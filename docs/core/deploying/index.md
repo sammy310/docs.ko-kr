@@ -91,7 +91,7 @@ FDE 배포에는 다음과 같은 여러 가지 장점이 있습니다.
 
 ## <a name="step-by-step-examples"></a>단계별 예제
 
-CLI 도구를 사용하여 .NET Core 앱을 배포하는 방법을 보여 주는 단계별 예제는 [Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md)(CLI 도구를 사용하여 .NET Core 앱 배포)를 참조하세요. Visual Studio를 사용하여 .NET Core 앱을 배포하는 방법을 보여 주는 단계별 예제는 [Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md)(Visual Studio를 사용하여 .NET Core 앱 배포)를 참조하세요. 
+CLI 도구를 사용하여 .NET Core 앱을 배포하는 방법을 보여 주는 단계별 예제는 [CLI를 사용하여 .NET Core 앱 게시](deploy-with-cli.md)를 참조하세요. Visual Studio를 사용하여 .NET Core 앱을 배포하는 방법을 보여 주는 단계별 예제는 [Visual Studio를 사용하여 .NET Core 앱 배포](deploy-with-vs.md)를 참조하세요. 
 
 ## <a name="see-also"></a>참조
 

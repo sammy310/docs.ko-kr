@@ -2,12 +2,12 @@
 title: Docker 애플리케이션에 대한 외부 루프 DevOps 워크플로의 단계
 description: DevOps 워크플로의 "외부 루프"에 대한 단계 알아보기
 ms.date: 02/15/2019
-ms.openlocfilehash: 7c465ab380770441005f7365f53bc585236c31bd
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 735f92c00cd6279649ec3b0c35cfb00543f21a8c
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738285"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936775"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker 애플리케이션에 대한 외부 루프 DevOps 워크플로의 단계
 
@@ -91,7 +91,7 @@ Visual Studio Azure DevOps Services는 CI/CD 파이프라인에 사용하여 Doc
 >   <https://hub.docker.com/_/microsoft-azure-pipelines-vsts-agent>
 >
 > - Azure DevOps Services를 사용하여 .NET Core Linux Docker 이미지 빌드: \
->   <https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/>
+>   <https://docs.microsoft.com/archive/blogs/stevelasker/building-net-core-linux-docker-images-with-visual-studio-team-services>
 >
 > - Docker 지원을 사용하여 Linux 기반 Visual Studio Team Service 빌드 머신 구축: \
 >   <http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>

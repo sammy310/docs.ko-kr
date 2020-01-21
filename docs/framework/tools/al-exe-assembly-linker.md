@@ -81,7 +81,7 @@ al sources options
 
 모든 Visual Studio 컴파일러는 어셈블리를 만듭니다. 그러나 모듈(매니페스트 없는 메타데이터)이 하나 이상 있으면 *Al.exe*를 사용하여 별도의 파일에 매니페스트가 있는 어셈블리를 만들 수 있습니다.
 
-캐시에서 어셈블리를 설치하거나, 제거하거나, 캐시의 내용을 나열하려면 [Global Assembly Cache Tool (*Gacutil.exe*)](gacutil-exe-gac-tool.md)(Gacutil.exe(전역 어셈블리 캐시 도구))을 사용합니다.
+캐시에서 어셈블리를 설치하거나, 제거하거나, 캐시의 내용을 나열하려면 [*Gacutil.exe*(전역 어셈블리 캐시 도구)](gacutil-exe-gac-tool.md)를 사용합니다.
 
 ## <a name="errors-and-warnings"></a>오류 및 경고
 
@@ -174,7 +174,7 @@ al t2.netmodule /target:exe /out:t2a.exe /main:MyClass.Main
 ## <a name="see-also"></a>참조
 
 - [도구](index.md)
-- [*Sn.exe* (Strong Name Tool)](sn-exe-strong-name-tool.md)(Sn.exe(강력한 이름 도구))
-- [*Gacutil.exe* (Global Assembly Cache Tool)](gacutil-exe-gac-tool.md)(Gacutil.exe(전역 어셈블리 캐시 도구))
+- [*Sn.exe* (강력한 이름 도구)](sn-exe-strong-name-tool.md)
+- [*Gacutil.exe*(전역 어셈블리 캐시 도구)](gacutil-exe-gac-tool.md)
 - [어셈블리를 사용한 프로그래밍](../../standard/assembly/program.md)
 - [명령 프롬프트](developer-command-prompt-for-vs.md)

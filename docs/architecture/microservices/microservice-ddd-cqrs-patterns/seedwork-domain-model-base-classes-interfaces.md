@@ -2,16 +2,16 @@
 title: Seedwork(도메인 모델에 대해 재사용이 가능한 기본 클래스 및 인터페이스)
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | DDD 지향 도메인 모델의 구현을 시작하려면 시드워크 개념을 시작점으로 사용합니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: f53988b92a05fb54f3f05d9f463450d1a11a0843
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: ab0aadc28dbd1175c75b04dadca29b7b0947f29b
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "73737224"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116574"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork(도메인 모델에 대해 재사용이 가능한 기본 클래스 및 인터페이스)
 
-솔루션 폴더에 *SeedWork* 폴더가 포함되어 있습니다. 이 폴더에는 도메인 엔터티 및 값 개체의 기반으로 사용할 수 있는 사용자 지정 기본 클래스가 포함되어 있습니다. 각 도메인의 개체 클래스에 중복 코드가 없으므로 이러한 기본 클래스를 사용합니다. 이러한 유형의 클래스의 폴더는 *SeedWork*라고 하며 *프레임 워크* 같은 것이 아닙니다. *SeedWork*라고 하는 이유는 이 폴더에는 실제로 프레임워크라고 할 수 없는 재사용이 가능한 클래스의 작은 하위 집합 포함하기 때문입니다. *Seedwork*는 [Michael Feathers](https://www.artima.com/forums/flat.jsp?forum=106&thread=8826)가 도입해 [Martin Fowler](https://martinfowler.com/bliki/Seedwork.html)에 의해 유명해진 용어지만 해당 폴더를 Common, SharedKernel 또는 비슷한 이름으로 부를 수도 있습니다.
+솔루션 폴더에 *SeedWork* 폴더가 포함되어 있습니다. 이 폴더에는 도메인 엔터티 및 값 개체의 기반으로 사용할 수 있는 사용자 지정 기본 클래스가 포함되어 있습니다. 각 도메인의 개체 클래스에 중복 코드가 없으므로 이러한 기본 클래스를 사용합니다. 이러한 유형의 클래스의 폴더는 *SeedWork*라고 하며 *프레임 워크* 같은 것이 아닙니다. *SeedWork*라고 하는 이유는 이 폴더에는 실제로 프레임워크라고 할 수 없는 재사용이 가능한 클래스의 작은 하위 집합을 포함하기 때문입니다. *Seedwork*는 [Michael Feathers](https://www.artima.com/forums/flat.jsp?forum=106&thread=8826)가 도입해 [Martin Fowler](https://martinfowler.com/bliki/Seedwork.html)에 의해 유명해진 용어지만 해당 폴더를 Common, SharedKernel 또는 비슷한 이름으로 부를 수도 있습니다.
 
 그림 7-12는 정렬 마이크로 서비스에서 도메인 모델의 시드워크를 구성하는 클래스를 보여줍니다. 시드워크에는 엔터티와 ValueObject, 열거형을 포함한 몇 가지 인터페이스처럼 사용자 지정 기본 클래스가 있습니다. 이러한 인터페이스(IRepository 및 IUnitOfWork)는 인프라 계층에게 구현되어야 할 사항에 대해 알려줍니다. 이러한 인터페이스는 또한 애플리케이션 계층에서 종속성 주입을 통해 사용됩니다.
 
@@ -85,7 +85,7 @@ public abstract class Entity
             if (!_requestedHashCode.HasValue)
                 _requestedHashCode = this.Id.GetHashCode() ^ 31;
             // XOR for random distribution. See:
-            // https://blogs.msdn.microsoft.com/ericlippert/2011/02/28/guidelines-and-rules-for-gethashcode/
+            // https://docs.microsoft.com/archive/blogs/ericlippert/guidelines-and-rules-for-gethashcode
             return _requestedHashCode.Value;
         }
         else

@@ -40,7 +40,7 @@ ms.locfileid: "74960391"
 ## <a name="choosing-a-compiler"></a>컴파일러 선택  
  CLR(공용 언어 런타임)에서 제공되는 이점을 얻으려면 런타임을 대상으로 지정하는 Visual Basic, C#, Visual C++, F# 또는 다양한 타사 컴파일러의 하나(예: Eiffel, Perl 또는 COBOL 컴파일러) 등의 언어 컴파일러를 하나 이상 사용해야 합니다.  
   
- CLR은 다국어 실행 환경이므로 런타임은 다양한 데이터 형식과 언어 기능을 지원합니다. 사용하는 언어 컴파일러에 따라 사용할 수 있는 런타임 기능이 결정되고 사용자가 해당 기능을 사용하여 코드를 디자인합니다. 코드에서 사용해야 하는 구문을 설정하는 것은 런타임이 아니라 컴파일러입니다. 다른 언어로 작성된 구성 요소가 사용자의 구성 요소를 완전히 사용할 수 있어야 하면 사용자 구성 요소의 내보낸 형식은 CLS( [Language Independence and Language-Independent Components](../../docs/standard/language-independence-and-language-independent-components.md) )에 포함된 언어 기능만 노출해야 합니다. <xref:System.CLSCompliantAttribute> 특성을 사용하여 코드가 CLS 규격인지 확인할 수 있습니다. 자세한 내용은 [Language Independence and Language-Independent Components](../../docs/standard/language-independence-and-language-independent-components.md)을 참조하십시오.  
+ CLR은 다국어 실행 환경이므로 런타임은 다양한 데이터 형식과 언어 기능을 지원합니다. 사용하는 언어 컴파일러에 따라 사용할 수 있는 런타임 기능이 결정되고 사용자가 해당 기능을 사용하여 코드를 디자인합니다. 코드에서 사용해야 하는 구문을 설정하는 것은 런타임이 아니라 컴파일러입니다. 다른 언어로 작성된 구성 요소가 사용자의 구성 요소를 완전히 사용할 수 있어야 하면 사용자 구성 요소의 내보낸 형식은 CLS( [Language Independence and Language-Independent Components](../../docs/standard/language-independence-and-language-independent-components.md) )에 포함된 언어 기능만 노출해야 합니다. <xref:System.CLSCompliantAttribute> 특성을 사용하여 코드가 CLS 규격인지 확인할 수 있습니다. 자세한 내용은 [언어 독립성 및 언어 독립적 구성 요소](../../docs/standard/language-independence-and-language-independent-components.md)을 참조하십시오.  
   
  [맨 위로 이동](#introduction)  
   

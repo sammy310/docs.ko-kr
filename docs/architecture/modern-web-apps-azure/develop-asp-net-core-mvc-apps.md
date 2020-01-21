@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 최신 웹 애플리케이�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: efb57b4290825be9f21c61c8dee5af073d264d3a
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 7bc30db084f361e6c4654b89e69230b379b0136c
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899700"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116534"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC 앱 개발
 
@@ -32,9 +32,9 @@ Razor Page의 페이지 모델은 MVC 컨트롤러 및 보기 모델의 책임�
 
 ### <a name="when-to-use-mvc"></a>MVC를 사용하는 경우
 
-웹 API를 빌드하는 경우 Razor Pages를 사용하는 것보다 MVC 패턴을 사용하는 것이 좋습니다. 프로젝트가 웹 API 엔드포인트를 노출하기만 하는 경우 Web API 프로젝트 템플릿에서 시작하는 것이 이상적이지만, 그렇지 않으면 ASP.NET Core 앱에 컨트롤러 및 연결된 API 엔드포인트를 추가하는 것이 쉽습니다. 또한 수월하게 ASP.NET MVC 5 이전에서 ASP.NET Core MVC로 기존 애플리케이션을 마이그레이션하려는 경우 보기 기반 MVC 방법을 사용해야 합니다. 초기 마이그레이션을 수행하면 Razor Pages를 새로운 기능에서 채택하는 것이 맞는지 아니면 도매 마이그레이션으로 채택하는 것이 맞는지 여부를 평가할 수 있습니다.
+웹 API를 빌드하는 경우 Razor Pages를 사용하는 것보다 MVC 패턴을 사용하는 것이 좋습니다. 프로젝트가 웹 API 엔드포인트만 노출하는 경우 웹 API 프로젝트 템플릿에서 시작하는 것이 좋습니다. 그런 경우가 아니라면 컨트롤러 및 연결된 API 엔드포인트를 모든 ASP.NET Core 앱에 쉽게 추가할 수 있습니다. 수월하게 ASP.NET MVC 5 이전 버전에서 ASP.NET Core MVC로 기존 애플리케이션을 마이그레이션하려는 경우 보기 기반 MVC 방법을 사용합니다. 초기 마이그레이션을 수행하면 Razor Pages를 새로운 기능에서 채택하는 것이 맞는지 아니면 도매 마이그레이션으로 채택하는 것이 맞는지 여부를 평가할 수 있습니다.
 
-Razor Pages를 사용하여 웹앱을 빌드하는지 아니면 MVC 보기를 사용하여 웹앱을 빌드하는지와 관계 없이 앱은 유사한 성능을 보여주고, 종속성 주입, 필터, 모델 바인딩 및 유효성 검사 등에 대한 지원도 포함합니다.
+Razor Pages를 사용하여 웹앱을 빌드하는지 아니면 MVC 보기를 사용하여 웹앱을 빌드하는지와 관계없이 앱은 유사한 성능을 보여주고, 종속성 주입, 필터, 모델 바인딩 및 유효성 검사 등에 대한 지원도 포함합니다.
 
 ## <a name="mapping-requests-to-responses"></a>요청을 응답에 매핑
 
@@ -540,7 +540,7 @@ DDD 도메인 모델은 모델 내에서 복잡한 동작을 캡슐화해야 합
 
 ### <a name="when-should-you-apply-ddd"></a>DDD를 적용해야 하는 경우
 
-DDD는 단지 기술적인 측면이 아닌 비즈니스 측면에서 복잡한 큰 애플리케이션에 적합합니다. 애플리케이션에는 도메인 전문가의 지식이 필요합니다. 도메인 모델 자체에는 데이터 저장소의 다양한 레코드에 대한 현재 상태를 저장하고 검색하는 것 이상의 비즈니스 규칙과 상호 작용을 나타내는 중요한 동작이 있어야 합니다.
+DDD는 단순히 기술적인 측면이 아닌 비즈니스 측면에서 복잡한 큰 애플리케이션에 적합합니다. 애플리케이션에는 도메인 전문가의 지식이 필요합니다. 도메인 모델 자체에는 데이터 저장소의 다양한 레코드에 대한 현재 상태를 저장하고 검색하는 것 이상의 비즈니스 규칙과 상호 작용을 나타내는 중요한 동작이 있어야 합니다.
 
 ### <a name="when-shouldnt-you-apply-ddd"></a>DDD를 적용하지 않아야 하는 경우
 

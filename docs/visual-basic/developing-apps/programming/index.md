@@ -33,7 +33,7 @@ ms.locfileid: "74352111"
  [애플리케이션 웹 서비스 액세스](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
  `My.WebServices` 개체를 사용하여 애플리케이션에서 참조하는 웹 서비스에 액세스하는 방법에 대한 설명서를 포함합니다.  
   
- [Accessing Application Settings](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
+ [애플리케이션 설정 액세스(Visual Basic)](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
  `My.Settings` 개체를 사용하여 애플리케이션 설정에 액세스하는 방법에 대한 설명서를 포함합니다.  
   
  [드라이브, 디렉터리 및 파일 처리](drives-directories-files/index.md)  

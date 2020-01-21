@@ -48,7 +48,7 @@ ms.locfileid: "75711391"
   
  명시적 비교를 제공할 수 있도록 일부 메서드는 매개 변수로 **IComparer** 구현을 허용합니다. 예를 들어 <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> 메서드는 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 구현을 허용합니다.  
   
- 시스템의 현재 문화권 설정은 컬렉션 내의 비교와 정렬에 영향을 줄 수 있습니다. 기본적으로 **Collections** 클래스의 비교 및 정렬은 문화권을 구분합니다. 문화권 설정을 무시하고 동일한 비교 및 정렬 결과가 반환되도록 하려면 <xref:System.Globalization.CultureInfo.InvariantCulture%2A> 를 허용하는 멤버 오버로드를 포함하여 <xref:System.Globalization.CultureInfo>를 사용합니다. 자세한 내용은 [Performing Culture-Insensitive String Operations in Collections](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) 및 [Performing Culture-Insensitive String Operations in Arrays](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md)를 참조하세요.  
+ 시스템의 현재 문화권 설정은 컬렉션 내의 비교와 정렬에 영향을 줄 수 있습니다. 기본적으로 **Collections** 클래스의 비교 및 정렬은 문화권을 구분합니다. 문화권 설정을 무시하고 동일한 비교 및 정렬 결과가 반환되도록 하려면 <xref:System.Globalization.CultureInfo.InvariantCulture%2A> 를 허용하는 멤버 오버로드를 포함하여 <xref:System.Globalization.CultureInfo>를 사용합니다. 자세한 내용은 [컬렉션에서 Culture를 구분하지 않는 문자열 작업 수행](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) 및 [배열에서 문화권을 구분하지 않는 문자열 작업 수행](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md)를 참조하세요.  
   
 <a name="BKMK_Equalityandsortexample"></a>   
 ## <a name="equality-and-sort-example"></a>같음 및 정렬 예제  

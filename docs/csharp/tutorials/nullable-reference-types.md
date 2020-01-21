@@ -220,4 +220,4 @@ nullable 참조 형식과 nullable이 아닌 참조 형식 간에 형식 선언�
 
 nullable 참조 형식을 사용할 수 있도록 기존 애플리케이션을 마이그레이션하여 자세히 알아보세요.
 > [!div class="nextstepaction"]
-> [Upgrade an application to use nullable reference types](upgrade-to-nullable-references.md)(nullable 참조 형식을 사용할 수 있도록 애플리케이션 업그레이드)
+> [자습서: nullable 참조 형식이 있는 기존 코드 마이그레이션](upgrade-to-nullable-references.md)

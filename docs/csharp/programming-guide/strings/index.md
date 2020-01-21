@@ -138,7 +138,7 @@ string s = String.Empty;
 |[문자열이 숫자 값을 나타내는지 확인 방법](./how-to-determine-whether-a-string-represents-a-numeric-value.md)|문자열에 올바른 숫자 값이 있는지 여부를 확인할 수 있도록 문자열을 안전하게 구문 분석하는 방법을 보여 줍니다.|  
 |[문자열 보간](../../language-reference/tokens/interpolated.md)|문자열의 서식을 지정하는 편리한 구문을 제공하는 문자열 보간 기능에 대해 설명합니다.|
 |[기본적인 문자열 작업](../../../standard/base-types/basic-string-operations.md)|<xref:System.String?displayProperty=nameWithType> 및 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 메서드를 사용하여 기본적인 문자열 작업을 수행하는 항목에 대한 링크를 제공합니다.|  
-|[Parsing Strings](../../../standard/base-types/parsing-strings.md)|.NET 기본 형식의 문자열 표현을 해당 형식의 인스턴스로 변환하는 방법에 대해 설명합니다.|  
+|[.NET에서 문자열 구문 분석](../../../standard/base-types/parsing-strings.md)|.NET 기본 형식의 문자열 표현을 해당 형식의 인스턴스로 변환하는 방법에 대해 설명합니다.|  
 |[.NET에서 날짜 및 시간 문자열 구문 분석](../../../standard/base-types/parsing-datetime.md)|"01/24/2008"과 같은 문자열을 <xref:System.DateTime?displayProperty=nameWithType> 개체로 변환하는 방법을 보여 줍니다.|  
 |[문자열 비교](../../../standard/base-types/comparing.md)|문자열을 비교하는 방법에 대한 정보가 포함되어 있으며, C# 및 Visual Basic의 예제를 제공합니다.|  
 |[StringBuilder 클래스 사용](../../../standard/base-types/stringbuilder.md)|<xref:System.Text.StringBuilder> 클래스를 사용하여 동적 문자열 개체를 만들고 수정하는 방법을 설명합니다.|  

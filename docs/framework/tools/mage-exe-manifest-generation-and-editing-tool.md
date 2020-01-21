@@ -16,7 +16,7 @@ ms.locfileid: "74714469"
 
 매니페스트 생성 및 편집 도구(*Mage.exe*)는 애플리케이션 매니페스트 및 배포 매니페스트의 생성과 편집을 지원하는 명령줄 도구입니다. *Mage.exe*는 명령줄 도구로서 일괄 처리 스크립트뿐 아니라 ASP.NET 애플리케이션을 비롯한 Windows 기반 애플리케이션에서도 실행할 수 있습니다.
 
-*Mage.exe* 대신 그래픽 애플리케이션인 *MageUI.exe*를 사용할 수도 있습니다. 자세한 내용은 [MageUI.exe (Manifest Generation and Editing Tool, Graphical Client)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)을 참조하십시오.
+*Mage.exe* 대신 그래픽 애플리케이션인 *MageUI.exe*를 사용할 수도 있습니다. 자세한 내용은 [매니페스트 생성 및 편집 도구, 그래픽 클라이언트](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)를 참조하십시오.
 
 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트를 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.
 

@@ -42,7 +42,7 @@ ms.locfileid: "73091598"
 <xref:System.BitConverter?displayProperty=nameWithType> 클래스를 사용하여 정수 값의 개별 비트를 사용할 수도 있습니다.  
 
 > [!NOTE]  
-> 부호 없는 정수 형식은 CLS 규격이 아닙니다. 자세한 내용은 [Language Independence and Language-Independent Components](language-independence-and-language-independent-components.md)을 참조하십시오.
+> 부호 없는 정수 형식은 CLS 규격이 아닙니다. 자세한 내용은 [언어 독립성 및 언어 독립적 구성 요소](language-independence-and-language-independent-components.md)을 참조하십시오.
 
 ## <a name="biginteger"></a>BigInteger
 
@@ -96,4 +96,4 @@ SIMD 사용 형식은 SIMD 미사용 하드웨어 또는 JIT 컴파일러와 함
 ## <a name="see-also"></a>참고 항목
 
 - [애플리케이션 주요 사항](application-essentials.md)
-- [Standard Numeric Format Strings](base-types/standard-numeric-format-strings.md)
+- [표준 숫자 형식 문자열](base-types/standard-numeric-format-strings.md)

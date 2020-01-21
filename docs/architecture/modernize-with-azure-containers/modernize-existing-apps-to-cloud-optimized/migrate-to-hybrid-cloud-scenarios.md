@@ -2,12 +2,12 @@
 title: 하이브리드 클라우드로 마이그레이션 시나리오
 description: Azure Cloud 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화 | 하이브리드 클라우드 시나리오로 마이그레이션
 ms.date: 04/30/2018
-ms.openlocfilehash: 4348a9b538042fee7ebd9c08f480491f17425937
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: dcbb799a45609f8bb811866c4041951abf1fda8b
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "72394541"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937369"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>하이브리드 클라우드로 마이그레이션 시나리오
 
@@ -37,11 +37,11 @@ Azure Stack은 사용자 요구 사항을 충족하기 위해 두 가지 배포 
 
 ### <a name="azure-stack-integrated-systems"></a>Azure Stack 통합 시스템
 
-Azure Stack 통합 시스템은 Microsoft와 하드웨어 파트너 간 파트너 관계를 통해 제공됩니다. 이 파트너 관계는 관리 단순성과 균형을 이루는 클라우드 지향 혁신을 제공하는 솔루션을 만듭니다. Azure Stack은 하드웨어와 소프트웨어의 통합 시스템으로 제공되므로 유동적으로 활용하고 제어하는 동시에 클라우드의 혁신 기능도 도입할 수 있습니다. Azure Stack 통합 시스템은 4~12개 노드를 포함하며 하드웨어 파트너와 Microsoft를 통해 공동으로 지원됩니다. 프로덕션 워크로드용으로 새로운 시나리오를 구현하려면 Azure Stack 통합 시스템을 사용하세요.
+Azure Stack 통합 시스템은 Microsoft와 하드웨어 파트너 간 파트너 관계를 통해 제공됩니다. 이 파트너 관계는 관리 단순성과 균형을 이루는 클라우드 지향 혁신을 제공하는 솔루션을 만듭니다. Azure Stack은 하드웨어와 소프트웨어의 통합 시스템으로 제공되므로 클라우드의 혁신을 채택하면서도 필요한 만큼의 제어 기능을 유연하게 이용할 수 있습니다. Azure Stack 통합 시스템은 4~12개 노드를 포함하며 하드웨어 파트너와 Microsoft를 통해 공동으로 지원됩니다. 프로덕션 워크로드용으로 새로운 시나리오를 구현하려면 Azure Stack 통합 시스템을 사용하세요.
 
 ### <a name="azure-stack-development-kit"></a>Azure Stack Development Kit
 
-Microsoft Azure Stack 개발 키트는 Azure Stack을 평가 및 파악하는 데 사용할 수 있는 Azure Stack의 단일 노드 배포입니다. Azure Stack Development Kit를 개발자 환경으로 활용해 Azure와 동일한 API와 도구를 사용하여 개발 작업을 수행할 수도 있습니다. Azure Stack 개발 키트를 프로덕션 환경으로 사용할 수는 없습니다.
+Microsoft Azure Stack Development Kit는 Azure Stack을 평가하고 학습하는 데 사용할 수 있는 Azure Stack의 단일 노드 배포입니다. Azure Stack Development Kit를 개발자 환경으로 활용해 Azure와 동일한 API와 도구를 사용하여 개발 작업을 수행할 수도 있습니다. Azure Stack Development Kit는 프로덕션 환경으로 사용하기 위한 도구가 아닙니다.
 
 ### <a name="additional-resources"></a>추가 자료
 
@@ -59,7 +59,7 @@ Microsoft Azure Stack 개발 키트는 Azure Stack을 평가 및 파악하는 �
 
 - **Active Directory 지원으로 컨테이너 만들기**
 
-    <https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/>
+    <https://docs.microsoft.com/archive/blogs/containerstuff/create-a-container-with-active-directory-support>
 
 - **Azure 하이브리드 혜택 라이선스**
 

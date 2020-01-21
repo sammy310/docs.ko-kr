@@ -55,4 +55,4 @@ ms.locfileid: "75708180"
 
 - [파일 및 스트림 I/O](../../../docs/standard/io/index.md)
 - [스트림 작성](../../../docs/standard/io/composing-streams.md)
-- [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md)
+- [비동기 파일 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)

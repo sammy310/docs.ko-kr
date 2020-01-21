@@ -92,5 +92,5 @@ ms.locfileid: "73127532"
 - [방법: 작업에서 값 반환](../parallel-programming/how-to-return-a-value-from-a-task.md)
 - [스레딩 개체 및 기능](threading-objects-and-features.md)
 - [스레드 및 스레딩](threads-and-threading.md)
-- [Asynchronous File I/O](../io/asynchronous-file-i-o.md)
+- [비동기 파일 I/O](../io/asynchronous-file-i-o.md)
 - [타이머](timers.md)

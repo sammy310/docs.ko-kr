@@ -54,6 +54,6 @@ ms.locfileid: "75698523"
   
 ## <a name="see-also"></a>참조
 
-- [Standard Numeric Format Strings](../../../standard/base-types/standard-numeric-format-strings.md)
+- [표준 숫자 형식 문자열](../../../standard/base-types/standard-numeric-format-strings.md)
 - [유형](./index.md)
 - [문자열이 숫자 값을 나타내는지 확인 방법](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)

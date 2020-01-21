@@ -86,7 +86,7 @@ ms.locfileid: "75348067"
 
 ## <a name="see-also"></a>참조
 
-- [Parsing Strings](parsing-strings.md)
+- [.NET에서 문자열 구문 분석](parsing-strings.md)
 - [형식 서식 지정](formatting-types.md)
 - [.NET에서 형식 변환](type-conversion.md)
 - [표준 날짜 및 시간 형식](standard-date-and-time-format-strings.md)

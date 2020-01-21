@@ -2,12 +2,12 @@
 title: docker-compose.yml을 사용하여 다중 컨테이너 애플리케이션 정의
 description: docker-compose.yml을 사용하여 다중 컨테이너 애플리케이션에서 마이크로 서비스 컴퍼지션을 지정하는 방법입니다.
 ms.date: 10/02/2018
-ms.openlocfilehash: 02db27feb1320d8b9c6823b8f9ef51c2ddf9791c
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: f9cab35ac8e11ca89a83f646c29bf72f84e66ef4
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737092"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116547"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml을 사용하여 다중 컨테이너 애플리케이션 정의
 
@@ -82,7 +82,7 @@ services:
     image: redis
 ```
 
-이 파일의 루트 키는 서비스입니다. 해당 키 아래에서 `docker-compose up` 명령을 실행하거나 이 docker-compose.yml 파일을 사용하여 Visual Studio에서 배포할 때 배포 및 실행하려는 서비스를 정의합니다. 이 경우 docker-compose.yml 파일에는 다음 표에 설명된 대로 정의된 여러 서비스가 있습니다.
+이 파일의 루트 키는 서비스입니다. 해당 키에서 `docker-compose up` 명령을 실행하거나 이 docker-compose.yml 파일을 사용하여 Visual Studio에서 배포할 때 배포 및 실행하려는 서비스를 정의합니다. 이 경우 docker-compose.yml 파일에는 다음 표에 설명된 대로 정의된 여러 서비스가 있습니다.
 
 | 서비스 이름 | 설명 |
 |--------------|-------------|
@@ -422,7 +422,7 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=10.121.122.92
 
 docker-compose는 .env 파일의 각 줄이 \<변수\>=\<값\> 형식이 되도록 예상합니다.
 
-런타임 환경에서 설정된 값은 항상 .env 파일 내부에 정의된 값을 재정의합니다. 비슷한 방식으로 명령줄 명령 인수를 통해 전달된 값도 .env 파일에 설정된 기본값을 재정의합니다.
+런타임 환경에서 설정된 값은 항상 .env 파일 내부에 정의된 값을 재정의합니다. 비슷한 방식으로 명령줄 인수를 통해 전달된 값도 .env 파일에 설정된 기본값을 재정의합니다.
 
 #### <a name="additional-resources"></a>추가 자료
 
@@ -470,7 +470,7 @@ ENTRYPOINT ["dotnet", "run"]
 #### <a name="additional-resources"></a>추가 자료
 
 - **ASP.NET Core를 사용하여 최적화된 Docker 이미지 빌드**  
-  <https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/>
+  <https://docs.microsoft.com/archive/blogs/stevelasker/building-optimized-docker-images-with-asp-net-core>
 
 - **.NET Core 애플리케이션에 대한 Docker 이미지 작성**  
   [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](/aspnet/core/host-and-deploy/docker/building-net-docker-images)

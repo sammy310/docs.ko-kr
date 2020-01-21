@@ -88,8 +88,8 @@ ms.locfileid: "75338521"
 |형식 또는 형식 범주|참조 항목|  
 |---------------------------|---------|  
 |날짜 및 시간 형식(<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[표준 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [사용자 지정 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
-|열거형 형식(<xref:System.Enum?displayProperty=nameWithType>에서 파생되는 모든 형식)|[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|  
-|숫자 형식(<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
+|열거형 형식(<xref:System.Enum?displayProperty=nameWithType>에서 파생되는 모든 형식)|[열거형 형식 문자열](../../../docs/standard/base-types/enumeration-format-strings.md)|  
+|숫자 형식(<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[표준 숫자 형식 문자열](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [사용자 지정 숫자 형식 문자열](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
 |<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|  
 |<xref:System.TimeSpan>|[표준 TimeSpan 서식 문자열](../../../docs/standard/base-types/standard-timespan-format-strings.md)<br /><br /> [사용자 지정 TimeSpan 서식 문자열](../../../docs/standard/base-types/custom-timespan-format-strings.md)|  
   
@@ -170,4 +170,4 @@ ms.locfileid: "75338521"
 - [사용자 지정 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [표준 TimeSpan 서식 문자열](../../../docs/standard/base-types/standard-timespan-format-strings.md)
 - [사용자 지정 TimeSpan 서식 문자열](../../../docs/standard/base-types/custom-timespan-format-strings.md)
-- [Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)
+- [열거형 형식 문자열](../../../docs/standard/base-types/enumeration-format-strings.md)

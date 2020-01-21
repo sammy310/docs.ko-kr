@@ -212,7 +212,7 @@ C# 7.0부터 C#에서 참조 반환 값을 지원합니다. 즉, 호출하는 �
 
 [문자열 보간](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
 
-문자열 보간 식을 사용하여 문자열을 생성할 수 있습니다.  보간된 문자열 식은 식이 포함된 템플릿 문자열과 유사합니다.  보간된 문자열은 인수 측면에서 [Composite Formatting](../../standard/base-types/composite-formatting.md)보다 이해하기 쉽습니다.
+문자열 보간 식을 사용하여 문자열을 생성할 수 있습니다.  보간된 문자열 식은 식이 포함된 템플릿 문자열과 유사합니다.  보간된 문자열은 인수 측면에서 [복합 형식 지정](../../standard/base-types/composite-formatting.md)보다 이해하기 쉽습니다.
 
 [Null 조건부 멤버 액세스 및 인덱싱](../language-reference/operators/null-conditional-operators.md)
 

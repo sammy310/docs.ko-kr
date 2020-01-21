@@ -228,6 +228,6 @@ public class Hello
 ## <a name="see-also"></a>참고 항목
 
 - [도구](index.md)
-- [*Ildasm.exe* (IL Disassembler)](ildasm-exe-il-disassembler.md)(Ildasm.exe(IL 디스어셈블러))
+- [*Ildasm.exe*(IL 디스어셈블러)](ildasm-exe-il-disassembler.md)
 - [관리되는 실행 프로세스](../../standard/managed-execution-process.md)
 - [명령 프롬프트](developer-command-prompt-for-vs.md)

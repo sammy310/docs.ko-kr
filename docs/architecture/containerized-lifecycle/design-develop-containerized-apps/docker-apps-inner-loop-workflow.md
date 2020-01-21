@@ -2,12 +2,12 @@
 title: Docker 앱을 위한 내부 루프 개발 워크플로
 description: Docker 애플리케이션 개발을 위한 "내부 루프" 워크플로에 대해 알아봅니다.
 ms.date: 02/15/2019
-ms.openlocfilehash: 5f534b23f5e0042e68343deb0c1e9e0ee2e64600
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 3d2fc889d22dbf02acccfbf9231ad98fca224cff
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394772"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936807"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 앱을 위한 내부 루프 개발 워크플로
 
@@ -266,7 +266,7 @@ Visual Studio Code는 Node.js 및 다른 플랫폼(예: .NET Core 컨테이너)�
 또한 다음 섹션에서 설명하는 대로 Windows용 또는 Mac용 Visual Studio를 사용하는 경우 Docker의 .NET Core 또는 .NET Framework 컨테이너를 디버그할 수도 있습니다.
 
 > [!TIP]
-> Node.js Docker 컨테이너 디버깅에 대한 자세한 내용은 <https://blog.docker.com/2016/07/live-debugging-docker/> 및 <https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/> 내용을 참조하세요.
+> Node.js Docker 컨테이너 디버깅에 대한 자세한 내용은 <https://blog.docker.com/2016/07/live-debugging-docker/> 및 <https://docs.microsoft.com/archive/blogs/user_ed/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more> 내용을 참조하세요.
 
 >[!div class="step-by-step"]
 >[이전](docker-apps-development-environment.md)

@@ -16,7 +16,7 @@ WCF(Windows Communication Foundation) **dotnet-svcutil** 도구는 네트워크 
 
 .NET Framework 프로젝트용 [**서비스 모델 메타데이터 - svcutil**](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 도구와 비슷하게, **dotnet-svcutil**은 .NET Core 및 .NET Standard 프로젝트와 호환되는 웹 서비스 참조를 생성하기 위한 명령줄 도구입니다.
 
-**dotnet-svcutil** 도구는 Visual Studio 2017 버전 15.5에서 처음 제공된 [**WCF Web Service Reference**](wcf-web-service-reference-guide.md) Visual Studio 연결된 서비스 공급자의 대체 옵션입니다. .NET Core CLI 도구인 **dotnet svcutil** 도구는 Linux, macOS, Windows에서 플랫폼 간에 사용할 수 있습니다.
+**dotnet-svcutil** 도구는 Visual Studio 2017 버전 15.5에서 처음 제공된 [**WCF Web Service Reference Provider 도구 사용**](wcf-web-service-reference-guide.md) Visual Studio 연결된 서비스 공급자의 대체 옵션입니다. .NET Core CLI 도구인 **dotnet svcutil** 도구는 Linux, macOS, Windows에서 플랫폼 간에 사용할 수 있습니다.
 
 > [!IMPORTANT]
 > 신뢰할 수 있는 원본의 서비스만 참조해야 합니다. 신뢰할 수 없는 원본에서 참조를 추가하면 보안이 손상될 수 있습니다.

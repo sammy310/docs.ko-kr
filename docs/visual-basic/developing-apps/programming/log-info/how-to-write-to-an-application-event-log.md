@@ -20,7 +20,7 @@ ms.locfileid: "74352043"
 
 보안 로그에는 쓸 수 없습니다. 시스템 로그에 쓰려면 LocalSystem 또는 Administrator 계정의 멤버여야 합니다.
 
-이벤트 로그를 보려면 **서버 탐색기** 또는 **Windows 이벤트 뷰어**를 사용합니다. 자세한 내용은 [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md)을 참조하세요.
+이벤트 로그를 보려면 **서버 탐색기** 또는 **Windows 이벤트 뷰어**를 사용합니다. 자세한 내용은 [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md)를 참조하세요.
 
 ## <a name="to-add-and-configure-the-event-log-listener"></a>이벤트 로그 수신기를 추가하고 구성하려면
 

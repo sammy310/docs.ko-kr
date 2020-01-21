@@ -41,7 +41,7 @@ ms.locfileid: "74348940"
 
 - **검색**. 쿼리할 수 있으며 스트림에서 현재 위치를 수정할 수 있습니다.
 
-자세한 내용은 [Composing Streams](../../../../standard/io/composing-streams.md)을 참조하세요.
+자세한 내용은 [스트림 작성](../../../../standard/io/composing-streams.md)을 참조하세요.
 
 ## <a name="types-of-streams"></a>스트림의 형식
 
@@ -110,5 +110,5 @@ ms.locfileid: "74348940"
 
 - [스트림 작성](../../../../standard/io/composing-streams.md)
 - [파일 및 스트림 I/O](../../../../standard/io/index.md)
-- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)
+- [비동기 파일 I/O](../../../../standard/io/asynchronous-file-i-o.md)
 - [.NET Framework 파일 I/O 및 파일 시스템에 사용되는 클래스(Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

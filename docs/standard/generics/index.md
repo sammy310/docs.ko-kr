@@ -100,7 +100,7 @@ ms.locfileid: "75708373"
   
 - 제네릭 형식은 <xref:System.MarshalByRefObject> 와 같은 대부분의 기본 클래스에서 파생될 수 있으며, 제약 조건을 사용하면 제네릭 형식 매개 변수가 <xref:System.MarshalByRefObject>와 같은 기본 클래스에서 파생되어야 하도록 지정할 수 있습니다. 그러나 .NET Framework에서는 컨텍스트에 바인딩된 제네릭 형식을 지원하지 않습니다. 제네릭 형식이 <xref:System.ContextBoundObject>에서 파생될 수는 있지만 해당 형식의 인스턴스를 만들려고 하면 <xref:System.TypeLoadException>이 발생합니다.  
   
-- 열거형은 제네릭 형식 매개 변수를 포함할 수 없습니다. 열거형은 Visual Basic, C# 또는 C++를 사용하여 정의되는 제네릭 형식에 중첩되는 경우 부수적으로만 제네릭이 될 수 있습니다. 자세한 내용은 [Common Type System](../../../docs/standard/base-types/common-type-system.md)에서 “열거”를 참조하세요.  
+- 열거형은 제네릭 형식 매개 변수를 포함할 수 없습니다. 열거형은 Visual Basic, C# 또는 C++를 사용하여 정의되는 제네릭 형식에 중첩되는 경우 부수적으로만 제네릭이 될 수 있습니다. 자세한 내용은 [공용 형식 시스템](../../../docs/standard/base-types/common-type-system.md)에서 “열거”를 참조하세요.  
   
 - 경량의 동적 메서드는 제네릭이 될 수 없습니다.  
   
