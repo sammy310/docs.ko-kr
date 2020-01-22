@@ -2,15 +2,16 @@
 title: 엔터프라이즈 서비스 트랜잭션 구성 요소 통합
 ms.date: 03/30/2017
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
-ms.openlocfilehash: c73be31bef67f1de818f7b04181a3540bbd7caa8
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 5914f76639adc3ff569a3bfb8d6eb1db14313e76
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991543"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76211945"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>엔터프라이즈 서비스 트랜잭션 구성 요소 통합
-WCF (Windows Communication Foundation)는 엔터프라이즈 서비스와 통합 하기 위한 자동 메커니즘을 제공 합니다 ( [COM + 응용 프로그램과 통합](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)참조). 하지만 엔터프라이즈 서비스에 호스팅된 트랜잭션 구성 요소를 내부적으로 사용하는 서비스를 개발하기 위한 유연성이 필요할 수 있습니다. Wcf 트랜잭션 기능은 <xref:System.Transactions> 인프라를 기반으로 하기 때문에, 엔터프라이즈 서비스와 wcf를 통합 하는 프로세스는 다음에 설명 된 대로 및 <xref:System.Transactions> 엔터프라이즈 서비스 간의 상호 운용성을 지정 하는 프로세스와 동일 합니다. [엔터프라이즈 서비스 및 COM + 트랜잭션과의 상호 운용성](https://go.microsoft.com/fwlink/?LinkId=94949)  
+
+WCF (Windows Communication Foundation)는 엔터프라이즈 서비스와 통합 하기 위한 자동 메커니즘을 제공 합니다 ( [COM + 응용 프로그램과 통합](integrating-with-com-plus-applications.md)참조). 하지만 엔터프라이즈 서비스에 호스팅된 트랜잭션 구성 요소를 내부적으로 사용하는 서비스를 개발하기 위한 유연성이 필요할 수 있습니다. WCF 트랜잭션 기능은 <xref:System.Transactions> 인프라를 기반으로 하기 때문에 엔터프라이즈 서비스와 WCF를 통합 하는 프로세스는 [엔터프라이즈 서비스 및 COM + 트랜잭션과의 상호 운용성](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms229974(v=vs.85))에 설명 된 대로 <xref:System.Transactions>와 엔터프라이즈 서비스 간의 상호 운용성을 지정 하는 프로세스와 동일 합니다.  
   
  들어오는 흐름의 트랜잭션과 COM+ 컨텍스트 트랜잭션 간에 필요한 수준의 상호 운용성을 제공하려면 서비스 구현에서 <xref:System.Transactions.TransactionScope> 인스턴스를 만들고 적절한 <xref:System.Transactions.EnterpriseServicesInteropOption> 열거형 값을 사용해야 합니다.  
   
@@ -92,7 +93,7 @@ static void Main()
 }  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [COM+ 애플리케이션과 통합](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
 - [COM 애플리케이션과 통합](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)
