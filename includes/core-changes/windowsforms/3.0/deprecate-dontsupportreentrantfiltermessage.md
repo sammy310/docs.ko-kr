@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: cb72e1b92172b8989ce99b47181c13561a7ccd76
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 3272dc562981269b868df4ca9d3a5806918aba5f
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74643894"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937006"
 ---
-### <a name="switchsystemwindowsformsdontsupportreentrantfiltermessage-compatibility-switch-not-supported"></a>Switch.System.Windows.Forms.DontSupportReentrantFilterMessage 호환성 스위치가 지원되지 않음
+### <a name="dontsupportreentrantfiltermessage-compatibility-switch-not-supported"></a>DontSupportReentrantFilterMessage 호환성 스위치가 지원되지 않음
 
 .NET Framework 4.6.1에서 도입된 `Switch.System.Windows.Forms.DontSupportReentrantFilterMessage` 호환성 스위치는 .NET Core 3.0의 Windows Forms에서 지원되지 않습니다.
 
@@ -20,7 +20,7 @@ ms.locfileid: "74643894"
 
 3.0 미리 보기 9
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 스위치를 제거합니다. 이 스위치는 지원되지 않으며, 사용 가능한 대체 기능이 없습니다.
 

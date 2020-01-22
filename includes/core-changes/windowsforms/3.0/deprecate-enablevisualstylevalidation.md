@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 84b6bfc32f5a73597b227098e5aee1e3450cf85b
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 75baa4f23eae838defafd3ce9b3907a187982a18
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74643900"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937058"
 ---
-### <a name="switchsystemwindowsformsenablevisualstylevalidation-compatibility-switch-not-supported"></a>Switch.System.Windows.Forms.EnableVisualStyleValidation 호환성 스위치가 지원되지 않음
+### <a name="enablevisualstylevalidation-compatibility-switch-not-supported"></a>EnableVisualStyleValidation 호환성 스위치가 지원되지 않음
 
 `Switch.System.Windows.Forms.EnableVisualStyleValidation` 호환성 스위치는 .NET Core 3.0의 Windows Forms에서 지원되지 않습니다.
 
@@ -20,7 +20,7 @@ ms.locfileid: "74643900"
 
 3.0 미리 보기 9
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 스위치를 제거합니다. 이 스위치는 지원되지 않으며, 사용 가능한 대체 기능이 없습니다.
 

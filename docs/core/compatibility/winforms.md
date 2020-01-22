@@ -1,17 +1,35 @@
 ---
 title: Windows Forms 관련 호환성이 손상되는 변경 - .NET Core
 description: .NET Core용 Windows Forms 관련 호환성이 손상되는 변경 목록입니다.
-ms.date: 11/27/2019
-ms.openlocfilehash: 8fefa6e2f5a004e8bbe0e6e715f7fd467debb7a4
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.date: 01/08/2020
+ms.openlocfilehash: 44bcde60f9e08d2e06a69c55e4ebe904bf5c449b
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567353"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116451"
 ---
-# <a name="breaking-changes-in-windows-forms-net-core-to-net-core"></a>Windows Forms의 호환성이 손상되는 변경(.NET Core에서 .NET Core로 변경)
+# <a name="breaking-changes-in-windows-forms"></a>Windows Forms 관련 호환성이 손상되는 변경
 
-Windows Forms 지원이 버전 3.0의 .NET Core에 추가되었습니다. 이 문서에서는 Windows Forms의 호환성이 손상되는 변경 사항이 .NET Core 버전별로 표시됩니다. 이전 버전의 .NET Core(3.0 이상)에서 Windows Forms 앱을 업그레이드하는 경우 이 문서가 적용됩니다. Windows Forms 앱을 .NET Framework에서 .NET Core로 마이그레이션하는 경우 [Windows Forms의 호환성이 손상되는 변경(.NET Framework 에서 .NET Core로 변경)](../porting/winforms-breaking-changes.md)을 참조하세요.
+Windows Forms 지원이 버전 3.0의 .NET Core에 추가되었습니다. 이 문서에서는 Windows Forms의 주요 변경 사항이 .NET Core 버전이 도입된 순서대로 표시됩니다. .NET Framework 또는 이전 버전의 .NET Core(3.0 이상)에서 Windows Forms 앱을 업그레이드하는 경우 이 문서가 적용됩니다.
+
+이 페이지에는 다음과 같은 주요 변경 사항이 설명되어 있습니다.
+
+- [제거된 컨트롤](#removed-controls)
+- [도구 설명이 표시되면 CellFormatting 이벤트가 발생하지 않음](#cellformatting-event-not-raised-if-tooltip-is-shown)
+- [Control.DefaultFont가 맑은 고딕 9pt로 변경됨](#default-control-font-changed-to-segoe-ui-9-pt)
+- [FolderBrowserDialog의 현대화](#modernization-of-the-folderbrowserdialog)
+- [일부 Windows Forms 형식에서 SerializableAttribute 제거됨](#serializableattribute-removed-from-some-windows-forms-types)
+- [AllowUpdateChildControlIndexForTabControls 호환성 스위치가 지원되지 않음](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported)
+- [DomainUpDown.UseLegacyScrolling 호환성 스위치가 지원되지 않음](#domainupdownuselegacyscrolling-compatibility-switch-not-supported)
+- [DoNotLoadLatestRichEditControl 호환성 스위치가 지원되지 않음](#donotloadlatestricheditcontrol-compatibility-switch-not-supported)
+- [DoNotSupportSelectAllShortcutInMultilineTextBox 호환성 스위치가 지원되지 않음](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported)
+- [DontSupportReentrantFilterMessage 호환성 스위치가 지원되지 않음](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported)
+- [EnableVisualStyleValidation 호환성 스위치가 지원되지 않음](#enablevisualstylevalidation-compatibility-switch-not-supported)
+- [UseLegacyContextMenuStripSourceControlValue 호환성 스위치가 지원되지 않음](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported)
+- [UseLegacyImages 호환성 스위치가 지원되지 않음](#uselegacyimages-compatibility-switch-not-supported)
+- [AccessibleObject.RuntimeIDFirstItem에 대한 액세스 변경](#change-of-access-for-accessibleobjectruntimeidfirstitem)
+- [Windows Forms에서 중복된 API가 제거되었습니다.](#duplicated-apis-removed-from-windows-forms)
 
 ## <a name="net-core-31"></a>.NET Core 3.1
 
@@ -21,6 +39,62 @@ Windows Forms 지원이 버전 3.0의 .NET Core에 추가되었습니다. 이 �
 
 [!INCLUDE[CellFormatting event](~/includes/core-changes/windowsforms/3.1/cellformatting-event-not-raised.md)]
 
-## <a name="see-also"></a>참고 항목
+***
 
-- [Windows Forms의 호환성이 손상되는 변경(.NET Framework에서 .NET Core로 변경)](../porting/winforms-breaking-changes.md)
+## <a name="net-core-30"></a>.NET Core 3.0
+
+[!INCLUDE[Control.DefaultFont changed to Segoe UI 9pt](~/includes/core-changes/windowsforms/3.0/control-defaultfont-changed.md)]
+
+***
+
+[!INCLUDE[Modernization of the FolderBrowserDialog](~/includes/core-changes/windowsforms/3.0/modernized-folderbrowserdialog.md)]
+
+***
+
+[!INCLUDE[SerializableAttribute removed from some Windows Forms types](~/includes/core-changes/windowsforms/3.0/remove-serializationattribute.md)]
+
+***
+
+[!INCLUDE[Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls compatibility switch not supported](~/includes/core-changes/windowsforms/3.0/deprecate-allowupdatechildcontrolindexfortabcontrols.md)]
+
+***
+
+[!INCLUDE[Switch.System.Windows.Forms.DomainUpDown.UseLegacyScrolling compatibility switch not supported](~/includes/core-changes/windowsforms/3.0/deprecate-uselegacyscrolling.md)]
+
+***
+
+[!INCLUDE[Switch.System.Windows.Forms.DoNotLoadLatestRichEditControl compatibility switch not supported](~/includes/core-changes/windowsforms/3.0/deprecate-donotloadlatestricheditcontrol.md)]
+
+***
+
+[!INCLUDE[Switch.System.Windows.Forms.DoNotSupportSelectAllShortcutInMultilineTextBox compatibility switch not supported](~/includes/core-changes/windowsforms/3.0/deprecate-donotsupportselectallshortcutinmultilinetextbox.md)]
+
+***
+
+[!INCLUDE[Switch.System.Windows.Forms.DontSupportReentrantFilterMessage compatibility switch not supported](~/includes/core-changes/windowsforms/3.0/deprecate-dontsupportreentrantfiltermessage.md)]
+
+***
+
+[!INCLUDE[Switch.System.Windows.Forms.EnableVisualStyleValidation compatibility switch not supported](~/includes/core-changes/windowsforms/3.0/deprecate-enablevisualstylevalidation.md)]
+
+***
+
+[!INCLUDE[Switch.System.Windows.Forms.UseLegacyContextMenuStripSourceControlValue compatibility switch not supported](~/includes/core-changes/windowsforms/3.0/deprecate-uselegacycontextmenustripsourcecontrolvalue.md)]
+
+***
+
+[!INCLUDE[Switch.System.Windows.Forms.UseLegacyImages compatibility switch not supported](~/includes/core-changes/windowsforms/3.0/deprecate-uselegacyimages.md)]
+
+***
+
+[!INCLUDE[Change of access for AccessibleObject.RuntimeIDFirstItem](~/includes/core-changes/windowsforms/3.0/changed-access-for-runtimeidfirstitem.md)]
+
+***
+
+[!INCLUDE[Duplicated APIs removed from Windows Forms](~/includes/core-changes/windowsforms/3.0/remove-duplicated-apis.md)]
+
+***
+
+## <a name="see-also"></a>참조
+
+- [.NET Core에 Windows Forms 앱 포팅](../porting/winforms.md)

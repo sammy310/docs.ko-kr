@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: a9d0fe3516ade04bc38b804268a9d989f6891d80
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 9631e64bb403a3fe7b1b91e8ac592b57ce8068d9
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74643882"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937018"
 ---
-### <a name="switchsystemwindowsformsdonotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported"></a>Switch.System.Windows.Forms.DoNotSupportSelectAllShortcutInMultilineTextBox 호환성 스위치가 지원되지 않음
+### <a name="donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported"></a>DoNotSupportSelectAllShortcutInMultilineTextBox 호환성 스위치가 지원되지 않음
 
 .NET Framework 4.6.1에서 도입된 `Switch.System.Windows.Forms.DoNotSupportSelectAllShortcutInMultilineTextBox` 호환성 스위치는 .NET Core 3.0의 Windows Forms에서 지원되지 않습니다.
 
@@ -20,7 +20,7 @@ ms.locfileid: "74643882"
 
 3.0 미리 보기 9
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 스위치를 제거합니다. 이 스위치는 지원되지 않으며, 사용 가능한 대체 기능이 없습니다.
 

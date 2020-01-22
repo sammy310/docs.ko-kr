@@ -4,12 +4,12 @@ description: Windows용 .NET Core에 .NET Framework Windows Forms 애플리케�
 author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
-ms.openlocfilehash: 959b506fe23691e160d7e88e0ae61cc71c1f3421
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: dbd522851faa0a4fe435199914a034ee230d3455
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567283"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116028"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>.NET Core에 Windows Forms 데스크톱 앱을 포팅하는 방법
 
@@ -24,7 +24,7 @@ ms.locfileid: "74567283"
 | **MyFormsCore.csproj** | 만들 새 .NET Core 프로젝트의 이름입니다. |
 | **MyAppCore.exe** | .NET Core Windows Forms 앱 실행 파일입니다. |
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 - 수행할 디자이너 작업용 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)
 
@@ -106,7 +106,7 @@ SolutionFolder
     └───MyFormsCore.csproj
 ```
 
-**SolutionFolder** 디렉터리에서 Visual Studio 또는 .NET Core CLI를 사용하여 **MyFormsCore.csproj** 프로젝트를 **MyApps.sln**에 추가하려고 합니다.
+**SolutionFolder** 디렉터리에서 Visual Studio 또는 .NET Core CLI를 사용하여 **MyFormsCore.csproj** 프로젝트를 **MyApps.sln**에 추가합니다.
 
 ```dotnetcli
 dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
@@ -287,7 +287,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj package Microsoft.Windows.Compati
 
 ```xml
   <ItemGroup>
-    <PackageReference Include="Microsoft.Windows.Compatibility" Version="2.0.1" />
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="3.1.0" />
   </ItemGroup>
 ```
 
@@ -299,6 +299,7 @@ Visual Studio 2019가 Windows Forms 디자이너를 지원하면 .NET Core 프�
 
 ## <a name="next-steps"></a>다음 단계
 
+- [.NET Framework에서 .NET Core로의 주요 변경 사항](../compatibility/fx-core.md)을 알아보세요.
 - [Windows 호환성 팩][compat-pack]에 대해 자세히 알아봅니다.
 - .NET Framework Windows Forms 프로젝트를 .NET Core에 [포팅하는 방법에 관한 동영상](https://www.youtube.com/watch?v=upVQEUc_KwU)을 봅니다.
 

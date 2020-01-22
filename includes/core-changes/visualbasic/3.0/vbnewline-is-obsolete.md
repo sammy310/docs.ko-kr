@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 86cdb845c436f424bbcc70e0736568031143b204
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 95a4c807f5c1077cf52f54b196e904ebc98c32f8
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567445"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116380"
 ---
 ### <a name="microsoftvisualbasicconstantsvbnewline-is-obsolete"></a>Microsoft.VisualBasic.Constants.vbNewLine은 사용되지 않습니다
 
-<xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName> 상수는 .NET Core 3.0 미리 보기 8부터 [사용되지 않음](xref:System.ObsoleteAttribute)으로 표시됩니다.
+<xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName> 상수는 .NET Core 3.0 미리 보기 8부터 [\[사용되지 않음\]](xref:System.ObsoleteAttribute)으로 표시됩니다.
 
 #### <a name="version-introduced"></a>도입된 버전
 
@@ -16,15 +16,15 @@ ms.locfileid: "74567445"
 
 #### <a name="change-description"></a>변경 내용 설명
 
-.NET Core 3.0 미리 보기 8부터 <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName> 상수에 [Obsolete](xref:System.ObsoleteAttribute) 특성이 적용되었습니다. 이 상수를 사용하면 컴파일러 경고가 생성됩니다. .NET Core 및 .NET Framework의 이전 릴리스에서는 사용되지 않음으로 표시되지 않았습니다.
+.NET Core 3.0 미리 보기 8부터 <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName> 상수에 [Obsolete](xref:System.ObsoleteAttribute) 특성이 적용되었습니다. 이 상수를 사용하면 컴파일러 경고가 생성됩니다. .NET Framework 및 .NET Core의 이전 릴리스에서는 사용되지 않음으로 표시되지 않았습니다.
 
-이 변경은 다중 플랫폼 개발 언어로 Visual Basic을 지원하기 위해 적용된 것입니다. `vbNewLine` 상수는 Windows의 줄 바꿈 문자 시퀀스인 `\r\n`과 동일합니다. Unix 기반 시스템에서 줄 바꿈 문자는 `\n`입니다.
+이 변경은 다중 플랫폼 개발 언어로 Visual Basic을 지원하기 위해 적용된 것입니다. <xref:Microsoft.VisualBasic.Constants.vbNewLine> 상수는 Windows의 줄 바꿈 문자 시퀀스인 `\r\n`과 동일합니다. Unix 기반 시스템에서 줄 바꿈 문자는 `\n`입니다.
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
-`vbNewLine`의 [Obsolete](xref:System.ObsoleteAttribute) 특성 메시지에는 다음 권장 사항이 포함됩니다.
+<xref:Microsoft.VisualBasic.Constants.vbNewLine>의 [Obsolete](xref:System.ObsoleteAttribute) 특성 메시지에는 다음 권장 사항이 포함됩니다.
 
-> 캐리지 리턴 및 줄 바꿈의 경우 [vbCrLf](xref:Microsoft.VisualBasic.Constants.vbCrLf)를 사용합니다. 현재 플랫폼의 줄 바꿈의 경우 <xref:System.Environment.NewLine?displayProperty=nameWithType>를 사용합니다.
+캐리지 리턴 및 줄 바꿈의 경우 <xref:Microsoft.VisualBasic.Constants.vbCrLf>를 사용합니다. 현재 플랫폼의 줄 바꿈의 경우 <xref:System.Environment.NewLine?displayProperty=nameWithType>를 사용합니다.
 
 #### <a name="category"></a>범주
 

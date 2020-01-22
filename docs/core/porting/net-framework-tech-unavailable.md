@@ -3,18 +3,18 @@ title: .NET Core에서 사용할 수 없는 .NET Framework 기술
 description: .NET Core에서 사용할 수 없는 .NET Framework 기술에 대해 알아보기
 author: cartermp
 ms.date: 04/30/2019
-ms.openlocfilehash: d474b694b80b2f0e74dd2916106016802f7e0c68
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.openlocfilehash: 89871753fef92a30bf2151a618207a73b40bb402
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75777306"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936953"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Core에서 사용할 수 없는 .NET Framework 기술
 
 .NET Framework 라이브러리에서 사용할 수 있는 AppDomain, 원격, CAS(코드 액세스 보안), 보안 투명도, System.EnterpriseServices 같은 몇몇 기술은 .NET Core에서 사용할 수 없습니다. 라이브러리가 이러한 기술 중 하나 이상에 의존하는 경우 아래에 설명된 대체 방법을 고려하세요. API 호환성에 대한 자세한 내용은 [.NET Core 호환성이 손상되는 변경 사항](../compatibility/breaking-changes.md)을 참조하세요.
 
-API 또는 기술이 현재 구현되지 않았기 때문에 이들을 고의로 지원하지 않는 것은 아닙니다. 특정 문제가 의도적으로 발생하는 것인지 확인하려면 .NET Core용 GitHub 리포지토리를 검색합니다. 이를 찾지 못한 경우 [dotnet/runtime 리포지토리](https://github.com/dotnet/runtime/issues)에 문제를 신고하여 특정 API 및 기술을 요청하세요. 요청을 이식하는 문제는 [port-to-core](https://github.com/dotnet/runtime/labels/port-to-core) 레이블로 표시됩니다.
+API 또는 기술이 현재 구현되지 않았기 때문에 이들을 고의로 지원하지 않는 것은 아닙니다. 특정 문제가 의도적으로 발생하는 것인지 확인하려면 .NET Core용 GitHub 리포지토리를 검색합니다. 이를 찾지 못한 경우 [dotnet/runtime 리포지토리](https://github.com/dotnet/runtime/issues)에 이슈를 보고하고 특정 API 및 기술을 요청하세요. 요청을 이식하는 문제는 [port-to-core](https://github.com/dotnet/runtime/labels/port-to-core) 레이블로 표시됩니다.
 
 ## <a name="appdomains"></a>AppDomain
 
@@ -46,7 +46,6 @@ CAS와 마찬가지로 보안 투명도는 샌드박스 코드를 보안상 중�
 
 System.EnterpriseServices(COM+)는 .NET Core에서 지원되지 않습니다.
 
-## <a name="next-steps"></a>다음 단계
+## <a name="see-also"></a>참조
 
->[!div class="nextstepaction"]
->[종속성 분석](third-party-deps.md)
+- [.NET Framework에서 .NET Core로의 이식 개요](../porting/index.md)

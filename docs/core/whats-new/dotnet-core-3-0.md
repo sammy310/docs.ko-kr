@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 10/22/2019
-ms.openlocfilehash: 8c2d586a444412abd67198ad7f295e81cb3101fb
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: eb1815f965e86a6f8f709b32f84f879eb03de447
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567329"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115807"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0의 새로운 기능
 
@@ -497,9 +497,13 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 ### <a name="fast-built-in-json-support"></a>빠른 기본 제공 JSON 지원
 
-.NET 사용자는 [**Json.NET**](https://www.newtonsoft.com/json) 및 여전히 유용한 기타 인기 있는 JSON 라이브러리를 많이 사용해 왔습니다. **Json.NET**은 내부적으로 UTF-16인 .NET 문자열을 기본 데이터 형식으로 사용합니다.
+.NET 사용자는 [Newtonsoft.Json](https://www.newtonsoft.com/json) 및 여전히 유용한 기타 인기 있는 JSON 라이브러리를 많이 사용해 왔습니다. `Newtonsoft.Json`은 내부적으로 UTF-16인 .NET 문자열을 기본 데이터 형식으로 사용합니다.
 
-새로 기본 제공되는 JSON 지원은 성능이 높고, 할당이 낮으며 `Span<byte>`를 기반으로 합니다. <xref:System.Text.Json> 네임스페이스 및 형식에 대한 자세한 내용은 [.NET의 JSON serialization - 개요](../../standard/serialization/system-text-json-overview.md)를 참조하세요. 일반적인 JSON serialization 시나리오에 대한 자습서는 [.NET에서 JSON을 직렬화 및 역직렬화하는 방법](../../standard/serialization/system-text-json-how-to.md)을 참조하세요.
+새로운 기본 제공 JSON 지원은 고성능, 낮은 할당이며 UTF-8로 인코딩된 JSON 텍스트와 함께 작동합니다. <xref:System.Text.Json> 네임스페이스 및 형식에 대한 자세한 내용은 다음 문서를 참조하세요.
+
+* [.NET의 JSON serialization - 개요](../../standard/serialization/system-text-json-overview.md)
+* [.NET에서 JSON을 직렬화 및 역직렬화하는 방법](../../standard/serialization/system-text-json-how-to.md)
+* [Newtonsoft.json에서 System.Text.Json으로 마이그레이션하는 방법](../../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md)
 
 ### <a name="http2-support"></a>HTTP/2 지원
 
@@ -520,4 +524,4 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 ## <a name="next-steps"></a>다음 단계
 
 - [.NET Core 2.2 및 3.0 간의 호환성이 손상되는 변경 검토](../compatibility/2.2-3.0.md)
-- [Windows Forms 앱의 .NET Framework 및 .NET Core 3.0 간의 호환성이 손상되는 변경 검토](../porting/winforms-breaking-changes.md)
+- [Windows Forms 앱용 .NET Core 3.0의 주요 변경 사항을 검토합니다.](../compatibility/winforms.md#net-core-30)

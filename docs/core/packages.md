@@ -3,12 +3,12 @@ title: 패키지, 메타패키지 및 프레임워크 - .NET Core
 description: 패키지, 메타패키지 및 프레임워크 용어에 관해 알아봅니다.
 author: richlander
 ms.date: 06/20/2016
-ms.openlocfilehash: bd40ca603aaa9685fca9934368895bf7e945d962
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 6a8e257ebf493365518dd9663fbd2a9cadc83875
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715514"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116058"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>패키지, 메타패키지 및 프레임워크
 
@@ -18,7 +18,7 @@ ms.locfileid: "75715514"
 
 ## <a name="packages"></a>패키지
 
-.NET Core는 기본 형식, 더 높은 수준의 데이터 형식, 앱 구성 형식 및 공통 유틸리티를 제공하는 패키지 집합으로 나누어집니다. 이러한 각 패키지는 동일한 이름의 단일 어셈블리를 나타냅니다. 예를 들어 [System.Runtime](https://www.nuget.org/packages/System.Runtime)은 System.Runtime.dll을 포함합니다. 
+.NET Core는 기본 형식, 더 높은 수준의 데이터 형식, 앱 구성 형식 및 공통 유틸리티를 제공하는 패키지 집합으로 나누어집니다. 각 패키지는 동일한 이름의 단일 어셈블리를 나타냅니다. 예를 들어 [System.Runtime 패키지](https://www.nuget.org/packages/System.Runtime)는 System.Runtime.dll을 포함합니다. 
 
 세분화된 방식으로 패키지를 정의하는 데 따른 이점이 있습니다.
 
@@ -108,7 +108,7 @@ ms.locfileid: "75715514"
 
 ### <a name="net-standard"></a>.NET Standard
 
-.NET Standard([대상 프레임워크 모니커](../standard/frameworks.md): `netstandard`) 프레임워크는 [.NET Standard](../standard/net-standard.md)에 의해 정의되고 그 위에 빌드되는 API를 나타냅니다. 여러 런타임에서 실행되도록 만들어진 라이브러리는 이 프레임워크를 대상으로 하며, .NET Core, .NET Framework 및 Mono/Xamarin 같은 .NET 표준 호환 런타임에서 지원됩니다. 이러한 각 런타임은 구현하는 API에 따라 .NET 표준 버전 집합을 지원합니다.
+.NET Standard([대상 프레임워크 모니커](../standard/frameworks.md): `netstandard`) 프레임워크는 [.NET Standard](../standard/net-standard.md)에 의해 정의되고 그 위에 빌드되는 API를 나타냅니다. 여러 런타임에서 실행되도록 만들어진 라이브러리는 이 프레임워크를 대상으로 하며, .NET Core, .NET Framework 및 Mono/Xamarin 같은 .NET Standard 호환 런타임에서 지원됩니다. 이러한 각 런타임은 구현하는 API에 따라 .NET 표준 버전 집합을 지원합니다.
 
 `netstandard` 프레임워크는 [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library) 메타패키지를 암시적으로 참조합니다. 예를 들어 다음 MSBuild 프로젝트 파일은 프로젝트가 [`NETStandard.Library` 버전 1.6](https://www.nuget.org/packages/NETStandard.Library/1.6.0) 메타패키지를 참조하는 `netstandard1.6`을 대상으로 지정함을 나타냅니다.
 

@@ -2,16 +2,16 @@
 title: .NET Core에서 지원되지 않는 API
 description: .NET Core에서 항상 예외를 throw하는 .NET Framework의 API를 알아봅니다.
 ms.date: 12/23/2019
-ms.openlocfilehash: 0cb533f10d53fd3d287265032e3de13c242a8ae0
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: f27aeca31226a95dacf100813762eedb56876fbd
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901345"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936980"
 ---
 # <a name="apis-that-always-throw-exceptions-on-net-core"></a>.NET Core에서 항상 예외를 throw하는 API
 
-다음 API는 지정된 플랫폼의 .NET Core에서 실행될 때 항상 <xref:System.PlatformNotSupportedException>을 통해 수행됩니다.
+다음 API는 모든 또는 일부 플랫폼의 .NET Core에서 <xref:System.PlatformNotSupportedException>를 throw합니다.
 
 이 문서에서는 네임스페이스별로 영향을 받는 API 멤버를 구성합니다.
 
@@ -22,7 +22,7 @@ ms.locfileid: "75901345"
 
 ## <a name="system"></a>시스템
 
-| 멤버 | 플랫폼 |
+| 멤버 | throw되는 플랫폼 |
 | - | - |
 | <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> | 모두 |
 | <xref:System.AppDomain.ExecuteAssembly(System.String,System.String[],System.Byte[],System.Configuration.Assemblies.AssemblyHashAlgorithm)?displayProperty=nameWithType> | 모두 |
@@ -37,7 +37,7 @@ ms.locfileid: "75901345"
 
 ## <a name="systemcodedomcompiler"></a>System.CodeDom.Compiler
 
-| 멤버 | 플랫폼 |
+| 멤버 | throw되는 플랫폼 |
 | - | - |
 | <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromDom%2A?displayProperty=nameWithType> | 모두 |
 | <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromFile%2A?displayProperty=nameWithType> | 모두 |
@@ -45,7 +45,7 @@ ms.locfileid: "75901345"
 
 ## <a name="systemcollectionsspecialized"></a>System.Collections.Specialized
 
-| 멤버 | 플랫폼 |
+| 멤버 | throw되는 플랫폼 |
 | - | - |
 | <xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 모두 |
 | <xref:System.Collections.Specialized.NameObjectCollectionBase.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 모두 |
@@ -53,13 +53,13 @@ ms.locfileid: "75901345"
 
 ## <a name="systemconfiguration"></a>System.Configuration
 
-| 멤버 | 플랫폼 |
+| 멤버 | throw되는 플랫폼 |
 | - | - |
 | <xref:System.Configuration.RsaProtectedConfigurationProvider?displayProperty=nameWithType>(모든 멤버) | 모두 |
 
 ## <a name="systemconsole"></a>System.Console
 
-| 멤버 | 플랫폼 |
+| 멤버 | throw되는 플랫폼 |
 | - | - |
 | <xref:System.Console.Beep?displayProperty=nameWithType> | Linux 및 macOS |
 | <xref:System.Console.BufferHeight?displayProperty=nameWithType>(설정만) | Linux 및 macOS |
@@ -77,13 +77,13 @@ ms.locfileid: "75901345"
 
 ## <a name="systemdatacommon"></a>System.Data.Common
 
-| 멤버 | 플랫폼 |
+| 멤버 | throw되는 플랫폼 |
 | - | - |
 | <xref:System.Data.Common.DbDataReader.GetSchemaTable%2A?displayProperty=nameWithType>(<xref:System.NotSupportedException> throw) | 모두 |
 
 ## <a name="systemdiagnosticsprocess"></a>System.Diagnostics.Process
 
-| 멤버 | 플랫폼 |
+| 멤버 | throw되는 플랫폼 |
 | - | - |
 | <xref:System.Diagnostics.Process.MaxWorkingSet?displayProperty=nameWithType>(설정만) | Linux |
 | <xref:System.Diagnostics.Process.MinWorkingSet?displayProperty=nameWithType>(설정만) | Linux |
@@ -100,14 +100,14 @@ ms.locfileid: "75901345"
 
 ## <a name="systemio"></a>System.IO
 
-| 멤버 | 플랫폼 |
+| 멤버 | throw되는 플랫폼 |
 | - | - |
 | <xref:System.IO.FileSystemInfo.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 모두 |
 | <xref:System.IO.FileSystemInfo.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 모두 |
 
 ## <a name="systemiopipes"></a>System.IO.Pipes
 
-| 멤버 | 플랫폼 |
+| 멤버 | throw되는 플랫폼 |
 | - | - |
 | <xref:System.IO.Pipes.NamedPipeClientStream.NumberOfServerInstances?displayProperty=nameWithType> | Linux 및 macOS |
 | <xref:System.IO.Pipes.NamedPipeServerStream.GetImpersonationUserName?displayProperty=nameWithType> | Linux 및 macOS |
@@ -118,13 +118,13 @@ ms.locfileid: "75901345"
 
 ## <a name="systemmedia"></a>System.Media
 
-| 멤버 | 플랫폼 |
+| 멤버 | throw되는 플랫폼 |
 | - | - |
 | <xref:System.Media.SoundPlayer.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 모두 |
 
 ## <a name="systemnet"></a>System.Net
 
-| 멤버 | 플랫폼 |
+| 멤버 | throw되는 플랫폼 |
 | - | - |
 | <xref:System.Net.AuthenticationManager.Authenticate(System.String,System.Net.WebRequest,System.Net.ICredentials)?displayProperty=nameWithType> | 모두 |
 | <xref:System.Net.AuthenticationManager.PreAuthenticate(System.Net.WebRequest,System.Net.ICredentials)?displayProperty=nameWithType> | 모두 |
@@ -146,25 +146,25 @@ ms.locfileid: "75901345"
 
 ## <a name="systemnetnetworkinformation"></a>System.Net.NetworkInformation
 
-| 멤버 | 플랫폼 |
+| 멤버 | throw되는 플랫폼 |
 | - | - |
 | <xref:System.Net.NetworkInformation.Ping.Send%2A?displayProperty=nameWithType> | Windows(UWP) |
 
 ## <a name="systemnetsockets"></a>System.Net.Sockets
 
-| 멤버 | 플랫폼 |
+| 멤버 | throw되는 플랫폼 |
 | - | - |
 | <xref:System.Net.Sockets.Socket.DuplicateAndClose(System.Int32)?displayProperty=nameWithType> | 모두 |
 
 ## <a name="systemnetwebsockets"></a>System.Net.WebSockets
 
-| 멤버 | 플랫폼 |
+| 멤버 | throw되는 플랫폼 |
 | - | - |
 | <xref:System.Net.WebSockets.WebSocket.RegisterPrefixes?displayProperty=nameWithType> | 모두 |
 
 ## <a name="systemreflection"></a>System.Reflection
 
-| 멤버 | 플랫폼 |
+| 멤버 | throw되는 플랫폼 |
 | - | - |
 | <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> | 모두 |
 | <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom(System.String)?displayProperty=nameWithType> | 모두 |
@@ -176,13 +176,13 @@ ms.locfileid: "75901345"
 
 ## <a name="systemruntimecompilerservices"></a>System.Runtime.CompilerServices
 
-| 멤버 | 플랫폼 |
+| 멤버 | throw되는 플랫폼 |
 | - | - |
 | <xref:System.Runtime.CompilerServices.DebugInfoGenerator.CreatePdbGenerator?displayProperty=nameWithType> | 모두 |
 
 ## <a name="systemruntimeinteropservices"></a>System.Runtime.InteropServices
 
-| 멤버 | 플랫폼 |
+| 멤버 | throw되는 플랫폼 |
 | - | - |
 | <xref:System.Runtime.InteropServices.Marshal.GetIDispatchForObject(System.Object)?displayProperty=nameWithType> | 모두 |
 | <xref:System.Runtime.InteropServices.RuntimeEnvironment.SystemConfigurationFile?displayProperty=nameWithType> | 모두 |
@@ -194,13 +194,13 @@ ms.locfileid: "75901345"
 
 ## <a name="systemruntimeserialization"></a>System.Runtime.Serialization
 
-| 멤버 | 플랫폼 |
+| 멤버 | throw되는 플랫폼 |
 | - | - |
 | <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas?displayProperty=nameWithType> | 모두 |
 
 ## <a name="systemsecurity"></a>System.Security
 
-| 멤버 | 플랫폼 |
+| 멤버 | throw되는 플랫폼 |
 | - | - |
 | <xref:System.Security.CodeAccessPermission.Deny?displayProperty=nameWithType> | 모두 |
 | <xref:System.Security.CodeAccessPermission.PermitOnly?displayProperty=nameWithType> | 모두 |
@@ -219,7 +219,7 @@ ms.locfileid: "75901345"
 
 ## <a name="systemsecurityclaims"></a>System.Security.Claims
 
-| 멤버 | 플랫폼 |
+| 멤버 | throw되는 플랫폼 |
 | - | - |
 | <xref:System.Security.Claims.ClaimsPrincipal.%23ctor?displayProperty=nameWithType> | 모두 |
 | <xref:System.Security.Claims.ClaimsPrincipal.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 모두 |
@@ -229,7 +229,7 @@ ms.locfileid: "75901345"
 
 ## <a name="systemsecuritycryptography"></a>System.Security.Cryptography
 
-| 멤버 | 플랫폼 |
+| 멤버 | throw되는 플랫폼 |
 | - | - |
 | <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create(System.String)?displayProperty=nameWithType> | 모두 |
 | <xref:System.Security.Cryptography.CspKeyContainerInfo.%23ctor%2A?displayProperty=nameWithType> | Linux 및 macOS |
@@ -263,7 +263,7 @@ ms.locfileid: "75901345"
 
 ## <a name="systemsecuritycryptographypkcs"></a>System.Security.Cryptography.Pkcs
 
-| 멤버 | 플랫폼 |
+| 멤버 | throw되는 플랫폼 |
 | - | - |
 | <xref:System.Security.Cryptography.Pkcs.CmsSigner.%23ctor(System.Security.Cryptography.CspParameters)?displayProperty=nameWithType> | 모두 |
 | <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> | 모두 |
@@ -271,7 +271,7 @@ ms.locfileid: "75901345"
 
 ## <a name="systemsecuritycryptographyx509certificates"></a>System.Security.Cryptography.X509Certificates
 
-| 멤버 | 플랫폼 |
+| 멤버 | throw되는 플랫폼 |
 | - | - |
 | <xref:System.Security.Cryptography.X509Certificates.X509Certificate.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 모두 |
 | <xref:System.Security.Cryptography.X509Certificates.X509Certificate.Import%2A?displayProperty=nameWithType> | 모두 |
@@ -280,31 +280,31 @@ ms.locfileid: "75901345"
 
 ## <a name="systemsecurityauthenticationextendedprotection"></a>System.Security.Authentication.ExtendedProtection
 
-| 멤버 | 플랫폼 |
+| 멤버 | throw되는 플랫폼 |
 | - | - |
 | <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 모두 |
 
 ## <a name="systemsecuritypolicy"></a>System.Security.Policy
 
-| 멤버 | 플랫폼 |
+| 멤버 | throw되는 플랫폼 |
 | - | - |
 | <xref:System.Security.Policy.Hash.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 모두 |
 
 ## <a name="systemserviceprocessservicecontroller"></a>System.ServiceProcess.ServiceController
 
-| 멤버 | 플랫폼 |
+| 멤버 | throw되는 플랫폼 |
 | - | - |
 | <xref:System.ServiceProcess.TimeoutException.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 모두 |
 
 ## <a name="systemtextregularexpressions"></a>System.Text.RegularExpressions
 
-| 멤버 | 플랫폼 |
+| 멤버 | throw되는 플랫폼 |
 | - | - |
 | <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> | 모두 |
 
 ## <a name="systemthreading"></a>System.Threading
 
-| 멤버 | 플랫폼 |
+| 멤버 | throw되는 플랫폼 |
 | - | - |
 | <xref:System.Threading.CompressedStack.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 모두 |
 | <xref:System.Threading.ExecutionContext.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 모두 |
@@ -315,7 +315,7 @@ ms.locfileid: "75901345"
 
 ## <a name="systemxml"></a>System.Xml
 
-| 멤버 | 플랫폼 |
+| 멤버 | throw되는 플랫폼 |
 | - | - |
 | <xref:System.Xml.XmlDictionaryReader.CreateMtomReader(System.Byte[],System.Int32,System.Int32,System.Text.Encoding[],System.String,System.Xml.XmlDictionaryReaderQuotas,System.Int32,System.Xml.OnXmlDictionaryReaderClose)?displayProperty=nameWithType> | 모두 |
 | <xref:System.Xml.XmlDictionaryReader.CreateMtomReader(System.IO.Stream,System.Text.Encoding[],System.String,System.Xml.XmlDictionaryReaderQuotas,System.Int32,System.Xml.OnXmlDictionaryReaderClose)?displayProperty=nameWithType> | 모두 |

@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: a9f47c2909375251460b45792822e491d56fb242
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: eba3d21cfc787c5d388de31f988b835522118151
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75342856"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936920"
 ---
 # <a name="whats-new-in-net-core-31"></a>.NET Core 3.1의 새로운 기능
 
@@ -72,4 +72,4 @@ Visual Studio 2019 16.4에서 C++/CLI에 대한 지원을 추가하려면 [C++ �
 ## <a name="next-steps"></a>다음 단계
 
 - [.NET Core 3.0 및 3.1 간의 호환성이 손상되는 변경을 검토합니다.](../compatibility/3.0-3.1.md)
-- [Windows Forms 앱의 .NET Framework 및 .NET Core 3.0 간의 호환성이 손상되는 변경 검토](../porting/winforms-breaking-changes.md)
+- [Windows Forms 앱용 .NET Core 3.1의 주요 변경 사항을 검토합니다.](../compatibility/winforms.md#net-core-31)
