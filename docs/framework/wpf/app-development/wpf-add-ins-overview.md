@@ -1,5 +1,5 @@
 ---
-title: WPF 추가 기능 개요
+title: 추가 기능 개요
 ms.date: 03/30/2017
 helpviewer_keywords:
 - add-ins and XAML browser applications [WPF]
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 319f8b8c0225c7730112b1db073884b391945ac8
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 93904e308932ea41c736ca849ce0efb200502a7e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421095"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738948"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF 추가 기능 개요
 
@@ -25,7 +25,7 @@ ms.locfileid: "73421095"
 
 <a name="Requirements"></a>
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>전제 조건
 
 .NET Framework 추가 기능 모델에 대해 잘 알고 있어야 합니다. 자세한 내용은 [추가 기능 및 확장성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))을 참조하세요.
 
@@ -100,11 +100,11 @@ WPF를 .NET Framework 추가 기능 모델과 함께 사용 하면 호스트 응
 
 원격으로 사용 가능한 개체는 다음 중 하나 이상을 수행하는 클래스의 인스턴스입니다.
 
-- <xref:System.MarshalByRefObject> 클래스에서 파생 됩니다.
+- 파생 되는 <xref:System.MarshalByRefObject> 클래스입니다.
 
 - <xref:System.Runtime.Serialization.ISerializable> 인터페이스를 구현합니다.
 
-- <xref:System.SerializableAttribute> 특성이 적용 됩니다.
+- 에 <xref:System.SerializableAttribute> 특성을 적용 합니다.
 
 > [!NOTE]
 > 원격으로 사용할 .NET Framework 개체 만들기에 대 한 자세한 내용은 [개체를 원격](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))으로 만들기를 참조 하세요.
@@ -252,7 +252,7 @@ WPF 사용자 인터페이스에서 창 핸들로 식별 되는 사용자 인터
 
 ## <a name="wpf-add-in-benefits"></a>WPF 추가 기능의 이점
 
-WPF 추가 기능 사용자 인터페이스는 <xref:System.Windows.Interop.HwndHost>에서 파생 되는 내부 클래스를 사용 하 여 호스트 응용 프로그램에서 표시 되기 때문에 해당 사용자 인터페이스는 레이아웃, 렌더링, 데이터 등의 WPF UI 서비스와 관련 하 여 <xref:System.Windows.Interop.HwndHost> 기능에 의해 제한 됩니다. 바인딩, 스타일, 템플릿 및 리소스입니다. 그러나 WPF는 다음을 포함 하는 추가 기능을 사용 하 여 내부 <xref:System.Windows.Interop.HwndHost> 하위 클래스를 보강 합니다.
+WPF 추가 기능 사용자 인터페이스는 <xref:System.Windows.Interop.HwndHost>에서 파생 되는 내부 클래스를 사용 하 여 호스트 응용 프로그램에서 표시 되기 때문에 이러한 사용자 인터페이스는 레이아웃, 렌더링, 데이터 바인딩, 스타일, 템플릿 및 리소스와 같은 WPF UI 서비스와 관련 하 여 <xref:System.Windows.Interop.HwndHost> 기능에 의해 제한 됩니다. 그러나 WPF는 다음을 포함 하는 추가 기능을 사용 하 여 내부 <xref:System.Windows.Interop.HwndHost> 하위 클래스를 보강 합니다.
 
 - 호스트 응용 프로그램의 UI와 추가 기능의 UI 사이를 이동 합니다. "추가 기능에서 UI" 프로그래밍 모델을 사용 하려면 추가 기능이 완전히 신뢰 되는지 아니면 부분적으로 신뢰할 수 있는지에 관계 없이 탭 이동이 가능 하도록 추가 기능 측 어댑터가 <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>을 재정의 해야 합니다.
 

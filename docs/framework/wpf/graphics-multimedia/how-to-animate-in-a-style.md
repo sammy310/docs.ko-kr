@@ -1,16 +1,16 @@
 ---
-title: 스타일에서 애니메이션 효과를 주는 방법 (WPF)
+title: 스타일에서 애니메이션 효과를 주는 방법
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], properties [WPF], within styles
 - styles [WPF], animating properties within
 ms.assetid: 6a791f3d-6b1f-4972-a2f9-35880bcfd954
-ms.openlocfilehash: 617d41ca1c97463bf1c61c0d1e2728756fd8f1fb
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 0b29648bf15f0046adcdee610f9565f7deb24972
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459233"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744884"
 ---
 # <a name="how-to-animate-in-a-style"></a>스타일에서 애니메이션 효과를 주는 방법
 
@@ -18,7 +18,7 @@ ms.locfileid: "73459233"
 
 다음 예제에서는 여러 애니메이션이 스타일 내에서 정의 되 고 <xref:System.Windows.Controls.Button>에 적용 됩니다. 사용자가 단추 위로 마우스를 이동 하면 불투명에서 부분적으로 투명 하 게 그리고 다시 반복 해 서 다시 돌아옵니다. 사용자가 마우스를 단추 밖으로 움직이면 완전히 불투명 하 게 됩니다. 단추를 클릭 하면 배경색이 주황색에서 흰색으로 바뀌고 다시 돌아옵니다. 단추를 그리는 데 사용 되는 <xref:System.Windows.Media.SolidColorBrush>를 직접 대상으로 지정할 수 없으므로 단추의 <xref:System.Windows.Controls.Control.Background%2A> 속성에서 dotting down을 사용 하 여 액세스 합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 [!code-xaml[timingbehaviors_snip#21](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StyleStoryboardsExample.xaml#21)]
 

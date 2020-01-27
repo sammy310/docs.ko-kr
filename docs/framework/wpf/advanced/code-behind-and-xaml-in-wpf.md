@@ -1,16 +1,16 @@
 ---
-title: WPF의 코드 숨김 및 XAML
+title: 코드 숨김과 XAML
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: 00427004448997aa234b335b397390f9fabe1bd5
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 212a37fb7fbcb7e66a669d96671333be793956df
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559913"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738097"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>WPF의 코드 숨김 및 XAML
 <a name="introduction"></a>코드 숨김이 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지가 태그 컴파일될 때 태그 정의 개체와 조인 된 코드를 설명 하는 데 사용 되는 용어입니다. 이 항목에서는 코드 숨김으로 사용할 요구 사항 뿐만 아니라 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]코드에 대 한 대체 인라인 코드 메커니즘에 대해 설명 합니다.  

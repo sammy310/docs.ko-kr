@@ -1,5 +1,6 @@
 ---
-title: '연습: WPF에서 Windows Forms 복합 컨트롤 호스팅'
+title: WPF에서 Windows Forms 복합 컨트롤 호스팅
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-ms.openlocfilehash: e42737b9fccd3b91dee2c446dfb0653e57f9dd1b
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 16c09b4bb393fa830412385b4b405dd1fae9878b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197941"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745001"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>연습: WPF에서 Windows Forms 복합 컨트롤 호스팅
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 애플리케이션을 만들기 위한 다양한 환경을 제공합니다. 그러나 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 코드에 상당한 투자가 있는 경우 처음부터 다시 작성 하는 대신 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램에서 해당 코드를 다시 사용 하는 것이 더 효과적일 수 있습니다. 가장 일반적인 시나리오는 기존 Windows Forms 컨트롤이 있는 경우입니다. 경우에 따라 이러한 컨트롤에 대한 소스 코드에 액세스하지 못할 수도 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램에서 이러한 컨트롤을 호스팅하기 위한 간단한 절차를 제공 합니다. 예를 들어, 특수 한 <xref:System.Windows.Forms.DataGridView> 컨트롤을 호스트 하는 동안 대부분의 프로그래밍에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 사용할 수 있습니다.  
@@ -30,7 +31,7 @@ ms.locfileid: "73197941"
   
  이 연습에서 설명 하는 작업의 전체 코드 목록은 [WPF에서 Windows Forms 복합 컨트롤 호스팅 샘플](https://go.microsoft.com/fwlink/?LinkID=159999)을 참조 하세요.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先决条件  
 
 이 연습을 완료하려면 Visual Studio가 필요합니다.
   
@@ -58,7 +59,7 @@ ms.locfileid: "73197941"
   
  프로젝트에는 다음과 같은 시스템 DLL에 대한 참조가 있어야 합니다. 이러한 DLL이 기본적으로 포함되지 않은 경우 프로젝트에 추가합니다.  
   
-- 시스템  
+- System  
   
 - System.Data  
   
@@ -238,7 +239,7 @@ using MyControls;
   
  애플리케이션을 빌드 및 실행합니다. Windows Forms 복합 컨트롤에 일부 텍스트를 추가한 다음 **확인**을 클릭 합니다. 텍스트가 레이블에 나타납니다. 컨트롤에 대한 효과를 확인하려면 다른 라디오 단추를 클릭합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
