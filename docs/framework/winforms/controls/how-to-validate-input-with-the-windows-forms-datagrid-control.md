@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms DataGrid 컨트롤을 사용하여 입력 유효성 검사'
+title: DataGrid 컨트롤을 사용 하 여 입력 유효성 검사
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,25 +11,25 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], validating input
 - validation [Windows Forms], user input
 ms.assetid: f1e9c3a0-d0a1-4893-a615-b4b0db046c63
-ms.openlocfilehash: dc8c8f157e6673c1bddc68bfb511683e6d2b99be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3958089007401d2e977c9c96f07c9196e6216596
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796476"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728289"
 ---
-# <a name="how-to-validate-input-with-the-windows-forms-datagrid-control"></a><span data-ttu-id="674d0-102">방법: Windows Forms DataGrid 컨트롤을 사용하여 입력 유효성 검사</span><span class="sxs-lookup"><span data-stu-id="674d0-102">How to: Validate Input with the Windows Forms DataGrid Control</span></span>
+# <a name="how-to-validate-input-with-the-windows-forms-datagrid-control"></a><span data-ttu-id="7b10f-102">방법: Windows Forms DataGrid 컨트롤을 사용하여 입력 유효성 검사</span><span class="sxs-lookup"><span data-stu-id="7b10f-102">How to: Validate Input with the Windows Forms DataGrid Control</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="674d0-103"><xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="674d0-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="674d0-104">자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="674d0-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>
+> <span data-ttu-id="7b10f-103"><xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7b10f-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="7b10f-104">자세한 내용은 [Windows Forms DataGridView 컨트롤과 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="7b10f-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>
 
-<span data-ttu-id="674d0-105">Windows Forms에 사용할 수 있는 두 가지 유형의 입력된 유효성 검사는 <xref:System.Windows.Forms.DataGrid> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="674d0-105">There are two types of input validation available for the Windows Forms <xref:System.Windows.Forms.DataGrid> control.</span></span> <span data-ttu-id="674d0-106">사용자가 셀을 예를 들어 정수, 문자열에 대 한 허용 되지 않는 데이터 형식의 값을 입력 하려고 하는 경우 새 잘못 된 값을 이전 값으로 바뀝니다.</span><span class="sxs-lookup"><span data-stu-id="674d0-106">If the user attempts to enter a value that is of an unacceptable data type for the cell, for example a string into an integer, the new invalid value is replaced with the old value.</span></span> <span data-ttu-id="674d0-107">이러한 종류의 입력된 유효성 검사는 자동으로 수행 됩니다 하 고 사용자 지정할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="674d0-107">This kind of input validation is done automatically and cannot be customized.</span></span>
+<span data-ttu-id="7b10f-105">Windows Forms <xref:System.Windows.Forms.DataGrid> 컨트롤에 사용할 수 있는 입력 유효성 검사에는 두 가지 유형이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7b10f-105">There are two types of input validation available for the Windows Forms <xref:System.Windows.Forms.DataGrid> control.</span></span> <span data-ttu-id="7b10f-106">사용자가 셀에 대해 허용 되지 않는 데이터 형식의 값 (예: 문자열)을 입력 하려고 하면 새 잘못 된 값이 이전 값으로 바뀝니다.</span><span class="sxs-lookup"><span data-stu-id="7b10f-106">If the user attempts to enter a value that is of an unacceptable data type for the cell, for example a string into an integer, the new invalid value is replaced with the old value.</span></span> <span data-ttu-id="7b10f-107">이러한 종류의 입력 유효성 검사는 자동으로 수행 되며 사용자 지정할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="7b10f-107">This kind of input validation is done automatically and cannot be customized.</span></span>
 
-<span data-ttu-id="674d0-108">예를 들어 0 값 보다 크거나 1 또는 부적절 한 문자열을 해야 하는 필드에 허용 되지 않는 모든 데이터를 거부 하는 다른 유형의 입력된 유효성 검사를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="674d0-108">The other type of input validation can be used to reject any unacceptable data, for example a 0 value in a field that must be greater than or equal to 1, or an inappropriate string.</span></span> <span data-ttu-id="674d0-109">에 대 한 이벤트 처리기를 작성 하 여 데이터 집합에서 이렇게 합니다 <xref:System.Data.DataTable.ColumnChanging> 또는 <xref:System.Data.DataTable.RowChanging> 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="674d0-109">This is done in the dataset by writing an event handler for the <xref:System.Data.DataTable.ColumnChanging> or <xref:System.Data.DataTable.RowChanging> event.</span></span> <span data-ttu-id="674d0-110">사용 하 여 아래 예제는 <xref:System.Data.DataTable.ColumnChanging> 이벤트 사용할 수 없는 값 허용 되지 않습니다 "Product" 열에 대 한 특히 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="674d0-110">The example below uses the <xref:System.Data.DataTable.ColumnChanging> event because the unacceptable value is disallowed for the "Product" column in particular.</span></span> <span data-ttu-id="674d0-111">사용할 수 있습니다는 <xref:System.Data.DataTable.RowChanging> "종료 날짜" 열의 값이 동일한 행에서 "Start Date" 열 보다 크면 확인에 대 한 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="674d0-111">You might use the <xref:System.Data.DataTable.RowChanging> event for checking that the value of an "End Date" column is later than the "Start Date" column in the same row.</span></span>
+<span data-ttu-id="7b10f-108">다른 형식의 입력 유효성 검사를 사용 하 여 허용 되지 않는 데이터 (예: 1 보다 크거나 같은 필드의 0 값 또는 부적절 한 문자열)를 거부할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7b10f-108">The other type of input validation can be used to reject any unacceptable data, for example a 0 value in a field that must be greater than or equal to 1, or an inappropriate string.</span></span> <span data-ttu-id="7b10f-109">이 작업은 <xref:System.Data.DataTable.ColumnChanging> 또는 <xref:System.Data.DataTable.RowChanging> 이벤트에 대 한 이벤트 처리기를 작성 하 여 데이터 집합에서 수행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="7b10f-109">This is done in the dataset by writing an event handler for the <xref:System.Data.DataTable.ColumnChanging> or <xref:System.Data.DataTable.RowChanging> event.</span></span> <span data-ttu-id="7b10f-110">다음 예에서는 특히 "Product" 열에 대해 허용 되지 않는 값이 허용 되지 않기 때문에 <xref:System.Data.DataTable.ColumnChanging> 이벤트를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b10f-110">The example below uses the <xref:System.Data.DataTable.ColumnChanging> event because the unacceptable value is disallowed for the "Product" column in particular.</span></span> <span data-ttu-id="7b10f-111"><xref:System.Data.DataTable.RowChanging> 이벤트를 사용 하 여 "종료 날짜" 열 값이 같은 행의 "시작 날짜" 열 보다 최신 인지 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7b10f-111">You might use the <xref:System.Data.DataTable.RowChanging> event for checking that the value of an "End Date" column is later than the "Start Date" column in the same row.</span></span>
 
-## <a name="to-validate-user-input"></a><span data-ttu-id="674d0-112">사용자 입력의 유효성을 검사 하려면</span><span class="sxs-lookup"><span data-stu-id="674d0-112">To validate user input</span></span>
+## <a name="to-validate-user-input"></a><span data-ttu-id="7b10f-112">사용자 입력의 유효성을 검사 하려면</span><span class="sxs-lookup"><span data-stu-id="7b10f-112">To validate user input</span></span>
 
-1. <span data-ttu-id="674d0-113">처리할 코드를 작성 합니다 <xref:System.Data.DataTable.ColumnChanging> 해당 테이블에 대 한 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="674d0-113">Write code to handle the <xref:System.Data.DataTable.ColumnChanging> event for the appropriate table.</span></span> <span data-ttu-id="674d0-114">부적절 한 입력이 감지 되 면 호출 된 <xref:System.Data.DataRow.SetColumnError%2A> 메서드는 <xref:System.Data.DataRow> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="674d0-114">When inappropriate input is detected, call the <xref:System.Data.DataRow.SetColumnError%2A> method of the <xref:System.Data.DataRow> object.</span></span>
+1. <span data-ttu-id="7b10f-113">적절 한 테이블에 대 한 <xref:System.Data.DataTable.ColumnChanging> 이벤트를 처리 하는 코드를 작성 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b10f-113">Write code to handle the <xref:System.Data.DataTable.ColumnChanging> event for the appropriate table.</span></span> <span data-ttu-id="7b10f-114">부적절 한 입력이 감지 되 면 <xref:System.Data.DataRow> 개체의 <xref:System.Data.DataRow.SetColumnError%2A> 메서드를 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b10f-114">When inappropriate input is detected, call the <xref:System.Data.DataRow.SetColumnError%2A> method of the <xref:System.Data.DataRow> object.</span></span>
 
     ```vb
     Private Sub Customers_ColumnChanging(ByVal sender As Object, _
@@ -66,9 +66,9 @@ ms.locfileid: "61796476"
     }
     ```
 
-2. <span data-ttu-id="674d0-115">이벤트에 이벤트 처리기를 연결 합니다.</span><span class="sxs-lookup"><span data-stu-id="674d0-115">Connect the event handler to the event.</span></span>
+2. <span data-ttu-id="7b10f-115">이벤트 처리기를 이벤트에 연결 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b10f-115">Connect the event handler to the event.</span></span>
 
-    <span data-ttu-id="674d0-116">다음 위치 코드 내에서 양식의 <xref:System.Windows.Forms.Form.Load> 이벤트 또는 생성자입니다.</span><span class="sxs-lookup"><span data-stu-id="674d0-116">Place the following code within either the form's <xref:System.Windows.Forms.Form.Load> event or its constructor.</span></span>
+    <span data-ttu-id="7b10f-116">폼의 <xref:System.Windows.Forms.Form.Load> 이벤트 나 해당 생성자에 다음 코드를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b10f-116">Place the following code within either the form's <xref:System.Windows.Forms.Form.Load> event or its constructor.</span></span>
 
     ```vb
     ' Assumes the grid is bound to a dataset called customersDataSet1
@@ -84,9 +84,9 @@ ms.locfileid: "61796476"
     customersDataSet1.Tables["Customers"].ColumnChanging += new DataColumnChangeEventHandler(this.Customers_ColumnChanging);
     ```
 
-## <a name="see-also"></a><span data-ttu-id="674d0-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="674d0-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7b10f-117">참조</span><span class="sxs-lookup"><span data-stu-id="7b10f-117">See also</span></span>
 
 - <xref:System.Windows.Forms.DataGrid>
 - <xref:System.Data.DataTable.ColumnChanging>
 - <xref:System.Data.DataRow.SetColumnError%2A>
-- [<span data-ttu-id="674d0-118">DataGrid 컨트롤</span><span class="sxs-lookup"><span data-stu-id="674d0-118">DataGrid Control</span></span>](datagrid-control-windows-forms.md)
+- [<span data-ttu-id="7b10f-118">DataGrid 컨트롤</span><span class="sxs-lookup"><span data-stu-id="7b10f-118">DataGrid Control</span></span>](datagrid-control-windows-forms.md)
