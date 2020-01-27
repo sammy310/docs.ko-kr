@@ -2,12 +2,12 @@
 title: 클라우드 네이티브 앱에 대 한 IdentityServer
 description: Azure 용 클라우드 네이티브 .NET 앱 설계 | IdentityServer
 ms.date: 06/30/2019
-ms.openlocfilehash: e96395766d1a4b63815c10c2c90e35a8f7f9159d
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 48d0b95a40682f3127127851781b4d0e26e44630
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568474"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728585"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>클라우드 네이티브 응용 프로그램에 대 한 IdentityServer
 
@@ -96,13 +96,13 @@ public class Startup
 
 ## <a name="javascript-clients"></a>JavaScript 클라이언트
 
-많은 클라우드 네이티브 응용 프로그램은 프런트 엔드에서 서버 쪽 Api 및 리치 클라이언트 SPAs (단일 페이지 응용 프로그램)를 활용 합니다. IdentityServer는 NPM를 통해 웹 Api의 로그인, 로그 아웃 및 토큰 기반 인증에 IdentityServer를 사용할 수 있도록 하는를 통해 [JavaScript 클라이언트](http://docs.identityserver.io/en/latest/quickstarts/6_javascript_client.html) (`oidc-client.js`)를 제공 합니다.
+많은 클라우드 네이티브 응용 프로그램은 프런트 엔드에서 서버 쪽 Api 및 리치 클라이언트 SPAs (단일 페이지 응용 프로그램)를 활용 합니다. IdentityServer는 NPM를 통해 웹 Api의 로그인, 로그 아웃 및 토큰 기반 인증에 IdentityServer를 사용할 수 있도록 하는를 통해 [JavaScript 클라이언트](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html) (`oidc-client.js`)를 제공 합니다.
 
 ## <a name="references"></a>참조
 
 - [IdentityServer 설명서](http://docs.identityserver.io/en/latest/)
 - [응용 프로그램 종류](https://docs.microsoft.com/azure/active-directory/develop/app-types)
-- [JavaScript OIDC 클라이언트](http://docs.identityserver.io/en/latest/quickstarts/6_javascript_client.html)
+- [JavaScript OIDC 클라이언트](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)
 
 >[!div class="step-by-step"]
 >[이전](azure-active-directory.md)

@@ -1,5 +1,6 @@
 ---
-title: '연습: WPF에서 Win32 컨트롤 호스팅'
+title: WPF에서 Win32 컨트롤 호스팅
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 56f096dd7ba4feb677394cd26be9858a33842018
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: eb497a88c119dece85d61d6a32e7b86fb03b44b5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040814"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744938"
 ---
-# <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>연습: WPF에서 Win32 컨트롤 호스팅
+# <a name="walkthrough-host-a-win32-control-in-wpf"></a>연습: WPF에서 Win32 컨트롤 호스팅
 WPF (Windows Presentation Foundation)는 응용 프로그램을 만들기 위한 다양 한 환경을 제공 합니다. 그러나 Win32 코드에 상당한 투자를 한 경우 WPF 응용 프로그램에서 해당 코드를 완전히 다시 작성 하는 것 보다 최소한의 코드를 다시 사용 하는 것이 더 효과적일 수 있습니다. Wpf는 WPF 페이지에서 Win32 창을 호스팅하기 위한 간단한 메커니즘을 제공 합니다.  
   
  이 항목에서는 Win32 목록 상자 컨트롤을 호스트 하는 [WPF 샘플에서 Win32 ListBox 컨트롤](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control)을 호스트 하는 응용 프로그램을 안내 합니다. 이 일반적인 절차를 확장 하 여 모든 Win32 창을 호스트할 수 있습니다.  
@@ -45,7 +46,7 @@ WPF (Windows Presentation Foundation)는 응용 프로그램을 만들기 위한
   
 5. 호스트 창을 만들었으면 호스트된 창의 HWND를 반환합니다. 하나 이상의 Win32 컨트롤을 호스트 하려는 경우 일반적으로 호스트 창을 HWND의 자식으로 만들고 컨트롤을 해당 호스트 창의 자식으로 만듭니다. 호스트 창에서 컨트롤을 래핑하여 WPF 페이지가 컨트롤에서 알림을 받을 수 있는 간단한 방법을 제공 하 고,이를 통해 HWND 경계에서 알림과 관련 된 몇 가지 특정 Win32 문제를 처리 합니다.  
   
-6. 자식 컨트롤의 알림과 같이 호스트 창으로 전송되는 선택한 메시지를 처리합니다. 이렇게 하는 데는 두 가지 방법이 있습니다.  
+6. 자식 컨트롤의 알림과 같이 호스트 창으로 전송되는 선택한 메시지를 처리합니다. 이렇게 하는 방법은 두 가지가 있습니다.  
   
     - 호스팅 클래스에서 메시지를 처리 하려면 <xref:System.Windows.Interop.HwndHost> 클래스의 <xref:System.Windows.Interop.HwndHost.WndProc%2A> 메서드를 재정의 합니다.  
   
@@ -61,7 +62,7 @@ WPF (Windows Presentation Foundation)는 응용 프로그램을 만들기 위한
 ## <a name="implement-the-page-layout"></a>페이지 레이아웃 구현  
  ListBox 컨트롤을 호스트 하는 WPF 페이지의 레이아웃은 두 개의 영역으로 구성 됩니다. 페이지의 왼쪽은 Win32 컨트롤을 조작할 수 있는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]를 제공 하는 몇 가지 WPF 컨트롤을 호스팅합니다. 페이지의 오른쪽 위에는 호스트된 ListBox 컨트롤에 대한 사각형 영역이 있습니다.  
   
- 이 레이아웃을 구현 하는 코드는 매우 간단 합니다. Root 요소는 두 개의 자식 요소가 있는 <xref:System.Windows.Controls.DockPanel>입니다. 첫 번째 요소는 ListBox 컨트롤을 호스트 하는 <xref:System.Windows.Controls.Border> 요소입니다. 이 요소는 페이지의 오른쪽 위에 있는 200x200 정사각형을 사용합니다. 두 번째는 정보를 표시 하 고 노출 된 상호 운용성 속성을 설정 하 여 ListBox 컨트롤을 조작할 수 있도록 하는 WPF 컨트롤 집합을 포함 하는 <xref:System.Windows.Controls.StackPanel> 요소입니다. <xref:System.Windows.Controls.StackPanel>의 자식인 각 요소에 대 한 참조 자료는 아래 예제 코드에 나열 되어 있지만 여기서는 설명 하지 않습니다 (기본 항목을 참조 하세요.). 이러한 요소에 대 한 자세한 내용은 상호 운용 모델에는 이러한 모델이 필요 하지 않으며 샘플에 일부 상호 작용을 추가 하기 위해 제공 됩니다.  
+ 이 레이아웃을 구현 하는 코드는 매우 간단 합니다. Root 요소는 두 개의 자식 요소가 있는 <xref:System.Windows.Controls.DockPanel>입니다. 첫 번째 요소는 ListBox 컨트롤을 호스트 하는 <xref:System.Windows.Controls.Border> 요소입니다. 이 요소는 페이지의 오른쪽 위에 있는 200x200 정사각형을 사용합니다. 두 번째는 정보를 표시 하 고 노출 된 상호 운용성 속성을 설정 하 여 ListBox 컨트롤을 조작할 수 있도록 하는 WPF 컨트롤 집합을 포함 하는 <xref:System.Windows.Controls.StackPanel> 요소입니다. <xref:System.Windows.Controls.StackPanel>의 자식인 각 요소에 대 한 참조 자료는 아래 예제 코드에 나열 되어 있지만 여기서는 설명 하지 않습니다. 기본 상호 운용 모델에는이에 대 한 설명이 필요 하지 않습니다. 이러한 요소는 샘플에 일부 대화형 작업을 추가 하기 위해 제공 됩니다.  
   
  [!code-xaml[WPFHostingWin32Control#WPFUI](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml#wpfui)]  
   
@@ -152,7 +153,7 @@ WPF (Windows Presentation Foundation)는 응용 프로그램을 만들기 위한
   
  마지막으로 `handled`를 `true`으로 설정 하 여 메시지가 처리 되었음을 표시 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Interop.HwndHost>
 - [WPF 및 Win32 상호 운용성](wpf-and-win32-interoperation.md)

@@ -1,19 +1,20 @@
 ---
 title: '연습: Win32에서 WPF 시계 호스팅'
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - interoperability [WPF], tutorials
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: 8d1f376a2c5b3f31407af0100d9a4417f7cff34e
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 79f79e42652ca51c409fabb12a572485ad734b35
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740243"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744891"
 ---
-# <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>연습: Win32에서 WPF 시계 호스팅
+# <a name="walkthrough-host-a-wpf-clock-in-win32"></a>연습: Win32에서 WPF 시계 호스팅
 
 Win32 응용 프로그램 내에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]을 추가 하려면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠를 포함 하는 HWND를 제공 하는 <xref:System.Windows.Interop.HwndSource>을 사용 합니다. 먼저 <xref:System.Windows.Interop.HwndSource>를 만들어 CreateWindow와 유사한 매개 변수를 제공 합니다. 그런 다음 <xref:System.Windows.Interop.HwndSource> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠에 대 한 정보를 알려 줍니다. 마지막으로 <xref:System.Windows.Interop.HwndSource>의 HWND를 가져옵니다. 이 연습에서는 운영 체제 **날짜 및 시간 속성** 대화 상자를 다시 구현 하는 Win32 응용 프로그램 내에서 혼합 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]을 만드는 방법을 보여 줍니다.
 

@@ -1,5 +1,5 @@
 ---
-title: '연습: WPF에서 호스팅할 Direct3D9 콘텐츠 만들기'
+title: 호스팅할 Direct3D9 콘텐츠 만들기
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 286e98bc-1eaa-4b5e-923d-3490a9cca5fc
-ms.openlocfilehash: 462220b526db90d3acfa90a28f9bfd56dbe813e2
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 847ee74da5b295c2c9d3824b3df74f94bc98a4db
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991405"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76727923"
 ---
 # <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>연습: WPF에서 호스팅할 Direct3D9 콘텐츠 만들기
 이 연습에서는 Windows Presentation Foundation (WPF) 응용 프로그램에서 호스트 하는 데 적합 한 Direct3D9 콘텐츠를 만드는 방법을 보여 줍니다. WPF 응용 프로그램에서 Direct3D9 콘텐츠를 호스트 하는 방법에 대 한 자세한 내용은 [wpf 및 Direct3d9 상호 운용성](wpf-and-direct3d9-interoperation.md)을 참조 하세요.
@@ -25,7 +25,7 @@ ms.locfileid: "70991405"
 
  작업이 완료 되 면 WPF 응용 프로그램에서 사용할 수 있도록 Direct3D9 콘텐츠를 포함 하는 DLL이 만들어집니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.
 
 - Visual Studio 2010
@@ -37,7 +37,7 @@ ms.locfileid: "70991405"
 
 #### <a name="to-create-the-direct3d9-project"></a>Direct3D9 프로젝트를 만들려면
 
-1. C++ 이라는`D3DContent`새 Win32 프로젝트를 만듭니다.
+1. 명명 된 `D3DContent`에서 C++ 새 Win32 프로젝트를 만듭니다.
 
      Win32 응용 프로그램 마법사가 열리고 시작 화면이 표시 됩니다.
 
@@ -57,17 +57,17 @@ ms.locfileid: "70991405"
 
 6. **C/C++**  노드를 선택 합니다.
 
-7. **추가 포함 디렉터리** 필드에서 DirectX Include 폴더의 위치를 지정 합니다. 이 폴더의 기본 위치는%ProgramFiles%\Microsoft DirectX SDK (*version*) \Include.입니다.
+7. **추가 포함 디렉터리** 필드에서 DirectX Include 폴더의 위치를 지정 합니다. 이 폴더의 기본 위치 는%ProgramFiles%\Microsoft DirectX SDK (*version*) \Include.입니다.
 
 8. **링커** 노드를 두 번 클릭 하 여 확장 합니다.
 
-9. **추가 라이브러리 디렉터리** 필드에서 DirectX 라이브러리 폴더의 위치를 지정 합니다. 이 폴더의 기본 위치는%ProgramFiles%\Microsoft DirectX SDK (*version*) \Lib\x86.입니다.
+9. **추가 라이브러리 디렉터리** 필드에서 DirectX 라이브러리 폴더의 위치를 지정 합니다. 이 폴더의 기본 위치 는%ProgramFiles%\Microsoft DirectX SDK (*version*) \Lib\x86.입니다.
 
 10. **입력** 노드를 선택 합니다.
 
 11. **추가 종속성** 필드에 `d3d9.lib` 및 `d3dx9.lib` 파일을 추가 합니다.
 
-12. 솔루션 탐색기에서 라는 `D3DContent.def` 새 모듈 정의 파일 (.def)을 프로젝트에 추가 합니다.
+12. 솔루션 탐색기에서 `D3DContent.def` 라는 새 모듈 정의 파일 (.def)을 프로젝트에 추가 합니다.
 
 ## <a name="creating-the-direct3d9-content"></a>Direct3D9 콘텐츠 만들기
  최상의 성능을 얻으려면 Direct3D9 콘텐츠에서 특정 설정을 사용 해야 합니다. 다음 코드에서는 최상의 성능 특성이 있는 Direct3D9 화면을 만드는 방법을 보여 줍니다. 자세한 내용은 [Direct3D9 및 WPF 상호 운용성을 위한 성능 고려 사항](performance-considerations-for-direct3d9-and-wpf-interoperability.md)합니다.
@@ -76,7 +76,7 @@ ms.locfileid: "70991405"
 
 1. 솔루션 탐색기를 사용 하 여 C++ 프로젝트에 다음의 세 가지 클래스를 추가 합니다.
 
-     `CRenderer`(가상 소멸자 포함)
+     `CRenderer` (가상 소멸자 포함)
 
      `CRendererManager`
 
@@ -137,9 +137,9 @@ ms.locfileid: "70991405"
 
 ## <a name="next-steps"></a>다음 단계
 
-- WPF 응용 프로그램에서 Direct3D9 콘텐츠를 호스팅합니다. 자세한 내용은 [연습: WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)에서 Direct3D9 콘텐츠 호스팅
+- WPF 응용 프로그램에서 Direct3D9 콘텐츠를 호스팅합니다. 자세한 내용은 [연습: WPF에서 Direct3D9 콘텐츠 호스팅](walkthrough-hosting-direct3d9-content-in-wpf.md)합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Interop.D3DImage>
 - [Direct3D9 및 WPF 상호 운용성을 위한 성능 고려 사항](performance-considerations-for-direct3d9-and-wpf-interoperability.md)

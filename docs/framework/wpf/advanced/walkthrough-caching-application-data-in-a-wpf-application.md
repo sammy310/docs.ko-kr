@@ -1,5 +1,5 @@
 ---
-title: '연습: WPF 애플리케이션에서 애플리케이션 데이터 캐싱'
+title: 앱 데이터 캐시
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 922d91466731b331cc409cc362c4ada2c287916a
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: b7d999f94e2f2ae410a16e537d51c0f890def4e1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715884"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728065"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>연습: WPF 애플리케이션에서 애플리케이션 데이터 캐싱
 캐싱을 사용하면 빠른 액세스를 위해 데이터를 메모리에 저장할 수 있습니다. 데이터에 다시 액세스할 때 애플리케이션은 원래 소스에서 검색하는 대신 캐시에서 데이터를 가져올 수 있습니다. 이 경우 성능과 확장성이 향상됩니다. 또한 캐싱을 사용하면 데이터 소스를 일시적으로 사용할 수 없는 경우에도 데이터를 사용할 수 있습니다.
@@ -40,7 +40,7 @@ ms.locfileid: "74715884"
 
 - 캐시 된 파일의 경로를 모니터링 하 고 모니터링 되는 항목에 대 한 변경 내용을 캐시 인스턴스에 알립니다.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>전제 조건
  이 연습을 완료하려면 다음 사항이 필요합니다.
 
 - Visual Studio 2010

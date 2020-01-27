@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: 58057709e2d5c5e34d0aa37158ea9b033840f840
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 1e551572fa6d94e9fd1170eb7e3b258f2e8fb926
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344698"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728895"
 ---
 # <a name="windows-communication-foundation-security-overview"></a>Windows Communication Foundation 보안 개요
 WCF (Windows Communication Foundation)는 SOAP 메시지 기반의 분산 프로그래밍 플랫폼 이며, 클라이언트와 서비스 간의 메시지 보안은 데이터를 보호 하는 데 필요 합니다. WCF는 기존 보안 인프라와 SOAP 메시지에 대해 인식 되는 보안 표준을 기반으로 보안 메시지를 교환 하기 위한 다양 하 고 상호 운용할 수 있는 플랫폼을 제공 합니다.  
   
 > [!NOTE]
-> WCF 보안에 대 한 포괄적인 가이드는 [Wcf 보안 지침](https://go.microsoft.com/fwlink/?LinkID=158912)을 참조 하세요.  
+> WCF 보안에 대 한 포괄적인 가이드는 [Wcf 보안 지침](https://archive.codeplex.com/?p=WCFSecurity)을 참조 하세요.  
   
  WCF는 HTTPS, Windows 통합 보안, 사용자 이름 및 암호와 같은 기존 기술을 사용 하 여 보안 분산 응용 프로그램을 구축 하 여 사용자를 인증 하는 경우 익숙한 개념을 사용 합니다. WCF는 기존 보안 인프라와 통합 될 뿐 아니라 보안 SOAP 메시지를 사용 하 여 Windows 전용 도메인 이상의 분산 보안도 확장 합니다. 기존 프로토콜을 비롯 하 여 SOAP를 프로토콜로 사용 하는 주요 이점을 활용 하 여 기존 보안 메커니즘을 구현 하는 것이 좋습니다. 예를 들어, 사용자 이름과 암호 또는 X.509 인증서와 같이 클라이언트 또는 서비스를 식별하는 자격 증명에는 상호 운용성 있는 XML 기반 SOAP 프로필이 있습니다. 이러한 프로필을 사용하면 XML 디지털 서명 및 XML 암호화와 같은 개방형 규격을 활용하여 메시지가 안전하게 교환됩니다. 사양 목록은 [시스템 제공 상호 운용성 바인딩에서 지 원하는 웹 서비스 프로토콜](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)을 참조 하세요.  
   
@@ -113,4 +113,4 @@ WCF (Windows Communication Foundation)는 SOAP 메시지 기반의 분산 프로
 - [시스템 제공 바인딩](../../../../docs/framework/wcf/system-provided-bindings.md)
 - [엔드포인트 만들기 개요](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [보안 확장](../../../../docs/framework/wcf/extending/extending-security.md)
-- [Windows Server Fabric 용 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server Fabric 용 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

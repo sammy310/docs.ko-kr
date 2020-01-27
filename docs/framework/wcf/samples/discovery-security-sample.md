@@ -2,15 +2,16 @@
 title: Discovery Security 샘플
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 8469b69baabcd2ba9185956c276554b4bb929d85
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: cfee226f52bc5f001b2952b76b40ce0eb8aebceb
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74712050"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728860"
 ---
 # <a name="discovery-security-sample"></a>Discovery Security 샘플
-검색 사양에서는 검색 프로세스에 참여하는 엔드포인트를 보호하도록 요구하지 않습니다. 그러나 검색 메시지의 보안을 강화하면 메시지 변경, 서비스 거부, 재생, 스푸핑 같은 다양한 형식의 공격을 완화할 수 있습니다. 이 샘플에서는 WS-Discovery 사양의 8.2단원에 설명된 압축 서명 형식을 사용하여 메시지 서명을 컴퓨팅 및 확인하는 사용자 지정 채널을 구현합니다. 이 샘플에서는 [2005 검색 사양과](https://go.microsoft.com/fwlink/?LinkId=177912) [1.1 버전](https://go.microsoft.com/fwlink/?LinkId=179677)을 모두 지원 합니다.  
+
+검색 사양에서는 검색 프로세스에 참여하는 엔드포인트를 보호하도록 요구하지 않습니다. 그러나 검색 메시지의 보안을 강화하면 메시지 변경, 서비스 거부, 재생, 스푸핑 같은 다양한 형식의 공격을 완화할 수 있습니다. 이 샘플에서는 WS-Discovery 사양의 8.2단원에 설명된 압축 서명 형식을 사용하여 메시지 서명을 컴퓨팅 및 확인하는 사용자 지정 채널을 구현합니다. 이 샘플에서는 [2005 검색 사양과](http://specs.xmlsoap.org/ws/2005/04/discovery/ws-discovery.pdf) [1.1 버전](http://docs.oasis-open.org/ws-dd/discovery/1.1/cs-01/wsdd-discovery-1.1-spec-cs-01.pdf)을 모두 지원 합니다.  
   
  사용자 지정 채널은 검색 및 알림 엔드포인트의 기존 채널 스택 맨 위에서 적용됩니다. 이렇게 하면 서명 헤더가 보내는 모든 메시지에 적용됩니다. 서명은 받은 메시지에서 확인되며 서명이 일치하지 않거나 서명이 없는 메시지는 삭제됩니다. 메시지 서명 및 확인을 위해 이 샘플에서는 인증서를 사용합니다.  
   

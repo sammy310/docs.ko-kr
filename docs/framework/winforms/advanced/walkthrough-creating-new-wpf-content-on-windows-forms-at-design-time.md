@@ -1,5 +1,6 @@
 ---
-title: '연습: 디자인 타임에 Windows Forms에서 새 WPF 콘텐츠 만들기'
+title: Windows Forms에서 새 WPF 콘텐츠 만들기
+titleSuffix: ''
 ms.date: 08/18/2018
 helpviewer_keywords:
 - interoperability [Windows Forms], WPF and Windows Forms
@@ -11,18 +12,18 @@ ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 395543a3141af66038cabef9a3c9fed40a36b47e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 69a0598b05d1b2bff84b203317d6d5a166ce109d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460658"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746396"
 ---
 # <a name="walkthrough-create-new-wpf-content-on-windows-forms-at-design-time"></a>연습: 디자인 타임에 Windows Forms에서 새 WPF 콘텐츠 만들기
 
 이 문서에서는 Windows Forms 기반 응용 프로그램에서 사용할 WPF (Windows Presentation Foundation) 컨트롤을 만드는 방법을 보여 줍니다.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先决条件
 
 이 연습을 완료하려면 Visual Studio가 필요합니다.
 
@@ -91,7 +92,7 @@ Windows Form에 WPF 컨트롤을 추가 하려면 다음을 수행 합니다.
 
 5. **F5** 키를 눌러 애플리케이션을 빌드하고 실행합니다.
 
-## <a name="next-steps"></a>다음 단계
+## <a name="next-steps"></a>后续步骤
 
 Windows Forms와 WPF는 서로 다른 기술이지만 긴밀하게 상호 운용하도록 설계되었습니다. 응용 프로그램에서 다양 한 모양과 동작을 제공 하려면 다음을 시도 합니다.
 
@@ -101,7 +102,7 @@ Windows Forms와 WPF는 서로 다른 기술이지만 긴밀하게 상호 운용
 
 - WPF 콘텐츠의 스타일을 변경합니다. 자세한 내용은 [연습: WPF 콘텐츠 스타일](walkthrough-styling-wpf-content.md)지정을 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

@@ -1,5 +1,6 @@
 ---
-title: LoadFromHistory 함수 (F 관리 되지 않는 API 참조)
+title: LoadFromHistory 함수-WPF 관리 되지 않는 API 참조
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -8,17 +9,17 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: d037c062-a911-4949-b251-ccd3e48b1d17
-ms.openlocfilehash: a4480d54390aea2771e2939b0a0825f6c49c3564
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7807e073d1f09ac6a6213aee6d86d53cc75a3c56
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766134"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76727932"
 ---
-# <a name="loadfromhistory-function-wpf-unmanaged-api-reference"></a>LoadFromHistory 함수 (F 관리 되지 않는 API 참조)
-이 API는 Windows Presentation Foundation (WPF) 인프라를 지원 하며 코드에서 직접 사용할 수 없습니다.  
+# <a name="loadfromhistory-function-wpf-unmanaged-api-reference"></a>LoadFromHistory 함수 (WPF 관리 되지 않는 API 참조)
+이 API는 Windows Presentation Foundation (WPF) 인프라를 지원 하며 사용자 코드에서 직접 사용 하기 위한 것이 아닙니다.  
   
- Windows 관리에 대 한 Windows Presentation Foundation (WPF) 인프라에서 사용 합니다.  
+ Windows 관리를 위한 WPF (Windows Presentation Foundation) 인프라에서 사용 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -31,22 +32,22 @@ HRESULT LoadFromHistory_export(
   
 ## <a name="parameters"></a>매개 변수  
  pHistoryStream  
- 기록 정보 스트림으로 포인터입니다.  
+ 기록 정보 스트림에 대 한 포인터입니다.  
   
  pBindCtx  
  바인드 컨텍스트에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [.NET Framework 시스템 요구 사항](../../get-started/system-requirements.md)합니다.  
+ **플랫폼:** [.NET Framework 시스템 요구 사항](../../get-started/system-requirements.md)을 참조 하세요.  
   
  **DLL:**  
   
- .NET framework 3.0 및 3.5. PresentationHostDLL.dll  
+ .NET Framework 3.0 및 3.5: PresentationHostDLL에서  
   
- .NET framework 4 이상: PresentationHost_v0400.dll  
+ .NET Framework 4 이상: PresentationHost_v0400 .dll  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [F 관리되지 않는 API 참조](wpf-unmanaged-api-reference.md)

@@ -1,17 +1,17 @@
 ---
-title: Windows Forms 애플리케이션의 마우스 입력
+title: 마우스 입력
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, mouse input
 ms.assetid: 743c2f3c-219e-4a52-b6b8-2657096a2da6
-ms.openlocfilehash: 91bbf61029d52cf1d434136ee72ef389ca499ebc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e0b43fa5f98a23b1cde882154ca1d7ec7542cdc0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949894"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76727906"
 ---
-# <a name="mouse-input-in-a-windows-forms-application"></a>Windows Forms 애플리케이션의 마우스 입력
+# <a name="mouse-input-in-a-windows-forms-application"></a>Windows Forms 응용 프로그램의 마우스 입력
 Windows Forms에는 다양한 마우스 이벤트 및 사용자 지정된 마우스 커서, 마우스 캡처 및 끌어서 놓기 동작에 대한 추가 지원이 포함되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
@@ -33,6 +33,6 @@ Windows Forms에는 다양한 마우스 이벤트 및 사용자 지정된 마우
  [Windows Forms에서의 끌어서 놓기 기능](drag-and-drop-functionality-in-windows-forms.md)  
  끌어서 놓기 동작을 구현하는 방법을 설명합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
  [마우스에 액세스](../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md)  
  Visual Basic을 사용하여 마우스에 액세스에 대한 항목을 나열합니다.

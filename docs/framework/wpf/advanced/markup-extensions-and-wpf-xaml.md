@@ -1,5 +1,5 @@
 ---
-title: 태그 확장명 및 WPF XAML
+title: 태그 확장명 및 XAML
 ms.date: 03/30/2017
 helpviewer_keywords:
 - brace character [WPF]
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: a9e0657aa9f9dd4de0ff3f8788c686bf1535b1ad
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: f4134e9d0b26135d1bd6058ac9ed8941a9c6be34
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559796"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76727890"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>태그 확장명 및 WPF XAML
 이 항목에서는 XAML 태그 확장의 구문 규칙, 용도, 기반이 되는 클래스 개체 모델 등을 비롯한 개념에 대해 소개합니다. 태그 확장은 XAML 언어의 일반적 기능이며 XAML 서비스에 대한 .NET 구현의 일반적 기능입니다. 이 항목에서는 WPF XAML에서 사용할 태그 확장에 대해 자세히 설명합니다.  

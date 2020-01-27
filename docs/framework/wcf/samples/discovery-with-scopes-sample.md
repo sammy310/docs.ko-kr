@@ -2,12 +2,12 @@
 title: 범위 샘플을 사용한 검색
 ms.date: 03/30/2017
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
-ms.openlocfilehash: 23991002a5236c491a9f74c7efe71ceb2bf51a37
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 8ba5618f472fc8a6e1751776060f99103a67a073
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74712072"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728746"
 ---
 # <a name="discovery-with-scopes-sample"></a>범위 샘플을 사용한 검색
 
@@ -23,7 +23,7 @@ ms.locfileid: "74712072"
 
 ### <a name="to-use-this-sample"></a>이 샘플을 사용하려면
 
-1. 이 샘플에서는 HTTP 엔드포인트를 사용하며 이 샘플을 실행하려면 적절한 URL ACL을 추가해야 합니다. 자세한 내용은 [HTTP 및 HTTPS 구성](https://go.microsoft.com/fwlink/?LinkId=70353) 을 참조 하세요. 높은 권한으로 다음 명령을 실행하면 적절한 ACL이 추가됩니다. 명령이 지정한 대로 작동하지 않는 경우 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%` 인수 대신 도메인과 사용자 이름을 사용할 수 있습니다.
+1. 이 샘플에서는 HTTP 엔드포인트를 사용하며 이 샘플을 실행하려면 적절한 URL ACL을 추가해야 합니다. 자세한 내용은 [HTTP 및 HTTPS 구성](../feature-details/configuring-http-and-https.md)을 참조 하세요. 높은 권한으로 다음 명령을 실행하면 적절한 ACL이 추가됩니다. 명령이 지정한 대로 작동하지 않는 경우 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%` 인수 대신 도메인과 사용자 이름을 사용할 수 있습니다.
 
 2. 솔루션을 빌드합니다.
 

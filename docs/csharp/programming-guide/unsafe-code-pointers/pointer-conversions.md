@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
-ms.openlocfilehash: 308d5e0646eeb94012dbe18d46d6d33f67dfeaf5
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 517166331d2bcf73132269ce2adcf68d5f60b4fe
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75698367"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745369"
 ---
 # <a name="pointer-conversions-c-programming-guide"></a>포인터 변환(C# 프로그래밍 가이드)
 다음 표에서는 미리 정의된 암시적 포인터 변환을 보여 줍니다. 암시적 변환은 메서드 호출, 할당 문을 비롯한 대부분의 경우에서 발생할 수 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "75698367"
 - [C# 프로그래밍 가이드](../index.md)
 - [포인터 형식](pointer-types.md)
 - [참조 형식](../../language-reference/keywords/reference-types.md)
-- [값 형식](../../language-reference/keywords/value-types.md)
+- [값 형식](../../language-reference/builtin-types/value-types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)
 - [fixed 문](../../language-reference/keywords/fixed-statement.md)
 - [stackalloc](../../language-reference/operators/stackalloc.md)
