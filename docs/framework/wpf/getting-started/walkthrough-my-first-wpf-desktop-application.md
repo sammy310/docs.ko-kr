@@ -1,5 +1,6 @@
 ---
-title: '자습서: Visual Studio 2019에서 첫 번째 WPF 응용 프로그램 만들기-.NET Framework'
+title: Visual Studio 2019에서 첫 WPF 앱 만들기-.NET Framework
+titleSuffix: ''
 ms.date: 09/06/2019
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ ms.topic: tutorial
 ms.custom: mvc,vs-dotnet
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b5f74448ffce448740937c06a476a29c8659879
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 232605850c65aebd9aafdc9b76c90af42f2c901c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75336818"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746981"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>자습서: Visual Studio 2019에서 첫 번째 WPF 응용 프로그램 만들기
 
@@ -83,7 +84,7 @@ ms.locfileid: "75336818"
 
     [!code-xaml[ExpenseIt#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/App.xaml#1)]
 
-3. *MainWindow.xaml*을 엽니다.
+3. *Mainwindow.xaml*를 엽니다.
 
     이 XAML 파일은 응용 프로그램의 주 창이 며 페이지에서 만든 콘텐츠를 표시 합니다. <xref:System.Windows.Window> 클래스는 창의 속성 (예: 제목, 크기 또는 아이콘)을 정의 하 고 닫기 또는 숨기기와 같은 이벤트를 처리 합니다.
 
@@ -151,7 +152,7 @@ ms.locfileid: "75336818"
 
     [!code-xaml[ExpenseIt#6](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/ExpenseItHome.xaml#6)]
 
-1. *MainWindow.xaml*을 엽니다.
+1. *Mainwindow.xaml*를 엽니다.
 
 1. <xref:System.Windows.Navigation.NavigationWindow> 요소에 <xref:System.Windows.Navigation.NavigationWindow.Source%2A> 속성을 추가 하 고 "`ExpenseItHome.xaml`"로 설정 합니다.
 

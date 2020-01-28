@@ -1,17 +1,17 @@
 ---
-title: WPF의 트리
+title: 트리나
 ms.date: 03/30/2017
 helpviewer_keywords:
 - logical tree [WPF]
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: 0dfae3a601a07c68b2dfe029f061dcf838e98af7
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d4b17c34fb33f73ca1c173bebc8f94ddac5b1942
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459502"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746570"
 ---
 # <a name="trees-in-wpf"></a>WPF의 트리
 대부분의 기술에서 요소와 구성 요소는 트리 구조로 구성됩니다. 이 트리 구조에서 개발자는 트리의 개체 노드를 직접 조작하여 애플리케이션의 동작이나 렌더링에 영향을 줍니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서도 여러 가지 트리 구조 메타포를 사용하여 프로그램 요소 간의 관계를 정의합니다. 대부분 경우 WPF 개발자는 개념적으로 개체 트리 메타포를 고려하면서 코드로 애플리케이션을 만들거나 XAML로 애플리케이션의 일부를 정의할 수 있지만 XML DOM에서 사용할 수 있는 몇 가지 일반적인 개체 트리 조작 API 대신 특정 API를 호출하거나 특정 태그를 사용하여 이 작업을 수행합니다. WPF는 트리 메타포 뷰, <xref:System.Windows.LogicalTreeHelper> 및 <xref:System.Windows.Media.VisualTreeHelper>를 제공 하는 두 개의 도우미 클래스를 노출 합니다. 또한 WPF 설명서에서는 시각적 트리와 논리 트리라는 용어를 사용하는데 이러한 동일한 트리는 특정 주요 WPF 기능의 동작을 이해하는 데 유용하기 때문입니다. 이 항목에서는 시각적 트리와 논리적 트리가 나타내는 항목을 정의 하 고, 이러한 트리가 전반적인 개체 트리 개념과 어떻게 관련 되는지를 설명 하 고, <xref:System.Windows.LogicalTreeHelper> 및 <xref:System.Windows.Media.VisualTreeHelper>를 소개 합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "73459502"
   
  문서 개체 모델에서 이 XAML을 XML로 처리하려는 경우 및 적합해야 하는 태그를 암시적으로 주석 처리하여 포함한 경우 결과 XML DOM 트리에는 `<ListBox.Items>`에 대한 요소 및 기타 암시적 항목이 포함됩니다. 그러나 XAML은 태그를 읽고 개체에 쓸 때 이런 방식으로 처리하지 않으며 결과 개체 그래프에 `ListBox.Items`가 포함되지 않습니다. 그러나이 파일에는 <xref:System.Windows.Controls.ItemCollection>를 포함 하는 `Items` 라는 <xref:System.Windows.Controls.ListBox> 속성이 있지만 <xref:System.Windows.Controls.ListBox> XAML이 처리 될 때 <xref:System.Windows.Controls.ItemCollection>는 초기화 되지 않습니다. 그런 다음 <xref:System.Windows.Controls.ListBox>의 콘텐츠로 존재 하는 각 자식 개체 요소는 `ItemCollection.Add`에 대 한 파서 호출을 통해 <xref:System.Windows.Controls.ItemCollection>에 추가 됩니다. 지금까지 XAML을 개체 트리로 처리하는 이 예제는 생성된 개체 트리가 기본적으로 논리 트리인 경우로 보입니다.  
   
- 그러나 논리적 트리는 XAML 암시적 구문 항목이 제외 된 경우에도 런타임에 응용 프로그램 UI에 대해 존재 하는 전체 개체 그래프가 아닙니다. 주요 이유는 시각적 개체 및 템플릿입니다. 예를 들어 <xref:System.Windows.Controls.Button>을 고려 합니다. 논리적 트리는 <xref:System.Windows.Controls.Button> 개체 및 해당 문자열 `Content`보고 합니다. 하지만 런타임 개체 트리의 이 단추에는 더 많은 정보가 있습니다. 특히 단추는 특정 <xref:System.Windows.Controls.Button> 컨트롤 템플릿이 적용 되었기 때문에 화면에 표시 되는 방식에만 표시 됩니다. 런타임에 논리 트리를 확인 하는 경우에도 적용 된 템플릿에서 가져온 시각적 개체 (예: 시각적 단추 주위의 진한 회색의 템플릿 정의 <xref:System.Windows.Controls.Border>)는 논리적 트리에서 보고 되지 않습니다. 표시 되는 UI를 찾은 다음 논리 트리를 읽습니다. 템플릿 시각 효과를 찾으려면 시각적 트리를 대신 검사해야 합니다.  
+ 그러나 논리적 트리는 XAML 암시적 구문 항목이 제외 된 경우에도 런타임에 응용 프로그램 UI에 대해 존재 하는 전체 개체 그래프가 아닙니다. 주요 이유는 시각적 개체 및 템플릿입니다. 예를 들어 <xref:System.Windows.Controls.Button>을 고려 합니다. 논리적 트리는 <xref:System.Windows.Controls.Button> 개체 및 해당 문자열 `Content`보고 합니다. 하지만 런타임 개체 트리의 이 단추에는 더 많은 정보가 있습니다. 특히 단추는 특정 <xref:System.Windows.Controls.Button> 컨트롤 템플릿이 적용 되었기 때문에 화면에 표시 되는 방식에만 표시 됩니다. 적용 된 템플릿에서 가져온 시각적 개체 (예: 시각적 단추 주위에 있는 템플릿 정의 <xref:System.Windows.Controls.Border>)는 런타임에 논리 트리를 확인 하는 경우 (예: 표시 되는 UI에서 입력 이벤트를 처리 한 다음 논리 트리를 읽은 경우)에도 논리적 트리에서 보고 되지 않습니다. 템플릿 시각 효과를 찾으려면 시각적 트리를 대신 검사해야 합니다.  
   
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 구문이 생성된 개체 그래프에 매핑되는 방법 및 XAML의 암시적 구문에 대한 자세한 내용은 [XAML 구문 정보](xaml-syntax-in-detail.md) 또는 [XAML 개요(WPF)](xaml-overview-wpf.md)를 참조하세요.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "73459502"
 ### <a name="the-purpose-of-the-logical-tree"></a>논리 트리의 용도  
  논리 트리를 통해 콘텐츠 모델은 해당 자식 개체를 쉽게 반복할 수 있고 콘텐츠 모델을 확장할 수 있습니다. 또한 논리 트리는 논리 트리의 모든 개체가 로드된 경우 등의 특정 알림에 대한 프레임워크를 제공합니다. 기본적으로 논리 트리는 시각 효과를 제외한 프레임워크 수준의 런타임 개체 그래프와 유사하지만 고유한 런타임 애플리케이션의 구성에 대한 많은 쿼리 작업에 적합합니다.  
   
- 또한 초기 요청 개체에 대 한 <xref:System.Windows.FrameworkElement.Resources%2A> 컬렉션에 대 한 논리 트리를 위쪽으로 조회 한 다음 논리 트리를 진행 하 고 각 <xref:System.Windows.FrameworkElement> (또는 <xref:System.Windows.FrameworkContentElement>)를 확인 하 여 정적 및 동적 리소스 참조를 모두 확인 합니다. 해당 키를 포함할 수 있는 <xref:System.Windows.ResourceDictionary>을 포함 하는 다른 `Resources` 값입니다. 논리 트리와 시각적 트리가 모두 있을 경우 논리 트리가 리소스 조회에 사용됩니다. 리소스 사전 및 조회에 대한 자세한 내용은 [XAML 리소스](../../../desktop-wpf/fundamentals/xaml-resources-define.md)를 참조하세요.  
+ 또한 초기 요청 개체에 대 한 <xref:System.Windows.FrameworkElement.Resources%2A> 컬렉션에 대 한 논리 트리를 위쪽으로 조회 한 다음 논리 트리를 진행 하 고 해당 키를 포함 하는 <xref:System.Windows.ResourceDictionary>를 포함 하는 다른 `Resources` 값에 대해 각 <xref:System.Windows.FrameworkElement> (또는 <xref:System.Windows.FrameworkContentElement>)를 확인 하 여 정적 및 동적 리소스 참조를 모두 확인 합니다. 논리 트리와 시각적 트리가 모두 있을 경우 논리 트리가 리소스 조회에 사용됩니다. 리소스 사전 및 조회에 대한 자세한 내용은 [XAML 리소스](../../../desktop-wpf/fundamentals/xaml-resources-define.md)를 참조하세요.  
   
 <a name="composition"></a>   
 ### <a name="composition-of-the-logical-tree"></a>논리 트리의 구성  
@@ -67,12 +67,12 @@ ms.locfileid: "73459502"
   
 <a name="tree_traversal"></a>   
 ## <a name="tree-traversal"></a>트리 순회  
- <xref:System.Windows.LogicalTreeHelper> 클래스는 논리 트리 순회를 위한 <xref:System.Windows.LogicalTreeHelper.GetChildren%2A>, <xref:System.Windows.LogicalTreeHelper.GetParent%2A>및 <xref:System.Windows.LogicalTreeHelper.FindLogicalNode%2A> 메서드를 제공 합니다. 대부분의 경우 기존 컨트롤의 논리 트리를 트래버스할 필요가 없습니다. 이러한 컨트롤은 거의 항상 논리 자식 요소를 `Add`, 인덱서 등 컬렉션 액세스를 지원하는 전용 컬렉션 속성으로 노출하기 때문입니다. 트리 순회는 주로 컬렉션 속성이 이미 정의 된 <xref:System.Windows.Controls.ItemsControl> 또는 <xref:System.Windows.Controls.Panel>와 같은 의도 된 컨트롤 패턴에서 파생 되지 않도록 선택 하 고 고유한 컬렉션 속성을 제공 하려는 컨트롤 작성자가 사용 하는 시나리오입니다. 지원은.  
+ <xref:System.Windows.LogicalTreeHelper> 클래스는 논리 트리 순회를 위한 <xref:System.Windows.LogicalTreeHelper.GetChildren%2A>, <xref:System.Windows.LogicalTreeHelper.GetParent%2A>및 <xref:System.Windows.LogicalTreeHelper.FindLogicalNode%2A> 메서드를 제공 합니다. 대부분의 경우 기존 컨트롤의 논리 트리를 트래버스할 필요가 없습니다. 이러한 컨트롤은 거의 항상 논리 자식 요소를 `Add`, 인덱서 등 컬렉션 액세스를 지원하는 전용 컬렉션 속성으로 노출하기 때문입니다. 트리 순회는 주로 컬렉션 속성이 이미 정의 된 <xref:System.Windows.Controls.ItemsControl> 또는 <xref:System.Windows.Controls.Panel>와 같은 의도 된 컨트롤 패턴에서 파생 되지 않도록 선택 하 고 고유한 컬렉션 속성 지원을 제공 하려는 컨트롤 작성자가 사용 하는 시나리오입니다.  
   
  시각적 트리는 <xref:System.Windows.Media.VisualTreeHelper>시각적 트리 순회에 대 한 도우미 클래스도 지원 합니다. 시각적 트리는 컨트롤별 속성을 통해 편리 하 게 노출 되지 않으므로 프로그래밍 시나리오에 필요한 경우에는 시각적 트리를 트래버스하는 데 <xref:System.Windows.Media.VisualTreeHelper> 클래스가 권장 되는 방법입니다. 자세한 내용은 [WPF 그래픽 렌더링 개요](../graphics-multimedia/wpf-graphics-rendering-overview.md)를 참조하세요.  
   
 > [!NOTE]
-> 경우에 따라 적용된 템플릿의 시각적 트리를 검사해야 합니다. 이 기술을 사용할 때는 주의해야 합니다. 템플릿을 정의 하는 컨트롤에 대 한 시각적 트리를 트래버스하는 경우에도 컨트롤의 소비자는 인스턴스에서 <xref:System.Windows.Controls.Control.Template%2A> 속성을 설정 하 여 항상 템플릿을 변경할 수 있으며, 최종 사용자는 시스템을 변경 하 여 적용 된 템플릿에 영향을 줄 수 있습니다. 테마나.  
+> 경우에 따라 적용된 템플릿의 시각적 트리를 검사해야 합니다. 이 기술을 사용할 때는 주의해야 합니다. 템플릿을 정의 하는 컨트롤에 대 한 시각적 트리를 트래버스하는 경우에도 컨트롤의 소비자는 인스턴스에서 <xref:System.Windows.Controls.Control.Template%2A> 속성을 설정 하 여 항상 템플릿을 변경할 수 있으며, 최종 사용자도 시스템 테마를 변경 하 여 적용 된 템플릿에 영향을 줄 수 있습니다.  
   
 <a name="routes"></a>   
 ## <a name="routes-for-routed-events-as-a-tree"></a>"트리"로 라우트된 이벤트에 대한 경로  

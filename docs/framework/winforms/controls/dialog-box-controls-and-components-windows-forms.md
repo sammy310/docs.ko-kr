@@ -1,5 +1,5 @@
 ---
-title: 대화 상자 컨트롤 및 구성 요소(Windows Forms)
+title: 대화 상자 컨트롤 및 구성 요소
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CommonDialog control
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - dialog boxes [Windows Forms], Windows Forms
 - Windows Forms, dialog boxes
 ms.assetid: 6e5f5e9e-58d6-45f3-9df0-48b7bb6bfd5c
-ms.openlocfilehash: 9beacc84001aa1a5d505b8563794c49f3287cbc1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3f90384eff092e9198787e08e19ffc59bbe9d761
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972278"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745970"
 ---
 # <a name="dialog-box-controls-and-components-windows-forms"></a>대화 상자 컨트롤 및 구성 요소(Windows Forms)
 다음 Windows Forms 컨트롤 및 구성 요소는 표준 대화 상자를 제공합니다. 각 대화 상자에서 사용할 수 있는 함수에 대한 자세한 내용은 링크를 참조하세요.  
@@ -39,7 +39,7 @@ ms.locfileid: "61972278"
  <xref:System.Windows.Forms.SaveFileDialog>  
  <xref:System.Windows.Forms.SaveFileDialog> 클래스 및 해당 멤버에 대한 참조 정보를 제공합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
  [Windows Forms 대화 상자](../dialog-boxes-in-windows-forms.md)  
  Windows Form에 대한 대화 상자를 만드는 방법을 설명합니다.  
   

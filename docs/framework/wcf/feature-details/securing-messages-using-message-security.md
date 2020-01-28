@@ -2,15 +2,15 @@
 title: 메시지 보안을 사용하여 메시지에 보안 설정
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: 1098057042c0842161258fd081d3ee63e82b4c5f
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: a6b062d0d6a74ce2a2ff9afa7e8a0a18853dbd22
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395710"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746438"
 ---
 # <a name="securing-messages-using-message-security"></a>메시지 보안을 사용하여 메시지에 보안 설정
-이 섹션에서는 <xref:System.ServiceModel.NetMsmqBinding>을 사용할 때 WCF 메시지 보안에 대해 설명 합니다.  
+이 섹션에서는 <xref:System.ServiceModel.NetMsmqBinding>를 사용할 때 WCF 메시지 보안에 대해 설명 합니다.  
   
 > [!NOTE]
 > 이 항목을 읽기 전에 [보안 개념](../../../../docs/framework/wcf/feature-details/security-concepts.md)을 확인 하는 것이 좋습니다.  
@@ -41,9 +41,9 @@ ms.locfileid: "72395710"
   
  연결되지 않은 쿼리의 성질을 생각하면, 클라이언트와 서비스는 동시에 온라인 상태가 아닐 수도 있습니다. 따라서 클라이언트와 서비스는 out-of-band로 인증서를 교환해야 합니다. 특히 신뢰할 수 있는 저장소에 서비스의 인증서(인증 기관에 체인으로 연결 가능)를 가지고 있는 클라이언트는 올바른 서비스와 통신하고 있는 것을 신뢰해야 합니다. 클라이언트 인증의 경우 서비스에서는 메시지와 함께 첨부된 X.509 인증서를 저장소에 있는 인증서와 비교하여 클라이언트를 인증합니다. 인증서는 인증 기관에 연결되어 있어야 합니다.  
   
- Windows를 실행하는 컴퓨터에서 인증서는 다양한 종류의 저장소에 저장됩니다. 여러 저장소에 대 한 자세한 내용은 [인증서 저장소](https://go.microsoft.com/fwlink/?LinkId=87787)를 참조 하세요.  
+ Windows를 실행하는 컴퓨터에서 인증서는 다양한 종류의 저장소에 저장됩니다. 여러 저장소에 대 한 자세한 내용은 [인증서 저장소](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc757138(v=ws.10))를 참조 하세요.  
   
-### <a name="windows"></a>창  
+### <a name="windows"></a>Windows  
  Windows 메시지 자격 증명 형식에는 Kerberos 프로토콜이 사용됩니다.  
   
  Kerberos 프로토콜은 도메인에서 사용자를 인증하고 인증된 사용자가 도메인에 있는 다른 엔터티와 보안 컨텍스트를 구성할 수 있게 해 주는 보안 메커니즘입니다.  
@@ -63,9 +63,9 @@ ms.locfileid: "72395710"
 ## <a name="using-transport-and-message-security"></a>전송 및 메시지 보안 사용  
  전송 보안과 메시지 보안을 모두 사용하는 경우에는 전송과 SOAP 메시지 수준 모두에서 메시지 보호에 사용되는 인증서가 같아야 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>另请参阅
 
 - [전송 보안을 사용하여 메시지에 보안 설정](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
 - [메시지 큐에 대한 메시지 보안](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
 - [보안 개념](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [서비스 및 클라이언트에 보안 설정](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Web hosted service
 - IIS Hosting Using Inline Code Sample [Windows Communication Foundation]
 ms.assetid: 56fe3687-a34b-4661-8e30-b33770f413fa
-ms.openlocfilehash: 862ae61112db475825901f7c3f1d5127b384bb22
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 304da4fa7d2bb48899cdec864fb2dc1f9fdfb9ef
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711610"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746424"
 ---
 # <a name="iis-hosting-using-inline-code"></a>인라인 코드를 사용한 IIS 호스팅
 
@@ -94,6 +94,6 @@ Press <ENTER> to terminate client.
 
 4. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요. 이 서비스를 호출할 수 있는 클라이언트 응용 프로그램을 만드는 방법에 대 한 예제는 [방법: 클라이언트 만들기](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)를 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>另请参阅
 
-- [AppFabric 호스팅 및 지 속성 샘플](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [AppFabric 호스팅 및 지 속성 샘플](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

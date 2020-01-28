@@ -1,5 +1,5 @@
 ---
-title: 디자인 타임에 Windows Forms 컨트롤 개발
+title: 디자인 타임에 컨트롤 개발
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls [Windows Forms]
@@ -12,12 +12,12 @@ ms.assetid: e5a8e088-7ec8-4fd9-bcb3-9078fd134829
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f6afb13a01075d3aa2d101100a0c3bfe31c6ee29
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: dac049ea6a51037daa0e23dc93476e4410b2df06
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460088"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745989"
 ---
 # <a name="develop-windows-forms-controls-at-design-time"></a>디자인 타임에 Windows Forms 컨트롤 개발
 
@@ -28,7 +28,7 @@ ms.locfileid: "73460088"
 
 Web Forms에서 사용할 사용자 지정 컨트롤을 만들려면 [사용자 지정 ASP.NET 서버 컨트롤 개발](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100))을 참조하세요.
 
-## <a name="in-this-section"></a>이 섹션의 내용
+## <a name="in-this-section"></a>단원 내용
 
 [연습: 복합 컨트롤 작성](walkthrough-authoring-a-composite-control-with-visual-csharp.md)\
 C#에서 간단한 복합 컨트롤을 만드는 방법을 보여 줍니다.
@@ -81,7 +81,7 @@ Windows Forms 디자이너를 로드하지 못할 때 Microsoft Visual Studio에
 [컨트롤 및 구성 요소 작성 문제 해결](troubleshooting-control-and-component-authoring.md)\
 사용자 지정 구성 요소 또는 컨트롤을 작성할 때 발생할 수 있는 일반적인 문제를 진단하고 수정하는 방법을 보여 줍니다.
 
-## <a name="reference"></a>참고
+## <a name="reference"></a>참조
 
 - <xref:System.Windows.Forms.Control?displayProperty=nameWithType>
 

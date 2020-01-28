@@ -1,5 +1,6 @@
 ---
-title: ForwardTranslateAccelerator 함수 (F 관리 되지 않는 API 참조)
+title: ForwardTranslateAccelerator 함수-WPF 관리 되지 않는 API 참조
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -8,17 +9,17 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: fff47a86-9d9f-4176-9530-10e1876e393f
-ms.openlocfilehash: 4bb7e665bb836dc5f95b14f39179f1d4b9f8173d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f6e8208ffe2c186234f30f31e346ca6b1d0be4c0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61960916"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747043"
 ---
-# <a name="forwardtranslateaccelerator-function-wpf-unmanaged-api-reference"></a>ForwardTranslateAccelerator 함수 (F 관리 되지 않는 API 참조)
-이 API는 Windows Presentation Foundation (WPF) 인프라를 지원 하며 코드에서 직접 사용할 수 없습니다.  
+# <a name="forwardtranslateaccelerator-function-wpf-unmanaged-api-reference"></a>ForwardTranslateAccelerator 함수 (WPF 관리 되지 않는 API 참조)
+이 API는 Windows Presentation Foundation (WPF) 인프라를 지원 하며 사용자 코드에서 직접 사용 하기 위한 것이 아닙니다.  
   
- Windows 관리에 대 한 Windows Presentation Foundation (WPF) 인프라에서 사용 합니다.  
+ Windows 관리를 위한 WPF (Windows Presentation Foundation) 인프라에서 사용 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,19 +35,19 @@ HRESULT ForwardTranslateAccelerator(
  메시지에 대 한 포인터입니다.  
   
  appUnhandled  
- `true` 앱에 이미 지정 된 입력된 메시지를 처리할 수 있는 기회가 되지만, 처리 하지 경우 그렇지 않으면 `false`합니다.  
+ 앱이 이미 입력 메시지를 처리할 수 있는 기회를 제공 했지만 처리 하지 않은 경우를 `true` 합니다. 그렇지 않으면 `false`합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [.NET Framework 시스템 요구 사항](../../get-started/system-requirements.md)합니다.  
+ **플랫폼:** [.NET Framework 시스템 요구 사항](../../get-started/system-requirements.md)을 참조 하세요.  
   
  **DLL:**  
   
- .NET framework 3.0 및 3.5. PresentationHostDLL.dll  
+ .NET Framework 3.0 및 3.5: PresentationHostDLL에서  
   
- .NET framework 4 이상: PresentationHost_v0400.dll  
+ .NET Framework 4 이상: PresentationHost_v0400 .dll  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [F 관리되지 않는 API 참조](wpf-unmanaged-api-reference.md)

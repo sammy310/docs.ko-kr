@@ -1,17 +1,17 @@
 ---
-title: '연습: TableLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬'
+title: TableLayoutPanel를 사용 하 여 컨트롤 정렬
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], arranging with TableLayoutPanel
 - TableLayoutPanel control [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
-ms.openlocfilehash: 7b7380690d8668f46b98272e1d42640f23679b19
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: 803a56f6416cf3b718890e96cf9f36ae6c4ee471
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72799121"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740322"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>연습: TableLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬
 
@@ -77,7 +77,7 @@ ms.locfileid: "72799121"
 
 ## <a name="positioning-controls-within-cells-using-docking-and-anchoring"></a>도킹 및 고정을 사용 하 여 셀 내에서 컨트롤 위치 지정
 
-<xref:System.Windows.Forms.TableLayoutPanel>에 있는 자식 컨트롤의 고정 동작은 다른 컨테이너 컨트롤의 동작과 다릅니다. 자식 컨트롤의 도킹 동작은 다른 컨테이너 컨트롤과 동일 합니다.
+자식 컨트롤의 앵커 동작을 <xref:System.Windows.Forms.TableLayoutPanel> 다른 컨테이너 컨트롤의 동작과에서 다릅니다. 자식 컨트롤의 도킹 동작을 다른 컨테이너 컨트롤와 같습니다.
 
 #### <a name="positioning-controls-within-cells"></a>셀 내에서 컨트롤 위치 지정
 

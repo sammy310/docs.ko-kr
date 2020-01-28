@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤에서 특정 항목 액세스'
+title: ComboBox, ListBox 또는 CheckedListBox 컨트롤의 특정 항목에 액세스
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], accessing items
 - CheckedListBox control [Windows Forms], accessing items
 ms.assetid: 1216742f-bcf9-4ff8-8a62-d7c9053c2b96
-ms.openlocfilehash: fbdd9168fe286823db7cf066ae0f821b8db88ecb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 67673ec7f136f1466d4fd091e691324c53e7de06
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011829"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746329"
 ---
-# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤에서 특정 항목 액세스
-Windows Forms 콤보 상자, 목록 상자 또는 선택된 목록 상자에서 특정 항목에 액세스 하기 필수 작업입니다. 이 통해 프로그래밍 방식으로 지정된 된 위치에서 목록에는 무엇이 확인할 수 있습니다.  
+# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤의 특정 항목에 액세스
+Windows Forms 콤보 상자, 목록 상자 또는 선택 된 목록 상자의 특정 항목에 액세스 하는 작업은 필수 작업입니다. 지정 된 위치에서 목록에 있는 항목을 프로그래밍 방식으로 확인할 수 있습니다.  
   
 ### <a name="to-access-a-specific-item"></a>특정 항목에 액세스 하려면  
   
-1. 쿼리는 `Items` 특정 항목의 인덱스를 사용 하 여 컬렉션:  
+1. 특정 항목의 인덱스를 사용 하 여 `Items` 컬렉션을 쿼리 합니다.  
   
     ```vb  
     Private Function GetItemText(i As Integer) As String  
@@ -51,7 +51,7 @@ Windows Forms 콤보 상자, 목록 상자 또는 선택된 목록 상자에서 
        }  
     ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>

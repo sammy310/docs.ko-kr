@@ -9,16 +9,16 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: 32156ad0fe4b3dce4371fe757d15f5b8040aaf19
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 62df08bf4ae3580e9b8d5b3aab0697d396674ca1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115858"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745420"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Boxing 및 Unboxing(C# 프로그래밍 가이드)
 
-Boxing은 [값 형식](../../language-reference/keywords/value-types.md)을 `object` 형식 또는 이 값 형식에서 구현된 임의의 인터페이스 형식으로 변환하는 프로세스입니다. CLR(공용 언어 런타임)은 값 형식을 boxing할 때 값을 <xref:System.Object?displayProperty=nameWithType> 인스턴스 내부에 래핑하고 관리되는 힙에 저장합니다. unboxing하면 개체에서 값 형식이 추출됩니다. Boxing은 암시적이며 unboxing은 명시적입니다. Boxing 및 unboxing의 개념은 개체로 처리할 수 있는 모든 값 형식에서 형식 시스템의 C#에 통합된 뷰의 기반이 됩니다.
+Boxing은 [값 형식](../../language-reference/builtin-types/value-types.md)을 `object` 형식 또는 이 값 형식에서 구현된 임의의 인터페이스 형식으로 변환하는 프로세스입니다. CLR(공용 언어 런타임)은 값 형식을 boxing할 때 값을 <xref:System.Object?displayProperty=nameWithType> 인스턴스 내부에 래핑하고 관리되는 힙에 저장합니다. unboxing하면 개체에서 값 형식이 추출됩니다. Boxing은 암시적이며 unboxing은 명시적입니다. Boxing 및 unboxing의 개념은 개체로 처리할 수 있는 모든 값 형식에서 형식 시스템의 C#에 통합된 뷰의 기반이 됩니다.
 
 다음 예제에서는 정수 변수 `i`를 *boxing*하고 개체 `o`에 할당합니다.
 
@@ -38,7 +38,7 @@ Boxing은 [값 형식](../../language-reference/keywords/value-types.md)을 `obj
 
 ## <a name="boxing"></a>boxing
 
-boxing은 가비지 수집되는 힙에 값 형식을 저장하는 데 사용됩니다. Boxing은 [값 형식](../../language-reference/keywords/value-types.md)을 `object` 형식 또는 이 값 형식에서 구현된 임의의 인터페이스 형식으로 암시적으로 변환하는 프로세스입니다. 값 형식을 boxing하면 힙에 개체 인스턴스가 할당되고 값이 새 개체에 복사됩니다.
+boxing은 가비지 수집되는 힙에 값 형식을 저장하는 데 사용됩니다. Boxing은 [값 형식](../../language-reference/builtin-types/value-types.md)을 `object` 형식 또는 이 값 형식에서 구현된 임의의 인터페이스 형식으로 암시적으로 변환하는 프로세스입니다. 값 형식을 boxing하면 힙에 개체 인스턴스가 할당되고 값이 새 개체에 복사됩니다.
 
 다음과 같이 값 형식 변수를 선언합니다.
 
@@ -66,7 +66,7 @@ boxing은 가비지 수집되는 힙에 값 형식을 저장하는 데 사용됩
 
 ## <a name="unboxing"></a>unboxing
 
-Unboxing은 `object` 형식에서 [값 형식](../../language-reference/keywords/value-types.md)으로, 또는 인터페이스 형식에서 해당 인터페이스를 구현하는 값 형식으로 명시적으로 변환하는 프로세스입니다. unboxing 연산 과정은 다음과 같습니다.
+Unboxing은 `object` 형식에서 [값 형식](../../language-reference/builtin-types/value-types.md)으로, 또는 인터페이스 형식에서 해당 인터페이스를 구현하는 값 형식으로 명시적으로 변환하는 프로세스입니다. unboxing 연산 과정은 다음과 같습니다.
 
 - 개체 인스턴스가 지정한 값 형식을 boxing한 값인지 확인합니다.
 
@@ -112,14 +112,8 @@ int j = (int) o;
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="related-sections"></a>관련 단원
-
-추가 정보
-
-- [참조 형식](../../language-reference/keywords/reference-types.md)
-
-- [값 형식](../../language-reference/keywords/value-types.md)
-
 ## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
+- [참조 형식](../../language-reference/keywords/reference-types.md)
+- [값 형식](../../language-reference/builtin-types/value-types.md)

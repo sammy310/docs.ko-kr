@@ -1,5 +1,5 @@
 ---
-title: '연습: Visual C#을 사용하여 Windows Forms 컨트롤에서 상속'
+title: 컨트롤에서 상속
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], custom controls
@@ -11,16 +11,16 @@ ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c54733a340b1855b3fc7b90ff2b5178fad8c5303
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 713ccf97a73ce9684b9124a121369f22751861d0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460588"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740144"
 ---
 # <a name="walkthrough-inherit-from-a-windows-forms-control-with-c"></a>연습: C\#를 사용 하 여 Windows Forms 컨트롤에서 상속
 
-시각적 개체 C#를 사용 하면 *상속*을 통해 강력한 사용자 지정 컨트롤을 만들 수 있습니다. 상속을 통해 표준 Windows Forms 컨트롤의 모든 고유 기능을 유지하면서 사용자 지정 기능을 통합하는 컨트롤을 만들 수 있습니다. 이 연습에서는 `ValueButton`이라는 간단한 상속된 컨트롤을 만듭니다. 이 단추는 표준 Windows Forms <xref:System.Windows.Forms.Button> 컨트롤에서 기능을 상속 하 고 `ButtonValue`이라는 사용자 지정 속성을 노출 합니다.
+를 C#사용 하면 *상속*을 통해 강력한 사용자 지정 컨트롤을 만들 수 있습니다. 상속을 통해 표준 Windows Forms 컨트롤의 모든 고유 기능을 유지하면서 사용자 지정 기능을 통합하는 컨트롤을 만들 수 있습니다. 이 연습에서는 `ValueButton`이라는 간단한 상속된 컨트롤을 만듭니다. 이 단추는 표준 Windows Forms <xref:System.Windows.Forms.Button> 컨트롤에서 기능을 상속 하 고 `ButtonValue`이라는 사용자 지정 속성을 노출 합니다.
 
 ## <a name="create-the-project"></a>프로젝트 만들기
 
@@ -144,4 +144,4 @@ ms.locfileid: "73460588"
 ## <a name="see-also"></a>참조
 
 - [방법: 도구 상자 항목 선택 대화 상자에 컨트롤 표시](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [연습: Visual C#에서 합성 컨트롤 작성](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [연습: Visual C#에서 복합 컨트롤 제작](walkthrough-authoring-a-composite-control-with-visual-csharp.md)

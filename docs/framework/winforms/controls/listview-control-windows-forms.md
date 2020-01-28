@@ -1,5 +1,5 @@
 ---
-title: ListView 컨트롤(Windows Forms)
+title: ListView 컨트롤
 ms.date: 03/30/2017
 helpviewer_keywords:
 - lists
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms]
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
-ms.openlocfilehash: a5f20ec34a1b4b41ec1aee667b5d4bfb0c3eebb1
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 009739f78f334d09a9f7e4f0e9f171669014b909
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960364"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745138"
 ---
 # <a name="listview-control-windows-forms"></a>ListView 컨트롤(Windows Forms)
 Windows Forms `ListView` 컨트롤은 아이콘이 포함된 항목 목록을 표시합니다. 목록 뷰를 사용하여 Windows 탐색기의 오른쪽 창과 같은 사용자 인터페이스를 만들 수 있습니다.  

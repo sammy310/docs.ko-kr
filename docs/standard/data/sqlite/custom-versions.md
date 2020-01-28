@@ -2,12 +2,12 @@
 title: 사용자 지정 SQLite 버전
 ms.date: 12/13/2019
 description: 기본 SQLite 라이브러리의 사용자 지정 버전을 사용 하는 방법에 대해 알아봅니다.
-ms.openlocfilehash: 8a2646138ea9dbecf412a2e8e0e347e2d71a5b0b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: dd27278c1dbe17b12e5067d04d19043bf259b1e8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75450389"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746984"
 ---
 # <a name="custom-sqlite-versions"></a>사용자 지정 SQLite 버전
 
@@ -21,9 +21,9 @@ SQLitePCLRaw는 다양 한 플랫폼에서 적절 한 종속성을 쉽게 가져
 
 다른 번들을 사용 하려면 사용 하려는 번들 패키지와 함께 `Microsoft.Data.Sqlite.Core` 패키지를 설치 합니다. 번들은 Microsoft. Data. Sqlite에 의해 자동으로 초기화 됩니다.
 
-| 번들 | 설명 |
+| 묶는 | 설명 |
 | --- | --- |
-| SQLitePCLRaw bundle_e_sqlite3 | 모든 플랫폼에서 SQLite의 일관 된 버전을 제공 합니다. FTS4, FTS5, JSON1 및를 포함 합니다. | R * 트리 확장 이것이 기본값입니다. |
+| SQLitePCLRaw bundle_e_sqlite3 | 모든 플랫폼에서 SQLite의 일관 된 버전을 제공 합니다. FTS4, FTS5, JSON1 및 R * 트리 확장을 포함 합니다. 이것이 기본값입니다. |
 | SQLitePCLRaw bundle_green | 시스템 SQLite 라이브러리를 사용 하는 iOS를 제외 하 고 bundle_e_sqlite3와 동일 합니다. |
 | SQLitePCLRaw bundle_zetetic | Zetetic의 공식 SQLCipher 빌드를 사용 합니다 (포함 되지 않음). |
 | SQLitePCLRaw bundle_winsqlite3 | Windows 10의 시스템 SQLite 라이브러리인 winsqlite3를 사용 합니다. |

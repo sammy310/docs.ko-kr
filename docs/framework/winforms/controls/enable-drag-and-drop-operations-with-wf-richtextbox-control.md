@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms RichTextBox 컨트롤을 사용하여 끌어서 놓기 작업 사용'
+title: RichTextBox 컨트롤을 사용 하 여 끌어서 놓기 작업 사용
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - text boxes [Windows Forms], drag-and-drop operations
 - RichTextBox control [Windows Forms], drag-and-drop operations
 ms.assetid: ca167d1c-2014-4cf0-96a0-20598470be3b
-ms.openlocfilehash: d1b8f3e1d0ef7d0f83db4a742ab76a05e42f761b
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 3c17560dee012912aea2938654f1dc4dc56e0725
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053686"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745816"
 ---
-# <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>방법: Windows Forms RichTextBox 컨트롤을 사용하여 끌어서 놓기 작업 사용
+# <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>방법: Windows Forms RichTextBox 컨트롤에서 끌어서 놓기 작업 사용
 Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤을 사용한 끌어서 놓기 작업은 <xref:System.Windows.Forms.RichTextBox.DragEnter> 및 <xref:System.Windows.Forms.RichTextBox.DragDrop> 이벤트를 처리하여 수행됩니다. 따라서 <xref:System.Windows.Forms.RichTextBox> 컨트롤을 사용하면 끌어서 놓기 작업이 매우 간단합니다.  
   
 ### <a name="to-enable-drag-operations-in-a-richtextbox-control"></a>RichTextBox 컨트롤에서 끌기 작업을 사용하도록 설정하려면  
@@ -62,7 +62,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤을 사용한 끌
        }  
     ```  
   
-     (Visual C# 및 시각적 C++) 이벤트 처리기를 등록 하려면 폼의 생성자에 다음 코드를 추가 합니다.  
+     (시각적 C# 개체 및 C++시각적 개체) 폼의 생성자에 다음 코드를 추가 하 여 이벤트 처리기를 등록 합니다.  
   
     ```csharp  
     this.richTextBox1.DragEnter += new  
@@ -138,7 +138,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤을 사용한 끌
        }  
     ```  
   
-     (Visual C# 및 시각적 C++) 이벤트 처리기를 등록 하려면 폼의 생성자에 다음 코드를 추가 합니다.  
+     (시각적 C# 개체 및 C++시각적 개체) 폼의 생성자에 다음 코드를 추가 하 여 이벤트 처리기를 등록 합니다.  
   
     ```csharp  
     this.richTextBox1.DragDrop += new  
@@ -164,9 +164,9 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤을 사용한 끌
   
      마우스 단추를 놓으면 선택한 텍스트가 놓이고(즉, <xref:System.Windows.Forms.RichTextBox.DragDrop> 이벤트 발생) <xref:System.Windows.Forms.RichTextBox> 컨트롤 내에 삽입됩니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Forms.RichTextBox>
-- [방법: 응용 프로그램 간에 끌어서 놓기 작업 수행](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
+- [방법: 애플리케이션 간에 끌어서 놓기 작업 수행](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
 - [RichTextBox 컨트롤](richtextbox-control-windows-forms.md)
 - [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)

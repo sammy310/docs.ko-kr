@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms DataGridView 컨트롤에 데이터 바인딩'
+title: DataGridView 컨트롤에 데이터 바인딩
 ms.date: 02/08/2019
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], DataGridView control
 - DataGridView control [Windows Forms], data binding
 ms.assetid: 1660f69c-5711-45d2-abc1-e25bc6779124
-ms.openlocfilehash: bdba8af04cd9473b17d1a28f07ead7cd5bf43698
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e2762bf363a469abf8c1e57b851d351c1cb41b62
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139090"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745081"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a>방법: Windows Forms DataGridView 컨트롤에 데이터 바인딩
 
@@ -28,7 +28,7 @@ DataGridView 컨트롤을 데이터에 연결 하려면 다음을 수행 합니�
 
 2. 양식의 <xref:System.Windows.Forms.Form.Load> 이벤트 처리기에서 <xref:System.Windows.Forms.DataGridView> 컨트롤을 <xref:System.Windows.Forms.BindingSource>에 바인딩하고 `GetData` 메서드를 호출 하 여 데이터를 검색 합니다.  
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 이 전체 코드 예제에서는 데이터베이스에서 데이터를 검색 하 여 Windows form에서 DataGridView 컨트롤을 채웁니다. 또한 폼에는 데이터를 다시 로드 하 고 변경 내용을 데이터베이스에 전송 하는 단추도 있습니다.  
 

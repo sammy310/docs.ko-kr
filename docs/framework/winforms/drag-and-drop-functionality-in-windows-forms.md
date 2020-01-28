@@ -1,19 +1,19 @@
 ---
-title: Windows Forms에서의 끌어서 놓기 기능
+title: 끌어서 놓기 기능
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
-ms.openlocfilehash: 437b632706b27cd487d60c2ad23db3f9a3c96c09
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 603dc158719c0b11def4386eb24a33f235cf3a42
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966873"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732750"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Windows Forms에서의 끌어서 놓기 기능
-Windows Forms에는 끌어서 놓기 동작을 구현하는 메서드, 이벤트 및 클래스 집합이 포함되어 있습니다. 이 항목에서는 Windows Forms의 끌어서 놓기 지원에 대해 개괄적으로 설명합니다.  도 참조 하세요 [끌어서 놓기 작업 및 클립보드 지원](./advanced/drag-and-drop-operations-and-clipboard-support.md)합니다.  
+Windows Forms에는 끌어서 놓기 동작을 구현하는 메서드, 이벤트 및 클래스 집합이 포함되어 있습니다. 이 항목에서는 Windows Forms의 끌어서 놓기 지원에 대해 개괄적으로 설명합니다.  또한 [끌어서 놓기 작업 및 클립보드 지원을](./advanced/drag-and-drop-operations-and-clipboard-support.md)참조 하세요.  
   
 ## <a name="performing-drag-and-drop-operations"></a>끌어서 놓기 작업 수행  
  끌어서 놓기 작업을 수행하려면 <xref:System.Windows.Forms.Control> 클래스의 <xref:System.Windows.Forms.Control.DoDragDrop%2A> 메서드를 사용합니다. 끌어서 놓기 작업을 수행하는 방법에 대한 자세한 내용은 <xref:System.Windows.Forms.Control.DoDragDrop%2A>을 참조하세요. 끌어서 놓기 작업이 시작되기 전에 마우스 포인터를 위로 끌어와야 하는 사각형을 가져오려면 <xref:System.Windows.Forms.SystemInformation> 클래스의 <xref:System.Windows.Forms.SystemInformation.DragSize%2A> 속성을 사용합니다.  
@@ -43,6 +43,6 @@ Windows Forms에는 끌어서 놓기 동작을 구현하는 메서드, 이벤트
   
  <xref:System.Windows.Forms.QueryContinueDragEventArgs> 클래스는 마우스 단추의 현재 상태 및 키보드의 한정자 키, Esc 키를 눌렀는지 여부를 지정하는 값, 끌어서 놓기 작업을 계속할지 여부를 지정하기 위해 설정할 수 있는 <xref:System.Windows.Forms.DragAction> 값을 제공합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Windows Forms 애플리케이션의 마우스 입력](mouse-input-in-a-windows-forms-application.md)

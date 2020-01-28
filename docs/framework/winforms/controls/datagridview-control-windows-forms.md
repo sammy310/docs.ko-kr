@@ -1,5 +1,5 @@
 ---
-title: DataGridView 컨트롤(Windows Forms)
+title: DataGridView 컨트롤
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tables [Windows Forms]
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - datasets [Windows Forms], displaying in DataGridView control
 - DataGridView control [Windows Forms]
 ms.assetid: dbee73f2-bba6-4874-9389-cd21d44309be
-ms.openlocfilehash: 86e96045b7de580b7cefd0262369ce860d00e234
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fc40c0f08c0c11fa9acc94ce12caab8766658f1e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909196"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746955"
 ---
 # <a name="datagridview-control-windows-forms"></a>DataGridView 컨트롤(Windows Forms)
 `DataGridView` 컨트롤에서는 데이터를 표 형식으로 표시하는 강력하고 유연한 방법을 제공합니다. `DataGridView` 컨트롤을 사용하여 적은 양의 데이터에 대한 읽기 전용 보기를 표시하거나, 컨트롤을 확장하여 매우 큰 데이터 집합에 대한 편집 가능한 보기를 표시할 수 있습니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "61909196"
  [Windows Forms DataGridView 컨트롤과 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)  
  `DataGridView` 컨트롤로 <xref:System.Windows.Forms.DataGrid> 컨트롤을 개선하고 대체하는 방법을 설명합니다.  
   
- 도 참조 하세요 [디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤을 사용 하 여](using-the-designer-with-the-windows-forms-datagridview-control.md)입니다.  
+ 또한 [Windows Forms DataGridView 컨트롤과 함께 디자이너 사용](using-the-designer-with-the-windows-forms-datagridview-control.md)을 참조 하세요.  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Forms.DataGridView>  
@@ -82,6 +82,6 @@ ms.locfileid: "61909196"
  <xref:System.Windows.Forms.BindingSource>  
  <xref:System.Windows.Forms.BindingSource> 구성 요소에 대한 참조 설명서를 제공합니다. <xref:System.Windows.Forms.DataGridView> 컨트롤과 <xref:System.Windows.Forms.BindingSource> 구성 요소는 서로 긴밀하게 작동하도록 설계되었습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)

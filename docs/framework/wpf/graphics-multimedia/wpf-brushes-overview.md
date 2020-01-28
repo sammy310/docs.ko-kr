@@ -1,5 +1,5 @@
 ---
-title: WPF 브러시 개요
+title: 브러시 개요
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-ms.openlocfilehash: 8a1d05ad48ce75ce67d21d5a4d508015fea879b2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 18ca9b79a6ee801638a54fcb227c44e9aea21fd0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458632"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746215"
 ---
 # <a name="wpf-brushes-overview"></a>WPF 브러시 개요
 화면에 표시 되는 모든 항목은 브러시로 그리기 때문에 표시 됩니다. 예를 들어 브러시를 사용 하 여 단추의 배경, 텍스트 전경 및 모양의 채우기를 설명할 수 있습니다. 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 브러시를 사용한 그리기의 개념을 소개 하 고 예제를 제공 합니다. 브러시를 사용하여 간단한 단색부터 복잡한 패턴 및 이미지 집합에 이르는 모든 방식으로 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 개체를 그릴 수 있습니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "73458632"
   
  대부분의 시각적 개체를 사용 하 여 그리는 방법을 지정할 수 있습니다. 다음 표에서는 <xref:System.Windows.Media.Brush>사용할 수 있는 몇 가지 일반적인 개체와 속성을 보여 줍니다.  
   
-|인스턴스|브러시 속성|  
+|클래스|브러시 속성|  
 |-----------|----------------------|  
 |<xref:System.Windows.Controls.Border>|<xref:System.Windows.Controls.Border.BorderBrush%2A>, <xref:System.Windows.Controls.Border.Background%2A>|  
 |<xref:System.Windows.Controls.Control>|<xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>|  
@@ -160,7 +160,7 @@ VisualBrush를 사용 하 여 그린 사각형
   
  개체 <xref:System.Windows.Media.VisualBrush> 고정할 수 없는 이유에 대 한 자세한 내용은 <xref:System.Windows.Media.VisualBrush> 유형 페이지를 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>另请参阅
 
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Brushes>

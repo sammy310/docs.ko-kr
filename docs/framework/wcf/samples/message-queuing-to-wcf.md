@@ -2,12 +2,12 @@
 title: Windows Communication Foundation로 메시지 큐
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
-ms.openlocfilehash: 08ab6468ed638b4e9f1ca2fdbac1c55076eafe99
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 541ea23e6748242db57661ceda8e1fedecb66884
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337616"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747122"
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>Windows Communication Foundation로 메시지 큐
 
@@ -158,4 +158,4 @@ Console.ReadLine();
 
 - [WCF의 큐](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
 - [방법: WCF 엔드포인트 및 메시지 큐 애플리케이션과 메시지 교환](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
-- [메시지 큐](https://go.microsoft.com/fwlink/?LinkId=94968)
+- [메시지 큐](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))

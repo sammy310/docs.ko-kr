@@ -2,12 +2,12 @@
 title: 런타임 지시문(rd.xml) 구성 파일 참조
 ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
-ms.openlocfilehash: f4c51dc269775d14d395cb464b3787cc987e086d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e74d34693446cca645003a9f93bc1777849e3182
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128135"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738414"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>런타임 지시문(rd.xml) 구성 파일 참조
 
@@ -39,27 +39,69 @@ ms.locfileid: "73128135"
 
 참조 정보를 확인하려면 다음 구조체의 요소를 선택하거나 [런타임 지시문 요소](runtime-directive-elements.md)를 참조하세요. 다음 계층 구조에서 줄임표는 재귀 구조를 표시합니다. 괄호 안의 정보는 해당 요소가 필수 항목인지 선택적 항목인지와 요소가 사용되는 경우 허용되는 인스턴스 수(하나 또는 여러 개)를 나타냅니다.
 
-[지시문](directives-element-net-native.md) [1:1] [응용 프로그램](application-element-net-native.md) [0:1] [어셈블리](assembly-element-net-native.md) [0: m] [네임 스페이스](namespace-element-net-native.md) [0: m]. 이어야 합니다. 이어야 합니다.
-[0: M]을 [입력](type-element-net-native.md) 합니다. 이어야 합니다. 이어야 합니다.
-[Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 이어야 합니다. 이어야 합니다.
-[네임 스페이스](namespace-element-net-native.md) [0: m] [네임 스페이스](namespace-element-net-native.md) [0: m]. 이어야 합니다. 이어야 합니다.
-[0: M]을 [입력](type-element-net-native.md) 합니다. 이어야 합니다. 이어야 합니다.
-[Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 이어야 합니다. 이어야 합니다.
-[0: m] 형식 (포함 형식의 [하위](subtypes-element-net-native.md) 클래스) [O:1] [형식](type-element-net-native.md) [0: m]을 [입력](type-element-net-native.md) 합니다. 이어야 합니다. 이어야 합니다.
-[Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 이어야 합니다. 이어야 합니다.
-[Attributeimplies](attributeimplies-element-net-native.md) (특성을 포함 하는 형식) [O:1 [] GenericParameter](genericparameter-element-net-native.md) [0: m] [메서드](method-element-net-native.md) [0: m] [매개](parameter-element-net-native.md) 변수 [0: m] [typeparameter](typeparameter-element-net-native.md) [0: m] [GenericParameter](genericparameter-element-net-native.md) [0: m] [methodinstantiation](methodinstantiation-element-net-native.md) ( 생성 된 제네릭 메서드) [0: M] [속성](property-element-net-native.md) [0: m] [필드](field-element-net-native.md) [0: m] [이벤트](event-element-net-native.md) [0: m] [typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: m] [형식](type-element-net-native.md) [0: m]. 이어야 합니다. 이어야 합니다.
-[Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 이어야 합니다. 이어야 합니다.
-[메서드](method-element-net-native.md) [0: m] [매개](parameter-element-net-native.md) 변수 [0: m] [typeparameter](typeparameter-element-net-native.md) [0: M [] GenericParameter](genericparameter-element-net-native.md) [0: m [] methodinstantiation](methodinstantiation-element-net-native.md) (생성 된 제네릭 메서드) [0: m] [속성](property-element-net-native.md) [0: m] [필드](field-element-net-native.md) [0: m] [이벤트](event-element-net-native.md) [ [0: m] Library](library-element-net-native.md) [0: m] [어셈블리](assembly-element-net-native.md) [0: m] [네임 스페이스](namespace-element-net-native.md) [0: m]. 이어야 합니다. 이어야 합니다.
-[0: M]을 [입력](type-element-net-native.md) 합니다. 이어야 합니다. 이어야 합니다.
-[Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 이어야 합니다. 이어야 합니다.
-[네임 스페이스](namespace-element-net-native.md) [0: m] [네임 스페이스](namespace-element-net-native.md) [0: m]. 이어야 합니다. 이어야 합니다.
-[0: M]을 [입력](type-element-net-native.md) 합니다. 이어야 합니다. 이어야 합니다.
-[Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 이어야 합니다. 이어야 합니다.
-[0: m] 형식 (포함 형식의 [하위](subtypes-element-net-native.md) 클래스) [O:1] [형식](type-element-net-native.md) [0: m]을 [입력](type-element-net-native.md) 합니다. 이어야 합니다. 이어야 합니다.
-[Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 이어야 합니다. 이어야 합니다.
-[Attributeimplies](attributeimplies-element-net-native.md) (특성 포함) [O:1] [GenericParameter](genericparameter-element-net-native.md) [0: m] [메서드](method-element-net-native.md) [0: m] [methodinstantiation](methodinstantiation-element-net-native.md) (생성 된 제네릭 메서드) [0: m] [속성](property-element-net-native.md) [0: m] [필드](field-element-net-native.md) [0: m] [이벤트](event-element-net-native.md) [0 : M] [Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: m] [형식](type-element-net-native.md) [0: m]. 이어야 합니다. 이어야 합니다.
-[Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 이어야 합니다. 이어야 합니다.
-[메서드](method-element-net-native.md) [0: M] [methodinstantiation](methodinstantiation-element-net-native.md) (생성 된 제네릭 메서드) [0: m] [속성](property-element-net-native.md) [0: m] [필드](field-element-net-native.md) [0: m] [이벤트](event-element-net-native.md) [0: m]
+- [Directives](directives-element-net-native.md) [1:1]
+  - [Application](application-element-net-native.md) [0:1]
+    - [Assembly](assembly-element-net-native.md) [0:M]
+      - [네임 스페이스](namespace-element-net-native.md) [0: M]. 의 기본 클래스입니다. 의 기본 클래스입니다.
+      - [0: M]을 [입력](type-element-net-native.md) 합니다. 의 기본 클래스입니다. 의 기본 클래스입니다.
+      - [Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 의 기본 클래스입니다. 의 기본 클래스입니다.
+    - [Namespace](namespace-element-net-native.md) [0:M]
+      - [네임 스페이스](namespace-element-net-native.md) [0: M]. 의 기본 클래스입니다. 의 기본 클래스입니다.
+      - [0: M]을 [입력](type-element-net-native.md) 합니다. 의 기본 클래스입니다. 의 기본 클래스입니다.
+      - [Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 의 기본 클래스입니다. 의 기본 클래스입니다.
+    - [Type](type-element-net-native.md) [0:M]
+      - [Subtypes](subtypes-element-net-native.md)(포함 형식의 하위 클래스) [O:1]
+      - [0: M]을 [입력](type-element-net-native.md) 합니다. 의 기본 클래스입니다. 의 기본 클래스입니다.
+      - [Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 의 기본 클래스입니다. 의 기본 클래스입니다.
+      - [AttributeImplies](attributeimplies-element-net-native.md)(포함 형식이 특성임) [O:1]
+      - [GenericParameter](genericparameter-element-net-native.md) [0:M]
+      - [Method](method-element-net-native.md) [0:M]
+        - [Parameter](parameter-element-net-native.md) [0:M]
+        - [TypeParameter](typeparameter-element-net-native.md) [0:M]
+        - [GenericParameter](genericparameter-element-net-native.md) [0:M]
+      - [MethodInstantiation](methodinstantiation-element-net-native.md)(생성된 제네릭 메서드) [0:M]
+      - [Property](property-element-net-native.md) [0:M]
+      - [Field](field-element-net-native.md) [0:M]
+      - [Event](event-element-net-native.md) [0:M]
+    - [TypeInstantiation](typeinstantiation-element-net-native.md)(생성된 제네릭 형식) [0:M]
+      - [0: M]을 [입력](type-element-net-native.md) 합니다. 의 기본 클래스입니다. 의 기본 클래스입니다.
+      - [Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 의 기본 클래스입니다. 의 기본 클래스입니다.
+      - [Method](method-element-net-native.md) [0:M]
+        - [Parameter](parameter-element-net-native.md) [0:M]
+        - [TypeParameter](typeparameter-element-net-native.md) [0:M]
+        - [GenericParameter](genericparameter-element-net-native.md) [0:M]
+      - [MethodInstantiation](methodinstantiation-element-net-native.md)(생성된 제네릭 메서드) [0:M]
+      - [Property](property-element-net-native.md) [0:M]
+      - [Field](field-element-net-native.md) [0:M]
+      - [Event](event-element-net-native.md) [0:M]
+  - [Library](library-element-net-native.md) [0:M]
+    - [Assembly](assembly-element-net-native.md) [0:M]
+      - [네임 스페이스](namespace-element-net-native.md) [0: M]. 의 기본 클래스입니다. 의 기본 클래스입니다.
+      - [0: M]을 [입력](type-element-net-native.md) 합니다. 의 기본 클래스입니다. 의 기본 클래스입니다.
+      - [Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 의 기본 클래스입니다. 의 기본 클래스입니다.
+    - [Namespace](namespace-element-net-native.md) [0:M]
+      - [네임 스페이스](namespace-element-net-native.md) [0: M]. 의 기본 클래스입니다. 의 기본 클래스입니다.
+      - [0: M]을 [입력](type-element-net-native.md) 합니다. 의 기본 클래스입니다. 의 기본 클래스입니다.
+      - [Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 의 기본 클래스입니다. 의 기본 클래스입니다.
+    - [Type](type-element-net-native.md) [0:M]
+      - [Subtypes](subtypes-element-net-native.md)(포함 형식의 하위 클래스) [O:1]
+      - [0: M]을 [입력](type-element-net-native.md) 합니다. 의 기본 클래스입니다. 의 기본 클래스입니다.
+      - [Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 의 기본 클래스입니다. 의 기본 클래스입니다.
+      - [AttributeImplies](attributeimplies-element-net-native.md)(포함 형식이 특성임) [O:1]
+      - [GenericParameter](genericparameter-element-net-native.md) [0:M]
+      - [Method](method-element-net-native.md) [0:M]
+      - [MethodInstantiation](methodinstantiation-element-net-native.md)(생성된 제네릭 메서드) [0:M]
+      - [Property](property-element-net-native.md) [0:M]
+      - [Field](field-element-net-native.md) [0:M]
+      - [Event](event-element-net-native.md) [0:M]
+    - [TypeInstantiation](typeinstantiation-element-net-native.md)(생성된 제네릭 형식) [0:M]
+      - [0: M]을 [입력](type-element-net-native.md) 합니다. 의 기본 클래스입니다. 의 기본 클래스입니다.
+      - [Typeinstantiation](typeinstantiation-element-net-native.md) (생성 된 제네릭 형식) [0: M]. 의 기본 클래스입니다. 의 기본 클래스입니다.
+      - [Method](method-element-net-native.md) [0:M]
+      - [MethodInstantiation](methodinstantiation-element-net-native.md)(생성된 제네릭 메서드) [0:M]
+      - [Property](property-element-net-native.md) [0:M]
+      - [Field](field-element-net-native.md) [0:M]
+      - [Event](event-element-net-native.md) [0:M]
 
 [Application](application-element-net-native.md) 요소는 특성을 포함할 수 없거나 [런타임 지시문 및 정책 섹션](#Directives)에서 설명하는 정책 특성을 포함할 수 있습니다.
 
@@ -90,43 +132,43 @@ ms.locfileid: "73128135"
 
 [Application](application-element-net-native.md), [Assembly](assembly-element-net-native.md), [AttributeImplies](attributeimplies-element-net-native.md), [Namespace](namespace-element-net-native.md), [Subtypes](subtypes-element-net-native.md) 및 [Type](type-element-net-native.md) 요소는 다음 정책 형식을 지원합니다.
 
-- `Activate` 인스턴스를 활성화할 수 있도록 생성자에 대한 런타임 액세스를 제어합니다.
+- `Activate`. 인스턴스를 활성화할 수 있도록 생성자에 대한 런타임 액세스를 제어합니다.
 
-- `Browse` 프로그램 요소에 대한 정보 쿼리를 제어하지만 런타임 액세스를 사용하도록 설정하지는 않습니다.
+- `Browse`. 프로그램 요소에 대한 정보 쿼리를 제어하지만 런타임 액세스를 사용하도록 설정하지는 않습니다.
 
-- `Dynamic` 동적 프로그래밍을 수행할 수 있도록 생성자, 메서드, 필드, 속성 및 이벤트를 비롯한 모든 형식 멤버에 대한 런타임 액세스를 제어합니다.
+- `Dynamic`. 동적 프로그래밍을 수행할 수 있도록 생성자, 메서드, 필드, 속성 및 이벤트를 비롯한 모든 형식 멤버에 대한 런타임 액세스를 제어합니다.
 
-- `Serialize` Newtonsoft JSON serializer 등의 타사 라이브러리를 통해 형식 인스턴스를 serialize 및 deserialize할 수 있도록 생성자, 필드 및 속성에 대한 런타임 액세스를 제어합니다.
+- `Serialize`. Newtonsoft JSON serializer 등의 타사 라이브러리를 통해 형식 인스턴스를 serialize 및 deserialize할 수 있도록 생성자, 필드 및 속성에 대한 런타임 액세스를 제어합니다.
 
-- `DataContractSerializer` <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 클래스를 사용하는 serialization에 대한 정책을 제어합니다.
+- `DataContractSerializer`. <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 클래스를 사용하는 serialization에 대한 정책을 제어합니다.
 
-- `DataContractJsonSerializer` <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 클래스를 사용하는 JSON serialization에 대한 정책을 제어합니다.
+- `DataContractJsonSerializer`. <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 클래스를 사용하는 JSON serialization에 대한 정책을 제어합니다.
 
-- `XmlSerializer` <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> 클래스를 사용하는 XML serialization에 대한 정책을 제어합니다.
+- `XmlSerializer`. <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> 클래스를 사용하는 XML serialization에 대한 정책을 제어합니다.
 
-- `MarshalObject` WinRT 및 COM에 대한 참조 형식을 마샬링하는 정책을 제어합니다.
+- `MarshalObject`. WinRT 및 COM에 대한 참조 형식을 마샬링하는 정책을 제어합니다.
 
-- `MarshalDelegate` 네이티브 코드에 대한 함수 포인터로 대리자 형식을 마샬링하는 정책을 제어합니다.
+- `MarshalDelegate`. 네이티브 코드에 대한 함수 포인터로 대리자 형식을 마샬링하는 정책을 제어합니다.
 
-- `MarshalStructure`. 구조체를 네이티브 코드로 마샬링하는 정책을 제어합니다.
+- `MarshalStructure` . 구조체를 네이티브 코드로 마샬링하는 정책을 제어합니다.
 
 이러한 정책 형식과 연관된 설정은 다음과 같습니다.
 
-- `All` 도구 체인에서 제거하지 않는 모든 형식과 멤버에 대해 정책을 사용하도록 설정합니다.
+- `All`. 도구 체인에서 제거하지 않는 모든 형식과 멤버에 대해 정책을 사용하도록 설정합니다.
 
-- `Auto` 기본 동작을 사용합니다. 정책을 지정하지 않는 것은 부모 요소에 의해 정책이 재정의되는 등의 경우를 제외하면 해당 정책을 `Auto`로 설정하는 것과 같습니다.
+- `Auto`. 기본 동작을 사용합니다. 정책을 지정하지 않는 것은 부모 요소에 의해 정책이 재정의되는 등의 경우를 제외하면 해당 정책을 `Auto`로 설정하는 것과 같습니다.
 
-- `Excluded` 프로그램 요소에 대한 정책을 사용하지 않도록 설정합니다.
+- `Excluded`. 프로그램 요소에 대한 정책을 사용하지 않도록 설정합니다.
 
-- `Public` 도구 체인이 멤버를 불필요한 것으로 결정하여 제거하는 경우가 아니면 public 형식 또는 멤버에 대해서는 정책을 사용하도록 설정합니다. 멤버가 제거되는 경우에는 `Required Public`을 사용하여 멤버를 유지하고 리플렉션 기능이 포함되도록 해야 합니다.
+- `Public`. 도구 체인이 멤버를 불필요한 것으로 결정하여 제거하는 경우가 아니면 public 형식 또는 멤버에 대해서는 정책을 사용하도록 설정합니다. 멤버가 제거되는 경우에는 `Required Public`을 사용하여 멤버를 유지하고 리플렉션 기능이 포함되도록 해야 합니다.
 
-- `PublicAndInternal` 도구 체인에서 제거하지 않는 public 및 내부 형식이나 멤버에 대해 정책을 사용하도록 설정합니다.
+- `PublicAndInternal`. 도구 체인에서 제거하지 않는 public 및 내부 형식이나 멤버에 대해 정책을 사용하도록 설정합니다.
 
-- `Required Public` 사용 여부에 관계없이 도구 체인이 public 형식과 멤버를 유지해야 하도록 지정하고 해당 형식과 멤버에 대해 정책을 사용하도록 설정합니다.
+- `Required Public`. 사용 여부에 관계없이 도구 체인이 public 형식과 멤버를 유지해야 하도록 지정하고 해당 형식과 멤버에 대해 정책을 사용하도록 설정합니다.
 
-- `Required PublicAndInternal` 사용 여부에 관계없이 도구 체인이 public 및 내부 형식과 멤버를 모두 유지해야 하도록 지정하고 해당 형식과 멤버에 대해 정책을 사용하도록 설정합니다.
+- `Required PublicAndInternal`. 사용 여부에 관계없이 도구 체인이 public 및 내부 형식과 멤버를 모두 유지해야 하도록 지정하고 해당 형식과 멤버에 대해 정책을 사용하도록 설정합니다.
 
-- `Required All` 사용 여부에 관계없이 도구 체인이 모든 형식과 멤버를 유지해야 하도록 지정하고 해당 형식과 멤버에 대해 정책을 사용하도록 설정합니다.
+- `Required All`. 사용 여부에 관계없이 도구 체인이 모든 형식과 멤버를 유지해야 하도록 지정하고 해당 형식과 멤버에 대해 정책을 사용하도록 설정합니다.
 
 예를 들어 다음 런타임 지시문 파일은 DataClasses.dll 어셈블리의 모든 형식과 멤버에 대한 정책을 정의합니다. 이 정책은 모든 public 속성의 serialization에 대해 리플렉션을 사용하도록 설정하고, 모든 형식 및 형식 멤버를 검색할 수 있도록 설정하고, `Dynamic` 특성을 통해 모든 형식을 활성화할 수 있도록 설정하고, 모든 public 형식 및 멤버에 대해 리플렉션을 사용하도록 설정합니다.
 
@@ -151,7 +193,7 @@ ms.locfileid: "73128135"
 
 - `Dynamic` - 동적 프로그래밍을 수행할 수 있도록 생성자, 메서드, 필드, 속성 및 이벤트를 비롯한 모든 형식 멤버에 대한 런타임 액세스를 제어합니다. 또한 포함 형식에 대한 정보 쿼리도 제어합니다.
 
-- `Serialize` - Newtonsoft JSON serializer 등의 라이브러리를 통해 형식 인스턴스를 serialize 및 deserialize할 수 있도록 멤버에 대한 런타임 액세스를 제어합니다. 이 정책은 생성자, 필드 및 속성에 적용할 수 있습니다.
+- `Serialize` - Newtonsoft JSON serializer 등의 라이브러리를 통해 형식 인스턴스를 직렬화 및 역직렬화할 수 있도록 멤버에 대한 런타임 액세스를 제어합니다. 이 정책은 생성자, 필드 및 속성에 적용할 수 있습니다.
 
 [Method](method-element-net-native.md) 및 [Event](event-element-net-native.md) 요소는 다음 정책 형식을 지원합니다.
 

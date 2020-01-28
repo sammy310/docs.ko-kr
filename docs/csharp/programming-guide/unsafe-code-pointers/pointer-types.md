@@ -4,12 +4,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: fe0eacbd67917826c88c5ef68bb8d8aeab9ba251
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ad6e6f17f9a8c30339a74b8ab41af3a99e716d3f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711820"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745351"
 ---
 # <a name="pointer-types-c-programming-guide"></a>포인터 형식(C# 프로그래밍 가이드)
 
@@ -87,5 +87,5 @@ int* myVariable;
 - [안전하지 않은 코드 및 포인터](index.md)
 - [포인터 변환](pointer-conversions.md)
 - [참조 형식](../../language-reference/keywords/reference-types.md)
-- [값 형식](../../language-reference/keywords/value-types.md)
+- [값 형식](../../language-reference/builtin-types/value-types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)

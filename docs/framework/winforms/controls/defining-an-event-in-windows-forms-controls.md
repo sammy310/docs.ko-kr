@@ -1,5 +1,5 @@
 ---
-title: Windows Forms 컨트롤에서 이벤트 정의
+title: 컨트롤에서 이벤트 정의
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - events [Windows Forms], defining within Windows Forms custom controls
 - custom controls [Windows Forms], events using code
 ms.assetid: d89f1096-8061-42e2-a855-a1f053f1940a
-ms.openlocfilehash: 4235c8b3c513509023388112071e78cfd079ec6f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d45c369e1fc82ee009a85b5b35fe6aa754873436
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972343"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746083"
 ---
 # <a name="defining-an-event-in-windows-forms-controls"></a>Windows Forms 컨트롤에서 이벤트 정의
-사용자 지정 이벤트를 정의 하는 방법에 대 한 자세한 내용은 참조 하세요 [이벤트](../../../standard/events/index.md)합니다. 연결된 데이터가 없는 이벤트를 정의하는 경우에는 이벤트 데이터의 기본 형식인 <xref:System.EventArgs>를 사용하고 이벤트 대리자로 <xref:System.EventHandler>를 사용합니다. 모든 작업을 수행 하는 이벤트 멤버 및 보호 된 정의 `On` *EventName* 이벤트를 발생 시키는 메서드.  
+사용자 지정 이벤트를 정의 하는 방법에 대 한 자세한 내용은 [이벤트](../../../standard/events/index.md)를 참조 하세요. 연결된 데이터가 없는 이벤트를 정의하는 경우에는 이벤트 데이터의 기본 형식인 <xref:System.EventArgs>를 사용하고 이벤트 대리자로 <xref:System.EventHandler>를 사용합니다. 이벤트 멤버와 이벤트를 발생 시키는 보호 된 `On`*EventName* 메서드를 정의 하는 것이 좋습니다.  
   
- 다음 코드 조각은 `FlashTrackBar` 사용자 지정 컨트롤이 사용자 지정 이벤트 `ValueChanged`를 정의하는 방법을 보여줍니다. 에 대 한 전체 코드는 `FlashTrackBar` 샘플을 참조 하십시오는 [방법: 진행률을 보여 주는 Windows Forms 컨트롤 만들기](how-to-create-a-windows-forms-control-that-shows-progress.md)합니다.  
+ 다음 코드 조각은 `FlashTrackBar` 사용자 지정 컨트롤이 사용자 지정 이벤트 `ValueChanged`를 정의하는 방법을 보여줍니다. `FlashTrackBar` 샘플에 대 한 전체 코드는 [방법: 진행률을 보여 주는 Windows Forms 컨트롤 만들기](how-to-create-a-windows-forms-control-that-shows-progress.md)를 참조 하세요.  
   
 ```vb  
 Option Explicit  
@@ -76,7 +76,7 @@ public class FlashTrackBar : Control {
 }  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Windows Forms 컨트롤의 이벤트](events-in-windows-forms-controls.md)
 - [이벤트](../../../standard/events/index.md)

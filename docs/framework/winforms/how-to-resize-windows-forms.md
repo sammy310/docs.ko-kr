@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms 크기 조정'
+title: 폼 크기 조정
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - resizing Windows Forms
 - Windows Forms, resizing
 ms.assetid: 5d9dd47e-e68c-48c9-a0a3-a9ff34ba009d
-ms.openlocfilehash: aa7ee2bbbf6983a371ea71edc0dfd0cc12cd0c9d
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 8d4ce46ada505f952fc3090d10c5d893338d19f2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211662"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739308"
 ---
 # <a name="how-to-resize-windows-forms"></a>방법: Windows Forms 크기 조정
 
-여러가지 방법으로 Windows Form의 크기를 지정할 수 있습니다. <xref:System.Windows.Forms.Form.Size%2A> 속성에 대해 새 값을 설정하거나 <xref:System.Windows.Forms.Control.Height%2A> 또는 <xref:System.Windows.Forms.Control.Width%2A> 속성을 개별적으로 조정하여 프로그래밍 방식으로 폼의 높이와 너비를 모두 변경할 수 있습니다. Visual Studio를 사용 하는 경우에 Windows Forms 디자이너를 사용 하 여 크기를 변경할 수 있습니다. 또한 참조 [방법: 디자이너를 사용 하 여 Windows Forms 크기 조정](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))합니다.
+여러가지 방법으로 Windows Form의 크기를 지정할 수 있습니다. <xref:System.Windows.Forms.Form.Size%2A> 속성에 대해 새 값을 설정하거나 <xref:System.Windows.Forms.Control.Height%2A> 또는 <xref:System.Windows.Forms.Control.Width%2A> 속성을 개별적으로 조정하여 프로그래밍 방식으로 폼의 높이와 너비를 모두 변경할 수 있습니다. Visual Studio를 사용 하는 경우 Windows Forms 디자이너를 사용 하 여 크기를 변경할 수 있습니다. 또한 [방법: 디자이너를 사용 하 여 Windows Forms 크기 조정을](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))참조 하세요.
 
-## <a name="resize-a-form-programmatically"></a>프로그래밍 방식으로 폼의 크기를 조정합니다
+## <a name="resize-a-form-programmatically"></a>프로그래밍 방식으로 폼 크기 조정
 
 폼의 <xref:System.Windows.Forms.Form.Size%2A> 속성을 설정하여 런타임에 폼의 크기를 정의합니다.
 
@@ -38,7 +38,7 @@ Form1.Size = new System.Drawing.Size(100, 100);
 Form1->Size = System::Drawing::Size(100, 100);
 ```
 
-## <a name="change-form-width-and-height-programmatically"></a>프로그래밍 방식으로 폼 너비와 높이 변경
+## <a name="change-form-width-and-height-programmatically"></a>프로그래밍 방식으로 폼 너비 및 높이 변경
 
 <xref:System.Windows.Forms.Form.Size%2A>가 정의된 후 <xref:System.Windows.Forms.Control.Width%2A> 또는 <xref:System.Windows.Forms.Control.Height%2A> 속성을 사용하여 폼 높이나 너비를 변경합니다.
 
@@ -56,7 +56,7 @@ Form1.Width = 300;
 Form1->Width = 300;
 ```
 
-또는
+-또는-
 
 <xref:System.Windows.Forms.Form.Size%2A> 속성을 설정하여 <xref:System.Drawing.Size.Width%2A> 또는 <xref:System.Drawing.Size.Height%2A>를 변경합니다.
 
@@ -74,7 +74,7 @@ Form1.Size = new Size(300, Form1.Size.Height);
 Form1->Size = System::Drawing::Size(300, Form1->Size.Height);
 ```
 
-## <a name="change-form-size-by-increments-programmatically"></a>프로그래밍 방식으로 증가 하 여 폼의 크기 변경
+## <a name="change-form-size-by-increments-programmatically"></a>프로그래밍 방식으로 증가 하 여 폼 크기 변경
 
 폼의 크기를 증가시키려면 <xref:System.Drawing.Size.Width%2A> 및 <xref:System.Drawing.Size.Height%2A> 속성을 설정합니다.
 
@@ -113,7 +113,7 @@ Form^ f = gcnew Form();
 f->Size->X += 100;
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Windows Forms 시작](getting-started-with-windows-forms.md)
-- [Windows Forms 응용 프로그램 강화](./advanced/index.md)
+- [Windows Forms 애플리케이션 강화](./advanced/index.md)

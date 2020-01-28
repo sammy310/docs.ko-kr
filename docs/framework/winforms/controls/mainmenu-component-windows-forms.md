@@ -1,19 +1,19 @@
 ---
-title: MainMenu 구성 요소(Windows Forms)
+title: MainMenu 구성 요소
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MainMenu control [Windows Forms]
 ms.assetid: 7cd22f29-828b-42e8-9c88-f08aa4533850
-ms.openlocfilehash: f177ee397b0641645d55de9e805543a68fa75672
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6b56ae27d32d85ca75f749727674ea24e91d82ac
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952119"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747146"
 ---
 # <a name="mainmenu-component-windows-forms"></a>MainMenu 구성 요소(Windows Forms)
 > [!NOTE]
-> 및 `MenuStrip` 는이전`MainMenu` 버전 의및<xref:System.Windows.Forms.ContextMenu> 컨트롤에 기능을 추가 하 고 추가 하지만를 선택 하는 경우 이전 버전과의 호환성 및 향후 사용에 대해 모두 유지 됩니다.<xref:System.Windows.Forms.ContextMenu> `MainMenu` `ContextMenuStrip`  
+> `MenuStrip` 및 `ContextMenuStrip` 대체 하 고 이전 버전의 `MainMenu` 및 <xref:System.Windows.Forms.ContextMenu> 컨트롤에 기능을 추가 하는 경우에도, `MainMenu` 및 <xref:System.Windows.Forms.ContextMenu>은 이전 버전과의 호환성 및 향후 사용을 위해 유지 됩니다.  
   
  Windows Forms `MainMenu` 구성 요소에는 런타임에 메뉴가 표시 됩니다.  
   
@@ -25,7 +25,7 @@ ms.locfileid: "69952119"
  <xref:System.Windows.Forms.MainMenu>  
  이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

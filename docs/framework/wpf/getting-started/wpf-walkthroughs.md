@@ -1,16 +1,16 @@
 ---
-title: WPF 연습
+title: 연습
 ms.date: 03/30/2017
 helpviewer_keywords:
 - walkthroughs [WPF]
 - WPF walkthroughs [WPF]
 ms.assetid: c29bde96-0389-4aff-a9fb-cd678f66b7f7
-ms.openlocfilehash: fbd5006611a0a8e0d90b589df7b2cb6a34101457
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: d7853019b109fa7be97f83134be223b1c65375ac
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977025"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746915"
 ---
 # <a name="wpf-walkthroughs"></a>WPF 연습
 연습에서는 일반적인 시나리오에 대 한 단계별 지침을 제공 합니다. 제품 또는 특정 기능 영역 파악을 효율적으로 시작할 수 있습니다.
@@ -46,7 +46,7 @@ ms.locfileid: "73977025"
 |[연습: WPF에서 Windows Forms 컨트롤 정렬](../advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)|WPF 레이아웃 기능을 사용 하 여 혼합 응용 프로그램에서 Windows Forms 컨트롤을 정렬 하는 방법을 보여 줍니다.|
 |[연습: 혼합 애플리케이션에서 데이터 바인딩](../advanced/walkthrough-binding-to-data-in-hybrid-applications.md)|Windows Forms 및 WPF 컨트롤을 모두 포함 하는 혼합 응용 프로그램에서 데이터 바인딩을 사용 하는 방법을 보여 줍니다.|
 
-## <a name="related-sections"></a>관련 단원
+## <a name="related-sections"></a>관련 섹션
 
 |제목|설명|
 |-----------|-----------------|

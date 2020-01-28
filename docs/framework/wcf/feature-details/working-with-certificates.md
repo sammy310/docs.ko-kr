@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 0764ca29fc959092e77629ff3888e65f0d68d70c
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: e38ead0d378092af086218277fd2e85b4a6396c3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938059"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746879"
 ---
 # <a name="working-with-certificates"></a>인증서 사용
 
@@ -164,9 +164,9 @@ WCF에서는 서비스 또는 클라이언트에서 메시지를 인증, 암호�
 
 ## <a name="mapping-a-certificate-to-a-user-account"></a>사용자 계정에 인증서 매핑
 
-IIS 및 Active Directory에는 Windows 사용자 계정에 인증서를 매핑하는 기능이 있습니다. 기능에 대한 자세한 내용은 [사용자 계정에 인증서 매핑](https://go.microsoft.com/fwlink/?LinkId=88917)을 참조하세요.
+IIS 및 Active Directory에는 Windows 사용자 계정에 인증서를 매핑하는 기능이 있습니다. 기능에 대한 자세한 내용은 [사용자 계정에 인증서 매핑](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc736706(v=ws.10))을 참조하세요.
 
-Active Directory 매핑 사용에 대한 자세한 내용은 [디렉터리 서비스 매핑을 사용하여 클라이언트 인증서 매핑](https://go.microsoft.com/fwlink/?LinkId=88918)을 참조하세요.
+Active Directory 매핑 사용에 대한 자세한 내용은 [디렉터리 서비스 매핑을 사용하여 클라이언트 인증서 매핑](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc758484(v=ws.10))을 참조하세요.
 
 이 기능을 사용하여 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> 클래스의 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 속성을 `true`로 설정할 수 있습니다. 다음 코드에 표시된 것처럼 구성에서 [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) 요소의 `mapClientCertificateToWindowsAccount` 특성을 `true`로 설정할 수 있습니다.
 

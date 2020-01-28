@@ -1,17 +1,17 @@
 ---
-title: '방법: Windows Forms에 ActiveX 컨트롤 추가'
+title: 양식에 ActiveX 컨트롤 추가
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls, ActiveX controls
 - forms [Windows Forms], adding ActiveX controls
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 54a61e5b-555e-4887-b41e-6244fed271eb
-ms.openlocfilehash: 8c4c6c3f96c49401b032e360314794cc800c0551
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 920c1111a5703352a4b624068e3d5ceae9892591
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987083"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746847"
 ---
 # <a name="how-to-add-activex-controls-to-windows-forms"></a>방법: Windows Forms에 ActiveX 컨트롤 추가
 
@@ -29,9 +29,9 @@ Windows Form에 ActiveX 컨트롤을 추가 하려면 도구 상자에서 컨트
 Visual Studio는 프로젝트의 컨트롤에 대 한 모든 참조를 추가 합니다. Windows Forms에서 ActiveX 컨트롤을 사용할 때 고려해 야 할 사항에 대 한 자세한 내용은 [Windows Form에서 Activex 컨트롤을 호스팅할 때의 고려 사항](considerations-when-hosting-an-activex-control-on-a-windows-form.md)을 참조 하세요.
 
 > [!NOTE]
-> Activex 컨트롤 가져오기 (Aximp.exe) Windows Forms activex 동적 연결 라이브러리를 가져올 때 예상과 다른 형식의 이벤트 인수를 만듭니다. Aximp.exe에서 생성 되는 인수는가 필요한 경우 `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEvent e)` `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEventArgs e)` 와 유사 합니다. 이 irregularity는 코드가 정상적으로 작동 하는 것을 방지 하지 않습니다. 자세한 내용은 [Windows Forms ActiveX 컨트롤 가져오기 (aximp.exe)](../../tools/aximp-exe-windows-forms-activex-control-importer.md)를 참조 하세요.
+> Activex 컨트롤 가져오기 (Aximp.exe) Windows Forms activex 동적 연결 라이브러리를 가져올 때 예상과 다른 형식의 이벤트 인수를 만듭니다. Aximp.exe에서 생성 되는 인수는 `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEventArgs e)` 예상 되는 경우 `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEvent e)`와 비슷합니다. 이 irregularity는 코드가 정상적으로 작동 하는 것을 방지 하지 않습니다. 자세한 내용은 [Windows Forms ActiveX 컨트롤 가져오기 (aximp.exe)](../../tools/aximp-exe-windows-forms-activex-control-importer.md)를 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Windows Forms 컨트롤](index.md)
 - [여러 언어 및 라이브러리에서 사용되는 컨트롤 및 프로그래밍 가능한 개체 비교](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))

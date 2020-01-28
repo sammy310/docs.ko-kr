@@ -1,5 +1,6 @@
 ---
-title: '연습: 디자인 타임에 Windows Forms에서 WPF 콘텐츠 정렬'
+title: 디자인 타임에 Windows Forms에서 WPF 콘텐츠 정렬
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF user control [Windows Forms], hosting in a layout panel
@@ -12,18 +13,18 @@ ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c9db49ae299870479a5cfa6372c25d793a92ff8f
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5a6b12def45052e117fb149555946ea42d6cd3c2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460677"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746824"
 ---
 # <a name="walkthrough-arrange-wpf-content-on-windows-forms-at-design-time"></a>연습: 디자인 타임에 Windows Forms에서 WPF 콘텐츠 정렬
 
 이 문서에서는 고정 및 맞춤선과 같은 Windows Forms 레이아웃 기능을 사용 하 여 Windows Presentation Foundation (WPF) 컨트롤을 정렬 하는 방법을 보여 줍니다.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>전제 조건
 
 이 연습을 완료하려면 Visual Studio가 필요합니다.
 
@@ -126,7 +127,7 @@ Visual Studio를 열고 Visual Basic 또는 `ArrangeElementHost`라는 시각적
 
     <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤 3개의 크기가 모두 적절하게 조정됩니다.
 
-    자세한 내용은 [방법: TableLayoutPanel 컨트롤의 자식 컨트롤 고정 및 도킹](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)을 참조 하세요.
+    자세한 내용은 참조 하세요. [방법: TableLayoutPanel 컨트롤의 자식 컨트롤 고정 및 앵커](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)합니다.
 
 ## <a name="see-also"></a>참조
 

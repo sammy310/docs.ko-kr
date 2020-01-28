@@ -1,5 +1,5 @@
 ---
-title: WPF 앱에서 잉크 수집
+title: 디지털 잉크 수집
 ms.date: 08/15/2018
 dev_langs:
 - csharp
@@ -13,18 +13,18 @@ helpviewer_keywords:
 - properties [WPF], DefaultDrawingAttributes
 - DefaultDrawingAttributes property [WPF]
 ms.assetid: 66a3129d-9577-43eb-acbd-56c147282016
-ms.openlocfilehash: 8109e0d6a746d6ca23c25643c510014c1a1e656c
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 813a5313a6fbf83c36cdbed1f64ce69a217ad788
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740879"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747031"
 ---
 # <a name="collect-ink"></a>잉크 수집
 
 [Windows Presentation Foundation](../index.md) 플랫폼은 기능의 핵심 요소로서 디지털 잉크를 수집합니다. 이 항목에서는 Windows Presentation Foundation (WPF)에서 잉크를 수집 하는 방법에 대해 설명 합니다.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>전제 조건
 
 다음 예제를 사용 하려면 먼저 Visual Studio 및 Windows SDK를 설치 해야 합니다. WPF 용 응용 프로그램을 작성 하는 방법에 대해서도 이해 해야 합니다. WPF를 시작 하는 방법에 대 한 자세한 내용은 [연습: 내 첫 wpf 데스크톱 응용 프로그램](../getting-started/walkthrough-my-first-wpf-desktop-application.md)을 참조 하세요.
 

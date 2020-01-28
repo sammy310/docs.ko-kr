@@ -1,5 +1,5 @@
 ---
-title: '연습: FlowLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬'
+title: FlowLayoutPanel를 사용 하 여 컨트롤 정렬
 ms.date: 03/30/2017
 helpviewer_keywords:
 - FlowLayoutPanel control [Windows Forms], walkthroughs
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [Windows Forms], arranging with FlowLayoutPanel
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
-ms.openlocfilehash: c9ee615a610c383c97b5d4f0de195cfc7422d3ec
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6df0a910ee346f319fbee835e5e632808630a99e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771656"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745409"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>연습: FlowLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬
 
@@ -20,7 +20,7 @@ ms.locfileid: "67771656"
 
 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤 및 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤은 폼에서 컨트롤을 정렬하는 직관적인 방법을 제공합니다. 둘 다 포함된 자식 컨트롤의 상대 위치를 제어하는 구성 가능한 자동 기능을 제공하며, 둘 다 런타임에 동적 레이아웃 기능을 제공하므로 부모 폼의 크기가 변경될 때 자식 컨트롤의 크기를 조정하고 위치를 변경할 수 있습니다. 레이아웃 패널을 레이아웃 패널 내에 중첩하여 정교한 사용자 인터페이스를 구현할 수 있습니다.
 
-합니다 <xref:System.Windows.Forms.TableLayoutPanel> HTML과 비슷한 기능을 제공 하는 눈금으로 내용을 정렬 \<테이블 > 요소입니다. 해당 셀은 행과 열로 정렬되며 크기가 서로 다를 수 있습니다. 자세한 내용은 [연습: TableLayoutPanel을 사용 하 여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)합니다.
+<xref:System.Windows.Forms.TableLayoutPanel>는 HTML \<table > 요소와 유사한 기능을 제공 하 여 표 형태의 내용을 정렬 합니다. 해당 셀은 행과 열로 정렬되며 크기가 서로 다를 수 있습니다. 자세한 내용은 [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)을 참조하세요.
 
 <xref:System.Windows.Forms.FlowLayoutPanel> 은 특정 흐름 방향(수평 또는 수직)으로 내용을 정렬합니다. 컨트롤 내용을 한 행에서 다음 행으로 또는 한 열에서 다음 열로 줄 바꿈할 수 있습니다. 또는 컨트롤 내용이 줄 바꿈되는 대신 잘릴 수 있습니다. 이 연습에서 설명하는 작업은 다음과 같습니다.
 
@@ -42,11 +42,11 @@ ms.locfileid: "67771656"
 
 - 다른 부모에 기존 컨트롤 다시 할당
 
-작업을 완료 하는 경우에 이러한 중요 한 레이아웃 기능을 통해 수행 하는 역할을 이해를 해야 합니다.
+완료 하면 이러한 중요 한 레이아웃 기능을 통해 수행 되는 역할을 이해 하 게 됩니다.
 
 ## <a name="create-the-project"></a>프로젝트를 만듭니다.
 
-1. Visual Studio에서 "FlowLayoutPanelExample" 이라는 Windows 기반 응용 프로그램 프로젝트를 만듭니다 (**파일** > **새로 만들기** > **프로젝트**  >  **시각적 C#**  하거나 **Visual Basic** > **클래식 바탕 화면** > **Windows Forms응용프로그램**).
+1. Visual Studio에서 "FlowLayoutPanelExample" (**파일** > **새** > **프로젝트** >  **C# Visual** 또는 **Visual Basic** > **클래식 Desktop** > **응용 프로그램**) 이라는 Windows 기반 응용 프로그램 프로젝트를 만듭니다.
 
 2. **폼 디자이너**에서 폼을 선택합니다.
 
@@ -119,7 +119,7 @@ ms.locfileid: "67771656"
 
 1. <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 <xref:System.Windows.Forms.Control.Dock%2A> 속성 값을 <xref:System.Windows.Forms.DockStyle.Fill>로 변경합니다. 폼이 충분히 큰 경우 <xref:System.Windows.Forms.Button> 컨트롤이 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 첫 번째 열로 이동됩니다.
 
-2. <xref:System.Windows.Forms.FlowLayoutPanel> 속성 <xref:System.Windows.Forms.Control.Padding%2A> 창에서 <xref:System.Windows.Forms.Control.Padding%2A> 항목을 확장하고 **속성을** 20 <xref:System.Windows.Forms.Padding.All%2A> 으로 설정하여 **컨트롤의**속성 값을 변경합니다. 자세한 내용은 [연습: 레이아웃 Windows Forms 컨트롤 Padding, Margins 및 AutoSize 속성을 사용 하 여](windows-forms-controls-padding-autosize.md)입니다. 자식 컨트롤이 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 중심 쪽으로 이동됩니다. <xref:System.Windows.Forms.Control.Padding%2A> 속성의 값이 증가한 만큼 자식 컨트롤이 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 테두리에서 멀어집니다.
+2. <xref:System.Windows.Forms.FlowLayoutPanel> 속성 <xref:System.Windows.Forms.Control.Padding%2A> 창에서 <xref:System.Windows.Forms.Control.Padding%2A> 항목을 확장하고 **속성을** 20 <xref:System.Windows.Forms.Padding.All%2A> 으로 설정하여 **컨트롤의**속성 값을 변경합니다. 자세한 내용은 [연습: 안쪽 여백, 여백 및 AutoSize 속성을 사용 하 여 Windows Forms 컨트롤 레이아웃](windows-forms-controls-padding-autosize.md)을 참조 하세요. 자식 컨트롤이 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 중심 쪽으로 이동됩니다. <xref:System.Windows.Forms.Control.Padding%2A> 속성의 값이 증가한 만큼 자식 컨트롤이 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 테두리에서 멀어집니다.
 
 3. <xref:System.Windows.Forms.Button> 에서 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤을 모두 선택하고 <xref:System.Windows.Forms.Control.Margin%2A> 속성의 값을 **20**으로 설정합니다. <xref:System.Windows.Forms.Button> 컨트롤 사이의 간격이 증가하므로 더 멀리 떨어져 이동됩니다. 자식 컨트롤을 모두 표시하기 위해 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 크기를 더 크게 조정해야 할 수도 있습니다.
 
@@ -150,7 +150,7 @@ ms.locfileid: "67771656"
 
 ### <a name="to-insert-a-control-using-the-caret"></a>캐럿을 사용하여 컨트롤을 삽입하려면
 
-1. <xref:System.Windows.Forms.Button> 도구 상자 **에서** 컨트롤을 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤로 끌어다 놓고 두 <xref:System.Windows.Forms.Button> 컨트롤 사이의 공간을 가리킵니다. 삽입 막대가 그려집니다, 위치를 나타내는 합니다 <xref:System.Windows.Forms.Button> 놓을 때 배치 될는 <xref:System.Windows.Forms.FlowLayoutPanel> 제어 합니다. 새 <xref:System.Windows.Forms.Button> 컨트롤을 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤로 끌어다 놓기 전에 마우스 포인터를 움직여 삽입 막대가 어떻게 이동하는지 관찰합니다.
+1. <xref:System.Windows.Forms.Button> 도구 상자 **에서** 컨트롤을 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤로 끌어다 놓고 두 <xref:System.Windows.Forms.Button> 컨트롤 사이의 공간을 가리킵니다. <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤에 놓을 때 <xref:System.Windows.Forms.Button> 배치 되는 위치를 나타내는 삽입 막대가 그려집니다. 새 <xref:System.Windows.Forms.Button> 컨트롤을 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤로 끌어다 놓기 전에 마우스 포인터를 움직여 삽입 막대가 어떻게 이동하는지 관찰합니다.
 
 2. 새 <xref:System.Windows.Forms.Button> 컨트롤을 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤로 끌어다 놓습니다. 새 <xref:System.Windows.Forms.Button> 컨트롤은 <xref:System.Windows.Forms.Control.Margin%2A> 속성 값이 다르기 때문에 다른 컨트롤과 정렬되지 않습니다.
 
@@ -182,14 +182,13 @@ ms.locfileid: "67771656"
 
 - 컨트롤 중 하나의 <xref:System.Windows.Forms.Control.Visible%2A> 속성을 `false` 로 설정하고 그에 대한 응답으로 <xref:System.Windows.Forms.FlowLayoutPanel> 이 어떻게 재배치되는지 확인합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [연습: TableLayoutPanel을 사용 하 여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [연습: 맞춤선을 사용 하 여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Microsoft Windows 사용자 환경, 사용자 인터페이스 개발자 및 디자이너를 위한 공식 지침. Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
+- [연습: TableLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [연습: Windows Forms에서 맞춤선을 사용하여 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [AutoSize 속성 개요](autosize-property-overview.md)
-- [방법: Windows Forms에 컨트롤 도킹](how-to-dock-controls-on-windows-forms.md)
+- [방법: Windows Forms에서 컨트롤 고정](how-to-dock-controls-on-windows-forms.md)
 - [방법: Windows Forms에서 컨트롤 고정](how-to-anchor-controls-on-windows-forms.md)
-- [연습: Windows Forms 컨트롤 Padding, Margins 및 AutoSize 속성을 사용 하 여 레이아웃](windows-forms-controls-padding-autosize.md)
+- [연습: Padding, Margins 및 AutoSize 속성을 사용하여 Windows Forms 컨트롤 레이아웃](windows-forms-controls-padding-autosize.md)

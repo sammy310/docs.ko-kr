@@ -1,5 +1,6 @@
 ---
-title: '연습: 디자인 타임에 Windows Forms에서 WPF 콘텐츠 할당'
+title: Windows Forms에 대 한 WPF 컨트롤 선택
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF content [Windows Forms], assigning at design time
@@ -11,18 +12,18 @@ ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0c1e0c91b7ab8bded677a86b597b02b9cb442d98
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 19f1dfec282b025f5a1fa367ec5fa9a52472c691
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460665"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746805"
 ---
 # <a name="walkthrough-assign-wpf-content-on-windows-forms-at-design-time"></a>연습: 디자인 타임에 Windows Forms에 WPF 콘텐츠 할당
 
-이 문서에서는 폼에 표시 하려는 Windows Presentation Foundation (WPF) 컨트롤 형식을 선택 하는 방법을 보여 줍니다. 프로젝트에 포함된 모든 WPF 컨트롤 형식을 선택할 수 있습니다.
+이 문서에서는 폼에 표시 하려는 Windows Presentation Foundation (WPF) 컨트롤 형식을 선택 하는 방법을 보여 줍니다. 프로젝트에 포함 된 모든 WPF 컨트롤 형식을 선택할 수 있습니다.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>전제 조건
 
 이 연습을 완료하려면 Visual Studio가 필요합니다.
 

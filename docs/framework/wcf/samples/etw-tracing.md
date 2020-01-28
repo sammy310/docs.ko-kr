@@ -2,12 +2,12 @@
 title: ETW 추적
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: 25a4281cbf5a9ad81a63eee13d768715eebedfb6
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: a62403e61e0566d5e7b753ff951bf4b316209b6f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837898"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742120"
 ---
 # <a name="etw-tracing"></a>ETW 추적
 이 샘플에서는 ETW(Windows용 이벤트 추적) 및 이 샘플과 함께 제공된 `ETWTraceListener`를 사용하여 E2E(엔드투엔드) 추적을 구현하는 방법을 보여 줍니다. 이 샘플은 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 을 기반으로 하며 ETW 추적을 포함 합니다.  
@@ -108,4 +108,4 @@ logman stop Wcf
   
 ## <a name="see-also"></a>참조
 
-- [AppFabric 모니터링 샘플](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric 모니터링 샘플](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

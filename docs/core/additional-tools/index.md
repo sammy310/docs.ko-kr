@@ -4,12 +4,12 @@ description: .NET Core 기능을 지원하고 확장하는, 설치 가능한 추
 author: mlacouture
 ms.date: 12/02/2019
 ms.custom: mvc
-ms.openlocfilehash: 1f066523a24d4e1fd7aaaa5a19e8d6c9d72d35af
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 853633f5ef159eee39ed1a8682372d4291a752f5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714530"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740713"
 ---
 # <a name="net-core-additional-tools-overview"></a>.NET Core 추가 도구 개요
 
@@ -17,7 +17,7 @@ ms.locfileid: "75714530"
 
 ## <a name="net-core-uninstall-tooluninstall-toolmd"></a>[.NET Core 제거 도구](uninstall-tool.md)
 
-[.NET Core 제거 도구](https://dotnet.microsoft.com/download/dotnet-core/uninstall-tool)(`dotnet-core-uninstall`)를 사용하면 지정한 버전만 유지되도록 시스템에서 .NET Core SDK 및 런타임을 정리할 수 있습니다. 제거되는 버전을 지정할 수 있는 옵션 컬렉션이 제공됩니다.
+[.NET Core 제거 도구](https://github.com/dotnet/cli-lab/releases)(`dotnet-core-uninstall`)를 사용하면 지정한 버전만 유지되도록 시스템에서 .NET Core SDK 및 런타임을 정리할 수 있습니다. 제거되는 버전을 지정할 수 있는 옵션 컬렉션이 제공됩니다.
 
 ## <a name="wcf-web-service-reference-toolwcf-web-service-reference-guidemd"></a>[WCF Web Service Reference 도구](wcf-web-service-reference-guide.md)
 
