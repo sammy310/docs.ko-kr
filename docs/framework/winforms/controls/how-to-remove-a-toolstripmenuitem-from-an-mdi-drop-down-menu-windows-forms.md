@@ -1,5 +1,5 @@
 ---
-title: '방법: (Windows Forms) MDI 드롭 다운 메뉴에서 ToolStripMenuItem 제거'
+title: '방법: MDI 드롭다운 메뉴에서 ToolStripMenuItem 제거'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,47 +10,47 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], removing
 - MDI [Windows Forms], merging menu items
 ms.assetid: bdafe60d-82ee-45bc-97fe-eeefca6e54c1
-ms.openlocfilehash: 378410977c31a446b34bf907dfd438a2a799c84a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3198195cf0991734826508aa65818505bf2038c8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662301"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735848"
 ---
-# <a name="how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms"></a><span data-ttu-id="3b04b-102">방법: (Windows Forms) MDI 드롭 다운 메뉴에서 ToolStripMenuItem 제거</span><span class="sxs-lookup"><span data-stu-id="3b04b-102">How to: Remove a ToolStripMenuItem from an MDI Drop-Down Menu (Windows Forms)</span></span>
-<span data-ttu-id="3b04b-103">일부 애플리케이션에서는 MDI(다중 문서 인터페이스) 자식 창의 종류가 MDI 부모 창과 다를 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3b04b-103">In some applications, the kind of a multiple-document interface (MDI) child window can be different from the MDI parent window.</span></span> <span data-ttu-id="3b04b-104">예를 들어 MDI 부모는 스프레드시트이고 MDI 자식은 차트일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3b04b-104">For example, the MDI parent might be a spreadsheet, and the MDI child might be a chart.</span></span> <span data-ttu-id="3b04b-105">이 경우 다른 종류의 MDI 자식 창이 활성화될 때 MDI 부모 메뉴의 내용을 MDI 자식 메뉴의 내용으로 업데이트하려고 합니다.</span><span class="sxs-lookup"><span data-stu-id="3b04b-105">In that case, you want to update the contents of the MDI parent's menu with the contents of the MDI child's menu as MDI child windows of different kinds are activated.</span></span>  
+# <a name="how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms"></a><span data-ttu-id="7d196-102">방법: MDI 드롭다운 메뉴에서 ToolStripMenuItem 제거(Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="7d196-102">How to: Remove a ToolStripMenuItem from an MDI Drop-Down Menu (Windows Forms)</span></span>
+<span data-ttu-id="7d196-103">일부 애플리케이션에서는 MDI(다중 문서 인터페이스) 자식 창의 종류가 MDI 부모 창과 다를 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7d196-103">In some applications, the kind of a multiple-document interface (MDI) child window can be different from the MDI parent window.</span></span> <span data-ttu-id="7d196-104">예를 들어 MDI 부모는 스프레드시트이고 MDI 자식은 차트일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7d196-104">For example, the MDI parent might be a spreadsheet, and the MDI child might be a chart.</span></span> <span data-ttu-id="7d196-105">이 경우 다른 종류의 MDI 자식 창이 활성화될 때 MDI 부모 메뉴의 내용을 MDI 자식 메뉴의 내용으로 업데이트하려고 합니다.</span><span class="sxs-lookup"><span data-stu-id="7d196-105">In that case, you want to update the contents of the MDI parent's menu with the contents of the MDI child's menu as MDI child windows of different kinds are activated.</span></span>  
   
- <span data-ttu-id="3b04b-106">다음 절차에서는 합니다 <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>를 <xref:System.Windows.Forms.MergeAction>, 및 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> MDI 부모 메뉴의 드롭다운 부분에서 메뉴 항목을 제거 하는 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="3b04b-106">The following procedure uses the <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction>, and <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> properties to remove a menu item from the drop-down part of the MDI parent menu.</span></span> <span data-ttu-id="3b04b-107">MDI 자식 창을 닫으면 MDI 부모 메뉴에 제거 메뉴 항목을 복원 합니다.</span><span class="sxs-lookup"><span data-stu-id="3b04b-107">Closing the MDI child window restores the removed menu items to the MDI parent menu.</span></span>  
+ <span data-ttu-id="7d196-106">다음 절차에서는 <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction>및 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 속성을 사용 하 여 MDI 부모 메뉴의 드롭다운 부분에서 메뉴 항목을 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="7d196-106">The following procedure uses the <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction>, and <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> properties to remove a menu item from the drop-down part of the MDI parent menu.</span></span> <span data-ttu-id="7d196-107">MDI 자식 창을 닫으면 제거 된 메뉴 항목이 MDI 부모 메뉴로 복원 됩니다.</span><span class="sxs-lookup"><span data-stu-id="7d196-107">Closing the MDI child window restores the removed menu items to the MDI parent menu.</span></span>  
   
-### <a name="to-remove-a-menustrip-from-an-mdi-drop-down-menu"></a><span data-ttu-id="3b04b-108">MDI 드롭 다운 메뉴에 MenuStrip를 제거 하려면</span><span class="sxs-lookup"><span data-stu-id="3b04b-108">To remove a MenuStrip from an MDI drop-down menu</span></span>  
+### <a name="to-remove-a-menustrip-from-an-mdi-drop-down-menu"></a><span data-ttu-id="7d196-108">MDI 드롭다운 메뉴에서 MenuStrip을 제거 하려면</span><span class="sxs-lookup"><span data-stu-id="7d196-108">To remove a MenuStrip from an MDI drop-down menu</span></span>  
   
-1. <span data-ttu-id="3b04b-109">폼을 만들고 해당 <xref:System.Windows.Forms.Form.IsMdiContainer%2A> 속성을 `true`로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="3b04b-109">Create a form and set its <xref:System.Windows.Forms.Form.IsMdiContainer%2A> property to `true`.</span></span>  
+1. <span data-ttu-id="7d196-109">폼을 만들고 해당 <xref:System.Windows.Forms.Form.IsMdiContainer%2A> 속성을 `true`로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="7d196-109">Create a form and set its <xref:System.Windows.Forms.Form.IsMdiContainer%2A> property to `true`.</span></span>  
   
-2. <span data-ttu-id="3b04b-110">`Form1`에 <xref:System.Windows.Forms.MenuStrip>을 추가하고 <xref:System.Windows.Forms.MenuStrip>의 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 속성을 `true`로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="3b04b-110">Add a <xref:System.Windows.Forms.MenuStrip> to `Form1` and set the <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> property of the <xref:System.Windows.Forms.MenuStrip> to `true`.</span></span>  
+2. <span data-ttu-id="7d196-110">`Form1`에 <xref:System.Windows.Forms.MenuStrip>을 추가하고 <xref:System.Windows.Forms.MenuStrip>의 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 속성을 `true`로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="7d196-110">Add a <xref:System.Windows.Forms.MenuStrip> to `Form1` and set the <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> property of the <xref:System.Windows.Forms.MenuStrip> to `true`.</span></span>  
   
-3. <span data-ttu-id="3b04b-111">`Form1`<xref:System.Windows.Forms.MenuStrip>에 최상위 메뉴 항목을 추가하고 해당 <xref:System.Windows.Forms.Control.Text%2A> 속성을 `&File`로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="3b04b-111">Add a top-level menu item to the `Form1`<xref:System.Windows.Forms.MenuStrip> and set its <xref:System.Windows.Forms.Control.Text%2A> property to `&File`.</span></span>  
+3. <span data-ttu-id="7d196-111">`Form1`<xref:System.Windows.Forms.MenuStrip>에 최상위 메뉴 항목을 추가하고 해당 <xref:System.Windows.Forms.Control.Text%2A> 속성을 `&File`로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="7d196-111">Add a top-level menu item to the `Form1`<xref:System.Windows.Forms.MenuStrip> and set its <xref:System.Windows.Forms.Control.Text%2A> property to `&File`.</span></span>  
   
-4. <span data-ttu-id="3b04b-112">세 하위 메뉴 항목을 추가 합니다 `&File` 메뉴 항목 집합과 해당 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 속성을 `&Open`를 `&Import from`, 및 `E&xit`합니다.</span><span class="sxs-lookup"><span data-stu-id="3b04b-112">Add three submenu items to the `&File` menu item and set their <xref:System.Windows.Forms.ToolStripItem.Text%2A> properties to `&Open`, `&Import from`, and `E&xit`.</span></span>  
+4. <span data-ttu-id="7d196-112">`&File` 메뉴 항목에 세 개의 하위 메뉴 항목을 추가 하 고 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 속성을 `&Open`, `&Import from`및 `E&xit`로 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="7d196-112">Add three submenu items to the `&File` menu item and set their <xref:System.Windows.Forms.ToolStripItem.Text%2A> properties to `&Open`, `&Import from`, and `E&xit`.</span></span>  
   
-5. <span data-ttu-id="3b04b-113">두 개의 하위 메뉴 항목을 추가 합니다 `&Import from` 하위 메뉴 항목 집합과 해당 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 속성을 `&Word` 및 `&Excel`합니다.</span><span class="sxs-lookup"><span data-stu-id="3b04b-113">Add two submenu items to the `&Import from` submenu item and set their <xref:System.Windows.Forms.ToolStripItem.Text%2A> properties to `&Word` and `&Excel`.</span></span>  
+5. <span data-ttu-id="7d196-113">`&Import from` 하위 메뉴 항목에 두 개의 하위 메뉴 항목을 추가 하 고 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 속성을 `&Word` 및 `&Excel`로 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="7d196-113">Add two submenu items to the `&Import from` submenu item and set their <xref:System.Windows.Forms.ToolStripItem.Text%2A> properties to `&Word` and `&Excel`.</span></span>  
   
-6. <span data-ttu-id="3b04b-114">프로젝트에 폼을 추가하고, 폼에 <xref:System.Windows.Forms.MenuStrip>을 추가한 다음 `Form2`<xref:System.Windows.Forms.MenuStrip>의 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 속성을 `true`로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="3b04b-114">Add a form to the project, add a <xref:System.Windows.Forms.MenuStrip> to the form, and set the <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> property of the `Form2`<xref:System.Windows.Forms.MenuStrip> to `true`.</span></span>  
+6. <span data-ttu-id="7d196-114">프로젝트에 폼을 추가하고, 폼에 <xref:System.Windows.Forms.MenuStrip>을 추가한 다음 `Form2`<xref:System.Windows.Forms.MenuStrip>의 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 속성을 `true`로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="7d196-114">Add a form to the project, add a <xref:System.Windows.Forms.MenuStrip> to the form, and set the <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> property of the `Form2`<xref:System.Windows.Forms.MenuStrip> to `true`.</span></span>  
   
-7. <span data-ttu-id="3b04b-115">`Form2`<xref:System.Windows.Forms.MenuStrip>에 최상위 메뉴 항목을 추가하고 해당 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 속성을 `&File`로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="3b04b-115">Add a top-level menu item to the `Form2`<xref:System.Windows.Forms.MenuStrip> and set its <xref:System.Windows.Forms.ToolStripItem.Text%2A> property to `&File`.</span></span>  
+7. <span data-ttu-id="7d196-115">`Form2`<xref:System.Windows.Forms.MenuStrip>에 최상위 메뉴 항목을 추가하고 해당 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 속성을 `&File`로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="7d196-115">Add a top-level menu item to the `Form2`<xref:System.Windows.Forms.MenuStrip> and set its <xref:System.Windows.Forms.ToolStripItem.Text%2A> property to `&File`.</span></span>  
   
-8. <span data-ttu-id="3b04b-116">추가 `&Import from` 하위 메뉴 항목을 합니다 `&File` 의 메뉴 `Form2`, 추가 `&Word` 하위 메뉴 항목을는 `&File` 메뉴.</span><span class="sxs-lookup"><span data-stu-id="3b04b-116">Add an `&Import from` submenu item to the `&File` menu of `Form2`, and add an `&Word` submenu item to the `&File` menu.</span></span>  
+8. <span data-ttu-id="7d196-116">`Form2`의 `&File` 메뉴에 `&Import from` 하위 메뉴 항목을 추가 하 고 `&File` 메뉴에 `&Word` 하위 메뉴 항목을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="7d196-116">Add an `&Import from` submenu item to the `&File` menu of `Form2`, and add an `&Word` submenu item to the `&File` menu.</span></span>  
   
-9. <span data-ttu-id="3b04b-117">설정 합니다 <xref:System.Windows.Forms.MergeAction> 및 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 의 속성을 `Form2` 다음 표에 나와 있는 것 처럼 메뉴 항목.</span><span class="sxs-lookup"><span data-stu-id="3b04b-117">Set the <xref:System.Windows.Forms.MergeAction> and <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> properties of the `Form2` menu items as shown in the following table.</span></span>  
+9. <span data-ttu-id="7d196-117">다음 표와 같이 `Form2` 메뉴 항목의 <xref:System.Windows.Forms.MergeAction> 및 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 속성을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="7d196-117">Set the <xref:System.Windows.Forms.MergeAction> and <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> properties of the `Form2` menu items as shown in the following table.</span></span>  
   
-    |<span data-ttu-id="3b04b-118">Form2 메뉴 항목</span><span class="sxs-lookup"><span data-stu-id="3b04b-118">Form2 menu item</span></span>|<span data-ttu-id="3b04b-119">MergeAction 값</span><span class="sxs-lookup"><span data-stu-id="3b04b-119">MergeAction value</span></span>|<span data-ttu-id="3b04b-120">MergeIndex 값</span><span class="sxs-lookup"><span data-stu-id="3b04b-120">MergeIndex value</span></span>|  
+    |<span data-ttu-id="7d196-118">Form2 메뉴 항목</span><span class="sxs-lookup"><span data-stu-id="7d196-118">Form2 menu item</span></span>|<span data-ttu-id="7d196-119">MergeAction 값</span><span class="sxs-lookup"><span data-stu-id="7d196-119">MergeAction value</span></span>|<span data-ttu-id="7d196-120">MergeIndex 값</span><span class="sxs-lookup"><span data-stu-id="7d196-120">MergeIndex value</span></span>|  
     |---------------------|-----------------------|----------------------|  
-    |<span data-ttu-id="3b04b-121">파일</span><span class="sxs-lookup"><span data-stu-id="3b04b-121">File</span></span>|<span data-ttu-id="3b04b-122">MatchOnly</span><span class="sxs-lookup"><span data-stu-id="3b04b-122">MatchOnly</span></span>|<span data-ttu-id="3b04b-123">-1</span><span class="sxs-lookup"><span data-stu-id="3b04b-123">-1</span></span>|  
-    |<span data-ttu-id="3b04b-124">가져오기</span><span class="sxs-lookup"><span data-stu-id="3b04b-124">Import from</span></span>|<span data-ttu-id="3b04b-125">MatchOnly</span><span class="sxs-lookup"><span data-stu-id="3b04b-125">MatchOnly</span></span>|<span data-ttu-id="3b04b-126">-1</span><span class="sxs-lookup"><span data-stu-id="3b04b-126">-1</span></span>|  
-    |<span data-ttu-id="3b04b-127">단어</span><span class="sxs-lookup"><span data-stu-id="3b04b-127">Word</span></span>|<span data-ttu-id="3b04b-128">제거</span><span class="sxs-lookup"><span data-stu-id="3b04b-128">Remove</span></span>|<span data-ttu-id="3b04b-129">-1</span><span class="sxs-lookup"><span data-stu-id="3b04b-129">-1</span></span>|  
+    |<span data-ttu-id="7d196-121">File</span><span class="sxs-lookup"><span data-stu-id="7d196-121">File</span></span>|<span data-ttu-id="7d196-122">MatchOnly</span><span class="sxs-lookup"><span data-stu-id="7d196-122">MatchOnly</span></span>|<span data-ttu-id="7d196-123">-1</span><span class="sxs-lookup"><span data-stu-id="7d196-123">-1</span></span>|  
+    |<span data-ttu-id="7d196-124">에서 가져오기</span><span class="sxs-lookup"><span data-stu-id="7d196-124">Import from</span></span>|<span data-ttu-id="7d196-125">MatchOnly</span><span class="sxs-lookup"><span data-stu-id="7d196-125">MatchOnly</span></span>|<span data-ttu-id="7d196-126">-1</span><span class="sxs-lookup"><span data-stu-id="7d196-126">-1</span></span>|  
+    |<span data-ttu-id="7d196-127">Word</span><span class="sxs-lookup"><span data-stu-id="7d196-127">Word</span></span>|<span data-ttu-id="7d196-128">Remove</span><span class="sxs-lookup"><span data-stu-id="7d196-128">Remove</span></span>|<span data-ttu-id="7d196-129">-1</span><span class="sxs-lookup"><span data-stu-id="7d196-129">-1</span></span>|  
   
-10. <span data-ttu-id="3b04b-130">`Form1`에 대 한 이벤트 처리기를 만듭니다를 <xref:System.Windows.Forms.Control.Click> 이벤트를 `&Open` <xref:System.Windows.Forms.ToolStripMenuItem>합니다.</span><span class="sxs-lookup"><span data-stu-id="3b04b-130">In `Form1`, create an event handler for the <xref:System.Windows.Forms.Control.Click> event of the `&Open`<xref:System.Windows.Forms.ToolStripMenuItem>.</span></span>  
+10. <span data-ttu-id="7d196-130">`Form1`에서 `&Open`<xref:System.Windows.Forms.ToolStripMenuItem>의 <xref:System.Windows.Forms.Control.Click> 이벤트에 대 한 이벤트 처리기를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="7d196-130">In `Form1`, create an event handler for the <xref:System.Windows.Forms.Control.Click> event of the `&Open`<xref:System.Windows.Forms.ToolStripMenuItem>.</span></span>  
   
-11. <span data-ttu-id="3b04b-131">이벤트 처리기에서 만들고의 새 인스턴스를 표시 하려면 다음 코드 예제와 비슷한 코드를 삽입 `Form2` MDI 자식으로 `Form1`:</span><span class="sxs-lookup"><span data-stu-id="3b04b-131">Within the event handler, insert code similar to the following code example to create and display new instances of `Form2` as MDI children of `Form1`:</span></span>  
+11. <span data-ttu-id="7d196-131">이벤트 처리기 내에서 다음 코드 예제와 비슷한 코드를 삽입 하 여 `Form2`의 새 인스턴스를 만들고 `Form1`의 MDI 자식으로 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="7d196-131">Within the event handler, insert code similar to the following code example to create and display new instances of `Form2` as MDI children of `Form1`:</span></span>  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles openToolStripMenuItem.Click  
@@ -73,7 +73,7 @@ ms.locfileid: "64662301"
     }  
     ```  
   
-12. <span data-ttu-id="3b04b-132">`&Open`<xref:System.Windows.Forms.ToolStripMenuItem>에 다음 코드 예제와 비슷한 코드를 배치하여 이벤트 처리기를 등록합니다.</span><span class="sxs-lookup"><span data-stu-id="3b04b-132">Place code similar to the following code example in the `&Open`<xref:System.Windows.Forms.ToolStripMenuItem> to register the event handler.</span></span>  
+12. <span data-ttu-id="7d196-132">`&Open`<xref:System.Windows.Forms.ToolStripMenuItem>에 다음 코드 예제와 비슷한 코드를 배치하여 이벤트 처리기를 등록합니다.</span><span class="sxs-lookup"><span data-stu-id="7d196-132">Place code similar to the following code example in the `&Open`<xref:System.Windows.Forms.ToolStripMenuItem> to register the event handler.</span></span>  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(sender As Object, e As _  
@@ -85,17 +85,17 @@ ms.locfileid: "64662301"
     System.EventHandler(this.openToolStripMenuItem_Click);  
     ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="3b04b-133">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="3b04b-133">Compiling the Code</span></span>  
- <span data-ttu-id="3b04b-134">이 예제에는 다음 사항이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="3b04b-134">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="7d196-133">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="7d196-133">Compiling the Code</span></span>  
+ <span data-ttu-id="7d196-134">이 예제에는 다음 사항이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="7d196-134">This example requires:</span></span>  
   
-- <span data-ttu-id="3b04b-135">`Form1` 및 `Form2`라는 두 개의 <xref:System.Windows.Forms.Form> 컨트롤</span><span class="sxs-lookup"><span data-stu-id="3b04b-135">Two <xref:System.Windows.Forms.Form> controls named `Form1` and `Form2`.</span></span>  
+- <span data-ttu-id="7d196-135">`Form1` 및 `Form2`라는 두 개의 <xref:System.Windows.Forms.Form> 컨트롤</span><span class="sxs-lookup"><span data-stu-id="7d196-135">Two <xref:System.Windows.Forms.Form> controls named `Form1` and `Form2`.</span></span>  
   
-- <span data-ttu-id="3b04b-136">`menuStrip1`이라는 `Form1`의 <xref:System.Windows.Forms.MenuStrip> 컨트롤 및 `menuStrip2`라는 `Form2`의 <xref:System.Windows.Forms.MenuStrip> 컨트롤</span><span class="sxs-lookup"><span data-stu-id="3b04b-136">A <xref:System.Windows.Forms.MenuStrip> control on `Form1` named `menuStrip1`, and a <xref:System.Windows.Forms.MenuStrip> control on `Form2` named `menuStrip2`.</span></span>  
+- <span data-ttu-id="7d196-136">`menuStrip1`이라는 `Form1`의 <xref:System.Windows.Forms.MenuStrip> 컨트롤 및 `menuStrip2`라는 `Form2`의 <xref:System.Windows.Forms.MenuStrip> 컨트롤</span><span class="sxs-lookup"><span data-stu-id="7d196-136">A <xref:System.Windows.Forms.MenuStrip> control on `Form1` named `menuStrip1`, and a <xref:System.Windows.Forms.MenuStrip> control on `Form2` named `menuStrip2`.</span></span>  
   
-- <span data-ttu-id="3b04b-137"><xref:System?displayProperty=nameWithType> 및 <xref:System.Windows.Forms?displayProperty=nameWithType> 어셈블리에 대한 참조</span><span class="sxs-lookup"><span data-stu-id="3b04b-137">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
+- <span data-ttu-id="7d196-137"><xref:System?displayProperty=nameWithType> 및 <xref:System.Windows.Forms?displayProperty=nameWithType> 어셈블리에 대한 참조</span><span class="sxs-lookup"><span data-stu-id="7d196-137">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3b04b-138">참고자료</span><span class="sxs-lookup"><span data-stu-id="3b04b-138">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7d196-138">참조</span><span class="sxs-lookup"><span data-stu-id="7d196-138">See also</span></span>
 
-- [<span data-ttu-id="3b04b-139">방법: MDI 부모 폼 만들기</span><span class="sxs-lookup"><span data-stu-id="3b04b-139">How to: Create MDI Parent Forms</span></span>](../advanced/how-to-create-mdi-parent-forms.md)
-- [<span data-ttu-id="3b04b-140">방법: MDI 자식 폼 만들기</span><span class="sxs-lookup"><span data-stu-id="3b04b-140">How to: Create MDI Child Forms</span></span>](../advanced/how-to-create-mdi-child-forms.md)
-- [<span data-ttu-id="3b04b-141">MenuStrip 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="3b04b-141">MenuStrip Control Overview</span></span>](menustrip-control-overview-windows-forms.md)
+- [<span data-ttu-id="7d196-139">방법: MDI 상위 폼 만들기</span><span class="sxs-lookup"><span data-stu-id="7d196-139">How to: Create MDI Parent Forms</span></span>](../advanced/how-to-create-mdi-parent-forms.md)
+- [<span data-ttu-id="7d196-140">방법: MDI 자식 폼 만들기</span><span class="sxs-lookup"><span data-stu-id="7d196-140">How to: Create MDI Child Forms</span></span>](../advanced/how-to-create-mdi-child-forms.md)
+- [<span data-ttu-id="7d196-141">MenuStrip 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="7d196-141">MenuStrip Control Overview</span></span>](menustrip-control-overview-windows-forms.md)
