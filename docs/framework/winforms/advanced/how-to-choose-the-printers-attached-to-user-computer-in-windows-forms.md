@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms에서 사용자의 컴퓨터에 연결된 프린터 선택'
+title: '방법: 사용자 컴퓨터에 연결 된 프린터 선택'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,25 +9,25 @@ helpviewer_keywords:
 - printing [Windows Forms], choosing printers
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-ms.openlocfilehash: e81ef8b563afff6dd57a9fbb7674d17c0eb80916
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 7fc2427468540ac0a1480f6140cbb34c3a0f1ab3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053066"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746502"
 ---
-# <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a><span data-ttu-id="b733f-102">방법: Windows Forms에서 사용자의 컴퓨터에 연결된 프린터 선택</span><span class="sxs-lookup"><span data-stu-id="b733f-102">How to: Choose the Printers Attached to a User's Computer in Windows Forms</span></span>
-<span data-ttu-id="b733f-103">사용자는 기본 프린터 이외의 프린터를 선택하는 경우가 많습니다.</span><span class="sxs-lookup"><span data-stu-id="b733f-103">Often, users want to choose a printer other than the default printer to print to.</span></span> <span data-ttu-id="b733f-104"><xref:System.Windows.Forms.PrintDialog> 구성 요소를 사용하면 현재 설치된 프린터 중에서 사용자가 원하는 프린터를 선택하도록 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b733f-104">You can enable users to choose a printer from among those currently installed by using the <xref:System.Windows.Forms.PrintDialog> component.</span></span> <span data-ttu-id="b733f-105"><xref:System.Windows.Forms.PrintDialog> 구성 요소를 통해 <xref:System.Windows.Forms.DialogResult> 구성 요소의 <xref:System.Windows.Forms.PrintDialog> 가 캡처되고 프린터 선택에 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="b733f-105">Through the <xref:System.Windows.Forms.PrintDialog> component, the <xref:System.Windows.Forms.DialogResult> of the <xref:System.Windows.Forms.PrintDialog> component is captured and used to select the printer.</span></span>  
+# <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a><span data-ttu-id="09a0b-102">방법: Windows Forms에서 사용자의 컴퓨터에 연결된 프린터 선택</span><span class="sxs-lookup"><span data-stu-id="09a0b-102">How to: Choose the Printers Attached to a User's Computer in Windows Forms</span></span>
+<span data-ttu-id="09a0b-103">사용자는 기본 프린터 이외의 프린터를 선택하는 경우가 많습니다.</span><span class="sxs-lookup"><span data-stu-id="09a0b-103">Often, users want to choose a printer other than the default printer to print to.</span></span> <span data-ttu-id="09a0b-104"><xref:System.Windows.Forms.PrintDialog> 구성 요소를 사용하면 현재 설치된 프린터 중에서 사용자가 원하는 프린터를 선택하도록 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="09a0b-104">You can enable users to choose a printer from among those currently installed by using the <xref:System.Windows.Forms.PrintDialog> component.</span></span> <span data-ttu-id="09a0b-105"><xref:System.Windows.Forms.PrintDialog> 구성 요소를 통해 <xref:System.Windows.Forms.DialogResult> 구성 요소의 <xref:System.Windows.Forms.PrintDialog> 가 캡처되고 프린터 선택에 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="09a0b-105">Through the <xref:System.Windows.Forms.PrintDialog> component, the <xref:System.Windows.Forms.DialogResult> of the <xref:System.Windows.Forms.PrintDialog> component is captured and used to select the printer.</span></span>  
   
- <span data-ttu-id="b733f-106">다음 절차에서는 텍스트 파일이 기본 프린터로 인쇄되도록 선택되었습니다.</span><span class="sxs-lookup"><span data-stu-id="b733f-106">In the following procedure, a text file is selected to be printed to the default printer.</span></span> <span data-ttu-id="b733f-107">그런 다음 <xref:System.Windows.Forms.PrintDialog> 클래스가 인스턴스화됩니다.</span><span class="sxs-lookup"><span data-stu-id="b733f-107">The <xref:System.Windows.Forms.PrintDialog> class is then instantiated.</span></span>  
+ <span data-ttu-id="09a0b-106">다음 절차에서는 텍스트 파일이 기본 프린터로 인쇄되도록 선택되었습니다.</span><span class="sxs-lookup"><span data-stu-id="09a0b-106">In the following procedure, a text file is selected to be printed to the default printer.</span></span> <span data-ttu-id="09a0b-107">그런 다음 <xref:System.Windows.Forms.PrintDialog> 클래스가 인스턴스화됩니다.</span><span class="sxs-lookup"><span data-stu-id="09a0b-107">The <xref:System.Windows.Forms.PrintDialog> class is then instantiated.</span></span>  
   
-### <a name="to-choose-a-printer-and-then-print-a-file"></a><span data-ttu-id="b733f-108">프린터를 선택한 다음 파일을 인쇄하려면</span><span class="sxs-lookup"><span data-stu-id="b733f-108">To choose a printer and then print a file</span></span>  
+### <a name="to-choose-a-printer-and-then-print-a-file"></a><span data-ttu-id="09a0b-108">프린터를 선택한 다음 파일을 인쇄하려면</span><span class="sxs-lookup"><span data-stu-id="09a0b-108">To choose a printer and then print a file</span></span>  
   
-1. <span data-ttu-id="b733f-109">사용 하 여 사용할 프린터를 선택 합니다 <xref:System.Windows.Forms.PrintDialog> 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="b733f-109">Select the printer to be used using the <xref:System.Windows.Forms.PrintDialog> component.</span></span>  
+1. <span data-ttu-id="09a0b-109"><xref:System.Windows.Forms.PrintDialog> 구성 요소를 사용 하 여 사용할 프린터를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="09a0b-109">Select the printer to be used using the <xref:System.Windows.Forms.PrintDialog> component.</span></span>  
   
-     <span data-ttu-id="b733f-110">다음 코드 예제에서는 두 이벤트가 처리되고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b733f-110">In the following code example, there are two events being handled.</span></span> <span data-ttu-id="b733f-111">첫 번째에서는 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Click> 이벤트를 <xref:System.Windows.Forms.PrintDialog> 클래스가 인스턴스화되고 사용자가 선택한 프린터가 캡처됩니다는 <xref:System.Windows.Forms.DialogResult> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="b733f-111">In the first, a <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event, the <xref:System.Windows.Forms.PrintDialog> class is instantiated and the printer selected by the user is captured in the <xref:System.Windows.Forms.DialogResult> property.</span></span>  
+     <span data-ttu-id="09a0b-110">다음 코드 예제에서는 두 이벤트가 처리되고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="09a0b-110">In the following code example, there are two events being handled.</span></span> <span data-ttu-id="09a0b-111">첫 번째, <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Click> 이벤트에서 <xref:System.Windows.Forms.PrintDialog> 클래스가 인스턴스화되고 사용자가 선택한 프린터가 <xref:System.Windows.Forms.DialogResult> 속성에서 캡처됩니다.</span><span class="sxs-lookup"><span data-stu-id="09a0b-111">In the first, a <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event, the <xref:System.Windows.Forms.PrintDialog> class is instantiated and the printer selected by the user is captured in the <xref:System.Windows.Forms.DialogResult> property.</span></span>  
   
-     <span data-ttu-id="b733f-112">두 번째 경우에서는 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 의 이벤트는 <xref:System.Drawing.Printing.PrintDocument> 구성 요소, 샘플 문서가 지정 된 프린터에 인쇄 되 합니다.</span><span class="sxs-lookup"><span data-stu-id="b733f-112">In the second event, the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event of the <xref:System.Drawing.Printing.PrintDocument> component, a sample document is printed to the printer specified.</span></span>  
+     <span data-ttu-id="09a0b-112"><xref:System.Drawing.Printing.PrintDocument> 구성 요소의 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 이벤트에 대 한 두 번째 이벤트에서 샘플 문서는 지정 된 프린터로 인쇄 됩니다.</span><span class="sxs-lookup"><span data-stu-id="09a0b-112">In the second event, the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event of the <xref:System.Drawing.Printing.PrintDocument> component, a sample document is printed to the printer specified.</span></span>  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -89,7 +89,7 @@ ms.locfileid: "66053066"
        }  
     ```  
   
-     <span data-ttu-id="b733f-113">(Visual C# 및 시각적 C++) 이벤트 처리기를 등록 하려면 폼의 생성자에 다음 코드를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="b733f-113">(Visual C# and Visual C++) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="09a0b-113">(시각적 C# 개체 및 C++시각적 개체) 폼의 생성자에 다음 코드를 추가 하 여 이벤트 처리기를 등록 합니다.</span><span class="sxs-lookup"><span data-stu-id="09a0b-113">(Visual C# and Visual C++) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.printDocument1.PrintPage += new  
@@ -106,6 +106,6 @@ ms.locfileid: "66053066"
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="b733f-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="b733f-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="09a0b-114">참조</span><span class="sxs-lookup"><span data-stu-id="09a0b-114">See also</span></span>
 
-- [<span data-ttu-id="b733f-115">Windows Forms 인쇄 지원</span><span class="sxs-lookup"><span data-stu-id="b733f-115">Windows Forms Print Support</span></span>](windows-forms-print-support.md)
+- [<span data-ttu-id="09a0b-115">Windows Forms 인쇄 지원</span><span class="sxs-lookup"><span data-stu-id="09a0b-115">Windows Forms Print Support</span></span>](windows-forms-print-support.md)

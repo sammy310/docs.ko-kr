@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms DataGridView 컨트롤에서 열 다시 정렬 사용'
+title: DataGridView 컨트롤에서 열 다시 정렬 사용
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,35 +9,35 @@ helpviewer_keywords:
 - data grids [Windows Forms], reordering columns
 - columns [Windows Forms], reordering
 ms.assetid: cc20eae3-e4db-493f-95ce-a4215e29472a
-ms.openlocfilehash: c4c92a51f2e209f814ac34b39a0c6ba35f0bf56b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 681489cdb874677079e2577140040921e587d21e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651739"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745490"
 ---
-# <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="fffe6-102">방법: Windows Forms DataGridView 컨트롤에서 열 다시 정렬 사용</span><span class="sxs-lookup"><span data-stu-id="fffe6-102">How to: Enable Column Reordering in the Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="fffe6-103"><xref:System.Windows.Forms.DataGridView> 컨트롤에서 열 다시 정렬을 사용하도록 설정하면 사용자가 마우스로 열 머리글을 끌어서 열을 새 위치로 이동할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fffe6-103">When you enable column reordering in the <xref:System.Windows.Forms.DataGridView> control, users can move a column to a new position by dragging the column header with the mouse.</span></span> <span data-ttu-id="fffe6-104"><xref:System.Windows.Forms.DataGridView> 컨트롤에서 <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType> 속성 값은 사용자가 열을 다른 위치로 이동할 수 있는지 여부를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="fffe6-104">In the <xref:System.Windows.Forms.DataGridView> control, the <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType> property value determines whether users can move columns to different positions.</span></span>  
+# <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="19993-102">방법: Windows Forms DataGridView 컨트롤에서 열 다시 정렬 사용</span><span class="sxs-lookup"><span data-stu-id="19993-102">How to: Enable Column Reordering in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="19993-103"><xref:System.Windows.Forms.DataGridView> 컨트롤에서 열 다시 정렬을 사용하도록 설정하면 사용자가 마우스로 열 머리글을 끌어서 열을 새 위치로 이동할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="19993-103">When you enable column reordering in the <xref:System.Windows.Forms.DataGridView> control, users can move a column to a new position by dragging the column header with the mouse.</span></span> <span data-ttu-id="19993-104"><xref:System.Windows.Forms.DataGridView> 컨트롤에서 <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType> 속성 값은 사용자가 열을 다른 위치로 이동할 수 있는지 여부를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="19993-104">In the <xref:System.Windows.Forms.DataGridView> control, the <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType> property value determines whether users can move columns to different positions.</span></span>  
   
- <span data-ttu-id="fffe6-105">Visual Studio에서는 이 작업이 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="fffe6-105">There is support for this task in Visual Studio.</span></span>  <span data-ttu-id="fffe6-106">또한 참조 [방법: 사용 하도록 설정 된 Windows에서 열 다시 정렬 Forms DataGridView 컨트롤 디자이너를 사용 하 여](enable-column-reordering-in-the-datagrid-using-the-designer.md)입니다.</span><span class="sxs-lookup"><span data-stu-id="fffe6-106">Also see [How to: Enable Column Reordering in the Windows Forms DataGridView Control Using the Designer](enable-column-reordering-in-the-datagrid-using-the-designer.md).</span></span>  
+ <span data-ttu-id="19993-105">Visual Studio에서는 이 작업이 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="19993-105">There is support for this task in Visual Studio.</span></span>  <span data-ttu-id="19993-106">또한 [방법: 디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤에서 열 다시 정렬을 사용 하도록 설정을](enable-column-reordering-in-the-datagrid-using-the-designer.md)참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="19993-106">Also see [How to: Enable Column Reordering in the Windows Forms DataGridView Control Using the Designer](enable-column-reordering-in-the-datagrid-using-the-designer.md).</span></span>  
   
-### <a name="to-enable-column-reordering-programmatically"></a><span data-ttu-id="fffe6-107">프로그래밍 방식으로 열 다시 정렬을 사용하도록 설정하려면 다음을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="fffe6-107">To enable column reordering programmatically</span></span>  
+### <a name="to-enable-column-reordering-programmatically"></a><span data-ttu-id="19993-107">프로그래밍 방식으로 열 다시 정렬을 사용하도록 설정하려면 다음을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="19993-107">To enable column reordering programmatically</span></span>  
   
-- <span data-ttu-id="fffe6-108"><xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType> 속성을 `true`으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="fffe6-108">Set the <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType> property to `true`.</span></span>  
+- <span data-ttu-id="19993-108"><xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType> 속성을 `true`으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="19993-108">Set the <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType> property to `true`.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#060](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#060)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#060](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#060)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="fffe6-109">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="fffe6-109">Compiling the Code</span></span>  
- <span data-ttu-id="fffe6-110">이 예제에는 다음 사항이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="fffe6-110">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="19993-109">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="19993-109">Compiling the Code</span></span>  
+ <span data-ttu-id="19993-110">이 예제에는 다음 사항이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="19993-110">This example requires:</span></span>  
   
-- <span data-ttu-id="fffe6-111">`dataGridView1`이라는 <xref:System.Windows.Forms.DataGridView> 컨트롤</span><span class="sxs-lookup"><span data-stu-id="fffe6-111">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span>  
+- <span data-ttu-id="19993-111">`dataGridView1`이라는 <xref:System.Windows.Forms.DataGridView> 컨트롤</span><span class="sxs-lookup"><span data-stu-id="19993-111">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span>  
   
-- <span data-ttu-id="fffe6-112"><xref:System?displayProperty=nameWithType> 및 <xref:System.Windows.Forms?displayProperty=nameWithType> 어셈블리에 대한 참조</span><span class="sxs-lookup"><span data-stu-id="fffe6-112">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
+- <span data-ttu-id="19993-112"><xref:System?displayProperty=nameWithType> 및 <xref:System.Windows.Forms?displayProperty=nameWithType> 어셈블리에 대한 참조</span><span class="sxs-lookup"><span data-stu-id="19993-112">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fffe6-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="fffe6-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="19993-113">참조</span><span class="sxs-lookup"><span data-stu-id="19993-113">See also</span></span>
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="fffe6-114">Windows Forms DataGridView 컨트롤의 기본 열, 행 및 셀 기능</span><span class="sxs-lookup"><span data-stu-id="fffe6-114">Basic Column, Row, and Cell Features in the Windows Forms DataGridView Control</span></span>](basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [<span data-ttu-id="fffe6-115">방법: Windows Forms DataGridView 컨트롤에서 열 고정</span><span class="sxs-lookup"><span data-stu-id="fffe6-115">How to: Freeze Columns in the Windows Forms DataGridView Control</span></span>](how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="19993-114">Windows Forms DataGridView 컨트롤의 기본 열, 행 및 셀 기능</span><span class="sxs-lookup"><span data-stu-id="19993-114">Basic Column, Row, and Cell Features in the Windows Forms DataGridView Control</span></span>](basic-column-row-and-cell-features-wf-datagridview-control.md)
+- [<span data-ttu-id="19993-115">방법: Windows Forms DataGridView 컨트롤에서 열 고정</span><span class="sxs-lookup"><span data-stu-id="19993-115">How to: Freeze Columns in the Windows Forms DataGridView Control</span></span>](how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)
