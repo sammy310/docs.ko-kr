@@ -2,12 +2,12 @@
 title: 기본 상호 운용성 모범 사례 - .NET
 description: .NET에서 기본 구성 요소와 인터페이스하는 모범 사례를 알아봅니다.
 ms.date: 01/18/2019
-ms.openlocfilehash: 7fe0dd0545f8ba800174f8be18bb2f11f39463f9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9486256b815856c0c283f5fe231be3d35d6e8f00
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706402"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742755"
 ---
 # <a name="native-interoperability-best-practices"></a>기본 상호 운용성 모범 사례
 
@@ -17,12 +17,12 @@ ms.locfileid: "75706402"
 
 이 섹션의 지침은 모든 interop 시나리오에 적용됩니다.
 
-- **✔️** 호출하려는 네이티브 메서드와 동일한 명명 및 대문자 표시를 메서드와 매개 변수에 사용합니다.
-- **✔️** 상수 값에 동일한 명명 및 대문자 표시를 사용하는 것이 좋습니다.
-- **✔️** 네이티브 형식에 가장 가깝게 매핑되는 .NET 형식을 사용합니다. 예를 들어 C#에서 네이티브 형식이 `unsigned int`인 경우 `uint`를 사용합니다.
-- **✔️** 기본 동작과 다른 동작을 원하는 경우에만 `[In]` 및 `[Out]` 특성을 사용합니다.
-- **✔** 네이티브 배열 버퍼를 풀하려는 경우 <xref:System.Buffers.ArrayPool%601?displayProperty=nameWithType>을 사용하는 것이 좋습니다.
-- **✔️** 네이티브 라이브러리와 동일한 이름 및 대문자 표시를 사용하여 P/Invoke 선언을 클래스에 래핑하는 것이 좋습니다.
+- 메서드 및 매개 변수에 대해 호출 하려는 네이티브 메서드로 동일한 이름 및 대/소문자를 사용 ✔️ 합니다.
+- 상수 값에 대해 동일한 이름 지정 및 대문자 표시를 사용 하는 것이 좋습니다 ✔️.
+- ✔️ 네이티브 형식과 가장 가깝게 매핑되는 .NET 형식을 사용 합니다. 예를 들어 C#에서 네이티브 형식이 `unsigned int`인 경우 `uint`를 사용합니다.
+- 원하는 동작이 기본 동작과 다를 경우에만 ✔️ `[In]` 및 `[Out]` 특성을 사용 합니다.
+- ✔️ <xref:System.Buffers.ArrayPool%601?displayProperty=nameWithType>를 사용 하 여 네이티브 배열 버퍼를 풀 하는 것이 좋습니다.
+- 네이티브 라이브러리와 이름 및 대/소문자가 동일한 클래스에서 P/Invoke 선언을 래핑하는 것이 좋습니다. ✔️
   - 이렇게 하면 `[DllImport]` 특성이 C# `nameof` 언어 기능을 사용하여 네이티브 라이브러리의 이름을 전달하고 네이티브 라이브러리 이름의 철자가 잘못 입력되지 않았는지 확인할 수 있습니다.
 
 ## <a name="dllimport-attribute-settings"></a>DllImport 특성 설정
@@ -40,15 +40,15 @@ CharSet이 유니코드 이거나 인수가 `[MarshalAs(UnmanagedType.LPWSTR)]`�
 
 문자열을 명시적으로 ANSI 처리하려는 경우가 아니면, `[DllImport]`를 `Charset.Unicode`로 표시해야 합니다.
 
-**❌** `[Out] string` 매개 변수를 사용 하지 않습니다. `[Out]` 특성을 사용하여 값으로 전달된 문자열 매개 변수는 문자열이 인턴 지정된 문자열인 경우 런타임을 불안정하게 만들 수 있습니다. 문자열 인터닝에 대한 자세한 내용은 <xref:System.String.Intern%2A?displayProperty=nameWithType> 문서를 참조하세요.
+❌ `[Out] string` 매개 변수를 사용 하지 않습니다. `[Out]` 특성을 사용하여 값으로 전달된 문자열 매개 변수는 문자열이 인턴 지정된 문자열인 경우 런타임을 불안정하게 만들 수 있습니다. 문자열 인터닝에 대한 자세한 내용은 <xref:System.String.Intern%2A?displayProperty=nameWithType> 문서를 참조하세요.
 
-❌ `StringBuilder` 매개 변수를 사용 **하지 않습니다** . `StringBuilder` 마샬링은 *항상* 네이티브 버퍼 복사본을 만듭니다. 따라서 매우 비효율적일 수 있습니다. 문자열을 사용하는 Windows API를 호출하는 일반적인 시나리오를 살펴보겠습니다.
+❌ `StringBuilder` 매개 변수를 사용 하지 않습니다. `StringBuilder` 마샬링은 *항상* 네이티브 버퍼 복사본을 만듭니다. 따라서 매우 비효율적일 수 있습니다. 문자열을 사용하는 Windows API를 호출하는 일반적인 시나리오를 살펴보겠습니다.
 
 1. 원하는 용량의 SB 생성(관리 용량 할당) **{1}**
 2. 호출
-   1. 네이티브 버퍼 할당 **{2}**  
-   2. `[In]` 경우 _(`StringBuilder` 매개 변수의 기본값)_ 콘텐츠를 복사 합니다.  
-   3. **{3}** `[Out]` 경우에는 네이티브 버퍼를 새로 할당 된 관리 되는 배열에 복사 합니다 _(`StringBuilder`에 대 한 기본값 이기도)_ .  
+   1. 네이티브 버퍼 할당 **{2}**
+   2. `[In]` 경우 _(`StringBuilder` 매개 변수의 기본값)_ 콘텐츠를 복사 합니다.
+   3. **{3}** `[Out]` 경우에는 네이티브 버퍼를 새로 할당 된 관리 되는 배열에 복사 합니다 _(`StringBuilder`에 대 한 기본값 이기도)_ .
 3. `ToString()`이 다른 관리형 배열 **{4}** 할당
 
 네이티브 코드에서 문자열을 가져오는 *{4}* 할당입니다. 이를 제한하는 가장 좋은 방법은 다른 호출에서 `StringBuilder`를 재사용하는 것이지만, 여전히 *1*개 할당만 저장됩니다. `ArrayPool`의 문자 버퍼를 사용하고 캐시하는 것이 훨씬 더 좋습니다. 그러면 후속 호출에서는 `ToString()`의 할당에만 바로 액세스할 수 있습니다.
@@ -57,17 +57,15 @@ CharSet이 유니코드 이거나 인수가 `[MarshalAs(UnmanagedType.LPWSTR)]`�
 
 `StringBuilder`를 사용하는 경우 유의할 마지막 문제는 interop에 대해 항상 고려되는 숨겨진 Null이 용량에 포함되지 **않는**다는 것입니다. 대부분의 API가 Null을 ‘포함’하는 버퍼 크기를 원하기 때문에 이 동작이 잘못 파악되는 경우가 많습니다. 이로 인해 불필요한 할당이 발생할 수 있습니다. 또한 이 문제로 인해 런타임이 복사본 최소화를 위해 `StringBuilder` 마샬링을 최적화할 수 없게 됩니다.
 
-**✔️**`ArrayPool`의 `char[]`을 사용하는 것이 좋습니다.
+✔️ `ArrayPool`에서 `char[]`를 사용 하는 것이 좋습니다.
 
 문자열 마샬링에 대한 자세한 내용은 [문자열의 기본 마샬링](../../framework/interop/default-marshaling-for-strings.md) 및 [문자열 마샬링 사용자 지정](customize-parameter-marshaling.md#customizing-string-parameters)을 참조하세요.
 
-> __Windows 특정__  
-> `[Out]` 문자열에 대해 CLR에서는 기본적으로 `CoTaskMemFree`를 사용하여 문자열을 해제하거나, `UnmanagedType.BSTR`로 표시된 문자열에 `SysStringFree`를 사용합니다.  
-**출력 문자열 버퍼가 있는 대부분의 API의 경우:**  
-> 전달된 문자 수에 Null이 포함되어야 합니다. 반환된 값이 전달된 문자 수보다 작으면 호출이 성공하고 값은 후행 Null이 ‘없는’ 문자 수가 됩니다. 그렇지 않으면 개수는 Null 문자를 ‘포함’하는 필수 버퍼 크기입니다.  
+> __Windows 관련__ `[Out]` 문자열의 경우 CLR은 기본적으로 `CoTaskMemFree`를 사용 하 여 `UnmanagedType.BSTR`로 표시 된 문자열에 대 한 문자열 또는 `SysStringFree`를 해제 합니다.
+> **출력 문자열 버퍼를 사용 하는 대부분의 api:** 전달 된 문자 수는 null을 포함 해야 합니다. 반환된 값이 전달된 문자 수보다 작으면 호출이 성공하고 값은 후행 Null이 ‘없는’ 문자 수가 됩니다. 그렇지 않으면 개수는 Null 문자를 ‘포함’하는 필수 버퍼 크기입니다.
 >
 > - 5를 전달 하 고, 4를 전달 합니다. 문자열은 후행 null을 포함 하는 4 자 길이입니다.
-> - 5를 전달 하 고, 6을 전달 합니다. 문자열의 길이가 5 자이 고 null을 보유 하기 위해 6 문자 버퍼가 필요 합니다.  
+> - 5를 전달 하 고, 6을 전달 합니다. 문자열의 길이가 5 자이 고 null을 보유 하기 위해 6 문자 버퍼가 필요 합니다.
 > [문자열에 대한 Windows 데이터 형식](/windows/desktop/Intl/windows-data-types-for-strings)
 
 ## <a name="boolean-parameters-and-fields"></a>부울 매개 변수 및 필드
@@ -82,7 +80,7 @@ GUID는 시그니처에 직접 사용할 수 있습니다. 많은 Windows API는
 |------|-------------|
 | `KNOWNFOLDERID` | `REFKNOWNFOLDERID` |
 
-**❌ 하지** 않음 `ref` GUID 매개 변수 이외의 항목에 대해 `[MarshalAs(UnmanagedType.LPStruct)]`를 사용 합니다.
+❌ `ref` GUID 매개 변수 이외의 항목에는 `[MarshalAs(UnmanagedType.LPStruct)]` 사용 하지 않습니다.
 
 ## <a name="blittable-types"></a>blittable 형식
 
@@ -120,11 +118,11 @@ public struct UnicodeCharStruct
 
 고정 `GCHandle` 만들기를 시도하면 형식이 blittable인지 확인할 수 있습니다. 형식이 문자열이 아니거나 blittable로 간주되지 않는 경우 `GCHandle.Alloc`에서 `ArgumentException`이 throw됩니다.
 
-**✔️** 가능한 경우 구조체를 blittable로 설정합니다.
+가능 하면 구조체를 blittable으로 설정 ✔️ 합니다.
 
 자세한 내용은  항목을 참조하세요.
 
-- [Blittable 형식 및 비 Blittable 형식](../../framework/interop/blittable-and-non-blittable-types.md)  
+- [Blittable 형식 및 비 Blittable 형식](../../framework/interop/blittable-and-non-blittable-types.md)
 - [형식 마샬링](type-marshaling.md)
 
 ## <a name="keeping-managed-objects-alive"></a>관리형 개체를 활성 상태로 유지
@@ -133,7 +131,7 @@ public struct UnicodeCharStruct
 
 [`HandleRef`](xref:System.Runtime.InteropServices.HandleRef)를 사용하면 마샬러가 P/Invoke 기간에 개체를 활성 상태로 유지할 수 있습니다. 메서드 시그니처에 `IntPtr` 대신 사용할 수 있습니다. `SafeHandle`은 이 클래스를 효과적으로 대체하며 대신 사용되어야 합니다.
 
-[`GCHandle`](xref:System.Runtime.InteropServices.GCHandle)을 사용하면 관리형 개체를 고정하고 개체에 대한 네이티브 포인터를 가져올 수 있습니다. 기본 패턴은 다음과 같습니다.  
+[`GCHandle`](xref:System.Runtime.InteropServices.GCHandle)을 사용하면 관리형 개체를 고정하고 개체에 대한 네이티브 포인터를 가져올 수 있습니다. 기본 패턴은 다음과 같습니다.
 
 ```csharp
 GCHandle handle = GCHandle.Alloc(obj, GCHandleType.Pinned);
@@ -215,9 +213,9 @@ blittable 구조체는 마샬링 계층에서 직접 사용할 수 있으므로 
 
 정의의 구조체 포인터는 `ref`에 의해 전달되거나 `unsafe` 및 `*`를 사용해야 합니다.
 
-**✔️** 공식 플랫폼 문서 또는 헤더에 사용되는 모양 및 이름에 최대한 가깝게 관리형 구조체를 일치시킵니다.
+✔️는 관리 되는 구조체를 공식 플랫폼 설명서 또는 헤더에 사용 되는 모양 및 이름에 최대한 가깝게 일치 시킵니다.
 
-**✔️** 성능 개선을 위해 blittable 구조체에 `Marshal.SizeOf<MyStruct>()` 대신 C# `sizeof()`를 사용합니다.
+✔️는 blittable 구조 C# 에 대해 `Marshal.SizeOf<MyStruct>()` 대신 `sizeof()`를 사용 하 여 성능을 향상 시킬 수 있습니다.
 
 `INT_PTR Reserved1[2]` 등의 배열을 두 개의 `IntPtr` 필드인 `Reserved1a` 및 `Reserved1b`로 마샬링해야 합니다. 네이티브 배열이 기본 형식인 경우 `fixed` 키워드를 사용하여 보다 명확하게 작성할 수 있습니다. 예를 들어 `SYSTEM_PROCESS_INFORMATION`은 네이티브 헤더에서 다음과 같습니다.
 

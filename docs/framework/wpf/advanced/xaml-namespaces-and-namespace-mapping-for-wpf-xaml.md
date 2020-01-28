@@ -1,5 +1,5 @@
 ---
-title: WPF XAML을 위한 XAML 네임스페이스 및 네임스페이스 매핑
+title: XAML 네임 스페이스 및 네임 스페이스 매핑
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 5cce8ff04dbf163aba95346447f0557da14197da
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 85f35c29cdd1d9e4ea9776b756245a75af58e912
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976773"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741828"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>WPF XAML을 위한 XAML 네임스페이스 및 네임스페이스 매핑
 이 항목에서는 WPF XAML 파일의 루트 태그에서 주로 찾을 수 있는 두 XAML 네임스페이스 매핑과 그 용도에 대해 자세하게 설명합니다. 또한 고유한 코드나 별도의 어셈블리에 정의된 요소에 사용할 수 있도록 유사한 매핑을 생성하는 방법에 대해서도 설명합니다.  
@@ -107,7 +107,7 @@ End Namespace
 ## <a name="mapping-clr-namespaces-to-xml-namespaces-in-an-assembly"></a>CLR 네임스페이스를 어셈블리의 XML 네임스페이스에 매핑  
  WPF는 여러 CLR 네임스페이스를 단일 XAML 네임스페이스에 매핑하기 위해 XAML 프로세서에서 사용되는 CLR 특성을 정의합니다. 이 특성 <xref:System.Windows.Markup.XmlnsDefinitionAttribute>어셈블리를 생성 하는 소스 코드의 어셈블리 수준에 배치 됩니다. WPF 어셈블리 소스 코드에서는이 특성을 사용 하 여 <xref:System.Windows> 및 <xref:System.Windows.Controls>같은 다양 한 일반 네임 스페이스를 `http://schemas.microsoft.com/winfx/2006/xaml/presentation` 네임 스페이스에 매핑합니다.  
   
- <xref:System.Windows.Markup.XmlnsDefinitionAttribute>는 두 개의 매개 변수, 즉 XML/XAML 네임 스페이스 이름과 CLR 네임 스페이스 이름을 사용 합니다. 여러 CLR 네임 스페이스를 동일한 XML 네임 스페이스에 매핑하기 위해 둘 이상의 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 있을 수 있습니다. 매핑한 후에는 partial 클래스의 코드 숨김 페이지에서 적절한 `using` 문을 사용하여 정규화된 이름 없이도 이러한 네임스페이스의 멤버를 참조할 수 있습니다. 자세한 내용은 <xref:System.Windows.Markup.XmlnsDefinitionAttribute>를 참조 하세요.  
+ <xref:System.Windows.Markup.XmlnsDefinitionAttribute>는 두 개의 매개 변수, 즉 XML/XAML 네임 스페이스 이름과 CLR 네임 스페이스 이름을 사용 합니다. 여러 CLR 네임 스페이스를 동일한 XML 네임 스페이스에 매핑하기 위해 둘 이상의 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 있을 수 있습니다. 매핑한 후에는 partial 클래스의 코드 숨김 페이지에서 적절한 `using` 문을 사용하여 정규화된 이름 없이도 이러한 네임스페이스의 멤버를 참조할 수 있습니다. 자세한 내용은 <xref:System.Windows.Markup.XmlnsDefinitionAttribute>를 참조하세요.  
   
 ## <a name="designer-namespaces-and-other-prefixes-from-xaml-templates"></a>XAML 템플릿의 디자이너 네임스페이스 및 기타 접두사  
  여러 가지 WPF XAML 개발 환경 및/또는 디자인 도구를 사용하는 경우 XAML 태그 내에 다른 XAML 네임스페이스 및 접두사가 정의되어 있을 수 있습니다.  

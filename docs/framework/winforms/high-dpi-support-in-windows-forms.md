@@ -1,5 +1,5 @@
 ---
-title: Windows Forms의 높은 DPI 지원
+title: 높은 DPI 지원
 ms.date: 05/16/2017
 helpviewer_keywords:
 - High DPI in Windows Forms
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Forms layout
 - Windows Forms dynamic resizing
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
-ms.openlocfilehash: f9183b15da24f70b6fceaa90f718c5af93a3cdda
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a5c3125475c2de2cf83a3d97e356b26c0acdde99
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139074"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741891"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Windows Forms의 높은 DPI 지원
 
@@ -60,7 +60,7 @@ ms.locfileid: "73139074"
 
 - 정적 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 메서드를 호출 합니다.
 
-  응용 프로그램 진입점의 첫 번째 메서드 호출 이어야 합니다. 예를 들면,
+  응용 프로그램 진입점의 첫 번째 메서드 호출 이어야 합니다. 예를 들면 다음과 같습니다.:
 
   ```csharp
   static void Main()

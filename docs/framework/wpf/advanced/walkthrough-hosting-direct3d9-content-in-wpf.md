@@ -1,16 +1,17 @@
 ---
-title: '연습: WPF에서 Direct3D9 콘텐츠 호스팅'
+title: WPF에서 Direct3D9 콘텐츠 호스트
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Direct3D9 [WPF interoperability], hosting Direct3D9 content
 - WPF [WPF], hosting Direct3D9 content
 ms.assetid: 60983736-0ab5-42cc-8b16-e9fbde261a43
-ms.openlocfilehash: 03c93ea3813d3572abd7ca60519478c9bf54cf7d
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e65b0c59268b44abed289e54181bf0bda9355664
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976514"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742614"
 ---
 # <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>연습: WPF에서 Direct3D9 콘텐츠 호스팅
 
@@ -26,11 +27,11 @@ ms.locfileid: "73976514"
 
  작업이 완료 되 면 WPF 응용 프로그램에서 Direct3D9 콘텐츠를 호스트 하는 방법을 알게 됩니다.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>전제 조건
 
 이 연습을 완료하려면 다음 구성 요소가 필요합니다.
 
-- Visual Studio.
+- 보여 줍니다.
 
 - DirectX SDK 9 이상
 

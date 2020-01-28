@@ -1,5 +1,5 @@
 ---
-title: '방법: 디자이너를 사용하여 Windows Forms DataGrid 컨트롤 서식 지정'
+title: 디자이너를 사용 하 여 DataGrid 컨트롤 서식 지정
 ms.date: 03/30/2017
 helpviewer_keywords:
 - columns [Windows Forms], DataGrid controls
@@ -9,21 +9,21 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-ms.openlocfilehash: b3a85f5f9e51dae50a40058b8f07f92976da66f2
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 548acac0fc7724490bfe89927ec0662b3488c230
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "69666168"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736803"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGrid 컨트롤 서식 지정
 
 > [!NOTE]
-> @No__t_0 컨트롤은 기능을 대체 하 고 <xref:System.Windows.Forms.DataGrid> 컨트롤에 기능을 추가 합니다. 그러나 <xref:System.Windows.Forms.DataGrid> 컨트롤은 이전 버전과의 호환성 및 향후 사용을 위해 유지 됩니다 (선택 하는 경우). 자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.
+> <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 컨트롤과 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하세요.
 
-@No__t_0 컨트롤의 다양 한 부분에 다양 한 색을 적용 하면 정보를 쉽게 읽고 해석 하는 데 도움이 될 수 있습니다. 행과 열에 색을 적용할 수 있습니다. 행과 열은 사용자의 판단에 따라 숨겨지거나 표시 될 수도 있습니다.
+<xref:System.Windows.Forms.DataGrid> 컨트롤의 다양 한 부분에 다양 한 색을 적용 하면 정보를 쉽게 읽고 해석 하는 데 도움이 될 수 있습니다. 행과 열에 색을 적용할 수 있습니다. 행과 열은 사용자의 판단에 따라 숨겨지거나 표시 될 수도 있습니다.
 
-@No__t_0 컨트롤의 서식을 지정 하는 세 가지 기본 측면은 다음과 같습니다.
+<xref:System.Windows.Forms.DataGrid> 컨트롤의 서식을 지정 하는 세 가지 기본 측면은 다음과 같습니다.
 
 - 속성을 설정 하 여 데이터가 표시 되는 기본 스타일을 설정할 수 있습니다.
 
@@ -43,26 +43,26 @@ ms.locfileid: "69666168"
 
     |속성|설명|
     |--------------|-----------------|
-    |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|@No__t_0 속성은 표에 있는 짝수 번호 행의 색을 정의 합니다. @No__t_0 속성을 다른 색으로 설정 하면 다른 모든 행이 새 색 (행 1, 3, 5 등)으로 설정 됩니다.|
+    |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|`BackColor` 속성은 표에 있는 짝수 번호 행의 색을 정의 합니다. <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> 속성을 다른 색으로 설정 하면 다른 모든 행이 새 색 (행 1, 3, 5 등)으로 설정 됩니다.|
     |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|표 형태에서 짝수 행의 배경색입니다 (행 0, 2, 4, 6 등).|
-    |<xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>|@No__t_0 및 <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> 속성은 표에서 행의 색을 결정 하는 반면, <xref:System.Windows.Forms.DataGrid.BackgroundColor%2A> 속성은 표를 아래쪽으로 스크롤할 때만 표시 되는 행 영역 외부 영역의 색을 결정 하 고, 몇 개의 행만 포함 되어 있는 경우에만 표시 됩니다. 그리드에.|
-    |<xref:System.Windows.Forms.DataGrid.BorderStyle%2A>|@No__t_0 열거형 값 중 하나인 표의 테두리 스타일입니다.|
+    |<xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>|<xref:System.Windows.Forms.DataGrid.BackColor%2A> 및 <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> 속성은 표에서 행의 색을 결정 하는 반면, <xref:System.Windows.Forms.DataGrid.BackgroundColor%2A> 속성은 표를 아래쪽으로 스크롤할 때만 표시 되는 행 영역 외부 영역의 색을 결정 하 고, 표에 몇 개의 행만 포함 되어 있는 경우에만 표시 됩니다.|
+    |<xref:System.Windows.Forms.DataGrid.BorderStyle%2A>|<xref:System.Windows.Forms.BorderStyle> 열거형 값 중 하나인 표의 테두리 스타일입니다.|
     |<xref:System.Windows.Forms.DataGrid.CaptionBackColor%2A>|그리드 바로 위에 표시 되는 표 창 캡션의 배경색입니다.|
     |<xref:System.Windows.Forms.DataGrid.CaptionFont%2A>|그리드 위쪽에 있는 캡션의 글꼴입니다.|
     |<xref:System.Windows.Forms.DataGrid.CaptionForeColor%2A>|표 창 캡션의 배경색입니다.|
     |<xref:System.Windows.Forms.Control.Font%2A>|표에 텍스트를 표시 하는 데 사용 되는 글꼴입니다.|
     |<xref:System.Windows.Forms.DataGrid.ForeColor%2A>|데이터 표 행의 데이터로 표시 되는 글꼴의 색입니다.|
     |<xref:System.Windows.Forms.DataGrid.GridLineColor%2A>|데이터 표의 눈금선 색입니다.|
-    |<xref:System.Windows.Forms.DataGrid.GridLineStyle%2A>|@No__t_0 열거형 값 중 하나인 표의 셀을 구분 하는 줄의 스타일입니다.|
+    |<xref:System.Windows.Forms.DataGrid.GridLineStyle%2A>|<xref:System.Windows.Forms.DataGridLineStyle> 열거형 값 중 하나인 표의 셀을 구분 하는 줄의 스타일입니다.|
     |<xref:System.Windows.Forms.DataGrid.HeaderBackColor%2A>|행 및 열 머리글의 배경색입니다.|
     |<xref:System.Windows.Forms.DataGrid.HeaderFont%2A>|열 머리글에 사용 되는 글꼴입니다.|
     |<xref:System.Windows.Forms.DataGrid.HeaderForeColor%2A>|열 머리글 텍스트와 여러 관련 테이블이 표시 될 때 행을 확장 및 축소 하는 더하기 기호 (+) 및 빼기 기호 (-) 문자를 포함 하 여 표 열 머리글의 전경색입니다.|
     |<xref:System.Windows.Forms.DataGrid.LinkColor%2A>|자식 테이블에 대 한 링크, 관계 이름 등을 포함 하 여 데이터 표에 있는 모든 링크의 텍스트 색입니다.|
     |<xref:System.Windows.Forms.DataGrid.ParentRowsBackColor%2A>|자식 테이블에서 부모 행의 배경색입니다.|
     |<xref:System.Windows.Forms.DataGrid.ParentRowsForeColor%2A>|자식 테이블에서이는 부모 행의 전경색입니다.|
-    |<xref:System.Windows.Forms.DataGrid.ParentRowsLabelStyle%2A>|@No__t_0 열거를 통해 테이블 및 열 이름을 부모 행에 표시할지 여부를 결정 합니다.|
-    |<xref:System.Windows.Forms.DataGrid.PreferredColumnWidth%2A>|모눈에 있는 열의 기본 너비 (픽셀)입니다. @No__t_0 및 <xref:System.Windows.Forms.DataGrid.DataMember%2A> 속성을 다시 설정 하기 전에이 속성을 설정 하거나 (또는 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 메서드를 통해) 속성이 적용 되지 않습니다.<br /><br /> 속성은 0 보다 작은 값으로 설정할 수 없습니다.|
-    |<xref:System.Windows.Forms.DataGrid.PreferredRowHeight%2A>|모눈에 있는 행의 행 높이 (픽셀)입니다. @No__t_0 및 <xref:System.Windows.Forms.DataGrid.DataMember%2A> 속성을 다시 설정 하기 전에이 속성을 설정 하거나 (또는 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 메서드를 통해) 속성이 적용 되지 않습니다.<br /><br /> 속성은 0 보다 작은 값으로 설정할 수 없습니다.|
+    |<xref:System.Windows.Forms.DataGrid.ParentRowsLabelStyle%2A>|<xref:System.Windows.Forms.DataGridParentRowsLabelStyle> 열거를 통해 테이블 및 열 이름을 부모 행에 표시할지 여부를 결정 합니다.|
+    |<xref:System.Windows.Forms.DataGrid.PreferredColumnWidth%2A>|데이터 표에서 열의 기본 너비(픽셀)입니다. 다시 설정 하기 전에이 속성을 설정 합니다 <xref:System.Windows.Forms.DataGrid.DataSource%2A> 및 <xref:System.Windows.Forms.DataGrid.DataMember%2A> 속성 (중 하나 개별적으로 또는 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 메서드), 또는 속성이 영향을 주지 것입니다.<br /><br /> 속성이 0 보다 작은 값으로 설정할 수 없습니다.|
+    |<xref:System.Windows.Forms.DataGrid.PreferredRowHeight%2A>|모눈에 있는 행의 행 높이 (픽셀)입니다. 다시 설정 하기 전에이 속성을 설정 합니다 <xref:System.Windows.Forms.DataGrid.DataSource%2A> 및 <xref:System.Windows.Forms.DataGrid.DataMember%2A> 속성 (중 하나 개별적으로 또는 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 메서드), 또는 속성이 영향을 주지 것입니다.<br /><br /> 속성이 0 보다 작은 값으로 설정할 수 없습니다.|
     |<xref:System.Windows.Forms.DataGrid.RowHeaderWidth%2A>|표의 행 머리글 너비입니다.|
     |<xref:System.Windows.Forms.DataGrid.SelectionBackColor%2A>|행 또는 셀을 선택 하는 경우이 색은 배경색입니다.|
     |<xref:System.Windows.Forms.DataGrid.SelectionForeColor%2A>|행 또는 셀을 선택 하는 경우이 색은 전경색입니다.|
@@ -76,17 +76,17 @@ ms.locfileid: "69666168"
 
 1. 폼에서 <xref:System.Windows.Forms.DataGrid> 컨트롤을 선택 합니다.
 
-2. **속성** 창에서 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 속성을 선택 하 고 Visual Studio의 속성 창 ](./media/visual-studio-ellipsis-button.png)) 단추에서 **줄임표** (![The 줄임표 단추 (...)를 클릭 합니다.
+2. **속성** 창에서 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 속성을 선택 하 고 **줄임표** 단추 (...)를 클릭 하 여 Visual Studio의 속성 창](./media/visual-studio-ellipsis-button.png)) 단추를![합니다.
 
 3. **DataGridTableStyle 컬렉션 편집기** 대화 상자에서 **추가** 를 클릭 하 여 컬렉션에 테이블 스타일을 추가 합니다.
 
      **DataGridTableStyle 컬렉션 편집기**를 사용 하 여 테이블 스타일을 추가 및 제거 하 고, 표시 및 레이아웃 속성을 설정 하 고, 테이블 스타일에 대 한 매핑 이름을 설정할 수 있습니다.
 
-4. @No__t_0 속성을 각 테이블 스타일에 대 한 매핑 이름으로 설정 합니다.
+4. <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 속성을 각 테이블 스타일에 대 한 매핑 이름으로 설정 합니다.
 
      매핑 이름은 테이블에 사용할 테이블 스타일을 지정 하는 데 사용 됩니다.
 
-5. **DataGridTableStyle 컬렉션 편집기**에서 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 속성을 선택 하 고 Visual Studio의 속성 창에 있는 줄임표 단추 (...)를 ![The 클릭 합니다. ](./media/visual-studio-ellipsis-button.png)).
+5. **DataGridTableStyle 컬렉션 편집기**에서 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 속성을 선택 하 고 줄임표 단추를 클릭 합니다![(Visual Studio의 속성 창에 있는 줄임표 단추 (...).](./media/visual-studio-ellipsis-button.png)).
 
 6. **System.windows.forms.datagridcolumnstyle> 컬렉션 편집기** 대화 상자에서 사용자가 만든 테이블 스타일에 열 스타일을 추가 합니다.
 

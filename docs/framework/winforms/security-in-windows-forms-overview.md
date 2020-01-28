@@ -1,5 +1,5 @@
 ---
-title: Windows Forms의 보안 개요
+title: 보안 개요
 ms.date: 03/30/2017
 helpviewer_keywords:
 - code access security [Windows Forms], Windows Forms
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 08c80eccee395d9141978a7d4594205af1a51ed9
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 9010b45383f856079661359fdf82180526d96dde
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972137"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734848"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows Forms의 보안 개요
 
@@ -46,11 +46,11 @@ Windows Forms 응용 프로그램을 배포 하는 데 사용 하는 ClickOnce �
 
 부분 신뢰(즉, 인터넷 또는 로컬 인트라넷 권한 집합)를 선택하는 경우 이 환경에서 원하는 애플리케이션의 동작 방식을 결정합니다. Windows Forms는 부분 신뢰 환경에서 기능을 구현하는 보다 안전한 대체 방법을 제공합니다. 데이터 액세스와 같은 애플리케이션의 특정 부분을 부분 신뢰 및 완전 신뢰 환경 둘 다에 대해 다르게 디자인 및 작성할 수 있습니다. 애플리케이션 설정과 같은 일부 Windows Forms 기능은 부분 신뢰로 작동하도록 설계되었습니다. 자세한 내용은 [애플리케이션 설정 개요](./advanced/application-settings-overview.md)를 참조하세요.
 
-애플리케이션에 부분 신뢰에서 허용하는 것보다 많은 권한이 필요하지만 완전 신뢰로 실행하지 않으려는 경우 필요한 추가 권한만 어설션하는 동시에 부분 신뢰로 실행할 수 있습니다. 예를 들어 부분 신뢰로 실행하지만 사용자의 파일 시스템에 있는 디렉터리에 대한 읽기 전용 액세스 권한을 응용 프로그램에 부여해야 경우 해당 디렉터리에 대해서만 <xref:System.Security.Permissions.FileIOPermission>을 요청할 수 있습니다. 올바르게 사용할 경우 이 접근 방식은 애플리케이션의 기능을 증가시키며 사용자의 보안 위험을 최소화할 수 있습니다.
+애플리케이션에 부분 신뢰에서 허용하는 것보다 많은 권한이 필요하지만 완전 신뢰로 실행하지 않으려는 경우 필요한 추가 권한만 어설션하는 동시에 부분 신뢰로 실행할 수 있습니다. 예를 들어 부분 신뢰로 실행하지만 사용자의 파일 시스템에 있는 디렉터리에 대한 읽기 전용 액세스 권한을 애플리케이션에 부여해야 경우 해당 디렉터리에 대해서만 <xref:System.Security.Permissions.FileIOPermission>을 요청할 수 있습니다. 올바르게 사용할 경우 이 접근 방식은 애플리케이션의 기능을 증가시키며 사용자의 보안 위험을 최소화할 수 있습니다.
 
 부분 신뢰로 실행되는 애플리케이션을 개발할 때는 애플리케이션이 실행해야 하는 권한 및 애플리케이션이 선택적으로 사용할 수 있는 권한을 추적합니다. 모든 권한을 알고 난 후 애플리케이션 수준에서 권한에 대한 선언적 요청을 해야 합니다. 권한 요청은 응용 프로그램에 필요한 권한 및 특별히 원하지 않는 권한에 대 한 .NET Framework 실행 시간을 알려 줍니다. 권한 요청에 대한 자세한 내용은 [권한 요청](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/yd267cce(v=vs.100))을 참조하세요.
 
-선택적 권한을 요청할 때는 애플리케이션에서 부여되지 않은 권한이 필요한 작업을 수행하는 경우 생성되는 보안 예외를 처리해야 합니다. <xref:System.Security.SecurityException>을 적절히 처리하면 응용 프로그램이 계속 작동할 수 있습니다. 애플리케이션은 예외를 사용하여 사용자에 대해 기능을 사용할 수 없도록 설정할지 여부를 결정할 수 있습니다. 예를 들어 필요한 파일 권한이 부여되지 않은 경우 애플리케이션에서 **저장** 메뉴 옵션을 사용할 수 없습니다.
+선택적 권한을 요청할 때는 애플리케이션에서 부여되지 않은 권한이 필요한 작업을 수행하는 경우 생성되는 보안 예외를 처리해야 합니다. <xref:System.Security.SecurityException>을 적절히 처리하면 애플리케이션이 계속 작동할 수 있습니다. 애플리케이션은 예외를 사용하여 사용자에 대해 기능을 사용할 수 없도록 설정할지 여부를 결정할 수 있습니다. 예를 들어 필요한 파일 권한이 부여되지 않은 경우 애플리케이션에서 **저장** 메뉴 옵션을 사용할 수 없습니다.
 
 적절한 권한을 모두 어설션했는지 확인하기 어려운 경우도 있습니다. 예를 들어 화면에서 무해한 것처럼 보이는 메서드 호출이 실행 중 특정 지점에서 파일 시스템에 액세스할 수도 있습니다. 필요한 모든 권한으로 애플리케이션을 배포하지 않을 경우 데스크톱에서 디버그할 때는 정상적으로 테스트되지만 배포 시 실패할 수 있습니다. .NET Framework 2.0 SDK 및 Visual Studio 2005 모두에는 응용 프로그램에 필요한 권한을 계산 하기 위한 도구인 MT.EXE 명령줄 도구와 Visual Studio의 권한 계산 기능이 각각 포함 되어 있습니다.
 
@@ -72,24 +72,24 @@ ClickOnce에는 클라이언트 컴퓨터에서 상승 된 권한을 요청 하�
 
 |높은 권한 기술|설명|
 |------------------------------------|-----------------|
-|권한 상승|애플리케이션을 처음 실행할 때 사용자에게 보안 대화 상자를 표시합니다. **권한 상승** 대화 상자는 사용자가 추가 신뢰를 부여할지 여부에 대해 합리적인 결정을 내릴 수 있도록 응용 프로그램을 게시한 사람을 사용자에게 알립니다.|
+|권한 상승|애플리케이션을 처음 실행할 때 사용자에게 보안 대화 상자를 표시합니다. **권한 상승** 대화 상자는 사용자가 추가 신뢰를 부여할지 여부에 대해 합리적인 결정을 내릴 수 있도록 애플리케이션을 게시한 사람을 사용자에게 알립니다.|
 |신뢰할 수 있는 애플리케이션 배포|시스템 관리자가 클라이언트 컴퓨터에서 게시자 Authenticode 인증서의 일회성 설치를 수행해야 합니다. 이때부터 인증서로 서명된 애플리케이션은 신뢰할 수 있는 것으로 간주되며, 추가 확인 메시지 없이 로컬 컴퓨터에서 완전 신뢰로 실행될 수 있습니다.|
 
 선택하는 기술은 배포 환경에 따라 달라집니다. 자세한 내용은 [ClickOnce 배포 전략 선택](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy)을 참조하세요.
 
-기본적으로 Visual Studio 또는 .NET Framework SDK 도구 (Mage.exe 및 Mageui.exe) 중 하나를 사용 하 여 배포 된 ClickOnce 응용 프로그램은 완전 신뢰가 있는 클라이언트 컴퓨터에서 실행 되도록 구성 됩니다. 부분 신뢰를 사용하거나 일부 추가 권한만 사용하여 애플리케이션을 배포하는 경우 이 기본값을 변경해야 합니다. 배포를 구성할 때 Visual Studio 또는 .NET Framework SDK 도구 Mageui.exe를 사용 하 여이 작업을 수행할 수 있습니다. Mageui.exe를 사용 하는 방법에 대 한 자세한 내용은 [연습: ClickOnce 응용 프로그램](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)을 수동으로 배포 합니다.  자세한 내용은 [다음을 참조 하세요. ClickOnce 응용 프로그램](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) 에 대 한 사용자 지정 [권한 설정 또는 방법: ClickOnce 응용 프로그램](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)에 대 한 사용자 지정 권한을 설정 합니다.
+기본적으로 Visual Studio 또는 .NET Framework SDK 도구 (Mage.exe 및 Mageui.exe) 중 하나를 사용 하 여 배포 된 ClickOnce 응용 프로그램은 완전 신뢰가 있는 클라이언트 컴퓨터에서 실행 되도록 구성 됩니다. 부분 신뢰를 사용하거나 일부 추가 권한만 사용하여 애플리케이션을 배포하는 경우 이 기본값을 변경해야 합니다. 배포를 구성할 때 Visual Studio 또는 .NET Framework SDK 도구 Mageui.exe를 사용 하 여이 작업을 수행할 수 있습니다. Mageui.exe를 사용 하는 방법에 대 한 자세한 내용은 [연습: ClickOnce 응용 프로그램 수동 배포](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)를 참조 하세요.  또한 [방법: ClickOnce 애플리케이션에 대한 사용자 지정 권한 설정](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) 또는 [방법: ClickOnce 애플리케이션에 대한 사용자 지정 권한 설정](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)을 참조하세요.
 
 ClickOnce 및 권한 상승의 보안 측면에 대 한 자세한 내용은 [Clickonce 응용 프로그램 보안](/visualstudio/deployment/securing-clickonce-applications)을 참조 하세요. 신뢰할 수 있는 애플리케이션 배포에 대한 자세한 내용은 [신뢰할 수 있는 애플리케이션 배포 개요](/visualstudio/deployment/trusted-application-deployment-overview)를 참조하세요.
 
-### <a name="testing-the-application"></a>애플리케이션 테스트
+### <a name="testing-the-application"></a>응용 프로그램 테스트
 
-Visual Studio를 사용 하 여 Windows Forms 응용 프로그램을 배포한 경우 개발 환경에서 부분 신뢰 또는 제한 된 권한 집합으로 디버깅을 사용 하도록 설정할 수 있습니다.  자세한 내용은 [다음을 참조 하세요. 제한된 권한으로 ClickOnce 애플리케이션 디버그](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions)를 참조하세요.
+Visual Studio를 사용 하 여 Windows Forms 응용 프로그램을 배포한 경우 개발 환경에서 부분 신뢰 또는 제한 된 권한 집합으로 디버깅을 사용 하도록 설정할 수 있습니다.  또한 [방법: 제한 된 권한으로 ClickOnce 응용 프로그램 디버그](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions)를 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Windows Forms 보안](windows-forms-security.md)
 - [코드 액세스 보안 기본 사항](../misc/code-access-security-basics.md)
 - [ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)
-- [신뢰할 수 있는 응용 프로그램 배포 개요](/visualstudio/deployment/trusted-application-deployment-overview)
+- [신뢰할 수 있는 애플리케이션 배포 개요](/visualstudio/deployment/trusted-application-deployment-overview)
 - [Mage.exe(매니페스트 생성 및 편집 도구)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
-- [MageUI.exe(매니페스트 생성 및 편집 도구, 그래픽 클라이언트)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+- [MageUI.exe (매니페스트 생성 및 편집 도구, 그래픽 클라이언트)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

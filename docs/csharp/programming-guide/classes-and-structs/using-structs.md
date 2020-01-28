@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: 22d63465c534090a8918348ea5f050739c0cf01c
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 47a1da4982d22c63cb762a27313590c8ec0c5dd4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964751"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743968"
 ---
 # <a name="using-structs-c-programming-guide"></a>구조체 사용(C# 프로그래밍 가이드)
 
@@ -27,7 +27,7 @@ ms.locfileid: "75964751"
 
 클래스의 경우와는 달리 구조체에 대한 상속은 없습니다. 구조체는 다른 구조체 또는 클래스에서 상속될 수 없으며, 클래스의 기본 클래스가 될 수도 없습니다. 그러나 구조체는 기본 클래스 <xref:System.Object>에서 상속할 수 있습니다. 구조체는 클래스에서 인터페이스를 구현하는 것과 동일한 방식으로 인터페이스를 구현할 수 있습니다.
 
-`struct`키워드를 사용하여 클래스를 선언할 수 없습니다. C#에서 클래스와 구조체는 구문적으로 다릅니다. 구조체는 값 형식인 반면 클래스는 참조 형식입니다. 자세한 내용은 [값 형식](../../language-reference/keywords/value-types.md) 및 [참조 형식](../../language-reference/keywords/reference-types.md)을 참조하세요.
+`struct`키워드를 사용하여 클래스를 선언할 수 없습니다. C#에서 클래스와 구조체는 구문적으로 다릅니다. 구조체는 값 형식인 반면 클래스는 참조 형식입니다. 자세한 내용은 [값 형식](../../language-reference/builtin-types/value-types.md) 및 [참조 형식](../../language-reference/keywords/reference-types.md)을 참조하세요.
 
 참조 형식 구문이 필요한 경우가 아니라면 작은 클래스는 구조체로 대신 선언하면 시스템에서 보다 효율적으로 처리할 수 있습니다.
 

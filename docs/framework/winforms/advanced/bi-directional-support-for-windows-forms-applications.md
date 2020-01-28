@@ -1,5 +1,5 @@
 ---
-title: Windows Forms 애플리케이션에 대한 양방향 지원
+title: 양방향 지원
 ms.date: 09/30/2017
 helpviewer_keywords:
 - globalization [Windows Forms], bi-directional support in Windows
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - localization [Windows Forms], bi-directional support in Windows
 - bi-directional language support [Windows Forms], Windows applications
 - Windows Forms, bi-directional support
-ms.openlocfilehash: 0b99dcdb9549a2319efe8a78eb4bca33f40f2cb0
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 8b2e842fc08be78b74cede85927352fafca7bc8f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197497"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742072"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Windows Forms 애플리케이션에 대한 양방향 지원
 Visual Studio를 사용 하 여 아랍어 및 히브리어와 같은 양방향 (오른쪽에서 왼쪽) 언어를 지 원하는 Windows 기반 응용 프로그램을 만들 수 있습니다. 여기에는 표준 폼, 대화 상자, MDI 폼 및 이러한 폼에서 사용할 수 있는 모든 컨트롤(즉, <xref:System.Windows.Forms.Control> 네임스페이스의 모든 개체)이 포함됩니다.
@@ -76,7 +76,7 @@ Visual Studio를 사용 하 여 아랍어 및 히브리어와 같은 양방향 (
 |<xref:System.Windows.Forms.UserControl>|세로 스크롤 막대는 왼쪽에 표시되고 가로 스크롤 막대는 오른쪽에 thumb이 있습니다.|직접 지원되지 않습니다. <xref:System.Windows.Forms.TableLayoutPanel>을 사용합니다.|아니요|
 |<xref:System.Windows.Forms.VScrollBar>|스크롤 가능한 컨트롤의 오른쪽이 아닌 왼쪽에 표시됩니다.|효과 없음|아니요|
 
-## <a name="encoding"></a>인코딩
+## <a name="encoding"></a>Encoding
  Windows Forms는 유니코드를 지원하므로 양방향 애플리케이션을 만들 때 모든 문자 집합을 포함할 수 있습니다. 그러나 모든 Windows Forms 컨트롤이 모든 플랫폼에서 유니코드를 지원하는 것은 아닙니다.
 
 ## <a name="gdi"></a>GDI+
@@ -88,9 +88,9 @@ Visual Studio를 사용 하 여 아랍어 및 히브리어와 같은 양방향 (
  마찬가지로, 메시지 상자도 운영 체제를 통해 양방향 텍스트를 지원합니다. 메시지 상자 단추의 캡션은 현재 언어 설정을 기반으로 합니다. 기본적으로 메시지 상자는 오른쪽에서 왼쪽 읽기 순서를 사용하지 않지만 매개 변수를 지정하여 메시지 상자가 표시될 때 읽기 순서를 변경할 수 있습니다.
 
 ## <a name="righttoleft-scrollbars-and-scrollablecontrol"></a>RightToLeft, Scrollbars 및 ScrollableControl
- 현재 Windows Forms에는 <xref:System.Windows.Forms.Control.RightToLeft%2A>를 모두 사용 하도록 설정 하 고 <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A>를 <xref:System.Windows.Forms.RightToLeft.Yes>로 설정 하는 경우 <xref:System.Windows.Forms.ScrollableControl>에서 파생 된 모든 클래스가 제대로 작동 하지 않도록 하는 제한 사항이 있습니다. 예를 들어 <xref:System.Windows.Forms.Panel>와 같은 컨트롤 또는 <xref:System.Windows.Forms.Panel> (예: <xref:System.Windows.Forms.FlowLayoutPanel> 또는 <xref:System.Windows.Forms.TableLayoutPanel>)에서 파생 된 컨테이너 클래스를 폼에 저장 한다고 가정해 보겠습니다. 컨테이너의 <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A>를 <xref:System.Windows.Forms.RightToLeft.Yes> 설정 하 고 컨테이너 내부에 있는 하나 이상의 컨트롤에서 <xref:System.Windows.Forms.Control.Anchor%2A> 속성을 <xref:System.Windows.Forms.AnchorStyles.Right>로 설정 하면 스크롤 막대가 표시 되지 않습니다. <xref:System.Windows.Forms.ScrollableControl>에서 파생 된 클래스는 <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> <xref:System.Windows.Forms.RightToLeft.No>으로 설정 된 것 처럼 동작 합니다.
+ 현재 Windows Forms에는 <xref:System.Windows.Forms.Control.RightToLeft%2A>가 사용하도록 설정되고 <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A>이 <xref:System.Windows.Forms.RightToLeft.Yes>로 설정된 경우 <xref:System.Windows.Forms.ScrollableControl>에서 파생된 모든 클래스가 제대로 작동할 수 없게 하는 제한 사항이 있습니다. 예를 들어 <xref:System.Windows.Forms.Panel>과 같은 컨트롤이나 <xref:System.Windows.Forms.Panel>에서 파생된 컨테이너 클래스(예: <xref:System.Windows.Forms.FlowLayoutPanel> 또는 <xref:System.Windows.Forms.TableLayoutPanel>)를 폼에 배치한다고 가정해 보세요. 컨테이너의 <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A>을 <xref:System.Windows.Forms.RightToLeft.Yes>로 설정한 다음 컨테이너 내부에 있는 하나 이상 컨트롤의 <xref:System.Windows.Forms.Control.Anchor%2A> 속성을 <xref:System.Windows.Forms.AnchorStyles.Right>로 설정하는 경우에는 스크롤 막대가 나타나지 않습니다. <xref:System.Windows.Forms.ScrollableControl>에서 파생된 클래스는 <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A>이 <xref:System.Windows.Forms.RightToLeft.No>로 설정된 것처럼 동작합니다.
 
- 현재 유일한 해결 방법은 다른 <xref:System.Windows.Forms.ScrollableControl>내에 <xref:System.Windows.Forms.ScrollableControl>를 중첩 하는 것입니다. 예를 들어이 상황에서 <xref:System.Windows.Forms.TableLayoutPanel> 작업을 수행 해야 하는 경우 <xref:System.Windows.Forms.Panel> 컨트롤 내부에 놓고 <xref:System.Windows.Forms.Panel>에서 <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A>을 <xref:System.Windows.Forms.RightToLeft.Yes>로 설정할 수 있습니다.
+ 현재 유일한 해결 방법은 <xref:System.Windows.Forms.ScrollableControl>을 다른 <xref:System.Windows.Forms.ScrollableControl> 안에 중첩하는 것입니다. 예를 들어 이런 상황에서 <xref:System.Windows.Forms.TableLayoutPanel>이 작동해야 하는 경우 <xref:System.Windows.Forms.Panel> 컨트롤 내부에 배치하고 <xref:System.Windows.Forms.Panel>의 <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A>을 <xref:System.Windows.Forms.RightToLeft.Yes>로 설정할 수 있습니다.
 
 ## <a name="mirroring"></a>미러링
  *미러링*은 오른쪽에서 왼쪽으로 배치되도록 UI 요소의 레이아웃을 반대로 바꾸는 것을 가리킵니다. 예를 들어 미러링된 Windows Form에서는 최소화, 최대화 및 닫기 단추가 제목 표시줄에서 맨 오른쪽이 아니라 맨 왼쪽에 나타납니다.

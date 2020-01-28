@@ -1,16 +1,16 @@
 ---
-title: Visual Basic 및 WPF 이벤트 처리
+title: Visual Basic에서 이벤트 처리
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-ms.openlocfilehash: 5625b63f2a2162f8f188476bfd61bde4c717f1dd
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 959ef66f41f6c5f06e18a202109fba058c522d1d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559861"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735402"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic 및 WPF 이벤트 처리
 특히 Microsoft Visual Basic .NET 언어의 경우 특성을 사용 하 여 이벤트 처리기를 연결 하거나 <xref:System.Windows.UIElement.AddHandler%2A> 메서드를 사용 하는 대신 언어별 `Handles` 키워드를 사용 하 여 이벤트 처리기를 인스턴스와 연결할 수 있습니다. 그러나 처리기를 인스턴스에 연결하는 `Handles` 기술에는 몇 가지 제한 사항이 있습니다. 이는 `Handles` 구문이 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이벤트 시스템의 특정 라우트된 이벤트 기능 중 일부를 지원할 수 없기 때문입니다.  

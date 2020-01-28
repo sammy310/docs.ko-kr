@@ -386,10 +386,7 @@
           href: tutorials/creating-app-with-plugin-support.md
         - name: .NET Core에서 어셈블리 언로드 기능을 사용하고 디버그하는 방법
           href: ../standard/assembly/unloadability-howto.md
-- name: 소스에서 .NET Core 빌드
-  href: build/index.md
+- name: .NET Core 배포 패키징
   items:
-    - name: .NET Core 배포 패키징
-      href: build/distribution-packaging.md
-- name: VS 2015/project.json 문서
-  href: ../project-json.md
+    - name: 개요
+      href: distribution-packaging.md

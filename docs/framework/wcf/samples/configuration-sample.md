@@ -2,12 +2,12 @@
 title: 구성 샘플
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: 78108dc9b28657f0479e9e39ad134f03cf6c877b
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: eb02b5d01b3f95ef741aa689cc66616fd598577b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714951"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741962"
 ---
 # <a name="configuration-sample"></a>구성 샘플
 이 샘플에서는 구성 파일을 사용하여 서비스를 검색 가능하게 만드는 방법을 보여 줍니다.  
@@ -259,7 +259,7 @@ ms.locfileid: "74714951"
   
 #### <a name="to-use-this-sample"></a>이 샘플을 사용하려면  
   
-1. 이 샘플에서는 HTTP 끝점을 사용 하며이 샘플을 실행 하려면 적절 한 URL Acl을 추가 해야 합니다. 자세한 내용은 [http 및 HTTPS 구성](https://go.microsoft.com/fwlink/?LinkId=70353) 을 참조 하세요. 높은 권한으로 다음 명령을 실행하면 적절한 ACL이 추가됩니다. 명령이 지정한 대로 작동하지 않는 경우 다음 인수의 도메인과 사용자 이름을 대체할 수 있습니다. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. 이 샘플에서는 HTTP 엔드포인트를 사용하며 이 샘플을 실행하려면 적절한 URL ACL을 추가해야 합니다. 자세한 내용은 [HTTP 및 HTTPS 구성](../feature-details/configuring-http-and-https.md)을 참조 하세요. 높은 권한으로 다음 명령을 실행하면 적절한 ACL이 추가됩니다. 명령이 지정한 대로 작동하지 않는 경우 다음 인수의 도메인과 사용자 이름을 대체할 수 있습니다. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 2. 솔루션을 빌드합니다.  
   

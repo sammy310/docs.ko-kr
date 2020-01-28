@@ -1,5 +1,5 @@
 ---
-title: Windows Forms에서의 이벤트 순서
+title: 이벤트 순서
 ms.date: 03/30/2017
 helpviewer_keywords:
 - events [Windows Forms], order of
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - validation events [Windows Forms], order of
 - application startup event order
 ms.assetid: e81db09b-4453-437f-b78a-62d7cd5c9829
-ms.openlocfilehash: 28eb451c7edd740664f80f8ec35c60192764043c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 618ac5a6a6a32ae1a53fc60ac80700d7648c81a7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949872"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734865"
 ---
 # <a name="order-of-events-in-windows-forms"></a>Windows Forms에서의 이벤트 순서
 Windows Forms 애플리케이션에서 이벤트가 발생하는 순서는 반대로 이러한 각 이벤트의 처리와 관련된 개발자에게 특히 관심 사항입니다. 폼 부분을 다시 그려야 하는 경우와 같이 이벤트를 세심하게 처리해야 하는 상황에서는 런타임에 이벤트가 발생한 정확한 순서를 알아야 합니다. 이 항목에서는 애플리케이션 및 컨트롤 수명에서 여러 중요한 단계 중에 발생하는 이벤트 순서에 대한 세부 정보를 제공합니다. 마우스 입력 이벤트의 순서에 대 한 자세한 내용은 [Windows Forms의 마우스 이벤트](mouse-events-in-windows-forms.md)를 참조 하세요. Windows Forms 이벤트에 대 한 개요는 [이벤트 개요](events-overview-windows-forms.md)를 참조 하세요. 이벤트 처리기의 구성을에 대 한 자세한 내용은 [이벤트 처리기 개요](event-handlers-overview-windows-forms.md)를 참조 하세요.  
@@ -80,6 +80,6 @@ Windows Forms 애플리케이션에서 이벤트가 발생하는 순서는 반�
   
 - <xref:System.Windows.Forms.Control.Validated>  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Windows Forms에서 이벤트 처리기 만들기](creating-event-handlers-in-windows-forms.md)

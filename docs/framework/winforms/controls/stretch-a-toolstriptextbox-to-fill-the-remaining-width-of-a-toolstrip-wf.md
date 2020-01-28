@@ -1,5 +1,5 @@
 ---
-title: '방법: Toolstriptextbox를 늘려 ToolStrip (Windows Forms)의 나머지 너비 채우기'
+title: '방법: ToolStripTextBox를 늘려 ToolStrip의 나머지 너비 채우기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - text boxes [Windows Forms], stretching in ToolStrip control [Windows Forms]
 - ToolStrip control [Windows Forms], stretching a text box
 ms.assetid: 0e610fbf-85fe-414c-900c-9704a5dd5cc6
-ms.openlocfilehash: 7a9fd703206caadf2d9c63d92567f8b1c3b51e61
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c60cc2a377f08a73159f25b2ab5f2812d41f0c10
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751424"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742847"
 ---
-# <a name="how-to-stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-windows-forms"></a>방법: Toolstriptextbox를 늘려 ToolStrip (Windows Forms)의 나머지 너비 채우기
-설정한 경우를 <xref:System.Windows.Forms.ToolStrip.Stretch%2A> 의 속성을 <xref:System.Windows.Forms.ToolStrip> 컨트롤을 `true`, 컨트롤이 해당 컨테이너 종단 간 채우고 해당 컨테이너의 크기를 조정 하는 경우 크기를 조정 합니다. 이 구성에서는 유용할 수 있습니다 것과 같은 컨트롤에서 항목을 확장 하는 <xref:System.Windows.Forms.ToolStripTextBox>, 사용 가능한 공간 및 크기를 조정 하는 경우 크기를 조정 합니다. 이 확장 유용 예를 들어, 모양 및 Microsoft® Internet Explorer의 주소 표시줄에 비슷한 동작을 수행 하려는 경우.  
+# <a name="how-to-stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-windows-forms"></a>방법: ToolStripTextBox를 늘려 ToolStrip의 나머지 너비 채우기(Windows Forms)
+<xref:System.Windows.Forms.ToolStrip> 컨트롤의 <xref:System.Windows.Forms.ToolStrip.Stretch%2A> 속성을 `true`로 설정 하는 경우 컨트롤은 해당 컨테이너를 끝에서 끝까지 채우고 컨테이너의 크기가 조정 될 때 크기를 조정 합니다. 이 구성에서는 <xref:System.Windows.Forms.ToolStripTextBox>와 같은 컨트롤의 항목을 확장 하 여 사용 가능한 공간을 채우고 컨트롤의 크기를 조정할 때 크기를 조정 하는 것이 유용할 수 있습니다. 예를 들어이 확장은 Microsoft® Internet Explorer의 주소 표시줄과 비슷한 모양 및 동작을 수행 하려는 경우에 유용 합니다.  
   
-## <a name="example"></a>예제  
- 다음 코드 예제에서 파생 된 클래스를 제공 <xref:System.Windows.Forms.ToolStripTextBox> 호출 `ToolStripSpringTextBox`합니다. 이 클래스에서 재정의 된 <xref:System.Windows.Forms.ToolStripTextBox.GetPreferredSize%2A> 부모 사용 가능한 너비를 계산 하는 방법 <xref:System.Windows.Forms.ToolStrip> 다른 모든 항목의 결합 된 너비를 뺀 후 제어 합니다. 이 코드 예제에서는 한 <xref:System.Windows.Forms.Form> 클래스 및 `Program` 클래스의 새 동작을 보여 줍니다.  
+## <a name="example"></a>예  
+ 다음 코드 예제에서는 `ToolStripSpringTextBox`이라는 <xref:System.Windows.Forms.ToolStripTextBox>에서 파생 된 클래스를 제공 합니다. 이 클래스는 <xref:System.Windows.Forms.ToolStripTextBox.GetPreferredSize%2A> 메서드를 재정의 하 여 다른 모든 항목의 전체 너비를 뺀 후의 부모 <xref:System.Windows.Forms.ToolStrip> 컨트롤의 사용 가능한 너비를 계산 합니다. 이 코드 예제에서는 <xref:System.Windows.Forms.Form> 클래스 및 `Program` 클래스를 제공 하 여 새 동작을 보여 줍니다.  
   
  [!code-csharp[ToolStripSpringTextBox#00](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolStripSpringTextBox/cs/ToolStripSpringTextBox.cs#00)]
  [!code-vb[ToolStripSpringTextBox#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripSpringTextBox/vb/ToolStripSpringTextBox.vb#00)]  
@@ -29,7 +29,7 @@ ms.locfileid: "64751424"
   
 - System, System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStrip.Stretch%2A?displayProperty=nameWithType>

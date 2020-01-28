@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms DataGridView 컨트롤에서 정렬 사용자 지정'
+title: DataGridView 컨트롤에서 정렬 사용자 지정
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], sorting
 - data grids [Windows Forms], customizing sorting
 ms.assetid: 92fb5c14-afab-4cf5-a97e-924fd9cb99f5
-ms.openlocfilehash: 85ca27bf2ef738dce86c6e88037da00e4992a4b2
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 20f581b2df6fd172a0a1998aed60c56b0306f2eb
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592787"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743184"
 ---
 # <a name="how-to-customize-sorting-in-the-windows-forms-datagridview-control"></a>방법: Windows Forms DataGridView 컨트롤에서 정렬 사용자 지정
 <xref:System.Windows.Forms.DataGridView> 컨트롤은 자동 정렬을 제공하지만 필요에 따라 정렬 작업을 사용자 지정해야 할 수도 있습니다. 예를 들어 프로그래밍 방식의 정렬을 사용하여 대체 UI(사용자 인터페이스)를 만들 수 있습니다. 또는 다중 열 정렬과 같은 정렬 유연성 향상을 위해 <xref:System.Windows.Forms.DataGridView.SortCompare> 이벤트를 처리하거나 <xref:System.Windows.Forms.DataGridView.Sort%2A> 메서드의 `Sort(IComparer)` 오버로드를 호출할 수 있습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "65592787"
   
 - System, System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Windows Forms DataGridView 컨트롤의 데이터 정렬](sorting-data-in-the-windows-forms-datagridview-control.md)

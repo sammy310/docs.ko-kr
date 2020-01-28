@@ -7,25 +7,25 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: 18942c2d486038c3ebfbe11d21b41d0ba9412500
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e19f858818866f16b8af44abe462ddb826d43b69
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69909868"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741473"
 ---
 # <a name="programming-wcf-security"></a>WCF 보안 프로그래밍
 이 항목에서는 WCF (보안 Windows Communication Foundation) 응용 프로그램을 만드는 데 사용 되는 기본 프로그래밍 작업에 대해 설명 합니다. 이 항목에서는 *전송 보안*이라는 인증, 기밀성 및 무결성만 다룹니다. 이 항목에서는 권한 부여 (리소스 또는 서비스에 대 한 액세스 제어)에 대해 다루지 않습니다. 권한 부여에 대 한 자세한 내용은 [권한 부여](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)를 참조 하세요.  
   
 > [!NOTE]
-> 특히 WCF와 관련 하 여 보안 개념에 대 한 유용한 정보를 보려면 MSDN의 패턴 및 사례 자습서 (영문)의 [시나리오, 패턴 및 구현 지침 (WSE) 3.0](https://go.microsoft.com/fwlink/?LinkID=88250)을 참조 하십시오.  
+> 특히 WCF와 관련 하 여 보안 개념에 대 한 유용한 정보를 보려면 MSDN의 패턴 및 사례 자습서 (영문)의 [시나리오, 패턴 및 구현 지침 (WSE) 3.0](https://docs.microsoft.com/previous-versions/msp-n-p/ff648183(v=pandp.10))을 참조 하십시오.  
   
  WCF 보안 프로그래밍은 보안 모드, 클라이언트 자격 증명 형식 및 자격 증명 값을 설정 하는 세 가지 단계를 기반으로 합니다. 코드 또는 구성을 통해 이러한 단계를 수행할 수 있습니다.  
   
 ## <a name="setting-the-security-mode"></a>보안 모드 설정  
  다음은 WCF에서 보안 모드를 사용 하 여 프로그래밍 하는 일반적인 단계를 설명 합니다.  
   
-1. 애플리케이션 요구 사항에 적합한 미리 정의된 바인딩 중 하나를 선택합니다. 바인딩 선택 목록에 대해서는 [시스템 제공 바인딩](../../../../docs/framework/wcf/system-provided-bindings.md)을 참조 하세요. 기본적으로 거의 모든 바인딩에서 보안을 사용할 수 있습니다. 한 가지 예외 <xref:System.ServiceModel.BasicHttpBinding> 는 클래스 (구성 사용 [ \<, basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md))입니다.  
+1. 애플리케이션 요구 사항에 적합한 미리 정의된 바인딩 중 하나를 선택합니다. 바인딩 선택 목록에 대해서는 [시스템 제공 바인딩](../../../../docs/framework/wcf/system-provided-bindings.md)을 참조 하세요. 기본적으로 거의 모든 바인딩에서 보안을 사용할 수 있습니다. 한 가지 예외는 <xref:System.ServiceModel.BasicHttpBinding> 클래스 (구성 사용, [\<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md))입니다.  
   
      선택한 바인딩에 따라 전송이 결정됩니다. 예를 들어, <xref:System.ServiceModel.WSHttpBinding>에서는 HTTP를 전송으로 사용하고 <xref:System.ServiceModel.NetTcpBinding>에서는 TCP를 사용합니다.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "69909868"
   
     1. `Transport`  
   
-         전송 보안은 선택한 바인딩에서 사용하는 메커니즘에 종속됩니다. 예를 들어, `WSHttpBinding`을 사용하는 경우 보안 메커니즘은 SSL(Secure Sockets Layer)(또한 HTTPS에 대한 메커니즘)입니다. 일반적으로 전송 보안의 주요 이점은 사용 중인 전송에 관계 없이 처리 능력이 우수하다는 점입니다. 그러나 두 가지 제한 사항이 있습니다. 첫 번째는 전송 메커니즘이 사용자를 인증 하는 데 사용 되는 자격 증명 유형을 결정 하는 것입니다. 이는 서비스가 다른 형식의 자격 증명을 요구하는 다른 서비스와 상호 작용해야 하는 경우에만 단점이 됩니다. 둘째는 메시지 수준에서 보안이 적용되지 않기 때문에 엔드투엔드 방식 대신 hop-by-hop 방식으로 보안이 구현됩니다. 이 제한은 클라이언트와 서비스 사이의 메시지 경로에 매개자가 포함되어 있는 경우에만 문제가 됩니다. 사용할 전송에 대 한 자세한 내용은 [전송 선택](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)을 참조 하세요. 전송 보안을 사용 하는 방법에 대 한 자세한 내용은 [전송 보안 개요](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)를 참조 하세요.  
+         전송 보안은 선택한 바인딩에서 사용하는 메커니즘에 종속됩니다. 예를 들어, `WSHttpBinding`을 사용하는 경우 보안 메커니즘은 SSL(Secure Sockets Layer)(또한 HTTPS에 대한 메커니즘)입니다. 일반적으로 전송 보안의 주요 이점은 사용 중인 전송에 관계 없이 처리 능력이 우수하다는 점입니다. 그러나 두 가지 제한이 있습니다. 첫째, 전송 메커니즘이 사용자를 인증하는 데 사용되는 자격 증명 형식을 지정합니다. 이는 서비스가 다른 형식의 자격 증명을 요구하는 다른 서비스와 상호 작용해야 하는 경우에만 단점이 됩니다. 둘째는 메시지 수준에서 보안이 적용되지 않기 때문에 엔드투엔드 방식 대신 hop-by-hop 방식으로 보안이 구현됩니다. 이 제한은 클라이언트와 서비스 사이의 메시지 경로에 매개자가 포함되어 있는 경우에만 문제가 됩니다. 사용할 전송에 대 한 자세한 내용은 [전송 선택](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)을 참조 하세요. 전송 보안을 사용 하는 방법에 대 한 자세한 내용은 [전송 보안 개요](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)를 참조 하세요.  
   
     2. `Message`  
   
@@ -101,7 +101,7 @@ ms.locfileid: "69909868"
  [!code-csharp[c_TcpClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpclient/cs/source.cs#1)]
  [!code-vb[c_TcpClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpclient/vb/source.vb#1)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [기본 WCF 프로그래밍](../../../../docs/framework/wcf/basic-wcf-programming.md)
 - [일반적인 보안 시나리오](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)

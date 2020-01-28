@@ -1,16 +1,17 @@
 ---
 title: WPF 호스트(PresentationHost.exe)
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF Host application [WPF]
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
-ms.openlocfilehash: 64ba1261134184f22e9faf157ca70e3471e3b3cb
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: bda7efbb1b7a4760199215bdb58c12b3063e290c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636252"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743405"
 ---
 # <a name="wpf-host-presentationhostexe"></a>WPF 호스트(PresentationHost.exe)
 WPF (Windows Presentation Foundation) 호스트 (Presentationhost.exe)는 WPF 응용 프로그램을 호환 브라우저 (Microsoft Internet Explorer 6 이상 포함)에서 호스팅할 수 있도록 하는 응용 프로그램입니다. 기본적으로 WPF (Windows Presentation Foundation) 호스트는 브라우저에서 호스트 되는 WPF 콘텐츠에 대 한 셸 및 MIME 처리기로 등록 됩니다. 여기에는 다음이 포함 됩니다.  

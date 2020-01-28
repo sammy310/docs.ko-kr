@@ -1,15 +1,16 @@
 ---
-title: '연습: Windows Forms에서 WPF 복합 컨트롤 호스팅'
+title: Windows Forms에서 WPF 복합 컨트롤 호스팅
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: 39124b03b21fe1bc2a5dce3d8fb90ff372ab4853
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
-ms.translationtype: MT
+ms.openlocfilehash: 59243e1810757ff0ff58a60ac3eb007bbc227be0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458928"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742690"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>연습: Windows Forms에서 WPF 복합 컨트롤 호스팅
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 애플리케이션을 만들기 위한 다양한 환경을 제공합니다. 그러나 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 코드에 상당한 투자가 있는 경우 기존 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 응용 프로그램을 처음부터 다시 작성 하는 대신 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]으로 확장 하는 것이 더 효과적일 수 있습니다. 일반적인 시나리오는 Windows Forms 응용 프로그램 내에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]으로 구현 된 하나 이상의 컨트롤을 포함 하려는 경우입니다. WPF 컨트롤을 사용자 지정 하는 방법에 대 한 자세한 내용은 [컨트롤 사용자 지정](../controls/control-customization.md)을 참조 하세요.  
@@ -26,7 +27,7 @@ ms.locfileid: "73458928"
   
  이 연습에서 설명 하는 작업의 전체 코드 목록은 [Windows Forms 샘플에서 WPF 복합 컨트롤 호스팅](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WindowsFormsHostingWpfControl)을 참조 하세요.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>전제 조건  
 
 이 연습을 완료하려면 Visual Studio가 필요합니다.  
   
@@ -58,7 +59,7 @@ ms.locfileid: "73458928"
   
 - PresentationFramework  
   
-- 시스템  
+- System  
   
 - WindowsBase  
   
@@ -230,7 +231,7 @@ namespace MyControls
   
 4. 다음 <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> 컨트롤을 폼에 추가 합니다.  
   
-    |name|Text|  
+    |이름|텍스트|  
     |----------|----------|  
     |groupBox1|배경색|  
     |groupBox2|전경색|  
@@ -242,14 +243,14 @@ namespace MyControls
   
 5. <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> 컨트롤에 다음 <xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType> 컨트롤을 추가 합니다.  
   
-    |GroupBox|name|Text|  
+    |GroupBox|이름|텍스트|  
     |--------------|----------|----------|  
     |groupBox1|radioBackgroundOriginal|원래 색|  
     |groupBox1|radioBackgroundLightGreen|LightGreen|  
     |groupBox1|radioBackgroundLightSalmon|LightSalmon|  
     |groupBox2|radioForegroundOriginal|원래 색|  
     |groupBox2|radioForegroundRed|빨강|  
-    |groupBox2|radioForegroundYellow|노랑|  
+    |groupBox2|radioForegroundYellow|Yellow|  
     |groupBox3|radioSizeOriginal|원래 색|  
     |groupBox3|radioSizeTen|10|  
     |groupBox3|radioSizeTwelve|12|  
@@ -257,13 +258,13 @@ namespace MyControls
     |groupBox4|radioFamilyTimes|궁서|  
     |groupBox4|radioFamilyWingDings|WingDings|  
     |groupBox5|radioStyleOriginal|보통|  
-    |groupBox5|radioStyleItalic|기울임꼴|  
+    |groupBox5|radioStyleItalic|Italic입니다.|  
     |groupBox6|radioWeightOriginal|원래 색|  
-    |groupBox6|radioWeightBold|Bold|  
+    |groupBox6|radioWeightBold|굵게|  
   
 6. 마지막 <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>에 다음 <xref:System.Windows.Forms.Label?displayProperty=nameWithType> 컨트롤을 추가 합니다. 이러한 컨트롤은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 복합 컨트롤에서 반환 된 데이터를 표시 합니다.  
   
-    |GroupBox|name|Text|  
+    |GroupBox|이름|텍스트|  
     |--------------|----------|----------|  
     |groupBox7|lblName|이름:|  
     |groupBox7|lblAddress|구/군/시:|  

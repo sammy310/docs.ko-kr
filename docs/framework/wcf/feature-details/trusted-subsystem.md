@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: a0f845ad0d8ca461f8ab0b3188a72e87c589add2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f3166b8f1e59a100f54574ab548f5dae88eb5cd
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918708"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742628"
 ---
 # <a name="trusted-subsystem"></a>신뢰할 수 있는 하위 시스템
 클라이언트는 네트워크에 분산되어 있는 하나 이상의 웹 서비스에 액세스합니다. 웹 서비스는 데이터베이스 또는 기타 웹 서비스와 같은 추가 리소스에 대한 액세스가 해당 웹 서비스의 비즈니스 논리에 캡슐화되도록 디자인되어 있습니다. 이러한 리소스는 권한이 없는 액세스로부터 보호되어야 합니다. 다음 그림은 신뢰할 수 있는 하위 시스템 프로세스를 보여 줍니다.  
   
- ![하위 시스템을 신뢰할 수 있는](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")  
+ ![신뢰할 수 있는 하위 시스템](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")  
   
  그림에서처럼 다음 단계에서는 신뢰할 수 있는 하위 시스템 프로세스에 대해 설명합니다.  
   
@@ -29,16 +29,16 @@ ms.locfileid: "61918708"
   
 5. 신뢰할 수 있는 하위 시스템은 해당 응답을 처리하고 클라이언트에 자체 응답을 보냅니다.  
   
-|특성|설명|  
+|특징|설명|  
 |--------------------|-----------------|  
 |보안 모드|메시지|  
-|상호 운용성|Windows Communication Foundation (WCF)만 합니다.|  
+|상호 운용성|Windows Communication Foundation (WCF)만 해당 합니다.|  
 |인증(서비스)|보안 토큰 서비스는 클라이언트를 인증하고 클라이언트에게 권한을 부여합니다.|  
 |인증(클라이언트)|신뢰할 수 있는 하위 시스템은 클라이언트를 인증하고, 리소스는 신뢰할 수 있는 하위 시스템 서비스를 인증합니다.|  
 |무결성|예|  
 |기밀성|예|  
-|전송|클라이언트와 신뢰할 수 있는 하위 시스템 서비스 간의 HTTP입니다.<br /><br /> 신뢰할 수 있는 하위 시스템 서비스와 리소스(백 엔드 서비스) 간의 NET.TCP입니다.|  
-|바인딩|<xref:System.ServiceModel.WSHttpBinding> 및 <xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|Transport|클라이언트와 신뢰할 수 있는 하위 시스템 서비스 간의 HTTP입니다.<br /><br /> 신뢰할 수 있는 하위 시스템 서비스와 리소스(백 엔드 서비스) 간의 NET.TCP입니다.|  
+|바인딩|<xref:System.ServiceModel.WSHttpBinding> 및 <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>리소스(백 엔드 서비스)  
   
@@ -101,7 +101,7 @@ ms.locfileid: "61918708"
  [!code-vb[TrustedSubSystems#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystems/vb/source.vb#2)]  
   
 ### <a name="configuration"></a>구성  
- 다음 구성에서는 구성을 사용하여 동일한 엔드포인트를 설정합니다. 두 개의 바인딩 note: 하나는 신뢰할 수 있는 하위 시스템에서 호스팅되는 서비스를 보호 하 고 신뢰할 수 있는 하위 시스템과 백 엔드 서비스 사이의 통신 다른 합니다.  
+ 다음 구성에서는 구성을 사용하여 동일한 엔드포인트를 설정합니다. 두 개의 바인딩 중 하나는 신뢰할 수 있는 하위 시스템에서 호스팅되는 서비스를 보안하고, 다른 하나는 신뢰할 수 있는 하위 시스템과 백 엔드 서비스 간의 통신을 담당합니다.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -163,7 +163,7 @@ ms.locfileid: "61918708"
 </configuration>  
 ```  
   
-## <a name="client"></a>클라이언트  
+## <a name="client"></a>Client  
   
 ### <a name="code"></a>코드  
  다음 코드에서는 HTTP 프로토콜에서 메시지 보안을 사용하여 신뢰할 수 있는 하위 시스템과 통신하는 클라이언트와 인증용 사용자 이름 및 암호를 만드는 방법을 보여 줍니다.  
@@ -210,7 +210,7 @@ ms.locfileid: "61918708"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server appfabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server Fabric 용 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

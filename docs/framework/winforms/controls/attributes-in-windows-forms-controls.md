@@ -1,5 +1,5 @@
 ---
-title: Windows Forms 컨트롤의 특성
+title: 컨트롤의 특성
 ms.date: 03/30/2017
 helpviewer_keywords:
 - attributes [Windows Forms]
@@ -7,24 +7,24 @@ helpviewer_keywords:
 - attributes [Windows Forms], control properties
 - attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
-ms.openlocfilehash: 9dd4c2aabe1517b66d8e499de3cf2671bb94e0d6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b32e4f87e953438a3bb11569445a9270e11c7922
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954377"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732131"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Windows Forms 컨트롤의 특성
 .NET Framework는 사용자 지정 컨트롤 및 구성 요소의 멤버에 적용할 수 있는 다양한 특성을 제공합니다. 이러한 특성 중 일부는 클래스의 런타임 동작에 영향을 주고, 다른 일부는 디자인 타임 동작에 영향을 줍니다.  
   
 ## <a name="attributes-for-control-and-component-properties"></a>컨트롤 및 구성 요소 속성의 특성  
- 다음 표에서는 사용자 지정 컨트롤 및 구성 요소의 속성이나 다른 멤버에 적용할 수 있는 특성을 보여 줍니다. 이러한 특성을 사용 하는 예제를 참조 하세요. [방법: Windows Forms 컨트롤에서 특성 적용](how-to-apply-attributes-in-windows-forms-controls.md)합니다.  
+ 다음 표에서는 사용자 지정 컨트롤 및 구성 요소의 속성이나 다른 멤버에 적용할 수 있는 특성을 보여 줍니다. 이러한 특성 중 많은 부분을 사용하는 예제는 [방법: Windows Forms 컨트롤에서 특성 적용](how-to-apply-attributes-in-windows-forms-controls.md)을 참조하세요.  
   
 |특성|설명|  
 |---------------|-----------------|  
 |<xref:System.ComponentModel.AmbientValueAttribute>|속성이 다른 소스에서 값을 가져오도록 속성에 전달할 값을 지정합니다. 이를 *앰비언스*라고 합니다.|  
 |<xref:System.ComponentModel.BrowsableAttribute>|속성 또는 이벤트를 **속성** 창에 표시할지 여부를 지정합니다.|  
-|<xref:System.ComponentModel.CategoryAttribute>|속성 또는 이벤트에 표시 될 때를 그룹화 할 범주의 이름을 지정 된 <xref:System.Windows.Forms.PropertyGrid> 컨트롤을 설정할 <xref:System.Windows.Forms.PropertySort.Categorized> 모드입니다.|  
+|<xref:System.ComponentModel.CategoryAttribute>|<xref:System.Windows.Forms.PropertySort.Categorized> 모드로 설정 된 <xref:System.Windows.Forms.PropertyGrid> 컨트롤에 표시 될 때 속성 또는 이벤트를 그룹화 할 범주의 이름을 지정 합니다.|  
 |<xref:System.ComponentModel.DefaultValueAttribute>|속성의 기본값을 지정합니다.|  
 |<xref:System.ComponentModel.DescriptionAttribute>|속성 또는 이벤트에 대한 설명을 지정합니다.|  
 |<xref:System.ComponentModel.DisplayNameAttribute>|인수를 사용하지 않는 속성, 이벤트 또는 `public void` 메서드에 대한 표시 이름을 지정합니다.|  
@@ -60,7 +60,7 @@ ms.locfileid: "61954377"
 |<xref:System.ComponentModel.ToolboxItemAttribute>|도구 상자 항목의 특성을 나타냅니다.|  
 |<xref:System.ComponentModel.ToolboxItemFilterAttribute>|도구 상자 항목에 사용할 필터 문자열과 필터 형식을 지정합니다.|  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Attribute>
 - [방법: Windows Forms 컨트롤에서 특성 적용](how-to-apply-attributes-in-windows-forms-controls.md)

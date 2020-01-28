@@ -4,16 +4,16 @@ description: C# nullable 값 형식 및 사용 방법 알아보기
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: 3b9a29e75fe894f7d8a0751feefa9eb0a39baa2c
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 42673d16ac68bbf119e57e4c357b1b2b2a0b5c51
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964319"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740938"
 ---
 # <a name="nullable-value-types-c-reference"></a>Nullalbe 값 형식(C# 참조)
 
-Null 허용 값 형식 `T?`는 기본 [값 형식](../keywords/value-types.md) `T`의 모든 값과 추가 [null](../keywords/null.md) 값을 나타냅니다. 예를 들어 `bool?` 변수에는 다음 세 가지 값 중 하나를 할당할 수 있습니다. `true`, `false`, `null`. 기본 값 형식 `T`는 null 허용 값 형식 자체일 수 없습니다.
+Null 허용 값 형식 `T?`는 기본 [값 형식](value-types.md) `T`의 모든 값과 추가 [null](../keywords/null.md) 값을 나타냅니다. 예를 들어 `bool?` 변수에는 다음 세 가지 값 중 하나를 할당할 수 있습니다. `true`, `false`, `null`. 기본 값 형식 `T`는 null 허용 값 형식 자체일 수 없습니다.
 
 > [!NOTE]
 > C# 8.0에서는 nullable 참조 형식 기능을 소개합니다. 자세한 내용은 [nullable 참조 형식](../../nullable-references.md)을 참조하세요. Null 허용 값 형식은 C# 2부터 사용할 수 있습니다.

@@ -21,16 +21,16 @@ helpviewer_keywords:
 - discovering type information at run time
 - type system, reflection
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
-ms.openlocfilehash: 1768acd65b738af068cf98a8b8340c3179e9b885
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 42944d8267d2e99fd9eb1a2cb28c0c81d3e9af75
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130055"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744574"
 ---
 # <a name="reflection-in-net"></a>.NET에서의 리플렉션
 
-<xref:System.Reflection> 네임스페이스의 클래스와 <xref:System.Type?displayProperty=nameWithType>을 함께 사용하여 로드된 [어셈블리](../../standard/assembly/index.md) 및 어셈블리 내에 정의된 형식(예: [클래스](../../standard/base-types/common-type-system.md#classes), [인터페이스](../../standard/base-types/common-type-system.md#interfaces), [값 형식](../../csharp/language-reference/keywords/value-types.md))에 대한 정보를 가져올 수 있습니다. 리플렉션을 사용하여 런타임에 형식 인스턴스를 만들고 이 인스턴스를 호출 및 액세스할 수도 있습니다. 리플렉션의 특정 측면에 대한 항목은 이 개요의 끝부분에서 [관련 항목](#related_topics)을 참조하세요.
+<xref:System.Type?displayProperty=nameWithType>와 함께 <xref:System.Reflection> 네임 스페이스의 클래스를 사용 하 여 로드 된 어셈블리에 대 한 정보 및 [클래스](../../standard/base-types/common-type-system.md#classes), [인터페이스](../../standard/base-types/common-type-system.md#interfaces), 값 형식 ( [구조체](../../standard/base-types/common-type-system.md#structures) 및 [열거형](../../standard/base-types/common-type-system.md#enumerations))과 같은 해당 [어셈블리](../../standard/assembly/index.md) 내에 정의 된 형식에 대 한 정보를 얻을 수 있습니다. 리플렉션을 사용하여 런타임에 형식 인스턴스를 만들고 이 인스턴스를 호출 및 액세스할 수도 있습니다. 리플렉션의 특정 측면에 대한 항목은 이 개요의 끝부분에서 [관련 항목](#related_topics)을 참조하세요.
   
 [공용 언어 런타임](../../standard/clr.md) 로더는 같은 애플리케이션 범위가 포함된 개체 주위의 경계를 구성하는 [애플리케이션 도메인](../app-domains/application-domains.md)을 관리합니다. 이 관리에는 각 어셈블리를 적절한 애플리케이션 도메인으로 로드하는 작업과 각 어셈블리 내에서 형식 계층 구조의 메모리 레이아웃을 제어하는 작업이 포함됩니다.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "73130055"
 |[방법: 리플렉션을 사용하여 대리자 후크](how-to-hook-up-a-delegate-using-reflection.md)|메서드의 대리자를 만들고 대리자를 이벤트에 후크하는 방법을 설명합니다. 런타임에 <xref:System.Reflection.Emit.DynamicMethod>를 사용하여 이벤트 처리 메서드를 만드는 방법을 설명합니다.|  
 |[동적 메서드 및 어셈블리 내보내기](emitting-dynamic-methods-and-assemblies.md)|동적 어셈블리 및 동적 메서드를 생성하는 방법을 설명합니다.|  
   
-## <a name="reference"></a>참고  
+## <a name="reference"></a>참조  
 
 <xref:System.Type?displayProperty=nameWithType>  
   

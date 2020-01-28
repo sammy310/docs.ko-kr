@@ -1,5 +1,5 @@
 ---
-title: '방법: 클릭 한 TreeView 노드 확인 (Windows Forms)'
+title: '방법: 클릭한 TreeView 노드 확인'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - tree nodes in TreeView control [Windows Forms], determining node clicked
 - TreeView control [Windows Forms], determining node clicked
 ms.assetid: 06a4a191-d918-42af-9f49-956c93eff261
-ms.openlocfilehash: ab93158daf987e2f19516b8fb3abf80bfe79a12c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7a0e2b69bbec0eb03d40bee2c8e2d4bc9c3558f9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967338"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742005"
 ---
-# <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a>방법: 클릭 한 TreeView 노드 확인 (Windows Forms)
+# <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a>방법: 클릭한 TreeView 노드 확인(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.TreeView> 컨트롤로 작업할 때 일반적인 작업은 클릭 한 노드를 확인 하 고 적절 하 게 응답 하는 것입니다.  
   
 ### <a name="to-determine-which-treeview-node-was-clicked"></a>클릭 한 TreeView 노드를 확인 하려면  
   
 1. <xref:System.EventArgs> 개체를 사용 하 여 클릭 한 노드 개체에 대 한 참조를 반환 합니다.  
   
-2. 이벤트와 관련 된 데이터를 포함 하 <xref:System.Windows.Forms.TreeViewEventArgs> 는 클래스를 확인 하 여 클릭 한 노드를 확인 합니다.  
+2. 이벤트와 관련 된 데이터가 포함 된 <xref:System.Windows.Forms.TreeViewEventArgs> 클래스를 확인 하 여 클릭 한 노드를 확인 합니다.  
   
     ```vb  
     Private Sub TreeView1_AfterSelect(ByVal sender As System.Object, _  
@@ -56,8 +56,8 @@ Windows Forms <xref:System.Windows.Forms.TreeView> 컨트롤로 작업할 때 �
     ```  
   
     > [!NOTE]
-    > <xref:System.Windows.Forms.MouseEventArgs> <xref:System.Drawing.Point.Y%2A> 또는또는이벤트의를<xref:System.Drawing.Point> 사용 하 여 클릭이 발생 한의 및좌표값을가져올수있습니다.<xref:System.Drawing.Point.X%2A> <xref:System.Windows.Forms.Control.MouseUp> <xref:System.Windows.Forms.Control.MouseDown> 그런 다음 <xref:System.Windows.Forms.TreeView> 컨트롤의 <xref:System.Windows.Forms.TreeView.GetNodeAt%2A> 메서드를 사용 하 여 클릭 한 노드를 확인 합니다.  
+    > 또는 <xref:System.Windows.Forms.Control.MouseDown> 또는 <xref:System.Windows.Forms.Control.MouseUp> 이벤트의 <xref:System.Windows.Forms.MouseEventArgs>를 사용 하 여 클릭이 발생 한 <xref:System.Drawing.Point.Y%2A>의 <xref:System.Drawing.Point.X%2A> 및 <xref:System.Drawing.Point> 좌표 값을 가져올 수 있습니다. 그런 다음 <xref:System.Windows.Forms.TreeView> 컨트롤의 <xref:System.Windows.Forms.TreeView.GetNodeAt%2A> 메서드를 사용 하 여 클릭 한 노드를 확인 합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [TreeView 컨트롤](treeview-control-windows-forms.md)

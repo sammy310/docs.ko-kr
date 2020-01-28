@@ -1,5 +1,6 @@
 ---
 title: Win32와 WPF 간에 메시지 루프 공유
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Win32 code [WPF], sharing message loops
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - sharing message loops [WPF]
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
-ms.openlocfilehash: 5c1d75ab9598196e9cffc78a2f116993e722fd38
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: e1b96284d69645876d3e383beb03a2cc540d8b7b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740322"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731715"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Win32와 WPF 간에 메시지 루프 공유
 이 항목에서는 <xref:System.Windows.Threading.Dispatcher>의 기존 메시지 루프 노출을 사용 하거나 상호 운용 코드의 Win32 쪽에서 별도의 메시지 루프를 만들어 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]와의 상호 운용을 위한 메시지 루프를 구현 하는 방법에 대해 설명 합니다.  

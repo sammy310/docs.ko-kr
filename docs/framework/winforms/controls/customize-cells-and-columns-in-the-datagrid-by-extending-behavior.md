@@ -1,5 +1,5 @@
 ---
-title: '방법: 동작 및 모양을 확장하여 Windows Forms DataGridView 컨트롤에서 셀 및 열 사용자 지정'
+title: 동작 및 모양을 확장 하 여 DataGridView 컨트롤의 셀과 열 사용자 지정
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - columns [Windows Forms], customizing in DataGridView control
 - cells [Windows Forms], customizing in DataGridView control
 ms.assetid: 9b7dc7b6-5ce6-4566-9949-902f74f17a81
-ms.openlocfilehash: 0976a0e07aead1bbaf951c6db8266c5de1a31cd8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: be01e085d4fa74c0c49f0a0494183482875c6a09
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929696"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744064"
 ---
-# <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>방법: 동작 및 모양을 확장하여 Windows Forms DataGridView 컨트롤에서 셀 및 열 사용자 지정
+# <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>방법: Windows Forms DataGridView 컨트롤에서 동작 및 모양을 확장하여 셀과 열 사용자 지정
 <xref:System.Windows.Forms.DataGridView> 컨트롤은 속성, 이벤트 및 도우미 클래스를 통해 모양과 동작을 사용자 지정하는 다양한 방법을 제공합니다. 경우에 따라 해당 셀에 대해 이러한 기능으로 충족할 수 없는 요구 사항이 있을 수 있습니다. 고유한 사용자 지정 <xref:System.Windows.Forms.DataGridViewCell> 클래스를 만들어 확장 기능을 제공할 수 있습니다.  
   
  <xref:System.Windows.Forms.DataGridViewCell> 기본 클래스 또는 파생 클래스 중 하나에서 파생시켜 사용자 지정 <xref:System.Windows.Forms.DataGridViewCell> 클래스를 만듭니다. 모든 유형의 열에 모든 유형의 셀을 표시할 수 있지만 일반적으로 셀 형식을 표시하기 위한 사용자 지정 <xref:System.Windows.Forms.DataGridViewColumn> 클래스도 만듭니다. 열 클래스는 <xref:System.Windows.Forms.DataGridViewColumn> 또는 파생 형식 중 하나에서 파생됩니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "69929696"
      [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#300](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#300)]
      [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#300](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#300)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  전체 코드 예제에는 사용자 지정 셀 형식의 동작을 보여 주는 작은 테스트 폼이 포함되어 있습니다.  
   
  [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#000](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#000)]
@@ -68,7 +68,7 @@ ms.locfileid: "69929696"
   
 - System, System.Windows.Forms 및 System.Drawing 어셈블리에 대한 참조  
  
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCell>

@@ -2,12 +2,12 @@
 title: 런타임 지시문 정책 설정
 ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
-ms.openlocfilehash: 6001e3855610e7da5262c46413b775da3bea305c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7a8933decaec45e8000f3f3d1717847f333deddd
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128160"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738500"
 ---
 # <a name="runtime-directive-policy-settings"></a>런타임 지시문 정책 설정
 
@@ -32,24 +32,24 @@ ms.locfileid: "73128160"
 
   다음 표에는 리플렉션 정책 형식과 해당 형식을 사용할 수 있는 프로그램 요소가 나와 있습니다.
 
-  |요소|Activate|Browse|동적|
+  |요소|Activate|Browse|Dynamic|
   |-------------|--------------|------------|-------------|
-  |[\<Application>](application-element-net-native.md)|✓|✓|✓|
-  |[\<Assembly>](assembly-element-net-native.md)|✓|✓|✓|
-  |[\<AttributeImplies>](attributeimplies-element-net-native.md)|✓|✓|✓|
-  |[\<Event>](event-element-net-native.md)||✓|✓|
-  |[\<Field>](field-element-net-native.md)||✓|✓|
-  |[\<GenericParameter>](genericparameter-element-net-native.md)|✓|✓|✓|
-  |[\<ImpliesType>](impliestype-element-net-native.md)|✓|✓|✓|
-  |[\<Method>](method-element-net-native.md)||✓|✓|
-  |[\<MethodInstantiation>](methodinstantiation-element-net-native.md)||✓|✓|
-  |[\<Namespace>](namespace-element-net-native.md)|✓|✓|✓|
-  |[\<Parameter>](parameter-element-net-native.md)|✓|✓|✓|
-  |[\<Property>](property-element-net-native.md)||✓|✓|
-  |[\<Subtypes>](subtypes-element-net-native.md)|✓|✓|✓|
-  |[\<Type>](type-element-net-native.md)|✓|✓|✓|
-  |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|✓|✓|✓|
-  |[\<TypeParameter>](typeparameter-element-net-native.md)|✓|✓|✓|
+  |[\<Application>](application-element-net-native.md)|✔️|✔️|✔️|
+  |[\<Assembly>](assembly-element-net-native.md)|✔️|✔️|✔️|
+  |[\<AttributeImplies>](attributeimplies-element-net-native.md)|✔️|✔️|✔️|
+  |[\<Event>](event-element-net-native.md)||✔️|✔️|
+  |[\<Field>](field-element-net-native.md)||✔️|✔️|
+  |[\<GenericParameter>](genericparameter-element-net-native.md)|✔️|✔️|✔️|
+  |[\<ImpliesType>](impliestype-element-net-native.md)|✔️|✔️|✔️|
+  |[\<Method>](method-element-net-native.md)||✔️|✔️|
+  |[\<MethodInstantiation>](methodinstantiation-element-net-native.md)||✔️|✔️|
+  |[\<Namespace>](namespace-element-net-native.md)|✔️|✔️|✔️|
+  |[\<Parameter>](parameter-element-net-native.md)|✔️|✔️|✔️|
+  |[\<Property>](property-element-net-native.md)||✔️|✔️|
+  |[\<Subtypes>](subtypes-element-net-native.md)|✔️|✔️|✔️|
+  |[\<Type>](type-element-net-native.md)|✔️|✔️|✔️|
+  |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|✔️|✔️|✔️|
+  |[\<TypeParameter>](typeparameter-element-net-native.md)|✔️|✔️|✔️|
 
 - Serialization 정책 형식에 따라 런타임에 serialization 및 deserialization에 사용할 수 있는 메타데이터가 결정됩니다.
 
@@ -65,22 +65,22 @@ ms.locfileid: "73128160"
 
   |요소|Serialize|DataContractSerializer|DataContractJsonSerializer|XmlSerializer|
   |-------------|---------------|----------------------------|--------------------------------|-------------------|
-  |[\<Application>](application-element-net-native.md)|✓|✓|✓|✓|
-  |[\<Assembly>](assembly-element-net-native.md)|✓|✓|✓|✓|
-  |[\<AttributeImplies>](attributeimplies-element-net-native.md)|✓|✓|✓|✓|
+  |[\<Application>](application-element-net-native.md)|✔️|✔️|✔️|✔️|
+  |[\<Assembly>](assembly-element-net-native.md)|✔️|✔️|✔️|✔️|
+  |[\<AttributeImplies>](attributeimplies-element-net-native.md)|✔️|✔️|✔️|✔️|
   |[\<Event>](event-element-net-native.md)|||||
-  |[\<Field>](field-element-net-native.md)|✓||||
-  |[\<GenericParameter>](genericparameter-element-net-native.md)|✓|✓|✓|✓|
-  |[\<ImpliesType>](impliestype-element-net-native.md)|✓|✓|✓|✓|
+  |[\<Field>](field-element-net-native.md)|✔️||||
+  |[\<GenericParameter>](genericparameter-element-net-native.md)|✔️|✔️|✔️|✔️|
+  |[\<ImpliesType>](impliestype-element-net-native.md)|✔️|✔️|✔️|✔️|
   |[\<Method>](method-element-net-native.md)|||||
   |[\<MethodInstantiation>](methodinstantiation-element-net-native.md)|||||
-  |[\<Namespace>](namespace-element-net-native.md)|✓|✓|✓|✓|
-  |[\<Parameter>](parameter-element-net-native.md)|✓|✓|✓|✓|
-  |[\<Property>](property-element-net-native.md)|✓||||
-  |[\<Subtypes>](subtypes-element-net-native.md)|✓|✓|✓|✓|
-  |[\<Type>](type-element-net-native.md)|✓|✓|✓|✓|
-  |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|✓|✓|✓|✓|
-  |[\<TypeParameter>](typeparameter-element-net-native.md)|✓|✓|✓|✓|
+  |[\<Namespace>](namespace-element-net-native.md)|✔️|✔️|✔️|✔️|
+  |[\<Parameter>](parameter-element-net-native.md)|✔️|✔️|✔️|✔️|
+  |[\<Property>](property-element-net-native.md)|✔️||||
+  |[\<Subtypes>](subtypes-element-net-native.md)|✔️|✔️|✔️|✔️|
+  |[\<Type>](type-element-net-native.md)|✔️|✔️|✔️|✔️|
+  |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|✔️|✔️|✔️|✔️|
+  |[\<TypeParameter>](typeparameter-element-net-native.md)|✔️|✔️|✔️|✔️|
 
 - interop 정책 형식에 따라 런타임에 참조 형식, 값 형식 및 함수 포인터를 COM 및 Windows 런타임으로 전달하는 데 사용할 수 있는 메타데이터가 결정됩니다.
 
@@ -94,22 +94,22 @@ ms.locfileid: "73128160"
 
   |요소|MarshalObject|MarshalDelegate|MarshalStructure|
   |-------------|-------------------|---------------------|----------------------|
-  |[\<Application>](application-element-net-native.md)|✓|✓|✓|
-  |[\<Assembly>](assembly-element-net-native.md)|✓|✓|✓|
-  |[\<AttributeImplies>](attributeimplies-element-net-native.md)|✓|✓|✓|
+  |[\<Application>](application-element-net-native.md)|✔️|✔️|✔️|
+  |[\<Assembly>](assembly-element-net-native.md)|✔️|✔️|✔️|
+  |[\<AttributeImplies>](attributeimplies-element-net-native.md)|✔️|✔️|✔️|
   |[\<Event>](event-element-net-native.md)||||
   |[\<Field>](field-element-net-native.md)||||
-  |[\<GenericParameter>](genericparameter-element-net-native.md)|✓|✓|✓|
-  |[\<ImpliesType>](impliestype-element-net-native.md)|✓|✓|✓|
+  |[\<GenericParameter>](genericparameter-element-net-native.md)|✔️|✔️|✔️|
+  |[\<ImpliesType>](impliestype-element-net-native.md)|✔️|✔️|✔️|
   |[\<Method>](method-element-net-native.md)||||
   |[\<MethodInstantiation>](methodinstantiation-element-net-native.md)||||
-  |[\<Namespace>](namespace-element-net-native.md)|✓|✓|✓|
-  |[\<Parameter>](parameter-element-net-native.md)|✓|✓|✓|
+  |[\<Namespace>](namespace-element-net-native.md)|✔️|✔️|✔️|
+  |[\<Parameter>](parameter-element-net-native.md)|✔️|✔️|✔️|
   |[\<Property>](property-element-net-native.md)||||
-  |[\<Subtypes>](subtypes-element-net-native.md)|✓|✓|✓|
-  |[\<Type>](type-element-net-native.md)|✓|✓|✓|
-  |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|✓|✓|✓|
-  |[\<TypeParameter>](typeparameter-element-net-native.md)|✓|✓|✓|
+  |[\<Subtypes>](subtypes-element-net-native.md)|✔️|✔️|✔️|
+  |[\<Type>](type-element-net-native.md)|✔️|✔️|✔️|
+  |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|✔️|✔️|✔️|
+  |[\<TypeParameter>](typeparameter-element-net-native.md)|✔️|✔️|✔️|
 
 ## <a name="policy-settings"></a>정책 설정
 
@@ -117,16 +117,16 @@ ms.locfileid: "73128160"
 
 |정책 설정|설명|`Assembly`, `Namespace`, `Type` 및 `TypeInstantiation` 요소|`Event`, `Field`, `Method`, `MethodInstantiation` 및 `Property` 요소|
 |--------------------|-----------------|-----------------------------------------------------------------------|--------------------------------------------------------------------------------|
-|`All`|.NET 네이티브 도구 체인에서 제거하지 않는 모든 형식과 멤버에 대해 정책을 사용하도록 설정합니다.|✓||
-|`Auto`|해당 프로그램 요소에 대한 정책 형식으로 기본 정책을 사용해야 함을 지정합니다. 이 설정은 해당 정책 형식에 대해 정책을 생략하는 것과 같습니다. `Auto`는 보통 부모 요소에서 정책이 상속됨을 나타내는 데 사용됩니다.|✓|✓|
-|`Excluded`|특정 프로그램 요소에 대해 정책을 사용하지 않음을 나타냅니다. 예를 들어<br /><br /> `<Type Name="BusinessClasses.Person" Browse="Excluded" Dynamic="Excluded" />`<br /><br /> 런타임 지시문은 `BusinessClasses.Person` 클래스의 메타데이터를 검색하거나 `Person` 개체를 동적으로 인스턴스화 및 수정하는 데 사용할 수 없음을 지정합니다.|✓|✓|
-|`Included`|부모 형식의 메타데이터를 사용할 수 있는 경우 정책을 사용하도록 설정합니다.||✓|
-|`Public`|도구 체인이 형식 또는 멤버를 불필요한 것으로 결정하여 제거하는 경우가 아니면 public 형식 또는 멤버에 대해 정책을 사용하도록 설정합니다. 이 설정은 도구 체인에서 불필요한 것으로 결정하는 public 형식 및 멤버도 항상 사용할 수 있도록 하는 `Required Public`과는 다릅니다.|✓||
-|`PublicAndInternal`|도구 체인이 형식 또는 멤버를 불필요한 것으로 결정하여 제거하는 경우가 아니면 public 및 내부 형식이나 멤버에 대해 정책을 사용하도록 설정합니다. 이 설정은 도구 체인에서 불필요한 것으로 결정하는 public 및 내부 형식과 멤버도 항상 사용할 수 있도록 하는 `Required PublicAndInternal`과는 다릅니다.|✓||
-|`Required`|멤버가 사용된 것으로 표시되어도 멤버에 대한 정책이 사용되며 메타데이터가 제공됨을 나타냅니다.||✓|
-|`Required Public`|public 형식 또는 멤버에 대해 정책을 사용하도록 설정하며 public 형식 또는 멤버의 메타데이터를 항상 사용할 수 있습니다. 이 설정은 도구 체인이 필요하다고 결정하는 public 형식과 멤버의 메타데이터만 제공하는 `Public`과는 다릅니다.|✓||
-|`Required PublicAndInternal`|public 및 내부 형식 또는 멤버에 대해 정책을 사용하도록 설정하며 public 및 내부 형식 또는 멤버의 메타데이터를 항상 사용할 수 있습니다. 이 설정은 도구 체인이 필요하다고 결정하는 public 및 내부 형식과 멤버의 메타데이터만 제공하는 `PublicAndInternal`과는 다릅니다.|✓||
-|`Required All`|도구 체인이 사용 여부에 관계없이 모든 형식과 멤버를 유지해야 하도록 지정하고 해당 형식과 멤버에 대해 정책을 사용하도록 설정합니다.|✓||
+|`All`|.NET 네이티브 도구 체인에서 제거하지 않는 모든 형식과 멤버에 대해 정책을 사용하도록 설정합니다.|✔️||
+|`Auto`|해당 프로그램 요소에 대한 정책 형식으로 기본 정책을 사용해야 함을 지정합니다. 이 설정은 해당 정책 형식에 대해 정책을 생략하는 것과 같습니다. `Auto`는 보통 부모 요소에서 정책이 상속됨을 나타내는 데 사용됩니다.|✔️|✔️|
+|`Excluded`|특정 프로그램 요소에 대해 정책을 사용하지 않음을 나타냅니다. 예를 들어<br /><br /> `<Type Name="BusinessClasses.Person" Browse="Excluded" Dynamic="Excluded" />`<br /><br /> 런타임 지시문은 `BusinessClasses.Person` 클래스의 메타데이터를 검색하거나 `Person` 개체를 동적으로 인스턴스화 및 수정하는 데 사용할 수 없음을 지정합니다.|✔️|✔️|
+|`Included`|부모 형식의 메타데이터를 사용할 수 있는 경우 정책을 사용하도록 설정합니다.||✔️|
+|`Public`|도구 체인이 형식 또는 멤버를 불필요한 것으로 결정하여 제거하는 경우가 아니면 public 형식 또는 멤버에 대해 정책을 사용하도록 설정합니다. 이 설정은 도구 체인에서 불필요한 것으로 결정하는 public 형식 및 멤버도 항상 사용할 수 있도록 하는 `Required Public`과는 다릅니다.|✔️||
+|`PublicAndInternal`|도구 체인이 형식 또는 멤버를 불필요한 것으로 결정하여 제거하는 경우가 아니면 public 및 내부 형식이나 멤버에 대해 정책을 사용하도록 설정합니다. 이 설정은 도구 체인에서 불필요한 것으로 결정하는 public 및 내부 형식과 멤버도 항상 사용할 수 있도록 하는 `Required PublicAndInternal`과는 다릅니다.|✔️||
+|`Required`|멤버가 사용된 것으로 표시되어도 멤버에 대한 정책이 사용되며 메타데이터가 제공됨을 나타냅니다.||✔️|
+|`Required Public`|public 형식 또는 멤버에 대해 정책을 사용하도록 설정하며 public 형식 또는 멤버의 메타데이터를 항상 사용할 수 있습니다. 이 설정은 도구 체인이 필요하다고 결정하는 public 형식과 멤버의 메타데이터만 제공하는 `Public`과는 다릅니다.|✔️||
+|`Required PublicAndInternal`|public 및 내부 형식 또는 멤버에 대해 정책을 사용하도록 설정하며 public 및 내부 형식 또는 멤버의 메타데이터를 항상 사용할 수 있습니다. 이 설정은 도구 체인이 필요하다고 결정하는 public 및 내부 형식과 멤버의 메타데이터만 제공하는 `PublicAndInternal`과는 다릅니다.|✔️||
+|`Required All`|도구 체인이 사용 여부에 관계없이 모든 형식과 멤버를 유지해야 하도록 지정하고 해당 형식과 멤버에 대해 정책을 사용하도록 설정합니다.|✔️||
 
 ## <a name="see-also"></a>참조
 

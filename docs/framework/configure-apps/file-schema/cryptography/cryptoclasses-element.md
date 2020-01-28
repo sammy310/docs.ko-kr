@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <cryptoClasses> element
 - cryptoClasses element
 ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
-ms.openlocfilehash: 89f1d89ea397794e366b53205ac23b94d7892869
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 6601417f0b80f623b7698c4b072c35eca44343b7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699749"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732881"
 ---
 # <a name="cryptoclasses-element"></a>\<cryptoClasses > 요소
 [\<nameEntry>](nameentry-element.md) 요소에 있는 이름에 매핑되는 암호화 클래스의 목록이 포함되어 있습니다.  
@@ -32,27 +32,27 @@ ms.locfileid: "71699749"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
- None.  
+ 없음.  
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<cryptoClass>](cryptoclass-element.md)|**\<nameEntry>** 요소에 있는 이름에 매핑되는 암호화 클래스가 포함되어 있습니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`cryptographySettings`|암호화 설정이 포함되어 있습니다.|  
 |`cryptoNameMapping`|이름에 대한 클래스의 매핑이 포함되어 있습니다.|  
 |`mscorlib`|`cryptographySettings` 요소를 포함 합니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 **\<cryptoclass >** 요소를 사용 하 여 암호화 클래스를 참조 하 고 런타임을 구성 하는 방법을 보여 줍니다. 그런 다음 문자열 "RSA"를 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> 메서드에 전달 하 고 <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> 메서드를 사용 하 여 `MyCryptoRSAClass` 개체를 반환할 수 있습니다.  
   
 ```xml  
@@ -76,11 +76,11 @@ ms.locfileid: "71699749"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Security.Cryptography>
 - [구성 파일 스키마](../index.md)
 - [암호화 설정 스키마](index.md)
 - [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
-- [System.Security.Cryptography.CryptoConfig.CreateFromName](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)
+- [System.Security.Cryptography.CryptoConfig.CreateFromName](xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A)
 - [암호화 클래스 구성](../../configure-cryptography-classes.md)

@@ -1,16 +1,16 @@
 ---
-title: ProgressBar 컨트롤(Windows Forms)
+title: ProgressBar 컨트롤
 ms.date: 03/30/2017
 helpviewer_keywords:
 - progress controls
 - ProgressBar control [Windows Forms]
 ms.assetid: 5be6b642-e8a6-4565-8ebd-ae73c7b10dc9
-ms.openlocfilehash: a941189eb8ca00de6fb2ef75cada5762c0bcc973
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 177db058e1df49e5b9ee5541f8fc074881f3f72c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968297"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741220"
 ---
 # <a name="progressbar-control-windows-forms"></a>ProgressBar 컨트롤(Windows Forms)
 > [!IMPORTANT]
@@ -20,15 +20,15 @@ ms.locfileid: "69968297"
   
 ## <a name="in-this-section"></a>섹션 내용  
  [ProgressBar 컨트롤 개요](progressbar-control-overview-windows-forms.md)  
- 작업 진행률을 그래픽으로 표시 <xref:System.Windows.Forms.ProgressBar> 하는 데 사용할 수 있는 컨트롤의 일반적인 개념을 소개 합니다.  
+ 작업 진행률을 그래픽으로 표시 하는 데 사용할 수 있는 <xref:System.Windows.Forms.ProgressBar> 컨트롤의 일반적인 개념을 소개 합니다.  
   
- [방법: Windows Forms ProgressBar 컨트롤에 표시 되는 값 설정](how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control.md)  
- <xref:System.Windows.Forms.ProgressBar> 컨트롤에 표시 되는 값을 늘리는 여러 가지 방법을 설명 합니다.  
+ [방법: Windows Forms ProgressBar 컨트롤에서 표시하는 값 설정](how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control.md)  
+ <xref:System.Windows.Forms.ProgressBar> 컨트롤에 표시 되는 값을 늘리는 다양 한 방법에 대해 설명 합니다.  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Forms.ProgressBar>  
  클래스 및 해당 멤버에 대한 참조 정보를 제공합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
  [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)  
  사용 방법에 대한 정보 링크를 포함하는 Windows Forms 컨트롤의 전체 목록을 제공합니다.

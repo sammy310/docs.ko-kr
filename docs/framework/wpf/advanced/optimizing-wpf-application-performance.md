@@ -1,5 +1,5 @@
 ---
-title: WPF 애플리케이션 성능 최적화
+title: 앱 성능 최적화
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application rendering [WPF], performance
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
-ms.openlocfilehash: 98c7022eab9153808d47d7da69c23349032165c3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: cc6ea051401199a87965565c920068fd55cb05d0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460854"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743953"
 ---
-# <a name="optimizing-wpf-application-performance"></a>WPF 애플리케이션 성능 최적화
+# <a name="optimizing-wpf-application-performance"></a>WPF 응용 프로그램 성능 최적화
 이 섹션은 응용 프로그램의 성능을 향상 시키는 방법을 찾고 있는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램 개발자를 위한 참조로 제공 됩니다. Microsoft .NET Framework 및 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 처음 사용 하는 개발자는 먼저 두 플랫폼에 대해 잘 알고 있어야 합니다. 이 섹션에서는 두 가지 모두에 대 한 실무 지식이 있다고 가정 하 고, 응용 프로그램을 실행 하는 데 충분 한 지식이 이미 있는 프로그래머를 위해 작성 되었습니다.  
   
 > [!NOTE]
 > 이 섹션에서 제공 하는 성능 데이터는 2.8 GHz PC에서 실행 되는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램을 기반으로 512 RAM 및 ATI Radeon 9700 그래픽 카드를 사용 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [애플리케이션 성능 계획](planning-for-application-performance.md)  
   
  [하드웨어 이용](optimizing-performance-taking-advantage-of-hardware.md)  
@@ -33,7 +33,7 @@ ms.locfileid: "73460854"
   
  [애플리케이션 리소스](optimizing-performance-application-resources.md)  
   
- [텍스트](optimizing-performance-text.md)  
+ [Text](optimizing-performance-text.md)  
   
  [데이터 바인딩](optimizing-performance-data-binding.md)  
   

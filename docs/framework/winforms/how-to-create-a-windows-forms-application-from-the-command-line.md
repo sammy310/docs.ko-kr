@@ -1,5 +1,6 @@
 ---
-title: '방법: 명령줄에서 Windows Forms 응용 프로그램 만들기'
+title: 명령줄에서 Windows Forms 응용 프로그램 만들기
+titleSuffix: ''
 ms.date: 03/14/2018
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating basic form
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
-ms.openlocfilehash: af1548602ece8ea0f5720a836ec05648854e198f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: da6b9da53a36a44233dde4f0d1c4f147d913c7cf
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127242"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739531"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>방법: 명령줄에서 Windows Forms 응용 프로그램 만들기
 
@@ -103,7 +104,7 @@ ms.locfileid: "73127242"
   
 7. 이전 절차에서 설명한 대로 애플리케이션을 컴파일 및 실행합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  
 다음 코드 예제는 이전 절차의 전체 예제입니다.
   

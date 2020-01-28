@@ -1,5 +1,5 @@
 ---
-title: WPF 애플리케이션 빌드(WPF)
+title: 앱 컴파일
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 48536d8fba3f86c2883e48cd4e5cf9a3a8752fcd
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 00c76dfcdcedc7ceaefaaae785368f8b343457a7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636317"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744771"
 ---
-# <a name="building-a-wpf-application-wpf"></a>WPF 애플리케이션 빌드(WPF)
+# <a name="compile-a-wpf-application"></a>WPF 응용 프로그램 컴파일
 
 WPF (Windows Presentation Foundation) 응용 프로그램은 .NET Framework 실행 파일 (.exe), 라이브러리 (.dll) 또는 두 어셈블리 형식의 조합으로 빌드할 수 있습니다. 이 항목에서는 WPF 응용 프로그램을 빌드하는 방법을 소개 하 고 빌드 프로세스의 주요 단계에 대해 설명 합니다.
 
