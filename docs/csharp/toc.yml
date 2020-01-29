@@ -1317,14 +1317,15 @@
           items:
             - name: 값 형식
               items:
-                - name: 값 형식의 기능
-                  href: language-reference/keywords/value-types.md
+                - name: 개요
+                  href: language-reference/builtin-types/value-types.md
+                  displayName: 'value types, simple types'
                 - name: 정수 숫자 형식
-                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer, literal'
                   href: language-reference/builtin-types/integral-numeric-types.md
+                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer, literal'
                 - name: 부동 소수점 숫자 형식
-                  displayName: 'float, decimal, double, rational, real, literal'
                   href: language-reference/builtin-types/floating-point-numeric-types.md
+                  displayName: 'float, decimal, double, rational, real, literal'
                 - name: 기본 제공 숫자 변환
                   href: language-reference/builtin-types/numeric-conversions.md
                 - name: bool
@@ -1364,8 +1365,6 @@
               items:
                 - name: 기본 제공 형식 표
                   href: language-reference/keywords/built-in-types-table.md
-                - name: 값 형식 표
-                  href: language-reference/keywords/value-types-table.md
                 - name: 숫자 결과 서식 지정 표
                   href: language-reference/keywords/formatting-numeric-results-table.md
         - name: 한정자
@@ -1399,7 +1398,7 @@
               displayName: await
             - name: const
               href: language-reference/keywords/const.md
-            - name: 이벤트(event)
+            - name: event
               href: language-reference/keywords/event.md
             - name: extern
               href: language-reference/keywords/extern.md
@@ -1409,13 +1408,13 @@
               href: language-reference/keywords/new-modifier.md
             - name: out(제네릭 한정자)
               href: language-reference/keywords/out-generic-modifier.md
-            - name: 재정의
+            - name: override
               href: language-reference/keywords/override.md
             - name: readonly
               href: language-reference/keywords/readonly.md
             - name: sealed
               href: language-reference/keywords/sealed.md
-            - name: 정적
+            - name: static
               href: language-reference/keywords/static.md
             - name: unsafe
               href: language-reference/keywords/unsafe.md

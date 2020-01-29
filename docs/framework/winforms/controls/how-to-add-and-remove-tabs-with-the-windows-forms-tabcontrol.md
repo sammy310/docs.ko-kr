@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms TabControl을 사용하여 탭 추가 및 제거'
+title: TabControl을 사용 하 여 탭 추가 및 제거
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 66d4dfca-41e8-44e3-9c80-fb7ac4cb1619
-ms.openlocfilehash: 938f1210eaa3479822e752327123737a3286fe9a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8292d8441f9b47334b98736cf3282c846673dbb4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624055"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732709"
 ---
-# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a><span data-ttu-id="738e5-102">방법: Windows Forms TabControl을 사용하여 탭 추가 및 제거</span><span class="sxs-lookup"><span data-stu-id="738e5-102">How to: Add and Remove Tabs with the Windows Forms TabControl</span></span>
-<span data-ttu-id="738e5-103">기본적으로 <xref:System.Windows.Forms.TabControl> 컨트롤에는 두 개의 <xref:System.Windows.Forms.TabPage> 컨트롤입니다.</span><span class="sxs-lookup"><span data-stu-id="738e5-103">By default, a <xref:System.Windows.Forms.TabControl> control contains two <xref:System.Windows.Forms.TabPage> controls.</span></span> <span data-ttu-id="738e5-104">이러한 탭을 통해 액세스할 수 있습니다는 <xref:System.Windows.Forms.TabControl.TabPages%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="738e5-104">You can access these tabs through the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
+# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a><span data-ttu-id="3259f-102">방법: Windows Forms TabControl을 사용하여 탭 추가 및 제거</span><span class="sxs-lookup"><span data-stu-id="3259f-102">How to: Add and Remove Tabs with the Windows Forms TabControl</span></span>
+<span data-ttu-id="3259f-103">기본적으로 <xref:System.Windows.Forms.TabControl> 컨트롤에는 두 개의 <xref:System.Windows.Forms.TabPage> 컨트롤이 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3259f-103">By default, a <xref:System.Windows.Forms.TabControl> control contains two <xref:System.Windows.Forms.TabPage> controls.</span></span> <span data-ttu-id="3259f-104"><xref:System.Windows.Forms.TabControl.TabPages%2A> 속성을 통해 이러한 탭에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3259f-104">You can access these tabs through the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
   
-### <a name="to-add-a-tab-programmatically"></a><span data-ttu-id="738e5-105">프로그래밍 방식으로 탭을 추가 하려면</span><span class="sxs-lookup"><span data-stu-id="738e5-105">To add a tab programmatically</span></span>  
+### <a name="to-add-a-tab-programmatically"></a><span data-ttu-id="3259f-105">프로그래밍 방식으로 탭을 추가 하려면</span><span class="sxs-lookup"><span data-stu-id="3259f-105">To add a tab programmatically</span></span>  
   
-- <span data-ttu-id="738e5-106">사용 된 <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> 메서드를 <xref:System.Windows.Forms.TabControl.TabPages%2A> 속성.</span><span class="sxs-lookup"><span data-stu-id="738e5-106">Use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
+- <span data-ttu-id="3259f-106"><xref:System.Windows.Forms.TabControl.TabPages%2A> 속성의 <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> 메서드를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="3259f-106">Use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
   
     ```vb  
     Dim myTabPage As New TabPage()  
@@ -45,13 +45,13 @@ ms.locfileid: "64624055"
     tabControl1->TabPages->Add(myTabPage);  
     ```  
   
-### <a name="to-remove-a-tab-programmatically"></a><span data-ttu-id="738e5-107">프로그래밍 방식으로 탭을 제거 하려면</span><span class="sxs-lookup"><span data-stu-id="738e5-107">To remove a tab programmatically</span></span>  
+### <a name="to-remove-a-tab-programmatically"></a><span data-ttu-id="3259f-107">프로그래밍 방식으로 탭을 제거 하려면</span><span class="sxs-lookup"><span data-stu-id="3259f-107">To remove a tab programmatically</span></span>  
   
-- <span data-ttu-id="738e5-108">선택한 탭을 제거 하려면 사용 합니다 <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> 메서드는 <xref:System.Windows.Forms.TabControl.TabPages%2A> 속성.</span><span class="sxs-lookup"><span data-stu-id="738e5-108">To remove selected tabs, use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
+- <span data-ttu-id="3259f-108">선택한 탭을 제거 하려면 <xref:System.Windows.Forms.TabControl.TabPages%2A> 속성의 <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> 메서드를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="3259f-108">To remove selected tabs, use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
   
-     <span data-ttu-id="738e5-109">또는</span><span class="sxs-lookup"><span data-stu-id="738e5-109">-or-</span></span>  
+     <span data-ttu-id="3259f-109">-또는-</span><span class="sxs-lookup"><span data-stu-id="3259f-109">-or-</span></span>  
   
-- <span data-ttu-id="738e5-110">모든 탭을 제거 하려면 사용 합니다 <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> 메서드는 <xref:System.Windows.Forms.TabControl.TabPages%2A> 속성.</span><span class="sxs-lookup"><span data-stu-id="738e5-110">To remove all tabs, use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
+- <span data-ttu-id="3259f-110">모든 탭을 제거 하려면 <xref:System.Windows.Forms.TabControl.TabPages%2A> 속성의 <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> 메서드를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="3259f-110">To remove all tabs, use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
   
     ```vb  
     ' Removes the selected tab:  
@@ -74,9 +74,9 @@ ms.locfileid: "64624055"
     tabControl1->TabPages->Clear();  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="738e5-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="738e5-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3259f-111">참조</span><span class="sxs-lookup"><span data-stu-id="3259f-111">See also</span></span>
 
-- [<span data-ttu-id="738e5-112">TabControl 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="738e5-112">TabControl Control Overview</span></span>](tabcontrol-control-overview-windows-forms.md)
-- [<span data-ttu-id="738e5-113">방법: 탭 페이지에 컨트롤 추가</span><span class="sxs-lookup"><span data-stu-id="738e5-113">How to: Add a Control to a Tab Page</span></span>](how-to-add-a-control-to-a-tab-page.md)
-- [<span data-ttu-id="738e5-114">방법: 탭 페이지를 사용 하지 않도록 설정</span><span class="sxs-lookup"><span data-stu-id="738e5-114">How to: Disable Tab Pages</span></span>](how-to-disable-tab-pages.md)
-- [<span data-ttu-id="738e5-115">방법: Windows Forms TabControl의 모양 변경</span><span class="sxs-lookup"><span data-stu-id="738e5-115">How to: Change the Appearance of the Windows Forms TabControl</span></span>](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [<span data-ttu-id="3259f-112">TabControl 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="3259f-112">TabControl Control Overview</span></span>](tabcontrol-control-overview-windows-forms.md)
+- [<span data-ttu-id="3259f-113">방법: 탭 페이지에 컨트롤 추가</span><span class="sxs-lookup"><span data-stu-id="3259f-113">How to: Add a Control to a Tab Page</span></span>](how-to-add-a-control-to-a-tab-page.md)
+- [<span data-ttu-id="3259f-114">방법: 탭 페이지 사용 안 함</span><span class="sxs-lookup"><span data-stu-id="3259f-114">How to: Disable Tab Pages</span></span>](how-to-disable-tab-pages.md)
+- [<span data-ttu-id="3259f-115">방법: Windows Forms TabControl의 모양 변경</span><span class="sxs-lookup"><span data-stu-id="3259f-115">How to: Change the Appearance of the Windows Forms TabControl</span></span>](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

@@ -1,66 +1,62 @@
 ---
 title: .NET 가이드
-description: .NET에 대해 자세히 알아봅니다.
+description: .NET 및 .NET Standard에 대해 알아봅니다.
 author: cartermp
-ms.date: 05/02/2017
+ms.date: 12/27/2019
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 8a989ed4ff0d670296fc255733d01ddd5b5a8f1e
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: ce76448b69a002216125192f75d24b38e7582260
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838106"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76730780"
 ---
-# <a name="net-guide"></a><span data-ttu-id="91895-103">.NET 가이드</span><span class="sxs-lookup"><span data-stu-id="91895-103">.NET Guide</span></span>
+# <a name="net-guide"></a><span data-ttu-id="5f8a6-103">.NET 가이드</span><span class="sxs-lookup"><span data-stu-id="5f8a6-103">.NET guide</span></span>
 
-<span data-ttu-id="91895-104">.NET 가이드는 .NET에 대한 많은 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="91895-104">The .NET Guide provides a large amount of information about .NET.</span></span>  <span data-ttu-id="91895-105">.NET에 대한 지식에 따라 이 가이드의 다양한 섹션과 .NET 설명서의 다른 섹션을 탐색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="91895-105">Depending on your familiarity with .NET, you may wish to explore different sections of this guide and other sections of the .NET documentation.</span></span>
+<span data-ttu-id="5f8a6-104">.Net 가이드에서는 .NET에 대한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="5f8a6-104">The .NET guide provides information about .NET.</span></span> <span data-ttu-id="5f8a6-105">.NET에 대한 지식에 따라 이 가이드의 다양한 섹션과 [.NET Core](../core/index.md) 또는 [.NET Framework](../framework/index.md)와 같은 기타 가이드를 살펴볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5f8a6-105">Depending on your familiarity with .NET, you may wish to explore different sections of this guide and other guides such as [.NET Core](../core/index.md) or [.NET Framework](../framework/index.md).</span></span>
 
-## <a name="new-to-net"></a><span data-ttu-id="91895-106">.NET을 처음 사용하는 경우</span><span class="sxs-lookup"><span data-stu-id="91895-106">New to .NET</span></span>
+## <a name="new-to-net"></a><span data-ttu-id="5f8a6-106">.NET을 처음 사용하는 경우</span><span class="sxs-lookup"><span data-stu-id="5f8a6-106">New to .NET</span></span>
 
-<span data-ttu-id="91895-107">.NET에 대한 대략적인 개요는 [.NET이란?](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet)을 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="91895-107">If you want a high-level overview about .NET, check out [What is .NET?](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet).</span></span>
+<span data-ttu-id="5f8a6-107">.NET에 대한 대략적인 개요는 [.NET이란?](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="5f8a6-107">If you want a high-level overview of .NET, see [What is .NET?](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet).</span></span>
 
-<span data-ttu-id="91895-108">.NET을 처음 사용하는 경우 [시작](get-started.md) 문서를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="91895-108">If you're new to .NET, check out the [Get Started](get-started.md) article.</span></span>
+<span data-ttu-id="5f8a6-108">.NET을 처음 접하는 경우 [시작](get-started.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="5f8a6-108">If you're new to .NET, see [Get started](get-started.md).</span></span>
 
-<span data-ttu-id="91895-109">.NET의 주요 기능을 둘러보려는 경우 [.NET 둘러보기](tour.md)를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="91895-109">If you prefer to have a guided tour through major features of .NET, check out the [Tour of .NET](tour.md).</span></span>
+<span data-ttu-id="5f8a6-109">.NET의 주요 기능을 둘러보려는 경우 [.NET 둘러보기](tour.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="5f8a6-109">If you prefer to have a guided tour through major features of .NET, see [Tour of .NET](tour.md).</span></span>
 
-<span data-ttu-id="91895-110">또한 [.NET 아키텍처 구성 요소](components.md)를 참조하여 .NET의 다양한 "부분"과 이러한 부분의 연결 방식을 간략하게 살펴볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="91895-110">You can also read about [.NET Architectural Components](components.md) to get an overview of the various "pieces" of .NET and how they fit together.</span></span>
+<span data-ttu-id="5f8a6-110">.NET의 다양한 "부분"과 이러한 부분의 연결 방식을 간략하게 알아보려면 [.NET 아키텍처 구성 요소](components.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="5f8a6-110">For an overview of the various pieces of .NET and how they fit together, see [.NET architectural components](components.md).</span></span>
 
-## <a name="new-to-net-core"></a><span data-ttu-id="91895-111">.NET Core를 처음 사용하는 경우</span><span class="sxs-lookup"><span data-stu-id="91895-111">New to .NET Core</span></span>
+## <a name="new-to-net-core"></a><span data-ttu-id="5f8a6-111">.NET Core를 처음 사용하는 경우</span><span class="sxs-lookup"><span data-stu-id="5f8a6-111">New to .NET Core</span></span>
 
-<span data-ttu-id="91895-112">.NET Core를 처음 사용하는 경우 [.NET Core 시작](../core/get-started.md)을 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="91895-112">If you're new to .NET Core, check out [Get Started with .NET Core](../core/get-started.md).</span></span>
+<span data-ttu-id="5f8a6-112">.NET Core를 처음 사용하는 경우 [.NET Core 시작](../core/get-started.md)을 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="5f8a6-112">If you're new to .NET Core, check out [Get started with .NET Core](../core/get-started.md).</span></span>
 
-## <a name="new-to-net-standard"></a><span data-ttu-id="91895-113">.NET Standard를 처음 사용하는 경우</span><span class="sxs-lookup"><span data-stu-id="91895-113">New to .NET Standard</span></span>
+## <a name="new-to-net-standard"></a><span data-ttu-id="5f8a6-113">.NET Standard를 처음 사용하는 경우</span><span class="sxs-lookup"><span data-stu-id="5f8a6-113">New to .NET Standard</span></span>
 
-<span data-ttu-id="91895-114">.NET Standard를 처음 사용하는 경우 [.NET Standard](net-standard.md)를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="91895-114">If you're new to .NET Standard, check out [.NET Standard](net-standard.md).</span></span>
+<span data-ttu-id="5f8a6-114">.NET Standard를 처음 사용하는 경우 [.NET Standard](net-standard.md)를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="5f8a6-114">If you're new to .NET Standard, check out [.NET Standard](net-standard.md).</span></span>
 
-## <a name="porting-net-framework-code-to-net-core"></a><span data-ttu-id="91895-115">.NET Framework 코드를 .NET Core로 이식</span><span class="sxs-lookup"><span data-stu-id="91895-115">Porting .NET Framework Code to .NET Core</span></span>
+## <a name="port-net-framework-code-to-net-standard-or-net-core"></a><span data-ttu-id="5f8a6-115">.NET Framework 코드를 .NET Standard 또는 .NET Core로 이식</span><span class="sxs-lookup"><span data-stu-id="5f8a6-115">Port .NET Framework code to .NET Standard or .NET Core</span></span>
 
-<span data-ttu-id="91895-116">애플리케이션, 서비스 또는 시스템의 일부 구성 요소를 .NET Core로 이식하려는 경우 [.NET Framework에서.NET Core로 이식](../core/porting/index.md)을 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="91895-116">If you're looking to port an application, service, or some component of a system to .NET Core, check out [Porting to .NET Core from .NET Framework](../core/porting/index.md).</span></span>
+<span data-ttu-id="5f8a6-116">애플리케이션, 서비스, 구성 요소 또는 NuGet 패키지를 .NET Standard 또는 .NET Core로 이식하려면 [ .NET Core로 이식](../core/porting/index.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="5f8a6-116">To port an application, service, component, or NuGet package to .NET Standard or .NET Core, see [Port to .NET Core from .NET Framework](../core/porting/index.md).</span></span> <span data-ttu-id="5f8a6-117">.NET Standard 및 .NET Core의 도구는 공유되므로 콘텐츠는 두 프레임워크에 대한 이식과 관련이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5f8a6-117">Tooling for .NET Standard and .NET Core is shared, so the content is relevant for porting to both frameworks.</span></span>
 
-## <a name="porting-a-nuget-package-from-net-framework-to-net-standard-or-net-core"></a><span data-ttu-id="91895-117">.NET Framework에서 .NET Standard 또는 .NET Core로 NuGet 패키지 이식</span><span class="sxs-lookup"><span data-stu-id="91895-117">Porting a NuGet package from .NET Framework to .NET Standard or .NET Core</span></span>
+## <a name="net-concepts"></a><span data-ttu-id="5f8a6-118">.NET 개념</span><span class="sxs-lookup"><span data-stu-id="5f8a6-118">.NET concepts</span></span>
 
-<span data-ttu-id="91895-118">.NET Standard로 NuGet 패키지를 이식하려는 경우 [.NET Framework에서 .NET Core로 이식](../core/porting/index.md)을 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="91895-118">If you're looking to port a NuGet package to .NET Standard, check out [Porting to .NET Core from .NET Framework](../core/porting/index.md).</span></span>  <span data-ttu-id="91895-119">.NET Standard와 .NET Core 도구는 공통적으로 사용할 수 있으므로 .NET Standard와 .NET Core 이식에 관한 내용은 서로 관련이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="91895-119">Tooling for .NET Standard and .NET Core are shared, so the content will be relevant for porting to .NET Standard as well as .NET Core.</span></span>
+<span data-ttu-id="5f8a6-119">.NET의 주요 개념에 대한 자세한 내용은 다음을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="5f8a6-119">For more information about the major concepts of .NET, see:</span></span>
 
-## <a name="interested-in-major-net-concepts"></a><span data-ttu-id="91895-120">주요 .NET 개념에 관심이 있는 경우</span><span class="sxs-lookup"><span data-stu-id="91895-120">Interested in Major .NET Concepts</span></span>
+* [<span data-ttu-id="5f8a6-120">.NET 아키텍처 구성 요소</span><span class="sxs-lookup"><span data-stu-id="5f8a6-120">.NET architectural components</span></span>](components.md)
+* [<span data-ttu-id="5f8a6-121">.NET Standard</span><span class="sxs-lookup"><span data-stu-id="5f8a6-121">.NET Standard</span></span>](net-standard.md)
+* [<span data-ttu-id="5f8a6-122">기본 상호 운용성</span><span class="sxs-lookup"><span data-stu-id="5f8a6-122">Native interoperability</span></span>](native-interop/index.md)
+* [<span data-ttu-id="5f8a6-123">가비지 수집</span><span class="sxs-lookup"><span data-stu-id="5f8a6-123">Garbage collection</span></span>](garbage-collection/index.md)
+* [<span data-ttu-id="5f8a6-124">.NET의 기본 형식</span><span class="sxs-lookup"><span data-stu-id="5f8a6-124">Base types in .NET</span></span>](base-types/index.md)
+* [<span data-ttu-id="5f8a6-125">컬렉션</span><span class="sxs-lookup"><span data-stu-id="5f8a6-125">Collections</span></span>](collections/index.md)
+* [<span data-ttu-id="5f8a6-126">날짜, 시간 및 표준 시간대</span><span class="sxs-lookup"><span data-stu-id="5f8a6-126">Dates, times, and time zones</span></span>](datetime/index.md)
+* [<span data-ttu-id="5f8a6-127">비동기 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="5f8a6-127">Asynchronous programming</span></span>](async.md)
 
-<span data-ttu-id="91895-121">.NET의 주요 개념에 관심이 있다면 다음을 확인해 보세요.</span><span class="sxs-lookup"><span data-stu-id="91895-121">If you're interested in some of the major concepts of .NET, check out:</span></span>
+<span data-ttu-id="5f8a6-128">세 가지 주요 .NET 언어에 대한 자세한 내용은 다음을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="5f8a6-128">For information about the three major .NET languages, see:</span></span>
 
-* [<span data-ttu-id="91895-122">.NET 아키텍처 구성 요소</span><span class="sxs-lookup"><span data-stu-id="91895-122">.NET Architectural Components</span></span>](components.md)
-* [<span data-ttu-id="91895-123">.NET Standard</span><span class="sxs-lookup"><span data-stu-id="91895-123">.NET Standard</span></span>](net-standard.md)
-* [<span data-ttu-id="91895-124">기본 상호 운용성</span><span class="sxs-lookup"><span data-stu-id="91895-124">Native Interoperability</span></span>](native-interop/index.md)
-* [<span data-ttu-id="91895-125">가비지 수집</span><span class="sxs-lookup"><span data-stu-id="91895-125">Garbage Collection</span></span>](garbage-collection/index.md)
-* [<span data-ttu-id="91895-126">.NET의 기본 형식</span><span class="sxs-lookup"><span data-stu-id="91895-126">Base Types in .NET</span></span>](base-types/index.md)
-* [<span data-ttu-id="91895-127">컬렉션</span><span class="sxs-lookup"><span data-stu-id="91895-127">Collections</span></span>](collections/index.md)
-* [<span data-ttu-id="91895-128">날짜, 시간 및 표준 시간대</span><span class="sxs-lookup"><span data-stu-id="91895-128">Dates, times, and time zones</span></span>](datetime/index.md)
-* [<span data-ttu-id="91895-129">비동기 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="91895-129">Asynchronous Programming</span></span>](async.md)
+* [<span data-ttu-id="5f8a6-129">C# 가이드</span><span class="sxs-lookup"><span data-stu-id="5f8a6-129">C# guide</span></span>](../csharp/index.yml)
+* [<span data-ttu-id="5f8a6-130">F# 가이드</span><span class="sxs-lookup"><span data-stu-id="5f8a6-130">F# guide</span></span>](../fsharp/index.yml)
+* [<span data-ttu-id="5f8a6-131">Visual Basic 가이드</span><span class="sxs-lookup"><span data-stu-id="5f8a6-131">Visual Basic guide</span></span>](../visual-basic/index.yml)
 
-<span data-ttu-id="91895-130">.NET의 세 가지 주요 언어는 다음의 언어별 가이드에서 확인해 보세요.</span><span class="sxs-lookup"><span data-stu-id="91895-130">Additionally, check out each language guide to learn about the three major .NET languages:</span></span>
+## <a name="api-reference"></a><span data-ttu-id="5f8a6-132">API 참조</span><span class="sxs-lookup"><span data-stu-id="5f8a6-132">API reference</span></span>
 
-* [<span data-ttu-id="91895-131">C# 가이드</span><span class="sxs-lookup"><span data-stu-id="91895-131">C# Guide</span></span>](../csharp/index.yml)
-* [<span data-ttu-id="91895-132">F# 가이드</span><span class="sxs-lookup"><span data-stu-id="91895-132">F# Guide</span></span>](../fsharp/index.yml)
-* [<span data-ttu-id="91895-133">Visual Basic 가이드</span><span class="sxs-lookup"><span data-stu-id="91895-133">Visual Basic Guide</span></span>](../visual-basic/index.yml)
-
-## <a name="api-reference"></a><span data-ttu-id="91895-134">API 참조</span><span class="sxs-lookup"><span data-stu-id="91895-134">API Reference</span></span>
-
-<span data-ttu-id="91895-135">[.NET API 참조](../../api/index.md)에서 사용 가능한 API 범위를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="91895-135">Check out the [.NET API Reference](../../api/index.md) to see the breadth of APIs available.</span></span>
+<span data-ttu-id="5f8a6-133">.NET에서 사용할 수 있는 모든 API에 대한 자세한 내용은 [.NET API 참조](../../api/index.md)를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="5f8a6-133">For detailed information about all of the APIs that are available in .NET, see [.NET API reference](../../api/index.md).</span></span>
