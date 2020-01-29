@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms를 사용하여 다중 창 사용자 인터페이스 만들기'
+title: 다중 창 사용자 인터페이스 만들기
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,25 +12,25 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], examples
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-ms.openlocfilehash: 8650ba3b8011e50779080e31d94727609f2d08f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b168a6d566e20814d4403f90e157d80efe3bf12
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747097"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731342"
 ---
-# <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>방법: Windows Forms를 사용하여 다중 창 사용자 인터페이스 만들기
-다음 절차를 사용 하 여 Microsoft Outlook에서 사용 하는 비슷한 다중 창 사용자 인터페이스를 만듭니다는 **폴더** 목록에는 **메시지** 창 및 **미리보기** 창입니다. 이 정렬 폼에 컨트롤을 도킹을 통해 주로 수행 됩니다.  
+# <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>방법: Windows Forms으로 다중 창 사용자 인터페이스 만들기
+다음 절차에서는 **폴더** 목록, **메시지** 창 및 **미리 보기** 창을 사용 하 여 Microsoft Outlook에서 사용 되는 것과 유사한 다중 창 사용자 인터페이스를 만듭니다. 이러한 정렬은 폼을 사용 하 여 도킹 컨트롤을 통해 주로 됩니다.  
   
- 컨트롤을 고정 하면 부모 컨테이너의 가장자리 컨트롤은 고정 시킬 확인할 수 있습니다. 따라서 설정 하는 경우는 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Right>, 컨트롤의 오른쪽 가장자리 부모 컨트롤의 오른쪽 가장자리에 도킹 됩니다. 또한 컨트롤의 도킹된 가장자리 컨테이너 컨트롤과의 일치 하도록 크기가 조정 됩니다. 방법에 대 한 자세한 내용은 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 속성을 참조 하십시오 [방법: Windows Forms에서 컨트롤을 도킹](how-to-dock-controls-on-windows-forms.md)합니다.  
+ 컨트롤을 도킹할 때 컨트롤이 고정 되는 부모 컨테이너의 가장자리를 결정 합니다. 따라서 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Right>로 설정 하면 컨트롤의 오른쪽 가장자리가 부모 컨트롤의 오른쪽 가장자리에 도킹 됩니다. 또한 컨트롤의 도킹 된 가장자리는 컨테이너 컨트롤의 크기에 맞게 조정 됩니다. <xref:System.Windows.Forms.SplitContainer.Dock%2A> 속성의 작동 방식에 대 한 자세한 내용은 [방법: Windows Forms에 컨트롤 도킹](how-to-dock-controls-on-windows-forms.md)을 참조 하세요.  
   
- 정렬에 중점을 두고이 절차는 <xref:System.Windows.Forms.SplitContainer> 및 기타 컨트롤이 폼에, 응용 프로그램을 Microsoft Outlook을 모방 하는 기능을 추가 하는 방법에 없습니다.  
+ 이 절차에서는 응용 프로그램이 Microsoft Outlook을 모방 하는 기능을 추가 하는 것이 아니라 폼의 <xref:System.Windows.Forms.SplitContainer> 및 기타 컨트롤을 정렬 하는 방법을 집중적으로 설명 합니다.  
   
- 내에서 모든 컨트롤을 배치 하면이 사용자 인터페이스를 만들려면를 <xref:System.Windows.Forms.SplitContainer> 포함 하는 컨트롤을 <xref:System.Windows.Forms.TreeView> 왼쪽 패널에서 컨트롤입니다. 오른쪽 패널을 <xref:System.Windows.Forms.SplitContainer> 컨트롤에 두 번째 <xref:System.Windows.Forms.SplitContainer> 컨트롤을 <xref:System.Windows.Forms.ListView> 컨트롤 위의 <xref:System.Windows.Forms.RichTextBox> 컨트롤. 이러한 <xref:System.Windows.Forms.SplitContainer> 컨트롤을 폼에 다른 컨트롤의 독립적인 크기 조정을 사용 합니다. 자신만의 사용자 지정 사용자 인터페이스를 작성 하는이 절차에 설명 된 기술을 조정할 수 있습니다.  
+ 이 사용자 인터페이스를 만들려면 왼쪽 패널에서 <xref:System.Windows.Forms.TreeView> 컨트롤을 포함 하는 <xref:System.Windows.Forms.SplitContainer> 컨트롤 내에 모든 컨트롤을 저장 합니다. <xref:System.Windows.Forms.SplitContainer> 컨트롤의 오른쪽 패널에는 <xref:System.Windows.Forms.RichTextBox> 컨트롤 위에 <xref:System.Windows.Forms.ListView> 컨트롤을 포함 하는 두 번째 <xref:System.Windows.Forms.SplitContainer> 컨트롤이 있습니다. 이러한 <xref:System.Windows.Forms.SplitContainer> 컨트롤은 폼에서 다른 컨트롤의 크기를 독립적으로 조정할 수 있도록 합니다. 사용자 고유의 사용자 지정 사용자 인터페이스를 만들 수 있도록이 절차의 기술을 적용할 수 있습니다.  
   
-### <a name="to-create-an-outlook-style-user-interface-programmatically"></a>Outlook 스타일 사용자 인터페이스를 프로그래밍 방식으로 만들려면  
+### <a name="to-create-an-outlook-style-user-interface-programmatically"></a>프로그래밍 방식으로 Outlook 스타일 사용자 인터페이스를 만들려면  
   
-1. 양식 내에서 사용자 인터페이스를 구성 하는 각 컨트롤을 선언 합니다. 예를 들어 사용 합니다 <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer>, 및 <xref:System.Windows.Forms.RichTextBox> Microsoft Outlook 사용자 인터페이스를 모방 하기 위해 컨트롤입니다.  
+1. 폼 내에서 사용자 인터페이스를 구성 하는 각 컨트롤을 선언 합니다. 이 예에서는 <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer>및 <xref:System.Windows.Forms.RichTextBox> 컨트롤을 사용 하 여 Microsoft Outlook 사용자 인터페이스를 모방 합니다.  
   
     ```vb  
     Private WithEvents treeView1 As System.Windows.Forms.TreeView  
@@ -50,7 +50,7 @@ ms.locfileid: "61747097"
     private System.Windows.Forms. SplitContainer splitContainer1;  
     ```  
   
-2. 사용자 인터페이스를 정의 하는 프로시저를 만듭니다. 다음 코드 형식에는 Microsoft Outlook의 사용자 인터페이스와 유사 합니다 되도록 속성을 설정 합니다. 그러나 다른 컨트롤을 사용 하 여 또는 다르게에 도킹 하 여 것 시키면는 다른 사용자 인터페이스를 만드는 것도 그만큼 용이 합니다.  
+2. 사용자 인터페이스를 정의 하는 프로시저를 만듭니다. 다음 코드는 폼이 Microsoft Outlook의 사용자 인터페이스와 비슷하게 속성을 설정 합니다. 그러나 다른 컨트롤을 사용 하거나 다르게 도킹 하면 유연 하 게 다른 사용자 인터페이스를 쉽게 만들 수 있습니다.  
   
     ```vb  
     Public Sub CreateOutlookUI()  
@@ -164,7 +164,7 @@ ms.locfileid: "61747097"
     }  
     ```  
   
-3. Visual basic에서는 방금 만든 프로시저 호출을 추가 합니다 `New()` 프로시저입니다. 시각적 개체의 C#를 폼 클래스의 생성자에이 코드 줄을 추가 합니다.  
+3. Visual Basic에서 방금 만든 프로시저에 대 한 호출을 `New()` 프로시저에 추가 합니다. 시각적 개체 C#에서 form 클래스의 생성자에 다음 코드 줄을 추가 합니다.  
   
     ```vb  
     ' Add this to the New procedure.  
@@ -176,8 +176,8 @@ ms.locfileid: "61747097"
     createOutlookUI();  
     ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Forms.SplitContainer>
 - [SplitContainer 컨트롤](splitcontainer-control-windows-forms.md)
-- [방법: 디자이너를 사용 하 여 Windows Forms로 다중 창 사용자 인터페이스 만들기](create-a-multipane-user-interface-with-wf-using-the-designer.md)
+- [방법: 디자이너를 사용하여 Windows Forms으로 다중 창 사용자 인터페이스 만들기](create-a-multipane-user-interface-with-wf-using-the-designer.md)

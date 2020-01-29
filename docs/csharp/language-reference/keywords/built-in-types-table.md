@@ -6,12 +6,12 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 1836458972c453b733287e58e783f32892d27fde
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: f26da848d58426472d2c2ab755ecadfd267b096a
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964379"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734488"
 ---
 # <a name="built-in-types-table-c-reference"></a>기본 제공 형식 표(C# 참조)
 
@@ -63,9 +63,8 @@ Console.WriteLine(doubleType.FullName);
 ## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
-- [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 키워드](index.md)
-- [값 형식](value-types.md)
+- [값 형식](../builtin-types/value-types.md)
 - [참조 형식](reference-types.md)
 - [C# 형식의 기본값](../builtin-types/default-values.md)
 - [dynamic](../builtin-types/reference-types.md#the-dynamic-type)

@@ -1,5 +1,5 @@
 ---
-title: '연습: WPF 콘텐츠 스타일 지정'
+title: '연습: WPF 콘텐츠 스타일'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF Designer [Windows Forms], styling WPF content
@@ -9,18 +9,18 @@ ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d0aa2c54f05cea658c95dc2c23b7ba4bb78835c9
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: e52297f51c74fc3dba93c987fd5b9bd5b6801777
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74138920"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732549"
 ---
 # <a name="walkthrough-style-wpf-content"></a>연습: WPF 콘텐츠 스타일
 
 이 문서에서는 Windows Form에 호스팅된 Windows Presentation Foundation (WPF) 컨트롤에 스타일을 적용 하는 방법을 보여 줍니다.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>전제 조건
 
 이 연습을 완료하려면 Visual Studio가 필요합니다.
 

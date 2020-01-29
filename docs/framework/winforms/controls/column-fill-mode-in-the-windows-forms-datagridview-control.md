@@ -1,5 +1,5 @@
 ---
-title: Windows Forms DataGridView 컨트롤의 열 채우기 모드
+title: DataGridView 컨트롤의 열 채우기 모드
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column fill mode
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
-ms.openlocfilehash: f9eb45e9b96ccb97938c7396d177ccedbea329e6
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 43b8915efe303b6f56cd4adf5fdbd69f51b0b754
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590372"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736879"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 열 채우기 모드
 열 채우기 모드에는 <xref:System.Windows.Forms.DataGridView> 컨트롤이 사용 가능한 표시 영역의 너비를 채우도록 열 크기를 자동으로 조정합니다. 각 열의 너비를 해당 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 속성 값과 같거나 더 크게 유지해야 하는 경우 컨트롤이 가로 스크롤 막대를 표시하지 않습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "65590372"
 ## <a name="content-based-fillweight-adjustment"></a>콘텐츠 기반 FillWeight 조정  
  <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> 메서드와 같은 <xref:System.Windows.Forms.DataGridView> 자동 크기 조정 메서드를 사용하여 채우기 모드 열에 대한 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 값을 초기화할 수 있습니다. 이 메서드는 먼저 열에서 콘텐츠를 표시하는 데 필요한 너비를 계산합니다. 그런 다음 비율이 계산된 너비의 비율과 일치하도록 컨트롤이 모든 채우기 모드 열의 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 값을 조정합니다. 끝으로, 컨트롤의 모든 열이 사용 가능한 가로 공간을 채우도록 컨트롤이 새로운 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 비율을 사용하여 채우기 모드 열의 크기를 조정합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ### <a name="description"></a>설명  
  <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>, <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>, <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 및 <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A> 속성에 적합한 값을 사용하여 다양한 시나리오에 대한 열 크기 조정 동작을 사용자 지정할 수 있습니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "65590372"
   
 - System, System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A?displayProperty=nameWithType>

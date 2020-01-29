@@ -1,18 +1,18 @@
 ---
-title: Windows Forms에 사용할 수 있는 컨트롤
+title: 사용할 컨트롤
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: bedfaef9a3d0cc81641006d254926f7bf9861c10
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2bcefd2ee2c9533d9f0afa2d12cd2e7437fc3d37
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69930199"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737451"
 ---
-# <a name="controls-to-use-on-windows-forms"></a>Windows Forms에 사용할 수 있는 컨트롤
+# <a name="controls-to-use-on-windows-forms"></a>Windows Forms에서 사용할 컨트롤
 다음은 사전순 목록 컨트롤 및 Windows Forms에서 사용할 수 있는 구성 요소입니다. 이 섹션에서 다루는 Windows Forms 컨트롤 외에 Windows Forms에 ActiveX 및 사용자 지정 컨트롤을 추가할 수 있습니다. 여기에 나열된 목록에서 사용자가 필요한 컨트롤을 찾을 수 없는 경우 직접 만들 수도 있습니다. 자세한 내용은 [디자인할 때 Windows Forms 컨트롤 개발](developing-windows-forms-controls-at-design-time.md)을 참조하십시오. 필요한 컨트롤을 선택하는 방법에 대한 자세한 내용은 [기능별 Windows Forms 컨트롤](windows-forms-controls-by-function.md)을 참조하십시오.  
   
 > [!NOTE]
@@ -32,7 +32,7 @@ ms.locfileid: "69930199"
  데이터에 바인딩된 컨트롤에 대한 탐색 및 조작 UI(사용자 인터페이스)를 제공합니다.  
   
  [BindingSource 구성 요소](bindingsource-component.md)  
- 컨트롤에 바인딩하기 위해 데이터 소스를 캡슐화합니다.  
+ 컨트롤에 바인딩할 데이터 소스를 캡슐화합니다.  
   
  [Button 컨트롤](button-control-windows-forms.md)  
  사용자가 동작을 수행하기 위해 클릭할 수 있는 표준 단추를 표시합니다.  
@@ -129,7 +129,7 @@ ms.locfileid: "69930199"
  [OpenFileDialog 구성 요소](openfiledialog-component-windows-forms.md)  
  사용자가 미리 구성된 대화 상자를 통해 파일을 열 수 있습니다.  
   
- [PageSetupDialog 구성 요소](pagesetupdialog-component-windows-forms.md)  
+ [PageSetupDialog Component](pagesetupdialog-component-windows-forms.md)  
  미리 구성된 대화 상자를 통해 인쇄를 위한 페이지 세부 정보를 설정합니다.  
   
  [Panel 컨트롤](panel-control-windows-forms.md)  
@@ -151,7 +151,7 @@ ms.locfileid: "69930199"
  인쇄할 때 나타나는 대로 문서를 표시합니다.  
   
  [ProgressBar 컨트롤](progressbar-control-windows-forms.md)  
- 완료될 작업의 진행 상태를 그래픽으로 나타냅니다.  
+ 완료될 동작의 진행 상태를 그래픽으로 나타냅니다.  
   
  [RadioButton 컨트롤](radiobutton-control-windows-forms.md)  
  사용자에게 둘 이상의 상호 배타적인 옵션 집합을 표시합니다.  
@@ -195,13 +195,13 @@ ms.locfileid: "69930199"
  Windows Forms 애플리케이션에 사용자 지정 툴바와 메뉴를 만듭니다. 하지만 <xref:System.Windows.Forms.ToolStrip> 대체 하 고 기능을 추가 합니다 <xref:System.Windows.Forms.ToolBar> 이전 버전의 컨트롤 <xref:System.Windows.Forms.ToolBar> 선택 하면 이전 버전과 호환성 및 향후 사용을 위해 유지 됩니다.  
   
  [ToolStripContainer 컨트롤](toolstripcontainer-control.md)  
- 컨트롤을 도킹, 래프팅 (rafting) 및 정렬 <xref:System.Windows.Forms.ToolStrip> 하기 위한 폼의 양쪽 패널을 제공 하 고 기존 컨트롤에 대 한 중심 <xref:System.Windows.Forms.ToolStripContentPanel> 을 제공 합니다.  
+ <xref:System.Windows.Forms.ToolStrip> 컨트롤을 도킹, 래프팅 (rafting) 및 정렬 하기 위한 폼의 양쪽에 있는 패널 및 기존 컨트롤에 대 한 중앙 <xref:System.Windows.Forms.ToolStripContentPanel>를 제공 합니다.  
   
  [ToolStripPanel 컨트롤](toolstrippanel-control.md)  
- 도킹, 래프팅 (rafting) 및 정렬 <xref:System.Windows.Forms.ToolStrip> 컨트롤에 대 한 패널을 제공 합니다.  
+ 도킹, 래프팅 (rafting) 및 <xref:System.Windows.Forms.ToolStrip> 컨트롤 정렬에 사용할 패널을 하나 제공 합니다.  
   
  [ToolStripProgressBar 컨트롤 개요](toolstripprogressbar-control-overview.md)  
- 완료될 동작의 진행 상태를 그래픽으로 나타냅니다. 는 일반적으로에 포함 <xref:System.Windows.Forms.StatusStrip> 되어있습니다.<xref:System.Windows.Forms.ToolStripProgressBar>  
+ 완료될 동작의 진행 상태를 그래픽으로 나타냅니다. <xref:System.Windows.Forms.ToolStripProgressBar>은 일반적으로 <xref:System.Windows.Forms.StatusStrip>에 포함 되어 있습니다.  
   
  [ToolStripStatusLabel 컨트롤](toolstripstatuslabel-control.md)  
  <xref:System.Windows.Forms.StatusStrip> 컨트롤의 패널을 나타냅니다.  
@@ -221,7 +221,7 @@ ms.locfileid: "69930199"
  [옵션 목록 표시에 사용된 Windows Forms 컨트롤](windows-forms-controls-used-to-list-options.md)  
  선택할 옵션 목록을 사용자에게 제공하는 데 사용되는 컨트롤에 대해 설명합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
  [Windows Forms 컨트롤](index.md)  
  Windows Forms 컨트롤 사용에 대해 설명하고 작업의 중요 개념을 설명합니다.  
   
@@ -231,5 +231,5 @@ ms.locfileid: "69930199"
  [여러 언어 및 라이브러리에서 사용되는 컨트롤 및 프로그래밍 가능한 개체 비교](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))  
  Visual Basic 6.0의 컨트롤을 Visual Basic .NET의 해당 컨트롤에 매핑하는 표를 제공 합니다. 이제 컨트롤은 .NET Framework의 클래스입니다.  
   
- [방법: ActiveX 컨트롤을 Windows Forms에 추가](how-to-add-activex-controls-to-windows-forms.md)  
+ [방법: Windows Forms에 ActiveX 컨트롤 추가](how-to-add-activex-controls-to-windows-forms.md)  
  Windows Forms에서 ActiveX 컨트롤을 사용하는 방법을 설명합니다.

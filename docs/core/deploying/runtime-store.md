@@ -1,14 +1,13 @@
 ---
 title: 런타임 패키지 저장소
 description: 런타임 패키지 저장소를 사용하여 .NET Core에서 사용되는 매니페스트를 대상으로 지정하는 방법을 알아봅니다.
-author: bleroy
 ms.date: 08/12/2017
-ms.openlocfilehash: aa0fd3a0895bc79ddb80aeb599d3e3820b3be6db
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8c58ccdb90e5ae9830313f52c19f58629ea5b0a2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714455"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737779"
 ---
 # <a name="runtime-package-store"></a>런타임 패키지 저장소
 

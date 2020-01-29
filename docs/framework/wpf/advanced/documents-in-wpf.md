@@ -1,5 +1,5 @@
 ---
-title: WPF의 문서
+title: 문서
 ms.date: 03/30/2017
 helpviewer_keywords:
 - documents [WPF], packaging
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 36704d56b66de977ac7f63fd7e766c925ef9023b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: eccb333b8e9a71ea30454f8bdf9fd2bf6dc90b9b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974680"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737962"
 ---
 # <a name="documents-in-wpf"></a>WPF의 문서
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]은 이전 세대의 Windows에서 보다 쉽게 액세스 하 고 읽을 수 있도록 설계 된 고화질 콘텐츠를 만들 수 있는 다양 한 문서 기능을 제공 합니다. 고급 기능 및 품질 외에도 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 문서 표시, 패키징 및 보안을 위한 통합 서비스도 제공합니다. 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 문서 형식 및 문서 패키징을 소개합니다.  
@@ -46,12 +46,12 @@ ms.locfileid: "73974680"
  유동 문서 콘텐츠 표시는 <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>및 <xref:System.Windows.Controls.FlowDocumentScrollViewer>의 세 가지 컨트롤에서 지원 됩니다.  
   
 #### <a name="flowdocumentreader"></a>FlowDocumentReader  
- <xref:System.Windows.Controls.FlowDocumentReader>에는 사용자가 단일 페이지 (시간 페이지) 보기 모드, 2 페이지 시간 (책 읽기 형식) 보기 모드 및 연속 스크롤 (무제한)을 포함 하 여 다양 한 보기 모드를 동적으로 선택할 수 있도록 하는 기능이 포함 되어 있습니다. 보기 모드입니다.  이러한 보기 모드에 대 한 자세한 내용은 <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>를 참조 하세요.  서로 다른 보기 모드를 동적으로 전환할 수 있는 기능이 필요 하지 않은 경우 <xref:System.Windows.Controls.FlowDocumentPageViewer> 및 <xref:System.Windows.Controls.FlowDocumentScrollViewer> 특정 보기 모드에서 수정 되는 더 간단한 유동 콘텐츠 뷰어를 제공 합니다.  
+ <xref:System.Windows.Controls.FlowDocumentReader> 사용자가 단일 페이지 (페이지-에-) 보기 모드를 한 번에 두 페이지 (책 읽기 형식) 보기 모드 및 연속 스크롤 (바닥이 없음) 보기 모드를 비롯 한 다양 한 보기 모드를 동적으로 선택할 수 있도록 하는 기능이 포함 되어 있습니다.  이러한 보기 모드에 대 한 자세한 내용은 <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>를 참조 하세요.  서로 다른 보기 모드를 동적으로 전환할 수 있는 기능이 필요 하지 않은 경우 <xref:System.Windows.Controls.FlowDocumentPageViewer> 및 <xref:System.Windows.Controls.FlowDocumentScrollViewer> 특정 보기 모드에서 수정 되는 더 간단한 유동 콘텐츠 뷰어를 제공 합니다.  
   
 #### <a name="flowdocumentpageviewer-and-flowdocumentscrollviewer"></a>FlowDocumentPageViewer 및 FlowDocumentScrollViewer  
- <xref:System.Windows.Controls.FlowDocumentPageViewer>는 콘텐츠를 실시간 보기 모드로 표시 하 고 <xref:System.Windows.Controls.FlowDocumentScrollViewer>는 연속 스크롤 모드로 콘텐츠를 표시 합니다.  <xref:System.Windows.Controls.FlowDocumentPageViewer>와 <xref:System.Windows.Controls.FlowDocumentScrollViewer>는 모두 특정 보기 모드로 고정 되어 있습니다. 사용자가 <xref:System.Windows.Controls.FlowDocumentReaderViewingMode> 열거에서 제공 되는 다양 한 보기 모드를 동적으로 선택할 수 있도록 하는 기능을 포함 하는 <xref:System.Windows.Controls.FlowDocumentReader>과 비교 하 여 <xref:System.Windows.Controls.FlowDocumentPageViewer> 하거나 <xref:System.Windows.Controls.FlowDocumentScrollViewer>하는 것 보다 많은 리소스를 사용 하는 비용을 산출 합니다.  
+ <xref:System.Windows.Controls.FlowDocumentPageViewer>는 콘텐츠를 실시간 보기 모드로 표시 하 고 <xref:System.Windows.Controls.FlowDocumentScrollViewer>는 연속 스크롤 모드로 콘텐츠를 표시 합니다.  둘 다 <xref:System.Windows.Controls.FlowDocumentPageViewer> 고 <xref:System.Windows.Controls.FlowDocumentScrollViewer> 특정 보기 모드로 고정 됩니다. 사용자가 <xref:System.Windows.Controls.FlowDocumentReaderViewingMode> 열거에서 제공 되는 다양 한 보기 모드를 동적으로 선택할 수 있도록 하는 기능을 포함 하는 <xref:System.Windows.Controls.FlowDocumentReader>과 비교 하 여 <xref:System.Windows.Controls.FlowDocumentPageViewer> 하거나 <xref:System.Windows.Controls.FlowDocumentScrollViewer>하는 것 보다 많은 리소스를 사용 하는 비용을 산출 합니다.  
   
- 기본적으로 세로 스크롤 막대는 항상 표시되며 가로 스크롤 막대는 필요한 경우 표시됩니다. <xref:System.Windows.Controls.FlowDocumentScrollViewer>의 기본 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]에는 도구 모음이 포함 되어 있지 않습니다. 그러나 <xref:System.Windows.Controls.FlowDocumentScrollViewer.IsToolBarVisible%2A> 속성을 사용 하 여 기본 제공 도구 모음을 활성화할 수 있습니다.  
+ 기본적으로 세로 스크롤 막대는 항상 표시되며 가로 스크롤 막대는 필요한 경우 표시됩니다. 기본값 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 에 대 한 <xref:System.Windows.Controls.FlowDocumentScrollViewer> 도구 모음을 다루지 않습니다 하지만 <xref:System.Windows.Controls.FlowDocumentScrollViewer.IsToolBarVisible%2A> 기본 제공 도구 모음을 사용 하도록 설정 하려면 속성을 사용할 수 있습니다.  
   
 <a name="text_in_the_user_interface"></a>   
 ### <a name="text-in-the-user-interface"></a>사용자 인터페이스의 텍스트  
@@ -144,7 +144,7 @@ ms.locfileid: "73974680"
 - <xref:System.IO.Packaging.ZipPackagePart>
 - <xref:System.IO.Packaging.PackageRelationship>
 - <xref:System.Windows.Controls.DocumentViewer>
-- [텍스트](optimizing-performance-text.md)
+- [Text](optimizing-performance-text.md)
 - [유동 문서 개요](flow-document-overview.md)
 - [인쇄 개요](printing-overview.md)
 - [문서 serialization 및 스토리지](document-serialization-and-storage.md)

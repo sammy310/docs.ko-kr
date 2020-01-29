@@ -1,5 +1,6 @@
 ---
-title: '연습: WPF에서 Windows Forms 컨트롤 정렬'
+title: WPF에서 Windows Forms 컨트롤 정렬
+titleSuffix: ''
 ms.date: 04/03/2018
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-ms.openlocfilehash: 484895db539b288bf388ff6c2ce3c29db55080b1
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
-ms.translationtype: MT
+ms.openlocfilehash: 5e7544dfdbee234bb968c9a7f39814e8749ece15
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197847"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735292"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>연습: WPF에서 Windows Forms 컨트롤 정렬
 
@@ -31,7 +32,7 @@ ms.locfileid: "73197847"
 - 도킹
 - 표시 유형 설정
 - 늘어나지 않는 컨트롤 호스트
-- 배율 조정
+- 조정 중.
 - 회전
 - 안쪽 여백 및 여백 설정
 - 동적 레이아웃 컨테이너 사용
@@ -40,7 +41,7 @@ ms.locfileid: "73197847"
 
 작업이 완료 되 면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]기반 응용 프로그램의 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 레이아웃 기능을 이해 하 게 됩니다.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>전제 조건
 
 이 연습을 완료하려면 Visual Studio가 필요합니다.
 
@@ -149,7 +150,7 @@ ms.locfileid: "73197847"
 
 2. <kbd>F5</kbd> 키를 눌러 애플리케이션을 빌드하고 실행합니다. <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소가 label 요소 위에 그려집니다.
 
-## <a name="docking"></a>도킹
+## <a name="docking"></a>Docking
 
 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 도킹을 지원 합니다. 연결 된 <xref:System.Windows.Controls.DockPanel.Dock%2A> 속성을 설정 하 여 호스팅된 컨트롤을 <xref:System.Windows.Controls.DockPanel> 요소에 도킹 합니다.
 

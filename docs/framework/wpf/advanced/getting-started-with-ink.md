@@ -1,5 +1,5 @@
 ---
-title: Visual Studio에서 WPF 앱에 InkCanvas 만들기
+title: Visual Studio에서 InkCanvas 만들기
 ms.date: 08/15/2018
 dev_langs:
 - csharp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: ebbf25037921e7802b2bfcb6ffa562d16a849ffa
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: b8087d6db04f7024b9ee48f28002bee04045a14b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920246"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737893"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>WPF에서 잉크 시작
 
 WPF (Windows Presentation Foundation)에는 디지털 잉크를 앱에 쉽게 통합 하는 데 사용 되는 잉크 기능이 있습니다.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>전제 조건
 
 다음 예제를 사용 하려면 먼저 [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)를 설치 합니다. 또한 기본적인 WPF 앱을 작성 하는 방법을 알고 있습니다. WPF 시작에 대 한 도움말은 [연습: 내 첫 wpf 데스크톱 응용 프로그램](../getting-started/walkthrough-my-first-wpf-desktop-application.md)을 참조 하세요.
 
@@ -85,7 +85,7 @@ XAML을 사용 하면 사용자 인터페이스를 매우 쉽게 디자인할 �
    [!code-csharp[DigitalInkTopics#4](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
    [!code-vb[DigitalInkTopics#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]
 
-1. 애플리케이션을 실행합니다. 일부 잉크를 추가 하 고 마우스 오른쪽 단추를 클릭 하거나 스타일러스를 사용 하 여 선택 및 유지를 수행 합니다.
+1. 응용 프로그램을 실행합니다. 일부 잉크를 추가 하 고 마우스 오른쪽 단추를 클릭 하거나 스타일러스를 사용 하 여 선택 및 유지를 수행 합니다.
 
    마우스 오른쪽 단추로 클릭할 때마다 디스플레이가 확대 됩니다.
 

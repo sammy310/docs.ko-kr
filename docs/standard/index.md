@@ -1,30 +1,30 @@
 ---
 title: .NET 가이드
-description: .NET에 대해 자세히 알아봅니다.
+description: .NET 및 .NET Standard에 대해 알아봅니다.
 author: cartermp
-ms.date: 05/02/2017
+ms.date: 12/27/2019
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 8a989ed4ff0d670296fc255733d01ddd5b5a8f1e
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: ce76448b69a002216125192f75d24b38e7582260
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838106"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76730780"
 ---
 # <a name="net-guide"></a>.NET 가이드
 
-.NET 가이드는 .NET에 대한 많은 정보를 제공합니다.  .NET에 대한 지식에 따라 이 가이드의 다양한 섹션과 .NET 설명서의 다른 섹션을 탐색할 수 있습니다.
+.Net 가이드에서는 .NET에 대한 정보를 제공합니다. .NET에 대한 지식에 따라 이 가이드의 다양한 섹션과 [.NET Core](../core/index.md) 또는 [.NET Framework](../framework/index.md)와 같은 기타 가이드를 살펴볼 수 있습니다.
 
 ## <a name="new-to-net"></a>.NET을 처음 사용하는 경우
 
-.NET에 대한 대략적인 개요는 [.NET이란?](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet)을 확인하세요.
+.NET에 대한 대략적인 개요는 [.NET이란?](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet)을 참조하세요.
 
-.NET을 처음 사용하는 경우 [시작](get-started.md) 문서를 확인하세요.
+.NET을 처음 접하는 경우 [시작](get-started.md)을 참조하세요.
 
-.NET의 주요 기능을 둘러보려는 경우 [.NET 둘러보기](tour.md)를 확인하세요.
+.NET의 주요 기능을 둘러보려는 경우 [.NET 둘러보기](tour.md)를 참조하세요.
 
-또한 [.NET 아키텍처 구성 요소](components.md)를 참조하여 .NET의 다양한 "부분"과 이러한 부분의 연결 방식을 간략하게 살펴볼 수 있습니다.
+.NET의 다양한 "부분"과 이러한 부분의 연결 방식을 간략하게 알아보려면 [.NET 아키텍처 구성 요소](components.md)를 참조하세요.
 
 ## <a name="new-to-net-core"></a>.NET Core를 처음 사용하는 경우
 
@@ -34,17 +34,13 @@ ms.locfileid: "74838106"
 
 .NET Standard를 처음 사용하는 경우 [.NET Standard](net-standard.md)를 확인하세요.
 
-## <a name="porting-net-framework-code-to-net-core"></a>.NET Framework 코드를 .NET Core로 이식
+## <a name="port-net-framework-code-to-net-standard-or-net-core"></a>.NET Framework 코드를 .NET Standard 또는 .NET Core로 이식
 
-애플리케이션, 서비스 또는 시스템의 일부 구성 요소를 .NET Core로 이식하려는 경우 [.NET Framework에서.NET Core로 이식](../core/porting/index.md)을 확인하세요.
+애플리케이션, 서비스, 구성 요소 또는 NuGet 패키지를 .NET Standard 또는 .NET Core로 이식하려면 [ .NET Core로 이식](../core/porting/index.md)을 참조하세요. .NET Standard 및 .NET Core의 도구는 공유되므로 콘텐츠는 두 프레임워크에 대한 이식과 관련이 있습니다.
 
-## <a name="porting-a-nuget-package-from-net-framework-to-net-standard-or-net-core"></a>.NET Framework에서 .NET Standard 또는 .NET Core로 NuGet 패키지 이식
+## <a name="net-concepts"></a>.NET 개념
 
-.NET Standard로 NuGet 패키지를 이식하려는 경우 [.NET Framework에서 .NET Core로 이식](../core/porting/index.md)을 확인하세요.  .NET Standard와 .NET Core 도구는 공통적으로 사용할 수 있으므로 .NET Standard와 .NET Core 이식에 관한 내용은 서로 관련이 있습니다.
-
-## <a name="interested-in-major-net-concepts"></a>주요 .NET 개념에 관심이 있는 경우
-
-.NET의 주요 개념에 관심이 있다면 다음을 확인해 보세요.
+.NET의 주요 개념에 대한 자세한 내용은 다음을 참조하세요.
 
 * [.NET 아키텍처 구성 요소](components.md)
 * [.NET Standard](net-standard.md)
@@ -55,7 +51,7 @@ ms.locfileid: "74838106"
 * [날짜, 시간 및 표준 시간대](datetime/index.md)
 * [비동기 프로그래밍](async.md)
 
-.NET의 세 가지 주요 언어는 다음의 언어별 가이드에서 확인해 보세요.
+세 가지 주요 .NET 언어에 대한 자세한 내용은 다음을 참조하세요.
 
 * [C# 가이드](../csharp/index.yml)
 * [F# 가이드](../fsharp/index.yml)
@@ -63,4 +59,4 @@ ms.locfileid: "74838106"
 
 ## <a name="api-reference"></a>API 참조
 
-[.NET API 참조](../../api/index.md)에서 사용 가능한 API 범위를 확인하세요.
+.NET에서 사용할 수 있는 모든 API에 대한 자세한 내용은 [.NET API 참조](../../api/index.md)를 확인하세요.

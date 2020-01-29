@@ -1,13 +1,13 @@
 ---
 title: F# 코딩 규칙
 description: 코드를 작성할 F# 때 일반적인 지침과 관용구에 대해 알아봅니다.
-ms.date: 11/04/2019
-ms.openlocfilehash: 60eff6392d71caa54eeb438f2f6ba9db910f1bc1
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.date: 01/15/2020
+ms.openlocfilehash: ca86bcf714d2fb4ee5f173ee54ba12c317f9abe7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978221"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737829"
 ---
 # <a name="f-coding-conventions"></a>F# 코딩 규칙
 
@@ -36,7 +36,7 @@ type MyClass() =
     ...
 ```
 
-에서 F#유일 하 게 호출 하는 경우에만 최상위 모듈을 사용할 수 있습니다. C# 그러나 소비자의 경우에는`MyCode`모듈을 사용 하 여`MyClass`를 한정 해야 할 수 있습니다.
+에서 F#유일 하 게 호출 하는 경우에만 최상위 모듈을 사용할 수 있습니다. C# 그러나 소비자의 경우에는 `MyCode` 모듈을 사용 하 여 `MyClass`를 한정 해야 할 수 있습니다.
 
 ```fsharp
 // Bad!
@@ -48,7 +48,7 @@ type MyClass() =
 
 ### <a name="carefully-apply-autoopen"></a>신중 하 게 적용 `[<AutoOpen>]`
 
-`[<AutoOpen>]` 구문은 호출자가 사용할 수 있는 항목의 범위를 pollute 수 있으며, 무언가가 제공 되는 위치에 대 한 답은 "매직"입니다. 일반적으로 좋은 방법은 아닙니다. 이 규칙에 대 한 예외는 F# 핵심 라이브러리 자체 이지만이 사실은 약간의 논쟁 이기도 합니다.
+`[<AutoOpen>]` 구문은 호출자가 사용할 수 있는 항목의 범위를 pollute 수 있으며, 무언가가 제공 되는 위치에 대 한 답은 "매직"입니다. 이것은 좋은 방법이 아닙니다. 이 규칙에 대 한 예외는 F# 핵심 라이브러리 자체 이지만이 사실은 약간의 논쟁 이기도 합니다.
 
 그러나 공용 api와 별도로 구성 하려는 공용 API에 대 한 도우미 기능이 있는 경우 편리 합니다.
 
@@ -89,9 +89,9 @@ let parsed = StringTokenization.parse s // Must qualify to use 'parse'
 
 ### <a name="sort-open-statements-topologically"></a>`open` 문 정렬 토폴로지 방식으로
 
-에서 F#선언 순서는 `open`문을 포함 하 여 중요 합니다. 이는와 C#는 달리`using`및`using static`의 효과는 파일에서 해당 문의 순서와는 독립적입니다.
+에서 F#선언 순서는 `open` 문을 포함 하 여 중요 합니다. 이는와 C#는 달리 `using` 및 `using static`의 효과는 파일에서 해당 문의 순서와는 독립적입니다.
 
-에서 F#범위로 열린 요소는 이미 존재 하는 다른 요소를 숨길 수 있습니다. 즉, `open` 문을 다시 정렬 하 여 코드의 의미를 변경할 수 있습니다. 따라서 사전순으로와 같은 모든 `open` 문을 임의로 정렬 하는 것은 일반적으로 권장 되지 않습니다. 목록 다른 동작을 생성할 수 있습니다.
+에서 F#범위로 열린 요소는 이미 존재 하는 다른 요소를 숨길 수 있습니다. 즉, `open` 문을 다시 정렬 하 여 코드의 의미를 변경할 수 있습니다. 따라서 모든 `open` 문의 임의 정렬 (예: 사전순으로)은 권장 되지 않습니다. 목록 다른 동작을 생성할 수 있습니다.
 
 대신 [토폴로지 방식으로](https://en.wikipedia.org/wiki/Topological_sorting)를 정렬 하는 것이 좋습니다. 즉, 시스템 _계층이_ 정의 된 순서에 따라 `open` 문을 정렬 합니다. 다른 토폴로지 계층 내에서 영숫자 정렬을 수행 하는 것도 고려할 수 있습니다.
 
@@ -189,7 +189,7 @@ type MyParametricApi(dep1, dep2, dep3) =
 
 ### <a name="represent-error-cases-and-illegal-state-in-types-intrinsic-to-your-domain"></a>도메인의 내장 형식에서 오류 사례 및 잘못 된 상태를 나타냅니다.
 
-[구별 된 공용 구조체](../language-reference/discriminated-unions.md)를 F# 사용 하면 형식 시스템에서 잘못 된 프로그램 상태를 나타내는 기능을 제공 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+[구별 된 공용 구조체](../language-reference/discriminated-unions.md)를 F# 사용 하면 형식 시스템에서 잘못 된 프로그램 상태를 나타내는 기능을 제공 합니다. 예를 들면 다음과 같습니다.:
 
 ```fsharp
 type MoneyWithdrawalResult =
@@ -239,7 +239,7 @@ let handleWithdrawal amount =
 
 ### <a name="using-exception-handling-syntax"></a>예외 처리 구문 사용
 
-F#에서는`try...with`구문을 통해 예외 패턴을 지원 합니다.
+F#에서는 `try...with` 구문을 통해 예외 패턴을 지원 합니다.
 
 ```fsharp
 try
@@ -320,7 +320,7 @@ let tryReadAllTextIfPresent (path : string) =
 
 ## <a name="partial-application-and-point-free-programming"></a>부분 응용 프로그램 및 지점 없는 프로그래밍
 
-F#에서는 부분 응용 프로그램을 지원 하므로 특정 시점 스타일로 프로그래밍 하는 다양 한 방법을 사용할 수 있습니다. 이는 모듈 내에서 코드를 다시 사용 하거나 항목을 구현 하는 데 도움이 될 수 있지만 일반적으로 공개적으로 노출 하는 것은 아닙니다. 일반적으로 지점 없는 프로그래밍은 그 자체로는 적합 하지 않으며 스타일에 사용 되지 않은 사용자에 게 상당한 인식 장벽을 추가할 수 있습니다.
+F#에서는 부분 응용 프로그램을 지원 하므로 특정 시점 스타일로 프로그래밍 하는 다양 한 방법을 사용할 수 있습니다. 이는 모듈 내에서 코드를 다시 사용 하거나 항목을 구현 하는 데 유용할 수 있지만 공개적으로 노출 하는 것은 아닙니다. 일반적으로 지점 없는 프로그래밍은 그 자체로는 적합 하지 않으며 스타일에 사용 되지 않은 사용자에 게 상당한 인식 장벽을 추가할 수 있습니다.
 
 ### <a name="do-not-use-partial-application-and-currying-in-public-apis"></a>공용 Api에서 부분 응용 프로그램 및 currying 사용 안 함
 
@@ -443,11 +443,118 @@ F#에는 .NET 런타임에서 사용할 수 있는 것으로 상속 되는 [Acce
 
 ## <a name="performance"></a>성능
 
-F#기본적으로 값은 변경할 수 없습니다 .이를 통해 특정 버그 클래스 (특히 동시성 및 병렬 처리와 관련 된 클래스)를 피할 수 있습니다. 그러나 특정 한 경우에는 실행 시간이 나 메모리 할당의 최적 또는 적절 한 효율성을 얻기 위해 상태의 내부 변형을 사용 하 여 작업 범위를 가장 잘 구현할 수 있습니다. 이는`mutable`키워드를 사용 하 여 옵트인 F# 할 때 사용할 수 있습니다.
+### <a name="prefer-structs-for-small-data-types"></a>작은 데이터 형식에 대 한 구조체 선호
 
-그러나의 F# `mutable` 사용 하는 것은 함수 순도와는 다를 수 있습니다. 이는 순도에서 [참조 투명도](https://en.wikipedia.org/wiki/Referential_transparency)로 기대치를 조정 하는 경우에 유용 합니다. 참조 투명도-비 순도-함수를 작성할 F# 때의 끝 목표입니다. 이렇게 하면 성능에 중요 한 코드를 위해 변형 기반 구현에 대해 함수형 인터페이스를 작성할 수 있습니다.
+구조체 (값 형식이 라고도 함)를 사용 하면 일반적으로 개체 할당을 방지 하기 때문에 일부 코드에서 성능이 더 높아질 수 있습니다. 그러나 구조체의 데이터 크기가 16 바이트를 초과 하는 경우에는 구조체의 데이터 크기가 16 바이트를 초과 하는 경우 데이터를 복사 하면 참조 형식을 사용 하는 것 보다 CPU 시간이 더 많이 소요 될 수 있습니다.
 
-### <a name="wrap-mutable-code-in-immutable-interfaces"></a>변경할 수 없는 인터페이스에서 변경 가능한 코드 줄 바꿈
+구조체를 사용 해야 하는지 확인 하려면 다음 조건을 고려 합니다.
+
+- 데이터의 크기가 16 바이트이 하입니다.
+- 이러한 데이터 형식이 많은 경우 실행 중인 프로그램의 메모리에 상주 합니다.
+
+첫 번째 조건이 적용 되는 경우 일반적으로 구조체를 사용 해야 합니다. 둘 다 적용 되는 경우 거의 항상 구조체를 사용 해야 합니다. 이전 조건이 적용 되는 경우도 있지만 구조체를 사용 하는 것은 참조 형식을 사용 하는 것 보다 더 나 좋지 않지만 드문 경우가 있습니다. 이와 같이 변경 하는 경우를 항상 측정 하 고 가정 또는 intuition에서 작동 하지 않는 것이 중요 합니다.
+
+#### <a name="prefer-struct-tuples-when-grouping-small-value-types"></a>작은 값 형식을 그룹화 할 때 구조체 튜플 선호
+
+다음 두 가지 함수를 고려 하세요.
+
+```fsharp
+let rec runWithTuple t offset times =
+    let offsetValues x y z offset =
+        (x + offset, y + offset, z + offset)
+
+    if times <= 0 then
+        t
+    else
+        let (x, y, z) = t
+        let r = offsetValues x y z offset
+        runWithTuple r offset (times - 1)
+
+let rec runWithStructTuple t offset times =
+    let offsetValues x y z offset =
+        struct(x + offset, y + offset, z + offset)
+
+    if times <= 0 then
+        t
+    else
+        let struct(x, y, z) = t
+        let r = offsetValues x y z offset
+        runWithStructTuple r offset (times - 1)
+```
+
+[BenchmarkDotNet](https://benchmarkdotnet.org/)와 같은 통계적 벤치마킹 도구를 사용 하 여 이러한 기능을 벤치 마크 하는 경우 구조체 튜플을 사용 하는 `runWithStructTuple` 함수는 40% 더 빠르게 실행 되 고 메모리를 할당 하지 않습니다.
+
+그러나 이러한 결과는 항상 사용자 고유의 코드에 있는 경우가 아닙니다. 함수를 `inline`로 표시 하는 경우 참조 튜플을 사용 하는 코드에서 몇 가지 추가 최적화를 사용 하거나, 할당 되는 코드를 간단히 최적화할 수 있습니다. 성능이 염려 될 때마다 항상 결과를 측정 하 고 가정 또는 intuition에 따라 작동 하지 않아야 합니다.
+
+#### <a name="prefer-struct-records-when-the-data-type-is-small"></a>데이터 형식이 작은 경우 구조체 레코드 선호
+
+앞에서 설명한 것 처럼 앞에서 설명한 규칙은 [ F# 레코드 형식](../language-reference/records.md)에도 적용 됩니다. 다음 데이터 형식 및 함수를 처리 하는 함수를 고려 하십시오.
+
+```fsharp
+type Point = { X: float; Y: float; Z: float }
+
+[<Struct>]
+type SPoint = { X: float; Y: float; Z: float }
+
+let rec processPoint (p: Point) offset times =
+    let inline offsetValues (p: Point) offset =
+        { p with X = p.X + offset; Y = p.Y + offset; Z = p.Z + offset }
+
+    if times <= 0 then
+        p
+    else
+        let r = offsetValues p offset
+        processPoint r offset (times - 1)
+
+let rec processStructPoint (p: SPoint) offset times =
+    let inline offsetValues (p: SPoint) offset =
+        { p with X = p.X + offset; Y = p.Y + offset; Z = p.Z + offset }
+
+    if times <= 0 then
+        p
+    else
+        let r = offsetValues p offset
+        processStructPoint r offset (times - 1)
+```
+
+이는 이전 튜플 코드와 비슷하지만이 예에서는 레코드와 인라인 내부 함수를 사용 합니다.
+
+[BenchmarkDotNet](https://benchmarkdotnet.org/)와 같은 통계적 벤치마킹 도구를 사용 하 여 이러한 기능을 벤치 마크 하면 `processStructPoint` 거의 60% 더 빠르게 실행 되 고 관리 되는 힙에서 아무 것도 할당 되지 않을 수 있습니다.
+
+#### <a name="prefer-struct-discriminated-unions-when-the-data-type-is-small"></a>데이터 형식이 작은 경우 구별 된 공용 구조체를 사용 하는 것이 좋습니다.
+
+구조체 튜플 및 레코드와의 성능에 대 한 이전 관찰은 [ F# 구별 된 공용 구조체](../language-reference/discriminated-unions.md)에도 포함 됩니다. 다음 코드를 살펴보세요.
+
+```fsharp
+    type Name = Name of string
+    
+    [<Struct>]
+    type SName = SName of string
+
+    let reverseName (Name s) =
+        s.ToCharArray()
+        |> Array.rev
+        |> string
+        |> Name
+
+    let structReverseName (SName s) =
+        s.ToCharArray()
+        |> Array.rev
+        |> string
+        |> SName
+```
+
+도메인 모델링을 위해 이와 같이 단일 대/소문자 구분 된 공용 구조체를 정의 하는 것이 일반적입니다. [BenchmarkDotNet](https://benchmarkdotnet.org/)와 같은 통계적 벤치마킹 도구를 사용 하 여 이러한 기능을 벤치 마크 하는 경우 작은 문자열의 `reverseName` 보다 약 25% 더 빠른 속도로 `structReverseName` 실행 되는 것을 알 수 있습니다. 문자열이 클 경우 둘 다 동일한를 수행 합니다. 따라서이 경우에는 항상 구조체를 사용 하는 것이 좋습니다. 앞에서 설명한 것 처럼 항상를 측정 하 고 가정 또는 intuition에서 작동 하지 않습니다.
+
+이전 예제에서는 구조체에서 구별 된 공용 구조체를 통해 성능이 향상 되었음을 보여 주지만 도메인을 모델링할 때에는 더 큰 구별 된 공용 구조체를 포함 하는 것이 일반적입니다. 더 많은 복사 작업을 수행할 수 있기 때문에 이러한 데이터 형식이 구조체의 작업에 따라 struct 인 경우에도 더 큰 데이터 형식이 될 수 있습니다.
+
+### <a name="functional-programming-and-mutation"></a>함수형 프로그래밍 및 변형
+
+F#기본적으로 값은 변경할 수 없습니다 .이를 통해 특정 버그 클래스 (특히 동시성 및 병렬 처리와 관련 된 클래스)를 피할 수 있습니다. 그러나 특정 한 경우에는 실행 시간이 나 메모리 할당의 최적 또는 적절 한 효율성을 얻기 위해 상태의 내부 변형을 사용 하 여 작업 범위를 가장 잘 구현할 수 있습니다. 이는 `mutable` 키워드를 사용 하 여 옵트인 F# 할 때 사용할 수 있습니다.
+
+에서 F# `mutable`를 사용 하는 것은 함수 순도와는 문제가 없을 수 있습니다. 이는 이해 하기 쉬워야 하지만 모든 곳에서 기능을 향상 시킬 수 있습니다. 손상은 호출자가 함수를 호출할 때 발생 하는 일을 신경 써야 하는 변형을 캡슐화 하는 것입니다. 이렇게 하면 성능이 중요 한 코드에 대 한 변형 기반 구현에 대해 함수형 인터페이스를 작성할 수 있습니다.
+
+#### <a name="wrap-mutable-code-in-immutable-interfaces"></a>변경할 수 없는 인터페이스에서 변경 가능한 코드 줄 바꿈
 
 참조 투명성을 목표로 하는 경우 성능에 중요 한 함수의 변경 가능한 underbelly을 노출 하지 않는 코드를 작성 하는 것이 중요 합니다. 예를 들어 다음 코드는 F# 핵심 라이브러리에서 `Array.contains` 함수를 구현 합니다.
 
@@ -465,7 +572,7 @@ let inline contains value (array:'T[]) =
 
 이 함수를 여러 번 호출 하면 기본 배열이 변경 되지 않으며,이 함수를 사용 하 여 변경 가능한 상태를 유지 관리 하지 않아도 됩니다. 거의 모든 코드 줄에서 변형을 사용 하는 경우에도 투명 하 게 엔터티와.
 
-### <a name="consider-encapsulating-mutable-data-in-classes"></a>변경 가능한 데이터를 클래스에 캡슐화 하는 것이 좋습니다.
+#### <a name="consider-encapsulating-mutable-data-in-classes"></a>변경 가능한 데이터를 클래스에 캡슐화 하는 것이 좋습니다.
 
 이전 예제에서는 단일 함수를 사용 하 여 변경 가능한 데이터를 사용 하는 작업을 캡슐화 했습니다. 이는 더 복잡 한 데이터 집합에는 항상 충분 하지 않습니다. 다음 함수 집합을 고려 하십시오.
 
@@ -511,9 +618,9 @@ type Closure1Table() =
 
 `Closure1Table`는 기본 변형 기반 데이터 구조를 캡슐화 하 여 호출자가 내부 데이터 구조를 유지 하지 않도록 합니다. 클래스는 세부 정보를 호출자에 게 노출 하지 않고 변형 기반 데이터 및 루틴을 캡슐화 하는 강력한 방법입니다.
 
-### <a name="prefer-let-mutable-to-reference-cells"></a>셀을 참조 하는 `let mutable` 선호
+#### <a name="prefer-let-mutable-to-reference-cells"></a>셀을 참조 하는 `let mutable` 선호
 
-참조 셀은 값 자체가 아닌 값에 대 한 참조를 표시 하는 방법입니다. 성능이 중요 한 코드에는 사용 될 수 있지만 일반적으로 권장 되지는 않습니다. 다음 예제를 참조하세요.
+참조 셀은 값 자체가 아닌 값에 대 한 참조를 표시 하는 방법입니다. 성능이 중요 한 코드에는 사용할 수 있지만 권장 되지는 않습니다. 다음 예제를 참조하세요.
 
 ```fsharp
 let kernels =

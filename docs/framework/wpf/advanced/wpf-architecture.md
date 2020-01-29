@@ -1,5 +1,5 @@
 ---
-title: WPF 아키텍처
+title: 아키텍처
 ms.date: 03/30/2017
 helpviewer_keywords:
 - properties [WPF], attached
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 382facef15e79c4ce49fdedaeb1a072b7591e4a0
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
-ms.translationtype: MT
+ms.openlocfilehash: db9938f26f31506737eb0395fa389da01a1ee444
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740221"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735070"
 ---
 # <a name="wpf-architecture"></a>WPF 아키텍처
 이 항목에서는 Windows Presentation Foundation (WPF) 클래스 계층 구조 둘러보기를 제공 합니다. WPF의 주요 하위 시스템 대부분에 대해 설명 하 고 상호 작용 하는 방법을 설명 합니다. WPF의 설계자가 선택한 일부 항목에 대해서도 자세히 설명 합니다.  

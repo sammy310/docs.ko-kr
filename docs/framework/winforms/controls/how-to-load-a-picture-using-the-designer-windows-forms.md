@@ -1,5 +1,5 @@
 ---
-title: '방법: 디자이너를 사용 하 여 그림 로드 (Windows Forms)'
+title: 'How to: Load a Picture Using the Designer'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - picture formats
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - forms [Windows Forms], displaying images
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 4dc7b973-afb1-4276-8322-20825af96655
-ms.openlocfilehash: 818bc63b5b3bea6c73804f716a72ba3cd1a62b4c
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 12b90d561a18fcffaafb9c45b7fa6be6dd060215
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039688"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736335"
 ---
-# <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>방법: 디자이너를 사용 하 여 그림 로드 (Windows Forms)
+# <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>방법: 디자이너를 사용하여 그림 로드(Windows Forms)
 
-Windows Forms <xref:System.Windows.Forms.PictureBox> 컨트롤을 사용 하면 속성을 <xref:System.Windows.Forms.PictureBox.Image%2A> 유효한 그림으로 설정 하 여 디자인 타임에 폼에서 그림을 로드 하 고 표시할 수 있습니다. 다음 표에서는 허용 되는 파일 형식을 보여 줍니다.
+Windows Forms <xref:System.Windows.Forms.PictureBox> 컨트롤을 사용 하면 <xref:System.Windows.Forms.PictureBox.Image%2A> 속성을 유효한 그림으로 설정 하 여 디자인 타임에 폼에서 그림을 로드 하 고 표시할 수 있습니다. 다음 표에서는 허용 되는 파일 형식을 보여 줍니다.
 
 |형식|파일 이름 확장명|
 |---|---|
-|Bitmap|.bmp|
+|비트맵|.bmp|
 |아이콘|.ico|
 |GIF|.gif|
 |Emf|.wmf|
@@ -41,7 +41,7 @@ Windows Forms <xref:System.Windows.Forms.PictureBox> 컨트롤을 사용 하면 
 
 1. **속성** 창에서 <xref:System.Windows.Forms.PictureBox.Image%2A> 속성을 선택 합니다. 이미지 개체 이름 왼쪽에 표시 되는 작은 축소판 이미지를 마우스 오른쪽 단추로 클릭 한 다음 **다시 설정**을 선택 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Forms.PictureBox>
 - [PictureBox 컨트롤 개요](picturebox-control-overview-windows-forms.md)

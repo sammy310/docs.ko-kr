@@ -1,38 +1,38 @@
 ---
-title: '방법: Windows Forms GroupBox 컨트롤을 사용하여 컨트롤 그룹화'
+title: GroupBox 컨트롤을 사용 하 여 컨트롤 그룹화
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], grouping
 - GroupBox control [Windows Forms], grouping controls
 - Windows Forms controls, grouping
 ms.assetid: 0bda316d-bd2a-43aa-ac73-342453303169
-ms.openlocfilehash: f5b8c5ef47063663d5f8fcd2f80317e6cf6c91e6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bb7476c410d2802b5d32cc9842a778f290765e32
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609488"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736655"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>방법: Windows Forms GroupBox 컨트롤을 사용하여 컨트롤 그룹화
-Windows Forms <xref:System.Windows.Forms.GroupBox> 컨트롤은 다른 컨트롤을 그룹화 하는 데 사용 됩니다. 컨트롤을 그룹화 하는 방법은 세 가지가 있습니다.  
+Windows Forms <xref:System.Windows.Forms.GroupBox> 컨트롤은 다른 컨트롤을 그룹화 하는 데 사용 됩니다. 컨트롤을 그룹화 하는 세 가지 이유는 다음과 같습니다.  
   
-- 에 관련 된 일반 사용자 인터페이스에 대 한 폼 요소 시각적으로 그룹화 합니다.  
+- 일반 사용자 인터페이스에 대 한 관련 폼 요소의 시각적 그룹화를 만듭니다.  
   
-- 그룹화 하려면 프로그래밍 방식으로 (예를 들어 라디오 단추).  
+- 프로그래밍 방식 그룹화 (예: 라디오 단추)를 만들려면  
   
-- 하나의 단위로 디자인 타임에 컨트롤을 이동 합니다.  
+- 디자인 타임에 컨트롤을 하나의 단위로 이동 합니다.  
   
-### <a name="to-create-a-group-of-controls"></a>컨트롤의 그룹을 만들려면  
+### <a name="to-create-a-group-of-controls"></a>컨트롤 그룹을 만들려면  
   
-1. 그리기는 <xref:System.Windows.Forms.GroupBox> 폼의 컨트롤입니다.  
+1. 폼에 <xref:System.Windows.Forms.GroupBox> 컨트롤을 그립니다.  
   
-2. 그룹 상자 내에서 각 그리기 그룹 상자에 다른 컨트롤을 추가 합니다.  
+2. 그룹 상자에 다른 컨트롤을 추가 하 고 각 컨트롤을 그룹 상자 안에 그립니다.  
   
-     그룹 상자의 묶으려는 기존 컨트롤에 있는 경우에 모든 컨트롤, 선택 클립보드로 잘라낸 수 있습니다는 <xref:System.Windows.Forms.GroupBox> 컨트롤 및 그룹 상자에 붙여 넣습니다. 그룹 상자로 직접를 끌어 올 수도 있습니다.  
+     그룹 상자에 포함 하려는 기존 컨트롤이 있는 경우 모든 컨트롤을 선택 하 고 클립보드로 잘라내고 <xref:System.Windows.Forms.GroupBox> 컨트롤을 선택한 다음 그룹 상자에 붙여 넣을 수 있습니다. 그룹 상자에 끌어서 놓을 수도 있습니다.  
   
-3. 설정 된 <xref:System.Windows.Forms.GroupBox.Text%2A> 속성을 적절 한 캡션에 그룹 상자의 합니다.  
+3. 그룹 상자의 <xref:System.Windows.Forms.GroupBox.Text%2A> 속성을 적절 한 캡션으로 설정 합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Forms.GroupBox>
 - [GroupBox 컨트롤](groupbox-control-windows-forms.md)

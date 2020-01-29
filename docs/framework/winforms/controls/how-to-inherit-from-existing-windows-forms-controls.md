@@ -1,5 +1,5 @@
 ---
-title: '방법: 기존 Windows Forms 컨트롤에서 상속'
+title: 기존 컨트롤에서 상속
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,12 +11,12 @@ ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 063f5bb87b6348ee83573cf1506c9fabdaf651ee
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d0025ba136698c0a74a73e64a83fa4f526e44843
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460560"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736491"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>방법: 기존 Windows Forms 컨트롤에서 상속
 
@@ -90,6 +90,6 @@ ms.locfileid: "73460560"
 - [사용자 지정 컨트롤의 종류](varieties-of-custom-controls.md)
 - [방법: Control 클래스에서 상속](how-to-inherit-from-the-control-class.md)
 - [방법: UserControl 클래스에서 상속](how-to-inherit-from-the-usercontrol-class.md)
-- [방법: Windows Forms 컨트롤 제작](how-to-author-controls-for-windows-forms.md)
+- [방법: Windows Forms 컨트롤 작성](how-to-author-controls-for-windows-forms.md)
 - [Visual Basic에서 상속된 이벤트 처리기 관련 문제 해결](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
 - [연습: Windows Forms 컨트롤에서 상속](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

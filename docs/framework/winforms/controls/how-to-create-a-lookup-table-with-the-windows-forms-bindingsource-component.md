@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms BindingSource 구성 요소를 사용하여 조회 테이블 만들기'
+title: BindingSource 구성 요소를 사용 하 여 조회 테이블 만들기
 ms.date: 03/30/2017
 helpviewer_keywords:
 - lookup tables
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: 33b9e4e98a8a3f8c0d5dd6433ebbf15c049b608e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ccf2bfa6cf3f56a38b55f8c87004c42a46172891
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643069"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736806"
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>방법: Windows Forms BindingSource 구성 요소를 사용하여 조회 테이블 만들기
 조회 테이블은 관련 테이블의 레코드에서 데이터를 표시하는 열이 포함된 데이터 테이블입니다. 다음 절차에서는 <xref:System.Windows.Forms.ComboBox> 컨트롤을 사용하여 부모에서 자식 테이블로의 외래 키 관계로 필드를 표시합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "64643069"
   
 ### <a name="to-create-the-user-interface"></a>사용자 인터페이스를 만들려면  
   
-1. **도구 상자**를 끌어를 <xref:System.Windows.Forms.ComboBox> 컨트롤을 폼으로 합니다.  
+1. **도구 상자**에서 <xref:System.Windows.Forms.ComboBox> 컨트롤을 폼으로 끌어옵니다.  
   
      이 컨트롤에는 부모 테이블의 열이 표시됩니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "64643069"
   
     4. **데이터 연결 선택** 페이지의 사용 가능한 연결 목록에서 데이터 연결을 선택합니다. 원하는 데이터 연결을 사용할 수 없으면 **새 연결**을 선택하여 새 데이터 연결을 만듭니다.  
   
-    5. **예, 연결을 저장합니다.** 를 클릭하여 응용 프로그램 구성 파일에 연결 문자열을 저장합니다.  
+    5. **예, 연결을 저장합니다.** 를 클릭하여 애플리케이션 구성 파일에 연결 문자열을 저장합니다.  
   
     6. 애플리케이션에 바인딩할 데이터베이스 개체를 선택합니다. 여기서는 외래 키 관계가 적용된 부모 테이블과 자식 테이블(예: Customers 및 Orders)을 선택합니다.  
   
@@ -85,13 +85,13 @@ ms.locfileid: "64643069"
   
 5. **값 구성원** 드롭다운 상자에서 자식 테이블에서 조회 작업을 수행할 CustomerID 등의 열을 선택합니다.  
   
-6. **선택한 값** 드롭다운 상자에서 **프로젝트 데이터 소스**로 이동한 다음 부모 및 자식 테이블이 포함된 방금 만든 데이터 집합으로 이동합니다. 부모 테이블의 값 멤버인 자식 테이블의 동일 속성(예: Orders.CustomerID)을 선택합니다. 해당하는 <xref:System.Windows.Forms.BindingSource>, 데이터 집합 및 테이블 어댑터 구성 요소가 작성되어 폼에 추가됩니다.  
+6. **선택한 값** 드롭다운 상자에서 **프로젝트 데이터 원본**으로 이동하고 부모 및 자식 테이블이 포함된 방금 만든 데이터 세트로 이동합니다. 부모 테이블의 값 멤버인 자식 테이블의 동일 속성(예: Orders.CustomerID)을 선택합니다. 해당하는 <xref:System.Windows.Forms.BindingSource>, 데이터 집합 및 테이블 어댑터 구성 요소가 작성되어 폼에 추가됩니다.  
   
 7. <xref:System.Windows.Forms.BindingNavigator> 컨트롤을 자식 테이블의 <xref:System.Windows.Forms.BindingSource>(예: `OrdersBindingSource`)에 바인딩합니다.  
   
 8. <xref:System.Windows.Forms.ComboBox> 및 <xref:System.Windows.Forms.BindingNavigator> 컨트롤 이외의 컨트롤은 표시하려는 자식 테이블의 <xref:System.Windows.Forms.BindingSource>(예: `OrdersBindingSource`)의 세부 정보 필드에 바인딩합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Forms.BindingSource>
 - [BindingSource 구성 요소](bindingsource-component.md)

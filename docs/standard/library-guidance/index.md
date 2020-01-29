@@ -2,12 +2,12 @@
 title: 오픈 소스 .NET 라이브러리 지침
 description: 고품질 .NET 라이브러리를 만드는 개발자를 위한 모범 사례 권장 사항입니다.
 ms.date: 10/17/2018
-ms.openlocfilehash: c1e1c302eede86fd5555a8e84630e216e96f1ce7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4c76dfae6ffc39df7f15381be64e33657067d79d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706454"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731431"
 ---
 # <a name="open-source-library-guidance"></a>오픈 소스 라이브러리 지침
 
@@ -32,19 +32,19 @@ ms.locfileid: "75706454"
 
 **수행** 권장 사항은 거의 항상 따라야 합니다. 예:
 
-**✔️ 수행** NuGet 패키지를 사용하여 라이브러리를 배포합니다.
+✔️ 수행 NuGet 패키지를 사용하여 라이브러리를 배포합니다.
 
 한편으로 **고려** 권장 사항은 일반적으로 따라야 하지만 규칙에 대한 정당한 예외가 있거나 지침을 따르지 않아도 됩니다.
 
-**✔️ 고려**[SemVer 2.0.0](https://semver.org/)을 사용하여 NuGet 패키지 버전을 관리합니다.
+✔️ 고려 [SemVer 2.0.0](https://semver.org/)을 사용하여 NuGet 패키지 버전을 관리합니다.
 
 **회피** 권장 사항은 일반적으로 좋지는 않지만 규칙을 깨는 것이 적합한 경우를 언급합니다.
 
-**❌회피** 정확한 버전을 요구하는 NuGet 패키지 참조는 사용하지 않습니다.
+❌ 회피 정확한 버전을 요구하는 NuGet 패키지 참조는 사용하지 않습니다.
 
 마지막으로, **금지**는 수행하지 않아야 하는 항목을 나타냅니다.
 
-**❌** 강력한 이름 및 강력하지 않은 이름이 지정된 버전의 라이브러리를 게시하지 않습니다. 예를 들어 `Contoso.Api` 및 `Contoso.Api.StrongNamed`를 지정합니다.
+❌ 강력한 이름 및 강력하지 않은 이름이 지정된 버전의 라이브러리를 게시하지 않습니다. 예를 들어 `Contoso.Api` 및 `Contoso.Api.StrongNamed`를 지정합니다.
 
 >[!div class="step-by-step"]
 >[다음](get-started.md)
