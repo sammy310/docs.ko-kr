@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4083b505-5b59-44fb-8c5d-129db6a96c10
 topic_type:
 - apiref
-ms.openlocfilehash: 77210edfdc954f38ff06bc43a8b41a6abe8dc3d6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 89576e2b3d5fb4df0cccfdd28c80a5cb67331597
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131832"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791894"
 ---
 # <a name="icordebugstackwalkgetframe-method"></a>ICorDebugStackWalk::GetFrame 메서드
-[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) 개체의 현재 프레임을 가져옵니다.  
+[ICorDebugStackWalk](icordebugstackwalk-interface.md) 개체의 현재 프레임을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,13 +43,13 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
 |S_OK|런타임에서 현재 프레임을 성공적으로 반환 했습니다.|  
 |E_FAIL|현재 프레임이 반환 되지 않았습니다.|  
 |S_FALSE|현재 프레임은 네이티브 스택 프레임입니다.|  
-|E_INVALIDARG|`pFrame`가 null입니다.|  
+|E_INVALIDARG|`pFrame`가 null인 경우|  
 |CORDBG_E_PAST_END_OF_STACK|프레임 포인터가 이미 스택의 끝에 있습니다. 따라서 추가 프레임에는 액세스할 수 없습니다.|  
   
 ## <a name="exceptions"></a>예외  
   
 ## <a name="remarks"></a>주의  
- `ICorDebugStackWalk`는 실제 스택 프레임만 반환 합니다. [ICorDebugThread3:: GetActiveInternalFrames](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) 메서드를 사용 하 여 내부 프레임을 반환 합니다. 내부 프레임은 런타임에서 임시 데이터를 저장 하기 위해 스택에 푸시되는 데이터 구조입니다.  
+ `ICorDebugStackWalk`는 실제 스택 프레임만 반환 합니다. [ICorDebugThread3:: GetActiveInternalFrames](icordebugthread3-getactiveinternalframes-method.md) 메서드를 사용 하 여 내부 프레임을 반환 합니다. 내부 프레임은 런타임에서 임시 데이터를 저장 하기 위해 스택에 푸시되는 데이터 구조입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -62,6 +62,6 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugStackWalk 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugStackWalk 인터페이스](icordebugstackwalk-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)
+- [디버깅](index.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3b8e15ca-3c72-4685-a937-da4c739cb9e9
 topic_type:
 - apiref
-ms.openlocfilehash: 583819e8e7ab16a8ac1ce72892f4353e3043ce3d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9497bea9b7cc5eb98876c923858dbcbc6adf9d07
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129691"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792458"
 ---
 # <a name="icordebugprocess5enablengenpolicy-method"></a>ICorDebugProcess5::EnableNGENPolicy 메서드
 응용 프로그램에서 관리 되는 디버거를 실행 하는 동안 네이티브 이미지를 로드 하는 방법을 결정 하는 값을 설정 합니다.  
@@ -35,10 +35,10 @@ HRESULT EnableNGENPolicy(
   
 ## <a name="parameters"></a>매개 변수  
  `ePolicy`  
- 진행 응용 프로그램이 관리 되는 디버거에서 실행 되는 동안 네이티브 이미지를 로드 하는 방법을 결정 하는 [Cordebugngenpolicy](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md) 상수입니다.  
+ 진행 응용 프로그램이 관리 되는 디버거에서 실행 되는 동안 네이티브 이미지를 로드 하는 방법을 결정 하는 [Cordebugngenpolicy](cordebugngenpolicy-enumeration.md) 상수입니다.  
   
 ## <a name="remarks"></a>주의  
- 정책이 성공적으로 설정 된 경우 메서드는 `S_OK`반환 합니다. `ePolicy`가 [Cordebugngenpolicy](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md)에서 정의한 열거형 값의 범위 밖에 있는 경우 메서드는 `E_INVALIDARG`를 반환 하 고 메서드 호출이 영향을 주지 않습니다. 네이티브 이미지 생성기 (Ngen.exe)의 정책을 업데이트할 수 없는 경우 메서드는 `E_FAIL`반환 합니다.  
+ 정책이 성공적으로 설정 된 경우 메서드는 `S_OK`반환 합니다. `ePolicy`가 [Cordebugngenpolicy](cordebugngenpolicy-enumeration.md)에서 정의한 열거형 값의 범위 밖에 있는 경우 메서드는 `E_INVALIDARG`를 반환 하 고 메서드 호출이 영향을 주지 않습니다. 네이티브 이미지 생성기 (Ngen.exe)의 정책을 업데이트할 수 없는 경우 메서드는 `E_FAIL`반환 합니다.  
   
  프로세스 수명 중에 언제 든 지 `ICorDebugProcess5::EnableNGenPolicy` 메서드를 호출할 수 있습니다. 정책은 정책이 설정 된 후에 로드 되는 모든 모듈에 적용 됩니다.  
   
@@ -53,6 +53,6 @@ HRESULT EnableNGENPolicy(
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugProcess5 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugProcess5 인터페이스](icordebugprocess5-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)
+- [디버깅](index.md)

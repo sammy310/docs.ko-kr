@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e1834ab-c359-498a-b10b-984ae23cdda4
 topic_type:
 - apiref
-ms.openlocfilehash: 79be2572f52ec509d9551261074204bf62ad5388
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 808c26f53c4089248420280a43c88a1b3af0dad9
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445054"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866548"
 ---
 # <a name="icorprofilercallbackcomclassicvtablecreated-method"></a>ICorProfilerCallback::COMClassicVTableCreated 메서드
 지정 된 IID 및 클래스에 대 한 COM interop vtable이 생성 되었음을 프로파일러에 알립니다.  
@@ -35,20 +35,25 @@ HRESULT COMClassicVTableCreated(
     [in] ULONG   cSlots);  
 ```  
   
-## <a name="parameters"></a>매개 변수  
- `wrappedClasId`  
- 진행 Vtable이 생성 된 클래스의 ID입니다.  
-  
- `implementedIID`  
- 진행 클래스에서 구현 하는 인터페이스의 ID입니다. 인터페이스가 내부 전용 이면이 값은 NULL 일 수 있습니다.  
-  
- `pVTable`  
- 진행 Vtable의 시작에 대 한 포인터입니다.  
-  
- `cSlots`  
- 진행 Vtable에 있는 슬롯의 수입니다.  
-  
-## <a name="remarks"></a>설명  
+## <a name="parameters"></a>매개 변수
+
+- `wrappedClasId`
+
+  \[in] vtable이 생성 된 클래스의 ID입니다.
+
+- `implementedIID`
+
+  \[in] 클래스에서 구현 하는 인터페이스의 ID입니다. 인터페이스가 내부 전용 이면이 값은 NULL 일 수 있습니다.
+
+- `pVTable`
+
+  \[에서 vtable의 시작에 대 한 포인터입니다.
+
+- `cSlots`
+
+  \[in] vtable에 있는 슬롯의 수입니다.
+
+## <a name="remarks"></a>주의  
  스택은 가비지 수집을 허용 하는 상태가 아닐 수 있으므로 선점형 가비지 수집을 사용 하도록 설정할 수 없기 때문에 프로파일러는이 메서드의 구현에서 차단 해서는 안 됩니다. 프로파일러가 여기에서 차단 되 고 가비지 수집이 시도 되는 경우이 콜백이 반환 될 때까지 런타임이 차단 됩니다.  
   
  이 메서드의 프로파일러 구현은 관리 코드를 호출 하거나 관리 되는 메모리 할당을 발생 시 키 지 않아야 합니다.  
@@ -62,7 +67,7 @@ HRESULT COMClassicVTableCreated(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [COMClassicVTableDestroyed 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtabledestroyed-method.md)
+- [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
+- [COMClassicVTableDestroyed 메서드](icorprofilercallback-comclassicvtabledestroyed-method.md)

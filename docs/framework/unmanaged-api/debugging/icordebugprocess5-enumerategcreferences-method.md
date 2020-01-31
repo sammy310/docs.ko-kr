@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 86c397c3-81d8-463e-a248-3cbe06c44d9d
 topic_type:
 - apiref
-ms.openlocfilehash: 84b5da043f9bd437ee9099135ba865c1ab23bb9d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 81993f108ae9b59300b5d29402d7a423c3657757
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129664"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792443"
 ---
 # <a name="icordebugprocess5enumerategcreferences-method"></a>ICorDebugProcess5::EnumerateGCReferences 메서드
 프로세스에서 가비지 수집 될 모든 개체에 대 한 열거자를 가져옵니다.  
@@ -39,7 +39,7 @@ HRESULT EnumerateGCReferences(
  진행 약한 참조도 열거 되는지 여부를 나타내는 부울 값입니다. `enumerateWeakReferences` `true`경우 `ppEnum` 열거자에는 강력한 참조와 weak 참조가 모두 포함 됩니다. `enumerateWeakReferences` `false`이면 열거자에는 강력한 참조만 포함 됩니다.  
   
  `ppEnum`  
- 제한이 가비지 수집 될 개체의 열거자 인 [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) 의 주소에 대 한 포인터입니다.  
+ 제한이 가비지 수집 될 개체의 열거자 인 [ICorDebugGCReferenceEnum](icordebuggcreferenceenum-interface.md) 의 주소에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>주의  
  이 메서드는 프로세스에서 관리 되는 개체에 대 한 전체 루 팅 체인을 확인 하는 방법을 제공 하 고 개체의 활성 상태를 확인 하는 데 사용할 수 있습니다.  
@@ -55,5 +55,5 @@ HRESULT EnumerateGCReferences(
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugProcess5 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugProcess5 인터페이스](icordebugprocess5-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

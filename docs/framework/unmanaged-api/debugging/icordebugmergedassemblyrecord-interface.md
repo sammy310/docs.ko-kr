@@ -2,12 +2,12 @@
 title: ICorDebugMergedAssemblyRecord 인터페이스
 ms.date: 03/30/2017
 ms.assetid: fe280b11-9479-4e34-a07c-0d1ea8088422
-ms.openlocfilehash: 8dc07cb8c2f57ee6f9598c727cbd6de38bf4625f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6d5d862110cd91e8ac81c96e50486be10c579903
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139193"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793065"
 ---
 # <a name="icordebugmergedassemblyrecord-interface"></a>ICorDebugMergedAssemblyRecord 인터페이스
 병합된 어셈블리에 대한 정보를 제공합니다.  
@@ -16,12 +16,12 @@ ms.locfileid: "73139193"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[GetCulture 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-getculture-method.md)|어셈블리의 문화권 이름 문자열을 가져옵니다.|  
-|[GetIndex 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-getindex-method.md)|어셈블리의 접두사 인덱스를 가져옵니다.|  
-|[GetPublicKey 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-getpublickey-method.md)|어셈블리의 공개 키를 가져옵니다.|  
-|[GetPublicKeyToken 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-getpublickeytoken-method.md)|어셈블리의 공개 키 토큰을 가져옵니다.|  
-|[GetSimpleName 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-getsimplename-method.md)|어셈블리의 단순한 이름을 가져옵니다.|  
-|[GetVersion 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-getversion-method.md)|어셈블리의 버전 정보를 가져옵니다.|  
+|[GetCulture 메서드](icordebugmergedassemblyrecord-getculture-method.md)|어셈블리의 문화권 이름 문자열을 가져옵니다.|  
+|[GetIndex 메서드](icordebugmergedassemblyrecord-getindex-method.md)|어셈블리의 접두사 인덱스를 가져옵니다.|  
+|[GetPublicKey 메서드](icordebugmergedassemblyrecord-getpublickey-method.md)|어셈블리의 공개 키를 가져옵니다.|  
+|[GetPublicKeyToken 메서드](icordebugmergedassemblyrecord-getpublickeytoken-method.md)|어셈블리의 공개 키 토큰을 가져옵니다.|  
+|[GetSimpleName 메서드](icordebugmergedassemblyrecord-getsimplename-method.md)|어셈블리의 단순한 이름을 가져옵니다.|  
+|[GetVersion 메서드](icordebugmergedassemblyrecord-getversion-method.md)|어셈블리의 버전 정보를 가져옵니다.|  
   
 ## <a name="remarks"></a>주의  
   
@@ -39,5 +39,5 @@ ms.locfileid: "73139193"
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [디버깅 인터페이스](debugging-interfaces.md)
+- [디버깅](index.md)

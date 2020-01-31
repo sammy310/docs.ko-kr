@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: bf4ffa50-4506-4dd4-aa13-a0457b47ca74
 topic_type:
 - apiref
-ms.openlocfilehash: 38ed7de647aabefc95f515d9aa627b0e9c8d9015
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
-ms.translationtype: HT
+ms.openlocfilehash: caea1d3d526017c0118f95bb138ee4ac45d2c137
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790253"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866998"
 ---
 # <a name="functionenter-function"></a>FunctionEnter 함수
 컨트롤이 함수에 전달 되 고 있음을 프로파일러에 알립니다.  
   
 > [!NOTE]
-> `FunctionEnter` 함수는 .NET Framework 버전 2.0에서 더 이상 사용 되지 않으며,이 함수를 사용 하면 성능이 저하 됩니다. 대신 [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) 함수를 사용 해야 합니다.  
+> `FunctionEnter` 함수는 .NET Framework 버전 2.0에서 더 이상 사용 되지 않으며,이 함수를 사용 하면 성능이 저하 됩니다. 대신 [FunctionEnter2](functionenter2-function.md) 함수를 사용 해야 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -65,8 +65,8 @@ void __stdcall FunctionEnter (
   
 ## <a name="see-also"></a>참조
 
-- [FunctionEnter2 함수](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [FunctionLeave2 함수](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [FunctionTailcall2 함수](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
-- [SetEnterLeaveFunctionHooks2 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [프로파일링 전역 정적 함수](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [FunctionEnter2 함수](functionenter2-function.md)
+- [FunctionLeave2 함수](functionleave2-function.md)
+- [FunctionTailcall2 함수](functiontailcall2-function.md)
+- [SetEnterLeaveFunctionHooks2 메서드](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [프로파일링 전역 정적 함수](profiling-global-static-functions.md)

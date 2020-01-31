@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0d6471bc-ad9b-4b1d-a307-c10443918863
 topic_type:
 - apiref
-ms.openlocfilehash: c6c361113a441df050a8e7cd5219819cc8332581
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bc6543b46200dd611e13bdf55aabfabd8302e70a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131491"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793343"
 ---
 # <a name="icordebugmanagedcallback2functionremapopportunity-method"></a>ICorDebugManagedCallback2::FunctionRemapOpportunity 메서드
 코드 실행이 이전 버전의 편집 된 함수에서 시퀀스 위치에 도달 했음을 디버거에 알립니다.  
@@ -54,9 +54,9 @@ HRESULT FunctionRemapOpportunity (
  진행 이전 버전의 함수에 있는 명령 포인터의 MSIL (Microsoft 중간 언어) 오프셋입니다.  
   
 ## <a name="remarks"></a>주의  
- 이 콜백은 디버거가 [ICorDebugILFrame2:: RemapFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md) 메서드를 호출 하 여 지정 된 함수의 새 버전에서 적절 한 위치에 명령 포인터를 다시 매핑할 수 있는 기회를 제공 합니다. [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) 메서드를 호출 하기 전에 디버거가 `RemapFunction`를 호출 하지 않으면 런타임은 계속 이전 코드를 실행 하 고 다음 시퀀스 위치에서 다른 `FunctionRemapOpportunity` 콜백을 실행 합니다.  
+ 이 콜백은 디버거가 [ICorDebugILFrame2:: RemapFunction](icordebugilframe2-remapfunction-method.md) 메서드를 호출 하 여 지정 된 함수의 새 버전에서 적절 한 위치에 명령 포인터를 다시 매핑할 수 있는 기회를 제공 합니다. [ICorDebugController:: Continue](icordebugcontroller-continue-method.md) 메서드를 호출 하기 전에 디버거가 `RemapFunction`를 호출 하지 않으면 런타임은 계속 이전 코드를 실행 하 고 다음 시퀀스 위치에서 다른 `FunctionRemapOpportunity` 콜백을 실행 합니다.  
   
- 이 콜백은 디버거가 S_OK를 반환할 때까지 지정 된 함수의 이전 버전을 실행 하는 모든 프레임에 대해 호출 됩니다.  
+ 이 콜백은 디버거가 S_OK 반환 될 때까지 지정 된 함수의 이전 버전을 실행 하는 모든 프레임에 대해 호출 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -69,5 +69,5 @@ HRESULT FunctionRemapOpportunity (
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugManagedCallback2 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [ICorDebugManagedCallback 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback2 인터페이스](icordebugmanagedcallback2-interface.md)
+- [ICorDebugManagedCallback 인터페이스](icordebugmanagedcallback-interface.md)

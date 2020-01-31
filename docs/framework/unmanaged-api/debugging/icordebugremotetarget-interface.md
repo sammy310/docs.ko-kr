@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bd9936a6-cc24-4869-8761-0988664464e6
 topic_type:
 - apiref
-ms.openlocfilehash: 97c4e6d3c9de7dcb8d399a956a4a58c49ca6e3b9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bab6b7f683b5563cf362366dfb007f83caeee12d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131880"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791930"
 ---
 # <a name="icordebugremotetarget-interface"></a>ICorDebugRemoteTarget 인터페이스
 개발자가 CLR(공용 언어 런타임) 환경에서 Silverlight 기반 애플리케이션을 디버깅하는 데 사용할 수 있는 메서드를 제공합니다.  
@@ -43,7 +43,7 @@ interface ICorDebugRemoteTarget  : IUnknown
   
 |메서드|설명|  
 |------------|-----------------|  
-|[ICorDebugRemoteTarget::GetHostName 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-gethostname-method.md)|원격 컴퓨터의 IP 주소나 호스트 이름을 반환합니다.|  
+|[ICorDebugRemoteTarget::GetHostName 메서드](icordebugremotetarget-gethostname-method.md)|원격 컴퓨터의 IP 주소나 호스트 이름을 반환합니다.|  
   
 ## <a name="remarks"></a>주의  
  Windows 95, Windows 98, Windows ME 또는 x86이 아닌 플랫폼(IA-64, AMD64 등)에서는 관리 코드와 네이티브 코드가 혼합된 혼합 모드에서의 디버깅이 지원되지 않습니다.  
@@ -59,6 +59,6 @@ interface ICorDebugRemoteTarget  : IUnknown
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugRemote 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
-- [ICorDebug 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugRemote 인터페이스](icordebugremote-interface.md)
+- [ICorDebug 인터페이스](icordebug-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

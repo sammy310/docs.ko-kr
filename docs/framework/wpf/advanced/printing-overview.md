@@ -15,15 +15,15 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 3f99b0e93e6b16ac66f6869c284c1119ddfc3751
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: de9f4b5c0a817d010c7510395b4e5c09ed0a9865
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740311"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794287"
 ---
 # <a name="printing-overview"></a>인쇄 개요
-Microsoft .NET 프레임 워크에서 Windows Presentation Foundation (WPF)를 사용 하는 응용 프로그램 개발자는 다양 한 새로운 인쇄 및 인쇄 시스템 관리 Api 집합을 사용할 수 있습니다. Windows Vista에서는 비관리 코드를 사용 하 여 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 응용 프로그램 및 개발자를 만드는 개발자도 이러한 인쇄 시스템 향상 기능 중 일부를 사용할 수 있습니다. 이 새로운 기능의 핵심은 새로운 XPS (XML Paper Specification) 파일 형식 및 XPS 인쇄 경로입니다.  
+Microsoft .NET 프레임 워크에서 Windows Presentation Foundation (WPF)를 사용 하는 응용 프로그램 개발자는 다양 한 새로운 인쇄 및 인쇄 시스템 관리 Api 집합을 사용할 수 있습니다. Windows Vista에서는 비관리 코드를 사용 하 여 Windows Forms 응용 프로그램 및 개발자를 만드는 개발자도 이러한 인쇄 시스템 향상 기능 중 일부를 사용할 수 있습니다. 이 새로운 기능의 핵심은 새로운 XPS (XML Paper Specification) 파일 형식 및 XPS 인쇄 경로입니다.  
   
  이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   
@@ -57,7 +57,7 @@ Microsoft .NET 프레임 워크에서 Windows Presentation Foundation (WPF)를 �
   
 - 인쇄 스키마. 공용 스키마는 정기적으로 업데이트되며 디바이스 기능을 빠르게 확장할 수 있게 해줍니다. 아래의 **PrintTicket 및 PrintCapabilities**를 참조하세요.  
   
-- 확장 가능한 필터 파이프라인. XPSDrv (XPS 프린터 드라이버) 필터 파이프라인은 XPS 문서의 직접 인쇄와 확장 가능한 인쇄를 둘 다 사용할 수 있도록 설계 되었습니다. 자세한 내용은 [XPSDrv 프린터 드라이버](/windows-hardware/drivers/print/xpsdrv-printer-drivers)를 참조하세요. 
+- 확장 가능한 필터 파이프라인. XPSDrv (XPS 프린터 드라이버) 필터 파이프라인은 XPS 문서의 직접 인쇄와 확장 가능한 인쇄를 둘 다 사용할 수 있도록 설계 되었습니다. 자세한 내용은 [XPSDrv 프린터 드라이버](/windows-hardware/drivers/print/xpsdrv-printer-drivers)(영문)를 참조 하세요. 
   
 ### <a name="print-path-architecture"></a>인쇄 경로 아키텍처  
  Win32 및 .NET Framework 응용 프로그램 모두 XPS를 지 원하는 반면, Win32 및 Windows Forms 응용 프로그램은 xps 프린터 드라이버 (XPSDrv)에 대해 XPS 형식의 콘텐츠를 만들기 위해 GDI 및 XPS 변환을 사용 합니다. 이러한 응용 프로그램은 XPS 인쇄 경로를 사용할 필요가 없으며 EMF (확장 메타 파일) 기반 인쇄를 계속 사용할 수 있습니다. 그러나 대부분의 XPS 기능과 향상 된 기능은 XPS 인쇄 경로를 대상으로 하는 응용 프로그램 에서만 사용할 수 있습니다.  

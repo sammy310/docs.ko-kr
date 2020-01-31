@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 6643c2af-2ee6-4789-aa25-1d8eaf500c94
 topic_type:
 - apiref
-ms.openlocfilehash: d5e7841844c8fa500935eb9cba06f4e2fe95d2d5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 037e216cb93e3aa6fce28966fc724498024abd52
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73111991"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789063"
 ---
 # <a name="iclrdatatarget3getexceptionrecord-method"></a>ICLRDataTarget3::GetExceptionRecord 메서드
 공용 언어 런타임(CLR)에 의해 호출되는 데이터 액세스는 대상 프로세스와 연관된 예외 레코드 검색을 제공합니다. 예를 들어 덤프 대상의 경우이 값은 Windows 디버그 도움말 라이브러리 (Dbghelp.dll)의 [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) 함수에 `ExceptionParam` 인수를 통해 전달 된 예외 레코드와 동일 합니다.  
@@ -52,7 +52,7 @@ HRESULT GetExceptionRecord(
 |`HRESULT_FROM_WIN32(ERROR_BAD_LENGTH)`|입력 버퍼 크기가 `sizeof(MINIDUMP_EXCEPTION)`와 다릅니다.|  
   
 ## <a name="remarks"></a>주의  
- [MINIDUMP_EXCEPTION](/windows/win32/api/minidumpapiset/ns-minidumpapiset-minidump_exception) 는 Windows SDK의 dbghelp.dll 및 데 필요한 imagehlp.dll에 정의 된 구조입니다.  
+ [MINIDUMP_EXCEPTION](/windows/win32/api/minidumpapiset/ns-minidumpapiset-minidump_exception) 은 Windows SDK에서 dbghelp.dll 및 데 필요한 imagehlp.dll에 정의 된 구조입니다.  
   
  이 메서드는 디버깅 애플리케이션의 작성자가 구현합니다.  
   
@@ -67,6 +67,6 @@ HRESULT GetExceptionRecord(
   
 ## <a name="see-also"></a>참조
 
-- [ICLRDataTarget3 인터페이스](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)
-- [GetExceptionContextRecord 메서드](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptioncontextrecord-method.md)
-- [GetExceptionThreadID 메서드](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionthreadid-method.md)
+- [ICLRDataTarget3 인터페이스](iclrdatatarget3-interface.md)
+- [GetExceptionContextRecord 메서드](iclrdatatarget3-getexceptioncontextrecord-method.md)
+- [GetExceptionThreadID 메서드](iclrdatatarget3-getexceptionthreadid-method.md)

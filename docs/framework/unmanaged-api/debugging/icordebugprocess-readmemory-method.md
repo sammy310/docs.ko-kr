@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 28e4b2f6-9589-445c-be24-24a3306795e7
 topic_type:
 - apiref
-ms.openlocfilehash: ef9e339c74b2d2785d758ed9c4adfc1901073253
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dca2a4e5ee869346108137a8ba01ab8855756725
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139366"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792552"
 ---
 # <a name="icordebugprocessreadmemory-method"></a>ICorDebugProcess::ReadMemory 메서드
 이 프로세스에 대해 지정 된 메모리 영역을 읽습니다.  
@@ -51,7 +51,7 @@ HRESULT ReadMemory(
 ## <a name="remarks"></a>주의  
  `ReadMemory` 메서드는 주로 interop 디버깅에서 디버기의 관리 되지 않는 부분에 사용 되는 메모리 영역을 검사 하는 데 사용 됩니다. 이 메서드를 사용 하 여 MSIL (Microsoft 중간 언어) 코드 및 네이티브 JIT 컴파일된 코드를 읽을 수도 있습니다.  
   
- 모든 관리 되는 중단점은 `buffer` 매개 변수에 반환 되는 데이터에서 제거 됩니다. [ICorDebugProcess2:: SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)에 의해 설정 된 네이티브 중단점에 대해서는 조정이 수행 되지 않습니다.  
+ 모든 관리 되는 중단점은 `buffer` 매개 변수에 반환 되는 데이터에서 제거 됩니다. [ICorDebugProcess2:: SetUnmanagedBreakpoint](icordebugprocess2-setunmanagedbreakpoint-method.md)에 의해 설정 된 네이티브 중단점에 대해서는 조정이 수행 되지 않습니다.  
   
  프로세스 메모리의 캐싱이 수행 되지 않습니다.  
   

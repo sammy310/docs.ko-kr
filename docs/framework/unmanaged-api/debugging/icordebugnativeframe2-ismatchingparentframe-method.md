@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2ca20db-df22-4528-a0dd-a09ea62c8998
 topic_type:
 - apiref
-ms.openlocfilehash: aa06b7db6b7371e66853ed242f5e118fb5e5ff0c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: aeaa706ef35413a728f8b254cd325f0bcc83acd1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73096196"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792708"
 ---
 # <a name="icordebugnativeframe2ismatchingparentframe-method"></a>ICorDebugNativeFrame2::IsMatchingParentFrame 메서드
 지정 된 프레임이 현재 프레임의 부모 인지 여부를 확인 합니다.  
@@ -47,7 +47,7 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
 |-------------|-----------------|  
 |S_OK|부모 상태가 성공적으로 반환 되었습니다.|  
 |E_FAIL|부모 상태를 반환할 수 없습니다.|  
-|E_INVALIDARG|`pPotentialParentFrame` 또는 `pIsParent`가 null입니다.|  
+|E_INVALIDARG|`pPotentialParentFrame` 또는 `pIsParent`이 null입니다.|  
   
 ## <a name="exceptions"></a>예외  
   
@@ -65,6 +65,6 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugNativeFrame2 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugNativeFrame2 인터페이스](icordebugnativeframe2-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)
+- [디버깅](index.md)

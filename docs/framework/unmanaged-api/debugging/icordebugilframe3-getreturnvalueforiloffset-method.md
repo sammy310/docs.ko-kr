@@ -13,12 +13,12 @@ api_type:
 ms.assetid: 06522727-5f64-4391-9331-11386883c352
 topic_type:
 - apiref
-ms.openlocfilehash: c7419e5c3677b5679a0ca5c234463ae6e205b7d1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7a96385ccc6e7f9089365c19bb8f150015bba81c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090370"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788523"
 ---
 # <a name="icordebugilframe3getreturnvalueforiloffset-method"></a>ICorDebugILFrame3::GetReturnValueForILOffset 메서드
 함수의 반환 값을 캡슐화 하는 "ICorDebugValue" 개체를 가져옵니다.  
@@ -40,7 +40,7 @@ HRESULT GetReturnValueForILOffset(
  함수 호출의 반환 값에 대 한 정보를 제공 하는 "ICorDebugValue" 인터페이스 개체의 주소에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>주의  
- 이 메서드는 [ICorDebugCode3:: GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) 메서드와 함께 메서드의 반환 값을 가져오는 데 사용 됩니다. 다음 두 코드 예제와 같이 반환 값이 무시 되는 메서드의 경우 특히 유용 합니다. 첫 번째 예제에서는 <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> 메서드를 호출 하지만 메서드의 반환 값을 무시 합니다.  
+ 이 메서드는 [ICorDebugCode3:: GetReturnValueLiveOffset](icordebugcode3-getreturnvalueliveoffset-method.md) 메서드와 함께 메서드의 반환 값을 가져오는 데 사용 됩니다. 다음 두 코드 예제와 같이 반환 값이 무시 되는 메서드의 경우 특히 유용 합니다. 첫 번째 예제에서는 <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> 메서드를 호출 하지만 메서드의 반환 값을 무시 합니다.  
   
  [!code-csharp[Unmanaged.Debugging.MRV#1](../../../../samples/snippets/csharp/VS_Snippets_CLR/unmanaged.debugging.mrv/cs/mrv1.cs#1)]
  [!code-vb[Unmanaged.Debugging.MRV#1](../../../../samples/snippets/visualbasic/VS_Snippets_CLR/unmanaged.debugging.mrv/vb/mrv1.vb#1)]  
@@ -50,12 +50,12 @@ HRESULT GetReturnValueForILOffset(
  [!code-csharp[Unmanaged.Debugging.MRV#2](../../../../samples/snippets/csharp/VS_Snippets_CLR/unmanaged.debugging.mrv/cs/mrv2.cs#2)]
  [!code-vb[Unmanaged.Debugging.MRV#2](../../../../samples/snippets/visualbasic/VS_Snippets_CLR/unmanaged.debugging.mrv/vb/mrv2.vb#2)]  
   
- [ICorDebugCode3:: GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) 메서드를 함수 호출 사이트에 대 한 IL 오프셋으로 전달 하는 경우 하나 이상의 네이티브 오프셋을 반환 합니다. 그런 다음 디버거는 함수에서 이러한 네이티브 오프셋에 중단점을 설정할 수 있습니다. 디버거가 중단점 중 하나에 적중 하면이 메서드에 전달 된 것과 동일한 IL 오프셋을 전달 하 여 반환 값을 가져올 수 있습니다. 그런 다음 디버거는 설정 된 모든 중단점을 지워야 합니다.  
+ [ICorDebugCode3:: GetReturnValueLiveOffset](icordebugcode3-getreturnvalueliveoffset-method.md) 메서드를 함수 호출 사이트에 대 한 IL 오프셋으로 전달 하는 경우 하나 이상의 네이티브 오프셋을 반환 합니다. 그런 다음 디버거는 함수에서 이러한 네이티브 오프셋에 중단점을 설정할 수 있습니다. 디버거가 중단점 중 하나에 적중 하면이 메서드에 전달 된 것과 동일한 IL 오프셋을 전달 하 여 반환 값을 가져올 수 있습니다. 그런 다음 디버거는 설정 된 모든 중단점을 지워야 합니다.  
   
 > [!WARNING]
-> [ICorDebugCode3:: GetReturnValueLiveOffset 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) 및 `ICorDebugILFrame3::GetReturnValueForILOffset` 메서드를 사용 하 여 참조 형식에 대해서만 반환 값 정보를 가져올 수 있습니다. 값 형식에서 반환 값 정보를 검색할 수 있습니다. 즉, <xref:System.ValueType>에서 파생 되는 모든 형식은 지원 되지 않습니다.  
+> [ICorDebugCode3:: GetReturnValueLiveOffset 메서드](icordebugcode3-getreturnvalueliveoffset-method.md) 및 `ICorDebugILFrame3::GetReturnValueForILOffset` 메서드를 사용 하 여 참조 형식에 대해서만 반환 값 정보를 가져올 수 있습니다. 값 형식에서 반환 값 정보를 검색할 수 있습니다. 즉, <xref:System.ValueType>에서 파생 되는 모든 형식은 지원 되지 않습니다.  
   
- `ILOffset` 매개 변수로 지정 된 IL 오프셋은 함수 호출 사이트에 있어야 하며, 디버기는 동일한 IL 오프셋에 대해 [ICorDebugCode3:: GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) 메서드에서 반환 되는 네이티브 오프셋에 설정 된 중단점에서 중지 되어야 합니다. 디버기가 지정 된 IL 오프셋의 올바른 위치에서 중지 되지 않은 경우 API가 실패 합니다.  
+ `ILOffset` 매개 변수로 지정 된 IL 오프셋은 함수 호출 사이트에 있어야 하며, 디버기는 동일한 IL 오프셋에 대해 [ICorDebugCode3:: GetReturnValueLiveOffset](icordebugcode3-getreturnvalueliveoffset-method.md) 메서드에서 반환 되는 네이티브 오프셋에 설정 된 중단점에서 중지 되어야 합니다. 디버기가 지정 된 IL 오프셋의 올바른 위치에서 중지 되지 않은 경우 API가 실패 합니다.  
   
  함수 호출에서 값을 반환 하지 않는 경우 API가 실패 합니다.  
   
@@ -72,5 +72,5 @@ HRESULT GetReturnValueForILOffset(
   
 ## <a name="see-also"></a>참조
 
-- [GetReturnValueLiveOffset 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)
-- [ICorDebugILFrame3 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-interface.md)
+- [GetReturnValueLiveOffset 메서드](icordebugcode3-getreturnvalueliveoffset-method.md)
+- [ICorDebugILFrame3 인터페이스](icordebugilframe3-interface.md)

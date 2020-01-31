@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 081d1c95-152b-4797-8552-18453eb7b14b
 topic_type:
 - apiref
-ms.openlocfilehash: 700e0af05828b9fe0a50c1aac114e840adc276b5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9953d0f3e1a4d4cd935918f0e5721e474453ca7d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131843"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791905"
 ---
 # <a name="icordebugstackwalkgetcontext-method"></a>ICorDebugStackWalk::GetContext 메서드
-[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) 개체의 현재 프레임에 대 한 컨텍스트를 반환 합니다.  
+[ICorDebugStackWalk](icordebugstackwalk-interface.md) 개체의 현재 프레임에 대 한 컨텍스트를 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -54,7 +54,7 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
 |-------------|-----------------|  
 |S_OK|현재 프레임에 대 한 컨텍스트가 성공적으로 반환 되었습니다.|  
 |E_FAIL|컨텍스트를 반환할 수 없습니다.|  
-|HRESULT_FROM_WIN32 (ERROR_INSUFFICIENT BUFFER)|컨텍스트 버퍼가 너무 작습니다.|  
+|HRESULT_FROM_WIN32 (ERROR_INSUFFICIENT 버퍼)|컨텍스트 버퍼가 너무 작습니다.|  
 |CORDBG_E_PAST_END_OF_STACK|프레임 포인터가 이미 스택의 끝에 있습니다. 따라서 추가 프레임에는 액세스할 수 없습니다.|  
   
 ## <a name="exceptions"></a>예외  
@@ -73,5 +73,5 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [디버깅 인터페이스](debugging-interfaces.md)
+- [디버깅](index.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 937de6a0-6fbf-4ddc-80ea-a6217b73e62b
 topic_type:
 - apiref
-ms.openlocfilehash: b782207503a2c3f739a30f68d509e6b481d2b6a4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e104f8c522af2ee4cd42332b7459f4a2fd185511
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129761"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792682"
 ---
 # <a name="icordebugobjectvalue-interface"></a>ICorDebugObjectValue 인터페이스
 
@@ -29,13 +29,13 @@ ms.locfileid: "73129761"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[GetClass 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md)|이 `ICorDebugObjectValue` 참조 하는 개체의 CLR (공용 언어 런타임) <xref:System.Type>에 대 한 인터페이스 포인터를 가져옵니다.|  
-|[GetContext 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getcontext-method.md)|구현되지 않았습니다.|  
-|[GetFieldValue 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getfieldvalue-method.md)|지정 된 클래스의 지정 된 필드 값을 나타내는 [ICorDebugValue](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-interface.md) 에 대 한 인터페이스 포인터를 가져옵니다.|  
-|[GetManagedCopy 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getmanagedcopy-method.md)|사용되지 않습니다. 이 메서드를 호출 하지 마십시오.|  
-|[GetVirtualMethod 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getvirtualmethod-method.md)|구현되지 않았습니다.|  
-|[IsValueClass 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-isvalueclass-method.md)|이 `ICorDebugObjectValue` 참조 하는 개체가 값 형식 인지 여부를 나타내는 값을 가져옵니다.|  
-|[SetFromManagedCopy 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-setfrommanagedcopy-method.md)|사용되지 않습니다. 이 메서드를 호출 하지 마십시오.|  
+|[GetClass 메서드](icordebugobjectvalue-getclass-method.md)|이 `ICorDebugObjectValue` 참조 하는 개체의 CLR (공용 언어 런타임) <xref:System.Type>에 대 한 인터페이스 포인터를 가져옵니다.|  
+|[GetContext 메서드](icordebugobjectvalue-getcontext-method.md)|구현되지 않았습니다.|  
+|[GetFieldValue 메서드](icordebugobjectvalue-getfieldvalue-method.md)|지정 된 클래스의 지정 된 필드 값을 나타내는 [ICorDebugValue](icordebugvalue-interface.md) 에 대 한 인터페이스 포인터를 가져옵니다.|  
+|[GetManagedCopy 메서드](icordebugobjectvalue-getmanagedcopy-method.md)|사용되지 않습니다. 이 메서드를 호출 하지 마세요.|  
+|[GetVirtualMethod 메서드](icordebugobjectvalue-getvirtualmethod-method.md)|구현되지 않았습니다.|  
+|[IsValueClass 메서드](icordebugobjectvalue-isvalueclass-method.md)|이 `ICorDebugObjectValue` 참조 하는 개체가 값 형식 인지 여부를 나타내는 값을 가져옵니다.|  
+|[SetFromManagedCopy 메서드](icordebugobjectvalue-setfrommanagedcopy-method.md)|사용되지 않습니다. 이 메서드를 호출 하지 마세요.|  
   
 ## <a name="remarks"></a>주의  
  `ICorDebugObjectValue`는 디버깅 중인 프로세스가 계속 될 때까지 계속 유효 합니다.  
@@ -54,4 +54,4 @@ ms.locfileid: "73129761"
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

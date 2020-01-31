@@ -8,17 +8,17 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - visual styles [Windows Forms]
 ms.assetid: 95de9b9c-d804-405c-b2d1-49a88c1e0fe1
-ms.openlocfilehash: 251c53a8665d2eae7c3b5bb23b0a388009362dcc
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: dd52313e9100f9c6a1141b53ccc5a23a4b54410a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960117"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789915"
 ---
 # <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a>방법: 혼합 애플리케이션에서 비주얼 스타일 사용
-이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]기반 응용 프로그램에서 호스팅되는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤에서 비주얼 스타일을 사용 하도록 설정 하는 방법을 보여 줍니다.  
+이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]기반 응용 프로그램에서 호스팅되는 Windows Forms 컨트롤에서 비주얼 스타일을 사용 하도록 설정 하는 방법을 보여 줍니다.  
   
- 응용 프로그램이 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 메서드를 호출 하는 경우 대부분의 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤은 자동으로 비주얼 스타일을 사용 합니다. 자세한 내용은 [비주얼 스타일을 사용 하 여 컨트롤 렌더링](../../winforms/controls/rendering-controls-with-visual-styles.md)합니다.  
+ 응용 프로그램이 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 메서드를 호출 하는 경우 대부분의 Windows Forms 컨트롤은 자동으로 비주얼 스타일을 사용 합니다. 자세한 내용은 [비주얼 스타일을 사용 하 여 컨트롤 렌더링](../../winforms/controls/rendering-controls-with-visual-styles.md)합니다.  
   
  이 항목에서 설명 하는 작업의 전체 코드 목록은 [하이브리드 응용 프로그램에서 비주얼 스타일 사용 샘플](https://go.microsoft.com/fwlink/?LinkID=159986)을 참조 하세요.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "74960117"
   
 9. F5 키를 눌러 응용 프로그램을 빌드하고 실행합니다.  
   
-     비주얼 스타일을 사용 하 여 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤을 그립니다.  
+     비주얼 스타일을 사용 하 여 Windows Forms 컨트롤을 그립니다.  
   
 ## <a name="disabling-windows-forms-visual-styles"></a>Windows Forms 시각적 스타일 사용 안 함  
  비주얼 스타일을 사용 하지 않도록 설정 하려면 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 메서드에 대 한 호출을 제거 하면 됩니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "74960117"
   
 3. F5 키를 눌러 응용 프로그램을 빌드하고 실행합니다.  
   
-     [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤은 기본 시스템 스타일로 그려집니다.  
+     Windows Forms 컨트롤은 기본 시스템 스타일로 그려집니다.  
   
 ## <a name="see-also"></a>참조
 

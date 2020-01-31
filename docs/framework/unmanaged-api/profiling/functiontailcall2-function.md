@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 249f9892-b5a9-41e1-b329-28a925904df6
 topic_type:
 - apiref
-ms.openlocfilehash: db3c3d38e0200f9849c84d7605a436816d56b813
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 7f6ef2c410d49e2e63b88d6f47c33c211f2a8dd8
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427431"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790277"
 ---
 # <a name="functiontailcall2-function"></a>FunctionTailcall2 함수
 현재 실행 중인 함수가 다른 함수에 대 한 마무리 호출을 수행 하려고 함을 프로파일러에 알리고 스택 프레임에 대 한 정보를 제공 합니다.  
@@ -34,18 +34,22 @@ void __stdcall FunctionTailcall2 (
 );  
 ```  
   
-## <a name="parameters"></a>매개 변수  
- `funcId`  
- 진행 마무리 호출을 수행 하려고 하는 현재 실행 중인 함수의 식별자입니다.  
+## <a name="parameters"></a>매개 변수
+
+- `funcId`
+
+  \[in] 마무리 호출을 수행 하려고 하는 현재 실행 중인 함수의 식별자입니다.
+
+- `clientData`
+
+  \[의 경우 마무리 호출을 수행 하려고 하는 현재 실행 중인 함수의 함수에서 이전에 [Functionidmapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)를 통해 지정한 다시 매핑된 함수 식별자입니다.
   
- `clientData`  
- 진행 마무리 호출을 수행 하려고 하는 현재 실행 중인 함수의 함수에 대해 이전에 [Functionidmapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)를 통해 지정한 다시 매핑된 함수 식별자입니다.  
-  
- `func`  
- 진행 스택 프레임에 대 한 정보를 가리키는 `COR_PRF_FRAME_INFO` 값입니다.  
-  
- 프로파일러는 [ICorProfilerInfo2:: GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) 메서드에서 실행 엔진으로 다시 전달할 수 있는 불투명 핸들로이를 처리 해야 합니다.  
-  
+- `func`
+
+  \[] 스택 프레임에 대 한 정보를 가리키는 `COR_PRF_FRAME_INFO` 값입니다.
+
+  프로파일러는 [ICorProfilerInfo2:: GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) 메서드에서 실행 엔진으로 다시 전달할 수 있는 불투명 핸들로이를 처리 해야 합니다.
+
 ## <a name="remarks"></a>주의  
  마무리 호출의 대상 함수는 현재 스택 프레임을 사용 하며, 마무리 호출을 수행한 함수의 호출자에 게 직접 반환 됩니다. 즉, 마무리 호출의 대상인 함수에 대해 [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) 콜백이 실행 되지 않습니다.  
   
@@ -72,7 +76,7 @@ void __stdcall FunctionTailcall2 (
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [FunctionEnter2 함수](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
 - [FunctionLeave2 함수](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)

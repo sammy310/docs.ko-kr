@@ -2,21 +2,21 @@
 title: ICorDebugDataTarget3 인터페이스
 ms.date: 03/30/2017
 ms.assetid: f477af85-994f-4df0-ae78-404ed252bf49
-ms.openlocfilehash: 5f91db291396589a916933bdc7c2a2390dd61a5d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 04e7b9a064d4a06a06b8a1518f06092ba79a3561
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136676"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783495"
 ---
 # <a name="icordebugdatatarget3-interface"></a>ICorDebugDataTarget3 인터페이스
-[ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md) 인터페이스를 논리적으로 확장 하 여 로드 된 모듈에 대 한 정보를 제공 합니다.  
+[ICorDebugDataTarget](icordebugdatatarget-interface.md) 인터페이스를 논리적으로 확장 하 여 로드 된 모듈에 대 한 정보를 제공 합니다.  
   
 ## <a name="method"></a>메서드  
   
 |메서드|설명|  
 |------------|-----------------|  
-|[GetLoadedModules 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget3-getloadedmodules-method.md)|지금까지 로드된 모듈 목록을 가져옵니다.|  
+|[GetLoadedModules 메서드](icordebugdatatarget3-getloadedmodules-method.md)|지금까지 로드된 모듈 목록을 가져옵니다.|  
   
 ## <a name="remarks"></a>주의  
   
@@ -34,5 +34,5 @@ ms.locfileid: "73136676"
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [디버깅 인터페이스](debugging-interfaces.md)
+- [디버깅](index.md)

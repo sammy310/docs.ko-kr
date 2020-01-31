@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 7a4e3085-8f95-40ef-a4be-7d6146f47ce2
 topic_type:
 - apiref
-ms.openlocfilehash: 7dede4e5af702f1b86b430450db4a669c326c062
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 728a6c83dc321fa28dc4ff84c4e874d886524b36
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131071"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788567"
 ---
 # <a name="icordebugilcode2getinstrumentedilmap-method"></a>ICorDebugILCode2::GetInstrumentedILMap 메서드
 [.NET Framework 4.5.2 이상 버전에서 지원됨]  
@@ -36,18 +36,18 @@ HRESULT GetInstrumentedILMap(
   
 ## <a name="parameters"></a>매개 변수  
  cMap  
- [in] `map` 배열의 스토리지 용량입니다. 자세한 내용은 설명 부분을 참조하세요.  
+ [in] `map` 배열의 스토리지 용량입니다. 자세한 내용은 설명 섹션을 참조하십시오.  
   
  pcMap  
- 제한이 지도 배열에 기록 된 COR_IL_MAP 값의 수입니다.  
+ [out] 맵 배열에 기록되는 COR_IL_MAP 값의 수입니다.  
   
  map  
- 제한이 프로파일러 계측 된 IL에서 원래 메서드의 IL로의 매핑에 대 한 정보를 제공 하는 COR_IL_MAP 값의 배열입니다.  
+ [out] 프로파일러가 계측한 IL에서 원래 메서드 IL로의 매핑에 대한 정보를 제공하는 COR_IL_MAP 값의 배열입니다.  
   
 ## <a name="remarks"></a>주의  
- 프로파일러가 [ICorProfilerInfo:: SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) 메서드를 호출 하 여 매핑을 설정 하는 경우 디버거는이 메서드를 호출 하 여 매핑을 검색 하 고 스택 추적 및 변수에 대 한 IL 오프셋을 계산할 때 내부적으로 매핑을 사용할 수 있습니다. 수명.  
+ 프로파일러가 [ICorProfilerInfo:: SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) 메서드를 호출 하 여 매핑을 설정 하는 경우 디버거는이 메서드를 호출 하 여 매핑을 검색 하 고 스택 추적 및 변수 수명에 대 한 IL 오프셋을 계산할 때 내부적으로 매핑을 사용할 수 있습니다.  
   
- `cMap`이 0이 고 `pcMap`**null**이 아닌 경우 `pcMap`은 사용 가능한 COR_IL_MAP 값의 수로 설정 됩니다. `cMap`은 값이 0이 아닌 경우 `map` 배열의 스토리지 용량을 나타냅니다. 메서드가 반환 될 때 `map`는 최대 `cMap` 항목을 포함 하 고, `pcMap`는 실제로 `map` 배열에 기록 된 COR_IL_MAP 값의 수로 설정 됩니다.  
+ `cMap`이 0이 고 `pcMap`**null**이 아닌 경우 `pcMap`는 사용 가능한 COR_IL_MAP 값 수로 설정 됩니다. `cMap`은 값이 0이 아닌 경우 `map` 배열의 스토리지 용량을 나타냅니다. 메서드가 반환 될 때 `map`는 최대 `cMap` 항목을 포함 하 고, `pcMap`는 실제로 `map` 배열에 기록 된 COR_IL_MAP 값의 수로 설정 됩니다.  
   
  IL이 계측되지 않았거나 프로파일러가 매핑을 제공하지 않은 경우 이 메서드는 `S_OK`를 반환하고 `pcMap`을 0으로 설정합니다.  
   
@@ -62,6 +62,6 @@ HRESULT GetInstrumentedILMap(
   
 ## <a name="see-also"></a>참조
 
-- [ICorProfilerInfo:: SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md)
-- [ICorDebugILCode2 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorProfilerInfo::SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md)
+- [ICorDebugILCode2 인터페이스](icordebugilcode2-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

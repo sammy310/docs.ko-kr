@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d23a3408-b525-4aec-a186-2ac7ca65d7a4
 topic_type:
 - apiref
-ms.openlocfilehash: 6bbb41f8fd3ac37f1c21fe8b4f6159e3d303777c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 6edf498d506a0ca914124a284c0da3f869f28130
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445188"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790213"
 ---
 # <a name="icorprofilercallbackappdomainshutdownstarted-method"></a>ICorProfilerCallback::AppDomainShutdownStarted 메서드
 응용 프로그램 도메인이 프로세스에서 언로드되고 있음을 프로파일러에 알립니다.  
@@ -32,10 +32,12 @@ HRESULT AppDomainShutdownStarted(
     [in] AppDomainID appDomainId);  
 ```  
   
-## <a name="parameters"></a>매개 변수  
- `appDomainId`  
- 진행 응용 프로그램의 어셈블리가 저장 된 도메인을 식별 합니다.  
-  
+## <a name="parameters"></a>매개 변수
+
+- `appDomainId`
+
+  \[in] 응용 프로그램의 어셈블리가 저장 된 도메인을 식별 합니다.
+
 ## <a name="remarks"></a>주의  
  `appDomainId` 값은 `AppDomainShutdownStarted` 메서드가 반환 된 후 정보 요청에 대해 유효 하지 않습니다 .이는 프로파일러에서이 응용 프로그램 도메인에 대 한 정보를 가져올 수 있는 마지막 기회입니다.  
   
@@ -48,6 +50,6 @@ HRESULT AppDomainShutdownStarted(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

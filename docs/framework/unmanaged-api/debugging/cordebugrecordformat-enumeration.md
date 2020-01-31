@@ -10,12 +10,12 @@ api_type:
 ms.assetid: d680c1c0-16ab-4ccc-9444-39cf8e0e05ee
 topic_type:
 - apiref
-ms.openlocfilehash: 239b1a9f258f435e6dcca6e00cc20df5b5c01188
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 99fc89d1aee6c9f0fbffc193e12ce563e820f268
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73097447"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789277"
 ---
 # <a name="cordebugrecordformat-enumeration"></a>CorDebugRecordFormat 열거형
 네이티브 예외 디버그 이벤트에 대한 정보가 포함된 바이트 배열의 데이터 형식을 설명합니다.  
@@ -29,15 +29,15 @@ typedef enum CorDebugRecordFormat {
 } CorDebugRecordFormat;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-|멤버|설명|  
+|Member|설명|  
 |------------|-----------------|  
 |`FORMAT_WINDOWS_EXCEPTIONRECORD32`|데이터가 32비트 Windows 예외 레코드입니다.|  
 |`FORMAT_WINDOWS_EXCEPTIONRECORD64`|데이터가 64비트 Windows 예외 레코드입니다.|  
   
 ## <a name="remarks"></a>주의  
- `CorDebugRecordFormat` 열거형의 멤버는 `pRecord` 인수에서 바이트 배열의 형식을 나타내기 위해 [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) 메서드에 전달 됩니다.  
+ `CorDebugRecordFormat` 열거형의 멤버는 `pRecord` 인수에서 바이트 배열의 형식을 나타내기 위해 [DecodeEvent](icordebugprocess6-decodeevent-method.md) 메서드에 전달 됩니다.  
   
 > [!NOTE]
 > 이 열거형은 .NET 네이티브 디버깅 시나리오에서만 사용됩니다.  
@@ -53,4 +53,4 @@ typedef enum CorDebugRecordFormat {
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 열거형](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [디버깅 열거형](debugging-enumerations.md)

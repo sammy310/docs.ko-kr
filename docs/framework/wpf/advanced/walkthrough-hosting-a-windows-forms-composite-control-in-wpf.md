@@ -9,15 +9,15 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-ms.openlocfilehash: 16c09b4bb393fa830412385b4b405dd1fae9878b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 22eb323d1c1921832630d1d1b30463b4ecb7d1fd
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745001"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794238"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>연습: WPF에서 Windows Forms 복합 컨트롤 호스팅
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 애플리케이션을 만들기 위한 다양한 환경을 제공합니다. 그러나 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 코드에 상당한 투자가 있는 경우 처음부터 다시 작성 하는 대신 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램에서 해당 코드를 다시 사용 하는 것이 더 효과적일 수 있습니다. 가장 일반적인 시나리오는 기존 Windows Forms 컨트롤이 있는 경우입니다. 경우에 따라 이러한 컨트롤에 대한 소스 코드에 액세스하지 못할 수도 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램에서 이러한 컨트롤을 호스팅하기 위한 간단한 절차를 제공 합니다. 예를 들어, 특수 한 <xref:System.Windows.Forms.DataGridView> 컨트롤을 호스트 하는 동안 대부분의 프로그래밍에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 사용할 수 있습니다.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 애플리케이션을 만들기 위한 다양한 환경을 제공합니다. 그러나 Windows Forms 코드에 상당한 투자가 있는 경우 처음부터 다시 작성 하는 대신 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램에서 해당 코드를 다시 사용 하는 것이 더 효과적일 수 있습니다. 가장 일반적인 시나리오는 기존 Windows Forms 컨트롤이 있는 경우입니다. 경우에 따라 이러한 컨트롤에 대한 소스 코드에 액세스하지 못할 수도 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램에서 이러한 컨트롤을 호스팅하기 위한 간단한 절차를 제공 합니다. 예를 들어, 특수 한 <xref:System.Windows.Forms.DataGridView> 컨트롤을 호스트 하는 동안 대부분의 프로그래밍에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 사용할 수 있습니다.  
   
  이 연습에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램에서 데이터 입력을 수행 하기 위해 Windows Forms 복합 컨트롤을 호스트 하는 응용 프로그램을 단계별로 안내 합니다. 복합 컨트롤은 DLL로 패키지됩니다. 이 일반적인 절차는 더 복잡한 애플리케이션 및 컨트롤로 확장할 수 있습니다. 이 연습은 [연습: Windows Forms에서 WPF 복합 컨트롤 호스팅](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)의 모양과 기능과 거의 동일 하 게 디자인 되었습니다. 주요 차이점은 호스팅 시나리오가 반대라는 점입니다.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "76745001"
   
  이 연습에서 설명 하는 작업의 전체 코드 목록은 [WPF에서 Windows Forms 복합 컨트롤 호스팅 샘플](https://go.microsoft.com/fwlink/?LinkID=159999)을 참조 하세요.  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>전제 조건  
 
 이 연습을 완료하려면 Visual Studio가 필요합니다.
   
@@ -239,7 +239,7 @@ using MyControls;
   
  애플리케이션을 빌드 및 실행합니다. Windows Forms 복합 컨트롤에 일부 텍스트를 추가한 다음 **확인**을 클릭 합니다. 텍스트가 레이블에 나타납니다. 컨트롤에 대한 효과를 확인하려면 다른 라디오 단추를 클릭합니다.  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

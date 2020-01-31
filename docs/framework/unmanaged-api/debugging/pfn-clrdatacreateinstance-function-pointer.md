@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5c66ac57-d751-4de5-af9f-26ceb949af8b
 topic_type:
 - apiref
-ms.openlocfilehash: 426a8acf2e9319725cf592db00dc97c8960bca4f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 433f34447d3bd1a57ca1e289cb0eab3facac2c69
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139164"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790363"
 ---
 # <a name="pfn_clrdatacreateinstance-function-pointer"></a>PFN_CLRDataCreateInstance 함수 포인터
 지정 된 대상 항목에 대 한 인터페이스 개체를 만드는 함수를 가리킵니다.  
@@ -39,7 +39,7 @@ typedef HRESULT (STDAPICALLTYPE* PFN_CLRDataCreateInstance) (
  진행 인스턴스화할 인터페이스의 식별자입니다.  
   
  `target`  
- 진행 인터페이스 개체를 만들 대상 항목을 나타내는 사용자 구현 [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) 개체에 대 한 포인터입니다.  
+ 진행 인터페이스 개체를 만들 대상 항목을 나타내는 사용자 구현 [ICLRDataTarget](iclrdatatarget-interface.md) 개체에 대 한 포인터입니다.  
   
  `iface`  
  제한이 반환 된 인터페이스 개체의 주소에 대 한 포인터입니다.  
@@ -58,4 +58,4 @@ typedef HRESULT (STDAPICALLTYPE* PFN_CLRDataCreateInstance) (
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 전역 정적 함수](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [디버깅 전역 정적 함수](debugging-global-static-functions.md)

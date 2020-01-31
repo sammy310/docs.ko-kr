@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 8589bba7-7304-45ba-9e31-7bf43dfd5c19
 topic_type:
 - apiref
-ms.openlocfilehash: 453486c9e3d98ffd6f0dcfa08e7a0a9a1c1d3342
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 35767529d9433764b7eed0b3b4acdd806f399962
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123397"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792175"
 ---
 # <a name="icordebugprocess7setwriteablemetadataupdatemode-method"></a>ICorDebugProcess7::SetWriteableMetadataUpdateMode 메서드
 [.NET Framework 4.5.2 이상 버전에서 지원됨]  
@@ -34,7 +34,7 @@ HRESULT SetWriteableMetadataUpdateMode(
   
 ## <a name="parameters"></a>매개 변수  
  `flags`  
- 대상 프로세스에서 메타 데이터에 대 한 메모리 내 업데이트가 디버거에 표시 (`WriteableMetadataUpdateMode::AlwaysShowUpdates`) 되는지 아니면 표시 되지 않는지 (`WriteableMetadataUpdateMode::LegacyCompatPolicy`)를 지정 하는 [WriteableMetadataUpdateMode](../../../../docs/framework/unmanaged-api/debugging/writeablemetadataupdatemode-enumeration.md) 열거형 값입니다.  
+ 대상 프로세스에서 메타 데이터에 대 한 메모리 내 업데이트가 디버거에 표시 (`WriteableMetadataUpdateMode::AlwaysShowUpdates`) 되는지 아니면 표시 되지 않는지 (`WriteableMetadataUpdateMode::LegacyCompatPolicy`)를 지정 하는 [WriteableMetadataUpdateMode](writeablemetadataupdatemode-enumeration.md) 열거형 값입니다.  
   
 ## <a name="remarks"></a>주의  
  대상 프로세스의 메타데이터는 편집하며 계속하기, 프로파일러 또는 <xref:System.Reflection.Emit?displayProperty=nameWithType>에 의해 업데이트될 수 있습니다.  
@@ -50,5 +50,5 @@ HRESULT SetWriteableMetadataUpdateMode(
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugProcess7 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugProcess7 인터페이스](icordebugprocess7-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

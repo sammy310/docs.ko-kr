@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 93f79627-bd31-4f4f-b95d-46a032a52fe4
 topic_type:
 - apiref
-ms.openlocfilehash: ab3819d5c33f090fda1ca9c3dccb5d08ab8f84cc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bf9ea40cc81be37499e6729006e7177a8000c000
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131455"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793294"
 ---
 # <a name="icordebugmanagedcallback2mdanotification-method"></a>ICorDebugManagedCallback2::MDANotification 메서드
 코드 실행이 디버깅 중인 응용 프로그램에서 MDA (관리 디버깅 도우미)를 발견 한 알림을 제공 합니다.  
@@ -49,10 +49,10 @@ HRESULT MDANotification(
  MDA 개체 자체에서 OS (운영 체제) 스레드 ID를 가져와야 합니다.  
   
  `pMDA`  
- 진행 MDA 정보를 노출 하는 [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) 인터페이스에 대 한 포인터입니다.  
+ 진행 MDA 정보를 노출 하는 [ICorDebugMDA](icordebugmda-interface.md) 인터페이스에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>주의  
- MDA는 추론 경고 이며, 디버깅 중인 응용 프로그램의 실행을 계속 하기 위해 [ICorDebugController::](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) 를 호출 하는 경우를 제외 하 고 명시적 디버거 작업이 필요 하지 않습니다.  
+ MDA는 추론 경고 이며, 디버깅 중인 응용 프로그램의 실행을 계속 하기 위해 [ICorDebugController::](icordebugcontroller-continue-method.md) 를 호출 하는 경우를 제외 하 고 명시적 디버거 작업이 필요 하지 않습니다.  
   
  CLR (공용 언어 런타임)은 언제 든 지 어떤 mda가 발생 하는지, 어느 시점에서 어떤 데이터가 지정 된 MDA에 있는지를 확인할 수 있습니다. 따라서 디버거는 특정 MDA 패턴이 필요한 기능을 빌드하지 않아야 합니다.  
   
@@ -72,5 +72,5 @@ HRESULT MDANotification(
 ## <a name="see-also"></a>참조
 
 - [관리 디버깅 도우미를 사용하여 오류 진단](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [ICorDebugManagedCallback2 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [ICorDebugManagedCallback 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback2 인터페이스](icordebugmanagedcallback2-interface.md)
+- [ICorDebugManagedCallback 인터페이스](icordebugmanagedcallback-interface.md)

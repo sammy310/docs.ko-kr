@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 66fcd2b8-ac66-414b-83a8-75a925e17772
 topic_type:
 - apiref
-ms.openlocfilehash: 94472e84b73cdffe09505088b1e7fbc20a209bc3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 406468fc6e2b68e8c8e1dfbd0f0f18cce3f013ab
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138478"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794453"
 ---
 # <a name="icordebughandlevalue-interface"></a>ICorDebugHandleValue 인터페이스
 
@@ -29,8 +29,8 @@ ms.locfileid: "73138478"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[Dispose 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-dispose-method.md)|인터페이스 포인터를 명시적으로 해제 하지 않고이 `ICorDebugHandleValue` 개체에서 참조 하는 핸들을 해제 합니다.|  
-|[GetHandleType 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebughandlevalue-gethandletype-method.md)|이 `ICorDebugHandleValue`에서 참조 하는 핸들의 종류를 설명 하는 CorDebugHandleType 값을 가져옵니다.|  
+|[Dispose 메서드](icordebughandlevalue-dispose-method.md)|인터페이스 포인터를 명시적으로 해제 하지 않고이 `ICorDebugHandleValue` 개체에서 참조 하는 핸들을 해제 합니다.|  
+|[GetHandleType 메서드](icordebughandlevalue-gethandletype-method.md)|이 `ICorDebugHandleValue`에서 참조 하는 핸들의 종류를 설명 하는 CorDebugHandleType 값을 가져옵니다.|  
   
 ## <a name="remarks"></a>주의  
  디버깅 된 코드의 실행이 중단 되 면 `ICorDebugReferenceValue` 개체가 무효화 됩니다. `ICorDebugHandleValue`은 명시적으로 해제 될 때까지 중단 및 연속을 통해 참조를 유지 관리 합니다.  
@@ -49,4 +49,4 @@ ms.locfileid: "73138478"
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

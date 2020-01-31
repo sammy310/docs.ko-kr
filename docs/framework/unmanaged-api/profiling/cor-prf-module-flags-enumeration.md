@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7bc3a938-0df1-4739-9ff1-89cff454b704
 topic_type:
 - apiref
-ms.openlocfilehash: bdbf93ba4df50cf26538f0e527fdc3c982bb274e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0f6fb469aa9d6d40b762bfd2feec28c28299732f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447328"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867115"
 ---
 # <a name="cor_prf_module_flags-enumeration"></a>COR_PRF_MODULE_FLAGS 열거형
 모듈의 속성을 지정합니다.  
@@ -39,9 +39,9 @@ typedef enum
 }   COR_PRF_MODULE_FLAGS;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-|멤버|설명|  
+|Member|설명|  
 |------------|-----------------|  
 |COR_PRF_MODULE_DISK|모듈이 디스크에서 로드 되었습니다.|  
 |COR_PRF_MODULE_NGEN|네이티브 이미지 생성기 (Ngen.exe)에서 모듈을 생성 했습니다.|  
@@ -52,7 +52,7 @@ typedef enum
 |COR_PRF_MODULE_WINDOWS_RUNTIME|Windows 런타임 콘텐츠 형식 플래그는이 모듈의 어셈블리에 대 한 메타 데이터에 설정 됩니다. 이는 모든 Windows 메타 데이터 (winmd) 모듈의 경우입니다.|  
   
 ## <a name="remarks"></a>주의  
- COR_PRF_MODULE_FLAGS의 비트는 [ICorProfilerInfo3:: GetModuleInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getmoduleinfo2-method.md) 메서드의 `pdwModuleFlags` output 매개 변수에서 프로파일러로 반환 됩니다. 둘 이상의 플래그를 조합 하 여 사용할 수 있지만 모든 조합을 사용할 수 있는 것은 아닙니다.  
+ COR_PRF_MODULE_FLAGS의 비트는 [ICorProfilerInfo3:: GetModuleInfo2](icorprofilerinfo3-getmoduleinfo2-method.md) 메서드의 `pdwModuleFlags` output 매개 변수에서 프로파일러로 반환 됩니다. 둘 이상의 플래그를 조합 하 여 사용할 수 있지만 모든 조합을 사용할 수 있는 것은 아닙니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -63,6 +63,6 @@ typedef enum
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [프로파일링 열거형](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [프로파일링 열거형](profiling-enumerations.md)

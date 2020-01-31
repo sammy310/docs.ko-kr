@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5bbb8d1b-bbc4-47b0-b1b1-2d54cc0be291
 topic_type:
 - apiref
-ms.openlocfilehash: 2a6ca9f4d74c508ac0a2af68c2a5b0a3e6d6b217
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 29781666c106755f96f945325e3a8953bf93b211
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139176"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790343"
 ---
 # <a name="logswitchcallreason-enumeration"></a>LogSwitchCallReason 열거형
 디버깅/추적 스위치에 대해 수행된 작업을 나타냅니다.  
@@ -34,9 +34,9 @@ typedef enum LogSwitchCallReason {
 } LogSwitchCallReason;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-|멤버|설명|  
+|Member|설명|  
 |------------|-----------------|  
 |`SWITCH_CREATE`|디버깅/추적 스위치를 만들었습니다.|  
 |`SWITCH_MODIFY`|디버깅/추적 스위치가 수정 되었습니다.|  
@@ -53,4 +53,4 @@ typedef enum LogSwitchCallReason {
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 열거형](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [디버깅 열거형](debugging-enumerations.md)

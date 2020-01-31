@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 72fa95bde0c41e913bdaa35da7fdcd34f81b3057
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 550ba74c7ceba16c2040932918364ae2a59ea665
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740272"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794279"
 ---
 # <a name="threading-model"></a>스레딩 모델
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 개발자가 스레딩의 어려움을 해결하도록 디자인되어 있습니다. 결과적으로 대부분의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 개발자는 둘 이상의 스레드를 사용 하는 인터페이스를 작성할 필요가 없습니다. 다중 스레드 프로그램은 복잡하고 디버그하기 어려우므로 단일 스레드 솔루션이 있을 경우 피해야 합니다.
@@ -177,7 +177,7 @@ ms.locfileid: "75740272"
 
  `GetWeatherAsync`는 백그라운드 스레드 만들기와 같이 앞에서 설명한 기술 중 하나를 사용하여 호출 스레드를 잠그지 않고 비동기적으로 작업을 수행합니다.
 
- 이 패턴의 가장 중요 한 부분 중 하나는 *methodname*`Async` 메서드를 호출한 동일한 스레드에서 *methodname*`Completed` 메서드를 호출 하 여 시작 하는 것입니다. <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>을 저장 하 여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 매우 쉽게 사용할 수 있지만, 그래픽이 아닌 구성 요소는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 또는 ASP.NET 프로그램이 아닌 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 에서만 사용할 수 있습니다.
+ 이 패턴의 가장 중요 한 부분 중 하나는 *methodname*`Async` 메서드를 호출한 동일한 스레드에서 *methodname*`Completed` 메서드를 호출 하 여 시작 하는 것입니다. <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>을 저장 하 여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 매우 쉽게 사용할 수 있지만, 그래픽이 아닌 구성 요소는 Windows Forms 또는 ASP.NET 프로그램이 아닌 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 에서만 사용할 수 있습니다.
 
  <xref:System.Windows.Threading.DispatcherSynchronizationContext> 클래스는이 요구 사항을 해결 합니다. 즉, 다른 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 프레임 워크와 함께 작동 하는 <xref:System.Windows.Threading.Dispatcher> 단순화 된 버전으로 간주 합니다.
 

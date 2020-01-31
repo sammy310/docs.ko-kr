@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d6a5fa8b-09c6-47a5-b60e-6cf2e355df30
 topic_type:
 - apiref
-ms.openlocfilehash: f57a3ed70267de65daed85305ad7d623b4ca0337
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 89e4d046deced4294edb98d55e4816f00480fe19
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448023"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790071"
 ---
 # <a name="icorprofilercallbackfunctionunloadstarted-method"></a>ICorProfilerCallback::FunctionUnloadStarted 메서드
 런타임이 함수 언로드를 시작 했음을 프로파일러에 알립니다.  
@@ -32,10 +32,12 @@ HRESULT FunctionUnloadStarted(
     [in] FunctionID functionId);   
 ```  
   
-## <a name="parameters"></a>매개 변수  
- `functionId`  
- 진행 언로드될 함수의 ID입니다.  
-  
+## <a name="parameters"></a>매개 변수
+
+- `functionId`
+
+  \[in] 언로드되고 있는 함수의 ID입니다.
+
 ## <a name="remarks"></a>주의  
  이 메서드가 호출자에 게 반환 된 후에는 `functionId` 매개 변수의 값이 더 이상 유효 하지 않습니다.  
   
@@ -48,6 +50,6 @@ HRESULT FunctionUnloadStarted(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

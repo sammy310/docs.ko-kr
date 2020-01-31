@@ -2,12 +2,12 @@
 title: ICorDebugDataTarget3::GetLoadedModules 메서드
 ms.date: 03/30/2017
 ms.assetid: 9a48c05b-1949-416e-933c-52549b6fcf5e
-ms.openlocfilehash: 6ee2215e2b3e3bd911158b3fc801361fc4e22db1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d4c22146422085daa4dc9d90ae5b3735a12500c2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136682"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793562"
 ---
 # <a name="icordebugdatatarget3getloadedmodules-method"></a>ICorDebugDataTarget3::GetLoadedModules 메서드
 지금까지 로드된 모듈 목록을 가져옵니다.  
@@ -30,7 +30,7 @@ HRESULT GetLoadedModules(
  [out] 정보가 반환된 모듈 수에 대한 포인터입니다.  
   
  `pLoadedModules`  
- 제한이 로드 된 모듈에 대 한 정보를 제공 하는 [ICorDebugLoadedModule](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-interface.md) 개체의 배열에 대 한 포인터입니다.  
+ 제한이 로드 된 모듈에 대 한 정보를 제공 하는 [ICorDebugLoadedModule](icordebugloadedmodule-interface.md) 개체의 배열에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>주의  
   
@@ -48,5 +48,5 @@ HRESULT GetLoadedModules(
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugDataTarget3 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget3-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugDataTarget3 인터페이스](icordebugdatatarget3-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

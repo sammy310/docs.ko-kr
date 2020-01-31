@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 880ca92a-42d4-42a5-9b9c-c2848eb39c6a
 topic_type:
 - apiref
-ms.openlocfilehash: b954aa0e4db10fd4b3bde951c7f27d18b8634f5a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6f4c96517375df4cd249b72953bf37812a498c0c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132193"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789355"
 ---
 # <a name="cordebuggctype-enumeration"></a>CorDebugGCType 열거형
 가비지 수집기가 실행되고 있는 위치(워크스테이션 또는 서버)를 나타냅니다.  
@@ -35,7 +35,7 @@ typedef enum CorDebugGCType {
   
 ## <a name="parameters"></a>매개 변수  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
 |멤버 이름|설명|  
 |-----------------|-----------------|  
@@ -55,4 +55,4 @@ typedef enum CorDebugGCType {
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 열거형](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [디버깅 열거형](debugging-enumerations.md)

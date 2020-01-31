@@ -2,12 +2,12 @@
 title: ICorDebugMemoryBuffer 인터페이스
 ms.date: 03/30/2017
 ms.assetid: 85dc2d65-3657-4b93-9f23-9feaa95d37ff
-ms.openlocfilehash: 9e43f9a2297eb56755c7a6bba73e994441cbfeaa
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fa1bbca1e771cbc2b3475891862875b97b9e7f90
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127975"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793147"
 ---
 # <a name="icordebugmemorybuffer-interface"></a>ICorDebugMemoryBuffer 인터페이스
 메모리 내 버퍼를 나타냅니다.  
@@ -16,8 +16,8 @@ ms.locfileid: "73127975"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[GetSize 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-getsize-method.md)|메모리 버퍼의 크기(바이트)를 가져옵니다.|  
-|[GetStartAddress 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-getstartaddress-method.md)|메모리 버퍼의 시작 주소를 가져옵니다.|  
+|[GetSize 메서드](icordebugmemorybuffer-getsize-method.md)|메모리 버퍼의 크기(바이트)를 가져옵니다.|  
+|[GetStartAddress 메서드](icordebugmemorybuffer-getstartaddress-method.md)|메모리 버퍼의 시작 주소를 가져옵니다.|  
   
 ## <a name="remarks"></a>주의  
   
@@ -35,5 +35,5 @@ ms.locfileid: "73127975"
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [디버깅 인터페이스](debugging-interfaces.md)
+- [디버깅](index.md)

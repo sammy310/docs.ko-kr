@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 66347e03-9a97-41e8-8f9d-89b80803f7b5
 topic_type:
 - apiref
-ms.openlocfilehash: c83a55a74542d94559b50b89ef784de0bd55d0db
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: bd03eccc923049c4a49062d18bd11659f3316e8a
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427338"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866825"
 ---
 # <a name="functiontailcall-function"></a>FunctionTailcall 함수
 현재 실행 중인 함수가 다른 함수에 대 한 마무리 호출을 수행 하려고 함을 프로파일러에 알립니다.  
   
 > [!NOTE]
-> `FunctionTailcall` 함수는 .NET Framework 버전 2.0에서 더 이상 사용 되지 않습니다. 계속 작동 하지만 성능이 저하 됩니다. 대신 [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) 함수를 사용 해야 합니다.  
+> `FunctionTailcall` 함수는 .NET Framework 버전 2.0에서 더 이상 사용 되지 않습니다. 계속 작동 하지만 성능이 저하 됩니다. 대신 [FunctionTailcall2](functiontailcall2-function.md) 함수를 사용 해야 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,12 +35,14 @@ void __stdcall FunctionTailcall (
 );  
 ```  
   
-## <a name="parameters"></a>매개 변수  
- `funcID`  
- 진행 마무리 호출을 수행 하려고 하는 현재 실행 중인 함수의 식별자입니다.  
-  
-## <a name="remarks"></a>설명  
- 마무리 호출의 대상 함수는 현재 스택 프레임을 사용 하며, 마무리 호출을 수행한 함수의 호출자에 게 직접 반환 됩니다. 즉, tail 호출의 대상인 함수에 대해 [Functionleave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md) 콜백이 실행 되지 않습니다.  
+## <a name="parameters"></a>매개 변수
+
+- `funcID`
+
+  \[in] 마무리 호출을 수행 하려고 하는 현재 실행 중인 함수의 식별자입니다.
+
+## <a name="remarks"></a>주의  
+ 마무리 호출의 대상 함수는 현재 스택 프레임을 사용 하며, 마무리 호출을 수행한 함수의 호출자에 게 직접 반환 됩니다. 즉, tail 호출의 대상인 함수에 대해 [Functionleave](functionleave-function.md) 콜백이 실행 되지 않습니다.  
   
  `FunctionTailcall` 함수는 콜백입니다. 구현 해야 합니다. 구현은 `__declspec`(`naked`) 저장소 클래스 특성을 사용 해야 합니다.  
   
@@ -63,9 +65,9 @@ void __stdcall FunctionTailcall (
   
  **.NET Framework 버전:** 1.1, 1.0  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [FunctionEnter2 함수](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [FunctionLeave2 함수](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [SetEnterLeaveFunctionHooks2 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [프로파일링 전역 정적 함수](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [FunctionEnter2 함수](functionenter2-function.md)
+- [FunctionLeave2 함수](functionleave2-function.md)
+- [SetEnterLeaveFunctionHooks2 메서드](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [프로파일링 전역 정적 함수](profiling-global-static-functions.md)

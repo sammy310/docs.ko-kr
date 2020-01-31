@@ -8,16 +8,16 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 92d267ee9e87e9d204fe76172ca7e0fe33cf1a1b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 1bb38436049e338ab6033ae3b6370732a457d520
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976575"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794216"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>연습: 혼합 애플리케이션에서 데이터 바인딩
 
-[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 또는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 사용 하는지에 관계 없이 사용자에 게 기본 데이터에 대 한 액세스 권한을 제공 하려면 데이터 소스를 컨트롤에 바인딩하는 것이 중요 합니다. 이 연습에서는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 및 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤을 모두 포함 하는 혼합 응용 프로그램에서 데이터 바인딩을 사용 하는 방법을 보여 줍니다.
+Windows Forms 또는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 사용 하는지에 관계 없이 사용자에 게 기본 데이터에 대 한 액세스 권한을 제공 하려면 데이터 소스를 컨트롤에 바인딩하는 것이 중요 합니다. 이 연습에서는 Windows Forms 및 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤을 모두 포함 하는 혼합 응용 프로그램에서 데이터 바인딩을 사용 하는 방법을 보여 줍니다.
 
 이 연습에서 설명하는 작업은 다음과 같습니다.
 
@@ -39,11 +39,11 @@ ms.locfileid: "73976575"
 
 작업을 완료하면 혼합 애플리케이션의 데이터 바인딩 기능을 이해하게 됩니다.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>전제 조건
 
 이 연습을 완료하려면 다음 구성 요소가 필요합니다.
 
-- Visual Studio.
+- 보여 줍니다.
 
 - Microsoft SQL Server에서 실행 되는 Northwind 샘플 데이터베이스에 액세스 합니다.
 
@@ -61,7 +61,7 @@ ms.locfileid: "73976575"
 
 3. WPF 디자이너에서 Mainwindow.xaml를 엽니다.
 
-4. <xref:System.Windows.Window> 요소에서 다음 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 네임 스페이스 매핑을 추가 합니다.
+4. <xref:System.Windows.Window> 요소에서 다음 Windows Forms 네임 스페이스 매핑을 추가 합니다.
 
     ```xaml
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
@@ -113,7 +113,7 @@ ms.locfileid: "73976575"
 
 ## <a name="displaying-data-by-using-interoperation"></a>상호 운용성을 사용하여 데이터 표시
 
-선택한 고객에 해당 하는 주문이 `dataGridView1`이라는 <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> 컨트롤에 표시 됩니다. `dataGridView1` 컨트롤은 코드 숨김이 있는 파일의 데이터 소스에 바인딩됩니다. <xref:System.Windows.Forms.Integration.WindowsFormsHost> 컨트롤은이 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤의 부모입니다.
+선택한 고객에 해당 하는 주문이 `dataGridView1`이라는 <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> 컨트롤에 표시 됩니다. `dataGridView1` 컨트롤은 코드 숨김이 있는 파일의 데이터 소스에 바인딩됩니다. <xref:System.Windows.Forms.Integration.WindowsFormsHost> 컨트롤은이 Windows Forms 컨트롤의 부모입니다.
 
 ### <a name="to-display-data-in-the-datagridview-control"></a>DataGridView 컨트롤에 데이터를 표시하려면
 
@@ -179,7 +179,7 @@ Visual Studio를 사용 하면 프로젝트에 데이터 소스를 쉽게 추가
      [!code-csharp[WPFWithWFAndDatabinding#14](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#14)]
      [!code-vb[WPFWithWFAndDatabinding#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#14)]
 
-10. F5 키를 눌러 애플리케이션을 빌드하고 실행합니다.
+10. F5 키를 눌러 응용 프로그램을 빌드하고 실행합니다.
 
 ## <a name="see-also"></a>참조
 

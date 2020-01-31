@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 796de687-7dd4-4b7b-a10b-8bf22dc7779f
 topic_type:
 - apiref
-ms.openlocfilehash: 6969c23bcf3ea19bf6e404996d477f669f0eee5b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6de2cb7c1a1423c5bd38a6f2e5d01c39166ab119
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122400"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791326"
 ---
 # <a name="icordebugthreadenum-interface"></a>ICorDebugThreadEnum 인터페이스
 ICorDebugEnum 메서드를 구현 하 고 ICorDebugThread 배열을 열거 합니다.  
@@ -28,7 +28,7 @@ ICorDebugEnum 메서드를 구현 하 고 ICorDebugThread 배열을 열거 합�
   
 |메서드|설명|  
 |------------|-----------------|  
-|[Next 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugthreadenum-next-method.md)|현재 위치에서 시작 하 여 열거형에서 지정 된 수의 `ICorDebugThread` 인스턴스를 가져옵니다.|  
+|[Next 메서드](icordebugthreadenum-next-method.md)|현재 위치에서 시작 하 여 열거형에서 지정 된 수의 `ICorDebugThread` 인스턴스를 가져옵니다.|  
   
 ## <a name="remarks"></a>주의  
   
@@ -46,4 +46,4 @@ ICorDebugEnum 메서드를 구현 하 고 ICorDebugThread 배열을 열거 합�
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

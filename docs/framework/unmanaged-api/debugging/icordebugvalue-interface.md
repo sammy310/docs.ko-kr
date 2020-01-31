@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b2f7007f-c446-4b18-aed1-a25cff8aee31
 topic_type:
 - apiref
-ms.openlocfilehash: 77d28d8eef97a934c15ac29725f856f4bf39e6ce
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e1044386bd6251132703c4e98a0cf2ed267d34e0
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140152"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791146"
 ---
 # <a name="icordebugvalue-interface"></a>ICorDebugValue 인터페이스
 디버그 중인 프로세스의 값을 나타냅니다. 값은 읽기 또는 쓰기 값일 수 있습니다.  
@@ -28,15 +28,15 @@ ms.locfileid: "73140152"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[CreateBreakpoint 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-createbreakpoint-method.md)|이 메서드는 현재 구현 되어 있지 않습니다.|  
-|[GetAddress 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getaddress-method.md)|디버깅 중인이 `ICorDebugValue` 개체의 주소를 가져옵니다.|  
-|[GetSize 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md)|이 `ICorDebugValue` 개체의 크기 (바이트)를 가져옵니다.|  
-|[GetType 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md)|이 `ICorDebugValue` 개체의 기본 형식을 가져옵니다.|  
+|[CreateBreakpoint 메서드](icordebugvalue-createbreakpoint-method.md)|현재 이 메서드는 구현되지 않습니다.|  
+|[GetAddress 메서드](icordebugvalue-getaddress-method.md)|디버깅 중인이 `ICorDebugValue` 개체의 주소를 가져옵니다.|  
+|[GetSize 메서드](icordebugvalue-getsize-method.md)|이 `ICorDebugValue` 개체의 크기 (바이트)를 가져옵니다.|  
+|[GetType 메서드](icordebugvalue-gettype-method.md)|이 `ICorDebugValue` 개체의 기본 형식을 가져옵니다.|  
   
 ## <a name="remarks"></a>주의  
  일반적으로 값 개체의 소유권은 반환 될 때 전달 됩니다. 개체를 사용 하 여 작업이 완료 되 면 수신자는 개체에서 참조를 제거할 책임이 있습니다.  
   
- 값이 검색 된 위치에 따라 프로세스가 다시 시작 된 후에는 값이 유효 하지 않을 수 있습니다. 따라서 일반적으로 [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) 메서드를 호출 하는 동안 값을 보유 하면 안 됩니다.  
+ 값이 검색 된 위치에 따라 프로세스가 다시 시작 된 후에는 값이 유효 하지 않을 수 있습니다. 따라서 일반적으로 [ICorDebugController:: Continue](icordebugcontroller-continue-method.md) 메서드를 호출 하는 동안 값을 보유 하면 안 됩니다.  
   
 > [!NOTE]
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
@@ -52,5 +52,5 @@ ms.locfileid: "73140152"
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugValue3 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugValue3 인터페이스](icordebugvalue3-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

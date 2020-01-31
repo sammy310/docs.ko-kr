@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dbc498a8-ba3f-42f2-bdd9-b623c77a1019
 topic_type:
 - apiref
-ms.openlocfilehash: 8e5583acfe338c185200c0b8e41b7d6e051fa146
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 54a5fb50a0177fe9886582c112f16ce871ea9df4
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131349"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792069"
 ---
 # <a name="icordebugregisterset2getregisters-method"></a>ICorDebugRegisterSet2::GetRegisters 메서드
 지정 된 비트 마스크로 지정 된 각 레지스터의 값 (코드가 현재 실행 중인 플랫폼의 경우)을 가져옵니다.  
@@ -56,7 +56,7 @@ HRESULT GetRegisters (
   
  `ICorDebugRegisterSet2::GetRegisters` 메서드는 레지스터가 64 개를 초과 하는 플랫폼에 필요 합니다. 예를 들어 IA64에는 128 범용 레지스터와 128 부동 소수점 레지스터가 있으므로 비트 마스크에 64 비트 이상이 필요 합니다.  
   
- 64 개 이상의 레지스터가 있는 경우 x 86과 같은 플랫폼의 경우 처럼 `GetRegisters` 메서드는 실제로 `mask` 바이트 배열의 바이트를 `ULONG64` 변환한 다음 [ICorDebugRegisterSet:: GetRegisters](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregisters-method.md) 메서드를 호출 합니다. 는 `ULONG64` 마스크를 사용 합니다.  
+ 64 개 이상의 레지스터가 없는 경우 x86 등의 플랫폼에서와 같이 `GetRegisters` 메서드는 실제로 `mask` 바이트 배열의 바이트를 `ULONG64` 변환한 다음 [ICorDebugRegisterSet:: GetRegisters](icordebugregisterset-getregisters-method.md) 메서드를 호출 합니다 .이 메서드는 `ULONG64` 마스크를 사용 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -69,5 +69,5 @@ HRESULT GetRegisters (
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugRegisterSet2 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
-- [ICorDebugRegisterSet 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+- [ICorDebugRegisterSet2 인터페이스](icordebugregisterset2-interface.md)
+- [ICorDebugRegisterSet 인터페이스](icordebugregisterset-interface.md)

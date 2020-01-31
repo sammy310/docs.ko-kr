@@ -1,15 +1,15 @@
 ---
-title: 'ICorDebugVariableSymbol:: GetValue 메서드'
+title: ICorDebugVariableSymbol::GetValue 메서드
 ms.date: 03/30/2017
 ms.assetid: 90abece1-392e-4ade-94a1-30c75b0f7074
-ms.openlocfilehash: 5ef7e67efb2bafd9b9f52203246fd7d1590e6107
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2dc074384d209d0740a1fb0a9a16d96ff355f02b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120962"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790875"
 ---
-# <a name="icordebugvariablesymbolgetvalue-method"></a>ICorDebugVariableSymbol:: GetValue 메서드
+# <a name="icordebugvariablesymbolgetvalue-method"></a>ICorDebugVariableSymbol::GetValue 메서드
 변수의 값을 바이트 배열로 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -60,5 +60,5 @@ HRESULT GetValue(
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugVariableSymbol 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugVariableSymbol 인터페이스](icordebugvariablesymbol-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

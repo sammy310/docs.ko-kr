@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 257d6076-06e0-4d93-bb33-651fbb2b92d7
 topic_type:
 - apiref
-ms.openlocfilehash: 4c5b8f18424ba54d9e8e14ba0a518a89e0d54796
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8168f6f1079ec34b9fb53a485da0f32175446719
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439471"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865430"
 ---
 # <a name="icorprofilercallback3profilerattachcomplete-method"></a>ICorProfilerCallback3::ProfilerAttachComplete 메서드
-프로파일러가 [ICorProfilerInfo3:: EnumJITedFunctions](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enumjitedfunctions-method.md) 및 [ICorProfilerInfo3:: enummodules](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enummodules-method.md) catch 메서드를 호출할 수 있음을 나타내기 위해 CLR (공용 언어 런타임)에 의해 호출 됩니다.  
+프로파일러가 [ICorProfilerInfo3:: EnumJITedFunctions](icorprofilerinfo3-enumjitedfunctions-method.md) 및 [ICorProfilerInfo3:: enummodules](icorprofilerinfo3-enummodules-method.md) catch 메서드를 호출할 수 있음을 나타내기 위해 CLR (공용 언어 런타임)에 의해 호출 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -31,8 +31,8 @@ ms.locfileid: "74439471"
 HRESULT ProfilerAttachComplete ();  
 ```  
   
-## <a name="remarks"></a>설명  
- `ProfilerAttachComplete` 콜백은 [ICorProfilerCallback3:: InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) 메서드가 호출 된 후에 실행 됩니다. 다음을 나타냅니다.  
+## <a name="remarks"></a>주의  
+ `ProfilerAttachComplete` 콜백은 [ICorProfilerCallback3:: InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) 메서드가 호출 된 후에 실행 됩니다. 다음을 나타냅니다.  
   
 - `InitializeForAttach`에서 프로파일러가 요청한 콜백이 활성화되었습니다.  
   
@@ -49,9 +49,9 @@ HRESULT ProfilerAttachComplete ();
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ICorProfilerInfo3 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [프로파일링](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
+- [ICorProfilerInfo3 인터페이스](icorprofilerinfo3-interface.md)
+- [프로파일링 인터페이스](profiling-interfaces.md)
+- [프로파일링](index.md)

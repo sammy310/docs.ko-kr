@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 783faea9-8083-41c1-b04a-51a81ac4c8f3
 topic_type:
 - apiref
-ms.openlocfilehash: eb2b1e218314be01898ce90c4378fb713f9bf6ba
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ba0e0b1b2bac785e28f41e09dda74841121a748d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137859"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794511"
 ---
 # <a name="icordebugfunction-interface"></a>ICorDebugFunction 인터페이스
 
@@ -29,17 +29,17 @@ ms.locfileid: "73137859"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[CreateBreakpoint 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-createbreakpoint-method.md)|이 함수의 시작 부분에 중단점을 만듭니다.|  
-|[GetClass 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getclass-method.md)|이 함수가 멤버인 클래스를 나타내는 ICorDebugClass 개체를 가져옵니다.|  
-|[GetCurrentVersionNumber 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getcurrentversionnumber-method.md)|이 함수에 대 한 최신 편집의 버전 번호를 가져옵니다.|  
-|[GetILCode 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getilcode-method.md)|이 함수의 MSIL (Microsoft 중간 언어) 코드를 가져옵니다.|  
-|[GetLocalVarSigToken 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getlocalvarsigtoken-method.md)|이 `ICorDebugFunction` 인스턴스가 나타내는 함수의 지역 변수 서명에 대 한 메타 데이터 토큰을 가져옵니다.|  
-|[GetModule 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getmodule-method.md)|이 함수가 정의 된 모듈을 가져옵니다.|  
-|[GetNativeCode 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getnativecode-method.md)|이 함수에 대 한 네이티브 코드를 가져옵니다.|  
-|[GetToken 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-gettoken-method.md)|이 함수에 대 한 메타 데이터 토큰을 가져옵니다.|  
+|[CreateBreakpoint 메서드](icordebugfunction-createbreakpoint-method.md)|이 함수의 시작 부분에 중단점을 만듭니다.|  
+|[GetClass 메서드](icordebugfunction-getclass-method.md)|이 함수가 멤버인 클래스를 나타내는 ICorDebugClass 개체를 가져옵니다.|  
+|[GetCurrentVersionNumber 메서드](icordebugfunction-getcurrentversionnumber-method.md)|이 함수에 대 한 최신 편집의 버전 번호를 가져옵니다.|  
+|[GetILCode 메서드](icordebugfunction-getilcode-method.md)|이 함수의 MSIL (Microsoft 중간 언어) 코드를 가져옵니다.|  
+|[GetLocalVarSigToken 메서드](icordebugfunction-getlocalvarsigtoken-method.md)|이 `ICorDebugFunction` 인스턴스가 나타내는 함수의 지역 변수 서명에 대 한 메타 데이터 토큰을 가져옵니다.|  
+|[GetModule 메서드](icordebugfunction-getmodule-method.md)|이 함수가 정의 된 모듈을 가져옵니다.|  
+|[GetNativeCode 메서드](icordebugfunction-getnativecode-method.md)|이 함수에 대 한 네이티브 코드를 가져옵니다.|  
+|[GetToken 메서드](icordebugfunction-gettoken-method.md)|이 함수에 대 한 메타 데이터 토큰을 가져옵니다.|  
   
 ## <a name="remarks"></a>주의  
- `ICorDebugFunction` 인터페이스가 제네릭 형식 매개 변수가 있는 함수를 나타내지 않습니다. 예를 들어 `ICorDebugFunction` 인스턴스는 `Func<T>`를 나타내지만 `Func<string>`되지 않습니다. [ICorDebugILFrame2:: Enumerat 매개 변수](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md) 를 호출 하 여 제네릭 형식 매개 변수를 가져옵니다.  
+ `ICorDebugFunction` 인터페이스가 제네릭 형식 매개 변수가 있는 함수를 나타내지 않습니다. 예를 들어 `ICorDebugFunction` 인스턴스는 `Func<T>`를 나타내지만 `Func<string>`되지 않습니다. [ICorDebugILFrame2:: Enumerat 매개 변수](icordebugilframe2-enumeratetypeparameters-method.md) 를 호출 하 여 제네릭 형식 매개 변수를 가져옵니다.  
   
  메서드의 메타 데이터 토큰, `mdMethodDef`및 메서드의 `ICorDebugFunction` 개체 간 관계는 함수에서 편집 하며 계속 하기가 허용 되는지 여부에 따라 달라 집니다.  
   
@@ -61,4 +61,4 @@ ms.locfileid: "73137859"
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

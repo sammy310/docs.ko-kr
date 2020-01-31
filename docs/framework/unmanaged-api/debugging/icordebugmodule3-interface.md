@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0b69f945-263a-4e11-8512-89d27f6ea296
 topic_type:
 - apiref
-ms.openlocfilehash: 07919398b658d735fe4c9818ab24d27d586b6629
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 33acc4d9a0819c43d17c362fcbea2e7636521fd3
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122558"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792930"
 ---
 # <a name="icordebugmodule3-interface"></a>ICorDebugModule3 인터페이스
 동적 모듈에 대한 기호 판독기를 만듭니다.  
@@ -41,7 +41,7 @@ interface ICorDebugModule3 : IUnknown
   
 |메서드|설명|  
 |------------|-----------------|  
-|[ICorDebugModule3::CreateReaderForInMemorySymbols 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule3-createreaderforinmemorysymbols-method.md)|동적 모듈에 대 한 기호 판독기 (일반적으로 [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md))를 만듭니다.|  
+|[ICorDebugModule3::CreateReaderForInMemorySymbols 메서드](icordebugmodule3-createreaderforinmemorysymbols-method.md)|동적 모듈에 대 한 기호 판독기 (일반적으로 [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md))를 만듭니다.|  
   
 ## <a name="remarks"></a>주의  
  이 인터페이스는 "ICorDebugModule" 및 "ICorDebugModule2" 인터페이스를 논리적으로 확장 합니다.  
@@ -60,7 +60,7 @@ interface ICorDebugModule3 : IUnknown
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugRemoteTarget 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
-- [ICorDebug 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebugRemoteTarget 인터페이스](icordebugremotetarget-interface.md)
+- [ICorDebug 인터페이스](icordebug-interface.md)
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

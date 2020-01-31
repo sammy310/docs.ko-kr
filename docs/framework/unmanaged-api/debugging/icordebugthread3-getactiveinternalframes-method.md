@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d69796b4-5b6d-457c-85f6-2cf42e8a8773
 topic_type:
 - apiref
-ms.openlocfilehash: b4f228d55c9ffd6b85ebd0b430a7f5db404320f6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 25cd3e05bc80dd39d2ca558bb4dd5fb77d255f5a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124340"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791406"
 ---
 # <a name="icordebugthread3getactiveinternalframes-method"></a>ICorDebugThread3::GetActiveInternalFrames 메서드
-스택에서 내부 프레임 ([ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) 개체)의 배열을 반환 합니다.  
+스택에서 내부 프레임 ([ICorDebugInternalFrame2](icordebuginternalframe2-interface.md) 개체)의 배열을 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -52,7 +52,7 @@ HRESULT GetActiveInternalFrames
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|[ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) 개체를 만들었습니다.|  
+|S_OK|[ICorDebugInternalFrame2](icordebuginternalframe2-interface.md) 개체를 만들었습니다.|  
 |E_INVALIDARG|`cInternalFrames` 0이 아니고 `ppInternalFrames` `null`되거나 `pcInternalFrames` `null`입니다.|  
 |HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|`ppInternalFrames` 내부 프레임 수 보다 작습니다.|  
   
@@ -65,7 +65,7 @@ HRESULT GetActiveInternalFrames
   
  그런 다음 `GetActiveInternalFrames`를 두 번째로 호출 해야 합니다. `cInternalFrames` 매개 변수에서 적절 한 개수 (`pcInternalFrames`)를 전달 하 고 `ppInternalFrames`에서 적절 하 게 크기가 지정 된 배열에 대 한 포인터를 지정 해야 합니다.  
   
- [ICorDebugStackWalk:: GetFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) 메서드를 사용 하 여 실제 스택 프레임을 반환 합니다.  
+ [ICorDebugStackWalk:: GetFrame](icordebugthread3-getactiveinternalframes-method.md) 메서드를 사용 하 여 실제 스택 프레임을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -78,5 +78,5 @@ HRESULT GetActiveInternalFrames
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [디버깅 인터페이스](debugging-interfaces.md)
+- [디버깅](index.md)
