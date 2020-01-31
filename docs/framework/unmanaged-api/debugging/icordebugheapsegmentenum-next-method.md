@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 51625fd0-7399-49c7-b22b-5dfb05451fe6
 topic_type:
 - apiref
-ms.openlocfilehash: 897fb56cacb51e98cf8f1778c3529617decb5ecb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 89ce4eafa46be3e9ba7cdb06884034a521e43bca
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138437"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777532"
 ---
-# <a name="icordebugheapsegmentenumnext-method"></a><span data-ttu-id="323b2-102">ICorDebugHeapSegmentEnum::Next 메서드</span><span class="sxs-lookup"><span data-stu-id="323b2-102">ICorDebugHeapSegmentEnum::Next Method</span></span>
-<span data-ttu-id="323b2-103">관리 되는 힙의 메모리 영역에 대 한 정보를 포함 하는 지정 된 수의 [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) 인스턴스를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="323b2-103">Gets the specified number of [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) instances that contain information about memory regions of the managed heap.</span></span>  
+# <a name="icordebugheapsegmentenumnext-method"></a><span data-ttu-id="be788-102">ICorDebugHeapSegmentEnum::Next 메서드</span><span class="sxs-lookup"><span data-stu-id="be788-102">ICorDebugHeapSegmentEnum::Next Method</span></span>
+<span data-ttu-id="be788-103">관리 되는 힙의 메모리 영역에 대 한 정보를 포함 하는 지정 된 수의 [COR_HEAPOBJECT](cor-heapobject-structure.md) 인스턴스를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="be788-103">Gets the specified number of [COR_HEAPOBJECT](cor-heapobject-structure.md) instances that contain information about memory regions of the managed heap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="323b2-104">구문</span><span class="sxs-lookup"><span data-stu-id="323b2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="be788-104">구문</span><span class="sxs-lookup"><span data-stu-id="be788-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Next(  
@@ -34,28 +34,28 @@ HRESULT Next(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="323b2-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="323b2-105">Parameters</span></span>  
- <span data-ttu-id="323b2-106">celt</span><span class="sxs-lookup"><span data-stu-id="323b2-106">celt</span></span>  
- <span data-ttu-id="323b2-107">진행 검색할 세그먼트 수입니다.</span><span class="sxs-lookup"><span data-stu-id="323b2-107">[in] The number of segments to be retrieved.</span></span>  
+## <a name="parameters"></a><span data-ttu-id="be788-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="be788-105">Parameters</span></span>  
+ <span data-ttu-id="be788-106">celt</span><span class="sxs-lookup"><span data-stu-id="be788-106">celt</span></span>  
+ <span data-ttu-id="be788-107">진행 검색할 세그먼트 수입니다.</span><span class="sxs-lookup"><span data-stu-id="be788-107">[in] The number of segments to be retrieved.</span></span>  
   
- <span data-ttu-id="323b2-108">세그먼트</span><span class="sxs-lookup"><span data-stu-id="323b2-108">segments</span></span>  
- <span data-ttu-id="323b2-109">제한이 각각 관리 되는 힙에서 메모리 영역에 대 한 정보를 제공 하는 [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) 개체를 가리키는 포인터의 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="323b2-109">[out] An array of pointers, each of which points to a [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) object that provides information about a region of memory in the managed heap.</span></span>  
+ <span data-ttu-id="be788-108">세그먼트</span><span class="sxs-lookup"><span data-stu-id="be788-108">segments</span></span>  
+ <span data-ttu-id="be788-109">제한이 각각 관리 되는 힙에서 메모리 영역에 대 한 정보를 제공 하는 [COR_HEAPOBJECT](cor-heapobject-structure.md) 개체를 가리키는 포인터의 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="be788-109">[out] An array of pointers, each of which points to a [COR_HEAPOBJECT](cor-heapobject-structure.md) object that provides information about a region of memory in the managed heap.</span></span>  
   
- <span data-ttu-id="323b2-110">pceltFetched</span><span class="sxs-lookup"><span data-stu-id="323b2-110">pceltFetched</span></span>  
- <span data-ttu-id="323b2-111">제한이 `segments`에서 실제로 반환 된 [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) 개체 수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="323b2-111">[out] A pointer to the number of [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) objects actually returned in `segments`.</span></span> <span data-ttu-id="323b2-112">`celt`가 1이면 이 값은 `null`일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="323b2-112">This value may be `null` if `celt` is 1.</span></span>  
+ <span data-ttu-id="be788-110">pceltFetched</span><span class="sxs-lookup"><span data-stu-id="be788-110">pceltFetched</span></span>  
+ <span data-ttu-id="be788-111">제한이 `segments`에서 실제로 반환 된 [COR_HEAPOBJECT](cor-heapobject-structure.md) 개체 수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="be788-111">[out] A pointer to the number of [COR_HEAPOBJECT](cor-heapobject-structure.md) objects actually returned in `segments`.</span></span> <span data-ttu-id="be788-112">`celt`가 1이면 이 값은 `null`일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="be788-112">This value may be `null` if `celt` is 1.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="323b2-113">주의</span><span class="sxs-lookup"><span data-stu-id="323b2-113">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="be788-113">주의</span><span class="sxs-lookup"><span data-stu-id="be788-113">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="323b2-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="323b2-114">Requirements</span></span>  
- <span data-ttu-id="323b2-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="323b2-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="be788-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="be788-114">Requirements</span></span>  
+ <span data-ttu-id="be788-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="be788-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="323b2-116">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="323b2-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="be788-116">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="be788-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="323b2-117">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="323b2-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="be788-117">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="be788-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="323b2-118">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="323b2-118">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="be788-118">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="be788-118">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="323b2-119">참조</span><span class="sxs-lookup"><span data-stu-id="323b2-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="be788-119">참조</span><span class="sxs-lookup"><span data-stu-id="be788-119">See also</span></span>
 
-- [<span data-ttu-id="323b2-120">ICorDebugHeapSegmentEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="323b2-120">ICorDebugHeapSegmentEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md)
-- [<span data-ttu-id="323b2-121">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="323b2-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="be788-120">ICorDebugHeapSegmentEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="be788-120">ICorDebugHeapSegmentEnum Interface</span></span>](icordebugheapsegmentenum-interface.md)
+- [<span data-ttu-id="be788-121">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="be788-121">Debugging Interfaces</span></span>](debugging-interfaces.md)

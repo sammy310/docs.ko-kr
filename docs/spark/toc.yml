@@ -29,6 +29,8 @@
       href: how-to-guides/hdinsight-deploy-methods.md
     - name: Databricks에 작업 제출
       href: how-to-guides/databricks-deploy-methods.md
+    - name: 작업자 및 UDF 이진 파일 배포
+      href: how-to-guides/deploy-worker-udf-binaries.md
 - name: 참고
   items:
     - name: API 참조

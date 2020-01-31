@@ -111,6 +111,8 @@
           href: native-interop/qualify-net-types-for-interoperation.md
     - name: Interop 특성 적용
       href: native-interop/apply-interop-attributes.md
+    - name: 예외
+      href: native-interop/exceptions-interoperability.md
 - name: 컬렉션 및 데이터 구조
   href: collections/
 - name: .NET의 숫자
