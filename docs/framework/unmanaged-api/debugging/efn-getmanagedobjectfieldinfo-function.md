@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3b93bcff-62a4-47b2-babc-6bcf4216119a
 topic_type:
 - apiref
-ms.openlocfilehash: b68f24908a5b214d507da8e8a4636a7c55259604
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 182424632e4f81dfdf86e87dc6bb2c75c2780fce
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123014"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793768"
 ---
 # <a name="_efn_getmanagedobjectfieldinfo-function"></a>\_EFN\_GetManagedObjectFieldInfo 함수
 제공된 개체 포인터와 필드 이름을 사용하여 개체 시작부터 필드 및 필드 값까지의 오프셋을 가져옵니다.  
@@ -55,15 +55,15 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
 ## <a name="remarks"></a>주의  
  오프셋이 0 이면 오프셋이 기록 되지 않습니다.  
   
- 현재 컨텍스트에 있는 스레드에 관리 코드가 없으면 함수는 기능 값 0xa0 및 0x1000 오류 코드와 함께 HRESULT SOS_E_NOMANAGEDCODE를 반환 합니다.  
+ 현재 컨텍스트에 있는 스레드에 관리 코드가 없는 경우 함수는 기능 값 0xa0 및 0x1000 오류 코드를 사용 하 여 HRESULT SOS_E_NOMANAGEDCODE을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** SOS_Stacktrace  
+ **헤더:** SOS_Stacktrace. h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 전역 정적 함수](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [디버깅 전역 정적 함수](debugging-global-static-functions.md)

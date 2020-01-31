@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef782c53-dae7-4990-b4ad-fddb1e690d4e
 topic_type:
 - apiref
-ms.openlocfilehash: fd224279b3df6c9e8e55cd81ebfbf2e5ea2428d5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 0ed7a0619816caab64361d7922d28b18c60ed453
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440783"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790266"
 ---
 # <a name="functionenter3-function"></a>FunctionEnter3 함수
 컨트롤이 함수에 전달 되 고 있음을 프로파일러에 알립니다.  
@@ -30,11 +30,13 @@ ms.locfileid: "74440783"
 void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);  
 ```  
   
-## <a name="parameters"></a>매개 변수  
- `functionOrRemappedID`  
- 진행 제어가 전달 되는 함수의 식별자입니다.  
-  
-## <a name="remarks"></a>설명  
+## <a name="parameters"></a>매개 변수
+
+- `functionOrRemappedID`
+
+  \[] 컨트롤을 전달할 함수의 식별자입니다.
+
+## <a name="remarks"></a>주의  
  `FunctionEnter3` 콜백 함수는 함수가 호출 될 때 프로파일러에 알립니다. 하지만 인수 검사는 지원 하지 않습니다. [ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) 를 사용 하 여이 함수의 구현을 등록 합니다.  
   
  `FunctionEnter3` 함수는 콜백입니다. 구현 해야 합니다. 구현에서 `__declspec(naked)` 저장소 클래스 특성을 사용 해야 합니다.  
@@ -54,7 +56,7 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)
 - [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)
