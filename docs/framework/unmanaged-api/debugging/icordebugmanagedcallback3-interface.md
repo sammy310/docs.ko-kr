@@ -14,40 +14,40 @@ helpviewer_keywords:
 ms.assetid: a95389d3-cf2e-47a4-9805-61426acc6b65
 topic_type:
 - apiref
-ms.openlocfilehash: 8da04b0c620404e0dad8227c7a627f75507389a7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b97f29b94ed4fad6892697ca1c7ed4a20c99c03e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128031"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793275"
 ---
-# <a name="icordebugmanagedcallback3-interface"></a><span data-ttu-id="0b55d-102">ICorDebugManagedCallback3 인터페이스</span><span class="sxs-lookup"><span data-stu-id="0b55d-102">ICorDebugManagedCallback3 Interface</span></span>
-<span data-ttu-id="0b55d-103">활성화된 사용자 지정 디버거 알림이 발생했음을 나타내는 콜백 메서드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="0b55d-103">Provides a callback method that indicates that an enabled custom debugger notification has been raised.</span></span>  
+# <a name="icordebugmanagedcallback3-interface"></a><span data-ttu-id="d57b1-102">ICorDebugManagedCallback3 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d57b1-102">ICorDebugManagedCallback3 Interface</span></span>
+<span data-ttu-id="d57b1-103">활성화된 사용자 지정 디버거 알림이 발생했음을 나타내는 콜백 메서드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="d57b1-103">Provides a callback method that indicates that an enabled custom debugger notification has been raised.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="0b55d-104">메서드</span><span class="sxs-lookup"><span data-stu-id="0b55d-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="d57b1-104">메서드</span><span class="sxs-lookup"><span data-stu-id="d57b1-104">Methods</span></span>  
   
-|<span data-ttu-id="0b55d-105">메서드</span><span class="sxs-lookup"><span data-stu-id="0b55d-105">Method</span></span>|<span data-ttu-id="0b55d-106">설명</span><span class="sxs-lookup"><span data-stu-id="0b55d-106">Description</span></span>|  
+|<span data-ttu-id="d57b1-105">메서드</span><span class="sxs-lookup"><span data-stu-id="d57b1-105">Method</span></span>|<span data-ttu-id="d57b1-106">설명</span><span class="sxs-lookup"><span data-stu-id="d57b1-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="0b55d-107">CustomNotification 메서드</span><span class="sxs-lookup"><span data-stu-id="0b55d-107">CustomNotification Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md)|<span data-ttu-id="0b55d-108">사용 하도록 설정 된 사용자 지정 디버거 알림이 발생 했음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="0b55d-108">Indicates that an enabled custom debugger notification has been raised.</span></span>|  
+|[<span data-ttu-id="d57b1-107">CustomNotification 메서드</span><span class="sxs-lookup"><span data-stu-id="d57b1-107">CustomNotification Method</span></span>](icordebugmanagedcallback3-customnotification-method.md)|<span data-ttu-id="d57b1-108">사용 하도록 설정 된 사용자 지정 디버거 알림이 발생 했음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d57b1-108">Indicates that an enabled custom debugger notification has been raised.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0b55d-109">주의</span><span class="sxs-lookup"><span data-stu-id="0b55d-109">Remarks</span></span>  
- <span data-ttu-id="0b55d-110">이 인터페이스는 [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md) 및 [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) 인터페이스의 논리적 확장입니다.</span><span class="sxs-lookup"><span data-stu-id="0b55d-110">This interface is a logical extension of the [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md) and [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) interfaces.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d57b1-109">주의</span><span class="sxs-lookup"><span data-stu-id="d57b1-109">Remarks</span></span>  
+ <span data-ttu-id="d57b1-110">이 인터페이스는 [ICorDebugManagedCallback](icordebugmanagedcallback-interface.md) 및 [ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md) 인터페이스의 논리적 확장입니다.</span><span class="sxs-lookup"><span data-stu-id="d57b1-110">This interface is a logical extension of the [ICorDebugManagedCallback](icordebugmanagedcallback-interface.md) and [ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md) interfaces.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="0b55d-111">이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="0b55d-111">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="d57b1-111">이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d57b1-111">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0b55d-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="0b55d-112">Requirements</span></span>  
- <span data-ttu-id="0b55d-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="0b55d-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d57b1-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d57b1-112">Requirements</span></span>  
+ <span data-ttu-id="d57b1-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d57b1-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0b55d-114">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0b55d-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d57b1-114">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d57b1-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0b55d-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0b55d-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d57b1-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d57b1-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0b55d-116">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0b55d-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="d57b1-116">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d57b1-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0b55d-117">참조</span><span class="sxs-lookup"><span data-stu-id="0b55d-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d57b1-117">참조</span><span class="sxs-lookup"><span data-stu-id="d57b1-117">See also</span></span>
 
-- [<span data-ttu-id="0b55d-118">ICorDebugManagedCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="0b55d-118">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
-- [<span data-ttu-id="0b55d-119">ICorDebugManagedCallback2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="0b55d-119">ICorDebugManagedCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [<span data-ttu-id="0b55d-120">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="0b55d-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="0b55d-121">디버깅</span><span class="sxs-lookup"><span data-stu-id="0b55d-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="d57b1-118">ICorDebugManagedCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d57b1-118">ICorDebugManagedCallback Interface</span></span>](icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="d57b1-119">ICorDebugManagedCallback2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d57b1-119">ICorDebugManagedCallback2 Interface</span></span>](icordebugmanagedcallback2-interface.md)
+- [<span data-ttu-id="d57b1-120">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d57b1-120">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="d57b1-121">디버깅</span><span class="sxs-lookup"><span data-stu-id="d57b1-121">Debugging</span></span>](index.md)

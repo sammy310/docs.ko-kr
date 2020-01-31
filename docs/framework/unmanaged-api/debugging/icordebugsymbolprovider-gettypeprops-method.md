@@ -1,18 +1,18 @@
 ---
-title: 'ICorDebugSymbolProvider:: GetTypeProps 메서드'
+title: ICorDebugSymbolProvider::GetTypeProps 메서드
 ms.date: 03/30/2017
 ms.assetid: 35ac4140-91ea-4c77-b1c4-1daf41986ca5
-ms.openlocfilehash: c87d9f6d0a719dae5e532e9c0369a7f9fc03748a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5fa091eaf2cf93b0c645effeec3c959d42665fc9
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133675"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791543"
 ---
-# <a name="icordebugsymbolprovidergettypeprops-method"></a><span data-ttu-id="ad374-102">ICorDebugSymbolProvider:: GetTypeProps 메서드</span><span class="sxs-lookup"><span data-stu-id="ad374-102">ICorDebugSymbolProvider::GetTypeProps Method</span></span>
-<span data-ttu-id="ad374-103">vtable에 RVA(상대 가상 주소)가 제공된 경우 해당 제네릭 매개 변수의 서명 수와 같은 형식의 속성 정보를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="ad374-103">Returns information about a type's properties, such as the number of signature of its generic parameters, given a relative virtual address (RVA) in a vtable.</span></span>  
+# <a name="icordebugsymbolprovidergettypeprops-method"></a><span data-ttu-id="72b7b-102">ICorDebugSymbolProvider::GetTypeProps 메서드</span><span class="sxs-lookup"><span data-stu-id="72b7b-102">ICorDebugSymbolProvider::GetTypeProps Method</span></span>
+<span data-ttu-id="72b7b-103">vtable에 RVA(상대 가상 주소)가 제공된 경우 해당 제네릭 매개 변수의 서명 수와 같은 형식의 속성 정보를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="72b7b-103">Returns information about a type's properties, such as the number of signature of its generic parameters, given a relative virtual address (RVA) in a vtable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ad374-104">구문</span><span class="sxs-lookup"><span data-stu-id="ad374-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="72b7b-104">구문</span><span class="sxs-lookup"><span data-stu-id="72b7b-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetTypeProps(  
@@ -23,36 +23,36 @@ HRESULT GetTypeProps(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ad374-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="ad374-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="72b7b-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="72b7b-105">Parameters</span></span>  
  `tableRva`  
- <span data-ttu-id="ad374-106">[in] vtable의 RVA(상대 가상 주소)입니다.</span><span class="sxs-lookup"><span data-stu-id="ad374-106">[in] A relative virtual address (RVA) in a vtable.</span></span>  
+ <span data-ttu-id="72b7b-106">[in] vtable의 RVA(상대 가상 주소)입니다.</span><span class="sxs-lookup"><span data-stu-id="72b7b-106">[in] A relative virtual address (RVA) in a vtable.</span></span>  
   
  `cbSignature`  
- <span data-ttu-id="ad374-107">[in] `signature` 배열의 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="ad374-107">[in] The size of the `signature` array.</span></span> <span data-ttu-id="ad374-108">설명 부분을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ad374-108">See the Remarks section.</span></span>  
+ <span data-ttu-id="72b7b-107">[in] `signature` 배열의 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="72b7b-107">[in] The size of the `signature` array.</span></span> <span data-ttu-id="72b7b-108">설명 부분을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="72b7b-108">See the Remarks section.</span></span>  
   
  `pcbSignature`  
- <span data-ttu-id="ad374-109">[out] [out] 반환된 `signature` 배열의 크기에 대한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="ad374-109">[out] [out] A pointer to the size of the returned `signature` array.</span></span>  
+ <span data-ttu-id="72b7b-109">[out] [out] 반환된 `signature` 배열의 크기에 대한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="72b7b-109">[out] [out] A pointer to the size of the returned `signature` array.</span></span>  
   
  `signature`  
- <span data-ttu-id="ad374-110">[out] 모든 제네릭 매개 변수의 typespec 서명을 보유하는 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="ad374-110">[out] A buffer that holds the typespec signatures of all generic parameters.</span></span>  
+ <span data-ttu-id="72b7b-110">[out] 모든 제네릭 매개 변수의 typespec 서명을 보유하는 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="72b7b-110">[out] A buffer that holds the typespec signatures of all generic parameters.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ad374-111">주의</span><span class="sxs-lookup"><span data-stu-id="ad374-111">Remarks</span></span>  
- <span data-ttu-id="ad374-112">형식의 `signature` 배열에 필요한 크기를 가져오려면 `cbSignature` 인수를 0으로 설정 하 고를 **null**로 `signature` 합니다.</span><span class="sxs-lookup"><span data-stu-id="ad374-112">To get the required size of the type's `signature` array, set the `cbSignature` argument to 0 and `signature` to **null**.</span></span> <span data-ttu-id="ad374-113">메서드가 반환되면 `signature` 배열에 필요한 바이트 수가 `pcbSignature`에 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="ad374-113">When the method returns, `pcbSignature` will contain the number of bytes required for the `signature` array.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="72b7b-111">주의</span><span class="sxs-lookup"><span data-stu-id="72b7b-111">Remarks</span></span>  
+ <span data-ttu-id="72b7b-112">형식의 `signature` 배열에 필요한 크기를 가져오려면 `cbSignature` 인수를 0으로 설정 하 고를 **null**로 `signature` 합니다.</span><span class="sxs-lookup"><span data-stu-id="72b7b-112">To get the required size of the type's `signature` array, set the `cbSignature` argument to 0 and `signature` to **null**.</span></span> <span data-ttu-id="72b7b-113">메서드가 반환되면 `signature` 배열에 필요한 바이트 수가 `pcbSignature`에 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="72b7b-113">When the method returns, `pcbSignature` will contain the number of bytes required for the `signature` array.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="ad374-114">이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ad374-114">This method is available with .NET Native only.</span></span>  
+> <span data-ttu-id="72b7b-114">이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="72b7b-114">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ad374-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ad374-115">Requirements</span></span>  
- <span data-ttu-id="ad374-116">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ad374-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="72b7b-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="72b7b-115">Requirements</span></span>  
+ <span data-ttu-id="72b7b-116">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="72b7b-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ad374-117">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ad374-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="72b7b-117">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="72b7b-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ad374-118">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ad374-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="72b7b-118">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="72b7b-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ad374-119">**.NET Framework 버전:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ad374-119">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="72b7b-119">**.NET Framework 버전:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="72b7b-119">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ad374-120">참조</span><span class="sxs-lookup"><span data-stu-id="ad374-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="72b7b-120">참조</span><span class="sxs-lookup"><span data-stu-id="72b7b-120">See also</span></span>
 
-- [<span data-ttu-id="ad374-121">GetMethodProps 메서드</span><span class="sxs-lookup"><span data-stu-id="ad374-121">GetMethodProps Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getmethodprops-method.md)
-- [<span data-ttu-id="ad374-122">ICorDebugSymbolProvider 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ad374-122">ICorDebugSymbolProvider Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [<span data-ttu-id="ad374-123">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ad374-123">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="72b7b-121">GetMethodProps 메서드</span><span class="sxs-lookup"><span data-stu-id="72b7b-121">GetMethodProps Method</span></span>](icordebugsymbolprovider-getmethodprops-method.md)
+- [<span data-ttu-id="72b7b-122">ICorDebugSymbolProvider 인터페이스</span><span class="sxs-lookup"><span data-stu-id="72b7b-122">ICorDebugSymbolProvider Interface</span></span>](icordebugsymbolprovider-interface.md)
+- [<span data-ttu-id="72b7b-123">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="72b7b-123">Debugging Interfaces</span></span>](debugging-interfaces.md)

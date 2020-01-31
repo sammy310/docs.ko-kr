@@ -14,42 +14,42 @@ helpviewer_keywords:
 ms.assetid: 76a136b5-e444-417a-8ade-f1596d597dc7
 topic_type:
 - apiref
-ms.openlocfilehash: 7d083655326333f18ee98f8e84fff2ed182dde6d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f54bb99df60d7b3fb7bb98de75fbae210597e45c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73103456"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790620"
 ---
-# <a name="icorpublishenum-interface"></a><span data-ttu-id="53b57-102">ICorPublishEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="53b57-102">ICorPublishEnum Interface</span></span>
-<span data-ttu-id="53b57-103">프로세스 및 응용 프로그램 도메인에 대 한 정보를 게시 하는 데 사용 되는 열거자에 대 한 추상 기본 인터페이스로 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="53b57-103">Serves as the abstract base interface for the enumerators that are used in the publishing of information about processes and application domains.</span></span>  
+# <a name="icorpublishenum-interface"></a><span data-ttu-id="f4a5c-102">ICorPublishEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f4a5c-102">ICorPublishEnum Interface</span></span>
+<span data-ttu-id="f4a5c-103">프로세스 및 응용 프로그램 도메인에 대 한 정보를 게시 하는 데 사용 되는 열거자에 대 한 추상 기본 인터페이스로 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f4a5c-103">Serves as the abstract base interface for the enumerators that are used in the publishing of information about processes and application domains.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="53b57-104">메서드</span><span class="sxs-lookup"><span data-stu-id="53b57-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="f4a5c-104">메서드</span><span class="sxs-lookup"><span data-stu-id="f4a5c-104">Methods</span></span>  
   
-|<span data-ttu-id="53b57-105">메서드</span><span class="sxs-lookup"><span data-stu-id="53b57-105">Method</span></span>|<span data-ttu-id="53b57-106">설명</span><span class="sxs-lookup"><span data-stu-id="53b57-106">Description</span></span>|  
+|<span data-ttu-id="f4a5c-105">메서드</span><span class="sxs-lookup"><span data-stu-id="f4a5c-105">Method</span></span>|<span data-ttu-id="f4a5c-106">설명</span><span class="sxs-lookup"><span data-stu-id="f4a5c-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="53b57-107">Clone 메서드</span><span class="sxs-lookup"><span data-stu-id="53b57-107">Clone Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-clone-method.md)|<span data-ttu-id="53b57-108">이 `ICorPublishEnum` 개체의 복사본을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="53b57-108">Creates a copy of this `ICorPublishEnum` object.</span></span>|  
-|[<span data-ttu-id="53b57-109">GetCount 메서드</span><span class="sxs-lookup"><span data-stu-id="53b57-109">GetCount Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-getcount-method.md)|<span data-ttu-id="53b57-110">열거형의 항목 수를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="53b57-110">Gets the number of items in the enumeration.</span></span>|  
-|[<span data-ttu-id="53b57-111">Reset 메서드</span><span class="sxs-lookup"><span data-stu-id="53b57-111">Reset Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-reset-method.md)|<span data-ttu-id="53b57-112">커서를 열거형의 시작 부분으로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="53b57-112">Moves the cursor of to the beginning of the enumeration.</span></span>|  
-|[<span data-ttu-id="53b57-113">Skip 메서드</span><span class="sxs-lookup"><span data-stu-id="53b57-113">Skip Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-skip-method.md)|<span data-ttu-id="53b57-114">지정 된 항목 수 만큼 열거에서 커서를 앞으로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="53b57-114">Moves the cursor forward in the enumeration by the specified number of items.</span></span>|  
+|[<span data-ttu-id="f4a5c-107">Clone 메서드</span><span class="sxs-lookup"><span data-stu-id="f4a5c-107">Clone Method</span></span>](icorpublishenum-clone-method.md)|<span data-ttu-id="f4a5c-108">이 복사본을 만들고 `ICorPublishEnum` 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="f4a5c-108">Creates a copy of this `ICorPublishEnum` object.</span></span>|  
+|[<span data-ttu-id="f4a5c-109">GetCount 메서드</span><span class="sxs-lookup"><span data-stu-id="f4a5c-109">GetCount Method</span></span>](icorpublishenum-getcount-method.md)|<span data-ttu-id="f4a5c-110">열거형의 항목 수를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="f4a5c-110">Gets the number of items in the enumeration.</span></span>|  
+|[<span data-ttu-id="f4a5c-111">Reset 메서드</span><span class="sxs-lookup"><span data-stu-id="f4a5c-111">Reset Method</span></span>](icorpublishenum-reset-method.md)|<span data-ttu-id="f4a5c-112">커서를 열거형의 시작 부분으로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="f4a5c-112">Moves the cursor of to the beginning of the enumeration.</span></span>|  
+|[<span data-ttu-id="f4a5c-113">Skip 메서드</span><span class="sxs-lookup"><span data-stu-id="f4a5c-113">Skip Method</span></span>](icorpublishenum-skip-method.md)|<span data-ttu-id="f4a5c-114">지정 된 항목 수 만큼 열거에서 커서를 앞으로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="f4a5c-114">Moves the cursor forward in the enumeration by the specified number of items.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="53b57-115">주의</span><span class="sxs-lookup"><span data-stu-id="53b57-115">Remarks</span></span>  
- <span data-ttu-id="53b57-116">다음 열거자는 `ICorPublishEnum`에서 파생 됩니다.</span><span class="sxs-lookup"><span data-stu-id="53b57-116">The following enumerators derive from `ICorPublishEnum`:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f4a5c-115">주의</span><span class="sxs-lookup"><span data-stu-id="f4a5c-115">Remarks</span></span>  
+ <span data-ttu-id="f4a5c-116">다음 열거자는 `ICorPublishEnum`에서 파생 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f4a5c-116">The following enumerators derive from `ICorPublishEnum`:</span></span>  
   
-- [<span data-ttu-id="53b57-117">ICorPublishAppDomainEnum</span><span class="sxs-lookup"><span data-stu-id="53b57-117">ICorPublishAppDomainEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)  
+- [<span data-ttu-id="f4a5c-117">ICorPublishAppDomainEnum</span><span class="sxs-lookup"><span data-stu-id="f4a5c-117">ICorPublishAppDomainEnum</span></span>](icorpublishappdomainenum-interface.md)  
   
-- [<span data-ttu-id="53b57-118">ICorPublishProcessEnum</span><span class="sxs-lookup"><span data-stu-id="53b57-118">ICorPublishProcessEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)  
+- [<span data-ttu-id="f4a5c-118">ICorPublishProcessEnum</span><span class="sxs-lookup"><span data-stu-id="f4a5c-118">ICorPublishProcessEnum</span></span>](icorpublishprocessenum-interface.md)  
   
-## <a name="requirements"></a><span data-ttu-id="53b57-119">요구 사항</span><span class="sxs-lookup"><span data-stu-id="53b57-119">Requirements</span></span>  
- <span data-ttu-id="53b57-120">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="53b57-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f4a5c-119">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f4a5c-119">Requirements</span></span>  
+ <span data-ttu-id="f4a5c-120">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="f4a5c-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="53b57-121">**헤더:** CorPub .idl, CorPub. h</span><span class="sxs-lookup"><span data-stu-id="53b57-121">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="f4a5c-121">**헤더:** CorPub .idl, CorPub. h</span><span class="sxs-lookup"><span data-stu-id="f4a5c-121">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="53b57-122">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="53b57-122">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f4a5c-122">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f4a5c-122">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="53b57-123">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="53b57-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="f4a5c-123">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f4a5c-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="53b57-124">참조</span><span class="sxs-lookup"><span data-stu-id="53b57-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f4a5c-124">참조</span><span class="sxs-lookup"><span data-stu-id="f4a5c-124">See also</span></span>
 
-- [<span data-ttu-id="53b57-125">CorpubPublish Coclass</span><span class="sxs-lookup"><span data-stu-id="53b57-125">CorpubPublish Coclass</span></span>](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
-- [<span data-ttu-id="53b57-126">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="53b57-126">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="f4a5c-125">CorpubPublish Coclass</span><span class="sxs-lookup"><span data-stu-id="f4a5c-125">CorpubPublish Coclass</span></span>](corpubpublish-coclass.md)
+- [<span data-ttu-id="f4a5c-126">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f4a5c-126">Debugging Interfaces</span></span>](debugging-interfaces.md)
