@@ -2,16 +2,16 @@
 title: Ocelot을 사용하여 API 게이트웨이 구현
 description: Ocelot을 사용하여 API 게이트웨이를 구현하는 방법과 컨테이너 기반 환경에서 Ocelot을 사용하는 방법을 알아봅니다.
 ms.date: 10/02/2018
-ms.openlocfilehash: 6c576a17d784777557bfb8bd99438eb111e8ec2e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 1ade05cc6935ce6a1bc74e6d6e4cdd5ef9fc6873
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737552"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734601"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Ocelot을 사용하여 API 게이트웨이 구현
 
-[eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)에서는 eShopOnContainers에서 사용되는 다음 환경과 같이 마이크로 서비스/컨테이너와 함께 어디서나 배포할 수 있는 간단하고 가벼운 API 게이트웨이이므로 참조 마이크로 서비스 애플리케이션인 [Ocelot](https://github.com/ThreeMammals/Ocelot)을 사용합니다.
+[eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)에서는 eShopOnContainers에서 사용되는 다음 환경과 같이 마이크로 서비스/컨테이너와 함께 어디서나 배포할 수 있는 간단하고 가벼운 API 게이트웨이므로 참조 마이크로 서비스 애플리케이션인 [Ocelot](https://github.com/ThreeMammals/Ocelot)을 사용합니다.
 
 - 로컬 개발 PC, 온-프레미스 또는 클라우드에 있는 Docker 호스트
 - 온-프레미스 또는 관리되는 클라우드(예: AKS(Azure Kubernetes Service))에 있는 Kubernetes 클러스터
@@ -26,7 +26,7 @@ ms.locfileid: "73737552"
 
 **그림 6-28** API 게이트웨이가 있는 eShopOnContainers 아키텍처
 
-이 다이어그램에서는 "Windows용 Docker" 또는 "Mac용 Docker"를 사용하여 전체 애플리케이션을 단일 Docker 호스트 또는 개발 PC에 배포하는 방법을 보여 줍니다. 그러나 모든 오케스트레이터에 배포하는 것은 매우 비슷하지만, 다이어그램의 모든 컨테이너는 오케스트레이터에서 확장할 수 있습니다.
+이 다이어그램에서는 "Windows용 Docker" 또는 "Mac용 Docker"를 사용하여 전체 애플리케이션을 단일 Docker 호스트 또는 개발 PC에 배포하는 방법을 보여 줍니다. 그러나 모든 오케스트레이터에 배포하는 것은 비슷하지만, 다이어그램의 모든 컨테이너는 오케스트레이터에서 확장할 수 있습니다.
 
 또한 데이터베이스, 캐시 및 메시지 broker와 같은 인프라 자산을 오케스트레이터에서 오프로드하여 인프라용 고가용성 시스템(예: Azure SQL Database, Azure Cosmos DB, Azure Redis, Azure Service Bus 또는 온-프레미스의 모든 HA 클러스터링 솔루션)에 배포해야 합니다.
 
@@ -42,7 +42,7 @@ ms.locfileid: "73737552"
 
 중요한 사항으로, 많은 중대형 애플리케이션의 경우 사용자 지정 API 게이트웨이 제품을 사용하는 것이 일반적으로 좋은 방법이지만, API 게이트웨이에서 자치 마이크로 서비스를 만드는 여러 개발 팀에 독립적인 여러 구성 영역을 허용하지 않는 한 단일 모놀리식 집계 또는 고유한 사용자 지정 중앙 API 게이트웨이가 아닙니다.
 
-### <a name="sample-microservicescontainers-to-re-route-through-the-api-gateways"></a>API 게이트웨이를 통해 다시 라우팅하는 마이크로 서비스/컨테이너 샘플
+### <a name="sample-microservicescontainers-to-reroute-through-the-api-gateways"></a>API 게이트웨이를 통해 다시 라우팅하는 마이크로 서비스/컨테이너 샘플
 
 예를 들어 eShopOnContainers에는 다음 이미지와 같이 API 게이트웨이를 통해 게시되어야 하는 약 6개의 내부 마이크로 서비스 형식이 있습니다.
 
@@ -52,7 +52,7 @@ ms.locfileid: "73737552"
 
 ID 서비스에 대한 설계에서 이 서비스는 시스템에서 유일한 교차 편집 문제이므로 API 게이트웨이 라우팅에서 빠져 있지만 Ocelot을 사용하면 재라우팅 목록의 일부로 포함할 수도 있습니다.
 
-코드에서 알 수 있듯이 이러한 모든 서비스는 현재 ASP.NET Core Web API 서비스로 구현되어 있습니다. Catalog 마이크로 서비스 코드와 같은 마이크로 서비스 중 하나에 집중하여 살펴보겠습니다.
+코드에서 알 수 있듯이 이러한 모든 서비스는 현재 ASP.NET Core Web API 서비스로 구현되어 있습니다. Catalog 마이크로 서비스 코드와 같은 마이크로 서비스 중 하나를 중점적으로 살펴보겠습니다.
 
 ![Catalog.API 프로젝트 콘텐츠가 표시된 솔루션 탐색기의 스크린샷입니다.](./media/implement-api-gateways-with-ocelot/catalog-api-microservice-folders.png)
 
@@ -86,7 +86,7 @@ public async Task<IActionResult> GetItemById(int id)
 
 HTTP 요청은 마이크로 서비스 데이터베이스에 액세스하는 종류의 C# 코드 및 필수 추가 작업을 실행하게 됩니다.
 
-마이크로 서비스 URL과 관련하여 컨테이너가 로컬 개발 PC(로컬 Docker 호스트)에 배포되면 각 마이크로 서비스의 컨테이너에는 항상 다음 dockerfile과 같이 docker 파일에 지정된 내부 포트(일반적으로 포트 80)가 포함됩니다.
+마이크로 서비스 URL과 관련하여 컨테이너가 로컬 개발 PC(로컬 Docker 호스트)에 배포되면 각 마이크로 서비스의 컨테이너에는 항상 다음 Dockerfile과 같이 Dockerfile에 지정된 내부 포트(일반적으로 포트 80)가 포함됩니다.
 
 ```Dockerfile
 FROM microsoft/aspnetcore:2.0.5 AS base
@@ -100,9 +100,9 @@ EXPOSE 80
 
 프로덕션 환경에 배포하는 경우 이러한 외부 포트는 게시되지 않아야 합니다. 이는 정확히 클라이언트 응용 프로그램과 마이크로 서비스 간의 직접 통신을 방지하기 위해 API 게이트웨이를 사용하려는 이유입니다.
 
-그러나 개발하는 경우에는 마이크로 서비스/컨테이너에 직접 액세스하여 Swagger를 통해 실행하려고 합니다. 이로 인해 eShopOnContainers에서 외부 포트는 API 게이트웨이 또는 클라이언트 응용 프로그램에서 사용되지 않는 경우에도 계속 지정됩니다.
+그러나 개발하는 경우에는 마이크로 서비스/컨테이너에 직접 액세스하여 Swagger를 통해 실행하려고 합니다. 이로 인해 eShopOnContainers에서 외부 포트는 API 게이트웨이 또는 클라이언트 애플리케이션에서 사용되지 않는 경우에도 계속 지정됩니다.
 
-Catalog 마이크로 서비스에 대한 `docker-compose.override.yml` 파일의 예제는 다음과 같습니다.
+다음은 Catalog 마이크로 서비스에 대한 `docker-compose.override.yml` 파일의 예제입니다.
 
 ```yml
 catalog.api:
@@ -120,7 +120,7 @@ docker-compose.override.yml 구성에서 Catalog 컨테이너에 대한 내부 �
 
 일반적으로 마이크로 서비스에 적합한 프로덕션 배포 환경은 Kubernetes 또는 Service Fabric과 같은 오케스트레이터이므로 docker-compose를 사용하여 프로덕션 환경에 배포하지 않습니다. 이러한 환경에 배포하는 경우에는 마이크로 서비스용 외부 포트를 직접 게시하지 않는 다른 구성 파일을 사용하지만 항상 API 게이트웨이로부터 역방향 프록시를 사용합니다.
 
-Visual Studio에서 eShopOnContainers 솔루션 전체를 실행하거나(docker-compose 파일의 모든 서비스를 실행함), `docker-compose.yml` 및 docker-compose.override.yml이 배치된 폴더에 있는 CMD 또는 PowerShell에서 다음 docker-compose 명령으로 Catalog 마이크로 서비스를 시작하여 로컬 Docker 호스트에서 카탈로그 마이크로 서비스를 실행합니다.
+로컬 Docker 호스트에서 Catalog 마이크로 서비스를 실행합니다. Visual Studio에서 전체 eShopOnContainers 솔루션을 실행하거나(Docker-Compose 파일의 모든 서비스 실행) CMD 또는 PowerShell에서 `docker-compose.yml` 및 `docker-compose.override.yml`이 배치된 폴더에 있는 CMD 또는 PowerShell에서 다음 Docker-Compose 명령으로 Catalog 마이크로 서비스를 시작합니다.
 
 ```console
 docker-compose run --service-ports catalog.api
@@ -128,7 +128,7 @@ docker-compose run --service-ports catalog.api
 
 이 명령은 catalog.api 서비스 컨테이너와 docker-compose.yml에 지정된 종속성만 실행합니다. 이 경우 SQL Server 컨테이너와 RabbitMQ 컨테이너가 있습니다.
 
-그런 다음, 카탈로그 마이크로 서비스에 직접 액세스하고 해당 "외부" 포트(이 경우 `http://localhost:5101/swagger`)를 통해 직접 액세스하는 Swagger UI를 통해 해당 메서드를 볼 수 있습니다.
+그런 다음, Catalog 마이크로 서비스에 직접 액세스하고 해당 "외부" 포트(이 경우 `http://localhost:5101/swagger`)를 통해 직접 액세스하는 Swagger UI를 통해 해당 메서드를 볼 수 있습니다.
 
 ![Catalog.API REST API가 표시된 Swagger UI의 스크린샷입니다.](./media/implement-api-gateways-with-ocelot/test-catalog-microservice.png)
 
@@ -136,7 +136,7 @@ docker-compose run --service-ports catalog.api
 
 이 시점에서 Visual Studio에서 C# 코드에 중단점을 설정하고, Swagger UI에 노출된 메서드를 사용하여 마이크로 서비스를 테스트한 다음, 마지막으로 `docker-compose down` 명령을 사용하여 모든 항목을 정리할 수 있습니다.
 
-그러나 5101 외부 포트를 통한 경우 마이크로 서비스에 대한 직접 액세스 통신은 정확히 애플리케이션에서 방지하려는 내용입니다. 그리고 API 게이트웨이(이 경우 Ocelot)의 간접 참조에 대한 추가 수준을 설정하여 이를 방지할 수 있습니다. 클라이언트 응용 프로그램은 이러한 방식으로 마이크로 서비스에 직접 액세스하지 않습니다.
+그러나 5101 외부 포트를 통한 경우 마이크로 서비스에 대한 직접 액세스 통신은 정확히 애플리케이션에서 방지하려는 내용입니다. 그리고 API 게이트웨이(이 경우 Ocelot)의 간접 참조에 대한 추가 수준을 설정하여 이를 방지할 수 있습니다. 클라이언트 애플리케이션은 이러한 방식으로 마이크로 서비스에 직접 액세스하지 않습니다.
 
 ## <a name="implementing-your-api-gateways-with-ocelot"></a>Ocelot을 사용하여 API 게이트웨이 구현
 
@@ -195,9 +195,9 @@ namespace OcelotApiGw
 }
 ```
 
-구성에는 재라우팅(Re-Routes) 배열과 GlobalConfiguration(전역 구성)의 두 가지 섹션이 있습니다. 재라우팅은 업스트림 요청을 처리하는 방법을 Ocelot에 알려주는 개체입니다. 전역 구성을 사용하면 재라우팅 특정 설정을 재정의할 수 있습니다. 이는 많은 재라우팅 특정 설정을 관리하지 않으려는 경우에 유용합니다.
+구성에는 재라우팅의 배열과 전역 구성의 두 가지 섹션이 있습니다. 재라우팅은 업스트림 요청을 처리하는 방법을 Ocelot에 알려주는 개체입니다. 전역 구성을 사용하면 재라우팅 특정 설정을 재정의할 수 있습니다. 이는 많은 재라우팅 특정 설정을 관리하지 않으려는 경우에 유용합니다.
 
-eShopOnContainers의 API 게이트웨이 중 하나에 있는 [ReRoute 구성 파일](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/ApiGateways/Web.Bff.Shopping/apigw/configuration.json)을 간단히 보여주는 예제는 다음과 같습니다.
+eShopOnContainers의 API 게이트웨이 중 하나에 있는 [ 구성 파일](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/ApiGateways/Web.Bff.Shopping/apigw/configuration.json)을 간단히 보여주는 예제는 다음과 같습니다.
 
 ```json
 {
@@ -239,9 +239,9 @@ eShopOnContainers의 API 게이트웨이 중 하나에 있는 [ReRoute 구성 �
   }
 ```
 
-Ocelot API 게이트웨이의 주요 기능은 들어오는 HTTP 요청을 가져오고, 현재 다른 HTTP 요청으로 다운스트림 서비스에 전달하는 것입니다. Ocelot은 한 요청에서 다른 요청으로의 라우팅을 재라우팅(Re-Route)으로 설명합니다.
+Ocelot API 게이트웨이의 주요 기능은 들어오는 HTTP 요청을 가져오고, 현재 다른 HTTP 요청으로 다운스트림 서비스에 전달하는 것입니다. Ocelot은 한 요청에서 다른 요청으로의 라우팅을 재라우팅으로 설명합니다.
 
-예를 들어 위의 configuration.json에 있는 재라우팅 중 하나인 Basket(장바구니) 마이크로 서비스의 구성에 집중하여 살펴보겠습니다.
+예를 들어 위의 configuration.json에 있는 재라우팅 중 하나인 Basket 마이크로 서비스의 구성을 중점적으로 살펴보겠습니다.
 
 ```json
 {
@@ -282,7 +282,7 @@ eShopOnContainers에서 Ocelot API 게이트웨이를 사용하여 단일 Docker
 
 ![모든 API 게이트웨이에 대한 단일 Ocelot 게이트웨이 Docker 이미지의 다이어그램입니다.](./media/implement-api-gateways-with-ocelot/reusing-single-ocelot-docker-image.png)
 
-**그림 6-33** 여러 API 게이트웨이 형식에서 단일 Ocelot Docker 이미지 재사용
+**그림 6-33** 여러 API 게이트웨이 유형에서 단일 Ocelot Docker 이미지 재사용
 
 eShopOnContainers에서는 "OcelotApiGw"라는 프로젝트와 docker-compose.yml 파일에 지정된 "eshop/ocelotapigw" 이미지 이름을 사용하여 "제네릭 Ocelot API 게이트웨이 Docker 이미지"가 만들어집니다. 그런 다음, Docker에 배포하면 docker-compose.yml 파일에서 나오는 다음 추출과 같이 동일한 Docker 이미지에서 만들어진 네 개의 API 게이트웨이 컨테이너가 있습니다.
 
@@ -508,7 +508,7 @@ services.AddAuthentication(options =>
 });
 ```
 
-`http://localhost:5202/api/v1/b/basket/1`과 같은 API 게이트웨이를 기반으로 하는 재라우팅 URL을 사용하여 Basket 마이크로 서비스와 같은 보안 마이크로 서비스에 액세스하려고 할 때 유효한 토큰을 제공하지 않으면 401 권한이 없음이 표시됩니다. 반면에 재라우팅 URL이 인증되면 Ocelot에서 이(내부 마이크로 서비스 URL)와 연결된 다운스트림 구성표를 호출합니다.
+`http://localhost:5202/api/v1/b/basket/1`과 같은 API 게이트웨이를 기반으로 하는 재라우팅 URL을 사용하여 Basket 마이크로 서비스와 같은 보안 마이크로 서비스에 액세스하려고 할 때 유효한 토큰을 제공하지 않으면 401 권한 없음이 표시됩니다. 반면에 재라우팅 URL이 인증되면 Ocelot에서 이(내부 마이크로 서비스 URL)와 연결된 다운스트림 구성표를 호출합니다.
 
 **Ocelot의 재라우팅 계층에서 권한 부여**  Ocelot은 인증 후에 평가된 클레임 기반 권한 부여를 지원합니다. 재라우팅 구성에 다음 줄을 추가하여 경로 수준에서 권한 부여를 설정합니다.
 
@@ -532,7 +532,7 @@ Kubernetes에서 수신 방식을 사용하지 않으면 서비스와 Pod에 클
 
 eShopOnContainers에서 로컬로 개발하고 개발 머신을 Docker 호스트로만 사용하는 경우 수신이 아니라 여러 API 게이트웨이만 사용합니다.
 
-그러나 Kubernetes를 기반으로 한 “프로덕션” 환경을 대상으로 하는 경우 eShopOnContainers에서는 API 게이트웨이 앞에 수신을 사용합니다. 그러면 클라이언트에서 동일한 기본 URL을 계속 호출하지만 요청은 여러 API 게이트웨이 또는 BFF로 라우팅됩니다.
+그러나 Kubernetes를 기반으로 한 "프로덕션" 환경을 대상으로 하는 경우 eShopOnContainers에서는 API 게이트웨이 앞에 수신을 사용합니다. 그러면 클라이언트에서 동일한 기본 URL을 계속 호출하지만 요청은 여러 API 게이트웨이 또는 BFF로 라우팅됩니다.
 
 API 게이트웨이는 일반적으로 서비스 범위를 벗어나는 웹 애플리케이션이 아닌 서비스만 표시하는 프런트 엔드 또는 외관입니다. 또한 API 게이트웨이는 특정 내부 마이크로 서비스를 숨길 수 있습니다.
 
@@ -554,7 +554,7 @@ Kubernetes 수신은 일반적으로 API 게이트웨이 범위를 벗어난 웹
 - `/mobileshoppingapigw`: 모바일 BFF 및 쇼핑 비즈니스 프로세스의 경우
 - `/mobilemarketingapigw`: 모바일 BFF 및 마케팅 비즈니스 프로세스의 경우
 
-Kubernetes에 배포하는 경우 각 Ocelot API 게이트웨이는 API 게이트웨이를 실행하는 각 _Pod_에 대해 서로 다른 "configuration.json" 파일을 사용합니다. 이러한 “configuration.json” 파일은 ‘ocelot’이라는 Kubernetes ‘구성 맵’에 따라 만들어진 볼륨을 탑재하여(원래는 deploy.ps1 스크립트 사용) 제공됩니다.  각 컨테이너는 `/app/configuration`이라는 컨테이너 폴더에 관련 구성 파일을 탑재합니다.
+Kubernetes에 배포하는 경우 각 Ocelot API 게이트웨이는 API 게이트웨이를 실행하는 각 _Pod_에 대해 서로 다른 "configuration.json" 파일을 사용합니다. 이러한 "configuration.json" 파일은 'ocelot'이라는 Kubernetes _구성 맵_에 따라 만들어진 볼륨을 탑재하여(원래는 deploy.ps1 스크립트 사용) 제공됩니다. 각 컨테이너는 `/app/configuration`이라는 컨테이너 폴더에 관련 구성 파일을 탑재합니다.
 
 eShopOnContainers의 소스 코드 파일에서 원래 "configuration.json" 파일은 `k8s/ocelot/` 폴더 내에서 찾을 수 있습니다. 각 BFF/API 게이트웨이마다 하나의 구성 파일이 있습니다.
 

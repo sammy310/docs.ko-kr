@@ -8,42 +8,35 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], type design guidelines
 - types [.NET Framework], design guidelines
 ms.assetid: 6b49314e-8bba-43ea-97ca-4e0255812f95
-ms.openlocfilehash: 3e2fe7168bd0029d8f0e8f69a136c9089032973f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 2a3cca0139974cbc92ce85a19db73dfb3d13d1a0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709025"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743573"
 ---
 # <a name="type-design-guidelines"></a>형식 디자인 지침
-CLR 관점에서 두 가지 종류의 형식 (참조 형식 및 값 형식)만 있습니다. 하지만 프레임 워크 디자인에 대 한 논의의 목적을 위해 각각 고유한 특정 디자인 규칙을 가진 더 많은 논리 그룹으로 형식을 나눕니다.  
-  
- 클래스는 참조 형식의 일반적인 경우입니다. 대부분의 프레임 워크에서 대부분의 형식을 구성 합니다. 클래스는 사용자가 지 원하는 다양 한 개체 지향 기능 집합 및 일반적인 적용 가능성을 미납 합니다. 기본 클래스와 추상 클래스는 확장성과 관련 된 특수 한 논리 그룹입니다.  
-  
- 인터페이스는 참조 형식 및 값 형식 둘 다에서 구현 될 수 있는 형식입니다. 따라서 참조 형식 및 값 형식의 다형 계층 구조를 사용할 수 있습니다. 또한 인터페이스를 사용 하 여 CLR에서 기본적으로 지원 되지 않는 여러 상속을 시뮬레이션할 수 있습니다.  
-  
- 구조체는 값 형식의 일반적인 사례 이며 언어 기본 형식과 유사 하 게 작은 단순 형식에 대해 예약 되어야 합니다.  
-  
- 열거형은 요일, 콘솔 색 등의 짧은 값 집합을 정의 하는 데 사용 되는 값 형식의 특수 한 경우입니다.  
-  
- 정적 클래스는 정적 멤버에 대 한 컨테이너로 사용 되는 형식입니다. 이러한 작업은 일반적으로 다른 작업에 바로 가기를 제공 하는 데 사용 됩니다.  
-  
- 대리자, 예외, 특성, 배열 및 컬렉션은 모두 특정 용도에 적합 한 참조 형식의 모든 특수 한 사례 이며 디자인 및 사용에 대 한 지침은이 책의 다른 곳에 설명 되어 있습니다.  
-  
- **✓ DO** 각 형식이 관련 되지 않은 기능의 임의 컬렉션 뿐 아니라 관련된 멤버의 잘 정의 된 집합 지 확인 합니다.  
-  
-## <a name="in-this-section"></a>섹션 내용  
- [클래스와 구조체 간의 선택](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)  
- [추상 클래스 디자인](../../../docs/standard/design-guidelines/abstract-class.md)  
- [정적 클래스 디자인](../../../docs/standard/design-guidelines/static-class.md)  
- [인터페이스 디자인](../../../docs/standard/design-guidelines/interface.md)  
- [구조체 디자인](../../../docs/standard/design-guidelines/struct.md)  
- [열거형 디자인](../../../docs/standard/design-guidelines/enum.md)  
- [중첩 형식](../../../docs/standard/design-guidelines/nested-types.md)  
- *2005, 2009 Microsoft Corporation © 부분입니다. All rights reserved.*  
-  
- *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*  
-  
-## <a name="see-also"></a>참조
+就 CLR 而言，它仅支持两种类型 — 引用类型和值类型。但出于探讨框架设计的目的，我们将类型划分为多个逻辑组，每种都有其特定的设计规则。
+
+ 类是使用最普遍的引用类型。 多数框架中的大部分引用类型都是类。 类的广泛应用主要得益于其支持丰富的面向对象功能，以及普适性。 基类和抽象类是具备扩展性的特殊逻辑组。
+
+ 接口也是一种类型。 接口可以被引用类型和值类型实现，因此可以充当这两种类型多态层次结构的根。 此外，接口也可用于模拟多个继承，而 CLR 本身并不支持该功能。
+
+ 结构是常见的值类型。结构应当用来定义类似于语言基元的小型简单类型。
+
+ 枚举是一种特殊的值类型，它适用于定义一组数量有限的值，例如一周七天的名称、控制台颜色等。
+
+ 静态类的作用是为静态成员提供容器。 它们通常用来为其他操作提供快捷方式。
+
+ 委托、异常、属性、数组和集合是适用于特定用途的特殊引用类型。关于这些类型的设计准则与使用情况将在本书其他章节中进行讨论。
+
+ ✔️ 각 형식이 관련 되지 않은 기능의 임의 컬렉션이 아니라 잘 정의 된 관련 멤버 집합 인지 확인 합니다.
+
+## <a name="in-this-section"></a>섹션 내용
+ [클래스와 구조체](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md) [추상 클래스](../../../docs/standard/design-guidelines/abstract-class.md) 를 선택 합니다. 추상 클래스 디자인 [정적 클래스](../../../docs/standard/design-guidelines/static-class.md) 디자인 [인터페이스](../../../docs/standard/design-guidelines/interface.md) 디자인 [구조체](../../../docs/standard/design-guidelines/struct.md) 디자인 [열거형](../../../docs/standard/design-guidelines/enum.md) 디자인 [중첩 형식](../../../docs/standard/design-guidelines/nested-types.md) *부분 © 2005, 2009 Microsoft Corporation. All rights reserved.*
+
+ *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
+
+## <a name="see-also"></a>另请参阅
 
 - [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)

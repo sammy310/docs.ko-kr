@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 49e647be-9d63-4250-9d11-704e2a400d1b
 topic_type:
 - apiref
-ms.openlocfilehash: d83ad530c8a61c2bfc38fb46ad2a33ef8d5077d3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e98748b523b948dc002f2ebc4e2e79fc7d659918
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130585"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781586"
 ---
 # <a name="icordebugmanagedcallback2createconnection-method"></a>ICorDebugManagedCallback2::CreateConnection 메서드
 새 연결이 생성 되었음을 디버거에 알립니다.  
@@ -48,7 +48,7 @@ HRESULT CreateConnection (
 ## <a name="remarks"></a>주의  
  `CreateConnection` 콜백은 다음과 같은 경우에 발생 합니다.  
   
-- 디버거가 연결을 포함 하는 프로세스에 연결 하는 경우 이 경우 런타임은 프로세스의 각 연결에 대해 `CreateConnection` 이벤트 및 [ICorDebugManagedCallback2:: ChangeConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-changeconnection-method.md) 이벤트를 생성 하 고 디스패치합니다.  
+- 디버거가 연결을 포함 하는 프로세스에 연결 하는 경우 이 경우 런타임은 프로세스의 각 연결에 대해 `CreateConnection` 이벤트 및 [ICorDebugManagedCallback2:: ChangeConnection](icordebugmanagedcallback2-changeconnection-method.md) 이벤트를 생성 하 고 디스패치합니다.  
   
 - 호스트가 [호스팅 API](../../../../docs/framework/unmanaged-api/hosting/index.md)에서 [ICLRDebugManager:: beginconnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) 을 호출 하는 경우  
   
@@ -63,5 +63,5 @@ HRESULT CreateConnection (
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugManagedCallback2 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [ICorDebugManagedCallback 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback2 인터페이스](icordebugmanagedcallback2-interface.md)
+- [ICorDebugManagedCallback 인터페이스](icordebugmanagedcallback-interface.md)

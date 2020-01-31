@@ -2,12 +2,12 @@
 title: 대기 중인 메시지 문제 해결
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: ed114cc9a37fff549e8bfc874765252fd18893a9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 3d2d48076fafe44687546ca27e4d8670b81ce433
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345585"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742675"
 ---
 # <a name="troubleshooting-queued-messaging"></a>대기 중인 메시지 문제 해결
 
@@ -113,10 +113,6 @@ ms.locfileid: "75345585"
 
 **A:** 세션의 마지막 메시지에 해당 하는 작업의 자동 완성 =`true`를 설정 하 고 나머지 모든 서비스 작업에서 자동 완성 =`false` 설정 합니다.
 
-**Q:** MSMQ에서 일반적인 질문과 대답은 어디에서 찾을 수 있나요?
-
-**A:** MSMQ에 대 한 자세한 내용은 [Microsoft Message Queuing](https://go.microsoft.com/fwlink/?LinkId=87810)을 참조 하십시오.
-
 **Q:** 큐에서 대기 중인 세션 메시지와 대기 중인 데이터 그램 메시지를 모두 포함 하는 큐를 읽을 때 서비스가 `ProtocolException`를 throw 하는 이유는 무엇 인가요?
 
 **A:** 대기 중인 세션 메시지와 대기 중인 데이터 그램 메시지를 구성 하는 방법에는 근본적인 차이가 있습니다. 따라서 대기 중인 세션 메시지를 읽으려는 서비스에서 대기 중인 데이터그램 메시지를 받을 수 없고, 대기 중인 데이터그램 메시지를 읽으려는 서비스에서 대기 중인 세션 메시지를 받을 수 없습니다. 같은 큐에서 두 형식의 메시지를 모두 읽으려고 하면 다음 예외가 throw됩니다.
@@ -174,7 +170,7 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
 
 6. 다음으로, 이전 단계를 사용 하 여 두 번째 인증서 스냅인을 추가 하지만 이번에는 **컴퓨터 계정** 을 선택 하 고 **다음**을 클릭 합니다.
 
-7. **로컬 컴퓨터**를 선택하고 **마침**을 클릭합니다. 이제 시스템 인증서 저장소에서 현재 사용자 저장소로 인증서를 끌어서 놓을 수 있습니다.
+7. **로컬 컴퓨터** 를 선택 하 고 **마침**을 클릭 합니다. 이제 시스템 인증서 저장소에서 현재 사용자 저장소로 인증서를 끌어서 놓을 수 있습니다.
 
 **Q:** 서비스 그룹 모드의 다른 컴퓨터에 있는 큐에서 서비스를 읽으면 "액세스 거부" 예외가 발생 합니다.
 
@@ -186,7 +182,7 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
 
 ### <a name="remote-transacted-receives"></a>트랜잭션된 원격 수신
 
-**Q:** 컴퓨터 A에 큐가 있고 컴퓨터 B의 큐에서 메시지를 읽는 WCF 서비스 (원격으로 트랜잭션 된 수신 시나리오)가 있는 경우 메시지를 큐에서 읽지 않습니다. 추적 정보는 "트랜잭션을 가져올 수 없습니다." 라는 메시지와 함께 수신이 실패 했음을 나타냅니다. 이 문제를 해결하려면 어떻게 해야 하나요?
+**Q:** 컴퓨터 A에 큐가 있고 컴퓨터 B의 큐에서 메시지를 읽는 WCF 서비스 (원격으로 트랜잭션 된 수신 시나리오)가 있는 경우 메시지를 큐에서 읽지 않습니다. 추적 정보는 "트랜잭션을 가져올 수 없습니다." 라는 메시지와 함께 수신이 실패 했음을 나타냅니다. 이 문제를 해결 하려면 어떻게 해야 하나요?
 
 **A:** 다음과 같은 세 가지 원인이 있을 수 있습니다.
 

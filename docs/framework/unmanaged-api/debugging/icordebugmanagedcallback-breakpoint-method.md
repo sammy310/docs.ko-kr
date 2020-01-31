@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 60b279b0-a726-46d2-8c53-76986a007ebb
 topic_type:
 - apiref
-ms.openlocfilehash: 8a4f7d4f422d80d044bcb92065dbefc7f421a069
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ac91a9c662a82c5ab870d01cb4b5d87c7af6b6ba
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122594"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782069"
 ---
 # <a name="icordebugmanagedcallbackbreakpoint-method"></a>ICorDebugManagedCallback::Breakpoint 메서드
 중단점에 도달 하면 디버거에 알립니다.  
@@ -56,4 +56,4 @@ HRESULT Breakpoint (
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugManagedCallback 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback 인터페이스](icordebugmanagedcallback-interface.md)

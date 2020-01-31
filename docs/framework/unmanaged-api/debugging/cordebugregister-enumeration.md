@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 003bb138-7960-4291-ac88-0d87e470ff70
 topic_type:
 - apiref
-ms.openlocfilehash: d182476130e611e57df232c9652cda4bec002c31
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9af265144c9e38ffe132c16a318c374b08a920e3
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132772"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778248"
 ---
 # <a name="cordebugregister-enumeration"></a>CorDebugRegister 열거형
 지정한 프로세서 아키텍처에 연결된 레지스터를 지정합니다.  
@@ -112,9 +112,9 @@ typedef enum CorDebugRegister {
 } CorDebugRegister;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-|멤버|설명|  
+|Member|설명|  
 |------------|-----------------|  
 |`REGISTER_INSTRUCTION_POINTER`|프로세서의 명령 포인터 레지스터입니다.|  
 |`REGISTER_STACK_POINTER`|프로세서의 스택 포인터 레지스터입니다.|  
@@ -209,4 +209,4 @@ typedef enum CorDebugRegister {
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 열거형](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [디버깅 열거형](debugging-enumerations.md)

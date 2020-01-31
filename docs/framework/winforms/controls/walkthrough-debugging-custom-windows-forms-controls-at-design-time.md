@@ -1,5 +1,5 @@
 ---
-title: '연습: 디자인 타임에 사용자 지정 Windows Forms 컨트롤 디버깅'
+title: 디자인 타임에 사용자 지정 컨트롤 디버그
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,12 +18,12 @@ ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a8572c1e70e36faf3a179de7a69e88e9cf1e781b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d9e292a1219c24571bcb35db2fe357b0197c8812
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460619"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740191"
 ---
 # <a name="walkthrough-debug-custom-windows-forms-controls-at-design-time"></a>연습: 디자인 타임에 사용자 지정 Windows Forms 컨트롤 디버그
 
@@ -143,7 +143,7 @@ Visual Studio에서 Windows 응용 프로그램 프로젝트를 만들고 이름
 
 이제 디자인 타임에 사용자 지정 컨트롤을 디버그할 수 있으므로 Visual Studio IDE와의 상호 작용을 확장 하는 여러 가지 가능성이 있습니다.
 
-- <xref:System.ComponentModel.Component> 클래스의 <xref:System.ComponentModel.Component.DesignMode%2A> 속성을 사용 하 여 디자인 타임에만 실행 되는 코드를 작성할 수 있습니다. 자세한 내용은 <xref:System.ComponentModel.Component.DesignMode%2A>를 참조하십시오.
+- <xref:System.ComponentModel.Component> 클래스의 <xref:System.ComponentModel.Component.DesignMode%2A> 속성을 사용 하 여 디자인 타임에만 실행 되는 코드를 작성할 수 있습니다. 자세한 내용은 <xref:System.ComponentModel.Component.DesignMode%2A>을 참조하세요.
 
 - 사용자 지정 컨트롤의 속성에 적용 하 여 디자이너와의 사용자 지정 컨트롤의 상호 작용을 조작할 수 있는 몇 가지 특성이 있습니다. 이러한 특성은 <xref:System.ComponentModel?displayProperty=nameWithType> 네임 스페이스에서 찾을 수 있습니다.
 

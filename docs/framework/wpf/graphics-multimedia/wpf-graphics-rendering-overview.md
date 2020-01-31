@@ -1,5 +1,5 @@
 ---
-title: WPF 그래픽 렌더링 개요
+title: 그래픽 렌더링 개요
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: 09f5f026ed320aaa253d8cdf6e0b271235aff604
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 103d086857bce8ae0960452bb92a69b68dc49dfa
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004174"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744800"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>WPF 그래픽 렌더링 개요
 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 시각적 계층에 대해 간략하게 설명합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 모델의 렌더링 지원에 대 한 <xref:System.Windows.Media.Visual> 클래스의 역할에 중점을 둘 수 있습니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "72004174"
 ### <a name="drawing-content-in-visual-objects"></a>시각적 개체의 그리기 콘텐츠  
  <xref:System.Windows.Media.Visual> 개체는 해당 렌더링 데이터를 **벡터 그래픽 명령 목록**으로 저장 합니다. 명령 목록의 각 항목은 그래픽 데이터 및 연결된 리소스의 하위 수준 집합을 serialize된 형식으로 나타냅니다. 그리기 콘텐츠를 포함할 수 있는 렌더링 데이터 형식에는 네 가지가 있습니다.  
   
-|그리기 콘텐츠 형식|Description|  
+|그리기 콘텐츠 형식|설명|  
 |--------------------------|-----------------|  
 |벡터 그래픽|벡터 그래픽 데이터와 관련 <xref:System.Windows.Media.Brush> 및 <xref:System.Windows.Media.Pen> 정보를 나타냅니다.|  
 |이미지|<xref:System.Windows.Rect>에서 정의한 영역 내의 이미지를 나타냅니다.|  
@@ -77,7 +77,7 @@ ms.locfileid: "72004174"
   
  다음 그림에서는 <xref:System.Windows.Media.DrawingGroup> 작업이 렌더링 시퀀스 중에 적용 되는 순서를 보여 줍니다.  
   
- ![DrawingGroup 작업 순서](./media/graphcismm-drawinggroup-order.png "graphcismm_drawinggroup_order")  
+ ![DrawingGroup 작업의 순서](./media/graphcismm-drawinggroup-order.png "graphcismm_drawinggroup_order")  
 DrawingGroup 작업의 순서  
   
  자세한 내용은 [그리기 개체 개요](drawing-objects-overview.md)를 참조하세요.  
@@ -179,7 +179,7 @@ DrawingGroup 작업의 순서
 ### <a name="profiling-visual-performance"></a>시각적 성능 프로파일링  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 애플리케이션의 런타임 동작을 분석할 수 있고 적용할 수 있는 성능 최적화 형식을 판별하는 성능 프로파일링 도구 제품군을 제공합니다. Visual Profiler 도구는 애플리케이션의 시각적 트리에 직접 매핑하여 성능 데이터의 다양한 그래픽 보기를 제공합니다. 이 스크린 샷에서 Visual Profiler의 **CPU 사용량** 섹션에서는 렌더링 및 레이아웃과 같은 개체의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 서비스 사용을 정확히 분석할 수 있습니다.  
   
- ![시각적 프로파일러 표시 출력](./media/wpfperf-visualprofiler-04.png "WPFPerf_VisualProfiler_04")  
+ ![Visual Profiler 표시 출력](./media/wpfperf-visualprofiler-04.png "WPFPerf_VisualProfiler_04")  
 Visual Profiler 표시 출력  
   
 <a name="visual_rendering_behavior"></a>   
@@ -220,7 +220,7 @@ Visual Profiler 표시 출력
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 하드웨어 픽셀이 아닌 디바이스 독립적 픽셀을 기본 측정 단위로 사용하여 자동 크기 조정을 지원합니다. 그래픽 및 텍스트는 애플리케이션 개발자의 추가 작업 없이 적절히 확장됩니다. 다음 그림에는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 텍스트와 그래픽이 다른 DPI 설정으로 표시되는 방식의 예가 나와 있습니다.  
   
- ![여러 DPI 설정의 그래픽 및 텍스트](./media/graphicsmm-dpi-setting-examples.png "graphicsmm_dpi_setting_examples")  
+ ![서로 다른 DPI 설정에서의 그래픽과 텍스트](./media/graphicsmm-dpi-setting-examples.png "graphicsmm_dpi_setting_examples")  
 서로 다른 DPI 설정에서의 그래픽과 텍스트  
   
 <a name="visualtreehelper_class"></a>   
@@ -247,7 +247,7 @@ Visual Profiler 표시 출력
  [!code-csharp[VisualsOverview#102](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#102)]
  [!code-vb[VisualsOverview#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#102)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>

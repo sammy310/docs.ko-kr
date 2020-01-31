@@ -1,5 +1,5 @@
 ---
-title: 이벤트 개요(Windows Forms)
+title: 이벤트 개요
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, event handling
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: 4abcf20b851f349a2b5df78c1fe1d15f729a5462
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 59085597789d12ce80648efb77859228e4718a3f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344999"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743491"
 ---
 # <a name="events-overview-windows-forms"></a>이벤트 개요(Windows Forms)
 이벤트는 코드에서 응답, 즉 "처리"할 수 있는 작업입니다. 마우스를 클릭하거나 키를 누르는 등의 사용자 작업, 프로그램 코드 또는 시스템에 의해 이벤트가 생성될 수 있습니다.

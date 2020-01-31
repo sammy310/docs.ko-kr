@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: 208e5c2d-3f3f-404e-8b3c-7cccc14ddb16
 topic_type:
 - apiref
-ms.openlocfilehash: bfd61d985eac3ab56d8a5df9474b2b1a9f641f3e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: be1e1cd0d38ad71de43478af5565bb1ac98a8c0d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122853"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778008"
 ---
 # <a name="icordebugblockingobjectenum-interface"></a>ICorDebugBlockingObjectEnum 인터페이스
-[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) 구조체의 목록에 대 한 열거자를 제공 합니다. 이 인터페이스는 ICorDebugEnum 인터페이스의 하위 클래스입니다.  
+[CorDebugBlockingObject](cordebugblockingobject-structure.md) 구조체의 목록에 대 한 열거자를 제공 합니다. 이 인터페이스는 ICorDebugEnum 인터페이스의 서브클래스입니다.  
   
 ## <a name="methods"></a>메서드  
   
 |메서드|설명|  
 |------------|-----------------|  
-|[Next 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugblockingobjectenum-next-method.md)|[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) 구조체 목록을 열거 합니다.|  
+|[Next 메서드](icordebugblockingobjectenum-next-method.md)|[CorDebugBlockingObject](cordebugblockingobject-structure.md) 구조체 목록을 열거 합니다.|  
   
 ## <a name="remarks"></a>주의  
  각 `CorDebugBlockingObject` 구조체는 스레드를 차단하는 개체를 나타냅니다.  
@@ -47,5 +47,5 @@ ms.locfileid: "73122853"
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [디버깅 인터페이스](debugging-interfaces.md)
+- [디버깅](index.md)

@@ -2,37 +2,37 @@
 title: dotnet pack 명령
 description: dotnet pack 명령은 .NET Core 프로젝트에 대한 NuGet 패키지를 만듭니다.
 ms.date: 08/08/2019
-ms.openlocfilehash: 99dd8e35601f82adf2a3101121028f191a4c3da4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 057d1029e5c933912c43c178b6db8a8498f2ed57
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117650"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734115"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
-**이 항목 적용 대상: ✓** .NET Core 1.x SDK 이상 버전
+**이 문서의 적용 대상:**  ✔️ .NET Core 1.x SDK 이상 버전
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>name
+## <a name="name"></a>이름
 
 `dotnet pack` - 코드를 NuGet 패키지로 압축합니다.
 
 ## <a name="synopsis"></a>개요
 
 ```dotnetcli
-dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--interactive] 
-    [--no-build] [--no-dependencies] [--no-restore] [--nologo] [-o|--output] [--runtime] [-s|--serviceable] 
+dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--interactive]
+    [--no-build] [--no-dependencies] [--no-restore] [--nologo] [-o|--output] [--runtime] [-s|--serviceable]
     [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
 
 ## <a name="description"></a>설명
 
-`dotnet pack` 명령은 프로젝트를 빌드하고 NuGet 패키지를 만듭니다. 이 명령의 결과가 NuGet 패키지(즉, *.nupkg* 파일)입니다. 
+`dotnet pack` 명령은 프로젝트를 빌드하고 NuGet 패키지를 만듭니다. 이 명령의 결과가 NuGet 패키지(즉, *.nupkg* 파일)입니다.
 
 디버그 기호를 포함하는 패키지를 만들려면 다음 두 가지 옵션을 사용할 수 있습니다.
 
@@ -89,7 +89,7 @@ dotnet pack [-h|--help]
 
 - **`--no-build`**
 
-  압축하기 전에 프로젝트를 빌드하지 않습니다. 또한 `--no-restore` 플래그를 암시적으로 설정합니다.
+  압축하기 전에 프로젝트를 빌드하지 않습니다. 또한 암시적으로 `--no-restore` 플래그를 설정합니다.
 
 - **`--no-dependencies`**
 
@@ -123,7 +123,7 @@ dotnet pack [-h|--help]
 
   명령의 세부 정보 표시 수준을 설정합니다. 허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 - 현재 디렉터리에 있는 프로젝트를 압축합니다.
 

@@ -2,12 +2,12 @@
 title: 피어 투 피어 네트워킹
 ms.date: 03/30/2017
 ms.assetid: ad6cb67b-fd1c-4ca1-a767-b410da2e16ca
-ms.openlocfilehash: 74566d7bc7c8d817cedb0ff6f64590ba827ed4c4
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 2905a429e907f7e97c482c22229a6bc928c52243
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837365"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744678"
 ---
 # <a name="peer-to-peer-networking"></a>피어 투 피어 네트워킹
 피어 채널은 WCF (Windows Communication Foundation)에서의 P2P (피어 투 피어) 통신 기술입니다. 피어 채널은 애플리케이션 개발자에게 안전하고 확장 가능한 메시지 기반 P2P 통신 채널을 제공합니다. 피어 채널을 활용할 수 있는 다자간 애플리케이션의 대표적인 예로 여러 사용자가 서버 없이 피어 투 피어 방식으로 서로 채트하는 대화방 같은 협업 애플리케이션을 들 수 있습니다. 피어 채널은 소비자 및 기업 시나리오 모두에서 P2P 협업, 콘텐츠 배포, 부하 분산 및 분산 처리를 가능하게 합니다.  
@@ -27,4 +27,4 @@ ms.locfileid: "74837365"
  [피어 채널 사용자 지정 피어 확인자](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90))  
   
 ## <a name="peer-channel-team-blog"></a>피어 채널 팀 블로그  
- [피어 채널 팀 블로그](https://go.microsoft.com/fwlink/?LinkID=114530)
+ [피어 채널 팀 블로그](https://docs.microsoft.com/archive/blogs/peerchan/)

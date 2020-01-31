@@ -1,5 +1,5 @@
 ---
-title: WPF 부분 신뢰 보안
+title: 부분 신뢰 보안
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: ce9341a45b43c4af4543cf473597c273c33701fc
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 0d9bbcc32eea49afc6ecc713b0cf005b4434a67d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636551"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743334"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF 부분 신뢰 보안
 <a name="introduction"></a> 일반적으로 악의적인 손상을 방지하기 위해 중요한 시스템 리소스에 직접 액세스하지 않도록 인터넷 애플리케이션을 제한해야 합니다. 기본적으로 HTML 및 클라이언트 쪽 스크립팅 언어는 중요 한 시스템 리소스에 액세스할 수 없습니다. WPF (Windows Presentation Foundation) 브라우저에서 호스팅되는 응용 프로그램은 브라우저에서 실행할 수 있기 때문에 유사한 제한 사항을 준수 해야 합니다. 이러한 제한을 적용 하기 위해 WPF는 CAS (코드 액세스 보안) 및 ClickOnce를 모두 사용 합니다 ( [Wpf 보안 전략-플랫폼 보안](wpf-security-strategy-platform-security.md)참조). 기본적으로 브라우저에서 호스트 된 응용 프로그램은 인터넷, 로컬 인트라넷 또는 로컬 컴퓨터에서 시작 되었는지 여부에 관계 없이 인터넷 영역 CA 사용 권한 집합을 요청 합니다. 전체 권한 집합보다 적은 권한으로 실행하는 애플리케이션은 부분 신뢰로 실행된다고 할 수 있습니다.  

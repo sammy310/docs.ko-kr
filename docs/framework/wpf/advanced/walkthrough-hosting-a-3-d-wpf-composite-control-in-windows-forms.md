@@ -1,5 +1,6 @@
 ---
-title: '연습: Windows Forms에서 3-D WPF 복합 컨트롤 호스팅'
+title: Windows Forms에서 3D WPF 복합 컨트롤 호스팅
+titleSuffix: ''
 ms.date: 08/18/2018
 dev_langs:
 - csharp
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 - composite controls [WPF], hosting WPF in
 ms.assetid: 486369a9-606a-4a3b-b086-a06f2119c7b0
-ms.openlocfilehash: f33adf6bac5efab87fecd9e95437ac8cff6d1f16
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
-ms.translationtype: MT
+ms.openlocfilehash: 07222809d62b207730ddad3c87b8fb60e1602bc3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976550"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744458"
 ---
-# <a name="walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms"></a>연습: Windows Forms에서 3-D WPF 복합 컨트롤 호스팅
+# <a name="walkthrough-host-a-3d-wpf-composite-control-in-windows-forms"></a>연습: Windows Forms에서 3D WPF 복합 컨트롤 호스팅
 
 이 연습에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 복합 컨트롤을 만들고 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤을 사용 하 여 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤과 폼에서 호스트 하는 방법을 보여 줍니다.
 
-이 연습에서는 두 개의 자식 컨트롤을 포함 하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>을 구현 합니다. <xref:System.Windows.Controls.UserControl> 3 차원 (3 차원) 원뿔을 표시 합니다. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]를 사용 하는 것 보다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 3 차원 개체를 훨씬 쉽게 렌더링할 수 있습니다. 따라서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> 클래스를 호스트 하 여 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]에서 3 차원 그래픽을 만드는 것이 좋습니다.
+이 연습에서는 두 개의 자식 컨트롤을 포함 하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>을 구현 합니다. <xref:System.Windows.Controls.UserControl> 3 차원 (3D) 원뿔을 표시 합니다. 3D 개체 렌더링은 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]보다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 사용 하는 것이 훨씬 쉽습니다. 따라서 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]에서 3D 그래픽을 만들기 위해 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> 클래스를 호스트 하는 것이 좋습니다.
 
 이 연습에서 설명하는 작업은 다음과 같습니다.
 
@@ -29,7 +30,7 @@ ms.locfileid: "73976550"
 
 - [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>를 호스팅합니다.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>전제 조건
 
 이 연습을 완료하려면 다음 구성 요소가 필요합니다.
 
@@ -46,7 +47,7 @@ ms.locfileid: "73976550"
 
      [!code-xaml[HostingWpfUserControlInWf#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/HostingWpfUserControlInWf/ConeControl.xaml#1)]
 
-     이 코드는 두 개의 자식 컨트롤을 포함 하는 <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType>를 정의 합니다. 첫 번째 자식 컨트롤은 <xref:System.Windows.Controls.Label?displayProperty=nameWithType> 컨트롤입니다. 두 번째는 3 차원 원뿔을 표시 하는 <xref:System.Windows.Controls.Viewport3D> 컨트롤입니다.
+     이 코드는 두 개의 자식 컨트롤을 포함 하는 <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType>를 정의 합니다. 첫 번째 자식 컨트롤은 <xref:System.Windows.Controls.Label?displayProperty=nameWithType> 컨트롤입니다. 두 번째는 3D 원추를 표시 하는 <xref:System.Windows.Controls.Viewport3D> 컨트롤입니다.
 
 <a name="To_Create_the_Windows_Forms_Host_Project"></a>
 ## <a name="create-the-host-project"></a>호스트 프로젝트 만들기

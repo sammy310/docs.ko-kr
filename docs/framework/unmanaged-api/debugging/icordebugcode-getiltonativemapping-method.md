@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8ecd8c8-9627-4356-9c6f-bd05e24637c0
 topic_type:
 - apiref
-ms.openlocfilehash: 011da6aacbf4c40420329952f47b1fabdfc2c1a3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 98709c0ce7469db1d0365d71e10d2d021cd3b3f0
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125628"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777885"
 ---
 # <a name="icordebugcodegetiltonativemapping-method"></a>ICorDebugCode::GetILToNativeMapping 메서드
 MSIL (Microsoft 중간 언어) 오프셋에서 네이티브 오프셋으로의 매핑을 나타내는 "COR_DEBUG_IL_TO_NATIVE_MAP" 인스턴스의 배열을 가져옵니다.  
@@ -62,4 +62,4 @@ HRESULT GetILToNativeMapping (
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugCode 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-interface1.md)
+- [ICorDebugCode 인터페이스](icordebugcode-interface1.md)

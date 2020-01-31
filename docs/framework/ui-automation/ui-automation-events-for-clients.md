@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: 6d4525aeea458e1ec810efa659f373a2b5f21f57
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 497c05740fd9e1c05d877cfdb72881168fff6e2e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741313"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778759"
 ---
 # <a name="ui-automation-events-for-clients"></a>클라이언트에 대한 UI 자동화 이벤트
 > [!NOTE]
@@ -23,7 +23,7 @@ ms.locfileid: "75741313"
  정의된 기능 내에서만 이벤트를 수신 대기하는 기능을 통해 효율성도 향상되었습니다. 예를 들어, 클라이언트는 트리의 모든 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요소에서 포커스 변경 이벤트를 수신 대기하거나, 하나의 요소와 해당 하위 항목만 수신 대기할 수 있습니다.  
   
 > [!NOTE]
-> 가능한 모든 이벤트가 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 공급자에서 발생되지는 않습니다. 예를 들어 일부 속성 변경으로 인해 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 및 Win32 컨트롤에 대 한 표준 프록시 공급자가 이벤트를 발생 시 키 지 않습니다.  
+> 가능한 모든 이벤트가 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 공급자에서 발생되지는 않습니다. 예를 들어 일부 속성 변경으로 인해 Windows Forms 및 Win32 컨트롤에 대 한 표준 프록시 공급자가 이벤트를 발생 시 키 지 않습니다.  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트에 대 한 광범위 한 보기는 [UI 자동화 이벤트 개요](ui-automation-events-overview.md)를 참조 하세요.  
   

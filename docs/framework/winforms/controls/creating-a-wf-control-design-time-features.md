@@ -1,5 +1,5 @@
 ---
-title: '연습: Visual Studio의 디자인 타임 기능을 사용하는 Windows Forms 컨트롤 만들기'
+title: Visual Studio 디자인 타임 기능을 활용 하는 컨트롤 만들기
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +13,12 @@ ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 64f637b232cf21701185e7b87d86f63fdece5127
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7166b4203c54ab31f1d929c85cf1e6481ff120f8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459528"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744082"
 ---
 # <a name="walkthrough-create-a-control-that-takes-advantage-of-design-time-features"></a>연습: 디자인 타임 기능을 활용 하는 컨트롤 만들기
 
@@ -36,7 +36,7 @@ ms.locfileid: "73459528"
 
 전체 코드 목록은 [방법: 디자인 타임 기능을 활용 하는 Windows Forms 컨트롤 만들기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))를 참조 하세요.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>전제 조건
 
 이 연습을 완료 하려면 Visual Studio가 필요 합니다.
 
@@ -430,7 +430,7 @@ Visual Studio에서 새 Windows Forms 응용 프로그램 프로젝트를 만들
 
 ## <a name="add-designer-verbs-to-your-custom-designer"></a>사용자 지정 디자이너에 디자이너 동사 추가
 
-디자이너 동사는 이벤트 처리기에 연결 된 메뉴 명령입니다. 디자인 타임에 디자이너 동사가 구성 요소의 바로 가기 메뉴에 추가 됩니다. 자세한 내용은 <xref:System.ComponentModel.Design.DesignerVerb>을 참조하십시오.
+디자이너 동사는 이벤트 처리기에 연결 된 메뉴 명령입니다. 디자이너 동사는 디자인 타임 구성 요소의 바로 가기 메뉴에 추가 됩니다. 자세한 내용은 <xref:System.ComponentModel.Design.DesignerVerb>를 참조하세요.
 
 디자이너에는 **테스트 실행** 및 **테스트 중지**라는 두 개의 디자이너 동사를 추가 합니다. 이러한 동사를 사용 하면 디자인 타임에 `MarqueeControl`의 런타임 동작을 볼 수 있습니다. 이러한 동사는 `MarqueeControlRootDesigner`에 추가 됩니다.
 

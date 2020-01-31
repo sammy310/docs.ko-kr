@@ -2,12 +2,12 @@
 title: 소스 링크 및 .NET 라이브러리
 description: 소스 링크를 사용하여 .NET 라이브러리의 디버깅을 향상시키기 위한 모범 사례 권장 사항입니다.
 ms.date: 01/15/2019
-ms.openlocfilehash: 0ebc7601f1ad92b0fc6ab4c7599b010cb42feb5d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3d768ae6e79efa23a8402ea37bc34cd58cd52c8c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706441"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744545"
 ---
 # <a name="source-link"></a>소스 링크
 
@@ -25,7 +25,7 @@ ms.locfileid: "75706441"
 
 ![NuGet 패키지 탐색기의 소스 링크](./media/sourcelink/nuget-package-explorer-sourcelink.png "NuGet 패키지 탐색기의 소스 링크")
 
-**✔️** 소스 링크를 사용하여 어셈블리 및 NuGet 패키지에 소스 제어 메타데이터를 추가하는 것이 좋습니다.
+✔️ 어셈블리 및 NuGet 패키지에 소스 제어 메타데이터를 추가하는 데 소스 링크를 사용하는 것을 고려하세요.
 
 > [!TIP]
 > 사용자 유형에 디버거 특성을 추가하여 개발자의 디버깅 환경을 향상시킬 수 있습니다.
@@ -34,7 +34,7 @@ ms.locfileid: "75706441"
 > * <xref:System.Diagnostics.DebuggerStepThroughAttribute>는 디버거가 코드를 한 단계씩 실행하는 대신 코드를 단계별로 실행하도록 디버거에 지시합니다.
 > * <xref:System.Diagnostics.DebuggerBrowsableAttribute>는 멤버가 디버거 변수 창에 표시되는지 여부를 제어합니다.
 
-**✔️** 게시 기호 파일(`*.pdb`)을 고려합니다.
+✔️ 기호 파일(`*.pdb`)을 사용하는 것을 고려하세요.
 
 > 최상의 디버깅 환경을 위해서는 라이브러리에서 기호 파일을 게시하고 소스 링크를 사용해야 합니다. 기호 파일 및 기호 패키지에 대한 자세한 내용은 [기호 패키지](./nuget.md#symbol-packages)를 참조하세요.
 

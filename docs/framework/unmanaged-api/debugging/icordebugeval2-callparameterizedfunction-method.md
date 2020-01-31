@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 72f54a45-dbe6-4bb4-8c99-e879a27368e5
 topic_type:
 - apiref
-ms.openlocfilehash: b521c96d26202119dad6fedb61cbd9da8b3c2e52
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ab31ab8f83a71372c8e12b460458a26996f65ff5
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137632"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782982"
 ---
 # <a name="icordebugeval2callparameterizedfunction-method"></a>ICorDebugEval2::CallParameterizedFunction 메서드
 생성자가 <xref:System.Type> 매개 변수를 사용 하거나 <xref:System.Type> 매개 변수를 사용할 수 있는 클래스 내에 중첩 될 수 있는 지정 된 ICorDebugFunction에 대 한 호출을 설정 합니다.  
@@ -54,7 +54,7 @@ HRESULT CallParameterizedFunction (
  진행 각각 함수 인수에 전달 된 값을 나타내는 ICorDebugValue 개체를 가리키는 포인터의 배열입니다.  
   
 ## <a name="remarks"></a>주의  
- `CallParameterizedFunction`는 함수는 형식 매개 변수가 있는 클래스 내부에 있을 수 있다는 점만 제외 하 고는 [ICorDebugEval:: CallFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md) 과 유사 합니다. 단, 형식 매개 변수 또는 둘 다를 사용할 수 있습니다. 먼저 클래스에 대해 형식 인수를 지정 하 고 그 다음에 함수를 지정 해야 합니다.  
+ `CallParameterizedFunction`는 함수는 형식 매개 변수가 있는 클래스 내부에 있을 수 있다는 점만 제외 하 고는 [ICorDebugEval:: CallFunction](icordebugeval-callfunction-method.md) 과 유사 합니다. 단, 형식 매개 변수 또는 둘 다를 사용할 수 있습니다. 먼저 클래스에 대해 형식 인수를 지정 하 고 그 다음에 함수를 지정 해야 합니다.  
   
  함수가 다른 응용 프로그램 도메인에 있는 경우 전환이 수행 됩니다. 그러나 모든 형식 및 값 인수는 대상 응용 프로그램 도메인에 있어야 합니다.  
   

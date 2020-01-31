@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 532e9dfd-d114-4c75-b952-1accce102643
 topic_type:
 - apiref
-ms.openlocfilehash: d948fda048e724ad11c59bf7d4776ee2ca6c8d58
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4ad1fb1bcb43dda9796b54cbf868f89c001995da
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125552"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777898"
 ---
 # <a name="icordebugcode2getcompilerflags-method"></a>ICorDebugCode2::GetCompilerFlags 메서드
 
@@ -37,7 +37,7 @@ HRESULT GetCompilerFlags (
 ## <a name="parameters"></a>매개 변수
 
 `pdwFlags`  
-제한이 JIT 컴파일러 또는 네이티브 이미지 생성기의 동작을 지정 하는 [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) 열거형의 값에 대 한 포인터입니다.
+제한이 JIT 컴파일러 또는 네이티브 이미지 생성기의 동작을 지정 하는 [CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md) 열거형의 값에 대 한 포인터입니다.
 
 ## <a name="requirements"></a>요구 사항
 

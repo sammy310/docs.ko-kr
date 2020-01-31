@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e983d11-eaf3-4741-b936-29ec456384a3
 topic_type:
 - apiref
-ms.openlocfilehash: c03be2405e1ab0287a2921b6e2e293862c67a193
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9b96c0a2eca543b9e01ccf92b271b1aa7003c5c9
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137368"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781944"
 ---
 # <a name="icordebugmanagedcallbackdebuggererror-method"></a>ICorDebugManagedCallback::DebuggerError 메서드
 CLR (공용 언어 런타임)에서 이벤트를 처리 하려고 시도 하는 동안 오류가 발생 했음을 디버거에 알립니다.  
@@ -48,7 +48,7 @@ HRESULT DebuggerError (
 ## <a name="remarks"></a>주의  
  오류 특성에 따라 프로세스를 통과 모드로 전환할 수 있습니다.  
   
- `DebugError` 콜백은 오류로 인해 디버깅 서비스를 사용할 수 없도록 설정 했으므로 디버거가 사용자에 게 오류 메시지를 사용할 수 있도록 해야 합니다. [ICorDebugProcess:: GetID](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getid-method.md) 는 호출 해도 안전 하지만 [ICorDebug:: Terminate](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md)를 비롯 한 다른 모든 메서드는 호출 하면 안 됩니다. 디버거는 프로세스를 종료 하는 운영 체제 기능을 사용 해야 합니다.  
+ `DebugError` 콜백은 오류로 인해 디버깅 서비스를 사용할 수 없도록 설정 했으므로 디버거가 사용자에 게 오류 메시지를 사용할 수 있도록 해야 합니다. [ICorDebugProcess:: GetID](icordebugprocess-getid-method.md) 는 호출 해도 안전 하지만 [ICorDebug:: Terminate](icordebug-terminate-method.md)를 비롯 한 다른 모든 메서드는 호출 하면 안 됩니다. 디버거는 프로세스를 종료 하는 운영 체제 기능을 사용 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -61,4 +61,4 @@ HRESULT DebuggerError (
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugManagedCallback 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback 인터페이스](icordebugmanagedcallback-interface.md)

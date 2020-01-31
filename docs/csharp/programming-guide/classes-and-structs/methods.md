@@ -5,12 +5,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 5955228d51d2f6845a363bcaf32581b6598273f6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8c90f06bfadc528bd9575ead30e6b01263055fe8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714764"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743913"
 ---
 # <a name="methods-c-programming-guide"></a>메서드(C# 프로그래밍 가이드)
 
@@ -44,7 +44,7 @@ ms.locfileid: "75714764"
 
 ## <a name="passing-by-reference-vs-passing-by-value"></a>참조로 전달할 것인지, 아니면 값으로 전달할 것인지 선택
 
-기본적으로 값 형식이 메서드에 전달될 때 개체 자체가 아닌 복사본이 전달됩니다. 따라서 인수에 대한 변경 내용은 호출하는 메서드의 원래 복사본에 영향을 주지 않습니다. ref 키워드를 사용하여 값 형식을 참조로 전달할 수 있습니다. 자세한 내용은 [값 형식 매개 변수 전달](./passing-value-type-parameters.md)을 참조하세요. 기본 제공 값 형식 목록을 보려면 [값 형식 표](../../language-reference/keywords/value-types-table.md)를 참조하세요.
+기본적으로 [값 형식](../../language-reference/builtin-types/value-types.md)의 인스턴스가 메서드에 전달될 때 인스턴스 자체가 아닌 해당 복사본이 전달됩니다. 따라서 인수에 대한 변경 내용은 호출하는 메서드의 원래 인스턴스에 영향을 주지 않습니다. 참조를 통해 값 형식 인스턴스를 전달하려면 `ref` 키워드를 사용합니다. 자세한 내용은 [값 형식 매개 변수 전달](./passing-value-type-parameters.md)을 참조하세요.
 
 참조 형식의 개체가 메서드에 전달될 때 개체에 대한 참조가 전달됩니다. 즉, 메서드는 개체 자체가 아니라 개체의 위치를 나타내는 인수를 수신합니다. 이 참조를 사용하여 개체의 멤버를 변경하면 개체를 값으로 전달하더라도 변경 내용은 호출하는 메서드의 인수에 반영됩니다.
 

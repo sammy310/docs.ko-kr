@@ -1,15 +1,16 @@
 ---
-title: '연습: XAML을 사용하여 WPF에서 Windows Forms 컨트롤 호스팅'
+title: XAML을 사용 하 여 WPF에서 Windows Forms 컨트롤 호스팅
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 ms.assetid: 1aef42cb-4cfb-44b4-9a7a-c02632d3d9c7
-ms.openlocfilehash: 3b4b743b07876f240366b2d2d19667405941a40b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
-ms.translationtype: MT
+ms.openlocfilehash: a0a88c39a25e5292365a6447cefdd8f31db5e5c3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976545"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744924"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml"></a>연습: XAML을 사용하여 WPF에서 Windows Forms 컨트롤 호스팅
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 풍부한 기능 집합이 있는 많은 컨트롤을 제공합니다. 그러나 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 페이지에서 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤을 사용 하려는 경우가 있습니다. 예를 들어 기존 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤에 상당한 투자가 있거나 고유한 기능을 제공 하는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤이 있을 수 있습니다.  
@@ -18,7 +19,7 @@ ms.locfileid: "73976545"
   
  이 연습에 표시 된 작업의 전체 코드 목록은 [WPF에서 XAML을 사용 하 여 Windows Forms 컨트롤 호스팅 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/HostingWfInWpfWithXaml)을 참조 하세요.
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>전제 조건  
 
 이 연습을 완료하려면 Visual Studio가 필요합니다.  
   
@@ -48,7 +49,7 @@ ms.locfileid: "73976545"
   
      [!code-xaml[HostingWfInWpfWithXaml#3](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWfInWpfWithXaml/CSharp/HostingWfInWpf/Window1.xaml#3)]  
   
-6. F5 키를 눌러 애플리케이션을 빌드하고 실행합니다.  
+6. F5 키를 눌러 응용 프로그램을 빌드하고 실행합니다.  
   
 ## <a name="see-also"></a>참조
 

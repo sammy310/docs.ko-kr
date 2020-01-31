@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 0b7c9fc0e9dd0f559c52f692c405a3f9e68814d0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: be2af77f9680ab3285720525638bba8ef2041999
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711885"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745373"
 ---
 # <a name="types-c-programming-guide"></a>형식(C# 프로그래밍 가이드)
 
@@ -113,7 +113,7 @@ char c = 'Z';
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 
-구조체에 대한 자세한 내용은 [구조체](../classes-and-structs/structs.md)를 참조하세요. .NET의 값 형식에 대한 자세한 내용은 [값 형식](../../language-reference/keywords/value-types.md)을 참조하세요.
+구조체에 대한 자세한 내용은 [구조체](../classes-and-structs/structs.md)를 참조하세요. 값 형식에 대한 자세한 내용은 [값 형식](../../language-reference/builtin-types/value-types.md)을 참조하세요.
 
 값 형식의 다른 범주는 [enum](../../language-reference/builtin-types/enum.md)입니다. 열거형은 명명된 정수 상수 집합을 정의합니다. 예를 들어, .NET 클래스 라이브러리의 <xref:System.IO.FileMode?displayProperty=nameWithType> 열거형에는 파일을 여는 방법을 지정하는 명명된 상수 정수 집합이 포함됩니다. 이 패턴은 다음 예제와 같이 정의됩니다.
 
@@ -148,7 +148,7 @@ IMyInterface iface = new MyClass();
 
 ## <a name="types-of-literal-values"></a>리터럴 값 형식
 
-C#에서는 리터럴 값이 컴파일러에서 형식을 받습니다. 숫자의 끝에 문자를 추가하여 숫자 리터럴의 입력 방법을 지정할 수 있습니다. 예를 들어 값 4.56이 float로 처리되도록 지정하려면 숫자 뒤에 "f" 또는 "F"를 추가합니다(`4.56f`). 문자를 추가하지 않으면 컴파일러가 리터럴의 형식을 유추합니다. 문자 접미사와 함께 지정할 수 있는 형식에 대한 자세한 내용은 [값 형식](../../language-reference/keywords/value-types.md)에서 개별 형식의 참조 페이지를 참조하세요.
+C#에서는 리터럴 값이 컴파일러에서 형식을 받습니다. 숫자의 끝에 문자를 추가하여 숫자 리터럴의 입력 방법을 지정할 수 있습니다. 예를 들어 값 4.56이 float로 처리되도록 지정하려면 숫자 뒤에 "f" 또는 "F"를 추가합니다(`4.56f`). 문자를 추가하지 않으면 컴파일러가 리터럴의 형식을 유추합니다. 문자 접미사를 사용하여 지정할 수 있는 형식에 대한 자세한 내용은 [정수 숫자 형식](../../language-reference/builtin-types/integral-numeric-types.md) 및 [부동 소수점 숫자 형식](../../language-reference/builtin-types/floating-point-numeric-types.md)을 참조하세요.
 
 리터럴은 형식화되고 모든 형식이 궁극적으로 <xref:System.Object?displayProperty=nameWithType>에서 파생되기 때문에 다음과 같은 코드를 작성하고 컴파일할 수 있습니다.
 
@@ -185,7 +185,7 @@ stringList.Add(4);
 
 - [dynamic 형식 사용](./using-type-dynamic.md)
 
-- [값 형식](../../language-reference/keywords/value-types.md)
+- [값 형식](../../language-reference/builtin-types/value-types.md)
 
 - [참조 형식](../../language-reference/keywords/reference-types.md)
 

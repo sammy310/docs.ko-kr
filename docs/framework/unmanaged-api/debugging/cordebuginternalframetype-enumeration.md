@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e4412dc2-c338-4cfb-94d8-f682095dd2b1
 topic_type:
 - apiref
-ms.openlocfilehash: e76800316885c27c697421d454341d5f0789c611
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2be827e12db765485ee889d6a4a19a982dad5d54
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73097946"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778363"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>CorDebugInternalFrameType 열거형
-스택 프레임 형식을 식별합니다. 이 열거형은 [ICorDebugInternalFrame:: GetFrameType](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md) 메서드에서 사용 됩니다.  
+스택 프레임 형식을 식별합니다. 이 열거형은 [ICorDebugInternalFrame:: GetFrameType](icordebuginternalframe-getframetype-method.md) 메서드에서 사용 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,11 +43,11 @@ typedef enum CorDebugInternalFrameType {
 } CorDebugInternalFrameType;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-|멤버|설명|  
+|Member|설명|  
 |------------|-----------------|  
-|`STUBFRAME_NONE`|Null 값입니다. `ICorDebugInternalFrame::GetFrameType` 메서드는이 값을 반환 하지 않습니다.|  
+|`STUBFRAME_NONE`|null 값입니다. `ICorDebugInternalFrame::GetFrameType` 메서드는이 값을 반환 하지 않습니다.|  
 |`STUBFRAME_M2U`|관리 되는 관리 되지 않는 스텁 프레임입니다.|  
 |`STUBFRAME_U2M`|관리 되지 않는 스텁 프레임입니다.|  
 |`STUBFRAME_APPDOMAIN_TRANSITION`|응용 프로그램 도메인 간 전환|  
@@ -70,4 +70,4 @@ typedef enum CorDebugInternalFrameType {
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 열거형](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [디버깅 열거형](debugging-enumerations.md)

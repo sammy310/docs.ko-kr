@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, providers
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-ms.openlocfilehash: f41fc102dfbe24d47e194da7477791a46f8d712d
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 98208f1e1fa1b540bf3880e33478854128505233
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741742"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778781"
 ---
 # <a name="ui-automation-providers-overview"></a>UI 자동화 공급자 개요
 > [!NOTE]
@@ -18,9 +18,9 @@ ms.locfileid: "75741742"
   
  UI 자동화 공급자를 통해 컨트롤이 UI 자동화 클라이언트 애플리케이션과 통신할 수 있습니다. 일반적으로 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 의 각 컨트롤 또는 기타 고유한 요소는 공급자가 나타냅니다. 공급자는 요소에 대한 정보를 노출하고 클라이언트 애플리케이션이 컨트롤과 상호 작용하도록 하는 컨트롤 패턴을 구현합니다(선택적).  
   
- 클라이언트 애플리케이션은 일반적으로 공급자와 직접 작동될 필요가 없습니다. Win32, [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]또는 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 프레임 워크를 사용 하는 응용 프로그램의 표준 컨트롤 대부분은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 시스템에 자동으로 노출 됩니다. 또한 사용자 지정 컨트롤을 구현하는 애플리케이션은 이러한 컨트롤에 대해 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 공급자를 구현할 수도 있으며, 공급자에 액세스하기 위해 클라이언트 애플리케이션이 수행해야 할 특별한 단계는 없습니다.  
+ 클라이언트 애플리케이션은 일반적으로 공급자와 직접 작동될 필요가 없습니다. Win32, Windows Forms 또는 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 프레임 워크를 사용 하는 응용 프로그램의 표준 컨트롤 대부분은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 시스템에 자동으로 노출 됩니다. 또한 사용자 지정 컨트롤을 구현하는 애플리케이션은 이러한 컨트롤에 대해 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 공급자를 구현할 수도 있으며, 공급자에 액세스하기 위해 클라이언트 애플리케이션이 수행해야 할 특별한 단계는 없습니다.  
   
- 이 항목에서는 컨트롤 개발자가 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 공급자를 구현 하는 방법, 특히 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 및 Win32 창의 컨트롤에 대 한 개요를 제공 합니다.  
+ 이 항목에서는 컨트롤 개발자가 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 공급자를 구현 하는 방법, 특히 Windows Forms 및 Win32 창의 컨트롤에 대 한 개요를 제공 합니다.  
   
 <a name="Types_of_Providers"></a>   
 ## <a name="types-of-providers"></a>공급자 형식입니다.  

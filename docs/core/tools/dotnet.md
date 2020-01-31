@@ -2,18 +2,18 @@
 title: dotnet 명령
 description: dotnet 명령(.NET Core CLI 도구에 대한 일반 드라이버) 및 사용법에 대해 알아봅니다.
 ms.date: 06/04/2018
-ms.openlocfilehash: a22340c26ca2e483e43857e2ecb31f2ab53b60f4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: fe90968560b58471c279fcd2097741ea476cef0b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117512"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734070"
 ---
 # <a name="dotnet-command"></a>dotnet 명령
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>이름
 
 `dotnet` - .NET 소스 코드 및 이진 파일을 관리하기 위한 도구입니다.
 
@@ -107,7 +107,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 *runtimeconfig.json* 파일의 경로입니다.
 
-*runtimeconfig.json* 파일은 런타임 구성 설정을 포함하는 구성 파일입니다. 자세한 내용은 GitHub에서 [런타임 구성 파일](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)을 참조하세요.
+*runtimeconfig.json* 파일은 런타임 설정을 포함하는 구성 파일입니다. 자세한 내용은 [.NET Core 런타임 구성 설정](../run-time-config/index.md#runtimeconfigjson)을 참조하세요.
 
 `-v|--verbosity <LEVEL>`
 
@@ -157,7 +157,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 *runtimeconfig.json* 파일의 경로입니다.
 
-*runtimeconfig.json* 파일은 런타임 구성 설정을 포함하는 구성 파일입니다. 자세한 내용은 [GitHub에서 런타임 구성 파일](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)을 참조하세요.
+*runtimeconfig.json* 파일은 런타임 설정을 포함하는 구성 파일입니다. 자세한 내용은 [.NET Core 런타임 구성 설정](../run-time-config/index.md#runtimeconfigjson)을 참조하세요.
 
 `-v|--verbosity <LEVEL>`
 
@@ -199,7 +199,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 *runtimeconfig.json* 파일의 경로입니다.
 
-*runtimeconfig.json* 파일은 런타임 구성 설정을 포함하는 구성 파일입니다. 자세한 내용은 [GitHub에서 런타임 구성 파일](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)을 참조하세요.
+*runtimeconfig.json* 파일은 런타임 설정을 포함하는 구성 파일입니다. 자세한 내용은 [.NET Core 런타임 구성 설정](../run-time-config/index.md#runtimeconfigjson)을 참조하세요.
 
 `-v|--verbosity <LEVEL>`
 
@@ -217,7 +217,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
-| 명령                                       | 함수                                                            |
+| 명령                                       | 기능                                                            |
 | --------------------------------------------- | ------------------------------------------------------------------- |
 | [dotnet build](dotnet-build.md)               | .NET Core 애플리케이션을 빌드합니다.                                     |
 | [dotnet build-server](dotnet-build-server.md) | 빌드에서 시작된 서버와 상호 작용합니다.                          |
@@ -236,7 +236,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
-| 명령                             | 함수                                                            |
+| 명령                             | 기능                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
 | [dotnet build](dotnet-build.md)     | .NET Core 애플리케이션을 빌드합니다.                                     |
 | [dotnet clean](dotnet-clean.md)     | 빌드 출력을 정리합니다.                                              |
@@ -254,7 +254,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-| 명령                             | 함수                                                            |
+| 명령                             | 기능                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
 | [dotnet build](dotnet-build.md)     | .NET Core 애플리케이션을 빌드합니다.                                     |
 | [dotnet clean](dotnet-clean.md)     | 빌드 출력을 정리합니다.                                              |
@@ -272,7 +272,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 ### <a name="project-references"></a>프로젝트 참조
 
-명령 | 함수
+명령 | 기능
 --- | ---
 [dotnet add reference](dotnet-add-reference.md) | 프로젝트 참조를 추가합니다.
 [dotnet list reference](dotnet-list-reference.md) | 프로젝트 참조를 나열합니다.
@@ -280,14 +280,14 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 ### <a name="nuget-packages"></a>NuGet 패키지
 
-명령 | 함수
+명령 | 기능
 --- | ---
 [dotnet add package](dotnet-add-package.md) | NuGet 패키지를 추가합니다.
 [dotnet remove package](dotnet-remove-package.md) | NuGet 패키지를 제거합니다.
 
 ### <a name="nuget-commands"></a>NuGet 명령
 
-명령 | 함수
+명령 | 기능
 --- | ---
 [dotnet nuget delete](dotnet-nuget-delete.md) | 서버에서 패키지를 삭제하거나 목록에서 제거합니다.
 [dotnet nuget locals](dotnet-nuget-locals.md) | http-request 캐시, 임시 캐시 또는 시스템 전체의 글로벌 패키지 폴더와 같은 로컬 NuGet 리소스를 지우거나 목록에 포함합니다.
@@ -297,7 +297,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 [.NET Core 전역 도구](global-tools.md)는 .NET Core SDK 2.1.300부터 사용할 수 있습니다.
 
-명령 | 함수
+명령 | 기능
 --- | ---
 [dotnet tool install](dotnet-tool-install.md) | 컴퓨터에 전역 도구를 설치합니다.
 [dotnet tool list](dotnet-tool-list.md) | 컴퓨터의 기본 디렉터리 또는 지정된 경로에 현재 설치된 모든 전역 도구를 나열합니다.
@@ -308,7 +308,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 .NET Core SDK 2.1.300부터는 `DotnetCliToolReference`을 사용하여 프로젝트별로만 사용할 수 있었던 여러 도구를 .NET Core SDK의 일부로 사용할 수 있습니다. 이러한 도구는 다음 표에 나열되어 있습니다.
 
-| 도구                                              | 함수                                                     |
+| 도구                                              | 기능                                                     |
 | ------------------------------------------------- | ------------------------------------------------------------ |
 | dev-certs                                         | 개발 인증서를 만들고 관리합니다.                |
 | [ef](/ef/core/miscellaneous/cli/dotnet)           | Entity Framework Core 명령줄 도구입니다.                    |
@@ -318,7 +318,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 각 도구에 대한 자세한 내용을 보려면 `dotnet <tool-name> --help`를 입력합니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 새 .NET Core 콘솔 애플리케이션을 만듭니다.
 
@@ -396,6 +396,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 ---
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [런타임 구성 파일](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)
+- [.NET Core 런타임 구성 설정](../run-time-config/index.md)

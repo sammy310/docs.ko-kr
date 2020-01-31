@@ -3,16 +3,16 @@ title: 메모리 누수 디버그 자습서
 description: .NET Core의 메모리 누수를 디버그하는 방법을 알아봅니다.
 ms.topic: tutorial
 ms.date: 12/17/2019
-ms.openlocfilehash: cb137503cbc81f5ab9438dadcf1dc1c6750a1ca8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 014945394f87edd02c94f7c3b28043bd07470d8b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715601"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737735"
 ---
 # <a name="tutorial-debug-a-memory-leak-in-net-core"></a>자습서: .NET Core의 메모리 누수 디버그
 
-**이 문서의 적용 대상: ✓** .NET Core 3.0 SDK 이상 버전
+**이 문서의 적용 대상:**  ✔️ .NET Core 3.0 SDK 이상 버전
 
 이 자습서에서는 .NET Core 메모리 누수를 분석하는 도구를 보여줍니다.
 

@@ -1,5 +1,5 @@
 ---
-title: NotifyIcon 구성 요소 개요(Windows Forms)
+title: NotifyIcon 구성 요소 개요
 ms.date: 03/30/2017
 f1_keywords:
 - NotifyIcon
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - system tray icons [Windows Forms], about system tray icons
 - system tray icons [Windows Forms], using in Windows Forms
 ms.assetid: 5b9189fa-d4ae-41a6-9b97-eb1f44bb1a69
-ms.openlocfilehash: def109799ddfb25b6f56a4f18d52bb19f62842f5
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 587bf514db853f1122ed16abc05a195985c5ce8d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645702"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742130"
 ---
 # <a name="notifyicon-component-overview-windows-forms"></a>NotifyIcon 구성 요소 개요(Windows Forms)
 
@@ -27,9 +27,9 @@ Windows Forms <xref:System.Windows.Forms.NotifyIcon> 구성 요소는 일반적�
 
 풍선 설명, 바로 가기 메뉴 및 도구 설명을 <xref:System.Windows.Forms.NotifyIcon>에 연결하여 사용자를 지원할 수 있습니다.
 
-풍선 설명을 표시할 시간 범위를 지정하고 <xref:System.Windows.Forms.NotifyIcon.ShowBalloonTip%2A> 메서드를 호출하여 <xref:System.Windows.Forms.NotifyIcon>에 대한 풍선 설명을 표시할 수 있습니다. <xref:System.Windows.Forms.NotifyIcon.BalloonTipText%2A>, <xref:System.Windows.Forms.NotifyIcon.BalloonTipIcon%2A> 및 <xref:System.Windows.Forms.NotifyIcon.BalloonTipTitle%2A>을 각각 사용하여 풍선 설명의 텍스트, 아이콘 및 제목을 지정할 수도 있습니다. <xref:System.Windows.Forms.NotifyIcon> 구성 요소에 연결된 도구 설명 및 바로 가기 메뉴가 있을 수도 있습니다. 자세한 내용은 [ToolTip 구성 요소 개요](tooltip-component-overview-windows-forms.md) 하 고 [ContextMenu 구성 요소 개요](contextmenu-component-overview-windows-forms.md)합니다.
+풍선 설명을 표시할 시간 범위를 지정하고 <xref:System.Windows.Forms.NotifyIcon.ShowBalloonTip%2A> 메서드를 호출하여 <xref:System.Windows.Forms.NotifyIcon>에 대한 풍선 설명을 표시할 수 있습니다. <xref:System.Windows.Forms.NotifyIcon.BalloonTipText%2A>, <xref:System.Windows.Forms.NotifyIcon.BalloonTipIcon%2A> 및 <xref:System.Windows.Forms.NotifyIcon.BalloonTipTitle%2A>을 각각 사용하여 풍선 설명의 텍스트, 아이콘 및 제목을 지정할 수도 있습니다. <xref:System.Windows.Forms.NotifyIcon> 구성 요소에 연결된 도구 설명 및 바로 가기 메뉴가 있을 수도 있습니다. 자세한 내용은 [도구 설명 구성 요소 개요](tooltip-component-overview-windows-forms.md) 및 [ContextMenu 구성 요소 개요](contextmenu-component-overview-windows-forms.md)를 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Forms.NotifyIcon>
 - [NotifyIcon 구성 요소](notifyicon-component-windows-forms.md)

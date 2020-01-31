@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dc437751-7093-44e2-bfdc-191d9ce3c192
 topic_type:
 - apiref
-ms.openlocfilehash: e41bb5ca0fdd999692395239304f50a6f745a4f3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0944f3379c18cba56ab65fe40a5b94a64d8a8991
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088276"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778198"
 ---
 # <a name="icordebugarrayvalue-interface"></a>ICorDebugArrayValue 인터페이스
 
@@ -29,14 +29,14 @@ ms.locfileid: "73088276"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[GetBaseIndicies 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-getbaseindicies-method.md)|배열에 있는 각 차원의 기본 인덱스를 가져옵니다.|  
-|[GetCount 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-getcount-method.md)|배열에 있는 요소의 총 수를 가져옵니다.|  
-|[GetDimensions 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-getdimensions-method.md)|배열의 크기를 가져옵니다.|  
-|[GetElement 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-getelement-method.md)|배열에서 지정 된 요소를 나타내는 값을 가져옵니다.|  
-|[GetElementAtPosition 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-getelementatposition-method.md)|배열을 0부터 시작 하는 1 차원 배열로 처리 하는 지정 된 위치에 있는 요소를 가져옵니다.|  
-|[GetElementType 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-getelementtype-method.md)|배열에 있는 요소의 단순 형식을 가져옵니다.|  
-|[GetRank 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-getrank-method.md)|배열의 차수를 가져옵니다.|  
-|[HasBaseIndicies 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-hasbaseindicies-method.md)|배열에 기본 인덱스가 있는지 여부를 확인 합니다.|  
+|[GetBaseIndicies 메서드](icordebugarrayvalue-getbaseindicies-method.md)|배열에 있는 각 차원의 기본 인덱스를 가져옵니다.|  
+|[GetCount 메서드](icordebugarrayvalue-getcount-method.md)|배열에 있는 요소의 총 수를 가져옵니다.|  
+|[GetDimensions 메서드](icordebugarrayvalue-getdimensions-method.md)|배열의 크기를 가져옵니다.|  
+|[GetElement 메서드](icordebugarrayvalue-getelement-method.md)|배열에서 지정 된 요소를 나타내는 값을 가져옵니다.|  
+|[GetElementAtPosition 메서드](icordebugarrayvalue-getelementatposition-method.md)|배열을 0부터 시작 하는 1 차원 배열로 처리 하는 지정 된 위치에 있는 요소를 가져옵니다.|  
+|[GetElementType 메서드](icordebugarrayvalue-getelementtype-method.md)|배열에 있는 요소의 단순 형식을 가져옵니다.|  
+|[GetRank 메서드](icordebugarrayvalue-getrank-method.md)|배열의 차수를 가져옵니다.|  
+|[HasBaseIndicies 메서드](icordebugarrayvalue-hasbaseindicies-method.md)|배열에 기본 인덱스가 있는지 여부를 확인 합니다.|  
   
 ## <a name="remarks"></a>주의  
  `ICorDebugArrayValue`는 1 차원 배열 및 다차원 배열을 모두 지원 합니다.  
@@ -55,4 +55,4 @@ ms.locfileid: "73088276"
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

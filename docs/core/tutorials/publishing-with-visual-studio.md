@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 12/10/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 485d62ce67f284fe1bbe931dcaa00671be154f35
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a82934fd2ea9568681a3bec82c3b15513decc926
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715363"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741571"
 ---
 # <a name="publish-your-net-core-hello-world-application-with-visual-studio"></a>Visual Studio를 사용하여 .NET Core Hello World 애플리케이션 게시
 
@@ -68,7 +68,7 @@ ms.locfileid: "75715363"
 
       * *HelloWorld.runtimeconfig.json*
 
-         애플리케이션의 런타임 구성 파일입니다. 애플리케이션이 실행되도록 빌드된 .NET Core의 버전을 식별합니다. 자세한 내용은 [런타임 구성 파일](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)을 참조하세요.
+         애플리케이션의 런타임 구성 파일입니다. 애플리케이션이 실행되도록 빌드된 .NET Core의 버전을 식별합니다. 구성 옵션을 추가할 수도 있습니다. 자세한 내용은 [.NET Core 런타임 구성 설정](../run-time-config/index.md#runtimeconfigjson)을 참조하세요.
 
 ## <a name="additional-resources"></a>추가 자료
 

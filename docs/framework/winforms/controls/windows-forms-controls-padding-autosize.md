@@ -1,5 +1,5 @@
 ---
-title: '연습: Padding, Margins 및 AutoSize 속성을 사용하여 Windows Forms 컨트롤 레이아웃'
+title: 안쪽 여백, 여백 및 AutoSize 속성을 사용 하 여 컨트롤 레이아웃
 ms.date: 03/30/2017
 f1_keywords:
 - Margin.Bottom
@@ -18,12 +18,12 @@ ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 76c880c208355b01d0fbaf46cf58091ad147846b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ca7942c04434592f2541252c47ac3dd17e03dbac
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460604"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742377"
 ---
 # <a name="walkthrough-lay-out-controls-with-padding-margins-and-the-autosize-property"></a>연습: 패딩, 여백 및 AutoSize 속성을 사용 하 여 컨트롤 레이아웃
 
@@ -39,7 +39,7 @@ ms.locfileid: "73460604"
 
 <xref:System.Windows.Forms.Control.AutoSize%2A> 속성은 컨트롤이 내용에 맞게 자동으로 크기를 조정 하도록 지시 합니다. 원래 <xref:System.Windows.Forms.Control.Size%2A> 속성 값 보다 작은 크기로 크기를 조정 하지 않으며 <xref:System.Windows.Forms.Control.Padding%2A> 속성의 값을 고려 합니다.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>전제 조건
 
 이 연습을 완료 하려면 Visual Studio가 필요 합니다.
 

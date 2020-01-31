@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9c149303-14b1-4138-83d7-e8c3e0fcd332
 topic_type:
 - apiref
-ms.openlocfilehash: a7876cd932558ad95dab7adac3c91a6f23ca647c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5e3804335bacefad61c4f521ea1ef1444b7b1fed
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134661"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777702"
 ---
 # <a name="icordebugfunctionbreakpoint-interface"></a>ICorDebugFunctionBreakpoint 인터페이스
 
@@ -29,8 +29,8 @@ ICorDebugBreakpoint 인터페이스를 확장 하 여 함수 내에서 중단점
   
 |메서드|설명|  
 |------------|-----------------|  
-|[GetFunction 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getfunction-method.md)|중단점이 설정 된 함수를 참조 하는 ICorDebugFunction에 대 한 인터페이스 포인터를 가져옵니다.|  
-|[GetOffset 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getoffset-method.md)|함수 내에서 중단점의 오프셋을 가져옵니다.|  
+|[GetFunction 메서드](icordebugfunctionbreakpoint-getfunction-method.md)|중단점이 설정 된 함수를 참조 하는 ICorDebugFunction에 대 한 인터페이스 포인터를 가져옵니다.|  
+|[GetOffset 메서드](icordebugfunctionbreakpoint-getoffset-method.md)|함수 내에서 중단점의 오프셋을 가져옵니다.|  
   
 ## <a name="remarks"></a>주의  
   
@@ -48,4 +48,4 @@ ICorDebugBreakpoint 인터페이스를 확장 하 여 함수 내에서 중단점
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

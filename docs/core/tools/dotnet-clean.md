@@ -2,29 +2,29 @@
 title: dotnet clean 명령
 description: dotnet clean 명령은 현재 디렉터리를 정리합니다.
 ms.date: 06/26/2019
-ms.openlocfilehash: 982232833b460b4ea4181acebee74dcef54d3131
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 736c0bba5d156e919534f1ad811641e815b3ffac
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117736"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734245"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
-**이 항목 적용 대상: ✓** .NET Core 1.x SDK 이상 버전
+**이 문서의 적용 대상:**  ✔️ .NET Core 1.x SDK 이상 버전
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>name
+## <a name="name"></a>이름
 
 `dotnet clean` - 프로젝트의 출력을 정리합니다.
 
 ## <a name="synopsis"></a>개요
 
 ```dotnetcli
-dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] 
+dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive]
     [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
@@ -73,7 +73,7 @@ dotnet clean [-h|--help]
 
   MSBuild의 자세한 정도 수준을 설정합니다. 허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다. 기본값은 `normal`입니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 * 프로젝트의 기본 빌드 정리:
 

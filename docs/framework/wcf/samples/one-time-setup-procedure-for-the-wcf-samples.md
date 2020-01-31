@@ -2,12 +2,12 @@
 title: Windows Communication Foundation 샘플의 일회 설치 절차
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: b0f452ba7aabcaa5ea995acba1873029c67f0f5d
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: b75dd523d4c88eae70f8d21ac8b3c9f72ae055ed
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544660"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744781"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 샘플의 일회 설치 절차
 
@@ -24,7 +24,7 @@ ms.locfileid: "75544660"
 
 2. .NET Framework 4가 설치 되어 있는지 확인 합니다. 다음 디렉터리에서 v 4.0 이상 (이상)을 검색 합니다. **\Windows\Microsoft.NET\Framework**
 
-3. Visual Studio 2012가 설치 되어 있지 않고 운영 체제가 Windows Server 2008 SP2 이상이 아닌 경우 [핫픽스 251798](https://go.microsoft.com/fwlink/?LinkId=184693)를 설치 합니다.
+3. Visual Studio 2012 이상 버전이 설치 되어 있는지 확인 하거나 운영 체제가 Windows Server 2008 SP2 이상 인지 확인 합니다.
 
 4. 다음 명령을 실행합니다. 이러한 명령을 실행 해야 하는 이유에 대 한 자세한 내용은 [IIS 호스팅된 서비스 실패](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752252(v=vs.90))를 참조 하세요.
 

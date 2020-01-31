@@ -6,20 +6,20 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: eba3d21cfc787c5d388de31f988b835522118151
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 0905cbebb2d966570be4ac3aefb40f4377b97061
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75936920"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742581"
 ---
 # <a name="whats-new-in-net-core-31"></a>.NET Core 3.1의 새로운 기능
 
 이 문서에서는 .NET Core 3.1의 새로운 기능을 설명합니다. 이 릴리스에는 작지만 중요한 수정 내용에 중점을 둔 .NET Core 3.0의 소소한 개선 사항이 포함되어 있습니다. .NET Core 3.1의 가장 중요한 기능은 [LTS(장기 지원)](#long-term-support) 릴리스라는 것입니다.
 
-Visual Studio 2019을 사용하는 경우 .NET Core 3.1 프로젝트와 함께 작동하려면 [Visual Studio 2019 버전 16.4](https://visualstudio.microsoft.com/downloads/)를 업데이트해야 합니다. Visual Studio의 새로운 기능에 대한 자세한 내용은 [Visual Studio 블로그](https://devblogs.microsoft.com/visualstudio/tis-the-season-visual-studio-2019/)를 참조하세요.
+Visual Studio 2019을 사용하는 경우 .NET Core 3.1 프로젝트와 함께 작동하려면 [Visual Studio 2019 버전 16.4](https://visualstudio.microsoft.com/downloads/)를 업데이트해야 합니다. Visual Studio의 새로운 기능에 대한 자세한 내용은 [Visual Studio 2019 버전 16.4의 새로운 기능](/visualstudio/releases/2019/release-notes#whats-new-in-visual-studio-2019-version-164)을 참조하세요.
 
-또한 Mac용 Visual Studio는 Mac용 Visual Studio 8.4 미리 보기 채널에서 .NET Core 3.1을 지원 및 포함합니다. .NET Core 3.1을 사용하려면 미리 보기 채널에 옵트인해야 합니다.
+또한 Mac용 Visual Studio는 Mac용 Visual Studio 8.4에서 .NET Core 3.1을 지원 및 포함합니다.
 
 릴리스에 대한 자세한 내용은 [.NET Core 3.1 공지](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-1/)를 참조하세요.
 
@@ -64,7 +64,7 @@ Visual Studio 2019을 사용하는 경우 .NET Core 3.1 프로젝트와 함께 �
 
 C++/CLI("관리되는 C++"라고도 함) 프로젝트를 만들기 위한 지원이 추가되었습니다. 이러한 프로젝트에서 생성된 이진 파일은 .NET Core 3.0 이상 버전과 호환됩니다.
 
-Visual Studio 2019 16.4에서 C++/CLI에 대한 지원을 추가하려면 [C++ 워크로드로 데스크톱 개발](https://docs.microsoft.com/cpp/build/vscpp-step-0-installation?view=vs-2019#step-4---choose-workloads)을 설치합니다. 이 워크로드는 Visual Studio에 다음의 두 가지 템플릿을 추가합니다.
+Visual Studio 2019 버전 16.4에서 C++/CLI에 대한 지원을 추가하려면 [C++ 워크로드로 데스크톱 개발](/cpp/build/vscpp-step-0-installation?view=vs-2019#step-4---choose-workloads)을 설치합니다. 이 워크로드는 Visual Studio에 다음의 두 가지 템플릿을 추가합니다.
 
 - CLR 클래스 라이브러리(.NET Core)
 - CLR 빈 프로젝트(.NET Core)

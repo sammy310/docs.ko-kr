@@ -7,12 +7,12 @@ helpviewer_keywords:
 - struct keyword [C#]
 - structs [C#], struct keyword
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 74e9909fda83c781b5a15727f79ff755e7682b0f
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 8d9a23a0813423571c894758257b284ad67a72e2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75963118"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744652"
 ---
 # <a name="struct-c-reference"></a>struct(C# 참조)
 
@@ -48,11 +48,9 @@ public struct Book
 ## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
-- [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 키워드](index.md)
 - [기본 제공 형식 표](built-in-types-table.md)
-- [유형](/dotnet/csharp/language-reference/keywords)
-- [값 형식](value-types.md)
+- [값 형식](../builtin-types/value-types.md)
 - [class](class.md)
 - [interface](interface.md)
 - [클래스 및 구조체](../../programming-guide/classes-and-structs/index.md)

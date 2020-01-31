@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7137e3d1-1dad-48d8-8c37-16ac816534d3
 topic_type:
 - apiref
-ms.openlocfilehash: db24228de7e8c98fd97f890b1e408515172299b3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 14a72e4622aac09840e43f8bcdcf8a8c8d6e6892
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125666"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777909"
 ---
 # <a name="icordebugcodegetcode-method"></a>ICorDebugCode::GetCode 메서드
-지정 된 함수에 대 한 코드를 모두 가져오고 디스어셈블리에 맞게 형식이 지정 됩니다. 이 메서드는 .NET Framework 버전 2.0에서 더 이상 사용 되지 않습니다. 대신 [ICorDebugCode2:: GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) 를 사용 합니다.  
+지정 된 함수에 대 한 코드를 모두 가져오고 디스어셈블리에 맞게 형식이 지정 됩니다. 이 메서드는 .NET Framework 버전 2.0에서 더 이상 사용 되지 않습니다. 대신 [ICorDebugCode2:: GetCodeChunks](icordebugcode2-getcodechunks-method.md) 를 사용 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -68,4 +68,4 @@ HRESULT GetCode (
   
 ## <a name="see-also"></a>참조
 
-- [GetCodeChunks 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
+- [GetCodeChunks 메서드](icordebugcode2-getcodechunks-method.md)
