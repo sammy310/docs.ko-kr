@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2debcaab-6005-4245-afdb-4268bb7e74bd
 topic_type:
 - apiref
-ms.openlocfilehash: f0000e9b063022e828e52b9b940ec6f4e0ce4165
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7e43f58f619aaa63fa2294dd3e989026dcdfc604
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445896"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866132"
 ---
 # <a name="icorprofilercallbackmoduleunloadstarted-method"></a>ICorProfilerCallback::ModuleUnloadStarted 메서드
 모듈이 언로드되고 있음을 프로파일러에 알립니다.  
@@ -48,7 +48,7 @@ HRESULT ModuleUnloadStarted(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ModuleUnloadFinished 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadfinished-method.md)
+- [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
+- [ModuleUnloadFinished 메서드](icorprofilercallback-moduleunloadfinished-method.md)

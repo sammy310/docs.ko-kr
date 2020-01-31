@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b2a8240b-07fe-4859-bb2b-7d3adbfa0a9f
 topic_type:
 - apiref
-ms.openlocfilehash: 35dbed6a723f5319dc506a44198456e3794464fc
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
-ms.translationtype: HT
+ms.openlocfilehash: 49c3ab4901537805a1ae1be79097c55cc331d29d
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790228"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866717"
 ---
 # <a name="icorprofilercallbackappdomaincreationstarted-method"></a>ICorProfilerCallback::AppDomainCreationStarted 메서드
 응용 프로그램 도메인이 생성 중임을 프로파일러에 알립니다.  
@@ -39,7 +39,7 @@ HRESULT AppDomainCreationStarted(
   \[]은 만들 도메인을 식별 합니다.
   
 ## <a name="remarks"></a>주의  
- [ICorProfilerCallback:: AppDomainCreationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md) 메서드가 호출 될 때까지 정보 요청에 대해 ID가 유효 하지 않습니다.  
+ [ICorProfilerCallback:: AppDomainCreationFinished](icorprofilercallback-appdomaincreationfinished-method.md) 메서드가 호출 될 때까지 정보 요청에 대해 ID가 유효 하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -52,4 +52,4 @@ HRESULT AppDomainCreationStarted(
   
 ## <a name="see-also"></a>참조
 
-- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)

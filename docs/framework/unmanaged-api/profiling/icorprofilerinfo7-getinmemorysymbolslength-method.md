@@ -1,5 +1,5 @@
 ---
-title: 'ICorProfilerInfo7:: Getinmemory기호 Slength 메서드'
+title: ICorProfilerInfo7::GetInMemorySymbolsLength Method
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerInfo7.GetInMemorySymbolsLength
@@ -9,14 +9,14 @@ api_location:
 api_type:
 - COM
 ms.assetid: d62c4a4c-8a62-45aa-8f01-a8387cf36159
-ms.openlocfilehash: 299a7495d9ca9215ad21301a3ac525fa6e49a01b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a675cc301d2dd32f87e3864a3123e2044761ef91
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130338"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868358"
 ---
-# <a name="icorprofilerinfo7getinmemorysymbolslength-method"></a>ICorProfilerInfo7:: Getinmemory기호 Slength 메서드
+# <a name="icorprofilerinfo7getinmemorysymbolslength-method"></a>ICorProfilerInfo7::GetInMemorySymbolsLength Method
 [.NET Framework 4.6.1 이상 버전에서 지원됨]  
   
  메모리 내 기호 스트림의 길이를 반환 합니다.  
@@ -34,7 +34,7 @@ HRESULT GetInMemorySymbolsLength(
  `moduleId`  
  진행 메모리 내 스트림을 포함 하는 모듈의 식별자입니다.  
   
- Pcount기호 바이트  
+ pCountSymbolBytes  
  제한이 메서드가 반환 될 때 스트림의 길이 (바이트)를 포함 하는 `DWORD` 값에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
@@ -59,4 +59,4 @@ HRESULT GetInMemorySymbolsLength(
   
 ## <a name="see-also"></a>참조
 
-- [ICorProfilerInfo7 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)
+- [ICorProfilerInfo7 인터페이스](icorprofilerinfo7-interface.md)

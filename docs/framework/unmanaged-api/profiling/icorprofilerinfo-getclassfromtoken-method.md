@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0afc1197-2a5b-424f-8b82-9cb59a7e00db
 topic_type:
 - apiref
-ms.openlocfilehash: 6999821412b3cdd614cb30858a0616c9f27a6baa
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 841953625235406f013e9f140ad91c7b65680e47
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448116"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76863955"
 ---
 # <a name="icorprofilerinfogetclassfromtoken-method"></a>ICorProfilerInfo::GetClassFromToken 메서드
-메타 데이터 토큰이 지정 된 경우 클래스의 ID를 가져옵니다. 이 메서드는 .NET Framework 버전 2.0에서 사용 되지 않습니다. 대신 [ICorProfilerInfo2:: GetClassFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) 를 사용 합니다.  
+메타 데이터 토큰이 지정 된 경우 클래스의 ID를 가져옵니다. 이 메서드는 .NET Framework 버전 2.0에서 사용 되지 않습니다. 대신 [ICorProfilerInfo2:: GetClassFromTokenAndTypeArgs](icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) 를 사용 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,7 +44,7 @@ HRESULT GetClassFromToken(
  `cTypeArgs`  
  제한이 클래스 ID에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  이 메서드는 사용 되지 않습니다. 대신 모든 형식에 대해 `ICorProfilerInfo2::GetClassFromTokenAndTypeArgs`를 사용 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
@@ -56,6 +56,6 @@ HRESULT GetClassFromToken(
   
  **.NET Framework 버전:** 1.0, 1.1  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo 인터페이스](icorprofilerinfo-interface.md)

@@ -2,12 +2,12 @@
 title: '자습서: Visual Studio Code를 사용하여 macOS에서 .NET Core 솔루션 만들기'
 description: 이 문서에서는 Visual Studio Code를 사용하여 .NET Core 솔루션을 만드는 단계와 워크플로를 제공합니다.
 ms.date: 12/19/2019
-ms.openlocfilehash: 4dc44a0aa155dca3c106a7da68cf100ef644b58b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e3c210d4391c0e3c9c3455ecf23dd138abdb4363
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715297"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741546"
 ---
 # <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 macOS에서 .NET Core 솔루션 만들기
 
@@ -28,7 +28,7 @@ Visual Studio Code 팔레트를 열려면 Visual Studio Code를 열고 <kbd>Fn</
 
 이 자습서에서는 라이브러리 프로젝트, 해당 라이브러리 프로젝트에 대한 테스트, 라이브러리를 사용하는 콘솔 애플리케이션 등 프로젝트 3개를 만듭니다. GitHub의 dotnet/samples 리포지토리에서 이 문서에 대한 [소스를 보거나 다운로드](https://github.com/dotnet/samples/tree/master/core/getting-started/golden)할 수 있습니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
 
-Visual Studio Code를 시작합니다. <kbd>Ctrl</kbd>+<kbd>\`</kbd> 키(역따옴표 또는 억음 문자)를 누르거나 메뉴에서 **보기 > 터미널**을 선택하여 Visual Studio Code에서 포함된 터미널을 엽니다. Visual Studio Code 외부에서 작업하려는 경우 탐색기 **명령 프롬프트에서 열기** 명령(Mac 또는 Linux에서는 **터미널에서 열기**)을 사용하여 외부 셸을 열 수 있습니다.
+Visual Studio Code를 시작합니다. <kbd>Ctrl</kbd><kbd>\`</kbd> 키(역따옴표 또는 백틱 문자)를 누르거나 메뉴에서 **보기** > **터미널**을 선택하여 Visual Studio Code에서 포함된 터미널을 엽니다. Visual Studio Code 외부에서 작업하려는 경우 탐색기 **명령 프롬프트에서 열기** 명령(macOS 또는 Linux에서는 **터미널에서 열기**)을 사용하여 외부 셸을 열 수 있습니다.
 
 하나 이상의 .NET Core 프로젝트에 대한 컨테이너로 사용되는 솔루션 파일을 먼저 만듭니다. 터미널에서 [`dotnet new`](../tools/dotnet-new.md) 명령을 실행하여 *golden*이라는 새 폴더에 새 솔루션 *golden.sln*을 만듭니다.
 
@@ -142,7 +142,8 @@ namespace TestApp
     public class LibraryTests
     {
         [Fact]
-        public void TestThing() {
+        public void TestThing()
+        {
             Assert.NotEqual(42, new Thing().Get(19, 23));
         }
     }
@@ -211,7 +212,7 @@ dotnet run -p app/app.csproj
 
 `Main` 메서드의 `WriteLine` 문에 중단점을 설정합니다. 이렇게 하려면  줄에 커서를 놓고 <kbd>Fn</kbd>+<kbd>F9</kbd> 키를 누르거나 중단점을 설정할 `WriteLine` 줄의 왼쪽 여백에서 마우스를 클릭합니다. 코드 줄 옆의 여백에 빨간색 원이 나타납니다. 중단점에 도달하면 중단점 줄이 실행되기 *전에* 코드 실행이 중지됩니다.
 
-Visual Studio Code 도구 모음에서 디버그 아이콘을 선택하거나, 메뉴 모음에서 **보기 > 디버그**를 선택하거나, 바로 가기 키 <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd>를 사용하여 디버거 탭을 엽니다.
+Visual Studio Code 도구 모음에서 디버그 아이콘을 선택하거나, 메뉴 모음에서 **보기** > **디버그**를 선택하거나, 바로 가기 키 <kbd>&#8679;</kbd><kbd>&#8984;</kbd><kbd>D</kbd>를 사용하여 디버거 탭을 엽니다.
 
 ![Visual Studio Code 디버거](./media/using-on-macos/visual-studio-code-debugger.png)
 

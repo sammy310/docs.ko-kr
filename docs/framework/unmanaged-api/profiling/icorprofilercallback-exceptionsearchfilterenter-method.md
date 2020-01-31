@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: acc239ce-3eef-418c-b1df-c5a6dd8e8a4c
 topic_type:
 - apiref
-ms.openlocfilehash: 96ca2b926217ced6c88f8890f0facc7346fe10c7
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
-ms.translationtype: HT
+ms.openlocfilehash: 710dbe70b0a2498a3d521cdc813c4ead7ba6442e
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790134"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866431"
 ---
 # <a name="icorprofilercallbackexceptionsearchfilterenter-method"></a>ICorProfilerCallback::ExceptionSearchFilterEnter 메서드
 예외 처리의 검색 단계에서 사용자 정의 예외 필터를 실행 하기 시작 했음을 프로파일러에 알립니다.  
@@ -49,5 +49,5 @@ HRESULT ExceptionSearchFilterEnter(
   
 ## <a name="see-also"></a>참조
 
-- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ExceptionSearchFilterLeave 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md)
+- [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
+- [ExceptionSearchFilterLeave 메서드](icorprofilercallback-exceptionsearchfilterleave-method.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 73fe8b4b-8f9a-4ba5-a10c-b26521396a66
 topic_type:
 - apiref
-ms.openlocfilehash: ef5122d49c428af4faa27f3827a5c60721ef0f74
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a543e5119a3ad5580fb67c31dc0e59ab62eab571
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435832"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866494"
 ---
 # <a name="icorprofilercallbackexceptionclrcatcherfound-method"></a>ICorProfilerCallback::ExceptionCLRCatcherFound 메서드
 예외에 대 한 `catch` 블록을 CLR (공용 언어 런타임) 내에서 찾을 때 호출 됩니다. 이 메서드는 .NET Framework 버전 2.0에서 사용 되지 않습니다.  
@@ -40,7 +40,7 @@ HRESULT ExceptionCLRCatcherFound();
   
  **.NET Framework 버전:** 1.0  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ExceptionCLRCatcherExecute 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionclrcatcherexecute-method.md)
+- [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
+- [ExceptionCLRCatcherExecute 메서드](icorprofilercallback-exceptionclrcatcherexecute-method.md)

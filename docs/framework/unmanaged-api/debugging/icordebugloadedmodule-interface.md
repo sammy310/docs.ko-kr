@@ -2,12 +2,12 @@
 title: ICorDebugLoadedModule 인터페이스
 ms.date: 03/30/2017
 ms.assetid: 34be6369-2e75-4a95-a538-3b29ac97cf6d
-ms.openlocfilehash: 9fe36497844b9c33cefcf8c63711941196847525
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9d3bdcec9e90dab337b595294d114de4bd3d531f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122612"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781995"
 ---
 # <a name="icordebugloadedmodule-interface"></a>ICorDebugLoadedModule 인터페이스
 로드된 모듈에 대한 정보를 제공합니다.  
@@ -16,9 +16,9 @@ ms.locfileid: "73122612"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[GetBaseAddress 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-getbaseaddress-method.md)|로드된 모듈의 기본 주소를 가져옵니다.|  
-|[GetName 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-getname-method.md)|로드된 모듈의 이름을 가져옵니다.|  
-|[GetSize 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-getsize-method.md)|로드된 모듈의 크기(바이트)를 가져옵니다.|  
+|[GetBaseAddress 메서드](icordebugloadedmodule-getbaseaddress-method.md)|로드된 모듈의 기본 주소를 가져옵니다.|  
+|[GetName 메서드](icordebugloadedmodule-getname-method.md)|로드된 모듈의 이름을 가져옵니다.|  
+|[GetSize 메서드](icordebugloadedmodule-getsize-method.md)|로드된 모듈의 크기(바이트)를 가져옵니다.|  
   
 ## <a name="remarks"></a>주의  
  `ICorDebugLoadedModule` 인터페이스는 디버거에서 구현되며 CLR 디버깅 인터페이스가 디버거에서 로드된 모듈에 대한 정보를 가져오는 데 사용됩니다.  
@@ -37,5 +37,5 @@ ms.locfileid: "73122612"
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [디버깅 인터페이스](debugging-interfaces.md)
+- [디버깅](index.md)

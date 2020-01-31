@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4400fb8c-0407-4791-8557-f011fd2aee51
 topic_type:
 - apiref
-ms.openlocfilehash: 20556d85655a0a1bbe069a94b99c19c774a13ce6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e3d167be9a4091ae57a3283424186142e90ca7a1
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449688"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868553"
 ---
 # <a name="icorprofilerinfo3getruntimeinformation-method"></a>ICorProfilerInfo3::GetRuntimeInformation 메서드
 프로 파일링 되 고 있는 CLR (공용 언어 런타임)에 대 한 버전 정보를 제공 합니다.  
@@ -81,8 +81,8 @@ HRESULT GetRuntimeInformation(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [ICorProfilerInfo3 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [프로파일링](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerInfo3 인터페이스](icorprofilerinfo3-interface.md)
+- [프로파일링 인터페이스](profiling-interfaces.md)
+- [프로파일링](index.md)

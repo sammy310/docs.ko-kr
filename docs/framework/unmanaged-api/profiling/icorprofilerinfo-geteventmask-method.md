@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ec34cc13-45a3-4695-abc3-b3347d4e6fc2
 topic_type:
 - apiref
-ms.openlocfilehash: f6a4ee32d1f0bd6f66b2cd2249dd90522062cdab
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 63f19fe899abd75380249e171f248480949bc471
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120945"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76863909"
 ---
 # <a name="icorprofilerinfogeteventmask-method"></a>ICorProfilerInfo::GetEventMask 메서드
 프로파일러가 CLR(공용 언어 런타임)에서 이벤트 알림을 받으려는 현재 이벤트 범주를 가져옵니다.  
@@ -34,12 +34,12 @@ HRESULT GetEventMask(
   
 ## <a name="parameters"></a>매개 변수  
  `pdwEvents`  
- [out] 이벤트 범주를 지정하는 4바이트 값에 대한 포인터입니다. 각 비트는 서로 다른 기능, 동작 또는 이벤트 형식을 제어합니다. 비트는 [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) 열거형에 설명 되어 있습니다.  
+ [out] 이벤트 범주를 지정하는 4바이트 값에 대한 포인터입니다. 각 비트는 서로 다른 기능, 동작 또는 이벤트 형식을 제어합니다. 비트는 [COR_PRF_MONITOR](cor-prf-monitor-enumeration.md) 열거형에 설명 되어 있습니다.  
   
 ## <a name="remarks"></a>주의  
   
 > [!NOTE]
-> 이 메서드 대신 [GetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md) 메서드를 호출 해야 합니다. `SetEventMask` 메서드는 계속 지원 되지만 [GetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md) 는 추가 기능을 제공 합니다.  
+> 이 메서드 대신 [GetEventMask2](icorprofilerinfo5-geteventmask2-method.md) 메서드를 호출 해야 합니다. `SetEventMask` 메서드는 계속 지원 되지만 [GetEventMask2](icorprofilerinfo5-geteventmask2-method.md) 는 추가 기능을 제공 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -52,5 +52,5 @@ HRESULT GetEventMask(
   
 ## <a name="see-also"></a>참조
 
-- [GetEventMask2 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md)
-- [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [GetEventMask2 메서드](icorprofilerinfo5-geteventmask2-method.md)
+- [ICorProfilerInfo 인터페이스](icorprofilerinfo-interface.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55a2f907-d216-42eb-8f2f-e5d59c2eebd6
 topic_type:
 - apiref
-ms.openlocfilehash: dffd4365669da61f7b321110ad663c131ce591e6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a9ce9a7a56847efcadf09924ffc56c41f20a1c58
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439675"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865729"
 ---
 # <a name="icorprofilercallback2rootreferences2-method"></a>ICorProfilerCallback2::RootReferences2 메서드
-가비지 수집이 발생 한 후 루트 참조에 대해 프로파일러에 알립니다. 이 메서드는 [ICorProfilerCallback:: RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) 메서드를 확장 한 것입니다.  
+가비지 수집이 발생 한 후 루트 참조에 대해 프로파일러에 알립니다. 이 메서드는 [ICorProfilerCallback:: RootReferences](icorprofilercallback-rootreferences-method.md) 메서드를 확장 한 것입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,10 +44,10 @@ HRESULT RootReferences2(
  진행 각각 정적 개체 또는 스택의 개체를 참조 하는 개체 Id의 배열입니다. `rootKinds` 배열의 요소는 `rootRefIds` 배열에서 해당 요소를 분류 하는 정보를 제공 합니다.  
   
  `rootKinds`  
- 진행 가비지 컬렉션 루트의 형식을 나타내는 [COR_PRF_GC_ROOT_KIND](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-kind-enumeration.md) 값의 배열입니다.  
+ 진행 가비지 컬렉션 루트의 형식을 나타내는 [COR_PRF_GC_ROOT_KIND](cor-prf-gc-root-kind-enumeration.md) 값의 배열입니다.  
   
  `rootFlags`  
- 진행 가비지 컬렉션 루트의 속성을 설명 하는 [COR_PRF_GC_ROOT_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-flags-enumeration.md) 값의 배열입니다.  
+ 진행 가비지 컬렉션 루트의 속성을 설명 하는 [COR_PRF_GC_ROOT_FLAGS](cor-prf-gc-root-flags-enumeration.md) 값의 배열입니다.  
   
  `rootIds`  
  진행 `rootKinds` 매개 변수의 값에 따라 가비지 컬렉션 루트에 대 한 추가 정보를 포함 하는 정수를 가리키는 UINT_PTR 값의 배열입니다.  
@@ -61,7 +61,7 @@ HRESULT RootReferences2(
   
  `rootRefIds`의 항목이 0 일 수 있습니다 .이는 해당 루트 참조가 null이 고 관리 되는 힙에서 개체를 참조 하지 않음을 의미 합니다.  
   
- 가비지 수집은 이전 주소에서 새 주소로 개체를 이동 하는 중일 수 있기 때문에 `RootReferences2`에서 반환 하는 개체 Id는 콜백 자체에서 유효 하지 않습니다. 그러므로 프로파일러는 `RootReferences2` 호출 중에 개체 검사를 시도하지 않아야 합니다. [ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) 를 호출 하면 모든 개체가 새 위치로 이동 되었으며 안전 하 게 검사할 수 있습니다.  
+ 가비지 수집은 이전 주소에서 새 주소로 개체를 이동 하는 중일 수 있기 때문에 `RootReferences2`에서 반환 하는 개체 Id는 콜백 자체에서 유효 하지 않습니다. 그러므로 프로파일러는 `RootReferences2` 호출 중에 개체 검사를 시도하지 않아야 합니다. [ICorProfilerCallback2:: GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md) 를 호출 하면 모든 개체가 새 위치로 이동 되었으며 안전 하 게 검사할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -72,7 +72,7 @@ HRESULT RootReferences2(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ICorProfilerCallback2 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+- [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
+- [ICorProfilerCallback2 인터페이스](icorprofilercallback2-interface.md)

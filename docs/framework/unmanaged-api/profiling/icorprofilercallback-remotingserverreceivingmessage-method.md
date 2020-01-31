@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5604d21f-e6b7-490e-b469-42122a7568e1
 topic_type:
 - apiref
-ms.openlocfilehash: 2c2eb7d0dc04d813b1ce91fb1acf4b171f244592
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6e045a99de9ad30516fd12a7b490e26c860bde7e
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445752"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866015"
 ---
 # <a name="icorprofilercallbackremotingserverreceivingmessage-method"></a>ICorProfilerCallback::RemotingServerReceivingMessage 메서드
 프로세스에서 원격 메서드 호출 또는 활성화 요청을 받았음을 프로파일러에 알립니다.  
@@ -35,7 +35,7 @@ HRESULT RemotingClientSendingMessage(
   
 ## <a name="parameters"></a>매개 변수  
  `pCookie`  
- 진행 다음 조건에서 [ICorProfilerCallback:: Remo Clientsendingmessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md) 에 제공 된 값에 해당 하는 값입니다.  
+ 진행 다음 조건에서 [ICorProfilerCallback:: Remo Clientsendingmessage](icorprofilercallback-remotingclientsendingmessage-method.md) 에 제공 된 값에 해당 하는 값입니다.  
   
 - 원격 GUID 쿠키가 활성 상태입니다.  
   
@@ -60,6 +60,6 @@ HRESULT RemotingClientSendingMessage(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)

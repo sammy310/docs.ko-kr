@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ce7a21f9-0ca3-4b92-bc4b-bb803cae3f51
 topic_type:
 - apiref
-ms.openlocfilehash: f4deec3e2b49b5cd6a924af8024e775c5c549f97
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6cd35c180b8a322b3402b050c6d6840073010b1f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440857"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866985"
 ---
 # <a name="functionenter2-function"></a>FunctionEnter2 함수
-컨트롤이 함수에 전달 되 고 있음을 프로파일러에 알리고 스택 프레임 및 함수 인수에 대 한 정보를 제공 합니다. 이 함수는 [Functionenter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) 함수를 대체 합니다.  
+컨트롤이 함수에 전달 되 고 있음을 프로파일러에 알리고 스택 프레임 및 함수 인수에 대 한 정보를 제공 합니다. 이 함수는 [Functionenter](functionenter-function.md) 함수를 대체 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,24 +35,29 @@ void __stdcall FunctionEnter2 (
 );  
 ```  
   
-## <a name="parameters"></a>매개 변수  
- `funcId`  
- 진행 제어가 전달 되는 함수의 식별자입니다.  
+## <a name="parameters"></a>매개 변수
+
+- `funcId`
+
+  \[] 컨트롤을 전달할 함수의 식별자입니다.
+
+- `clientData`
+
+  \[에서 이전에 [Functionidmapper](functionidmapper-function.md) 함수를 사용 하 여 지정한 프로파일러에서 다시 매핑된 함수 식별자입니다.
   
- `clientData`  
- 진행 이전에 [Functionidmapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) 함수를 사용 하 여 지정한 프로파일러에서 다시 매핑된 함수 식별자입니다.  
+- `func`
+
+  \[] 스택 프레임에 대 한 정보를 가리키는 `COR_PRF_FRAME_INFO` 값입니다.
   
- `func`  
- 진행 스택 프레임에 대 한 정보를 가리키는 `COR_PRF_FRAME_INFO` 값입니다.  
+  프로파일러는 [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) 메서드에서 실행 엔진으로 다시 전달할 수 있는 불투명 핸들로이를 처리 해야 합니다.  
   
- 프로파일러는 [ICorProfilerInfo2:: GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) 메서드에서 실행 엔진으로 다시 전달할 수 있는 불투명 핸들로이를 처리 해야 합니다.  
-  
- `argumentInfo`  
- 진행 함수의 인수 메모리에서 위치를 지정 하는 [COR_PRF_FUNCTION_ARGUMENT_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md) 구조체에 대 한 포인터입니다.  
-  
- 인수 정보에 액세스 하려면 `COR_PRF_ENABLE_FUNCTION_ARGS` 플래그를 설정 해야 합니다. 프로파일러는 [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) 메서드를 사용 하 여 이벤트 플래그를 설정할 수 있습니다.  
-  
-## <a name="remarks"></a>설명  
+- `argumentInfo`
+
+  \[in] 함수 인수의 메모리에서 위치를 지정 하는 [COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md) 구조체에 대 한 포인터입니다.
+
+  인수 정보에 액세스 하려면 `COR_PRF_ENABLE_FUNCTION_ARGS` 플래그를 설정 해야 합니다. 프로파일러는 [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) 메서드를 사용 하 여 이벤트 플래그를 설정할 수 있습니다.
+
+## <a name="remarks"></a>주의  
  값이 변경 되거나 제거 될 수 있으므로 `FunctionEnter2` 함수가 반환 된 후에는 `func` 및 `argumentInfo` 매개 변수의 값이 유효 하지 않습니다.  
   
  `FunctionEnter2` 함수는 콜백입니다. 구현 해야 합니다. 구현은 `__declspec`(`naked`) 저장소 클래스 특성을 사용 해야 합니다.  
@@ -76,9 +81,9 @@ void __stdcall FunctionEnter2 (
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [FunctionLeave2 함수](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [FunctionTailcall2 함수](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
-- [SetEnterLeaveFunctionHooks2 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [프로파일링 전역 정적 함수](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [FunctionLeave2 함수](functionleave2-function.md)
+- [FunctionTailcall2 함수](functiontailcall2-function.md)
+- [SetEnterLeaveFunctionHooks2 메서드](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [프로파일링 전역 정적 함수](profiling-global-static-functions.md)

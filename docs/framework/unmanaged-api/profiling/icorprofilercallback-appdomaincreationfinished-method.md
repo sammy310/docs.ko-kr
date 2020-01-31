@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dbab7d90-d515-4dc9-8195-294d5d04bab6
 topic_type:
 - apiref
-ms.openlocfilehash: eaf0ae2a1b86234495c1804cff8b74331b3e8021
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 1cf3f2b62b388b6c2d6fcd75b1b07a67d5b2e49f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445281"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866705"
 ---
 # <a name="icorprofilercallbackappdomaincreationfinished-method"></a>ICorProfilerCallback::AppDomainCreationFinished 메서드
 응용 프로그램 도메인이 생성 되었음을 프로파일러에 알립니다.  
@@ -33,13 +33,16 @@ HRESULT AppDomainCreationFinished(
     [in] HRESULT     hrStatus);   
 ```  
   
-## <a name="parameters"></a>매개 변수  
- `appDomainId`  
- 진행 만든 도메인을 식별 합니다.  
-  
- `hrStatus`  
- 진행 응용 프로그램 도메인 만들기가 성공적으로 완료 되었는지 여부를 나타내는 HRESULT입니다.  
-  
+## <a name="parameters"></a>매개 변수
+
+- `appDomainId`
+
+  \[in]은 생성 된 도메인을 식별 합니다.
+
+- `hrStatus`
+
+  \[] 응용 프로그램 도메인 만들기가 성공적으로 완료 되었는지 여부를 나타내는 HRESULT입니다.
+
 ## <a name="remarks"></a>주의  
  `AppDomainCreationFinished` 메서드를 호출할 때까지 모든 정보 요청에 대해 응용 프로그램 ID가 유효 하지 않습니다.  
   
@@ -54,6 +57,6 @@ HRESULT AppDomainCreationFinished(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)

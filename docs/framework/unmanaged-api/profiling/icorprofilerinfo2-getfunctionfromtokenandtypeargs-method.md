@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ce8f6aa6-4ebf-4a86-b429-4bbc8af41a8f
 topic_type:
 - apiref
-ms.openlocfilehash: 41021a524142afe34727584265aee578e31a64b3
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 945cf84e6f6201879514e29a21f7f5462aa33fdb
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433217"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868670"
 ---
 # <a name="icorprofilerinfo2getfunctionfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs 메서드
 지정 된 메타 데이터 토큰, 포함 하는 클래스 및 형식 인수의 `ClassID` 값을 사용 하 여 함수의 `FunctionID`를 가져옵니다.  
@@ -56,12 +56,12 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
  `pFunctionID`  
  제한이 지정 된 함수의 `FunctionID`에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  `mdMethodDef` 메타 데이터 토큰 대신 `mdMethodRef` 메타 데이터를 사용 하 여 `GetFunctionFromTokenAndTypeArgs` 메서드를 호출 하면 예기치 않은 결과가 발생할 수 있습니다. 호출자는 `mdMethodRef`를 전달할 때 `mdMethodDef`를 확인 해야 합니다.  
   
  함수가 아직 로드 되지 않은 경우 `GetFunctionFromTokenAndTypeArgs`를 호출 하면 로드가 발생 하며이는 많은 컨텍스트에서 위험한 작업입니다. 예를 들어 모듈이 나 형식을 로드 하는 동안이 메서드를 호출 하면 런타임에서 순환적으로 자신 로드를 시도 하는 경우 무한 루프가 발생할 수 있습니다.  
   
- 일반적으로 `GetFunctionFromTokenAndTypeArgs`는 사용 하지 않는 것이 좋습니다. 프로파일러가 특정 함수에 대 한 이벤트에 관심이 있는 경우 해당 함수의 `ModuleID` 및 `mdMethodDef`을 저장 하 고, [ICorProfilerInfo2:: GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) 를 사용 하 여 지정 된 `FunctionID`이 원하는 함수의 함수 인지 여부를 확인 해야 합니다.  
+ 일반적으로 `GetFunctionFromTokenAndTypeArgs`는 사용 하지 않는 것이 좋습니다. 프로파일러가 특정 함수에 대 한 이벤트에 관심이 있는 경우 해당 함수의 `ModuleID` 및 `mdMethodDef`을 저장 하 고, [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) 를 사용 하 여 지정 된 `FunctionID`이 원하는 함수의 함수 인지 여부를 확인 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -72,7 +72,7 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerInfo2 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [ICorProfilerInfo 인터페이스](icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 인터페이스](icorprofilerinfo2-interface.md)

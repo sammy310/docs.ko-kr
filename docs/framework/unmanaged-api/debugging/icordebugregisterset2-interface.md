@@ -14,23 +14,23 @@ helpviewer_keywords:
 ms.assetid: d7fbccbf-3b6b-4db8-a96d-768e1cb6b1a6
 topic_type:
 - apiref
-ms.openlocfilehash: 47beba867cd2246c98cb02c3a563b948c15f5154
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 161358fab9a4601e7b718321273d493bd84a3228
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131321"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792007"
 ---
 # <a name="icordebugregisterset2-interface"></a>ICorDebugRegisterSet2 인터페이스
-64 개 이상의 레지스터가 있는 하드웨어 플랫폼에 대 한 [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) 인터페이스의 기능을 확장 합니다.  
+64 개 이상의 레지스터가 있는 하드웨어 플랫폼에 대 한 [ICorDebugRegisterSet](icordebugregisterset-interface.md) 인터페이스의 기능을 확장 합니다.  
   
 ## <a name="methods"></a>메서드  
   
 |메서드|설명|  
 |------------|-----------------|  
-|[GetRegisters 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-getregisters-method.md)|비트 마스크로 지정 된 각 레지스터의 값 (현재 코드를 실행 중인 컴퓨터)을 가져옵니다.|  
-|[GetRegistersAvailable 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-getregistersavailable-method.md)|사용 가능한 레지스터의 비트맵을 제공 하는 바이트 배열을 가져옵니다.|  
-|[SetRegisters 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-setregisters-method.md)|.NET Framework 버전 2.0에서 구현 되지 않았습니다.|  
+|[GetRegisters 메서드](icordebugregisterset2-getregisters-method.md)|비트 마스크로 지정 된 각 레지스터의 값 (현재 코드를 실행 중인 컴퓨터)을 가져옵니다.|  
+|[GetRegistersAvailable 메서드](icordebugregisterset2-getregistersavailable-method.md)|사용 가능한 레지스터의 비트맵을 제공 하는 바이트 배열을 가져옵니다.|  
+|[SetRegisters 메서드](icordebugregisterset2-setregisters-method.md)|.NET Framework 버전 2.0에서 구현 되지 않았습니다.|  
   
 ## <a name="remarks"></a>주의  
   
@@ -48,5 +48,5 @@ ms.locfileid: "73131321"
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [ICorDebugRegisterSet 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)
+- [ICorDebugRegisterSet 인터페이스](icordebugregisterset-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: de830a8b-6ee1-4900-ace3-4237108f6b12
 topic_type:
 - apiref
-ms.openlocfilehash: 509d6cd2e65c2eb8c92f6d79deae9e01e75298f6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c8645bf828d0ad99bd25c1909cbee3314a11abf9
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433452"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865872"
 ---
 # <a name="icorprofilercallbackruntimethreadsuspended-method"></a>ICorProfilerCallback::RuntimeThreadSuspended 메서드
 지정 된 스레드가 일시 중단 되었거나 일시 중단 됨을 프로파일러에 알립니다.  
@@ -36,8 +36,8 @@ HRESULT RuntimeThreadSuspended(
  `threadId`  
  진행 일시 중단 된 스레드의 ID입니다.  
   
-## <a name="remarks"></a>설명  
- [ICorProfilerCallback:: RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) 와 연결 된 [ICorProfilerCallback:: Run Esumestarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) 콜백 사이에 언제 든 `RuntimeThreadSuspended` 알림이 발생할 수 있습니다. [ICorProfilerCallback:: RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) 와 `RuntimeResumeStarted` 사이에 발생 하는 알림은 비관리 코드에서 실행 중이 고 런타임에 진입 될 때 일시 중단 된 스레드에 대 한 것입니다.  
+## <a name="remarks"></a>주의  
+ [ICorProfilerCallback:: RuntimeSuspendStarted](icorprofilercallback-runtimesuspendstarted-method.md) 와 연결 된 [ICorProfilerCallback:: Run Esumestarted](icorprofilercallback-runtimeresumestarted-method.md) 콜백 사이에 언제 든 `RuntimeThreadSuspended` 알림이 발생할 수 있습니다. [ICorProfilerCallback:: RuntimeSuspendFinished](icorprofilercallback-runtimesuspendfinished-method.md) 와 `RuntimeResumeStarted` 사이에 발생 하는 알림은 비관리 코드에서 실행 중이 고 런타임에 진입 될 때 일시 중단 된 스레드에 대 한 것입니다.  
   
  일반적으로이 콜백은 스레드가 일시 중단 된 후에만 발생 합니다. 그러나 현재 실행 중인 스레드 (이 콜백을 호출한 스레드가 일시 중단 된 스레드) 인 경우이 콜백은 스레드가 일시 중단 되기 직전에 발생 합니다.  
   
@@ -50,7 +50,7 @@ HRESULT RuntimeThreadSuspended(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [RuntimeThreadResumed 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadresumed-method.md)
+- [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
+- [RuntimeThreadResumed 메서드](icorprofilercallback-runtimethreadresumed-method.md)

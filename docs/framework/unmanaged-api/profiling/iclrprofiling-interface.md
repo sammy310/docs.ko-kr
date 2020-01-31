@@ -14,23 +14,23 @@ helpviewer_keywords:
 ms.assetid: 8b53ccc6-1b5e-4b30-a100-c9683d553f5a
 topic_type:
 - apiref
-ms.openlocfilehash: 63974df83462dd5959a9c6f509e1825eb8064877
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 18cbaab08d5e3a5c36bec88ca5d5e48d1367444d
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448719"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866743"
 ---
 # <a name="iclrprofiling-interface"></a>ICLRProfiling 인터페이스
-프로파일러가 실행 중인 프로세스에 연결할 수 있도록 하는 [ICLRProfiling:: AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) 메서드를 제공 합니다.  
+프로파일러가 실행 중인 프로세스에 연결할 수 있도록 하는 [ICLRProfiling:: AttachProfiler](iclrprofiling-attachprofiler-method.md) 메서드를 제공 합니다.  
   
 ## <a name="methods"></a>메서드  
   
 |메서드|설명|  
 |------------|-----------------|  
-|[AttachProfiler 메서드](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)|지정한 프로파일러를 지정된 프로세스에 연결합니다.|  
+|[AttachProfiler 메서드](iclrprofiling-attachprofiler-method.md)|지정한 프로파일러를 지정된 프로세스에 연결합니다.|  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -41,7 +41,7 @@ ms.locfileid: "74448719"
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [프로파일링 인터페이스](profiling-interfaces.md)
+- [ICorProfilerInfo 인터페이스](icorprofilerinfo-interface.md)

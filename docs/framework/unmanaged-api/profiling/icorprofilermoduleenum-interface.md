@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 24d0fcfa-1601-4fba-868f-da8c97303467
 topic_type:
 - apiref
-ms.openlocfilehash: 5c4efff46c2460ee77f5a8011dc80796ac62a69e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2713fa90240cb0bf41f455b6ed65d76c568a2cf8
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442702"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868267"
 ---
 # <a name="icorprofilermoduleenum-interface"></a>ICorProfilerModuleEnum 인터페이스
 애플리케이션이나 프로파일러가 로드한 모듈 컬렉션을 순서대로 반복하는 메서드를 제공합니다.  
@@ -28,11 +28,11 @@ ms.locfileid: "74442702"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[Clone 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-clone-method.md)|이 `ICorProfilerModuleEnum` 인터페이스의 복사본에 대한 인터페이스 포인터를 가져옵니다.|  
-|[GetCount 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-getcount-method.md)|애플리케이션에 로드된 관리되는 모듈 수를 가져옵니다.|  
-|[Next 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-next-method.md)|시퀀스에서 열거자의 현재 위치부터 시작하여 순차적 개체 컬렉션에서 지정된 개수의 연속 모듈을 가져옵니다.|  
-|[Reset 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-reset-method.md)|열거자의 커서를 시퀀스의 시작 위치로 이동합니다.|  
-|[Skip 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-skip-method.md)|지정한 개수의 요소를 건너뛰도록 열거자의 커서 위치를 진행합니다.|  
+|[Clone 메서드](icorprofilermoduleenum-clone-method.md)|이 `ICorProfilerModuleEnum` 인터페이스의 복사본에 대한 인터페이스 포인터를 가져옵니다.|  
+|[GetCount 메서드](icorprofilermoduleenum-getcount-method.md)|애플리케이션에 로드된 관리되는 모듈 수를 가져옵니다.|  
+|[Next 메서드](icorprofilermoduleenum-next-method.md)|시퀀스에서 열거자의 현재 위치부터 시작하여 순차적 개체 컬렉션에서 지정된 개수의 연속 모듈을 가져옵니다.|  
+|[Reset 메서드](icorprofilermoduleenum-reset-method.md)|열거자의 커서를 시퀀스의 시작 위치로 이동합니다.|  
+|[Skip 메서드](icorprofilermoduleenum-skip-method.md)|지정한 개수의 요소를 건너뛰도록 열거자의 커서 위치를 진행합니다.|  
   
 ## <a name="remarks"></a>주의  
  `ICorProfilerModuleEnum` 인터페이스는 열거자입니다. 배열의 수신기가 수신기에 적합한 속도로 송신기에서 요소를 끌어올 수 있게 합니다. 즉, 수신기가 배열 요소의 흐름을 명시적으로 제어하여 대형 배열을 메서드 매개 변수로 전달하는 기능과 관련된 문제를 방지할 수 있습니다.  
@@ -46,8 +46,8 @@ ms.locfileid: "74442702"
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [EnumModules 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enummodules-method.md)
+- [ICorProfilerInfo 인터페이스](icorprofilerinfo-interface.md)
+- [프로파일링 인터페이스](profiling-interfaces.md)
+- [EnumModules 메서드](icorprofilerinfo3-enummodules-method.md)

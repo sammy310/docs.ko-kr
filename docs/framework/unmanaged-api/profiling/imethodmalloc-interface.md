@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c8ab5dc-557c-473a-82f2-6e403eca7dac
 topic_type:
 - apiref
-ms.openlocfilehash: 3f840154d472dbcea7dfef7ba93e38c80b836734
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e9cbf4551c2f8b183e9e6c37a74b13aff3a19ec1
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447553"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76860971"
 ---
 # <a name="imethodmalloc-interface"></a>IMethodMalloc 인터페이스
 새 MSIL (Microsoft 중간 언어) 함수 본문에 대 한 메모리를 할당 하는 메서드를 제공 합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "74447553"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[Alloc 메서드](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md)|새 MSIL 함수 본문에 지정 된 크기의 메모리를 할당 하려고 시도 합니다.|  
+|[Alloc 메서드](imethodmalloc-alloc-method.md)|새 MSIL 함수 본문에 지정 된 크기의 메모리를 할당 하려고 시도 합니다.|  
   
 ## <a name="remarks"></a>주의  
  각 할당자는 모듈에 따라 달라 지 며 함수 본문은 모듈의 기본에서 양의 오프셋에 있게 됩니다. 모듈의 기본 위에 있는 메모리는 유용 하므로 할당자를 사용 하 여 함수 본문에 대해서만 메모리를 할당 해야 합니다.  
@@ -45,6 +45,6 @@ ms.locfileid: "74447553"
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [프로파일링 인터페이스](profiling-interfaces.md)

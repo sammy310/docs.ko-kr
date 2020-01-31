@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: ecd340d00e7f02655dfdcd8eee548309d424a5ea
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f47eccac4e960bd6869da0da139803cd4e433393
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458745"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794297"
 ---
 # <a name="routed-events-overview"></a>라우트된 이벤트 개요
 
@@ -28,7 +28,7 @@ ms.locfileid: "73458745"
 
 <a name="prerequisites"></a>
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>전제 조건
 
 이 항목에서는 사용자에 게 CLR (공용 언어 런타임) 및 개체 지향 프로그래밍에 대 한 기본 지식이 있다고 가정 하 고 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 요소 간의 관계가 트리로 개념화 될 수 있는 방법에 대 한 개념을 가정 합니다. 이 항목의 예제를 따르려면 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]을 이해하고 매우 기본적인 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애플리케이션 또는 페이지를 작성하는 방법을 알아야 합니다. 자세한 내용은 [연습: 내 첫 wpf 데스크톱 응용 프로그램](../getting-started/walkthrough-my-first-wpf-desktop-application.md) 및 [XAML 개요 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)를 참조 하세요.
 
@@ -64,7 +64,7 @@ Button-->StackPanel-->Border-->...
 
 **컨트롤 컴퍼지션 및 캡슐화:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 다양한 컨트롤에는 서식 있는 콘텐츠 모델이 있습니다. 예를 들어, 단추의 시각적 트리를 효과적으로 확장 하는 <xref:System.Windows.Controls.Button>안에 이미지를 놓을 수 있습니다. 그러나 추가 된 이미지는 사용자가 기술적으로 이미지의 일부인 픽셀을 클릭 하는 경우에도 단추가 콘텐츠 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 응답 하도록 하는 적중 테스트 동작을 중단 해서는 안 됩니다.
 
-**단일 처리기 연결 지점:** [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]에서는 여러 요소에서 발생할 수 있는 이벤트를 처리하기 위해 같은 처리기를 여러 번 연결해야 합니다. 라우트된 이벤트를 사용하면 이전 예제에서 살펴본 것처럼 해당 처리기를 한 번만 연결하고 처리기 논리를 사용하여 필요한 경우 이벤트가 발생한 위치를 확인할 수 있습니다. 예를 들어 이것은 이전에 표시된 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에 대한 처리기일 수 있습니다.
+**단일 처리기 첨부 파일 위치:** Windows Forms 여러 요소에서 발생할 수 있는 이벤트를 처리 하기 위해 동일한 처리기를 여러 번 연결 해야 합니다. 라우트된 이벤트를 사용하면 이전 예제에서 살펴본 것처럼 해당 처리기를 한 번만 연결하고 처리기 논리를 사용하여 필요한 경우 이벤트가 발생한 위치를 확인할 수 있습니다. 예를 들어 이것은 이전에 표시된 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에 대한 처리기일 수 있습니다.
 
 [!code-csharp[EventOvwSupport#GroupButtonCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#groupbuttoncodebehind)]
 [!code-vb[EventOvwSupport#GroupButtonCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#groupbuttoncodebehind)]
@@ -98,7 +98,7 @@ Button-->StackPanel-->Border-->...
 
 - **버블링:** 이벤트 소스에서 이벤트 처리기가 호출됩니다. 라우트된 이벤트는 요소 트리 루트에 도달할 때까지 다음 부모 요소로 라우트됩니다. 대부분의 라우트된 이벤트는 버블링 라우트 전략을 사용합니다. 버블링 라우트된 이벤트는 일반적으로 개별 컨트롤 또는 기타 UI 요소에서 입력 또는 상태 변경을 보고하는 데 사용됩니다.
 
-- **직접:** 소스 요소 자체만 응답으로 처리기를 호출할 수 있습니다. 이 전략은 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]에서 이벤트에 사용하는 “라우트”와 비슷합니다. 그러나 표준 CLR 이벤트와 달리 직접 라우트된 이벤트는 클래스 처리를 지원 합니다. 클래스 처리는 이후 섹션에서 설명 하며 <xref:System.Windows.EventSetter> 및 <xref:System.Windows.EventTrigger>에서 사용할 수 있습니다.
+- **직접:** 소스 요소 자체만 응답으로 처리기를 호출할 수 있습니다. 이는 Windows Forms 이벤트에 사용 하는 "라우팅"과 유사 합니다. 그러나 표준 CLR 이벤트와 달리 직접 라우트된 이벤트는 클래스 처리를 지원 합니다. 클래스 처리는 이후 섹션에서 설명 하며 <xref:System.Windows.EventSetter> 및 <xref:System.Windows.EventTrigger>에서 사용할 수 있습니다.
 
 - **터널링:** 처음에 요소 트리 루트에 있는 이벤트 처리기가 호출됩니다. 그 다음에 라우트된 이벤트는 경로를 따라 있는 다음 자식 요소를 통해 경로를 이동하여 라우트된 이벤트 소스인 노드 요소(라우트된 이벤트를 발생시킨 요소)를 향합니다. 터널링 라우트된 이벤트는 보통 컨트롤 합치기의 일부로 사용 또는 처리되므로 복합 부분의 이벤트가 의도적으로 전체 컨트롤에 관련된 이벤트에 의해 억제되거나 대체될 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 제공된 입력 이벤트는 터널링/버블링 쌍으로 구현됩니다. 쌍에 사용되는 명명 규칙 때문에 터널링 이벤트를 미리 보기 이벤트라고도 합니다.
 
@@ -179,7 +179,7 @@ Visual Basic를 사용 하는 경우 `Handles` 키워드를 사용 하 여 처�
 
   - 이벤트에 대한 응답으로 코드를 실행합니다. 처리기에 전달된 이벤트 데이터에서 이벤트를 처리됨으로 표시합니다. 이는 수행된 작업이 처리됨으로 표시하도록 보장할 만큼 충분히 효과적이라고 생각되기 때문입니다. 이벤트는 계속 해 서 다음 수신기로 라우트 하지만 <xref:System.Windows.RoutedEventArgs.Handled%2A>=이벤트 데이터에 `true` 되므로 `handledEventsToo` 수신기만 추가 처리기를 호출할 수 있습니다.
 
-이 개념 디자인은 앞에서 언급 한 라우팅 동작에 의해 강화 됩니다. 경로를 따라 이전 처리기가 이미 <xref:System.Windows.RoutedEventArgs.Handled%2A> 설정 된 경우에도 호출 되는 라우트된 이벤트에 대 한 처리기를 연결 하는 것이 더 어렵거나 (코드 또는 스타일 에서도 가능 하지만) `true`합니다.
+이 개념 디자인은 앞에서 언급 한 라우팅 동작에 의해 강화 됩니다. 경로를 따르는 이전 처리기가 이미 <xref:System.Windows.RoutedEventArgs.Handled%2A> `true`로 설정 된 경우에도 호출 되는 라우트된 이벤트에 대 한 처리기를 연결 하는 것이 더 어려워집니다 (코드 또는 스타일 에서도 가능 하지만).
 
 <xref:System.Windows.RoutedEventArgs.Handled%2A>, 라우트된 이벤트의 클래스 처리 및 라우트된 이벤트를 <xref:System.Windows.RoutedEventArgs.Handled%2A>표시 하는 데 적절 한 경우에 대 한 권장 사항은 라우트된 이벤트를 [처리 된 것으로 표시 및 클래스 처리](marking-routed-events-as-handled-and-class-handling.md)를 참조 하세요.
 

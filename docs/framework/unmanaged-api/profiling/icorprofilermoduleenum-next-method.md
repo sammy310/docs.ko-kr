@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a3cea59d-7622-4323-897a-0a464c40f77f
 topic_type:
 - apiref
-ms.openlocfilehash: 361f08f8c787ad4c1288c56fb1bdb4d5136933e7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 695a4386d9399a079df41f11f52a3185083784ed
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442696"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861387"
 ---
 # <a name="icorprofilermoduleenumnext-method"></a>ICorProfilerModuleEnum::Next 메서드
 시퀀스에서 열거자의 현재 위치부터 시작하여 순차적 모듈 컬렉션에서 지정된 개수의 연속 모듈을 가져옵니다.  
@@ -49,7 +49,7 @@ HRESULT Next([in]  ULONG      celt,
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`celt` 요소가 반환 되었습니다.|  
+|S_OK|`celt` 요소가 반환되었습니다.|  
 |S_FALSE|`celt`개 미만의 요소가 반환되었으며 이는 열거형이 완료되었음을 나타냅니다.|  
   
 ## <a name="requirements"></a>요구 사항  
@@ -61,7 +61,7 @@ HRESULT Next([in]  ULONG      celt,
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [ICorProfilerModuleEnum 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
-- [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [ICorProfilerModuleEnum 인터페이스](icorprofilermoduleenum-interface.md)
+- [프로파일링 인터페이스](profiling-interfaces.md)

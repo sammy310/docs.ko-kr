@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 29da20ca-bf39-4356-8099-d9c3ac3423a9
 topic_type:
 - apiref
-ms.openlocfilehash: e82133f3b05740dff0e88db3bace0441a1e72bf6
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
-ms.translationtype: HT
+ms.openlocfilehash: 98d5dcf3b691f16f63390851e207f518bf26ab11
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790166"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866522"
 ---
 # <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a>ICorProfilerCallback::COMClassicVTableDestroyed 메서드
 COM interop vtable이 제거 중임을 프로파일러에 알립니다.  
@@ -67,5 +67,5 @@ HRESULT COMClassicVTableDestroyed(
   
 ## <a name="see-also"></a>참조
 
-- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [COMClassicVTableCreated 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtablecreated-method.md)
+- [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
+- [COMClassicVTableCreated 메서드](icorprofilercallback-comclassicvtablecreated-method.md)

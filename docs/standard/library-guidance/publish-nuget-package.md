@@ -2,12 +2,12 @@
 title: NuGet 패키지 게시
 description: .NET 라이브러리를 NuGet에 게시하는 모범 사례 권장 사항입니다.
 ms.date: 10/02/2018
-ms.openlocfilehash: e567fe3f7e00bf322cdd50786e50128961107469
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 089c660bc51252c6295858b1462ae59bde968564
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706467"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744561"
 ---
 # <a name="publishing-a-nuget-package"></a>NuGet 패키지 게시
 
@@ -22,11 +22,11 @@ NuGet 패키지는 패키지 리포지토리에서 게시되고 사용됩니다.
 > [!NOTE]
 > 패키지가 업로드되면 NuGet.org는 [패키지 삭제를 허용하지 않습니다](/nuget/policies/deleting-packages). 패키지는 UI에 공개적으로 표시되지 않도록 나열을 취소할 수 있지만, `*.nupkg`는 복원 시 계속 다운로드할 수 있습니다. 또한 nuget.org에서는 중복 패키지 버전을 허용하지 않습니다. 오류가 있는 NuGet 패키지를 수정하려면 잘못된 패키지를 나열 취소하고 버전 번호를 늘리고 패키지의 새 버전을 게시해야 합니다.
 
-**✔️** [커뮤니티 피드백을 원하는 안정적인 패키지 및 시험판 패키지를 NuGet.org에 게시합니다](/nuget/create-packages/publish-a-package).
+✔️ 커뮤니티 피드백을 원하는 [안정적인 패키지 및 시험판 패키지를 NuGet.org에 게시](/nuget/create-packages/publish-a-package)합니다.
 
-**✔️** 연속 통합 빌드에서 시험판 패키지를 MyGet 피드에 게시합니다.
+✔️ 연속 통합 빌드에서 시험판 패키지를 MyGet 피드에 게시하는 것을 고려하세요.
 
-**✔️** 로컬 피드 또는 MyGet을 사용하여 개발 환경에서 패키지를 테스트합니다. 패키지가 작동하는지 확인하고 해당 패키지를 NuGet.org에 게시하세요.
+✔️ 로컬 피드 또는 MyGet을 사용하여 개발 환경에서 패키지를 테스트하는 것을 고려하세요. 패키지가 작동하는지 확인하고 해당 패키지를 NuGet.org에 게시하세요.
 
 ## <a name="nugetorg-security"></a>NuGet.org 보안
 
@@ -34,11 +34,11 @@ NuGet 패키지는 패키지 리포지토리에서 게시되고 사용됩니다.
 
 ![대체 텍스트](./media/publish-nuget-package/nuget-2fa.png "NuGet 계정 보안")
 
-**✔️** Microsoft 계정을 사용하여 NuGet에 로그인합니다.
+✔️ Microsoft 계정을 사용하여 NuGet에 로그인합니다.
 
-**✔️** NuGet에 액세스에 대해 2단계 인증을 사용하도록 설정합니다.
+✔️ NuGet 액세스에 대해 2단계 인증을 사용하도록 설정합니다.
 
-**✔️** 패키지가 게시될 때 전자 메일 알림을 사용하도록 설정합니다.
+✔️ 패키지가 게시될 때 이메일 알림을 사용하도록 설정합니다.
 
 >[!div class="step-by-step"]
 >[이전](sourcelink.md)

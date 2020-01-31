@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 297d7721-3911-4f36-9e34-d9da0c33e22a
 topic_type:
 - apiref
-ms.openlocfilehash: 5e718d05f033cc46fa460a81f6816a13ec32476d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: daca2849908a7798b588ff06f6e117d412db1b33
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428352"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867271"
 ---
 # <a name="cor_prf_finalizer_flags-enumeration"></a>COR_PRF_FINALIZER_FLAGS 열거형
 개체에 대한 종료자를 설명합니다.  
@@ -32,14 +32,14 @@ typedef enum {
 } COR_PRF_FINALIZER_FLAGS;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-|멤버|설명|  
+|Member|설명|  
 |------------|-----------------|  
 |`COR_PRF_FINALIZER_CRITICAL`|종료자는 중요 합니다.|  
   
 ## <a name="remarks"></a>주의  
- `COR_PRF_FINALIZER_FLAGS` 열거형은 [ICorProfilerCallback2:: FinalizeableObjectQueued](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md) 메서드에서 개체의 종료자를 설명 하는 데 사용 됩니다.  
+ `COR_PRF_FINALIZER_FLAGS` 열거형은 [ICorProfilerCallback2:: FinalizeableObjectQueued](icorprofilercallback2-finalizeableobjectqueued-method.md) 메서드에서 개체의 종료자를 설명 하는 데 사용 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -50,6 +50,6 @@ typedef enum {
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [프로파일링 열거형](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [프로파일링 열거형](profiling-enumerations.md)

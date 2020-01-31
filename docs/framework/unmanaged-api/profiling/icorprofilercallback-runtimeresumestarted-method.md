@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5854bfb2-c568-4f19-904a-7c9d41e7b995
 topic_type:
 - apiref
-ms.openlocfilehash: fe204bbe6154bf3d512a998818cf053d1e96ab3d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c7b52954a6be449de0c3633f0ac648980c6d13f6
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433538"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865924"
 ---
 # <a name="icorprofilercallbackruntimeresumestarted-method"></a>ICorProfilerCallback::RuntimeResumeStarted 메서드
 런타임이 모든 런타임 스레드를 재개 함을 프로파일러에 알립니다.  
@@ -40,7 +40,7 @@ HRESULT RuntimeResumeStarted();
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [RuntimeResumeFinished 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumefinished-method.md)
+- [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
+- [RuntimeResumeFinished 메서드](icorprofilercallback-runtimeresumefinished-method.md)

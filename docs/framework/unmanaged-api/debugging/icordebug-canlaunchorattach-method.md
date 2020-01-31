@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ca7723db-7c07-4cdd-bd92-fba34928b623
 topic_type:
 - apiref
-ms.openlocfilehash: 805f9a5d1f2590a06bfa929c152bdfd13900531a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 28b9fb5a25981e5e37a5f1bbb797baeac45e0028
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134277"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793569"
 ---
 # <a name="icordebugcanlaunchorattach-method"></a>ICorDebug::CanLaunchOrAttach 메서드
 현재 컴퓨터 및 런타임 구성의 컨텍스트 내에서 새 프로세스를 시작 하거나 지정 된 기존 프로세스에 연결할 수 있는지 여부를 나타내는 HRESULT를 반환 합니다.  
@@ -42,7 +42,7 @@ HRESULT CanLaunchOrAttach (
  진행 Win32 디버깅을 사용 하도록 설정 하 여를 시작 하거나 Win32 디버깅을 사용 하도록 설정 하 여 연결 하려면 `true`를 전달 합니다. 그렇지 않으면 `false`를 전달 합니다.  
   
 ## <a name="return-value"></a>반환 값  
- 현재 컴퓨터와 런타임 구성에 대 한 정보를 고려 하 여 디버깅 서비스에서 새 프로세스를 시작 하거나 지정 된 프로세스에 연결할 수 있는지 확인 하는 경우 S_OK입니다. 가능한 HRESULT 값은 다음과 같습니다.  
+ 현재 컴퓨터와 런타임 구성에 대 한 정보를 고려 하 여 디버깅 서비스에서 새 프로세스를 시작 하거나 지정 된 프로세스에 연결 하는 것이 가능한 지 확인 하는 경우에 S_OK 합니다. 가능한 HRESULT 값은 다음과 같습니다.  
   
 - S_OK  
   
@@ -68,4 +68,4 @@ HRESULT CanLaunchOrAttach (
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebug 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebug 인터페이스](icordebug-interface.md)

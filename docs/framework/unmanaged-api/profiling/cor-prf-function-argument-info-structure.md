@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 07cf3bab-e193-4991-8205-3f41cf2d67b3
 topic_type:
 - apiref
-ms.openlocfilehash: 2b01acbd617b13a64ef3dca6c8661f1e6bb067ac
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c92ee580caed9f1fb87a31b676747769ad31a0e2
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447389"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867258"
 ---
 # <a name="cor_prf_function_argument_info-structure"></a>COR_PRF_FUNCTION_ARGUMENT_INFO 구조체
 왼쪽에서 오른쪽 순서의 함수 인수를 나타냅니다.  
@@ -34,11 +34,11 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
 } COR_PRF_FUNCTION_ARGUMENT_INFO;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-|멤버|설명|  
+|Member|설명|  
 |------------|-----------------|  
-|`numRanges`|인수의 블록 수입니다. 즉,이 값은 `ranges` 배열의 [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) 구조체 수입니다.|  
+|`numRanges`|인수의 블록 수입니다. 즉,이 값은 `ranges` 배열의 [COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md) 구조체 수입니다.|  
 |`totalArgumentSize`|모든 인수의 전체 크기입니다. 즉,이 값은 인수 길이의 합계입니다.|  
 |`ranges`|각각 하나의 함수 인수 블록을 나타내는 `COR_PRF_FUNCTION_ARGUMENT_RANGE` 구조체의 배열입니다.|  
   
@@ -58,6 +58,6 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [프로파일링 구조체](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+- [프로파일링 구조체](profiling-structures.md)

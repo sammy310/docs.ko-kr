@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ba08ffa-55a2-4662-9d6d-4738f1db60c9
 topic_type:
 - apiref
-ms.openlocfilehash: 9d8bd6ab13fa408fd7390aaeb76baee274742f48
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b137b956e06a2b2954918e4024860f9b234e7583
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137698"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792102"
 ---
 # <a name="icordebugregistersetgetregistersavailable-method"></a>ICorDebugRegisterSet::GetRegistersAvailable 메서드
-이 [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) 에서 현재 사용할 수 있는 레지스터를 나타내는 비트 마스크를 가져옵니다.  
+이 [ICorDebugRegisterSet](icordebugregisterset-interface.md) 에서 현재 사용할 수 있는 레지스터를 나타내는 비트 마스크를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -53,5 +53,5 @@ HRESULT GetRegistersAvailable (
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugRegisterSet 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
-- [ICorDebugRegisterSet2 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+- [ICorDebugRegisterSet 인터페이스](icordebugregisterset-interface.md)
+- [ICorDebugRegisterSet2 인터페이스](icordebugregisterset2-interface.md)

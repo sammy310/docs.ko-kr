@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: d6518612c213d21c2dc7d80878121ccd3b7e2abb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7fd62e0d3d9173f3b75882131e57126075c0677f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449857"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76863311"
 ---
 # <a name="icorprofilerinfo10enumerateobjectreferences-method"></a>ICorProfilerInfo10:: EnumerateObjectReferences 메서드
 
@@ -30,20 +30,23 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
                                    [in] void* clientData);
 ```
 
-#### <a name="parameters"></a>매개 변수
+## <a name="parameters"></a>매개 변수
 
-`objectId` \
-진행 참조를 열거할 개체입니다.
+- `objectId`
 
-`callback` \
-진행 개체에 대 한 참조를 사용 하 여 호출 되는 함수입니다.
+  \[in] 참조를 열거 하는 개체입니다.
 
-`clientData` \
-진행 `callback` 함수에 전달할 프로파일러 제공 데이터입니다.
+- `callback`
 
-## <a name="remarks"></a>설명
+  \[in] 개체에 대 한 참조를 사용 하 여 호출 되는 함수입니다.
 
-`EnumerateObjectReferences` 메서드는 참조를 저장 하는 배열을 미리 할당 하는 대신 프로파일러의 요청 시 참조를 안내 한다는 점을 제외 하 고 [ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)와 비슷합니다.
+- `clientData`
+
+  \[in] 프로파일러 제공 데이터를 `callback` 함수에 전달 합니다.
+
+## <a name="remarks"></a>주의
+
+`EnumerateObjectReferences` 메서드는 참조를 저장 하는 배열을 미리 할당 하는 대신 프로파일러의 요청 시 참조를 안내 한다는 점을 제외 하 고 [ObjectReferences](icorprofilercallback-objectreferences-method.md)와 비슷합니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -55,6 +58,6 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
 
 **.Net 버전:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [ICorProfilerInfo10 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10 인터페이스](icorprofilerinfo10-interface.md)

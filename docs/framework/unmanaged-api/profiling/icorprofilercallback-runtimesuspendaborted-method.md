@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5a8a4277-345b-448b-a028-fc8cff9998aa
 topic_type:
 - apiref
-ms.openlocfilehash: fb09a9422f2aeec239f9aef25fb61c731e0aa2e9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 285bdd3f2a96d3c6cb0039382d9944e48c49971a
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74430615"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865911"
 ---
 # <a name="icorprofilercallbackruntimesuspendaborted-method"></a>ICorProfilerCallback::RuntimeSuspendAborted 메서드
 런타임에서 발생 한 런타임 일시 중단이 중단 되었음을 프로파일러에 알립니다.  
@@ -31,10 +31,10 @@ ms.locfileid: "74430615"
 HRESULT RuntimeSuspendAborted();  
 ```  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  두 스레드가 동시에 런타임을 일시 중단 하려고 하면 런타임 일시 중단이 중단 될 수 있습니다.  
   
- [ICorProfilerCallback:: RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) callback 또는 `RuntimeSuspendAborted` 콜백은 [ICorProfilerCallback:: RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) callback 다음에 나오는 단일 스레드에서 발생 합니다.  
+ [ICorProfilerCallback:: RuntimeSuspendFinished](icorprofilercallback-runtimesuspendfinished-method.md) callback 또는 `RuntimeSuspendAborted` 콜백은 [ICorProfilerCallback:: RuntimeSuspendStarted](icorprofilercallback-runtimesuspendstarted-method.md) callback 다음에 나오는 단일 스레드에서 발생 합니다.  
   
  `RuntimeSuspendAborted` 콜백은 `RuntimeSuspendStarted` 콜백과 동일한 스레드에서 수행 됩니다.  
   
@@ -47,6 +47,6 @@ HRESULT RuntimeSuspendAborted();
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)

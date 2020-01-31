@@ -6,12 +6,12 @@ helpviewer_keywords:
 - colors [Windows Forms], dialog box
 - color dialog box
 ms.assetid: 261793e0-8252-47c5-b76c-621857b8da44
-ms.openlocfilehash: 0b44774fcace82f7e209440bc15705ad632bc223
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 3ac758c353d235183041b6442d4472f863f7ca75
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76736928"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76870806"
 ---
 # <a name="colordialog-component-windows-forms"></a>ColorDialog 구성 요소(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ColorDialog> 구성 요소는 사용자가 색상표에서 색을 선택 하 고 해당 색상표에 사용자 지정 색을 추가할 수 있는 미리 구성 된 대화 상자입니다. 이 구성 요소는 다른 Windows 기반 애플리케이션에서 색상 선택하는 데 사용하는 대화 상자와 동일합니다. 고유한 대화 상자를 구성하는 대신 Windows 기반 애플리케이션 내에서 간단한 솔루션으로 사용합니다.  
@@ -32,9 +32,6 @@ Windows Forms <xref:System.Windows.Forms.ColorDialog> 구성 요소는 사용자
   
  <xref:System.Windows.Forms.ColorDialog>  
  <xref:System.Windows.Forms.ColorDialog> 클래스 및 해당 멤버에 대한 참조 정보를 제공합니다.  
-  
- [Windows Forms 대화 상자의 필수 코드](assetId:///VS|dv_vstechart|~\html\vbtchessentialcodeforwindowsformsdialogboxes.htm)  
- Windows Forms 대화 상자 컨트롤 및 구성 요소와 기본 함수를 실행하는 데 필요한 코드에 대해 설명합니다.  
-  
+ 
  [대화 상자 컨트롤 및 구성 요소](dialog-box-controls-and-components-windows-forms.md)  
  사용자가 애플리케이션이나 시스템과의 에서 표준 상호 작용을 수행할 수 있도록 하는 컨트롤 집합을 나열합니다.

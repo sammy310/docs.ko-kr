@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c2f45801-dd38-4b78-b6b7-64397dc73f83
 topic_type:
 - apiref
-ms.openlocfilehash: 62035d623d56f7521e0a599a13bc20778e3f18d1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3e13b17fb03530730a78f6889309f1993419574b
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449911"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866216"
 ---
 # <a name="icorprofilercallbackjitinlining-method"></a>ICorProfilerCallback::JITInlining 메서드
 JIT (just-in-time) 컴파일러가 다른 함수를 사용 하 여 함수를 삽입 하려고 함을 프로파일러에 알립니다.  
@@ -45,7 +45,7 @@ HRESULT JITInlining(
  [out] 삽입을 수행할 수 있도록 `true` 합니다. 그렇지 않으면 `false`합니다.  
   
 ## <a name="remarks"></a>주의  
- 프로파일러는 `false` `pfShouldInline`를 설정 하 여 `calleeId` 함수가 `callerId` 함수에 삽입 되지 않도록 할 수 있습니다. 또한 프로파일러는 [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) 열거형의 COR_PRF_DISABLE_INLINING 값을 사용 하 여 인라인 삽입을 전역적으로 사용 하지 않도록 설정할 수 있습니다.  
+ 프로파일러는 `false` `pfShouldInline`를 설정 하 여 `calleeId` 함수가 `callerId` 함수에 삽입 되지 않도록 할 수 있습니다. 또한 프로파일러는 [COR_PRF_MONITOR](cor-prf-monitor-enumeration.md) 열거형의 COR_PRF_DISABLE_INLINING 값을 사용 하 여 인라인 삽입을 전역적으로 사용 하지 않도록 설정할 수 있습니다.  
   
  인라인으로 삽입 된 함수는 시작 또는 종료에 대 한 이벤트를 발생 시 키 지 않습니다. 따라서 정확한 호출 그래프을 생성 하기 위해 프로파일러는 `false` `pfShouldInline` 설정 해야 합니다. 인라인 삽입은 일반적으로 속도가 향상 되 고 삽입 된 메서드에 대 한 별도의 JIT 컴파일 이벤트 수가 줄어들기 때문에 `pfShouldInline`를 `false`로 설정 하면 성능에 영향을 줍니다.  
   
@@ -58,6 +58,6 @@ HRESULT JITInlining(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)

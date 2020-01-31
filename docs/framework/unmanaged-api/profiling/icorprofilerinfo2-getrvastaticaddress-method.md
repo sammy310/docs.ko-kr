@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a25a8f8b-5cfa-440d-9376-a1a1c3a9fc11
 topic_type:
 - apiref
-ms.openlocfilehash: db768c97a2d1a0fd5ee42ecfb121fb96d3092e79
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ca64d4f5932fb4a0c0486fee5ca1017a6d3adaf2
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433017"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868631"
 ---
 # <a name="icorprofilerinfo2getrvastaticaddress-method"></a>ICorProfilerInfo2::GetRVAStaticAddress 메서드
 지정 된 RVA (상대 가상 주소) 정적 필드의 주소를 가져옵니다.  
@@ -62,7 +62,7 @@ HRESULT GetRVAStaticAddress(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerInfo2 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [ICorProfilerInfo 인터페이스](icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 인터페이스](icorprofilerinfo2-interface.md)

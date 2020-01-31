@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0774f70-5bed-45e8-9922-fdad778c4c33
 topic_type:
 - apiref
-ms.openlocfilehash: 739b491d343c0eba76160c15719069ffae385f46
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 65d7e830b82cc1780826517fe8cff1da0a7d6188
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73097970"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793900"
 ---
 # <a name="cordebugjitcompilerflags-enumeration"></a>CorDebugJITCompilerFlags 열거형
 관리되는 JIT(Just-In-Time) 컴파일러의 동작에 영향을 주는 값을 포함합니다.  
@@ -36,9 +36,9 @@ typedef enum CorDebugJITCompilerFlags {
 } CorDebugJITCompilerFlags;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-|멤버|설명|  
+|Member|설명|  
 |------------|-----------------|  
 |`CORDEBUG_JIT_DEFAULT`|컴파일러가 컴파일 데이터를 추적 하 고 최적화를 허용 하도록 지정 합니다.|  
 |`CORDEBUG_JIT_DISABLE_OPTIMIZATION`|컴파일러가 컴파일 데이터를 추적 하지만 최적화를 사용 하지 않도록 지정 합니다.|  
@@ -55,4 +55,4 @@ typedef enum CorDebugJITCompilerFlags {
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 열거형](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [디버깅 열거형](debugging-enumerations.md)

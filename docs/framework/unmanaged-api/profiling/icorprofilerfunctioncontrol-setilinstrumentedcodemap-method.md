@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ecf56646-7e5f-46c4-8340-f3a04e88920f
 topic_type:
 - apiref
-ms.openlocfilehash: 11ce2fdccbf24fd688376cc3256f6db79a7cc352
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b2fca16b3b859df8bd7409149eb5a3cf7b011c5c
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447847"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76864585"
 ---
 # <a name="icorprofilerfunctioncontrolsetilinstrumentedcodemap-method"></a>ICorProfilerFunctionControl::SetILInstrumentedCodeMap 메서드
 지정한 CIL(공용 중간 언어) 맵 엔트리를 사용하여 지정된 함수에 대한 코드 맵을 설정합니다.  
@@ -38,7 +38,7 @@ HRESULT SetILInstrumentedCodeMap(
  [in] 맵의 엔트리 수입니다.  
   
  `rgILMapEntries`  
- [in] 호출자가 할당한 COR_IL_MAP 엔트리 배열입니다. 이러한 항목의 해석은 [ICorProfilerInfo:: SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) 메서드와 동일 합니다.  
+ [in] 호출자가 할당한 COR_IL_MAP 엔트리 배열입니다. 이러한 항목의 해석은 [ICorProfilerInfo:: SetILInstrumentedCodeMap](icorprofilerinfo-setilinstrumentedcodemap-method.md) 메서드와 동일 합니다.  
   
 ## <a name="remarks"></a>주의  
  이 메서드를 호출 하 여 매핑을 설정 하면 디버거가 [ICorDebugILCode2:: GetInstrumentedILMap](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md)를 호출 하 여 매핑을 검색할 수 있습니다. 또한 스택 추적 및 변수 수명에 대한 IL 오프셋을 계산할 때 디버거가 내부적으로 매핑을 사용할 수 있습니다.  
@@ -52,6 +52,6 @@ HRESULT SetILInstrumentedCodeMap(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo 인터페이스](icorprofilerinfo-interface.md)

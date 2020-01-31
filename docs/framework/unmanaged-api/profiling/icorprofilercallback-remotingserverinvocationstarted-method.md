@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 86051a11-ad8e-4ace-9a11-ff0f982a5e11
 topic_type:
 - apiref
-ms.openlocfilehash: ccb970fb2eb387f1be795f9322d5bf9650593a35
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3571b429c3733a07a74d50f69ecf8987d75b034f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445772"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865989"
 ---
 # <a name="icorprofilercallbackremotingserverinvocationstarted-method"></a>ICorProfilerCallback::RemotingServerInvocationStarted 메서드
 프로세스가 원격 메서드 호출 요청에 대 한 응답으로 메서드를 호출 하 고 있음을 프로파일러에 알립니다.  
@@ -40,6 +40,6 @@ HRESULT RemotingServerInvocationStarted();
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef3cd619-912d-40c5-a449-03ba02a39ee7
 topic_type:
 - apiref
-ms.openlocfilehash: f4f5871bdd7adf11fcc811fd40c62e3027b8e607
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0750ac66c654285e11dbbb5941f029bf5f900842
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426180"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866197"
 ---
 # <a name="icorprofilercallbackmanagedtounmanagedtransition-method"></a>ICorProfilerCallback::ManagedToUnmanagedTransition 메서드
 관리 코드에서 비관리 코드로의 전환이 발생 했음을 프로파일러에 알립니다.  
@@ -38,9 +38,9 @@ HRESULT ManagedToUnmanagedTransition(
  진행 호출 되는 함수의 ID입니다.  
   
  `reason`  
- 진행 관리 코드에서 비관리 코드를 호출 하거나 관리 되지 않는 함수에서 호출 된 관리 되는 함수의 반환 때문에 전환이 발생 했는지 여부를 나타내는 [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) 열거형의 값입니다.  
+ 진행 관리 코드에서 비관리 코드를 호출 하거나 관리 되지 않는 함수에서 호출 된 관리 되는 함수의 반환 때문에 전환이 발생 했는지 여부를 나타내는 [COR_PRF_TRANSITION_REASON](cor-prf-transition-reason-enumeration.md) 열거형의 값입니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  `reason` 값이 COR_PRF_TRANSITION_CALL 경우 함수 ID는 관리 되지 않는 함수의 함수 ID 이며 just-in-time 컴파일러를 사용 하 여 컴파일되지 않습니다. 관리 되지 않는 함수에는 이름 및 일부 메타 데이터와 같은 기본 정보가 연결 되어 있습니다. PInvoke (암시적 플랫폼 호출)를 사용 하 여 관리 되지 않는 함수를 호출 하는 경우 런타임에서 호출 대상을 확인할 수 없으며 `functionId`의 값이 null이 됩니다. 암시적 PInvoke에 대 한 자세한 내용은 [Interop 사용 C++ (암시적 pinvoke)](/cpp/dotnet/using-cpp-interop-implicit-pinvoke)을 참조 하세요.  
   
 ## <a name="requirements"></a>요구 사항  
@@ -52,8 +52,8 @@ HRESULT ManagedToUnmanagedTransition(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [UnmanagedToManagedTransition 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md)
+- [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
+- [UnmanagedToManagedTransition 메서드](icorprofilercallback-unmanagedtomanagedtransition-method.md)
 - [C++에서 명시적 PInvoke 사용(DllImport 특성)](/cpp/dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute)

@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 7593e8873c2714df85146903c0052a9909a95ccd
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8412020fb98fde245b873a2f0c6a355f6436f712
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444722"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868280"
 ---
 # <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9:: GetNativeCodeStartAddresses 메서드
 
@@ -32,24 +32,29 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
                                      [out] UINT_PTR codeStartAddresses[]);
 ```
 
-#### <a name="parameters"></a>매개 변수
+## <a name="parameters"></a>매개 변수
 
-`functionId` \
-진행 네이티브 코드 시작 주소가 반환 되어야 하는 함수의 ID입니다.
+- `functionId`
 
-`reJitId` \
-[in] JIT 다시 컴파일된 함수의 ID입니다.
+  \[in] 네이티브 코드 시작 주소가 반환 되어야 하는 함수의 ID입니다.
 
-`cCodeStartAddresses` \
-[in] `codeStartAddresses` 배열의 최대 크기입니다.
+- `reJitId`
 
-`pcCodeStartAddresses` \
-제한이 사용 가능한 주소 수입니다.
+  \[in] JIT 다시 컴파일된 함수의 id입니다.
 
-`codeStartAddresses` \
-제한이 `UINT_PTR`의 배열입니다. 각는 지정 된 함수에 대 한 네이티브 본문의 시작 주소입니다.
+- `cCodeStartAddresses`
 
-## <a name="remarks"></a>설명
+  \[in] `codeStartAddresses` 배열의 최대 크기입니다.
+
+- `pcCodeStartAddresses`
+
+  \[out] 사용 가능한 주소 수입니다.
+
+- `codeStartAddresses`
+
+  \[out] `UINT_PTR`배열로, 각는 지정 된 함수에 대 한 네이티브 본문의 시작 주소입니다.
+
+## <a name="remarks"></a>주의
 
 계층화 된 컴파일을 사용 하는 경우 함수에 둘 이상의 네이티브 코드 본문이 있을 수 있습니다.
 
@@ -63,6 +68,6 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 
 **.Net 버전:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [ICorProfilerInfo9 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)
+- [ICorProfilerInfo9 인터페이스](icorprofilerinfo9-interface.md)

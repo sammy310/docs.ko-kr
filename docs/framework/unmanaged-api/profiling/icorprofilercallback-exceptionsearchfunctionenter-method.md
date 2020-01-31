@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bfd54573-b7e6-4bd1-a184-7f08a8b39fae
 topic_type:
 - apiref
-ms.openlocfilehash: a64fe598bd9f50b822edb869fa9efca2a4ff280a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
-ms.translationtype: HT
+ms.openlocfilehash: c09d896e59a6c336fbe4923dbe85f30b039d8c36
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790122"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866405"
 ---
 # <a name="icorprofilercallbackexceptionsearchfunctionenter-method"></a>ICorProfilerCallback::ExceptionSearchFunctionEnter 메서드
 예외 처리의 검색 단계가 함수를 검색 하 여 현재 예외에 대 한 처리기를 시작 했음을 프로파일러에 알립니다.  
@@ -49,5 +49,5 @@ HRESULT ExceptionSearchFunctionEnter(
   
 ## <a name="see-also"></a>참조
 
-- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ExceptionSearchFunctionLeave 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionleave-method.md)
+- [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
+- [ExceptionSearchFunctionLeave 메서드](icorprofilercallback-exceptionsearchfunctionleave-method.md)

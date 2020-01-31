@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 1a5a259e6604d906e55166b3fcb770bc37d346c5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5c49d75432980d2f3af77ee040bc6eb20886b027
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444728"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861673"
 ---
 # <a name="icorprofilerinfo9getiltonativemapping3-method"></a>ICorProfilerInfo9:: GetILToNativeMapping3 메서드
 
@@ -31,23 +31,27 @@ HRESULT GetILToNativeMapping3( [in]  UINT_PTR pNativeCodeStartAddress,
                                [out] COR_DEBUG_IL_TO_NATIVE_MAP map[]);
 ```
 
-#### <a name="parameters"></a>매개 변수
+## <a name="parameters"></a>매개 변수
 
-`pNativeCodeStartAddress` \
-진행 네이티브 함수의 시작 부분에 대 한 포인터입니다.
+- `pNativeCodeStartAddress`
 
-`cMap` \
-[in] `map` 배열의 최대 크기입니다.
+  \[in] 네이티브 함수의 시작 부분에 대 한 포인터입니다.
 
-`pcMap` \
-[out] 사용 가능한 COR_DEBUG_IL_TO_NATIVE_MAP 구조체의 총수입니다.
+- `cMap`
 
-`map` \
-제한이 각각 오프셋을 지정 하는 [COR_DEBUG_IL_TO_NATIVE_MAP](../debugging/cor-debug-il-to-native-map-structure.md) 구조체의 배열입니다. `GetILToNativeMapping3` 메서드가 반환되면 `map`에 `COR_DEBUG_IL_TO_NATIVE_MAP` 구조체가 일부 또는 모두 포함됩니다.
+  \[in] `map` 배열의 최대 크기입니다.
 
-## <a name="remarks"></a>설명
+- `pcMap`
 
-계층화 된 컴파일을 사용 하는 경우 메서드에 둘 이상의 네이티브 코드 본문이 있을 수 있습니다. [ICorProfilerInfo9:: GetNativeCodeStartAddresses](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-getnativecodestartaddresses-method.md) 는 모든 네이티브 코드 본문에 대 한 시작 주소를 반환 합니다.
+  \[out] 사용 가능한 COR_DEBUG_IL_TO_NATIVE_MAP 구조체의 총 수입니다.
+
+- `map`
+
+  \[out] 각각 오프셋을 지정 하는 [COR_DEBUG_IL_TO_NATIVE_MAP](../debugging/cor-debug-il-to-native-map-structure.md) 구조체의 배열입니다. `GetILToNativeMapping3` 메서드가 반환되면 `map`에 `COR_DEBUG_IL_TO_NATIVE_MAP` 구조체가 일부 또는 모두 포함됩니다.
+
+## <a name="remarks"></a>주의
+
+계층화 된 컴파일을 사용 하는 경우 메서드에 둘 이상의 네이티브 코드 본문이 있을 수 있습니다. [ICorProfilerInfo9:: GetNativeCodeStartAddresses](icorprofilerinfo9-getnativecodestartaddresses-method.md) 는 모든 네이티브 코드 본문에 대 한 시작 주소를 반환 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -59,6 +63,6 @@ HRESULT GetILToNativeMapping3( [in]  UINT_PTR pNativeCodeStartAddress,
 
 **.NET Framework 버전:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [ICorProfilerInfo9 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)
+- [ICorProfilerInfo9 인터페이스](icorprofilerinfo9-interface.md)

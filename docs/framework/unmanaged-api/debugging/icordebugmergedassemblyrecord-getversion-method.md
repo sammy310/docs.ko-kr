@@ -1,15 +1,15 @@
 ---
-title: 'ICorDebugMergedAssemblyRecord:: GetVersion 메서드'
+title: ICorDebugMergedAssemblyRecord::GetVersion 메서드
 ms.date: 03/30/2017
 ms.assetid: c6858b06-ae26-4312-b325-ea6025016675
-ms.openlocfilehash: 0c89d0749281da412bbf71400d51bee1ed651fbe
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8b5995183be7f1c992cf3230e16456cb248eff0c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129765"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793073"
 ---
-# <a name="icordebugmergedassemblyrecordgetversion-method"></a>ICorDebugMergedAssemblyRecord:: GetVersion 메서드
+# <a name="icordebugmergedassemblyrecordgetversion-method"></a>ICorDebugMergedAssemblyRecord::GetVersion 메서드
 어셈블리의 버전 정보를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -53,5 +53,5 @@ HRESULT GetVersion(
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugMergedAssemblyRecord 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugMergedAssemblyRecord 인터페이스](icordebugmergedassemblyrecord-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c28a2a82-dd11-4385-843f-b509fb61753b
 topic_type:
 - apiref
-ms.openlocfilehash: 70573164baf6839b5ae701c645526e8b1507ad35
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 607143d7848534329a55a9caebdb6b9175b2749c
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445359"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866418"
 ---
 # <a name="icorprofilercallbackexceptionsearchfilterleave-method"></a>ICorProfilerCallback::ExceptionSearchFilterLeave 메서드
 사용자 필터의 실행이 완료 되었음을 프로파일러에 알립니다.  
@@ -40,7 +40,7 @@ HRESULT ExceptionSearchFilterLeave();
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ExceptionSearchFilterEnter 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterenter-method.md)
+- [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
+- [ExceptionSearchFilterEnter 메서드](icorprofilercallback-exceptionsearchfilterenter-method.md)

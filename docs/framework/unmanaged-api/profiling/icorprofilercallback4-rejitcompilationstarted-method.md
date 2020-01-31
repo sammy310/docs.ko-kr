@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 512fdd00-262a-4456-a075-365ef4133c4d
 topic_type:
 - apiref
-ms.openlocfilehash: 074b0b11a822d2b8bcb9588484557e3e5eba69dd
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 81d11c87c9bc970dd5b5c9010023610cea7c0e72
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74430201"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865196"
 ---
 # <a name="icorprofilercallback4rejitcompilationstarted-method"></a>ICorProfilerCallback4::ReJITCompilationStarted 메서드
 JIT (just-in-time) 컴파일러가 함수를 다시 컴파일하기 시작 했음을 프로파일러에 알립니다.  
@@ -45,9 +45,9 @@ HRESULT ReJITCompilationStarted(
  [in] `true` 차단으로 인해 런타임에서 호출 스레드가이 콜백에서 반환 될 때까지 대기 하는 것을 나타낼 수 있습니다. 블로킹이 런타임 작업에 영향을 주지 않음을 나타내려면 `false` 합니다. `true` 값은 런타임에 영향을 주지 않지만 프로 파일링 결과에 영향을 줄 수 있습니다.  
   
 ## <a name="remarks"></a>주의  
- 런타임이 클래스 생성자를 처리 하는 방식 때문에 각 함수에 대해 둘 이상의 `ReJITCompilationStarted` 및 [ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md) 메서드 호출을 받을 수 있습니다. 예를 들어 런타임은 메서드 A를 다시 컴파일하기 시작 하지만 클래스 B에 대 한 클래스 생성자를 실행 해야 합니다. 따라서 런타임은 클래스 B에 대 한 생성자를 다시 컴파일 하 고 실행 합니다. 생성자는를 실행 하는 동안 메서드 a를 호출 하 여 메서드 A를 다시 컴파일합니다. 이 시나리오에서는 메서드 A의 첫 번째 재컴파일을 중단 합니다. 그러나 메서드 A를 다시 컴파일하는 두 시도는 JIT 다시 컴파일 이벤트로 보고 됩니다.  
+ 런타임이 클래스 생성자를 처리 하는 방식 때문에 각 함수에 대해 둘 이상의 `ReJITCompilationStarted` 및 [ReJITCompilationFinished](icorprofilercallback4-rejitcompilationfinished-method.md) 메서드 호출을 받을 수 있습니다. 예를 들어 런타임은 메서드 A를 다시 컴파일하기 시작 하지만 클래스 B에 대 한 클래스 생성자를 실행 해야 합니다. 따라서 런타임은 클래스 B에 대 한 생성자를 다시 컴파일 하 고 실행 합니다. 생성자는를 실행 하는 동안 메서드 a를 호출 하 여 메서드 A를 다시 컴파일합니다. 이 시나리오에서는 메서드 A의 첫 번째 재컴파일을 중단 합니다. 그러나 메서드 A를 다시 컴파일하는 두 시도는 JIT 다시 컴파일 이벤트로 보고 됩니다.  
   
- 두 스레드가 동시에 콜백을 수행 하는 경우에는 프로파일러에서 JIT 다시 컴파일 콜백 시퀀스를 지원 해야 합니다. 예를 들어 스레드 A는 `ReJITCompilationStarted`를 호출 합니다. 그러나 스레드 A가 [ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md)를 호출 하기 전에 스레드 B는 스레드 a에 대 한 `ReJITCompilationStarted` 콜백의 함수 ID를 사용 하 여 [ICorProfilerCallback:: ExceptionSearchFunctionEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md) 를 호출 합니다. [ReJITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md) 에 대 한 호출을 프로파일러가 아직 받지 않았기 때문에 함수 ID가 아직 유효 하지 않은 것 처럼 보일 수 있습니다. 그러나이 경우에는 함수 ID가 유효 합니다.  
+ 두 스레드가 동시에 콜백을 수행 하는 경우에는 프로파일러에서 JIT 다시 컴파일 콜백 시퀀스를 지원 해야 합니다. 예를 들어 스레드 A는 `ReJITCompilationStarted`를 호출 합니다. 그러나 스레드 A가 [ReJITCompilationFinished](icorprofilercallback4-rejitcompilationfinished-method.md)를 호출 하기 전에 스레드 B는 스레드 a에 대 한 `ReJITCompilationStarted` 콜백의 함수 ID를 사용 하 여 [ICorProfilerCallback:: ExceptionSearchFunctionEnter](icorprofilercallback-exceptionsearchfunctionenter-method.md) 를 호출 합니다. [ReJITCompilationFinished](icorprofilercallback4-rejitcompilationfinished-method.md) 에 대 한 호출을 프로파일러가 아직 받지 않았기 때문에 함수 ID가 아직 유효 하지 않은 것 처럼 보일 수 있습니다. 그러나이 경우에는 함수 ID가 유효 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -58,9 +58,9 @@ HRESULT ReJITCompilationStarted(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ICorProfilerCallback4 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
-- [JITCompilationFinished 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md)
-- [ReJITCompilationFinished 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md)
+- [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
+- [ICorProfilerCallback4 인터페이스](icorprofilercallback4-interface.md)
+- [JITCompilationFinished 메서드](icorprofilercallback-jitcompilationfinished-method.md)
+- [ReJITCompilationFinished 메서드](icorprofilercallback4-rejitcompilationfinished-method.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a5eecd7b-b04c-4266-bff2-7c8771d519a8
 topic_type:
 - apiref
-ms.openlocfilehash: 4c9932c3eeebd0101ee364c9b4d0b0a26862c4b1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 396dd9c017fca6dc7037b43355ba7f726d7390ea
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125070"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790985"
 ---
 # <a name="icordebugvariablehomegetregister-method"></a>ICorDebugVariableHome:: GetRegister 메서드
 `VLT_REGISTER`위치 형식의 변수와 `VLT_REGISTER_RELATIVE`위치 형식의 변수에 대 한 기본 레지스터를 포함 하는 레지스터를 가져옵니다.  
@@ -56,5 +56,5 @@ HRESULT GetRegister(
   
 ## <a name="see-also"></a>참조
 
-- [VariableLocationType 열거형](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md)
-- [ICorDebugVariableHome 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+- [VariableLocationType 열거형](variablelocationtype-enumeration.md)
+- [ICorDebugVariableHome 인터페이스](icordebugvariablehome-interface.md)

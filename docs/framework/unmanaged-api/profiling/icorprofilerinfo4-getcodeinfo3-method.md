@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bb8c105e-4d9a-4684-8c05-ed6909cc1b8c
 topic_type:
 - apiref
-ms.openlocfilehash: d29145a9c224a064cf9210c56c8617d99f7690ba
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 164e042ab0f1a275ff07b917658024e22c2d7b0b
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443068"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862038"
 ---
 # <a name="icorprofilerinfo4getcodeinfo3-method"></a>ICorProfilerInfo4::GetCodeInfo3 메서드
 지정된 함수의 JIT 다시 컴파일된 버전과 연결된 네이티브 코드의 범위를 가져옵니다.  
@@ -48,22 +48,22 @@ HRESULT GetCodeInfo3(
  [in] `codeInfos` 배열의 크기입니다.  
   
  `pcCodeInfos`  
- 제한이 사용할 수 있는 [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) 구조체의 총 수에 대 한 포인터입니다.  
+ 제한이 사용할 수 있는 [COR_PRF_CODE_INFO](cor-prf-code-info-structure.md) 구조체의 총 수에 대 한 포인터입니다.  
   
  `codeInfos`  
  [out] 호출자가 제공한 버퍼입니다. 메서드가 반환된 후에는 각각 네이티브 코드 블록을 설명하는 `COR_PRF_CODE_INFO` 구조체의 배열을 포함합니다.  
   
-## <a name="remarks"></a>설명  
- `GetCodeInfo3` 메서드는 지정 된 IP 주소를 포함 하는 함수의 JIT 다시 컴파일된 ID를 가져오는 점을 제외 하 고 [GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md)와 비슷합니다.  
+## <a name="remarks"></a>주의  
+ `GetCodeInfo3` 메서드는 지정 된 IP 주소를 포함 하는 함수의 JIT 다시 컴파일된 ID를 가져오는 점을 제외 하 고 [GetCodeInfo2](icorprofilerinfo2-getcodeinfo2-method.md)와 비슷합니다.  
   
 > [!NOTE]
-> `GetCodeInfo3` 가비지 수집을 트리거할 수 있지만 [GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) 는 그렇지 않습니다. 자세한 내용은 [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md) HRESULT를 참조 하세요.  
+> `GetCodeInfo3` 가비지 수집을 트리거할 수 있지만 [GetCodeInfo2](icorprofilerinfo2-getcodeinfo2-method.md) 는 그렇지 않습니다. 자세한 내용은 [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](corprof-e-unsupported-call-sequence-hresult.md) HRESULT를 참조 하세요.  
   
  범위는 CIL(Common Intermediate Language) 오프셋의 오름차순으로 정렬됩니다.  
   
- `GetCodeInfo3` 반환한 후에는 `codeInfos` 버퍼가 모든 [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) 구조를 포함할 수 있을 만큼 충분히 큰지 확인 해야 합니다. 이렇게 하려면 `cCodeInfos` 값을 `cchName` 매개 변수의 값과 비교합니다. [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) 구조의 크기로 나눈 `cCodeInfos` `pcCodeInfos`보다 작은 경우 더 큰 `codeInfos` 버퍼를 할당 하 고, 더 큰 새 크기를 사용 하 여 `cCodeInfos`를 업데이트 하 고, `GetCodeInfo3`을 다시 호출 합니다.  
+ `GetCodeInfo3` 반환한 후에는 `codeInfos` 버퍼가 모든 [COR_PRF_CODE_INFO](cor-prf-code-info-structure.md) 구조를 포함할 수 있을 만큼 충분히 큰지 확인 해야 합니다. 이렇게 하려면 `cCodeInfos` 값을 `cchName` 매개 변수의 값과 비교합니다. [COR_PRF_CODE_INFO](cor-prf-code-info-structure.md) 구조의 크기로 나눈 `cCodeInfos` `pcCodeInfos`보다 작은 경우 더 큰 `codeInfos` 버퍼를 할당 하 고, 더 큰 새 크기를 사용 하 여 `cCodeInfos`를 업데이트 하 고, `GetCodeInfo3`을 다시 호출 합니다.  
   
- 또는 길이가 0인 `GetCodeInfo3` 버퍼로 `codeInfos`를 먼저 호출하여 올바른 버퍼 크기를 구합니다. 그런 다음 `codeInfos` 버퍼 크기를 `pcCodeInfos`에서 반환 된 값으로 설정 하 고 [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) 구조의 크기를 곱하여 `GetCodeInfo3`를 다시 호출할 수 있습니다.  
+ 또는 길이가 0인 `codeInfos` 버퍼로 `GetCodeInfo3`를 먼저 호출하여 올바른 버퍼 크기를 구합니다. 그런 다음 `codeInfos` 버퍼 크기를 `pcCodeInfos`에서 반환 된 값으로 설정 하 고 [COR_PRF_CODE_INFO](cor-prf-code-info-structure.md) 구조의 크기를 곱하여 `GetCodeInfo3`를 다시 호출할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -74,9 +74,9 @@ HRESULT GetCodeInfo3(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [GetCodeInfo2 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md)
-- [ICorProfilerInfo4 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
-- [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [프로파일링](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [GetCodeInfo2 메서드](icorprofilerinfo2-getcodeinfo2-method.md)
+- [ICorProfilerInfo4 인터페이스](icorprofilerinfo4-interface.md)
+- [프로파일링 인터페이스](profiling-interfaces.md)
+- [프로파일링](index.md)

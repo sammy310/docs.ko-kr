@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8bb5acf5-cf4b-4ccb-93f1-46db1f3f8bf3
 topic_type:
 - apiref
-ms.openlocfilehash: 40698a49ac7012c4f67eb88b1ead04c80f3dea77
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 14dcb251e25b5bd502c8d514a6dc35778fbe9f73
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428319"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867232"
 ---
 # <a name="cor_prf_function-structure"></a>COR_PRF_FUNCTION 구조체
 함수의 ID와 다시 컴파일된 함수 버전의 ID를 결합하여 함수의 고유한 표현을 제공합니다.  
@@ -30,9 +30,9 @@ ms.locfileid: "74428319"
 typedef struct _COR_PRF_FUNCTION {    FunctionID functionId;    ReJITID    reJitId;} COR_PRF_FUNCTION;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-|멤버|설명|  
+|Member|설명|  
 |------------|-----------------|  
 |`functionId`|함수의 ID입니다.|  
 |`reJitId`|다시 컴파일된 함수의 ID입니다. 값이 0 이면 함수의 원래 버전을 나타냅니다.|  
@@ -48,6 +48,6 @@ typedef struct _COR_PRF_FUNCTION {    FunctionID functionId;    ReJITID    reJit
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [프로파일링 구조체](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+- [프로파일링 구조체](profiling-structures.md)

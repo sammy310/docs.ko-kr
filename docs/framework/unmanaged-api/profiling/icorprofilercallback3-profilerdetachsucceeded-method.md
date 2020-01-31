@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05164966-16ce-4cc9-a530-43a640c00711
 topic_type:
 - apiref
-ms.openlocfilehash: b044c493649b73566a2e70db2e19977a6a7b877d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b96a8930c24275546b0aac9fa650cf5447ef4ef2
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439454"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865417"
 ---
 # <a name="icorprofilercallback3profilerdetachsucceeded-method"></a>ICorProfilerCallback3::ProfilerDetachSucceeded 메서드
 CLR(공용 언어 런타임)이 프로파일러 DLL을 언로드한다고 프로파일러에 알립니다.  
@@ -35,7 +35,7 @@ HRESULT ProfilerDetachSucceeded();
  이 콜백의 반환 값은 무시됩니다.  
   
 ## <a name="remarks"></a>주의  
- `ProfilerDetachSucceeded` 콜백은 모든 스레드가 프로파일러의 코드를 종료한 후에 실행됩니다. 이 메서드가 호출되면 프로파일러는 UI 또는 로깅 구성 요소에 알림과 같은 소멸자에 적합하지 않은 마지막 작업을 모두 수행해야 합니다. 그러나 프로파일러는이 콜백 중 CLR에서 제공 하는 인터페이스 (예: [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) 또는 `IMetaData*` 인터페이스)에서 함수를 호출 하면 안 됩니다.  
+ `ProfilerDetachSucceeded` 콜백은 모든 스레드가 프로파일러의 코드를 종료한 후에 실행됩니다. 이 메서드가 호출되면 프로파일러는 UI 또는 로깅 구성 요소에 알림과 같은 소멸자에 적합하지 않은 마지막 작업을 모두 수행해야 합니다. 그러나 프로파일러는이 콜백 중 CLR에서 제공 하는 인터페이스 (예: [ICorProfilerInfo](icorprofilerinfo-interface.md) 또는 `IMetaData*` 인터페이스)에서 함수를 호출 하면 안 됩니다.  
   
  CLR은 Windows 애플리케이션 이벤트 로그에 항목을 만들어 분리 작업에 성공했음을 나타냅니다.  
   
@@ -50,9 +50,9 @@ HRESULT ProfilerDetachSucceeded();
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [메타데이터 인터페이스](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
-- [ICorProfilerInfo3 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [프로파일링](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerInfo3 인터페이스](icorprofilerinfo3-interface.md)
+- [프로파일링 인터페이스](profiling-interfaces.md)
+- [프로파일링](index.md)

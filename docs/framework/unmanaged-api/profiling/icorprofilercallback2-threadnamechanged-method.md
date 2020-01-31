@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c8bbd76d-a9ff-44f2-87a6-be052819da36
 topic_type:
 - apiref
-ms.openlocfilehash: 1149298b4c5e521b37aae6ec48d463f395f18ae3
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c5182fd44f0cc2ad7b836bbcbddc469c89dbacb7
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439562"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865703"
 ---
 # <a name="icorprofilercallback2threadnamechanged-method"></a>ICorProfilerCallback2::ThreadNameChanged 메서드
 스레드의 이름이 변경 되었음을 코드 프로파일러에 알립니다.  
@@ -53,7 +53,7 @@ HRESULT ThreadNameChanged(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ICorProfilerCallback2 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+- [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
+- [ICorProfilerCallback2 인터페이스](icorprofilercallback2-interface.md)

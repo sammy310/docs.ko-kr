@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 18e89f45-e068-426a-be16-9f53a4346860
 topic_type:
 - apiref
-ms.openlocfilehash: 774a5d4e48f00ea8c28977f3f685dcd5a8da3199
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a9ab8c81c995bbec41db217c904e03dd70351aee
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440580"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866886"
 ---
 # <a name="functionleave-function"></a>FunctionLeave 함수
 함수가 호출자에 게 반환 될 것 이라고 프로파일러에 알립니다.  
   
 > [!NOTE]
-> `FunctionLeave` 함수는 2.0 .NET Framework에서 더 이상 사용 되지 않습니다. 계속 작동 하지만 성능이 저하 됩니다. 대신 [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) 함수를 사용 해야 합니다.  
+> `FunctionLeave` 함수는 2.0 .NET Framework에서 더 이상 사용 되지 않습니다. 계속 작동 하지만 성능이 저하 됩니다. 대신 [FunctionLeave2](functionleave2-function.md) 함수를 사용 해야 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,10 +35,12 @@ void __stdcall FunctionLeave (
 );  
 ```  
   
-## <a name="parameters"></a>매개 변수  
- `funcID`  
- 진행 반환 되는 함수의 식별자입니다.  
-  
+## <a name="parameters"></a>매개 변수
+
+- `funcID`
+
+  \[in] 반환 되는 함수의 식별자입니다.
+
 ## <a name="remarks"></a>주의  
  `FunctionLeave` 함수는 콜백입니다. 구현 해야 합니다. 구현은 `__declspec`(`naked`) 저장소 클래스 특성을 사용 해야 합니다.  
   
@@ -61,10 +63,10 @@ void __stdcall FunctionLeave (
   
  **.NET Framework 버전:** 1.1, 1.0  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [FunctionEnter2 함수](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [FunctionLeave2 함수](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [FunctionTailcall2 함수](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
-- [SetEnterLeaveFunctionHooks2 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [프로파일링 전역 정적 함수](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [FunctionEnter2 함수](functionenter2-function.md)
+- [FunctionLeave2 함수](functionleave2-function.md)
+- [FunctionTailcall2 함수](functiontailcall2-function.md)
+- [SetEnterLeaveFunctionHooks2 메서드](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [프로파일링 전역 정적 함수](profiling-global-static-functions.md)

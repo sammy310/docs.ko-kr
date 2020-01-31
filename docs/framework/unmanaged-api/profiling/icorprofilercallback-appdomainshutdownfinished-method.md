@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52794819-0a59-4bb1-a265-0f158cd5cd65
 topic_type:
 - apiref
-ms.openlocfilehash: 8ff7d5a593388bd3a584e031aea411dfdb6c9845
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0851ac33a2bac4fcf727cf09e5225f6b83481b50
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445204"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866678"
 ---
 # <a name="icorprofilercallbackappdomainshutdownfinished-method"></a>ICorProfilerCallback::AppDomainShutdownFinished 메서드
 응용 프로그램 도메인이 프로세스에서 언로드 되었음을 프로파일러에 알립니다.  
@@ -33,15 +33,18 @@ HRESULT AppDomainShutdownFinished(
     [in] HRESULT     hrStatus);  
 ```  
   
-## <a name="parameters"></a>매개 변수  
- `appDomainId`  
- 진행 응용 프로그램의 어셈블리가 저장 된 도메인을 식별 합니다.  
-  
- `hrStatus`  
- 진행 응용 프로그램 도메인이 성공적으로 언로드 되었는지 여부를 나타내는 HRESULT입니다.  
-  
-## <a name="remarks"></a>설명  
- [ICorProfilerCallback:: AppDomainShutdownStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownstarted-method.md) 메서드가 반환 된 후에는 `appDomainId` 값이 정보 요청에 적합 하지 않습니다.  
+## <a name="parameters"></a>매개 변수
+
+- `appDomainId`
+
+  \[in] 응용 프로그램의 어셈블리가 저장 된 도메인을 식별 합니다.
+
+- `hrStatus`
+
+  \[in] 응용 프로그램 도메인이 언로드 되었는지 여부를 나타내는 HRESULT입니다.
+
+## <a name="remarks"></a>주의  
+ [ICorProfilerCallback:: AppDomainShutdownStarted](icorprofilercallback-appdomainshutdownstarted-method.md) 메서드가 반환 된 후에는 `appDomainId` 값이 정보 요청에 적합 하지 않습니다.  
   
  응용 프로그램 도메인 언로드의 일부 부분은 `AppDomainCreationFinished` 콜백 후에도 계속 될 수 있습니다. `hrStatus` 오류 HRESULT는 오류를 나타냅니다. 그러나 `hrStatus`의 성공 HRESULT는 응용 프로그램 도메인 언로드의 첫 번째 부분만 성공 했다는 것을 나타냅니다.  
   
@@ -54,6 +57,6 @@ HRESULT AppDomainShutdownFinished(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
