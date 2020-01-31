@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 875ef5be-c1e7-4d95-97e9-d3a667aeaba0
 topic_type:
 - apiref
-ms.openlocfilehash: 0b238a953fa5cd57c8b7af9a0643bfc36ee1032e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1aaccb37ec61ed1ba6a7e6e1f508704973117cca
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088856"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784878"
 ---
 # <a name="icordebugappdomain3-interface"></a>ICorDebugAppDomain3 인터페이스
 응용 프로그램 도메인에 현재 로드 된 Windows 런타임 형식의 관리 되는 표현에 대 한 정보를 검색 하는 메서드를 제공 합니다. 이 인터페이스는 ICorDebugAppDomain 및 ICorDebugAppDomain2 인터페이스의 확장입니다.  
@@ -28,8 +28,8 @@ ms.locfileid: "73088856"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[ICorDebugAppDomain3:: GetCachedWinRTTypes](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypes-method.md)|모든 캐시 된 Windows 런타임 형식에 대 한 열거자를 가져옵니다.|  
-|[ICorDebugAppDomain3:: GetCachedWinRTTypesForIIDs](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypesforiids-method.md)|인터페이스 식별자를 기반으로 응용 프로그램 도메인의 캐시 된 Windows 런타임 형식에 대 한 열거자를 가져옵니다.|  
+|[ICorDebugAppDomain3::GetCachedWinRTTypes](icordebugappdomain3-getcachedwinrttypes-method.md)|모든 캐시 된 Windows 런타임 형식에 대 한 열거자를 가져옵니다.|  
+|[ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs](icordebugappdomain3-getcachedwinrttypesforiids-method.md)|인터페이스 식별자를 기반으로 응용 프로그램 도메인의 캐시 된 Windows 런타임 형식에 대 한 열거자를 가져옵니다.|  
   
 ## <a name="remarks"></a>주의  
  이 인터페이스는 디버거에서 `M:System.Runtime.InteropServices.Marshal.GetInspectableIIDs(System.Object)`에 대 한 함수 계산 호출과 함께 사용 됩니다. 메서드가 Windows 런타임 서버 개체에서 지 원하는 인터페이스 식별자를 검색 하는 경우 디버거는이 인터페이스에 정의 된 메서드를 사용 하 여 해당 인터페이스에 해당 하는 관리 되는 형식에 매핑할 수 있습니다.  
@@ -50,4 +50,4 @@ ms.locfileid: "73088856"
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

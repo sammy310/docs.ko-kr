@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COR_ENABLE_PROFILING environment variable
 - profiling API [.NET Framework], enabling
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
-ms.openlocfilehash: 86720cb1739e3f193cd1d5081577d69bca1cf0f9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 04b9abd8ffe04a24c08ad89ff48b037c9b003359
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427056"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76860981"
 ---
 # <a name="setting-up-a-profiling-environment"></a>프로파일링 환경 설정
 > [!NOTE]
@@ -55,23 +55,23 @@ ms.locfileid: "74427056"
   
 ## <a name="additional-considerations"></a>추가 고려 사항  
   
-- Profiler 클래스는 [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) 및 [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) 인터페이스를 구현 합니다. .NET Framework 버전 2.0에서 프로파일러는 `ICorProfilerCallback2`를 구현해야 합니다. 구현하지 않으면 `ICorProfilerCallback2`가 로드되지 않습니다.  
+- Profiler 클래스는 [ICorProfilerCallback](icorprofilercallback-interface.md) 및 [ICorProfilerCallback2](icorprofilercallback2-interface.md) 인터페이스를 구현 합니다. .NET Framework 버전 2.0에서 프로파일러는 `ICorProfilerCallback2`를 구현해야 합니다. 구현하지 않으면 `ICorProfilerCallback2`가 로드되지 않습니다.  
   
 - 특정 환경에서 한 번에 한 프로파일러에서만 프로세스를 프로파일링할 수 있습니다. 두 가지 프로파일러를 서로 다른 환경에서 등록할 수 있지만 각 프로파일러는 개별 프로세스를 프로파일링해야 합니다. 프로파일러는 프로파일링되고 있는 프로세스와 같은 주소 공간으로 매핑되는 in-process COM 서버 DLL로 구현되어야 합니다. 이는 프로파일러가 in-process로 실행됨을 의미합니다. .NET Framework는 다른 형식의 COM 서버를 지원하지 않습니다. 예를 들어 프로파일러가 원격 컴퓨터에서 애플리케이션을 모니터링하려고 하면 프로파일러가 각 컴퓨터에서 수집기 에이전트를 구현해야 합니다. 이들 에이전트를 결과를 일괄 처리하고 중앙 데이터 수집 컴퓨터에 전달합니다.  
   
 - 프로파일러는 in-process로 인스턴스화되는 COM 개체이므로 각 프로파일링된 애플리케이션에는 자체 프로파일러 복사본이 있습니다. 따라서 단일 프로파일러 인스턴스는 여러 애플리케이션에서 데이터를 처리할 필요가 없습니다. 그러나 다른 프로파일링된 애플리케이션에서 로그 파일을 덮어쓰지 않도록 방지하려면 프로파일러의 로깅 코드에 논리를 추가해야 합니다.  
   
 ## <a name="initializing-the-profiler"></a>프로파일러 초기화  
- 두 가지 환경 변수 확인을 모두 통과하면 CLR에서는 COM `CoCreateInstance` 함수와 비슷한 방식으로 프로파일러의 인스턴스를 만듭니다. 프로파일러는 직접 호출을 통해 `CoCreateInstance`에 로드되지 않습니다. 따라서 스레딩 모델을 설정해야 하는 `CoInitialize`가 호출되지 않습니다. 그런 다음 CLR은 프로파일러에서 [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) 메서드를 호출 합니다. 이 메서드의 서명은 다음과 같습니다.  
+ 두 가지 환경 변수 확인을 모두 통과하면 CLR에서는 COM `CoCreateInstance` 함수와 비슷한 방식으로 프로파일러의 인스턴스를 만듭니다. 프로파일러는 직접 호출을 통해 `CoCreateInstance`에 로드되지 않습니다. 따라서 스레딩 모델을 설정해야 하는 `CoInitialize`가 호출되지 않습니다. 그런 다음 CLR은 프로파일러에서 [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md) 메서드를 호출 합니다. 이 메서드의 서명은 다음과 같습니다.  
   
 ```cpp  
 HRESULT Initialize(IUnknown *pICorProfilerInfoUnk)  
 ```  
   
- 프로파일러는 [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) 또는 [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md) 인터페이스 포인터에 대 한 `pICorProfilerInfoUnk`를 쿼리하고 나중에 프로 파일링 하는 동안 추가 정보를 요청할 수 있도록 저장 해야 합니다.  
+ 프로파일러는 [ICorProfilerInfo](icorprofilerinfo-interface.md) 또는 [ICorProfilerInfo2](icorprofilerinfo2-interface.md) 인터페이스 포인터에 대 한 `pICorProfilerInfoUnk`를 쿼리하고 나중에 프로 파일링 하는 동안 추가 정보를 요청할 수 있도록 저장 해야 합니다.  
   
 ## <a name="setting-event-notifications"></a>이벤트 알림 설정  
- 그런 다음 프로파일러는 [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) 메서드를 호출 하 여 관심 있는 알림 범주를 지정 합니다. 예를 들어 프로파일러가 함수 시작 및 종료 알림과 가비지 수집 알림에만 관심이 있으면 다음을 지정합니다.  
+ 그런 다음 프로파일러는 [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) 메서드를 호출 하 여 관심 있는 알림 범주를 지정 합니다. 예를 들어 프로파일러가 함수 시작 및 종료 알림과 가비지 수집 알림에만 관심이 있으면 다음을 지정합니다.  
   
 ```cpp  
 ICorProfilerInfo* pInfo;  
@@ -91,8 +91,8 @@ pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)
   
  이 변경을 통해 프로파일링이 시스템 전반에서 사용됩니다. 나중에 실행되는 모든 관리되는 애플리케이션이 프로파일링되지 않게 하려면 대상 컴퓨터를 다시 사직하고 나서 시스템 환경 변수를 삭제해야 합니다.  
   
- 이 방법을 사용하면 모든 CLR 프로세스도 프로파일링됩니다. 프로파일러는 [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) 콜백에 논리를 추가 하 여 현재 프로세스의 관심 여부를 감지 해야 합니다. 관심이 없으면 프로파일러는 초기화를 수행하지 않고 콜백을 오류로 처리할 수 있습니다.  
+ 이 방법을 사용하면 모든 CLR 프로세스도 프로파일링됩니다. 프로파일러는 [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md) 콜백에 논리를 추가 하 여 현재 프로세스의 관심 여부를 감지 해야 합니다. 관심이 없으면 프로파일러는 초기화를 수행하지 않고 콜백을 오류로 처리할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [프로파일링 개요](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)
+- [프로파일링 개요](profiling-overview.md)

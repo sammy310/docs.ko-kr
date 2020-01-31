@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5f3c91c9-c035-454f-96cc-011cab1ea06b
 topic_type:
 - apiref
-ms.openlocfilehash: 49f89f7d36e74b1fa5921230d7dc6d271d4c0883
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f01c27376191c3a2dddf56dae4b26c8b5193c73e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134628"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788649"
 ---
 # <a name="icordebuggcreferenceenum-interface"></a>ICorDebugGCReferenceEnum 인터페이스
 가비지 수집되는 개체에 대한 열거자를 제공합니다.  
@@ -28,14 +28,14 @@ ms.locfileid: "73134628"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[Next 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-next-method.md)|가비지 수집 되는 개체에 대 한 정보를 포함 하는 지정 된 수의 [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) 인스턴스를 가져옵니다.|  
+|[Next 메서드](icordebuggcreferenceenum-next-method.md)|가비지 수집 되는 개체에 대 한 정보를 포함 하는 지정 된 수의 [COR_GC_REFERENCE](cor-gc-reference-structure.md) 인스턴스를 가져옵니다.|  
   
 ## <a name="remarks"></a>주의  
  `ICorDebugGCReferenceEnum` 인터페이스는 "ICorDebugEnum" 인터페이스를 구현 합니다.  
   
- `ICorDebugGCReferenceEnum` 인스턴스는 [ICorDebugProcess5:: EnumerateGCReferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) 메서드를 호출 하 여 [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) 인스턴스로 채워집니다. [ICorDebugGCReference:: Next](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-next-method.md) 메서드를 호출 하 여 [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) 개체를 열거할 수 있습니다.  
+ `ICorDebugGCReferenceEnum` 인스턴스는 [ICorDebugProcess5:: EnumerateGCReferences](icordebugprocess5-enumerategcreferences-method.md) 메서드를 호출 하 여 [COR_GC_REFERENCE](cor-gc-reference-structure.md) 인스턴스로 채워집니다. [ICorDebugGCReference:: Next](icordebuggcreferenceenum-next-method.md) 메서드를 호출 하 여 [COR_GC_REFERENCE](cor-gc-reference-structure.md) 개체를 열거할 수 있습니다.  
   
- 이 메서드로 채워진 컬렉션의 [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) 개체는 다음과 같은 세 가지 개체를 나타냅니다.  
+ 이 메서드로 채워진 컬렉션의 [COR_GC_REFERENCE](cor-gc-reference-structure.md) 개체는 다음과 같은 세 가지 개체를 나타냅니다.  
   
 - 모든 관리 되는 스택의 개체 여기에는 공용 언어 런타임에서 만든 개체 뿐만 아니라 관리 코드의 라이브 참조도 포함 됩니다.  
   
@@ -54,4 +54,4 @@ ms.locfileid: "73134628"
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

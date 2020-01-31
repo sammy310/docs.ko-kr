@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: f2d9345eaaba7b85a217e6b230ae202f27ad3af8
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 4ca40c0f6e62fd413e7f305649c5c01ddc152b2a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742617"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794142"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>연습: WPF에서 ActiveX 컨트롤 호스팅
 브라우저와의 상호 작용을 개선 하기 위해 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]기반 응용 프로그램에서 Microsoft ActiveX 컨트롤을 사용할 수 있습니다. 이 연습에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 페이지의 컨트롤로 Microsoft Windows Media Player를 호스트 하는 방법을 보여 줍니다.
@@ -83,7 +83,7 @@ Visual Studio는 컨트롤이 디자인 화면에 추가 될 때 Microsoft Activ
 
 2. Windows양식 통합 어셈블리에 참조를 추가 합니다 .이 어셈블리에는 Windows Integration .dll 이라는 이름이 지정 됩니다.
 
-3. 이름이 System.object 인 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 어셈블리에 대 한 참조를 추가 합니다.
+3. 이름이 System.object 인 Windows Forms 어셈블리에 대 한 참조를 추가 합니다.
 
 4. WPF 디자이너에서 Mainwindow.xaml를 엽니다.
 

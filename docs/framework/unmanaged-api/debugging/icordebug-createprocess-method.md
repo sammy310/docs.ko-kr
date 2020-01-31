@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6128694-11ed-46e7-bd4e-49ea1914c46a
 topic_type:
 - apiref
-ms.openlocfilehash: a69fb861f7c2671a5c26245aa544ee99bcbdb56b
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: cb16bae2dfe151d04c40269a8e6872ecb49b4269
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901006"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789005"
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess 메서드
 디버거를 제어할 때 프로세스 및 해당 기본 스레드를 시작 합니다.  
@@ -101,4 +101,4 @@ HRESULT CreateProcess (
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebug 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebug 인터페이스](icordebug-interface.md)

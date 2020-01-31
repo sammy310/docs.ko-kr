@@ -10,12 +10,12 @@ api_type:
 ms.assetid: b22717b9-ead5-4eea-887e-789b52d613dc
 topic_type:
 - apiref
-ms.openlocfilehash: b74008e0a183d46d82c5262209d582537fd155c7
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 7ef983c2f0785cb97baf8ba1ad3483b46c08af9a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938081"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788653"
 ---
 # <a name="icordebugfunction3-interface"></a>ICorDebugFunction3 인터페이스
 [.NET Framework 4.5.2 이상 버전에서 지원됨]  
@@ -26,7 +26,7 @@ ms.locfileid: "75938081"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[GetActiveReJitRequestILCode 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction3-getactiverejitrequestilcode-method.md)|활성 ReJIT 요청에서 IL을 포함 하는 [ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md) 에 대 한 인터페이스 포인터를 가져옵니다.|  
+|[GetActiveReJitRequestILCode 메서드](icordebugfunction3-getactiverejitrequestilcode-method.md)|활성 ReJIT 요청에서 IL을 포함 하는 [ICorDebugILCode](icordebugilcode-interface.md) 에 대 한 인터페이스 포인터를 가져옵니다.|  
   
 ## <a name="remarks"></a>주의  
   
@@ -41,6 +41,6 @@ ms.locfileid: "75938081"
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [디버깅 인터페이스](debugging-interfaces.md)
+- [디버깅](index.md)
 - [ReJIT: 방법 가이드](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)

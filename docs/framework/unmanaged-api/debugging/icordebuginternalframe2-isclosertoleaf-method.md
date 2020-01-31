@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c1d3d1eb-8370-4f25-8297-3bd262b4740a
 topic_type:
 - apiref
-ms.openlocfilehash: 8b9ec94184945c19b77247175e51bd5e8dc1ceee
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5dd93dcc29ace6573e313f732c45af0dfbb900e1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122663"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782221"
 ---
 # <a name="icordebuginternalframe2isclosertoleaf-method"></a>ICorDebugInternalFrame2::IsCloserToLeaf 메서드
 `this` 내부 프레임이 지정 된 ICorDebugFrame 개체 보다 리프에 가까이 있는지 확인 합니다.  
@@ -46,7 +46,7 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
 |-------------|-----------------|  
 |S_OK|비교가 성공적으로 수행 되었습니다.|  
 |E_FAIL|비교를 수행할 수 없습니다.|  
-|E_INVALIDARG|`pFrameToCompare` 또는 `pIsCloser`가 null입니다.|  
+|E_INVALIDARG|`pFrameToCompare` 또는 `pIsCloser`이 null입니다.|  
   
 ## <a name="remarks"></a>주의  
  `IsCloserToLeaf`를 사용 하 여 스택의 다른 프레임과 내부 프레임을 인터리브 하는 정책을 구현할 수 있습니다.  
@@ -62,6 +62,6 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugInternalFrame2 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugInternalFrame2 인터페이스](icordebuginternalframe2-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)
+- [디버깅](index.md)

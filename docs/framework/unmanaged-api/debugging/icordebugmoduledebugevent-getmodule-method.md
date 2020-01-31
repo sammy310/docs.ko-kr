@@ -1,15 +1,15 @@
 ---
-title: 'ICorDebugModuleDebugEvent:: GetModule 메서드'
+title: ICorDebugModuleDebugEvent::GetModule Method
 ms.date: 03/30/2017
 ms.assetid: b1141c35-4253-4e34-b3e4-ed406a9dea4f
-ms.openlocfilehash: 5dc26d0367d01bc8da957c3ce648c3e529dddb08
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4d9eea8fb5c42002763a0ae52a186bf2c1e6d2ee
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73096934"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792912"
 ---
-# <a name="icordebugmoduledebugeventgetmodule-method"></a>ICorDebugModuleDebugEvent:: GetModule 메서드
+# <a name="icordebugmoduledebugeventgetmodule-method"></a>ICorDebugModuleDebugEvent::GetModule Method
 방금 로드 또는 언로드된 병합된 모듈을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -22,10 +22,10 @@ HRESULT GetModule(
   
 ## <a name="parameters"></a>매개 변수  
  `ppModule`  
- 제한이 방금 로드 또는 언로드된 병합 된 모듈을 나타내는 ICorDebugModule 개체의 주소에 대 한 포인터입니다.  
+ [out] 방금 로드 또는 언로드된 병합된 모듈을 나타내는 ICorDebugModule 개체의 주소에 대한 포인터입니다.  
   
 ## <a name="remarks"></a>주의  
- [Geteventkind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) 메서드를 호출 하 여 모듈이 로드 또는 언로드 되었는지 여부를 확인할 수 있습니다.  
+ [Geteventkind](icordebugdebugevent-geteventkind-method.md) 메서드를 호출 하 여 모듈이 로드 또는 언로드 되었는지 여부를 확인할 수 있습니다.  
   
 > [!NOTE]
 > 이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.  
@@ -41,5 +41,5 @@ HRESULT GetModule(
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugModuleDebugEvent 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduledebugevent-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugModuleDebugEvent 인터페이스](icordebugmoduledebugevent-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

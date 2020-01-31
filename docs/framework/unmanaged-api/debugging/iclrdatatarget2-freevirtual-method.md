@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 26fb69f8-1467-4711-bd24-cb117c63938f
 topic_type:
 - apiref
-ms.openlocfilehash: c084a3fcbbc02504124a511c6e136be32f408d21
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7eda9bfff6de6b386c16ad0a188931d9d3adcb93
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73112318"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793668"
 ---
 # <a name="iclrdatatarget2freevirtual-method"></a>ICLRDataTarget2::FreeVirtual 메서드
 이전에 대상 프로세스의 주소 공간에 할당 된 메모리를 확보 하기 위해 CLR (공용 언어 런타임) 데이터 액세스 서비스에 의해 호출 됩니다.  
@@ -61,5 +61,5 @@ HRESULT FreeVirtual(
   
 ## <a name="see-also"></a>참조
 
-- [ICLRDataTarget2 인터페이스](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)
-- [AllocVirtual 메서드](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-allocvirtual-method.md)
+- [ICLRDataTarget2 인터페이스](iclrdatatarget2-interface.md)
+- [AllocVirtual 메서드](iclrdatatarget2-allocvirtual-method.md)

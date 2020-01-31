@@ -8,16 +8,16 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
-ms.openlocfilehash: 94d175ec58f35b7e807786c221437d05c605c0bc
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c076937d6431adf1750793d47ece88dc82edf95c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974220"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794107"
 ---
 # <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>연습: WindowsFormsHost 요소를 사용하여 속성 매핑
 
-이 연습에서는 <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A> 속성을 사용 하 여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성을 호스트 된 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤의 해당 속성에 매핑하는 방법을 보여 줍니다.
+이 연습에서는 <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A> 속성을 사용 하 여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성을 호스트 된 Windows Forms 컨트롤의 해당 속성에 매핑하는 방법을 보여 줍니다.
 
 이 연습에서 설명하는 작업은 다음과 같습니다.
 
@@ -35,9 +35,9 @@ ms.locfileid: "73974220"
 
 이 연습에서 설명 하는 작업의 전체 코드 목록은 [WindowsFormsHost 요소 샘플을 사용 하 여 속성 매핑](https://go.microsoft.com/fwlink/?LinkID=160019)을 참조 하세요.
 
-작업이 완료 되 면 호스팅된 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤의 해당 속성에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성을 매핑할 수 있습니다.
+작업이 완료 되 면 호스팅된 Windows Forms 컨트롤의 해당 속성에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성을 매핑할 수 있습니다.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>전제 조건
 
 이 연습을 완료하려면 다음 구성 요소가 필요합니다.
 
@@ -53,7 +53,7 @@ ms.locfileid: "73974220"
 
 ## <a name="defining-the-application-layout"></a>애플리케이션 레이아웃 정의
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]기반 응용 프로그램은 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소를 사용 하 여 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤을 호스팅합니다.
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]기반 응용 프로그램은 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소를 사용 하 여 Windows Forms 컨트롤을 호스팅합니다.
 
 ### <a name="to-define-the-application-layout"></a>애플리케이션 레이아웃을 정의하려면
 
@@ -83,7 +83,7 @@ ms.locfileid: "73974220"
 
      `AddClipMapping` 메서드는 <xref:System.Windows.UIElement.Clip%2A> 속성에 대 한 새 매핑을 추가 합니다.
 
-     `OnClipChange` 메서드는 <xref:System.Windows.UIElement.Clip%2A> 속성을 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.Region%2A> 속성으로 변환 합니다.
+     `OnClipChange` 메서드는 <xref:System.Windows.UIElement.Clip%2A> 속성을 Windows Forms<xref:System.Windows.Forms.Control.Region%2A> 속성으로 변환 합니다.
 
      `Window1_SizeChanged` 메서드는 창의 <xref:System.Windows.FrameworkElement.SizeChanged> 이벤트를 처리 하 고 클리핑 영역의 크기를 응용 프로그램 창에 맞게 조정 합니다.
 
@@ -113,7 +113,7 @@ ms.locfileid: "73974220"
 
      `ReplaceFlowDirectionMapping` 메서드는 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 속성의 기본 매핑을 바꿉니다.
 
-     `OnFlowDirectionChange` 메서드는 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 속성을 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.RightToLeft%2A> 속성으로 변환 합니다.
+     `OnFlowDirectionChange` 메서드는 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 속성을 Windows Forms<xref:System.Windows.Forms.Control.RightToLeft%2A> 속성으로 변환 합니다.
 
      `cb_CheckedChanged` 메서드는 <xref:System.Windows.Forms.CheckBox> 컨트롤의 <xref:System.Windows.Forms.CheckBox.CheckedChanged> 이벤트를 처리 합니다. <xref:System.Windows.Forms.CheckBox.CheckState%2A> 속성의 값을 기반으로 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 속성을 할당 합니다.
 
@@ -145,7 +145,7 @@ ms.locfileid: "73974220"
 
      `WindowLoaded` 메서드는 <xref:System.Windows.FrameworkElement.Loaded> 이벤트를 처리 하 고 다음 초기화를 수행 합니다.
 
-    - [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.CheckBox> 컨트롤을 만듭니다.
+    - Windows Forms<xref:System.Windows.Forms.CheckBox> 컨트롤을 만듭니다.
 
     - 연습에서 이전에 정의한 메서드를 호출하여 속성 매핑을 설정합니다.
 

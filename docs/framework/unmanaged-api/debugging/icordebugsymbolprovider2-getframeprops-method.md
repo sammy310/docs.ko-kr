@@ -1,15 +1,15 @@
 ---
-title: 'ICorDebugSymbolProvider2:: Get프레임 Props 메서드'
+title: ICorDebugSymbolProvider2::GetFrameProps 메서드
 ms.date: 03/30/2017
 ms.assetid: f07b73f3-188d-43a9-8f7d-44dce2f1ddb7
-ms.openlocfilehash: 39bdb93fcb48da6667d982ca2d511ee5e499ae32
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dc64152938c46945978715251286ecb6c6d8983c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133641"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791519"
 ---
-# <a name="icordebugsymbolprovider2getframeprops-method"></a>ICorDebugSymbolProvider2:: Get프레임 Props 메서드
+# <a name="icordebugsymbolprovider2getframeprops-method"></a>ICorDebugSymbolProvider2::GetFrameProps 메서드
 메서드의 메서드 시작 상대 가상 주소 및 코드 상대 가상 주소가 지정된 부모 프레임을 반환합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -48,5 +48,5 @@ HRESULT GetFrameProps(
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugSymbolProvider2 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugSymbolProvider2 인터페이스](icordebugsymbolprovider2-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

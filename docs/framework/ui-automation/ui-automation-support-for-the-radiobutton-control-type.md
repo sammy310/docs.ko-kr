@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Radio Button control type
 - RadioButton control type
 ms.assetid: 87170464-7857-41f1-bcf7-bb41be31cb53
-ms.openlocfilehash: 416d6d6b9d8e7fbd3b3bb5483ddd8dc22380166c
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 037f237537980f1c68855decf468da54e9a22d14
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741555"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76786107"
 ---
 # <a name="ui-automation-support-for-the-radiobutton-control-type"></a>RadioButton 컨트롤 형식에 대한 UI 자동화 지원
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741555"
   
  라디오 단추는 라운드 단추와 애플리케이션에서 정의한 텍스트(레이블), 아이콘 또는 사용자가 단추를 선택하여 수행할 수 있는 선택 항목을 나타내는 비트맵으로 구성됩니다. 일반적으로 애플리케이션은 그룹 상자의 라디오 단추를 제공하므로 관련되어 있지만 함께 사용할 수 없는 옵션 집합에서 사용자가 선택할 수 있습니다. 예를 들어, 애플리케이션은 사용자가 클라이언트 영역에서 선택된 텍스트에 대해 형식 기본 설정을 선택할 수 있는 라디오 단추 그룹을 제공할 수 있습니다. 사용자는 해당 라디오 단추를 선택하여 왼쪽 맞춤, 오른쪽 맞춤 또는 가운데 맞춤 형식을 선택할 수 있습니다. 일반적으로, 사용자는 라디오 단추 집합에서 한 번에 하나의 옵션만 선택할 수 있습니다.  
   
- 다음 섹션에서는 RadioButton 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 또는 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]있는지 여부에 관계 없이 모든 목록 컨트롤에 적용 됩니다.  
+ 다음 섹션에서는 RadioButton 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 또는 Windows Forms 있는지 여부에 관계 없이 모든 목록 컨트롤에 적용 됩니다.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>필요한 UI 자동화 트리 구조  

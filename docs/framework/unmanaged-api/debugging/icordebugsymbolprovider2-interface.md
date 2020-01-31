@@ -2,22 +2,22 @@
 title: ICorDebugSymbolProvider2 인터페이스
 ms.date: 03/30/2017
 ms.assetid: 1c9c3d92-f0de-4d4d-87f1-0c702a4808af
-ms.openlocfilehash: fbf6e8ecaf877ac1948b2abbed58526e7a1eec93
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ca5bb822be515c936560eb4888c72ea306888ff3
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133568"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791496"
 ---
 # <a name="icordebugsymbolprovider2-interface"></a>ICorDebugSymbolProvider2 인터페이스
-[ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md) 인터페이스를 논리적으로 확장 하 여 추가 디버그 기호 정보를 검색 합니다.  
+[ICorDebugSymbolProvider](icordebugsymbolprovider-interface.md) 인터페이스를 논리적으로 확장 하 여 추가 디버그 기호 정보를 검색 합니다.  
   
 ## <a name="methods"></a>메서드  
   
 |메서드|설명|  
 |------------|-----------------|  
-|[GetFrameProps 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-getframeprops-method.md)|메서드의 메서드 시작 상대 가상 주소 및 코드 상대 가상 주소가 지정된 부모 프레임을 반환합니다.|  
-|[GetGenericDictionaryInfo 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-getgenericdictionaryinfo-method.md)|제네릭 사전 맵을 검색합니다.|  
+|[GetFrameProps 메서드](icordebugsymbolprovider2-getframeprops-method.md)|메서드의 메서드 시작 상대 가상 주소 및 코드 상대 가상 주소가 지정된 부모 프레임을 반환합니다.|  
+|[GetGenericDictionaryInfo 메서드](icordebugsymbolprovider2-getgenericdictionaryinfo-method.md)|제네릭 사전 맵을 검색합니다.|  
   
 ## <a name="remarks"></a>주의  
   
@@ -35,6 +35,6 @@ ms.locfileid: "73133568"
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugSymbolProvider 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugSymbolProvider 인터페이스](icordebugsymbolprovider-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)
+- [디버깅](index.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 09daac08-005a-46b2-beab-408d0820c5e5
 topic_type:
 - apiref
-ms.openlocfilehash: 01e1eafd9955a0876f77e34eb73c2a3fc6d815c2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1677798abdb8994d34c82a71e97a2c858209c18e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139210"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790384"
 ---
 # <a name="logginglevelenum-enumeration"></a>LoggingLevelEnum 열거형
 관리되는 스레드가 이벤트를 기록할 때 이벤트 로그에 기록되는 설명 메시지의 보안 수준을 나타냅니다.  
@@ -44,9 +44,9 @@ typedef enum LoggingLevelEnum {
 } LoggingLevelEnum;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-|멤버|설명|  
+|Member|설명|  
 |------------|-----------------|  
 |`LTraceLevel0`|메시지는 추적 수준 0입니다.|  
 |`LTraceLevel1`|메시지는 추적 수준 1입니다.|  
@@ -63,7 +63,7 @@ typedef enum LoggingLevelEnum {
 |`LPanicLevel`|메시지는 비상 수준입니다.|  
   
 ## <a name="remarks"></a>주의  
- CLR (공용 언어 런타임)은 [ICorDebugManagedCallback:: LogMessage](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md) 메서드를 호출 하 여 관리 되는 스레드가 이벤트를 기록 했음을 디버거에 알립니다. CLR은 `LoggingLevelEnum` 열거형 값을 전달 하 여 관리 되는 스레드가 이벤트 로그에 기록 하는 메시지의 심각도 수준을 표시 합니다.  
+ CLR (공용 언어 런타임)은 [ICorDebugManagedCallback:: LogMessage](icordebugmanagedcallback-logmessage-method.md) 메서드를 호출 하 여 관리 되는 스레드가 이벤트를 기록 했음을 디버거에 알립니다. CLR은 `LoggingLevelEnum` 열거형 값을 전달 하 여 관리 되는 스레드가 이벤트 로그에 기록 하는 메시지의 심각도 수준을 표시 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -77,4 +77,4 @@ typedef enum LoggingLevelEnum {
 ## <a name="see-also"></a>참조
 
 - <xref:System.Diagnostics.EventLog>
-- [디버깅 열거형](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [디버깅 열거형](debugging-enumerations.md)

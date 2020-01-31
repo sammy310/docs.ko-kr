@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 01d1b481-ca67-4712-8744-d342ec0df639
 topic_type:
 - apiref
-ms.openlocfilehash: bfe77982b88b2fc96dc2846b9db04df28bfc0c38
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e3744cbfa08de30c53f15c457034b50e2fc5d283
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131444"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793244"
 ---
 # <a name="icordebugmdagetdescription-method"></a>ICorDebugMDA::GetDescription 메서드
-[ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)로 표시 된 MDA (관리 디버깅 도우미)에 대 한 설명을 포함 하는 문자열을 가져옵니다.  
+[ICorDebugMDA](icordebugmda-interface.md)로 표시 된 MDA (관리 디버깅 도우미)에 대 한 설명을 포함 하는 문자열을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -60,5 +60,5 @@ HRESULT GetDescription (
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugMDA 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
+- [ICorDebugMDA 인터페이스](icordebugmda-interface.md)
 - [관리 디버깅 도우미를 사용하여 오류 진단](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

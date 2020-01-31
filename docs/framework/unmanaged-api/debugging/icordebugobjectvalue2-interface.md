@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f93cc2ec-0a12-4499-9bf6-405dc58c9a81
 topic_type:
 - apiref
-ms.openlocfilehash: 34886b8f99715abe1f1abaa062d465002fbf98a7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 566d4323bfd76a2189e1a8280465eb2dcde2a03a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129724"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792670"
 ---
 # <a name="icordebugobjectvalue2-interface"></a>ICorDebugObjectValue2 인터페이스
 
@@ -29,7 +29,7 @@ ms.locfileid: "73129724"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[GetVirtualMethodAndType 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue2-getvirtualmethodandtype-method.md)|`GetVirtualMethodAndType` 아직 구현 되지 않았습니다.|  
+|[GetVirtualMethodAndType 메서드](icordebugobjectvalue2-getvirtualmethodandtype-method.md)|`GetVirtualMethodAndType` 아직 구현 되지 않았습니다.|  
   
 ## <a name="remarks"></a>주의  
   
@@ -47,4 +47,4 @@ ms.locfileid: "73129724"
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

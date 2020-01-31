@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0766e29-e573-4f9a-a928-167d1de5aa7e
 topic_type:
 - apiref
-ms.openlocfilehash: a0482ff451b05ec50c199a75a3c3fabd68c28e21
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0a56a943efd43c1ace766669dea8747024b00917
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133991"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784692"
 ---
 # <a name="icordebugassembly2-interface"></a>ICorDebugAssembly2 인터페이스
 
@@ -29,7 +29,7 @@ ms.locfileid: "73133991"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[IsFullyTrusted 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly2-isfullytrusted-method.md)|어셈블리에 런타임 보안 시스템에서 완전 신뢰를 부여 했는지 여부를 나타내는 값을 가져옵니다.|  
+|[IsFullyTrusted 메서드](icordebugassembly2-isfullytrusted-method.md)|어셈블리에 런타임 보안 시스템에서 완전 신뢰를 부여 했는지 여부를 나타내는 값을 가져옵니다.|  
   
 ## <a name="remarks"></a>주의  
   
@@ -47,4 +47,4 @@ ms.locfileid: "73133991"
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

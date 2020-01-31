@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 85e2108b-ff03-4a15-ac5c-1eb5d84f38ca
 topic_type:
 - apiref
-ms.openlocfilehash: 5a6c7d6075a114cc6e621108ce217dfdb0d75dc8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 542b33c82834ccd30c79c78bdcc759cf0c34d36c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137060"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783330"
 ---
 # <a name="icordebugeditandcontinueerrorinfogetstring-method"></a>ICorDebugEditAndContinueErrorInfo::GetString 메서드
-`GetString`는 사용되지 않습니다. 이 메서드를 호출 하지 마십시오.  
+`GetString`는 사용되지 않습니다. 이 메서드를 호출 하지 마세요.  
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

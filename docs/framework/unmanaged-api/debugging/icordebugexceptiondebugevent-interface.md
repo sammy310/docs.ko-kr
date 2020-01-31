@@ -2,34 +2,34 @@
 title: ICorDebugExceptionDebugEvent 인터페이스
 ms.date: 03/30/2017
 ms.assetid: f9ba60d8-b54d-417e-bb3e-fde4b41ca44c
-ms.openlocfilehash: 985edaa14510b7ca03399ae17cf1d89f28fd04c3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 168ba2945608a5b26432c5a0f583e5d406f6ce9b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73084646"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782824"
 ---
 # <a name="icordebugexceptiondebugevent-interface"></a>ICorDebugExceptionDebugEvent 인터페이스
-[ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md) 인터페이스를 확장 하 여 예외 이벤트를 지원 합니다.  
+[ICorDebugDebugEvent](icordebugdebugevent-interface.md) 인터페이스를 확장 하 여 예외 이벤트를 지원 합니다.  
   
 ## <a name="methods"></a>메서드  
   
 |메서드|설명|  
 |------------|-----------------|  
-|[GetFlags 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-getflags-method.md)|예외를 가로챌 수 있는지 여부를 나타내는 플래그를 가져옵니다.|  
-|[GetNativeIP 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-getnativeip-method.md)|이 예외 디버그 이벤트에 대한 네이티브 인터페이스 포인터를 가져옵니다.|  
-|[GetStackPointer 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-getstackpointer-method.md)|이 예외 디버그 이벤트에 대한 스택 포인터를 가져옵니다.|  
+|[GetFlags 메서드](icordebugexceptiondebugevent-getflags-method.md)|예외를 가로챌 수 있는지 여부를 나타내는 플래그를 가져옵니다.|  
+|[GetNativeIP 메서드](icordebugexceptiondebugevent-getnativeip-method.md)|이 예외 디버그 이벤트에 대한 네이티브 인터페이스 포인터를 가져옵니다.|  
+|[GetStackPointer 메서드](icordebugexceptiondebugevent-getstackpointer-method.md)|이 예외 디버그 이벤트에 대한 스택 포인터를 가져옵니다.|  
   
 ## <a name="remarks"></a>주의  
  `ICorDebugExceptionDebugEvent` 인터페이스는 다음 이벤트 유형을 통해 구현됩니다.  
   
-- [MANAGED_EXCEPTION_FIRST_CHANCE](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)  
+- [MANAGED_EXCEPTION_FIRST_CHANCE](cordebugrecordformat-enumeration.md)  
   
-- [MANAGED_EXCEPTION_USER_FIRST_CHANCE](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)  
+- [MANAGED_EXCEPTION_USER_FIRST_CHANCE](cordebugrecordformat-enumeration.md)  
   
-- [MANAGED_EXCEPTION_CATCH_HANDLER_FOUND](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)  
+- [MANAGED_EXCEPTION_CATCH_HANDLER_FOUND](cordebugrecordformat-enumeration.md)  
   
-- [MANAGED_EXCEPTION_UNHANDLED](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)  
+- [MANAGED_EXCEPTION_UNHANDLED](cordebugrecordformat-enumeration.md)  
   
 > [!NOTE]
 > 이 인터페이스는 .NET 네이티브에서만 사용할 수 있습니다. .NET 네이티브 외부의 ICorDebug 시나리오에 대해 `QueryInterface`를 호출하여 인터페이스 포인터를 검색하려고 하면 `E_NOINTERFACE`가 반환됩니다.  
@@ -45,5 +45,5 @@ ms.locfileid: "73084646"
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [디버깅 인터페이스](debugging-interfaces.md)
+- [디버깅](index.md)

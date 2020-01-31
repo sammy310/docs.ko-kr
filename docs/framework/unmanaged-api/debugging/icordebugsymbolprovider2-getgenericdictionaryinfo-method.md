@@ -1,15 +1,15 @@
 ---
-title: 'ICorDebugSymbolProvider2:: GetGenericDictionaryInfo 메서드'
+title: ICorDebugSymbolProvider2::GetGenericDictionaryInfo 메서드
 ms.date: 03/30/2017
 ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
-ms.openlocfilehash: c9f7206cac54d64c28eb50d81fea00a6f3c494d4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 02ecaf56e845680472f42c04f3978e54e7a69272
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133628"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791503"
 ---
-# <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>ICorDebugSymbolProvider2:: GetGenericDictionaryInfo 메서드
+# <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>ICorDebugSymbolProvider2::GetGenericDictionaryInfo 메서드
 
 제네릭 사전 맵을 검색합니다.
 
@@ -24,7 +24,7 @@ HRESULT GetGenericDictionaryInfo(
 ## <a name="parameters"></a>매개 변수
 
 `ppMemoryBuffer`\
-제한이 제네릭 사전 맵을 포함 하는 [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) 개체의 주소에 대 한 포인터입니다. 자세한 내용은 설명 부분을 참조하세요.
+제한이 제네릭 사전 맵을 포함 하는 [ICorDebugMemoryBuffer](icordebugmemorybuffer-interface.md) 개체의 주소에 대 한 포인터입니다. 자세한 내용은 설명 섹션을 참조하십시오.
 
 ## <a name="remarks"></a>주의
 
@@ -87,5 +87,5 @@ Heap Size = Stream.Length – (Directory Size + 4)
 
 ## <a name="see-also"></a>참조
 
-- [ICorDebugSymbolProvider2 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugSymbolProvider2 인터페이스](icordebugsymbolprovider2-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

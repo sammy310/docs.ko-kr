@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ad37cd10-0339-4d08-9b0e-4b3428bb4dc3
 topic_type:
 - apiref
-ms.openlocfilehash: 0553d8b07e3a16dc31474b5470ba2dd8ba365cb2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c8866e98be0dd064138acdf5e0f6fb9c339fb3d2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140508"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790641"
 ---
 # <a name="icorpublishappdomainenumnext-method"></a>ICorPublishAppDomainEnum::Next 메서드
 현재 위치에서 시작 하 여 현재 프로세스에 있는 지정 된 수의 응용 프로그램 도메인을 가져옵니다.  
@@ -41,7 +41,7 @@ HRESULT Next (
  진행 검색할 요소의 수입니다.  
   
  `objects`  
- 제한이 각각 응용 프로그램 도메인을 나타내는, 검색 된 [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md) 개체의 배열에 대 한 포인터입니다.  
+ 제한이 각각 응용 프로그램 도메인을 나타내는, 검색 된 [ICorPublishAppDomain](icorpublishappdomain-interface.md) 개체의 배열에 대 한 포인터입니다.  
   
  `pceltFetched`  
  제한이 실제로 반환 된 응용 프로그램 도메인의 수에 대 한 포인터입니다. `celt` 일 경우이 값은 null 일 수 있습니다.  
@@ -57,4 +57,4 @@ HRESULT Next (
   
 ## <a name="see-also"></a>참조
 
-- [ICorPublishAppDomainEnum 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)
+- [ICorPublishAppDomainEnum 인터페이스](icorpublishappdomainenum-interface.md)

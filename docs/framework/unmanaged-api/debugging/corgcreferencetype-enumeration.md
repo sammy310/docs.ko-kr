@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d9f16439-5a36-4474-8ffd-4f0b2c2bb686
 topic_type:
 - apiref
-ms.openlocfilehash: eafae181c74d9f3842f7f0d547bcccbbb28c09e6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 17d47b6242bb12ff5ca3cfbde3e4ec183b9c19fc
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132118"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793872"
 ---
 # <a name="corgcreferencetype-enumeration"></a>CorGCReferenceType 열거형
 가비지가 수집될 개체의 소스를 식별합니다.  
@@ -46,7 +46,7 @@ typedef enum {
 } CorGCReferenceType  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
 |멤버 이름|설명|  
 |-----------------|-----------------|  
@@ -60,16 +60,16 @@ typedef enum {
 |`CorHandleStrongSizedByref`|가비지 컬렉션 시 모든 개체 및 개체 루트의 집합 클로저의 대략적인 크기를 유지하는 강력한 핸들입니다.|  
 |`CorReferenceStack`|관리 되는 스택의 참조입니다.|  
 |`CorReferenceFinalizer`|종료자 큐의 참조입니다.|  
-|CorHandleStrongOnly|핸들 테이블에서 강력한 참조만 반환 합니다. 이 값은 [ICorDebugProcess5:: EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) 메서드에만 사용 됩니다.|  
-|`CorHandleWeakOnly`|핸들 테이블에서 약한 참조만 반환 합니다. 이 값은 [ICorDebugProcess5:: EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) 메서드에만 사용 됩니다.|  
-|`CorHandleAll`|핸들 테이블의 모든 참조를 반환 합니다. 이 값은 [ICorDebugProcess5:: EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) 메서드에만 사용 됩니다.|  
+|CorHandleStrongOnly|핸들 테이블에서 강력한 참조만 반환 합니다. 이 값은 [ICorDebugProcess5:: EnumerateHandles](icordebugprocess5-enumeratehandles-method.md) 메서드에만 사용 됩니다.|  
+|`CorHandleWeakOnly`|핸들 테이블에서 약한 참조만 반환 합니다. 이 값은 [ICorDebugProcess5:: EnumerateHandles](icordebugprocess5-enumeratehandles-method.md) 메서드에만 사용 됩니다.|  
+|`CorHandleAll`|핸들 테이블의 모든 참조를 반환 합니다. 이 값은 [ICorDebugProcess5:: EnumerateHandles](icordebugprocess5-enumeratehandles-method.md) 메서드에만 사용 됩니다.|  
   
 ## <a name="remarks"></a>주의  
  `CorGCReferenceType` 열거형은 다음과 같이 사용 됩니다.  
   
-- [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) 구조체의 `type` 필드 값으로 참조 또는 핸들의 원본을 나타냅니다.  
+- [COR_GC_REFERENCE](cor-gc-reference-structure.md) 구조체의 `type` 필드 값으로 참조 또는 핸들의 원본을 나타냅니다.  
   
-- [ICorDebugProcess5:: EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) 메서드에 대 한 `types` 인수로, 열거형에 포함할 핸들의 형식을 지정 합니다.  
+- [ICorDebugProcess5:: EnumerateHandles](icordebugprocess5-enumeratehandles-method.md) 메서드에 대 한 `types` 인수로, 열거형에 포함할 핸들의 형식을 지정 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -82,4 +82,4 @@ typedef enum {
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 열거형](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [디버깅 열거형](debugging-enumerations.md)

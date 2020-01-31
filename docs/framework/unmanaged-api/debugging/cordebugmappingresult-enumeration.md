@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 701281dd-2936-45c8-a1f0-3bf7332b093b
 topic_type:
 - apiref
-ms.openlocfilehash: fc3f77adf33502bfbc3d65ff5131420093fbbec8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 317dc2fe8403ae25949410423f1a28ad365caf6a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73097933"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789304"
 ---
 # <a name="cordebugmappingresult-enumeration"></a>CorDebugMappingResult 열거형
 IP(명령 포인터)의 값을 가져온 방법에 대한 세부 정보를 제공합니다.  
@@ -37,9 +37,9 @@ typedef enum CorDebugMappingResult {
 } CorDebugMappingResult;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-|멤버|설명|  
+|Member|설명|  
 |------------|-----------------|  
 |`MAPPING_PROLOG`|네이티브 코드는 프롤로그에 있으므로 IP의 값은 0입니다.|  
 |`MAPPING_EPILOG`|네이티브 코드는 에필로그에 있으므로 IP의 값은 메서드의 마지막 명령의 주소입니다.|  
@@ -49,7 +49,7 @@ typedef enum CorDebugMappingResult {
 |`MAPPING_APPROXIMATE`|메서드가 성공적으로 매핑 되었지만 IP의 값이 근사값이 될 수 있습니다.|  
   
 ## <a name="remarks"></a>주의  
- [ICorDebugILFrame:: GetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md) 메서드를 사용 하 여 명령 포인터의 값을 가져올 수 있습니다.  
+ [ICorDebugILFrame:: GetIP](icordebugilframe-getip-method.md) 메서드를 사용 하 여 명령 포인터의 값을 가져올 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -62,4 +62,4 @@ typedef enum CorDebugMappingResult {
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 열거형](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [디버깅 열거형](debugging-enumerations.md)

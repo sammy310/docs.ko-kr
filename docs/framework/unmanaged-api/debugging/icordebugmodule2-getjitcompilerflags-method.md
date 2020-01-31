@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7212d9f4-989b-44e3-b8d4-ffc35922f6a0
 topic_type:
 - apiref
-ms.openlocfilehash: 1216629fc7e1c3e720d5f296b9293b3c4b7f8721
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ab6551ba70ed4cd154b166eeb92138b6550d2cb2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127903"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792974"
 ---
 # <a name="icordebugmodule2getjitcompilerflags-method"></a>ICorDebugModule2::GetJITCompilerFlags 메서드
 이 ICorDebugModule2의 JIT (just-in-time) 컴파일을 제어 하는 플래그를 가져옵니다.  
@@ -35,7 +35,7 @@ HRESULT GetJITCompilerFlags (
   
 ## <a name="parameters"></a>매개 변수  
  `pdwFlags`  
- 제한이 JIT 컴파일을 제어 하는 [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) 열거형의 값에 대 한 포인터입니다.  
+ 제한이 JIT 컴파일을 제어 하는 [CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md) 열거형의 값에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  

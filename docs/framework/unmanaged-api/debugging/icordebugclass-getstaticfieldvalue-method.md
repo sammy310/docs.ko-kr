@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 56e718b4-fabd-418b-a5b3-3cc33c745683
 topic_type:
 - apiref
-ms.openlocfilehash: 867db3325f9b18b31f66429d01ea02be3603c0f6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 873dd5a1eb2c9356049d2d0c0cb495b963c2ae46
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125756"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784198"
 ---
 # <a name="icordebugclassgetstaticfieldvalue-method"></a>ICorDebugClass::GetStaticFieldValue 메서드
 지정 된 정적 필드의 값을 가져옵니다.  
@@ -48,7 +48,7 @@ HRESULT GetStaticFieldValue (
  제한이 정적 필드의 값을 나타내는 ICorDebugValue 개체의 주소에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>주의  
- 매개 변수가 있는 형식의 경우 정적 필드의 값은 특정 인스턴스화를 기준으로 합니다. 따라서 클래스 생성자가 <xref:System.Type>형식의 매개 변수를 사용 하는 경우 `ICorDebugClass::GetStaticFieldValue`대신 [ICorDebugType:: GetStaticFieldValue](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getstaticfieldvalue-method.md) 를 호출 합니다.  
+ 매개 변수가 있는 형식의 경우 정적 필드의 값은 특정 인스턴스화를 기준으로 합니다. 따라서 클래스 생성자가 <xref:System.Type>형식의 매개 변수를 사용 하는 경우 `ICorDebugClass::GetStaticFieldValue`대신 [ICorDebugType:: GetStaticFieldValue](icordebugtype-getstaticfieldvalue-method.md) 를 호출 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  

@@ -1,15 +1,15 @@
 ---
-title: 'ICorDebugMergedAssemblyRecord:: GetIndex 메서드'
+title: ICorDebugMergedAssemblyRecord::GetIndex 메서드
 ms.date: 03/30/2017
 ms.assetid: 98701444-b9bc-4978-9548-89ac3394147d
-ms.openlocfilehash: 236bd8b22d6c3ec783d787f6c906ede3193cfc1a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c8fb5ace27fbf7fbebdaca5822af99cd6673e8cf
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131403"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793134"
 ---
-# <a name="icordebugmergedassemblyrecordgetindex-method"></a>ICorDebugMergedAssemblyRecord:: GetIndex 메서드
+# <a name="icordebugmergedassemblyrecordgetindex-method"></a>ICorDebugMergedAssemblyRecord::GetIndex 메서드
 어셈블리의 접두사 인덱스를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -41,5 +41,5 @@ HRESULT GetIndex(
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugMergedAssemblyRecord 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugMergedAssemblyRecord 인터페이스](icordebugmergedassemblyrecord-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

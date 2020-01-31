@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a95389d3-cf2e-47a4-9805-61426acc6b65
 topic_type:
 - apiref
-ms.openlocfilehash: 8da04b0c620404e0dad8227c7a627f75507389a7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b97f29b94ed4fad6892697ca1c7ed4a20c99c03e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128031"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793275"
 ---
 # <a name="icordebugmanagedcallback3-interface"></a>ICorDebugManagedCallback3 인터페이스
 활성화된 사용자 지정 디버거 알림이 발생했음을 나타내는 콜백 메서드를 제공합니다.  
@@ -28,10 +28,10 @@ ms.locfileid: "73128031"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[CustomNotification 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md)|사용 하도록 설정 된 사용자 지정 디버거 알림이 발생 했음을 나타냅니다.|  
+|[CustomNotification 메서드](icordebugmanagedcallback3-customnotification-method.md)|사용 하도록 설정 된 사용자 지정 디버거 알림이 발생 했음을 나타냅니다.|  
   
 ## <a name="remarks"></a>주의  
- 이 인터페이스는 [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md) 및 [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) 인터페이스의 논리적 확장입니다.  
+ 이 인터페이스는 [ICorDebugManagedCallback](icordebugmanagedcallback-interface.md) 및 [ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md) 인터페이스의 논리적 확장입니다.  
   
 > [!NOTE]
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "73128031"
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugManagedCallback 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
-- [ICorDebugManagedCallback2 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugManagedCallback 인터페이스](icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback2 인터페이스](icordebugmanagedcallback2-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)
+- [디버깅](index.md)

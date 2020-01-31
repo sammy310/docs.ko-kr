@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 87360a52-90b1-4ada-80c0-589a556116d8
 topic_type:
 - apiref
-ms.openlocfilehash: 8ae788094def566b4dc3a17d0a08d657cc27468f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d7126222bd23548ec7013ba234c3f3eebbc8e374
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138372"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788626"
 ---
 # <a name="icordebugheapvalue2-interface"></a>ICorDebugHeapValue2 인터페이스
 
@@ -29,7 +29,7 @@ CLR (공용 언어 런타임) 핸들에 대 한 지원을 제공 하는 ICorDebu
   
 |메서드|설명|  
 |------------|-----------------|  
-|[CreateHandle 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-createhandle-method.md)|이 `ICorDebugHeapValue2` 개체에 대해 지정 된 형식의 핸들을 만듭니다.|  
+|[CreateHandle 메서드](icordebugheapvalue2-createhandle-method.md)|이 `ICorDebugHeapValue2` 개체에 대해 지정 된 형식의 핸들을 만듭니다.|  
   
 ## <a name="remarks"></a>주의  
   
@@ -47,4 +47,4 @@ CLR (공용 언어 런타임) 핸들에 대 한 지원을 제공 하는 ICorDebu
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

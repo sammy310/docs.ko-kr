@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 7a38ee4ae74ca5b96dd082e752fc733eb85fca3f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: d4d498c1d75625b2abc37dc1f4c88d73b58ec675
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427026"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790025"
 ---
 # <a name="icorprofilerinfo10getlohobjectsizethreshold-method"></a>ICorProfilerInfo10:: GetLOHObjectSizeThreshold 메서드
 
@@ -28,12 +28,13 @@ ms.locfileid: "74427026"
 HRESULT GetLOHObjectSizeThreshold( [out] DWORD *pThreshold );
 ```
 
-#### <a name="parameters"></a>매개 변수
+## <a name="parameters"></a>매개 변수
 
-`pThreshold` \
-제한이 대량 개체 힙 임계값 (바이트)입니다.
+- `pThreshold`
 
-## <a name="remarks"></a>설명
+  \[out] 대량 개체 힙 임계값 (바이트)입니다.
+
+## <a name="remarks"></a>주의
 
 큰 개체 힙 임계값 보다 큰 개체는 큰 개체 힙에 할당 됩니다. .NET Core 3.0부터 큰 개체 힙 임계값은 구성 가능 하며, `pThreshold`은 활성 큰 개체 힙 임계값 크기 (바이트)를 포함 합니다.
 
@@ -47,6 +48,6 @@ HRESULT GetLOHObjectSizeThreshold( [out] DWORD *pThreshold );
 
 **.Net 버전:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo10 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)

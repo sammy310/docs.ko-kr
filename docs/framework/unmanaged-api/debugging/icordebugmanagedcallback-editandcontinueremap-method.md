@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 24a8fcce-317e-48ff-aefc-d86123ada935
 topic_type:
 - apiref
-ms.openlocfilehash: 3fd1686eb268b9d4e347fe28e067a5321327dbd3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9cb956c0262fdcdb5971d049ea7b057aa4d952c0
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137383"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781899"
 ---
 # <a name="icordebugmanagedcallbackeditandcontinueremap-method"></a>ICorDebugManagedCallback::EditAndContinueRemap 메서드
 이 메서드는 사용되지 않습니다. 다시 매핑 이벤트는 IDE (통합 개발 환경)에 전송 되었음을 디버거에 알립니다.  
@@ -50,4 +50,4 @@ HRESULT EditAndContinueRemap (
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugManagedCallback 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback 인터페이스](icordebugmanagedcallback-interface.md)

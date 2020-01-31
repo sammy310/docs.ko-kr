@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4c6f4f6e-52cc-402e-881b-7b8526544c90
 topic_type:
 - apiref
-ms.openlocfilehash: 5fb4a8a508cde4455bbee8c08432d3549e3fac43
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 22ae1d24040a8ee5000e0ff2fbeb2b45e08050df
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122751"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784350"
 ---
 # <a name="icordebugbreakpointenum-interface"></a>ICorDebugBreakpointEnum 인터페이스
 
@@ -29,7 +29,7 @@ ICorDebugEnum 메서드를 구현 하 고 ICorDebugBreakpoint 배열을 열거 �
   
 |메서드|설명|  
 |------------|-----------------|  
-|[Next 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpointenum-next-method.md)|현재 위치에서 시작 하 여 열거형에서 지정 된 수의 `ICorDebugBreakpoint` 인스턴스를 가져옵니다.|  
+|[Next 메서드](icordebugbreakpointenum-next-method.md)|현재 위치에서 시작 하 여 열거형에서 지정 된 수의 `ICorDebugBreakpoint` 인스턴스를 가져옵니다.|  
   
 ## <a name="remarks"></a>주의  
   
@@ -47,4 +47,4 @@ ICorDebugEnum 메서드를 구현 하 고 ICorDebugBreakpoint 배열을 열거 �
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

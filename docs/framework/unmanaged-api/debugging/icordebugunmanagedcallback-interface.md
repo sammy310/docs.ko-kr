@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bc71cbca-7d73-40e5-84dd-2109fade3c2a
 topic_type:
 - apiref
-ms.openlocfilehash: 6de440d10f02f177e62ca3d2bd29fd5e98ea9388
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fdd2fee11e9353c3aa3faee2b137597e4ba47801
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137137"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791177"
 ---
 # <a name="icordebugunmanagedcallback-interface"></a>ICorDebugUnmanagedCallback 인터페이스
 CLR (공용 언어 런타임)과 직접적으로 관련 되지 않은 네이티브 이벤트에 대 한 알림을 제공 합니다.  
@@ -28,7 +28,7 @@ CLR (공용 언어 런타임)과 직접적으로 관련 되지 않은 네이티�
   
 |메서드|설명|  
 |------------|-----------------|  
-|[DebugEvent 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-debugevent-method.md)|네이티브 이벤트가 발생 했음을 디버거에 알립니다.|  
+|[DebugEvent 메서드](icordebugunmanagedcallback-debugevent-method.md)|네이티브 이벤트가 발생 했음을 디버거에 알립니다.|  
   
 ## <a name="remarks"></a>주의  
   
@@ -46,4 +46,4 @@ CLR (공용 언어 런타임)과 직접적으로 관련 되지 않은 네이티�
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

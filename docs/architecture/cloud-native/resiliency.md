@@ -2,12 +2,12 @@
 title: 클라우드 네이티브 복원력
 description: Azure 용 클라우드 네이티브 .NET 앱 설계 | 클라우드 기본 복원 력
 ms.date: 06/30/2019
-ms.openlocfilehash: 680542abc5d8c43c577321d5ae834f0a13290da3
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 427405d95534c4467ab519c2188fe88e2f18e2b2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "73841044"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781080"
 ---
 # <a name="cloud-native-resiliency"></a>클라우드 네이티브 복원력
 
@@ -41,5 +41,5 @@ ms.locfileid: "73841044"
 따라서 응용 프로그램 및 인프라는 복원 력이 있어야 합니다. 다음 섹션에서는 응용 프로그램에 추가할 수 있는 방어 기법 및 사용자 환경을 쉽게 확인할 수 있도록 활용할 수 있는 기본 제공 클라우드 기능을 살펴봅니다.
 
 >[!div class="step-by-step"]
->[이전](azure-data-storage.md)
+>[이전](elastic-search-in-azure.md)
 >[다음](application-resiliency-patterns.md)

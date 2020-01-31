@@ -2,12 +2,12 @@
 title: MSMQ 활성화
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 2afcfbee69f8257e4ed0b1c352ef29e4af9ddb84
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 805ab78908b4d1146cce94cac5357bafbb35c832
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544712"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744795"
 ---
 # <a name="msmq-activation"></a>MSMQ 활성화
 
@@ -269,7 +269,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
         이 명령을 사용 하면 `http://localhost/servicemodelsamples` 및 `net.msmq://localhost/servicemodelsamples`를 사용 하 여/servicemodelsamples 응용 프로그램에 액세스할 수 있습니다.
 
-7. 아직 설정하지 않은 경우 MSMQ 활성화 서비스를 사용하도록 설정합니다. **시작** 메뉴에서 **실행**을 클릭 하 고 `Services.msc`를 입력 합니다. **Net. Msmq 수신기 어댑터**에 대 한 서비스 목록을 검색 합니다. 마우스 오른쪽 단추를 클릭하고 **속성**을 선택합니다. **시작 유형** 을 **자동**으로 설정 하 고 **적용** 을 클릭 한 다음 **시작** 단추를 클릭 합니다. 이 단계는 Net.Msmq Listener Adapter 서비스를 처음 사용하기 전에 한 번만 수행해야 합니다.
+7. 아직 설정하지 않은 경우 MSMQ 활성화 서비스를 사용하도록 설정합니다. **시작** 메뉴에서 **실행**을 클릭 하 고 `Services.msc`를 입력 합니다. **Net. Msmq 수신기 어댑터**에 대 한 서비스 목록을 검색 합니다. 마우스 오른쪽 단추를 클릭 하 고 **속성**을 선택 합니다. **시작 유형** 을 **자동**으로 설정 하 고 **적용** 을 클릭 한 다음 **시작** 단추를 클릭 합니다. 이 단계는 Net.Msmq Listener Adapter 서비스를 처음 사용하기 전에 한 번만 수행해야 합니다.
 
 8. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요. 또한 구매 주문 전송 시에 큐의 URI에서 컴퓨터 이름이 반영되도록 구매 주문을 전송하는 클라이언트에서 코드를 변경합니다. 다음 코드를 사용합니다.
 
@@ -349,4 +349,4 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
 ## <a name="see-also"></a>참조
 
-- [AppFabric 호스팅 및 지 속성 샘플](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [AppFabric 호스팅 및 지 속성 샘플](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

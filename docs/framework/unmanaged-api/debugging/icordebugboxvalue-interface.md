@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3d3ae7e2-97d4-46de-a2c3-cb78f3490f9d
 topic_type:
 - apiref
-ms.openlocfilehash: a40e12655106cca01add065c2f95384b0eb1a286
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1ec54f4fe36aaf38d7c0ce0586733729bd2fddea
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122803"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784461"
 ---
 # <a name="icordebugboxvalue-interface"></a>ICorDebugBoxValue 인터페이스
 
@@ -29,7 +29,7 @@ Boxed 값 클래스 개체를 나타내는 "ICorDebugHeapValue"의 서브 클래
   
 |메서드|설명|  
 |------------|-----------------|  
-|[GetObject 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-getobject-method.md)|Boxed "ICorDebugObjectValue" 인스턴스에 대 한 인터페이스 포인터를 가져옵니다.|  
+|[GetObject 메서드](icordebugboxvalue-getobject-method.md)|Boxed "ICorDebugObjectValue" 인스턴스에 대 한 인터페이스 포인터를 가져옵니다.|  
   
 ## <a name="remarks"></a>주의  
   
@@ -47,4 +47,4 @@ Boxed 값 클래스 개체를 나타내는 "ICorDebugHeapValue"의 서브 클래
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

@@ -2,12 +2,12 @@
 title: ICorDebugAppDomain4::GetObjectForCCW 메서드
 ms.date: 03/30/2017
 ms.assetid: 2cacdb85-e7b8-42e7-b310-c3e8c22e5d33
-ms.openlocfilehash: 8b046eb5926bb9aa4738e8fff8e61b0b7c23a3aa
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 50f46394c809321f0bd256e4c8d75b76fc7c2c70
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088825"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784858"
 ---
 # <a name="icordebugappdomain4getobjectforccw-method"></a>ICorDebugAppDomain4::GetObjectForCCW 메서드
 CCW(COM 호출 가능 래퍼) 포인터에서 관리되는 개체를 가져옵니다.  
@@ -41,5 +41,5 @@ HRESULT GetObjectForCCW(
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugAppDomain4 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain4-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugAppDomain4 인터페이스](icordebugappdomain4-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

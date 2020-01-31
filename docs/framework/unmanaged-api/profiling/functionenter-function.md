@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bf4ffa50-4506-4dd4-aa13-a0457b47ca74
 topic_type:
 - apiref
-ms.openlocfilehash: ad34592223433f0bf541c390674bcf96839b6ca8
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 38ed7de647aabefc95f515d9aa627b0e9c8d9015
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440824"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790253"
 ---
 # <a name="functionenter-function"></a>FunctionEnter 함수
 컨트롤이 함수에 전달 되 고 있음을 프로파일러에 알립니다.  
@@ -35,11 +35,13 @@ void __stdcall FunctionEnter (
 );  
 ```  
   
-## <a name="parameters"></a>매개 변수  
- `funcID`  
- 진행 제어가 전달 되는 함수의 식별자입니다.  
-  
-## <a name="remarks"></a>설명  
+## <a name="parameters"></a>매개 변수
+
+- `funcID`
+
+  \[] 컨트롤을 전달할 함수의 식별자입니다.
+
+## <a name="remarks"></a>주의  
  `FunctionEnter` 함수는 콜백입니다. 구현 해야 합니다. 구현은 `__declspec`(`naked`) 저장소 클래스 특성을 사용 해야 합니다.  
   
  실행 엔진은이 함수를 호출 하기 전에 레지스터를 저장 하지 않습니다.  
@@ -61,7 +63,7 @@ void __stdcall FunctionEnter (
   
  **.NET Framework 버전:** 1.1, 1.0  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [FunctionEnter2 함수](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
 - [FunctionLeave2 함수](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)

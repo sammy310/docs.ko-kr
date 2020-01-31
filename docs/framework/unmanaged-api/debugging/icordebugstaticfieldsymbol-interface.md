@@ -2,12 +2,12 @@
 title: ICorDebugStaticFieldSymbol 인터페이스
 ms.date: 03/30/2017
 ms.assetid: c0b93609-631e-4b15-878a-189ede922631
-ms.openlocfilehash: 0891df1fc0528ff485605b2c4168fcff0adff990
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b50b9c8435f19e1a77229f01dc85514f5f75c9f5
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131701"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791807"
 ---
 # <a name="icordebugstaticfieldsymbol-interface"></a>ICorDebugStaticFieldSymbol 인터페이스
 정적 필드에 대한 디버그 기호 정보를 나타냅니다.  
@@ -16,9 +16,9 @@ ms.locfileid: "73131701"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[GetAddress 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-getaddress-method.md)|정적 필드의 주소를 가져옵니다.|  
-|[GetName 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-getname-method.md)|정적 필드의 이름을 가져옵니다.|  
-|[GetSize 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-getsize-method.md)|정적 필드의 크기(바이트)를 가져옵니다.|  
+|[GetAddress 메서드](icordebugstaticfieldsymbol-getaddress-method.md)|정적 필드의 주소를 가져옵니다.|  
+|[GetName 메서드](icordebugstaticfieldsymbol-getname-method.md)|정적 필드의 이름을 가져옵니다.|  
+|[GetSize 메서드](icordebugstaticfieldsymbol-getsize-method.md)|정적 필드의 크기(바이트)를 가져옵니다.|  
   
 ## <a name="remarks"></a>주의  
  `ICorDebugStaticFieldSymbol` 인터페이스는 정적 필드에 대한 디버그 기호 정보를 검색하는 데 사용됩니다.  
@@ -37,6 +37,6 @@ ms.locfileid: "73131701"
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugInstanceFieldSymbol 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugInstanceFieldSymbol 인터페이스](icordebuginstancefieldsymbol-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)
+- [디버깅](index.md)

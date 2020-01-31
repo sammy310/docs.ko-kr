@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a0ad3ee-dacb-47e9-abae-4536bcc4804b
 topic_type:
 - apiref
-ms.openlocfilehash: 0045285a3da22f468c2426bb3b9c4ae7e3e1d7c7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 644b5ed751caaf1809250244b37badc8037b0f57
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132666"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792350"
 ---
 # <a name="icordebugprocess5gettypefields-method"></a>ICorDebugProcess5::GetTypeFields 메서드
 형식에 속하는 필드에 대 한 정보를 제공 합니다.  
@@ -41,13 +41,13 @@ HRESULT GetTypeFields(
  진행 필드 정보를 검색할 형식의 식별자입니다.  
   
  `celt`  
- 진행 필드 정보를 검색할 [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) 개체의 수입니다.  
+ 진행 필드 정보를 검색할 [COR_FIELD](cor-field-structure.md) 개체의 수입니다.  
   
  `fields`  
- 제한이 형식에 속하는 필드에 대 한 정보를 제공 하는 [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) 개체의 배열입니다.  
+ 제한이 형식에 속하는 필드에 대 한 정보를 제공 하는 [COR_FIELD](cor-field-structure.md) 개체의 배열입니다.  
   
  `pceltNeeded`  
- 제한이 `fields`에 포함 된 [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) 개체 수에 대 한 포인터입니다.  
+ 제한이 `fields`에 포함 된 [COR_FIELD](cor-field-structure.md) 개체 수에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>주의  
  메서드가 `fields`를 채우는 데 사용 하는 필드 정보가 있는 필드의 수를 지정 하는 `celt` 매개 변수는 `COR_TYPE_LAYOUT::numFields` 필드의 값에 해당 해야 합니다.  
@@ -63,5 +63,5 @@ HRESULT GetTypeFields(
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugProcess5 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugProcess5 인터페이스](icordebugprocess5-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c02338fe-da6c-467f-9567-70ebb387e901
 topic_type:
 - apiref
-ms.openlocfilehash: cee421ef7d7c856ba90dc21f4e9dc25ae6fe1a9b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e1bb5a6fd0550f7c25d46fa31ca11a10cec54986
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140194"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791070"
 ---
 # <a name="icordebugvaluebreakpoint-interface"></a>ICorDebugValueBreakpoint 인터페이스
 특정 값에 대 한 액세스를 제공 하기 위해 ICorDebugBreakpoint 인터페이스를 확장 합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "73140194"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[GetValue 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugvaluebreakpoint-getvalue-method.md)|중단점이 설정 된 개체의 값을 나타내는 ICorDebugValue 개체에 대 한 인터페이스 포인터를 가져옵니다.|  
+|[GetValue 메서드](icordebugvaluebreakpoint-getvalue-method.md)|중단점이 설정 된 개체의 값을 나타내는 ICorDebugValue 개체에 대 한 인터페이스 포인터를 가져옵니다.|  
   
 ## <a name="remarks"></a>주의  
   
@@ -46,4 +46,4 @@ ms.locfileid: "73140194"
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

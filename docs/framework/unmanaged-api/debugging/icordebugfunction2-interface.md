@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2b936bef-9b75-48bf-859f-42e419c65f1c
 topic_type:
 - apiref
-ms.openlocfilehash: da440b7d2da57511545d3b63700662eb544660fd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5364e39f7e0a9b6c9cd10cd8f17bab4a03a4b7af
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137774"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794476"
 ---
 # <a name="icordebugfunction2-interface"></a>ICorDebugFunction2 인터페이스
 
@@ -29,10 +29,10 @@ ICorDebugFunction 인터페이스를 논리적으로 확장 하 여 사용자가
   
 |메서드|설명|  
 |------------|-----------------|  
-|[EnumerateNativeCode 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-enumeratenativecode-method.md)|아직 구현 되지 않았습니다. 이 ICorDebugFunction2 개체가 참조 하는 함수에 네이티브 코드 문이 포함 된 ICorDebugCodeEnum에 대 한 인터페이스 포인터를 가져옵니다.|  
-|[GetJMCStatus 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getjmcstatus-method.md)|이 함수가 사용자 코드로 표시 되었는지 여부를 나타내는 값을 가져옵니다.|  
-|[GetVersionNumber 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getversionnumber-method.md)|이 함수의 편집 하며 계속 하기 버전을 가져옵니다.|  
-|[SetJMCStatus 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-setjmcstatus-method.md)|내 코드만 단계별 실행을 위해이 함수를 표시 합니다.|  
+|[EnumerateNativeCode 메서드](icordebugfunction2-enumeratenativecode-method.md)|아직 구현 되지 않았습니다. 이 ICorDebugFunction2 개체가 참조 하는 함수에 네이티브 코드 문이 포함 된 ICorDebugCodeEnum에 대 한 인터페이스 포인터를 가져옵니다.|  
+|[GetJMCStatus 메서드](icordebugfunction2-getjmcstatus-method.md)|이 함수가 사용자 코드로 표시 되었는지 여부를 나타내는 값을 가져옵니다.|  
+|[GetVersionNumber 메서드](icordebugfunction2-getversionnumber-method.md)|이 함수의 편집 하며 계속 하기 버전을 가져옵니다.|  
+|[SetJMCStatus 메서드](icordebugfunction2-setjmcstatus-method.md)|내 코드만 단계별 실행을 위해이 함수를 표시 합니다.|  
   
 ## <a name="remarks"></a>주의  
   
@@ -50,4 +50,4 @@ ICorDebugFunction 인터페이스를 논리적으로 확장 하 여 사용자가
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

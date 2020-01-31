@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 78dad5e4-8e2e-400f-bec3-92ff0205cd82
 topic_type:
 - apiref
-ms.openlocfilehash: c18ed781d44c873b4cd1957bf0102a4ce0cccad4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d552b694787b5d9f0d5adc399eda6f75df93c385
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139215"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793031"
 ---
 # <a name="icordebugmoduleenableclassloadcallbacks-method"></a>ICorDebugModule::EnableClassLoadCallbacks 메서드
-이 모듈에 대해 [ICorDebugManagedCallback:: LoadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) 및 [ICorDebugManagedCallback:: UnloadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md) 콜백이 호출 되는지 여부를 제어 합니다.  
+이 모듈에 대해 [ICorDebugManagedCallback:: LoadClass](icordebugmanagedcallback-loadclass-method.md) 및 [ICorDebugManagedCallback:: UnloadClass](icordebugmanagedcallback-unloadclass-method.md) 콜백이 호출 되는지 여부를 제어 합니다.  
   
 ## <a name="syntax"></a>구문  
   

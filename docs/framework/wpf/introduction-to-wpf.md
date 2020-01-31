@@ -1,17 +1,18 @@
 ---
 title: WPF 소개
+titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: b8d7cf43-d1f2-4f3d-adb0-4f3a6428edc0
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: d8ea49bbe400c5ec478a94ad7c1adb759af28abb
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ecdd3b3c24b71917efb0d982d1f23737673622f9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454201"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744716"
 ---
 # <a name="wpf-overview"></a>WPF 개요
 
@@ -67,7 +68,7 @@ XAML은 XML 기반이기 때문에 XAML로 작성한 UI는 [요소 트리](advan
 
 ### <a name="code-behind"></a>코드 숨김
 
-애플리케이션의 주요 작업은 이벤트 (예: 메뉴, 도구 모음, 단추 클릭) 처리, 비즈니스 논리 작업 및 데이터 엑세스 응답과 같은 사용자 조작에 맞는 기능을 실행하는 것입니다. WPF에서 이 동작은 태그와 연결된 코드에서 구현됩니다. 이러한 종류의 코드를 코드 숨김이라고 합니다. 다음 예제에서는 이전 예제와 코드 숨김으로 업데이트 된 태그를 보여 줍니다.
+애플리케이션의 기본 동작은 이벤트 처리(예: 메뉴, 도구 모음 또는 단추 클릭) 및 응답으로 비즈니스 논리 및 데이터 액세스 논리 호출을 포함하여 사용자 조작에 응답하는 기능을 구현하는 것입니다. WPF에서 이 동작은 태그와 연결된 코드에서 구현됩니다. 이러한 종류의 코드를 코드 숨김이라고 합니다. 다음 예제에서는 이전 예제와 코드 숨김으로 업데이트 된 태그를 보여 줍니다.
 
 ```xaml
 <Window
@@ -134,7 +135,7 @@ Namespace SDKSample
 End Namespace
 ```
 
-이 예제에서 코드 숨김은 <xref:System.Windows.Window> 클래스에서 파생된 클래스를 구현합니다. `x:Class` 특성은 태그를 코드 숨김 클래스와 연결하는 데 사용됩니다. `InitializeComponent`는 코드 숨김 클래스를 사용하여 태그에서 정의된 UI를 병합하기 위해 코드 숨김 클래스의 생성자에서 호출됩니다. 응용 프로그램을 빌드할 때 `InitializeComponent` 생성 됩니다. 즉, 수동으로 구현 하지 않아도 됩니다. `x:Class`와 `InitializeComponent`의 조합은 구현이 만들어질 때마다 올바르게 초기화 되는지 확인 합니다. 코드 숨김 클래스는 단추의 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트에 대한 이벤트 처리기도 구현합니다. 단추를 클릭하면 이벤트 처리기가 <xref:System.Windows.MessageBox.Show%2A?displayProperty=fullName> 메서드를 호출하여 메시지 상자를 표시합니다.
+이 예제에서 코드 숨김은 <xref:System.Windows.Window> 클래스에서 파생된 클래스를 구현합니다. `x:Class` 특성은 태그를 코드 숨김 클래스와 연결하는 데 사용됩니다. `InitializeComponent` 는 코드 숨김 클래스를 사용하여 태그에서 정의된 UI를 병합하기 위해 코드 숨김 클래스의 생성자에서 호출됩니다. 응용 프로그램을 빌드할 때`InitializeComponent` 생성 됩니다. 즉, 수동으로 구현 하지 않아도 됩니다. `x:Class`와 `InitializeComponent`의 조합은 구현이 만들어질 때마다 올바르게 초기화 되는지 확인 합니다. 코드 숨김 클래스는 단추의 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트에 대한 이벤트 처리기도 구현합니다. 단추를 클릭하면 이벤트 처리기가 <xref:System.Windows.MessageBox.Show%2A?displayProperty=fullName> 메서드를 호출하여 메시지 상자를 표시합니다.
 
 다음 그림은 단추를 클릭할 때의 결과를 보여 줍니다.
 
@@ -206,7 +207,7 @@ End Namespace
 
 [!code-xaml[IntroToWPFSnippets#LayoutMARKUP](~/samples/snippets/xaml/wpf/introduction-to-wpf/introduction-to-wpf_1.xaml)]
 
-<xref:System.Windows.Controls.DockPanel>을 사용하면 자식 <xref:System.Windows.Controls.TextBox> 컨트롤이 정렬 방법을 알려줄 수 있습니다. 이렇게 하려면 <xref:System.Windows.Controls.DockPanel>은 각각 도킹 스타일을 지정할 수 있도록 자식 컨트롤에 노출되는 `Dock` 속성을 구현합니다.
+<xref:System.Windows.Controls.DockPanel> 을 사용하면 자식 <xref:System.Windows.Controls.TextBox> 컨트롤이 정렬 방법을 알려줄 수 있습니다. 이렇게 하려면 <xref:System.Windows.Controls.DockPanel>은 각각 도킹 스타일을 지정할 수 있도록 자식 컨트롤에 노출되는 `Dock` 속성을 구현합니다.
 
 > [!NOTE]
 > 자식 컨트롤에서 사용할 수 있도록 부모 컨트롤이 구현하는 속성은 [연결된 속성](advanced/attached-properties-overview.md)이라는 WPF 구문입니다.
@@ -322,7 +323,7 @@ WPF 애니메이션 지원을 사용하면 컨트롤이 커지거나, 흔들리�
 
 자세한 내용은 [애니메이션 개요](graphics-multimedia/animation-overview.md)를 참조하세요.
 
-## <a name="media"></a>미디어
+## <a name="media"></a>Media
 
 풍부한 콘텐츠를 전달하는 한 가지 방법은 시청각 미디어를 사용하는 것입니다. WPF는 이미지, 비디오 및 오디오에 대한 특별한 지원을 제공합니다.
 
@@ -503,7 +504,7 @@ WPF 컨트롤의 기본 사용자 인터페이스는 일반적으로 다른 컨�
 
 ![데이터 템플릿을 사용하는 목록 상자](media/introduction-to-wpf/wpfintrofigure19.png)
 
-<xref:System.Windows.Controls.ListBox>의 동작과 전반적인 모양은 유지되고 목록 상자에 표시되는 콘텐츠의 모양만 변경되었습니다.
+<xref:System.Windows.Controls.ListBox> 의 동작과 전반적인 모양은 유지되고 목록 상자에 표시되는 콘텐츠의 모양만 변경되었습니다.
 
 자세한 내용은 [데이터 템플릿 개요](data/data-templating-overview.md)를 참조하세요.
 
@@ -616,7 +617,7 @@ WPF 컨트롤의 기본 사용자 인터페이스는 일반적으로 다른 컨�
 
 ### <a name="custom-controls"></a>사용자 지정 컨트롤
 
-WPF는 다양한 사용자 지정 지원을 제공하지만 기존 WPF 컨트롤이 애플리케이션 또는 해당 사용자의 요구를 충족하지 않는 경우가 발생할 수 있습니다. 이 오류는 다음과 같은 경우에 발생할 수 있습니다.
+WPF는 다양한 사용자 지정 지원을 제공하지만 기존 WPF 컨트롤이 애플리케이션 또는 해당 사용자의 요구를 충족하지 않는 경우가 발생할 수 있습니다. 이 문제는 다음과 같은 경우에 발생할 수 있습니다.
 
 - 사용자가 요구하는 사용자 인터페이스가 기존 WPF 가 구현하는 모양이나 느낌으로 만들 수 없는 경우
 
@@ -649,7 +650,7 @@ WPF는 다양한 사용자 지정 지원을 제공하지만 기존 WPF 컨트롤
 
 ## <a name="wpf-best-practices"></a>WPF 모범 사례
 
-모든 개발 플랫폼과 마찬가지로 WPF를 다양한 방법으로 사용하여 원하는 결과를 얻을 수 있습니다. WPF 애플리케이션이 필요한 사용자 환경을 제공하고 일반적인 사용자 요구를 충족하도록 하는 한 가지 방법으로 접근성, 전역화 및 지역화, 성능에 대한 권장 모범 사례가 있습니다. 자세한 내용은 다음을 참조하십시오.
+모든 개발 플랫폼과 마찬가지로 WPF를 다양한 방법으로 사용하여 원하는 결과를 얻을 수 있습니다. WPF 애플리케이션이 필요한 사용자 환경을 제공하고 일반적인 사용자 요구를 충족하도록 하는 한 가지 방법으로 접근성, 전역화 및 지역화, 성능에 대한 권장 모범 사례가 있습니다. 자세한 내용은  항목을 참조하세요.
 
 - [액세스 가능성](../ui-automation/accessibility-best-practices.md)
 - [WPF 전역화 및 지역화](advanced/wpf-globalization-and-localization-overview.md)

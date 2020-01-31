@@ -10,12 +10,12 @@ api_location:
 api_type:
 - COM
 ms.assetid: a1bfb649-4584-4d35-b3e6-8fe59b53992a
-ms.openlocfilehash: 00d9bef1e2b59a2d2207d1e343380e0e81bee848
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b9e488a512ad506a8975bfff44ae02cd84c29f74
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130360"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861699"
 ---
 # <a name="icorprofilerinfo7applymetadata-method"></a>ICorProfilerInfo7:: ApplyMetaData 메서드
 [.NET Framework 4.6.1 이상 버전에서 지원됨]  
@@ -35,7 +35,7 @@ HRESULT ApplyMetaData(
  진행 메타 데이터가 변경 된 모듈의 식별자입니다.  
   
 ## <a name="remarks"></a>주의  
- [Moduleloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) 콜백을 수행한 후 메타 데이터를 변경 하는 경우 새 메타 데이터를 사용 하기 전에이 메서드를 호출 해야 합니다.  
+ [Moduleloadfinished](icorprofilercallback-moduleloadfinished-method.md) 콜백을 수행한 후 메타 데이터를 변경 하는 경우 새 메타 데이터를 사용 하기 전에이 메서드를 호출 해야 합니다.  
   
  `ApplyMetaData`는 다음 형식의 메타 데이터를 추가 하는 것만 지원 합니다.  
   
@@ -55,7 +55,7 @@ HRESULT ApplyMetaData(
 
 - [IMetaDataEmit::D Efin def](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) 메서드를 호출 하 여 만드는 레코드를 `TypeDef` 합니다.
 
-- `MethodDef` 레코드- [IMetaDataEmit::D efinemethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md) 메서드를 호출 하 여 만듭니다. 그러나 기존 형식에 가상 메서드를 추가 하는 것은 지원 되지 않습니다. 가상 메서드는 [Moduleloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) 콜백 전에 추가 해야 합니다.
+- `MethodDef` 레코드- [IMetaDataEmit::D efinemethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md) 메서드를 호출 하 여 만듭니다. 그러나 기존 형식에 가상 메서드를 추가 하는 것은 지원 되지 않습니다. 가상 메서드는 [Moduleloadfinished](icorprofilercallback-moduleloadfinished-method.md) 콜백 전에 추가 해야 합니다.
 
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -68,4 +68,4 @@ HRESULT ApplyMetaData(
   
 ## <a name="see-also"></a>참조
 
-- [ICorProfilerInfo7 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)
+- [ICorProfilerInfo7 인터페이스](icorprofilerinfo7-interface.md)

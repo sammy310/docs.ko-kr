@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9ffb4498-7719-49d3-8890-df2c22248a0c
 topic_type:
 - apiref
-ms.openlocfilehash: b77d5859986c90d6ef61c02547014d0bec354106
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0526c050bcf1316eccf2c756a404fbb971e6d7d0
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73096149"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792736"
 ---
 # <a name="icordebugobjectenum-interface"></a>ICorDebugObjectEnum 인터페이스
 
@@ -29,7 +29,7 @@ ICorDebugEnum 메서드를 구현 하 고 개체의 배열을 Rva (상대 가상
   
 |메서드|설명|  
 |------------|-----------------|  
-|[Next 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectenum-next-method.md)|현재 위치에서 시작 하 여 열거형에서 지정 된 개체 수의 Rva를 가져옵니다.|  
+|[Next 메서드](icordebugobjectenum-next-method.md)|현재 위치에서 시작 하 여 열거형에서 지정 된 개체 수의 Rva를 가져옵니다.|  
   
 ## <a name="remarks"></a>주의  
   
@@ -47,4 +47,4 @@ ICorDebugEnum 메서드를 구현 하 고 개체의 배열을 Rva (상대 가상
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

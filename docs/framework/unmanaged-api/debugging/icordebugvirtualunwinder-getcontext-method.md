@@ -1,15 +1,15 @@
 ---
-title: 'ICorDebugVirtualUnwinder:: GetContext 메서드'
+title: ICorDebugVirtualUnwinder::GetContext 메서드
 ms.date: 03/30/2017
 ms.assetid: fe502a76-3068-47e5-a0a0-85ccb72dfac3
-ms.openlocfilehash: ce54bfd01abb8bd4efd5e46eff1ef831a9f0c8fd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ff5e5bdd66ec44a0931b51212f07485718507576
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121892"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790836"
 ---
-# <a name="icordebugvirtualunwindergetcontext-method"></a>ICorDebugVirtualUnwinder:: GetContext 메서드
+# <a name="icordebugvirtualunwindergetcontext-method"></a>ICorDebugVirtualUnwinder::GetContext 메서드
 이 해제기의 현재 컨텍스트를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -40,7 +40,7 @@ HRESULT GetContext(
  mscordbi에 수신되는 모든 오류 HRESULT는 심각한 오류로 간주하여 ICorDebug API에서 `CORDBG_E_DATA_TARGET_ERROR`가 반환됩니다.  
   
 ## <a name="remarks"></a>주의  
- `contextBuf` 인수의 초기 값을 [ICorDebugStackWalk:: GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) 메서드를 호출 하 여 반환 되는 컨텍스트 버퍼로 설정 합니다.  
+ `contextBuf` 인수의 초기 값을 [ICorDebugStackWalk:: GetContext](icordebugstackwalk-getcontext-method.md) 메서드를 호출 하 여 반환 되는 컨텍스트 버퍼로 설정 합니다.  
   
 > [!NOTE]
 > 이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.  
@@ -58,5 +58,5 @@ HRESULT GetContext(
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugMemoryBuffer 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugMemoryBuffer 인터페이스](icordebugmemorybuffer-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

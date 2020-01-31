@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 98320175-7c5e-4dbb-8683-86fa82e2641f
 topic_type:
 - apiref
-ms.openlocfilehash: 9313fc58dec8099f42dbff07685ca14791fa324f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9f62d94d30c8c4f23073895b8ff0f7afa2dbad6b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137170"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792492"
 ---
 # <a name="icordebugprocess2setdesiredngencompilerflags-method"></a>ICorDebugProcess2::SetDesiredNGENCompilerFlags 메서드
 런타임이 해당 이미지를 현재 프로세스에 로드 하기 위해 미리 컴파일된 이미지에 포함 되어야 하는 플래그를 설정 합니다.  
@@ -35,14 +35,14 @@ HRESULT SetDesiredNGENCompilerFlags (
   
 ## <a name="parameters"></a>매개 변수  
  `pdwFlags`  
- 진행 올바른 미리 컴파일된 이미지를 선택 하는 데 사용 되는 컴파일러 플래그를 지정 하는 [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) 열거형의 값입니다.  
+ 진행 올바른 미리 컴파일된 이미지를 선택 하는 데 사용 되는 컴파일러 플래그를 지정 하는 [CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md) 열거형의 값입니다.  
   
 ## <a name="remarks"></a>주의  
- `SetDesiredNGENCompilerFlags` 메서드는 런타임이이 프로세스에 이미지를 로드 하도록 미리 컴파일된 이미지에 포함 되어야 하는 플래그를 지정 합니다. 이 메서드에 의해 설정 된 플래그는 올바른 미리 컴파일된 이미지를 선택 하는 데만 사용 됩니다. 이러한 이미지가 없는 경우 런타임은 MSIL (Microsoft 중간 언어) 이미지 및 JIT (just-in-time) 컴파일러를 대신 로드 합니다. 이 경우 디버거는 [ICorDebugModule2:: SetJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md) 메서드를 사용 하 여 JIT 컴파일에 필요한 만큼 플래그를 설정 해야 합니다.  
+ `SetDesiredNGENCompilerFlags` 메서드는 런타임이이 프로세스에 이미지를 로드 하도록 미리 컴파일된 이미지에 포함 되어야 하는 플래그를 지정 합니다. 이 메서드에 의해 설정 된 플래그는 올바른 미리 컴파일된 이미지를 선택 하는 데만 사용 됩니다. 이러한 이미지가 없는 경우 런타임은 MSIL (Microsoft 중간 언어) 이미지 및 JIT (just-in-time) 컴파일러를 대신 로드 합니다. 이 경우 디버거는 [ICorDebugModule2:: SetJITCompilerFlags](icordebugmodule2-setjitcompilerflags-method.md) 메서드를 사용 하 여 JIT 컴파일에 필요한 만큼 플래그를 설정 해야 합니다.  
   
  이미지가 로드 되었지만 해당 이미지에 대 한 JIT 컴파일 (이미지가 제네릭을 포함 하는 경우)이 발생 해야 하는 경우에는 `SetDesiredNGENCompilerFlags` 메서드에서 지정 된 컴파일러 플래그가 추가 JIT 컴파일에 적용 됩니다.  
   
- [ICorDebugManagedCallback:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) 콜백 중에 `SetDesiredNGENCompilerFlags` 메서드를 호출 해야 합니다. 나중에 `SetDesiredNGENCompilerFlags` 메서드를 호출 하려고 하면 실패 합니다. 또한 `CorDebugJITCompilerFlags` 열거형에 정의 되어 있지 않거나 지정 된 프로세스에 유효 하지 않은 플래그를 설정 하려고 하면 실패 합니다.  
+ [ICorDebugManagedCallback:: CreateProcess](icordebugmanagedcallback-createprocess-method.md) 콜백 중에 `SetDesiredNGENCompilerFlags` 메서드를 호출 해야 합니다. 나중에 `SetDesiredNGENCompilerFlags` 메서드를 호출 하려고 하면 실패 합니다. 또한 `CorDebugJITCompilerFlags` 열거형에 정의 되어 있지 않거나 지정 된 프로세스에 유효 하지 않은 플래그를 설정 하려고 하면 실패 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -55,5 +55,5 @@ HRESULT SetDesiredNGENCompilerFlags (
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebug 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
-- [ICorDebugManagedCallback 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebug 인터페이스](icordebug-interface.md)
+- [ICorDebugManagedCallback 인터페이스](icordebugmanagedcallback-interface.md)

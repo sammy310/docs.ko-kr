@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e8ab7c41-d508-4ed9-8a31-ead072b5a314
 topic_type:
 - apiref
-ms.openlocfilehash: cd43dce995c2bc9a45a0c8134a91b20cb1dec26e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 585b3d605d0df9169c12ca10198846ec0a7fe6d4
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73111423"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793606"
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>ICLRDebugging::OpenVirtualProcess 메서드
 프로세스에 로드 된 CLR (공용 언어 런타임) 모듈에 해당 하는 ICorDebugProcess 인터페이스를 가져옵니다.  
@@ -41,10 +41,10 @@ HRESULT OpenVirtualProcess(
   
 ## <a name="parameters"></a>매개 변수  
  `moduleBaseAddress`  
- 진행 대상 프로세스에 있는 모듈의 기본 주소입니다. 지정 된 모듈이 CLR 모듈이 아닌 경우 COR_E_NOT_CLR이 반환 됩니다.  
+ 진행 대상 프로세스에 있는 모듈의 기본 주소입니다. 지정 된 모듈이 CLR 모듈이 아닌 경우 COR_E_NOT_CLR 반환 됩니다.  
   
  `pDataTarget`  
- 진행 관리 되는 디버거가 프로세스 상태를 검사할 수 있도록 하는 데이터 대상 추상화입니다. 디버거는 [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md) 인터페이스를 구현 해야 합니다. 디버깅 중인 CLR이 컴퓨터에 로컬로 설치 되지 않은 시나리오를 지원 하려면 [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) 인터페이스를 구현 해야 합니다.  
+ 진행 관리 되는 디버거가 프로세스 상태를 검사할 수 있도록 하는 데이터 대상 추상화입니다. 디버거는 [ICorDebugDataTarget](icordebugdatatarget-interface.md) 인터페이스를 구현 해야 합니다. 디버깅 중인 CLR이 컴퓨터에 로컬로 설치 되지 않은 시나리오를 지원 하려면 [ICLRDebuggingLibraryProvider](iclrdebugginglibraryprovider-interface.md) 인터페이스를 구현 해야 합니다.  
   
  `pLibraryProvider`  
  진행 버전별 디버깅 라이브러리를 요청 시 배치 하 고 로드할 수 있도록 하는 라이브러리 공급자 콜백 인터페이스입니다. 이 매개 변수는 `ppProcess` 또는 `pFlags` `null`되지 않은 경우에만 필요 합니다.  
@@ -59,21 +59,21 @@ HRESULT OpenVirtualProcess(
  제한이 `riidProcess`으로 식별 되는 COM 인터페이스에 대 한 포인터입니다.  
   
  `pVersion`  
- [in, out] CLR의 버전입니다. 입력 시이 값을 `null`수 있습니다. [CLR_DEBUGGING_VERSION](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md) 구조체를 가리킬 수도 있습니다 .이 경우 구조체의 `wStructVersion` 필드는 0으로 초기화 되어야 합니다.  
+ [in, out] CLR의 버전입니다. 입력 시이 값을 `null`수 있습니다. 또한 [CLR_DEBUGGING_VERSION](clr-debugging-version-structure.md) 구조를 가리킬 수 있습니다 .이 경우 구조체의 `wStructVersion` 필드는 0으로 초기화 되어야 합니다.  
   
  출력에서 반환 된 `CLR_DEBUGGING_VERSION` 구조는 CLR의 버전 정보로 채워집니다.  
   
  `pdwFlags`  
- 제한이 지정 된 런타임에 대 한 정보 플래그입니다. 플래그에 대 한 설명은 [CLR_DEBUGGING_PROCESS_FLAGS](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-process-flags-enumeration.md) 항목을 참조 하세요.  
+ 제한이 지정 된 런타임에 대 한 정보 플래그입니다. 플래그에 대 한 설명은 [CLR_DEBUGGING_PROCESS_FLAGS](clr-debugging-process-flags-enumeration.md) 항목을 참조 하세요.  
   
 ## <a name="return-value"></a>반환 값  
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|메서드가 완료되었습니다.|  
-|E_POINTER|`pDataTarget`가 `null`입니다.|  
-|CORDBG_E_LIBRARY_PROVIDER_ERROR|[ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) 콜백에서 오류를 반환 하거나 올바른 핸들을 제공 하지 않습니다.|  
+|S_OK|메서드가 성공적으로 완료되었습니다.|  
+|E_POINTER|`pDataTarget`이(가) `null`인 경우.|  
+|CORDBG_E_LIBRARY_PROVIDER_ERROR|[ICLRDebuggingLibraryProvider](iclrdebugginglibraryprovider-interface.md) 콜백에서 오류를 반환 하거나 올바른 핸들을 제공 하지 않습니다.|  
 |CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget`는이 버전의 런타임에 필요한 데이터 대상 인터페이스를 구현 하지 않습니다.|  
 |CORDBG_E_NOT_CLR|표시 된 모듈이 CLR 모듈이 아닙니다. 이 HRESULT는 메모리가 손상 되었거나, 모듈을 사용할 수 없거나, CLR 버전이 shim 버전 보다 이후 CLR 모듈을 검색할 수 없는 경우에도 반환 됩니다.|  
 |CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|이 런타임 버전은이 디버깅 모델을 지원 하지 않습니다. 현재 디버깅 모델은 .NET Framework 4 이전 CLR 버전에서 지원 되지 않습니다. 이 오류가 발생 한 후에도 `pwszVersion` 출력 매개 변수가 올바른 값으로 설정 됩니다.|  
@@ -96,5 +96,5 @@ HRESULT OpenVirtualProcess(
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [디버깅 인터페이스](debugging-interfaces.md)
+- [디버깅](index.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 08dbd558-bd39-4263-94c2-71e70687aaf0
 topic_type:
 - apiref
-ms.openlocfilehash: c1e2b557a5e5794c50986b1af8ec39faba845cc9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9d1d6d2f506086dd3204053b0b635da2e7cdc87e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125510"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783958"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacepointers-method"></a>ICorDebugComObjectValue::GetCachedInterfacePointers 메서드
 현재 RCW (런타임 호출 가능 래퍼)에 캐시 된 원시 인터페이스 포인터를 가져옵니다.  
@@ -59,5 +59,5 @@ HRESULT GetCachedInterfacePointers(
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugComObjectValue 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugcomobjectvalue-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugComObjectValue 인터페이스](icordebugcomobjectvalue-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

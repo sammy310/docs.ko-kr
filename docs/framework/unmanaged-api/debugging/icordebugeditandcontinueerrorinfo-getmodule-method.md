@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 292f1255-5dfd-427f-844e-781d4b938f9a
 topic_type:
 - apiref
-ms.openlocfilehash: d6a04bdb68149fcc659fa45acc5856c3cebc9a56
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d55fd18b55f5387353e014b169633fc44dae3ad7
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137004"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783384"
 ---
 # <a name="icordebugeditandcontinueerrorinfogetmodule-method"></a>ICorDebugEditAndContinueErrorInfo::GetModule 메서드
-`GetModule`는 사용되지 않습니다. 이 메서드를 호출 하지 마십시오.  
+`GetModule`는 사용되지 않습니다. 이 메서드를 호출 하지 마세요.  
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅 인터페이스](debugging-interfaces.md)
