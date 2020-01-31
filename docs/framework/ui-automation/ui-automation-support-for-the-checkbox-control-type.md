@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, CheckBox
 - UI Automation, CheckBox control type
 ms.assetid: 9c2a0e70-3a39-4ba9-96ea-a7fe531fae9f
-ms.openlocfilehash: f4dcf04ff978258dcab3b0d6627bcabf3109a5ef
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 0161e6393cb1b4d08a56e6808238b3ae102513ad
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741282"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789568"
 ---
 # <a name="ui-automation-support-for-the-checkbox-control-type"></a>CheckBox 컨트롤 형식에 대한 UI 자동화 지원
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741282"
   
  확인란은 상태를 순환하기 위해 사용자가 상호 작용하는 상태를 나타내는 데 사용되는 개체입니다. 확인란은 사용자에게 2차 옵션 (예/아니오), (설정/해제) 또는 3차 옵션 (설정, 해제, 비활성)을 제공합니다.  
   
- 다음 섹션에서는 CheckBox 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 또는 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]에 관계 없이 모든 확인란 컨트롤에 적용 됩니다.  
+ 다음 섹션에서는 CheckBox 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 또는 Windows Forms에 관계 없이 모든 확인란 컨트롤에 적용 됩니다.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>필요한 UI 자동화 트리 구조  

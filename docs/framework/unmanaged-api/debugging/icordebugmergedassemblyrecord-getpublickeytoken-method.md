@@ -1,15 +1,15 @@
 ---
-title: 'ICorDebugMergedAssemblyRecord:: GetPublicKeyToken 메서드'
+title: ICorDebugMergedAssemblyRecord::GetPublicKeyToken 메서드
 ms.date: 03/30/2017
 ms.assetid: 72020b72-9611-4bc3-b1e7-5a16b023bfa3
-ms.openlocfilehash: 95ed1303b33b328d1f14ecea6cc318e14991cd54
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 543083703cd0cbbce9dc0660383713202fa2f0b8
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129783"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793098"
 ---
-# <a name="icordebugmergedassemblyrecordgetpublickeytoken-method"></a>ICorDebugMergedAssemblyRecord:: GetPublicKeyToken 메서드
+# <a name="icordebugmergedassemblyrecordgetpublickeytoken-method"></a>ICorDebugMergedAssemblyRecord::GetPublicKeyToken 메서드
 어셈블리의 공개 키 토큰을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -49,5 +49,5 @@ HRESULT GetPublicKeyToken(
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugMergedAssemblyRecord 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugMergedAssemblyRecord 인터페이스](icordebugmergedassemblyrecord-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

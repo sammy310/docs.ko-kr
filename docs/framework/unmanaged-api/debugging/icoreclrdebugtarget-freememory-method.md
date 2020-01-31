@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 98f2a0db-a6ec-4f9b-861d-f82485237d08
 topic_type:
 - apiref
-ms.openlocfilehash: 6821aacb80726cf202c99428a401b53b5c6ee566
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cfa313d286d0decad82f51bcedc582470549c8e1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121805"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790781"
 ---
 # <a name="icoreclrdebugtargetfreememory-method"></a>ICoreClrDebugTarget::FreeMemory 메서드
-[ICoreClrDebugTarget:: enumprocesses](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md) 및 [ICoreClrDebugTarget:: enumprocesses](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md) 메서드에 의해 할당 된 메모리를 해제 합니다.  
+[ICoreClrDebugTarget:: enumprocesses](icoreclrdebugtarget-enumprocesses-method.md) 및 [ICoreClrDebugTarget:: enumprocesses](icoreclrdebugtarget-enumruntimes-method.md) 메서드에 의해 할당 된 메모리를 해제 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,17 +36,17 @@ void FreeMemory (
   
 ## <a name="parameters"></a>매개 변수  
  `pMemory`  
- 진행 [ICoreClrDebugTarget:: enumprocesses](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md) 또는 [ICoreClrDebugTarget:: enumprocesses](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md) 메서드에 의해 반환 된 배열에 대 한 포인터입니다.  
+ 진행 [ICoreClrDebugTarget:: enumprocesses](icoreclrdebugtarget-enumprocesses-method.md) 또는 [ICoreClrDebugTarget:: enumprocesses](icoreclrdebugtarget-enumruntimes-method.md) 메서드에 의해 반환 된 배열에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CoreClrRemoteDebuggingInterfaces  
   
- **라이브러리:** mscordbi_macx86  
+ **라이브러리:** mscordbi_macx86 .dll  
   
  **.NET Framework 버전:** 3.5 SP1  
   
 ## <a name="see-also"></a>참조
 
-- [ICoreClrDebugTarget 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)
+- [ICoreClrDebugTarget 인터페이스](icoreclrdebugtarget-interface.md)

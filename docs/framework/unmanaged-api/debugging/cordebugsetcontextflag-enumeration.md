@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b30280bb-fe75-44ed-8589-bcff081fae44
 topic_type:
 - apiref
-ms.openlocfilehash: 251c96042e8e56112015fb869176c708322267f6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a443332e4f2b0351e99754fae610af39268bb105
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73097262"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789264"
 ---
 # <a name="cordebugsetcontextflag-enumeration"></a>CorDebugSetContextFlag 열거형
 컨텍스트가 스택의 활성(리프) 프레임에서 가져온 것인지 아니면 다른 프레임에서 해제하여 계산되었는지를 나타냅니다.  
@@ -34,15 +34,15 @@ typedef enum CorDebugSetContextFlag
 }  CorDebugSetContextFlag;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-|멤버|설명|  
+|Member|설명|  
 |------------|-----------------|  
 |SET_CONTEXT_FLAG_ACTIVE_FRAME|컨텍스트는 스레드의 활성 컨텍스트입니다.|  
 |SET_CONTEXT_FLAG_UNWIND_FRAME|다른 프레임에서 해제 하 여 컨텍스트를 계산 했습니다.|  
   
 ## <a name="remarks"></a>주의  
- `CorDebugSetContextFlag` [ICorDebugStackWalk:: SetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md) 메서드에서 사용 하는 값을 제공 합니다.  
+ `CorDebugSetContextFlag` [ICorDebugStackWalk:: SetContext](icordebugstackwalk-setcontext-method.md) 메서드에서 사용 하는 값을 제공 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -55,5 +55,5 @@ typedef enum CorDebugSetContextFlag
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 열거형](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [디버깅 열거형](debugging-enumerations.md)
+- [디버깅](index.md)

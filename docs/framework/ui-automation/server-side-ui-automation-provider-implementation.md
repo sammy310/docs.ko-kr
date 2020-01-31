@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: 25f22d5e8caacc69643f6d79e109ebaa94159d80
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 8a52d84f7152b9cb431ad0aa97c88b143463be2d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75632317"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789617"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>서버 쪽 UI 자동화 공급자 구현
 
@@ -20,7 +20,7 @@ ms.locfileid: "75632317"
 
 이 섹션에서는 사용자 지정 컨트롤에 대한 서버 쪽 UI 자동화 공급자를 구현하는 방법을 설명합니다.
 
-WPF (Windows Presentation Foundation) 요소 및 비 WPF 요소 (예: [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]에 대해 디자인 된 요소)에 대 한 구현은 근본적으로 다릅니다. WPF 요소는 <xref:System.Windows.Automation.Peers.AutomationPeer>에서 파생 된 클래스를 통해 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대 한 지원을 제공 합니다. 비 WPF 요소는 공급자 인터페이스의 구현을 통해 지원을 제공 합니다.
+WPF (Windows Presentation Foundation) 요소 및 비 WPF 요소 (예: Windows Forms에 대해 디자인 된 요소)에 대 한 구현은 근본적으로 다릅니다. WPF 요소는 <xref:System.Windows.Automation.Peers.AutomationPeer>에서 파생 된 클래스를 통해 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대 한 지원을 제공 합니다. 비 WPF 요소는 공급자 인터페이스의 구현을 통해 지원을 제공 합니다.
 
 <a name="Security_Considerations"></a>
 
@@ -40,7 +40,7 @@ WPF (Windows Presentation Foundation) 요소 및 비 WPF 요소 (예: [!INCLUDE[
 
 ## <a name="provider-implementation-by-non-wpf-elements"></a>비 WPF 요소를 사용한 공급자 구현
 
-WPF 프레임 워크의 일부가 아니지만 관리 코드로 작성 된 사용자 지정 컨트롤 (대부분의 경우 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 컨트롤)은 인터페이스를 구현 하 여 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대 한 지원을 제공 합니다. 모든 요소는 다음 섹션의 첫 번째 표에 나온 인터페이스 중 하나 이상을 구현해야 합니다. 또한 요소가 하나 이상의 컨트롤 패턴을 지원하는 경우 각 컨트롤 패턴에 대해 적절한 인터페이스를 구현해야 합니다.
+WPF 프레임 워크의 일부가 아니지만 관리 코드로 작성 된 사용자 지정 컨트롤 (대부분의 경우 Windows Forms 컨트롤)은 인터페이스를 구현 하 여 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대 한 지원을 제공 합니다. 모든 요소는 다음 섹션의 첫 번째 표에 나온 인터페이스 중 하나 이상을 구현해야 합니다. 또한 요소가 하나 이상의 컨트롤 패턴을 지원하는 경우 각 컨트롤 패턴에 대해 적절한 인터페이스를 구현해야 합니다.
 
 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 공급자 프로젝트는 다음 어셈블리를 참조해야 합니다.
 
@@ -117,7 +117,7 @@ HWND 기반 컨트롤에 대한 공급자는 일반적으로 다음 속성(필�
 > [!NOTE]
 > 간단한 요소나 창에서 호스트되는 조각 루트의 <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> 는 창에서 가져옵니다. 그러나 루트 아래의 조각 요소(예: 목록 상자에 있는 목록 항목)는 고유 식별자를 제공해야 합니다. 자세한 내용은 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>를 참조하세요.
 >
-> <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> 컨트롤에서 호스트되는 공급자에 대해 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 를 반환해야 합니다. 이 경우 기본 창 공급자가 올바른 값을 검색하지 못할 수 있습니다.
+> Windows Forms 컨트롤에서 호스트 되는 공급자에 대해 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>를 반환 해야 합니다. 이 경우 기본 창 공급자가 올바른 값을 검색하지 못할 수 있습니다.
 >
 > <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> 는 일반적으로 호스트 공급자가 제공합니다. 예를 들어 사용자 지정 컨트롤이 <xref:System.Windows.Forms.Control>에서 파생된 경우 이름은 컨트롤의 `Text` 속성에서 파생됩니다.
 

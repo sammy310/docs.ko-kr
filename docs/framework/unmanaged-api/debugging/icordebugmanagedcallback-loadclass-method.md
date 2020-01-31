@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e58dac7b-85c3-41ca-b9aa-3a7fc9ae6680
 topic_type:
 - apiref
-ms.openlocfilehash: d23b695550c8444264934f7aca4fa185064e89c5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cc5a2e1de79d6ba04ff3bf2bf86e0cb7ce9a5c0b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130735"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788386"
 ---
 # <a name="icordebugmanagedcallbackloadclass-method"></a>ICorDebugManagedCallback::LoadClass 메서드
 클래스가 로드 되었음을 디버거에 알립니다.  
@@ -57,5 +57,5 @@ HRESULT LoadClass (
   
 ## <a name="see-also"></a>참조
 
-- [UnloadClass 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md)
-- [ICorDebugManagedCallback 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [UnloadClass 메서드](icordebugmanagedcallback-unloadclass-method.md)
+- [ICorDebugManagedCallback 인터페이스](icordebugmanagedcallback-interface.md)

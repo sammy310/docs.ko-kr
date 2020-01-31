@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 84e1e605-37c1-49a5-8e12-35db85654622
 topic_type:
 - apiref
-ms.openlocfilehash: d38a59b23d47cbaf57dc21e121d56530a514d354
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d0dc301c67d09ebb15bf47cef15e642fb7c78fb9
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128857"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792613"
 ---
 # <a name="icordebugprocessgethelperthreadid-method"></a>ICorDebugProcess::GetHelperThreadID 메서드
 디버거의 내부 도우미 스레드의 OS (운영 체제) 스레드 ID를 가져옵니다.  
@@ -42,7 +42,7 @@ HRESULT GetHelperThreadID (
   
  도우미 스레드의 스레드 ID는 시간이 지남에 따라 변경 될 수 있으므로 캐시할 수 없습니다. 모든 중지 이벤트에서 스레드 ID를 다시 쿼리해야 합니다.  
   
- 디버거의 도우미 스레드의 스레드 ID는 모든 관리 되지 않는 [ICorDebugManagedCallback:: CreateThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) 이벤트에서 올바릅니다. 따라서 디버거가 도우미 스레드의 스레드 id를 확인 하 고 사용자 로부터 숨길 수 있습니다. 관리 되지 않는 `ICorDebugManagedCallback::CreateThread` 이벤트 중에 도우미 스레드로 식별 되는 스레드는 관리 되는 사용자 코드를 실행 하지 않습니다.  
+ 디버거의 도우미 스레드의 스레드 ID는 모든 관리 되지 않는 [ICorDebugManagedCallback:: CreateThread](icordebugmanagedcallback-createthread-method.md) 이벤트에서 올바릅니다. 따라서 디버거가 도우미 스레드의 스레드 id를 확인 하 고 사용자 로부터 숨길 수 있습니다. 관리 되지 않는 `ICorDebugManagedCallback::CreateThread` 이벤트 중에 도우미 스레드로 식별 되는 스레드는 관리 되는 사용자 코드를 실행 하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  

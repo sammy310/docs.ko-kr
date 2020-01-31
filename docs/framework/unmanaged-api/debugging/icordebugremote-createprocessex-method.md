@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41af93c7-e448-4251-8d4d-413d38c635f2
 topic_type:
 - apiref
-ms.openlocfilehash: 9e1a5ba65da09c90f33e5e8108c3bd91f3aee4a1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cfec84483d387630623f77c176c668171303dd0f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131289"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791983"
 ---
 # <a name="icordebugremotecreateprocessex-method"></a>ICorDebugRemote::CreateProcessEx 메서드
 디버거의 원격 컴퓨터에서 프로세스를 시작 합니다.  
@@ -47,7 +47,7 @@ HRESULT CreateProcessEx (
   
 ## <a name="parameters"></a>매개 변수  
  `pRemoteTarget`  
- 진행 [ICorDebugRemoteTarget 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)에 대 한 포인터입니다. 프로세스가 시작 되는 원격 컴퓨터를 확인 하는 데 사용 됩니다.  
+ 진행 [ICorDebugRemoteTarget 인터페이스](icordebugremotetarget-interface.md)에 대 한 포인터입니다. 프로세스가 시작 되는 원격 컴퓨터를 확인 하는 데 사용 됩니다.  
   
  `lpApplicationName`  
  진행 시작 된 프로세스에서 실행할 모듈을 지정 하는 null로 끝나는 문자열에 대 한 포인터입니다. 모듈은 호출 프로세스의 보안 컨텍스트에서 실행 됩니다.  
@@ -106,7 +106,7 @@ HRESULT CreateProcessEx (
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugRemote 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
-- [ICorDebug 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebugRemote 인터페이스](icordebugremote-interface.md)
+- [ICorDebug 인터페이스](icordebug-interface.md)
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

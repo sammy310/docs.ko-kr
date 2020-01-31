@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ed8364eb-f01b-46f6-b5e3-5dda9cae2dfe
 topic_type:
 - apiref
-ms.openlocfilehash: 3ca062231fd482c1f0d888935e882513461838ef
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e9bb69567a247472af42efb08b609d3474c87ed2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137590"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791787"
 ---
 # <a name="icordebugstepper-interface"></a>ICorDebugStepper 인터페이스
 디버거에서 수행하는 코드 실행 단계를 나타내며, 명령의 실행/완료를 구분하는 식별자로 사용되고, 단계를 취소하는 방법을 제공합니다.  
@@ -28,14 +28,14 @@ ms.locfileid: "73137590"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[Deactivate 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md)|이 `ICorDebugStepper`에서 받은 마지막 단계 명령을 취소 합니다.|  
-|[IsActive 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-isactive-method.md)|이 `ICorDebugStepper`가 현재 단계를 실행 하 고 있는지 여부를 나타내는 값을 가져옵니다.|  
-|[SetInterceptMask 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setinterceptmask-method.md)|단계별 코드의 형식을 지정 하는 CorDebugIntercept 값을 설정 합니다.|  
-|[SetRangeIL 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md)|[ICorDebugStepper:: StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) 에 대 한 호출이 네이티브 코드를 기준으로 인수 값을 전달 하는지 또는 단계별로 진행 중인 메서드의 MSIL (Microsoft 중간 언어) 코드를 기준으로 인수 값을 전달 하는지 여부를 나타내는 값을 설정 합니다.|  
-|[SetUnmappedStopMask 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md)|실행이 중단 되는 매핑되지 않은 코드의 형식을 지정 하는 CorDebugUnmappedStop 값을 설정 합니다.|  
-|[Step 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md)|이 `ICorDebugStepper`는 포함 하는 스레드를 한 단계씩 실행 하 고, 필요에 따라 스레드 내에서 호출 되는 함수를 한 단계씩 실행 하도록 합니다.|  
-|[StepOut 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-stepout-method.md)|이 `ICorDebugStepper`는 포함 하는 스레드를 한 단계씩 실행 하 고 현재 프레임에서 제어를 호출 프레임으로 반환할 때 완료 되도록 합니다.|  
-|[StepRange 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)|이 `ICorDebugStepper`는 포함 하는 스레드를 한 단계씩 실행 하 고 지정 된 범위를 벗어난 코드에 도달 하면를 반환 합니다.|  
+|[Deactivate 메서드](icordebugstepper-deactivate-method.md)|이 `ICorDebugStepper`에서 받은 마지막 단계 명령을 취소 합니다.|  
+|[IsActive 메서드](icordebugstepper-isactive-method.md)|이 `ICorDebugStepper`가 현재 단계를 실행 하 고 있는지 여부를 나타내는 값을 가져옵니다.|  
+|[SetInterceptMask 메서드](icordebugstepper-setinterceptmask-method.md)|단계별 코드의 형식을 지정 하는 CorDebugIntercept 값을 설정 합니다.|  
+|[SetRangeIL 메서드](icordebugstepper-setrangeil-method.md)|[ICorDebugStepper:: StepRange](icordebugstepper-steprange-method.md) 에 대 한 호출이 네이티브 코드를 기준으로 인수 값을 전달 하는지 또는 단계별로 진행 중인 메서드의 MSIL (Microsoft 중간 언어) 코드를 기준으로 인수 값을 전달 하는지 여부를 나타내는 값을 설정 합니다.|  
+|[SetUnmappedStopMask 메서드](icordebugstepper-setunmappedstopmask-method.md)|실행이 중단 되는 매핑되지 않은 코드의 형식을 지정 하는 CorDebugUnmappedStop 값을 설정 합니다.|  
+|[Step 메서드](icordebugstepper-step-method.md)|이 `ICorDebugStepper`는 포함 하는 스레드를 한 단계씩 실행 하 고, 필요에 따라 스레드 내에서 호출 되는 함수를 한 단계씩 실행 하도록 합니다.|  
+|[StepOut 메서드](icordebugstepper-stepout-method.md)|이 `ICorDebugStepper`는 포함 하는 스레드를 한 단계씩 실행 하 고 현재 프레임에서 제어를 호출 프레임으로 반환할 때 완료 되도록 합니다.|  
+|[StepRange 메서드](icordebugstepper-steprange-method.md)|이 `ICorDebugStepper`는 포함 하는 스레드를 한 단계씩 실행 하 고 지정 된 범위를 벗어난 코드에 도달 하면를 반환 합니다.|  
   
 ## <a name="remarks"></a>주의  
  `ICorDebugStepper` 인터페이스는 다음과 같은 용도로 사용 됩니다.  
@@ -64,4 +64,4 @@ ms.locfileid: "73137590"
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

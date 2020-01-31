@@ -1,5 +1,5 @@
 ---
-title: CorDebugEHClause 구조
+title: CorDebugEHClause 구조체
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -12,14 +12,14 @@ api_type:
 ms.assetid: 0e350a1b-6997-46d0-bfc5-962a5011ef43
 topic_type:
 - apiref
-ms.openlocfilehash: f35e979a5107064d2987a385a989075ef71283ff
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 197c33511a474eb8291e4361ebb3c21fb3720cae
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73098868"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789422"
 ---
-# <a name="cordebugehclause-structure"></a>CorDebugEHClause 구조
+# <a name="cordebugehclause-structure"></a>CorDebugEHClause 구조체
 [.NET Framework 4.5.2 이상 버전에서 지원됨]  
   
  지정된 IL(중간 언어) 코드 부분에 대한 EH(예외 처리) 절을 나타냅니다.  
@@ -38,9 +38,9 @@ typedef struct _CorDebugEHClause {
 } CorDebugEHClause;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-|멤버|설명|  
+|Member|설명|  
 |------------|-----------------|  
 |`Flags`|EH 절의 예외 정보를 설명하는 비트 필드입니다. 자세한 내용은 설명 섹션을 참조하세요.|  
 |`TryOffset`|메서드 본문 시작 지점부터 `try` 블록의 오프셋(바이트)입니다.|  
@@ -51,7 +51,7 @@ typedef struct _CorDebugEHClause {
 |`FilterOffset`|필터 기반 예외 처리기에 대한 메서드 본문 시작 지점부터의 오프셋(바이트)입니다.|  
   
 ## <a name="remarks"></a>주의  
- [GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md) 메서드는 `CoreDebugEHClause` 값의 배열을 반환 합니다.  
+ [GetEHClauses](icordebugilcode-getehclauses-method.md) 메서드는 `CoreDebugEHClause` 값의 배열을 반환 합니다.  
   
  EH 절 정보는 CLI 사양을 통해 정의됩니다. 자세한 내용은 [표준 ECMA-355: Common Language Infrastructure (CLI), 6 번째 버전](https://www.ecma-international.org/publications/standards/Ecma-335.htm)을 참조 하세요.  
   
@@ -75,5 +75,5 @@ typedef struct _CorDebugEHClause {
   
 ## <a name="see-also"></a>참조
 
-- [GetEHClauses 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)
-- [디버깅 구조체](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [GetEHClauses 메서드](icordebugilcode-getehclauses-method.md)
+- [디버깅 구조체](debugging-structures.md)

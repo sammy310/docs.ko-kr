@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 885bf5e8-00b7-4cd7-9d8d-e720d47918c4
 topic_type:
 - apiref
-ms.openlocfilehash: 1b19ce5e9f795fd9ff4dd15e10256a150063a314
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 522ac2fd448abaaba48d4d5c20551e8029b35fd4
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128038"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793239"
 ---
 # <a name="icordebugmdagetname-method"></a>ICorDebugMDA::GetName 메서드
-[ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)로 표시 된 MDA (관리 디버깅 도우미)의 이름을 포함 하는 문자열을 가져옵니다.  
+[ICorDebugMDA](icordebugmda-interface.md)로 표시 된 MDA (관리 디버깅 도우미)의 이름을 포함 하는 문자열을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -60,5 +60,5 @@ HRESULT GetName (
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugMDA 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
+- [ICorDebugMDA 인터페이스](icordebugmda-interface.md)
 - [관리 디버깅 도우미를 사용하여 오류 진단](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

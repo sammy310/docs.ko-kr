@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4a2d6a24-749a-47ad-9f01-4517203d3f35
 topic_type:
 - apiref
-ms.openlocfilehash: 1425d48bb18d4161a1c96239b76b8315ae258705
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6e6e157c7176a0f4f1ad3c585977e2cfb31c33d8
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73112776"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793686"
 ---
 # <a name="iclrdatatargetsettlsvalue-method"></a>ICLRDataTarget::SetTLSValue 메서드
 대상 프로세스에서 지정 된 스레드의 TLS (스레드 로컬 저장소)에 값을 설정 합니다. 이 메서드는 CLR (공용 언어 런타임) 데이터 액세스 서비스에 의해 호출 됩니다.  
@@ -59,4 +59,4 @@ HRESULT SetTLSValue (
   
 ## <a name="see-also"></a>참조
 
-- [ICLRDataTarget 인터페이스](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [ICLRDataTarget 인터페이스](iclrdatatarget-interface.md)

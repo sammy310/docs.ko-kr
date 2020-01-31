@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: be7ae711-1217-4a44-be40-166e29641b77
 topic_type:
 - apiref
-ms.openlocfilehash: 9abcb765357a0f305ae5acae77a4a13b07a003a3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: da7c0fb472df89d94fa702a13eff968a4c7e68e3
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134680"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76785036"
 ---
 # <a name="icordebugappdomain-interface"></a>ICorDebugAppDomain 인터페이스
 
@@ -29,16 +29,16 @@ ms.locfileid: "73134680"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[Attach 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-attach-method.md)|응용 프로그램 도메인에 디버거를 연결 합니다.|  
-|[EnumerateAssemblies 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-enumerateassemblies-method.md)|응용 프로그램 도메인의 어셈블리에 대 한 열거자를 가져옵니다.|  
-|[EnumerateBreakpoints 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-enumeratebreakpoints-method.md)|응용 프로그램 도메인의 모든 활성 중단점에 대 한 열거자를 가져옵니다.|  
-|[EnumerateSteppers 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-enumeratesteppers-method.md)|응용 프로그램 도메인의 모든 활성 steppers에 대 한 열거자를 가져옵니다.|  
-|[GetId 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-getid-method.md)|응용 프로그램 도메인의 고유 ID를 가져옵니다.|  
-|[GetModuleFromMetaDataInterface 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-getmodulefrommetadatainterface-method.md)|지정 된 메타 데이터 인터페이스를 사용 하 여 ICorDebugModule 개체를 가져옵니다.|  
-|[GetName 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-getname-method.md)|응용 프로그램 도메인의 이름을 가져옵니다.|  
-|[GetObject 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-getobject-method.md)|CLR (공용 언어 런타임) 응용 프로그램 도메인에 대 한 인터페이스 포인터를 가져옵니다.|  
-|[GetProcess 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-getprocess-method.md)|응용 프로그램 도메인을 포함 하는 프로세스를 가져옵니다.|  
-|[IsAttached 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-isattached-method.md)|디버거가 응용 프로그램 도메인에 연결 되어 있는지 여부를 확인 합니다.|  
+|[Attach 메서드](icordebugappdomain-attach-method.md)|응용 프로그램 도메인에 디버거를 연결 합니다.|  
+|[EnumerateAssemblies 메서드](icordebugappdomain-enumerateassemblies-method.md)|응용 프로그램 도메인의 어셈블리에 대 한 열거자를 가져옵니다.|  
+|[EnumerateBreakpoints 메서드](icordebugappdomain-enumeratebreakpoints-method.md)|응용 프로그램 도메인의 모든 활성 중단점에 대 한 열거자를 가져옵니다.|  
+|[EnumerateSteppers 메서드](icordebugappdomain-enumeratesteppers-method.md)|응용 프로그램 도메인의 모든 활성 steppers에 대 한 열거자를 가져옵니다.|  
+|[GetId 메서드](icordebugappdomain-getid-method.md)|응용 프로그램 도메인의 고유 ID를 가져옵니다.|  
+|[GetModuleFromMetaDataInterface 메서드](icordebugappdomain-getmodulefrommetadatainterface-method.md)|지정 된 메타 데이터 인터페이스를 사용 하 여 ICorDebugModule 개체를 가져옵니다.|  
+|[GetName 메서드](icordebugappdomain-getname-method.md)|응용 프로그램 도메인의 이름을 가져옵니다.|  
+|[GetObject 메서드](icordebugappdomain-getobject-method.md)|CLR (공용 언어 런타임) 응용 프로그램 도메인에 대 한 인터페이스 포인터를 가져옵니다.|  
+|[GetProcess 메서드](icordebugappdomain-getprocess-method.md)|응용 프로그램 도메인을 포함 하는 프로세스를 가져옵니다.|  
+|[IsAttached 메서드](icordebugappdomain-isattached-method.md)|디버거가 응용 프로그램 도메인에 연결 되어 있는지 여부를 확인 합니다.|  
   
 ## <a name="remarks"></a>주의  
   
@@ -56,4 +56,4 @@ ms.locfileid: "73134680"
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

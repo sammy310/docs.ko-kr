@@ -2,12 +2,12 @@
 title: ICorDebugProcess6::MarkDebuggerAttached 메서드
 ms.date: 03/30/2017
 ms.assetid: bf94f090-5265-4112-8e57-5b4e20e070d0
-ms.openlocfilehash: 48bab20a71144b28f24951556eb36210d7b6aebf
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b2ecd6da11bffb156826fa0c31b5f32abb54ff4a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123427"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792216"
 ---
 # <a name="icordebugprocess6markdebuggerattached-method"></a>ICorDebugProcess6::MarkDebuggerAttached 메서드
 .NET Framework 클래스 라이브러리의 <xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType> 메서드가 `true`를 반환하도록 디버기의 내부 상태를 변경합니다.  
@@ -49,5 +49,5 @@ HRESULT MarkDebuggerAttached(
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugProcess6 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugProcess6 인터페이스](icordebugprocess6-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

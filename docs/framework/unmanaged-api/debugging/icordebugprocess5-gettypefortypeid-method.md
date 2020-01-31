@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e0eed5a8-fa6d-4818-bd00-7babcea30325
 topic_type:
 - apiref
-ms.openlocfilehash: 39f5c1813b08f4d72c610820b1434e29eb4aec8e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bb25c9235e4fcded5c230d2d417b9d41bbdd9b19
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121270"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792331"
 ---
 # <a name="icordebugprocess5gettypefortypeid-method"></a>ICorDebugProcess5::GetTypeForTypeID 메서드
 형식 식별자를 ICorDebugType 값으로 변환 합니다.  
@@ -55,5 +55,5 @@ HRESULT GetTypeForTypeID(
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugProcess5 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugProcess5 인터페이스](icordebugprocess5-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

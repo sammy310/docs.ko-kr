@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 15212cb5-93d4-4025-bec9-d4b9919eb1fe
 topic_type:
 - apiref
-ms.openlocfilehash: b3094eb6e3006be49cf17c1ca2a220b8ec58b673
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 739c648173d45a9c147ea2a4e469a3a4b518e893
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139068"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794344"
 ---
 # <a name="icordebugilframe3-interface"></a>ICorDebugILFrame3 인터페이스
 함수의 반환 값을 캡슐화하는 메서드를 제공합니다. `ICorDebugILFrame3`은 ICorDebugILFrame 및 ICorDebugILFrame2 인터페이스의 논리적 확장입니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "73139068"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[GetReturnValueForILOffset 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)|함수의 반환 값을 캡슐화 하는 ICorDebugValue 개체를 가져옵니다.|  
+|[GetReturnValueForILOffset 메서드](icordebugilframe3-getreturnvalueforiloffset-method.md)|함수의 반환 값을 캡슐화 하는 ICorDebugValue 개체를 가져옵니다.|  
   
 ## <a name="remarks"></a>주의  
   
@@ -42,5 +42,5 @@ ms.locfileid: "73139068"
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugCode3 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugCode3 인터페이스](icordebugcode3-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

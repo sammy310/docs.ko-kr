@@ -1,15 +1,15 @@
 ---
-title: 'ICorDebugVariableSymbol:: GetSize 메서드'
+title: ICorDebugVariableSymbol::GetSize 메서드
 ms.date: 03/30/2017
 ms.assetid: add0cd9d-9a29-49b1-ae07-d9d3786b4ccd
-ms.openlocfilehash: 61dad9522f9171166ca56a97e68b9a149d35e49a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6d60dbdefd09770fd5a18653c5118469323581e1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120998"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790905"
 ---
-# <a name="icordebugvariablesymbolgetsize-method"></a>ICorDebugVariableSymbol:: GetSize 메서드
+# <a name="icordebugvariablesymbolgetsize-method"></a>ICorDebugVariableSymbol::GetSize 메서드
 변수의 크기(바이트)를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -40,5 +40,5 @@ HRESULT GetSize(
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugVariableSymbol 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugVariableSymbol 인터페이스](icordebugvariablesymbol-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

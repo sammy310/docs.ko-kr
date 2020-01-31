@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7a191c2a-95ea-4d47-83b0-44de2b632d63
 topic_type:
 - apiref
-ms.openlocfilehash: 28ec18864158641a337ebdea189080ba4247a7c4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d154cf10e60935d12653c70875323079f92ae288
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120516"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791738"
 ---
 # <a name="icordebugstepper2-interface"></a>ICorDebugStepper2 인터페이스
 내 코드만 (JMC) 디버깅을 지원 합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "73120516"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[SetJMC 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper2-setjmc-method.md)|이 ICorDebugStepper 응용 프로그램 개발자가 작성 한 코드를 통해서만 단계별로 진행 하는지 여부를 지정 하는 값을 설정 합니다.|  
+|[SetJMC 메서드](icordebugstepper2-setjmc-method.md)|이 ICorDebugStepper 응용 프로그램 개발자가 작성 한 코드를 통해서만 단계별로 진행 하는지 여부를 지정 하는 값을 설정 합니다.|  
   
 ## <a name="remarks"></a>주의  
   
@@ -46,4 +46,4 @@ ms.locfileid: "73120516"
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

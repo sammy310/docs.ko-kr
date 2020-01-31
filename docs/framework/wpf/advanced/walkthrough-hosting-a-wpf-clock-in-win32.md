@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: 79f79e42652ca51c409fabb12a572485ad734b35
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 1fdc0c9ccf1464d7519a4c5935520de1206ca9bb
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744891"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794154"
 ---
 # <a name="walkthrough-host-a-wpf-clock-in-win32"></a>연습: Win32에서 WPF 시계 호스팅
 
@@ -86,7 +86,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
                      int       nCmdShow)
 ```
 
-이 특성은 COM (구성 요소 개체 모델)을 초기화할 때 CLR (공용 언어 런타임)에 게 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]에 필요한 STA (단일 스레드 아파트 모델)를 사용 하도록 지시 합니다.
+이 특성은 COM (구성 요소 개체 모델)을 초기화할 때 CLR (공용 언어 런타임)에 게 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 Windows Forms에 필요한 STA (단일 스레드 아파트 모델)를 사용 하도록 지시 합니다.
 
 ## <a name="create-a-windows-presentation-framework-page"></a>Windows Presentation Framework 페이지 만들기
 

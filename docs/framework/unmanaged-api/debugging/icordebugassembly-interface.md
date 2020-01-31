@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d657a28-6984-4c5e-8a54-89d20080baff
 topic_type:
 - apiref
-ms.openlocfilehash: dea3231e3bbb361b56254756c6d99b115f73e792
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ecd4ad31b8dad55e9538642a4dc652341bc84b97
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133966"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784668"
 ---
 # <a name="icordebugassembly-interface"></a>ICorDebugAssembly 인터페이스
 
@@ -29,11 +29,11 @@ ms.locfileid: "73133966"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[EnumerateModules 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-enumeratemodules-method.md)|어셈블리에 포함 된 모듈의 열거자를 가져옵니다.|  
-|[GetAppDomain 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-getappdomain-method.md)|이 `ICorDebugAssembly` 인스턴스를 포함 하는 응용 프로그램 도메인에 대 한 인터페이스 포인터를 가져옵니다.|  
-|[GetCodeBase 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-getcodebase-method.md)|현재 버전의 .NET Framework에서 구현 되지 않았습니다.|  
-|[GetName 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-getname-method.md)|어셈블리의 이름을 가져옵니다.|  
-|[GetProcess 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-getprocess-method.md)|어셈블리가 실행 되는 ICorDebugProcess 인스턴스를 가져옵니다.|  
+|[EnumerateModules 메서드](icordebugassembly-enumeratemodules-method.md)|어셈블리에 포함 된 모듈의 열거자를 가져옵니다.|  
+|[GetAppDomain 메서드](icordebugassembly-getappdomain-method.md)|이 `ICorDebugAssembly` 인스턴스를 포함 하는 응용 프로그램 도메인에 대 한 인터페이스 포인터를 가져옵니다.|  
+|[GetCodeBase 메서드](icordebugassembly-getcodebase-method.md)|현재 버전의 .NET Framework에서 구현 되지 않았습니다.|  
+|[GetName 메서드](icordebugassembly-getname-method.md)|어셈블리의 이름을 가져옵니다.|  
+|[GetProcess 메서드](icordebugassembly-getprocess-method.md)|어셈블리가 실행 되는 ICorDebugProcess 인스턴스를 가져옵니다.|  
   
 ## <a name="remarks"></a>주의  
   
@@ -51,4 +51,4 @@ ms.locfileid: "73133966"
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

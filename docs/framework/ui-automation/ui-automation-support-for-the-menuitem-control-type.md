@@ -6,23 +6,23 @@ helpviewer_keywords:
 - Menu Item control type
 - UI Automation, Menu Item control type
 ms.assetid: 54bce311-3d23-40b9-ba90-1bdbdaf8fbba
-ms.openlocfilehash: 6e8755292d97e88ff97e039fa2fbafc60ebc4eae
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: ab050b3d515be325694d6e92ef1891d44cb309c7
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741567"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789432"
 ---
 # <a name="ui-automation-support-for-the-menuitem-control-type"></a>MenuItem 컨트롤 형식에 대한 UI 자동화 지원
 
 > [!NOTE]
-> 이 설명서는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 네임스페이스에 정의된 관리되는 <xref:System.Windows.Automation> 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.
 
 이 항목에서는 MenuItem 컨트롤 형식에 대한 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 지원 정보를 제공합니다. 컨트롤의 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 트리 구조에 대해 설명하고 MenuItem 컨트롤 형식에 필요한 속성 및 컨트롤 패턴을 제공합니다.
 
 메뉴 컨트롤을 사용하면 명령 및 이벤트 처리기와 연관된 요소를 계층적으로 구성할 수 있습니다. 일반적인 Microsoft Windows 응용 프로그램에서 메뉴 모음에는 몇 가지 메뉴 항목 (예: **파일**, **편집**, **창**)이 있고 각 메뉴 항목에 메뉴가 표시 됩니다. 메뉴 하나에 메뉴 항목 컬렉션(예: **새로 만들기**, **열기**, **닫기**)이 들어 있으며, 클릭하면 확장되어 추가 메뉴 항목이 표시되거나 특정 작업을 수행할 수 있습니다. 메뉴 항목은 메뉴, 메뉴 모음 또는 도구 모음에서 호스트될 수 있습니다.
 
-다음 섹션에서는 MenuItem 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 또는 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]있는지 여부에 관계 없이 모든 목록 컨트롤에 적용 됩니다.
+다음 섹션에서는 MenuItem 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 또는 Windows Forms 있는지 여부에 관계 없이 모든 목록 컨트롤에 적용 됩니다.
 
 <a name="Required_UI_Automation_Tree_Structure"></a>
 
@@ -76,12 +76,12 @@ ms.locfileid: "75741567"
 
 다음 표에서는 메뉴 항목 컨트롤과 연결된 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 이벤트를 보여줍니다.
 
-|이벤트|지원|설명|
+|Event|지원|설명|
 |-----------|-------------|-----------------|
 |<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|종속|컨트롤에서 Invoke 컨트롤 패턴을 지원하는 경우 발생되어야 합니다.|
 |<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> 속성 변경 이벤트.|종속|컨트롤에서 Toggle 컨트롤 패턴을 지원하는 경우 발생되어야 합니다.|
 |<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> 속성 변경 이벤트.|종속|컨트롤에서 Expand Collapse 컨트롤 패턴을 지원하는 경우 발생되어야 합니다.|
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|종속|None.|
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|종속|없음.|
 
 <a name="Required_UI_Automation_Events"></a>
 
@@ -91,17 +91,17 @@ ms.locfileid: "75741567"
 
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|지원/값|참고|
 |---------------------------------------------------------------------------------|--------------------|-----------|
-|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|종속|없음|
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|종속|없음|
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|종속|없음|
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|종속|없음|
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 속성 변경 이벤트.|필수|없음|
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 속성 변경 이벤트.|필수|없음|
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 속성 변경 이벤트.|필수|없음|
-|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> 속성 변경 이벤트.|종속|없음|
-|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> 속성 변경 이벤트.|종속|없음|
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|필수|없음|
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|필수|없음|
+|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|종속|None|
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|종속|None|
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|종속|None|
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|종속|None|
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 속성 변경 이벤트.|필수|None|
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 속성 변경 이벤트.|필수|None|
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 속성 변경 이벤트.|필수|None|
+|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> 속성 변경 이벤트.|종속|None|
+|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> 속성 변경 이벤트.|종속|None|
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|필수|None|
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|필수|None|
 
 <a name="Legacy_Issues"></a>
 
@@ -109,7 +109,7 @@ ms.locfileid: "75741567"
 
 설정/해제 패턴은 Win32 메뉴 항목이 선택 된 경우에만 지원 되 고 프로그래밍 방식으로 설정/해제 패턴을 지 원하는 데 필요한 결정을 받을 수 있습니다. Win32 메뉴 항목이 검사 가능 여부를 표시 하지 않기 때문에 메뉴 항목이 선택 되지 않으면 Invoke 패턴이 지원 됩니다. Toggle 패턴만 지원하는 메뉴 항목에 대해서도 Invoke 패턴이 항상 지원되도록 하는 예외가 적용됩니다. Invoke 패턴을 지원했던(메뉴 항목이 선택 취소되었을 때) 요소가 이 패턴이 선택된 후에는 더 이상 지원하지 않게 되므로 클라이언트에서 혼동되지 않습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Automation.ControlType.MenuItem>
 - [UI 자동화 컨트롤 패턴 개요](ui-automation-control-patterns-overview.md)

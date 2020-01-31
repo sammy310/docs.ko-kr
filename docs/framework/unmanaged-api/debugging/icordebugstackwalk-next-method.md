@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 189c36be-028c-4fba-a002-5edfb8fcd07f
 topic_type:
 - apiref
-ms.openlocfilehash: 8cebb66ecf298eaaca0e7af23a9b8c6a2932c23f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b76d17337408653d130ee0cb8594e759bdade37c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131821"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791862"
 ---
 # <a name="icordebugstackwalknext-method"></a>ICorDebugStackWalk::Next 메서드
-[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) 개체를 다음 프레임으로 이동 합니다.  
+[ICorDebugStackWalk](icordebugstackwalk-interface.md) 개체를 다음 프레임으로 이동 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -57,6 +57,6 @@ HRESULT Next();
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugStackWalk 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugStackWalk 인터페이스](icordebugstackwalk-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)
+- [디버깅](index.md)

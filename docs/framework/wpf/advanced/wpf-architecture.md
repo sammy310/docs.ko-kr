@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: db9938f26f31506737eb0395fa389da01a1ee444
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 6d8dedafd4ffc582b529289d3583f90d81779762
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76735070"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794036"
 ---
 # <a name="wpf-architecture"></a>WPF 아키텍처
 이 항목에서는 Windows Presentation Foundation (WPF) 클래스 계층 구조 둘러보기를 제공 합니다. WPF의 주요 하위 시스템 대부분에 대해 설명 하 고 상호 작용 하는 방법을 설명 합니다. WPF의 설계자가 선택한 일부 항목에 대해서도 자세히 설명 합니다.  
@@ -116,7 +116,7 @@ ms.locfileid: "76735070"
   
  <xref:System.Windows.FrameworkElement>에서 가장 중요 한 두 가지 항목은 데이터 바인딩 및 스타일입니다.  
   
- WPF의 데이터 바인딩 하위 시스템은 응용 프로그램 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]를 만들기 위해 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 또는 ASP.NET를 사용 하는 모든 사용자에 게 비교적 친숙 해야 합니다. 이러한 각 시스템에는 특정 요소에 있는 하나 이상의 속성을 데이터 조각에 바인딩하려고 한다는 것을 간단하게 표현할 수 있는 방법이 있습니다. WPF는 속성 바인딩, 변환 및 목록 바인딩을 완벽 하 게 지원 합니다.  
+ WPF의 데이터 바인딩 하위 시스템은 응용 프로그램 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]를 만들기 위해 Windows Forms 또는 ASP.NET를 사용 하는 모든 사용자에 게 비교적 친숙 해야 합니다. 이러한 각 시스템에는 특정 요소에 있는 하나 이상의 속성을 데이터 조각에 바인딩하려고 한다는 것을 간단하게 표현할 수 있는 방법이 있습니다. WPF는 속성 바인딩, 변환 및 목록 바인딩을 완벽 하 게 지원 합니다.  
   
  WPF에서 데이터 바인딩의 가장 흥미로운 기능 중 하나는 데이터 템플릿을 도입 하는 것입니다. 데이터 템플릿을 사용하면 어떤 데이터 조각을 시각화해야 하는지를 선언적으로 명시할 수 있습니다. 데이터에 바인딩할 수 있는 사용자 지정 사용자 인터페이스를 만드는 대신 역으로, 생성될 디스플레이를 데이터가 결정하도록 할 수 있습니다.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "76735070"
   
  데이터 모델(속성), 상호 작용 모델(명령 및 이벤트) 및 디스플레이 모델(템플릿)이 이렇게 구분됨에 따라 컨트롤의 모양 및 동작을 완전히 사용자 지정할 수 있습니다.  
   
- 컨트롤 데이터 모델의 공통적인 측면은 콘텐츠 모델입니다. <xref:System.Windows.Controls.Button>와 같은 컨트롤을 살펴보면 <xref:System.Object>형식의 "Content" 라는 속성이 있다는 것을 알 수 있습니다. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 및 ASP.NET에서이 속성은 일반적으로 문자열 이지만 단추에 포함할 수 있는 콘텐츠 형식을 제한 합니다. 단추의 콘텐츠는 간단한 문자열, 복잡한 데이터 개체 또는 전체 요소 트리일 수가 있습니다. 데이터 개체의 경우 데이터 템플릿이 사용되어 디스플레이를 구성합니다.  
+ 컨트롤 데이터 모델의 공통적인 측면은 콘텐츠 모델입니다. <xref:System.Windows.Controls.Button>와 같은 컨트롤을 살펴보면 <xref:System.Object>형식의 "Content" 라는 속성이 있다는 것을 알 수 있습니다. Windows Forms 및 ASP.NET에서이 속성은 일반적으로 문자열 이지만 단추에 포함할 수 있는 콘텐츠 형식을 제한 합니다. 단추의 콘텐츠는 간단한 문자열, 복잡한 데이터 개체 또는 전체 요소 트리일 수가 있습니다. 데이터 개체의 경우 데이터 템플릿이 사용되어 디스플레이를 구성합니다.  
   
 <a name="Summary"></a>   
 ## <a name="summary"></a>요약  
@@ -138,7 +138,7 @@ ms.locfileid: "76735070"
   
  일반 애플리케이션은 디스플레이를 만든 다음 일부 데이터에 바인딩합니다. WPF에서 컨트롤에 대 한 모든 항목 (표시의 모든 측면)은 일부 데이터 바인딩 형식에 의해 생성 됩니다. 단추 내의 텍스트는 단추 내에 구성된 컨트롤을 만들고 해당 디스플레이를 단추의 콘텐츠 속성에 바인딩하여 표시됩니다.  
   
- WPF 기반 응용 프로그램 개발을 시작 하는 경우 매우 익숙할 것입니다. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 또는 ASP.NET를 사용 하는 것과 거의 동일한 방법으로 속성을 설정 하 고, 개체를 사용 하 고, 데이터 바인딩을 설정할 수 있습니다. WPF 아키텍처를 심층적으로 조사 하 여 근본적으로 응용 프로그램의 핵심 드라이버로 데이터를 처리 하는 훨씬 다양 한 응용 프로그램을 만들 수 있다는 것을 알 수 있습니다.  
+ WPF 기반 응용 프로그램 개발을 시작 하는 경우 매우 익숙할 것입니다. Windows Forms 또는 ASP.NET를 사용 하는 것과 거의 동일한 방법으로 속성을 설정 하 고, 개체를 사용 하 고, 데이터 바인딩을 설정할 수 있습니다. WPF 아키텍처를 심층적으로 조사 하 여 근본적으로 응용 프로그램의 핵심 드라이버로 데이터를 처리 하는 훨씬 다양 한 응용 프로그램을 만들 수 있다는 것을 알 수 있습니다.  
   
 ## <a name="see-also"></a>참조
 

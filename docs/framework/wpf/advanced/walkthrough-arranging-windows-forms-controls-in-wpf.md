@@ -9,16 +9,16 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-ms.openlocfilehash: 5e7544dfdbee234bb968c9a7f39814e8749ece15
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: eee26165e17b3327166a160e7c4ee3726215dcfc
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76735292"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794242"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>연습: WPF에서 Windows Forms 컨트롤 정렬
 
-이 연습에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 레이아웃 기능을 사용 하 여 혼합 응용 프로그램에서 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤을 정렬 하는 방법을 보여 줍니다.
+이 연습에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 레이아웃 기능을 사용 하 여 혼합 응용 프로그램에서 Windows Forms 컨트롤을 정렬 하는 방법을 보여 줍니다.
 
 이 연습에서 설명하는 작업은 다음과 같습니다.
 
@@ -39,7 +39,7 @@ ms.locfileid: "76735292"
 
 이 연습에서 설명 하는 작업의 전체 코드 목록은 [WPF에서 Windows Forms 컨트롤 정렬 샘플](https://go.microsoft.com/fwlink/?LinkID=159971)을 참조 하세요.
 
-작업이 완료 되 면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]기반 응용 프로그램의 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 레이아웃 기능을 이해 하 게 됩니다.
+작업이 완료 되 면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]기반 응용 프로그램의 Windows Forms 레이아웃 기능을 이해 하 게 됩니다.
 
 ## <a name="prerequisites"></a>전제 조건
 
@@ -59,7 +59,7 @@ ms.locfileid: "76735292"
 
 3. *Mainwindow.xaml* 를 두 번 클릭 하 여 xaml 뷰에서 엽니다.
 
-4. <xref:System.Windows.Window> 요소에서 다음 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 네임 스페이스 매핑을 추가 합니다.
+4. <xref:System.Windows.Window> 요소에서 다음 Windows Forms 네임 스페이스 매핑을 추가 합니다.
 
     ```xaml
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
@@ -71,7 +71,7 @@ ms.locfileid: "76735292"
 
 ## <a name="using-default-layout-settings"></a>기본 레이아웃 설정 사용
 
-기본적으로 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소는 호스팅된 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤의 레이아웃을 처리 합니다.
+기본적으로 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소는 호스팅된 Windows Forms 컨트롤의 레이아웃을 처리 합니다.
 
 기본 레이아웃 설정을 사용 하려면 다음 단계를 수행 합니다.
 
@@ -79,7 +79,7 @@ ms.locfileid: "76735292"
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#3)]
 
-2. <kbd>F5</kbd> 키를 눌러 애플리케이션을 빌드하고 실행합니다. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Button?displayProperty=nameWithType> 컨트롤이 <xref:System.Windows.Controls.Canvas>에 표시 됩니다. 호스팅된 컨트롤은 해당 콘텐츠를 기반으로 크기가 조정 되 고, <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소는 호스트 된 컨트롤에 맞게 크기가 조정 됩니다.
+2. <kbd>F5</kbd> 키를 눌러 애플리케이션을 빌드하고 실행합니다. Windows Forms <xref:System.Windows.Forms.Button?displayProperty=nameWithType> 컨트롤이 <xref:System.Windows.Controls.Canvas>에 표시 됩니다. 호스팅된 컨트롤은 해당 콘텐츠를 기반으로 크기가 조정 되 고, <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소는 호스트 된 컨트롤에 맞게 크기가 조정 됩니다.
 
 ## <a name="sizing-to-content"></a>콘텐츠에 맞게 크기 조정
 
@@ -115,7 +115,7 @@ ms.locfileid: "76735292"
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#6](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#6)]
 
-2. <kbd>F5</kbd> 키를 눌러 애플리케이션을 빌드하고 실행합니다. <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소는 기본 레이아웃 설정 보다 작은 70 픽셀의 50 픽셀 너비의 크기로 설정 됩니다. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤의 내용이 알맞게 다시 정렬 됩니다.
+2. <kbd>F5</kbd> 키를 눌러 애플리케이션을 빌드하고 실행합니다. <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소는 기본 레이아웃 설정 보다 작은 70 픽셀의 50 픽셀 너비의 크기로 설정 됩니다. Windows Forms 컨트롤의 내용이 알맞게 다시 정렬 됩니다.
 
 ## <a name="setting-layout-properties"></a>레이아웃 속성 설정
 
@@ -164,7 +164,7 @@ ms.locfileid: "76735292"
 
 ## <a name="setting-visibility"></a>표시 유형 설정
 
-<xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소의 <xref:System.Windows.UIElement.Visibility%2A> 속성을 설정 하 여 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤을 보이지 않거나 축소할 수 있습니다. 컨트롤이 보이지 않으면 표시되지는 않지만 레이아웃 공간은 사용합니다. 컨트롤이 축소되면 표시되지 않고 레이아웃 공간도 자치하지 않습니다.
+<xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소의 <xref:System.Windows.UIElement.Visibility%2A> 속성을 설정 하 여 Windows Forms 컨트롤을 보이지 않거나 축소할 수 있습니다. 컨트롤이 보이지 않으면 표시되지는 않지만 레이아웃 공간은 사용합니다. 컨트롤이 축소되면 표시되지 않고 레이아웃 공간도 자치하지 않습니다.
 
 호스트 된 컨트롤의 표시 여부를 설정 하려면 다음 단계를 수행 합니다.
 
@@ -181,11 +181,11 @@ ms.locfileid: "76735292"
 
 4. <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소를 표시 하지 않도록 하려면 **클릭** 하십시오. 단추를 클릭 합니다.
 
-5. **축소 하려면 클릭** 단추를 클릭 하 여 레이아웃에서 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소를 완전히 숨깁니다. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤이 축소 되 면 주변 요소가 공간을 차지 하도록 다시 정렬 됩니다.
+5. **축소 하려면 클릭** 단추를 클릭 하 여 레이아웃에서 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소를 완전히 숨깁니다. Windows Forms 컨트롤이 축소 되 면 주변 요소가 공간을 차지 하도록 다시 정렬 됩니다.
 
 ## <a name="hosting-a-control-that-does-not-stretch"></a>늘어나지 않는 컨트롤 호스트
 
-일부 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤의 크기는 고정 되어 있으며 레이아웃에서 사용 가능한 공간을 채우도록 확장 되지 않습니다. 예를 들어 <xref:System.Windows.Forms.MonthCalendar> 컨트롤은 고정 된 공간에 월을 표시 합니다.
+일부 Windows Forms 컨트롤의 크기는 고정 되어 있으며 레이아웃에서 사용 가능한 공간을 채우도록 확장 되지 않습니다. 예를 들어 <xref:System.Windows.Forms.MonthCalendar> 컨트롤은 고정 된 공간에 월을 표시 합니다.
 
 스트레치 되지 않는 컨트롤을 호스팅하려면 다음 단계를 수행 합니다.
 
@@ -223,7 +223,7 @@ WPF 요소와 달리 Windows Forms 컨트롤은 회전을 지원 하지 않습�
 
 ## <a name="setting-padding-and-margins"></a>안쪽 여백 및 여백 설정
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 레이아웃의 안쪽 여백 및 여백은 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]의 안쪽 여백과 여백과 비슷합니다. <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소에 <xref:System.Windows.Controls.Control.Padding%2A> 및 <xref:System.Windows.FrameworkElement.Margin%2A> 속성을 설정 하기만 하면 됩니다.
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 레이아웃의 안쪽 여백 및 여백은 Windows Forms의 안쪽 여백과 여백과 비슷합니다. <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소에 <xref:System.Windows.Controls.Control.Padding%2A> 및 <xref:System.Windows.FrameworkElement.Margin%2A> 속성을 설정 하기만 하면 됩니다.
 
 호스팅된 컨트롤의 안쪽 여백과 여백을 설정 하려면 다음 단계를 수행 합니다.
 
@@ -232,11 +232,11 @@ WPF 요소와 달리 Windows Forms 컨트롤은 회전을 지원 하지 않습�
      [!code-xaml[WpfLayoutHostingWfWithXaml#14](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#14)]
     [!code-xaml[WpfLayoutHostingWfWithXaml#15](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#15)]
 
-2. <kbd>F5</kbd> 키를 눌러 애플리케이션을 빌드하고 실행합니다. 안쪽 여백 및 여백 설정은 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]에 적용 되는 것과 같은 방식으로 호스팅된 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤에 적용 됩니다.
+2. <kbd>F5</kbd> 키를 눌러 애플리케이션을 빌드하고 실행합니다. 안쪽 여백 및 여백 설정은 Windows Forms에 적용 되는 것과 같은 방식으로 호스팅된 Windows Forms 컨트롤에 적용 됩니다.
 
 ## <a name="using-dynamic-layout-containers"></a>동적 레이아웃 컨테이너 사용
 
-[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]는 <xref:System.Windows.Forms.FlowLayoutPanel> 및 <xref:System.Windows.Forms.TableLayoutPanel>의 두 가지 동적 레이아웃 컨테이너를 제공 합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 레이아웃에서 이러한 컨테이너를 사용할 수도 있습니다.
+Windows Forms는 <xref:System.Windows.Forms.FlowLayoutPanel> 및 <xref:System.Windows.Forms.TableLayoutPanel>의 두 가지 동적 레이아웃 컨테이너를 제공 합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 레이아웃에서 이러한 컨테이너를 사용할 수도 있습니다.
 
 동적 레이아웃 컨테이너를 사용 하려면 다음 단계를 수행 합니다.
 

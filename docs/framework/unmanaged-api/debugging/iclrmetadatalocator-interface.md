@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 43c944f4-406a-4df6-981e-0eabb33dd5d0
 topic_type:
 - apiref
-ms.openlocfilehash: ec92214e33cd1acda8b2702d93deba1f0fb2aaa2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 642391bce99328f3700d1783054943b6a450b22b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73111024"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789027"
 ---
 # <a name="iclrmetadatalocator-interface"></a>ICLRMetadataLocator 인터페이스
 데이터 액세스 서비스 계층에서 대상 프로세스의 어셈블리 메타 데이터를 찾는 데 사용 됩니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "73111024"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[GetMetadata 메서드](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-getmetadata-method.md)|대상 프로세스에서 이미지의 메타 데이터를 검색 합니다.|  
+|[GetMetadata 메서드](iclrmetadatalocator-getmetadata-method.md)|대상 프로세스에서 이미지의 메타 데이터를 검색 합니다.|  
   
 ## <a name="remarks"></a>주의  
  API 클라이언트(즉, 디버거)에서는 이 인터페이스를 특정 대상 프로세스에 적절하게 구현해야 합니다. 예를 들어 라이브 프로세스에 대 한 구현은 메모리 덤프의 구현과 다를 수 있습니다.  
@@ -44,4 +44,4 @@ ms.locfileid: "73111024"
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

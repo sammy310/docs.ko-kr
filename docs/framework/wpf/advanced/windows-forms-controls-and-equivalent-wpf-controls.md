@@ -7,19 +7,19 @@ helpviewer_keywords:
 - Windows Forms [WPF], WPF interoperation
 - interoperability [WPF], Windows Forms
 ms.assetid: 8a157e6b-8054-46db-a5cf-a78966acc7a1
-ms.openlocfilehash: 7f531b60d8b31181688f3d0a6753b234ffc6c7dd
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 729f893a94688f4a1d8b0a770a3624b27ddfe1c1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76735213"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794078"
 ---
 # <a name="windows-forms-controls-and-equivalent-wpf-controls"></a>Windows Forms 컨트롤 및 해당 WPF 컨트롤
-많은 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤에는 동일한 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤이 있지만 일부 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤에는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에 해당 하는 항목이 없습니다. 이 항목에서는 두 기술에서 제공 하는 컨트롤 형식을 비교 합니다.  
+많은 Windows Forms 컨트롤에는 동일한 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤이 있지만 일부 Windows Forms 컨트롤에는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에 해당 하는 항목이 없습니다. 이 항목에서는 두 기술에서 제공 하는 컨트롤 형식을 비교 합니다.  
   
- 항상 상호 운용을 사용 하 여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]기반 응용 프로그램에 해당 항목이 없는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤을 호스트할 수 있습니다.  
+ 항상 상호 운용을 사용 하 여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]기반 응용 프로그램에 해당 항목이 없는 Windows Forms 컨트롤을 호스트할 수 있습니다.  
   
- 다음 표에서는 컨트롤과 구성 요소에 해당 하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 제어 기능이 있는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 보여 줍니다.  
+ 다음 표에서는 컨트롤과 구성 요소에 해당 하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 제어 기능이 있는 Windows Forms 보여 줍니다.  
   
 |Windows Forms 컨트롤|WPF 동일한 컨트롤|주의|  
 |---------------------------|----------------------------|-------------|  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f9b0ff22-54db-45eb-9cc3-508000a3141d
 topic_type:
 - apiref
-ms.openlocfilehash: 6e4f11de423d1ab6b66aca40e671607a383a4413
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 43f3c1dd866b98bff51b375a11e28727e41d3ead
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136638"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793046"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>ICorDebugMetaDataLocator::GetMetaData 메서드
 디버거가 요청한 작업을 완료하는 데 필요한 메타데이터가 포함된 모듈의 전체 경로를 반환하도록 디버거에 요청합니다.  
@@ -67,7 +67,7 @@ HRESULT GetMetaData(
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|메서드가 완료되었습니다. `wszPathBuffer`는 파일의 전체 경로를 포함하고 null로 종료됩니다.|  
+|S_OK|메서드가 성공적으로 완료되었습니다. `wszPathBuffer`는 파일의 전체 경로를 포함하고 null로 종료됩니다.|  
 |E_NOT_SUFFICIENT_BUFFER|`wszPathBuffer`의 현재 크기는 전체 경로를 포함하기에 충분하지 않습니다. 이 경우 `pcchPathBuffer`는 종료 null 문자를 비롯하여 필요한 `WCHAR` 개수를 포함하고, `GetMetaData`는 요청된 버퍼 크기와 함께 두 번째로 호출됩니다.|  
   
 ## <a name="remarks"></a>주의  
@@ -84,6 +84,6 @@ HRESULT GetMetaData(
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugThread4 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugThread4 인터페이스](icordebugthread4-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)
+- [디버깅](index.md)

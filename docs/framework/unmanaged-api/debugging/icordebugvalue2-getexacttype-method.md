@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8e9aae1b-d1b7-4b6e-b577-6faf36dcec85
 topic_type:
 - apiref
-ms.openlocfilehash: 441d225dadbbca09ab27c8ccd70debe32f4c12da
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6c5e5d1c9f734e097fc9e871d7a0cffdc9bb9138
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140261"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791132"
 ---
 # <a name="icordebugvalue2getexacttype-method"></a>ICorDebugValue2::GetExactType 메서드
 이 값의 <xref:System.Type>을 나타내는 "ICorDebugType" 개체에 대 한 인터페이스 포인터를 가져옵니다.  
@@ -38,7 +38,7 @@ HRESULT GetExactType (
  제한이 이 "ICorDebugValue2" 개체가 나타내는 값의 <xref:System.Type>를 나타내는 `ICorDebugType` 개체의 주소에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>주의  
- 제네릭 인식 `GetExactType` 메서드는 각각 값의 형식에 대 한 정보를 반환 하는 [ICorDebugObjectValue:: GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md) 와 [ICorDebugValue:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md) 메서드를 모두 대체 합니다.  
+ 제네릭 인식 `GetExactType` 메서드는 각각 값의 형식에 대 한 정보를 반환 하는 [ICorDebugObjectValue:: GetClass](icordebugobjectvalue-getclass-method.md) 와 [ICorDebugValue:: GetType](icordebugvalue-gettype-method.md) 메서드를 모두 대체 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  

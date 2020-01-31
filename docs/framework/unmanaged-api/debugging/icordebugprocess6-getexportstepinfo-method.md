@@ -2,12 +2,12 @@
 title: ICorDebugProcess6::GetExportStepInfo 메서드
 ms.date: 03/30/2017
 ms.assetid: a927e0ac-f110-426d-bbec-9377a29c8f17
-ms.openlocfilehash: d92b05e3d84a230e87901378f34ed27ac38286b2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 118f52db63464b4c9355ba9ee7f330b996c5bf71
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123454"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792243"
 ---
 # <a name="icordebugprocess6getexportstepinfo-method"></a>ICorDebugProcess6::GetExportStepInfo 메서드
 관리 코드를 단계별로 실행할 수 있도록 런타임에 내보낸 함수에 대한 정보를 제공합니다.  
@@ -26,10 +26,10 @@ HRESULT GetExportStepInfo(
  [in] PE 내보내기 테이블에 기록된 런타임 내보내기 함수의 이름입니다.  
   
  invokeKind  
- 제한이 내보낸 함수가 관리 코드를 호출 하는 방법을 설명 하는 [CorDebugCodeInvokeKind](../../../../docs/framework/unmanaged-api/debugging/cordebugcodeinvokekind-enumeration.md) 열거형의 멤버에 대 한 포인터입니다.  
+ 제한이 내보낸 함수가 관리 코드를 호출 하는 방법을 설명 하는 [CorDebugCodeInvokeKind](cordebugcodeinvokekind-enumeration.md) 열거형의 멤버에 대 한 포인터입니다.  
   
  invokePurpose  
- 제한이 내보낸 함수가 관리 코드를 호출 하는 이유를 설명 하는 [CorDebugCodeInvokePurpose](../../../../docs/framework/unmanaged-api/debugging/cordebugcodeinvokepurpose-enumeration.md) 열거형의 멤버에 대 한 포인터입니다.  
+ 제한이 내보낸 함수가 관리 코드를 호출 하는 이유를 설명 하는 [CorDebugCodeInvokePurpose](cordebugcodeinvokepurpose-enumeration.md) 열거형의 멤버에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
  이 메서드는 다음 표에 나와 있는 값을 반환할 수 있습니다.  
@@ -56,5 +56,5 @@ HRESULT GetExportStepInfo(
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugProcess6 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugProcess6 인터페이스](icordebugprocess6-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

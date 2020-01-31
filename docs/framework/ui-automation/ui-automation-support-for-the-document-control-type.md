@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Document control type
 - UI Automation, Document control type
 ms.assetid: a79d594b-1ca0-4543-8dac-afd2c645201d
-ms.openlocfilehash: f3bff71509aaaec344ca64ffd6d7f09cef2b6a51
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 0bac338ad06b3ddf76b2374ea2a3d954abb3cbc7
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741540"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789513"
 ---
 # <a name="ui-automation-support-for-the-document-control-type"></a>Document 컨트롤 형식에 대한 UI 자동화 지원
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741540"
   
  문서 컨트롤을 통해 사용자가 여러 개의 텍스트 페이지를 보고 조작할 수 있습니다. 서식이 지정되지 않은 간단한 텍스트 줄만 지원하는 편집 컨트롤과는 달리, 문서 컨트롤은 다양한 스타일과 서식이 지정된 텍스트를 호스트할 수 있습니다.  
   
- 다음 섹션에서는 Document 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 또는 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]에 관계 없이 모든 문서 컨트롤에 적용 됩니다.  
+ 다음 섹션에서는 Document 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 또는 Windows Forms에 관계 없이 모든 문서 컨트롤에 적용 됩니다.  
   
 ## <a name="required-ui-automation-tree-structure"></a>필요한 UI 자동화 트리 구조  
  다음 표는 문서 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에 대 한 자세한 내용은 [UI 자동화 트리 개요](ui-automation-tree-overview.md)를 참조 하세요.  

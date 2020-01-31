@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8d50cb3-ec4f-4529-8fe3-bd61fd28e13c
 topic_type:
 - apiref
-ms.openlocfilehash: 69288e995ec789091bf089368cd9a60f003df86e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cdf88ef193df71a638fff43add1a9648d8631731
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122982"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789124"
 ---
 # <a name="enumerateclrs-function"></a>EnumerateCLRs 함수
 프로세스의 CLR을 열거하기 위한 메커니즘을 제공합니다.  
@@ -68,7 +68,7 @@ HRESULT EnumerateCLRs (
   
  Windows 운영 체제에서 `debuggeePID`는 OS 프로세스 식별자에 매핑됩니다.  
   
- `ppHandleArrayOut` 및 `ppStringArrayOut`용 메모리는 이 함수를 통해 할당됩니다. 할당 된 메모리를 해제 하려면 [CloseCLREnumeration 함수](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md)를 호출 해야 합니다.  
+ `ppHandleArrayOut` 및 `ppStringArrayOut`용 메모리는 이 함수를 통해 할당됩니다. 할당 된 메모리를 해제 하려면 [CloseCLREnumeration 함수](closeclrenumeration-function.md)를 호출 해야 합니다.  
   
  대상 프로세스의 CLR 개수를 반환하려면 null로 설정된 두 배열 매개 변수와 함께 이 함수를 호출하면 됩니다. 이 개수에서 호출자는 만들어질 버퍼 크기를 유추할 수 있습니다. `(sizeof(HANDLE) * count) + (sizeof(LPWSTR) * count) + (sizeof(WCHAR*) * count * MAX_PATH)`.  
   

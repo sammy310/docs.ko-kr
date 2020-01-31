@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8dc29c6a-e2ba-41d8-a1e0-0fdd21421e0b
 topic_type:
 - apiref
-ms.openlocfilehash: d8c0f69ce407638aed6475c4d84d0e032cc6a8f5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fb7a2a6d8bac7e9a67a5275694fc07e0f1d469e1
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435984"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861335"
 ---
 # <a name="icorprofilermoduleenumskip-method"></a>ICorProfilerModuleEnum::Skip 메서드
 지정한 개수의 요소를 건너뛰도록 현재 위치에서 열거자의 커서를 진행합니다.  
@@ -43,7 +43,7 @@ HRESULT Skip([in] ULONG celt);
 |S_OK|`celt` 요소를 건너뛰었습니다.|  
 |S_FALSE|`celt` 요소 수를 건너 뛰 었으 며 요소가 더 이상 없음을 나타냅니다.|  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  이 열거자 커서의 새 위치는 (현재 위치) + `celt`입니다.  
   
 ## <a name="requirements"></a>요구 사항  
@@ -55,7 +55,7 @@ HRESULT Skip([in] ULONG celt);
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [ICorProfilerModuleEnum 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
-- [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [ICorProfilerModuleEnum 인터페이스](icorprofilermoduleenum-interface.md)
+- [프로파일링 인터페이스](profiling-interfaces.md)

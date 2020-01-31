@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b12bfcd9-1e29-48bf-9a3d-44bfae5df5e8
 topic_type:
 - apiref
-ms.openlocfilehash: 70aaf32b9da751b49571ab98a95e432b7f84caa9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 88ef9fd5a0aac19954a247d0215fe698ebe30d40
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130646"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788328"
 ---
 # <a name="icordebugmanagedcallbackunloadmodule-method"></a>ICorDebugManagedCallback::UnloadModule 메서드
 DLL (공용 언어 런타임 모듈)이 언로드 되었음을 디버거에 알립니다.  
@@ -55,5 +55,5 @@ HRESULT UnloadModule (
   
 ## <a name="see-also"></a>참조
 
-- [LoadModule 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadmodule-method.md)
-- [ICorDebugManagedCallback 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [LoadModule 메서드](icordebugmanagedcallback-loadmodule-method.md)
+- [ICorDebugManagedCallback 인터페이스](icordebugmanagedcallback-interface.md)

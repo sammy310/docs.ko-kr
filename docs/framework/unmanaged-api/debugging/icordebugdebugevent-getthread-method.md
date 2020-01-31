@@ -2,12 +2,12 @@
 title: ICorDebugDebugEvent::GetThread 메서드
 ms.date: 03/30/2017
 ms.assetid: 4f2e9a2c-8369-4a07-a881-ad5422626353
-ms.openlocfilehash: 66b4abc4bebfbbde2e6a6b25d2bc0e88839a363f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0900ac2ae5bcf2141e720dad6efdf68d4fafaccc
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136642"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793530"
 ---
 # <a name="icordebugdebugeventgetthread-method"></a>ICorDebugDebugEvent::GetThread 메서드
 이벤트가 발생한 스레드를 가져옵니다.  
@@ -22,7 +22,7 @@ HRESULT GetThread(
   
 ## <a name="parameters"></a>매개 변수  
  ppThread  
- 제한이 이벤트가 발생 한 스레드를 나타내는 ICorDebugThread 개체의 주소에 대 한 포인터입니다.  
+ [out] 이벤트가 발생한 스레드를 나타내는 ICorDebugThread 개체의 주소에 대한 포인터입니다.  
   
 ## <a name="remarks"></a>주의  
   
@@ -40,5 +40,5 @@ HRESULT GetThread(
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugDebugEvent 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugDebugEvent 인터페이스](icordebugdebugevent-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

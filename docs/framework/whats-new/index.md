@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: ab14e6cb7d9bd4c1571040280dc35233e9b89d43
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 538806627a31366d4b8597eb010a4bbe3f8f9202
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937974"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76860961"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework의 새로운 기능
 
@@ -600,7 +600,7 @@ Windows Forms 애플리케이션의 경우 애플리케이션 매니페스트가
 
 **.NET Standard 2.0에 대한 지원**
 
-[.NET Standard](../../standard/net-standard.md)는 해당 버전의 표준을 지원하는 각 .NET 구현에서 사용할 수 있어야 하는 API 집합을 정의합니다. .NET Framework 4.7.1은 .NET Standard 2.0을 완전히 지원하며 .NET Standard 2.0에 정의되어 있지만 .NET Framework 4.6.1, 4.6.2 및 4.7에서는 제공하지 않았던 [약 200개의 API](https://github.com/dotnet/standard/blob/master/netstandard/src/ApiCompatBaseline.net461.txt)를 추가했습니다. (이러한 .NET Framework 버전은 대상 시스템에 추가적인 .NET Standard 지원 파일도 배포된 경우에만 .NET Standard 2.0을 지원합니다.) 자세한 내용은 [.NET Framework 4.7.1 Runtime and Compiler Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/)(.NET Framework 4.7.1 런타임 및 컴파일러 기능) 블로그 게시물의 "BCL - .NET Standard 2.0 Support"(BCL - .NET Standard 2.0 지원)를 참조하세요.
+[.NET Standard](../../standard/net-standard.md)는 해당 버전의 표준을 지원하는 각 .NET 구현에서 사용할 수 있어야 하는 API 집합을 정의합니다. .NET Framework 4.7.1은 .NET Standard 2.0을 완전히 지원하며 .NET Standard 2.0에 정의되어 있지만 .NET Framework 4.6.1, 4.6.2 및 4.7에서는 제공하지 않았던 [약 200개의 API](https://github.com/dotnet/standard/blob/master/src/netstandard/src/ApiCompatBaseline.net461.txt)를 추가했습니다. (이러한 .NET Framework 버전은 대상 시스템에 추가적인 .NET Standard 지원 파일도 배포된 경우에만 .NET Standard 2.0을 지원합니다.) 자세한 내용은 [.NET Framework 4.7.1 Runtime and Compiler Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/)(.NET Framework 4.7.1 런타임 및 컴파일러 기능) 블로그 게시물의 "BCL - .NET Standard 2.0 Support"(BCL - .NET Standard 2.0 지원)를 참조하세요.
 
 **구성 작성기에 대한 지원**
 

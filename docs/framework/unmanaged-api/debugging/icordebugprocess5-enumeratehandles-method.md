@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d7fa796-0dc6-4ee8-9d56-40166246d91d
 topic_type:
 - apiref
-ms.openlocfilehash: e0e68dba1f4d9ac5fa618aa842b823dcc046e70e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2a1653055a3834ce1bed0e7de7877b255bea0c38
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129672"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792424"
 ---
 # <a name="icordebugprocess5enumeratehandles-method"></a>ICorDebugProcess5::EnumerateHandles 메서드
 프로세스의 개체 핸들에 대 한 열거자를 가져옵니다.  
@@ -34,15 +34,15 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
   
 ## <a name="parameters"></a>매개 변수  
  `types`  
- 진행 컬렉션에 포함할 핸들의 형식을 지정 하는 [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) 값의 비트 조합입니다.  
+ 진행 컬렉션에 포함할 핸들의 형식을 지정 하는 [CorGCReferenceType](corgcreferencetype-enumeration.md) 값의 비트 조합입니다.  
   
  `ppENum`  
- 제한이 가비지 수집 될 개체의 열거자 인 [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) 의 주소에 대 한 포인터입니다.  
+ 제한이 가비지 수집 될 개체의 열거자 인 [ICorDebugGCReferenceEnum](icordebuggcreferenceenum-interface.md) 의 주소에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>주의  
- `EnumerateHandles`은 핸들 테이블의 검사를 지 원하는 도우미 함수입니다. [ICorDebugProcess5:: EnumerateGCReferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) 메서드와 유사 합니다. 단, 가비지 수집 되는 모든 개체를 사용 하 여 [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) 컬렉션을 채우지 않고에서 핸들을 포함 하는 개체만 포함 합니다. 핸들 테이블입니다.  
+ `EnumerateHandles`은 핸들 테이블의 검사를 지 원하는 도우미 함수입니다. [ICorDebugProcess5:: EnumerateGCReferences](icordebugprocess5-enumerategcreferences-method.md) 메서드와 유사 합니다. 단, 가비지 수집 되는 모든 개체를 사용 하 여 [ICorDebugGCReferenceEnum](icordebuggcreferenceenum-interface.md) 컬렉션을 채우지 않고 핸들 테이블의 핸들을 포함 하는 개체만 포함 합니다.  
   
- `types` 매개 변수는 컬렉션에 포함할 핸들 형식을 지정 합니다. [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) 열거형의 다음 세 멤버 중 하나일 수 있습니다. `types`  
+ `types` 매개 변수는 컬렉션에 포함할 핸들 형식을 지정 합니다. [CorGCReferenceType](corgcreferencetype-enumeration.md) 열거형의 다음 세 멤버 중 하나일 수 있습니다. `types`  
   
 - `CorHandleStrongOnly` (강력한 참조만 처리).  
   
@@ -61,5 +61,5 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 구조체](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [디버깅 구조체](debugging-structures.md)
+- [디버깅](index.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d508981f-e2b2-445b-a649-69951c22702d
 topic_type:
 - apiref
-ms.openlocfilehash: e09e25503ad00ab3542f0c4f50221b6014b25561
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 35e3e37b1487b5dda9945402c6a3338384147f9a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128890"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792636"
 ---
 # <a name="icordebugprocessenumerateappdomains-method"></a>ICorDebugProcess::EnumerateAppDomains 메서드
 이 프로세스의 모든 응용 프로그램 도메인을 열거 합니다.  
@@ -34,10 +34,10 @@ HRESULT EnumerateAppDomains(
   
 ## <a name="parameters"></a>매개 변수  
  `ppAppDomains`  
- 제한이 이 프로세스의 응용 프로그램 도메인에 대 한 열거자 인 [ICorDebugAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-interface.md) 의 주소에 대 한 포인터입니다.  
+ 제한이 이 프로세스의 응용 프로그램 도메인에 대 한 열거자 인 [ICorDebugAppDomainEnum](icordebugappdomainenum-interface.md) 의 주소에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>주의  
- 이 메서드는 [ICorDebugManagedCallback:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) 콜백 전에 사용할 수 있습니다.  
+ 이 메서드는 [ICorDebugManagedCallback:: CreateProcess](icordebugmanagedcallback-createprocess-method.md) 콜백 전에 사용할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  

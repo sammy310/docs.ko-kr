@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Status Bar control type
 - control types, Status Bar
 ms.assetid: 48dee94a-5119-4939-a4c7-ffeaf794c732
-ms.openlocfilehash: dde84c7550621eed350986b55739106a3ce9e7f4
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 4b2eddfd53b0125737f2fcf45cf1f30ae1ce38b9
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741511"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76785913"
 ---
 # <a name="ui-automation-support-for-the-statusbar-control-type"></a>StatusBar 컨트롤 형식에 대한 UI 자동화 지원
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741511"
   
  상태 표시줄 컨트롤은 애플리케이션 창에 표시되는 개체에 대한 정보, 개체의 구성 요소 또는 애플리케이션 내에서 해당 개체의 작업과 관련된 컨텍스트 정보를 표시합니다.  
   
- 다음 섹션에서는 StatusBar 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 또는 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]있는지 여부에 관계 없이 모든 상태 표시줄 컨트롤에 적용 됩니다.  
+ 다음 섹션에서는 StatusBar 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 또는 Windows Forms 있는지 여부에 관계 없이 모든 상태 표시줄 컨트롤에 적용 됩니다.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>필요한 UI 자동화 트리 구조  

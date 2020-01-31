@@ -5,15 +5,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: 59243e1810757ff0ff58a60ac3eb007bbc227be0
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 05ba8120c90175801aa2cb61499c48133853e8f7
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742690"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794163"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>연습: Windows Forms에서 WPF 복합 컨트롤 호스팅
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 애플리케이션을 만들기 위한 다양한 환경을 제공합니다. 그러나 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 코드에 상당한 투자가 있는 경우 기존 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 응용 프로그램을 처음부터 다시 작성 하는 대신 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]으로 확장 하는 것이 더 효과적일 수 있습니다. 일반적인 시나리오는 Windows Forms 응용 프로그램 내에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]으로 구현 된 하나 이상의 컨트롤을 포함 하려는 경우입니다. WPF 컨트롤을 사용자 지정 하는 방법에 대 한 자세한 내용은 [컨트롤 사용자 지정](../controls/control-customization.md)을 참조 하세요.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 애플리케이션을 만들기 위한 다양한 환경을 제공합니다. 그러나 Windows Forms 코드에 상당한 투자가 있는 경우 기존 Windows Forms 응용 프로그램을 처음부터 다시 작성 하는 대신 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]으로 확장 하는 것이 더 효과적일 수 있습니다. 일반적인 시나리오는 Windows Forms 응용 프로그램 내에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]으로 구현 된 하나 이상의 컨트롤을 포함 하려는 경우입니다. WPF 컨트롤을 사용자 지정 하는 방법에 대 한 자세한 내용은 [컨트롤 사용자 지정](../controls/control-customization.md)을 참조 하세요.  
   
  이 연습에서는 Windows Forms 응용 프로그램에서 데이터 입력을 수행 하기 위해 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 복합 컨트롤을 호스트 하는 응용 프로그램을 단계별로 안내 합니다. 복합 컨트롤은 DLL로 패키지됩니다. 이 일반적인 절차는 더 복잡한 애플리케이션 및 컨트롤로 확장할 수 있습니다. 이 연습은 [연습: WPF에서 Windows Forms 복합 컨트롤 호스팅](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)의 모양과 기능과 거의 동일 하 게 디자인 되었습니다. 주요 차이점은 호스팅 시나리오가 반대라는 점입니다.  
   

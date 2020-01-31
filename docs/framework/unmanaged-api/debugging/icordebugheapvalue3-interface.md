@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9c421bb0-e647-4b2d-a986-f3d578cc7f20
 topic_type:
 - apiref
-ms.openlocfilehash: b062faffc22e444bd4d3b4a0c67f2a08d7af3560
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ddfe8cee8fdbca910ffa4f6989b1359ae5f7b11f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131103"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794377"
 ---
 # <a name="icordebugheapvalue3-interface"></a>ICorDebugHeapValue3 인터페이스
 개체의 모니터 잠금 속성을 노출합니다. 이 인터페이스는 ICorDebugHeapValue 및 ICorDebugHeapValue2 인터페이스를 확장 합니다.  
@@ -28,8 +28,8 @@ ms.locfileid: "73131103"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[GetThreadOwningMonitorLock 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-getthreadowningmonitorlock-method.md)|이 개체에 대 한 모니터 잠금을 소유 하는 관리 되는 스레드를 반환 합니다.|  
-|[GetMonitorEventWaitList 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-getmonitoreventwaitlist-method.md)|모니터 잠금과 연결 된 이벤트에서 큐에 대기 중인 스레드의 순서 있는 목록을 제공 합니다.|  
+|[GetThreadOwningMonitorLock 메서드](icordebugheapvalue3-getthreadowningmonitorlock-method.md)|이 개체에 대 한 모니터 잠금을 소유 하는 관리 되는 스레드를 반환 합니다.|  
+|[GetMonitorEventWaitList 메서드](icordebugheapvalue3-getmonitoreventwaitlist-method.md)|모니터 잠금과 연결 된 이벤트에서 큐에 대기 중인 스레드의 순서 있는 목록을 제공 합니다.|  
   
 ## <a name="remarks"></a>주의  
   
@@ -47,5 +47,5 @@ ms.locfileid: "73131103"
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [디버깅 인터페이스](debugging-interfaces.md)
+- [디버깅](index.md)

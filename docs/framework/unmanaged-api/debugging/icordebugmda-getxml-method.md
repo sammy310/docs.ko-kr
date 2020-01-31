@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 29746b24-3766-4255-8813-0426c45e73e5
 topic_type:
 - apiref
-ms.openlocfilehash: f80bdffbf5c0ba39980bd27c6e89a368547340c0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cd1882bdfca1258889514a041726a59435e126b8
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129804"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793211"
 ---
 # <a name="icordebugmdagetxml-method"></a>ICorDebugMDA::GetXML 메서드
-[ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)로 표시 된 MDA (관리 디버깅 도우미)와 연결 된 전체 XML 스트림을 가져옵니다.  
+[ICorDebugMDA](icordebugmda-interface.md)로 표시 된 MDA (관리 디버깅 도우미)와 연결 된 전체 XML 스트림을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -60,5 +60,5 @@ HRESULT GetXML (
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugMDA 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
+- [ICorDebugMDA 인터페이스](icordebugmda-interface.md)
 - [관리 디버깅 도우미를 사용하여 오류 진단](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

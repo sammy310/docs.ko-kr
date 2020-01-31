@@ -2,12 +2,12 @@
 title: 독립형 진단 피드 샘플
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: 40e7e2b704204278e6a8754134a952b8235ee528
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 4520883b5db19c28544a5576ca600b83e37eede3
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716673"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787927"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>독립형 진단 피드 샘플
 이 샘플에서는 Windows Communication Foundation (WCF)를 사용 하 여 배포 하기 위해 RSS/Atom 피드를 만드는 방법을 보여 줍니다. 개체 모델의 기본 사항 및 Windows Communication Foundation (WCF) 서비스에서 설정 하는 방법을 보여 주는 기본적인 "Hello World" 프로그램입니다.  
@@ -45,55 +45,55 @@ WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http:/
   
  또는 IIS에서 호스트되는 .svc 파일 내에서 <xref:System.ServiceModel.Activation.WebServiceHostFactory>를 사용하여 동일한 기능을 제공할 수 있습니다(이 방법은 샘플 코드에서 설명하지 않음).  
   
-```  
-<%@ ServiceHost Language="C#|VB" Debug="true" Service="ProcessService" %>  
-```  
+```xml
+<%@ ServiceHost Language="C#|VB" Debug="true" Service="ProcessService" %>
+```
   
  이 서비스는 표준 HTTP GET을 사용하여 요청을 받기 때문에 RSS 또는 ATOM 인식 클라이언트를 사용하여 서비스에 액세스할 수 있습니다. 예를 들어 RSS 인식 브라우저에서 `http://localhost:8000/diagnostics/feed/?format=atom` 또는 `http://localhost:8000/diagnostics/feed/?format=rss`로 이동 하 여이 서비스의 출력을 볼 수 있습니다.
   
  또한 [WCF 배포 개체 모델이 Atom 및 RSS에 매핑되는 방법을](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md) 사용 하 여 배포 된 데이터를 읽고 명령적 코드를 사용 하 여 처리할 수 있습니다.  
   
-```csharp  
-XmlReader reader = XmlReader.Create( "http://localhost:8000/diagnostics/feed/?format=rss",  
-new XmlReaderSettings()  
-{  
-//MaxCharactersInDocument can be used to control the maximum amount of data   
-//read from the reader and helps prevent OutOfMemoryException  
-MaxCharactersInDocument = 1024 * 64  
-} );  
+```csharp
+XmlReader reader = XmlReader.Create( "http://localhost:8000/diagnostics/feed/?format=rss",
+    new XmlReaderSettings()
+    {
+        //MaxCharactersInDocument can be used to control the maximum amount of data
+        //read from the reader and helps prevent OutOfMemoryException
+        MaxCharactersInDocument = 1024 * 64
+    } );
+
+SyndicationFeed feed = SyndicationFeed.Load(reader);
+
+foreach (SyndicationItem i in feed.Items)
+{
+    XmlSyndicationContent content = i.Content as XmlSyndicationContent;
+    ProcessData pd = content.ReadContent<ProcessData>();
+
+    Console.WriteLine(i.Title.Text);
+    Console.WriteLine(pd.ToString());
+}
+```
   
-SyndicationFeed feed = SyndicationFeed.Load( reader );  
+## <a name="set-up-build-and-run-the-sample"></a>샘플 설정, 빌드 및 실행
   
-foreach (SyndicationItem i in feed.Items)  
-{  
-        XmlSyndicationContent content = i.Content as XmlSyndicationContent;  
-        ProcessData pd = content.ReadContent<ProcessData>();  
-  
-        Console.WriteLine(i.Title.Text);  
-        Console.WriteLine(pd.ToString());  
-}  
-```  
-  
-### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
-  
-1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)의 지침 설정에 설명 된 대로 컴퓨터에서 HTTP 및 HTTPS에 대 한 올바른 주소 등록 권한이 있는지 확인 합니다.  
-  
-2. 솔루션을 빌드합니다.  
-  
-3. 콘솔 애플리케이션을 실행합니다.  
-  
-4. 콘솔 응용 프로그램이 실행 되는 동안 RSS 인식 브라우저를 사용 하 여 `http://localhost:8000/diagnostics/feed/?format=atom` 또는 `http://localhost:8000/diagnostics/feed/?format=rss`로 이동 합니다.  
-  
+1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](one-time-setup-procedure-for-the-wcf-samples.md)의 지침 설정에 설명 된 대로 컴퓨터에서 HTTP 및 HTTPS에 대 한 올바른 주소 등록 권한이 있는지 확인 합니다.
+
+2. 솔루션을 빌드합니다.
+
+3. 콘솔 애플리케이션을 실행합니다.
+
+4. 콘솔 응용 프로그램이 실행 되는 동안 RSS 인식 브라우저를 사용 하 여 `http://localhost:8000/diagnostics/feed/?format=atom` 또는 `http://localhost:8000/diagnostics/feed/?format=rss`로 이동 합니다.
+
 > [!IMPORTANT]
-> 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
->   
-> `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
->   
-> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\DiagnosticsFeed`  
-  
+> 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.
+>
+> `<InstallDrive>:\WF_WCF_Samples`
+>
+> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+>
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\DiagnosticsFeed`
+
 ## <a name="see-also"></a>참조
 
-- [WCF 웹 HTTP 프로그래밍 모델](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [WCF 배포](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
+- [WCF 웹 HTTP 프로그래밍 모델](../feature-details/wcf-web-http-programming-model.md)
+- [WCF 배포](../feature-details/wcf-syndication.md)

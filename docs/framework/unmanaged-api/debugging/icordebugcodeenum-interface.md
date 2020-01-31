@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b5589171-a4a0-4c00-bbdc-6e0a42233b75
 topic_type:
 - apiref
-ms.openlocfilehash: f4baaf5e4f5117ee936fa6d758798c340551c48b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 127022fb8e9f9559ccb0f0c877d25db67eea3037
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121076"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784008"
 ---
 # <a name="icordebugcodeenum-interface"></a>ICorDebugCodeEnum 인터페이스
 
@@ -29,7 +29,7 @@ ms.locfileid: "73121076"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[Next 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugcodeenum-next-method.md)|현재 위치에서 시작 하 여 열거형에서 지정 된 수의 `ICorDebugCode` 인스턴스를 가져옵니다.|  
+|[Next 메서드](icordebugcodeenum-next-method.md)|현재 위치에서 시작 하 여 열거형에서 지정 된 수의 `ICorDebugCode` 인스턴스를 가져옵니다.|  
   
 ## <a name="remarks"></a>주의  
   
@@ -47,4 +47,4 @@ ms.locfileid: "73121076"
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 63a7d47a-0d54-4e29-9767-9f09feaa38b7
 topic_type:
 - apiref
-ms.openlocfilehash: 4518637eb47acf416a02c045f8ca6f8a90167277
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4380b8a3803e164aab7318821a9dbde32ecc3a0b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130782"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781748"
 ---
 # <a name="icordebugmanagedcallbackexitprocess-method"></a>ICorDebugManagedCallback::ExitProcess 메서드
 프로세스가 종료 되었음을 디버거에 알립니다.  
@@ -55,4 +55,4 @@ HRESULT ExitProcess (
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugManagedCallback 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback 인터페이스](icordebugmanagedcallback-interface.md)

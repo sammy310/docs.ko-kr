@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 57dbccd9-b16d-4da3-ae25-7a2cf9adf679
 topic_type:
 - apiref
-ms.openlocfilehash: 313f6649448653ad630d616c7dbf739653e352dc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b855a53c9e4303138d7605bdf108d37bb345b917
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132836"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789336"
 ---
 # <a name="cordebugguidtotypemapping-structure"></a>CorDebugGuidToTypeMapping 구조체
 Windows 런타임 GUID를 해당 ICorDebugType 개체에 매핑합니다.  
@@ -35,9 +35,9 @@ typedef struct CorDebugGuidToTypeMapping {
 } CorDebugGuidToTypeMapping;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-|멤버|설명|  
+|Member|설명|  
 |------------|-----------------|  
 |`iid`|캐시 된 Windows 런타임 형식의 GUID입니다.|  
 |`pType`|캐시 된 형식에 대 한 정보를 제공 하는 ICorDebugType 개체에 대 한 포인터입니다.|  
@@ -53,5 +53,5 @@ typedef struct CorDebugGuidToTypeMapping {
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 구조체](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [디버깅 구조체](debugging-structures.md)
+- [디버깅](index.md)

@@ -5,20 +5,20 @@ helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: 281afad0c0de856ca67abc74c65aff0e7afc3e01
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b406d539f2446824027e9462c8ecbe20c18cfb27
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976497"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794135"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>연습: 혼합 애플리케이션 지역화
 
-이 연습에서는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]기반 하이브리드 응용 프로그램에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 요소를 지역화 하는 방법을 보여 줍니다.
+이 연습에서는 Windows Forms 기반 하이브리드 응용 프로그램에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 요소를 지역화 하는 방법을 보여 줍니다.
 
 이 연습에서 설명하는 작업은 다음과 같습니다.
 
-- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 호스트 프로젝트를 만듭니다.
+- Windows Forms 호스트 프로젝트를 만듭니다.
 
 - 지역화 가능한 콘텐츠 추가.
 
@@ -32,7 +32,7 @@ ms.locfileid: "73976497"
 
 위의 작업을 완료하면 지역화된 하이브리드 애플리케이션이 구현됩니다.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>전제 조건
 
 이 연습을 완료하려면 다음 구성 요소가 필요합니다.
 
@@ -40,7 +40,7 @@ ms.locfileid: "73976497"
 
 ## <a name="creating-the-windows-forms-host-project"></a>Windows Forms 호스트 프로젝트 만들기
 
-첫 번째 단계는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 응용 프로그램 프로젝트를 만들고 지역화할 내용이 포함 된 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 요소를 추가 하는 것입니다.
+첫 번째 단계는 Windows Forms 응용 프로그램 프로젝트를 만들고 지역화할 내용이 포함 된 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 요소를 추가 하는 것입니다.
 
 ### <a name="to-create-the-host-project"></a>호스트 프로젝트 만들기
 
@@ -48,11 +48,11 @@ ms.locfileid: "73976497"
 
 2. `SimpleControl` 이라는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.UserControl> 요소를 프로젝트에 추가 합니다.
 
-3. <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤을 사용 하 여 폼에 `SimpleControl` 요소를 넣습니다. 자세한 내용은 [연습: Windows Forms에서 3 차원 WPF 복합 컨트롤 호스팅](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)을 참조 하세요.
+3. <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤을 사용 하 여 폼에 `SimpleControl` 요소를 넣습니다. 자세한 내용은 [연습: Windows Forms에서 3-D WPF 복합 컨트롤 호스팅](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)합니다.
 
 ## <a name="adding-localizable-content"></a>지역화 가능한 콘텐츠 추가
 
-다음으로 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 레이블 컨트롤을 추가 하 고 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 요소의 콘텐츠를 지역화 가능한 문자열로 설정 합니다.
+다음으로 Windows Forms 레이블 컨트롤을 추가 하 고 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 요소의 콘텐츠를 지역화 가능한 문자열로 설정 합니다.
 
 ### <a name="to-add-localizable-content"></a>지역화 가능한 콘텐츠를 추가하려면
 

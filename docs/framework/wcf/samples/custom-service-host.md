@@ -2,12 +2,12 @@
 title: 사용자 지정 서비스 호스트
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: 86dd8c5cebfb8ea6f9a2b95f7698362eb34c1a7c
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 271233015739024428a7a29815f66278c9d7aa04
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716796"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789936"
 ---
 # <a name="custom-service-host"></a>사용자 지정 서비스 호스트
 이 샘플에서는 <xref:System.ServiceModel.ServiceHost> 클래스의 사용자 지정 파생 항목을 사용하여 서비스의 런타임 동작을 변경하는 방법을 보여 줍니다. 이 접근 방식을 사용하면 일반적인 방법으로 여러 서비스를 구성하는 대신 재사용 가능한 대체 방법이 제공됩니다. 또한 샘플에서는 <xref:System.ServiceModel.Activation.ServiceHostFactory> 클래스를 사용하여 IIS(인터넷 정보 서비스) 또는 WAS(Windows Process Activation Service) 호스팅 환경에서 사용자 지정 ServiceHost를 사용하는 방법을 보여 줍니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "74716796"
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Hosting\CustomServiceHost`  
   
-## <a name="about-the-scenario"></a>시나리오 정보  
+## <a name="about-the-scenario"></a>시나리오 정보
  잠재적으로 중요 한 서비스 메타 데이터가 실수로 공개 되지 않도록 하기 위해 WCF (Windows Communication Foundation) 서비스의 기본 구성에서는 메타 데이터 게시를 사용 하지 않도록 설정 합니다. 이 동작은 기본적으로 안전하지만 구성에서 서비스의 메타데이터 게시 동작이 명시적으로 사용하도록 설정되어 있지 않은 경우 Svcutil.exe 등의 메타데이터 가져오기 도구를 사용하여 서비스를 호출하는 데 필요한 클라이언트 코드를 생성할 수 없습니다.  
   
  여러 서비스에 메타데이터 게시를 사용하도록 설정하면 각각의 개별 서비스에 동일한 구성 요소가 추가되어 기본적으로 동일한 구성 정보가 많이 생성될 수 있습니다. 각 서비스를 개별적으로 구성하는 대신 메타데이터 게시를 한 번 사용한 다음 여러 가지 다른 서비스에서 해당 코드를 다시 사용하도록 하는 명령 코드를 작성할 수 있습니다. 이 작업은 새 클래스를 만들어 수행합니다. 새 클래스는 <xref:System.ServiceModel.ServiceHost>에서 파생되며 `ApplyConfiguration`() 메서드를 재정의하여 메타데이터 게시 동작을 명령적으로 추가합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "74716796"
 > [!IMPORTANT]
 > 쉽게 구별할 수 있도록 이 샘플에서는 보안이 설정되지 않은 메타데이터 게시 엔드포인트를 만드는 방법을 보여 줍니다. 이러한 엔드포인트는 인증되지 않은 익명의 소비자가 사용할 수 있으므로 이러한 엔드포인트를 배포하기 전에 서비스의 메타데이터를 공개하는 것이 적절한지 주의를 기울여야 합니다.  
   
-## <a name="implementing-a-custom-servicehost"></a>사용자 지정 ServiceHost 구현  
+## <a name="implementing-a-custom-servicehost"></a>사용자 지정 ServiceHost 구현
  <xref:System.ServiceModel.ServiceHost> 클래스는 상속자가 서비스의 런타임 동작을 변경하기 위해 재정의할 수 있는 여러 가지 유용한 가상 메서드를 노출합니다. 예를 들어, `ApplyConfiguration`() 메서드는 구성 저장소에서 서비스 구성 정보를 읽고 그에 따라 호스트의 <xref:System.ServiceModel.Description.ServiceDescription>을 변경합니다. 기본 구현에서는 애플리케이션의 구성 파일에서 구성을 읽습니다. 사용자 지정 구현에서는 명령 코드를 사용하여 `ApplyConfiguration`을 추가로 변경하거나 기본 구성 저장소를 완전히 바꾸도록 <xref:System.ServiceModel.Description.ServiceDescription>()을 재정의할 수 있습니다. 예를 들어, 애플리케이션의 구성 파일 대신 데이터베이스에서 서비스의 엔드포인트 구성을 읽을 수 있습니다.  
   
  이 샘플에서는 메타데이터 게시를 사용하도록 설정하는 ServiceMetadataBehavior가 서비스의 구성 파일에 명시적으로 추가되지 않은 경우에도 이 동작을 추가하는 사용자 지정 ServiceHost를 빌드합니다. <xref:System.ServiceModel.ServiceHost>에서 상속되며 `ApplyConfiguration`()을 재정의하는 새 클래스를 만들어 이 작업을 수행합니다.  
@@ -145,35 +145,35 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
   
  서비스 구현에서 사용자 지정 팩터리를 사용하려면 서비스의 .svc 파일에 일부 메타데이터를 추가해야 합니다.  
   
-```  
-<%@ServiceHost Service="Microsoft.ServiceModel.Samples.CalculatorService"  
-               Factory="Microsoft.ServiceModel.Samples.SelfDescribingServiceHostFactory"  
-               language=c# Debug="true" %>  
-```  
+```xml
+<%@ServiceHost Service="Microsoft.ServiceModel.Samples.CalculatorService"
+               Factory="Microsoft.ServiceModel.Samples.SelfDescribingServiceHostFactory"
+               language=c# Debug="true" %>
+```
   
  여기서는 `Factory` 지시문에 추가 `@ServiceHost` 특성을 추가하고 사용자 지정 팩터리의 CLR 형식 이름을 특성의 값으로 전달했습니다. IIS 또는 WAS에서이 서비스에 대 한 메시지를 받으면 WCF 호스팅 인프라는 먼저 ServiceHostFactory의 인스턴스를 만든 다음 `ServiceHostFactory.CreateServiceHost()`를 호출 하 여 서비스 호스트 자체를 인스턴스화합니다.  
   
 ## <a name="running-the-sample"></a>샘플 실행  
  이 샘플에서는 완전한 기능을 갖춘 클라이언트 및 서비스 구현을 제공하지만 샘플의 핵심은 사용자 지정 호스트를 사용하여 서비스의 런타임 동작을 변경하는 방법을 보여 주는 것이므로 다음 단계를 수행합니다.  
   
-#### <a name="to-observe-the-effect-of-the-custom-host"></a>사용자 지정 호스트의 효과를 확인하려면  
+### <a name="observe-the-effect-of-the-custom-host"></a>사용자 지정 호스트의 효과를 관찰 합니다.
   
-1. 서비스의 Web.config 파일을 열고 서비스에서 메타데이터를 사용하도록 명시적으로 설정하는 구성이 없는지 확인합니다.  
+1. 서비스의 Web.config 파일을 열고 서비스에 대 한 메타 데이터를 명시적으로 사용 하도록 설정 하는 구성이 없는지 확인 합니다.  
   
 2. 서비스의 .svc 파일을 열고 해당 @ServiceHost 지시문에 사용자 지정 ServiceHostFactory의 이름을 지정 하는 팩터리 특성이 포함 되어 있는지 확인 합니다.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
+### <a name="set-up-build-and-run-the-sample"></a>샘플 설정, 빌드 및 실행
   
-1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.  
-  
-2. 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따르세요.  
-  
-3. 솔루션이 빌드된 후에는 Setup.exe를 실행 하 여 IIS 7.0에서 ServiceModelSamples 응용 프로그램을 설정 합니다. 이제 ServiceModelSamples 디렉터리가 IIS 7.0 응용 프로그램으로 표시 됩니다.  
-  
-4. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.  
-  
-5. IIS 7.0 응용 프로그램을 제거 하려면 Cleanup을 실행 합니다.  
-  
+1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.
+
+2. 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](building-the-samples.md)의 지침을 따르세요.
+
+3. 솔루션이 빌드된 후에는 Setup.exe를 실행 하 여 IIS 7.0에서 ServiceModelSamples 응용 프로그램을 설정 합니다. 이제 ServiceModelSamples 디렉터리가 IIS 7.0 응용 프로그램으로 표시 됩니다.
+
+4. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](running-the-samples.md)의 지침을 따르세요.
+
+5. IIS 7.0 응용 프로그램을 제거 하려면 *Cleanup*을 실행 합니다.
+
 ## <a name="see-also"></a>참조
 
-- [방법: IIS에서 WCF 서비스 호스트](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [방법: IIS에서 WCF 서비스 호스트](../feature-details/how-to-host-a-wcf-service-in-iis.md)

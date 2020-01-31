@@ -2,12 +2,12 @@
 title: ICorDebugProcess6::GetCode 메서드
 ms.date: 03/30/2017
 ms.assetid: faa538c2-60c9-4064-b996-1b4c24ebd751
-ms.openlocfilehash: fc7fecc3f523d7992bd57e2f7d485648caa6df8e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1588728f486ffb3db583439de05aff34e3dc59f8
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123477"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792275"
 ---
 # <a name="icordebugprocess6getcode-method"></a>ICorDebugProcess6::GetCode 메서드
 특정 코드 주소에서 관리 코드에 대한 정보를 가져옵니다.  
@@ -43,5 +43,5 @@ HRESULT GetCode(
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugProcess6 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugProcess6 인터페이스](icordebugprocess6-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

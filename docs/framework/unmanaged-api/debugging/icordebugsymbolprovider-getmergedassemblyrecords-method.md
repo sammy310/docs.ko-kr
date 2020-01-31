@@ -1,15 +1,15 @@
 ---
-title: 'ICorDebugSymbolProvider:: GetMergedAssemblyRecords 메서드'
+title: ICorDebugSymbolProvider::GetMergedAssemblyRecords 메서드
 ms.date: 03/30/2017
 ms.assetid: cc4c510d-550d-4941-af34-81987caf3425
-ms.openlocfilehash: 6faf8960c06488c8fff5a076aae375529e1d0260
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6a537a88bd4ab666eff8b5dda994da96bfcc5e52
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138868"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791620"
 ---
-# <a name="icordebugsymbolprovidergetmergedassemblyrecords-method"></a>ICorDebugSymbolProvider:: GetMergedAssemblyRecords 메서드
+# <a name="icordebugsymbolprovidergetmergedassemblyrecords-method"></a>ICorDebugSymbolProvider::GetMergedAssemblyRecords 메서드
 모든 병합된 어셈블리에 대한 기호 레코드를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -30,7 +30,7 @@ HRESULT GetMergedAssemblyRecords(
  [out] 메서드에 의해 검색되는 기호 레코드 수에 대한 포인터입니다.  
   
  `pRecords`  
- [ICorDebugMergedAssemblyRecord](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md) 개체의 배열에 대 한 포인터입니다.  
+ [ICorDebugMergedAssemblyRecord](icordebugmergedassemblyrecord-interface.md) 개체의 배열에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>주의  
   
@@ -48,5 +48,5 @@ HRESULT GetMergedAssemblyRecords(
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugSymbolProvider 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugSymbolProvider 인터페이스](icordebugsymbolprovider-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e06fc19d-2cf4-4cad-81a3-137a68af8969
 topic_type:
 - apiref
-ms.openlocfilehash: ec265525d01dab0669939569501fce91b500a900
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8be7c0e32f6183deb354d8b3936ef55c2520fe9f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127499"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788616"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>ICorDebugHeapValue3::GetThreadOwningMonitorLock 메서드
 이 개체에 대 한 모니터 잠금을 소유 하는 관리 되는 스레드를 반환 합니다.  
@@ -46,7 +46,7 @@ HRESULT GetThreadOwningMonitorLock (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|메서드가 완료되었습니다.|  
+|S_OK|메서드가 성공적으로 완료되었습니다.|  
 |S_FALSE|이 개체에 대 한 모니터 잠금을 소유 하는 관리 되는 스레드가 없습니다.|  
   
 ## <a name="exceptions"></a>예외  
@@ -58,7 +58,7 @@ HRESULT GetThreadOwningMonitorLock (
   
 - 스레드 개체는 스레드가 종료 될 때까지 유효 합니다.  
   
- 관리 되는 스레드가이 개체에 대 한 모니터 잠금을 소유 하지 않는 경우 `ppThread` 및 `pAcquisitionCount` 변경 되지 않으며 메서드에서 S_FALSE를 반환 합니다.  
+ 관리 되는 스레드가이 개체에 대 한 모니터 잠금을 소유 하지 않는 경우 `ppThread` 및 `pAcquisitionCount` 변경 되지 않으며 메서드에서 S_FALSE을 반환 합니다.  
   
  `ppThread` 또는 `pAcquisitionCount`가 유효한 포인터가 아닌 경우 결과가 정의 되지 않습니다.  
   
@@ -75,5 +75,5 @@ HRESULT GetThreadOwningMonitorLock (
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [디버깅 인터페이스](debugging-interfaces.md)
+- [디버깅](index.md)

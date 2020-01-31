@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, Scroll Bar
 - Scroll Bar control type
 ms.assetid: 329891d7-b609-49e6-920a-09ea8a627d07
-ms.openlocfilehash: 7a8371f46bb81410b653a7ba830605ec11c5b7f3
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 44810d89d376da193037bf4d3233de72426e0350
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741165"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76786087"
 ---
 # <a name="ui-automation-support-for-the-scrollbar-control-type"></a>ScrollBar 컨트롤 형식에 대한 UI 자동화 지원
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741165"
   
  스크롤 막대 컨트롤을 통해 사용자가 창 또는 항목 컨테이너 내에서 내용을 스크롤할 수 있습니다. 컨트롤은 단추와 Thumb 컨트롤 집합으로 이루어져 있습니다.  
   
- 다음 섹션에서는 ScrollBar 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 또는 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]있는지 여부에 관계 없이 모든 목록 컨트롤에 적용 됩니다.  
+ 다음 섹션에서는 ScrollBar 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 또는 Windows Forms 있는지 여부에 관계 없이 모든 목록 컨트롤에 적용 됩니다.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>필요한 UI 자동화 트리 구조  

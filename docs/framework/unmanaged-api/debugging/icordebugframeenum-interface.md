@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ee3f85d3-044e-46b8-945c-93ebfa5d9e91
 topic_type:
 - apiref
-ms.openlocfilehash: 3a33d25ee13e12a2612d0132da1dc84c24f2f95b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6cc1ef5f778902efaa53156fbefe334046c82114
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090535"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794531"
 ---
 # <a name="icordebugframeenum-interface"></a>ICorDebugFrameEnum 인터페이스
 
@@ -29,7 +29,7 @@ ICorDebugEnum 메서드를 구현 하 고 ICorDebugFrame 배열을 열거 합니
   
 |메서드|설명|  
 |------------|-----------------|  
-|[Next 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugframeenum-next-method.md)|현재 위치에서 시작 하 여 열거형에서 지정 된 수의 `ICorDebugFrame` 인스턴스를 가져옵니다.|  
+|[Next 메서드](icordebugframeenum-next-method.md)|현재 위치에서 시작 하 여 열거형에서 지정 된 수의 `ICorDebugFrame` 인스턴스를 가져옵니다.|  
   
 ## <a name="remarks"></a>주의  
   
@@ -47,4 +47,4 @@ ICorDebugEnum 메서드를 구현 하 고 ICorDebugFrame 배열을 열거 합니
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

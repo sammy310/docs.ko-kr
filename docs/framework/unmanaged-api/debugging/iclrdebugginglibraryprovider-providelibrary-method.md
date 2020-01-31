@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 86f06245-9517-49be-8d8c-ca5deaf34c02
 topic_type:
 - apiref
-ms.openlocfilehash: 8fc2abd0728115edbbfae42958d8013029523ed1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d0c283232ff8eca1af9f3ff4448fb7f4c81d554f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73111366"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789030"
 ---
 # <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a>ICLRDebuggingLibraryProvider::ProvideLibrary 메서드
 
@@ -56,13 +56,13 @@ HRESULT ProvideLibrary(
 
 |HRESULT|설명|
 |-------------|-----------------|
-|S_OK|메서드가 완료되었습니다.|
+|S_OK|메서드가 성공적으로 완료되었습니다.|
 
 ## <a name="exceptions"></a>예외
 
 ## <a name="remarks"></a>주의
 
-`ProvideLibrary`를 사용 하면 디버거가 mscordbi.dll 및 mscordacwks와 같은 특정 CLR 파일을 디버깅 하는 데 필요한 모듈을 제공할 수 있습니다. [ICLRDebugging:: CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) 메서드를 호출할 때까지 모듈 핸들은 유효한 상태로 유지 되어야 합니다 .이 경우에는 호출자가 핸들을 해제할 책임이 있습니다.
+`ProvideLibrary`를 사용 하면 디버거가 mscordbi.dll 및 mscordacwks와 같은 특정 CLR 파일을 디버깅 하는 데 필요한 모듈을 제공할 수 있습니다. [ICLRDebugging:: CanUnloadNow](iclrdebugging-canunloadnow-method.md) 메서드를 호출할 때까지 모듈 핸들은 유효한 상태로 유지 되어야 합니다 .이 경우에는 호출자가 핸들을 해제할 책임이 있습니다.
 
 디버거는 사용 가능한 모든 방법을 사용 하 여 디버깅 모듈을 찾거나 사용할 수 있습니다.
 
@@ -83,5 +83,5 @@ HRESULT ProvideLibrary(
 
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [디버깅 인터페이스](debugging-interfaces.md)
+- [디버깅](index.md)

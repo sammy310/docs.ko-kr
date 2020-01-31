@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 84296b55-c2c5-424c-ac9c-8e28e2895945
 topic_type:
 - apiref
-ms.openlocfilehash: 5a957a042875b546a18a17422f355b712756e91c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 15572037940f7c45ec5dcb7e34599756e15fd3bd
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73098164"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793906"
 ---
 # <a name="cordebughandletype-enumeration"></a>CorDebugHandleType 열거형
 핸들 형식을 나타냅니다.  
@@ -33,9 +33,9 @@ typedef enum CorDebugHandleType {
 } CorDebugHandleType;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-|멤버|설명|  
+|Member|설명|  
 |------------|-----------------|  
 |`HANDLE_STRONG`|핸들이 강력 하므로 가비지 수집에 의해 개체가 회수 되지 않습니다.|  
 |`HANDLE_WEAK_TRACK_RESURRECTION`|핸들은 weak 이며 가비지 수집에 의해 개체가 회수 되는 것을 방지 하지 않습니다.<br /><br /> 개체를 수집 하면 핸들이 무효화 됩니다.|  
@@ -51,4 +51,4 @@ typedef enum CorDebugHandleType {
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 열거형](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [디버깅 열거형](debugging-enumerations.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 68e20e62-203d-46d8-bb91-8d3c61cfacc3
 topic_type:
 - apiref
-ms.openlocfilehash: 7edf0065fa7eb39dada167a682f2b634a438f1f3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7685d1b6d5458a4405fc5a4abdb2f3134618f01c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138406"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794409"
 ---
 # <a name="icordebugheapvalueisvalid-method"></a>ICorDebugHeapValue::IsValid 메서드
 이 ICorDebugHeapValue 나타내는 개체가 유효한 지 여부를 나타내는 값을 가져옵니다.  
@@ -42,7 +42,7 @@ HRESULT IsValid (
 ## <a name="remarks"></a>주의  
  가비지 수집기에서 회수 한 값이 잘못 되었습니다.  
   
- 이 메서드는 사용되지 않습니다. .NET Framework 2.0에서 모든 값은 [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) 가 호출 될 때까지 유효 하며, 이때 값이 무효화 됩니다.  
+ 이 메서드는 사용되지 않습니다. .NET Framework 2.0에서 모든 값은 [ICorDebugController:: Continue](icordebugcontroller-continue-method.md) 가 호출 될 때까지 유효 하며, 이때 값이 무효화 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  

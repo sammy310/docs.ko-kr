@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 678f89f9-cce7-46d1-af87-5e989abaa93c
 topic_type:
 - apiref
-ms.openlocfilehash: 49d0015e9d8390a47aae7ce497dd431dfe743c36
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fdaad46b739721ff95b712d4b6461a793ae0a480
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138675"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791427"
 ---
 # <a name="icordebugthread2-interface"></a>ICorDebugThread2 인터페이스
 ICorDebugThread 인터페이스에 대 한 논리적 확장으로 사용 됩니다.  
@@ -28,11 +28,11 @@ ICorDebugThread 인터페이스에 대 한 논리적 확장으로 사용 됩니�
   
 |메서드|설명|  
 |------------|-----------------|  
-|[GetActiveFunctions 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md)|스레드의 프레임에서 활성 함수에 대 한 데이터를 포함 하는 COR_ACTIVE_FUNCTION instances의 배열을 가져옵니다.|  
-|[GetConnectionID 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getconnectionid-method.md)|이 `ICorDebugThread2`에 대 한 연결 식별자를 가져옵니다.|  
-|[GetTaskID 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-gettaskid-method.md)|이 `ICorDebugThread2`에 대 한 작업 식별자를 가져옵니다.|  
-|[GetVolatileOSThreadID 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getvolatileosthreadid-method.md)|이 `ICorDebugThread2`에 대 한 운영 체제 스레드 식별자를 가져옵니다.|  
-|[InterceptCurrentException 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-interceptcurrentexception-method.md)|디버거가 스레드의 현재 예외를 가로챌 수 있도록 허용 합니다.|  
+|[GetActiveFunctions 메서드](icordebugthread2-getactivefunctions-method.md)|스레드의 프레임에 있는 활성 함수에 대 한 데이터를 포함 하는 COR_ACTIVE_FUNCTION 인스턴스의 배열을 가져옵니다.|  
+|[GetConnectionID 메서드](icordebugthread2-getconnectionid-method.md)|이 `ICorDebugThread2`에 대 한 연결 식별자를 가져옵니다.|  
+|[GetTaskID 메서드](icordebugthread2-gettaskid-method.md)|이 `ICorDebugThread2`에 대 한 작업 식별자를 가져옵니다.|  
+|[GetVolatileOSThreadID 메서드](icordebugthread2-getvolatileosthreadid-method.md)|이 `ICorDebugThread2`에 대 한 운영 체제 스레드 식별자를 가져옵니다.|  
+|[InterceptCurrentException 메서드](icordebugthread2-interceptcurrentexception-method.md)|디버거가 스레드의 현재 예외를 가로챌 수 있도록 허용 합니다.|  
   
 ## <a name="remarks"></a>주의  
   
@@ -50,4 +50,4 @@ ICorDebugThread 인터페이스에 대 한 논리적 확장으로 사용 됩니�
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

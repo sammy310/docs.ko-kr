@@ -9,100 +9,100 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: 67698a0a45bdf84d36603cd1309a8dd5bce2f895
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9f97639447284b792d52cf4aa25b81f584d7291a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598840"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787898"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>WindowsFormsHost 요소에 대한 레이아웃 고려 사항
-이 항목에 설명 하는 방법을 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소와 상호 작용 하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 레이아웃 시스템입니다.  
+이 항목에서는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소가 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 레이아웃 시스템과 상호 작용 하는 방법에 대해 설명 합니다.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 폼 또는 페이지에 요소 배치 및 크기 조정에 대 한 다르지만, 비슷한 논리를 지원 합니다. 하이브리드 사용자 인터페이스 (UI)를 만들 때 해당 호스트 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 두 레이아웃 스키마를 통합 하는 요소입니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 Windows Forms는 폼 또는 페이지의 크기를 조정 하 고 위치를 지정 하는 것과 유사한 논리를 지원 합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 Windows Forms 컨트롤을 호스트 하는 하이브리드 UI (사용자 인터페이스)를 만들 때 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소는 두 가지 레이아웃 체계를 통합 합니다.  
   
-## <a name="differences-in-layout-between-wpf-and-windows-forms"></a>WPF 및 Windows Forms 간의 레이아웃 차이점  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 해상도 레이아웃이 사용 됩니다. 모든 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 레이아웃 크기를 사용 하 여 지정 된 *장치 독립적 픽셀*합니다. 장치 독립적 픽셀 1/96 인치 크기 및 해상도 독립적인 이므로 72 dpi 모니터 또는 19200 dpi 프린터를 렌더링 하는 여부에 관계 없이 비슷한 결과 표시 합니다.  
+## <a name="differences-in-layout-between-wpf-and-windows-forms"></a>WPF와 Windows Forms 간의 레이아웃 차이  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 해상도 독립적 레이아웃을 사용 합니다. 모든 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 레이아웃 차원은 *장치 독립적 픽셀*을 사용 하 여 지정 됩니다. 장치 독립적 픽셀은 크기 및 해상도에 구애 받지 않는 1 인치의 90-6입니다. 따라서 72 dpi 모니터 또는 19200 dpi 프린터로 렌더링 하는지 여부에 관계 없이 비슷한 결과를 얻을 수 있습니다.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기준으로 *동적 레이아웃*합니다. 이 UI 요소를 폼 이나 내용을, 해당 부모 레이아웃 컨테이너 및 사용 가능한 화면 크기에 따라 페이지에서 자체 정렬를 의미 합니다. 동적 레이아웃 자동으로 포함 된 문자열 길이 변경 하는 경우 UI 요소의 위치와 크기를 조정 하 여 지역화를 용이해 집니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 *동적 레이아웃*을 기반으로 합니다. 즉, UI 요소는 콘텐츠, 부모 레이아웃 컨테이너 및 사용 가능한 화면 크기에 따라 폼 이나 페이지에 정렬 됩니다. 동적 레이아웃은 문자열이 변경 길이를 포함 하는 경우 UI 요소의 크기와 위치를 자동으로 조정 하 여 지역화를 용이 하 게 합니다.  
   
- 레이아웃에 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 이며 장치 종속적 정적일 가능성이 있습니다. 일반적으로 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 하드웨어 픽셀 단위로 지정 된 차원을 사용 하 여 폼에 컨트롤 절대적으로 배치 됩니다. 그러나 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 다음 표에 요약 된 것 처럼 일부 동적 레이아웃 기능을 지 원하는지 않습니다.  
+ Windows Forms 레이아웃은 장치에 따라 다르며 정적일 가능성이 높습니다. 일반적으로 Windows Forms 컨트롤은 하드웨어 픽셀에 지정 된 차원을 사용 하 여 폼에 배치 됩니다. 그러나 Windows Forms는 다음 표에 요약 된 것 처럼 몇 가지 동적 레이아웃 기능을 지원 합니다.  
   
 |레이아웃 기능|설명|  
 |--------------------|-----------------|  
-|자동 크기 조정|일부 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤의 콘텐츠를 올바르게 표시 하는 자체 크기를 조정 합니다. 자세한 내용은 [AutoSize 속성 개요](../../winforms/controls/autosize-property-overview.md)합니다.|  
-|고정 및 도킹|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤 위치 및 크기 조정 기준으로 부모 컨테이너를 지원 합니다. 자세한 내용은 <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> 및 <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>를 참조하세요.|  
-|자동 크기 조정|컨테이너 컨트롤의 자체 및 출력 장치 또는 기본 컨테이너 글꼴의 픽셀에서 크기, 해상도에 따라 해당 자식 항목 크기를 조정 합니다. 자세한 내용은 [Windows Forms의 자동 크기 조정을](../../winforms/automatic-scaling-in-windows-forms.md)합니다.|  
-|레이아웃 컨테이너|합니다 <xref:System.Windows.Forms.FlowLayoutPanel> 고 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤 해당 자식 컨트롤을 정렬 하 고 해당 내용에 따라 자체 크기입니다.|  
+|자동 크기 조정|일부 Windows Forms 컨트롤의 크기를 조정 하면 해당 내용이 제대로 표시 됩니다. 자세한 내용은 [AutoSize 속성 개요](../../winforms/controls/autosize-property-overview.md)를 참조 하세요.|  
+|고정 및 도킹|Windows Forms 컨트롤은 부모 컨테이너를 기반으로 위치 지정 및 크기 조정을 지원 합니다. 자세한 내용은 <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> 및 <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>을 참조하세요.|  
+|배율이|컨테이너 컨트롤은 출력 장치의 해상도 또는 기본 컨테이너 글꼴의 크기 (픽셀 단위)에 따라 자신과 자식 항목의 크기를 조정 합니다. 자세한 내용은 [Windows Forms 자동 크기 조정](../../winforms/automatic-scaling-in-windows-forms.md)을 참조 하세요.|  
+|레이아웃 컨테이너|<xref:System.Windows.Forms.FlowLayoutPanel> 및 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤은 자식 컨트롤을 정렬 하 고 내용에 따라 크기를 조정 합니다.|  
   
-## <a name="layout-limitations"></a>레이아웃 제한 사항  
- 일반적으로 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤 없으며 확장에서 가능한 범위까지 변환 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]합니다. 다음과 같은 알려진된 제한 사항을 설명 할 때 합니다 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소는 호스 티 드 통합 하려고 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤을 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 레이아웃 시스템.  
+## <a name="layout-limitations"></a>레이아웃 제한  
+ 일반적으로 Windows Forms 컨트롤의 크기를 조정 하 고 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]가능한 범위로 변환할 수 없습니다. 다음 목록에서는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소가 호스팅된 Windows Forms 컨트롤을 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 레이아웃 시스템에 통합 하려고 할 때 알려진 제한 사항을 설명 합니다.  
   
-- 경우에 따라 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤은 크기를 조정할 수 없거나 특정 차원으로만 크기를 조정할 수 있습니다. 예를 들어, 한 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.ComboBox> 컨트롤은 컨트롤의 글꼴 크기에 의해 정의 된 단일 높이 지원 합니다. 에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 여기서 요소가 세로로 확장 될 수, 호스트 된 동적 레이아웃 <xref:System.Windows.Forms.ComboBox> 예상 대로 컨트롤이 늘어나지 것입니다.  
+- 경우에 따라 Windows Forms 컨트롤의 크기를 조정할 수 없거나 특정 차원 으로만 크기를 조정할 수 있습니다. 예를 들어 Windows Forms <xref:System.Windows.Forms.ComboBox> 컨트롤은 컨트롤의 글꼴 크기에 따라 정의 되는 단일 높이도 지원 합니다. 요소가 세로로 확장 될 수 있는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 동적 레이아웃에서 호스팅된 <xref:System.Windows.Forms.ComboBox> 컨트롤은 예상 대로 확장 되지 않습니다.  
   
-- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤을 회전하거나 기울일 수 없습니다. 합니다 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소를 발생 시킵니다는 <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> 기울이기, 회전 변환을 적용 하는 경우에 이벤트입니다. 처리 하지 않는 경우는 <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> 이벤트는 <xref:System.InvalidOperationException> 발생 합니다.  
+- Windows Forms 컨트롤은 회전 하거나 기울일 수 없습니다. 기울이기 또는 회전 변환을 적용 하면 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소가 <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> 이벤트를 발생 시킵니다. <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> 이벤트를 처리 하지 않으면 <xref:System.InvalidOperationException> 발생 합니다.  
   
-- 대부분의 경우 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤에 서는 비례하여 크기 조정을 지원하지 않습니다. 컨트롤의 전체 크기는 조정할 수 있지만, 컨트롤의 구성 요소와 자식 컨트롤의 크기가 예상대로 조정되지 않을 수 있습니다. 이 제한 사항은 각 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤에서 얼마나 효과적으로 크기 조정을 지원하는지에 따라 달라집니다. 또한 확장할 수 없으며 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 0 픽셀의 크기로 컨트롤입니다.  
+- 대부분의 경우 Windows Forms 컨트롤은 비례 크기 조정을 지원 하지 않습니다. 컨트롤의 전체 크기는 조정할 수 있지만, 컨트롤의 구성 요소와 자식 컨트롤의 크기가 예상대로 조정되지 않을 수 있습니다. 이러한 제한 사항은 각 Windows Forms 컨트롤이 크기 조정을 얼마나 잘 지원 하는지에 따라 달라 집니다. 또한 Windows Forms 컨트롤을 0 픽셀 크기로 축소할 수 없습니다.  
   
-- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤에 나타나는 양식을 자동으로 조정할지 자체 및 해당 컨트롤의 글꼴 크기에 따라 자동 크기 조정을 지원 합니다. 개별 요소의 크기는 동적으로 조정할 수 있지만 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 사용자 인터페이스에서 글꼴 크기를 변경해도 전체 레이아웃의 크기는 조정되지 않습니다.  
+- Windows Forms 컨트롤은 자동 크기 조정을 지원 합니다 .이를 통해 폼은 글꼴 크기에 따라 자동으로 크기를 조정 하 고 컨트롤의 크기를 조정 합니다. 개별 요소의 크기는 동적으로 조정할 수 있지만 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 사용자 인터페이스에서 글꼴 크기를 변경해도 전체 레이아웃의 크기는 조정되지 않습니다.  
   
 ### <a name="z-order"></a>Z 순서  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 사용자 인터페이스에서 겹치는 동작을 제어하기 위해 요소의 z 순서를 변경할 수 있습니다. 호스팅된 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤은 개별 HWND에서 그려지므로 항상 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 요소 위에 그려집니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 사용자 인터페이스에서 겹치는 동작을 제어하기 위해 요소의 z 순서를 변경할 수 있습니다. 호스팅된 Windows Forms 컨트롤은 별도의 HWND로 그려지며 항상 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 요소 위에 그려집니다.  
   
- 호스팅된 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 하나를 기반으로 컨트롤을 그리면도 <xref:System.Windows.Documents.Adorner> 요소입니다.  
+ 호스팅된 Windows Forms 컨트롤은 <xref:System.Windows.Documents.Adorner> 요소 위에도 그려집니다.  
   
 ## <a name="layout-behavior"></a>레이아웃 동작  
- 다음 섹션을 호스팅할 때 레이아웃 동작의 특정 측면을 설명 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]합니다.  
+ 다음 섹션에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 Windows Forms 컨트롤을 호스팅할 때 레이아웃 동작의 특정 측면에 대해 설명 합니다.  
   
 ### <a name="scaling-unit-conversion-and-device-independence"></a>크기 조정, 단위 변환 및 장치 독립성  
- 때마다를 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 관련 된 작업을 수행 하는 요소 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 차원 좌표 두 개가 포함 된:에 대 한 장치 독립적 픽셀 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에 대 한 하드웨어 픽셀 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]합니다. 따라서 일관 된 레이아웃을 달성 하기 위해 적절 한 단위 및 배율 변환을 적용 해야 합니다.  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 Windows Forms 차원과 관련 된 작업을 수행할 때마다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 하드웨어 픽셀에 대 한 장치 독립적 픽셀을 Windows Forms에 포함 하는 두 가지 좌표계를 사용할 수 있습니다. 따라서 일관 된 레이아웃을 얻기 위해서는 적절 한 단위 및 크기 조정 변환을 적용 해야 합니다.  
   
- 현재 장치 해상도 및 모든 레이아웃에 따라 좌표 시스템 간의 변환 또는 적용할 렌더링 변환은 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소 해당 상위 항목입니다.  
+ 좌표계 간의 변환은 현재 장치 해상도와 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소나 해당 상위 항목에 적용 된 레이아웃 또는 렌더링 변환에 따라 달라 집니다.  
   
- 출력 장치는 96dpi 및에 없는 확장을 적용 하는 경우는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 하드웨어 픽 요소를 하나의 장치 독립적 픽셀은입니다.  
+ 출력 장치가 96 dpi이 고 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소에 배율이 적용 되지 않은 경우 하나의 장치 독립적 픽셀은 하나의 하드웨어 픽셀과 같습니다.  
   
- 다른 모든 경우 좌표 시스템 크기 조정이 필요 합니다. 호스팅된 컨트롤 조정 되지 않습니다. 대신는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소에서 호스트 된 컨트롤 및 모든 자식 컨트롤의 크기를 조정 하려고 합니다. 때문에 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 크기 조정, 완벽 하 게 지원 하지 않습니다는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소는 특정 컨트롤에서 지원 되는 정도를 확장 합니다.  
+ 다른 모든 경우에는 좌표계 크기 조정이 필요 합니다. 호스팅된 컨트롤의 크기가 조정 되지 않습니다. 대신, <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소는 호스트 된 컨트롤과 모든 자식 컨트롤의 크기를 조정 하려고 합니다. Windows Forms는 크기 조정을 완전히 지원 하지 않으므로 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소는 특정 컨트롤에서 지 원하는 수준으로 확장 됩니다.  
   
  재정의 <xref:System.Windows.Forms.Integration.WindowsFormsHost.ScaleChild%2A> 호스팅된 Windows Forms 컨트롤에 대 한 사용자 지정 크기 조정 동작을 제공 하는 방법입니다.  
   
- 크기 조정 하는 것 외에도 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소는 다음 표에 설명 된 대로 반올림 하 고 오버플로 경우를 처리 합니다.  
+ 크기 조정 외에도 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소는 다음 표에 설명 된 대로 반올림 및 오버플로 사례를 처리 합니다.  
   
 |변환 문제|설명|  
 |----------------------|-----------------|  
-|반올림|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 장치 독립적 픽셀 크기와 지정 된 `double`, 및 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 으로 지정 된 하드웨어 픽셀 크기 `int`합니다. 경우에서 여기서 `double`-기반된 크기로 변환할 `int`-차원 기반는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소는 표준 반올림 되므로 0.5 보다 작은 소수 값 0으로 반올림 됩니다.|  
-|오버플로|경우는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소에서 변환 `double` 값을 `int` 값 오버플로가 발생 가능성이 있습니다. 합니다. 보다 큰 값은 <xref:System.Int32.MaxValue> 로 설정 되어 <xref:System.Int32.MaxValue>입니다.|  
+|반올림|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 장치 독립적 픽셀 차원은 `double`으로 지정 되 고 Windows Forms 하드웨어 픽셀 차원은 `int`로 지정 됩니다. `double`기반 차원이 `int`기반 차원으로 변환 되는 경우 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소는 표준 반올림을 사용 하므로 0.5 미만의 소수 자릿수 값이 0으로 반올림 됩니다.|  
+|오버플로|<xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소가 `double` 값에서 `int` 값으로 변환 되 면 오버플로가 발생할 수 있습니다. <xref:System.Int32.MaxValue> 보다 큰 값은 <xref:System.Int32.MaxValue>로 설정 됩니다.|  
   
 ### <a name="layout-related-properties"></a>레이아웃 관련 속성  
- 레이아웃 동작을 제어 하는 속성 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤 및 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 요소에서 적절 하 게 매핑되는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소입니다. 자세한 내용은 [Windows Forms 및 WPF 속성 매핑](windows-forms-and-wpf-property-mapping.md)을 참조하세요.  
+ Windows Forms 컨트롤과 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 요소의 레이아웃 동작을 제어 하는 속성은 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소에 의해 적절 하 게 매핑됩니다. 자세한 내용은 [Windows Forms 및 WPF 속성 매핑](windows-forms-and-wpf-property-mapping.md)을 참조하세요.  
   
-### <a name="layout-changes-in-the-hosted-control"></a>호스팅된 컨트롤에서 레이아웃 변경  
- 레이아웃 변경에서 호스팅된 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤에 전파 됩니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 레이아웃 업데이트를 트리거합니다. <xref:System.Windows.UIElement.InvalidateMeasure%2A> 메서드를 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 호스팅된 컨트롤에서 레이아웃 변경으로 인해 하면는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 레이아웃 엔진이 실행 되도록 합니다.  
+### <a name="layout-changes-in-the-hosted-control"></a>호스팅된 컨트롤의 레이아웃 변경 내용  
+ 호스팅된 Windows Forms 컨트롤의 레이아웃 변경 내용은 레이아웃 업데이트를 트리거하기 위해 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 전파 됩니다. <xref:System.Windows.Forms.Integration.WindowsFormsHost>에 대 한 <xref:System.Windows.UIElement.InvalidateMeasure%2A> 메서드는 호스트 된 컨트롤의 레이아웃 변경으로 인해 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 레이아웃 엔진이 실행 되도록 합니다.  
   
-### <a name="continuously-sized-windows-forms-controls"></a>지속적으로 Windows Forms 컨트롤 크기 조정  
- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 연속 확장을 완전히 지 원하는 컨트롤 상호 작용을 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 레이아웃 시스템입니다. <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소를 사용 합니다 <xref:System.Windows.FrameworkElement.MeasureOverride%2A> 및 <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> 일반적으로 정렬 하 고 크기 호스팅된 메서드 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤.  
+### <a name="continuously-sized-windows-forms-controls"></a>지속적으로 크기가 조정 되는 Windows Forms 컨트롤  
+ 연속 크기 조정을 지 원하는 Windows Forms 컨트롤은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 레이아웃 시스템과 완벽 하 게 상호 작용 합니다. <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소는 일반적인 방법으로 <xref:System.Windows.FrameworkElement.MeasureOverride%2A> 및 <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> 메서드를 사용 하 여 호스팅된 Windows Forms 컨트롤의 크기를 조정 하 고 정렬 합니다.  
   
 ### <a name="sizing-algorithm"></a>크기 조정 알고리즘  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소 다음 절차를 사용 하 여 호스트 된 컨트롤의 크기:  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소는 다음 절차를 사용 하 여 호스트 된 컨트롤의 크기를 조정 합니다.  
   
-1. 합니다 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소를 재정의 합니다 <xref:System.Windows.FrameworkElement.MeasureOverride%2A> 및 <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> 메서드.  
+1. <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소는 <xref:System.Windows.FrameworkElement.MeasureOverride%2A> 및 <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> 메서드를 재정의 합니다.  
   
-2. 호스팅된 컨트롤의 크기를 결정 하는 <xref:System.Windows.FrameworkElement.MeasureOverride%2A> 호스팅된 컨트롤의 메서드를 호출 <xref:System.Windows.Forms.Control.GetPreferredSize%2A> 제약 조건이 있는 메서드에 전달할 제약 조건에서 변환의 <xref:System.Windows.FrameworkElement.MeasureOverride%2A> 메서드.  
+2. 호스팅된 컨트롤의 크기를 확인 하기 위해 <xref:System.Windows.FrameworkElement.MeasureOverride%2A> 메서드는 <xref:System.Windows.FrameworkElement.MeasureOverride%2A> 메서드에 전달 된 제약 조건에서 변환 된 제약 조건을 사용 하 여 호스팅된 컨트롤의 <xref:System.Windows.Forms.Control.GetPreferredSize%2A> 메서드를 호출 합니다.  
   
-3. <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> 메서드는 지정 된 크기 제약 조건에 호스트 된 컨트롤을 설정 하려고 시도 합니다.  
+3. <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> 메서드는 호스팅된 컨트롤을 지정 된 크기 제약 조건으로 설정 하려고 시도 합니다.  
   
-4. 경우 호스팅된 컨트롤의 <xref:System.Windows.Forms.Control.Size%2A> 속성에 지정 된 제약 조건과 일치, 제약 조건에 호스트 된 컨트롤 크기가 조정 됩니다.  
+4. 호스팅된 컨트롤의 <xref:System.Windows.Forms.Control.Size%2A> 속성이 지정 된 제약 조건과 일치 하면 호스팅된 컨트롤의 크기가 제약 조건에 맞게 조정 됩니다.  
   
- 경우는 <xref:System.Windows.Forms.Control.Size%2A> 속성이 지정된 된 제약 일치 하지 않습니다, 호스트 된 컨트롤에 연속 크기 조정을 지원 하지 않습니다. 예를 들어를 <xref:System.Windows.Forms.MonthCalendar> 컨트롤 불연속 크기만 허용 합니다. 이 컨트롤에 대 한 허용 되는 크기 높이 너비에 대 한 정수 (개월 수를 나타냄)으로 구성 됩니다. 이 같은 경우에는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소는 다음과 같이 동작 합니다.  
+ <xref:System.Windows.Forms.Control.Size%2A> 속성이 지정 된 제약 조건과 일치 하지 않으면 호스팅된 컨트롤이 연속 크기 조정을 지원 하지 않습니다. 예를 들어 <xref:System.Windows.Forms.MonthCalendar> 컨트롤은 불연속 크기만 허용 합니다. 이 컨트롤에 허용 되는 크기는 높이와 너비의 정수 (월 수를 나타냄)로 구성 됩니다. 이와 같은 경우 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소는 다음과 같이 동작 합니다.  
   
-- 경우는 <xref:System.Windows.Forms.Control.Size%2A> 속성에 지정한 제약 조건이 보다 더 큰 크기를 반환 합니다.는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소는 호스트 된 컨트롤을 자릅니다. 호스팅된 컨트롤 어느 방향으로든에서 잘릴 수도 있습니다 있도록 높이 너비를 별도로 처리 됩니다.  
+- <xref:System.Windows.Forms.Control.Size%2A> 속성이 지정 된 제약 조건 보다 큰 크기를 반환 하는 경우 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소는 호스트 된 컨트롤을 자릅니다. Height 및 width는 개별적으로 처리 되므로 호스트 된 컨트롤이 어느 방향에서 나 잘릴 수 있습니다.  
   
-- 경우는 <xref:System.Windows.Forms.Control.Size%2A> 속성에 지정된 된 제약 보다 작은 크기를 반환 합니다 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 크기 값이 허용 하 고 값을 반환 합니다는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 레이아웃 시스템입니다.  
+- <xref:System.Windows.Forms.Control.Size%2A> 속성이 지정 된 제약 조건 보다 작은 크기를 반환 하는 경우 <xref:System.Windows.Forms.Integration.WindowsFormsHost>이 크기 값을 허용 하 고 값을 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 레이아웃 시스템으로 반환 합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [연습: WPF에서 정렬 Windows Forms 컨트롤](walkthrough-arranging-windows-forms-controls-in-wpf.md)
-- [WPF 샘플에서 정렬 Windows Forms 컨트롤](https://go.microsoft.com/fwlink/?LinkID=159971)
+- [연습: WPF에서 Windows Forms 컨트롤 정렬](walkthrough-arranging-windows-forms-controls-in-wpf.md)
+- [WPF 샘플에서 Windows Forms 컨트롤 정렬](https://go.microsoft.com/fwlink/?LinkID=159971)
 - [Windows Forms 및 WPF 속성 매핑](windows-forms-and-wpf-property-mapping.md)
 - [마이그레이션 및 상호 운용성](migration-and-interoperability.md)

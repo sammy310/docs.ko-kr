@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c9a26ea3-b8eb-4b8e-854f-9a2ca26b3b39
 topic_type:
 - apiref
-ms.openlocfilehash: e9f7f1fc0f04e8cc8c69d533c1dbba380d04ebfb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: afd16f1f31be9148422dd6d0be748036a8e5d99a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140491"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790655"
 ---
 # <a name="icorpublishenumclone-method"></a>ICorPublishEnum::Clone 메서드
-이 [ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md) 개체의 복사본을 만듭니다.  
+이 [ICorPublishEnum](icorpublishenum-interface.md) 개체의 복사본을 만듭니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -48,4 +48,4 @@ HRESULT Clone (
   
 ## <a name="see-also"></a>참조
 
-- [ICorPublishEnum 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)
+- [ICorPublishEnum 인터페이스](icorpublishenum-interface.md)
