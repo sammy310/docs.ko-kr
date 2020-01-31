@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 3e184022-0247-4824-a23d-6b29593d8d01
 topic_type:
 - apiref
-ms.openlocfilehash: c49bdcb9345960bce018cefd4443948f997c7267
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4dd4e39c9092d018f13e3bd2822e9492d71141ad
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428366"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867297"
 ---
-# <a name="cor_prf_codegen_flags-enumeration"></a><span data-ttu-id="61e22-102">COR_PRF_CODEGEN_FLAGS 열거형</span><span class="sxs-lookup"><span data-stu-id="61e22-102">COR_PRF_CODEGEN_FLAGS Enumeration</span></span>
-<span data-ttu-id="61e22-103">[ICorProfilerFunctionControl:: SetCodegenFlags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) 메서드를 사용 하 여 설정할 수 있는 코드 생성 플래그를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="61e22-103">Defines the code generation flags that can be set with the [ICorProfilerFunctionControl::SetCodegenFlags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) method.</span></span>  
+# <a name="cor_prf_codegen_flags-enumeration"></a><span data-ttu-id="4d5b4-102">COR_PRF_CODEGEN_FLAGS 열거형</span><span class="sxs-lookup"><span data-stu-id="4d5b4-102">COR_PRF_CODEGEN_FLAGS Enumeration</span></span>
+<span data-ttu-id="4d5b4-103">[ICorProfilerFunctionControl:: SetCodegenFlags](icorprofilerfunctioncontrol-setcodegenflags-method.md) 메서드를 사용 하 여 설정할 수 있는 코드 생성 플래그를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="4d5b4-103">Defines the code generation flags that can be set with the [ICorProfilerFunctionControl::SetCodegenFlags](icorprofilerfunctioncontrol-setcodegenflags-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="61e22-104">구문</span><span class="sxs-lookup"><span data-stu-id="61e22-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4d5b4-104">구문</span><span class="sxs-lookup"><span data-stu-id="4d5b4-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -33,25 +33,25 @@ typedef enum {
 } COR_PRF_CODEGEN_FLAGS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="61e22-105">멤버</span><span class="sxs-lookup"><span data-stu-id="61e22-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="4d5b4-105">Members</span><span class="sxs-lookup"><span data-stu-id="4d5b4-105">Members</span></span>  
   
-|<span data-ttu-id="61e22-106">멤버</span><span class="sxs-lookup"><span data-stu-id="61e22-106">Member</span></span>|<span data-ttu-id="61e22-107">설명</span><span class="sxs-lookup"><span data-stu-id="61e22-107">Description</span></span>|  
+|<span data-ttu-id="4d5b4-106">Member</span><span class="sxs-lookup"><span data-stu-id="4d5b4-106">Member</span></span>|<span data-ttu-id="4d5b4-107">설명</span><span class="sxs-lookup"><span data-stu-id="4d5b4-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_CODEGEN_DISABLE_INLINING`|<span data-ttu-id="61e22-108">이 함수의 본문에는 함수가 인라인 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="61e22-108">No functions will be inlined into this function’s body.</span></span> <span data-ttu-id="61e22-109">그러나 함수 자체가 해당 호출자에 게 인라인 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="61e22-109">However, the function itself may be inlined into its callers.</span></span>|  
-|`COR_PRF_CODEGEN_DISABLE_ALL_OPTIMIZATIONS`|<span data-ttu-id="61e22-110">이 함수의 본문에 대해 모든 최적화를 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="61e22-110">All optimizations will be disabled for this function’s body.</span></span> <span data-ttu-id="61e22-111">그러나 함수 자체는 여전히 해당 호출자에 게 인라인 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="61e22-111">However, the function itself may still be inlined into its callers.</span></span>|  
+|`COR_PRF_CODEGEN_DISABLE_INLINING`|<span data-ttu-id="4d5b4-108">이 함수의 본문에는 함수가 인라인 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4d5b4-108">No functions will be inlined into this function’s body.</span></span> <span data-ttu-id="4d5b4-109">그러나 함수 자체가 해당 호출자에 게 인라인 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4d5b4-109">However, the function itself may be inlined into its callers.</span></span>|  
+|`COR_PRF_CODEGEN_DISABLE_ALL_OPTIMIZATIONS`|<span data-ttu-id="4d5b4-110">이 함수의 본문에 대해 모든 최적화를 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4d5b4-110">All optimizations will be disabled for this function’s body.</span></span> <span data-ttu-id="4d5b4-111">그러나 함수 자체는 여전히 해당 호출자에 게 인라인 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4d5b4-111">However, the function itself may still be inlined into its callers.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="61e22-112">주의</span><span class="sxs-lookup"><span data-stu-id="61e22-112">Remarks</span></span>  
- <span data-ttu-id="61e22-113">`COR_PRF_CODEGEN_FLAGS` 열거형은 [ICorProfilerFunctionControl:: SetCodegenFlags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) 메서드에서 프로파일러를 사용 하 여 JIT 다시 컴파일된 함수의 코드 생성을 제어할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="61e22-113">The `COR_PRF_CODEGEN_FLAGS` enumeration is used by the [ICorProfilerFunctionControl::SetCodegenFlags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) method to enable the profiler to control the code generation for the JIT-recompiled function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4d5b4-112">주의</span><span class="sxs-lookup"><span data-stu-id="4d5b4-112">Remarks</span></span>  
+ <span data-ttu-id="4d5b4-113">`COR_PRF_CODEGEN_FLAGS` 열거형은 [ICorProfilerFunctionControl:: SetCodegenFlags](icorprofilerfunctioncontrol-setcodegenflags-method.md) 메서드에서 프로파일러를 사용 하 여 JIT 다시 컴파일된 함수의 코드 생성을 제어할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="4d5b4-113">The `COR_PRF_CODEGEN_FLAGS` enumeration is used by the [ICorProfilerFunctionControl::SetCodegenFlags](icorprofilerfunctioncontrol-setcodegenflags-method.md) method to enable the profiler to control the code generation for the JIT-recompiled function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="61e22-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="61e22-114">Requirements</span></span>  
- <span data-ttu-id="61e22-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="61e22-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4d5b4-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4d5b4-114">Requirements</span></span>  
+ <span data-ttu-id="4d5b4-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="4d5b4-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="61e22-116">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="61e22-116">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="4d5b4-116">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="4d5b4-116">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="61e22-117">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="61e22-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4d5b4-117">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4d5b4-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="61e22-118">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="61e22-118">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="4d5b4-118">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4d5b4-118">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="61e22-119">참고 항목</span><span class="sxs-lookup"><span data-stu-id="61e22-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4d5b4-119">참조</span><span class="sxs-lookup"><span data-stu-id="4d5b4-119">See also</span></span>
 
-- [<span data-ttu-id="61e22-120">프로파일링 열거형</span><span class="sxs-lookup"><span data-stu-id="61e22-120">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [<span data-ttu-id="4d5b4-120">프로파일링 열거형</span><span class="sxs-lookup"><span data-stu-id="4d5b4-120">Profiling Enumerations</span></span>](profiling-enumerations.md)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: dfe84a19-2e03-4be2-8b25-f02bad38e4a9
 topic_type:
 - apiref
-ms.openlocfilehash: 1aa5a0d20ee87fe4362016ed0d7fa29ef786460e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f77901623ef4df7b43276c18a910cf62fcc4451d
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74430723"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865976"
 ---
-# <a name="icorprofilercallbackremotingserversendingreply-method"></a><span data-ttu-id="3f3a5-102">ICorProfilerCallback::RemotingServerSendingReply 메서드</span><span class="sxs-lookup"><span data-stu-id="3f3a5-102">ICorProfilerCallback::RemotingServerSendingReply Method</span></span>
-<span data-ttu-id="3f3a5-103">프로세스가 원격 메서드 호출 요청 처리를 완료 했으며 채널을 통해 회신을 전송 하려고 함을 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="3f3a5-103">Notifies the profiler that the process has finished processing a remote method invocation request and is about to transmit the reply through a channel.</span></span>  
+# <a name="icorprofilercallbackremotingserversendingreply-method"></a><span data-ttu-id="b142e-102">ICorProfilerCallback::RemotingServerSendingReply 메서드</span><span class="sxs-lookup"><span data-stu-id="b142e-102">ICorProfilerCallback::RemotingServerSendingReply Method</span></span>
+<span data-ttu-id="b142e-103">프로세스가 원격 메서드 호출 요청 처리를 완료 했으며 채널을 통해 회신을 전송 하려고 함을 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="b142e-103">Notifies the profiler that the process has finished processing a remote method invocation request and is about to transmit the reply through a channel.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3f3a5-104">구문</span><span class="sxs-lookup"><span data-stu-id="3f3a5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b142e-104">구문</span><span class="sxs-lookup"><span data-stu-id="b142e-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT RemotingServerSendingReply(  
@@ -33,30 +33,30 @@ HRESULT RemotingServerSendingReply(
     [in] BOOL fIsAsync);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3f3a5-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="3f3a5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b142e-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="b142e-105">Parameters</span></span>  
  `pCookie`  
- <span data-ttu-id="3f3a5-106">진행 다음 조건에서 [ICorProfilerCallback:: RemotingClientReceivingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md) 에 제공 된 값과 일치 하는 GUID에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="3f3a5-106">[in] A pointer to a GUID that will correspond with the value provided in [ICorProfilerCallback::RemotingClientReceivingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md) under these conditions:</span></span>  
+ <span data-ttu-id="b142e-106">진행 다음 조건에서 [ICorProfilerCallback:: RemotingClientReceivingReply](icorprofilercallback-remotingclientreceivingreply-method.md) 에 제공 된 값과 일치 하는 GUID에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="b142e-106">[in] A pointer to a GUID that will correspond with the value provided in [ICorProfilerCallback::RemotingClientReceivingReply](icorprofilercallback-remotingclientreceivingreply-method.md) under these conditions:</span></span>  
   
-- <span data-ttu-id="3f3a5-107">원격 GUID 쿠키가 활성 상태입니다.</span><span class="sxs-lookup"><span data-stu-id="3f3a5-107">Remoting GUID cookies are active.</span></span>  
+- <span data-ttu-id="b142e-107">원격 GUID 쿠키가 활성 상태입니다.</span><span class="sxs-lookup"><span data-stu-id="b142e-107">Remoting GUID cookies are active.</span></span>  
   
-- <span data-ttu-id="3f3a5-108">채널에서 메시지를 전송 하는 데 성공 했습니다.</span><span class="sxs-lookup"><span data-stu-id="3f3a5-108">The channel succeeds in transmitting the message.</span></span>  
+- <span data-ttu-id="b142e-108">채널에서 메시지를 전송 하는 데 성공 했습니다.</span><span class="sxs-lookup"><span data-stu-id="b142e-108">The channel succeeds in transmitting the message.</span></span>  
   
-- <span data-ttu-id="3f3a5-109">GUID 쿠키는 클라이언트 쪽 프로세스에서 활성화 됩니다.</span><span class="sxs-lookup"><span data-stu-id="3f3a5-109">GUID cookies are active on the client-side process.</span></span>  
+- <span data-ttu-id="b142e-109">GUID 쿠키는 클라이언트 쪽 프로세스에서 활성화 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b142e-109">GUID cookies are active on the client-side process.</span></span>  
   
- <span data-ttu-id="3f3a5-110">이렇게 하면 원격 호출을 쉽게 페어링 하 고 논리 호출 스택을 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3f3a5-110">This allows easy pairing of remoting calls and the creation of a logical call stack.</span></span>  
+ <span data-ttu-id="b142e-110">이렇게 하면 원격 호출을 쉽게 페어링 하 고 논리 호출 스택을 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b142e-110">This allows easy pairing of remoting calls and the creation of a logical call stack.</span></span>  
   
  `fIsAsync`  
- <span data-ttu-id="3f3a5-111">진행 호출이 비동기 인 경우 `true` 하는 값입니다. 그렇지 않으면 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="3f3a5-111">[in] A value that is `true` if the call is asynchronous; otherwise, `false`.</span></span>  
+ <span data-ttu-id="b142e-111">진행 호출이 비동기 인 경우 `true` 하는 값입니다. 그렇지 않으면 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="b142e-111">[in] A value that is `true` if the call is asynchronous; otherwise, `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3f3a5-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="3f3a5-112">Requirements</span></span>  
- <span data-ttu-id="3f3a5-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="3f3a5-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b142e-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b142e-112">Requirements</span></span>  
+ <span data-ttu-id="b142e-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="b142e-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3f3a5-114">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="3f3a5-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="b142e-114">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b142e-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="3f3a5-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3f3a5-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b142e-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b142e-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3f3a5-116">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3f3a5-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b142e-116">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b142e-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3f3a5-117">참고 항목</span><span class="sxs-lookup"><span data-stu-id="3f3a5-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b142e-117">참조</span><span class="sxs-lookup"><span data-stu-id="b142e-117">See also</span></span>
 
-- [<span data-ttu-id="3f3a5-118">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="3f3a5-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="b142e-118">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="b142e-118">ICorProfilerCallback Interface</span></span>](icorprofilercallback-interface.md)
