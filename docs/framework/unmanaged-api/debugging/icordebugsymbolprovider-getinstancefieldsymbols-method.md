@@ -1,15 +1,15 @@
 ---
-title: 'ICorDebugSymbolProvider:: GetInstanceFieldSymbols 메서드'
+title: ICorDebugSymbolProvider::GetInstanceFieldSymbols 메서드
 ms.date: 03/30/2017
 ms.assetid: a29b9233-ee67-4b53-b8bc-c00b281e7edb
-ms.openlocfilehash: 0ad8ddd78d963681c0b2f69bf0f211ad464dc7b7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9c55ce4d36681e173047cfb51515a74899c5a9fe
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138883"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791630"
 ---
-# <a name="icordebugsymbolprovidergetinstancefieldsymbols-method"></a>ICorDebugSymbolProvider:: GetInstanceFieldSymbols 메서드
+# <a name="icordebugsymbolprovidergetinstancefieldsymbols-method"></a>ICorDebugSymbolProvider::GetInstanceFieldSymbols 메서드
 typespec 서명에 해당하는 인스턴스 필드 기호를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -38,7 +38,7 @@ HRESULT GetInstanceFieldSymbols(
  [out] 메서드에 의해 검색되는 기호 수에 대한 포인터입니다.  
   
  `pSymbols`  
- 제한이 요청 된 인스턴스 필드 기호를 포함 하는 [ICorDebugStaticFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md) 배열에 대 한 포인터입니다.  
+ 제한이 요청 된 인스턴스 필드 기호를 포함 하는 [ICorDebugStaticFieldSymbol](icordebugstaticfieldsymbol-interface.md) 배열에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>주의  
   
@@ -56,6 +56,6 @@ HRESULT GetInstanceFieldSymbols(
   
 ## <a name="see-also"></a>참조
 
-- [GetStaticFieldSymbols 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getstaticfieldsymbols-method.md)
-- [ICorDebugSymbolProvider 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [GetStaticFieldSymbols 메서드](icordebugsymbolprovider-getstaticfieldsymbols-method.md)
+- [ICorDebugSymbolProvider 인터페이스](icordebugsymbolprovider-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Open File dialog box
 - OpenFileDialog component
 ms.assetid: d2efa832-a272-42ff-aa26-c4ac13ff59ba
-ms.openlocfilehash: ef6b69a90a048caf7924b00ddd0b79a0a7efaeb9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 1f831297ec9d34cbf0c3c55390abd8be0f5013ee
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744368"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868098"
 ---
 # <a name="openfiledialog-component-windows-forms"></a>OpenFileDialog 구성 요소(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.OpenFileDialog> 구성 요소는 미리 구성된 대화 상자입니다. Windows 운영 체제에서 제공 하는 동일한 **파일 열기** 대화 상자입니다. <xref:System.Windows.Forms.CommonDialog> 클래스에서 상속됩니다.  
@@ -31,7 +31,4 @@ Windows Forms <xref:System.Windows.Forms.OpenFileDialog> 구성 요소는 미리
  사용자가 애플리케이션이나 시스템에서 표준 조작을 수행할 수 있도록 하는 컨트롤 및 구성 요소 집합에 대해 설명합니다.  
   
  [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)  
- 사용 방법에 대한 정보 링크를 포함하는 Windows Forms 컨트롤의 전체 목록을 제공합니다.  
-  
- [Windows Forms 대화 상자의 필수 코드](https://go.microsoft.com/fwlink/?LinkID=102575)  
- Windows Forms 대화 상자 컨트롤 및 구성 요소와 기본 함수를 실행하는 데 필요한 코드에 대해 설명합니다. (MSDN Online Library 기술 문서)
+ 사용 방법에 대한 정보 링크를 포함하는 Windows Forms 컨트롤의 전체 목록을 제공합니다.

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41462329-a648-46f0-ae6d-728b94c31aa9
 topic_type:
 - apiref
-ms.openlocfilehash: 9c9cd0b042dc22f35c38e349ab8881dafc602731
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 534e0672820cc2509f32765274ad970fda69ec5d
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445023"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866509"
 ---
 # <a name="icorprofilercallbackexceptioncatcherenter-method"></a>ICorProfilerCallback::ExceptionCatcherEnter 메서드
 컨트롤이 적절 한 `catch` 블록에 전달 되 고 있음을 프로파일러에 알립니다.  
@@ -33,13 +33,16 @@ HRESULT ExceptionCatcherEnter(
     [in] ObjectID   objectId);  
 ```  
   
-## <a name="parameters"></a>매개 변수  
- `functionId`  
- 진행 `catch` 블록을 포함 하는 함수의 식별자입니다.  
+## <a name="parameters"></a>매개 변수
+
+- `functionId`
+
+  \[in] `catch` 블록을 포함 하는 함수의 식별자입니다.
   
- `objectId`  
- 진행 처리 되는 예외의 식별자입니다.  
-  
+- `objectId`
+
+  \[in] 처리 되는 예외의 식별자입니다.
+
 ## <a name="remarks"></a>주의  
  `ExceptionCatcherEnter` 메서드는 catch 지점이 JIT (just-in-time) 컴파일러를 사용 하 여 컴파일된 코드에 있는 경우에만 호출 됩니다. 비관리 코드나 런타임의 내부 코드에서 catch 된 예외는이 알림을 호출 하지 않습니다. `objectId` 값은 `ExceptionThrown` 알림 이후 가비지 수집에서 개체를 이동 했을 수 있으므로 다시 전달 됩니다.  
   
@@ -56,7 +59,7 @@ HRESULT ExceptionCatcherEnter(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ExceptionCatcherLeave 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherleave-method.md)
+- [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
+- [ExceptionCatcherLeave 메서드](icorprofilercallback-exceptioncatcherleave-method.md)

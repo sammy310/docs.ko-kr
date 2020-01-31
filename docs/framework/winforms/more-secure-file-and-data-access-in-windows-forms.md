@@ -1,5 +1,5 @@
 ---
-title: Windows Forms의 파일 및 데이터 액세스 추가 보안
+title: 더 안전한 파일 및 데이터 액세스
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 94b165757de636b2570798a21fd7c483264e37c5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 49ba1919f68f35e9d72b012540b785e05c307c39
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949946"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743755"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Windows Forms의 파일 및 데이터 액세스 추가 보안
 .NET Framework는 사용 권한을 사용 하 여 리소스와 데이터를 보호 합니다. 애플리케이션이 데이터를 일거나 쓸 수 있는 위치는 애플리케이션에 부여된 권한에 따라 달라집니다. 애플리케이션이 부분 신뢰 환경에서 실행되는 경우 데이터에 대한 액세스 권한이 없거나 데이터에 액세스하는 방법을 변경해야 할 수 있습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "69949946"
 > 기본적으로 ClickOnce 배포를 생성 하는 도구는 해당 배포를 실행 하는 컴퓨터에서 완전 신뢰를 요청 하는 배포를 기본적으로 수행 합니다. 부분 신뢰로 실행 되는의 보안 이점을 강화 하려면 Visual Studio 또는 Windows SDK 도구 (Mage.exe 또는 Mageui.exe) 중 하나에서이 기본값을 변경 해야 합니다. Windows Forms 보안에 대 한 자세한 내용과 응용 프로그램의 적절 한 신뢰 수준을 결정 하는 방법에 대 한 자세한 내용은 [Windows Forms 개요의 보안](security-in-windows-forms-overview.md)을 참조 하세요.  
   
 ## <a name="file-access"></a>파일 액세스  
- 클래스 <xref:System.Security.Permissions.FileIOPermission> 는 .NET Framework에서 파일 및 폴더 액세스를 제어 합니다. 기본적으로 보안 시스템은 로컬 인트라넷 및 인터넷 영역과 같은 부분 신뢰 환경에 <xref:System.Security.Permissions.FileIOPermission>을 부여하지 않습니다. 그러나 애플리케이션의 디자인을 수정하거나 다른 메서드를 사용하여 파일에 액세스하는 경우 파일 액세스가 필요한 애플리케이션이 여전히 이러한 환경에서 작동할 수 있습니다. 기본적으로 로컬 인트라넷 영역에는 동일한 사이트 액세스 및 동일한 디렉터리 액세스를 포함하고, 원본 사이트에 다시 연결하고, 설치 디렉터리에서 읽을 수 있는 권한이 부여됩니다. 기본적으로 인터넷 영역에는 원본 사이트에 다시 연결할 수 있는 권한만 부여됩니다.  
+ <xref:System.Security.Permissions.FileIOPermission> 클래스는 .NET Framework에서 파일 및 폴더 액세스를 제어 합니다. 기본적으로 보안 시스템은 로컬 인트라넷 및 인터넷 영역과 같은 부분 신뢰 환경에 <xref:System.Security.Permissions.FileIOPermission>을 부여하지 않습니다. 그러나 애플리케이션의 디자인을 수정하거나 다른 메서드를 사용하여 파일에 액세스하는 경우 파일 액세스가 필요한 애플리케이션이 여전히 이러한 환경에서 작동할 수 있습니다. 기본적으로 로컬 인트라넷 영역에는 동일한 사이트 액세스 및 동일한 디렉터리 액세스를 포함하고, 원본 사이트에 다시 연결하고, 설치 디렉터리에서 읽을 수 있는 권한이 부여됩니다. 기본적으로 인터넷 영역에는 원본 사이트에 다시 연결할 수 있는 권한만 부여됩니다.  
   
 ### <a name="user-specified-files"></a>사용자 지정 파일  
  파일 액세스 권한 없음을 처리하는 한 가지 방법은 <xref:System.Windows.Forms.OpenFileDialog> 또는 <xref:System.Windows.Forms.SaveFileDialog> 클래스를 통해 특정 파일 정보를 제공하라는 메시지를 사용자에게 표시하는 것입니다. 이 사용자 상호 작용은 애플리케이션이 악의적으로 개인 파일을 로드하거나 중요한 파일을 덮어쓸 수 없도록 합니다. <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> 및 <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> 메서드는 사용자가 지정한 파일에 대한 파일 스트림을 열어 읽기 및 쓰기 파일 액세스를 제공합니다. 메서드는 파일 경로가 표시되지 않도록 하여 사용자 파일 보호를 돕습니다.  
@@ -135,10 +135,10 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 > [!NOTE]
 > 시각적 개체 C#에서 이벤트 처리기를 사용 하도록 설정 하는 코드를 추가 해야 합니다. 이전 예제의 코드를 사용하여 다음 코드에서는 이벤트 처리기 `this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`를 사용하도록 설정하는 방법을 보여 줍니다.  
   
-### <a name="other-files"></a>Other Files  
+### <a name="other-files"></a>기타 파일  
  애플리케이션 설정을 유지해야 하는 경우와 같이 사용자가 지정하지 않는 파일을 읽거나 써야 하는 경우가 있습니다. 로컬 인트라넷 및 인터넷 영역에서는 로컬 파일에 데이터를 저장할 수 있는 권한이 애플리케이션에 없습니다. 그러나 애플리케이션은 격리된 스토리지에 데이터를 저장할 수 있습니다. 격리된 스토리지는 데이터가 저장된 실제 디렉터리 위치를 포함하는 하나 이상의 격리된 스토리지 파일(스토리지라고 함)이 포함된 추상 데이터 컴파트먼트(특정 스토리지 위치가 아님)입니다. <xref:System.Security.Permissions.FileIOPermission>과 같은 파일 액세스 권한은 필요하지 않습니다. 대신, <xref:System.Security.Permissions.IsolatedStoragePermission> 클래스는 격리된 스토리지에 대한 권한을 제어합니다. 기본적으로 로컬 인트라넷 및 인터넷 영역에서 실행 중인 애플리케이션은 격리된 스토리지를 사용하여 데이터를 저장할 수 있습니다. 그러나 디스크 할당량과 같은 설정이 달라질 수 있습니다. 격리 된 저장소에 대 한 자세한 내용은 [격리 된 저장소](../../standard/io/isolated-storage.md)를 참조 하세요.  
   
- 다음 예제에서는 격리된 스토리지를 사용하여 스토리지에 있는 파일에 데이터를 씁니다. 예제를 사용하려면 <xref:System.Security.Permissions.IsolatedStorageFilePermission> 및 <xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByUser> 열거형 값이 필요합니다. 예제에서는 <xref:System.Windows.Forms.Button> 컨트롤의 특정 속성 값을 읽고 격리된 스토리지의 파일에 쓰는 방법을 보여 줍니다. `Read` 함수는 애플리케이션이 시작된 후에 호출되고 `Write` 함수는 애플리케이션이 종료되기 전에 호출됩니다. 이 `Read` 예제를 사용 하려면 및 `Write` 함수가 <xref:System.Windows.Forms.Button> 이라는 `MainButton`컨트롤이 포함 <xref:System.Windows.Forms.Form> 된의 멤버로 존재 해야 합니다.  
+ 다음 예제에서는 격리된 스토리지를 사용하여 스토리지에 있는 파일에 데이터를 씁니다. 예제를 사용하려면 <xref:System.Security.Permissions.IsolatedStorageFilePermission> 및 <xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByUser> 열거형 값이 필요합니다. 예제에서는 <xref:System.Windows.Forms.Button> 컨트롤의 특정 속성 값을 읽고 격리된 스토리지의 파일에 쓰는 방법을 보여 줍니다. `Read` 함수는 애플리케이션이 시작된 후에 호출되고 `Write` 함수는 애플리케이션이 종료되기 전에 호출됩니다. 이 예제에서는 `Read` 및 `Write` 함수가 `MainButton`이라는 <xref:System.Windows.Forms.Button> 컨트롤이 포함 된 <xref:System.Windows.Forms.Form>의 멤버로 존재 해야 합니다.  
   
 ```vb  
 ' Reads the button options from the isolated storage. Uses Default values   
@@ -358,11 +358,11 @@ public void Write()
   
  부분 신뢰에서는 레지스트리에 액세스할 수 없으므로 다른 데이터 저장 방법을 찾아야 할 수도 있습니다. 애플리케이션 설정을 저장하는 경우 레지스트리 대신 격리된 스토리지를 사용합니다. 격리된 스토리지를 사용하여 다른 애플리케이션 관련 파일을 저장할 수도 있습니다. 또한 기본적으로 애플리케이션에 원본 사이트 액세스 권한이 부여되므로 서버 또는 원본 사이트에 대한 전역 애플리케이션 정보를 저장할 수 있습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Windows Forms의 인쇄 추가 보안](more-secure-printing-in-windows-forms.md)
 - [Windows Forms의 추가 보안 고려 사항](additional-security-considerations-in-windows-forms.md)
 - [Windows Forms의 보안 개요](security-in-windows-forms-overview.md)
 - [Windows Forms 보안](windows-forms-security.md)
 - [Mage.exe(매니페스트 생성 및 편집 도구)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
-- [MageUI.exe(매니페스트 생성 및 편집 도구, 그래픽 클라이언트)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+- [MageUI.exe (매니페스트 생성 및 편집 도구, 그래픽 클라이언트)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

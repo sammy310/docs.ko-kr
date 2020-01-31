@@ -1,15 +1,15 @@
 ---
-title: 'ICorDebugSymbolProvider:: GetMethodParameterSymbols 메서드'
+title: ICorDebugSymbolProvider::GetMethodParameterSymbols 메서드
 ms.date: 03/30/2017
 ms.assetid: 58b7c0b9-f6ad-4b49-b92d-0e421cfd0ec6
-ms.openlocfilehash: 1f7da156e5a164dc753e2283bc7ab24d18983173
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a940077e50ff251111ca6eedaee49401775644d3
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138837"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791593"
 ---
-# <a name="icordebugsymbolprovidergetmethodparametersymbols-method"></a>ICorDebugSymbolProvider:: GetMethodParameterSymbols 메서드
+# <a name="icordebugsymbolprovidergetmethodparametersymbols-method"></a>ICorDebugSymbolProvider::GetMethodParameterSymbols 메서드
 메서드의 RVA(상대 가상 주소)가 지정된 경우 해당 메서드의 매개 변수 기호를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -34,7 +34,7 @@ HRESULT GetMethodParameterSymbols(
  [out] 메서드에 의해 검색되는 기호 수에 대한 포인터입니다.  
   
  `pcFetchedSymbols`  
- 제한이 메서드의 로컬 기호를 포함 하는 [ICorDebugVariableSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md) 배열에 대 한 포인터입니다.  
+ 제한이 메서드의 로컬 기호를 포함 하는 [ICorDebugVariableSymbol](icordebugvariablesymbol-interface.md) 배열에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>주의  
   
@@ -52,6 +52,6 @@ HRESULT GetMethodParameterSymbols(
   
 ## <a name="see-also"></a>참조
 
-- [GetMethodLocalSymbols 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getmethodlocalsymbols-method.md)
-- [ICorDebugSymbolProvider 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [GetMethodLocalSymbols 메서드](icordebugsymbolprovider-getmethodlocalsymbols-method.md)
+- [ICorDebugSymbolProvider 인터페이스](icordebugsymbolprovider-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

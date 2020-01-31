@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: afdb5ac9-5bf5-4b91-b7cb-f81db23d7da3
 topic_type:
 - apiref
-ms.openlocfilehash: e7a25fce945504cff0d07f499ae4bb79378e9f3a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: add89fe81fccbd5e6f5ad5d27f0ab3ace489963e
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449696"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868527"
 ---
 # <a name="icorprofilerinfo3getfunctiontailcall3info-method"></a>ICorProfilerInfo3::GetFunctionTailcall3Info 메서드
-[FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) 함수가 프로파일러에 보고 하는 함수의 스택 프레임을 제공 합니다. 이 함수는 `FunctionTailcall3WithInfo` 콜백 중에만 호출할 수 있습니다.  
+[FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md) 함수가 프로파일러에 보고 하는 함수의 스택 프레임을 제공 합니다. 이 함수는 `FunctionTailcall3WithInfo` 콜백 중에만 호출할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,7 +42,7 @@ HRESULT GetFunctionTailcall3Info(
  [in] 지정된 스택 프레임에 대한 정보를 나타내는 불투명 핸들입니다. 프로파일러는 `FunctionTailcall3WithInfo` 함수를 통해 프로파일러에 지정 된 것과 동일한 `eltInfo`를 제공 해야 합니다.  
   
  `pFrameInfo`  
- [out] 지정된 스택 프레임에 대한 일반 정보를 나타내는 불투명 핸들입니다. 이 핸들은 프로파일러가 `FunctionTailcall3WithInfo` 메서드를 호출한 `GetFunctionTailcall3Info` 콜백 중에만 유효합니다.  
+ [out] 지정된 스택 프레임에 대한 일반 정보를 나타내는 불투명 핸들입니다. 이 핸들은 프로파일러가 `GetFunctionTailcall3Info` 메서드를 호출한 `FunctionTailcall3WithInfo` 콜백 중에만 유효합니다.  
   
 ## <a name="remarks"></a>주의  
   
@@ -55,11 +55,11 @@ HRESULT GetFunctionTailcall3Info(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)
-- [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)
-- [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)
-- [ICorProfilerInfo3 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [프로파일링](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [FunctionEnter3WithInfo](functionenter3withinfo-function.md)
+- [FunctionLeave3WithInfo](functionleave3withinfo-function.md)
+- [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md)
+- [ICorProfilerInfo3 인터페이스](icorprofilerinfo3-interface.md)
+- [프로파일링 인터페이스](profiling-interfaces.md)
+- [프로파일링](index.md)

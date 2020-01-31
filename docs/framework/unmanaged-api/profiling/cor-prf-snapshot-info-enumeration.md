@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a5906b2a-ad4a-4cc6-a421-2d7d8adf7468
 topic_type:
 - apiref
-ms.openlocfilehash: 6ade4f7877e39a8307a36f3a3268f79e8b4d44fd
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 97bf3e69a8ea155d53479ba6f61988e56e3bd396
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427274"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867026"
 ---
 # <a name="cor_prf_snapshot_info-enumeration"></a>COR_PRF_SNAPSHOT_INFO 열거형
-프로파일러에서 [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) 함수를 호출할 때마다 스택 스냅숏으로 다시 전달할 데이터의 양을 지정 합니다.  
+프로파일러에서 [StackSnapshotCallback](stacksnapshotcallback-function.md) 함수를 호출할 때마다 스택 스냅숏으로 다시 전달할 데이터의 양을 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,16 +34,16 @@ typedef enum _COR_PRF_SNAPSHOT_INFO {
 } COR_PRF_SNAPSHOT_INFO;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
-|멤버|설명|  
+|Members|설명|  
 |-------------|-----------------|  
 |`COR_PRF_SNAPSHOT_DEFAULT`|`context` 매개 변수를 제외 하 고 모든 `StackSnapshotCallback` 매개 변수에 대 한 값을 전달 해야 함을 나타냅니다.|  
 |`COR_PRF_SNAPSHOT_REGISTER_CONTEXT`|`context` 매개 변수를 포함 하 여 모든 `StackSnapshotCallback` 매개 변수에 대 한 값을 전달 해야 함을 나타냅니다.|  
 |`COR_PRF_SNAPSHOT_X86_OPTIMIZED`|더 간단한 다른 스택 탐색 알고리즘이 사용 됨을 나타냅니다.|  
   
 ## <a name="remarks"></a>주의  
- `COR_PRF_SNAPSHOT_INFO` 열거형에서 제공 하는 값은 [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) 메서드에 매개 변수로 전달 됩니다.  
+ `COR_PRF_SNAPSHOT_INFO` 열거형에서 제공 하는 값은 [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) 메서드에 매개 변수로 전달 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -54,7 +54,7 @@ typedef enum _COR_PRF_SNAPSHOT_INFO {
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [DoStackSnapshot 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)
-- [프로파일링 열거형](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [DoStackSnapshot 메서드](icorprofilerinfo2-dostacksnapshot-method.md)
+- [프로파일링 열거형](profiling-enumerations.md)

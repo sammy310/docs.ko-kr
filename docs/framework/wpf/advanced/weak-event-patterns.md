@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: c0bf92c9b6046d531e75771a9205e6dffe0fd367
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 9f61a5a60b2ba1305158d1ab570079fe6aac19ac
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458487"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76870742"
 ---
 # <a name="weak-event-patterns"></a>약한 이벤트 패턴
 응용 프로그램에서 이벤트 소스에 연결 된 처리기가 소스에 처리기를 연결 하는 수신기 개체와 조정 되지 않을 수 있습니다. 이 경우 메모리 누수가 발생할 수 있습니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 특정 이벤트에 대 한 전용 관리자 클래스를 제공 하 고 해당 이벤트에 대 한 수신기에 인터페이스를 구현 하 여이 문제를 해결 하는 데 사용할 수 있는 디자인 패턴을 소개 합니다. 이 디자인 패턴을 *약한 이벤트 패턴*이라고 합니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "73458487"
 |기존 weak 이벤트 관리자 클래스 사용|구독할 이벤트에 해당 하는 <xref:System.Windows.WeakEventManager>있는 경우 기존 weak 이벤트 관리자를 사용 합니다. WPF에 포함 된 weak 이벤트 관리자 목록은 <xref:System.Windows.WeakEventManager> 클래스에서 상속 계층 구조를 참조 하세요. 포함 된 weak 이벤트 관리자는 제한적 이므로 다른 방법 중 하나를 선택 해야 합니다.|  
 |일반적인 약한 이벤트 관리자 클래스 사용|기존 <xref:System.Windows.WeakEventManager>를 사용할 수 없는 경우 일반 <xref:System.Windows.WeakEventManager%602>를 사용 합니다 .이 방법을 사용 하면 간편 하 게 구현할 수 있으며 효율성에 대해 염려 하지 않습니다. 일반 <xref:System.Windows.WeakEventManager%602>는 기존 또는 사용자 지정 weak 이벤트 관리자 보다 효율성이 낮습니다. 예를 들어, 제네릭 클래스는 이벤트 이름이 지정 된 경우 이벤트를 검색 하기 위해 더 많은 리플렉션을 수행 합니다. 또한 일반적인 <xref:System.Windows.WeakEventManager%602>를 사용 하 여 이벤트를 등록 하는 코드는 기존 또는 사용자 지정 <xref:System.Windows.WeakEventManager>를 사용 하는 것 보다 더 자세한 정보를 표시 합니다.|  
 |사용자 지정 weak 이벤트 관리자 클래스 만들기|기존 <xref:System.Windows.WeakEventManager>를 사용할 수 없는 경우 사용자 지정 <xref:System.Windows.WeakEventManager>를 만들고 최상의 효율성을 원합니다. 사용자 지정 <xref:System.Windows.WeakEventManager>를 사용 하 여 이벤트를 구독 하는 것이 더 효율적 이지만 앞으로 더 많은 코드를 작성 하는 비용이 발생 합니다.|  
-|타사 weak 이벤트 관리자 사용|NuGet에는 [몇 가지 weak 이벤트 관리자](https://www.nuget.org/packages?q=weak+event+manager&prerel=false) 가 있으며 많은 WPF 프레임 워크 에서도 패턴을 지원 합니다. 예를 들어 느슨하게 연결 된 [이벤트 구독에 대 한 프리즘 설명서](https://github.com/PrismLibrary/Prism-Documentation/blob/master/docs/wpf/Communication.md#subscribing-to-events)를 참조 하세요.|
+|타사 weak 이벤트 관리자 사용|NuGet에는 [몇 가지 weak 이벤트 관리자](https://www.nuget.org/packages?q=weak+event+manager&prerel=false) 가 있으며 많은 WPF 프레임 워크 에서도 패턴을 지원 합니다. 예를 들어 느슨하게 연결 된 [이벤트 구독에 대 한 프리즘 설명서](https://github.com/PrismLibrary/Prism-Documentation/blob/master/docs/wpf/legacy/Communication.md#subscribing-to-events)를 참조 하세요.|
 
  다음 섹션에서는 weak 이벤트 패턴을 구현 하는 방법을 설명 합니다.  이 논의의 목적을 위해 구독할 이벤트에는 다음과 같은 특징이 있습니다.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "73458487"
   
 1. 다음 클래스 템플릿을 프로젝트에 복사 합니다.  
   
-     이 클래스는 <xref:System.Windows.WeakEventManager> 클래스에서 상속 됩니다.  
+     이 클래스에서 상속 된 <xref:System.Windows.WeakEventManager> 클래스입니다.  
   
      [!code-csharp[WeakEvents#WeakEventManagerTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/WeakEvents/CSharp/WeakEventManagerTemplate.cs#weakeventmanagertemplate)]  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8cdac941-8b94-4497-b874-4e571785f3fe
 topic_type:
 - apiref
-ms.openlocfilehash: e40687f7f843dc563801bb01b503d2ae94a094fc
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0b1ecd1266528f8a08ef114de2f111dd0f71ca8b
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446022"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866933"
 ---
 # <a name="functionleave2-function"></a>FunctionLeave2 함수
 함수가 호출자에 게 반환 될 것을 프로파일러에 알리고 스택 프레임 및 함수 반환 값에 대 한 정보를 제공 합니다.  
@@ -35,24 +35,29 @@ void __stdcall FunctionLeave2 (
 );  
 ```  
   
-## <a name="parameters"></a>매개 변수  
- `funcId`  
- 진행 반환 되는 함수의 식별자입니다.  
+## <a name="parameters"></a>매개 변수
+
+- `funcId`
+
+  \[in] 반환 되는 함수의 식별자입니다.
+
+- `clientData`
+
+  \[에서 이전에 [Functionidmapper](functionidmapper-function.md) 함수를 통해 지정한 프로파일러에서 다시 매핑된 함수 식별자입니다.
+
+- `func`
+
+  \[] 스택 프레임에 대 한 정보를 가리키는 `COR_PRF_FRAME_INFO` 값입니다.
+
+  프로파일러는 [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) 메서드에서 실행 엔진으로 다시 전달할 수 있는 불투명 핸들로이를 처리 해야 합니다.  
   
- `clientData`  
- 진행 이전에 [Functionidmapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) 함수를 통해 지정한 프로파일러에서 다시 매핑된 함수 식별자입니다.  
-  
- `func`  
- 진행 스택 프레임에 대 한 정보를 가리키는 `COR_PRF_FRAME_INFO` 값입니다.  
-  
- 프로파일러는 [ICorProfilerInfo2:: GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) 메서드에서 실행 엔진으로 다시 전달할 수 있는 불투명 핸들로이를 처리 해야 합니다.  
-  
- `retvalRange`  
- 진행 함수 반환 값의 메모리 위치를 지정 하는 [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) 구조체에 대 한 포인터입니다.  
-  
- 반환 값 정보에 액세스 하려면 `COR_PRF_ENABLE_FUNCTION_RETVAL` 플래그를 설정 해야 합니다. 프로파일러는 [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) 메서드를 사용 하 여 이벤트 플래그를 설정할 수 있습니다.  
-  
-## <a name="remarks"></a>설명  
+- `retvalRange`
+
+  \[in] 함수 반환 값의 메모리 위치를 지정 하는 [COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md) 구조체에 대 한 포인터입니다.
+
+  반환 값 정보에 액세스 하려면 `COR_PRF_ENABLE_FUNCTION_RETVAL` 플래그를 설정 해야 합니다. 프로파일러는 [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) 메서드를 사용 하 여 이벤트 플래그를 설정할 수 있습니다.
+
+## <a name="remarks"></a>주의  
  값이 변경 되거나 제거 될 수 있으므로 `FunctionLeave2` 함수가 반환 된 후에는 `func` 및 `retvalRange` 매개 변수의 값이 유효 하지 않습니다.  
   
  `FunctionLeave2` 함수는 콜백입니다. 구현 해야 합니다. 구현은 `__declspec`(`naked`) 저장소 클래스 특성을 사용 해야 합니다.  
@@ -76,9 +81,9 @@ void __stdcall FunctionLeave2 (
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [FunctionEnter2 함수](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [FunctionTailcall2 함수](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
-- [SetEnterLeaveFunctionHooks2 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [프로파일링 전역 정적 함수](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [FunctionEnter2 함수](functionenter2-function.md)
+- [FunctionTailcall2 함수](functiontailcall2-function.md)
+- [SetEnterLeaveFunctionHooks2 메서드](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [프로파일링 전역 정적 함수](profiling-global-static-functions.md)

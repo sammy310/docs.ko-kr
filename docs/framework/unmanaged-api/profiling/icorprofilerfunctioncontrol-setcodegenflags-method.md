@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a2d5daa5-b990-4ae5-bf2a-c0862fe58bd7
 topic_type:
 - apiref
-ms.openlocfilehash: 88c9f552b73af69ea4e1f64b75ed74ea762dcdfb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 75414ec3d2b30fe8afc5db1e97c81f34b29a3115
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429931"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76864676"
 ---
 # <a name="icorprofilerfunctioncontrolsetcodegenflags-method"></a>ICorProfilerFunctionControl::SetCodegenFlags 메서드
-JIT (just in time) 컴파일 함수의 코드 생성을 제어 하기 위해 [COR_PRF_CODEGEN_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-codegen-flags-enumeration.md) 열거형에서 하나 이상의 플래그를 설정 합니다.  
+JIT (just in time) 컴파일 함수의 코드 생성을 제어 하기 위해 [COR_PRF_CODEGEN_FLAGS](cor-prf-codegen-flags-enumeration.md) 열거형에서 하나 이상의 플래그를 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,12 +34,12 @@ HRESULT SetCodegenFlags(
   
 ## <a name="parameters"></a>매개 변수  
  `flags`  
- 진행 [COR_PRF_CODEGEN_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-codegen-flags-enumeration.md) 열거형의 하나 이상의 플래그입니다.  
+ 진행 [COR_PRF_CODEGEN_FLAGS](cor-prf-codegen-flags-enumeration.md) 열거형의 하나 이상의 플래그입니다.  
   
 ## <a name="remarks"></a>주의  
- 프로파일러는 [ICorProfilerCallback4:: GetReJITParameters](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-getrejitparameters-method.md) 콜백을 통해이 인터페이스의 인스턴스를 가져옵니다. `SetCodegenFlags`를 사용 하면 프로파일러가 다시 컴파일된 함수에 대 한 코드 생성을 제어할 수 있습니다. 다른 모든 JIT 재컴파일 매개 변수와 마찬가지로 코드 생성 플래그는 함수의 모든 인스턴스에 적용 됩니다.  
+ 프로파일러는 [ICorProfilerCallback4:: GetReJITParameters](icorprofilercallback4-getrejitparameters-method.md) 콜백을 통해이 인터페이스의 인스턴스를 가져옵니다. `SetCodegenFlags`를 사용 하면 프로파일러가 다시 컴파일된 함수에 대 한 코드 생성을 제어할 수 있습니다. 다른 모든 JIT 재컴파일 매개 변수와 마찬가지로 코드 생성 플래그는 함수의 모든 인스턴스에 적용 됩니다.  
   
- JIT 컴파일러는 함수를 컴파일할 때 다른 원본에서 지정 된 다른 플래그와 함께 이러한 컴파일 플래그를 고려 합니다.  다른 소스에는 [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) 메서드 (값 `COR_PRF_DISABLE_INLINING` 및 `COR_PRF_DISABLE_OPTIMIZATIONS`) 및 프로파일러의 [ICorProfilerCallback:: JITInlining](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitinlining-method.md) callback을 사용 하 여 시작 시 프로파일러에서 설정 하는 디버거, 전역 플래그가 포함 됩니다.  JIT 컴파일러는 최소한의 최적화를 요청 하는 소스에 우선 순위를 부여 합니다.  예를 들어 프로파일러가 시작 시 `COR_PRF_DISABLE_INLINING` 지정 하지만 [ICorProfilerFunctionControl:: SetCodegenFlags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) 콜백에서 `COR_PRF_CODEGEN_DISABLE_INLINING`를 지정 하지 않는 경우에도 인라이닝을 사용할 수 없습니다.  마찬가지로 프로파일러가 `SetCodegenFlags`에서 `COR_PRF_CODEGEN_DISABLE_INLINING` 지정 하지 않지만 [ICorProfilerCallback:: JITInlining](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitinlining-method.md) 콜백을 사용 하 여 인라이닝을 사용 하지 않도록 설정 하면 인라이닝을 사용 하지 않도록 설정 됩니다.  
+ JIT 컴파일러는 함수를 컴파일할 때 다른 원본에서 지정 된 다른 플래그와 함께 이러한 컴파일 플래그를 고려 합니다.  다른 소스에는 [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) 메서드 (값 `COR_PRF_DISABLE_INLINING` 및 `COR_PRF_DISABLE_OPTIMIZATIONS`) 및 프로파일러의 [ICorProfilerCallback:: JITInlining](icorprofilercallback-jitinlining-method.md) callback을 사용 하 여 시작 시 프로파일러에서 설정 하는 디버거, 전역 플래그가 포함 됩니다.  JIT 컴파일러는 최소한의 최적화를 요청 하는 소스에 우선 순위를 부여 합니다.  예를 들어 프로파일러가 시작 시 `COR_PRF_DISABLE_INLINING` 지정 하지만 [ICorProfilerFunctionControl:: SetCodegenFlags](icorprofilerfunctioncontrol-setcodegenflags-method.md) 콜백에서 `COR_PRF_CODEGEN_DISABLE_INLINING`를 지정 하지 않는 경우에도 인라이닝을 사용할 수 없습니다.  마찬가지로 프로파일러가 `SetCodegenFlags`에서 `COR_PRF_CODEGEN_DISABLE_INLINING` 지정 하지 않지만 [ICorProfilerCallback:: JITInlining](icorprofilercallback-jitinlining-method.md) 콜백을 사용 하 여 인라이닝을 사용 하지 않도록 설정 하면 인라이닝을 사용 하지 않도록 설정 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -50,6 +50,6 @@ HRESULT SetCodegenFlags(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [ICorProfilerFunctionControl 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)
+- [ICorProfilerFunctionControl 인터페이스](icorprofilerfunctioncontrol-interface.md)

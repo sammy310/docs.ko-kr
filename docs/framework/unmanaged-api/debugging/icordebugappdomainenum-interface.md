@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e9226e6e-ca2c-428e-bb38-0c099210f507
 topic_type:
 - apiref
-ms.openlocfilehash: 6cc3ec1c802c28b74248380aa7f686e675a92f1d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9fb849c78636d5e29f58a70f59aa4cb3cd22df40
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088847"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784742"
 ---
 # <a name="icordebugappdomainenum-interface"></a>ICorDebugAppDomainEnum 인터페이스
 
@@ -29,7 +29,7 @@ ms.locfileid: "73088847"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[Next 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-next-method.md)|현재 커서 위치에서 시작 하 여 컬렉션에서 지정 된 수의 응용 프로그램 도메인을 가져옵니다.|  
+|[Next 메서드](icordebugappdomainenum-next-method.md)|현재 커서 위치에서 시작 하 여 컬렉션에서 지정 된 수의 응용 프로그램 도메인을 가져옵니다.|  
   
 ## <a name="remarks"></a>주의  
   
@@ -47,5 +47,5 @@ ms.locfileid: "73088847"
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebug 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebug 인터페이스](icordebug-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

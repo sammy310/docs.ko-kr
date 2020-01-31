@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 277c3344-d0cb-431e-beae-eb1eeeba8eea
 topic_type:
 - apiref
-ms.openlocfilehash: 86b1c8b3f5bd88b216c59f5cc6846f83f3c094ee
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 75a9a7174f105d99e9d1c9b220cfc5bf928d46ec
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440758"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866972"
 ---
 # <a name="functionenter3withinfo-function"></a>FunctionEnter3WithInfo 함수
-컨트롤이 함수에 전달 되 고 있음을 프로파일러에 알리고, [ICorProfilerInfo3:: GetFunctionEnter3Info 메서드에](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) 전달 하 여 스택 프레임 및 함수 인수를 검색 하는 핸들을 제공 합니다.  
+컨트롤이 함수에 전달 되 고 있음을 프로파일러에 알리고, [ICorProfilerInfo3:: GetFunctionEnter3Info 메서드에](icorprofilerinfo3-getfunctionenter3info-method.md) 전달 하 여 스택 프레임 및 함수 인수를 검색 하는 핸들을 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -32,15 +32,18 @@ void __stdcall FunctionEnter3WithInfo(
                [in] COR_PRF_ELT_INFO eltInfo);  
 ```  
   
-## <a name="parameters"></a>매개 변수  
- `functionIDOrClientID`  
- 진행 제어가 전달 되는 함수의 식별자입니다.  
-  
- `eltInfo`  
- [in] 지정된 스택 프레임에 대한 정보를 나타내는 불투명 핸들입니다. 이 핸들은 전달 되는 콜백 중에만 유효 합니다.  
-  
+## <a name="parameters"></a>매개 변수
+
+- `functionIDOrClientID`
+
+  \[] 컨트롤을 전달할 함수의 식별자입니다.
+
+- `eltInfo`
+
+  \[] 지정 된 스택 프레임에 대 한 정보를 나타내는 불투명 핸들입니다. 이 핸들은 전달 되는 콜백 중에만 유효 합니다.
+
 ## <a name="remarks"></a>주의  
- `FunctionEnter3WithInfo` 콜백 메서드는 함수가 호출 될 때 프로파일러를 알리고 프로파일러는 [ICorProfilerInfo3:: GetFunctionEnter3Info 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) 를 사용 하 여 인수 값을 검사할 수 있습니다. 인수 정보에 액세스 하려면 `COR_PRF_ENABLE_FUNCTION_ARGS` 플래그를 설정 해야 합니다. 프로파일러는 [ICorProfilerInfo:: SetEventMask 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) 를 사용 하 여 이벤트 플래그를 설정한 다음 [ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3WithInfo 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) 를 사용 하 여이 함수의 구현을 등록할 수 있습니다.  
+ `FunctionEnter3WithInfo` 콜백 메서드는 함수가 호출 될 때 프로파일러를 알리고 프로파일러는 [ICorProfilerInfo3:: GetFunctionEnter3Info 메서드](icorprofilerinfo3-getfunctionenter3info-method.md) 를 사용 하 여 인수 값을 검사할 수 있습니다. 인수 정보에 액세스 하려면 `COR_PRF_ENABLE_FUNCTION_ARGS` 플래그를 설정 해야 합니다. 프로파일러는 [ICorProfilerInfo:: SetEventMask 메서드](icorprofilerinfo-seteventmask-method.md) 를 사용 하 여 이벤트 플래그를 설정한 다음 [ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3WithInfo 메서드](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) 를 사용 하 여이 함수의 구현을 등록할 수 있습니다.  
   
  `FunctionEnter3WithInfo` 함수는 콜백입니다. 구현 해야 합니다. 구현에서 `__declspec(naked)` 저장소 클래스 특성을 사용 해야 합니다.  
   
@@ -63,9 +66,9 @@ void __stdcall FunctionEnter3WithInfo(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [GetFunctionEnter3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md)
-- [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)
-- [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)
-- [프로파일링 전역 정적 함수](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [GetFunctionEnter3Info](icorprofilerinfo3-getfunctionenter3info-method.md)
+- [FunctionEnter3](functionenter3-function.md)
+- [FunctionLeave3](functionleave3-function.md)
+- [프로파일링 전역 정적 함수](profiling-global-static-functions.md)

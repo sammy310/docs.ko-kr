@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8e7dbf14-98a2-4384-a950-58a7640e59df
 topic_type:
 - apiref
-ms.openlocfilehash: d44eae4da70418e2d4f398b2bacee1fb53d55b60
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2c98f67e20ea36d7fbbb31be2e3761594b674c36
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443059"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868605"
 ---
 # <a name="icorprofilerinfo2getthreadstaticaddress-method"></a>ICorProfilerInfo2::GetThreadStaticAddress 메서드
 지정 된 스레드의 범위에 있는 지정 된 스레드 정적 필드의 주소를 가져옵니다.  
@@ -48,7 +48,7 @@ HRESULT GetThreadStaticAddress(
  `ppAddress`  
  제한이 지정 된 스레드 내의 정적 필드 주소에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>설명  
+## <a name="remarks"></a>주의  
  `GetThreadStaticAddress` 메서드는 다음 중 하나를 반환할 수 있습니다.  
   
 - 지정 된 컨텍스트에서 지정 된 정적 필드에 주소가 할당 되지 않은 경우 HRESULT CORPROF_E_DATAINCOMPLETE입니다.  
@@ -66,7 +66,7 @@ HRESULT GetThreadStaticAddress(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerInfo2 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [ICorProfilerInfo 인터페이스](icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 인터페이스](icorprofilerinfo2-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 287b11e9-7c52-4a13-ba97-751203fa97f4
 topic_type:
 - apiref
-ms.openlocfilehash: 5d90f414a945d346ca7721745ea7d86cb24a085c
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 49b1769ade8e8b71c146a818523b124984c44ed6
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75936865"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868892"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot 메서드
 스택에서 관리 되는 프레임을 지정 된 스레드에 대해 보여 주고 콜백을 통해 프로파일러에 정보를 보냅니다.  
@@ -44,12 +44,12 @@ HRESULT DoStackSnapshot(
  `thread`에서 null을 전달 하면 현재 스레드의 스냅숏이 생성 됩니다. 다른 스레드의 `ThreadID` 전달 되 면 CLR (공용 언어 런타임)은 해당 스레드를 일시 중단 하 고, 스냅숏을 수행 하 고,를 다시 시작 합니다.  
   
  `callback`  
- 진행 [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) 메서드의 구현에 대 한 포인터로, 프로파일러에 관리 되는 각 프레임 및 관리 되지 않는 프레임의 각 실행에 대 한 정보를 제공 하기 위해 CLR에서 호출 됩니다.  
+ 진행 [StackSnapshotCallback](stacksnapshotcallback-function.md) 메서드의 구현에 대 한 포인터로, 프로파일러에 관리 되는 각 프레임 및 관리 되지 않는 프레임의 각 실행에 대 한 정보를 제공 하기 위해 CLR에서 호출 됩니다.  
   
  `StackSnapshotCallback` 메서드는 프로파일러 작성기에 의해 구현 됩니다.  
   
  `infoFlags`  
- 진행 `StackSnapshotCallback`하 여 각 프레임에 대해 다시 전달할 데이터 양을 지정 하는 [COR_PRF_SNAPSHOT_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-snapshot-info-enumeration.md) 열거형의 값입니다.  
+ 진행 `StackSnapshotCallback`하 여 각 프레임에 대해 다시 전달할 데이터 양을 지정 하는 [COR_PRF_SNAPSHOT_INFO](cor-prf-snapshot-info-enumeration.md) 열거형의 값입니다.  
   
  `clientData`  
  진행 `StackSnapshotCallback` 콜백 함수로 직접 전달 되는 클라이언트 데이터에 대 한 포인터입니다.  
@@ -78,12 +78,12 @@ HRESULT DoStackSnapshot(
 ## <a name="synchronous-stack-walk"></a>동기 스택 워크  
  동기 스택 워크에는 콜백에 대 한 응답으로 현재 스레드의 스택을 탐색 하는 작업이 포함 됩니다. 시드 또는 일시 중단은 필요 하지 않습니다.  
   
- 프로파일러에서 [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) (또는 [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)) 메서드 중 하나를 호출 하는 CLR에 대 한 응답으로, 현재 스레드의 스택을 탐색 하기 위해 `DoStackSnapshot`를 호출 하는 경우 동기식 호출을 수행 합니다. 이는 [ICorProfilerCallback:: ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md)된 것과 같은 알림에서 스택이 어떻게 표시 되는지 확인 하려는 경우에 유용 합니다. `ICorProfilerCallback` 메서드 내에서 `DoStackSnapshot`를 호출 하 여 `context` 및 `thread` 매개 변수에 null을 전달 하기만 하면 됩니다.  
+ 프로파일러에서 [ICorProfilerCallback](icorprofilercallback-interface.md) (또는 [ICorProfilerCallback2](icorprofilercallback2-interface.md)) 메서드 중 하나를 호출 하는 CLR에 대 한 응답으로, 현재 스레드의 스택을 탐색 하기 위해 `DoStackSnapshot`를 호출 하는 경우 동기식 호출을 수행 합니다. 이는 [ICorProfilerCallback:: ObjectAllocated](icorprofilercallback-objectallocated-method.md)된 것과 같은 알림에서 스택이 어떻게 표시 되는지 확인 하려는 경우에 유용 합니다. `ICorProfilerCallback` 메서드 내에서 `DoStackSnapshot`를 호출 하 여 `context` 및 `thread` 매개 변수에 null을 전달 하기만 하면 됩니다.  
   
 ## <a name="asynchronous-stack-walk"></a>비동기 스택 워크  
  비동기 스택 워크는 다른 스레드의 스택을 탐색 하거나 콜백에 대 한 응답으로는 아니지만 현재 스레드의 명령 포인터를 하이재킹 하 여 현재 스레드의 스택을 탐색 합니다. 스택의 맨 위에는 플랫폼 호출 (PInvoke) 또는 COM 호출의 일부가 아니지만 CLR 자체의 도우미 코드는 관리 되지 않는 코드를 사용 하는 경우 비동기 워크에 시드가 필요 합니다. 예를 들어 JIT (just-in-time) 컴파일 또는 가비지 수집을 수행 하는 코드는 도우미 코드입니다.  
   
- 관리 되는 최상위 프레임을 찾을 때까지 대상 스레드를 직접 일시 중단 하 고 해당 스택을 직접 탐색 하 여 초기값을 얻을 수 있습니다. 대상 스레드를 일시 중단 한 후 대상 스레드의 현재 등록 컨텍스트를 가져옵니다. 그런 다음 [ICorProfilerInfo:: GetFunctionFromIP](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getfunctionfromip-method.md) 를 호출 하 여 등록 컨텍스트가 비관리 코드를 가리키는지 여부를 확인 합니다. 0과 같은 `FunctionID` 반환 하는 경우 프레임은 비관리 코드입니다. 이제 첫 번째 관리 되는 프레임에 도달할 때까지 스택을 탐색 한 다음 해당 프레임에 대 한 등록 컨텍스트를 기준으로 초기값 컨텍스트를 계산 합니다.  
+ 관리 되는 최상위 프레임을 찾을 때까지 대상 스레드를 직접 일시 중단 하 고 해당 스택을 직접 탐색 하 여 초기값을 얻을 수 있습니다. 대상 스레드를 일시 중단 한 후 대상 스레드의 현재 등록 컨텍스트를 가져옵니다. 그런 다음 [ICorProfilerInfo:: GetFunctionFromIP](icorprofilerinfo-getfunctionfromip-method.md) 를 호출 하 여 등록 컨텍스트가 비관리 코드를 가리키는지 여부를 확인 합니다. 0과 같은 `FunctionID` 반환 하는 경우 프레임은 비관리 코드입니다. 이제 첫 번째 관리 되는 프레임에 도달할 때까지 스택을 탐색 한 다음 해당 프레임에 대 한 등록 컨텍스트를 기준으로 초기값 컨텍스트를 계산 합니다.  
   
  시드 컨텍스트를 사용 하 여 `DoStackSnapshot`를 호출 하 여 비동기 스택 워크를 시작 합니다. 초기값을 제공 하지 않으면 스택의 맨 위에 있는 관리 되는 프레임을 건너뛸 수 `DoStackSnapshot`, 결과적으로 완료 되지 않은 스택 워크가 제공 됩니다. 초기값을 제공 하는 경우 JIT로 컴파일된 또는 네이티브 이미지 생성기 (Ngen.exe)에서 생성 된 코드를 가리켜야 합니다. 그렇지 않으면 `DoStackSnapshot` 오류 코드 CORPROF_E_STACKSNAPSHOT_UNMANAGED_CTX 반환 됩니다.  
   
@@ -91,7 +91,7 @@ HRESULT DoStackSnapshot(
   
 - 스레드를 직접 일시 중단 하는 경우 관리 코드를 실행 하지 않는 스레드만 다른 스레드를 일시 중단할 수 있습니다.  
   
-- 스레드의 스택 워크가 완료 될 때까지 [ICorProfilerCallback:: ThreadDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md) 된 콜백이 항상 차단 됩니다.  
+- 스레드의 스택 워크가 완료 될 때까지 [ICorProfilerCallback:: ThreadDestroyed](icorprofilercallback-threaddestroyed-method.md) 된 콜백이 항상 차단 됩니다.  
   
 - 프로파일러가 가비지 수집을 트리거할 수 있는 CLR 함수를 호출 하는 동안에는 잠금을 보유 하지 않습니다. 즉, 소유 하는 스레드에서 가비지 수집을 트리거하는 호출을 수행할 수 있는 경우 잠금을 보유 하지 않습니다.  
   
@@ -108,5 +108,5 @@ HRESULT DoStackSnapshot(
   
 ## <a name="see-also"></a>참조
 
-- [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerInfo2 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [ICorProfilerInfo 인터페이스](icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 인터페이스](icorprofilerinfo2-interface.md)

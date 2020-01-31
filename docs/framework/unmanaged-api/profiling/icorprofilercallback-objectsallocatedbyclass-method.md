@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 91d688f3-a80e-419d-9755-ff94bc04188a
 topic_type:
 - apiref
-ms.openlocfilehash: 9ba021ec223d00e57081567b76f70f59768e6b9a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 028207486f43e35086ed2e515eb3ae6bca304491
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445863"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866080"
 ---
 # <a name="icorprofilercallbackobjectsallocatedbyclass-method"></a>ICorProfilerCallback::ObjectsAllocatedByClass 메서드
 가장 최근 가비지 수집 이후 생성 된 각 지정 된 클래스의 인스턴스 수에 대해 프로파일러에 알립니다.  
@@ -47,7 +47,7 @@ HRESULT ObjectsAllocatedByClass(
 ## <a name="remarks"></a>주의  
  `classIds` 및 `cObjects` 배열은 병렬 배열입니다. 예를 들어 `classIds[i]` 및 `cObjects[i]`는 동일한 클래스를 참조 합니다. 이전 가비지 수집 이후 클래스의 인스턴스를 만들지 않은 경우에는 클래스가 생략 됩니다. `ObjectsAllocatedByClass` 콜백은 대량 개체 힙에 할당 된 개체를 보고 하지 않습니다.  
   
- `ObjectsAllocatedByClass`에서 보고 하는 숫자는 단지 추정치입니다. 정확한 개수에 대해 [ICorProfilerCallback:: ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md)을 사용 합니다.  
+ `ObjectsAllocatedByClass`에서 보고 하는 숫자는 단지 추정치입니다. 정확한 개수에 대해 [ICorProfilerCallback:: ObjectAllocated](icorprofilercallback-objectallocated-method.md)을 사용 합니다.  
   
  해당 `cObjects` 배열의 형식이 언로드되고 있으면 `classIds` 배열에 하나 이상의 null 항목이 포함 될 수 있습니다.  
   
@@ -60,6 +60,6 @@ HRESULT ObjectsAllocatedByClass(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)

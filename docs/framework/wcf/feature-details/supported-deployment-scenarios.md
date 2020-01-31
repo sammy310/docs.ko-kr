@@ -2,12 +2,12 @@
 title: 지원 되는 배포 시나리오
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: 6898ec33564a526d0e444502ebb6ed7f142f1856
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5be9ab3d300da2095a45846d334512382b4067f6
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347977"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743458"
 ---
 # <a name="supported-deployment-scenarios"></a>지원 되는 배포 시나리오
 
@@ -35,7 +35,7 @@ WCF는 지원 되는 SOAP 바인딩 중 하나를 사용 하는 SOAP 메시징 �
 
 워크플로 서비스는 완전 신뢰 권한이 필요하며, 부분 신뢰 애플리케이션에서 사용할 수 없습니다.
 
-자세한 내용은 [How to: Use Medium Trust in ASP.NET 2.0](https://go.microsoft.com/fwlink/?LinkId=84603)을 참조 하세요.
+자세한 내용은 [How to: Use Medium Trust in ASP.NET 2.0](https://docs.microsoft.com/previous-versions/msp-n-p/ff648344(v=pandp.10))을 참조 하세요.
 
 ## <a name="partial-trust-on-the-client"></a>클라이언트의 부분 신뢰
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 535a6839-c443-405b-a6f4-e2af90725d5b
 topic_type:
 - apiref
-ms.openlocfilehash: 25c208c98802be540bde7532c53798e6f7b35446
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 29aecd530d18b931420467e9127bcbf96d3a4a5f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445957"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866766"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>ICLRProfiling::AttachProfiler 메서드
 지정한 프로파일러를 지정된 프로세스에 연결합니다.  
@@ -37,25 +37,32 @@ HRESULT AttachProfiler(
   [in] UINT cbClientData);                          // optional  
 ```  
   
-## <a name="parameters"></a>매개 변수  
- `dwProfileeProcessID`  
- [in] 프로파일러를 연결해야 하는 프로세스의 프로세스 ID입니다. 64비트 컴퓨터에서는 프로파일링된 프로세스의 비트가 `AttachProfiler`를 호출하는 트리거 프로세스의 비트와 일치해야 합니다. `AttachProfiler`가 호출되는 사용자 계정에 관리 권한이 있는 경우 대상 프로세스는 시스템의 모든 프로세스일 수 있습니다. 그러지 않으면 대상 프로세스가 동일한 사용자 계정에 의해 소유되어야 합니다.  
+## <a name="parameters"></a>매개 변수
+
+- `dwProfileeProcessID`
+
+  \[in] 프로파일러를 연결 해야 하는 프로세스의 프로세스 ID입니다. 64비트 컴퓨터에서는 프로파일링된 프로세스의 비트가 `AttachProfiler`를 호출하는 트리거 프로세스의 비트와 일치해야 합니다. `AttachProfiler`가 호출되는 사용자 계정에 관리 권한이 있는 경우 대상 프로세스는 시스템의 모든 프로세스일 수 있습니다. 그러지 않으면 대상 프로세스가 동일한 사용자 계정에 의해 소유되어야 합니다.
+
+- `dwMillisecondsMax`
+
+  \[in] `AttachProfiler` 완료할 시간 (밀리초)입니다. 트리거 프로세스는 특정 프로파일러가 초기화를 완료하기에 충분한 것으로 알려진 시간 제한을 전달해야 합니다.
   
- `dwMillisecondsMax`  
- [in] `AttachProfiler`가 완료되는 기간(밀리초)입니다. 트리거 프로세스는 특정 프로파일러가 초기화를 완료하기에 충분한 것으로 알려진 시간 제한을 전달해야 합니다.  
-  
- `pClsidProfiler`  
- [in] 로드할 프로파일러의 CLSID에 대한 포인터입니다. 트리거 프로세스는 `AttachProfiler`가 반환된 후 이 메모리를 다시 사용할 수 있습니다.  
-  
- `wszProfilerPath`  
- [in] 로드할 프로파일러 DLL 파일의 전체 경로입니다. 이 문자열에는 null 종결자를 포함하여 260자 이하가 포함되어야 합니다. `wszProfilerPath`가 null 또는 빈 문자열인 경우 CLR(공용 언어 런타임)은 `pClsidProfiler`가 가리키는 CLSID를 레지스트리에서 찾아 프로파일러 DLL 파일의 위치를 찾으려고 합니다.  
-  
- `pvClientData`  
- 진행 [ICorProfilerCallback3:: InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) 메서드로 프로파일러에 전달 될 데이터에 대 한 포인터입니다. 트리거 프로세스는 `AttachProfiler`가 반환된 후 이 메모리를 다시 사용할 수 있습니다. `pvClientData`가 null이면 `cbClientData`는 0이어야 합니다.  
-  
- `cbClientData`  
- [in] `pvClientData`가 가리키는 데이터의 크기(바이트)입니다.  
-  
+- `pClsidProfiler`
+
+  \[in] 로드할 프로파일러의 CLSID에 대 한 포인터입니다. 트리거 프로세스는 `AttachProfiler`가 반환된 후 이 메모리를 다시 사용할 수 있습니다.
+
+- `wszProfilerPath`
+
+  \[in] 로드할 프로파일러 DLL 파일의 전체 경로입니다. 이 문자열에는 null 종결자를 포함하여 260자 이하가 포함되어야 합니다. `wszProfilerPath`가 null 또는 빈 문자열인 경우 CLR(공용 언어 런타임)은 `pClsidProfiler`가 가리키는 CLSID를 레지스트리에서 찾아 프로파일러 DLL 파일의 위치를 찾으려고 합니다.
+
+- `pvClientData`
+
+  \[] [ICorProfilerCallback3:: InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) 메서드로 프로파일러에 전달 될 데이터에 대 한 포인터입니다. 트리거 프로세스는 `AttachProfiler`가 반환된 후 이 메모리를 다시 사용할 수 있습니다. `pvClientData`가 null이면 `cbClientData`는 0이어야 합니다.
+
+- `cbClientData`
+
+  \[in] `pvClientData` 가리키는 데이터의 크기 (바이트)입니다.
+
 ## <a name="return-value"></a>반환 값  
  이 메서드는 다음과 같은 HRESULT를 반환합니다.  
   
@@ -72,7 +79,7 @@ HRESULT AttachProfiler(
 |HRESULT_FROM_WIN32(ERROR_TIMEOUT)|프로파일러 로드를 시작하지 않고 시간 제한이 만료되었습니다. 연결 작업을 다시 시도할 수 있습니다. 시간 초과는 대상 프로세스의 종료자가 시간 제한 값보다 오래 실행되는 경우에 발생합니다.|  
 |E_INVALIDARG|하나 이상의 매개 변수에 잘못된 값이 있습니다.|  
 |E_FAIL|지정되지 않은 다른 일부 오류가 발생했습니다.|  
-|기타 오류 코드|프로파일러의 [ICorProfilerCallback3:: InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) 메서드가 실패를 나타내는 hresult를 반환 하는 경우 `AttachProfiler`는 동일한 hresult를 반환 합니다. 이 경우 E_NOTIMPL이 CORPROF_E_PROFILER_NOT_ATTACHABLE로 변환됩니다.|  
+|기타 오류 코드|프로파일러의 [ICorProfilerCallback3:: InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) 메서드가 실패를 나타내는 hresult를 반환 하는 경우 `AttachProfiler`는 동일한 hresult를 반환 합니다. 이 경우 E_NOTIMPL이 CORPROF_E_PROFILER_NOT_ATTACHABLE로 변환됩니다.|  
   
 ## <a name="remarks"></a>주의  
   
@@ -88,9 +95,9 @@ HRESULT AttachProfiler(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ICorProfilerInfo3 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [프로파일링](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
+- [ICorProfilerInfo3 인터페이스](icorprofilerinfo3-interface.md)
+- [프로파일링 인터페이스](profiling-interfaces.md)
+- [프로파일링](index.md)

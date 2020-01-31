@@ -1,15 +1,15 @@
 ---
-title: 'ICorDebugSymbolProvider:: GetCodeRange 메서드'
+title: ICorDebugSymbolProvider::GetCodeRange 메서드
 ms.date: 03/30/2017
 ms.assetid: 49a2451f-d250-4e73-aa96-9ff49d9f11c6
-ms.openlocfilehash: 84bf545fedf3a6c7915d94fd0c2630268585b6eb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dbe042641cadae182efac30502a70631be359bbe
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138915"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791646"
 ---
-# <a name="icordebugsymbolprovidergetcoderange-method"></a>ICorDebugSymbolProvider:: GetCodeRange 메서드
+# <a name="icordebugsymbolprovidergetcoderange-method"></a>ICorDebugSymbolProvider::GetCodeRange 메서드
 메서드의 RVA(상대 가상 주소)가 지정된 경우 메서드 시작 주소와 크기를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -48,5 +48,5 @@ HRESULT GetCodeRange(
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugSymbolProvider 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugSymbolProvider 인터페이스](icordebugsymbolprovider-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

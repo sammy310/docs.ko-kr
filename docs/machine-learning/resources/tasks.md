@@ -2,12 +2,12 @@
 title: 기계 학습 작업
 description: ML.NET에서 지원되는 다양한 기계 학습 작업 및 관련 작업을 살펴봅니다.
 ms.date: 12/23/2019
-ms.openlocfilehash: badb096ab3e7fbd575d8594b4fbd0e2ebaf63820
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 6cd41065e668375537b9816ef7a208a65e0a523b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739631"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745106"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>ML.NET의 기계 학습 작업
 
@@ -85,6 +85,7 @@ ms.locfileid: "75739631"
 * <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
 * <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer>
+* <xref:Microsoft.ML.Vision.ImageClassificationTrainer>
 
 ### <a name="multiclass-classification-inputs-and-outputs"></a>다중 클래스 분류 입력 및 출력
 
@@ -219,3 +220,13 @@ ms.locfileid: "75739631"
 다음 알고리즘을 사용하여 권장 사항 모델을 학습할 수 있습니다.
 
 * <xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer>
+
+## <a name="forecasting"></a>예측
+
+예측 작업은 과거 시계열 데이터를 사용하여 향후 동작에 대한 예측을 수행합니다. 예측에 적용되는 시나리오에는 날씨 예측, 계절별 매출 예측, 예측 유지 관리 등이 있습니다.
+
+### <a name="forecasting-trainers"></a>트레이너 예측
+
+다음 알고리즘을 사용하여 예측 모델을 학습할 수 있습니다.
+
+<xref:Microsoft.ML.TimeSeriesCatalog.ForecastBySsa*>

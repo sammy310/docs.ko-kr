@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: af317171-d66d-4114-89eb-063554c74940
 topic_type:
 - apiref
-ms.openlocfilehash: 2655151d34275b1b0fdc5d0903dd57fcea646014
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6596689af6533bb00f41b0d03805b3383ae8c3cc
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137313"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792947"
 ---
 # <a name="icordebugmodule3createreaderforinmemorysymbols-method"></a>ICorDebugModule3::CreateReaderForInMemorySymbols 메서드
 동적 모듈에 대 한 디버그 기호 판독기를 만듭니다.  
@@ -54,11 +54,11 @@ HRESULT CreateReaderForInMemorySymbols (
  판독기를 만들 수 없습니다.  
   
 ## <a name="remarks"></a>주의  
- 이 메서드를 사용 하 여 메모리 내 (동적이 아닌) 모듈에 대 한 기호 판독기 개체를 만들 수도 있습니다. 단, 기호를 처음 사용할 수 있는 경우에만 ( [UpdateModuleSymbols 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-updatemodulesymbols-method.md) 콜백에서 표시).  
+ 이 메서드를 사용 하 여 메모리 내 (동적이 아닌) 모듈에 대 한 기호 판독기 개체를 만들 수도 있습니다. 단, 기호를 처음 사용할 수 있는 경우에만 ( [UpdateModuleSymbols 메서드](icordebugmanagedcallback-updatemodulesymbols-method.md) 콜백에서 표시).  
   
- 이 메서드는 호출 될 때마다 새 판독기 인스턴스를 반환 합니다 (예 [: Ccomptrbase:: CoCreateInstance](/cpp/atl/reference/ccomptrbase-class#cocreateinstance)). 따라서 디버거는 기본 데이터가 변경 되었을 수 있는 경우 (즉, [LoadClass 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) 콜백이 수신 될 때)에만 결과를 캐시 하 고 새 인스턴스를 요청 해야 합니다.  
+ 이 메서드는 호출 될 때마다 새 판독기 인스턴스를 반환 합니다 (예 [: Ccomptrbase:: CoCreateInstance](/cpp/atl/reference/ccomptrbase-class#cocreateinstance)). 따라서 디버거는 기본 데이터가 변경 되었을 수 있는 경우 (즉, [LoadClass 메서드](icordebugmanagedcallback-loadclass-method.md) 콜백이 수신 될 때)에만 결과를 캐시 하 고 새 인스턴스를 요청 해야 합니다.  
   
- 동적 모듈에는 첫 번째 형식이 로드 될 때까지 사용할 수 있는 기호가 없습니다 ( [LoadClass 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) 콜백에 표시 됨).  
+ 동적 모듈에는 첫 번째 형식이 로드 될 때까지 사용할 수 있는 기호가 없습니다 ( [LoadClass 메서드](icordebugmanagedcallback-loadclass-method.md) 콜백에 표시 됨).  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -71,7 +71,7 @@ HRESULT CreateReaderForInMemorySymbols (
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugRemoteTarget 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
-- [ICorDebug 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebugRemoteTarget 인터페이스](icordebugremotetarget-interface.md)
+- [ICorDebug 인터페이스](icordebug-interface.md)
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

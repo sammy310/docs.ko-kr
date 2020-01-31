@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f25b64f-eedd-4ae5-8b0e-cfdfb9b6c5d8
 topic_type:
 - apiref
-ms.openlocfilehash: 362e917e1684c91bde80a8b5c2e6a27a18a99190
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6133b34a60fd06c1b75d69783760741b8de62071
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73098194"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789351"
 ---
 # <a name="cordebuggenerationtypes-enumeration"></a>CorDebugGenerationTypes 열거형
 관리되는 힙에 대한 메모리 영역 생성을 지정합니다.  
@@ -35,7 +35,7 @@ typedef enum CorDebugGenerationTypes {
 } CorDebugRegionTypes;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>Members  
   
 |멤버 이름|설명|  
 |-----------------|-----------------|  
@@ -57,4 +57,4 @@ typedef enum CorDebugGenerationTypes {
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 열거형](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [디버깅 열거형](debugging-enumerations.md)

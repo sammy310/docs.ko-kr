@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 376fb03f-f1ef-4107-baa4-4d9d55884862
 topic_type:
 - apiref
-ms.openlocfilehash: 7b56f0f3ba62efb48ac8d79aad4480b5f22771ba
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e90952a92c408762a98a2bfcb91b6aeb72052df1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73110221"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791212"
 ---
 # <a name="icordebugtype2-interface"></a>ICorDebugType2 인터페이스
 ICorDebugType 인터페이스를 확장 하 여 기본 형식 또는 복합 (사용자 정의) 형식의 형식 식별자를 검색 합니다.  
@@ -28,7 +28,7 @@ ICorDebugType 인터페이스를 확장 하 여 기본 형식 또는 복합 (사
   
 |메서드||  
 |------------|-|  
-|[GetTypeID 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)|이 형식에 대 한 [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) 를 가져옵니다.|  
+|[GetTypeID 메서드](icordebugtype2-gettypeid-method.md)|이 형식에 대 한 [COR_TYPEID](cor-typeid-structure.md) 를 가져옵니다.|  
   
 ## <a name="remarks"></a>주의  
  이 인터페이스는 ICorDebugType 인터페이스의 논리적 확장입니다.  
@@ -36,8 +36,8 @@ ICorDebugType 인터페이스를 확장 하 여 기본 형식 또는 복합 (사
 > [!NOTE]
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
-## <a name="example"></a>예제  
- 다음 코드 조각에서는 [ICorDebugType2:: GetTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) 메서드를 사용 하는 방법을 보여 줍니다.  
+## <a name="example"></a>예  
+ 다음 코드 조각에서는 [ICorDebugType2:: GetTypeID](icordebugtype2-gettypeid-method.md) 메서드를 사용 하는 방법을 보여 줍니다.  
   
 ```cpp  
 // (error checking omitted for brevity)  
@@ -63,4 +63,4 @@ pType2->GetTypeID(&id);
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

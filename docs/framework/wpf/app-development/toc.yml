@@ -128,10 +128,8 @@
           items:
             - name: IIS 5.0 및 IIS 6.0을 구성하여 WPF 애플리케이션 배포
               href: how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md
-            - name: Visual Studio를 구성하여 웹 서비스를 호출하는 XAML 브라우저 애플리케이션 디버깅
+            - name: Visual Studio를 구성하여 웹 서비스를 호출하는 XAML 브라우저 응용 프로그램 디버깅
               href: configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md
-            - name: 설치된 WPF 버전 확인
-              href: how-to-determine-the-installed-version-of-wpf.md
             - name: .NET Framework 3.0 설치 여부 확인
               href: how-to-detect-whether-the-net-framework-3-0-is-installed.md
             - name: .NET Framework 3.5 설치 여부 확인

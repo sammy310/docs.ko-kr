@@ -27,12 +27,12 @@ helpviewer_keywords:
 - security, profiling API considerations
 - stack depth [.NET Framework profiling]
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
-ms.openlocfilehash: a13470b970b35a2f6f088fd305ba455167c8e107
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: aa8bff374e9698d4b7e032428ec1bdc66901e05d
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937825"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76860917"
 ---
 # <a name="profiling-overview"></a>프로파일링 개요
 
@@ -48,7 +48,7 @@ CLR 애플리케이션을 프로파일링하려면 기존의 컴파일된 기계
 
 일반적으로 프로 파일링 API는 관리 되는 응용 프로그램의 실행을 모니터링 하는 프로그램인 *코드 프로파일러*를 작성 하는 데 사용 됩니다.
 
-프로파일링 API는 프로파일링되는 애플리케이션과 동일한 프로세스에 로드된 프로파일러 DLL에서 사용됩니다. 프로파일러 DLL은 콜백 인터페이스 (.NET Framework 버전 1.0 및 1.1, [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) 버전 2.0 이상)에서[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) 를 구현 합니다. CLR은 해당 인터페이스의 메서드를 호출하여 프로파일링된 프로세스의 이벤트를 프로파일러에 알립니다. 프로파일러는 [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) 및 [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md) 인터페이스의 메서드를 사용 하 여 프로 파일링 된 응용 프로그램의 상태에 대 한 정보를 가져올 때 런타임으로 다시 호출할 수 있습니다.
+프로파일링 API는 프로파일링되는 애플리케이션과 동일한 프로세스에 로드된 프로파일러 DLL에서 사용됩니다. 프로파일러 DLL은 콜백 인터페이스 (.NET Framework 버전 1.0 및 1.1, [ICorProfilerCallback2](icorprofilercallback2-interface.md) 버전 2.0 이상)에서[ICorProfilerCallback](icorprofilercallback-interface.md) 를 구현 합니다. CLR은 해당 인터페이스의 메서드를 호출하여 프로파일링된 프로세스의 이벤트를 프로파일러에 알립니다. 프로파일러는 [ICorProfilerInfo](icorprofilerinfo-interface.md) 및 [ICorProfilerInfo2](icorprofilerinfo2-interface.md) 인터페이스의 메서드를 사용 하 여 프로 파일링 된 응용 프로그램의 상태에 대 한 정보를 가져올 때 런타임으로 다시 호출할 수 있습니다.
 
 > [!NOTE]
 > 프로파일러 솔루션의 데이터 수집 부분만 프로파일링된 애플리케이션과 동일한 프로세스에서 실행되어야 합니다. 모든 사용자 인터페이스 및 데이터 분석은 별도 프로세스에서 수행되어야 합니다.
@@ -59,13 +59,13 @@ CLR 애플리케이션을 프로파일링하려면 기존의 컴파일된 기계
 
 ### <a name="the-notification-interfaces"></a>알림 인터페이스
 
-[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) 및 [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) 는 알림 인터페이스로 간주할 수 있습니다. 이러한 인터페이스는 [Classloadstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md), [Classloadstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)및 [JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)와 같은 메서드로 구성 됩니다. CLR은 클래스를 로드 또는 언로드하고 함수를 컴파일할 때마다 프로파일러의 `ICorProfilerCallback` 또는 `ICorProfilerCallback2` 인터페이스에서 해당 메서드를 호출합니다.
+[ICorProfilerCallback](icorprofilercallback-interface.md) 및 [ICorProfilerCallback2](icorprofilercallback2-interface.md) 는 알림 인터페이스로 간주할 수 있습니다. 이러한 인터페이스는 [Classloadstarted](icorprofilercallback-classloadstarted-method.md), [Classloadstarted](icorprofilercallback-classloadfinished-method.md)및 [JITCompilationStarted](icorprofilercallback-jitcompilationstarted-method.md)와 같은 메서드로 구성 됩니다. CLR은 클래스를 로드 또는 언로드하고 함수를 컴파일할 때마다 프로파일러의 `ICorProfilerCallback` 또는 `ICorProfilerCallback2` 인터페이스에서 해당 메서드를 호출합니다.
 
-예를 들어 프로파일러가 [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) 및 [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)의 두 가지 알림 함수를 통해 코드 성능을 측정할 수 있습니다. 단순히 각 알림에 타임스탬프를 지정하고, 결과를 누적한 다음 애플리케이션 실행 중에 가장 많은 CPU 또는 벽시계 시간을 사용한 함수를 나타내는 목록을 출력합니다.
+예를 들어 프로파일러가 [FunctionEnter2](functionenter2-function.md) 및 [FunctionLeave2](functionleave2-function.md)의 두 가지 알림 함수를 통해 코드 성능을 측정할 수 있습니다. 단순히 각 알림에 타임스탬프를 지정하고, 결과를 누적한 다음 애플리케이션 실행 중에 가장 많은 CPU 또는 벽시계 시간을 사용한 함수를 나타내는 목록을 출력합니다.
 
 ### <a name="the-information-retrieval-interfaces"></a>정보 검색 인터페이스
 
-프로 파일링과 관련 된 다른 주요 인터페이스는 [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) 및 [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)입니다. 프로파일러는 필요에 따라 이러한 인터페이스를 호출하여 분석에 도움이 되는 자세한 정보를 가져옵니다. 예를 들어 CLR은 [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) 함수를 호출할 때마다 함수 식별자를 제공 합니다. 프로파일러는 [ICorProfilerInfo2:: GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) 메서드를 호출 하 여 함수의 부모 클래스, 해당 이름 등을 검색 하 여 해당 함수에 대 한 자세한 정보를 가져올 수 있습니다.
+프로 파일링과 관련 된 다른 주요 인터페이스는 [ICorProfilerInfo](icorprofilerinfo-interface.md) 및 [ICorProfilerInfo2](icorprofilerinfo2-interface.md)입니다. 프로파일러는 필요에 따라 이러한 인터페이스를 호출하여 분석에 도움이 되는 자세한 정보를 가져옵니다. 예를 들어 CLR은 [FunctionEnter2](functionenter2-function.md) 함수를 호출할 때마다 함수 식별자를 제공 합니다. 프로파일러는 [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) 메서드를 호출 하 여 함수의 부모 클래스, 해당 이름 등을 검색 하 여 해당 함수에 대 한 자세한 정보를 가져올 수 있습니다.
 
 ## <a name="supported-features"></a>지원되는 기능
 
@@ -127,9 +127,9 @@ CLR 애플리케이션을 프로파일링하려면 기존의 컴파일된 기계
 
 ## <a name="notification-threads"></a>알림 스레드
 
-대부분의 경우 이벤트를 생성하는 스레드도 알림을 실행합니다. 이러한 알림 (예: [Functionenter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) 및 [functionenter](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md))은 명시적인 `ThreadID`를 제공할 필요가 없습니다. 또한 프로파일러는 영향을 받는 스레드의 `ThreadID`에 따라, 전역 스토리지의 분석 블록을 인덱싱하는 대신 스레드 로컬 스토리지를 사용하여 분석 블록을 저장 및 업데이트할 수 있습니다.
+대부분의 경우 이벤트를 생성하는 스레드도 알림을 실행합니다. 이러한 알림 (예: [Functionenter](functionenter-function.md) 및 [functionenter](functionleave-function.md))은 명시적인 `ThreadID`를 제공할 필요가 없습니다. 또한 프로파일러는 영향을 받는 스레드의 `ThreadID`에 따라, 전역 스토리지의 분석 블록을 인덱싱하는 대신 스레드 로컬 스토리지를 사용하여 분석 블록을 저장 및 업데이트할 수 있습니다.
 
-이러한 콜백은 직렬화되지 않습니다. 사용자는 스레드로부터 안전한 데이터 구조를 만들고 여러 스레드에서의 병렬 액세스를 방지하기 위해 필요에 따라 프로파일러 코드를 잠가 코드를 보호해야 합니다. 따라서 특정 경우에서는 사용자가 평소와 다른 콜백 시퀀스를 받을 수 있습니다. 예를 들어 관리되는 애플리케이션이 동일한 코드를 실행하는 두 스레드를 생성한다고 가정합니다. 이 경우 [ICorProfilerCallback:: JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md) 콜백을 받기 전에 한 스레드에서 일부 함수에 대해 [ICorProfilerCallback:: JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) 이벤트를 수신 하 고 다른 스레드에서는 `FunctionEnter` 콜백을 받을 수 있습니다. 이 경우에는 사용자가 아직 완전히 JIT(Just-In-Time) 컴파일되지 않았을 수 있는 함수에 대해 `FunctionEnter` 콜백을 받는 것입니다.
+이러한 콜백은 직렬화되지 않습니다. 사용자는 스레드로부터 안전한 데이터 구조를 만들고 여러 스레드에서의 병렬 액세스를 방지하기 위해 필요에 따라 프로파일러 코드를 잠가 코드를 보호해야 합니다. 따라서 특정 경우에서는 사용자가 평소와 다른 콜백 시퀀스를 받을 수 있습니다. 예를 들어 관리되는 애플리케이션이 동일한 코드를 실행하는 두 스레드를 생성한다고 가정합니다. 이 경우 [ICorProfilerCallback:: JITCompilationFinished](icorprofilercallback-jitcompilationfinished-method.md) 콜백을 받기 전에 한 스레드에서 일부 함수에 대해 [ICorProfilerCallback:: JITCompilationStarted](icorprofilercallback-jitcompilationstarted-method.md) 이벤트를 수신 하 고 다른 스레드에서는 `FunctionEnter` 콜백을 받을 수 있습니다. 이 경우에는 사용자가 아직 완전히 JIT(Just-In-Time) 컴파일되지 않았을 수 있는 함수에 대해 `FunctionEnter` 콜백을 받는 것입니다.
 
 ## <a name="security"></a>보안
 
@@ -145,9 +145,9 @@ CLR 프로파일링 API를 검토하면 COM interop 또는 간접 호출을 통�
 
 디자인 관점에서는 가능하지만 프로파일링 API는 관리되는 구성 요소를 지원하지 않습니다. CLR 프로파일러는 완전히 관리되지 않아야 합니다. CLR 프로파일러에서 관리 코드와 비관리 코드를 결합하려고 하면 액세스 위반, 프로그램 오류 또는 교착 상태가 발생할 수 있습니다. 프로파일러의 관리되는 구성 요소는 관리되지 않는 해당 구성 요소로 다시 이벤트를 발생시키고, 이후에 이 구성 요소가 관리되는 구성 요소를 다시 호출하여 순환 참조가 발생합니다.
 
-CLR 프로파일러가 관리 코드를 안전하게 호출할 수 있는 유일한 위치는 메서드의 MSIL(Microsoft Intermediate Language) 본문입니다. MSIL 본문을 수정 하는 권장 방법은 [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) 인터페이스에서 JIT 재컴파일 메서드를 사용 하는 것입니다.
+CLR 프로파일러가 관리 코드를 안전하게 호출할 수 있는 유일한 위치는 메서드의 MSIL(Microsoft Intermediate Language) 본문입니다. MSIL 본문을 수정 하는 권장 방법은 [ICorProfilerCallback4](icorprofilercallback4-interface.md) 인터페이스에서 JIT 재컴파일 메서드를 사용 하는 것입니다.
 
-오래된 계측 메서드를 사용하여 MSIL을 수정할 수도 있습니다. 함수의 JIT (just-in-time) 컴파일이 완료 되기 전에 프로파일러는 메서드의 MSIL 본문에 관리 되는 호출을 삽입 한 다음 JIT 컴파일할 수 있습니다 ( [ICorProfilerInfo:: GetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbody-method.md) 메서드 참조). 이 기술은 관리 코드의 선택적 계측이나 JIT에 대한 통계 및 성능 데이터 수집을 위해 성공적으로 사용할 수 있습니다.
+오래된 계측 메서드를 사용하여 MSIL을 수정할 수도 있습니다. 함수의 JIT (just-in-time) 컴파일이 완료 되기 전에 프로파일러는 메서드의 MSIL 본문에 관리 되는 호출을 삽입 한 다음 JIT 컴파일할 수 있습니다 ( [ICorProfilerInfo:: GetILFunctionBody](icorprofilerinfo-getilfunctionbody-method.md) 메서드 참조). 이 기술은 관리 코드의 선택적 계측이나 JIT에 대한 통계 및 성능 데이터 수집을 위해 성공적으로 사용할 수 있습니다.
 
 또는 코드 프로파일러가 비관리 코드를 호출하는 모든 관리되는 함수의 MSIL 본문에 네이티브 후크를 삽입할 수 있습니다. 이 기술은 계측 및 검사에 사용할 수 있습니다. 예를 들어 코드 프로파일러가 모든 MSIL 블록 뒤에 계측 후크를 삽입하여 블록이 실행되었는지 확인할 수 있습니다. 메서드의 MSIL 본문 수정은 매우 정교한 작업이며 여러 가지 요인을 고려해야 합니다.
 
@@ -161,7 +161,7 @@ CLR(공용 언어 런타임) 프로파일링 API는 비관리 코드 프로파�
 
 .NET Framework 버전 1.0 및 1.1에서는 CLR 디버깅 API의 in-process 하위 집합을 통해 이러한 메서드를 사용할 수 있습니다. CorDebug.idl 파일에서 정의됩니다.
 
-.NET Framework 2.0 이상에서는이 기능에 대해 [ICorProfilerInfo2::D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) 메서드를 사용할 수 있습니다.
+.NET Framework 2.0 이상에서는이 기능에 대해 [ICorProfilerInfo2::D ostacksnapshot](icorprofilerinfo2-dostacksnapshot-method.md) 메서드를 사용할 수 있습니다.
 
 ## <a name="using-com"></a>COM 사용
 
@@ -175,11 +175,11 @@ CLR(공용 언어 런타임) 프로파일링 API는 비관리 코드 프로파�
 
 스택 스냅샷은 한 순간의 스레드 스택 추적입니다. 프로파일링 API는 스택에서 관리되는 함수의 추적을 지원하지만 관리되지 않는 함수의 추적은 프로파일러의 자체 스택 워크에 맡깁니다.
 
-관리 되는 스택을 탐색 하기 위해 프로파일러를 프로그래밍 하는 방법에 대 한 자세한 내용은이 설명서 집합의 [ICorProfilerInfo2::D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) 메서드 및 [.NET Framework 2.0: 기본 사항 및 그 이상에서 프로파일러 스택 탐색](https://docs.microsoft.com/previous-versions/dotnet/articles/bb264782(v=msdn.10))을 참조 하세요.
+관리 되는 스택을 탐색 하기 위해 프로파일러를 프로그래밍 하는 방법에 대 한 자세한 내용은이 설명서 집합의 [ICorProfilerInfo2::D ostacksnapshot](icorprofilerinfo2-dostacksnapshot-method.md) 메서드 및 [.NET Framework 2.0: 기본 사항 및 그 이상에서 프로파일러 스택 탐색](https://docs.microsoft.com/previous-versions/dotnet/articles/bb264782(v=msdn.10))을 참조 하세요.
 
 ### <a name="shadow-stack"></a>섀도 스택
 
-스냅샷 메서드를 너무 자주 사용하면 성능 문제가 빠르게 발생할 수 있습니다. 스택 추적을 자주 수행 하려는 경우 프로파일러가 [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)및 [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) 예외 콜백을 사용 하 여 섀도 스택을 대신 빌드해야 합니다. 섀도 스택은 항상 최신 상태이며 스택 스냅샷이 필요할 때마다 스토리지로 빠르게 복사될 수 있습니다.
+스냅샷 메서드를 너무 자주 사용하면 성능 문제가 빠르게 발생할 수 있습니다. 스택 추적을 자주 수행 하려는 경우 프로파일러가 [FunctionEnter2](functionenter2-function.md), [FunctionLeave2](functionleave2-function.md), [FunctionTailcall2](functiontailcall2-function.md)및 [ICorProfilerCallback2](icorprofilercallback2-interface.md) 예외 콜백을 사용 하 여 섀도 스택을 대신 빌드해야 합니다. 섀도 스택은 항상 최신 상태이며 스택 스냅샷이 필요할 때마다 스토리지로 빠르게 복사될 수 있습니다.
 
 섀도 스택은 함수 인수, 반환 값 및 제네릭 인스턴스화에 대한 정보를 얻을 수 있습니다. 이 정보는 섀도 스택을 통해서만 제공되며 컨트롤이 함수에 전달될 때 얻을 수 있습니다. 그러나 나중에 함수 실행 중에는 이 정보는 사용할 수 없습니다.
 
@@ -191,8 +191,8 @@ CLR(공용 언어 런타임) 프로파일링 API는 비관리 코드 프로파�
 
 |제목|설명|
 |-----------|-----------------|
-|[프로파일링 환경 설정](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)|프로파일러를 초기화하고, 이벤트 알림을 설정하고, Windows 서비스를 프로파일링하는 방법을 설명합니다.|
-|[프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)|프로파일링 API에서 사용하는 관리되지 않는 인터페이스를 설명합니다.|
-|[프로파일링 전역 정적 함수](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)|프로파일링 API에서 사용하는 관리되지 않는 전역 정적 함수를 설명합니다.|
-|[프로파일링 열거형](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)|프로파일링 API에서 사용하는 관리되지 않는 열거형을 설명합니다.|
-|[프로파일링 구조체](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)|프로파일링 API에서 사용하는 관리되지 않는 구조체를 설명합니다.|
+|[프로파일링 환경 설정](setting-up-a-profiling-environment.md)|프로파일러를 초기화하고, 이벤트 알림을 설정하고, Windows 서비스를 프로파일링하는 방법을 설명합니다.|
+|[프로파일링 인터페이스](profiling-interfaces.md)|프로파일링 API에서 사용하는 관리되지 않는 인터페이스를 설명합니다.|
+|[프로파일링 전역 정적 함수](profiling-global-static-functions.md)|프로파일링 API에서 사용하는 관리되지 않는 전역 정적 함수를 설명합니다.|
+|[프로파일링 열거형](profiling-enumerations.md)|프로파일링 API에서 사용하는 관리되지 않는 열거형을 설명합니다.|
+|[프로파일링 구조체](profiling-structures.md)|프로파일링 API에서 사용하는 관리되지 않는 구조체를 설명합니다.|

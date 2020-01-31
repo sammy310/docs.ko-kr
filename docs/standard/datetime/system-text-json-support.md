@@ -13,12 +13,12 @@ helpviewer_keywords:
 - JSON Serializer, JSON Reader, JSON Writer
 - Converter, JSON Converter, DateTime Converter
 - ISO, ISO 8601, ISO 8601-1:2019
-ms.openlocfilehash: 8198359e2c54c4ed098703fbcc070f7469b3362a
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: fb8836d9c556b317c50b6b34a9dde4e42c6486b5
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344647"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867349"
 ---
 # <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>System.Text.Json의 DateTime 및 DateTimeOffset 지원
 
@@ -136,7 +136,7 @@ Serialize를 위해 변환기 쓰기 논리에 `DateTime(Offset).ToString` 메�
 | 부분 시간    | "HH ': ' mm ': ' ss [FFFFFFF]"     | UTC 오프셋 정보가 없는 시간                                             |
 | 전체 날짜       | "yyyy'-'mm'-'dd't'hh-'MM'-'dd"            | 달력 날짜                                                                   |
 | 전체 시간       | "' Partial time'K"           | 현지 시간과 UTC 사이의 시간 오프셋을 사용한 하루 또는 현지 시간 (UTC) |
-| 날짜/시간       | "' 전체 날짜 ' ' ' ' 전체 시간 '" | 달력 날짜 및 시간 (예: 2019-07-26T16:59:57-05:00)                   |
+| 날짜 시간       | "' 전체 날짜 ' ' ' ' 전체 시간 '" | 달력 날짜 및 시간 (예: 2019-07-26T16:59:57-05:00)                   |
 
 ### <a name="support-for-parsing"></a>구문 분석 지원
 
@@ -199,4 +199,12 @@ Serialize를 위해 변환기 쓰기 논리에 `DateTime(Offset).ToString` 메�
 
         <xref:System.DateTime> 또는 <xref:System.DateTimeOffset>의 형식을 지정 하는 데 사용 됩니다. 소수 자릿수 초 및 현지 오프셋을 사용 합니다.
 
-있는 경우 최대 7 개의 소수 자릿수가 기록 됩니다. 이는이 해상도로 제한 되는 <xref:System.DateTime> 구현에 맞게 정렬 됩니다.
+<xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 인스턴스의 [라운드트립 형식](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier) 표현에 소수 자릿수 초에 후행 0이 있는 경우 <xref:System.Text.Json.JsonSerializer> 및 <xref:System.Text.Json.Utf8JsonWriter>는 후행 0 없이 인스턴스 표현의 서식을 지정 합니다.
+예를 들어 [라운드트립 형식](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier) 표현이 `2019-04-24T14:50:17.1010000Z`되는 <xref:System.DateTime> 인스턴스는 <xref:System.Text.Json.JsonSerializer> 및 <xref:System.Text.Json.Utf8JsonWriter>에서 `2019-04-24T14:50:17.101Z` 형식으로 지정 됩니다.
+
+<xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 인스턴스의 [라운드트립 형식](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier) 표현에 소수 자릿수 초의 0이 모두 있는 경우 <xref:System.Text.Json.JsonSerializer> 및 <xref:System.Text.Json.Utf8JsonWriter>은 소수 자릿수 초 없이 인스턴스 표현의 형식을 지정 합니다.
+예를 들어 [라운드트립 형식](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier) 표현이 `2019-04-24T14:50:17.0000000+02:00`되는 <xref:System.DateTime> 인스턴스는 <xref:System.Text.Json.JsonSerializer> 및 <xref:System.Text.Json.Utf8JsonWriter>에서 `2019-04-24T14:50:17+02:00` 형식으로 지정 됩니다.
+
+소수점이 하 자릿수에서 0을 자르는 경우 라운드트립에 대 한 정보를 유지 하는 데 필요한 가장 작은 출력이 작성 됩니다.
+
+최대 7 초의 소수 자릿수가 기록 됩니다. 이는이 해상도로 제한 되는 <xref:System.DateTime> 구현에 맞게 정렬 됩니다.

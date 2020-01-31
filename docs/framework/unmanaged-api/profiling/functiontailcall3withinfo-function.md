@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 46380fcc-0198-43ae-a1f5-2d4939425886
 topic_type:
 - apiref
-ms.openlocfilehash: 33400f6b2700bbdbf9c2ccb8a61da192066c0e2f
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
-ms.translationtype: HT
+ms.openlocfilehash: 0aa43954c3e10d04524bf976d0dd3b29d2bc724c
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790247"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866832"
 ---
 # <a name="functiontailcall3withinfo-function"></a>FunctionTailcall3WithInfo 함수
-현재 실행 중인 함수가 다른 함수에 대 한 마무리 호출을 수행 하려고 함을 프로파일러에 알리고 [ICorProfilerInfo3:: GetFunctionTailcall3Info 메서드에](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) 전달 하 여 스택 프레임을 검색 하는 핸들을 제공 합니다.  
+현재 실행 중인 함수가 다른 함수에 대 한 마무리 호출을 수행 하려고 함을 프로파일러에 알리고 [ICorProfilerInfo3:: GetFunctionTailcall3Info 메서드에](icorprofilerinfo3-getfunctiontailcall3info-method.md) 전달 하 여 스택 프레임을 검색 하는 핸들을 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,7 +43,7 @@ void __stdcall FunctionTailcall3WithInfo(
   \[] 지정 된 스택 프레임에 대 한 정보를 나타내는 불투명 핸들입니다. 이 핸들은 전달 되는 콜백 중에만 유효 합니다.
 
 ## <a name="remarks"></a>주의  
- `FunctionTailcall3WithInfo` 콜백 메서드는 함수가 호출 될 때 프로파일러를 알리고 프로파일러에서 [ICorProfilerInfo3:: GetFunctionTailcall3Info 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) 를 사용 하 여 스택 프레임을 검사할 수 있도록 허용 합니다. 스택 프레임 정보에 액세스 하려면 `COR_PRF_ENABLE_FRAME_INFO` 플래그를 설정 해야 합니다. 프로파일러는 [ICorProfilerInfo:: SetEventMask 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) 를 사용 하 여 이벤트 플래그를 설정한 다음 [ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3WithInfo 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) 를 사용 하 여이 함수의 구현을 등록할 수 있습니다.  
+ `FunctionTailcall3WithInfo` 콜백 메서드는 함수가 호출 될 때 프로파일러를 알리고 프로파일러에서 [ICorProfilerInfo3:: GetFunctionTailcall3Info 메서드](icorprofilerinfo3-getfunctiontailcall3info-method.md) 를 사용 하 여 스택 프레임을 검사할 수 있도록 허용 합니다. 스택 프레임 정보에 액세스 하려면 `COR_PRF_ENABLE_FRAME_INFO` 플래그를 설정 해야 합니다. 프로파일러는 [ICorProfilerInfo:: SetEventMask 메서드](icorprofilerinfo-seteventmask-method.md) 를 사용 하 여 이벤트 플래그를 설정한 다음 [ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3WithInfo 메서드](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) 를 사용 하 여이 함수의 구현을 등록할 수 있습니다.  
   
  `FunctionTailcall3WithInfo` 함수는 콜백입니다. 구현 해야 합니다. 구현에서 `__declspec(naked)` 저장소 클래스 특성을 사용 해야 합니다.  
   
@@ -68,13 +68,13 @@ void __stdcall FunctionTailcall3WithInfo(
   
 ## <a name="see-also"></a>참조
 
-- [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)
-- [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)
-- [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)
-- [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)
-- [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)
-- [SetEnterLeaveFunctionHooks3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md)
-- [SetEnterLeaveFunctionHooks3WithInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)
-- [SetFunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md)
-- [SetFunctionIDMapper2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setfunctionidmapper2-method.md)
-- [프로파일링 전역 정적 함수](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [FunctionEnter3](functionenter3-function.md)
+- [FunctionLeave3](functionleave3-function.md)
+- [FunctionTailcall3](functiontailcall3-function.md)
+- [FunctionEnter3WithInfo](functiontailcall3-function.md)
+- [FunctionLeave3WithInfo](functionleave3withinfo-function.md)
+- [SetEnterLeaveFunctionHooks3](icorprofilerinfo3-setenterleavefunctionhooks3-method.md)
+- [SetEnterLeaveFunctionHooks3WithInfo](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)
+- [SetFunctionIDMapper](icorprofilerinfo-setfunctionidmapper-method.md)
+- [SetFunctionIDMapper2](icorprofilerinfo3-setfunctionidmapper2-method.md)
+- [프로파일링 전역 정적 함수](profiling-global-static-functions.md)

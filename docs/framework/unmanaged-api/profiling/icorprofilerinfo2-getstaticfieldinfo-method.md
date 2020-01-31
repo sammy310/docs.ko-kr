@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fc663e76-e23f-49a8-bdd5-52cdf1a3b2b3
 topic_type:
 - apiref
-ms.openlocfilehash: e74bab058adda759db1fb549022608eedfef5d80
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d30d0bc262d76cf8980f90d8384173d89baf92d5
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432981"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862687"
 ---
 # <a name="icorprofilerinfo2getstaticfieldinfo-method"></a>ICorProfilerInfo2::GetStaticFieldInfo 메서드
 지정 된 필드에 적용 되는 정적의 종류를 나타내는 값을 가져옵니다.  
@@ -42,7 +42,7 @@ HRESULT GetStaticFieldInfo (
  진행 정적 필드에 대 한 메타 데이터 토큰입니다.  
   
  `pFieldInfo`  
- 제한이 지정 된 필드가 정적 인지 여부를 나타내는 [COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md) 열거형 값에 대 한 포인터이 고, 그렇지 않으면 필드에 적용 되는 정적의 종류입니다.  
+ 제한이 지정 된 필드가 정적 인지 여부를 나타내는 [COR_PRF_STATIC_TYPE](cor-prf-static-type-enumeration.md) 열거형 값에 대 한 포인터이 고, 그렇지 않으면 필드에 적용 되는 정적의 종류입니다.  
   
 ## <a name="remarks"></a>주의  
  이 정보는 정적 필드의 주소를 가져오기 위해 호출할 함수를 결정 하는 데 사용할 수 있습니다.  
@@ -58,7 +58,7 @@ HRESULT GetStaticFieldInfo (
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerInfo2 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [ICorProfilerInfo 인터페이스](icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 인터페이스](icorprofilerinfo2-interface.md)

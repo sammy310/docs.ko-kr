@@ -1,5 +1,5 @@
 ---
-title: '연습: ElementHost 컨트롤을 사용 하 여 속성 매핑'
+title: '연습: ElementHost 컨트롤을 사용하여 속성 매핑'
 ms.date: 08/18/2018
 dev_langs:
 - csharp
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
-ms.openlocfilehash: 7d1cf353f7e6c4b87c13598e7e6029960cd0f715
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 7ff4ff607ab70b55cda1e2c4736ff773d4907a22
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197823"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794112"
 ---
-# <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>연습: ElementHost 컨트롤을 사용 하 여 속성 매핑
+# <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>연습: ElementHost 컨트롤을 사용하여 속성 매핑
 
-이 연습에서는 <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> 속성을 사용 하 여 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 속성을 호스팅된 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 요소의 해당 속성에 매핑하는 방법을 보여 줍니다.
+이 연습에서는 <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> 속성을 사용 하 여 Windows Forms 속성을 호스팅된 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 요소의 해당 속성에 매핑하는 방법을 보여 줍니다.
 
 이 연습에서 설명하는 작업은 다음과 같습니다.
 
@@ -31,9 +31,9 @@ ms.locfileid: "73197823"
 
 이 연습에서 설명 하는 작업의 전체 코드 목록은 [ElementHost 컨트롤을 사용 하 여 속성 매핑 샘플](https://go.microsoft.com/fwlink/?LinkID=160018)을 참조 하세요.
 
-작업이 완료 되 면 호스팅된 요소의 해당 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성에 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 속성을 매핑할 수 있습니다.
+작업이 완료 되 면 호스팅된 요소의 해당 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성에 Windows Forms 속성을 매핑할 수 있습니다.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>전제 조건
 
 이 연습을 완료하려면 다음 구성 요소가 필요합니다.
 
@@ -138,7 +138,7 @@ ms.locfileid: "73197823"
 
     - 매핑된 속성에 초기 값을 할당합니다.
 
-2. F5 키를 눌러 애플리케이션을 빌드하고 실행합니다.
+2. F5 키를 눌러 응용 프로그램을 빌드하고 실행합니다.
 
 ## <a name="see-also"></a>참조
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 86d98f39-52e6-4c61-a625-9760f695ff12
 topic_type:
 - apiref
-ms.openlocfilehash: 33b72c8d089e5b335069fe465987086dfa1243bc
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 15ce195af0c0e8f8777f6e5d02043e17e32308da
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445178"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866652"
 ---
 # <a name="icorprofilercallbackassemblyloadfinished-method"></a>ICorProfilerCallback::AssemblyLoadFinished 메서드
 어셈블리의 로드가 완료 되었음을 프로파일러에 알립니다.  
@@ -33,13 +33,16 @@ HRESULT AssemblyLoadFinished(
     [in] HRESULT    hrStatus);  
 ```  
   
-## <a name="parameters"></a>매개 변수  
- `assemblyId`  
- 진행 로드 된 어셈블리를 식별 합니다.  
-  
- `hrStatus`  
- 진행 어셈블리 로드가 성공적으로 완료 되었는지 여부를 나타내는 HRESULT입니다.  
-  
+## <a name="parameters"></a>매개 변수
+
+- `assemblyId`
+
+  \[in] 로드 된 어셈블리를 식별 합니다.
+
+- `hrStatus`
+
+  \[의 경우 어셈블리의 로드가 성공적으로 완료 되었는지 여부를 나타내는 HRESULT입니다.
+
 ## <a name="remarks"></a>주의  
  `assemblyId` 값은 `AssemblyLoadFinished` 메서드를 호출할 때까지 정보 요청에 사용할 수 없습니다.  
   
@@ -54,6 +57,6 @@ HRESULT AssemblyLoadFinished(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)

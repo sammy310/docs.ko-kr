@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms CheckedListBox 컨트롤에서 선택한 항목 확인'
+title: CheckedListBox 컨트롤에서 선택 된 항목 확인
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - check boxes [Windows Forms], determining checked state
 - CheckedListBox control [Windows Forms], determining checked state
 ms.assetid: 178b477d-27c9-489c-8914-44a9623a4d41
-ms.openlocfilehash: 10793053934dce0bb83113004a79f1c265f5f267
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5854f7e6be759daeb604458ea8554d3c98ed39c2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010919"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743247"
 ---
-# <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>방법: Windows Forms CheckedListBox 컨트롤에서 선택한 항목 확인
-Windows Forms에서 데이터를 표시할 때 <xref:System.Windows.Forms.CheckedListBox> 컨트롤을 반복할 수 있습니다 하거나 컬렉션에 저장 합니다 <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> 속성 또는 사용 하 여 목록을 단계별로 <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> 선택한 항목을 확인 하는 방법. 합니다 <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> 메서드 항목 인덱스 번호를 인수로 받아서 반환 `true` 또는 `false`합니다. 예상 하는 것을 달리 합니다 <xref:System.Windows.Forms.ListBox.SelectedItems%2A> 및 <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> 결정 하는 항목 강조 표시 되어; 속성에서 선택한 항목을 결정 하지 않습니다.  
+# <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>방법: Windows Forms CheckedListBox 컨트롤에서 선택된 항목 확인
+Windows Forms <xref:System.Windows.Forms.CheckedListBox> 컨트롤에 데이터를 제공 하는 경우 <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> 속성에 저장 된 컬렉션을 반복 하거나 <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> 메서드를 사용 하 여 목록을 단계별로 실행 하 여 확인 되는 항목을 확인할 수 있습니다. <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> 메서드는 항목 인덱스 번호를 인수로 사용 하 여 `true` 또는 `false`를 반환 합니다. 예상과 달리 <xref:System.Windows.Forms.ListBox.SelectedItems%2A> 및 <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> 속성은 선택 된 항목을 결정 하지 않습니다. 강조 표시 되는 항목을 결정 합니다.  
   
-### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a>CheckedListBox 컨트롤에서 선택한 항목을 확인 하려면  
+### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a>CheckedListBox 컨트롤에서 선택 된 항목을 확인 하려면  
   
-1. 반복 된 <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> 컬렉션, 컬렉션은 0부터 시작 하므로 0부터 시작 합니다. 이 메서드는 전체 목록이 아니라 선택 된 항목의 목록에서 항목 수를 알려 참고 합니다. 아래 코드와 같은 텍스트를 표시 되 목록에서 첫 번째 항목을 선택 하지 않으면 두 번째 항목을 선택 하는 경우 "선택한 항목 1 = MyListItem2"입니다.  
+1. 컬렉션이 0부터 시작 하므로 0부터 시작 하 여 <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> 컬렉션을 반복 합니다. 이 메서드는 전체 목록이 아니라 선택한 항목 목록에 있는 항목 번호를 제공 합니다. 따라서 목록의 첫 번째 항목을 선택 하지 않고 두 번째 항목을 선택 하는 경우 아래 코드는 "Checked Item 1 = MyListItem2"와 같은 텍스트를 표시 합니다.  
   
     ```vb  
     ' Determine if there are any items checked.  
@@ -68,7 +68,7 @@ Windows Forms에서 데이터를 표시할 때 <xref:System.Windows.Forms.Checke
   
      - 또는  
   
-2. 단계별로 실행 합니다 <xref:System.Windows.Forms.CheckedListBox.Items%2A> 부터 컬렉션 이므로 0부터 시작 하는 컬렉션 및 호출을 <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> 각 항목에 대 한 메서드. 이 메서드를 알려 항목 번호 전체 목록에서 첫 번째 항목 목록 확인 하지 않습니다 있도록 및 두 번째 항목을 체크을 비슷하게 표시 됩니다 "항목 2 = MyListItem2"입니다.  
+2. 컬렉션은 0부터 시작 하 고 각 항목에 대해 <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> 메서드를 호출 하므로 <xref:System.Windows.Forms.CheckedListBox.Items%2A> 컬렉션을 단계별로 실행 합니다. 이 메서드는 전체 목록에서 항목 번호를 제공 하므로 목록의 첫 번째 항목을 확인 하지 않고 두 번째 항목을 선택 하면 "Item 2 = MyListItem2"와 같이 표시 됩니다.  
   
     ```vb  
     Dim i As Integer  
@@ -111,6 +111,6 @@ Windows Forms에서 데이터를 표시할 때 <xref:System.Windows.Forms.Checke
     MessageBox::Show(s);  
     ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [옵션 목록 표시에 사용된 Windows Forms 컨트롤](windows-forms-controls-used-to-list-options.md)

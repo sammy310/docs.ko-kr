@@ -5,12 +5,12 @@ helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: 07c6061bfc66b1640d0eacca217302feff1a390a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8f093d22da789c6df750475e47a3b4e4685c5651
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715023"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744206"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>1차원 배열(C# 프로그래밍 가이드)
 
@@ -54,7 +54,7 @@ ms.locfileid: "75715023"
   
  이 문의 결과는 `SomeType`이 값 형식인지 또는 참조 형식인지에 따라 달라집니다. 값 형식인 경우 이 문은 각각 `SomeType` 형식인 10개 요소의 배열을 만듭니다. `SomeType`이 참조 형식인 경우 이 문은 각각 null 참조로 초기화된 10개 요소의 배열을 만듭니다.  
   
-값 형식과 참조 형식에 대한 자세한 내용은 [값 형식](../../language-reference/keywords/value-types.md) 및 [참조 형식](../../language-reference/keywords/reference-types.md)을 참조하세요.
+값 형식과 참조 형식에 대한 자세한 내용은 [값 형식](../../language-reference/builtin-types/value-types.md) 및 [참조 형식](../../language-reference/keywords/reference-types.md)을 참조하세요.
   
 ## <a name="see-also"></a>참조
 

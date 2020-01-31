@@ -2,18 +2,18 @@
 title: WorkflowIdentity 및 버전 관리 사용
 ms.date: 03/30/2017
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
-ms.openlocfilehash: 66ef4fed682554d9fab2a7b0f85bb9cfaf8e8a29
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 97224caa24b38a00a1cbb4fa76781eea3a10faaf
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74142039"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787913"
 ---
 # <a name="using-workflowidentity-and-versioning"></a>WorkflowIdentity 및 버전 관리 사용
 
 <xref:System.Activities.WorkflowIdentity>는 워크플로 애플리케이션 개발자에게 이름 및 <xref:System.Version>을 워크플로 정의에 연결하는 방법을 제공하며, 이러한 정보는 지속형 워크플로 인스턴스와 연결됩니다. 이 ID 정보는 워크플로 애플리케이션 개발자가 여러 버전의 워크플로 정의를 side-by-side로 실행하는 경우와 같은 시나리오를 가능하도록 하는 데 사용될 수 있으며 동적 업데이트와 같은 다른 기능의 토대를 제공합니다. 이 항목에서는 <xref:System.Activities.WorkflowIdentity> 호스팅과 함께 <xref:System.Activities.WorkflowApplication>를 사용하는 방법을 간단하게 설명합니다. 워크플로 서비스에서 워크플로 정의를 side-by-side로 실행 하는 방법에 대 한 자세한 내용은 [WorkflowServiceHost의 Side-by-side 버전 관리](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md)를 참조 하세요. 동적 업데이트에 대 한 자세한 내용은 [동적 업데이트](dynamic-update.md)를 참조 하세요.
 
-## <a name="in-this-topic"></a>항목 내용
+## <a name="in-this-topic"></a>이 항목의 내용
 
 - [WorkflowIdentity 사용](using-workflowidentity-and-versioning.md#UsingWorkflowIdentity)
 
@@ -78,7 +78,7 @@ wfApp.Load(instanceId);
 
 앞의 코드가 실행되면 다음 <xref:System.Activities.VersionMismatchException>이 throw됩니다.
 
-```
+```output
 The WorkflowIdentity ('MortgageWorkflow v1; Version=1.0.0.0') of the loaded instance does not match the WorkflowIdentity ('MortgageWorkflow v2; Version=2.0.0.0') of the provided workflow definition. The instance can be loaded using a different definition, or updated using Dynamic Update.
 ```
 
@@ -150,7 +150,7 @@ wfApp.Load(instance);
 
 .NET Framework 4.5 워크플로 응용 프로그램이 제공 된 스크립트를 사용 하 여 업그레이드 되지 않은 지 속성 데이터베이스에서 새 버전 관리 기능을 사용 하는 지 속성 작업을 시도 하면 다음 메시지와 비슷한 메시지가 포함 된 <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> throw 됩니다.
 
-```
+```output
 The SqlWorkflowInstanceStore has a database version of '4.0.0.0'. InstancePersistenceCommand 'System.Activities.DurableInstancing.CreateWorkflowOwnerWithIdentityCommand' cannot be run against this database version.  Please upgrade the database to '4.5.0.0'.
 ```
 

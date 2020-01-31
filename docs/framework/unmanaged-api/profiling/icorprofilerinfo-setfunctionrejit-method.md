@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 36ba4f15-78e5-4e52-b3b8-6341f710c696
 topic_type:
 - apiref
-ms.openlocfilehash: abc6bd06add428a17d932af97799d8c6f51caf22
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6eb7d7dc19ab5cbb7e78dc589202a12d9f1f599b
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438610"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76869165"
 ---
 # <a name="icorprofilerinfosetfunctionrejit-method"></a>ICorProfilerInfo::SetFunctionReJIT 메서드
 구현되지 않았습니다. 사용 안 함.  
@@ -41,6 +41,6 @@ HRESULT SetFunctionReJIT(
   
  **.NET Framework 버전:** 1.0  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo 인터페이스](icorprofilerinfo-interface.md)
