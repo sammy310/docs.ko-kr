@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 3b93bcff-62a4-47b2-babc-6bcf4216119a
 topic_type:
 - apiref
-ms.openlocfilehash: b68f24908a5b214d507da8e8a4636a7c55259604
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 182424632e4f81dfdf86e87dc6bb2c75c2780fce
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123014"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793768"
 ---
-# <a name="_efn_getmanagedobjectfieldinfo-function"></a><span data-ttu-id="34c20-102">\_EFN\_GetManagedObjectFieldInfo 함수</span><span class="sxs-lookup"><span data-stu-id="34c20-102">\_EFN\_GetManagedObjectFieldInfo Function</span></span>
-<span data-ttu-id="34c20-103">제공된 개체 포인터와 필드 이름을 사용하여 개체 시작부터 필드 및 필드 값까지의 오프셋을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="34c20-103">Gets the offset from the start of an object to a field and the field's value, using the provided object pointer and field name.</span></span>  
+# <a name="_efn_getmanagedobjectfieldinfo-function"></a><span data-ttu-id="2840b-102">\_EFN\_GetManagedObjectFieldInfo 함수</span><span class="sxs-lookup"><span data-stu-id="2840b-102">\_EFN\_GetManagedObjectFieldInfo Function</span></span>
+<span data-ttu-id="2840b-103">제공된 개체 포인터와 필드 이름을 사용하여 개체 시작부터 필드 및 필드 값까지의 오프셋을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="2840b-103">Gets the offset from the start of an object to a field and the field's value, using the provided object pointer and field name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="34c20-104">구문</span><span class="sxs-lookup"><span data-stu-id="34c20-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2840b-104">구문</span><span class="sxs-lookup"><span data-stu-id="2840b-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT _EFN_GetManagedObjectFieldInfo(  
@@ -36,34 +36,34 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="34c20-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="34c20-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2840b-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="2840b-105">Parameters</span></span>  
  `Client`  
- <span data-ttu-id="34c20-106">진행 디버그 클라이언트에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="34c20-106">[in] A pointer to the debug client.</span></span>  
+ <span data-ttu-id="2840b-106">진행 디버그 클라이언트에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="2840b-106">[in] A pointer to the debug client.</span></span>  
   
  `objAddr`  
- <span data-ttu-id="34c20-107">진행 관리 되는 개체 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="34c20-107">[in] A managed object pointer.</span></span>  
+ <span data-ttu-id="2840b-107">진행 관리 되는 개체 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="2840b-107">[in] A managed object pointer.</span></span>  
   
- <span data-ttu-id="34c20-108">szFieldName</span><span class="sxs-lookup"><span data-stu-id="34c20-108">szFieldName</span></span>  
- <span data-ttu-id="34c20-109">진행 필드 이름에 대 한 관리 되는 개체 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="34c20-109">[in] A managed object pointer to the field name.</span></span>  
+ <span data-ttu-id="2840b-108">szFieldName</span><span class="sxs-lookup"><span data-stu-id="2840b-108">szFieldName</span></span>  
+ <span data-ttu-id="2840b-109">진행 필드 이름에 대 한 관리 되는 개체 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="2840b-109">[in] A managed object pointer to the field name.</span></span>  
   
  `pValue`  
- <span data-ttu-id="34c20-110">제한이 필드 값입니다.</span><span class="sxs-lookup"><span data-stu-id="34c20-110">[out] The field value.</span></span> <span data-ttu-id="34c20-111">이 매개 변수는 null일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="34c20-111">This parameter can be null.</span></span>  
+ <span data-ttu-id="2840b-110">제한이 필드 값입니다.</span><span class="sxs-lookup"><span data-stu-id="2840b-110">[out] The field value.</span></span> <span data-ttu-id="2840b-111">이 매개 변수는 null일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2840b-111">This parameter can be null.</span></span>  
   
  `pOffset`  
- <span data-ttu-id="34c20-112">제한이 `objAddr`에서 필드로의 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="34c20-112">[out] The offset from `objAddr` to the field.</span></span> <span data-ttu-id="34c20-113">이 매개 변수는 null일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="34c20-113">This parameter can be null.</span></span>  
+ <span data-ttu-id="2840b-112">제한이 `objAddr`에서 필드로의 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="2840b-112">[out] The offset from `objAddr` to the field.</span></span> <span data-ttu-id="2840b-113">이 매개 변수는 null일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2840b-113">This parameter can be null.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="34c20-114">주의</span><span class="sxs-lookup"><span data-stu-id="34c20-114">Remarks</span></span>  
- <span data-ttu-id="34c20-115">오프셋이 0 이면 오프셋이 기록 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="34c20-115">If the offset is 0, no offset is written.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2840b-114">주의</span><span class="sxs-lookup"><span data-stu-id="2840b-114">Remarks</span></span>  
+ <span data-ttu-id="2840b-115">오프셋이 0 이면 오프셋이 기록 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="2840b-115">If the offset is 0, no offset is written.</span></span>  
   
- <span data-ttu-id="34c20-116">현재 컨텍스트에 있는 스레드에 관리 코드가 없으면 함수는 기능 값 0xa0 및 0x1000 오류 코드와 함께 HRESULT SOS_E_NOMANAGEDCODE를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="34c20-116">If there is no managed code on the thread currently in context, the function returns HRESULT SOS_E_NOMANAGEDCODE with a facility value of 0xa0 and an error code of 0x1000.</span></span>  
+ <span data-ttu-id="2840b-116">현재 컨텍스트에 있는 스레드에 관리 코드가 없는 경우 함수는 기능 값 0xa0 및 0x1000 오류 코드를 사용 하 여 HRESULT SOS_E_NOMANAGEDCODE을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="2840b-116">If there is no managed code on the thread currently in context, the function returns HRESULT SOS_E_NOMANAGEDCODE with a facility value of 0xa0 and an error code of 0x1000.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="34c20-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="34c20-117">Requirements</span></span>  
- <span data-ttu-id="34c20-118">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="34c20-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2840b-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="2840b-117">Requirements</span></span>  
+ <span data-ttu-id="2840b-118">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="2840b-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="34c20-119">**헤더:** SOS_Stacktrace</span><span class="sxs-lookup"><span data-stu-id="34c20-119">**Header:** SOS_Stacktrace.h</span></span>  
+ <span data-ttu-id="2840b-119">**헤더:** SOS_Stacktrace. h</span><span class="sxs-lookup"><span data-stu-id="2840b-119">**Header:** SOS_Stacktrace.h</span></span>  
   
- <span data-ttu-id="34c20-120">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="34c20-120">**.NET Framework Version:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="2840b-120">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2840b-120">**.NET Framework Version:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="34c20-121">참조</span><span class="sxs-lookup"><span data-stu-id="34c20-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2840b-121">참조</span><span class="sxs-lookup"><span data-stu-id="2840b-121">See also</span></span>
 
-- [<span data-ttu-id="34c20-122">디버깅 전역 정적 함수</span><span class="sxs-lookup"><span data-stu-id="34c20-122">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [<span data-ttu-id="2840b-122">디버깅 전역 정적 함수</span><span class="sxs-lookup"><span data-stu-id="2840b-122">Debugging Global Static Functions</span></span>](debugging-global-static-functions.md)
