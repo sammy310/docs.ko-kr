@@ -15,32 +15,32 @@ helpviewer_keywords:
 ms.assetid: 36ba4f15-78e5-4e52-b3b8-6341f710c696
 topic_type:
 - apiref
-ms.openlocfilehash: abc6bd06add428a17d932af97799d8c6f51caf22
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6eb7d7dc19ab5cbb7e78dc589202a12d9f1f599b
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438610"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76869165"
 ---
-# <a name="icorprofilerinfosetfunctionrejit-method"></a><span data-ttu-id="fb703-102">ICorProfilerInfo::SetFunctionReJIT 메서드</span><span class="sxs-lookup"><span data-stu-id="fb703-102">ICorProfilerInfo::SetFunctionReJIT Method</span></span>
-<span data-ttu-id="fb703-103">구현되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="fb703-103">Not implemented.</span></span> <span data-ttu-id="fb703-104">사용 안 함.</span><span class="sxs-lookup"><span data-stu-id="fb703-104">Do not use.</span></span>  
+# <a name="icorprofilerinfosetfunctionrejit-method"></a><span data-ttu-id="d4925-102">ICorProfilerInfo::SetFunctionReJIT 메서드</span><span class="sxs-lookup"><span data-stu-id="d4925-102">ICorProfilerInfo::SetFunctionReJIT Method</span></span>
+<span data-ttu-id="d4925-103">구현되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="d4925-103">Not implemented.</span></span> <span data-ttu-id="d4925-104">사용 안 함.</span><span class="sxs-lookup"><span data-stu-id="d4925-104">Do not use.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fb703-105">구문</span><span class="sxs-lookup"><span data-stu-id="fb703-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d4925-105">구문</span><span class="sxs-lookup"><span data-stu-id="d4925-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetFunctionReJIT(  
     [in] FunctionID functionId);  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="fb703-106">요구 사항</span><span class="sxs-lookup"><span data-stu-id="fb703-106">Requirements</span></span>  
- <span data-ttu-id="fb703-107">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="fb703-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d4925-106">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d4925-106">Requirements</span></span>  
+ <span data-ttu-id="d4925-107">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d4925-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fb703-108">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="fb703-108">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="d4925-108">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d4925-108">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="fb703-109">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fb703-109">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d4925-109">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d4925-109">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="fb703-110">**.NET Framework 버전:** 1.0</span><span class="sxs-lookup"><span data-stu-id="fb703-110">**.NET Framework Version:** 1.0</span></span>  
+ <span data-ttu-id="d4925-110">**.NET Framework 버전:** 1.0</span><span class="sxs-lookup"><span data-stu-id="d4925-110">**.NET Framework Version:** 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fb703-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="fb703-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d4925-111">참조</span><span class="sxs-lookup"><span data-stu-id="d4925-111">See also</span></span>
 
-- [<span data-ttu-id="fb703-112">ICorProfilerInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="fb703-112">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="d4925-112">ICorProfilerInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d4925-112">ICorProfilerInfo Interface</span></span>](icorprofilerinfo-interface.md)

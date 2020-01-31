@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7a439d92-348a-44dd-b60f-cad7cba56379
 topic_type:
 - apiref
-ms.openlocfilehash: c7bf8e3ebedb17a4536b604909434c3e004fc828
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6e787de6287dc5b3091d3671d3da2f2154b12e88
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439835"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76869926"
 ---
-# <a name="icorprofilerinfogetmodulemetadata-method"></a><span data-ttu-id="4467d-102">ICorProfilerInfo::GetModuleMetaData 메서드</span><span class="sxs-lookup"><span data-stu-id="4467d-102">ICorProfilerInfo::GetModuleMetaData Method</span></span>
-<span data-ttu-id="4467d-103">지정 된 모듈에 매핑되는 메타 데이터 인터페이스 인스턴스를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="4467d-103">Gets a metadata interface instance that maps to the specified module.</span></span>  
+# <a name="icorprofilerinfogetmodulemetadata-method"></a><span data-ttu-id="ede85-102">ICorProfilerInfo::GetModuleMetaData 메서드</span><span class="sxs-lookup"><span data-stu-id="ede85-102">ICorProfilerInfo::GetModuleMetaData Method</span></span>
+<span data-ttu-id="ede85-103">지정 된 모듈에 매핑되는 메타 데이터 인터페이스 인스턴스를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="ede85-103">Gets a metadata interface instance that maps to the specified module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4467d-104">구문</span><span class="sxs-lookup"><span data-stu-id="4467d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ede85-104">구문</span><span class="sxs-lookup"><span data-stu-id="ede85-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetModuleMetaData(  
@@ -35,33 +35,33 @@ HRESULT GetModuleMetaData(
     [out] IUnknown **ppOut);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4467d-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="4467d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ede85-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="ede85-105">Parameters</span></span>  
  `moduleId`  
- <span data-ttu-id="4467d-106">진행 인터페이스 인스턴스가 매핑될 모듈의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="4467d-106">[in] The ID of the module to which the interface instance will be mapped.</span></span>  
+ <span data-ttu-id="ede85-106">진행 인터페이스 인스턴스가 매핑될 모듈의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="ede85-106">[in] The ID of the module to which the interface instance will be mapped.</span></span>  
   
  `dwOpenFlags`  
- <span data-ttu-id="4467d-107">진행 매니페스트 파일을 여는 모드를 지정 하는 [Coropenflags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) 열거형의 값입니다.</span><span class="sxs-lookup"><span data-stu-id="4467d-107">[in] A value of the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration that specifies the mode for opening manifest files.</span></span> <span data-ttu-id="4467d-108">`ofRead`, `ofWrite` 및 `ofNoTransform` 비트만 유효 합니다.</span><span class="sxs-lookup"><span data-stu-id="4467d-108">Only the `ofRead`, `ofWrite` and `ofNoTransform` bits are valid.</span></span>  
+ <span data-ttu-id="ede85-107">진행 매니페스트 파일을 여는 모드를 지정 하는 [Coropenflags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) 열거형의 값입니다.</span><span class="sxs-lookup"><span data-stu-id="ede85-107">[in] A value of the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration that specifies the mode for opening manifest files.</span></span> <span data-ttu-id="ede85-108">`ofRead`, `ofWrite` 및 `ofNoTransform` 비트만 유효 합니다.</span><span class="sxs-lookup"><span data-stu-id="ede85-108">Only the `ofRead`, `ofWrite` and `ofNoTransform` bits are valid.</span></span>  
   
  `riid`  
- <span data-ttu-id="4467d-109">진행 해당 인스턴스를 검색할 메타 데이터 인터페이스의 참조 ID (GUID)입니다.</span><span class="sxs-lookup"><span data-stu-id="4467d-109">[in] The reference ID (GUID) of the metadata interface whose instance will be retrieved.</span></span> <span data-ttu-id="4467d-110">인터페이스 목록은 [메타 데이터 인터페이스](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) 를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="4467d-110">See [Metadata Interfaces](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) for a list of the interfaces.</span></span>  
+ <span data-ttu-id="ede85-109">진행 해당 인스턴스를 검색할 메타 데이터 인터페이스의 참조 ID (GUID)입니다.</span><span class="sxs-lookup"><span data-stu-id="ede85-109">[in] The reference ID (GUID) of the metadata interface whose instance will be retrieved.</span></span> <span data-ttu-id="ede85-110">인터페이스 목록은 [메타 데이터 인터페이스](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) 를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="ede85-110">See [Metadata Interfaces](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) for a list of the interfaces.</span></span>  
   
  `ppOut`  
- <span data-ttu-id="4467d-111">제한이 메타 데이터 인터페이스 인스턴스의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="4467d-111">[out] A pointer to the address of the metadata interface instance.</span></span>  
+ <span data-ttu-id="ede85-111">제한이 메타 데이터 인터페이스 인스턴스의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="ede85-111">[out] A pointer to the address of the metadata interface instance.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="4467d-112">주의</span><span class="sxs-lookup"><span data-stu-id="4467d-112">Remarks</span></span>  
- <span data-ttu-id="4467d-113">메타 데이터를 읽기/쓰기 모드에서 열도록 요청할 수도 있지만이 경우 메타 데이터에 대 한 변경 내용이 컴파일러에서와 같이 최적화 되지 않으므로 프로그램의 메타 데이터 실행 속도가 느려집니다.</span><span class="sxs-lookup"><span data-stu-id="4467d-113">You may ask for the metadata to be opened in read/write mode, but this will result in slower metadata execution of the program, because changes made to the metadata cannot be optimized as they were from the compiler.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ede85-112">주의</span><span class="sxs-lookup"><span data-stu-id="ede85-112">Remarks</span></span>  
+ <span data-ttu-id="ede85-113">메타 데이터를 읽기/쓰기 모드에서 열도록 요청할 수도 있지만이 경우 메타 데이터에 대 한 변경 내용이 컴파일러에서와 같이 최적화 되지 않으므로 프로그램의 메타 데이터 실행 속도가 느려집니다.</span><span class="sxs-lookup"><span data-stu-id="ede85-113">You may ask for the metadata to be opened in read/write mode, but this will result in slower metadata execution of the program, because changes made to the metadata cannot be optimized as they were from the compiler.</span></span>  
   
- <span data-ttu-id="4467d-114">일부 모듈 (예: 리소스 모듈)에는 메타 데이터가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4467d-114">Some modules (such as resource modules) have no metadata.</span></span> <span data-ttu-id="4467d-115">이러한 경우 `GetModuleMetaData`는 HRESULT 값 S_FALSE을 반환 하 고 \*`ppOut`에 null을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="4467d-115">In those cases, `GetModuleMetaData` will return an HRESULT value of S_FALSE, and a null in \*`ppOut`.</span></span>  
+ <span data-ttu-id="ede85-114">일부 모듈 (예: 리소스 모듈)에는 메타 데이터가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="ede85-114">Some modules (such as resource modules) have no metadata.</span></span> <span data-ttu-id="ede85-115">이러한 경우 `GetModuleMetaData`는 HRESULT 값 S_FALSE을 반환 하 고 \*`ppOut`에 null을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="ede85-115">In those cases, `GetModuleMetaData` will return an HRESULT value of S_FALSE, and a null in \*`ppOut`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4467d-116">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4467d-116">Requirements</span></span>  
- <span data-ttu-id="4467d-117">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="4467d-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ede85-116">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ede85-116">Requirements</span></span>  
+ <span data-ttu-id="ede85-117">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ede85-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4467d-118">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="4467d-118">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="ede85-118">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ede85-118">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="4467d-119">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4467d-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ede85-119">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ede85-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4467d-120">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4467d-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ede85-120">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ede85-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4467d-121">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4467d-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ede85-121">참조</span><span class="sxs-lookup"><span data-stu-id="ede85-121">See also</span></span>
 
-- [<span data-ttu-id="4467d-122">ICorProfilerInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4467d-122">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="ede85-122">ICorProfilerInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ede85-122">ICorProfilerInfo Interface</span></span>](icorprofilerinfo-interface.md)

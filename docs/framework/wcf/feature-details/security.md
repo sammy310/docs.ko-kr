@@ -6,69 +6,69 @@ helpviewer_keywords:
 - security [WCF]
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
-ms.openlocfilehash: 58bec40f197dd1f2b104607a65c3ad456b95f69d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f79ac28af45e8c05922373955c5317095d2c682
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61748469"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744640"
 ---
-# <a name="windows-communication-foundation-security"></a><span data-ttu-id="021fb-102">Windows Communication Foundation 보안</span><span class="sxs-lookup"><span data-stu-id="021fb-102">Windows Communication Foundation Security</span></span>
-<span data-ttu-id="021fb-103">이 섹션의에서 항목에서는 Windows Communication Foundation (WCF) 보안 기능 및 보안 메시지를 유용 하 게 활용 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="021fb-103">The topics in this section describe Windows Communication Foundation (WCF) security features and how to use them to help secure messages.</span></span>  
+# <a name="windows-communication-foundation-security"></a><span data-ttu-id="eebdc-102">Windows Communication Foundation 보안</span><span class="sxs-lookup"><span data-stu-id="eebdc-102">Windows Communication Foundation Security</span></span>
+<span data-ttu-id="eebdc-103">이 섹션의 항목에서는 WCF (Windows Communication Foundation) 보안 기능 및 이러한 기능을 사용 하 여 메시지를 보호 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="eebdc-103">The topics in this section describe Windows Communication Foundation (WCF) security features and how to use them to help secure messages.</span></span>  
   
- <span data-ttu-id="021fb-104">Windows Server AppFabric 및 보안에 대 한 자세한 내용은 참조 하세요. [Windows Server AppFabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)</span><span class="sxs-lookup"><span data-stu-id="021fb-104">For more information about Windows Server AppFabric and security, see [Security Model for Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)</span></span>  
+ <span data-ttu-id="eebdc-104">Windows Server AppFabric 및 보안에 대 한 자세한 내용은 [Windows Server Appfabric 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10)) 을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="eebdc-104">For more information about Windows Server AppFabric and security, see [Security Model for Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="021fb-105">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="021fb-105">In This Section</span></span>  
- [<span data-ttu-id="021fb-106">보안 개요</span><span class="sxs-lookup"><span data-stu-id="021fb-106">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- <span data-ttu-id="021fb-107">WCF의 보안 기능을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="021fb-107">Describes the security features in WCF.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="eebdc-105">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="eebdc-105">In This Section</span></span>  
+ [<span data-ttu-id="eebdc-106">보안 개요</span><span class="sxs-lookup"><span data-stu-id="eebdc-106">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ <span data-ttu-id="eebdc-107">WCF의 보안 기능에 대해 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="eebdc-107">Describes the security features in WCF.</span></span>  
   
- [<span data-ttu-id="021fb-108">보안 개념</span><span class="sxs-lookup"><span data-stu-id="021fb-108">Security Concepts</span></span>](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- <span data-ttu-id="021fb-109">기본 용어와 WCF 보안에 사용 되는 개념을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="021fb-109">Describes the basic terminology and concepts used in WCF security.</span></span>  
+ [<span data-ttu-id="eebdc-108">보안 개념</span><span class="sxs-lookup"><span data-stu-id="eebdc-108">Security Concepts</span></span>](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
+ <span data-ttu-id="eebdc-109">WCF 보안에 사용 되는 기본 용어 및 개념을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="eebdc-109">Describes the basic terminology and concepts used in WCF security.</span></span>  
   
- [<span data-ttu-id="021fb-110">일반적인 보안 시나리오</span><span class="sxs-lookup"><span data-stu-id="021fb-110">Common Security Scenarios</span></span>](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
- <span data-ttu-id="021fb-111">시나리오 및 WCF를 사용 하 여 구성할 수 있습니다 하는 토폴로지를 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="021fb-111">Describes scenarios and topologies you can configure with WCF.</span></span>  
+ [<span data-ttu-id="eebdc-110">일반적인 보안 시나리오</span><span class="sxs-lookup"><span data-stu-id="eebdc-110">Common Security Scenarios</span></span>](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
+ <span data-ttu-id="eebdc-111">WCF를 사용 하 여 구성할 수 있는 시나리오 및 토폴로지를 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="eebdc-111">Describes scenarios and topologies you can configure with WCF.</span></span>  
   
- [<span data-ttu-id="021fb-112">보안 동작</span><span class="sxs-lookup"><span data-stu-id="021fb-112">Security Behaviors</span></span>](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- <span data-ttu-id="021fb-113">보안에 영향을 주는 WCF 동작에 대한 개요를 제공합니다(예: 자격 증명 설정).</span><span class="sxs-lookup"><span data-stu-id="021fb-113">Provides an overview of WCF behaviors that affect security, such as setting credentials.</span></span>  
+ [<span data-ttu-id="eebdc-112">보안 동작</span><span class="sxs-lookup"><span data-stu-id="eebdc-112">Security Behaviors</span></span>](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
+ <span data-ttu-id="eebdc-113">보안에 영향을 주는 WCF 동작에 대한 개요를 제공합니다(예: 자격 증명 설정).</span><span class="sxs-lookup"><span data-stu-id="eebdc-113">Provides an overview of WCF behaviors that affect security, such as setting credentials.</span></span>  
   
- [<span data-ttu-id="021fb-114">바인딩 및 보안</span><span class="sxs-lookup"><span data-stu-id="021fb-114">Bindings and Security</span></span>](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
- <span data-ttu-id="021fb-115">사용자 지정 보안 바인딩을 만드는 방법을 보여 주는 항목을 비롯한 바인딩의 보안 지향적인 뷰입니다.</span><span class="sxs-lookup"><span data-stu-id="021fb-115">A security-oriented view of the bindings, including topics that demonstrate how to create custom security bindings.</span></span>  
+ [<span data-ttu-id="eebdc-114">바인딩 및 보안</span><span class="sxs-lookup"><span data-stu-id="eebdc-114">Bindings and Security</span></span>](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
+ <span data-ttu-id="eebdc-115">사용자 지정 보안 바인딩을 만드는 방법을 보여 주는 항목을 비롯한 바인딩의 보안 지향적인 뷰입니다.</span><span class="sxs-lookup"><span data-stu-id="eebdc-115">A security-oriented view of the bindings, including topics that demonstrate how to create custom security bindings.</span></span>  
   
- [<span data-ttu-id="021fb-116">서비스 및 클라이언트에 보안 설정</span><span class="sxs-lookup"><span data-stu-id="021fb-116">Securing Services and Clients</span></span>](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- <span data-ttu-id="021fb-117">WCF 보안 기능을 사용 하 여 메시지를 보호 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="021fb-117">Describes how to secure messages using WCF security features.</span></span>  
+ [<span data-ttu-id="eebdc-116">Securing Services and Clients</span><span class="sxs-lookup"><span data-stu-id="eebdc-116">Securing Services and Clients</span></span>](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ <span data-ttu-id="eebdc-117">WCF 보안 기능을 사용 하 여 메시지를 보호 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="eebdc-117">Describes how to secure messages using WCF security features.</span></span>  
   
- [<span data-ttu-id="021fb-118">인증</span><span class="sxs-lookup"><span data-stu-id="021fb-118">Authentication</span></span>](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
- <span data-ttu-id="021fb-119">일반적인 인증 작업을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="021fb-119">Demonstrates common authentication tasks.</span></span>  
+ [<span data-ttu-id="eebdc-118">인증</span><span class="sxs-lookup"><span data-stu-id="eebdc-118">Authentication</span></span>](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
+ <span data-ttu-id="eebdc-119">일반적인 인증 작업을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="eebdc-119">Demonstrates common authentication tasks.</span></span>  
   
- [<span data-ttu-id="021fb-120">권한 부여</span><span class="sxs-lookup"><span data-stu-id="021fb-120">Authorization</span></span>](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
- <span data-ttu-id="021fb-121">보안 구현을 사용하여 일반적인 인증 시나리오를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="021fb-121">Describes common authorization scenarios with security implementations.</span></span>  
+ [<span data-ttu-id="eebdc-120">권한 부여</span><span class="sxs-lookup"><span data-stu-id="eebdc-120">Authorization</span></span>](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
+ <span data-ttu-id="eebdc-121">보안 구현을 사용하여 일반적인 인증 시나리오를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="eebdc-121">Describes common authorization scenarios with security implementations.</span></span>  
   
- [<span data-ttu-id="021fb-122">페더레이션 및 발급된 토큰</span><span class="sxs-lookup"><span data-stu-id="021fb-122">Federation and Issued Tokens</span></span>](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- <span data-ttu-id="021fb-123">페더레이션 기본 사항 및 페더레이션 서버와 통신하는 클라이언트를 만드는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="021fb-123">Describes the basics of federation and how to create clients that communicate with federated servers.</span></span>  
+ [<span data-ttu-id="eebdc-122">페더레이션 및 발급된 토큰</span><span class="sxs-lookup"><span data-stu-id="eebdc-122">Federation and Issued Tokens</span></span>](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
+ <span data-ttu-id="eebdc-123">페더레이션 기본 사항 및 페더레이션 서버와 통신하는 클라이언트를 만드는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="eebdc-123">Describes the basics of federation and how to create clients that communicate with federated servers.</span></span>  
   
- [<span data-ttu-id="021fb-124">부분 신뢰</span><span class="sxs-lookup"><span data-stu-id="021fb-124">Partial Trust</span></span>](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
- <span data-ttu-id="021fb-125">부분적으로 신뢰할 수 있는 실행 될 때 WCF 제한 사항 및 부분적으로 신뢰할 수 있는 시나리오를 실행 하는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="021fb-125">Describes how to run partially-trusted scenarios and WCF limitations when running partially trusted.</span></span>  
+ [<span data-ttu-id="eebdc-124">부분 신뢰</span><span class="sxs-lookup"><span data-stu-id="eebdc-124">Partial Trust</span></span>](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
+ <span data-ttu-id="eebdc-125">부분적으로 신뢰할 수 있는 시나리오를 실행 하는 경우 부분적으로 신뢰할 수 있는 시나리오 및 WCF 제한을 실행 하는 방법을 설명</span><span class="sxs-lookup"><span data-stu-id="eebdc-125">Describes how to run partially-trusted scenarios and WCF limitations when running partially trusted.</span></span>  
   
- [<span data-ttu-id="021fb-126">감사</span><span class="sxs-lookup"><span data-stu-id="021fb-126">Auditing</span></span>](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- <span data-ttu-id="021fb-127">보안 이벤트를 감사하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="021fb-127">Describes how to audit security events.</span></span>  
+ [<span data-ttu-id="eebdc-126">감사</span><span class="sxs-lookup"><span data-stu-id="eebdc-126">Auditing</span></span>](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
+ <span data-ttu-id="eebdc-127">보안 이벤트를 감사하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="eebdc-127">Describes how to audit security events.</span></span>  
   
- [<span data-ttu-id="021fb-128">보안 지침 및 최선의 방법</span><span class="sxs-lookup"><span data-stu-id="021fb-128">Security Guidance and Best Practices</span></span>](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
- <span data-ttu-id="021fb-129">보안 WCF 응용 프로그램을 만들기 위한 지침입니다.</span><span class="sxs-lookup"><span data-stu-id="021fb-129">Guidelines for creating secure WCF applications.</span></span>  
+ [<span data-ttu-id="eebdc-128">보안 지침 및 최선의 방법</span><span class="sxs-lookup"><span data-stu-id="eebdc-128">Security Guidance and Best Practices</span></span>](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+ <span data-ttu-id="eebdc-129">보안 WCF 응용 프로그램을 만드는 방법에 대 한 지침입니다.</span><span class="sxs-lookup"><span data-stu-id="eebdc-129">Guidelines for creating secure WCF applications.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="021fb-130">참조</span><span class="sxs-lookup"><span data-stu-id="021fb-130">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="eebdc-130">참조</span><span class="sxs-lookup"><span data-stu-id="eebdc-130">Reference</span></span>  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Security>  
   
-## <a name="related-sections"></a><span data-ttu-id="021fb-131">관련 단원</span><span class="sxs-lookup"><span data-stu-id="021fb-131">Related Sections</span></span>  
- [<span data-ttu-id="021fb-132">WCF 기능 정보</span><span class="sxs-lookup"><span data-stu-id="021fb-132">WCF Feature Details</span></span>](../../../../docs/framework/wcf/feature-details/index.md)  
+## <a name="related-sections"></a><span data-ttu-id="eebdc-131">관련 섹션</span><span class="sxs-lookup"><span data-stu-id="eebdc-131">Related Sections</span></span>  
+ [<span data-ttu-id="eebdc-132">WCF 기능 정보</span><span class="sxs-lookup"><span data-stu-id="eebdc-132">WCF Feature Details</span></span>](../../../../docs/framework/wcf/feature-details/index.md)  
   
- [<span data-ttu-id="021fb-133">기본 WCF 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="021fb-133">Basic WCF Programming</span></span>](../../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [<span data-ttu-id="eebdc-133">기본 WCF 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="eebdc-133">Basic WCF Programming</span></span>](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
- [<span data-ttu-id="021fb-134">초보자를 위한 자습서</span><span class="sxs-lookup"><span data-stu-id="021fb-134">Getting Started Tutorial</span></span>](../../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [<span data-ttu-id="eebdc-134">초보자를 위한 자습서</span><span class="sxs-lookup"><span data-stu-id="eebdc-134">Getting Started Tutorial</span></span>](../../../../docs/framework/wcf/getting-started-tutorial.md)  
   
- [<span data-ttu-id="021fb-135">개념적 개요</span><span class="sxs-lookup"><span data-stu-id="021fb-135">Conceptual Overview</span></span>](../../../../docs/framework/wcf/conceptual-overview.md)  
+ [<span data-ttu-id="eebdc-135">개념적 개요</span><span class="sxs-lookup"><span data-stu-id="eebdc-135">Conceptual Overview</span></span>](../../../../docs/framework/wcf/conceptual-overview.md)  
   
-## <a name="see-also"></a><span data-ttu-id="021fb-136">참고자료</span><span class="sxs-lookup"><span data-stu-id="021fb-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eebdc-136">참조</span><span class="sxs-lookup"><span data-stu-id="eebdc-136">See also</span></span>
 
-- [<span data-ttu-id="021fb-137">애플리케이션 구성</span><span class="sxs-lookup"><span data-stu-id="021fb-137">Configuring Your Application</span></span>](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)
+- [<span data-ttu-id="eebdc-137">애플리케이션 구성</span><span class="sxs-lookup"><span data-stu-id="eebdc-137">Configuring Your Application</span></span>](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)

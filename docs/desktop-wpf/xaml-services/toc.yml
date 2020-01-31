@@ -76,7 +76,7 @@
           href: service-contexts-with-type-converters-and-markup-extensions.md
     - name: XAML의 제네릭
       href: generics.md
-    - name: .NET Framework XAML 서비스에서 사용할 사용자 지정 형식 정의
+    - name: .NET XAML 서비스에서 사용할 사용자 지정 형식 정의
       href: define-custom-types.md
       items:
         - name: 사용자 지정 형식 및 라이브러리에 대한 XAML 관련 CLR 특성
