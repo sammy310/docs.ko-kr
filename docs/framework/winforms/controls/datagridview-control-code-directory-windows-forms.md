@@ -1,5 +1,5 @@
 ---
-title: DataGridView 컨트롤 코드 디렉터리(Windows Forms)
+title: DataGridView 컨트롤 코드 디렉터리
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data grids [Windows Forms], examples
@@ -7,152 +7,152 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], examples
 - DataGridView control [Windows Forms], code directory
 ms.assetid: ea8bd66a-5ed6-491b-b9da-63873e275a0a
-ms.openlocfilehash: e77a5e6efa769503e45aaf68380acdca79a7bfd5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: abc4dad66ef2c89fe7937cbfffd047bc1f6a9811
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969169"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742505"
 ---
-# <a name="datagridview-control-code-directory-windows-forms"></a><span data-ttu-id="4ea8e-102">DataGridView 컨트롤 코드 디렉터리(Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="4ea8e-102">DataGridView Control Code Directory (Windows Forms)</span></span>
-<span data-ttu-id="4ea8e-103">이 항목에서는 설명서에서 <xref:System.Windows.Forms.DataGridView>제공 되는 관련 코드 예제에 대 한 링크를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="4ea8e-103">This topic provides links to <xref:System.Windows.Forms.DataGridView>-related code examples available in the documentation.</span></span>  
+# <a name="datagridview-control-code-directory-windows-forms"></a><span data-ttu-id="34087-102">DataGridView 컨트롤 코드 디렉터리(Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="34087-102">DataGridView Control Code Directory (Windows Forms)</span></span>
+<span data-ttu-id="34087-103">이 항목에서는 설명서에서 사용할 수 있는 <xref:System.Windows.Forms.DataGridView>관련 코드 예제에 대 한 링크를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="34087-103">This topic provides links to <xref:System.Windows.Forms.DataGridView>-related code examples available in the documentation.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="4ea8e-104">링크는 항상 코드 예제가 있는 항목의 맨 위로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="4ea8e-104">A link always jumps to the top of the topic in which the code example is found.</span></span>  
+> <span data-ttu-id="34087-104">링크는 항상 코드 예제가 있는 항목의 맨 위로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="34087-104">A link always jumps to the top of the topic in which the code example is found.</span></span>  
   
- <span data-ttu-id="4ea8e-105">클래스 라이브러리 참조 설명서에서 추가 코드 예제를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4ea8e-105">Additional code examples are available in the class library reference documentation.</span></span> <span data-ttu-id="4ea8e-106"><xref:System.Windows.Forms.DataGridView> 컨트롤과 연결 된 보안 주체 클래스 및 인터페이스 목록은 [DataGridView 컨트롤 기술 요약](datagridview-control-technology-summary-windows-forms.md)의 표를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="4ea8e-106">For a list of the principal classes and interfaces associated with the <xref:System.Windows.Forms.DataGridView> control, see the table in [DataGridView Control Technology Summary](datagridview-control-technology-summary-windows-forms.md).</span></span>  
+ <span data-ttu-id="34087-105">클래스 라이브러리 참조 설명서에서 추가 코드 예제를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="34087-105">Additional code examples are available in the class library reference documentation.</span></span> <span data-ttu-id="34087-106"><xref:System.Windows.Forms.DataGridView> 컨트롤과 연결 된 보안 주체 클래스 및 인터페이스 목록은 [DataGridView 컨트롤 기술 요약](datagridview-control-technology-summary-windows-forms.md)의 표를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="34087-106">For a list of the principal classes and interfaces associated with the <xref:System.Windows.Forms.DataGridView> control, see the table in [DataGridView Control Technology Summary](datagridview-control-technology-summary-windows-forms.md).</span></span>  
   
-## <a name="codelist"></a><span data-ttu-id="4ea8e-107">코드 목록</span><span class="sxs-lookup"><span data-stu-id="4ea8e-107">CodeList</span></span>  
+## <a name="codelist"></a><span data-ttu-id="34087-107">코드 목록</span><span class="sxs-lookup"><span data-stu-id="34087-107">CodeList</span></span>  
   
-## <a name="unbound-data-examples"></a><span data-ttu-id="4ea8e-108">바인딩되지 않은 데이터 예제</span><span class="sxs-lookup"><span data-stu-id="4ea8e-108">Unbound Data Examples</span></span>  
+## <a name="unbound-data-examples"></a><span data-ttu-id="34087-108">바인딩되지 않은 데이터 예제</span><span class="sxs-lookup"><span data-stu-id="34087-108">Unbound Data Examples</span></span>  
   
-- [<span data-ttu-id="4ea8e-109">방법: 데이터 바인딩된 Windows Forms DataGridView 컨트롤에 바인딩되지 않은 열 추가</span><span class="sxs-lookup"><span data-stu-id="4ea8e-109">How to: Add an Unbound Column to a Data-Bound Windows Forms DataGridView Control</span></span>](unbound-column-to-a-data-bound-datagridview.md)  
+- [<span data-ttu-id="34087-109">방법: 데이터 바인딩된 Windows Forms DataGridView 컨트롤에 바인딩되지 않은 열 추가</span><span class="sxs-lookup"><span data-stu-id="34087-109">How to: Add an Unbound Column to a Data-Bound Windows Forms DataGridView Control</span></span>](unbound-column-to-a-data-bound-datagridview.md)  
   
-- [<span data-ttu-id="4ea8e-110">방법: 바인딩되지 않은 Windows Forms DataGridView 컨트롤 만들기</span><span class="sxs-lookup"><span data-stu-id="4ea8e-110">How to: Create an Unbound Windows Forms DataGridView Control</span></span>](how-to-create-an-unbound-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="34087-110">방법: 바인딩되지 않은 Windows Forms DataGridView 컨트롤 만들기</span><span class="sxs-lookup"><span data-stu-id="34087-110">How to: Create an Unbound Windows Forms DataGridView Control</span></span>](how-to-create-an-unbound-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="4ea8e-111">연습: 바인딩되지 않은 Windows Forms DataGridView 컨트롤 만들기</span><span class="sxs-lookup"><span data-stu-id="4ea8e-111">Walkthrough: Creating an Unbound Windows Forms DataGridView Control</span></span>](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="34087-111">연습: 바인딩되지 않은 Windows Forms DataGridView 컨트롤 만들기</span><span class="sxs-lookup"><span data-stu-id="34087-111">Walkthrough: Creating an Unbound Windows Forms DataGridView Control</span></span>](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)  
   
-## <a name="data-binding-examples"></a><span data-ttu-id="4ea8e-112">데이터 바인딩 예제</span><span class="sxs-lookup"><span data-stu-id="4ea8e-112">Data Binding Examples</span></span>  
+## <a name="data-binding-examples"></a><span data-ttu-id="34087-112">데이터 바인딩 예제</span><span class="sxs-lookup"><span data-stu-id="34087-112">Data Binding Examples</span></span>  
   
-- [<span data-ttu-id="4ea8e-113">방법: Windows Forms DataGridView 컨트롤에 데이터 바인딩</span><span class="sxs-lookup"><span data-stu-id="4ea8e-113">How to: Bind Data to the Windows Forms DataGridView Control</span></span>](how-to-bind-data-to-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="34087-113">방법: Windows Forms DataGridView 컨트롤에 데이터 바인딩</span><span class="sxs-lookup"><span data-stu-id="34087-113">How to: Bind Data to the Windows Forms DataGridView Control</span></span>](how-to-bind-data-to-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="4ea8e-114">방법: 데이터 바인딩된 Windows Forms DataGridView 컨트롤의 열 자동 생성</span><span class="sxs-lookup"><span data-stu-id="4ea8e-114">How to: Autogenerate Columns in a Data-Bound Windows Forms DataGridView Control</span></span>](autogenerate-columns-in-a-data-bound-wf-datagridview-control.md)  
+- [<span data-ttu-id="34087-114">방법: 데이터 바인딩된 Windows Forms DataGridView 컨트롤에서 열 자동 생성</span><span class="sxs-lookup"><span data-stu-id="34087-114">How to: Autogenerate Columns in a Data-Bound Windows Forms DataGridView Control</span></span>](autogenerate-columns-in-a-data-bound-wf-datagridview-control.md)  
   
-- [<span data-ttu-id="4ea8e-115">방법: Windows Forms DataGridView 컨트롤에서 자동 생성 된 열 제거</span><span class="sxs-lookup"><span data-stu-id="4ea8e-115">How to: Remove Autogenerated Columns from a Windows Forms DataGridView Control</span></span>](remove-autogenerated-columns-from-a-wf-datagridview-control.md)  
+- [<span data-ttu-id="34087-115">방법: 자동으로 생성된 열을 Windows Forms DataGridView 컨트롤에서 제거</span><span class="sxs-lookup"><span data-stu-id="34087-115">How to: Remove Autogenerated Columns from a Windows Forms DataGridView Control</span></span>](remove-autogenerated-columns-from-a-wf-datagridview-control.md)  
   
-- [<span data-ttu-id="4ea8e-116">방법: Windows Forms DataGridView 컨트롤에 개체 바인딩</span><span class="sxs-lookup"><span data-stu-id="4ea8e-116">How to: Bind Objects to Windows Forms DataGridView Controls</span></span>](how-to-bind-objects-to-windows-forms-datagridview-controls.md)  
+- [<span data-ttu-id="34087-116">방법: Windows Forms DataGridView 컨트롤에 개체 바인딩</span><span class="sxs-lookup"><span data-stu-id="34087-116">How to: Bind Objects to Windows Forms DataGridView Controls</span></span>](how-to-bind-objects-to-windows-forms-datagridview-controls.md)  
   
-- [<span data-ttu-id="4ea8e-117">방법: Windows Forms DataGridView 행에 바인딩된 개체에 액세스 합니다.</span><span class="sxs-lookup"><span data-stu-id="4ea8e-117">How to: Access Objects Bound to Windows Forms DataGridView Rows</span></span>](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)  
+- [<span data-ttu-id="34087-117">방법: Windows Forms DataGridView 행에 바인딩된 개체에 액세스</span><span class="sxs-lookup"><span data-stu-id="34087-117">How to: Access Objects Bound to Windows Forms DataGridView Rows</span></span>](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)  
   
-- [<span data-ttu-id="4ea8e-118">방법: 두 Windows Forms DataGridView 컨트롤을 사용 하 여 마스터/세부 폼 만들기</span><span class="sxs-lookup"><span data-stu-id="4ea8e-118">How to: Create a Master/Detail Form Using Two Windows Forms DataGridView Controls</span></span>](create-a-master-detail-form-using-two-datagridviews.md)  
+- [<span data-ttu-id="34087-118">방법: 두 개의 Windows Forms DataGridView 컨트롤을 사용하여 마스터/세부 폼 만들기</span><span class="sxs-lookup"><span data-stu-id="34087-118">How to: Create a Master/Detail Form Using Two Windows Forms DataGridView Controls</span></span>](create-a-master-detail-form-using-two-datagridviews.md)  
   
-- [<span data-ttu-id="4ea8e-119">연습: 두 Windows Forms DataGridView 컨트롤을 사용 하 여 마스터/세부 폼 만들기</span><span class="sxs-lookup"><span data-stu-id="4ea8e-119">Walkthrough: Creating a Master/Detail Form Using Two Windows Forms DataGridView Controls</span></span>](creating-a-master-detail-form-using-two-datagridviews.md)  
+- [<span data-ttu-id="34087-119">연습: 두 개의 Windows Forms DataGridView 컨트롤을 사용하여 마스터/세부 폼 만들기</span><span class="sxs-lookup"><span data-stu-id="34087-119">Walkthrough: Creating a Master/Detail Form Using Two Windows Forms DataGridView Controls</span></span>](creating-a-master-detail-form-using-two-datagridviews.md)  
   
-## <a name="data-formatting-examples"></a><span data-ttu-id="4ea8e-120">데이터 서식 지정 예제</span><span class="sxs-lookup"><span data-stu-id="4ea8e-120">Data Formatting Examples</span></span>  
+## <a name="data-formatting-examples"></a><span data-ttu-id="34087-120">데이터 서식 지정 예제</span><span class="sxs-lookup"><span data-stu-id="34087-120">Data Formatting Examples</span></span>  
   
-- [<span data-ttu-id="4ea8e-121">방법: Windows Forms DataGridView 컨트롤의 데이터 서식 지정</span><span class="sxs-lookup"><span data-stu-id="4ea8e-121">How to: Format Data in the Windows Forms DataGridView Control</span></span>](how-to-format-data-in-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="34087-121">방법: Windows Forms DataGridView 컨트롤의 데이터 형식 지정</span><span class="sxs-lookup"><span data-stu-id="34087-121">How to: Format Data in the Windows Forms DataGridView Control</span></span>](how-to-format-data-in-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="4ea8e-122">방법: DataGridView 컨트롤 Windows Forms에서 데이터 서식 지정</span><span class="sxs-lookup"><span data-stu-id="4ea8e-122">How to: Customize Data Formatting in the Windows Forms DataGridView Control</span></span>](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="34087-122">방법: Windows Forms DataGridView 컨트롤에서 데이터 형식 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="34087-122">How to: Customize Data Formatting in the Windows Forms DataGridView Control</span></span>](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)  
   
-## <a name="data-validation-examples"></a><span data-ttu-id="4ea8e-123">데이터 유효성 검사 예제</span><span class="sxs-lookup"><span data-stu-id="4ea8e-123">Data Validation Examples</span></span>  
+## <a name="data-validation-examples"></a><span data-ttu-id="34087-123">데이터 유효성 검사 예제</span><span class="sxs-lookup"><span data-stu-id="34087-123">Data Validation Examples</span></span>  
   
-- [<span data-ttu-id="4ea8e-124">방법: Windows Forms DataGridView 컨트롤의 데이터 유효성 검사</span><span class="sxs-lookup"><span data-stu-id="4ea8e-124">How to: Validate Data in the Windows Forms DataGridView Control</span></span>](how-to-validate-data-in-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="34087-124">방법: Windows Forms DataGridView 컨트롤의 데이터 유효성 검사</span><span class="sxs-lookup"><span data-stu-id="34087-124">How to: Validate Data in the Windows Forms DataGridView Control</span></span>](how-to-validate-data-in-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="4ea8e-125">연습: Windows Forms DataGridView 컨트롤의 데이터 유효성 검사</span><span class="sxs-lookup"><span data-stu-id="4ea8e-125">Walkthrough: Validating Data in the Windows Forms DataGridView Control</span></span>](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="34087-125">연습: Windows Forms DataGridView 컨트롤의 데이터 유효성 검사</span><span class="sxs-lookup"><span data-stu-id="34087-125">Walkthrough: Validating Data in the Windows Forms DataGridView Control</span></span>](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="4ea8e-126">방법: Windows Forms DataGridView 컨트롤에서 데이터 입력 중에 발생 하는 오류를 처리 합니다.</span><span class="sxs-lookup"><span data-stu-id="4ea8e-126">How to: Handle Errors That Occur During Data Entry in the Windows Forms DataGridView Control</span></span>](handle-errors-that-occur-during-data-entry-in-the-datagrid.md)  
+- [<span data-ttu-id="34087-126">방법: Windows Forms DataGridView 컨트롤에서 데이터 입력 중에 발생하는 오류 처리</span><span class="sxs-lookup"><span data-stu-id="34087-126">How to: Handle Errors That Occur During Data Entry in the Windows Forms DataGridView Control</span></span>](handle-errors-that-occur-during-data-entry-in-the-datagrid.md)  
   
-- [<span data-ttu-id="4ea8e-127">연습: Windows Forms DataGridView 컨트롤에서 데이터 입력 중에 발생 하는 오류 처리</span><span class="sxs-lookup"><span data-stu-id="4ea8e-127">Walkthrough: Handling Errors that Occur During Data Entry in the Windows Forms DataGridView Control</span></span>](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
+- [<span data-ttu-id="34087-127">연습: Windows Forms DataGridView 컨트롤에서 데이터 입력 중에 발생하는 오류 처리</span><span class="sxs-lookup"><span data-stu-id="34087-127">Walkthrough: Handling Errors that Occur During Data Entry in the Windows Forms DataGridView Control</span></span>](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
   
-## <a name="appearance-customization-examples"></a><span data-ttu-id="4ea8e-128">모양 사용자 지정 예제</span><span class="sxs-lookup"><span data-stu-id="4ea8e-128">Appearance Customization Examples</span></span>  
+## <a name="appearance-customization-examples"></a><span data-ttu-id="34087-128">모양 사용자 지정 예제</span><span class="sxs-lookup"><span data-stu-id="34087-128">Appearance Customization Examples</span></span>  
   
-- [<span data-ttu-id="4ea8e-129">방법: Windows Forms DataGridView 컨트롤의 테두리 및 모눈선 스타일 변경</span><span class="sxs-lookup"><span data-stu-id="4ea8e-129">How to: Change the Border and Gridline Styles in the Windows Forms DataGridView Control</span></span>](change-the-border-and-gridline-styles-in-the-datagrid.md)  
+- [<span data-ttu-id="34087-129">방법: Windows Forms DataGridView 컨트롤의 테두리 및 모눈선 스타일 변경</span><span class="sxs-lookup"><span data-stu-id="34087-129">How to: Change the Border and Gridline Styles in the Windows Forms DataGridView Control</span></span>](change-the-border-and-gridline-styles-in-the-datagrid.md)  
   
-- [<span data-ttu-id="4ea8e-130">방법: Windows Forms DataGridView 컨트롤에서 글꼴 및 색 스타일 설정</span><span class="sxs-lookup"><span data-stu-id="4ea8e-130">How to: Set Font and Color Styles in the Windows Forms DataGridView Control</span></span>](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="34087-130">방법: Windows Forms DataGridView 컨트롤의 글꼴 및 색 스타일 설정</span><span class="sxs-lookup"><span data-stu-id="34087-130">How to: Set Font and Color Styles in the Windows Forms DataGridView Control</span></span>](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="4ea8e-131">방법: Windows Forms DataGridView 컨트롤에 기본 셀 스타일 설정</span><span class="sxs-lookup"><span data-stu-id="4ea8e-131">How to: Set Default Cell Styles for the Windows Forms DataGridView Control</span></span>](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="34087-131">방법: Windows Forms DataGridView 컨트롤에 기본 셀 스타일 설정</span><span class="sxs-lookup"><span data-stu-id="34087-131">How to: Set Default Cell Styles for the Windows Forms DataGridView Control</span></span>](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="4ea8e-132">방법: Windows Forms DataGridView 컨트롤의 행을 사용자 지정 하려면 행 템플릿을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="4ea8e-132">How to: Use the Row Template to Customize Rows in the Windows Forms DataGridView Control</span></span>](use-the-row-template-to-customize-rows-in-the-datagrid.md)  
+- [<span data-ttu-id="34087-132">방법: 행 템플릿을 사용하여 Windows Forms DataGridView 컨트롤에서 행 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="34087-132">How to: Use the Row Template to Customize Rows in the Windows Forms DataGridView Control</span></span>](use-the-row-template-to-customize-rows-in-the-datagrid.md)  
   
-- [<span data-ttu-id="4ea8e-133">방법: Windows Forms DataGridView 컨트롤에 대해 교대로 반복 되는 행 스타일 설정</span><span class="sxs-lookup"><span data-stu-id="4ea8e-133">How to: Set Alternating Row Styles for the Windows Forms DataGridView Control</span></span>](how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="34087-133">방법: Windows Forms DataGridView 컨트롤에 교대로 반복되는 행 스타일 설정</span><span class="sxs-lookup"><span data-stu-id="34087-133">How to: Set Alternating Row Styles for the Windows Forms DataGridView Control</span></span>](how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md)  
   
-## <a name="behavior-customization-examples"></a><span data-ttu-id="4ea8e-134">동작 사용자 지정 예제</span><span class="sxs-lookup"><span data-stu-id="4ea8e-134">Behavior Customization Examples</span></span>  
+## <a name="behavior-customization-examples"></a><span data-ttu-id="34087-134">동작 사용자 지정 예제</span><span class="sxs-lookup"><span data-stu-id="34087-134">Behavior Customization Examples</span></span>  
   
-- [<span data-ttu-id="4ea8e-135">방법: DataGridView 컨트롤 Windows Forms의 편집 모드 지정</span><span class="sxs-lookup"><span data-stu-id="4ea8e-135">How to: Specify the Edit Mode for the Windows Forms DataGridView Control</span></span>](how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="34087-135">방법: Windows Forms DataGridView 컨트롤에 편집 모드 지정</span><span class="sxs-lookup"><span data-stu-id="34087-135">How to: Specify the Edit Mode for the Windows Forms DataGridView Control</span></span>](how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="4ea8e-136">방법: Windows Forms DataGridView 컨트롤의 새 행에 대 한 기본값 지정</span><span class="sxs-lookup"><span data-stu-id="4ea8e-136">How to: Specify Default Values for New Rows in the Windows Forms DataGridView Control</span></span>](specify-default-values-for-new-rows-in-the-datagrid.md)  
+- [<span data-ttu-id="34087-136">방법: Windows Forms DataGridView 컨트롤에서 새 행에 기본값 지정</span><span class="sxs-lookup"><span data-stu-id="34087-136">How to: Specify Default Values for New Rows in the Windows Forms DataGridView Control</span></span>](specify-default-values-for-new-rows-in-the-datagrid.md)  
   
-- [<span data-ttu-id="4ea8e-137">방법: Windows Forms DataGridView 컨트롤에서 행 추가 및 삭제 방지</span><span class="sxs-lookup"><span data-stu-id="4ea8e-137">How to: Prevent Row Addition and Deletion in the Windows Forms DataGridView Control</span></span>](prevent-row-addition-and-deletion-datagridview.md)  
+- [<span data-ttu-id="34087-137">방법: Windows Forms DataGridView 컨트롤에서 행 추가 및 삭제 금지</span><span class="sxs-lookup"><span data-stu-id="34087-137">How to: Prevent Row Addition and Deletion in the Windows Forms DataGridView Control</span></span>](prevent-row-addition-and-deletion-datagridview.md)  
   
-- [<span data-ttu-id="4ea8e-138">방법: Windows Forms DataGridView 컨트롤의 셀 변경 내용에 따라 사용자 지정 작업을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="4ea8e-138">How to: Perform a Custom Action Based on Changes in a Cell of a Windows Forms DataGridView Control</span></span>](perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md)  
+- [<span data-ttu-id="34087-138">방법: Windows Forms DataGridView 컨트롤의 셀 변경 내용에 따라 사용자 지정 작업 수행</span><span class="sxs-lookup"><span data-stu-id="34087-138">How to: Perform a Custom Action Based on Changes in a Cell of a Windows Forms DataGridView Control</span></span>](perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md)  
   
-- [<span data-ttu-id="4ea8e-139">방법: 사용자가 Windows Forms DataGridView 컨트롤에서 여러 셀을 클립보드에 복사할 수 있도록 설정</span><span class="sxs-lookup"><span data-stu-id="4ea8e-139">How to: Enable Users to Copy Multiple Cells to the Clipboard from the Windows Forms DataGridView Control</span></span>](enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
+- [<span data-ttu-id="34087-139">방법: Windows Forms DataGridView 컨트롤에서 사용자가 여러 셀을 클립보드에 복사할 수 있도록 설정</span><span class="sxs-lookup"><span data-stu-id="34087-139">How to: Enable Users to Copy Multiple Cells to the Clipboard from the Windows Forms DataGridView Control</span></span>](enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
   
-- [<span data-ttu-id="4ea8e-140">방법: Windows Forms DataGridView 컨트롤의 개별 셀에 도구 설명 추가</span><span class="sxs-lookup"><span data-stu-id="4ea8e-140">How to: Add ToolTips to Individual Cells in a Windows Forms DataGridView Control</span></span>](add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
+- [<span data-ttu-id="34087-140">방법: Windows Forms DataGridView 컨트롤에서 개별 셀에 도구 설명 추가</span><span class="sxs-lookup"><span data-stu-id="34087-140">How to: Add ToolTips to Individual Cells in a Windows Forms DataGridView Control</span></span>](add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
   
-- [<span data-ttu-id="4ea8e-141">방법: Windows Forms DataGridView 컨트롤의 셀에 이미지 표시</span><span class="sxs-lookup"><span data-stu-id="4ea8e-141">How to: Display Images in Cells of the Windows Forms DataGridView Control</span></span>](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="34087-141">방법: Windows Forms DataGridView 컨트롤의 셀에 이미지 표시</span><span class="sxs-lookup"><span data-stu-id="34087-141">How to: Display Images in Cells of the Windows Forms DataGridView Control</span></span>](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="4ea8e-142">방법: Windows Forms DataGridView 컨트롤에서 정렬 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="4ea8e-142">How to: Customize Sorting in the Windows Forms DataGridView Control</span></span>](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="34087-142">방법: Windows Forms DataGridView 컨트롤에서 정렬 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="34087-142">How to: Customize Sorting in the Windows Forms DataGridView Control</span></span>](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)  
   
-## <a name="column-manipulation-examples"></a><span data-ttu-id="4ea8e-143">열 조작 예제</span><span class="sxs-lookup"><span data-stu-id="4ea8e-143">Column Manipulation Examples</span></span>  
+## <a name="column-manipulation-examples"></a><span data-ttu-id="34087-143">열 조작 예제</span><span class="sxs-lookup"><span data-stu-id="34087-143">Column Manipulation Examples</span></span>  
   
-- [<span data-ttu-id="4ea8e-144">방법: Windows Forms DataGridView 컨트롤의 열 고정</span><span class="sxs-lookup"><span data-stu-id="4ea8e-144">How to: Freeze Columns in the Windows Forms DataGridView Control</span></span>](how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="34087-144">방법: Windows Forms DataGridView 컨트롤에서 열 고정</span><span class="sxs-lookup"><span data-stu-id="34087-144">How to: Freeze Columns in the Windows Forms DataGridView Control</span></span>](how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="4ea8e-145">방법: Windows Forms DataGridView 컨트롤에서 열 다시 정렬 사용</span><span class="sxs-lookup"><span data-stu-id="4ea8e-145">How to: Enable Column Reordering in the Windows Forms DataGridView Control</span></span>](how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="34087-145">방법: Windows Forms DataGridView 컨트롤에서 열 다시 정렬 사용</span><span class="sxs-lookup"><span data-stu-id="34087-145">How to: Enable Column Reordering in the Windows Forms DataGridView Control</span></span>](how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="4ea8e-146">방법: Windows Forms DataGridView 컨트롤에서 열 순서 변경</span><span class="sxs-lookup"><span data-stu-id="4ea8e-146">How to: Change the Order of Columns in the Windows Forms DataGridView Control</span></span>](how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="34087-146">방법: Windows Forms DataGridView 컨트롤에서 열 순서 변경</span><span class="sxs-lookup"><span data-stu-id="34087-146">How to: Change the Order of Columns in the Windows Forms DataGridView Control</span></span>](how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="4ea8e-147">방법: Windows Forms DataGridView 컨트롤에서 열 숨기기</span><span class="sxs-lookup"><span data-stu-id="4ea8e-147">How to: Hide Columns in the Windows Forms DataGridView Control</span></span>](how-to-hide-columns-in-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="34087-147">방법: Windows Forms DataGridView 컨트롤에서 열 숨기기</span><span class="sxs-lookup"><span data-stu-id="34087-147">How to: Hide Columns in the Windows Forms DataGridView Control</span></span>](how-to-hide-columns-in-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="4ea8e-148">방법: Windows Forms DataGridView 컨트롤에서 열 머리글 숨기기</span><span class="sxs-lookup"><span data-stu-id="4ea8e-148">How to: Hide Column Headers in the Windows Forms DataGridView Control</span></span>](how-to-hide-column-headers-in-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="34087-148">방법: Windows Forms DataGridView 컨트롤에서 열 머리글 숨기기</span><span class="sxs-lookup"><span data-stu-id="34087-148">How to: Hide Column Headers in the Windows Forms DataGridView Control</span></span>](how-to-hide-column-headers-in-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="4ea8e-149">방법: Windows Forms DataGridView 컨트롤에서 열을 읽기 전용으로 설정</span><span class="sxs-lookup"><span data-stu-id="4ea8e-149">How to: Make Columns Read-Only in the Windows Forms DataGridView Control</span></span>](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="34087-149">방법: Windows Forms DataGridView 컨트롤에서 열을 읽기 전용으로 설정</span><span class="sxs-lookup"><span data-stu-id="34087-149">How to: Make Columns Read-Only in the Windows Forms DataGridView Control</span></span>](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="4ea8e-150">방법: Windows Forms DataGridView 컨트롤의 열에 대 한 정렬 모드 설정</span><span class="sxs-lookup"><span data-stu-id="4ea8e-150">How to: Set the Sort Modes for Columns in the Windows Forms DataGridView Control</span></span>](set-the-sort-modes-for-columns-wf-datagridview-control.md)  
+- [<span data-ttu-id="34087-150">방법: Windows Forms DataGridView 컨트롤의 열 정렬 모드 설정</span><span class="sxs-lookup"><span data-stu-id="34087-150">How to: Set the Sort Modes for Columns in the Windows Forms DataGridView Control</span></span>](set-the-sort-modes-for-columns-wf-datagridview-control.md)  
   
-- [<span data-ttu-id="4ea8e-151">방법: Windows Forms DataGridView 컨트롤에서 이미지 열 작업</span><span class="sxs-lookup"><span data-stu-id="4ea8e-151">How to: Work with Image Columns in the Windows Forms DataGridView Control</span></span>](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="34087-151">방법: Windows Forms DataGridView 컨트롤에서 이미지 열 작업</span><span class="sxs-lookup"><span data-stu-id="34087-151">How to: Work with Image Columns in the Windows Forms DataGridView Control</span></span>](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="4ea8e-152">방법: Windows Forms DataGridView 컨트롤에서 열 조작</span><span class="sxs-lookup"><span data-stu-id="4ea8e-152">How to: Manipulate Columns in the Windows Forms DataGridView Control</span></span>](how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="34087-152">방법: Windows Forms DataGridView 컨트롤에서 열 조작</span><span class="sxs-lookup"><span data-stu-id="34087-152">How to: Manipulate Columns in the Windows Forms DataGridView Control</span></span>](how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md)  
   
-## <a name="row-and-column-sizing-examples"></a><span data-ttu-id="4ea8e-153">행 및 열 크기 조정 예제</span><span class="sxs-lookup"><span data-stu-id="4ea8e-153">Row and Column Sizing Examples</span></span>  
+## <a name="row-and-column-sizing-examples"></a><span data-ttu-id="34087-153">행 및 열 크기 조정 예제</span><span class="sxs-lookup"><span data-stu-id="34087-153">Row and Column Sizing Examples</span></span>  
   
-- [<span data-ttu-id="4ea8e-154">Windows Forms DataGridView 컨트롤의 열 채우기 모드</span><span class="sxs-lookup"><span data-stu-id="4ea8e-154">Column Fill Mode in the Windows Forms DataGridView Control</span></span>](column-fill-mode-in-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="34087-154">Windows Forms DataGridView 컨트롤의 열 채우기 모드</span><span class="sxs-lookup"><span data-stu-id="34087-154">Column Fill Mode in the Windows Forms DataGridView Control</span></span>](column-fill-mode-in-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="4ea8e-155">방법: Windows Forms DataGridView 컨트롤의 크기 조정 모드 설정</span><span class="sxs-lookup"><span data-stu-id="4ea8e-155">How to: Set the Sizing Modes of the Windows Forms DataGridView Control</span></span>](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="34087-155">방법: Windows Forms DataGridView 컨트롤의 크기 조정 모드 설정</span><span class="sxs-lookup"><span data-stu-id="34087-155">How to: Set the Sizing Modes of the Windows Forms DataGridView Control</span></span>](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="4ea8e-156">방법: Windows Forms DataGridView 컨트롤에서 내용에 맞게 프로그래밍 방식으로 셀 크기 조정</span><span class="sxs-lookup"><span data-stu-id="4ea8e-156">How to: Programmatically Resize Cells to Fit Content in the Windows Forms DataGridView Control</span></span>](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
+- [<span data-ttu-id="34087-156">방법: Windows Forms DataGridView 컨트롤에서 내용에 맞게 프로그래밍 방식으로 셀 크기 조정</span><span class="sxs-lookup"><span data-stu-id="34087-156">How to: Programmatically Resize Cells to Fit Content in the Windows Forms DataGridView Control</span></span>](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
   
-- [<span data-ttu-id="4ea8e-157">방법: Windows Forms DataGridView 컨트롤의 내용이 변경 될 때 자동으로 셀 크기 조정</span><span class="sxs-lookup"><span data-stu-id="4ea8e-157">How to: Automatically Resize Cells When Content Changes in the Windows Forms DataGridView Control</span></span>](automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
+- [<span data-ttu-id="34087-157">방법: Windows Forms DataGridView 컨트롤에서 내용이 변경되는 경우 자동으로 셀 크기 조정</span><span class="sxs-lookup"><span data-stu-id="34087-157">How to: Automatically Resize Cells When Content Changes in the Windows Forms DataGridView Control</span></span>](automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
   
-## <a name="selection-examples"></a><span data-ttu-id="4ea8e-158">선택 예제</span><span class="sxs-lookup"><span data-stu-id="4ea8e-158">Selection Examples</span></span>  
+## <a name="selection-examples"></a><span data-ttu-id="34087-158">선택 예제</span><span class="sxs-lookup"><span data-stu-id="34087-158">Selection Examples</span></span>  
   
-- [<span data-ttu-id="4ea8e-159">방법: Windows Forms DataGridView 컨트롤의 선택 모드 설정</span><span class="sxs-lookup"><span data-stu-id="4ea8e-159">How to: Set the Selection Mode of the Windows Forms DataGridView Control</span></span>](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="34087-159">방법: Windows Forms DataGridView 컨트롤의 선택 모드 설정</span><span class="sxs-lookup"><span data-stu-id="34087-159">How to: Set the Selection Mode of the Windows Forms DataGridView Control</span></span>](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="4ea8e-160">방법: Windows Forms DataGridView 컨트롤에서 선택한 셀, 행 및 열 가져오기</span><span class="sxs-lookup"><span data-stu-id="4ea8e-160">How to: Get the Selected Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>](selected-cells-rows-and-columns-datagridview.md)  
+- [<span data-ttu-id="34087-160">방법: Windows Forms DataGridView 컨트롤에서 선택한 셀, 행 및 열 가져오기</span><span class="sxs-lookup"><span data-stu-id="34087-160">How to: Get the Selected Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>](selected-cells-rows-and-columns-datagridview.md)  
   
-- [<span data-ttu-id="4ea8e-161">방법: Windows Forms DataGridView 컨트롤에서 현재 셀 가져오기 및 설정</span><span class="sxs-lookup"><span data-stu-id="4ea8e-161">How to: Get and Set the Current Cell in the Windows Forms DataGridView Control</span></span>](get-and-set-the-current-cell-wf-datagridview-control.md)  
+- [<span data-ttu-id="34087-161">방법: Windows Forms DataGridView 컨트롤에서 현재 셀 가져오기 및 설정</span><span class="sxs-lookup"><span data-stu-id="34087-161">How to: Get and Set the Current Cell in the Windows Forms DataGridView Control</span></span>](get-and-set-the-current-cell-wf-datagridview-control.md)  
   
-## <a name="advanced-customization-examples"></a><span data-ttu-id="4ea8e-162">고급 사용자 지정 예제</span><span class="sxs-lookup"><span data-stu-id="4ea8e-162">Advanced Customization Examples</span></span>  
+## <a name="advanced-customization-examples"></a><span data-ttu-id="34087-162">고급 사용자 지정 예제</span><span class="sxs-lookup"><span data-stu-id="34087-162">Advanced Customization Examples</span></span>  
   
-- [<span data-ttu-id="4ea8e-163">방법: Windows Forms DataGridView 컨트롤에서 셀 모양 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="4ea8e-163">How to: Customize the Appearance of Cells in the Windows Forms DataGridView Control</span></span>](customize-the-appearance-of-cells-in-the-datagrid.md)  
+- [<span data-ttu-id="34087-163">방법: Windows Forms DataGridView 컨트롤에서 셀 모양 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="34087-163">How to: Customize the Appearance of Cells in the Windows Forms DataGridView Control</span></span>](customize-the-appearance-of-cells-in-the-datagrid.md)  
   
-- [<span data-ttu-id="4ea8e-164">방법: Windows Forms DataGridView 컨트롤에서 행 모양 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="4ea8e-164">How to: Customize the Appearance of Rows in the Windows Forms DataGridView Control</span></span>](customize-the-appearance-of-rows-in-the-datagrid.md)  
+- [<span data-ttu-id="34087-164">방법: Windows Forms DataGridView 컨트롤에서 행 모양 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="34087-164">How to: Customize the Appearance of Rows in the Windows Forms DataGridView Control</span></span>](customize-the-appearance-of-rows-in-the-datagrid.md)  
   
-- [<span data-ttu-id="4ea8e-165">방법: Windows Forms DataGridView 컨트롤의 동작과 모양을 확장 하 여 셀과 열 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="4ea8e-165">How to: Customize Cells and Columns in the Windows Forms DataGridView Control by Extending Their Behavior and Appearance</span></span>](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)  
+- [<span data-ttu-id="34087-165">방법: Windows Forms DataGridView 컨트롤에서 동작 및 모양을 확장하여 셀과 열 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="34087-165">How to: Customize Cells and Columns in the Windows Forms DataGridView Control by Extending Their Behavior and Appearance</span></span>](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)  
   
-- [<span data-ttu-id="4ea8e-166">방법: Windows Forms DataGridView 컨트롤의 단추 열에서 단추 비활성화</span><span class="sxs-lookup"><span data-stu-id="4ea8e-166">How to: Disable Buttons in a Button Column in the Windows Forms DataGridView Control</span></span>](disable-buttons-in-a-button-column-in-the-datagrid.md)  
+- [<span data-ttu-id="34087-166">방법: Windows Forms DataGridView 컨트롤의 단추 열에서 단추 비활성화</span><span class="sxs-lookup"><span data-stu-id="34087-166">How to: Disable Buttons in a Button Column in the Windows Forms DataGridView Control</span></span>](disable-buttons-in-a-button-column-in-the-datagrid.md)  
   
-- [<span data-ttu-id="4ea8e-167">방법: Windows Forms DataGridView 셀의 호스트 컨트롤</span><span class="sxs-lookup"><span data-stu-id="4ea8e-167">How to: Host Controls in Windows Forms DataGridView Cells</span></span>](how-to-host-controls-in-windows-forms-datagridview-cells.md)  
+- [<span data-ttu-id="34087-167">방법: Windows Forms DataGridView 셀에서 컨트롤 호스팅</span><span class="sxs-lookup"><span data-stu-id="34087-167">How to: Host Controls in Windows Forms DataGridView Cells</span></span>](how-to-host-controls-in-windows-forms-datagridview-cells.md)  
   
-## <a name="advanced-data-examples"></a><span data-ttu-id="4ea8e-168">고급 데이터 예제</span><span class="sxs-lookup"><span data-stu-id="4ea8e-168">Advanced Data Examples</span></span>  
+## <a name="advanced-data-examples"></a><span data-ttu-id="34087-168">고급 데이터 예제</span><span class="sxs-lookup"><span data-stu-id="34087-168">Advanced Data Examples</span></span>  
   
-- [<span data-ttu-id="4ea8e-169">방법: Windows Forms DataGridView 컨트롤에서 가상 모드 구현</span><span class="sxs-lookup"><span data-stu-id="4ea8e-169">How to: Implement Virtual Mode in the Windows Forms DataGridView Control</span></span>](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)  
+- [<span data-ttu-id="34087-169">방법: Windows Forms DataGridView 컨트롤에서 가상 모드 구현</span><span class="sxs-lookup"><span data-stu-id="34087-169">How to: Implement Virtual Mode in the Windows Forms DataGridView Control</span></span>](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)  
   
-- [<span data-ttu-id="4ea8e-170">연습: Windows Forms DataGridView 컨트롤에서 가상 모드 구현</span><span class="sxs-lookup"><span data-stu-id="4ea8e-170">Walkthrough: Implementing Virtual Mode in the Windows Forms DataGridView Control</span></span>](implementing-virtual-mode-wf-datagridview-control.md)  
+- [<span data-ttu-id="34087-170">연습: Windows Forms DataGridView 컨트롤에서 가상 모드 구현</span><span class="sxs-lookup"><span data-stu-id="34087-170">Walkthrough: Implementing Virtual Mode in the Windows Forms DataGridView Control</span></span>](implementing-virtual-mode-wf-datagridview-control.md)  
   
-- [<span data-ttu-id="4ea8e-171">Windows Forms DataGridView 컨트롤에서 Just-In-Time 데이터 로드를 사용하여 가상 모드 구현</span><span class="sxs-lookup"><span data-stu-id="4ea8e-171">Implementing Virtual Mode with Just-In-Time Data Loading in the Windows Forms DataGridView Control</span></span>](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
+- [<span data-ttu-id="34087-171">Windows Forms DataGridView 컨트롤에서 Just-In-Time 데이터 로드를 사용하여 가상 모드 구현</span><span class="sxs-lookup"><span data-stu-id="34087-171">Implementing Virtual Mode with Just-In-Time Data Loading in the Windows Forms DataGridView Control</span></span>](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
   
-## <a name="see-also"></a><span data-ttu-id="4ea8e-172">참고자료</span><span class="sxs-lookup"><span data-stu-id="4ea8e-172">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="34087-172">참조</span><span class="sxs-lookup"><span data-stu-id="34087-172">See also</span></span>
 
 - <xref:System.Windows.Forms.DataGridView>
-- [<span data-ttu-id="4ea8e-173">DataGridView 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="4ea8e-173">DataGridView Control Overview</span></span>](datagridview-control-overview-windows-forms.md)
+- [<span data-ttu-id="34087-173">DataGridView 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="34087-173">DataGridView Control Overview</span></span>](datagridview-control-overview-windows-forms.md)
