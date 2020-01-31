@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b0d25f76-0bd5-4aa6-96cf-bfec0e1de28b
 topic_type:
 - apiref
-ms.openlocfilehash: fdfd3715220785a1fa5285b19e677bf0dc190719
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b75de955e3b6857c9cc1b5411df4b0f262c4cb9a
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433086"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862700"
 ---
-# <a name="icorprofilerinfo2getobjectgeneration-method"></a><span data-ttu-id="cf437-102">ICorProfilerInfo2::GetObjectGeneration 메서드</span><span class="sxs-lookup"><span data-stu-id="cf437-102">ICorProfilerInfo2::GetObjectGeneration Method</span></span>
-<span data-ttu-id="cf437-103">지정 된 개체를 포함 하는 힙의 세그먼트를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="cf437-103">Gets the segment of the heap that contains the specified object.</span></span>  
+# <a name="icorprofilerinfo2getobjectgeneration-method"></a><span data-ttu-id="5fe51-102">ICorProfilerInfo2::GetObjectGeneration 메서드</span><span class="sxs-lookup"><span data-stu-id="5fe51-102">ICorProfilerInfo2::GetObjectGeneration Method</span></span>
+<span data-ttu-id="5fe51-103">지정 된 개체를 포함 하는 힙의 세그먼트를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="5fe51-103">Gets the segment of the heap that contains the specified object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cf437-104">구문</span><span class="sxs-lookup"><span data-stu-id="cf437-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5fe51-104">구문</span><span class="sxs-lookup"><span data-stu-id="5fe51-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetObjectGeneration(  
@@ -33,26 +33,26 @@ HRESULT GetObjectGeneration(
     [out] COR_PRF_GC_GENERATION_RANGE *range);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="cf437-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="cf437-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5fe51-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="5fe51-105">Parameters</span></span>  
  `objectId`  
- <span data-ttu-id="cf437-106">진행 개체의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="cf437-106">[in] The ID of the object.</span></span>  
+ <span data-ttu-id="5fe51-106">진행 개체의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="5fe51-106">[in] The ID of the object.</span></span>  
   
  `range`  
- <span data-ttu-id="cf437-107">제한이 가비지 수집이 수행 되는 세대 내의 메모리 범위 (즉, 블록)를 설명 하는 [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) 구조체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="cf437-107">[out] A pointer to a [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) structure, which describes a range (that is, a block) of memory within the generation that is undergoing garbage collection.</span></span> <span data-ttu-id="cf437-108">이 범위에는 지정 된 개체가 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="cf437-108">This range contains the specified object.</span></span>  
+ <span data-ttu-id="5fe51-107">제한이 가비지 수집이 수행 되는 세대 내의 메모리 범위 (즉, 블록)를 설명 하는 [COR_PRF_GC_GENERATION_RANGE](cor-prf-gc-generation-range-structure.md) 구조체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="5fe51-107">[out] A pointer to a [COR_PRF_GC_GENERATION_RANGE](cor-prf-gc-generation-range-structure.md) structure, which describes a range (that is, a block) of memory within the generation that is undergoing garbage collection.</span></span> <span data-ttu-id="5fe51-108">이 범위에는 지정 된 개체가 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="5fe51-108">This range contains the specified object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="cf437-109">주의</span><span class="sxs-lookup"><span data-stu-id="cf437-109">Remarks</span></span>  
- <span data-ttu-id="cf437-110">가비지 수집이 진행 되 고 있지 않은 경우 모든 프로파일러 콜백에서 `GetObjectGeneration` 메서드를 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cf437-110">The `GetObjectGeneration` method may be called from any profiler callback, provided that garbage collection is not in progress.</span></span> <span data-ttu-id="cf437-111">즉, [ICorProfilerCallback2:: GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md) 및 [ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)간에 발생 하는 것을 제외 하 고 모든 콜백에서 호출 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cf437-111">That is, it may be called from any callback except those that occur between [ICorProfilerCallback2::GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md) and [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5fe51-109">주의</span><span class="sxs-lookup"><span data-stu-id="5fe51-109">Remarks</span></span>  
+ <span data-ttu-id="5fe51-110">가비지 수집이 진행 되 고 있지 않은 경우 모든 프로파일러 콜백에서 `GetObjectGeneration` 메서드를 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5fe51-110">The `GetObjectGeneration` method may be called from any profiler callback, provided that garbage collection is not in progress.</span></span> <span data-ttu-id="5fe51-111">즉, [ICorProfilerCallback2:: GarbageCollectionStarted](icorprofilercallback2-garbagecollectionstarted-method.md) 및 [ICorProfilerCallback2:: GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md)간에 발생 하는 것을 제외 하 고 모든 콜백에서 호출 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5fe51-111">That is, it may be called from any callback except those that occur between [ICorProfilerCallback2::GarbageCollectionStarted](icorprofilercallback2-garbagecollectionstarted-method.md) and [ICorProfilerCallback2::GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cf437-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="cf437-112">Requirements</span></span>  
- <span data-ttu-id="cf437-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="cf437-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5fe51-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="5fe51-112">Requirements</span></span>  
+ <span data-ttu-id="5fe51-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="5fe51-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cf437-114">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="cf437-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="5fe51-114">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="5fe51-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="cf437-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cf437-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5fe51-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5fe51-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="cf437-116">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cf437-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="5fe51-116">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5fe51-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cf437-117">참고 항목</span><span class="sxs-lookup"><span data-stu-id="cf437-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5fe51-117">참조</span><span class="sxs-lookup"><span data-stu-id="5fe51-117">See also</span></span>
 
-- [<span data-ttu-id="cf437-118">ICorProfilerInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="cf437-118">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="cf437-119">ICorProfilerInfo2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="cf437-119">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [<span data-ttu-id="5fe51-118">ICorProfilerInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="5fe51-118">ICorProfilerInfo Interface</span></span>](icorprofilerinfo-interface.md)
+- [<span data-ttu-id="5fe51-119">ICorProfilerInfo2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="5fe51-119">ICorProfilerInfo2 Interface</span></span>](icorprofilerinfo2-interface.md)

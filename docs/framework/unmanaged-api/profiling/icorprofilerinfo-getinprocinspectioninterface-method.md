@@ -15,39 +15,39 @@ helpviewer_keywords:
 ms.assetid: 22a92d1d-8849-4af6-8304-ecc53dd1d289
 topic_type:
 - apiref
-ms.openlocfilehash: d3fcd859fb11f6a0c660751f16fa175e19e9d03b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5c9258126c872bd501b4eebc4698b4dded402dfe
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439001"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76863363"
 ---
-# <a name="icorprofilerinfogetinprocinspectioninterface-method"></a><span data-ttu-id="8eedf-102">ICorProfilerInfo::GetInprocInspectionInterface 메서드</span><span class="sxs-lookup"><span data-stu-id="8eedf-102">ICorProfilerInfo::GetInprocInspectionInterface Method</span></span>
-<span data-ttu-id="8eedf-103">"ICorDebugProcess" 인터페이스에 대해 쿼리할 수 있는 개체를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="8eedf-103">Gets an object that can be queried for an "ICorDebugProcess" interface.</span></span> <span data-ttu-id="8eedf-104">이 메서드는 .NET Framework 버전 2.0에서 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8eedf-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  
+# <a name="icorprofilerinfogetinprocinspectioninterface-method"></a><span data-ttu-id="a51df-102">ICorProfilerInfo::GetInprocInspectionInterface 메서드</span><span class="sxs-lookup"><span data-stu-id="a51df-102">ICorProfilerInfo::GetInprocInspectionInterface Method</span></span>
+<span data-ttu-id="a51df-103">"ICorDebugProcess" 인터페이스에 대해 쿼리할 수 있는 개체를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="a51df-103">Gets an object that can be queried for an "ICorDebugProcess" interface.</span></span> <span data-ttu-id="a51df-104">이 메서드는 .NET Framework 버전 2.0에서 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="a51df-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8eedf-105">구문</span><span class="sxs-lookup"><span data-stu-id="8eedf-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a51df-105">구문</span><span class="sxs-lookup"><span data-stu-id="a51df-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetInprocInspectionInterface(  
     [out] IUnknown **ppicd);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8eedf-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="8eedf-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a51df-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="a51df-106">Parameters</span></span>  
  `ppicd`  
- <span data-ttu-id="8eedf-107">`ICorDebugProcess` 인터페이스에 대해 쿼리할 수 있는 [out](/cpp/atl/iunknown) 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="8eedf-107">[out](/cpp/atl/iunknown) object that can be queried for an `ICorDebugProcess` interface.</span></span>  
+ <span data-ttu-id="a51df-107">`ICorDebugProcess` 인터페이스에 대해 쿼리할 수 있는 [out](/cpp/atl/iunknown) 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="a51df-107">[out](/cpp/atl/iunknown) object that can be queried for an `ICorDebugProcess` interface.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="8eedf-108">주의</span><span class="sxs-lookup"><span data-stu-id="8eedf-108">Remarks</span></span>  
- <span data-ttu-id="8eedf-109">CLR (공용 언어 런타임) 디버깅 API는 .NET Framework 버전 1.0에서 제한 된 in-process 디버깅을 지원 했습니다.</span><span class="sxs-lookup"><span data-stu-id="8eedf-109">The common language runtime (CLR) debugging API supported limited in-process debugging in the .NET Framework version 1.0.</span></span> <span data-ttu-id="8eedf-110">In-process 디버깅은 디버깅 API의 검사 부분을 사용 하는 프로파일러를 사용 하도록 설정 했습니다.</span><span class="sxs-lookup"><span data-stu-id="8eedf-110">In-process debugging enabled a profiler to use the inspection portions of the debugging API.</span></span> <span data-ttu-id="8eedf-111">고객 피드백의 결과로, 버전 2.0의 .NET Framework에서 in-process 디버깅이 제거 되었고 프로 파일링 API를 사용 하 여 더 많은 기능 집합으로 대체 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="8eedf-111">As a result of customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a51df-108">주의</span><span class="sxs-lookup"><span data-stu-id="a51df-108">Remarks</span></span>  
+ <span data-ttu-id="a51df-109">CLR (공용 언어 런타임) 디버깅 API는 .NET Framework 버전 1.0에서 제한 된 in-process 디버깅을 지원 했습니다.</span><span class="sxs-lookup"><span data-stu-id="a51df-109">The common language runtime (CLR) debugging API supported limited in-process debugging in the .NET Framework version 1.0.</span></span> <span data-ttu-id="a51df-110">In-process 디버깅은 디버깅 API의 검사 부분을 사용 하는 프로파일러를 사용 하도록 설정 했습니다.</span><span class="sxs-lookup"><span data-stu-id="a51df-110">In-process debugging enabled a profiler to use the inspection portions of the debugging API.</span></span> <span data-ttu-id="a51df-111">고객 피드백의 결과로, 버전 2.0의 .NET Framework에서 in-process 디버깅이 제거 되었고 프로 파일링 API를 사용 하 여 더 많은 기능 집합으로 대체 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="a51df-111">As a result of customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8eedf-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="8eedf-112">Requirements</span></span>  
- <span data-ttu-id="8eedf-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="8eedf-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a51df-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="a51df-112">Requirements</span></span>  
+ <span data-ttu-id="a51df-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="a51df-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8eedf-114">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="8eedf-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="a51df-114">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a51df-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="8eedf-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8eedf-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a51df-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a51df-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8eedf-116">**.NET Framework 버전:** 1.0</span><span class="sxs-lookup"><span data-stu-id="8eedf-116">**.NET Framework Version:** 1.0</span></span>  
+ <span data-ttu-id="a51df-116">**.NET Framework 버전:** 1.0</span><span class="sxs-lookup"><span data-stu-id="a51df-116">**.NET Framework Version:** 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8eedf-117">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8eedf-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a51df-117">참조</span><span class="sxs-lookup"><span data-stu-id="a51df-117">See also</span></span>
 
-- [<span data-ttu-id="8eedf-118">ICorProfilerInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8eedf-118">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="a51df-118">ICorProfilerInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a51df-118">ICorProfilerInfo Interface</span></span>](icorprofilerinfo-interface.md)
