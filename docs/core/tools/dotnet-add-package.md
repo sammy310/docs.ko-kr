@@ -2,22 +2,22 @@
 title: dotnet add package 명령
 description: ‘dotnet add package’ 명령은 NuGet 패키지 참조를 프로젝트에 추가하는 편리한 옵션을 제공합니다.
 ms.date: 06/26/2019
-ms.openlocfilehash: 9445cf686ec1733f5a8b3403b7efea3a544fbc99
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 210dcf0efe06672264ebfa297589bdb387591a42
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117788"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733321"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
-**이 문서 적용 대상: ✓** .NET Core 1.x SDK 이상 버전
+**이 문서의 적용 대상:**  ✔️ .NET Core 1.x SDK 이상 버전
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>name
+## <a name="name"></a>이름
 
 `dotnet add package` - 패키지 참조를 프로젝트 파일에 추가합니다.
 
@@ -92,7 +92,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
   패키지의 버전입니다. [NuGet 패키지 버전 관리](https://docs.microsoft.com/nuget/reference/package-versioning)를 참조하세요.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 - `Newtonsoft.Json` NuGet 패키지를 프로젝트에 추가합니다.
 
@@ -112,7 +112,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
   dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json
   ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [NuGet에서 글로벌 패키지, 캐시 및 임시 폴더 관리](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)
 - [NuGet 패키지 버전 관리](https://docs.microsoft.com/nuget/reference/package-versioning)

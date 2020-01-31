@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 45a40d49cea2dd5f881fbd47cc2fb4bd96e8f9ff
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
-ms.translationtype: MT
+ms.openlocfilehash: 66a08cf60ae4ca9bb6e373d230d0819ee6f9b28c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70243978"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790004"
 ---
 # <a name="icorprofilerinfo8getdynamicfunctioninfo-method"></a>ICorProfilerInfo8:: GetDynamicFunctionInfo 메서드
 
@@ -34,30 +34,37 @@ HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
                                 [out] WCHAR                   wszName[]);
 ```
 
-#### <a name="parameters"></a>매개 변수
+## <a name="parameters"></a>매개 변수
 
-`functionId` \
-진행 정보를 검색할 함수의 ID입니다.
+- `functionId`
 
-`moduleId` \
-진행 함수의 부모 클래스가 정의 되어 있는 모듈에 대 한 포인터입니다.
+  \[] 정보를 검색할 함수의 ID입니다.
 
-`ppvSig` \
-제한이 함수의 시그니처에 대 한 포인터입니다.
+- `moduleId`
 
-`pbSig` \
-제한이 함수 시그니처의 바이트 수에 대 한 포인터입니다.
+  \[in] 함수의 부모 클래스가 정의 되어 있는 모듈에 대 한 포인터입니다.
 
-`cchName` \
-[in] `wszName` 배열의 최대 크기입니다.
+- `ppvSig`
 
-`pcchName` \
-제한이 `wszName` 배열에 있는 문자의 수입니다.
+  \[out] 함수에 대 한 시그니처에 대 한 포인터입니다.
 
-`wszName` \
-제한이 함수 이름이 있는 `WCHAR` 경우이 배열에 해당 하는 배열입니다.
+- `pbSig`
 
-## <a name="remarks"></a>설명
+  \[out] 함수 시그니처의 바이트 수에 대 한 포인터입니다.
+
+- `cchName`
+
+  \[in] `wszName` 배열의 최대 크기입니다.
+
+- `pcchName`
+
+  \[out] `wszName` 배열의 문자 수입니다.
+
+- `wszName`
+
+  \[out] 함수의 이름인 `WCHAR`의 배열입니다 (있는 경우).
+
+## <a name="remarks"></a>주의
 
 IL 스텁 또는 LCG와 같은 특정 메서드에는 [IMetaDataImport](../metadata/imetadataimport-interface.md) 및 [IMetaDataImport2](../metadata/imetadataimport2-interface.md) api를 사용 하 여 검색할 수 있는 연결 된 메타 데이터가 없습니다. 이러한 메서드는 프로파일러에서 명령 포인터를 통하거나 [ICorProfilerCallback8::D ynamicmethodjitcompilationstarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)를 수신 하 여 발견할 수 있습니다.
 
@@ -65,14 +72,14 @@ IL 스텁 또는 LCG와 같은 특정 메서드에는 [IMetaDataImport](../metad
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.
+**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.
 
 **헤더:** CorProf.idl, CorProf.h
 
-**라이브러리** CorGuids.lib
+**라이브러리:** CorGuids.lib
 
 **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo8 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo8-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4275af0c-b5a7-4e4c-97c9-7e41f36b2dd8
 topic_type:
 - apiref
-ms.openlocfilehash: fb8cfb2d1c5902ecd0d5858ef21ba48b65b12506
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 851a127c117b826c271dd021c41cfdb36045a1ff
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125326"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783751"
 ---
 # <a name="icordebugcontrollerterminate-method"></a>ICorDebugController::Terminate 메서드
 지정 된 종료 코드를 사용 하 여 프로세스를 종료 합니다.  
@@ -41,7 +41,7 @@ HRESULT Terminate (
  진행 종료 코드 인 숫자 값입니다. 유효한 숫자 값은 Winbase. h에 정의 되어 있습니다.  
   
 ## <a name="remarks"></a>주의  
- `Terminate`가 호출 될 때 프로세스가 중지 되는 경우 디버거는 ICorDebugManagedCallback::를 통해 종료에 대 한 확인을 받을 수 있도록 [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) 메서드를 사용 하 여 프로세스를 계속 진행 해야 합니다. [ ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) 또는 [ICorDebugManagedCallback:: exitprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md) 콜백입니다.  
+ `Terminate`가 호출 될 때 프로세스가 중지 되는 경우 디버거가 [ICorDebugManagedCallback:: ExitProcess](icordebugmanagedcallback-exitprocess-method.md) 또는 [ICorDebugManagedCallback:: exitprocess](icordebugmanagedcallback-exitappdomain-method.md) 콜백을 통해 종료 확인을 받도록 [ICorDebugController:: Continue](icordebugcontroller-continue-method.md) 메서드를 사용 하 여 프로세스를 계속 해야 합니다.  
   
 > [!NOTE]
 > 이 메서드는 응용 프로그램 도메인에서 구현 되지 않습니다. 즉, <xref:System.AppDomain> 수준에서 구현 되지 않습니다.  

@@ -1,20 +1,20 @@
 ---
-title: Windows Forms 컨트롤의 속성
+title: 컨트롤의 속성
 ms.date: 03/30/2017
 helpviewer_keywords:
 - custom controls [Windows Forms], properties overview (using code)
 - controls [Windows Forms], properties
 - properties [Windows Forms]
 ms.assetid: 2785279b-fb57-4937-8f6b-2050e475db6f
-ms.openlocfilehash: e531b80cffabb94d2589383936a425b740c9cc07
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82bfab15cef4946661a37d2d88fbe1b797f3d816
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012509"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741175"
 ---
 # <a name="properties-in-windows-forms-controls"></a>Windows Forms 컨트롤의 속성
-Windows Forms 컨트롤을 기본 클래스를 많은 속성 양식을 상속 <xref:System.Windows.Forms.Control?displayProperty=nameWithType>합니다. 와 같은 속성을 포함 <xref:System.Windows.Forms.Control.Font%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Bounds%2A>, <xref:System.Windows.Forms.Control.ClientRectangle%2A>를 <xref:System.Windows.Forms.Control.DisplayRectangle%2A>, <xref:System.Windows.Forms.Control.Enabled%2A>를 <xref:System.Windows.Forms.Control.Focused%2A>, <xref:System.Windows.Forms.Control.Height%2A>를 <xref:System.Windows.Forms.Control.Width%2A>, <xref:System.Windows.Forms.Control.Visible%2A>, <xref:System.Windows.Forms.Control.AutoSize%2A>를 등입니다. 상속 된 속성에 대 한 세부 정보를 참조 하세요. <xref:System.Windows.Forms.Control?displayProperty=nameWithType>합니다.  
+Windows Forms 컨트롤은 기본 클래스 <xref:System.Windows.Forms.Control?displayProperty=nameWithType>의 많은 속성을 상속 합니다. 여기에는 <xref:System.Windows.Forms.Control.Font%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Bounds%2A>, <xref:System.Windows.Forms.Control.ClientRectangle%2A>, <xref:System.Windows.Forms.Control.DisplayRectangle%2A>, <xref:System.Windows.Forms.Control.Enabled%2A>, <xref:System.Windows.Forms.Control.Focused%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, <xref:System.Windows.Forms.Control.Visible%2A>, <xref:System.Windows.Forms.Control.AutoSize%2A>등의 속성이 포함 됩니다. 상속 된 속성에 대 한 자세한 내용은 <xref:System.Windows.Forms.Control?displayProperty=nameWithType>를 참조 하세요.  
   
  컨트롤에서 상속된 속성을 재정의하고 새 속성을 정의할 수도 있습니다.  
   
@@ -39,12 +39,12 @@ Windows Forms 컨트롤을 기본 클래스를 많은 속성 양식을 상속 <x
  복합 컨트롤을 구현하기 위한 기본 클래스를 설명합니다.  
   
  <xref:System.ComponentModel.TypeConverterAttribute>  
- 지정 하는 특성에 설명 합니다 <xref:System.ComponentModel.TypeConverter> 사용자 지정 속성 형식에 대해 사용 하도록 합니다.  
+ 사용자 지정 속성 형식에 사용할 <xref:System.ComponentModel.TypeConverter>를 지정 하는 특성을 문서화 합니다.  
   
  <xref:System.ComponentModel.EditorAttribute>  
- 지정 하는 특성에 설명 합니다 <xref:System.Drawing.Design.UITypeEditor> 사용자 지정 속성에 대해 사용 하도록 합니다.  
+ 사용자 지정 속성에 사용할 <xref:System.Drawing.Design.UITypeEditor>를 지정 하는 특성을 문서화 합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
  [Windows Forms 컨트롤의 특성](attributes-in-windows-forms-controls.md)  
  사용자 지정 컨트롤 및 구성 요소의 속성이나 다른 멤버에 적용할 수 있는 특성을 설명합니다.  
   

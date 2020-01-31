@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e86fcc72-388d-4009-ab21-8f9c3323e9a3
 topic_type:
 - apiref
-ms.openlocfilehash: 86b2815c6f95c674c49bba7455e8497192bd8bac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 12d4e63480f03bfad613f30362ddaeaf12b57a88
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125148"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791043"
 ---
 # <a name="icordebugvariablehomegetargumentindex-method"></a>ICorDebugVariableHome:: GetArgumentIndex 메서드
 
@@ -46,7 +46,7 @@ HRESULT GetArgumentIndex(
 |값|설명|
 |-----------|-----------------|
 |`S_OK`|메서드 호출에서 유효한 인수 인덱스를 반환 했습니다.|
-|`E_FAIL`|현재 [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) 인스턴스는 지역 변수를 나타냅니다.|
+|`E_FAIL`|현재 [ICorDebugVariableHome](icordebugvariablehome-interface.md) 인스턴스는 지역 변수를 나타냅니다.|
 
 ## <a name="remarks"></a>주의
 
@@ -64,4 +64,4 @@ HRESULT GetArgumentIndex(
 
 ## <a name="see-also"></a>참조
 
-- [ICorDebugVariableHome 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+- [ICorDebugVariableHome 인터페이스](icordebugvariablehome-interface.md)

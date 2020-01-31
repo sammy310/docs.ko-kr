@@ -1,5 +1,5 @@
 ---
-title: WPF 보안 전략 - 플랫폼 보안
+title: 플랫폼 보안 전략
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: b2fd923de165c0926e6f812764c71127b7c27691
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 1ef705fcf046af1f4136ddcf1b29f417c0d72c83
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636239"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741860"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF 보안 전략 - 플랫폼 보안
 WPF (Windows Presentation Foundation)는 다양 한 보안 서비스를 제공 하지만 운영 체제, CLR 및 Internet Explorer를 포함 하는 기본 플랫폼의 보안 기능도 활용 합니다. 이러한 계층은 다음 그림과 같이 단일 실패 지점을 방지 하는 강력한 심층 방어 보안 모델을 WPF에 제공 하기 위해 결합 되었습니다.  

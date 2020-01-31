@@ -2,16 +2,16 @@
 title: dotnet-trace 도구 - .NET Core
 description: dotnet-trace 명령줄 도구를 설치하고 사용합니다.
 ms.date: 11/21/2019
-ms.openlocfilehash: 64c931db5a18659707e832aaca910cfbbd6823c0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b19b159636fbf57fa2d461b398fcf9234aab491c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714428"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737653"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-trace 성능 분석 유틸리티
 
-**이 문서의 적용 대상: ✓** .NET Core 3.0 SDK 이상 버전
+**이 문서의 적용 대상:**  ✔️ .NET Core 3.0 SDK 이상 버전
 
 ## <a name="install-dotnet-trace"></a>dotnet-trace 설치
 
@@ -38,7 +38,7 @@ dotnet-trace [-h, --help] [--version] <command>
 
 ## <a name="options"></a>옵션
 
-- **`--version`**  
+- **`--version`**
 
   dotnet-counters 유틸리티의 버전을 표시합니다.
 

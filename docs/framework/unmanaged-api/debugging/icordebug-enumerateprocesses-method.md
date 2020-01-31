@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ba25d166-1d28-4f1d-aca2-de298bbca669
 topic_type:
 - apiref
-ms.openlocfilehash: 09a8a2bb38378f5d4a32d7b00b68d02f1aa4c054
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c2a176764332eed6affda704c8bfaf546ef70880
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73110707"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788995"
 ---
 # <a name="icordebugenumerateprocesses-method"></a>ICorDebug::EnumerateProcesses 메서드
 디버깅 중인 프로세스에 대 한 열거자를 가져옵니다.  
@@ -48,4 +48,4 @@ HRESULT EnumerateProcesses (
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebug 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebug 인터페이스](icordebug-interface.md)

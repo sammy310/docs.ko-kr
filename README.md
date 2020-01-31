@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d384aa2daea17581402dc45dc3104a0d97f77f3a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: fe99a2ac81b54ae6aa3cb64af9b5995a548c0c2b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035444"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76727879"
 ---
 # <a name="net-docs"></a>.NET 문서
 
@@ -20,9 +20,7 @@ API 참조 리포지토리를 제외한 모든 리포지토리의 이슈 및 작
 
 기여하려면 [Projects for .NET Community Contributors](https://github.com/dotnet/docs/projects/35)를 참조하여 아이디어를 얻어보세요. [기여 가이드](CONTRIBUTING.md)에는 우리가 사용하는 프로시저에 대한 지침이 있습니다. 
 
-.NET Framework를 대상으로 하는 기존 코드를 [코드 갤러리](https://code.msdn.microsoft.com)에서, [샘플 리포지토리](https://github.com/dotnet/samples)에 저장되고 [샘플 브라우저](https://docs.microsoft.com/samples/browse)에서 다운로드할 수 있는 .NET Core 애플리케이션으로 마이그레이션하도록 지원하려면 [코드 갤러리 마이그레이션](https://github.com/dotnet/docs/projects/88) 프로젝트를 참조하세요. 
-
-[Xamarin](https://docs.microsoft.com/xamarin), [Mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) 및 [Unity](https://docs.unity3d.com/Manual/index.html)도 이 설명서를 사용할 것으로 예상됩니다.
+.NET Framework를 대상으로 하는 기존 코드를 [만료된 코드 갤러리](https://docs.microsoft.com/teamblog/msdn-code-gallery-retired) 사이트에서, [샘플 리포지토리](https://github.com/dotnet/samples)에 저장되고 [샘플 브라우저](https://docs.microsoft.com/samples/browse)에서 다운로드할 수 있는 .NET Core 애플리케이션으로 마이그레이션하도록 지원하려면 [코드 갤러리 마이그레이션](https://github.com/dotnet/docs/projects/88) 프로젝트를 참조하세요. 코드 갤러리 샘플이 [Microsoft Archive](https://github.com/microsoftarchive?q=msdn-code-gallery) 조직으로 이동되었습니다.
 
 이 프로젝트는 커뮤니티에서 예상되는 행동을 명확히 하기 위해 기여자 규약에서 정의된 행동 수칙을 채택했습니다.
 자세한 내용은 [.NET Foundation Code of Conduct](https://dotnetfoundation.org/code-of-conduct)를 참조하세요.

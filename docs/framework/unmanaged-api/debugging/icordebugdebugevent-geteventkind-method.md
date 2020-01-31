@@ -2,12 +2,12 @@
 title: ICorDebugDebugEvent::GetEventKind 메서드
 ms.date: 03/30/2017
 ms.assetid: c37aaceb-c948-46bd-a943-08be4cbb76f4
-ms.openlocfilehash: 92606d7bd0a277dd327ce4fd430ce963a260206d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0c67f8bdce49b4e9200b501aaf00ae293cced7d7
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136653"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783408"
 ---
 # <a name="icordebugdebugeventgeteventkind-method"></a>ICorDebugDebugEvent::GetEventKind 메서드
 이 `ICorDebugDebugEvent` 개체가 나타내는 이벤트의 종류를 나타냅니다.  
@@ -22,7 +22,7 @@ HRESULT GetEventKind(
   
 ## <a name="parameters"></a>매개 변수  
  pDebugEventKind  
- 이벤트 유형을 나타내는 [Cordebugdebugeventkind](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md) 열거형 멤버에 대 한 포인터입니다.  
+ 이벤트 유형을 나타내는 [Cordebugdebugeventkind](cordebugdebugeventkind-enumeration.md) 열거형 멤버에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>주의  
  `pDebugEventKind`의 값에 따라 `QueryInterface`를 호출하여 추가 데이터를 포함하는 보다 정확한 디버그 이벤트 인터페이스를 가져올 수 있습니다.  
@@ -41,5 +41,5 @@ HRESULT GetEventKind(
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugDebugEvent 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugDebugEvent 인터페이스](icordebugdebugevent-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

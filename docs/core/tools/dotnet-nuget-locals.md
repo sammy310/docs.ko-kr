@@ -3,22 +3,22 @@ title: dotnet nuget locals 명령
 description: dotnet nuget locals 명령은 http-request 캐시, 임시 캐시 또는 컴퓨터 전체의 글로벌 패키지 폴더와 같은 로컬 NuGet 리소스를 지우거나 목록에 포함합니다.
 author: karann-msft
 ms.date: 06/26/2019
-ms.openlocfilehash: cb5747636aa9d04f1ef6a6ff9309ba29c0630dd6
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: b57c127650555e412af08df6656fb62d75c8ed7c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74087399"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734085"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
-**이 항목 적용 대상: ✓** .NET Core 1.x SDK 이상 버전
+**이 문서의 적용 대상:**  ✔️ .NET Core 1.x SDK 이상 버전
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>name
+## <a name="name"></a>이름
 
 `dotnet nuget locals` - 로컬 NuGet 리소스를 지우거나 나열합니다.
 
@@ -62,7 +62,7 @@ dotnet nuget locals [-h|--help]
 
   목록 옵션은 지정된 캐시 형식의 위치를 표시하는 데 사용됩니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 * 모든 로컬 캐시 디렉터리(http-cache 디렉터리, 전역 패키지 캐시 디렉터리 및 임시 캐시 디렉터리)의 경로를 표시합니다.
 

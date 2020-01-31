@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa5ad3d7-e1bb-42af-99bc-471224e3bcaa
 topic_type:
 - apiref
-ms.openlocfilehash: 29bb84341c2cb4177c43f798d25a1a6d50099aa5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 53d8d219a13f2dade16a338efccf0837f8de0158
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122792"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784371"
 ---
 # <a name="icordebugbreakpoint-interface"></a>ICorDebugBreakpoint 인터페이스
 
@@ -29,8 +29,8 @@ ms.locfileid: "73122792"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[Activate 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-activate-method.md)|이 `ICorDebugBreakpoint`의 활성 상태를 설정 합니다.|  
-|[IsActive 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-isactive-method.md)|이 `ICorDebugBreakpoint` 활성화 되어 있는지 여부를 나타내는 값을 가져옵니다.|  
+|[Activate 메서드](icordebugbreakpoint-activate-method.md)|이 `ICorDebugBreakpoint`의 활성 상태를 설정 합니다.|  
+|[IsActive 메서드](icordebugbreakpoint-isactive-method.md)|이 `ICorDebugBreakpoint` 활성화 되어 있는지 여부를 나타내는 값을 가져옵니다.|  
   
 ## <a name="remarks"></a>주의  
  중단점은 조건식을 직접 지원 하지 않습니다. 이러한 기능이 필요한 경우 디버거는 `ICorDebugBreakpoint`위에서 해당 기능을 구현 해야 합니다.  
@@ -51,4 +51,4 @@ ms.locfileid: "73122792"
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

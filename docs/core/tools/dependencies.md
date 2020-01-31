@@ -2,12 +2,12 @@
 title: .NET Core 도구에서 종속성 관리
 description: .NET Core 도구로 종속성을 관리하는 방법을 설명합니다.
 ms.date: 03/06/2017
-ms.openlocfilehash: 9c088829ce3d5197198b7ff22a1331b8baba41d7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e14fa42534d807e2a0fcce1dabe747c18c5166b7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714204"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733383"
 ---
 # <a name="managing-dependencies-with-net-core-sdk-10"></a>.NET Core SDK 1.0으로 종속성 관리
 
@@ -33,7 +33,7 @@ MSBuild에 익숙한 경우 이미 존재하는 다른 참조 형식에 익숙�
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp2.1'" />
 ```
 
-위의 예는 지정된 대상에 대해 빌드가 발생한 경우에만 종속성이 유효하다는 것을 의미합니다. 조건에서 `$(TargetFramework)`는 프로젝트에 설정 되는 MSBuild 속성입니다. 가장 일반적인.NET Core 애플리케이션의 경우 이 작업을 수행하지 않아도 됩니다. 
+위의 예는 지정된 대상에 대해 빌드가 발생한 경우에만 종속성이 유효하다는 것을 의미합니다. 조건에서 `$(TargetFramework)`는 프로젝트에 설정되는 MSBuild 속성입니다. 가장 일반적인.NET Core 애플리케이션의 경우 이 작업을 수행하지 않아도 됩니다. 
 
 ## <a name="adding-a-dependency-to-your-project"></a>프로젝트에 종속성 추가
 프로젝트에 종속성을 추가하는 작업은 간단합니다. 다음은 Json.NET 버전 `9.0.1`을 프로젝트에 추가하는 방법을 보여 주는 예입니다. 물론, 다른 NuGet 종속성에 적용됩니다. 

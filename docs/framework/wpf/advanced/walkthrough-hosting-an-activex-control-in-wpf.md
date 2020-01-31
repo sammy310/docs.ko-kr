@@ -1,5 +1,6 @@
 ---
-title: '연습: WPF에서 ActiveX 컨트롤 호스팅'
+title: WPF에서 ActiveX 컨트롤 호스팅
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: 8679181d720d9550cf60034a7cf1809b79198e83
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
-ms.translationtype: MT
+ms.openlocfilehash: f2d9345eaaba7b85a217e6b230ae202f27ad3af8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197894"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742617"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>연습: WPF에서 ActiveX 컨트롤 호스팅
 브라우저와의 상호 작용을 개선 하기 위해 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]기반 응용 프로그램에서 Microsoft ActiveX 컨트롤을 사용할 수 있습니다. 이 연습에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 페이지의 컨트롤로 Microsoft Windows Media Player를 호스트 하는 방법을 보여 줍니다.
@@ -28,7 +29,7 @@ ms.locfileid: "73197894"
 
  이 연습을 완료 하면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]기반 응용 프로그램에서 Microsoft ActiveX 컨트롤을 사용 하는 방법을 이해 하 게 됩니다.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>전제 조건
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.
 
 - Visual Studio가 설치 된 컴퓨터에 Microsoft Windows Media Player 설치 되어 있습니다.
@@ -103,7 +104,7 @@ Visual Studio는 컨트롤이 디자인 화면에 추가 될 때 Microsoft Activ
      [!code-csharp[HostingAxInWpf#11](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingAxInWpf/CSharp/HostingAxInWpf/window1.xaml.cs#11)]
      [!code-vb[HostingAxInWpf#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HostingAxInWpf/VisualBasic/HostingAxInWpf/window1.xaml.vb#11)]  
   
-10. F5 키를 눌러 애플리케이션을 빌드하고 실행합니다.  
+10. F5 키를 눌러 응용 프로그램을 빌드하고 실행합니다.  
   
 ## <a name="see-also"></a>참조
 

@@ -4,12 +4,12 @@ description: Windows에서 .NET Core를 사용하여 .NET for Apache Spark 앱�
 ms.date: 11/04/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 934b91a258937a976804109c71df232b8ce6d6d7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 679ee7660e96504768a781e1e384acab80362736
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337595"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743207"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>자습서: .NET for Apache Spark 시작
 
@@ -94,7 +94,7 @@ setx SPARK_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
 
 ### <a name="5-install-net-for-apache-spark"></a>5. .NET for Apache Spark 설치
 
-.NET for Apache Spark GitHub에서 [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) 릴리스를 다운로드합니다. 예를 들어 Windows 머신에서 .NET Core를 사용하려는 경우 [Windows x64 netcoreapp2.1 릴리스를 다운로드](https://github.com/dotnet/spark/releases/download/v0.5.0/Microsoft.Spark.Worker.netcoreapp2.1.win-x64-0.6.0.zip)합니다.
+.NET for Apache Spark GitHub에서 [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) 릴리스를 다운로드합니다. 예를 들어 Windows 머신에서 .NET Core를 사용하려는 경우 [Windows x64 netcoreapp2.1 릴리스를 다운로드](https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.win-x64-0.6.0.zip)합니다.
 
 Microsoft.Spark.Worker 압축을 풀려면:
 

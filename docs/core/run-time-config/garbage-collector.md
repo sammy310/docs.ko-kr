@@ -3,12 +3,12 @@ title: 가비지 수집기 구성 설정
 description: 가비지 수집기가 .NET Core 앱의 메모리를 관리하는 방식을 구성하는 런타임 설정에 대해 알아봅니다.
 ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: 24e5c47de781e7eed5f76d2c551cac2dce1e8f05
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 044083d69601f5092724a46d358b2ee5673d428d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900105"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733524"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>가비지 수집을 위한 런타임 구성 옵션
 
@@ -38,10 +38,13 @@ ms.locfileid: "75900105"
 | | 설정 이름 | 값 | 도입된 버전 |
 | - | - | - | - |
 | **runtimeconfig.json** | `System.GC.Server` | `false` - 워크스테이션<br/>`true` - 서버 | .NET Core 1.0 |
+| **MSBuild 속성** | `ServerGarbageCollection` | `false` - 워크스테이션<br/>`true` - 서버 | .NET Core 1.0 |
 | **환경 변수** | `COMPlus_gcServer` | `0` - 워크스테이션<br/>`1` - 서버 | .NET Core 1.0 |
 | **.NET Framework의 app.config** | [GCServer](../../framework/configure-apps/file-schema/runtime/gcserver-element.md) | `false` - 워크스테이션<br/>`true` - 서버 |  |
 
-예:
+### <a name="examples"></a>예
+
+*runtimeconfig.json* 파일:
 
 ```json
 {
@@ -53,6 +56,18 @@ ms.locfileid: "75900105"
 }
 ```
 
+프로젝트 파일:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ServerGarbageCollection>true</ServerGarbageCollection>
+  </PropertyGroup>
+
+</Project>
+```
+
 ### <a name="systemgcconcurrentcomplus_gcconcurrent"></a>System.GC.Concurrent/COMPlus_gcConcurrent
 
 - 백그라운드(동시) 가비지 수집이 사용하도록 설정되었는지 여부를 구성합니다.
@@ -62,10 +77,13 @@ ms.locfileid: "75900105"
 | | 설정 이름 | 값 | 도입된 버전 |
 | - | - | - | - |
 | **runtimeconfig.json** | `System.GC.Concurrent` | `true` - 백그라운드 GC<br/>`false` - 비동시 GC | .NET Core 1.0 |
+| **MSBuild 속성** | `ConcurrentGarbageCollection` | `true` - 백그라운드 GC<br/>`false` - 비동시 GC | .NET Core 1.0 |
 | **환경 변수** | `COMPlus_gcConcurrent` | `true` - 백그라운드 GC<br/>`false` - 비동시 GC | .NET Core 1.0 |
 | **.NET Framework의 app.config** | [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) | `true` - 백그라운드 GC<br/>`false` - 비동시 GC |  |
 
-예:
+### <a name="examples"></a>예
+
+*runtimeconfig.json* 파일:
 
 ```json
 {
@@ -75,6 +93,18 @@ ms.locfileid: "75900105"
       }
    }
 }
+```
+
+프로젝트 파일:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+  </PropertyGroup>
+
+</Project>
 ```
 
 ## <a name="manage-resource-usage"></a>리소스 사용량 관리
@@ -261,10 +291,13 @@ ms.locfileid: "75900105"
 
 | | 설정 이름 | 값 | 도입된 버전 |
 | - | - | - | - |
-| **runtimeconfig.json** | `System.GC.RetainVM` | `false` - OS로 해제<br/>`true` - 대기 목록에 두기| .NET Core 1.0 |
+| **runtimeconfig.json** | `System.GC.RetainVM` | `false` - OS로 해제<br/>`true` - 대기 목록에 두기 | .NET Core 1.0 |
+| **MSBuild 속성** | `RetainVMGarbageCollection` | `false` - OS로 해제<br/>`true` - 대기 목록에 두기 | .NET Core 1.0 |
 | **환경 변수** | `COMPlus_GCRetainVM` | `0` - OS로 해제<br/>`1` - 대기 목록에 두기 | .NET Core 1.0 |
 
-예:
+### <a name="examples"></a>예
+
+*runtimeconfig.json* 파일:
 
 ```json
 {
@@ -274,6 +307,18 @@ ms.locfileid: "75900105"
       }
    }
 }
+```
+
+프로젝트 파일:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RetainVMGarbageCollection>true</RetainVMGarbageCollection>
+  </PropertyGroup>
+
+</Project>
 ```
 
 ## <a name="large-pages"></a>큰 페이지

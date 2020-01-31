@@ -2,12 +2,12 @@
 title: 서비스 엔드포인트 및 큐 주소 지정
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: 6bdd3b0966f85ff456e0e2ed0b6da773046201dc
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: ec932e83a2b37330f54be545a45358a5ab055423
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837989"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744623"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>서비스 엔드포인트 및 큐 주소 지정
 이 항목에서는 클라이언트가 큐에서 읽는 서비스에 주소를 지정하는 방법 및 서비스 엔드포인트가 큐에 매핑되는 방법을 설명합니다. 다음 그림에서는 미리 알림을 통해 기존 WCF (Windows Communication Foundation) 대기 중인 응용 프로그램 배포를 보여 줍니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "74837989"
   
  경로 이름은 라우팅 및 큐 관리자 전송 프로토콜을 포함 하 여 주소의 추가 측면을 결정 하기 위해 "FormatNames"에 매핑됩니다. 큐 관리자는 기본 MSMQ 프로토콜과 SRMP(SOAP Reliable Messaging Protocol)의 두 가지 전송 프로토콜을 지원합니다.  
   
- MSMQ 경로 및 형식 이름에 대 한 자세한 내용은 [메시지 큐 정보](https://go.microsoft.com/fwlink/?LinkId=94837)를 참조 하세요.  
+ MSMQ 경로 및 형식 이름에 대 한 자세한 내용은 [메시지 큐 정보](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms706032(v=vs.85))를 참조 하세요.  
   
 ## <a name="netmsmqbinding-and-service-addressing"></a>NetMsmqBinding 및 서비스 주소 지정  
  서비스로 메시지 주소를 지정할 때 URI의 체계는 통신에 사용되는 전송에 따라 선택됩니다. WCF의 각 전송에는 고유한 체계가 있습니다. 체계는 통신에 사용되는 전송의 특성을 반영해야 합니다. 예를 들어 net.tcp, net.pipe, HTTP 등입니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "74837989"
   
  net.msmq: // \<*host-name*> / [private/] \<*queue-name*>  
   
- 여기서  
+ 다음은 각 문자에 대한 설명입니다.  
   
 - \<*호스트 이름*>는 대상 큐를 호스팅하는 컴퓨터의 이름입니다.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "74837989"
   
  msmq.formatname:\<*MSMQ-format-name*>>  
   
- MSMQ 형식의 이름은 MSMQ에서 [메시지 큐에 대해](https://go.microsoft.com/fwlink/?LinkId=94837)지정 하는 형식입니다.  
+ MSMQ 형식의 이름은 MSMQ에서 [메시지 큐에 대해](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms706032(v=vs.85))지정 하는 형식입니다.  
   
  `MsmqIntegrationBinding`을 사용하여 큐에서 메시지를 받을 때 직접 형식 이름, 공개 및 개인 형식 이름만 사용할 수 있습니다(Active Directory 통합 필요). 그러나 직접 형식 이름을 사용하는 것이 좋습니다. 예를 들어 Windows Vista에서 다른 형식 이름을 사용 하면 시스템에서 직접 형식 이름 으로만 열 수 있는 하위 큐를 열려고 하기 때문에 오류가 발생 합니다.  
   

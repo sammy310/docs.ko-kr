@@ -1,19 +1,20 @@
 ---
-title: WPF 애플리케이션 배포(WPF)
+title: 앱 배포
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: d67919ba38c2e306672966ddc2f62140ef92b638
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 9d4b7dd0464960441410d8ff2a196f0912354e5f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636304"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741948"
 ---
-# <a name="deploying-a-wpf-application-wpf"></a>WPF 애플리케이션 배포(WPF)
-Windows Presentation Foundation (WPF) 응용 프로그램을 빌드한 후 배포 해야 합니다. Windows 및 .NET Framework에는 몇 가지 배포 기술이 포함 되어 있습니다. WPF 응용 프로그램을 배포 하는 데 사용 되는 배포 기술은 응용 프로그램 유형에 따라 달라 집니다. 이 항목에서는 각 배포 기술에 대 한 간략 한 개요와 각 WPF 응용 프로그램 유형의 배포 요구 사항과 함께 사용 되는 방법을 설명 합니다.  
+# <a name="deploy-a-wpf-application"></a>WPF 응용 프로그램 배포
+
+Windows Presentation Foundation (WPF) 응용 프로그램을 빌드한 후 배포 해야 합니다. Windows 및 .NET Framework에는 몇 가지 배포 기술이 포함 되어 있습니다. WPF 응용 프로그램을 배포 하는 데 사용 되는 배포 기술은 응용 프로그램 유형에 따라 달라 집니다. 이 항목에서는 각 배포 기술에 대 한 간략 한 개요와 각 WPF 응용 프로그램 유형의 배포 요구 사항과 함께 사용 되는 방법을 설명 합니다.
 
 <a name="Deployment_Technologies"></a>   
 ## <a name="deployment-technologies"></a>배포 기술  

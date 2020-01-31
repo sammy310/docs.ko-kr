@@ -6,12 +6,12 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-ms.openlocfilehash: e1194a8e340504ce02c0a5daec7074fc34d962f3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6751513b72f732bd7392de11a203467a9ead1bce
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951644"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743351"
 ---
 # <a name="wcf-security-terminology"></a>WCF 보안 용어
 보안을 설명할 때 사용되는 일부 용어는 생소할 수 있습니다. 이 항목에서는 일부 보안 용어에 대해 간략하게 설명하며, 모든 항목을 포괄적으로 설명하지는 않습니다.  
@@ -19,9 +19,9 @@ ms.locfileid: "69951644"
  WCF (Windows Communication Foundation) 설명서에 사용 되는 용어에 대 한 자세한 내용은 [기본 Windows Communication Foundation 개념](../../../../docs/framework/wcf/fundamental-concepts.md)을 참조 하세요.  
   
  ACL(액세스 제어 목록 - Access Control List)  
- 개체에 적용되는 보안 보호 목록입니다. 개체는 파일, 프로세스 또는 이벤트이거나 보안 설명자를 가진 모든 대상을 가리킵니다. ACL의 항목은 ACE(액세스 제어 항목)이며 임의 ACL과 시스템 ACL의 두 가지 종류가 있습니다.  
+ 개체에 적용되는 보안 보호 목록입니다. 개체는 파일, 프로세스, 이벤트 또는 보안 설명자가 있는 다른 모든 것이 될 수 있습니다. ACL의 항목은 ACE (액세스 제어 항목)입니다. 임의 ACL과 시스템 ACL의 두 가지 종류가 있습니다.  
   
- 인증  
+ 인증(authentication)  
  사용자, 컴퓨터, 서비스 또는 프로세스가 요청된 대상이 맞는지 확인하는 프로세스입니다.  
   
  권한 부여(authorization)  
@@ -33,7 +33,7 @@ ms.locfileid: "69951644"
  CA 계층 구조  
  CA 계층 구조에는 여러 CA가 포함되어 있습니다. 각 CA는 계층 구조의 맨 위에 ( *루트 인증 기관*이 라고도 함)에 도달할 때까지 상위 수준에 있는 다른 ca에 의해 인증 되도록 구성 됩니다.  
   
- 인증서(certificate)  
+ 인증서  
  엔터티 및 엔터티의 공개 키에 대한 정보를 포함하여 두 정보 부분을 함께 바인딩하는 디지털 서명된 문입니다. 인증서는 인증 기관이라는 신뢰할 수 있는 조직(또는 엔터티)에서 엔터티가 정확한지 확인한 이후에 발급됩니다.  
   
  인증서는 다양한 형식의 데이터를 포함할 수 있습니다. 예를 들어, X.509 인증서는 인증서 형식, 인증서 일련 번호, 인증서 서명에 사용된 알고리즘, 인증서를 발급한 CA 이름, 인증서를 요청하는 엔터티의 이름 및 공개 키, CA의 서명 등을 포함합니다.  
@@ -89,10 +89,10 @@ ms.locfileid: "69951644"
  PKCS #7  
  암호화 메시지 구문 표준입니다. 디지털 서명 및 암호화와 같은 암호화 기법을 적용할 수 있는 데이터에 대한 일반 구문입니다. 또한 인증서 또는 인증서 해지 목록과 기타 메시지 특성(예: 타임스탬프)을 메시지에 배포하는 구문을 제공합니다.  
   
- 일반 텍스트(plaintext)  
- 암호화되지 않은 메시지입니다. 일반 텍스트 메시지를 일반 텍스트 메시지 라고도 합니다.  
+ 일반 텍스트  
+ 암호화되지 않은 메시지입니다. 일반 텍스트 메시지 *를 일반 텍스트 메시지 라고도* 합니다.  
   
- 권한  
+ privilege  
  시스템 종료, 디바이스 드라이버 로드, 시스템 시간 변경 등과 같은 다양한 시스템 관련 작업을 수행할 수 있는 권한입니다. 사용자의 액세스 토큰에는 사용자 또는 사용자 그룹이 보유하는 권한 목록이 포함되어 있습니다.  
   
  프라이빗 키  
@@ -104,7 +104,7 @@ ms.locfileid: "69951644"
  퍼블릭/프라이빗 키 쌍  
  공개 키 암호화에 사용되는 암호화 키 세트입니다. CSP(암호화 서비스 공급자)는 일반적으로 사용자별로 두 퍼블릭/프라이빗 키 쌍(교환 키 쌍 및 디지털 서명 키 쌍)을 유지 관리합니다. 두 키 쌍은 모두 세션별로 유지 관리됩니다.  
   
- 공개 키(public key)  
+ 공개 키  
  암호화 키는 일반적으로 세션 키 또는 디지털 서명을 해독하는 데 사용됩니다. 퍼블릭 키를 사용하여 메시지를 암호화하여 해당 프라이빗 키를 가진 사용자만 메시지를 해독하도록 보장할 수 있습니다.  
   
  공개 키 암호화  
@@ -120,7 +120,7 @@ ms.locfileid: "69951644"
  CA 계층 구조의 맨 위에 있는 CA입니다. 루트 기관은 계층 구조의 다음 수준에 속하는 CA를 인증합니다.  
   
  SHA(Secure Hash Algorithm)  
- 메시지 다이제스트를 생성하는 해시 알고리즘입니다. SHA는 DSS(디지털 서명 표준) 등 여러 위치에서 DSA(디지털 서명 알고리즘)와 함께 사용됩니다. SHA에는 다음과 같은 네 가지 종류의 SHA가 있습니다. SHA-1, SHA-256, SHA-384 및 SHA-512입니다. SHA-1은 160비트 메시지 다이제스트를 생성합니다. SHA-256, SHA-384 및 SHA-512는 각각 256비트, 384비트 및 512비트 메시지 다이제스트를 생성합니다. SHA는 NIST(National Institute of Standards and Technology)와 NSA(National Security Agency)에 의해 개발되었습니다.  
+ 메시지 다이제스트를 생성하는 해시 알고리즘입니다. SHA는 DSS(디지털 서명 표준) 등 여러 위치에서 DSA(디지털 서명 알고리즘)와 함께 사용됩니다. SHA는 SHA-1, SHA-256, SHA-384, SHA-512의 네 가지가 있습니다. SHA-1은 160비트 메시지 다이제스트를 생성합니다. SHA-256, SHA-384 및 SHA-512는 각각 256비트, 384비트 및 512비트 메시지 다이제스트를 생성합니다. SHA는 NIST(National Institute of Standards and Technology)와 NSA(National Security Agency)에 의해 개발되었습니다.  
   
  SSL(Secure Sockets Layer)  
  공개 및 비밀 키 기술을 함께 사용하는 보안 네트워크 통신을 위한 프로토콜입니다.  
@@ -128,7 +128,7 @@ ms.locfileid: "69951644"
  보안 컨텍스트  
  현재 적용되는 보안 특성 또는 규칙입니다. 예를 들어, 컴퓨터에 로그온한 현재 사용자 또는 스마트 카드 사용자가 입력한 개인 식별 번호 등이 있습니다. SSPI의 경우 보안 컨텍스트는 세션 키, 세션 기간 표시 등과 같은 연결 관련 보안 데이터를 포함하는 불투명 데이터 구조입니다.  
   
- 보안 주체(security principal)  
+ 보안 주체  
  보안 시스템에서 인식되는 엔터티입니다. 주체는 사용자와 자치 프로세스를 포함할 수 있습니다.  
   
  SSP(보안 지원 공급자)  
@@ -143,7 +143,7 @@ ms.locfileid: "69951644"
  서버 인증서  
  서버 인증(예: 웹 브라우저에 웹 서버 인증)에 사용되는 인증서를 말합니다. 웹 브라우저 클라이언트가 보안된 웹 서버에 액세스하려고 하면 서버는 브라우저에서 서버의 ID를 확인할 수 있도록 브라우저에 인증서를 보냅니다.  
   
- 세션  
+ 연결  
  키 재료의 단일 부분을 보호하는 메시지 교환입니다. 예를 들어, SSL 세션에서는 단일 키를 사용하여 해당 키 하에서 여러 메시지를 앞뒤로 보냅니다.  
   
  세션 키  
@@ -157,7 +157,7 @@ ms.locfileid: "69951644"
   
  "공개 키 암호화"를 참조하십시오.  
   
- 대칭 키(symmetric key)  
+ 대칭 키  
  암호화와 해독 모두에 사용되는 단일 키입니다. 세션 키는 일반적으로 대칭 키입니다.  
   
  토큰(액세스 토큰)  
@@ -181,8 +181,8 @@ ms.locfileid: "69951644"
  X.509  
  필수 부분을 정의하는 인증서에 대한 국제 승인 표준입니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [기본적인 Windows Communication Foundation 개념](../../../../docs/framework/wcf/fundamental-concepts.md)
 - [보안 개념](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Windows Server Fabric 용 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server Fabric 용 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

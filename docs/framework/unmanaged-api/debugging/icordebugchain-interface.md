@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f671f519-1cb3-4ae5-b9f1-abc5e783459f
 topic_type:
 - apiref
-ms.openlocfilehash: 8baf3567e4ae188f88ad3a2df157cffab3f597ac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f4bacfe94178ea78b1c3afd15a2e100076c38a84
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125794"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777990"
 ---
 # <a name="icordebugchain-interface"></a>ICorDebugChain 인터페이스
 
@@ -29,18 +29,18 @@ ms.locfileid: "73125794"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[EnumerateFrames 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-enumerateframes-method.md)|최신 프레임에서 시작 하 여 체인의 모든 관리 되는 스택 프레임을 포함 하는 열거자를 가져옵니다.|  
-|[GetActiveFrame 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getactiveframe-method.md)|체인의 활성 (가장 최근) 프레임을 가져옵니다.|  
-|[GetCallee 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getcallee-method.md)|이 체인에 의해 호출 된 체인을 가져옵니다.|  
-|[GetCaller 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getcaller-method.md)|이 체인을 호출한 체인을 가져옵니다.|  
-|[GetContext 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getcontext-method.md)|구현되지 않았습니다.|  
-|[GetNext 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getnext-method.md)|스레드에 대 한 다음 프레임 체인을 가져옵니다.|  
-|[GetPrevious 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getprevious-method.md)|스레드에 대 한 이전 프레임 체인을 가져옵니다.|  
-|[GetReason 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getreason-method.md)|이 호출 체인의 genesis 이유를 가져옵니다.|  
-|[GetRegisterSet 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getregisterset-method.md)|이 체인의 활성 부분에 대 한 레지스터 집합을 가져옵니다.|  
-|[GetStackRange 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getstackrange-method.md)|이 체인의 스택 세그먼트에 대 한 주소 범위를 가져옵니다.|  
-|[GetThread 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getthread-method.md)|이 호출 체인이 속한 실제 스레드를 가져옵니다.|  
-|[IsManaged 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-ismanaged-method.md)|이 체인이 관리 코드를 실행 하 고 있는지 여부를 나타내는 값을 가져옵니다.|  
+|[EnumerateFrames 메서드](icordebugchain-enumerateframes-method.md)|최신 프레임에서 시작 하 여 체인의 모든 관리 되는 스택 프레임을 포함 하는 열거자를 가져옵니다.|  
+|[GetActiveFrame 메서드](icordebugchain-getactiveframe-method.md)|체인의 활성 (가장 최근) 프레임을 가져옵니다.|  
+|[GetCallee 메서드](icordebugchain-getcallee-method.md)|이 체인에 의해 호출 된 체인을 가져옵니다.|  
+|[GetCaller 메서드](icordebugchain-getcaller-method.md)|이 체인을 호출한 체인을 가져옵니다.|  
+|[GetContext 메서드](icordebugchain-getcontext-method.md)|구현되지 않았습니다.|  
+|[GetNext 메서드](icordebugchain-getnext-method.md)|스레드에 대 한 다음 프레임 체인을 가져옵니다.|  
+|[GetPrevious 메서드](icordebugchain-getprevious-method.md)|스레드에 대 한 이전 프레임 체인을 가져옵니다.|  
+|[GetReason 메서드](icordebugchain-getreason-method.md)|이 호출 체인의 genesis 이유를 가져옵니다.|  
+|[GetRegisterSet 메서드](icordebugchain-getregisterset-method.md)|이 체인의 활성 부분에 대 한 레지스터 집합을 가져옵니다.|  
+|[GetStackRange 메서드](icordebugchain-getstackrange-method.md)|이 체인의 스택 세그먼트에 대 한 주소 범위를 가져옵니다.|  
+|[GetThread 메서드](icordebugchain-getthread-method.md)|이 호출 체인이 속한 실제 스레드를 가져옵니다.|  
+|[IsManaged 메서드](icordebugchain-ismanaged-method.md)|이 체인이 관리 코드를 실행 하 고 있는지 여부를 나타내는 값을 가져옵니다.|  
   
 ## <a name="remarks"></a>주의  
  체인의 스택 프레임은 연속 된 스택 공간을 차지 하 고 동일한 스레드와 컨텍스트를 공유 합니다. 체인은 관리 코드 체인 또는 비관리 코드 체인을 나타낼 수 있습니다. 빈 `ICorDebugChain` 인스턴스는 관리 되지 않는 코드 체인을 나타냅니다.  
@@ -59,4 +59,4 @@ ms.locfileid: "73125794"
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

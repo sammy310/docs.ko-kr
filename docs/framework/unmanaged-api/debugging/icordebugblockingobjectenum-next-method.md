@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0121753f-ebea-48d0-aeb2-ed7fda76dc60
 topic_type:
 - apiref
-ms.openlocfilehash: 3a1c4a931a61186c4737aada47ceb861e7848e7b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c25f26bb0f1f34e3799bab4bec7e697d393cccb4
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122837"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784522"
 ---
 # <a name="icordebugblockingobjectenumnext-method"></a>ICorDebugBlockingObjectEnum::Next 메서드
-현재 위치에서 시작 하 여 열거형에서 지정 된 수의 [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) 개체를 가져옵니다.  
+현재 위치에서 시작 하 여 열거형에서 지정 된 수의 [CorDebugBlockingObject](cordebugblockingobject-structure.md) 개체를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,7 +39,7 @@ HRESULT Next([in] ULONG  celt,
  진행 검색할 개체의 수입니다.  
   
  `values`  
- 제한이 [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) 개체에 대 한 포인터의 배열입니다.  
+ 제한이 [CorDebugBlockingObject](cordebugblockingobject-structure.md) 개체에 대 한 포인터의 배열입니다.  
   
  `pceltFetched`  
  제한이 검색 된 개체의 수에 대 한 포인터입니다.  
@@ -49,7 +49,7 @@ HRESULT Next([in] ULONG  celt,
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|메서드가 완료되었습니다.|  
+|S_OK|메서드가 성공적으로 완료되었습니다.|  
 |S_FALSE|`pceltFetched`이 `celt`와 다른 경우|  
   
 ## <a name="remarks"></a>주의  
@@ -58,7 +58,7 @@ HRESULT Next([in] ULONG  celt,
  입력 배열 값의 크기는 `celt`이상 이어야 합니다. 배열은 열거형의 다음 `celt` 값으로 채워지거나 `celt` 보다 작은 경우에는 나머지 모든 값으로 채워집니다. 이 메서드가 반환 될 때 `pceltFetched`은 검색 된 값의 수로 채워집니다. `values`에 `celt`보다 작은 버퍼에 대 한 잘못 된 포인터나 점이 있거나 `pceltFetched` 잘못 된 포인터인 경우 결과가 정의 되지 않습니다.  
   
 > [!NOTE]
-> [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) 구조를 해제할 필요는 없지만 그 안에 있는 "ICorDebugValue" 인터페이스를 해제 해야 합니다.  
+> [CorDebugBlockingObject](cordebugblockingobject-structure.md) 구조를 해제할 필요는 없지만 그 안에 있는 "ICorDebugValue" 인터페이스를 해제 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
@@ -71,6 +71,6 @@ HRESULT Next([in] ULONG  celt,
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugDataTarget 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugDataTarget 인터페이스](icordebugdatatarget-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)
+- [디버깅](index.md)

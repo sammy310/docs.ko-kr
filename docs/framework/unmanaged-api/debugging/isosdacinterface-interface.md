@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: ccaf479fc4fb90007b4999e95ee03bdd0529321e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 94349a3f7b18c8ce29bb3a71cb9d10ee4eac8036
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922150"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790475"
 ---
 # <a name="isosdacinterface-interface"></a>ISOSDacInterface 인터페이스
 
-데이터에 액세스할 도우미 메서드를 제공 `SOS`합니다.
+`SOS`의 데이터에 액세스 하는 도우미 메서드를 제공 합니다.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -32,22 +32,22 @@ ms.locfileid: "61922150"
 
 | 메서드                                                                                                               | 설명                                                                                                                   |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| [GetMethodDescData](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-getmethoddescdata-method.md) | 지정된 된 MethodDesc 포인터에 대 한 데이터를 가져옵니다. |
-| [GetMethodDescPtrFromIP](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-getmethoddescptrfromip-method.md) | 특정된 네이티브 명령 주소를 포함 하는 메서드를 해당 MethodDesc의 포인터를 검색 합니다. |
-| [GetModuleData](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-getmoduledata-method.md)| 주어진된 주소에 로드 된 모듈에 해당 데이터를 인출 합니다. |
+| [GetMethodDescData](isosdacinterface-getmethoddescdata-method.md) | 지정 된 MethodDesc 포인터에 대 한 데이터를 가져옵니다. |
+| [GetMethodDescPtrFromIP](isosdacinterface-getmethoddescptrfromip-method.md) | 지정 된 기본 명령 주소를 포함 하는 메서드에 해당 하는 MethodDesc의 포인터를 검색 합니다. |
+| [GetModuleData](isosdacinterface-getmoduledata-method.md)| 지정 된 주소에서 로드 된 모듈에 해당 하는 데이터를 인출 합니다. |
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
-이 인터페이스는 런타임 내에서 있으며 모든 헤더 또는 라이브러리 파일을 통해 노출 되지 않습니다. 그러나 COM 인터페이스에서 파생 되는 것 `IUnknown` GUID를 사용 하 여 `436f00f2-b42a-4b9f-870c-e73db66ae930` 일반적인 COM 메커니즘을 통해 얻을 수 있습니다.
+이 인터페이스는 런타임 내부에 있고 헤더 또는 라이브러리 파일을 통해 노출 되지 않습니다. 그러나 일반적인 COM 메커니즘을 통해 가져올 수 있는 GUID `436f00f2-b42a-4b9f-870c-e73db66ae930`를 사용 하 여 `IUnknown`에서 파생 되는 COM 인터페이스입니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
-**헤더:** 없음  
-**라이브러리:** 없음  
+**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+**헤더:** 없음을  
+**라이브러리:** 없음을  
 **.NET Framework 버전:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅](index.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

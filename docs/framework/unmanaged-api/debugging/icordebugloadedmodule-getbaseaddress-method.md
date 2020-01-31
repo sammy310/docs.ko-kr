@@ -2,12 +2,12 @@
 title: ICorDebugLoadedModule::GetBaseAddress 메서드
 ms.date: 03/30/2017
 ms.assetid: 7c036772-d58a-47f1-a5fa-31779898ef0d
-ms.openlocfilehash: 8af814ff2eaaf3ae6dae9031c13bf37ea0c1236b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 190c9114cffa537ba162b19abdf30d5a6aee87f8
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122650"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788455"
 ---
 # <a name="icordebugloadedmodulegetbaseaddress-method"></a>ICorDebugLoadedModule::GetBaseAddress 메서드
 로드된 모듈의 기본 주소를 가져옵니다.  
@@ -40,5 +40,5 @@ HRESULT GetBaseAddress(
   
 ## <a name="see-also"></a>참조
 
-- [ICorDebugLoadedModule 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-interface.md)
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugLoadedModule 인터페이스](icordebugloadedmodule-interface.md)
+- [디버깅 인터페이스](debugging-interfaces.md)

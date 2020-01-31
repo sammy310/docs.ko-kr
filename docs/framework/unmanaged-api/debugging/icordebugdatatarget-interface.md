@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: df5f05be-bed7-4f3c-bc89-dbb435d79a0b
 topic_type:
 - apiref
-ms.openlocfilehash: f8b216d370f7278f6d2a4beed5bab88afa666200
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9029d53872108bc1953fd22c584b6e01a6f3c7ab
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122209"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788864"
 ---
 # <a name="icordebugdatatarget-interface"></a>ICorDebugDataTarget 인터페이스
 특정 대상 프로세스에 대한 액세스를 제공하는 콜백 인터페이스를 제공합니다.  
@@ -28,9 +28,9 @@ ms.locfileid: "73122209"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[GetPlatform 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)|대상 프로세스가 실행 되는 프로세서 아키텍처 및 운영 체제를 포함 하 여 플랫폼에 대 한 정보를 제공 합니다.|  
-|[ReadVirtual 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-readvirtual-method.md)|지정 된 주소에서 시작 하는 연속 메모리 블록을 가져와 제공 된 버퍼에 반환 합니다.|  
-|[GetThreadContext 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getthreadcontext-method.md)|지정 된 스레드에 대 한 현재 스레드 컨텍스트를 요청 합니다.|  
+|[GetPlatform 메서드](icordebugdatatarget-getplatform-method.md)|대상 프로세스가 실행 되는 프로세서 아키텍처 및 운영 체제를 포함 하 여 플랫폼에 대 한 정보를 제공 합니다.|  
+|[ReadVirtual 메서드](icordebugdatatarget-readvirtual-method.md)|지정 된 주소에서 시작 하는 연속 메모리 블록을 가져와 제공 된 버퍼에 반환 합니다.|  
+|[GetThreadContext 메서드](icordebugdatatarget-getthreadcontext-method.md)|지정 된 스레드에 대 한 현재 스레드 컨텍스트를 요청 합니다.|  
   
 ## <a name="remarks"></a>주의  
  `ICorDebugDataTarget`와 해당 메서드에는 다음과 같은 특징이 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "73122209"
   
 - `ICorDebugDataTarget` 구현은 항상 대상에 대 한 최신 정보를 반환 해야 합니다.  
   
- 대상 프로세스를 중지 하 고 변경 하지 않아야 합니다. `ICorDebug*` 인터페이스 (따라서 `ICorDebugDataTarget` 메서드)를 호출 하는 중입니다. 대상이 라이브 프로세스이 고 상태가 변경 되 면 [ICLRDebugging:: OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) 메서드를 다시 호출 하 여 대체 ICorDebugProcess 인스턴스를 제공 해야 합니다.  
+ 대상 프로세스를 중지 하 고 변경 하지 않아야 합니다. `ICorDebug*` 인터페이스 (따라서 `ICorDebugDataTarget` 메서드)를 호출 하는 중입니다. 대상이 라이브 프로세스이 고 상태가 변경 되 면 [ICLRDebugging:: OpenVirtualProcess](iclrdebugging-openvirtualprocess-method.md) 메서드를 다시 호출 하 여 대체 ICorDebugProcess 인스턴스를 제공 해야 합니다.  
   
 > [!NOTE]
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
@@ -59,5 +59,5 @@ ms.locfileid: "73122209"
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [디버깅 인터페이스](debugging-interfaces.md)
+- [디버깅](index.md)

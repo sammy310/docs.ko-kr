@@ -2,12 +2,12 @@
 title: WCF 웹 HTTP 프로그래밍 모델 개요
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: 4862ae0e5151177e74da0f94d06b5b39205ed4c0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 8a4b4ff6c0482ed8a09fe30b7d03afc1f84db581
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283301"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739910"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF 웹 HTTP 프로그래밍 모델 개요
 WCF (Windows Communication Foundation) 웹 HTTP 프로그래밍 모델은 WCF를 사용 하 여 웹 HTTP 서비스를 빌드하는 데 필요한 기본 요소를 제공 합니다. WCF 웹 HTTP 서비스는 웹 브라우저를 포함 하 여 가능한 광범위 한 클라이언트에서 액세스할 수 있도록 설계 되었으며 다음과 같은 고유한 요구 사항이 있습니다.  
@@ -43,15 +43,15 @@ WCF (Windows Communication Foundation) 웹 HTTP 프로그래밍 모델은 WCF를
   
  이 템플릿에서 중괄호 표기법("{segment}")은 리터럴 값 대신 변수 세그먼트를 나타냅니다.  
   
- .NET Framework는 <xref:System.UriTemplate>이라는 URI 템플릿으로 작업하기 위한 API를 제공합니다. `UriTemplates`를 사용 하 여 다음을 수행할 수 있습니다.  
+ .NET Framework는 <xref:System.UriTemplate>이라는 URI 템플릿으로 작업하기 위한 API를 제공합니다. `UriTemplates`을 사용하여 다음 작업을 수행할 수 있습니다.  
   
 - 매개 변수 집합을 사용 하 여 `Bind` 메서드 중 하나를 호출 하 여 템플릿과 일치 하는 *완전히 폐쇄형 URI* 를 생성할 수 있습니다. 즉, URI 템플릿 내에 있는 변수는 모두 실제 값으로 바뀝니다.  
   
 - 후보 URI로 `Match`()를 호출할 수 있으며, 후보 URI는 템플릿을 사용하여 후보 URI를 구성 부분으로 나누고 템플릿의 변수에 따라 레이블이 지정된 URI의 다른 부분이 포함된 사전을 반환합니다.  
   
-- `Bind`() 및 `Match`()은 (는) `Match``Bind`(x)을 (를) 호출 하 고 시작 하는 것과 동일한 환경으로 돌아올 수 있도록 반대 됩니다.  
+- `Bind`() 및 `Match`()는 서로가 반대이므로, 사용자는 `Match`(`Bind`( x ))를 호출하고 시작한 환경으로 돌아갈 수 있습니다.  
   
- 대부분의 경우, 특히 URI를 기반으로 서비스 작업에 대한 요청을 디스패치해야 하는 서버에서는 포함된 각 템플릿을 독립적으로 처리할 수 있는 데이터 구조의 <xref:System.UriTemplate> 개체 집합을 추적할 수 있습니다. <xref:System.UriTemplateTable>는 URI 템플릿 집합을 나타내며 템플릿 집합 및 후보 URI에서 가장 일치 하는 항목을 선택 합니다. 이는 특정 네트워킹 스택 (WCF 포함)과 관련이 없으므로 필요할 때마다 사용할 수 있습니다.  
+ 대부분의 경우, 특히 URI를 기반으로 서비스 작업에 대한 요청을 디스패치해야 하는 서버에서는 포함된 각 템플릿을 독립적으로 처리할 수 있는 데이터 구조의 <xref:System.UriTemplate> 개체 집합을 추적할 수 있습니다. <xref:System.UriTemplateTable>은 URI 템플릿 집합을 나타내며 템플릿 집합과 후보 URI가 지정된 경우 가장 일치하는 항목을 선택합니다. 이는 특정 네트워킹 스택 (WCF 포함)과 관련이 없으므로 필요할 때마다 사용할 수 있습니다.  
   
  WCF 서비스 모델은 <xref:System.UriTemplate> 및 <xref:System.UriTemplateTable>을 사용하여, <xref:System.UriTemplate>에서 설명한 URI 집합과 서비스 작업을 연결합니다. 서비스 작업은 <xref:System.UriTemplate> 또는 <xref:System.ServiceModel.Web.WebGetAttribute>를 사용하여 <xref:System.ServiceModel.Web.WebInvokeAttribute>과 연결됩니다. <xref:System.UriTemplate> 및 <xref:System.UriTemplateTable>에 대 한 자세한 내용은 [UriTemplate 및 UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md) 를 참조 하세요.  
   
@@ -80,7 +80,7 @@ interface ICustomer
   
  `POST /UpdateCustomerName`  
   
- <xref:System.ServiceModel.Web.WebInvokeAttribute> 기본값은 POST 이지만 다른 동사에도 사용할 수 있습니다.  
+ <xref:System.ServiceModel.Web.WebInvokeAttribute>는 기본적으로 POST로 설정되지만 다른 동사에도 사용할 수 있습니다.  
   
 ```csharp
 [ServiceContract]  
@@ -101,7 +101,7 @@ interface ICustomer
 ## <a name="uritemplate-query-string-parameters-and-urls"></a>UriTemplate 쿼리 문자열 매개 변수 및 URL  
  웹 스타일 서비스는 서비스 작업과 관련된 URL을 입력하여 웹 브라우저에서 호출할 수 있습니다. 이러한 서비스 작업은 URL 내의 문자열 형식에 지정해야 하는 쿼리 문자열 매개 변수를 가져올 수 있습니다. 다음 표에서는 URL 내에서 전달할 수 있는 형식과 사용된 형식을 보여 줍니다.  
   
-|형식|형식|  
+|형식|서식|  
 |----------|------------|  
 |<xref:System.Byte>|0 - 255|  
 |<xref:System.SByte>|-128 - 127|  
@@ -122,7 +122,7 @@ interface ICustomer
 |<xref:System.Guid>|GUID, 예:<br /><br /> 936DA01F-9ABD-4d9d-80C7-02AF85C822A8|  
 |<xref:System.DateTimeOffset>|MM/DD/YYYY HH:MM:SS MM:SS<br /><br /> 여기서 DD = 일, HH = 시간, MM = 분, SS = 초입니다.|  
 |열거형|다음 코드에서처럼 열거형을 정의하는 예제의 열거형 값입니다.<br /><br /> `public enum Days{ Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday };`<br /><br /> 개별 열거형 값 또는 해당 정수 값은 쿼리 문자열에 지정할 수 있습니다.|  
-|형식을 문자열 표현으로 변환할 수 있는 `TypeConverterAttribute` 있는 형식입니다.|형식 변환기에 따라 다릅니다.|  
+|문자열 표현과 형식을 서로 변환할 수 있는 `TypeConverterAttribute`가 있는 형식입니다.|형식 변환기에 따라 다릅니다.|  
   
 ## <a name="formats-and-the-wcf-web-http-programming-model"></a>형식 및 WCF WEB HTTP 프로그래밍 모델  
  WCF WEB HTTP 프로그래밍 모델에는 다양 한 데이터 형식으로 작업할 수 있는 새로운 기능이 있습니다. <xref:System.ServiceModel.WebHttpBinding>은 바인딩 계층에서 다음과 같은 여러 종류의 데이터를 읽고 쓸 수 있습니다.  
@@ -138,12 +138,13 @@ interface ICustomer
  .NET Framework 3.5는 JSON 데이터 (AJAX) 뿐만 아니라 배포 피드 (ATOM 및 RSS 포함)를 지원 합니다. 이러한 기능에 대 한 자세한 내용은 [Wcf 웹 HTTP 형식 지정](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[wcf 배포 개요](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md) 및 [AJAX 통합 및 JSON 지원](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)을 참조 하세요.  
   
 ## <a name="wcf-web-http-programming-model-and-security"></a>WCF WEB HTTP 프로그래밍 모델 및 보안  
- WCF 웹 HTTP 프로그래밍 모델은 WS-* 프로토콜을 지원 하지 않으므로 WCF 웹 HTTP 서비스를 보호 하는 유일한 방법은 SSL을 사용 하 여 HTTPS를 통해 서비스를 노출 하는 것입니다. IIS 7.0에서 SSL을 설정 하는 방법에 대 한 자세한 내용은 [iis에서 ssl을 구현 하는 방법](https://go.microsoft.com/fwlink/?LinkId=131613) 을 참조 하십시오.  
+
+WCF 웹 HTTP 프로그래밍 모델은 WS-* 프로토콜을 지원 하지 않으므로 WCF 웹 HTTP 서비스를 보호 하는 유일한 방법은 SSL을 사용 하 여 HTTPS를 통해 서비스를 노출 하는 것입니다. IIS 7.0를 사용 하 여 SSL을 설정 하는 방법에 대 한 자세한 내용은 [iis에서 ssl을 구현 하는 방법](https://support.microsoft.com/help/299875/how-to-implement-ssl-in-iis)을 참조 하십시오.
   
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>WCF WEB HTTP 프로그래밍 모델 문제 해결  
  <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>을 사용하는 WCF WEB HTTP 서비스를 호출해 채널을 만들 때 <xref:System.ServiceModel.Description.WebHttpBehavior>는 다른 <xref:System.ServiceModel.EndpointAddress>가 <xref:System.ServiceModel.EndpointAddress>로 전달되어도 구성 파일에 설정된 <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>를 사용합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [WCF 배포](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
 - [WCF 웹 HTTP 프로그래밍 개체 모델](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

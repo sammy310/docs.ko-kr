@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ee1f6e6-1bd7-4ebb-83b8-ff9a08ca03de
 topic_type:
 - apiref
-ms.openlocfilehash: 57a82e4ec106fead105cc7f200e7e56026004328
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b2c381d093069f5ee86be1b19d75f5c2d69ad9fa
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122376"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791308"
 ---
 # <a name="icordebugtypeenumeratetypeparameters-method"></a>ICorDebugType::EnumerateTypeParameters 메서드
 이 ICorDebugType에서 참조 하는 클래스의 <xref:System.Type> 매개 변수를 포함 하는 ICorDebugTypeEnum에 대 한 인터페이스 포인터를 가져옵니다.  
@@ -38,11 +38,11 @@ HRESULT EnumerateTypeParameters (
  제한이 형식의 매개 변수를 포함 하는 `ICorDebugTypeEnum`의 주소에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>주의  
- [ICorDebugType:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) 에서 반환 된 corelementtype 값이 ELEMENT_TYPE_CLASS, ELEMENT_TYPE_VALUETYPE, ELEMENT_TYPE_ARRAY, ELEMENT_TYPE_SZARRAY, ELEMENT_TYPE_BYREF, ELEMENT_TYPE_PTR 또는 ELEMENT_TYPE_FNPTR 인 경우 `EnumerateTypeParameters`를 사용할 수 있습니다. 매개 변수 수와 해당 순서는 다음 유형에 따라 달라 집니다.  
+ [ICorDebugType:: GetType](icordebugtype-gettype-method.md) 에서 반환 된 corelementtype 값이 ELEMENT_TYPE_CLASS, ELEMENT_TYPE_VALUETYPE, ELEMENT_TYPE_ARRAY, ELEMENT_TYPE_SZARRAY, ELEMENT_TYPE_BYREF, ELEMENT_TYPE_PTR 또는 ELEMENT_TYPE_FNPTR 인 경우 `EnumerateTypeParameters`를 사용할 수 있습니다. 매개 변수 수와 해당 순서는 다음 유형에 따라 달라 집니다.  
   
-- ELEMENT_TYPE_CLASS 또는 ELEMENT_TYPE_VALUETYPE:이 메서드가 반환 하는 `ICorDebugTypeEnum`에 포함 된 형식 매개 변수의 수는 해당 클래스에 대 한 정식 형식 매개 변수의 수에 따라 달라 집니다. 예를 들어 형식이 `class Dict<String,int32>`이면 `EnumerateTypeParameters`는 `String`를 나타내는 개체와 순서 대로 `int32`를 포함 하는 `ICorDebugTypeEnum` 반환 합니다.  
+- ELEMENT_TYPE_CLASS 또는 ELEMENT_TYPE_VALUETYPE:이 메서드가 반환 하는 `ICorDebugTypeEnum`에 포함 된 형식 매개 변수의 수는 해당 클래스에 대 한 형식 매개 변수의 수에 따라 달라 집니다. 예를 들어 형식이 `class Dict<String,int32>`이면 `EnumerateTypeParameters`는 `String`를 나타내는 개체와 순서 대로 `int32`를 포함 하는 `ICorDebugTypeEnum` 반환 합니다.  
   
-- ELEMENT_TYPE_FNPTR: `ICorDebugTypeEnum`에 포함 된 형식 매개 변수의 수는 함수에서 허용 하는 인수 개수 보다 1 더 큽니다. `ICorDebugTypeEnum`에 포함 된 첫 번째 형식 매개 변수는 함수의 반환 형식이 고 후속 형식 매개 변수는 함수의 매개 변수입니다.  
+- ELEMENT_TYPE_FNPTR: `ICorDebugTypeEnum`에 포함 된 형식 매개 변수의 수는 함수에서 허용 하는 인수 수보다 하나 큽니다. `ICorDebugTypeEnum`에 포함 된 첫 번째 형식 매개 변수는 함수의 반환 형식이 고 후속 형식 매개 변수는 함수의 매개 변수입니다.  
   
 - ELEMENT_TYPE_ARRAY, ELEMENT_TYPE_SZARRAY, ELEMENT_TYPE_BYREF 또는 ELEMENT_TYPE_PTR: 하나의 형식 매개 변수가 반환 됩니다. 예를 들어 형식이 `int32[]`와 같은 배열 형식인 경우`EnumerateTypeParameters`는 `int32`를 나타내는 개체를 포함 하는 `ICorDebugTypeEnum` 반환 합니다.  
   

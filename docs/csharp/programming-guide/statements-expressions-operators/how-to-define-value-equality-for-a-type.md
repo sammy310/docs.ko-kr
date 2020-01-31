@@ -8,16 +8,18 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 5eb1aaf96097d2c00cb04e24e65e01464f5f00c6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8c911dc1d0aa36ab8e57fb8a77a52d9cec20743c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711976"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745386"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>형식에 대한 값 같음을 정의하는 방법(C# 프로그래밍 가이드)
 
-클래스 또는 구조체를 정의할 때 형식에 대한 값 같음(또는 동등)의 사용자 지정 정의를 만드는 것이 적합한지 결정합니다. 일반적으로 형식의 개체를 일종의 컬렉션에 추가해야 하는 경우 또는 주요 용도가 필드 또는 속성 집합 저장인 경우 값 같음을 구현합니다. 형식의 모든 필드 및 속성 비교를 기준으로 값 같음의 정의를 만들거나, 하위 집합을 기준으로 정의를 만들 수 있습니다. 그러나 두 경우 모두, 클래스와 구조체 둘 다에서 구현이 동등의 5가지 사항을 따라야 합니다.  
+클래스 또는 구조체를 정의할 때 형식에 대한 값 같음(또는 동등)의 사용자 지정 정의를 만드는 것이 적합한지 결정합니다. 일반적으로 형식의 개체를 일종의 컬렉션에 추가해야 하는 경우 또는 주요 용도가 필드 또는 속성 집합 저장인 경우 값 같음을 구현합니다. 형식의 모든 필드 및 속성 비교를 기준으로 값 같음의 정의를 만들거나, 하위 집합을 기준으로 정의를 만들 수 있습니다. 
+
+두 경우 모두 및 클래스와 구조체 둘 다에서 구현은 다음과 같은 동등의 5가지 사항을 따라야 합니다(다음 규칙의 경우 `x`, `y` 및 `z`가 Null이 아닌 것으로 가정).  
   
 1. `x.Equals(x)`가 `true`를 반환하는 경우 이를 반사 속성이라고 합니다.  
   
@@ -27,8 +29,8 @@ ms.locfileid: "75711976"
   
 4. `x.Equals(y)`의 연속 호출은 x 및 y에서 참조하는 개체가 수정되지 않는 한 동일한 값이 반환됩니다.  
   
-5. `x.Equals(null)`가 `false`를 반환하는 경우 그러나 `null.Equals(null)`는 예외를 throw하고 위의 규칙 번호 2를 따르지 않습니다.  
-  
+5. Null이 아닌 값은 Null과 같지 않습니다. 그러나 CLR은 모든 메서드 호출에서 Null을 확인하고 `this` 참조가 Null인 경우 `NullReferenceException`을 throw합니다. 따라서 `x` Null인 경우 `x.Equals(y)`는 예외를 throw합니다. `Equals`에 대한 인수에 따라 규칙 1 또는 2가 위반됩니다.
+ 
  정의하는 모든 구조체에는 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 메서드의 <xref:System.ValueType?displayProperty=nameWithType> 재정의에서 상속하는 값 같음의 기본 구현이 이미 있습니다. 이 구현은 리플렉션을 사용하여 형식의 모든 필드와 속성을 검사합니다. 이 구현은 올바른 결과를 생성하지만 해당 형식에 맞게 작성한 사용자 지정 구현에 비해 비교적 속도가 느립니다.  
   
  값 같음에 대한 구현 세부 정보는 클래스 및 구조체에서 서로 다릅니다. 그러나 클래스와 구조체는 둘 다 같음 구현을 위해 동일한 기본 단계가 필요합니다.  

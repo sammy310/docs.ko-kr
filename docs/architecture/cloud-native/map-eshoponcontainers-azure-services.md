@@ -2,12 +2,12 @@
 title: Azure 서비스에 eShopOnContainers 매핑
 description: EShopOnContainers를 azure Kubernetes Service, API 게이트웨이 및 Azure Service Bus와 같은 Azure 서비스에 매핑합니다.
 ms.date: 06/30/2019
-ms.openlocfilehash: 67430da18c0a12c694426214de33e85c2113e454
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: eb37be94461a5373afe328572a94892dec50432d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "73841194"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781210"
 ---
 # <a name="mapping-eshoponcontainers-to-azure-services"></a>Azure 서비스에 eShopOnContainers 매핑
 
@@ -44,7 +44,7 @@ APIM을 사용 하 여 응용 프로그램은 각각 특정 프런트 엔드 클
 
 응용 프로그램이 AKS를 사용 하는 경우 또 다른 옵션은 AKS 클러스터 내에서 pod로 Azure 게이트웨이 수신 컨트롤러를 배포 하는 것입니다. 이렇게 하면 클러스터가 Azure 애플리케이션 게이트웨이와 통합 되어 게이트웨이가 AKS pod에 대 한 트래픽 부하를 분산할 수 있습니다. [AKS에 대 한 Azure 게이트웨이 수신 컨트롤러에 대해 자세히 알아보세요](https://github.com/Azure/application-gateway-kubernetes-ingress).
 
-## <a name="data"></a>data
+## <a name="data"></a>데이터
 
 EShopOnContainers에서 사용 하는 다양 한 백 엔드 서비스에는 저장소 요구 사항이 다릅니다. 여러 마이크로 서비스는 SQL Server 데이터베이스를 사용 합니다. 바구니 마이크로 서비스는 지 속성에 대 한 Redis 캐시를 활용 합니다. 마이크로 서비스 위치에는 해당 데이터에 대 한 MongoDB API가 필요 합니다. Azure는 이러한 각 데이터 형식을 지원 합니다.
 
@@ -54,7 +54,7 @@ EShopOnContainers 응용 프로그램은 요청 사이에 사용자의 현재 �
 
 위치 마이크로 서비스는 지 속성에 MongoDB NoSQL 데이터베이스를 사용 합니다. 개발 중에는 데이터베이스를 자체 컨테이너에 배포할 수 있지만 프로덕션 환경에서는 서비스에서 [MongoDB에 대 한 Azure Cosmos DB의 API](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)를 활용할 수 있습니다. Azure Cosmos DB의 이점 중 하나는 MongoDB, Cassandra, Gremlin 및 Azure Table Storage를 포함 하 여 SQL API 및 일반적인 NoSQL Api를 비롯 한 여러 통신 프로토콜을 활용 하는 기능입니다. Azure Cosmos DB는이를 사용 하는 서비스의 요구를 충족 하도록 확장할 수 있는 완전히 관리 되 고 전 세계적으로 분산 된 Database as a Service를 제공 합니다.
 
-클라우드 네이티브 응용 프로그램의 분산 데이터에 대해서는 [5 장에서](distributed-data.md)자세히 설명 합니다.
+클라우드 네이티브 응용 프로그램의 분산 데이터에 대해서는 [5 장에서](database-per-microservice.md)자세히 설명 합니다.
 
 ## <a name="event-bus"></a>이벤트 버스
 

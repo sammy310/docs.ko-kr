@@ -2,12 +2,12 @@
 title: NuGet 및 .NET 라이브러리
 description: .NET 라이브러리용 NuGet을 사용하여 패키지하는 모범 사례 권장 사항입니다.
 ms.date: 01/15/2019
-ms.openlocfilehash: 71c380f6062c09a8951769009b29b567fddfddfc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f1e8d39fe2988f11ce7fd351a4d6bee6d322f2b5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706480"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731378"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -34,7 +34,7 @@ NuGet 패키지를 만드는 방법에는 크게 두 가지가 있습니다. 최
 
 NuGet 패키지를 만드는 이전 방법은 `*.nuspec` 파일 및 `nuget.exe` 명령줄 도구를 사용하는 것입니다. nuspec 파일을 사용하면 제어 기능이 향상되지만 최종 NuGet 패키지에 포함할 어셈블리 및 대상을 신중하게 지정해야 합니다. 실수하거나, 다른 사람이 변경할 때 nuspec 업데이트를 잊어버리기 쉽습니다. nuspec의 장점은 아직 SDK 스타일 프로젝트 파일을 지원하지 않는 프레임워크에 대한 NuGet 패키지를 만드는 데 사용할 수 있다는 것입니다.
 
-**✔** SDK 스타일 프로젝트 파일을 사용하여 NuGet 패키지를 만드세요.
+✔ NuGet 패키지를 만드는 데 SDK 스타일 프로젝트 파일을 사용하는 것을 고려하세요.
 
 ## <a name="package-dependencies"></a>패키지 종속성
 
@@ -59,15 +59,15 @@ NuGet 패키지는 많은 [메타데이터 속성](/nuget/reference/nuspec)을 �
 > [!IMPORTANT]
 > 라이선스가 없는 프로젝트의 기본값은 [배타적 저작권](https://choosealicense.com/no-permission/)으로 설정되므로 다른 사용자는 합법적으로 사용할 수 없습니다.
 
-**✔️** NuGet의 접두사 예약 [조건](/nuget/reference/id-prefix-reservation)을 충족하는 접두사를 가진 NuGet 패키지 이름을 선택합니다.
+✔️ NuGet의 접두사 예약 [조건](/nuget/reference/id-prefix-reservation)을 충족하는 접두사를 가진 NuGet 패키지 이름을 선택합니다.
 
-**✔️** 패키지 아이콘에 대한 HTTPS href를 사용합니다.
+✔️ 패키지 아이콘에 대한 HTTPS href를 사용합니다.
 
 > HTTPS를 사용하여 실행되고 HTTPS가 아닌 이미지를 표시하는 NuGet.org 등의 사이트는 혼합 콘텐츠 경고를 만듭니다.
 
-**✔️** 보기 결과를 최적화하기 위해 64x64이고 투명한 배경을 가진 패키지 아이콘 이미지를 사용합니다.
+✔️ 보기 결과를 최적화하기 위해 64x64이고 투명한 배경을 가진 패키지 아이콘 이미지를 사용합니다.
 
-**✔️**[소스 링크](./sourcelink.md)를 설정하여 어셈블리 및 NuGet 패키지에 소스 제어 메타데이터를 추가하세요.
+✔️ [소스 링크](./sourcelink.md)를 설정하여 어셈블리 및 NuGet 패키지에 소스 제어 메타데이터를 추가하세요.
 
 > 소스 링크는 `RepositoryUrl` 및 `RepositoryType` 메타데이터를 NuGet 패키지에 자동으로 추가합니다. 소스 링크는 패키지가 빌드된 정확한 소스 코드에 대한 정보도 추가합니다. 예를 들어 Git 리포지토리에서 만든 패키지에는 메타데이터로 추가된 커밋 해시가 있습니다.
 
@@ -84,9 +84,9 @@ NuGet 패키지는 많은 [메타데이터 속성](/nuget/reference/nuspec)을 �
 
 ![NuGet 시험판 패키지 종속성](./media/nuget/nuget-prerelease-package.png "NuGet 시험판 패키지 종속성")
 
-**✔️** 테스트, 미리 보기 또는 실험 시에는 시험판 패키지를 게시합니다.
+✔️ 테스트, 미리 보기 또는 실험 시에는 시험판 패키지를 게시합니다.
 
-**✔️** 준비가 되면 안정적인 패키지를 게시하여 다른 안정적인 패키지가 참조할 수 있도록 합니다.
+✔️ 준비가 되면 안정적인 패키지를 게시하여 다른 안정적인 패키지가 참조할 수 있도록 합니다.
 
 ## <a name="symbol-packages"></a>기호 패키지
 
@@ -112,7 +112,7 @@ NuGet.org는 자체 [기호 서버 리포지토리](/nuget/create-packages/symbo
 
 포함된 기호 파일의 단점은 SDK 스타일 프로젝트를 사용하여 컴파일된 .NET 라이브러리의 패키지 크기가 약 30% 증가한다는 것입니다. 패키지 크기가 중요한 경우 기호 패키지에 기호를 게시해야 합니다.
 
-**✔️ CONSIDER** NuGet.org에 기호 패키지(`*.snupkg`)로 기호 게시
+✔️ NuGet.org에 기호 패키지(`*.snupkg`)로 기호를 게시하는 것을 고려하세요.
 
 > 기호 패키지(`*.snupkg`)는 주 패키지 크기를 블로트하지 않고 NuGet 패키지를 디버그할 의도가 없는 개발자에게 복원 성능에 영향을 주지 않으면서 개발자에게 좋은 주문형 디버깅 환경을 제공합니다.
 >

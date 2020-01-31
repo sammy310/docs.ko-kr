@@ -3,12 +3,12 @@ title: 스레딩 구성 설정
 description: .NET Core 앱의 스레딩을 구성하는 런타임 설정에 대해 알아봅니다.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 6a920dbc301830e3f4c95bf637ff3de6d4f464ff
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: ed7688d4d8f7178440fe59afc6e2f5e0a11b2a5c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74998830"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733425"
 ---
 # <a name="run-time-configuration-options-for-threading"></a>스레딩을 위한 런타임 구성 옵션
 
@@ -19,7 +19,7 @@ ms.locfileid: "74998830"
 
 | | 설정 이름 | 값 |
 | - | - | - |
-| **runtimeconfig.json** | 해당 사항 없음 | 해당 사항 없음 |
+| **runtimeconfig.json** | N/A | N/A |
 | **환경 변수** | `COMPlus_Thread_UseAllCpuGroups` | `0` - 사용 안 함<br/>`1` - 사용 |
 
 ## <a name="minimum-threads"></a>최소 스레드
@@ -30,7 +30,34 @@ ms.locfileid: "74998830"
 | | 설정 이름 | 값 |
 | - | - | - |
 | **runtimeconfig.json** | `System.Threading.ThreadPool.MinThreads` | 최소 스레드 개수를 나타내는 정수 |
-| **환경 변수** | 해당 사항 없음 | 해당 사항 없음 |
+| **MSBuild 속성** | `ThreadPoolMinThreads` | 최소 스레드 개수를 나타내는 정수 |
+| **환경 변수** | N/A | N/A |
+
+### <a name="examples"></a>예
+
+*runtimeconfig.json* 파일:
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.Threading.ThreadPool.MinThreads": 4
+      }
+   }
+}
+```
+
+프로젝트 파일:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ThreadPoolMinThreads>4</ThreadPoolMinThreads>
+  </PropertyGroup>
+
+</Project>
+```
 
 ## <a name="maximum-threads"></a>최대 스레드
 
@@ -40,4 +67,31 @@ ms.locfileid: "74998830"
 | | 설정 이름 | 값 |
 | - | - | - |
 | **runtimeconfig.json** | `System.Threading.ThreadPool.MaxThreads` | 최대 스레드 개수를 나타내는 정수 |
-| **환경 변수** | 해당 사항 없음 | 해당 사항 없음 |
+| **MSBuild 속성** | `ThreadPoolMaxThreads` | 최대 스레드 개수를 나타내는 정수 |
+| **환경 변수** | N/A | N/A |
+
+### <a name="examples"></a>예
+
+*runtimeconfig.json* 파일:
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.Threading.ThreadPool.MaxThreads": 20
+      }
+   }
+}
+```
+
+프로젝트 파일:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ThreadPoolMaxThreads>20</ThreadPoolMaxThreads>
+  </PropertyGroup>
+
+</Project>
+```

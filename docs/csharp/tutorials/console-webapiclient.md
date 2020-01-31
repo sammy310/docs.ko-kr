@@ -3,12 +3,12 @@ title: .NET Core를 사용하여 REST 클라이언트 만들기
 description: 이 자습서에서는 .NET Core 및 C# 언어의 다양한 기능에 대해 설명합니다.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 85a3c8e17e14db86786950380ba745ae286dccca
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 09eda08f82490070c66d0b290359872c1043b0c2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115864"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737580"
 ---
 # <a name="rest-client"></a>REST 클라이언트
 
@@ -71,7 +71,7 @@ private static async Task ProcessRepositories()
 }
 ```
 
-C# 컴파일러에서 <xref:System.Threading.Tasks.Task> 형식을 인식하도록 `using` 문을 `Main` 메서드 맨 위에 추가해야 합니다.
+C# 컴파일러에서 <xref:System.Threading.Tasks.Task> 형식을 인식하도록 `using` 지시문을 `Main` 메서드 맨 위에 추가해야 합니다.
 
 ```csharp
 using System.Threading.Tasks;
@@ -84,7 +84,7 @@ using System.Threading.Tasks;
 다음에는 `Main` 메서드를 업데이트하여 이 메서드를 호출합니다. `ProcessRepositories` 메서드는 작업을 반환합니다. 이 작업이 완료되기 전에 프로그램을 종료하지 않아야 합니다. 따라서 `Main`의 서명을 변경해야 합니다. `async` 한정자를 추가하고 반환 형식을 `Task`로 변경합니다. 그런 다음 메서드의 본문에서 `ProcessRepositories`에 대한 호출을 추가합니다. 해당 메서드 호출에 `await` 키워드를 추가합니다.
 
 ```csharp
-static Task Main(string[] args)
+static async Task Main(string[] args)
 {
     await ProcessRepositories();
 }
@@ -92,7 +92,7 @@ static Task Main(string[] args)
 
 이제 아무 작업도 수행하지 않지만 비동기적으로는 수행하는 프로그램이 되었습니다. 이것을 개선해보겠습니다.
 
-먼저 웹에서 데이터를 검색할 수 있는 개체가 필요합니다. 이를 위해 <xref:System.Net.Http.HttpClient>를 사용할 수 있습니다. 이 개체는 요청 및 응답을 처리합니다. Program.cs 파일 내의 `Program` 클래스에서 해당 형식의 단일 인스턴스를 인스턴스화합니다.
+먼저 웹에서 데이터를 검색할 수 있는 개체가 필요합니다. 이를 위해 <xref:System.Net.Http.HttpClient>를 사용할 수 있습니다. 이 개체는 요청 및 응답을 처리합니다. *Program.cs* 파일 내의 `Program` 클래스에서 해당 형식의 단일 인스턴스를 인스턴스화합니다.
 
 ```csharp
 namespace WebAPIClient
@@ -101,7 +101,7 @@ namespace WebAPIClient
     {
         private static readonly HttpClient client = new HttpClient();
 
-        static Task Main(string[] args)
+        static async Task Main(string[] args)
         {
             //...
         }
@@ -126,7 +126,7 @@ private static async Task ProcessRepositories()
 }
 ```
 
-컴파일을 위해 파일 맨 위에 2개의 새 using 문을 추가해야 합니다.
+컴파일을 위해 파일 맨 위에 2개의 새 `using` 지시문도 추가해야 합니다.
 
 ```csharp
 using System.Net.Http;
@@ -206,6 +206,12 @@ foreach (var repo in repositories)
 public string Name { get; set; }
 ```
 
+`[JsonPropertyName]` 특성을 사용하려면 `using` 지시문에 <xref:System.Text.Json.Serialization> 네임스페이스를 추가해야 합니다.
+
+```csharp
+using System.Text.Json.Serialization;
+```
+
 이렇게 변경할 경우 program.cs에서 각 리포지토리의 이름을 쓰는 코드를 변경해야 합니다.
 
 ```csharp
@@ -233,7 +239,7 @@ return repositories;
 그런 다음 해당 결과를 캡처하고 각 리포지토리 이름을 콘솔에 쓰도록 `Main` 메서드를 수정해 보겠습니다. `Main` 메서드는 이제 다음과 같이 표시됩니다.
 
 ```csharp
-public static Task Main(string[] args)
+public static async Task Main(string[] args)
 {
     var repositories = await ProcessRepositories();
 
@@ -296,7 +302,7 @@ public DateTime LastPush =>
 
 방금 정의한 새 구문을 살펴보겠습니다. `LastPush` 속성은 `get` 접근자에 대한 *식 본문 멤버*를 사용하여 정의됩니다. `set` 접근자가 없습니다. `set` 접근자를 생략하는 것이 바로 C#에서 *읽기 전용* 속성을 정의하는 방식입니다. (C#에서 *쓰기 전용* 속성을 만들 수 있지만 해당 값은 제한됩니다.) <xref:System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider)> 메서드는 제공된 날짜 형식을 사용하여 문자열을 구문 분석하고 <xref:System.DateTime> 개체를 만들고, `CultureInfo` 개체를 사용하여 `DateTime`에 메타데이터를 더 추가합니다. 구문 분석 작업이 실패하는 경우 속성 접근자가 예외를 throw합니다.
 
-<xref:System.Globalization.CultureInfo.InvariantCulture> 를 사용하려면 `repo.cs`의 `using` 문에 <xref:System.Globalization> 네임스페이스를 추가해야 합니다.
+<xref:System.Globalization.CultureInfo.InvariantCulture>를 사용하려면 `repo.cs`의 `using` 지시문에 <xref:System.Globalization> 네임스페이스를 추가해야 합니다.
 
 ```csharp
 using System.Globalization;

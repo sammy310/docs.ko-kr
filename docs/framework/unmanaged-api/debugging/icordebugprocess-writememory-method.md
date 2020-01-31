@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d5c07d86-045d-4391-893b-0bcd2959f90e
 topic_type:
 - apiref
-ms.openlocfilehash: eaf5b9980d55b0efb473b4631a8c052b013d0796
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fb3e0ccb57cf3b056bd25e643706e49b8bc75531
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137252"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792549"
 ---
 # <a name="icordebugprocesswritememory-method"></a>ICorDebugProcess::WriteMemory 메서드
 이 프로세스의 메모리 영역에 데이터를 씁니다.  
@@ -49,7 +49,7 @@ HRESULT WriteMemory(
  제한이 이 프로세스의 메모리 영역에 쓴 바이트 수를 받는 변수에 대 한 포인터입니다. `written` NULL 이면이 매개 변수는 무시 됩니다.  
   
 ## <a name="remarks"></a>주의  
- 데이터는 모든 중단점 뒤에 자동으로 기록 됩니다. .NET Framework 버전 2.0에서 네이티브 디버거는이 메서드를 사용 하 여 중단점을 명령 스트림에 삽입 해서는 안 됩니다. 대신 [ICorDebugProcess2:: SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md) 를 사용 합니다.  
+ 데이터는 모든 중단점 뒤에 자동으로 기록 됩니다. .NET Framework 버전 2.0에서 네이티브 디버거는이 메서드를 사용 하 여 중단점을 명령 스트림에 삽입 해서는 안 됩니다. 대신 [ICorDebugProcess2:: SetUnmanagedBreakpoint](icordebugprocess2-setunmanagedbreakpoint-method.md) 를 사용 합니다.  
   
  `WriteMemory` 메서드는 관리 코드 외부 에서만 사용 해야 합니다. 이 메서드는 부적절 하 게 사용 되는 경우 런타임을 손상 시킬 수 있습니다.  
   

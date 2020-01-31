@@ -5,12 +5,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: e69746e03cefa2444d4c34b582730824ff357858
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7f8d1ad93633d6feef9c3c6f5d19aad52105968c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706350"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741523"
 ---
 # <a name="customizing-structure-marshaling"></a>구조체 마샬링 사용자 지정
 
@@ -20,11 +20,11 @@ ms.locfileid: "75706350"
 
 .NET에서는 메모리에 필드가 배치되는 방식을 사용자 지정할 수 있도록 <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> 특성과 <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType> 열거형을 제공합니다. 다음 지침은 일반적인 문제를 방지하는 데 도움이 됩니다.
 
-**✔️** 가능한 경우 항상 `LayoutKind.Sequential`을 사용하는 것이 좋습니다.
+가능 하면 `LayoutKind.Sequential`를 사용 하는 것이 좋습니다 ✔️.
 
-**✔️** 네이티브 구조체에 공용 구조체 등의 명시적인 레이아웃도 있는 경우에만 마샬링할 때 `LayoutKind.Explicit`를 사용합니다.
+네이티브 구조체에 공용 구조체와 같은 명시적 레이아웃이 있는 경우에만 마샬링에 `LayoutKind.Explicit`를 사용 ✔️ 합니다.
 
-❌ .NET Core 3.0 이전 런타임을 대상으로 해야 하는 경우 Windows가 아닌 플랫폼에서 구조체를 마샬링할 때 `LayoutKind.Explicit`를 사용 **하지 않도록** 합니다. 3\.0 이전의 .NET Core 런타임에서는 Intel 또는 AMD 64 비트 비 Windows 시스템의 네이티브 함수에 대 한 명시적 구조체 전달을 지원 하지 않습니다. 그러나 런타임은 모든 플랫폼에서 명시적 구조체를 참조로 전달하는 기능을 지원합니다.
+❌ .NET Core 3.0 이전 런타임을 대상으로 해야 하는 경우 Windows가 아닌 플랫폼에서 구조체를 마샬링할 때 `LayoutKind.Explicit`를 사용 하지 않도록 합니다. 3\.0 이전의 .NET Core 런타임에서는 Intel 또는 AMD 64 비트 비 Windows 시스템의 네이티브 함수에 대 한 명시적 구조체 전달을 지원 하지 않습니다. 그러나 런타임은 모든 플랫폼에서 명시적 구조체를 참조로 전달하는 기능을 지원합니다.
 
 ## <a name="customizing-boolean-field-marshaling"></a>부울 필드 마샬링 사용자 지정
 

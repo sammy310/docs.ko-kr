@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bf84d0af-53e1-4c04-bc5b-7e5f81ba2cc2
 topic_type:
 - apiref
-ms.openlocfilehash: d1d3a5eb6e0b24b40a35c13a99465dd3c7032a91
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6c232163f7c18086804eca7990a0890a507ef00b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138952"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791684"
 ---
 # <a name="icordebugstringvalue-interface"></a>ICorDebugStringValue 인터페이스
 문자열 값에 적용 되는 ICorDebugHeapValue의 서브 클래스입니다.  
@@ -28,8 +28,8 @@ ms.locfileid: "73138952"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[GetLength 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getlength-method.md)|이 `ICorDebugStringValue`에서 참조 하는 문자열의 문자 수를 가져옵니다.|  
-|[GetString 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getstring-method.md)|이 `ICorDebugStringValue`에서 참조 하는 문자열을 가져옵니다.|  
+|[GetLength 메서드](icordebugstringvalue-getlength-method.md)|이 `ICorDebugStringValue`에서 참조 하는 문자열의 문자 수를 가져옵니다.|  
+|[GetString 메서드](icordebugstringvalue-getstring-method.md)|이 `ICorDebugStringValue`에서 참조 하는 문자열을 가져옵니다.|  
   
 ## <a name="remarks"></a>주의  
   
@@ -47,4 +47,4 @@ ms.locfileid: "73138952"
   
 ## <a name="see-also"></a>참조
 
-- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅 인터페이스](debugging-interfaces.md)
