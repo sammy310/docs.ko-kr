@@ -2,12 +2,12 @@
 title: 워크플로 서비스 등록 도구(WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: 182bef75bff1785905d77d3bc497e0701e297912
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5e7d39062a8ad016eebf949daa625a5ba7848328
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346585"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921222"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>워크플로 서비스 등록 도구(WFServicesReg.exe)
 워크플로 서비스 등록 도구(WFServicesReg.exe)는 Windows WF(Workflow Foundation) 서비스의 구성 요소를 추가, 제거 또는 복구하는 데 사용할 수 있는 독립 실행형 도구입니다.  
@@ -56,7 +56,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  이 도구는 또한 IIS 메타베이스에 .xoml과 .rules 스크립트 맵 및 처리기를 등록합니다.  
   
- Windows Server 2003 및 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 컴퓨터 (IIS 5.1 및 IIS 6.0)에서는 하나의 xoml 및. 규칙 스크립트 집합이 등록 됩니다.  
+ Windows Server 2003 및 Windows XP 컴퓨터 (IIS 5.1 및 IIS 6.0)에서는 하나의 xoml 및. 규칙 스크립트 집합이 등록 됩니다.  
   
  64비트 시스템에서 도구는 `Enable32BitAppOnWin64` 스위치를 사용할 수 있는 경우 WOW 모드 스크립트 맵을 등록하고, `Enable32BitAppOnWin64` 스위치를 사용할 수 없는 경우 네이티브 64비트 스크립트 맵을 등록합니다.  
   

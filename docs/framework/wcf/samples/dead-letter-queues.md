@@ -2,12 +2,12 @@
 title: 배달 못 한 편지 큐
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: d493aba9a3f7a51824243fe8d06441ab563b2261
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5025aa784817d1189f23918eacfef275abf968e1
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344533"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921430"
 ---
 # <a name="dead-letter-queues"></a>배달 못 한 편지 큐
 이 샘플에서는 배달에 실패한 메시지를 처리하는 방법을 보여 줍니다. [트랜잭션 된 MSMQ 바인딩](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) 샘플을 기반으로 합니다. 이 샘플에서는 `netMsmqBinding` 바인딩을 사용합니다. 이 서비스는 자체적으로 호스트되는 콘솔 애플리케이션으로서 이를 사용하여 서비스에서 대기된 메시지를 받는 것을 볼 수 있습니다.
@@ -16,7 +16,7 @@ ms.locfileid: "75344533"
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.
 
 > [!NOTE]
-> 이 샘플은 Windows Vista 에서만 사용할 수 있는 각 응용 프로그램 배달 못 한 편지 큐를 보여 줍니다. 이 샘플은 Windows Server 2003 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 MSMQ 3.0에 대 한 기본 시스템 전체 큐를 사용 하도록 수정할 수 있습니다.
+> 이 샘플은 Windows Vista 에서만 사용할 수 있는 각 응용 프로그램 배달 못 한 편지 큐를 보여 줍니다. 이 샘플은 Windows Server 2003 및 Windows XP에서 MSMQ 3.0에 대 한 기본 시스템 전체 큐를 사용 하도록 수정할 수 있습니다.
 
  대기 중인 통신에서 클라이언트는 큐를 사용하여 서비스와 통신합니다. 좀더 정확하게 말하면 클라이언트는 큐에 메시지를 보내고, 서비스는 큐에서 보낸 메시지를 받습니다. 따라서 서비스와 클라이언트가 동시에 실행되고 있지 않더라도 큐를 사용하여 통신할 수 있습니다.
 

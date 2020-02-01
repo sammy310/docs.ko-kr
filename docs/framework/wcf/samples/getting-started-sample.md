@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: 12568b2bb86257ed7075f2dc83b8077714a1318e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 7bfef2c3fa5d0d3c6dafad5a6015eb9f5ca2b5c6
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347046"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921313"
 ---
 # <a name="getting-started-sample"></a>Getting Started 샘플
 
@@ -34,7 +34,7 @@ ms.locfileid: "75347046"
 
 클라이언트에는 서비스에 액세스하기 위한 프록시 클래스와 서비스 계약에 대한 정의가 포함되어 있습니다. 프록시 코드는 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)를 사용 하 여 서비스 메타 데이터에서 생성 됩니다.
 
-Windows Vista에서 서비스는 WAS (Windows Activation Service)에서 호스팅됩니다. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 및 Windows Server 2003에서는 인터넷 정보 서비스 (IIS) 및 ASP.NET에서 호스트 됩니다. IIS 또는 WAS에서 서비스를 호스팅하면 서비스에 처음 액세스할 때 서비스를 자동으로 활성화할 수 있습니다.
+Windows Vista에서 서비스는 WAS (Windows Activation Service)에서 호스팅됩니다. Windows XP 및 Windows Server 2003에서는 인터넷 정보 서비스 (IIS) 및 ASP.NET에서 호스트 됩니다. IIS 또는 WAS에서 서비스를 호스팅하면 서비스에 처음 액세스할 때 서비스를 자동으로 활성화할 수 있습니다.
 
 > [!NOTE]
 > IIS 대신 콘솔 응용 프로그램에서 서비스를 호스팅하는 샘플을 사용 하려는 경우 [자체 호스트](../../../../docs/framework/wcf/samples/self-host.md) 샘플을 참조 하세요.

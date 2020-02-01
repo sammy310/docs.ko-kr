@@ -2,12 +2,12 @@
 title: Poison Message Handling in MSMQ 4.0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: 71ce6d3df69164aa0d565539bad5e843a7ed6a47
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: cc4da0deea0de2cd8b3bb8e8f2ba9b8a17e3cc60
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337495"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919391"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Poison Message Handling in MSMQ 4.0
 이 샘플에서는 서비스에서 포이즌 메시지 처리를 수행하는 방법을 보여 줍니다. 이 샘플은 [트랜잭션 된 MSMQ 바인딩](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) 샘플을 기반으로 합니다. 이 샘플에서는 `netMsmqBinding`을 사용합니다. 이 서비스는 자체적으로 호스트되는 콘솔 애플리케이션으로서 이를 사용하여 서비스에서 대기된 메시지를 받는 것을 볼 수 있습니다.
@@ -18,7 +18,7 @@ ms.locfileid: "75337495"
 
  MSMQ의 버전에 따라 NetMsmqBinding에서는 포이즌 메시지의 제한적 검색부터 완전한 검색까지 지원합니다. 포이즌 메시지로 검색된 메시지는 몇 가지 방법으로 처리할 수 있습니다. 또한 MSMQ의 버전에 따라 NetMsmqBinding에서는 포이즌 메시지의 제한된 처리부터 전체 처리까지를 지원합니다.
 
- 이 샘플은 windows Server 2003 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 플랫폼에서 제공 되는 제한 된 포이즌 기능과 Windows Vista에서 제공 되는 완전 한 포이즌 기능을 보여 줍니다. 두 샘플의 목표는 큐에서 포이즌 메시지를 다른 큐로 이동하여 포이즌 메시지 서비스에 의해 처리되도록 하는 것입니다.
+ 이 샘플은 windows Server 2003 및 Windows XP 플랫폼에서 제공 되는 제한 된 포이즌 기능과 Windows Vista에서 제공 하는 완전 한 포이즌 기능을 보여 줍니다. 두 샘플의 목표는 큐에서 포이즌 메시지를 다른 큐로 이동하여 포이즌 메시지 서비스에 의해 처리되도록 하는 것입니다.
 
 ## <a name="msmq-v40-poison-handling-sample"></a>MSMQ v4.0 Poison Handling 샘플
  Windows Vista에서 MSMQ는 포이즌 메시지를 저장 하는 데 사용할 수 있는 포이즌 하위 큐 기능을 제공 합니다. 이 샘플에서는 Windows Vista를 사용 하는 포이즌 메시지를 처리 하는 최선의 방법을 보여 줍니다.

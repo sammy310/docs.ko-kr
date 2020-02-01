@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 068ddcab5cfb7bfb5f37a1858820195a5a05269f
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 6399d64746db158ba0569eaf0137127603973513
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964574"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919339"
 ---
 # <a name="configure-ws-atomic-transaction-support"></a>WS 원자성 트랜잭션 지원 구성
 
@@ -25,7 +25,7 @@ WS-AT 구성 유틸리티(wsatConfig.exe)는 WS-AT 설정을 구성하는 데 �
 
 명령줄 도구에 대 한 자세한 내용은 [Ws-atomictransaction 구성 유틸리티 (wsatconfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)를 참조 하세요.
 
-[!INCLUDE[wxp](../../../../includes/wxp-md.md)] 또는 Windows Server 2003를 실행 하는 경우 **제어판/관리 도구/구성 요소 서비스로**이동 하 여 **내 컴퓨터**을 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 하 여 MMC 스냅인에 액세스할 수 있습니다. 동일한 위치에서 MSDTC(Microsoft Distributed Transaction Coordinator)를 구성할 수 있습니다. 구성에 사용할 수 있는 옵션은 **ws-at** 탭에서 그룹화 됩니다. Windows Vista 또는 Windows Server 2008를 실행 하는 경우 **시작** 단추를 클릭 하 고 **검색** 상자에 `dcomcnfg.exe`를 입력 하 여 MMC 스냅인을 찾을 수 있습니다. MMC를 열면 **My Computer\Distributed Transaction COORDINATOR\LOCAL DTC** 노드로 이동 하 고 마우스 오른쪽 단추를 클릭 한 다음 **속성**을 선택 합니다. 구성에 사용할 수 있는 옵션은 **ws-at** 탭에서 그룹화 됩니다.
+Windows XP 또는 Windows Server 2003를 실행 하는 경우 **제어판/관리 도구/구성 요소 서비스로**이동 하 여 **내 컴퓨터**를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 하 여 MMC 스냅인에 액세스할 수 있습니다. 동일한 위치에서 MSDTC(Microsoft Distributed Transaction Coordinator)를 구성할 수 있습니다. 구성에 사용할 수 있는 옵션은 **ws-at** 탭에서 그룹화 됩니다. Windows Vista 또는 Windows Server 2008를 실행 하는 경우 **시작** 단추를 클릭 하 고 **검색** 상자에 `dcomcnfg.exe`를 입력 하 여 MMC 스냅인을 찾을 수 있습니다. MMC를 열면 **My Computer\Distributed Transaction COORDINATOR\LOCAL DTC** 노드로 이동 하 고 마우스 오른쪽 단추를 클릭 한 다음 **속성**을 선택 합니다. 구성에 사용할 수 있는 옵션은 **ws-at** 탭에서 그룹화 됩니다.
 
 스냅인에 대 한 자세한 내용은 [Ws-atomictransaction 구성 MMC 스냅인](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)을 참조 하세요.
 

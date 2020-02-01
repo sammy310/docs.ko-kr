@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: 6505cc027b2983fd61ae53ca7ae43319024c74f7
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: e1c3e3d7697bf9a85cf0ab7df35a4755939d1df0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964708"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921406"
 ---
 # <a name="auditing-security-events"></a>보안 이벤트 감사
 WCF (Windows Communication Foundation)를 사용 하 여 만든 응용 프로그램은 감사 기능을 사용 하 여 보안 이벤트 (성공, 실패 또는 둘 다)를 기록할 수 있습니다. 이벤트는 Windows의 시스템 이벤트 로그에 기록되며 이벤트 뷰어를 사용하여 검사할 수 있습니다.  
@@ -32,7 +32,7 @@ WCF (Windows Communication Foundation)를 사용 하 여 만든 응용 프로그
   
  보안 로그에 기록하려면 `SeAuditPrivilege`가 필요합니다. 기본적으로 로컬 시스템 및 네트워크 서비스 계정에만 이 권한이 있습니다. 보안 로그 기능 `read` 및 `delete`를 관리하려면 `SeSecurityPrivilege`가 필요합니다. 기본적으로 관리자만 이 권한을 가집니다.  
   
- 반대로, 인증된 사용자는 애플리케이션 로그를 읽고 쓸 수 있습니다. [!INCLUDE[wxp](../../../../includes/wxp-md.md)]는 기본적으로 감사 이벤트를 애플리케이션 로그에 씁니다. 이 로그는 모든 인증된 사용자에게 표시되는 개인 정보를 포함할 수도 있습니다.  
+ 반대로, 인증된 사용자는 애플리케이션 로그를 읽고 쓸 수 있습니다. Windows XP에서는 기본적으로 응용 프로그램 로그에 감사 이벤트를 기록 합니다. 이 로그는 모든 인증된 사용자에게 표시되는 개인 정보를 포함할 수도 있습니다.  
   
 ## <a name="suppressing-audit-failures"></a>감사 실패 억제  
  또한 감사 중에 감사 실패를 억제할지 여부를 지정하는 옵션이 있습니다. 기본적으로 감사 실패는 애플리케이션에 영향을 주지 않습니다. 그러나 필요한 경우 이 옵션을 `false`로 설정할 수 있습니다. 그러면 예외가 throw됩니다.  
@@ -78,7 +78,7 @@ WCF (Windows Communication Foundation)를 사용 하 여 만든 응용 프로그
 ## <a name="security-considerations"></a>보안 고려 사항  
  악의적인 사용자가 감사가 설정된 사실을 알고 있다면 잘못된 메시지를 보내 감사 항목을 기록할 수 있습니다. 이런 식으로 감사 로그가 채워지면 감사 시스템이 실패합니다. 이 문제를 완화하려면 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 속성을 `true`로 설정하고 이벤트 뷰어의 속성을 사용하여 감사 동작을 제어합니다.  
   
- [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 애플리케이션 로그에 기록되는 감사 이벤트는 모든 인증된 사용자가 볼 수 있습니다.  
+ Windows XP의 응용 프로그램 로그에 기록 된 감사 이벤트는 모든 인증 된 사용자에 게 표시 됩니다.  
   
 ## <a name="choosing-between-application-and-security-event-logs"></a>애플리케이션 및 보안 이벤트 로그 선택  
  다음 표에서는 애플리케이션 이벤트 로그에 기록할지 보안 이벤트 로그에 기록할지 여부를 선택하는 데 도움이 되는 정보를 제공합니다.  
@@ -87,7 +87,7 @@ WCF (Windows Communication Foundation)를 사용 하 여 만든 응용 프로그
   
 |System|애플리케이션 로그|보안 로그|  
 |------------|---------------------|------------------|  
-|[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 이상|지원|지원 안 함|  
+|Windows XP SP2 이상|지원|지원 안 함|  
 |Windows Server 2003 SP1 및 Windows Vista|지원|스레드 컨텍스트에 `SeAuditPrivilege`가 있어야 합니다.|  
   
 #### <a name="other-factors"></a>기타 요소  

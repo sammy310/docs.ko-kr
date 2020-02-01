@@ -2,12 +2,12 @@
 title: Windows Communication Foundation 샘플의 일회 설치 절차
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: b75dd523d4c88eae70f8d21ac8b3c9f72ae055ed
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 1d7b5f6cb5922bde4b002611209ea3464f8e457c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744781"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921179"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 샘플의 일회 설치 절차
 
@@ -63,7 +63,7 @@ ms.locfileid: "76744781"
     > [!NOTE]
     > 이 단계를 완료하지 않으면 IIS에서 호스팅되는 모든 샘플이 빌드 중에 실패합니다. 사용 권한을 올바르게 설정했는지 확인하거나 SDK 명령 프롬프트와 Visual Studio 명령 프롬프트(2012)를 관리자 권한으로 실행하십시오.
 
-11. 컴퓨터에 C:\logs 디렉터리를 만듭니다. 일부 샘플에 이 디렉터리가 필요할 수 있습니다. 적절한 계정에 이 폴더에 대한 쓰기 권한을 부여해야 합니다. Windows 7, Windows Vista 및 Windows Server 2008 r 2의 경우이 계정은 **네트워크 서비스**입니다. Windows Server 2008의 경우 계정은 NT Authority\Network Service입니다. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 및 Windows Server 2003의 경우 계정은 ASPNET입니다.
+11. 컴퓨터에 C:\logs 디렉터리를 만듭니다. 일부 샘플에 이 디렉터리가 필요할 수 있습니다. 적절한 계정에 이 폴더에 대한 쓰기 권한을 부여해야 합니다. Windows 7, Windows Vista 및 Windows Server 2008 r 2의 경우이 계정은 **네트워크 서비스**입니다. Windows Server 2008의 경우 계정은 NT Authority\Network Service입니다. Windows XP 및 Windows Server 2003의 경우 계정은 ASPNET입니다.
 
 12. Setupcerttool.bat 파일을 실행합니다. 이 파일은 \<InstallPath > \ WF_WCF_Samples \WCF\Setup\ 폴더에 있습니다.  이 스크립트는 다음 작업을 수행합니다.
 

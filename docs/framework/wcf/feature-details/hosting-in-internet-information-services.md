@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: 108048f6bdd2c02a67e331bd7b07b724d0e86527
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 2e0fb579897797b732859692092665225a0d6168
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75963795"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919362"
 ---
 # <a name="host-in-internet-information-services"></a>인터넷 정보 서비스 호스트
 
@@ -19,7 +19,7 @@ WCF (Windows Communication Foundation) 서비스를 호스팅하는 한 가지 �
 
 WCF는 다음 운영 체제에 대해 다음 버전의 IIS에서 호스팅될 수 있습니다.
 
-- [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)]의 IIS 5.1. 이 환경은 나중에 Windows Server 2003와 같은 서버 운영 체제에 배포 되는 IIS에서 호스팅되는 응용 프로그램을 디자인 하 고 개발 하는 데 유용 합니다.
+- Windows XP s p 2의 IIS 5.1. 이 환경은 나중에 Windows Server 2003와 같은 서버 운영 체제에 배포 되는 IIS에서 호스팅되는 응용 프로그램을 디자인 하 고 개발 하는 데 유용 합니다.
 
 - Windows Server 2003의 IIS 6.0. IIS 6.0은 향상된 확장성, 안정성 및 응용 프로그램 격리 기능을 제공하는 고급 프로세스 모델을 사용합니다. 이 환경은 HTTP 통신을 독점적으로 사용 하는 WCF 서비스의 프로덕션 배포에 적합 합니다.
 

@@ -2,12 +2,12 @@
 title: WS-AtomicTransaction 구성 MMC 스냅인
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-ms.openlocfilehash: 9b6c7ecf112309b6c10414bfe506559e153911c2
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 0bcd08f9a3450c850ead941df6313526d076df2d
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900720"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921338"
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>Ws-atomictransaction 구성 MMC 스냅인
 
@@ -15,11 +15,11 @@ Ws-atomictransaction 구성 MMC 스냅인은 로컬 및 원격 컴퓨터 모두�
 
 ## <a name="remarks"></a>주의
 
-[!INCLUDE[wxp](../../../includes/wxp-md.md)] 또는 Windows Server 2003를 실행 하는 경우 **제어판/관리 도구/구성 요소 서비스/** 로 이동 하 여 **내 컴퓨터**을 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 하 여 MMC 스냅인을 찾을 수 있습니다. 이 위치는 MSDTC를 구성할 수 있는 위치와 동일합니다. 구성에 사용할 수 있는 옵션은 **ws-at** 탭에서 그룹화 됩니다.
+Windows XP 또는 Windows Server 2003를 실행 하는 경우 **제어판/관리 도구/구성 요소 서비스/** 로 이동 하 여 **내 컴퓨터**를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 하 여 MMC 스냅인을 찾을 수 있습니다. 이 위치는 MSDTC를 구성할 수 있는 위치와 동일합니다. 구성에 사용할 수 있는 옵션은 **ws-at** 탭에서 그룹화 됩니다.
 
  Windows Vista 또는 Windows Server 2008를 실행 하는 경우 **시작** 단추를 클릭 하 고 **검색** 상자에 `dcomcnfg.exe`를 입력 하 여 MMC 스냅인을 찾을 수 있습니다. MMC를 열면 **My Computer\Distributed Transaction COORDINATOR\LOCAL DTC** 노드로 이동 하 고 마우스 오른쪽 단추를 클릭 한 다음 **속성**을 선택 합니다. 구성에 사용할 수 있는 옵션은 **ws-at** 탭에서 그룹화 됩니다.
 
- 앞의 단계는 로컬 컴퓨터를 구성하기 위한 스냅인을 시작하는 데 사용됩니다. 원격 컴퓨터를 구성 하려면 **제어판/관리 도구/구성 요소 서비스/** 에서 원격 컴퓨터의 이름을 찾고 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 또는 Windows Server 2003를 실행 하는 경우 비슷한 단계를 수행 해야 합니다. Windows Vista 또는 Windows Server 2008를 실행 하는 경우 Vista 및 Windows Server 2008의 이전 단계를 수행 하지만 원격 컴퓨터의 노드에서 **Distributed Transaction COORDINATOR\LOCAL DTC** 노드를 사용 합니다.
+ 앞의 단계는 로컬 컴퓨터를 구성하기 위한 스냅인을 시작하는 데 사용됩니다. 원격 컴퓨터를 구성 하려면 **제어판/관리 도구/구성 요소 서비스/** 에서 원격 컴퓨터의 이름을 찾고, windows XP 또는 windows Server 2003를 실행 하는 경우 비슷한 단계를 수행 해야 합니다. Windows Vista 또는 Windows Server 2008를 실행 하는 경우 Vista 및 Windows Server 2008의 이전 단계를 수행 하지만 원격 컴퓨터의 노드에서 **Distributed Transaction COORDINATOR\LOCAL DTC** 노드를 사용 합니다.
 
  도구의 사용자 인터페이스를 사용하려면 다음 경로에 있는 WsatUI.dll 파일을 등록해야 합니다.
 

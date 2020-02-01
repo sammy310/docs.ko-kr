@@ -2,12 +2,12 @@
 title: 포이즌 메시지 처리
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: ff1eaec99308b06250722b290b7005ac21731570
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 389d0651438036cd23d30cf7dd866956ac8e5dae
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337639"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921198"
 ---
 # <a name="poison-message-handling"></a>포이즌 메시지 처리
 *포이즌 메시지* 는 응용 프로그램에 대 한 최대 배달 시도 횟수를 초과한 메시지입니다. 큐 기반 애플리케이션에서 오류로 인해 메시지를 처리할 수 없는 경우 이러한 상황이 발생할 수 있습니다. 안정성 요청을 충족하려면 대기 중인 애플리케이션이 트랜잭션에서 메시지를 받습니다. 대기 중인 메시지를 받은 트랜잭션을 중단하면 메시지가 큐에 남으므로 새 트랜잭션에서 해당 메시지가 다시 시도됩니다. 트랜잭션의 중단 문제가 해결되지 않은 경우에는 수신 애플리케이션이 최대 전달 시도 횟수를 초과할 때까지 같은 메시지를 받고 중단하는 루프에 갇히고, 포이즌 메시지가 발생합니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "75337639"
   
 - `ReceiveRetryCount`. 애플리케이션 큐에서 애플리케이션으로 메시지 전달을 다시 시도하는 최대 횟수를 나타내는 정수 값입니다. 기본값은 5입니다. 이 값은 데이터베이스의 임시 교착 상태처럼 문제 해결을 즉시 다시 시도하는 경우 충분합니다.  
   
-- `MaxRetryCycles`. 최대 재시도 주기 수를 나타내는 정수 값입니다. 재시도 주기는 애플리케이션 큐에서 재시도 하위 큐로 메시지를 전송하고, 구성 가능한 지연 시간 이후 재시도 하위 큐에서 전달을 다시 시도할 애플리케이션 큐로 메시지를 다시 전송하는 것으로 구성됩니다. 기본값은 2입니다. Windows Vista에서 메시지는 최대 (`ReceiveRetryCount` + 1) * (`MaxRetryCycles` + 1) 회를 시도 합니다. `MaxRetryCycles` Windows Server 2003 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 무시 됩니다.  
+- `MaxRetryCycles`. 최대 재시도 주기 수를 나타내는 정수 값입니다. 재시도 주기는 애플리케이션 큐에서 재시도 하위 큐로 메시지를 전송하고, 구성 가능한 지연 시간 이후 재시도 하위 큐에서 전달을 다시 시도할 애플리케이션 큐로 메시지를 다시 전송하는 것으로 구성됩니다. 기본값은 2입니다. Windows Vista에서 메시지는 최대 (`ReceiveRetryCount` + 1) * (`MaxRetryCycles` + 1) 회를 시도 합니다. `MaxRetryCycles`는 Windows Server 2003 및 Windows XP에서 무시 됩니다.  
   
 - `RetryCycleDelay`. 재시도 주기 사이의 지연 시간입니다. 기본값은 30분입니다. `MaxRetryCycles` 및 `RetryCycleDelay`는 함께 정기적인 지연 시간 이후 재시도로 문제를 해결하는 문제 해결 메커니즘을 제공합니다. 예를 들면, 이 핸들은 SQL Server의 보류 중인 트랜잭션 커밋에 설정된 잠긴 행을 처리합니다.  
   
@@ -39,12 +39,12 @@ ms.locfileid: "75337639"
   
 - Windows Vista의 ((ReceiveRetryCount + 1) * (MaxRetryCycles + 1)).  
   
-- (ReceiveRetryCount + 1) Windows Server 2003 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]  
+- (ReceiveRetryCount + 1) Windows Server 2003 및 Windows XP  
   
 > [!NOTE]
 > 전달된 메시지에 대해서는 다시 시도하지 않습니다.  
   
- 메시지 읽기를 시도 하는 횟수를 추적 하기 위해 Windows Vista는 중단 횟수를 계산 하는 지 속성 메시지 속성을 유지 하 고, 응용 프로그램 큐와 하위 큐 간에 메시지가 이동 하는 횟수를 계산 하는 이동 횟수 속성을 유지 합니다. WCF 채널은이를 사용 하 여 수신 다시 시도 횟수 및 재시도 주기 수를 계산 합니다. Windows Server 2003 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 중단 횟수는 WCF 채널에 의해 메모리에 유지 되며 응용 프로그램에 오류가 발생 하면 다시 설정 됩니다. 또한 WCF 채널은 언제 든 지 메모리에 최대 256 메시지의 중단 횟수를 보유할 수 있습니다. 257번째 메시지를 읽으면 가장 오래된 메시지의 중단 횟수가 재설정됩니다.  
+ 메시지 읽기를 시도 하는 횟수를 추적 하기 위해 Windows Vista는 중단 횟수를 계산 하는 지 속성 메시지 속성을 유지 하 고, 응용 프로그램 큐와 하위 큐 간에 메시지가 이동 하는 횟수를 계산 하는 이동 횟수 속성을 유지 합니다. WCF 채널은이를 사용 하 여 수신 다시 시도 횟수 및 재시도 주기 수를 계산 합니다. Windows Server 2003 및 Windows XP에서 중단 횟수는 WCF 채널에 의해 메모리에 유지 되며 응용 프로그램에 오류가 발생 하면 다시 설정 됩니다. 또한 WCF 채널은 언제 든 지 메모리에 최대 256 메시지의 중단 횟수를 보유할 수 있습니다. 257번째 메시지를 읽으면 가장 오래된 메시지의 중단 횟수가 재설정됩니다.  
   
  중단 횟수와 이동 횟수 속성은 작업 컨텍스트를 통해 서비스 작업에 사용할 수 있습니다. 다음 코드 예제에서는 이러한 속성에 액세스하는 방법을 보여 줍니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "75337639"
   
  애플리케이션에서 서비스가 큐의 남은 메시지에 액세스할 수 있도록 포이즌 메시지를 포이즌 메시지 큐로 이동하는 몇 가지 포이즌 메시지 자동 처리 작업이 필요할 수 있습니다. <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> 설정이 <xref:System.ServiceModel.ReceiveErrorHandling.Fault>로 설정된 경우에만 오류 처리 메커니즘을 사용하여 포이즌 메시지 예외를 수신 대기할 수 있습니다. 메시지 큐 3.0의 포이즌 메시지 샘플은 이 동작을 보여 줍니다. 다음에서는 최선의 방법을 포함하여 포이즌 메시지를 처리하는 단계를 간략히 보여 줍니다.  
   
-1. 포이즌 설정이 애플리케이션의 요구 사항을 반영하는지 확인합니다. 설정을 사용 하 여 작업 하는 경우 Windows Vista의 메시지 큐 기능, Windows Server 2003 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]간의 차이점을 이해 해야 합니다.  
+1. 포이즌 설정이 애플리케이션의 요구 사항을 반영하는지 확인합니다. 설정을 사용 하 여 작업할 때 Windows Vista, Windows Server 2003 및 Windows XP에서 메시지 큐의 기능 간의 차이점을 이해 해야 합니다.  
   
 2. 필요한 경우 `IErrorHandler`를 구현하여 포이즌 메시지 오류를 처리합니다. `ReceiveErrorHandling`을 `Fault`로 설정하려면 큐에서 포이즌 메시지를 제거하거나 외부 종속 문제를 해결하는 수동 메커니즘이 필요하므로 일반적인 사용법은 다음 코드처럼 `IErrorHandler`이 `ReceiveErrorHandling`로 설정된 경우 `Fault`를 구현하는 것입니다.  
   
@@ -95,13 +95,13 @@ ms.locfileid: "75337639"
  메시지가 포이즌 메시지 큐에 놓이면 포이즌 메시지 처리가 종료되지 않습니다. 포이즌 메시지 큐의 메시지를 읽고 처리해야 합니다. 최종 포이즌 하위 큐에서 메시지를 읽을 때 포이즌 메시지 처리 설정의 하위 집합을 사용할 수 있습니다. `ReceiveRetryCount` 및 `ReceiveErrorHandling` 설정을 적용할 수 있습니다. `ReceiveErrorHandling`은 Drop, Reject 또는 Fault로 설정할 수 있습니다. `MaxRetryCycles`이 Move로 설정되면 `ReceiveErrorHandling`가 무시되고 예외가 throw됩니다.  
   
 ## <a name="windows-vista-windows-server-2003-and-windows-xp-differences"></a>Windows Vista, Windows Server 2003 및 Windows XP의 차이점  
- 앞에서 설명한 것 처럼 일부 포이즌 메시지 처리 설정은 Windows Server 2003 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에 적용 되지 않습니다. Windows Server 2003, [!INCLUDE[wxp](../../../../includes/wxp-md.md)]및 Windows Vista에서 메시지 큐의 다음과 같은 주요 차이점은 포이즌 메시지 처리와 관련이 있습니다.  
+ 앞에서 설명한 것 처럼 일부 포이즌 메시지 처리 설정은 Windows Server 2003 및 Windows XP에 적용 되지 않습니다. Windows Server 2003, Windows XP 및 Windows Vista에서 메시지 큐의 다음과 같은 주요 차이점은 포이즌 메시지 처리와 관련이 있습니다.  
   
-- Windows Vista의 메시지 큐는 하위 큐를 지원 하지만 Windows Server 2003 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]는 하위 큐를 지원 하지 않습니다. 하위 큐는 포이즌 메시지 처리에 사용됩니다. 재시도 큐와 포이즌 큐는 포이즌 메시지 처리 설정에 따라 만들어지는 애플리케이션 큐의 하위 큐입니다. `MaxRetryCycles`는 만들 재시도 하위 큐의 수를 지정합니다. 따라서 Windows Server 2003 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 실행 하는 경우 `MaxRetryCycles` 무시 되 고 `ReceiveErrorHandling.Move` 허용 되지 않습니다.  
+- Windows Vista의 메시지 큐는 하위 큐를 지원 하지만 Windows Server 2003 및 Windows XP에서는 하위 큐를 지원 하지 않습니다. 하위 큐는 포이즌 메시지 처리에 사용됩니다. 재시도 큐와 포이즌 큐는 포이즌 메시지 처리 설정에 따라 만들어지는 애플리케이션 큐의 하위 큐입니다. `MaxRetryCycles`는 만들 재시도 하위 큐의 수를 지정합니다. 따라서 Windows Server 2003 또는 Windows XP에서 실행 하는 경우 `MaxRetryCycles` 무시 되 고 `ReceiveErrorHandling.Move` 허용 되지 않습니다.  
   
-- Windows Vista의 메시지 큐는 부정 승인을 지원 하지만 Windows Server 2003 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]는 그렇지 않습니다. 받는 큐 관리자에서 네거티브 승인을 사용하면 거부된 메시지가 보내는 큐 관리자의 배달 못한 편지 큐에 들어갑니다. 따라서 `ReceiveErrorHandling.Reject` Windows Server 2003 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 허용 되지 않습니다.  
+- Windows Vista의 메시지 큐는 부정 승인을 지원 하지만 Windows Server 2003 및 Windows XP는 지원 하지 않습니다. 받는 큐 관리자에서 네거티브 승인을 사용하면 거부된 메시지가 보내는 큐 관리자의 배달 못한 편지 큐에 들어갑니다. 따라서 `ReceiveErrorHandling.Reject` Windows Server 2003 및 Windows XP에서는 허용 되지 않습니다.  
   
-- Windows Vista의 메시지 큐는 메시지 배달을 시도 하는 횟수를 유지 하는 메시지 속성을 지원 합니다. 이 abort count 속성은 Windows Server 2003 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 사용할 수 없습니다. WCF는 메모리에서 중단 횟수를 유지 하므로 팜의 둘 이상의 WCF 서비스에서 같은 메시지를 읽을 경우이 속성에 정확한 값이 포함 되지 않을 수 있습니다.  
+- Windows Vista의 메시지 큐는 메시지 배달을 시도 하는 횟수를 유지 하는 메시지 속성을 지원 합니다. 이 abort count 속성은 Windows Server 2003 및 Windows XP에서 사용할 수 없습니다. WCF는 메모리에서 중단 횟수를 유지 하므로 팜의 둘 이상의 WCF 서비스에서 같은 메시지를 읽을 경우이 속성에 정확한 값이 포함 되지 않을 수 있습니다.  
   
 ## <a name="see-also"></a>참조
 

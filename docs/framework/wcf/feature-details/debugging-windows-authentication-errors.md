@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 45e4926905bbf3b5a24af15de153afc7bd2a4823
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 9dbf9eee6e4222f899d77a4457bc78132ec7f092
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964562"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920227"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Windows 인증 오류 디버깅
 Windows 인증을 보안 메커니즘으로 사용하면 SSPI(보안 지원 공급자 인터페이스)에서 보안 프로세스를 처리합니다. SSPI 계층에서 보안 오류가 발생 하면 Windows Communication Foundation (WCF)에 의해 표시 됩니다. 이 항목에서는 오류 진단에 도움이 되는 프레임워크 및 일련의 질문을 제공합니다.  
@@ -139,7 +139,7 @@ Windows 인증을 보안 메커니즘으로 사용하면 SSPI(보안 지원 공�
  [!code-vb[C_DebuggingWindowsAuth#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#3)]  
   
 #### <a name="sspi-is-not-available"></a>SSPI를 사용할 수 없음  
- 서버 ([!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Media Center Edition 및 Windows Vista Home edition)로 사용 하는 경우에는 다음 운영 체제에서 Windows 인증을 지원 하지 않습니다.  
+ 서버 (Windows XP Home Edition, Windows XP Media Center Edition 및 Windows Vista Home edition)로 사용 하는 경우에는 다음 운영 체제에서 Windows 인증을 지원 하지 않습니다.  
   
 #### <a name="developing-and-deploying-with-different-identities"></a>다른 ID로 개발 및 배포  
  애플리케이션을 한 컴퓨터에서 개발하여 다른 컴퓨터에 배포하고 서로 다른 계정 형식을 사용하여 각 컴퓨터에서 인증을 수행하면 동작이 동일하지 않을 수 있습니다. 예를 들어 `SSPI Negotiated` 인증 모드를 사용하여 Windows XP Pro 컴퓨터에서 애플리케이션을 개발할 경우 로컬 사용자 계정을 사용하여 인증하면 NTLM 프로토콜이 사용됩니다. 애플리케이션 개발을 마친 후 도메인 계정으로 실행되는 Windows Server 2003 컴퓨터에 해당 서비스를 배포하면 클라이언트에서는 Kerberos 및 도메인 컨트롤러를 사용할 것이므로 해당 서비스를 인증할 수 없습니다.  

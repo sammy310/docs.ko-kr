@@ -9,19 +9,19 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: 1ea7680d092a4270b8c0969c50db8accf7c23d49
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 412aa2bb2a56fbe654b0d9ce5f4b9b5176fc5549
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75963301"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921308"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>방법: SSL 인증서를 사용하여 포트 구성
 전송 보안을 사용 하는 <xref:System.ServiceModel.WSHttpBinding> 클래스를 사용 하 여 자체 호스팅 Windows Communication Foundation (WCF) 서비스를 만들 때 x.509 인증서를 사용 하 여 포트를 구성 해야 합니다. 자체 호스트된 서비스를 만들지 않는 경우에는 IIS(인터넷 정보 서비스)에서 서비스를 호스트할 수 있습니다. 자세한 내용은 [HTTP 전송 보안](../../../../docs/framework/wcf/feature-details/http-transport-security.md)을 참조 하세요.  
   
  포트를 구성하려면 컴퓨터에서 실행하는 운영 체제에 따라 다른 도구를 사용해야 합니다.  
   
- Windows Server 2003 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]를 실행 하는 경우 Httpcfg.exe 도구를 사용 합니다. Windows Server 2003를 사용 하 여이 도구를 설치 합니다. [!INCLUDE[wxp](../../../../includes/wxp-md.md)]를 사용 하 여 [WINDOWS XP 서비스 팩 2 지원 도구](https://go.microsoft.com/fwlink/?LinkId=88606)에서이 도구를 다운로드할 수 있습니다. 자세한 내용은 [Httpcfg.exe 개요](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10))를 참조 하세요. [Windows 지원 도구 설명서](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10)) 에서는 httpcfg.exe 도구에 대 한 구문을 설명 합니다.  
+ Windows Server 2003 또는 Windows XP를 실행 하는 경우 Httpcfg.exe 도구를 사용 합니다. Windows Server 2003를 사용 하 여이 도구를 설치 합니다. Windows XP를 사용 하는 경우 [WINDOWS Xp 서비스 팩 2 지원 도구](https://go.microsoft.com/fwlink/?LinkId=88606)에서이 도구를 다운로드할 수 있습니다. 자세한 내용은 [Httpcfg.exe 개요](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10))를 참조 하세요. [Windows 지원 도구 설명서](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10)) 에서는 httpcfg.exe 도구에 대 한 구문을 설명 합니다.  
   
  Windows Vista를 실행 하는 경우 이미 설치 된 Netsh.exe 도구를 사용 합니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "75963301"
   
 ### <a name="to-determine-how-ports-are-configured"></a>포트의 구성 방법을 확인하려면  
   
-1. Windows Server 2003 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 다음 예제와 같이 Httpcfg.exe 도구를 사용 하 여 **쿼리** 및 **ssl** 스위치를 사용 하 여 현재 포트 구성을 봅니다.  
+1. Windows Server 2003 또는 Windows XP에서 다음 예제와 같이 Httpcfg.exe 도구를 사용 하 여 **쿼리** 및 **ssl** 스위치를 사용 하 여 현재 포트 구성을 봅니다.  
   
     ```console
     httpcfg query ssl  
@@ -57,7 +57,7 @@ ms.locfileid: "75963301"
   
 1. 인증서 MMC 스냅인을 사용하여 클라이언트 인증 용도의 X.509 인증서를 찾습니다. 자세한 내용은 [방법: MMC 스냅인을 사용하여 인증서 보기](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)를 참조하세요.  
   
-2. 인증서의 지문에 액세스합니다. 자세한 내용은 [방법: 인증서의 지문 검색](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)을 참조하세요.  
+2. 인증서의 지문에 액세스합니다. 자세한 내용은 [방법: 인증서의 지문 검색](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)을 참조 하세요.  
   
 3. 인증서의 지문을 메모장 등의 텍스트 편집기에 복사합니다.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "75963301"
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number"></a>SSL 인증서를 포트 번호에 바인딩하려면  
   
-1. Windows Server 2003 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서는 SSL(Secure Sockets Layer) (SSL) 저장소에서 "설정" 모드로 Httpcfg.exe 도구를 사용 하 여 인증서를 포트 번호에 바인딩합니다. 도구에서는 다음 예제처럼 지문을 사용하여 인증서를 식별합니다.  
+1. Windows Server 2003 또는 Windows XP에서는 SSL(Secure Sockets Layer) (SSL) 저장소에서 "설정" 모드로 Httpcfg.exe 도구를 사용 하 여 인증서를 포트 번호에 바인딩합니다. 도구에서는 다음 예제처럼 지문을 사용하여 인증서를 식별합니다.  
   
     ```console  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
@@ -89,7 +89,7 @@ ms.locfileid: "75963301"
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>SSL 인증서를 포트 번호에 바인딩하고 클라이언트 인증서를 지원하려면  
   
-1. Windows Server 2003 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 전송 계층의 x.509 인증서를 사용 하 여 인증 하는 클라이언트를 지원 하려면 위의 절차를 수행 하 되 다음 예제와 같이 Httpcfg.exe에 추가 명령줄 매개 변수를 전달 합니다.  
+1. Windows Server 2003 또는 Windows XP에서 전송 계층의 x.509 인증서를 사용 하 여 인증 하는 클라이언트를 지원 하려면 위의 절차를 수행 하 되 다음 예제와 같이 Httpcfg.exe에 추가 명령줄 매개 변수를 전달 합니다.  
   
     ```console  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6 -f 2  
@@ -111,7 +111,7 @@ ms.locfileid: "75963301"
     httpcfg query ssl>myMachinePorts.txt  
     ```
   
-2. Windows Server 2003 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서는 **delete** 및 **ssl** 키워드와 함께 httpcfg.exe 도구를 사용 합니다. **-I** 스위치를 사용 하 여 `IP``port` 번호를 지정 하 고 **-h** 스위치를 사용 하 여 지문을 지정 합니다.  
+2. Windows Server 2003 또는 Windows XP에서는 **delete** 및 **ssl** 키워드와 함께 httpcfg.exe 도구를 사용 합니다. **-I** 스위치를 사용 하 여 `IP``port` 번호를 지정 하 고 **-h** 스위치를 사용 하 여 지문을 지정 합니다.  
   
     ```console  
     httpcfg delete ssl -i 0.0.0.0:8005 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  

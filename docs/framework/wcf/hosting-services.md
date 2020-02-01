@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: 7a77f7d11bbd2b685bdcf53a3992b4e04b3691b8
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 9608f9cc55bbba29686440be529659c6606b0eb8
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901224"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921047"
 ---
 # <a name="hosting-services"></a>호스팅 서비스
 
@@ -32,9 +32,9 @@ WCF는 서비스 지향 응용 프로그램을 빌드하기 위한 통합 프로
 
 ### <a name="internet-information-services-iis"></a>IIS(인터넷 정보 서비스)
 
-IIS 호스팅 옵션은 ASP.NET와 통합 되며 이러한 기술이 제공 하는 프로세스 재활용, 유휴 상태 종료, 프로세스 상태 모니터링 및 메시지 기반 활성화 기능을 사용 합니다. [!INCLUDE[wxp](../../../includes/wxp-md.md)] 및 Windows Server 2003 운영 체제에서이 솔루션은 항상 사용 가능 하 고 확장성이 뛰어난 웹 서비스 응용 프로그램을 호스팅하기 위한 기본 솔루션입니다. IIS는 또한 고객이 엔터프라이즈 수준의 서버 제품에서 기대하는 통합된 관리 효율성을 제공합니다. 이 호스팅 옵션을 사용하려면 IIS를 적절히 구성해야 하지만 호스팅 코드를 애플리케이션의 일부로 작성하지 않아도 됩니다. WCF 서비스에 대 한 IIS 호스팅을 구성 하는 방법에 대 한 자세한 내용은 [방법: iis에서 Wcf 서비스](./feature-details/how-to-host-a-wcf-service-in-iis.md)호스팅을 참조 하세요.
+IIS 호스팅 옵션은 ASP.NET와 통합 되며 이러한 기술이 제공 하는 프로세스 재활용, 유휴 상태 종료, 프로세스 상태 모니터링 및 메시지 기반 활성화 기능을 사용 합니다. Windows XP 및 Windows Server 2003 운영 체제에서이 솔루션은 항상 사용 가능 하 고 확장성이 뛰어난 웹 서비스 응용 프로그램을 호스팅하기 위한 기본 솔루션입니다. IIS는 또한 고객이 엔터프라이즈 수준의 서버 제품에서 기대하는 통합된 관리 효율성을 제공합니다. 이 호스팅 옵션을 사용하려면 IIS를 적절히 구성해야 하지만 호스팅 코드를 애플리케이션의 일부로 작성하지 않아도 됩니다. WCF 서비스에 대 한 IIS 호스팅을 구성 하는 방법에 대 한 자세한 내용은 [방법: iis에서 Wcf 서비스](./feature-details/how-to-host-a-wcf-service-in-iis.md)호스팅을 참조 하세요.
 
- IIS에서 호스팅되는 서비스는 HTTP 전송만 사용할 수 있습니다. IIS 5.1에서의 서비스 구현 시 [!INCLUDE[wxp](../../../includes/wxp-md.md)]의 경우 몇 가지 제한이 있습니다. [!INCLUDE[wxp](../../../includes/wxp-md.md)]에서 IIS 5.1이 제공 하는 WCF 서비스에 제공 되는 메시지 기반 활성화는 동일한 컴퓨터의 다른 자체 호스팅 WCF 서비스에서 포트 80을 사용 하 여 통신 하는 것을 차단 합니다. WCF 서비스는 Windows Server 2003에서 IIS 6.0에 의해 호스팅되는 경우 다른 응용 프로그램과 동일한 AppDomain/응용 프로그램 풀/작업자 프로세스에서 실행할 수 있습니다. 그러나 WCF 및 IIS 6.0 모두 커널 모드 HTTP 스택 (http.sys)을 사용 하므로 iis 6.0은 IIS 5.1와 달리 포트 80을 동일한 컴퓨터에서 실행 되는 다른 자체 호스팅 WCF 서비스와 공유할 수 있습니다.
+ IIS에서 호스팅되는 서비스는 HTTP 전송만 사용할 수 있습니다. IIS 5.1의 구현에는 Windows XP에 몇 가지 제한 사항이 도입 되었습니다. Windows XP에서 IIS 5.1에 의해 WCF 서비스에 제공 되는 메시지 기반 활성화는 동일한 컴퓨터에서 자체 호스팅되는 다른 WCF 서비스에서 포트 80을 사용 하 여 통신 하는 것을 차단 합니다. WCF 서비스는 Windows Server 2003에서 IIS 6.0에 의해 호스팅되는 경우 다른 응용 프로그램과 동일한 AppDomain/응용 프로그램 풀/작업자 프로세스에서 실행할 수 있습니다. 그러나 WCF 및 IIS 6.0 모두 커널 모드 HTTP 스택 (http.sys)을 사용 하므로 iis 6.0은 IIS 5.1와 달리 포트 80을 동일한 컴퓨터에서 실행 되는 다른 자체 호스팅 WCF 서비스와 공유할 수 있습니다.
 
 ### <a name="windows-process-activation-service-was"></a>WAS(Windows Process Activation Service)
 
@@ -57,9 +57,9 @@ WAS (windows Process Activation Service)는 windows Vista 에서도 제공 되�
 
 |호스팅 환경|사용 가능한 플랫폼|지원되는 전송|프로세스 및 AppDomain 재활용|
 |-------------------------|---------------------------|--------------------------|-------------------------------------|
-|관리되는 애플리케이션("자체 호스팅")|[!INCLUDE[wxp](../../../includes/wxp-md.md)], Windows Server 2003, Windows Vista<br /><br /> Windows Server 2008|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|아니요|
-|Windows 서비스(이전의 NT 서비스)|[!INCLUDE[wxp](../../../includes/wxp-md.md)], Windows Server 2003, Windows Vista<br /><br /> Windows Server 2008|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|아니요|
-|IIS 5.1|[!INCLUDE[wxp](../../../includes/wxp-md.md)]|HTTP|예|
+|관리되는 애플리케이션("자체 호스팅")|Windows XP, Windows Server 2003, Windows Vista,<br /><br /> Windows Server 2008|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|아니요|
+|Windows 서비스(이전의 NT 서비스)|Windows XP, Windows Server 2003, Windows Vista,<br /><br /> Windows Server 2008|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|아니요|
+|IIS 5.1|Windows XP|HTTP|예|
 |IIS 6.0|Windows Server 2003|HTTP|예|
 |WAS(Windows Process Activation Service)|Windows Vista, Windows Server 2008|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|예|
 

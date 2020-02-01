@@ -2,12 +2,12 @@
 title: 서비스 ID 샘플
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: 375246127b6b39440360f48fc7b24bd0388a35e5
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 868bd6e0ac7429224462c973c1c48132ec3860ba
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347932"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919372"
 ---
 # <a name="service-identity-sample"></a>서비스 ID 샘플
 이 Service Identity 샘플에서는 서비스의 ID를 설정하는 방법을 보여 줍니다. 클라이언트는 디자인 타임에 서비스의 메타데이터를 사용하여 ID를 검색한 다음 런타임에 서비스의 ID를 인증할 수 있습니다. 서비스 ID의 개념을 사용하면 클라이언트가 작업을 호출하기 전에 서비스를 인증함으로써 인증되지 않은 호출로부터 클라이언트를 보호할 수 있습니다. 보안 연결에서는 또한 서비스가 클라이언트의 액세스를 허용하기 전에 클라이언트의 자격 증명을 인증하는데, 이 부분은 샘플에서 다루지 않습니다. 서버 인증을 표시 하는 [클라이언트](../../../../docs/framework/wcf/samples/client.md) 의 샘플을 참조 하세요.
@@ -115,7 +115,7 @@ class CustomIdentityVerifier : IdentityVerifier
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>단일 컴퓨터 구성에서 샘플을 실행하려면
 
-1. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 또는 Windows Vista에서 MMC 스냅인 도구를 사용 하 여 Id 솔루션 폴더의 Identity .pfx 인증서 파일을 LocalMachine/My (Personal) 인증서 저장소로 가져옵니다. 이 파일은 암호로 보호됩니다. 가져오는 동안 암호를 묻는 메시지가 나타납니다. 암호 상자에 `xyz`을 입력 합니다. 자세한 내용은 [방법: MMC 스냅인을 사용 하 여 인증서 보기](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) 항목을 참조 하세요. 이 작업이 완료 되 면 관리자 권한으로 Visual Studio에 대 한 개발자 명령 프롬프트에서 Setup.exe를 실행 합니다. 그러면이 인증서가 클라이언트에서 사용 하기 위해 CurrentUser/Trusted 사용자 저장소로 복사 됩니다.
+1. Windows XP 또는 Windows Vista에서 MMC 스냅인 도구를 사용 하 여 Id 솔루션 폴더의 Identity .pfx 인증서 파일을 LocalMachine/My (Personal) 인증서 저장소로 가져옵니다. 이 파일은 암호로 보호됩니다. 가져오는 동안 암호를 묻는 메시지가 나타납니다. 암호 상자에 `xyz`을 입력 합니다. 자세한 내용은 [방법: MMC 스냅인을 사용 하 여 인증서 보기](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) 항목을 참조 하세요. 이 작업이 완료 되 면 관리자 권한으로 Visual Studio에 대 한 개발자 명령 프롬프트에서 Setup.exe를 실행 합니다. 그러면이 인증서가 클라이언트에서 사용 하기 위해 CurrentUser/Trusted 사용자 저장소로 복사 됩니다.
 
 2. Windows Server 2003에서는 관리자 권한으로 Visual Studio 2012 명령 프롬프트 내의 샘플 설치 폴더에서 Setup.exe를 실행 합니다. 이 작업은 샘플 실행에 필요한 모든 인증서를 설치합니다.
 

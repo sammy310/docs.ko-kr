@@ -2,12 +2,12 @@
 title: 피어 확인자
 ms.date: 03/30/2017
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-ms.openlocfilehash: 33afffcbf11d757dfd003d1fd2bc9a17a3047a69
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 3bcdeffac3673c1c464a35d8b6e089efd7394907
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837378"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919235"
 ---
 # <a name="peer-resolvers"></a>피어 확인자
 메시에 연결하려면 피어 노드에 다른 노드의 IP 주소가 필요합니다. IP 주소를 가져오려면 메시 ID를 사용하고 해당 메시 ID로 등록된 노드에 해당하는 주소 목록을 반환하는 확인자 서비스에 연결합니다. 확인자는 메시의 각 노드가 서비스에 등록되게 하여 만드는 등록된 주소 목록을 유지합니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "74837378"
  기본적으로 피어 채널은 PNRP 피어 확인자 서비스를 사용하여 메시의 피어 및 인접한 환경을 검색합니다. PNRP가 사용 가능 하지 않거나 적절 하지 않은 상황/플랫폼의 경우 WCF (Windows Communication Foundation)는 서버 기반 검색 서비스인 <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>를 제공 합니다. <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract> 인터페이스를 구현하는 클래스를 작성하여 사용자 지정 확인자 서비스를 명시적으로 정의할 수도 있습니다.  
   
 ### <a name="peer-name-resolution-protocol-pnrp"></a>PNRP(피어 이름 확인 프로토콜)  
- Windows Vista의 기본 해결 프로그램인 PNRP는 배포 되지 않은 배포 된 이름 확인자 서비스입니다. 고급 네트워킹 팩을 설치하여 [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)]에서 PNRP를 사용할 수도 있습니다. 동일한 버전의 PNRP를 실행하는 두 개의 클라이언트는 개입하는 회사 방화벽 없음 등 특정 조건을 만족할 경우 이 프로토콜을 사용하여 서로를 찾을 수 있습니다. Windows Vista와 함께 제공 되는 PNRP 버전은 고급 네트워킹 팩에 포함 된 버전 보다 최신 버전입니다. Microsoft 다운로드 센터에서 [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)]용 PNRP 업데이트를 확인하세요.  
+ Windows Vista의 기본 해결 프로그램인 PNRP는 배포 되지 않은 배포 된 이름 확인자 서비스입니다. Windows XP s p 2에서는 고급 네트워킹 팩을 설치 하 여 PNRP를 사용할 수도 있습니다. 동일한 버전의 PNRP를 실행하는 두 개의 클라이언트는 개입하는 회사 방화벽 없음 등 특정 조건을 만족할 경우 이 프로토콜을 사용하여 서로를 찾을 수 있습니다. Windows Vista와 함께 제공 되는 PNRP 버전은 고급 네트워킹 팩에 포함 된 버전 보다 최신 버전입니다. Microsoft 다운로드 센터에서 Windows XP s p 2 용 PNRP 업데이트를 확인 합니다.  
   
 ### <a name="custom-resolver-services"></a>사용자 지정 확인자 서비스  
  PNRP 서비스를 사용할 수 없거나 메시 형성을 완벽하게 제어하려면 서버 기반의 사용자 지정 확인자 서비스를 사용합니다. 이 서비스는 <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract> 인터페이스를 구현하는 확인자 클래스를 작성하거나 Windows 제공 기본 구현인 <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>를 사용하여 명시적으로 정의할 수 있습니다.  

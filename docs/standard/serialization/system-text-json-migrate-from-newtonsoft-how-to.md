@@ -11,32 +11,32 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 588a36c70d31883f79a4449d69cb4ba3b4239b9f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 221d19ee6441614324d375b66e8b13a90f683890
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741557"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921285"
 ---
-# <a name="how-to-migrate-from-opno-locnewtonsoftjson-to-opno-locsystemtextjson"></a>[!OP.NO-LOC(Newtonsoft.Json)]에서 [!OP.NO-LOC(System.Text.Json)]로 마이그레이션하는 방법
+# <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Newtonsoft.json에서 System.object로 마이그레이션하는 방법
 
-이 문서에서는 [[!OP.NO-LOC(Newtonsoft.Json)]](https://www.newtonsoft.com/json) 에서 <xref:[!OP.NO-LOC(System.Text.Json)]>로 마이그레이션하는 방법을 보여 줍니다.
+이 문서에서는 [newtonsoft.json](https://www.newtonsoft.com/json) 에서 <xref:System.Text.Json>로 마이그레이션하는 방법을 보여 줍니다.
 
-`[!OP.NO-LOC(System.Text.Json)]`는 주로 성능, 보안 및 표준 준수에 중점을 둘 것입니다. 기본 동작에는 몇 가지 주요 차이점이 있으며 `[!OP.NO-LOC(Newtonsoft.Json)]`기능 패리티를 목표로 하지 않습니다. 일부 시나리오에서는 `[!OP.NO-LOC(System.Text.Json)]`에 기본 제공 기능이 없지만 권장 해결 방법이 있습니다. 다른 시나리오의 경우 해결 방법은 실용적이 지 않습니다. 응용 프로그램이 누락 된 기능에 종속 된 경우 시나리오에 대 한 지원을 추가할 수 있는지 확인 하는 [문제](https://github.com/dotnet/runtime/issues/new) 를 확인 하는 것이 좋습니다.
+`System.Text.Json`는 주로 성능, 보안 및 표준 준수에 중점을 둘 것입니다. 기본 동작에는 몇 가지 주요 차이점이 있으며 `Newtonsoft.Json`기능 패리티를 목표로 하지 않습니다. 일부 시나리오에서는 `System.Text.Json`에 기본 제공 기능이 없지만 권장 해결 방법이 있습니다. 다른 시나리오의 경우 해결 방법은 실용적이 지 않습니다. 응용 프로그램이 누락 된 기능에 종속 된 경우 시나리오에 대 한 지원을 추가할 수 있는지 확인 하는 [문제](https://github.com/dotnet/runtime/issues/new) 를 확인 하는 것이 좋습니다.
 
-<!-- For information about which features might be added in future releases, see the [Roadmap](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/[!OP.NO-LOC(System.Text.Json)]/roadmap/README.md). [Restore this when the roadmap is updated.]-->
+<!-- For information about which features might be added in future releases, see the [Roadmap](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md). [Restore this when the roadmap is updated.]-->
 
-이 문서의 대부분은 <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializer> API를 사용 하는 방법에 대 한 것 이지만 <xref:[!OP.NO-LOC(System.Text.Json)].JsonDocument> (문서 개체 모델 또는 DOM을 나타냄), <xref:[!OP.NO-LOC(System.Text.Json)].Utf8JsonReader>및 <xref:[!OP.NO-LOC(System.Text.Json)].Utf8JsonWriter> 유형을 사용 하는 방법에 대 한 지침도 포함 되어 있습니다.
+이 문서의 대부분은 <xref:System.Text.Json.JsonSerializer> API를 사용 하는 방법에 대 한 것 이지만 <xref:System.Text.Json.JsonDocument> (문서 개체 모델 또는 DOM을 나타냄), <xref:System.Text.Json.Utf8JsonReader>및 <xref:System.Text.Json.Utf8JsonWriter> 유형을 사용 하는 방법에 대 한 지침도 포함 되어 있습니다.
 
-## <a name="table-of-differences-between-opno-locnewtonsoftjson-and-opno-locsystemtextjson"></a>[!OP.NO-LOC(Newtonsoft.Json)]와 [!OP.NO-LOC(System.Text.Json)] 간의 차이점 표
+## <a name="table-of-differences-between-newtonsoftjson-and-systemtextjson"></a>Newtonsoft.json와 System.object 간의 차이점 표
 
-다음 표에서는 `[!OP.NO-LOC(Newtonsoft.Json)]` 기능 및 `[!OP.NO-LOC(System.Text.Json)]`에 해당 하는 항목을 보여 줍니다. 이에 해당 하는 항목은 다음과 같습니다.
+다음 표에서는 `Newtonsoft.Json` 기능 및 `System.Text.Json`에 해당 하는 항목을 보여 줍니다. 이에 해당 하는 항목은 다음과 같습니다.
 
-* 기본 제공 기능에서 지원 됩니다. `[!OP.NO-LOC(System.Text.Json)]`에서 유사한 동작을 가져오려면 특성 또는 전역 옵션을 사용 해야 할 수 있습니다.
-* 지원 되지 않으므로 해결 방법이 가능 합니다. 해결 방법은 `[!OP.NO-LOC(Newtonsoft.Json)]` 기능으로 전체 패리티를 제공 하지 않을 수 있는 [사용자 지정 변환기](system-text-json-converters-how-to.md)입니다. 몇 가지 예제 코드는 예제로 제공 됩니다. 이러한 `[!OP.NO-LOC(Newtonsoft.Json)]` 기능을 사용 하는 경우 마이그레이션을 수행 하려면 .NET 개체 모델이 나 기타 코드 변경 내용을 수정 해야 합니다.
-* 지원 되지 않으므로 해결 방법이 실용적이 지 않습니다. 이러한 `[!OP.NO-LOC(Newtonsoft.Json)]` 기능을 사용 하는 경우에는 중요 한 변경 없이 마이그레이션을 수행할 수 없습니다.
+* 기본 제공 기능에서 지원 됩니다. `System.Text.Json`에서 유사한 동작을 가져오려면 특성 또는 전역 옵션을 사용 해야 할 수 있습니다.
+* 지원 되지 않으므로 해결 방법이 가능 합니다. 해결 방법은 `Newtonsoft.Json` 기능으로 전체 패리티를 제공 하지 않을 수 있는 [사용자 지정 변환기](system-text-json-converters-how-to.md)입니다. 몇 가지 예제 코드는 예제로 제공 됩니다. 이러한 `Newtonsoft.Json` 기능을 사용 하는 경우 마이그레이션을 수행 하려면 .NET 개체 모델이 나 기타 코드 변경 내용을 수정 해야 합니다.
+* 지원 되지 않으므로 해결 방법이 실용적이 지 않습니다. 이러한 `Newtonsoft.Json` 기능을 사용 하는 경우에는 중요 한 변경 없이 마이그레이션을 수행할 수 없습니다.
 
-| [!OP.NO-LOC(Newtonsoft.Json)] 기능                               | [!OP.NO-LOC(System.Text.Json)] 동일 |
+| Newtonsoft.json 기능                               | System.object와 동일 합니다. |
 |-------------------------------------------------------|-----------------------------|
 | 기본적으로 대/소문자를 구분 하지 않는 deserialization           | ✔️ [PropertyNameCaseInsensitive 전역 설정](#case-insensitive-deserialization) |
 | 카멜식 대/소문자 속성 이름                             | ✔️ [Propertynamingpolicy 전역 설정](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) |
@@ -75,33 +75,33 @@ ms.locfileid: "76741557"
 | 문자열 값을 작은따옴표로 묶습니다.              | ❌ [지원 되지 않음](#json-strings-property-names-and-string-values) |
 | 문자열 속성에 문자열이 아닌 JSON 값 허용    | ❌ [지원 되지 않음](#non-string-values-for-string-properties) |
 
-이는 `[!OP.NO-LOC(Newtonsoft.Json)]` 기능에 대 한 완전 한 목록이 아닙니다. 이 목록에는 [GitHub 문제](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-[!OP.NO-LOC(System.Text.Json)]) 또는 [stackoverflow](https://stackoverflow.com/questions/tagged/system.text.json) 게시물에서 요청 된 많은 시나리오가 포함 되어 있습니다. 여기에 나열 된 시나리오 중에서 현재 샘플 코드가 없는 시나리오에 대 한 해결 방법을 구현 하는 경우 솔루션을 공유 하려면이 페이지의 [피드백 섹션](/dotnet/standard/serialization/system-text-json-migrate-from-newtonsoft-how-to#feedback) 에서 **이 페이지** 를 선택 합니다. 그러면 GitHub 문제가 만들어지고이 페이지의 맨 아래에 나열 됩니다.
+이는 `Newtonsoft.Json` 기능에 대 한 완전 한 목록이 아닙니다. 이 목록에는 [GitHub 문제](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json) 또는 [stackoverflow](https://stackoverflow.com/questions/tagged/system.text.json) 게시물에서 요청 된 많은 시나리오가 포함 되어 있습니다. 여기에 나열 된 시나리오 중에서 현재 샘플 코드가 없는 시나리오에 대 한 해결 방법을 구현 하는 경우 솔루션을 공유 하려면이 페이지의 [피드백 섹션](/dotnet/standard/serialization/system-text-json-migrate-from-newtonsoft-how-to#feedback) 에서 **이 페이지** 를 선택 합니다. 그러면 GitHub 문제가 만들어지고이 페이지의 맨 아래에 나열 됩니다.
 
-## <a name="differences-in-default-jsonserializer-behavior-compared-to-opno-locnewtonsoftjson"></a>[!OP.NO-LOC(Newtonsoft.Json)]에 비해 기본 JsonSerializer 동작의 차이점
+## <a name="differences-in-default-jsonserializer-behavior-compared-to-newtonsoftjson"></a>Newtonsoft.json에 비해 기본 JsonSerializer 동작의 차이점
 
-<xref:[!OP.NO-LOC(System.Text.Json)]>은 기본적으로 엄격 하며, 호출자를 대신 하 여 추측 또는 해석을 방지 하 여 결정적 동작을 강조 합니다. 라이브러리는 이러한 방식으로 성능 및 보안을 위해 의도적으로 설계 되었습니다. `[!OP.NO-LOC(Newtonsoft.Json)]`은 기본적으로 유연 합니다. 이러한 기본적인 디자인의 차이점은 기본 동작의 다음과 같은 몇 가지 중요 한 차이점입니다.
+<xref:System.Text.Json>은 기본적으로 엄격 하며, 호출자를 대신 하 여 추측 또는 해석을 방지 하 여 결정적 동작을 강조 합니다. 라이브러리는 이러한 방식으로 성능 및 보안을 위해 의도적으로 설계 되었습니다. `Newtonsoft.Json`은 기본적으로 유연 합니다. 이러한 기본적인 디자인의 차이점은 기본 동작의 다음과 같은 몇 가지 중요 한 차이점입니다.
 
 ### <a name="case-insensitive-deserialization"></a>대/소문자를 구분 하지 않는 deserialization 
 
-Deserialization을 수행 하는 동안 `[!OP.NO-LOC(Newtonsoft.Json)]`는 기본적으로 대/소문자를 구분 하지 않는 속성 이름을 비교 합니다. <xref:[!OP.NO-LOC(System.Text.Json)]> 기본값은 대/소문자를 구분 하며,이는 정확히 일치 하는 항목을 수행 하기 때문에 더 나은 성능을 제공 합니다. 대/소문자를 구분 하지 않는 일치를 수행 하는 방법은 대/소문자를 구분 하지 않는 [속성 일치](system-text-json-how-to.md#case-insensitive-property-matching)를 참조 하세요.
+Deserialization을 수행 하는 동안 `Newtonsoft.Json`는 기본적으로 대/소문자를 구분 하지 않는 속성 이름을 비교 합니다. <xref:System.Text.Json> 기본값은 대/소문자를 구분 하며,이는 정확히 일치 하는 항목을 수행 하기 때문에 더 나은 성능을 제공 합니다. 대/소문자를 구분 하지 않는 일치를 수행 하는 방법은 대/소문자를 구분 하지 않는 [속성 일치](system-text-json-how-to.md#case-insensitive-property-matching)를 참조 하세요.
 
-ASP.NET Core를 사용 하 여 간접적으로 `[!OP.NO-LOC(System.Text.Json)]`를 사용 하는 경우 `[!OP.NO-LOC(Newtonsoft.Json)]`와 같은 동작을 수행 하기 위해 아무것도 수행할 필요가 없습니다. ASP.NET Core는 [카멜식 대/소문자 속성 이름](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) 및 대/소문자를 구분 하지 않는 일치를 `[!OP.NO-LOC(System.Text.Json)]`사용 하는 경우 해당 설정을 지정 합니다.
+ASP.NET Core를 사용 하 여 간접적으로 `System.Text.Json`를 사용 하는 경우 `Newtonsoft.Json`와 같은 동작을 수행 하기 위해 아무것도 수행할 필요가 없습니다. ASP.NET Core는 [카멜식 대/소문자 속성 이름](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) 및 대/소문자를 구분 하지 않는 일치를 `System.Text.Json`사용 하는 경우 해당 설정을 지정 합니다.
 
 ### <a name="minimal-character-escaping"></a>최소 문자 이스케이프
 
-Serialization 중에는 문자를 이스케이프 하지 않고 문자를 허용 하는 것에 대 한 `[!OP.NO-LOC(Newtonsoft.Json)]` 비교적 허용 됩니다. 즉, `xxxx` 문자 코드 포인트 인 `\uxxxx`로 대체 하지 않습니다. 이를 이스케이프 처리 하는 경우에는 문자 앞에 `\`을 내보내면 됩니다. 예를 들어 `"` `\"`됩니다. <xref:[!OP.NO-LOC(System.Text.Json)]>은 기본적으로 더 많은 문자를 이스케이프 하 여 XSS (교차 사이트 스크립팅) 또는 정보 공개 공격에 대해 심층 방어 보호를 제공 하며,이를 위해 6 문자 시퀀스를 사용 합니다. `[!OP.NO-LOC(System.Text.Json)]`은 기본적으로 ASCII가 아닌 모든 문자를 이스케이프 하므로 `[!OP.NO-LOC(Newtonsoft.Json)]`에서 `StringEscapeHandling.EscapeNonAscii`를 사용 하는 경우에는 아무것도 수행할 필요가 없습니다. 또한 `[!OP.NO-LOC(System.Text.Json)]`는 기본적으로 HTML 구분 문자를 이스케이프 합니다. 기본 `[!OP.NO-LOC(System.Text.Json)]` 동작을 재정의 하는 방법에 대 한 자세한 내용은 [문자 인코딩 사용자 지정](system-text-json-how-to.md#customize-character-encoding)을 참조 하세요.
+Serialization 중에는 문자를 이스케이프 하지 않고 문자를 허용 하는 것에 대 한 `Newtonsoft.Json` 비교적 허용 됩니다. 즉, `xxxx` 문자 코드 포인트 인 `\uxxxx`로 대체 하지 않습니다. 이를 이스케이프 처리 하는 경우에는 문자 앞에 `\`을 내보내면 됩니다. 예를 들어 `"` `\"`됩니다. <xref:System.Text.Json>은 기본적으로 더 많은 문자를 이스케이프 하 여 XSS (교차 사이트 스크립팅) 또는 정보 공개 공격에 대해 심층 방어 보호를 제공 하며,이를 위해 6 문자 시퀀스를 사용 합니다. `System.Text.Json`은 기본적으로 ASCII가 아닌 모든 문자를 이스케이프 하므로 `Newtonsoft.Json`에서 `StringEscapeHandling.EscapeNonAscii`를 사용 하는 경우에는 아무것도 수행할 필요가 없습니다. 또한 `System.Text.Json`는 기본적으로 HTML 구분 문자를 이스케이프 합니다. 기본 `System.Text.Json` 동작을 재정의 하는 방법에 대 한 자세한 내용은 [문자 인코딩 사용자 지정](system-text-json-how-to.md#customize-character-encoding)을 참조 하세요.
 
 ### <a name="comments"></a>설명
 
-Deserialization을 수행 하는 동안 `[!OP.NO-LOC(Newtonsoft.Json)]`는 기본적으로 JSON의 주석을 무시 합니다. <xref:[!OP.NO-LOC(System.Text.Json)]> 기본값은 [RFC 8259](https://tools.ietf.org/html/rfc8259) 사양에 포함 되지 않기 때문에 주석에 대 한 예외를 throw 하는 것입니다. 주석을 허용 하는 방법에 대 한 자세한 내용은 [주석 및 후행 쉼표 허용](system-text-json-how-to.md#allow-comments-and-trailing-commas)을 참조 하세요.
+Deserialization을 수행 하는 동안 `Newtonsoft.Json`는 기본적으로 JSON의 주석을 무시 합니다. <xref:System.Text.Json> 기본값은 [RFC 8259](https://tools.ietf.org/html/rfc8259) 사양에 포함 되지 않기 때문에 주석에 대 한 예외를 throw 하는 것입니다. 주석을 허용 하는 방법에 대 한 자세한 내용은 [주석 및 후행 쉼표 허용](system-text-json-how-to.md#allow-comments-and-trailing-commas)을 참조 하세요.
 
 ### <a name="trailing-commas"></a>후행 쉼표
 
-Deserialization을 수행 하는 동안 `[!OP.NO-LOC(Newtonsoft.Json)]`는 기본적으로 후행 쉼표를 무시 합니다. 또한 여러 개의 후행 쉼표를 무시 합니다 (예: `[{"Color":"Red"},{"Color":"Green"},,]`). <xref:[!OP.NO-LOC(System.Text.Json)]> 기본값은 [RFC 8259](https://tools.ietf.org/html/rfc8259) 사양에서 허용 하지 않으므로 후행 쉼표에 대 한 예외를 throw 하는 것입니다. `[!OP.NO-LOC(System.Text.Json)]` 허용 하는 방법에 대 한 자세한 내용은 [주석 및 후행 쉼표 허용](system-text-json-how-to.md#allow-comments-and-trailing-commas)을 참조 하세요. 후행 쉼표를 여러 개 허용 하는 방법은 없습니다.
+Deserialization을 수행 하는 동안 `Newtonsoft.Json`는 기본적으로 후행 쉼표를 무시 합니다. 또한 여러 개의 후행 쉼표를 무시 합니다 (예: `[{"Color":"Red"},{"Color":"Green"},,]`). <xref:System.Text.Json> 기본값은 [RFC 8259](https://tools.ietf.org/html/rfc8259) 사양에서 허용 하지 않으므로 후행 쉼표에 대 한 예외를 throw 하는 것입니다. `System.Text.Json` 허용 하는 방법에 대 한 자세한 내용은 [주석 및 후행 쉼표 허용](system-text-json-how-to.md#allow-comments-and-trailing-commas)을 참조 하세요. 후행 쉼표를 여러 개 허용 하는 방법은 없습니다.
 
 ### <a name="converter-registration-precedence"></a>변환기 등록 우선 순위
 
-사용자 지정 변환기에 대 한 `[!OP.NO-LOC(Newtonsoft.Json)]` 등록 우선 순위는 다음과 같습니다.
+사용자 지정 변환기에 대 한 `Newtonsoft.Json` 등록 우선 순위는 다음과 같습니다.
 
 * 속성의 특성
 * 형식의 특성
@@ -109,10 +109,10 @@ Deserialization을 수행 하는 동안 `[!OP.NO-LOC(Newtonsoft.Json)]`는 기�
 
 이 순서는 `Converters` 컬렉션의 사용자 지정 변환기가 형식 수준에서 특성을 적용 하 여 등록 된 변환기에 의해 재정의 됨을 의미 합니다. 이러한 등록은 모두 속성 수준에서 특성에 의해 재정의 됩니다.
 
-사용자 지정 변환기에 대 한 <xref:[!OP.NO-LOC(System.Text.Json)]> 등록 우선 순위는 다릅니다.
+사용자 지정 변환기에 대 한 <xref:System.Text.Json> 등록 우선 순위는 다릅니다.
 
 * 속성의 특성
-* <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.Converters> 컬렉션
+* <xref:System.Text.Json.JsonSerializerOptions.Converters> 컬렉션
 * 형식의 특성
 
 여기서 차이점은 `Converters` 컬렉션의 사용자 지정 변환기가 형식 수준에서 특성을 재정의 한다는 것입니다. 이 우선 순위를 설정 하는 것은 런타임 변경 시 디자인 타임 선택 항목을 재정의 하는 것입니다. 우선 순위를 변경할 수 있는 방법은 없습니다.
@@ -121,11 +121,11 @@ Deserialization을 수행 하는 동안 `[!OP.NO-LOC(Newtonsoft.Json)]`는 기�
 
 ### <a name="maximum-depth"></a>최대 깊이
 
-`[!OP.NO-LOC(Newtonsoft.Json)]`은 기본적으로 최대 깊이 제한이 없습니다. <xref:[!OP.NO-LOC(System.Text.Json)]>의 경우 기본 제한은 64이 고 <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.MaxDepth?displayProperty=nameWithType>을 설정 하 여 구성할 수 있습니다.
+`Newtonsoft.Json`은 기본적으로 최대 깊이 제한이 없습니다. <xref:System.Text.Json>의 경우 기본 제한은 64이 고 <xref:System.Text.Json.JsonSerializerOptions.MaxDepth?displayProperty=nameWithType>을 설정 하 여 구성할 수 있습니다.
 
 ### <a name="json-strings-property-names-and-string-values"></a>JSON 문자열 (속성 이름 및 문자열 값)
 
-Deserialization을 수행 하는 동안 `[!OP.NO-LOC(Newtonsoft.Json)]` 큰따옴표, 작은따옴표 또는 따옴표 없이 속성 이름을 허용 합니다. 큰따옴표 또는 작은따옴표로 묶은 문자열 값을 허용 합니다. 예를 들어 `[!OP.NO-LOC(Newtonsoft.Json)]`는 다음 JSON을 허용 합니다.
+Deserialization을 수행 하는 동안 `Newtonsoft.Json` 큰따옴표, 작은따옴표 또는 따옴표 없이 속성 이름을 허용 합니다. 큰따옴표 또는 작은따옴표로 묶은 문자열 값을 허용 합니다. 예를 들어 `Newtonsoft.Json`는 다음 JSON을 허용 합니다.
 
 ```json
 {
@@ -135,9 +135,9 @@ Deserialization을 수행 하는 동안 `[!OP.NO-LOC(Newtonsoft.Json)]` 큰따�
 }
 ```
 
-`[!OP.NO-LOC(System.Text.Json)]`는 [RFC 8259](https://tools.ietf.org/html/rfc8259) 사양에서 필요 하며 유효한 JSON으로 간주 되는 유일한 형식 이므로 속성 이름과 문자열 값을 큰따옴표로만 허용 합니다.
+`System.Text.Json`는 [RFC 8259](https://tools.ietf.org/html/rfc8259) 사양에서 필요 하며 유효한 JSON으로 간주 되는 유일한 형식 이므로 속성 이름과 문자열 값을 큰따옴표로만 허용 합니다.
 
-작은따옴표로 묶인 값을 사용 하면 다음과 같은 메시지와 함께 [JsonException](xref:[!OP.NO-LOC(System.Text.Json)].JsonException) 이 발생 합니다.
+작은따옴표로 묶인 값을 사용 하면 다음과 같은 메시지와 함께 [JsonException](xref:System.Text.Json.JsonException) 이 발생 합니다.
 
 ```
 ''' is an invalid start of a value.
@@ -145,7 +145,7 @@ Deserialization을 수행 하는 동안 `[!OP.NO-LOC(Newtonsoft.Json)]` 큰따�
 
 ### <a name="non-string-values-for-string-properties"></a>문자열 속성에 대 한 문자열이 아닌 값
 
-문자열 형식의 속성에 대 한 deserialization을 위해 숫자, 리터럴 `true` 및 `false`와 같은 문자열이 아닌 값을 `[!OP.NO-LOC(Newtonsoft.Json)]` 허용 합니다. 다음 클래스를 성공적으로 deserialize `[!OP.NO-LOC(Newtonsoft.Json)]` JSON의 예는 다음과 같습니다.
+문자열 형식의 속성에 대 한 deserialization을 위해 숫자, 리터럴 `true` 및 `false`와 같은 문자열이 아닌 값을 `Newtonsoft.Json` 허용 합니다. 다음 클래스를 성공적으로 deserialize `Newtonsoft.Json` JSON의 예는 다음과 같습니다.
 
 ```json
 {
@@ -164,7 +164,7 @@ public class ExampleClass
 }
 ```
 
-`[!OP.NO-LOC(System.Text.Json)]`은 문자열이 아닌 값을 문자열 속성으로 deserialize 하지 않습니다. 문자열 필드에 대해 문자열이 아닌 값을 받으면 다음과 같은 메시지와 함께 [JsonException](xref:[!OP.NO-LOC(System.Text.Json)].JsonException) 이 발생 합니다.
+`System.Text.Json`은 문자열이 아닌 값을 문자열 속성으로 deserialize 하지 않습니다. 문자열 필드에 대해 문자열이 아닌 값을 받으면 다음과 같은 메시지와 함께 [JsonException](xref:System.Text.Json.JsonException) 이 발생 합니다.
 
 ```
 The JSON value could not be converted to System.String.
@@ -172,11 +172,11 @@ The JSON value could not be converted to System.String.
 
 ## <a name="scenarios-using-jsonserializer-that-require-workarounds"></a>해결 방법이 필요한 JsonSerializer를 사용 하는 시나리오
 
-다음 시나리오는 기본 제공 기능에서 지원 되지 않지만 해결 방법이 가능 합니다. 해결 방법은 `[!OP.NO-LOC(Newtonsoft.Json)]` 기능으로 전체 패리티를 제공 하지 않을 수 있는 [사용자 지정 변환기](system-text-json-converters-how-to.md)입니다. 몇 가지 예제 코드는 예제로 제공 됩니다. 이러한 `[!OP.NO-LOC(Newtonsoft.Json)]` 기능을 사용 하는 경우 마이그레이션을 수행 하려면 .NET 개체 모델이 나 기타 코드 변경 내용을 수정 해야 합니다.
+다음 시나리오는 기본 제공 기능에서 지원 되지 않지만 해결 방법이 가능 합니다. 해결 방법은 `Newtonsoft.Json` 기능으로 전체 패리티를 제공 하지 않을 수 있는 [사용자 지정 변환기](system-text-json-converters-how-to.md)입니다. 몇 가지 예제 코드는 예제로 제공 됩니다. 이러한 `Newtonsoft.Json` 기능을 사용 하는 경우 마이그레이션을 수행 하려면 .NET 개체 모델이 나 기타 코드 변경 내용을 수정 해야 합니다.
 
 ### <a name="types-without-built-in-support"></a>기본 제공 지원이 없는 형식
 
-<xref:[!OP.NO-LOC(System.Text.Json)]>는 다음 형식에 대 한 기본 제공 지원을 제공 하지 않습니다.
+<xref:System.Text.Json>는 다음 형식에 대 한 기본 제공 지원을 제공 하지 않습니다.
 
 * <xref:System.Data.DataTable> 및 관련 형식
 * F#[구분 된 공용 구조체](../../fsharp/language-reference/discriminated-unions.md), [레코드 형식](../../fsharp/language-reference/records.md)및 [익명 레코드 형식과](../../fsharp/language-reference/anonymous-records.md)같은 형식입니다.
@@ -192,53 +192,60 @@ The JSON value could not be converted to System.String.
 
 ### <a name="quoted-numbers"></a>따옴표 붙은 숫자
 
-JSON 문자열로 표시 되는 숫자를 직렬화 하거나 deserialize 할 수 `[!OP.NO-LOC(Newtonsoft.Json)]` (따옴표로 묶인). 예를 들어, `{"DegreesCelsius":23}`대신 `{"DegreesCelsius":"23"}`를 수락할 수 있습니다. <xref:[!OP.NO-LOC(System.Text.Json)]>에서 해당 동작을 사용 하도록 설정 하려면 다음 예제와 같이 사용자 지정 변환기를 구현 합니다. 변환기는 `long`으로 정의 된 속성을 처리 합니다.
+JSON 문자열로 표시 되는 숫자를 직렬화 하거나 deserialize 할 수 `Newtonsoft.Json` (따옴표로 묶인). 예를 들어, `{"DegreesCelsius":23}`대신 `{"DegreesCelsius":"23"}`를 수락할 수 있습니다. <xref:System.Text.Json>에서 해당 동작을 사용 하도록 설정 하려면 다음 예제와 같이 사용자 지정 변환기를 구현 합니다. 변환기는 `long`으로 정의 된 속성을 처리 합니다.
 
 * JSON 문자열로 serialize 합니다. 
 * Deserialize 하는 동안 따옴표 안의 JSON 숫자 및 숫자를 허용 합니다.
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/LongToStringConverter.cs)]
 
-개별 `long` 속성에서 [특성을 사용](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-property) 하거나 <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.Converters> 컬렉션에 [변환기를 추가](system-text-json-converters-how-to.md#registration-sample---converters-collection) 하 여이 사용자 지정 변환기를 등록 합니다.
+개별 `long` 속성에서 [특성을 사용](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-property) 하거나 <xref:System.Text.Json.JsonSerializerOptions.Converters> 컬렉션에 [변환기를 추가](system-text-json-converters-how-to.md#registration-sample---converters-collection) 하 여이 사용자 지정 변환기를 등록 합니다.
 
 ### <a name="dictionary-with-non-string-key"></a>문자열이 아닌 키를 포함 하는 사전
 
-`[!OP.NO-LOC(Newtonsoft.Json)]`는 `Dictionary<TKey, TValue>`형식의 컬렉션을 지원 합니다. <xref:[!OP.NO-LOC(System.Text.Json)]>의 사전 컬렉션에 대 한 기본 제공 지원은 `Dictionary<string, TValue>`으로 제한 됩니다. 즉, 키는 문자열 이어야 합니다.
+`Newtonsoft.Json`는 `Dictionary<TKey, TValue>`형식의 컬렉션을 지원 합니다. <xref:System.Text.Json>의 사전 컬렉션에 대 한 기본 제공 지원은 `Dictionary<string, TValue>`으로 제한 됩니다. 즉, 키는 문자열 이어야 합니다.
 
 정수 또는 다른 형식을 키로 사용 하 여 사전을 지원 하려면 [사용자 지정 변환기를 작성 하는 방법](system-text-json-converters-how-to.md#support-dictionary-with-non-string-key)의 예제와 같은 변환기를 만듭니다.
 
 ### <a name="polymorphic-serialization"></a>다형 serialization
 
-`[!OP.NO-LOC(Newtonsoft.Json)]`는 다형성 serialization을 자동으로 수행 합니다. <xref:[!OP.NO-LOC(System.Text.Json)]>의 제한 된 다형성 serialization 기능에 대 한 자세한 내용은 [파생 클래스의 속성 직렬화](system-text-json-how-to.md#serialize-properties-of-derived-classes)를 참조 하세요.
+`Newtonsoft.Json`는 다형성 serialization을 자동으로 수행 합니다. <xref:System.Text.Json>의 제한 된 다형성 serialization 기능에 대 한 자세한 내용은 [파생 클래스의 속성 직렬화](system-text-json-how-to.md#serialize-properties-of-derived-classes)를 참조 하세요.
 
 `object`형식으로 파생 클래스를 포함할 수 있는 속성을 정의 하는 방법을 설명 합니다. 이렇게 할 수 없는 경우 [사용자 지정 변환기를 작성 하는 방법](system-text-json-converters-how-to.md#support-polymorphic-deserialization)의 예제와 같이 전체 상속 형식 계층 구조에 대 한 `Write` 메서드를 사용 하 여 변환기를 만드는 것이 또 다른 옵션입니다.
 
 ### <a name="polymorphic-deserialization"></a>다형 deserialization
 
-`[!OP.NO-LOC(Newtonsoft.Json)]`에는 직렬화 하는 동안 JSON에 형식 이름 메타 데이터를 추가 하는 `TypeNameHandling` 설정이 있습니다. Deserialize 하는 동안 메타 데이터를 사용 하 여 다형 deserialization을 수행 합니다. <xref:[!OP.NO-LOC(System.Text.Json)]>는 다형성 [serialization](system-text-json-how-to.md#serialize-properties-of-derived-classes) 의 제한 된 범위를 수행할 수 있지만 다형성 deserialization은 수행할 수 없습니다.
+`Newtonsoft.Json`에는 직렬화 하는 동안 JSON에 형식 이름 메타 데이터를 추가 하는 `TypeNameHandling` 설정이 있습니다. Deserialize 하는 동안 메타 데이터를 사용 하 여 다형 deserialization을 수행 합니다. <xref:System.Text.Json>는 다형성 [serialization](system-text-json-how-to.md#serialize-properties-of-derived-classes) 의 제한 된 범위를 수행할 수 있지만 다형성 deserialization은 수행할 수 없습니다.
 
 다형 deserialization을 지원 하려면 [사용자 지정 변환기를 작성 하는 방법](system-text-json-converters-how-to.md#support-polymorphic-deserialization)의 예제와 같은 변환기를 만듭니다.
 
 ### <a name="deserialization-of-object-properties"></a>개체 속성 Deserialization
 
-`[!OP.NO-LOC(Newtonsoft.Json)]`에서 POCOs의 속성 또는 `Dictionary<string, object>`형식의 사전에 `object` 속성을 deserialize 합니다.
+`Newtonsoft.Json` deserialize 할 때 <xref:System.Object>합니다.
 
 * JSON 페이로드의 기본 값 형식 (`null`제외)을 유추 하 고 저장 된 `string`, `long`, `double`, `boolean`또는 `DateTime`를 boxed 개체로 반환 합니다. *기본 값* 은 json number, string, `true`, `false`, `null`등의 단일 json 값입니다.
 * JSON 페이로드의 복합 값에 대 한 `JObject` 또는 `JArray`을 반환 합니다. *복합 값* 은 중괄호 (`{}`) 내에 있는 JSON 키-값 쌍의 컬렉션 이거나 대괄호 안에 있는 값 목록 (`[]`)입니다. 중괄호 또는 대괄호 안의 속성 및 값에는 추가 속성이 나 값이 있을 수 있습니다.
 * 페이로드에 `null` JSON 리터럴이 있는 경우 null 참조를 반환 합니다.
 
-<xref:[!OP.NO-LOC(System.Text.Json)]>은 `System.Object` 속성 또는 사전 값 내에서 기본 값과 복합 값 모두에 대해 boxed `JsonElement`를 저장 합니다. 그러나 `[!OP.NO-LOC(Newtonsoft.Json)]`와 동일 하 게 `null`를 처리 하 고 페이로드에 `null` JSON 리터럴이 있는 경우 null 참조를 반환 합니다.
+<xref:System.Text.Json>는 <xref:System.Object>로 deserialize 할 때마다 기본 값과 복합 값 모두에 대해 boxed `JsonElement`를 저장 합니다. 예를 들면 다음과 같습니다.
+
+* `object` 속성입니다.
+* `object` 사전 값입니다.
+* `object` 배열 값입니다.
+* 루트 `object`입니다.
+
+그러나 `System.Text.Json`는 `null` `Newtonsoft.Json`와 동일 하 게 처리 하 고 페이로드에 `null` JSON 리터럴이 있는 경우 null 참조를 반환 합니다.
 
 `object` 속성에 대 한 형식 유추를 구현 하려면 [사용자 지정 변환기를 작성 하는 방법](system-text-json-converters-how-to.md#deserialize-inferred-types-to-object-properties)의 예제와 같은 변환기를 만듭니다.
 
 ### <a name="deserialize-null-to-non-nullable-type"></a>Null을 허용 하지 않는 형식으로 Deserialize 합니다. 
 
-다음 시나리오에서는 `[!OP.NO-LOC(Newtonsoft.Json)]` 예외를 throw 하지 않습니다.
+다음 시나리오에서는 `Newtonsoft.Json` 예외를 throw 하지 않습니다.
 
 * `NullValueHandling` `Ignore`로 설정 됩니다.
 * Deserialization을 수행 하는 동안 JSON은 null을 허용 하지 않는 형식에 대해 null 값을 포함 합니다.
 
-동일한 시나리오에서 <xref:[!OP.NO-LOC(System.Text.Json)]>는 예외를 throw 합니다. 해당 하는 null 처리 설정은 <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.IgnoreNullValues?displayProperty=nameWithType>입니다.
+동일한 시나리오에서 <xref:System.Text.Json>는 예외를 throw 합니다. 해당 하는 null 처리 설정은 <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues?displayProperty=nameWithType>입니다.
 
 대상 유형을 소유 하는 경우 가장 좋은 해결 방법은 해당 속성을 nullable nullable로 설정 하는 것입니다 (예: `int` `int?`로 변경).
 
@@ -246,9 +253,9 @@ JSON 문자열로 표시 되는 숫자를 직렬화 하거나 deserialize 할 �
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DateTimeOffsetNullHandlingConverter.cs)]
 
-[속성의 특성을 사용](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-property) 하거나 <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.Converters> 컬렉션에 [변환기를 추가](system-text-json-converters-how-to.md#registration-sample---converters-collection) 하 여이 사용자 지정 변환기를 등록 합니다.
+[속성의 특성을 사용](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-property) 하거나 <xref:System.Text.Json.JsonSerializerOptions.Converters> 컬렉션에 [변환기를 추가](system-text-json-converters-how-to.md#registration-sample---converters-collection) 하 여이 사용자 지정 변환기를 등록 합니다.
 
-**참고:** 위의 변환기는 기본값을 지정 하는 POCOs에 대해 `[!OP.NO-LOC(Newtonsoft.Json)]`는 것과는 **다른 방식으로 null 값을 처리** 합니다. 예를 들어 다음 코드는 대상 개체를 나타냅니다.
+**참고:** 위의 변환기는 기본값을 지정 하는 POCOs에 대해 `Newtonsoft.Json`는 것과는 **다른 방식으로 null 값을 처리** 합니다. 예를 들어 다음 코드는 대상 개체를 나타냅니다.
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithDefault)]
 
@@ -262,11 +269,11 @@ JSON 문자열로 표시 되는 숫자를 직렬화 하거나 deserialize 할 �
 }
 ```
 
-Deserialization 후 `Date` 속성에 1/1/0001 (`default(DateTimeOffset)`)가 있습니다. 즉, 생성자에 설정 된 값을 덮어씁니다. 동일한 POCO 및 JSON을 지정 하는 경우 `[!OP.NO-LOC(Newtonsoft.Json)]` deserialization은 `Date` 속성에 1/1/2001을 남겨 둡니다.
+Deserialization 후 `Date` 속성에 1/1/0001 (`default(DateTimeOffset)`)가 있습니다. 즉, 생성자에 설정 된 값을 덮어씁니다. 동일한 POCO 및 JSON을 지정 하는 경우 `Newtonsoft.Json` deserialization은 `Date` 속성에 1/1/2001을 남겨 둡니다.
 
 ### <a name="deserialize-to-immutable-classes-and-structs"></a>변경할 수 없는 클래스 및 구조체로 Deserialize
 
-매개 변수가 있는 생성자를 사용할 수 있기 때문에 변경 불가능 한 클래스 및 구조체로 deserialize 할 수 `[!OP.NO-LOC(Newtonsoft.Json)]`. <xref:[!OP.NO-LOC(System.Text.Json)]>은 매개 변수가 없는 public 생성자만 지원 합니다. 이 문제를 해결 하기 위해 사용자 지정 변환기에서 매개 변수가 있는 생성자를 호출할 수 있습니다.
+매개 변수가 있는 생성자를 사용할 수 있기 때문에 변경 불가능 한 클래스 및 구조체로 deserialize 할 수 `Newtonsoft.Json`. <xref:System.Text.Json>은 매개 변수가 없는 public 생성자만 지원 합니다. 이 문제를 해결 하기 위해 사용자 지정 변환기에서 매개 변수가 있는 생성자를 호출할 수 있습니다.
 
 여러 생성자 매개 변수를 사용 하는 변경할 수 없는 구조체는 다음과 같습니다.
 
@@ -276,19 +283,19 @@ Deserialization 후 `Date` 속성에 1/1/0001 (`default(DateTimeOffset)`)가 있
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ImmutablePointConverter.cs)]
 
-<xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.Converters> 컬렉션에 변환기를 [추가](system-text-json-converters-how-to.md#registration-sample---converters-collection) 하 여이 사용자 지정 변환기를 등록 합니다.
+<xref:System.Text.Json.JsonSerializerOptions.Converters> 컬렉션에 변환기를 [추가](system-text-json-converters-how-to.md#registration-sample---converters-collection) 하 여이 사용자 지정 변환기를 등록 합니다.
 
-개방형 제네릭 속성을 처리 하는 비슷한 변환기의 예제는 [키-값 쌍에 대 한 기본 제공 변환기](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/[!OP.NO-LOC(System.Text.Json)]/src/[!OP.NO-LOC(System/Text/Json)]/Serialization/Converters/JsonValueConverterKeyValuePair.cs)를 참조 하세요.
+개방형 제네릭 속성을 처리 하는 비슷한 변환기의 예제는 [키-값 쌍에 대 한 기본 제공 변환기](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters/JsonValueConverterKeyValuePair.cs)를 참조 하세요.
 
 ### <a name="specify-constructor-to-use"></a>사용할 생성자를 지정 합니다.
 
-`[!OP.NO-LOC(Newtonsoft.Json)]` `[JsonConstructor]` 특성을 사용 하면 POCO로 deserialize 할 때 호출할 생성자를 지정할 수 있습니다. <xref:[!OP.NO-LOC(System.Text.Json)]>는 매개 변수가 없는 생성자만 지원 합니다. 이 문제를 해결 하려면 사용자 지정 변환기에서 필요한 생성자를 호출할 수 있습니다. [변경할 수 없는 클래스 및 구조체로 Deserialize 하](#deserialize-to-immutable-classes-and-structs)는 예제를 참조 하세요.
+`Newtonsoft.Json` `[JsonConstructor]` 특성을 사용 하면 POCO로 deserialize 할 때 호출할 생성자를 지정할 수 있습니다. <xref:System.Text.Json>는 매개 변수가 없는 생성자만 지원 합니다. 이 문제를 해결 하려면 사용자 지정 변환기에서 필요한 생성자를 호출할 수 있습니다. [변경할 수 없는 클래스 및 구조체로 Deserialize 하](#deserialize-to-immutable-classes-and-structs)는 예제를 참조 하세요.
 
 ### <a name="required-properties"></a>필수 속성
 
-`[!OP.NO-LOC(Newtonsoft.Json)]`에서 `[JsonProperty]` 특성에 `Required`를 설정 하 여 속성을 요구 하도록 지정 합니다. 필수로 표시 된 속성에 대해 JSON에서 값을 받지 못한 경우 `[!OP.NO-LOC(Newtonsoft.Json)]` 예외를 throw 합니다.
+`Newtonsoft.Json`에서 `[JsonProperty]` 특성에 `Required`를 설정 하 여 속성을 요구 하도록 지정 합니다. 필수로 표시 된 속성에 대해 JSON에서 값을 받지 못한 경우 `Newtonsoft.Json` 예외를 throw 합니다.
 
-대상 형식의 속성 중 하나에 대해 값을 받지 못한 경우에는 <xref:[!OP.NO-LOC(System.Text.Json)]> 예외를 throw 하지 않습니다. 예를 들어 `WeatherForecast` 클래스가 있는 경우 다음을 수행 합니다.
+대상 형식의 속성 중 하나에 대해 값을 받지 못한 경우에는 <xref:System.Text.Json> 예외를 throw 하지 않습니다. 예를 들어 `WeatherForecast` 클래스가 있는 경우 다음을 수행 합니다.
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWF)]
 
@@ -305,11 +312,11 @@ JSON에 `Date` 속성이 없는 경우 deserialization이 실패 하도록 하�
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecastRequiredPropertyConverter.cs)]
 
-[POCO 클래스에서 특성을 사용](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type) 하거나 <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.Converters> 컬렉션에 [변환기를 추가](system-text-json-converters-how-to.md#registration-sample---converters-collection) 하 여이 사용자 지정 변환기를 등록 합니다.
+[POCO 클래스에서 특성을 사용](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type) 하거나 <xref:System.Text.Json.JsonSerializerOptions.Converters> 컬렉션에 [변환기를 추가](system-text-json-converters-how-to.md#registration-sample---converters-collection) 하 여이 사용자 지정 변환기를 등록 합니다.
 
-이 패턴을 따르는 경우 <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializer.Serialize%2A> 또는 <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializer.Deserialize%2A>를 재귀적으로 호출 하는 경우 options 개체를 전달 하지 마세요. Options 개체는 <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.Converters%2A> 컬렉션을 포함 합니다. `Serialize` 또는 `Deserialize`에 전달 하는 경우 사용자 지정 변환기가 자신을 호출 하 여 스택 오버플로 예외가 발생 하는 무한 루프를 만듭니다. 기본 옵션이 적절 하지 않은 경우 필요한 설정을 사용 하 여 옵션의 새 인스턴스를 만듭니다. 이 접근 방식은 각 새 인스턴스를 독립적으로 캐시 하므로 속도가 느립니다.
+이 패턴을 따르는 경우 <xref:System.Text.Json.JsonSerializer.Serialize%2A> 또는 <xref:System.Text.Json.JsonSerializer.Deserialize%2A>를 재귀적으로 호출 하는 경우 options 개체를 전달 하지 마세요. Options 개체는 <xref:System.Text.Json.JsonSerializerOptions.Converters%2A> 컬렉션을 포함 합니다. `Serialize` 또는 `Deserialize`에 전달 하는 경우 사용자 지정 변환기가 자신을 호출 하 여 스택 오버플로 예외가 발생 하는 무한 루프를 만듭니다. 기본 옵션이 적절 하지 않은 경우 필요한 설정을 사용 하 여 옵션의 새 인스턴스를 만듭니다. 이 접근 방식은 각 새 인스턴스를 독립적으로 캐시 하므로 속도가 느립니다.
 
-앞의 변환기 코드는 단순화 된 예제입니다. 특성 (예: [[JsonIgnore]](xref:[!OP.NO-LOC(System.Text.Json)].Serialization.JsonIgnoreAttribute) ) 또는 다른 옵션 (예: 사용자 지정 인코더)을 처리 해야 하는 경우에는 추가 논리가 필요 합니다. 또한 예제 코드는 생성자에서 기본값이 설정 된 속성을 처리 하지 않습니다. 이 방법은 다음과 같은 시나리오를 구분 하지 않습니다.
+앞의 변환기 코드는 단순화 된 예제입니다. 특성 (예: [[JsonIgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute) ) 또는 다른 옵션 (예: 사용자 지정 인코더)을 처리 해야 하는 경우에는 추가 논리가 필요 합니다. 또한 예제 코드는 생성자에서 기본값이 설정 된 속성을 처리 하지 않습니다. 이 방법은 다음과 같은 시나리오를 구분 하지 않습니다.
 
 * JSON에서 속성이 누락 되었습니다.
 * Nullable이 아닌 형식에 대 한 속성은 JSON에 있지만 값은 `int`의 경우 0과 같이 형식에 대 한 기본값입니다.
@@ -317,13 +324,13 @@ JSON에 `Date` 속성이 없는 경우 deserialization이 실패 하도록 하�
 
 ### <a name="conditionally-ignore-a-property"></a>조건부로 속성 무시
 
-`[!OP.NO-LOC(Newtonsoft.Json)]`는 serialization 또는 deserialization에서 속성을 조건부로 무시 하는 여러 가지 방법이 있습니다.
+`Newtonsoft.Json`는 serialization 또는 deserialization에서 속성을 조건부로 무시 하는 여러 가지 방법이 있습니다.
 
 * `DefaultContractResolver`를 사용 하 여 임의 조건에 따라 포함 하거나 제외할 속성을 선택할 수 있습니다. 
 * `JsonSerializerSettings`의 `NullValueHandling` 및 `DefaultValueHandling` 설정을 사용 하 여 모든 null 값 또는 기본 값 속성을 무시 하도록 지정할 수 있습니다.
 * `[JsonProperty]` 특성의 `NullValueHandling` 및 `DefaultValueHandling` 설정을 사용 하면 null 또는 기본값으로 설정 된 경우 무시 해야 하는 개별 속성을 지정할 수 있습니다.
 
-<xref:[!OP.NO-LOC(System.Text.Json)]>는 serialize 하는 동안 속성을 생략 하는 다음과 같은 방법을 제공 합니다.
+<xref:System.Text.Json>는 serialize 하는 동안 속성을 생략 하는 다음과 같은 방법을 제공 합니다.
 
 * 속성의 [[JsonIgnore]](system-text-json-how-to.md#exclude-individual-properties) 특성을 지정 하면 serialization 중에 JSON에서 속성이 생략 됩니다.
 * [Ignorenullvalues](system-text-json-how-to.md#exclude-all-null-value-properties) 전역 옵션을 사용 하면 모든 null 값 속성을 제외할 수 있습니다.
@@ -344,7 +351,7 @@ JSON에 `Date` 속성이 없는 경우 deserialization이 실패 하도록 하�
 
 변환기를 설정 하면 해당 값이 null, 빈 문자열 또는 "N/A" 인 경우 serialization에서 `Summary` 속성이 생략 됩니다. 
 
-[클래스에서 특성을 사용](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type) 하거나 <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.Converters> 컬렉션에 [변환기를 추가](system-text-json-converters-how-to.md#registration-sample---converters-collection) 하 여이 사용자 지정 변환기를 등록 합니다.
+[클래스에서 특성을 사용](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type) 하거나 <xref:System.Text.Json.JsonSerializerOptions.Converters> 컬렉션에 [변환기를 추가](system-text-json-converters-how-to.md#registration-sample---converters-collection) 하 여이 사용자 지정 변환기를 등록 합니다.
 
 이 방법에는 다음과 같은 경우 추가 논리가 필요 합니다.
 
@@ -353,23 +360,23 @@ JSON에 `Date` 속성이 없는 경우 deserialization이 실패 하도록 하�
 
 ### <a name="specify-date-format"></a>날짜 형식 지정
 
-`[!OP.NO-LOC(Newtonsoft.Json)]` `DateTime` 및 `DateTimeOffset` 형식의 속성을 serialize 및 deserialize 하는 방법을 제어 하는 여러 가지 방법을 제공 합니다.
+`Newtonsoft.Json` `DateTime` 및 `DateTimeOffset` 형식의 속성을 serialize 및 deserialize 하는 방법을 제어 하는 여러 가지 방법을 제공 합니다.
 
 * `DateTimeZoneHandling` 설정을 사용 하 여 모든 `DateTime` 값을 UTC 날짜로 serialize 할 수 있습니다.
 * `DateFormatString` 설정 및 `DateTime` 변환기를 사용 하 여 날짜 문자열의 형식을 사용자 지정할 수 있습니다.
 
-<xref:[!OP.NO-LOC(System.Text.Json)]>기본적으로 지원 되는 유일한 형식은 ISO 8601-1:2019입니다 .이는 널리 사용 되 고 명확 하 게 도입 되었으며 라운드트립을 정확 하 게 수행 하기 때문입니다. 다른 형식을 사용 하려면 사용자 지정 변환기를 만듭니다. 자세한 내용은 [[!OP.NO-LOC(System.Text.Json)]의 DateTime 및 DateTimeOffset 지원 ](../datetime/system-text-json-support.md)을 참조 하세요.
+<xref:System.Text.Json>기본적으로 지원 되는 유일한 형식은 ISO 8601-1:2019입니다 .이는 널리 사용 되 고 명확 하 게 도입 되었으며 라운드트립을 정확 하 게 수행 하기 때문입니다. 다른 형식을 사용 하려면 사용자 지정 변환기를 만듭니다. 자세한 내용은 [system.object의 DateTime 및 DateTimeOffset 지원](../datetime/system-text-json-support.md)을 참조 하세요.
 
 ### <a name="callbacks"></a>콜백
 
-`[!OP.NO-LOC(Newtonsoft.Json)]`를 사용 하면 serialization 또는 deserialization 프로세스의 여러 지점에서 사용자 지정 코드를 실행할 수 있습니다.
+`Newtonsoft.Json`를 사용 하면 serialization 또는 deserialization 프로세스의 여러 지점에서 사용자 지정 코드를 실행할 수 있습니다.
 
 * OnDeserializing (개체 deserialize를 시작할 때)
 * OnDeserialized 됨 (개체 deserialize 완료 시)
 * OnSerializing (개체 직렬화를 시작할 때)
 * OnSerialized 됨 (개체 직렬화를 완료 한 경우)
 
-<xref:[!OP.NO-LOC(System.Text.Json)]>에서 사용자 지정 변환기를 작성 하 여 콜백을 시뮬레이션할 수 있습니다. 다음 예제에서는 POCO의 사용자 지정 변환기를 보여 줍니다. 변환기에는 `[!OP.NO-LOC(Newtonsoft.Json)]` 콜백에 해당 하는 각 지점에서 메시지를 표시 하는 코드가 포함 되어 있습니다.
+<xref:System.Text.Json>에서 사용자 지정 변환기를 작성 하 여 콜백을 시뮬레이션할 수 있습니다. 다음 예제에서는 POCO의 사용자 지정 변환기를 보여 줍니다. 변환기에는 `Newtonsoft.Json` 콜백에 해당 하는 각 지점에서 메시지를 표시 하는 코드가 포함 되어 있습니다.
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecastCallbacksConverter.cs)]
 

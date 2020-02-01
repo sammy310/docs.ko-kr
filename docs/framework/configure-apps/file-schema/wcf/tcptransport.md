@@ -2,12 +2,12 @@
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 45b710c3b2d1647e1bf7e57b30a96192abb9d788
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 7101719f77a03909d9a38dca93100ec90c1add13
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345056"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921381"
 ---
 # <a name="tcptransport"></a>\<tcpTransport>
 사용자 지정 바인딩에 대한 메시지를 전송하기 위해 채널이 사용할 수 있는 TCP 전송을 정의합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "75345056"
 |maxPendingConnections|서비스에서 디스패치를 대기하는 최대 연결 수를 가져오거나 설정합니다.|  
 |maxReceivedMessageSize|받을 수 있는 최대 메시지 크기를 가져오거나 설정합니다.|  
 |portSharingEnabled|이 연결에서 TCP 포트 공유를 사용하는지를 지정하는 부울 값입니다. 이 값이 `false`이면 바인딩마다 자체 단독 포트가 사용됩니다. 기본값은 `false`입니다.<br /><br /> 이 설정은 서비스에만 적용되며, 클라이언트는 영향을 받지 않습니다.<br /><br /> 이 설정을 사용하려면 WCF(Windows Communication Foundation) TCP 포트 공유 서비스의 시작 유형을 수동 또는 자동으로 변경하여 서비스를 사용하도록 설정해야 합니다|  
-|teredoEnabled|Teredo(방화벽으로 보호되는 클라이언트의 주소를 지정하는 기술)의 사용 여부를 지정하는 부울 값입니다. 기본값은 `false`입니다.<br /><br /> 이 속성은 내부 TCP 소켓에 대해 Teredo를 활성화합니다. 자세한 내용은 [Teredo 개요](https://go.microsoft.com/fwlink/?LinkId=95339)합니다.<br /><br /> 이 속성은 [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] 및 Windows Server 2003에만 적용 됩니다. Windows Vista에는 Teredo 용 시스템 수준의 구성 옵션이 있으므로 Vista를 실행할 때이 속성이 무시 됩니다. Teredo를 사용할 경우 클라이언트와 서비스 시스템 모두에 Microsoft IPv6 스택을 설치하고 Teredo 사용에 적합하도록 구성해야 합니다. Teredo 구성에 대 한 자세한 내용은 참조 하세요. [Teredo 개요](https://go.microsoft.com/fwlink/?LinkId=95339)합니다. 자세한 내용은 [Windows Server 2003 기술 센터](https://go.microsoft.com/fwlink/?LinkId=49888)합니다.|  
+|teredoEnabled|Teredo(방화벽으로 보호되는 클라이언트의 주소를 지정하는 기술)의 사용 여부를 지정하는 부울 값입니다. 기본값은 `false`입니다.<br /><br /> 이 속성은 내부 TCP 소켓에 대해 Teredo를 활성화합니다. 자세한 내용은 [Teredo 개요](https://go.microsoft.com/fwlink/?LinkId=95339)합니다.<br /><br /> 이 속성은 Windows XP SP2 및 Windows Server 2003에만 적용 됩니다. Windows Vista에는 Teredo 용 시스템 수준의 구성 옵션이 있으므로 Vista를 실행할 때이 속성이 무시 됩니다. Teredo를 사용할 경우 클라이언트와 서비스 시스템 모두에 Microsoft IPv6 스택을 설치하고 Teredo 사용에 적합하도록 구성해야 합니다. Teredo 구성에 대 한 자세한 내용은 참조 하세요. [Teredo 개요](https://go.microsoft.com/fwlink/?LinkId=95339)합니다. 자세한 내용은 [Windows Server 2003 기술 센터](https://go.microsoft.com/fwlink/?LinkId=49888)합니다.|  
 |transferMode|메시지가 연결 지향 전송을 사용하여 버퍼링되는지 아니면 스트리밍되는지를 나타내는 값을 가져오거나 설정합니다.|  
 |connectionPoolSettings|명명된 파이프 바인딩의 추가 연결 풀 설정을 지정합니다.|  
   

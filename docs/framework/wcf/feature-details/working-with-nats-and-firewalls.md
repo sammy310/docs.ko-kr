@@ -5,12 +5,12 @@ helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-ms.openlocfilehash: b8be10740c8e92d3dac7094f07b3372e8d78a3d9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 28360b8b5b07c7c532dd2406ca98604870b8335f
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743865"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921071"
 ---
 # <a name="working-with-nats-and-firewalls"></a>NAT 및 방화벽 작업
 네트워크 연결의 클라이언트와 서버에 통신을 위한 직접 및 열린 경로가 없는 경우가 자주 발생합니다. 패킷은 네트워크의 중간 컴퓨터와 엔드포인트 컴퓨터 모두에서 필터링, 라우트, 분석 및 변환됩니다. NAT(Network Address Translation) 및 방화벽은 네트워크 통신에 참여할 수 있는 일반적인 중간 애플리케이션의 예입니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "76743865"
  외부 컴퓨터에서 특정 내부 컴퓨터에 연결할 수 있도록 NAT에서 전달 규칙 구성을 지원하는 경우도 있습니다. 전달 규칙 구성에 대한 지침은 NAT마다 다르며, 대부분의 애플리케이션의 경우 최종 사용자에게 NAT 구성을 변경하도록 요청하지 않는 것이 좋습니다. 대부분의 최종 사용자는 특정 애플리케이션에 대해 NAT 구성을 변경할 수 없거나 변경하기를 원하지 않습니다.  
   
 ## <a name="how-firewalls-affect-communication"></a>방화벽이 통신에 미치는 영향  
- *방화벽* 은 통과를 허용할지 아니면 거부할지를 결정 하기 위해 통과 하는 트래픽에 규칙을 적용 하는 소프트웨어 또는 하드웨어 장치입니다. 트래픽의 들어오는 스트림 및/또는 나가는 스트림을 검사하도록 방화벽을 구성할 수 있습니다. 방화벽은 네트워크의 가장자리 또는 엔드포인트 호스트에서 네트워크에 대한 보안 경계를 제공합니다. 비즈니스 사용자는 일반적으로 악의적인 공격을 방지하기 위해 서버를 방화벽으로 보호합니다. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)]에서 개인 방화벽을 도입함에 따라 방화벽을 설치하는 개인 사용자 수 또한 크게 증가하였습니다. 대체적으로 연결의 한쪽 또는 양쪽 끝에 방화벽 검사 패킷이 있습니다.  
+ *방화벽* 은 통과를 허용할지 아니면 거부할지를 결정 하기 위해 통과 하는 트래픽에 규칙을 적용 하는 소프트웨어 또는 하드웨어 장치입니다. 트래픽의 들어오는 스트림 및/또는 나가는 스트림을 검사하도록 방화벽을 구성할 수 있습니다. 방화벽은 네트워크의 가장자리 또는 엔드포인트 호스트에서 네트워크에 대한 보안 경계를 제공합니다. 비즈니스 사용자는 일반적으로 악의적인 공격을 방지하기 위해 서버를 방화벽으로 보호합니다. Windows XP s p 2의 개인 방화벽이 도입 되었으므로 방화벽 뒤에 있는 홈 사용자의 수도 크게 증가 했습니다. 대체적으로 연결의 한쪽 또는 양쪽 끝에 방화벽 검사 패킷이 있습니다.  
   
  방화벽은 패킷 검사의 복잡성과 기능이 매우 다양합니다. 간단한 방화벽은 패킷의 원본 및 대상 주소와 포트를 기반으로 규칙을 적용합니다. 지능형 방화벽은 패킷 내용을 검사하여 결정을 내릴 수도 있습니다. 이러한 방화벽은 다양한 구성으로 제공되며 특수 애플리케이션에서 사용되는 경우도 있습니다.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "76743865"
   
 ## <a name="using-teredo"></a>Teredo 사용  
 
- Teredo는 NAT 뒤에서 컴퓨터의 주소를 직접 지정할 수 있는 IPv6 전환 기술입니다. Teredo는 잠재적 연결을 광고하기 위해 공개적이고 전역적으로 라우팅될 수 있는 서버를 사용합니다. Teredo 서버는 애플리케이션 클라이언트와 서버에 연결 정보를 교환할 수 있는 공통 만남 지점을 제공합니다. 컴퓨터는 임시 Teredo 주소를 요청하고 패킷이 기존 네트워크를 통해 터널링됩니다. WCF에서 teredo를 지원 하려면 운영 체제에서 IPv6 및 Teredo 지원을 사용 하도록 설정 해야 합니다. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 이상 운영 체제에서는 Teredo를 지원합니다. Windows Vista 이상 운영 체제는 기본적으로 i p v 6을 지원 하며, 사용자만 Teredo를 사용 하도록 설정 해야 합니다. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 및 Windows Server 2003에는 사용자가 i p v 6과 Teredo를 모두 사용 하도록 설정 해야 합니다. 자세한 내용은 [Teredo 개요](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-xp/bb457011(v%3dtechnet.10))를 참조 하세요.  
+ Teredo는 NAT 뒤에서 컴퓨터의 주소를 직접 지정할 수 있는 IPv6 전환 기술입니다. Teredo는 잠재적 연결을 광고하기 위해 공개적이고 전역적으로 라우팅될 수 있는 서버를 사용합니다. Teredo 서버는 애플리케이션 클라이언트와 서버에 연결 정보를 교환할 수 있는 공통 만남 지점을 제공합니다. 컴퓨터는 임시 Teredo 주소를 요청하고 패킷이 기존 네트워크를 통해 터널링됩니다. WCF에서 teredo를 지원 하려면 운영 체제에서 IPv6 및 Teredo 지원을 사용 하도록 설정 해야 합니다. Windows XP 이상 운영 체제에서는 Teredo를 지원 합니다. Windows Vista 이상 운영 체제는 기본적으로 i p v 6을 지원 하며, 사용자만 Teredo를 사용 하도록 설정 해야 합니다. Windows XP SP2 및 Windows Server 2003에서는 사용자가 i p v 6과 Teredo를 모두 사용 하도록 설정 해야 합니다. 자세한 내용은 [Teredo 개요](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-xp/bb457011(v%3dtechnet.10))를 참조 하세요.  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>전송 및 메시지 교환 패턴 선택  
  전송 및 MEP 선택은 3단계 프로세스입니다.  

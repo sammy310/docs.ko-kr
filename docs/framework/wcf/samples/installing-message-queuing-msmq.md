@@ -2,18 +2,18 @@
 title: 메시지 큐(MSMQ) 설치
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-ms.openlocfilehash: e6d6a3a2e1bc0a0c936e4b8594eab836b559e5a7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 8ecbd07adfb6bfb4e9898f9b8508809480d17e16
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344744"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921097"
 ---
 # <a name="installing-message-queuing-msmq"></a>메시지 큐(MSMQ) 설치
 다음 절차에서는 메시지 큐 4.0 및 메시지 큐 3.0을 설치하는 방법을 보여 줍니다.  
   
 > [!NOTE]
-> 메시지 큐 4.0은 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 및 Windows Server 2003에서 사용할 수 없습니다.  
+> 메시지 큐 4.0은 Windows XP 및 Windows Server 2003에서 사용할 수 없습니다.  
   
 #### <a name="to-install-message-queuing-40-on-windows-server-2008-or-windows-server-2008-r2"></a>Windows Server 2008 또는 Windows Server 2008 R2에 메시지 큐 4.0을 설치하려면  
   
