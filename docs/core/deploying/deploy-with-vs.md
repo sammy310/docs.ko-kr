@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 6116b2322ed2071b78bcd77de7c38ad07c327aa6
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 23dc0f691c8a8d80a0bd2a5d301ace0d129007af
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740845"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920887"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Visual Studio를 사용하여 .NET Core 앱 배포
 
@@ -28,7 +28,7 @@ Visual Studio를 사용하여 .NET Core 애플리케이션을 개발하는 방�
 
 ## <a name="framework-dependent-deployment"></a>프레임워크 종속 배포
 
-타사 종속성이 없는 프레임워크 종속 배포에는 앱의 빌드, 테스트 및 게시만 포함됩니다. C#으로 작성된 간단한 예제에서는 이 프로세스를 보여 줍니다.  
+타사 종속성이 없는 프레임워크 종속 배포에는 앱의 빌드, 테스트 및 게시만 포함됩니다. C#으로 작성된 간단한 예제에서는 이 프로세스를 보여 줍니다.
 
 1. 프로젝트를 만듭니다.
 
@@ -189,7 +189,7 @@ Visual Studio에서 앱을 게시하려면 다음을 수행합니다.
    프로필을 이미 만든 경우 프로젝트를 마우스 오른쪽 단추로 클릭하여 **게시** 대화 상자를 엽니다(아직 열려 있지 않은 경우). 그런 다음, **새 프로필**을 선택합니다.
 
    **게시 대상 선택** 대화 상자가 열립니다.
-  
+
 1. Visual Studio에서 애플리케이션을 게시하는 위치를 선택합니다.
 
    단일 플랫폼에만 게시하는 경우 **폴더 선택** 텍스트 상자의 기본값을 적용합니다. 이렇게 하면 애플리케이션의 프레임워크 종속 배포를 *\<project-directory>\bin\Release\netcoreapp2.1\publish* 디렉터리에 게시합니다.
@@ -244,7 +244,7 @@ Visual Studio에서 앱을 게시하려면 다음을 수행합니다.
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-https://go.microsoft.com/fwlink/?LinkID=208121. 
+https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>

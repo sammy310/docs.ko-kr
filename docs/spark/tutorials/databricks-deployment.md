@@ -1,15 +1,15 @@
 ---
 title: Databricks에 .NET for Apache Spark 애플리케이션 배포
 description: Databricks에 .NET for Apache Spark 애플리케이션을 배포하는 방법을 살펴봅니다.
-ms.date: 05/17/2019
+ms.date: 01/23/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: dfd33e83c04428b7a6a72e4992c40f00982b1958
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: a117d85ab911b380598c93417f6ff95661ab864c
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960469"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868033"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>자습서: Databricks에 .NET for Apache Spark 애플리케이션 배포
 
@@ -24,7 +24,7 @@ ms.locfileid: "74960469"
 > - Spark 작업 및 Spark 클러스터 만들기
 > - Spark 클러스터에서 앱 실행
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 시작하기 전에 다음 작업을 수행합니다.
 
@@ -190,7 +190,7 @@ ms.locfileid: "74960469"
 3. 작업 구성에 다음 매개 변수를 붙여넣습니다. **확인**을 선택합니다.
 
    ```
-   ["--class","org.apache.spark.deploy.DotnetRunner","/dbfs/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar","/dbfs/spark-dotnet/publish.zip","mySparkApp"]
+   ["--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar","/dbfs/spark-dotnet/publish.zip","mySparkApp"]
    ```
 
 ## <a name="create-a-cluster"></a>클러스터 만들기

@@ -1,15 +1,15 @@
 ---
 title: Azure HDInsight에 .NET for Apache Spark 애플리케이션 배포
 description: HDInsight에 .NET for Apache Spark 애플리케이션을 배포하는 방법을 살펴봅니다.
-ms.date: 05/17/2019
+ms.date: 01/23/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 3604aff5d1f138071c941ea85546af03185d722d
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 76a150879324640352aa36f753ec3d6e7342bcaf
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460725"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76860780"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>자습서: Azure HDInsight에 .NET for Apache Spark 애플리케이션 배포
 
@@ -25,7 +25,7 @@ ms.locfileid: "73460725"
 > * HDInsight 스크립트 동작 만들기 및 실행
 > * HDInsight 클러스터에서 .NET for Apache Spark 앱 실행
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 시작하기 전에 다음 작업을 수행합니다.
 
@@ -151,7 +151,7 @@ Azure Storage Explorer를 사용하여 클러스터 스토리지로 선택한 Bl
    |속성  |설명  |
    |---------|---------|
    | 스크립트 유형 |사용자 지정|
-   | name | 작업자 설치|
+   | 이름 | 작업자 설치|
    | Bash 스크립트 URI |https://mystorageaccount.blob.core.windows.net/mycontainer/install-worker.sh </br> 이 URI를 확인하려면 Azure Storage Explorer에서 install-worker.sh를 마우스 오른쪽 단추로 클릭하고 속성을 선택합니다. |
    | 노드 유형| 작업자|
    | 매개 변수 | azure </br> wasbs://mycontainer@myStorageAccount.blob.core.windows.net/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz </br> /usr/local/bin
@@ -169,7 +169,7 @@ Azure Storage Explorer를 사용하여 클러스터 스토리지로 선택한 Bl
    ```bash
    $SPARK_HOME/bin/spark-submit \
    --master yarn \
-   --class org.apache.spark.deploy.DotnetRunner \
+   --class org.apache.spark.deploy.dotnet.DotnetRunner \
    wasbs://mycontainer@mystorageaccount.blob.core.windows.net/microsoft-spark-2.3.x-0.6.0.jar \
    wasbs://mycontainer@mystorageaccount.blob.core.windows.net/publish.zip mySparkApp
    ```

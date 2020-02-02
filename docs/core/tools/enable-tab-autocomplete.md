@@ -4,14 +4,14 @@ description: 이 문서에서는 PowerShell, Bash 및 zsh용 .NET Core CLI에 �
 author: thraka
 ms.author: adegeo
 ms.date: 11/03/2019
-ms.openlocfilehash: 8c5d6a254db5ba21417ba45122ed0d7cb093c7c3
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 649b723c2abfa74443a16914594284a77e0eafc0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739305"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920530"
 ---
-# <a name="how-to-enable-tab-completion-for-net-core-cli"></a>.NET Core CLI에 대한 TAB 완성 기능을 사용하는 방법
+# <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a>.NET Core CLI에 대한 탭 완성 기능을 사용하는 방법
 
 .NET Core 2.0 SDK부터 .NET Core CLI는 탭 완성 기능을 지원합니다. 이 문서에서는 세 개의 셸, PowerShell, Bash 및 zsh에 대한 탭 완성 기능을 구성하는 방법을 설명합니다. 다른 셸에는 자동 완성에 대한 지원이 있을 수 있습니다. 자동 완성을 구성하는 방법에 대해 해당 설명서를 참조하세요. 단계는 이 문서에 설명된 단계와 유사해야 합니다.
 

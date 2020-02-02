@@ -4,12 +4,12 @@ description: Apache Livy 및 spark-submit을 사용하여 Azure HDInsight에 Apa
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: cdd5e15ffde78ccb8b3156ee047b8ca98f7320b8
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: d558234a53cc22d65540a380ac7f5b3ac03ba0ae
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74553024"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868020"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-azure-hdinsight"></a>Azure HDInsight에 Apache Spark 작업의 .NET 제출
 
@@ -28,7 +28,7 @@ Apache Spark 작업의 .NET을 HDInsight에 배포하는 방법에는 두 가지
    ```bash
    $SPARK_HOME/bin/spark-submit \
    --master yarn \
-   --class org.apache.spark.deploy.DotnetRunner \
+   --class org.apache.spark.deploy.dotnet.DotnetRunner \
    wasbs://mycontainer@mystorageaccount.blob.core.windows.net/microsoft-spark-2.3.x-0.6.0.jar \
    wasbs://mycontainer@mystorageaccount.blob.core.windows.net/publish.zip mySparkApp
    ```
