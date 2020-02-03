@@ -6,25 +6,25 @@ dev_langs:
 - csharp
 - vb
 ms.date: 09/13/2019
-ms.openlocfilehash: 9360fccf27a0900d8380461e03baa5806ce1e0da
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 48e429a6379b0a13cb81f8db6fae27aa31409840
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708920"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794607"
 ---
-# <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a><span data-ttu-id="d7ddc-103">방법: 지역화된 예외 메시지를 사용하여 사용자 정의 예외 생성</span><span class="sxs-lookup"><span data-stu-id="d7ddc-103">How to create user-defined exceptions with localized exception messages</span></span>
+# <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a><span data-ttu-id="79196-103">방법: 지역화된 예외 메시지를 사용하여 사용자 정의 예외 생성</span><span class="sxs-lookup"><span data-stu-id="79196-103">How to create user-defined exceptions with localized exception messages</span></span>
 
-<span data-ttu-id="d7ddc-104">이 문서에서는 위성 어셈블리를 사용하여 지역화된 예외 메시지로 기본 <xref:System.Exception> 클래스에서 상속되는 사용자 정의 예외를 만드는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="d7ddc-104">In this article, you will learn how to create user-defined exceptions that are inherited from the base <xref:System.Exception> class with localized exception messages using satellite assemblies.</span></span>
+<span data-ttu-id="79196-104">이 문서에서는 위성 어셈블리를 사용하여 지역화된 예외 메시지로 기본 <xref:System.Exception> 클래스에서 상속되는 사용자 정의 예외를 만드는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="79196-104">In this article, you will learn how to create user-defined exceptions that are inherited from the base <xref:System.Exception> class with localized exception messages using satellite assemblies.</span></span>
 
-## <a name="create-custom-exceptions"></a><span data-ttu-id="d7ddc-105">사용자 지정 예외 만들기</span><span class="sxs-lookup"><span data-stu-id="d7ddc-105">Create custom exceptions</span></span>
+## <a name="create-custom-exceptions"></a><span data-ttu-id="79196-105">사용자 지정 예외 만들기</span><span class="sxs-lookup"><span data-stu-id="79196-105">Create custom exceptions</span></span>
 
-<span data-ttu-id="d7ddc-106">.NET에는 사용할 수 있는 다양한 예외가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d7ddc-106">.NET contains many different exceptions that you can use.</span></span> <span data-ttu-id="d7ddc-107">그러나 사용자의 요구를 충족하는 항목이 없는 경우에는 사용자 지정 예외를 직접 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d7ddc-107">However, in some cases when none of them meets your needs, you can create your own custom exceptions.</span></span>
+<span data-ttu-id="79196-106">.NET에는 사용할 수 있는 다양한 예외가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="79196-106">.NET contains many different exceptions that you can use.</span></span> <span data-ttu-id="79196-107">그러나 사용자의 요구를 충족하는 항목이 없는 경우에는 사용자 지정 예외를 직접 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="79196-107">However, in some cases when none of them meets your needs, you can create your own custom exceptions.</span></span>
 
-<span data-ttu-id="d7ddc-108">`StudentName` 속성을 포함하는 `StudentNotFoundException`을 만들려고 한다고 가정해 보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="d7ddc-108">Let's assume you want to create a `StudentNotFoundException` that contains a `StudentName` property.</span></span>
-<span data-ttu-id="d7ddc-109">사용자 지정 예외를 만들려면 다음 단계를 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="d7ddc-109">To create a custom exception, follow these steps:</span></span>
+<span data-ttu-id="79196-108">`StudentName` 속성을 포함하는 `StudentNotFoundException`을 만들려고 한다고 가정해 보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="79196-108">Let's assume you want to create a `StudentNotFoundException` that contains a `StudentName` property.</span></span>
+<span data-ttu-id="79196-109">사용자 지정 예외를 만들려면 다음 단계를 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="79196-109">To create a custom exception, follow these steps:</span></span>
 
-1. <span data-ttu-id="d7ddc-110"><xref:System.Exception>에서 상속된 serializable 클래스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="d7ddc-110">Create a serializable class that inherits from <xref:System.Exception>.</span></span> <span data-ttu-id="d7ddc-111">클래스 이름은 "Exception"으로 끝나야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d7ddc-111">The class name should end in "Exception":</span></span>
+1. <span data-ttu-id="79196-110"><xref:System.Exception>에서 상속된 serializable 클래스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="79196-110">Create a serializable class that inherits from <xref:System.Exception>.</span></span> <span data-ttu-id="79196-111">클래스 이름은 "Exception"으로 끝나야 합니다.</span><span class="sxs-lookup"><span data-stu-id="79196-111">The class name should end in "Exception":</span></span>
 
     ```csharp
     [Serializable]
@@ -38,7 +38,7 @@ ms.locfileid: "75708920"
     End Class
     ```
 
-1. <span data-ttu-id="d7ddc-112">기본 생성자를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="d7ddc-112">Add the default constructors:</span></span>
+1. <span data-ttu-id="79196-112">기본 생성자를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="79196-112">Add the default constructors:</span></span>
 
     ```csharp
     [Serializable]
@@ -72,7 +72,7 @@ ms.locfileid: "75708920"
     End Class
     ```
 
-1. <span data-ttu-id="d7ddc-113">추가 속성 및 생성자를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="d7ddc-113">Define any additional properties and constructors:</span></span>
+1. <span data-ttu-id="79196-113">추가 속성 및 생성자를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="79196-113">Define any additional properties and constructors:</span></span>
 
     ```csharp
     [Serializable]
@@ -121,9 +121,9 @@ ms.locfileid: "75708920"
     End Class
     ```
 
-## <a name="create-localized-exception-messages"></a><span data-ttu-id="d7ddc-114">지역화된 예외 메시지 만들기</span><span class="sxs-lookup"><span data-stu-id="d7ddc-114">Create localized exception messages</span></span>
+## <a name="create-localized-exception-messages"></a><span data-ttu-id="79196-114">지역화된 예외 메시지 만들기</span><span class="sxs-lookup"><span data-stu-id="79196-114">Create localized exception messages</span></span>
 
-<span data-ttu-id="d7ddc-115">사용자 지정 예외를 만들고 다음과 같은 코드를 사용하여 어디에서든 throw할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d7ddc-115">You have created a custom exception, and you can throw it anywhere with code like the following:</span></span>
+<span data-ttu-id="79196-115">사용자 지정 예외를 만들고 다음과 같은 코드를 사용하여 어디에서든 throw할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="79196-115">You have created a custom exception, and you can throw it anywhere with code like the following:</span></span>
 
 ```csharp
 throw new StudentNotFoundException("The student cannot be found.", "John");
@@ -133,36 +133,41 @@ throw new StudentNotFoundException("The student cannot be found.", "John");
 Throw New StudentNotFoundException("The student cannot be found.", "John")
 ```
 
-<span data-ttu-id="d7ddc-116">이전 줄의 문제는 `"The student cannot be found."`이 상수 문자열에 불과하다는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="d7ddc-116">The problem with the previous line is that `"The student cannot be found."` is just a constant string.</span></span> <span data-ttu-id="d7ddc-117">지역화된 애플리케이션에서는 사용자 문화권에 따라 다른 메시지를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d7ddc-117">In a localized application, you want to have different messages depending on user culture.</span></span>
-<span data-ttu-id="d7ddc-118">[위성 어셈블리](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md)는 이 작업을 수행하는 좋은 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="d7ddc-118">[Satellite Assemblies](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md) are a good way to do that.</span></span> <span data-ttu-id="d7ddc-119">위성 어셈블리는 특정 언어에 대한 리소스를 포함하는 .dll입니다.</span><span class="sxs-lookup"><span data-stu-id="d7ddc-119">A satellite assembly is a .dll that contains resources for a specific language.</span></span> <span data-ttu-id="d7ddc-120">런타임에 특정 리소스를 요청하면 CLR은 사용자 문화권에 따라 해당 리소스를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="d7ddc-120">When you ask for a specific resources at run time, the CLR finds that resource depending on user culture.</span></span> <span data-ttu-id="d7ddc-121">해당 문화권에 대한 위성 어셈블리를 찾을 수 없는 경우에는 기본 문화권의 리소스가 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="d7ddc-121">If no satellite assembly is found for that culture, the resources of the default culture are used.</span></span>
+<span data-ttu-id="79196-116">이전 줄의 문제는 `"The student cannot be found."`이 상수 문자열에 불과하다는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="79196-116">The problem with the previous line is that `"The student cannot be found."` is just a constant string.</span></span> <span data-ttu-id="79196-117">지역화된 애플리케이션에서는 사용자 문화권에 따라 다른 메시지를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="79196-117">In a localized application, you want to have different messages depending on user culture.</span></span>
+<span data-ttu-id="79196-118">[위성 어셈블리](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md)는 이 작업을 수행하는 좋은 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="79196-118">[Satellite Assemblies](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md) are a good way to do that.</span></span> <span data-ttu-id="79196-119">위성 어셈블리는 특정 언어에 대한 리소스를 포함하는 .dll입니다.</span><span class="sxs-lookup"><span data-stu-id="79196-119">A satellite assembly is a .dll that contains resources for a specific language.</span></span> <span data-ttu-id="79196-120">런타임에 특정 리소스를 요청하면 CLR은 사용자 문화권에 따라 해당 리소스를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="79196-120">When you ask for a specific resources at run time, the CLR finds that resource depending on user culture.</span></span> <span data-ttu-id="79196-121">해당 문화권에 대한 위성 어셈블리를 찾을 수 없는 경우에는 기본 문화권의 리소스가 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="79196-121">If no satellite assembly is found for that culture, the resources of the default culture are used.</span></span>
 
-<span data-ttu-id="d7ddc-122">지역화된 예외 메시지를 만들려면</span><span class="sxs-lookup"><span data-stu-id="d7ddc-122">To create the localized exception messages:</span></span>
+<span data-ttu-id="79196-122">지역화된 예외 메시지를 만들려면</span><span class="sxs-lookup"><span data-stu-id="79196-122">To create the localized exception messages:</span></span>
 
-1. <span data-ttu-id="d7ddc-123">리소스 파일을 저장한 *Resources*라는 새 폴더를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="d7ddc-123">Create a new folder named *Resources* to hold the resource files.</span></span>
-1. <span data-ttu-id="d7ddc-124">새 리소스 파일을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="d7ddc-124">Add a new resource file to it.</span></span> <span data-ttu-id="d7ddc-125">Visual Studio에서 이렇게 하려면 **솔루션 탐색기**에서 폴더를 마우스 오른쪽 단추로 클릭하고 **추가** > **새 항목** > **리소스 파일**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="d7ddc-125">To do that in Visual Studio, right-click the folder in **Solution Explorer**, and select **Add** > **New Item** > **Resources File**.</span></span> <span data-ttu-id="d7ddc-126">파일 이름을 *ExceptionMessages.resx*입니다.</span><span class="sxs-lookup"><span data-stu-id="d7ddc-126">Name the file *ExceptionMessages.resx*.</span></span> <span data-ttu-id="d7ddc-127">이 파일은 기본 리소스 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="d7ddc-127">This is the default resources file.</span></span>
-1. <span data-ttu-id="d7ddc-128">다음 그림에 표시된 것처럼 예외 메시지에 대한 이름/값 쌍을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="d7ddc-128">Add a name/value pair for your exception message, like the following image shows:</span></span>
+1. <span data-ttu-id="79196-123">리소스 파일을 저장한 *Resources*라는 새 폴더를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="79196-123">Create a new folder named *Resources* to hold the resource files.</span></span>
+1. <span data-ttu-id="79196-124">새 리소스 파일을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="79196-124">Add a new resource file to it.</span></span> <span data-ttu-id="79196-125">Visual Studio에서 이렇게 하려면 **솔루션 탐색기**에서 폴더를 마우스 오른쪽 단추로 클릭하고 **추가** > **새 항목** > **리소스 파일**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="79196-125">To do that in Visual Studio, right-click the folder in **Solution Explorer**, and select **Add** > **New Item** > **Resources File**.</span></span> <span data-ttu-id="79196-126">파일 이름을 *ExceptionMessages.resx*입니다.</span><span class="sxs-lookup"><span data-stu-id="79196-126">Name the file *ExceptionMessages.resx*.</span></span> <span data-ttu-id="79196-127">이 파일은 기본 리소스 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="79196-127">This is the default resources file.</span></span>
+1. <span data-ttu-id="79196-128">다음 그림에 표시된 것처럼 예외 메시지에 대한 이름/값 쌍을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="79196-128">Add a name/value pair for your exception message, like the following image shows:</span></span>
 
    ![기본 문화권에 리소스 추가](media/add-resources-to-default-culture.jpg)
 
-1. <span data-ttu-id="d7ddc-130">프랑스어의 새 리소스 파일을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="d7ddc-130">Add a new resource file for French.</span></span> <span data-ttu-id="d7ddc-131">이름을 *ExceptionMessages.fr-FR.resx*로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="d7ddc-131">Name it *ExceptionMessages.fr-FR.resx*.</span></span>
-1. <span data-ttu-id="d7ddc-132">예외 메시지에 대한 이름/값 쌍을 다시 추가하지만 이번에는 다음과 같은 프랑스 값을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="d7ddc-132">Add a name/value pair for the exception message again, but with a French value:</span></span>
+1. <span data-ttu-id="79196-130">프랑스어의 새 리소스 파일을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="79196-130">Add a new resource file for French.</span></span> <span data-ttu-id="79196-131">이름을 *ExceptionMessages.fr-FR.resx*로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="79196-131">Name it *ExceptionMessages.fr-FR.resx*.</span></span>
+1. <span data-ttu-id="79196-132">예외 메시지에 대한 이름/값 쌍을 다시 추가하지만 이번에는 다음과 같은 프랑스 값을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="79196-132">Add a name/value pair for the exception message again, but with a French value:</span></span>
 
    ![fr-FR 문화권에 리소스 추가](media/add-resources-to-fr-culture.jpg)
 
-1. <span data-ttu-id="d7ddc-134">프로젝트를 빌드하면 빌드 출력 폴더에는 위성 어셈블리인 *.dll* 파일을 포함하는 *fr-FR* 폴더가 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d7ddc-134">After you build the project, the build output folder should contain the *fr-FR* folder with a *.dll* file, which is the satellite assembly.</span></span>
-1. <span data-ttu-id="d7ddc-135">다음과 같은 코드를 사용하여 예외를 throw합니다.</span><span class="sxs-lookup"><span data-stu-id="d7ddc-135">You throw the exception with code like the following:</span></span>
+1. <span data-ttu-id="79196-134">프로젝트를 빌드하면 빌드 출력 폴더에는 위성 어셈블리인 *.dll* 파일을 포함하는 *fr-FR* 폴더가 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="79196-134">After you build the project, the build output folder should contain the *fr-FR* folder with a *.dll* file, which is the satellite assembly.</span></span>
+1. <span data-ttu-id="79196-135">다음과 같은 코드를 사용하여 예외를 throw합니다.</span><span class="sxs-lookup"><span data-stu-id="79196-135">You throw the exception with code like the following:</span></span>
 
     ```csharp
     var resourceManager = new ResourceManager("FULLY_QIALIFIED_NAME_OF_RESOURCE_FILE", Assembly.GetExecutingAssembly());
     throw new StudentNotFoundException(resourceManager.GetString("StudentNotFound"), "John");
     ```
 
+    ```vb
+    Dim resourceManager As New ResourceManager("FULLY_QIALIFIED_NAME_OF_RESOURCE_FILE", Assembly.GetExecutingAssembly())
+    Throw New StudentNotFoundException(resourceManager.GetString("StudentNotFound"), "John")
+    ```
+
     > [!NOTE]
-    > <span data-ttu-id="d7ddc-136">프로젝트 이름이 `TestProject`이고 리소스 파일 *ExceptionMessages.resx*가 프로젝트의 *Resources* 폴더에 있는 경우 리소스 파일의 정규화된 이름은 `TestProject.Resources.ExceptionMessages`입니다.</span><span class="sxs-lookup"><span data-stu-id="d7ddc-136">If the project name is `TestProject` and the resource file *ExceptionMessages.resx* resides in the *Resources* folder of the project, the fully qualified name of the resource file is `TestProject.Resources.ExceptionMessages`.</span></span>
+    > <span data-ttu-id="79196-136">프로젝트 이름이 `TestProject`이고 리소스 파일 *ExceptionMessages.resx*가 프로젝트의 *Resources* 폴더에 있는 경우 리소스 파일의 정규화된 이름은 `TestProject.Resources.ExceptionMessages`입니다.</span><span class="sxs-lookup"><span data-stu-id="79196-136">If the project name is `TestProject` and the resource file *ExceptionMessages.resx* resides in the *Resources* folder of the project, the fully qualified name of the resource file is `TestProject.Resources.ExceptionMessages`.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="d7ddc-137">참조</span><span class="sxs-lookup"><span data-stu-id="d7ddc-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="79196-137">참조</span><span class="sxs-lookup"><span data-stu-id="79196-137">See also</span></span>
 
-- [<span data-ttu-id="d7ddc-138">사용자 정의 예외를 만드는 방법</span><span class="sxs-lookup"><span data-stu-id="d7ddc-138">How to create user-defined exceptions</span></span>](how-to-create-user-defined-exceptions.md)
-- [<span data-ttu-id="d7ddc-139">데스크톱 응용 프로그램용 위성 어셈블리 만들기</span><span class="sxs-lookup"><span data-stu-id="d7ddc-139">Creating Satellite Assemblies for Desktop Apps</span></span>](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
-- [<span data-ttu-id="d7ddc-140">base(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="d7ddc-140">base (C# Reference)</span></span>](../../csharp/language-reference/keywords/base.md)
-- [<span data-ttu-id="d7ddc-141">this(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="d7ddc-141">this (C# Reference)</span></span>](../../csharp/language-reference/keywords/this.md)
+- [<span data-ttu-id="79196-138">사용자 정의 예외를 만드는 방법</span><span class="sxs-lookup"><span data-stu-id="79196-138">How to create user-defined exceptions</span></span>](how-to-create-user-defined-exceptions.md)
+- [<span data-ttu-id="79196-139">데스크톱 응용 프로그램용 위성 어셈블리 만들기</span><span class="sxs-lookup"><span data-stu-id="79196-139">Creating Satellite Assemblies for Desktop Apps</span></span>](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
+- [<span data-ttu-id="79196-140">base(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="79196-140">base (C# Reference)</span></span>](../../csharp/language-reference/keywords/base.md)
+- [<span data-ttu-id="79196-141">this(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="79196-141">this (C# Reference)</span></span>](../../csharp/language-reference/keywords/this.md)
