@@ -19,7 +19,7 @@ ms.locfileid: "76746215"
   
 <a name="paintingwithbrush"></a>   
 ## <a name="painting-with-a-brush"></a>브러시로 그리기  
- <xref:System.Windows.Media.Brush> 출력을 사용 하 여 영역을 "그립니다". 다른 브러시의 출력 형식은 서로 다릅니다. 일부 브러시는 단색으로 영역을 페인트 하 고 다른 색은 그라데이션, 패턴, 이미지 또는 그리기를 사용 합니다. 다음 그림에서는 각각의 서로 다른 <xref:System.Windows.Media.Brush> 형식에 대 한 예를 보여 줍니다.  
+ <xref:System.Windows.Media.Brush> 출력을 사용 하 여 영역을 "그립니다". 다른 브러시는 다른 유형의 출력 합니다. 일부 브러시 그라데이션, 패턴, 이미지 또는 드로잉을 사용 하 여 다른 단색으로 영역을 그립니다. 다음 그림에서는 각각의 서로 다른 <xref:System.Windows.Media.Brush> 형식에 대 한 예를 보여 줍니다.  
   
  ![브러시 형식](./media/graphicsmm-brushtypes.jpg "graphicsmm_brushtypes")  
 브러시 예제  
@@ -54,7 +54,7 @@ System.windows.media.solidcolorbrush>를 사용 하 여 그린 사각형
   
 <a name="paintwithlineargradientbrush"></a>   
 ## <a name="paint-with-a-linear-gradient"></a>선형 그라데이션으로 그리기  
- <xref:System.Windows.Media.LinearGradientBrush>는 선형 그라데이션으로 영역을 그립니다. 선형 그라데이션은 선 전체에 걸쳐 그라데이션 축을 혼합 하 여 두 개 이상의 색을 혼합 합니다. <xref:System.Windows.Media.GradientStop> 개체를 사용 하 여 그라데이션의 색과 위치를 지정 합니다.  
+ <xref:System.Windows.Media.LinearGradientBrush> 선형 그라데이션으로 영역을 그립니다. 선형 그라데이션은 선 전체에 걸쳐 그라데이션 축을 혼합 하 여 두 개 이상의 색을 혼합 합니다. <xref:System.Windows.Media.GradientStop> 개체를 사용 하 여 그라데이션의 색과 위치를 지정 합니다.  
   
  다음 예에서는 <xref:System.Windows.Media.LinearGradientBrush>를 사용 하 여 <xref:System.Windows.Shapes.Rectangle><xref:System.Windows.Shapes.Shape.Fill%2A>를 그립니다. 다음 그림은 칠해진 사각형을 보여 줍니다.  
   
@@ -160,7 +160,7 @@ VisualBrush를 사용 하 여 그린 사각형
   
  개체 <xref:System.Windows.Media.VisualBrush> 고정할 수 없는 이유에 대 한 자세한 내용은 <xref:System.Windows.Media.VisualBrush> 유형 페이지를 참조 하세요.  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Brushes>

@@ -89,7 +89,7 @@ WCF (Windows Communication Foundation)는 SOAP 메시지 기반의 분산 프로
   
  세 번째 보안 모드는 위 두 가지 모드를 모두 사용하며 두 모드의 이점을 모두 갖추고 있습니다. 이 모드를 `TransportWithMessageCredential`이라고 합니다. 이 모드에서는 클라이언트를 인증하는 데 메시지 보안을 사용하고 서버를 인증하고 메시지 기밀성과 무결성을 제공하는 데 전송 보안을 사용합니다. 이로 인해 `TransportWithMessageCredential` 보안 모드는 전송 보안 모드만큼 빠른 속도를 제공하면서 메시지 보안과 같은 방식으로 클라이언트 인증 확장성을 지원합니다. 반면 메시지 보안 모드와는 달리 완벽한 엔드투엔드 보안은 제공하지 않습니다.  
   
-### <a name="access-control"></a>액세스 제어  
+### <a name="access-control"></a>Access Control  
  *액세스 제어* 를 권한 부여 라고도 합니다. *권한 부여* 를 통해 서로 다른 사용자가 데이터를 볼 수 있는 권한을 가질 수 있습니다. 예를 들어, 회사의 인사 관리 파일에는 중요한 직원 데이터가 들어 있기 때문에 관리자만 직원 데이터를 볼 수 있습니다. 또한 관리자는 자신이 관리하는 부하 직원에 대한 데이터만 볼 수 있습니다. 이 경우 액세스 제어는 역할("관리자")뿐 아니라 관리자의 특정 ID에 기반하므로 관리자는 다른 관리자의 직원 레코드를 볼 수 없습니다.  
   
  WCF에서 액세스 제어 기능은 CLR (공용 언어 런타임 <xref:System.Security.Permissions.PrincipalPermissionAttribute>)과의 통합 및 *id 모델*이라는 api 집합을 통해 제공 됩니다. 액세스 제어 및 클레임 기반 권한 부여에 대 한 자세한 내용은 [보안 확장](../../../../docs/framework/wcf/extending/extending-security.md)을 참조 하세요.  
@@ -97,13 +97,13 @@ WCF (Windows Communication Foundation)는 SOAP 메시지 기반의 분산 프로
 ### <a name="auditing"></a>감사  
  *감사* 는 Windows 이벤트 로그에 보안 이벤트를 기록 하는 것입니다. 인증 실패 또는 성공과 같은 보안 관련 이벤트를 기록할 수 있습니다. 자세한 내용은 [감사](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)합니다. 프로그래밍에 대 한 자세한 내용은 [방법: 보안 이벤트 감사](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - [서비스에 보안 설정](../../../../docs/framework/wcf/securing-services.md)
 - [일반적인 보안 시나리오](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
 - [바인딩 및 보안](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
-- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [서비스 및 클라이언트에 보안 설정](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [인증](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)
 - [권한 부여](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
 - [페더레이션 및 발급된 토큰](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

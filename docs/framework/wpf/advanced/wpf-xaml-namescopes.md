@@ -27,7 +27,7 @@ XAML 이름 범위는 XAML에 정의된 개체를 식별하는 개념입니다. 
  WPF XAML에서 일반적인 루트 요소 (예: <xref:System.Windows.Controls.Page>및 <xref:System.Windows.Window>) 인 요소는 항상 XAML 이름 범위를 제어 합니다. <xref:System.Windows.FrameworkElement> 또는 <xref:System.Windows.FrameworkContentElement>와 같은 요소가 태그에 있는 페이지의 루트 요소인 경우 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서는 <xref:System.Windows.Controls.Page>가 작동 하는 XAML 이름 범위를 제공할 수 있도록 <xref:System.Windows.Controls.Page> 루트를 암시적으로 추가 합니다.  
   
 > [!NOTE]
-> WPF 빌드 작업에서는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 태그의 모든 요소에 대해 `Name` 또는 `x:Name` 특성이 정의되지 않은 경우에도 XAML 프로덕션을 위한 XAML 이름 범위가 만들어집니다.  
+> WPF 빌드 작업에서는 `Name` 태그의 모든 요소에 대해 `x:Name` 또는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 특성이 정의되지 않은 경우에도 XAML 프로덕션을 위한 XAML 이름 범위가 만들어집니다.  
   
  한 XAML 이름 범위에서 같은 이름을 두 번 사용하려고 하면 예외가 발생합니다. 코드 숨김 파일이 있고 컴파일된 애플리케이션의 일부인 WPF XAML의 경우에는 빌드 시 WPF 빌드 작업에서 초기 태그 컴파일 중 페이지에 대해 생성된 클래스를 만들 때 예외가 발생합니다. 빌드 작업을 통해 태그 컴파일되지 않은 XAML의 경우에는 XAML이 로드될 때 XAML 이름 범위 문제와 관련된 예외가 발생할 수 있습니다. XAML 디자이너가 디자인 타임에 XAML 이름 범위 문제를 예상할 수도 있습니다.  
   
@@ -53,7 +53,7 @@ XAML 이름 범위는 XAML에 정의된 개체를 식별하는 개념입니다. 
 ## <a name="xaml-namescopes-in-styles-and-templates"></a>스타일 및 템플릿의 XAML 이름 범위  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 스타일 및 템플릿을 사용하면 간편하게 콘텐츠를 다시 사용 및 적용할 수 있지만 템플릿 수준에서 XAML 이름이 정의된 요소가 스타일 및 템플릿에 포함될 수 있습니다. 이런 템플릿은 한 페이지에서 여러 번 사용될 수 있기 때문에 스타일과 템플릿은 모두 해당 스타일 또는 템플릿이 적용되는 개체 트리 내의 위치와는 상관없이 고유한 XAML 이름 범위를 정의합니다.  
   
- 다음 예제를 참조하세요.  
+ 다음과 같은 예제를 참조하세요.  
   
  [!code-xaml[XamlOvwSupport#NameScopeTemplates](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page6.xaml#namescopetemplates)]  
   
@@ -94,7 +94,7 @@ XAML 이름 범위는 XAML에 정의된 개체를 식별하는 개념입니다. 
   
 - <xref:System.Windows.FrameworkContentElement>  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [WPF XAML을 위한 XAML 네임스페이스 및 네임스페이스 매핑](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)
 - [x:Name 지시문](../../../desktop-wpf/xaml-services/xname-directive.md)

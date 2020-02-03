@@ -60,7 +60,7 @@ ms.locfileid: "76741891"
 
 - 정적 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 메서드를 호출 합니다.
 
-  응용 프로그램 진입점의 첫 번째 메서드 호출 이어야 합니다. 예를 들면 다음과 같습니다.:
+  응용 프로그램 진입점의 첫 번째 메서드 호출 이어야 합니다. 예들 들어 다음과 같습니다.
 
   ```csharp
   static void Main()
@@ -128,7 +128,7 @@ Console.WriteLine(Environment.OSVersion.Version.CompareTo(OsMinVersion));
 Console.WriteLine(AppDomain.CurrentDomain.SetupInformation.TargetFrameworkName);
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [구성 요소 Windows Forms 추가](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
 - [Windows Forms의 크기 및 배율 조정](adjusting-the-size-and-scale-of-windows-forms.md)

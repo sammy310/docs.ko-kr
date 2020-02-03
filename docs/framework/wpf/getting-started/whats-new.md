@@ -16,7 +16,7 @@ ms.locfileid: "76746924"
 # <a name="whats-new-in-wpf-version-45"></a>WPF 버전 4.5의 새로운 기능
 <a name="introduction"></a>이 항목에는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 버전 4.5의 새로운 기능과 향상 된 기능에 대 한 정보가 포함 되어 있습니다.  
   
- 이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
+ 이 항목의 섹션:  
   
 - [리본 컨트롤](#ribbon_control)  
   
@@ -59,7 +59,7 @@ ms.locfileid: "76746924"
   
 1. <xref:System.Windows.Controls.VirtualizingStackPanel>와 같은 <xref:System.Windows.Controls.VirtualizingPanel><xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> 연결 된 속성을 사용 하 여 부분 항목을 표시할지 여부를 지정할 수 있습니다. <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A>을 <xref:System.Windows.Controls.ScrollUnit.Item>로 설정 하면 <xref:System.Windows.Controls.VirtualizingPanel>에는 완전히 표시 되는 항목만 표시 됩니다. <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A>을 <xref:System.Windows.Controls.ScrollUnit.Pixel>로 설정 하면 <xref:System.Windows.Controls.VirtualizingPanel>에서 부분적으로 표시 되는 항목을 표시할 수 있습니다.  
   
-2. <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A> 연결 된 속성을 사용 하 여 <xref:System.Windows.Controls.VirtualizingPanel>를 가상화 할 때 뷰포트 전후에 캐시 크기를 지정할 수 있습니다.  캐시는 항목이 가상화되지 않는 뷰포트 위 또는 아래 공간 양입니다.  캐시를 사용하면 뷰로 스크롤하는 동안 UI 요소가 생성되지 않도록 하여 성능을 향상시킬 수 있습니다. 캐시는 낮은 우선 순위에서 채워지므로 작업 중에는 애플리케이션이 응답하지 않게 됩니다. 합니다 <xref:System.Windows.Controls.VirtualizingPanel.CacheLengthUnit%2A?displayProperty=nameWithType> 속성에서 사용 되는 측정 단위를 결정 <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A?displayProperty=nameWithType>합니다.  
+2. <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A> 연결 된 속성을 사용 하 여 <xref:System.Windows.Controls.VirtualizingPanel>를 가상화 할 때 뷰포트 전후에 캐시 크기를 지정할 수 있습니다.  캐시는 항목이 가상화되지 않는 뷰포트 위 또는 아래 공간 양입니다.  캐시를 사용하면 뷰로 스크롤하는 동안 UI 요소가 생성되지 않도록 하여 성능을 향상시킬 수 있습니다. 캐시는 낮은 우선 순위에서 채워지므로 작업 중에는 애플리케이션이 응답하지 않게 됩니다. <xref:System.Windows.Controls.VirtualizingPanel.CacheLengthUnit%2A?displayProperty=nameWithType> 속성은 <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A?displayProperty=nameWithType>에서 사용 하는 측정 단위를 결정 합니다.  
   
 <a name="static_properties"></a>   
 ## <a name="binding-to-static-properties"></a>정적 속성에 바인딩  
@@ -77,7 +77,7 @@ ms.locfileid: "76746924"
   
 <a name="INotifyDataErrorInfo"></a>   
 ## <a name="synchronously-and-asynchronously-validating-data"></a>동기적 및 비동기적으로 데이터 유효성 검사  
- <xref:System.ComponentModel.INotifyDataErrorInfo> 인터페이스를 사용 하면 데이터 엔터티 클래스에서 사용자 지정 유효성 검사 규칙을 구현 하 고 유효성 검사 결과를 비동기적으로 표시할 수 있습니다. 또한 이 인터페이스는 사용자 지정 오류 개체, 속성당 여러 오류, 속성 간 오류 및 엔터티 수준 오류도 지원합니다.  자세한 내용은 <xref:System.ComponentModel.INotifyDataErrorInfo>를 참조하세요.  
+ <xref:System.ComponentModel.INotifyDataErrorInfo> 인터페이스를 사용 하면 데이터 엔터티 클래스에서 사용자 지정 유효성 검사 규칙을 구현 하 고 유효성 검사 결과를 비동기적으로 표시할 수 있습니다. 또한 이 인터페이스는 사용자 지정 오류 개체, 속성당 여러 오류, 속성 간 오류 및 엔터티 수준 오류도 지원합니다.  자세한 내용은 <xref:System.ComponentModel.INotifyDataErrorInfo>을 참조하세요.  
   
 <a name="delay"></a>   
 ## <a name="automatically-updating-the-source-of-a-data-binding"></a>데이터 바인딩 원본을 자동으로 업데이트  
@@ -108,11 +108,11 @@ ms.locfileid: "76746924"
   
 <a name="DisconnectedSource"></a>   
 ## <a name="checking-for-a-valid-datacontext-object"></a>유효한 DataContext 개체 확인  
- <xref:System.Windows.Controls.ItemsControl>의 항목 컨테이너 <xref:System.Windows.FrameworkElement.DataContext%2A>의 연결을 해제 하는 경우가 있습니다.  항목 컨테이너에 있는 항목을 표시 하는 UI 요소는는 <xref:System.Windows.Controls.ItemsControl>합니다.  경우는 <xref:System.Windows.Controls.ItemsControl> 데이터가 컬렉션에 바인딩된 각 항목에 대해 항목 컨테이너가 생성 됩니다. 경우에 따라 항목 컨테이너는 시각적 트리에서 제거됩니다. 항목 컨테이너는 제거 되는 두 가지 일반적인 경우는 기본 컬렉션에서 항목이 제거 될 때 및에 가상화가 사용 하는 경우는 <xref:System.Windows.Controls.ItemsControl>합니다. 이러한 경우 항목 컨테이너의 <xref:System.Windows.FrameworkElement.DataContext%2A> 속성은 <xref:System.Windows.Data.BindingOperations.DisconnectedSource%2A?displayProperty=nameWithType> 정적 속성에서 반환 되는 센티널 개체로 설정 됩니다.  항목 컨테이너의 <xref:System.Windows.FrameworkElement.DataContext%2A>에 액세스 하기 전에 <xref:System.Windows.FrameworkElement.DataContext%2A> <xref:System.Windows.Data.BindingOperations.DisconnectedSource%2A> 개체와 같은지 여부를 확인 해야 합니다.  
+ <xref:System.Windows.Controls.ItemsControl>의 항목 컨테이너 <xref:System.Windows.FrameworkElement.DataContext%2A>의 연결을 해제 하는 경우가 있습니다.  항목 컨테이너는 <xref:System.Windows.Controls.ItemsControl>항목을 표시 하는 UI 요소입니다.  <xref:System.Windows.Controls.ItemsControl> 컬렉션에 데이터 바인딩된 경우 각 항목에 대해 항목 컨테이너가 생성 됩니다. 경우에 따라 항목 컨테이너는 시각적 트리에서 제거됩니다. 항목 컨테이너가 제거 되는 두 가지 일반적인 경우는 항목이 기본 컬렉션에서 제거 되 고 <xref:System.Windows.Controls.ItemsControl>에서 가상화가 사용 하도록 설정 된 경우입니다. 이러한 경우 항목 컨테이너의 <xref:System.Windows.FrameworkElement.DataContext%2A> 속성은 <xref:System.Windows.Data.BindingOperations.DisconnectedSource%2A?displayProperty=nameWithType> 정적 속성에서 반환 되는 센티널 개체로 설정 됩니다.  항목 컨테이너의 <xref:System.Windows.FrameworkElement.DataContext%2A>에 액세스 하기 전에 <xref:System.Windows.FrameworkElement.DataContext%2A> <xref:System.Windows.Data.BindingOperations.DisconnectedSource%2A> 개체와 같은지 여부를 확인 해야 합니다.  
   
 <a name="live_shaping"></a>   
 ## <a name="repositioning-data-as-the-datas-values-change-live-shaping"></a>데이터 값이 변경될 때 데이터의 위치 변경(라이브 셰이핑)  
- 데이터의 컬렉션을 그룹화, 정렬 또는 필터링할 수 있습니다. WPF 4.5에서는 데이터가 수정되면 데이터를 다시 배열할 수 있습니다. 예를 들어, 애플리케이션에서 사용 하는 <xref:System.Windows.Controls.DataGrid> 따라 주식 시장에 주식, 주식을 나열 하려면 정렬 합니다. 주식에서 실시간 정렬을 사용 하도록 설정 하는 경우 <xref:System.Windows.Data.CollectionView>에서 주식의 위치는 <xref:System.Windows.Controls.DataGrid> 재고 값이 큰 이동 또는 보다 작은 다른 주식의 값입니다.   자세한 내용은 참조는 <xref:System.ComponentModel.ICollectionViewLiveShaping> 인터페이스입니다.  
+ 데이터의 컬렉션을 그룹화, 정렬 또는 필터링할 수 있습니다. WPF 4.5에서는 데이터가 수정되면 데이터를 다시 배열할 수 있습니다. 예를 들어, 애플리케이션에서 사용 하는 <xref:System.Windows.Controls.DataGrid> 따라 주식 시장에 주식, 주식을 나열 하려면 정렬 합니다. 주식에서 실시간 정렬을 사용 하도록 설정 하는 경우 <xref:System.Windows.Data.CollectionView>에서 주식의 위치는 <xref:System.Windows.Controls.DataGrid> 재고 값이 큰 이동 또는 보다 작은 다른 주식의 값입니다.   자세한 내용은 <xref:System.ComponentModel.ICollectionViewLiveShaping> 인터페이스를 참조 하세요.  
   
 <a name="weak_event_pattern"></a>   
 ## <a name="improved-support-for-establishing-a-weak-reference-to-an-event"></a>이벤트에 대한 약한 참조 설정을 위한 지원 개선  
@@ -126,6 +126,6 @@ ms.locfileid: "76746924"
 ## <a name="markup-extensions-for-events"></a>이벤트에 대한 태그 확장  
  WPF 4.5에서는 이벤트에 대한 태그 확장을 지원합니다.  WPF는 이벤트에 사용될 태그 확장을 정의하지 않지만 타사에서 이벤트에 사용할 수 있는 태그 확장을 만들 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [.NET Framework의 새로운 기능](../../whats-new/index.md)

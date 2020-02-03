@@ -42,11 +42,11 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> 컨트롤을 사용 하�
     ```  
   
     > [!NOTE]
-    > Windows Vista부터 테마에 따라 일부 속성을 설정 하면 일정의 모양이 변경 되지 않을 수 있습니다. 예를 들어 Windows가 Aero 테마를 사용 하도록 설정 된 경우 <xref:System.Windows.Forms.MonthCalendar.BackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>또는 <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> 속성을 설정 해도 아무 효과가 없습니다. 즉, 런타임에 현재 운영 체제 테마에서 파생 되는 모양을 사용 하 여 달력의 업데이트 된 렌더링 됩니다. 이러한 속성을 사용 하 고 이전 버전의 달력을 사용 하려면 응용 프로그램에 대 한 비주얼 스타일을 사용 하지 않도록 설정할 수 있습니다. 비주얼 스타일을 사용 하지 않도록 설정 하면 애플리케이션에서 다른 컨트롤의 동작과 모양을 달라질 수 있습니다. Visual Basic에서 비주얼 스타일을 사용 하지 않으려면 프로젝트 디자이너를 열고 선택 취소 합니다 **XP 비주얼 스타일 사용** 확인란 합니다. C#에서 비주얼 스타일을 사용 하지 않으려면 Program.cs를 열고 주석 `Application.EnableVisualStyles();`합니다. 비주얼 스타일에 대 한 자세한 내용은 [비주얼 스타일 사용](/windows/desktop/controls/cookbook-overview)을 참조 하세요.  
+    > Windows Vista부터 테마에 따라 일부 속성을 설정 하면 일정의 모양이 변경 되지 않을 수 있습니다. 예를 들어 Windows가 Aero 테마를 사용 하도록 설정 된 경우 <xref:System.Windows.Forms.MonthCalendar.BackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>또는 <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> 속성을 설정 해도 아무 효과가 없습니다. 즉, 런타임에 현재 운영 체제 테마에서 파생 되는 모양을 사용 하 여 달력의 업데이트 된 렌더링 됩니다. 이러한 속성을 사용 하 고 이전 버전의 달력을 사용 하려면 응용 프로그램에 대 한 비주얼 스타일을 사용 하지 않도록 설정할 수 있습니다. 비주얼 스타일을 사용 하지 않도록 설정 하면 애플리케이션에서 다른 컨트롤의 동작과 모양을 달라질 수 있습니다. Visual Basic에서 비주얼 스타일을 사용 하지 않도록 설정 하려면 프로젝트 디자이너를 열고 **XP 비주얼 스타일 사용** 확인란의 선택을 취소 합니다. 에서 C#비주얼 스타일을 사용 하지 않도록 설정 하려면 Program.cs을 열고 `Application.EnableVisualStyles();`를 주석으로 처리 합니다. 비주얼 스타일에 대 한 자세한 내용은 [비주얼 스타일 사용](/windows/desktop/controls/cookbook-overview)을 참조 하세요.  
   
 ### <a name="to-display-the-current-date-at-the-bottom-of-the-control"></a>컨트롤의 맨 아래에 있는 현재 날짜를 표시 하려면  
   
-- <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> 속성을 `true`으로 설정합니다. 아래 예제에서는 폼을 두 번 클릭 했을 때 오늘 날짜를 표시 하거나 생략할 때를 전환 합니다.  
+- <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> 속성을 `true`로 설정합니다. 아래 예제에서는 폼을 두 번 클릭 했을 때 오늘 날짜를 표시 하거나 생략할 때를 전환 합니다.  
   
     ```vb  
     Private Sub Form1_DoubleClick(ByVal sender As Object, _  
@@ -87,7 +87,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> 컨트롤을 사용 하�
   
 ### <a name="to-display-week-numbers"></a>주 번호를 표시 하려면  
   
-- <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> 속성을 `true`으로 설정합니다. 코드 또는 속성 창에서이 속성을 설정할 수 있습니다.  
+- <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> 속성을 `true`로 설정합니다. 코드 또는 속성 창에서이 속성을 설정할 수 있습니다.  
   
      주 번호는 첫 번째 요일의 왼쪽에 있는 별도의 열에 표시 됩니다.  
   
@@ -103,7 +103,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> 컨트롤을 사용 하�
     monthCalendar1->ShowWeekNumbers = true;  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [MonthCalendar 컨트롤](monthcalendar-control-windows-forms.md)
 - [방법: Windows Forms MonthCalendar 컨트롤에서 날짜 범위 선택](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)

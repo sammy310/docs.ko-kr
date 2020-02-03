@@ -81,7 +81,7 @@ CLR (공용 언어 런타임) 프레임 워크에서 구현 된 XAML은 CLR (공
   
  .NET Framework XAML 서비스 구현과 WPF XAML 프로세서에서 컬렉션 속성을 구성하는 사항에 대한 다음 정의를 사용합니다. 속성의 형식은 다음 중 하나를 구현해야 합니다.  
   
-- 구현 <xref:System.Collections.IList>합니다.  
+- <xref:System.Collections.IList> 구현  
   
 - <xref:System.Collections.IDictionary> 또는 해당 하는 제네릭 (<xref:System.Collections.Generic.IDictionary%602>)을 구현 합니다.  
   
@@ -110,7 +110,7 @@ CLR (공용 언어 런타임) 프레임 워크에서 구현 된 XAML은 CLR (공
 ## <a name="serializing-xaml"></a>XAML Serialize  
  예를 들어 컨트롤 작성자인 경우 XAML에서 인스턴스화할 수 있는 개체 표현도 해당 XAML 태그로 다시 serialize할 수 있도록 하려는 경우가 있습니다. Serialization 요구 사항은 이 항목에서 설명하지 않습니다. [컨트롤 작성 개요](../controls/control-authoring-overview.md) 및 [요소 트리 및 Serialization](element-tree-and-serialization.md)을 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [XAML 개요(WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [사용자 지정 종속성 속성](custom-dependency-properties.md)

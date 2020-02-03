@@ -31,7 +31,7 @@ ms.locfileid: "76740191"
 
 다른 .NET Framework 클래스를 디버그 하는 것 처럼 Visual Studio를 사용 하 여 사용자 지정 컨트롤을 디버그할 수 있습니다. 차이점은 사용자 지정 컨트롤의 코드를 실행 하는 Visual Studio의 개별 인스턴스를 디버깅할 것입니다.
 
-## <a name="create-the-project"></a>프로젝트를 만듭니다.
+## <a name="create-the-project"></a>프로젝트 만들기
 
 첫 번째 단계에서는 애플리케이션 프로젝트를 만듭니다. 이 프로젝트를 사용 하 여 사용자 지정 컨트롤을 호스트 하는 응용 프로그램을 빌드합니다.
 
@@ -143,12 +143,12 @@ Visual Studio에서 Windows 응용 프로그램 프로젝트를 만들고 이름
 
 이제 디자인 타임에 사용자 지정 컨트롤을 디버그할 수 있으므로 Visual Studio IDE와의 상호 작용을 확장 하는 여러 가지 가능성이 있습니다.
 
-- <xref:System.ComponentModel.Component> 클래스의 <xref:System.ComponentModel.Component.DesignMode%2A> 속성을 사용 하 여 디자인 타임에만 실행 되는 코드를 작성할 수 있습니다. 자세한 내용은 <xref:System.ComponentModel.Component.DesignMode%2A>을 참조하세요.
+- <xref:System.ComponentModel.Component> 클래스의 <xref:System.ComponentModel.Component.DesignMode%2A> 속성을 사용 하 여 디자인 타임에만 실행 되는 코드를 작성할 수 있습니다. 자세한 내용은 <xref:System.ComponentModel.Component.DesignMode%2A>를 참조하세요.
 
 - 사용자 지정 컨트롤의 속성에 적용 하 여 디자이너와의 사용자 지정 컨트롤의 상호 작용을 조작할 수 있는 몇 가지 특성이 있습니다. 이러한 특성은 <xref:System.ComponentModel?displayProperty=nameWithType> 네임 스페이스에서 찾을 수 있습니다.
 
 - 사용자 지정 컨트롤에 대 한 사용자 지정 디자이너를 작성할 수 있습니다. 이를 통해 Visual Studio에서 제공 하는 확장 가능한 디자이너 인프라를 사용 하 여 디자인 환경을 완벽 하 게 제어할 수 있습니다. 자세한 내용은 [연습: Visual Studio 디자인 타임 기능을 활용 하는 Windows Forms 컨트롤 만들기](creating-a-wf-control-design-time-features.md)를 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [연습: Visual Studio의 디자인 타임 기능을 사용하는 Windows Forms 컨트롤 만들기](creating-a-wf-control-design-time-features.md)

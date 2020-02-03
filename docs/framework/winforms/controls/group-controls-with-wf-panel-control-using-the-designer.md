@@ -26,7 +26,7 @@ Windows Forms <xref:System.Windows.Forms.Panel> 컨트롤은 다른 컨트롤을
 
 3. 필드 패널에 테두리를 추가 하려면 해당 <xref:System.Windows.Forms.BorderStyle> 속성을 설정 합니다. <xref:System.Windows.Forms.BorderStyle.Fixed3D>, <xref:System.Windows.Forms.BorderStyle.FixedSingle>및 <xref:System.Windows.Forms.BorderStyle.None>의 세 가지 옵션이 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Panel 컨트롤](panel-control-windows-forms.md)
 - [Panel 컨트롤 개요](panel-control-overview-windows-forms.md)

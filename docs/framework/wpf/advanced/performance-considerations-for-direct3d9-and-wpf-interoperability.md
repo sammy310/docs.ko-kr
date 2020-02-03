@@ -38,7 +38,7 @@ ms.locfileid: "76743938"
 > [!NOTE]
 > XDDM은 Windows XP 및 Windows Vista에서 모두 사용할 수 있습니다. 그러나 WDDM은 Windows Vista 에서만 사용할 수 있습니다.  
   
-## <a name="general-best-practices"></a>일반적인 모범 사례  
+## <a name="general-best-practices"></a>일반 모범 사례  
  장치를 만들 때 `D3DCREATE_MULTITHREADED` 만들기 플래그를 사용 합니다. 이렇게 하면 성능이 저하 되지만 WPF 렌더링 시스템은 다른 스레드에서이 장치에 대 한 메서드를 호출 합니다. 두 스레드가 동시에 장치에 액세스 하지 않도록 잠금 프로토콜을 올바르게 준수 해야 합니다.  
   
  WPF 관리 스레드에서 렌더링을 수행 하는 경우 `D3DCREATE_FPU_PRESERVE` 생성 플래그를 사용 하 여 장치를 만드는 것이 좋습니다. 이 설정이 없으면 D3D 렌더링은 WPF 배정밀도 작업의 정확도를 줄이고 렌더링 문제를 발생 시킬 수 있습니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "76743938"
 |D3DFMT_A8R8G8B8 (잠글 수 없음)|**하드웨어 업데이트**|소프트웨어 업데이트|소프트웨어 업데이트|소프트웨어 업데이트|  
 |D3DFMT_A8R8G8B8 (잠금 가능)|**하드웨어 업데이트**|소프트웨어 업데이트|**하드웨어 업데이트**|소프트웨어 업데이트|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Interop.D3DImage>
 - [WPF 및 Direct3D9 상호 운용성](wpf-and-direct3d9-interoperation.md)

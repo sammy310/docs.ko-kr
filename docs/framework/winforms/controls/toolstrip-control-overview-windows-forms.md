@@ -46,32 +46,32 @@ Windows Forms <xref:System.Windows.Forms.ToolStrip> 컨트롤 및 관련 클래�
   
 ### <a name="important-toolstrip-members"></a>중요 한 ToolStrip 멤버  
   
-|이름|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStrip.Dock%2A>|<xref:System.Windows.Forms.ToolStrip> 도킹 된 부모 컨테이너의 가장자리를 가져오거나 설정 합니다.|  
-|<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>|<xref:System.Windows.Forms.ToolStrip> 클래스를 통해 끌어서 놓기와 항목 다시 정렬을 전용으로 처리할지를 나타내는 값을 가져오거나 설정합니다.|  
+|<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>|<xref:System.Windows.Forms.ToolStrip> 클래스를 통해 끌어서 놓기와 항목 다시 정렬을 프라이빗하게 처리할지 여부를 나타내는 값을 가져오거나 설정합니다.|  
 |<xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A>|<xref:System.Windows.Forms.ToolStrip> 항목을 레이아웃 하는 방법을 나타내는 값을 가져오거나 설정 합니다.|  
 |<xref:System.Windows.Forms.ToolStripItem.Overflow%2A>|<xref:System.Windows.Forms.ToolStripItem> <xref:System.Windows.Forms.ToolStrip> 또는 <xref:System.Windows.Forms.ToolStripOverflowButton>에 연결 되어 있는지 또는 둘 사이에서 부동 상태로 있을 수 있는지를 가져오거나 설정 합니다.|  
 |<xref:System.Windows.Forms.ToolStrip.IsDropDown%2A>|<xref:System.Windows.Forms.ToolStripItem> 클릭 될 때 <xref:System.Windows.Forms.ToolStripItem> 드롭다운 목록에 다른 항목을 표시할지 여부를 나타내는 값을 가져옵니다.|  
-|<xref:System.Windows.Forms.ToolStrip.OverflowButton%2A>|오버플로가 활성화된 <xref:System.Windows.Forms.ToolStrip>에 대한 오버플로 단추인 <xref:System.Windows.Forms.ToolStripItem>을 가져옵니다.|  
+|<xref:System.Windows.Forms.ToolStrip.OverflowButton%2A>|오버플로가 활성화된 <xref:System.Windows.Forms.ToolStripItem>에 대한 오버플로 단추인 <xref:System.Windows.Forms.ToolStrip>을 가져옵니다.|  
 |<xref:System.Windows.Forms.ToolStrip.Renderer%2A>|<xref:System.Windows.Forms.ToolStrip>의 모양 및 동작 (모양 및 느낌)을 사용자 지정 하는 데 사용 되는 <xref:System.Windows.Forms.ToolStripRenderer>를 가져오거나 설정 합니다.|  
-|<xref:System.Windows.Forms.ToolStrip.RenderMode%2A>|적용할 것 그리기 스타일을 가져오거나 설정 합니다.는 <xref:System.Windows.Forms.ToolStrip>합니다.|  
+|<xref:System.Windows.Forms.ToolStrip.RenderMode%2A>|<xref:System.Windows.Forms.ToolStrip>에 적용될 그리기 스타일을 가져오거나 설정합니다.|  
 |<xref:System.Windows.Forms.ToolStrip.RendererChanged>|<xref:System.Windows.Forms.ToolStrip.Renderer%2A> 속성이 변경되면 발생합니다.|  
   
  <xref:System.Windows.Forms.ToolStrip> 컨트롤의 유연성은 다양 한 도우미 클래스를 사용 하 여 구현 됩니다. 다음은 가장 주목할 만한 몇 가지 사항입니다.  
   
 ### <a name="important-toolstrip-companion-classes"></a>중요 한 ToolStrip 도우미 클래스  
   
-|이름|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.MenuStrip>|를 대체 하 고 <xref:System.Windows.Forms.MainMenu> 클래스에 기능을 추가 합니다.|  
 |<xref:System.Windows.Forms.StatusStrip>|를 대체 하 고 <xref:System.Windows.Forms.StatusBar> 클래스에 기능을 추가 합니다.|  
 |<xref:System.Windows.Forms.ContextMenuStrip>|를 대체 하 고 <xref:System.Windows.Forms.ContextMenu> 클래스에 기능을 추가 합니다.|  
 |<xref:System.Windows.Forms.ToolStripItem>|<xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.ToolStripControlHost>또는 <xref:System.Windows.Forms.ToolStripDropDown>에 포함 될 수 있는 모든 요소의 이벤트와 레이아웃을 관리 하는 추상 기본 클래스입니다.|  
 |<xref:System.Windows.Forms.ToolStripContainer>|다양 한 방법으로 컨트롤을 정렬할 수 있는 폼의 양쪽에 있는 패널을 컨테이너에 제공 합니다.|  
-|<xref:System.Windows.Forms.ToolStripRenderer>|에 대 한 그리기 기능을 처리 <xref:System.Windows.Forms.ToolStrip> 개체입니다.|  
+|<xref:System.Windows.Forms.ToolStripRenderer>|<xref:System.Windows.Forms.ToolStrip> 개체에 대한 그리기 기능을 처리합니다.|  
 |<xref:System.Windows.Forms.ToolStripProfessionalRenderer>|Microsoft Office 스타일의 모양을 제공 합니다.|  
-|<xref:System.Windows.Forms.ToolStripManager>|컨트롤 <xref:System.Windows.Forms.ToolStrip> 렌더링 및 래프팅 및 병합 <xref:System.Windows.Forms.MenuStrip>를 <xref:System.Windows.Forms.ToolStripDropDownMenu>, 및 <xref:System.Windows.Forms.ToolStripMenuItem> 개체입니다.|  
+|<xref:System.Windows.Forms.ToolStripManager>|<xref:System.Windows.Forms.ToolStrip> 렌더링 및 래프팅(rafting)과 <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.ToolStripDropDownMenu> 및 <xref:System.Windows.Forms.ToolStripMenuItem> 개체의 병합을 제어합니다.|  
 |<xref:System.Windows.Forms.ToolStripManagerRenderMode>|폼에 포함 된 여러 <xref:System.Windows.Forms.ToolStrip> 개체에 적용 되는 그리기 스타일 (사용자 지정, Windows XP 또는 Microsoft Office Professional)을 지정 합니다.|  
 |<xref:System.Windows.Forms.ToolStripRenderMode>|폼에 포함 된 하나의 <xref:System.Windows.Forms.ToolStrip> 개체에 적용 되는 그리기 스타일 (사용자 지정, Windows XP 또는 Microsoft Office Professional)을 지정 합니다.|  
 |<xref:System.Windows.Forms.ToolStripControlHost>|는 특정 컨트롤을 <xref:System.Windows.Forms.ToolStrip> 하지 않지만 <xref:System.Windows.Forms.ToolStrip> 기능을 원하는 다른 컨트롤을 호스팅합니다.|  
@@ -79,7 +79,7 @@ Windows Forms <xref:System.Windows.Forms.ToolStrip> 컨트롤 및 관련 클래�
   
  자세한 내용은 [Toolstrip 기술 요약](toolstrip-technology-summary.md) 및 [toolstrip 컨트롤 아키텍처](toolstrip-control-architecture.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.MenuStrip>

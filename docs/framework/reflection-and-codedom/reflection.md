@@ -40,9 +40,9 @@ ms.locfileid: "76744574"
   
 - <xref:System.Reflection.Module>을 사용하여 모듈 및 모듈의 클래스가 포함된 어셈블리와 같은 정보를 검색합니다. 모듈에 정의된 모든 전역 메서드나 기타 특정 비전역 메서드를 가져올 수도 있습니다.  
   
-- <xref:System.Reflection.ConstructorInfo>를 사용하여 생성자의 이름, 매개 변수, 액세스 한정자(예: `public` 또는 `private`), 구현 세부 정보(예: `abstract` 또는 `virtual`)와 같은 정보를 검색합니다. <xref:System.Type>의 <xref:System.Type.GetConstructors%2A> 또는 <xref:System.Type.GetConstructor%2A> 메서드를 사용하여 특정 생성자를 호출합니다.  
+- <xref:System.Reflection.ConstructorInfo>를 사용하여 생성자의 이름, 매개 변수, 액세스 한정자(예: `public` 또는 `private`), 구현 세부 정보(예: `abstract` 또는 `virtual`)와 같은 정보를 검색합니다. <xref:System.Type.GetConstructors%2A>의 <xref:System.Type.GetConstructor%2A> 또는 <xref:System.Type> 메서드를 사용하여 특정 생성자를 호출합니다.  
   
-- <xref:System.Reflection.MethodInfo>를 사용하여 메서드의 이름, 반환 형식, 매개 변수, 액세스 한정자(예: `public` 또는 `private`), 구현 세부 정보(예: `abstract` 또는 `virtual`)와 같은 정보를 검색합니다. <xref:System.Type>의 <xref:System.Type.GetMethods%2A> 또는 <xref:System.Type.GetMethod%2A> 메서드를 사용하여 특정 메서드를 호출합니다.  
+- <xref:System.Reflection.MethodInfo>를 사용하여 메서드의 이름, 반환 형식, 매개 변수, 액세스 한정자(예: `public` 또는 `private`), 구현 세부 정보(예: `abstract` 또는 `virtual`)와 같은 정보를 검색합니다. <xref:System.Type.GetMethods%2A>의 <xref:System.Type.GetMethod%2A> 또는 <xref:System.Type> 메서드를 사용하여 특정 메서드를 호출합니다.  
   
 - <xref:System.Reflection.FieldInfo>를 사용하여 필드의 이름, 액세스 한정자(예: `public` 또는 `private`), 구현 세부 정보(예: `static`)를 검색하고 필드 값을 가져오거나 설정합니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "76744574"
 
 ## <a name="related-topics"></a>관련 항목  
   
-|제목|설명|  
+|제목|Description|  
 |-----------|-----------------|  
 |[형식 정보 보기](viewing-type-information.md)|<xref:System.Type> 클래스를 설명하고 <xref:System.Type>과 여러 리플렉션 클래스를 함께 사용하여 생성자, 메서드, 필드, 속성, 이벤트에 대한 정보를 가져오는 방법을 보여 주는 코드 예제를 제공합니다.|  
 |[리플렉션 및 제네릭 형식](reflection-and-generic-types.md)|리플렉션이 제네릭 형식과 제네릭 메서드의 형식 매개 변수 및 형식 인수를 처리하는 방법을 설명합니다.|  

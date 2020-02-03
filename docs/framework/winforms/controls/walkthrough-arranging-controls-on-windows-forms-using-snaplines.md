@@ -25,7 +25,7 @@ ms.locfileid: "76740211"
 
 맞춤선을 사용 하면 선명 하 고 전문적인 모양 및 동작 (모양 및 느낌)을 위해 컨트롤을 쉽게 맞출 수 있습니다.
 
-## <a name="create-the-project"></a>프로젝트를 만듭니다.
+## <a name="create-the-project"></a>프로젝트 만들기
 
 1. Visual Studio에서 "SnaplineExample" 이라는 Windows 기반 응용 프로그램 프로젝트를 만듭니다.
 
@@ -182,13 +182,13 @@ ms.locfileid: "76740211"
 
 ## <a name="next-steps"></a>다음 단계
 
-맞춤선은 폼에서 컨트롤을 정렬 하는 직관적인 방법을 제공 합니다. 다음과 같은 사항을 더 살펴보는 것이 좋습니다.
+맞춤선은 폼에서 컨트롤을 정렬 하는 직관적인 방법을 제공 합니다. 다음을 추가로 살펴볼 수 있습니다.
 
 - 다른 <xref:System.Windows.Forms.GroupBox> 컨트롤 내에서 <xref:System.Windows.Forms.GroupBox> 컨트롤을 중첩 해 보세요. 자식 <xref:System.Windows.Forms.GroupBox> 컨트롤 내에 <xref:System.Windows.Forms.Button> 컨트롤을 추가 하 고 부모 <xref:System.Windows.Forms.GroupBox> 컨트롤 내에 다른 컨트롤을 추가 합니다. <xref:System.Windows.Forms.Button> 컨트롤을 이동 하 여 맞춤선이 컨테이너 경계를 교차 하는 방식을 확인 합니다.
 
 - <xref:System.Windows.Forms.TextBox> 컨트롤 및 <xref:System.Windows.Forms.Label> 컨트롤의 해당 열에 대 한 열을 만듭니다. <xref:System.Windows.Forms.Label> 컨트롤의 <xref:System.Windows.Forms.Control.AutoSize%2A> 속성 값을 `true`로 설정 합니다. 맞춤선을 사용 하 여 <xref:System.Windows.Forms.Label> 컨트롤을 이동 합니다. 그러면 표시 되는 텍스트가 <xref:System.Windows.Forms.TextBox> 컨트롤의 텍스트와 정렬 됩니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.Design.Behavior.SnapLine>
 - [연습: FlowLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)

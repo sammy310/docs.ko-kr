@@ -20,7 +20,7 @@ ms.locfileid: "76737893"
 
 WPF (Windows Presentation Foundation)에는 디지털 잉크를 앱에 쉽게 통합 하는 데 사용 되는 잉크 기능이 있습니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 다음 예제를 사용 하려면 먼저 [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)를 설치 합니다. 또한 기본적인 WPF 앱을 작성 하는 방법을 알고 있습니다. WPF 시작에 대 한 도움말은 [연습: 내 첫 wpf 데스크톱 응용 프로그램](../getting-started/walkthrough-my-first-wpf-desktop-application.md)을 참조 하세요.
 
@@ -85,7 +85,7 @@ XAML을 사용 하면 사용자 인터페이스를 매우 쉽게 디자인할 �
    [!code-csharp[DigitalInkTopics#4](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
    [!code-vb[DigitalInkTopics#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]
 
-1. 응용 프로그램을 실행합니다. 일부 잉크를 추가 하 고 마우스 오른쪽 단추를 클릭 하거나 스타일러스를 사용 하 여 선택 및 유지를 수행 합니다.
+1. 애플리케이션을 실행합니다. 일부 잉크를 추가 하 고 마우스 오른쪽 단추를 클릭 하거나 스타일러스를 사용 하 여 선택 및 유지를 수행 합니다.
 
    마우스 오른쪽 단추로 클릭할 때마다 디스플레이가 확대 됩니다.
 
@@ -108,7 +108,7 @@ XAML을 사용 하면 사용자 인터페이스를 매우 쉽게 디자인할 �
 
 1. **F5**키를 눌러 응용 프로그램을 빌드합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디지털 잉크](digital-ink.md)
 - [잉크 수집](collecting-ink.md)

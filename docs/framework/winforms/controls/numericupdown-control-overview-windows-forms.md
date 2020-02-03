@@ -23,7 +23,7 @@ ms.locfileid: "76740807"
 ## <a name="key-properties-and-methods"></a>키 속성 및 메서드  
  컨트롤의 텍스트 상자에 표시 되는 숫자는 16 진수를 포함 하 여 다양 한 형식으로 표시 될 수 있습니다. 자세한 내용은 [방법: Windows Forms NumericUpDown 컨트롤의 형식 설정](how-to-set-the-format-for-the-windows-forms-numericupdown-control.md)을 참조 하세요. 컨트롤의 키 속성은 <xref:System.Windows.Forms.NumericUpDown.Value%2A><xref:System.Windows.Forms.NumericUpDown.Maximum%2A> (기본값 100), <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> (기본값 0) 및 <xref:System.Windows.Forms.NumericUpDown.Increment%2A> (기본값 1)입니다. <xref:System.Windows.Forms.NumericUpDown.Value%2A> 속성은 컨트롤에서 선택 된 현재 숫자를 설정 합니다. <xref:System.Windows.Forms.NumericUpDown.Increment%2A> 속성은 사용자가 위쪽 또는 아래쪽 화살표를 클릭할 때 숫자를 조정 하는 크기를 설정 합니다. 포커스가 컨트롤을 벗어나면 형식화 된 모든 입력의 유효성은 최소 및 최대 숫자 값에 대해 유효성 검사가 수행 됩니다. 사용자가 <xref:System.Windows.Forms.NumericUpDown.Accelerations%2A> 속성을 사용 하 여 위로 또는 아래로 화살표를 지속적으로 누를 때 컨트롤이 숫자 간을 이동 하는 속도를 높일 수 있습니다. 컨트롤의 주요 메서드는 <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> 하 고 <xref:System.Windows.Forms.NumericUpDown.DownButton%2A>합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.NumericUpDown>
 - [NumericUpDown 컨트롤](numericupdown-control-windows-forms.md)

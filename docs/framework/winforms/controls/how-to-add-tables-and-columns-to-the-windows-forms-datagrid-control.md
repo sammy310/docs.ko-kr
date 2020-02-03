@@ -20,7 +20,7 @@ ms.locfileid: "76747211"
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control"></a>방법: Windows Forms DataGrid 컨트롤에 테이블과 열 추가
 
 > [!NOTE]
-> <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 컨트롤과 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하세요.
+> <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.
 
 **DataGridTableStyle** 개체를 만들고이 개체를 <xref:System.Windows.Forms.DataGrid> 컨트롤의 **system.windows.forms.datagrid.tablestyles** 속성을 통해 액세스 되는 **GridTableStylesCollection** 개체에 추가 하 여 Windows Forms <xref:System.Windows.Forms.DataGrid> 컨트롤의 데이터를 테이블 및 열에 표시할 수 있습니다. 각 테이블 스타일은 **DataGridTableStyle** 개체의 **MappingName** 속성에 지정 된 모든 데이터 테이블의 내용을 표시 합니다. 기본적으로 열 스타일이 지정 되지 않은 테이블 스타일은 해당 데이터 테이블 내의 모든 열을 표시 합니다. 각 **DataGridTableStyle** 개체의 **gridcolumnstyles** 속성을 통해 액세스 되는 **GridColumnStylesCollection** 개체에 **system.windows.forms.datagridcolumnstyle>** 개체를 추가 하 여 나타나는 테이블의 열을 제한할 수 있습니다.
 
@@ -96,7 +96,7 @@ ms.locfileid: "76747211"
     dataGrid1->TableStyles->Add(ts1);
     ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [DataGrid 컨트롤](datagrid-control-windows-forms.md)
 - [방법: Windows Forms DataGrid 컨트롤에서 열 삭제 또는 숨기기](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

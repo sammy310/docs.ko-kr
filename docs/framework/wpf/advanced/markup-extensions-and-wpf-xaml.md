@@ -38,7 +38,7 @@ ms.locfileid: "76727890"
  속성 요소 구문에 사용되는 경우 태그 확장은 속성 요소 값을 제공하는 데 사용되는 다른 요소와 시각적으로 동일합니다. 즉, 태그 확장 클래스를 요소로 참조하는 XAML 요소 선언을 꺾쇠 괄호(<>)로 묶습니다.  
   
 <a name="XAML_Defined_Markup_Extensions"></a>   
-## <a name="xaml-defined-markup-extensions"></a>XAML 정의 태그 확장명  
+## <a name="xaml-defined-markup-extensions"></a>XAML 정의 태그 확장  
  XAML의 WPF 구현과 관련되지 않고 대신 XAML의 내장 형식 또는 기능 구현에서 언어로 사용되는 몇 가지 태그 확장도 있습니다. 이러한 태그 확장은 System.Xaml 어셈블리에 일반적인 .NET Framework XAML 서비스의 일부로 구현되어 있으며, XAML 언어 XAML 네임스페이스 내에 있습니다. 일반적인 태그 사용법에서 볼 수 있는 것처럼 이러한 태그 확장은 대개 사용법에서 `x:` 접두사로 식별됩니다. <xref:System.Windows.Markup.MarkupExtension> 기본 클래스 (System.xaml에도 정의 됨)는 WPF XAML을 비롯 하 여 XAML 판독기와 XAML 작성기에서 지원 되기 위해 모든 태그 확장에서 사용 해야 하는 패턴을 제공 합니다.  
   
 - `x:Type` 은 명명된 형식에 <xref:System.Type> 개체를 제공합니다. 이 기능은 스타일 및 템플릿에서 가장 많이 사용됩니다. 자세한 내용은 [x:Type 태그 확장](../../../desktop-wpf/xaml-services/xtype-markup-extension.md)을 참조하세요.  
@@ -116,7 +116,7 @@ ms.locfileid: "76727890"
   
  속성 요소를 채우는 개체 요소 구문에 사용되는 대부분의 태그 확장에는 콘텐츠나 추가 속성 요소 구문이 없습니다. 따라서 개체 요소 태그를 닫고 자식 요소를 제공하지 않을 수 있습니다. XAML 프로세서에서 개체 요소를 발견할 때마다 해당 클래스의 생성자가 호출되어 구문 분석된 요소에서 생성되는 개체를 인스턴스화합니다. 태그 확장 클래스는 다릅니다. 개체 요소 구문에서 태그 확장을 사용할 수 있도록 하려면 매개 변수가 없는 생성자를 제공 해야 합니다. 일부 기존 태그 확장에는 효율적인 초기화를 위해 지정해야 하는 필수 속성 값이 적어도 하나는 있습니다. 이런 경우 해당 속성 값은 대개 개체 요소에 속성 특성으로 지정됩니다. [XAML 네임스페이스(x:) 언어 기능](../../../desktop-wpf/xaml-services/namespace-language-features.md) 및 [WPF XAML 확장](wpf-xaml-extensions.md) 참조 페이지에는 필수 속성이 있는 태그 확장 및 필수 속성의 이름이 나와 있습니다. 또한 참조 페이지에는 특정 태그 확장에서 개체 요소 구문이나 특성 구문을 사용할 수 없는지 여부도 나와 있습니다. 예를 들어 [x:Array 태그 확장](../../../desktop-wpf/xaml-services/xarray-markup-extension.md)의 경우에는 배열의 내용을 태그에서 콘텐츠로 지정해야 하기 때문에 특성 구문을 사용할 수 없습니다. 배열 내용은 일반 개체로 처리되므로 특성에 대한 기본 형식 변환기를 사용할 수 없습니다. [x:Array 태그 확장](../../../desktop-wpf/xaml-services/xarray-markup-extension.md)에는 `type` 매개 변수도 필요합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [XAML 개요(WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [XAML 네임스페이스(x:) 언어 기능](../../../desktop-wpf/xaml-services/namespace-language-features.md)

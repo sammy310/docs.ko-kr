@@ -17,7 +17,7 @@ ms.locfileid: "76742483"
   
  데이터를 테이블 형식으로 표시 하는 작업은 자주 수행 해야 하는 작업입니다. `DataGridView` 컨트롤은 모눈에 데이터를 제공 하기 위한 완전 한 솔루션으로 설계 되었습니다.  
   
-## <a name="keywords"></a>키워드  
+## <a name="keywords"></a>키워드가  
  DataGridView, BindingSource, 테이블, 셀, 데이터 바인딩, 가상 모드  
   
 ## <a name="namespaces"></a>네임스페이스  
@@ -31,7 +31,7 @@ ms.locfileid: "76742483"
 ## <a name="background"></a>배경  
  UI (사용자 인터페이스) 디자이너는 사용자에 게 테이블 형식 데이터를 표시 해야 하는 경우가 많습니다. .NET Framework는 테이블이 나 표에 데이터를 표시 하는 여러 가지 방법을 제공 합니다. `DataGridView` 컨트롤은 Windows Forms 응용 프로그램에 대 한이 기술의 최신 진화를 나타냅니다.  
   
- `DataGridView` 컨트롤은 데이터 저장소의 데이터 행을 표시할 수 있습니다. 많은 유형의 데이터 저장소가 지원 됩니다. 데이터 저장소는 1 차원 배열과 같은 단순 하 고 형식화 되지 않은 데이터를 보유할 수 있으며, <xref:System.Data.DataSet>등의 형식화 된 데이터를 저장할 수 있습니다. 자세한 내용은 [방법: Windows Forms DataGridView 컨트롤에 데이터 바인딩](how-to-bind-data-to-the-windows-forms-datagridview-control.md)합니다.  
+ `DataGridView` 컨트롤은 데이터 저장소의 데이터 행을 표시할 수 있습니다. 많은 유형의 데이터 저장소가 지원 됩니다. 데이터 저장소는 1 차원 배열과 같은 단순 하 고 형식화 되지 않은 데이터를 보유할 수 있으며, <xref:System.Data.DataSet>등의 형식화 된 데이터를 저장할 수 있습니다. 자세한 내용은 [방법: Windows Forms DataGridView 컨트롤에 데이터 바인딩](how-to-bind-data-to-the-windows-forms-datagridview-control.md)을 참조 하세요.  
   
  `DataGridView` 컨트롤에서는 데이터를 표 형식으로 표시하는 강력하고 유연한 방법을 제공합니다. 컨트롤을 사용 하 여 작고 매우 큰 데이터 집합에 대 한 읽기 전용 또는 편집 가능한 뷰를 표시할 수 있습니다.  
   
@@ -55,12 +55,12 @@ ms.locfileid: "76742483"
 |데이터 프레젠테이션|<xref:System.Windows.Forms.DataGridView><br /><br /> <xref:System.Windows.Forms.DataGridViewCell> 및 파생 클래스<br /><br /> <xref:System.Windows.Forms.DataGridViewRow> 및 파생 클래스<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> 및 파생 클래스<br /><br /> <xref:System.Windows.Forms.DataGridViewCellStyle>|  
 |<xref:System.Windows.Forms.DataGridView> 확장성|<xref:System.Windows.Forms.DataGridViewCell> 및 파생 클래스<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> 및 파생 클래스<br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingCell><br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingControl>|  
   
-## <a name="whats-new"></a>새로운 기능  
- <xref:System.Windows.Forms.DataGridView> 컨트롤은 Windows Forms를 사용 하 여 표 형식 데이터를 표시 하기 위한 완전 한 솔루션으로 설계 되었습니다. 새 응용 프로그램을 작성 하는 경우 <xref:System.Windows.Forms.DataGrid>같은 다른 솔루션 앞에 <xref:System.Windows.Forms.DataGridView> 컨트롤을 사용 하는 것이 좋습니다. 자세한 내용은 [Windows Forms DataGridView 컨트롤과 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하세요.  
+## <a name="whats-new"></a>What's New  
+ <xref:System.Windows.Forms.DataGridView> 컨트롤은 Windows Forms를 사용 하 여 표 형식 데이터를 표시 하기 위한 완전 한 솔루션으로 설계 되었습니다. 새 응용 프로그램을 작성 하는 경우 <xref:System.Windows.Forms.DataGrid>같은 다른 솔루션 앞에 <xref:System.Windows.Forms.DataGridView> 컨트롤을 사용 하는 것이 좋습니다. 자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.  
   
  <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.BindingSource> 구성 요소와 밀접 하 게 연동 하 여 작업할 수 있습니다. 이 구성 요소는 양식의 주 데이터 원본으로 설계 되었습니다. 데이터 원본 형식에 관계 없이 <xref:System.Windows.Forms.DataGridView> 컨트롤과 데이터 소스 간의 상호 작용을 관리할 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [DataGridView 컨트롤 개요](datagridview-control-overview-windows-forms.md)
 - [DataGridView 컨트롤 아키텍처](datagridview-control-architecture-windows-forms.md)

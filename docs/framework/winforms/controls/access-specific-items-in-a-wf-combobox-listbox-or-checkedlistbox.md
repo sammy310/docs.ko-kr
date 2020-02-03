@@ -51,7 +51,7 @@ Windows Forms 콤보 상자, 목록 상자 또는 선택 된 목록 상자의 �
        }  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>

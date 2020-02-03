@@ -26,7 +26,7 @@ ms.locfileid: "76746192"
   
  <xref:System.Windows.Forms.ContextMenu> 구성 요소의 키 속성은 <xref:System.Windows.Forms.Menu.MenuItems%2A> 속성입니다. 프로그래밍 방식으로 <xref:System.Windows.Forms.MenuItem> 개체를 만들어 바로 가기 메뉴의 <xref:System.Windows.Forms.Menu.MenuItemCollection>에 추가 하 여 메뉴 항목을 추가할 수 있습니다. 바로 가기 메뉴의 항목은 일반적으로 다른 메뉴에서 그려지며 항목을 복사 하 여 바로 가기 메뉴에 항목을 추가 하는 경우가 가장 많습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.ContextMenu>
 - <xref:System.Windows.Forms.MenuStrip>

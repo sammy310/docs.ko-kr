@@ -107,7 +107,7 @@ ms.locfileid: "76746521"
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#200](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#200)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#200](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#200)]  
   
-## <a name="testing-the-application"></a>응용 프로그램 테스트  
+## <a name="testing-the-application"></a>애플리케이션 테스트  
  이제 폼을 테스트 하 여 예상 대로 동작 하는지 확인할 수 있습니다.  
   
 #### <a name="to-test-the-form"></a>폼을 테스트 하려면  
@@ -125,7 +125,7 @@ ms.locfileid: "76746521"
   
  외부 데이터베이스에서 값을 캐싱하는 방법에 대 한 자세한 내용은 [방법: Windows Forms DataGridView 컨트롤에서 Just-in-time 데이터 로드를 사용 하 여 가상 모드 구현](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>

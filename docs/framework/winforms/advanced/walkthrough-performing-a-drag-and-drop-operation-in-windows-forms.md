@@ -28,7 +28,7 @@ Windows 기반 응용 프로그램 내에서 끌어서 놓기 작업을 수행 �
   
 #### <a name="to-start-a-drag-operation"></a>끌기 작업을 시작하려면  
   
-1. 끌기가 시작 되는 컨트롤에 대 한 <xref:System.Windows.Forms.Control.MouseDown> 이벤트에서 `DoDragDrop` 메서드를 사용 하 여 끌어올 데이터를 설정 하면 허용 되는 효과를 끌 수 있습니다. 자세한 내용은 <xref:System.Windows.Forms.DragEventArgs.Data%2A> 및 <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A>을 참조하세요.  
+1. 끌기가 시작 되는 컨트롤에 대 한 <xref:System.Windows.Forms.Control.MouseDown> 이벤트에서 `DoDragDrop` 메서드를 사용 하 여 끌어올 데이터를 설정 하면 허용 되는 효과를 끌 수 있습니다. 자세한 내용은 <xref:System.Windows.Forms.DragEventArgs.Data%2A> 및 <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A>를 참조하세요.  
   
      다음 예제에서는 끌기 작업을 시작하는 방법을 보여 줍니다. 끌기가 시작 되는 컨트롤은 <xref:System.Windows.Forms.Button> 컨트롤, 끌고 있는 데이터는 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Text%2A> 속성을 나타내는 문자열이 고, 허용 되는 효과는 복사 또는 이동 중 하나입니다.  
   
@@ -59,7 +59,7 @@ Windows 기반 응용 프로그램 내에서 끌어서 놓기 작업을 수행 �
   
 1. <xref:System.Windows.Forms.Control.AllowDrop%2A> 속성을 true로 설정 합니다.  
   
-2. 놓기가 발생 하는 컨트롤에 대 한 `DragEnter` 이벤트에서 끌고 있는 데이터를 사용할 수 있는 형식 (이 경우에는 <xref:System.Windows.Forms.Control.Text%2A>) 인지 확인 합니다. 그런 다음 코드는 <xref:System.Windows.Forms.DragDropEffects> 열거형의 값에 대 한 drop이 발생할 때 발생 하는 효과를 설정 합니다. 자세한 내용은 <xref:System.Windows.Forms.DragEventArgs.Effect%2A>를 참조하세요.  
+2. 놓기가 발생 하는 컨트롤에 대 한 `DragEnter` 이벤트에서 끌고 있는 데이터를 사용할 수 있는 형식 (이 경우에는 <xref:System.Windows.Forms.Control.Text%2A>) 인지 확인 합니다. 그런 다음 코드는 <xref:System.Windows.Forms.DragDropEffects> 열거형의 값에 대 한 drop이 발생할 때 발생 하는 효과를 설정 합니다. 자세한 내용은 <xref:System.Windows.Forms.DragEventArgs.Effect%2A>을 참조하세요.  
   
     ```vb  
     Private Sub TextBox1_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles TextBox1.DragEnter  
@@ -83,9 +83,9 @@ Windows 기반 응용 프로그램 내에서 끌어서 놓기 작업을 수행 �
     ```  
   
     > [!NOTE]
-    > 고유한 개체를 <xref:System.Windows.Forms.DataObject.SetData%2A> 메서드의 <xref:System.Object> 매개 변수로 지정 하 여 고유한 <xref:System.Windows.Forms.DataFormats>를 정의할 수 있습니다. 이 작업을 수행할 때 지정된 개체는 직렬화(serialize)할 수 있어야 합니다. 자세한 내용은 <xref:System.Runtime.Serialization.ISerializable>를 참조하세요.  
+    > 고유한 개체를 <xref:System.Windows.Forms.DataObject.SetData%2A> 메서드의 <xref:System.Object> 매개 변수로 지정 하 여 고유한 <xref:System.Windows.Forms.DataFormats>를 정의할 수 있습니다. 이 작업을 수행할 때 지정된 개체는 직렬화(serialize)할 수 있어야 합니다. 자세한 내용은 <xref:System.Runtime.Serialization.ISerializable>을 참조하세요.  
   
-3. 놓기 작업이 발생 하는 컨트롤에 대 한 <xref:System.Windows.Forms.Control.DragDrop> 이벤트에서 <xref:System.Windows.Forms.DataObject.GetData%2A> 메서드를 사용 하 여 끌고 있는 데이터를 검색 합니다. 자세한 내용은 <xref:System.Security.Cryptography.Xml.DataObject.Data%2A>를 참조하세요.  
+3. 놓기 작업이 발생 하는 컨트롤에 대 한 <xref:System.Windows.Forms.Control.DragDrop> 이벤트에서 <xref:System.Windows.Forms.DataObject.GetData%2A> 메서드를 사용 하 여 끌고 있는 데이터를 검색 합니다. 자세한 내용은 <xref:System.Security.Cryptography.Xml.DataObject.Data%2A>을 참조하세요.  
   
      아래 예제에서 <xref:System.Windows.Forms.TextBox> 컨트롤은 놓기가 발생 하는 위치로 끌고 있는 컨트롤입니다. 이 코드는 <xref:System.Windows.Forms.TextBox> 컨트롤의 <xref:System.Windows.Forms.Control.Text%2A> 속성을 끌고 있는 데이터와 같도록 설정 합니다.  
   
@@ -106,7 +106,7 @@ Windows 기반 응용 프로그램 내에서 끌어서 놓기 작업을 수행 �
     > [!NOTE]
     > 또한 <xref:System.Windows.Forms.DragEventArgs.KeyState%2A> 속성을 사용 하 여 끌어서 놓기 작업 중에 눌린 키에 따라 특정 효과가 발생 하도록 할 수 있습니다. 예를 들어 CTRL 키를 누를 때 끌어온 데이터를 복사 하는 것이 표준입니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [방법: 클립보드에 데이터 추가](how-to-add-data-to-the-clipboard.md)
 - [방법: 클립보드에서 데이터 검색](how-to-retrieve-data-from-the-clipboard.md)

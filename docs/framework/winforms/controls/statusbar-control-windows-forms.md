@@ -42,5 +42,5 @@ ms.locfileid: "76742855"
  를 대체 하 고 <xref:System.Windows.Forms.StatusBar> 컨트롤에 기능을 추가 합니다.  
   
 ## <a name="related-sections"></a>관련 섹션  
- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)  
+ [Windows Forms에서 사용할 컨트롤](controls-to-use-on-windows-forms.md)  
  사용 방법에 대한 정보 링크를 포함하는 Windows Forms 컨트롤의 전체 목록을 제공합니다.

@@ -21,9 +21,9 @@ Windows Forms <xref:System.Windows.Forms.LinkLabel> 컨트롤을 사용 하면 W
 ## <a name="what-you-can-do-with-the-linklabel-control"></a>LinkLabel 컨트롤을 사용 하 여 수행할 수 있는 작업  
  <xref:System.Windows.Forms.Label> 컨트롤의 모든 속성, 메서드 및 이벤트 외에도 <xref:System.Windows.Forms.LinkLabel> 컨트롤에는 하이퍼링크 및 링크 색에 대 한 속성이 있습니다. <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 속성은 링크를 활성화 하는 텍스트 영역을 설정 합니다. <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>및 <xref:System.Windows.Forms.LinkLabel.ActiveLinkColor%2A> 속성은 링크의 색을 설정 합니다. <xref:System.Windows.Forms.LinkLabel.LinkClicked> 이벤트는 링크 텍스트가 선택 될 때 수행 되는 작업을 결정 합니다.  
   
- <xref:System.Windows.Forms.LinkLabel> 컨트롤을 가장 간단 하 게 사용 하는 것은 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 속성을 사용 하 여 단일 링크를 표시 하는 것 이지만 <xref:System.Windows.Forms.LinkLabel.Links%2A> 속성을 사용 하 여 여러 하이퍼링크를 표시할 수도 있습니다. <xref:System.Windows.Forms.LinkLabel.Links%2A> 속성을 사용 하 여 링크 컬렉션에 액세스할 수 있습니다. 각 개별 <xref:System.Windows.Forms.LinkLabel.Link> 개체의 <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> 속성에 데이터를 지정할 수도 있습니다. 값을 <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> 표시할 파일의 위치 또는 웹 사이트의 주소를 저장할 속성을 사용할 수 있습니다.  
+ <xref:System.Windows.Forms.LinkLabel> 컨트롤을 가장 간단 하 게 사용 하는 것은 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 속성을 사용 하 여 단일 링크를 표시 하는 것 이지만 <xref:System.Windows.Forms.LinkLabel.Links%2A> 속성을 사용 하 여 여러 하이퍼링크를 표시할 수도 있습니다. <xref:System.Windows.Forms.LinkLabel.Links%2A> 속성을 사용 하 여 링크 컬렉션에 액세스할 수 있습니다. 각 개별 <xref:System.Windows.Forms.LinkLabel.Link> 개체의 <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> 속성에 데이터를 지정할 수도 있습니다. <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> 속성의 값을 사용 하 여 표시할 파일의 위치를 저장 하거나 웹 사이트의 주소를 저장할 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.LinkLabel>
 - [Label 컨트롤 개요](label-control-overview-windows-forms.md)

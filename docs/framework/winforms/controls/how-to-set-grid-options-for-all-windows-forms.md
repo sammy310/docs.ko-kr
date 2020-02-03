@@ -30,6 +30,6 @@ Visual Studio 개발 환경에서 작업 하는 데 사용 되는 것 처럼 Win
 
    오른쪽 창의 **레이아웃 설정** 머리글에서 새로 만드는 모든 폼에 대 한 기본 그리드 설정을 지정할 수 있습니다. 이러한 설정에는 그리드 크기, 컨트롤의 맞춤 여부 및 기본적으로 설정 되어 있는지 여부가 포함 됩니다. 또한 **SnapToGrid** 및 **맞춤선** 레이아웃 모드 중에서 선택할 수 있습니다. 맞춤선에 대 한 자세한 내용은 [연습: 맞춤선을 사용 하 여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)을 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [옵션: Windows Forms 디자이너](/visualstudio/ide/reference/options-windows-forms-designer)

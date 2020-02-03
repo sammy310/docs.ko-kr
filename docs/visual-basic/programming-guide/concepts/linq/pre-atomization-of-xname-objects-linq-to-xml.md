@@ -17,7 +17,7 @@ LINQ to XML의 성능을 향상시키는 한 가지 방법은 <xref:System.Xml.L
 
 이 방법을 사용할지 여부를 결정하려면 사용자 시나리오를 사전 원자화해 보는 것이 좋습니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음은 이에 대한 예입니다.
 
@@ -33,7 +33,7 @@ Dim root2 As New XElement(root1, New XElement(data, New XAttribute(id, "1"), "4,
 Console.WriteLine(root2)
 ```
 
-이 예제는 다음과 같은 출력을 생성합니다.
+이 예에서 생성되는 출력은 다음과 같습니다.
 
 ```xml
 <Root>
@@ -59,7 +59,7 @@ Dim root2 As New XElement(root1, New XAttribute(XNamespace.Xmlns + "aw", aw),
 Console.WriteLine(root2)
 ```
 
-이 예제는 다음과 같은 출력을 생성합니다.
+이 예에서 생성되는 출력은 다음과 같습니다.
 
 ```xml
 <aw:Root xmlns:aw="http://www.adventure-works.com">
@@ -93,7 +93,7 @@ sw.Stop()
 Console.WriteLine($"Time to construct: {sw.ElapsedMilliseconds} milliseconds")
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [성능 (LINQ to XML) (Visual Basic)](performance-linq-to-xml.md)
 - [원자화 명령의 xname 및 XNamespace 개체 (LINQ to XML) (Visual Basic)](atomized-xname-and-xnamespace-objects-linq-to-xml.md)

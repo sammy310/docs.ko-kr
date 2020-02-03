@@ -25,7 +25,7 @@ ms.locfileid: "76739934"
   
  또한 콤보 상자는 폼의 공간을 절약 합니다. 사용자가 아래쪽 화살표를 클릭할 때까지 전체 목록이 표시 되지 않기 때문에 콤보 상자는 목록 상자가 맞지 않는 작은 공간에 쉽게 맞출 수 있습니다. 단, <xref:System.Windows.Forms.ComboBox.DropDownStyle%2A> 속성이 <xref:System.Windows.Forms.ComboBoxStyle.Simple>로 설정 된 경우, 전체 목록이 표시 되 고 콤보 상자가 목록 상자 보다 더 많은 공간을 차지 하는 경우는 예외입니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>

@@ -25,7 +25,7 @@ Windows Forms <xref:System.Windows.Forms.DataGridView> 컨트롤에서 사용할
   
 ### <a name="to-hide-a-column-programmatically"></a>프로그래밍 방식으로 열을 숨기려면  
   
-- <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType> 속성을 `false`으로 설정합니다. 데이터 바인딩 중에 자동으로 생성되는 `CustomerID` 열을 숨기려면 다음 코드 예제를 <xref:System.Windows.Forms.DataGridView.DataBindingComplete> 이벤트 처리기에 배치합니다.  
+- <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType> 속성을 `false`로 설정합니다. 데이터 바인딩 중에 자동으로 생성되는 `CustomerID` 열을 숨기려면 다음 코드 예제를 <xref:System.Windows.Forms.DataGridView.DataBindingComplete> 이벤트 처리기에 배치합니다.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#063](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#063)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#063](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#063)]  
@@ -33,11 +33,11 @@ Windows Forms <xref:System.Windows.Forms.DataGridView> 컨트롤에서 사용할
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
-- 이름이 `CustomerID`인 열을 포함하는 이름이 `dataGridView1`인 <xref:System.Windows.Forms.DataGridView> 컨트롤  
+- 이름이 <xref:System.Windows.Forms.DataGridView>인 열을 포함하는 이름이 `dataGridView1`인 `CustomerID` 컨트롤  
   
 - <xref:System?displayProperty=nameWithType> 및 <xref:System.Windows.Forms?displayProperty=nameWithType> 어셈블리에 대한 참조  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType>

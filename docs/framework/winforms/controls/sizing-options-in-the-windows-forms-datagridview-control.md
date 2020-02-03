@@ -19,7 +19,7 @@ ms.locfileid: "76742987"
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 크기 조정 옵션
 행, 열 및 헤더를 <xref:System.Windows.Forms.DataGridView> 여러 번의 결과로 크기가 변경 될 수 있습니다. 다음 표에서는 이러한 항목을 보여 줍니다.  
   
-|발생|설명|  
+|발생 빈도|Description|  
 |----------------|-----------------|  
 |사용자 크기 조정|사용자는 행, 열 또는 머리글 구분선을 끌거나 두 번 클릭 하 여 크기 조정을 수행할 수 있습니다.|  
 |컨트롤 크기 조정|열 채우기 모드에서는 컨트롤 너비가 변경 될 때 열 너비가 변경 됩니다. 예를 들어 컨트롤을 부모 폼에 도킹 하 고 사용자가 폼의 크기를 조정 하는 경우입니다.|  
@@ -33,9 +33,9 @@ ms.locfileid: "76742987"
   
 |시나리오|구현|  
 |--------------|--------------------|  
-|열 채우기 모드를 사용 하 여 가로 스크롤 막대를 표시 하지 않고 컨트롤의 전체 너비를 차지 하는 비교적 적은 수의 열에 비슷한 크기의 데이터를 표시 합니다.|<xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> 속성을 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill>으로 설정합니다.|  
-|다양 한 크기의 표시 값으로 열 채우기 모드를 사용 합니다.|<xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> 속성을 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill>으로 설정합니다. 열 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 속성을 설정 하거나 컨트롤을 데이터로 채운 후 컨트롤 <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> 메서드를 호출 하 여 상대적 열 너비를 초기화 합니다.|  
-|다양 한 중요도의 값으로 열 채우기 모드를 사용 합니다.|<xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> 속성을 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill>으로 설정합니다. 항상 데이터의 일부를 표시 하거나 특정 열에 대해 채우기 모드 이외의 크기 조정 옵션을 사용 해야 하는 열에 대해 큼 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 값을 설정 합니다.|  
+|열 채우기 모드를 사용 하 여 가로 스크롤 막대를 표시 하지 않고 컨트롤의 전체 너비를 차지 하는 비교적 적은 수의 열에 비슷한 크기의 데이터를 표시 합니다.|<xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> 속성을 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill>로 설정합니다.|  
+|다양 한 크기의 표시 값으로 열 채우기 모드를 사용 합니다.|<xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> 속성을 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill>로 설정합니다. 열 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 속성을 설정 하거나 컨트롤을 데이터로 채운 후 컨트롤 <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> 메서드를 호출 하 여 상대적 열 너비를 초기화 합니다.|  
+|다양 한 중요도의 값으로 열 채우기 모드를 사용 합니다.|<xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> 속성을 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill>로 설정합니다. 항상 데이터의 일부를 표시 하거나 특정 열에 대해 채우기 모드 이외의 크기 조정 옵션을 사용 해야 하는 열에 대해 큼 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 값을 설정 합니다.|  
 |열 채우기 모드를 사용 하 여 컨트롤 배경을 표시 하지 않습니다.|마지막 열의 <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> 속성을 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill> 설정 하 고 다른 열에 다른 크기 조정 옵션을 사용 합니다. 다른 열에서 사용 가능한 공간을 너무 많이 사용 하는 경우 마지막 열의 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 속성을 설정 합니다.|  
 |아이콘 또는 ID 열과 같은 고정 너비 열을 표시 합니다.|<xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>을 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.None>로 설정 하 고 열에 대해 <xref:System.Windows.Forms.DataGridViewTriState.False> <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A> 합니다. <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> 속성을 설정 하거나 컨트롤을 데이터로 채운 후 컨트롤 <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A> 메서드를 호출 하 여 너비를 초기화 합니다.|  
 |자르기를 방지 하 고 공간 사용을 최적화 하기 위해 셀 내용이 변경 될 때마다 크기를 자동으로 조정 합니다.|자동 크기 조정 속성을 내용 기반 크기 조정 모드를 나타내는 값으로 설정 합니다. 많은 양의 데이터로 작업할 때 성능 저하를 방지 하려면 표시 된 행만 계산 하는 크기 조정 모드를 사용 합니다.|  
@@ -54,9 +54,9 @@ ms.locfileid: "76742987"
   
 - <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
   
- 사용자가 <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> 속성을 설정 하 여 개별 행 또는 열의 크기를 조정 하지 못하게 할 수도 있습니다. 기본적으로 <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> 속성 값은 기반으로 합니다 <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A> 열에 대 한 속성 값 및 <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A> 행에 대 한 속성 값입니다. 그러나 <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A>를 <xref:System.Windows.Forms.DataGridViewTriState.True> 또는 <xref:System.Windows.Forms.DataGridViewTriState.False>로 명시적으로 설정 하는 경우 지정 된 값은 해당 행 또는 열에 대 한 컨트롤 값을 재정의 합니다. 설정 <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> 에 <xref:System.Windows.Forms.DataGridViewTriState.NotSet> 상속을 복원 합니다.  
+ 사용자가 <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> 속성을 설정 하 여 개별 행 또는 열의 크기를 조정 하지 못하게 할 수도 있습니다. 기본적으로 <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> 속성 값은 열에 대 한 <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A> 속성 값 및 행에 대 한 <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A> 속성 값을 기반으로 합니다. 그러나 <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A>를 <xref:System.Windows.Forms.DataGridViewTriState.True> 또는 <xref:System.Windows.Forms.DataGridViewTriState.False>로 명시적으로 설정 하는 경우 지정 된 값은 해당 행 또는 열에 대 한 컨트롤 값을 재정의 합니다. 상속을 복원 하려면 <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A>를 <xref:System.Windows.Forms.DataGridViewTriState.NotSet>로 설정 합니다.  
   
- 때문에 <xref:System.Windows.Forms.DataGridViewTriState.NotSet> 값 상속을 복원 합니다 <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> 속성을 반환 하지 것입니다를 <xref:System.Windows.Forms.DataGridViewTriState.NotSet> 행 또는 열에 추가 되지 않는에 값을 <xref:System.Windows.Forms.DataGridView> 컨트롤입니다. 행 또는 열의 <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> 속성 값이 상속 되는지 여부를 확인 해야 하는 경우 해당 <xref:System.Windows.Forms.DataGridViewElement.State%2A> 속성을 검사 합니다. 경우는 <xref:System.Windows.Forms.DataGridViewElement.State%2A> 값에 포함 됩니다 합니다 <xref:System.Windows.Forms.DataGridViewElementStates.ResizableSet> 플래그를는 <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> 속성 값 상속 되지 않습니다.  
+ <xref:System.Windows.Forms.DataGridViewTriState.NotSet>는 값 상속을 복원 하므로 행 또는 열이 <xref:System.Windows.Forms.DataGridView> 컨트롤에 추가 되지 않은 경우 <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> 속성은 <xref:System.Windows.Forms.DataGridViewTriState.NotSet> 값을 반환 하지 않습니다. 행 또는 열의 <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> 속성 값이 상속 되는지 여부를 확인 해야 하는 경우 해당 <xref:System.Windows.Forms.DataGridViewElement.State%2A> 속성을 검사 합니다. <xref:System.Windows.Forms.DataGridViewElement.State%2A> 값에 <xref:System.Windows.Forms.DataGridViewElementStates.ResizableSet> 플래그가 포함 된 경우 <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> 속성 값이 상속 되지 않습니다.  
   
 ## <a name="automatic-sizing"></a>자동 크기 조정  
  <xref:System.Windows.Forms.DataGridView> 컨트롤에는 열 채우기 모드와 내용 기반 자동 크기 조정의 두 가지 자동 크기 조정 기능이 있습니다.  
@@ -127,7 +127,7 @@ ms.locfileid: "76742987"
 ## <a name="content-based-sizing-options"></a>내용 기반 크기 조정 옵션  
  크기 조정 속성 및 메서드에 사용 되는 열거형에는 내용 기반 크기 조정에 대해 유사한 값이 있습니다. 이러한 값을 사용 하 여 기본 크기를 계산 하는 데 사용 되는 셀을 제한할 수 있습니다. 모든 크기 조정 열거의 경우 표시 된 셀을 참조 하는 이름의 값은 표시 된 행의 셀에 대 한 계산을 제한 합니다. 행을 제외 하면 많은 양의 행으로 작업할 때 성능 저하를 방지 하는 데 유용 합니다. 머리글 또는 nonheader 셀의 셀 값에 대 한 계산을 제한할 수도 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A?displayProperty=nameWithType>

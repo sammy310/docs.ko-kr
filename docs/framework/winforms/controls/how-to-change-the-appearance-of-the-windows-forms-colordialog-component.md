@@ -49,7 +49,7 @@ ms.locfileid: "76746642"
     colorDialog1->ShowHelp = true;  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.ColorDialog>
 - [ColorDialog 구성 요소](colordialog-component-windows-forms.md)

@@ -24,9 +24,9 @@ Windows Forms [ErrorProvider](errorprovider-component-windows-forms.md) 구성 �
  <xref:System.Windows.Forms.ErrorProvider.Icon%2A> 속성은 기본값이 아닌 사용자 지정 오류 아이콘으로 설정할 수 있습니다. <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> 속성이 설정 되 면 <xref:System.Windows.Forms.ErrorProvider> 구성 요소가 데이터 집합에 대 한 오류 메시지를 표시할 수 있습니다. <xref:System.Windows.Forms.ErrorProvider> 구성 요소의 주요 메서드는 오류 메시지 문자열을 지정 하 고 오류 아이콘이 표시 되어야 하는 <xref:System.Windows.Forms.ErrorProvider.SetError%2A> 메서드입니다.  
   
 > [!NOTE]
-> <xref:System.Windows.Forms.ErrorProvider> 구성 요소 액세스 가능 클라이언트에 대 한 기본 제공 지원을 제공 하지 않습니다. 이 구성 요소를 사용 하는 경우 애플리케이션에 액세스할 수 있도록, 추가, 액세스할 수 있는 피드백 메커니즘을 제공 해야 합니다.  
+> <xref:System.Windows.Forms.ErrorProvider> 구성 요소는 내게 필요한 옵션 지원 클라이언트에 대 한 기본 제공 지원을 제공 하지 않습니다. 이 구성 요소를 사용 하는 경우 애플리케이션에 액세스할 수 있도록, 추가, 액세스할 수 있는 피드백 메커니즘을 제공 해야 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.ErrorProvider>
 - [방법: Windows Forms ErrorProvider 구성 요소를 사용하여 데이터 세트에 있는 오류 보기](view-errors-within-a-dataset-with-wf-errorprovider-component.md)

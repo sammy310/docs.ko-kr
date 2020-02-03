@@ -30,15 +30,15 @@ ms.locfileid: "76744623"
   
  WCF에서 큐 주소 지정은 다음 패턴을 기반으로 합니다.  
   
- net.msmq: // \<*host-name*> / [private/] \<*queue-name*>  
+ net.pipe://\<*호스트 이름*>/[private/] \<*큐-이름*>  
   
- 다음은 각 문자에 대한 설명입니다.  
+ 각 항목이 나타내는 의미는 다음과 같습니다.  
   
 - \<*호스트 이름*>는 대상 큐를 호스팅하는 컴퓨터의 이름입니다.  
   
 - [private]는 선택 사항입니다. 개인 큐인 대상 큐에 주소를 지정할 때 사용됩니다. 공개 큐에 주소를 지정하려면 private를 지정하지 않아야 합니다. MSMQ 경로와 달리 WCF URI 형식에는 "$"가 없습니다.  
   
-- \<*queue-name*>은 큐의 이름입니다. 큐 이름은 하위 큐를 참조할 수도 있습니다. Thus, \<*queue-name*> = \<*name-of-queue*>[;*sub-queue-name*].  
+- \<*queue-name*>은 큐의 이름입니다. 큐 이름은 하위 큐를 참조할 수도 있습니다. 따라서 *큐*이름 > = \<*큐 이름*> [;을 (를) \<. *하위 큐-이름*].  
   
  예제 1: abc atadatum.com 컴퓨터에서 호스팅된 개인 큐 PurchaseOrders에 주소를 지정하는 경우 URI는 net.msmq://abc.adatum.com/private/PurchaseOrders입니다.  
   
@@ -72,9 +72,9 @@ ms.locfileid: "76744623"
   
 |WCF URI 기반 큐 주소|Active Directory 속성 사용|큐 전송 프로토콜 속성|결과 MSMQ 형식 이름|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
-|Net.msmq://\<machine-name>/private/abc|False(기본값)|Native(기본값)|DIRECT=OS:machine-name\private$\abc|  
-|Net.msmq://\<machine-name>/private/abc|False|SRMP|DIRECT=http://machine/msmq/private $/abc|  
-|Net.msmq://\<machine-name>/private/abc|True|네이티브|PUBLIC=some-guid(큐의 GUID)|  
+|Net.tcp://\<컴퓨터 이름 >/private/abc|False(기본값)|Native(기본값)|DIRECT=OS:machine-name\private$\abc|  
+|Net.tcp://\<컴퓨터 이름 >/private/abc|False|SRMP|DIRECT =http://machine/msmq/private$/abc|  
+|Net.tcp://\<컴퓨터 이름 >/private/abc|True|네이티브|PUBLIC=some-guid(큐의 GUID)|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>배달 못 한 편지 큐 또는 포이즌 메시지 큐에서 메시지 읽기  
  대상 큐의 하위 큐인 포이즌 메시지 큐에서 메시지를 읽으려면 하위 큐의 주소가 있는 `ServiceHost`를 엽니다.  
@@ -87,23 +87,23 @@ ms.locfileid: "76744623"
   
  사용자 지정 배달 못 한 편지 큐를 사용할 때 배달 못 한 편지 큐가 로컬 컴퓨터에 있어야 합니다. 따라서 배달 못 한 편지 큐의 URI는 다음 형식으로 제한됩니다.  
   
- net.msmq: //localhost/ [private/]  \<*custom-dead-letter-queue-name*>.  
+ net.pipe:/localhost/[private/] \<*사용자 지정 배달 못 한 편지 큐 이름*>입니다.  
   
  WCF 서비스는 수신 하는 모든 메시지가 수신 대기 중인 특정 큐로 주소가 지정 되었는지 확인 합니다. 메시지의 대상 큐가 메시지가 있는 큐와 일치하지 않으면 서비스가 메시지를 처리하지 않습니다. 이 경우 배달 못 한 편지 큐의 메시지를 다른 곳으로 배달해야 하므로 배달 못 한 편지 큐를 수신하는 서비스가 주소를 지정해야 하는 문제가 있습니다. 배달 못 한 편지 큐에서 또는 포이즌 큐에서 메시지를 읽으려면 `ServiceBehavior` 매개 변수를 포함하는 <xref:System.ServiceModel.AddressFilterMode.Any>를 사용해야 합니다. 예를 들어 [배달 못한 편지 큐](../../../../docs/framework/wcf/samples/dead-letter-queues.md)를 참조 하십시오.  
   
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>MsmqIntegrationBinding 및 서비스 주소 지정  
  `MsmqIntegrationBinding`은 기존 MSMQ 애플리케이션과의 통신에 사용됩니다. 기존 MSMQ 응용 프로그램과의 상호 작용을 용이 하 게 하기 위해 WCF는 형식 이름 주소 지정만 지원 합니다. 따라서 이 바인딩을 사용하여 보낸 메시지는 URI 체계를 따라야 합니다.  
   
- msmq.formatname:\<*MSMQ-format-name*>>  
+ msmq.formatname:\<*msmq-형식-이름*>>  
   
  MSMQ 형식의 이름은 MSMQ에서 [메시지 큐에 대해](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms706032(v=vs.85))지정 하는 형식입니다.  
   
  `MsmqIntegrationBinding`을 사용하여 큐에서 메시지를 받을 때 직접 형식 이름, 공개 및 개인 형식 이름만 사용할 수 있습니다(Active Directory 통합 필요). 그러나 직접 형식 이름을 사용하는 것이 좋습니다. 예를 들어 Windows Vista에서 다른 형식 이름을 사용 하면 시스템에서 직접 형식 이름 으로만 열 수 있는 하위 큐를 열려고 하기 때문에 오류가 발생 합니다.  
   
- `MsmqIntegrationBinding`을 사용하여 SRMP에 주소를 지정할 때 IIS(인터넷 정보 서비스)가 디스패치할 수 있도록 직접 형식 이름에 /msmq/를 추가하지 않아도 됩니다. 예: SRMP 프로토콜을 사용 하 여 큐 abc의 주소를 지정 하는 경우 DIRECT =http://adatum.com/msmq/private $/abc 대신 DIRECT =http://adatum.com/private $/abc.를 사용 해야 합니다.  
+ `MsmqIntegrationBinding`을 사용하여 SRMP에 주소를 지정할 때 IIS(인터넷 정보 서비스)가 디스패치할 수 있도록 직접 형식 이름에 /msmq/를 추가하지 않아도 됩니다. 예: SRMP 프로토콜을 사용 하 여 큐 abc의 주소를 지정 하는 경우 DIRECT =http://adatum.com/msmq/private$/abc 대신 DIRECT =http://adatum.com/private$/abc.를 사용 해야 합니다.  
   
  `MsmqIntegrationBinding`과 함께 net.msmq:// 주소 지정을 사용할 수 없습니다. `MsmqIntegrationBinding`은 자유 형식 MSMQ 형식 이름 주소 지정을 지원 하므로이 바인딩을 사용 하는 WCF 서비스를 사용 하 여 MSMQ에서 멀티 캐스트 및 메일 그룹 기능을 사용할 수 있습니다. 한 가지 예외의 경우는 `CustomDeadLetterQueue`을 사용할 때 `MsmqIntegrationBinding`를 지정하는 것입니다. 이 경우 net.msmq:// 형식이어야 하며, `NetMsmqBinding`을 사용하여 지정하는 방법과 비슷합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [대기 중인 애플리케이션 웹 호스팅](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

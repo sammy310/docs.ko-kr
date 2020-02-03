@@ -36,7 +36,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤은 다음과 같
 
 - OLE 개체의 텍스트 표현을 포함 하는 일반 텍스트
 
-파일을 저장 하려면 <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> 메서드를 호출 합니다. **SaveFile** 메서드를 사용 하 여 데이터를 스트림에 저장할 수도 있습니다. 자세한 내용은 <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>를 참조하세요.
+파일을 저장 하려면 <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> 메서드를 호출 합니다. **SaveFile** 메서드를 사용 하 여 데이터를 스트림에 저장할 수도 있습니다. 자세한 내용은 <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>을 참조하세요.
 
 ### <a name="to-save-the-contents-of-the-control-to-a-file"></a>컨트롤의 내용을 파일에 저장 하려면
 
@@ -88,9 +88,9 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤은 다음과 같
     > [!IMPORTANT]
     > 이 예제에서는 파일이 아직 없는 경우 새 파일을 만듭니다. 응용 프로그램에서 파일을 만들어야 하는 경우 해당 응용 프로그램에 폴더에 대 한 만들기 권한이 있어야 합니다. 권한은 액세스 제어 목록을 사용하여 설정됩니다. 파일이 이미 있는 경우 응용 프로그램은 낮은 권한인 쓰기 액세스만 있으면 됩니다. 가능 하면 배포 중에 파일을 만드는 것이 더 안전 하며, 폴더에 대 한 액세스를 만드는 대신 단일 파일에 대 한 읽기 권한만 부여 합니다. 또한 루트 폴더나 Program Files 폴더보다 사용자 폴더에 데이터를 쓰는 것이 더 안전합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox 컨트롤](richtextbox-control-windows-forms.md)
-- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)
+- [Windows Forms에서 사용할 컨트롤](controls-to-use-on-windows-forms.md)

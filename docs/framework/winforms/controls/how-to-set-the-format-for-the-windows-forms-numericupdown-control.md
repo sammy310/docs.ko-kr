@@ -38,7 +38,7 @@ Windows Forms <xref:System.Windows.Forms.NumericUpDown> 컨트롤에 값이 표�
     numericUpDown1->ThousandsSeparator = true;  
     ```  
   
-     -또는-  
+     또는  
   
 - <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> 속성을 `true`설정 하 여 16 진수 값을 표시 합니다.  
   
@@ -57,7 +57,7 @@ Windows Forms <xref:System.Windows.Forms.NumericUpDown> 컨트롤에 값이 표�
     > [!NOTE]
     > 값이 폼에 16 진수로 표시 되는 경우에도 <xref:System.Windows.Forms.NumericUpDown.Value%2A> 속성에서 수행 하는 모든 테스트는 10 진수 값을 테스트 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.NumericUpDown>
 - [NumericUpDown 컨트롤](numericupdown-control-windows-forms.md)

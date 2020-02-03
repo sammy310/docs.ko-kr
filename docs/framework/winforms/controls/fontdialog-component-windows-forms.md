@@ -31,5 +31,5 @@ Windows Forms <xref:System.Windows.Forms.FontDialog> 구성 요소는 미리 구
  [대화 상자 컨트롤 및 구성 요소](dialog-box-controls-and-components-windows-forms.md)  
  사용자가 응용 프로그램 또는 시스템과의 표준 상호 작용을 수행할 수 있도록 하는 컨트롤 및 구성 요소 집합을 설명 합니다.  
   
- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)  
+ [Windows Forms에서 사용할 컨트롤](controls-to-use-on-windows-forms.md)  
  사용에 대 한 정보 링크와 함께 Windows Forms 컨트롤의 전체 목록을 제공 합니다.

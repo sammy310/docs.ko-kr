@@ -70,7 +70,7 @@ Windows Forms <xref:System.Windows.Forms.TreeView> 컨트롤은 <xref:System.Win
     treeView1->Nodes->Clear();  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [TreeView 컨트롤](treeview-control-windows-forms.md)
 - [TreeView 컨트롤 개요](treeview-control-overview-windows-forms.md)

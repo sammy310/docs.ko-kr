@@ -144,7 +144,7 @@ ms.locfileid: "76744482"
 
 이 예에서는 <xref:System.Windows.Controls.Grid>의 공유 크기 조정 기능을 사용 합니다. 마지막 세 열은 같은 <xref:System.Windows.Controls.DefinitionBase.SharedSizeGroup%2A>에 배치 하 여이를 활용 합니다. 속성의 이름에서 알 수 있듯이 이 속성을 통해 열은 같은 크기를 공유할 수 있습니다. 따라서 "찾아보기 ..." 긴 문자열 "찾아보기 ..."로 지역화 된 모든 단추는 작은 "확인" 단추를 포함 하는 대신 너비가 커지고 "찾아보기 ..." 단추만.
 
-**xml:lang**
+**xml: lang**
 
 `xml:lang="en-US"`
 
@@ -181,12 +181,12 @@ ms.locfileid: "76744482"
 |리소스 키|지역화 범주|값|
 |-|-|-|
 |Button_1:System.Windows.Controls.Button.$Content|단추|확인|
-|Button_2:System.Windows.Controls.Button.$Content|단추|Cancel|
+|Button_2:System.Windows.Controls.Button.$Content|단추|취소|
 |Button_3:System.Windows.Controls.Button.$Content|단추|찾아보기...|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|텍스트|프로그램, 폴더, 문서 또는 인터넷 리소스의 이름을 입력하면 Windows에서 열립니다.|
-|TextBlock_2:System.Windows.Controls.TextBlock.$Content|텍스트|열기:|
-|Window_1:System.Windows.Window.Title|제목|를 실행합니다.|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|프로그램, 폴더, 문서 또는 인터넷 리소스의 이름을 입력하면 Windows에서 열립니다.|
+|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|열기:|
+|Window_1:System.Windows.Window.Title|제목|Run|
 
 애플리케이션을 독일어로 지역화하려면 다음과 같이 번역해야 합니다.
 
@@ -196,11 +196,11 @@ ms.locfileid: "76744482"
 |Button_2:System.Windows.Controls.Button.$Content|단추|Abbrechen|
 |Button_3:System.Windows.Controls.Button.$Content|단추|Durchsuchen…|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|텍스트|Geben Sie den Namen eines Programms, Ordners, Dokuments oder einer Internetresource an.|
-|TextBlock_2:System.Windows.Controls.TextBlock.$Content|텍스트|열기:|
-|Window_1:System.Windows.Window.Title|제목|를 실행합니다.|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|Geben Sie den Namen eines Programms, Ordners, Dokuments oder einer Internetresource an.|
+|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|열기:|
+|Window_1:System.Windows.Window.Title|제목|Run|
 
-**생성**
+**Generate**
 
 지역화의 마지막 단계에서는 새로 지역화된 위성 어셈블리를 만듭니다. 이렇게 하려면 다음 LocBaml 명령을 사용합니다.
 
@@ -267,9 +267,9 @@ ms.locfileid: "76744482"
 
 이 주석은 TextBlock_1 콘텐츠와 연결 되며 LocBaml 도구의 경우 ( [응용 프로그램 지역화](how-to-localize-an-application.md)참조) 출력 .csv 파일에서 TextBlock_1 행의 6 번째 열에 표시 될 수 있습니다.
 
-|리소스 키|범주|가독성|수정 가능성|설명|값|
+|리소스 키|Category|가독성|수정 가능성|주석|값|
 |-|-|-|-|-|-|
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|텍스트|true|true|이 문자는 장식 규칙으로 사용됩니다.|&#124;|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|TRUE|TRUE|이 문자는 장식 규칙으로 사용됩니다.|&#124;|
 
 다음 구문을 사용하여 주석을 요소의 속성 또는 콘텐츠에 배치할 수 있습니다.
 
@@ -277,7 +277,7 @@ ms.locfileid: "76744482"
 
 **지역화 특성**
 
-개발자 또는 지역화 관리자는 지역화 담당자가 읽고 수정할 수 있는 컨트롤을 필요로 할 수 있습니다. 예를 들어 회사 이름이나 법적 고지문은 번역하지 않아야 할 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 지역화 도구가 요소를 잠그거나, 숨기거나, 정렬할 때 사용할 수 있는 요소의 콘텐츠나 속성의 가독성, 수정 가능 여부 및 범주를 설정할 수 있는 특성을 제공합니다. 자세한 내용은 <xref:System.Windows.Localization.Attributes%2A>를 참조하세요. 이 샘플의 목적상 LocBaml 도구는 이러한 특성의 값만 출력합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤은 모두 이러한 특성에 대해 기본값을 사용하지만 이를 재정의할 수 있습니다. 예를 들어 다음 예제에서는 `TextBlock_1`에 대 한 기본 지역화 특성을 재정의 하 고 지역화 담당자가 콘텐츠를 읽을 수는 있지만 수정할 수 없도록 설정 합니다.
+개발자 또는 지역화 관리자는 지역화 담당자가 읽고 수정할 수 있는 컨트롤을 필요로 할 수 있습니다. 예를 들어 회사 이름이나 법적 고지문은 번역하지 않아야 할 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 지역화 도구가 요소를 잠그거나, 숨기거나, 정렬할 때 사용할 수 있는 요소의 콘텐츠나 속성의 가독성, 수정 가능 여부 및 범주를 설정할 수 있는 특성을 제공합니다. 자세한 내용은 <xref:System.Windows.Localization.Attributes%2A>을 참조하세요. 이 샘플의 목적상 LocBaml 도구는 이러한 특성의 값만 출력합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤은 모두 이러한 특성에 대해 기본값을 사용하지만 이를 재정의할 수 있습니다. 예를 들어 다음 예제에서는 `TextBlock_1`에 대 한 기본 지역화 특성을 재정의 하 고 지역화 담당자가 콘텐츠를 읽을 수는 있지만 수정할 수 없도록 설정 합니다.
 
 [!code-xaml[LocalizationComAtt#LocalizationAttributes](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributes)]
 
@@ -285,7 +285,7 @@ ms.locfileid: "76744482"
 
 [!code-xaml[LocalizationComAtt#LocalizationAttributesOverridden](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributesoverridden)]
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 제공 하는 기본 지역화 특성은 코드를 통해 재정의할 수도 있으므로 사용자 지정 컨트롤에 대 한 올바른 기본값을 올바르게 설정할 수 있습니다. 예를 들면 다음과 같습니다.:
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 제공 하는 기본 지역화 특성은 코드를 통해 재정의할 수도 있으므로 사용자 지정 컨트롤에 대 한 올바른 기본값을 올바르게 설정할 수 있습니다. 예들 들어 다음과 같습니다.
 
 ```csharp
 [Localizability(Readability = Readability.Readable, Modifiability=Modifiability.Unmodifiable, LocalizationCategory.None)]

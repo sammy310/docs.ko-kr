@@ -48,7 +48,7 @@ PKI (공개 키 인프라)는 공개 키 암호화를 사용 하 여 전자적 �
   
  이러한 항목에 대 한 자세한 내용은 [Access Control 메커니즘](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md) (영문)을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Windows Server Fabric 용 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

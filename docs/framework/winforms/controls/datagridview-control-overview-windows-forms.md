@@ -28,7 +28,7 @@ ms.locfileid: "76742485"
 ---
 # <a name="datagridview-control-overview-windows-forms"></a>DataGridView 컨트롤 개요(Windows Forms)
 > [!NOTE]
-> <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 컨트롤과 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하세요.  
+> <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.  
   
  <xref:System.Windows.Forms.DataGridView> 컨트롤을 사용 하 여 다양 한 종류의 데이터 원본에서 테이블 형식 데이터를 표시 하 고 편집할 수 있습니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "76742485"
   
  <xref:System.Windows.Forms.DataGridView> 컨트롤은 반환 된 개체에서 구현 되는 경우 이러한 인터페이스 또는 <xref:System.ComponentModel.ICustomTypeDescriptor> 인터페이스에서 반환 된 속성 컬렉션에 의해 반환 되는 개체의 공용 속성에 대 한 데이터 바인딩을 지원 합니다.  
   
- 일반적으로 바인딩할를 <xref:System.Windows.Forms.BindingSource> 구성 요소 및 바인딩은 <xref:System.Windows.Forms.BindingSource> 구성 요소를 다른 데이터 원본 또는 비즈니스 개체를 입력 합니다. <xref:System.Windows.Forms.BindingSource> 다양 한 데이터 원본에 바인딩할 수 있습니다 하 고 많은 데이터 바인딩 문제를 자동으로 해결할 수 있기 때문에 구성 요소는 기본 데이터 원본입니다. 자세한 내용은 [BindingSource 구성 요소](bindingsource-component.md)를 참조 하세요.  
+ 일반적으로 <xref:System.Windows.Forms.BindingSource> 구성 요소에 바인딩하고 <xref:System.Windows.Forms.BindingSource> 구성 요소를 다른 데이터 소스에 바인딩하거나 비즈니스 개체를 채웁니다. <xref:System.Windows.Forms.BindingSource> 구성 요소는 다양 한 데이터 원본에 바인딩할 수 있으며 여러 데이터 바인딩 문제를 자동으로 해결할 수 있기 때문에 기본 설정 된 데이터 원본입니다. 자세한 내용은 [BindingSource 구성 요소](bindingsource-component.md)를 참조 하세요.  
   
  기본 데이터 저장소가 없는 *바인딩되지* 않은 모드 에서도 <xref:System.Windows.Forms.DataGridView> 컨트롤을 사용할 수 있습니다. 바인딩되지 않은 <xref:System.Windows.Forms.DataGridView> 컨트롤을 사용 하는 코드 예제는 [연습: 바인딩되지 않은 Windows Forms DataGridView 컨트롤 만들기](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)를 참조 하세요.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "76742485"
  [Windows Forms DataGridView 컨트롤의 성능 조정](performance-tuning-in-the-windows-forms-datagridview-control.md)  
  컨트롤을 효율적으로 사용하여 대용량 데이터를 사용할 때 성능 문제를 방지하는 방법을 설명하는 항목을 제공합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>

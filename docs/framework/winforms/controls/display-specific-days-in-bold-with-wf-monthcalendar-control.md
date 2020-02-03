@@ -59,7 +59,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> 컨트롤은 날짜를 �
     monthCalendar1->AddBoldedDate(myVacation2);  
     ```  
   
-     – 또는 –  
+     -또는-  
   
      <xref:System.DateTime> 개체의 배열을 만들고이를 속성 중 하나에 할당 하 여 날짜 집합을 한 번에 모두 굵게 만듭니다.  
   
@@ -97,7 +97,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> 컨트롤은 날짜를 �
     monthCalendar1->RemoveBoldedDate(myVacation2);  
     ```  
   
-     – 또는 –  
+     -또는-  
   
      <xref:System.Windows.Forms.MonthCalendar.RemoveAllBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAllAnnuallyBoldedDates%2A>또는 <xref:System.Windows.Forms.MonthCalendar.RemoveAllMonthlyBoldedDates%2A> 메서드를 호출 하 여 세 목록 중 하나에서 굵게 표시 된 날짜를 모두 제거 합니다.  
   
@@ -127,7 +127,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> 컨트롤은 날짜를 �
     monthCalendar1->UpdateBoldedDates();  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [MonthCalendar 컨트롤](monthcalendar-control-windows-forms.md)
 - [방법: Windows Forms MonthCalendar 컨트롤에서 날짜 범위 선택](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)

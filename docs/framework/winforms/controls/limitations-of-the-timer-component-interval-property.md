@@ -28,7 +28,7 @@ Windows Forms <xref:System.Windows.Forms.Timer> 구성 요소에는 한 타이�
   
 - <xref:System.Windows.Forms.Timer.Interval%2A> 속성의 전체 자릿수는 밀리초 단위입니다. 일부 컴퓨터는 해결 방법이 밀리초 보다 높은 고해상도 카운터를 제공 합니다. 이러한 카운터의 가용성은 컴퓨터의 프로세서 하드웨어에 따라 달라 집니다.
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.Timer>
 - [Timer 구성 요소](timer-component-windows-forms.md)

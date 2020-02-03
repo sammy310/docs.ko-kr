@@ -30,14 +30,14 @@ WPF (Windows Presentation Foundation) 호스트 (Presentationhost.exe)는 WPF �
   
  이 항목에서는 PresentationHost.exe에서 사용할 수 있는 명령줄 매개 변수를 설명합니다.  
   
-## <a name="usage"></a>용도  
+## <a name="usage"></a>사용법  
  `PresentationHost.exe [parameters] uri|filename`  
   
 ## <a name="parameters"></a>매개 변수  
   
-|매개 변수|설명|  
+|매개 변수|Description|  
 |---------------|-----------------|  
-|파일 이름|활성화할 파일의 경로입니다. URI 일 수도 있습니다.|  
+|filename|활성화할 파일의 경로입니다. URI 일 수도 있습니다.|  
 |-debug|애플리케이션을 활성화할 때 저장소에서 커밋하거나 실행하지 않습니다. 이는 로컬 파일이 활성화된 경우에만 작동합니다.|  
 |-debugSecurityZoneURL \<url>|URL 값과 함께 사용 하 여 지정 된 URL에서 응용 프로그램을 배포 하는 것 처럼 응용 프로그램을 Presentationhost.exe에 지정 합니다. 이를 통해 배포 영역과 원본 사이트가 모두 결정됩니다.|  
 |-embedding|OLE에 필요합니다. `-event` 또는 `-debug` 매개 변수가 지정된 경우 `-embedding` 매개 변수가 내부적으로 설정되기 때문에 해당 매개 변수를 지정할 필요가 없습니다.|  
@@ -58,6 +58,6 @@ WPF (Windows Presentation Foundation) 호스트 (Presentationhost.exe)는 WPF �
 ### <a name="visual-studio-debugging-in-zone"></a>영역에서 Visual Studio 디버깅  
  `PresentationHost.exe -debug -debugSecurityZoneURL http://www.example.com c:\folderpath\example.xbap`  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [Security](../security-wpf.md)
+- [보안](../security-wpf.md)

@@ -16,7 +16,7 @@ WCF (Windows Communication Foundation) 기능은 서로 인증 하 고 암호화
   
  세션에 대 한 자세한 내용은 참조 하십시오 [를 사용 하 여 세션](../../../../docs/framework/wcf/using-sessions.md)합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [세션, 인스턴스 및 동시성](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)
 - [방법: 세션이 필요한 서비스 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)

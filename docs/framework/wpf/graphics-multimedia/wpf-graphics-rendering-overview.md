@@ -20,9 +20,9 @@ ms.locfileid: "76744800"
 
 <a name="role_of_visual_object"></a>   
 ## <a name="role-of-the-visual-object"></a>시각적 개체의 역할  
- 합니다 <xref:System.Windows.Media.Visual> 클래스는 기본 추상화는 모든 <xref:System.Windows.FrameworkElement> 개체에서 파생 됩니다. 또한 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 새 컨트롤을 작성하기 위한 진입점으로도 사용되며, Win32 애플리케이션 모델에서는 여러 가지 측면에서 창 핸들(HWND)로도 간주될 수 있습니다.  
+ <xref:System.Windows.Media.Visual> 클래스는 모든 <xref:System.Windows.FrameworkElement> 개체가 파생 되는 기본 추상화입니다. 또한 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 새 컨트롤을 작성하기 위한 진입점으로도 사용되며, Win32 애플리케이션 모델에서는 여러 가지 측면에서 창 핸들(HWND)로도 간주될 수 있습니다.  
   
- 합니다 <xref:System.Windows.Media.Visual> 개체는 핵심 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 개체를 렌더링 지원을 제공 하는 역할입니다. <xref:System.Windows.Controls.Button> 및 <xref:System.Windows.Controls.TextBox>와 같은 사용자 인터페이스 컨트롤은 <xref:System.Windows.Media.Visual> 클래스에서 파생 되 고 렌더링 데이터를 유지 하는 데 사용 됩니다. <xref:System.Windows.Media.Visual> 개체는 다음에 대 한 지원을 제공 합니다.  
+ <xref:System.Windows.Media.Visual> 개체는 기본 역할이 렌더링 지원을 제공 하는 데 사용할 수 있는 핵심 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 개체입니다. <xref:System.Windows.Controls.Button> 및 <xref:System.Windows.Controls.TextBox>와 같은 사용자 인터페이스 컨트롤은 <xref:System.Windows.Media.Visual> 클래스에서 파생 되 고 렌더링 데이터를 유지 하는 데 사용 됩니다. <xref:System.Windows.Media.Visual> 개체는 다음에 대 한 지원을 제공 합니다.  
   
 - 출력 표시: 시각적 개체의 serialize된 지속형 그리기 콘텐츠 렌더링  
   
@@ -57,12 +57,12 @@ ms.locfileid: "76744800"
  <xref:System.Windows.Media.Media3D.Viewport3DVisual>는 2D <xref:System.Windows.Media.Visual>와 <xref:System.Windows.Media.Media3D.Visual3D> 개체 간의 브리지를 제공 합니다. <xref:System.Windows.Media.Media3D.Visual3D> 클래스는 모든 3D 시각적 요소의 기본 클래스입니다. <xref:System.Windows.Media.Media3D.Viewport3DVisual>을 사용 하려면 <xref:System.Windows.Media.Media3D.Viewport3DVisual.Camera%2A> 값과 <xref:System.Windows.Media.Media3D.Viewport3DVisual.Viewport%2A> 값을 정의 해야 합니다. 카메라를 사용하면 장면을 볼 수 있습니다. 뷰포트는 프로젝션이 2D 표면에 매핑되는 위치를 설정합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 3D에 대한 자세한 내용은 [3차원 그래픽 개요](3-d-graphics-overview.md)를 참조하세요.  
   
 ### <a name="containervisual-class"></a>ContainerVisual 클래스  
- 합니다 <xref:System.Windows.Media.ContainerVisual> 클래스의 컬렉션에 대 한 컨테이너로 사용 됩니다 <xref:System.Windows.Media.Visual> 개체입니다. <xref:System.Windows.Media.DrawingVisual> 클래스는 <xref:System.Windows.Media.ContainerVisual> 클래스에서 파생 되므로 시각적 개체의 컬렉션을 포함할 수 있습니다.  
+ <xref:System.Windows.Media.ContainerVisual> 클래스는 <xref:System.Windows.Media.Visual> 개체의 컬렉션에 대 한 컨테이너로 사용 됩니다. <xref:System.Windows.Media.DrawingVisual> 클래스는 <xref:System.Windows.Media.ContainerVisual> 클래스에서 파생 되므로 시각적 개체의 컬렉션을 포함할 수 있습니다.  
   
 ### <a name="drawing-content-in-visual-objects"></a>시각적 개체의 그리기 콘텐츠  
  <xref:System.Windows.Media.Visual> 개체는 해당 렌더링 데이터를 **벡터 그래픽 명령 목록**으로 저장 합니다. 명령 목록의 각 항목은 그래픽 데이터 및 연결된 리소스의 하위 수준 집합을 serialize된 형식으로 나타냅니다. 그리기 콘텐츠를 포함할 수 있는 렌더링 데이터 형식에는 네 가지가 있습니다.  
   
-|그리기 콘텐츠 형식|설명|  
+|그리기 콘텐츠 형식|Description|  
 |--------------------------|-----------------|  
 |벡터 그래픽|벡터 그래픽 데이터와 관련 <xref:System.Windows.Media.Brush> 및 <xref:System.Windows.Media.Pen> 정보를 나타냅니다.|  
 |이미지|<xref:System.Windows.Rect>에서 정의한 영역 내의 이미지를 나타냅니다.|  
@@ -83,7 +83,7 @@ DrawingGroup 작업의 순서
  자세한 내용은 [그리기 개체 개요](drawing-objects-overview.md)를 참조하세요.  
   
 #### <a name="drawing-content-at-the-visual-layer"></a>시각적 계층에서 그리기 콘텐츠  
- 절대 직접 인스턴스화하지를 <xref:System.Windows.Media.DrawingContext>; 얻을 수 있습니다, 있지만 특정 메서드에서 그리기 컨텍스트 등 <xref:System.Windows.Media.DrawingGroup.Open%2A?displayProperty=nameWithType> 고 <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A?displayProperty=nameWithType>입니다. 다음 예제에서는 검색 된 <xref:System.Windows.Media.DrawingContext> 에서 <xref:System.Windows.Media.DrawingVisual> 사각형 그리기를 사용 하 여 합니다.  
+ <xref:System.Windows.Media.DrawingContext>를 직접 인스턴스화하지 않습니다. 그러나 <xref:System.Windows.Media.DrawingGroup.Open%2A?displayProperty=nameWithType> 및 <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A?displayProperty=nameWithType>같은 특정 메서드에서 그리기 컨텍스트를 가져올 수 있습니다. 다음 예제에서는 <xref:System.Windows.Media.DrawingVisual>에서 <xref:System.Windows.Media.DrawingContext>을 검색 하 고이를 사용 하 여 사각형을 그립니다.  
   
  [!code-csharp[drawingvisualsample#101](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#101)]
  [!code-vb[drawingvisualsample#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#101)]  
@@ -247,7 +247,7 @@ Visual Profiler 표시 출력
  [!code-csharp[VisualsOverview#102](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#102)]
  [!code-vb[VisualsOverview#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#102)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>

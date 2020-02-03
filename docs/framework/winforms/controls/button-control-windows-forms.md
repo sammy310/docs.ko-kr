@@ -38,7 +38,7 @@ ms.locfileid: "76738021"
  이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.  
   
 ## <a name="related-sections"></a>관련 섹션  
- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)  
+ [Windows Forms에서 사용할 컨트롤](controls-to-use-on-windows-forms.md)  
  사용 방법에 대한 정보 링크를 포함하는 Windows Forms 컨트롤의 전체 목록을 제공합니다.  
   
  또한 [대화 상자에 대 한 사용자 입력](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1s9ws53w(v=vs.100)) 및 [방법: 대화 상자 닫기 및 사용자 입력 유지](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/65ad5907(v=vs.100))를 참조 하세요.

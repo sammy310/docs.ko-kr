@@ -50,13 +50,13 @@ ms.locfileid: "76744384"
 
 9. 원하는 경우 기본 데이터 세트 이름을 바꿉니다.
 
-10. **마침**을 클릭합니다.
+10. **Finish**를 클릭합니다.
 
 11. **속성** 창에서 <xref:System.Windows.Forms.TextBox.Text%2A> 속성 옆의 화살표를 다시 클릭 합니다. **DataSource** UI 형식 편집기에서 <xref:System.Windows.Forms.TextBox> 바인딩할 필드의 이름을 선택 합니다.
 
      **DataSource** UI 유형 편집기가 닫히고 해당 데이터 연결과 관련 된 데이터 집합, <xref:System.Windows.Forms.BindingSource> 및 테이블 어댑터가 폼에 추가 됩니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.BindingNavigator>

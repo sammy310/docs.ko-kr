@@ -21,7 +21,7 @@ Windows Form에서 <xref:System.Windows.Forms.Button> 컨트롤이 취소 단추
 
 2. **속성** 창에서 양식의 <xref:System.Windows.Forms.Form.CancelButton%2A> 속성을 <xref:System.Windows.Forms.Button> 컨트롤의 이름으로 설정 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.Form.CancelButton%2A>
 - [Button 컨트롤 개요](button-control-overview-windows-forms.md)

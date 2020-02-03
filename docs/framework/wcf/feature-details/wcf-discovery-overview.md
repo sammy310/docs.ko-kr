@@ -57,7 +57,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
   
  서비스를 검색 가능하게 하려면 서비스 설명에 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 인스턴스를 추가해야 합니다. 서비스에 검색 요청을 수신할 위치를 알리려면 서비스 호스트에 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> 인스턴스를 추가해야 합니다. 이 예제에서는 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>(<xref:System.ServiceModel.Discovery.DiscoveryEndpoint>에서 파생됨)를 추가하여 서비스가 UDP 멀티캐스트 전송을 통해 검색 요청을 수신하도록 지정합니다. 모든 메시지가 멀티캐스트 방식으로 전송되므로 애드혹 검색을 위해 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>가 사용됩니다.  
   
-## <a name="announcement"></a>공지  
+## <a name="announcement"></a>알림  
  기본적으로 서비스 게시는 알림 메시지를 보내지 않습니다. 알림 메시지를 보내도록 서비스를 구성해야 합니다. 이렇게 하면 서비스 작성기가 검색 메시지 수신과는 별도로 서비스를 알릴 수 있으므로 유연성이 높아집니다. 서비스 알림은 검색 프록시 및 기타 서비스 레지스트리에 서비스를 등록하기 위한 메커니즘으로도 사용할 수 있습니다. 다음 코드는 UDP 바인딩을 통해 알림 메시지를 보내도록 서비스를 구성하는 방법을 보여 줍니다.  
   
 ```csharp  

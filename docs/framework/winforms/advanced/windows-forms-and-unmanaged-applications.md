@@ -15,7 +15,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76746361"
 ---
-# <a name="windows-forms-and-unmanaged-applications"></a>Windows Forms 및 관리되지 않는 응용 프로그램
+# <a name="windows-forms-and-unmanaged-applications"></a>Windows Forms 및 관리되지 않는 애플리케이션
 Windows Forms 애플리케이션과 컨트롤은 관리되지 않는 애플리케이션과 상호 운용될 수 있지만 몇 가지 주의할 사항이 있습니다. 다음 섹션에서는 Windows Forms 애플리케이션과 컨트롤이 지원하는 시나리오 및 구성과 지원하지 않는 시나리오 및 구성을 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  

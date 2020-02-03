@@ -180,7 +180,7 @@ Windows Forms <xref:System.Windows.Forms.LinkLabel> 컨트롤을 사용 하 여 
        }
     ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>
 - [LinkLabel 컨트롤 개요](linklabel-control-overview-windows-forms.md)

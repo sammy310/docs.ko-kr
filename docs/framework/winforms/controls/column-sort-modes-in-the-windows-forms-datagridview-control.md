@@ -15,7 +15,7 @@ ms.locfileid: "76744198"
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 열 정렬 모드
 <xref:System.Windows.Forms.DataGridView> 열에는 세 가지 정렬 모드가 있습니다. 각 열에 대 한 정렬 모드는 다음 <xref:System.Windows.Forms.DataGridViewColumnSortMode> 열거형 값 중 하나로 설정할 수 있는 열의 <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> 속성을 통해 지정 됩니다.  
   
-|`DataGridViewColumnSortMode` 값|설명|  
+|`DataGridViewColumnSortMode` 값|Description|  
 |----------------------------------------|-----------------|  
 |<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>|텍스트 상자 열에 대 한 기본값입니다. 열 머리글을 선택에 사용 하지 않을 경우 열 머리글을 클릭 하면 자동으로이 열에 의해 <xref:System.Windows.Forms.DataGridView> 정렬 되 고 정렬 순서를 나타내는 문자 모양이 표시 됩니다.|  
 |<xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>|텍스트 상자 열이 아닌 열에 대 한 기본값입니다. 프로그래밍 방식으로이 열을 정렬할 수 있습니다. 그러나 정렬 하기 위한 것이 아니므로 정렬 문자를 위한 공간이 예약 되어 있지 않습니다.|  
@@ -58,7 +58,7 @@ ms.locfileid: "76744198"
 > [!NOTE]
 > <xref:System.Windows.Forms.DataGridView.SortCompare> 이벤트는 <xref:System.Windows.Forms.DataGridView.DataSource%2A> 속성을 설정 하거나 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> 속성 값이 `true`될 때 발생 하지 않습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.Sort%2A?displayProperty=nameWithType>

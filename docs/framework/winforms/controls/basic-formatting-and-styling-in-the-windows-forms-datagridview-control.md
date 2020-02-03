@@ -12,7 +12,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76732003"
 ---
-# <a name="basic-formatting-and-styling-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 기본 형식 및 스타일 지정
+# <a name="basic-formatting-and-styling-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤에서 기본 형식 및 스타일 지정
 `DataGridView` 컨트롤을 사용 하면 셀의 기본 모양과 셀 값의 표시 형식을 쉽게 정의할 수 있습니다. 다양 한 `DataGridView` 컨트롤 속성을 통해 액세스 되는 `DataGridViewCellStyle` 개체의 속성을 설정 하 여 개별 셀, 특정 열 및 행의 셀 또는 컨트롤의 모든 셀에 대 한 모양 및 서식 스타일을 정의할 수 있습니다. 또한 `CellFormatting` 이벤트를 처리 하 여 셀 값과 같은 요소에 따라 이러한 스타일을 동적으로 수정할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
@@ -57,6 +57,6 @@ ms.locfileid: "76732003"
  [Windows Forms DataGridView 컨트롤의 기본 열, 행 및 셀 기능](basic-column-row-and-cell-features-wf-datagridview-control.md)  
  일반적으로 사용 되는 셀, 행 및 열 속성을 설명 하는 항목을 제공 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [DataGridView 컨트롤](datagridview-control-windows-forms.md)

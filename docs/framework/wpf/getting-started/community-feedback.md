@@ -109,7 +109,7 @@ Visual Studio 개발자 커뮤니티에 게시 하는 경우에는 WPF 포럼에
   - 솔루션
   - 단일 프로젝트
   - 여러 종속 프로젝트가 포함 된 솔루션
-- 애플리케이션에 언어별 또는 언어 중립적인 리소스가 포함되는지 여부. 예를 들어 `Application`, `Page` 및 `Resource` 형식에 `UICulture` 프로젝트 속성 또는 지역화 가능한 메타데이터를 지정했나요?
+- 애플리케이션에 언어별 또는 언어 중립적인 리소스가 포함되는지 여부. 예를 들어 `UICulture`, `Application` 및 `Page` 형식에 `Resource` 프로젝트 속성 또는 지역화 가능한 메타데이터를 지정했나요?
 - 중립적인 언어 설정을 AssemblyInfo.cs 또는 AssemblyInfo.vb 파일에서 사용했는지 여부.
 
 #### <a name="provide-scenario-and-impact-information"></a>시나리오 및 영향 정보 제공
@@ -118,6 +118,6 @@ Visual Studio 개발자 커뮤니티에 게시 하는 경우에는 WPF 포럼에
 
 일반적으로 충돌 및 데이터 손실 시나리오는 영향이 크기 때문에 우선 순위를 정하기가 가장 쉽습니다. 하지만 일부 버그는 흔하지 않은 시나리오에서만 나타납니다. 경우에 따라 이러한 시나리오가 주요 시나리오일 수도 있습니다. 시나리오 및 영향에 대 한 컨텍스트를 제공 하면 WPF 팀에서 적절 한 의사 결정을 내리는 데 도움이 됩니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Visual Studio의 문제를 보고하는 방법](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)

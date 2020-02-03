@@ -28,7 +28,7 @@ ms.locfileid: "76744376"
  [방법: Windows Forms BindingNavigator 컨트롤을 사용하여 데이터 세트에서 이동](move-through-a-dataset-with-wf-bindingnavigator-control.md)  
  `BindingNavigator` 컨트롤을 사용하여 <xref:System.Data.DataSet>의 레코드를 탐색하는 방법을 보여 줍니다.  
   
- [방법: Windows Forms BindingNavigator 컨트롤에 로드, 저장 및 취소 단추 추가](load-save-and-cancel-bindingnavigator.md)를 참조하세요.  
+ [방법: Windows Forms BindingNavigator 컨트롤에 로드, 저장 및 취소 단추 추가](load-save-and-cancel-bindingnavigator.md)도 참조하세요.  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Forms.BindingNavigator>  

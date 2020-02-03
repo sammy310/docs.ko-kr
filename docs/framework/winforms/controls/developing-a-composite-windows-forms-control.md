@@ -22,7 +22,7 @@ Visual Studio의 Windows Forms 디자이너는 사용자 정의 컨트롤 제작
 
 - [방법: 도구 상자 항목 선택 대화 상자에 컨트롤 표시](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
 
-- [연습: DesignerSerializationVisibilityAttribute를 사용하여 표준 형식의 컬렉션 직렬화](serializing-collections-designerserializationvisibilityattribute.md)
+- [연습: DesignerSerializationVisibilityAttribute를 사용하여 표준 형식의 컬렉션 serialize](serializing-collections-designerserializationvisibilityattribute.md)
 
 - [연습: Visual C#을 사용하여 Windows Forms 컨트롤에서 상속](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
 
@@ -40,17 +40,17 @@ Visual Studio의 Windows Forms 디자이너는 사용자 정의 컨트롤 제작
 
 - [방법: UserControl 클래스에서 상속](how-to-inherit-from-the-usercontrol-class.md)
 
-- [방법: Windows Forms 컨트롤 작성](how-to-author-controls-for-windows-forms.md)
+- [방법: Windows Forms 컨트롤 제작](how-to-author-controls-for-windows-forms.md)
 
-- [방법: 복합 컨트롤 작성](how-to-author-composite-controls.md)
+- [방법: 복합 컨트롤 제작](how-to-author-composite-controls.md)
 
-- [연습: Visual C#에서 복합 컨트롤 제작](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [연습: Visual C#에서 합성 컨트롤 제작](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
 
 - [연습: Visual Studio의 디자인 타임 기능을 사용하는 Windows Forms 컨트롤 만들기](creating-a-wf-control-design-time-features.md)
 
 - [방법: 디자인 타임 기능을 활용하는 Windows Forms 컨트롤 만들기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [방법: Windows Forms 컨트롤에서 특성 적용](how-to-apply-attributes-in-windows-forms-controls.md)
 - [.NET Framework에서 사용자 지정 Windows Forms 컨트롤 개발](developing-custom-windows-forms-controls.md)

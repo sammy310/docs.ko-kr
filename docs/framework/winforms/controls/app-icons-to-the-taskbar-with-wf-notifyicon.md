@@ -31,7 +31,7 @@ Windows Forms <xref:System.Windows.Forms.NotifyIcon> 구성 요소는 작업 표
 
 1. <xref:System.Windows.Forms.NotifyIcon.Icon%2A> 속성에 값을 할당 합니다. 값은 `System.Drawing.Icon` 형식 이어야 하며 .ico 파일에서 로드할 수 있습니다. **속성** 창의 <xref:System.Windows.Forms.NotifyIcon.Icon%2A> 속성 옆에 있는 줄임표 단추 (...)를 코드에서 지정 하거나 줄임표![단추 (...](./media/visual-studio-ellipsis-button.png)속성 창)를 클릭 하 고 표시 되는 **열기** 대화 상자에서 파일을 선택 하 여 코드에서 아이콘 파일을 지정할 수 있습니다.
 
-2. <xref:System.Windows.Forms.NotifyIcon.Visible%2A> 속성을 `true`으로 설정합니다.
+2. <xref:System.Windows.Forms.NotifyIcon.Visible%2A> 속성을 `true`로 설정합니다.
 
 3. <xref:System.Windows.Forms.NotifyIcon.Text%2A> 속성을 적절 한 도구 설명 문자열로 설정 합니다.
 
@@ -72,7 +72,7 @@ Windows Forms <xref:System.Windows.Forms.NotifyIcon> 구성 요소는 작업 표
     notifyIcon1->Text = "Antivirus program";
     ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>

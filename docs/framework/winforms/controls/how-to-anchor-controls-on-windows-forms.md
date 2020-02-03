@@ -54,7 +54,7 @@ ms.locfileid: "76747188"
 
 상속 될 수 있으려면 상속 된 컨트롤을 `Protected` 해야 합니다. 컨트롤의 액세스 수준을 변경 하려면 **속성** 창에서 해당 `Modifiers` 속성을 설정 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Forms 컨트롤](index.md)
 - [AutoSize 속성 개요](autosize-property-overview.md)

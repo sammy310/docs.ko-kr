@@ -16,7 +16,7 @@ ms.locfileid: "76746257"
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGrid 컨트롤에 테이블 및 열 추가
 
 > [!NOTE]
-> <xref:System.Windows.Forms.DataGridView> 컨트롤은 기능을 대체 하 고 <xref:System.Windows.Forms.DataGrid> 컨트롤에 기능을 추가 합니다. 그러나 <xref:System.Windows.Forms.DataGrid> 컨트롤은 이전 버전과의 호환성 및 향후 사용을 위해 유지 됩니다 (선택 하는 경우). 자세한 내용은 [Windows Forms DataGridView 컨트롤과 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하세요.
+> <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.
 
 <xref:System.Windows.Forms.DataGridTableStyle> 개체를 만들고 <xref:System.Windows.Forms.DataGrid> 컨트롤의 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 속성을 통해 액세스 되는 <xref:System.Windows.Forms.GridTableStylesCollection> 개체에 추가 하 여 Windows Forms <xref:System.Windows.Forms.DataGrid> 컨트롤의 데이터를 테이블 및 열에 표시할 수 있습니다. 각 테이블 스타일은 <xref:System.Windows.Forms.DataGridTableStyle>의 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 속성에 지정 된 모든 데이터 테이블의 내용을 표시 합니다. 기본적으로 열 스타일이 지정 되지 않은 테이블 스타일은 해당 데이터 테이블 내의 모든 열을 표시 합니다. 각 <xref:System.Windows.Forms.DataGridTableStyle>의 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 속성을 통해 액세스 되는 <xref:System.Windows.Forms.GridColumnStylesCollection>에 <xref:System.Windows.Forms.DataGridColumnStyle> 개체를 추가 하 여 표시 되는 테이블의 열을 제한할 수 있습니다.
 
@@ -26,7 +26,7 @@ ms.locfileid: "76746257"
 
 1. 테이블에 데이터를 표시 하려면 먼저 <xref:System.Windows.Forms.DataGrid> 컨트롤을 데이터 집합에 바인딩해야 합니다. 자세한 내용은 [방법: 디자이너를 사용 하 여 Windows Forms DataGrid 컨트롤을 데이터 소스에 바인딩](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)을 참조 하세요.
 
-2. 속성 창에서 <xref:System.Windows.Forms.DataGrid> 컨트롤의 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 속성을 선택 하 고 속성 옆의 줄임표 단추 (...)를 클릭 하 여 **DataGridTableStyle 컬렉션 편집기**를 표시 합니다![(속성 창).
+2. 속성 창에서 <xref:System.Windows.Forms.DataGrid> 컨트롤의 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 속성을 선택 하 고 속성 옆의 줄임표 단추 (...)를 클릭 하 여 **DataGridTableStyle 컬렉션 편집기**를 표시 합니다![(속성 창).](./media/visual-studio-ellipsis-button.png)
 
 3. 컬렉션 편집기에서 **추가** 를 클릭 하 여 테이블 스타일을 삽입 합니다.
 
@@ -54,7 +54,7 @@ ms.locfileid: "76746257"
 
 5. 컬렉션 편집기의 **속성** 상자에서 표시 하려는 열에 대 한 <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> 값을 선택 합니다.
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>참고 항목
 
 - [DataGrid 컨트롤](datagrid-control-windows-forms.md)
 - [방법: Windows Forms DataGrid 컨트롤에서 열 삭제 또는 숨기기](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

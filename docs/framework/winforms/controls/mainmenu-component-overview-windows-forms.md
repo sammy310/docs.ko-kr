@@ -24,7 +24,7 @@ ms.locfileid: "76745122"
 ## <a name="key-properties"></a>키 속성  
  <xref:System.Windows.Forms.MenuItem.DefaultItem%2A> 속성을 `true`설정 하 여 메뉴 항목을 기본 항목으로 지정할 수 있습니다. 메뉴를 클릭 하면 기본 항목이 굵은 텍스트로 표시 됩니다. 메뉴 항목의 <xref:System.Windows.Forms.MenuItem.Checked%2A> 속성은 `true` 또는 `false`이며 메뉴 항목이 선택 되어 있는지 여부를 나타냅니다. 메뉴 항목의 <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> 속성은 선택한 항목의 모양을 사용자 지정 합니다. <xref:System.Windows.Forms.MenuItem.RadioCheck%2A>를 `true`로 설정 하면 항목 옆에 라디오 단추가 표시 됩니다. <xref:System.Windows.Forms.MenuItem.RadioCheck%2A>을 `false`로 설정 하면 항목 옆에 확인 표시가 나타납니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.MainMenu>
 - <xref:System.Windows.Forms.Menu>

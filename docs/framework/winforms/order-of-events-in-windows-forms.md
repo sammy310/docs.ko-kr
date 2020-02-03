@@ -46,7 +46,7 @@ Windows Forms 애플리케이션에서 이벤트가 발생하는 순서는 반�
   
 - <xref:System.Windows.Forms.Form.Deactivate?displayProperty=nameWithType>  
   
- <xref:System.Windows.Forms.Application> 클래스의 <xref:System.Windows.Forms.Application.ApplicationExit> 이벤트는 주 폼의 종료 이벤트 뒤에 발생합니다.  
+ <xref:System.Windows.Forms.Application.ApplicationExit> 클래스의 <xref:System.Windows.Forms.Application> 이벤트는 주 폼의 종료 이벤트 뒤에 발생합니다.  
   
 > [!NOTE]
 > Visual Basic 2005에는 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup?displayProperty=nameWithType> 및 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown?displayProperty=nameWithType>과 같은 추가 애플리케이션 이벤트가 포함됩니다.  
@@ -80,6 +80,6 @@ Windows Forms 애플리케이션에서 이벤트가 발생하는 순서는 반�
   
 - <xref:System.Windows.Forms.Control.Validated>  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Forms에서 이벤트 처리기 만들기](creating-event-handlers-in-windows-forms.md)

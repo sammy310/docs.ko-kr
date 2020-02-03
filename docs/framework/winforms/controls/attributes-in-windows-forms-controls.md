@@ -20,7 +20,7 @@ ms.locfileid: "76732131"
 ## <a name="attributes-for-control-and-component-properties"></a>컨트롤 및 구성 요소 속성의 특성  
  다음 표에서는 사용자 지정 컨트롤 및 구성 요소의 속성이나 다른 멤버에 적용할 수 있는 특성을 보여 줍니다. 이러한 특성 중 많은 부분을 사용하는 예제는 [방법: Windows Forms 컨트롤에서 특성 적용](how-to-apply-attributes-in-windows-forms-controls.md)을 참조하세요.  
   
-|특성|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |<xref:System.ComponentModel.AmbientValueAttribute>|속성이 다른 소스에서 값을 가져오도록 속성에 전달할 값을 지정합니다. 이를 *앰비언스*라고 합니다.|  
 |<xref:System.ComponentModel.BrowsableAttribute>|속성 또는 이벤트를 **속성** 창에 표시할지 여부를 지정합니다.|  
@@ -40,7 +40,7 @@ ms.locfileid: "76732131"
 ## <a name="attributes-for-data-binding-properties"></a>데이터 바인딩 속성의 특성  
  다음 표에서는 사용자 지정 컨트롤과 구성 요소가 데이터 바인딩과 상호 작용하는 방법을 지정하는 데 적용할 수 있는 특성을 보여 줍니다.  
   
-|특성|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |<xref:System.ComponentModel.BindableAttribute>|속성이 일반적으로 바인딩에 사용되는지 여부를 지정합니다.|  
 |<xref:System.ComponentModel.ComplexBindingPropertiesAttribute>|구성 요소의 데이터 소스와 데이터 멤버 속성을 지정합니다.|  
@@ -51,7 +51,7 @@ ms.locfileid: "76732131"
 ## <a name="attributes-for-classes"></a>클래스의 특성  
  다음 표에서는 디자인 타임에 사용자 지정 컨트롤 및 구성 요소의 동작을 지정하는 데 적용할 수 있는 특성을 보여 줍니다.  
   
-|특성|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |<xref:System.ComponentModel.DefaultEventAttribute>|구성 요소의 기본 이벤트를 지정합니다.|  
 |<xref:System.ComponentModel.DefaultPropertyAttribute>|구성 요소의 기본 속성을 지정합니다.|  
@@ -60,7 +60,7 @@ ms.locfileid: "76732131"
 |<xref:System.ComponentModel.ToolboxItemAttribute>|도구 상자 항목의 특성을 나타냅니다.|  
 |<xref:System.ComponentModel.ToolboxItemFilterAttribute>|도구 상자 항목에 사용할 필터 문자열과 필터 형식을 지정합니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Attribute>
 - [방법: Windows Forms 컨트롤에서 특성 적용](how-to-apply-attributes-in-windows-forms-controls.md)

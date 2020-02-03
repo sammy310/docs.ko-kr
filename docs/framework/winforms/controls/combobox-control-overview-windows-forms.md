@@ -23,7 +23,7 @@ Windows Forms <xref:System.Windows.Forms.ComboBox> 컨트롤은 드롭다운 콤
   
  <xref:System.Windows.Forms.ComboBox> 컨트롤에서 항목을 추가 하거나 삭제 하려면 <xref:System.Windows.Forms.ComboBox.ObjectCollection.Add%2A>, <xref:System.Windows.Forms.ComboBox.ObjectCollection.Insert%2A>, <xref:System.Windows.Forms.ComboBox.ObjectCollection.Clear%2A> 또는 <xref:System.Windows.Forms.ComboBox.ObjectCollection.Remove%2A> 메서드를 사용 합니다. 또는 디자이너에서 <xref:System.Windows.Forms.ComboBox.Items%2A> 속성을 사용 하 여 목록에 항목을 추가할 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.ComboBox>
 - [ListBox 컨트롤 개요](listbox-control-overview-windows-forms.md)

@@ -17,7 +17,7 @@ Windows Forms 컨트롤은 <xref:System.Windows.Forms.Control?displayProperty=na
   
  사용자 지정 컨트롤이 상속된 이벤트 기능을 재정의해야 하는 경우 대리자를 연결하는 대신 상속된 `On`*EventName* 메서드를 재정의합니다. .NET Framework에서 이벤트 모델에 익숙하지 않다면 [구성 요소에서 이벤트 발생 시키기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/sh2e3k5z(v=vs.120))를 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [OnPaint 메서드 재정의](overriding-the-onpaint-method.md)
 - [사용자 입력 처리](handling-user-input.md)

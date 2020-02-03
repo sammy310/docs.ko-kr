@@ -30,7 +30,7 @@ void Deactivate()
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [.NET Framework 시스템 요구 사항](../../get-started/system-requirements.md)을 참조 하세요.  
   
- **DLL:**  
+ **GDIPLUS.DLL**  
   
  .NET Framework 3.0 및 3.5: PresentationHostDLL에서  
   
@@ -38,6 +38,6 @@ void Deactivate()
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [F 관리되지 않는 API 참조](wpf-unmanaged-api-reference.md)

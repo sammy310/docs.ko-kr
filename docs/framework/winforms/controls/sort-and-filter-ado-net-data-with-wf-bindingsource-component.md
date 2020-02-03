@@ -44,7 +44,7 @@ ms.locfileid: "76742967"
  [!code-csharp[System.Windows.Forms.DataConnectorFilterAndSort#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/CS/form1.cs#12)]
  [!code-vb[System.Windows.Forms.DataConnectorFilterAndSort#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/VB/form1.vb#12)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제에서는 Northwind 샘플 데이터베이스의 Customers 테이블에서 <xref:System.Windows.Forms.DataGridView> 컨트롤로 데이터를 로드 하 고 표시 된 데이터를 필터링 및 정렬 합니다.  
   
  [!code-csharp[System.Windows.Forms.DataConnectorFilterAndSort#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/CS/form1.cs#1)]
@@ -53,7 +53,7 @@ ms.locfileid: "76742967"
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제를 실행 하려면 `BindingSource1` 라는 <xref:System.Windows.Forms.BindingSource> 포함 된 양식에 코드를 붙여넣고 이름이 `dataGridView1`<xref:System.Windows.Forms.DataGridView> 합니다. 폼에 대 한 <xref:System.Windows.Forms.Form.Load> 이벤트를 처리 하 고 load 이벤트 처리기 메서드에서 `InitializeSortedFilteredBindingSource`를 호출 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.BindingSource.Sort%2A>
 - <xref:System.Windows.Forms.BindingSource.Filter%2A>

@@ -164,9 +164,9 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤을 사용한 끌
   
      마우스 단추를 놓으면 선택한 텍스트가 놓이고(즉, <xref:System.Windows.Forms.RichTextBox.DragDrop> 이벤트 발생) <xref:System.Windows.Forms.RichTextBox> 컨트롤 내에 삽입됩니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.RichTextBox>
 - [방법: 애플리케이션 간에 끌어서 놓기 작업 수행](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
 - [RichTextBox 컨트롤](richtextbox-control-windows-forms.md)
-- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)
+- [Windows Forms에서 사용할 컨트롤](controls-to-use-on-windows-forms.md)

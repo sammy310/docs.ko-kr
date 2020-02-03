@@ -12,13 +12,13 @@ ms.locfileid: "76730947"
 # <a name="security-behaviors-in-wcf"></a>WCF의 보안 동작
 WCF (Windows Communication Foundation)에서 동작은 서비스 수준 또는 끝점 수준에서 런타임 동작을 수정 합니다. 일반적인 동작에 대 한 자세한 내용은 [서비스 런타임 동작 지정](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)을 참조 하세요. *보안 동작* 을 통해 자격 증명, 인증, 권한 부여 및 감사 로그를 제어할 수 있습니다. 프로그래밍 또는 구성을 통해 동작을 사용할 수 있습니다. 이 항목에서는 보안 기능과 관련된 다음 동작의 구성에 대해 중점적으로 설명합니다.  
   
-- [\<serviceCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
+- [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)입니다.  
   
-- [\<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).  
+- [clientCredentials >를\<](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)합니다.  
   
-- [\<serviceAuthorization>](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md).  
+- [serviceAuthorization >를\<](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)합니다.  
   
-- [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md).  
+- [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)입니다.  
   
 - [\<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md)를 사용 하면 클라이언트가 메타 데이터에 대해 액세스할 수 있는 보안 끝점을 지정할 수도 있습니다.  
   
@@ -82,7 +82,7 @@ WCF (Windows Communication Foundation)에서 동작은 서비스 수준 또는 �
   
 - 이 컬렉션에 URI를 추가하여 유효한 URI 집합을 지정합니다. 이렇게 하려면 각 URI에 대해 [> 추가\<](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md) 를 삽입 합니다.  
   
- 자세한 내용은 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>를 참조하세요.  
+ 자세한 내용은 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>을 참조하세요.  
   
  이 구성 요소를 사용 하는 방법에 대 한 자세한 내용은 [방법: 페더레이션 서비스 자격 증명 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)을 참조 하세요.  
   
@@ -117,16 +117,16 @@ WCF (Windows Communication Foundation)에서 동작은 서비스 수준 또는 �
 #### <a name="clientcertificate-element"></a>\<clientCertificate > 요소  
  이 요소로 클라이언트를 인증하는 데 사용하는 인증서를 설정합니다. 자세한 내용은 [방법: 클라이언트 자격 증명 값 지정을](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)참조 하세요.  
   
-#### <a name="httpdigest"></a>\<httpDigest>  
+#### <a name="httpdigest"></a>\<httpDigest >  
  이 기능은 Windows 및 IIS(인터넷 정보 서비스)의 Active Directory를 통해 사용해야 합니다. 자세한 내용은 [IIS 6.0의 다이제스트 인증](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc782661(v=ws.10))을 참조 하세요.  
   
 #### <a name="issuedtoken-element"></a>\<issuedToken > 요소  
  [\<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) 는 토큰의 로컬 발급자를 구성 하는 데 사용 되는 요소 또는 보안 토큰 서비스에 사용 되는 동작을 포함 합니다. 로컬 발급자를 사용 하도록 클라이언트를 구성 하는 방법에 대 한 지침은 [방법: 로컬 발급자 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)을 참조 하세요.  
   
-#### <a name="localissueraddress"></a>\<localIssuerAddress>  
+#### <a name="localissueraddress"></a>\<localIssuerAddress >  
  기본 보안 토큰 서비스 주소를 지정합니다. <xref:System.ServiceModel.WSFederationHttpBinding>에서 보안 토큰 서비스에 대 한 URL을 제공 하지 않거나 페더레이션된 바인딩의 발급자 주소가 `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` 되거나 `null`경우 사용 됩니다. 이러한 경우 로컬 발급자의 주소와 이 발급자와 통신하는 데 사용할 바인딩을 사용하여 <xref:System.ServiceModel.Description.ClientCredentials>를 구성해야 합니다.  
   
-#### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors>  
+#### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors >  
  [\<issuerChannelBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md) 를 사용 하 여 보안 토큰 서비스와 통신할 때 사용 되는 WCF 클라이언트 동작을 추가 합니다. [\<endpointbehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) 섹션에서 클라이언트 동작을 정의 합니다. 정의 된 동작을 사용 하려면 두 개의 특성을 사용 하 여 `<issuerChannelBehaviors>` 요소에 <`add`> 요소를 추가 합니다. 다음 예제와 같이 `issuerAddress`를 보안 토큰 서비스의 URL로 설정하고 `behaviorConfiguration` 특성을 정의된 엔드포인트 동작 이름으로 설정합니다.  
   
 ```xml  
@@ -217,7 +217,7 @@ WCF (Windows Communication Foundation)에서 동작은 서비스 수준 또는 �
 </behaviors>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [감사](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
 - [Windows Server Fabric 용 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

@@ -22,7 +22,7 @@ Windows Forms <xref:System.Windows.Forms.DateTimePicker> 컨트롤을 사용 하
   
 ### <a name="to-display-a-custom-format"></a>사용자 지정 형식을 표시 하려면  
   
-1. <xref:System.Windows.Forms.DateTimePicker.Format%2A> 속성을 `DateTimePickerFormat.Custom`으로 설정합니다.  
+1. <xref:System.Windows.Forms.DateTimePicker.Format%2A> 속성을 `DateTimePickerFormat.Custom`로 설정합니다.  
   
 2. <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> 속성을 형식 문자열로 설정 합니다.  
   
@@ -63,7 +63,7 @@ Windows Forms <xref:System.Windows.Forms.DateTimePicker> 컨트롤을 사용 하
   
      문화권 설정에 따라 작은따옴표로 묶이지 않은 문자는 변경 될 수 있습니다. 예를 들어 위의 형식 문자열은 영어 (미국) 문화권의 "오늘: 05:30:31 년 3 월 02 2012 일 금요일" 형식으로 현재 날짜를 표시 합니다. 첫 번째 콜론은 "hh: mm: ss"에 있는 구분 문자로 사용할 수 없으므로 작은따옴표로 묶여 있습니다. 다른 문화권에서 형식은 "오늘: 05.30.31 금요일 3 월 02 2012"로 표시 될 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [DateTimePicker 컨트롤](datetimepicker-control-windows-forms.md)
 - [방법: Windows Forms DateTimePicker 컨트롤을 사용하여 날짜 설정 및 반환](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

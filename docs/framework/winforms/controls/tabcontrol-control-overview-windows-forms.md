@@ -22,7 +22,7 @@ Windows Forms <xref:System.Windows.Forms.TabControl>은 파일 캐비닛의 폴�
 ## <a name="working-with-tabcontrol"></a>TabControl 사용  
  <xref:System.Windows.Forms.TabControl>의 가장 중요 한 속성은 개별 탭이 포함 된 <xref:System.Windows.Forms.TabControl.TabPages%2A>입니다. 각 개별 탭은 <xref:System.Windows.Forms.TabPage> 개체입니다. 탭을 클릭 하면 해당 <xref:System.Windows.Forms.TabPage> 개체에 대 한 <xref:System.Windows.Forms.Control.Click> 이벤트가 발생 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.TabControl>
 - [TabControl 컨트롤](tabcontrol-control-windows-forms.md)

@@ -18,7 +18,7 @@ ms.locfileid: "76743033"
 
 <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType> 속성을 다음 <xref:System.Windows.Forms.DataGridViewSelectionMode> 열거형 값 중 하나로 설정 하 여 허용 되는 선택 항목을 지정할 수 있습니다.
 
-|DataGridViewSelectionMode 값|설명|
+|DataGridViewSelectionMode 값|Description|
 |-------------------------------------|-----------------|
 |<xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>|셀을 클릭 하면 해당 셀이 선택 됩니다. 행 및 열 머리글은 선택에 사용할 수 없습니다.|
 |<xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>|셀을 클릭 하면 해당 셀이 선택 됩니다. 열 머리글을 클릭 하면 전체 열이 선택 됩니다. 열 머리글은 정렬에 사용할 수 없습니다.|
@@ -46,7 +46,7 @@ ms.locfileid: "76743033"
 > [!TIP]
 > 선택한 셀을 프로그래밍 방식으로 사용 하는 방법을 보여 주는 예제 코드는 <xref:System.Windows.Forms.DataGridView> 클래스 개요에서 찾을 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>

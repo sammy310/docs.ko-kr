@@ -24,7 +24,7 @@ ms.locfileid: "76747031"
 
 [Windows Presentation Foundation](../index.md) 플랫폼은 기능의 핵심 요소로서 디지털 잉크를 수집합니다. 이 항목에서는 Windows Presentation Foundation (WPF)에서 잉크를 수집 하는 방법에 대해 설명 합니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 다음 예제를 사용 하려면 먼저 Visual Studio 및 Windows SDK를 설치 해야 합니다. WPF 용 응용 프로그램을 작성 하는 방법에 대해서도 이해 해야 합니다. WPF를 시작 하는 방법에 대 한 자세한 내용은 [연습: 내 첫 wpf 데스크톱 응용 프로그램](../getting-started/walkthrough-my-first-wpf-desktop-application.md)을 참조 하세요.
 
@@ -52,7 +52,7 @@ XAML을 사용 하 여 **InkCanvas** 요소를 트리에 추가 하는 것 처�
 
 <xref:System.Windows.Controls.InkCanvas>에서는 많은 잉크 편집 작업을 지원 합니다. 예를 들어 <xref:System.Windows.Controls.InkCanvas>는 펜 후면 지우기를 지원 하 고 요소에 기능을 추가 하는 데 필요한 추가 코드는 없습니다.
 
-#### <a name="selection"></a>선택 항목
+#### <a name="selection"></a>선택
 
 선택 모드를 설정 하는 것은 <xref:System.Windows.Controls.InkCanvasEditingMode> 속성을 **Select**로 설정 하는 것 만큼 간단 합니다.
 
@@ -88,7 +88,7 @@ XAML을 사용 하 여 **InkCanvas** 요소를 트리에 추가 하는 것 처�
 
 <xref:System.Windows.Controls.StackPanel> <xref:System.Windows.Controls.InkCanvas>위에 단추를 배치 하는 방법을 확인 합니다. 단추 위쪽에서 잉크를 시도 하는 경우 <xref:System.Windows.Controls.InkCanvas>은 단추 뒤에 잉크를 수집 하 고 렌더링 합니다. 이는 단추가 자식이 아닌 <xref:System.Windows.Controls.InkCanvas>의 형제 이기 때문입니다. 또한 단추가 z 순서에서 더 앞서기 때문에 잉크가 단추 뒤에서 렌더링됩니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Ink.DrawingAttributes>
 - <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A>

@@ -25,7 +25,7 @@ ms.locfileid: "76747146"
  <xref:System.Windows.Forms.MainMenu>  
  이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

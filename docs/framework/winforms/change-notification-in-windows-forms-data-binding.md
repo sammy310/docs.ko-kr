@@ -32,7 +32,7 @@ Windows Forms 데이터 바인딩의 가장 중요 한 개념 중 하나는 *변
 ## <a name="change-notification-for-custom-controls"></a>사용자 지정 컨트롤에 대 한 변경 알림  
  마지막으로, 컨트롤 쪽에서 데이터에 바인딩하기 위해 디자인 된 각 속성에 대해 *PropertyName*Changed 이벤트를 노출 해야 합니다. 그러면 컨트롤 속성에 대 한 변경 내용이 바인딩된 데이터 소스에 전파 됩니다. 자세한 내용은 [방법: PropertyNameChanged 패턴 적용](how-to-apply-the-propertynamechanged-pattern.md) 을 참조 하세요.  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.ComponentModel.INotifyPropertyChanged>

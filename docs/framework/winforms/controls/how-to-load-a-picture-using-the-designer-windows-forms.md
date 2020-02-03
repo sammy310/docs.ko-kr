@@ -21,7 +21,7 @@ Windows Forms <xref:System.Windows.Forms.PictureBox> 컨트롤을 사용 하면 
 
 |형식|파일 이름 확장명|
 |---|---|
-|비트맵|.bmp|
+|Bitmap|.bmp|
 |아이콘|.ico|
 |GIF|.gif|
 |Emf|.wmf|
@@ -41,7 +41,7 @@ Windows Forms <xref:System.Windows.Forms.PictureBox> 컨트롤을 사용 하면 
 
 1. **속성** 창에서 <xref:System.Windows.Forms.PictureBox.Image%2A> 속성을 선택 합니다. 이미지 개체 이름 왼쪽에 표시 되는 작은 축소판 이미지를 마우스 오른쪽 단추로 클릭 한 다음 **다시 설정**을 선택 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.PictureBox>
 - [PictureBox 컨트롤 개요](picturebox-control-overview-windows-forms.md)

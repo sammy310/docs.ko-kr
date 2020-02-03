@@ -14,7 +14,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743953"
 ---
-# <a name="optimizing-wpf-application-performance"></a>WPF 응용 프로그램 성능 최적화
+# <a name="optimizing-wpf-application-performance"></a>WPF 애플리케이션 성능 최적화
 이 섹션은 응용 프로그램의 성능을 향상 시키는 방법을 찾고 있는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램 개발자를 위한 참조로 제공 됩니다. Microsoft .NET Framework 및 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 처음 사용 하는 개발자는 먼저 두 플랫폼에 대해 잘 알고 있어야 합니다. 이 섹션에서는 두 가지 모두에 대 한 실무 지식이 있다고 가정 하 고, 응용 프로그램을 실행 하는 데 충분 한 지식이 이미 있는 프로그래머를 위해 작성 되었습니다.  
   
 > [!NOTE]
@@ -43,7 +43,7 @@ ms.locfileid: "76743953"
   
  [애플리케이션 시작 시간](application-startup-time.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Media.RenderOptions>
 - <xref:System.Windows.Media.RenderCapability>

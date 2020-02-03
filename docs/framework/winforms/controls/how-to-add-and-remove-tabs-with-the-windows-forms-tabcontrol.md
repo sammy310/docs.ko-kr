@@ -49,7 +49,7 @@ ms.locfileid: "76732709"
   
 - 선택한 탭을 제거 하려면 <xref:System.Windows.Forms.TabControl.TabPages%2A> 속성의 <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> 메서드를 사용 합니다.  
   
-     -또는-  
+     또는  
   
 - 모든 탭을 제거 하려면 <xref:System.Windows.Forms.TabControl.TabPages%2A> 속성의 <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> 메서드를 사용 합니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "76732709"
     tabControl1->TabPages->Clear();  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [TabControl 컨트롤 개요](tabcontrol-control-overview-windows-forms.md)
 - [방법: 탭 페이지에 컨트롤 추가](how-to-add-a-control-to-a-tab-page.md)

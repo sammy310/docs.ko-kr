@@ -18,7 +18,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743274"
 ---
-# <a name="how-to-designate-a-windows-forms-button-as-the-accept-button"></a>방법: Windows Forms Button을 적용 단추로 지정
+# <a name="how-to-designate-a-windows-forms-button-as-the-accept-button"></a>방법: Windows Forms 단추를 적용 단추로 지정
 Windows Form에서 기본 단추가 라고도 하는 허용 단추로 <xref:System.Windows.Forms.Button> 컨트롤을 지정할 수 있습니다. 사용자가 ENTER 키를 누를 때마다 폼의 다른 컨트롤에 포커스가 있는지 여부에 관계 없이 기본 단추가 클릭 됩니다.  
   
 > [!NOTE]
@@ -49,7 +49,7 @@ Windows Form에서 기본 단추가 라고도 하는 허용 단추로 <xref:Syst
        }  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.Form.AcceptButton%2A>
 - [Button 컨트롤 개요](button-control-overview-windows-forms.md)

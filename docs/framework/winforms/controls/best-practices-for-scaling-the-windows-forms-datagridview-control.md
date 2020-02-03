@@ -32,7 +32,7 @@ ms.locfileid: "76744129"
 
 - 행 공유가 해제 되지 않도록 방지
 
-특별 한 성능 요구 사항이 있는 경우 가상 모드를 구현 하 고 고유한 데이터 관리 작업을 제공할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 컨트롤의 데이터 디스플레이 모드](data-display-modes-in-the-windows-forms-datagridview-control.md)합니다.
+특별 한 성능 요구 사항이 있는 경우 가상 모드를 구현 하 고 고유한 데이터 관리 작업을 제공할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 컨트롤의 데이터 표시 모드](data-display-modes-in-the-windows-forms-datagridview-control.md)를 참조 하세요.
 
 ## <a name="using-cell-styles-efficiently"></a>효율적으로 셀 스타일 사용
 
@@ -42,7 +42,7 @@ ms.locfileid: "76744129"
 
 - 일부 셀에 기본 서식 지정 이외의 서식 지정이 필요한 경우에는 셀, 행 또는 열 그룹에서 동일한 <xref:System.Windows.Forms.DataGridViewCellStyle> 인스턴스를 사용 합니다. 개별 셀, 행 및 열에 <xref:System.Windows.Forms.DataGridViewCellStyle> 형식의 속성을 직접 설정 하지 마십시오. 셀 스타일 공유의 예제는 [방법: DataGridView 컨트롤 Windows Forms에 기본 셀 스타일 설정](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)을 참조 하세요. <xref:System.Windows.Forms.DataGridView.CellFormatting> 이벤트 처리기를 처리 하 여 셀 스타일을 개별적으로 설정 하는 경우 성능 저하를 방지할 수도 있습니다. 예제는 [방법: DataGridView 컨트롤 Windows Forms에서 데이터 형식 사용자 지정](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)을 참조 하세요.
 
-- 셀의 스타일을 결정 하는 경우 <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType> 속성 대신 <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A?displayProperty=nameWithType> 속성을 사용 합니다. 속성이 아직 사용 되지 않은 경우 <xref:System.Windows.Forms.DataGridViewCell.Style%2A> 속성에 액세스 하면 <xref:System.Windows.Forms.DataGridViewCellStyle> 클래스의 새 인스턴스가 만들어집니다. 또한 일부 스타일이 행, 열 또는 컨트롤에서 상속 되는 경우이 개체에 셀에 대 한 전체 스타일 정보가 포함 되지 않을 수 있습니다. 셀 스타일 상속에 대 한 자세한 내용은 참조 하세요. [Windows Forms DataGridView 컨트롤의 셀 스타일](cell-styles-in-the-windows-forms-datagridview-control.md)합니다.
+- 셀의 스타일을 결정 하는 경우 <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType> 속성 대신 <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A?displayProperty=nameWithType> 속성을 사용 합니다. 속성이 아직 사용 되지 않은 경우 <xref:System.Windows.Forms.DataGridViewCell.Style%2A> 속성에 액세스 하면 <xref:System.Windows.Forms.DataGridViewCellStyle> 클래스의 새 인스턴스가 만들어집니다. 또한 일부 스타일이 행, 열 또는 컨트롤에서 상속 되는 경우이 개체에 셀에 대 한 전체 스타일 정보가 포함 되지 않을 수 있습니다. 셀 스타일 상속에 대 한 자세한 내용은 [Windows Forms DataGridView 컨트롤의 셀 스타일](cell-styles-in-the-windows-forms-datagridview-control.md)을 참조 하세요.
 
 ## <a name="using-shortcut-menus-efficiently"></a>효율적으로 바로 가기 메뉴 사용
 
@@ -64,13 +64,13 @@ ms.locfileid: "76744129"
 
 - 최대 확장성을 위해 자동 크기 조정을 끄고 프로그래밍 방식 크기 조정을 사용 합니다.
 
-자세한 내용은 [Windows Forms DataGridView 컨트롤의 크기 조정 옵션](sizing-options-in-the-windows-forms-datagridview-control.md)합니다.
+자세한 내용은 [Windows Forms DataGridView 컨트롤의 크기 조정 옵션](sizing-options-in-the-windows-forms-datagridview-control.md)을 참조 하세요.
 
 ## <a name="using-the-selected-cells-rows-and-columns-collections-efficiently"></a>선택한 셀, 행 및 열 컬렉션을 효율적으로 사용
 
-<xref:System.Windows.Forms.DataGridView.SelectedCells%2A> 큰 선택 항목을 사용 하 여 컬렉션을 효율적으로 수행 하지 않습니다. 일반적인 <xref:System.Windows.Forms.DataGridView> 컨트롤의 셀 보다 많은 행이 있고 행 보다 많은 열이 더 적으므로 <xref:System.Windows.Forms.DataGridView.SelectedRows%2A> 및 <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> 컬렉션은 비효율적 일 수도 있습니다. 이러한 컬렉션으로 작업할 때 성능 저하를 방지 하려면 다음 지침을 따르십시오.
+<xref:System.Windows.Forms.DataGridView.SelectedCells%2A> 컬렉션은 많은 항목을 선택 하 여 효율적으로 수행 되지 않습니다. 일반적인 <xref:System.Windows.Forms.DataGridView> 컨트롤의 셀 보다 많은 행이 있고 행 보다 많은 열이 더 적으므로 <xref:System.Windows.Forms.DataGridView.SelectedRows%2A> 및 <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> 컬렉션은 비효율적 일 수도 있습니다. 이러한 컬렉션으로 작업할 때 성능 저하를 방지 하려면 다음 지침을 따르십시오.
 
-- 결정할 여부를 모든 셀에는 <xref:System.Windows.Forms.DataGridView> 의 내용에 액세스 하기 전에 선택한를 <xref:System.Windows.Forms.DataGridView.SelectedCells%2A> 컬렉션의 반환 값을 확인 합니다 <xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A> 메서드. 그러나이 메서드는 행을 공유 하지 않을 수 있습니다. 자세한 내용은 다음 단원을 참조하세요.
+- <xref:System.Windows.Forms.DataGridView.SelectedCells%2A> 컬렉션의 내용에 액세스 하기 전에 <xref:System.Windows.Forms.DataGridView>의 모든 셀을 선택 했는지 여부를 확인 하려면 <xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A> 메서드의 반환 값을 확인 합니다. 그러나이 메서드는 행을 공유 하지 않을 수 있습니다. 자세한 내용은 다음 단원을 참조하세요.
 
 - <xref:System.Windows.Forms.DataGridViewSelectedCellCollection?displayProperty=nameWithType>의 <xref:System.Collections.ICollection.Count%2A> 속성을 사용 하 여 선택한 셀 수를 결정 하지 않습니다. 대신 <xref:System.Windows.Forms.DataGridView.GetCellCount%2A?displayProperty=nameWithType> 메서드를 사용 하 여 <xref:System.Windows.Forms.DataGridViewElementStates.Selected?displayProperty=nameWithType> 값을 전달 합니다. 마찬가지로, <xref:System.Windows.Forms.DataGridViewRowCollection.GetRowCount%2A?displayProperty=nameWithType> 및 <xref:System.Windows.Forms.DataGridViewColumnCollection.GetColumnCount%2A?displayProperty=nameWithType> 메서드를 사용 하 여 선택한 행 및 열 컬렉션에 액세스 하는 대신 선택 된 요소의 수를 확인 합니다.
 
@@ -142,7 +142,7 @@ ms.locfileid: "76744129"
 
 - <xref:System.Windows.Forms.DataGridView.Sort%2A> 메서드의 `Sort(IComparer)` 오버 로드를 호출 하지 마십시오. 사용자 지정 비교자를 사용 하 여 정렬 하면 모든 행이 공유 되지 않게 됩니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Windows Forms DataGridView 컨트롤의 성능 조정](performance-tuning-in-the-windows-forms-datagridview-control.md)

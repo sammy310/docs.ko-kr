@@ -61,7 +61,7 @@ Windows Forms <xref:System.Windows.Forms.TextBox> 컨트롤에서 먼저 포커�
   
 - <xref:System.Windows.Forms.TextBox> 컨트롤의 <xref:System.Windows.Forms.Control.TabIndex%2A> 속성을 `0`로 설정 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.TextBox>
 - [TextBox 컨트롤 개요](textbox-control-overview-windows-forms.md)

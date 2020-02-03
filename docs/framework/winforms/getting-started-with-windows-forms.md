@@ -1,5 +1,5 @@
 ---
-title: 시작
+title: 시작하기
 ms.date: 03/30/2017
 f1_keywords:
 - Designer_System.Windows.Forms.Design.FormDocumentDesigner

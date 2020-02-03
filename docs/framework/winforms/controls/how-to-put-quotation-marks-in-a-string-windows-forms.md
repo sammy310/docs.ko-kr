@@ -18,7 +18,7 @@ ms.lasthandoff: 01/24/2020
 ms.locfileid: "76735902"
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>방법: 문자열에 인용 부호 넣기(Windows Forms)
-경우에 따라 텍스트의 문자열에 따옴표(" ")를 배치하려고 합니다. 예를 들면 다음과 같습니다.:  
+경우에 따라 텍스트의 문자열에 따옴표(" ")를 배치하려고 합니다. 예들 들어 다음과 같습니다.  
   
  그녀는 "당신은 그럴 자격이 있어!"라고 말했습니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "76735902"
        }  
     ```  
   
-     -또는-  
+     또는  
   
 2. 따옴표에 대한 ASCII 또는 유니코드 문자를 삽입합니다. Visual Basic에서 ASCII 문자 (34)를 사용 합니다. 시각적 개체 C#에서 유니코드 문자 (\u0022)를 사용 합니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "76735902"
     > [!NOTE]
     > 이 예제에서는 기본 문자 집합에서 문자를 지정하는 범용 문자 이름을 사용할 수 없으므로 \u0022를 사용할 수 없습니다. 그렇지 않으면 C3851을 생성합니다. 자세한 내용은 [컴파일러 오류 C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851)을 참조하세요.  
   
-     -또는-  
+     또는  
   
 3. 문자에 대한 상수를 정의하고 필요한 부분에 사용할 수도 있습니다.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "76735902"
        const_cast<String^>(quote));  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.TextBox>
 - <xref:Microsoft.VisualBasic.ControlChars.Quote>

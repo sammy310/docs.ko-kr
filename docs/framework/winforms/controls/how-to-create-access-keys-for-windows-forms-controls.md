@@ -33,7 +33,7 @@ ms.locfileid: "76731164"
 
 포커스를 받을 수 없는 컨트롤에는 액세스 키를 사용할 수 없습니다.
 
-## <a name="programmatic"></a>기능의
+## <a name="programmatic"></a>프로그래밍 방식
 
 `Text` 속성을 바로 가기로 사용할 문자 앞에 앰퍼샌드 (&)가 포함 된 문자열로 설정 합니다.
 
@@ -55,11 +55,11 @@ button1->Text = "&Print";
 > [!NOTE]
 > 선택 키를 만들지 않고 캡션에 앰퍼샌드를 사용 하려면 두 개의 앰퍼샌드 (& &)를 포함 합니다. 하나의 앰퍼샌드는 캡션에 표시 되 고 문자에는 밑줄이 표시 되지 않습니다.
 
-## <a name="designer"></a>Designer
+## <a name="designer"></a>디자이너
 
 Visual Studio의 **속성** 창에서 **텍스트** 속성을 선택 키가 될 문자 앞에 앰퍼샌드 (' & ')가 포함 된 문자열로 설정 합니다. 예를 들어 "P" 문자를 선택 키로 설정 하려면 **& 인쇄**를 입력 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.Button>
 - [방법: Windows Forms 단추 클릭에 응답](how-to-respond-to-windows-forms-button-clicks.md)

@@ -80,7 +80,7 @@ Word 프로세서 및 인쇄와 관련 된 기타 응용 프로그램은 종종 
        (this, &Form1::printDocument1_EndPrint);  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Drawing.Printing.PrintDocument>
 - [Windows Forms 인쇄 지원](windows-forms-print-support.md)

@@ -49,7 +49,7 @@ ms.locfileid: "76743755"
   
  파일 대화 상자를 표시할 수 있는 권한은 애플리케이션에 <xref:System.Windows.Forms.FileDialog>, <xref:System.Windows.Forms.OpenFileDialog> 및 <xref:System.Windows.Forms.SaveFileDialog> 클래스의 모든 멤버에 대한 모든 권한을 부여하지 않습니다. 각 메서드를 호출 하는 데 필요한 정확한 사용 권한은 .NET Framework 클래스 라이브러리 설명서에서 해당 메서드에 대 한 참조 항목을 참조 하세요.  
   
- 다음 코드 예제에서는 <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> 메서드를 사용하여 사용자 지정 파일을 <xref:System.Windows.Forms.RichTextBox> 컨트롤에 엽니다. 예제를 사용하려면 <xref:System.Security.Permissions.FileDialogPermission> 및 연결된 <xref:System.Security.Permissions.FileDialogPermissionAttribute.Open%2A> 열거형 값이 필요합니다. 예제에서는 <xref:System.Security.SecurityException>을 처리하여 저장 기능을 사용하지 않도록 설정할지 여부를 확인하는 방법을 보여 줍니다. 이 예제를 사용하려면 <xref:System.Windows.Forms.Form>에 `ButtonOpen`이라는 <xref:System.Windows.Forms.Button> 컨트롤과 `RtfBoxMain`이라는 <xref:System.Windows.Forms.RichTextBox> 컨트롤이 있어야 합니다.  
+ 다음 코드 예제에서는 <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> 메서드를 사용하여 사용자 지정 파일을 <xref:System.Windows.Forms.RichTextBox> 컨트롤에 엽니다. 예제를 사용하려면 <xref:System.Security.Permissions.FileDialogPermission> 및 연결된 <xref:System.Security.Permissions.FileDialogPermissionAttribute.Open%2A> 열거형 값이 필요합니다. 예제에서는 <xref:System.Security.SecurityException>을 처리하여 저장 기능을 사용하지 않도록 설정할지 여부를 확인하는 방법을 보여 줍니다. 이 예제를 사용하려면 <xref:System.Windows.Forms.Form>에 <xref:System.Windows.Forms.Button>이라는 `ButtonOpen` 컨트롤과 <xref:System.Windows.Forms.RichTextBox>이라는 `RtfBoxMain` 컨트롤이 있어야 합니다.  
   
 > [!NOTE]
 > 저장 기능에 대한 프로그래밍 논리는 예제에 표시되어 있지 않습니다.  
@@ -358,11 +358,11 @@ public void Write()
   
  부분 신뢰에서는 레지스트리에 액세스할 수 없으므로 다른 데이터 저장 방법을 찾아야 할 수도 있습니다. 애플리케이션 설정을 저장하는 경우 레지스트리 대신 격리된 스토리지를 사용합니다. 격리된 스토리지를 사용하여 다른 애플리케이션 관련 파일을 저장할 수도 있습니다. 또한 기본적으로 애플리케이션에 원본 사이트 액세스 권한이 부여되므로 서버 또는 원본 사이트에 대한 전역 애플리케이션 정보를 저장할 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Forms의 인쇄 추가 보안](more-secure-printing-in-windows-forms.md)
 - [Windows Forms의 추가 보안 고려 사항](additional-security-considerations-in-windows-forms.md)
 - [Windows Forms의 보안 개요](security-in-windows-forms-overview.md)
 - [Windows Forms 보안](windows-forms-security.md)
 - [Mage.exe(매니페스트 생성 및 편집 도구)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
-- [MageUI.exe (매니페스트 생성 및 편집 도구, 그래픽 클라이언트)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+- [MageUI.exe(매니페스트 생성 및 편집 도구, 그래픽 클라이언트)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

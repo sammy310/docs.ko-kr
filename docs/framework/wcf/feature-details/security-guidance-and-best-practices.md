@@ -19,13 +19,13 @@ ms.locfileid: "76728925"
  [보안을 위한 최선의 방법](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)  
  애플리케이션의 보안을 유지하는 데 도움이 되는 권장 사항입니다.  
   
- [보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
+ [Security Considerations](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
  WCF 응용 프로그램을 만들 때 고려할 항목입니다.  
   
  [성능 고려 사항](../../../../docs/framework/wcf/feature-details/performance-considerations.md)  
  성능 및 보안과 관련된 항목이 들어 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [기본 WCF 프로그래밍](../../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Windows Server Fabric 용 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

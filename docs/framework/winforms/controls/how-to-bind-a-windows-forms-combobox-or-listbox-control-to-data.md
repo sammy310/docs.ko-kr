@@ -53,7 +53,7 @@ ms.locfileid: "76742039"
     > [!NOTE]
     > <xref:System.Collections.ArrayList>와 같이 <xref:System.ComponentModel.IBindingList> 인터페이스를 구현 하지 않는 데이터 소스에 바인딩되는 경우 데이터 소스가 업데이트 될 때 바인딩된 컨트롤의 데이터가 업데이트 되지 않습니다. 예를 들어 <xref:System.Collections.ArrayList>에 바인딩된 콤보 상자가 있고 데이터가 <xref:System.Collections.ArrayList>에 추가 되는 경우 이러한 새 항목은 콤보 상자에 나타나지 않습니다. 그러나 컨트롤이 바인딩되는 <xref:System.Windows.Forms.BindingContext> 클래스의 인스턴스에서 <xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A> 및 <xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A> 메서드를 호출 하 여 콤보 상자를 강제로 업데이트할 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>

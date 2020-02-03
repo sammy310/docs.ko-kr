@@ -28,7 +28,7 @@ Windows Form의 좌표계는 장치 좌표를 기반으로 하며 Windows Forms 
 ## <a name="mapping-from-one-type-of-coordinate-to-another"></a>한 좌표 유형에 서 다른 유형으로 매핑  
  경우에 따라 화면 좌표에서 클라이언트 좌표로 매핑해야 할 수도 있습니다. <xref:System.Windows.Forms.Control> 클래스에서 사용할 수 있는 <xref:System.Windows.Forms.Control.PointToClient%2A> 및 <xref:System.Windows.Forms.Control.PointToScreen%2A> 메서드를 사용 하 여이를 쉽게 수행할 수 있습니다. 예를 들어 <xref:System.Windows.Forms.Control>의 <xref:System.Windows.Forms.Control.MousePosition%2A> 속성은 화면 좌표로 보고 되지만 이러한 속성을 클라이언트 좌표로 변환 하는 것이 좋습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.Control.PointToClient%2A>
 - <xref:System.Windows.Forms.Control.PointToScreen%2A>

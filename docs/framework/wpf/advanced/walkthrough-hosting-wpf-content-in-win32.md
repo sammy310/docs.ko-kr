@@ -225,7 +225,7 @@ ms.locfileid: "76735315"
 
  [!code-cpp[Win32HostingWPFPage#WPFPageSetFontFamily](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagesetfontfamily)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Interop.HwndSource>
 - [WPF 및 Win32 상호 운용성](wpf-and-win32-interoperation.md)

@@ -22,7 +22,7 @@ ms.locfileid: "76739812"
 ## <a name="clipboard-access"></a>클립보드 액세스  
  합니다 <xref:System.Security.Permissions.UIPermission> 클래스를 클립보드에 연결 된 액세스 제어 <xref:System.Security.Permissions.UIPermissionClipboard> 열거형 값에 대 한 액세스 수준을 나타냅니다. 다음 표에서는 가능한 권한 수준을 보여 줍니다.  
   
-|UIPermissionClipboard 값|설명|  
+|UIPermissionClipboard 값|Description|  
 |---------------------------------|-----------------|  
 |<xref:System.Security.Permissions.UIPermissionClipboard.AllClipboard>|클립보드 사용에 제한을 받지 않습니다.|  
 |<xref:System.Security.Permissions.UIPermissionClipboard.OwnClipboard>|약간의 제한을 받으면서 클립보드를 사용할 수 있습니다. 복사 또는 잘라내기 명령 작업과 같이 클립보드에 데이터를 넣는 기능은 제한을 받지 않습니다. 텍스트 상자와 같이 붙여넣기를 허용하는 내장 컨트롤은 클립보드 데이터를 받아들일 수 있지만 사용자 정의 컨트롤은 프로그래밍 방식으로 클립보드에서 데이터를 읽을 수는 없습니다.|  
@@ -35,7 +35,7 @@ ms.locfileid: "76739812"
   
  기본적으로 로컬 인트라넷 영역에는 <xref:System.Security.Permissions.UIPermissionWindow.AllWindows> 액세스 권한이 부여 되 고 인터넷 영역에는 <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows> 액세스 권한이 부여 됩니다. 이것은 인터넷 영역에서는 애플리케이션이 대부분의 창 작업 및 UI 작업을 수행할 수 있지만 창의 모양은 수정된다는 것을 의미합니다. 처음 실행한 경우 수정된 창에는 풍선 알림과 수정된 제목 표시줄 텍스트가 표시되며, 제목 표시줄에 닫기 단추가 필요합니다. 풍선 알림과 제목 표시줄은 애플리케이션 사용자에게 애플리케이션이 부분 신뢰 환경에서 실행되고 있음을 알려 줍니다.  
   
-|UIPermissionWindow 값|설명|  
+|UIPermissionWindow 값|Description|  
 |------------------------------|-----------------|  
 |<xref:System.Security.Permissions.UIPermissionWindow.AllWindows>|사용자는 모든 창과 사용자 입력 이벤트를 제한 없이 사용할 수 있습니다.|  
 |<xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows>|사용자가 안전한 최상위 창과 안전한 하위 창만 그리기 작업에 사용할 수 있고, 이러한 최상위 창 및 하위 창 내의 사용자 인터페이스에는 사용자 입력 이벤트만 사용할 수 있습니다. 이러한 안전한 창에는 명확하게 레이블이 지정되며 최소 및 최대 크기 제한이 있습니다. 이러한 제한 사항은 모방 시스템 로그온 화면 또는 시스템 데스크톱과 같은 잠재적으로 유해한 스푸핑 공격을 방지 하 고 부모 창, 포커스 관련 Api 및 <xref:System.Windows.Forms.ToolTip> 컨트롤 사용에 대 한 프로그래밍 방식의 액세스를 제한 합니다.|  
@@ -74,10 +74,10 @@ ms.locfileid: "76739812"
   
  일부 Windows Forms 멤버는 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> 권한이 필요한 관리 되지 않는 액세스를 제공 합니다. 다음 표에서는 권한이 필요한 <xref:System.Windows.Forms> 네임 스페이스의 멤버를 나열 합니다. 멤버에 필요한 권한에 대한 자세한 내용은 .NET Framework 클래스 라이브러리 설명서를 참조하세요.  
   
-|구성 요소|Member|  
+|구성 요소|멤버|  
 |---------------|------------|  
 |<xref:System.Windows.Forms.Application>|-   <xref:System.Windows.Forms.Application.AddMessageFilter%2A> 메서드<br />-   <xref:System.Windows.Forms.Application.CurrentInputLanguage%2A> 속성<br />-   `Exit` 메서드<br />-   <xref:System.Windows.Forms.Application.ExitThread%2A> 메서드<br />-   <xref:System.Windows.Forms.Application.ThreadException> 이벤트|  
-|<xref:System.Windows.Forms.CommonDialog>|-   <xref:System.Windows.Forms.CommonDialog.HookProc%2A> 메서드<br />-   <xref:System.Windows.Forms.CommonDialog.OwnerWndProc%2A>\ method<br />-   <xref:System.Windows.Forms.CommonDialog.Reset%2A> 메서드<br />-   <xref:System.Windows.Forms.CommonDialog.RunDialog%2A> 메서드|  
+|<xref:System.Windows.Forms.CommonDialog>|-   <xref:System.Windows.Forms.CommonDialog.HookProc%2A> 메서드<br />-   <xref:System.Windows.Forms.CommonDialog.OwnerWndProc%2A>\ 메서드<br />-   <xref:System.Windows.Forms.CommonDialog.Reset%2A> 메서드<br />-   <xref:System.Windows.Forms.CommonDialog.RunDialog%2A> 메서드|  
 |<xref:System.Windows.Forms.Control>|-   <xref:System.Windows.Forms.Control.CreateParams%2A> 메서드<br />-   <xref:System.Windows.Forms.Control.DefWndProc%2A> 메서드<br />-   <xref:System.Windows.Forms.Control.DestroyHandle%2A> 메서드<br />-   <xref:System.Windows.Forms.Control.WndProc%2A> 메서드|  
 |<xref:System.Windows.Forms.Help>|-   <xref:System.Windows.Forms.Help.ShowHelp%2A> 메서드<br />-   <xref:System.Windows.Forms.Help.ShowHelpIndex%2A> 메서드|  
 |<xref:System.Windows.Forms.NativeWindow>|-   <xref:System.Windows.Forms.NativeWindow> 클래스|  
@@ -88,7 +88,7 @@ ms.locfileid: "76739812"
   
  비관리 코드를 호출할 수 있는 권한을 부여하면 애플리케이션이 거의 모든 작업을 수행할 수 있습니다. 따라서 비관리 코드를 호출할 수 있는 권한은 신뢰할 수 있는 소스의 애플리케이션에만 부여해야 합니다. 또는 애플리케이션에 따라 비관리 코드를 호출하는 기능을 옵션으로 지정하거나 완전 신뢰 환경에서만 이 기능을 사용하도록 할 수 있습니다. 위험한 권한에 대한 자세한 내용은 [위험한 권한 및 정책 관리](../misc/dangerous-permissions-and-policy-administration.md)를 참조하세요. 권한 높이기에 대한 자세한 내용은 [일반 보안 정책 관리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100))를 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Forms의 파일 및 데이터 액세스 추가 보안](more-secure-file-and-data-access-in-windows-forms.md)
 - [Windows Forms의 인쇄 추가 보안](more-secure-printing-in-windows-forms.md)

@@ -15,7 +15,7 @@ ms.locfileid: "76747017"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>WPF에서 Win32 콘텐츠 호스팅
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 [WPF 및 Win32 상호 운용성을](wpf-and-win32-interoperation.md)참조 하세요.
 
@@ -368,6 +368,6 @@ public partial class Window1 : Window {
 
 ![실행 중인 WPF 앱의 스크린샷](./media/hosting-win32-content-in-wpf/windows-presentation-foundation-application.png)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [WPF 및 Win32 상호 운용성](wpf-and-win32-interoperation.md)

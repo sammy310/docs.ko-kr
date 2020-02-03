@@ -25,5 +25,5 @@ Windows Forms `TrackBar` 컨트롤 ("slider" 컨트롤이 라고도 함)은 많�
  클래스 및 해당 멤버에 대한 참조 정보를 제공합니다.  
   
 ## <a name="related-sections"></a>관련 섹션  
- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)  
+ [Windows Forms에서 사용할 컨트롤](controls-to-use-on-windows-forms.md)  
  사용 방법에 대한 정보 링크를 포함하는 Windows Forms 컨트롤의 전체 목록을 제공합니다.

@@ -23,11 +23,11 @@ ms.locfileid: "76746396"
 
 이 문서에서는 Windows Forms 기반 응용 프로그램에서 사용할 WPF (Windows Presentation Foundation) 컨트롤을 만드는 방법을 보여 줍니다.
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 연습을 완료하려면 Visual Studio가 필요합니다.
 
-## <a name="create-the-project"></a>프로젝트를 만듭니다.
+## <a name="create-the-project"></a>프로젝트 만들기
 
 Visual Studio를 열고 Visual Basic 또는 시각적 개체 C# `HostingWpf`에 새 **Windows Forms 앱 (.NET Framework)** 프로젝트를 만듭니다.
 
@@ -92,7 +92,7 @@ Windows Form에 WPF 컨트롤을 추가 하려면 다음을 수행 합니다.
 
 5. **F5** 키를 눌러 애플리케이션을 빌드하고 실행합니다.
 
-## <a name="next-steps"></a>后续步骤
+## <a name="next-steps"></a>다음 단계
 
 Windows Forms와 WPF는 서로 다른 기술이지만 긴밀하게 상호 운용하도록 설계되었습니다. 응용 프로그램에서 다양 한 모양과 동작을 제공 하려면 다음을 시도 합니다.
 
@@ -102,7 +102,7 @@ Windows Forms와 WPF는 서로 다른 기술이지만 긴밀하게 상호 운용
 
 - WPF 콘텐츠의 스타일을 변경합니다. 자세한 내용은 [연습: WPF 콘텐츠 스타일](walkthrough-styling-wpf-content.md)지정을 참조 하세요.
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

@@ -23,7 +23,7 @@ Windows Forms <xref:System.Windows.Forms.FontDialog> 구성 요소는 시스템�
 ## <a name="key-properties"></a>키 속성  
  구성 요소에는 모양을 구성 하는 다양 한 속성이 있습니다. 대화 상자 선택 항목을 설정 하는 속성은 <xref:System.Windows.Forms.FontDialog.Font%2A> <xref:System.Windows.Forms.FontDialog.Color%2A>됩니다. <xref:System.Windows.Forms.FontDialog.Font%2A> 속성은 글꼴, 스타일, 크기, 스크립트 및 효과를 설정 합니다. 예를 들어 `Arial, 10pt, style=Italic, Strikeout`합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.FontDialog>
 - [FontDialog 구성 요소](fontdialog-component-windows-forms.md)

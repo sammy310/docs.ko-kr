@@ -30,7 +30,7 @@ ms.locfileid: "76745809"
 
 2. **속성** 창에서 <xref:System.Windows.Forms.ListView.View%2A> 속성을 선택 하 고 **타일**을 선택 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.ListView.TileSize%2A>
 - [ListView 컨트롤 개요](listview-control-overview-windows-forms.md)

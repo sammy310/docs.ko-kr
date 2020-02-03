@@ -17,18 +17,18 @@ ms.locfileid: "76742702"
   
  ![기본 인증을 사용 하는 전송 보안을 보여 주는 스크린샷](./media/transport-security-with-basic-authentication/transport-security-basic-authentication.gif)  
   
-|특징|설명|  
+|특성|Description|  
 |--------------------|-----------------|  
-|보안 모드|Transport|  
+|보안 모드|전송|  
 |상호 운용성|기존 웹 서비스 클라이언트 및 서비스와의 상호 운용성|  
 |인증(서버)<br /><br /> 인증(클라이언트)|예(HTTPS 사용)<br /><br /> 예(사용자 이름/암호 사용)|  
 |무결성|예|  
 |기밀성|예|  
-|Transport|HTTPS|  
+|전송|HTTPS|  
 |바인딩|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>서비스  
- 다음 코드와 구성은 독립적으로 실행되어야 합니다. 다음 작업 중 하나를 수행합니다.  
+ 다음 코드와 구성은 독립적으로 실행되어야 합니다. 다음 중 하나를 수행합니다.  
   
 - 구성 없이 코드를 사용하여 독립 실행형 서비스를 만듭니다.  
   
@@ -110,12 +110,12 @@ ms.locfileid: "76742702"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>
 - <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>
 - [인증서 작업](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [방법: SSL 인증서로 포트 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
 - [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [\<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
+- [\<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
 - [Windows Server Fabric 용 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

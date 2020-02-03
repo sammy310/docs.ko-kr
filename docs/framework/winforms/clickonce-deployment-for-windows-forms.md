@@ -62,7 +62,7 @@ ms.locfileid: "76746339"
  [방법: ClickOnce 애플리케이션에 데이터 파일 포함](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)  
  ClickOnce 데이터 디렉터리에서 사용할 수 있도록 파일을 표시 하는 방법을 보여 줍니다.  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>참고 항목
 
 - [애플리케이션 설정 개요](./advanced/application-settings-overview.md)
 - [ClickOnce 애플리케이션 게시](/visualstudio/deployment/publishing-clickonce-applications)

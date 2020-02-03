@@ -62,7 +62,7 @@ Windows Forms <xref:System.Windows.Forms.ErrorProvider> 구성 요소를 사용 
     this.BindingContext [DataTable1].Position = 5;  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ErrorProvider 구성 요소 개요](errorprovider-component-overview-windows-forms.md)
 - [방법: Windows Forms ErrorProvider 구성 요소를 사용하여 폼 유효성에 대한 오류 아이콘 표시](display-error-icons-for-form-validation-with-wf-errorprovider.md)

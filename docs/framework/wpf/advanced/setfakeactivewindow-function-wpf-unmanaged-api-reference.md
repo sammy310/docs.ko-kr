@@ -40,6 +40,6 @@ void __stdcall SetFakeActiveWindow(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [F 관리되지 않는 API 참조](wpf-unmanaged-api-reference.md)

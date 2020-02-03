@@ -43,7 +43,7 @@ ms.locfileid: "76743491"
 
  대리자에는 동적 바인딩 메커니즘이 사용되므로 대리자는 런타임에 서명이 이벤트 처리기의 서명과 일치하는 모든 메서드에 바인딩될 수 있습니다. 이 기능을 사용하면 조건에 따라 bound 메서드를 설정하거나 변경하고 이벤트 처리기를 컨트롤에 동적으로 연결할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Forms에서 이벤트 처리기 만들기](creating-event-handlers-in-windows-forms.md)
 - [이벤트 처리기 개요](event-handlers-overview-windows-forms.md)

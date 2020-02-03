@@ -40,7 +40,7 @@ ms.locfileid: "76745437"
   
  다음 이벤트는 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> 속성이 `true`로 설정 된 경우에만 발생 합니다.  
   
-|Event|설명|  
+|이벤트(event)|Description|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.DataGridView.CellValueNeeded>|컨트롤에서 표시할 데이터 캐시의 셀 값을 검색 하는 데 사용 됩니다. 이 이벤트는 바인딩되지 않은 열의 셀에 대해서만 발생 합니다.|  
 |<xref:System.Windows.Forms.DataGridView.CellValuePushed>|컨트롤에서 데이터 캐시에 대 한 사용자 입력을 커밋하는 데 사용 됩니다. 이 이벤트는 바인딩되지 않은 열의 셀에 대해서만 발생 합니다.<br /><br /> <xref:System.Windows.Forms.DataGridView.CellValuePushed> 이벤트 처리기 외부에서 캐시 된 값을 변경할 때 <xref:System.Windows.Forms.DataGridView.UpdateCellValue%2A> 메서드를 호출 하 여 현재 값이 컨트롤에 표시 되는지 확인 하 고 현재 적용 되는 자동 크기 조정 모드를 적용 합니다.|  
@@ -50,7 +50,7 @@ ms.locfileid: "76745437"
   
  다음 이벤트는 가상 모드에서 유용 하지만 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> 속성 설정에 관계 없이 사용할 수 있습니다.  
   
-|이벤트|설명|  
+|이벤트|Description|  
 |------------|-----------------|  
 |<xref:System.Windows.Forms.DataGridView.UserDeletingRow><br /><br /> <xref:System.Windows.Forms.DataGridView.UserDeletedRow><br /><br /> <xref:System.Windows.Forms.DataGridView.RowsRemoved><br /><br /> <xref:System.Windows.Forms.DataGridView.RowsAdded>|컨트롤에서 행을 삭제 하거나 추가 하는 시간을 표시 하는 데 사용 되므로 데이터 캐시를 적절 하 게 업데이트할 수 있습니다.|  
 |<xref:System.Windows.Forms.DataGridView.CellFormatting><br /><br /> <xref:System.Windows.Forms.DataGridView.CellParsing><br /><br /> <xref:System.Windows.Forms.DataGridView.CellValidating><br /><br /> <xref:System.Windows.Forms.DataGridView.CellValidated><br /><br /> <xref:System.Windows.Forms.DataGridView.RowValidating><br /><br /> <xref:System.Windows.Forms.DataGridView.RowValidated>|컨트롤에서 표시 하기 위해 셀 값의 서식을 지정 하 고 사용자 입력을 구문 분석 하 고 유효성을 검사 하는 데 사용 됩니다.|  
@@ -62,7 +62,7 @@ ms.locfileid: "76745437"
 ## <a name="best-practices-in-virtual-mode"></a>가상 모드의 모범 사례  
  많은 양의 데이터를 효율적으로 사용 하기 위해 가상 모드를 구현 하는 경우 <xref:System.Windows.Forms.DataGridView> 컨트롤 자체를 효율적으로 사용 하 고 있는지도 확인 해야 합니다. 셀 스타일, 자동 크기 조정, 선택 항목 및 행 공유를 효율적으로 사용 하는 방법에 대 한 자세한 내용은 [Windows Forms DataGridView 컨트롤 크기 조정에 대 한 모범 사례](best-practices-for-scaling-the-windows-forms-datagridview-control.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>

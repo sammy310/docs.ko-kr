@@ -43,7 +43,7 @@ ms.locfileid: "76737280"
 
 응용 프로그램 개발의이 시점에서 정교한 사용자 인터페이스를 만들었습니다. 다음 단계는 <xref:System.Windows.Forms.TreeView> 컨트롤과 <xref:System.Windows.Forms.ListView> 컨트롤을 일종의 데이터 소스에 연결 하 여 응용 프로그램 자체의 프로그래밍을 진행 합니다. 컨트롤을 데이터에 연결 하는 방법에 대 한 자세한 내용은 [데이터 바인딩 및 Windows Forms](../data-binding-and-windows-forms.md)를 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.SplitContainer>
 - [SplitContainer 컨트롤](splitcontainer-control-windows-forms.md)

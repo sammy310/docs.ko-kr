@@ -36,6 +36,6 @@ Windows Forms [HelpProvider](helpprovider-component-windows-forms.md) 구성 요
 > [!NOTE]
 > <xref:System.Windows.Forms.HelpProvider> 컨트롤의 <xref:System.Windows.Forms.Help.ShowHelp%2A> 메서드 또는 <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> 속성에서 도움말 파일의 경로를 지정 하는 경우 상대 경로를 사용 하는 데 문제가 발생할 수 있습니다. 따라서 절대 파일 경로를 사용 하 여 도움말 파일을 지정 해야 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Forms 애플리케이션의 도움말 시스템](../advanced/help-systems-in-windows-forms-applications.md)

@@ -50,7 +50,7 @@ ms.locfileid: "76746712"
 
 10. 컨트롤을 패키지하고 배포합니다. 자세한 내용은 [Visual Studio에서 배포 살펴보기](/visualstudio/deployment/deploying-applications-services-and-components)를 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [방법: UserControl 클래스에서 상속](how-to-inherit-from-the-usercontrol-class.md)
 - [방법: Control 클래스에서 상속](how-to-inherit-from-the-control-class.md)

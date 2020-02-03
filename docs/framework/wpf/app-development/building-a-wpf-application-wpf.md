@@ -28,7 +28,7 @@ WPF (Windows Presentation Foundation) 응용 프로그램은 .NET Framework 실�
 
 - MSBuild(Microsoft Build Engine). 애플리케이션에 코드 및 XAML 파일 외에 MSBuild 프로젝트 파일이 포함되어야 합니다. 자세한 내용은 "MSBuild"를 참조하세요.
 
-- 보여 줍니다. Visual Studio는 MSBuild를 사용하여 WPF 애플리케이션을 컴파일하고 UI를 만들기 위한 비주얼 디자이너를 포함하는 통합 개발 환경입니다. 자세한 내용은 visual Studio를 [사용 하 여 코드 작성 및 관리](/visualstudio/ide/index-writing-code) 및 [VISUAL Studio에서 XAML 디자인](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)을 참조 하세요.
+- Visual Studio. Visual Studio는 MSBuild를 사용하여 WPF 애플리케이션을 컴파일하고 UI를 만들기 위한 비주얼 디자이너를 포함하는 통합 개발 환경입니다. 자세한 내용은 visual Studio를 [사용 하 여 코드 작성 및 관리](/visualstudio/ide/index-writing-code) 및 [VISUAL Studio에서 XAML 디자인](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)을 참조 하세요.
 
 <a name="The_Windows_Presentation_Foundation_Build_Pipeline"></a>
 
@@ -66,7 +66,7 @@ MSBuild에서 어셈블리를 검색 하는 첫 번째 위치는 참조 어셈�
 
 이 단계에서는 런타임에서 XML 구문 분석 및 속성 값의 유효성을 검사 하지 않도록 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일을 구문 분석 하 고 컴파일합니다. 컴파일된 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일은 사전 토큰화되어 있으므로 런타임 시 이 파일을 로드하면 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일을 로드하는 것보다 훨씬 속도가 빨라집니다.
 
-이 단계에서 다음 작업은 `Page` 빌드 항목인 모든 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일에 대해 수행됩니다.
+이 단계에서 다음 작업은 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 빌드 항목인 모든 `Page` 파일에 대해 수행됩니다.
 
 1. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일은 태그 컴파일러에 의해 구문 분석됩니다.
 
@@ -152,7 +152,7 @@ WPF 빌드 시스템은 증분 빌드에 대 한 지원을 제공 합니다. 태
 
 - 현재 컴파일러 상태를 유지 관리하는 $(*AssemblyName*)_MarkupCompiler.Cache 파일
 
-- 로컬로 정의된 형식에 대한 참조가 있는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일을 캐시하는 $(*AssemblyName*) _MarkupCompiler.lref 파일
+- 로컬로 정의된 형식에 대한 참조가 있는  *파일을 캐시하는 $(* AssemblyName[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]) _MarkupCompiler.lref 파일
 
 다음은 증분 빌드를 제어하는 규칙 집합입니다.
 
@@ -186,7 +186,7 @@ WPF 빌드 시스템은 증분 빌드에 대 한 지원을 제공 합니다. 태
 
 - 모든 항목이 다시 컴파일되지 않습니다(프로젝트의 모든 항목이 변경되지 않음).
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [WPF 애플리케이션 배포](deploying-a-wpf-application-wpf.md)
 - [WPF MSBuild 참조](/visualstudio/msbuild/wpf-msbuild-reference)

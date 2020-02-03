@@ -89,9 +89,9 @@ ms.locfileid: "76741842"
 ### <a name="critical-code-management"></a>중요한 코드 관리  
  Xbap (XAML 브라우저 응용 프로그램)의 경우 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]를 사용 .NET Framework 하 여 보안 샌드박스를 빌드하여 권한을 높이는 보안에 중요 한 코드를 표시 하 고 추적 합니다 ( [WPF 보안 전략-플랫폼 보안](wpf-security-strategy-platform-security.md)의 **보안에 중요 한 방법론** 참조). 보안에 중요한 코드의 높은 보안 품질 요구 사항을 감안하여 이러한 코드는 추가 수준의 소스 관리 제어 및 보안 감사를 받습니다. [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]의 약 5%-10%는 전담 검토팀이 검토하는 보안에 중요한 코드로 구성됩니다. 소스 코드 및 체크 인 프로세스는 보안에 중요한 코드를 추적하고 중요한 엔터티(예: 중요한 코드가 포함된 메서드)를 사인오프 상태로 매핑하여 관리합니다. 사인오프 상태에는 하나 이상의 검토자 이름이 포함됩니다. [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]의 각 일별 빌드는 중요한 코드를 이전 빌드의 코드와 비교하여 승인되지 않은 변경 내용을 확인합니다. 엔지니어가 검토팀의 승인 없이 중요한 코드를 수정하는 경우 식별되어 즉시 수정됩니다. 이 프로세스를 통해 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 샌드박스 코드에 특히 높은 수준의 감시를 적용하고 유지할 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [Security](security-wpf.md)
+- [보안](security-wpf.md)
 - [WPF 부분 신뢰 보안](wpf-partial-trust-security.md)
 - [WPF 보안 전략 - 플랫폼 보안](wpf-security-strategy-platform-security.md)
 - [신뢰 컴퓨팅](https://www.microsoft.com/mscorp/twc/default.mspx)

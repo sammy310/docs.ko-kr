@@ -92,7 +92,7 @@ public class Startup
 
 **그림 8-2**. IdentityServer 구성.
 
-또한 IdentityServer는 다양 한 프로토콜 및 구성을 테스트 하는 데 사용할 수 있는 공개 데모 사이트를 호스팅합니다. [https://demo.identityserver.io/](https://demo.identityserver.io/) 에 있으며 제공 된 `client_id` 에 따라 동작을 구성 하는 방법에 대 한 정보를 포함 합니다.
+또한 IdentityServer는 다양 한 프로토콜 및 구성을 테스트 하는 데 사용할 수 있는 공개 데모 사이트를 호스팅합니다. [https://demo.identityserver.io/](https://demo.identityserver.io/) 에 있으며 제공 된 `client_id`에 따라 동작을 구성 하는 방법에 대 한 정보를 포함 합니다.
 
 ## <a name="javascript-clients"></a>JavaScript 클라이언트
 

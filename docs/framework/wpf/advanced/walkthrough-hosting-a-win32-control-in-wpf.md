@@ -46,7 +46,7 @@ WPF (Windows Presentation Foundation)는 응용 프로그램을 만들기 위한
   
 5. 호스트 창을 만들었으면 호스트된 창의 HWND를 반환합니다. 하나 이상의 Win32 컨트롤을 호스트 하려는 경우 일반적으로 호스트 창을 HWND의 자식으로 만들고 컨트롤을 해당 호스트 창의 자식으로 만듭니다. 호스트 창에서 컨트롤을 래핑하여 WPF 페이지가 컨트롤에서 알림을 받을 수 있는 간단한 방법을 제공 하 고,이를 통해 HWND 경계에서 알림과 관련 된 몇 가지 특정 Win32 문제를 처리 합니다.  
   
-6. 자식 컨트롤의 알림과 같이 호스트 창으로 전송되는 선택한 메시지를 처리합니다. 이렇게 하는 방법은 두 가지가 있습니다.  
+6. 자식 컨트롤의 알림과 같이 호스트 창으로 전송되는 선택한 메시지를 처리합니다. 두 가지 방법으로 이 작업을 수행할 수 있습니다.  
   
     - 호스팅 클래스에서 메시지를 처리 하려면 <xref:System.Windows.Interop.HwndHost> 클래스의 <xref:System.Windows.Interop.HwndHost.WndProc%2A> 메서드를 재정의 합니다.  
   
@@ -153,7 +153,7 @@ WPF (Windows Presentation Foundation)는 응용 프로그램을 만들기 위한
   
  마지막으로 `handled`를 `true`으로 설정 하 여 메시지가 처리 되었음을 표시 합니다.  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Interop.HwndHost>
 - [WPF 및 Win32 상호 운용성](wpf-and-win32-interoperation.md)

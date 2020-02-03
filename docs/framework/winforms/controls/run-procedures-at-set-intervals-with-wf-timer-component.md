@@ -43,7 +43,7 @@ ms.locfileid: "76743119"
   
 5. 적절한 시간에 <xref:System.Windows.Forms.Timer.Enabled%2A> 속성을 `false`로 설정하여 프로시저가 다시 실행되지 않도록 중지합니다. 간격을 `0` 설정 하면 타이머가 중지 되지 않습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 첫 번째 코드 예제에서는 1초 증분으로 시간을 추적합니다. 폼의 <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.Label> 및 <xref:System.Windows.Forms.Timer> 구성 요소를 사용합니다. <xref:System.Windows.Forms.Timer.Interval%2A> 속성은 1000(1초와 같음)으로 설정됩니다. <xref:System.Windows.Forms.Timer.Tick> 이벤트에서 레이블의 캡션은 현재 시간으로 설정됩니다. 단추를 클릭하면 <xref:System.Windows.Forms.Timer.Enabled%2A> 속성이 `false`로 설정되어 타이머가 레이블 캡션 업데이트를 중지합니다. 다음 코드 예제에서는 `Button1`이라는 <xref:System.Windows.Forms.Button> 컨트롤, `Timer1`이라는 <xref:System.Windows.Forms.Timer> 컨트롤 및 <xref:System.Windows.Forms.Label> 이라는 `Label1`컨트롤이 있는 폼이 있어야 합니다.  
   
 ```vb  
@@ -148,7 +148,7 @@ private:
    }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 두 번째 코드 예제는 루프가 완료될 때까지 600밀리초마다 프로시저를 실행합니다. 다음 코드 예제에서는 `Button1`이라는 <xref:System.Windows.Forms.Button> 컨트롤, `Timer1`이라는 <xref:System.Windows.Forms.Timer> 컨트롤 및 <xref:System.Windows.Forms.Label> 이라는 `Label1`컨트롤이 있는 폼이 있어야 합니다.  
   
 ```vb  
@@ -242,7 +242,7 @@ private:
    }  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.Timer>
 - [Timer 구성 요소](timer-component-windows-forms.md)

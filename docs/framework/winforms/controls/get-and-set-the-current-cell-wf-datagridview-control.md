@@ -43,11 +43,11 @@ ms.locfileid: "76745667"
   
 - `getCurrentCellButton` 및 `setCurrentCellButton`이라는 컨트롤을 <xref:System.Windows.Forms.Button> 합니다. 시각적 개체 C#에서 각 단추에 대 한 <xref:System.Windows.Forms.Control.Click> 이벤트를 예제 코드의 연결 된 이벤트 처리기에 연결 해야 합니다.  
   
-- `dataGridView1`이라는 <xref:System.Windows.Forms.DataGridView> 컨트롤  
+- <xref:System.Windows.Forms.DataGridView>이라는 `dataGridView1` 컨트롤  
   
 - <xref:System?displayProperty=nameWithType> 및 <xref:System.Windows.Forms?displayProperty=nameWithType> 어셈블리에 대한 참조  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.CurrentCell%2A?displayProperty=nameWithType>

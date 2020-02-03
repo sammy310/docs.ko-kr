@@ -19,7 +19,7 @@ ms.locfileid: "76735540"
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 텍스트는 텍스트의 명확성 및 가독성을 향상 시키는 Microsoft ClearType을 사용 하 여 렌더링 됩니다. ClearType은 랩톱 화면, Pocket PC 화면, 평면 패널 모니터 등 기존 Lcd (액체 크리스탈 디스플레이)의 텍스트 가독성을 향상 시키는 Microsoft에서 개발한 소프트웨어 기술입니다. ClearType은 픽셀의 소수 부분에 문자를 정렬 하 여 텍스트를 진정한 모양으로 더 크게 표시할 수 있는 하위 픽셀 렌더링을 사용 합니다. 해상도를 더 세밀하게 지원할수록 텍스트의 미세한 부분까지 더 선명하게 표시되므로 오랫동안 더 쉽게 읽을 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 ClearType의 또 다른 향상 된 기능은 y 방향 앤티앨리어싱으로 텍스트 문자에서 단순 곡선의 위쪽 및 아래쪽을 곡선으로 합니다. ClearType 기능에 대 한 자세한 내용은 [Cleartype 개요](cleartype-overview.md)를 참조 하세요.  
   
  ![ClearType y 방향 앤티 앨리어싱을 사용한 텍스트](./media/typography-in-wpf/text-y-direction-antialiasing.gif)  
-ClearType y 방향 앤티 앨리어싱으로 표시된 텍스트  
+ClearType y 방향 앤티앨리어싱으로 표시된 텍스트  
   
  컴퓨터가 최소 수준의 하드웨어 요구를 충족하는 경우 전체 텍스트 렌더링 파이프라인은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 하드웨어 가속일 수 있습니다. 하드웨어를 사용하여 수행할 수 없는 렌더링은 소프트웨어 렌더링으로 대체됩니다. 하드웨어 가속은 텍스트 렌더링 파이프라인의 모든 단계에 영향을 줍니다. 여기에는 개별 문자 모양 저장, 문자 모양 실행에 문자 모양 적용, 효과 적용, ClearType 혼합 알고리즘이 최종 표시 된 출력에 적용 됩니다. 하드웨어 가속에 대한 자세한 내용은 [그래픽 렌더링 계층](graphics-rendering-tiers.md)을 참조하세요.  
   
@@ -63,11 +63,11 @@ ClearType y 방향 앤티 앨리어싱으로 표시된 텍스트
   
 - 글꼴 이름과 독립적으로 처리되는 쓰기 방향(가로 및 세로).  
   
-- 복합 글꼴 기술을 사용 하 여 휴대용 XML 파일에서 글꼴 연결 및 글꼴 대체를 사용 합니다. 합성 글꼴은 모든 범위의 다국어 글꼴 생성을 허용합니다. 또한 합성 글꼴은 없는 문자 모양을 표시하지 않는 메커니즘을 제공합니다. 자세한 내용은 설명을 참조는 <xref:System.Windows.Media.FontFamily> 클래스입니다.  
+- 복합 글꼴 기술을 사용 하 여 휴대용 XML 파일에서 글꼴 연결 및 글꼴 대체를 사용 합니다. 합성 글꼴은 모든 범위의 다국어 글꼴 생성을 허용합니다. 또한 합성 글꼴은 없는 문자 모양을 표시하지 않는 메커니즘을 제공합니다. 자세한 내용은 <xref:System.Windows.Media.FontFamily> 클래스의 설명을 참조 하세요.  
   
 - 단일 언어 글꼴 그룹을 사용하여 합성 글꼴에서 국가별 글꼴 작성. 따라서 여러 언어에 대한 글꼴을 개발할 때 리소스 비용이 절감됩니다.  
   
-- 합성 글꼴을 문서에 포함하여 문서에 이식성 제공. 자세한 내용은 설명을 참조는 <xref:System.Windows.Media.FontFamily> 클래스입니다.  
+- 합성 글꼴을 문서에 포함하여 문서에 이식성 제공. 자세한 내용은 <xref:System.Windows.Media.FontFamily> 클래스의 설명을 참조 하세요.  
   
 <a name="New_Text_APIs"></a>   
 ## <a name="new-text-application-programming-interfaces-apis"></a>새 텍스트 API(응용 프로그래밍 인터페이스)  
@@ -148,7 +148,7 @@ ClearType y 방향 앤티 앨리어싱으로 표시된 텍스트
   
  사용자 지정 텍스트 레이아웃을 만드는 방법에 대한 자세한 내용은 [고급 텍스트 서식 지정](advanced-text-formatting.md)을 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Media.FormattedText>
 - <xref:System.Windows.Media.TextFormatting.TextFormatter>

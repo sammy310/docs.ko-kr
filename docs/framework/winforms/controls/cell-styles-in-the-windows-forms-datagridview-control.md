@@ -48,7 +48,7 @@ ms.locfileid: "76746162"
   
  다음 표에서는 <xref:System.Windows.Forms.DataGridViewCellStyle> 개체를 가져오거나 설정 하는 기본 속성을 나열 합니다.  
   
-|속성|클래스|설명|  
+|속성|클래스|Description|  
 |--------------|-------------|-----------------|  
 |`DefaultCellStyle`|<xref:System.Windows.Forms.DataGridView>, <xref:System.Windows.Forms.DataGridViewColumn>, <xref:System.Windows.Forms.DataGridViewRow>및 파생 클래스|머리글 셀을 포함 하 여 전체 컨트롤의 모든 셀, 열 또는 행에 사용 되는 기본 스타일을 가져오거나 설정 합니다.|  
 |<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|컨트롤의 모든 행에 사용 되는 기본 셀 스타일을 가져오거나 설정 합니다. 머리글 셀은 포함 되지 않습니다.|  
@@ -144,7 +144,7 @@ ms.locfileid: "76746162"
 > [!NOTE]
 > 특정 스타일 값의 설정 여부에 관계 없이 셀의 <xref:System.Windows.Forms.DataGridViewCell.Style%2A> 속성에 저장 된 값을 캐시 하는 것이 중요 합니다. 스타일 설정을 일시적으로 바꾸면 원래 "설정 안 함" 상태로 복원 하면 셀이 상위 수준에서 스타일 설정을 상속 하는 것으로 돌아갑니다. 스타일이 상속 되었는지 여부에 관계 없이 셀에 적용 되는 실제 스타일을 결정 해야 하는 경우 셀의 <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> 속성을 사용 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>

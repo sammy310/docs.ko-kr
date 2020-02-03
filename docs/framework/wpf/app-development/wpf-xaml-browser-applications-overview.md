@@ -20,7 +20,7 @@ ms.locfileid: "76742287"
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 브라우저 애플리케이션 개요
 <a name="introduction"></a>Xbap (XAML 브라우저 응용 프로그램)는 웹 응용 프로그램과 리치 클라이언트 응용 프로그램의 기능을 결합 합니다. XBAP는 웹 애플리케이션처럼 웹 서버에 배포할 수 있으며 Internet Explorer 또는 Firefox에서 시작할 수 있습니다. 풍부한 클라이언트 응용 프로그램과 마찬가지로 Xbap는 WPF의 기능을 활용할 수 있습니다. XBAP를 개발하는 것은 리치 클라이언트 개발과도 비슷합니다. 이 항목에서는 XBAP 개발에 대한 간단하고 고급 수준의 소개를 제공하며 XBAP 개발이 표준 리치 클라이언트 개발과 다른 점을 설명합니다.
 
- 이 항목에는 다음과 같은 단원이 포함되어 있습니다.
+ 이 항목의 섹션:
 
 - [새 XBAP(XAML 브라우저 애플리케이션) 만들기](#creating_a_new_xaml_browser_application_xbap)
 
@@ -45,7 +45,7 @@ ms.locfileid: "76742287"
 ## <a name="deploying-an-xbap"></a>XBAP 배포
  XBAP를 빌드하는 경우 출력에는 다음 세 가지 파일이 포함됩니다.
 
-|File|설명|
+|파일|Description|
 |----------|-----------------|
 |실행 파일(.exe)|컴파일된 코드가 포함되며 확장명이 .exe입니다.|
 |애플리케이션 매니페스트(.manifest)|애플리케이션과 연결된 메타데이터가 포함되며 확장명이 .manifest입니다.|
@@ -168,9 +168,9 @@ ms.locfileid: "76742287"
 
 |보안 영역|동작|완전 신뢰 얻기|
 |-------------------|--------------|------------------------|
-|로컬 컴퓨터|자동 완전 신뢰|작업이 필요하지 않습니다.|
+|수집|자동 완전 신뢰|어떤 조치가 필요하지 않습니다.|
 |인트라넷 및 신뢰할 수 있는 사이트|완전 신뢰 확인|사용자가 프롬프트에서 소스를 볼 수 있도록 인증서로 XBAP에 로그인합니다.|
-|인터넷|"신뢰할 수 없음"과 함께 실패|인증서로 XBAP를 서명합니다.|
+|인터넷|"신뢰할 수 없음"과 함께 실패|인증서로 XBAP에 로그인합니다.|
 
 > [!NOTE]
 > 위의 표에 설명된 동작은 ClickOnce 신뢰 배포 모델을 따르지 않는 완전 신뢰 XBAP에 대한 것입니다.
@@ -185,7 +185,7 @@ ms.locfileid: "76742287"
 
  또한 ClickOnce 다운로드 순서의 동시성이 향상 되어 시작 시간이 최대 10%까지 향상 되었습니다. ClickOnce에서 매니페스트를 다운로드 하 고 유효성을 검사 한 후에는 응용 프로그램 다운로드가 시작 되 고 진행률 표시줄이 업데이트 되기 시작 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Visual Studio를 구성하여 웹 서비스를 호출하는 XAML 브라우저 애플리케이션 디버깅](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
 - [WPF 애플리케이션 배포](deploying-a-wpf-application-wpf.md)

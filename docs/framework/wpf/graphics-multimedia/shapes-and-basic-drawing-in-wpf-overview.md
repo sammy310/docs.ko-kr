@@ -213,7 +213,7 @@ myPolygon.StrokeThickness = 2;
   
  이전 예제에서는 각 도형 개체에 단일 변환이 적용되었습니다. 도형 또는 다른 UI 요소에 여러 변환을 적용 하려면 <xref:System.Windows.Media.TransformGroup>을 사용 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [2차원 그래픽 및 이미징](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [단색 및 그라데이션을 사용한 그리기 개요](painting-with-solid-colors-and-gradients-overview.md)

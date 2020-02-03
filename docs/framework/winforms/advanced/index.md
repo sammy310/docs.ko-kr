@@ -12,7 +12,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76744833"
 ---
-# <a name="enhancing-windows-forms-applications"></a>Windows Forms 응용 프로그램 강화
+# <a name="enhancing-windows-forms-applications"></a>Windows Forms 애플리케이션 강화
 Windows Forms에는 사용자의 특정 요구에 맞게 Windows 기반 애플리케이션을 향상시키는 데 사용할 수 있는 다양한 기능이 포함되어 있습니다. 다음 항목에서는 이러한 기능과 사용 방법을 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
@@ -34,7 +34,7 @@ Windows Forms에는 사용자의 특정 요구에 맞게 Windows 기반 애플�
  [응용 프로그램 Windows Forms 전역화](globalizing-windows-forms.md)  
  Windows Forms 애플리케이션을 전역화하는 방법을 보여 주는 항목의 링크를 포함합니다.  
   
- [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)  
+ [Windows Forms 및 관리되지 않는 애플리케이션](windows-forms-and-unmanaged-applications.md)  
  Windows Forms 애플리케이션에서 COM 구성 요소에 액세스하는 방법을 설명하고 보여 주는 항목의 링크를 포함합니다.  
   
  [시스템 정보 및 Windows Forms](system-information-and-windows-forms.md)  

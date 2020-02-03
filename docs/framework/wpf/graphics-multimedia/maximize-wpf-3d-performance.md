@@ -18,7 +18,7 @@ ms.locfileid: "76744602"
   
 ## <a name="performance-impact-high"></a>성능 영향: 높음  
   
-|속성|권장 구성|  
+|속성|권장|  
 |-|-|  
 |<xref:System.Windows.Media.Brush>|브러시 속도 (가장 빠름):<br /><br /> <xref:System.Windows.Media.SolidColorBrush><br /><br /> <xref:System.Windows.Media.LinearGradientBrush><br /><br /> <xref:System.Windows.Media.ImageBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush> (캐시 됨)<br /><br /> <xref:System.Windows.Media.VisualBrush> (캐시 됨)<br /><br /> <xref:System.Windows.Media.RadialGradientBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush> (캐시 되지 않은)<br /><br /> <xref:System.Windows.Media.VisualBrush> (캐시 되지 않은)|  
 |<xref:System.Windows.UIElement.ClipToBoundsProperty>|Viewport3D's 사각형에 <xref:System.Windows.Controls.Viewport3D> 내용을 명시적으로 자르는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 없어도 될 때마다 `Viewport3D.ClipToBounds`를 false로 설정 합니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 앤티 앨리어싱 클리핑을 매우 느릴 수 있으며 <xref:System.Windows.Controls.Viewport3D>에서 기본적으로 `ClipToBounds` (느림)을 사용 합니다.|  
@@ -26,13 +26,13 @@ ms.locfileid: "76744602"
 |<xref:System.Windows.Media.Media3D.GeometryModel3D>|다른 자료 나 변환이 필요한 경우에만 다른 모델을 만듭니다.  그렇지 않은 경우에는 동일한 자료를 사용 하 여 많은 <xref:System.Windows.Media.Media3D.GeometryModel3D> 인스턴스를 몇 개의 큰 <xref:System.Windows.Media.Media3D.GeometryModel3D> 및 <xref:System.Windows.Media.Media3D.MeshGeometry3D> 인스턴스로 병합 해 보세요.|  
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|메시 애니메이션-프레임 단위로 메시의 개별 꼭 짓 점을 변경 하는 것은 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 효율적이 지 않습니다.  각 꼭 짓 점이 수정 될 때 변경 알림의 성능 영향을 최소화 하려면 꼭 짓 점 수정 작업을 수행 하기 전에 시각적 트리에서 메시를 분리 합니다.  메쉬가 수정 된 후에는 시각적 트리에 다시 연결 합니다.  또한 이러한 방식으로 애니메이션 효과를 주는 메시의 크기를 최소화 합니다.|  
 |3D 앤티 앨리어싱|렌더링 속도를 높이려면 연결 된 속성 <xref:System.Windows.Media.RenderOptions.EdgeMode%2A>를 `Aliased`로 설정 하 여 <xref:System.Windows.Controls.Viewport3D>에서 다중 샘플링을 사용 하지 않도록 설정 합니다.  기본적으로 3D 앤티 앨리어싱은 픽셀 당 4 개의 샘플을 사용 하 여 Windows에서 사용 하도록 설정 됩니다.|  
-|텍스트|3D 장면의 라이브 텍스트 (<xref:System.Windows.Media.DrawingBrush> 또는 <xref:System.Windows.Media.VisualBrush>에서 라이브)는 속도가 느릴 수 있습니다. 텍스트를 변경 하지 않는 한 텍스트 이미지를 대신 사용 하 여 (<xref:System.Windows.Media.Imaging.RenderTargetBitmap>을 통해) 시도 합니다.|  
+|Text|3D 장면의 라이브 텍스트 (<xref:System.Windows.Media.DrawingBrush> 또는 <xref:System.Windows.Media.VisualBrush>에서 라이브)는 속도가 느릴 수 있습니다. 텍스트를 변경 하지 않는 한 텍스트 이미지를 대신 사용 하 여 (<xref:System.Windows.Media.Imaging.RenderTargetBitmap>을 통해) 시도 합니다.|  
 |<xref:System.Windows.Media.TileBrush>|브러시의 내용이 정적이 아니기 때문에 3D 장면에서 <xref:System.Windows.Media.VisualBrush> 또는 <xref:System.Windows.Media.DrawingBrush>를 사용 해야 하는 경우 브러시를 캐시 해 보세요 (연결 된 속성 <xref:System.Windows.Media.RenderOptions.CachingHint%2A>를 `Cache`로 설정).  캐시 된 브러시를 너무 자주 다시 생성 하지 않고 원하는 품질 수준을 유지 하기 위해 최소 및 최대 크기 조정 무효화 임계값 (연결 된 속성 <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMinimum%2A> 및 <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum%2A>)을 설정 합니다.  기본적으로 <xref:System.Windows.Media.DrawingBrush> 및 <xref:System.Windows.Media.VisualBrush>는 캐시 되지 않습니다. 즉, 브러시를 사용 하 여 그린 항목을 다시 렌더링 해야 할 때마다 브러시의 전체 내용을 먼저 중간 화면으로 다시 렌더링 해야 합니다.|  
 |<xref:System.Windows.Media.Effects.BitmapEffect>|<xref:System.Windows.Media.Effects.BitmapEffect> 모든 영향을 받는 콘텐츠가 하드웨어 가속 없이 렌더링 되도록 합니다.  최상의 성능을 위해 <xref:System.Windows.Media.Effects.BitmapEffect>를 사용 하지 마십시오.|  
   
 ## <a name="performance-impact-medium"></a>성능 영향: 중형  
   
-|속성|권장 구성|  
+|속성|권장|  
 |-|-|  
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|메쉬가 공유 꼭지점이 있는 인접 삼각형으로 정의 되 고 해당 꼭 짓 점, 표준 및 질감 좌표가 동일한 경우 각 공유 꼭 짓 점을 한 번만 정의한 다음 <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>를 사용 하 여 인덱스로 삼각형을 정의 합니다.|  
 |<xref:System.Windows.Media.ImageBrush>|크기를 명시적으로 제어 하는 경우 (<xref:System.Windows.Media.Imaging.RenderTargetBitmap> 및/또는 <xref:System.Windows.Media.ImageBrush>를 사용 하는 경우) 질감 크기를 최소화 하려고 합니다.  해상도가 낮은 질감이 시각적 품질을 저하 시킬 수 있으므로 품질 및 성능 간에 적절 한 균형을 찾아야 합니다.|  
@@ -50,7 +50,7 @@ ms.locfileid: "76744602"
   
 ## <a name="performance-impact-low"></a>성능 영향: 낮음  
   
-|속성|권장 구성|  
+|속성|권장|  
 |-|-|  
 |<xref:System.Windows.Media.Media3D.Transform3DGroup>|여러 변환이 포함 된 변환 그룹을 사용 하는 대신 애니메이션이 나 데이터 바인딩이 필요 하지 않은 경우에는 단일 <xref:System.Windows.Media.Media3D.MatrixTransform3D>를 사용 하 여 변환 그룹에 독립적으로 존재 하는 모든 변환의 곱으로 설정 합니다.|  
 |<xref:System.Windows.Media.Media3D.Light>|장면의 조명 수를 최소화 합니다. 장면에 너무 많은 표시등이 있으면 강제로 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 소프트웨어 렌더링으로 대체 됩니다.  한도는 대략 110 <xref:System.Windows.Media.Media3D.DirectionalLight> 개체, 70 <xref:System.Windows.Media.Media3D.PointLight> 개체 또는 40 <xref:System.Windows.Media.Media3D.SpotLight> 개체입니다.|  
@@ -59,6 +59,6 @@ ms.locfileid: "76744602"
 |밝게|검정 조명이 표시 되지 않지만 렌더링 시간에 추가 됩니다. 생략 하는 것이 좋습니다.|  
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|MeshGeometry3D's <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>, <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>, <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>, <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>등 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 큰 컬렉션의 생성 시간을 최소화 하려면 값 채우기 전에 컬렉션의 크기를 미리 조정 합니다. 가능 하면 배열 또는 목록과 같은 컬렉션의 생성자 미리 채워진 데이터 구조를 전달 합니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [3차원 그래픽 개요](3-d-graphics-overview.md)

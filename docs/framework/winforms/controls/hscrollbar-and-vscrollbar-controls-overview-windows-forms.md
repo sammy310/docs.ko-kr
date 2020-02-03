@@ -33,10 +33,10 @@ ms.locfileid: "76728165"
 ## <a name="largechange-and-smallchange-properties"></a>LargeChange 및 SmallChange 속성  
  사용자가 스크롤 상자의 양쪽에서 PAGE UP 또는 PAGE DOWN 키를 누르거나 스크롤 막대 트랙을 클릭 하면 <xref:System.Windows.Forms.ScrollBar.Value%2A> 속성이 <xref:System.Windows.Forms.ScrollBar.LargeChange%2A> 속성에 설정 된 값에 따라 변경 됩니다.  
   
- 키 또는 스크롤 막대 단추 중 하나를 클릭할 때 사용자가 누를 화살표 중 하나는 <xref:System.Windows.Forms.ScrollBar.Value%2A> 에 설정 된 값에 따라 속성 변경 내용을 <xref:System.Windows.Forms.ScrollBar.SmallChange%2A> 속성입니다.  
+ 사용자가 화살표 키 중 하나를 누르거나 스크롤 막대 단추 중 하나를 클릭 하면 <xref:System.Windows.Forms.ScrollBar.Value%2A> 속성이 <xref:System.Windows.Forms.ScrollBar.SmallChange%2A> 속성에 설정 된 값에 따라 변경 됩니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.HScrollBar>
 - <xref:System.Windows.Forms.VScrollBar>
-- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)
+- [Windows Forms에서 사용할 컨트롤](controls-to-use-on-windows-forms.md)

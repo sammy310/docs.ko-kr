@@ -31,7 +31,7 @@ ms.locfileid: "76743988"
   
  사용자 지정 값의 기본 구문 분석이 사용자의 요구에 맞지 않는 경우 <xref:System.Windows.Forms.DataGridView> 컨트롤의 <xref:System.Windows.Forms.DataGridView.CellParsing> 이벤트를 처리 하 여 사용자 지정 구문 분석을 제공할 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>

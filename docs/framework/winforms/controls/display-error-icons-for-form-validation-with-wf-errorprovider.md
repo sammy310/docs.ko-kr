@@ -92,7 +92,7 @@ ms.locfileid: "76745916"
   
 4. 프로젝트를 실행합니다. 첫 번째 컨트롤에 잘못 된 (이 예제에서는 숫자가 아닌) 데이터를 입력 한 다음 tab 키를 누릅니다. 오류 아이콘이 표시 되 면이 아이콘을 마우스로 가리켜 오류 텍스트를 확인 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.ErrorProvider.SetError%2A>
 - [ErrorProvider 구성 요소 개요](errorprovider-component-overview-windows-forms.md)

@@ -34,7 +34,7 @@ Windows Forms 컨트롤은 일반적으로 컨트롤의 기본 함수와 관련 
 
 [디자이너](#designer)를 사용 하 여 텍스트를 설정할 수도 있습니다.
 
-## <a name="programmatic"></a>기능의
+## <a name="programmatic"></a>프로그래밍 방식
 
 1. <xref:System.Windows.Forms.Control.Text%2A> 속성을 문자열로 설정합니다.
 
@@ -72,7 +72,7 @@ Windows Forms 컨트롤은 일반적으로 컨트롤의 기본 함수와 관련 
     mpMenuItem->Text = "&& Now For Something Completely Different";
     ```
 
-## <a name="designer"></a>Designer
+## <a name="designer"></a>디자이너
 
 1. Visual Studio의 **속성** 창에서 컨트롤의 **Text** 속성을 적절 한 문자열로 설정 합니다.
 
@@ -82,7 +82,7 @@ Windows Forms 컨트롤은 일반적으로 컨트롤의 기본 함수와 관련 
 
    표준 글꼴 대화 상자에서 글꼴, 글꼴 스타일, 크기, 효과 (취소선 또는 밑줄 등) 및 원하는 스크립트를 선택 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>
 - [방법: Windows Forms 컨트롤에 대한 선택키 만들기](how-to-create-access-keys-for-windows-forms-controls.md)

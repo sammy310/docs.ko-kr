@@ -77,7 +77,7 @@ ms.locfileid: "76740322"
 
 ## <a name="positioning-controls-within-cells-using-docking-and-anchoring"></a>도킹 및 고정을 사용 하 여 셀 내에서 컨트롤 위치 지정
 
-자식 컨트롤의 앵커 동작을 <xref:System.Windows.Forms.TableLayoutPanel> 다른 컨테이너 컨트롤의 동작과에서 다릅니다. 자식 컨트롤의 도킹 동작을 다른 컨테이너 컨트롤와 같습니다.
+<xref:System.Windows.Forms.TableLayoutPanel>에 있는 자식 컨트롤의 고정 동작은 다른 컨테이너 컨트롤의 동작과 다릅니다. 자식 컨트롤의 도킹 동작을 다른 컨테이너 컨트롤와 같습니다.
 
 #### <a name="positioning-controls-within-cells"></a>셀 내에서 컨트롤 위치 지정
 
@@ -99,11 +99,11 @@ ms.locfileid: "76740322"
 
 2. **속성** 창에서 **열** 항목 옆에 있는](./media/visual-studio-ellipsis-button.png)의 속성 창 Visual Studio에서 줄임표 단추 (...) 단추를![클릭 하 여 <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> 컬렉션을 엽니다.
 
-3. 첫 번째 열을 선택 하 고 해당 <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> 속성의 값을 <xref:System.Windows.Forms.SizeType.AutoSize>로 변경 합니다. **확인** 을 클릭 하 여 변경 내용을 적용 합니다. <xref:System.Windows.Forms.Button> 컨트롤에 맞게 첫 번째 열의 너비가 줄어듭니다. 또한 열의 너비는 크기를 조정할 수 없습니다.
+3. 첫 번째 열을 선택 하 고 해당 <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> 속성의 값을 <xref:System.Windows.Forms.SizeType.AutoSize>로 변경 합니다. **확인**을 클릭하여 변경 내용을 적용합니다. <xref:System.Windows.Forms.Button> 컨트롤에 맞게 첫 번째 열의 너비가 줄어듭니다. 또한 열의 너비는 크기를 조정할 수 없습니다.
 
-4. **속성** 창에서 <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> 컬렉션을 열고 첫 번째 열을 선택 합니다. <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> 속성의 값을 <xref:System.Windows.Forms.SizeType.Percent>로 변경합니다. **확인** 을 클릭 하 여 변경 내용을 적용 합니다. <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 더 큰 너비로 크기를 조정 하 고 첫 번째 열의 너비가 확장 됨을 확인 합니다. <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 더 작은 너비로 크기를 조정 하 고 첫 번째 열의 단추 크기를 셀에 맞게 조정 합니다. 또한 열의 너비는 크기를 조정할 수 있습니다.
+4. **속성** 창에서 <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> 컬렉션을 열고 첫 번째 열을 선택 합니다. <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> 속성의 값을 <xref:System.Windows.Forms.SizeType.Percent>로 변경합니다. **확인**을 클릭하여 변경 내용을 적용합니다. <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 더 큰 너비로 크기를 조정 하 고 첫 번째 열의 너비가 확장 됨을 확인 합니다. <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 더 작은 너비로 크기를 조정 하 고 첫 번째 열의 단추 크기를 셀에 맞게 조정 합니다. 또한 열의 너비는 크기를 조정할 수 있습니다.
 
-5. **속성** 창에서 <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> 컬렉션을 열고 나열 된 모든 열을 선택 합니다. 모든 <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> 속성의 값을 <xref:System.Windows.Forms.SizeType.Percent>로 설정 합니다. **확인** 을 클릭 하 여 변경 내용을 적용 합니다. <xref:System.Windows.Forms.TableLayoutPanel.RowStyles%2A> 컬렉션을 반복 합니다.
+5. **속성** 창에서 <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> 컬렉션을 열고 나열 된 모든 열을 선택 합니다. 모든 <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> 속성의 값을 <xref:System.Windows.Forms.SizeType.Percent>로 설정 합니다. **확인**을 클릭하여 변경 내용을 적용합니다. <xref:System.Windows.Forms.TableLayoutPanel.RowStyles%2A> 컬렉션을 반복 합니다.
 
 6. 모퉁이 크기 조정 핸들 중 하나를 잡고 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤의 너비와 높이를 모두 조정 합니다. <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤의 크기가 변경 되 면 행과 열의 크기가 조정 됩니다. 또한 행과 열은 가로 및 세로 크기 조정 핸들을 사용 하 여 크기를 조정할 수 있습니다.
 
@@ -177,7 +177,7 @@ ms.locfileid: "76740322"
 
 ## <a name="next-steps"></a>다음 단계
 
-레이아웃 패널 및 컨트롤의 조합을 사용하여 복잡한 레이아웃을 얻을 수 있습니다. 다음과 같은 사항을 더 살펴보는 것이 좋습니다.
+레이아웃 패널 및 컨트롤의 조합을 사용하여 복잡한 레이아웃을 얻을 수 있습니다. 다음을 추가로 살펴볼 수 있습니다.
 
 - <xref:System.Windows.Forms.Button> 컨트롤 중 하나의 크기를 더 크게 조정 하 고 레이아웃에 미치는 영향을 확인 하세요.
 
@@ -187,7 +187,7 @@ ms.locfileid: "76740322"
 
 - <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 부모 폼에 도킹합니다. 폼의 크기를 조정하고 레이아웃에 미치는 영향을 확인합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>

@@ -24,7 +24,7 @@ Windows Forms <xref:System.Windows.Forms.CheckBox> 컨트롤은 특정 조건이
   
  <xref:System.Windows.Forms.CheckBox> 컨트롤에는 <xref:System.Windows.Forms.CheckBox.Checked%2A> 및 <xref:System.Windows.Forms.CheckBox.CheckState%2A>라는 두 가지 중요 한 속성이 있습니다. <xref:System.Windows.Forms.CheckBox.Checked%2A> 속성은 `true` 또는 `false`를 반환 합니다. <xref:System.Windows.Forms.CheckBox.CheckState%2A> 속성은 <xref:System.Windows.Forms.CheckState.Checked> 또는 <xref:System.Windows.Forms.CheckState.Unchecked>를 반환 합니다. 또는 <xref:System.Windows.Forms.CheckBox.ThreeState%2A> 속성이 `true`로 설정 된 경우에도 <xref:System.Windows.Forms.CheckState.Indeterminate>를 반환할 수 <xref:System.Windows.Forms.CheckBox.CheckState%2A>. 비활성화 된 상태에서 상자는 흐리게 표시 되어 옵션을 사용할 수 없음을 나타낼 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.CheckBox>
 - [방법: Windows Forms CheckBox 컨트롤을 사용하여 옵션 설정](how-to-set-options-with-windows-forms-checkbox-controls.md)

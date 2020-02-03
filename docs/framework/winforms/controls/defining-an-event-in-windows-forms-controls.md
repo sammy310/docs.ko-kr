@@ -76,7 +76,7 @@ public class FlashTrackBar : Control {
 }  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Forms 컨트롤의 이벤트](events-in-windows-forms-controls.md)
 - [이벤트](../../../standard/events/index.md)

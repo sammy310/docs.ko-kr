@@ -28,9 +28,9 @@ ms.locfileid: "76746782"
   
  음수를 포함하는 `Balance` 열의 셀에는 빨간색 배경이 제공됩니다. 또한 이러한 셀에 통화 형식을 지정하여 음수 값을 괄호 안에 표시할 수도 있습니다. 자세한 내용은 [방법: Windows Forms DataGridView 컨트롤의 데이터 형식 지정](how-to-format-data-in-the-windows-forms-datagridview-control.md)을 참조하세요.  
   
- `Priority` 열의 셀에는 해당하는 텍스트 셀 값 대신 이미지가 표시됩니다. <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs>의 <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> 속성은 텍스트 셀 값을 가져오고 해당하는 이미지 표시 값을 설정하는 데 사용됩니다.  
+ `Priority` 열의 셀에는 해당하는 텍스트 셀 값 대신 이미지가 표시됩니다. <xref:System.Windows.Forms.ConvertEventArgs.Value%2A>의 <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs> 속성은 텍스트 셀 값을 가져오고 해당하는 이미지 표시 값을 설정하는 데 사용됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-csharp[System.Windows.Forms.DataGridViewCustomizeDataFormatting#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCustomizeDataFormatting/cs/customFormatting.cs#00)]
  [!code-vb[System.Windows.Forms.DataGridViewCustomizeDataFormatting#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCustomizeDataFormatting/vb/customFormatting.vb#00)]  
   
@@ -41,7 +41,7 @@ ms.locfileid: "76746782"
   
 - 실행 파일과 동일한 디렉터리에 있는 <xref:System.Drawing.Bitmap>, `highPri.bmp` 및 `mediumPri.bmp`로 명명된 `lowPri.bmp` 이미지  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A?displayProperty=nameWithType>

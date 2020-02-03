@@ -49,7 +49,7 @@ ms.locfileid: "76746319"
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#120](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#120)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#120](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#120)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  전체 예제에서는 드롭다운 목록에서 비즈니스 개체를 사용 하는 방법을 보여 줍니다. 예제에서 <xref:System.Windows.Forms.DataGridView> 컨트롤은 `Task` 개체의 컬렉션에 바인딩됩니다. 각 `Task` 개체에는 해당 작업에 현재 할당 된 `Employee` 개체를 나타내는 `AssignedTo` 속성이 있습니다. `Assigned To` 열에는 할당 된 각 직원의 `Name` 속성 값이 표시 되거나 `Task.AssignedTo` 속성 값이 `null`인 경우 "할당 되지 않음"이 표시 됩니다.  
   
  이 예제의 동작을 보려면 다음 단계를 수행 합니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "76746319"
   
 - System 및 System.Windows.Forms 어셈블리에 대한 참조  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewComboBoxColumn>

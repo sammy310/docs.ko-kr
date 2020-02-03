@@ -13,7 +13,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76742419"
 ---
-# <a name="resizing-columns-and-rows-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 열 및 행 크기 조정
+# <a name="resizing-columns-and-rows-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤에서 열 및 행 크기 조정
 `DataGridView` 컨트롤은 열 및 행의 크기 조정 동작을 사용자 지정 하는 다양 한 옵션을 제공 합니다. 일반적으로 `DataGridView` 셀은 내용에 따라 크기를 조정 하지 않습니다. 대신 셀 보다 큰 모든 표시 값을 자릅니다. 콘텐츠를 문자열로 표시할 수 있는 경우 셀에 도구 설명으로 표시 됩니다.  
   
  기본적으로 사용자는 행, 열 및 헤더 구분선을 마우스로 끌어 추가 정보를 표시할 수 있습니다. 또한 사용자는 구분선을 두 번 클릭 하 여 해당 내용에 따라 연결 된 행, 열 또는 헤더 밴드의 크기를 자동으로 조정할 수 있습니다.  
@@ -40,6 +40,6 @@ ms.locfileid: "76742419"
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView> 컨트롤에 대한 참조 설명서를 제공합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [DataGridView 컨트롤](datagridview-control-windows-forms.md)

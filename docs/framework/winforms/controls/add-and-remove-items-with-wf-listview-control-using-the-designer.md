@@ -30,7 +30,7 @@ ms.locfileid: "76732301"
 
 4. 항목을 제거 하려면 항목을 선택 하 고 **제거** 단추를 클릭 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ListView 컨트롤 개요](listview-control-overview-windows-forms.md)
 - [방법: Windows Forms ListView 컨트롤에 열 추가](how-to-add-columns-to-the-windows-forms-listview-control.md)

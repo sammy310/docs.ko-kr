@@ -51,9 +51,9 @@ Windows Forms <xref:System.Windows.Forms.PrintPreviewDialog> 컨트롤은 인쇄
 
 스위치가 없거나 다른 값으로 설정 된 경우에는 최적화가 적용 되지 않습니다.
 
-사용 하는 경우는 <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings> 성능을 프린터 설정을 수정 하려면 이벤트를 <xref:System.Windows.Forms.PrintPreviewDialog> 최적화 구성 스위치를 설정한 경우에 제어 향상 되지 것입니다.
+<xref:System.Drawing.Printing.PrintDocument.QueryPageSettings> 이벤트를 사용 하 여 프린터 설정을 수정 하는 경우 최적화 구성 스위치를 설정한 경우에도 <xref:System.Windows.Forms.PrintPreviewDialog> 컨트롤의 성능이 향상 되지 않습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.PrintPreviewDialog>
 - [PrintPreviewControl 컨트롤 개요](printpreviewcontrol-control-overview-windows-forms.md)

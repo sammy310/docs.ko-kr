@@ -21,7 +21,7 @@ ms.locfileid: "76743809"
   
  .NET Framework은 <xref:System.Windows.Forms.ProgressBar> 컨트롤 내에 지정 된 값을 표시 하는 여러 가지 방법을 제공 합니다. 선택 하는 방법은 현재 작업 또는 해결 중인 문제에 따라 달라 집니다. 다음 표에서는 선택할 수 있는 방법을 보여 줍니다.  
   
-|방법|설명|  
+|방법|Description|  
 |--------------|-----------------|  
 |<xref:System.Windows.Forms.ProgressBar> 컨트롤의 값을 직접 설정 합니다.|이 방법은 데이터 원본에서 레코드를 읽는 것과 같이 측정 된 항목의 합계를 알고 있는 작업에 유용 합니다. 또한 값을 한 번 또는 두 번 설정 해야 하는 경우이 작업을 수행 하는 쉬운 방법입니다. 마지막으로 진행률 표시줄에 표시 되는 값을 줄여야 하는 경우이 프로세스를 사용 합니다.|  
 |고정 값으로 표시 되는 <xref:System.Windows.Forms.ProgressBar>를 늘립니다.|이 방법은 경과 된 시간 또는 알려진 합계에서 처리 된 파일 수와 같은 최소 및 최대 사이의 단순 카운트를 표시 하는 경우에 유용 합니다.|  
@@ -224,7 +224,7 @@ ms.locfileid: "76743809"
     }  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.ProgressBar>
 - <xref:System.Windows.Forms.ToolStripProgressBar>

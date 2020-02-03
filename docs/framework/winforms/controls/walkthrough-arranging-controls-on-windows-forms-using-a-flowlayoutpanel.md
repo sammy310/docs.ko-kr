@@ -44,7 +44,7 @@ ms.locfileid: "76745409"
 
 완료 하면 이러한 중요 한 레이아웃 기능을 통해 수행 되는 역할을 이해 하 게 됩니다.
 
-## <a name="create-the-project"></a>프로젝트를 만듭니다.
+## <a name="create-the-project"></a>프로젝트 만들기
 
 1. Visual Studio에서 "FlowLayoutPanelExample" (**파일** > **새** > **프로젝트** >  **C# Visual** 또는 **Visual Basic** > **클래식 Desktop** > **응용 프로그램**) 이라는 Windows 기반 응용 프로그램 프로젝트를 만듭니다.
 
@@ -172,7 +172,7 @@ ms.locfileid: "76745409"
 6. 마우스 단추를 놓습니다. 세 <xref:System.Windows.Forms.Button> 컨트롤이 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤에 삽입됩니다.
 
 ## <a name="next-steps"></a>다음 단계
- 레이아웃 패널 및 컨트롤의 조합을 사용하여 복잡한 레이아웃을 얻을 수 있습니다. 다음과 같은 사항을 더 살펴보는 것이 좋습니다.
+ 레이아웃 패널 및 컨트롤의 조합을 사용하여 복잡한 레이아웃을 얻을 수 있습니다. 다음을 추가로 살펴볼 수 있습니다.
 
 - <xref:System.Windows.Forms.Button> 컨트롤 중 하나의 크기를 더 크게 조정하고 레이아웃에 미치는 영향을 확인합니다.
 
@@ -182,7 +182,7 @@ ms.locfileid: "76745409"
 
 - 컨트롤 중 하나의 <xref:System.Windows.Forms.Control.Visible%2A> 속성을 `false` 로 설정하고 그에 대한 응답으로 <xref:System.Windows.Forms.FlowLayoutPanel> 이 어떻게 재배치되는지 확인합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>

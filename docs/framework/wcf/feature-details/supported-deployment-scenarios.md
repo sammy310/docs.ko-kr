@@ -43,7 +43,7 @@ WCF는 지원 되는 SOAP 바인딩 중 하나를 사용 하는 SOAP 메시징 �
 
 WCF는 [ClickOnce 배포](/visualstudio/deployment/clickonce-security-and-deployment) 또는 XBAP에서 배포한 부분 신뢰 응용 프로그램 내에서 원격 서버와 통신 하는 데 사용할 수 있습니다. 인터넷 영역 권한 집합에는 원래 호스트에 대 한 <xref:System.Net.WebPermission> 포함 되어 있으며, 이러한 응용 프로그램은 [부분 신뢰 기능 호환성](partial-trust-feature-compatibility.md)에 설명 된 지원 되는 WCF 바인딩 중 하나를 사용 하 여 원본 서버와 통신할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [코드 액세스 보안](../../misc/code-access-security.md)
 - [Windows Presentation Foundation 브라우저에서 호스팅되는 응용 프로그램 개요](../../wpf/app-development/wpf-xaml-browser-applications-overview.md)

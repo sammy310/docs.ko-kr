@@ -25,7 +25,7 @@ Windows Forms <xref:System.Windows.Forms.RadioButton> 컨트롤은 둘 이상의
   
 2. <xref:System.Windows.Forms.GroupBox> 또는 <xref:System.Windows.Forms.Panel> 컨트롤에 <xref:System.Windows.Forms.RadioButton> 컨트롤을 그립니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.RadioButton>
 - [RadioButton 컨트롤 개요](radiobutton-control-overview-windows-forms.md)

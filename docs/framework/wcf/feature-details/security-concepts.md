@@ -36,8 +36,8 @@ ms.locfileid: "76730825"
 ## <a name="related-sections"></a>관련 섹션  
  [보안 확장](../../../../docs/framework/wcf/extending/extending-security.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [Security](../../../../docs/framework/wcf/feature-details/security.md)
+- [보안](../../../../docs/framework/wcf/feature-details/security.md)
 - [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Windows Server Fabric 용 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

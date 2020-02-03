@@ -27,14 +27,14 @@ ms.locfileid: "76736784"
   
 ### <a name="to-format-currency-and-date-values"></a>통화 및 날짜 값의 서식을 지정 하려면  
   
-- <xref:System.Windows.Forms.DataGridViewCellStyle>의 <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> 속성을 설정합니다. 다음 코드 예에서는 열의 <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> 속성을 사용 하 여 특정 열의 형식을 설정 합니다. `UnitPrice` 열의 값은 현재 문화권별 통화 형식으로 표시 되며 음수 값은 괄호로 묶여 있습니다. `ShipDate` 열의 값은 현재 문화권별 짧은 날짜 형식으로 표시 됩니다. <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> 값에 대 한 자세한 내용은 [형식 서식 지정](../../../standard/base-types/formatting-types.md)을 참조 하세요.  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A>의 <xref:System.Windows.Forms.DataGridViewCellStyle> 속성을 설정합니다. 다음 코드 예에서는 열의 <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> 속성을 사용 하 여 특정 열의 형식을 설정 합니다. `UnitPrice` 열의 값은 현재 문화권별 통화 형식으로 표시 되며 음수 값은 괄호로 묶여 있습니다. `ShipDate` 열의 값은 현재 문화권별 짧은 날짜 형식으로 표시 됩니다. <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> 값에 대 한 자세한 내용은 [형식 서식 지정](../../../standard/base-types/formatting-types.md)을 참조 하세요.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#071](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#071)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#071](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#071)]  
   
 ### <a name="to-customize-the-display-of-null-database-values"></a>Null 데이터베이스 값의 표시를 사용자 지정 하려면  
   
-- <xref:System.Windows.Forms.DataGridViewCellStyle>의 <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> 속성을 설정합니다. 다음 코드 예제에서는 <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> 속성을 사용 하 여 <xref:System.DBNull.Value?displayProperty=nameWithType>와 같은 값을 포함 하는 모든 셀에 "no entry"를 표시 합니다.  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A>의 <xref:System.Windows.Forms.DataGridViewCellStyle> 속성을 설정합니다. 다음 코드 예제에서는 <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> 속성을 사용 하 여 <xref:System.DBNull.Value?displayProperty=nameWithType>와 같은 값을 포함 하는 모든 셀에 "no entry"를 표시 합니다.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#073](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#073)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#073](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#073)]  
@@ -53,7 +53,7 @@ ms.locfileid: "76736784"
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#072](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#072)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#072](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#072)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#070](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#070)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#070](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#070)]  
   
@@ -67,7 +67,7 @@ ms.locfileid: "76736784"
 ## <a name="robust-programming"></a>강력한 프로그래밍  
  확장성을 최대화 하려면 각 요소에 대 한 스타일 속성을 별도로 설정 하는 대신 동일한 스타일을 사용 하는 여러 행, 열 또는 셀에서 <xref:System.Windows.Forms.DataGridViewCellStyle> 개체를 공유 해야 합니다. 자세한 내용은 [Windows Forms DataGridView 컨트롤의 크기 조정에 대 한 모범 사례](best-practices-for-scaling-the-windows-forms-datagridview-control.md)합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A?displayProperty=nameWithType>
