@@ -21,7 +21,7 @@ ms.locfileid: "76739628"
 ## <a name="mouse-events"></a>마우스 이벤트  
  마우스 입력에 응답 하는 기본적인 방법은 마우스 이벤트를 처리 하는 것입니다. 다음 표에서는 마우스 이벤트를 보여 주고 이벤트가 발생 하는 시기를 설명 합니다.  
   
-|마우스 이벤트|설명|  
+|마우스 이벤트|Description|  
 |-----------------|-----------------|  
 |<xref:System.Windows.Forms.Control.Click>|이 이벤트는 마우스 단추를 놓을 때, 일반적으로 <xref:System.Windows.Forms.Control.MouseUp> 이벤트 이전에 발생 합니다. 이 이벤트의 처리기는 <xref:System.EventArgs> 형식의 인수를 받습니다. 클릭이 발생 한 경우를 결정 해야 하는 경우이 이벤트를 처리 합니다.|  
 |<xref:System.Windows.Forms.Control.MouseClick>|이 이벤트는 사용자가 마우스로 컨트롤을 클릭할 때 발생 합니다. 이 이벤트의 처리기는 <xref:System.Windows.Forms.MouseEventArgs> 형식의 인수를 받습니다. 클릭이 발생할 때 마우스에 대 한 정보를 가져와야 하는 경우이 이벤트를 처리 합니다.|  
@@ -38,7 +38,7 @@ ms.locfileid: "76739628"
 ## <a name="changing-mouse-input-and-detecting-system-settings"></a>마우스 입력 변경 및 시스템 설정 검색  
  컨트롤에서 파생 하 고 <xref:System.Windows.Forms.Control.GetStyle%2A> 및 <xref:System.Windows.Forms.Control.SetStyle%2A> 메서드를 사용 하 여 컨트롤에서 마우스 입력을 처리 하는 방법을 검색 하 고 변경할 수 있습니다. <xref:System.Windows.Forms.Control.SetStyle%2A> 메서드는 <xref:System.Windows.Forms.ControlStyles> 값의 비트 조합을 사용 하 여 컨트롤이 표준 클릭 또는 두 번 클릭 동작을 수행 하거나 컨트롤이 자체 마우스 처리를 처리할지 여부를 결정 합니다. 또한 <xref:System.Windows.Forms.SystemInformation> 클래스에는 마우스의 기능을 설명 하 고 마우스가 운영 체제와 상호 작용 하는 방식을 지정 하는 속성이 포함 되어 있습니다. 다음 표에서는 이러한 속성을 요약 합니다.  
   
-|속성|설명|  
+|속성|Description|  
 |--------------|-----------------|  
 |<xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A>|운영 체제에서 두 번 클릭을 두 번 클릭 하는 것으로 간주 하도록 사용자가 두 번 클릭 해야 하는 영역의 크기 (픽셀 단위)를 가져옵니다.|  
 |<xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A>|마우스 작업을 두 번 클릭 하는 것으로 간주 하기 위해 운영 체제에서 첫 번째 클릭과 두 번째 클릭 사이에 경과할 수 있는 최대 시간 (밀리초)을 가져옵니다.|  
@@ -52,7 +52,7 @@ ms.locfileid: "76739628"
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollDelta%2A>|단일 마우스 휠 회전의 증가값에 대 한 델타 값 크기를 가져옵니다.|  
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollLines%2A>|마우스 휠을 돌릴 때 스크롤되는 줄 수를 가져옵니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Forms 애플리케이션의 마우스 입력](mouse-input-in-a-windows-forms-application.md)
 - [Windows Forms의 마우스 캡처](mouse-capture-in-windows-forms.md)

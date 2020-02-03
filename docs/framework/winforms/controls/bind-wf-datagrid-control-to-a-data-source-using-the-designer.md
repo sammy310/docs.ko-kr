@@ -22,7 +22,7 @@ ms.locfileid: "76744094"
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source-using-the-designer"></a>방법: 디자이너를 사용하여 데이터 소스에 Windows Forms DataGrid 컨트롤 바인딩
 
 > [!NOTE]
-> <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 컨트롤과 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하세요.
+> <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.
 
  Windows Forms <xref:System.Windows.Forms.DataGrid> 컨트롤은 데이터 원본의 정보를 표시 하도록 특별히 설계 되었습니다. 디자인 타임에 <xref:System.Windows.Forms.DataGrid.DataSource%2A> 및 <xref:System.Windows.Forms.DataGrid.DataMember%2A> 속성을 설정 하거나 런타임에 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 메서드를 호출 하 여 컨트롤을 바인딩합니다. 다양 한 데이터 원본의 데이터를 표시할 수 있지만 가장 일반적인 원본은 데이터 집합 및 데이터 뷰입니다.
 
@@ -66,7 +66,7 @@ ms.locfileid: "76744094"
 
 3. 데이터 집합을 채우는 코드를 작성 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [DataGrid 컨트롤 개요](datagrid-control-overview-windows-forms.md)
 - [방법: Windows Forms DataGrid 컨트롤에 테이블 및 열 추가](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)

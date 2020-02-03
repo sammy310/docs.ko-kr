@@ -32,5 +32,5 @@ Windows Forms `FolderBrowserDialog` 구성 요소는 사용자가 폴더를 찾�
  [Windows Forms 대화 상자](../dialog-boxes-in-windows-forms.md)  
  대체로 탭을 표시하는 대화 상자에 대한 작업 목록을 제공합니다.  
   
- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)  
+ [Windows Forms에서 사용할 컨트롤](controls-to-use-on-windows-forms.md)  
  사용 방법에 대한 정보 링크를 포함하는 Windows Forms 컨트롤의 전체 목록을 제공합니다.

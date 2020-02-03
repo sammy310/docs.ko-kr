@@ -32,7 +32,7 @@ ms.locfileid: "76738500"
 
   다음 표에는 리플렉션 정책 형식과 해당 형식을 사용할 수 있는 프로그램 요소가 나와 있습니다.
 
-  |요소|Activate|Browse|Dynamic|
+  |요소|활성화|찾아보기|동적|
   |-------------|--------------|------------|-------------|
   |[\<Application>](application-element-net-native.md)|✔️|✔️|✔️|
   |[\<Assembly>](assembly-element-net-native.md)|✔️|✔️|✔️|
@@ -115,7 +115,7 @@ ms.locfileid: "76738500"
 
 각 정책 형식은 다음 표에 나와 있는 값 중 하나로 설정할 수 있습니다. 형식 멤버를 나타내는 요소는 기타 요소와는 다른 정책 설정 집합을 지원합니다.
 
-|정책 설정|설명|`Assembly`, `Namespace`, `Type` 및 `TypeInstantiation` 요소|`Event`, `Field`, `Method`, `MethodInstantiation` 및 `Property` 요소|
+|정책 설정|Description|`Assembly`, `Namespace`, `Type` 및 `TypeInstantiation` 요소|`Event`, `Field`, `Method`, `MethodInstantiation` 및 `Property` 요소|
 |--------------------|-----------------|-----------------------------------------------------------------------|--------------------------------------------------------------------------------|
 |`All`|.NET 네이티브 도구 체인에서 제거하지 않는 모든 형식과 멤버에 대해 정책을 사용하도록 설정합니다.|✔️||
 |`Auto`|해당 프로그램 요소에 대한 정책 형식으로 기본 정책을 사용해야 함을 지정합니다. 이 설정은 해당 정책 형식에 대해 정책을 생략하는 것과 같습니다. `Auto`는 보통 부모 요소에서 정책이 상속됨을 나타내는 데 사용됩니다.|✔️|✔️|
@@ -128,7 +128,7 @@ ms.locfileid: "76738500"
 |`Required PublicAndInternal`|public 및 내부 형식 또는 멤버에 대해 정책을 사용하도록 설정하며 public 및 내부 형식 또는 멤버의 메타데이터를 항상 사용할 수 있습니다. 이 설정은 도구 체인이 필요하다고 결정하는 public 및 내부 형식과 멤버의 메타데이터만 제공하는 `PublicAndInternal`과는 다릅니다.|✔️||
 |`Required All`|도구 체인이 사용 여부에 관계없이 모든 형식과 멤버를 유지해야 하도록 지정하고 해당 형식과 멤버에 대해 정책을 사용하도록 설정합니다.|✔️||
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)
 - [런타임 지시문 요소](runtime-directive-elements.md)

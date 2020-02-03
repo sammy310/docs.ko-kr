@@ -37,13 +37,13 @@ ms.locfileid: "76734542"
  끝으로, 고유한 사용자 지정 UI 요소를 만들어야 하는 경우 <xref:System.Drawing> 네임스페이스에는 선, 원 및 기타 도형을 폼에 직접 렌더링하는 다양한 클래스가 포함되어 있습니다.
 
 > [!NOTE]
-> Windows Forms 컨트롤은 애플리케이션 도메인 간에 마샬링되도록 설계되어 있지 않습니다. 이런 이유로 Microsoft는 <xref:System.MarshalByRefObject>의 <xref:System.Windows.Controls.Control> 기본 형식이 가능한 것처럼 표시해도 <xref:System.AppDomain> 경계를 넘어서 Windows Forms 컨트롤을 전달하는 기능을 지원하지 않습니다. 애플리케이션 도메인 경계를 넘어서 Windows Forms 컨트롤이 전달되지 않는 한 여러 개의 애플리케이션 도메인을 가진 Windows Forms 애플리케이션이 지원됩니다.
+> Windows Forms 컨트롤은 애플리케이션 도메인 간에 마샬링되도록 설계되어 있지 않습니다. 이런 이유로 Microsoft는 <xref:System.AppDomain>의 <xref:System.Windows.Controls.Control> 기본 형식이 가능한 것처럼 표시해도 <xref:System.MarshalByRefObject> 경계를 넘어서 Windows Forms 컨트롤을 전달하는 기능을 지원하지 않습니다. 애플리케이션 도메인 경계를 넘어서 Windows Forms 컨트롤이 전달되지 않는 한 여러 개의 애플리케이션 도메인을 가진 Windows Forms 애플리케이션이 지원됩니다.
 
 #### <a name="create-forms-and-controls"></a>폼 및 컨트롤 만들기
 
 이러한 기능을 사용하는 방법에 대한 단계별 정보는 다음 도움말 항목을 참조하세요.
 
-|설명|도움말 항목|
+|Description|도움말 항목|
 |-----------------|----------------|
 |폼에서 컨트롤 사용|[방법: Windows Forms에 컨트롤 추가](./controls/how-to-add-controls-to-windows-forms.md)|
 |<xref:System.Windows.Forms.ToolStrip> 컨트롤 사용|[방법: 디자이너를 사용하여 표준 항목이 있는 기본 ToolStrip 만들기](./controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
@@ -63,7 +63,7 @@ ms.locfileid: "76734542"
 
 이러한 기능을 사용하는 방법에 대한 단계별 정보는 다음 도움말 항목을 참조하세요.
 
-|설명|도움말 항목|
+|Description|도움말 항목|
 |-----------------|----------------|
 |<xref:System.Windows.Forms.BindingSource> 구성 요소 사용|[방법: 디자이너를 사용하여 Windows Forms 컨트롤에 BindingSource 구성 요소 바인딩](./controls/bind-wf-controls-with-the-bindingsource.md)|
 |ADO.NET 데이터 원본 사용|[방법: Windows Forms BindingSource 구성 요소를 사용하여 ADO.NET 데이터 정렬 및 필터링](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
@@ -82,7 +82,7 @@ ClickOnce 응용 프로그램은 사용자가 네트워크에 연결 된 경우�
 
 ClickOnce에 대 한 전체 개요는 [Clickonce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)를 참조 하세요. 이러한 기능을 사용하는 방법에 대한 단계별 정보는 다음 도움말 항목을 참조하세요.
 
-|설명|도움말 항목|
+|Description|도움말 항목|
 |-----------------|----------------|
 |ClickOnce를 사용 하 여 응용 프로그램 배포|[방법: 게시 마법사를 사용하여 ClickOnce 애플리케이션 게시](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [연습: ClickOnce 애플리케이션 수동 배포](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
 |ClickOnce 배포 업데이트|[방법: ClickOnce 애플리케이션에 대한 업데이트 관리](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
@@ -96,12 +96,12 @@ Windows Forms에는 대화 상자 만들기, 인쇄, 도움말 및 설명서 추
 
 이러한 기능을 사용하는 방법에 대한 단계별 정보는 다음 도움말 항목을 참조하세요.
 
-|설명|도움말 항목|
+|Description|도움말 항목|
 |-----------------|----------------|
 |폼의 콘텐츠 인쇄|[방법: Windows Forms의 그래픽 인쇄](./advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [방법: Windows Forms에서 다중 페이지 텍스트 파일 인쇄](./advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
 |Windows Forms 보안에 대한 자세한 정보|[Windows Forms의 보안 개요](security-in-windows-forms-overview.md)|
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Forms 시작](getting-started-with-windows-forms.md)
 - [새 Windows Form 만들기](creating-a-new-windows-form.md)

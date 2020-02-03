@@ -19,9 +19,9 @@ Windows Forms <xref:System.Windows.Forms.TreeView> 컨트롤을 통해 Windows �
 
 ## <a name="key-properties"></a>키 속성
 
-<xref:System.Windows.Forms.TreeView> 컨트롤의 키 속성은 <xref:System.Windows.Forms.TreeView.Nodes%2A> 및 <xref:System.Windows.Forms.TreeView.SelectedNode%2A>입니다. <xref:System.Windows.Forms.TreeView.Nodes%2A> 속성에는 트리 뷰의 최상위 노드 목록이 포함됩니다. <xref:System.Windows.Forms.TreeView.SelectedNode%2A> 속성은 현재 선택된 노드를 설정합니다. 노드 옆에 아이콘을 표시할 수 있습니다. 컨트롤은 트리 뷰의 <xref:System.Windows.Forms.TreeView.ImageList%2A> 속성에 명명된 <xref:System.Windows.Forms.ImageList>의 이미지를 사용합니다. <xref:System.Windows.Forms.TreeView.ImageIndex%2A> 속성은 트리 뷰의 노드에 대한 기본 이미지를 설정합니다. 이미지를 표시 하는 방법에 대 한 자세한 내용은 [방법: Windows Forms TreeView 컨트롤의 아이콘 설정](how-to-set-icons-for-the-windows-forms-treeview-control.md)을 참조 하세요. Visual Studio 2005을 사용 하는 경우 <xref:System.Windows.Forms.TreeView> 컨트롤에 사용할 수 있는 많은 표준 이미지 라이브러리에 액세스할 수 있습니다.
+<xref:System.Windows.Forms.TreeView> 컨트롤의 키 속성은 <xref:System.Windows.Forms.TreeView.Nodes%2A> 및 <xref:System.Windows.Forms.TreeView.SelectedNode%2A>입니다. <xref:System.Windows.Forms.TreeView.Nodes%2A> 속성에는 트리 뷰의 최상위 노드 목록이 포함됩니다. <xref:System.Windows.Forms.TreeView.SelectedNode%2A> 속성은 현재 선택된 노드를 설정합니다. 노드 옆에 아이콘을 표시할 수 있습니다. 컨트롤은 트리 뷰의 <xref:System.Windows.Forms.ImageList> 속성에 명명된 <xref:System.Windows.Forms.TreeView.ImageList%2A>의 이미지를 사용합니다. <xref:System.Windows.Forms.TreeView.ImageIndex%2A> 속성은 트리 뷰의 노드에 대한 기본 이미지를 설정합니다. 이미지를 표시 하는 방법에 대 한 자세한 내용은 [방법: Windows Forms TreeView 컨트롤의 아이콘 설정](how-to-set-icons-for-the-windows-forms-treeview-control.md)을 참조 하세요. Visual Studio 2005을 사용 하는 경우 <xref:System.Windows.Forms.TreeView> 컨트롤에 사용할 수 있는 많은 표준 이미지 라이브러리에 액세스할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.TreeView>
 - [TreeView 컨트롤](treeview-control-windows-forms.md)

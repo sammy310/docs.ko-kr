@@ -24,11 +24,11 @@ ms.locfileid: "76746824"
 
 이 문서에서는 고정 및 맞춤선과 같은 Windows Forms 레이아웃 기능을 사용 하 여 Windows Presentation Foundation (WPF) 컨트롤을 정렬 하는 방법을 보여 줍니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 연습을 완료하려면 Visual Studio가 필요합니다.
 
-## <a name="create-the-project"></a>프로젝트를 만듭니다.
+## <a name="create-the-project"></a>프로젝트 만들기
 
 Visual Studio를 열고 Visual Basic 또는 `ArrangeElementHost`라는 시각적 개체 C# 에서 새 Windows Forms 응용 프로그램 프로젝트를 만듭니다.
 
@@ -63,7 +63,7 @@ Visual Studio를 열고 Visual Basic 또는 `ArrangeElementHost`라는 시각적
 
 5. **도구 상자**에서 `UserControl1`를 두 번 클릭 하 여 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤의 첫 번째 셀에 `UserControl1`의 인스턴스를 만듭니다.
 
-   `UserControl1` 인스턴스가 `elementHost1`이라는 새 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤에서 호스트됩니다.
+   `UserControl1` 인스턴스가 <xref:System.Windows.Forms.Integration.ElementHost>이라는 새 `elementHost1` 컨트롤에서 호스트됩니다.
 
 6. **도구 상자**에서 `UserControl1`를 두 번 클릭 하 여 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤의 두 번째 셀에 다른 인스턴스를 만듭니다.
 
@@ -79,7 +79,7 @@ Visual Studio를 열고 Visual Basic 또는 `ArrangeElementHost`라는 시각적
 
 1. **도구 상자**에서 `UserControl1` 인스턴스를 폼으로 끌어 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤 아래의 공간에 넣습니다.
 
-   `UserControl1` 인스턴스가 `elementHost3`이라는 새 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤에서 호스트됩니다.
+   `UserControl1` 인스턴스가 <xref:System.Windows.Forms.Integration.ElementHost>이라는 새 `elementHost3` 컨트롤에서 호스트됩니다.
 
 2. 맞춤선을 사용하여 `elementHost3`의 왼쪽 가장자리를 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤의 왼쪽 가장자리에 맞춥니다.
 
@@ -93,7 +93,7 @@ Visual Studio를 열고 Visual Basic 또는 `ArrangeElementHost`라는 시각적
 
 7. 왼쪽 가장자리가 `elementHost1`의 왼쪽 가장자리에 맞춰질 때까지 `elementHost3`를 오른쪽으로 이동 합니다.
 
-8. 오른쪽 가장자리가 `elementHost2`의 오른쪽 가장자리와 맞춰질 때까지 `elementHost3`의 너비를 변경합니다.
+8. 오른쪽 가장자리가 `elementHost3`의 오른쪽 가장자리와 맞춰질 때까지 `elementHost2`의 너비를 변경합니다.
 
 ## <a name="anchor-and-dock-wpf-controls"></a>WPF 컨트롤 고정 및 도킹
 
@@ -127,9 +127,9 @@ Visual Studio를 열고 Visual Basic 또는 `ArrangeElementHost`라는 시각적
 
     <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤 3개의 크기가 모두 적절하게 조정됩니다.
 
-    자세한 내용은 참조 하세요. [방법: TableLayoutPanel 컨트롤의 자식 컨트롤 고정 및 앵커](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)합니다.
+    자세한 내용은 [방법: TableLayoutPanel 컨트롤의 자식 컨트롤 고정 및 도킹](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)을 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

@@ -19,7 +19,7 @@ ms.locfileid: "76746669"
 # <a name="how-to-bind-windows-forms-controls-to-dbnull-database-values"></a>방법: DBNull 데이터베이스 값에 Windows Forms 컨트롤 바인딩
 Windows Forms 컨트롤을 데이터 소스에 바인딩하고 데이터 소스가 <xref:System.DBNull> 값을 반환하는 경우 이벤트를 처리, 형식 지정 또는 구문 분석하지 않고 적절한 값을 대체할 수 있습니다. <xref:System.Windows.Forms.Binding.NullValue%2A> 속성은 데이터 소스 값을 형식 지정 또는 구문 분석할 때 <xref:System.DBNull>을 지정된 개체로 변환합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 두 가지 다른 상황에서 <xref:System.DBNull> 값을 바인딩하는 방법을 보여 줍니다. 첫 번째 예제에서는 문자열 속성에 대해 <xref:System.Windows.Forms.Binding.NullValue%2A>를 설정하는 방법을 보여 주고, 두 번째 예제에서는 이미지 속성에 대해 <xref:System.Windows.Forms.Binding.NullValue%2A>를 설정하는 방법을 보여 줍니다.  
   
  [!code-csharp[System.Windows.Forms.BindingDBNull#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingDBNull/CS/form1.cs#1)]
@@ -32,7 +32,7 @@ Windows Forms 컨트롤을 데이터 소스에 바인딩하고 데이터 소스�
   
 - System, System.Data, System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [BindingSource 구성 요소](bindingsource-component.md)
 - [방법: 데이터 바인딩에서 발생하는 오류 및 예외 처리](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)

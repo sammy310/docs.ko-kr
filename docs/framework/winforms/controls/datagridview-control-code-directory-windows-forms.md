@@ -152,7 +152,7 @@ ms.locfileid: "76742505"
   
 - [Windows Forms DataGridView 컨트롤에서 Just-In-Time 데이터 로드를 사용하여 가상 모드 구현](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView>
 - [DataGridView 컨트롤 개요](datagridview-control-overview-windows-forms.md)

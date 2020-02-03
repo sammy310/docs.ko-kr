@@ -65,7 +65,7 @@ ms.locfileid: "76746617"
   
 - <xref:System.Windows.Forms.TabControl>의 <xref:System.Windows.Forms.TabControl.Appearance%2A> 속성을 <xref:System.Windows.Forms.TabAppearance.Buttons> 또는 <xref:System.Windows.Forms.TabAppearance.FlatButtons>로 설정 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [TabControl 컨트롤](tabcontrol-control-windows-forms.md)
 - [TabControl 컨트롤 개요](tabcontrol-control-overview-windows-forms.md)

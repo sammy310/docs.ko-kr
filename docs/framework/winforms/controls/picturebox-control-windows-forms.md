@@ -34,5 +34,5 @@ Windows Forms `PictureBox` 컨트롤은 비트맵, GIF, JPEG, 메타 파일 또�
  이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.  
   
 ## <a name="related-sections"></a>관련 섹션  
- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)  
+ [Windows Forms에서 사용할 컨트롤](controls-to-use-on-windows-forms.md)  
  사용 방법에 대한 정보 링크를 포함하는 Windows Forms 컨트롤의 전체 목록을 제공합니다.

@@ -26,20 +26,20 @@ ms.locfileid: "76740279"
   
  다음 코드 예제에서는 포함 된 리소스에서 아이콘을 추출 하 고 이미지 열의 모든 셀에 표시 하기 위해 비트맵으로 변환 하는 방법을 보여 줍니다. 텍스트 셀 값을 해당 이미지로 바꾸는 다른 예제 [는 방법: DataGridView 컨트롤 Windows Forms에서 데이터 형식 사용자 지정](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)을 참조 하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#050](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#050)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#050](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#050)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
-- `dataGridView1`이라는 <xref:System.Windows.Forms.DataGridView> 컨트롤  
+- <xref:System.Windows.Forms.DataGridView>이라는 `dataGridView1` 컨트롤  
   
 - `tree.ico`이라는 포함 된 아이콘 리소스입니다.  
   
 - <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType> 및 <xref:System.Drawing?displayProperty=nameWithType> 어셈블리에 대한 참조  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Windows Forms DataGridView 컨트롤의 기본 열, 행 및 셀 기능](basic-column-row-and-cell-features-wf-datagridview-control.md)

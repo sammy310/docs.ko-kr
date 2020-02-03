@@ -67,7 +67,7 @@ Windows Forms <xref:System.Windows.Forms.TextBox> 컨트롤에서 프로그래�
     }  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.TextBox>
 - [TextBox 컨트롤 개요](textbox-control-overview-windows-forms.md)

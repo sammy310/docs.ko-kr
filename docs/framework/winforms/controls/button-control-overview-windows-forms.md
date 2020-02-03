@@ -21,7 +21,7 @@ ms.locfileid: "76747086"
   
  <xref:System.Windows.Forms.Button> 컨트롤은 <xref:System.Windows.Forms.ButtonBase.Image%2A> 및 <xref:System.Windows.Forms.ButtonBase.ImageList%2A> 속성을 사용 하 여 이미지를 표시할 수도 있습니다. 자세한 내용은 [방법: Windows Forms 컨트롤에 의해 표시 되는 이미지 설정](how-to-set-the-image-displayed-by-a-windows-forms-control.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.Button>
 - [방법: Windows Forms 단추 클릭에 응답](how-to-respond-to-windows-forms-button-clicks.md)

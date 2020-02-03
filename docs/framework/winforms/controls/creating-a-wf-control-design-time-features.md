@@ -36,11 +36,11 @@ ms.locfileid: "76744082"
 
 전체 코드 목록은 [방법: 디자인 타임 기능을 활용 하는 Windows Forms 컨트롤 만들기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))를 참조 하세요.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 연습을 완료 하려면 Visual Studio가 필요 합니다.
 
-## <a name="create-the-project"></a>프로젝트를 만듭니다.
+## <a name="create-the-project"></a>프로젝트 만들기
 
 첫 번째 단계에서는 애플리케이션 프로젝트를 만듭니다. 이 프로젝트를 사용 하 여 사용자 지정 컨트롤을 호스트 하는 응용 프로그램을 빌드합니다.
 
@@ -430,7 +430,7 @@ Visual Studio에서 새 Windows Forms 응용 프로그램 프로젝트를 만들
 
 ## <a name="add-designer-verbs-to-your-custom-designer"></a>사용자 지정 디자이너에 디자이너 동사 추가
 
-디자이너 동사는 이벤트 처리기에 연결 된 메뉴 명령입니다. 디자이너 동사는 디자인 타임 구성 요소의 바로 가기 메뉴에 추가 됩니다. 자세한 내용은 <xref:System.ComponentModel.Design.DesignerVerb>를 참조하세요.
+디자이너 동사는 이벤트 처리기에 연결된 메뉴 명령입니다. 디자이너 동사는 디자인 타임 구성 요소의 바로 가기 메뉴에 추가 됩니다. 자세한 내용은 <xref:System.ComponentModel.Design.DesignerVerb>을 참조하세요.
 
 디자이너에는 **테스트 실행** 및 **테스트 중지**라는 두 개의 디자이너 동사를 추가 합니다. 이러한 동사를 사용 하면 디자인 타임에 `MarqueeControl`의 런타임 동작을 볼 수 있습니다. 이러한 동사는 `MarqueeControlRootDesigner`에 추가 됩니다.
 
@@ -608,7 +608,7 @@ Visual Studio에서 새 Windows Forms 응용 프로그램 프로젝트를 만들
 
 - 컨트롤이 serialize 되는 방법 및 컨트롤이 생성 되는 방식을 제어 합니다. 자세한 내용은 [동적 소스 코드 생성 및 컴파일](../../reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)을 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.UserControl>
 - <xref:System.Windows.Forms.Design.ParentControlDesigner>

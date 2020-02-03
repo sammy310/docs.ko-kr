@@ -22,6 +22,6 @@ WPF (Windows Presentation Foundation) 라이브러리는 내부용 으로만 사
  [SaveToHistory 함수](savetohistory-function-wpf-unmanaged-api-reference.md)  
  [SetFakeActiveWindow 함수](setfakeactivewindow-function-wpf-unmanaged-api-reference.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [고급](index.md)

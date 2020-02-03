@@ -84,6 +84,6 @@ TextBox1.Font = New System.Drawing.Font(Me.Font, TextBox1.Font.Style)
 textBox1.Font = new System.Drawing.Font(this.Font, textBox1.Font.Style);
 ```
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [글꼴 및 텍스트 사용](using-fonts-and-text.md)

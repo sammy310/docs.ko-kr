@@ -15,7 +15,7 @@ WPF (Windows Presentation Foundation)는 Windows 7 touch 입력 처리를 기본
   
  스타일러스 입력을 수신 하는 WPF를 사용 하지 않도록 설정 하려면 WPF 창에 의해 추가 된 태블릿 지원을 제거 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플 코드에서는 리플렉션을 사용 하 여 기본 태블릿 플랫폼 지원을 제거 하는 방법을 보여 줍니다.  
   
 ```csharp  
@@ -53,6 +53,6 @@ public static void DisableWPFTabletSupport()
 }  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [스타일러스에서 입력 가로채기](intercepting-input-from-the-stylus.md)

@@ -52,7 +52,7 @@ ms.locfileid: "76744005"
  [Windows Forms DataGridView 컨트롤에서 데이터 표시](displaying-data-in-the-windows-forms-datagridview-control.md)  
  수동으로 또는 외부 데이터 원본에서 컨트롤에 데이터를 채우는 방법을 설명 하는 항목을 제공 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [DataGridView 컨트롤](datagridview-control-windows-forms.md)
 - [Windows Forms DataGridView 컨트롤의 열 형식](column-types-in-the-windows-forms-datagridview-control.md)

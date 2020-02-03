@@ -23,7 +23,7 @@ Windows Form에서 기본 단추가 라고도 하는 허용 단추로 <xref:Syst
 
 2. **속성** 창에서 양식의 <xref:System.Windows.Forms.Form.AcceptButton%2A> 속성을 <xref:System.Windows.Forms.Button> 컨트롤의 이름으로 설정 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.Form.AcceptButton%2A>
 - [Button 컨트롤 개요](button-control-overview-windows-forms.md)

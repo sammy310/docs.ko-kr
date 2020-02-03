@@ -22,7 +22,7 @@ ms.locfileid: "76743859"
   
  다음 표에서는 <xref:System.Windows.Forms.DataGridView> 컨트롤에서 사용할 수 있는 다양 한 열 클래스에 대해 설명 합니다.  
   
-|클래스|설명|  
+|클래스|Description|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|텍스트 기반 값에 사용 됩니다. 숫자 및 문자열에 바인딩할 때 자동으로 생성 됩니다.|  
 |<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|<xref:System.Boolean> 및 <xref:System.Windows.Forms.CheckState> 값과 함께 사용 됩니다. 이러한 형식의 값에 바인딩하는 경우 자동으로 생성 됩니다.|  
@@ -44,7 +44,7 @@ ms.locfileid: "76743859"
 ## <a name="datagridviewcheckboxcolumn"></a>DataGridViewCheckBoxColumn  
  <xref:System.Windows.Forms.DataGridViewCheckBoxColumn>는 <xref:System.Boolean> 및 <xref:System.Windows.Forms.CheckState> 값과 함께 사용 됩니다. <xref:System.Boolean> 값은 <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> 속성의 값에 따라 두 가지 상태 또는 세 가지 상태 확인란으로 표시 됩니다. 열이 <xref:System.Windows.Forms.CheckState> 값에 바인딩되면 <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> 속성 값이 기본적으로 `true` 됩니다.  
   
- 일반적으로 확인란 셀 값은 스토리지용이거나 다른 데이터와 같거나 대량 작업 수행용입니다. 사용자가 확인란 셀을 클릭 하는 경우를 처리할 수 있습니다 하는 즉시 응답 하려는 경우는 <xref:System.Windows.Forms.DataGridView.CellClick> 이벤트 하지만이 이벤트는 셀 값이 업데이트 되기 전에 발생 합니다. 클릭 시 새 값을 해야 하는 경우 한 가지 방법은 될 예상 값을 계산 하려면 현재 값을 기반으로 합니다. 또 다른 방법은 즉시 변경 내용 커밋 및 처리 하는 <xref:System.Windows.Forms.DataGridView.CellValueChanged> 이벤트에 응답 하려면. 셀을 클릭할 때 변경 내용을 커밋하려면를 처리 해야 합니다는 <xref:System.Windows.Forms.DataGridView.CurrentCellDirtyStateChanged> 이벤트입니다. 처리기에서 현재 셀의 확인란 셀 인 경우 호출 합니다 <xref:System.Windows.Forms.DataGridView.CommitEdit%2A> 메서드를 전달 합니다 <xref:System.Windows.Forms.DataGridViewDataErrorContexts.Commit> 값.  
+ 일반적으로 확인란 셀 값은 스토리지용이거나 다른 데이터와 같거나 대량 작업 수행용입니다. 사용자가 확인란 셀을 클릭할 때 즉시 응답 하려면 <xref:System.Windows.Forms.DataGridView.CellClick> 이벤트를 처리할 수 있지만이 이벤트는 셀 값이 업데이트 되기 전에 발생 합니다. 클릭 시 새 값을 해야 하는 경우 한 가지 방법은 될 예상 값을 계산 하려면 현재 값을 기반으로 합니다. 또 다른 방법은 변경 내용을 즉시 커밋하고 해당 이벤트에 응답 하는 <xref:System.Windows.Forms.DataGridView.CellValueChanged> 이벤트를 처리 하는 것입니다. 셀을 클릭 하면 변경 내용을 커밋하려면 <xref:System.Windows.Forms.DataGridView.CurrentCellDirtyStateChanged> 이벤트를 처리 해야 합니다. 처리기에서 현재 셀이 확인란 셀 이면 <xref:System.Windows.Forms.DataGridView.CommitEdit%2A> 메서드를 호출 하 고 <xref:System.Windows.Forms.DataGridViewDataErrorContexts.Commit> 값을 전달 합니다.  
   
 ## <a name="datagridviewimagecolumn"></a>DataGridViewImageColumn  
  <xref:System.Windows.Forms.DataGridViewImageColumn>는 이미지를 표시 하는 데 사용 됩니다. 이미지 열은 데이터 원본에서 자동으로 채우거 나 바인딩되지 않은 열에 대해 수동으로 채우거 나 <xref:System.Windows.Forms.DataGridView.CellFormatting> 이벤트에 대 한 처리기에서 동적으로 채워질 수 있습니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "76743859"
   
  <xref:System.Windows.Forms.DataGridViewLinkColumn> 클래스는 이전, 도중 및 클릭 후에 링크 모양을 수정 하기 위한 여러 가지 속성을 제공 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn>

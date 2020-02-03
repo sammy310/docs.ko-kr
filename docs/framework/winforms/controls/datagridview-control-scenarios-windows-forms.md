@@ -30,7 +30,7 @@ ms.locfileid: "76742466"
 - 바인딩되지 않은 모드는 스프레드시트와 유사 하거나 부족 한 테이블에도 적합 합니다.  
   
 ## <a name="scenario-2-viewing-and-updating-data-stored-in-an-external-data-source"></a>시나리오 2: 외부 데이터 원본에 저장 된 데이터 보기 및 업데이트  
- 사용자가 데이터베이스 테이블이 나 비즈니스 개체 컬렉션과 같은 데이터 원본에 저장 된 데이터에 액세스할 수 있는 UI (사용자 인터페이스)로 <xref:System.Windows.Forms.DataGridView> 컨트롤을 사용할 수 있습니다. 자세한 내용은 [방법: Windows Forms DataGridView 컨트롤에 데이터 바인딩](how-to-bind-data-to-the-windows-forms-datagridview-control.md)합니다.  
+ 사용자가 데이터베이스 테이블이 나 비즈니스 개체 컬렉션과 같은 데이터 원본에 저장 된 데이터에 액세스할 수 있는 UI (사용자 인터페이스)로 <xref:System.Windows.Forms.DataGridView> 컨트롤을 사용할 수 있습니다. 자세한 내용은 [방법: Windows Forms DataGridView 컨트롤에 데이터 바인딩](how-to-bind-data-to-the-windows-forms-datagridview-control.md)을 참조 하세요.  
   
 ### <a name="scenario-key-points"></a>시나리오 주요 사항  
   
@@ -54,7 +54,7 @@ ms.locfileid: "76742466"
 - 가상 모드는 성능을 미세 조정 해야 할 때 매우 많은 양의 데이터를 표시 하는 데 적합 합니다.  
   
 ## <a name="scenario-4-automatically-resizing-rows-and-columns"></a>시나리오 4: 행 및 열의 크기 자동 조정  
- 정기적으로 업데이트 되는 데이터를 표시 하는 경우 모든 내용이 표시 되도록 행과 열의 크기를 자동으로 조정할 수 있습니다. <xref:System.Windows.Forms.DataGridView> 컨트롤은 수동 크기 조정을 활성화 또는 비활성화 하 고, 특정 시간에 프로그래밍 방식으로 크기를 조정 하거나, 콘텐츠가 변경 될 때마다 자동으로 크기를 조정할 수 있는 몇 가지 옵션을 제공 자세한 내용은 [Windows Forms DataGridView 컨트롤의 크기 조정 옵션](sizing-options-in-the-windows-forms-datagridview-control.md)합니다.  
+ 정기적으로 업데이트 되는 데이터를 표시 하는 경우 모든 내용이 표시 되도록 행과 열의 크기를 자동으로 조정할 수 있습니다. <xref:System.Windows.Forms.DataGridView> 컨트롤은 수동 크기 조정을 활성화 또는 비활성화 하 고, 특정 시간에 프로그래밍 방식으로 크기를 조정 하거나, 콘텐츠가 변경 될 때마다 자동으로 크기를 조정할 수 있는 몇 가지 옵션을 제공 자세한 내용은 [Windows Forms DataGridView 컨트롤의 크기 조정 옵션](sizing-options-in-the-windows-forms-datagridview-control.md)을 참조 하세요.  
   
 ### <a name="scenario-key-points"></a>시나리오 주요 사항  
   
@@ -65,7 +65,7 @@ ms.locfileid: "76742466"
 - 프로그래밍 방식으로 크기를 조정 하면 연속 자동 크기 조정의 성능 저하를 방지 하기 위해 특정 시간에 셀 크기를 조정할 수 있습니다.  
   
 ## <a name="scenario-5-simple-customization"></a>시나리오 5: 간단한 사용자 지정  
- <xref:System.Windows.Forms.DataGridView> 컨트롤은 기본 모양과 동작을 변경할 수 있는 여러 가지 방법을 제공 합니다. 자세한 내용은 [Windows Forms DataGridView 컨트롤의 셀 스타일](cell-styles-in-the-windows-forms-datagridview-control.md)합니다.  
+ <xref:System.Windows.Forms.DataGridView> 컨트롤은 기본 모양과 동작을 변경할 수 있는 여러 가지 방법을 제공 합니다. 자세한 내용은 [Windows Forms DataGridView 컨트롤의 셀 스타일](cell-styles-in-the-windows-forms-datagridview-control.md)을 참조 하세요.  
   
 ### <a name="scenario-key-points"></a>시나리오 주요 사항  
   
@@ -86,7 +86,7 @@ ms.locfileid: "76742466"
   
 - 사용자 고유의 셀 및 열 클래스를 구현 하 여 기본 제공 열 형식에서 제공 하는 컨트롤 이외의 컨트롤을 호스팅할 수 있습니다. 자세한 내용은 [방법: Windows Forms DataGridView 셀의 호스트 컨트롤](how-to-host-controls-in-windows-forms-datagridview-cells.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView>
 - [DataGridView 컨트롤 개요](datagridview-control-overview-windows-forms.md)

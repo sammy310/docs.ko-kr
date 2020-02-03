@@ -18,13 +18,13 @@ ms.locfileid: "76745555"
   
 ### <a name="to-display-scroll-bars-in-a-richtextbox-control"></a>RichTextBox 컨트롤에서 스크롤 막대를 표시 하려면  
   
-1. <xref:System.Windows.Forms.RichTextBox.Multiline%2A> 속성을 `true`으로 설정합니다. <xref:System.Windows.Forms.RichTextBox.Multiline%2A> 속성이 `false`로 설정 되어 있으면 가로를 포함 하는 스크롤 막대의 형식이 표시 되지 않습니다.  
+1. <xref:System.Windows.Forms.RichTextBox.Multiline%2A> 속성을 `true`로 설정합니다. <xref:System.Windows.Forms.RichTextBox.Multiline%2A> 속성이 `false`로 설정 되어 있으면 가로를 포함 하는 스크롤 막대의 형식이 표시 되지 않습니다.  
   
 2. <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> 속성을 <xref:System.Windows.Forms.RichTextBoxScrollBars> 열거형의 적절 한 값으로 설정 합니다.  
   
-    |값|설명|  
+    |값|Description|  
     |-----------|-----------------|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Both>(기본)|텍스트가 컨트롤의 너비나 길이를 초과 하는 경우에만 가로 또는 세로 스크롤 막대를 표시 하거나 둘 다 표시 합니다.|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Both>(기본값)|텍스트가 컨트롤의 너비나 길이를 초과 하는 경우에만 가로 또는 세로 스크롤 막대를 표시 하거나 둘 다 표시 합니다.|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.None>|스크롤 막대의 유형을 표시 하지 않습니다.|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.Horizontal>|텍스트가 컨트롤의 너비를 초과 하는 경우에만 가로 스크롤 막대를 표시 합니다. 이를 수행 하려면 <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 속성을 `false`로 설정 해야 합니다.|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.Vertical>|텍스트가 컨트롤의 높이를 초과할 때만 세로 스크롤 막대를 표시 합니다.|  
@@ -34,14 +34,14 @@ ms.locfileid: "76745555"
   
 3. <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 속성을 적절한 값으로 설정합니다.  
   
-    |값|설명|  
+    |값|Description|  
     |-----------|-----------------|  
     |`false`|컨트롤의 텍스트는 컨트롤의 너비에 맞게 자동으로 조정 되지 않으므로 줄 바꿈에 도달할 때까지 오른쪽으로 스크롤합니다. 위의 가로 스크롤 막대나 둘 다를 선택한 경우이 값을 사용 합니다.|  
-    |`true`(기본)|컨트롤의 텍스트는 컨트롤의 너비에 맞게 자동으로 조정 됩니다. 가로 스크롤 막대는 표시 되지 않습니다. 위쪽의 세로 스크롤 막대 또는 없음을 선택 하 여 하나 이상의 단락을 표시 하는 경우이 값을 사용 합니다.|  
+    |`true`(기본값)|컨트롤의 텍스트는 컨트롤의 너비에 맞게 자동으로 조정 됩니다. 가로 스크롤 막대는 표시 되지 않습니다. 위쪽의 세로 스크롤 막대 또는 없음을 선택 하 여 하나 이상의 단락을 표시 하는 경우이 값을 사용 합니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.RichTextBoxScrollBars>
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox 컨트롤](richtextbox-control-windows-forms.md)
-- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)
+- [Windows Forms에서 사용할 컨트롤](controls-to-use-on-windows-forms.md)

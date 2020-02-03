@@ -42,7 +42,7 @@ Windows Forms <xref:System.Windows.Forms.ToolTip> 구성 요소에 대해 설정
     toolTip1->AutoPopDelay = 5000;  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ToolTip 구성 요소 개요](tooltip-component-overview-windows-forms.md)
 - [방법: 디자인 타임에 Windows Form의 컨트롤에 도구 설명 설정](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)

@@ -25,7 +25,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤에는 표시 되
   
 ### <a name="to-format-a-paragraph-as-a-bulleted-list"></a>단락의 서식을 글머리 기호 목록으로 지정하려면  
   
-1. <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> 속성을 `true`으로 설정합니다.  
+1. <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> 속성을 `true`로 설정합니다.  
   
     ```vb  
     RichTextBox1.SelectionBullet = True  
@@ -68,8 +68,8 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤에는 표시 되
     > [!NOTE]
     > 이러한 모든 속성은 선택한 텍스트가 포함된 단락에 적용되며, 현재 삽입 지점 이후로 입력된 텍스트에도 적용됩니다. 예를 들어 사용자가 단락 내의 단어를 선택한 다음 들여쓰기를 조정하면, 이 단어가 포함된 전체 단락뿐만 아니라 선택한 단락 이후에 입력되는 모든 단락에도 새 설정이 적용됩니다. 프로그래밍 방식으로 텍스트를 선택 하는 방법에 대 한 자세한 내용은 <xref:System.Windows.Forms.TextBoxBase.Select%2A>를 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox 컨트롤](richtextbox-control-windows-forms.md)
-- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)
+- [Windows Forms에서 사용할 컨트롤](controls-to-use-on-windows-forms.md)

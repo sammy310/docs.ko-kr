@@ -58,7 +58,7 @@ XAML은 선언적으로 애플리케이션의 모양을 구현하는 XML 기반 
 </Window>
 ```
 
-특히, 이 XAML은 각각 `Window` 및 `Button` 요소를 사용하여 창과 단추를 정의합니다. 각 요소는 창의 제목 표시줄 텍스트를 지정하는 `Window` 요소의 `Title` 특성과 같은 특성으로 구성됩니다. 런타임에 WPF는 태그에 정의된 요소와 특성을 WPF 클래스 인스턴스로 변환합니다. 예를 들어 `Window` 요소는 <xref:System.Windows.Window.Title%2A> 속성이 `Title` 특성의 값인 <xref:System.Windows.Window> 클래스 인스턴스로 변환됩니다.
+특히, 이 XAML은 각각 `Window` 및 `Button` 요소를 사용하여 창과 단추를 정의합니다. 각 요소는 창의 제목 표시줄 텍스트를 지정하는 `Window` 요소의 `Title` 특성과 같은 특성으로 구성됩니다. 런타임에 WPF는 태그에 정의된 요소와 특성을 WPF 클래스 인스턴스로 변환합니다. 예를 들어 `Window` 요소는 <xref:System.Windows.Window> 속성이 <xref:System.Windows.Window.Title%2A> 특성의 값인 `Title` 클래스 인스턴스로 변환됩니다.
 
 다음 그림은 이전 예제에서 XAML로 정의 된 UI (사용자 인터페이스)를 보여 줍니다.
 
@@ -68,7 +68,7 @@ XAML은 XML 기반이기 때문에 XAML로 작성한 UI는 [요소 트리](advan
 
 ### <a name="code-behind"></a>코드 숨김
 
-애플리케이션의 기본 동작은 이벤트 처리(예: 메뉴, 도구 모음 또는 단추 클릭) 및 응답으로 비즈니스 논리 및 데이터 액세스 논리 호출을 포함하여 사용자 조작에 응답하는 기능을 구현하는 것입니다. WPF에서 이 동작은 태그와 연결된 코드에서 구현됩니다. 이러한 종류의 코드를 코드 숨김이라고 합니다. 다음 예제에서는 이전 예제와 코드 숨김으로 업데이트 된 태그를 보여 줍니다.
+애플리케이션의 주요 작업은 이벤트 (예: 메뉴, 도구 모음, 단추 클릭) 처리, 비즈니스 논리 작업 및 데이터 엑세스 응답과 같은 사용자 조작에 맞는 기능을 실행하는 것입니다. WPF에서 이 동작은 태그와 연결된 코드에서 구현됩니다. 이러한 종류의 코드를 코드 숨김이라고 합니다. 다음 예제에서는 이전 예제와 코드 숨김으로 업데이트 된 태그를 보여 줍니다.
 
 ```xaml
 <Window
@@ -207,7 +207,7 @@ End Namespace
 
 [!code-xaml[IntroToWPFSnippets#LayoutMARKUP](~/samples/snippets/xaml/wpf/introduction-to-wpf/introduction-to-wpf_1.xaml)]
 
-<xref:System.Windows.Controls.DockPanel> 을 사용하면 자식 <xref:System.Windows.Controls.TextBox> 컨트롤이 정렬 방법을 알려줄 수 있습니다. 이렇게 하려면 <xref:System.Windows.Controls.DockPanel>은 각각 도킹 스타일을 지정할 수 있도록 자식 컨트롤에 노출되는 `Dock` 속성을 구현합니다.
+<xref:System.Windows.Controls.DockPanel>을 사용하면 자식 <xref:System.Windows.Controls.TextBox> 컨트롤이 정렬 방법을 알려줄 수 있습니다. 이렇게 하려면 <xref:System.Windows.Controls.DockPanel>은 각각 도킹 스타일을 지정할 수 있도록 자식 컨트롤에 노출되는 `Dock` 속성을 구현합니다.
 
 > [!NOTE]
 > 자식 컨트롤에서 사용할 수 있도록 부모 컨트롤이 구현하는 속성은 [연결된 속성](advanced/attached-properties-overview.md)이라는 WPF 구문입니다.
@@ -250,7 +250,7 @@ End Namespace
 [!code-vb[SimpleDataBindingSnippets#DataBindingCODEBEHIND](~/samples/snippets/visualbasic/wpf/introduction-to-wpf/introduction-to-wpf_6.vb)]
 [!code-csharp[SimpleDataBindingSnippets#DataBindingCODEBEHIND](~/samples/snippets/csharp/wpf/introduction-to-wpf/introduction-to-wpf_6.cs)]
 
-이 예제에서 `Person` 클래스는 코드 숨김에서 인스턴스화되고 `DataBindingWindow`에 대한 데이터 컨텍스트로 설정됩니다. 태그에서 <xref:System.Windows.Controls.TextBox>의 <xref:System.Windows.Controls.TextBox.Text%2A> 속성은 "`{Binding ... }`" XAML 구문을 사용하는 `Person.Name` 속성에 바인딩됩니다. 이 XAML은 WPF가 <xref:System.Windows.Controls.TextBox> 컨트롤을 해당 창의 <xref:System.Windows.FrameworkElement.DataContext%2A> 속성에 저장된 `Person` 개체에 바인딩되도록 합니다.
+이 예제에서 `Person` 클래스는 코드 숨김에서 인스턴스화되고 `DataBindingWindow`에 대한 데이터 컨텍스트로 설정됩니다. 태그에서 <xref:System.Windows.Controls.TextBox.Text%2A>의 <xref:System.Windows.Controls.TextBox> 속성은 "`Person.Name`" XAML 구문을 사용하는 `{Binding ... }` 속성에 바인딩됩니다. 이 XAML은 WPF가 <xref:System.Windows.Controls.TextBox> 컨트롤을 해당 창의 `Person` 속성에 저장된 <xref:System.Windows.FrameworkElement.DataContext%2A> 개체에 바인딩되도록 합니다.
 
 WPF 데이터 바인딩 엔진은 유효성 검사, 정렬, 필터링 및 그룹화를 포함하는 추가 지원을 제공합니다. 또한 데이터 바인딩은 표준 WPF 컨트롤에 의해 표시되는 사용자 인터페이스가 적절하지 않은 경우 데이터 템플릿을 사용하여 바인딩된 데이터에 대한 사용자 지정 사용자 인터페이스를 만들 수 있도록 지원합니다.
 
@@ -323,7 +323,7 @@ WPF 애니메이션 지원을 사용하면 컨트롤이 커지거나, 흔들리�
 
 자세한 내용은 [애니메이션 개요](graphics-multimedia/animation-overview.md)를 참조하세요.
 
-## <a name="media"></a>Media
+## <a name="media"></a>미디어
 
 풍부한 콘텐츠를 전달하는 한 가지 방법은 시청각 미디어를 사용하는 것입니다. WPF는 이미지, 비디오 및 오디오에 대한 특별한 지원을 제공합니다.
 
@@ -394,7 +394,7 @@ WPF 애니메이션 지원을 사용하면 컨트롤이 커지거나, 흔들리�
 
 ![텍스트가 포함된 TextBox 컨트롤](media/introduction-to-wpf/wpfintrofigure21.png)
 
-그러나 다른 컨트롤은 다양한 콘텐츠 형식의 여러 항목을 포함할 수 있습니다. <xref:System.Windows.Controls.ContentControl.Content%2A> 속성으로 지정된 <xref:System.Windows.Controls.Button>의 콘텐츠에는 레이아웃 컨트롤, 텍스트, 이미지 및 도형을 포함하여 다양한 항목이 포함될 수 있습니다. 다음 예에서는 <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.Border>및 <xref:System.Windows.Controls.MediaElement>를 포함 하는 콘텐츠가 포함 된 <xref:System.Windows.Controls.Button>를 보여 줍니다.
+그러나 다른 컨트롤은 다양한 콘텐츠 형식의 여러 항목을 포함할 수 있습니다. <xref:System.Windows.Controls.Button>속성으로 지정된 <xref:System.Windows.Controls.ContentControl.Content%2A> 의 콘텐츠에는 레이아웃 컨트롤, 텍스트, 이미지 및 도형을 포함하여 다양한 항목이 포함될 수 있습니다. 다음 예에서는 <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.Border>및 <xref:System.Windows.Controls.MediaElement>를 포함 하는 콘텐츠가 포함 된 <xref:System.Windows.Controls.Button>를 보여 줍니다.
 
 ```xaml
 <Window
@@ -439,7 +439,7 @@ WPF 컨트롤의 기본 사용자 인터페이스는 일반적으로 다른 컨�
 [!code-csharp[IntroToWPFSnippets#ButtonControlTemplateWindowCODEBEHIND](~/samples/snippets/csharp/wpf/introduction-to-wpf/introduction-to-wpf_17.cs)]
 [!code-vb[IntroToWPFSnippets#ButtonControlTemplateWindowCODEBEHIND](~/samples/snippets/visualbasic/wpf/introduction-to-wpf/introduction-to-wpf_17.vb)]
 
-이 예제에서는 기본 단추 사용자 인터페이스가 진한 파란색 테두리가 있는 <xref:System.Windows.Shapes.Ellipse>로 대체되고 <xref:System.Windows.Media.RadialGradientBrush>를 사용하여 채워집니다. <xref:System.Windows.Controls.ContentPresenter> 컨트롤은 <xref:System.Windows.Controls.Button>의 콘텐츠인 "Click Me!"를 표시합니다. <xref:System.Windows.Controls.Button> 을 클릭하면 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트가 <xref:System.Windows.Controls.Button> 컨트롤의 기본 동작의 일부로 여전히 발생합니다. 결과는 다음 그림에 나와 있습니다.
+이 예제에서는 기본 단추 사용자 인터페이스가 진한 파란색 테두리가 있는 <xref:System.Windows.Shapes.Ellipse> 로 대체되고 <xref:System.Windows.Media.RadialGradientBrush>를 사용하여 채워집니다. <xref:System.Windows.Controls.ContentPresenter> 컨트롤은 <xref:System.Windows.Controls.Button>의 콘텐츠인 "Click Me!"를 표시합니다. <xref:System.Windows.Controls.Button> 을 클릭하면 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트가 <xref:System.Windows.Controls.Button> 컨트롤의 기본 동작의 일부로 여전히 발생합니다. 결과는 다음 그림에 나와 있습니다.
 
 ![타원형 단추 및 두 번째 창](media/introduction-to-wpf/wpfintrofigure2.png)
 
@@ -449,7 +449,7 @@ WPF 컨트롤의 기본 사용자 인터페이스는 일반적으로 다른 컨�
 
 ![기본 모양의 목록 상자](media/introduction-to-wpf/wpfintrofigure18.png)
 
-기본 모양은 <xref:System.Windows.Controls.ListBox>에서 예상되는 모양입니다. 그러나 각 작업의 기본 모양은 작업 이름만 포함합니다. 작업 이름, 설명 및 우선 순위를 표시하려면 <xref:System.Windows.DataTemplate>을 사용하여 <xref:System.Windows.Controls.ListBox> 컨트롤의 바인딩된 목록 항목에 대한 기본 모양을 변경해야 합니다. 다음 XAML은 <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> 특성을 사용 하 여 각 작업에 적용 되는 <xref:System.Windows.DataTemplate>을 정의 합니다.
+기본 모양은 <xref:System.Windows.Controls.ListBox>에서 예상되는 모양입니다. 그러나 각 작업의 기본 모양은 작업 이름만 포함합니다. 작업 이름, 설명 및 우선 순위를 표시하려면 <xref:System.Windows.Controls.ListBox>을 사용하여 <xref:System.Windows.DataTemplate> 컨트롤의 바인딩된 목록 항목에 대한 기본 모양을 변경해야 합니다. 다음 XAML은 <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> 특성을 사용 하 여 각 작업에 적용 되는 <xref:System.Windows.DataTemplate>을 정의 합니다.
 
 ```xaml
 <Window
@@ -504,7 +504,7 @@ WPF 컨트롤의 기본 사용자 인터페이스는 일반적으로 다른 컨�
 
 ![데이터 템플릿을 사용하는 목록 상자](media/introduction-to-wpf/wpfintrofigure19.png)
 
-<xref:System.Windows.Controls.ListBox> 의 동작과 전반적인 모양은 유지되고 목록 상자에 표시되는 콘텐츠의 모양만 변경되었습니다.
+<xref:System.Windows.Controls.ListBox>의 동작과 전반적인 모양은 유지되고 목록 상자에 표시되는 콘텐츠의 모양만 변경되었습니다.
 
 자세한 내용은 [데이터 템플릿 개요](data/data-templating-overview.md)를 참조하세요.
 
@@ -543,7 +543,7 @@ WPF 컨트롤의 기본 사용자 인터페이스는 일반적으로 다른 컨�
 
 자세한 내용은 [스타일 및 템플릿](../../desktop-wpf/fundamentals/styles-templates-overview.md)을 참조하세요.
 
-### <a name="resources"></a>자료
+### <a name="resources"></a>리소스
 
 애플리케이션의 컨트롤은 글꼴 및 배경색부터 컨트롤 템플릿, 데이터 템플릿 및 스타일까지 모든 항목을 포함할 수 있는 동일한 모양을 공유해야 합니다. 사용자 인터페이스 리소스에 대한 WPF 지원을 사용하여 재사용을 위해 이러한 리소스를 단일 위치에 캡슐화할 수 있습니다.
 
@@ -617,7 +617,7 @@ WPF 컨트롤의 기본 사용자 인터페이스는 일반적으로 다른 컨�
 
 ### <a name="custom-controls"></a>사용자 지정 컨트롤
 
-WPF는 다양한 사용자 지정 지원을 제공하지만 기존 WPF 컨트롤이 애플리케이션 또는 해당 사용자의 요구를 충족하지 않는 경우가 발생할 수 있습니다. 이 문제는 다음과 같은 경우에 발생할 수 있습니다.
+WPF는 다양한 사용자 지정 지원을 제공하지만 기존 WPF 컨트롤이 애플리케이션 또는 해당 사용자의 요구를 충족하지 않는 경우가 발생할 수 있습니다. 이 오류는 다음과 같은 경우에 발생할 수 있습니다.
 
 - 사용자가 요구하는 사용자 인터페이스가 기존 WPF 가 구현하는 모양이나 느낌으로 만들 수 없는 경우
 
@@ -650,9 +650,9 @@ WPF는 다양한 사용자 지정 지원을 제공하지만 기존 WPF 컨트롤
 
 ## <a name="wpf-best-practices"></a>WPF 모범 사례
 
-모든 개발 플랫폼과 마찬가지로 WPF를 다양한 방법으로 사용하여 원하는 결과를 얻을 수 있습니다. WPF 애플리케이션이 필요한 사용자 환경을 제공하고 일반적인 사용자 요구를 충족하도록 하는 한 가지 방법으로 접근성, 전역화 및 지역화, 성능에 대한 권장 모범 사례가 있습니다. 자세한 내용은  항목을 참조하세요.
+모든 개발 플랫폼과 마찬가지로 WPF를 다양한 방법으로 사용하여 원하는 결과를 얻을 수 있습니다. WPF 애플리케이션이 필요한 사용자 환경을 제공하고 일반적인 사용자 요구를 충족하도록 하는 한 가지 방법으로 접근성, 전역화 및 지역화, 성능에 대한 권장 모범 사례가 있습니다. 자세한 내용은 다음을 참조하세요.
 
-- [액세스 가능성](../ui-automation/accessibility-best-practices.md)
+- [내게 필요한 옵션](../ui-automation/accessibility-best-practices.md)
 - [WPF 전역화 및 지역화](advanced/wpf-globalization-and-localization-overview.md)
 - [WPF 앱 성능](advanced/optimizing-wpf-application-performance.md)
 - [WPF 보안](security-wpf.md)
@@ -664,7 +664,7 @@ WPF의 주요 기능을 살펴보았습니다. 이제 첫 번째 WPF 앱을 만�
 > [!div class="nextstepaction"]
 > [연습: 내 첫 번째 WPF 데스크톱 앱](getting-started/walkthrough-my-first-wpf-desktop-application.md)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [WPF 시작](getting-started/index.md)
 - [Windows Presentation Foundation](index.md)

@@ -20,7 +20,7 @@ ms.locfileid: "76742065"
 
 *전역화* 는 여러 문화권에서 작동 하는 소프트웨어 제품을 설계 하 고 개발 하는 프로세스입니다.
 
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
 [Windows Forms과 컨트롤에서 국가별 글꼴](international-fonts-in-windows-forms-and-controls.md)  
 Windows Forms에서 국제 문자를 표시하기 위한 글꼴을 선택하는 시기 및 방법을 설명합니다.

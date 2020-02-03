@@ -24,7 +24,7 @@ ms.locfileid: "76747219"
   
  다음 코드 예제에서는 주소 표시줄, 일반적인 브라우저 단추, **파일** 메뉴, 상태 표시줄 및 현재 페이지 제목을 표시하는 제목 표시줄을 구현합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-cpp[System.Windows.Forms.WebBrowser#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser/CPP/form1.cpp#0)]
  [!code-csharp[System.Windows.Forms.WebBrowser#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser/CS/form1.cs#0)]
  [!code-vb[System.Windows.Forms.WebBrowser#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser/VB/form1.vb#0)]  
@@ -34,7 +34,7 @@ ms.locfileid: "76747219"
   
 - `System`, `System.Drawing` 및 `System.Windows.Forms` 어셈블리에 대한 참조  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.WebBrowser>
 - [WebBrowser 컨트롤](webbrowser-control-windows-forms.md)

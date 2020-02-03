@@ -190,7 +190,7 @@ ms.locfileid: "76742364"
   
 - 현재 활성 창이 활성 상태로 유지됩니다.  
   
- 그러나 사용자가 클라이언트 영역이나 비클라이언트 영역을 클릭하여 창을 활성화하면 해당 창이 활성화됩니다. 이 경우 처리 방식은 다음과 같습니다.  
+ 그러나 사용자가 클라이언트 영역이나 비클라이언트 영역을 클릭하여 창을 활성화하면 해당 창이 활성화됩니다. 이 경우 다음과 같습니다.  
   
 - 창이 활성화됩니다.  
   
@@ -229,7 +229,7 @@ ms.locfileid: "76742364"
   
 - **시스템** 메뉴의 **닫기** 항목입니다.  
   
-- ALT+F4 누르기.  
+- ALT+F4를 누릅니다.  
   
 - **닫기** 단추를 누릅니다.  
   
@@ -262,7 +262,7 @@ ms.locfileid: "76742364"
  <xref:System.Windows.Window.Closing> 처리 되지 않거나 처리 되었지만 취소 되지 않은 경우 창이 닫힙니다. 창이 실제로 닫히기 직전에 <xref:System.Windows.Window.Closed> 발생 합니다. 이 시점에서는 창 닫기를 방지할 수 없습니다.  
   
 > [!NOTE]
-> 주 응용 프로그램 창이 닫히거나 (<xref:System.Windows.Application.MainWindow%2A>참조), 마지막 창이 닫히면 응용 프로그램은 자동으로 종료 되도록 구성할 수 있습니다. 자세한 내용은 <xref:System.Windows.Application.ShutdownMode%2A>을 참조하세요.  
+> 주 응용 프로그램 창이 닫히거나 (<xref:System.Windows.Application.MainWindow%2A>참조), 마지막 창이 닫히면 응용 프로그램은 자동으로 종료 되도록 구성할 수 있습니다. 자세한 내용은 <xref:System.Windows.Application.ShutdownMode%2A>를 참조하세요.  
   
  비클라이언트 및 클라이언트 영역에서 제공 하는 메커니즘을 통해 창을 명시적으로 닫을 수 있지만, 다음을 포함 하 여 응용 프로그램이 나 창의 다른 부분에서 동작의 결과로 창이 암시적으로 닫힐 수도 있습니다.  
   
@@ -272,7 +272,7 @@ ms.locfileid: "76742364"
   
 - 주 응용 프로그램 창이 닫혀 <xref:System.Windows.Application.ShutdownMode%2A> <xref:System.Windows.ShutdownMode.OnMainWindowClose>됩니다.  
   
-- <xref:System.Windows.Application.Shutdown%2A>가 호출된 경우  
+- <xref:System.Windows.Application.Shutdown%2A>을 호출합니다.  
   
 > [!NOTE]
 > 창을 닫은 뒤에는 다시 열 수 없습니다.  
@@ -293,7 +293,7 @@ ms.locfileid: "76742364"
   
  <xref:System.Windows.Window.WindowStartupLocation%2A> 속성을 다음 <xref:System.Windows.WindowStartupLocation> 열거형 값 중 하나로 설정 하 여 처음 표시 될 때 <xref:System.Windows.Window>의 초기 위치를 지정할 수도 있습니다.  
   
-- <xref:System.Windows.WindowStartupLocation.CenterOwner>(기본)  
+- <xref:System.Windows.WindowStartupLocation.CenterOwner>(기본값)  
   
 - <xref:System.Windows.WindowStartupLocation.CenterScreen>  
   
@@ -325,13 +325,13 @@ ms.locfileid: "76742364"
   
  창의 너비와 높이를 창 내용의 크기에 맞게 조정 하려는 경우에는 다음 값을 포함 하는 <xref:System.Windows.Window.SizeToContent%2A> 속성을 사용할 수 있습니다.  
   
-- <xref:System.Windows.SizeToContent.Manual>. 아무런 영향이 없습니다(기본값).  
+- <xref:System.Windows.SizeToContent.Manual>입니다. 아무런 영향이 없습니다(기본값).  
   
-- <xref:System.Windows.SizeToContent.Width>. 콘텐츠 너비에 맞게 <xref:System.Windows.FrameworkElement.MinWidth%2A>와 <xref:System.Windows.FrameworkElement.MaxWidth%2A>를 모두 설정 하는 것과 동일한 효과가 있습니다.  
+- <xref:System.Windows.SizeToContent.Width>입니다. 콘텐츠 너비에 맞게 <xref:System.Windows.FrameworkElement.MinWidth%2A>와 <xref:System.Windows.FrameworkElement.MaxWidth%2A>를 모두 설정 하는 것과 동일한 효과가 있습니다.  
   
-- <xref:System.Windows.SizeToContent.Height>. 콘텐츠 높이에 맞게 <xref:System.Windows.FrameworkElement.MinHeight%2A>와 <xref:System.Windows.FrameworkElement.MaxHeight%2A>를 모두 설정 하는 것과 동일한 효과가 있습니다.  
+- <xref:System.Windows.SizeToContent.Height>입니다. 콘텐츠 높이에 맞게 <xref:System.Windows.FrameworkElement.MinHeight%2A>와 <xref:System.Windows.FrameworkElement.MaxHeight%2A>를 모두 설정 하는 것과 동일한 효과가 있습니다.  
   
-- <xref:System.Windows.SizeToContent.WidthAndHeight>. 콘텐츠 너비와 높이에 맞게 <xref:System.Windows.FrameworkElement.MinHeight%2A>와 <xref:System.Windows.FrameworkElement.MaxHeight%2A>를 모두 설정 하는 것과 동일한 효과를 적용 하 고 <xref:System.Windows.FrameworkElement.MinWidth%2A> 및 <xref:System.Windows.FrameworkElement.MaxWidth%2A>을 모두 콘텐츠의 너비로 설정 합니다.  
+- <xref:System.Windows.SizeToContent.WidthAndHeight>입니다. 콘텐츠 너비와 높이에 맞게 <xref:System.Windows.FrameworkElement.MinHeight%2A>와 <xref:System.Windows.FrameworkElement.MaxHeight%2A>를 모두 설정 하는 것과 동일한 효과를 적용 하 고 <xref:System.Windows.FrameworkElement.MinWidth%2A> 및 <xref:System.Windows.FrameworkElement.MaxWidth%2A>을 모두 콘텐츠의 너비로 설정 합니다.  
   
  다음 예는 창이 처음 표시될 때 콘텐츠에 맞도록 수직 및 수평으로 크기를 자동으로 조정하는 창을 보여 줍니다.  
   
@@ -381,7 +381,7 @@ ms.locfileid: "76742364"
   
  다음 <xref:System.Windows.WindowState> 열거형 값 중 하나를 가질 수 있는 <xref:System.Windows.Window.WindowState%2A> 속성을 설정 하 여 창의 상태를 구성할 수 있습니다.  
   
-- <xref:System.Windows.WindowState.Normal>(기본)  
+- <xref:System.Windows.WindowState.Normal>(기본값)  
   
 - <xref:System.Windows.WindowState.Maximized>  
   
@@ -409,7 +409,7 @@ ms.locfileid: "76742364"
   
 - <xref:System.Windows.ResizeMode.CanMinimize>  
   
-- <xref:System.Windows.ResizeMode.CanResize>(기본)  
+- <xref:System.Windows.ResizeMode.CanResize>(기본값)  
   
 - <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
   
@@ -427,7 +427,7 @@ ms.locfileid: "76742364"
   
 - <xref:System.Windows.WindowStyle.None>  
   
-- <xref:System.Windows.WindowStyle.SingleBorderWindow>(기본)  
+- <xref:System.Windows.WindowStyle.SingleBorderWindow>(기본값)  
   
 - <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
   
@@ -466,7 +466,7 @@ ms.locfileid: "76742364"
  [!code-xaml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup1)]  
   
 <a name="SecurityConsiderations"></a>   
-## <a name="security-considerations"></a>보안 고려 사항  
+## <a name="security-considerations"></a>보안 고려사항  
  <xref:System.Windows.Window> 하려면 `UnmanagedCode` 보안 권한을 인스턴스화해야 합니다. 로컬 시스템에 설치되어 실행되는 애플리케이션의 경우에는 애플리케이션에 허용된 권한 집합에 속합니다.  
   
  그러나이는 ClickOnce를 사용 하 여 인터넷 또는 로컬 인트라넷 영역에서 시작 된 응용 프로그램에 부여 된 사용 권한 집합을 벗어납니다. 따라서 사용자는 ClickOnce 보안 경고를 받게 되며 응용 프로그램에 대 한 권한 집합을 완전 신뢰로 승격 시켜야 합니다.  
@@ -479,7 +479,7 @@ ms.locfileid: "76742364"
   
  대화 상자는 기능 수행을 위해 사용자로부터 정보를 수집할 때 많이 사용됩니다. 예를 들어 사용자가 파일을 열려고 할 때 파일 **열기** 대화 상자는 일반적으로 응용 프로그램에서 사용자 로부터 파일 이름을 가져오는 데 표시 됩니다. 자세한 내용은 [대화 상자 개요](dialog-boxes-overview.md)를 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Window>
 - <xref:System.Windows.MessageBox>

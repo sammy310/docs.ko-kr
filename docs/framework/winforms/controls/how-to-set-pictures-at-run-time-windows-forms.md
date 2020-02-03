@@ -97,7 +97,7 @@ Windows Forms <xref:System.Windows.Forms.PictureBox> 컨트롤에 의해 표시 
   
      디자인 타임에 그래픽이 컨트롤에 로드 된 경우에도이 코드는 이미지를 지웁니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.PictureBox>
 - <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>

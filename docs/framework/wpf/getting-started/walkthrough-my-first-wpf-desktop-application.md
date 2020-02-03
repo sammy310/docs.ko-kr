@@ -24,7 +24,7 @@ ms.locfileid: "76746981"
 
 이 문서에서는 대부분의 WPF 응용 프로그램에 공통 된 요소를 포함 하는 WPF (Windows Presentation Foundation) 데스크톱 응용 프로그램을 개발 하는 방법을 보여 줍니다. Extensible Application Markup Language (XAML) 태그, 코드 숨겨진, 응용 프로그램 정의, 컨트롤, 레이아웃, 데이터 바인딩 및 스타일. 응용 프로그램을 개발 하려면 Visual Studio를 사용 합니다. 
 
-이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
+이 자습서에서는 다음 작업 방법을 알아봅니다.
 > [!div class="checklist"]
 >
 > - WPF 프로젝트를 만듭니다.
@@ -42,7 +42,7 @@ ms.locfileid: "76746981"
 >
 > 이 페이지 맨 위에 있는 언어 선택기를 사용 하 여 C# 및 Visual Basic 사이에 샘플 코드의 코드 언어를 전환할 수 있습니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 - **.Net 데스크톱 개발** 워크 로드가 설치 된 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) .
 
@@ -473,8 +473,8 @@ UI에서 같은 형식의 모든 요소에 대해 다양 한 요소의 모양이
 > [!NOTE]
 > 이 샘플은 WPF의 특정 기능을 보여 주며 보안, 지역화 및 접근성과 같은 항목에 대 한 모든 모범 사례를 따르지 않습니다. WPF 및 .NET 앱 개발 모범 사례에 대 한 포괄적인 적용 범위는 다음 항목을 참조 하세요.
 >
-> - [액세스 가능성](../../ui-automation/accessibility-best-practices.md)
-> - [Security](../security-wpf.md)
+> - [내게 필요한 옵션](../../ui-automation/accessibility-best-practices.md)
+> - [보안](../security-wpf.md)
 > - [WPF 전역화 및 지역화](../advanced/wpf-globalization-and-localization-overview.md)
 > - [WPF 성능](../advanced/optimizing-wpf-application-performance.md)
 
@@ -495,7 +495,7 @@ UI에서 같은 형식의 모든 요소에 대해 다양 한 요소의 모양이
 - [그래픽 및 멀티미디어](../graphics-multimedia/index.md)
 - [WPF의 문서](../advanced/documents-in-wpf.md)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [패널 개요](../controls/panels-overview.md)
 - [데이터 템플릿 개요](../data/data-templating-overview.md)

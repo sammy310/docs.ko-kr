@@ -27,7 +27,7 @@ Windows Forms <xref:System.Windows.Forms.ListView> 컨트롤은 아이콘이 포
   
  다음 표에서는 일부 <xref:System.Windows.Forms.ListView> 멤버와 이러한 멤버가 유효한 뷰를 나열 합니다.  
   
-|ListView 구성원|뷰|  
+|ListView 구성원|보기|  
 |---------------------|----------|  
 |<xref:System.Windows.Forms.ListView.Alignment%2A> 속성|<xref:System.Windows.Forms.View.SmallIcon> 또는 <xref:System.Windows.Forms.View.LargeIcon>|  
 |<xref:System.Windows.Forms.ListView.AutoArrange%2A> 속성|<xref:System.Windows.Forms.View.SmallIcon> 또는 <xref:System.Windows.Forms.View.LargeIcon>|  
@@ -37,8 +37,8 @@ Windows Forms <xref:System.Windows.Forms.ListView> 컨트롤은 아이콘이 포
 |<xref:System.Windows.Forms.ListView.FindItemWithText%2A> 메서드|<xref:System.Windows.Forms.View.Details>, <xref:System.Windows.Forms.View.List> 또는 <xref:System.Windows.Forms.View.Tile>|  
 |<xref:System.Windows.Forms.ListView.FindNearestItem%2A> 메서드|<xref:System.Windows.Forms.View.SmallIcon> 또는 <xref:System.Windows.Forms.View.LargeIcon>|  
 |<xref:System.Windows.Forms.ListView.GetItemAt%2A> 메서드|<xref:System.Windows.Forms.View.Details> 또는 <xref:System.Windows.Forms.View.Tile>|  
-|<xref:System.Windows.Forms.ListView.Groups%2A> 속성|제외한 모든 보기 <xref:System.Windows.Forms.View.List>|  
-|<xref:System.Windows.Forms.ListView.HeaderStyle%2A> 속성|<xref:System.Windows.Forms.View.Details>.|  
+|<xref:System.Windows.Forms.ListView.Groups%2A> 속성|<xref:System.Windows.Forms.View.List>를 제외한 모든 뷰|  
+|<xref:System.Windows.Forms.ListView.HeaderStyle%2A> 속성|<xref:System.Windows.Forms.View.Details>입니다.|  
 |<xref:System.Windows.Forms.ListView.InsertionMark%2A> 속성|<xref:System.Windows.Forms.View.LargeIcon>, <xref:System.Windows.Forms.View.SmallIcon> 또는 <xref:System.Windows.Forms.View.Tile>|  
   
  <xref:System.Windows.Forms.ListView> 컨트롤의 키 속성은 컨트롤에 의해 표시 되는 항목을 포함 하는 <xref:System.Windows.Forms.ListView.Items%2A>입니다. <xref:System.Windows.Forms.ListView.SelectedItems%2A> 속성은 컨트롤에서 현재 선택 된 항목의 컬렉션을 포함 합니다. <xref:System.Windows.Forms.ListView.MultiSelect%2A> 속성이 `true`로 설정 된 경우 사용자는 여러 항목을 선택 하 여 한 번에 여러 항목을 끌어서 놓을 수 있습니다. <xref:System.Windows.Forms.ListView.CheckBoxes%2A> 속성이 `true`으로 설정 된 경우 <xref:System.Windows.Forms.ListView> 컨트롤은 항목 옆에 있는 확인란을 표시할 수 있습니다.  
@@ -47,7 +47,7 @@ Windows Forms <xref:System.Windows.Forms.ListView> 컨트롤은 아이콘이 포
   
  또한 <xref:System.Windows.Forms.ListView> 컨트롤은 그룹화, 타일 보기 및 삽입 표시를 포함 하 여 Windows XP 플랫폼에서 사용할 수 있는 비주얼 스타일 및 기타 기능을 지원 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.ListView>
 - [ListView 컨트롤](listview-control-windows-forms.md)

@@ -52,7 +52,7 @@ Pack URI 체계는 콘텐츠를 구성 하 고 식별 하기 위한 모델을 �
 
 URI로 지정 된 체계는 접두사에 의해 정의 됩니다. http, ftp 및 파일은 잘 알려진 예제입니다. Pack URI 체계는 "pack"을 체계로 사용 하 고 두 구성 요소인 authority와 path를 포함 합니다. 다음은 pack URI에 대 한 형식입니다.
 
-pack://*authority*/*path*
+pack://*authority*/*경로*
 
 *기관은* 파트에 포함 된 패키지 유형을 지정 하는 반면 *경로* 는 패키지 내 파트의 위치를 지정 합니다.
 
@@ -115,7 +115,7 @@ WPF는 이러한 파일 형식에 액세스 하기 위해 application:///및 sit
 
 - **경로**: 참조된 어셈블리로 컴파일되는 리소스 파일의 이름. 경로는 다음 형식을 따라야 합니다.
 
-  *AssemblyShortName*{ *;Version*]{ *;PublicKey*];component/*Path*
+  *AssemblyShortName*{ *; Version*] { *; PublicKey*]; 구성 요소/*경로*
 
   - **AssemblyShortName**: 참조된 어셈블리에 대한 약식 이름
 
@@ -297,7 +297,7 @@ Pack URI를 확인 하는 한 가지 단순화는 코드를 리소스 및 콘텐
 
 ### <a name="using-pack-uris-in-markup"></a>태그에서 Pack URI 사용
 
-Pack uri를 사용 하 여 특성의 요소를 설정 하 여 태그에 pack URI를 지정 합니다. 예를 들면 다음과 같습니다.:
+Pack uri를 사용 하 여 특성의 요소를 설정 하 여 태그에 pack URI를 지정 합니다. 예들 들어 다음과 같습니다.
 
 `<element attribute="pack://application:,,,/File.xaml" />`
 
@@ -305,7 +305,7 @@ Pack uri를 사용 하 여 특성의 요소를 설정 하 여 태그에 pack URI
 
 표 1: 태그의 절대 Pack URI
 
-|File|절대 pack URI|
+|파일|절대 pack URI|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
 |리소스 파일 - 로컬 어셈블리|`"pack://application:,,,/ResourceFile.xaml"`|
 |하위 폴더의 리소스 파일 - 로컬 어셈블리|`"pack://application:,,,/Subfolder/ResourceFile.xaml"`|
@@ -321,7 +321,7 @@ Pack uri를 사용 하 여 특성의 요소를 설정 하 여 태그에 pack URI
 
 표 2: 태그의 상대 Pack URI
 
-|File|상대 pack URI|
+|파일|상대 pack URI|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
 |로컬 어셈블리의 리소스 파일|`"/ResourceFile.xaml"`|
 |로컬 어셈블리의 하위 폴더에 있는 리소스 파일|`"/Subfolder/ResourceFile.xaml"`|
@@ -368,7 +368,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 
 표 3: 코드의 절대 Pack URI
 
-|File|절대 pack URI|
+|파일|절대 pack URI|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
 |리소스 파일 - 로컬 어셈블리|`Uri uri = new Uri("pack://application:,,,/ResourceFile.xaml", UriKind.Absolute);`|
 |하위 폴더의 리소스 파일 - 로컬 어셈블리|`Uri uri = new Uri("pack://application:,,,/Subfolder/ResourceFile.xaml", UriKind.Absolute);`|
@@ -384,7 +384,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 
 표 4: 코드의 상대 Pack URI
 
-|File|상대 pack URI|
+|파일|상대 pack URI|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
 |리소스 파일 - 로컬 어셈블리|`Uri uri = new Uri("/ResourceFile.xaml", UriKind.Relative);`|
 |하위 폴더의 리소스 파일 - 로컬 어셈블리|`Uri uri = new Uri("/Subfolder/ResourceFile.xaml", UriKind.Relative);`|
@@ -433,7 +433,7 @@ WPF에서 다양 한 탐색 방법에 대 한 자세한 내용은 [탐색 개요
 
 [!code-xaml[WindowIconSnippets#WindowIconSetXAML](~/samples/snippets/xaml/VS_Snippets_Wpf/WindowIconSnippets/XAML/MainWindow.xaml#windowiconsetxaml)]
 
-자세한 내용은 <xref:System.Windows.Window.Icon%2A>를 참조하세요.
+자세한 내용은 <xref:System.Windows.Window.Icon%2A>을 참조하세요.
 
 <a name="Loading_Image__Audio__and_Video_Files"></a>
 
@@ -459,6 +459,6 @@ WPF를 사용 하면 다음 예제와 같이 응용 프로그램에서 다양 �
 
 WPF의 테마에 대 한 개요는 [스타일 지정 및 템플릿](../../../desktop-wpf/fundamentals/styles-templates-overview.md)을 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [WPF 애플리케이션 리소스, 콘텐츠 및 데이터 파일](wpf-application-resource-content-and-data-files.md)

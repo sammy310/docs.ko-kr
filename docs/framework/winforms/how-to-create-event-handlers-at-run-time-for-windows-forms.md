@@ -73,7 +73,7 @@ Visual Studio에서 Windows Forms 디자이너 사용 하 여 이벤트를 만�
 
      위의 Visual Basic 코드에 설명 된 <xref:System.ComponentModel.EventHandlerList.AddHandler%2A> 메서드는 단추에 대 한 클릭 이벤트 처리기를 설정 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Forms에서 이벤트 처리기 만들기](creating-event-handlers-in-windows-forms.md)
 - [이벤트 처리기 개요](event-handlers-overview-windows-forms.md)

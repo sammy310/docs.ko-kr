@@ -62,6 +62,6 @@ ms.locfileid: "76741970"
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\CircularTracing`
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [AppFabric 모니터링 샘플](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

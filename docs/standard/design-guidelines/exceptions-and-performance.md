@@ -75,7 +75,7 @@ public struct DateTime
 
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
 - [예외 디자인 지침](../../../docs/standard/design-guidelines/exceptions.md)

@@ -34,7 +34,7 @@ Windows Forms `Panel` 컨트롤은 다른 컨트롤에 대해 식별 가능한 �
  이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.  
   
 ## <a name="related-sections"></a>관련 섹션  
- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)  
+ [Windows Forms에서 사용할 컨트롤](controls-to-use-on-windows-forms.md)  
  사용 방법에 대한 정보 링크를 포함하는 Windows Forms 컨트롤의 전체 목록을 제공합니다.  
   
  [방법: 런타임에 컨트롤 컬렉션에서 컨트롤 추가 또는 제거](how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time.md)  

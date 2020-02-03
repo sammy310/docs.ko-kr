@@ -29,11 +29,11 @@ Windows 기반 응용 프로그램의 UI (사용자 인터페이스) 레이아�
 
 3. **서식** 메뉴에서 **맞춤**을 선택 하 고 사용 가능한 7 가지 선택 항목 중 하나를 선택 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Forms 컨트롤](index.md)
 - [방법: Windows Forms에 컨트롤 추가](how-to-add-controls-to-windows-forms.md)
-- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)
+- [Windows Forms에서 사용할 컨트롤](controls-to-use-on-windows-forms.md)
 - [기능별 Windows Forms 컨트롤](windows-forms-controls-by-function.md)
 - [연습: Windows Forms에서 맞춤선을 사용하여 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [연습: TableLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)

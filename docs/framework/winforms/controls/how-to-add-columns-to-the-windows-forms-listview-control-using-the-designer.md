@@ -28,7 +28,7 @@ Windows Forms <xref:System.Windows.Forms.ListView> 컨트롤은 **자세히** �
 
 3. **추가** 단추를 사용 하 여 새 열을 추가 합니다. 그런 다음 열 머리글을 선택 하 고 해당 텍스트 (열의 캡션), 텍스트 맞춤 및 너비를 설정할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ListView 컨트롤 개요](listview-control-overview-windows-forms.md)
 - [방법: Windows Forms ListView 컨트롤을 사용하여 항목 추가 및 제거](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

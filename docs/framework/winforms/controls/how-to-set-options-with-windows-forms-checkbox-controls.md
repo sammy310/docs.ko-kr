@@ -65,7 +65,7 @@ Windows Forms <xref:System.Windows.Forms.CheckBox> 컨트롤은 사용자에 게
        }  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.CheckBox>
 - [CheckBox 컨트롤 개요](checkbox-control-overview-windows-forms.md)

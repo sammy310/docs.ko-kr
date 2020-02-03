@@ -14,7 +14,7 @@ ms.lasthandoff: 01/24/2020
 ms.locfileid: "76745744"
 ---
 # <a name="flowlayoutpanel-control-windows-forms"></a>FlowLayoutPanel 컨트롤(Windows Forms)
-`FlowLayoutPanel` 컨트롤은 수평 또는 수직 방향으로 내용을 정렬합니다. 컨트롤 내용을 한 행에서 다음 행으로 또는 한 열에서 다음 열로 줄 바꿈할 수 있습니다. 또는 컨트롤 내용이 줄 바꿈되는 대신 잘릴 수 있습니다.  
+`FlowLayoutPanel` 컨트롤은 가로 또는 세로 흐름 방향으로 내용을 정렬 합니다. 컨트롤 내용을 한 행에서 다음 행으로 또는 한 열에서 다음 열로 줄 바꿈할 수 있습니다. 또는 컨트롤 내용이 줄 바꿈되는 대신 잘릴 수 있습니다.  
   
  이 섹션의 항목에서는 `FlowLayoutPanel` 기능을 애플리케이션에 빌드할 수 있게 해주는 개념 및 기술을 설명합니다.  
   

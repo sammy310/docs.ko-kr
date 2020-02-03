@@ -28,7 +28,7 @@ ms.locfileid: "76745989"
 
 Web Forms에서 사용할 사용자 지정 컨트롤을 만들려면 [사용자 지정 ASP.NET 서버 컨트롤 개발](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100))을 참조하세요.
 
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
 [연습: 복합 컨트롤 작성](walkthrough-authoring-a-composite-control-with-visual-csharp.md)\
 C#에서 간단한 복합 컨트롤을 만드는 방법을 보여 줍니다.
@@ -92,7 +92,7 @@ Windows Forms 디자이너를 로드하지 못할 때 Microsoft Visual Studio에
 [.NET Framework에서 사용자 지정 Windows Forms 컨트롤 개발](developing-custom-windows-forms-controls.md)\
 .NET Framework를 사용하여 사용자 지정 컨트롤을 만드는 방법에 대해 설명합니다.
 
-[Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md)\
+[언어 독립성 및 언어 독립적 구성 요소](../../../standard/language-independence-and-language-independent-components.md)\
 구성 요소의 생성과 사용을 간소화하도록 설계된 공용 언어 런타임을 소개합니다. 이러한 간소화의 중요한 측면은 다양한 프로그래밍 언어를 사용하여 작성된 구성 요소 간의 향상된 상호 운용성에 있습니다. CLS(공용 언어 사양)를 사용하면 여러 프로그래밍 언어를 사용하는 도구와 구성 요소를 만들 수 있습니다.
 
 [연습: 도구 상자에 자동으로 사용자 지정 구성 요소 채우기](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)\

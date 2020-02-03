@@ -121,7 +121,7 @@ ms.locfileid: "76746623"
        }  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>
 - <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>

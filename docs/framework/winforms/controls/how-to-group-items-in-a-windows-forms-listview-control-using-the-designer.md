@@ -41,7 +41,7 @@ ms.locfileid: "76736676"
 
 3. <xref:System.Windows.Forms.ListViewItem.Group%2A> 속성을 선택 하 고 드롭다운 목록에서 그룹을 선택 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.Groups%2A>

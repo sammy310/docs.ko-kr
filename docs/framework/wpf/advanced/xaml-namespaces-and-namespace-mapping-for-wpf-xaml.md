@@ -99,7 +99,7 @@ End Namespace
 ```  
   
 ### <a name="mapping-to-current-assemblies"></a>현재 어셈블리에 매핑  
- 사용자 지정 클래스를 참조하는 애플리케이션 코드와 동일한 어셈블리 내에서 `clr-namespace` 참조를 정의하는 경우에는 `assembly`를 생략할 수 있습니다. 등호 다음에 문자열 토큰 없이 `assembly=`를 지정하는 구문도 이와 동일합니다.  
+ 사용자 지정 클래스를 참조하는 애플리케이션 코드와 동일한 어셈블리 내에서 `assembly` 참조를 정의하는 경우에는 `clr-namespace`를 생략할 수 있습니다. 등호 다음에 문자열 토큰 없이 `assembly=`를 지정하는 구문도 이와 동일합니다.  
   
  사용자 지정 클래스는 동일한 어셈블리에 정의된 경우 페이지의 루트 요소로 사용할 수 없습니다. partial 클래스는 매핑할 필요가 없으며 애플리케이션에서 페이지의 partial 클래스가 아닌 클래스 중 XAML에서 요소로 참조하려는 클래스만 매핑하면 됩니다.  
   
@@ -135,7 +135,7 @@ End Namespace
   
  BAML도 정규화되지 않은 어셈블리 이름을 포함해서는 안되지만 PresentationBuildTask를 통해 생성된 컴파일된 BAML에서는 모든 단계를 사용합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [XML 네임 스페이스 이해](https://go.microsoft.com/fwlink/?LinkId=98069)
 - [XAML 개요(WPF)](../../../desktop-wpf/fundamentals/xaml.md)

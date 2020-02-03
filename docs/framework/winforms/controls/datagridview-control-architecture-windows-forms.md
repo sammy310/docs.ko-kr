@@ -120,11 +120,11 @@ ms.locfileid: "76742533"
   
 |셀 형식|호스팅된 컨트롤|열 유형|  
 |---------------|--------------------|-----------------|  
-|<xref:System.Windows.Forms.DataGridViewButtonCell>|N/A|<xref:System.Windows.Forms.DataGridViewButtonColumn>|  
-|<xref:System.Windows.Forms.DataGridViewCheckBoxCell>|N/A|<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|  
+|<xref:System.Windows.Forms.DataGridViewButtonCell>|해당 없음|<xref:System.Windows.Forms.DataGridViewButtonColumn>|  
+|<xref:System.Windows.Forms.DataGridViewCheckBoxCell>|해당 없음|<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|  
 |<xref:System.Windows.Forms.DataGridViewComboBoxCell>|<xref:System.Windows.Forms.DataGridViewComboBoxEditingControl>|<xref:System.Windows.Forms.DataGridViewComboBoxColumn>|  
-|<xref:System.Windows.Forms.DataGridViewImageCell>|N/A|<xref:System.Windows.Forms.DataGridViewImageColumn>|  
-|<xref:System.Windows.Forms.DataGridViewLinkCell>|N/A|<xref:System.Windows.Forms.DataGridViewLinkColumn>|  
+|<xref:System.Windows.Forms.DataGridViewImageCell>|해당 없음|<xref:System.Windows.Forms.DataGridViewImageColumn>|  
+|<xref:System.Windows.Forms.DataGridViewLinkCell>|해당 없음|<xref:System.Windows.Forms.DataGridViewLinkColumn>|  
 |<xref:System.Windows.Forms.DataGridViewTextBoxCell>|<xref:System.Windows.Forms.DataGridViewTextBoxEditingControl>|<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|  
   
 ### <a name="datagridviewrow"></a>DataGridViewRow  
@@ -136,7 +136,7 @@ ms.locfileid: "76742533"
   
  <xref:System.Windows.Forms.DataGridView> 컨트롤의 <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> 속성을 사용 하도록 설정 하면 새 행을 추가 하는 특수 행이 마지막 행으로 표시 됩니다. 이 행은 <xref:System.Windows.Forms.DataGridView.Rows%2A> 컬렉션의 일부 이지만 주의가 필요한 특수 기능이 있습니다. 자세한 내용은 [Windows Forms DataGridView 컨트롤에서 새 레코드에 행 사용](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [DataGridView 컨트롤 개요](datagridview-control-overview-windows-forms.md)
 - [Windows Forms DataGridView 컨트롤 사용자 지정](customizing-the-windows-forms-datagridview-control.md)

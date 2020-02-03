@@ -22,7 +22,7 @@ Windows Forms <xref:System.Windows.Forms.ListBox> 컨트롤은 사용자가 하�
   
  <xref:System.Windows.Forms.ListBox> 컨트롤에서 항목을 추가 하거나 삭제 하려면 <xref:System.Windows.Forms.ListBox.ObjectCollection.Add%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Insert%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Clear%2A> 또는 <xref:System.Windows.Forms.ListBox.ObjectCollection.Remove%2A> 메서드를 사용 합니다. 또는 디자인 타임에 <xref:System.Windows.Forms.ListBox.Items%2A> 속성을 사용 하 여 목록에 항목을 추가할 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.ListBox>
 - [방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤에서 항목 추가 및 제거](add-and-remove-items-from-a-wf-combobox.md)

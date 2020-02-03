@@ -90,7 +90,7 @@ C# 또는 Visual Basic 명령줄에서 .NET Framework 앱으로 이러한 예제
  [!code-csharp[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/cs/Form1.cs)]
  [!code-vb[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/vb/Form1.vb)]  
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ComponentModel.BackgroundWorker>
 - [방법: 백그라운드에서 작업 실행](how-to-run-an-operation-in-the-background.md)

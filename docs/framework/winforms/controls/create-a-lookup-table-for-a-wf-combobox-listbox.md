@@ -26,14 +26,14 @@ ms.locfileid: "76737374"
   
 ### <a name="orderdetailstable"></a>OrderDetailsTable  
   
-|OrderID|ItemID|Quantity|  
+|OrderID|ItemID|수량|  
 |-------------|------------|--------------|  
 |4085|12|1|  
 |4086|13|3|  
   
 ### <a name="itemtable"></a>ItemTable  
   
-|ID|이름|  
+|ID|속성|  
 |--------|----------|  
 |12|Potato|  
 |13|Chicken|  
@@ -60,7 +60,7 @@ ms.locfileid: "76737374"
     |<xref:System.Windows.Forms.ListControl.DisplayMember%2A>|컨트롤에 표시하려는 데이터 소스 테이블의 열입니다. 이전 시나리오에서이는 `"Name"` (코드에서 설정 하기 위해 따옴표 사용)입니다.|  
     |<xref:System.Windows.Forms.ListControl.ValueMember%2A>|저장된 정보를 포함하는 데이터 소스 테이블의 열입니다. 이전 시나리오에서이는 `"ID"` (코드에서 설정 하기 위해 따옴표 사용)입니다.|  
   
-5. 프로시저에서 <xref:System.Windows.Forms.ControlBindingsCollection> 클래스의 <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> 메서드를 호출하여 양식 입력을 기록하는 테이블에 컨트롤의 <xref:System.Windows.Forms.ListControl.SelectedValue%2A> 속성을 바인딩합니다. 또한 **속성** 창에서 컨트롤의 <xref:System.Windows.Forms.Control.DataBindings%2A> 속성에 액세스 하 여 코드 대신 디자이너에서이 작업을 수행할 수 있습니다. 이전 시나리오에서는이 `OrderDetailsTable`되 고 열은 `"ItemID"`됩니다.  
+5. 프로시저에서 <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> 클래스의 <xref:System.Windows.Forms.ControlBindingsCollection> 메서드를 호출하여 양식 입력을 기록하는 테이블에 컨트롤의 <xref:System.Windows.Forms.ListControl.SelectedValue%2A> 속성을 바인딩합니다. 또한 **속성** 창에서 컨트롤의 <xref:System.Windows.Forms.Control.DataBindings%2A> 속성에 액세스 하 여 코드 대신 디자이너에서이 작업을 수행할 수 있습니다. 이전 시나리오에서는이 `OrderDetailsTable`되 고 열은 `"ItemID"`됩니다.  
   
     ```vb  
     ListBox1.DataBindings.Add("SelectedValue", OrderDetailsTable, "ItemID")  
@@ -70,7 +70,7 @@ ms.locfileid: "76737374"
     listBox1.DataBindings.Add("SelectedValue", OrderDetailsTable, "ItemID");  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [데이터 바인딩 및 Windows Forms](../data-binding-and-windows-forms.md)
 - [ListBox 컨트롤 개요](listbox-control-overview-windows-forms.md)

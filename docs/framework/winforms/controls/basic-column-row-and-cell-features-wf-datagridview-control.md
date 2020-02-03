@@ -53,7 +53,7 @@ ms.locfileid: "76746224"
  [Windows Forms DataGridView 컨트롤에서 셀, 행 및 열 프로그래밍](programming-with-cells-rows-and-columns-in-the-datagrid.md)  
  셀, 행 및 열 개체를 사용하여 프로그래밍하는 방법을 설명하는 항목을 제공합니다.  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>참고 항목
 
 - [DataGridView 컨트롤](datagridview-control-windows-forms.md)
 - [Windows Forms DataGridView 컨트롤의 열 형식](column-types-in-the-windows-forms-datagridview-control.md)

@@ -23,7 +23,7 @@ ms.locfileid: "76746877"
 
 여러 가지 Windows Forms 컨트롤에서 이미지를 표시할 수 있습니다. 이러한 이미지는 저장 명령을 나타내는 단추의 디스켓 아이콘 처럼 컨트롤의 용도를 명확히 나타내는 아이콘 일 수 있습니다. 또는 원하는 모양과 동작을 컨트롤에 제공 하기 위해 아이콘을 배경 이미지로 사용할 수 있습니다.
 
-## <a name="programmatic"></a>기능의
+## <a name="programmatic"></a>프로그래밍 방식
 
 컨트롤의 `Image` 또는 `BackgroundImage` 속성을 <xref:System.Drawing.Image>형식의 개체로 설정 합니다. 일반적으로 <xref:System.Drawing.Image.FromFile%2A> 메서드를 사용 하 여 파일에서 이미지를 로드 합니다.
 
@@ -54,13 +54,13 @@ pictureBox1->Image = Image::FromFile(String::Concat
    "\\Image.gif"));
 ```
 
-## <a name="designer"></a>Designer
+## <a name="designer"></a>디자이너
 
 1. Visual Studio의 **속성** 창에서 컨트롤의 **Image** 또는 **BackgroundImage** 속성을 선택한 다음 줄임표 (Visual studio](./media/visual-studio-ellipsis-button.png)의 줄임표 단추![)를 선택 하 여 **리소스 선택** 대화 상자를 표시 합니다.
 
 2. 표시 하려는 이미지를 선택 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Drawing.Image.FromFile%2A>
 - <xref:System.Drawing.Image>

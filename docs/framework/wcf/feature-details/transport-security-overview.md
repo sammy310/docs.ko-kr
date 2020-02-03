@@ -120,6 +120,6 @@ WCF (Windows Communication Foundation)의 전송 보안 메커니즘은 사용 �
 ## <a name="msmqintegrationbinding-and-netmsmqbinding"></a>MsmqIntegrationBinding 및 NetMsmqBinding  
  메시지 큐 (이전에는 MSMQ 라고 함)를 사용한 전송 보안에 대 한 자세한 설명은 [전송 보안을 사용 하 여 메시지 보안](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [WCF 보안 프로그래밍](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

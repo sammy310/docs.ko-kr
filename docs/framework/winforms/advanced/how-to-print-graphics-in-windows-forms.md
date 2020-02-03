@@ -66,7 +66,7 @@ Windows 기반 응용 프로그램에서 그래픽을 인쇄 하려고 하는 �
        (this, &Form1::printDocument1_PrintPage);  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>

@@ -18,7 +18,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76745574"
 ---
-# <a name="how-to-display-print-preview-in-windows-forms-applications"></a>방법: Windows Forms 응용 프로그램에서 인쇄 미리 보기 표시
+# <a name="how-to-display-print-preview-in-windows-forms-applications"></a>방법: Windows Forms 애플리케이션에서 인쇄 미리 보기 표시
 <xref:System.Windows.Forms.PrintPreviewDialog> 컨트롤을 사용 하면 문서를 인쇄 하기 전에 사용자가 문서를 표시할 수 있습니다.  
   
  이렇게 하려면 <xref:System.Drawing.Printing.PrintDocument> 클래스의 인스턴스를 지정 해야 합니다. 인쇄할 문서입니다. <xref:System.Drawing.Printing.PrintDocument> 구성 요소에서 인쇄 미리 보기를 사용 하는 방법에 대 한 자세한 내용은 [방법: 인쇄 미리 보기를 사용 하 여 Windows Forms에 인쇄](../advanced/how-to-print-in-windows-forms-using-print-preview.md)를 참조 하세요.  
@@ -82,7 +82,7 @@ ms.locfileid: "76745574"
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [PrintDocument 구성 요소](printdocument-component-windows-forms.md)
 - [PrintPreviewDialog 컨트롤](printpreviewdialog-control-windows-forms.md)

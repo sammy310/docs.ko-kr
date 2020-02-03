@@ -30,7 +30,7 @@ ms.locfileid: "76746477"
 > [!NOTE]
 > 폼의 <xref:System.Windows.Forms.Control.DoubleBuffered%2A> 속성을 `true`로 설정 하면 <xref:System.Windows.Forms.Control.Paint> 이벤트의 그래픽 기반 코드를 이중 버퍼링 할 수 있습니다. 이는 아래 코드를 사용할 때 뚜렷한 성능이 향상 되지 않지만 보다 복잡 한 그래픽 조작 코드를 사용할 때 고려해 야 할 사항입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```vb  
 Private Sub Form1_Paint(ByVal sender As Object, ByVal e As _  
@@ -62,7 +62,7 @@ private void Form1_Paint(System.Object sender,
 ## <a name="compiling-the-code"></a>코드 컴파일  
  위의 코드는 폼의 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기에서 실행 되므로 폼을 다시 그릴 때 그래픽이 유지 됩니다. 따라서 폼의 크기를 조정 하거나 다른 폼으로 숨기는 경우에는 그려지는 콘텐츠가 다시 그려지지 않으므로 <xref:System.Windows.Forms.Form.Load> 이벤트 처리기에서 그래픽 관련 메서드를 호출 하지 마십시오.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Drawing.CopyPixelOperation>
 - <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>

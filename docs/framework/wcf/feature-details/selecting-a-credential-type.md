@@ -23,22 +23,22 @@ ms.locfileid: "76746144"
 ## <a name="transport-credential-types"></a>전송 자격 증명 형식  
  다음 표에서는 전송 보안 모드의 바인딩에서 사용할 수 있는 클라이언트 자격 증명 형식을 보여 줍니다. 서비스를 만드는 경우 `ClientCredentialType` 속성을 이러한 값 중 하나로 설정하여 클라이언트가 서비스와 통신하기 위해 제공해야 하는 자격 증명 형식을 지정합니다. 코드 또는 구성 파일에서 형식을 설정할 수 있습니다.  
   
-|설정|설명|  
+|설정|Description|  
 |-------------|-----------------|  
-|None|클라이언트가 자격 증명을 제공할 필요가 없음을 지정합니다. 익명 클라이언트로 변환됩니다.|  
+|없음|클라이언트가 자격 증명을 제공할 필요가 없음을 지정합니다. 익명 클라이언트로 변환됩니다.|  
 |Basic|클라이언트에 대한 기본 인증을 지정합니다. 자세한 내용은 RFC2617-[HTTP authentication: Basic And Digest authentication](ftp://ftp.rfc-editor.org/in-notes/rfc2617.txt)을 참조 하세요.|  
 |Digest|클라이언트에 대한 다이제스트 인증을 지정합니다. 자세한 내용은 RFC2617-[HTTP authentication: Basic And Digest authentication](ftp://ftp.rfc-editor.org/in-notes/rfc2617.txt)을 참조 하세요.|  
 |Ntlm|NTLM(NT LAN Manager) 인증을 지정합니다. 이 인증은 어떤 이유로 Kerberos 인증을 사용할 수 없는 경우에 사용됩니다. <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> 속성을 `false`로 설정 하 여이를 대체 방법으로 사용 하지 않도록 설정할 수도 있습니다. 이렇게 하면 NTLM이 사용 되는 경우 WCF에서 예외를 throw 하는 데 가장 적합 한 작업을 수행 합니다. 이 속성을 `false`로 설정하면 유선을 통해 NTLM 자격 증명을 보낼 수 있습니다.|  
 |Windows|Windows 인증을 지정합니다. Windows 도메인에서 Kerberos 프로토콜만 지정하려면 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> 속성을 `false`로 설정합니다. 기본값은 `true`입니다.|  
 |인증서|X.509 인증서를 사용하여 클라이언트 인증을 수행합니다.|  
-|Password|사용자가 사용자 이름과 암호를 제공해야 합니다. Windows 인증 또는 다른 사용자 지정 솔루션을 사용하여 사용자 이름/암호 쌍의 유효성을 검사합니다.|  
+|암호|사용자가 사용자 이름과 암호를 제공해야 합니다. Windows 인증 또는 다른 사용자 지정 솔루션을 사용하여 사용자 이름/암호 쌍의 유효성을 검사합니다.|  
   
 ### <a name="message-client-credential-types"></a>메시지 클라이언트 자격 증명 형식  
  다음 표에서는 메시지 보안을 사용하는 애플리케이션을 만들 때 사용할 수 있는 자격 증명 형식을 보여 줍니다. 코드 또는 구성 파일에서 이러한 값을 사용할 수 있습니다.  
   
-|설정|설명|  
+|설정|Description|  
 |-------------|-----------------|  
-|None|클라이언트가 자격 증명을 제공할 필요가 없음을 지정합니다. 익명 클라이언트로 변환됩니다.|  
+|없음|클라이언트가 자격 증명을 제공할 필요가 없음을 지정합니다. 익명 클라이언트로 변환됩니다.|  
 |Windows|Windows 자격 증명으로 설정된 보안 컨텍스트에서 SOAP 메시지 교환을 수행할 수 있습니다.|  
 |사용자 이름|서비스에서 사용자 이름 자격 증명을 사용하여 클라이언트를 인증하도록 요구할 수 있습니다. WCF에서는 서명 생성 또는 데이터 암호화와 같은 사용자 이름을 가진 암호화 작업을 허용 하지 않습니다. WCF는 사용자 이름 자격 증명을 사용할 때 전송 보안이 유지 되도록 합니다.|  
 |인증서|서비스에서 X.509 인증서를 사용하여 클라이언트를 인증하도록 요구할 수 있습니다.|  
@@ -97,7 +97,7 @@ ms.locfileid: "76746144"
   
  자격 증명 및 보안 세션에 대 한 자세한 내용은 보안 [세션의 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A?displayProperty=nameWithType>
@@ -111,6 +111,6 @@ ms.locfileid: "76746144"
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A?displayProperty=nameWithType>
 - [보안 개념](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [서비스 및 클라이언트에 보안 설정](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [WCF 보안 프로그래밍](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
 - [HTTP 전송 보안](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

@@ -27,7 +27,7 @@ ms.locfileid: "76738728"
 
 이 항목의 코드를 단일 목록으로 복사 하려면 [방법: Windows Forms DataGridView 컨트롤에서 데이터 입력 중에 발생 하는 오류 처리를](handle-errors-that-occur-during-data-entry-in-the-datagrid.md)참조 하세요.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 연습을 완료하려면 다음 사항이 필요합니다.
 
@@ -68,13 +68,13 @@ ms.locfileid: "76738728"
     [!code-csharp[System.Windows.Forms.DataGridView.DataError#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/CS/errorhandling.cs#20)]
     [!code-vb[System.Windows.Forms.DataGridView.DataError#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#20)]
 
-## <a name="testing-the-application"></a>응용 프로그램 테스트
+## <a name="testing-the-application"></a>애플리케이션 테스트
 
 이제 폼을 테스트 하 여 예상 대로 동작 하는지 확인할 수 있습니다.
 
 #### <a name="to-test-the-form"></a>폼을 테스트 하려면
 
-- F5 키를 눌러 응용 프로그램을 실행합니다.
+- F5 키를 눌러 애플리케이션을 실행합니다.
 
   Customers 테이블의 데이터로 채워진 <xref:System.Windows.Forms.DataGridView> 컨트롤이 표시 됩니다. `CustomerID`에 중복 값을 입력 하 고 편집 내용을 커밋하면 셀 값이 자동으로 되돌아가고 데이터 입력 오류를 표시 하는 <xref:System.Windows.Forms.MessageBox> 표시 됩니다.
 
@@ -92,7 +92,7 @@ ms.locfileid: "76738728"
 
 - 셀의 모양을 사용자 지정 합니다. 자세한 내용은 [방법: Datagridview 컨트롤 Windows Forms에서 셀 모양 사용자 지정](customize-the-appearance-of-cells-in-the-datagrid.md) 및 [방법: Windows Forms Datagridview 컨트롤의 기본 셀 스타일 설정](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)을 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>

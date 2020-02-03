@@ -76,6 +76,6 @@ Windows Forms `ListView` 컨트롤은 아이콘이 포함된 항목 목록을 �
  [방법: Windows Forms으로 다중 창 사용자 인터페이스 만들기](how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  여러 창으로 Windows Form의 레이아웃을 작성하기 위한 지침을 제공합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)
+- [Windows Forms에서 사용할 컨트롤](controls-to-use-on-windows-forms.md)

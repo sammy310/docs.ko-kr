@@ -47,17 +47,17 @@ ms.locfileid: "76742305"
  ADO.NET data 개체  
  ADO.NET는에 바인딩하는 데 적합 한 여러 데이터 구조를 제공 합니다. 각각은 복잡성과 복잡도에 따라 다릅니다.  
   
-- <xref:System.Data.DataColumn>. <xref:System.Data.DataColumn>은 테이블을 구성 하는 여러 열이 있는 <xref:System.Data.DataTable>의 필수 구성 요소입니다. 각 <xref:System.Data.DataColumn>에는 열이 보유 하는 데이터의 종류를 결정 하는 <xref:System.Data.DataColumn.DataType%2A> 속성이 있습니다. 예를 들어 자동차를 설명 하는 테이블의 자동차를 만듭니다. 컨트롤 (예: <xref:System.Windows.Forms.TextBox> 컨트롤의 <xref:System.Windows.Forms.Control.Text%2A> 속성)을 데이터 테이블 내의 열에 간단 하 게 바인딩할 수 있습니다.  
+- <xref:System.Data.DataColumn>입니다. <xref:System.Data.DataColumn>은 테이블을 구성 하는 여러 열이 있는 <xref:System.Data.DataTable>의 필수 구성 요소입니다. 각 <xref:System.Data.DataColumn>에는 열이 보유 하는 데이터의 종류를 결정 하는 <xref:System.Data.DataColumn.DataType%2A> 속성이 있습니다. 예를 들어 자동차를 설명 하는 테이블의 자동차를 만듭니다. 컨트롤 (예: <xref:System.Windows.Forms.TextBox> 컨트롤의 <xref:System.Windows.Forms.Control.Text%2A> 속성)을 데이터 테이블 내의 열에 간단 하 게 바인딩할 수 있습니다.  
   
-- <xref:System.Data.DataTable>. <xref:System.Data.DataTable>는 ADO.NET의 행과 열이 있는 테이블의 표현입니다. 데이터 테이블에는 두 개의 컬렉션이 포함 되어 있습니다. 즉, 지정 된 테이블의 데이터 열 (궁극적으로는 해당 테이블에 입력할 수 있는 데이터의 종류를 결정 함)을 나타내고 지정 된 테이블의 데이터 행을 나타내는 <xref:System.Data.DataRow>를 <xref:System.Data.DataColumn>합니다. 데이터 테이블에 포함 된 정보에 컨트롤을 복잡 하 게 바인딩할 수 있습니다. 예를 들어 <xref:System.Windows.Forms.DataGridView> 컨트롤을 데이터 테이블에 바인딩할 수 있습니다. 그러나 <xref:System.Data.DataTable>에 바인딩하는 경우에는 테이블의 기본 뷰에 대 한 실제 바인딩입니다.  
+- <xref:System.Data.DataTable>입니다. <xref:System.Data.DataTable>는 ADO.NET의 행과 열이 있는 테이블의 표현입니다. 데이터 테이블에는 두 개의 컬렉션이 포함 되어 있습니다. 즉, 지정 된 테이블의 데이터 열 (궁극적으로는 해당 테이블에 입력할 수 있는 데이터의 종류를 결정 함)을 나타내고 지정 된 테이블의 데이터 행을 나타내는 <xref:System.Data.DataRow>를 <xref:System.Data.DataColumn>합니다. 데이터 테이블에 포함 된 정보에 컨트롤을 복잡 하 게 바인딩할 수 있습니다. 예를 들어 <xref:System.Windows.Forms.DataGridView> 컨트롤을 데이터 테이블에 바인딩할 수 있습니다. 그러나 <xref:System.Data.DataTable>에 바인딩하는 경우에는 테이블의 기본 뷰에 대 한 실제 바인딩입니다.  
   
-- <xref:System.Data.DataView>. <xref:System.Data.DataView>은 필터링 하거나 정렬할 수 있는 단일 데이터 테이블의 사용자 지정 된 뷰입니다. 데이터 뷰는 복합 바인딩된 컨트롤에서 사용 하는 데이터 "스냅숏"입니다. 데이터 뷰 내에서 데이터를 단순 하 게 바인딩하거나 복잡 하 게 바인딩할 수 있지만 데이터 원본이 깨끗 하 고 업데이트 되는 것이 아니라 데이터의 고정 "그림"에 바인딩합니다.  
+- <xref:System.Data.DataView>입니다. <xref:System.Data.DataView>은 필터링 하거나 정렬할 수 있는 단일 데이터 테이블의 사용자 지정 된 뷰입니다. 데이터 뷰는 복합 바인딩된 컨트롤에서 사용 하는 데이터 "스냅숏"입니다. 데이터 뷰 내에서 데이터를 단순 하 게 바인딩하거나 복잡 하 게 바인딩할 수 있지만 데이터 원본이 깨끗 하 고 업데이트 되는 것이 아니라 데이터의 고정 "그림"에 바인딩합니다.  
   
-- <xref:System.Data.DataSet>. <xref:System.Data.DataSet>은 데이터베이스의 데이터에 대 한 테이블, 관계 및 제약 조건의 컬렉션입니다. 데이터 집합 내에서 데이터를 단순 하 게 바인딩하거나 복잡 하 게 바인딩할 수 있지만 <xref:System.Data.DataSet>의 기본 <xref:System.Data.DataViewManager>에 바인딩합니다 (다음 글머리 기호 참조).  
+- <xref:System.Data.DataSet>입니다. <xref:System.Data.DataSet>은 데이터베이스의 데이터에 대 한 테이블, 관계 및 제약 조건의 컬렉션입니다. 데이터 집합 내에서 데이터를 단순 하 게 바인딩하거나 복잡 하 게 바인딩할 수 있지만 <xref:System.Data.DataSet>의 기본 <xref:System.Data.DataViewManager>에 바인딩합니다 (다음 글머리 기호 참조).  
   
-- <xref:System.Data.DataViewManager>. <xref:System.Data.DataViewManager>은 <xref:System.Data.DataView>와 유사 하지만 관계가 포함 된 전체 <xref:System.Data.DataSet>의 사용자 지정 된 뷰입니다. <xref:System.Data.DataViewManager.DataViewSettings%2A> 컬렉션을 사용 하 여 지정 된 테이블에 대 한 <xref:System.Data.DataViewManager>에 있는 모든 뷰에 대해 기본 필터 및 정렬 옵션을 설정할 수 있습니다.  
+- <xref:System.Data.DataViewManager>입니다. <xref:System.Data.DataViewManager>은 <xref:System.Data.DataView>와 유사 하지만 관계가 포함 된 전체 <xref:System.Data.DataSet>의 사용자 지정 된 뷰입니다. <xref:System.Data.DataViewManager.DataViewSettings%2A> 컬렉션을 사용 하 여 지정 된 테이블에 대 한 <xref:System.Data.DataViewManager>에 있는 모든 뷰에 대해 기본 필터 및 정렬 옵션을 설정할 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Forms 데이터 바인딩의 변경 알림](change-notification-in-windows-forms-data-binding.md)
 - [데이터 바인딩 및 Windows Forms](data-binding-and-windows-forms.md)

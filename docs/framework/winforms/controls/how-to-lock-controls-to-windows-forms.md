@@ -47,9 +47,9 @@ Visual Studio의 **속성** 창에서 **Locked** 속성을 선택 하 고 **true
 
 **속성** 창에서 **Locked** 속성을 선택 하 고 **false**를 선택 합니다. (이름을 두 번 클릭 하면 속성 설정이 전환 됩니다.)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Forms 컨트롤](index.md)
 - [개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)
+- [Windows Forms에서 사용할 컨트롤](controls-to-use-on-windows-forms.md)
 - [기능별 Windows Forms 컨트롤](windows-forms-controls-by-function.md)

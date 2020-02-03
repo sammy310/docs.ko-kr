@@ -23,7 +23,7 @@ Windows Forms <xref:System.Windows.Forms.Label> 컨트롤은 사용자가 편집
   
  레이블에 표시 되는 캡션은 <xref:System.Windows.Forms.Label.Text%2A> 속성에 포함 되어 있습니다. <xref:System.Windows.Forms.Label.TextAlign%2A> 속성을 사용 하면 레이블 내의 텍스트 맞춤을 설정할 수 있습니다. 자세한 내용은 [방법: Windows Forms 컨트롤에 표시 되는 텍스트 설정](how-to-set-the-text-displayed-by-a-windows-forms-control.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.Label>
 - [방법: 내용에 맞게 Windows Forms Label 컨트롤 크기 조정](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)

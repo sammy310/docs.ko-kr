@@ -19,7 +19,7 @@ ms.locfileid: "76746915"
 
 ## <a name="wpf-designer-walkthroughs"></a>WPF 디자이너 연습
 
-|제목|설명|
+|제목|Description|
 |-----------|-----------------|
 |[연습: WPF Designer를 사용 하 여 간단한 WPF 응용 프로그램 빌드](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546972(v=vs.100))|WPF Designer를 사용 하 여 간단한 WPF 응용 프로그램을 빌드하는 방법을 보여 줍니다.|
 |[연습: 동적 레이아웃 생성](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514519(v=vs.100))|<xref:System.Windows.Controls.Grid> panel 컨트롤을 사용 하 여 동적 레이아웃을 만드는 방법을 보여 줍니다.|
@@ -29,7 +29,7 @@ ms.locfileid: "76746915"
 
 ## <a name="wpf-walkthroughs"></a>WPF 연습
 
-|제목|설명|
+|제목|Description|
 |-----------|-----------------|
 |[연습: 내 첫 WPF 데스크톱 애플리케이션](walkthrough-my-first-wpf-desktop-application.md)|컨트롤, 레이아웃 및 데이터 바인딩을 포함 하는 WPF의 여러 일반적인 기능을 사용 하 여 WPF 응용 프로그램을 만드는 방법을 보여 줍니다.|
 |[XAML을 사용하여 단추 만들기](../controls/walkthrough-create-a-button-by-using-xaml.md)|애니메이션 단추를 만드는 방법을 보여 줍니다.|
@@ -38,7 +38,7 @@ ms.locfileid: "76746915"
 
 ## <a name="migration-and-interoperability-in-wpf"></a>WPF의 마이그레이션 및 상호 운용성
 
-|제목|설명|
+|제목|Description|
 |-----------|-----------------|
 |[연습: WPF에서 Windows Forms 컨트롤 호스팅](../advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|WPF 응용 프로그램에서 Windows Forms <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> 컨트롤을 호스트 하는 방법을 보여 줍니다.|
 |[연습: WPF에서 Windows Forms 복합 컨트롤 호스팅](../advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램에서 Windows Forms 데이터 엔트리 복합 컨트롤을 호스트 하는 방법을 보여 줍니다.|
@@ -48,6 +48,6 @@ ms.locfileid: "76746915"
 
 ## <a name="related-sections"></a>관련 섹션
 
-|제목|설명|
+|제목|Description|
 |-----------|-----------------|
 |[Visual Studio 연습](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/szatc41e(v=vs.100))|Visual Studio의 모든 프로그래밍 영역에 대 한 관련 연습 목록을 제공 합니다.|

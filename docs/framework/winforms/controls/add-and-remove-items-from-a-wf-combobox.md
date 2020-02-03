@@ -40,7 +40,7 @@ ms.locfileid: "76746298"
     comboBox1->Items->Add("Tokyo");  
     ```  
   
-     - 또는  
+     - 또는-  
   
 2. `Insert` 메서드를 사용 하 여 목록에서 원하는 지점에 문자열 또는 개체를 삽입 합니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "76746298"
     checkedListBox1->Items->Insert(0, "Copenhagen");  
     ```  
   
-     - 또는  
+     - 또는-  
   
 3. `Items` 컬렉션에 전체 배열을 할당 합니다.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "76746298"
     listBox1->Items->Clear();  
     ```  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>

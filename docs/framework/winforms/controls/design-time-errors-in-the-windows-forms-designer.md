@@ -186,7 +186,7 @@ Visual Studio에서 이벤트 처리기를 만들려고 했지만 이벤트 형�
 
 이 오류는 프로젝트에 잘못 된 .resx 파일이 있는 경우에 발생할 수 있습니다.
 
-이 오류를 해결하려면 다음 단계를 수행합니다.
+이 오류를 수정하려면,
 
 1. 솔루션과 연결 된 .resx 파일을 보려면 솔루션 탐색기의 **모든 파일 표시** 단추를 클릭 합니다.
 2. .Resx 파일을 마우스 오른쪽 단추로 클릭 하 고 **열기**를 선택 하 여 .resx 파일을 XML 편집기에서 로드 합니다.
@@ -196,7 +196,7 @@ Visual Studio에서 이벤트 처리기를 만들려고 했지만 이벤트 형�
 
 이 오류는 프로젝트에 기본 문화권에 대 한 잘못 된 .resx 파일이 있는 경우에 발생할 수 있습니다.
 
-이 오류를 해결하려면 다음 단계를 수행합니다.
+이 오류를 수정하려면,
 
 1. 솔루션과 연결 된 .resx 파일을 보려면 솔루션 탐색기의 **모든 파일 표시** 단추를 클릭 합니다.
 2. .Resx 파일을 마우스 오른쪽 단추로 클릭 하 고 **열기**를 선택 하 여 .resx 파일을 XML 편집기에서 로드 합니다.
@@ -406,7 +406,7 @@ Visual Studio에서 클래스를 로드했는데 해당 클래스의 디자이�
 
 Visual Studio에서 클래스를 로드 했지만 클래스를 디자인할 수 없습니다. 대신 클래스를 마우스 오른쪽 단추로 클릭 하 고 **코드 보기**를 선택 하 여 코드 뷰에서 클래스를 편집 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디자이너를 사용 하 여 Windows Forms 컨트롤 개발](developing-windows-forms-controls-at-design-time.md)
 - [Windows Forms 디자이너 포럼](https://social.msdn.microsoft.com/Forums/windows/home?forum=winformsdesigner)

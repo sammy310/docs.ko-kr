@@ -22,7 +22,7 @@ ms.locfileid: "76745918"
 # <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>방법: Windows Forms LinkLabel 컨트롤에서 웹 페이지 표시(Visual Basic)
 이 예제에서는 사용자가 Windows Forms <xref:System.Windows.Forms.LinkLabel> 컨트롤을 클릭할 때 기본 브라우저에 웹 페이지를 표시 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```vb  
 Private Sub Form1_Load(ByVal sender As System.Object, ByVal e _  
@@ -42,14 +42,14 @@ End Sub
   
 - 이름이 `Form1`Windows 폼입니다.  
   
-- `LinkLabel1`이라는 <xref:System.Windows.Forms.LinkLabel> 컨트롤  
+- <xref:System.Windows.Forms.LinkLabel>이라는 `LinkLabel1` 컨트롤  
   
 - 활성 인터넷 연결입니다.  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
- <xref:System.Diagnostics.Process.Start%2A> 메서드에 대 한 호출에는 완전 신뢰가 필요 합니다. 자세한 내용은 <xref:System.Security.SecurityException>를 참조하세요.  
+ <xref:System.Diagnostics.Process.Start%2A> 메서드에 대 한 호출에는 완전 신뢰가 필요 합니다. 자세한 내용은 <xref:System.Security.SecurityException>을 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.LinkLabel>
 - [LinkLabel 컨트롤](linklabel-control-windows-forms.md)

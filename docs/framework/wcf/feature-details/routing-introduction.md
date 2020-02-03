@@ -364,7 +364,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), backupList);
 
 다음 표에서는 백업 엔드포인트 목록 사용과 호환되는 패턴에 대해 설명하고 특정 패턴에 대한 오류 처리의 세부 정보를 설명하는 참고 사항을 제공합니다.
 
-|무늬|세션|트랜잭션|받기 컨텍스트|백업 목록 지원|참고|
+|무늬|세션|트랜잭션|받기 컨텍스트|백업 목록 지원|참고 사항|
 |-------------|-------------|-----------------|---------------------|---------------------------|-----------|
 |단방향||||예|백업 엔드포인트에 메시지를 다시 보내려고 시도합니다. 이 메시지가 멀티캐스트되는 경우 실패한 채널의 메시지만 백업 대상으로 이동됩니다.|
 |단방향||✔️||아니요|예외가 throw되고 트랜잭션이 롤백됩니다.|
@@ -381,7 +381,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), backupList);
 |이중||||아니요|비-세션 이중 통신은 현재 지원되지 않습니다.|
 |이중|✔️|||예|백업 대상으로 보냅니다.|
 
-## <a name="hosting"></a>호스팅
+## <a name="hosting"></a>Hosting
 
 라우팅 서비스는 WCF 서비스로 구현되므로 애플리케이션 내에서 자체 호스트되거나 IIS 또는 WAS에서 호스트되어야 합니다. 자동 시작 및 수명 주기 관리 기능을 사용하려면 호스팅 환경에서 이러한 기능을 제공하는 IIS, WAS 또는 Windows 서비스 애플리케이션에서 라우팅 서비스를 호스트하는 것이 좋습니다.
 
@@ -413,7 +413,7 @@ WCF 라우팅 서비스는 메시지 보내기 및 받기 모두에 대해 가�
 
 라우팅 서비스에서 Windows 자격 증명 가장을 사용하려면 자격 증명과 서비스 둘 다를 구성해야 합니다. 클라이언트 자격 증명 개체(<xref:System.ServiceModel.Security.WindowsClientCredential>, <xref:System.ServiceModel.ChannelFactory>에서 액세스)는 가장을 허용하기 위해 반드시 설정해야 하는 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 속성을 정의합니다. 마지막으로, 서비스에서 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 동작을 구성해서 `ImpersonateCallerForAllOperations`를 `true`로 설정해야 합니다. 라우팅 서비스는 이 플래그를 사용하여 가장을 사용하는 메시지를 전달하기 위한 클라이언트를 만들지 여부를 결정합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메시지 필터](message-filters.md)
 - [라우팅 계약](routing-contracts.md)

@@ -30,7 +30,7 @@ ms.locfileid: "76740962"
   
  마우스 포인터를 변경 하는 기본 방법은 컨트롤의 <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> 또는 <xref:System.Windows.Forms.Control.DefaultCursor%2A> 속성을 새 <xref:System.Windows.Forms.Cursor>설정 하는 것입니다. 마우스 포인터를 변경 하는 예제는 <xref:System.Windows.Forms.Cursor> 클래스의 코드 예제를 참조 하세요. 또한 <xref:System.Windows.Forms.Cursors> 클래스는 손 모양의 포인터와 같이 다양 한 형식의 포인터에 대 한 <xref:System.Windows.Forms.Cursor> 개체 집합을 노출 합니다. 마우스 포인터가 컨트롤에 있을 때마다 모래 시계와 유사한 대기 포인터를 표시 하려면 <xref:System.Windows.Forms.Control> 클래스의 <xref:System.Windows.Forms.Control.UseWaitCursor%2A> 속성을 사용 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.Cursor>
 - [Windows Forms 애플리케이션의 마우스 입력](mouse-input-in-a-windows-forms-application.md)

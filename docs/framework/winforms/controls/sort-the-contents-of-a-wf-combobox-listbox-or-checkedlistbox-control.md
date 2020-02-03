@@ -22,11 +22,11 @@ Windows Forms 컨트롤은 데이터 바인딩된 경우에는 정렬 되지 않
   
 ### <a name="to-sort-the-list"></a>목록을 정렬 하려면  
   
-1. `Sorted` 속성을 `true`으로 설정합니다.  
+1. `Sorted` 속성을 `true`로 설정합니다.  
   
      이 설정은 모든 기존 목록 항목의 위치를 정렬 된 순서로 설정 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>

@@ -94,6 +94,6 @@ Press <ENTER> to terminate client.
 
 4. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요. 이 서비스를 호출할 수 있는 클라이언트 응용 프로그램을 만드는 방법에 대 한 예제는 [방법: 클라이언트 만들기](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)를 참조 하세요.
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>참고 항목
 
 - [AppFabric 호스팅 및 지 속성 샘플](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

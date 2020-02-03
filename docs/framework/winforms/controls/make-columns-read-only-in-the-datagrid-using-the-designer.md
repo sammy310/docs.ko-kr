@@ -30,7 +30,7 @@ ms.locfileid: "76744970"
     > [!NOTE]
     > **열 추가** 대화 상자에서 **읽기 전용** 확인란을 선택 하 여 열을 추가 하는 경우에도 열을 읽기 전용으로 설정할 수 있습니다.
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A?displayProperty=nameWithType>

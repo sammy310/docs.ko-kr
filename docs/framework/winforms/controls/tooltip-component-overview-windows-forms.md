@@ -22,7 +22,7 @@ Windows Forms <xref:System.Windows.Forms.ToolTip> 구성 요소는 사용자가 
   
  <xref:System.Windows.Forms.ToolTip> 구성 요소의 주요 메서드는 <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> 및 <xref:System.Windows.Forms.ToolTip.GetToolTip%2A>됩니다. <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> 메서드를 사용 하 여 컨트롤에 대해 표시 되는 도구 설명을 설정할 수 있습니다. 자세한 내용은 [방법: 디자인 타임에 Windows Form의 컨트롤에 도구 설명 설정](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)을 참조 하세요. 키 속성은 도구 설명이 나타나도록 `true`로 설정 해야 하 고, 도구 설명 문자열이 표시 되는 시간을 설정 하는 <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A>, 도구 설명에 표시 되는 컨트롤을 가리켜야 하는 시간, 다음 도구 설명 창이 표시 될 때까지 걸리는 시간을 설정 하는 <xref:System.Windows.Forms.ToolTip.Active%2A>입니다. 자세한 내용은 [방법: Windows Forms ToolTip 구성 요소의 지연 변경](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.ToolTip>
 - [방법: 디자인 타임에 Windows Form의 컨트롤에 도구 설명 설정](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)

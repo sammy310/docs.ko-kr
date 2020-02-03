@@ -30,7 +30,7 @@ Windows Forms 컨트롤은 <xref:System.Windows.Forms.Control?displayProperty=na
   
  Windows Forms 컨트롤의 기본 클래스인 <xref:System.Windows.Forms.Control>는 클라이언트 쪽 Windows 기반 응용 프로그램에서 시각적 표시에 필요한 통로를 제공 합니다. <xref:System.Windows.Forms.Control> 창 핸들을 제공 하 고, 메시지 라우팅을 처리 하 고, 마우스 및 키보드 이벤트와 기타 많은 사용자 인터페이스 이벤트를 제공 합니다. 고급 레이아웃을 제공 하 고 시각적 표시와 관련 된 속성 (예: <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>등)을 제공 합니다. 또한 보안, 스레딩 지원 및 ActiveX 컨트롤과의 상호 운용성을 제공 합니다. 인프라의 상당 부분이 기본 클래스에서 제공되므로 비교적 쉽게 사용자 고유의 Windows Forms 컨트롤을 개발할 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [방법: 간단한 Windows Forms 컨트롤 개발](how-to-develop-a-simple-windows-forms-control.md)
 - [합성 Windows Forms 컨트롤 개발](developing-a-composite-windows-forms-control.md)

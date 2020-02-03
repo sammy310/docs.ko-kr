@@ -21,7 +21,7 @@ SQLitePCLRaw는 다양 한 플랫폼에서 적절 한 종속성을 쉽게 가져
 
 다른 번들을 사용 하려면 사용 하려는 번들 패키지와 함께 `Microsoft.Data.Sqlite.Core` 패키지를 설치 합니다. 번들은 Microsoft. Data. Sqlite에 의해 자동으로 초기화 됩니다.
 
-| 묶는 | 설명 |
+| 번들 | Description |
 | --- | --- |
 | SQLitePCLRaw bundle_e_sqlite3 | 모든 플랫폼에서 SQLite의 일관 된 버전을 제공 합니다. FTS4, FTS5, JSON1 및 R * 트리 확장을 포함 합니다. 이것이 기본값입니다. |
 | SQLitePCLRaw bundle_green | 시스템 SQLite 라이브러리를 사용 하는 iOS를 제외 하 고 bundle_e_sqlite3와 동일 합니다. |

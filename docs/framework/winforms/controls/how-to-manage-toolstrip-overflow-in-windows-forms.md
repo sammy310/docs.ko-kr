@@ -43,7 +43,7 @@ ms.locfileid: "76736150"
     System.Windows.Forms.ToolStripItemOverflow.Never;
     ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripOverflowButton>

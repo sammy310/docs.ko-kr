@@ -28,7 +28,7 @@ DataGridView 컨트롤을 데이터에 연결 하려면 다음을 수행 합니�
 
 2. 양식의 <xref:System.Windows.Forms.Form.Load> 이벤트 처리기에서 <xref:System.Windows.Forms.DataGridView> 컨트롤을 <xref:System.Windows.Forms.BindingSource>에 바인딩하고 `GetData` 메서드를 호출 하 여 데이터를 검색 합니다.  
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 이 전체 코드 예제에서는 데이터베이스에서 데이터를 검색 하 여 Windows form에서 DataGridView 컨트롤을 채웁니다. 또한 폼에는 데이터를 다시 로드 하 고 변경 내용을 데이터베이스에 전송 하는 단추도 있습니다.  
 
@@ -45,7 +45,7 @@ DataGridView 컨트롤을 데이터에 연결 하려면 다음을 수행 합니�
 [!code-csharp[System.Windows.Forms.DataGridViewBoundEditable](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs)]
 [!code-vb[System.Windows.Forms.DataGridViewBoundEditable](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>

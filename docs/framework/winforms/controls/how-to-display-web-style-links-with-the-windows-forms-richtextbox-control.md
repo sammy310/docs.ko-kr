@@ -117,10 +117,10 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤은 웹 링크를
     }
     ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>
 - <xref:System.Windows.Forms.RichTextBox.LinkClicked>
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox 컨트롤](richtextbox-control-windows-forms.md)
-- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)
+- [Windows Forms에서 사용할 컨트롤](controls-to-use-on-windows-forms.md)

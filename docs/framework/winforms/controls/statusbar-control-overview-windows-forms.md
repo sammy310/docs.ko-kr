@@ -25,7 +25,7 @@ ms.locfileid: "76742870"
   
  <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> 속성을 `false` (기본값)로 설정 하 고 상태 표시줄의 <xref:System.Windows.Forms.StatusBar.Text%2A> 속성을 상태 표시줄에 표시할 텍스트로 설정 하 여 상태 표시줄에 단일 메시지를 표시할 수 있습니다. <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> 속성을 `true`로 설정 하 고 <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>의 <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> 메서드를 사용 하 여 여러 유형의 정보를 표시 하도록 상태 표시줄을 패널로 나눌 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>

@@ -237,6 +237,6 @@ Microsoft Windows 응용 프로그램은 종종 [!INCLUDE[TLA#tla_xaml](../../..
 ## <a name="rebuilding-after-changing-build-type"></a>빌드 형식 변경 후 다시 빌드  
  애플리케이션 데이터 파일의 빌드 형식을 변경한 뒤에는 변경 내용이 적용되도록 전체 애플리케이션을 다시 빌드해야 합니다. 애플리케이션만 빌드하면 변경 내용이 적용되지 않습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [WPF의 Pack URI](pack-uris-in-wpf.md)

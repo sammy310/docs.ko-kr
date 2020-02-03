@@ -77,7 +77,7 @@ ms.locfileid: "76742262"
 
 ## <a name="using-the-custom-control-on-a-form"></a>양식에서 사용자 지정 컨트롤 사용
 
-다음 예제에서는 `FirstControl`을 사용하는 간단한 양식을 보여 줍니다. `TextAlignment` 속성에 대해 각각 다른 값을 가진 세 개의 `FirstControl` 인스턴스를 만듭니다.
+다음 예제에서는 `FirstControl`을 사용하는 간단한 양식을 보여 줍니다. `FirstControl` 속성에 대해 각각 다른 값을 가진 세 개의 `TextAlignment` 인스턴스를 만듭니다.
 
 #### <a name="to-compile-and-run-this-sample"></a>이 샘플을 컴파일하고 실행하려면
 
@@ -104,7 +104,7 @@ ms.locfileid: "76742262"
 [!code-csharp[System.Windows.Forms.FirstControl#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/SimpleForm.cs#10)]
 [!code-vb[System.Windows.Forms.FirstControl#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/SimpleForm.vb#10)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Forms 컨트롤의 속성](properties-in-windows-forms-controls.md)
 - [Windows Forms 컨트롤의 이벤트](events-in-windows-forms-controls.md)

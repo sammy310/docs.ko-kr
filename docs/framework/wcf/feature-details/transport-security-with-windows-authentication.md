@@ -19,18 +19,18 @@ ms.locfileid: "76742653"
   
  ![Windows 인증을 사용하는 전송 보안](./media/transport-security-with-windows-authentication/secured-windows-authentication.gif)  
   
-|특징|설명|  
+|특성|Description|  
 |--------------------|-----------------|  
-|보안 모드|Transport|  
+|보안 모드|전송|  
 |상호 운용성|WCF만|  
 |인증(서버)<br /><br /> 인증(클라이언트)|예, Windows 통합 인증을 사용합니다.<br /><br /> 예, Windows 통합 인증을 사용합니다.|  
 |무결성|예|  
 |기밀성|예|  
-|Transport|NET.TCP|  
+|전송|NET.TCP|  
 |바인딩|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>서비스  
- 다음 코드와 구성은 독립적으로 실행되어야 합니다. 다음 작업 중 하나를 수행합니다.  
+ 다음 코드와 구성은 독립적으로 실행되어야 합니다. 다음 중 하나를 수행합니다.  
   
 - 구성 없이 코드를 사용하여 독립 실행형 서비스를 만듭니다.  
   
@@ -74,11 +74,11 @@ ms.locfileid: "76742653"
 ```  
   
 ## <a name="client"></a>Client  
- 다음 코드와 구성은 독립적으로 실행되어야 합니다. 다음 작업 중 하나를 수행합니다.  
+ 다음 코드와 구성은 독립적으로 실행되어야 합니다. 다음 중 하나를 수행합니다.  
   
 - 이 코드와 클라이언트 코드를 사용하여 독립 실행형 클라이언트를 만듭니다.  
   
-- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들면 다음과 같습니다.:  
+- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예들 들어 다음과 같습니다.  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -117,7 +117,7 @@ ms.locfileid: "76742653"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [방법: Windows 자격 증명을 사용하여 서비스에 보안 설정](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)

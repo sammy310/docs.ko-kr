@@ -56,9 +56,9 @@ Form1.Width = 300;
 Form1->Width = 300;
 ```
 
--또는-
+또는
 
-<xref:System.Windows.Forms.Form.Size%2A> 속성을 설정하여 <xref:System.Drawing.Size.Width%2A> 또는 <xref:System.Drawing.Size.Height%2A>를 변경합니다.
+<xref:System.Drawing.Size.Width%2A> 속성을 설정하여 <xref:System.Drawing.Size.Height%2A> 또는 <xref:System.Windows.Forms.Form.Size%2A>를 변경합니다.
 
 그러나 다음 코드 예제와 같이 이 접근 방식은 단순히 <xref:System.Windows.Forms.Control.Width%2A> 또는 <xref:System.Windows.Forms.Control.Height%2A> 속성을 설정하는 것보다 성가십니다.
 
@@ -93,7 +93,7 @@ Form1->Width += 200;
 ```
 
 > [!CAUTION]
-> <xref:System.Windows.Forms.Form.Size%2A> 속성을 새로운 <xref:System.Drawing.Size> 구조체로 설정하여 동시에 높이 및 너비 크기를 설정하지 않는 한 항상 <xref:System.Drawing.Size.Height%2A> 또는 <xref:System.Drawing.Size.Width%2A> 속성을 사용하여 폼의 크기를 변경합니다. <xref:System.Windows.Forms.Form.Size%2A> 속성은 값 형식인 <xref:System.Drawing.Size> 구조체를 반환합니다. 값 형식의 속성에 새 값을 할당할 수 없습니다. 따라서 다음 코드 예제는 컴파일되지 않습니다.
+> <xref:System.Drawing.Size.Height%2A> 속성을 새로운 <xref:System.Drawing.Size.Width%2A> 구조체로 설정하여 동시에 높이 및 너비 크기를 설정하지 않는 한 항상 <xref:System.Windows.Forms.Form.Size%2A> 또는 <xref:System.Drawing.Size> 속성을 사용하여 폼의 크기를 변경합니다. <xref:System.Windows.Forms.Form.Size%2A> 속성은 값 형식인 <xref:System.Drawing.Size> 구조체를 반환합니다. 값 형식의 속성에 새 값을 할당할 수 없습니다. 따라서 다음 코드 예제는 컴파일되지 않습니다.
 
 ```vb
 ' NOTE: CODE WILL NOT COMPILE
@@ -113,7 +113,7 @@ Form^ f = gcnew Form();
 f->Size->X += 100;
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Forms 시작](getting-started-with-windows-forms.md)
 - [Windows Forms 애플리케이션 강화](./advanced/index.md)

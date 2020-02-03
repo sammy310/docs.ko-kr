@@ -22,6 +22,6 @@ Windows Forms <xref:System.Windows.Forms.GroupBox> 컨트롤은 다른 컨트롤
 ## <a name="groupbox-and-panel"></a>GroupBox 및 Panel  
  <xref:System.Windows.Forms.GroupBox> 컨트롤은 <xref:System.Windows.Forms.Panel> 컨트롤과 비슷합니다. 그러나 <xref:System.Windows.Forms.GroupBox> 컨트롤에만 캡션이 표시 되 고 <xref:System.Windows.Forms.Panel> 컨트롤에만 스크롤 막대가 있을 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [GroupBox 컨트롤](groupbox-control-windows-forms.md)

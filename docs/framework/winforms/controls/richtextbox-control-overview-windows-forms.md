@@ -22,9 +22,9 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤은 서식을 사
   
  <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> 속성을 `true` 하 고 코드를 작성 하 여 <xref:System.Windows.Forms.RichTextBox.LinkClicked> 이벤트를 처리할 수 있도록 설정 하 여 웹 스타일 링크에 <xref:System.Windows.Forms.RichTextBox> 컨트롤을 사용할 수도 있습니다. 자세한 내용은 [방법: Windows Forms RichTextBox 컨트롤을 사용하여 웹 스타일 링크 표시](how-to-display-web-style-links-with-the-windows-forms-richtextbox-control.md)를 참조하세요. <xref:System.Windows.Forms.RichTextBox.SelectionProtected%2A> 속성을 `true`로 설정 하 여 사용자가 컨트롤에 있는 텍스트의 일부 또는 전부를 조작 하지 못하게 할 수 있습니다.  
   
- <xref:System.Windows.Forms.TextBoxBase.Undo%2A> 및 <xref:System.Windows.Forms.RichTextBox.Redo%2A> 메서드를 호출 하 여 <xref:System.Windows.Forms.RichTextBox> 컨트롤에서 대부분의 편집 작업을 실행 취소 하 고 다시 실행할 수 있습니다. <xref:System.Windows.Forms.RichTextBox.CanRedo%2A> 메서드를 사용 하면 사용자가 실행 취소 한 마지막 작업 컨트롤에 다시 적용할 수 있는지 여부를 확인할 수 있습니다.  
+ <xref:System.Windows.Forms.TextBoxBase.Undo%2A> 및 <xref:System.Windows.Forms.RichTextBox.Redo%2A> 메서드를 호출 하 여 <xref:System.Windows.Forms.RichTextBox> 컨트롤에서 대부분의 편집 작업을 실행 취소 하 고 다시 실행할 수 있습니다. <xref:System.Windows.Forms.RichTextBox.CanRedo%2A> 메서드를 사용 하면 사용자가 취소 한 마지막 작업을 컨트롤에 다시 적용할 수 있는지 여부를 확인할 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox 컨트롤](richtextbox-control-windows-forms.md)

@@ -23,11 +23,11 @@ ms.locfileid: "76746805"
 
 이 문서에서는 폼에 표시 하려는 Windows Presentation Foundation (WPF) 컨트롤 형식을 선택 하는 방법을 보여 줍니다. 프로젝트에 포함 된 모든 WPF 컨트롤 형식을 선택할 수 있습니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 연습을 완료하려면 Visual Studio가 필요합니다.
 
-## <a name="create-the-project"></a>프로젝트를 만듭니다.
+## <a name="create-the-project"></a>프로젝트 만들기
 
 Visual Studio를 열고 Visual Basic 또는 `SelectingWpfContent`라는 시각적 개체 C# 에서 새 Windows Forms 응용 프로그램 프로젝트를 만듭니다.
 
@@ -65,7 +65,7 @@ Visual Studio를 열고 Visual Basic 또는 `SelectingWpfContent`라는 시각�
 
 2. **도구 상자**에서 `UserControl1`를 두 번 클릭 하 여 폼에 `UserControl1`의 인스턴스를 만듭니다.
 
-   `UserControl1` 인스턴스가 `elementHost1`이라는 새 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤에서 호스트됩니다.
+   `UserControl1` 인스턴스가 <xref:System.Windows.Forms.Integration.ElementHost>이라는 새 `elementHost1` 컨트롤에서 호스트됩니다.
 
 3. `elementHost1`에 대 한 스마트 태그 패널에서 **호스팅된 콘텐츠 선택** 드롭다운 목록을 엽니다.
 
@@ -85,7 +85,7 @@ Visual Studio를 열고 Visual Basic 또는 `SelectingWpfContent`라는 시각�
 
 9. 이제 `elementHost2` 컨트롤이 `UserControl1` 형식의 인스턴스를 호스트합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

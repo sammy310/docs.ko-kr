@@ -46,12 +46,12 @@ ms.locfileid: "76737962"
  유동 문서 콘텐츠 표시는 <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>및 <xref:System.Windows.Controls.FlowDocumentScrollViewer>의 세 가지 컨트롤에서 지원 됩니다.  
   
 #### <a name="flowdocumentreader"></a>FlowDocumentReader  
- <xref:System.Windows.Controls.FlowDocumentReader> 사용자가 단일 페이지 (페이지-에-) 보기 모드를 한 번에 두 페이지 (책 읽기 형식) 보기 모드 및 연속 스크롤 (바닥이 없음) 보기 모드를 비롯 한 다양 한 보기 모드를 동적으로 선택할 수 있도록 하는 기능이 포함 되어 있습니다.  이러한 보기 모드에 대 한 자세한 내용은 <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>를 참조 하세요.  서로 다른 보기 모드를 동적으로 전환할 수 있는 기능이 필요 하지 않은 경우 <xref:System.Windows.Controls.FlowDocumentPageViewer> 및 <xref:System.Windows.Controls.FlowDocumentScrollViewer> 특정 보기 모드에서 수정 되는 더 간단한 유동 콘텐츠 뷰어를 제공 합니다.  
+ <xref:System.Windows.Controls.FlowDocumentReader>에는 사용자가 단일 페이지 (시간 페이지) 보기 모드, 2 페이지 시간 (책 읽기 형식) 보기 모드 및 연속 스크롤 (무제한) 보기 모드를 비롯 한 다양 한 보기 모드를 동적으로 선택할 수 있도록 하는 기능이 포함 되어 있습니다.  이러한 보기 모드에 대 한 자세한 내용은 <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>를 참조 하세요.  서로 다른 보기 모드를 동적으로 전환할 수 있는 기능이 필요 하지 않은 경우 <xref:System.Windows.Controls.FlowDocumentPageViewer> 및 <xref:System.Windows.Controls.FlowDocumentScrollViewer> 특정 보기 모드에서 수정 되는 더 간단한 유동 콘텐츠 뷰어를 제공 합니다.  
   
 #### <a name="flowdocumentpageviewer-and-flowdocumentscrollviewer"></a>FlowDocumentPageViewer 및 FlowDocumentScrollViewer  
- <xref:System.Windows.Controls.FlowDocumentPageViewer>는 콘텐츠를 실시간 보기 모드로 표시 하 고 <xref:System.Windows.Controls.FlowDocumentScrollViewer>는 연속 스크롤 모드로 콘텐츠를 표시 합니다.  둘 다 <xref:System.Windows.Controls.FlowDocumentPageViewer> 고 <xref:System.Windows.Controls.FlowDocumentScrollViewer> 특정 보기 모드로 고정 됩니다. 사용자가 <xref:System.Windows.Controls.FlowDocumentReaderViewingMode> 열거에서 제공 되는 다양 한 보기 모드를 동적으로 선택할 수 있도록 하는 기능을 포함 하는 <xref:System.Windows.Controls.FlowDocumentReader>과 비교 하 여 <xref:System.Windows.Controls.FlowDocumentPageViewer> 하거나 <xref:System.Windows.Controls.FlowDocumentScrollViewer>하는 것 보다 많은 리소스를 사용 하는 비용을 산출 합니다.  
+ <xref:System.Windows.Controls.FlowDocumentPageViewer>는 콘텐츠를 실시간 보기 모드로 표시 하 고 <xref:System.Windows.Controls.FlowDocumentScrollViewer>는 연속 스크롤 모드로 콘텐츠를 표시 합니다.  <xref:System.Windows.Controls.FlowDocumentPageViewer>와 <xref:System.Windows.Controls.FlowDocumentScrollViewer>는 모두 특정 보기 모드로 고정 되어 있습니다. 사용자가 <xref:System.Windows.Controls.FlowDocumentReaderViewingMode> 열거에서 제공 되는 다양 한 보기 모드를 동적으로 선택할 수 있도록 하는 기능을 포함 하는 <xref:System.Windows.Controls.FlowDocumentReader>과 비교 하 여 <xref:System.Windows.Controls.FlowDocumentPageViewer> 하거나 <xref:System.Windows.Controls.FlowDocumentScrollViewer>하는 것 보다 많은 리소스를 사용 하는 비용을 산출 합니다.  
   
- 기본적으로 세로 스크롤 막대는 항상 표시되며 가로 스크롤 막대는 필요한 경우 표시됩니다. 기본값 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 에 대 한 <xref:System.Windows.Controls.FlowDocumentScrollViewer> 도구 모음을 다루지 않습니다 하지만 <xref:System.Windows.Controls.FlowDocumentScrollViewer.IsToolBarVisible%2A> 기본 제공 도구 모음을 사용 하도록 설정 하려면 속성을 사용할 수 있습니다.  
+ 기본적으로 세로 스크롤 막대는 항상 표시되며 가로 스크롤 막대는 필요한 경우 표시됩니다. <xref:System.Windows.Controls.FlowDocumentScrollViewer>의 기본 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]에는 도구 모음이 포함 되어 있지 않습니다. 그러나 <xref:System.Windows.Controls.FlowDocumentScrollViewer.IsToolBarVisible%2A> 속성을 사용 하 여 기본 제공 도구 모음을 활성화할 수 있습니다.  
   
 <a name="text_in_the_user_interface"></a>   
 ### <a name="text-in-the-user-interface"></a>사용자 인터페이스의 텍스트  
@@ -135,7 +135,7 @@ ms.locfileid: "76737962"
   
 - 문서를 XPS 호환 프린터로 직접 라우팅합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Documents.FixedDocument>
 - <xref:System.Windows.Documents.FlowDocument>

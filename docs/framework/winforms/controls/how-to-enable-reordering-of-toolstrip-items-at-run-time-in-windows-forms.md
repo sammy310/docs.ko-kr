@@ -22,7 +22,7 @@ ms.locfileid: "76745482"
   
 ### <a name="to-enable-toolstripitem-rearrangement-at-run-time"></a>런타임에 ToolStripItem을 재배치 하도록 설정 하려면  
   
-- <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> 속성을 `true`으로 설정합니다. 기본적으로 <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> 는 `false`합니다.  
+- <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> 속성을 `true`로 설정합니다. 기본적으로 <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> 는 `false`합니다.  
   
      런타임에 사용자는 ALT 키를 누르고 마우스 왼쪽 단추를 클릭 하 여 <xref:System.Windows.Forms.ToolStripItem>를 <xref:System.Windows.Forms.ToolStrip>의 다른 위치로 끕니다.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "76745482"
     toolStrip1.AllowItemReorder = true;  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>

@@ -30,7 +30,7 @@ Windows Forms 응용 프로그램에 대 한 폼과 컨트롤을 구성할 때 �
 
 스마트 태그는 디자이너에서 수명 동안 컨트롤 인스턴스에 연결 된 상태로 유지 되며 항상 사용할 수 있습니다.
 
-## <a name="create-the-project"></a>프로젝트를 만듭니다.
+## <a name="create-the-project"></a>프로젝트 만들기
 
 첫 번째 단계는 프로젝트를 만들고 폼을 설정하는 것입니다.
 
@@ -54,7 +54,7 @@ Windows Forms 응용 프로그램에 대 한 폼과 컨트롤을 구성할 때 �
 
 6. 스마트 태그 문자 모양을 클릭 합니다. 문자 모양 옆에 나타나는 바로 가기 메뉴에서 **가로 분할자 방향** 항목을 선택 합니다. <xref:System.Windows.Forms.SplitContainer> 컨트롤의 분할자 막대가 이제 가로 방향으로 표시 되는지 확인 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.TextBox>
 - <xref:System.Windows.Forms.TabControl>

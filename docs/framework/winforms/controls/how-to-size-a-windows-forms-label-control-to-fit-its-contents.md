@@ -24,7 +24,7 @@ Windows Forms <xref:System.Windows.Forms.Label> 컨트롤은 한 줄 또는 여�
   
  <xref:System.Windows.Forms.Label.AutoSize%2A>을 `false`로 설정 하면 <xref:System.Windows.Forms.Label.Text%2A> 속성에 지정 된 단어가 가능한 경우 다음 줄로 줄 바꿈됩니다. 그러나 컨트롤이 확장 되지 않습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [방법: Windows Forms Label 컨트롤을 사용하여 선택키 만들기](how-to-create-access-keys-with-windows-forms-label-controls.md)
 - [Label 컨트롤 개요](label-control-overview-windows-forms.md)

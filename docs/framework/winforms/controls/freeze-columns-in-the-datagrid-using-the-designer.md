@@ -32,7 +32,7 @@ ms.locfileid: "76745671"
     > [!NOTE]
     > **열 추가** 대화 상자에서 **고정** 상자를 선택 하 여 열을 추가 하는 경우에도 열을 고정할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType>

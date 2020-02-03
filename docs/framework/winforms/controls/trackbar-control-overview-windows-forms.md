@@ -23,7 +23,7 @@ Windows Forms <xref:System.Windows.Forms.TrackBar> 컨트롤 ("slider" 컨트롤
   
  다른 두 가지 중요 한 속성은 <xref:System.Windows.Forms.TrackBar.SmallChange%2A> 및 <xref:System.Windows.Forms.TrackBar.LargeChange%2A>입니다. <xref:System.Windows.Forms.TrackBar.SmallChange%2A> 속성의 값은 왼쪽 또는 오른쪽 화살표 키를 누른 상태에서 엄지 단추가 이동 하는 위치 수입니다. <xref:System.Windows.Forms.TrackBar.LargeChange%2A> 속성의 값은 PAGE UP 또는 PAGE DOWN 키를 눌렀을 때 또는 thumb의 한쪽에 있는 트랙 표시줄의 마우스 클릭에 대 한 응답으로 스크롤 막대를 이동 하는 위치 수입니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.TrackBar>
 - [TrackBar 컨트롤](trackbar-control-windows-forms.md)

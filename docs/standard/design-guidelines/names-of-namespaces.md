@@ -34,7 +34,7 @@ ms.locfileid: "76744144"
 
  적절 한 경우 복수 네임 스페이스 이름을 사용 하는 것이 좋습니다 ✔️.
 
- 예를 들어 `System.Collection` 대신 `System.Collections`을 사용합니다. 그러나 브랜드 이름과 머리글자어는이 규칙의 예외입니다. 예를 들어 `System.IOs` 대신 `System.IO`을 사용합니다.
+ 예를 들어, `System.Collections` 대신 `System.Collection`을 사용합니다. 그러나 브랜드 이름과 머리글자어는이 규칙의 예외입니다. 예를 들어, `System.IO` 대신 `System.IOs`을 사용합니다.
 
  네임 스페이스에 동일한 이름과 네임 스페이스의 형식을 사용 하지 ❌ 합니다.
 
@@ -81,7 +81,7 @@ ms.locfileid: "76744144"
 
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
 - [명명 지침](../../../docs/standard/design-guidelines/naming-guidelines.md)

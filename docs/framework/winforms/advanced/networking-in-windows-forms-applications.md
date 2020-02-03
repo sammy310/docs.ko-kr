@@ -12,7 +12,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76745016"
 ---
-# <a name="networking-in-windows-forms-applications"></a>Windows 窗体应用程序中的网络
+# <a name="networking-in-windows-forms-applications"></a>Windows Forms 애플리케이션의 네트워킹
 .NET Framework는 웹 페이지를 표시 하 고, 웹 콘텐츠를 다운로드 하 고, FTP (파일 전송 프로토콜) 사이트와 상호 작용 하 고, 웹 서비스를 사용 하 여 응용 프로그램에 네트워크 기능을 쉽게 빌드할 수 있는 클래스를 제공 합니다. 다음 리소스는 .NET Framework의 네트워킹 기술과이를 Windows Forms에 통합할 수 있는 방법을 이해 하는 데 도움이 됩니다.  
   
 ## <a name="reference"></a>참조  

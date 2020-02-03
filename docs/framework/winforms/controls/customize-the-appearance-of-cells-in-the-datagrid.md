@@ -21,7 +21,7 @@ ms.locfileid: "76744048"
   
  다음 코드 예제에서는 <xref:System.Windows.Forms.DataGridView> 컨트롤의 색 구성표를 사용 하 여 `ContactName` 열의 모든 셀을 그립니다. 각 셀의 텍스트 콘텐츠는 <xref:System.Drawing.Color.Crimson%2A>그려집니다. 삽입 사각형은 <xref:System.Windows.Forms.DataGridView> 컨트롤의 <xref:System.Windows.Forms.DataGridView.GridColor%2A> 속성과 동일한 색으로 그려집니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-csharp[System.Windows.Forms.DataGridViewCellPainting#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCellPainting/CS/form1.cs#10)]
  [!code-vb[System.Windows.Forms.DataGridViewCellPainting#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCellPainting/VB/form1.vb#10)]  
   
@@ -32,7 +32,7 @@ ms.locfileid: "76744048"
   
 - System, System.Windows.Forms 및 System.Drawing 어셈블리에 대한 참조  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.CellPainting>

@@ -25,7 +25,7 @@ ms.locfileid: "76737384"
 
 3. **ToolStrip 작업** 창에서 **표준 항목 삽입**을 선택 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.ToolStrip>
 - [ToolStrip 컨트롤 개요](toolstrip-control-overview-windows-forms.md)

@@ -29,7 +29,7 @@ ms.locfileid: "76742628"
   
 5. 신뢰할 수 있는 하위 시스템은 해당 응답을 처리하고 클라이언트에 자체 응답을 보냅니다.  
   
-|특징|설명|  
+|특성|Description|  
 |--------------------|-----------------|  
 |보안 모드|메시지|  
 |상호 운용성|Windows Communication Foundation (WCF)만 해당 합니다.|  
@@ -37,7 +37,7 @@ ms.locfileid: "76742628"
 |인증(클라이언트)|신뢰할 수 있는 하위 시스템은 클라이언트를 인증하고, 리소스는 신뢰할 수 있는 하위 시스템 서비스를 인증합니다.|  
 |무결성|예|  
 |기밀성|예|  
-|Transport|클라이언트와 신뢰할 수 있는 하위 시스템 서비스 간의 HTTP입니다.<br /><br /> 신뢰할 수 있는 하위 시스템 서비스와 리소스(백 엔드 서비스) 간의 NET.TCP입니다.|  
+|전송|클라이언트와 신뢰할 수 있는 하위 시스템 서비스 간의 HTTP입니다.<br /><br /> 신뢰할 수 있는 하위 시스템 서비스와 리소스(백 엔드 서비스) 간의 NET.TCP입니다.|  
 |바인딩|<xref:System.ServiceModel.WSHttpBinding> 및 <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>리소스(백 엔드 서비스)  
@@ -210,7 +210,7 @@ ms.locfileid: "76742628"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Windows Server Fabric 용 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

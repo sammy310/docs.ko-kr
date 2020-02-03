@@ -22,7 +22,7 @@ ms.locfileid: "76743770"
   
 - <xref:System.Windows.Forms.DataGridView> 컨트롤을 사용할 수 있습니다.  
   
-- 합니다 <xref:System.Windows.Forms.DataGridView.EditMode%2A> 속성 값이 <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>합니다.  
+- <xref:System.Windows.Forms.DataGridView.EditMode%2A> 속성 값이 <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>가 아닌 경우  
   
 - 셀, 행, 열 및 컨트롤의 `ReadOnly` 속성은 모두 `false`로 설정 됩니다.  
   
@@ -40,11 +40,11 @@ ms.locfileid: "76743770"
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
-- `dataGridView1`이라는 <xref:System.Windows.Forms.DataGridView> 컨트롤  
+- <xref:System.Windows.Forms.DataGridView>이라는 `dataGridView1` 컨트롤  
   
 - <xref:System> 및 <xref:System.Windows.Forms> 어셈블리에 대한 참조  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>

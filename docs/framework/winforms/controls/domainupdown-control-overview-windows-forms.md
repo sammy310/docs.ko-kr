@@ -27,7 +27,7 @@ Windows Forms <xref:System.Windows.Forms.DomainUpDown> 컨트롤은 기본적으
   
  이 컨트롤은 텍스트 문자열만 표시 합니다. 숫자 값을 표시 하는 컨트롤을 사용 하려면 <xref:System.Windows.Forms.NumericUpDown> 컨트롤을 사용 합니다. 자세한 내용은 [NumericUpDown 컨트롤 개요](numericupdown-control-overview-windows-forms.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DomainUpDown>
 - [DomainUpDown 컨트롤](domainupdown-control-windows-forms.md)

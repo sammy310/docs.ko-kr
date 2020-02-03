@@ -20,7 +20,7 @@ WCF (Windows Communication Foundation) 웹 HTTP 프로그래밍 모델은 WCF를
   
  WCF 웹 HTTP 프로그래밍 모델은 웹 HTTP 서비스, AJAX 및 JSON 서비스 및 배포 (ATOM/RSS) 피드가 포함 된 웹 스타일 시나리오를 포함 하도록 WCF의 범위를 확장 합니다. AJAX 및 JSON 서비스에 대 한 자세한 내용은 [Ajax 통합 및 Json 지원](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)을 참조 하세요. 배포에 대 한 자세한 내용은 [WCF 배포 개요](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)를 참조 하세요.  
   
- WEB HTTP 서비스에서 반환될 수 있는 데이터 형식에 대한 추가 제한은 없습니다. 모든 직렬화 가능 형식이 WEB HTTP 서비스 작업에서 반환될 수 있습니다. 웹 브라우저가 WEB HTTP 서비스 작업을 호출할 수 있기 때문에 URL에 지정할 수 있는 데이터 형식에 대한 제한이 있습니다. 기본적으로 지원 되는 형식에 대 한 자세한 내용은 아래의 **UriTemplate 쿼리 문자열 매개 변수 및 url** 섹션을 참조 하십시오. URL에 지정된 매개 변수를 실제 매개 변수 형식으로 변환하는 방법을 지정하는 고유한 T:System.ServiceModel.Dispatcher.QueryStringConverter 구현을 제공하여 기본 동작을 변경할 수 있습니다. 자세한 내용은 <xref:System.ServiceModel.Dispatcher.QueryStringConverter>을 참조하세요.  
+ WEB HTTP 서비스에서 반환될 수 있는 데이터 형식에 대한 추가 제한은 없습니다. 모든 직렬화 가능 형식이 WEB HTTP 서비스 작업에서 반환될 수 있습니다. 웹 브라우저가 WEB HTTP 서비스 작업을 호출할 수 있기 때문에 URL에 지정할 수 있는 데이터 형식에 대한 제한이 있습니다. 기본적으로 지원 되는 형식에 대 한 자세한 내용은 아래의 **UriTemplate 쿼리 문자열 매개 변수 및 url** 섹션을 참조 하십시오. URL에 지정된 매개 변수를 실제 매개 변수 형식으로 변환하는 방법을 지정하는 고유한 T:System.ServiceModel.Dispatcher.QueryStringConverter 구현을 제공하여 기본 동작을 변경할 수 있습니다. 자세한 내용은 <xref:System.ServiceModel.Dispatcher.QueryStringConverter>를 참조하세요.  
   
 > [!CAUTION]
 > WCF 웹 HTTP 프로그래밍 모델을 사용 하 여 작성 된 서비스는 SOAP 메시지를 사용 하지 않습니다. SOAP는 사용 되지 않으므로 WCF에서 제공 하는 보안 기능을 사용할 수 없습니다. 그러나 HTTPS를 사용하여 서비스를 호스트하면 전송 기반 보안을 사용할 수 있습니다. WCF 보안에 대 한 자세한 내용은 [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md) 를 참조 하세요.  
@@ -39,7 +39,7 @@ WCF (Windows Communication Foundation) 웹 HTTP 프로그래밍 모델은 WCF를
   
 - a/z/c  
   
-- 있습니다.  
+- 등  
   
  이 템플릿에서 중괄호 표기법("{segment}")은 리터럴 값 대신 변수 세그먼트를 나타냅니다.  
   
@@ -101,7 +101,7 @@ interface ICustomer
 ## <a name="uritemplate-query-string-parameters-and-urls"></a>UriTemplate 쿼리 문자열 매개 변수 및 URL  
  웹 스타일 서비스는 서비스 작업과 관련된 URL을 입력하여 웹 브라우저에서 호출할 수 있습니다. 이러한 서비스 작업은 URL 내의 문자열 형식에 지정해야 하는 쿼리 문자열 매개 변수를 가져올 수 있습니다. 다음 표에서는 URL 내에서 전달할 수 있는 형식과 사용된 형식을 보여 줍니다.  
   
-|형식|서식|  
+|형식|형식|  
 |----------|------------|  
 |<xref:System.Byte>|0 - 255|  
 |<xref:System.SByte>|-128 - 127|  
@@ -113,7 +113,7 @@ interface ICustomer
 |<xref:System.UInt64>|0 - 18,446,744,073,709,551,615|  
 |<xref:System.Single>|-3.402823e38 - 3.402823e38(지수 표기법이 필요하지 않음)|  
 |<xref:System.Double>|-1.79769313486232e308 - 1.79769313486232e308(지수 표기법이 필요하지 않음)|  
-|<xref:System.Char>|단일 문자|  
+|<xref:System.Char>|임의의 단일 문자|  
 |<xref:System.Decimal>|표준 표기법으로 나타낸 10진수(지수 없음)|  
 |<xref:System.Boolean>|True 또는 False(대/소문자 구분 안 함)|  
 |<xref:System.String>|모든 문자열(null 문자열이 지원되지 않으며 이스케이프가 수행되지 않음)|  
@@ -144,7 +144,7 @@ WCF 웹 HTTP 프로그래밍 모델은 WS-* 프로토콜을 지원 하지 않으
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>WCF WEB HTTP 프로그래밍 모델 문제 해결  
  <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>을 사용하는 WCF WEB HTTP 서비스를 호출해 채널을 만들 때 <xref:System.ServiceModel.Description.WebHttpBehavior>는 다른 <xref:System.ServiceModel.EndpointAddress>가 <xref:System.ServiceModel.EndpointAddress>로 전달되어도 구성 파일에 설정된 <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>를 사용합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [WCF 배포](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
 - [WCF 웹 HTTP 프로그래밍 개체 모델](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

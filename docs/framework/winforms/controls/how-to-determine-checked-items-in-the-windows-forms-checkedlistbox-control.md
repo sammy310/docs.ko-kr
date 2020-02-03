@@ -66,7 +66,7 @@ Windows Forms <xref:System.Windows.Forms.CheckedListBox> 컨트롤에 데이터�
     }  
     ```  
   
-     - 또는  
+     - 또는-  
   
 2. 컬렉션은 0부터 시작 하 고 각 항목에 대해 <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> 메서드를 호출 하므로 <xref:System.Windows.Forms.CheckedListBox.Items%2A> 컬렉션을 단계별로 실행 합니다. 이 메서드는 전체 목록에서 항목 번호를 제공 하므로 목록의 첫 번째 항목을 확인 하지 않고 두 번째 항목을 선택 하면 "Item 2 = MyListItem2"와 같이 표시 됩니다.  
   
@@ -111,6 +111,6 @@ Windows Forms <xref:System.Windows.Forms.CheckedListBox> 컨트롤에 데이터�
     MessageBox::Show(s);  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [옵션 목록 표시에 사용된 Windows Forms 컨트롤](windows-forms-controls-used-to-list-options.md)

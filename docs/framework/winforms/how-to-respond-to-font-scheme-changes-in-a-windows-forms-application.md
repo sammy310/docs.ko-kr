@@ -59,13 +59,13 @@ Windows 운영 체제에서 사용자는 시스템 수준 글꼴 설정을 변�
   
      이제 양식이 바탕 화면 글꼴 구성표의 런타임 변경 내용에 반응 하는 것을 알 수 있습니다. 사용자가 **보통**, **대형 글꼴**및 초대형 **글꼴**사이에서 변경 하는 경우 폼이 글꼴을 변경 하 고 크기를 올바르게 조정 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-csharp[WinFormsAutoScaling#1](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#1)]
  [!code-vb[WinFormsAutoScaling#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#1)]  
   
  이 코드 예제의 생성자에는 Visual Studio에서 새 Windows Forms 프로젝트를 만들 때 정의 되는 `InitializeComponent`에 대 한 호출이 포함 되어 있습니다. 명령줄에서 응용 프로그램을 빌드하는 경우이 코드 줄을 제거 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
 - [Windows Forms의 자동 크기 조정](automatic-scaling-in-windows-forms.md)

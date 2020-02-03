@@ -110,7 +110,7 @@ ms.locfileid: "76745132"
     > [!NOTE]
     > <xref:System.Windows.Forms.BindingSource.CancelEdit%2A> 메서드는 데이터의 행으로 범위가 지정 됩니다. 다음 레코드로 이동 하기 전에 해당 개별 레코드를 보는 동안 변경한 내용을 저장 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.BindingSource>

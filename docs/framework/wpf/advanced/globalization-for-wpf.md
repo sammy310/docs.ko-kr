@@ -178,6 +178,6 @@ ms.locfileid: "76747059"
     "de" , UltimateResourceFallbackLocation.Satellite)]
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [WPF 전역화 및 지역화 개요](wpf-globalization-and-localization-overview.md)

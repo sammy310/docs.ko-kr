@@ -55,8 +55,8 @@ Tab 키를 사용 하 여 컨트롤을 순환할 때 컨트롤이 생략 되는 
 > [!NOTE]
 > 라디오 단추 그룹은 런타임에 단일 탭 정지를 가집니다. 선택 된 단추 (즉, <xref:System.Windows.Forms.RadioButton.Checked%2A> 속성이 `true`로 설정 된 단추의 <xref:System.Windows.Forms.Control.TabStop%2A> 속성은 자동으로 `true`로 설정 되 고 다른 단추의 <xref:System.Windows.Forms.Control.TabStop%2A> 속성은 `false`로 설정 됩니다. <xref:System.Windows.Forms.RadioButton> 컨트롤을 그룹화 하는 방법에 대 한 자세한 내용은 [그룹화 Windows Forms RadioButton 컨트롤이 집합으로 작동 하는 방법](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)을 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Forms 컨트롤](index.md)
-- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)
+- [Windows Forms에서 사용할 컨트롤](controls-to-use-on-windows-forms.md)
 - [기능별 Windows Forms 컨트롤](windows-forms-controls-by-function.md)

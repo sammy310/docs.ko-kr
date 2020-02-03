@@ -21,14 +21,14 @@ ms.locfileid: "76742660"
   
  서비스에서 인증서를 사용 하는 방법에 대 한 자세한 내용은 [인증서 작업](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) 및 [방법: SSL 인증서로 포트 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)을 참조 하세요. 다음 표에서는 시나리오의 다양한 특성에 대해 설명합니다.  
   
-|특징|설명|  
+|특성|Description|  
 |--------------------|-----------------|  
-|보안 모드|Transport|  
+|보안 모드|전송|  
 |상호 운용성|기존 웹 서비스 클라이언트 및 서비스에 사용됩니다.|  
 |인증(서버)<br /><br /> 인증(클라이언트)|예(SSL 인증서 사용)<br /><br /> 예(X.509 인증서 사용)|  
 |데이터 무결성|예|  
 |데이터 기밀성|예|  
-|Transport|HTTPS|  
+|전송|HTTPS|  
 |바인딩|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="configure-the-service"></a>서비스 구성  
@@ -138,7 +138,7 @@ cc.Close();
 <startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup></configuration>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Windows Server Fabric 용 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

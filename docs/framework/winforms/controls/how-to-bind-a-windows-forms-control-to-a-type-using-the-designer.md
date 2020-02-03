@@ -44,7 +44,7 @@ ms.locfileid: "76742021"
 
 ### <a name="to-bind-the-control-to-the-bindingsource"></a>BindingSource에 컨트롤을 바인딩하려면
 
-1. 폼에 <xref:System.Windows.Forms.TextBox>를 추가합니다.
+1. 폼에 <xref:System.Windows.Forms.TextBox>를 추가 합니다.
 
 2. **속성** 창에서 **(DataBindings)** 노드를 확장합니다.
 
@@ -52,7 +52,7 @@ ms.locfileid: "76742021"
 
 4. **DATASOURCE UI 형식 편집기**에서 이전에 추가 된 <xref:System.Windows.Forms.BindingSource>에 대 한 노드를 확장 하 고 <xref:System.Windows.Forms.TextBox>의 <xref:System.Windows.Forms.TextBox.Text%2A> 속성에 바인딩하려는 바인딩된 형식의 속성을 선택 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [BindingSource 구성 요소](bindingsource-component.md)
 - [방법: 형식에 Windows Forms 컨트롤 바인딩](how-to-bind-a-windows-forms-control-to-a-type.md)

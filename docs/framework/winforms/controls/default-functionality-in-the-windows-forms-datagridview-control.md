@@ -46,7 +46,7 @@ Windows Forms <xref:System.Windows.Forms.DataGridView> 컨트롤은 많은 양�
   
 - 사용자가 열 머리글을 클릭할 때 기본 데이터를 기준으로 행을 자동으로 정렬 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView>
 - [DataGridView 컨트롤](datagridview-control-windows-forms.md)

@@ -64,7 +64,7 @@ ms.locfileid: "76746600"
   
 ### <a name="to-define-how-toolstripitem-text-and-images-are-displayed-relative-to-each-other"></a>ToolStripItem 텍스트 및 이미지가 서로를 기준으로 표시 되는 방법을 정의 하려면  
   
-- <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> 속성을 원하는 값으로 설정 합니다. 가능성은 `ImageAboveText`, `ImageBeforeText`를 `Overlay`합니다 `TextAboveImage`, 및 `TextBeforeImage`합니다. 기본값은 `ImageBeforeText`입니다.  
+- <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> 속성을 원하는 값으로 설정 합니다. 가능한 값으로는 `ImageAboveText`, `ImageBeforeText`, `Overlay`, `TextAboveImage` 및 `TextBeforeImage`가 있습니다. 기본값은 `ImageBeforeText`입니다.  
   
     ```vb  
     ToolStripButton1.TextImageRelation = _  
@@ -75,7 +75,7 @@ ms.locfileid: "76746600"
     toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.ToolStrip>
 - [ToolStrip 컨트롤 개요](toolstrip-control-overview-windows-forms.md)

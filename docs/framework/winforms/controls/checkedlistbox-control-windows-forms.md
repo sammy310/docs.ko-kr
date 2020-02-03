@@ -38,5 +38,5 @@ Windows Forms `CheckedListBox` 컨트롤은 <xref:System.Windows.Forms.ListBox> 
  [옵션 목록 표시에 사용된 Windows Forms 컨트롤](windows-forms-controls-used-to-list-options.md)  
  목록 상자, 콤보 상자 및 선택 목록 상자를 사용 하 여 수행할 수 있는 작업 목록을 제공 합니다.  
   
- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)  
+ [Windows Forms에서 사용할 컨트롤](controls-to-use-on-windows-forms.md)  
  사용 방법에 대한 정보 링크를 포함하는 Windows Forms 컨트롤의 전체 목록을 제공합니다.

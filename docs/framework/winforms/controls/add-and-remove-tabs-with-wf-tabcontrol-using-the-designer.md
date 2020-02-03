@@ -24,11 +24,11 @@ ms.locfileid: "76746290"
 
 - 컨트롤의 스마트 태그에서 **탭 추가** 또는 **탭 제거** 를 클릭 합니다.
 
-     -또는-
+     또는
 
      **속성** 창에서 <xref:System.Windows.Forms.TabControl.TabPages%2A> 속성 옆에 **](./media/visual-studio-ellipsis-button.png)속성 창 있는** 줄임표 단추 (...)를 클릭 하 여 **TabPage 컬렉션 편집기**를 엽니다 .이 단추를 클릭 하 여 속성 옆에 있는 줄임표 단추 (...)를![합니다. **추가** 또는 **제거** 단추를 클릭 합니다.
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>참고 항목
 
 - [TabControl 컨트롤](tabcontrol-control-windows-forms.md)
 - [TabControl 컨트롤 개요](tabcontrol-control-overview-windows-forms.md)

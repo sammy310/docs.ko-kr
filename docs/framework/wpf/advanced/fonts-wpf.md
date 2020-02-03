@@ -22,7 +22,7 @@ ms.locfileid: "76737915"
  [샘플 OpenType 글꼴 팩](sample-opentype-font-pack.md)  
  [방법 항목](fonts-how-to-topics.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.FontStyle>
 - <xref:System.Windows.SystemFonts>

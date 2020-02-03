@@ -34,7 +34,7 @@ ms.locfileid: "76744640"
  [바인딩 및 보안](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
  사용자 지정 보안 바인딩을 만드는 방법을 보여 주는 항목을 비롯한 바인딩의 보안 지향적인 뷰입니다.  
   
- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [서비스 및 클라이언트에 보안 설정](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  WCF 보안 기능을 사용 하 여 메시지를 보호 하는 방법을 설명 합니다.  
   
  [인증](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
@@ -69,6 +69,6 @@ ms.locfileid: "76744640"
   
  [개념적 개요](../../../../docs/framework/wcf/conceptual-overview.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [애플리케이션 구성](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)

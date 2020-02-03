@@ -20,7 +20,7 @@ Windows Forms <xref:System.Windows.Forms.CheckedListBox> 컨트롤은 <xref:Syst
   
  선택 된 목록 상자는 디자인 타임에 **문자열 컬렉션 편집기** 를 사용 하 여 항목을 추가 하거나 런타임에 <xref:System.Windows.Forms.CheckedListBox.Items%2A> 속성을 사용 하 여 해당 항목을 컬렉션에서 동적으로 추가할 수 있습니다. 자세한 내용은 [방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤에서 항목 추가 및 제거](add-and-remove-items-from-a-wf-combobox.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.CheckedListBox>
 - <xref:System.Windows.Forms.CheckedListBox.Items%2A?displayProperty=nameWithType>

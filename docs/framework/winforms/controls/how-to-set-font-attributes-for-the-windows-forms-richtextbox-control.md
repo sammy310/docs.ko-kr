@@ -53,8 +53,8 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤에는 표시 되
     > [!NOTE]
     > 이러한 속성은 선택한 텍스트에만 적용되며, 선택한 텍스트가 없으면 삽입 지점의 현재 위치에서 입력한 텍스트에 적용됩니다. 프로그래밍 방식으로 텍스트를 선택 하는 방법에 대 한 자세한 내용은 <xref:System.Windows.Forms.TextBoxBase.Select%2A>를 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox 컨트롤](richtextbox-control-windows-forms.md)
-- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)
+- [Windows Forms에서 사용할 컨트롤](controls-to-use-on-windows-forms.md)

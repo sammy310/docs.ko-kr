@@ -20,7 +20,7 @@ Windows Forms <xref:System.Windows.Forms.Timer>는 일정한 간격마다 이벤
 ## <a name="key-properties-methods-and-events"></a>키 속성, 메서드 및 이벤트  
  간격의 길이는 값 (밀리초)을 갖는 <xref:System.Windows.Forms.Timer.Interval%2A> 속성으로 정의 됩니다. 구성 요소가 활성화 되 면 간격 마다 <xref:System.Windows.Forms.Timer.Tick> 이벤트가 발생 합니다. 실행할 코드를 추가 합니다. 자세한 내용은 [방법: Windows Forms Timer 구성 요소를 사용 하 여 설정 된 간격 마다 프로시저 실행](run-procedures-at-set-intervals-with-wf-timer-component.md)을 참조 하세요. <xref:System.Windows.Forms.Timer> 구성 요소의 주요 메서드는 타이머를 설정 및 해제 하는 <xref:System.Windows.Forms.Timer.Start%2A> 및 <xref:System.Windows.Forms.Timer.Stop%2A>입니다. 타이머가 꺼져 있는 경우 다시 설정 됩니다. <xref:System.Windows.Forms.Timer> 구성 요소를 일시 중지할 수 있는 방법은 없습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.Timer>
 - [Timer 구성 요소](timer-component-windows-forms.md)

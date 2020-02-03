@@ -27,7 +27,7 @@ ms.locfileid: "76746100"
     > [!NOTE]
     > 사용자 지정 속성에 형식 변환기 또는 UI 형식 편집기를 사용할 수 없는 경우 [디자인 타임 지원 확장](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))에 설명된 대로 구현할 수 있습니다.  
   
- 다음 코드 조각은 사용자 지정 컨트롤 `FlashTrackBar`에 대해 `EndColor`이라는 사용자 지정 속성을 정의합니다.  
+ 다음 코드 조각은 사용자 지정 컨트롤 `EndColor`에 대해 `FlashTrackBar`이라는 사용자 지정 속성을 정의합니다.  
   
 ```vb  
 Public Class FlashTrackBar  
@@ -120,7 +120,7 @@ public int Value {
 }  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Forms 컨트롤의 속성](properties-in-windows-forms-controls.md)
 - [ShouldSerialize 및 Reset 메서드를 사용하여 기본값 정의](defining-default-values-with-the-shouldserialize-and-reset-methods.md)

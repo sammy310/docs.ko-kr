@@ -1,5 +1,5 @@
 ---
-title: 트리나
+title: Trees
 ms.date: 03/30/2017
 helpviewer_keywords:
 - logical tree [WPF]
@@ -84,7 +84,7 @@ ms.locfileid: "76746570"
   
  그러나 리소스 조회는 직접적인 논리 트리를 넘어 확장될 수도 있습니다. 애플리케이션 태그의 경우 리소스 조회가 애플리케이션 수준 리소스 사전까지 계속된 다음 정적 속성이나 키로 참조되는 테마 지원 및 시스템 값까지 계속될 수 있습니다. 테마 자체는 리소스 참조가 동적인 경우 테마 논리 트리 외부의 시스템 값을 참조할 수도 있습니다. 리소스 사전 및 조회 논리에 대한 자세한 내용은 [XAML 리소스](../../../desktop-wpf/fundamentals/xaml-resources-define.md)를 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [입력 개요](input-overview.md)
 - [WPF 그래픽 렌더링 개요](../graphics-multimedia/wpf-graphics-rendering-overview.md)

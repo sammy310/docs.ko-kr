@@ -16,7 +16,7 @@ ms.lasthandoff: 01/24/2020
 ms.locfileid: "76739572"
 ---
 # <a name="how-to-change-the-borders-of-windows-forms"></a>방법: Windows Forms의 테두리 변경
-Windows Forms의 모양과 동작을 결정할 때 선택할 수 있는 여러 테두리 스타일이 있습니다. <xref:System.Windows.Forms.Form.FormBorderStyle%2A> 속성을 변경하여 폼의 크기 조정 동작을 제어할 수 있습니다. 또한 <xref:System.Windows.Forms.Form.FormBorderStyle%2A>을 설정하면 캡션 표시줄 표시 방식 및 표시되는 단추에 영향을 줍니다. 자세한 내용은 <xref:System.Windows.Forms.FormBorderStyle>를 참조하세요.  
+Windows Forms의 모양과 동작을 결정할 때 선택할 수 있는 여러 테두리 스타일이 있습니다. <xref:System.Windows.Forms.Form.FormBorderStyle%2A> 속성을 변경하여 폼의 크기 조정 동작을 제어할 수 있습니다. 또한 <xref:System.Windows.Forms.Form.FormBorderStyle%2A>을 설정하면 캡션 표시줄 표시 방식 및 표시되는 단추에 영향을 줍니다. 자세한 내용은 <xref:System.Windows.Forms.FormBorderStyle>을 참조하세요.  
   
  Visual Studio에서는 이 작업이 광범위하게 지원됩니다.  
   
@@ -43,7 +43,7 @@ Windows Forms의 모양과 동작을 결정할 때 선택할 수 있는 여러 �
   
      또한 선택적 **최소화** 및 **최대화** 단추를 제공 하는 폼에 대 한 테두리 스타일을 선택한 경우 이러한 단추 중 하나 또는 둘 다를 사용할지 여부를 지정할 수 있습니다. 이러한 단추는 사용자 환경을 긴밀히 제어하려는 경우에 유용합니다. **최소화** 및 **최대화** 단추는 기본적으로 사용 하도록 설정 되어 있으며 **속성** 창을 통해 해당 기능을 조작할 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.FormBorderStyle>
 - <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>

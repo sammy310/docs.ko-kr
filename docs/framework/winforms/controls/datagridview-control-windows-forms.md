@@ -82,6 +82,6 @@ ms.locfileid: "76746955"
  <xref:System.Windows.Forms.BindingSource>  
  <xref:System.Windows.Forms.BindingSource> 구성 요소에 대한 참조 설명서를 제공합니다. <xref:System.Windows.Forms.DataGridView> 컨트롤과 <xref:System.Windows.Forms.BindingSource> 구성 요소는 서로 긴밀하게 작동하도록 설계되었습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)
+- [Windows Forms에서 사용할 컨트롤](controls-to-use-on-windows-forms.md)

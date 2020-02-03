@@ -31,11 +31,11 @@ Visual Studio는 프로젝트의 컨트롤에 대 한 모든 참조를 추가 �
 > [!NOTE]
 > Activex 컨트롤 가져오기 (Aximp.exe) Windows Forms activex 동적 연결 라이브러리를 가져올 때 예상과 다른 형식의 이벤트 인수를 만듭니다. Aximp.exe에서 생성 되는 인수는 `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEventArgs e)` 예상 되는 경우 `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEvent e)`와 비슷합니다. 이 irregularity는 코드가 정상적으로 작동 하는 것을 방지 하지 않습니다. 자세한 내용은 [Windows Forms ActiveX 컨트롤 가져오기 (aximp.exe)](../../tools/aximp-exe-windows-forms-activex-control-importer.md)를 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Forms 컨트롤](index.md)
 - [여러 언어 및 라이브러리에서 사용되는 컨트롤 및 프로그래밍 가능한 개체 비교](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))
 - [방법: Windows Forms에 컨트롤 추가](how-to-add-controls-to-windows-forms.md)
 - [개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)
+- [Windows Forms에서 사용할 컨트롤](controls-to-use-on-windows-forms.md)
 - [기능별 Windows Forms 컨트롤](windows-forms-controls-by-function.md)

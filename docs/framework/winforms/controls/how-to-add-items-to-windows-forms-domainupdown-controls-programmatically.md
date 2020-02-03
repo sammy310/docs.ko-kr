@@ -35,7 +35,7 @@ ms.locfileid: "76745585"
     domainUpDown1->Items->Add("noodles");  
     ```  
   
-     -또는-  
+     또는  
   
 2. <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> 메서드를 사용 하 여 목록에서 지정 된 위치에 항목을 삽입 합니다.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "76745585"
     domainUpDown1->Items->Insert(2, "rice");  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DomainUpDown>
 - <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A?displayProperty=nameWithType>

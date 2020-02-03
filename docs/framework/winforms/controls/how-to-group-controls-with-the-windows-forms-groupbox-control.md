@@ -32,7 +32,7 @@ Windows Forms <xref:System.Windows.Forms.GroupBox> 컨트롤은 다른 컨트롤
   
 3. 그룹 상자의 <xref:System.Windows.Forms.GroupBox.Text%2A> 속성을 적절 한 캡션으로 설정 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.GroupBox>
 - [GroupBox 컨트롤](groupbox-control-windows-forms.md)

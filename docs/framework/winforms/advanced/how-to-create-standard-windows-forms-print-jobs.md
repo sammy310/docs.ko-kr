@@ -76,7 +76,7 @@ Windows Forms의 인쇄 기초는 <xref:System.Drawing.Printing.PrintDocument> �
   
      프로그래밍 방식으로 인쇄 작업을 만드는 방법을 비롯 하 여 Windows Forms 인쇄 작업의 세부 정보에 대 한 자세한 내용은 <xref:System.Drawing.Printing.PrintPageEventArgs>을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Drawing.Printing.PrintDocument>
 - [Windows Forms 인쇄 지원](windows-forms-print-support.md)

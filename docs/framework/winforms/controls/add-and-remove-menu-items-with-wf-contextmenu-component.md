@@ -58,7 +58,7 @@ Windows Forms에서 바로 가기 메뉴 항목을 추가 하 고 제거 하는 
     contextMenu1->MenuItems->Remove(mnuItemNew);  
     ```  
   
-     -또는-  
+     또는  
   
 2. <xref:System.Windows.Forms.ContextMenu> 구성 요소의 `MenuItems` 컬렉션에 `Clear` 메서드를 사용 하 여 메뉴에서 모든 항목을 제거 합니다.  
   
@@ -74,7 +74,7 @@ Windows Forms에서 바로 가기 메뉴 항목을 추가 하 고 제거 하는 
     contextMenu1->MenuItems->Clear();  
     ```  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.ContextMenu>
 - [ContextMenu 구성 요소](contextmenu-component-windows-forms.md)

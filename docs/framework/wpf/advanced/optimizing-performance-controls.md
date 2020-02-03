@@ -61,20 +61,20 @@ UI 가상화는 목록 컨트롤의 중요한 요소입니다. UI 가상화를 �
 
 다음 표에서는 데이터를 표시하는 일반적인 컨트롤 및 각 컨트롤에 성능 기능이 지원되는지 여부를 보여 줍니다. 이러한 기능을 설정하는 방법은 이전 섹션을 참조하세요.
 
-|Control|가상화|컨테이너 재활용|스크롤 지연|
+|제어|가상화|컨테이너 재활용|스크롤 지연|
 |-------------|--------------------|-------------------------|------------------------|
 |<xref:System.Windows.Controls.ComboBox>|사용할 수 있음|사용할 수 있음|사용할 수 있음|
 |<xref:System.Windows.Controls.ContextMenu>|사용할 수 있음|사용할 수 있음|사용할 수 있음|
 |<xref:System.Windows.Controls.DocumentViewer>|사용할 수 없음|사용할 수 없음|사용할 수 있음|
-|<xref:System.Windows.Controls.ListBox>|기본|사용할 수 있음|사용할 수 있음|
-|<xref:System.Windows.Controls.ListView>|기본|사용할 수 있음|사용할 수 있음|
+|<xref:System.Windows.Controls.ListBox>|기본값|사용할 수 있음|사용할 수 있음|
+|<xref:System.Windows.Controls.ListView>|기본값|사용할 수 있음|사용할 수 있음|
 |<xref:System.Windows.Controls.TreeView>|사용할 수 있음|사용할 수 있음|사용할 수 있음|
 |<xref:System.Windows.Controls.ToolBar>|사용할 수 없음|사용할 수 없음|사용할 수 있음|
 
 > [!NOTE]
 > <xref:System.Windows.Controls.TreeView>에서 가상화 및 컨테이너 재활용을 사용 하도록 설정 하는 방법에 대 한 예제는 [TreeView의 성능 향상](../controls/how-to-improve-the-performance-of-a-treeview.md)을 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [레이아웃](layout.md)
 - [레이아웃 및 디자인](optimizing-performance-layout-and-design.md)
