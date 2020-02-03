@@ -60,7 +60,7 @@ ms.locfileid: "76739600"
   
      기존 이벤트 처리기에 이벤트를 바인딩하기 위해 코드를 폼에 추가 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Forms에서 이벤트 처리기 만들기](creating-event-handlers-in-windows-forms.md)
 - [이벤트 처리기 개요](event-handlers-overview-windows-forms.md)

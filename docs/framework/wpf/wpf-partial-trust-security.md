@@ -27,7 +27,7 @@ ms.locfileid: "76743334"
   
  WPF는 가능한 많은 기능을 부분 신뢰에서 안전 하 게 사용할 수 있도록 다양 한 지원을 제공 하며, CA와 함께 부분 신뢰 프로그래밍에 대 한 추가 지원을 제공 합니다.  
   
- 이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
+ 이 항목의 섹션:  
   
 - [WPF 기능 부분 신뢰 지원](#WPF_Feature_Partial_Trust_Support)  
   
@@ -44,8 +44,8 @@ ms.locfileid: "76743334"
 |기능 영역|기능|  
 |------------------|-------------|  
 |일반|브라우저 창<br /><br /> 원 사이트 액세스<br /><br /> IsolatedStorage(512KB 제한)<br /><br /> UIAutomation 공급자<br /><br /> 명령<br /><br /> IME(입력기)<br /><br /> 태블릿 스타일러스 및 잉크<br /><br /> 마우스 캡처 및 이동 이벤트를 사용하여 시뮬레이션된 끌어서 놓기<br /><br /> OpenFileDialog<br /><br /> XamlReader.Load를 통한 XAML Deserialization|  
-|웹 통합|브라우저 다운로드 대화 상자<br /><br /> 사용자가 시작한 최상위 탐색<br /><br /> mailto:links<br /><br /> URI(Uniform Resource Identifier) 매개 변수<br /><br /> HTTPWebRequest<br /><br /> IFRAME에 호스팅되는 WPF 콘텐츠<br /><br /> 프레임을 사용하여 동일한 사이트 HTML 페이지 호스팅<br /><br /> WebBrowser를 사용하여 동일한 사이트 HTML 페이지 호스팅<br /><br /> 웹 서비스(ASMX)<br /><br /> 웹 서비스(Windows Communication Foundation 사용)<br /><br /> 스크립팅 중<br /><br /> 문서 개체 모델|  
-|시각적 개체|2D 및 3D<br /><br /> 애니메이션<br /><br /> 미디어(원본 사이트 및 도메인 간)<br /><br /> 이미지/오디오/비디오|  
+|웹 통합|브라우저 다운로드 대화 상자<br /><br /> 사용자가 시작한 최상위 탐색<br /><br /> mailto:links<br /><br /> URI(Uniform Resource Identifier) 매개 변수<br /><br /> HTTPWebRequest<br /><br /> IFRAME에 호스팅되는 WPF 콘텐츠<br /><br /> 프레임을 사용하여 동일한 사이트 HTML 페이지 호스팅<br /><br /> WebBrowser를 사용하여 동일한 사이트 HTML 페이지 호스팅<br /><br /> 웹 서비스(ASMX)<br /><br /> 웹 서비스(Windows Communication Foundation 사용)<br /><br /> 스크립팅<br /><br /> 문서 개체 모델|  
+|시각 효과|2D 및 3D<br /><br /> 애니메이션<br /><br /> 미디어(원본 사이트 및 도메인 간)<br /><br /> 이미지/오디오/비디오|  
 |읽기|FlowDocuments<br /><br /> XPS 문서<br /><br /> 포함된 시스템 글꼴<br /><br /> CFF & 트루타입 글꼴|  
 |편집|맞춤법 검사<br /><br /> RichTextBox<br /><br /> 일반 텍스트 및 잉크 클립보드 지원<br /><br /> 사용자가 시작한 붙여넣기<br /><br /> 선택한 콘텐츠 복사|  
 |컨트롤|일반 컨트롤|  
@@ -73,7 +73,7 @@ ms.locfileid: "76743334"
 |기능 영역|기능|  
 |------------------|-------------|  
 |일반|창(애플리케이션 정의 창 및 대화 상자)<br /><br /> SaveFileDialog<br /><br /> 파일 시스템<br /><br /> 레지스트리 액세스<br /><br /> 끌어서 놓기<br /><br /> XamlWriter.Save를 통한 XAML 직렬화<br /><br /> UIAutomation 클라이언트<br /><br /> 소스 창 액세스(HwndHost)<br /><br /> 완전한 음성 지원<br /><br /> Windows Forms 상호 운용성|  
-|시각적 개체|비트맵 효과<br /><br /> 이미지 인코딩|  
+|시각 효과|비트맵 효과<br /><br /> 이미지 인코딩|  
 |편집|RTF(서식 있는 텍스트) 클립보드<br /><br /> 전체 XAML 지원|  
   
 <a name="Partial_Trust_Programming"></a>   
@@ -82,9 +82,9 @@ ms.locfileid: "76743334"
   
 |보안 영역|동작|완전 신뢰 얻기|  
 |-------------------|--------------|------------------------|  
-|로컬 컴퓨터|자동 완전 신뢰|작업이 필요하지 않습니다.|  
+|수집|자동 완전 신뢰|어떤 조치가 필요하지 않습니다.|  
 |인트라넷 및 신뢰할 수 있는 사이트|완전 신뢰 확인|사용자가 프롬프트에서 소스를 볼 수 있도록 인증서로 XBAP에 로그인합니다.|  
-|인터넷|"신뢰할 수 없음"과 함께 실패|인증서로 XBAP를 서명합니다.|  
+|인터넷|"신뢰할 수 없음"과 함께 실패|인증서로 XBAP에 로그인합니다.|  
   
 > [!NOTE]
 > 위의 표에 설명된 동작은 ClickOnce 신뢰 배포 모델을 따르지 않는 완전 신뢰 XBAP에 대한 것입니다.  
@@ -123,24 +123,24 @@ ms.locfileid: "76743334"
 > <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A>는 응용 프로그램이 실행 되 고 있는 권한 집합이 아니라 브라우저에서 응용 프로그램을 실행 하 고 있는지만 구별할 수 있습니다.  
   
 <a name="Managing_Permissions"></a>   
-## <a name="managing-permissions"></a>Managing Permissions  
+## <a name="managing-permissions"></a>권한 관리  
  기본적으로 Xbap는 부분 신뢰 (기본 인터넷 영역 권한 집합)를 사용 하 여 실행 됩니다. 그러나 애플리케이션의 요구에 따라 기본값에서 권한 집합을 변경할 수 있습니다. 예를 들어 로컬 인트라넷에서 Xbap를 시작 하는 경우 다음 표에 표시 된 권한 집합을 활용할 수 있습니다.  
   
  표 3: LocalIntranet 및 인터넷 권한  
   
-|사용 권한|특성|LocalIntranet|인터넷|  
+|사용 권한|attribute|LocalIntranet|인터넷|  
 |----------------|---------------|-------------------|--------------|  
 |DNS|DNS 서버 액세스|예|아니요|  
 |환경 변수|읽기|예|아니요|  
-|파일 대화 상자|Open|예|예|  
+|파일 대화 상자|열기|예|예|  
 |파일 대화 상자|제한 없음|예|아니요|  
-|격리된 저장소|사용자가 어셈블리 격리|예|아니요|  
-|격리된 저장소|알 수 없는 격리|예|예|  
-|격리된 저장소|무제한 사용자 할당량|예|아니요|  
-|Media|안전한 오디오, 비디오 및 이미지|예|예|  
+|격리된 스토리지|사용자가 어셈블리 격리|예|아니요|  
+|격리된 스토리지|알 수 없는 격리|예|예|  
+|격리된 스토리지|무제한 사용자 할당량|예|아니요|  
+|미디어|안전한 오디오, 비디오 및 이미지|예|예|  
 |인쇄|기본 인쇄|예|아니요|  
 |인쇄|안전 인쇄|예|예|  
-|리플렉션|내보내기|예|아니요|  
+|반사|내보내기|예|아니요|  
 |보안|관리되는 코드 실행|예|예|  
 |보안|부여된 권한 어셜션|예|아니요|  
 |사용자 인터페이스|제한 없음|예|아니요|  
@@ -163,8 +163,8 @@ ms.locfileid: "76743334"
   
  또는 모든 보안 영역에서 완전 신뢰 배포를 위한 ClickOnce 신뢰 배포 모델을 사용할 수 있습니다. 자세한 내용은 [신뢰할 수 있는 응용 프로그램 배포 개요](/visualstudio/deployment/trusted-application-deployment-overview) 및 [보안](security-wpf.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [Security](security-wpf.md)
+- [보안](security-wpf.md)
 - [WPF 보안 전략 - 플랫폼 보안](wpf-security-strategy-platform-security.md)
 - [WPF 보안 전략 - 보안 엔지니어링](wpf-security-strategy-security-engineering.md)

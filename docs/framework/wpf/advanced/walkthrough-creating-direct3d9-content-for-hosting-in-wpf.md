@@ -25,8 +25,8 @@ ms.locfileid: "76727923"
 
  작업이 완료 되 면 WPF 응용 프로그램에서 사용할 수 있도록 Direct3D9 콘텐츠를 포함 하는 DLL이 만들어집니다.
 
-## <a name="prerequisites"></a>전제 조건
- 이 연습을 완료하려면 다음 구성 요소가 필요합니다.
+## <a name="prerequisites"></a>사전 요구 사항
+ 이 연습을 완료하려면 다음과 같은 구성 요소가 필요합니다.
 
 - Visual Studio 2010
 
@@ -47,7 +47,7 @@ ms.locfileid: "76727923"
 
 3. **응용 프로그램 종류:** 섹션에서 **DLL** 옵션을 선택 합니다.
 
-4. **마침**을 클릭합니다.
+4. **Finish**를 클릭합니다.
 
      D3DContent 프로젝트가 생성 됩니다.
 
@@ -70,7 +70,7 @@ ms.locfileid: "76727923"
 12. 솔루션 탐색기에서 `D3DContent.def` 라는 새 모듈 정의 파일 (.def)을 프로젝트에 추가 합니다.
 
 ## <a name="creating-the-direct3d9-content"></a>Direct3D9 콘텐츠 만들기
- 최상의 성능을 얻으려면 Direct3D9 콘텐츠에서 특정 설정을 사용 해야 합니다. 다음 코드에서는 최상의 성능 특성이 있는 Direct3D9 화면을 만드는 방법을 보여 줍니다. 자세한 내용은 [Direct3D9 및 WPF 상호 운용성을 위한 성능 고려 사항](performance-considerations-for-direct3d9-and-wpf-interoperability.md)합니다.
+ 최상의 성능을 얻으려면 Direct3D9 콘텐츠에서 특정 설정을 사용 해야 합니다. 다음 코드에서는 최상의 성능 특성이 있는 Direct3D9 화면을 만드는 방법을 보여 줍니다. 자세한 내용은 [Direct3D9 및 WPF 상호 운용성에 대 한 성능 고려 사항](performance-considerations-for-direct3d9-and-wpf-interoperability.md)을 참조 하세요.
 
 #### <a name="to-create-the-direct3d9-content"></a>Direct3D9 콘텐츠를 만들려면
 
@@ -139,7 +139,7 @@ ms.locfileid: "76727923"
 
 - WPF 응용 프로그램에서 Direct3D9 콘텐츠를 호스팅합니다. 자세한 내용은 [연습: WPF에서 Direct3D9 콘텐츠 호스팅](walkthrough-hosting-direct3d9-content-in-wpf.md)합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Interop.D3DImage>
 - [Direct3D9 및 WPF 상호 운용성을 위한 성능 고려 사항](performance-considerations-for-direct3d9-and-wpf-interoperability.md)

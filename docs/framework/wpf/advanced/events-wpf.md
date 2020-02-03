@@ -41,7 +41,7 @@ ms.locfileid: "76737933"
   [WPF의 XAML](xaml-in-wpf.md)  
   [기본 요소](base-elements.md)  
   [요소 트리 및 Serialization](element-tree-and-serialization.md)  
-  [데이터 액세스](properties-wpf.md)  
+  [속성](properties-wpf.md)  
   [입력](input-wpf.md)  
   [리소스](resources-wpf.md)  
   [스타일 지정 및 템플릿](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  

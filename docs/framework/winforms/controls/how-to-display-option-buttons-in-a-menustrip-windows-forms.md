@@ -70,7 +70,7 @@ ms.locfileid: "76735519"
      [!code-csharp[ToolStripRadioButtonMenuItem#180](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#180)]
      [!code-vb[ToolStripRadioButtonMenuItem#180](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#180)]
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 코드 예제에서는 `ToolStripRadioButtonMenuItem` 클래스 전체를 제공 하 고 <xref:System.Windows.Forms.Form> 클래스와 `Program` 클래스를 제공 하 여 옵션 단추 동작을 보여 줍니다.
 
@@ -83,7 +83,7 @@ ms.locfileid: "76735519"
 
 - System, System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>

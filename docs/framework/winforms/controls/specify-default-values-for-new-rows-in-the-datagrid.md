@@ -22,20 +22,20 @@ ms.locfileid: "76742936"
   
  다음 코드 예제에서는 <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> 이벤트를 사용 하 여 새 행에 대 한 기본값을 지정 하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#120](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#120)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#120](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#120)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
-- `dataGridView1`이라는 <xref:System.Windows.Forms.DataGridView> 컨트롤  
+- <xref:System.Windows.Forms.DataGridView>이라는 `dataGridView1` 컨트롤  
   
 - 고유한 `CustomerID` 값을 생성 하기 위한 `NewCustomerId` 함수입니다.  
   
 - <xref:System?displayProperty=nameWithType> 및 <xref:System.Windows.Forms?displayProperty=nameWithType> 어셈블리에 대한 참조  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>

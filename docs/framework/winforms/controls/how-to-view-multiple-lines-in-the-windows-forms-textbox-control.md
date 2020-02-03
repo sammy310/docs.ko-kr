@@ -29,11 +29,11 @@ ms.locfileid: "76728281"
   
 ### <a name="to-view-multiple-lines-in-the-textbox-control"></a>TextBox 컨트롤에서 여러 줄을 보려면  
   
-1. <xref:System.Windows.Forms.TextBox.Multiline%2A> 속성을 `true`으로 설정합니다. <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> `true` (기본값) 이면 컨트롤의 텍스트가 하나 이상의 단락으로 표시 됩니다. 그렇지 않으면 목록으로 표시 되며,이는 일부 줄이 컨트롤의 가장자리에서 잘릴 수 있습니다.  
+1. <xref:System.Windows.Forms.TextBox.Multiline%2A> 속성을 `true`로 설정합니다. <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> `true` (기본값) 이면 컨트롤의 텍스트가 하나 이상의 단락으로 표시 됩니다. 그렇지 않으면 목록으로 표시 되며,이는 일부 줄이 컨트롤의 가장자리에서 잘릴 수 있습니다.  
   
 2. <xref:System.Windows.Forms.TextBox.ScrollBars%2A> 속성을 적절한 값으로 설정합니다.  
   
-    |값|설명|  
+    |값|Description|  
     |-----------|-----------------|  
     |<xref:System.Windows.Forms.ScrollBars.None>|텍스트가 거의 항상 컨트롤에 맞는 단락이 면이 값을 사용 합니다. 텍스트가 너무 길어서 한 번에 표시할 수 없는 경우 사용자는 마우스 포인터를 사용 하 여 컨트롤 내에서 이동할 수 있습니다.|  
     |<xref:System.Windows.Forms.ScrollBars.Horizontal>|줄 목록을 표시 하려는 경우이 값을 사용 합니다 .이 중 일부는 <xref:System.Windows.Forms.TextBox> 컨트롤의 너비 보다 길 수 있습니다.|  
@@ -41,12 +41,12 @@ ms.locfileid: "76728281"
   
 3. <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 속성을 적절한 값으로 설정합니다.  
   
-    |값|설명|  
+    |값|Description|  
     |-----------|-----------------|  
     |`false`|컨트롤의 텍스트는 자동으로 래핑되지 않으므로 줄 바꿈에 도달할 때까지 오른쪽으로 스크롤합니다. 위의 스크롤 막대나 <xref:System.Windows.Forms.ScrollBars.Both><xref:System.Windows.Forms.ScrollBars.Horizontal> 선택한 경우이 값을 사용 합니다.|  
-    |`true`(기본)|가로 스크롤 막대는 표시 되지 않습니다. 위의 스크롤 막대나 <xref:System.Windows.Forms.ScrollBars.None>를 <xref:System.Windows.Forms.ScrollBars.Vertical> 하 여 하나 이상의 단락을 표시 하는 경우이 값을 사용 합니다.|  
+    |`true`(기본값)|가로 스크롤 막대는 표시 되지 않습니다. 위의 스크롤 막대나 <xref:System.Windows.Forms.ScrollBars.None>를 <xref:System.Windows.Forms.ScrollBars.Vertical> 하 여 하나 이상의 단락을 표시 하는 경우이 값을 사용 합니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.TextBox>
 - [TextBox 컨트롤 개요](textbox-control-overview-windows-forms.md)

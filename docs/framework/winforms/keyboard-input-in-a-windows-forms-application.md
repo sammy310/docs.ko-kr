@@ -13,7 +13,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76739153"
 ---
-# <a name="keyboard-input-in-a-windows-forms-application"></a>Windows Forms 응용 프로그램의 키보드 입력
+# <a name="keyboard-input-in-a-windows-forms-application"></a>Windows Forms 애플리케이션의 키보드 입력
 Windows Forms는 특정 키 누름에 응답 하는 데 사용할 수 있는 표준 키보드 이벤트를 포함 하며, 응용 프로그램, 폼 및 컨트롤 수준에서 키 누름을 가로채 고 수정 하 고 사용할 수 있는 방법도 제공 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  

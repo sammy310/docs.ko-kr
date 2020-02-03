@@ -24,7 +24,7 @@ MDI (다중 문서 인터페이스)를 사용 하 여 여러 문서를 동시에
   
 1. 폼을 만들고 해당 <xref:System.Windows.Forms.Form.IsMdiContainer%2A> 속성을 `true`로 설정합니다.  
   
-2. 폼에 <xref:System.Windows.Forms.MenuStrip>를 추가합니다.  
+2. 폼에 <xref:System.Windows.Forms.MenuStrip>를 추가 합니다.  
   
 3. <xref:System.Windows.Forms.MenuStrip>에 두 개의 최상위 메뉴 항목을 추가 하 고 <xref:System.Windows.Forms.Control.Text%2A> 속성을 `&File` 및 `&Window`로 설정 합니다.  
   
@@ -34,7 +34,7 @@ MDI (다중 문서 인터페이스)를 사용 하 여 여러 문서를 동시에
   
 6. 프로젝트에 폼을 추가 하 고 원하는 컨트롤을 다른 <xref:System.Windows.Forms.MenuStrip>추가 합니다.  
   
-7. `&New`<xref:System.Windows.Forms.ToolStripMenuItem>의 <xref:System.Windows.Forms.Control.Click> 이벤트에 대한 이벤트 처리기를 만듭니다.  
+7. <xref:System.Windows.Forms.Control.Click>`&New`의 <xref:System.Windows.Forms.ToolStripMenuItem> 이벤트에 대한 이벤트 처리기를 만듭니다.  
   
 8. 이벤트 처리기 내에서 다음과 비슷한 코드를 삽입 하 여 `Form2`의 새 인스턴스를 만들고 `Form1`의 MDI 자식으로 표시 합니다.  
   
@@ -75,13 +75,13 @@ MDI (다중 문서 인터페이스)를 사용 하 여 여러 문서를 동시에
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
-- `Form1` 및 `Form2`라는 두 개의 <xref:System.Windows.Forms.Form> 컨트롤  
+- <xref:System.Windows.Forms.Form> 및 `Form1`라는 두 개의 `Form2` 컨트롤  
   
-- `menuStrip1`이라는 `Form1`의 <xref:System.Windows.Forms.MenuStrip> 컨트롤 및 `menuStrip2`라는 `Form2`의 <xref:System.Windows.Forms.MenuStrip> 컨트롤  
+- <xref:System.Windows.Forms.MenuStrip>이라는 `Form1`의 `menuStrip1` 컨트롤 및 <xref:System.Windows.Forms.MenuStrip>라는 `Form2`의 `menuStrip2` 컨트롤  
   
 - <xref:System?displayProperty=nameWithType> 및 <xref:System.Windows.Forms?displayProperty=nameWithType> 어셈블리에 대한 참조  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [방법: MDI 상위 폼 만들기](../advanced/how-to-create-mdi-parent-forms.md)
 - [방법: MDI 자식 폼 만들기](../advanced/how-to-create-mdi-child-forms.md)

@@ -55,7 +55,7 @@ Windows Forms <xref:System.Windows.Forms.Button> 컨트롤의 가장 기본적�
        }  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Button 컨트롤 개요](button-control-overview-windows-forms.md)
 - [Windows Forms Button 컨트롤 선택 방법](ways-to-select-a-windows-forms-button-control.md)

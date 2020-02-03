@@ -130,7 +130,7 @@ Windows Forms <xref:System.Windows.Forms.TreeView> 컨트롤 또는 <xref:System
        }  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [TreeView 컨트롤](treeview-control-windows-forms.md)
 - [ListView 컨트롤](listview-control-windows-forms.md)

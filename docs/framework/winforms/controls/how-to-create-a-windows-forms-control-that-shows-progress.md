@@ -30,11 +30,11 @@ ms.locfileid: "76731182"
   
 - <xref:System.Windows.Forms.Control.ClientRectangle%2A> 속성을 사용 하 여 컨트롤을 그리는 데 사용할 수 있는 영역을 계산 합니다. `FlashTrackBar`은 해당 `OptimizedInvalidate` 메서드에서 이를 수행합니다.  
   
-- Windows Forms 디자이너에서 변경되는 경우 속성의 serialization 또는 지속성을 구현합니다. `FlashTrackBar`은 `StartColor` 및 `EndColor` 속성을 직렬화하는 `ShouldSerializeStartColor` 및 `ShouldSerializeEndColor` 메서드를 정의합니다.  
+- Windows Forms 디자이너에서 변경되는 경우 속성의 serialization 또는 지속성을 구현합니다. `FlashTrackBar`은 `ShouldSerializeStartColor` 및 `ShouldSerializeEndColor` 속성을 직렬화하는 `StartColor` 및 `EndColor` 메서드를 정의합니다.  
   
  다음 테이블에서는 `FlashTrackBar`에서 정의된 사용자 지정 속성을 보여 줍니다.  
   
-|속성|설명|  
+|속성|Description|  
 |--------------|-----------------|  
 |`AllowUserEdit`|사용자가 플래시 트랙 표시줄의 값을 클릭하고 끌어와서 변경할 수 있는지 여부를 나타냅니다.|  
 |`EndColor`|트랙 표시줄의 끝 색을 지정합니다.|  
@@ -49,7 +49,7 @@ ms.locfileid: "76731182"
   
  다음 테이블에서는 `FlashTrackBar:` 속성 변경 이벤트 및 이벤트를 발생시키는 메서드에 의해 정의된 추가 구성원을 보여 줍니다.  
   
-|Member|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`ValueChanged`|트랙 표시줄의 `Value` 속성이 변경되면 발생하는 이벤트입니다.|  
 |`OnValueChanged`|메서드는 `ValueChanged` 이벤트를 발생시킵니다.|  
@@ -77,7 +77,7 @@ ms.locfileid: "76731182"
   
 - <xref:System.Windows.Forms.Control.OnTextChanged%2A>  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  `FlashTrackBar` 컨트롤은 `FlashTrackBarValueEditor` 및 `FlashTrackBarDarkenByEditor`이라는 두 개의 UI 형식 편집기를 정의하며 이는 다음 코드 목록에 표시됩니다. `HostApp` 클래스는 Windows Form에소 `FlashTrackBar` 컨트롤을 사용합니다.  
   
  [!code-csharp[System.Windows.Forms.FlashTrackBar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#1)]
@@ -92,7 +92,7 @@ ms.locfileid: "76731182"
  [!code-csharp[System.Windows.Forms.FlashTrackBar#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/HostApp.cs#30)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/HostApp.vb#30)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디자인 타임 지원 확장](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
 - [Windows Forms 컨트롤 개발 기본 사항](windows-forms-control-development-basics.md)

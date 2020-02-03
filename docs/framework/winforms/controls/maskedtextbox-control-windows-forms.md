@@ -16,7 +16,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76744964"
 ---
-# <a name="maskedtextbox-control-windows-forms"></a>MaskedTextBox 控件（Windows 窗体）
+# <a name="maskedtextbox-control-windows-forms"></a>MaskedTextBox 컨트롤(Windows Forms)
 이 항목은 `MaskedTextBox` 컨트롤에 대 한 다른 사용자에 게 연결 됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
@@ -31,5 +31,5 @@ ms.locfileid: "76744964"
  마스킹된 텍스트 상자 컨트롤의 구현에 대 한 기본 클래스입니다.  
   
 ## <a name="related-sections"></a>관련 섹션  
- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)  
+ [Windows Forms에서 사용할 컨트롤](controls-to-use-on-windows-forms.md)  
  사용 방법에 대한 정보 링크를 포함하는 Windows Forms 컨트롤의 전체 목록을 제공합니다.

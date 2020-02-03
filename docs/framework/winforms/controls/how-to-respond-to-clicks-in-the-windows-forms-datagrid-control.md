@@ -21,7 +21,7 @@ ms.locfileid: "76735757"
 ---
 # <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>방법: Windows Forms DataGrid 컨트롤에서 클릭에 대한 응답
 > [!NOTE]
-> <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 컨트롤과 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하세요.  
+> <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.  
   
  Windows Forms <xref:System.Windows.Forms.DataGrid> 데이터베이스에 연결 된 후에는 사용자가 클릭 한 셀을 모니터링할 수 있습니다.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "76735757"
        (this.myDataGrid_MouseDown);  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [DataGrid 컨트롤](datagrid-control-windows-forms.md)
 - [방법: 런타임에 Windows Forms DataGrid 컨트롤에 표시되는 데이터 변경](change-displayed-data-at-run-time-wf-datagrid-control.md)

@@ -21,20 +21,20 @@ ms.locfileid: "76746238"
   
  <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A> 속성을 설정할 때 <xref:System.Windows.Forms.DataGridView> 컨트롤에 이미 열이 있는 경우 기존 바인딩된 열은 데이터 원본의 열과 비교 되며, 일치 하는 항목이 있을 때마다 유지 됩니다. 바인딩되지 않은 열은 항상 유지 됩니다. 데이터 원본에 일치 하는 항목이 없는 바운드 열은 제거 됩니다. 컨트롤에 일치 하는 항목이 없는 데이터 원본의 열은 <xref:System.Windows.Forms.DataGridView.Columns%2A> 컬렉션의 끝에 추가 되는 새 <xref:System.Windows.Forms.DataGridViewColumn> 개체를 생성 합니다.  
   
-## <a name="example"></a>示例  
+## <a name="example"></a>예제  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#020](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#020)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#020](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#020)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
-- `customersDataGridView`이라는 <xref:System.Windows.Forms.DataGridView> 컨트롤  
+- <xref:System.Windows.Forms.DataGridView>이라는 `customersDataGridView` 컨트롤  
   
 - 이름이 `Customers`인 테이블이 있는 `customersDataSet` 라는 <xref:System.Data.DataSet> 개체입니다.  
   
 - <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, <xref:System.Data?displayProperty=nameWithType> 및 <xref:System.Xml?displayProperty=nameWithType> 어셈블리에 대한 참조  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A?displayProperty=nameWithType>

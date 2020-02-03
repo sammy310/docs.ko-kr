@@ -34,7 +34,7 @@ Windows Forms <xref:System.Windows.Forms.Panel> 컨트롤은 배경색과 배경
 
 6. **열기** 대화 상자에서 표시 하려는 파일을 선택 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.Control.BackColor%2A>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>

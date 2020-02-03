@@ -32,11 +32,11 @@ ms.locfileid: "76732381"
 
 1. 디자인 타임에 <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> 속성(이제 사용 되지 않음)이 개발자 컴퓨터의 기본 시스템 글꼴 높이와 너비로 설정되었습니다.
 
-2. 런타임에 사용자 컴퓨터의 기본 시스템 글꼴이 <xref:System.Windows.Forms.Form> 클래스의 <xref:System.Windows.Forms.Control.Font%2A> 속성을 초기화하는 데 사용되었습니다.
+2. 런타임에 사용자 컴퓨터의 기본 시스템 글꼴이 <xref:System.Windows.Forms.Control.Font%2A> 클래스의 <xref:System.Windows.Forms.Form> 속성을 초기화하는 데 사용되었습니다.
 
 3. 폼을 표시하기 전에 <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A> 메서드가 폼의 크기 조정을 위해 호출되었습니다. 이 메서드는 <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> 및 <xref:System.Windows.Forms.Control.Font%2A>에서 상대 크기를 계산한 다음 <xref:System.Windows.Forms.Control.Scale%2A> 메서드를 호출하여 실제로 폼과 자식의 크기를 조정했습니다.
 
-4. 후속 <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A> 호출에서 점진적으로 폼의 크기를 조정하지 않도록 <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> 값이 업데이트되었습니다.
+4. 후속 <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> 호출에서 점진적으로 폼의 크기를 조정하지 않도록 <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A> 값이 업데이트되었습니다.
 
 이 메커니즘은 대부분의 용도에 충분했지만 다음과 같은 제한 사항이 있었습니다.
 
@@ -84,7 +84,7 @@ ms.locfileid: "76732381"
 
 4. 다음 상황에서는 <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>도 자동으로 호출됩니다.
 
-    - 크기 조정 모드가 <xref:System.Windows.Forms.AutoScaleMode.Font>인 경우 <xref:System.Windows.Forms.Control.OnFontChanged%2A> 이벤트에 대한 응답으로
+    - 크기 조정 모드가 <xref:System.Windows.Forms.Control.OnFontChanged%2A>인 경우 <xref:System.Windows.Forms.AutoScaleMode.Font> 이벤트에 대한 응답으로
 
     - 컨테이너 컨트롤의 레이아웃이 다시 시작되고 <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> 또는 <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> 속성에서 변경 내용이 검색되는 경우
 
@@ -98,7 +98,7 @@ ms.locfileid: "76732381"
 
     - <xref:System.Windows.Forms.Control.ScaleControl%2A> 메서드를 재정의하여 현재 컨트롤에 대한 크기 조정 논리를 변경할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>
 - <xref:System.Windows.Forms.Control.Scale%2A>

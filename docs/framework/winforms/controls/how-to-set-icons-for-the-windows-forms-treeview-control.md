@@ -68,7 +68,7 @@ Windows Forms <xref:System.Windows.Forms.TreeView> 컨트롤은 각 노드 옆�
     treeView1->SelectedNode->SelectedImageIndex = 1;  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [TreeView 컨트롤 개요](treeview-control-overview-windows-forms.md)
 - [방법: Windows Forms TreeView 컨트롤을 사용하여 노드 추가 및 제거](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)

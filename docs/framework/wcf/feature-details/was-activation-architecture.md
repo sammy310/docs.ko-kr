@@ -32,7 +32,7 @@ ms.locfileid: "76737508"
 ### <a name="listener-adapters"></a>수신기 어댑터  
  수신기 어댑터는 수신 대기하는 네트워크 프로토콜을 사용하여 메시지를 받는 데 사용되는 네트워크 통신 논리를 구현하는 개별 Windows 서비스입니다. 다음 표에서는 WCF (Windows Communication Foundation) 프로토콜용 수신기 어댑터를 보여 줍니다.  
   
-|수신기 어댑터 서비스 이름|프로토콜|참고|  
+|수신기 어댑터 서비스 이름|프로토콜|참고 사항|  
 |-----------------------------------|--------------|-----------|  
 |W3SVC|http|IIS 7.0 및 WCF 모두에 대해 HTTP 활성화를 제공 하는 공용 구성 요소입니다.|  
 |NetTcpActivator|net.tcp|NetTcpPortSharing 서비스에 따라 다릅니다.|  
@@ -85,7 +85,7 @@ ms.locfileid: "76737508"
 </system.web>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [WCF와 함께 사용하도록 WAS 구성](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
 - [Windows Server App Fabric 호스팅 기능](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

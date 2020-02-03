@@ -24,7 +24,7 @@ Windows Forms <xref:System.Windows.Forms.RadioButton> 컨트롤은 둘 이상의
   
  <xref:System.Windows.Forms.RadioButton> 컨트롤은 명령 단추 처럼 표시 될 수 있으며,이 단추를 선택 하면 <xref:System.Windows.Forms.RadioButton.Appearance%2A> 속성이 <xref:System.Windows.Forms.Appearance.Button>으로 설정 된 경우 눌려진 것 처럼 보입니다. 라디오 단추는 <xref:System.Windows.Forms.ButtonBase.Image%2A> 및 <xref:System.Windows.Forms.ButtonBase.ImageList%2A> 속성을 사용 하 여 이미지를 표시할 수도 있습니다. 자세한 내용은 [방법: Windows Forms 컨트롤에 의해 표시 되는 이미지 설정](how-to-set-the-image-displayed-by-a-windows-forms-control.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.RadioButton>
 - [Panel 컨트롤 개요](panel-control-overview-windows-forms.md)

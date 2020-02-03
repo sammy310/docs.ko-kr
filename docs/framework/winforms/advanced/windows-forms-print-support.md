@@ -57,7 +57,7 @@ Windows Forms 인쇄는 주로 [PrintDocument component](../controls/printdocume
  [PrintPreviewDialog 컨트롤](../controls/printpreviewdialog-control-windows-forms.md)  
  <xref:System.Windows.Forms.PrintPreviewDialog> 컨트롤의 사용법을 설명 합니다.  
   
- [PageSetupDialog Component](../controls/pagesetupdialog-component-windows-forms.md)  
+ [PageSetupDialog 구성 요소](../controls/pagesetupdialog-component-windows-forms.md)  
  <xref:System.Windows.Forms.PageSetupDialog> 구성 요소의 사용법을 설명 합니다.  
   
  <xref:System.Drawing.Printing>  

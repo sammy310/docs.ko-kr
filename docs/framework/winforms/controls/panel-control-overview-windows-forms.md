@@ -23,7 +23,7 @@ Windows Forms <xref:System.Windows.Forms.Panel> 컨트롤은 다른 컨트롤에
 ## <a name="key-properties"></a>키 속성  
  스크롤 막대를 표시 하려면 <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> 속성을 `true`로 설정 합니다. <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.BackgroundImage%2A>및 <xref:System.Windows.Forms.Panel.BorderStyle%2A> 속성을 설정 하 여 패널의 모양을 사용자 지정할 수도 있습니다. <xref:System.Windows.Forms.Control.BackColor%2A> 및 <xref:System.Windows.Forms.Control.BackgroundImage%2A> 속성에 대 한 자세한 내용은 [방법: 패널의 배경 설정](how-to-set-the-background-of-a-windows-forms-panel.md)을 참조 하세요. <xref:System.Windows.Forms.Panel.BorderStyle%2A> 속성은 패널이 표시 되지 않는 테두리 (<xref:System.Windows.Forms.BorderStyle.None>), 일반 선 (<xref:System.Windows.Forms.BorderStyle.FixedSingle>) 또는 숨겨진 줄 (<xref:System.Windows.Forms.BorderStyle.Fixed3D>)을 사용 하 여 윤곽선으로 표시 되는지를 결정 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.Panel>
 - [GroupBox 컨트롤](groupbox-control-windows-forms.md)

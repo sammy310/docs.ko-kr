@@ -20,7 +20,7 @@ ms.locfileid: "76743237"
 # <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a>방법: Windows Forms ListView 컨트롤에서 항목 선택
 이 예제에서는 Windows Forms <xref:System.Windows.Forms.ListView> 컨트롤에서 프로그래밍 방식으로 항목을 선택 하는 방법을 보여 줍니다. 항목을 프로그래밍 방식으로 선택 하면 자동으로 포커스가 <xref:System.Windows.Forms.ListView> 컨트롤로 변경 되지 않습니다. 따라서 일반적으로 항목을 선택 하는 경우 항목을 포커스로 설정 하려고 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-csharp[System.Windows.Forms.ListView.Misc#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView.Misc/CS/form1.cs#1)]
  [!code-vb[System.Windows.Forms.ListView.Misc#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView.Misc/VB/form1.vb#1)]  
   
@@ -31,7 +31,7 @@ ms.locfileid: "76743237"
   
 - <xref:System?displayProperty=nameWithType> 및 <xref:System.Windows.Forms?displayProperty=nameWithType> 네임스페이스에 대한 참조  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListViewItem.Selected%2A?displayProperty=nameWithType>

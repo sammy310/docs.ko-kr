@@ -25,7 +25,7 @@ ms.locfileid: "76740576"
 
 이 항목의 코드를 단일 목록으로 복사 하려면 [방법: 두 개의 Windows Forms DataGridView 컨트롤을 사용 하 여 마스터/세부 폼 만들기](create-a-master-detail-form-using-two-datagridviews.md)를 참조 하세요.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 연습을 완료하려면 다음 사항이 필요합니다.
 
@@ -55,7 +55,7 @@ ms.locfileid: "76740576"
     [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#10)]
     [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#10)]
 
-## <a name="testing-the-application"></a>응용 프로그램 테스트
+## <a name="testing-the-application"></a>애플리케이션 테스트
 
 이제 폼을 테스트 하 여 예상 대로 동작 하는지 확인할 수 있습니다.
 
@@ -79,7 +79,7 @@ ms.locfileid: "76740576"
 
 - 셀의 모양을 사용자 지정 합니다. 자세한 내용은 [방법: Datagridview 컨트롤 Windows Forms에서 셀 모양 사용자 지정](customize-the-appearance-of-cells-in-the-datagrid.md) 및 [방법: Windows Forms Datagridview 컨트롤의 기본 셀 스타일 설정](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)을 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>

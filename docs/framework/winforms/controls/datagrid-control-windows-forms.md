@@ -17,7 +17,7 @@ ms.locfileid: "76742517"
 ---
 # <a name="datagrid-control-windows-forms"></a>DataGrid 컨트롤(Windows Forms)
 > [!NOTE]
-> <xref:System.Windows.Forms.DataGridView> 컨트롤은 `DataGrid` 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 `DataGrid` 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 컨트롤과 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하세요.  
+> <xref:System.Windows.Forms.DataGridView> 컨트롤은 `DataGrid` 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 `DataGrid` 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.  
   
  Windows Forms `DataGrid` 컨트롤은 데이터 집합을 ADO.NET 하 고, 테이블 형식 데이터를 표시 하 고, 데이터 소스를 업데이트할 수 있는 사용자 인터페이스를 제공 합니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "76742517"
  [Windows Forms 데이터 바인딩](../windows-forms-data-binding.md)  
  Windows Forms의 데이터 바인딩과 관련된 항목에 대한 링크를 제공합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [DataGridView 컨트롤](datagridview-control-windows-forms.md)
 - [Windows Forms DataGridView 컨트롤과 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)

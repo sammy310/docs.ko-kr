@@ -18,7 +18,7 @@ ms.locfileid: "76733845"
 
 이 단원의 항목에서는 데이터 바인딩을 사용 하 여 요소를 CLR (공용 언어 런타임) 개체 및 XML 형식으로 다양 한 데이터 소스의 데이터에 바인딩하는 방법에 대해 설명 합니다.
 
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
 - [단순 바인딩 만들기](how-to-create-a-simple-binding.md)
 - [바인딩 소스 지정](how-to-specify-the-binding-source.md)

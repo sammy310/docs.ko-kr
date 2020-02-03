@@ -135,11 +135,11 @@ ms.locfileid: "76738276"
   
  다음 그림에서는 이러한 형식의 항목을 포함 하는 <xref:System.Windows.Controls.ListBox> 보여 줍니다.  
   
-- 문자열  
+- 문자열입니다.  
   
 - <xref:System.DateTime> 개체입니다.  
   
-- <xref:System.Windows.UIElement>  
+- <xref:System.Windows.UIElement>입니다.  
   
 - <xref:System.Windows.Shapes.Ellipse> 및 <xref:System.Windows.Controls.TextBlock>를 포함 하는 <xref:System.Windows.Controls.Panel>입니다.  
   
@@ -221,7 +221,7 @@ ms.locfileid: "76738276"
 ## <a name="classes-that-enable-users-to-enter-text"></a>사용자가 텍스트를 입력할 수 있는 클래스  
  WPF는 사용자가 텍스트를 입력할 수 있는 세 개의 기본 컨트롤을 제공합니다. 각 컨트롤에는 텍스트가 다르게 표시됩니다. 다음 표에서는 이 세 가지 텍스트 관련 컨트롤과 텍스트를 표시할 때의 기능 및 컨트롤 텍스트를 포함하는 속성을 보여 줍니다.  
   
-|Control|텍스트 표시|콘텐츠 속성|  
+|제어|텍스트 표시|콘텐츠 속성|  
 |-------------|--------------------------|----------------------|  
 |<xref:System.Windows.Controls.TextBox>|일반 텍스트|<xref:System.Windows.Controls.TextBox.Text%2A>|  
 |<xref:System.Windows.Controls.RichTextBox>|서식 있는 텍스트|<xref:System.Windows.Controls.RichTextBox.Document%2A>|  
@@ -235,7 +235,7 @@ ms.locfileid: "76738276"
   
  다음 표에서는 <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>및 <xref:System.Windows.Controls.FlowDocumentScrollViewer> 클래스에 대 한 콘텐츠 속성을 나열 합니다.  
   
-|Control|콘텐츠 속성|콘텐츠 속성 형식|  
+|제어|콘텐츠 속성|콘텐츠 속성 형식|  
 |-------------|----------------------|---------------------------|  
 |<xref:System.Windows.Controls.FlowDocumentPageViewer>|문서|<xref:System.Windows.Documents.IDocumentPaginatorSource>|  
 |<xref:System.Windows.Controls.FlowDocumentReader>|문서|<xref:System.Windows.Documents.FlowDocument>|  
@@ -247,6 +247,6 @@ ms.locfileid: "76738276"
 ## <a name="classes-that-format-your-text"></a>텍스트 서식을 지정하는 클래스  
  <xref:System.Windows.Documents.TextElement> 및 관련 클래스를 사용 하 여 텍스트의 서식을 지정할 수 있습니다. <xref:System.Windows.Documents.TextElement> 개체는 <xref:System.Windows.Controls.TextBlock> 및 <xref:System.Windows.Documents.FlowDocument> 개체에 텍스트를 포함 하 고 서식을 지정 합니다. <xref:System.Windows.Documents.TextElement> 개체의 두 가지 기본 형식은 <xref:System.Windows.Documents.Block> 요소와 <xref:System.Windows.Documents.Inline> 요소입니다. <xref:System.Windows.Documents.Block> 요소는 단락 또는 목록과 같은 텍스트 블록을 나타냅니다. <xref:System.Windows.Documents.Inline> 요소는 블록의 텍스트 부분을 나타냅니다. 많은 <xref:System.Windows.Documents.Inline> 클래스는 적용 되는 텍스트의 서식을 지정 합니다. 각 <xref:System.Windows.Documents.TextElement>에는 자체 콘텐츠 모델이 있습니다. 자세한 내용은 [TextElement 콘텐츠 모델 개요](../advanced/textelement-content-model-overview.md)를 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [고급](../advanced/index.md)

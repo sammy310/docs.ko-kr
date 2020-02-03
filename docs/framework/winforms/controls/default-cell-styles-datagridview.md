@@ -18,7 +18,7 @@ ms.locfileid: "76731363"
 
 <xref:System.Windows.Forms.DataGridView> 컨트롤을 사용 하 여 전체 컨트롤에 대 한 기본 셀 스타일 및 셀 데이터 형식을 지정 하 고, 행 및 열 머리글의 경우 행 및 열 머리글의 경우, 대체 행에 대해 원장 효과를 만들 수 있습니다. 전체 컨트롤에 대해 설정 된 기본 스타일은 열 및 교대로 반복 되는 행에 대해 설정 된 기본 스타일에 의해 재정의 됩니다. 또한 개별 행 및 셀에 대해 코드에서 설정한 스타일이 기본 스타일을 재정의 합니다.
 
-셀 스타일에 대 한 자세한 내용은 참조 하세요. [Windows Forms DataGridView 컨트롤의 셀 스타일](cell-styles-in-the-windows-forms-datagridview-control.md)합니다. 교대로 반복 되는 행에 대 한 스타일을 설정 하려면 [방법: 디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤의 교대로 반복 되는 행 스타일 설정](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)을 참조 하세요.
+셀 스타일에 대 한 자세한 내용은 [Windows Forms DataGridView 컨트롤의 셀 스타일](cell-styles-in-the-windows-forms-datagridview-control.md)을 참조 하세요. 교대로 반복 되는 행에 대 한 스타일을 설정 하려면 [방법: 디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤의 교대로 반복 되는 행 스타일 설정](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)을 참조 하세요.
 
 <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> 속성을 사용 하 여 컨트롤에 추가 되는 모든 행에 영향을 주는 스타일을 설정할 수도 있습니다. 행 템플릿에 대 한 자세한 내용은 [방법: 행 템플릿을 사용 하 여 Windows Forms DataGridView 컨트롤에서 행 사용자 지정](use-the-row-template-to-customize-rows-in-the-datagrid.md)을 참조 하세요.
 
@@ -57,7 +57,7 @@ ms.locfileid: "76731363"
 
 4. <xref:System.Windows.Forms.DataGridView> 컨트롤을 null 값이 포함 될 수 있는 데이터 소스에 바인딩하는 경우 **Null 값** 텍스트 상자에 입력 합니다. 이 값은 셀 값이 null 참조 (Visual Basic의`Nothing`)와 같거나 <xref:System.DBNull.Value?displayProperty=nameWithType>경우에 표시 됩니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>

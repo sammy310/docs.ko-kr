@@ -38,7 +38,7 @@ Windows Forms <xref:System.Windows.Forms.SplitContainer> 컨트롤은 복합으�
   
 ## <a name="commonly-used-properties-methods-and-events"></a>일반적으로 사용되는 속성, 메서드 및 이벤트  
   
-|이름|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> 속성|<xref:System.Windows.Forms.SplitContainer> 컨트롤의 크기가 조정 된 후에 동일한 크기를 유지할 패널을 결정 합니다.|  
 |<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> 속성|분할자를 키보드 또는 마우스로 이동할 수 있는지 여부를 결정 합니다.|  
@@ -49,7 +49,7 @@ Windows Forms <xref:System.Windows.Forms.SplitContainer> 컨트롤은 복합으�
 |<xref:System.Windows.Forms.SplitContainer.SplitterMoving> 이벤트|분할자를 이동할 때 발생 합니다.|  
 |<xref:System.Windows.Forms.SplitContainer.SplitterMoved> 이벤트|분할자를 이동할 때 발생 합니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.SplitContainer>
 - [SplitContainer 컨트롤](splitcontainer-control-windows-forms.md)

@@ -104,7 +104,7 @@ ms.locfileid: "76741869"
 
  컬렉션의 개념과 관련이 없는 복잡 한 Api를 사용 하 여 형식에 컬렉션 인터페이스를 구현 하지 않도록 ❌ 합니다.
 
- ❌ `CollectionBase`와 같은 제네릭이 아닌 기본 컬렉션에서 상속 되지 않습니다. 대신 `Collection<T>`, `ReadOnlyCollection<T>`및 `KeyedCollection<TKey,TItem>`를 사용 해야 합니다.
+ ❌ `CollectionBase`와 같은 제네릭이 아닌 기본 컬렉션에서 상속 되지 않습니다. 대신 `Collection<T>`, `ReadOnlyCollection<T>` 및 `KeyedCollection<TKey,TItem>`를 사용해야 합니다.
 
 ### <a name="naming-custom-collections"></a>사용자 지정 컬렉션 이름 지정
  컬렉션 (`IEnumerable`을 구현 하는 형식)은 주로 (1) 구조 관련 작업을 포함 하는 새 데이터 구조를 만들고 기존 데이터 구조 (예: <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.LinkedList%601>, <xref:System.Collections.Generic.Stack%601>)와 다른 성능 특성을 만들고 (2) 특정 항목 집합을 포함 하는 특수 한 컬렉션을 만드는 (예: <xref:System.Collections.Specialized.StringCollection>) 두 가지 이유로 생성 됩니다. 데이터 구조는 응용 프로그램 및 라이브러리의 내부 구현에서 주로 사용 됩니다. 특수 컬렉션은 주로 Api (속성 및 매개 변수 형식)로 노출 됩니다.
@@ -127,7 +127,7 @@ ms.locfileid: "76741869"
 
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
 - [사용 지침](../../../docs/standard/design-guidelines/usage-guidelines.md)

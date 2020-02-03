@@ -26,7 +26,7 @@ ms.locfileid: "76735848"
   
 1. 폼을 만들고 해당 <xref:System.Windows.Forms.Form.IsMdiContainer%2A> 속성을 `true`로 설정합니다.  
   
-2. `Form1`에 <xref:System.Windows.Forms.MenuStrip>을 추가하고 <xref:System.Windows.Forms.MenuStrip>의 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 속성을 `true`로 설정합니다.  
+2. <xref:System.Windows.Forms.MenuStrip>에 `Form1`을 추가하고 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>의 <xref:System.Windows.Forms.MenuStrip> 속성을 `true`로 설정합니다.  
   
 3. `Form1`<xref:System.Windows.Forms.MenuStrip>에 최상위 메뉴 항목을 추가하고 해당 <xref:System.Windows.Forms.Control.Text%2A> 속성을 `&File`로 설정합니다.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "76735848"
   
 5. `&Import from` 하위 메뉴 항목에 두 개의 하위 메뉴 항목을 추가 하 고 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 속성을 `&Word` 및 `&Excel`로 설정 합니다.  
   
-6. 프로젝트에 폼을 추가하고, 폼에 <xref:System.Windows.Forms.MenuStrip>을 추가한 다음 `Form2`<xref:System.Windows.Forms.MenuStrip>의 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 속성을 `true`로 설정합니다.  
+6. 프로젝트에 폼을 추가하고, 폼에 <xref:System.Windows.Forms.MenuStrip>을 추가한 다음 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>`Form2`의 <xref:System.Windows.Forms.MenuStrip> 속성을 `true`로 설정합니다.  
   
 7. `Form2`<xref:System.Windows.Forms.MenuStrip>에 최상위 메뉴 항목을 추가하고 해당 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 속성을 `&File`로 설정합니다.  
   
@@ -44,9 +44,9 @@ ms.locfileid: "76735848"
   
     |Form2 메뉴 항목|MergeAction 값|MergeIndex 값|  
     |---------------------|-----------------------|----------------------|  
-    |File|MatchOnly|-1|  
-    |에서 가져오기|MatchOnly|-1|  
-    |Word|Remove|-1|  
+    |파일|MatchOnly|-1|  
+    |다음에서 가져오기|MatchOnly|-1|  
+    |Word|제거|-1|  
   
 10. `Form1`에서 `&Open`<xref:System.Windows.Forms.ToolStripMenuItem>의 <xref:System.Windows.Forms.Control.Click> 이벤트에 대 한 이벤트 처리기를 만듭니다.  
   
@@ -88,13 +88,13 @@ ms.locfileid: "76735848"
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
-- `Form1` 및 `Form2`라는 두 개의 <xref:System.Windows.Forms.Form> 컨트롤  
+- <xref:System.Windows.Forms.Form> 및 `Form1`라는 두 개의 `Form2` 컨트롤  
   
-- `menuStrip1`이라는 `Form1`의 <xref:System.Windows.Forms.MenuStrip> 컨트롤 및 `menuStrip2`라는 `Form2`의 <xref:System.Windows.Forms.MenuStrip> 컨트롤  
+- <xref:System.Windows.Forms.MenuStrip>이라는 `Form1`의 `menuStrip1` 컨트롤 및 <xref:System.Windows.Forms.MenuStrip>라는 `Form2`의 `menuStrip2` 컨트롤  
   
 - <xref:System?displayProperty=nameWithType> 및 <xref:System.Windows.Forms?displayProperty=nameWithType> 어셈블리에 대한 참조  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [방법: MDI 상위 폼 만들기](../advanced/how-to-create-mdi-parent-forms.md)
 - [방법: MDI 자식 폼 만들기](../advanced/how-to-create-mdi-child-forms.md)

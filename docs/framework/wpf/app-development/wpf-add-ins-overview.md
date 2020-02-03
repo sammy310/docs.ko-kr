@@ -25,7 +25,7 @@ ms.locfileid: "76738948"
 
 <a name="Requirements"></a>
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 .NET Framework 추가 기능 모델에 대해 잘 알고 있어야 합니다. 자세한 내용은 [추가 기능 및 확장성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))을 참조하세요.
 
@@ -308,7 +308,7 @@ WPF가 <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.Hw
 
 기본적으로 여러 응용 프로그램 도메인을 사용 하는 경우 각 응용 프로그램에 필요한 다양 한 .NET Framework 어셈블리가 모두 해당 응용 프로그램의 도메인에 로드 됩니다. 결과적으로 새 애플리케이션 도메인을 만들고 이 도메인의 애플리케이션을 시작하는 데 필요한 시간이 성능에 영향을 미칠 수 있습니다. 그러나 .NET Framework는 응용 프로그램이 이미 로드 된 경우 응용 프로그램 도메인 간에 어셈블리를 공유 하도록 응용 프로그램에 지시 하 여 시작 시간을 줄일 수 있는 방법을 제공 합니다. 진입점 메서드 (`Main`)에 적용 해야 하는 <xref:System.LoaderOptimizationAttribute> 특성을 사용 하 여이 작업을 수행 합니다. 이 경우, 애플리케이션 정의를 구현하는 코드만 사용해야 합니다([애플리케이션 관리 개요](application-management-overview.md) 참조).
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.LoaderOptimizationAttribute>
 - [추가 기능 및 확장성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))

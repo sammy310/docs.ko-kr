@@ -93,7 +93,7 @@ Win32 창에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-
 8. 속성, 호출 메서드 등을 설정하기 위해 정적 필드에 저장한 참조를 사용하여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠 개체와 통신합니다.
 
 > [!NOTE]
-> 별도의 어셈블리를 생성한 다음 이를 참조하는 경우 콘텐츠 클래스의 기본 부분 클래스를 사용하여 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서 1단계용 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠 클래스 정의 중 일부 또는 모두를 수행할 수 있습니다. 일반적으로 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]를 어셈블리로 컴파일하는 과정의 일부로 <xref:System.Windows.Application> 개체를 포함 하지만, 상호 운용의 일부로 <xref:System.Windows.Application> 사용 하지 않는 것이 아니라 응용 프로그램에서 참조 하는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일에 대해 루트 클래스를 하나 이상 사용 하 고 partial 클래스를 참조 하기만 하면 됩니다. 프로시저의 나머지 부분은 기본적으로 위에서 설명한 것과 비슷합니다.
+> 별도의 어셈블리를 생성한 다음 이를 참조하는 경우 콘텐츠 클래스의 기본 부분 클래스를 사용하여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 1단계용 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 콘텐츠 클래스 정의 중 일부 또는 모두를 수행할 수 있습니다. 일반적으로 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]를 어셈블리로 컴파일하는 과정의 일부로 <xref:System.Windows.Application> 개체를 포함 하지만, 상호 운용의 일부로 <xref:System.Windows.Application> 사용 하지 않는 것이 아니라 응용 프로그램에서 참조 하는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일에 대해 루트 클래스를 하나 이상 사용 하 고 partial 클래스를 참조 하기만 하면 됩니다. 프로시저의 나머지 부분은 기본적으로 위에서 설명한 것과 비슷합니다.
 >
 > 이러한 각 단계는 [연습: Win32에서 WPF 콘텐츠 호스팅](walkthrough-hosting-wpf-content-in-win32.md) 항목에서 코드를 통해 설명되어 있습니다.
 
@@ -169,7 +169,7 @@ Win32 창에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-
 
 인터페이스는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]와 Win32 지역 간의 전환에 발생 하는 상황에 대 한 지원도 제공 합니다. Win32 지역 내에서 탭 이동 동작은 모두 탭 이동에 대 한 Win32 구현 논리에 의해 완전히 제어 됩니다 (있는 경우).
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Interop.HwndHost>
 - <xref:System.Windows.Interop.HwndSource>

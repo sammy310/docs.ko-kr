@@ -19,9 +19,9 @@ ms.locfileid: "76736101"
 ---
 # <a name="how-to-manipulate-columns-in-the-windows-forms-datagridview-control"></a>방법: Windows Forms DataGridView 컨트롤에서 열 조작
 
-다음 코드 예제에서는 <xref:System.Windows.Forms.DataGridViewColumn> 클래스의 속성을 사용하여 <xref:System.Windows.Forms.DataGridView> 열을 조작하는 다양한 방법을 보여 줍니다.
+다음 코드 예제에서는 <xref:System.Windows.Forms.DataGridView> 클래스의 속성을 사용하여 <xref:System.Windows.Forms.DataGridViewColumn> 열을 조작하는 다양한 방법을 보여 줍니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#100](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewColumnDemo.cpp#100)]
 [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#100](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewColumnDemo.cs#100)]
@@ -33,7 +33,7 @@ ms.locfileid: "76736101"
 
 - System, System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewBand>

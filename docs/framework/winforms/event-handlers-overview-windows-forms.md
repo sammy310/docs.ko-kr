@@ -48,7 +48,7 @@ private:
   
  동일한 이벤트 처리기를 사용 하 여 다른 컨트롤에 대해 동일한 이벤트를 처리할 수도 있습니다. 예를 들어 폼에 <xref:System.Windows.Forms.RadioButton> 컨트롤 그룹이 있는 경우 <xref:System.Windows.Forms.Control.Click> 이벤트에 대 한 단일 이벤트 처리기를 만들고 각 컨트롤의 <xref:System.Windows.Forms.Control.Click> 이벤트를 단일 이벤트 처리기에 바인딩할 수 있습니다. 자세한 내용은 [방법: 여러 이벤트를 Windows Forms의 단일 이벤트 처리기에 연결](how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Forms에서 이벤트 처리기 만들기](creating-event-handlers-in-windows-forms.md)
 - [이벤트 개요](events-overview-windows-forms.md)

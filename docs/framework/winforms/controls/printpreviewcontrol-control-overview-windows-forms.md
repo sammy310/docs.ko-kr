@@ -20,7 +20,7 @@ Windows Forms <xref:System.Windows.Forms.PrintPreviewControl>은 인쇄 될 때 
 ## <a name="key-properties"></a>키 속성  
  컨트롤의 키 속성은 미리 볼 문서를 설정 하는 <xref:System.Windows.Forms.PrintPreviewControl.Document%2A>입니다. 문서는 <xref:System.Drawing.Printing.PrintDocument> 개체 여야 합니다. 인쇄용 문서 만들기에 대 한 개요는 [PrintDocument 구성 요소 개요](printdocument-component-overview-windows-forms.md) 및 [Windows Forms 인쇄 지원](../advanced/windows-forms-print-support.md)을 참조 하세요. <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> 및 <xref:System.Windows.Forms.PrintPreviewControl.Rows%2A> 속성은 컨트롤에서 가로 및 세로로 표시 되는 페이지 수를 결정 합니다. 앤티앨리어싱을 사용 하면 텍스트가 더 부드럽게 표시 될 수 있지만 표시 속도가 느려질 수도 있습니다. 이를 사용 하려면 <xref:System.Windows.Forms.PrintPreviewControl.UseAntiAlias%2A> 속성을 `true`로 설정 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.PrintPreviewControl>
 - [PrintPreviewDialog 컨트롤 개요](printpreviewdialog-control-overview-windows-forms.md)

@@ -19,14 +19,14 @@ Windows Forms 응용 프로그램에는 인쇄 기능이 포함 되는 경우가
   
  다음 표에서는 각 인쇄 권한 수준에서 사용할 수 있는 기능을 보여 줍니다.  
   
-|PrintingPermissionLevel|설명|  
+|PrintingPermissionLevel|Description|  
 |-----------------------------|-----------------|  
 |<xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>|설치 된 모든 프린터에 대 한 모든 권한을 제공 합니다.|  
-|<xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>|기본 프린터를 프로그래밍 방식으로 인쇄 하 고 제한 된 인쇄 대화 상자를 통해 보다 안전 하 게 인쇄할 수 있습니다. <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>는 <xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>의 하위 집합입니다.|  
-|<xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>|는 제한 된 대화 상자 에서만 인쇄 기능을 제공 합니다. <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>는 <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>의 하위 집합입니다.|  
-|<xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting>|프린터에 대 한 액세스를 차단합니다. <xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting>는 <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>의 하위 집합입니다.|  
+|<xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>|기본 프린터를 프로그래밍 방식으로 인쇄 하 고 제한 된 인쇄 대화 상자를 통해 보다 안전 하 게 인쇄할 수 있습니다. <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>은 <xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>의 하위 집합입니다.|  
+|<xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>|는 제한 된 대화 상자 에서만 인쇄 기능을 제공 합니다. <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>은 <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>의 하위 집합입니다.|  
+|<xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting>|프린터에 액세스할 수 없도록 합니다. <xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting>은 <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>의 하위 집합입니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Forms의 파일 및 데이터 액세스 추가 보안](more-secure-file-and-data-access-in-windows-forms.md)
 - [Windows Forms의 추가 보안 고려 사항](additional-security-considerations-in-windows-forms.md)

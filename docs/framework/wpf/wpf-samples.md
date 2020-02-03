@@ -1,5 +1,5 @@
 ---
-title: 예제
+title: 샘플
 ms.date: 11/02/2017
 helpviewer_keywords:
 - WPF samples [WPF]

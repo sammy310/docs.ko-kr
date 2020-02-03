@@ -19,7 +19,7 @@ Windows Forms <xref:System.Windows.Forms.ColorDialog> 구성 요소는 사용자
   
  대화 상자에서 선택한 색은 <xref:System.Windows.Forms.ColorDialog.Color%2A> 속성에서 반환 됩니다. <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A> 속성이 `false`로 설정 된 경우 "사용자 지정 색 정의" 단추를 사용할 수 없으며 사용자가 색상표의 미리 정의 된 색으로 제한 됩니다. <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A> 속성이 `true`로 설정 된 경우 사용자는 디더링된 색을 선택할 수 없습니다. 대화 상자를 표시 하려면 <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 메서드를 호출 해야 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.ColorDialog>
 - [ColorDialog 구성 요소](colordialog-component-windows-forms.md)

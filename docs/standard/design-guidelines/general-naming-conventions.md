@@ -60,15 +60,15 @@ ms.locfileid: "76741596"
 |C#|Visual Basic|C++|CLR|
 |---------|------------------|-----------|---------|
 |**sbyte**|**SByte**|**char**|**SByte**|
-|**byte**|**Byte**|**unsigned char**|**Byte**|
+|**바이트**|**Byte**|**unsigned char**|**Byte**|
 |**short**|**Short**|**short**|**Int16**|
 |**ushort**|**UInt16**|**unsigned short**|**UInt16**|
 |**int**|**Integer**|**int**|**Int32**|
 |**uint**|**UInt32**|**unsigned int**|**UInt32**|
 |**long**|**Long**|**__int64**|**Int64**|
 |**ulong**|**UInt64**|**unsigned __int64**|**UInt64**|
-|**float**|**Single**|**float**|**Single**|
-|**double**|**double**|**double**|**double**|
+|**float**|**단일**|**float**|**단일**|
+|**double**|**Double**|**double**|**Double**|
 |**bool**|**Boolean**|**bool**|**Boolean**|
 |**char**|**Char**|**wchar_t**|**Char**|
 |**string**|**String**|**String**|**String**|
@@ -97,7 +97,7 @@ ms.locfileid: "76741596"
 
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
 - [명명 지침](../../../docs/standard/design-guidelines/naming-guidelines.md)

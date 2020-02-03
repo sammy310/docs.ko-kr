@@ -21,7 +21,7 @@ ms.locfileid: "76740653"
 Windows 기반 애플리케이션에서 텍스트를 인쇄하는 것은 매우 일반적입니다. <xref:System.Drawing.Graphics> 클래스는 화면이나 프린터와 같은 디바이스에 개체(그래픽 또는 텍스트)를 그리기 위한 메서드를 제공합니다.  
   
 > [!NOTE]
-> <xref:System.Windows.Forms.TextRenderer>의 <xref:System.Windows.Forms.TextRenderer.DrawText%2A> 메서드는 인쇄에 지원되지 않습니다. 인쇄용 텍스트를 그리려면 다음 코드 예제와 같이 항상 <xref:System.Drawing.Graphics>의 <xref:System.Drawing.Graphics.DrawString%2A> 메서드를 사용해야 합니다.  
+> <xref:System.Windows.Forms.TextRenderer.DrawText%2A>의 <xref:System.Windows.Forms.TextRenderer> 메서드는 인쇄에 지원되지 않습니다. 인쇄용 텍스트를 그리려면 다음 코드 예제와 같이 항상 <xref:System.Drawing.Graphics.DrawString%2A>의 <xref:System.Drawing.Graphics> 메서드를 사용해야 합니다.  
   
 ### <a name="to-print-text"></a>텍스트를 인쇄하려면  
   
@@ -35,7 +35,7 @@ Windows 기반 애플리케이션에서 텍스트를 인쇄하는 것은 매우 
      [!code-csharp[System.Drawing.Printing.PrintExamples#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintExamples/CS/Form1.cs#1)]
      [!code-vb[System.Drawing.Printing.PrintExamples#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintExamples/VB/Form1.vb#1)]  
   
-3. <xref:System.Drawing.Printing.PrintDocument.PrintPage> 이벤트 처리기에서 <xref:System.Drawing.Printing.PrintPageEventArgs> 클래스의 <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> 속성과 문서 내용을 사용하여 줄 길이와 페이지당 줄 수를 계산합니다. 각 페이지가 그려진 후 마지막 페이지인지 확인하고 <xref:System.Drawing.Printing.PrintPageEventArgs.HasMorePages%2A> 의 <xref:System.Drawing.Printing.PrintPageEventArgs> 속성을 적절하게 설정합니다. <xref:System.Drawing.Printing.PrintDocument.PrintPage> 가 <xref:System.Drawing.Printing.PrintPageEventArgs.HasMorePages%2A> 가 될 때까지 `false`이벤트가 발생합니다. 또한 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 이벤트가 해당 이벤트 처리 메서드에 연결되어 있는지 확인합니다.  
+3. <xref:System.Drawing.Printing.PrintDocument.PrintPage> 이벤트 처리기에서 <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> 클래스의 <xref:System.Drawing.Printing.PrintPageEventArgs> 속성과 문서 내용을 사용하여 줄 길이와 페이지당 줄 수를 계산합니다. 각 페이지가 그려진 후 마지막 페이지인지 확인하고 <xref:System.Drawing.Printing.PrintPageEventArgs.HasMorePages%2A> 의 <xref:System.Drawing.Printing.PrintPageEventArgs> 속성을 적절하게 설정합니다. <xref:System.Drawing.Printing.PrintDocument.PrintPage> 가 <xref:System.Drawing.Printing.PrintPageEventArgs.HasMorePages%2A> 가 될 때까지 `false`이벤트가 발생합니다. 또한 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 이벤트가 해당 이벤트 처리 메서드에 연결되어 있는지 확인합니다.  
   
      다음 코드 예제에서 이벤트 처리기는 "testPage.txt" 파일의 내용을 폼에 사용된 것과 동일한 글꼴로 인쇄하는 데 사용됩니다.  
   
@@ -47,7 +47,7 @@ Windows 기반 애플리케이션에서 텍스트를 인쇄하는 것은 매우 
      [!code-csharp[System.Drawing.Printing.PrintExamples#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintExamples/CS/Form1.cs#5)]
      [!code-vb[System.Drawing.Printing.PrintExamples#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintExamples/VB/Form1.vb#5)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-csharp[System.Drawing.Printing.PrintExamples#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintExamples/CS/Form1.cs#0)]
  [!code-vb[System.Drawing.Printing.PrintExamples#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintExamples/VB/Form1.vb#0)]  
   
@@ -60,7 +60,7 @@ Windows 기반 애플리케이션에서 텍스트를 인쇄하는 것은 매우 
   
 - Visual Basic 또는 시각적 개체 C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 자세한 내용은 [명령줄에서 빌드](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 또는 [csc.exe를 사용 하 여 명령줄 빌드](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)를 참조 하세요. 코드를 새 프로젝트에 붙여넣어 Visual Studio에서이 예제를 빌드할 수도 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>

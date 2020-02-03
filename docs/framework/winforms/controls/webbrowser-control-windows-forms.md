@@ -78,6 +78,6 @@ Windows Forms `WebBrowser` 컨트롤은 웹 페이지를 호스팅하고 응용 
  <xref:System.Windows.Forms.WebBrowserRefreshOption>  
  이 열거형 및 모든 해당 값에 대해 설명 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)
+- [Windows Forms에서 사용할 컨트롤](controls-to-use-on-windows-forms.md)

@@ -24,7 +24,7 @@ Windows Forms <xref:System.Windows.Forms.PageSetupDialog> 구성 요소는 Windo
 
 폼에 추가 되 면 <xref:System.Windows.Forms.PageSetupDialog> 구성 요소가 Visual Studio의 Windows Forms 디자이너 아래쪽에 있는 트레이에 표시 됩니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.PageSetupDialog>
-- [PageSetupDialog Component](pagesetupdialog-component-windows-forms.md)
+- [PageSetupDialog 구성 요소](pagesetupdialog-component-windows-forms.md)

@@ -18,9 +18,9 @@ ms.lasthandoff: 01/24/2020
 ms.locfileid: "76736122"
 ---
 # <a name="how-to-manipulate-bands-in-the-windows-forms-datagridview-control"></a>방법: Windows Forms DataGridView 컨트롤에서 밴드 조작
-다음 코드 예제에서는 <xref:System.Windows.Forms.DataGridViewRow> 및 <xref:System.Windows.Forms.DataGridViewColumn> 클래스가 파생되는 <xref:System.Windows.Forms.DataGridViewBand> 클래스의 속성을 사용하여 <xref:System.Windows.Forms.DataGridView> 행과 열을 조작하는 다양한 방법을 보여 줍니다.  
+다음 코드 예제에서는 <xref:System.Windows.Forms.DataGridView> 및 <xref:System.Windows.Forms.DataGridViewBand> 클래스가 파생되는 <xref:System.Windows.Forms.DataGridViewRow> 클래스의 속성을 사용하여 <xref:System.Windows.Forms.DataGridViewColumn> 행과 열을 조작하는 다양한 방법을 보여 줍니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewBandDemo.cpp#0)]
  [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewBandDemo.cs#0)]
  [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewbanddemo.vb#0)]  
@@ -30,7 +30,7 @@ ms.locfileid: "76736122"
   
 - System, System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewBand>

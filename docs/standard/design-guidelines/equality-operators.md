@@ -1,5 +1,5 @@
 ---
-title: 같음 연산자
+title: 등가 연산자
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -16,7 +16,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76741700"
 ---
-# <a name="equality-operators"></a>같음 연산자
+# <a name="equality-operators"></a>등가 연산자
 이 섹션에서는 같음 연산자를 오버 로드 하는 방법을 설명 하 고 같음 연산자로 `operator==` 및 `operator!=`을 참조 합니다.
 
  ❌는 같음 연산자 중 하나를 오버 로드 하지 않고 다른 연산자를 오버 로드 하지 않습니다.
@@ -47,7 +47,7 @@ ms.locfileid: "76741700"
 
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
 - [사용 지침](../../../docs/standard/design-guidelines/usage-guidelines.md)

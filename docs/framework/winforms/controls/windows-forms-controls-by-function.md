@@ -21,7 +21,7 @@ Windows Forms는 다양 한 기능을 수행 하는 컨트롤 및 구성 요소�
   
 ## <a name="recommended-controls-and-components-by-function"></a>기능에 권장 되는 컨트롤 및 구성 요소  
   
-|기능|Control|설명|  
+|함수|제어|Description|  
 |--------------|-------------|-----------------|  
 |데이터 표시|<xref:System.Windows.Forms.DataGridView> 컨트롤|<xref:System.Windows.Forms.DataGridView> 컨트롤은 데이터를 표시 하기 위한 사용자 지정 가능한 테이블을 제공 합니다. <xref:System.Windows.Forms.DataGridView> 클래스를 사용 하면 셀, 행, 열 및 테두리를 사용자 지정할 수 있습니다. **참고:**  <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤에 없는 다양 한 기본 및 고급 기능을 제공 합니다. 자세한 내용은 [Windows Forms DataGridView 컨트롤과 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) 을 참조 하세요.|  
 |데이터 바인딩 및 탐색|<xref:System.Windows.Forms.BindingSource> 구성 요소|통화 관리, 변경 알림 및 기타 서비스를 제공 하 여 폼의 컨트롤을 데이터에 간편 하 게 바인딩할 수 있습니다.|  
@@ -74,7 +74,7 @@ Windows Forms는 다양 한 기능을 수행 하는 컨트롤 및 구성 요소�
   
 ## <a name="superseded-controls-and-components-by-function"></a>함수로 대체 된 컨트롤 및 구성 요소  
   
-|기능|대체 된 컨트롤|권장된 대체|  
+|함수|대체 된 컨트롤|권장된 대체|  
 |--------------|------------------------|-----------------------------|  
 |데이터 표시|<xref:System.Windows.Forms.DataGrid>|<xref:System.Windows.Forms.DataGridView>|  
 |정보 표시 (읽기 전용 컨트롤)|<xref:System.Windows.Forms.StatusBar>|<xref:System.Windows.Forms.StatusStrip>|  
@@ -84,7 +84,7 @@ Windows Forms는 다양 한 기능을 수행 하는 컨트롤 및 구성 요소�
 ||<xref:System.Windows.Forms.StatusBar>|<xref:System.Windows.Forms.StatusStrip>|  
 |폼 레이아웃|<xref:System.Windows.Forms.Splitter>|<xref:System.Windows.Forms.SplitContainer>|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)
+- [Windows Forms에서 사용할 컨트롤](controls-to-use-on-windows-forms.md)
 - [.NET Framework에서 사용자 지정 Windows Forms 컨트롤 개발](developing-custom-windows-forms-controls.md)

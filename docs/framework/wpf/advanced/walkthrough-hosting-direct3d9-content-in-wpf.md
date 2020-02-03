@@ -27,11 +27,11 @@ ms.locfileid: "76742614"
 
  작업이 완료 되 면 WPF 응용 프로그램에서 Direct3D9 콘텐츠를 호스트 하는 방법을 알게 됩니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
-이 연습을 완료하려면 다음 구성 요소가 필요합니다.
+이 연습을 완료하려면 다음과 같은 구성 요소가 필요합니다.
 
-- 보여 줍니다.
+- Visual Studio.
 
 - DirectX SDK 9 이상
 
@@ -77,7 +77,7 @@ Mainwindow.xaml WPF 디자이너에서 열립니다.
 
     Direct3D9 콘텐츠는 WPF 응용 프로그램 내에 표시 됩니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Interop.D3DImage>
 - [Direct3D9 및 WPF 상호 운용성을 위한 성능 고려 사항](performance-considerations-for-direct3d9-and-wpf-interoperability.md)

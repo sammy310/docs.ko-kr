@@ -36,10 +36,10 @@ Visual Studio에서 크기를 조정할 컨트롤을 선택 하 고 8 개의 크
 
 2. **서식** 메뉴에서 **같은 크기로 설정**을 선택 하 고 네 가지 옵션 중 하나를 선택 합니다. 처음 세 명령은 첫 번째 선택 된 컨트롤과 일치 하도록 컨트롤의 크기를 변경 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Forms 컨트롤](index.md)
 - [개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)
+- [Windows Forms에서 사용할 컨트롤](controls-to-use-on-windows-forms.md)
 - [기능별 Windows Forms 컨트롤](windows-forms-controls-by-function.md)
 - [방법: 디자이너를 사용 하 여 Windows Forms 크기 조정](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))

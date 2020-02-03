@@ -62,7 +62,7 @@ ms.locfileid: "76731715"
   
  <xref:System.Windows.Interop.HwndSource.AddHook%2A> 메서드를 사용 하 여 해당 메시지에 대 한 후크를 추가한 경우 키보드 싱크로 이동 하는 메시지를 HWND로 보낼 수 없습니다. 메시지가 메시지 펌프 수준에서 직접 처리 되 고 `DispatchMessage` 함수에 전송 되지 않았을 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Interop.ComponentDispatcher>
 - <xref:System.Windows.Interop.IKeyboardInputSink>

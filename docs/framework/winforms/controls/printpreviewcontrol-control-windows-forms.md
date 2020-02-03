@@ -29,5 +29,5 @@ Windows Forms `PrintPreviewControl`은 인쇄할 때 표시되는 방식으로 �
  [PrintPreviewDialog 컨트롤](printpreviewdialog-control-windows-forms.md)  
  인쇄 미리 보기 기능을 만들 수 있는 대체 방법을 설명합니다.  
   
- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)  
+ [Windows Forms에서 사용할 컨트롤](controls-to-use-on-windows-forms.md)  
  사용 방법에 대한 정보 링크를 포함하는 Windows Forms 컨트롤의 전체 목록을 제공합니다.

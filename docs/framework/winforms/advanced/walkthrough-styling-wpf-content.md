@@ -20,11 +20,11 @@ ms.locfileid: "76732549"
 
 이 문서에서는 Windows Form에 호스팅된 Windows Presentation Foundation (WPF) 컨트롤에 스타일을 적용 하는 방법을 보여 줍니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 연습을 완료하려면 Visual Studio가 필요합니다.
 
-## <a name="create-the-project"></a>프로젝트를 만듭니다.
+## <a name="create-the-project"></a>프로젝트 만들기
 
 Visual Studio를 열고 Visual Basic 또는 `StylingWpfContent`라는 시각적 개체 C# 에서 새 Windows Forms 응용 프로그램 프로젝트를 만듭니다.
 
@@ -55,7 +55,7 @@ WPF 컨트롤에 다른 스타일을 적용하여 모양과 동작을 변경할 
 
 1. **도구 상자**에서 `UserControl1`를 두 번 클릭 하 여 폼에 `UserControl1`의 인스턴스를 만듭니다.
 
-   `UserControl1` 인스턴스가 `elementHost1`이라는 새 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤에서 호스트됩니다.
+   `UserControl1` 인스턴스가 <xref:System.Windows.Forms.Integration.ElementHost>이라는 새 `elementHost1` 컨트롤에서 호스트됩니다.
 
 1. `elementHost1`에 대 한 스마트 태그 패널의 드롭다운 목록에서 **호스트 된 콘텐츠 편집** 을 클릭 합니다.
 
@@ -134,7 +134,7 @@ WPF 컨트롤에 다른 스타일을 적용하여 모양과 동작을 변경할 
 
 1. **확인** 및 **취소** 단추를 클릭 하 고 차이점을 확인 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

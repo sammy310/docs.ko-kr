@@ -41,7 +41,7 @@ ms.locfileid: "76732187"
 ## <a name="robust-programming"></a>강력한 프로그래밍  
  <xref:System.Windows.Forms.DataGridView> 컨트롤을 외부 데이터 원본에 바인딩하거나 가상 모드를 구현 하 여 고유한 데이터 원본을 제공 하는 경우 성능 문제가 발생할 수 있습니다. 많은 양의 데이터로 작업할 때 성능 저하를 방지 하려면 여러 셀의 <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> 속성을 설정 하는 대신 <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded> 이벤트를 처리 합니다. 이 이벤트를 처리할 때 셀 <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> 속성 값을 가져오면 이벤트가 발생 하 고 이벤트 처리기에 지정 된 <xref:System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs.ToolTipText%2A?displayProperty=nameWithType> 속성 값이 반환 됩니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A?displayProperty=nameWithType>

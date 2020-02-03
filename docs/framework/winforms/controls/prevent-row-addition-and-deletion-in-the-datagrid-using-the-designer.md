@@ -23,7 +23,7 @@ ms.locfileid: "76728713"
     > [!NOTE]
     > 컨트롤을 완전히 읽기 전용으로 설정 하려면 **편집 사용** 확인란의 선택을 취소 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A?displayProperty=nameWithType>

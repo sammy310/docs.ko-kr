@@ -28,7 +28,7 @@ ms.locfileid: "76740010"
   
 - <xref:System.Windows.Forms.Button.PerformClick%2A> 메서드를 호출 하 여 프로그래밍 방식으로 단추를 선택 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Button 컨트롤 개요](button-control-overview-windows-forms.md)
 - [방법: Windows Forms 단추 클릭에 응답](how-to-respond-to-windows-forms-button-clicks.md)

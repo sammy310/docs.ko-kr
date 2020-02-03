@@ -40,7 +40,7 @@ ms.locfileid: "76728065"
 
 - 캐시 된 파일의 경로를 모니터링 하 고 모니터링 되는 항목에 대 한 변경 내용을 캐시 인스턴스에 알립니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
  이 연습을 완료하려면 다음 사항이 필요합니다.
 
 - Visual Studio 2010
@@ -288,7 +288,7 @@ ms.locfileid: "76728065"
 
 #### <a name="to-test-caching-in-the-wpf-application"></a>WPF 응용 프로그램에서 캐싱을 테스트 하려면
 
-1. Ctrl+F5를 눌러 응용 프로그램을 실행합니다.
+1. Ctrl+F5를 눌러 애플리케이션을 실행합니다.
 
      `MainWindow` 창이 표시 됩니다.
 
@@ -319,13 +319,13 @@ ms.locfileid: "76728065"
     > [!NOTE]
     > 파일을 변경 하는 데 더 많은 시간을 허용 하려면 제거 시간을 20 초 이상으로 늘릴 수 있습니다.
 
-## <a name="code-example"></a>코드 예제
+## <a name="code-example"></a>코드 예
  이 연습을 완료 한 후에는 만든 프로젝트에 대 한 코드는 다음 예제와 유사 합니다.
 
  [!code-csharp[CachingWPFApplications#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CachingWPFApplications/CSharp/MainWindow.xaml.cs#1)]
  [!code-vb[CachingWPFApplications#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CachingWPFApplications/VisualBasic/MainWindow.xaml.vb#1)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Runtime.Caching.MemoryCache>
 - <xref:System.Runtime.Caching.ObjectCache>

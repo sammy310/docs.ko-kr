@@ -24,7 +24,7 @@ ms.locfileid: "76731276"
     > [!NOTE]
     > <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A> 속성은 런타임에 사용자 상호 작용에만 영향을 줍니다. 텍스트 상자의 <xref:System.Windows.Forms.TextBox.Text%2A> 속성을 변경 하 여 런타임에 텍스트 상자 콘텐츠를 프로그래밍 방식으로 변경할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.TextBox>
 - [TextBox 컨트롤 개요](textbox-control-overview-windows-forms.md)

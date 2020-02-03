@@ -51,7 +51,7 @@ ms.locfileid: "76743067"
  <xref:System.Windows.Forms.DataGridViewSelectedColumnCollection>  
  <xref:System.Windows.Forms.DataGridViewSelectedColumnCollection> 클래스에 대 한 참조 설명서를 제공 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [DataGridView 컨트롤](datagridview-control-windows-forms.md)
 - [Windows Forms DataGridView 컨트롤에서의 기본 키보드 및 마우스 처리](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)

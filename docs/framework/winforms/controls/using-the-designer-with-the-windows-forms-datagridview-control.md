@@ -54,6 +54,6 @@ Visual Studio는 코드를 작성 하지 않고도 많은 설치 작업을 수�
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView> 컨트롤에 대한 참조 설명서를 제공합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [DataGridView 컨트롤](datagridview-control-windows-forms.md)

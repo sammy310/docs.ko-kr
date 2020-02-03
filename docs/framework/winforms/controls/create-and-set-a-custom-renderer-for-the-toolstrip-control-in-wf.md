@@ -29,7 +29,7 @@ ms.locfileid: "76743413"
   
 1. <xref:System.Windows.Forms.ToolStripRenderer> 클래스를 확장 합니다.  
   
-2. 적절 한를 재정의 하 여 원하는 사용자 지정 렌더링 *을* 구현 합니다. 멤버  
+2. 적절 한를 재정의 하 여 원하는 사용자 지정 렌더링 *을* 구현 합니다. members  
   
     ```vb  
     Public Class RedTextRenderer  
@@ -81,7 +81,7 @@ ms.locfileid: "76743413"
     ToolStripManager.Renderer = new RedTextRenderer();  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.ToolStripManager.Renderer%2A>
 - <xref:System.Windows.Forms.ToolStripRenderer>

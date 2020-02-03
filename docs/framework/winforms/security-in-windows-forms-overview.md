@@ -56,7 +56,7 @@ Windows Forms 응용 프로그램을 배포 하는 데 사용 하는 ClickOnce �
 
 다음 항목에서는 추가 Windows Forms 보안 기능을 설명합니다.
 
-|항목|설명|
+|항목|Description|
 |-----------|-----------------|
 |- [Windows Forms의 파일 및 데이터 액세스 추가 보안](more-secure-file-and-data-access-in-windows-forms.md)|부분 신뢰 환경에서 파일 및 데이터에 액세스하는 방법을 설명합니다.|
 |- [Windows Forms의 인쇄 추가 보안](more-secure-printing-in-windows-forms.md)|부분 신뢰 환경에서 인쇄 기능에 액세스하는 방법을 설명합니다.|
@@ -70,7 +70,7 @@ ClickOnce에는 클라이언트 컴퓨터에서 상승 된 권한을 요청 하�
 
 다음 표에서는 이러한 기술을 설명합니다.
 
-|높은 권한 기술|설명|
+|높은 권한 기술|Description|
 |------------------------------------|-----------------|
 |권한 상승|애플리케이션을 처음 실행할 때 사용자에게 보안 대화 상자를 표시합니다. **권한 상승** 대화 상자는 사용자가 추가 신뢰를 부여할지 여부에 대해 합리적인 결정을 내릴 수 있도록 애플리케이션을 게시한 사람을 사용자에게 알립니다.|
 |신뢰할 수 있는 애플리케이션 배포|시스템 관리자가 클라이언트 컴퓨터에서 게시자 Authenticode 인증서의 일회성 설치를 수행해야 합니다. 이때부터 인증서로 서명된 애플리케이션은 신뢰할 수 있는 것으로 간주되며, 추가 확인 메시지 없이 로컬 컴퓨터에서 완전 신뢰로 실행될 수 있습니다.|
@@ -81,15 +81,15 @@ ClickOnce에는 클라이언트 컴퓨터에서 상승 된 권한을 요청 하�
 
 ClickOnce 및 권한 상승의 보안 측면에 대 한 자세한 내용은 [Clickonce 응용 프로그램 보안](/visualstudio/deployment/securing-clickonce-applications)을 참조 하세요. 신뢰할 수 있는 애플리케이션 배포에 대한 자세한 내용은 [신뢰할 수 있는 애플리케이션 배포 개요](/visualstudio/deployment/trusted-application-deployment-overview)를 참조하세요.
 
-### <a name="testing-the-application"></a>응용 프로그램 테스트
+### <a name="testing-the-application"></a>애플리케이션 테스트
 
 Visual Studio를 사용 하 여 Windows Forms 응용 프로그램을 배포한 경우 개발 환경에서 부분 신뢰 또는 제한 된 권한 집합으로 디버깅을 사용 하도록 설정할 수 있습니다.  또한 [방법: 제한 된 권한으로 ClickOnce 응용 프로그램 디버그](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions)를 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Forms 보안](windows-forms-security.md)
 - [코드 액세스 보안 기본 사항](../misc/code-access-security-basics.md)
 - [ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)
 - [신뢰할 수 있는 애플리케이션 배포 개요](/visualstudio/deployment/trusted-application-deployment-overview)
 - [Mage.exe(매니페스트 생성 및 편집 도구)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
-- [MageUI.exe (매니페스트 생성 및 편집 도구, 그래픽 클라이언트)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+- [MageUI.exe(매니페스트 생성 및 편집 도구, 그래픽 클라이언트)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

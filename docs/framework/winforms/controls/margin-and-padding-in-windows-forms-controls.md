@@ -27,7 +27,7 @@ ms.locfileid: "76728568"
   
  Visual Studio에서는 디자인 타임에 이 기능을 지원합니다. 또한 [연습: 안쪽 여백, 여백 및 AutoSize 속성을 사용 하 여 Windows Forms 컨트롤 레이아웃](windows-forms-controls-padding-autosize.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.Control.AutoSize%2A>
 - <xref:System.Windows.Forms.Control.Margin%2A>

@@ -121,7 +121,7 @@ Windows Presentation Foundation (WPF) 응용 프로그램을 빌드한 후 배�
   
  자세한 내용은 [.NET Framework 및 애플리케이션 배포](../../deployment/index.md)를 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [WPF 애플리케이션 빌드](building-a-wpf-application-wpf.md)
-- [Security](../security-wpf.md)
+- [보안](../security-wpf.md)

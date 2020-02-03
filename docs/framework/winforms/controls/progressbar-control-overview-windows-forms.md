@@ -28,14 +28,14 @@ ms.locfileid: "76741285"
   
  현재 진행 값을 업데이트 하는 가장 일반적인 방법은 <xref:System.Windows.Forms.ProgressBar.Value%2A> 속성을 설정 하는 코드를 작성 하는 것입니다. 큰 파일을 로드 하는 예제에서는 최대 파일 크기 (kb)를 설정할 수 있습니다. 예를 들어 <xref:System.Windows.Forms.ProgressBar.Maximum%2A> 속성이 100로 설정 된 경우 <xref:System.Windows.Forms.ProgressBar.Minimum%2A> 속성이 10으로 설정 되 고 <xref:System.Windows.Forms.ProgressBar.Value%2A> 속성이 50로 설정 되 고 5 개의 사각형이 표시 됩니다. 표시할 수 있는 숫자의 절반입니다.  
   
- 그러나 <xref:System.Windows.Forms.ProgressBar.Value%2A> 속성을 직접 설정 하는 것 외에도 <xref:System.Windows.Forms.ProgressBar> 컨트롤에 표시 되는 값을 수정 하는 다른 방법도 있습니다. <xref:System.Windows.Forms.ProgressBar.Step%2A> 속성을 사용 하 여 <xref:System.Windows.Forms.ProgressBar.Value%2A> 속성을 증가 시킬 값을 지정할 수 있습니다. 그런 다음 <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> 메서드를 호출 하면 값이 증가 합니다. 증가값 다를 사용할 수 있습니다는 <xref:System.Windows.Forms.ProgressBar.Increment%2A> 메서드는 증가 하는 데 사용할 값을 지정 합니다 <xref:System.Windows.Forms.ProgressBar.Value%2A> 속성입니다.  
+ 그러나 <xref:System.Windows.Forms.ProgressBar.Value%2A> 속성을 직접 설정 하는 것 외에도 <xref:System.Windows.Forms.ProgressBar> 컨트롤에 표시 되는 값을 수정 하는 다른 방법도 있습니다. <xref:System.Windows.Forms.ProgressBar.Step%2A> 속성을 사용 하 여 <xref:System.Windows.Forms.ProgressBar.Value%2A> 속성을 증가 시킬 값을 지정할 수 있습니다. 그런 다음 <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> 메서드를 호출 하면 값이 증가 합니다. 증분 값을 변경 하기 위해 <xref:System.Windows.Forms.ProgressBar.Increment%2A> 메서드를 사용 하 고 <xref:System.Windows.Forms.ProgressBar.Value%2A> 속성을 증가 시킬 값을 지정할 수 있습니다.  
   
  사용자에 게 현재 동작에 대 한 정보를 그래픽으로 알리는 또 다른 컨트롤은 <xref:System.Windows.Forms.StatusBar> 컨트롤입니다.  
   
 > [!IMPORTANT]
 > <xref:System.Windows.Forms.StatusStrip> 및 <xref:System.Windows.Forms.ToolStripStatusLabel> 컨트롤은 기능을 대체 하 고 <xref:System.Windows.Forms.StatusBar> 및 <xref:System.Windows.Forms.StatusBarPanel> 컨트롤에 추가 합니다. 그러나 <xref:System.Windows.Forms.StatusBar> 및 <xref:System.Windows.Forms.StatusBarPanel> 컨트롤은 이전 버전과의 호환성 및 향후 사용을 위해 유지 됩니다 (선택 하는 경우).  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.ProgressBar>
 - [ProgressBar 컨트롤](progressbar-control-windows-forms.md)

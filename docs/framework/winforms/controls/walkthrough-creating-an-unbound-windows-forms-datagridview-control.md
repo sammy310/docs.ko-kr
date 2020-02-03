@@ -70,12 +70,12 @@ ms.locfileid: "76740181"
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#10)]  
   
-## <a name="testing-the-application"></a>응용 프로그램 테스트  
+## <a name="testing-the-application"></a>애플리케이션 테스트  
  이제 폼을 테스트 하 여 예상 대로 동작 하는지 확인할 수 있습니다.  
   
 #### <a name="to-test-the-form"></a>폼을 테스트 하려면  
   
-- F5 키를 눌러 응용 프로그램을 실행합니다.  
+- F5 키를 눌러 애플리케이션을 실행합니다.  
   
      `PopulateDataGridView`에 나열 된 노래를 표시 하는 <xref:System.Windows.Forms.DataGridView> 컨트롤이 표시 됩니다. **행 추가** 단추를 사용 하 여 새 행을 추가 하 고 **행 삭제** 단추를 사용 하 여 선택한 행을 삭제할 수 있습니다. 바인딩되지 않은 <xref:System.Windows.Forms.DataGridView> 컨트롤은 데이터 저장소이 고 해당 데이터는 <xref:System.Data.DataSet> 또는 배열과 같은 외부 소스와는 독립적입니다.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "76740181"
   
 - 셀의 모양을 사용자 지정 합니다. 자세한 내용은 [방법: Datagridview 컨트롤 Windows Forms에서 셀 모양 사용자 지정](customize-the-appearance-of-cells-in-the-datagrid.md) 및 [방법: Windows Forms Datagridview 컨트롤의 기본 셀 스타일 설정](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Windows Forms DataGridView 컨트롤에서 데이터 표시](displaying-data-in-the-windows-forms-datagridview-control.md)

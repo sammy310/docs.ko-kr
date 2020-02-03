@@ -178,7 +178,7 @@ XAML 요소에는 각 요소의 언어를 정의 하는 XML 특성 (`xml:lang`)�
 
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 동일한 기능을 계속 유지하며 대체가 사용되는 시기와 방법을 사용자가 더 많이 제어할 수 있도록 이 기능에 대한 지원을 추가합니다. 이 기능은 모든 언어를 대상으로 하지만, 애플리케이션을 실행하는 다양한 문화권 때문에 특정 언어에 대한 숫자 모양을 애플리케이션 개발자가 지정하기 어려운 양방향 콘텐츠에서 더욱 유용합니다.
 
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 숫자 대체가 작동 하는 방식을 제어 하는 핵심 속성은 <xref:System.Windows.Media.NumberSubstitution.Substitution%2A> 종속성 속성입니다. <xref:System.Windows.Media.NumberSubstitution> 클래스 텍스트의 숫자가 표시 하는 하는 방법을 지정 합니다. 동작을 정의하는 세 가지 공용 속성이 있습니다. 다음은 각 속성에 대 한 요약입니다.
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 숫자 대체가 작동 하는 방식을 제어 하는 핵심 속성은 <xref:System.Windows.Media.NumberSubstitution.Substitution%2A> 종속성 속성입니다. <xref:System.Windows.Media.NumberSubstitution> 클래스는 텍스트의 숫자가 표시 되는 방법을 지정 합니다. 동작을 정의하는 세 가지 공용 속성이 있습니다. 다음은 각 속성에 대 한 요약입니다.
 
 **CultureSource:**
 
@@ -226,7 +226,7 @@ XAML 요소에는 각 요소의 언어를 정의 하는 XML 특성 (`xml:lang`)�
 
 먼저 응용 프로그램 구성 요소의 `NumberSubstitution.CultureSource="Text"`설정 합니다. 이 설정을 사용 하면 <xref:System.Windows.Controls.TextBlock>와 같이 "User"를 기본값으로 사용 하는 텍스트 요소에 대 한 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]에서 설정이 제공 되지 않습니다.
 
-예를 들면 다음과 같습니다.:
+예들 들어 다음과 같습니다.
 
 ```xaml
 <TextBlock

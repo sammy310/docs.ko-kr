@@ -42,7 +42,7 @@ ms.locfileid: "76732482"
  [상속 기본 사항(Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
  다른 클래스에 대한 기본 클래스 역할을 하는 Visual Basic 클래스를 정의하는 방법을 설명합니다.  
   
- [클래스](../../../csharp/language-reference/keywords/class.md)  
+ [class](../../../csharp/language-reference/keywords/class.md)  
  단일 상속이 허용되는 C# 클래스 접근 방식을 설명합니다.  
   
  [Visual Basic에서 상속된 이벤트 처리기 관련 문제 해결](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)  

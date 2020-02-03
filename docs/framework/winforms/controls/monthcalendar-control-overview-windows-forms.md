@@ -25,7 +25,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> 컨트롤은 사용자�
   
  <xref:System.Windows.Forms.MonthCalendar> 컨트롤의 키 속성이 <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A>, 컨트롤에서 선택한 날짜 범위입니다. <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> 값은 <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> 속성에서 설정할 수 있는 최대 일 수를 초과할 수 없습니다. 사용자가 선택할 수 있는 가장 이른 날짜와 가장 늦은 날짜는 <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A> 및 <xref:System.Windows.Forms.MonthCalendar.MinDate%2A> 속성에 따라 결정 됩니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.MonthCalendar>
 - [MonthCalendar 컨트롤](monthcalendar-control-windows-forms.md)

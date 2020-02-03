@@ -19,7 +19,7 @@ ms.locfileid: "76742546"
 # <a name="how-to-extract-the-icon-associated-with-a-file-in-windows-forms"></a>방법: Windows Forms에서 파일과 연결된 아이콘 추출
 많은 파일에는 연결 된 파일 형식에 대 한 시각적 표현을 제공 하는 아이콘이 포함 되어 있습니다. 예를 들어 Microsoft Word 문서에는 Word 문서로 식별 하는 아이콘이 포함 되어 있습니다. 목록 컨트롤이 나 테이블 컨트롤에 파일을 표시 하는 경우 각 파일 이름 옆에 있는 파일 형식을 나타내는 아이콘을 표시 하는 것이 좋습니다. <xref:System.Drawing.Icon.ExtractAssociatedIcon%2A> 메서드를 사용 하 여이 작업을 쉽게 수행할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제에서는 파일에 연결 된 아이콘을 추출 하 고 <xref:System.Windows.Forms.ListView> 컨트롤에 파일 이름 및 연결 된 아이콘을 표시 하는 방법을 보여 줍니다.  
   
  [!code-csharp[System.Drawing.Icon.ExtractAssociatedIconEx#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Icon.ExtractAssociatedIconEx/CS/Form1.cs#1)]
@@ -32,7 +32,7 @@ ms.locfileid: "76742546"
   
      양식이 <xref:System.IO> 네임 스페이스를 가져오는지 확인 해야 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [이미지, 비트맵 및 메타파일](images-bitmaps-and-metafiles.md)
 - [ListView 컨트롤](../controls/listview-control-windows-forms.md)

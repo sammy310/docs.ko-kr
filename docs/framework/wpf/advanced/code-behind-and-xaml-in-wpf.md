@@ -15,9 +15,9 @@ ms.locfileid: "76738097"
 # <a name="code-behind-and-xaml-in-wpf"></a>WPF의 코드 숨김 및 XAML
 <a name="introduction"></a>코드 숨김이 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지가 태그 컴파일될 때 태그 정의 개체와 조인 된 코드를 설명 하는 데 사용 되는 용어입니다. 이 항목에서는 코드 숨김으로 사용할 요구 사항 뿐만 아니라 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]코드에 대 한 대체 인라인 코드 메커니즘에 대해 설명 합니다.  
   
- 이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
+ 이 항목의 섹션:  
   
-- [전제 조건](#Prerequisites)  
+- [필수 구성 요소](#Prerequisites)  
   
 - [코드 숨김과 XAML 언어](#codebehind_and_the_xaml_language)  
   
@@ -28,7 +28,7 @@ ms.locfileid: "76738097"
 - [인라인 코드 제한 사항](#Inline_Code_Limitations)  
   
 <a name="Prerequisites"></a>   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 항목에서는 [XAML 개요 (WPF)](../../../desktop-wpf/fundamentals/xaml.md) 를 읽고 CLR 및 개체 지향 프로그래밍에 대 한 기본적인 지식이 있다고 가정 합니다.  
   
 <a name="codebehind_and_the_xaml_language"></a>   
@@ -58,7 +58,7 @@ ms.locfileid: "76738097"
 ## <a name="inline-code-limitations"></a>인라인 코드 제한 사항  
  인라인 코드 사용을 방지 하거나 제한 하는 것을 고려해 야 합니다. 아키텍처 및 코딩 철학 측면에서 태그와 코드 숨김으로 분리를 유지 하면 디자이너와 개발자 역할이 훨씬 더 명확 하 게 유지 됩니다. 좀 더 기술적인 수준에서 인라인 코드에 대해 작성 하는 코드는 항상 생성 되는 partial 클래스 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에 작성 하 고 기본 XML 네임 스페이스 매핑만 사용할 수 있기 때문에 작성 하기 불편할 수 있습니다. `using` 문을 추가할 수 없으므로 많은 API 호출을 정규화 해야 합니다. 기본 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 매핑은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 어셈블리에 있는 CLR 네임 스페이스를 모두 포함 하지만 대부분은 포함 하지 않습니다. 다른 CLR 네임 스페이스 내에 포함 된 형식 및 멤버에 대 한 호출을 정규화 해야 합니다. 또한 인라인 코드에서 partial 클래스 이외의 모든 항목을 정의할 수 없으며, 사용자가 참조 하는 모든 사용자 코드 엔터티는 생성 된 partial 클래스 내에 멤버 또는 변수로 존재 해야 합니다. 매크로, 전역 변수 또는 빌드 변수에 대 한 `#ifdef` 같은 다른 언어 관련 프로그래밍 기능을 사용할 수도 없습니다. 자세한 내용은 [X:Code 내장 XAML 형식](../../../desktop-wpf/xaml-services/xcode-intrinsic-xaml-type.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [XAML 개요(WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [x:Code 내장 XAML 형식](../../../desktop-wpf/xaml-services/xcode-intrinsic-xaml-type.md)

@@ -11,7 +11,7 @@ ms.locfileid: "76733825"
 ---
 # <a name="overview-of-wpf-data-binding-with-linq-to-xml"></a>LINQ to XML를 사용한 WPF 데이터 바인딩 개요
 
-이 문서에서는 <xref:System.Xml.Linq> 네임 스페이스의 동적 데이터 바인딩 기능을 소개 합니다. 이러한 기능을 WPF(Windows Presentation Foundation) 앱의 UI(사용자 인터페이스) 요소에 대한 데이터 소스로 사용할 수 있습니다. 이 시나리오에서는 <xref:System.Xml.Linq.XAttribute?displayProperty=fullName> 및 <xref:System.Xml.Linq.XElement?displayProperty=fullName>의 특수 *동적 속성*을 사용합니다.
+이 문서에서는 <xref:System.Xml.Linq> 네임 스페이스의 동적 데이터 바인딩 기능을 소개 합니다. 이러한 기능을 WPF(Windows Presentation Foundation) 앱의 UI(사용자 인터페이스) 요소에 대한 데이터 소스로 사용할 수 있습니다. 이 시나리오에서는 *및*의 특수 <xref:System.Xml.Linq.XAttribute?displayProperty=fullName>동적 속성<xref:System.Xml.Linq.XElement?displayProperty=fullName>을 사용합니다.
 
 ## <a name="xaml-and-linq-to-xml"></a>XAML 및 LINQ to XML
 
@@ -29,7 +29,7 @@ XAML과 LINQ to XML은 다음 두 가지 주요 방식으로 상호 작용할 �
 
 WPF 데이터 바인딩을 통해 UI 요소에서 속성 중 하나를 데이터 소스와 연결할 수 있습니다. 이에 대한 간단한 예는 사용자 정의 개체에서 public 속성의 값을 제공하는 텍스트가 포함된 <xref:System.Windows.Controls.Label>입니다. WPF 데이터 바인딩은 다음 구성 요소를 사용합니다.
 
-|구성 요소|설명|
+|구성 요소|Description|
 |---------------|-----------------|
 |바인딩 대상|데이터 소스와 연결할 UI 요소입니다. WPF의 시각적 요소는 <xref:System.Windows.UIElement> 클래스에서 파생됩니다.|
 |대상 속성|데이터 바인딩 원본의 값을 반영하는 바인딩 대상의 *종속성 속성*입니다. 종속성 속성은 <xref:System.Windows.DependencyObject>가 파생되는 <xref:System.Windows.UIElement> 클래스에서 직접 지원합니다.|
@@ -85,7 +85,7 @@ C#에서는 <xref:System.ComponentModel> 네임스페이스에서 제공하는 �
 
 WPF 동적 바인딩을 구현하기 위해 동적 속성은 <xref:System.Windows.Data> 네임스페이스(무엇보다도 <xref:System.Windows.Data.Binding> 클래스)에서 제공하는 기능과 함께 사용됩니다
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [LINQ to XML로 WPF 데이터 바인딩](wpf-data-binding-with-linq-to-xml-overview.md)
 - [LINQ to XML 동적 속성](linq-to-xml-dynamic-properties.md)

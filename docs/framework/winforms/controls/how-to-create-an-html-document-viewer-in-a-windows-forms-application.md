@@ -35,11 +35,11 @@ ms.locfileid: "76732838"
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
-- `webBrowser1`이라는 <xref:System.Windows.Forms.WebBrowser> 컨트롤  
+- <xref:System.Windows.Forms.WebBrowser>이라는 `webBrowser1` 컨트롤  
   
 - `System` 및 `System.Windows.Forms` 어셈블리에 대한 참조  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.WebBrowser>
 - <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>

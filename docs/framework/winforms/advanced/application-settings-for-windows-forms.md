@@ -1,5 +1,5 @@
 ---
-title: Application Settings
+title: 애플리케이션 설정
 ms.date: 04/07/2017
 f1_keywords:
 - ClientApplicationSettings
@@ -41,6 +41,6 @@ Windows Forms의 애플리케이션 설정 기능을 사용하면 클라이언�
 [구성 섹션 Windows Forms](../../configure-apps/file-schema/winforms/index.md)    
 4\.7 .NET Framework부터 Windows Forms 응용 프로그램에서 높은 DPI 지원을 사용 하도록 설정 하는 방법을 설명 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Forms](../index.md)

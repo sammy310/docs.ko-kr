@@ -79,7 +79,7 @@ ms.locfileid: "76736806"
   
     7. 원하는 경우 기본 데이터 세트 이름을 바꿉니다.  
   
-    8. **마침**을 클릭합니다.  
+    8. **Finish**를 클릭합니다.  
   
 4. **구성원 표시** 드롭다운 상자에서 콤보 상자에 표시할 ContactName 등의 열 이름을 선택합니다.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "76736806"
   
 8. <xref:System.Windows.Forms.ComboBox> 및 <xref:System.Windows.Forms.BindingNavigator> 컨트롤 이외의 컨트롤은 표시하려는 자식 테이블의 <xref:System.Windows.Forms.BindingSource>(예: `OrdersBindingSource`)의 세부 정보 필드에 바인딩합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.BindingSource>
 - [BindingSource 구성 요소](bindingsource-component.md)

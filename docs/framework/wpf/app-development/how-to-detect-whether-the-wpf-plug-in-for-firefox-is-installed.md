@@ -23,7 +23,7 @@ Firefox 용 WPF (Windows Presentation Foundation) 플러그 인은 Xbap (XAML �
 > [!NOTE]
 > .NET Framework 설치, 배포 및 검색 하는 방법에 대 한 자세한 내용은 [개발자 용 .NET Framework 설치](../../install/guide-for-developers.md)를 참조 하세요.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 .NET Framework 3.5가 설치 되 면 클라이언트 컴퓨터는 Firefox 용 WPF 플러그 인을 사용 하 여 구성 됩니다. 다음 예제 스크립트는 Firefox 용 WPF 플러그 인을 확인 한 다음 적절 한 상태 메시지를 표시 합니다.
 
@@ -65,7 +65,7 @@ Firefox 용 WPF 플러그 인에 대 한 확인이 성공 하면 다음 상태 �
 
 `The WPF plug-in for Firefox is not installed. Please install or reinstall the .NET Framework 3.5.`
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [.NET Framework 3.0 설치 여부 확인](how-to-detect-whether-the-net-framework-3-0-is-installed.md)
 - [.NET Framework 3.5 설치 여부 확인](how-to-detect-whether-the-net-framework-3-5-is-installed.md)

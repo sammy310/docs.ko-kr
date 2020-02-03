@@ -19,7 +19,7 @@ ms.locfileid: "76741484"
 # <a name="how-to-apply-attributes-in-windows-forms-controls"></a>방법: Windows Forms 컨트롤에서 특성 적용
 디자인 환경과 올바르게 상호 작용 하 고 런타임에 제대로 실행 되는 구성 요소와 컨트롤을 개발 하려면 클래스 및 멤버에 특성을 올바르게 적용 해야 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제에서는 사용자 지정 컨트롤에 여러 특성을 사용 하는 방법을 보여 줍니다. 컨트롤은 간단한 로깅 기능을 보여 줍니다. 컨트롤은 데이터 소스에 바인딩될 때 데이터 소스에서 보낸 값을 <xref:System.Windows.Forms.DataGridView> 컨트롤에 표시 합니다. 값이 `Threshold` 속성에 지정 된 값을 초과 하면 `ThresholdExceeded` 이벤트가 발생 합니다.  
   
  `AttributesDemoControl`은 `LogEntry` 클래스를 사용 하 여 값을 기록 합니다. `LogEntry` 클래스는 템플릿 클래스입니다. 즉, 기록 하는 형식에 대해 매개 변수가 있습니다. 예를 들어 `AttributesDemoControl` `float`형식의 값을 기록 하는 경우 각 `LogEntry` 인스턴스가 다음과 같이 선언 되 고 사용 됩니다.  
@@ -77,7 +77,7 @@ ms.locfileid: "76741484"
   
 - `AttributesDemoControl`를 호스팅하는 폼에는를 빌드하기 위해 `AttributesDemoControl` 어셈블리에 대 한 참조가 필요 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.IComparable>
 - <xref:System.Windows.Forms.DataGridView>

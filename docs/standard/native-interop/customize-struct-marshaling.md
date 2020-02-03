@@ -163,7 +163,7 @@ struct InPlaceArray
 
 .NET에서는 문자열 필드를 마샬링하기 위한 다양한 사용자 지정도 제공합니다.
 
-기본적으로 .NET은 문자열을 Null 종료 문자열에 대한 포인터로 마샬링합니다. 인코딩은 <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType>의 <xref:System.Runtime.InteropServices.StructLayoutAttribute.CharSet?displayProperty=nameWithType> 필드 값에 따라 다릅니다. 특성을 지정하지 않으면 인코딩은 기본적으로 ANSI 인코딩으로 설정됩니다.
+기본적으로 .NET은 문자열을 Null 종료 문자열에 대한 포인터로 마샬링합니다. 인코딩은 <xref:System.Runtime.InteropServices.StructLayoutAttribute.CharSet?displayProperty=nameWithType>의 <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> 필드 값에 따라 다릅니다. 특성을 지정하지 않으면 인코딩은 기본적으로 ANSI 인코딩으로 설정됩니다.
 
 ```csharp
 [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
@@ -195,7 +195,7 @@ struct DefaultString
 };
 ```
 
-다른 필드에 다른 인코딩을 사용해야 하거나 구조체 정의를 좀 더 명시적으로 설정하려는 경우 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 특성에 <xref:System.Runtime.InteropServices.UnmanagedType.LPStr?displayProperty=nameWithType> 또는 <xref:System.Runtime.InteropServices.UnmanagedType.LPWStr?displayProperty=nameWithType> 값을 사용할 수 있습니다.
+다른 필드에 다른 인코딩을 사용해야 하거나 구조체 정의를 좀 더 명시적으로 설정하려는 경우 <xref:System.Runtime.InteropServices.UnmanagedType.LPStr?displayProperty=nameWithType> 특성에 <xref:System.Runtime.InteropServices.UnmanagedType.LPWStr?displayProperty=nameWithType> 또는 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 값을 사용할 수 있습니다.
 
 ```csharp
 public struct AnsiString
@@ -227,7 +227,7 @@ struct UnicodeString
 };
 ```
 
-UTF-8 인코딩을 사용하여 문자열을 마샬링하려는 경우 <xref:System.Runtime.InteropServices.MarshalAsAttribute>의 <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> 값을 사용할 수 있습니다.
+UTF-8 인코딩을 사용하여 문자열을 마샬링하려는 경우 <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType>의 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 값을 사용할 수 있습니다.
 
 ```csharp
 public struct UTF8String
@@ -317,7 +317,7 @@ struct DefaultString
 
 ## <a name="customizing-decimal-field-marshaling"></a>10진 필드 마샬링 사용자 지정
 
-Windows에서 작업하는 경우 네이티브 [`CY` 또는 `CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy~r1) 구조체를 사용하는 일부 API를 발견할 수 있습니다. 기본적으로 .NET `decimal` 형식은 네이티브 [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) 구조체로 마샬링됩니다. 그러나 <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> 값과 함께 <xref:System.Runtime.InteropServices.MarshalAsAttribute>를 사용하여 `decimal` 값을 네이티브 `CY` 값으로 변환하도록 마샬러에 지정할 수 있습니다.
+Windows에서 작업하는 경우 네이티브 [`CY` 또는 `CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy~r1) 구조체를 사용하는 일부 API를 발견할 수 있습니다. 기본적으로 .NET `decimal` 형식은 네이티브 [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) 구조체로 마샬링됩니다. 그러나 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 값과 함께 <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType>를 사용하여 `decimal` 값을 네이티브 `CY` 값으로 변환하도록 마샬러에 지정할 수 있습니다.
 
 ```csharp
 public struct Currency
@@ -358,7 +358,7 @@ struct ObjectDefault
 };
 ```
 
-개체 필드를 `IDispatch*`로 마샬링하려는 경우 <xref:System.Runtime.InteropServices.UnmanagedType.IDispatch?displayProperty=nameWithType> 값과 함께 <xref:System.Runtime.InteropServices.MarshalAsAttribute>를 추가합니다.
+개체 필드를 `IDispatch*`로 마샬링하려는 경우 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 값과 함께 <xref:System.Runtime.InteropServices.UnmanagedType.IDispatch?displayProperty=nameWithType>를 추가합니다.
 
 ```csharp
 public struct ObjectDispatch
@@ -375,7 +375,7 @@ struct ObjectDispatch
 };
 ```
 
-`VARIANT`로 마샬링하려는 경우 <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> 값과 함께 <xref:System.Runtime.InteropServices.MarshalAsAttribute>를 추가합니다.
+`VARIANT`로 마샬링하려는 경우 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 값과 함께 <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType>를 추가합니다.
 
 ```csharp
 public struct ObjectVariant

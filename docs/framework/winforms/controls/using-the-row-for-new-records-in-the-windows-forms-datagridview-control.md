@@ -34,7 +34,7 @@ ms.locfileid: "76728342"
 - 새 레코드의 행 뒤에는 행을 추가할 수 없습니다. 이를 시도 하면 <xref:System.InvalidOperationException> 발생 합니다. 따라서 새 레코드의 행은 항상 <xref:System.Windows.Forms.DataGridView> 컨트롤의 마지막 행입니다. 행을 추가 하는 <xref:System.Windows.Forms.DataGridViewRowCollection>에 대 한 메서드 (<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>및 <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>)는 새 레코드에 대 한 행이 있는 경우 내부적으로 삽입 메서드를 호출 합니다.  
   
 ## <a name="visual-customization-of-the-row-for-new-records"></a>새 레코드에 대 한 행의 시각적 사용자 지정  
- 새 레코드에 대 한 행을 만들 때이 행은 <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> 속성에 지정 된 행을 기반으로 합니다. 이 행에 지정 되지 않은 모든 셀 스타일은 다른 속성에서 상속 됩니다. 셀 스타일 상속에 대 한 자세한 내용은 참조 하세요. [Windows Forms DataGridView 컨트롤의 셀 스타일](cell-styles-in-the-windows-forms-datagridview-control.md)합니다.  
+ 새 레코드에 대 한 행을 만들 때이 행은 <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> 속성에 지정 된 행을 기반으로 합니다. 이 행에 지정 되지 않은 모든 셀 스타일은 다른 속성에서 상속 됩니다. 셀 스타일 상속에 대 한 자세한 내용은 [Windows Forms DataGridView 컨트롤의 셀 스타일](cell-styles-in-the-windows-forms-datagridview-control.md)을 참조 하세요.  
   
  새 레코드에 대 한 행의 셀에 표시 되는 초기 값은 각 셀의 <xref:System.Windows.Forms.DataGridViewCell.DefaultNewRowValue%2A> 속성에서 검색 됩니다. <xref:System.Windows.Forms.DataGridViewImageCell>형식의 셀의 경우이 속성은 자리 표시자 이미지를 반환 합니다. 그렇지 않은 경우 `null`을 반환합니다. 사용자 지정 값을 반환 하도록이 속성을 재정의할 수 있습니다. 그러나 이러한 초기 값은 포커스를 새 레코드의 행에 입력할 때 <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> 이벤트 처리기로 대체 될 수 있습니다.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "76728342"
 ## <a name="virtual-mode"></a>가상 모드  
  가상 모드를 구현 하는 경우 데이터 모델에 새 레코드의 행이 필요한 시기와 행 추가를 롤백하는 시기를 추적 해야 합니다. 이 기능의 정확한 구현은 커밋 범위가 셀 또는 행 수준에 있는지 여부와 같은 데이터 모델 및 해당 트랜잭션 의미 체계의 구현에 따라 달라 집니다. 자세한 내용은 [Windows Forms DataGridView 컨트롤의 가상 모드](virtual-mode-in-the-windows-forms-datagridview-control.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>

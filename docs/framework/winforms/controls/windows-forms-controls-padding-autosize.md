@@ -39,11 +39,11 @@ ms.locfileid: "76742377"
 
 <xref:System.Windows.Forms.Control.AutoSize%2A> 속성은 컨트롤이 내용에 맞게 자동으로 크기를 조정 하도록 지시 합니다. 원래 <xref:System.Windows.Forms.Control.Size%2A> 속성 값 보다 작은 크기로 크기를 조정 하지 않으며 <xref:System.Windows.Forms.Control.Padding%2A> 속성의 값을 고려 합니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 연습을 완료 하려면 Visual Studio가 필요 합니다.
 
-## <a name="create-the-project"></a>프로젝트를 만듭니다.
+## <a name="create-the-project"></a>프로젝트 만들기
 
 1. Visual Studio에서 `LayoutExample`라는 **Windows 응용 프로그램** 프로젝트를 만듭니다.
 
@@ -174,7 +174,7 @@ Windows Forms 응용 프로그램에서 컨트롤을 정렬 하는 다양 한 �
 
 - <xref:System.Windows.Forms.Panel> 컨트롤의 도킹 자식 컨트롤을 사용 하 여 실험 합니다. <xref:System.Windows.Forms.Control.Padding%2A> 속성은 <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A> 속성을 보다 일반적으로 인식 하며, 자식 컨트롤을 <xref:System.Windows.Forms.Panel> 컨트롤에 배치 하 고 자식 컨트롤의 <xref:System.Windows.Forms.Control.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Fill>으로 설정 하 여이를 구현할 수 있습니다. <xref:System.Windows.Forms.Panel> 컨트롤의 <xref:System.Windows.Forms.Control.Padding%2A> 속성을 다양 한 값으로 설정 하 고 효과를 확인 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.Control.AutoSize%2A>
 - <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>

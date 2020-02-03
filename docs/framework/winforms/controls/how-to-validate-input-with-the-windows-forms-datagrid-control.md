@@ -21,7 +21,7 @@ ms.locfileid: "76728289"
 # <a name="how-to-validate-input-with-the-windows-forms-datagrid-control"></a>방법: Windows Forms DataGrid 컨트롤을 사용하여 입력 유효성 검사
 
 > [!NOTE]
-> <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 컨트롤과 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하세요.
+> <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.
 
 Windows Forms <xref:System.Windows.Forms.DataGrid> 컨트롤에 사용할 수 있는 입력 유효성 검사에는 두 가지 유형이 있습니다. 사용자가 셀에 대해 허용 되지 않는 데이터 형식의 값 (예: 문자열)을 입력 하려고 하면 새 잘못 된 값이 이전 값으로 바뀝니다. 이러한 종류의 입력 유효성 검사는 자동으로 수행 되며 사용자 지정할 수 없습니다.
 
@@ -84,7 +84,7 @@ Windows Forms <xref:System.Windows.Forms.DataGrid> 컨트롤에 사용할 수 �
     customersDataSet1.Tables["Customers"].ColumnChanging += new DataColumnChangeEventHandler(this.Customers_ColumnChanging);
     ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGrid>
 - <xref:System.Data.DataTable.ColumnChanging>

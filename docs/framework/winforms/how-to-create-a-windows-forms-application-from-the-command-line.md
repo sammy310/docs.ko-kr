@@ -21,7 +21,7 @@ ms.locfileid: "76739531"
 
 다음 절차에서는 명령줄에서 Windows Forms 애플리케이션을 만들고 실행하기 위해 완료해야 하는 기본 단계를 설명합니다. Visual Studio에서는 이러한 절차가 광범위하게 지원됩니다.  또한 [연습: WPF에서 Windows Forms 컨트롤 호스팅을](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)참조 하세요.
   
-## <a name="procedure"></a>프로시저  
+## <a name="procedure"></a>절차  
   
 #### <a name="to-create-the-form"></a>폼을 만들려면  
   
@@ -65,7 +65,7 @@ ms.locfileid: "76739531"
   
     - Visual Basic를 사용 하는 경우 다음을 입력 합니다. `vbc form1.vb`  
   
-3. 명령 프롬프트에서 다음을 입력 합니다. `Form1.exe`  
+3. 명령 프롬프트에 다음을 입력합니다. `Form1.exe`  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>컨트롤 추가 및 이벤트 처리
 
@@ -104,14 +104,14 @@ ms.locfileid: "76739531"
   
 7. 이전 절차에서 설명한 대로 애플리케이션을 컴파일 및 실행합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  
 다음 코드 예제는 이전 절차의 전체 예제입니다.
   
  [!code-csharp[System.Windows.Forms.FormWithButton#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.FormWithButton#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#1)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.Form>
 - <xref:System.Windows.Forms.Control>

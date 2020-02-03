@@ -77,8 +77,8 @@ ms.locfileid: "76732795"
  바로 가기 메뉴를 나타내는 <xref:System.Windows.Forms.ContextMenuStrip> 기능을 설명합니다.  
   
  <xref:System.Windows.Forms.ToolStripMenuItem>  
- <xref:System.Windows.Forms.MenuStrip> 또는 <xref:System.Windows.Forms.ContextMenuStrip>에 표시된 선택 가능한 옵션을 나타내는 <xref:System.Windows.Forms.ToolStripMenuItem> 클래스의 기능을 설명합니다.  
+ <xref:System.Windows.Forms.ToolStripMenuItem> 또는 <xref:System.Windows.Forms.MenuStrip>에 표시된 선택 가능한 옵션을 나타내는 <xref:System.Windows.Forms.ContextMenuStrip> 클래스의 기능을 설명합니다.  
   
 ## <a name="related-sections"></a>관련 섹션  
- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)  
+ [Windows Forms에서 사용할 컨트롤](controls-to-use-on-windows-forms.md)  
  사용 방법에 대한 정보 링크를 포함하는 Windows Forms 컨트롤의 전체 목록을 제공합니다.

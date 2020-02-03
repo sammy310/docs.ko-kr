@@ -47,17 +47,17 @@ ms.locfileid: "76741764"
 
  다음 표에서는 다양 한 유형의 식별자에 대 한 대/소문자 규칙을 설명 합니다.
 
-|식별자|대/소문자 구분|예|
+|ID|대/소문자 구분|예제|
 |----------------|------------|-------------|
 |네임스페이스|파스칼식|`namespace System.Security { ... }`|
 |형식|파스칼식|`public class StreamReader { ... }`|
 |인터페이스|파스칼식|`public interface IEnumerable { ... }`|
-|메서드|파스칼식|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|
+|방법|파스칼식|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|
 |속성|파스칼식|`public class String {` <br />  `public int Length { get; }` <br /> `}`|
-|Event|파스칼식|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|
+|이벤트(event)|파스칼식|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|
 |필드|파스칼식|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|
 |열거형 값|파스칼식|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|
-|매개 변수|카멜식|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|
+|매개 변수|Camel|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|
 
 ## <a name="capitalizing-compound-words-and-common-terms"></a>복합 단어 및 일반적인 단어를 대문자로
  대부분의 복합 용어는 대문자 표시를 위해 단일 단어로 취급 됩니다.
@@ -66,7 +66,7 @@ ms.locfileid: "76741764"
 
  이러한 단어는 끝점과 같이 단일 단어로 작성 된 복합 단어입니다. 대/소문자를 구분 하기 위해 폐쇄형 형식의 복합 단어를 단일 단어로 처리 합니다. 현재 사전을 사용 하 여 복합 단어가 닫힌 형태로 작성 되었는지 확인 합니다.
 
-|파스칼식|카멜식|not|
+|파스칼식|Camel|not|
 |------------|-----------|---------|
 |`BitFlag`|`bitFlag`|`Bitflag`|
 |`Callback`|`callback`|`CallBack`|
@@ -103,7 +103,7 @@ ms.locfileid: "76741764"
 
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
 - [명명 지침](../../../docs/standard/design-guidelines/naming-guidelines.md)

@@ -37,7 +37,7 @@ MDI (다중 문서 인터페이스) 응용 프로그램이 있는 경우 자식 
   
  다음 표에서는 사용 가능한 병합 동작의 의미와 일반적인 사용법을 설명 합니다.  
   
-|MergeAction 값|설명|일반적인 용도|  
+|MergeAction 값|Description|일반적인 용도|  
 |-----------------------|-----------------|-----------------|  
 |<xref:System.Windows.Forms.MergeAction.Append>|기본 소스 항목을 대상 항목 컬렉션의 끝에 추가 합니다.|프로그램의 일부가 활성화 된 경우 메뉴의 끝에 메뉴 항목을 추가 합니다.|  
 |<xref:System.Windows.Forms.MergeAction.Insert>|소스 항목에 설정 된 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 속성으로 지정 된 위치에 있는 대상 항목의 컬렉션에 소스 항목을 추가 합니다.|프로그램의 일부가 활성화 될 때 메뉴 항목을 가운데에 추가 하거나 메뉴의 시작 부분에 추가 합니다.<br /><br /> <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>의 값이 두 메뉴 항목의 값과 같으면 역순으로 추가 됩니다. 원래 순서를 유지 하기 위해 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>를 적절 하 게 설정 합니다.|  
@@ -53,7 +53,7 @@ MDI (다중 문서 인터페이스) 응용 프로그램이 있는 경우 자식 
   
  MDI 원본에서 <xref:System.Windows.Forms.MenuStrip>를 활성화 하 여 자동 병합을 트리거할 수 있습니다. 활성화 되 면 소스 <xref:System.Windows.Forms.MenuStrip> MDI 대상으로 병합 됩니다. 새 폼이 활성화 되 면 마지막 폼에서 병합이 되돌아가고 새 폼에서 트리거됩니다. 각 <xref:System.Windows.Forms.ToolStripItem>에서 필요에 따라 <xref:System.Windows.Forms.ToolStripItem.MergeAction%2A> 속성을 설정 하 고 각 <xref:System.Windows.Forms.MenuStrip>에 대해 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 속성을 설정 하 여이 동작을 제어할 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.ToolStripManager>
 - <xref:System.Windows.Forms.MenuStrip>

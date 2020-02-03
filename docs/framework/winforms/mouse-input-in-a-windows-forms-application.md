@@ -11,7 +11,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76727906"
 ---
-# <a name="mouse-input-in-a-windows-forms-application"></a>Windows Forms 응용 프로그램의 마우스 입력
+# <a name="mouse-input-in-a-windows-forms-application"></a>Windows Forms 애플리케이션의 마우스 입력
 Windows Forms에는 다양한 마우스 이벤트 및 사용자 지정된 마우스 커서, 마우스 캡처 및 끌어서 놓기 동작에 대한 추가 지원이 포함되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  

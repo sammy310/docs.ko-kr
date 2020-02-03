@@ -189,7 +189,7 @@ type MyParametricApi(dep1, dep2, dep3) =
 
 ### <a name="represent-error-cases-and-illegal-state-in-types-intrinsic-to-your-domain"></a>도메인의 내장 형식에서 오류 사례 및 잘못 된 상태를 나타냅니다.
 
-[구별 된 공용 구조체](../language-reference/discriminated-unions.md)를 F# 사용 하면 형식 시스템에서 잘못 된 프로그램 상태를 나타내는 기능을 제공 합니다. 예를 들면 다음과 같습니다.:
+[구별 된 공용 구조체](../language-reference/discriminated-unions.md)를 F# 사용 하면 형식 시스템에서 잘못 된 프로그램 상태를 나타내는 기능을 제공 합니다. 예들 들어 다음과 같습니다.
 
 ```fsharp
 type MoneyWithdrawalResult =
@@ -224,7 +224,7 @@ let handleWithdrawal amount =
 
 예외를 발생 시키기 위해 F# 에서 사용할 수 있는 기본 구문은 다음과 같은 기본 설정 순서로 고려 되어야 합니다.
 
-| 기능 | 구문 | 용도 |
+| 함수 | 구문 | 용도 |
 |----------|--------|---------|
 | `nullArg` | `nullArg "argumentName"` | 지정 된 인수 이름을 사용 하 여 `System.ArgumentNullException`을 발생 시킵니다. |
 | `invalidArg` | `invalidArg "argumentName" "message"` | 지정 된 인수 이름 및 메시지를 사용 하 여 `System.ArgumentException`을 발생 시킵니다. |
@@ -620,7 +620,7 @@ type Closure1Table() =
 
 #### <a name="prefer-let-mutable-to-reference-cells"></a>셀을 참조 하는 `let mutable` 선호
 
-참조 셀은 값 자체가 아닌 값에 대 한 참조를 표시 하는 방법입니다. 성능이 중요 한 코드에는 사용할 수 있지만 권장 되지는 않습니다. 다음 예제를 참조하세요.
+참조 셀은 값 자체가 아닌 값에 대 한 참조를 표시 하는 방법입니다. 성능이 중요 한 코드에는 사용할 수 있지만 권장 되지는 않습니다. 다음과 같은 예제를 참조하세요.
 
 ```fsharp
 let kernels =

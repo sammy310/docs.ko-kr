@@ -18,7 +18,7 @@ ms.locfileid: "76745266"
 
 Windows Forms에 추가된 컨트롤에는 사용자 환경을 더욱 특수화하는 데 사용되는 속성 및 메서드가 있습니다. 사용자의 요구에 맞게 사용자 인터페이스를 사용자 지정하는 것은 잘 설계된 Windows 애플리케이션에 매우 중요합니다.
 
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
 [방법: Windows Forms 컨트롤에 표시 되는 텍스트 설정](how-to-set-the-text-displayed-by-a-windows-forms-control.md)\
 컨트롤에 텍스트 레이블을 할당하는 방법을 설명합니다.

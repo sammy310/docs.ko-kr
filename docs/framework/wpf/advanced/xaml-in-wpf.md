@@ -40,7 +40,7 @@ ms.locfileid: "76741885"
 [WPF 아키텍처](wpf-architecture.md)  
 [기본 요소](base-elements.md)  
 [요소 트리 및 Serialization](element-tree-and-serialization.md)  
-[데이터 액세스](properties-wpf.md)  
+[속성](properties-wpf.md)  
 [이벤트](events-wpf.md)  
 [입력](input-wpf.md)  
 [리소스](resources-wpf.md)  

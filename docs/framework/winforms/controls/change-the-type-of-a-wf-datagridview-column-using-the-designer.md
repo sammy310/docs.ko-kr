@@ -30,7 +30,7 @@ ms.locfileid: "76737139"
     > [!NOTE]
     > `ColumnType` 속성은 열 유형을 나타내는 클래스를 나타내는 디자인 타임 전용 속성입니다. 열 클래스에 정의 된 실제 속성이 아닙니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn>

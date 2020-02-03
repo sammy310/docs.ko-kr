@@ -55,7 +55,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> 컨트롤의 중요 한 
        SelectionRange(projectStart, projectEnd);  
     ```  
   
-     – 또는 –  
+     -또는-  
   
      <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> 및 <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> 속성을 설정합니다.  
   
@@ -74,7 +74,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> 컨트롤의 중요 한 
     monthCalendar1->SelectionEnd = projectEnd;  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [MonthCalendar 컨트롤](monthcalendar-control-windows-forms.md)
 - [방법: Windows Forms MonthCalendar 컨트롤의 모양 변경](how-to-change-monthcalendar-control-appearance.md)

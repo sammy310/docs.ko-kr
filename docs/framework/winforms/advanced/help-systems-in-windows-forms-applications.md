@@ -15,7 +15,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76742240"
 ---
-# <a name="help-systems-in-windows-forms-applications"></a>Windows Forms 응용 프로그램의 도움말 시스템
+# <a name="help-systems-in-windows-forms-applications"></a>Windows Forms 애플리케이션의 도움말 시스템
 응용 프로그램 개발자로 서 가장 중요 한 courtesies 중 하나는 사용자에 게 특정 조항이 불법 도움말 시스템을 제공할 수 있다는 것입니다. 이것이 혼동 되거나 disoriented 될 때 설정 되는 위치입니다. Windows 기반 응용 프로그램에 도움말 시스템을 제공 하는 것은 [HelpProvider 구성 요소](../controls/helpprovider-component-windows-forms.md)를 사용 하 여 쉽게 수행할 수 있습니다.  
   
 ## <a name="different-types-of-help"></a>다양 한 형식의 도움말  
@@ -23,7 +23,7 @@ ms.locfileid: "76742240"
   
  Html 도움말 워크샵을 사용 하 여 HTML 도움말 1.x 파일을 생성할 수 있습니다. HTML 도움말에 대 한 자세한 내용은 MSDN의 "HTML 도움말 워크숍" 또는 기타 "HTML 도움말" 항목을 참조 하십시오.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Forms에 사용자 도움말 통합](integrating-user-help-in-windows-forms.md)
 - [HelpProvider 구성 요소](../controls/helpprovider-component-windows-forms.md)

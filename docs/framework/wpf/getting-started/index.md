@@ -1,5 +1,5 @@
 ---
-title: 시작
+title: 시작하기
 ms.date: 01/26/2018
 helpviewer_keywords:
 - getting started [WPF]
@@ -26,7 +26,7 @@ WPF(Windows Presentation Foundation)는 데스크톱 클라이언트 애플리�
 |WPF에 대한 자세한 설명...|[Visual Studio에서의 WPF 소개](introduction-to-wpf-in-vs.md)<br /><br /> [XAML 개요(WPF)](../advanced/xaml-overview-wpf.md)<br /><br /> [컨트롤](../controls/index.md)<br /><br /> [데이터 바인딩 개요](../../../desktop-wpf/data/data-binding-overview.md)|  
 |Windows Forms 개발자인가요?|[Windows Forms 컨트롤 및 해당 WPF 컨트롤](../advanced/windows-forms-controls-and-equivalent-wpf-controls.md)<br /><br /> [WPF 및 Windows Forms 상호 운용성](../advanced/wpf-and-windows-forms-interoperation.md)|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [클래스 라이브러리](../class-library-wpf.md)
 - [애플리케이션 개발](../app-development/index.md)

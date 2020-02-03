@@ -67,7 +67,7 @@ ms.locfileid: "76734695"
 #### <a name="default-implicit-validation-behavior-for-windows-forms-controls"></a>Windows Forms 컨트롤에 대 한 기본 암시적 유효성 검사 동작  
  Windows Forms 컨트롤 마다 <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> 속성에 대해 기본값이 다릅니다. 다음 표에서는 가장 일반적인 컨트롤과 기본값을 보여 줍니다.  
   
-|Control|기본 유효성 검사 동작|  
+|제어|기본 유효성 검사 동작|  
 |-------------|---------------------------------|  
 |<xref:System.Windows.Forms.ContainerControl>|<xref:System.Windows.Forms.AutoValidate.Inherit>|  
 |<xref:System.Windows.Forms.Form>|<xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>|  
@@ -90,7 +90,7 @@ ms.locfileid: "76734695"
 > [!NOTE]
 > 이러한 방식으로 폼을 강제로 닫으려면 폼의 컨트롤에서 아직 저장 되지 않은 데이터는 모두 손실 됩니다. 또한 모달 폼은 컨트롤을 닫을 때 컨트롤 내용의 유효성을 검사 하지 않습니다. 컨트롤 유효성 검사를 사용 하 여 포커스를 컨트롤에 잠글 수 있지만 폼 닫기와 관련 된 동작에 대해 걱정 하지 않아도 됩니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>

@@ -53,7 +53,7 @@ Windows Forms 프로그래밍에서는 인쇄 서비스 외에 인쇄 미리 보
      [!code-csharp[System.Drawing.Printing.PrintPreviewExample#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/CS/Form1.cs#4)]
      [!code-vb[System.Drawing.Printing.PrintPreviewExample#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/VB/Form1.vb#4)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-csharp[System.Drawing.Printing.PrintPreviewExample#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/CS/Form1.cs#0)]
  [!code-vb[System.Drawing.Printing.PrintPreviewExample#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/VB/Form1.vb#0)]  
   
@@ -62,7 +62,7 @@ Windows Forms 프로그래밍에서는 인쇄 서비스 외에 인쇄 미리 보
   
 - System, System.Windows.Forms, System.Drawing 어셈블리에 대한 참조  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [방법: Windows Forms에서 다중 페이지 텍스트 파일 인쇄](how-to-print-a-multi-page-text-file-in-windows-forms.md)
 - [Windows Forms 인쇄 지원](windows-forms-print-support.md)

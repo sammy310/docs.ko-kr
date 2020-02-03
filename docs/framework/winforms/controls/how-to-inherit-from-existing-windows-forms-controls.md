@@ -85,11 +85,11 @@ ms.locfileid: "76736491"
 
 1. 컨트롤을 저장하고 테스트합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [사용자 지정 컨트롤의 종류](varieties-of-custom-controls.md)
 - [방법: Control 클래스에서 상속](how-to-inherit-from-the-control-class.md)
 - [방법: UserControl 클래스에서 상속](how-to-inherit-from-the-usercontrol-class.md)
-- [방법: Windows Forms 컨트롤 작성](how-to-author-controls-for-windows-forms.md)
+- [방법: Windows Forms 컨트롤 제작](how-to-author-controls-for-windows-forms.md)
 - [Visual Basic에서 상속된 이벤트 처리기 관련 문제 해결](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
 - [연습: Windows Forms 컨트롤에서 상속](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

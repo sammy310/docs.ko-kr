@@ -37,7 +37,7 @@ Windows Forms <xref:System.Windows.Forms.NumericUpDown> 컨트롤의 숫자 값�
     numericUpDown1->Value = 55;  
     ```  
   
-     -또는-  
+     또는  
   
 2. <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> 또는 <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> 메서드를 호출 하 여 <xref:System.Windows.Forms.NumericUpDown.Increment%2A> 속성에 지정 된 양만큼 값을 늘리거나 줄입니다.  
   
@@ -89,7 +89,7 @@ Windows Forms <xref:System.Windows.Forms.NumericUpDown> 컨트롤의 숫자 값�
     }  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.NumericUpDown>
 - <xref:System.Windows.Forms.NumericUpDown.Value%2A?displayProperty=nameWithType>

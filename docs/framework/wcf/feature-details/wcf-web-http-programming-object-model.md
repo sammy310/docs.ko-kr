@@ -44,7 +44,7 @@ WCF 웹 HTTP 프로그래밍 모델을 통해 개발자는 SOAP 없이 기본 HT
 ## <a name="webgetattribute"></a>WebGetAttribute  
  <xref:System.ServiceModel.Web.WebGetAttribute> 특성은 서비스 작업을 HTTP GET 요청에 응답하는 작업으로 표시하는 데 사용됩니다. 이는 작업 설명에 메타데이터를 추가하는 수동 작업 동작입니다(<xref:System.ServiceModel.Description.IOperationBehavior> 메서드는 아무 작업도 하지 않음). 작업 설명에서 이 메타데이터를 찾는 동작(특히 <xref:System.ServiceModel.Web.WebGetAttribute>)이 서비스의 동작 컬렉션에 추가되지 않으면 <xref:System.ServiceModel.Description.WebHttpBehavior>를 적용해도 아무 효과가 없습니다. <xref:System.ServiceModel.Web.WebGetAttribute> 특성은 다음 표에 있는 선택적 매개 변수를 사용합니다.  
   
-|매개 변수|설명|  
+|매개 변수|Description|  
 |---------------|-----------------|  
 |`BodyStyle`|특성이 적용된 서비스 작업으로 보내거나 받은 요청 및 응답을 래핑할지 여부를 제어합니다.|  
 |`RequestFormat`|요청 메시지의 형식을 지정하는 방법을 제어합니다.|  
@@ -59,7 +59,7 @@ WCF 웹 HTTP 프로그래밍 모델을 통해 개발자는 SOAP 없이 기본 HT
   
  <xref:System.ServiceModel.Web.WebInvokeAttribute> 특성은 다음 표에 있는 선택적 매개 변수를 사용합니다.  
   
-|매개 변수|설명|  
+|매개 변수|Description|  
 |---------------|-----------------|  
 |`BodyStyle`|특성이 적용된 서비스 작업으로 보내거나 받은 요청 및 응답을 래핑할지 여부를 제어합니다.|  
 |`Method`|서비스 작업이 매핑되는 HTTP 메서드를 지정합니다.|  
@@ -74,7 +74,7 @@ WCF 웹 HTTP 프로그래밍 모델을 통해 개발자는 SOAP 없이 기본 HT
  <xref:System.UriTemplateTable> 클래스는 개발자가 선택한 개체에 바인딩된 <xref:System.UriTemplate> 개체의 관련 집합을 나타냅니다. 후보 URI(Uniform Resource Identifier)를 세트의 템플릿에 일치시키고 일치하는 템플릿과 연결된 데이터를 검색할 수 있습니다. WCF WEB HTTP 프로그래밍 모델에서 <xref:System.UriTemplateTable>를 사용 하 여 특정 Uri 또는 Uri 그룹을 서비스 작업에 매핑합니다.  
   
 ## <a name="webservicehost"></a>WebServiceHost  
- <xref:System.ServiceModel.Web.WebServiceHost>는 비SOAP 웹 스타일 서비스를 보다 쉽게 호스트할 수 있도록 <xref:System.ServiceModel.ServiceHost>를 확장합니다. <xref:System.ServiceModel.Web.WebServiceHost>는 서비스 설명에서 엔드포인트를 찾지 못하는 경우 자동으로 서비스의 기본 주소에 기본 엔드포인트를 만듭니다. 기본 HTTP 엔드포인트를 만들 때 <xref:System.ServiceModel.Web.WebServiceHost>는 메타데이터 엔드포인트가 기본 HTTP 엔드포인트와 간섭하지 않도록 HTTP 도움말 페이지 및 WSDL(웹 서비스 기술 언어) GET 기능을 비활성화합니다. <xref:System.ServiceModel.Web.WebServiceHost>는 또한 <xref:System.ServiceModel.WebHttpBinding>을 사용하는 모든 엔드포인트에 필수 <xref:System.ServiceModel.Description.WebHttpBehavior>가 연결되어 있는지 확인합니다. 마지막으로<xref:System.ServiceModel.Web.WebServiceHost>는 보안 가상 디렉터리에서 사용될 때 연결된 IIS(인터넷 정보 서비스) 보안 설정과 함께 작동하도록 엔드포인트의 바인딩을 자동으로 구성합니다.  
+ <xref:System.ServiceModel.Web.WebServiceHost>는 비SOAP 웹 스타일 서비스를 보다 쉽게 호스트할 수 있도록 <xref:System.ServiceModel.ServiceHost>를 확장합니다. <xref:System.ServiceModel.Web.WebServiceHost>는 서비스 설명에서 엔드포인트를 찾지 못하는 경우 자동으로 서비스의 기본 주소에 기본 엔드포인트를 만듭니다. 기본 HTTP 끝점을 만들 때 <xref:System.ServiceModel.Web.WebServiceHost>는 메타 데이터 끝점이 기본 HTTP 끝점과 간섭 하지 않도록 HTTP 도움말 페이지 및 WSDL (웹 서비스 기술 언어) GET 기능을 사용 하지 않도록 설정 합니다. <xref:System.ServiceModel.Web.WebServiceHost>는 또한 <xref:System.ServiceModel.WebHttpBinding>을 사용하는 모든 엔드포인트에 필수 <xref:System.ServiceModel.Description.WebHttpBehavior>가 연결되어 있는지 확인합니다. 마지막으로<xref:System.ServiceModel.Web.WebServiceHost>는 보안 가상 디렉터리에서 사용될 때 연결된 IIS(인터넷 정보 서비스) 보안 설정과 함께 작동하도록 엔드포인트의 바인딩을 자동으로 구성합니다.  
   
 ## <a name="webservicehostfactory"></a>WebServiceHostFactory  
  <xref:System.ServiceModel.Activation.WebServiceHostFactory> 클래스는 서비스가 IIS(인터넷 정보 서비스) 또는 WAS(Windows Process Activation Service)에서 호스트될 때 동적으로 <xref:System.ServiceModel.Web.WebServiceHost>를 만드는 데 사용됩니다. 호스팅 애플리케이션이 <xref:System.ServiceModel.Web.WebServiceHost>를 인스턴스화하는 자체 호스팅 서비스와 달리 IIS 또는 WAS에서 호스트되는 서비스는 이 클래스를 사용하여 서비스에 대한 <xref:System.ServiceModel.Web.WebServiceHost>를 만듭니다. <xref:System.ServiceModel.Activation.WebServiceHostFactory.CreateServiceHost%28System.Type%2CSystem.Uri%5B%5D%29> 메서드는 서비스에 대한 들어오는 요청을 수신할 때 호출됩니다.  
@@ -100,7 +100,7 @@ WCF 웹 HTTP 프로그래밍 모델을 통해 개발자는 SOAP 없이 기본 HT
 
 WCF 웹 HTTP 프로그래밍 모델은 WS-* 프로토콜을 지원 하지 않으므로 WCF 웹 HTTP 프로그래밍 모델을 기반으로 하는 웹 서비스를 보호 하는 유일한 방법은 SSL을 사용 하 여 서비스를 노출 하는 것입니다. IIS 7.0로 SSL을 설정 하는 방법에 대 한 자세한 내용은 [iis에서 ssl을 구현 하는 방법을](https://support.microsoft.com/help/299875/how-to-implement-ssl-in-iis)참조 하십시오.
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>

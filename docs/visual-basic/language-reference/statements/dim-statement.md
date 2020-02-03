@@ -47,23 +47,23 @@ ms.locfileid: "76744732"
 Dim [ WithEvents ] variablelist
 ```
 
-## <a name="parts"></a>구성 요소
+## <a name="parts"></a>요소
 
 - `attributelist`
 
-  옵션. [특성 목록](attribute-list.md)을 참조 하십시오.
+  (선택 사항) [특성 목록](attribute-list.md)을 참조 하십시오.
 
 - `accessmodifier`
 
-  옵션. 다음 중 하나일 수 있습니다.
+  (선택 사항) 다음 중 하나일 수 있습니다.
 
   - [Public](../modifiers/public.md)
 
-  - [보호됨](../modifiers/protected.md)
+  - [Protected](../modifiers/protected.md)
 
   - [Friend](../modifiers/friend.md)
 
-  - [전용](../modifiers/private.md)
+  - [프라이빗](../modifiers/private.md)
 
   - [Protected Friend](../modifiers/protected-friend.md)
 
@@ -73,27 +73,27 @@ Dim [ WithEvents ] variablelist
 
 - `Shared`
 
-  옵션. [공유](../modifiers/shared.md)를 참조 하세요.
+  (선택 사항) [공유](../modifiers/shared.md)를 참조 하세요.
 
 - `Shadows`
 
-  옵션. [그림자](../modifiers/shadows.md)를 참조 하세요.
+  (선택 사항) [그림자](../modifiers/shadows.md)를 참조 하세요.
 
 - `Static`
 
-  옵션. [Static](../modifiers/static.md)을 참조 하세요.
+  (선택 사항) [Static](../modifiers/static.md)을 참조 하세요.
 
 - `ReadOnly`
 
-  옵션. [ReadOnly](../modifiers/readonly.md)를 참조 하세요.
+  (선택 사항) [ReadOnly](../modifiers/readonly.md)를 참조 하세요.
 
 - `WithEvents`
 
-  옵션. 이러한 개체 변수가 이벤트를 발생 시킬 수 있는 클래스의 인스턴스를 참조 하도록 지정 합니다. [WithEvents](../modifiers/withevents.md)를 참조 하세요.
+  (선택 사항) 이러한 개체 변수가 이벤트를 발생 시킬 수 있는 클래스의 인스턴스를 참조 하도록 지정 합니다. [WithEvents](../modifiers/withevents.md)를 참조 하세요.
 
 - `variablelist`
 
-  필수 이 문에서 선언 되는 변수의 목록입니다.
+  필수 사항입니다. 이 문에서 선언 되는 변수의 목록입니다.
 
   `variable [ , variable ... ]`
 
@@ -101,18 +101,18 @@ Dim [ WithEvents ] variablelist
 
   `variablename [ ( [ boundslist ] ) ] [ As [ New ] datatype [ With`{`[ .propertyname = propinitializer [ , ... ] ] } ] ] [ = initializer ]`
 
-  |구성 요소|설명|
+  |부분|Description|
   |---|---|
-  |`variablename`|필수 변수의 이름입니다. [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)을 참조하세요.|
-  |`boundslist`|옵션. 배열 변수의 각 차원에 대 한 범위 목록입니다.|
-  |`New`|옵션. `Dim` 문이 실행 될 때 클래스의 새 인스턴스를 만듭니다.|
-  |`datatype`|옵션. 변수의 데이터 형식입니다.|
-  |`With`|옵션. 개체 이니셜라이저 목록을 소개 합니다.|
-  |`propertyname`|옵션. 인스턴스를 만드는 클래스의 속성 이름입니다.|
+  |`variablename`|필수 사항입니다. 변수의 이름입니다. [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)을 참조하세요.|
+  |`boundslist`|(선택 사항) 배열 변수의 각 차원에 대 한 범위 목록입니다.|
+  |`New`|(선택 사항) `Dim` 문이 실행 될 때 클래스의 새 인스턴스를 만듭니다.|
+  |`datatype`|(선택 사항) 변수의 데이터 형식입니다.|
+  |`With`|(선택 사항) 개체 이니셜라이저 목록을 소개 합니다.|
+  |`propertyname`|(선택 사항) 인스턴스를 만드는 클래스의 속성 이름입니다.|
   |`propinitializer`|`propertyname` = 이후에 필요 합니다. 평가 되 고 속성 이름에 할당 되는 식입니다.|
   |`initializer`|`New` 지정 되지 않은 경우 선택 사항입니다. 식이 생성 될 때 계산 되어 변수에 할당 되는 식입니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 Visual Basic 컴파일러는 `Dim` 문을 사용 하 여 변수의 데이터 형식 및 변수에 액세스할 수 있는 코드와 같은 기타 정보를 확인 합니다. 다음 예에서는 `Integer` 값을 포함 하는 변수를 선언 합니다.
 
@@ -255,7 +255,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 
 다음 테이블에는 `Dim` 문에서 데이터 형식과 이니셜라이저를 지정하는 다양한 조합의 결과에 대한 설명이 나와 있습니다.
 
-|데이터 형식 지정 여부|이니셜라이저 지정 여부|예|결과|
+|데이터 형식 지정 여부|이니셜라이저 지정 여부|예제|결과|
 |---|---|---|---|
 |아니요|아니요|`Dim qty`|[Option Strict](option-strict-statement.md) 가 off (기본값) 이면 변수가 `Nothing`로 설정 됩니다.<br /><br /> `Option Strict`가 on이면 컴파일 시간 오류가 발생합니다.|
 |아니요|예|`Dim qty = 5`|[유추 옵션](option-infer-statement.md) (기본값)이 설정 된 경우 변수는 이니셜라이저의 데이터 형식을 사용 합니다. [지역 형식 유추](../../programming-guide/language-features/variables/local-type-inference.md)를 참조 하세요.<br /><br /> `Option Infer`가 off이고 `Option Strict`고 off이면 변수가 `Object`의 데이터 형식을 사용합니다.<br /><br /> `Option Infer`가 off이고 `Option Strict`는 on이면 컴파일 시간 오류가 발생합니다.|
@@ -305,19 +305,19 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 
 `Using` 문은 리소스를 확보 하 고, 문 집합을 실행 한 다음 리소스를 삭제 하는 프로세스를 자동화 합니다. 그러나 리소스는 <xref:System.IDisposable> 인터페이스를 구현 해야 합니다. 자세한 내용은 [using 문](using-statement.md)을 참조하세요.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예에서는 다양 한 옵션과 함께 `Dim` 문을 사용 하 여 변수를 선언 합니다.
 
 [!code-vb[VbVbalrStatements#141](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#141)]
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예에서는 1에서 30 사이의 소수를 나열 합니다. 지역 변수의 범위는 코드 설명에 설명 되어 있습니다.
 
 [!code-vb[VbVbalrStatements#142](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#142)]
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 `speedValue` 변수가 클래스 수준에서 선언 됩니다. `Private` 키워드는 변수를 선언 하는 데 사용 됩니다. 변수는 `Car` 클래스의 모든 프로시저에서 액세스할 수 있습니다.
 
@@ -325,7 +325,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 
 [!code-vb[VbVbalrStatements#145](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#145)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Const 문](const-statement.md)
 - [ReDim 문](redim-statement.md)

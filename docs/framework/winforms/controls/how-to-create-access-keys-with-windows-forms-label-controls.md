@@ -31,7 +31,7 @@ Windows Forms <xref:System.Windows.Forms.Label> 컨트롤은 다른 컨트롤에
   
 1. 먼저 레이블을 그린 다음 다른 컨트롤을 그립니다.  
   
-     -또는-  
+     또는  
   
      컨트롤을 임의의 순서로 그리고 레이블의 <xref:System.Windows.Forms.Control.TabIndex%2A> 속성을 다른 컨트롤 보다 하나 작은 값으로 설정 합니다.  
   
@@ -63,7 +63,7 @@ Windows Forms <xref:System.Windows.Forms.Label> 컨트롤은 다른 컨트롤에
     label2->Text = "&Copy && Paste";  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [방법: 내용에 맞게 Windows Forms Label 컨트롤 크기 조정](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
 - [Label 컨트롤 개요](label-control-overview-windows-forms.md)

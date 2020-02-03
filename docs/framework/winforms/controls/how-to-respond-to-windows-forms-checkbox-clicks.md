@@ -135,7 +135,7 @@ ms.locfileid: "76735668"
     > [!NOTE]
     > <xref:System.Windows.Forms.CheckBox.ThreeState%2A> 속성이 `true`로 설정 된 경우 <xref:System.Windows.Forms.CheckBox.Checked%2A> 속성은 <xref:System.Windows.Forms.CheckState.Checked>와 <xref:System.Windows.Forms.CheckState.Indeterminate>에 대 한 `true`를 반환 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.CheckBox>
 - [CheckBox 컨트롤 개요](checkbox-control-overview-windows-forms.md)
