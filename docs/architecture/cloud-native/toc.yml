@@ -44,12 +44,16 @@
         - name: 서비스 메시 통신 인프라
           href: service-mesh-communication-infrastructure.md
     - name: 분산 데이터
-      href: distributed-data.md
+      href: null
       items:
-        - name: 클라우드 네이티브 데이터 패턴
-          href: data-patterns.md
-        - name: Azure의 데이터 스토리지
-          href: azure-data-storage.md
+        - name: 마이크로 서비스당 데이터베이스
+          href: database-per-microservice.md
+        - name: 관계형 마이닝 모델과 NoSQL 데이터 비교
+          href: relational-vs-nosql-data.md
+        - name: 클라우드 네이티브 애플리케이션에서 캐싱
+          href: azure-caching.md
+        - name: Azure의 Elasticsearch
+          href: elastic-search-in-azure.md
     - name: 클라우드 네이티브 복원력
       href: resiliency.md
       items:
@@ -70,7 +74,7 @@
           href: monitoring-azure-kubernetes.md
         - name: Azure Monitor
           href: azure-monitor.md
-    - name: 클레임
+    - name: Identity
       href: identity.md
       items:
         - name: 클라우드 네이티브 앱의 인증 및 권한 부여

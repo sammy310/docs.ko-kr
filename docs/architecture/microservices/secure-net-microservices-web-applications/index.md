@@ -4,12 +4,12 @@ description: .NET 마이크로 서비스 및 웹 애플리케이션 보안 - ASP
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: b25f02140915ce87c5c478d8a8a5fe28ba7693b3
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 6d318f4efc6958610947f164d6ca63634f3d7db5
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736979"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777207"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>.NET 마이크로 서비스 및 웹 애플리케이션 보안
 
@@ -121,7 +121,7 @@ else
 }
 ```
 
-Visual Studio에서 ASP.NET Core 웹 애플리케이션 프로젝트를 만들 때 **개별 사용자 계정** 인증 옵션을 선택한 경우 그림 9-3에 표시된 것처럼 외부 공급 기업을 통해 로그인하는 데 필요한 모든 코드는 이미 프로젝트에 있습니다.
+Visual Studio에서 ASP.NET Core 웹 애플리케이션 프로젝트를 만들 때 **개별 사용자 계정** 인증 옵션을 선택한 경우 그림 9-3에 표시된 것처럼 외부 공급자를 통해 로그인하는 데 필요한 모든 코드는 이미 프로젝트에 존재합니다.
 
 ![새 ASP.NET Core 웹 애플리케이션 대화 상자의 스크린샷입니다.](./media/index/select-external-authentication-option.png)
 
@@ -272,7 +272,7 @@ public void ConfigureServices(IServiceCollection services)
 
 다른 매개 변수 `RequireHttpsMetadata`는 테스트 목적으로 사용하는 것이 적합합니다. 이 매개 변수를 false로 설정하여 인증서가 없는 환경에서 테스트할 수 있습니다. 실제 배포에서 JWT 전달자 토큰은 항상 HTTPS를 통해서만 전달되어야 합니다.
 
-미들웨어가 준비되면 JWT 토큰은 인증 헤더에서 자동으로 추출됩니다. 그런 다음, 토큰은 deserialize되고 (`Audience` 및 `Authority` 매개 변수를 사용하여) 유효성 검사가 진행되며 나중에 MVC 작업 또는 인증 필터에서 참조하는 사용자 정보로 저장됩니다.
+미들웨어가 준비되면 JWT 토큰은 인증 헤더에서 자동으로 추출됩니다. 그런 다음, 토큰은 역직렬화되고 (`Audience` 및 `Authority` 매개 변수를 사용하여) 유효성 검사가 진행되며 나중에 MVC 작업 또는 인증 필터에서 참조하는 사용자 정보로 저장됩니다.
 
 JWT 전달자 인증 미들웨어는 인증 기관을 사용할 수 없는 경우 로컬 인증서를 사용하여 토큰의 유효성을 검사하는 상황과 같은 고급 시나리오도 지원할 수 있습니다. 이 시나리오의 경우 `JwtBearerOptions` 개체에서 `TokenValidationParameters` 개체를 지정할 수 있습니다.
 
