@@ -15,15 +15,15 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76744403"
 ---
-# <a name="wpf-xaml-extensions"></a><span data-ttu-id="3ef16-102">WPF XAML 확장</span><span class="sxs-lookup"><span data-stu-id="3ef16-102">WPF XAML Extensions</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="3ef16-103">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="3ef16-103">In This Section</span></span>  
- [<span data-ttu-id="3ef16-104">Binding 태그 확장</span><span class="sxs-lookup"><span data-stu-id="3ef16-104">Binding Markup Extension</span></span>](binding-markup-extension.md)  
-  [<span data-ttu-id="3ef16-105">ColorConvertedBitmap 태그 확장</span><span class="sxs-lookup"><span data-stu-id="3ef16-105">ColorConvertedBitmap Markup Extension</span></span>](colorconvertedbitmap-markup-extension.md)  
-  [<span data-ttu-id="3ef16-106">ComponentResourceKey 태그 확장</span><span class="sxs-lookup"><span data-stu-id="3ef16-106">ComponentResourceKey Markup Extension</span></span>](componentresourcekey-markup-extension.md)  
-  [<span data-ttu-id="3ef16-107">DynamicResource 태그 확장</span><span class="sxs-lookup"><span data-stu-id="3ef16-107">DynamicResource Markup Extension</span></span>](dynamicresource-markup-extension.md)  
-  [<span data-ttu-id="3ef16-108">RelativeSource 태그 확장</span><span class="sxs-lookup"><span data-stu-id="3ef16-108">RelativeSource MarkupExtension</span></span>](relativesource-markupextension.md)  
-  [<span data-ttu-id="3ef16-109">StaticResource 태그 확장</span><span class="sxs-lookup"><span data-stu-id="3ef16-109">StaticResource Markup Extension</span></span>](staticresource-markup-extension.md)  
-  [<span data-ttu-id="3ef16-110">TemplateBinding 태그 확장</span><span class="sxs-lookup"><span data-stu-id="3ef16-110">TemplateBinding Markup Extension</span></span>](templatebinding-markup-extension.md)  
-  [<span data-ttu-id="3ef16-111">ThemeDictionary 태그 확장</span><span class="sxs-lookup"><span data-stu-id="3ef16-111">ThemeDictionary Markup Extension</span></span>](themedictionary-markup-extension.md)  
-  [<span data-ttu-id="3ef16-112">PropertyPath XAML 구문</span><span class="sxs-lookup"><span data-stu-id="3ef16-112">PropertyPath XAML Syntax</span></span>](propertypath-xaml-syntax.md)  
-  [<span data-ttu-id="3ef16-113">PresentationOptions:Freeze 특성</span><span class="sxs-lookup"><span data-stu-id="3ef16-113">PresentationOptions:Freeze Attribute</span></span>](presentationoptions-freeze-attribute.md)
+# <a name="wpf-xaml-extensions"></a><span data-ttu-id="7d7d2-102">WPF XAML 확장</span><span class="sxs-lookup"><span data-stu-id="7d7d2-102">WPF XAML Extensions</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="7d7d2-103">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="7d7d2-103">In This Section</span></span>  
+ [<span data-ttu-id="7d7d2-104">Binding 태그 확장</span><span class="sxs-lookup"><span data-stu-id="7d7d2-104">Binding Markup Extension</span></span>](binding-markup-extension.md)  
+  [<span data-ttu-id="7d7d2-105">ColorConvertedBitmap 태그 확장</span><span class="sxs-lookup"><span data-stu-id="7d7d2-105">ColorConvertedBitmap Markup Extension</span></span>](colorconvertedbitmap-markup-extension.md)  
+  [<span data-ttu-id="7d7d2-106">ComponentResourceKey 태그 확장</span><span class="sxs-lookup"><span data-stu-id="7d7d2-106">ComponentResourceKey Markup Extension</span></span>](componentresourcekey-markup-extension.md)  
+  [<span data-ttu-id="7d7d2-107">DynamicResource 태그 확장</span><span class="sxs-lookup"><span data-stu-id="7d7d2-107">DynamicResource Markup Extension</span></span>](dynamicresource-markup-extension.md)  
+  [<span data-ttu-id="7d7d2-108">RelativeSource 태그 확장</span><span class="sxs-lookup"><span data-stu-id="7d7d2-108">RelativeSource MarkupExtension</span></span>](relativesource-markupextension.md)  
+  [<span data-ttu-id="7d7d2-109">StaticResource 태그 확장</span><span class="sxs-lookup"><span data-stu-id="7d7d2-109">StaticResource Markup Extension</span></span>](staticresource-markup-extension.md)  
+  [<span data-ttu-id="7d7d2-110">TemplateBinding 태그 확장</span><span class="sxs-lookup"><span data-stu-id="7d7d2-110">TemplateBinding Markup Extension</span></span>](templatebinding-markup-extension.md)  
+  [<span data-ttu-id="7d7d2-111">ThemeDictionary 태그 확장</span><span class="sxs-lookup"><span data-stu-id="7d7d2-111">ThemeDictionary Markup Extension</span></span>](themedictionary-markup-extension.md)  
+  [<span data-ttu-id="7d7d2-112">PropertyPath XAML 구문</span><span class="sxs-lookup"><span data-stu-id="7d7d2-112">PropertyPath XAML Syntax</span></span>](propertypath-xaml-syntax.md)  
+  [<span data-ttu-id="7d7d2-113">PresentationOptions:Freeze 특성</span><span class="sxs-lookup"><span data-stu-id="7d7d2-113">PresentationOptions:Freeze Attribute</span></span>](presentationoptions-freeze-attribute.md)
