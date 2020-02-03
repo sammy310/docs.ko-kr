@@ -14,56 +14,56 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76733845"
 ---
-# <a name="data-binding-how-to-topics"></a><span data-ttu-id="58d2f-102">데이터 바인딩 방법 도움말 항목</span><span class="sxs-lookup"><span data-stu-id="58d2f-102">Data binding how-to topics</span></span>
+# <a name="data-binding-how-to-topics"></a><span data-ttu-id="637c1-102">데이터 바인딩 방법 도움말 항목</span><span class="sxs-lookup"><span data-stu-id="637c1-102">Data binding how-to topics</span></span>
 
-<span data-ttu-id="58d2f-103">이 단원의 항목에서는 데이터 바인딩을 사용 하 여 요소를 CLR (공용 언어 런타임) 개체 및 XML 형식으로 다양 한 데이터 소스의 데이터에 바인딩하는 방법에 대해 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="58d2f-103">The topics in this section describe how to use data binding to bind elements to data from a variety of data sources in the form of common language runtime (CLR) objects and XML.</span></span>
+<span data-ttu-id="637c1-103">이 단원의 항목에서는 데이터 바인딩을 사용 하 여 요소를 CLR (공용 언어 런타임) 개체 및 XML 형식으로 다양 한 데이터 소스의 데이터에 바인딩하는 방법에 대해 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="637c1-103">The topics in this section describe how to use data binding to bind elements to data from a variety of data sources in the form of common language runtime (CLR) objects and XML.</span></span>
 
-## <a name="in-this-section"></a><span data-ttu-id="58d2f-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="58d2f-104">In this section</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="637c1-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="637c1-104">In this section</span></span>
 
-- [<span data-ttu-id="58d2f-105">단순 바인딩 만들기</span><span class="sxs-lookup"><span data-stu-id="58d2f-105">Create a Simple Binding</span></span>](how-to-create-a-simple-binding.md)
-- [<span data-ttu-id="58d2f-106">바인딩 소스 지정</span><span class="sxs-lookup"><span data-stu-id="58d2f-106">Specify the Binding Source</span></span>](how-to-specify-the-binding-source.md)
-- [<span data-ttu-id="58d2f-107">XAML의 바인딩에 사용할 수 있는 데이터 만들기</span><span class="sxs-lookup"><span data-stu-id="58d2f-107">Make Data Available for Binding in XAML</span></span>](how-to-make-data-available-for-binding-in-xaml.md)
-- [<span data-ttu-id="58d2f-108">TextBox 텍스트의 소스를 업데이트하는 시점 제어</span><span class="sxs-lookup"><span data-stu-id="58d2f-108">Control When the TextBox Text Updates the Source</span></span>](how-to-control-when-the-textbox-text-updates-the-source.md)
-- [<span data-ttu-id="58d2f-109">바인딩 방향 지정</span><span class="sxs-lookup"><span data-stu-id="58d2f-109">Specify the Direction of the Binding</span></span>](how-to-specify-the-direction-of-the-binding.md)
-- [<span data-ttu-id="58d2f-110">선택에 따라 수집 및 표시 정보에 바인딩</span><span class="sxs-lookup"><span data-stu-id="58d2f-110">Bind to a Collection and Display Information Based on Selection</span></span>](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
-- [<span data-ttu-id="58d2f-111">열거형 바인딩</span><span class="sxs-lookup"><span data-stu-id="58d2f-111">Bind to an Enumeration</span></span>](how-to-bind-to-an-enumeration.md)
-- [<span data-ttu-id="58d2f-112">두 컨트롤의 속성 바인딩</span><span class="sxs-lookup"><span data-stu-id="58d2f-112">Bind the Properties of Two Controls</span></span>](how-to-bind-the-properties-of-two-controls.md)
-- [<span data-ttu-id="58d2f-113">바인딩 유효성 검사 구현</span><span class="sxs-lookup"><span data-stu-id="58d2f-113">Implement Binding Validation</span></span>](how-to-implement-binding-validation.md)
-- [<span data-ttu-id="58d2f-114">사용자 지정 개체의 유효성 검사 논리 구현</span><span class="sxs-lookup"><span data-stu-id="58d2f-114">Implement Validation Logic on Custom Objects</span></span>](how-to-implement-validation-logic-on-custom-objects.md)
-- [<span data-ttu-id="58d2f-115">바인딩된 대상 속성에서 바인딩 개체 가져오기</span><span class="sxs-lookup"><span data-stu-id="58d2f-115">Get the Binding Object from a Bound Target Property</span></span>](how-to-get-the-binding-object-from-a-bound-target-property.md)
-- [<span data-ttu-id="58d2f-116">CompositeCollection 구현</span><span class="sxs-lookup"><span data-stu-id="58d2f-116">Implement a CompositeCollection</span></span>](how-to-implement-a-compositecollection.md)
-- [<span data-ttu-id="58d2f-117">바인딩된 데이터 변환</span><span class="sxs-lookup"><span data-stu-id="58d2f-117">Convert Bound Data</span></span>](how-to-convert-bound-data.md)
-- [<span data-ttu-id="58d2f-118">코드에서 바인딩 만들기</span><span class="sxs-lookup"><span data-stu-id="58d2f-118">Create a Binding in Code</span></span>](how-to-create-a-binding-in-code.md)
-- [<span data-ttu-id="58d2f-119">데이터 수집의 기본 뷰 가져오기</span><span class="sxs-lookup"><span data-stu-id="58d2f-119">Get the Default View of a Data Collection</span></span>](how-to-get-the-default-view-of-a-data-collection.md)
-- [<span data-ttu-id="58d2f-120">데이터 수집 뷰의 개체 탐색</span><span class="sxs-lookup"><span data-stu-id="58d2f-120">Navigate Through the Objects in a Data CollectionView</span></span>](how-to-navigate-through-the-objects-in-a-data-collectionview.md)
-- [<span data-ttu-id="58d2f-121">뷰에서 데이터 필터링</span><span class="sxs-lookup"><span data-stu-id="58d2f-121">Filter Data in a View</span></span>](how-to-filter-data-in-a-view.md)
-- [<span data-ttu-id="58d2f-122">뷰의 데이터 정렬</span><span class="sxs-lookup"><span data-stu-id="58d2f-122">Sort Data in a View</span></span>](how-to-sort-data-in-a-view.md)
-- [<span data-ttu-id="58d2f-123">XAML 데이터 정렬 및 그룹화</span><span class="sxs-lookup"><span data-stu-id="58d2f-123">Sort and Group Data Using a View in XAML</span></span>](how-to-sort-and-group-data-using-a-view-in-xaml.md)
-- [<span data-ttu-id="58d2f-124">계층적 데이터에 마스터-세부 패턴 사용</span><span class="sxs-lookup"><span data-stu-id="58d2f-124">Use the Master-Detail Pattern with Hierarchical Data</span></span>](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)
-- [<span data-ttu-id="58d2f-125">계층적 XML 데이터에 마스터-세부 패턴 사용</span><span class="sxs-lookup"><span data-stu-id="58d2f-125">Use the Master-Detail Pattern with Hierarchical XML Data</span></span>](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
-- [<span data-ttu-id="58d2f-126">바인딩된 항목 목록을 기반으로 값 산출</span><span class="sxs-lookup"><span data-stu-id="58d2f-126">Produce a Value Based on a List of Bound Items</span></span>](how-to-produce-a-value-based-on-a-list-of-bound-items.md)
-- [<span data-ttu-id="58d2f-127">속성 변경 알림 구현</span><span class="sxs-lookup"><span data-stu-id="58d2f-127">Implement Property Change Notification</span></span>](how-to-implement-property-change-notification.md)
-- [<span data-ttu-id="58d2f-128">ObservableCollection 만들기 및 바인딩</span><span class="sxs-lookup"><span data-stu-id="58d2f-128">Create and Bind to an ObservableCollection</span></span>](how-to-create-and-bind-to-an-observablecollection.md)
-- [<span data-ttu-id="58d2f-129">PriorityBinding 구현</span><span class="sxs-lookup"><span data-stu-id="58d2f-129">Implement PriorityBinding</span></span>](how-to-implement-prioritybinding.md)
-- [<span data-ttu-id="58d2f-130">XMLDataProvider 및 XPath 쿼리를 사용하여 XML 데이터에 바인딩</span><span class="sxs-lookup"><span data-stu-id="58d2f-130">Bind to XML Data Using an XMLDataProvider and XPath Queries</span></span>](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
-- [<span data-ttu-id="58d2f-131">XDocument, XElement 또는 LINQ for XML 쿼리 결과에 바인딩</span><span class="sxs-lookup"><span data-stu-id="58d2f-131">Bind to XDocument, XElement, or LINQ for XML Query Results</span></span>](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)
-- [<span data-ttu-id="58d2f-132">LINQ 쿼리 결과에 바인딩</span><span class="sxs-lookup"><span data-stu-id="58d2f-132">Bind to the Results of a LINQ Query</span></span>](how-to-bind-to-the-results-of-a-linq-query.md)
-- [<span data-ttu-id="58d2f-133">XML 네임스페이스를 데이터 바인딩에 사용</span><span class="sxs-lookup"><span data-stu-id="58d2f-133">Use XML Namespaces in Data Binding</span></span>](how-to-use-xml-namespaces-in-data-binding.md)
-- [<span data-ttu-id="58d2f-134">ADO.NET 데이터 소스 바인딩</span><span class="sxs-lookup"><span data-stu-id="58d2f-134">Bind to an ADO.NET Data Source</span></span>](how-to-bind-to-an-ado-net-data-source.md)
-- [<span data-ttu-id="58d2f-135">메서드 바인딩</span><span class="sxs-lookup"><span data-stu-id="58d2f-135">Bind to a Method</span></span>](how-to-bind-to-a-method.md)
-- [<span data-ttu-id="58d2f-136">바인딩 업데이트 알림 설정</span><span class="sxs-lookup"><span data-stu-id="58d2f-136">Set Up Notification of Binding Updates</span></span>](how-to-set-up-notification-of-binding-updates.md)
-- [<span data-ttu-id="58d2f-137">바인딩 지우기</span><span class="sxs-lookup"><span data-stu-id="58d2f-137">Clear Bindings</span></span>](how-to-clear-bindings.md)
-- [<span data-ttu-id="58d2f-138">DataTemplate에서 생성된 요소 찾기</span><span class="sxs-lookup"><span data-stu-id="58d2f-138">Find DataTemplate-Generated Elements</span></span>](how-to-find-datatemplate-generated-elements.md)
-- [<span data-ttu-id="58d2f-139">웹 서비스 바인딩</span><span class="sxs-lookup"><span data-stu-id="58d2f-139">Bind to a Web Service</span></span>](how-to-bind-to-a-web-service.md)
+- [<span data-ttu-id="637c1-105">단순 바인딩 만들기</span><span class="sxs-lookup"><span data-stu-id="637c1-105">Create a Simple Binding</span></span>](how-to-create-a-simple-binding.md)
+- [<span data-ttu-id="637c1-106">바인딩 소스 지정</span><span class="sxs-lookup"><span data-stu-id="637c1-106">Specify the Binding Source</span></span>](how-to-specify-the-binding-source.md)
+- [<span data-ttu-id="637c1-107">XAML의 바인딩에 사용할 수 있는 데이터 만들기</span><span class="sxs-lookup"><span data-stu-id="637c1-107">Make Data Available for Binding in XAML</span></span>](how-to-make-data-available-for-binding-in-xaml.md)
+- [<span data-ttu-id="637c1-108">TextBox 텍스트의 소스를 업데이트하는 시점 제어</span><span class="sxs-lookup"><span data-stu-id="637c1-108">Control When the TextBox Text Updates the Source</span></span>](how-to-control-when-the-textbox-text-updates-the-source.md)
+- [<span data-ttu-id="637c1-109">바인딩 방향 지정</span><span class="sxs-lookup"><span data-stu-id="637c1-109">Specify the Direction of the Binding</span></span>](how-to-specify-the-direction-of-the-binding.md)
+- [<span data-ttu-id="637c1-110">선택에 따라 수집 및 표시 정보에 바인딩</span><span class="sxs-lookup"><span data-stu-id="637c1-110">Bind to a Collection and Display Information Based on Selection</span></span>](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
+- [<span data-ttu-id="637c1-111">열거형 바인딩</span><span class="sxs-lookup"><span data-stu-id="637c1-111">Bind to an Enumeration</span></span>](how-to-bind-to-an-enumeration.md)
+- [<span data-ttu-id="637c1-112">두 컨트롤의 속성 바인딩</span><span class="sxs-lookup"><span data-stu-id="637c1-112">Bind the Properties of Two Controls</span></span>](how-to-bind-the-properties-of-two-controls.md)
+- [<span data-ttu-id="637c1-113">바인딩 유효성 검사 구현</span><span class="sxs-lookup"><span data-stu-id="637c1-113">Implement Binding Validation</span></span>](how-to-implement-binding-validation.md)
+- [<span data-ttu-id="637c1-114">사용자 지정 개체의 유효성 검사 논리 구현</span><span class="sxs-lookup"><span data-stu-id="637c1-114">Implement Validation Logic on Custom Objects</span></span>](how-to-implement-validation-logic-on-custom-objects.md)
+- [<span data-ttu-id="637c1-115">바인딩된 대상 속성에서 바인딩 개체 가져오기</span><span class="sxs-lookup"><span data-stu-id="637c1-115">Get the Binding Object from a Bound Target Property</span></span>](how-to-get-the-binding-object-from-a-bound-target-property.md)
+- [<span data-ttu-id="637c1-116">CompositeCollection 구현</span><span class="sxs-lookup"><span data-stu-id="637c1-116">Implement a CompositeCollection</span></span>](how-to-implement-a-compositecollection.md)
+- [<span data-ttu-id="637c1-117">바인딩된 데이터 변환</span><span class="sxs-lookup"><span data-stu-id="637c1-117">Convert Bound Data</span></span>](how-to-convert-bound-data.md)
+- [<span data-ttu-id="637c1-118">코드에서 바인딩 만들기</span><span class="sxs-lookup"><span data-stu-id="637c1-118">Create a Binding in Code</span></span>](how-to-create-a-binding-in-code.md)
+- [<span data-ttu-id="637c1-119">데이터 수집의 기본 뷰 가져오기</span><span class="sxs-lookup"><span data-stu-id="637c1-119">Get the Default View of a Data Collection</span></span>](how-to-get-the-default-view-of-a-data-collection.md)
+- [<span data-ttu-id="637c1-120">데이터 수집 뷰의 개체 탐색</span><span class="sxs-lookup"><span data-stu-id="637c1-120">Navigate Through the Objects in a Data CollectionView</span></span>](how-to-navigate-through-the-objects-in-a-data-collectionview.md)
+- [<span data-ttu-id="637c1-121">뷰에서 데이터 필터링</span><span class="sxs-lookup"><span data-stu-id="637c1-121">Filter Data in a View</span></span>](how-to-filter-data-in-a-view.md)
+- [<span data-ttu-id="637c1-122">뷰의 데이터 정렬</span><span class="sxs-lookup"><span data-stu-id="637c1-122">Sort Data in a View</span></span>](how-to-sort-data-in-a-view.md)
+- [<span data-ttu-id="637c1-123">XAML 데이터 정렬 및 그룹화</span><span class="sxs-lookup"><span data-stu-id="637c1-123">Sort and Group Data Using a View in XAML</span></span>](how-to-sort-and-group-data-using-a-view-in-xaml.md)
+- [<span data-ttu-id="637c1-124">계층적 데이터에 마스터-세부 패턴 사용</span><span class="sxs-lookup"><span data-stu-id="637c1-124">Use the Master-Detail Pattern with Hierarchical Data</span></span>](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)
+- [<span data-ttu-id="637c1-125">계층적 XML 데이터에 마스터-세부 패턴 사용</span><span class="sxs-lookup"><span data-stu-id="637c1-125">Use the Master-Detail Pattern with Hierarchical XML Data</span></span>](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
+- [<span data-ttu-id="637c1-126">바인딩된 항목 목록을 기반으로 값 산출</span><span class="sxs-lookup"><span data-stu-id="637c1-126">Produce a Value Based on a List of Bound Items</span></span>](how-to-produce-a-value-based-on-a-list-of-bound-items.md)
+- [<span data-ttu-id="637c1-127">속성 변경 알림 구현</span><span class="sxs-lookup"><span data-stu-id="637c1-127">Implement Property Change Notification</span></span>](how-to-implement-property-change-notification.md)
+- [<span data-ttu-id="637c1-128">ObservableCollection 만들기 및 바인딩</span><span class="sxs-lookup"><span data-stu-id="637c1-128">Create and Bind to an ObservableCollection</span></span>](how-to-create-and-bind-to-an-observablecollection.md)
+- [<span data-ttu-id="637c1-129">PriorityBinding 구현</span><span class="sxs-lookup"><span data-stu-id="637c1-129">Implement PriorityBinding</span></span>](how-to-implement-prioritybinding.md)
+- [<span data-ttu-id="637c1-130">XMLDataProvider 및 XPath 쿼리를 사용하여 XML 데이터에 바인딩</span><span class="sxs-lookup"><span data-stu-id="637c1-130">Bind to XML Data Using an XMLDataProvider and XPath Queries</span></span>](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
+- [<span data-ttu-id="637c1-131">XDocument, XElement 또는 LINQ for XML 쿼리 결과에 바인딩</span><span class="sxs-lookup"><span data-stu-id="637c1-131">Bind to XDocument, XElement, or LINQ for XML Query Results</span></span>](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)
+- [<span data-ttu-id="637c1-132">LINQ 쿼리 결과에 바인딩</span><span class="sxs-lookup"><span data-stu-id="637c1-132">Bind to the Results of a LINQ Query</span></span>](how-to-bind-to-the-results-of-a-linq-query.md)
+- [<span data-ttu-id="637c1-133">XML 네임스페이스를 데이터 바인딩에 사용</span><span class="sxs-lookup"><span data-stu-id="637c1-133">Use XML Namespaces in Data Binding</span></span>](how-to-use-xml-namespaces-in-data-binding.md)
+- [<span data-ttu-id="637c1-134">ADO.NET 데이터 소스 바인딩</span><span class="sxs-lookup"><span data-stu-id="637c1-134">Bind to an ADO.NET Data Source</span></span>](how-to-bind-to-an-ado-net-data-source.md)
+- [<span data-ttu-id="637c1-135">메서드 바인딩</span><span class="sxs-lookup"><span data-stu-id="637c1-135">Bind to a Method</span></span>](how-to-bind-to-a-method.md)
+- [<span data-ttu-id="637c1-136">바인딩 업데이트 알림 설정</span><span class="sxs-lookup"><span data-stu-id="637c1-136">Set Up Notification of Binding Updates</span></span>](how-to-set-up-notification-of-binding-updates.md)
+- [<span data-ttu-id="637c1-137">바인딩 지우기</span><span class="sxs-lookup"><span data-stu-id="637c1-137">Clear Bindings</span></span>](how-to-clear-bindings.md)
+- [<span data-ttu-id="637c1-138">DataTemplate에서 생성된 요소 찾기</span><span class="sxs-lookup"><span data-stu-id="637c1-138">Find DataTemplate-Generated Elements</span></span>](how-to-find-datatemplate-generated-elements.md)
+- [<span data-ttu-id="637c1-139">웹 서비스 바인딩</span><span class="sxs-lookup"><span data-stu-id="637c1-139">Bind to a Web Service</span></span>](how-to-bind-to-a-web-service.md)
 
-## <a name="reference"></a><span data-ttu-id="58d2f-140">참조</span><span class="sxs-lookup"><span data-stu-id="58d2f-140">Reference</span></span>
+## <a name="reference"></a><span data-ttu-id="637c1-140">참조</span><span class="sxs-lookup"><span data-stu-id="637c1-140">Reference</span></span>
 
 - <xref:System.Windows.Data>
 - <xref:System.Windows.Data.Binding>
 - <xref:System.Windows.DataTemplate>
 - <xref:System.Windows.Controls.DataTemplateSelector>
 
-## <a name="related-sections"></a><span data-ttu-id="58d2f-141">관련 단원</span><span class="sxs-lookup"><span data-stu-id="58d2f-141">Related sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="637c1-141">관련 단원</span><span class="sxs-lookup"><span data-stu-id="637c1-141">Related sections</span></span>
 
-- [<span data-ttu-id="58d2f-142">WPF의 데이터 바인딩</span><span class="sxs-lookup"><span data-stu-id="58d2f-142">Data binding in WPF</span></span>](../../../desktop-wpf/data/data-binding-overview.md)
-- [<span data-ttu-id="58d2f-143">데이터 바인딩 성능</span><span class="sxs-lookup"><span data-stu-id="58d2f-143">Data binding performance</span></span>](../advanced/optimizing-performance-data-binding.md)
+- [<span data-ttu-id="637c1-142">WPF의 데이터 바인딩</span><span class="sxs-lookup"><span data-stu-id="637c1-142">Data binding in WPF</span></span>](../../../desktop-wpf/data/data-binding-overview.md)
+- [<span data-ttu-id="637c1-143">데이터 바인딩 성능</span><span class="sxs-lookup"><span data-stu-id="637c1-143">Data binding performance</span></span>](../advanced/optimizing-performance-data-binding.md)

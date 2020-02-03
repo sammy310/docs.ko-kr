@@ -9,35 +9,35 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76741962"
 ---
-# <a name="configuration-sample"></a><span data-ttu-id="c191e-102">구성 샘플</span><span class="sxs-lookup"><span data-stu-id="c191e-102">Configuration Sample</span></span>
-<span data-ttu-id="c191e-103">이 샘플에서는 구성 파일을 사용하여 서비스를 검색 가능하게 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-103">This sample demonstrates the use of a configuration file to make a service discoverable.</span></span>  
+# <a name="configuration-sample"></a><span data-ttu-id="8d202-102">구성 샘플</span><span class="sxs-lookup"><span data-stu-id="8d202-102">Configuration Sample</span></span>
+<span data-ttu-id="8d202-103">이 샘플에서는 구성 파일을 사용하여 서비스를 검색 가능하게 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-103">This sample demonstrates the use of a configuration file to make a service discoverable.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="c191e-104">이 샘플은 구성에서 검색을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-104">This sample implements discovery in configuration.</span></span> <span data-ttu-id="c191e-105">코드에서 검색을 구현 하는 샘플은 [Basic](../../../../docs/framework/wcf/samples/basic-sample.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="c191e-105">For a sample that implements discovery in code, see [Basic](../../../../docs/framework/wcf/samples/basic-sample.md).</span></span>  
+> <span data-ttu-id="8d202-104">이 샘플은 구성에서 검색을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-104">This sample implements discovery in configuration.</span></span> <span data-ttu-id="8d202-105">코드에서 검색을 구현 하는 샘플은 [Basic](../../../../docs/framework/wcf/samples/basic-sample.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="8d202-105">For a sample that implements discovery in code, see [Basic](../../../../docs/framework/wcf/samples/basic-sample.md).</span></span>  
   
 > [!IMPORTANT]
-> <span data-ttu-id="c191e-106">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-106">The samples may already be installed on your computer.</span></span> <span data-ttu-id="c191e-107">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="c191e-107">Check for the following (default) directory before continuing.</span></span>  
+> <span data-ttu-id="8d202-106">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-106">The samples may already be installed on your computer.</span></span> <span data-ttu-id="8d202-107">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="8d202-107">Check for the following (default) directory before continuing.</span></span>  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> <span data-ttu-id="c191e-108">이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-108">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="c191e-109">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-109">This sample is located in the following directory.</span></span>  
+> <span data-ttu-id="8d202-108">이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-108">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="8d202-109">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-109">This sample is located in the following directory.</span></span>  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Configuration`  
   
-## <a name="service-configuration"></a><span data-ttu-id="c191e-110">서비스 구성</span><span class="sxs-lookup"><span data-stu-id="c191e-110">Service Configuration</span></span>  
- <span data-ttu-id="c191e-111">이 샘플의 구성 파일에서는 다음 두 가지 기능을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-111">The configuration file in this sample demonstrates two features:</span></span>  
+## <a name="service-configuration"></a><span data-ttu-id="8d202-110">서비스 구성</span><span class="sxs-lookup"><span data-stu-id="8d202-110">Service Configuration</span></span>  
+ <span data-ttu-id="8d202-111">이 샘플의 구성 파일에서는 다음 두 가지 기능을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-111">The configuration file in this sample demonstrates two features:</span></span>  
   
-- <span data-ttu-id="c191e-112">표준 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>를 통해 서비스를 검색할 수 있게 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-112">Making the service discoverable over a standard <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.</span></span>  
+- <span data-ttu-id="8d202-112">표준 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>를 통해 서비스를 검색할 수 있게 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-112">Making the service discoverable over a standard <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.</span></span>  
   
-- <span data-ttu-id="c191e-113">서비스의 애플리케이션 엔드포인트에 대한 검색 관련 정보를 조정하고 표준 엔드포인트의 검색 관련 설정 중 일부를 조정합니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-113">Adjusting discovery-related information for the service’s application endpoint and adjusting some of the discovery-related settings on the standard endpoint.</span></span>  
+- <span data-ttu-id="8d202-113">서비스의 애플리케이션 엔드포인트에 대한 검색 관련 정보를 조정하고 표준 엔드포인트의 검색 관련 설정 중 일부를 조정합니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-113">Adjusting discovery-related information for the service’s application endpoint and adjusting some of the discovery-related settings on the standard endpoint.</span></span>  
   
- <span data-ttu-id="c191e-114">검색 가능하도록 설정하려면 서비스의 애플리케이션 구성 파일에서 몇 가지 변경 작업을 수행해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-114">To enable discovery, a few changes must be made in the application configuration file for the service:</span></span>  
+ <span data-ttu-id="8d202-114">검색 가능하도록 설정하려면 서비스의 애플리케이션 구성 파일에서 몇 가지 변경 작업을 수행해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-114">To enable discovery, a few changes must be made in the application configuration file for the service:</span></span>  
   
-- <span data-ttu-id="c191e-115">ph x="1" /&gt; 요소에 검색 엔드포인트를 추가해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-115">A discovery endpoint must be added to the `<service>` element.</span></span> <span data-ttu-id="c191e-116">이는 표준 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 엔드포인트로서,</span><span class="sxs-lookup"><span data-stu-id="c191e-116">This is a standard <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> endpoint.</span></span> <span data-ttu-id="c191e-117">런타임에서 검색 서비스와 연결하는 시스템 엔드포인트입니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-117">This is a system endpoint that the runtime associates with the discovery service.</span></span> <span data-ttu-id="c191e-118">검색 서비스는 이 엔드포인트에서 메시지를 수신 대기합니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-118">The discovery service listens for messages on this endpoint.</span></span>  
+- <span data-ttu-id="8d202-115">ph x="1" /&gt; 요소에 검색 엔드포인트를 추가해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-115">A discovery endpoint must be added to the `<service>` element.</span></span> <span data-ttu-id="8d202-116">이는 표준 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 엔드포인트로서,</span><span class="sxs-lookup"><span data-stu-id="8d202-116">This is a standard <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> endpoint.</span></span> <span data-ttu-id="8d202-117">런타임에서 검색 서비스와 연결하는 시스템 엔드포인트입니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-117">This is a system endpoint that the runtime associates with the discovery service.</span></span> <span data-ttu-id="8d202-118">검색 서비스는 이 엔드포인트에서 메시지를 수신 대기합니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-118">The discovery service listens for messages on this endpoint.</span></span>  
   
-- <span data-ttu-id="c191e-119">`<serviceDiscovery>` 섹션에 `<serviceBehaviors>` 동작을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-119">A `<serviceDiscovery>` behavior is added to the `<serviceBehaviors>` section.</span></span> <span data-ttu-id="c191e-120">이 동작은 런타임에 서비스를 검색할 수 있게 해 주며, 앞에서 설명한 검색 엔드포인트를 사용하여 검색 `Probe` 및 `Resolve` 메시지를 수신 대기합니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-120">This enables the service to be discovered at runtime and uses the discovery endpoint mentioned previously to listen for discovery `Probe` and `Resolve` messages.</span></span> <span data-ttu-id="c191e-121">이 두 가지 항목을 추가하면 서비스를 지정된 검색 엔드포인트에서 검색할 수 있게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-121">With these two additions, the service is discoverable at the discovery endpoint specified.</span></span>  
+- <span data-ttu-id="8d202-119">`<serviceDiscovery>` 섹션에 `<serviceBehaviors>` 동작을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-119">A `<serviceDiscovery>` behavior is added to the `<serviceBehaviors>` section.</span></span> <span data-ttu-id="8d202-120">이 동작은 런타임에 서비스를 검색할 수 있게 해 주며, 앞에서 설명한 검색 엔드포인트를 사용하여 검색 `Probe` 및 `Resolve` 메시지를 수신 대기합니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-120">This enables the service to be discovered at runtime and uses the discovery endpoint mentioned previously to listen for discovery `Probe` and `Resolve` messages.</span></span> <span data-ttu-id="8d202-121">이 두 가지 항목을 추가하면 서비스를 지정된 검색 엔드포인트에서 검색할 수 있게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-121">With these two additions, the service is discoverable at the discovery endpoint specified.</span></span>  
   
- <span data-ttu-id="c191e-122">다음 구성 코드 조각에서는 애플리케이션 엔드포인트와 검색 엔드포인트가 정의된 서비스를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-122">The following config snippet shows a service with an application endpoint and a discovery endpoint defined:</span></span>  
+ <span data-ttu-id="8d202-122">다음 구성 코드 조각에서는 애플리케이션 엔드포인트와 검색 엔드포인트가 정의된 서비스를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-122">The following config snippet shows a service with an application endpoint and a discovery endpoint defined:</span></span>  
   
 ```xml
 <services>  
@@ -53,7 +53,7 @@ ms.locfileid: "76741962"
       </services>  
 ```  
   
- <span data-ttu-id="c191e-123">알림을 사용하려면 알림 엔드포인트를 추가해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-123">To take advantage of announcements, you will need to add an announcement endpoint.</span></span> <span data-ttu-id="c191e-124">이렇게 하려면 다음 코드와 같이 구성 파일을 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-124">To do this, modify the configuration file as shown in the following code.</span></span>  
+ <span data-ttu-id="8d202-123">알림을 사용하려면 알림 엔드포인트를 추가해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-123">To take advantage of announcements, you will need to add an announcement endpoint.</span></span> <span data-ttu-id="8d202-124">이렇게 하려면 다음 코드와 같이 구성 파일을 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-124">To do this, modify the configuration file as shown in the following code.</span></span>  
   
 ```xml  
 <serviceDiscovery>  
@@ -63,13 +63,13 @@ ms.locfileid: "76741962"
           </serviceDiscovery>  
 ```  
   
- <span data-ttu-id="c191e-125">알림 엔드포인트를 검색 서비스 동작에 추가하면 서비스에 대한 기본 알림 클라이언트가 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-125">Adding an announcement endpoint to the discovery service behavior creates a default announcement client for the service.</span></span> <span data-ttu-id="c191e-126">이렇게 되면 서비스에서 서비스가 열리거나 닫힐 때 각각 온라인 및 오프라인 알림을 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-126">This guarantees that the service will send an online and offline announcement when the service is opened and closed respectively.</span></span>  
+ <span data-ttu-id="8d202-125">알림 엔드포인트를 검색 서비스 동작에 추가하면 서비스에 대한 기본 알림 클라이언트가 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-125">Adding an announcement endpoint to the discovery service behavior creates a default announcement client for the service.</span></span> <span data-ttu-id="8d202-126">이렇게 되면 서비스에서 서비스가 열리거나 닫힐 때 각각 온라인 및 오프라인 알림을 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-126">This guarantees that the service will send an online and offline announcement when the service is opened and closed respectively.</span></span>  
   
- <span data-ttu-id="c191e-127">이 구성 파일에서는 추가 동작을 수정하여 이러한 간단한 단계 외의 작업도 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-127">This configuration file goes beyond just those simple steps by modifying additional behaviors.</span></span> <span data-ttu-id="c191e-128">특정 엔드포인트를 사용하여 검색 관련 정보를 제어할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-128">It is possible to control discovery-related information by using specific endpoints.</span></span> <span data-ttu-id="c191e-129">즉, 사용자가 엔드포인트의 검색 가능 여부를 제어할 수 있으며 해당 엔드포인트를 <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes%2A> 및 사용자 지정 XML 메타데이터로 표시할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-129">That is, a user can control whether an endpoint can be discovered and the user can also mark that endpoint with <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes%2A> and custom XML metadata.</span></span> <span data-ttu-id="c191e-130">이렇게 하려면 애플리케이션 엔드포인트에 `behaviorConfiguration` 속성을 추가해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-130">To do this, the user must add a `behaviorConfiguration` property to the application endpoint.</span></span> <span data-ttu-id="c191e-131">이 경우 다음 속성이 애플리케이션 엔드포인트에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-131">In this case, the following property is added to the application endpoint.</span></span>  
+ <span data-ttu-id="8d202-127">이 구성 파일에서는 추가 동작을 수정하여 이러한 간단한 단계 외의 작업도 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-127">This configuration file goes beyond just those simple steps by modifying additional behaviors.</span></span> <span data-ttu-id="8d202-128">특정 엔드포인트를 사용하여 검색 관련 정보를 제어할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-128">It is possible to control discovery-related information by using specific endpoints.</span></span> <span data-ttu-id="8d202-129">즉, 사용자가 엔드포인트의 검색 가능 여부를 제어할 수 있으며 해당 엔드포인트를 <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes%2A> 및 사용자 지정 XML 메타데이터로 표시할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-129">That is, a user can control whether an endpoint can be discovered and the user can also mark that endpoint with <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes%2A> and custom XML metadata.</span></span> <span data-ttu-id="8d202-130">이렇게 하려면 애플리케이션 엔드포인트에 `behaviorConfiguration` 속성을 추가해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-130">To do this, the user must add a `behaviorConfiguration` property to the application endpoint.</span></span> <span data-ttu-id="8d202-131">이 경우 다음 속성이 애플리케이션 엔드포인트에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-131">In this case, the following property is added to the application endpoint.</span></span>  
   
 `behaviorConfiguration="endpointBehaviorConfiguration"`  
   
- <span data-ttu-id="c191e-132">이제 동작 구성 요소를 통해 검색 관련 특성을 제어할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-132">Now, through the behavior configuration element, you can control discovery-related attributes.</span></span> <span data-ttu-id="c191e-133">이 경우 두 개의 범위가 애플리케이션 엔드포인트에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-133">In this case, two scopes are added to the application endpoint.</span></span>  
+ <span data-ttu-id="8d202-132">이제 동작 구성 요소를 통해 검색 관련 특성을 제어할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-132">Now, through the behavior configuration element, you can control discovery-related attributes.</span></span> <span data-ttu-id="8d202-133">이 경우 두 개의 범위가 애플리케이션 엔드포인트에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-133">In this case, two scopes are added to the application endpoint.</span></span>  
   
 ```xml  
 <endpointBehaviors>  
@@ -85,9 +85,9 @@ ms.locfileid: "76741962"
         </endpointBehaviors>  
 ```  
   
- <span data-ttu-id="c191e-134">범위에 대 한 자세한 내용은 [Discovery 찾기 및 FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="c191e-134">For more information about scopes, see [Discovery Find and FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md).</span></span>  
+ <span data-ttu-id="8d202-134">범위에 대 한 자세한 내용은 [Discovery 찾기 및 FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="8d202-134">For more information about scopes, see [Discovery Find and FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md).</span></span>  
   
- <span data-ttu-id="c191e-135">검색 엔드포인트의 특정 세부 정보를 제어할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-135">You can also control specific details of the discovery endpoint.</span></span> <span data-ttu-id="c191e-136">이 작업은 <xref:System.ServiceModel.Configuration.StandardEndpointsSection>을 통해 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-136">This is done through the <xref:System.ServiceModel.Configuration.StandardEndpointsSection>.</span></span> <span data-ttu-id="c191e-137">이 샘플에서는 다음 코드 예제와 같이 사용되는 프로토콜 버전을 수정할 뿐 아니라 `maxResponseDelay` 특성도 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-137">In this sample, the version of the protocol used is modified as well as adding a `maxResponseDelay` attribute as shown in the following code example.</span></span>  
+ <span data-ttu-id="8d202-135">검색 엔드포인트의 특정 세부 정보를 제어할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-135">You can also control specific details of the discovery endpoint.</span></span> <span data-ttu-id="8d202-136">이 작업은 <xref:System.ServiceModel.Configuration.StandardEndpointsSection>을 통해 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-136">This is done through the <xref:System.ServiceModel.Configuration.StandardEndpointsSection>.</span></span> <span data-ttu-id="8d202-137">이 샘플에서는 다음 코드 예제와 같이 사용되는 프로토콜 버전을 수정할 뿐 아니라 `maxResponseDelay` 특성도 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-137">In this sample, the version of the protocol used is modified as well as adding a `maxResponseDelay` attribute as shown in the following code example.</span></span>  
   
 ```xml  
 <standardEndpoints>  
@@ -97,7 +97,7 @@ ms.locfileid: "76741962"
 </standardEndpoints>  
 ```  
   
- <span data-ttu-id="c191e-138">다음은 이 예제에 사용되는 전체 구성 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-138">The following is the complete configuration file used in this example:</span></span>  
+ <span data-ttu-id="8d202-138">다음은 이 예제에 사용되는 전체 구성 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-138">The following is the complete configuration file used in this example:</span></span>  
   
 ```xml  
 <configuration>  
@@ -154,8 +154,8 @@ ms.locfileid: "76741962"
 </configuration>  
 ```  
   
-## <a name="client-configuration"></a><span data-ttu-id="c191e-139">클라이언트 구성</span><span class="sxs-lookup"><span data-stu-id="c191e-139">Client Configuration</span></span>  
- <span data-ttu-id="c191e-140">클라이언트의 애플리케이션 구성 파일에서 `standardEndpoint` 형식의 `dynamicEndpoint`는 다음 구성 코드 조각과 같이 검색을 활용하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-140">In the application configuration file for the client, a `standardEndpoint` of type `dynamicEndpoint` is used to utilize discovery as shown in the following config snippet.</span></span>  
+## <a name="client-configuration"></a><span data-ttu-id="8d202-139">클라이언트 구성</span><span class="sxs-lookup"><span data-stu-id="8d202-139">Client Configuration</span></span>  
+ <span data-ttu-id="8d202-140">클라이언트의 애플리케이션 구성 파일에서 `standardEndpoint` 형식의 `dynamicEndpoint`는 다음 구성 코드 조각과 같이 검색을 활용하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-140">In the application configuration file for the client, a `standardEndpoint` of type `dynamicEndpoint` is used to utilize discovery as shown in the following config snippet.</span></span>  
   
 ```xml  
 <client>  
@@ -169,13 +169,13 @@ ms.locfileid: "76741962"
 </client>  
 ```  
   
- <span data-ttu-id="c191e-141">클라이언트에서 `dynamicEndpoint`를 사용하는 경우 런타임에서는 검색을 자동으로 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-141">When a client is using a `dynamicEndpoint`, the runtime performs discovery automatically.</span></span> <span data-ttu-id="c191e-142">사용할 검색 엔드포인트의 형식을 지정하는 `discoveryClientSettings` 섹션에 정의된 설정과 같은 다양한 설정이 검색 중에 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-142">Various settings are used during discovery, such as those defined in the  `discoveryClientSettings` section, which specifies the type of discovery endpoint to use:</span></span>  
+ <span data-ttu-id="8d202-141">클라이언트에서 `dynamicEndpoint`를 사용하는 경우 런타임에서는 검색을 자동으로 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-141">When a client is using a `dynamicEndpoint`, the runtime performs discovery automatically.</span></span> <span data-ttu-id="8d202-142">사용할 검색 엔드포인트의 형식을 지정하는 `discoveryClientSettings` 섹션에 정의된 설정과 같은 다양한 설정이 검색 중에 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-142">Various settings are used during discovery, such as those defined in the  `discoveryClientSettings` section, which specifies the type of discovery endpoint to use:</span></span>  
   
 ```xml  
 <endpoint kind="udpDiscoveryEndpoint" endpointConfiguration="adhocDiscoveryEndpointConfiguration" />  
 ```  
   
- <span data-ttu-id="c191e-143">서비스를 검색하는 데 사용되는 찾기 조건은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-143">The find criteria used to search for services:</span></span>  
+ <span data-ttu-id="8d202-143">서비스를 검색하는 데 사용되는 찾기 조건은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-143">The find criteria used to search for services:</span></span>  
   
 ```xml  
 <!-- Add Scopes, ScopeMatchBy, Extensions and termination criteria in FindCriteria -->  
@@ -190,7 +190,7 @@ ms.locfileid: "76741962"
 </findCriteria>  
 ```  
   
- <span data-ttu-id="c191e-144">이 샘플에서는 이 기능을 확장하고, 클라이언트에서 사용하는 <xref:System.ServiceModel.Discovery.FindCriteria>뿐 아니라 검색에 사용되는 표준 `updDiscoveryEndpoint`의 일부 속성도 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-144">This sample extends this feature and modifies the <xref:System.ServiceModel.Discovery.FindCriteria> used by the client, as well as some properties of the standard `updDiscoveryEndpoint` used for discovery.</span></span> <span data-ttu-id="c191e-145">범위, 특정 <xref:System.ServiceModel.Discovery.FindCriteria> 알고리즘 및 사용자 지정 종료 조건을 사용하도록 `scopeMatchBy`를 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-145">The <xref:System.ServiceModel.Discovery.FindCriteria> are modified to use a scope and a specific `scopeMatchBy` algorithm, as well as custom termination criteria.</span></span> <span data-ttu-id="c191e-146">또한 이 샘플에서는 클라이언트가 `Probe` 메시지를 사용하여 XML 요소를 보내는 방법도 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-146">Furthermore, the sample also shows how a client can send XML elements using `Probe` messages.</span></span> <span data-ttu-id="c191e-147">마지막으로 다음 구성 파일과 같이 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>에 대해 사용되는 프로토콜 버전 및 UDP 관련 설정 등의 사항을 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-147">Lastly, some changes are made to the <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, such as the version of the protocol used and UDP-specific settings as shown in the following configuration file.</span></span>  
+ <span data-ttu-id="8d202-144">이 샘플에서는 이 기능을 확장하고, 클라이언트에서 사용하는 <xref:System.ServiceModel.Discovery.FindCriteria>뿐 아니라 검색에 사용되는 표준 `updDiscoveryEndpoint`의 일부 속성도 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-144">This sample extends this feature and modifies the <xref:System.ServiceModel.Discovery.FindCriteria> used by the client, as well as some properties of the standard `updDiscoveryEndpoint` used for discovery.</span></span> <span data-ttu-id="8d202-145">범위, 특정 <xref:System.ServiceModel.Discovery.FindCriteria> 알고리즘 및 사용자 지정 종료 조건을 사용하도록 `scopeMatchBy`를 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-145">The <xref:System.ServiceModel.Discovery.FindCriteria> are modified to use a scope and a specific `scopeMatchBy` algorithm, as well as custom termination criteria.</span></span> <span data-ttu-id="8d202-146">또한 이 샘플에서는 클라이언트가 `Probe` 메시지를 사용하여 XML 요소를 보내는 방법도 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-146">Furthermore, the sample also shows how a client can send XML elements using `Probe` messages.</span></span> <span data-ttu-id="8d202-147">마지막으로 다음 구성 파일과 같이 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>에 대해 사용되는 프로토콜 버전 및 UDP 관련 설정 등의 사항을 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-147">Lastly, some changes are made to the <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, such as the version of the protocol used and UDP-specific settings as shown in the following configuration file.</span></span>  
   
 ```xml  
 <udpDiscoveryEndpoint>    
@@ -204,7 +204,7 @@ ms.locfileid: "76741962"
       </udpDiscoveryEndpoint>  
 ```  
   
- <span data-ttu-id="c191e-148">다음은 샘플에 사용되는 전체 클라이언트 구성입니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-148">The following is the complete client configuration used in the sample.</span></span>  
+ <span data-ttu-id="8d202-148">다음은 샘플에 사용되는 전체 클라이언트 구성입니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-148">The following is the complete client configuration used in the sample.</span></span>  
   
 ```xml  
 <configuration>  
@@ -257,12 +257,12 @@ ms.locfileid: "76741962"
   </system.serviceModel>  
 ```  
   
-#### <a name="to-use-this-sample"></a><span data-ttu-id="c191e-149">이 샘플을 사용하려면</span><span class="sxs-lookup"><span data-stu-id="c191e-149">To use this sample</span></span>  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="8d202-149">이 샘플을 사용하려면</span><span class="sxs-lookup"><span data-stu-id="8d202-149">To use this sample</span></span>  
   
-1. <span data-ttu-id="c191e-150">이 샘플에서는 HTTP 엔드포인트를 사용하며 이 샘플을 실행하려면 적절한 URL ACL을 추가해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-150">This sample uses HTTP endpoints and to run this sample, proper URL ACLs must be added.</span></span> <span data-ttu-id="c191e-151">자세한 내용은 [HTTP 및 HTTPS 구성](../feature-details/configuring-http-and-https.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="c191e-151">For more information, see [Configuring HTTP and HTTPS](../feature-details/configuring-http-and-https.md).</span></span> <span data-ttu-id="c191e-152">높은 권한으로 다음 명령을 실행하면 적절한 ACL이 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-152">Executing the following command at an elevated privilege should add the appropriate ACLs.</span></span> <span data-ttu-id="c191e-153">명령이 지정한 대로 작동하지 않는 경우 다음 인수의 도메인과 사용자 이름을 대체할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-153">You may want to substitute your Domain and Username for the following arguments if the command does not work as is.</span></span> `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. <span data-ttu-id="8d202-150">이 샘플에서는 HTTP 엔드포인트를 사용하며 이 샘플을 실행하려면 적절한 URL ACL을 추가해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-150">This sample uses HTTP endpoints and to run this sample, proper URL ACLs must be added.</span></span> <span data-ttu-id="8d202-151">자세한 내용은 [HTTP 및 HTTPS 구성](../feature-details/configuring-http-and-https.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="8d202-151">For more information, see [Configuring HTTP and HTTPS](../feature-details/configuring-http-and-https.md).</span></span> <span data-ttu-id="8d202-152">높은 권한으로 다음 명령을 실행하면 적절한 ACL이 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-152">Executing the following command at an elevated privilege should add the appropriate ACLs.</span></span> <span data-ttu-id="8d202-153">명령이 지정한 대로 작동하지 않는 경우 다음 인수의 도메인과 사용자 이름을 대체할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-153">You may want to substitute your Domain and Username for the following arguments if the command does not work as is.</span></span> `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2. <span data-ttu-id="c191e-154">솔루션을 빌드합니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-154">Build the solution.</span></span>  
+2. <span data-ttu-id="8d202-154">솔루션을 빌드합니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-154">Build the solution.</span></span>  
   
-3. <span data-ttu-id="c191e-155">빌드 디렉터리에서 서비스 실행 파일을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-155">Run the service executable from the build directory.</span></span>  
+3. <span data-ttu-id="8d202-155">빌드 디렉터리에서 서비스 실행 파일을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-155">Run the service executable from the build directory.</span></span>  
   
-4. <span data-ttu-id="c191e-156">클라이언트 실행 파일을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-156">Run the client executable.</span></span> <span data-ttu-id="c191e-157">클라이언트에서 서비스를 찾을 수 있는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="c191e-157">Note that the client is able to locate the service.</span></span>  
+4. <span data-ttu-id="8d202-156">클라이언트 실행 파일을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-156">Run the client executable.</span></span> <span data-ttu-id="8d202-157">클라이언트에서 서비스를 찾을 수 있는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="8d202-157">Note that the client is able to locate the service.</span></span>  

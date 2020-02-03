@@ -19,15 +19,15 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76735757"
 ---
-# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a><span data-ttu-id="3d960-102">방법: Windows Forms DataGrid 컨트롤에서 클릭에 대한 응답</span><span class="sxs-lookup"><span data-stu-id="3d960-102">How to: Respond to Clicks in the Windows Forms DataGrid Control</span></span>
+# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a><span data-ttu-id="b9254-102">방법: Windows Forms DataGrid 컨트롤에서 클릭에 대한 응답</span><span class="sxs-lookup"><span data-stu-id="b9254-102">How to: Respond to Clicks in the Windows Forms DataGrid Control</span></span>
 > [!NOTE]
-> <span data-ttu-id="3d960-103"><xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3d960-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="3d960-104">자세한 내용은 [Windows Forms DataGridView 컨트롤과 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="3d960-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
+> <span data-ttu-id="b9254-103"><xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b9254-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="b9254-104">자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="b9254-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
   
- <span data-ttu-id="3d960-105">Windows Forms <xref:System.Windows.Forms.DataGrid> 데이터베이스에 연결 된 후에는 사용자가 클릭 한 셀을 모니터링할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3d960-105">After the Windows Forms <xref:System.Windows.Forms.DataGrid> is connected to a database, you can monitor which cell the user clicked.</span></span>  
+ <span data-ttu-id="b9254-105">Windows Forms <xref:System.Windows.Forms.DataGrid> 데이터베이스에 연결 된 후에는 사용자가 클릭 한 셀을 모니터링할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b9254-105">After the Windows Forms <xref:System.Windows.Forms.DataGrid> is connected to a database, you can monitor which cell the user clicked.</span></span>  
   
-### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a><span data-ttu-id="3d960-106">DataGrid 사용자가 다른 셀을 선택 하는 경우를 감지 하려면</span><span class="sxs-lookup"><span data-stu-id="3d960-106">To detect when the user of the DataGrid selects a different cell</span></span>  
+### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a><span data-ttu-id="b9254-106">DataGrid 사용자가 다른 셀을 선택 하는 경우를 감지 하려면</span><span class="sxs-lookup"><span data-stu-id="b9254-106">To detect when the user of the DataGrid selects a different cell</span></span>  
   
-- <span data-ttu-id="3d960-107"><xref:System.Windows.Forms.DataGrid.CurrentCellChanged> 이벤트 처리기에서 적절 하 게 응답 하는 코드를 작성 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d960-107">In the <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> event handler, write code to respond appropriately.</span></span>  
+- <span data-ttu-id="b9254-107"><xref:System.Windows.Forms.DataGrid.CurrentCellChanged> 이벤트 처리기에서 적절 하 게 응답 하는 코드를 작성 합니다.</span><span class="sxs-lookup"><span data-stu-id="b9254-107">In the <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> event handler, write code to respond appropriately.</span></span>  
   
     ```vb  
     Private Sub myDataGrid_CurrentCellChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles myDataGrid.CurrentCellChanged  
@@ -47,18 +47,18 @@ ms.locfileid: "76735757"
     }  
     ```  
   
-     <span data-ttu-id="3d960-108">(시각적 C#개체) 폼의 생성자에 다음 코드를 추가 하 여 이벤트 처리기를 등록 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d960-108">(Visual C#) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="b9254-108">(시각적 C#개체) 폼의 생성자에 다음 코드를 추가 하 여 이벤트 처리기를 등록 합니다.</span><span class="sxs-lookup"><span data-stu-id="b9254-108">(Visual C#) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.myDataGrid.CurrentCellChanged += new  
        System.EventHandler(this.myDataGrid_CurrentCellChanged);  
     ```  
   
-### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a><span data-ttu-id="3d960-109">사용자가 클릭 한 DataGrid 부분을 확인 하려면</span><span class="sxs-lookup"><span data-stu-id="3d960-109">To determine which part of the DataGrid the user clicked</span></span>  
+### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a><span data-ttu-id="b9254-109">사용자가 클릭 한 DataGrid 부분을 확인 하려면</span><span class="sxs-lookup"><span data-stu-id="b9254-109">To determine which part of the DataGrid the user clicked</span></span>  
   
-- <span data-ttu-id="3d960-110"><xref:System.Windows.Forms.Control.MouseDown> 또는 <xref:System.Windows.Forms.Control.Click> 이벤트와 같은 적절 한 이벤트 처리기에서 <xref:System.Windows.Forms.DataGrid.HitTest%2A> 메서드를 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d960-110">Call the <xref:System.Windows.Forms.DataGrid.HitTest%2A> method in an appropriate event handler, such as for the <xref:System.Windows.Forms.Control.MouseDown> or <xref:System.Windows.Forms.Control.Click> event.</span></span>  
+- <span data-ttu-id="b9254-110"><xref:System.Windows.Forms.Control.MouseDown> 또는 <xref:System.Windows.Forms.Control.Click> 이벤트와 같은 적절 한 이벤트 처리기에서 <xref:System.Windows.Forms.DataGrid.HitTest%2A> 메서드를 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="b9254-110">Call the <xref:System.Windows.Forms.DataGrid.HitTest%2A> method in an appropriate event handler, such as for the <xref:System.Windows.Forms.Control.MouseDown> or <xref:System.Windows.Forms.Control.Click> event.</span></span>  
   
-     <span data-ttu-id="3d960-111"><xref:System.Windows.Forms.DataGrid.HitTest%2A> 메서드는 클릭 한 영역의 행과 열을 포함 하는 <xref:System.Windows.Forms.DataGrid.HitTestInfo> 개체를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d960-111">The <xref:System.Windows.Forms.DataGrid.HitTest%2A> method returns a <xref:System.Windows.Forms.DataGrid.HitTestInfo> object that contains the row and column of a clicked area.</span></span>  
+     <span data-ttu-id="b9254-111"><xref:System.Windows.Forms.DataGrid.HitTest%2A> 메서드는 클릭 한 영역의 행과 열을 포함 하는 <xref:System.Windows.Forms.DataGrid.HitTestInfo> 개체를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="b9254-111">The <xref:System.Windows.Forms.DataGrid.HitTest%2A> method returns a <xref:System.Windows.Forms.DataGrid.HitTestInfo> object that contains the row and column of a clicked area.</span></span>  
   
     ```vb  
     Private Sub myDataGrid_MouseDown(ByVal sender As Object, _  
@@ -132,7 +132,7 @@ ms.locfileid: "76735757"
     }  
     ```  
   
-     <span data-ttu-id="3d960-112">(시각적 C#개체) 폼의 생성자에 다음 코드를 추가 하 여 이벤트 처리기를 등록 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d960-112">(Visual C#) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="b9254-112">(시각적 C#개체) 폼의 생성자에 다음 코드를 추가 하 여 이벤트 처리기를 등록 합니다.</span><span class="sxs-lookup"><span data-stu-id="b9254-112">(Visual C#) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.myDataGrid.MouseDown += new  
@@ -140,7 +140,7 @@ ms.locfileid: "76735757"
        (this.myDataGrid_MouseDown);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="3d960-113">참조</span><span class="sxs-lookup"><span data-stu-id="3d960-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b9254-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b9254-113">See also</span></span>
 
-- [<span data-ttu-id="3d960-114">DataGrid 컨트롤</span><span class="sxs-lookup"><span data-stu-id="3d960-114">DataGrid Control</span></span>](datagrid-control-windows-forms.md)
-- [<span data-ttu-id="3d960-115">방법: 런타임에 Windows Forms DataGrid 컨트롤에 표시되는 데이터 변경</span><span class="sxs-lookup"><span data-stu-id="3d960-115">How to: Change Displayed Data at Run Time in the Windows Forms DataGrid Control</span></span>](change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [<span data-ttu-id="b9254-114">DataGrid 컨트롤</span><span class="sxs-lookup"><span data-stu-id="b9254-114">DataGrid Control</span></span>](datagrid-control-windows-forms.md)
+- [<span data-ttu-id="b9254-115">방법: 런타임에 Windows Forms DataGrid 컨트롤에 표시되는 데이터 변경</span><span class="sxs-lookup"><span data-stu-id="b9254-115">How to: Change Displayed Data at Run Time in the Windows Forms DataGrid Control</span></span>](change-displayed-data-at-run-time-wf-datagrid-control.md)

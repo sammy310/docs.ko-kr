@@ -15,46 +15,46 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76741351"
 ---
-# <a name="programming-with-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="2b0a0-102">Windows Forms DataGridView 컨트롤에서 셀, 행 및 열 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="2b0a0-102">Programming with Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="2b0a0-103">이 섹션에서는 셀, 행 및 열 개체와 관련 된 다양 한 프로그래밍 태스크를 보여 주는 항목을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="2b0a0-103">This section provides topics that demonstrate various programming tasks involving cell, row, and column objects.</span></span>  
+# <a name="programming-with-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="cd5bd-102">Windows Forms DataGridView 컨트롤에서 셀, 행 및 열 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="cd5bd-102">Programming with Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="cd5bd-103">이 섹션에서는 셀, 행 및 열 개체와 관련 된 다양 한 프로그래밍 태스크를 보여 주는 항목을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="cd5bd-103">This section provides topics that demonstrate various programming tasks involving cell, row, and column objects.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2b0a0-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="2b0a0-104">In This Section</span></span>  
- [<span data-ttu-id="2b0a0-105">방법: Windows Forms DataGridView 컨트롤에서 개별 셀에 도구 설명 추가</span><span class="sxs-lookup"><span data-stu-id="2b0a0-105">How to: Add ToolTips to Individual Cells in a Windows Forms DataGridView Control</span></span>](add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
- <span data-ttu-id="2b0a0-106"><xref:System.Windows.Forms.DataGridView.CellFormatting> 이벤트를 처리 하 여 개별 셀에 대해 다른 도구 설명을 제공 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="2b0a0-106">Describes how to handle the <xref:System.Windows.Forms.DataGridView.CellFormatting> event to provide different ToolTips for individual cells.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="cd5bd-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="cd5bd-104">In This Section</span></span>  
+ [<span data-ttu-id="cd5bd-105">방법: Windows Forms DataGridView 컨트롤에서 개별 셀에 도구 설명 추가</span><span class="sxs-lookup"><span data-stu-id="cd5bd-105">How to: Add ToolTips to Individual Cells in a Windows Forms DataGridView Control</span></span>](add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
+ <span data-ttu-id="cd5bd-106"><xref:System.Windows.Forms.DataGridView.CellFormatting> 이벤트를 처리 하 여 개별 셀에 대해 다른 도구 설명을 제공 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="cd5bd-106">Describes how to handle the <xref:System.Windows.Forms.DataGridView.CellFormatting> event to provide different ToolTips for individual cells.</span></span>  
   
- [<span data-ttu-id="2b0a0-107">방법: Windows Forms DataGridView 컨트롤의 셀 변경 내용에 따라 사용자 지정 작업 수행</span><span class="sxs-lookup"><span data-stu-id="2b0a0-107">How to: Perform a Custom Action Based on Changes in a Cell of a Windows Forms DataGridView Control</span></span>](perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md)  
- <span data-ttu-id="2b0a0-108"><xref:System.Windows.Forms.DataGridView.CellValueChanged> 및 <xref:System.Windows.Forms.DataGridView.CellStateChanged> 이벤트를 처리 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="2b0a0-108">Describes how to handle the <xref:System.Windows.Forms.DataGridView.CellValueChanged> and <xref:System.Windows.Forms.DataGridView.CellStateChanged> events.</span></span>  
+ [<span data-ttu-id="cd5bd-107">방법: Windows Forms DataGridView 컨트롤의 셀 변경 내용에 따라 사용자 지정 작업 수행</span><span class="sxs-lookup"><span data-stu-id="cd5bd-107">How to: Perform a Custom Action Based on Changes in a Cell of a Windows Forms DataGridView Control</span></span>](perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md)  
+ <span data-ttu-id="cd5bd-108"><xref:System.Windows.Forms.DataGridView.CellValueChanged> 및 <xref:System.Windows.Forms.DataGridView.CellStateChanged> 이벤트를 처리 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="cd5bd-108">Describes how to handle the <xref:System.Windows.Forms.DataGridView.CellValueChanged> and <xref:System.Windows.Forms.DataGridView.CellStateChanged> events.</span></span>  
   
- [<span data-ttu-id="2b0a0-109">방법: Windows Forms DataGridView 컨트롤에서 밴드 조작</span><span class="sxs-lookup"><span data-stu-id="2b0a0-109">How to: Manipulate Bands in the Windows Forms DataGridView Control</span></span>](how-to-manipulate-bands-in-the-windows-forms-datagridview-control.md)  
- <span data-ttu-id="2b0a0-110">행 및 열에 대 한 기본 유형인 <xref:System.Windows.Forms.DataGridViewBand>형식의 개체를 사용 하 여 프로그래밍 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="2b0a0-110">Describes how to program with objects of type <xref:System.Windows.Forms.DataGridViewBand>, which is the base type for rows and columns.</span></span>  
+ [<span data-ttu-id="cd5bd-109">방법: Windows Forms DataGridView 컨트롤에서 밴드 조작</span><span class="sxs-lookup"><span data-stu-id="cd5bd-109">How to: Manipulate Bands in the Windows Forms DataGridView Control</span></span>](how-to-manipulate-bands-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="cd5bd-110">행 및 열에 대 한 기본 유형인 <xref:System.Windows.Forms.DataGridViewBand>형식의 개체를 사용 하 여 프로그래밍 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="cd5bd-110">Describes how to program with objects of type <xref:System.Windows.Forms.DataGridViewBand>, which is the base type for rows and columns.</span></span>  
   
- [<span data-ttu-id="2b0a0-111">방법: Windows Forms DataGridView 컨트롤에서 행 조작</span><span class="sxs-lookup"><span data-stu-id="2b0a0-111">How to: Manipulate Rows in the Windows Forms DataGridView Control</span></span>](how-to-manipulate-rows-in-the-windows-forms-datagridview-control.md)  
- <span data-ttu-id="2b0a0-112">`DataGridViewRow`형식의 개체를 사용 하 여 프로그래밍 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="2b0a0-112">Describes how to program with objects of type `DataGridViewRow`.</span></span>  
+ [<span data-ttu-id="cd5bd-111">방법: Windows Forms DataGridView 컨트롤에서 행 조작</span><span class="sxs-lookup"><span data-stu-id="cd5bd-111">How to: Manipulate Rows in the Windows Forms DataGridView Control</span></span>](how-to-manipulate-rows-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="cd5bd-112">`DataGridViewRow`형식의 개체를 사용 하 여 프로그래밍 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="cd5bd-112">Describes how to program with objects of type `DataGridViewRow`.</span></span>  
   
- [<span data-ttu-id="2b0a0-113">방법: Windows Forms DataGridView 컨트롤에서 열 조작</span><span class="sxs-lookup"><span data-stu-id="2b0a0-113">How to: Manipulate Columns in the Windows Forms DataGridView Control</span></span>](how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md)  
- <span data-ttu-id="2b0a0-114">`DataGridViewColumn`형식의 개체를 사용 하 여 프로그래밍 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="2b0a0-114">Describes how to program with objects of type `DataGridViewColumn`.</span></span>  
+ [<span data-ttu-id="cd5bd-113">방법: Windows Forms DataGridView 컨트롤에서 열 조작</span><span class="sxs-lookup"><span data-stu-id="cd5bd-113">How to: Manipulate Columns in the Windows Forms DataGridView Control</span></span>](how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="cd5bd-114">`DataGridViewColumn`형식의 개체를 사용 하 여 프로그래밍 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="cd5bd-114">Describes how to program with objects of type `DataGridViewColumn`.</span></span>  
   
- [<span data-ttu-id="2b0a0-115">방법: Windows Forms DataGridView 컨트롤에서 이미지 열 작업</span><span class="sxs-lookup"><span data-stu-id="2b0a0-115">How to: Work with Image Columns in the Windows Forms DataGridView Control</span></span>](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
- <span data-ttu-id="2b0a0-116">`DataGridViewImageColumn` 클래스를 사용 하 여 프로그래밍 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="2b0a0-116">Describes how to program with the `DataGridViewImageColumn` class.</span></span>  
+ [<span data-ttu-id="cd5bd-115">방법: Windows Forms DataGridView 컨트롤에서 이미지 열 작업</span><span class="sxs-lookup"><span data-stu-id="cd5bd-115">How to: Work with Image Columns in the Windows Forms DataGridView Control</span></span>](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="cd5bd-116">`DataGridViewImageColumn` 클래스를 사용 하 여 프로그래밍 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="cd5bd-116">Describes how to program with the `DataGridViewImageColumn` class.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="2b0a0-117">참조</span><span class="sxs-lookup"><span data-stu-id="2b0a0-117">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="cd5bd-117">참조</span><span class="sxs-lookup"><span data-stu-id="cd5bd-117">Reference</span></span>  
  <xref:System.Windows.Forms.DataGridView>  
- <span data-ttu-id="2b0a0-118"><xref:System.Windows.Forms.DataGridView> 컨트롤에 대한 참조 설명서를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="2b0a0-118">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView> control.</span></span>  
+ <span data-ttu-id="cd5bd-118"><xref:System.Windows.Forms.DataGridView> 컨트롤에 대한 참조 설명서를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="cd5bd-118">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView> control.</span></span>  
   
  <xref:System.Windows.Forms.DataGridViewCell>  
- <span data-ttu-id="2b0a0-119"><xref:System.Windows.Forms.DataGridViewCell> 클래스에 대 한 참조 설명서를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="2b0a0-119">Provides reference documentation for the <xref:System.Windows.Forms.DataGridViewCell> class.</span></span>  
+ <span data-ttu-id="cd5bd-119"><xref:System.Windows.Forms.DataGridViewCell> 클래스에 대 한 참조 설명서를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="cd5bd-119">Provides reference documentation for the <xref:System.Windows.Forms.DataGridViewCell> class.</span></span>  
   
  <xref:System.Windows.Forms.DataGridViewRow>  
- <span data-ttu-id="2b0a0-120"><xref:System.Windows.Forms.DataGridViewRow> 클래스에 대 한 참조 설명서를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="2b0a0-120">Provides reference documentation for the <xref:System.Windows.Forms.DataGridViewRow> class.</span></span>  
+ <span data-ttu-id="cd5bd-120"><xref:System.Windows.Forms.DataGridViewRow> 클래스에 대 한 참조 설명서를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="cd5bd-120">Provides reference documentation for the <xref:System.Windows.Forms.DataGridViewRow> class.</span></span>  
   
  <xref:System.Windows.Forms.DataGridViewColumn>  
- <span data-ttu-id="2b0a0-121"><xref:System.Windows.Forms.DataGridViewColumn> 클래스에 대 한 참조 설명서를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="2b0a0-121">Provides reference documentation for the <xref:System.Windows.Forms.DataGridViewColumn> class.</span></span>  
+ <span data-ttu-id="cd5bd-121"><xref:System.Windows.Forms.DataGridViewColumn> 클래스에 대 한 참조 설명서를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="cd5bd-121">Provides reference documentation for the <xref:System.Windows.Forms.DataGridViewColumn> class.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="2b0a0-122">관련 섹션</span><span class="sxs-lookup"><span data-stu-id="2b0a0-122">Related Sections</span></span>  
- [<span data-ttu-id="2b0a0-123">Windows Forms DataGridView 컨트롤의 기본 열, 행 및 셀 기능</span><span class="sxs-lookup"><span data-stu-id="2b0a0-123">Basic Column, Row, and Cell Features in the Windows Forms DataGridView Control</span></span>](basic-column-row-and-cell-features-wf-datagridview-control.md)  
- <span data-ttu-id="2b0a0-124">일반적으로 사용 되는 셀, 행 및 열 속성을 설명 하는 항목을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="2b0a0-124">Provides topics that describe commonly used cell, row, and column properties.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="cd5bd-122">관련 섹션</span><span class="sxs-lookup"><span data-stu-id="cd5bd-122">Related Sections</span></span>  
+ [<span data-ttu-id="cd5bd-123">Windows Forms DataGridView 컨트롤의 기본 열, 행 및 셀 기능</span><span class="sxs-lookup"><span data-stu-id="cd5bd-123">Basic Column, Row, and Cell Features in the Windows Forms DataGridView Control</span></span>](basic-column-row-and-cell-features-wf-datagridview-control.md)  
+ <span data-ttu-id="cd5bd-124">일반적으로 사용 되는 셀, 행 및 열 속성을 설명 하는 항목을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="cd5bd-124">Provides topics that describe commonly used cell, row, and column properties.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2b0a0-125">참조</span><span class="sxs-lookup"><span data-stu-id="2b0a0-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cd5bd-125">참고 항목</span><span class="sxs-lookup"><span data-stu-id="cd5bd-125">See also</span></span>
 
-- [<span data-ttu-id="2b0a0-126">DataGridView 컨트롤</span><span class="sxs-lookup"><span data-stu-id="2b0a0-126">DataGridView Control</span></span>](datagridview-control-windows-forms.md)
-- [<span data-ttu-id="2b0a0-127">Windows Forms DataGridView 컨트롤의 열 형식</span><span class="sxs-lookup"><span data-stu-id="2b0a0-127">Column Types in the Windows Forms DataGridView Control</span></span>](column-types-in-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="cd5bd-126">DataGridView 컨트롤</span><span class="sxs-lookup"><span data-stu-id="cd5bd-126">DataGridView Control</span></span>](datagridview-control-windows-forms.md)
+- [<span data-ttu-id="cd5bd-127">Windows Forms DataGridView 컨트롤의 열 형식</span><span class="sxs-lookup"><span data-stu-id="cd5bd-127">Column Types in the Windows Forms DataGridView Control</span></span>](column-types-in-the-windows-forms-datagridview-control.md)
