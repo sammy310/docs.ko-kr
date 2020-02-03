@@ -3,12 +3,12 @@ title: Windows 10에 .NET Framework 설치
 description: Windows 10 또는 Windows Server 2016에서 .NET Framework를 설치하는 방법을 알아봅니다.
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: c2b274bb85b6d4c496e7b6b6b62f05aa932202dd
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: eed15b9088d6ba46d8f5bc6d16ba779dd6115b0d
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716373"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965973"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Windows 10 및 Windows Server 2016 이상에 .NET Framework 설치
 
@@ -50,7 +50,7 @@ Windows 10 1507 또는 1511을 사용 중인 경우 .NET Framework 4.8을 설치
 
 ## <a name="net-framework-462"></a>.NET Framework 4.6.2
 
-[.NET Framework 4.6.2](https://www.microsoft.com/download/details.aspx?id=53345)는 Windows 10 1507 및 1511에서 지원되는 최신 .NET Framework 버전입니다.
+[.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)는 Windows 10 1507 및 1511에서 지원되는 최신 .NET Framework 버전입니다.
 
 .NET Framework 4.6.2는 .NET Framework 4.0~4.6.2용으로 빌드된 앱을 지원합니다.
 

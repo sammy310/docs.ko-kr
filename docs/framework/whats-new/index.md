@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 538806627a31366d4b8597eb010a4bbe3f8f9202
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: c38127281139d0c85b54a5d5077034804f1102a8
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76860961"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76966012"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework의 새로운 기능
 
@@ -46,9 +46,9 @@ ms.locfileid: "76860961"
 
 다음 위치에서 .NET Framework 4.8을 다운로드할 수 있습니다.
 
-- [.NET Framework 4.8 웹 설치 관리자](https://go.microsoft.com/fwlink/?LinkId=2085155)
+- [.NET Framework 4.8 웹 설치 관리자](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
-- [.NET Framework 4.8 오프라인 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2088631)
+- [.NET Framework 4.8 오프라인 설치 관리자](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
 .NET Framework 4.8은 Windows 10, Windows 8.1, Windows 7 SP1 및 Windows Server 2008 R2 SP1 이상의 해당 서버 플랫폼에 설치할 수 있습니다. 웹 설치 관리자 또는 오프라인 설치 관리자를 사용하여 .NET Framework 4.8을 설치할 수 있습니다. 대부분의 사용자에게 권장되는 방법은 웹 설치 관리자를 사용하는 것입니다.
 
@@ -2132,3 +2132,4 @@ Visual Studio 2012 및 이후 버전의 이식 가능한 클래스 라이브러�
 - [Visual Studio 2019의 새로운 기능](/visualstudio/ide/whats-new-visual-studio-2019)
 - [ASP.NET](/aspnet)
 - [Visual Studio의 새로운 C++ 기능](/cpp/what-s-new-for-visual-cpp-in-visual-studio)
+ 

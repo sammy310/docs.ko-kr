@@ -3,12 +3,12 @@ title: Windows Vista에 .NET Framework 설치
 description: Windows Vista에서.NET Framework를 설치하는 방법을 알아봅니다.
 ms.custom: updateeachrelease
 ms.date: 04/18/2019
-ms.openlocfilehash: 95a536ea201844461d60bda0da2654e76de04787
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 02f57aee139621ba277731f9b76c3c48fc6abc57
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716329"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965882"
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>Windows Vista 및 Windows Server 2008에 .NET Framework 설치
 
@@ -20,9 +20,9 @@ Windows에서 많은 애플리케이션을 실행하는 데 .NET Framework가 �
 
 ## <a name="net-framework-46"></a>.NET Framework 4.6
 
-[.NET Framework 4.6](https://www.microsoft.com/download/details.aspx?id=48130&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True)은 Windows Vista 및 Windows Server 2008에서 지원되는 최신 .NET Framework 버전입니다.
+[.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)은 Windows Vista 및 Windows Server 2008에서 지원되는 최신 .NET Framework 버전입니다.
 
-[.NET Framework 4.6](https://www.microsoft.com/download/details.aspx?id=48130&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True)은 .NET Framework 4.0~4.6용으로 빌드된 애플리케이션을 지원합니다.
+[.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True)은 .NET Framework 4.0~4.6용으로 빌드된 애플리케이션을 지원합니다.
 
 ## <a name="net-framework-35"></a>.NET Framework 3.5
 

@@ -2,12 +2,12 @@
 title: ‘이 애플리케이션을 시작할 수 없음’ 문제 해결
 description: "'이 애플리케이션을 시작할 수 없음' 대화 상자가 표시되면 어떻게 해야 하는지 알아보세요."
 ms.date: 09/05/2019
-ms.openlocfilehash: 2140ab38c29d610634f71305c4337c324e0550d8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 864c6ea23e9a048f060eee39d904bd4377be5084
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092047"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965908"
 ---
 # <a name="troubleshooting-a-this-application-could-not-be-started-error-message"></a>‘이 애플리케이션을 시작할 수 없음’ 오류 메시지 문제 해결
 
@@ -44,11 +44,11 @@ ms.locfileid: "73092047"
    |Windows 버전|.NET Framework 설치|
    |---|---|
    |Windows 10 1주년 업데이트 이상 버전|[.NET Framework 4.8 런타임](https://dotnet.microsoft.com/download/dotnet-framework/net48)|
-   |Windows 10, Windows 10 11월 업데이트|[.NET Framework 4.6.2](https://www.microsoft.com/download/details.aspx?id=53345)|
+   |Windows 10, Windows 10 11월 업데이트|[.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)|
    |Windows 8.1|[.NET Framework 4.8 런타임](https://dotnet.microsoft.com/download/dotnet-framework/net48)|
-   |Windows 8|[.NET Framework 4.6.1](https://www.microsoft.com/download/details.aspx?id=49981)|
+   |Windows 8|[.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)|
    |Windows 7 SP1|[.NET Framework 4.8 런타임](https://dotnet.microsoft.com/download/dotnet-framework/net48)|
-   |Windows Vista SP2|[.NET Framework 4.6](https://www.microsoft.com/download/details.aspx?id=48130)|
+   |Windows Vista SP2|[.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)|
 
    > [!NOTE]
    > Windows 10 2019년 5월 업데이트에는 .NET Framework 4.8이 미리 설치되어 있습니다.
@@ -59,7 +59,7 @@ ms.locfileid: "73092047"
 
    ![이 문제를 해결할 수 없음](media/application-not-started/install-3-5.png)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET Framework 시스템 요구 사항](../get-started/system-requirements.md)
 - [.NET Framework 설치 가이드](index.md)

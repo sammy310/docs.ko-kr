@@ -4,12 +4,12 @@ description: 이미지 처리에서 모바일 백 엔드 및 ETL 파이프라인
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 8a2301b3c7a5f4a1f465677f31371d5b94783692
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 5f0d7a4c5cd736d1168ec76c1c0ea19627505f15
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "72522397"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787888"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>서버리스 비즈니스 시나리오 및 사용 사례
 
@@ -33,7 +33,7 @@ ms.locfileid: "72522397"
 
 Azure Web Portal 또는 Visual Studio에서 간단한 서버리스 Azure 함수를 구현하는 방법을 알아봅니다. Android, iOS 및 Windows에서 실행되는 Xamarin.Forms를 사용하여 클라이언트를 빌드합니다. 그런 다음 서버와 서버리스 백 엔드가 있는 모바일 클라이언트 간 통신 매체로 JSON(JavaScript Object Notation)을 사용하도록 애플리케이션을 수정합니다.
 
-자세한 내용은 [Xamarin Forms 클라이언트를 사용하여 간단한 Azure 함수 구현](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)을 참조하세요.
+자세한 내용은 [Xamarin Forms 클라이언트를 사용하여 간단한 Azure 함수 구현](https://docs.microsoft.com/samples/azure-samples/functions-xamarin-getting-started/implementing-a-simple-azure-function-with-a-xamarinforms-client/)을 참조하세요.
 
 ## <a name="generate-a-photo-mosaic-with-serverless-image-recognition"></a>서버리스 이미지 인식을 사용하여 사진 모자이크 생성
 
@@ -43,7 +43,7 @@ Azure Web Portal 또는 Visual Studio에서 간단한 서버리스 Azure 함수�
 
 예를 들어 올랜도 아이와 같은 올랜도 랜드마크를 사용하여 모델을 학습할 수 있습니다. Custom Vision은 올랜도 아이 이미지를 인식하고, 함수는 "올랜도 아이"에 대해 Bing 이미지 검색 결과로 구성된 사진 모자이크를 만듭니다.
 
-자세한 내용은 [Azure Functions 사진 모자이크 생성기](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)를 참조하세요.
+자세한 내용은 [Azure Functions 사진 모자이크 생성기](https://github.com/Azure-Samples/functions-dotnet-photo-mosaic)를 참조하세요.
 
 ## <a name="migrate-an-existing-application-to-the-cloud"></a>기존 애플리케이션을 클라우드로 마이그레이션
 
@@ -83,17 +83,17 @@ Azure Functions는 긴 URL을 붙여 넣어 짧은 URL을 생성할 수 있는 S
 
 이 샘플은 Azure IoT Hub와 Azure 함수로 구성됩니다. IoT Hub의 새 메시지는 Azure 함수를 트리거합니다. 서버리스 코드는 동일한 메시지 내용을 전송한 장치로 다시 보냅니다. 프로젝트에는 솔루션에 필요한 모든 코드 및 배포 구성이 있습니다.
 
-자세한 내용은 [Azure IoT Hub ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)을 참조하세요.
+자세한 내용은 [Azure IoT Hub ping](https://github.com/Azure-Samples/iot-hub-node-ping)을 참조하세요.
 
 ## <a name="recommended-resources"></a>권장되는 리소스
 
-- [Azure Functions 사진 모자이크 생성기](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
-- [Azure IoT Hub ping(영문)](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
+- [Azure Functions 사진 모자이크 생성기](https://github.com/Azure-Samples/functions-dotnet-photo-mosaic)
+- [Azure IoT Hub ping(영문)](https://github.com/Azure-Samples/iot-hub-node-ping)
 - [Azure Storage for serverless .NET apps in minutes](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
 - [Bring your own app](https://github.com/JeremyLikness/bring-own-app-connect-17)
 - [CSV import lab](https://github.com/JeremyLikness/azure-fn-file-process-hol)
 - [Event grid glue](https://github.com/JeremyLikness/Event-Grid-Glue)
-- [Xamarin.Forms 클라이언트를 사용하여 간단한 Azure Function 구현](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
+- [Xamarin.Forms 클라이언트를 사용하여 간단한 Azure Function 구현](https://docs.microsoft.com/samples/azure-samples/functions-xamarin-getting-started/implementing-a-simple-azure-function-with-a-xamarinforms-client/)
 - [Lift and shift with serverless Azure functions](https://channel9.msdn.com/Events/Connect/2017/E102)
 - [Serverless URL shortener](https://github.com/jeremylikness/serverless-url-shortener)
 

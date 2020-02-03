@@ -71,7 +71,7 @@ ms.locfileid: "73738197"
 2. 레지스트리 편집기에서 다음 하위 키를 엽니다. **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full**. **전체**하위 키가 없으면 .NET Framework 4.5 이상이 설치되어 있지 않은 것입니다.
 
     > [!NOTE]
-    > 레지스트리의 **NET Framework Setup** 폴더는 마침표로 시작하지 ‘않습니다’. 
+    > 레지스트리의 **NET Framework Setup** 폴더는 마침표로 시작하지 ‘않습니다’.
 
 3. **릴리스**라는 DWORD 항목을 확인합니다. 릴리스 DWORD가 있으면 컴퓨터에 .NET Framework 4.5 이상이 설치된 것입니다. 그 값은 특정 버전의 .NET Framework에 대응되는 릴리스 키입니다. 예를 들어, 다음 그림에서 **릴리스** 항목은 378389로, 이것은 .NET Framework 4.5.의 릴리스 키입니다.
 
@@ -98,11 +98,11 @@ ms.locfileid: "73738197"
 
 #### <a name="specific-version"></a>특정 버전
 
-특정 버전의 .NET Framework가 *특정* 버전의 Windows 운영 체제에 설치되어 있는지 여부를 확인하려면 **릴리스** DWORD 값이 표에 나열된 값과 *동일한지* 테스트하세요. 예를 들어 .NET Framework 4.6이 Windows 10 시스템에 있는지 확인하려면 **릴리스** 값이 393295와 ‘같은지’ 테스트합니다. 
+특정 버전의 .NET Framework가 *특정* 버전의 Windows 운영 체제에 설치되어 있는지 여부를 확인하려면 **릴리스** DWORD 값이 표에 나열된 값과 *동일한지* 테스트하세요. 예를 들어 .NET Framework 4.6이 Windows 10 시스템에 있는지 확인하려면 **릴리스** 값이 393295와 ‘같은지’ 테스트합니다.
 
 #### <a name="minimum-version"></a>최소 버전
 
-*최하* 버전의 .NET Framework가 있는지 확인하려면 이전 테이블에서 해당 버전에 대해 가장 작은 **릴리스** DWORD 값을 사용하세요. (편의를 위해 다음 표에도 최솟값이 나열됩니다.)
+*최하* 버전의 .NET Framework가 있는지 확인하려면 이전 표에서 해당 버전에 대해 가장 작은 **릴리스** DWORD 값을 사용하세요. (편의를 위해 다음 표에도 최솟값이 나열됩니다.)
 
 예를 들어 애플리케이션이 .NET Framework 4.8 이상 버전에서 실행되는 경우 528040과 *같거나 이보다 큰* **릴리스** DWORD 값을 테스트합니다.
 
@@ -121,7 +121,7 @@ ms.locfileid: "73738197"
 
 #### <a name="multiple-versions"></a>여러 가지 버전
 
-여러 버전을 테스트하려면 최신 .NET Framework 버전의 더 작은 DWORD 값과 ‘같거나 이보다 큰’ 값을 테스트한 후 연속적인 각 이전 버전에 대해 더 작은 DWORD 값과 비교하세요.  예를 들어 애플리케이션에 .NET Framework 4.7 이상이 필요하고 특정 버전의 .NET Framework를 확인하려는 경우 461808(또는 .NET Framework 4.7.2의 경우는 더 작은 DWORD 값)과 ‘같거나 이보다 큰’ **릴리스** DWORD 값을 테스트하여 시작합니다.  그런 다음, 이 **릴리스** DWORD 값을 이후의 각 .NET Framework 버전에 대한 더 작은 값과 비교합니다.
+여러 버전을 테스트하려면 최신 .NET Framework 버전의 더 작은 DWORD 값과 ‘같거나 이보다 큰’ 값을 테스트한 후 연속적인 각 이전 버전에 대해 더 작은 DWORD 값과 비교하세요. 예를 들어 애플리케이션에 .NET Framework 4.7 이상이 필요하고 특정 버전의 .NET Framework를 확인하려는 경우 461808(또는 .NET Framework 4.7.2의 경우는 더 작은 DWORD 값)과 ‘같거나 이보다 큰’ **릴리스** DWORD 값을 테스트하여 시작합니다. 그런 다음, 이 **릴리스** DWORD 값을 이후의 각 .NET Framework 버전에 대한 더 작은 값과 비교합니다.
 
 <a name="net_d"></a>
 
@@ -150,7 +150,7 @@ ms.locfileid: "73738197"
 
 PowerShell 명령을 사용하여 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full** 하위 키의 **릴리스** 항목값을 확인합니다.
 
-다음 예제에서는 **릴리스** 항목 값을 확인하여 .NET Framework 4.6.2 이상이 설치되어 있는지 확인합니다. `True`설치된 경우 코드 반환, 설치되지 않은 경우 `False` 코드 반환.
+다음 예제에서는 **릴리스** 항목 값을 확인하여 .NET Framework 4.6.2 이상이 설치되어 있는지 확인합니다. 설치된 경우 `True` 코드 반환, 설치되지 않은 경우 `False` 코드 반환.
 
 ```PowerShell
 (Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release -ge 394802
@@ -200,7 +200,7 @@ PowerShell 명령을 사용하여 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Fr
 
 [CLR 버전 도구(Clrver.exe)](../tools/clrver-exe-clr-version-tool.md)를 사용하여 컴퓨터에 설치된 공용 언어 런타임의 버전을 확인합니다.
 
-- [Visual Studio용 개발자 명령 프롬프트](../tools/developer-command-prompt-for-vs.md)을 입력 `clrver` 합니다.
+- [Visual Studio용 개발자 명령 프롬프트](../tools/developer-command-prompt-for-vs.md)에서 `clrver` 을 입력합니다.
 
     샘플 출력:
 
@@ -227,7 +227,7 @@ PowerShell 명령을 사용하여 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Fr
 
    - 주 릴리스 식별자(예:버전 4.0의 경우 *4*)는 <xref:System.Version.Major%2A?displayProperty=nameWithType>속성을 사용합니다.
 
-   - 부 릴리스 식별자(예:버전 4.0의 경우 *0*)를 가져오고 <xref:System.Version.Minor%2A?displayProperty=nameWithType>속성을 사용합니다.
+   - 부 릴리스 식별자(예:버전 4.0의 경우 *0*)는 <xref:System.Version.Minor%2A?displayProperty=nameWithType>속성을 사용합니다.
 
    - 전체 버전 문자열(예를 들어*4.0.30319.18010*)에는 <xref:System.Version.ToString%2A?displayProperty=nameWithType>메서드를 사용합니다. 메서드는 코드를 실행 하는 런타임 버전을 반영하는 단일 값을 반환합니다. 이는 컴퓨터에 설치된 어셈블리 버전이나 다른 런타임 버전은 반환하지 않습니다.
 

@@ -2,12 +2,12 @@
 title: 복원력 있는 Entity Framework Core SQL 연결 구현
 description: 복원력 있는 Entity Framework Core SQL 연결을 구현하는 방법을 알아봅니다. 이 기술은 클라우드에서 Azure SQL Database를 사용하는 경우에 특히 중요합니다.
 ms.date: 10/16/2018
-ms.openlocfilehash: 7899fc263ab3cde6ac2410ca614a7e5fa285576b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0ded30469bb4985fed7b60938756046531c8feea
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76732732"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777056"
 ---
 # <a name="implement-resilient-entity-framework-core-sql-connections"></a>복원력 있는 Entity Framework Core SQL 연결 구현
 
@@ -41,7 +41,7 @@ public class Startup
 
 ## <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a>BeginTransaction 및 여러 DbContexts를 사용한 실행 전략 및 명시적 트랜잭션
 
-EF 코어 연결에서 다시 시도가 설정되면, EF 코어를 사용하여 수행하는 각 작업은 자체적으로 다시 시도할 수 있는 작업이 됩니다. 일시적인 오류가 발생할 경우 `SaveChanges`에 대한 각 쿼리와 각 호출이 하나의 단위로 다시 시도됩니다.
+EF Core 연결에서 다시 시도를 사용하도록 설정되면 EF Core를 사용하여 수행하는 각 작업이 자체적으로 다시 시도할 수 있는 작업이 됩니다. 일시적인 오류가 발생할 경우 `SaveChanges`에 대한 각 쿼리와 각 호출이 하나의 단위로 다시 시도됩니다.
 
 그러나 코드에서 `BeginTransaction`을 사용하여 트랜잭션을 시작하는 경우 하나의 단위로 처리해야 하는 고유한 작업 그룹이 정의됩니다. 오류가 발생할 경우 트랜잭션 내부의 모든 항목을 롤백해야 합니다.
 
