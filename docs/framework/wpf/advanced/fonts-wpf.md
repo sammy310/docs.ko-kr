@@ -13,18 +13,18 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76737915"
 ---
-# <a name="fonts-wpf"></a><span data-ttu-id="2bcc2-102">글꼴(WPF)</span><span class="sxs-lookup"><span data-stu-id="2bcc2-102">Fonts (WPF)</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="2bcc2-103">는 OpenType 글꼴을 사용 하 여 다양 한 텍스트 표현을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="2bcc2-103">includes support for rich presentation of text using OpenType fonts.</span></span> <span data-ttu-id="2bcc2-104">OpenType 글꼴의 샘플 팩은 Windows SDK 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2bcc2-104">A sample pack of OpenType fonts is included with the Windows SDK.</span></span>  
+# <a name="fonts-wpf"></a><span data-ttu-id="95f26-102">글꼴(WPF)</span><span class="sxs-lookup"><span data-stu-id="95f26-102">Fonts (WPF)</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="95f26-103">는 OpenType 글꼴을 사용 하 여 다양 한 텍스트 표현을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="95f26-103">includes support for rich presentation of text using OpenType fonts.</span></span> <span data-ttu-id="95f26-104">OpenType 글꼴의 샘플 팩은 Windows SDK 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="95f26-104">A sample pack of OpenType fonts is included with the Windows SDK.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2bcc2-105">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="2bcc2-105">In This Section</span></span>  
- [<span data-ttu-id="2bcc2-106">OpenType 글꼴 기능</span><span class="sxs-lookup"><span data-stu-id="2bcc2-106">OpenType Font Features</span></span>](opentype-font-features.md)  
- [<span data-ttu-id="2bcc2-107">애플리케이션과 함께 글꼴 패키징</span><span class="sxs-lookup"><span data-stu-id="2bcc2-107">Packaging Fonts with Applications</span></span>](packaging-fonts-with-applications.md)  
- [<span data-ttu-id="2bcc2-108">샘플 OpenType 글꼴 팩</span><span class="sxs-lookup"><span data-stu-id="2bcc2-108">Sample OpenType Font Pack</span></span>](sample-opentype-font-pack.md)  
- [<span data-ttu-id="2bcc2-109">방법 항목</span><span class="sxs-lookup"><span data-stu-id="2bcc2-109">How-to Topics</span></span>](fonts-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="95f26-105">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="95f26-105">In This Section</span></span>  
+ [<span data-ttu-id="95f26-106">OpenType 글꼴 기능</span><span class="sxs-lookup"><span data-stu-id="95f26-106">OpenType Font Features</span></span>](opentype-font-features.md)  
+ [<span data-ttu-id="95f26-107">애플리케이션과 함께 글꼴 패키징</span><span class="sxs-lookup"><span data-stu-id="95f26-107">Packaging Fonts with Applications</span></span>](packaging-fonts-with-applications.md)  
+ [<span data-ttu-id="95f26-108">샘플 OpenType 글꼴 팩</span><span class="sxs-lookup"><span data-stu-id="95f26-108">Sample OpenType Font Pack</span></span>](sample-opentype-font-pack.md)  
+ [<span data-ttu-id="95f26-109">방법 항목</span><span class="sxs-lookup"><span data-stu-id="95f26-109">How-to Topics</span></span>](fonts-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="2bcc2-110">참조</span><span class="sxs-lookup"><span data-stu-id="2bcc2-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="95f26-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="95f26-110">See also</span></span>
 
 - <xref:System.Windows.FontStyle>
 - <xref:System.Windows.SystemFonts>
-- [<span data-ttu-id="2bcc2-111">WPF의 문서</span><span class="sxs-lookup"><span data-stu-id="2bcc2-111">Documents in WPF</span></span>](documents-in-wpf.md)
-- [<span data-ttu-id="2bcc2-112">WPF의 입력 체계</span><span class="sxs-lookup"><span data-stu-id="2bcc2-112">Typography in WPF</span></span>](typography-in-wpf.md)
+- [<span data-ttu-id="95f26-111">WPF의 문서</span><span class="sxs-lookup"><span data-stu-id="95f26-111">Documents in WPF</span></span>](documents-in-wpf.md)
+- [<span data-ttu-id="95f26-112">WPF의 입력 체계</span><span class="sxs-lookup"><span data-stu-id="95f26-112">Typography in WPF</span></span>](typography-in-wpf.md)

@@ -19,10 +19,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76745918"
 ---
-# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a><span data-ttu-id="a1956-102">방법: Windows Forms LinkLabel 컨트롤에서 웹 페이지 표시(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a1956-102">How to: Display a Web Page from a Windows Forms LinkLabel Control (Visual Basic)</span></span>
-<span data-ttu-id="a1956-103">이 예제에서는 사용자가 Windows Forms <xref:System.Windows.Forms.LinkLabel> 컨트롤을 클릭할 때 기본 브라우저에 웹 페이지를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="a1956-103">This example displays a Web page in the default browser when a user clicks a Windows Forms <xref:System.Windows.Forms.LinkLabel> control.</span></span>  
+# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a><span data-ttu-id="aec6b-102">방법: Windows Forms LinkLabel 컨트롤에서 웹 페이지 표시(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="aec6b-102">How to: Display a Web Page from a Windows Forms LinkLabel Control (Visual Basic)</span></span>
+<span data-ttu-id="aec6b-103">이 예제에서는 사용자가 Windows Forms <xref:System.Windows.Forms.LinkLabel> 컨트롤을 클릭할 때 기본 브라우저에 웹 페이지를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="aec6b-103">This example displays a Web page in the default browser when a user clicks a Windows Forms <xref:System.Windows.Forms.LinkLabel> control.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a1956-104">예</span><span class="sxs-lookup"><span data-stu-id="a1956-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="aec6b-104">예제</span><span class="sxs-lookup"><span data-stu-id="aec6b-104">Example</span></span>  
   
 ```vb  
 Private Sub Form1_Load(ByVal sender As System.Object, ByVal e _  
@@ -37,19 +37,19 @@ LinkLabel1.LinkClicked
 End Sub  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="a1956-105">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="a1956-105">Compiling the Code</span></span>  
- <span data-ttu-id="a1956-106">이 예제에는 다음 사항이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="a1956-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="aec6b-105">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="aec6b-105">Compiling the Code</span></span>  
+ <span data-ttu-id="aec6b-106">이 예제에는 다음 사항이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="aec6b-106">This example requires:</span></span>  
   
-- <span data-ttu-id="a1956-107">이름이 `Form1`Windows 폼입니다.</span><span class="sxs-lookup"><span data-stu-id="a1956-107">A Windows Form named `Form1`.</span></span>  
+- <span data-ttu-id="aec6b-107">이름이 `Form1`Windows 폼입니다.</span><span class="sxs-lookup"><span data-stu-id="aec6b-107">A Windows Form named `Form1`.</span></span>  
   
-- <span data-ttu-id="a1956-108">`LinkLabel1`이라는 <xref:System.Windows.Forms.LinkLabel> 컨트롤</span><span class="sxs-lookup"><span data-stu-id="a1956-108">A <xref:System.Windows.Forms.LinkLabel> control named `LinkLabel1`.</span></span>  
+- <span data-ttu-id="aec6b-108"><xref:System.Windows.Forms.LinkLabel>이라는 `LinkLabel1` 컨트롤</span><span class="sxs-lookup"><span data-stu-id="aec6b-108">A <xref:System.Windows.Forms.LinkLabel> control named `LinkLabel1`.</span></span>  
   
-- <span data-ttu-id="a1956-109">활성 인터넷 연결입니다.</span><span class="sxs-lookup"><span data-stu-id="a1956-109">An active Internet connection.</span></span>  
+- <span data-ttu-id="aec6b-109">활성 인터넷 연결입니다.</span><span class="sxs-lookup"><span data-stu-id="aec6b-109">An active Internet connection.</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="a1956-110">.NET Framework 보안</span><span class="sxs-lookup"><span data-stu-id="a1956-110">.NET Framework Security</span></span>  
- <span data-ttu-id="a1956-111"><xref:System.Diagnostics.Process.Start%2A> 메서드에 대 한 호출에는 완전 신뢰가 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="a1956-111">The call to the <xref:System.Diagnostics.Process.Start%2A> method requires full trust.</span></span> <span data-ttu-id="a1956-112">자세한 내용은 <xref:System.Security.SecurityException>를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="a1956-112">For more information, see <xref:System.Security.SecurityException>.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="aec6b-110">.NET Framework 보안</span><span class="sxs-lookup"><span data-stu-id="aec6b-110">.NET Framework Security</span></span>  
+ <span data-ttu-id="aec6b-111"><xref:System.Diagnostics.Process.Start%2A> 메서드에 대 한 호출에는 완전 신뢰가 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="aec6b-111">The call to the <xref:System.Diagnostics.Process.Start%2A> method requires full trust.</span></span> <span data-ttu-id="aec6b-112">자세한 내용은 <xref:System.Security.SecurityException>을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="aec6b-112">For more information, see <xref:System.Security.SecurityException>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a1956-113">참조</span><span class="sxs-lookup"><span data-stu-id="a1956-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="aec6b-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="aec6b-113">See also</span></span>
 
 - <xref:System.Windows.Forms.LinkLabel>
-- [<span data-ttu-id="a1956-114">LinkLabel 컨트롤</span><span class="sxs-lookup"><span data-stu-id="a1956-114">LinkLabel Control</span></span>](linklabel-control-windows-forms.md)
+- [<span data-ttu-id="aec6b-114">LinkLabel 컨트롤</span><span class="sxs-lookup"><span data-stu-id="aec6b-114">LinkLabel Control</span></span>](linklabel-control-windows-forms.md)

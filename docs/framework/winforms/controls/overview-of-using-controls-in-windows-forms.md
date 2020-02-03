@@ -16,17 +16,17 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76744352"
 ---
-# <a name="overview-of-using-controls-in-windows-forms"></a><span data-ttu-id="b2d89-102">Windows Forms에서 컨트롤 사용 개요</span><span class="sxs-lookup"><span data-stu-id="b2d89-102">Overview of Using Controls in Windows Forms</span></span>
-<span data-ttu-id="b2d89-103">이 항목에서는 Windows Forms 응용 프로그램의 필수 요소에 대해 설명 하 고 컨트롤을 사용 하 고 Windows Forms 응용 프로그램에서 이벤트를 처리 하는 간단한 예제를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="b2d89-103">This topic describes the essential elements of a Windows Forms application and provides a simple example that uses controls and handles events in a Windows Forms application.</span></span>  
+# <a name="overview-of-using-controls-in-windows-forms"></a><span data-ttu-id="eadb9-102">Windows Forms에서 컨트롤 사용 개요</span><span class="sxs-lookup"><span data-stu-id="eadb9-102">Overview of Using Controls in Windows Forms</span></span>
+<span data-ttu-id="eadb9-103">이 항목에서는 Windows Forms 응용 프로그램의 필수 요소에 대해 설명 하 고 컨트롤을 사용 하 고 Windows Forms 응용 프로그램에서 이벤트를 처리 하는 간단한 예제를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="eadb9-103">This topic describes the essential elements of a Windows Forms application and provides a simple example that uses controls and handles events in a Windows Forms application.</span></span>  
   
-## <a name="simple-windows-forms-applications"></a><span data-ttu-id="b2d89-104">간단한 Windows Forms 응용 프로그램</span><span class="sxs-lookup"><span data-stu-id="b2d89-104">Simple Windows Forms Applications</span></span>  
- <span data-ttu-id="b2d89-105">최소한 Windows Forms 응용 프로그램은 다음 요소로 구성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b2d89-105">At a minimum, a Windows Forms application consists of the following elements:</span></span>  
+## <a name="simple-windows-forms-applications"></a><span data-ttu-id="eadb9-104">간단한 Windows Forms 응용 프로그램</span><span class="sxs-lookup"><span data-stu-id="eadb9-104">Simple Windows Forms Applications</span></span>  
+ <span data-ttu-id="eadb9-105">최소한 Windows Forms 응용 프로그램은 다음 요소로 구성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="eadb9-105">At a minimum, a Windows Forms application consists of the following elements:</span></span>  
   
-- <span data-ttu-id="b2d89-106"><xref:System.Windows.Forms.Form?displayProperty=nameWithType>에서 파생 되는 하나 이상의 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="b2d89-106">One or more classes that derive from <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.</span></span>  
+- <span data-ttu-id="eadb9-106"><xref:System.Windows.Forms.Form?displayProperty=nameWithType>에서 파생 되는 하나 이상의 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="eadb9-106">One or more classes that derive from <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.</span></span>  
   
-- <span data-ttu-id="b2d89-107">`static``shared` (Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> 메서드를 호출 하 고 <xref:System.Windows.Forms.Form> 인스턴스를 전달 하는 `Main` 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="b2d89-107">A `Main` method that invokes the `static` (`shared` in Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> method and passes a <xref:System.Windows.Forms.Form> instance to it.</span></span> <span data-ttu-id="b2d89-108"><xref:System.Windows.Forms.Application.Run%2A> 메서드는 운영 체제에서 응용 프로그램으로 메시지를 처리 합니다.</span><span class="sxs-lookup"><span data-stu-id="b2d89-108">The <xref:System.Windows.Forms.Application.Run%2A> method processes messages from the operating system to the application.</span></span>  
+- <span data-ttu-id="eadb9-107">`static``shared` (Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> 메서드를 호출 하 고 <xref:System.Windows.Forms.Form> 인스턴스를 전달 하는 `Main` 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="eadb9-107">A `Main` method that invokes the `static` (`shared` in Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> method and passes a <xref:System.Windows.Forms.Form> instance to it.</span></span> <span data-ttu-id="eadb9-108"><xref:System.Windows.Forms.Application.Run%2A> 메서드는 운영 체제에서 응용 프로그램으로 메시지를 처리 합니다.</span><span class="sxs-lookup"><span data-stu-id="eadb9-108">The <xref:System.Windows.Forms.Application.Run%2A> method processes messages from the operating system to the application.</span></span>  
   
- <span data-ttu-id="b2d89-109">다음 코드 예제에서는 Windows Forms 응용 프로그램의 필수 요소를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b2d89-109">The following code example shows the essential elements of a Windows Forms application.</span></span>  
+ <span data-ttu-id="eadb9-109">다음 코드 예제에서는 Windows Forms 응용 프로그램의 필수 요소를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="eadb9-109">The following code example shows the essential elements of a Windows Forms application.</span></span>  
   
 ```vb  
 Option Explicit  
@@ -74,8 +74,8 @@ public class MyForm : Form {
 }  
 ```  
   
-## <a name="using-controls-in-a-windows-forms-application"></a><span data-ttu-id="b2d89-110">Windows Forms 응용 프로그램에서 컨트롤 사용</span><span class="sxs-lookup"><span data-stu-id="b2d89-110">Using Controls in a Windows Forms Application</span></span>  
- <span data-ttu-id="b2d89-111">다음 코드 예제에서는 Windows Forms 응용 프로그램에서 컨트롤을 사용 하 고 이벤트를 처리 하는 방법을 보여 주는 간단한 응용 프로그램을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b2d89-111">The following code example shows a simple application that illustrates how Windows Forms applications use controls and handle events.</span></span> <span data-ttu-id="b2d89-112">이 예제는 폼의 단추 3 개로 구성 됩니다. 클릭할 때 각 단추는 배경색을 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="b2d89-112">The example consists of three buttons on a form; each button changes the background color when clicked.</span></span>  
+## <a name="using-controls-in-a-windows-forms-application"></a><span data-ttu-id="eadb9-110">Windows Forms 응용 프로그램에서 컨트롤 사용</span><span class="sxs-lookup"><span data-stu-id="eadb9-110">Using Controls in a Windows Forms Application</span></span>  
+ <span data-ttu-id="eadb9-111">다음 코드 예제에서는 Windows Forms 응용 프로그램에서 컨트롤을 사용 하 고 이벤트를 처리 하는 방법을 보여 주는 간단한 응용 프로그램을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="eadb9-111">The following code example shows a simple application that illustrates how Windows Forms applications use controls and handle events.</span></span> <span data-ttu-id="eadb9-112">이 예제는 폼의 단추 3 개로 구성 됩니다. 클릭할 때 각 단추는 배경색을 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="eadb9-112">The example consists of three buttons on a form; each button changes the background color when clicked.</span></span>  
   
 ```vb  
 Option Explicit  
@@ -223,7 +223,7 @@ public class MyForm : Form {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b2d89-113">참조</span><span class="sxs-lookup"><span data-stu-id="b2d89-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eadb9-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="eadb9-113">See also</span></span>
 
-- [<span data-ttu-id="b2d89-114">.NET Framework에서 사용자 지정 Windows Forms 컨트롤 개발</span><span class="sxs-lookup"><span data-stu-id="b2d89-114">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](developing-custom-windows-forms-controls.md)
-- [<span data-ttu-id="b2d89-115">Windows Forms 컨트롤 개발 기본 사항</span><span class="sxs-lookup"><span data-stu-id="b2d89-115">Windows Forms Control Development Basics</span></span>](windows-forms-control-development-basics.md)
+- [<span data-ttu-id="eadb9-114">.NET Framework에서 사용자 지정 Windows Forms 컨트롤 개발</span><span class="sxs-lookup"><span data-stu-id="eadb9-114">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](developing-custom-windows-forms-controls.md)
+- [<span data-ttu-id="eadb9-115">Windows Forms 컨트롤 개발 기본 사항</span><span class="sxs-lookup"><span data-stu-id="eadb9-115">Windows Forms Control Development Basics</span></span>](windows-forms-control-development-basics.md)

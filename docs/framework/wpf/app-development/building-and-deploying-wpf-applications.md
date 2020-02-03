@@ -15,26 +15,26 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76742107"
 ---
-# <a name="building-and-deploying-wpf-applications"></a><span data-ttu-id="1d62d-102">WPF 애플리케이션 빌드 및 배포</span><span class="sxs-lookup"><span data-stu-id="1d62d-102">Building and Deploying WPF Applications</span></span>
-<span data-ttu-id="1d62d-103">빌드 및 배포 모델은 다음을 비롯 하 여 응용 프로그램을 로컬 및 원격으로 빌드 및 배포 하는 기능을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="1d62d-103">The build and deployment model provides the capability to build and deploy applications locally and remotely, including the following:</span></span>  
+# <a name="building-and-deploying-wpf-applications"></a><span data-ttu-id="2a393-102">WPF 애플리케이션 빌드 및 배포</span><span class="sxs-lookup"><span data-stu-id="2a393-102">Building and Deploying WPF Applications</span></span>
+<span data-ttu-id="2a393-103">빌드 및 배포 모델은 다음을 비롯 하 여 응용 프로그램을 로컬 및 원격으로 빌드 및 배포 하는 기능을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="2a393-103">The build and deployment model provides the capability to build and deploy applications locally and remotely, including the following:</span></span>  
   
-- <span data-ttu-id="1d62d-104">MSBuild: Microsoft. Build. Windows 네임 스페이스에 있는 .NET 빌드 시스템입니다.</span><span class="sxs-lookup"><span data-stu-id="1d62d-104">MSBuild: the .NET build system located in the Microsoft.Build.Tasks.Windows namespace.</span></span>  
+- <span data-ttu-id="2a393-104">MSBuild: Microsoft. Build. Windows 네임 스페이스에 있는 .NET 빌드 시스템입니다.</span><span class="sxs-lookup"><span data-stu-id="2a393-104">MSBuild: the .NET build system located in the Microsoft.Build.Tasks.Windows namespace.</span></span>  
   
-- <span data-ttu-id="1d62d-105">리소스: UI 리소스 작업</span><span class="sxs-lookup"><span data-stu-id="1d62d-105">Resources: working with UI resources.</span></span>  
+- <span data-ttu-id="2a393-105">리소스: UI 리소스 작업</span><span class="sxs-lookup"><span data-stu-id="2a393-105">Resources: working with UI resources.</span></span>  
   
-- <span data-ttu-id="1d62d-106">ClickOnce 배포: .NET 게시 및 배포 시스템입니다.</span><span class="sxs-lookup"><span data-stu-id="1d62d-106">ClickOnce Deployment: the .NET publishing and deployment system.</span></span>  
+- <span data-ttu-id="2a393-106">ClickOnce 배포: .NET 게시 및 배포 시스템입니다.</span><span class="sxs-lookup"><span data-stu-id="2a393-106">ClickOnce Deployment: the .NET publishing and deployment system.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="1d62d-107">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="1d62d-107">In This Section</span></span>  
- [<span data-ttu-id="1d62d-108">WPF 애플리케이션 빌드</span><span class="sxs-lookup"><span data-stu-id="1d62d-108">Building a WPF Application</span></span>](building-a-wpf-application-wpf.md)  
- [<span data-ttu-id="1d62d-109">WPF 애플리케이션 배포</span><span class="sxs-lookup"><span data-stu-id="1d62d-109">Deploying a WPF Application</span></span>](deploying-a-wpf-application-wpf.md)  
- [<span data-ttu-id="1d62d-110">방법 항목</span><span class="sxs-lookup"><span data-stu-id="1d62d-110">How-to Topics</span></span>](build-and-deploy-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="2a393-107">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="2a393-107">In This Section</span></span>  
+ [<span data-ttu-id="2a393-108">WPF 애플리케이션 빌드</span><span class="sxs-lookup"><span data-stu-id="2a393-108">Building a WPF Application</span></span>](building-a-wpf-application-wpf.md)  
+ [<span data-ttu-id="2a393-109">WPF 애플리케이션 배포</span><span class="sxs-lookup"><span data-stu-id="2a393-109">Deploying a WPF Application</span></span>](deploying-a-wpf-application-wpf.md)  
+ [<span data-ttu-id="2a393-110">방법 항목</span><span class="sxs-lookup"><span data-stu-id="2a393-110">How-to Topics</span></span>](build-and-deploy-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="1d62d-111">참조</span><span class="sxs-lookup"><span data-stu-id="1d62d-111">Reference</span></span>  
- <span data-ttu-id="1d62d-112">MSBuild</span><span class="sxs-lookup"><span data-stu-id="1d62d-112">MSBuild</span></span>  
+## <a name="reference"></a><span data-ttu-id="2a393-111">참조</span><span class="sxs-lookup"><span data-stu-id="2a393-111">Reference</span></span>  
+ <span data-ttu-id="2a393-112">MSBuild</span><span class="sxs-lookup"><span data-stu-id="2a393-112">MSBuild</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="1d62d-113">관련 섹션</span><span class="sxs-lookup"><span data-stu-id="1d62d-113">Related Sections</span></span>  
- [<span data-ttu-id="1d62d-114">애플리케이션 관리 개요</span><span class="sxs-lookup"><span data-stu-id="1d62d-114">Application Management Overview</span></span>](application-management-overview.md)  
-  [<span data-ttu-id="1d62d-115">WPF의 창</span><span class="sxs-lookup"><span data-stu-id="1d62d-115">Windows in WPF</span></span>](windows-in-wpf-applications.md)  
-  [<span data-ttu-id="1d62d-116">탐색 개요</span><span class="sxs-lookup"><span data-stu-id="1d62d-116">Navigation Overview</span></span>](navigation-overview.md)  
-  [<span data-ttu-id="1d62d-117">WPF XAML 브라우저 애플리케이션 개요</span><span class="sxs-lookup"><span data-stu-id="1d62d-117">WPF XAML Browser Applications Overview</span></span>](wpf-xaml-browser-applications-overview.md)  
-  [<span data-ttu-id="1d62d-118">호스팅</span><span class="sxs-lookup"><span data-stu-id="1d62d-118">Hosting</span></span>](hosting-wpf-applications.md)
+## <a name="related-sections"></a><span data-ttu-id="2a393-113">관련 섹션</span><span class="sxs-lookup"><span data-stu-id="2a393-113">Related Sections</span></span>  
+ [<span data-ttu-id="2a393-114">애플리케이션 관리 개요</span><span class="sxs-lookup"><span data-stu-id="2a393-114">Application Management Overview</span></span>](application-management-overview.md)  
+  [<span data-ttu-id="2a393-115">WPF의 창</span><span class="sxs-lookup"><span data-stu-id="2a393-115">Windows in WPF</span></span>](windows-in-wpf-applications.md)  
+  [<span data-ttu-id="2a393-116">탐색 개요</span><span class="sxs-lookup"><span data-stu-id="2a393-116">Navigation Overview</span></span>](navigation-overview.md)  
+  [<span data-ttu-id="2a393-117">WPF XAML 브라우저 애플리케이션 개요</span><span class="sxs-lookup"><span data-stu-id="2a393-117">WPF XAML Browser Applications Overview</span></span>](wpf-xaml-browser-applications-overview.md)  
+  [<span data-ttu-id="2a393-118">호스팅</span><span class="sxs-lookup"><span data-stu-id="2a393-118">Hosting</span></span>](hosting-wpf-applications.md)
