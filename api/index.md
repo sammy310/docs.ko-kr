@@ -2,19 +2,19 @@
 layout: ApiBrowserPage
 hide_bc: true
 title: .NET API 브라우저
-quickFilterColumn1: netframework-4.8,netcore-3.1,netstandard-2.1
-quickFilterColumn2: xamarinios-10.8,xamarinandroid-7.1,xamarinmac-3.0
-quickFilterColumn3: azure-dotnet,aspnetcore-3.1,ml-dotnet
+quickFilterColumn1: netcore-3.1,netframework-4.8,netstandard-2.1,aspnetcore-3.1
+quickFilterColumn2: xamarinios-10.8,xamarinandroid-7.1,xamarinmac-3.0,efcore-3.1
+quickFilterColumn3: azure-dotnet,roslyn-dotnet,ml-dotnet,spark-dotnet
 ms.topic: landing-page
 ms.custom: updateeachrelease
-ms.date: 12/12/2019
-ms.openlocfilehash: d2729597dfdca51ab32e8877ea510b81dadd909e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.date: 01/24/2020
+ms.openlocfilehash: 1cb4be7cf771f19be450c863a68d55403e9557b0
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337180"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777008"
 ---
-# <a name="net-api-browser"></a><span data-ttu-id="8a692-102">.NET API 브라우저</span><span class="sxs-lookup"><span data-stu-id="8a692-102">.NET API Browser</span></span>
+# <a name="net-api-browser"></a><span data-ttu-id="8b1a2-102">.NET API 브라우저</span><span class="sxs-lookup"><span data-stu-id="8b1a2-102">.NET API browser</span></span>
 
-<span data-ttu-id="8a692-103">.NET API 브라우저에 오신 것을 환영합니다. 여기는 Microsoft에서 제공하는 모든 .NET 기반 API를 위한 원스톱 쇼핑몰입니다.</span><span class="sxs-lookup"><span data-stu-id="8a692-103">Welcome to the .NET API Browser – your one-stop shop for all .NET-based APIs from Microsoft.</span></span> <span data-ttu-id="8a692-104">아래 상자에 입력하면 관리되는 모든 API를 검색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8a692-104">Start searching for any managed APIs by typing in the box below.</span></span> <span data-ttu-id="8a692-105">[블로그 게시물](https://aka.ms/apibrowser)에서 API 브라우저에 대해 알아보세요.</span><span class="sxs-lookup"><span data-stu-id="8a692-105">You can learn more about the API Browser [in our blog post](https://aka.ms/apibrowser).</span></span> <span data-ttu-id="8a692-106">피드백이 있는 경우 [GitHub의 MicrosoftDocs/피드백 리포지토리](https://github.com/MicrosoftDocs/feedback/issues)에 새로운 문제를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="8a692-106">If you have any feedback, create a new issue in the [MicrosoftDocs/feedback repo on GitHub](https://github.com/MicrosoftDocs/feedback/issues).</span></span>
+<span data-ttu-id="8b1a2-103">.NET API 브라우저에 오신 것을 환영합니다. 여기는 Microsoft에서 제공하는 모든 .NET 기반 API를 위한 원스톱 쇼핑몰입니다.</span><span class="sxs-lookup"><span data-stu-id="8b1a2-103">Welcome to the .NET API browser – your one-stop shop for all .NET-based APIs from Microsoft.</span></span> <span data-ttu-id="8b1a2-104">아래 상자에 입력하면 관리되는 모든 API를 검색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8b1a2-104">Start searching for any managed APIs by typing in the box below.</span></span> <span data-ttu-id="8b1a2-105">[블로그 게시물](https://aka.ms/apibrowser)에서 API 브라우저에 대해 알아보세요.</span><span class="sxs-lookup"><span data-stu-id="8b1a2-105">You can learn more about the API browser [in our blog post](https://aka.ms/apibrowser).</span></span> <span data-ttu-id="8b1a2-106">피드백이 있는 경우 [GitHub의 MicrosoftDocs/피드백 리포지토리](https://github.com/MicrosoftDocs/feedback/issues)에 새로운 문제를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="8b1a2-106">If you have any feedback, create a new issue in the [MicrosoftDocs/feedback repository on GitHub](https://github.com/MicrosoftDocs/feedback/issues).</span></span>

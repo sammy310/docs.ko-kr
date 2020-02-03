@@ -1349,7 +1349,7 @@
                 - name: 기본 제공 참조 형식
                   displayName: 'object, delegate, dynamic, string'
                   href: language-reference/builtin-types/reference-types.md
-                - name: 클래스
+                - name: class
                   href: language-reference/keywords/class.md
                 - name: interface(인터페이스)
                   href: language-reference/keywords/interface.md
