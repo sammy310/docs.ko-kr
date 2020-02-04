@@ -2,12 +2,12 @@
 title: Byref
 description: 하위 수준 프로그래밍에 사용 되는의 F#byref 및 byref와 유사한 형식에 대해 알아봅니다.
 ms.date: 11/04/2019
-ms.openlocfilehash: 5aaee1e4eac9ce0d7e9ba89a2ab5f745d31367a0
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 05a40059ad5b72829233b0c4135c76eb1cff4da5
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901305"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965817"
 ---
 # <a name="byrefs"></a>Byref
 
@@ -166,7 +166,7 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 `IsByRefLike`은 `Struct`을 의미 하지 않습니다. 둘 다 형식에 있어야 합니다.
 
-의 F# "`byref`유사" 구조체는 스택 바인딩된 값 형식입니다. 이는 관리 되는 힙에 할당 되지 않습니다. `byref`같은 구조체는 수명 및 비 캡처에 대 한 강력한 검사 집합으로 적용 되므로 고성능 프로그래밍에 유용 합니다. 여기에 적용되는 규칙은 다음과 같습니다.
+의 F# "`byref`유사" 구조체는 스택 바인딩된 값 형식입니다. 이는 관리 되는 힙에 할당 되지 않습니다. `byref`같은 구조체는 수명 및 비 캡처에 대 한 강력한 검사 집합으로 적용 되므로 고성능 프로그래밍에 유용 합니다. 규칙은 다음과 같습니다.
 
 * 함수 매개 변수, 메서드 매개 변수, 지역 변수, 메서드 반환으로 사용할 수 있습니다.
 * 클래스 또는 일반 구조체의 정적 또는 인스턴스 멤버일 수 없습니다.
@@ -182,14 +182,20 @@ type S(count1: Span<int>, count2: Span<int>) =
 Byref는 함수 F# 또는 멤버를 생성 하 고 사용할 수 있습니다. `byref`반환 메서드를 사용 하는 경우이 값은 암시적으로 역참조 됩니다. 예를 들면 다음과 같습니다.:
 
 ```fsharp
-let safeSum(bytes: Span<byte>) =
-    let mutable sum = 0
+let squareAndPrint (data : byref<int>) = 
+    let squared = data*data    // data is implicitly dereferenced
+    printfn "%d" squared
+```
+
+Byref 값을 반환 하려면 값을 포함 하는 변수가 현재 범위 보다 오래 지속 되어야 합니다.
+또한 byref를 반환 하려면 & 값을 사용 합니다. 여기서 value는 현재 범위 보다 오래 지속 되는 변수입니다.
+
+```fsharp
+let mutable sum = 0
+let safeSum (bytes: Span<byte>) =
     for i in 0 .. bytes.Length - 1 do
         sum <- sum + int bytes.[i]
-    sum
-
-let sum = safeSum(mySpanOfBytes)
-printfn "%d" sum // 'sum' is of type 'int'
+    &sum  // sum lives longer than the scope of this function.
 ```
 
 여러 개의 연결 된 호출을 통해 참조를 전달 하는 것과 같이 암시적 역참조를 방지 하려면 `&x`을 사용 합니다. 여기서 `x`는 값입니다.

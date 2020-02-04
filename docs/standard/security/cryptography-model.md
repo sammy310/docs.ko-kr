@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], model
 - encryption [.NET Framework], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: f0c00e4cc866c537fe26dd1ad466d6cde95bc608
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 964c63e01a6b09e63e305e9a10dca46e62c18648
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706229"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965960"
 ---
 # <a name="net-framework-cryptography-model"></a>.NET Framework 암호화 모델
 
@@ -33,15 +33,11 @@ ms.locfileid: "75706229"
 
 알고리즘에 사용할 수 있는 다양한 구현의 예로 대칭 알고리즘을 고려해 보세요. 모든 대칭 알고리즘의 기본은 <xref:System.Security.Cryptography.SymmetricAlgorithm>으로, 다음 알고리즘에 상속됩니다.
 
-1. <xref:System.Security.Cryptography.Aes>
-
-2. <xref:System.Security.Cryptography.DES>
-
-3. <xref:System.Security.Cryptography.RC2>
-
-4. <xref:System.Security.Cryptography.Rijndael>
-
-5. <xref:System.Security.Cryptography.TripleDES>
+* <xref:System.Security.Cryptography.Aes>
+* <xref:System.Security.Cryptography.DES>
+* <xref:System.Security.Cryptography.RC2>
+* <xref:System.Security.Cryptography.Rijndael>
+* <xref:System.Security.Cryptography.TripleDES>
 
 <xref:System.Security.Cryptography.Aes>는 두 클래스 <xref:System.Security.Cryptography.AesCryptoServiceProvider> 및 <xref:System.Security.Cryptography.AesManaged>에 상속됩니다. <xref:System.Security.Cryptography.AesCryptoServiceProvider> 클래스는 Aes의 Windows CAPI(암호화 API) 구현에 대한 래퍼인 반면, <xref:System.Security.Cryptography.AesManaged> 클래스는 완전히 관리 코드로 작성됩니다. 관리되는 구현 및 CAPI 구현 외에도 세 번째 유형의 구현인 CNG(Cryptography Next Generation)가 있습니다. CNG 알고리즘의 한 예는 <xref:System.Security.Cryptography.ECDiffieHellmanCng>입니다. CNG 알고리즘은 Windows Vista 이상에서 사용할 수 있습니다.
 
@@ -62,35 +58,22 @@ ms.locfileid: "75706229"
 애플리케이션에서 권장하는 알고리즘 목록은 다음과 같습니다.
 
 - 데이터 프라이버시:
-
   - <xref:System.Security.Cryptography.Aes>
-
 - 데이터 무결성:
-
   - <xref:System.Security.Cryptography.HMACSHA256>
-
   - <xref:System.Security.Cryptography.HMACSHA512>
-
 - 디지털 서명:
-
   - <xref:System.Security.Cryptography.ECDsa>
-
   - <xref:System.Security.Cryptography.RSA>
-
 - 키 교환:
-
   - <xref:System.Security.Cryptography.ECDiffieHellman>
-
   - <xref:System.Security.Cryptography.RSA>
-
 - 난수 생성:
-
   - <xref:System.Security.Cryptography.RNGCryptoServiceProvider>
-
 - 암호에서 키 생성:
-
   - <xref:System.Security.Cryptography.Rfc2898DeriveBytes>
 
 ## <a name="see-also"></a>참조
 
 - [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [C에서 Bruce Schneier 암호화 프로토콜, 알고리즘 및 소스 코드를 적용 합니다.](https://www.schneier.com/books/applied_cryptography/)
