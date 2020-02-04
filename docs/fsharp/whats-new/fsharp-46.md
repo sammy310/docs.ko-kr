@@ -2,24 +2,24 @@
 title: 4\.6의 F# 새로운 기능- F# 가이드
 description: 4\.6에서 F# 사용할 수 있는 새 기능에 대 한 개요를 확인 하세요.
 ms.date: 11/27/2019
-ms.openlocfilehash: 81d3e988d044cb16f8ec079118fd0ede2dabc587
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 620c1edd8ea212fee306a02d5844b6b322808251
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74644135"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980394"
 ---
-# <a name="whats-new-in-f-46"></a><span data-ttu-id="ef4ad-103">4\.6의 F# 새로운 기능</span><span class="sxs-lookup"><span data-stu-id="ef4ad-103">What's new in F# 4.6</span></span>
+# <a name="whats-new-in-f-46"></a><span data-ttu-id="1587f-103">4\.6의 F# 새로운 기능</span><span class="sxs-lookup"><span data-stu-id="1587f-103">What's new in F# 4.6</span></span>
 
-<span data-ttu-id="ef4ad-104">F#4.6는 언어에 대 한 F# 여러 가지 향상 된 기능을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="ef4ad-104">F# 4.6 adds multiple improvements to the F# language.</span></span>
+<span data-ttu-id="1587f-104">F#4.6는 언어에 대 한 F# 여러 가지 향상 된 기능을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="1587f-104">F# 4.6 adds multiple improvements to the F# language.</span></span>
 
-## <a name="get-started"></a><span data-ttu-id="ef4ad-105">시작</span><span class="sxs-lookup"><span data-stu-id="ef4ad-105">Get started</span></span>
+## <a name="get-started"></a><span data-ttu-id="1587f-105">시작</span><span class="sxs-lookup"><span data-stu-id="1587f-105">Get started</span></span>
 
-<span data-ttu-id="ef4ad-106">F#4.6는 모든 .NET Core 배포 및 Visual Studio 도구에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ef4ad-106">F# 4.6 is available in all .NET Core distributions and Visual Studio tooling.</span></span> <span data-ttu-id="ef4ad-107">를 [시작 F# ](../get-started/index.md) 하 여 자세히 알아보세요.</span><span class="sxs-lookup"><span data-stu-id="ef4ad-107">[Get started with F#](../get-started/index.md) to learn more.</span></span>
+<span data-ttu-id="1587f-106">F#4.6는 모든 .NET Core 배포 및 Visual Studio 도구에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1587f-106">F# 4.6 is available in all .NET Core distributions and Visual Studio tooling.</span></span> <span data-ttu-id="1587f-107">를 [시작 F# ](../get-started/index.md) 하 여 자세히 알아보세요.</span><span class="sxs-lookup"><span data-stu-id="1587f-107">[Get started with F#](../get-started/index.md) to learn more.</span></span>
 
-## <a name="anonymous-records"></a><span data-ttu-id="ef4ad-108">익명 레코드</span><span class="sxs-lookup"><span data-stu-id="ef4ad-108">Anonymous records</span></span>
+## <a name="anonymous-records"></a><span data-ttu-id="1587f-108">익명 레코드</span><span class="sxs-lookup"><span data-stu-id="1587f-108">Anonymous records</span></span>
 
-<span data-ttu-id="ef4ad-109">[익명 레코드](../language-reference/anonymous-records.md) 는 4.6에 F# 도입 된 F# 새로운 종류의 유형입니다.</span><span class="sxs-lookup"><span data-stu-id="ef4ad-109">[Anonymous records](../language-reference/anonymous-records.md) are a new kind of F# type introduced in F# 4.6.</span></span> <span data-ttu-id="ef4ad-110">사용 하기 전에 선언 하지 않아도 되는 명명 된 값의 단순 집계입니다.</span><span class="sxs-lookup"><span data-stu-id="ef4ad-110">They are simple aggregates of named values that don't need to be declared before use.</span></span> <span data-ttu-id="ef4ad-111">구조체 또는 참조 형식 중 하나로 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ef4ad-111">You can declare them as either structs or reference types.</span></span> <span data-ttu-id="ef4ad-112">기본적으로 참조 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="ef4ad-112">They're reference types by default.</span></span>
+<span data-ttu-id="1587f-109">[익명 레코드](../language-reference/anonymous-records.md) 는 4.6에 F# 도입 된 F# 새로운 종류의 유형입니다.</span><span class="sxs-lookup"><span data-stu-id="1587f-109">[Anonymous records](../language-reference/anonymous-records.md) are a new kind of F# type introduced in F# 4.6.</span></span> <span data-ttu-id="1587f-110">사용 하기 전에 선언 하지 않아도 되는 명명 된 값의 단순 집계입니다.</span><span class="sxs-lookup"><span data-stu-id="1587f-110">They are simple aggregates of named values that don't need to be declared before use.</span></span> <span data-ttu-id="1587f-111">구조체 또는 참조 형식 중 하나로 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1587f-111">You can declare them as either structs or reference types.</span></span> <span data-ttu-id="1587f-112">기본적으로 참조 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="1587f-112">They're reference types by default.</span></span>
 
 ```fsharp
 open System
@@ -37,7 +37,7 @@ printfn "Circle with radius: %f has diameter %f, area %f, and circumference %f"
     r stats.Diameter stats.Area stats.Circumference
 ```
 
-<span data-ttu-id="ef4ad-113">값 형식을 그룹화 하 고 성능이 중요 한 시나리오에서 작동 하는 경우에 대 한 구조체로 선언할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ef4ad-113">They can also be declared as structs for when you want to group value types and are operating in performance-sensitive scenarios:</span></span>
+<span data-ttu-id="1587f-113">값 형식을 그룹화 하 고 성능이 중요 한 시나리오에서 작동 하는 경우에 대 한 구조체로 선언할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1587f-113">They can also be declared as structs for when you want to group value types and are operating in performance-sensitive scenarios:</span></span>
 
 ```fsharp
 open System
@@ -55,11 +55,11 @@ printfn "Circle with radius: %f has diameter %f, area %f, and circumference %f"
     r stats.Diameter stats.Area stats.Circumference
 ```
 
-<span data-ttu-id="ef4ad-114">매우 강력 하 고 다양 한 시나리오에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ef4ad-114">They're quite powerful and can be used in numerous scenarios.</span></span> <span data-ttu-id="ef4ad-115">[익명 레코드](../language-reference/anonymous-records.md)에서 자세히 알아보세요.</span><span class="sxs-lookup"><span data-stu-id="ef4ad-115">Learn more at [Anonymous records](../language-reference/anonymous-records.md).</span></span>
+<span data-ttu-id="1587f-114">매우 강력 하 고 다양 한 시나리오에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1587f-114">They're quite powerful and can be used in numerous scenarios.</span></span> <span data-ttu-id="1587f-115">[익명 레코드](../language-reference/anonymous-records.md)에서 자세히 알아보세요.</span><span class="sxs-lookup"><span data-stu-id="1587f-115">Learn more at [Anonymous records](../language-reference/anonymous-records.md).</span></span>
 
-## <a name="valueoption-functions"></a><span data-ttu-id="ef4ad-116">ValueOption 함수</span><span class="sxs-lookup"><span data-stu-id="ef4ad-116">ValueOption functions</span></span>
+## <a name="valueoption-functions"></a><span data-ttu-id="1587f-116">ValueOption 함수</span><span class="sxs-lookup"><span data-stu-id="1587f-116">ValueOption functions</span></span>
 
-<span data-ttu-id="ef4ad-117">4\.5에 F# 추가 된 valueoption 형식에는 이제 옵션 유형을 사용 하는 "모듈 바인딩된 함수 패리티"가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ef4ad-117">The ValueOption type added in F# 4.5 now has "module-bound function parity" with the Option type.</span></span> <span data-ttu-id="ef4ad-118">가장 일반적으로 사용 되는 예제는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="ef4ad-118">Some of the more commonly-used examples are as follows:</span></span>
+<span data-ttu-id="1587f-117">4\.5에 F# 추가 된 valueoption 형식에는 이제 옵션 유형을 사용 하는 "모듈 바인딩된 함수 패리티"가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1587f-117">The ValueOption type added in F# 4.5 now has "module-bound function parity" with the Option type.</span></span> <span data-ttu-id="1587f-118">가장 일반적으로 사용 되는 예제는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="1587f-118">Some of the more commonly-used examples are as follows:</span></span>
 
 ```fsharp
 // Multiply a value option by 2 if it has  value
@@ -71,14 +71,14 @@ let strOpt = ValueSome "Mirror image"
 let reverse (str: string) =
     match str with
     | null
-    | "" -> None
+    | "" -> ValueNone
     | s ->
         str.ToCharArray()
         |> Array.rev
         |> string
-        |> Some
+        |> ValueSome
 
-let reversedString = strOpt |> Option.bind reverse
+let reversedString = strOpt |> ValueOption.bind reverse
 ```
 
-<span data-ttu-id="ef4ad-119">이렇게 하면 값 형식이 성능을 향상 시키는 시나리오에서 옵션과 마찬가지로 ValueOption을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ef4ad-119">This allows for ValueOption to be used just like Option in scenarios where having a value type improves performance.</span></span>
+<span data-ttu-id="1587f-119">이렇게 하면 값 형식이 성능을 향상 시키는 시나리오에서 옵션과 마찬가지로 ValueOption을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1587f-119">This allows for ValueOption to be used just like Option in scenarios where having a value type improves performance.</span></span>
