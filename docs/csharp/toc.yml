@@ -1450,7 +1450,7 @@
                   href: language-reference/keywords/continue.md
                 - name: goto
                   href: language-reference/keywords/goto.md
-                - name: 반환값(return)
+                - name: return
                   href: language-reference/keywords/return.md
             - name: 예외 처리 문
               items:
@@ -1489,7 +1489,7 @@
               href: language-reference/keywords/out-parameter-modifier.md
         - name: 네임스페이스 키워드
           items:
-            - name: 네임스페이스(namespace)
+            - name: namespace
               href: language-reference/keywords/namespace.md
             - name: using
               items:
@@ -1511,7 +1511,7 @@
           items:
             - name: new 제약 조건
               href: language-reference/keywords/new-constraint.md
-            - name: 형식에 대한 설명
+            - name: where
               href: language-reference/keywords/where-generic-type-constraint.md
         - name: 액세스 키워드
           items:
@@ -1536,7 +1536,7 @@
               href: language-reference/keywords/add.md
             - name: Get
               href: language-reference/keywords/get.md
-            - name: 부분(형식)
+            - name: partial(형식)
               href: language-reference/keywords/partial-type.md
             - name: partial(메서드)
               href: language-reference/keywords/partial-method.md
@@ -1546,7 +1546,7 @@
               href: language-reference/keywords/set.md
             - name: when(필터 조건)
               href: language-reference/keywords/when.md
-            - name: 값
+            - name: value
               href: language-reference/keywords/value.md
             - name: yield
               href: language-reference/keywords/yield.md
@@ -1581,7 +1581,7 @@
               href: language-reference/keywords/equals.md
             - name: by
               href: language-reference/keywords/by.md
-            - name: 의
+            - name: in
               href: language-reference/keywords/in.md
     - name: 'C# 연산자'
       items:
@@ -1642,10 +1642,10 @@
         - name: await 연산자
           href: language-reference/operators/await.md
           displayName: async
-        - name: 기본 연산자
+        - name: default 연산자
           href: language-reference/operators/default.md
           displayName: 'default value, default literal, type default'
-        - name: 대리자 연산자
+        - name: delegate 연산자
           href: language-reference/operators/delegate-operator.md
           displayName: anonymous
         - name: nameof 연산자

@@ -19,7 +19,7 @@ ms.locfileid: "76742755"
 
 - 메서드 및 매개 변수에 대해 호출 하려는 네이티브 메서드로 동일한 이름 및 대/소문자를 사용 ✔️ 합니다.
 - 상수 값에 대해 동일한 이름 지정 및 대문자 표시를 사용 하는 것이 좋습니다 ✔️.
-- ✔️ 네이티브 형식과 가장 가깝게 매핑되는 .NET 형식을 사용 합니다. 예를 들어 C#에서 네이티브 형식이 `unsigned int`인 경우 `uint`를 사용합니다.
+- ✔️ 네이티브 형식과 가장 가깝게 매핑되는 .NET 형식을 사용 합니다. 예를 들어 C#에서 네이티브 형식이 `uint`인 경우 `unsigned int`를 사용합니다.
 - 원하는 동작이 기본 동작과 다를 경우에만 ✔️ `[In]` 및 `[Out]` 특성을 사용 합니다.
 - ✔️ <xref:System.Buffers.ArrayPool%601?displayProperty=nameWithType>를 사용 하 여 네이티브 배열 버퍼를 풀 하는 것이 좋습니다.
 - 네이티브 라이브러리와 이름 및 대/소문자가 동일한 클래스에서 P/Invoke 선언을 래핑하는 것이 좋습니다. ✔️
@@ -27,11 +27,11 @@ ms.locfileid: "76742755"
 
 ## <a name="dllimport-attribute-settings"></a>DllImport 특성 설정
 
-| 설정 | 기본 | 권장 구성 | 자세히 |
+| 설정 | 기본값 | 권장 | 세부 정보 |
 |---------|---------|----------------|---------|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  기본값 유지  | 이 옵션을 명시적으로 false로 설정하면 실패한 HRESULT 반환 값이 예외로 바뀝니다(그 결과로 정의의 반환 값은 Null이 됨).|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | API에 따라 다름  | API에서 GetLastError를 사용하는 경우 이 옵션을 true로 설정하고, Marshal.GetLastWin32Error를 사용하여 값을 가져옵니다. API에서 오류가 있음을 나타내는 조건을 설정하는 경우 실수로 덮어쓰지 않도록 다른 호출을 수행하기 전에 오류를 가져옵니다.|
-| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None`(`CharSet.Ansi` 동작으로 대체됨)  | 정의에 문자열 또는 문자가 있는 경우 명시적으로 `CharSet.Unicode` 또는 `CharSet.Ansi` 사용 | 문자열의 마샬링 동작과 `false`인 경우 `ExactSpelling`에서 수행하는 작업을 지정합니다. `CharSet.Ansi`는 Unix에서 실제로 UTF8입니다. _대부분_의 경우 Windows에서는 유니코드, Unix에서는 UTF8이 사용됩니다. 자세한 내용은 [문자 집합 문서](./charset.md)를 참조하세요. |
+| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None`(`CharSet.Ansi` 동작으로 대체됨)  | 정의에 문자열 또는 문자가 있는 경우 명시적으로 `CharSet.Unicode` 또는 `CharSet.Ansi` 사용 | 문자열의 마샬링 동작과 `ExactSpelling`인 경우 `false`에서 수행하는 작업을 지정합니다. `CharSet.Ansi`는 Unix에서 실제로 UTF8입니다. _대부분_의 경우 Windows에서는 유니코드, Unix에서는 UTF8이 사용됩니다. 자세한 내용은 [문자 집합 문서](./charset.md)를 참조하세요. |
 | <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> | `false` | `true`             | 이 옵션을 true로 설정하면 `CharSet` 설정 값(`CharSet.Ansi`는 “A”, `CharSet.Unicode`는 “W”)에 따라 “A” 또는 “W” 접미사가 있는 대체 함수 이름을 런타임이 찾지 않으므로 성능이 약간 향상됩니다. |
 
 ## <a name="string-parameters"></a>문자열 매개 변수
@@ -49,13 +49,13 @@ CharSet이 유니코드 이거나 인수가 `[MarshalAs(UnmanagedType.LPWSTR)]`�
    1. 네이티브 버퍼 할당 **{2}**
    2. `[In]` 경우 _(`StringBuilder` 매개 변수의 기본값)_ 콘텐츠를 복사 합니다.
    3. **{3}** `[Out]` 경우에는 네이티브 버퍼를 새로 할당 된 관리 되는 배열에 복사 합니다 _(`StringBuilder`에 대 한 기본값 이기도)_ .
-3. `ToString()`이 다른 관리형 배열 **{4}** 할당
+3. `ToString()`이 다른 관리형 배열 **** ** 할당
 
 네이티브 코드에서 문자열을 가져오는 *{4}* 할당입니다. 이를 제한하는 가장 좋은 방법은 다른 호출에서 `StringBuilder`를 재사용하는 것이지만, 여전히 *1*개 할당만 저장됩니다. `ArrayPool`의 문자 버퍼를 사용하고 캐시하는 것이 훨씬 더 좋습니다. 그러면 후속 호출에서는 `ToString()`의 할당에만 바로 액세스할 수 있습니다.
 
 `StringBuilder`의 다른 문제는 항상 반환 버퍼 백업을 첫 번째 Null에 복사하는 것입니다. 다시 전달된 문자열이 종료되지 않았거나 이중 Null 종료 문자열인 경우 P/Invoke가 올바르지 않습니다.
 
-`StringBuilder`를 사용하는 경우 유의할 마지막 문제는 interop에 대해 항상 고려되는 숨겨진 Null이 용량에 포함되지 **않는**다는 것입니다. 대부분의 API가 Null을 ‘포함’하는 버퍼 크기를 원하기 때문에 이 동작이 잘못 파악되는 경우가 많습니다. 이로 인해 불필요한 할당이 발생할 수 있습니다. 또한 이 문제로 인해 런타임이 복사본 최소화를 위해 `StringBuilder` 마샬링을 최적화할 수 없게 됩니다.
+*를 사용하는 경우 유의할 마지막 문제는 interop에 대해 항상 고려되는 숨겨진 Null이 용량에 포함되지* 않는`StringBuilder`다는 것입니다. 대부분의 API가 Null을 ‘포함’하는 버퍼 크기를 원하기 때문에 이 동작이 잘못 파악되는 경우가 많습니다. 이로 인해 불필요한 할당이 발생할 수 있습니다. 또한 이 문제로 인해 런타임이 복사본 최소화를 위해 `StringBuilder` 마샬링을 최적화할 수 없게 됩니다.
 
 ✔️ `ArrayPool`에서 `char[]`를 사용 하는 것이 좋습니다.
 
@@ -72,9 +72,9 @@ CharSet이 유니코드 이거나 인수가 `[MarshalAs(UnmanagedType.LPWSTR)]`�
 
 부울은 문제가 발생하기 쉽습니다. 기본적으로 .NET `bool`은 4바이트 값인 Windows `BOOL`로 마샬링됩니다. 그러나 C 및 C++의 `_Bool` 및 `bool` 형식은 ‘1’바이트입니다. 이로 인해 반환 값의 절반이 버려지고 ‘잠재적’으로 결과가 변경될 수 있기 때문에 버그를 추적하기 어려울 수 있습니다. .NET `bool` 값을 C 또는 C++ `bool` 형식으로 마샬링하는 방법에 대한 자세한 내용은 [부울 필드 마샬링 사용자 지정](customize-struct-marshaling.md#customizing-boolean-field-marshaling) 문서를 참조하세요.
 
-## <a name="guids"></a>GUID
+## <a name="guids"></a>GUIDs
 
-GUID는 시그니처에 직접 사용할 수 있습니다. 많은 Windows API는 `REFIID`와 같은 `GUID&` 형식 별칭을 사용합니다. ref로 전달된 경우 `ref` 또는 `[MarshalAs(UnmanagedType.LPStruct)]` 특성으로 전달할 수 있습니다.
+GUID는 시그니처에 직접 사용할 수 있습니다. 많은 Windows API는 `GUID&`와 같은 `REFIID` 형식 별칭을 사용합니다. ref로 전달된 경우 `ref` 또는 `[MarshalAs(UnmanagedType.LPStruct)]` 특성으로 전달할 수 있습니다.
 
 | GUID | by-ref GUID |
 |------|-------------|
@@ -104,7 +104,7 @@ blittable 형식은 관리 코드와 네이티브 코드에 동일한 비트 수
 
 blittable 형식이 참조로 전달된 경우 중간 버퍼에 복사되는 대신 마샬러에 의해 고정됩니다. 클래스는 본질적으로 참조로 전달되고, 구조체는 `ref` 또는 `out`과 함께 사용할 경우 참조로 전달됩니다.
 
-`char`는 1차원 배열의 blittable이거나, 포함하는 형식의 일부인 경우 `[StructLayout]` 및 `CharSet = CharSet.Unicode`로 명시적으로 표시됩니다 **.**
+`char`는 1차원 배열의 blittable이거나, 포함하는 형식의 일부인 경우 **및**로 명시적으로 표시됩니다`[StructLayout]`.`CharSet = CharSet.Unicode`
 
 ```csharp
 [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
@@ -120,7 +120,7 @@ public struct UnicodeCharStruct
 
 가능 하면 구조체를 blittable으로 설정 ✔️ 합니다.
 
-자세한 내용은  항목을 참조하세요.
+자세한 내용은 다음을 참조하세요.
 
 - [Blittable 형식 및 비 Blittable 형식](../../framework/interop/blittable-and-non-blittable-types.md)
 - [형식 마샬링](type-marshaling.md)
@@ -177,11 +177,11 @@ Windows API에서 일반적으로 사용되는 데이터 형식과 Windows 코�
 | 32    | `LONG`           | `long`               | `int`    |                                      |
 | 32    | `ULONG`          | `unsigned long`      | `uint`   |                                      |
 | 32    | `DWORD`          | `unsigned long`      | `uint`   |                                      |
-| 64개    | `QWORD`          | `long long`          | `long`   |                                      |
-| 64개    | `LARGE_INTEGER`  | `long long`          | `long`   |                                      |
-| 64개    | `LONGLONG`       | `long long`          | `long`   |                                      |
-| 64개    | `ULONGLONG`      | `unsigned long long` | `ulong`  |                                      |
-| 64개    | `ULARGE_INTEGER` | `unsigned long long` | `ulong`  |                                      |
+| 64    | `QWORD`          | `long long`          | `long`   |                                      |
+| 64    | `LARGE_INTEGER`  | `long long`          | `long`   |                                      |
+| 64    | `LONGLONG`       | `long long`          | `long`   |                                      |
+| 64    | `ULONGLONG`      | `unsigned long long` | `ulong`  |                                      |
+| 64    | `ULARGE_INTEGER` | `unsigned long long` | `ulong`  |                                      |
 | 32    | `HRESULT`        | `long`               | `int`    |                                      |
 | 32    | `NTSTATUS`       | `long`               | `int`    |                                      |
 
@@ -197,7 +197,7 @@ Windows API에서 일반적으로 사용되는 데이터 형식과 Windows 코�
 | `LONG_PTR`                          |                                        |
 | `INT_PTR`                           |                                        |
 
-C `void*`인 Windows `PVOID`는 `IntPtr` 또는 `UIntPtr`로 마샬링할 수 있지만, 가능한 경우 `void*`를 사용하는 것이 좋습니다.
+C `PVOID`인 Windows `void*`는 `IntPtr` 또는 `UIntPtr`로 마샬링할 수 있지만, 가능한 경우 `void*`를 사용하는 것이 좋습니다.
 
 [Windows 데이터 형식](/windows/desktop/WinProg/windows-data-types)
 
@@ -209,7 +209,7 @@ C `void*`인 Windows `PVOID`는 `IntPtr` 또는 `UIntPtr`로 마샬링할 수 �
 
 blittable 구조체는 마샬링 계층에서 직접 사용할 수 있으므로 성능이 훨씬 더 뛰어납니다. 구조체를 blittable로 설정합니다(예: `bool` 사용 안 함). 자세한 내용은 [blittable 형식](#blittable-types) 섹션을 참조하세요.
 
-구조체가 blittable인 경우 성능 향상을 위해 `Marshal.SizeOf<MyStruct>()` 대신 `sizeof()`를 사용합니다. 위에서 언급한 대로, 고정 `GCHandle` 만들기를 시도하여 형식이 blittable인지 확인할 수 있습니다. 형식이 문자열이 아니거나 blittable로 간주되지 않는 경우 `GCHandle.Alloc`에서 `ArgumentException`이 throw됩니다.
+구조체가 blittable인 경우 성능 향상을 위해 *대신*를 사용합니다.`sizeof()``Marshal.SizeOf<MyStruct>()` 위에서 언급한 대로, 고정 `GCHandle` 만들기를 시도하여 형식이 blittable인지 확인할 수 있습니다. 형식이 문자열이 아니거나 blittable로 간주되지 않는 경우 `GCHandle.Alloc`에서 `ArgumentException`이 throw됩니다.
 
 정의의 구조체 포인터는 `ref`에 의해 전달되거나 `unsafe` 및 `*`를 사용해야 합니다.
 
