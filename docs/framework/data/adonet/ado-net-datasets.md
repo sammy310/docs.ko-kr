@@ -1,13 +1,13 @@
 ---
-title: ADO.NET 데이터 세트
+title: 데이터 세트
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-ms.openlocfilehash: 85c0df88d7e919649eae8d2b4e551b26cc684dd8
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 86c14f516ff82e4d9acf7cc3078e04590971a8a1
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634939"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980303"
 ---
 # <a name="adonet-datasets"></a>ADO.NET 데이터 세트
 <xref:System.Data.DataSet> 개체는 ADO.NET를 사용 하 여 연결이 끊어진 분산 데이터 시나리오를 지 원하는 데 핵심이 됩니다. 데이터 **집합** 은 데이터 원본에 관계 없이 일관 된 관계형 프로그래밍 모델을 제공 하는 데이터의 메모리 상주 표현입니다. 이 개체는 다양한 여러 데이터 소스에 사용하거나 XML 데이터에 사용할 수 있을 뿐 아니라 이 개체를 사용하여 응용 프로그램의 로컬 데이터를 관리할 수도 있습니다. 데이터 **집합** 은 관련 테이블, 제약 조건 및 테이블 간의 관계를 포함 하 여 전체 데이터 집합을 나타냅니다. 다음 그림에서는 **데이터 집합** 개체 모델을 보여 줍니다.  

@@ -1,13 +1,13 @@
 ---
-title: ADO.NET 애플리케이션 보안
+title: 애플리케이션 보안
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: c99c56afca475caafe32cca3f50d074fb82e0e00
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: c1bdf4329665e4d29a47c26fb7dba8eb41c1cc3a
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73196721"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980030"
 ---
 # <a name="securing-adonet-applications"></a>ADO.NET 애플리케이션 보안
 보안 ADO.NET 애플리케이션을 작성하려면 사용자 입력의 유효성을 확인하지 않는 것과 같은 일반적인 코딩 문제를 피하는 것 외에도 여러 부분을 고려해야 합니다. 데이터에 액세스하는 애플리케이션에는 공격자가 중요한 데이터를 검색, 조작 또는 제거하는 데 악용할 수 있는 여러 잠재적인 오류 지점이 있습니다. 따라서 애플리케이션 디자인 단계의 위협 모델링 과정에서부터 최종 배포와 진행 중인 유지 관리에 이르기까지 보안의 모든 측면을 이해해야 합니다.  
@@ -16,7 +16,7 @@ ms.locfileid: "73196721"
   
  보안 코드를 작성하면 데이터베이스와 같은 관리되지 않는 리소스 작업을 할 때 자초한 보안 허점을 막지 못합니다. SQL Server와 같은 대부분의 서버 데이터베이스는 제대로 구현되는 경우 보안을 강화하는 자체 보안 시스템을 가집니다. 그러나 제대로 구성되지 않은 경우 강력한 보안 시스템으로 구성된 데이터 소스라 할지라도 공격에 취약할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [보안 개요](security-overview.md)  
  보안 ADO.NET 애플리케이션 디자인에 대한 권장 사항을 제공합니다.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "73196721"
  [개인 정보 및 데이터 보안](privacy-and-data-security.md)  
  ADO.NET 애플리케이션의 암호화 옵션에 대해 설명합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
  [SQL Server 보안](./sql/sql-server-security.md)  
  개발자 관점에서 SQL Server 보안 기능에 대해 설명합니다.  
   

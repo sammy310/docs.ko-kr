@@ -2,12 +2,12 @@
 title: 조각
 description: 기존 F# 데이터 형식에 대 한 조각을 사용 하는 방법 및 다른 데이터 형식에 대 한 사용자 고유의 조각을 정의 하는 방법을 알아봅니다.
 ms.date: 12/23/2019
-ms.openlocfilehash: 3f16c71b071bab7de5b1fb90a2075e351e83cfb4
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 928005f2c63ffe099bb64e11ed29bb625e0a54c6
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901237"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980381"
 ---
 # <a name="slices"></a>조각
 
@@ -139,7 +139,7 @@ let sp = [| 1; 2; 3; 4; 5 |].AsSpan()
 printSpan sp.[0..] // [|1; 2; 3; 4; 5|]
 printSpan sp.[..5] // [|1; 2; 3; 4; 5|]
 printSpan sp.[0..3] // [|1; 2; 3|]
-printSpan sp.[1..2] // |2; 3|]
+printSpan sp.[1..3] // |2; 3|]
 ```
 
 ## <a name="built-in-f-slices-are-end-inclusive"></a>기본 제공 F# 조각은 끝이 포함 됩니다.

@@ -1,13 +1,13 @@
 ---
-title: ADO.NET의 연결 문자열
+title: 연결 문자열
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: bf053c7c26435bea5b2368c81c89b73e8949b74a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: cb0b2831a22f3fe51dd7c5bfbe51e72f266a0003
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040144"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980238"
 ---
 # <a name="connection-strings-in-adonet"></a>ADO.NET의 연결 문자열
 
@@ -23,7 +23,7 @@ keyword1=value; keyword2=value;
 
 키워드는 대/소문자를 구분 하지 않습니다. 그러나 값은 데이터 원본에 따라 대/소문자를 구분 하지 않을 수 있습니다. 키워드와 값 모두 [공백 문자](https://en.wikipedia.org/wiki/Whitespace_character#Unicode)를 포함할 수 있습니다. 선행 및 후행 공백은 키워드 및 따옴표 붙지 않은 값에서 무시 됩니다.
 
-값에 세미콜론, [유니코드 제어 문자](https://en.wikipedia.org/wiki/Unicode_control_characters)또는 선행 또는 후행 공백이 포함 된 경우 작은따옴표 또는 큰따옴표로 묶어야 합니다. 예를 들면,
+값에 세미콜론, [유니코드 제어 문자](https://en.wikipedia.org/wiki/Unicode_control_characters)또는 선행 또는 후행 공백이 포함 된 경우 작은따옴표 또는 큰따옴표로 묶어야 합니다. 예를 들면 다음과 같습니다.:
 
 ```csharp
 Keyword=" whitespace  ";
@@ -59,7 +59,7 @@ Keyword=a=b=c
 
 유효성 검사 사용자 입력에서 런타임에 수동으로 생성 된 연결 문자열은 문자열 삽입 공격에 취약 하 고 데이터 원본의 보안을 위협 합니다. 이러한 문제를 해결 하기 위해 *ADO.NET* 2.0에는 각 *.NET Framework* 데이터 공급자에 대 한 [연결 문자열 빌더가](connection-string-builders.md) 도입 되었습니다. 이러한 연결 문자열 작성기는 매개 변수를 강력한 형식의 속성으로 노출 하 고, 연결 문자열을 데이터 원본으로 보내기 전에 유효성을 검사할 수 있도록 합니다.
 
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
 [연결 문자열 작성기](connection-string-builders.md)\
 `ConnectionStringBuilder` 클래스를 사용하여 런타임에 유효한 연결 문자열을 구성하는 방법을 보여 줍니다.

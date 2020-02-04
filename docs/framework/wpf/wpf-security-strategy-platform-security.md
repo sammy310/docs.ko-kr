@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 1ef705fcf046af1f4136ddcf1b29f417c0d72c83
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 4fa01922c5c3097adb124d67272b9f449b70ada3
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741860"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76979874"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF 보안 전략 - 플랫폼 보안
 WPF (Windows Presentation Foundation)는 다양 한 보안 서비스를 제공 하지만 운영 체제, CLR 및 Internet Explorer를 포함 하는 기본 플랫폼의 보안 기능도 활용 합니다. 이러한 계층은 다음 그림과 같이 단일 실패 지점을 방지 하는 강력한 심층 방어 보안 모델을 WPF에 제공 하기 위해 결합 되었습니다.  
@@ -35,14 +35,14 @@ WPF (Windows Presentation Foundation)는 다양 한 보안 서비스를 제공 �
 Windows의 핵심은 WPF로 빌드된 응용 프로그램을 포함 하 여 모든 Windows 응용 프로그램에 대 한 보안 기반을 형성 하는 몇 가지 보안 기능을 제공 합니다. 이 항목에서는 wpf에 중요 한 이러한 보안 기능의 범위 뿐만 아니라 WPF를 사용 하 여 심층 방어를 제공 하는 방법을 설명 합니다.  
   
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP SP2(서비스 팩 2)  
- Windows의 일반적인 검토 및 강화 외에도이 항목에서 설명 하는 [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]의 세 가지 주요 기능이 있습니다.  
+ Windows의 일반적인 검토 및 강화 외에도이 항목에서 설명 하는 Windows XP s p 2의 세 가지 주요 기능이 있습니다.  
   
 - /GS 컴파일  
   
 - Microsoft Windows 업데이트.  
   
 #### <a name="gs-compilation"></a>/GS 컴파일  
- [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]는 CLR과 같은 모든 WPF 종속성을 포함 하 여 많은 핵심 시스템 라이브러리를 다시 컴파일하여 버퍼 오버런을 완화 하는 기능을 제공 합니다. 이 작업을 위해 /GS 매개 변수와 C/C++ 명령줄 컴파일러를 함께 사용합니다. 버퍼 오버런을 명시적으로 피해야 하지만 /GS 컴파일은 실수 또는 악의적으로 만들어진 잠재적인 취약성에 대한 심층 방어의 예를 제공합니다.  
+ Windows XP s p 2에서는 CLR 등의 모든 WPF 종속성을 포함 하 여 많은 핵심 시스템 라이브러리를 다시 컴파일하여 버퍼 오버런을 완화 하는 기능을 제공 합니다. 이 작업을 위해 /GS 매개 변수와 C/C++ 명령줄 컴파일러를 함께 사용합니다. 버퍼 오버런을 명시적으로 피해야 하지만 /GS 컴파일은 실수 또는 악의적으로 만들어진 잠재적인 취약성에 대한 심층 방어의 예를 제공합니다.  
   
  지금까지 버퍼 오버런은 많은 강력한 보안 익스플로이트의 원인이 되었습니다. 버퍼 오버런은 공격자는 버퍼의 경계를 지나서 쓰는 악성 코드의 삽입을 허용하는 코드 취약성을 활용하는 경우에 발생합니다. 이 경우 공격자의 코드가 실행되도록 함수의 반환 주소를 덮어써서 코드가 실행되는 프로세스를 공격자가 가로챌 수 있습니다. 그 결과, 가로챈 프로세스와 동일한 권한으로 임의 코드를 실행하는 악성 코드가 생깁니다.  
   
@@ -103,7 +103,7 @@ Windows Vista의 WPF 사용자는 "최소 권한 사용자 액세스", 코드 �
   
 - **로컬 인트라넷** 인트라넷에서 시작된 애플리케이션입니다. (다소 신뢰).  
   
-- **인터넷**. 인터넷에서 시작된 애플리케이션입니다. (최소 신뢰).  
+- **인터넷** 인터넷에서 시작된 애플리케이션입니다. (최소 신뢰).  
   
 - **신뢰할 수 있는 사이트** 사용자가 신뢰할 수 있는 것으로 식별한 애플리케이션입니다. (최소 신뢰).  
   
@@ -115,7 +115,7 @@ Windows Vista의 WPF 사용자는 "최소 권한 사용자 액세스", 코드 �
   
 - **LocalIntranet** **로컬 인트라넷** 영역에서 시작 된 응용 프로그램의 경우 격리된 스토리지, 무제한 UI 액세스, 무제한 파일 대화 상자, 제한된 리플렉션, 환경 변수에 대한 제한된 액세스를 포함하여 클라이언트 머신의 리소스에 대해 보통 액세스 권한을 제공하도록 권한 하위 집합이 부여됩니다. 레지스트리와 같은 중요한 리소스에 대한 권한은 제공되지 않습니다.  
   
-- **인터넷**. **인터넷** 또는 **신뢰할 수 있는 사이트** 영역에서 시작 된 응용 프로그램 격리된 스토리지, 파일 열기 전용 및 제한된 UI를 포함하여 클라이언트 머신의 리소스에 대해 제한된 액세스 권한을 제공하도록 권한 하위 집합이 부여됩니다. 기본적으로이 권한 집합은 클라이언트 컴퓨터에서 응용 프로그램을 격리 합니다.  
+- **인터넷** **인터넷** 또는 **신뢰할 수 있는 사이트** 영역에서 시작 된 응용 프로그램 격리된 스토리지, 파일 열기 전용 및 제한된 UI를 포함하여 클라이언트 머신의 리소스에 대해 제한된 액세스 권한을 제공하도록 권한 하위 집합이 부여됩니다. 기본적으로이 권한 집합은 클라이언트 컴퓨터에서 응용 프로그램을 격리 합니다.  
   
  **신뢰할 수 없는 사이트** 영역에서 사용 되는 것으로 식별 된 응용 프로그램에는 ca에 대 한 권한이 부여 되지 않습니다. 따라서 미리 정의된 해당 권한 집합이 없습니다.  
   
@@ -186,9 +186,9 @@ Windows Vista의 WPF 사용자는 "최소 권한 사용자 액세스", 코드 �
   
  Internet Explorer 7은 보안에 대 한 지속적인 약정의 일환으로 IE6 s p 2의 보안 기능을 통합 하 고 확장 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [코드 액세스 보안](../misc/code-access-security.md)
-- [보안](security-wpf.md)
+- [Security](security-wpf.md)
 - [WPF 부분 신뢰 보안](wpf-partial-trust-security.md)
 - [WPF 보안 전략 - 보안 엔지니어링](wpf-security-strategy-security-engineering.md)

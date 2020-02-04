@@ -1,13 +1,13 @@
 ---
-title: ADO.NET 개요
+title: 개요
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 2d21e5b73757280b679a9c5cd04a56339e7e967e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d5dc9cf7081c6876118914a0b95853a5a7ca5e57
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785103"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980342"
 ---
 # <a name="adonet-overview"></a>ADO.NET 개요
 ADO.NET은 OLE DB 및 ODBC를 통해 노출되는 데이터 소스, SQL Server 및 XML과 같은 데이터 소스에 대한 일관성 있는 액세스를 제공합니다. 데이터 공유 소비자 애플리케이션은 ADO.NET을 통해 이러한 데이터 소스에 연결하여 포함된 데이터를 검색, 처리 및 업데이트할 수 있습니다.  
@@ -20,7 +20,7 @@ ADO.NET은 OLE DB 및 ODBC를 통해 노출되는 데이터 소스, SQL Server �
   
  ADO.NET은 .NET Framework 내에서 가장 직접적인 데이터 액세스 방법을 제공합니다. 응용 프로그램이 기본 저장소 모델 대신 개념적 모델에 대해 작동할 수 있도록 하는 더 높은 수준의 추상화를 위해 [ADO.NET Entity Framework](./ef/index.md)를 참조 하세요.  
   
- **개인정보 처리 방침**: System.object, OracleClient, System.data.sqlserverce 및 system.string, system.string, system.string 및 system.xml 어셈블리는 사용자의를 구분 하지 않습니다. d m l. d m l. d m l. d a t. d m l. d a t. 개인 데이터 및 개인 데이터가 아닌 데이터.  이러한 어셈블리는 사용자의 개인 데이터를 수집, 저장 및 전송하지 않습니다. 하지만 타사 애플리케이션에서 이러한 어셈블리를 사용하여 사용자의 개인 데이터를 수집, 저장 및 전송할 수 있습니다.  
+ **개인 정보 취급 방침**: System.object, OracleClient, system.data.sqlserverce, system.string, System.string, 및 System.xml 어셈블리는 사용자의 개인 데이터와 개인 데이터를 구분 하지 않습니다. 이러한 어셈블리는 사용자의 개인 데이터와 개인 데이터를 구분 하지 않습니다 .이는 사용자의 개인 데이터와 개인 데이터를 구분 하지 않습니다.  이러한 어셈블리는 사용자의 개인 데이터를 수집, 저장 및 전송하지 않습니다. 하지만 타사 애플리케이션에서 이러한 어셈블리를 사용하여 사용자의 개인 데이터를 수집, 저장 및 전송할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [ADO.NET 아키텍처](ado-net-architecture.md)  
@@ -44,11 +44,11 @@ ADO.NET은 OLE DB 및 ODBC를 통해 노출되는 데이터 소스, SQL Server �
  [ADO.NET 코드 예제](ado-net-code-examples.md)  
  ADO.NET 데이터 공급자를 사용하여 데이터를 검색하는 코드 샘플을 제공합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
  [ADO.NET의 새로운 기능](whats-new.md)  
  ADO.NET에 새로 추가된 기능을 소개합니다.  
   
- [ADO.NET 응용 프로그램 보안](securing-ado-net-applications.md)  
+ [ADO.NET 애플리케이션 보안](securing-ado-net-applications.md)  
  ADO.NET을 사용할 때 보안 코드를 작성하는 방법에 대해 설명합니다.  
   
  [ADO.NET에서 데이터 형식 매핑](data-type-mappings-in-ado-net.md)  
@@ -57,7 +57,7 @@ ADO.NET은 OLE DB 및 ODBC를 통해 노출되는 데이터 소스, SQL Server �
  [ADO.NET에서 데이터 검색 및 수정](retrieving-and-modifying-data.md)  
  데이터 소스에 연결하고, 데이터를 검색하고, 데이터를 수정하는 방법을 설명합니다. 여기에는 `DataReaders` 및 `DataAdapters`가 포함됩니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ADO.NET](index.md)
 - [Visual Studio에서 데이터 액세스](/visualstudio/data-tools/accessing-data-in-visual-studio)

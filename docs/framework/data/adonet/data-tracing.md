@@ -1,13 +1,13 @@
 ---
-title: ADO.NET의 데이터 추적
+title: 데이터 추적
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: f92a17374cf3df1281e51d54bae1a1dcf9e5ea03
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 2b2a33739619ba09e56d4cc9ce99c51423678918
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937623"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980225"
 ---
 # <a name="data-tracing-in-adonet"></a>ADO.NET의 데이터 추적
 
@@ -31,7 +31,7 @@ ADO.NET에서 관리 되는 추적을 설정 하 고 구성 하는 방법에 대
 
 ## <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>확장 이벤트 로그에서 진단 정보에 액세스
 
-SQL Server에 대 한 .NET Framework Data Provider에서 데이터 액세스 추적 ([데이터 액세스 추적](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10)))은 서버 연결 링 버퍼 및 확장 이벤트 로그의 응용 프로그램 성능 정보에서 클라이언트 이벤트와 진단 정보 (예: 연결 오류)를 더 쉽게 상호 연결할 수 있도록 업데이트 되었습니다. 확장 이벤트 로그를 읽는 방법에 대한 자세한 내용은 [View Event Session Data](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110))를 참조하십시오.
+SQL Server에 대 한 .NET Framework Data Provider에서 데이터 액세스 추적 ([데이터 액세스 추적](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10)))은 서버 연결 링 버퍼 및 확장 이벤트 로그의 응용 프로그램 성능 정보에서 클라이언트 이벤트와 진단 정보 (예: 연결 오류)를 더 쉽게 상호 연결할 수 있도록 업데이트 되었습니다. 확장 이벤트 로그를 읽는 방법에 대 한 자세한 내용은 [이벤트 세션 데이터 보기](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110))를 참조 하세요.
 
 연결 동작의 경우 ADO.NET은 클라이언트 연결 ID를 전송합니다. 연결에 실패 하면 연결 링 버퍼 (연결[링 버퍼를 사용 하 여 SQL Server 2008의 연결 문제 해결](https://docs.microsoft.com/archive/blogs/sql_protocols/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer))에 액세스 하 고 `ClientConnectionID` 필드를 찾아서 연결 실패에 대 한 진단 정보를 가져올 수 있습니다. 클라이언트 연결 ID는 오류가 발생한 경우에만 링 버퍼에 로그인됩니다. 사전 로그인 패킷을 전송 하기 전에 연결이 실패 하는 경우 클라이언트 연결 ID는 생성 되지 않습니다. 클라이언트 연결 ID는 16 바이트 GUID입니다. `client_connection_id` 동작이 확장 이벤트 세션에서 이벤트에 추가된 경우 확장 이벤트 대상 출력에서 클라이언트 연결 ID를 찾을 수도 있습니다. 추가 클라이언트 드라이버 진단이 필요한 경우 데이터 액세스 추적을 활성화하고 연결 명령을 다시 실행하여 데이터 액세스 추적에서 `ClientConnectionID` 필드를 관찰할 수 있습니다.
 

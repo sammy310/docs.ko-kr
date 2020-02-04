@@ -1,16 +1,16 @@
 ---
-title: ADO.NET 코드 예제
+title: 코드 예제
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: a66ae2b2b8bed95fd38b71a39682a2a7f42be218
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4f0cbc06c03c0d122fc69b8a396570919ac14970
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74430812"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980290"
 ---
 # <a name="adonet-code-examples"></a>ADO.NET 코드 예제
 이 항목에 나열된 코드에서는 다음과 같은 ADO.NET 기술을 사용하여 데이터베이스에서 데이터를 검색하는 방법을 보여 줍니다.
@@ -136,7 +136,7 @@ End Class
 ```
 
 ### <a name="typed-objectquery"></a>형식화된 ObjectQuery
-이 예제 코드에서는 <xref:System.Data.Objects.ObjectQuery%601>을 사용하여 데이터를 Categories 개체로 반환합니다. 자세한 내용은 [개체 쿼리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100))를 참조 하세요.
+이 예제 코드에서는 <xref:System.Data.Objects.ObjectQuery%601>을 사용하여 데이터를 Categories 개체로 반환합니다. 자세한 내용은 [개체 쿼리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100))합니다.
 
 ```csharp
 using System;
@@ -339,7 +339,7 @@ Class LinqSqlSample
 End Class
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ADO.NET 개요](ado-net-overview.md)
 - [ADO.NET에서 데이터 검색 및 수정](retrieving-and-modifying-data.md)

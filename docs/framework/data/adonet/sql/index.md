@@ -1,13 +1,14 @@
 ---
 title: SQL Server 및 ADO.NET
+titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
-ms.openlocfilehash: b54725fa8dbff7db82ed197f4961e773a06895e4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6e88c35936de72f0d426c23493bbe5a08e707ee1
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782336"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76979978"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server 및 ADO.NET
 이 단원에서는 .NET Framework Data Provider for SQL Server(<xref:System.Data.SqlClient>)와 관련된 기능 및 동작에 대해 설명합니다.  
@@ -40,9 +41,9 @@ ms.locfileid: "70782336"
   
  [SQL Server 온라인 설명서](/sql/sql-server/sql-server-technical-documentation)  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [ADO.NET 응용 프로그램 보안](../securing-ado-net-applications.md)
+- [ADO.NET 애플리케이션 보안](../securing-ado-net-applications.md)
 - [ADO.NET에서 데이터 형식 매핑](../data-type-mappings-in-ado-net.md)
 - [DataSets, DataTables 및 DataViews](../dataset-datatable-dataview/index.md)
 - [ADO.NET에서 데이터 검색 및 수정](../retrieving-and-modifying-data.md)

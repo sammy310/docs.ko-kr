@@ -2,12 +2,12 @@
 title: 4\.6의 F# 새로운 기능- F# 가이드
 description: 4\.6에서 F# 사용할 수 있는 새 기능에 대 한 개요를 확인 하세요.
 ms.date: 11/27/2019
-ms.openlocfilehash: 81d3e988d044cb16f8ec079118fd0ede2dabc587
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 620c1edd8ea212fee306a02d5844b6b322808251
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74644135"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980394"
 ---
 # <a name="whats-new-in-f-46"></a>4\.6의 F# 새로운 기능
 
@@ -71,14 +71,14 @@ let strOpt = ValueSome "Mirror image"
 let reverse (str: string) =
     match str with
     | null
-    | "" -> None
+    | "" -> ValueNone
     | s ->
         str.ToCharArray()
         |> Array.rev
         |> string
-        |> Some
+        |> ValueSome
 
-let reversedString = strOpt |> Option.bind reverse
+let reversedString = strOpt |> ValueOption.bind reverse
 ```
 
 이렇게 하면 값 형식이 성능을 향상 시키는 시나리오에서 옵션과 마찬가지로 ValueOption을 사용할 수 있습니다.

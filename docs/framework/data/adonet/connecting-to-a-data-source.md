@@ -1,13 +1,13 @@
 ---
-title: 데이터 원본에 연결(ADO.NET)
+title: 데이터 소스에 연결
 ms.date: 03/30/2017
 ms.assetid: 9abc3f92-1be3-4e1a-b360-762dc689650e
-ms.openlocfilehash: 01e4048fb9c7b53b1b1907d1965f822b9a4644a4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 84dc15c0965b7ac8209bd9115d611162e57d6dda
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786768"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980251"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a>데이터 원본에 연결(ADO.NET)
 ADO.NET에서는 연결 문자열에 필요한 인증 정보를 제공 하 여 **연결** 개체를 사용 하 여 특정 데이터 원본에 연결 합니다. 사용 하는 **연결** 개체는 데이터 원본 유형에 따라 달라 집니다.  
@@ -21,7 +21,7 @@ ADO.NET에서는 연결 문자열에 필요한 인증 정보를 제공 하 여 *
  [연결 이벤트](connection-events.md)  
  **InfoMessage** 이벤트를 사용 하 여 데이터 소스에서 정보 메시지를 검색 하는 방법을 설명 합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [연결 문자열](connection-strings.md)
 - [연결 풀링](connection-pooling.md)

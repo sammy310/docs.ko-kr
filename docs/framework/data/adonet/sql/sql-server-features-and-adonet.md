@@ -1,13 +1,14 @@
 ---
 title: SQL Server 기능 및 ADO.NET
+titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
-ms.openlocfilehash: f2f0d0327e2b66f97f9cf5ffe797ee153d4fb9ca
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a4420799a94b5fa5f37b1e25cf6eb37c130de471
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791634"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76979796"
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server 기능 및 ADO.NET
 이 단원의 항목에서는 ADO.NET을 사용하여 데이터베이스 애플리케이션을 개발하는 데 사용할 수 있는 SQL Server 기능에 대해 설명합니다.  
@@ -46,7 +47,7 @@ ms.locfileid: "70791634"
  [LocalDB에 대한 SqlClient 지원](sqlclient-support-for-localdb.md)  
  LocalDB 데이터베이스를 위한 SqlClient 지원에 대해 설명합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [ADO.NET에서 SQL Server 데이터 작업](sql-server-data-operations.md)
 - [ADO.NET에서 데이터 검색 및 수정](../retrieving-and-modifying-data.md)
