@@ -1,19 +1,19 @@
 ---
-title: 추가 CLI 도구
+title: 추가 도구
 description: .NET Core 기능을 지원하고 확장하는, 설치 가능한 추가 도구에 대한 개요입니다.
 author: mlacouture
 ms.date: 12/02/2019
 ms.custom: mvc
-ms.openlocfilehash: 853633f5ef159eee39ed1a8682372d4291a752f5
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 23b94ceef729cdc3d83032e3897312eb1d1afd79
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740713"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920925"
 ---
 # <a name="net-core-additional-tools-overview"></a>.NET Core 추가 도구 개요
 
-이 섹션에서는 [.NET Core CLI (명령줄 인터페이스)](../tools/index.md) 도구 외에 .NET Core 기능을 지원하고 확장하는 도구 목록을 컴파일합니다.
+이 섹션에서는 .NET Core CLI 외에 .NET Core 기능을 지원하고 확장하는 도구 목록을 소개합니다.
 
 ## <a name="net-core-uninstall-tooluninstall-toolmd"></a>[.NET Core 제거 도구](uninstall-tool.md)
 
@@ -25,9 +25,9 @@ WCF(Windows Communication Foundation) Web Service Reference는 [Visual Studio 20
 
 ## <a name="wcf-dotnet-svcutil-tooldotnet-svcutil-guidemd"></a>[WCF dotnet-svcutil 도구](dotnet-svcutil-guide.md)
 
-WCF(Windows Communication Foundation) dotnet-svcutil 도구는 WSDL 파일 또는 네트워크 위치의 웹 서비스에서 메타데이터를 검색하는 .NET Core CLI 도구입니다. 웹 서비스 작업에 액세스하는 데 사용할 수 있는 메서드로 WCF 프록시 클래스를 정의하여 .NET Core와 호환되는 소스 파일을 생성합니다.
+WCF(Windows Communication Foundation) dotnet-svcutil 도구는 WSDL 파일 또는 네트워크 위치의 웹 서비스에서 메타데이터를 검색하는 .NET 도구입니다. 웹 서비스 작업에 액세스하는 데 사용할 수 있는 메서드로 WCF 프록시 클래스를 정의하여 .NET Core와 호환되는 소스 파일을 생성합니다.
 
-**dotnet-svcutil** 도구는 Visual Studio 2017 버전 15.5와 함께 처음 제공된 [**WCF Web Service Reference**](wcf-web-service-reference-guide.md) Visual Studio 연결 서비스 공급자에 대한 대체 옵션입니다. .NET Core CLI 도구인 **dotnet-svcutil** 도구는 Linux, macOS, Windows에서 플랫폼 간에 사용할 수 있습니다.
+**dotnet-svcutil** 도구는 Visual Studio 2017 버전 15.5와 함께 처음 제공된 [**WCF Web Service Reference**](wcf-web-service-reference-guide.md) Visual Studio 연결 서비스 공급자에 대한 대체 옵션입니다. .NET 도구인 **dotnet-svcutil** 도구는 Linux, macOS, Windows와 같은 여러 플랫폼에서 사용할 수 있습니다.
 
 ## <a name="wcf-dotnet-svcutilxmlserializer-tooldotnet-svcutilxmlserializer-guidemd"></a>[WCF dotnet-svcutil.xmlserializer 도구](dotnet-svcutil.xmlserializer-guide.md)
 

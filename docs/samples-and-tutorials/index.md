@@ -4,12 +4,12 @@ description: .NET Core, ASP.NET Core 및 .NET에 대해 배우는 데 도움이 
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: e64d0fdd02b28a1c9f21f06305f5ef278fb2827b
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 9a161d5325125fba8d4f4e53a0a306c989ed6bc5
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901035"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921396"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET 샘플 및 자습서
 
@@ -25,13 +25,13 @@ ms.locfileid: "75901035"
 
 ### <a name="tutorials"></a>자습서
 
-**[CLI 도구를 사용하여 .NET Core 콘솔 앱 작성: 단계별 가이드](../core/tutorials/cli-create-console-app.md)**
+**[.NET Core CLI를 사용하여 .NET Core 콘솔 앱 작성: 단계별 가이드](../core/tutorials/cli-create-console-app.md)**
 
 이 가이드에서는 .NET Core CLI 도구를 사용하여 플랫폼 간 콘솔 앱을 빌드하는 방법을 보여 줍니다. 기본적인 콘솔 앱으로 시작하여 테스트를 비롯한 여러 프로젝트로 확장됩니다. 단계별로 기능을 추가하면서 지식을 쌓게 됩니다. [완료된 샘플](https://github.com/dotnet/samples/tree/master/core/console-apps)은 GitHub의 dotnet/samples 리포지토리에서 사용 가능합니다.
 
 **[플랫폼 간 도구로 라이브러리 작성](../core/tutorials/libraries.md)**
 
-이 문서에서는 플랫폼 간 CLI 도구를 사용하여 .NET용 라이브러리를 작성하는 방법을 다룹니다. 이러한 도구는 지원되는 모든 운영 체제에서 작동하는 효율적인 하위 수준 환경을 제공합니다. [완료된 샘플](https://github.com/dotnet/samples/tree/master/framework/libraries/frameworks-library)은 GitHub의 dotnet/samples 리포지토리에서 사용 가능합니다.
+이 샘플에서는 .NET Core CLI를 사용하여 .NET용 라이브러리를 작성하는 방법에 대해 설명합니다. 이러한 도구는 지원되는 모든 운영 체제에서 작동하는 효율적인 하위 수준 환경을 제공합니다. [완료된 샘플](https://github.com/dotnet/samples/tree/master/framework/libraries/frameworks-library)은 GitHub의 dotnet/samples 리포지토리에서 사용 가능합니다.
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
@@ -111,7 +111,7 @@ ms.locfileid: "75901035"
    * 리포지토리를 로컬로 복제합니다. 로컬 시스템에 직접 문서 리포지토리를 복제하는 경우 공식 리포지토리에 직접 커밋할 수 없으므로 나중에 설명서에 기여할 수가 없습니다. 나중에 설명서에 기여할 수 있는 기회를 잃지 않으려면 앞서 설명한 분기 및 복제 절차를 사용하세요.
 1. 리포지토리의 폴더 내에서 샘플의 위치로 이동합니다. 샘플에 대한 링크를 따라가면 브라우저의 주소 표시줄에 샘플 위치에 대한 상대 경로가 나타납니다.
 1. 다음과 같은 몇 가지 옵션을 사용하여 샘플을 실행할 수 있습니다.
-   * [dotnet CLI 도구](../core/tools/index.md) 사용: 콘솔 창에서 샘플의 폴더로 이동하고 dotnet CLI 명령을 사용합니다.
+   * [.NET Core CLI](../core/tools/index.md) 사용: 콘솔 창에서 샘플의 폴더로 이동하고 dotnet CLI 명령을 사용합니다.
    * [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 또는 [Mac용 Visual Studio](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 사용: 메뉴 모음에서 **파일 > 열기 > 프로젝트/솔루션**을 선택하여 샘플을 열고 샘플 프로젝트 폴더로 이동하여 프로젝트 파일( *.csproj* 또는 *.fsproj*)을 선택합니다.
    * [Visual Studio Code](https://code.visualstudio.com/) 사용: 메뉴 모음에서 **파일 > 폴더 열기**를 선택하고 샘플의 프로젝트 폴더를 선택하여 샘플을 엽니다.
    * .NET Core 프로젝트를 지원하는 다른 IDE를 사용합니다.

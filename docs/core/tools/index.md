@@ -1,26 +1,20 @@
 ---
-title: .NET Core CLI(명령줄 인터페이스) 도구
-description: .NET Core CLI(명령줄 인터페이스) 도구 및 기능에 대한 개요입니다.
+title: .NET Core CLI
+titleSuffix: ''
+description: .NET Core CLI 및 해당 기능에 대한 개요입니다.
 ms.date: 08/14/2017
-ms.openlocfilehash: f19dcb19fb9d0203b3d3795c3fdc0b026c4c60e3
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: b0a8e0dd8cf77bb6f7567c27e9972f62515ec0f2
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163217"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920486"
 ---
-# <a name="net-core-command-line-interface-cli-tools"></a>.NET Core CLI(명령줄 인터페이스) 도구
+# <a name="net-core-cli-overview"></a>.NET Core CLI 개요
 
-.NET Core CLI(명령줄 인터페이스)는 .NET 애플리케이션 개발에 사용되는 플랫폼 간 도구 체인입니다. 이 CLI는 IDE(통합 개발 환경), 편집기 및 빌드 오케스트레이터와 같은 기타 상위 수준 도구의 기반이 됩니다.
+.NET Core CLI(명령줄 인터페이스)는 .NET Core 애플리케이션의 개발, 빌드, 실행 및 게시에 사용되는 플랫폼 간 도구 체인입니다.
 
-## <a name="installation"></a>설치
-
-기본 설치 관리자를 사용하거나 설치 셸 스크립트를 사용합니다.
-
-- Ubuntu의 DEB 패키지 또는 Windows의 MSI 번들처럼 기본 설치 관리자는 주로 개발자 컴퓨터에서 사용되고 지원되는 각 플랫폼의 기본 설치 메커니즘을 사용합니다. 이러한 설치 관리자는 개발자가 즉시 사용할 수 있도록 환경을 설치하고 구성하지만 컴퓨터에서 관리자 권한이 필요합니다. [.NET Core 설치 가이드](https://aka.ms/dotnetcoregs)에서 설치 지침을 볼 수 있습니다.
-- 셸 스크립트는 대개 빌드 서버를 설정하거나 관리자 권한 없이 도구를 설치할 경우 사용됩니다. 설치 스크립트는 컴퓨터에 필수 구성 요소를 설치하지 않으므로 이러한 구성 요소는 수동으로 설치해야 합니다. 자세한 내용은 [스크립트 참조 설치 항목](dotnet-install-script.md)을 참조하세요. CI(연속 통합) 빌드 서버에서 CLI를 설치하는 방법에 대한 자세한 내용은 [.NET Core SDK 및 CI(연속 통합)의 도구 사용](using-ci-with-cli.md)을 참조하세요.
-
-기본적으로 CLI는 병렬(SxS) 방식으로 설치되므로 여러 버전의 CLI 도구가 단일 컴퓨터에 공존할 수 있습니다. 여러 버전이 설치되어 있는 컴퓨터에서 사용되는 버전을 확인하는 방법은 [드라이버](#driver) 섹션에 좀 더 자세히 설명되어 있습니다.
+.NET Core CLI는 [.NET Core SDK](../sdk.md)에 포함되어 있습니다. .NET Core SDK를 설치하는 방법에 대한 자세한 내용은 [.NET Core SDK 설치](../install/sdk.md)를 참조하세요.
 
 ## <a name="cli-commands"></a>CLI 명령
 
@@ -153,5 +147,5 @@ Preview 2 도구를 사용하여 *project.json* 기반 프로젝트를 생성하
 
 ## <a name="see-also"></a>참조
 
-- [dotnet/CLI GitHub 리포지토리](https://github.com/dotnet/cli/)
+- [dotnet/sdk GitHub 리포지토리](https://github.com/dotnet/sdk/)
 - [.NET Core 설치 가이드](https://aka.ms/dotnetcoregs)

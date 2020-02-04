@@ -31,6 +31,10 @@
       href: how-to-guides/databricks-deploy-methods.md
     - name: 작업자 및 UDF 이진 파일 배포
       href: how-to-guides/deploy-worker-udf-binaries.md
+    - name: Ubuntu에서 애플리케이션 빌드
+      href: how-to-guides/ubuntu-instructions.md
+    - name: Windows에서 애플리케이션 빌드
+      href: how-to-guides/windows-instructions.md
 - name: 참고
   items:
     - name: API 참조

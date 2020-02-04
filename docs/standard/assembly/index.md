@@ -12,12 +12,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 9fd0c55294815c191f1e116dd4e16a44693f3565
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 968eaf2befb44eb893699d1114b315a4f5df3097
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900590"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921364"
 ---
 # <a name="assemblies-in-net"></a>.NET 어셈블리
 
@@ -63,7 +63,7 @@ ms.locfileid: "75900590"
 
 여러 가지 방법으로 어셈블리를 만들 수 있습니다. Visual Studio와 같이 *.dll* 또는 *.exe* 파일을 만들 수 있는 개발 도구를 사용할 수 있습니다. Windows SDK의 도구를 사용하여 다른 개발 환경의 모듈이 포함된 어셈블리를 만들 수 있습니다. 또한 <xref:System.Reflection.Emit?displayProperty=nameWithType> 등의 공용 언어 런타임 API를 사용하여 동적 어셈블리를 만들 수도 있습니다.
 
-Visual Studio에서 또는 .NET Core 명령줄 인터페이스 도구를 사용하여 어셈블리를 빌드하거나 명령줄 컴파일러를 사용하여 .NET Framework 어셈블리를 빌드하여 어셈블리를 컴파일합니다. .NET Core 명령줄 인터페이스 도구를 사용하여 어셈블리를 빌드하는 방법에 대한 자세한 내용은 [.NET Core 명령줄 인터페이스 도구](../../core/tools/index.md)를 참조하세요. 명령줄 컴파일러를 사용하여 어셈블리를 빌드하려면 C#의 경우 [csc.exe로 명령줄 빌드](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)를, Visual Basic의 경우 [명령줄에서 빌드](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)를 참조하세요.
+Visual Studio에서 또는 .NET Core 명령줄 인터페이스 도구를 사용하여 어셈블리를 빌드하거나 명령줄 컴파일러를 사용하여 .NET Framework 어셈블리를 빌드하여 어셈블리를 컴파일합니다. .NET Core CLI를 사용하여 어셈블리를 빌드하는 방법에 대한 자세한 내용은 [.NET Core CLI 개요](../../core/tools/index.md)를 참조하세요. 명령줄 컴파일러를 사용하여 어셈블리를 빌드하려면 C#의 경우 [csc.exe로 명령줄 빌드](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)를, Visual Basic의 경우 [명령줄에서 빌드](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)를 참조하세요.
 
 > [!NOTE]
 > Visual Studio에서 어셈블리를 빌드하려면 **빌드** 메뉴에서 **빌드**를 선택합니다.

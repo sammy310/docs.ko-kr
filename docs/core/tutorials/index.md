@@ -4,12 +4,12 @@ description: .NET Core 학습을 위한 자습서에 따라 Mac, Linux 및 Windo
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: 7039d5877ecbd4477d64991321a7fc46cadc2848
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4e0acc357453d3bd3fb877e357264cc1aa715e4c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714037"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920435"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>자습서에서 .NET Core 및 .NET Core SDK 도구 알아보기
 
@@ -35,10 +35,10 @@ ms.locfileid: "75714037"
 - [Mac용 Visual Studio를 사용하여 macOS에서 .NET Core 시작](using-on-mac-vs.md)
 - [Visual Studio for Mac을 사용하여 macOS에서 완전한 .NET Core 솔루션 빌드](using-on-mac-vs-full-solution.md)
 
-## <a name="build-applications-with-the-net-core-cli-tools"></a>.NET Core CLI 도구를 사용하여 애플리케이션 빌드
+## <a name="build-applications-with-the-net-core-cli"></a>.NET Core CLI를 사용하여 애플리케이션 빌드
 
-- [.NET Core CLI 도구를 사용하여 Windows/Linux/macOS에서 .NET Core 시작](cli-create-console-app.md)
-- [.NET Core CLI 도구를 사용하여 프로젝트 구성 및 테스트](testing-with-cli.md)
+- [.NET Core CLI를 사용하여 Windows/Linux/macOS에서 .NET Core 시작](cli-create-console-app.md)
+- [.NET Core CLI를 사용하여 프로젝트 구성 및 테스트](testing-with-cli.md)
 - [F# 시작](../../fsharp/get-started/get-started-command-line.md)
 
 ## <a name="other"></a>기타

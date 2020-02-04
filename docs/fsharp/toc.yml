@@ -256,6 +256,8 @@
       href: language-reference/caller-information.md
     - name: 자세한 구문
       href: language-reference/verbose-syntax.md
+    - name: 컴파일러 오류 및 경고
+      href: language-reference/compiler-messages/index.md
 - name: 'F# 스타일 가이드'
   href: style-guide/index.md
   items:

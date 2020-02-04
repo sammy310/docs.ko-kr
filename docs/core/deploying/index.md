@@ -2,12 +2,12 @@
 title: .NET Core 애플리케이션 배포
 description: .NET Core 애플리케이션을 배포하는 방법을 알아봅니다.
 ms.date: 12/03/2018
-ms.openlocfilehash: 41c5285f2a9ddf38e4be7326bd5cba1c58370fe7
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 425f0d5bf11fd0572825d2025005aacf65d7d2cd
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740815"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920883"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core 애플리케이션 배포
 
@@ -91,11 +91,11 @@ FDE 배포에는 다음과 같은 여러 가지 장점이 있습니다.
 
 ## <a name="step-by-step-examples"></a>단계별 예제
 
-CLI 도구를 사용하여 .NET Core 앱을 배포하는 방법을 보여 주는 단계별 예제는 [CLI를 사용하여 .NET Core 앱 게시](deploy-with-cli.md)를 참조하세요. Visual Studio를 사용하여 .NET Core 앱을 배포하는 방법을 보여 주는 단계별 예제는 [Visual Studio를 사용하여 .NET Core 앱 배포](deploy-with-vs.md)를 참조하세요. 
+.NET Core CLI를 사용하여 .NET Core 앱을 배포하는 방법을 보여 주는 단계별 예제는 [.NET Core CLI를 사용하여 .NET Core 앱 게시](deploy-with-cli.md)를 참조하세요. Visual Studio를 사용하여 .NET Core 앱을 배포하는 방법을 보여 주는 단계별 예제는 [Visual Studio를 사용하여 .NET Core 앱 배포](deploy-with-vs.md)를 참조하세요. 
 
 ## <a name="see-also"></a>참조
 
-- [CLI 도구를 사용하여 .NET Core 앱 배포](deploy-with-cli.md)
+- [.NET Core CLI를 사용하여 .NET Core 앱 게시](deploy-with-cli.md)
 - [Visual Studio를 사용하여 .NET Core 앱 배포](deploy-with-vs.md)
 - [패키지, 메타패키지 및 프레임워크](../packages.md)
 - [.NET Core RID(런타임 식별자) 카탈로그](../rid-catalog.md)
