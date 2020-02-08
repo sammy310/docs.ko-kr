@@ -2,16 +2,20 @@
 title: Windows 10, 8.1, 8에 .NET Framework 3.5 설치
 description: Windows 10, Windows 8.1 및 Windows 8에 .NET Framework 3.5를 설치하는 방법을 알아봅니다.
 ms.date: 07/16/2018
-ms.openlocfilehash: 208016e22eed324a3996552284072c6ad29637a5
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cfe21c0821b8f3223301dcc802533e1aaf024a79
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716386"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965947"
 ---
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>Windows 10, Windows 8.1 및 Windows 8에 .NET Framework 3.5 설치
 
 Windows 10, Windows 8.1 및 Windows 8에서 앱을 실행하려면 .NET Framework 3.5가 필요할 수 있습니다. 이러한 지침은 이전 Windows 버전에도 사용할 수 있습니다.
+
+## <a name="download-the-offline-installer"></a>오프라인 설치 프로그램 다운로드
+
+.NET Framework 3.5 SP1 오프라인 설치 프로그램은 [.NET Framework 3.5 SP1 다운로드 페이지](https://dotnet.microsoft.com/download/dotnet-framework/net35-sp1)에서 사용할 수 있으며, Windows 10 이전의 Windows 버전에서 사용할 수 있습니다.
 
 ## <a name="install-the-net-framework-35-on-demand"></a>요청 시 .NET Framework 3.5 설치
 

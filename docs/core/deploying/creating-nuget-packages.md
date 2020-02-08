@@ -4,14 +4,14 @@ description: "'dotnet pack' 명령을 사용하여 NuGet 패키지를 만드는 
 author: cartermp
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
-ms.openlocfilehash: ddc19faa7547637036686146f8600f40713541a8
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 3f8e75a501cfc48e1c416f71e91290cab1a4ffae
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740870"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920914"
 ---
-# <a name="how-to-create-a-nuget-package-with-net-core-command-line-interface-cli-tools"></a>.NET Core CLI(명령줄 인터페이스) 도구를 사용하여 NuGet 패키지를 만드는 방법
+# <a name="how-to-create-a-nuget-package-with-the-net-core-cli"></a>.NET Core CLI를 사용하여 NuGet 패키지를 만드는 방법
 
 > [!NOTE]
 > 다음에서는 Unix를 사용하는 명령줄 샘플을 보여 줍니다. 여기에 표시된 `dotnet pack` 명령은 Windows에서와 동일한 방식으로 작동합니다.

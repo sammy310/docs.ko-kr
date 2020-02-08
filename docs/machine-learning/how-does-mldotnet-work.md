@@ -4,16 +4,16 @@ description: ML.NET은 온라인 또는 오프라인 시나리오에서 .NET 애
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: 98251c39a4bdaba8203c26c6a781a86efc46efa4
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: bc157b22201c66bceecf78aaa36b9c653fe6a131
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740088"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794570"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>ML.NET은 무엇이며 어떻게 작동하나요?
 
-ML.NET은 온라인 또는 오프라인 시나리오에서 .NET 애플리케이션에 기계 학습을 추가할 수 있는 기능을 제공합니다. 이 기능을 사용하여 애플리케이션에 사용 가능한 데이터를 사용하여 자동 예측할 수 있습니다.
+ML.NET은 온라인 또는 오프라인 시나리오에서 .NET 애플리케이션에 기계 학습을 추가할 수 있는 기능을 제공합니다. 이 기능을 사용하여 애플리케이션에 사용 가능한 데이터를 사용하여 자동 예측할 수 있습니다. 기계 학습 애플리케이션은 명시적으로 프로그래밍하지 않아도 데이터의 패턴을 사용하여 예측합니다.
 
 ML.NET의 핵심은 기계 학습 **모델**입니다. 모델은 입력 데이터를 예측으로 변환하는 데 필요한 단계를 지정합니다. ML.NET를 사용하면 알고리즘을 지정하여 사용자 지정 모델을 학습하거나 미리 학습된 TensorFlow 및 ONNX 모델을 가져올 수 있습니다.
 

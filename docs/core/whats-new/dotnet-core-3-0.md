@@ -5,13 +5,13 @@ dev_langs:
 - csharp
 author: thraka
 ms.author: adegeo
-ms.date: 10/22/2019
-ms.openlocfilehash: 4bf1c4826273535bfe824828f0fad96998b29483
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 01/27/2020
+ms.openlocfilehash: 92d97ca3efe761c879d0940a02342edb5a8180f0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742595"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920374"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0의 새로운 기능
 
@@ -121,7 +121,7 @@ TC를 사용하도록 설정하면 앱이 시작될 때 메서드 컴파일에 �
 - 메서드에 Ahead Of Time 컴파일 코드([ReadyToRun](#readytorun-images))가 있는 경우 사전 생성된 코드가 사용됩니다.
 - 그렇지 않으면 메서드가 JIT 컴파일됩니다. 일반적으로 이 메서드는 값 형식의 제네릭입니다.
   - *빠른 JIT*은 품질이 더 낮거나 덜 최적화된 코드를 더욱 빠르게 생성합니다. .NET Core 3.0에서 빠른 JIT는 루프를 포함하지 않은 메서드에 기본적으로 사용하도록 설정되며, 시작하는 동안 사용하는 것이 좋습니다.
-  - 완전히 최적화된 JIT는 품질이 더 높거나 더 최적화된 코드를 더욱 느리게 생성합니다. 빠른 JIT를 사용하지 않는 메서드의 경우(예: 메서드가 <xref:System.Runtime.CompilerServices.MethodImplOptions.AggressiveOptimization?displayProperty=nameWithType>(으)로 특성이 지정된 경우) 완전히 최적화된 JIT가 사용됩니다.
+  - 완전히 최적화된 JIT는 품질이 더 높거나 더 최적화된 코드를 더욱 느리게 생성합니다. 빠른 JIT를 사용하지 않는 메서드의 경우(예: 메서드가 <xref:System.Runtime.CompilerServices.MethodImplOptions.AggressiveOptimization?displayProperty=nameWithType>으로 특성이 지정된 경우) 완전히 최적화된 JIT가 사용됩니다.
 
 자주 호출되는 메서드의 경우 Just-In-Time 컴파일러는 결과적으로 백그라운드에서 완전히 최적화된 코드를 만듭니다. 그런 다음, 최적화된 코드는 해당 메서드에 대해 미리 컴파일된 코드를 대체합니다.
 
@@ -180,7 +180,7 @@ R2R 이진 파일은 애플리케이션이 로드될 때 JIT(Just-In-Time) 컴�
 
 ## <a name="runtimesdk"></a>런타임/SDK
 
-### <a name="major-version-roll-forward"></a>주 버전 롤포워드
+### <a name="major-version-runtime-roll-forward"></a>주 버전 런타임 롤포워드
 
 .NET Core 3.0은 애플리케이션을 .NET Core의 최신 주 버전으로 롤포워드할 수 있는 옵트인(opt-in) 기능을 소개합니다. 또한, 롤포워드가 애플리케이션에 적용되는 방식을 제어하기 위해 새 설정이 추가되었습니다. 이 설정은 다음과 같은 방법으로 구성할 수 있습니다.
 
@@ -226,6 +226,15 @@ R2R 이진 파일은 애플리케이션이 로드될 때 JIT(Just-In-Time) 컴�
 로컬 도구는 현재 디렉터리에 있는 매니페스트 파일 이름 `dotnet-tools.json`을 사용합니다. 이 매니페스트 파일은 해당 폴더 및 그 아래에서 사용할 수 있는 도구를 정의합니다. 코드를 사용하는 누구나 동일한 도구를 복구하고 사용할 수 있도록 코드로 매니페스트 파일을 배포할 수 있습니다.
 
 전역 도구와 로컬 도구 둘 다, 호환되는 버전의 런타임이 필요합니다. 현재 NuGet.org의 많은 도구는 .NET Core 런타임 2.1을 대상으로 합니다. 이러한 도구를 전역 또는 로컬로 설치하려면 여전히 [NET Core 2.1 런타임](https://dotnet.microsoft.com/download/dotnet-core/2.1)을 설치해야 합니다.
+
+### <a name="new-globaljson-options"></a>새 global.json 옵션
+
+*global. json* 파일에는 사용되는 .NET Core SDK 버전을 정의하려고 할 때 더 많은 유연성을 제공하는 새로운 옵션이 있습니다. 새 옵션은 다음과 같습니다.
+
+- `allowPrerelease`: 사용할 SDK 버전을 선택할 때 SDK 확인자가 시험판 버전을 고려해야 하는지 여부를 나타냅니다.
+- `rollForward`: SDK 버전을 선택할 때, 특정 SDK 버전이 누락된 경우 대체하거나 상위 버전을 사용하기 위한 지시문으로 사용할 롤포워드 정책을 나타냅니다.
+
+기본값, 지원되는 값, 새 일치 규칙을 비롯한 변경 내용에 대한 자세한 내용은 [global.json 개요](../tools/global-json.md)를 참조하세요.
 
 ### <a name="smaller-garbage-collection-heap-sizes"></a>더 작은 가비지 수집 힙 크기
 
@@ -458,7 +467,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 `log2` IEEE 연산에 해당하며, 기본-2 로그를 반환합니다. 반올림 오류를 최소화합니다.
 
 - <xref:System.Math.FusedMultiplyAdd(System.Double,System.Double,System.Double)>\
-`fma` IEEE 연산에 해당하며, 단일 곱셈 누산기(fused multiply add) 계산을 수행합니다. 다시 말해, `(x * y) + z`을(를) 단일 연산으로 수행하기 때문에 반올림 오류가 최소화됩니다. 예를 들어 `FusedMultiplyAdd(1e308, 2.0, -1e308)`는 `1e308`을 반환합니다. 일반 `(1e308 * 2.0) - 1e308`은 `double.PositiveInfinity`를 반환합니다.
+`fma` IEEE 연산에 해당하며, 단일 곱셈 누산기(fused multiply add) 계산을 수행합니다. 다시 말해, `(x * y) + z`을(를) 단일 연산으로 수행하기 때문에 반올림 오류가 최소화됩니다. 한 예로 `FusedMultiplyAdd(1e308, 2.0, -1e308)`는 `1e308`을 반환합니다. 일반 `(1e308 * 2.0) - 1e308`은 `double.PositiveInfinity`를 반환합니다.
 
 - <xref:System.Math.CopySign(System.Double,System.Double)>\
 `copySign` IEEE 연산에 해당하며, `x`의 값을 반환하지만 `y`의 부호를 반환합니다.

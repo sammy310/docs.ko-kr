@@ -2,12 +2,12 @@
 title: DNX에서 .NET Core CLI로 마이그레이션
 description: DNX 도구 사용에서 .NET Core CLI 도구로 마이그레이션합니다.
 ms.date: 06/20/2016
-ms.openlocfilehash: 91a43ffda31b34332d2e545a90c857221aa162c4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e15e7ce10bb7a36deb2acd2abb9a0bd4ec8cd4a9
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715517"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920620"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>DNX에서.NET Core CLI(project.json)로 마이그레이션
 
@@ -30,9 +30,9 @@ CLI의 도입에 따라 이제 위의 모든 요소는 단일 도구 집합의 �
 ### <a name="no-more-dnvm"></a>더 이상 DNVM 없음
 DNVM(*DotNet Version Manager*)은 컴퓨터에 DNX를 설치하는 데 사용된 bash/PowerShell 스크립트였습니다. DNVM을 통해 사용자는 지정한 피드(또는 기본 피드)에서 필요한 DNX를 가져와 특정 DNX를 "활성"으로 표시하여 특정 세션의 $PATH에 둘 수 있습니다. 이렇게 하면 다양한 도구를 사용할 수 있습니다.
 
-DNVM은 기능 집합이 .NET Core CLI 도구에 포함된 변경 사항과 중복되므로 단종되었습니다.
+DNVM은 기능 집합이 .NET Core CLI에 포함된 변경 사항과 중복되므로 단종되었습니다.
 
-CLI 도구는 다음과 같은 두 가지 주요 방법으로 패키지됩니다.
+CLI는 다음과 같은 두 가지 주요 방법으로 패키지됩니다.
 
 1. 지정된 플랫폼에 대한 기본 설치 관리자
 2. 다른 상황(예: CI 서버)에 대한 설치 스크립트
@@ -69,7 +69,7 @@ DNU는 "명령 전역"이라는 개념과 함께 제공되었습니다. 이는 �
 CLI는 이 개념을 지원하지 않습니다. 대신 친숙한 `dotnet <command>` 구문을 사용하여 호출할 수 있는 프로젝트별 명령을 추가하는 개념을 지원합니다.
 
 ### <a name="installing-dependencies"></a>종속성 설치
-v1부터 .NET Core CLI 도구에는 종속성 설치를 위한 `install` 명령이 없습니다. NuGet에서 패키지를 설치하려면 이를 종속성으로 `project.json` 파일에 추가한 후 `dotnet restore`([참고 참조](#dotnet-restore-note))를 실행해야 합니다.
+v1부터 .NET Core CLI에는 종속성 설치를 위한 `install` 명령이 없습니다. NuGet에서 패키지를 설치하려면 이를 종속성으로 `project.json` 파일에 추가한 후 `dotnet restore`([참고 참조](#dotnet-restore-note))를 실행해야 합니다.
 
 ### <a name="running-your-code"></a>코드 실행
 코드를 실행하는 두 가지 중요한 방법이 있습니다. 하나는 소스에서 `dotnet run`으로 실행하는 것입니다. `dnx run`과는 달리, 이 경우 메모리 내 컴파일을 수행하지 않습니다. 실제로 `dotnet build`를 호출하여 코드를 빌드하고 빌드된 바이너리를 실행합니다.
@@ -84,7 +84,7 @@ v1부터 .NET Core CLI 도구에는 종속성 설치를 위한 `install` 명령�
 3. DNX API를 해당 BCL API로 마이그레이션합니다.
 
 ### <a name="changing-the-globaljson-file"></a>Global.json 파일 변경
-`global.json` 파일은 RC1 및 RC2(또는 그 이상) 프로젝트 모두에 대한 솔루션 파일 역할을 합니다. Visual Studio는 물론 CLI 도구를 RC1 및 그 이후 버전과 차별화하기 위해, `"sdk": { "version" }` 속성을 사용하여 프로젝트가 RC1인지 또는 그 이후 버전인지를 구분합니다. `global.json`에 이 노드가 없는 경우 최신으로 간주됩니다.
+`global.json` 파일은 RC1 및 RC2(또는 그 이상) 프로젝트 모두에 대한 솔루션 파일 역할을 합니다. RC1 버전과 그 이후 버전에서 .NET Core CLI(및 Visual Studio)를 구별하기 위해 `"sdk": { "version" }` 속성을 사용하여 프로젝트가 RC1인지 또는 그 이후 버전인지를 구분합니다. `global.json`에 이 노드가 없는 경우 최신으로 간주됩니다.
 
 `global.json` 파일을 업데이트하려면 속성을 제거하거나 사용할 정확한 도구 버전으로 설정합니다(이 경우**1.0.0-preview2-003121**).
 

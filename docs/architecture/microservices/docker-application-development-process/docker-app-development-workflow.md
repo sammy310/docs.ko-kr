@@ -2,12 +2,12 @@
 title: Docker 앱에 대한 개발 워크플로
 description: Docker 기반 애플리케이션 개발 워크플로의 세부 정보를 확인하세요. 먼저 단계별로 살펴보고 Dockerfile 최적화에 대한 세부 정보를 알아본 후 Visual Studio 사용 시 사용 가능한 간소화된 워크플로를 마지막으로 확인하세요.
 ms.date: 01/07/2019
-ms.openlocfilehash: 0c2789377bc388b8ac7373ee7fa46e3141f1b518
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 53675bf974069e9052d6d03b2743314af6f13cf9
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "73740154"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965791"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 앱에 대한 개발 워크플로
 
@@ -442,7 +442,7 @@ Visual Studio에서 솔루션에 오케스트레이터 지원을 추가하면 �
 그림 5-9처럼 `docker run` 명령을 사용하여 Docker 컨테이너를 실행할 수 있습니다.
 
 ```console
-  docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
+docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 ```
 
 위의 명령이 실행될 때마다 지정된 이미지에서 새 컨테이너 인스턴스가 생성됩니다. `--name` 매개 변수를 사용하여 컨테이너에 이름을 지정한 다음, `docker start {name}`(또는 컨테이너 ID나 자동 이름)을 사용하여 기존의 컨테이너 인스턴스를 실행할 수 있습니다.

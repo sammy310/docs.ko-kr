@@ -1,18 +1,18 @@
 ---
-title: 플랫폼 간 도구로 라이브러리 개발
-description: .NET Core CLI 도구를 사용하여 .NET Core 라이브러리를 만드는 방법을 알아봅니다. 여러 프레임워크를 지원하는 라이브러리를 만듭니다.
+title: .NET Core CLI를 사용하여 라이브러리 개발
+description: .NET Core CLI를 사용하여 .NET Core 라이브러리를 만드는 방법을 알아봅니다. 여러 프레임워크를 지원하는 라이브러리를 만듭니다.
 author: cartermp
 ms.date: 05/01/2017
-ms.openlocfilehash: 4132113037e6c5ec555d2d1859b8217a1a53d07f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a7c0175d29f483571578b58d698dd790cf66f7f4
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714022"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920441"
 ---
-# <a name="develop-libraries-with-cross-platform-tools"></a>플랫폼 간 도구로 라이브러리 개발
+# <a name="develop-libraries-with-the-net-core-cli"></a>.NET Core CLI를 사용하여 라이브러리 개발
 
-이 문서에서는 플랫폼 간 CLI 도구를 사용하여 .NET용 라이브러리를 작성하는 방법을 다룹니다. CLI는 지원되는 운영 체제에서 작동하는 효율적인 하위 수준 환경을 제공합니다. Visual Studio로 라이브러리를 빌드할 수 있습니다. 그러한 환경을 선호하는 경우 [Visual Studio 설명서를 참조하세요](library-with-visual-studio.md).
+이 문서에서는 .NET Core CLI를 사용하여 .NET용 라이브러리를 작성하는 방법에 대해 설명합니다. CLI는 지원되는 운영 체제에서 작동하는 효율적인 하위 수준 환경을 제공합니다. Visual Studio로 라이브러리를 빌드할 수 있습니다. 그러한 환경을 선호하는 경우 [Visual Studio 설명서를 참조하세요](library-with-visual-studio.md).
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -216,7 +216,7 @@ netstandard1.4/
 플랫폼 간에 테스트할 수 있는 기능이 중요합니다. 기본적으로 [xUnit](https://xunit.github.io/) 또는 MSTest를 사용할 수 있습니다. 둘 다 .NET Core에서 라이브러리를 단위 테스트하는 데 적합합니다. 테스트 프로젝트로 솔루션을 설정하는 방법은 [솔루션 구조](#structuring-a-solution)에 따라 달라집니다. 다음 예제에서는 테스트 및 원본 디렉터리가 동일한 최상위 디렉터리에 있다고 가정합니다.
 
 > [!NOTE]
-> 일부 [.NET Core CLI 명령](../tools/index.md)이 사용됩니다. 자세한 내용은 [dotnet new](../tools/dotnet-new.md) 및 [dotnet sln](../tools/dotnet-sln.md)을 참조하세요.
+> 일부 [.NET Core CLI](../tools/index.md) 명령이 사용됩니다. 자세한 내용은 [dotnet new](../tools/dotnet-new.md) 및 [dotnet sln](../tools/dotnet-sln.md)을 참조하세요.
 
 1. 솔루션을 설정합니다. 다음 명령을 사용하여 설정할 수 있습니다.
 

@@ -1,63 +1,51 @@
 ---
 title: 개발자를 위한 .NET Framework 배포 가이드
 ms.custom: updateeachrelease
-ms.date: 04/18/2019
+ms.date: 01/17/2020
 helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 1b7fccc673f82986a53dcb3dfcb68e8575b99dfd
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: a346a19400c1d2c536fff56ed7fb6dc27570df29
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74959994"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965830"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>개발자를 위한 .NET Framework 배포 가이드
 이 항목에서는 앱과 함께 .NET Framework 4.5에서 [!INCLUDE[net_current](../../../includes/net-current-version.md)] 사이의 .NET Framework 버전을 설치하려는 개발자를 위한 정보를 제공합니다.
 
-다운로드 링크를 확인하려면 [재배포 가능 패키지](#redistributable-packages) 섹션을 참조하세요. 재배포 가능 패키지 및 언어 팩은 다음 Microsoft 다운로드 센터 페이지에서 다운로드할 수도 있습니다.
+다운로드 페이지에서 .NET Framework 재배포 가능 패키지 및 언어 팩을 다운로드할 수 있습니다.
 
-- 모든 운영 체제용 .NET Framework 4.8([웹 설치 관리자](https://go.microsoft.com/fwlink/?LinkId=2085155) 또는 [오프라인 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2088631))
-
-- 모든 운영 체제용 .NET Framework 4.7.2([웹 설치 관리자](https://go.microsoft.com/fwlink/?LinkId=863262) 또는 [오프라인 설치 관리자](https://go.microsoft.com/fwlink/p/?LinkId=863265))
-
-- 모든 운영 체제용 .NET Framework 4.7.1([웹 설치 관리자](https://go.microsoft.com/fwlink/?LinkId=852095) 또는 [오프라인 설치 관리자](https://go.microsoft.com/fwlink/p/?LinkId=852107))
-
-- 모든 운영 체제용 .NET Framework 4.7([웹 설치 관리자](https://go.microsoft.com/fwlink/?LinkId=825299) 또는 [오프라인 설치 관리자](https://go.microsoft.com/fwlink/p/?LinkId=825303))
-
-- 모든 운영 체제용 .NET Framework 4.6.2([웹 설치 관리자](https://go.microsoft.com/fwlink/?LinkId=780597) 또는 [오프라인 설치 관리자](https://go.microsoft.com/fwlink/p/?LinkId=780601))
-
-- 모든 운영 체제용 .NET Framework 4.6.1([웹 설치 관리자](https://go.microsoft.com/fwlink/?LinkId=671729) 또는 [오프라인 설치 관리자](https://go.microsoft.com/fwlink/p/?LinkId=671744))
-
-- 모든 운영 체제용 .NET Framework 4.6([웹 설치 관리자](https://go.microsoft.com/fwlink/?LinkId=528222) 또는 [오프라인 설치 관리자](https://go.microsoft.com/fwlink/p/?LinkId=528232))
-
-- 모든 운영 체제용 .NET Framework 4.5.2([웹 설치 관리자](https://go.microsoft.com/fwlink/p/?LinkId=397703) 또는 [오프라인 설치 관리자](https://go.microsoft.com/fwlink/p/?LinkId=397706))
-
-- 모든 운영 체제용 .NET Framework 4.5.1([웹 설치 관리자](https://go.microsoft.com/fwlink/p/?LinkId=310158) 또는 [오프라인 설치 관리자](https://go.microsoft.com/fwlink/p/?LinkId=310159))
-
-- [.NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)
+- [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+- [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
+- [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
+- [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
+- [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)
+- [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)
+- [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
+- [.NET Framework 4.5.2](https://dotnet.microsoft.com/download/dotnet-framework/net452)
+- [.NET Framework 4.5.1](https://dotnet.microsoft.com/download/dotnet-framework/net451)
+- [.NET Framework 4.5](https://dotnet.microsoft.com/download/dotnet-framework/net45)
 
  유의 사항:
 
-> [!NOTE]
-> “.NET Framework 4.5 및 해당 포인트 릴리스”라는 구는 .NET Framework 4.5 및 모든 이후 버전을 의미합니다.
-
 - .NET Framework 4.5.1에서 [!INCLUDE[net_current](../../../includes/net-current-version.md)] 사이의 .NET Framework 버전은 .NET Framework 4.5의 내부 업데이트입니다. 즉, 같은 런타임 버전을 사용하지만 어셈블리 버전이 업데이트되어 새 형식과 멤버를 포함합니다.
 
-- .NET Framework 4.5 및 해당 포인트 릴리스는 .NET Framework 4에서 증분 방식으로 빌드됩니다. .NET Framework 4가 설치되어 있는 시스템에 .NET Framework 4.5 또는 해당 포인트 릴리스를 설치하면 버전 4 어셈블리가 최신 버전으로 바뀝니다.
+- .NET Framework 4.5 이상 버전은 .NET Framework 4에서 증분 방식으로 빌드됩니다. .NET Framework 4가 설치되어 있는 시스템에 .NET Framework 4.5 이상 버전을 설치하면 버전 4 어셈블리가 최신 버전으로 바뀝니다.
 
 - 앱에서 Microsoft [번외 패키지](../get-started/the-net-framework-and-out-of-band-releases.md) 를 참조하는 경우 어셈블리가 앱 패키지에 포함됩니다.
 
-- .NET Framework 4.5 및 해당 포인트 릴리스를 설치하려면 관리자 권한이 있어야 합니다.
+- .NET Framework 4.5 이상 버전을 설치하려면 관리자 권한이 있어야 합니다.
 
 - Windows 8 및 Windows Server 2012에는 .NET Framework 4.5가 포함되어 있으므로, 해당 운영 체제에서는 앱과 함께 배포할 필요가 없습니다. 마찬가지로, Windows 8.1 및 Windows Server 2012 R2에는 .NET Framework 4.5.1이 포함되어 있습니다. .NET Framework 4.5.2는 어떤 운영 체제에도 포함되어 있지 않습니다. .NET Framework 4.6은 Windows 10, .NET Framework 4.6.1은 Windows 10의 11월 업데이트, .NET Framework 4.6.2는 Windows 10의 1주년 업데이트에 각각 포함되어 있습니다.  .NET Framework 4.7은 Windows 10 크리에이터스 업데이트, .NET Framework 4.7.1은 Windows 10 Fall Creators Update, .NET Framework 4.7.2는 Windows 10 2018년 10월 업데이트와 Windows 10 2018년 4월 업데이트에 각각 포함되어 있습니다. .NET Framework 4.8은 Windows 10 2019년 5월 업데이트에 포함되어 있습니다. 하드웨어 및 소프트웨어 요구 사항의 전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md)을 참조하세요.
 
 - .NET Framework 4.5부터, 사용자는 설치하는 동안 실행 중인 .NET Framework 앱 목록을 보고 쉽게 닫을 수 있습니다. 이렇게 하면 .NET Framework 설치로 인해 시스템이 다시 시작되는 것을 방지할 수 있습니다. [시스템 다시 시작 사례 감소](reducing-system-restarts.md)를 참조하세요.
 
-- .NET Framework 4.5 또는 해당 포인트 릴리스 중 하나를 제거하면 기존의 .NET Framework 4 파일도 제거됩니다. .NET Framework 4로 돌아가려면 해당 프로그램과 모든 업데이트를 다시 설치해야 합니다. [.NET Framework 4 설치](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100))를 참조하세요.
+- .NET Framework 4.5 이상 버전을 제거하면 기존 .NET Framework 4 파일도 제거됩니다. .NET Framework 4로 돌아가려면 해당 프로그램과 모든 업데이트를 다시 설치해야 합니다. [.NET Framework 4 설치](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100))를 참조하세요.
 
-- .NET Framework 4.5 재배포 가능 패키지는 Microsoft에서 생성 및 서명된 파일의 디지털 서명이 중간에 만료되도록 한 디지털 서명의 부적절한 타임스탬프 관련 문제를 해결하기 위해 2012년 10월 9일 업데이트되었습니다. 이전에 2012년 8월 16일자 .NET Framework 4.5 재배포 가능 패키지를 설치한 경우 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/p/?LinkId=245484)에서 최신 재배포 가능 패키지로 업데이트하는 것이 좋습니다. 이 문제에 대한 자세한 내용은 [Microsoft 보안 공지 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655)를 참조하세요.
+- .NET Framework 4.5 재배포 가능 패키지는 Microsoft에서 생성 및 서명된 파일의 디지털 서명이 중간에 만료되도록 한 디지털 서명의 부적절한 타임스탬프 관련 문제를 해결하기 위해 2012년 10월 9일 업데이트되었습니다. 이전에 2012년 8월 16일자 .NET Framework 4.5 재배포 가능 패키지를 설치한 경우 [.NET Framework 다운로드 페이지](https://dotnet.microsoft.com/download/dotnet-framework/net45)에서 최신 재배포 가능 패키지로 업데이트하는 것이 좋습니다. 이 문제에 대한 자세한 내용은 [Microsoft 보안 공지 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655)를 참조하세요.
 
 시스템 관리자가 .NET Framework 및 시스템 종속성을 네트워크에 배포하는 방법에 대한 자세한 내용은 [관리자용 배포 가이드](guide-for-administrators.md)를 참조하세요.
 
@@ -73,16 +61,14 @@ ms.locfileid: "74959994"
 
 ## <a name="redistributable-packages"></a>재배포 가능 패키지
 
-.NET Framework에서는 두 개의 재배포 가능 패키지인 웹 설치 관리자(부트스트래퍼) 및 오프라인 설치 관리자(독립 실행형 재배포 가능 패키지)를 사용할 수 있습니다. 다음 표에서는 두 개의 패키지를 비교합니다.
+.NET Framework에서는 두 개의 재배포 가능 패키지인 웹 설치 관리자(부트스트래퍼) 및 오프라인 설치 관리자(독립 실행형 재배포 가능 패키지)를 사용할 수 있습니다. 모든 .NET Framework 다운로드는 [.NET Framework 다운로드 페이지](https://dotnet.microsoft.com/download/dotnet-framework/)에서 호스트됩니다. 다음 표에서는 두 개의 패키지를 비교합니다.
 
 ||웹 설치 관리자|오프라인 설치 관리자|
 |-|-------------------|-----------------------|
-|파일 다운로드|.NET Framework 4.8: <br/>[ndp48-web.exe](https://go.microsoft.com/fwlink/?LinkId=2085155)<br/><br/>.NET Framework 4.7.2: <br/>[NDP472-KB4054531-Web.exe](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>.NET Framework 4.7.1: <br/>[NDP471-KB4033344-Web.exe](https://go.microsoft.com/fwlink/?LinkId=852092)<br/><br/>.NET Framework 4.7: <br />[NDP47-KB3186500-Web.exe](https://go.microsoft.com/fwlink/?LinkId=825298) <br /><br />.NET Framework 4.6.2: <br />[NDP462-KB3151802-Web.exe](https://go.microsoft.com/fwlink/?LinkId=780596)<br /><br /> .NET Framework 4.6.1:<br />[NDP461-KB3102438-Web.exe](https://go.microsoft.com/fwlink/?LinkId=671728)<br /><br /> .NET Framework 4.6:<br />[NDP46-KB3045560-Web.exe](https://go.microsoft.com/fwlink/?LinkId=528222)<br /><br /> .NET Framework 4.5.2: <br />[NDP452-KB2901954-Web.exe](https://go.microsoft.com/fwlink/?LinkId=397707)<br /><br /> .NET Framework 4.5.1: <br />[NDP451-KB2859818-Web.exe](https://go.microsoft.com/fwlink/?LinkId=322115)<br /><br /> .NET Framework 4.5: <br />[dotNetFx45_Full_setup.exe](https://go.microsoft.com/fwlink/?LinkId=225704)|.NET Framework 4.8: <br/>[NDP48-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?linkid=2088631)<br/><br/>.NET Framework 4.7.2: <br/>[NDP472-KB4054530-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=863265)<br/><br/>.NET Framework 4.7.1: <br />[NDP471-KB4033342-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=852104) <br /><br />.NET Framework 4.7: <br />[NDP47-KB3186497-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=825302) <br /><br />.NET Framework 4.6.2: <br />[NDP462-KB3151800-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=780600)<br /><br /> .NET Framework 4.6.1: <br />[NDP461-KB3102436-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=671743)<br /><br /> .NET Framework 4.6: <br />[NDP46-KB3045557-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=528232)<br /><br /> .NET Framework 4.5.2: <br />[NDP452-KB2901907-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=397708)<br /><br /> .NET Framework 4.5.1: <br />[NDP451-KB2858728-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=322116)<br /><br /> .NET Framework 4.5: <br />[dotNetFx45_Full_x86_x64.exe](https://go.microsoft.com/fwlink/?LinkId=225702)|
 |인터넷 연결 여부|예|아니요|
 |다운로드 크기|작게(대상 플랫폼의 설치 관리자만 포함) *|크게*|
 |언어 팩|포함됨**|반드시 [별도로 설치](#chain_langpack)합니다. 그러지 않으면, 모든 운영 체제를 대상으로 하는 패키지를 사용합니다.|
 |배포 방법|모든 메서드 지원:<br /><br />- [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [WiX(Windows Installer XML)](#wix)<br />- [수동 설치](#installing_manually)<br />- [사용자 지정 설치(연결)](#chaining)|모든 메서드 지원:<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [WiX(Windows Installer XML)](#wix)<br />- [수동 설치](#installing_manually)<br />- [사용자 지정 설치(연결)](#chaining)|
-|ClickOnce 배포를 위한 다운로드 위치|Microsoft 다운로드 센터:<br /><br /> - [.NET Framework 4.8](https://go.microsoft.com/fwlink/?LinkId=2085155) <br/> - [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863262) <br/> - [.NET Framework 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852092) <br/> - [.NET Framework 4.7](https://go.microsoft.com/fwlink/?LinkId=825298) <br/> - [.NET Framework 4.6.2](https://go.microsoft.com/fwlink/?LinkId=780596)<br />- [.NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkId=671728)<br />- [.NET Framework 4.6](https://go.microsoft.com/fwlink/?LinkId=528222)<br />- [.NET Framework 4.5.2](https://go.microsoft.com/fwlink/?LinkId=397703)<br />- [.NET Framework 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310158)<br />- [.NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)|사용자의 서버 또는 Microsoft 다운로드 센터:<br /><br /> - [.NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631)<br /> - [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863265)<br /> - [.NET Framework 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852104)<br /> - [.NET Framework 4.7](https://go.microsoft.com/fwlink/?LinkId=825302)<br /> - [.NET Framework 4.6.2](https://go.microsoft.com/fwlink/?LinkId=780600)<br />- [.NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkId=671743)<br />- [.NET Framework 4.6](https://go.microsoft.com/fwlink/?LinkId=528232)<br />- [.NET Framework 4.5.2](https://go.microsoft.com/fwlink/p/?LinkId=397706)<br />- [.NET Framework 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310159)<br />- [.NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)|
 
 \* 오프라인 설치 관리자는 모든 대상 플랫폼의 구성 요소를 포함하기 때문에 더 큽니다. 설치 프로그램의 실행을 마치면 Windows 운영 체제에서는 사용한 설치 관리자만 캐시합니다. 설치 후에 오프라인 설치 관리자를 삭제하는 경우 사용된 디스크 공간은 웹 설치 관리자에서 사용하는 것과 동일합니다. 앱의 설치 프로그램을 만드는 데 사용하는 도구(예: [InstallAware](#installaware-deployment) 또는 [InstallShield](#installshield-deployment))가 설치 후에 제거되는 설치 파일 폴더를 제공하는 경우 오프라인 설치 관리자를 설치 폴더에 저장하여 자동으로 삭제할 수 있습니다.
 
@@ -136,7 +122,7 @@ Visual Studio에서 ClickOnce 배포를 선택하고 .NET Framework에 대한 �
 
 7. 필수 구성 요소의 소스 위치를 지정하는 옵션을 선택한 다음 **확인**을 선택합니다.
 
-     .NET Framework 다운로드 위치의 URL을 제공하는 경우 Microsoft 다운로드 센터 사이트 또는 자체 사이트를 지정할 수 있습니다. 재배포 가능 패키지를 자체 서버에 배치하려면 패키지가 웹 설치 관리자가 아닌 오프라인 설치 관리자여야 합니다. Microsoft 다운로드 센터에 있는 웹 설치 관리자에만 연결할 수 있습니다. URL은 사용자 응용 프로그램을 배포할 CD를 지정할 수도 있습니다.
+     .NET Framework 다운로드 위치의 URL을 제공하는 경우 .NET Framework 다운로드 페이지 또는 자체 사이트를 지정할 수 있습니다. 재배포 가능 패키지를 자체 서버에 배치하려면 패키지가 웹 설치 관리자가 아닌 오프라인 설치 관리자여야 합니다. .NET Framework 다운로드 페이지에서 웹 설치 관리자만 연결할 수 있습니다. URL은 사용자 응용 프로그램을 배포할 CD를 지정할 수도 있습니다.
 
 8. **속성 페이지** 대화 상자에서 **확인**을 선택합니다.
 
@@ -289,7 +275,7 @@ WiX(Windows Installer XML) 도구 집합은 XML 소스 코드에서 Windows 설�
 | | |
 |-|-|
 | Key | HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
-| name | Release |
+| 이름 | Release |
 | 형식 | DWORD |
 
 4\.5~4.7.2의 특정 버전의 .NET Framework에 대해 최종 릴리스 버전의 언어 팩이 설치되었는지를 확인하려면 이전 섹션인 [.NET Framework 검색](#detect_net)에 설명된 릴리스 키 DWORD의 값을 확인하세요.
@@ -298,27 +284,18 @@ WiX(Windows Installer XML) 도구 집합은 XML 소스 코드에서 Windows 설�
 
 ### <a name="chaining-the-language-packs-to-your-app-setup"></a>응용 프로그램 설치 프로그램에 언어 팩 연결
 
-.NET Framework에서는 특정 문화권에 맞게 지역화된 리소스를 포함하는 독립 실행형 언어 팩 실행 파일의 집합을 제공합니다. 언어 팩은 Microsoft 다운로드 센터에 있습니다.
+.NET Framework에서는 특정 문화권에 맞게 지역화된 리소스를 포함하는 독립 실행형 언어 팩 실행 파일의 집합을 제공합니다. 언어 팩은 .NET Framework 다운로드 페이지에 있습니다.
 
-- [.NET Framework 4.8 언어 팩](https://go.microsoft.com/fwlink/p/?LinkId=2086170)
-
-- [.NET Framework 4.7.2 언어 팩](https://go.microsoft.com/fwlink/?LinkId=863275)
-
-- [.NET Framework 4.7.1 언어 팩](https://go.microsoft.com/fwlink/p/?LinkId=852090)
-
-- [.NET Framework 4.7 언어 팩](https://go.microsoft.com/fwlink/p/?LinkId=825306)
-
-- [.NET Framework 4.6.2 언어 팩](https://go.microsoft.com/fwlink/p/?LinkId=780604)
-
-- [.NET Framework 4.6.1 언어 팩](https://go.microsoft.com/fwlink/p/?LinkId=671747)
-
-- [.NET Framework 4.6 언어 팩](https://go.microsoft.com/fwlink/p/?LinkId=528314)
-
-- [.NET Framework 4.5.2 언어 팩](https://go.microsoft.com/fwlink/p/?LinkId=397701)
-
-- [.NET Framework 4.5.1 언어 팩](https://go.microsoft.com/fwlink/p/?LinkId=322101)
-
-- [.NET Framework 4.5 언어 팩](https://go.microsoft.com/fwlink/p/?LinkId=245451)
+- [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+- [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
+- [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
+- [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
+- [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)
+- [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)
+- [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
+- [.NET Framework 4.5.2](https://dotnet.microsoft.com/download/dotnet-framework/net452)
+- [.NET Framework 4.5.1](https://dotnet.microsoft.com/download/dotnet-framework/net451)
+- [.NET Framework 4.5](https://dotnet.microsoft.com/download/dotnet-framework/net45)
 
 > [!IMPORTANT]
 > 언어 팩에는 응용 프로그램을 실행하는 데 필요한 .NET Framework 구성 요소가 포함되지 않으므로 언어 팩을 설치하기 전에 웹 또는 오프라인 설치 관리자를 사용하여 .NET Framework를 설치해야 합니다.
@@ -368,7 +345,7 @@ WiX(Windows Installer XML) 도구 집합은 XML 소스 코드에서 Windows 설�
 
 ## <a name="uninstalling-the-net-framework"></a>.NET Framework 제거
 
-Windows 8부터, 제어판의 **Windows 기능 사용/사용 안 함**을 통해 .NET Framework 4.5 또는 해당 포인트 릴리스 중 하나를 제거할 수 있습니다. 이전 버전의 Windows에서는 제어판의 **프로그램 추가/제거**를 통해 .NET Framework 4.5 또는 해당 포인트 릴리스 중 하나를 제거할 수 있습니다.
+Windows 8부터 제어판의 **Windows 기능 사용/사용 안 함**을 통해 .NET Framework 4.5 이상 버전을 제거할 수 있습니다. 이전 버전의 Windows에서는 제어판의 **프로그램 추가/제거**를 통해 .NET Framework 4.5 이상 버전을 제거할 수 있습니다.
 
 > [!IMPORTANT]
 > Windows 7 및 이전 버전의 운영 체제에서 .NET Framework 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 또는 4.8을 제거하면 .NET Framework 4.5 파일이 복원되지 않고, .NET Framework 4.5를 제거하면 .NET Framework 4 파일이 복원되지 않습니다. 이전 버전으로 돌아가려면 해당 프로그램과 업데이트를 다시 설치해야 합니다.
@@ -399,7 +376,7 @@ Windows 8부터, 제어판의 **Windows 기능 사용/사용 안 함**을 통해
 
 ### <a name="supported-languages"></a>지원되는 언어
 
-다음 표에는 .NET Framework 4.5 및 해당 포인트 릴리스에 사용할 수 있는 .NET Framework 언어 팩이 나와 있습니다.
+다음 표에는 .NET Framework 4.5 이상 버전에 사용할 수 있는 .NET Framework 언어 팩이 나와 있습니다.
 
 |LCID|언어 - 국가/지역|culture|
 |----------|--------------------------------|-------------|
@@ -427,7 +404,7 @@ Windows 8부터, 제어판의 **Windows 기능 사용/사용 안 함**을 통해
 |2070|포르투갈어 - 포르투갈|pt-PT|
 |3082|스페인어 - 스페인(현대 정렬)|es|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [관리자를 위한 배포 가이드](guide-for-administrators.md)
 - [시스템 요구 사항](../get-started/system-requirements.md)

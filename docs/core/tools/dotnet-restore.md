@@ -2,12 +2,12 @@
 title: dotnet restore 명령
 description: dotnet restore 명령을 사용하여 종속성 및 프로젝트 관련 도구를 복원하는 방법을 알아봅니다.
 ms.date: 05/29/2018
-ms.openlocfilehash: 82dd85e340a4cb520f781d977b0798b0f532a088
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: dc73b7b2482d25872be922e68103fb86067146f7
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340442"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920555"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -45,7 +45,7 @@ dotnet restore [-h|--help]
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-종속성을 복원하려면 NuGet에 패키지가 있는 피드가 필요합니다. 피드는 일반적으로 *nuget.config* 구성 파일을 통해 제공됩니다. CLI 도구가 설치될 때 기본 구성 파일이 제공됩니다. 프로젝트 디렉터리에 고유한 *nuget.config* 파일을 만들어 추가 피드를 지정합니다. `-s` 옵션을 사용하여 *nuget.config*를 재정할 수 있습니다.
+종속성을 복원하려면 NuGet에 패키지가 있는 피드가 필요합니다. 피드는 일반적으로 *nuget.config* 구성 파일을 통해 제공됩니다. .NET Core SDK가 설치될 때 기본 구성 파일이 제공됩니다. 프로젝트 디렉터리에 고유한 *nuget.config* 파일을 만들어 추가 피드를 지정합니다. `-s` 옵션을 사용하여 *nuget.config*를 재정할 수 있습니다.
 
 종속성의 경우 복원 작업 중 `--packages` 인수를 사용하여 복원된 패키지가 배치될 위치를 지정합니다. 지정하지 않으면 모든 운영 체제에서 사용자의 홈 디렉터리의 `.nuget/packages` 디렉터리에 있는 기본 NuGet 패키지 캐시가 사용됩니다. 예를 들어 Linux의 경우 */home/user1* 또는 Windows의 경우 *C:\Users\user1*입니다.
 

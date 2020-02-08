@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: 2c3ba0e12d0d7e6a568c4c3741d99b901fca2722
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: bc72cade9ce6edddb88d741a3424405bba0a7ad8
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75696521"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793386"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>XML 파일 처리(C# 프로그래밍 가이드)
 
@@ -27,11 +27,11 @@ XML 파일은 코드의 계층적 표현이 아니며 각 요소에 대해 생�
     |문자|설명|
     |---------------|-----------------|
     |N|네임스페이스(namespace)<br /><br /> 네임스페이스에 문서 주석을 추가할 수는 없지만 지원되는 경우 문서 주석에 대한 cref 참조를 만들 수는 있습니다.|
-    |T|유형: 클래스, 인터페이스, 구조체, 열거형, 대리자|
+    |T|유형: 클래스, 인터페이스, 구조체, 열거형 또는 대리자|
     |F|필드(field)|
     |P|속성(인덱서 또는 기타 인덱싱된 속성 포함)|
     |M|메서드(생성자, 연산자 등의 특수 메서드 포함)|
-    |E|이벤트(event)|
+    |E|event|
     |!|오류 문자열<br /><br /> 문자열의 나머지 부분은 오류에 대한 정보를 제공합니다. C# 컴파일러는 확인할 수 없는 링크에 대해 오류 정보를 생성합니다.|
 
 - 문자열의 두 번째 부분은 네임스페이스의 루트부터 시작되는 항목의 정규화된 이름입니다. 항목의 이름과 바깥쪽 형식 및 네임스페이스는 마침표로 구분됩니다. 항목 자체의 이름에 마침표가 있으면 이러한 요소를 구분하는 마침표가 해시 기호('#')로 바뀝니다. 항목 이름에는 해시 기호가 직접적으로 포함되지 않는다고 가정합니다. 예를 들어 String 생성자의 정규화된 이름은 "System.String.#ctor"일 수 있습니다.

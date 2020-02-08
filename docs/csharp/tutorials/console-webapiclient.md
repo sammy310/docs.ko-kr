@@ -3,20 +3,18 @@ title: .NET Core를 사용하여 REST 클라이언트 만들기
 description: 이 자습서에서는 .NET Core 및 C# 언어의 다양한 기능에 대해 설명합니다.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 09eda08f82490070c66d0b290359872c1043b0c2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: eb7946d669de60c3469ca8098e40b159082ea270
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76737580"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921083"
 ---
 # <a name="rest-client"></a>REST 클라이언트
 
-## <a name="introduction"></a>소개
-
 이 자습서에서는 .NET Core 및 C# 언어의 다양한 기능에 대해 설명합니다. 다음을 배울 수 있습니다.
 
-* .NET Core CLI(명령줄 인터페이스)의 기본 사항
+* .NET Core CLI의 기본 사항
 * C# 언어 기능의 개요
 * NuGet으로 종속성 관리
 * HTTP 통신
@@ -154,7 +152,7 @@ namespace WebAPIClient
 {
     public class Repository
     {
-        public string name { get; set; };
+        public string name { get; set; }
     }
 }
 ```
@@ -170,7 +168,6 @@ JSON serializer는 사용되는 클래스 형식에 포함되지 않은 정보�
 ```csharp
 var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos");
 var repositories = await JsonSerializer.DeserializeAsync<List<Repository>>(await streamTask);
-return repositories;
 ```
 
 새 네임 스페이스를 사용하고 있으므로 파일의 맨 위에도 추가해야 합니다.
@@ -231,7 +228,8 @@ private static async Task<List<Repository>> ProcessRepositories()
 다음에는 JSON 응답을 처리한 후 리포지토리를 반환합니다.
 
 ```csharp
-var repositories = serializer.ReadObject(await streamTask) as List<Repository>;
+var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos");
+var repositories = await JsonSerializer.DeserializeAsync<List<Repository>>(await streamTask);
 return repositories;
 ```
 
@@ -255,16 +253,16 @@ GitHub API에서 전송되는 JSON 패킷에 있는 속성을 몇 가지 더 처
 먼저 `Repository` 클래스 정의에 몇 가지 간단한 형식을 더 추가해 보겠습니다. 해당 클래스에 다음 속성을 추가합니다.
 
 ```csharp
-[JsonPropertyName(Name="description")]
+[JsonPropertyName("description")]
 public string Description { get; set; }
 
-[JsonPropertyName(Name="html_url")]
+[JsonPropertyName("html_url")]
 public Uri GitHubHomeUrl { get; set; }
 
-[JsonPropertyName(Name="homepage")]
+[JsonPropertyName("homepage")]
 public Uri Homepage { get; set; }
 
-[JsonPropertyName(Name="watchers")]
+[JsonPropertyName("watchers")]
 public int Watchers { get; set; }
 ```
 
@@ -293,7 +291,7 @@ foreach (var repo in repositories)
 해당 형식은 표준 .NET <xref:System.DateTime> 형식을 따르지 않습니다. 따라서 사용자 지정 변환 메서드를 작성해야 합니다. 또한 `Repository` 클래스 사용자에게 원시 문자열이 노출되는 것을 원하지 않을 것입니다. 특성도 이러한 작업을 제어하는 데 도움이 될 수 있습니다. 먼저 `Repository` 클래스의 날짜 및 시간 문자열 표현을 포함하는 `public` 속성을 정의하고, 반환된 날짜를 나타내는 형식 지정된 문자열을 반환하는 `LastPush` `readonly` 속성을 정의합니다.
 
 ```csharp
-[JsonPropertyName(Name="pushed_at")]
+[JsonPropertyName("pushed_at")]
 public string JsonDate { get; set; }
 
 public DateTime LastPush =>

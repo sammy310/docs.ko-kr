@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: fa30deb16be323f059aa0ec12df08793598a6da2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: d3c91f594eedd2636cbf08285f0dee352bc4835a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76738354"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777125"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core 앱에서 데이터 작업
 
@@ -236,11 +236,11 @@ public class Startup
 
 #### <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a>BeginTransaction 및 여러 DbContexts를 사용한 실행 전략 및 명시적 트랜잭션
 
-EF 코어 연결에서 다시 시도가 설정되면, EF 코어를 사용하여 수행하는 각 작업은 자체적으로 다시 시도할 수 있는 작업이 됩니다. 일시적인 오류가 발생할 경우 SaveChanges에 대한 각 쿼리와 각 호출이 하나의 단위로 다시 시도됩니다.
+EF Core 연결에서 다시 시도를 사용하도록 설정되면 EF Core를 사용하여 수행하는 각 작업이 자체적으로 다시 시도할 수 있는 작업이 됩니다. 일시적인 오류가 발생할 경우 SaveChanges에 대한 각 쿼리와 각 호출이 하나의 단위로 다시 시도됩니다.
 
 그러나 코드가 BeginTransaction을 사용하여 트랜잭션을 시작한 경우, 하나의 단위로 처리해야 하는 자신만의 작업 그룹을 정의하게 됩니다. 오류가 발생하면 트랜잭션 내부의 모든 항목이 롤백되어야 합니다. EF 실행 전략(다시 시도 정책)을 사용할 때 해당 트랜잭션을 실행하려고 시도하고 여러 DbContexts의 여러 SaveChanges를 포함하면 다음과 같은 예외가 표시됩니다.
 
-System.InvalidOperationException: 구성된 실행 전략 ‘SqlServerRetryingExecutionStrategy’는 사용자가 시작한 트랜잭션을 지원하지 않습니다. 'DbContext.Database.CreateExecutionStrategy()'에서 반환된 실행 전략을 사용하여 트랜잭션을 다시 시도가 가능한 단위로 트랜잭션의 모든 작업을 실행합니다.
+System.InvalidOperationException: 구성된 실행 전략 ‘SqlServerRetryingExecutionStrategy’는 사용자가 시작한 트랜잭션을 지원하지 않습니다. 'DbContext.Database.CreateExecutionStrategy()'에서 반환된 실행 전략을 사용하여 다시 시도가 가능한 단위로 트랜잭션의 모든 작업을 실행합니다.
 
 해결책은 실행해야 하는 모든 것을 나타내는 대리자를 사용하여 EF 실행 전략을 수동으로 호출하는 것입니다. 일시적인 오류가 발생하면, 실행 전략에서 대리자를 다시 호출합니다. 다음 코드는 이 방식을 구현하는 방법을 보여줍니다.
 
@@ -271,16 +271,16 @@ await strategy.ExecuteAsync(async () =>
 
 > ### <a name="references--entity-framework-core"></a>참조 - Entity Framework Core
 >
-> - **EF Core Docs**  
+> - **EF Core Docs**
 >   <https://docs.microsoft.com/ef/>
-> - **EF Core: 관련 데이터**  
+> - **EF Core: 관련 데이터**
 >   <https://docs.microsoft.com/ef/core/querying/related-data>
-> - **ASPNET 애플리케이션에서 엔터티 지연 로드 방지**  
+> - **ASPNET 애플리케이션에서 엔터티 지연 로드 방지**
 >   <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
 
 ## <a name="ef-core-or-micro-orm"></a>EF Core 또는 마이크로 ORM
 
-EF Core는 지속성 관리에 매우 유용하고 대부분 애플리케이션 개발자의 데이터베이스 세부 정보를 캡슐화하지만, 유일한 방법은 아닙니다. 또 다른 인기 있는 오픈 소스는 마이크로 ORM이라고도 불리는 [Dapper](https://github.com/StackExchange/Dapper)입니다. 마이크로 ORM은 개체를 데이터 구조에 매핑하는 데 사용되며 기능이 약간 적은 도구입니다. Dapper의 디자인 목표는 데이터를 검색하고 업데이트하는 데 사용되는 기본 쿼리를 완전히 캡슐화하는 것이 아니라 성능에 집중하는 것입니다. Dapper는 개발자의 SQL을 추상화하지 않으므로 "금속에 가깝고" 개발자가 특정 데이터 액세스 작업에 사용할 정확한 쿼리를 작성할 수 있습니다.
+EF Core는 지속성 관리에 매우 유용하고 대부분 애플리케이션 개발자의 데이터베이스 세부 정보를 캡슐화하지만, 유일한 방법은 아닙니다. 또 다른 인기 있는 오픈 소스는 마이크로 ORM이라고도 하는 [Dapper](https://github.com/StackExchange/Dapper)입니다. 마이크로 ORM은 개체를 데이터 구조에 매핑하는 데 사용되며 기능이 약간 적은 도구입니다. Dapper의 디자인 목표는 데이터를 검색하고 업데이트하는 데 사용되는 기본 쿼리를 완전히 캡슐화하는 것이 아니라 성능에 집중하는 것입니다. Dapper는 개발자의 SQL을 추상화하지 않으므로 "금속에 가깝고" 개발자가 특정 데이터 액세스 작업에 사용할 정확한 쿼리를 작성할 수 있습니다.
 
 EF Core에는 Dapper과 구별되지만 성능 오버헤드를 제공하는 두 가지 중요한 기능이 있습니다. 첫 번째는 LINQ 식에서 SQL로의 변환입니다. 이러한 변환은 캐시되지만, 그럼에도 불구하고 처음으로 수행할 때 오버헤드가 있습니다. 두 번째는 엔터티 변경 내용 추적(효율적인 update 문을 생성할 수 있도록)입니다. AsNotTracking 확장을 사용하여 특정 쿼리에 대해 이 동작을 해제할 수 있습니다. 또한 EF 코어는 일반적으로 매우 효율적이고 어떤 경우에도 성능의 관점에서 완벽하게 허용되는 SQL 쿼리를 생성하지만, 실행할 정확한 쿼리를 세부적으로 제어해야 하는 경우 EF Core를 사용하여 사용자 지정 SQL을 전달(또는 저장 프로시저를 실행)할 수 있습니다. 이 경우 Dapper는 여전히 EF Core보다 성능이 우수하지만, 그 차이는 미미합니다. Julie Lerman은 2016년 5월에 작성한 MSDN 문서 [Dapper, Entity Framework 및 하이브리드 앱](https://docs.microsoft.com/archive/msdn-magazine/2016/may/data-points-dapper-entity-framework-and-hybrid-apps)에서 몇 가지 성능 데이터를 제시했습니다. 다양한 데이터 액세스 방법에 대한 추가 성능 벤치마크 데이터는 [Dapper 사이트](https://github.com/StackExchange/Dapper)에서 찾을 수 있습니다.
 
@@ -332,7 +332,7 @@ EF Core는 대부분의 애플리케이션에서, 그리고 애플리케이션�
 
 ## <a name="sql-or-nosql"></a>SQL 또는 NoSQL
 
-전통적으로 SQL Server 같은 관계형 데이터베이스가 영구 데이터 스토리지 시장을 지배해 왔지만, 유일한 솔루션은 아닙니다. [MongoDB](https://www.mongodb.com/what-is-mongodb) 같은 NoSQL 데이터베이스는 개체를 저장하는 다른 접근 방식을 제공합니다. 개체를 테이블 및 행에 매핑하는 대신, 전체 개체 그래프를 직렬화하고 결과를 저장하는 또 다른 옵션이 있습니다. 이 방법의 이점은 적어도 처음에는 간단하고 성능이 우수하다는 점입니다. 개체를 관계가 있는 여러 테이블로 분해하고 데이터베이스에서 개체가 마지막으로 검색된 이후에 변경되었을 수 있는 행을 업데이트하는 방법보다는 키를 사용하여 직렬화된 단일 개체를 저장하는 방법이 더 간단합니다. 마찬가지로, 관계형 데이터베이스에서 동일한 개체를 완전히 작성하는 데 필요한 복잡한 조인 또는 여러 데이터베이스 쿼리보다는 키 기반 저장소에서 단일 개체를 가져와서 역직렬화하는 방법이 훨씬 쉽고 빠릅니다. 또한 잠금이나 트랜잭션 또는 고정된 스키마가 없으면 여러 머신에서 NoSQL 데이터베이스를 확장할 수 있으므로 대규모 데이터 세트를 지원할 수 있습니다.
+전통적으로 SQL Server 같은 관계형 데이터베이스가 영구 데이터 스토리지 시장을 지배해 왔지만, 유일한 솔루션은 아닙니다. [MongoDB](https://www.mongodb.com/what-is-mongodb) 같은 NoSQL 데이터베이스는 개체를 저장하는 다른 접근 방식을 제공합니다. 개체를 테이블 및 행에 매핑하는 대신, 전체 개체 그래프를 직렬화하고 결과를 저장하는 또 다른 옵션이 있습니다. 이 방법의 이점은 적어도 처음에는 간단하고 성능이 우수하다는 점입니다. 개체를 관계가 있는 여러 테이블로 분해하고 데이터베이스에서 개체가 마지막으로 검색된 이후에 변경되었을 수 있는 행을 업데이트하는 것보다 키를 사용하여 직렬화된 단일 개체를 저장하는 방법이 더 간단합니다. 마찬가지로, 관계형 데이터베이스에서 동일한 개체를 완전히 작성하는 데 필요한 복잡한 조인 또는 여러 데이터베이스 쿼리보다는 키 기반 저장소에서 단일 개체를 가져와서 역직렬화하는 방법이 훨씬 쉽고 빠릅니다. 또한 잠금이나 트랜잭션 또는 고정된 스키마가 없으면 여러 머신에서 NoSQL 데이터베이스를 확장할 수 있으므로 대규모 데이터 세트를 지원할 수 있습니다.
 
 반면, NoSQL 데이터베이스는(일반적으로 그 이름처럼) 고유한 단점이 있습니다. 관계형 데이터베이스는 정규화를 사용하여 일관성을 유지하고 데이터 중복을 방지합니다. 이렇게 하면 데이터베이스의 전체 크기가 감소하며 즉시 전체 데이터베이스에서 공유 데이터 업데이트를 사용할 수 있습니다. 관계형 데이터베이스에서 주소 테이블은 ID별로 국가 테이블을 참조할 수 있으며, 이를 통해 국가/지역의 이름이 변경되면 주소 레코드 자체를 업데이트할 필요 없이 업데이트의 이점을 누릴 수 있습니다. 그러나 NoSQL 데이터베이스에는 주소 및 주소와 연결된 국가는 여러 저장된 개체의 일부로 직렬화될 수 있습니다. 국가/지역 이름을 업데이트하려면 단일 행이 아닌 모든 개체를 업데이트해야 합니다. 관계형 데이터베이스는 외래 키 같은 규칙을 적용하여 관계 무결성을 보장할 수도 있습니다. 일반적으로 NoSQL 데이터베이스는 데이터에 대한 이러한 제약 조건을 제공하지 않습니다.
 
@@ -340,7 +340,7 @@ EF Core는 대부분의 애플리케이션에서, 그리고 애플리케이션�
 
 NoSQL 데이터베이스에서는 개체의 여러 버전을 저장할 수 있으며, 무언가 고정된 스키마 관계형 데이터베이스는 일반적으로 지원하지 않습니다. 그러나 이 경우 애플리케이션 코드에서 개체의 이전 버전이 존재하여 복잡성이 추가되는지 고려해야 합니다.
 
-NoSQL 데이터베이스는 일반적으로 [ACID](https://en.wikipedia.org/wiki/ACID)를 적용하지 않습니다. 즉, 관계형 데이터베이스보다 성능과 확장성이 더 좋습니다. 정규화된 테이블 구조의 스토리지에 적합하지 않은 매우 거대한 데이터 세트 및 개체에 적합합니다. 각 데이터베이스를 적합하게 사용한다면 단일 애플리케이션으로 관계형 데이터베이스와 NoSQL 데이터베이스의 장점을 모두 취하지 못할 이유가 없습니다.
+NoSQL 데이터베이스는 일반적으로 [ACID](https://en.wikipedia.org/wiki/ACID)를 적용하지 않습니다. 즉, 관계형 데이터베이스보다 성능과 확장성이 더 좋습니다. 정규화된 테이블 구조의 스토리지에 적합하지 않은 매우 큰 데이터 세트 및 개체에 적합합니다. 각 데이터베이스를 적합하게 사용한다면 단일 애플리케이션으로 관계형 데이터베이스와 NoSQL 데이터베이스의 장점을 모두 취하지 못할 이유가 없습니다.
 
 ## <a name="azure-cosmos-db"></a>Azure Cosmos DB
 
@@ -354,8 +354,7 @@ Azure Cosmos DB 쿼리 언어는 JSON 문서를 쿼리하는 단순하지만 강
 
 **참조 – Azure Cosmos DB**
 
-- Azure Cosmos DB 소개  
-  <https://docs.microsoft.com/azure/cosmos-db/introduction>
+- Azure Cosmos DB 소개 <https://docs.microsoft.com/azure/cosmos-db/introduction>
 
 ## <a name="other-persistence-options"></a>다른 지속성 옵션
 
@@ -371,8 +370,7 @@ Azure Cosmos DB 쿼리 언어는 JSON 문서를 쿼리하는 단순하지만 강
 
 **참조 – Azure Storage**
 
-- Azure Storage 소개  
-  <https://docs.microsoft.com/azure/storage/storage-introduction>
+- Azure Storage 소개 <https://docs.microsoft.com/azure/storage/storage-introduction>
 
 ## <a name="caching"></a>캐싱
 
@@ -484,9 +482,9 @@ services.AddScoped<ICatalogService, CachedCatalogService>();
 services.AddScoped<CatalogService>();
 ```
 
-이 상태에서 카탈로그 데이터를 가져오는 데이터베이스 호출은 요청마다 만들어지는 것이 아니라 분당 한 번만 만들어집니다. 사이트의 트래픽에 따라, 이는 데이터베이스에 대해 만들어지는 쿼리 수, 그리고 현재 이 서비스에서 노출하는 세 쿼리에 의존하는 홈페이지의 평균 페이지 로드 시간에 매우 큰 영향을 미칠 수 있습니다.
+이 상태에서 카탈로그 데이터를 가져오는 데이터베이스 호출은 요청마다 만들어지는 것이 아니라 분당 한 번만 만들어집니다. 사이트의 트래픽에 따라, 이는 데이터베이스에 대해 이루어지는 쿼리 수, 현재 이 서비스에서 노출하는 세 쿼리에 의존하는 홈페이지의 평균 페이지 로드 시간에 큰 영향을 미칠 수 있습니다.
 
-캐싱이 구현될 때 발생하는 문제는 _부실 데이터_, 다시 말해서 원본에서 변경되었지만 오래된 버전이 캐시에 남아 있는 데이터입니다. 이 문제를 완화하는 간단한 방법은 캐시 기간을 짧게 하는 것입니다. 사용량이 많은 애플리케이션의 경우 데이터가 캐시되는 길이를 연장해서 얻을 수 있는 이점이 제한적이기 때문입니다. 예를 들어 단일 데이터베이스 쿼리를 만들고 초당 10회 요청되는 페이지를 고려해 보세요. 이 페이지가 1분 동안 캐시되면 분당 데이터베이스 쿼리 수가 600에서 1로 99.8% 감소합니다. 그 대신 캐시 기간을 1시간으로 하면 전체 감소율이 99.997%가 되겠지만, 부실 데이터 가능성 및 잠재적 연령이 크게 증가합니다.
+캐싱이 구현될 때 발생하는 문제는 _부실 데이터_, 즉 원본에서는 변경되었지만 캐시에는 오래된 버전이 남아 있는 데이터입니다. 이 문제를 완화하는 간단한 방법은 캐시 기간을 짧게 하는 것입니다. 사용량이 많은 애플리케이션의 경우 데이터가 캐시되는 길이를 연장해서 얻을 수 있는 이점이 제한적이기 때문입니다. 예를 들어 단일 데이터베이스 쿼리를 만들고 초당 10회 요청되는 페이지를 고려해 보세요. 이 페이지가 1분 동안 캐시되면 분당 데이터베이스 쿼리 수가 600에서 1로 99.8% 감소합니다. 그 대신 캐시 기간을 1시간으로 하면 전체 감소율이 99.997%가 되겠지만, 부실 데이터 가능성 및 잠재적 연령이 크게 증가합니다.
 
 또 다른 방법은 캐시에 포함된 데이터가 업데이트될 때 선제적으로 캐시 항목을 제거하는 것입니다. 키를 알고 있으면 개별 항목을 제거할 수 있습니다.
 

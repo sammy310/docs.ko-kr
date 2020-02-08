@@ -4,12 +4,12 @@ description: 패키지 관리자를 사용하여 Fedora 31에 .NET Core SDK 및 
 author: thraka
 ms.author: adegeo
 ms.date: 12/17/2019
-ms.openlocfilehash: 25c670694ed2d9e89fe37cedf0b06efd8bc93293
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 28bda3676f99037e565080e1ff3f9d89a67d0d69
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116953"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920779"
 ---
 # <a name="fedora-31-package-manager---install-net-core"></a>Fedora 31 패키지 관리자 - .NET Core 설치
 
@@ -61,3 +61,11 @@ sudo dnf install dotnet-runtime-3.1
 ## <a name="how-to-install-other-versions"></a>다른 버전을 설치하는 방법
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
+## <a name="troubleshoot-the-package-manager"></a>패키지 관리자 문제 해결
+
+이 섹션에서는 패키지 관리자를 사용하여 .NET Core를 설치할 때 발생할 수 있는 일반적인 오류에 대한 정보를 제공합니다.
+
+### <a name="failed-to-fetch"></a>가져오지 못함
+
+[!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]

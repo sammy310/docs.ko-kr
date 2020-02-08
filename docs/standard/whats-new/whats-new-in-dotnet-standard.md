@@ -4,12 +4,12 @@ description: 이 문서에는 .NET Standard의 각 새 버전에 있는 새로�
 ms.custom: updateeachrelease
 ms.date: 04/12/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: ebf656c4a5499fff54cb5a70a93c4e8cc9c82d0a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a90df0360211c3b02f4f2d8697890180099c5807
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73101762"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921065"
 ---
 # <a name="whats-new-in-the-net-standard"></a>.NET Standard의 새로운 기능
 
@@ -49,7 +49,7 @@ ms.locfileid: "73101762"
 - <xref:System.String> 클래스의 문자열 비교, 열거 및 정규화를 위한 향상된 지원.
 - <xref:System.TimeZoneInfo.AdjustmentRule> 및 <xref:System.TimeZoneInfo.TransitionTime> 클래스의 일광 절약 조정 및 전환 시간에 대한 지원.
 - <xref:System.Type> 클래스의 크게 향상된 기능.
-- <xref:System.Runtime.Serialization.SerializationInfo> 및 <xref:System.Runtime.Serialization.StreamingContext> 매개 변수를 통해 예외 생성자를 추가하여 예외 개체를 deserialize하는 기능에 대한 향상된 지원.
+- <xref:System.Runtime.Serialization.SerializationInfo> 및 <xref:System.Runtime.Serialization.StreamingContext> 매개 변수를 통해 예외 생성자를 추가하여 예외 개체를 역직렬화하는 기능에 대한 향상된 지원.
 
 ### <a name="support-for-net-framework-libraries"></a>.NET Framework 라이브러리에 대한 지원
 
@@ -63,7 +63,7 @@ ms.locfileid: "73101762"
 
 ### <a name="tooling-support-for-net-standard-libraries"></a>.NET Standard 라이브러리의 도구 지원
 
-.NET Core 2.0과 .NET Standard 2.0 릴리스에서는 Visual Studio 2017과 [.NET Core CLI(명령줄 인터페이스)](../../core/tools/index.md)에서 NET Standard 라이브러리를 만들기 위한 도구가 모두 지원됩니다.
+.NET Core 2.0과 .NET Standard 2.0 릴리스에서는 Visual Studio 2017과 [.NET Core CLI](../../core/tools/index.md)에서 NET Standard 라이브러리를 만들기 위한 도구가 모두 지원됩니다.
 
 **.NET Core 플랫폼 간 개발** 워크로드를 통해 Visual Studio를 설치하는 경우 다음 그림과 같이 프로젝트 템플릿을 사용하여 .NET Standard 2.0 라이브러리 프로젝트를 만들 수 있습니다.
 
@@ -91,7 +91,7 @@ dotnet new classlib -lang vb
 
 ---
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET Standard](../net-standard.md)
 - [.NET Standard 소개](https://devblogs.microsoft.com/dotnet/introducing-net-standard/)

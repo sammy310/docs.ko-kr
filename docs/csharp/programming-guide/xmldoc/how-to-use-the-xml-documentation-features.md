@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 5de94b1f1ab44f954b5bab9f8b5212c33325c19d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 57034fb835d4c82b5bf658e61ec78ef226c2551e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75696716"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789780"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>XML 문서 기능을 사용하는 방법
 
@@ -20,7 +20,7 @@ ms.locfileid: "75696716"
 
 [!code-csharp[csProgGuideDocComments#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#15)]
 
-이 예제에서는 다음 내용과 같은 내용의 .xml 파일을 생성합니다.
+이 예제에서는 다음 내용과 같은 내용의 *.xml* 파일을 생성합니다.
 
 ```xml
 <?xml version="1.0"?>
@@ -120,7 +120,7 @@ XML 문서는 ///로 시작합니다. 새 프로젝트를 만드는 경우 마�
 
 - 문서는 잘 구성된 XML이어야 합니다. XML이 잘 구성되지 않은 경우 경고가 생성되고, 문서 파일에 오류가 발생했다는 주석이 포함됩니다.
 
-- 개발자는 각자 고유한 태그 집합을 만들 수 있습니다. 권장 태그 집합이 있습니다([문서 주석에 대한 권장 태그](recommended-tags-for-documentation-comments.md) 참조). 권장 태그 중 일부는 특별한 의미가 있습니다.
+- 개발자는 각자 고유한 태그 집합을 만들 수 있습니다. [권장 태그 집합](recommended-tags-for-documentation-comments.md)이 있습니다. 권장 태그 중 일부는 특별한 의미가 있습니다.
 
   - \<param> 태그는 매개 변수를 설명하는 데 사용됩니다. 사용되는 경우 컴파일러는 매개 변수가 있고 모든 매개 변수가 문서에서 설명되었는지 확인합니다. 확인에 실패하면 컴파일러가 경고를 실행합니다.
 

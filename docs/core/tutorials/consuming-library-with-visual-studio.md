@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: ec9c6f992bcd4a76e2f70018f3facca42b7b660c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4eb75f23359334ea483cba1498f1804c4b24c80c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714065"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920452"
 ---
 # <a name="consume-a-net-standard-library-in-visual-studio"></a>Visual Studio에서 .NET Standard 라이브러리 사용
 
@@ -86,4 +86,4 @@ ms.locfileid: "75714065"
    > [!TIP]
    > *dotnet.exe*를 포함하는 디렉터리가 해당 PATH에 없는 경우 콘솔 창에 `where dotnet.exe`를 입력하여 해당 위치를 찾을 수 있습니다.
 
-NuGet 패키지를 만드는 방법에 대한 자세한 내용은 [플랫폼 간 도구로 NuGet 패키지를 만드는 방법](../deploying/creating-nuget-packages.md)을 참조하세요.
+NuGet 패키지를 만드는 방법에 대한 자세한 내용은 [.NET Core CLI로 NuGet 패키지를 만드는 방법](../deploying/creating-nuget-packages.md)을 참조하세요.

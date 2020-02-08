@@ -2,12 +2,12 @@
 title: dotnet 설치 스크립트
 description: .NET Core SDK 및 공유 런타임을 설치하는 dotnet-install 스크립트에 대해 알아봅니다.
 ms.date: 01/23/2020
-ms.openlocfilehash: 169991ac4cd24ccab90634ff265c3ae5b603f8e9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 76055627c6b2016396209c9594dba36e56eb841c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734210"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920570"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 스크립트 참조
 
@@ -35,7 +35,7 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
 
 ## <a name="description"></a>설명
 
-`dotnet-install` 스크립트는 .NET Core CLI 도구 및 공유 런타임을 포함하는 .NET Core SDK의 비관리자 설치를 수행하는 데 사용됩니다.
+`dotnet-install` 스크립트는 .NET Core CLI 및 공유 런타임을 포함하는 .NET Core SDK의 비관리자 설치를 수행하는 데 사용됩니다.
 
 안정적인 버전의 스크립트를 사용하는 것이 좋습니다.
 
@@ -108,7 +108,7 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
 
 - **`-NoPath|--no-path`**
 
-  설정하면 설치 폴더를 현재 세션의 경로로 내보내지 않습니다. 기본적으로 스크립트는 경로를 수정하여, 설치 후 CLI 도구를 즉시 사용할 수 있게 만듭니다.
+  설정하면 설치 폴더를 현재 세션의 경로로 내보내지 않습니다. 기본적으로 스크립트는 경로를 수정하므로 설치 후 .NET Core CLI를 즉시 사용할 수 있습니다.
 
 - **`-Verbose|--verbose`**
 

@@ -5,12 +5,12 @@ ms.date: 12/17/2019
 author: billwagner
 ms.author: wiwagn
 ms.custom: updateeachrelease
-ms.openlocfilehash: 8f8dbf7a8730712dc546643a6ef86425a3e19794
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 82fbccdec0323b54d313960279fcbfeeb6033319
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713993"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920408"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>.NET Core 런타임 및 SDK를 제거하는 방법
 
@@ -136,7 +136,7 @@ Microsoft.NETCore.App 2.1.1 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ---
 
-## <a name="uninstalling-net-core"></a>.NET Core 제거
+## <a name="uninstall-net-core"></a>.NET Core 제거
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
@@ -220,7 +220,7 @@ Visual Studio 2019 버전 16.3 이전에는 Visual Studio 설치 관리자가 �
 | Visual Studio 2017 버전 15.9 | .NET Core SDK 2.2.1xx, 2.1.5xx |
 | Visual Studio 2017 버전 15.8 | .NET Core SDK 2.1.4xx |
 
-Visual Studio 2019 16.3부터 Visual Studio는 .NET Core SDK의 자체 복사본을 담당합니다. 그런 이유로 **프로그램 추가/제거** 대화 상자에 해당 SDK 버전이 더 이상 표시되지 않습니다.
+Visual Studio 2019 버전 16.3부터 Visual Studio는 .NET Core SDK의 자체 복사본을 담당합니다. 그런 이유로 **프로그램 추가/제거** 대화 상자에 해당 SDK 버전이 더 이상 표시되지 않습니다.
 
 ## <a name="remove-the-nuget-fallback-folder"></a>NuGet 대체 폴더 제거
 

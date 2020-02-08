@@ -1,15 +1,15 @@
 ---
 title: XML 주석을 사용하여 코드 문서화
 description: XML 문서 주석을 사용하여 코드를 문서화하고 컴파일 시간에 XML 문서 파일을 생성하는 방법을 알아봅니다.
-ms.date: 02/14/2017
+ms.date: 01/21/2020
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 6aa52030e20f61b26311347a57629658ebe0e609
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1ec088db1de7c953bdb20b1129c5fd40f9e31454
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713935"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965934"
 ---
 # <a name="document-your-code-with-xml-comments"></a>XML 주석을 사용하여 코드 문서화
 
@@ -61,7 +61,7 @@ XML 문서 주석에는 삼중 슬래시(`///`) 및 XML 형식의 주석 본문�
 
 [!code-csharp[Summary Tag](~/samples/snippets/csharp/concepts/codedoc/summary-tag.cs)]
 
-`<summary>` 태그는 매우 중요하고 태그 내용은 IntelliSense 또는 API 참조 문서에서 형식 또는 멤버 정보의 기본 소스이므로 포함하는 것이 좋습니다.
+`<summary>` 태그는 중요하며, 태그 내용은 IntelliSense 또는 API 참조 문서에서 형식 또는 멤버 정보의 기본 소스이므로 포함하는 것이 좋습니다.
 
 ## <a name="remarks"></a>\<remarks>
 
@@ -163,12 +163,17 @@ XML 문서 주석에는 삼중 슬래시(`///`) 및 XML 형식의 주석 본문�
 
 ## <a name="list"></a>\<list>
 
-`<list>` 태그를 사용하여 문서 정보의 서식을 순서가 지정된 목록, 순서가 지정되지 않은 목록 또는 표로 지정합니다.
-`Math` 라이브러리에서 지원하는 모든 수학 연산의 순서가 지정되지 않은 목록을 만듭니다.
+`<list>` 태그를 사용하여 문서 정보의 서식을 순서가 지정된 목록, 순서가 지정되지 않은 목록 또는 표로 지정합니다. `Math` 라이브러리에서 지원하는 모든 수학 연산의 순서가 지정되지 않은 목록을 만듭니다.
 
 [!code-csharp[List Tag](~/samples/snippets/csharp/concepts/codedoc/list-tag.cs)]
 
 `type` 특성을 각각 `number` 또는 `table`로 변경하여 순서가 지정된 목록 또는 표를 만들 수 있습니다.
+
+## <a name="inheritdoc"></a>\<inheritdoc>
+
+`<inheritdoc>` 태그를 사용하여 기본 클래스, 인터페이스 및 유사한 메서드에서 XML 주석을 상속할 수 있습니다. 이렇게 하면 중복 XML 주석을 복사하여 붙여넣을 필요가 없으며 XML 주석이 자동으로 동기화됩니다.
+
+[!code-csharp-interactive[InheritDoc Tag](~/samples/snippets/csharp/concepts/codedoc/inheritdoc-tag.cs)]
 
 ### <a name="put-it-all-together"></a>전체 과정
 

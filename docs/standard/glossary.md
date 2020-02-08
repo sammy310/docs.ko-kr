@@ -3,12 +3,12 @@ title: .NET 용어
 description: .NET 설명서에서 사용되는 선택한 용어의 의미를 알아봅니다.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 9bca68753a93721e48d1ff90aa7baf3a147da0ee
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 822d6c9513d49dcc6bc57421003441d9bcc7c281
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708206"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921119"
 ---
 # <a name="net-glossary"></a>.NET 용어
 
@@ -167,7 +167,7 @@ Mono의 자세한 내용은 [Mono 설명서](https://www.mono-project.com/docs/)
 
 다양한 플랫폼에서 사용할 수 있는 .NET Core 애플리케이션 개발용 툴 체인입니다.
 
-[.NET Core CLI(명령줄 인터페이스) 도구](../core/tools/index.md)를 참조하세요.
+[.NET Core CLI](../core/tools/index.md)를 참조하세요.
 
 ## <a name="net-core-sdk"></a>.NET Core SDK
 

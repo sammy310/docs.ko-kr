@@ -3,20 +3,20 @@ title: WCF svcutil 도구 개요
 description: .NET Framework 프로젝트용 WCF svcutil 도구와 유사하게, .NET Core 및 ASP.NET Core 프로젝트 기능을 추가하는 Microsoft WCF dotnet-svcutil 도구에 대한 개요입니다.
 author: mlacouture
 ms.date: 02/22/2019
-ms.openlocfilehash: d204576f27227ce6e65d61471f19cdf3ec4df37a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0607c73935f319f2cc0d8d9f92d96a4c71c54edf
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714556"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920943"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>.NET Core용 WCF dotnet-svcutil 도구
 
-WCF(Windows Communication Foundation) **dotnet-svcutil** 도구는 네트워크 위치의 웹 서비스 또는 WSDL 파일에서 메타데이터를 검색하고, 해당 웹 서비스 작업에 액세스하는 클라이언트 프록시 메서드가 포함된 WCF 클래스를 생성하는 .NET Core CLI 도구입니다.
+WCF(Windows Communication Foundation) **dotnet-svcutil** 도구는 네트워크 위치의 웹 서비스 또는 WSDL 파일에서 메타데이터를 검색하고, 해당 웹 서비스 작업에 액세스하는 클라이언트 프록시 메서드가 포함된 WCF 클래스를 생성하는 .NET 도구입니다.
 
 .NET Framework 프로젝트용 [**서비스 모델 메타데이터 - svcutil**](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 도구와 비슷하게, **dotnet-svcutil**은 .NET Core 및 .NET Standard 프로젝트와 호환되는 웹 서비스 참조를 생성하기 위한 명령줄 도구입니다.
 
-**dotnet-svcutil** 도구는 Visual Studio 2017 버전 15.5에서 처음 제공된 [**WCF Web Service Reference Provider 도구 사용**](wcf-web-service-reference-guide.md) Visual Studio 연결된 서비스 공급자의 대체 옵션입니다. .NET Core CLI 도구인 **dotnet svcutil** 도구는 Linux, macOS, Windows에서 플랫폼 간에 사용할 수 있습니다.
+**dotnet-svcutil** 도구는 Visual Studio 2017 버전 15.5에서 처음 제공된 [**WCF Web Service Reference Provider 도구 사용**](wcf-web-service-reference-guide.md) Visual Studio 연결된 서비스 공급자의 대체 옵션입니다. .NET 도구인 **dotnet-svcutil** 도구는 Linux, macOS, Windows와 같은 여러 플랫폼에서 사용할 수 있습니다.
 
 > [!IMPORTANT]
 > 신뢰할 수 있는 원본의 서비스만 참조해야 합니다. 신뢰할 수 없는 원본에서 참조를 추가하면 보안이 손상될 수 있습니다.

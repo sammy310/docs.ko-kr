@@ -4,12 +4,12 @@ description: 플러그 인을 지원하는 .NET Core 애플리케이션을 만�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: 16fc9d3c721ddd0618c980c7dc406b7ad7864ff5
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 32205a507bc95b2f8a2f75368aab3fde710249ee
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739706"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787850"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>플러그 인을 사용하여 .NET Core 애플리케이션 만들기
 
@@ -20,7 +20,7 @@ ms.locfileid: "73739706"
 - <xref:System.Runtime.Loader.AssemblyDependencyResolver?displayProperty=fullName> 형식을 사용하여 플러그 인에 종속성을 포함할 수 있습니다.
 - 빌드 아티팩트를 복사하기만 하면 쉽게 배포할 수 있는 작성자 플러그 인입니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 - [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download) 또는 최신 버전을 설치합니다.
 
@@ -250,13 +250,16 @@ static Assembly LoadPlugin(string relativePath)
 
 ```xml
 <ItemGroup>
-<ProjectReference Include="..\PluginBase\PluginBase.csproj">
-    <Private>false</Private>
-</ProjectReference>
+    <ProjectReference Include="..\PluginBase\PluginBase.csproj">
+        <Private>false</Private>
+        <ExcludeAssets>runtime</ExcludeAssets>
+    </ProjectReference>
 </ItemGroup>
 ```
 
 `<Private>false</Private>` 요소는 중요합니다. 그러면 MSBuild에서 *PluginBase.dll*을 HelloPlugin의 출력 디렉터리에 복사하지 않도록 지시합니다. *PluginBase.dll* 어셈블리가 출력 디렉터리에 표시되는 경우 `PluginLoadContext`는 *HelloPlugin.dll* 어셈블리를 로드할 때 거기서 해당 어셈블리를 찾아 함께 로드합니다. 이 시점에서 `HelloPlugin.HelloCommand` 형식은 기본 로드 컨텍스트에 로드된 `ICommand` 인터페이스가 아닌 `HelloPlugin` 프로젝트의 출력 디렉터리에서 *PluginBase.dll*의 `ICommand` 인터페이스를 구현합니다. 런타임에서 이러한 두 가지 형식을 다른 어셈블리와 다른 형식으로 인식하므로 `AppWithPlugin.Program.CreateCommands` 메서드는 해당 명령을 찾지 못합니다. 결과적으로, 플러그 인 인터페이스를 포함하는 어셈블리에 대한 참조에 `<Private>false</Private>` 메타데이터가 필요합니다.
+
+마찬가지로 `PluginBase`가 다른 패키지를 참조하는 경우 `<ExcludeAssets>runtime</ExcludeAssets>` 요소도 중요합니다. 이 설정은 `<Private>false</Private>`와 효과가 동일하지만 `PluginBase` 프로젝트 또는 해당 종속성 중 하나에 포함될 수 있는 패키지 참조에서 작동합니다.
 
 이제 `HelloPlugin` 프로젝트가 완료되었으므로 `HelloPlugin` 플러그 인을 찾을 수 있는 위치를 인식하도록 `AppWithPlugin` 프로젝트를 업데이트해야 합니다. `// Paths to plugins to load` 주석 뒤에 `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"`을 `pluginPaths` 배열의 요소로 추가합니다.
 
@@ -268,7 +271,7 @@ static Assembly LoadPlugin(string relativePath)
 
 이 자습서의 전체 소스 코드는 [dotnet/samples 리포지토리](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin)에서 찾을 수 있습니다. 완료된 샘플에는 `AssemblyDependencyResolver` 동작의 몇 가지 다른 예제가 포함됩니다. 예를 들어 `AssemblyDependencyResolver` 개체는 NuGet 패키지에 포함된 지역화된 위성 어셈블리뿐만 아니라 네이티브 라이브러리를 확인할 수도 있습니다. 샘플 리포지토리의 `UVPlugin` 및 `FrenchPlugin`에서 이와 같은 시나리오를 보여 줍니다.
 
-## <a name="reference-a-plugin-from-a-nuget-package"></a>NuGet 패키지에서 플러그 인 참조
+## <a name="reference-a-plugin-interface-from-a-nuget-package"></a>NuGet 패키지에서 플러그 인 인터페이스 참조
 
 `A.PluginBase`라는 NuGet 패키지에 정의된 플러그 인 인터페이스가 포함된 앱 A가 있다고 가정하겠습니다. 플러그 인 프로젝트에서 패키지를 올바르게 참조하려면 어떻게 할까요? 프로젝트 참조의 경우 프로젝트 파일의 `ProjectReference` 요소에서 `<Private>false</Private>` 메타데이터를 사용하면 dll이 출력에 복사되지 않도록 방지합니다.
 

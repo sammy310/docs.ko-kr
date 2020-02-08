@@ -4,12 +4,12 @@ description: 패키지 관리자를 사용하여 openSUSE 15에 .NET Core SDK �
 author: thraka
 ms.author: adegeo
 ms.date: 12/26/2019
-ms.openlocfilehash: ae0f6664c0545ceb047cd9b110fe3f26740e5816
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: aaece5e3554ab567cf82c23265c8fba1656298d8
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116138"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920763"
 ---
 # <a name="opensuse-15-package-manager---install-net-core"></a>openSUSE 15 패키지 관리자 - .NET Core 설치
 
@@ -64,3 +64,11 @@ sudo zypper install dotnet-runtime-3.1
 ## <a name="how-to-install-other-versions"></a>다른 버전을 설치하는 방법
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
+## <a name="troubleshoot-the-package-manager"></a>패키지 관리자 문제 해결
+
+이 섹션에서는 패키지 관리자를 사용하여 .NET Core를 설치할 때 발생할 수 있는 일반적인 오류에 대한 정보를 제공합니다.
+
+### <a name="failed-to-fetch"></a>가져오지 못함
+
+[!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]

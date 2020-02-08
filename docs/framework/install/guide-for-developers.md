@@ -1,19 +1,19 @@
 ---
 title: .NET Framework 개발자 팩 또는 재배포 가능 패키지 설치
 ms.custom: updateeachrelease
-ms.date: 04/18/2019
+ms.date: 01/17/2020
 helpviewer_keywords:
 - .NET Framework redistributable package, downloading
 - .NET Framework, installing
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
-ms.openlocfilehash: 407c9a3fd5057a8e1d68707c9e475d76b3f266e2
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 66643021ce4939505af24cf3a72ab194662a15f7
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960052"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965921"
 ---
 # <a name="install-the-net-framework-for-developers"></a>개발자용 .NET Framework 설치
 
@@ -33,18 +33,18 @@ ms.locfileid: "74960052"
 
 다음 표에서 빠른 링크를 확인하거나 자세한 내용을 확인하세요. 설치하기 전에 .NET Framework에 대한 시스템 요구 사항을 보려면 [시스템 요구 사항](../get-started/system-requirements.md)을 참조하십시오. 문제 해결에 대한 도움말은 [문제 해결](troubleshoot-blocked-installations-and-uninstallations.md)을 참조하십시오.
 
-|.NET Framework 버전|개발자 설치|재배포 가능 설치|플랫폼 지원|
-|----------------------------|----------------------------|----------------------------------|----------------------|
-|**4.8**|[.NET Framework 4.8 개발자 팩](https://go.microsoft.com/fwlink/?linkid=2088517)|[다운로드 센터 4.8 웹 설치 관리자](https://go.microsoft.com/fwlink/?LinkId=2085155)<br/><br/>[다운로드 센터 4.8 오프라인 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2088631)|**포함된 운영 체제:**<br/><br/>Windows 10 2019년 5월 업데이트<br /><br /> **설치 가능한 운영 체제:**<br/><br/>Windows 10 2018년 10월 업데이트<br/>Windows 10 2018년 4월 업데이트<br/>Windows 10 Fall Creators Update<br/>Windows 10 크리에이터스 업데이트 <br /> Windows 10 1주년 업데이트<br /> Windows 8.1 및 이전 버전<br /> Windows Server 2019<br/>Windows Server, 버전 1809<br/>Windows Server, 버전 1803<br /><br/> (전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)||
-|**4.7.2**|[NET Framework 4.7.2 개발자 팩](https://go.microsoft.com/fwlink/?LinkId=874338)|[다운로드 센터 4.7.2 웹 설치 관리자](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[다운로드 센터 4.7.2 오프라인 설치 관리자](https://go.microsoft.com/fwlink/?LinkId=863265)|**포함된 운영 체제:** <br/><br/>Windows 10 2018년 10월 업데이트<br/>Windows 10 2018년 4월 업데이트<br/>Windows Server 2019<br/>Windows Server, 버전 1809<br/>Windows Server, 버전 1803<br /><br /> **설치 가능한 운영 체제:**<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 크리에이터스 업데이트 <br /> Windows 10 1주년 업데이트<br /> Windows 8.1 및 이전 버전<br /> Windows Server, 버전 1709 이상<br /><br/> (전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)||
-|**4.7.1**|[NET Framework 4.7.1 개발자 팩](https://go.microsoft.com/fwlink/?LinkId=852105)|[4.7.1 웹 설치 관리자 다운로드 페이지](https://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [4.7.1 오프라인 설치 관리자 다운로드 페이지](https://go.microsoft.com/fwlink/?LinkId=852107)|**포함된 운영 체제:** <br/><br/>Windows 10 Fall Creators Update<br/>Windows Server, 버전 1709<br /><br /> **설치 가능한 운영 체제:**<br/><br/> Windows 10 크리에이터스 업데이트 <br /> Windows 10 1주년 업데이트<br /> Windows 8.1 및 이전 버전<br /> Windows Server 2016 이상<br /> (전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)||
-|**4.7**|[NET Framework 4.7 개발자 팩](https://go.microsoft.com/fwlink/?LinkId=825319)|[4.7 웹 설치 관리자의 다운로드 페이지](https://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [4.7 오프라인 설치 관리자의 다운로드 페이지](https://go.microsoft.com/fwlink/?LinkId=825303)|**포함된 운영 체제:** <br/><br/>Windows 10 크리에이터스 업데이트<br /><br /> **설치 가능한 운영 체제:**<br /><br/> Windows 10 1주년 업데이트<br /> Windows 8.1 및 이전 버전<br /> Windows Server 2016 이상<br /> (전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)||
-|**4.6.2**|[NET Framework 4.6.2 개발자 팩](https://go.microsoft.com/fwlink/?LinkId=780617)|[4.6.2 웹 설치 관리자의 다운로드 페이지](https://go.microsoft.com/fwlink/?LinkId=780597)<br /><br /> [4.6.2 오프라인 설치 관리자의 다운로드 페이지](https://go.microsoft.com/fwlink/?LinkId=780601)|**포함된 운영 체제:** <br/><br /> Windows 10 1주년 업데이트<br /><br /> **설치 가능한 운영 체제:**<br /><br/> Windows 10 11월 업데이트 <br/> Windows 10 <br /> Windows 8.1 및 이전 버전<br /> Windows Server 2012 R2 및 이전 버전<br /> (전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)|
-|**4.6.1**|[NET Framework 4.6.1 개발자 팩](https://go.microsoft.com/fwlink/?LinkId=690706)|[4.6.1 웹 설치 관리자의 다운로드 페이지](https://go.microsoft.com/fwlink/?LinkId=671729)<br /><br /> [4.6.1 오프라인 설치 관리자의 다운로드 페이지](https://go.microsoft.com/fwlink/?LinkId=671744)|**설치 가능한 운영 체제:**<br /><br/> Windows 10 <br /> Windows 8.1 및 이전 버전<br /> Windows Server 2012 R2 및 이전 버전<br /> (전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)|
-|**4.6**|Visual Studio 2015에 포함됨<br /><br /> [Microsoft .NET Framework 4.6 타기팅 팩](https://go.microsoft.com/fwlink/?LinkId=528261)|[4.6 웹 설치 관리자의 다운로드 페이지](https://go.microsoft.com/fwlink/?LinkId=528259)<br /><br /> [4.6 오프라인 설치 관리자의 다운로드 페이지](https://go.microsoft.com/fwlink/?LinkId=528233)|**포함된 운영 체제:** <br/><br /> Windows 10 <br />[Visual Studio 2015](https://my.visualstudio.com/Downloads?q=visual%20studio%202015)<br /><br /> **설치 가능한 운영 체제:**<br /><br/> Windows 8.1 및 이전 버전<br /> Windows Server 2012 R2 및 이전 버전<br /> (전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)|
-|**4.5.2**|[Microsoft .NET Framework 4.5.2 개발자 팩](https://go.microsoft.com/fwlink/?LinkId=397702)<br /><br /> Visual Studio 2013, Visual Studio 2012 또는 기타 IDE와 함께 사용할 경우|[4.5.2 웹 설치 관리자의 다운로드 페이지](https://go.microsoft.com/fwlink/p/?LinkId=397703)<br /><br /> [4.5.2 오프라인 설치 관리자의 다운로드 페이지](https://go.microsoft.com/fwlink/p/?LinkId=397706)|**설치 가능한 운영 체제:**<br /><br/> Windows 8.1 및 이전 버전<br /> Windows Server 2012 R2 및 이전 버전<br /> (전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)|
-|**4.5.1**|[Microsoft .NET Framework 4.5.1 개발자 팩](https://go.microsoft.com/fwlink/?LinkId=324213)<br /><br /> Visual Studio 2013, Visual Studio 2012 또는 기타 IDE와 함께 사용할 경우|[4.5.1 웹 설치 관리자의 다운로드 페이지](https://go.microsoft.com/fwlink/p/?LinkId=310158)<br /><br /> [4.5.1 오프라인 설치 관리자의 다운로드 페이지](https://go.microsoft.com/fwlink/p/?LinkId=310159)|**포함된 운영 체제:**<br /> <br/>Windows 8.1<br /> Windows Server 2012 R2<br /> [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)<br /><br /> **설치 가능한 운영 체제:**<br /><br/> Windows 8 및 이전 버전<br /> Windows Server 2012 및 이전 버전<br />(전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)|
-|**4.5**|Visual Studio 2012에 포함됨<br /><br /> 또한 Windows 8 SDK의 일부로 사용 가능|[4.5 웹 설치 관리자의 다운로드 페이지](https://go.microsoft.com/fwlink/p/?LinkId=245484)|**포함된 운영 체제:** <br/><br /> Windows 8<br /> Windows Server 2012<br /> [Visual Studio 2012](https://my.visualstudio.com/Downloads?q=visual%20studio%202012)<br /><br /> **설치 가능한 운영 체제:**<br/><br /> Windows 7 및 이전 버전<br /> Windows Server 2008 SP2 및 이전 버전<br />(전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)|
+| .NET Framework 버전 | 설치 프로그램(개발자 팩 및 런타임) | 플랫폼 지원 |
+| ---------------------- | -------------------------------------- | ---------------- |
+|**4.8**   | [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)    | **포함된 운영 체제:**<br/><br/>Windows 10 2019년 5월 업데이트<br/>[Visual Studio 2019(16.3 업데이트)](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **설치 가능한 운영 체제:**<br/><br/>Windows 10 2018년 10월 업데이트<br/>Windows 10 2018년 4월 업데이트<br/>Windows 10 Fall Creators Update<br/>Windows 10 크리에이터스 업데이트 <br /> Windows 10 1주년 업데이트<br /> Windows 8.1 및 이전 버전<br /> Windows Server 2019<br/>Windows Server, 버전 1809<br/>Windows Server, 버전 1803<br /><br/> (전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)||
+|**4.7.2** | [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472) | **포함된 운영 체제:** <br/><br/>Windows 10 2018년 10월 업데이트<br/>Windows 10 2018년 4월 업데이트<br/>Windows Server 2019<br/>Windows Server, 버전 1809<br/>Windows Server, 버전 1803<br/>[Visual Studio 2017(15.8 업데이트)](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **설치 가능한 운영 체제:**<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 크리에이터스 업데이트 <br /> Windows 10 1주년 업데이트<br /> Windows 8.1 및 이전 버전<br /> Windows Server, 버전 1709 이상<br /><br/> (전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)||
+|**4.7.1** | [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471) | **포함된 운영 체제:** <br/><br/>Windows 10 Fall Creators Update<br/>Windows Server, 버전 1709<br/>[Visual Studio 2017(15.5 업데이트)](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **설치 가능한 운영 체제:**<br/><br/> Windows 10 크리에이터스 업데이트 <br /> Windows 10 1주년 업데이트<br /> Windows 8.1 및 이전 버전<br /> Windows Server 2016 이상<br /> (전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)||
+|**4.7**   | [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)    | **포함된 운영 체제:** <br/><br/>Windows 10 크리에이터스 업데이트<br/>[Visual Studio 2017(15.3 업데이트)](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **설치 가능한 운영 체제:**<br /><br/> Windows 10 1주년 업데이트<br /> Windows 8.1 및 이전 버전<br /> Windows Server 2016 이상<br /> (전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)||
+|**4.6.2** | [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462) | **포함된 운영 체제:** <br/><br/>Windows 10 1주년 업데이트<br /><br /> **설치 가능한 운영 체제:**<br /><br/> Windows 10 11월 업데이트 <br/> Windows 10 <br /> Windows 8.1 및 이전 버전<br /> Windows Server 2012 R2 및 이전 버전<br /> (전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)|
+|**4.6.1** | [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461) | **포함된 운영 체제:** <br/><br/>[Visual Studio 2015 업데이트 2](https://my.visualstudio.com/Downloads?q=visual%20studio%202015)<br/><br/>**설치 가능한 운영 체제:**<br /><br/> Windows 10 <br /> Windows 8.1 및 이전 버전<br /> Windows Server 2012 R2 및 이전 버전<br /> (전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)|
+|**4.6**   | [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)    | **포함된 운영 체제:** <br/><br/> Windows 10 <br />[Visual Studio 2015](https://my.visualstudio.com/Downloads?q=visual%20studio%202015)<br /><br /> **설치 가능한 운영 체제:**<br /><br/> Windows 8.1 및 이전 버전<br /> Windows Server 2012 R2 및 이전 버전<br /> (전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)|
+|**4.5.2** | [.NET Framework 4.5.2](https://dotnet.microsoft.com/download/dotnet-framework/net452) | **설치 가능한 운영 체제:**<br/><br/> Windows 8.1 및 이전 버전<br /> Windows Server 2012 R2 및 이전 버전<br /> (전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)|
+|**4.5.1** | [.NET Framework 4.5.1](https://dotnet.microsoft.com/download/dotnet-framework/net451) | **포함된 운영 체제:**<br/><br/>Windows 8.1<br /> Windows Server 2012 R2<br /> [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)<br /><br /> **설치 가능한 운영 체제:**<br /><br/> Windows 8 및 이전 버전<br /> Windows Server 2012 및 이전 버전<br />(전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)|
+|**4.5**   | [.NET Framework 4.5](https://dotnet.microsoft.com/download/dotnet-framework/net45)    | **포함된 운영 체제:** <br/><br/>Windows 8<br /> Windows Server 2012<br /> [Visual Studio 2012](https://my.visualstudio.com/Downloads?q=visual%20studio%202012)<br /><br /> **설치 가능한 운영 체제:**<br/><br /> Windows 7 및 이전 버전<br /> Windows Server 2008 SP2 및 이전 버전<br />(전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)|
 
 지원되는 모든 플랫폼에서 .NET Framework의 특정 버전에 대한 **개발자 팩**을 설치할 수 있습니다.
 
@@ -68,23 +68,15 @@ Visual Studio 또는 다른 개발 환경에서 최신 버전의 .NET Framework�
 
 .NET Framework 4.5.1 또는 4.5.2용 개발자 팩, .NET Framework 4.6용 대상 팩 및 .NET Framework 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 또는 4.8용 개발자 팩에서는 Visual Studio와 같은 통합 개발 환경에서 사용할 수 있는 특정 .NET Framework 버전의 참조 어셈블리, 언어 팩 및 IntelliSense 파일을 제공합니다.  Visual Studio를 사용하는 경우 개발자 팩 또는 타기팅 팩은 설치된 .NET Framework 버전을 새 프로젝트를 만들 때 선택한 대상에도 추가합니다.  다음 중 하나를 선택합니다.
 
-- [Microsoft .NET Framework 4.8 개발자 팩](https://go.microsoft.com/fwlink/?linkid=2088517)
-
-- [Microsoft .NET Framework 4.7.2 개발자 팩](https://go.microsoft.com/fwlink/?LinkId=874338)
-
-- [Microsoft .NET Framework 4.7.1 개발자 팩](https://go.microsoft.com/fwlink/?LinkId=852105)
-
-- [Microsoft .NET Framework 4.7 개발자 팩](https://go.microsoft.com/fwlink/?LinkId=825319)
-
-- [Microsoft .NET Framework 4.6.2 개발자 팩](https://go.microsoft.com/fwlink/?LinkId=780617)
-
-- [Microsoft .NET Framework 4.6.1 개발자 팩](https://go.microsoft.com/fwlink/?LinkId=690706)
-
-- [Microsoft .NET Framework 4.6 타기팅 팩](https://go.microsoft.com/fwlink/?LinkId=528261)
-
-- [.NET Framework 4.5.2 개발자 팩](https://go.microsoft.com/fwlink/?LinkId=397702)(버전 4.5.2를 Windows 8.1 또는 이전 버전, Visual Studio 2013, Visual Studio 2012 또는 기타 IDE에 설치하려는 경우)
-
-- [.NET Framework 4.5.1 개발자 팩](https://go.microsoft.com/fwlink/?LinkId=324213)(버전 4.5.1을 Visual Studio 2012 또는 기타 IDE에 설치하려는 경우)
+- [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+- [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
+- [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
+- [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
+- [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)
+- [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)
+- [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
+- [.NET Framework 4.5.2](https://dotnet.microsoft.com/download/dotnet-framework/net452)(버전 4.5.2를 Windows 8.1 또는 이전 버전, Visual Studio 2013, Visual Studio 2012 또는 기타 IDE에 설치하려는 경우)
+- [.NET Framework 4.5.1](https://dotnet.microsoft.com/download/dotnet-framework/net451)(버전 4.5.1을 Visual Studio 2012 또는 기타 IDE에 설치하려는 경우)
 
 개발자 팩 다운로드 페이지에서 **다운로드**를 선택합니다. 그리고 **실행** 또는 **저장**을 선택하고 표시된 메시지의 지침을 따릅니다. 다음 그림과 같이 Visual Studio 설치 관리자에서 **.NET 데스크톱 개발** 워크로드의 옵션 구성 요소 중에서 선택하여 특정 버전의.NET Framework용 개발자 팩 또는 대상 팩을 설치할 수도 있습니다.
 
@@ -110,25 +102,16 @@ Visual Studio에서 애플리케이션을 빌드하거나 명령줄에서 MSBuil
 
 1. 설치하려는 .NET Framework 버전의 다운로드 페이지를 엽니다.
 
-   - .NET Framework 4.8([웹 설치 관리자](https://go.microsoft.com/fwlink/?LinkId=2085155) 또는 [오프라인 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2088631))
-
-   - .NET Framework 4.7.2([웹 설치 관리자](https://go.microsoft.com/fwlink/?LinkId=863262) 또는 [오프라인 설치 관리자](https://go.microsoft.com/fwlink/p/?LinkId=863265))
-
-   - .NET Framework 4.7.1([웹 설치 관리자](https://go.microsoft.com/fwlink/?LinkId=852095) 또는 [오프라인 설치 관리자](https://go.microsoft.com/fwlink/p/?LinkId=852107))
-
-   - .NET Framework 4.7([웹 설치 관리자](https://go.microsoft.com/fwlink/?LinkId=825299) 또는 [오프라인 설치 관리자](https://go.microsoft.com/fwlink/p/?LinkId=825303))
-
-   - .NET Framework 4.6.2([웹 설치 관리자](https://go.microsoft.com/fwlink/?LinkId=780597) 또는 [오프라인 설치 관리자](https://go.microsoft.com/fwlink/p/?LinkId=780601))
-
-   - .NET Framework 4.6.1([웹 설치 관리자](https://go.microsoft.com/fwlink/?LinkId=671729) 또는 [오프라인 설치 관리자](https://go.microsoft.com/fwlink/p/?LinkId=671744))
-
-   - .NET Framework 4.6([웹 설치 관리자](https://go.microsoft.com/fwlink/?LinkId=528259) 또는 [오프라인 설치 관리자](https://go.microsoft.com/fwlink/p/?LinkId=528233))
-
-   - .NET Framework 4.5.2([웹 설치 관리자](https://go.microsoft.com/fwlink/p/?LinkId=397703) 또는 [오프라인 설치 관리자](https://go.microsoft.com/fwlink/p/?LinkId=397706))
-
-   - .NET Framework 4.5.1([웹 설치 관리자](https://go.microsoft.com/fwlink/p/?LinkId=310158) 또는 [오프라인 설치 관리자](https://go.microsoft.com/fwlink/p/?LinkId=310159))
-
-   - [.NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)
+   - [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+   - [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
+   - [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
+   - [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
+   - [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)
+   - [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)
+   - [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
+   - [.NET Framework 4.5.2](https://dotnet.microsoft.com/download/dotnet-framework/net452)
+   - [.NET Framework 4.5.1](https://dotnet.microsoft.com/download/dotnet-framework/net451)
+   - [.NET Framework 4.5](https://dotnet.microsoft.com/download/dotnet-framework/net45)
 
 1. 다운로드 페이지의 언어를 선택합니다. 이 옵션을 선택해도 .NET Framework의 지역화된 리소스를 다운로드하지는 않습니다. 이는 다운로드 페이지에 표시되는 텍스트에만 영향을 줍니다.
 
@@ -149,15 +132,13 @@ Visual Studio에서 애플리케이션을 빌드하거나 명령줄에서 MSBuil
 
 **설치 참고:**
 
-- .NET Framework 4.5.1 및 4.5.2와 .NET Framework 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 및 4.8은 .NET Framework 4.5에 대한 내부 업데이트입니다.
+- .NET Framework 4.5 이상 버전은 .NET Framework 4.0을 대체합니다. .NET Framework 4가 설치되어 있는 시스템에 이 버전을 설치하면 어셈블리가 교체됩니다.
 
-- .NET Framework 4.5와 해당 포인트 릴리스, .NET Framework 4.6과 해당 포인트 릴리스, .NET Framework 4.7과 해당 포인트 릴리스 및 .NET Framework 4.8은 .NET Framework 4를 대체합니다. .NET Framework 4가 설치되어 있는 시스템에 이 버전을 설치하면 어셈블리가 교체됩니다.
+- .NET Framework 4.5 이상 버전을 제거하면 기존 .NET Framework 4 파일도 제거됩니다. .NET Framework 4로 돌아가려면 해당 프로그램과 모든 업데이트를 다시 설치해야 합니다. [.NET Framework 4 설치](https://go.microsoft.com/fwlink/p/?LinkId=230665)를 참조하세요.
 
-- .NET Framework 4.5와 해당 포인트 릴리스, .NET Framework 4.6과 해당 포인트 릴리스, .NET Framework 4.7과 해당 포인트 릴리스 또는 .NET Framework 4.8을 제거하면 기존 .NET Framework 4 파일도 제거됩니다. .NET Framework 4로 돌아가려면 해당 프로그램과 모든 업데이트를 다시 설치해야 합니다. [.NET Framework 4 설치](https://go.microsoft.com/fwlink/p/?LinkId=230665)를 참조하세요.
+- .NET Framework 4.5 이상 버전을 설치하려면 관리자 자격 증명이 있어야 합니다.
 
-- .NET Framework 4.5와 해당 포인트 릴리스, .NET Framework 4.6과 해당 포인트 릴리스, .NET Framework 4.7과 해당 포인트 릴리스 및 .NET Framework 4.8을 설치하려면 관리자 자격 증명이 있어야 합니다.
-
-- .NET Framework 4.5 재배포 가능 패키지는 Microsoft에서 생성 및 서명된 파일의 디지털 서명이 중간에 만료되도록 한 디지털 서명의 부적절한 타임스탬프 관련 문제를 해결하기 위해 2012년 10월 9일 업데이트되었습니다. 이전에 2012년 8월 16일자 .NET Framework 4.5 재배포 가능 패키지를 설치한 경우 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/p/?LinkId=245484)에서 최신 재배포 가능 패키지로 업데이트하는 것이 좋습니다. 이 문제에 대한 자세한 내용은 [Microsoft 보안 공지 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655) 및 [기술 자료 문서 2770445](https://support.microsoft.com/kb/2770445)를 참조하십시오.
+- .NET Framework 4.5 재배포 가능 패키지는 Microsoft에서 생성 및 서명된 파일의 디지털 서명이 중간에 만료되도록 한 디지털 서명의 부적절한 타임스탬프 관련 문제를 해결하기 위해 2012년 10월 9일 업데이트되었습니다. 이전에 2012년 8월 16일자 .NET Framework 4.5 재배포 가능 패키지를 설치한 경우 [.NET Framework 다운로드 페이지](https://dotnet.microsoft.com/download/dotnet-framework/net45)에서 최신 재배포 가능 패키지로 업데이트하는 것이 좋습니다. 이 문제에 대한 자세한 내용은 [Microsoft 보안 공지 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655) 및 [기술 자료 문서 2770445](https://support.microsoft.com/kb/2770445)를 참조하십시오.
 
 ## <a name="to-install-language-packs"></a>언어 팩을 설치하려면
 
@@ -168,25 +149,16 @@ Visual Studio에서 애플리케이션을 빌드하거나 명령줄에서 MSBuil
 
 1. 설치된 .NET Framework 버전의 언어 팩 다운로드 페이지를 엽니다.
 
-    - [.NET Framework 4.8 언어 팩](https://go.microsoft.com/fwlink/?LinkId=2053984)
-
-    - [.NET Framework 4.7.2 언어 팩](https://go.microsoft.com/fwlink/?LinkID=863258)
-
-    - [.NET Framework 4.7.1 언어 팩](https://go.microsoft.com/fwlink/?LinkID=852090)
-
-    - [.NET Framework 4.7 언어 팩](https://go.microsoft.com/fwlink/?LinkID=825306)
-
-    - [.NET Framework 4.6.2 언어 팩](https://go.microsoft.com/fwlink/?LinkID=780604)
-
-    - [.NET Framework 4.6.1 언어 팩](https://go.microsoft.com/fwlink/?LinkID=671747)
-
-    - [.NET Framework 4.6 언어 팩](https://go.microsoft.com/fwlink/?LinkID=528314)
-
-    - [.NET Framework 4.5.2 언어 팩](https://go.microsoft.com/fwlink/?LinkId=397701)
-
-    - [.NET Framework 4.5.1 언어 팩](https://go.microsoft.com/fwlink/?LinkId=322101)
-
-    - [.NET Framework 4.5 언어 팩](https://go.microsoft.com/fwlink/p/?LinkId=245451)
+   - [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+   - [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
+   - [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
+   - [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
+   - [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)
+   - [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)
+   - [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
+   - [.NET Framework 4.5.2](https://dotnet.microsoft.com/download/dotnet-framework/net452)
+   - [.NET Framework 4.5.1](https://dotnet.microsoft.com/download/dotnet-framework/net451)
+   - [.NET Framework 4.5](https://dotnet.microsoft.com/download/dotnet-framework/net45)
 
 2. 언어 목록에서 다운로드하려는 언어를 선택하고 페이지가 해당 언어로 다시 로드될 때까지 몇 초 동안 기다립니다.
 
@@ -201,7 +173,7 @@ Visual Studio에서 애플리케이션을 빌드하거나 명령줄에서 MSBuil
 | 덴마크어                | da      |
 | 네덜란드어                 | nl      |
 | 핀란드어               | fi      |
-| 영어(미국)         | en-US   |
+| 영어(미국)         | ko-KR   |
 | 프랑스어                | fr      |
 | 독일어                | de      |
 | 그리스어                 | el      |
@@ -231,11 +203,11 @@ Visual Studio에서 애플리케이션을 빌드하거나 명령줄에서 MSBuil
 
 - 응용 프로그램과 함께 .NET Framework의 배포에 영향을 주는 변경 내용은 [.NET Framework 4.5를 설치하는 동안 시스템 다시 시작 줄이기](../deployment/reducing-system-restarts.md)를 참조하십시오.
 
-- 앱을 .NET Framework 4에서 .NET Framework 4.5 및 해당 포인트 릴리스 중 하나로 마이그레이션하는 방법에 대한 자세한 내용은 [마이그레이션 가이드](../migration-guide/index.md)를 참조하세요.
+- 앱을 .NET Framework 4에서 .NET Framework 4.5 이상 버전으로 마이그레이션하는 방법에 대한 자세한 내용은 [마이그레이션 가이드](../migration-guide/index.md)를 참조하세요.
 
 - 온라인에서 .NET Framework 소스 코드를 검색하려면 [.NET Framework 참조 소스](https://referencesource.microsoft.com/)를 참조하세요. 참조 소스는 [GitHub](https://github.com/Microsoft/referencesource)에서도 사용할 수 있습니다. [참조 소스를 다운로드](https://referencesource.microsoft.com/download.html)하여 오프라인에서 살펴보고, 디버그 시 소스(패치 및 업데이트 포함)를 단계별로 실행할 수 있습니다. 자세한 내용은 블로그 항목 [.NET 참조 소스의 새로운 디자인](https://devblogs.microsoft.com/dotnet/a-new-look-for-net-reference-source/)을 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [개발자를 위한 배포 가이드](../deployment/deployment-guide-for-developers.md)
 - [관리자를 위한 배포 가이드](../deployment/guide-for-administrators.md)

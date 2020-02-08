@@ -1,23 +1,23 @@
 ---
-title: CLI를 사용하여 .NET Core 시작 - .NET Core CLI
-description: .NET Core CLI(명령줄 인터페이스)를 사용하여 Windows, Linux 또는 macOS에서 .NET Core를 시작하는 방법을 보여 주는 단계별 자습서입니다.
+title: CLI를 사용하여 .NET Core 시작
+description: .NET Core CLI를 사용하여 Windows, Linux 또는 macOS에서 .NET Core를 시작하는 방법을 보여 주는 단계별 자습서입니다.
 author: thraka
 ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: 4285ed3c0488ea615ca89b0b771bf09c8c29b318
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 6e1c7881aa415ea54307d80214001a2f0fe5b4a6
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739119"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920473"
 ---
-# <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>명령줄을 사용하여 Windows/Linux/macOS에서 .NET Core 시작
+# <a name="get-started-with-net-core-using-the-net-core-cli"></a>.NET Core CLI를 사용하여 .NET Core 시작하기
 
-이 문서에서는 .NET Core CLI 도구를 사용하여 머신에서 플랫폼 간 앱 개발을 시작하는 방법을 보여줍니다.
+이 문서에서는 .NET Core CLI를 사용하여 Windows, Linux 및 macOS에서 작동하는 .NET Core 앱 개발을 시작하는 방법을 보여 줍니다.
 
-.NET Core CLI 도구 집합에 익숙하지 않은 경우 [.NET Core SDK 개요](../tools/index.md)를 읽어 보세요.
+.NET Core CLI에 익숙하지 않은 경우 [.NET Core CLI 개요](../tools/index.md)를 참조하세요.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -194,6 +194,6 @@ Hello World!
 
 ## <a name="see-also"></a>참조
 
-- [.NET Core CLI 도구를 사용하여 프로젝트 구성 및 테스트](testing-with-cli.md)
-- [CLI를 사용하여 .NET Core 앱 게시](../deploying/deploy-with-cli.md)
-- [앱 배포에 대한 자세한 정보](../deploying/index.md)
+- [.NET Core CLI를 사용하여 프로젝트 구성 및 테스트](testing-with-cli.md)
+- [.NET Core CLI를 사용하여 .NET Core 앱 게시](../deploying/deploy-with-cli.md)
+- [.NET Core 애플리케이션 배포](../deploying/index.md)

@@ -4,18 +4,18 @@ description: 이 자습서에서는 .NET Core 및 C# 언어의 다양한 기능�
 ms.date: 03/06/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 921c8fc7824bdb48f08e4d9f5a276bf2284f8a17
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 09ce36e7a61f576dc4449976ce676701dc57c9cd
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714596"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921129"
 ---
 # <a name="console-app"></a>콘솔 앱
 
 이 자습서에서는 .NET Core 및 C# 언어의 다양한 기능에 대해 설명합니다. 다음에 대해 알아봅니다.
 
-- .NET Core CLI(명령줄 인터페이스)의 기본 사항
+- .NET Core CLI의 기본 사항
 - C# 콘솔 애플리케이션의 구조
 - 콘솔 I/O
 - .NET에 포함된 파일 I/O API의 기본 사항
@@ -311,6 +311,6 @@ RunTeleprompter().Wait();
 
 ## <a name="conclusion"></a>결론
 
-이 자습서에서는 콘솔 애플리케이션 사용과 관련된 다양한 C# 언어 및 .NET Core 라이브러리 기능을 살펴보았습니다. 이 지식을 토대로 해당 언어 및 여기서 소개된 클래스에 대해 좀 더 자세히 알아볼 수 있습니다. 지금까지 파일 및 콘솔 I/O 기본 사항, 작업 기반 비동기 프로그래밍의 차단 및 비차단 사용, C# 언어 둘러보기, C# 프로그램이 구성되는 방식, .NET Core 명령줄 인터페이스 및 도구에 대해 살펴보았습니다.
+이 자습서에서는 콘솔 애플리케이션 사용과 관련된 다양한 C# 언어 및 .NET Core 라이브러리 기능을 살펴보았습니다. 이 지식을 토대로 해당 언어 및 여기서 소개된 클래스에 대해 좀 더 자세히 알아볼 수 있습니다. 지금까지 파일 및 콘솔 I/O 기본 사항, 작업 기반 비동기 프로그래밍의 차단 및 비차단 사용, C# 언어 둘러보기, C# 프로그램이 구성되는 방식, .NET Core CLI에 대해 살펴보았습니다.
 
 파일 I/O에 대한 자세한 내용은 [파일 및 스트림 I/O](../../standard/io/index.md) 항목을 참조하세요. 이 자습서에서 사용된 비동기 프로그래밍 모델에 대한 자세한 내용은 [작업 기반 비동기 프로그래밍](../..//standard/parallel-programming/task-based-asynchronous-programming.md) 항목 및 [비동기 프로그래밍](../async.md) 항목을 참조하세요.

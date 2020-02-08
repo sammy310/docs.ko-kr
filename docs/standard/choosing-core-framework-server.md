@@ -4,12 +4,12 @@ description: .NET에서 서버 앱을 구축할 때 고려해야 할 .NET 구현
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: b2b9e15cfdfd63d070ae94c29a9f2d1a5b5c87b2
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: c280e22341a45260a816a36c1148dc8c4f76db09
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738671"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921428"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>서버 앱에 대해 .NET Core와 .NET Framework 중에 선택
 
@@ -38,7 +38,7 @@ ms.locfileid: "75738671"
 
 애플리케이션(웹/서비스)이 여러 플랫폼 (Windows, Linux 및 macOS)에서 실행되어야 하는 경우 .NET Core를 사용합니다.
 
-.NET Core는 앞에서 언급한 운영 체제를 개발 워크스테이션으로 지원합니다. Visual Studio는 Windows 및 macOS용 IDE(통합 개발 환경)를 제공합니다. 또한 macOS, Linux 및 Windows에서 실행되는 Visual Studio Code를 사용할 수 있습니다. Visual Studio Code는 IntelliSense 및 디버깅을 포함하여 .NET Core를 지원합니다. Sublime, Emacs 및 VI 같은 대부분의 타사 편집기는 .NET Core에서 작동합니다. 이러한 타사 편집기는 [Omnisharp](https://www.omnisharp.net/)를 사용하여 편집기 IntelliSense를 가져옵니다. 어떤 코드 편집기도 사용하지 않고, 지원되는 모든 플랫폼에서 사용할 수 있는 [.NET Core CLI 도구](../core/tools/index.md)를 직접 사용할 수도 있습니다.
+.NET Core는 앞에서 언급한 운영 체제를 개발 워크스테이션으로 지원합니다. Visual Studio는 Windows 및 macOS용 IDE(통합 개발 환경)를 제공합니다. 또한 macOS, Linux 및 Windows에서 실행되는 Visual Studio Code를 사용할 수 있습니다. Visual Studio Code는 IntelliSense 및 디버깅을 포함하여 .NET Core를 지원합니다. Sublime, Emacs 및 VI 같은 대부분의 타사 편집기는 .NET Core에서 작동합니다. 이러한 타사 편집기는 [Omnisharp](https://www.omnisharp.net/)를 사용하여 편집기 IntelliSense를 가져옵니다. 어떤 코드 편집기도 사용하지 않고, 지원되는 모든 플랫폼에서 사용할 수 있는 [.NET Core CLI](../core/tools/index.md)를 직접 사용할 수도 있습니다.
 
 ### <a name="microservices-architecture"></a>마이크로 서비스 아키텍처
 

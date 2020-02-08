@@ -3,12 +3,12 @@ title: 기본 인터페이스 메서드를 사용하여 mixin 형식 만들기
 description: 기본 인터페이스 멤버를 사용하여 구현자에 대한 선택적 기본 구현으로 인터페이스를 확장할 수 있습니다.
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: fb8fc1f432bdf909bae4f54bb76d10d7619f71a3
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: f97410124a4ca5bbb10972ab5e7942fa4af68d72
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140852"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921454"
 ---
 # <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>자습서: 기본 인터페이스 메서드를 사용하는 인터페이스를 통해 클래스를 만드는 경우의 기능 혼합
 
@@ -22,9 +22,9 @@ ms.locfileid: "74140852"
 > * 기본 구현을 사용하는 클래스를 만듭니다.
 > * 기본 구현의 일부 또는 전체를 재정의하는 클래스를 만듭니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
-C# 8.0 컴파일러를 포함하여 .NET Core를 실행하도록 머신을 설정해야 합니다. C# 8.0 컴파일러는 [Visual Studio 2019 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 또는 [.NET Core 3.0 SDK 및 이후 버전](https://dotnet.microsoft.com/download/dotnet-core)부터 사용할 수 있습니다.
+C# 8.0 컴파일러를 포함하여 .NET Core를 실행하도록 머신을 설정해야 합니다. C# 8.0 컴파일러는 [Visual Studio 2019 버전 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 또는 [.NET CORE 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) 이상부터 사용할 수 있습니다.
 
 ## <a name="limitations-of-extension-methods"></a>확장 메서드의 제한 사항
 
@@ -45,7 +45,7 @@ C# 8.0부터 기본 구현을 인터페이스 메서드로 선언할 수 있습�
 
 이러한 확장 기능 중 일부는 최소 설정을 지원하는 디바이스에서 에뮬레이트될 수 있습니다. 이는 기본 구현을 제공한다는 의미입니다. 더 많은 기능이 내장된 디바이스의 경우 디바이스 소프트웨어는 기본 기능을 사용합니다. 다른 광원의 경우 인터페이스를 구현하고 기본 구현을 사용하도록 선택할 수 있습니다.
 
-기본 인터페이스 멤버는 이 시나리오에서 확장 메서드보다 더 나은 솔루션입니다. 클래스 작성자는 구현할 인터페이스를 제어할 수 있습니다. 선택한 인터페이스는 메서드로 사용할 수 있습니다. 또한 기본 인터페이스 메서드는 기본적으로 가상이기 때문에 메서드 디스패치는 항상 클래스에서 구현을 선택합니다. 
+기본 인터페이스 멤버는 이 시나리오에서 확장 메서드보다 더 나은 솔루션입니다. 클래스 작성자는 구현할 인터페이스를 제어할 수 있습니다. 선택한 인터페이스는 메서드로 사용할 수 있습니다. 또한 기본 인터페이스 메서드는 기본적으로 가상이기 때문에 메서드 디스패치는 항상 클래스에서 구현을 선택합니다.
 
 이러한 차이점을 보여주는 코드를 만들어 보겠습니다.
 
@@ -79,7 +79,7 @@ public class OverheadLight : ITimerLight { }
 
 [!code-csharp[Override the timer function](~/samples/csharp/tutorials/mixins-with-interfaces/HalogenLight.cs?name=SnippetHalogenLight)]
 
-가상 클래스 메서드를 재정의하는 것과 달리 `HalogenLight` 클래스의 `TurnOnFor` 선언에는 `override` 키워드가 사용되지 않습니다. 
+가상 클래스 메서드를 재정의하는 것과 달리 `HalogenLight` 클래스의 `TurnOnFor` 선언에는 `override` 키워드가 사용되지 않습니다.
 
 ## <a name="mix-and-match-capabilities"></a>조합 및 일치 기능
 

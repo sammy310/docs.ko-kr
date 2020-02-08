@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 04d7dedf9f882d9f0e0396949c71e4941c207fe3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 6aaf5acc605067f378ff5d42f713fe1c63d91e46
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345040"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794635"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>자습서: ML.NET에서 ONNX를 사용하여 개체 검색
 
@@ -213,7 +213,7 @@ ONNX(Open Neural Network Exchange)는 AI 모델의 오픈 소스 형식입니다
 
     [!code-csharp [DimensionsBaseClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/DimensionsBase.cs#L3-L9)]
 
-    `DimensionsBase`에는 다음 `float` 필드가 있습니다.
+    `DimensionsBase`에는 다음과 같은 `float` 속성이 있습니다.
 
     - `X`에는 x축의 개체 위치가 포함되어 있습니다.
     - `Y`에는 y축의 개체 위치가 포함되어 있습니다.
@@ -237,7 +237,7 @@ ONNX(Open Neural Network Exchange)는 AI 모델의 오픈 소스 형식입니다
 
     [!code-csharp [YoloBoundingBoxClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloBoundingBox.cs#L7-L21)]
 
-    `YoloBoundingBox`에는 다음 필드가 있습니다.
+    `YoloBoundingBox`에는 다음 속성이 있습니다.
 
     - `Dimensions`에는 경계 상자의 크기가 포함되어 있습니다.
     - `Label`에는 경계 상자 내에서 검색된 개체의 클래스가 포함되어 있습니다.

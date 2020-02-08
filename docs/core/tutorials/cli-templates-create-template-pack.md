@@ -5,12 +5,12 @@ author: thraka
 ms.date: 12/10/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: a4723d6d63c5739123fad774bc75fae7c9fd6703
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 3a72f68f5634c9ee5b137baf12a279130861e61a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340160"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787832"
 ---
 # <a name="tutorial-create-a-template-pack"></a>자습서: 템플릿 팩 만들기
 
@@ -49,7 +49,7 @@ ms.locfileid: "75340160"
 dotnet new console -n templatepack -o .
 ```
 
-`-n` 매개 변수는 _.csproj_ 파일 이름을 _templatepack.csproj_로 설정하고 `-o` 매개 변수는 현재 디렉터리에서 파일을 만듭니다. 다음 출력과 유사한 결과가 표시되어야 합니다.
+`-n` 매개 변수는 _.csproj_ 파일 이름을 _templatepack.csproj_로 설정합니다. `-o` 매개 변수는 현재 디렉터리에 파일을 만듭니다. 다음 출력과 유사한 결과가 표시되어야 합니다.
 
 ```console
 C:\working> dotnet new console -n templatepack -o .
@@ -91,7 +91,7 @@ Restore succeeded.
 </Project>
 ```
 
-위 XML의 `<PropertyGroup>` 설정은 세 개의 그룹으로 나뉩니다. 첫 번째 그룹은 NuGet 패키지에 필요한 속성을 처리합니다. 세 `<Package` 설정은 NuGet 피드에서 패키지를 식별하는 NuGet 패키지 속성과 관련이 있습니다. 특히, `<PacakgeId>` 값은 디렉터리 경로 대신 단일 이름으로 템플릿 팩을 제거하는 데 사용됩니다. 이 값을 사용하여 NuGet 피드에서 템플릿 팩을 설치할 수도 있습니다. `<Title>` 및 `<Tags>`와 같은 나머지 설정은 NuGet 피드에 표시되는 메타데이터와 관련이 있습니다. NuGet 설정에 대한 자세한 내용은 [NuGet 및 MSBuild 속성](/nuget/reference/msbuild-targets)을 참조하세요.
+위 XML의 `<PropertyGroup>` 설정은 세 개의 그룹으로 나뉩니다. 첫 번째 그룹은 NuGet 패키지에 필요한 속성을 처리합니다. 세 `<Package` 설정은 NuGet 피드에서 패키지를 식별하는 NuGet 패키지 속성과 관련이 있습니다. 특히, `<PackageId>` 값은 디렉터리 경로 대신 단일 이름으로 템플릿 팩을 제거하는 데 사용됩니다. 이 값을 사용하여 NuGet 피드에서 템플릿 팩을 설치할 수도 있습니다. `<Title>` 및 `<PackageTags>`와 같은 나머지 설정은 NuGet 피드에 표시되는 메타데이터와 관련이 있습니다. NuGet 설정에 대한 자세한 내용은 [NuGet 및 MSBuild 속성](/nuget/reference/msbuild-targets)을 참조하세요.
 
 pack 명령을 실행하여 프로젝트를 컴파일하고 압축할 때 MSBuild가 제대로 실행되도록 `<TargetFramework>` 설정을 지정해야 합니다.
 
@@ -178,7 +178,7 @@ Currently installed items:
 
 `dotnet new -u AdatumCorporation.Utility.Templates`을 실행하여 템플릿을 제거합니다. `dotnet new` 명령은 이전에 설치한 템플릿을 생략해야 한다는 도움말 정보를 출력합니다.
 
-지금까지 템플릿 팩을 설치했다가 제거했습니다. 
+지금까지 템플릿 팩을 설치했다가 제거했습니다.
 
 ## <a name="next-steps"></a>다음 단계
 

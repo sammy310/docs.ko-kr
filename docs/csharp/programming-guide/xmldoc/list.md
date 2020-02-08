@@ -12,48 +12,54 @@ helpviewer_keywords:
 - <item> C# XML tag
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
-ms.openlocfilehash: 6e6f3a3399f2bffe84b5cec733833c974a0bb51b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cb289b26e9bc12d561892c421fb40da18d8c3513
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711755"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789748"
 ---
 # <a name="list-c-programming-guide"></a>\<list>(C# 프로그래밍 가이드)
-## <a name="syntax"></a>구문  
+
+## <a name="syntax"></a>구문
+
+```xml
+<list type="bullet|number|table">
+    <listheader>
+        <term>term</term>
+        <description>description</description>
+    </listheader>
+    <item>
+        <term>term</term>
+        <description>description</description>
+    </item>
+</list>
+```
+
+## <a name="parameters"></a>매개 변수
+
+- `term`
+
+  `description`에서 정의되는, 정의할 용어입니다.
+
+- `description`
+
+  글머리 기호 또는 번호 매기기 목록의 항목이나 `term`의 정의입니다.
   
-```xml  
-<list type="bullet" | "number" | "table">  
-    <listheader>  
-        <term>term</term>  
-        <description>description</description>  
-    </listheader>  
-    <item>  
-        <term>term</term>  
-        <description>description</description>  
-    </item>  
-</list>  
-```  
-  
-## <a name="parameters"></a>매개 변수  
- `term`  
- `description`에서 정의되는, 정의할 용어입니다.  
-  
- `description`  
- 글머리 기호 또는 번호 매기기 목록의 항목이나 `term`의 정의입니다.  
-  
-## <a name="remarks"></a>설명  
- \<listheader> 블록은 테이블 또는 정의 목록의 머리글 행을 정의하는 데 사용됩니다. 테이블을 정의할 때는 머리글에 용어 항목만 제공하면 됩니다.  
-  
- 목록의 각 항목은 \<item> 블록을 사용하여 지정됩니다. 정의 목록을 만들 때는 `term`과 `description`을 모두 지정해야 합니다. 그러나 테이블, 글머리 기호 목록 또는 번호 매기기 목록의 경우 `description` 항목만 제공하면 됩니다.  
-  
- 목록 또는 테이블에 \<item> 블록을 필요한 개수만큼 포함할 수 있습니다.  
-  
- [-doc](../../language-reference/compiler-options/doc-compiler-option.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
-  
-## <a name="example"></a>예제  
- [!code-csharp[csProgGuideDocComments#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#6)]  
-  
+## <a name="remarks"></a>설명
+
+\<listheader> 블록은 테이블 또는 정의 목록의 머리글 행을 정의하는 데 사용됩니다. 테이블을 정의할 때는 머리글에 용어 항목만 제공하면 됩니다.
+
+목록의 각 항목은 \<item> 블록을 사용하여 지정됩니다. 정의 목록을 만들 때는 `term`과 `description`을 모두 지정해야 합니다. 그러나 테이블, 글머리 기호 목록 또는 번호 매기기 목록의 경우 `description` 항목만 제공하면 됩니다.
+
+목록 또는 테이블에 \<item> 블록을 필요한 개수만큼 포함할 수 있습니다.
+
+[-doc](../../language-reference/compiler-options/doc-compiler-option.md)로 컴파일하여 문서 주석을 파일로 처리합니다.
+
+## <a name="example"></a>예제
+
+[!code-csharp[csProgGuideDocComments#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#6)]
+
 ## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)

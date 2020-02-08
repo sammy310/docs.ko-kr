@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach, parallel version
 - parallel programming, foreach
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
-ms.openlocfilehash: c2f2484f37c0e99f45b3f10951540c2bb3a4cb8d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 528e22d6b54179181d1479f4feaedfbf82933c58
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134172"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921206"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>방법: 간단한 Parallel.ForEach 루프 작성
 
@@ -23,7 +23,7 @@ ms.locfileid: "73134172"
 > [!NOTE]
 > 이 문서에서는 람다 식을 사용하여 PLINQ에 대리자를 정의합니다. C# 또는 Visual Basic의 람다 식을 잘 모르는 경우 [PLINQ 및 TPL의 람다 식](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)을 참조하세요.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 이 예제에서는 *C:\Users\Public\Pictures\Sample Pictures* 폴더에 여러 .jpg 파일이 있다고 가정하고 *Modified*라는 새 하위 폴더를 만듭니다. 예제를 실행할 때 *Sample Pictures*의 각 .jpg 이미지를 회전시키고 *Modified*에 저장합니다. 필요에 따라 두 경로를 수정할 수 있습니다.
 
@@ -47,7 +47,7 @@ ms.locfileid: "73134172"
 
 Visual Studio에는 Windows Desktop 및 .NET Core용 Visual Basic 및 C# 콘솔 애플리케이션 템플릿이 있습니다.
 
-명령줄에서 .NET Core 및 CLI 도구 중 하나를 사용할 수 있습니다(예: `dotnet new console` 또는 `dotnet new console -lang vb`). 또는 .NET Framework 애플리케이션에서 파일을 만들고 명령줄 컴파일러를 사용할 수 있습니다.
+명령줄에서 .NET Core CLI 명령(예: `dotnet new console` 또는 `dotnet new console -lang vb`)을 사용하거나 .NET Framework 애플리케이션에서 파일을 만들고 명령줄 컴파일러를 사용할 수 있습니다.
 
 .NET Core 프로젝트에서 **System.Drawing.Common** NuGet 패키지를 참조해야 합니다. Visual Studio에서 NuGet 패키지 관리자를 사용하여 패키지를 설치합니다. 혹은 \*.csproj 또는 \*.vbproj 파일에서 패키지에 대한 참조를 추가할 수 있습니다.
  
@@ -61,7 +61,7 @@ Visual Studio에는 Windows Desktop 및 .NET Core용 Visual Basic 및 C# 콘솔 
 
 Visual Studio에서 콘솔 애플리케이션을 실행하려면 **F5** 키를 누르세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [데이터 병렬 처리](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
 - [병렬 프로그래밍](../../../docs/standard/parallel-programming/index.md)

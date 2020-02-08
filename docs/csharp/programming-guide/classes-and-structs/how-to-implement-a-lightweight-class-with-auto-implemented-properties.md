@@ -5,12 +5,12 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: 170a36e2a10896d9e4d29af602694700fa122e69
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c2d4fbd2f9e8a343a81d88bacc54a53335e170ec
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714906"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867388"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>자동으로 구현된 속성을 사용하여 간단한 클래스를 구현하는 방법(C# 프로그래밍 가이드)
 
@@ -23,6 +23,29 @@ ms.locfileid: "75714906"
   private `set` 접근자를 선언하는 경우 개체 이니셜라이저를 사용하여 속성을 초기화할 수 없습니다. 생성자나 팩터리 메서드를 사용해야 합니다.
 - [get](../../language-reference/keywords/get.md) 접근자만 선언하여 형식의 생성자를 제외한 어떤 위치에서도 속성을 변경할 수 없도록 만들 수 있습니다.
 
+다음 예제는 get 접근자만 있는 속성이 get 및 private 집합이 있는 속성과 어떻게 다른지 보여 줍니다.
+
+```csharp
+class Contact
+{
+    public string Name { get; }
+    public string Address { get; private set; }
+
+    public Contact(string contactName, string contactAddress)
+    {
+        // Both properties are accessible in the constructor.
+        Name = contactName;
+        Address = contactAddress;
+    }
+
+    // Name isn't assignable here. This will generate a compile error.
+    //public void ChangeName(string newName) => Name = newName; 
+
+    // Address is assignable here.
+    public void ChangeAddress(string newAddress) => Address = newAddress
+}
+```
+
 ## <a name="example"></a>예제
 
 다음 예제에서는 자동 구현 속성을 갖는 변경할 수 없는 클래스를 구현하는 두 가지 방법을 보여 줍니다. 각 방법에서 속성 중 하나는 private `set`으로 선언하고 다른 하나는 `get`으로만 선언합니다.  첫 번째 클래스는 생성자만 사용하여 속성을 초기화하고 두 번째 클래스는 생성자를 호출하는 정적 팩터리 메서드를 사용합니다.
@@ -33,8 +56,10 @@ ms.locfileid: "75714906"
 // constructor to initialize its properties.
 class Contact
 {
-    // Read-only properties.
+    // Read-only property.
     public string Name { get; }
+
+    // Read-write property with a private set accessor.
     public string Address { get; private set; }
 
     // Public constructor.
@@ -50,8 +75,10 @@ class Contact
 // static method and private constructor to initialize its properties.
 public class Contact2
 {
-    // Read-only properties.
+    // Read-write property with a private set accessor.
     public string Name { get; private set; }
+
+    // Read-only property.
     public string Address { get; }
 
     // Private constructor.

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 603e7ae4ffb9e6a4bb477af9597d6948bd63f55e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 32784f7d4b9e3a93eb7f81b4829b39c1a06ef949
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100744"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920390"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1의 새로운 기능
 
@@ -112,7 +112,7 @@ dotnet tool install -g dotnetsay
    "rollForwardOnNoCandidateFx" : 0
    ```
 
-- [.NET Core CLI 도구](../tools/index.md)를 사용하는 경우 `run`과 같은 .NET Core 명령에 원하는 값을 포함하여 다음 옵션을 추가합니다.
+- [.NET Core CLI](../tools/index.md)를 사용하는 경우 `run`과 같은 .NET Core 명령에 원하는 값을 포함하여 다음 옵션을 추가합니다.
 
    ```dotnetcli
    dotnet run --rollForwardOnNoCandidateFx=0
@@ -245,7 +245,7 @@ Windows에서는 네이티브 구현을 사용하는 <xref:System.Net.Http.WinHt
 
 Linux 및 macOS에서는 프로세스별로 <xref:System.Net.Http.HttpClient>만 구성할 수 있습니다. Linux에서 이전 <xref:System.Net.Http.HttpClient> 구현을 사용하려면 [libcurl](https://curl.haxx.se/libcurl/)을 배포해야 합니다. (.NET Core 2.0과 함께 설치됩니다.)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET Core의 새로운 기능](index.md)
 - [EF Core 2.1의 새로운 기능](/ef/core/what-is-new/ef-core-2.1)

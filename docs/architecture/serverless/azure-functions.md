@@ -4,12 +4,12 @@ description: Azure Functions는 여러 언어(C#, JavaScript, Java) 및 플랫�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 5e8187b3752a0f0d0bcf8e15f2ce440dc5a64e45
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 8764e6a33f3fdd53e60fa767d0fb584a9c07de7e
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "72522873"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920973"
 ---
 # <a name="azure-functions"></a>Azure Functions
 
@@ -61,7 +61,7 @@ GA(일반 공급), 미리 보기 또는 실험적으로 지원되는 언어는 �
 세 가지 일반적인 방법으로 함수 앱을 만들 수 있습니다.
 
 - 포털에서 함수를 스크립팅합니다.
-- Azure CLI(명령줄 인터페이스)를 사용하여 필요한 리소스를 만듭니다.
+- Azure CLI를 사용하여 필요한 리소스를 만듭니다.
 - 즐겨 사용하는 IDE를 사용하여 함수를 로컬에서 빌드하고 Azure에 게시합니다.
 
 포털에서 스크립팅된 함수를 만드는 방법에 대한 자세한 내용은 [Azure Portal에서 첫 번째 함수 만들기](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)를 참조하세요.

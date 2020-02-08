@@ -3,12 +3,12 @@ title: .NET Core로 라이브러리 포팅
 description: .NET Framework에서 .NET Core로 라이브러리 프로젝트를 이식하는 방법에 관해 알아봅니다.
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: 6ff38647f77bbe1d25dd1d0065c4b32c60f87fcd
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.openlocfilehash: 646587120de2e51280c2af4de36bf3a6b0f60c2d
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75777342"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920616"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>.NET Core로 .NET Framework 라이브러리 포팅
 
@@ -31,7 +31,7 @@ ms.locfileid: "75777342"
 이 문서에서는 .NET Core가 패키지를 정의하고 사용하는 방법과 패키지가 여러 .NET 구현에서 실행되는 코드를 지원하는 방법에 관해 설명합니다.
 
 [플랫폼 간 도구로 라이브러리 개발](../tutorials/libraries.md)\
-이 문서에서는 플랫폼 간 CLI 도구를 사용하여 .NET용 라이브러리를 작성하는 방법에 관해 설명합니다.
+이 문서에서는 .NET Core CLI를 사용하여 라이브러리를 작성하는 방법에 대해 설명합니다.
 
 [.NET Core용 *csproj* 형식에 대한 추가 사항](../tools/csproj.md)\
 이 문서에서는 *csproj* 및 MSBuild로 프로젝트 시스템을 전환함에 따라 프로젝트 파일에 추가된 변경 내용을 간략하게 설명합니다.

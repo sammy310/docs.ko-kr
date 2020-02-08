@@ -2,12 +2,12 @@
 title: .NET Core용 csproj 형식에 대한 추가 사항
 description: 기존 및 .NET Core csproj 파일 간의 차이점에 대해 알아보기
 ms.date: 04/08/2019
-ms.openlocfilehash: 9d6a7a388cb51bf08996adc654db5722a5ef1303
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 126f5b10999e65d9715e9b52cb54a2bf1dbd3933
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733343"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787875"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core용 csproj 형식에 대한 추가 사항
 
@@ -15,7 +15,7 @@ ms.locfileid: "76733343"
 
 ## <a name="implicit-package-references"></a>암시적 패키지 참조
 
-메타패키지는 프로젝트 파일의 `<TargetFramework>` 또는 `<TargetFrameworks>` 속성에 지정된 대상 프레임워크를 기준으로 암시적으로 참조됩니다. `<TargetFramework>`가 지정된 경우 `<TargetFrameworks>`는 순서와 관계없이 무시됩니다. 자세한 내용은 [패키지, 메타패키지 및 프레임워크](../packages.md)를 참조하세요. 
+메타패키지는 프로젝트 파일의 `<TargetFramework>` 또는 `<TargetFrameworks>` 속성에 지정된 대상 프레임워크를 기준으로 암시적으로 참조됩니다. `<TargetFramework>`가 지정된 경우 `<TargetFrameworks>`는 순서와 관계없이 무시됩니다. 자세한 내용은 [패키지, 메타패키지 및 프레임워크](../packages.md)를 참조하세요.
 
 ```xml
  <PropertyGroup>
@@ -248,7 +248,7 @@ SDK 스타일 프로젝트에서 `PreBuild` 또는 `PostBuild`라는 MSBuild 대
 ```
 
 > [!NOTE]
->MSBuild 대상에는 아무 이름이나 사용할 수 있지만, Visual Studio IDE는 `PreBuild` 및 `PostBuild` 대상을 인식하므로 Visual Studio IDE에서 명령을 편집할 수 있도록 해당 이름을 사용하는 것이 좋습니다. 
+>MSBuild 대상에는 아무 이름이나 사용할 수 있지만, Visual Studio IDE는 `PreBuild` 및 `PostBuild` 대상을 인식하므로 Visual Studio IDE에서 명령을 편집할 수 있도록 해당 이름을 사용하는 것이 좋습니다.
 
 ## <a name="nuget-metadata-properties"></a>NuGet 메타데이터 속성
 
@@ -321,7 +321,7 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 SPDX 식별자가 할당되지 않은 라이선스나 사용자 지정 라이선스를 사용하는 경우, 패키지에 포함된 라이선스 파일의 경로입니다(그 밖에 경우에는 `PackageLicenseExpression`이 선호됨).
 
-`PackageLicenseUrl`을 대체하며, `PackageLicenseExpression`과 함께 사용할 수 없고, Visual Studio 15.9.4, .NET SDK 2.1.502 또는 2.2.101 이상이 필요합니다.
+`PackageLicenseUrl`을 대체하며, `PackageLicenseExpression`과 함께 사용할 수 없고, Visual Studio 버전 15.9.4, .NET SDK 2.1.502 또는 2.2.101 이상이 필요합니다.
 
 라이선스 파일이 누락되지 않도록 라이선스 파일을 프로젝트에 명시적으로 추가해야 합니다. 사용 예:
 
@@ -427,7 +427,7 @@ key=value 쌍의 세미콜론으로 구분된 목록입니다.
 
 ### <a name="properties-per-attribute"></a>특성별 속성
 
-각 특성에는 해당 콘텐츠를 제어하는 속성과 다음 표에 표시된 대로 생성을 사용하지 않도록 설정하는 또 다른 속성이 있습니다.
+다음 표에 나온 것처럼 각 특성에는 해당 콘텐츠를 제어하는 속성과 생성을 사용하지 않도록 설정하는 또 다른 속성이 있습니다.
 
 | 특성                                                      | 속성               | 사용하지 않도록 설정할 속성                             |
 |----------------------------------------------------------------|------------------------|-------------------------------------------------|

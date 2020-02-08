@@ -1,20 +1,20 @@
 ---
-title: CLI를 사용하여 .NET Core 앱 게시
-description: .NET Core SDK CLI(명령줄 인터페이스) 도구를 사용하여 .NET Core 앱을 게시하는 방법을 알아봅니다.
+title: .NET Core CLI를 사용하여 앱 게시
+description: .NET Core CLI 명령을 사용하여 .NET Core 앱을 게시하는 방법을 알아봅니다.
 author: thraka
 ms.author: adegeo
 ms.date: 12/12/2019
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 98f1e96ac087727e711f9ebf3d3eaf86c4d4eec9
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: f4c2a4ccf551c53e4aa4e125cb5720d6f1cc9601
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740847"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920906"
 ---
-# <a name="publish-net-core-apps-with-the-cli"></a>CLI를 사용하여 .NET Core 앱 게시
+# <a name="publish-net-core-apps-with-the-net-core-cli"></a>.NET Core CLI를 사용하여 .NET Core 앱 게시
 
 이 문서에서는 명령줄에서 .NET Core 애플리케이션을 게시하는 방법을 보여줍니다. .NET Core는 애플리케이션을 게시하는 세 가지 방법을 제공합니다. 프레임워크 종속 배포는 로컬에 설치된 .NET Core 런타임을 사용하는 플랫폼 간 .dll 파일을 생성합니다. 프레임워크 종속 실행 파일은 로컬에 설치된 .NET Core 런타임을 사용하는 플랫폼별 실행 파일을 생성합니다. 자체 포함 실행 파일은 플랫폼별 실행 파일을 생성하고 .NET Core 런타임의 로컬 복사본을 포함합니다.
 

@@ -4,12 +4,12 @@ description: 패키지 관리자를 사용하여 Ubuntu 19.10에 .NET Core SDK �
 author: thraka
 ms.author: adegeo
 ms.date: 01/16/2020
-ms.openlocfilehash: afba761e2237ed84528157841e538a9b44d9a966
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: b8fec2afa6f03e3dabbf1ff449431759087163ba
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76164071"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920632"
 ---
 # <a name="ubuntu-1910-package-manager---install-net-core"></a>Ubuntu 19.10 패키지 관리자 - .NET Core 설치
 
@@ -82,6 +82,10 @@ sudo apt-get install dotnet-runtime-3.1
 
 ## <a name="troubleshoot-the-package-manager"></a>패키지 관리자 문제 해결
 
+이 섹션에서는 패키지 관리자를 사용하여 .NET Core를 설치할 때 발생할 수 있는 일반적인 오류에 대한 정보를 제공합니다.
+
+### <a name="unable-to-locate"></a>찾을 수 없음
+
 **패키지 {.NET Core 패키지}를 찾을 수 없습니다**와 같은 오류 메시지가 표시되는 경우 다음 명령을 실행합니다.
 
 ```bash
@@ -104,3 +108,7 @@ sudo apt-get install -y apt-transport-https
 sudo apt-get update
 sudo apt-get install {the .NET Core package}
 ```
+
+### <a name="failed-to-fetch"></a>가져오지 못함
+
+[!INCLUDE [package-manager-failed-to-fetch-deb](includes/package-manager-failed-to-fetch-deb.md)]

@@ -4,12 +4,12 @@ description: 패키지 관리자를 사용하여 CentOS 7에 .NET Core SDK 및 �
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: a7b4a76d780714850fe0792f51f1fa1282f6525d
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 66e78aadf933d3e10b99e3d2c7258733e96164f6
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740736"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920863"
 ---
 # <a name="centos-7-package-manager---install-net-core"></a>CentOS 7 패키지 관리자 - .NET Core 설치
 
@@ -60,3 +60,11 @@ sudo yum install dotnet-runtime-3.1
 ## <a name="how-to-install-other-versions"></a>다른 버전을 설치하는 방법
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
+## <a name="troubleshoot-the-package-manager"></a>패키지 관리자 문제 해결
+
+이 섹션에서는 패키지 관리자를 사용하여 .NET Core를 설치할 때 발생할 수 있는 일반적인 오류에 대한 정보를 제공합니다.
+
+### <a name="failed-to-fetch"></a>가져오지 못함
+
+[!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]

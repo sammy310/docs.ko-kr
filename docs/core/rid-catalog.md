@@ -2,12 +2,12 @@
 title: .NET Core RID(런타임 식별자) 카탈로그
 description: RID(런타임 식별자) 및 .NET Core에서 RID의 사용 방법에 관해 알아봅니다.
 ms.date: 02/22/2019
-ms.openlocfilehash: b4e0226afa3f68d7c0d17b19e66489d70b759cf8
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 4369e263f1f46c73f04c65e4124f63c68d133520
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733547"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789902"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core RID 카탈로그
 
@@ -115,7 +115,7 @@ RID를 사용할 수 있으려면 어떤 RID가 있는지 알아야 합니다. �
 자주 사용되는 값만 나열되어 있습니다. 완전한 최신 버전을 보려면 `dotnet/runtime` 리포지토리에서 [runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) 파일을 확인하세요. 아래에 나열되지 않은 배포를 실행하는 디바이스의 경우, 이식 가능 RID 중 하나와 작동할 수 있습니다. 예를 들어, 여기에 나열되지 않은 Linux 배포를 실행하는 Raspberry Pi 디바이스는 `linux-arm`을 사용하여 대상으로 지정할 수 있습니다.
 
 - 이식 가능(.NET Core 2.0 이상 버전)
-  - `linux-x64` (CentOS, Debian, Fedora, Ubuntu 및 파생 버전을 비롯한 대부분의 데스크톱 배포)
+  - `linux-x64`(CentOS, Debian, Fedora, Ubuntu 및 파생 버전을 비롯한 대부분의 데스크톱 배포)
   - `linux-musl-x64` (Alpine Linux와 같이 [musl](https://wiki.musl-libc.org/projects-using-musl.html)을 사용하는 간단한 배포)
   - `linux-arm` (Raspberry Pi와 같이 ARM에서 실행되는 Linux 배포)
 - Red Hat Enterprise Linux

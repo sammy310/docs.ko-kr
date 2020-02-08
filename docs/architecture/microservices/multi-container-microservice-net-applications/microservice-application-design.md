@@ -2,14 +2,14 @@
 title: 마이크로 서비스 지향 애플리케이션 디자인
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스 지향 애플리케이션의 장점과 단점을 이해하면 최신 정보에 입각한 결정을 내릴 수 있습니다.
 ms.date: 10/02/2018
-ms.openlocfilehash: a783d582f39d25be0123f410553a54af970a4f67
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 619440c02c1a82e05adb2cec9ddba933cd3e0a65
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739559"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965765"
 ---
-# <a name="designing-a-microservice-oriented-application"></a>마이크로 서비스 지향 애플리케이션 디자인
+# <a name="design-a-microservice-oriented-application"></a>마이크로 서비스 지향 애플리케이션 디자인
 
 이 섹션에서는 가상의 서버 측 엔터프라이즈 애플리케이션 개발에 대해 자세히 다룹니다.
 

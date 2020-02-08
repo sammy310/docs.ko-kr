@@ -2,12 +2,12 @@
 title: .NET Core 정보
 description: .NET Core에 대한 자세히 알아봅니다.
 ms.date: 09/17/2019
-ms.openlocfilehash: 12611c2cd0b872a683d070ff17dcf9f111578627
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: e5460fd1d968a49478a1bdc5f18962de2c7cbbe0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900624"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920951"
 ---
 # <a name="about-net-core"></a>.NET Core 정보
 
@@ -58,16 +58,16 @@ C#, Visual Basic 및 F# 언어를 사용하여 .NET Core에 대한 애플리케�
 
 - [.NET Core 런타임](https://github.com/dotnet/runtime/tree/master/src/coreclr)은 형식 시스템, 어셈블리 로드, 가비지 수집기, 네이티브 interop, 기타 기본 서비스를 제공합니다. [.NET Core 프레임워크 라이브러리](https://github.com/dotnet/runtime/tree/master/src/libraries)는 기본 데이터 형식, 앱 컴퍼지션 형식, 기본 유틸리티를 제공합니다.
 - [ASP.NET Core 런타임](https://github.com/dotnet/aspnetcore)은 웹앱, IoT 앱, 모바일 백 엔드 등의 최신 클라우드 기반 인터넷 연결 애플리케이션을 빌드하기 위한 프레임워크를 제공합니다.
-- .NET Core 개발자 환경을 사용할 수 있도록 하는 [.NET Core CLI 도구](https://github.com/dotnet/sdk) 및 언어 컴파일러([Roslyn](https://github.com/dotnet/roslyn) 및 [F#](https://github.com/microsoft/visualfsharp))입니다.
-- [dotnet 도구](https://github.com/dotnet/core-setup)는 .NET Core 앱 및 CLI 도구를 시작하는 데 사용됩니다. 런타임을 선택 및 호스트하고, 어셈블리 로드 정책을 제공하며, 앱과 도구를 시작합니다.
+- .NET Core 개발자 환경을 사용할 수 있도록 하는 [.NET Core SDK](https://github.com/dotnet/sdk) 및 언어 컴파일러([Roslyn](https://github.com/dotnet/roslyn) 및 [F#](https://github.com/microsoft/visualfsharp))입니다.
+- [dotnet 명령](./tools/dotnet.md)은 .NET Core 앱 및 CLI 명령을 시작하는 데 사용됩니다. 런타임을 선택 및 호스트하고, 어셈블리 로드 정책을 제공하며, 앱과 도구를 시작합니다.
 
 이러한 구성 요소는 다음과 같은 방법으로 배포됩니다.
 
 - [.NET Core 런타임](https://dotnet.microsoft.com/download) - .NET Core 런타임 및 프레임워크 라이브러리가 포함되어 있습니다.
 - [ASP.NET Core 런타임](https://dotnet.microsoft.com/download) - ASP.NET Core 및 .NET Core 런타임 및 프레임워크 라이브러리가 포함되어 있습니다.
-- [.NET Core SDK](https://dotnet.microsoft.com/download) - .NET CLI 도구, ASP.NET Core 런타임 및 .NET Core 런타임 및 프레임워크가 포함되어 있습니다.
+- [.NET Core SDK](https://dotnet.microsoft.com/download) - .NET Core CLI, ASP.NET Core 런타임, .NET Core 런타임 및 프레임워크가 포함되어 있습니다.
 
-### <a name="open-source"></a>소스 열기
+### <a name="open-source"></a>오픈 소스
 
 [.NET Core](https://github.com/dotnet/core)는 오픈 소스([MIT 라이선스](https://github.com/dotnet/core/blob/master/LICENSE.TXT))이며 2014년 Microsoft에 의해 [.NET Foundation](https://dotnetfoundation.org)에 제공되었습니다. 현재 가장 많이 사용되는 .NET Foundation 프로젝트 중 하나입니다. 개인, 교육 또는 상업용으로 개인 및 회사에서 사용할 수 있습니다. 여러 회사에서 앱, 도구, 새 플랫폼, 호스팅 서비스의 일부로 .NET Core를 사용합니다. 이러한 회사 중 일부는 GitHub에서 .NET Core에 대한 중요한 정보를 제공하고 [.NET Foundation Technical Steering Group(.NET Foundation 기술 방향 설정 그룹)](https://dotnetfoundation.org/blog/tsg-welcome)의 일부로 제품 판매에 대한 지침을 제공합니다.
 

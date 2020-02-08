@@ -3,12 +3,12 @@ title: dotnet nuget push 명령
 description: dotnet nuget push 명령은 서버에 패키지를 푸시하고 게시합니다.
 author: karann-msft
 ms.date: 12/04/2019
-ms.openlocfilehash: a483c559dee8b4a82cc2c792f5c2c5e4a8ff3f87
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a352120efa199b871e67eb8ba2442bd69a9fc4ed
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733099"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789877"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -98,7 +98,13 @@ dotnet nuget push [-h|--help]
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
   ```
 
-* 사용자 지정 푸시 소스 `https://customsource`에 *foo.nupkg*를 푸시하여 API 키를 지정합니다.
+* 공식 NuGet 서버에 *foo.nupkg*를 푸시하여 API 키를 지정합니다.
+
+  ```dotnetcli
+  dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://api.nuget.org/v3/index.json
+  ```
+  
+  * 사용자 지정 푸시 소스 `https://customsource`에 *foo.nupkg*를 푸시하여 API 키를 지정합니다.
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/

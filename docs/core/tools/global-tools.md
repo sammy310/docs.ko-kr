@@ -3,12 +3,12 @@ title: .NET Core Global Tool
 description: .NET Core Global Tool의 개요와 사용 가능한 .NET Core CLI 명령입니다.
 author: KathleenDollard
 ms.date: 05/29/2018
-ms.openlocfilehash: 0df3c1b615adfeaaf41542dc8252a8f14f49f6f9
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 1531df48b7ca9c816b897d06e725ec375f6cae31
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899860"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920499"
 ---
 # <a name="net-core-global-tools-overview"></a>.NET Core Global Tool 개요
 
@@ -30,7 +30,7 @@ ms.locfileid: "75899860"
 
 ## <a name="find-a-net-core-global-tool"></a>.NET Core Global Tool 찾기
 
-현재 .NET Core CLI(명령줄 인터페이스)에는 Global Tool 검색 기능이 없습니다. 다음은 도구를 찾는 방법에 대한 몇 가지 권장 사항입니다.
+현재 .NET Core CLI에는 Global Tool 검색 기능이 없습니다. 다음은 도구를 찾는 방법에 대한 몇 가지 권장 사항입니다.
 
 * [NuGet](https://www.nuget.org)에서 .NET Core Global Tool을 찾을 수 있습니다. 그러나 NuGet에서는 아직 .NET Core Global Tool을 검색할 수 없습니다.
 * 블로그 게시물 또는 [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) GitHub 리포지토리에서 도구 권장 사항을 찾을 수 있습니다.

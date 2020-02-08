@@ -1,16 +1,16 @@
 ---
-title: .NET Core 명령줄을 사용하여 프로젝트 구성 및 테스트
+title: .NET Core CLI를 사용하여 프로젝트 구성 및 테스트
 description: 이 자습서에서는 명령줄에서 .NET Core 프로젝트를 구성하고 테스트하는 방법을 설명합니다.
 author: cartermp
 ms.date: 09/10/2018
-ms.openlocfilehash: fdaa42be4d3b8872a3119f97f253ce277564339e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 11d13ad1d74c69cdfe0626bda8823dd0609da85f
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715335"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920415"
 ---
-# <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>.NET Core 명령줄을 사용하여 프로젝트 구성 및 테스트
+# <a name="organizing-and-testing-projects-with-the-net-core-cli"></a>.NET Core CLI를 사용하여 프로젝트 구성 및 테스트
 
 이 자습서에서는 [명령줄을 사용하여 Windows/Linux/macOS에서 .NET Core 시작](cli-create-console-app.md)에 따라 간단한 콘솔 앱 이상의 잘 구성된 고급 애플리케이션을 개발하는 과정을 안내합니다. 이 자습서에서는 폴더를 사용하여 코드를 구성하는 방법을 보여 준 후에 [xUnit](https://xunit.github.io/) 테스트 프레임워크를 사용하여 콘솔 애플리케이션을 확장하는 방법을 보여 줍니다.
 

@@ -1,21 +1,21 @@
 ---
 title: .NET Core CLI 확장성 모델
-description: CLI(명령줄 인터페이스) 도구를 확장할 수 있는 방법을 알아봅니다.
+description: .NET Core CLI를 확장하는 방법을 알아봅니다.
 ms.date: 04/12/2017
-ms.openlocfilehash: 4f49735fa94b2a7ee32e0d80590f9e680edeff16
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 74da895fb3a3f6c77640a2b9a64acdb2894a954b
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714187"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920522"
 ---
-# <a name="net-core-cli-tools-extensibility-model"></a>.NET Core CLI 도구 확장성 모델
+# <a name="net-core-cli-extensibility-model"></a>.NET Core CLI 확장성 모델
 
-이 문서에서는 .NET Core CLI(명령줄 인터페이스) 도구를 확장할 수 있는 다양한 방법 및 각 방법을 구동하는 시나리오를 설명합니다.
+이 문서에서는 .NET Core CLI를 확장할 수 있는 다양한 방법 및 각 방법이 적절한 시나리오를 설명합니다.
 도구를 사용하는 방법과 여러 유형의 도구를 빌드하는 방법을 알아보겠습니다.
 
-## <a name="how-to-extend-cli-tools"></a>CLI 도구를 확장하는 방법
-CLI 도구는 세 가지 주요 방법으로 확장할 수 있습니다.
+## <a name="how-to-extend-the-cli"></a>CLI를 확장하는 방법
+CLI는 세 가지 주요 방법으로 확장할 수 있습니다.
 
 1. [프로젝트 단위로 NuGet 패키지 사용](#per-project-based-extensibility)
 
@@ -79,7 +79,7 @@ CLI 도구는 세 가지 주요 방법으로 확장할 수 있습니다.
 
 ## <a name="custom-targets"></a>사용자 지정 대상
 
-NuGet에는 [사용자 지정 MSBuild 대상 및 props 파일을 패키지](/nuget/create-packages/creating-a-package#include-msbuild-props-and-targets-in-a-package)하는 기능이 있습니다. .NET Core CLI 도구가 MSBuild를 사용하도록 이동하면서 이제 동일한 확장성 메커니즘이 .NET Core 프로젝트에 적용됩니다. 빌드 프로세스를 확장하거나 빌드 프로세스에서 생성된 파일과 같은 아티팩트에 액세스하거나 빌드 호출 시 구성을 검사하려는 경우 이 유형의 확장성을 사용하게 됩니다.
+NuGet에는 [사용자 지정 MSBuild 대상 및 props 파일을 패키지](/nuget/create-packages/creating-a-package#include-msbuild-props-and-targets-in-a-package)하는 기능이 있습니다. .NET Core가 MSBuild를 사용하게 되면서 이제 동일한 확장성 메커니즘이 .NET Core 프로젝트에 적용됩니다. 빌드 프로세스를 확장하거나 빌드 프로세스에서 생성된 파일과 같은 아티팩트에 액세스하거나 빌드 호출 시 구성을 검사하려는 경우 이 유형의 확장성을 사용하게 됩니다.
 
 다음 예제에서는 `csproj` 구문을 사용하여 대상의 프로젝트 파일을 볼 수 있습니다. 이렇게 하면 [`dotnet pack`](dotnet-pack.md) 명령에 대상 파일 및 어셈블리를 패키지 내의 *빌드* 폴더에 배치하여 패키지할 항목이 지정됩니다. `Label` 속성이 `dotnet pack instructions`로 설정된 `<ItemGroup>` 요소 및 그 아래에 정의된 Target을 확인합니다.
 

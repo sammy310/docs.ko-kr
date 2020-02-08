@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 4dd747293fba4c18c2d10738d36f4d98cfd3f5b9
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 0e5f3578edc723e2e2a32b9b3a1d8a7dcabd2909
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926496"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965752"
 ---
 # <a name="common-client-side-web-technologies"></a>일반 클라이언트측 웹 기술
 
@@ -58,7 +58,7 @@ JavaScript는 ECMAScript 언어 사양에 표준화된 동적이고 해석된 �
 
 ### <a name="legacy-web-apps-with-jquery"></a>jQuery를 사용한 레거시 웹앱
 
-JavaScript 프레임워크 표준에서 유래되었음에도 jQuery는 여전히 HTML/CSS로 작업하고 웹 API에 대한 AJAX 호출을 수행하는 애플리케이션을 빌드하기 위해 매우 일반적으로 사용되는 라이브러리입니다. 그러나 jQuery는 브라우저 DOM(문서 개체 모델)의 수준에서 작동하며, 기본적으로 선언적이 아닌 명령적 모델을 제공합니다.
+JavaScript 프레임워크 표준에서 유래되었음에도 jQuery는 여전히 HTML/CSS로 작업하고 웹 API에 대한 AJAX 호출을 수행하는 애플리케이션을 빌드하기 위해 일반적으로 사용되는 라이브러리입니다. 그러나 jQuery는 브라우저 DOM(문서 개체 모델)의 수준에서 작동하며, 기본적으로 선언적이 아닌 명령적 모델을 제공합니다.
 
 예를 들어 텍스트 상자의 값이 10을 초과하는 경우 페이지에 요소가 표시되어야 합니다. jQuery에서는 일반적으로 텍스트 상자의 값을 검사하고 해당 값에 따라 대상 요소의 표시 여부를 설정하는 코드를 사용하여 이벤트 처리기를 작성하면 이를 구현할 수 있습니다. 이는 명령형 코드 기반 방법입니다. 대신 다른 프레임워크가 데이터 바인딩을 사용하여 텍스트 상자의 값에 따라 요소의 표시 여부를 선언적으로 바인딩할 수 있습니다. 코드를 작성할 필요는 없으나, 대신 데이터 바인딩 특성이 포함된 요소를 데코레이팅해야 합니다. 클라이언트측 동작이 더 복잡해짐에 따라 데이터 바인딩 방식은 코드 및 조건부 복잡성이 덜한 더 간단한 솔루션이 됩니다.
 
@@ -73,7 +73,7 @@ JavaScript 프레임워크 표준에서 유래되었음에도 jQuery는 여전�
 | 템플릿 | **No** | **예** |
 | 딥 링크 라우팅 | **No** | **예** |
 
-대부분의 jQuery 기능 부족은 본질적으로 다른 라이브러리를 추가하여 채울 수 있습니다. 그러나 Angular와 같은 SPA 프레임워크는 이러한 기능을 더 통합된 방식으로 제공합니다. 처음부터 이러한 사항 모두를 고려하여 설계되었기 때문입니다. 또한 jQuery는 매우 명령적 라이브러리입니다. 즉, jQuery를 사용한 작업을 수행하려면 jQuery 함수를 호출해야 합니다. SPA 프레임워크가 제공하는 많은 작업과 기능은 실제 코드를 작성할 필요 없이 선언적으로 수행될 수 있습니다.
+대부분의 jQuery 기능 부족은 본질적으로 다른 라이브러리를 추가하여 채울 수 있습니다. 그러나 Angular와 같은 SPA 프레임워크는 이러한 기능을 더 통합된 방식으로 제공합니다. 처음부터 이러한 사항 모두를 고려하여 설계되었기 때문입니다. 또한 jQuery는 명령적 라이브러리입니다. 즉, jQuery를 사용한 작업을 수행하려면 jQuery 함수를 호출해야 합니다. SPA 프레임워크가 제공하는 많은 작업과 기능은 실제 코드를 작성할 필요 없이 선언적으로 수행될 수 있습니다.
 
 데이터 바인딩은 이에 대한 좋은 예입니다. jQuery에서는 일반적으로 단 한 줄의 코드로 DOM 요소의 값을 가져오거나 요소의 값을 설정합니다. 단, 이 코드는 요소의 값을 변경해야 때마다 작성해야 하며, 경우에 따라 이는 페이지의 여러 기능에서 발생됩니다. 또 다른 일반적인 예제는 요소 표시 유형입니다. jQuery에서는 여러 다른 위치에서 특정 요소를 표시할지 여부를 제어하는 코드를 작성해야 할 수 있습니다. 이러한 각각의 경우에서 데이터 바인딩을 사용할 때 코드를 작성할 필요가 없습니다. 문제의 값 또는 요소의 표시 여부를 페이지의 *viewmodel*에 바인딩하기만 하면 해당 viewmodel에 대한 변경 사항이 자동으로 바인딩된 요소에 반영됩니다.
 
@@ -98,7 +98,7 @@ export class AppComponent { name = 'Angular'; }
 
 DOM 요소 대신 구성 요소 및 템플릿을 사용하면 Angular 앱은 추상화의 상위 수준에서 작업할 수 있으며 JavaScript만(“바닐라 JS”라고 함) 또는 jQuery를 사용하여 작성된 앱보다 전체 코드가 더 적습니다. 또한 Angular는 클라이언트 쪽 스크립트 파일을 구성하는 방식에 몇 가지 순서를 적용합니다. 규칙에 따라 Angular 앱은 앱 폴더에 모듈 및 구성 요소 스크립트 파일이 포함된 일반적인 폴더 구조를 사용합니다. 앱의 빌드, 배포 및 테스트와 관련된 Angular 스크립트는 일반적으로 상위 폴더에 위치합니다.
 
-또한 Angular는 CLI(명령줄 인터페이스) 도구를 적절히 사용합니다. 로컬에서 Angular 개발을 시작하면(이미 git 및 npm이 설치되어 있다고 가정) 바로 GitHub에서 리포지토리 복제가 구성되고 `npm install` 및 `npm start`가 실행됩니다. 이 외에 Angular는 프로젝트를 만들고, 파일을 추가하고, 테스트, 묶음 및 배포 작업을 지원할 수 있는 자체 CLI 도구를 함께 제공합니다. 이 CLI 도구 친화성 덕분에 Angular는 특별히 탁월한 CLI 지원이 특징인 ASP.NET Core와 호환됩니다.
+CLI를 사용하여 Angular 앱을 개발할 수 있습니다. 로컬에서 Angular 개발을 시작하면(이미 git 및 npm이 설치되어 있다고 가정) 바로 GitHub에서 리포지토리 복제가 구성되고 `npm install` 및 `npm start`가 실행됩니다. 이 외에 Angular는 프로젝트를 만들고, 파일을 추가하고, 테스트, 묶음 및 배포 작업을 지원할 수 있는 자체 CLI를 함께 제공합니다. 이러한 CLI 친화성 덕분에 Angular는 CLI 지원 역시 뛰어난 ASP.NET Core와 호환됩니다.
 
 Microsoft는 Angular SPA 구현을 포함하는 [eShopOnContainers](https://aka.ms/MicroservicesArchitecture)라는 참조 애플리케이션을 개발했습니다. 이 앱에는 온라인 상점의 장바구니를 관리하고, 해당 카탈로그의 항목을 로드 및 표시하며, 주문 생성을 처리하는 Angular 모듈이 포함됩니다. [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA)에서 샘플 애플리케이션을 보고 다운로드할 수 있습니다.
 
@@ -132,7 +132,7 @@ SPA를 지원하기에 어떤 JavaScript 프레임워크가 최선인지를 고�
 
 - 프레임워크(또는 도우미 라이브러리)에 앱에 필요한 모든 기능이 포함되어 있는가?
 
-- 문서화가 잘 되어 있는가?
+- 문서화가 제대로 되어 있는가?
 
 - 해당 커뮤니티는 얼마나 활발한가? 해당 프레임워크를 사용하여 새 프로젝트가 빌드되고 있는가?
 

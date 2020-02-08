@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4781e39a0c8827adb6ab0155d5215645242208a5
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 2dfa3cdab9de47b55f7a3f73f0d6e9460390700c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348173"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920098"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>자습서: ML.NET 이미지 분류 API와 함께 전이 학습을 사용한 자동화된 시각적 개체 검사
 
@@ -28,7 +28,7 @@ ms.locfileid: "75348173"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- “.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2017 15.6 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017).
+- “.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2017 버전 15.6 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)
 
 ## <a name="image-classification-transfer-learning-sample-overview"></a>이미지 분류 전이 학습 샘플 개요
 
@@ -140,10 +140,10 @@ SDNET2018은 금이 간 콘크리트 구조물(교량 상판, 벽, 도로)과 �
 
         `ModelInput`에는 다음 속성이 있습니다.
 
-        - `ImagePath`는 이미지가 저장된 정규화된 경로입니다.
-        - `Label`은 이미지가 속하는 범주입니다. 예측할 값입니다.
         - `Image`는 이미지의 `byte[]` 표현입니다. 모델을 학습하려면 이미지 데이터가 이 형식이어야 합니다.
         - `LabelAsKey`는 `Label`의 숫자 표현입니다.
+        - `ImagePath`는 이미지가 저장된 정규화된 경로입니다.
+        - `Label`은 이미지가 속하는 범주입니다. 예측할 값입니다.
 
         `Image` 및 `LabelAsKey`만 모델을 학습하고 예측하는 데 사용됩니다. `ImagePath` 및 `Label` 속성은 원본 이미지 파일 이름과 범주에 액세스하기 편리하도록 유지됩니다.
 
@@ -171,7 +171,7 @@ SDNET2018은 금이 간 콘크리트 구조물(교량 상판, 벽, 도로)과 �
 
     [!code-csharp [DefinePaths](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L15-L17)]
 
-1. 그런 다음, [MLContext](xref:Microsoft.ML.MLContext)의 새 인스턴스를 사용하여 `mlContext` 변수를 초기화합니다.
+1. [MLContext](xref:Microsoft.ML.MLContext)의 새 인스턴스를 사용하여 `mlContext` 변수를 초기화합니다.
 
     [!code-csharp [MLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L19)]
 
@@ -253,7 +253,7 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
 모델 학습은 몇 가지 단계로 구성됩니다. 먼저, 이미지 분류 API를 사용하여 모델을 학습합니다. `MapKeyToValue` 변환을 사용하여 `PredictedLabel` 열의 인코드된 레이블이 원래 범주 값으로 다시 변환됩니다.
 
-1. `ImageClassificationTrainer`에 대한 필수 및 선택적 매개 변수 집합을 저장할 새 변수를 만듭니다. 
+1. `ImageClassificationTrainer`에 대한 필수 및 선택적 매개 변수 집합을 저장할 새 변수를 만듭니다.
 
     [!code-csharp [ClassifierOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L46-L57)]
 

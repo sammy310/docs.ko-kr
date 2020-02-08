@@ -2,12 +2,12 @@
 title: Ocelot을 사용하여 API 게이트웨이 구현
 description: Ocelot을 사용하여 API 게이트웨이를 구현하는 방법과 컨테이너 기반 환경에서 Ocelot을 사용하는 방법을 알아봅니다.
 ms.date: 10/02/2018
-ms.openlocfilehash: 1ade05cc6935ce6a1bc74e6d6e4cdd5ef9fc6873
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: c0bcd240b6bd190dd02266c7faaf9fd668eb23bb
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734601"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777302"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Ocelot을 사용하여 API 게이트웨이 구현
 
@@ -414,7 +414,7 @@ eShopOnContainers는 BFF 및 비즈니스 영역에 따른 경계가 있는 여�
 
 **그림 6-40** Ocelot에서 인증
 
-이전 다이어그램에 표시된 것처럼 ID 마이크로 서비스가 API 게이트웨이(AG)의 아래에 있으면 다음과 같이 됩니다. 1) AG는 ID 마이크로 서비스에서 인증 토큰을 요청하고, 2) ID 마이크로 서비스는 AG에 토큰을 반환하고, 3-4) AG는 인증 토큰을 사용하여 마이크로 서비스에서 요청합니다. eShopOnContainers 애플리케이션에서 API 게이트웨이를 여러 BFF(프런트 엔드에 대한 백 엔드) 및 비즈니스 영역 API 게이트웨이로 분할했으므로 교차 편집 문제에 대한 추가 API 게이트웨이를 만드는 것이 또 다른 옵션이었습니다. 이 선택은 여러 교차 편집 문제 마이크로 서비스가 있는 더 복잡한 마이크로 서비스 기반 아키텍처에 적합합니다. eShopOnContainers에는 하나의 교차 편집 문제만 있으므로 간단히 하기 위해 API 게이트웨이 영역에서 보안 서비스를 처리하기로 결정했습니다.
+이전 다이어그램에 표시된 것처럼 ID 마이크로 서비스가 API 게이트웨이(AG)의 아래에 있으면 다음과 같이 됩니다. 1) AG는 ID 마이크로 서비스에서 인증 토큰을 요청하고, 2) ID 마이크로 서비스는 AG에 토큰을 반환하고, 3-4) AG는 인증 토큰을 사용하여 마이크로 서비스에서 요청합니다. eShopOnContainers 애플리케이션에서 API 게이트웨이를 여러 BFF(Backend for Frontend) 및 비즈니스 영역 API 게이트웨이로 분할했으므로 교차 편집 문제에 대한 추가 API 게이트웨이를 만드는 것이 또 다른 옵션이었습니다. 이 선택은 여러 교차 편집 문제 마이크로 서비스가 있는 더 복잡한 마이크로 서비스 기반 아키텍처에 적합합니다. eShopOnContainers에는 하나의 교차 편집 문제만 있으므로 간단히 하기 위해 API 게이트웨이 영역에서 보안 서비스를 처리하기로 결정했습니다.
 
 어떤 경우이든 응용 프로그램이 API 게이트웨이 수준에서 보안이 설정되면 보안 마이크로 서비스를 사용하려고 할 때 Ocelot API 게이트웨이의 인증 모듈을 처음 방문합니다. 이렇게 하면 액세스 토큰을 가져오기 위해 Identity 또는 Auth 마이크로 서비스를 방문하도록 HTTP 요청을 리디렉션하므로 access_token으로 보호된 서비스를 방문할 수 있습니다.
 
