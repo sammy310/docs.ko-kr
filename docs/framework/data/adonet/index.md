@@ -3,64 +3,65 @@ title: ADO.NET
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: a803c0592cd44801c55a699b56a9a498781a6593
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: cca3075a73a7bb45fd6154f760adfcda9064345c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980108"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094399"
 ---
-# <a name="adonet"></a><span data-ttu-id="f563f-102">ADO.NET</span><span class="sxs-lookup"><span data-stu-id="f563f-102">ADO.NET</span></span>
-<span data-ttu-id="f563f-103">ADO.NET은 .NET Framework 프로그래머에게 데이터 액세스 서비스를 노출하는 클래스 집합입니다.</span><span class="sxs-lookup"><span data-stu-id="f563f-103">ADO.NET is a set of classes that expose data access services for .NET Framework programmers.</span></span> <span data-ttu-id="f563f-104">ADO.NET은 분산된 데이터 공유 애플리케이션을 만들기 위한 다양한 구성 요소를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="f563f-104">ADO.NET provides a rich set of components for creating distributed, data-sharing applications.</span></span> <span data-ttu-id="f563f-105">또한 관계형, XML 및 애플리케이션 데이터에 대한 액세스를 제공하는 .NET Framework의 핵심 부분입니다.</span><span class="sxs-lookup"><span data-stu-id="f563f-105">It is an integral part of the .NET Framework, providing access to relational, XML, and application data.</span></span> <span data-ttu-id="f563f-106">ADO.NET은 애플리케이션, 도구, 언어 또는 인터넷 브라우저에서 사용되는 중간 계층 비즈니스 개체 및 프런트 엔드 데이터베이스 클라이언트 만들기를 포함하여 다양한 개발 요구 사항을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="f563f-106">ADO.NET supports a variety of development needs, including the creation of front-end database clients and middle-tier business objects used by applications, tools, languages, or Internet browsers.</span></span>  
-  
-## <a name="in-this-section"></a><span data-ttu-id="f563f-107">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="f563f-107">In This Section</span></span>  
- [<span data-ttu-id="f563f-108">ADO.NET의 새로운 기능</span><span class="sxs-lookup"><span data-stu-id="f563f-108">What's New in ADO.NET</span></span>](whats-new.md)  
- <span data-ttu-id="f563f-109">ADO.NET에 새로 추가된 기능을 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="f563f-109">Introduces features that are new in ADO.NET.</span></span>  
-  
- [<span data-ttu-id="f563f-110">ADO.NET 개요</span><span class="sxs-lookup"><span data-stu-id="f563f-110">ADO.NET Overview</span></span>](ado-net-overview.md)  
- <span data-ttu-id="f563f-111">ADO.NET의 디자인 및 구성 요소에 대해 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="f563f-111">Provides an introduction to the design and components of ADO.NET.</span></span>  
-  
- [<span data-ttu-id="f563f-112">Entity Framework</span><span class="sxs-lookup"><span data-stu-id="f563f-112">Entity Framework</span></span>](/ef/ef6/index)  
- <span data-ttu-id="f563f-113">Entity Framework를 사용하여 애플리케이션을 만드는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="f563f-113">Describes how to create applications using the Entity Framework.</span></span>  
-  
- [<span data-ttu-id="f563f-114">ADO.NET 애플리케이션 보안</span><span class="sxs-lookup"><span data-stu-id="f563f-114">Securing ADO.NET Applications</span></span>](securing-ado-net-applications.md)  
- <span data-ttu-id="f563f-115">ADO.NET을 사용할 때 보안 코드를 작성하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="f563f-115">Describes secure coding practices when using ADO.NET.</span></span>  
-  
- [<span data-ttu-id="f563f-116">ADO.NET에서 데이터 형식 매핑</span><span class="sxs-lookup"><span data-stu-id="f563f-116">Data Type Mappings in ADO.NET</span></span>](data-type-mappings-in-ado-net.md)  
- <span data-ttu-id="f563f-117">.NET Framework 데이터 형식과 .NET Framework 데이터 공급자 간의 데이터 형식 매핑에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="f563f-117">Describes data type mappings between .NET Framework data types and the .NET Framework data providers.</span></span>  
-  
- [<span data-ttu-id="f563f-118">DataSets, DataTables 및 DataViews</span><span class="sxs-lookup"><span data-stu-id="f563f-118">DataSets, DataTables, and DataViews</span></span>](./dataset-datatable-dataview/index.md)  
- <span data-ttu-id="f563f-119">`DataSets`, 형식화된 `DataSets`, `DataTables` 및 `DataViews`를 만들고 사용하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="f563f-119">Describes how to create and use `DataSets`, typed `DataSets`, `DataTables`, and `DataViews`.</span></span>  
-  
- [<span data-ttu-id="f563f-120">LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="f563f-120">LINQ to DataSet</span></span>](linq-to-dataset.md)  
- <span data-ttu-id="f563f-121">LINQ to DataSet에 대한 정보와 프로그래밍 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="f563f-121">Provides information about LINQ to DataSet, including programming examples.</span></span>  
-  
- [<span data-ttu-id="f563f-122">ADO.NET에서 데이터 검색 및 수정</span><span class="sxs-lookup"><span data-stu-id="f563f-122">Retrieving and Modifying Data in ADO.NET</span></span>](retrieving-and-modifying-data.md)  
- <span data-ttu-id="f563f-123">데이터 소스에 연결하고 `Commands`, `DataReaders` 및 `DataAdapters`를 사용하여 데이터를 검색 및 수정하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="f563f-123">Describes how to connect to a data source and how to retrieve and modify data using `Commands`, `DataReaders` and `DataAdapters`.</span></span>  
-  
- [<span data-ttu-id="f563f-124">SQL Server 및 ADO.NET</span><span class="sxs-lookup"><span data-stu-id="f563f-124">SQL Server and ADO.NET</span></span>](./sql/index.md)  
- <span data-ttu-id="f563f-125">SQL Server 관련 기능을 사용하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="f563f-125">Describes how to work with features and functionality that are specific to SQL Server.</span></span>  
-  
- [<span data-ttu-id="f563f-126">Oracle 및 ADO.NET</span><span class="sxs-lookup"><span data-stu-id="f563f-126">Oracle and ADO.NET</span></span>](oracle-and-adonet.md)  
- <span data-ttu-id="f563f-127">.NET Framework Data Provider for Oracle과 관련된 기능 및 동작을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="f563f-127">Describes features and behaviors that are specific to the .NET Framework Data Provider for Oracle.</span></span>  
-  
-## <a name="related-sections"></a><span data-ttu-id="f563f-128">관련 섹션</span><span class="sxs-lookup"><span data-stu-id="f563f-128">Related Sections</span></span>  
- [<span data-ttu-id="f563f-129">LINQ(Language-Integrated Query) - C#</span><span class="sxs-lookup"><span data-stu-id="f563f-129">Language-Integrated Query (LINQ) - C#</span></span>](../../../csharp/programming-guide/concepts/linq/index.md)  
- <span data-ttu-id="f563f-130">을 사용 하 여 C#LINQ 토픽 및 샘플에 대 한 링크를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="f563f-130">Provides links to LINQ topics and samples using C#.</span></span>  
-  
- [<span data-ttu-id="f563f-131">LINQ(Language-Integrated Query) - Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f563f-131">Language-Integrated Query (LINQ) - Visual Basic</span></span>](../../../visual-basic/programming-guide/concepts/linq/index.md)  
- <span data-ttu-id="f563f-132">Visual Basic를 사용 하 여 LINQ 토픽 및 샘플에 대 한 링크를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="f563f-132">Provides links to LINQ topics and samples using Visual Basic.</span></span>  
-  
- [<span data-ttu-id="f563f-133">WCF Data Services 4.5</span><span class="sxs-lookup"><span data-stu-id="f563f-133">WCF Data Services 4.5</span></span>](../wcf/index.md)  
- <span data-ttu-id="f563f-134">WCF Data Services를 사용 하 여 OData (Open Data Protocol를 구현 하는 웹 또는 인트라넷에 데이터 서비스를 배포 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="f563f-134">Describes how to use WCF Data Services to deploy data services on the Web or an intranet that implement the Open Data Protocol (OData).</span></span>  
-  
- [<span data-ttu-id="f563f-135">.NET Framework 개발 가이드</span><span class="sxs-lookup"><span data-stu-id="f563f-135">.NET Framework Development Guide</span></span>](../../development-guide.md)  
- <span data-ttu-id="f563f-136">.NET Framework의 표준 개발 작업에 대한 정보를 볼 수 있는 링크를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="f563f-136">Provides links to information about standard development tasks in the .NET Framework.</span></span>  
-  
- [<span data-ttu-id="f563f-137">샘플 및 자습서</span><span class="sxs-lookup"><span data-stu-id="f563f-137">Samples and tutorials</span></span>](../../../samples-and-tutorials/index.md)  
- <span data-ttu-id="f563f-138">.NET 샘플 및 자습서의 목록을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="f563f-138">Provides a list of .NET samples and tutorials.</span></span>
-  
-## <a name="see-also"></a><span data-ttu-id="f563f-139">참조</span><span class="sxs-lookup"><span data-stu-id="f563f-139">See also</span></span>
+# <a name="adonet"></a><span data-ttu-id="0176f-102">ADO.NET</span><span class="sxs-lookup"><span data-stu-id="0176f-102">ADO.NET</span></span>
 
-- [<span data-ttu-id="f563f-140">Visual Studio에서 데이터 액세스</span><span class="sxs-lookup"><span data-stu-id="f563f-140">Accessing data in Visual Studio</span></span>](/visualstudio/data-tools/accessing-data-in-visual-studio)
-- [<span data-ttu-id="f563f-141">ADO.NET 개요</span><span class="sxs-lookup"><span data-stu-id="f563f-141">ADO.NET Overview</span></span>](ado-net-overview.md)
+<span data-ttu-id="0176f-103">ADO.NET은 .NET Framework 프로그래머에게 데이터 액세스 서비스를 노출하는 클래스 집합입니다.</span><span class="sxs-lookup"><span data-stu-id="0176f-103">ADO.NET is a set of classes that expose data access services for .NET Framework programmers.</span></span> <span data-ttu-id="0176f-104">ADO.NET은 분산된 데이터 공유 애플리케이션을 만들기 위한 다양한 구성 요소를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="0176f-104">ADO.NET provides a rich set of components for creating distributed, data-sharing applications.</span></span> <span data-ttu-id="0176f-105">또한 관계형, XML 및 애플리케이션 데이터에 대한 액세스를 제공하는 .NET Framework의 핵심 부분입니다.</span><span class="sxs-lookup"><span data-stu-id="0176f-105">It is an integral part of the .NET Framework, providing access to relational, XML, and application data.</span></span> <span data-ttu-id="0176f-106">ADO.NET은 애플리케이션, 도구, 언어 또는 인터넷 브라우저에서 사용되는 중간 계층 비즈니스 개체 및 프런트 엔드 데이터베이스 클라이언트 만들기를 포함하여 다양한 개발 요구 사항을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="0176f-106">ADO.NET supports a variety of development needs, including the creation of front-end database clients and middle-tier business objects used by applications, tools, languages, or Internet browsers.</span></span>  
+  
+## <a name="in-this-section"></a><span data-ttu-id="0176f-107">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="0176f-107">In This Section</span></span>  
+ [<span data-ttu-id="0176f-108">ADO.NET의 새로운 기능</span><span class="sxs-lookup"><span data-stu-id="0176f-108">What's New in ADO.NET</span></span>](whats-new.md)  
+ <span data-ttu-id="0176f-109">ADO.NET에 새로 추가된 기능을 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="0176f-109">Introduces features that are new in ADO.NET.</span></span>  
+  
+ [<span data-ttu-id="0176f-110">ADO.NET 개요</span><span class="sxs-lookup"><span data-stu-id="0176f-110">ADO.NET Overview</span></span>](ado-net-overview.md)  
+ <span data-ttu-id="0176f-111">ADO.NET의 디자인 및 구성 요소에 대해 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="0176f-111">Provides an introduction to the design and components of ADO.NET.</span></span>  
+  
+ [<span data-ttu-id="0176f-112">Entity Framework</span><span class="sxs-lookup"><span data-stu-id="0176f-112">Entity Framework</span></span>](/ef/ef6/index)  
+ <span data-ttu-id="0176f-113">Entity Framework를 사용하여 애플리케이션을 만드는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="0176f-113">Describes how to create applications using the Entity Framework.</span></span>  
+  
+ [<span data-ttu-id="0176f-114">ADO.NET 애플리케이션 보안</span><span class="sxs-lookup"><span data-stu-id="0176f-114">Securing ADO.NET Applications</span></span>](securing-ado-net-applications.md)  
+ <span data-ttu-id="0176f-115">ADO.NET을 사용할 때 보안 코드를 작성하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="0176f-115">Describes secure coding practices when using ADO.NET.</span></span>  
+  
+ [<span data-ttu-id="0176f-116">ADO.NET에서 데이터 형식 매핑</span><span class="sxs-lookup"><span data-stu-id="0176f-116">Data Type Mappings in ADO.NET</span></span>](data-type-mappings-in-ado-net.md)  
+ <span data-ttu-id="0176f-117">.NET Framework 데이터 형식과 .NET Framework 데이터 공급자 간의 데이터 형식 매핑에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="0176f-117">Describes data type mappings between .NET Framework data types and the .NET Framework data providers.</span></span>  
+  
+ [<span data-ttu-id="0176f-118">DataSets, DataTables 및 DataViews</span><span class="sxs-lookup"><span data-stu-id="0176f-118">DataSets, DataTables, and DataViews</span></span>](./dataset-datatable-dataview/index.md)  
+ <span data-ttu-id="0176f-119">`DataSets`, 형식화된 `DataSets`, `DataTables` 및 `DataViews`를 만들고 사용하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="0176f-119">Describes how to create and use `DataSets`, typed `DataSets`, `DataTables`, and `DataViews`.</span></span>  
+  
+ [<span data-ttu-id="0176f-120">LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="0176f-120">LINQ to DataSet</span></span>](linq-to-dataset.md)  
+ <span data-ttu-id="0176f-121">LINQ to DataSet에 대한 정보와 프로그래밍 예제를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="0176f-121">Provides information about LINQ to DataSet, including programming examples.</span></span>  
+  
+ [<span data-ttu-id="0176f-122">ADO.NET에서 데이터 검색 및 수정</span><span class="sxs-lookup"><span data-stu-id="0176f-122">Retrieving and Modifying Data in ADO.NET</span></span>](retrieving-and-modifying-data.md)  
+ <span data-ttu-id="0176f-123">데이터 원본에 연결 하는 방법 및 `Commands`, `DataReaders`및 `DataAdapters`를 사용 하 여 데이터를 검색 및 수정 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="0176f-123">Describes how to connect to a data source and how to retrieve and modify data using `Commands`, `DataReaders`, and `DataAdapters`.</span></span>  
+  
+ [<span data-ttu-id="0176f-124">SQL Server 및 ADO.NET</span><span class="sxs-lookup"><span data-stu-id="0176f-124">SQL Server and ADO.NET</span></span>](./sql/index.md)  
+ <span data-ttu-id="0176f-125">SQL Server 관련 기능을 사용하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="0176f-125">Describes how to work with features and functionality that are specific to SQL Server.</span></span>  
+  
+ [<span data-ttu-id="0176f-126">Oracle 및 ADO.NET</span><span class="sxs-lookup"><span data-stu-id="0176f-126">Oracle and ADO.NET</span></span>](oracle-and-adonet.md)  
+ <span data-ttu-id="0176f-127">.NET Framework Data Provider for Oracle과 관련된 기능 및 동작을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="0176f-127">Describes features and behaviors that are specific to the .NET Framework Data Provider for Oracle.</span></span>  
+  
+## <a name="related-sections"></a><span data-ttu-id="0176f-128">관련 단원</span><span class="sxs-lookup"><span data-stu-id="0176f-128">Related Sections</span></span>  
+ [<span data-ttu-id="0176f-129">LINQ(Language-Integrated Query) - C#</span><span class="sxs-lookup"><span data-stu-id="0176f-129">Language-Integrated Query (LINQ) - C#</span></span>](../../../csharp/programming-guide/concepts/linq/index.md)  
+ <span data-ttu-id="0176f-130">을 사용 하 여 C#LINQ 토픽 및 샘플에 대 한 링크를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="0176f-130">Provides links to LINQ topics and samples using C#.</span></span>  
+  
+ [<span data-ttu-id="0176f-131">LINQ(Language-Integrated Query) - Visual Basic</span><span class="sxs-lookup"><span data-stu-id="0176f-131">Language-Integrated Query (LINQ) - Visual Basic</span></span>](../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ <span data-ttu-id="0176f-132">Visual Basic를 사용 하 여 LINQ 토픽 및 샘플에 대 한 링크를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="0176f-132">Provides links to LINQ topics and samples using Visual Basic.</span></span>  
+  
+ [<span data-ttu-id="0176f-133">WCF Data Services 4.5</span><span class="sxs-lookup"><span data-stu-id="0176f-133">WCF Data Services 4.5</span></span>](../wcf/index.md)  
+ <span data-ttu-id="0176f-134">WCF Data Services를 사용 하 여 OData (Open Data Protocol를 구현 하는 웹 또는 인트라넷에 데이터 서비스를 배포 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="0176f-134">Describes how to use WCF Data Services to deploy data services on the Web or an intranet that implement the Open Data Protocol (OData).</span></span>  
+  
+ [<span data-ttu-id="0176f-135">.NET Framework 개발 가이드</span><span class="sxs-lookup"><span data-stu-id="0176f-135">.NET Framework Development Guide</span></span>](../../development-guide.md)  
+ <span data-ttu-id="0176f-136">.NET Framework의 표준 개발 작업에 대한 정보를 볼 수 있는 링크를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="0176f-136">Provides links to information about standard development tasks in the .NET Framework.</span></span>  
+  
+ [<span data-ttu-id="0176f-137">샘플 및 자습서</span><span class="sxs-lookup"><span data-stu-id="0176f-137">Samples and tutorials</span></span>](../../../samples-and-tutorials/index.md)  
+ <span data-ttu-id="0176f-138">.NET 샘플 및 자습서의 목록을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="0176f-138">Provides a list of .NET samples and tutorials.</span></span>
+  
+## <a name="see-also"></a><span data-ttu-id="0176f-139">참고 항목</span><span class="sxs-lookup"><span data-stu-id="0176f-139">See also</span></span>
+
+- [<span data-ttu-id="0176f-140">Visual Studio에서 데이터 액세스</span><span class="sxs-lookup"><span data-stu-id="0176f-140">Accessing data in Visual Studio</span></span>](/visualstudio/data-tools/accessing-data-in-visual-studio)
+- [<span data-ttu-id="0176f-141">ADO.NET 개요</span><span class="sxs-lookup"><span data-stu-id="0176f-141">ADO.NET Overview</span></span>](ado-net-overview.md)
