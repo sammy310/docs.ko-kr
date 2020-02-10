@@ -7,18 +7,18 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 178145b06cb937fb677b8454357bed774ed3003b
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: a9ff3a4f6ac08a0f7ec6dd9fc26bf190f43f3584
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740854"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095205"
 ---
 # <a name="dependency-property-value-precedence"></a>종속성 속성 값 우선 순위
 <a name="introduction"></a> 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 속성 시스템의 작업 방식이 종속성 속성 값에 영향을 주는 방식을 설명하고 속성 시스템의 일면이 속성의 유효 값이 적용되는 우선 순위에 관해 설명합니다.  
 
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 클래스에서 기존 종속성 속성의 이용자 관점에서 종속성 속성을 이해하고 [종속성 속성 개요](dependency-properties-overview.md)를 읽었다고 가정합니다. 이 항목의 예제를 따르려면 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]을 이해하고 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애플리케이션을 작성하는 방법도 알아야 합니다.  
   
 <a name="intro"></a>   
@@ -71,7 +71,7 @@ ms.locfileid: "73740854"
   
 <a name="templatedparent"></a>   
 ## <a name="templatedparent"></a>TemplatedParent  
- 우선 순위 항목으로서의 TemplatedParent는 표준 애플리케이션 마크업에서 직접 선언한 요소의 어느 속성에도 적용되지 않습니다. TemplatedParent 개념은 템플릿 적용을 통해 생긴 시각적 트리의 하위 항목에만 존재합니다. 속성 시스템이 <xref:System.Windows.FrameworkElement.TemplatedParent%2A> 템플릿에서 값을 검색 하는 경우 해당 요소를 만든 템플릿을 검색 합니다. <xref:System.Windows.FrameworkElement.TemplatedParent%2A> 템플릿의 속성 값은 일반적으로 자식 요소에서 로컬 값으로 설정 된 것 처럼 동작 하지만, 템플릿이 잠재적으로 공유 될 수 있으므로 로컬 값과 우선 순위가 낮습니다. 자세한 내용은 <xref:System.Windows.FrameworkElement.TemplatedParent%2A>를 참조하십시오.  
+ 우선 순위 항목으로서의 TemplatedParent는 표준 애플리케이션 마크업에서 직접 선언한 요소의 어느 속성에도 적용되지 않습니다. TemplatedParent 개념은 템플릿 적용을 통해 생긴 시각적 트리의 하위 항목에만 존재합니다. 속성 시스템이 <xref:System.Windows.FrameworkElement.TemplatedParent%2A> 템플릿에서 값을 검색 하는 경우 해당 요소를 만든 템플릿을 검색 합니다. <xref:System.Windows.FrameworkElement.TemplatedParent%2A> 템플릿의 속성 값은 일반적으로 자식 요소에서 로컬 값으로 설정 된 것 처럼 동작 하지만, 템플릿이 잠재적으로 공유 될 수 있으므로 로컬 값과 우선 순위가 낮습니다. 자세한 내용은 <xref:System.Windows.FrameworkElement.TemplatedParent%2A>를 참조하세요.  
   
 <a name="style_property"></a>   
 ## <a name="the-style-property"></a>스타일 속성  
@@ -93,7 +93,7 @@ ms.locfileid: "73740854"
   
  <xref:System.Windows.Controls.Primitives.Thumb>에는 특정 한 사용자 지정 가능 속성이 있습니다. <xref:System.Windows.Controls.Primitives.Thumb>의 기본 템플릿은 여러 중첩 된 <xref:System.Windows.Controls.Border> 구성 요소가 포함 된 기본 구조/시각적 트리를 만들어 빗면 모양을 만듭니다. 템플릿에 포함 된 속성이 <xref:System.Windows.Controls.Primitives.Thumb> 클래스에서 사용자 지정을 위해 노출 되도록 하려면 해당 속성을 템플릿 내에서 [TemplateBinding](templatebinding-markup-extension.md)으로 노출 해야 합니다. <xref:System.Windows.Controls.Primitives.Thumb>의 경우 이러한 테두리의 다양 한 속성은 <xref:System.Windows.Controls.Border.Background%2A> 또는 <xref:System.Windows.Controls.Border.BorderThickness%2A>같은 속성에 대 한 템플릿 바인딩을 공유 합니다. 하지만 다른 특정 속성 또는 시각적 배치는 컨트롤 템플릿에 하드 코딩되거나 테마에서 직접 제공되는 값에 바인딩되어 템플릿 전체를 바꾸지 않는 한은 변경할 수 없습니다. 일반적으로, 속성이 템플릿 상위에서 오며 템플릿 바인딩을 통해 노출되지 않는 경우는, 쉽게 대상으로 지정할 방법이 없기 때문에 스타일을 통해 조정할 수 없습니다. 그러나 그 속성도 적용된 템플릿에서 상속된 속성 값이나 기본값의 영향을 받을 수는 있습니다.  
   
- 테마 스타일에서는 유형을 정의에서 키로 사용합니다. 그러나 테마가 지정 된 요소 인스턴스에 적용 되는 경우이 형식의 테마 조회는 컨트롤의 <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> 속성을 확인 하 여 수행 됩니다. 암시적 스타일과 같이 리터럴 Type을 사용하는 방법과는 대조적입니다. <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>의 값은 구현 자가 변경 하지 않은 경우에도 파생 클래스로 상속 됩니다. 속성을 변경 하는 방법은 속성 수준에서 재정의 하지 않고 속성 메타 데이터에서 기본값을 변경 하는 것입니다. 이 간접 참조를 사용하면 기본 클래스에서 원래는 스타일이 없었을(그 스타일에 템플릿이 없어 기본적인 시각적 모양이 전혀 없었을) 파생 요소의 테마 스타일을 정의할 수 있습니다. 따라서 <xref:System.Windows.Controls.Button>에서 `MyButton`를 파생 시킬 수 있으며, <xref:System.Windows.Controls.Button> 기본 템플릿이 계속 제공 됩니다. `MyButton`의 컨트롤 작성자가 다른 동작을 원하는 경우 `MyButton`의 <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>에 대 한 종속성 속성 메타 데이터를 재정의 하 여 다른 키를 반환한 다음 `MyButton`에 대 한 템플릿을 포함 하 여 관련 테마 스타일을 정의할 수 있습니다. `MyButton` 컨트롤을 사용 하 여 패키지 해야 합니다. 테마, 스타일 및 컨트롤 작성에 대한 자세한 내용은 [컨트롤 제작 개요](../controls/control-authoring-overview.md)를 참조하십시오.  
+ 테마 스타일에서는 유형을 정의에서 키로 사용합니다. 그러나 테마가 지정 된 요소 인스턴스에 적용 되는 경우이 형식의 테마 조회는 컨트롤의 <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> 속성을 확인 하 여 수행 됩니다. 암시적 스타일과 같이 리터럴 Type을 사용하는 방법과는 대조적입니다. <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>의 값은 구현 자가 변경 하지 않은 경우에도 파생 클래스로 상속 됩니다. 속성을 변경 하는 방법은 속성 수준에서 재정의 하지 않고 속성 메타 데이터에서 기본값을 변경 하는 것입니다. 이 간접 참조를 사용하면 기본 클래스에서 원래는 스타일이 없었을(그 스타일에 템플릿이 없어 기본적인 시각적 모양이 전혀 없었을) 파생 요소의 테마 스타일을 정의할 수 있습니다. 따라서 <xref:System.Windows.Controls.Button>에서 `MyButton`를 파생 시킬 수 있으며, <xref:System.Windows.Controls.Button> 기본 템플릿이 계속 제공 됩니다. `MyButton`의 컨트롤 작성자가 다른 동작을 원하는 경우 `MyButton`의 <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>에 대 한 종속성 속성 메타 데이터를 재정의 하 여 다른 키를 반환한 다음 `MyButton` 컨트롤을 사용 하 여 패키지 해야 하는 `MyButton`에 대 한 템플릿을 포함 하 여 관련 테마 스타일을 정의할 수 있습니다. 테마, 스타일 및 컨트롤 작성에 대한 자세한 내용은 [컨트롤 제작 개요](../controls/control-authoring-overview.md)를 참조하십시오.  
   
 <a name="resources"></a>   
 ## <a name="dynamic-resource-references-and-binding"></a>동적 리소스 참조 및 바인딩  
@@ -111,7 +111,7 @@ ms.locfileid: "73740854"
 ## <a name="coercion-animations-and-base-value"></a>강제 변환, 애니메이션 및 기준 값  
  강제 변환 및 애니메이션은 모두이 SDK 전체에서 "기본 값"으로 표현 되는 값에 대해 작동 합니다. 따라서 기준 값은 항목 2에 도달할 때까지 위쪽으로 평가하여 결정된 값입니다.  
   
- 애니메이션의 경우, 그 애니메이션이 특정 동작의 "From" 및 "To"를 모두 지정하지 않거나 애니메이션이 완료되었을 때 기준 값으로 돌아가도록 되어 있는 경우는 애니메이션된 값에서 기준 값의 효과를 적용할 수 있습니다. 이 작동을 실제로 확인하려면 [From, To 및 By 애니메이션 대상 값 샘플](https://go.microsoft.com/fwlink/?LinkID=159988)을 실행하십시오. 예에서 직사각형 높이의 로컬 값을 초기 로컬 값이 애니메이션에 있는 "From" 값과 달라지도록 설정해 보십시오. 애니메이션은 "From" 값을 사용하여 시작하며, 시작된 후에는 기준 값을 대체합니다. 애니메이션은 중지 <xref:System.Windows.Media.Animation.FillBehavior>를 지정 하 여 완료 된 후 애니메이션에 대해 발견 된 값으로 돌아가도록 지정할 수 있습니다. 그 후에는 일반적인 우선 순위를 사용하여 기준 값을 결정합니다.  
+ 애니메이션의 경우, 그 애니메이션이 특정 동작의 "From" 및 "To"를 모두 지정하지 않거나 애니메이션이 완료되었을 때 기준 값으로 돌아가도록 되어 있는 경우는 애니메이션된 값에서 기준 값의 효과를 적용할 수 있습니다. 이 작동을 실제로 확인하려면 [From, To 및 By 애니메이션 대상 값 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/TargetValues)을 실행하십시오. 예에서 직사각형 높이의 로컬 값을 초기 로컬 값이 애니메이션에 있는 "From" 값과 달라지도록 설정해 보십시오. 애니메이션은 "From" 값을 사용하여 시작하며, 시작된 후에는 기준 값을 대체합니다. 애니메이션은 중지 <xref:System.Windows.Media.Animation.FillBehavior>를 지정 하 여 완료 된 후 애니메이션에 대해 발견 된 값으로 돌아가도록 지정할 수 있습니다. 그 후에는 일반적인 우선 순위를 사용하여 기준 값을 결정합니다.  
   
  여러 애니메이션을 단일 속성에 적용할 수 있으며, 이러한 애니메이션 각각은 값 우선 순위의 여러 지점에서 정의할 수 있습니다. 그러나 이러한 애니메이션을 사용하면 높은 우선 순위의 애니메이션이 그냥 적용되지 않고 값이 복합될 수도 있습니다. 결과는 애니메이션을 정의하는 정확한 방식과 애니메이션되는 값의 유형에 따라 달라집니다. 속성 애니메이션에 대한 자세한 내용은 [애니메이션 개요](../graphics-multimedia/animation-overview.md)를 참조하십시오.  
   
@@ -123,9 +123,9 @@ ms.locfileid: "73740854"
   
 <a name="clearvalue"></a>   
 ## <a name="clearvalue-and-value-precedence"></a>ClearValue 및 값 우선 순위  
- <xref:System.Windows.DependencyObject.ClearValue%2A> 메서드는 요소에 설정 된 종속성 속성에서 로컬로 적용 되는 모든 값을 지우는 편리 함을 제공 합니다. 그러나 <xref:System.Windows.DependencyObject.ClearValue%2A>를 호출 하는 것은 속성 등록 중 메타 데이터에 설정 된 기본값이 새로운 유효 값이 되도록 보장 되지 않습니다. 값의 우선 순위에 있는 다른 항목도 모두 여전히 활성 상태입니다. 로컬에서 설정된 값만 우선 순위 시퀀스에서 제거되었습니다. 예를 들어 테마 스타일을 사용 하 여 속성을 설정 하는 속성에 대 한 <xref:System.Windows.DependencyObject.ClearValue%2A>를 호출 하는 경우 테마 값은 메타 데이터 기반 기본값이 아닌 새 값으로 적용 됩니다. 모든 속성 값 참가자를 프로세스에서 제외 하 고 값을 등록 된 메타 데이터 기본값으로 설정 하려는 경우 종속성 속성 메타 데이터를 쿼리하여 해당 기본값을 확인할 수 있습니다. 그런 다음 기본값을 로컬로 사용할 수 있습니다. <xref:System.Windows.DependencyObject.SetValue%2A>에 대 한 호출을 사용 하 여 속성을 설정 합니다.  
+ <xref:System.Windows.DependencyObject.ClearValue%2A> 메서드는 요소에 설정 된 종속성 속성에서 로컬로 적용 되는 모든 값을 지우는 편리 함을 제공 합니다. 그러나 <xref:System.Windows.DependencyObject.ClearValue%2A>를 호출 하는 것은 속성 등록 중 메타 데이터에 설정 된 기본값이 새로운 유효 값이 되도록 보장 되지 않습니다. 값의 우선 순위에 있는 다른 항목도 모두 여전히 활성 상태입니다. 로컬에서 설정된 값만 우선 순위 시퀀스에서 제거되었습니다. 예를 들어 테마 스타일을 사용 하 여 속성을 설정 하는 속성에 대 한 <xref:System.Windows.DependencyObject.ClearValue%2A>를 호출 하는 경우 테마 값은 메타 데이터 기반 기본값이 아닌 새 값으로 적용 됩니다. 모든 속성 값 참가자를 프로세스에서 제외 하 고 값을 등록 된 메타 데이터 기본값으로 설정 하려는 경우 종속성 속성 메타 데이터를 쿼리하여 해당 기본값을 얻을 수 있습니다. 그런 다음 기본값을 사용 하 여 <xref:System.Windows.DependencyObject.SetValue%2A>에 대 한 호출로 로컬로 속성을 설정할 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.DependencyObject>
 - <xref:System.Windows.DependencyProperty>

@@ -2,15 +2,16 @@
 title: 신뢰할 수 있는 보안 프로필
 ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
-ms.openlocfilehash: ee94dc5be2c50f9e383a42d435996b2fd35df4a4
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ef4680673f37655603a42f6da8aaf7eceaa01f56
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716499"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094945"
 ---
 # <a name="reliable-secure-profile"></a>신뢰할 수 있는 보안 프로필
-이 샘플에서는 WCF 및 RSP ( [신뢰할 수 있는 보안 프로필](https://go.microsoft.com/fwlink/?LinkId=178140) )를 구성 하는 방법을 보여 줍니다. 이 샘플에서는 [연결 된 연결](https://go.microsoft.com/fwlink/?LinkId=178141) 채널의 구현을 보여 줍니다 .이 채널은 신뢰할 수 있는 메시징 및 선택적으로 보안 채널로 구성 하 여 RSP 사양을 기반으로 하는 안정적인 보안 바인딩을 만들 수 있습니다.  
+
+이 샘플에서는 WCF 및 [RSP (신뢰할 수 있는 보안 프로필)](http://www.ws-i.org/Profiles/ReliableSecureProfile-1.0.html)를 구성 하는 방법을 보여 줍니다. 이 샘플에서는 [연결](http://docs.oasis-open.org/ws-rx/wsmc/200702/wsmc-1.0-spec-cs-01.pdf) 채널을 구현 하는 방법을 보여 줍니다 .이 채널은 신뢰할 수 있는 메시징 및 선택적으로 보안 채널을 사용 하 여 RSP 사양을 기반으로 하는 신뢰할 수 있는 보안 바인딩을 만들 수 있습니다.  
   
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  

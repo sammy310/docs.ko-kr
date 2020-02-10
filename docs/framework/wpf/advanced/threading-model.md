@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 550ba74c7ceba16c2040932918364ae2a59ea665
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 87dcfa22bcce730c5a9b61721c3a846a08146475
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794279"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094503"
 ---
 # <a name="threading-model"></a>스레딩 모델
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 개발자가 스레딩의 어려움을 해결하도록 디자인되어 있습니다. 결과적으로 대부분의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 개발자는 둘 이상의 스레드를 사용 하는 인터페이스를 작성할 필요가 없습니다. 다중 스레드 프로그램은 복잡하고 디버그하기 어려우므로 단일 스레드 솔루션이 있을 경우 피해야 합니다.
@@ -99,7 +99,7 @@ ms.locfileid: "76794279"
 
  이 메서드는 다음 홀수가 소수인지 확인합니다. 소수 인 경우 메서드는 검색을 반영 하기 위해 `bigPrime`<xref:System.Windows.Controls.TextBlock>를 직접 업데이트 합니다. 구성 요소를 만드는 데 사용된 같은 스레드에서 계산이 수행되므로 이 작업을 수행할 수 있습니다. 계산을 위해 별도의 스레드를 사용 하도록 선택 했으므로 보다 복잡 한 동기화 메커니즘을 사용 하 고 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 스레드에서 업데이트를 실행 해야 합니다. 이 상황은 다음에 살펴보겠습니다.
 
- 이 샘플에 대 한 전체 소스 코드는 [장기 실행 계산이 포함 된 단일 스레드 응용 프로그램 샘플](https://go.microsoft.com/fwlink/?LinkID=160038) 을 참조 하세요.
+ 이 샘플에 대 한 전체 소스 코드는 [장기 실행 계산이 포함 된 단일 스레드 응용 프로그램 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Threading/SingleThreadedApplication) 을 참조 하세요.
 
 <a name="weather_sim"></a>
 ### <a name="handling-a-blocking-operation-with-a-background-thread"></a>백그라운드 스레드를 사용하여 차단 작업 처리
@@ -215,6 +215,6 @@ ms.locfileid: "76794279"
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에 대 한 작업은 메모리 누수를 재 도입 하지 않고 예기치 않은 재진입을 방지 하는 것입니다 .이 경우에는 모든 위치에서 재진입을 차단 하지 않습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [장기 실행 계산이 포함된 단일 스레드 애플리케이션 샘플](https://go.microsoft.com/fwlink/?LinkID=160038)
+- [장기 실행 계산이 포함된 단일 스레드 애플리케이션 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Threading/SingleThreadedApplication)

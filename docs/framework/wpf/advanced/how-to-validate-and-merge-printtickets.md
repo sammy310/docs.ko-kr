@@ -10,15 +10,15 @@ helpviewer_keywords:
 - validation of PrintTickets [WPF]
 - PrintTicket [WPF], validation
 ms.assetid: 4fe2d501-d0b0-4fef-86af-6ffe6c162532
-ms.openlocfilehash: 15e328729886e0f1efc3b47705fcb4ce13013137
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: bd7f399555b343a52ec6f36aa3b8c706747d8b06
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035581"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094529"
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a>방법: PrintTicket 유효성 검사 및 병합
-Microsoft Windows [인쇄 스키마](https://go.microsoft.com/fwlink/?LinkId=186397) 에는 유연 하 고 확장 가능한 <xref:System.Printing.PrintCapabilities> 및 <xref:System.Printing.PrintTicket> 요소가 포함 됩니다. 이전에는 인쇄 장치의 기능을 항목별로 요약, 후자는 특정 문서 시퀀스, 개별 문서 또는 개별 페이지와 관련 하 여 장치에서 이러한 기능을 사용 하는 방법을 지정 합니다.  
+Microsoft Windows [인쇄 스키마](/windows/win32/printdocs/printschema) 에는 유연 하 고 확장 가능한 <xref:System.Printing.PrintCapabilities> 및 <xref:System.Printing.PrintTicket> 요소가 포함 됩니다. 이전에는 인쇄 장치의 기능을 항목별로 요약, 후자는 특정 문서 시퀀스, 개별 문서 또는 개별 페이지와 관련 하 여 장치에서 이러한 기능을 사용 하는 방법을 지정 합니다.  
   
  인쇄를 지 원하는 응용 프로그램에 대 한 일반적인 작업 시퀀스는 다음과 같습니다.  
   
@@ -56,7 +56,7 @@ Microsoft Windows [인쇄 스키마](https://go.microsoft.com/fwlink/?LinkId=186
  [!code-csharp[PrintTicketManagment#UIForMergeAndValidatePTUtility](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#uiformergeandvalidateptutility)]
  [!code-vb[PrintTicketManagment#UIForMergeAndValidatePTUtility](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#uiformergeandvalidateptutility)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Printing.PrintCapabilities>
 - <xref:System.Printing.PrintTicket>
@@ -67,4 +67,4 @@ Microsoft Windows [인쇄 스키마](https://go.microsoft.com/fwlink/?LinkId=186
 - <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>
 - [WPF의 문서](documents-in-wpf.md)
 - [인쇄 개요](printing-overview.md)
-- [인쇄 스키마](https://go.microsoft.com/fwlink/?LinkId=186397)
+- [인쇄 스키마](/windows/win32/printdocs/printschema)

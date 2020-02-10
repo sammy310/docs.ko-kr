@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], model
 - encryption [.NET Framework], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: 964c63e01a6b09e63e305e9a10dca46e62c18648
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: f878f73497b83aaf31f2ba3b23cca1f685867b3e
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965960"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095270"
 ---
 # <a name="net-framework-cryptography-model"></a>.NET Framework 암호화 모델
 
@@ -41,7 +41,7 @@ ms.locfileid: "76965960"
 
 <xref:System.Security.Cryptography.Aes>는 두 클래스 <xref:System.Security.Cryptography.AesCryptoServiceProvider> 및 <xref:System.Security.Cryptography.AesManaged>에 상속됩니다. <xref:System.Security.Cryptography.AesCryptoServiceProvider> 클래스는 Aes의 Windows CAPI(암호화 API) 구현에 대한 래퍼인 반면, <xref:System.Security.Cryptography.AesManaged> 클래스는 완전히 관리 코드로 작성됩니다. 관리되는 구현 및 CAPI 구현 외에도 세 번째 유형의 구현인 CNG(Cryptography Next Generation)가 있습니다. CNG 알고리즘의 한 예는 <xref:System.Security.Cryptography.ECDiffieHellmanCng>입니다. CNG 알고리즘은 Windows Vista 이상에서 사용할 수 있습니다.
 
-가장 적합한 구현을 선택할 수 있습니다.  관리되는 구현은 .NET Framework를 지원하는 모든 플랫폼에서 사용할 수 있습니다.  CAPI 구현은 이전 운영 체제에서 사용할 수 있으며 더 이상 개발되지 않습니다. CNG는 새로운 개발이 수행되는 최신 구현입니다. 그러나 관리되는 구현은 FIPS(Federal Information Processing Standards)에서 인증되지 않았으며 래퍼 클래스보다 느릴 수 있습니다.
+가장 적합한 구현을 선택할 수 있습니다. 관리 되는 구현은 .NET Framework를 지 원하는 모든 플랫폼에서 사용할 수 있습니다. CAPI 구현은 이전 운영 체제에서 사용할 수 있으며 더 이상 개발 되지 않습니다. CNG는 새로운 개발이 이루어지는 최신 구현입니다. 그러나 관리되는 구현은 FIPS(Federal Information Processing Standards)에서 인증되지 않았으며 래퍼 클래스보다 느릴 수 있습니다.
 
 ## <a name="stream-design"></a>스트림 디자인
 
@@ -73,7 +73,7 @@ ms.locfileid: "76965960"
 - 암호에서 키 생성:
   - <xref:System.Security.Cryptography.Rfc2898DeriveBytes>
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [암호화 서비스](../../../docs/standard/security/cryptographic-services.md)
 - [C에서 Bruce Schneier 암호화 프로토콜, 알고리즘 및 소스 코드를 적용 합니다.](https://www.schneier.com/books/applied_cryptography/)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: 755240859829042e9790b9c89e47bb7a2013ceef
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: b1887afd19407898d8de1d92252e29778899fb89
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460453"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095192"
 ---
 # <a name="freezable-objects-overview"></a>Freezable 개체 개요
 
@@ -139,7 +139,7 @@ mc:Ignorable="PresentationOptions"
 
 - 자세한 변경 알림: 다른 <xref:System.Windows.DependencyObject>s와 달리 Freezable 개체는 하위 속성 값이 변경 될 때 변경 알림을 제공 합니다.
 
-- 간편한 복제: Freezable 클래스는 심층 클론을 생성 하는 여러 메서드를 이미 구현 했습니다.
+- 쉬운 복제: Freezable 클래스가 이미 전체 복제를 만드는 여러 메서드를 구현 합니다.
 
 <xref:System.Windows.Freezable>은 <xref:System.Windows.DependencyObject>형식 이므로 종속성 속성 시스템을 사용 합니다. 클래스 속성은 종속성 속성이 될 필요는 없지만 종속성 속성을 사용 하면 <xref:System.Windows.Freezable> 클래스가 종속성 속성을 염두에 두면 디자인 되었으므로 작성 해야 하는 코드의 양이 줄어듭니다. 종속성 속성 시스템에 대 한 자세한 내용은 [종속성 속성 개요](dependency-properties-overview.md)를 참조 하세요.
 
@@ -170,11 +170,11 @@ mc:Ignorable="PresentationOptions"
 > [!NOTE]
 > 기본 구현에 대 한 호출을 사용 하 여 재정의 하는 각 <xref:System.Windows.Freezable> 메서드를 시작 하는 것이 매우 중요 합니다.
 
-사용자 지정 <xref:System.Windows.Freezable> 클래스에 대 한 예제는 [사용자 지정 애니메이션 샘플](https://go.microsoft.com/fwlink/?LinkID=159981)을 참조 하세요.
+사용자 지정 <xref:System.Windows.Freezable> 클래스에 대 한 예제는 [사용자 지정 애니메이션 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/CustomAnimation)을 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Freezable>
-- [사용자 지정 애니메이션 샘플](https://go.microsoft.com/fwlink/?LinkID=159981)
+- [사용자 지정 애니메이션 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/CustomAnimation)
 - [종속성 속성 개요](dependency-properties-overview.md)
 - [사용자 지정 종속성 속성](custom-dependency-properties.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: 9f97639447284b792d52cf4aa25b81f584d7291a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 89ed57a787b93a1326b4accd3bb1bc5ff9a825fd
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787898"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095153"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>WindowsFormsHost 요소에 대한 레이아웃 고려 사항
 이 항목에서는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소가 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 레이아웃 시스템과 상호 작용 하는 방법에 대해 설명 합니다.  
@@ -31,8 +31,8 @@ ms.locfileid: "76787898"
 |레이아웃 기능|설명|  
 |--------------------|-----------------|  
 |자동 크기 조정|일부 Windows Forms 컨트롤의 크기를 조정 하면 해당 내용이 제대로 표시 됩니다. 자세한 내용은 [AutoSize 속성 개요](../../winforms/controls/autosize-property-overview.md)를 참조 하세요.|  
-|고정 및 도킹|Windows Forms 컨트롤은 부모 컨테이너를 기반으로 위치 지정 및 크기 조정을 지원 합니다. 자세한 내용은 <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> 및 <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>을 참조하세요.|  
-|배율이|컨테이너 컨트롤은 출력 장치의 해상도 또는 기본 컨테이너 글꼴의 크기 (픽셀 단위)에 따라 자신과 자식 항목의 크기를 조정 합니다. 자세한 내용은 [Windows Forms 자동 크기 조정](../../winforms/automatic-scaling-in-windows-forms.md)을 참조 하세요.|  
+|고정 및 도킹|Windows Forms 컨트롤은 부모 컨테이너를 기반으로 위치 지정 및 크기 조정을 지원 합니다. 자세한 내용은 <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> 및 <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>를 참조하세요.|  
+|자동 확장|컨테이너 컨트롤은 출력 장치의 해상도 또는 기본 컨테이너 글꼴의 크기 (픽셀 단위)에 따라 자신과 자식 항목의 크기를 조정 합니다. 자세한 내용은 [Windows Forms 자동 크기 조정](../../winforms/automatic-scaling-in-windows-forms.md)을 참조 하세요.|  
 |레이아웃 컨테이너|<xref:System.Windows.Forms.FlowLayoutPanel> 및 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤은 자식 컨트롤을 정렬 하 고 내용에 따라 크기를 조정 합니다.|  
   
 ## <a name="layout-limitations"></a>레이아웃 제한  
@@ -98,11 +98,11 @@ ms.locfileid: "76787898"
   
 - <xref:System.Windows.Forms.Control.Size%2A> 속성이 지정 된 제약 조건 보다 작은 크기를 반환 하는 경우 <xref:System.Windows.Forms.Integration.WindowsFormsHost>이 크기 값을 허용 하 고 값을 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 레이아웃 시스템으로 반환 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [연습: WPF에서 Windows Forms 컨트롤 정렬](walkthrough-arranging-windows-forms-controls-in-wpf.md)
-- [WPF 샘플에서 Windows Forms 컨트롤 정렬](https://go.microsoft.com/fwlink/?LinkID=159971)
+- [WPF 샘플에서 Windows Forms 컨트롤 정렬](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WpfLayoutHostingWfWithXaml)
 - [Windows Forms 및 WPF 속성 매핑](windows-forms-and-wpf-property-mapping.md)
 - [마이그레이션 및 상호 운용성](migration-and-interoperability.md)

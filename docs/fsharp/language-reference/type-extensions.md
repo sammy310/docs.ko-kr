@@ -1,13 +1,13 @@
 ---
 title: 형식 확장
 description: 형식 확장 F# 을 사용 하 여 이전에 정의한 개체 형식에 새 멤버를 추가 하는 방법을 알아봅니다.
-ms.date: 11/04/2019
-ms.openlocfilehash: 3e2c6971156bd562ed5d5428e6b7ffdc520c4cf5
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.date: 02/05/2020
+ms.openlocfilehash: 9ab3a007783f67fd8d80cff840ac3085fdcd60f7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75341566"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092683"
 ---
 # <a name="type-extensions"></a>형식 확장
 
@@ -33,7 +33,8 @@ open System.Runtime.CompilerServices
 
 [<Extension>]
 type Extensions() =
-    [static] member self-identifier.extension-name (ty: typename, [args]) =
+    [<Extension>]
+    static member self-identifier.extension-name (ty: typename, [args]) =
         body
     ...
 ```
@@ -78,7 +79,7 @@ type Variant with
 
 선택적 형식 확장은 확장 중인 형식의 원래 모듈, 네임 스페이스 또는 어셈블리 외부에 표시 되는 확장입니다.
 
-선택적 형식 확장은 직접 정의 하지 않은 형식을 확장 하는 데 유용 합니다. 예를 들면 다음과 같습니다.:
+선택적 형식 확장은 직접 정의 하지 않은 형식을 확장 하는 데 유용 합니다. 예를 들면 다음과 같습니다.
 
 ```fsharp
 module Extensions
@@ -104,7 +105,7 @@ type IEnumerable<'T> with
 
 형식 변수가 제한 되는 제네릭 형식에 대해 형식 확장을 선언할 수 있습니다. 요구 사항은 확장 선언의 제약 조건이 선언 된 형식의 제약 조건과 일치 한다는 것입니다.
 
-그러나 제약 조건이 선언 된 형식과 형식 확장명 사이에 일치 하는 경우에도 선언 된 형식에 비해 형식 매개 변수에 대해 다른 요구 사항을 적용 하는 확장 멤버의 본문에서 제약 조건을 유추할 수 있습니다. 예를 들면 다음과 같습니다.:
+그러나 제약 조건이 선언 된 형식과 형식 확장명 사이에 일치 하는 경우에도 선언 된 형식에 비해 형식 매개 변수에 대해 다른 요구 사항을 적용 하는 확장 멤버의 본문에서 제약 조건을 유추할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```fsharp
 open System.Collections.Generic
@@ -128,7 +129,7 @@ type IEnumerable<'T> with
 
 마지막으로, 확장 메서드 ("C# 스타일 확장 멤버" 라고도 함)를 클래스의 F# 정적 멤버 메서드로 선언할 수 있습니다.
 
-확장 메서드는 형식 변수를 제약 하는 제네릭 형식에 대 한 확장을 정의 하려는 경우에 유용 합니다. 예를 들면 다음과 같습니다.:
+확장 메서드는 형식 변수를 제약 하는 제네릭 형식에 대 한 확장을 정의 하려는 경우에 유용 합니다. 예를 들면 다음과 같습니다.
 
 ```fsharp
 namespace Extensions
@@ -136,12 +137,21 @@ namespace Extensions
 open System.Runtime.CompilerServices
 
 [<Extension>]
-type IEnumerableExtensions() =
+type IEnumerableExtensions =
     [<Extension>]
     static member inline Sum(xs: IEnumerable<'T>) = Seq.sum xs
 ```
 
 이 코드를 사용 하면 `Extensions`가 열리거나 범위 내에 있는 한 <xref:System.Collections.Generic.IEnumerable%601>에 `Sum` 정의 된 것 처럼 표시 됩니다.
+
+VB.NET 코드에 확장을 사용할 수 있도록 하려면 어셈블리 수준에서 추가 `ExtensionAttribute` 필요 합니다.
+
+```fsharp
+module AssemblyInfo
+open System.Runtime.CompilerServices
+[<assembly:Extension>]
+do ()
+```
 
 ## <a name="other-remarks"></a>기타 설명
 
@@ -149,7 +159,7 @@ type IEnumerableExtensions() =
 
 - 액세스할 수 있는 모든 형식을 확장할 수 있습니다.
 - 내장 함수와 선택적 형식 확장은 메서드 뿐 _아니라 멤버 형식을_ 정의할 수 있습니다. 따라서 확장명 속성도 가능 합니다 (예:).
-- [구문](type-extensions.md#syntax)의 `self-identifier` 토큰은 일반 멤버와 마찬가지로 호출 중인 형식의 인스턴스를 나타냅니다.
+- [구문의](type-extensions.md#syntax) `self-identifier` 토큰은 일반 멤버와 마찬가지로 호출 중인 형식의 인스턴스를 나타냅니다.
 - 확장 멤버는 정적 또는 인스턴스 멤버일 수 있습니다.
 - 형식 확장의 형식 변수는 선언 된 형식의 제약 조건과 일치 해야 합니다.
 
@@ -166,7 +176,7 @@ type IEnumerableExtensions() =
 
 마지막으로 한 형식에 대해 여러 개의 내장 형식 확장이 있는 경우 모든 멤버가 고유 해야 합니다. 선택적 형식 확장의 경우 동일한 형식에 대 한 다른 형식 확장의 멤버는 동일한 이름을 가질 수 있습니다. 모호성 오류는 클라이언트 코드가 동일한 멤버 이름을 정의 하는 두 개의 서로 다른 범위를 연 경우에만 발생 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [F# 언어 참조](index.md)
 - [멤버](./members/index.md)

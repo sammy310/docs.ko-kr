@@ -2,12 +2,12 @@
 title: Byref
 description: 하위 수준 프로그래밍에 사용 되는의 F#byref 및 byref와 유사한 형식에 대해 알아봅니다.
 ms.date: 11/04/2019
-ms.openlocfilehash: 05a40059ad5b72829233b0c4135c76eb1cff4da5
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 2d98d325dc4ad26548fb2cc6aa5b872e152ee0a8
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965817"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092790"
 ---
 # <a name="byrefs"></a>Byref
 
@@ -134,7 +134,7 @@ C#`ref` 반환 하는 것 외에도 `in ref` 및 `out ref` 키워드를 지원 �
 2. 변경할 필드가 없는 구조체 형식의 `this` 포인터입니다.
 3. 다른 `inref<_>` 포인터에서 파생 된 메모리 위치의 주소입니다.
 
-`inref`의 암시적 주소를 사용 하는 경우 `inref<SomeType>`형식의 인수를 사용 하는 오버 로드에 `SomeType` 형식의 인수를 사용 하는 오버 로드를 사용 하는 것이 좋습니다. 예를 들면 다음과 같습니다.:
+`inref`의 암시적 주소를 사용 하는 경우 `inref<SomeType>`형식의 인수를 사용 하는 오버 로드에 `SomeType` 형식의 인수를 사용 하는 오버 로드를 사용 하는 것이 좋습니다. 예를 들면 다음과 같습니다.
 
 ```fsharp
 type C() =
@@ -179,7 +179,7 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 ## <a name="byref-returns"></a>Byref 반환
 
-Byref는 함수 F# 또는 멤버를 생성 하 고 사용할 수 있습니다. `byref`반환 메서드를 사용 하는 경우이 값은 암시적으로 역참조 됩니다. 예를 들면 다음과 같습니다.:
+Byref는 함수 F# 또는 멤버를 생성 하 고 사용할 수 있습니다. `byref`반환 메서드를 사용 하는 경우이 값은 암시적으로 역참조 됩니다. 예를 들면 다음과 같습니다.
 
 ```fsharp
 let squareAndPrint (data : byref<int>) = 
@@ -188,7 +188,7 @@ let squareAndPrint (data : byref<int>) =
 ```
 
 Byref 값을 반환 하려면 값을 포함 하는 변수가 현재 범위 보다 오래 지속 되어야 합니다.
-또한 byref를 반환 하려면 & 값을 사용 합니다. 여기서 value는 현재 범위 보다 오래 지속 되는 변수입니다.
+또한 byref를 반환 하려면 `&value`을 사용 합니다. 여기서 value는 현재 범위 보다 오래 지속 되는 변수입니다.
 
 ```fsharp
 let mutable sum = 0
@@ -252,4 +252,4 @@ let test () =
     ()
 ```
 
-이렇게 하면 최적화를 설정 하거나 해제 하 여 컴파일하는 경우에 따라 다른 결과를 얻을 수 없습니다.
+이렇게 하면 최적화를 사용 하 여 컴파일하는 경우에 따라 다른 결과를 얻을 수 없습니다.

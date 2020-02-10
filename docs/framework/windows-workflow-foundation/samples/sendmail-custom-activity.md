@@ -2,12 +2,12 @@
 title: SendMail 사용자 지정 활동
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: b1e2d58a09362569d4d408f6e1c9e589aa6bda76
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 90b3192d931b216345b50ba49465455427e43a64
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715577"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094607"
 ---
 # <a name="sendmail-custom-activity"></a>SendMail 사용자 지정 활동
 이 샘플에서는 워크플로 애플리케이션 내에서 사용하기 위해 <xref:System.Activities.AsyncCodeActivity>로부터 파생되는 사용자 지정 활동을 만들어 SMTP를 사용하여 메일을 보내는 방법을 보여 줍니다. 사용자 지정 작업은 <xref:System.Net.Mail.SmtpClient> 기능을 사용 하 여 비동기적으로 전자 메일을 보내고 인증을 사용 하 여 메일을 보냅니다. 또한 테스트 모드, 토큰 바꾸기, 파일 템플릿 및 테스트 드롭 경로와 같은 몇 가지 최종 사용자 기능도 제공합니다.  
@@ -16,17 +16,17 @@ ms.locfileid: "74715577"
   
 |이름|형식|설명|  
 |-|-|-|  
-|Host|String|SMTP 서버 호스트의 주소입니다.|  
-|Port|String|호스트에 있는 SMTP 서비스의 포트입니다.|  
-|EnableSsl|부울|<xref:System.Net.Mail.SmtpClient>에서 SSL(Secure Sockets Layer)을 사용하여 연결을 암호화할지 여부를 지정합니다.|  
-|사용자 이름|String|보낸 사람의 <xref:System.Net.Mail.SmtpClient.Credentials%2A> 속성을 인증하는 자격 증명을 설정할 사용자 이름입니다.|  
+|호스트|String|SMTP 서버 호스트의 주소입니다.|  
+|포트|String|호스트에 있는 SMTP 서비스의 포트입니다.|  
+|EnableSsl|bool|<xref:System.Net.Mail.SmtpClient>에서 SSL(Secure Sockets Layer)을 사용하여 연결을 암호화할지 여부를 지정합니다.|  
+|UserName|String|보낸 사람의 <xref:System.Net.Mail.SmtpClient.Credentials%2A> 속성을 인증하는 자격 증명을 설정할 사용자 이름입니다.|  
 |Password|String|보낸 사람의 <xref:System.Net.Mail.SmtpClient.Credentials%2A> 속성을 인증하는 자격 증명을 설정할 암호입니다.|  
-|Subject|<xref:System.Activities.InArgument%601>\<문자열 >|메시지 제목입니다.|  
+|제목|<xref:System.Activities.InArgument%601>\<문자열 >|메시지 제목입니다.|  
 |본문|<xref:System.Activities.InArgument%601>\<문자열 >|메시지 본문입니다.|  
-|첨부할|<xref:System.Activities.InArgument%601>\<문자열 >|이 전자 메일 메시지에 첨부 된 데이터를 저장 하는 데 사용 되는 첨부 파일 컬렉션입니다.|  
-|에서|<xref:System.Net.Mail.MailAddress>|이 전자 메일 메시지의 보낸 사람 주소입니다.|  
-|변환 대상|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|이 전자 메일 메시지의 받는 사람이 들어 있는 주소 컬렉션입니다.|  
-|참조|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|이 전자 메일 메시지에 대 한 CC (참조) 받는 사람이 들어 있는 주소 컬렉션입니다.|  
+|첨부 파일|<xref:System.Activities.InArgument%601>\<문자열 >|이 전자 메일 메시지에 첨부 된 데이터를 저장 하는 데 사용 되는 첨부 파일 컬렉션입니다.|  
+|변경 전|<xref:System.Net.Mail.MailAddress>|이 전자 메일 메시지의 보낸 사람 주소입니다.|  
+|대상|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|이 전자 메일 메시지의 받는 사람이 들어 있는 주소 컬렉션입니다.|  
+|CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|이 전자 메일 메시지에 대 한 CC (참조) 받는 사람이 들어 있는 주소 컬렉션입니다.|  
 |BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|이 전자 메일 메시지의 BCC (숨은 참조) 받는 사람이 들어 있는 주소 컬렉션입니다.|  
 |토큰|<xref:System.Activities.InArgument%601>< IDictionary\<문자열, 문자열 > >|본문에서 바꿀 토큰입니다. 사용자는 이 기능을 통해 나중에 이 속성을 사용하여 제공된 토큰으로 바꿀 수 있는 일부 값을 본문에 지정할 수 있습니다.|  
 |BodyTemplateFilePath|String|본문에 대한 템플릿의 경로입니다. `SendMail` 활동은 이 파일의 내용을 본문 속성에 복사합니다.<br /><br /> 템플릿에는 토큰 속성의 내용으로 바뀌는 토큰이 포함될 수 있습니다.|  
@@ -107,13 +107,11 @@ new SendMail
   
  SMTP 서버를 설정 하는 방법에 대 한 자세한 내용은 다음 링크를 참조 하십시오.  
   
-- [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
+- [SMTP 서비스 구성 (IIS 6.0)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784968(v=ws.10))  
   
-- [SMTP 서비스 구성 (IIS 6.0)](https://go.microsoft.com/fwlink/?LinkId=150456)  
+- [IIS 7.0: SMTP 전자 메일 구성](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772058(v=ws.10))  
   
-- [IIS 7.0: SMTP 전자 메일 구성](https://go.microsoft.com/fwlink/?LinkId=150457)  
-  
-- [SMTP 서비스를 설치 하는 방법](https://go.microsoft.com/fwlink/?LinkId=150458)  
+- [SMTP 서비스를 설치 하는 방법](https://docs.microsoft.com/previous-versions/tn-archive/aa997480(v=exchg.65))  
   
  타사에서 제공하는 SMTP 에뮬레이터를 다운로드할 수 있습니다.  
   

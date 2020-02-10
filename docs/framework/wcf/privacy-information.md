@@ -6,15 +6,15 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 30ea92f09bc655796b6bc268212b6d9e0e05bd9b
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: b724ff1ce85442f64980fdc972188705992d5a4f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919328"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094984"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 개인 정보 취급 방침
-Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할 것을 약속합니다. WCF (Windows Communication Foundation) 버전 3.0을 사용 하 여 응용 프로그램을 빌드할 때 응용 프로그램이 최종 사용자의 개인 정보에 영향을 줄 수 있습니다. 예를 들어 애플리케이션에서 사용자 연락처 정보를 명시적으로 수집하거나, 정보를 요청하거나 인터넷을 통해 정보를 웹 사이트로 보낼 수 있습니다. 애플리케이션에 Microsoft 기술을 포함하는 경우 해당 기술의 동작이 개인 정보 보호에 영향을 줄 수 있습니다. 사용자 또는 최종 사용자가 Microsoft에 전송 하도록 선택 하지 않는 한 WCF는 응용 프로그램에서 Microsoft로 정보를 보내지 않습니다.  
+Microsoft는 최종 사용자 개인 정보를 보호 하기 위해 최선을 다하고 있습니다. WCF (Windows Communication Foundation) 버전 3.0을 사용 하 여 응용 프로그램을 빌드하면 응용 프로그램이 최종 사용자의 개인 정보에 영향을 줄 수 있습니다. 예를 들어 애플리케이션에서 사용자 연락처 정보를 명시적으로 수집하거나, 정보를 요청하거나 인터넷을 통해 정보를 웹 사이트로 보낼 수 있습니다. 애플리케이션에 Microsoft 기술을 포함하는 경우 해당 기술의 동작이 개인 정보 보호에 영향을 줄 수 있습니다. WCF는 사용자 또는 최종 사용자가 Microsoft에 정보를 전송 하도록 선택한 경우를 제외 하 고는 응용 프로그램에서 Microsoft로 정보를 보내지 않습니다.  
   
 ## <a name="wcf-in-brief"></a>WCF에 대한 간략한 설명  
  WCF는 개발자가 분산 응용 프로그램을 빌드할 수 있도록 하는 Microsoft .NET 프레임 워크를 사용 하는 분산 메시징 프레임 워크입니다. 두 애플리케이션 간에 전달된 메시지에는 헤더 및 본문 정보가 들어 있습니다.  
@@ -28,7 +28,7 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  WCF 메시징 계층은 로컬 컴퓨터에 개인 정보를 쓰지 않습니다. 그러나 엔드포인트 이름에 개인 이름을 사용하거나 엔드포인트의 웹 서비스 기술 언어에 개인 정보를 포함하지만 클라이언트에 https를 사용하여 WSDL에 액세스하도록 요구하지 않는 경우 등 서비스 개발자가 이러한 정보를 노출하는 서비스를 만든 경우 네트워크 수준에서 개인 정보를 전파할 수도 있습니다. 또한 개발자가 개인 정보를 노출 하는 끝점에 대해 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) 도구를 실행 하는 경우 도구의 출력은 해당 정보를 포함 하 고 출력 파일은 로컬 하드 디스크에 기록 됩니다.  
   
-## <a name="hosting"></a>호스팅  
+## <a name="hosting"></a>Hosting  
  WCF의 호스팅 기능을 사용 하면 요청 시 응용 프로그램을 시작 하거나 여러 응용 프로그램 간에 포트를 공유할 수 있습니다. WCF 응용 프로그램은 ASP.NET와 유사 하 게 인터넷 정보 서비스 (IIS)에서 호스팅할 수 있습니다.  
   
  호스팅은 네트워크에 특정 정보를 노출하지 않으며 컴퓨터에 데이터를 보관하지 않습니다.  
@@ -44,7 +44,7 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  인증을 통해 통신하는 엔드포인트 간에 보안 세션이 설정될 수 있습니다. 세션은 보안 세션의 수명 동안 지속되는 GUID로 식별됩니다. 다음 표에서는 보관되는 데이터와 위치를 보여 줍니다.  
   
-|데이터|저장소|  
+|데이터|스토리지|  
 |----------|-------------|  
 |사용자 이름, X.509 인증서, Kerberos 토큰, 자격 증명에 대한 참조 등의 프레젠테이션 자격 증명|Windows 인증서 저장소 등의 표준 Windows 자격 증명 관리 메커니즘|  
 |사용자 이름, 암호 등의 사용자 멤버 자격 정보|ASP.NET 멤버 자격 공급자입니다.|  
@@ -70,17 +70,17 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  신뢰할 수 있는 세션은 WS-RM(WS-ReliableMessaging) 프로토콜을 사용하여 구현됩니다. 신뢰할 수 있는 특정 세션과 연결된 모든 메시지 식별에 사용되는 세션 정보가 들어 있는 WS-RM 헤더를 추가합니다. 각 WS-RM 세션에는 GUID인 식별자가 있습니다.  
   
- 최종 사용자의 컴퓨터에는 개인 정보가 보관되지 않습니다.  
+ 최종 사용자의 컴퓨터에는 개인 정보가 보존 되지 않습니다.  
   
 ## <a name="queued-channels"></a>대기 중인 채널  
  큐는 수신 애플리케이션을 대신하여 송신 애플리케이션의 메시지를 저장하고 나중에 이 메시지를 수신 애플리케이션에 전달합니다. 예를 들어 큐는 수신 애플리케이션이 임시일 때 송신 애플리케이션에서 수신 애플리케이션으로 메시지가 전송되게 합니다. WCF는 MSMQ (Microsoft Message Queuing)를 전송으로 사용 하 여 큐에 대 한 지원을 제공 합니다.  
   
  대기 중인 채널 기능은 메시지에 헤더를 추가하지 않습니다. 대신 적절한 메시지 큐 메시지 속성이 설정된 메시지 큐 메시지를 만들고 메시지 큐 메서드를 호출하여 메시지를 메시지 큐의 큐에 보관합니다. 메시지 큐는 Windows에 포함된 선택적 구성 요소입니다.  
   
- 대기 중인 채널 기능은 메시지 큐를 큐 인프라로 사용하므로 최종 사용자의 컴퓨터에 정보를 보관하지 않습니다.  
+ 큐에 대기 중인 채널 기능은 큐 인프라로 메시지 큐를 사용 하기 때문에 최종 사용자의 컴퓨터에는 정보가 보존 되지 않습니다.  
   
 ## <a name="com-integration"></a>COM+ 통합  
- 이 기능은 기존 COM 및 COM + 기능을 래핑하여 WCF 서비스와 호환 되는 서비스를 만듭니다. 이 기능은 특정 헤더를 사용하지 않으며 최종 사용자의 컴퓨터에 데이터를 보관하지 않습니다.  
+ 이 기능은 기존 COM 및 COM + 기능을 래핑하여 WCF 서비스와 호환 되는 서비스를 만듭니다. 이 기능은 특정 헤더를 사용 하지 않으며 최종 사용자의 컴퓨터에 데이터를 보관 하지 않습니다.  
   
 ## <a name="com-service-moniker"></a>COM 서비스 모니커  
  이렇게 하면 관리 되지 않는 래퍼가 표준 WCF 클라이언트에 제공 됩니다. 이 기능은 통신 중에 특정 헤더를 사용하지 않으며 최종 사용자의 컴퓨터에 데이터를 보관하지도 않습니다.  
@@ -88,7 +88,7 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
 ## <a name="peer-channel"></a>피어 채널  
  피어 채널을 사용 하면 WCF를 사용 하 여 단체 응용 프로그램을 개발할 수 있습니다. 다중 상대방 메시징은 메시 컨텍스트에서 발생합니다. 노드가 참여할 수 있는 메시는 이름으로 식별됩니다. 피어 채널의 각 노드는 사용자 지정 포트에 TCP 수신기를 만들고 메시의 다른 노드와 연결을 설정하여 복원력을 보장합니다. 메시의 다른 노드에 연결하기 위해 노드는 수신기 주소와 컴퓨터의 IP 주소를 비롯한 일부 데이터도 메시의 다른 노드와 교환합니다. 메시에서 전송되는 메시지에는 메시지 스푸핑과 변조를 방지하기 위해 보낸 사람과 관련된 보안 정보가 들어 있을 수 있습니다.  
   
- 최종 사용자의 컴퓨터에는 개인 정보가 저장되지 않습니다.  
+ 최종 사용자의 컴퓨터에는 개인 정보가 저장 되지 않습니다.  
   
 ## <a name="it-professional-experience"></a>IT 전문가 경험  
   
@@ -127,13 +127,13 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  제거되는 키  
   
- xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" 및 xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust"에 대 한 \-  
+ xmlns: wst = "http://schemas.xmlsoap.org/ws/2004/04/trust" 및 xmlns: wst = "http://schemas.xmlsoap.org/ws/2005/02/trust"에 대 한 \-  
   
  wst:BinarySecret  
   
  wst:Entropy  
   
- xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" 및 xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"에 대 한 \-  
+ xmlns: wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" 및 xmlns: wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"에 대 한 \-  
   
  wsse:Password  
   
@@ -141,7 +141,7 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  제거되는 잠재적 개인 정보  
   
- xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" 및 xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"에 대 한 \-  
+ xmlns: wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" 및 xmlns: wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"에 대 한 \-  
   
  wsse:Username  
   
@@ -163,15 +163,15 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  >  
   
- \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
+ \<조건 NotBefore = "[dateTime]" NotOnOrAfter = "[dateTime]" >  
   
- \<AudienceRestrictionCondition>  
+ \<AudienceRestrictionCondition >  
   
- \<Audience>[uri]\</Audience>+  
+ \<대상 > [uri]\</대상 그룹 > +  
   
- \</AudienceRestrictionCondition>*  
+ \</AudienceRestrictionCondition > *  
   
- \<DoNotCacheCondition />*  
+ \<DoNotCacheCondition/> *  
   
  <\!--추상 기본 형식  
   
@@ -183,9 +183,9 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  \<조언 >  
   
- \<AssertionIDReference>[ID]\</AssertionIDReference>*  
+ \<AssertionIDReference > [ID]\</AssertionIDReference > *  
   
- \<Assertion>[assertion]\</Assertion>*  
+ \<Assertion > [assertion]\</assertion > *  
   
  [any]*  
   
@@ -195,7 +195,7 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  \<문/> *  
   
- \<SubjectStatement>  
+ \<이란 문 >  
   
  \<제목 >  
   
@@ -211,19 +211,19 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  `</NameIdentifier>?`  
   
- \<SubjectConfirmation>  
+ \<SubjectConfirmation >  
   
- \<ConfirmationMethod>[anyUri]\</ConfirmationMethod>+  
+ \<Confrimationmethod > [anyUri]\</ConfirmationMethod > +  
   
- \<SubjectConfirmationData>[any]\</SubjectConfirmationData>?  
+ \<SubjectConfirmationData > [any]\</SubjectConfirmationData >?  
   
- \<ds:KeyInfo>...\</ds:KeyInfo>?  
+ \<ds: KeyInfo > ...\</ds: KeyInfo >?  
   
- \</SubjectConfirmation>?  
+ \</SubjectConfirmation >?  
   
- \</Subject>  
+ \</주제 >  
   
- \</SubjectStatement>*  
+ \</SubjectStatement > *  
   
  -->  
   
@@ -255,9 +255,9 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  />*  
   
- \</AuthenticationStatement>*  
+ \</AuthenticationStatement > *  
   
- \<AttributeStatement>  
+ \<AttributeStatement >  
   
  [Subject]  
   
@@ -271,9 +271,9 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  `<AttributeValue>[any]</AttributeValue>+`  
   
- \</Attribute>+  
+ \</특성 > +  
   
- \</AttributeStatement>*  
+ \</AttributeStatement > *  
   
  \<AuthorizationDecisionStatement  
   
@@ -285,26 +285,26 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  [Subject]  
   
- \<Action Namespace="[uri]">[string]\</Action>+  
+ \<Action Namespace = "[uri]" > [string]\</Action > +  
   
  \<증명 정보 >  
   
- \<AssertionIDReference>[ID]\</AssertionIDReference>+  
+ \<AssertionIDReference > [ID]\</AssertionIDReference > +  
   
- \<Assertion>[assertion]\</Assertion>+  
+ \<Assertion > [assertion]\</assertion > +  
   
- \</Evidence>?  
+ \</증거 >?  
   
- \</AuthorizationDecisionStatement>*  
+ \</AuthorizationDecisionStatement > *  
   
- \</Assertion>  
+ \</어설션 >  
   
 #### <a name="information-removed-from-message-bodies-when-logging-decryptedunencrypted-messages"></a>해독/암호화되지 않은 메시지를 기록할 때 메시지 본문에서 제거되는 정보  
  앞서 설명한 것 처럼 WCF는 암호 해독/암호화 되지 않은 메시지에 대 한 메시지 헤더에서 키 및 알려진 잠재적 개인 정보를 제거 합니다. 또한 WCF는 키 교환과 관련 된 보안 메시지를 설명 하는 다음 목록의 본문 요소 및 작업에 대 한 메시지 본문에서 키 및 알려진 잠재적 개인 정보를 제거 합니다.  
   
  다음 네임스페이스의 경우  
   
- xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" 및 xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust" (예: 사용할 수 있는 작업이 없는 경우)  
+ xmlns: wst = "http://schemas.xmlsoap.org/ws/2004/04/trust" 및 xmlns: wst = "http://schemas.xmlsoap.org/ws/2005/02/trust" (예: 사용할 수 있는 작업이 없는 경우)  
   
  키 교환과 관련된 다음 본문 요소에서 정보가 제거됩니다.  
   
@@ -359,17 +359,17 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
 #### <a name="no-information-is-removed-from-application-specific-headers-and-body-data"></a>애플리케이션별 헤더 및 본문 데이터의 정보는 제거되지 않음  
  WCF는 응용 프로그램별 헤더 (예: 쿼리 문자열) 또는 본문 데이터 (예: 신용 카드 번호)의 개인 정보를 추적 하지 않습니다.  
   
- 메시지 로깅을 설정하면 애플리케이션별 헤더와 본문 정보의 개인 정보가 로그에 표시될 수 있습니다. 애플리케이션 배포자는 구성 및 로그 파일에 ACL을 설정하는 작업을 담당합니다. 또한 이 정보를 표시하지 않으려면 로깅을 해제할 수 있으며 이 정보가 기록된 후 로그 파일에서 필터링할 수도 있습니다.  
+ 메시지 로깅을 설정하면 애플리케이션별 헤더와 본문 정보의 개인 정보가 로그에 표시될 수 있습니다. 애플리케이션 배포자는 구성 및 로그 파일에 ACL을 설정하는 작업을 담당합니다. 또한이 정보를 표시 하지 않으려면 로깅을 해제 하거나 기록 된 후 로그 파일에서이 정보를 필터링 할 수 있습니다.  
   
 ### <a name="service-model-tracing"></a>서비스 모델 추적  
  서비스 모델 추적 소스(<xref:System.ServiceModel>)는 메시지 처리와 관련된 동작 및 이벤트 추적을 가능하게 합니다. 이 기능은 <xref:System.Diagnostics>의 .NET Framework 진단 기능을 사용합니다. <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> 속성과 마찬가지로 사용자가 .NET Framework 애플리케이션 구성 파일을 사용하여 위치와 해당 ACL을 구성할 수 있습니다. 메시지 로깅과 마찬가지로 파일 위치는 항상 관리자가 추적을 활성화할 때 구성되므로 관리자가 ACL을 제어합니다.  
   
- 메시지가 범위 내에 있으면 추적에 메시지 헤더가 포함됩니다. 이전 단원에서 메시지 헤더에서 잠재적 개인 정보를 숨기는 경우에 대한 것과 동일한 규칙이 적용됩니다. 기본적으로 이전에 식별된 개인 정보가 추적 중인 헤더에서 제거됩니다. 잠재적 개인 정보를 기록하려면 컴퓨터 관리자와 애플리케이션 배포자가 모두 구성을 수정해야 합니다. 그러나 애플리케이션별 헤더에 포함된 개인 정보는 추적에 기록됩니다. 애플리케이션 배포자는 구성 및 추적 파일에 ACL을 설정하는 작업을 담당합니다. 또한 이 정보를 표시하지 않으려면 추적을 해제할 수 있으며 이 정보가 기록된 후 추적 파일에서 필터링할 수도 있습니다.  
+ 메시지가 범위 내에 있으면 추적에 메시지 헤더가 포함됩니다. 이전 단원에서 메시지 헤더에서 잠재적 개인 정보를 숨기는 경우에 대한 것과 동일한 규칙이 적용됩니다. 기본적으로 이전에 식별된 개인 정보가 추적 중인 헤더에서 제거됩니다. 잠재적 개인 정보를 기록하려면 컴퓨터 관리자와 애플리케이션 배포자가 모두 구성을 수정해야 합니다. 그러나 애플리케이션별 헤더에 포함된 개인 정보는 추적에 기록됩니다. 애플리케이션 배포자는 구성 및 추적 파일에 ACL을 설정하는 작업을 담당합니다. 추적을 해제 하 여이 정보를 숨기 거 나 기록 후 추적 파일에서이 정보를 필터링 할 수도 있습니다.  
   
  ServiceModel 추적의 일부로 고유 ID(동작 ID라고 하며 일반적으로 GUID임)는 메시지가 인프라의 여러 부분을 통과할 때 여러 동작을 함께 연결합니다.  
   
 #### <a name="custom-trace-listeners"></a>사용자 지정 추적 수신기  
- 메시지 로깅 및 추적에 대해 통신 중에 추적과 메시지를 원격 데이터베이스 등에 보낼 수 있는 사용자 지정 추적 수신기를 구성할 수 있습니다. 애플리케이션 배포자는 사용자 지정 수신기를 구성하거나 사용자가 구성할 수 있게 하는 작업을 담당합니다. 또한 원격 위치에 노출되는 모든 개인 정보에 대한 책임이 있으며 이 위치에 ACL을 적절하게 적용하는 작업을 담당합니다.  
+ 메시지 로깅 및 추적에 대해 통신 중에 추적과 메시지를 원격 데이터베이스 등에 보낼 수 있는 사용자 지정 추적 수신기를 구성할 수 있습니다. 애플리케이션 배포자는 사용자 지정 수신기를 구성하거나 사용자가 구성할 수 있게 하는 작업을 담당합니다. 또한 원격 위치에 표시 되는 모든 개인 정보를 담당 하며이 위치에 Acl을 올바르게 적용 합니다.  
   
 ### <a name="other-features-for-it-professionals"></a>IT 전문가용 기타 기능  
  WCF에는 WMI (Windows와 함께 제공 됨)를 통해 WCF 인프라 구성 정보를 노출 하는 WMI 공급자가 있습니다. 기본적으로 관리자는 WMI 인터페이스를 사용할 수 있습니다.  
@@ -401,7 +401,7 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  WSDL(웹 서비스 기술 언어)에는 포트 정의가 들어 있습니다. 각 포트에는 엔드포인트 주소와 애플리케이션에서 사용하는 서비스를 나타내는 바인딩이 있습니다. 구성을 사용하여 WSDL 노출을 해제할 수 있습니다. 컴퓨터에는 정보가 보관되지 않습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Communication Foundation](index.md)
 - [Security](./feature-details/security.md)

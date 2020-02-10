@@ -2,22 +2,22 @@
 title: WCF 분석 추적
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 52a6787f6c7d309b1ae3a932780e4dbcb2ec0792
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 3ed9c5f08e89d978f8290dcda5ab1ecfd8b9c56c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715299"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094828"
 ---
 # <a name="wcf-analytic-tracing"></a>WCF 분석 추적
 이 샘플에서는 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]에서 ETW에 쓰기를 Windows Communication Foundation 하는 분석 추적 스트림에 사용자 고유의 추적 이벤트를 추가 하는 방법을 보여 줍니다. 분석 추적은 성능을 크게 저하시키지 않으면서 서비스를 쉽게 확인할 수 있도록 하기 위한 것입니다. 이 샘플에서는 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> Api를 사용 하 여 WCF 서비스와 통합 되는 이벤트를 작성 하는 방법을 보여 줍니다.  
   
  <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> Api에 대 한 자세한 내용은 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>을 참조 하세요.  
   
- Windows에서 이벤트 추적에 대 한 자세한 내용은 [ETW를 사용한 디버깅 및 성능 조정 개선](https://go.microsoft.com/fwlink/?LinkId=166488)을 참조 하세요.  
+ Windows에서 이벤트 추적에 대 한 자세한 내용은 [ETW를 사용한 디버깅 및 성능 조정 개선](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)을 참조 하세요.  
   
 ## <a name="disposing-eventprovider"></a>EventProvider 삭제  
- 이 샘플에서는 <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType>을 구현하는 <xref:System.IDisposable?displayProperty=nameWithType> 클래스를 사용합니다. WCF 서비스에 대 한 추적을 구현 하는 경우 서비스 수명 동안 <xref:System.Diagnostics.Eventing.EventProvider>의 리소스를 사용할 수 있습니다. 이러한 이유로, 또한 읽기 쉽게 하려는 목적으로 이 샘플에서는 래핑된 <xref:System.Diagnostics.Eventing.EventProvider>를 삭제하지 않습니다. 어떤 이유로 서비스에 다른 추적 요구 사항이 있으며 이 리소스를 삭제해야 하는 경우 관리되지 않는 리소스를 삭제하기 위한 최선의 방법에 따라 이 샘플을 수정해야 합니다. 관리 되지 않는 리소스를 삭제 하는 방법에 대 한 자세한 내용은 [Dispose 메서드 구현](https://go.microsoft.com/fwlink/?LinkId=166436)을 참조 하세요.  
+ 이 샘플에서는 <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType>을 구현하는 <xref:System.IDisposable?displayProperty=nameWithType> 클래스를 사용합니다. WCF 서비스에 대 한 추적을 구현 하는 경우 서비스 수명 동안 <xref:System.Diagnostics.Eventing.EventProvider>의 리소스를 사용할 수 있습니다. 이러한 이유로, 또한 읽기 쉽게 하려는 목적으로 이 샘플에서는 래핑된 <xref:System.Diagnostics.Eventing.EventProvider>를 삭제하지 않습니다. 어떤 이유로 서비스에 다른 추적 요구 사항이 있으며 이 리소스를 삭제해야 하는 경우 관리되지 않는 리소스를 삭제하기 위한 최선의 방법에 따라 이 샘플을 수정해야 합니다. 관리 되지 않는 리소스를 삭제 하는 방법에 대 한 자세한 내용은 [Dispose 메서드 구현](https://docs.microsoft.com/dotnet/standard/garbage-collection/implementing-dispose)을 참조 하세요.  
   
 ## <a name="self-hosting-vs-web-hosting"></a>자체 호스팅과 웹 호스팅 비교  
  웹 호스팅 서비스의 경우 WCF의 분석 추적은 추적을 내보내는 서비스를 식별 하는 데 사용 되는 "HostReference" 라는 필드를 제공 합니다. 확장 가능한 사용자 추적이 이 모델에 관여할 수 있으며 이 샘플에서는 이 작업을 수행하기 위한 최선의 방법을 보여 줍니다. 파이프 '&#124;' 문자가 실제로 결과 문자열에 표시 되는 경우 웹 호스트 참조의 형식은 다음 중 하나일 수 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "74715299"
 ## <a name="custom-event-details"></a>사용자 지정 이벤트 상세 정보  
  WCF의 ETW 이벤트 공급자 매니페스트는 WCF 서비스 작성자가 서비스 코드 내에서 내보내도록 디자인 된 세 개의 이벤트를 정의 합니다. 다음 표에서는 세 개의 이벤트를 간략하게 설명합니다.  
   
-|이벤트(event)|설명|이벤트 ID|  
+|이벤트|설명|이벤트 ID|  
 |-----------|-----------------|--------------|  
 |UserDefinedInformationEventOccurred|문제는 아니지만 중요한 사항이 서비스에 발생하면 이 이벤트를 내보냅니다. 예를 들어 데이터베이스를 성공적으로 호출한 후 이벤트를 내보낼 수 있습니다.|301|  
 |UserDefinedWarningOccurred|이후에 오류를 초래할 수 있는 문제가 발생하면 이 이벤트를 내보냅니다. 예를 들어 데이터베이스에 대한 호출에 실패했지만 중복 데이터 저장소를 대신 사용하여 복구할 수 있는 경우 경고 이벤트를 내보낼 수 있습니다.|302|  
@@ -59,7 +59,7 @@ ms.locfileid: "74715299"
   
      입력 상자에 엔드포인트 주소를 추가합니다.  
   
-6. **확인** 을 클릭 하 여 대화 상자를 닫습니다.  
+6. **확인**을 클릭하여 대화 상자를 닫습니다.  
   
      ICalculator 서비스가 **내 서비스 프로젝트**아래의 왼쪽 창에 추가 됩니다.  
   
@@ -117,6 +117,6 @@ ms.locfileid: "74715299"
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTrace`  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [AppFabric 모니터링 샘플](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric 모니터링 샘플](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

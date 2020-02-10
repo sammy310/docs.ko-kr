@@ -2,12 +2,12 @@
 title: Windows에서 이벤트 추적으로 이벤트 추적
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: fe50476eedef505258c2e6818e75a32c06ed6fa6
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 2c397bcfa809a1306e9c31bf3f652b055d997f38
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715922"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094581"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Windows에서 이벤트 추적으로 이벤트 추적
 
@@ -47,7 +47,7 @@ Windows Workflow Foundation는 추적 인프라를 제공 하 여 워크플로 �
 
 3. F5 키를 눌러 솔루션을 실행합니다.
 
-    기본적으로 서비스는 포트 53797 (http://localhost:53797/SampleWorkflowService.xamlx) 에서 수신 대기 합니다.
+    기본적으로 서비스는 포트 53797 (http://localhost:53797/SampleWorkflowService.xamlx)에서 수신 대기 합니다.
 
 4. 파일 탐색기를 사용 하 여 WCF 테스트 클라이언트를 엽니다.
 
@@ -136,7 +136,7 @@ Windows Workflow Foundation는 추적 인프라를 제공 하 여 워크플로 �
 ## <a name="known-issue"></a>알려진 문제
 
 > [!NOTE]
-> 알려진 문제로 인해 이벤트 뷰어에서 ETW 이벤트를 디코딩하지 못할 수 있습니다. 다음과 같은 오류 메시지가 표시될 수 있습니다.
+> ETW 이벤트가 디코딩되지 않을 수 있으며, 이는 이벤트 뷰어와 관련하여 알려진 문제입니다. 다음과 같은 오류 메시지가 표시될 수 있습니다.
 >
 > 원본 Microsoft-Windows 응용 프로그램 서버의 이벤트 ID \<id >에 대 한 설명을 찾을 수 없습니다. 이 이벤트를 발생시킨 구성 요소가 로컬 컴퓨터에 설치되어 있지 않거나 설치가 손상되었습니다. 로컬 컴퓨터에서 구성 요소를 설치 또는 복구할 수 있습니다.
 >
@@ -151,6 +151,6 @@ Windows Workflow Foundation는 추적 인프라를 제공 하 여 워크플로 �
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [AppFabric 모니터링 샘플](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric 모니터링 샘플](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 2fef4c7b00fd6a1ed8f85a8bfa01ef9cfffa1bbb
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: d1cae7ad2ac0fdf963d11911484b1bd534cbc129
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919945"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094737"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF 문제 해결 퀵 스타트
 이 항목에서는 WCF 클라이언트 및 서비스를 개발하는 동안 발생하는 몇 가지 알려진 문제점을 나열합니다. 발생하는 문제가 이 목록에 없는 경우 서비스에 대한 추적을 구성하는 것이 좋습니다. 추적을 구성하면 추적 파일 뷰어로 보고 서비스 내에서 발생하는 예외에 대한 자세한 정보를 얻을 수 있는 추적 파일이 생성됩니다. 추적을 구성하는 방법에 대한 자세한 내용은 [Configuring Tracing](./diagnostics/tracing/configuring-tracing.md)을 참조하십시오. 추적 파일 뷰어에 대한 자세한 내용은 [Service Trace Viewer Tool (SvcTraceViewer.exe)](service-trace-viewer-tool-svctraceviewer-exe.md)를 참조하십시오.  
@@ -47,7 +47,7 @@ ms.locfileid: "76919945"
   
  HTTP 오류 404.3 – 찾을 수 없음. 확장명 구성으로 인해 요청한 페이지를 제공할 수 없습니다. 페이지가 스크립트인 경우 처리기를 추가합니다. 파일을 다운로드해야 하는 경우 MIME 맵을 추가합니다. 자세한 오류 정보 모듈은 StaticFileModule입니다.  
   
- 이 오류 메시지는 제어판에서 "Windows Communication Foundation HTTP 활성화"가 명시적으로 설정 되지 않은 경우에 발생 합니다. 이를 설정하려면 제어판으로 이동하고 창 왼쪽 아래 모서리에서 프로그램을 클릭합니다. Windows 기능 사용/사용 안 함을 클릭합니다. Microsoft .NET Framework 3.5.1을 확장하고 Windows Communication Foundation HTTP 활성화를 선택합니다.  
+ 이 오류 메시지는 제어판에서 "Windows Communication Foundation HTTP 활성화"가 명시적으로 설정 되지 않은 경우에 발생 합니다. 이를 설정 하려면 제어판의 왼쪽 아래 모서리에서 프로그램을 클릭 합니다. Windows 기능 사용/사용 안 함을 클릭합니다. Microsoft .NET Framework 3.5.1을 확장하고 Windows Communication Foundation HTTP 활성화를 선택합니다.  
   
 <a name="BKMK_q1"></a>   
 ## <a name="sometimes-i-receive-a-messagesecurityexception-on-the-second-request-if-my-client-is-idle-for-a-while-after-the-first-request-what-is-happening"></a>첫 번째 요청 이후 클라이언트가 잠시 유휴 상태일 때 가끔씩 두 번째 요청에서 MessageSecurityException이 발생합니다. 이유가 무엇입니까?  
@@ -59,7 +59,7 @@ ms.locfileid: "76919945"
   
 <a name="BKMK_q3"></a>   
 ## <a name="can-i-load-my-service-configuration-from-somewhere-other-than-the-wcf-applications-configuration-file"></a>WCF 애플리케이션의 구성 파일이 아닌 다른 위치에서 서비스 구성을 로드할 수 있습니까?  
- 예. 그러나 <xref:System.ServiceModel.ServiceHost> 메서드를 재정의하는 사용자 지정 <xref:System.ServiceModel.ServiceHostBase.ApplyConfiguration%2A> 클래스를 만들어야 합니다. 이 메서드 내에서 기본을 호출하여 구성을 먼저 로드할 수 있으며(표준 구성 정보도 함께 로드하려는 경우), 또한 구성 로딩 시스템을 완전히 바꿀 수도 있습니다. 애플리케이션 구성 파일과 다른 구성 파일에서 구성을 로드하려는 경우에는 구성 파일을 직접 구문 분석하고 구성을 로드해야 합니다.  
+ 예. 그러나 <xref:System.ServiceModel.ServiceHost> 메서드를 재정의하는 사용자 지정 <xref:System.ServiceModel.ServiceHostBase.ApplyConfiguration%2A> 클래스를 만들어야 합니다. 이 메서드 내에서 기본을 호출하여 구성을 먼저 로드할 수 있으며(표준 구성 정보도 함께 로드하려는 경우), 또한 구성 로딩 시스템을 완전히 바꿀 수도 있습니다. 응용 프로그램 구성 파일과 다른 구성 파일에서 구성을 로드 하려는 경우 구성 파일을 직접 구문 분석 하 고 구성을 로드 해야 합니다.  
   
  다음 코드 예제는 <xref:System.ServiceModel.ServiceHostBase.ApplyConfiguration%2A> 메서드를 재정의하고 엔드포인트를 직접 구성하는 방법을 보여 줍니다.  
   
@@ -130,7 +130,7 @@ public class MyServiceHost : ServiceHost
   
     3. 기본적으로 SPN(서비스 사용자 이름) 계정을 사용하는 IIS(인터넷 정보 서비스)에서 서비스를 호스팅합니다.  
   
-    4. SetSPN을 사용하여 도메인에 새 SPN을 등록합니다. 이 작업을 수행하려면 도메인 관리자여야 합니다.  
+    4. SetSPN을 사용하여 도메인에 새 SPN을 등록합니다. 이 작업을 수행 하려면 도메인 관리자 여야 합니다.  
   
  Kerberos 프로토콜에 대 한 자세한 내용은 WCF 및 [에서 사용 되는 보안 개념](./feature-details/security-concepts-used-in-wcf.md) 을 참조 하세요.  
   
@@ -154,7 +154,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q6"></a>   
 ## <a name="it-seems-like-one-way-and-request-reply-operations-return-at-roughly-the-same-speed-when-the-reply-contains-no-data-whats-happening"></a>회신에 데이터가 포함되지 않은 경우 단방향 및 요청-회신 작업이 거의 같은 속도로 반환되는 것 같습니다. 이유가 무엇입니까?  
- 작업을 단방향 작업으로 지정한다는 것은 작업 계약이 입력 메시지를 받은 다음 출력 메시지를 반환하지 않는다는 것을 의미할 뿐입니다. WCF에서 모든 클라이언트 호출은 아웃 바운드 데이터가 네트워크에 기록 되거나 예외가 throw 될 때를 반환 합니다. 단방향 작업도 이와 동일한 방식으로 작동하며, 서비스를 찾을 수 없는 경우 throw되거나 서비스가 네트워크로부터 데이터를 받을 준비가 되지 않은 경우 블로킹될 수 있습니다. 일반적으로 WCF에서는 단방향 호출이 요청-회신 보다 더 빨리 클라이언트에 반환 됩니다. 하지만 네트워크를 통해 아웃 바운드 데이터를 보내는 속도가 느려지는 상황이 발생 하는 경우 요청-회신 작업 뿐만 아니라 단방향 작업이 느려집니다. 자세한 내용은 [단방향 서비스](./feature-details/one-way-services.md) 하 고 [WCF 클라이언트를 사용 하 여 액세스 서비스](./feature-details/accessing-services-using-a-client.md)합니다.  
+ 작업을 단방향 작업으로 지정한다는 것은 작업 계약이 입력 메시지를 받은 다음 출력 메시지를 반환하지 않는다는 것을 의미할 뿐입니다. WCF에서 모든 클라이언트 호출은 아웃 바운드 데이터가 네트워크에 기록 되거나 예외가 throw 될 때를 반환 합니다. 단방향 작업도 이와 동일한 방식으로 작동하며, 서비스를 찾을 수 없는 경우 throw되거나 서비스가 네트워크로부터 데이터를 받을 준비가 되지 않은 경우 블로킹될 수 있습니다. 일반적으로 WCF에서는 단방향 호출이 요청-회신 보다 더 빨리 클라이언트에 반환 됩니다. 하지만 네트워크를 통해 아웃 바운드 데이터를 보내는 속도가 느려지는 상황이 발생 하는 경우 요청-회신 작업 뿐만 아니라 단방향 작업이 느려집니다. 자세한 내용은 [WCF 클라이언트를 사용 하 여](./feature-details/accessing-services-using-a-client.md) [단방향 서비스](./feature-details/one-way-services.md) 및 서비스 액세스를 참조 하세요.  
   
 <a name="BKMK_q77"></a>   
 ## <a name="im-using-an-x509-certificate-with-my-service-and-i-get-a-systemsecuritycryptographycryptographicexception-whats-happening"></a>서비스에 X.509 인증서를 사용하고 있으며 System.Security.Cryptography.CryptographicException이 발생합니다. 이유가 무엇입니까?  
@@ -166,7 +166,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q88"></a>   
 ## <a name="i-changed-the-first-parameter-of-an-operation-from-uppercase-to-lowercase-now-my-client-throws-an-exception-whats-happening"></a>작업의 첫 번째 매개 변수를 대문자에서 소문자로 변경한 다음에 클라이언트에서 예외가 throw됩니다. 이유가 무엇입니까?  
- 작업 서명에 포함된 매개 변수 이름의 값은 계약의 일부이며 대/소문자를 구분합니다. 로컬 매개 변수 이름과 클라이언트 애플리케이션의 작업을 설명하는 메타데이터를 구분해야 하는 경우에는 <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType> 특성을 사용하십시오.  
+ 작업 시그니처의 매개 변수 이름 값은 계약의 일부 이며 대/소문자를 구분 합니다. 로컬 매개 변수 이름과 클라이언트 애플리케이션의 작업을 설명하는 메타데이터를 구분해야 하는 경우에는 <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType> 특성을 사용하십시오.  
   
 <a name="BKMK_q99"></a>   
 ## <a name="im-using-one-of-my-tracing-tools-and-i-get-an-endpointnotfoundexception-whats-happening"></a>추적 도구 중 하나를 사용하는 동안 EndpointNotFoundException이 발생합니다. 이유가 무엇입니까?  
@@ -237,7 +237,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BK_MK99"></a>   
 ## <a name="when-calling-a-wcf-web-http-application-from-a-wcf-soap-application-the-service-returns-the-following-error-405-method-not-allowed"></a>WCF SOAP 애플리케이션에서 WCF 웹 HTTP 애플리케이션을 호출하면 서비스에서 다음 오류를 반환합니다: 405 메서드가 허용되지 않습니다.  
- Wcf 서비스에서 WCF 웹 HTTP 응용 프로그램 (<xref:System.ServiceModel.WebHttpBinding> 및 <xref:System.ServiceModel.Description.WebHttpBehavior>를 사용 하는 서비스)을 호출 하면 다음과 같은 예외가 발생할 수 있습니다. `Unhandled Exception: System.ServiceModel.FaultException`1 [System.servicemodel]: 원격 서버에서 예기치 않은 응답을 반환 했습니다. (405) 메서드가 허용 되지 않습니다. WCF에서 들어오는 <xref:System.ServiceModel.OperationContext>를 사용 하 여 나가는 <xref:System.ServiceModel.OperationContext>를 덮어쓰므로이 예외가 발생 합니다. 이 문제를 해결하려면 WCF 웹 HTTP 서비스 작업 안에 <xref:System.ServiceModel.OperationContextScope> 을 만듭니다. 예를 들면 다음과 같습니다.:  
+ Wcf 서비스에서 WCF 웹 HTTP 응용 프로그램 (<xref:System.ServiceModel.WebHttpBinding> 및 <xref:System.ServiceModel.Description.WebHttpBehavior>를 사용 하는 서비스)을 호출 하면 다음과 같은 예외가 발생할 수 있습니다 .이 예외는 WCF에서 들어오는 <xref:System.ServiceModel.OperationContext>를 사용 하 여 나가는 <xref:System.ServiceModel.OperationContext>를 덮어쓰기 때문에 발생 합니다 ``Unhandled Exception: System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: The remote server returned an unexpected response: (405) Method Not Allowed.``. 이 문제를 해결 하려면 WCF 웹 HTTP 서비스 작업 내에 <xref:System.ServiceModel.OperationContextScope>를 만듭니다. 예를 들면 다음과 같습니다.  
   
 ```csharp
 public string Echo(string input)  
@@ -249,6 +249,6 @@ public string Echo(string input)
 }  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows 인증 오류 디버깅](./feature-details/debugging-windows-authentication-errors.md)

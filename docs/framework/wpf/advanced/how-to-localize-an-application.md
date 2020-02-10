@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 26c09e547205e7819ebb43d6e34b6e18d6d9ff98
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7e034e92e1ff2b9bec0eaf8e0f3330f7a832a7e5
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460844"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095170"
 ---
 # <a name="how-to-localize-an-application"></a>방법: 애플리케이션 지역화
 이 자습서에서는 LocBaml 도구를 사용하여 지역화된 애플리케이션을 만드는 방법을 설명합니다.  
@@ -81,7 +81,7 @@ ms.locfileid: "73460844"
 <a name="build_locbaml"></a>   
 ## <a name="build-the-locbaml-tool"></a>LocBaml 도구 빌드  
   
-1. LocBaml을 빌드하는 데 필요한 모든 파일은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 샘플에 있습니다. C# [LocBaml 도구 샘플](https://go.microsoft.com/fwlink/?LinkID=160016)에서 파일을 다운로드 합니다.  
+1. LocBaml을 빌드하는 데 필요한 모든 파일은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 샘플에 있습니다. C# [LocBaml 도구 샘플](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml)에서 파일을 다운로드 합니다.  
   
 2. 명령줄에서 프로젝트 파일(locbaml.csproj)을 실행하여 도구를 빌드합니다.  
   
@@ -149,11 +149,11 @@ ms.locfileid: "73460844"
   
    다음 표에서는 이러한 필드가 .csv 파일의 구분된 값에 매핑되는 방법을 보여 줍니다.  
   
-   |BAML 이름|리소스 키|범주|가독성|수정 가능성|주석|값|  
+   |BAML 이름|리소스 키|범주|가독성|수정 가능성|설명|값|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
-   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Ignore|false|false||#Text1;#Text2|
-   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|없음|true|true||Hello World|
-   |HelloApp.g.en-US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|없음|true|true||Goodbye World|
+   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|무시|FALSE|FALSE||#Text1;#Text2|
+   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|없음|TRUE|TRUE||Hello World|
+   |HelloApp.g.en-US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|없음|TRUE|TRUE||Goodbye World|
   
    **설명** 필드의 모든 값에는 값이 포함 되어 있지 않습니다. 필드에 값이 없는 경우 비어 있습니다. 또한 첫 번째 행의 항목은 읽고 수정할 수 없으며 해당 **범주** 값으로 "Ignore"가 있으므로 값을 지역화할 수 없음을 나타냅니다.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "73460844"
 ## <a name="whats-next"></a>새로운 기능  
  지금까지 LocBaml 도구를 사용하는 방법에 대한 기본 사항을 알아보았습니다.  Uid를 포함하는 파일을 만들 수 있어야 합니다. LocBaml 도구를 통해 파일을 구문 분석하여 지역화할 수 있는 콘텐츠를 추출할 수 있어야 하며, 콘텐츠가 번역된 후 번역된 콘텐츠를 병합하는 .resources.dll 파일을 생성할 수 있어야 합니다. 이 항목에 가능한 모든 세부 정보가 포함되어 있지는 않지만 이제 LocBaml를 애플리케이션 지역화에 사용하는 데 필요한 지식을 습득했습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [WPF의 전역화](globalization-for-wpf.md)
 - [자동 레이아웃 사용 개요](use-automatic-layout-overview.md)

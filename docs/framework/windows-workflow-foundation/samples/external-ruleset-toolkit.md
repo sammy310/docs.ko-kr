@@ -2,12 +2,12 @@
 title: External RuleSet Toolkit
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-ms.openlocfilehash: b07d2b63d9f3d98b8f08eb697a8d688d8fac1962
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: eb59b02d469788b23126f4e02c5b7ae5a63081f0
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710894"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094672"
 ---
 # <a name="external-ruleset-toolkit"></a>External RuleSet Toolkit
 
@@ -16,7 +16,7 @@ ms.locfileid: "74710894"
 External RuleSet Toolkit 샘플에는 데이터베이스에서 RuleSet 버전을 관리하고 편집하는 데 사용할 수 있는 Windows Forms 기반 도구가 포함되어 있으며, 해당 규칙을 실행하는 호스트 서비스 및 활동도 포함되어 있습니다.
 
 > [!NOTE]
-> 이 샘플에는 [Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=96181)필요 합니다.
+> 이 샘플에는 [Microsoft SQL Server](/sql)필요 합니다.
 
 Visual Studio는 Windows Workflow Foundation (WF)의 일부로 규칙 집합 편집기를 제공 합니다. 이 편집기는 워크플로의 `Policy` 활동을 두 번 클릭하여 시작할 수 있으며 정의된 RuleSet 개체를 워크플로와 연결된 .rules 파일로 serialize합니다. `Policy` 활동은 워크플로에 대해 RuleSet 인스턴스를 실행합니다. .rules 파일은 워크플로 프로젝트를 빌드할 때 리소스로 어셈블리에 컴파일됩니다.
 
