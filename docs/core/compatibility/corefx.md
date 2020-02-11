@@ -1,37 +1,37 @@
 ---
-title: 기본 클래스 라이브러리 주요 변경 내용 - .NET Core
+title: 기본 클래스 라이브러리 호환성이 손상되는 변경
 description: 기본 클래스 라이브러리인 .NET CoreFx 관련 호환성이 손상되는 변경 목록입니다.
 ms.date: 09/20/2019
-ms.openlocfilehash: eb416a0b061bfe50db330627c0ea68e0ba0c9079
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 9e8a00abfae8bf8f5301a4879cb5274492a2b6fd
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116510"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093086"
 ---
-# <a name="corefx-breaking-changes"></a><span data-ttu-id="35351-103">CoreFx 관련 호환성이 손상되는 변경</span><span class="sxs-lookup"><span data-stu-id="35351-103">CoreFx breaking changes</span></span>
+# <a name="corefx-breaking-changes"></a><span data-ttu-id="8fad3-103">CoreFx 관련 호환성이 손상되는 변경</span><span class="sxs-lookup"><span data-stu-id="8fad3-103">CoreFx breaking changes</span></span>
 
-<span data-ttu-id="35351-104">CoreFx는 .NET Core에서 사용되는 기본 형식과 기타 일반적인 형식을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="35351-104">CoreFx provides the primitives and other general types used by .NET Core.</span></span>
+<span data-ttu-id="8fad3-104">CoreFx는 .NET Core에서 사용되는 기본 형식과 기타 일반적인 형식을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="8fad3-104">CoreFx provides the primitives and other general types used by .NET Core.</span></span>
 
-<span data-ttu-id="35351-105">이 페이지에는 다음과 같은 주요 변경 사항이 설명되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="35351-105">The following breaking changes are documented on this page:</span></span>
+<span data-ttu-id="8fad3-105">이 페이지에는 다음과 같은 주요 변경 사항이 설명되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8fad3-105">The following breaking changes are documented on this page:</span></span>
 
-- [<span data-ttu-id="35351-106">버전을 보고하는 API가 이제 파일 버전이 아닌 제품 버전을 보고함</span><span class="sxs-lookup"><span data-stu-id="35351-106">APIs that report version now report product and not file version</span></span>](#apis-that-report-version-now-report-product-and-not-file-version)
-- [<span data-ttu-id="35351-107">사용자 지정 EncoderFallbackBuffer 인스턴스는 재귀적으로 대체될 수 없음</span><span class="sxs-lookup"><span data-stu-id="35351-107">Custom EncoderFallbackBuffer instances cannot fall back recursively</span></span>](#custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively)
-- [<span data-ttu-id="35351-108">부동 소수점 서식 및 구문 분석 동작 변경</span><span class="sxs-lookup"><span data-stu-id="35351-108">Floating point formatting and parsing behavior changes</span></span>](#floating-point-formatting-and-parsing-behavior-changed)
-- [<span data-ttu-id="35351-109">부동 소수점 구문 분석 작업은 더 이상 실패하거나 OverflowException을 throw하지 않음</span><span class="sxs-lookup"><span data-stu-id="35351-109">Floating-point parsing operations no longer fail or throw an OverflowException</span></span>](#floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception)
-- [<span data-ttu-id="35351-110">InvalidAsynchronousStateException이 다른 어셈블리로 이동됨</span><span class="sxs-lookup"><span data-stu-id="35351-110">InvalidAsynchronousStateException moved to another assembly</span></span>](#invalidasynchronousstateexception-moved-to-another-assembly)
-- [<span data-ttu-id="35351-111">.NET Core 3.0이 잘못된 형식의 UTF-8 바이트 시퀀스를 대체할 때 유니코드 모범 사례를 적용</span><span class="sxs-lookup"><span data-stu-id="35351-111">NET Core 3.0 follows Unicode best practices when replacing ill-formed UTF-8 byte sequences</span></span>](#net-core-30-follows-unicode-best-practices-when-replacing-ill-formed-utf-8-byte-sequences)
-- [<span data-ttu-id="35351-112">TypeDescriptionProviderAttribute가 다른 어셈블리로 이동됨</span><span class="sxs-lookup"><span data-stu-id="35351-112">TypeDescriptionProviderAttribute moved to another assembly</span></span>](#typedescriptionproviderattribute-moved-to-another-assembly)
-- [<span data-ttu-id="35351-113">ZipArchiveEntry가 더 이상 일치하지 않는 항목 크기의 아카이브를 처리하지 않음</span><span class="sxs-lookup"><span data-stu-id="35351-113">ZipArchiveEntry no longer handles archives with inconsistent entry sizes</span></span>](#ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes)
-- [<span data-ttu-id="35351-114">JSON 직렬 변환기 예외 형식이 JsonException에서 NotSupportedException으로 변경됨</span><span class="sxs-lookup"><span data-stu-id="35351-114">JSON serializer exception type changed from JsonException to NotSupportedException</span></span>](#json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception)
-- [<span data-ttu-id="35351-115">Utf8JsonWriter에서 (문자열)null의 의미 체계가 변경됨</span><span class="sxs-lookup"><span data-stu-id="35351-115">Change in semantics of (string)null in Utf8JsonWriter</span></span>](#change-in-semantics-of-stringnull-in-utf8jsonwriter)
-- [<span data-ttu-id="35351-116">JsonEncodedText.Encode 메서드에 JavaScriptEncoder 인수 추가</span><span class="sxs-lookup"><span data-stu-id="35351-116">JsonEncodedText.Encode methods have an additional JavaScriptEncoder argument</span></span>](#jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument)
-- [<span data-ttu-id="35351-117">JsonFactoryConverter.CreateConverter 서명이 변경되었습니다.</span><span class="sxs-lookup"><span data-stu-id="35351-117">JsonFactoryConverter.CreateConverter signature changed</span></span>](#jsonfactoryconvertercreateconverter-signature-changed)
-- [<span data-ttu-id="35351-118">JsonElement API 변경 내용</span><span class="sxs-lookup"><span data-stu-id="35351-118">JsonElement API changes</span></span>](#jsonelement-api-changes)
-- [<span data-ttu-id="35351-119">기본 제공 구조체 형식에 추가된 프라이빗 필드</span><span class="sxs-lookup"><span data-stu-id="35351-119">Private fields added to built-in struct types</span></span>](#private-fields-added-to-built-in-struct-types)
-- [<span data-ttu-id="35351-120">UseShellExecute의 기본값 변경</span><span class="sxs-lookup"><span data-stu-id="35351-120">Change in default value of UseShellExecute</span></span>](#change-in-default-value-of-useshellexecute)
+- [<span data-ttu-id="8fad3-106">버전을 보고하는 API가 이제 파일 버전이 아닌 제품 버전을 보고함</span><span class="sxs-lookup"><span data-stu-id="8fad3-106">APIs that report version now report product and not file version</span></span>](#apis-that-report-version-now-report-product-and-not-file-version)
+- [<span data-ttu-id="8fad3-107">사용자 지정 EncoderFallbackBuffer 인스턴스는 재귀적으로 대체될 수 없음</span><span class="sxs-lookup"><span data-stu-id="8fad3-107">Custom EncoderFallbackBuffer instances cannot fall back recursively</span></span>](#custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively)
+- [<span data-ttu-id="8fad3-108">부동 소수점 서식 및 구문 분석 동작 변경</span><span class="sxs-lookup"><span data-stu-id="8fad3-108">Floating point formatting and parsing behavior changes</span></span>](#floating-point-formatting-and-parsing-behavior-changed)
+- [<span data-ttu-id="8fad3-109">부동 소수점 구문 분석 작업은 더 이상 실패하거나 OverflowException을 throw하지 않음</span><span class="sxs-lookup"><span data-stu-id="8fad3-109">Floating-point parsing operations no longer fail or throw an OverflowException</span></span>](#floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception)
+- [<span data-ttu-id="8fad3-110">InvalidAsynchronousStateException이 다른 어셈블리로 이동됨</span><span class="sxs-lookup"><span data-stu-id="8fad3-110">InvalidAsynchronousStateException moved to another assembly</span></span>](#invalidasynchronousstateexception-moved-to-another-assembly)
+- [<span data-ttu-id="8fad3-111">.NET Core 3.0이 잘못된 형식의 UTF-8 바이트 시퀀스를 대체할 때 유니코드 모범 사례를 적용</span><span class="sxs-lookup"><span data-stu-id="8fad3-111">NET Core 3.0 follows Unicode best practices when replacing ill-formed UTF-8 byte sequences</span></span>](#net-core-30-follows-unicode-best-practices-when-replacing-ill-formed-utf-8-byte-sequences)
+- [<span data-ttu-id="8fad3-112">TypeDescriptionProviderAttribute가 다른 어셈블리로 이동됨</span><span class="sxs-lookup"><span data-stu-id="8fad3-112">TypeDescriptionProviderAttribute moved to another assembly</span></span>](#typedescriptionproviderattribute-moved-to-another-assembly)
+- [<span data-ttu-id="8fad3-113">ZipArchiveEntry가 더 이상 일치하지 않는 항목 크기의 아카이브를 처리하지 않음</span><span class="sxs-lookup"><span data-stu-id="8fad3-113">ZipArchiveEntry no longer handles archives with inconsistent entry sizes</span></span>](#ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes)
+- [<span data-ttu-id="8fad3-114">JSON 직렬 변환기 예외 형식이 JsonException에서 NotSupportedException으로 변경됨</span><span class="sxs-lookup"><span data-stu-id="8fad3-114">JSON serializer exception type changed from JsonException to NotSupportedException</span></span>](#json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception)
+- [<span data-ttu-id="8fad3-115">Utf8JsonWriter에서 (문자열)null의 의미 체계가 변경됨</span><span class="sxs-lookup"><span data-stu-id="8fad3-115">Change in semantics of (string)null in Utf8JsonWriter</span></span>](#change-in-semantics-of-stringnull-in-utf8jsonwriter)
+- [<span data-ttu-id="8fad3-116">JsonEncodedText.Encode 메서드에 JavaScriptEncoder 인수 추가</span><span class="sxs-lookup"><span data-stu-id="8fad3-116">JsonEncodedText.Encode methods have an additional JavaScriptEncoder argument</span></span>](#jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument)
+- [<span data-ttu-id="8fad3-117">JsonFactoryConverter.CreateConverter 서명이 변경되었습니다.</span><span class="sxs-lookup"><span data-stu-id="8fad3-117">JsonFactoryConverter.CreateConverter signature changed</span></span>](#jsonfactoryconvertercreateconverter-signature-changed)
+- [<span data-ttu-id="8fad3-118">JsonElement API 변경 내용</span><span class="sxs-lookup"><span data-stu-id="8fad3-118">JsonElement API changes</span></span>](#jsonelement-api-changes)
+- [<span data-ttu-id="8fad3-119">기본 제공 구조체 형식에 추가된 프라이빗 필드</span><span class="sxs-lookup"><span data-stu-id="8fad3-119">Private fields added to built-in struct types</span></span>](#private-fields-added-to-built-in-struct-types)
+- [<span data-ttu-id="8fad3-120">UseShellExecute의 기본값 변경</span><span class="sxs-lookup"><span data-stu-id="8fad3-120">Change in default value of UseShellExecute</span></span>](#change-in-default-value-of-useshellexecute)
 
-## <a name="net-core-30"></a><span data-ttu-id="35351-121">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="35351-121">.NET Core 3.0</span></span>
+## <a name="net-core-30"></a><span data-ttu-id="8fad3-121">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="8fad3-121">.NET Core 3.0</span></span>
 
 [!INCLUDE[APIs that report version now report product and not file version](~/includes/core-changes/corefx/3.0/version-information-changes.md)]
 
@@ -65,13 +65,13 @@ ms.locfileid: "76116510"
 
 ***
 
-## <a name="net-core-30-preview-9"></a><span data-ttu-id="35351-122">.NET Core 3.0 미리 보기 9</span><span class="sxs-lookup"><span data-stu-id="35351-122">.NET Core 3.0 Preview 9</span></span>
+## <a name="net-core-30-preview-9"></a><span data-ttu-id="8fad3-122">.NET Core 3.0 미리 보기 9</span><span class="sxs-lookup"><span data-stu-id="8fad3-122">.NET Core 3.0 Preview 9</span></span>
 
 [!INCLUDE[JSON serializer exception type changed from JsonException to NotSupportedException](~/includes/core-changes/corefx/3.0/serializer-throws-notsupportedexception.md)]
 
 ***
 
-## <a name="net-core-30-preview-8"></a><span data-ttu-id="35351-123">.NET Core 3.0 미리 보기 8</span><span class="sxs-lookup"><span data-stu-id="35351-123">.NET Core 3.0 Preview 8</span></span>
+## <a name="net-core-30-preview-8"></a><span data-ttu-id="8fad3-123">.NET Core 3.0 미리 보기 8</span><span class="sxs-lookup"><span data-stu-id="8fad3-123">.NET Core 3.0 Preview 8</span></span>
 
 [!INCLUDE[Change in semantics of (string)null in Utf8JsonWriter](~/includes/core-changes/corefx/3.0/change-in-null-in-utf8jsonwriter.md)]
 
@@ -85,13 +85,13 @@ ms.locfileid: "76116510"
 
 ***
 
-## <a name="net-core-30-preview-7"></a><span data-ttu-id="35351-124">.NET Core 3.0 미리 보기 7</span><span class="sxs-lookup"><span data-stu-id="35351-124">.NET Core 3.0 Preview 7</span></span>
+## <a name="net-core-30-preview-7"></a><span data-ttu-id="8fad3-124">.NET Core 3.0 미리 보기 7</span><span class="sxs-lookup"><span data-stu-id="8fad3-124">.NET Core 3.0 Preview 7</span></span>
 
 [!INCLUDE[JsonElement API changes](~/includes/core-changes/corefx/3.0/jsonelement-api-changes.md)]
 
 ***
 
-## <a name="net-core-21"></a><span data-ttu-id="35351-125">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="35351-125">.NET Core 2.1</span></span>
+## <a name="net-core-21"></a><span data-ttu-id="8fad3-125">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="8fad3-125">.NET Core 2.1</span></span>
 
 [!INCLUDE[Private fields added to built-in struct types](~/includes/core-changes/corefx/2.1/instantiate-struct.md)]
 

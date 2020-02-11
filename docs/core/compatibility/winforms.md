@@ -1,37 +1,37 @@
 ---
-title: Windows Forms 관련 호환성이 손상되는 변경 - .NET Core
+title: Windows Forms 관련 호환성이 손상되는 변경
 description: .NET Core용 Windows Forms 관련 호환성이 손상되는 변경 목록입니다.
 ms.date: 01/08/2020
-ms.openlocfilehash: 44bcde60f9e08d2e06a69c55e4ebe904bf5c449b
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 7fba78382d011bc9d489924fa185a44e598c5a76
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116451"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093021"
 ---
-# <a name="breaking-changes-in-windows-forms"></a><span data-ttu-id="e8678-103">Windows Forms 관련 호환성이 손상되는 변경</span><span class="sxs-lookup"><span data-stu-id="e8678-103">Breaking changes in Windows Forms</span></span>
+# <a name="breaking-changes-in-windows-forms"></a><span data-ttu-id="8f2b6-103">Windows Forms 관련 호환성이 손상되는 변경</span><span class="sxs-lookup"><span data-stu-id="8f2b6-103">Breaking changes in Windows Forms</span></span>
 
-<span data-ttu-id="e8678-104">Windows Forms 지원이 버전 3.0의 .NET Core에 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="e8678-104">Windows Forms support was added to .NET Core in version 3.0.</span></span> <span data-ttu-id="e8678-105">이 문서에서는 Windows Forms의 주요 변경 사항이 .NET Core 버전이 도입된 순서대로 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="e8678-105">This article lists breaking changes for Windows Forms by the .NET Core version in which they were introduced.</span></span> <span data-ttu-id="e8678-106">.NET Framework 또는 이전 버전의 .NET Core(3.0 이상)에서 Windows Forms 앱을 업그레이드하는 경우 이 문서가 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="e8678-106">If you're upgrading a Windows Forms app from .NET Framework or from a previous version of .NET Core (3.0 or later), this article is applicable to you.</span></span>
+<span data-ttu-id="8f2b6-104">Windows Forms 지원이 버전 3.0의 .NET Core에 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="8f2b6-104">Windows Forms support was added to .NET Core in version 3.0.</span></span> <span data-ttu-id="8f2b6-105">이 문서에서는 Windows Forms의 주요 변경 사항이 .NET Core 버전이 도입된 순서대로 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="8f2b6-105">This article lists breaking changes for Windows Forms by the .NET Core version in which they were introduced.</span></span> <span data-ttu-id="8f2b6-106">.NET Framework 또는 이전 버전의 .NET Core(3.0 이상)에서 Windows Forms 앱을 업그레이드하는 경우 이 문서가 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="8f2b6-106">If you're upgrading a Windows Forms app from .NET Framework or from a previous version of .NET Core (3.0 or later), this article is applicable to you.</span></span>
 
-<span data-ttu-id="e8678-107">이 페이지에는 다음과 같은 주요 변경 사항이 설명되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e8678-107">The following breaking changes are documented on this page:</span></span>
+<span data-ttu-id="8f2b6-107">이 페이지에는 다음과 같은 주요 변경 사항이 설명되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8f2b6-107">The following breaking changes are documented on this page:</span></span>
 
-- [<span data-ttu-id="e8678-108">제거된 컨트롤</span><span class="sxs-lookup"><span data-stu-id="e8678-108">Removed controls</span></span>](#removed-controls)
-- [<span data-ttu-id="e8678-109">도구 설명이 표시되면 CellFormatting 이벤트가 발생하지 않음</span><span class="sxs-lookup"><span data-stu-id="e8678-109">CellFormatting event not raised if tooltip is shown</span></span>](#cellformatting-event-not-raised-if-tooltip-is-shown)
-- [<span data-ttu-id="e8678-110">Control.DefaultFont가 맑은 고딕 9pt로 변경됨</span><span class="sxs-lookup"><span data-stu-id="e8678-110">Control.DefaultFont changed to Segoe UI 9 pt</span></span>](#default-control-font-changed-to-segoe-ui-9-pt)
-- [<span data-ttu-id="e8678-111">FolderBrowserDialog의 현대화</span><span class="sxs-lookup"><span data-stu-id="e8678-111">Modernization of the FolderBrowserDialog</span></span>](#modernization-of-the-folderbrowserdialog)
-- [<span data-ttu-id="e8678-112">일부 Windows Forms 형식에서 SerializableAttribute 제거됨</span><span class="sxs-lookup"><span data-stu-id="e8678-112">SerializableAttribute removed from some Windows Forms types</span></span>](#serializableattribute-removed-from-some-windows-forms-types)
-- [<span data-ttu-id="e8678-113">AllowUpdateChildControlIndexForTabControls 호환성 스위치가 지원되지 않음</span><span class="sxs-lookup"><span data-stu-id="e8678-113">AllowUpdateChildControlIndexForTabControls compatibility switch not supported</span></span>](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported)
-- [<span data-ttu-id="e8678-114">DomainUpDown.UseLegacyScrolling 호환성 스위치가 지원되지 않음</span><span class="sxs-lookup"><span data-stu-id="e8678-114">DomainUpDown.UseLegacyScrolling compatibility switch not supported</span></span>](#domainupdownuselegacyscrolling-compatibility-switch-not-supported)
-- [<span data-ttu-id="e8678-115">DoNotLoadLatestRichEditControl 호환성 스위치가 지원되지 않음</span><span class="sxs-lookup"><span data-stu-id="e8678-115">DoNotLoadLatestRichEditControl compatibility switch not supported</span></span>](#donotloadlatestricheditcontrol-compatibility-switch-not-supported)
-- [<span data-ttu-id="e8678-116">DoNotSupportSelectAllShortcutInMultilineTextBox 호환성 스위치가 지원되지 않음</span><span class="sxs-lookup"><span data-stu-id="e8678-116">DoNotSupportSelectAllShortcutInMultilineTextBox compatibility switch not supported</span></span>](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported)
-- [<span data-ttu-id="e8678-117">DontSupportReentrantFilterMessage 호환성 스위치가 지원되지 않음</span><span class="sxs-lookup"><span data-stu-id="e8678-117">DontSupportReentrantFilterMessage compatibility switch not supported</span></span>](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported)
-- [<span data-ttu-id="e8678-118">EnableVisualStyleValidation 호환성 스위치가 지원되지 않음</span><span class="sxs-lookup"><span data-stu-id="e8678-118">EnableVisualStyleValidation compatibility switch not supported</span></span>](#enablevisualstylevalidation-compatibility-switch-not-supported)
-- [<span data-ttu-id="e8678-119">UseLegacyContextMenuStripSourceControlValue 호환성 스위치가 지원되지 않음</span><span class="sxs-lookup"><span data-stu-id="e8678-119">UseLegacyContextMenuStripSourceControlValue compatibility switch not supported</span></span>](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported)
-- [<span data-ttu-id="e8678-120">UseLegacyImages 호환성 스위치가 지원되지 않음</span><span class="sxs-lookup"><span data-stu-id="e8678-120">UseLegacyImages compatibility switch not supported</span></span>](#uselegacyimages-compatibility-switch-not-supported)
-- [<span data-ttu-id="e8678-121">AccessibleObject.RuntimeIDFirstItem에 대한 액세스 변경</span><span class="sxs-lookup"><span data-stu-id="e8678-121">Change of access for AccessibleObject.RuntimeIDFirstItem</span></span>](#change-of-access-for-accessibleobjectruntimeidfirstitem)
-- [<span data-ttu-id="e8678-122">Windows Forms에서 중복된 API가 제거되었습니다.</span><span class="sxs-lookup"><span data-stu-id="e8678-122">Duplicated APIs removed from Windows Forms</span></span>](#duplicated-apis-removed-from-windows-forms)
+- [<span data-ttu-id="8f2b6-108">제거된 컨트롤</span><span class="sxs-lookup"><span data-stu-id="8f2b6-108">Removed controls</span></span>](#removed-controls)
+- [<span data-ttu-id="8f2b6-109">도구 설명이 표시되면 CellFormatting 이벤트가 발생하지 않음</span><span class="sxs-lookup"><span data-stu-id="8f2b6-109">CellFormatting event not raised if tooltip is shown</span></span>](#cellformatting-event-not-raised-if-tooltip-is-shown)
+- [<span data-ttu-id="8f2b6-110">Control.DefaultFont가 맑은 고딕 9pt로 변경됨</span><span class="sxs-lookup"><span data-stu-id="8f2b6-110">Control.DefaultFont changed to Segoe UI 9 pt</span></span>](#default-control-font-changed-to-segoe-ui-9-pt)
+- [<span data-ttu-id="8f2b6-111">FolderBrowserDialog의 현대화</span><span class="sxs-lookup"><span data-stu-id="8f2b6-111">Modernization of the FolderBrowserDialog</span></span>](#modernization-of-the-folderbrowserdialog)
+- [<span data-ttu-id="8f2b6-112">일부 Windows Forms 형식에서 SerializableAttribute 제거됨</span><span class="sxs-lookup"><span data-stu-id="8f2b6-112">SerializableAttribute removed from some Windows Forms types</span></span>](#serializableattribute-removed-from-some-windows-forms-types)
+- [<span data-ttu-id="8f2b6-113">AllowUpdateChildControlIndexForTabControls 호환성 스위치가 지원되지 않음</span><span class="sxs-lookup"><span data-stu-id="8f2b6-113">AllowUpdateChildControlIndexForTabControls compatibility switch not supported</span></span>](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported)
+- [<span data-ttu-id="8f2b6-114">DomainUpDown.UseLegacyScrolling 호환성 스위치가 지원되지 않음</span><span class="sxs-lookup"><span data-stu-id="8f2b6-114">DomainUpDown.UseLegacyScrolling compatibility switch not supported</span></span>](#domainupdownuselegacyscrolling-compatibility-switch-not-supported)
+- [<span data-ttu-id="8f2b6-115">DoNotLoadLatestRichEditControl 호환성 스위치가 지원되지 않음</span><span class="sxs-lookup"><span data-stu-id="8f2b6-115">DoNotLoadLatestRichEditControl compatibility switch not supported</span></span>](#donotloadlatestricheditcontrol-compatibility-switch-not-supported)
+- [<span data-ttu-id="8f2b6-116">DoNotSupportSelectAllShortcutInMultilineTextBox 호환성 스위치가 지원되지 않음</span><span class="sxs-lookup"><span data-stu-id="8f2b6-116">DoNotSupportSelectAllShortcutInMultilineTextBox compatibility switch not supported</span></span>](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported)
+- [<span data-ttu-id="8f2b6-117">DontSupportReentrantFilterMessage 호환성 스위치가 지원되지 않음</span><span class="sxs-lookup"><span data-stu-id="8f2b6-117">DontSupportReentrantFilterMessage compatibility switch not supported</span></span>](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported)
+- [<span data-ttu-id="8f2b6-118">EnableVisualStyleValidation 호환성 스위치가 지원되지 않음</span><span class="sxs-lookup"><span data-stu-id="8f2b6-118">EnableVisualStyleValidation compatibility switch not supported</span></span>](#enablevisualstylevalidation-compatibility-switch-not-supported)
+- [<span data-ttu-id="8f2b6-119">UseLegacyContextMenuStripSourceControlValue 호환성 스위치가 지원되지 않음</span><span class="sxs-lookup"><span data-stu-id="8f2b6-119">UseLegacyContextMenuStripSourceControlValue compatibility switch not supported</span></span>](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported)
+- [<span data-ttu-id="8f2b6-120">UseLegacyImages 호환성 스위치가 지원되지 않음</span><span class="sxs-lookup"><span data-stu-id="8f2b6-120">UseLegacyImages compatibility switch not supported</span></span>](#uselegacyimages-compatibility-switch-not-supported)
+- [<span data-ttu-id="8f2b6-121">AccessibleObject.RuntimeIDFirstItem에 대한 액세스 변경</span><span class="sxs-lookup"><span data-stu-id="8f2b6-121">Change of access for AccessibleObject.RuntimeIDFirstItem</span></span>](#change-of-access-for-accessibleobjectruntimeidfirstitem)
+- [<span data-ttu-id="8f2b6-122">Windows Forms에서 중복된 API가 제거되었습니다.</span><span class="sxs-lookup"><span data-stu-id="8f2b6-122">Duplicated APIs removed from Windows Forms</span></span>](#duplicated-apis-removed-from-windows-forms)
 
-## <a name="net-core-31"></a><span data-ttu-id="e8678-123">.NET Core 3.1</span><span class="sxs-lookup"><span data-stu-id="e8678-123">.NET Core 3.1</span></span>
+## <a name="net-core-31"></a><span data-ttu-id="8f2b6-123">.NET Core 3.1</span><span class="sxs-lookup"><span data-stu-id="8f2b6-123">.NET Core 3.1</span></span>
 
 [!INCLUDE[Removed controls](~/includes/core-changes/windowsforms/3.1/remove-controls-3.1.md)]
 
@@ -41,7 +41,7 @@ ms.locfileid: "76116451"
 
 ***
 
-## <a name="net-core-30"></a><span data-ttu-id="e8678-124">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="e8678-124">.NET Core 3.0</span></span>
+## <a name="net-core-30"></a><span data-ttu-id="8f2b6-124">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="8f2b6-124">.NET Core 3.0</span></span>
 
 [!INCLUDE[Control.DefaultFont changed to Segoe UI 9pt](~/includes/core-changes/windowsforms/3.0/control-defaultfont-changed.md)]
 
@@ -95,6 +95,6 @@ ms.locfileid: "76116451"
 
 ***
 
-## <a name="see-also"></a><span data-ttu-id="e8678-125">참조</span><span class="sxs-lookup"><span data-stu-id="e8678-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8f2b6-125">참조</span><span class="sxs-lookup"><span data-stu-id="8f2b6-125">See also</span></span>
 
-- [<span data-ttu-id="e8678-126">.NET Core에 Windows Forms 앱 포팅</span><span class="sxs-lookup"><span data-stu-id="e8678-126">Port a Windows Forms app to .NET Core</span></span>](../porting/winforms.md)
+- [<span data-ttu-id="8f2b6-126">.NET Core에 Windows Forms 앱 포팅</span><span class="sxs-lookup"><span data-stu-id="8f2b6-126">Port a Windows Forms app to .NET Core</span></span>](../porting/winforms.md)
