@@ -244,7 +244,7 @@ ML.NET 기계 학습 파이프라인의 핵심에는 [DataView](xref:Microsoft.M
 
    ![주택 가격 예측 데이터가 있는 ML.NET 데이터 뷰 예제](./media/ml-net-dataview.png)
 
-모든 ML.NET 알고리즘은 벡터인 입력 열을 찾습니다. 기본적으로 이 벡터 열은 **기능**이라고 합니다. 이것이 바로 주택 가격 예제에서 **기능**이라고 하는 새 열로 **크기** 열을 연관시킨 이유입니다.
+모든 ML.NET 알고리즘은 벡터인 입력 열을 찾습니다. 기본적으로 이 벡터 열은 **특성(feature)** 이라고 합니다. 이것이 바로 주택 가격 예제에서 **Features**이라고 하는 새 열로 **크기** 열을 연관시킨 이유입니다.
 
  ```csharp
     var pipeline = mlContext.Transforms.Concatenate("Features", new[] { "Size" })

@@ -1,5 +1,5 @@
 ---
-title: 기본 연산자 - C# 참조
+title: default 연산자 - C# 참조
 description: 기본 연산자를 사용하여 형식의 기본값을 생성합니다.
 ms.date: 08/01/2019
 helpviewer_keywords:
@@ -11,7 +11,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/15/2020
 ms.locfileid: "75964614"
 ---
-# <a name="default-operator-c-reference"></a>기본 연산자(C# 참조)
+# <a name="default-operator-c-reference"></a>default 연산자(C# 참조)
 
 `default` 연산자는 형식의 [기본값](../builtin-types/default-values.md)을 생성합니다. `default` 연산자에 대한 인수는 형식 또는 형식 매개 변수의 이름이어야 합니다.
 
