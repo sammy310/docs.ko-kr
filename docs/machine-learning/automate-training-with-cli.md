@@ -52,7 +52,7 @@ mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" 
 
 CLI `auto-train` 명령은 출력 폴더에 다음 자산을 생성합니다.
 
-- 예측 실행에 사용할 수 있는 직렬화된 모델의 .zip("최상의 모델") 파일
+- 예측 실행에 사용할 수 있는 직렬화된 모델.zip("최상의 모델")
 - 다음을 포함한 C# 솔루션:
   - 생성된 모델을 실행/채점하는 C# 코드(해당 모델의 최종 사용자 앱에서 예측 수행)
   - 해당 모델을 생성하는 데 사용된 학습 코드를 포함한 C# 코드(교육용 또는 모델 재교육용)
