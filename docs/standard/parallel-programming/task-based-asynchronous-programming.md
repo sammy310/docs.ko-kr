@@ -31,7 +31,7 @@ TPL(작업 병렬 라이브러리)은 *작업*이란 개념을 기반으로 하�
 
 ## <a name="creating-and-running-tasks-implicitly"></a>암시적으로 작업 만들기 및 실행
 
-<xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWithType> 메서드를 사용하면 개수에 관계없이 여러 개의 임의 문을 간편하게 동시에 실행할 수 있습니다. 작업의 각 항목에 대한 <xref:System.Action> 대리자를 전달하기만 하면 됩니다. 이러한 대리자를 만드는 가장 쉬운 방법은 람다 식을 사용하는 것입니다. 람다 식은 명명된 메서드를 호출하거나 코드를 인라인으로 제공합니다. 다음 예제에서는 동시에 실행되는 두 개의 작업을 만들고 시작하는 기본적인 <xref:System.Threading.Tasks.Parallel.Invoke%2A> 호출을 보여 줍니다.call that creates and starts two tasks that run concurrently. 이름이 `DoSomeWork`인 메서드를 호출하는 람다 식에서 첫 번째 작업을 표시하며 이름이 `DoSomeOtherWork`인 메서드를 호출하는 람다 식에서 두 번째 작업을 표시합니다.
+<xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWithType> 메서드를 사용하면 개수에 관계없이 여러 개의 임의 문을 간편하게 동시에 실행할 수 있습니다. 작업의 각 항목에 대한 <xref:System.Action> 대리자를 전달하기만 하면 됩니다. 이러한 대리자를 만드는 가장 쉬운 방법은 람다 식을 사용하는 것입니다. 람다 식은 명명된 메서드를 호출하거나 코드를 인라인으로 제공합니다. 다음 예제에서는 동시에 실행되는 두 개의 작업을 만들고 시작하는 기본적인 <xref:System.Threading.Tasks.Parallel.Invoke%2A> 호출을 보여 줍니다. 이름이 `DoSomeWork`인 메서드를 호출하는 람다 식에서 첫 번째 작업을 표시하며 이름이 `DoSomeOtherWork`인 메서드를 호출하는 람다 식에서 두 번째 작업을 표시합니다.
 
 > [!NOTE]
 > 이 문서에서는 람다 식을 사용하여 TPL에 대리자를 정의합니다. C# 또는 Visual Basic의 람다 식을 잘 모르는 경우 [PLINQ 및 TPL의 람다 식](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)을 참조하세요.
