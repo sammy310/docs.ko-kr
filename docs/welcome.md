@@ -1,16 +1,14 @@
 ---
 title: .NET 시작
 description: .NET 기술 제품군을 시작합니다.
-author: mairaw
-ms.author: mairaw
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 15daaafed02ab1132a3c82c12efa6fad0e0a6db2
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 20332f4dcc0664287873a27e0064a4765b1ecde7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838132"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124223"
 ---
 # <a name="welcome-to-net"></a>.NET 시작
 
@@ -62,7 +60,7 @@ ms.locfileid: "74838132"
 
 [.NET 101 동영상 시리즈](https://dotnet.microsoft.com/learn/videos)
 
-## <a name="open-source"></a>소스 열기
+## <a name="open-source"></a>오픈 소스
 
 이 문서는 완전히 [오픈 소스](https://github.com/dotnet/docs)입니다. 문제 생성부터 문서 작성에 이르기까지 원하는 방식으로 참여할 수 있습니다. 또한 .NET 자체도 대부분 오픈 소스입니다. 다음 목록에서는 기본 .NET GitHub 리포지토리를 보여줍니다.
 
