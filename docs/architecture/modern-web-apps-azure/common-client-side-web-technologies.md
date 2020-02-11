@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 0e5f3578edc723e2e2a32b9b3a1d8a7dcabd2909
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 7dd3765b1b71d8c1ef22d714a00be3e171fab523
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965752"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093125"
 ---
 # <a name="common-client-side-web-technologies"></a>일반 클라이언트측 웹 기술
 
@@ -18,7 +18,7 @@ ms.locfileid: "76965752"
 
 ASP.NET Core 애플리케이션은 웹 애플리케이션이며 일반적으로 HTML, CSS 및 JavaScript와 같은 클라이언트측 웹 기술에 의존합니다. 레이아웃과 스타일(CSS), 동작(JavaScript를 통해)에서 페이지(HTML)의 콘텐츠를 분리하면 복잡한 웹앱에서 관심사 분리 원칙을 활용할 수 있습니다. 이러한 관심사가 긴밀히 연결되어 있지 않으면 향후에 애플리케이션의 구조, 디자인 또는 동작을 더 쉽게 변경할 수 있습니다.
 
-HTML 및 CSS는 상대적으로 안정적인 반면, JavaScript는 웹 기반 애플리케이션 빌드를 위해 애플리케이션 프레임워크와 유틸리티 개발자가 함께 일하는 덕분에 빠른 속도로 발전하고 있습니다. 이 장에서는 Angular 및 React 클라이언트측 라이브러리의 간단한 개요를 제공하면서 웹 개발자가 애플리케이션 개발의 일환으로 JavaScript를 사용하는 몇 가지 방법에 대해 살펴봅니다.
+HTML 및 CSS는 상대적으로 안정적인 반면, JavaScript는 웹 기반 애플리케이션 빌드를 위해 애플리케이션 프레임워크와 유틸리티 개발자가 함께 일하는 덕분에 빠른 속도로 발전하고 있습니다. 이 장에서는 웹 개발자가 JavaScript를 사용하는 몇 가지 방법을 살펴보고 Angular 및 React 클라이언트 측 라이브러리의 간단한 개요를 제공합니다.
 
 ## <a name="html"></a>HTML
 
@@ -75,7 +75,7 @@ JavaScript 프레임워크 표준에서 유래되었음에도 jQuery는 여전�
 
 대부분의 jQuery 기능 부족은 본질적으로 다른 라이브러리를 추가하여 채울 수 있습니다. 그러나 Angular와 같은 SPA 프레임워크는 이러한 기능을 더 통합된 방식으로 제공합니다. 처음부터 이러한 사항 모두를 고려하여 설계되었기 때문입니다. 또한 jQuery는 명령적 라이브러리입니다. 즉, jQuery를 사용한 작업을 수행하려면 jQuery 함수를 호출해야 합니다. SPA 프레임워크가 제공하는 많은 작업과 기능은 실제 코드를 작성할 필요 없이 선언적으로 수행될 수 있습니다.
 
-데이터 바인딩은 이에 대한 좋은 예입니다. jQuery에서는 일반적으로 단 한 줄의 코드로 DOM 요소의 값을 가져오거나 요소의 값을 설정합니다. 단, 이 코드는 요소의 값을 변경해야 때마다 작성해야 하며, 경우에 따라 이는 페이지의 여러 기능에서 발생됩니다. 또 다른 일반적인 예제는 요소 표시 유형입니다. jQuery에서는 여러 다른 위치에서 특정 요소를 표시할지 여부를 제어하는 코드를 작성해야 할 수 있습니다. 이러한 각각의 경우에서 데이터 바인딩을 사용할 때 코드를 작성할 필요가 없습니다. 문제의 값 또는 요소의 표시 여부를 페이지의 *viewmodel*에 바인딩하기만 하면 해당 viewmodel에 대한 변경 사항이 자동으로 바인딩된 요소에 반영됩니다.
+데이터 바인딩은 이에 대한 좋은 예입니다. jQuery에서는 일반적으로 단 한 줄의 코드로 DOM 요소의 값을 가져오거나 요소의 값을 설정합니다. 단, 이 코드는 요소의 값을 변경해야 때마다 작성해야 하며, 경우에 따라 이는 페이지의 여러 기능에서 발생합니다. 또 다른 일반적인 예제는 요소 표시 유형입니다. jQuery에서는 여러 다른 위치에서 특정 요소를 표시할지 여부를 제어하는 코드를 작성해야 할 수 있습니다. 이러한 각각의 경우에서 데이터 바인딩을 사용할 때 코드를 작성할 필요가 없습니다. 문제의 값 또는 요소의 표시 여부를 페이지의 ‘viewmodel’에 바인딩하기만 하면 해당 viewmodel에 대한 변경 사항이 자동으로 바인딩된 요소에 반영됩니다. 
 
 ### <a name="angular-spas"></a>Angular SPA
 
@@ -108,7 +108,7 @@ Microsoft는 Angular SPA 구현을 포함하는 [eShopOnContainers](https://aka.
 
 React의 가장 중요한 기능 중 하나는 가상 DOM을 사용하는 것입니다. 가상 DOM은 React에 성능(가상 DOM은 업데이트가 필요한 실제 DOM의 부분을 최적화할 수 있음) 및 테스트 용이성(React와 해당 가상 DOM과의 상호 작용을 테스트하기 위해 브라우저가 필요하지 않음)을 포함한 여러 장점을 제공합니다.
 
-또한 React는 HTML과 작동하는 방식 작동 방식이 특이합니다. 코드 및 표시 사이를 엄격히 구분하지 않으면서(아마 HTML 특성에 표시되는 JavaScript에 대한 참조 사용) React는 HTML을 직접 해당 JavaScript 코드 내에 JSX로 추가합니다. JSX는 순수 JavaScript로 컴파일 다운할 수 있는 HTML 스타일의 구문입니다. 예:
+또한 React는 HTML과 작동하는 방식 작동 방식이 특이합니다. 코드 및 표시 사이를 엄격히 구분하지 않으면서(아마 HTML 특성에 표시되는 JavaScript에 대한 참조 사용) React는 HTML을 직접 해당 JavaScript 코드 내에 JSX로 추가합니다. JSX는 순수 JavaScript로 컴파일 다운할 수 있는 HTML 스타일의 구문입니다. 예를 들어:
 
 ```js
 <ul>

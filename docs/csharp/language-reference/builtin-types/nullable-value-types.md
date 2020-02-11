@@ -4,16 +4,16 @@ description: C# nullable 값 형식 및 사용 방법 알아보기
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: 42673d16ac68bbf119e57e4c357b1b2b2a0b5c51
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: bd90a0b1b77349efe581eb8aae44c58802ba756d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740938"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093190"
 ---
 # <a name="nullable-value-types-c-reference"></a>Nullalbe 값 형식(C# 참조)
 
-Null 허용 값 형식 `T?`는 기본 [값 형식](value-types.md) `T`의 모든 값과 추가 [null](../keywords/null.md) 값을 나타냅니다. 예를 들어 `bool?` 변수에는 다음 세 가지 값 중 하나를 할당할 수 있습니다. `true`, `false`, `null`. 기본 값 형식 `T`는 null 허용 값 형식 자체일 수 없습니다.
+*Null 허용 값 형식* `T?`는 기본 [값 형식](value-types.md) `T`의 모든 값과 추가 [null](../keywords/null.md) 값을 나타냅니다. 예를 들어 `bool?` 변수에는 다음 세 가지 값 중 하나를 할당할 수 있습니다. `true`, `false`, `null`. 기본 값 형식 `T`는 null 허용 값 형식 자체일 수 없습니다.
 
 > [!NOTE]
 > C# 8.0에서는 nullable 참조 형식 기능을 소개합니다. 자세한 내용은 [nullable 참조 형식](../../nullable-references.md)을 참조하세요. Null 허용 값 형식은 C# 2부터 사용할 수 있습니다.
@@ -24,7 +24,7 @@ Null 허용 값 형식은 제네릭 <xref:System.Nullable%601?displayProperty=na
 
 ## <a name="declaration-and-assignment"></a>선언 및 할당
 
-값 형식이 암시적으로 해당 null 허용 값 형식으로 변환될 수 있기 때문에 기본 값 형식에서와 마찬가지로 null 허용 값 형식의 변수에 값을 할당할 수 있습니다. `null` 값을 할당할 수도 있습니다. 예:
+값 형식이 암시적으로 해당 null 허용 값 형식으로 변환될 수 있기 때문에 기본 값 형식에서와 마찬가지로 null 허용 값 형식의 변수에 값을 할당할 수 있습니다. `null` 값을 할당할 수도 있습니다. 예를 들어:
 
 [!code-csharp[declare and assign](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#Declaration)]
 
@@ -68,7 +68,7 @@ null을 허용하지 않는 값 형식 `T`는 해당 null 허용 값 형식 `T?`
 
 ## <a name="lifted-operators"></a>리프트 연산자
 
-미리 정의된 단항 및 이항 연산자 또는 `T` 값 형식에서 지원하는 오버로드된 연산자는 해당 null 허용 값 형식 `T?`에서도 지원합니다. *리프트 연산자*라고도 하는 이러한 연산자는 하나 또는 두 개의 피연산자가 `null`인 경우 `null` 값을 생성하고, 그렇지 않으면 연산자는 포함된 피연산자 값을 사용하여 결과를 계산합니다. 예:
+미리 정의된 단항 및 이항 [연산자](../operators/index.md) 또는 값 형식 `T`에서 지원하는 오버로드된 연산자는 해당 null 허용 값 형식 `T?`에서도 지원합니다. *리프트 연산자*라고도 하는 이러한 연산자는 하나 또는 두 개의 피연산자가 `null`인 경우 `null` 값을 생성하고, 그렇지 않으면 연산자는 포함된 피연산자 값을 사용하여 결과를 계산합니다. 예를 들어:
 
 [!code-csharp[lifted operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#LiftedOperator)]
 
@@ -82,7 +82,9 @@ null을 허용하지 않는 값 형식 `T`는 해당 null 허용 값 형식 `T?`
 
 [!code-csharp-interactive[relational and equality operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#ComparisonOperators)]
 
-또한 위 예제에서는 둘 다 `null`인 두 null 허용 값 형식 인스턴스의 같음 비교는 `true`로 계산되는 것을 보여줍니다.
+[같음 연산자](../operators/equality-operators.md#equality-operator-) `==`의 경우 두 피연산자 모두 `null`이면 결과는 `true`이고 피연산자 중 하나만 `null`이면 결과는 `false`입니다. 그렇지 않으면 포함된 피연산자 값을 비교합니다.
+
+[같지 않음 연산자](../operators/equality-operators.md#inequality-operator-) `!=`의 경우 두 피연산자 모두 `null`이면 결과는 `false`이고 피연산자 중 하나만 `null`이면 결과는 `true`입니다. 그렇지 않으면 포함된 피연산자 값을 비교합니다.
 
 두 값 형식 사이에 [사용자 정의 변환](../operators/user-defined-conversion-operators.md)이 있는 경우 해당 null 허용 값 형식 사이에도 같은 변환을 사용할 수 있습니다.
 

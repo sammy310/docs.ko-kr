@@ -32,16 +32,16 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 058e75c81c18f0ec73140f6fc13a91f4e0012a61
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 394a809a9a2f45f4aee652d0eca892f62f0f2e54
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036367"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093203"
 ---
 # <a name="integral-numeric-types--c-reference"></a>정수 숫자 형식(C# 참조)
 
-**정수 숫자 형식**은 **단순 형식**의 하위 집합이며 [*리터럴*](#integer-literals)을 사용하여 초기화할 수 있습니다. 모든 정수 형식도 값 형식입니다. 모든 정수 숫자 형식은 [산술](../operators/arithmetic-operators.md), [비트 논리](../operators/bitwise-and-shift-operators.md), [비교](../operators/comparison-operators.md) 및 [같음](../operators/equality-operators.md) 연산자를 지원합니다.
+*정수 숫자 형식*은 정수를 표현합니다. 모든 정수 숫자 형식은 [값 형식](value-types.md)입니다. 이것은 [기본 형식](value-types.md#built-in-value-types)이기도 하며, [리터럴](#integer-literals)로 초기화할 수 있습니다. 모든 정수 숫자 형식은 [산술](../operators/arithmetic-operators.md), [비트 논리](../operators/bitwise-and-shift-operators.md), [비교](../operators/comparison-operators.md) 및 [같음](../operators/equality-operators.md) 연산자를 지원합니다.
 
 ## <a name="characteristics-of-the-integral-types"></a>정수 형식의 특성
 
@@ -127,10 +127,10 @@ var longVariable = (long)42;
 - [정수 형식](~/_csharplang/spec/types.md#integral-types)
 - [정수 리터럴](~/_csharplang/spec/lexical-structure.md#integer-literals)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
-- [기본 제공 형식 표](../keywords/built-in-types-table.md)
+- [값 형식](value-types.md)
 - [부동 소수점 형식](floating-point-numeric-types.md)
-- [숫자 결과 형식 지정 표](../keywords/formatting-numeric-results-table.md)
+- [표준 숫자 형식 문자열](../../../standard/base-types/standard-numeric-format-strings.md)
 - [.NET의 숫자](../../../standard/numerics.md)

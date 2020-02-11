@@ -4,12 +4,12 @@ description: 이 고급 자습서에서는 nullable 참조 형식으로 기존 �
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: e480cfa7c041d18a2bdaf8caa2468165e855186e
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 4edeab7b2a4211d50c424f567ad7df6ced0bf4ce
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740460"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093307"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>자습서: nullable 참조 형식이 있는 기존 코드 마이그레이션
 
@@ -40,7 +40,7 @@ C# 8.0 컴파일러를 포함하여 .NET Core를 실행하도록 머신을 설�
 
 ## <a name="upgrade-the-projects-to-c-8"></a>프로젝트를 C# 8로 업그레이드
 
-첫 번째 단계로 마이그레이션 작업의 범위를 확인하는 것이 좋습니다. 시작하려면 먼저 프로젝트를 C# 8.0(이상)으로 업그레이드합니다. 웹 프로젝트의 csproj 파일과 단위 테스트 프로젝트의 csproj 파일에 각각 `LangVersion` 요소를 추가합니다.
+첫 번째 단계로 마이그레이션 작업의 범위를 확인하는 것이 좋습니다. 시작하려면 먼저 프로젝트를 C# 8.0(이상)으로 업그레이드합니다. 웹 프로젝트의 csproj 파일과 단위 테스트 프로젝트의 csproj 파일에 있는 PropertyGroup에 각각 `LangVersion` 요소를 추가합니다.
 
 ```xml
 <LangVersion>8.0</LangVersion>

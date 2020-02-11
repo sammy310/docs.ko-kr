@@ -1,15 +1,15 @@
 ---
-title: '자습서: 미리 학습된 TensorFlow 모델을 사용하여 영화 리뷰의 감정 분석'
+title: '자습서: TensorFlow 모델을 사용하여 리뷰 감정 분석'
 description: 이 자습서에서는 미리 학습된 TensorFlow 모델을 사용하여 웹 사이트 댓글의 감정을 분류하는 방법을 보여 줍니다. 이진 감정 분류자는 Visual Studio를 사용하여 개발된 C# 콘솔 애플리케이션입니다.
 ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 0e80cdc6bb7dcc62a57466e909451da972c92db8
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 7a6043f56a2ecaca633ba5545170f27a85a22efc
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738691"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092397"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>자습서: ML.NET에서 미리 학습된 TensorFlow 모델을 사용하여 영화 리뷰의 감정 분석
 

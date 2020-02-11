@@ -4,12 +4,12 @@ description: 모든 C# 프로그램의 핵심 형식(숫자, 문자열 및 개�
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 7b6dec16b3fd84ced856a9f0e42f38189b1e03fd
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: ad496a9cbb0a654ec10ac38b374a76b042911302
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75339279"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093294"
 ---
 # <a name="types-variables-and-values"></a>형식, 변수 및 값
 
@@ -54,7 +54,7 @@ C#은 강력한 형식의 언어입니다. 모든 변수 및 상수에는 값으
 
 ## <a name="built-in-types"></a>기본 제공 형식
 
-C#에서는 정수, 부동 소수점 값, 부울 식, 텍스트 문자, 10진수 값 및 기타 데이터 형식을 표현하는 기본 제공 숫자 형식의 표준 집합을 제공합니다. 기본 제공 **string** 및 **object** 형식도 있습니다. 이러한 형식을 모든 C# 프로그램에서 사용할 수 있습니다. 기본 제공 형식에 대한 자세한 내용은 [기본 제공 형식에 대한 참조 테이블](language-reference/keywords/built-in-types-table.md)을 참조하세요.  
+C#에서는 정수, 부동 소수점 값, 부울 식, 텍스트 문자, 10진수 값 및 기타 데이터 형식을 표현하는 기본 제공 숫자 형식의 표준 집합을 제공합니다. 기본 제공 **string** 및 **object** 형식도 있습니다. 이러한 형식을 모든 C# 프로그램에서 사용할 수 있습니다. 기본 제공 형식의 전체 목록은 [기본 제공 형식](language-reference/builtin-types/built-in-types.md)을 참조하세요.
   
 ## <a name="custom-types"></a>사용자 지정 형식
 

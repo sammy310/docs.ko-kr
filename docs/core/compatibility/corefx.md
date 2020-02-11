@@ -1,13 +1,13 @@
 ---
-title: 기본 클래스 라이브러리 주요 변경 내용 - .NET Core
+title: 기본 클래스 라이브러리 호환성이 손상되는 변경
 description: 기본 클래스 라이브러리인 .NET CoreFx 관련 호환성이 손상되는 변경 목록입니다.
 ms.date: 09/20/2019
-ms.openlocfilehash: eb416a0b061bfe50db330627c0ea68e0ba0c9079
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 9e8a00abfae8bf8f5301a4879cb5274492a2b6fd
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116510"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093086"
 ---
 # <a name="corefx-breaking-changes"></a>CoreFx 관련 호환성이 손상되는 변경
 

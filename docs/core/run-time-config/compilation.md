@@ -3,19 +3,19 @@ title: 컴파일 구성 설정
 description: .NET Core 앱에 대해 JIT 컴파일러가 작동하는 방식을 구성하는 런타임 설정에 대해 알아봅니다.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 0dab3b7b7726a232cf293e338308cf898b370759
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: adf1f01dba7387b89ee56784e33653d6a132c0e3
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733528"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092891"
 ---
 # <a name="run-time-configuration-options-for-compilation"></a>컴파일을 위한 런타임 구성 옵션
 
 ## <a name="tiered-compilation"></a>계층화된 컴파일
 
 - JIT(Just-In-Time) 컴파일러가 [계층화된 컴파일](../whats-new/dotnet-core-3-0.md#tiered-compilation)을 사용하는지 여부를 구성합니다. 계층화된 컴파일은 두 계층을 통해 메서드를 전환합니다.
-  - 첫 번째 계층은 코드를 더 빠르게 생성([빠른 JIT](#quick-jit))하거나 미리 컴파일된 코드([ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images))를 로드합니다.
+  - 첫 번째 계층은 코드를 더 빠르게 생성([빠른 JIT](#quick-jit))하거나 미리 컴파일된 코드([ReadyToRun](#readytorun))를 로드합니다.
   - 두 번째 계층은 백그라운드에서 최적화된 코드를 생성합니다("JIT 최적화").
 - .NET Core 3.0 이상에서는 기본적으로 계층화된 컴파일이 사용하도록 설정됩니다.
 - .NET Core 2.1 및 2.2에서는 기본적으로 계층화된 컴파일이 사용하지 않도록 설정됩니다.
@@ -57,7 +57,7 @@ ms.locfileid: "76733528"
 
 - JIT 컴파일러가 *빠른 JIT*를 사용하는지 여부를 구성합니다. 루프를 포함되어 있지 않고 미리 컴파일된 코드를 사용할 수 없는 메서드의 경우 빠른 JIT는 최적화하지 않고도 빠르게 컴파일합니다.
 - 빠른 JIT를 사용하도록 설정하면 시작 시간이 단축되지만 성능 특성이 저하된 코드가 생성될 수 있습니다. 예를 들어 코드에서 더 많은 스택 공간을 사용하고, 더 많은 메모리를 할당하며 느리게 실행될 수 있습니다.
-- 빠른 JIT를 사용하지 않도록 설정하고 [계층화된 컴파일](#tiered-compilation)을 사용하도록 설정한 경우에는 미리 컴파일된 코드만 계층화된 컴파일에 참여합니다. 메서드를 [ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images)으로 미리 컴파일하지 않은 경우 JIT 동작은 [계층화된 컴파일](#tiered-compilation)이 사용하지 않도록 설정된 것과 같습니다.
+- 빠른 JIT를 사용하지 않도록 설정하고 [계층화된 컴파일](#tiered-compilation)을 사용하도록 설정한 경우에는 미리 컴파일된 코드만 계층화된 컴파일에 참여합니다. 메서드를 [ReadyToRun](#readytorun)으로 미리 컴파일하지 않은 경우 JIT 동작은 [계층화된 컴파일](#tiered-compilation)이 사용하지 않도록 설정된 것과 같습니다.
 - .NET Core 3.0 이상에서는 기본적으로 빠른 JIT가 사용하도록 설정됩니다.
 - .NET Core 2.1 및 2.2에서는 기본적으로 빠른 JIT가 사용하지 않도록 설정됩니다.
 
@@ -131,3 +131,13 @@ ms.locfileid: "76733528"
 
 </Project>
 ```
+
+## <a name="readytorun"></a>ReadyToRun
+
+- .NET Core 런타임이 사용 가능한 ReadyToRun 데이터가 포함된 이미지에 미리 컴파일된 코드를 사용하도록 할지 여부를 구성합니다. 이 옵션을 사용하지 않도록 설정하면 런타임에서 프레임워크 코드를 강제로 JIT 컴파일하게 합니다.
+- 자세한 내용은 [ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images)을 참조하세요.
+- 기본값: 사용(`1`).
+
+| | 설정 이름 | 값 |
+| - | - | - |
+| **환경 변수** | `COMPlus_ReadyToRun` | `1` - 사용<br/>`0` - 사용 안 함 |

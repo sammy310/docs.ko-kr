@@ -11,16 +11,16 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 72bc867bf0a789279da9a01f97c85d96b78684ed
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: ac4dafef92bbc900d291a5b653c55ba295f1a6d6
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75437956"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093229"
 ---
 # <a name="enumeration-types-c-reference"></a>열거형(C# 참조)
 
-열거형(또는 열거형 형식)은 기본 [정수 숫자](integral-numeric-types.md) 형식의 명명된 상수 집합에 의해 정의되는 값 형식입니다. 열거형을 정의하려면 `enum` 키워드를 정의하고 *열거형 멤버*의 이름을 지정합니다.
+*열거형*(또는 *열거형 형식*)은 기본 [정수 숫자](integral-numeric-types.md) 형식의 명명된 상수 집합에 의해 정의되는 [값 형식](value-types.md)입니다. 열거형을 정의하려면 `enum` 키워드를 정의하고 *열거형 멤버*의 이름을 지정합니다.
 
 ```csharp
 enum Season
