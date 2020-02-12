@@ -7,16 +7,16 @@ helpviewer_keywords:
 - WPF retargeting changes
 - WPF pointer-based touch and stylus stack
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
-ms.openlocfilehash: 6b3e8068be2f5ed82c483b760fe100ea0a751588
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 023c38f66611bd0022699d3f62d90c3923585012
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457864"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094477"
 ---
 # <a name="mitigation-pointer-based-touch-and-stylus-support"></a>완화: 포인터 기반 터치 및 스타일러스 지원
 
-.NET Framework 4.7을 대상으로 하고 Windows 10 작성자 업데이트 버전 이상의 Windows 시스템에서 실행되는 WPF 애플리케이션은 선택적 `WM_POINTER` 기반 WPF 터치/스타일러스 스택을 사용하도록 설정할 수 있습니다.
+.NET Framework 4.7을 대상으로 하고 Windows 10 크리에이터 업데이트 버전 이상의 Windows에서 실행되는 WPF 애플리케이션은 선택적 `WM_POINTER` 기반 WPF 터치/스타일러스 스택을 사용하도록 설정할 수 있습니다.
 
 ## <a name="impact"></a>영향
 
@@ -40,7 +40,7 @@ ms.locfileid: "73457864"
 
 ## <a name="opting-in-to-wm_pointer-based-touchstylus-support"></a>WM_POINTER 기반 터치/스타일러스 지원 옵트인(opt in)
 
-이 스택을 사용하도록 설정하려는 개발자는 애플리케이션의 app.config 파일에 다음을 추가할 수 있습니다.
+이 스택을 사용하도록 설정하려는 개발자는 애플리케이션의 ‘app.config’ 파일에 다음을 추가할 수 있습니다. 
 
 ```xml
 <configuration>
@@ -52,6 +52,6 @@ ms.locfileid: "73457864"
 
 이 항목을 제거하거나 해당 값을 `false`로 설정하면 이 선택적 스택이 해제됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [애플리케이션 호환성](application-compatibility.md)

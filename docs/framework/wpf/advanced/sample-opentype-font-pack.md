@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fonts [WPF], OpenType font pack
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-ms.openlocfilehash: a5b49e2a1f7536fb9d8e8f4dbfc53494dcd1f1ac
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: be9bc6e0cddc0581b9acb319f7d1fc1c81dae268
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740775"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095114"
 ---
 # <a name="sample-opentype-font-pack"></a>샘플 OpenType 글꼴 팩
 이 항목에서는 Windows SDK와 함께 배포 되는 샘플 OpenType 글꼴의 개요를 제공 합니다. 샘플 글꼴은 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램에서 사용할 수 있는 확장 된 OpenType 기능을 지원 합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "73740775"
   
  ![샘플 글꼴 팩의 글꼴 이름 목록](./media/sample-opentype-font-pack/font-names-sample-pack.gif)  
   
- 샘플 글꼴은 Ascender Corporation으로부터 사용 허가를 받아 제공됩니다. Ascender는 고급 글꼴 제품의 공급자입니다. 샘플 글꼴의 확장 또는 사용자 지정 버전을 사용 허가하려면 [Ascender Corporation의 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=182627)를 참조하세요.  
+ 샘플 글꼴은 Ascender Corporation으로부터 사용 허가를 받아 제공됩니다. Ascender는 고급 글꼴 제품의 공급자입니다. 샘플 글꼴의 확장 또는 사용자 지정 버전을 사용 허가하려면 [Ascender Corporation의 웹 사이트](https://www.monotype.com/)를 참조하세요.  
   
 > [!NOTE]
 > 애플리케이션 내에 포함하거나 재배포할 글꼴에 대한 필요한 라이선스 권한이 있는지 확인하는 것은 개발자의 책임입니다.  
@@ -51,7 +51,7 @@ Lindsey 글꼴 표시
 ## <a name="using-the-fonts"></a>글꼴 사용  
  애플리케이션에서 글꼴을 사용할 수 있는 두 가지 방법이 있습니다. 어셈블리 내에 리소스로 포함되지 않은 프로젝트 콘텐츠 항목으로 애플리케이션에 글꼴을 추가할 수 있습니다. 또는 애플리케이션의 어셈블리 파일에 포함된 프로젝트 리소스 항목으로 애플리케이션에 글꼴을 추가할 수 있습니다. 자세한 내용은 [애플리케이션과 함께 글꼴 패키징](packaging-fonts-with-applications.md)을 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Documents.Typography>
 - [OpenType 글꼴 기능](opentype-font-features.md)

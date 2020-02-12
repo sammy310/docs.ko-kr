@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: db23c250014006655fa51ee5a2e5b54e15e4f964
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 781934e9ab27f761e71841c2edc509f9b8022aa7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714595"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094750"
 ---
 # <a name="ws-transaction-flow"></a>WS Transaction Flow
 이 샘플에서는 클라이언트에서 조정하는 트랜잭션의 사용법과 WS-Atomic Transaction 또는 OleTransactions 프로토콜을 사용하는 트랜잭션 흐름의 클라이언트 및 서버 옵션을 보여 줍니다. 이 샘플은 계산기 서비스를 구현 하는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 을 기반으로 하지만 작업은 **TransactionFlowOption** 열거형과 함께 `TransactionFlowAttribute`를 사용 하 여 트랜잭션 흐름이 사용 되는 정도를 결정 하는 방법을 보여 줍니다. 흐름이 지정된 트랜잭션의 범위 내에서는 요청한 작업에 대한 로그가 데이터베이스에 기록되고 클라이언트에서 조정하는 트랜잭션이 완료될 때까지 유지됩니다. 클라이언트 트랜잭션이 완료되지 않으면 웹 서비스 트랜잭션에서 데이터베이스에 적합한 업데이트가 커밋되지 않도록 합니다.  
@@ -230,7 +230,7 @@ Press <ENTER> to terminate the service.
 3. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.  
   
     > [!NOTE]
-    > 다중 컴퓨터 구성의 경우 아래의 지침을 사용하여 DTC(Distributed Transaction Coordinator)를 사용하도록 설정하고 Windows SDK에서 WsatConfig.exe 도구를 사용하여 WCF 트랜잭션 네트워크 지원을 사용하도록 설정합니다. Wsatconfig.exe를 설정 하는 방법에 대 한 자세한 내용은 [WS 원자성 트랜잭션 지원 구성](https://go.microsoft.com/fwlink/?LinkId=190370) 을 참조 하세요.  
+    > 다중 컴퓨터 구성의 경우 아래의 지침을 사용하여 DTC(Distributed Transaction Coordinator)를 사용하도록 설정하고 Windows SDK에서 WsatConfig.exe 도구를 사용하여 WCF 트랜잭션 네트워크 지원을 사용하도록 설정합니다. Wsatconfig.exe를 설정 하는 방법에 대 한 자세한 내용은 [WS 원자성 트랜잭션 지원 구성](../feature-details/configuring-ws-atomic-transaction-support.md)을 참조 하세요.  
   
  샘플을 동일한 컴퓨터나 다른 컴퓨터에서 실행 하는 경우에는 네트워크 트랜잭션 흐름을 사용 하도록 MSDTC (Microsoft DTC(Distributed Transaction Coordinator))를 구성 하 고 Wsatconfig.exe 도구를 사용 하 여 WCF 트랜잭션 네트워크 지원을 사용 하도록 설정 해야 합니다.  
   

@@ -8,14 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: c38127281139d0c85b54a5d5077034804f1102a8
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 00026fee12e447b7fba56b42cd86699aba38cc52
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76966012"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094685"
 ---
-# <a name="whats-new-in-the-net-framework"></a>.NET Framework의 새로운 기능
+# <a name="whats-new-in-net-framework"></a>.NET Framework의 새로운 기능
 
 이 문서에서는 다음 버전의 .NET Framework에 새로 추가된 주요 기능과 향상된 내용에 대해 요약합니다.
 
@@ -102,7 +102,7 @@ ms.locfileid: "76966012"
 
 다음과 같은 두 가지 방법으로 상태 엔드포인트를 공개하고 WCF 서비스 상태 정보를 게시할 수 있습니다.
 
-- 코드를 통해. 예:
+- 코드를 통해. 예를 들어:
 
   ```csharp
   ServiceHost host = new ServiceHost(typeof(Service1),
@@ -124,7 +124,7 @@ ms.locfileid: "76966012"
   host.Description.Behaviors.Add(healthBehavior)
   ```
 
-- 구성 파일 사용. 예:
+- 구성 파일 사용. 예를 들어:
 
   ```xml
   <behaviors>
@@ -136,7 +136,7 @@ ms.locfileid: "76966012"
   </behaviors>
   ```
 
-서비스 상태는 `OnServiceFailure`, `OnDispatcherFailure`, `OnListenerFailure`, `OnThrottlePercentExceeded` 등의 쿼리 매개 변수를 사용하여 쿼리할 수 있고 각 쿼리 매개 변수에 대한 HTTP 응답 코드를 지정할 수 있습니다. 쿼리 매개 변수에 대한 HTTP 응답 코드가 생략되면 기본적으로 503 HTTP 응답 코드가 사용됩니다. 예:
+서비스 상태는 `OnServiceFailure`, `OnDispatcherFailure`, `OnListenerFailure`, `OnThrottlePercentExceeded` 등의 쿼리 매개 변수를 사용하여 쿼리할 수 있고 각 쿼리 매개 변수에 대한 HTTP 응답 코드를 지정할 수 있습니다. 쿼리 매개 변수에 대한 HTTP 응답 코드가 생략되면 기본적으로 503 HTTP 응답 코드가 사용됩니다. 예를 들어:
 
 - OnServiceFailure: `https://contoso:81/Service1?health&OnServiceFailure=450`
 
@@ -252,7 +252,7 @@ Using rsa = RSA.Create(rsaParameters)
 End Using
 ```
 
-<xref:System.Security.Cryptography.DSA.Create(System.Int32)?displayProperty=nameWithType> 및 <xref:System.Security.Cryptography.RSA.Create(System.Int32)?displayProperty=nameWithType> 메서드를 통해 특정 키 크기의 새로운 <xref:System.Security.Cryptography.DSA> 또는 <xref:System.Security.Cryptography.RSA> 키를 생성할 수 있습니다. 예:
+<xref:System.Security.Cryptography.DSA.Create(System.Int32)?displayProperty=nameWithType> 및 <xref:System.Security.Cryptography.RSA.Create(System.Int32)?displayProperty=nameWithType> 메서드를 통해 특정 키 크기의 새로운 <xref:System.Security.Cryptography.DSA> 또는 <xref:System.Security.Cryptography.RSA> 키를 생성할 수 있습니다. 예를 들어:
 
 ```csharp
 using (DSA dsa = DSA.Create(2048))
@@ -467,7 +467,7 @@ c.SameSite = SameSiteMode.Lax
 
 - <xref:System.Data.SqlClient.SqlEnclaveAttestationParameters> - 특정 증명 프로토콜을 실행하는 데 필요한 정보를 얻기 위해 SQL Server에서 사용하는 증명 매개 변수를 제공합니다.
 
-그런 다음, 애플리케이션 구성 파일에서 enclave 공급자에 대한 기능을 제공하는 추상 <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider?displayProperty=nameWithType> 클래스의 구체적인 구현을 지정합니다. 예:
+그런 다음, 애플리케이션 구성 파일에서 enclave 공급자에 대한 기능을 제공하는 추상 <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider?displayProperty=nameWithType> 클래스의 구체적인 구현을 지정합니다. 예를 들어:
 
 ```xml
 <configuration>
@@ -650,7 +650,7 @@ ASP.NET은 23개 이벤트가 포함된 미리 정의된 파이프라인의 요�
 
 **ASP.NET 양식 인증 자격 증명에 대한 SHA-2 해시 지원**
 
-.NET Framework 4.7 이하 버전에서는 개발자가 MD5 또는 SHA1을 사용하여 구성 파일에 해시 암호와 사용자 자격 증명을 저장할 수 있었습니다. .NET Framework 4.7.1부터 ASP.NET은 SHA256, SHA384 및 SHA512 같은 새로운 보안 SHA-2 해시 옵션도 지원합니다. SHA1은 기본값을 유지하며, 기본값이 아닌 해시 알고리즘은 웹 구성 파일에 정의할 수 있습니다. 예:
+.NET Framework 4.7 이하 버전에서는 개발자가 MD5 또는 SHA1을 사용하여 구성 파일에 해시 암호와 사용자 자격 증명을 저장할 수 있었습니다. .NET Framework 4.7.1부터 ASP.NET은 SHA256, SHA384 및 SHA512 같은 새로운 보안 SHA-2 해시 옵션도 지원합니다. SHA1은 기본값을 유지하며, 기본값이 아닌 해시 알고리즘은 웹 구성 파일에 정의할 수 있습니다. 예를 들어:
 
 ```xml
 <system.web>
@@ -677,7 +677,7 @@ ASP.NET은 23개 이벤트가 포함된 미리 정의된 파이프라인의 요�
 - [Windows Forms](#wf47)
 - [WPF(Windows Presentation Foundation)](#WPF47)
 
-.NET Framework 4.7에 추가된 새 API 목록은 GitHub에서 [.NET Framework 4.7 API 변경 내용](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md)을 참조하세요. .NET Framework 4.7의 향상된 기능 및 버그 수정 목록은 GitHub에서 [.NET Framework 4.7 변경 내용 목록](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md)을 참조하세요.  자세한 내용은 .NET 블로그에서 [.NET Framework 4.7 알림](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7/)을 참조하세요.
+.NET Framework 4.7에 추가된 새 API 목록은 GitHub에서 [.NET Framework 4.7 API 변경 내용](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md)을 참조하세요. .NET Framework 4.7의 향상된 기능 및 버그 수정 목록은 GitHub에서 [.NET Framework 4.7 변경 내용 목록](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md)을 참조하세요. 자세한 내용은 .NET 블로그에서 [.NET Framework 4.7 알림](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7/)을 참조하세요.
 
 <a name="Core47" />
 
@@ -800,7 +800,7 @@ WISP(Windows 잉크 서비스 플랫폼) 대신 [WM_POINTER 메시지](https://d
 
 - [디버깅 기능 향상](#Debug462)
 
-.NET Framework 4.6.2에 추가된 새 API 목록은 GitHub에서 [.NET Framework 4.6.2 API 변경 내용](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md)을 참조하세요. .NET Framework 4.6.2의 향상된 기능 및 버그 수정 목록은 GitHub에서 [.NET Framework 4.6.2 변경 내용 목록](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-changes.md)을 참조하세요. 자세한 내용은 .NET 블로그에서 [.NET Framework 4.6.2 알림](https://devblogs.microsoft.com/dotnet/announcing-net-framework-4-6-2/)을 참조하십시오.
+.NET Framework 4.6.2에 추가된 새 API 목록은 GitHub에서 [.NET Framework 4.6.2 API 변경 내용](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md)을 참조하세요. .NET Framework 4.6.2의 향상된 기능 및 버그 수정 목록은 GitHub에서 [.NET Framework 4.6.2 변경 내용 목록](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-changes.md)을 참조하세요. 자세한 내용은 .NET 블로그에서 [.NET Framework 4.6.2 알림](https://devblogs.microsoft.com/dotnet/announcing-net-framework-4-6-2/)을 참조하세요.
 
 <a name="ASPNET462" />
 
@@ -965,7 +965,7 @@ End Function
 
 Windows 암호화 라이브러리(CNG)에서는 지속형 대칭 키 저장과 하드웨어에 저장된 대칭 키 사용에 대한 지원을 추가했으며 개발자는 .NET Framework 4.6.2를 통해 이 기능을 활용할 수 있습니다.  키 이름과 키 공급자가 구현별로 다르게 표시되므로, 이 기능을 사용하려면 기본 팩토리 접근 방식 대신 구체적인 구현 형식의 생성자를 활용해야 합니다(예: `Aes.Create` 호출).
 
-AES(<xref:System.Security.Cryptography.AesCng>) 및 3DES(<xref:System.Security.Cryptography.TripleDESCng>) 알고리즘에 대해 지속형 키 대칭 암호화가 지원됩니다. 예:
+AES(<xref:System.Security.Cryptography.AesCng>) 및 3DES(<xref:System.Security.Cryptography.TripleDESCng>) 알고리즘에 대해 지속형 키 대칭 암호화가 지원됩니다. 예를 들어:
 
 ```csharp
 public static byte[] EncryptDataWithPersistedKey(byte[] data, byte[] iv)
@@ -1029,7 +1029,7 @@ URI 상수가 <xref:System.Security.Cryptography.Xml.SignedXml>에 모두 노출
 
 **Azure SQL Database와의 연결 풀링 및 시간 초과**
 
-연결 풀링을 사용하도록 설정한 상태에서 시간 초과 또는 다른 오류가 발생할 경우 예외가 캐시되고 다음에 연결하려고 시도할 때 캐시된 예외가 5초-1분 동안 throw됩니다.  자세한 내용은 [SQL Server 연결 풀링(ADO.NET)](../data/adonet/sql-server-connection-pooling.md)을 참조하십시오.
+연결 풀링을 사용하도록 설정한 상태에서 시간 초과 또는 다른 오류가 발생할 경우 예외가 캐시되고 다음에 연결하려고 시도할 때 캐시된 예외가 5초-1분 동안 throw됩니다. 자세한 내용은 [SQL Server 연결 풀링(ADO.NET)](../data/adonet/sql-server-connection-pooling.md)을 참조하세요.
 
 Azure SQL Database에 연결할 때 일반적으로 빠르게 복구되는 일시적인 오류로 인해 연결 시도가 실패할 수 있으므로 이 동작은 바람직하지 않습니다. 연결 재시도 경험을 효율적으로 최적화하기 위해 Azure SQL Database 연결이 실패할 때 연결 풀 차단 기간 동작을 제거합니다.
 
@@ -1168,11 +1168,11 @@ WCF에는 클라이언트 애플리케이션에서 요청한 항목과 가장 �
 </SortDescriptions>
 ```
 
-**소프트 키보드 지원**
+**터치 키보드 지원**
 
-소프트 키보드 지원을 사용하면 텍스트 입력을 수행할 수 있는 컨트롤을 통해 터치 입력을 수신할 때 Windows 10의 새로운 소프트 키보드를 자동으로 호출하거나 해제하여 WPF 애플리케이션에서 포커스를 추적할 수 있습니다.
+터치 키보드 지원을 사용하면 텍스트 입력을 수행할 수 있는 컨트롤을 통해 터치 입력을 수신할 때 Windows 10의 터치 키보드를 자동으로 호출하거나 해제하여 WPF 애플리케이션에서 포커스를 추적할 수 있습니다.
 
-이전 버전 .NET Framework의 WPF 애플리케이션에서는 포커스 추적을 사용하려면 WPF 펜/터치 제스처 지원을 사용하지 않도록 설정해야 합니다.  따라서 WPF 애플리케이션에서는 전체 WPF 터치 지원을 선택하거나 Windows 마우스 승격을 사용해야 합니다.
+이전 버전 .NET Framework의 WPF 애플리케이션에서는 포커스 추적을 사용하려면 WPF 펜/터치 제스처 지원을 사용하지 않도록 설정해야 합니다. 따라서 WPF 애플리케이션에서는 전체 WPF 터치 지원을 선택하거나 Windows 마우스 승격을 사용해야 합니다.
 
 **모니터별 DPI**
 
@@ -1198,7 +1198,7 @@ WPF 앱에 대해 최근에 확산되는 높은 DPI 및 하이브리드 DPI 환�
 
 .NET Framework 4.5 이상에서 WF는 Visual Studio 디자이너와 코드 워크플로 모두에서 C# 식을 지원합니다. 다시 호스트된 워크플로 디자이너는 Visual Studio 외부 애플리케이션(예: WPF)에서 워크플로 디자이너가 위치할 수 있도록 해주는 WF의 주요 기능입니다.  Windows Workflow Foundation을 사용하면 다시 호스트된 워크플로 디자이너에서 C# 식 및 IntelliSense를 지원할 수 있습니다. 자세한 내용은 [Windows Workflow Foundation 블로그](https://docs.microsoft.com/archive/blogs/workflowteam/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer)를 참조하십시오.
 
-`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` .NET Framework 4.6.2 이전 버전의 .NET Framework에서는 고객이 Visual Studio에서 워크플로 프로젝트를 다시 작성할 때 WF Designer IntelliSense가 중단됩니다. 프로젝트가 빌드되면 워크플로 형식을 디자이너에서 찾을 수 없으므로 IntelliSense의 누락된 워크플로 형식에 대한 경고가 **오류 목록** 창에 표시됩니다. .NET Framework 4.6.2에서는 이 문제를 해결하고 IntelliSense를 사용할 수 있도록 해줍니다.
+`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` 4.6.2 이전 버전의 .NET Framework에서는 고객이 Visual Studio에서 워크플로 프로젝트를 다시 작성할 때 WF 디자이너 IntelliSense가 중단됩니다. 프로젝트가 빌드되면 워크플로 형식을 디자이너에서 찾을 수 없으므로 IntelliSense의 누락된 워크플로 형식에 대한 경고가 **오류 목록** 창에 표시됩니다. .NET Framework 4.6.2에서는 이 문제를 해결하고 IntelliSense를 사용할 수 있도록 해줍니다.
 
 **워크플로 추적 기능이 설정된 Workflow V1 애플리케이션을 이제 FIPS 모드로 실행 가능**
 
@@ -1324,7 +1324,7 @@ Windows 8.1 이상 버전에서는 추가 언어 맞춤법 검사에 대한 운�
 
 - 현재 스레드 문화권
 
-WPF의 언어 지원에 대한 자세한 내용은 [.NET Framework 4.6.1 기능에 대한 WPF 블로그 게시물](https://devblogs.microsoft.com/wpf/wpf-in-net-4-6-1/)을 참조하십시오.
+WPF의 언어 지원에 대한 자세한 내용은 [.NET Framework 4.6.1 기능에 대한 WPF 블로그 게시물](https://devblogs.microsoft.com/wpf/wpf-in-net-4-6-1/)을 참조하세요.
 
 **사용자 단위 사용자 지정 사전에 대한 추가 지원**
 
@@ -1462,7 +1462,7 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
 - **관리 코드에 대한 64비트 JIT 컴파일러**
 
-  .NET Framework 4.6에는 새 버전의64비트 JIT 컴파일러(원래 코드 이름은 RyuJIT)가 있습니다. 새로운 64비트 컴파일러는 이전 64비트 JIT 컴파일러보다 훨씬 향상된 성능을 제공합니다. 새로운 64비트 컴파일러는 .NET Framework 4.6에서 실행되는 64비트 프로세스에 사용됩니다. 앱이 64비트 또는 AnyCPU로 컴파일되고 64비트 운영 체제에서 실행되는 경우 해당 앱은 64비트 프로세스에서 실행됩니다. 새 컴파일러로 전환할 때 무슨 조치를 취했는지 투명하게 알 수 있으면 동작을 변경할 수 있습니다. 새 JIT 컴파일러를 사용할 때 발생하는 모든 문제에 대해 직접 듣고 싶습니다. 새로운 64비트 JIT 컴파일러와 관련된 문제가 발생하는 경우 [Microsoft Connect](https://connect.microsoft.com/)에 문의하십시오.
+  .NET Framework 4.6에는 새 버전의64비트 JIT 컴파일러(원래 코드 이름은 RyuJIT)가 있습니다. 새로운 64비트 컴파일러는 이전 64비트 JIT 컴파일러보다 훨씬 향상된 성능을 제공합니다. 새로운 64비트 컴파일러는 .NET Framework 4.6에서 실행되는 64비트 프로세스에 사용됩니다. 앱이 64비트 또는 AnyCPU로 컴파일되고 64비트 운영 체제에서 실행되는 경우 해당 앱은 64비트 프로세스에서 실행됩니다. 새 컴파일러로 전환할 때 무슨 조치를 취했는지 투명하게 알 수 있으면 동작을 변경할 수 있습니다.
 
   또한 새로운 64비트 JIT 컴파일러에는 하드웨어 SIMD 가속 기능이 있으므로 <xref:System.Numerics> 네임스페이스의 SIMD 사용 형식과 함께 사용하면 성능이 현저히 향상될 수 있습니다.
 
@@ -1528,7 +1528,7 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
   - **호환성 스위치**
 
-    새 <xref:System.AppContext> 클래스는 라이브러리 작성자가 사용자에게 새로운 기능에 대한 균일한 옵트아웃(opt out) 메커니즘을 제공할 수 있게 해주는 새 호환성 기능을 추가합니다. 옵트아웃(opt out) 요청을 전달하기 위해 구성 요소 간에 느슨하게 결합된 계약을 설정합니다. 이 기능은 일반적으로 기존 기능이 변경될 때 중요합니다. 반대로, 새로운 기능에 대한 암시적 옵트인(opt in)은 이미 있습니다.
+    <xref:System.AppContext> 클래스는 라이브러리 작성자가 사용자에게 새로운 기능에 대한 균일한 옵트아웃(opt out) 메커니즘을 제공할 수 있게 해주는 새 호환성 기능을 추가합니다. 옵트아웃(opt out) 요청을 전달하기 위해 구성 요소 간에 느슨하게 결합된 계약을 설정합니다. 이 기능은 일반적으로 기존 기능이 변경될 때 중요합니다. 반대로, 새로운 기능에 대한 암시적 옵트인(opt in)은 이미 있습니다.
 
     <xref:System.AppContext>에서는 라이브러리가 호환성 스위치를 정의 및 노출하는 반면, 라이브러리에 종속된 코드가 해당 스위치를 설정하여 라이브러리 동작에 영향을 줄 수 있습니다. 기본적으로 라이브러리는 새로운 기능을 제공하며 스위치가 설정된 경우에만 변경합니다(즉, 이전 기능 제공).
 
@@ -1715,7 +1715,7 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
     Windows 10에는 새로운 확장성 높은 네트워킹 알고리즘이 있습니다. 이 알고리즘을 통해 아웃바운드 TCP 연결에 대한 로컬 포트를 재사용하여 컴퓨터 리소스를 효과적으로 사용할 수 있습니다. .NET Framework 4.6은 새 알고리즘을 지원하므로 .NET 앱이 새 동작을 활용할 수 있습니다. 이전 버전의 Windows에는 인위적인 동시 연결 제한(일반적으로 동적 포트 범위의 기본 크기는 16,384임)이 있었습니다. 이는 부하 상태에서 포트 소모를 발생시켜 서비스의 확장성을 제한할 수 있습니다.
 
-    .NET Framework 4.6에는 다음 두 개의 새 API가 추가되어 포트를 재사용할 수 있습니다. 이를 통해 동시 연결 시 64K 제한을 효과적으로 제거합니다.
+    .NET Framework 4.6에는 다음 두 개의 API가 추가되어 포트를 재사용할 수 있습니다. 이를 통해 동시 연결 시 64KB 제한을 효과적으로 제거합니다.
 
     - <xref:System.Net.Sockets.SocketOptionName?displayProperty=nameWithType> 열거형 값
 
@@ -2132,4 +2132,3 @@ Visual Studio 2012 및 이후 버전의 이식 가능한 클래스 라이브러�
 - [Visual Studio 2019의 새로운 기능](/visualstudio/ide/whats-new-visual-studio-2019)
 - [ASP.NET](/aspnet)
 - [Visual Studio의 새로운 C++ 기능](/cpp/what-s-new-for-visual-cpp-in-visual-studio)
- 

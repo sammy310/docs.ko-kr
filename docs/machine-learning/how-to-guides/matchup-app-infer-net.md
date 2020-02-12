@@ -1,14 +1,14 @@
 ---
-title: Infer.NET 및 확률적 프로그래밍을 사용하여 게임 대전 목록 앱 만들기
+title: Infer.NET 게임 대전 앱 - 확률적 프로그래밍
 description: Infer.NET과 함께 확률적 프로그래밍을 사용하여 TrueSkill의 간소화된 버전을 기반으로 게임 대전 목록 앱을 만드는 방법을 알아봅니다.
-ms.date: 05/06/2019
+ms.date: 01/30/2020
 ms.custom: mvc,how-to
-ms.openlocfilehash: 69515c7b3518c35bf84335c453408b1466f93f34
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 8e489d61c5e6cca53ba12b13fddd0b73c7f85ef9
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774538"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092605"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Infer.NET 및 확률적 프로그래밍을 사용하여 게임 대전 목록 앱 만들기
 
@@ -18,7 +18,7 @@ ms.locfileid: "72774538"
 
 확률적 프로그래밍을 사용하면 실제와 같은 프로세스의 통계 모델을 만들 수 있습니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 - 로컬 개발 환경 설정
 

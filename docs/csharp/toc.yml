@@ -1313,7 +1313,7 @@
         - name: 개요
           displayName: keywords
           href: language-reference/keywords/index.md
-        - name: 기본 제공 형식
+        - name: 유형
           items:
             - name: 값 형식
               items:
@@ -1357,14 +1357,12 @@
               href: language-reference/keywords/void.md
             - name: var
               href: language-reference/keywords/var.md
+            - name: 기본 제공 형식
+              href: language-reference/builtin-types/built-in-types.md
             - name: 관리되지 않는 형식
               href: language-reference/builtin-types/unmanaged-types.md
             - name: 기본값
               href: language-reference/builtin-types/default-values.md
-            - name: 형식 참조 테이블
-              items:
-                - name: 기본 제공 형식 표
-                  href: language-reference/keywords/built-in-types-table.md
         - name: 한정자
           items:
             - name: 액세스 한정자

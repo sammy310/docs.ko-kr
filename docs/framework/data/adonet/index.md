@@ -3,14 +3,15 @@ title: ADO.NET
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: a803c0592cd44801c55a699b56a9a498781a6593
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: cca3075a73a7bb45fd6154f760adfcda9064345c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980108"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094399"
 ---
 # <a name="adonet"></a>ADO.NET
+
 ADO.NET은 .NET Framework 프로그래머에게 데이터 액세스 서비스를 노출하는 클래스 집합입니다. ADO.NET은 분산된 데이터 공유 애플리케이션을 만들기 위한 다양한 구성 요소를 제공합니다. 또한 관계형, XML 및 애플리케이션 데이터에 대한 액세스를 제공하는 .NET Framework의 핵심 부분입니다. ADO.NET은 애플리케이션, 도구, 언어 또는 인터넷 브라우저에서 사용되는 중간 계층 비즈니스 개체 및 프런트 엔드 데이터베이스 클라이언트 만들기를 포함하여 다양한 개발 요구 사항을 지원합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
@@ -36,7 +37,7 @@ ADO.NET은 .NET Framework 프로그래머에게 데이터 액세스 서비스를
  LINQ to DataSet에 대한 정보와 프로그래밍 예제를 제공합니다.  
   
  [ADO.NET에서 데이터 검색 및 수정](retrieving-and-modifying-data.md)  
- 데이터 소스에 연결하고 `Commands`, `DataReaders` 및 `DataAdapters`를 사용하여 데이터를 검색 및 수정하는 방법에 대해 설명합니다.  
+ 데이터 원본에 연결 하는 방법 및 `Commands`, `DataReaders`및 `DataAdapters`를 사용 하 여 데이터를 검색 및 수정 하는 방법을 설명 합니다.  
   
  [SQL Server 및 ADO.NET](./sql/index.md)  
  SQL Server 관련 기능을 사용하는 방법에 대해 설명합니다.  
@@ -44,7 +45,7 @@ ADO.NET은 .NET Framework 프로그래머에게 데이터 액세스 서비스를
  [Oracle 및 ADO.NET](oracle-and-adonet.md)  
  .NET Framework Data Provider for Oracle과 관련된 기능 및 동작을 설명합니다.  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
  [LINQ(Language-Integrated Query) - C#](../../../csharp/programming-guide/concepts/linq/index.md)  
  을 사용 하 여 C#LINQ 토픽 및 샘플에 대 한 링크를 제공 합니다.  
   
@@ -60,7 +61,7 @@ ADO.NET은 .NET Framework 프로그래머에게 데이터 액세스 서비스를
  [샘플 및 자습서](../../../samples-and-tutorials/index.md)  
  .NET 샘플 및 자습서의 목록을 제공 합니다.
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Visual Studio에서 데이터 액세스](/visualstudio/data-tools/accessing-data-in-visual-studio)
 - [ADO.NET 개요](ado-net-overview.md)

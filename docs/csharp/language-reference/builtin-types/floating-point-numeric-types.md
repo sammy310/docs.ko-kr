@@ -18,16 +18,16 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 23aa33c6887db48a12f995efc5e1e2220d30216c
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 9c8b11f9337ee9de90f2d4d96b5be162713bfcbd
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552274"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093216"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>부동 소수점 숫자 형식(C# 참조)
 
-**부동 소수점 형식**은 **단순 형식**의 하위 집합이며 [*리터럴*](#real-literals)을 사용하여 초기화할 수 있습니다. 모든 부동 소수점 형식도 값 형식입니다. 모든 부동 소수점 숫자 형식은 [산술](../operators/arithmetic-operators.md), [비교](../operators/comparison-operators.md) 및 [같음](../operators/equality-operators.md) 연산자를 지원합니다.
+*부동 소수점 숫자 형식*은 실수를 나타냅니다. 모든 부동 소수점 숫자 형식은 [값 형식](value-types.md)입니다. 이것은 [기본 형식](value-types.md#built-in-value-types)이기도 하며, [리터럴](#real-literals)로 초기화할 수 있습니다. 모든 부동 소수점 숫자 형식은 [산술](../operators/arithmetic-operators.md), [비교](../operators/comparison-operators.md) 및 [같음](../operators/equality-operators.md) 연산자를 지원합니다.
 
 ## <a name="characteristics-of-the-floating-point-types"></a>부동 소수점 형식의 특성
 
@@ -115,12 +115,11 @@ Console.WriteLine(m);  // output: 1500000
 - [10진 형식](~/_csharplang/spec/types.md#the-decimal-type)
 - [real 리터럴](~/_csharplang/spec/lexical-structure.md#real-literals)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
-- [기본 제공 형식 표](../keywords/built-in-types-table.md)
+- [값 형식](value-types.md)
 - [정수 형식](integral-numeric-types.md)
-- [숫자 결과 형식 지정 표](../keywords/formatting-numeric-results-table.md)
 - [표준 숫자 형식 문자열](../../../standard/base-types/standard-numeric-format-strings.md)
 - [.NET의 숫자](../../../standard/numerics.md)
 - <xref:System.Numerics.Complex?displayProperty=nameWithType>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-ms.openlocfilehash: da8f3e592e47c9482d4395b81627c1582e2354f7
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 65ecfc4269ff894d45c9b4ee15e349b1a7ddbb73
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72005242"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094516"
 ---
 # <a name="opentype-font-features"></a>OpenType 글꼴 기능
 
@@ -39,10 +39,10 @@ ms.locfileid: "72005242"
 > [!NOTE]
 > Windows SDK에는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램에서 사용할 수 있는 샘플 OpenType 글꼴 집합이 포함 되어 있습니다. 이 글꼴에서는 이 항목의 나머지 부분에서 보여 주는 대부분의 기능이 제공됩니다. 자세한 내용은 [샘플 OpenType 글꼴 팩](sample-opentype-font-pack.md)을 참조하세요.  
   
- OpenType 글꼴 형식에 대 한 자세한 내용은 [Opentype 사양](https://go.microsoft.com/fwlink/?LinkId=96731) 을 참조 하십시오.  
+OpenType 글꼴 형식에 대 한 자세한 내용은 [opentype 사양을](https://docs.microsoft.com/typography/opentype/spec/)참조 하십시오.  
   
 ### <a name="advanced-typographic-extensions"></a>고급 입력 체계 확장  
- 고급 입력 체계 표 (OpenType 레이아웃 테이블)는 트루타입 또는 CFF 윤곽선을 사용 하 여 글꼴의 기능을 확장 합니다. OpenType 레이아웃 글꼴에는 고품질의 국제 입력 체계를 지원 하기 위해 글꼴의 기능을 확장 하는 추가 정보가 포함 되어 있습니다. 대부분의 OpenType 글꼴은 사용 가능한 전체 OpenType 기능의 하위 집합만 노출 합니다. OpenType 글꼴은 다음과 같은 기능을 제공 합니다.  
+ 고급 입력 체계 표 (OpenType 레이아웃 테이블)는 트루타입 또는 CFF 윤곽선을 사용 하 여 글꼴의 기능을 확장 합니다. OpenType 레이아웃 글꼴에는 고품질의 국제 입력 체계를 지원 하기 위해 글꼴의 기능을 확장 하는 추가 정보가 포함 되어 있습니다. 대부분의 OpenType 글꼴에 사용할 수 있는 총 OpenType 기능의 하위 집합만 노출합니다. OpenType 글꼴은 다음과 같은 기능을 제공 합니다.  
   
 - 합자, 위치 형식, 대체 문자 및 기타 글꼴 대체를 지원하는 문자와 문자 모양 간의 다양한 매핑  
   
@@ -59,7 +59,7 @@ ms.locfileid: "72005242"
  변형은 위 첨자 및 아래 첨자와 같은 다양한 입력 체계 스타일을 렌더링하는 데 사용됩니다.  
   
 ### <a name="superscripts-and-subscripts"></a>위 첨자 및 아래 첨자  
- @No__t_0 속성을 사용 하 여 OpenType 글꼴의 위 첨자 및 아래 첨자 값을 설정할 수 있습니다.  
+ <xref:System.Windows.Documents.Typography.Variants%2A> 속성을 사용 하면 OpenType 글꼴에 대 한 위 첨자 및 아래 첨자 값을 설정할 수 있습니다.  
   
  다음 텍스트는 Palatino Linotype 글꼴의 위 첨자를 표시합니다.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "72005242"
   
 <a name="capitals"></a>   
 ## <a name="capitals"></a>대문자  
- 대문자는 대문자 스타일의 문자 모양으로 텍스트를 렌더링하는 일련의 입력 체계 형식입니다. 일반적으로 텍스트를 모두 대문자로 렌더링하면 글자 사이의 간격이 너무 좁아 보이고 글자의 무게와 비율상 너무 무거워 보일 수 있습니다. OpenType은 작은 대문자, 꼬마 대문자, 제목 및 대문자 간격을 포함 하 여 대문자에 대해 다양 한 스타일 형식을 지원 합니다. 이러한 스타일 서식을 사용하여 대문자 모양을 제어할 수 있습니다.  
+ 대문자는 대문자 스타일의 문자 모양으로 텍스트를 렌더링하는 일련의 입력 체계 형식입니다. 일반적으로 텍스트를 모두 대문자로 렌더링하면 글자 사이의 간격이 너무 좁아 보이고 글자의 무게와 비율상 너무 무거워 보일 수 있습니다. OpenType 작은 대문자를 포함 하 여, 대문자, 꼬마 대문자, 제목, 및 대문자 간격에 대 한 다양 한 스타일 서식 지원 합니다. 이러한 스타일 서식을 사용하여 대문자 모양을 제어할 수 있습니다.  
   
  다음 텍스트는 “SmallCaps” 및 “AllSmallCaps”로 스타일이 지정된 문자 앞에 Pescadero 글꼴의 표준 대문자를 표시합니다. 이 경우 세 단어 모두 동일한 글꼴 크기가 사용됩니다.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "72005242"
   
  [!code-xaml[OpenTypeFontSamples#5](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#5)]  
   
- 기본적으로 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]의 OpenType 글꼴은 표준 합자를 사용 하도록 설정 합니다. 예를 들어 Palatino Linotype 글꼴을 사용하면 표준 합자 “fi”, “ff”및 “fl”이 결합된 문자 모양으로 나타납니다. 각 표준 합자의 문자 쌍이 서로 붙어 있음을 확인할 수 있습니다.  
+ OpenType 글꼴에 기본적으로 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 표준 합자를 사용 하도록 설정 합니다. 예를 들어 Palatino Linotype 글꼴을 사용하면 표준 합자 “fi”, “ff”및 “fl”이 결합된 문자 모양으로 나타납니다. 각 표준 합자의 문자 쌍이 서로 붙어 있음을 확인할 수 있습니다.  
   
  ![Palatino Linotype와 함께 OpenType 표준 합자를 사용 하는 텍스트](./media/opentype-font-features/opentype-standard-ligatures-palatino.gif "Palatino Linotype와 함께 OpenType 표준 합자를 사용 하는 텍스트")    
    
@@ -185,7 +185,7 @@ ms.locfileid: "72005242"
   
  ![OpenType 표준 문자 모양을 사용하는 텍스트](./media/opentype-font-features/opentype-standard-glyphs.gif "OpenType 표준 문자 모양을 사용하는 텍스트")  
 
- Pericles OpenType 글꼴에는 표준 문자 집합에 스타일 대체를 제공 하는 추가 문자 모양이 포함 되어 있습니다. 다음 텍스트는 스타일 대체 문자 모양을 표시합니다.  
+ Pericles OpenType 글꼴 스타일 대체 문자 모양의 표준 집합을 제공 하는 추가 문자 모양이 포함 되어 있습니다. 다음 텍스트는 스타일 대체 문자 모양을 표시합니다.  
   
  ![OpenType 스타일 대체 문자 모양을 사용하는 텍스트](./media/opentype-font-features/opentype-stylistic-alternate-glyphs.gif "OpenType 스타일 대체 문자 모양을 사용하는 텍스트")  
   
@@ -224,7 +224,7 @@ ms.locfileid: "72005242"
  OpenType 글꼴은 텍스트의 숫자 값으로 사용할 수 있는 많은 기능을 지원합니다.  
   
 ### <a name="fractions"></a>소수  
- OpenType 글꼴은 슬래시 및 누적형를 포함 하는 분수 스타일을 지원 합니다.  
+ OpenType 글꼴 분수 슬래시 사용 하거나 위아래로 표현에 대 한 스타일을 지원 합니다.  
   
  다음 텍스트는 Palatino Linotype 글꼴의 분수 스타일을 표시합니다.  
   
@@ -235,7 +235,7 @@ ms.locfileid: "72005242"
  [!code-xaml[OpenTypeFontSamples#10](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#10)]  
   
 ### <a name="old-style-numerals"></a>이전 스타일 숫자  
- OpenType 글꼴은 이전 스타일 숫자 형식을 지원 합니다. 이 형식은 더 이상 표준이 아닌 스타일의 숫자를 표시할 때 유용합니다. 다음 텍스트는 Palatino Linotype 글꼴의 표준 및 이전 스타일 숫자 형식으로 된 18세기 날짜를 표시합니다.  
+ OpenType 글꼴에는 이전 스타일 숫자 형식을 지원합니다. 이 형식은 더 이상 표준이 아닌 스타일의 숫자를 표시할 때 유용합니다. 다음 텍스트는 Palatino Linotype 글꼴의 표준 및 이전 스타일 숫자 형식으로 된 18세기 날짜를 표시합니다.  
   
  ![OpenType 이전 스타일 숫자를 사용하는 텍스트](./media/opentype-font-features/opentype-old-style-numerals.gif "OpenType 이전 스타일 숫자를 사용하는 텍스트")  
     
@@ -248,7 +248,7 @@ ms.locfileid: "72005242"
  [!code-xaml[OpenTypeFontSamples#11](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#11)]  
   
 ### <a name="proportional-and-tabular-figures"></a>가변 폭 및 테이블 형식 숫자  
- OpenType 글꼴은 숫자를 사용할 때 너비 맞춤을 제어 하는 비례 및 테이블 형식 그림 기능을 지원 합니다. 가변 폭 숫자는 각 숫자의 너비를 다르게 처리합니다. 예를 들어 “1”은 “5”보다 너비가 좁습니다. 테이블 형식 숫자는 같은 너비의 숫자로 처리되어 세로로 정렬되므로 금융 형식 정보의 가독성이 높아집니다.  
+ OpenType 글꼴 숫자를 사용할 때 너비 맞춤을 제어 하는 가변 폭 및 테이블 형식 숫자 기능을 지원 합니다. 가변 폭 숫자는 각 숫자의 너비를 다르게 처리합니다. 예를 들어 “1”은 “5”보다 너비가 좁습니다. 테이블 형식 숫자는 같은 너비의 숫자로 처리되어 세로로 정렬되므로 금융 형식 정보의 가독성이 높아집니다.  
   
  다음 텍스트는 Miramonte 글꼴을 사용하여 첫 번째 열에 두 개의 가변 폭 숫자를 표시합니다. 숫자 “5”와 “1” 사이의 너비 차이를 확인할 수 있습니다. 두 번째 열은 테이블 형식 숫자 기능을 사용하여 너비가 조정된 동일한 두 개의 숫자 값을 보여 줍니다.  
   
@@ -259,7 +259,7 @@ ms.locfileid: "72005242"
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet19](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet19)]  
   
 ### <a name="slashed-zero"></a>슬래시 0  
- OpenType 글꼴은 문자 "O"와 숫자 "0"의 차이를 강조 하기 위해 슬래시 0 숫자 형식을 지원 합니다. 슬래시 0 숫자는 금융 정보 및 비즈니스 정보의 식별자에 주로 사용됩니다.  
+ OpenType 글꼴 지원 슬래시 0 숫자 형식을 "O" 문자와 숫자 "0"의 차이 강조 하기 위해. 슬래시 0 숫자는 금융 정보 및 비즈니스 정보의 식별자에 주로 사용됩니다.  
   
  다음 텍스트는 Miramonte 글꼴을 사용하는 샘플 주문 식별자를 나타냅니다. 첫 번째 줄에는 표준 숫자가 사용됩니다. 두 번째 줄에서는 대문자 “O” 문자와의 대비를 높이기 위해 슬래시 0 숫자가 사용되었습니다.  
   
@@ -271,7 +271,7 @@ ms.locfileid: "72005242"
   
 <a name="typography_class"></a>   
 ## <a name="typography-class"></a>입력 체계 클래스  
- @No__t_0 개체는 OpenType 글꼴이 지 원하는 기능 집합을 노출 합니다. 태그에서 <xref:System.Windows.Documents.Typography> 속성을 설정 하 여 OpenType 기능을 활용 하는 문서를 쉽게 작성할 수 있습니다.  
+ <xref:System.Windows.Documents.Typography> 개체는 OpenType 글꼴이 지 원하는 기능 집합을 노출 합니다. 태그에서 <xref:System.Windows.Documents.Typography> 속성을 설정 하 여 OpenType 기능을 활용 하는 문서를 쉽게 작성할 수 있습니다.  
   
  다음 텍스트는 “SmallCaps” 및 “AllSmallCaps”로 스타일이 지정된 문자 앞에 Pescadero 글꼴의 표준 대문자를 표시합니다. 이 경우 세 단어 모두 동일한 글꼴 크기가 사용됩니다.  
   
@@ -292,7 +292,7 @@ ms.locfileid: "72005242"
 |속성|값|기본값|  
 |--------------|----------------|-------------------|  
 |<xref:System.Windows.Documents.Typography.AnnotationAlternates%2A>|숫자 값-바이트|0|  
-|<xref:System.Windows.Documents.Typography.Capitals%2A>|<xref:System.Windows.FontCapitals.AllPetiteCaps> &#124; <xref:System.Windows.FontCapitals.AllSmallCaps> &#124; <xref:System.Windows.FontCapitals.Normal> &#124; <xref:System.Windows.FontCapitals.PetiteCaps> &#124; <xref:System.Windows.FontCapitals.SmallCaps> &#124; 0 &#124; 2|<xref:System.Windows.FontCapitals.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.Capitals%2A>|<xref:System.Windows.FontCapitals.AllPetiteCaps> &#124; <xref:System.Windows.FontCapitals.AllSmallCaps> &#124; <xref:System.Windows.FontCapitals.Normal> &#124; <xref:System.Windows.FontCapitals.PetiteCaps> &#124; <xref:System.Windows.FontCapitals.SmallCaps> &#124; <xref:System.Windows.FontCapitals.Titling> &#124; <xref:System.Windows.FontCapitals.Unicase>|<xref:System.Windows.FontCapitals.Normal?displayProperty=nameWithType>|  
 |<xref:System.Windows.Documents.Typography.CapitalSpacing%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.CaseSensitiveForms%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.ContextualAlternates%2A>|<xref:System.Boolean>|`true`|  
@@ -300,8 +300,8 @@ ms.locfileid: "72005242"
 |<xref:System.Windows.Documents.Typography.ContextualSwashes%2A>|숫자 값-바이트|0|  
 |<xref:System.Windows.Documents.Typography.DiscretionaryLigatures%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.EastAsianExpertForms%2A>|<xref:System.Boolean>|`false`|  
-|<xref:System.Windows.Documents.Typography.EastAsianLanguage%2A>|<xref:System.Windows.FontEastAsianLanguage.HojoKanji> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis04> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis78> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis83> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis90> &#124; 0 &#124; 2 &#124; 4 &#124; 6 &#124; 8|<xref:System.Windows.FontEastAsianLanguage.Normal?displayProperty=nameWithType>|  
-|<xref:System.Windows.Documents.Typography.EastAsianWidths%2A>|<xref:System.Windows.FontEastAsianWidths.Full> &#124; <xref:System.Windows.FontEastAsianWidths.Half> &#124; <xref:System.Windows.FontEastAsianWidths.Normal> &#124; <xref:System.Windows.FontEastAsianWidths.Proportional> &#124; <xref:System.Windows.FontEastAsianWidths.Quarter> &#124; 0|<xref:System.Windows.FontEastAsianWidths.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.EastAsianLanguage%2A>|<xref:System.Windows.FontEastAsianLanguage.HojoKanji> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis04> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis78> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis83> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis90> &#124; <xref:System.Windows.FontEastAsianLanguage.NlcKanji> &#124; <xref:System.Windows.FontEastAsianLanguage.Normal> &#124; <xref:System.Windows.FontEastAsianLanguage.Simplified> &#124; <xref:System.Windows.FontEastAsianLanguage.Traditional> &#124; <xref:System.Windows.FontEastAsianLanguage.TraditionalNames>|<xref:System.Windows.FontEastAsianLanguage.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.EastAsianWidths%2A>|<xref:System.Windows.FontEastAsianWidths.Full> &#124; <xref:System.Windows.FontEastAsianWidths.Half> &#124; <xref:System.Windows.FontEastAsianWidths.Normal> &#124; <xref:System.Windows.FontEastAsianWidths.Proportional> &#124; <xref:System.Windows.FontEastAsianWidths.Quarter> &#124; <xref:System.Windows.FontEastAsianWidths.Third>|<xref:System.Windows.FontEastAsianWidths.Normal?displayProperty=nameWithType>|  
 |<xref:System.Windows.Documents.Typography.Fraction%2A>|<xref:System.Windows.FontFraction.Normal> &#124; <xref:System.Windows.FontFraction.Slashed> &#124; <xref:System.Windows.FontFraction.Stacked>|<xref:System.Windows.FontFraction.Normal?displayProperty=nameWithType>|  
 |<xref:System.Windows.Documents.Typography.HistoricalForms%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.HistoricalLigatures%2A>|<xref:System.Boolean>|`false`|  
@@ -333,12 +333,12 @@ ms.locfileid: "72005242"
 |<xref:System.Windows.Documents.Typography.StylisticSet18%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.StylisticSet19%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.StylisticSet20%2A>|<xref:System.Boolean>|`false`|  
-|<xref:System.Windows.Documents.Typography.Variants%2A>|<xref:System.Windows.FontVariants.Inferior> &#124; <xref:System.Windows.FontVariants.Normal> &#124; <xref:System.Windows.FontVariants.Ordinal> &#124; <xref:System.Windows.FontVariants.Ruby> &#124; <xref:System.Windows.FontVariants.Subscript> &#124; 0|<xref:System.Windows.FontVariants.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.Variants%2A>|<xref:System.Windows.FontVariants.Inferior> &#124; <xref:System.Windows.FontVariants.Normal> &#124; <xref:System.Windows.FontVariants.Ordinal> &#124; <xref:System.Windows.FontVariants.Ruby> &#124; <xref:System.Windows.FontVariants.Subscript> &#124; <xref:System.Windows.FontVariants.Superscript>|<xref:System.Windows.FontVariants.Normal?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Documents.Typography>
-- [OpenType 사양](https://go.microsoft.com/fwlink/?LinkId=96731)
+- [OpenType 사양](https://docs.microsoft.com/typography/opentype/spec/)
 - [WPF의 입력 체계](typography-in-wpf.md)
 - [샘플 OpenType 글꼴 팩](sample-opentype-font-pack.md)
 - [애플리케이션과 함께 글꼴 패키징](packaging-fonts-with-applications.md)

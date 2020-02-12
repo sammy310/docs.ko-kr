@@ -8,14 +8,15 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 9dbf9eee6e4222f899d77a4457bc78132ec7f092
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 4a5e56f6b7f33a4c6f29aa384635737eeee37ddd
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920227"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095036"
 ---
-# <a name="debugging-windows-authentication-errors"></a>Windows 인증 오류 디버깅
+# <a name="debug-windows-authentication-errors"></a>Windows 인증 오류 디버깅
+
 Windows 인증을 보안 메커니즘으로 사용하면 SSPI(보안 지원 공급자 인터페이스)에서 보안 프로세스를 처리합니다. SSPI 계층에서 보안 오류가 발생 하면 Windows Communication Foundation (WCF)에 의해 표시 됩니다. 이 항목에서는 오류 진단에 도움이 되는 프레임워크 및 일련의 질문을 제공합니다.  
   
  Kerberos 프로토콜에 대 한 개요는 [Kerberos 설명](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/bb742516(v=technet.10))을 참조 하세요. SSPI의 개요는 [sspi](/windows/win32/secauthn/sspi)를 참조 하십시오.  
@@ -49,9 +50,9 @@ Windows 인증을 보안 메커니즘으로 사용하면 SSPI(보안 지원 공�
   
 - 로컬 시스템: 도메인에 연결되지 않은 컴퓨터의 기본 제공 계정인 SYSTEM.  
   
-- 도메인 사용자: Windows 도메인의 사용자 계정. 예를 들어 `DomainName\ProfileName`을 참조하십시오.  
+- 도메인 사용자: Windows 도메인의 사용자 계정. 예: `DomainName\ProfileName`  
   
-- 도메인 컴퓨터: Windows 도메인에 연결된 컴퓨터에서 실행 중인 컴퓨터 ID가 있는 프로세스. 예를 들어 `MachineName\Network Service`을 참조하십시오.  
+- 도메인 컴퓨터: Windows 도메인에 연결된 컴퓨터에서 실행 중인 컴퓨터 ID가 있는 프로세스. 예: `MachineName\Network Service`  
   
 > [!NOTE]
 > 서비스 자격 증명은 <xref:System.ServiceModel.ICommunicationObject.Open%2A> 클래스의 <xref:System.ServiceModel.ServiceHost> 메서드가 호출될 때 캡처됩니다. 클라이언트 자격 증명은 클라이언트가 메시지를 보낼 때마다 읽어 옵니다.  
@@ -98,7 +99,7 @@ Windows 인증을 보안 메커니즘으로 사용하면 SSPI(보안 지원 공�
 ### <a name="ntlm-protocol"></a>NTLM 프로토콜  
   
 #### <a name="negotiate-ssp-falls-back-to-ntlm-but-ntlm-is-disabled"></a>협상 SSP가 NTLM으로 대체되어도 NTLM을 사용하지 않도록 설정  
- <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> 속성이 `false`로 설정 되어 있으므로 NTLM이 사용 되는 경우 Windows Communication Foundation (WCF)에서 예외를 throw 하는 데 가장 적합 합니다. 이 속성을 `false`로 설정하면 유선을 통해 NTLM 자격 증명을 보낼 수 있습니다.  
+ <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> 속성이 `false`로 설정 되어 있으므로 NTLM이 사용 되는 경우 Windows Communication Foundation (WCF)에서 예외를 throw 하는 데 가장 적합 합니다. 이 속성을 `false`로 설정 하면 네트워크를 통해 NTLM 자격 증명이 전송 되는 것을 방지 하지 못할 수 있습니다.  
   
  다음은 NTLM으로 대체되지 않도록 설정하는 방법을 보여 줍니다.  
   
@@ -142,9 +143,9 @@ Windows 인증을 보안 메커니즘으로 사용하면 SSPI(보안 지원 공�
  서버 (Windows XP Home Edition, Windows XP Media Center Edition 및 Windows Vista Home edition)로 사용 하는 경우에는 다음 운영 체제에서 Windows 인증을 지원 하지 않습니다.  
   
 #### <a name="developing-and-deploying-with-different-identities"></a>다른 ID로 개발 및 배포  
- 애플리케이션을 한 컴퓨터에서 개발하여 다른 컴퓨터에 배포하고 서로 다른 계정 형식을 사용하여 각 컴퓨터에서 인증을 수행하면 동작이 동일하지 않을 수 있습니다. 예를 들어 `SSPI Negotiated` 인증 모드를 사용하여 Windows XP Pro 컴퓨터에서 애플리케이션을 개발할 경우 로컬 사용자 계정을 사용하여 인증하면 NTLM 프로토콜이 사용됩니다. 애플리케이션 개발을 마친 후 도메인 계정으로 실행되는 Windows Server 2003 컴퓨터에 해당 서비스를 배포하면 클라이언트에서는 Kerberos 및 도메인 컨트롤러를 사용할 것이므로 해당 서비스를 인증할 수 없습니다.  
+ 애플리케이션을 한 컴퓨터에서 개발하여 다른 컴퓨터에 배포하고 서로 다른 계정 형식을 사용하여 각 컴퓨터에서 인증을 수행하면 동작이 동일하지 않을 수 있습니다. 예를 들어 `SSPI Negotiated` 인증 모드를 사용하여 Windows XP Pro 컴퓨터에서 애플리케이션을 개발할 경우 로컬 사용자 계정을 사용하여 인증하면 NTLM 프로토콜이 사용됩니다. 애플리케이션 개발을 마친 후 도메인 계정으로 실행되는 Windows Server 2003 컴퓨터에 해당 서비스를 배포하면 이 시점에서 클라이언트는 Kerberos 및 도메인 컨트롤러를 사용 하기 때문에 서비스를 인증할 수 없습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
 - <xref:System.ServiceModel.Security.WindowsServiceCredential>

@@ -3,12 +3,12 @@ title: F#을 사용하여 Azure Blob 스토리지 시작
 description: Azure Blob storage를 사용 하 여 클라우드에 구조화 되지 않은 데이터를 저장 합니다.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 90ec0d63b11ad00c53a1740211e9a6509582e863
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 79f6a559ac603b0544916764126a988d3f3f43d7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75935512"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092631"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>F\#를 사용 하 여 Azure Blob storage 시작
 
@@ -16,11 +16,11 @@ Azure Blob Storage는 클라우드에서 구조화되지 않은 데이터를 개
 
 이 문서에서는 Blob storage를 사용 하 여 일반적인 작업을 수행 하는 방법을 보여 줍니다. 샘플은 .NET 용 Azure Storage F# 클라이언트 라이브러리를 사용 하 여 작성 되었습니다. 여기에서 설명 하는 태스크에는 blob을 업로드, 나열, 다운로드 및 삭제 하는 방법이 포함 됩니다.
 
-Blob 저장소에 대 한 개념적 개요는 [blob 저장소에 대 한 .net 가이드](/azure/storage/storage-dotnet-how-to-use-blobs)를 참조 하세요.
+Blob 저장소에 대 한 개념적 개요는 [blob 저장소에 대 한 .net 가이드](/azure/storage/blobs/storage-quickstart-blobs-dotnet)를 참조 하세요.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
-이 가이드를 사용 하려면 먼저 [Azure storage 계정을 만들어야](/azure/storage/storage-create-storage-account)합니다. 이 계정에 대 한 저장소 액세스 키도 필요 합니다.
+이 가이드를 사용 하려면 먼저 [Azure storage 계정을 만들어야](/azure/storage/common/storage-account-create)합니다. 이 계정에 대 한 저장소 액세스 키도 필요 합니다.
 
 ## <a name="create-an-f-script-and-start-f-interactive"></a>F# 스크립트 만들기 및 대화형 시작 F#
 
@@ -30,7 +30,7 @@ Blob 저장소에 대 한 개념적 개요는 [blob 저장소에 대 한 .net �
 
 ### <a name="add-namespace-declarations"></a>네임스페이스 선언 추가
 
-`blobs.fsx` 파일 맨 위에 다음 `open` 문을 추가합니다.
+`open` 파일 맨 위에 다음 `blobs.fsx` 문을 추가합니다.
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L1-L5)]
 
@@ -102,14 +102,14 @@ Azure Blob Storage는 블록 Blob 및 페이지 Blob을 지원합니다. 대부�
 
 예를 들어 `photos`컨테이너에 있는 다음 블록 Blob 집합을 고려합니다.
 
-*photo1.jpg*\
-*2015/architecture/description.txt*\
-*2015/architecture/photo3.jpg*\
-*2015/architecture/photo4.jpg*\
-*2016/architecture/photo5.jpg*\
-*2016/architecture/photo6.jpg*\
-*2016/architecture/description.txt*\
-*2016/photo7.jpg*\
+*photo1*\
+*2015/아키텍처/설명 .txt*\
+*2015/architecture/photo3*\
+*2015/architecture/photo4*\
+*2016/architecture/photo5*\
+*2016/architecture/photo6*\
+*2016/아키텍처/설명 .txt*\
+*2016/photo7*\
 
 위의 샘플과 같이 컨테이너에서 `ListBlobs`를 호출 하면 계층적 목록이 반환 됩니다. 컨테이너의 디렉터리와 blob을 각각 나타내는 `CloudBlobDirectory` 및 `CloudBlockBlob` 개체를 모두 포함 하는 경우 결과 출력은 다음과 유사 합니다.
 
@@ -196,8 +196,8 @@ Blob을 삭제 하려면 먼저 blob 참조를 가져온 다음이 참조에 대
 
 Azure Storage의 모든 Blob은 컨테이너에 있어야 합니다. 컨테이너는 Blob 이름의 일부를 형성합니다. 예를 들어 `mydata` 은(는) 이러한 샘플 Blob URI에서 컨테이너의 이름입니다.
 
-- https://storagesample.blob.core.windows.net/mydata/blob1.txt
-- https://storagesample.blob.core.windows.net/mydata/photos/myphoto.jpg
+- `https://storagesample.blob.core.windows.net/mydata/blob1.txt`
+- `https://storagesample.blob.core.windows.net/mydata/photos/myphoto.jpg`
 
 컨테이너 이름은 유효한 DNS 이름이어야 하고 다음 명명 규칙을 따라야 합니다.
 
@@ -226,10 +226,10 @@ Azure Storage은 클라이언트와 서버 모두에서 blob 데이터를 암호
 
 ### <a name="tools"></a>도구
 
-- [F# AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/)\
+- [ F# Azurestorag및 공급자](https://fsprojects.github.io/AzureStorageTypeProvider/)\
 Blob F# , 테이블 및 큐 Azure Storage 자산을 탐색 하 고이에 대 한 CRUD 작업을 쉽게 적용 하는 데 사용할 수 있는 형식 공급자입니다.
 
-- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage)\
+- [Fsharp.core](https://github.com/fsprojects/FSharp.Azure.Storage)\
 Microsoft Azure F# Table Storage 서비스를 사용 하는 API
 
 - [Microsoft Azure Storage 탐색기 (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer)\
@@ -237,14 +237,13 @@ Windows, OS X 및 Linux에서 Azure Storage 데이터로 시각적으로 작업�
 
 ### <a name="blob-storage-reference"></a>Blob Storage 참조
 
-- [.NET용 Azure Storage API](/dotnet/api/overview/azure/storage)
-- [Azure Storage 서비스 REST API 참조](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference)
+- [.NET 용 Azure Storage Api](/dotnet/api/overview/azure/storage)
+- [Azure Storage 서비스 REST API 참조](/rest/api/storageservices/)
 
 ### <a name="related-guides"></a>관련 가이드
 
-- [에서 Azure Blob Storage 시작C#](https://azure.microsoft.com/resources/samples/storage-blob-dotnet-getting-started/)
-- [Windows에서 AzCopy 명령줄 유틸리티를 사용 하 여 데이터 전송](/azure/storage/common/storage-use-azcopy)
-- [Linux에서 AzCopy 명령줄 유틸리티를 사용 하 여 데이터 전송](/azure/storage/common/storage-use-azcopy-linux)
+- [.NET용 Azure Blob Storage 샘플](https://docs.microsoft.com/samples/azure-samples/storage-blob-dotnet-getting-started/storage-blob-dotnet-getting-started/)
+- [AzCopy 시작](/azure/storage/common/storage-use-azcopy-v10)
 - [Azure Storage 연결 문자열 구성](/azure/storage/common/storage-configure-connection-string)
 - [Azure Storage 팀 블로그](https://docs.microsoft.com/archive/blogs/windowsazurestorage/)
 - [빠른 시작: .NET을 사용 하 여 개체 저장소에 blob 만들기](/azure/storage/blobs/storage-quickstart-blobs-dotnet)

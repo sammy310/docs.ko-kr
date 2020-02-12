@@ -1,13 +1,14 @@
 ---
 title: .NET Core에서 지원되지 않는 API
+titleSuffix: ''
 description: .NET Core에서 항상 예외를 throw하는 .NET Framework의 API를 알아봅니다.
 ms.date: 12/23/2019
-ms.openlocfilehash: f27aeca31226a95dacf100813762eedb56876fbd
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: c4b94321d30cacd90d5c2ee23c258681683a6faa
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75936980"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092969"
 ---
 # <a name="apis-that-always-throw-exceptions-on-net-core"></a>.NET Core에서 항상 예외를 throw하는 API
 
@@ -154,6 +155,7 @@ ms.locfileid: "75936980"
 
 | 멤버 | throw되는 플랫폼 |
 | - | - |
+| <xref:System.Net.Sockets.Socket.%23ctor(System.Net.Sockets.SocketInformation)?displayProperty=nameWithType> | 모두 |
 | <xref:System.Net.Sockets.Socket.DuplicateAndClose(System.Int32)?displayProperty=nameWithType> | 모두 |
 
 ## <a name="systemnetwebsockets"></a>System.Net.WebSockets
@@ -246,7 +248,6 @@ ms.locfileid: "75936980"
 | <xref:System.Security.Cryptography.CspKeyContainerInfo.Removable?displayProperty=nameWithType> | Linux 및 macOS |
 | <xref:System.Security.Cryptography.CspKeyContainerInfo.UniqueKeyContainerName?displayProperty=nameWithType> | Linux 및 macOS |
 | <xref:System.Security.Cryptography.HashAlgorithm.Create?displayProperty=nameWithType> | 모두 |
-| <xref:System.Security.Cryptography.HashAlgorithm.Create(System.String)?displayProperty=nameWithType> | 모두 |
 | <xref:System.Security.Cryptography.HMAC.Create?displayProperty=nameWithType> | 모두 |
 | <xref:System.Security.Cryptography.HMAC.Create(System.String)?displayProperty=nameWithType> | 모두 |
 | <xref:System.Security.Cryptography.HMAC.HashCore%2A?displayProperty=nameWithType> | 모두 |

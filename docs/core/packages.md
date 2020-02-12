@@ -3,22 +3,22 @@ title: 패키지, 메타패키지 및 프레임워크 - .NET Core
 description: 패키지, 메타패키지 및 프레임워크 용어에 관해 알아봅니다.
 author: richlander
 ms.date: 06/20/2016
-ms.openlocfilehash: 6a8e257ebf493365518dd9663fbd2a9cadc83875
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 657519edf1c0860ee3222c71ce85723e19029a9d
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116058"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965895"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>패키지, 메타패키지 및 프레임워크
 
-.NET Core는 NuGet 패키지로 구성된 플랫폼입니다. 일부 제품은 정교하게 정의된 패키지로 구성되는 반면 다른 제품은 다소 거칠게 정의된 패키지로 구성됩니다. 이러한 이중성을 수용하기 위해 이 제품은 세분화된 패키지 집합으로 배포되고 비공식적으로 [메타패키지](#metapackages)라고 하는 패키지 형식의 거친 덩어리 상태입니다.
+.NET Core는 NuGet 패키지로 구성된 플랫폼입니다. 일부 제품은 정교하게 정의된 패키지로 구성되는 반면 다른 제품은 다소 거칠게 정의된 패키지로 구성됩니다. 이러한 이중성을 수용하기 위해 .NET Core는 세분화된 패키지 집합으로 배포되고 비공식적으로 [메타패키지](#metapackages)라고 하는 패키지 형식의 거친 덩어리 상태입니다.
 
-각 .NET Core 패키지는 프레임워크라고 하는 여러 .NET 구현에서의 실행을 지원합니다. 그러한 프레임워크 중 일부는 `net46`처럼 .NET Framework를 나타내는 기존의 프레임워크입니다. 또 다른 집합은 "패키지 기반 프레임워크"로 간주할 수 있는 새로운 프레임워크로, 프레임워크를 정의하기 위한 새 모델을 설정합니다. 이러한 패키지 기반 프레임워크는 패키지로서 완전히 구성 및 정의되어, 패키지와 프레임워크 간에 강력한 관계를 형성합니다.
+각 .NET Core 패키지는 프레임워크라고 하는 여러 .NET 구현에서의 실행을 지원합니다. 그러한 프레임워크 중 일부는 `net46`처럼 .NET Framework를 나타내는 기존의 프레임워크입니다. 또 다른 집합은 "패키지 기반 프레임워크"로 간주할 수 있는 새로운 프레임워크로, 프레임워크를 정의하기 위한 새 모델을 설정합니다. 이러한 패키지 기반 프레임워크는 패키지로서 완전히 생성 및 정의되어, 패키지와 프레임워크 간에 강력한 관계를 형성합니다.
 
 ## <a name="packages"></a>패키지
 
-.NET Core는 기본 형식, 더 높은 수준의 데이터 형식, 앱 구성 형식 및 공통 유틸리티를 제공하는 패키지 집합으로 나누어집니다. 각 패키지는 동일한 이름의 단일 어셈블리를 나타냅니다. 예를 들어 [System.Runtime 패키지](https://www.nuget.org/packages/System.Runtime)는 System.Runtime.dll을 포함합니다. 
+.NET Core는 기본 형식, 더 높은 수준의 데이터 형식, 앱 구성 형식 및 공통 유틸리티를 제공하는 패키지 집합으로 나누어집니다. 각 패키지는 동일한 이름의 단일 어셈블리를 나타냅니다. 예를 들어 [System.Runtime 패키지](https://www.nuget.org/packages/System.Runtime)는 System.Runtime.dll을 포함합니다.
 
 세분화된 방식으로 패키지를 정의하는 데 따른 이점이 있습니다.
 
@@ -38,7 +38,7 @@ ms.locfileid: "76116058"
 - [System.Linq](https://www.nuget.org/packages/System.Linq) - 개체 쿼리를 위한 형식 집합으로, `Enumerable` 및 <xref:System.Linq.ILookup%602>를 포함합니다.
 - [System.Reflection](https://www.nuget.org/packages/System.Reflection) - 형식의 로드, 검사 및 활성화를 위한 형식의 집합으로, <xref:System.Reflection.Assembly>, <xref:System.Reflection.TypeInfo> 및 <xref:System.Reflection.MethodInfo>를 포함합니다.
 
-일반적으로 각 패키지를 포함하는 것보다 [메타패키지](#metapackages)를 포함하기가 좀 더 쉽고 강력합니다. 그러나 단일 패키지가 필요한 경우 [System.Runtime](https://www.nuget.org/packages/System.Runtime/) 패키지를 참조하는 다음 예제에서처럼 포함할 수 있습니다. 
+일반적으로 각 패키지를 포함하는 것보다 [메타패키지](#metapackages)를 포함하기가 좀 더 쉽고 강력합니다. 그러나 단일 패키지가 필요한 경우 [System.Runtime](https://www.nuget.org/packages/System.Runtime/) 패키지를 참조하는 다음 예제에서처럼 포함할 수 있습니다.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -53,24 +53,24 @@ ms.locfileid: "76116058"
 
 ## <a name="metapackages"></a>메타패키지
 
-메타패키지는 서로 의미가 있는 패키지 집합을 기술하기 위한 NuGet 패키지 규칙입니다. 메타패키지는 종속성을 설정함으로써 이러한 패키지 집합을 나타냅니다. 선택적으로, 프레임워크를 지정하여 이 패키지 집합에 대한 프레임워크를 설정할 수 있습니다. 
+메타패키지는 서로 의미가 있는 패키지 집합을 기술하기 위한 NuGet 패키지 규칙입니다. 메타패키지는 종속성을 설정함으로써 이러한 패키지 집합을 나타냅니다. 메타패키지는 선택적으로 프레임워크를 지정하여 패키지 집합에 대한 프레임워크를 설정할 수 있습니다.
 
 이전 버전의 .NET Core 도구(project.json 및 csproj 기반 도구)는 기본적으로 프레임워크와 메타패키지를 모두 지정했습니다. 그러나 현재 메타패키지는 암시적으로 대상 프레임워크에서 참조하므로 각 메타패키지는 대상 프레임워크에 연결됩니다. 예를 들어 `netstandard1.6` 프레임워크는 NetStandard.Library 버전 1.6.0 메타패키지를 참조합니다. 마찬가지로 `netcoreapp2.1` 프레임워크는 Microsoft.NETCore.App 버전 2.1.0 메타패키지를 참조합니다. 자세한 내용은 [Implicit metapackage package reference in the .NET Core SDK](https://github.com/dotnet/core/blob/master/release-notes/1.0/sdk/1.0-rc3-implicit-package-refs.md)(.NET Core SDK에서 암시적인 메타패키지 패키지 참조)를 참조하세요.
 
-프레임워크 대상을 지정하고 메타패키지를 암시적으로 참조함으로써 각각의 종속된 패키지에 단일 제스처로서 참조를 추가하게 됩니다. 즉, IntelliSense(또는 유사한 환경) 및 앱 게시에 대해 해당 패키지의 모든 라이브러리를 사용할 수 있습니다.  
+프레임워크 대상을 지정하고 메타패키지를 암시적으로 참조함으로써 각각의 종속된 패키지에 단일 제스처로서 참조를 추가하게 됩니다. 즉, IntelliSense(또는 유사한 환경) 및 앱 게시에 대해 해당 패키지의 모든 라이브러리를 사용할 수 있습니다.
 
 메타패키지 사용에 따른 이점이 있습니다.
 
-- 세분화된 패키지의 큰 집합을 참조하기 위한 편리한 사용자 환경을 제공합니다. 
+- 세분화된 패키지의 큰 집합을 참조하기 위한 편리한 사용자 환경을 제공합니다.
 - 테스트되고 함께 잘 작동하는 패키지 집합을 정의합니다(특정 버전 포함).
 
 .NET 표준 메타패키지:
 
-- [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) - ".NET 표준"에 포함된 라이브러리를 설명합니다. .NET 표준을 지원하는 모든 .NET 구현(예: .NET Framework, .NET Core 및 Mono)에 적용됩니다. 'netstandard' 프레임워크를 설정합니다.
+- [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) - .NET Standard에 포함된 라이브러리를 설명합니다. .NET Standard를 지원하는 모든 .NET 구현(예: .NET Framework, .NET Core 및 Mono)에 적용됩니다. `netstandard` 프레임워크를 설정합니다.
 
 주요 .NET Core 메타패키지:
 
-- [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) - .NET Core 배포에 포함된 라이브러리를 설명합니다. [`.NETCoreApp` 프레임워크를 설정합니다](https://github.com/dotnet/core-setup/blob/release/1.1.0/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj). 더 작은 `NETStandard.Library`에 종속됩니다.
+- [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) - .NET Core 배포에 포함된 라이브러리를 설명합니다. `.NETCoreApp` 프레임워크를 설정합니다. 더 작은 `NETStandard.Library`에 종속됩니다.
 - [Microsoft.AspNetCore.App](https://www.nuget.org/packages/Microsoft.AspNetCore.App) - 타사 종속성을 포함하는 패키지를 제외하고 ASP.NET Core 및 Entity Framework Core의 모든 지원되는 패키지를 포함합니다. 자세한 내용은 [ASP.NET Core에 대한 Microsoft.AspNetCore.App 메타패키지](/aspnet/core/fundamentals/metapackage-app)를 참조하세요.
 - [Microsoft.AspNetCore.All](https://www.nuget.org/packages/Microsoft.AspNetCore.All) - ASP.NET Core, Entity Framework Core 및 ASP.NET Core와 Entity Framework Core에서 사용되는 내부/타사 종속성의 모든 지원되는 패키지를 포함합니다. 자세한 내용은 [ASP.NET Core 2.x에 대한 Microsoft.AspNetCore.All 메타패키지](/aspnet/core/fundamentals/metapackage)를 참조하세요.
 - [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) - .NET Core에서 실행되는 mscorlib 기반 PCL(이식 가능한 클래스 라이브러리)을 사용하도록 설정하는 호환성 외관의 집합입니다.
@@ -87,9 +87,9 @@ ms.locfileid: "76116058"
 
 처음 두 프레임워크는 프레임워크를 정의하는 두 가지 방법의 예를 보여주므로 대조해보면 유용합니다.
 
-`.NETFramework,Version=4.6` 프레임워크는 .NET Framework 4.6의 사용 가능한 API를 나타냅니다. .NET Framework 4.6 참조 어셈블리로 컴파일된 라이브러리를 생성하고 net46 lib 폴더의 NuGet 패키지에 배포할 수 있습니다. 이는 .NET Framework 4.6을 대상으로 하거나 이와 호환되는 앱에 사용됩니다. 모든 프레임워크는 지금까지 이러한 방식으로 작동했습니다.
+- `.NETFramework,Version=4.6` 프레임워크는 .NET Framework 4.6의 사용 가능한 API를 나타냅니다. .NET Framework 4.6 참조 어셈블리로 컴파일된 라이브러리를 생성하고 net46 lib 폴더의 NuGet 패키지에 배포할 수 있습니다. 이는 .NET Framework 4.6을 대상으로 하거나 이와 호환되는 앱에 사용됩니다. 모든 프레임워크는 지금까지 이러한 방식으로 작동했습니다.
 
-`.NETStandard,Version=1.3` 프레임워크는 패키지 기반 프레임워크로서, API를 정의하고 노출하는 프레임워크를 대상으로 하는 패키지에 의존합니다.
+- `.NETStandard,Version=1.3` 프레임워크는 패키지 기반 프레임워크로서, API를 정의하고 노출하는 프레임워크를 대상으로 하는 패키지에 의존합니다.
 
 ## <a name="package-based-frameworks"></a>패키지 기반 프레임워크
 
@@ -131,14 +131,14 @@ ms.locfileid: "76116058"
 </Project>
 ```
 
-`netstandard1.3`을 대상으로 하지만 `NETStandard.Library`의 1.6.0 버전을 사용하는 것이 이상하게 보일 수 있습니다. 메타패키지가 이전 `netstandard` 버전에 대한 지원을 유지하므로 이는 유효한 사용 사례입니다. 메타패키지의 1.6.0 버전에서 표준화하고 모든 라이브러리에 사용하여 다양한 `netstandard` 버전을 대상으로 하는 사례일 수 있습니다. 이 방법을 통해 `NETStandard.Library` 1.6.0만을 복원할 수 있으며 그 이전 버전은 복원할 수 없습니다. 
+`netstandard1.3`을 대상으로 하지만 `NETStandard.Library`의 1.6.0 버전을 사용하는 것이 이상하게 보일 수 있습니다. 메타패키지가 이전 `netstandard` 버전에 대한 지원을 유지하므로 이는 유효한 사용 사례입니다. 메타패키지의 1.6.0 버전에서 표준화하고 모든 라이브러리에 사용하여 다양한 `netstandard` 버전을 대상으로 하는 사례일 수 있습니다. 이 방법을 통해 `NETStandard.Library` 1.6.0만을 복원할 수 있으며 그 이전 버전은 복원할 수 없습니다.
 
-`NETStandard.Library`의 1.3.0 버전으로 `netstandard1.6`를 대상으로 하는 반대의 경우는 유효하지 않습니다. 더 낮은 메타패키지로 더 높은 프레임워크를 대상으로 할 수 없습니다. 더 낮은 버전의 메타패키지는 더 높은 프레임워크의 자산을 노출하지 않기 때문입니다. 메타패키지의 버전 관리 체계는 메타패키지가 프레임워크의 최고 버전과 일치해야 한다고 주장합니다. 버전 관리 체계 덕분에, `netstandard1.6` 자산을 포함하는 경우 `NETStandard.Library`의 첫 번째 버전은 v1.6.0입니다. 위의 예제에는 v1.3.0이 사용되지만(위 예제와 대칭을 위해), 실제로 존재하지는 않습니다.
+`NETStandard.Library`의 1.3.0 버전으로 `netstandard1.6`를 대상으로 하는 반대의 경우는 유효하지 않습니다. 더 낮은 메타패키지로 더 높은 프레임워크를 대상으로 할 수 없습니다. 더 낮은 버전의 메타패키지는 더 높은 프레임워크의 자산을 노출하지 않기 때문입니다. 메타패키지의 버전 관리 체계는 메타패키지가 프레임워크의 최고 버전과 일치해야 한다고 주장합니다. 버전 관리 체계 덕분에, `netstandard1.6` 자산을 포함하는 경우 `NETStandard.Library`의 첫 번째 버전은 v1.6.0입니다. (이전 예제와의 대칭을 위해 여기에는 v1.3.0이 사용되지만 실제로는 존재하지 않습니다.)
 
 ### <a name="net-core-application"></a>.NET Core 애플리케이션
 
-.NET Core([대상 프레임워크 모니커](../standard/frameworks.md): `netcoreapp`) 프레임워크는 .NET Core 배포와 함께 제공되는 패키지 및 관련 API, 그리고 콘솔 애플리케이션 모델을 나타냅니다. .NET Core 앱은 콘솔 애플리케이션 모델을 대상으로 하기 때문에 이 프레임워크를 사용해야 하며, .NET Core에서만 실행되도록 만들어진 라이브러리도 마찬가지입니다. 이 프레임워크를 사용하면 앱과 라이브러리의 실행이 .NET Core로만 제한됩니다. 
+.NET Core([대상 프레임워크 모니커](../standard/frameworks.md): `netcoreapp`) 프레임워크는 .NET Core 배포와 함께 제공되는 패키지 및 관련 API, 그리고 콘솔 애플리케이션 모델을 나타냅니다. .NET Core 앱은 콘솔 애플리케이션 모델을 대상으로 하기 때문에 이 프레임워크를 사용해야 하며, .NET Core에서만 실행되도록 만들어진 라이브러리도 마찬가지입니다. 이 프레임워크를 사용하면 앱과 라이브러리의 실행이 .NET Core로만 제한됩니다.
 
-`Microsoft.NETCore.App` 메타패키지는 `netcoreapp` 프레임워크를 대상으로 합니다. 최대 60개 라이브러리, `NETStandard.Library` 패키지에서 제공하는 최대 40개 및 추가 20개에 대한 액세스를 제공합니다. 추가 API에 대한 액세스 권한을 얻기 위해 `netcoreapp` 또는 호환 프레임워크(예: `netstandard`)를 대상으로 하는 추가 라이브러리를 참조할 수 있습니다. 
+`Microsoft.NETCore.App` 메타패키지는 `netcoreapp` 프레임워크를 대상으로 합니다. 최대 60개 라이브러리, `NETStandard.Library` 패키지에서 제공하는 최대 40개 및 추가 20개에 대한 액세스를 제공합니다. 추가 API에 대한 액세스 권한을 얻기 위해 `netcoreapp` 또는 호환 프레임워크(예: `netstandard`)를 대상으로 하는 추가 라이브러리를 참조할 수 있습니다.
 
-다른 `netstandard` 라이브러리에서 종속성을 충족하는 경우 `Microsoft.NETCore.App`에서 제공하는 추가 라이브러리 대부분은 또한 `netstandard`를 대상으로 합니다. 즉, `netstandard` 라이브러리 역시 해당 패키지를 종속성으로 참조할 수 있습니다. 
+다른 `netstandard` 라이브러리에서 종속성을 충족하는 경우 `Microsoft.NETCore.App`에서 제공하는 추가 라이브러리 대부분은 또한 `netstandard`를 대상으로 합니다. 즉, `netstandard` 라이브러리 역시 해당 패키지를 종속성으로 참조할 수 있습니다.

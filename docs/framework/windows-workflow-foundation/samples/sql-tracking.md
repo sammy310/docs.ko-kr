@@ -2,12 +2,12 @@
 title: SQL 추적
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: c1bb4492695df3ff803dff893de24453d7c03dfb
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 88f44e5362684f755695aab154842fad2274134d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715562"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094594"
 ---
 # <a name="sql-tracking"></a>SQL 추적
 이 샘플에서는 SQL 데이터베이스에 추적 레코드를 기록 하는 사용자 지정 SQL 추적 참가자를 작성 하는 방법을 보여 줍니다. WF (Windows Workflow Foundation)는 워크플로 인스턴스 실행에 대 한 가시성을 확보 하기 위해 워크플로 추적을 제공 합니다. 추적 런타임에서는 워크플로를 실행하는 동안 워크플로 추적 레코드를 내보냅니다. 워크플로 추적에 대 한 자세한 내용은 [워크플로 추적 및 추적](../workflow-tracking-and-tracing.md)을 참조 하세요.
@@ -25,7 +25,7 @@ ms.locfileid: "74715562"
 
 4. Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.
 
-5. F5 키를 눌러 응용 프로그램을 실행합니다.
+5. F5 키를 눌러 애플리케이션을 실행합니다.
 
      브라우저 창이 열리고 애플리케이션의 디렉터리 목록이 표시됩니다.
 
@@ -37,11 +37,11 @@ ms.locfileid: "74715562"
 
 8. 파일 탐색기를 사용 하 여 WCF 테스트 클라이언트 (Wcftestclient.exe)를 실행 합니다. 이는 Microsoft Visual Studio 10.0\Common7\IDE 디렉터리에 있습니다.
 
-9. WCF 테스트 클라이언트에서 **파일** 메뉴를 클릭 하 고 **서비스 추가**를 선택 합니다. 로컬 서비스 주소를 텍스트 상자에 붙여넣습니다. **확인** 을 클릭 하 여 대화 상자를 닫습니다.
+9. WCF 테스트 클라이언트에서 **파일** 메뉴를 클릭 하 고 **서비스 추가**를 선택 합니다. 로컬 서비스 주소를 텍스트 상자에 붙여넣습니다. **확인**을 클릭하여 대화 상자를 닫습니다.
 
 10. WCF 테스트 클라이언트에서 **GetStockPrice**를 두 번 클릭 합니다. 그러면 매개 변수 하나를 사용 하는 `GetStockPrice` 작업이 열리고 `Contoso` 값을 입력 하 고 **호출**을 클릭 합니다.
 
-11. 내보낸 추적 레코드가 SQL 데이터베이스에 기록됩니다. 추적 레코드를 보려면 SQL Management Studio에서 TrackingSample 데이터베이스를 열고 테이블을 찾습니다. SQL Server Management Studio에 대 한 자세한 내용은 [SQL Server Management Studio 소개](https://go.microsoft.com/fwlink/?LinkId=165645)를 참조 하세요. SQL Server 2008 Management Studio Express는 [여기](https://go.microsoft.com/fwlink/?LinkId=180520)에서 다운로드할 수 있습니다. 테이블에 대해 선택 쿼리를 실행하면 해당 테이블에 저장되어 있는 추적 레코드 내의 데이터가 표시됩니다.
+11. 내보낸 추적 레코드가 SQL 데이터베이스에 기록됩니다. 추적 레코드를 보려면 SQL Management Studio에서 TrackingSample 데이터베이스를 열고 테이블을 찾습니다. SQL Server Management Studio에 대 한 자세한 내용은 [SQL Server Management Studio 소개](/sql/ssms/sql-server-management-studio-ssms)를 참조 하세요. SQL Server 2008 Management Studio Express는 [여기](https://www.microsoft.com/download/details.aspx?id=7593)에서 다운로드할 수 있습니다. 테이블에 대해 선택 쿼리를 실행하면 해당 테이블에 저장되어 있는 추적 레코드 내의 데이터가 표시됩니다.
 
 #### <a name="to-uninstall-the-sample"></a>샘플을 제거하려면
 
@@ -59,6 +59,6 @@ ms.locfileid: "74715562"
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\SqlTracking`
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [AppFabric 모니터링 샘플](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric 모니터링 샘플](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

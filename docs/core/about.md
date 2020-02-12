@@ -2,12 +2,12 @@
 title: .NET Core 정보
 description: .NET Core에 대한 자세히 알아봅니다.
 ms.date: 09/17/2019
-ms.openlocfilehash: e5460fd1d968a49478a1bdc5f18962de2c7cbbe0
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 7908cf70e91dcd68668008c2c3082dc293330ec1
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920951"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965843"
 ---
 # <a name="about-net-core"></a>.NET Core 정보
 
@@ -73,7 +73,7 @@ C#, Visual Basic 및 F# 언어를 사용하여 .NET Core에 대한 애플리케�
 
 ### <a name="designed-for-adaptability"></a>뛰어난 적응성
 
-.NET Core는 다른 .NET 제품과 매우 유사하지만 고유한 제품으로 빌드되었습니다. 새 플랫폼과 워크로드에 광범위하게 적응되도록 설계되었으며, 사용 가능한 여러 OS 및 CPU 포트가 있고 더 많은 포트로 포팅될 수도 있습니다.
+.NET Core는 다른 .NET 제품과 유사하지만 고유한 제품으로 빌드되었습니다. 새 플랫폼과 워크로드에 광범위하게 적응되도록 설계되었으며, 사용 가능한 여러 OS 및 CPU 포트가 있고 더 많은 포트로 포팅될 수도 있습니다.
 
 제품은 여러 조각으로 구분되어 다양한 시점에 다양한 부품을 새 플랫폼에 적용할 수 있습니다. 런타임 및 플랫폼별 기본 라이브러리는 하나의 단위로 이식해야 합니다. 플랫폼 제약 없는 라이브러리는 구성에 따라 모든 플랫폼에서 있는 그대로 작동합니다. 개발자 효율성을 높이기 위해 플랫폼별 구현을 줄이려는 프로젝트 성향이 있으므로, 가능한 경우 항상 플랫폼 중립 C# 코드를 사용하여 알고리즘이나 API를 전체 또는 부분적으로 구현합니다.
 

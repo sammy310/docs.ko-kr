@@ -1,17 +1,17 @@
 ---
-title: '자습서: ONNX 및 ML.NET를 통한 딥 러닝을 사용하여 개체 검색'
+title: '자습서: ONNX 딥 러닝 모델을 사용하여 개체 검색'
 description: 이 자습서에서는 ML.NET에서 미리 학습된 ONNX 딥 러닝 학습 모델을 사용하여 이미지에서 개체를 검색하는 방법을 보여줍니다.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 12/12/2019
+ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 6aaf5acc605067f378ff5d42f713fe1c63d91e46
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 7ff9986c09e39f5c4d24f52c351db6455ff63e77
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794635"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092722"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>자습서: ML.NET에서 ONNX를 사용하여 개체 검색
 

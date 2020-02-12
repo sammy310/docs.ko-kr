@@ -2,12 +2,12 @@
 title: .NET Core 도구에서 종속성 관리
 description: .NET Core 도구로 종속성을 관리하는 방법을 설명합니다.
 ms.date: 03/06/2017
-ms.openlocfilehash: 28280dc05e746cdef4e90870cd4cb528382c45bd
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 916daca0240c10dc63ca96048590a426bc51d450
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787869"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965622"
 ---
 # <a name="manage-dependencies-with-net-core-sdk-10"></a>.NET Core SDK 1.0으로 종속성 관리
 
@@ -26,21 +26,21 @@ ms.locfileid: "76787869"
 MSBuild에 익숙한 경우 이미 존재하는 다른 참조 형식에 익숙할 것입니다. 키는 프로젝트에 추가할 패키지 ID를 지정하는 `Include` 문입니다. `<Version>` 자식 요소는 가져올 버전을 지정합니다. 버전은 [NuGet 버전 규칙](/nuget/create-packages/dependency-versions#version-ranges)에 따라 지정됩니다.
 
 > [!NOTE]
-> 전체 `csproj` 구문에 대해 잘 알고 있지 않은 경우 자세한 내용은[MSBuild 프로젝트 참조](/visualstudio/msbuild/msbuild-project-file-schema-reference) 설명서를 참조하세요.
+> project-file 구문에 대해 잘 알고 있지 않은 경우 자세한 내용은[MSBuild 프로젝트 참조](/visualstudio/msbuild/msbuild-project-file-schema-reference) 설명서를 참조하세요.
 
-특정 대상에만 사용할 수 있는 종속성을 추가하려면 다음 예와 같은 조건을 사용하여 수행합니다.
+특정 대상에만 사용할 수 있는 종속성을 추가하려면 다음 예와 같이 조건을 사용합니다.
 
 ```xml
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp2.1'" />
 ```
 
-위의 예는 지정된 대상에 대해 빌드가 발생한 경우에만 종속성이 유효하다는 것을 의미합니다. 조건에서 `$(TargetFramework)`는 프로젝트에 설정되는 MSBuild 속성입니다. 가장 일반적인.NET Core 애플리케이션의 경우 이 작업을 수행하지 않아도 됩니다.
+종속성은 지정된 대상에 대해 빌드가 발생한 경우에만 유효합니다. 조건에서 `$(TargetFramework)`는 프로젝트에 설정되는 MSBuild 속성입니다. 가장 일반적인.NET Core 애플리케이션의 경우 이 작업을 수행하지 않아도 됩니다.
 
 ## <a name="add-a-dependency-to-the-project"></a>프로젝트에 종속성 추가
 
 프로젝트에 종속성을 추가하는 작업은 간단합니다. 다음은 Json.NET 버전 `9.0.1`을 프로젝트에 추가하는 방법을 보여 주는 예입니다. 물론, 다른 NuGet 종속성에 적용됩니다.
 
-프로젝트 파일을 열면 `<ItemGroup>` 노드가 두 개 이상 나타납니다. 노드 중 하나에 이미 `<PackageReference>` 요소가 있다고 표시됩니다. 이 노드에 새 종속성을 추가하거나 새로 만들 수 있습니다. 둘 중 어떤 방법을 사용해도 결과는 동일합니다.
+프로젝트 파일에 둘 이상의 `<ItemGroup>` 노드가 있습니다. 노드 중 하나에 이미 `<PackageReference>` 요소가 있습니다. 이 노드에 새 종속성을 추가하거나 새로 만들 수 있습니다. 결과는 동일합니다.
 
 다음 예는 `dotnet new console`에 의해 삭제된 기본 템플릿을 사용합니다. 이는 간단한 콘솔 애플리케이션입니다. 프로젝트를 열면 이미 기존 `<PackageReference>`가 있는 `<ItemGroup>`을 찾을 수 있습니다. 여기에 다음을 추가합니다.
 

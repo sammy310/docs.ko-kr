@@ -2,16 +2,16 @@
 title: Database Access Activities
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: eec368803eeacb2bab729bcd6d57cc7fc6107256
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ed3f0ad3f2fd19f622c9cb0faf7d5cd864b81995
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710856"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094646"
 ---
 # <a name="database-access-activities"></a>Database Access Activities
 
-데이터베이스 액세스 활동을 사용하여 워크플로 내에서 데이터베이스에 액세스할 수 있습니다. 이러한 작업을 통해 데이터베이스에 액세스 하 여 정보를 검색 하거나 수정 하 고 [ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081) 을 사용 하 여 데이터베이스에 액세스할 수 있습니다.
+데이터베이스 액세스 활동을 사용하여 워크플로 내에서 데이터베이스에 액세스할 수 있습니다. 이러한 작업을 통해 데이터베이스에 액세스 하 여 정보를 검색 하거나 수정 하 고 [ADO.NET](../../data/adonet/index.md) 을 사용 하 여 데이터베이스에 액세스할 수 있습니다.
 
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.
@@ -138,7 +138,7 @@ public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
 
 ## <a name="dbquery"></a>DbQuery
 
-개체 목록을 검색하는 쿼리를 실행합니다. 쿼리가 실행 된 후 매핑 함수가 실행 됩니다 .이 함수는 <`DbDataReader`, `TResult`> 또는 <xref:System.Activities.ActivityFunc%601><`DbDataReader`)를 <xref:System.Func%601>수 있습니다. 이 매핑 함수는 `DbDataReader`에서 레코드를 가져오고 이를 반환할 개체에 매핑합니다.
+개체 목록을 검색하는 쿼리를 실행합니다. 쿼리가 실행 된 후 매핑 함수가 실행 됩니다 .이 함수는 <`DbDataReader`, `TResult`> 또는 <xref:System.Activities.ActivityFunc%601><`DbDataReader`)를 <xref:System.Func%601>수 있습니다.`TResult` 이 매핑 함수는 `DbDataReader`에서 레코드를 가져오고 이를 반환할 개체에 매핑합니다.
 
 공급자 고정 이름(`ProviderName`)과 연결 문자열(`ConnectionString`)을 설정하거나 애플리케이션 구성 파일의 연결 문자열 구성 이름(`ConfigFileSectionName`)만 사용하여 연결 정보를 구성할 수 있습니다.
 

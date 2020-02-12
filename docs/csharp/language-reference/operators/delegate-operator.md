@@ -1,5 +1,5 @@
 ---
-title: 대리자 연산자 - C# 참조
+title: delegate 연산자 - C# 참조
 ms.date: 07/18/2019
 helpviewer_keywords:
 - delegate [C#]
@@ -11,7 +11,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/29/2019
 ms.locfileid: "73039037"
 ---
-# <a name="delegate-operator-c-reference"></a>대리자 연산자(C# 참조)
+# <a name="delegate-operator-c-reference"></a>delegate 연산자(C# 참조)
 
 `delegate` 연산자는 대리자 형식으로 변환될 수 있는 무명 메서드를 만듭니다.
 

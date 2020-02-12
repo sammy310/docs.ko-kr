@@ -2,12 +2,12 @@
 title: C# 언어 버전 관리 - C# 가이드
 description: 프로젝트에 따라 C# 언어 버전이 결정되는 방법과 수동으로 조정할 수 있는 다양한 값에 대해 알아봅니다.
 ms.date: 07/10/2019
-ms.openlocfilehash: 90624816a68de694cacd0017c6d3162f6a89431c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3c1035d983660ea0a945e4d4b7b72c69736c90cb
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713868"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980134"
 ---
 # <a name="c-language-versioning"></a>C# 언어 버전 관리
 
@@ -54,7 +54,7 @@ C# 버전을 명시적으로 지정해야 하는 경우 다음과 같은 여러 
 
 ### <a name="configure-multiple-projects"></a>여러 프로젝트 구성
 
-`<LangVersion>` 요소를 포함하는 **Directory.Build.props** 파일을 만들어 여러 디렉터리를 구성할 수 있습니다. 일반적으로 솔루션 디렉터리에서 이 작업을 수행합니다. 솔루션 디렉터리의 **Directory.Build.props** 파일에 다음을 추가합니다.
+여러 프로젝트를 구성하려면 `<LangVersion>` 요소를 포함하는 **Directory.Build.props** 파일을 만들 수 있습니다. 일반적으로 솔루션 디렉터리에서 이 작업을 수행합니다. 솔루션 디렉터리의 **Directory.Build.props** 파일에 다음을 추가합니다.
 
 ```xml
 <Project>

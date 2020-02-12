@@ -2,12 +2,12 @@
 title: 대기 중인 메시지 문제 해결
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: 5c039c34983647884561f33645f26e4a89280248
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 7990d4b9847ee2f35b9fe6269bb211763c4c80b6
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921261"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095010"
 ---
 # <a name="troubleshooting-queued-messaging"></a>대기 중인 메시지 문제 해결
 
@@ -53,13 +53,13 @@ ms.locfileid: "76921261"
 
 **Q:** 개인 큐를 사용 하려고 하는데 다음 예외가 발생 했습니다. `System.InvalidOperationException`: URL이 잘못 되었습니다. 큐의 URL에는 '$' 문자가 포함될 수 없습니다. net.msmq://machine/private/queueName의 구문을 사용하여 개인 큐의 주소를 지정하십시오.
 
-**A:** 구성 및 코드에서 큐 URI (Uniform Resource Identifier)를 확인 하세요. URI에는 "$" 문자를 사용하지 마십시오. 예를 들어 OrdersQueue라는 개인 큐를 지정하려면 URI를 net.msmq://localhost/private/ordersQueue로 지정합니다.
+**A:** 구성 및 코드에서 큐 URI (Uniform Resource Identifier)를 확인 합니다. URI에는 "$" 문자를 사용하지 마십시오. 예를 들어 OrdersQueue 이라는 개인 큐의 주소를 지정 하려면 URI를 `net.msmq://localhost/private/ordersQueue`로 지정 합니다.
 
-**Q:** 대기 중인 응용 프로그램에서 `ServiceHost.Open()`를 호출 하면 다음 예외가 throw 됩니다. `System.ArgumentException`: 기본 주소는 URI 쿼리 문자열을 포함할 수 없습니다. 이유는 무엇입니까?
+**Q:** 대기 중인 응용 프로그램에서 `ServiceHost.Open()`를 호출 하면 다음 예외가 throw 됩니다. `System.ArgumentException`: 기본 주소는 URI 쿼리 문자열을 포함할 수 없습니다. 이유
 
 **A:** 구성 파일 및 코드에서 큐 URI를 확인 합니다. MSMQ 큐에서는 '?' 문자 사용을 지원하지만 URI에서는 이 문자를 문자열 쿼리의 시작으로 해석합니다. 이 문제를 방지하려면 '?' 문자가 포함되지 않은 큐 이름을 사용합니다.
 
-**Q:** 내 보내기가 성공 했지만 수신자에 대해 서비스 작업이 호출 되지 않습니다. 이유는 무엇입니까?
+**Q:** 내 보내기가 성공 했지만 수신자에 대해 서비스 작업이 호출 되지 않습니다. 이유
 
 **A:** 답변을 확인 하려면 다음 검사 목록을 사용 합니다.
 
@@ -87,7 +87,7 @@ ms.locfileid: "76921261"
 
 보증이 none (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`) 이면 기본값은 배달 못 한 편지 큐 기능입니다.
 
-**Q:** 내 서비스에서 Svchost.exe를 throw 합니다. "EndpointListener 요구 사항은 ListenerFactory에서 만족할 수 없습니다." 라는 메시지와 함께 열립니다. 이유는 무엇입니까?
+**Q:** 내 서비스에서 Svchost.exe를 throw 합니다. "EndpointListener 요구 사항은 ListenerFactory에서 만족할 수 없습니다." 라는 메시지와 함께 열립니다. 이유
 
 대답: 서비스 계약을 확인하십시오. 모든 서비스 작업에 "IsOneWay =`true`"를 추가 하는 것을 잊은 것일 수 있습니다. 큐에서는 단방향 서비스 작업만 지원합니다.
 
@@ -95,7 +95,7 @@ ms.locfileid: "76921261"
 
 **A:** 서비스 호스트에 오류가 발생 했는지 확인 합니다. 추적을 검토하거나 `IErrorHandler`를 구현하면 확인할 수 있습니다. 포이즌 메시지가 검색되면 기본적으로 서비스 호스트 오류가 발생합니다.
 
-**Q:** 큐에 메시지가 있지만 웹에서 호스팅되는 대기 중인 서비스가 활성화 되지 않았습니다. 이유는 무엇입니까?
+**Q:** 큐에 메시지가 있지만 웹에서 호스팅되는 대기 중인 서비스가 활성화 되지 않았습니다. 이유
 
 **A:** 가장 일반적인 이유는 사용 권한입니다.
 
@@ -126,15 +126,15 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
 
 ### <a name="msmq-integration-specific-troubleshooting"></a>MSMQ 통합: 특정 문제 해결
 
-**Q:** 메시지를 보낼 때 또는 서비스 호스트를 열 때 스키마가 잘못 되었음을 나타내는 오류가 발생 합니다. 이유는 무엇입니까?
+**Q:** 메시지를 보낼 때 또는 서비스 호스트를 열 때 스키마가 잘못 되었음을 나타내는 오류가 발생 합니다. 이유
 
 **A:** MSMQ 통합 바인딩을 사용 하는 경우 msmq.formatname 체계를 사용 해야 합니다. 예를 들어 msmq.formatname:DIRECT=OS:.\private$\OrdersQueue입니다. 하지만 사용자 지정 배달 못한 편지 큐를 지정하는 경우에는 net.msmq 체계를 사용해야 합니다.
 
-**Q:** 공용 또는 개인 형식 이름을 사용 하 고 Windows Vista에서 서비스 호스트를 여는 경우 오류가 발생 합니다. 이유는 무엇입니까?
+**Q:** 공용 또는 개인 형식 이름을 사용 하 고 Windows Vista에서 서비스 호스트를 여는 경우 오류가 발생 합니다. 이유
 
-**A:** Windows Vista의 WCF 통합 채널은 포이즌 메시지를 처리 하기 위해 주 응용 프로그램 큐에 대 한 하위 큐를 열 수 있는지 확인 합니다. 하위 큐의 이름은 수신기에 전달되는 msmq.formatname URI에서 파생됩니다. MSMQ에서 하위 큐 이름에는 직접 형식 이름만 사용할 수 있습니다. 따라서 오류가 발생합니다. 큐 URI를 직접 형식 이름으로 변경하십시오.
+**A:** Windows Vista의 WCF 통합 채널은 포이즌 메시지를 처리 하기 위해 주 응용 프로그램 큐에 대 한 하위 큐를 열 수 있는지 확인 합니다. 하위 큐 이름은 수신기에 전달 된 msmq.formatname URI에서 파생 됩니다. MSMQ의 하위 큐 이름은 직접 형식 이름일 수만 있습니다. 따라서 오류가 발생합니다. 큐 URI를 직접 형식 이름으로 변경하십시오.
 
-**Q:** MSMQ 응용 프로그램에서 메시지를 수신 하는 경우 메시지는 큐에 있으며 수신 하는 WCF 응용 프로그램에서 읽지 않습니다. 이유는 무엇입니까?
+**Q:** MSMQ 응용 프로그램에서 메시지를 수신 하는 경우 메시지는 큐에 있으며 수신 하는 WCF 응용 프로그램에서 읽지 않습니다. 이유
 
 **A:** 메시지에 본문이 있는지 여부를 확인 합니다. 메시지에 본문이 없으면 MSMQ 통합 채널에서 메시지를 무시합니다. 예외에 대한 알림을 받고 추적을 확인하려면 `IErrorHandler`를 구현하십시오.
 
@@ -170,7 +170,7 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
 
 6. 다음으로, 이전 단계를 사용 하 여 두 번째 인증서 스냅인을 추가 하지만 이번에는 **컴퓨터 계정** 을 선택 하 고 **다음**을 클릭 합니다.
 
-7. **로컬 컴퓨터** 를 선택 하 고 **마침**을 클릭 합니다. 이제 시스템 인증서 저장소에서 현재 사용자 저장소로 인증서를 끌어서 놓을 수 있습니다.
+7. **로컬 컴퓨터**를 선택하고 **마침**을 클릭합니다. 이제 시스템 인증서 저장소에서 현재 사용자 저장소로 인증서를 끌어서 놓을 수 있습니다.
 
 **Q:** 서비스 그룹 모드의 다른 컴퓨터에 있는 큐에서 서비스를 읽으면 "액세스 거부" 예외가 발생 합니다.
 
@@ -182,7 +182,7 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
 
 ### <a name="remote-transacted-receives"></a>트랜잭션된 원격 수신
 
-**Q:** 컴퓨터 A에 큐가 있고 컴퓨터 B의 큐에서 메시지를 읽는 WCF 서비스 (원격으로 트랜잭션 된 수신 시나리오)가 있는 경우 메시지를 큐에서 읽지 않습니다. 추적 정보는 "트랜잭션을 가져올 수 없습니다." 라는 메시지와 함께 수신이 실패 했음을 나타냅니다. 이 문제를 해결 하려면 어떻게 해야 하나요?
+**Q:** 컴퓨터 A에 큐가 있고 컴퓨터 B의 큐에서 메시지를 읽는 WCF 서비스 (원격으로 트랜잭션 된 수신 시나리오)가 있는 경우 메시지를 큐에서 읽지 않습니다. 추적 정보는 "트랜잭션을 가져올 수 없습니다." 라는 메시지와 함께 수신이 실패 했음을 나타냅니다. 이 문제를 해결하려면 어떻게 해야 하나요?
 
 **A:** 다음과 같은 세 가지 원인이 있을 수 있습니다.
 
@@ -208,4 +208,4 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
 
 ## <a name="using-custom-msmq-bindings-with-receivecontext-enabled"></a>ReceiveContext를 사용하는 사용자 지정 MSMQ 바인딩 사용
 
-<xref:System.ServiceModel.Channels.ReceiveContext>를 사용하는 사용자 지정 MSMQ 바인딩을 사용하는 경우 네이티브 MSMQ가 비동기 <xref:System.ServiceModel.Channels.ReceiveContext>에 대한 I/O 완료를 지원하지 않기 때문에 들어오는 메시지 처리에서 스레드 풀 스레드를 사용합니다. 이는 이러한 메시지 처리에서 <xref:System.ServiceModel.Channels.ReceiveContext>에 내부 트랜잭션을 사용하고 MSMQ가 비동기 처리를 지원하지 않기 때문입니다. 이 문제를 해결하려면 <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>를 엔드포인트에 추가하여 동기 처리를 강제로 수행하거나 <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.MaxPendingReceives%2A>를 1로 설정하면 됩니다.
+<xref:System.ServiceModel.Channels.ReceiveContext> 사용 하도록 설정 된 사용자 지정 MSMQ 바인딩을 사용 하는 경우 네이티브 MSMQ는 비동기 <xref:System.ServiceModel.Channels.ReceiveContext> 받기에 대해 i/o 완료를 지원 하지 않기 때문에 들어오는 메시지를 처리할 때 스레드 풀 스레드가 사용 됩니다. 이러한 메시지 처리는 <xref:System.ServiceModel.Channels.ReceiveContext>에 내부 트랜잭션을 사용 하 고 MSMQ는 비동기 처리를 지원 하지 않기 때문입니다. 이 문제를 해결 하려면 <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>를 끝점에 추가 하 여 동기 처리를 적용 하거나 <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.MaxPendingReceives%2A>를 1로 설정할 수 있습니다.

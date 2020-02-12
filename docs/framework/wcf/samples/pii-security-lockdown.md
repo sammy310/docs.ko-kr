@@ -2,12 +2,12 @@
 title: PII 보안 잠금
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 63410ecc19e94e57f943e5d7dc13a6098bd91d51
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 56c8acbe53f1e0243f7c679da6ef04f7135bcd3a
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714634"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094971"
 ---
 # <a name="pii-security-lockdown"></a>PII 보안 잠금
 이 샘플에서는 다음을 수행 하 여 WCF (Windows Communication Foundation) 서비스의 몇 가지 보안 관련 기능을 제어 하는 방법을 보여 줍니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "74714634"
   
 3. `aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"` 명령을 실행하여 Web.config 폴더에서 appSettings 구성 설정을 암호화합니다.  
   
- 구성 파일의 섹션을 암호화 하는 방법에 대 한 자세한 내용은 ASP.NET 구성에서 DPAPI를 사용 하는 방법 ([보안 ASP.NET 응용 프로그램 빌드: 인증, 권한 부여 및 보안 통신](https://go.microsoft.com/fwlink/?LinkId=95137)) 및 ASP.NET 구성에서 rsa에 대 한 방법 ([방법: Rsa를 사용 하 여 ASP.NET 2.0의 구성 섹션 암호화](https://go.microsoft.com/fwlink/?LinkId=95138))을 참조 하세요.  
+ 구성 파일의 섹션을 암호화 하는 방법에 대 한 자세한 내용은 ASP.NET 구성에서 DPAPI를 사용 하는 방법 ([보안 ASP.NET 응용 프로그램 빌드: 인증, 권한 부여 및 보안 통신](https://docs.microsoft.com/previous-versions/msp-n-p/ff649248(v=pandp.10))) 및 ASP.NET 구성에서 rsa에 대 한 방법 ([방법: Rsa를 사용 하 여 ASP.NET 2.0의 구성 섹션 암호화](https://docs.microsoft.com/previous-versions/msp-n-p/ff650304(v=pandp.10)))을 참조 하세요.  
   
 ## <a name="locking-configuration-file-elements"></a>구성 파일 요소 잠금  
  웹 호스팅 시나리오에서는 서비스의 하위 디렉터리에 서비스를 가질 수 있습니다. 이러한 상황에서는 Machine.config의 값을 검사한 다음 디렉터리 트리를 내려가면서 부모 디렉터리의 모든 Web.config 파일과 병합하고 마지막으로 서비스가 포함된 디렉터리의 Web.config 파일을 병합함으로써 하위 디렉터리의 서비스에 대한 구성 값을 계산합니다. 대부분의 구성 요소에서는 기본적으로 하위 디렉터리의 구성 파일이 부모 디렉터리의 값을 재정의하도록 허용됩니다. 그러나 특정 상황에서는 하위 디렉터리의 구성 파일이 부모 디렉터리 구성에 설정된 값을 재정의하지 못하도록 방지하는 것이 바람직할 수 있습니다.  
@@ -124,9 +124,9 @@ ms.locfileid: "74714634"
   
  또한 DPAPI 및 RSA를 사용하여 구성 파일 요소를 암호화할 수 있습니다. 자세한 내용은 다음 링크를 참조하세요.  
   
-- [보안 ASP.NET 응용 프로그램 빌드: 인증, 권한 부여 및 보안 통신](https://go.microsoft.com/fwlink/?LinkId=95137)  
+- [보안 ASP.NET 응용 프로그램 빌드: 인증, 권한 부여 및 보안 통신](https://docs.microsoft.com/previous-versions/msp-n-p/ff649248(v=pandp.10))  
   
-- [방법: RSA를 사용 하 여 ASP.NET 2.0의 구성 섹션 암호화](https://go.microsoft.com/fwlink/?LinkId=95138)  
+- [방법: RSA를 사용 하 여 ASP.NET 2.0의 구성 섹션 암호화](https://docs.microsoft.com/previous-versions/msp-n-p/ff650304(v=pandp.10))  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
@@ -142,6 +142,6 @@ ms.locfileid: "74714634"
   
 1. Machine.config를 편집하여 `enableLoggingKnownPii` 특성을 `false`로 설정합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [AppFabric 모니터링 샘플](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric 모니터링 샘플](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

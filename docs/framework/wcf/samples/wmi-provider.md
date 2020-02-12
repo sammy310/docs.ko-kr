@@ -2,12 +2,12 @@
 title: WMI Provider
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 4db8873397b0136de88d00ebe62c429aee260911
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: a170a20212791d789af589c1ff99dcd1abad1c9e
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715000"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094776"
 ---
 # <a name="wmi-provider"></a>WMI Provider
 이 샘플에서는 WCF에서 빌드된 WMI(Windows Management Instrumentation) (WMI) 공급자를 사용 하 여 런타임에 WCF (Windows Communication Foundation) 서비스에서 데이터를 수집 하는 방법을 보여 줍니다. 또한 사용자 정의 WMI 개체를 서비스에 추가하는 방법도 보여 줍니다. 이 샘플에서는 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md) 에 대해 WMI 공급자를 활성화 하 고 런타임에 `ICalculator` 서비스에서 데이터를 수집 하는 방법을 보여 줍니다.  
@@ -32,7 +32,8 @@ ms.locfileid: "74715000"
  서비스에 WMI 개체를 추가하면 기본 제공 WMI 공급자 정보와 함께 사용자 정의 정보를 표시할 수 있습니다. 그러려면 Installutil.exe 애플리케이션을 사용하여 WMI에 서비스의 스키마를 게시합니다. 이 작업을 수행하기 위한 지침과 자세한 설명은 항목 끝 부분에 있는 설치 지침을 참조하십시오.  
   
 ## <a name="accessing-wmi-information"></a>WMI 정보 액세스  
- 다양한 방식으로 WMI 데이터에 액세스할 수 있습니다. Microsoft는 스크립트, Visual Basic 응용 프로그램, C++ 응용 프로그램 및 .NET Framework (https://docs.microsoft.com/windows/desktop/wmisdk/using-wmi) 에 WMI api를 제공 합니다.  
+
+다양한 방식으로 WMI 데이터에 액세스할 수 있습니다. Microsoft는 스크립트, Visual Basic 응용 프로그램, C++ 응용 프로그램 및 .NET FRAMEWORK에 WMI api를 제공 합니다. 자세한 내용은 [WMI 사용](/windows/desktop/wmisdk/using-wmi)을 참조 하세요.
   
  이 샘플에서는 두 개의 Java 스크립트를 사용합니다. 하나는 컴퓨터에서 실행 중인 서비스를 속성과 함께 나열하고, 다른 하나는 사용자 정의 WMI 데이터를 표시합니다. 스크립트에서는 WMI 공급자에 대한 연결을 열고, 데이터를 구문 분석하고, 수집된 데이터를 표시합니다.  
   
@@ -143,6 +144,6 @@ cscript EnumerateCustomObjects.js
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\WMIProvider`  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [AppFabric 모니터링 샘플](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric 모니터링 샘플](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

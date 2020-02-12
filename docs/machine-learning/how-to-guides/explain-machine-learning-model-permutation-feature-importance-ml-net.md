@@ -1,20 +1,20 @@
 ---
-title: 순열 기능 중요도를 사용하여 예측 모델 설명
+title: 순열 기능 중요도를 사용하여 ML.NET 모델 해석
 description: ML.NET에서 순열 기능 중요도를 사용하여 모델의 기능 중요도 파악
-ms.date: 08/29/2019
+ms.date: 01/30/2020
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 4bad8b0ed17a34ba290bf9c00d65cc3f000a2acf
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c1163a41cd2feb0e8785ae9d4c6a71dfbedf3f12
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976683"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092618"
 ---
-# <a name="explain-model-predictions-using-permutation-feature-importance"></a>순열 기능 중요도를 사용하여 예측 모델 설명
+# <a name="interpret-model-predictions-using-permutation-feature-importance"></a>순열 기능 중요도를 사용하여 모델 예측 해석
 
-PFI(순열 기능 중요도)를 사용한 예측에서 기능이 갖는 기여도를 해석하여 ML.NET 기계 학습 모델 예측을 설명하는 방법을 알아 봅니다.
+PFI(순열 기능 중요도)를 사용하여 ML.NET 기계 학습 모델 예측을 해석하는 방법을 알아봅니다. PFI를 통해 각 기능이 예측에 공헌하는 상대적 기여도를 알 수 있습니다.
 
 기계 학습 모델은 종종 입력을 받아 출력을 생성하는 블랙 박스처럼 여겨지곤 합니다. 출력에 영향을 미치는 중간 단계 또는 기능 간 상호 작용은 거의 해석되지 않습니다. 의료 등, 다양한 일상에서 기계 학습의 도입이 증가하면서 기계 학습 모델이 그러한 의사 결정을 내리게 되는 이유를 해석하는 것이 매우 중요해졌습니다. 예를 들어, 기계 학습 모델에서 진단을 수행할 경우 의료 전문가가 해당 진단에 반영된 요소를 살펴볼 방법이 필요합니다. 올바른 진단을 제공하면 환자의 빠른 회복 여부에 큰 차이를 낼 수 있습니다. 따라서 모델의 설명 가능한 수준이 높을수록 의료 전문가는 더 자신 있게 모델의 의사 결정을 수락 또는 거부할 수 있습니다.
 

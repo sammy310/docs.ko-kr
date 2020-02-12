@@ -2,12 +2,12 @@
 title: 'Transport: WSE 3.0 TCP Interoperability'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 8166e1c378bc745eb8c9f37d6982642e754813cb
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 8e95d7e75ac49aea4b823ee3434f53ed5df11fb0
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544626"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094854"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Transport: WSE 3.0 TCP Interoperability
 WSE 3.0 TCP 상호 운용성 전송 샘플에서는 TCP 이중 세션을 WCF (사용자 지정 Windows Communication Foundation) 전송으로 구현 하는 방법을 보여 줍니다. 또한 채널 계층의 확장성을 사용하여 연결을 통해 기존에 배포된 시스템과 상호 작용할 수 있는 방법도 보여 줍니다. 다음 단계에서는이 사용자 지정 WCF 전송을 빌드하는 방법을 보여 줍니다.  
@@ -37,7 +37,7 @@ WSE 3.0 TCP 상호 운용성 전송 샘플에서는 TCP 이중 세션을 WCF (�
   
  `return encoder.WriteMessage(message, maxBufferSize, bufferManager);`  
   
- <xref:System.ServiceModel.Channels.Message>를 바이트로 인코딩한 다음에는 연결을 통해 전송해야 합니다. 이렇게 하려면 메시지 경계를 정의하기 위한 시스템이 필요합니다. WSE 3.0에서는 프레이밍 프로토콜로 [DIME](https://go.microsoft.com/fwlink/?LinkId=94999) 버전을 사용 합니다. `WriteData`는 프레이밍 논리를 캡슐화하여 byte[]를 DIME 레코드의 집합으로 래핑합니다.  
+ <xref:System.ServiceModel.Channels.Message>를 바이트로 인코딩한 다음에는 연결을 통해 전송해야 합니다. 이렇게 하려면 메시지 경계를 정의하기 위한 시스템이 필요합니다. WSE 3.0에서는 프레이밍 프로토콜로 [DIME](https://docs.microsoft.com/archive/msdn-magazine/2002/december/sending-files-attachments-and-soap-messages-via-dime) 버전을 사용 합니다. `WriteData`는 프레이밍 논리를 캡슐화하여 byte[]를 DIME 레코드의 집합으로 래핑합니다.  
   
  메시지를 수신하는 논리도 매우 유사합니다. 한 가지 복잡한 문제는 소켓 읽기가 요청된 것보다 적은 수의 바이트를 반환할 수 있다는 사실을 다루는 것입니다. 메시지를 수신하기 위해 `WseTcpDuplexSessionChannel`은 연결이 끊긴 상태에서 바이트를 읽고 DIME 프레이밍을 디코딩한 다음 byte[]를 <xref:System.ServiceModel.Channels.MessageEncoder>로 변환하는 데 <xref:System.ServiceModel.Channels.Message>를 사용합니다.  
   
@@ -133,7 +133,7 @@ WSE 3.0 TCP 상호 운용성 전송 샘플에서는 TCP 이중 세션을 WCF (�
   
  샘플을 실행할 경우의 예상 출력은 다음과 같습니다.  
   
- 클라이언트:  
+ 클라이언트  
   
 ```console  
 Calling soap://stockservice.contoso.com/wse/samples/2003/06/TcpSyncStockService  

@@ -2,16 +2,16 @@
 title: .NET Framework 4.5의 구체화된 정책 작업
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 9184386751bb44e89dfdcedd34ab0ab84a27323e
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 8fd08c9c29f7a268170aaa101a9bdb85250157dc
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710923"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094633"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5의 구체화된 정책 작업
 
-이 샘플에서는 ExternalizedPolicy4 작업을 통해 wf 3.5에서 제공 되는 규칙 엔진을 사용 하 여 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation (wf 4.5)에서 기존 3.5 WF (.NET Framework 3.5 Windows Workflow Foundation) <xref:System.Workflow.Activities.Rules.RuleSet> 개체를 직접 실행 하는 방법을 보여 줍니다. 이 활동을 사용하여 기존 WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>을 열고 실행할 수 있습니다. Windows Workflow Foundation의 일부로 포함 된 WF 3.5 규칙 엔진에 대 한 자세한 내용은 [Windows Workflow Foundation 규칙 엔진 소개를](https://go.microsoft.com/fwlink/?LinkId=166079)참조 하세요. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]에서 [!INCLUDE[wf1](../../../../includes/wf1-md.md)]로 규칙을 마이그레이션하는 방법에 대 한 자세한 내용은 [마이그레이션 지침](../migration-guidance.md)을 참조 하세요.
+이 샘플에서는 ExternalizedPolicy4 작업을 통해 wf 3.5에서 제공 되는 규칙 엔진을 사용 하 여 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation (wf 4.5)에서 기존 3.5 WF (.NET Framework 3.5 Windows Workflow Foundation) <xref:System.Workflow.Activities.Rules.RuleSet> 개체를 직접 실행 하는 방법을 보여 줍니다. 이 활동을 사용하여 기존 WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>을 열고 실행할 수 있습니다. Windows Workflow Foundation의 일부로 포함 된 WF 3.5 규칙 엔진에 대 한 자세한 내용은 [Windows Workflow Foundation 규칙 엔진 소개를](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480193(v=msdn.10))참조 하세요. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]에서 [!INCLUDE[wf1](../../../../includes/wf1-md.md)]로 규칙을 마이그레이션하는 방법에 대 한 자세한 내용은 [마이그레이션 지침](../migration-guidance.md)을 참조 하세요.
 
 ## <a name="projects-in-this-sample"></a>이 샘플의 프로젝트
 

@@ -1,13 +1,13 @@
 ---
-title: 호환성이 손상되는 변경 유형 - .NET Core
+title: 호환성이 손상되는 변경의 형식
 description: .Net Core가 .NET 버전에서 개발자에 대한 호환성을 유지하는 방법 및 호환성이 손상되는 변경으로 간주되는 변경 사항 유형을 알아보세요.
 ms.date: 06/10/2019
-ms.openlocfilehash: 76d04504c4476f0f7517a633cfbf1c0aa9d5797e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 1c5790e39754b91aacbde9e87ed99f9dcc36ce9f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76738579"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092982"
 ---
 # <a name="changes-that-affect-compatibility"></a>호환성에 영향을 미치는 변경 사항
 
