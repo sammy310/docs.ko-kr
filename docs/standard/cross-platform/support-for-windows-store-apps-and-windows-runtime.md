@@ -9,14 +9,12 @@ helpviewer_keywords:
 - .NET Framework, and Windows Store apps
 - .NET Framework, and Windows Runtime
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: dd7e045bf54b09fe2a229efefc0218eb3f2f731a
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 56c9cb60ab46a583c34f898d20abf85f5ff0fe4c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802754"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123703"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원
 
@@ -88,19 +86,19 @@ JavaScript를 사용 하 여 Windows 용으로 빌드된 Windows 8.x 스토어 �
 
 Windows 런타임에서 `IMap<K, V>` 및 `IMapView<K, V>`는 `IKeyValuePair`를 사용 하 여 반복 됩니다. 관리 코드에 전달되면 이들은 `IDictionary<TKey, TValue>` 및 `IReadOnlyDictionary<TKey, TValue>`로 표시되므로 당연히 `System.Collections.Generic.KeyValuePair<TKey, TValue>`를 사용하여 열거해야 합니다.
 
-인터페이스가 관리 코드에 나타나는 방법은 이러한 인터페이스를 구현한 형식이 나타나는 방법에 영향을 줍니다. 예를 들어 `PropertySet` 클래스는 관리되는 코드에 `IDictionary<TKey, TValue>`로 나타나는 `IMap<K, V>`를 구현합니다. `PropertySet`에서 `IMap<K, V>` 대신 `IDictionary<TKey, TValue>`가 구현된 것으로 나타나므로 관리되는 코드에서는 .NET Framework 사전의 `Add` 메서드처럼 동작하는 `Add` 메서드가 있는 것으로 나타납니다. 이 클래스는 `Insert` 메서드를 가지고 있는 것으로 보이지 않습니다.
+인터페이스가 관리 코드에 나타나는 방법은 이러한 인터페이스를 구현한 형식이 나타나는 방법에 영향을 줍니다. 예를 들어 `PropertySet` 클래스는 관리되는 코드에 `IMap<K, V>`로 나타나는 `IDictionary<TKey, TValue>`를 구현합니다. `PropertySet`에서 `IDictionary<TKey, TValue>` 대신 `IMap<K, V>`가 구현된 것으로 나타나므로 관리되는 코드에서는 .NET Framework 사전의 `Add` 메서드처럼 동작하는 `Add` 메서드가 있는 것으로 나타납니다. 이 클래스는 `Insert` 메서드를 가지고 있는 것으로 보이지 않습니다.
 
 .NET Framework를 사용 하 여 Windows 런타임 구성 요소를 만드는 방법 및 JavaScript와 함께 이러한 구성 요소를 사용 하는 방법을 보여 주는 연습은 [및 Visual Basic에서 C# Windows 런타임 구성 요소 만들기](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)를 참조 하세요.
 
-### <a name="primitive-types"></a>기본 형식
+### <a name="primitive-types"></a>기본 유형
 
 관리 코드에서 Windows 런타임를 자연스럽 게 사용할 수 있도록 하기 위해 코드에 기본 형식 Windows 런타임 대신 .NET Framework 기본 형식이 표시 됩니다. .NET Framework에서 `Int32` 구조체와 같은 기본 형식에는 `Int32.TryParse` 메서드 등 유용한 속성 및 메서드가 많이 포함되어 있습니다. 이와 대조적으로 Windows 런타임의 기본 형식과 구조체에는 필드만 있습니다. 관리 코드에서 기본 형식을 사용할 때 .NET Framework 형식으로 표시되고, 평소와 같이 .NET Framework 형식의 속성 및 메서드를 사용할 수 있습니다. 다음 목록은 요약을 제공합니다.
 
 - Windows 런타임 기본 형식 `Int32`, `Int64`, `Single`, `Double`, `Boolean`, `String` (유니코드 문자의 변경할 수 없는 컬렉션), `Enum`, `UInt32`, `UInt64`및 `Guid`의 경우 `System` 네임 스페이스에 있는 동일한 이름의 형식을 사용 합니다.
 
-- `UInt8`에 대해 `System.Byte`를 사용합니다.
+- `UInt8`의 경우 `System.Byte`을 사용합니다.
 
-- `Char16`에 대해 `System.Char`를 사용합니다.
+- `Char16`의 경우 `System.Char`을 사용합니다.
 
 - `IInspectable` 인터페이스에 대해 `System.Object`를 사용합니다.
 
@@ -112,7 +110,7 @@ Windows 런타임에서 `IMap<K, V>` 및 `IMapView<K, V>`는 `IKeyValuePair`를 
 
 ### <a name="other-differences"></a>기타 차이점
 
-일부 경우에는 Windows 런타임 형식 대신 .NET Framework 형식이 코드에 표시 되기 때문에 사용자가 작업을 수행 해야 합니다. 예를 들어 <xref:Windows.Foundation.Uri?displayProperty=nameWithType> 클래스는 .NET Framework 코드에서 <xref:System.Uri?displayProperty=nameWithType>로 표시 됩니다. <xref:System.Uri?displayProperty=nameWithType>는 상대 URI를 허용 하지만 <xref:Windows.Foundation.Uri?displayProperty=nameWithType>에는 절대 URI가 필요 합니다. 따라서 Windows 런타임 메서드에 URI를 전달 하는 경우 절대 URI 인지 확인 해야 합니다. [Windows 런타임에 URI 전달](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)을 참조하세요.
+일부 경우에는 Windows 런타임 형식 대신 .NET Framework 형식이 코드에 표시 되기 때문에 사용자가 작업을 수행 해야 합니다. 예를 들어 <xref:Windows.Foundation.Uri?displayProperty=nameWithType> 클래스는 .NET Framework 코드에서 <xref:System.Uri?displayProperty=nameWithType>로 표시 됩니다. <xref:System.Uri?displayProperty=nameWithType>는 상대 URI를 허용 하지만 <xref:Windows.Foundation.Uri?displayProperty=nameWithType>에는 절대 URI가 필요 합니다. 따라서 Windows 런타임 메서드에 URI를 전달 하는 경우 절대 URI 인지 확인 해야 합니다. [Windows 런타임에 URI 전달을](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)참조 하세요.
 
 <a name="WindowsRuntimeComponents"></a>
 
@@ -157,7 +155,7 @@ JavaScript를 사용 하 여 windows 용 Windows 8.x 스토어 앱을 개발 하
 
 ## <a name="related-topics"></a>관련 항목
 
-|제목|설명|
+|제목|Description|
 |-----------|-----------------|
 |[Windows 스토어 앱용 .NET 개요](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))|Windows 8.x 스토어 앱 및 Windows RuntimeComponents을 만드는 데 사용할 수 있는 .NET Framework 형식 및 멤버에 대해 설명 합니다. (Windows 개발자 센터)|
 |[또는 Visual Basic를 사용 하 C# 는 Windows 스토어 앱 용 로드맵](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))|다양 한 빠른 시작 항목, 지침 및 모범 사례를 포함 하 여 또는 Visual Basic를 C# 사용 하 여 Windows 8.x 스토어 앱 개발을 시작 하는 데 도움이 되는 주요 리소스를 제공 합니다. (Windows 개발자 센터)|

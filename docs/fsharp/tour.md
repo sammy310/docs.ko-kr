@@ -1,27 +1,27 @@
 ---
 title: F# 둘러보기
 description: 이 자습서에서는 예제 코드를 사용하여 F# 프로그래밍 언어의 주요 기능을 살펴봅니다.
-ms.date: 11/06/2018
-ms.openlocfilehash: cfea2827dcec65f9e3606e8528179029e1f2db84
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 02/09/2020
+ms.openlocfilehash: ac2eef40e2dbc494e41a9760f0a70edb0f7ce399
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423814"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124574"
 ---
 # <a name="tour-of-f"></a>F\# 둘러보기
 
-F#에 대해 자세히 이해하려면 F# 코드를 읽고 작성하는 방법이 가장 좋습니다. 이 문서에서는 F# 언어의 주요 기능 중 일부를 둘러보고 컴퓨터에서 실행할 수 있는 코드 조각을 제공합니다. 개발 환경 설정에 대한 자세한 내용은 [시작하기](get-started/index.md)를 참조하십시오.
+F#에 대해 자세히 이해하려면 F# 코드를 읽고 작성하는 방법이 가장 좋습니다. 이 문서에서는 F# 언어의 주요 기능 중 일부를 둘러보고 컴퓨터에서 실행할 수 있는 코드 조각을 제공합니다. 개발 환경을 설정 하는 방법에 대 한 자세한 내용은 [시작](get-started/index.md)을 참조 하세요.
 
 F#에 함수(function)와 유형(type)이라는 두 가지 기본 개념이 있습니다.  둘러보기에서는 이 두 가지 개념에 해당하는 언어의 기능을 강조합니다.
 
 ## <a name="executing-the-code-online"></a>온라인에서 코드 실행
 
-컴퓨터에가 설치 F# 되어 있지 않은 경우에는 [Weasembmba를 사용해 보세요 F# ](https://tryfsharp.fsbolero.io/). Fable은 F#과 유사하며 브라우저에서 직접 실행할 수 있습니다. REPL에서 다음에 나오는 예제를 보기 위해서는 Fable REPL의 왼쪽 메뉴 바에서 **Samples > Learn > Tour of F#** 를 확인하세요.
+컴퓨터에가 설치 F# 되어 있지 않은 경우에는 [Weasembmba를 사용해 보세요 F# ](https://tryfsharp.fsbolero.io/). Fable은 F#과 유사하며 브라우저에서 직접 실행할 수 있습니다. Repl에서 팔 로우 하는 예제를 보려면 fable repl의 왼쪽 메뉴 모음에서 **샘플 F# >** 확인 하 여 > 둘러보기를 확인 합니다.
 
 ## <a name="functions-and-modules"></a>함수와 모듈
 
-F# 프로그램의 가장 기본적인 부분은 ***모듈***로 구성된 ***함수***입니다.  [함수](./language-reference/functions/index.md)는 입력에 대한 작업으로 출력을 생성하고, F#에서 작업을 그룹화하는 기본 방식인 [모듈](./language-reference/modules.md)로 구성됩니다.  [`let` 바인딩](./language-reference/functions/let-bindings.md)을 사용하여 정의하며, 함수 이름을 지정하고 해당 인수를 정의할 수 있습니다.
+F# 프로그램의 가장 기본적인 부분은 ***모듈로***구성 된 ***함수*** 입니다.  [함수](./language-reference/functions/index.md) 는 입력에 대 한 작업을 수행 하 여 출력을 생성 [Modules](./language-reference/modules.md)하며, 이러한 함수는 항목을 그룹화 하는 기본 F#방법인 모듈 아래에 구성 됩니다.  이는 함수에 이름을 지정 하 고 인수를 정의 하는 [`let` 바인딩을](./language-reference/functions/let-bindings.md)사용 하 여 정의 됩니다.
 
 [!code-fsharp[BasicFunctions](~/samples/snippets/fsharp/tour.fs#L101-L133)]
 
@@ -31,7 +31,7 @@ F# 프로그램의 가장 기본적인 부분은 ***모듈***로 구성된 ***�
 
 ## <a name="numbers-booleans-and-strings"></a>숫자, 부울 및 문자열
 
-.NET 언어로, F# 지원 동일한 기본 [기본 형식](language-reference/basic-types.md) .NET에 존재 하는 합니다.
+.NET 언어는 .NET에 F# 존재 하는 동일한 기본 [기본 형식을](language-reference/basic-types.md) 지원 합니다.
 
 다양 한 숫자 형식은 F#의 표현 됩니다 다음과 같습니다.
 
@@ -47,11 +47,11 @@ F# 프로그램의 가장 기본적인 부분은 ***모듈***로 구성된 ***�
 
 ## <a name="tuples"></a>튜플
 
-[튜플](./language-reference/tuples.md) F#에서는 큰 문제가 됩니다.  값 자체로 처리 될 수 있는 명명 되지 않았지만 순서가 지정 된 값의 그룹입니다.  이러한 값을 다른 값에서 집계 된 값으로 간주 합니다.  함수에서 여러 값을 편리 하 게 반환 하거나 일부 임시 편의를 위해 값을 그룹화 하는 등의 여러 가지 용도로 사용 됩니다.
+[튜플은](./language-reference/tuples.md) 큰 거래 F#입니다.  값 자체로 처리 될 수 있는 명명 되지 않았지만 순서가 지정 된 값의 그룹입니다.  이러한 값을 다른 값에서 집계 된 값으로 간주 합니다.  함수에서 여러 값을 편리 하 게 반환 하거나 일부 임시 편의를 위해 값을 그룹화 하는 등의 여러 가지 용도로 사용 됩니다.
 
 [!code-fsharp[Tuples](~/samples/snippets/fsharp/tour.fs#L186-L203)]
 
-F# 4.1을 기준으로 만들 수도 있습니다 `struct` 튜플.  또한 튜플도 `struct` c # 7/Visual Basic 15 튜플로 완전히 상호 운용 됩니다.
+`struct` 튜플을 만들 수도 있습니다.  또한 튜플도 `struct` c # 7/Visual Basic 15 튜플로 완전히 상호 운용 됩니다.
 
 [!code-fsharp[Tuples](~/samples/snippets/fsharp/tour.fs#L205-L218)]
 
@@ -59,11 +59,11 @@ F# 4.1을 기준으로 만들 수도 있습니다 `struct` 튜플.  또한 튜�
 
 ## <a name="pipelines-and-composition"></a>파이프라인 및 컴퍼지션
 
-와 같은 연산자를 파이프할 `|>` F#의 데이터를 처리 하는 경우 널리 사용 됩니다. 이러한 연산자는 함수에 대 한 "파이프라인"을 유연 하 게 설정할 수 있도록 하는 함수입니다. 다음 예제에서는 이러한 연산자를 활용 하 여 간단한 함수 파이프라인을 만드는 방법을 안내 합니다.
+`|>`와 같은 파이프 연산자는에서 F#데이터를 처리할 때 광범위 하 게 사용 됩니다. 이러한 연산자는 함수에 대 한 "파이프라인"을 유연 하 게 설정할 수 있도록 하는 함수입니다. 다음 예제에서는 이러한 연산자를 활용 하 여 간단한 함수 파이프라인을 만드는 방법을 안내 합니다.
 
 [!code-fsharp[Pipelines](~/samples/snippets/fsharp/tour.fs#L227-L282)]
 
-앞의 예제 수 목록 처리 함수를 첫 번째 클래스 함수를 포함 하 여 F#의 많은 기능을 사용 하 고 [부분 응용 프로그램](./language-reference/functions/index.md#partial-application-of-arguments)합니다. 이러한 각 개념에 대 한 심층적인 이해는 다소 고급이 될 수 있지만 파이프라인을 빌드할 때 쉽게 함수를 사용 하 여 데이터를 처리할 수 있는지 명확 하 게 이해 해야 합니다.
+위의 샘플에서는 목록 처리 함수, 첫 번째 F#클래스 함수 및 [부분 응용 프로그램](./language-reference/functions/index.md#partial-application-of-arguments)을 포함 하 여의 여러 기능을 사용 했습니다. 이러한 각 개념에 대 한 심층적인 이해는 다소 고급이 될 수 있지만 파이프라인을 빌드할 때 쉽게 함수를 사용 하 여 데이터를 처리할 수 있는지 명확 하 게 이해 해야 합니다.
 
 ## <a name="lists-arrays-and-sequences"></a>목록, 배열 및 시퀀스
 
@@ -83,7 +83,7 @@ F# 4.1을 기준으로 만들 수도 있습니다 `struct` 튜플.  또한 튜�
 
 ## <a name="recursive-functions"></a>재귀 함수
 
-컬렉션 또는 요소의 시퀀스로 처리는 사용 하 여 일반적으로 수행 됩니다 [재귀](./language-reference/functions/index.md#recursive-functions) F#에 있습니다.  F#에 루프 및 명령형 프로그래밍에 대 한 지원으로 재귀는 정확성을 보장 하기 위해 더 쉽기 때문에 기본 설정 합니다.
+컬렉션 또는 요소의 시퀀스를 처리 하는 작업은 [recursion](./language-reference/functions/index.md#recursive-functions) 일반적으로 F#에서 재귀를 사용 하 여 수행 됩니다.  F#에 루프 및 명령형 프로그래밍에 대 한 지원으로 재귀는 정확성을 보장 하기 위해 더 쉽기 때문에 기본 설정 합니다.
 
 > [!NOTE]
 > 다음 예제에서는 `match` 식을 통해 패턴 일치를 사용 합니다.  이 기본 구문은이 문서의 뒷부분에 설명 되어 있습니다.
@@ -100,7 +100,7 @@ F# 또한가 마무리 호출 최적화에 대 한 전체 지원 있습니다 �
 
 [!code-fsharp[Records](~/samples/snippets/fsharp/tour.fs#L507-L559)]
 
-F# 4.1을 기준으로 나타낼 수도 있습니다 레코드는 `struct`s입니다.  `[<Struct>]` 특성을 사용 하 여 수행 됩니다.
+레코드를 구조체로 나타낼 수도 있습니다. `[<Struct>]` 특성을 사용 하 여 수행 됩니다.
 
 [!code-fsharp[Records](~/samples/snippets/fsharp/tour.fs#L561-L568)]
 
@@ -133,11 +133,15 @@ Du를 사용 하면 데이터 형식에서 트리의 재귀 구조를 나타낼 
 
 ## <a name="pattern-matching"></a>패턴 일치
 
-[일치 패턴](./language-reference/pattern-matching.md) 기능은 F# 언어는 F# 형식에서 작동 하는 것에 대 한 정확성을 사용 하도록 설정 합니다.  위의 샘플에서 상당히 많은 `match x with ...` 구문을 알게 되었을 것입니다.  이 구문을 사용 하면 컴파일러가 데이터 형식의 "셰이프"를 이해할 수 있으므로 전체 패턴 일치를 통해 데이터 형식을 사용 하는 경우 가능한 모든 사례를 설명할 수 있습니다.  이는 정확성을 위해 매우 강력 하며, 일반적으로 컴파일 시간에 대 한 런타임 문제를 "리프트" 하는 데 사용 되는 영리 수 있습니다.
+[패턴 일치](./language-reference/pattern-matching.md) 는 형식 F# 에 F# 대 한 작업을 정확 하 게 수행할 수 있도록 하는 언어 기능입니다.  위의 샘플에서 상당히 많은 `match x with ...` 구문을 알게 되었을 것입니다.  이 구문을 사용 하면 컴파일러가 데이터 형식의 "셰이프"를 이해할 수 있으므로 전체 패턴 일치를 통해 데이터 형식을 사용 하는 경우 가능한 모든 사례를 설명할 수 있습니다.  이는 정확성을 위해 매우 강력 하며, 일반적으로 컴파일 시간에 대 한 런타임 문제를 "리프트" 하는 데 사용 되는 영리 수 있습니다.
 
 [!code-fsharp[PatternMatching](~/samples/snippets/fsharp/tour.fs#L705-L742)]
 
 `_` 패턴을 사용 하는 것이 무엇 인지 알 수 있습니다.  이를 [와일드 카드 패턴](./language-reference/pattern-matching.md#wildcard-pattern)이라고 하며,이 패턴은 "무엇이 무엇 인지 걱정할 필요가 없습니다." 라는 방법입니다.  매우 편리 하지만 `_`를 사용 하는 데 익숙하지 않은 경우에는 실수로 완전 한 패턴 일치를 무시 하 고 컴파일 시간 사항을 더 이상 혜택을 받지 않을 수 있습니다.  패턴 일치의 경우 분해 된 형식의 특정 부분을 고려 하지 않거나 패턴 일치 식에 모든 의미 있는 사례를 열거 한 경우에 가장 적합 합니다.
+
+다음 예제에서는 구문 분석 작업이 실패 하는 경우 `_` 사례가 사용 됩니다.
+
+[!code-fsharp[PatternMatching](~/samples/snippets/fsharp/tour.fs#L744-L762)]
 
 [활성 패턴](./language-reference/active-patterns.md) 은 패턴 일치에 사용할 수 있는 또 다른 강력한 구문입니다.  입력 데이터를 사용자 지정 형식으로 분할 하 여 패턴 일치 호출 사이트에서 분해 수 있습니다.  매개 변수화 될 수도 있으므로 파티션을 함수로 정의할 수 있습니다.  활성 패턴을 지원 하기 위해 이전 예제를 확장 하는 것은 다음과 같습니다.
 
@@ -163,7 +167,7 @@ F# 핵심 라이브러리는 많은 SI 단위 유형 및 변환 단위를 정의
 
 ## <a name="classes-and-interfaces"></a>클래스 및 인터페이스
 
-F#에.NET 클래스에 대 한 전체 지원을 [인터페이스](./language-reference/interfaces.md), [추상 클래스](./language-reference/abstract-classes.md)합니다 [상속](./language-reference/inheritance.md)등.
+F#또한에는 .NET 클래스, [인터페이스](./language-reference/interfaces.md), [추상 클래스](./language-reference/abstract-classes.md), [상속](./language-reference/inheritance.md)등에 대 한 모든 지원이 있습니다.
 
 [클래스](./language-reference/classes.md) 는 속성, 메서드 및 이벤트를 [멤버로](./language-reference/members/index.md)가질 수 있는 .net 개체를 나타내는 형식입니다.
 
@@ -195,4 +199,4 @@ F#에.NET 클래스에 대 한 전체 지원을 [인터페이스](./language-ref
 
 자세한 정보를 얻기 위한 다음 단계는 원하는 대로 지정할 수 있지만 핵심 함수형 프로그래밍 개념에 익숙해지면 [의 F# 함수형 프로그래밍에 대해 소개](./introduction-to-functional-programming/index.md) 하는 것이 좋습니다.  이러한 강력한 프로그램 F# 빌드에 필수적인 됩니다.
 
-또한 체크 아웃 합니다 [F# 언어 참조](./language-reference/index.md) F#에서 광범위 한 개념적 콘텐츠를 보려면.
+또한 [ F# 언어 참조](./language-reference/index.md) 를 확인 하 여에 대 F#한 포괄적인 개념 콘텐츠 컬렉션을 확인 하세요.

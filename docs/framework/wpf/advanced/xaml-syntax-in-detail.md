@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 2c6a8662236b614545e7fb8545b7b60e1b08b6bd
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 38c77086075e79c0ec5b4b1564ed753eded23b34
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559835"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124496"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 구문 정보
 이 항목에서는 XAML 구문의 요소를 설명 하는 데 사용 되는 용어를 정의 합니다. 이러한 용어는이 설명서의 나머지 부분 전체에서 자주 사용 됩니다. WPF 설명서와 XAML을 사용 하는 다른 프레임 워크 또는 system.xaml 수준에서 XAML 언어 지원에 의해 설정 된 기본 XAML 개념에 대해 자주 사용 됩니다. 이 항목에서는 [XAML 개요 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)항목에서 소개 하는 기본 용어를 확장 합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "75559835"
 ## <a name="the-xaml-language-specification"></a>XAML 언어 사양  
  여기에 정의 된 XAML 구문 용어는 XAML 언어 사양 내 에서도 정의 되거나 참조 됩니다. XAML은 XML을 기반으로 하는 언어 이며 XML 구조 규칙에 따라 다음을 수행 하거나 확장 합니다. 일부 용어는에서 공유 되거나 XML 언어 또는 XML 문서 개체 모델을 설명할 때 일반적으로 사용 되는 용어를 기반으로 합니다.  
   
- XAML 언어 사양에 대 한 자세한 내용을 보려면 Microsoft 다운로드 센터에서 [\[MS-xaml\]](https://go.microsoft.com/fwlink/?LinkId=114525) 를 다운로드 하세요.  
+ XAML 언어 사양에 대 한 자세한 내용을 보려면 Microsoft 다운로드 센터에서 [\[MS-xaml\]](https://download.microsoft.com/download/0/A/6/0A6F7755-9AF5-448B-907D-13985ACCF53E/[MS-XAML].pdf) 를 다운로드 하세요.  
   
 <a name="xaml_and_clr"></a>   
 ## <a name="xaml-and-clr"></a>XAML 및 CLR  
@@ -247,7 +247,7 @@ ms.locfileid: "75559835"
  XAML 네임 스페이스에 대 한 자세한 내용은 [WPF xaml을 위한 Xaml 네임 스페이스 및 네임 스페이스 매핑](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)을 참조 하세요.  
   
 <a name="markup_extensions"></a>   
-## <a name="markup-extensions"></a>태그 확장  
+## <a name="markup-extensions"></a>태그 확장명  
  XAML은 문자열 특성 값 또는 개체 요소의 일반적인 XAML 프로세서 처리에서 이스케이프할 수 있도록 하 고 지원 클래스에 대 한 처리를 지연 하는 태그 확장 프로그래밍 엔터티를 정의 합니다. 특성 구문을 사용 하는 경우 XAML 프로세서에 대 한 태그 확장을 식별 하는 문자는 여는 중괄호 ({)와 닫는 중괄호 (}) 이외의 모든 문자를 나타냅니다. 여는 중괄호 뒤의 첫 번째 문자열은 특정 확장 동작을 제공 하는 클래스를 참조 해야 합니다 .이 경우에는 해당 하위 문자열이 진정한 클래스 이름의 일부인 경우 참조에서 하위 문자열 "Extension"을 생략할 수 있습니다. 이후에는 단일 공간이 나타날 수 있으며, 그 다음에 나오는 각 문자는 닫는 중괄호가 나타날 때까지 확장 구현에서 입력으로 사용 됩니다.  
   
  .NET XAML 구현에서는 <xref:System.Windows.Markup.MarkupExtension> 추상 클래스를 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 뿐만 아니라 다른 프레임 워크 나 기술에 의해 지원 되는 모든 태그 확장의 기반으로 사용 합니다. 특히을 구현 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 하는 태그 확장은 다른 기존 개체를 참조 하거나 런타임에 계산 될 개체에 대해 지연 된 참조를 제공 하는 방법을 제공 하는 데 사용 되는 경우가 많습니다. 예를 들어 특정 속성에 일반적으로 사용 되는 값 대신 `{Binding}` 태그 확장을 지정 하 여 간단한 WPF 데이터 바인딩을 수행 합니다. 대부분의 WPF 태그 확장은 특성 구문이 가능 하지 않은 속성에 대 한 특성 구문을 사용 합니다. 예를 들어 <xref:System.Windows.Style> 개체는 중첩 된 일련의 개체 및 속성을 포함 하는 비교적 복잡 한 형식입니다. WPF의 스타일은 일반적으로 <xref:System.Windows.ResourceDictionary>의 리소스로 정의 된 다음, 리소스를 요청 하는 두 개의 WPF 태그 확장 중 하나를 통해 참조 됩니다. 태그 확장은 리소스 조회에 대 한 속성 값의 계산을 지연 하 고 다음 예제와 같이 특성 구문에서 형식 <xref:System.Windows.Style>를 사용 하 여 <xref:System.Windows.FrameworkElement.Style%2A> 속성의 값을 제공 합니다.  
@@ -313,7 +313,7 @@ ms.locfileid: "75559835"
   
  하지만 *typeName*과 동일 합니다. *memberName* 특성에 대 한 형식 *basetypename*. *memberName* 가 태그에서 잘못 된 스타일 이므로이를 방지 해야 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [XAML 개요(WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [XAML 네임스페이스(x:) 언어 기능](../../../desktop-wpf/xaml-services/namespace-language-features.md)

@@ -7,24 +7,24 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: 1fdc0c9ccf1464d7519a4c5935520de1206ca9bb
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0aecde96d182e12ab72b1a6cba129ab1d8a28391
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794154"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123781"
 ---
 # <a name="walkthrough-host-a-wpf-clock-in-win32"></a>연습: Win32에서 WPF 시계 호스팅
 
 Win32 응용 프로그램 내에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]을 추가 하려면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠를 포함 하는 HWND를 제공 하는 <xref:System.Windows.Interop.HwndSource>을 사용 합니다. 먼저 <xref:System.Windows.Interop.HwndSource>를 만들어 CreateWindow와 유사한 매개 변수를 제공 합니다. 그런 다음 <xref:System.Windows.Interop.HwndSource> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠에 대 한 정보를 알려 줍니다. 마지막으로 <xref:System.Windows.Interop.HwndSource>의 HWND를 가져옵니다. 이 연습에서는 운영 체제 **날짜 및 시간 속성** 대화 상자를 다시 구현 하는 Win32 응용 프로그램 내에서 혼합 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]을 만드는 방법을 보여 줍니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 [WPF 및 Win32 상호 운용성을](wpf-and-win32-interoperation.md)참조 하세요.
 
-## <a name="how-to-use-this-tutorial"></a>이 자습서의 사용 방법
+## <a name="how-to-use-this-tutorial"></a>이 자습서를 사용하는 방법
 
-이 자습서는 상호 운용 애플리케이션을 생성하는 중요한 단계에 대해 중점적으로 설명합니다. 이 자습서는 [Win32 클록 상호 운용성 샘플](https://go.microsoft.com/fwlink/?LinkID=160051)샘플에서 지원 되지만이 샘플은 최종 제품을 반영 합니다. 이 자습서에서는 기존 프로젝트와 같은 기존 Win32 프로젝트를 사용 하 여 시작 하 고 응용 프로그램에 호스트 된 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 추가 하는 것 처럼 단계를 문서화 합니다. 최종 제품을 [Win32 클록 상호 운용 샘플과](https://go.microsoft.com/fwlink/?LinkID=160051)비교할 수 있습니다.
+이 자습서는 상호 운용 애플리케이션을 생성하는 중요한 단계에 대해 중점적으로 설명합니다. 이 자습서는 [Win32 클록 상호 운용성 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32Clock)샘플에서 지원 되지만이 샘플은 최종 제품을 반영 합니다. 이 자습서에서는 기존 프로젝트와 같은 기존 Win32 프로젝트를 사용 하 여 시작 하 고 응용 프로그램에 호스트 된 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 추가 하는 것 처럼 단계를 문서화 합니다. 최종 제품을 [Win32 클록 상호 운용 샘플과](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32Clock)비교할 수 있습니다.
 
 ## <a name="a-walkthrough-of-windows-presentation-framework-inside-win32-hwndsource"></a>Win32 내에서 Windows Presentation Framework의 연습(HwndSource)
 
@@ -232,10 +232,10 @@ HWND clock = ManagedCode::GetHwnd(hDlg, point.x, point.y, width, height);
 
 ![최종 결과 날짜 및 시간 속성 대화 상자](./media/walkthrough-hosting-a-wpf-clock-in-win32/final-result-date-time-properties-dialog.png)
 
-최종 결과를이 스크린샷을 생성 한 코드와 비교 하려면 [Win32 클록 상호 운용성 샘플](https://go.microsoft.com/fwlink/?LinkID=160051)을 참조 하세요.
+최종 결과를이 스크린샷을 생성 한 코드와 비교 하려면 [Win32 클록 상호 운용성 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32Clock)을 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Interop.HwndSource>
 - [WPF 및 Win32 상호 운용성](wpf-and-win32-interoperation.md)
-- [Win32 시계 상호 운용 샘플](https://go.microsoft.com/fwlink/?LinkID=160051)
+- [Win32 시계 상호 운용 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32Clock)

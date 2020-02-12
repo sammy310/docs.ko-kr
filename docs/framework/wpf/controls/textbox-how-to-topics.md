@@ -7,15 +7,15 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF], how-to topics
 ms.assetid: 006aa461-fe37-4cd8-860a-d38d76e8b9f7
-ms.openlocfilehash: d3d5116a2fa2198661050a1c1adbae9512cd078a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82da07620135224b5f7353f2acce087d939c1855
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790886"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124236"
 ---
 # <a name="textbox-how-to-topics"></a>TextBox 방법 항목
-이 섹션에서는 사용 하 여 일반적인 작업을 수행 하는 방법을 보여 주는 예제를 제공 합니다 <xref:System.Windows.Controls.TextBox> 제어 합니다.  
+이 섹션에서는 <xref:System.Windows.Controls.TextBox> 컨트롤을 사용 하 여 일반적인 작업을 수행 하는 방법을 보여 주는 예제를 제공 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [여러 줄 TextBox 컨트롤 만들기](how-to-create-a-multiline-textbox-control.md)  
@@ -41,7 +41,7 @@ ms.locfileid: "61790886"
   
  <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053)(WPF 컨트롤 갤러리 샘플)
+- [WPF Controls Gallery Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)(WPF 컨트롤 갤러리 샘플)
 - [TextBox 스타일 및 템플릿](textbox-styles-and-templates.md)

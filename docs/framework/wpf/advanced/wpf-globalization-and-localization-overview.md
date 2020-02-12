@@ -5,20 +5,20 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 9be6245d7429466490d9dac93c5b94d70bde30bd
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 665daa14b543a357b17747a7d9d34dac2224711d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744482"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124561"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 전역화 및 지역화 개요
 
-제품을 한 언어로만 제공하면 잠재적 고객 기반이 전 세계 65억 인구의 극히 일부로만 제한됩니다. 전 세계를 대상으로 하는 애플리케이션을 만들려는 경우 가장 뛰어나고 경제적으로 고객에게 다가갈 수 있는 방법 중 하나는 바로 제품의 비용 효율적인 지역화입니다.
+제품의 가용성을 한 언어로 제한 하면 전 세계 75억 모집단의 분수로 잠재적 고객 기반을 제한할 수 있습니다. 전 세계를 대상으로 하는 애플리케이션을 만들려는 경우 가장 뛰어나고 경제적으로 고객에게 다가갈 수 있는 방법 중 하나는 바로 제품의 비용 효율적인 지역화입니다.
 
 이 개요에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]의 세계화 및 지역화를 소개 합니다. 전역화는 여러 위치에서 수행되는 애플리케이션의 디자인 및 개발 작업입니다. 예를 들어 전역화는 여러 문화권의 사용자를 위해 지역화된 사용자 인터페이스와 국가별 데이터를 지원합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]은 자동 레이아웃, 위성 어셈블리, 지역화 된 특성 및 주석 달기를 포함 하 여 세계화 된 디자인 기능을 제공 합니다.
 
-지역화는 애플리케이션 리소스를 애플리케이션에서 지원할 각 문화권에 맞는 지역화된 버전으로 번역하는 작업입니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 지역화할 때 <xref:System.Windows.Markup.Localizer> 네임 스페이스에서 Api를 사용 합니다. 이러한 Api는 [LocBaml 도구 샘플](https://go.microsoft.com/fwlink/?LinkID=160016) 명령줄 도구를 구동 합니다. LocBaml을 빌드 및 사용 하는 방법에 대 한 자세한 내용은 [응용 프로그램 지역화](how-to-localize-an-application.md)를 참조 하세요.
+지역화는 애플리케이션 리소스를 애플리케이션에서 지원할 각 문화권에 맞는 지역화된 버전으로 번역하는 작업입니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 지역화할 때 <xref:System.Windows.Markup.Localizer> 네임 스페이스에서 Api를 사용 합니다. 이러한 Api는 [LocBaml 도구 샘플](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml) 명령줄 도구를 구동 합니다. LocBaml을 빌드 및 사용 하는 방법에 대 한 자세한 내용은 [응용 프로그램 지역화](how-to-localize-an-application.md)를 참조 하세요.
 
 ## <a name="best-practices-for-globalization-and-localization-in-wpf"></a>WPF를 위한 최선의 전역화 및 지역화 방법
 
@@ -48,7 +48,7 @@ ms.locfileid: "76744482"
 
 - 오른쪽에서 왼쪽 형식으로 텍스트를 표시 하는 문화권으로 지역화할 수 있는 탐색 응용 프로그램을 만드는 경우 페이지에서 <xref:System.Windows.Navigation.NavigationWindow><xref:System.Windows.FlowDirection>를 상속 하지 않도록 모든 페이지의 <xref:System.Windows.FlowDirection>을 명시적으로 설정 합니다.
 
-- 브라우저 외부에서 호스트 되는 독립 실행형 탐색 응용 프로그램을 만드는 경우 초기 응용 프로그램의 <xref:System.Windows.Application.StartupUri%2A>을 페이지가 아닌 <xref:System.Windows.Navigation.NavigationWindow> (예: `<Application StartupUri="NavigationWindow.xaml">`)로 설정 합니다. 이 디자인을 사용 하면 창과 탐색 모음의 <xref:System.Windows.FlowDirection>를 변경할 수 있습니다. 자세한 내용 및 예제는 [세계화 홈 페이지 샘플](https://go.microsoft.com/fwlink/?LinkID=159990)을 참조 하세요.
+- 브라우저 외부에서 호스트 되는 독립 실행형 탐색 응용 프로그램을 만드는 경우 초기 응용 프로그램의 <xref:System.Windows.Application.StartupUri%2A>을 페이지가 아닌 <xref:System.Windows.Navigation.NavigationWindow> (예: `<Application StartupUri="NavigationWindow.xaml">`)로 설정 합니다. 이 디자인을 사용 하면 창과 탐색 모음의 <xref:System.Windows.FlowDirection>를 변경할 수 있습니다. 자세한 내용 및 예제는 [세계화 홈 페이지 샘플](https://github.com/microsoft/WPF-Samples/tree/master/Globalization%20and%20Localization/GlobalizationHomepage)을 참조 하세요.
 
 ### <a name="best-practices-for-wpf-localization"></a>WPF 지역화 모범 사례
 
@@ -64,7 +64,7 @@ ms.locfileid: "76744482"
 
   - 중복 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 속성을 사용 하지 마십시오 (복사 및 붙여넣기 명령을 사용 하는 경우이 팁을 명심).
 
-  - AssemblyInfo. *에 `UltimateResourceFallback` 위치를 설정 하 여 대체에 적절 한 언어를 지정 합니다 (예: `[assembly: NeutralResourcesLanguage("en-US",   UltimateResourceFallbackLocation.Satellite)]`).
+  - AssemblyInfo의 `UltimateResourceFallback` 위치를 설정 합니다. 대체 (예: `[assembly: NeutralResourcesLanguage("en-US",   UltimateResourceFallbackLocation.Satellite)]`)에 적절 한 언어를 지정 하려면\* 합니다.
 
     프로젝트 파일에 `<UICulture>` 태그를 생략 하 여 주 어셈블리에 소스 언어를 포함 하려는 경우 `UltimateResourceFallback` 위치를 위성이 아닌 주 어셈블리 (예: `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.MainAssembly)]`)로 설정 합니다.
 
@@ -102,7 +102,7 @@ ms.locfileid: "76744482"
 
 이 섹션에는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램을 빌드하고 지역화 하는 방법을 이해할 수 있도록 지역화 된 응용 프로그램의 예가 포함 되어 있습니다.
 
-#### <a name="run-dialog-box-example"></a>실행 대화 상자 예제
+### <a name="run-dialog-box-example"></a>실행 대화 상자 예제
 
 다음 그림은 **실행** 대화 상자 샘플의 출력을 보여 줍니다.
 
@@ -172,7 +172,7 @@ ms.locfileid: "76744482"
 
 **구문 분석**
 
-애플리케이션을 빌드한 후 지역화의 첫 번째 단계는 위성 어셈블리에서 지역화할 수 있는 리소스를 구문 분석하는 것입니다. 이 항목에서는 [Locbaml 도구 샘플](https://go.microsoft.com/fwlink/?LinkID=160016)에서 찾을 수 있는 샘플 locbaml 도구를 사용 합니다. LocBaml은 지역화 프로세스에 적합한 지역화 도구의 빌드에 도움을 주기 위한 샘플 도구입니다. LocBaml을 사용 하 여 다음을 실행 하 여 **locbaml/Parse RunDialog. .resources/out:** "RUNDIALOG. .csv" 파일을 생성 합니다.
+애플리케이션을 빌드한 후 지역화의 첫 번째 단계는 위성 어셈블리에서 지역화할 수 있는 리소스를 구문 분석하는 것입니다. 이 항목에서는 [Locbaml 도구 샘플](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml)에서 찾을 수 있는 샘플 locbaml 도구를 사용 합니다. LocBaml은 지역화 프로세스에 적합한 지역화 도구의 빌드에 도움을 주기 위한 샘플 도구입니다. LocBaml을 사용 하 여 다음을 실행 하 여 **locbaml/Parse RunDialog. .resources/out:** "RUNDIALOG. .csv" 파일을 생성 합니다.
 
 **지역화**
 
@@ -184,9 +184,9 @@ ms.locfileid: "76744482"
 |Button_2:System.Windows.Controls.Button.$Content|단추|취소|
 |Button_3:System.Windows.Controls.Button.$Content|단추|찾아보기...|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|프로그램, 폴더, 문서 또는 인터넷 리소스의 이름을 입력하면 Windows에서 열립니다.|
-|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|열기:|
-|Window_1:System.Windows.Window.Title|제목|Run|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|텍스트|프로그램, 폴더, 문서 또는 인터넷 리소스의 이름을 입력하면 Windows에서 열립니다.|
+|TextBlock_2:System.Windows.Controls.TextBlock.$Content|텍스트|미해결:|
+|Window_1:System.Windows.Window.Title|제목|다음을 실행합니다.|
 
 애플리케이션을 독일어로 지역화하려면 다음과 같이 번역해야 합니다.
 
@@ -196,9 +196,9 @@ ms.locfileid: "76744482"
 |Button_2:System.Windows.Controls.Button.$Content|단추|Abbrechen|
 |Button_3:System.Windows.Controls.Button.$Content|단추|Durchsuchen…|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|Geben Sie den Namen eines Programms, Ordners, Dokuments oder einer Internetresource an.|
-|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|열기:|
-|Window_1:System.Windows.Window.Title|제목|Run|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|텍스트|Geben Sie den Namen eines Programms, Ordners, Dokuments oder einer Internetresource an.|
+|TextBlock_2:System.Windows.Controls.TextBlock.$Content|텍스트|열기:|
+|Window_1:System.Windows.Window.Title|제목|다음을 실행합니다.|
 
 **Generate**
 
@@ -215,7 +215,7 @@ ms.locfileid: "76744482"
 |코드|원본 영어 BAML|지역화된 BAML|
 |문화권에 중립적인 리소스|영어로 된 기타 리소스|독일어로 지역화된 기타 리소스|
 
-.NET framework는 응용 프로그램의 `Thread.CurrentThread.CurrentUICulture`을 기반으로 로드할 위성 리소스 어셈블리를 자동으로 선택 합니다. 기본값은 Windows OS의 문화권입니다. 따라서 독일어 창을 사용 하는 경우 de-DE\MyDialog.resources.dll가 로드 되 고 영어 창을 사용 하는 경우 en-US\MyDialog.resources.dll가 로드 됩니다. 프로젝트의 AssemblyInfo.*에 NeutralResourcesLanguage를 지정하여 애플리케이션에 대한 최종 대체 리소스를 설정할 수 있습니다. 예를 들면 다음과 같이 지정할 수 있습니다.
+.NET framework는 응용 프로그램의 `Thread.CurrentThread.CurrentUICulture`을 기반으로 로드할 위성 리소스 어셈블리를 자동으로 선택 합니다. 기본값은 Windows OS의 문화권입니다. 따라서 독일어 창을 사용 하는 경우 de-DE\MyDialog.resources.dll가 로드 되 고 영어 창을 사용 하는 경우 en-US\MyDialog.resources.dll가 로드 됩니다. 프로젝트의 AssemblyInfo에 NeutralResourcesLanguage를 지정 하 여 응용 프로그램에 대 한 최종 대체 (fallback) 리소스를 설정할 수 있습니다.\*. 예를 들면 다음과 같이 지정할 수 있습니다.
 
 `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]`
 
@@ -223,7 +223,7 @@ ms.locfileid: "76744482"
 
 ### <a name="microsoft-saudi-arabia-homepage"></a>Microsoft 사우디아라비아 홈페이지
 
-다음 그래픽에서는 영어 및 아랍어 홈페이지를 보여 줍니다. 이러한 그래픽을 생성 하는 전체 샘플은 [세계화 홈 페이지 샘플](https://go.microsoft.com/fwlink/?LinkID=159990)을 참조 하세요.
+다음 그래픽에서는 영어 및 아랍어 홈페이지를 보여 줍니다. 이러한 그래픽을 생성 하는 전체 샘플은 [세계화 홈 페이지 샘플](https://github.com/microsoft/WPF-Samples/tree/master/Globalization%20and%20Localization/GlobalizationHomepage)을 참조 하세요.
 
 **영어:**
 
@@ -261,7 +261,7 @@ ms.locfileid: "76744482"
 
 **지역화 주석**
 
-콘텐츠가 모호하여 번역하기 어려운 경우도 많이 있습니다. 개발자나 디자이너는 지역화 주석을 통해 지역화 담당자에게 추가적인 컨텍스트 및 주석을 제공할 수 있습니다. 예를 들어 아래의 Localization.Comments에서는 문자 ‘&#124;’의 사용을 명확하게 설명합니다.
+콘텐츠가 모호하여 번역하기 어려운 경우도 많이 있습니다. 개발자나 디자이너는 지역화 주석을 통해 지역화 담당자에게 추가적인 컨텍스트 및 주석을 제공할 수 있습니다. 예를 들어 아래 주석은 '&#124;' 문자를 사용 하는 것을 명확 하 게 보여줍니다.
 
 [!code-xaml[GlobalizationHomepage#LocalizationComment](~/samples/snippets/csharp/VS_Snippets_Wpf/GlobalizationHomepage/CS/Homepage.xaml#localizationcomment)]
 
@@ -269,7 +269,7 @@ ms.locfileid: "76744482"
 
 |리소스 키|Category|가독성|수정 가능성|주석|값|
 |-|-|-|-|-|-|
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|TRUE|TRUE|이 문자는 장식 규칙으로 사용됩니다.|&#124;|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|텍스트|TRUE|TRUE|이 문자는 장식 규칙으로 사용됩니다.|&#124;|
 
 다음 구문을 사용하여 주석을 요소의 속성 또는 콘텐츠에 배치할 수 있습니다.
 
@@ -277,7 +277,7 @@ ms.locfileid: "76744482"
 
 **지역화 특성**
 
-개발자 또는 지역화 관리자는 지역화 담당자가 읽고 수정할 수 있는 컨트롤을 필요로 할 수 있습니다. 예를 들어 회사 이름이나 법적 고지문은 번역하지 않아야 할 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 지역화 도구가 요소를 잠그거나, 숨기거나, 정렬할 때 사용할 수 있는 요소의 콘텐츠나 속성의 가독성, 수정 가능 여부 및 범주를 설정할 수 있는 특성을 제공합니다. 자세한 내용은 <xref:System.Windows.Localization.Attributes%2A>을 참조하세요. 이 샘플의 목적상 LocBaml 도구는 이러한 특성의 값만 출력합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤은 모두 이러한 특성에 대해 기본값을 사용하지만 이를 재정의할 수 있습니다. 예를 들어 다음 예제에서는 `TextBlock_1`에 대 한 기본 지역화 특성을 재정의 하 고 지역화 담당자가 콘텐츠를 읽을 수는 있지만 수정할 수 없도록 설정 합니다.
+개발자 또는 지역화 관리자는 지역화 담당자가 읽고 수정할 수 있는 컨트롤을 필요로 할 수 있습니다. 예를 들어 회사 이름이나 법적 고지문은 번역하지 않아야 할 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 지역화 도구에서 요소를 잠그거나, 숨기 거 나, 정렬 하는 데 사용할 수 있는 요소 내용 또는 속성의 가독성, 수정 가능 여부 및 범주를 설정 하는 데 사용할 수 있는 특성을 제공 합니다. 자세한 내용은 <xref:System.Windows.Localization.Attributes%2A>을 참조하세요. 이 샘플의 목적상 LocBaml 도구는 이러한 특성의 값만 출력합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤은 모두 이러한 특성에 대해 기본값을 사용하지만 이를 재정의할 수 있습니다. 예를 들어 다음 예제에서는 `TextBlock_1`에 대 한 기본 지역화 특성을 재정의 하 고 지역화 담당자가 콘텐츠를 읽을 수는 있지만 수정할 수 없도록 설정 합니다.
 
 [!code-xaml[LocalizationComAtt#LocalizationAttributes](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributes)]
 
@@ -285,7 +285,7 @@ ms.locfileid: "76744482"
 
 [!code-xaml[LocalizationComAtt#LocalizationAttributesOverridden](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributesoverridden)]
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 제공 하는 기본 지역화 특성은 코드를 통해 재정의할 수도 있으므로 사용자 지정 컨트롤에 대 한 올바른 기본값을 올바르게 설정할 수 있습니다. 예들 들어 다음과 같습니다.
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 제공 하는 기본 지역화 특성은 코드를 통해 재정의할 수도 있으므로 사용자 지정 컨트롤에 대 한 올바른 기본값을 올바르게 설정할 수 있습니다. 다음은 그 예입니다.
 
 ```csharp
 [Localizability(Readability = Readability.Readable, Modifiability=Modifiability.Unmodifiable, LocalizationCategory.None)]
@@ -305,4 +305,4 @@ public class CorporateLogo : TextBlock
 
 **Microsoft 홈페이지 지역화**
 
-실행 대화 상자와 동일한 단계를 사용하여 이 애플리케이션을 지역화할 수 있습니다. 아랍어의 지역화 된 .csv 파일은 [세계화 홈 페이지 샘플](https://go.microsoft.com/fwlink/?LinkID=159990)에서 사용할 수 있습니다.
+실행 대화 상자와 동일한 단계를 사용하여 이 애플리케이션을 지역화할 수 있습니다. 아랍어의 지역화 된 .csv 파일은 [세계화 홈 페이지 샘플](https://github.com/microsoft/WPF-Samples/tree/master/Globalization%20and%20Localization/GlobalizationHomepage)에서 사용할 수 있습니다.

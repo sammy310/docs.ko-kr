@@ -6,18 +6,18 @@ helpviewer_keywords:
 - presence of WPT [WPF], detecting
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-ms.openlocfilehash: c68daf2cb5687497e66ad3022ce42352a17ae0f7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 41010e615b6b3d10ebf6adc0e3f871873e94f409
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053445"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124457"
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>방법: .NET Framework 3.0 설치 여부 확인
 관리자가 시스템에 Microsoft .NET Framework 응용 프로그램을 배포 하려면 먼저 .NET Framework 런타임이 있는지 확인 해야 합니다. 이 항목에서는 관리자가 시스템에 .NET Framework 있는지 여부를 확인 하는 데 사용할 수 있는 HTML/JavaScript로 작성 된 스크립트를 제공 합니다.  
   
 > [!NOTE]
-> Microsoft .NET 프레임 워크 설치, 배포 및 검색에 대 한 자세한 내용은 [Microsoft .NET Framework 버전 3.0 배포](https://go.microsoft.com/fwlink/?LinkId=96739)에 대 한 설명을 참조 하세요.  
+> Microsoft .NET 프레임 워크 설치, 배포 및 검색에 대 한 자세한 내용은 [Microsoft .NET Framework 버전 3.0 배포](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480198(v=msdn.10))에 대 한 설명을 참조 하세요.  
   
 <a name="content_expiration"></a>   
 ## <a name="detect-the-net-clr-user-agent-string"></a>".NET CLR" 사용자 에이전트 문자열을 검색 합니다.  

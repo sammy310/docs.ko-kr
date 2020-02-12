@@ -12,14 +12,12 @@ helpviewer_keywords:
 - resources, for multiple platforms
 - targeting multiple platforms, resources for
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b32c2e354ea48e25ddb0aa561eb576cbfd89e3fb
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 3bf475117a85c2fced260dcc9460d55cd7007277
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204749"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123664"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>여러 플랫폼을 대상으로 하는 라이브러리의 앱 리소스
 .NET Framework [이식 가능한 클래스 라이브러리](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) 프로젝트 형식을 사용 하 여 여러 플랫폼에서 클래스 라이브러리의 리소스에 액세스할 수 있는지 확인할 수 있습니다. 이 프로젝트 형식은 Visual Studio 2012에서 사용할 수 있으며 .NET Framework 클래스 라이브러리의 이식 가능한 하위 집합을 대상으로 합니다. 이식 가능한 클래스 라이브러리를 사용 하면 데스크톱 앱, Silverlight 앱, Windows Phone 앱 및 Windows 8.x 스토어 앱에서 라이브러리에 액세스할 수 있습니다.
@@ -35,7 +33,7 @@ ms.locfileid: "74204749"
 
  이식 가능한 클래스 라이브러리 프로젝트에는 다음 표에 나열 된 네 개의 <xref:System.Resources.ResourceManager> 멤버가 포함 되어 있습니다. 이러한 생성자와 메서드를 사용하여 <xref:System.Resources.ResourceManager> 개체를 인스턴스화하고 문자열 리소스를 검색할 수 있습니다.
 
-|`ResourceManager` 멤버|설명|
+|`ResourceManager` 멤버|Description|
 |------------------------------|-----------------|
 |<xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29>|<xref:System.Resources.ResourceManager> 인스턴스를 만들어 지정한 어셈블리에서 발견되는 명명된 리소스 파일에 액세스합니다.|
 |<xref:System.Resources.ResourceManager.%23ctor%28System.Type%29>|지정한 형식에 해당하는 <xref:System.Resources.ResourceManager> 인스턴스를 만듭니다.|
@@ -63,7 +61,7 @@ ms.locfileid: "74204749"
 |HiredLength|12|
 |ID|ID|
 |ID.Length|12|
-|이름|이름|
+|속성|속성|
 |NameLength|25|
 |제목|직원 데이터베이스|
 
@@ -91,7 +89,7 @@ ms.locfileid: "74204749"
 |Hired|Date embauché|
 |HiredLength|16|
 |ID|ID|
-|이름|Nom|
+|속성|Nom|
 |제목|Base de données des employés|
 
  다음 코드는 `UILibrary` 클래스와 해당 리소스를 콘솔 모드 응용 프로그램에서 액세스하는 방법을 보여 줍니다. 콘솔 응용 프로그램 프로젝트에 추가 하려면 Uilibrary.dll에 대 한 참조가 필요 합니다.

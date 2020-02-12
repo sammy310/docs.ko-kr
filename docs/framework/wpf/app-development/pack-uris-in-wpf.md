@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: 0fec72bdedbcc2c84d8bc65e72391366e42d82be
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a98c97a4aa95fb956a2ca6d417e009a281a938b6
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739163"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124483"
 ---
 # <a name="pack-uris-in-wpf"></a>WPF의 Pack URI
 
@@ -44,7 +44,7 @@ WPF (Windows Presentation Foundation)에서 Uri (uniform resource identifier)는
 
 ## <a name="the-pack-uri-scheme"></a>Pack URI 체계
 
-Pack URI 체계는 콘텐츠를 구성 하 고 식별 하기 위한 모델을 설명 하는 OPC ( [Open 패키징 규칙](https://go.microsoft.com/fwlink/?LinkID=71255) ) 사양에서 사용 됩니다. 이 모델의 핵심 요소는 패키지 및 파트입니다. 여기서 *패키지* 는 하나 이상의 논리적 *파트*에 대 한 논리적 컨테이너입니다. 다음 그림에서는 이 개념을 보여 줍니다.
+Pack URI 체계는 콘텐츠를 구성 하 고 식별 하기 위한 모델을 설명 하는 OPC ( [Open 패키징 규칙](https://www.ecma-international.org/publications/standards/Ecma-376.htm) ) 사양에서 사용 됩니다. 이 모델의 핵심 요소는 패키지 및 파트입니다. 여기서 *패키지* 는 하나 이상의 논리적 *파트*에 대 한 논리적 컨테이너입니다. 다음 그림에서는 이 개념을 보여 줍니다.
 
 ![패키지 및 파트 다이어그램](./media/pack-uris-in-wpf/wpf-package-parts-diagram.png)
 
@@ -297,7 +297,7 @@ Pack URI를 확인 하는 한 가지 단순화는 코드를 리소스 및 콘텐
 
 ### <a name="using-pack-uris-in-markup"></a>태그에서 Pack URI 사용
 
-Pack uri를 사용 하 여 특성의 요소를 설정 하 여 태그에 pack URI를 지정 합니다. 예들 들어 다음과 같습니다.
+Pack uri를 사용 하 여 특성의 요소를 설정 하 여 태그에 pack URI를 지정 합니다. 다음은 그 예입니다.
 
 `<element attribute="pack://application:,,,/File.xaml" />`
 
@@ -334,7 +334,7 @@ Pack uri를 사용 하 여 특성의 요소를 설정 하 여 태그에 pack URI
 
 ### <a name="using-pack-uris-in-code"></a>코드에서 Pack URI 사용
 
-<xref:System.Uri> 클래스를 인스턴스화하고 pack URI를 매개 변수로 생성자에 전달 하 여 코드에서 pack URI를 지정 합니다. 다음 예제를 통해 볼 수 있습니다.
+<xref:System.Uri> 클래스를 인스턴스화하고 pack URI를 매개 변수로 생성자에 전달 하 여 코드에서 pack URI를 지정 합니다. 다음 예제에 이 내용이 나와 있습니다.
 
 ```csharp
 Uri uri = new Uri("pack://application:,,,/File.xaml");

@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: d77ce78fe914bf300c5b33019d7cf67aa4ad74c3
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: d0962793854a6066112eb987fbdb3f703617787f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291452"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124431"
 ---
 # <a name="panels-overview"></a>Panel 개요
 <xref:System.Windows.Controls.Panel> 요소는 요소의 크기와 크기, 위치 및 자식 콘텐츠의 정렬 등 요소의 렌더링을 제어 하는 구성 요소입니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 미리 정의 된 여러 <xref:System.Windows.Controls.Panel> 요소 뿐만 아니라 사용자 지정 <xref:System.Windows.Controls.Panel> 요소를 생성 하는 기능을 제공 합니다.  
   
- 이 항목에는 다음 섹션이 수록되어 있습니다.  
+ 이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   
 - [Panel 클래스](#Panels_view_from_10000_feet)  
   
@@ -64,16 +64,16 @@ ms.locfileid: "72291452"
   
 |요소 이름|UI 패널 여부|Description|  
 |------------------|---------------|-----------------|  
-|<xref:System.Windows.Controls.Canvas>|예|<xref:System.Windows.Controls.Canvas> 영역에 상대적인 좌표를 기준으로 자식 요소를 명시적으로 배치할 수 있는 영역을 정의 합니다.|  
-|<xref:System.Windows.Controls.DockPanel>|예|자식 요소를 서로 맞춰 가로 또는 세로로 정렬할 수 있는 영역을 정의합니다.|  
-|<xref:System.Windows.Controls.Grid>|예|열 및 행으로 구성되는 유연한 그리드 영역을 정의합니다. <xref:System.Windows.Controls.Grid>의 자식 요소는 <xref:System.Windows.FrameworkElement.Margin%2A> 속성을 사용 하 여 정확 하 게 배치할 수 있습니다.|  
-|<xref:System.Windows.Controls.StackPanel>|예|가로 또는 세로 방향으로 한 줄로 자식 요소를 정렬합니다.|  
-|<xref:System.Windows.Controls.Primitives.TabPanel>|아니요|<xref:System.Windows.Controls.TabControl>의 탭 단추 레이아웃을 처리 합니다.|  
-|<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|아니요|<xref:System.Windows.Controls.ToolBar> 컨트롤 내에 콘텐츠를 정렬 합니다.|  
-|<xref:System.Windows.Controls.Primitives.UniformGrid>|아니요|<xref:System.Windows.Controls.Primitives.UniformGrid>는 동일한 셀 크기를 모두 포함 하는 표 형태의 자식을 정렬 하는 데 사용 됩니다.|  
-|<xref:System.Windows.Controls.VirtualizingPanel>|아니요|자식 컬렉션을 "가상화"할 수 있는 패널의 기본 클래스를 제공합니다.|  
-|<xref:System.Windows.Controls.VirtualizingStackPanel>|예|가로 또는 세로 방향으로 한 줄로 콘텐츠를 정렬하고 가상화합니다.|  
-|<xref:System.Windows.Controls.WrapPanel>|예|<xref:System.Windows.Controls.WrapPanel>은 왼쪽에서 오른쪽으로 자식 요소를 배치 하 고 콘텐츠를 포함 하는 상자의 가장자리에 있는 다음 줄로 바꿉니다. 다음 정렬은 <xref:System.Windows.Controls.WrapPanel.Orientation%2A> 속성의 값에 따라 위쪽에서 아래쪽으로 또는 오른쪽에서 왼쪽으로 순차적으로 발생 합니다.|  
+|<xref:System.Windows.Controls.Canvas>|yes|<xref:System.Windows.Controls.Canvas> 영역에 상대적인 좌표를 기준으로 자식 요소를 명시적으로 배치할 수 있는 영역을 정의 합니다.|  
+|<xref:System.Windows.Controls.DockPanel>|yes|자식 요소를 서로 맞춰 가로 또는 세로로 정렬할 수 있는 영역을 정의합니다.|  
+|<xref:System.Windows.Controls.Grid>|yes|열 및 행으로 구성되는 유연한 그리드 영역을 정의합니다. <xref:System.Windows.Controls.Grid>의 자식 요소는 <xref:System.Windows.FrameworkElement.Margin%2A> 속성을 사용 하 여 정확 하 게 배치할 수 있습니다.|  
+|<xref:System.Windows.Controls.StackPanel>|yes|가로 또는 세로 방향으로 한 줄로 자식 요소를 정렬합니다.|  
+|<xref:System.Windows.Controls.Primitives.TabPanel>|예|<xref:System.Windows.Controls.TabControl>의 탭 단추 레이아웃을 처리 합니다.|  
+|<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|예|<xref:System.Windows.Controls.ToolBar> 컨트롤 내에 콘텐츠를 정렬 합니다.|  
+|<xref:System.Windows.Controls.Primitives.UniformGrid>|예|<xref:System.Windows.Controls.Primitives.UniformGrid>는 동일한 셀 크기를 모두 포함 하는 표 형태의 자식을 정렬 하는 데 사용 됩니다.|  
+|<xref:System.Windows.Controls.VirtualizingPanel>|예|자식 컬렉션을 "가상화"할 수 있는 패널의 기본 클래스를 제공합니다.|  
+|<xref:System.Windows.Controls.VirtualizingStackPanel>|yes|가로 또는 세로 방향으로 한 줄로 콘텐츠를 정렬하고 가상화합니다.|  
+|<xref:System.Windows.Controls.WrapPanel>|yes|<xref:System.Windows.Controls.WrapPanel>은 왼쪽에서 오른쪽으로 자식 요소를 배치 하 고 콘텐츠를 포함 하는 상자의 가장자리에 있는 다음 줄로 바꿉니다. 다음 정렬은 <xref:System.Windows.Controls.WrapPanel.Orientation%2A> 속성의 값에 따라 위쪽에서 아래쪽으로 또는 오른쪽에서 왼쪽으로 순차적으로 발생 합니다.|  
   
 <a name="Panels_main_UI_elements"></a>   
 ## <a name="user-interface-panels"></a>사용자 인터페이스 패널  
@@ -93,15 +93,15 @@ ms.locfileid: "72291452"
  이러한 각 요소에 대한 자세한 설명과 사용법 예제는 아래 내용을 참조하세요.  
   
 <a name="Panels_overview_Canvas_subsection"></a>   
-### <a name="canvas"></a>Canvas  
- <xref:System.Windows.Controls.Canvas> 요소는 절대 *x* 및 *y*좌표에 따라 콘텐츠의 위치를 지정할 수 있습니다. 요소를 고유한 위치에 그릴 수 있고, 여러 요소가 같은 좌표를 사용하는 경우에는 요소가 태그에 표시되는 순서에 따라 요소를 그리는 순서가 결정됩니다.  
+### <a name="canvas"></a>캔버스  
+ <xref:System.Windows.Controls.Canvas> 요소는 절대 *x* 및 *y* 좌표에 따라 콘텐츠의 위치를 지정할 수 있습니다. 요소를 고유한 위치에 그릴 수 있고, 여러 요소가 같은 좌표를 사용하는 경우에는 요소가 태그에 표시되는 순서에 따라 요소를 그리는 순서가 결정됩니다.  
   
  <xref:System.Windows.Controls.Canvas>은 <xref:System.Windows.Controls.Panel>의 가장 유연한 레이아웃 지원 기능을 제공 합니다. Height 및 Width 속성은 캔버스 영역을 정의 하는 데 사용 되 고 내부 요소는 부모 <xref:System.Windows.Controls.Canvas>영역을 기준으로 절대 좌표로 할당 됩니다. <xref:System.Windows.Controls.Canvas.Left%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.Canvas.Top%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.Canvas.Right%2A?displayProperty=nameWithType> 및 <xref:System.Windows.Controls.Canvas.Bottom%2A?displayProperty=nameWithType>의 네 가지 연결 된 속성을 사용 하면 개발자가 화면에서 요소를 정확 하 게 배치 하 고 정렬할 수 있도록 <xref:System.Windows.Controls.Canvas>내에서 개체 배치를 세부적으로 제어할 수 있습니다.  
   
 #### <a name="cliptobounds-within-a-canvas"></a>캔버스 내의 ClipToBounds  
  <xref:System.Windows.Controls.Canvas>는 자체 정의 된 <xref:System.Windows.FrameworkElement.Height%2A> 및 <xref:System.Windows.FrameworkElement.Width%2A>의 외부에 있는 경우에도 화면에서 임의의 위치에 자식 요소를 배치할 수 있습니다. 또한 <xref:System.Windows.Controls.Canvas>은 자식 크기의 영향을 받지 않습니다. 따라서 자식 요소가 부모 <xref:System.Windows.Controls.Canvas>의 경계 사각형 외부에 있는 다른 요소를 과도 하 게 그릴 수 있습니다. <xref:System.Windows.Controls.Canvas>의 기본 동작은 부모 <xref:System.Windows.Controls.Canvas>의 범위 밖에 자식을 그릴 수 있도록 하는 것입니다. 이 동작이 적절 하지 않은 경우에는 <xref:System.Windows.UIElement.ClipToBounds%2A> 속성을 `true`로 설정할 수 있습니다. 이렇게 하면 <xref:System.Windows.Controls.Canvas> 자체 크기에 맞게 잘립니다. <xref:System.Windows.Controls.Canvas>은 자식 요소를 해당 범위 밖으로 그릴 수 있는 유일한 레이아웃 요소입니다.  
   
- [너비 속성 비교 샘플](https://go.microsoft.com/fwlink/?LinkID=160050)에서 동작을 그래픽 방식으로 설명합니다.  
+ [너비 속성 비교 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Elements/WidthProperties)에서 동작을 그래픽 방식으로 설명합니다.  
   
 #### <a name="defining-and-using-a-canvas"></a>Canvas 정의 및 사용  
  <xref:System.Windows.Controls.Canvas>는 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 또는 코드를 사용 하 여 인스턴스화할 수 있습니다. 다음 예제에서는 <xref:System.Windows.Controls.Canvas>를 사용 하 여 콘텐츠를 절대적으로 배치 하는 방법을 보여 줍니다. 이 코드는 세 개의 100픽셀 사각형을 생성합니다. 첫 번째 사각형은 빨간색이고 왼쪽 위(*x, y*) 위치는 (0, 0)으로 지정됩니다. 두 번째 사각형은 녹색이고 왼쪽 위 위치는 (100, 100)으로, 첫 번째 사각형의 오른쪽 바로 아래입니다. 세 번째 사각형은 파란색이고 왼쪽 위 위치는 (50, 50)이므로 첫 번째 사각형의 오른쪽 아래 사분면과 두 번째 사각형의 왼쪽 위 사분면을 포함합니다. 세 번째 사각형이 마지막으로 배치되므로 다른 두 개의 사각형 위에 있는 것처럼 보입니다. 즉, 겹치는 부분은 세 번째 상자의 색으로 표시됩니다.  
@@ -112,7 +112,7 @@ ms.locfileid: "72291452"
   
  컴파일된 애플리케이션은 다음과 같은 새 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]를 생성합니다.  
   
- ![일반적인 Canvas 요소](./media/panel-intro-canvas.PNG "panel_intro_canvas")  
+ ![일반적인 Canvas 요소입니다.](./media/panel-intro-canvas.PNG "panel_intro_canvas")  
   
 <a name="Panels_overview_DockPanel_subsection"></a>   
 ### <a name="dockpanel"></a>DockPanel  
@@ -136,7 +136,7 @@ ms.locfileid: "72291452"
   
  컴파일된 애플리케이션은 다음과 같은 새 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]를 생성합니다.  
   
- ![일반적인 DockPanel 시나리오](./media/panel-intro-dockpanel.PNG "panel_intro_dockpanel")  
+ ![일반적인 DockPanel 시나리오입니다.](./media/panel-intro-dockpanel.PNG "panel_intro_dockpanel")  
   
 <a name="Panels_overview_Grid_subsection"></a>   
 ### <a name="grid"></a>표 형태  
@@ -156,7 +156,7 @@ ms.locfileid: "72291452"
   
  컴파일된 애플리케이션은 다음과 같은 새 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]를 생성합니다.  
   
- ![일반적인 Grid 요소](./media/avalon-run-dialog.PNG "avalon_run_dialog")  
+ ![일반적인 그리드 요소입니다.](./media/avalon-run-dialog.PNG "avalon_run_dialog")  
   
 <a name="Panels_overview_StackPanel_subsection"></a>   
 ### <a name="stackpanel"></a>StackPanel  
@@ -174,7 +174,7 @@ ms.locfileid: "72291452"
   
  이 그림에서 렌더링 동작의 차이를 확인할 수 있습니다.  
   
- ![스크린 샷: StackPanel 및 DockPanel 스크린 샷](./media/layout-smiley-stackpanel.PNG "layout_smiley_stackpanel")  
+ ![스크린샷: StackPanel 및 DockPanel 스크린 샷](./media/layout-smiley-stackpanel.PNG "layout_smiley_stackpanel")  
   
 #### <a name="defining-and-using-a-stackpanel"></a>StackPanel 정의 및 사용  
  다음 예제에서는 <xref:System.Windows.Controls.StackPanel>를 사용 하 여 세로 방향으로 배치 된 단추 집합을 만드는 방법을 보여 줍니다. 가로 위치 지정의 경우 <xref:System.Windows.Controls.StackPanel.Orientation%2A> 속성을 <xref:System.Windows.Controls.Orientation.Horizontal>로 설정 합니다.  
@@ -184,7 +184,7 @@ ms.locfileid: "72291452"
   
  컴파일된 애플리케이션은 다음과 같은 새 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]를 생성합니다.  
   
- ![일반적인 StackPanel 요소](./media/panel-intro-stackpanel.PNG "panel_intro_stackpanel")  
+ ![일반적인 StackPanel 요소입니다.](./media/panel-intro-stackpanel.PNG "panel_intro_stackpanel")  
   
 <a name="Panels_overview_VirtualizingStackPanel_subsection"></a>   
 #### <a name="virtualizingstackpanel"></a>VirtualizingStackPanel  
@@ -209,7 +209,7 @@ ms.locfileid: "72291452"
   
  컴파일된 애플리케이션은 다음과 같은 새 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]를 생성합니다.  
   
- ![일반적인 WrapPanel 요소](./media/wrappanel-element.PNG "WrapPanel_Element")  
+ ![일반적인 WrapPanel 요소입니다.](./media/wrappanel-element.PNG "WrapPanel_Element")  
   
 <a name="Panels_nested_panel_elements"></a>   
 ## <a name="nested-panel-elements"></a>중첩 Panel 요소  
@@ -224,7 +224,7 @@ ms.locfileid: "72291452"
   
  컴파일된 애플리케이션은 다음과 같은 새 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]를 생성합니다.  
   
- ![중첩된 패널의 이점을 활용하는 UI](./media/nested-panels.PNG "nested_panels")  
+ ![중첩 된 패널을 활용 하는 UI입니다.](./media/nested-panels.PNG "nested_panels")  
   
 <a name="Panels_custom_panel_elements"></a>   
 ## <a name="custom-panel-elements"></a>사용자 지정 Panel 요소  
@@ -232,7 +232,7 @@ ms.locfileid: "72291452"
   
  마찬가지로, 파생 클래스 (예: <xref:System.Windows.Controls.Canvas> 또는 <xref:System.Windows.Controls.Grid>)를 기반으로 하는 사용자 지정 레이아웃 동작은 해당 <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> 및 <xref:System.Windows.FrameworkElement.MeasureOverride%2A> 메서드를 재정의 하 여 정의할 수 있습니다.  
   
- 다음 태그는 사용자 지정 <xref:System.Windows.Controls.Panel> 요소를 만드는 방법을 보여 줍니다. `PlotPanel`으로 정의 된이 새 <xref:System.Windows.Controls.Panel>는 하드 코드 된 *x* 및 *y*좌표를 사용 하 여 자식 요소의 위치 지정을 지원 합니다. 이 예제에서는 <xref:System.Windows.Shapes.Rectangle> 요소 (표시 되지 않음)가 플롯 지점 50 (*x*) 및 50 (*y*)에 배치 됩니다.  
+ 다음 태그는 사용자 지정 <xref:System.Windows.Controls.Panel> 요소를 만드는 방법을 보여 줍니다. `PlotPanel`으로 정의 된이 새 <xref:System.Windows.Controls.Panel>는 하드 코드 된 *x* 및 *y* 좌표를 사용 하 여 자식 요소의 위치 지정을 지원 합니다. 이 예제에서는 <xref:System.Windows.Shapes.Rectangle> 요소 (표시 되지 않음)가 플롯 지점 50 (*x*) 및 50 (*y*)에 배치 됩니다.  
   
  [!code-cpp[PlotPanel#1](~/samples/snippets/cpp/VS_Snippets_Wpf/PlotPanel/CPP/PlotPanel.cpp#1)]
  [!code-csharp[PlotPanel#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PlotPanel/CSharp/PlotPanel.cs#1)]
@@ -257,7 +257,7 @@ ms.locfileid: "72291452"
 - [연습: 내 첫 WPF 데스크톱 애플리케이션](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
 - [WPF 레이아웃 갤러리 샘플](https://go.microsoft.com/fwlink/?LinkID=160054)
 - [레이아웃](../advanced/layout.md)
-- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053)(WPF 컨트롤 갤러리 샘플)
+- [WPF Controls Gallery Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)(WPF 컨트롤 갤러리 샘플)
 - [맞춤, 여백 및 안쪽 여백 개요](../advanced/alignment-margins-and-padding-overview.md)
 - [사용자 지정 콘텐츠 래핑 패널 샘플 만들기](https://go.microsoft.com/fwlink/?LinkID=159979)
 - [연결된 속성 개요](../advanced/attached-properties-overview.md)

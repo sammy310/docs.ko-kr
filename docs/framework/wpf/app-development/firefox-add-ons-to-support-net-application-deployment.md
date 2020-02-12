@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET application deployment [WPF], deploying with Firefox add-ons
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
-ms.openlocfilehash: 687f61bd3ec7d10c6aa66c20cd5eb58fcc56f18a
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 56f5f633092d8aa0bfabdb0570ec26f14221838d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636369"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124613"
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>.NET 애플리케이션 배포를 지원하기 위한 Firefox 추가 기능
 Firefox 용 WPF (Windows Presentation Foundation) 플러그 인 및 Firefox 용 .NET Framework 길잡이는 Xbap (XAML 브라우저 응용 프로그램), 느슨한 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]및 ClickOnce 응용 프로그램을 Mozilla Firefox 브라우저에서 사용할 수 있도록 합니다.  
@@ -31,9 +31,9 @@ Firefox 용 WPF (Windows Presentation Foundation) 플러그 인 및 Firefox 용 
   
 - 설치 된 .NET Framework 버전을 모두 보고 하거나 최신 버전만 보고 합니다.  
   
- Firefox 용 .NET Framework 길잡이는 .NET Framework 3.5 s p 1에 포함 되어 있습니다. Firefox 용 .NET Framework 길잡이를 제거 하는 방법에 대 한 자세한 내용은 [firefox 용 .NET Framework 길잡이를 제거](https://go.microsoft.com/fwlink/?LinkId=177944)하는 방법을 참조 하세요.  
+ Firefox 용 .NET Framework 길잡이는 .NET Framework 3.5 s p 1에 포함 되어 있습니다. Firefox 용 .NET Framework 길잡이를 제거 하는 방법에 대 한 자세한 내용은 [firefox 용 .NET Framework 길잡이를 제거](https://support.microsoft.com/help/963707/how-to-remove-the-net-framework-assistant-for-firefox)하는 방법을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [WPF 애플리케이션 배포](deploying-a-wpf-application-wpf.md)
 - [WPF XAML 브라우저 애플리케이션 개요](wpf-xaml-browser-applications-overview.md)

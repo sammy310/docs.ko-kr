@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: ff95b330ff67e916a4d27ef841e757998d847c8b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 418c5a4708a7842e5e441235738b73a009c9c956
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76735315"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124549"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>연습: Win32에서 WPF 콘텐츠 호스팅
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 애플리케이션을 만들기 위한 다양한 환경을 제공합니다. 그러나 Win32 코드에 상당한 투자가 있으면 원본 코드를 다시 작성 하는 대신 응용 프로그램에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기능을 추가 하는 것이 더 효과적일 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 Win32 창에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠를 호스팅하기 위한 간단한 메커니즘을 제공 합니다.  
   
- 이 자습서에서는 win32 창에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠를 호스팅하는 샘플 응용 프로그램 ( [Win32 창에서 WPF 콘텐츠 호스팅](https://go.microsoft.com/fwlink/?LinkID=160004))을 작성 하는 방법에 대해 설명 합니다. 이 샘플을 확장 하 여 모든 Win32 창을 호스트할 수 있습니다. 관리 코드와 비관리 코드를 혼합 하 여 포함 하기 때문에 응용 C++프로그램은/cli로 작성 됩니다.  
+ 이 자습서에서는 win32 창에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠를 호스팅하는 샘플 응용 프로그램 ( [Win32 창에서 WPF 콘텐츠 호스팅](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32HostingWPFPage))을 작성 하는 방법에 대해 설명 합니다. 이 샘플을 확장 하 여 모든 Win32 창을 호스트할 수 있습니다. 관리 코드와 비관리 코드를 혼합 하 여 포함 하기 때문에 응용 C++프로그램은/cli로 작성 됩니다.  
 
 <a name="requirements"></a>   
 ## <a name="requirements"></a>요구 사항  
@@ -26,7 +26,7 @@ ms.locfileid: "76735315"
  이 자습서와 함께 제공 되는 샘플은/Cli C++에서 구현 되었으므로이 자습서에서는를 사용 C++ 하 여 Windows API를 프로그래밍 하는 방법과 관리 코드 프로그래밍에 대해 잘 알고 있다고 가정 합니다. /Cli를 C++사용 하는 데 도움이 되지만 반드시 필요한 것은 아닙니다.  
   
 > [!NOTE]
-> 이 자습서에는 관련 샘플의 많은 코드 예제가 포함되어 있습니다. 그러나 가독성을 위해 전체 샘플 코드를 포함하지는 않습니다. 전체 샘플 코드는 [Win32 창에서 WPF 콘텐츠 호스팅 샘플](https://go.microsoft.com/fwlink/?LinkID=160004)을 참조 하세요.  
+> 이 자습서에는 관련 샘플의 많은 코드 예제가 포함되어 있습니다. 그러나 가독성을 위해 전체 샘플 코드를 포함하지는 않습니다. 전체 샘플 코드는 [Win32 창에서 WPF 콘텐츠 호스팅 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32HostingWPFPage)을 참조 하세요.  
   
 <a name="basic_procedure"></a>   
 ## <a name="the-basic-procedure"></a>기본 절차  

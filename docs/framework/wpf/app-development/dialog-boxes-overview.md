@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: 9ec6716fefdc8de75d7e523c56ae0b3a02c8cf02
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: bce2eed5f0e78c16b85b399e588c3d0d68ce7cb7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424639"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123716"
 ---
 # <a name="dialog-boxes-overview"></a>대화 상자 개요
 독립 실행형 응용 프로그램에는 일반적으로 응용 프로그램이 작동 하는 기본 데이터를 표시 하 고 메뉴 모음, 도구 모음, 상태 표시줄 등의 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 메커니즘을 통해 해당 데이터를 처리 하는 기능을 노출 하는 주 창이 있습니다. 특수 애플리케이션에는 다음을 수행하는 추가 창이 표시될 수도 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "73424639"
   
  반면 *모덜리스* 대화 상자는 열려 있는 동안 사용자가 다른 창을 활성화할 수 없도록 합니다. 예를 들어, 사용자가 문서에서 특정 단어를 찾으려고 할 때 주 창에서 사용자가 찾으려는 단어를 입력할 대화 상자를 열 때가 많습니다. 단어를 찾는다고 해서 사용자가 문서를 편집하지 못하게 되는 것은 아니기 때문에 대화 상자를 모덜로 설정할 필요가 없습니다. 모덜리스 대화 상자는 최소한 대화 상자를 닫기 위한 **닫기** 단추를 제공 하 고, **다음 찾기** 단추와 같은 특정 함수를 실행 하는 추가 단추를 제공 하 여 단어 검색의 찾기 조건과 일치 하는 다음 단어를 찾을 수 있습니다.  
   
- WPF (Windows Presentation Foundation)를 사용 하면 메시지 상자, 일반 대화 상자 및 사용자 지정 대화 상자를 비롯 한 여러 가지 유형의 대화 상자를 만들 수 있습니다. 이 항목에서는 각에 대해 설명 하 고, [대화 상자 샘플](https://go.microsoft.com/fwlink/?LinkID=159984) 에서는 일치 하는 예제를 제공 합니다.  
+ WPF (Windows Presentation Foundation)를 사용 하면 메시지 상자, 일반 대화 상자 및 사용자 지정 대화 상자를 비롯 한 여러 가지 유형의 대화 상자를 만들 수 있습니다. 이 항목에서는 각에 대해 설명 하 고, [대화 상자 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox) 에서는 일치 하는 예제를 제공 합니다.  
 
 <a name="Message_Boxes"></a>   
 ## <a name="message-boxes"></a>메시지 상자  
@@ -55,9 +55,9 @@ ms.locfileid: "73424639"
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxShowAndResultCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxshowandresultcodebehind1)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxShowAndResultCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxshowandresultcodebehind1)]  
   
- 메시지 상자를 사용 하는 방법에 대 한 자세한 내용은 <xref:System.Windows.MessageBox>, [MessageBox 샘플](https://go.microsoft.com/fwlink/?LinkID=160023)및 [대화 상자 샘플](https://go.microsoft.com/fwlink/?LinkID=159984)을 참조 하세요.  
+ 메시지 상자를 사용 하는 방법에 대 한 자세한 내용은 <xref:System.Windows.MessageBox>, [MessageBox 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/MessageBox)및 [대화 상자 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox)을 참조 하세요.  
   
- <xref:System.Windows.MessageBox>는 간단한 대화 상자 사용자 환경을 제공할 수 있지만 <xref:System.Windows.MessageBox>를 사용 하는 이점은 부분 신뢰 보안 샌드박스 내에서 실행 되는 응용 프로그램에서 표시할 수 있는 유일한 형식의 창입니다 ( [보안](../security-wpf.md)참조) (예: XAML 브라우저). 응용 프로그램 (Xbap).  
+ <xref:System.Windows.MessageBox>는 간단한 대화 상자 사용자 환경을 제공할 수 있지만 <xref:System.Windows.MessageBox>를 사용 하는 경우의 이점은 Xbap (XAML 브라우저 응용 프로그램)와 같은 부분 신뢰 보안 샌드박스 내에서 실행 되는 응용 프로그램에 표시 될 수 있는 유일한 창 형식입니다 ( [보안](../security-wpf.md)참조).  
   
  대부분의 대화 상자는 텍스트, 선택(확인란), 상호 배타적인 선택(라디오 단추), 목록 선택(목록 상자, 콤보 상자, 드롭다운 목록 상자)과 같이 메시지 상자의 결과보다 복잡한 데이터를 표시하고 수집합니다. 이러한 경우, Windows Presentation Foundation (WPF)는 여러 일반적인 대화 상자를 제공 하며,이 중 하나를 사용 하면 완전 신뢰로 실행 되는 응용 프로그램으로 제한 되지만 사용자 고유의 대화 상자를 만들 수 있습니다.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "73424639"
 <a name="Creating_a_Modal_Custom_Dialog_Box"></a>   
 ### <a name="creating-a-modal-custom-dialog-box"></a>모달 사용자 지정 대화 상자 만들기
 
-이 항목에서는 <xref:System.Windows.Window>를 사용 하 여 `Margins` 대화 상자를 예로 사용 하 여 일반적인 모달 대화 상자 구현을 만드는 방법을 보여 줍니다 ( [대화 상자 샘플](https://go.microsoft.com/fwlink/?LinkID=159984)참조). `Margins` 대화 상자는 다음 그림에 나와 있습니다.  
+이 항목에서는 <xref:System.Windows.Window>를 사용 하 여 `Margins` 대화 상자를 예로 사용 하 여 일반적인 모달 대화 상자 구현을 만드는 방법을 보여 줍니다 ( [대화 상자 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox)참조). `Margins` 대화 상자는 다음 그림에 나와 있습니다.  
   
  ![왼쪽 여백, 위쪽 여백, 오른쪽 여백 및 아래쪽 여백을 정의 하는 필드를 포함 하는 여백 대화 상자입니다.](./media/dialog-boxes-overview/margin-size-dialog-box.png)  
   
@@ -295,7 +295,7 @@ WPF는 유효한 데이터를 입력할 때까지 사용자를 잘못 된 컨트
   
 - 제목 표시줄에서 **닫기** 단추를 클릭 합니다.  
   
-- ALT+F4 누르기.  
+- ALT+F4를 누릅니다.  
   
 - **시스템** 메뉴에서 **닫기** 를 선택 합니다.  
   
@@ -304,7 +304,7 @@ WPF는 유효한 데이터를 입력할 때까지 사용자를 잘못 된 컨트
 [!code-csharp[Calling the Close method](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs?range=1-9,119-126)]
 [!code-vb[Calling the Close method](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb?range=1-9,99-103)]  
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [팝업 개요](../controls/popup-overview.md)
-- [대화 상자 샘플](https://go.microsoft.com/fwlink/?LinkID=159984)
+- [대화 상자 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox)
