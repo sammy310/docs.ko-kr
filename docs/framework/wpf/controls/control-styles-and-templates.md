@@ -10,69 +10,69 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 1c6d6b7beba03aaa5c978b5cb72c09ce625e0d7e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 01b8dc50860757b0eddee477219db1e19d27f40f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460404"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124405"
 ---
-# <a name="control-styles-and-templates"></a><span data-ttu-id="6c4ce-102">Control 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="6c4ce-102">Control Styles and Templates</span></span>
-<span data-ttu-id="6c4ce-103">Windows Presentation Foundation (WPF)의 컨트롤에는 해당 컨트롤의 시각적 트리를 포함 하는 <xref:System.Windows.Controls.ControlTemplate> 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6c4ce-103">Controls in Windows Presentation Foundation (WPF) have a <xref:System.Windows.Controls.ControlTemplate> that contains the visual tree of that control.</span></span> <span data-ttu-id="6c4ce-104">컨트롤의 <xref:System.Windows.Controls.ControlTemplate>를 수정 하 여 컨트롤의 구조와 모양을 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6c4ce-104">You can change the structure and appearance of a control by modifying the <xref:System.Windows.Controls.ControlTemplate> of that control.</span></span> <span data-ttu-id="6c4ce-105">컨트롤의 시각적 트리 부분만 바꿀 수 있는 방법은 없습니다. 컨트롤의 시각적 트리를 변경 하려면 컨트롤의 <xref:System.Windows.Controls.Control.Template%2A> 속성을 새 <xref:System.Windows.Controls.ControlTemplate>및 전체로 설정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6c4ce-105">There is no way to replace only part of the visual tree of a control; to change the visual tree of a control you must set the <xref:System.Windows.Controls.Control.Template%2A> property of the control to its new and complete <xref:System.Windows.Controls.ControlTemplate>.</span></span>  
+# <a name="control-styles-and-templates"></a><span data-ttu-id="26100-102">Control 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="26100-102">Control Styles and Templates</span></span>
+<span data-ttu-id="26100-103">Windows Presentation Foundation (WPF)의 컨트롤에는 해당 컨트롤의 시각적 트리를 포함 하는 <xref:System.Windows.Controls.ControlTemplate> 있습니다.</span><span class="sxs-lookup"><span data-stu-id="26100-103">Controls in Windows Presentation Foundation (WPF) have a <xref:System.Windows.Controls.ControlTemplate> that contains the visual tree of that control.</span></span> <span data-ttu-id="26100-104">컨트롤의 <xref:System.Windows.Controls.ControlTemplate>를 수정 하 여 컨트롤의 구조와 모양을 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="26100-104">You can change the structure and appearance of a control by modifying the <xref:System.Windows.Controls.ControlTemplate> of that control.</span></span> <span data-ttu-id="26100-105">컨트롤의 시각적 트리 부분만 바꿀 수 있는 방법은 없습니다. 컨트롤의 시각적 트리를 변경 하려면 컨트롤의 <xref:System.Windows.Controls.Control.Template%2A> 속성을 새 <xref:System.Windows.Controls.ControlTemplate>및 전체로 설정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="26100-105">There is no way to replace only part of the visual tree of a control; to change the visual tree of a control you must set the <xref:System.Windows.Controls.Control.Template%2A> property of the control to its new and complete <xref:System.Windows.Controls.ControlTemplate>.</span></span>  
   
- <span data-ttu-id="6c4ce-106">바탕 화면 테마가 사용되는 리소스 사전을 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="6c4ce-106">The desktop themes determine which resource dictionary is used.</span></span> <span data-ttu-id="6c4ce-107">바탕 화면 테마에 대한 리소스 사전을 얻으려면 [기본 WPF 테마](https://go.microsoft.com/fwlink/?LinkID=158252)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="6c4ce-107">To get the resource dictionaries for the desktop themes, see [Default WPF Themes](https://go.microsoft.com/fwlink/?LinkID=158252).</span></span>  
+ <span data-ttu-id="26100-106">바탕 화면 테마가 사용되는 리소스 사전을 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="26100-106">The desktop themes determine which resource dictionary is used.</span></span> <span data-ttu-id="26100-107">바탕 화면 테마에 대한 리소스 사전을 얻으려면 [기본 WPF 테마](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="26100-107">To get the resource dictionaries for the desktop themes, see [Default WPF Themes](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms).</span></span>  
   
- <span data-ttu-id="6c4ce-108">다음 표에서는 리소스 사전 파일 이름과 해당 바탕 화면 테마를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="6c4ce-108">The following table describes the resource dictionary file names and their corresponding desktop themes.</span></span>  
+ <span data-ttu-id="26100-108">다음 표에서는 리소스 사전 파일 이름과 해당 바탕 화면 테마를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="26100-108">The following table describes the resource dictionary file names and their corresponding desktop themes.</span></span>  
   
-|<span data-ttu-id="6c4ce-109">테마 파일</span><span class="sxs-lookup"><span data-stu-id="6c4ce-109">Theme file</span></span>|<span data-ttu-id="6c4ce-110">바탕 화면 테마</span><span class="sxs-lookup"><span data-stu-id="6c4ce-110">Desktop theme</span></span>|  
+|<span data-ttu-id="26100-109">테마 파일</span><span class="sxs-lookup"><span data-stu-id="26100-109">Theme file</span></span>|<span data-ttu-id="26100-110">바탕 화면 테마</span><span class="sxs-lookup"><span data-stu-id="26100-110">Desktop theme</span></span>|  
 |----------------|-------------------|  
-|<span data-ttu-id="6c4ce-111">Classic.xaml</span><span class="sxs-lookup"><span data-stu-id="6c4ce-111">Classic.xaml</span></span>|<span data-ttu-id="6c4ce-112">Windows XP 운영 체제의 고전 Windows 모양(Windows 95, Windows 98 및 Windows 2000)</span><span class="sxs-lookup"><span data-stu-id="6c4ce-112">Classic Windows look (from Windows 95, Windows 98, and Windows 2000) on the Windows XP operating system..</span></span>|  
-|<span data-ttu-id="6c4ce-113">Luna.NormalColor.xaml</span><span class="sxs-lookup"><span data-stu-id="6c4ce-113">Luna.NormalColor.xaml</span></span>|<span data-ttu-id="6c4ce-114">Windows XP의 기본 파란색 테마</span><span class="sxs-lookup"><span data-stu-id="6c4ce-114">Default blue theme on Windows XP.</span></span>|  
-|<span data-ttu-id="6c4ce-115">Luna.homestead.xaml</span><span class="sxs-lookup"><span data-stu-id="6c4ce-115">Luna.Homestead.xaml</span></span>|<span data-ttu-id="6c4ce-116">Windows XP의 올리브색 테마</span><span class="sxs-lookup"><span data-stu-id="6c4ce-116">Olive theme on Windows XP.</span></span>|  
-|<span data-ttu-id="6c4ce-117">Luna.Metallic.xaml</span><span class="sxs-lookup"><span data-stu-id="6c4ce-117">Luna.Metallic.xaml</span></span>|<span data-ttu-id="6c4ce-118">Windows XP의 은색 테마</span><span class="sxs-lookup"><span data-stu-id="6c4ce-118">Silver theme on Windows XP.</span></span>|  
-|<span data-ttu-id="6c4ce-119">Royale.NormalColor.xaml</span><span class="sxs-lookup"><span data-stu-id="6c4ce-119">Royale.NormalColor.xaml</span></span>|<span data-ttu-id="6c4ce-120">Windows XP Media Center Edition 운영 체제</span><span class="sxs-lookup"><span data-stu-id="6c4ce-120">Default theme on the Windows XP Media Center Edition operating system.</span></span>|  
-|<span data-ttu-id="6c4ce-121">Aero.normalcolor.xaml</span><span class="sxs-lookup"><span data-stu-id="6c4ce-121">Aero.NormalColor.xaml</span></span>|<span data-ttu-id="6c4ce-122">Windows Vista 운영 체제의 기본 테마</span><span class="sxs-lookup"><span data-stu-id="6c4ce-122">Default theme on the Windows Vista operating system.</span></span>|  
+|<span data-ttu-id="26100-111">Classic.xaml</span><span class="sxs-lookup"><span data-stu-id="26100-111">Classic.xaml</span></span>|<span data-ttu-id="26100-112">Windows XP 운영 체제의 고전 Windows 모양(Windows 95, Windows 98 및 Windows 2000)</span><span class="sxs-lookup"><span data-stu-id="26100-112">Classic Windows look (from Windows 95, Windows 98, and Windows 2000) on the Windows XP operating system..</span></span>|  
+|<span data-ttu-id="26100-113">Luna.NormalColor.xaml</span><span class="sxs-lookup"><span data-stu-id="26100-113">Luna.NormalColor.xaml</span></span>|<span data-ttu-id="26100-114">Windows XP의 기본 파란색 테마</span><span class="sxs-lookup"><span data-stu-id="26100-114">Default blue theme on Windows XP.</span></span>|  
+|<span data-ttu-id="26100-115">Luna.homestead.xaml</span><span class="sxs-lookup"><span data-stu-id="26100-115">Luna.Homestead.xaml</span></span>|<span data-ttu-id="26100-116">Windows XP의 올리브색 테마</span><span class="sxs-lookup"><span data-stu-id="26100-116">Olive theme on Windows XP.</span></span>|  
+|<span data-ttu-id="26100-117">Luna.Metallic.xaml</span><span class="sxs-lookup"><span data-stu-id="26100-117">Luna.Metallic.xaml</span></span>|<span data-ttu-id="26100-118">Windows XP의 은색 테마</span><span class="sxs-lookup"><span data-stu-id="26100-118">Silver theme on Windows XP.</span></span>|  
+|<span data-ttu-id="26100-119">Royale.NormalColor.xaml</span><span class="sxs-lookup"><span data-stu-id="26100-119">Royale.NormalColor.xaml</span></span>|<span data-ttu-id="26100-120">Windows XP Media Center Edition 운영 체제</span><span class="sxs-lookup"><span data-stu-id="26100-120">Default theme on the Windows XP Media Center Edition operating system.</span></span>|  
+|<span data-ttu-id="26100-121">Aero.normalcolor.xaml</span><span class="sxs-lookup"><span data-stu-id="26100-121">Aero.NormalColor.xaml</span></span>|<span data-ttu-id="26100-122">Windows Vista 운영 체제의 기본 테마</span><span class="sxs-lookup"><span data-stu-id="26100-122">Default theme on the Windows Vista operating system.</span></span>|  
   
-## <a name="in-this-section"></a><span data-ttu-id="6c4ce-123">단원 내용</span><span class="sxs-lookup"><span data-stu-id="6c4ce-123">In This Section</span></span>  
- [<span data-ttu-id="6c4ce-124">Button 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="6c4ce-124">Button Styles and Templates</span></span>](button-styles-and-templates.md)  
- [<span data-ttu-id="6c4ce-125">Calendar 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="6c4ce-125">Calendar Styles and Templates</span></span>](calendar-styles-and-templates.md)  
- [<span data-ttu-id="6c4ce-126">CheckBox 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="6c4ce-126">CheckBox Styles and Templates</span></span>](checkbox-styles-and-templates.md)  
- [<span data-ttu-id="6c4ce-127">ComboBox 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="6c4ce-127">ComboBox Styles and Templates</span></span>](combobox-styles-and-templates.md)  
- [<span data-ttu-id="6c4ce-128">ContextMenu 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="6c4ce-128">ContextMenu Styles and Templates</span></span>](contextmenu-styles-and-templates.md)  
- [<span data-ttu-id="6c4ce-129">DataGrid 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="6c4ce-129">DataGrid Styles and Templates</span></span>](datagrid-styles-and-templates.md)  
- [<span data-ttu-id="6c4ce-130">DatePicker 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="6c4ce-130">DatePicker Styles and Templates</span></span>](datepicker-styles-and-templates.md)  
- [<span data-ttu-id="6c4ce-131">DocumentViewer 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="6c4ce-131">DocumentViewer Styles and Templates</span></span>](documentviewer-styles-and-templates.md)  
- [<span data-ttu-id="6c4ce-132">Expander 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="6c4ce-132">Expander Styles and Templates</span></span>](expander-styles-and-templates.md)  
- [<span data-ttu-id="6c4ce-133">Frame 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="6c4ce-133">Frame Styles and Templates</span></span>](frame-styles-and-templates.md)  
- [<span data-ttu-id="6c4ce-134">GroupBox 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="6c4ce-134">GroupBox Styles and Templates</span></span>](groupbox-styles-and-templates.md)  
- [<span data-ttu-id="6c4ce-135">Label 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="6c4ce-135">Label Styles and Templates</span></span>](label-styles-and-templates.md)  
- [<span data-ttu-id="6c4ce-136">ListBox 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="6c4ce-136">ListBox Styles and Templates</span></span>](listbox-styles-and-templates.md)  
- [<span data-ttu-id="6c4ce-137">ListView 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="6c4ce-137">ListView Styles and Templates</span></span>](listview-styles-and-templates.md)  
- [<span data-ttu-id="6c4ce-138">Menu 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="6c4ce-138">Menu Styles and Templates</span></span>](menu-styles-and-templates.md)  
- [<span data-ttu-id="6c4ce-139">NavigationWindow 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="6c4ce-139">NavigationWindow Styles and Templates</span></span>](navigationwindow-styles-and-templates.md)  
- [<span data-ttu-id="6c4ce-140">PasswordBox 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="6c4ce-140">PasswordBox Styles and Templates</span></span>](passwordbox-styles-and-templates.md)  
- [<span data-ttu-id="6c4ce-141">ProgressBar 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="6c4ce-141">ProgressBar Styles and Templates</span></span>](progressbar-styles-and-templates.md)  
- [<span data-ttu-id="6c4ce-142">RadioButton 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="6c4ce-142">RadioButton Styles and Templates</span></span>](radiobutton-styles-and-templates.md)  
- [<span data-ttu-id="6c4ce-143">RepeatButton 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="6c4ce-143">RepeatButton Styles and Templates</span></span>](repeatbutton-styles-and-templates.md)  
- [<span data-ttu-id="6c4ce-144">ScrollBar 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="6c4ce-144">ScrollBar Styles and Templates</span></span>](scrollbar-styles-and-templates.md)  
- [<span data-ttu-id="6c4ce-145">ScrollViewer 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="6c4ce-145">ScrollViewer Styles and Templates</span></span>](scrollviewer-styles-and-templates.md)  
- [<span data-ttu-id="6c4ce-146">Slider 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="6c4ce-146">Slider Styles and Templates</span></span>](slider-styles-and-templates.md)  
- [<span data-ttu-id="6c4ce-147">StatusBar 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="6c4ce-147">StatusBar Styles and Templates</span></span>](statusbar-styles-and-templates.md)  
- [<span data-ttu-id="6c4ce-148">TabControl 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="6c4ce-148">TabControl Styles and Templates</span></span>](tabcontrol-styles-and-templates.md)  
- [<span data-ttu-id="6c4ce-149">TextBox 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="6c4ce-149">TextBox Styles and Templates</span></span>](textbox-styles-and-templates.md)  
- [<span data-ttu-id="6c4ce-150">Thumb 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="6c4ce-150">Thumb Styles and Templates</span></span>](thumb-styles-and-templates.md)  
- [<span data-ttu-id="6c4ce-151">ToggleButton 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="6c4ce-151">ToggleButton Styles and Templates</span></span>](togglebutton-styles-and-templates.md)  
- [<span data-ttu-id="6c4ce-152">ToolBar 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="6c4ce-152">ToolBar Styles and Templates</span></span>](toolbar-styles-and-templates.md)  
- [<span data-ttu-id="6c4ce-153">ToolTip 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="6c4ce-153">ToolTip Styles and Templates</span></span>](tooltip-styles-and-templates.md)  
- [<span data-ttu-id="6c4ce-154">TreeView스타일 및 템플릿s</span><span class="sxs-lookup"><span data-stu-id="6c4ce-154">TreeView Styles and Templates</span></span>](treeview-styles-and-templates.md)  
- [<span data-ttu-id="6c4ce-155">Window 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="6c4ce-155">Window Styles and Templates</span></span>](window-styles-and-templates.md)  
+## <a name="in-this-section"></a><span data-ttu-id="26100-123">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="26100-123">In This Section</span></span>  
+ [<span data-ttu-id="26100-124">Button 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="26100-124">Button Styles and Templates</span></span>](button-styles-and-templates.md)  
+ [<span data-ttu-id="26100-125">Calendar 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="26100-125">Calendar Styles and Templates</span></span>](calendar-styles-and-templates.md)  
+ [<span data-ttu-id="26100-126">CheckBox 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="26100-126">CheckBox Styles and Templates</span></span>](checkbox-styles-and-templates.md)  
+ [<span data-ttu-id="26100-127">ComboBox 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="26100-127">ComboBox Styles and Templates</span></span>](combobox-styles-and-templates.md)  
+ [<span data-ttu-id="26100-128">ContextMenu 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="26100-128">ContextMenu Styles and Templates</span></span>](contextmenu-styles-and-templates.md)  
+ [<span data-ttu-id="26100-129">DataGrid 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="26100-129">DataGrid Styles and Templates</span></span>](datagrid-styles-and-templates.md)  
+ [<span data-ttu-id="26100-130">DatePicker 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="26100-130">DatePicker Styles and Templates</span></span>](datepicker-styles-and-templates.md)  
+ [<span data-ttu-id="26100-131">DocumentViewer 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="26100-131">DocumentViewer Styles and Templates</span></span>](documentviewer-styles-and-templates.md)  
+ [<span data-ttu-id="26100-132">Expander 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="26100-132">Expander Styles and Templates</span></span>](expander-styles-and-templates.md)  
+ [<span data-ttu-id="26100-133">Frame 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="26100-133">Frame Styles and Templates</span></span>](frame-styles-and-templates.md)  
+ [<span data-ttu-id="26100-134">GroupBox 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="26100-134">GroupBox Styles and Templates</span></span>](groupbox-styles-and-templates.md)  
+ [<span data-ttu-id="26100-135">Label 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="26100-135">Label Styles and Templates</span></span>](label-styles-and-templates.md)  
+ [<span data-ttu-id="26100-136">ListBox 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="26100-136">ListBox Styles and Templates</span></span>](listbox-styles-and-templates.md)  
+ [<span data-ttu-id="26100-137">ListView 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="26100-137">ListView Styles and Templates</span></span>](listview-styles-and-templates.md)  
+ [<span data-ttu-id="26100-138">Menu 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="26100-138">Menu Styles and Templates</span></span>](menu-styles-and-templates.md)  
+ [<span data-ttu-id="26100-139">NavigationWindow 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="26100-139">NavigationWindow Styles and Templates</span></span>](navigationwindow-styles-and-templates.md)  
+ [<span data-ttu-id="26100-140">PasswordBox 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="26100-140">PasswordBox Styles and Templates</span></span>](passwordbox-styles-and-templates.md)  
+ [<span data-ttu-id="26100-141">ProgressBar 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="26100-141">ProgressBar Styles and Templates</span></span>](progressbar-styles-and-templates.md)  
+ [<span data-ttu-id="26100-142">RadioButton 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="26100-142">RadioButton Styles and Templates</span></span>](radiobutton-styles-and-templates.md)  
+ [<span data-ttu-id="26100-143">RepeatButton 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="26100-143">RepeatButton Styles and Templates</span></span>](repeatbutton-styles-and-templates.md)  
+ [<span data-ttu-id="26100-144">ScrollBar 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="26100-144">ScrollBar Styles and Templates</span></span>](scrollbar-styles-and-templates.md)  
+ [<span data-ttu-id="26100-145">ScrollViewer 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="26100-145">ScrollViewer Styles and Templates</span></span>](scrollviewer-styles-and-templates.md)  
+ [<span data-ttu-id="26100-146">Slider 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="26100-146">Slider Styles and Templates</span></span>](slider-styles-and-templates.md)  
+ [<span data-ttu-id="26100-147">StatusBar 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="26100-147">StatusBar Styles and Templates</span></span>](statusbar-styles-and-templates.md)  
+ [<span data-ttu-id="26100-148">TabControl 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="26100-148">TabControl Styles and Templates</span></span>](tabcontrol-styles-and-templates.md)  
+ [<span data-ttu-id="26100-149">TextBox 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="26100-149">TextBox Styles and Templates</span></span>](textbox-styles-and-templates.md)  
+ [<span data-ttu-id="26100-150">Thumb 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="26100-150">Thumb Styles and Templates</span></span>](thumb-styles-and-templates.md)  
+ [<span data-ttu-id="26100-151">ToggleButton 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="26100-151">ToggleButton Styles and Templates</span></span>](togglebutton-styles-and-templates.md)  
+ [<span data-ttu-id="26100-152">ToolBar 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="26100-152">ToolBar Styles and Templates</span></span>](toolbar-styles-and-templates.md)  
+ [<span data-ttu-id="26100-153">ToolTip 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="26100-153">ToolTip Styles and Templates</span></span>](tooltip-styles-and-templates.md)  
+ [<span data-ttu-id="26100-154">TreeView스타일 및 템플릿s</span><span class="sxs-lookup"><span data-stu-id="26100-154">TreeView Styles and Templates</span></span>](treeview-styles-and-templates.md)  
+ [<span data-ttu-id="26100-155">Window 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="26100-155">Window Styles and Templates</span></span>](window-styles-and-templates.md)  
   
-## <a name="reference"></a><span data-ttu-id="6c4ce-156">참고</span><span class="sxs-lookup"><span data-stu-id="6c4ce-156">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="26100-156">참조</span><span class="sxs-lookup"><span data-stu-id="26100-156">Reference</span></span>  
  <xref:System.Windows.Controls>  
   
  <xref:System.Windows.Controls.ControlTemplate>  
   
-## <a name="related-sections"></a><span data-ttu-id="6c4ce-157">관련 단원</span><span class="sxs-lookup"><span data-stu-id="6c4ce-157">Related Sections</span></span>  
- [<span data-ttu-id="6c4ce-158">컨트롤 제작 개요</span><span class="sxs-lookup"><span data-stu-id="6c4ce-158">Control Authoring Overview</span></span>](control-authoring-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="26100-157">관련 섹션</span><span class="sxs-lookup"><span data-stu-id="26100-157">Related Sections</span></span>  
+ [<span data-ttu-id="26100-158">컨트롤 제작 개요</span><span class="sxs-lookup"><span data-stu-id="26100-158">Control Authoring Overview</span></span>](control-authoring-overview.md)  
   
- [<span data-ttu-id="6c4ce-159">스타일 지정 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="6c4ce-159">Styling and Templating</span></span>](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
+ [<span data-ttu-id="26100-159">스타일 지정 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="26100-159">Styling and Templating</span></span>](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

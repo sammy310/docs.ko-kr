@@ -6,22 +6,22 @@ helpviewer_keywords:
 - presence of WPT [WPF], detecting
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-ms.openlocfilehash: c68daf2cb5687497e66ad3022ce42352a17ae0f7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 41010e615b6b3d10ebf6adc0e3f871873e94f409
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053445"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124457"
 ---
-# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a><span data-ttu-id="bf551-102">방법: .NET Framework 3.0 설치 여부 확인</span><span class="sxs-lookup"><span data-stu-id="bf551-102">How to: Detect Whether the .NET Framework 3.0 Is Installed</span></span>
-<span data-ttu-id="bf551-103">관리자가 시스템에 Microsoft .NET Framework 응용 프로그램을 배포 하려면 먼저 .NET Framework 런타임이 있는지 확인 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="bf551-103">Before administrators can deploy Microsoft .NET Framework applications on a system, they must first confirm that the .NET Framework runtime is present.</span></span> <span data-ttu-id="bf551-104">이 항목에서는 관리자가 시스템에 .NET Framework 있는지 여부를 확인 하는 데 사용할 수 있는 HTML/JavaScript로 작성 된 스크립트를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="bf551-104">This topic provides a script written in HTML/JavaScript that administrators can use to determine whether the .NET Framework is present on a system.</span></span>  
+# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a><span data-ttu-id="1f6e2-102">방법: .NET Framework 3.0 설치 여부 확인</span><span class="sxs-lookup"><span data-stu-id="1f6e2-102">How to: Detect Whether the .NET Framework 3.0 Is Installed</span></span>
+<span data-ttu-id="1f6e2-103">관리자가 시스템에 Microsoft .NET Framework 응용 프로그램을 배포 하려면 먼저 .NET Framework 런타임이 있는지 확인 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f6e2-103">Before administrators can deploy Microsoft .NET Framework applications on a system, they must first confirm that the .NET Framework runtime is present.</span></span> <span data-ttu-id="1f6e2-104">이 항목에서는 관리자가 시스템에 .NET Framework 있는지 여부를 확인 하는 데 사용할 수 있는 HTML/JavaScript로 작성 된 스크립트를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f6e2-104">This topic provides a script written in HTML/JavaScript that administrators can use to determine whether the .NET Framework is present on a system.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="bf551-105">Microsoft .NET 프레임 워크 설치, 배포 및 검색에 대 한 자세한 내용은 [Microsoft .NET Framework 버전 3.0 배포](https://go.microsoft.com/fwlink/?LinkId=96739)에 대 한 설명을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="bf551-105">For more detailed information on installing, deploying, and detecting the Microsoft .NET Framework, see the discussion in [Deploying Microsoft .NET Framework Version 3.0](https://go.microsoft.com/fwlink/?LinkId=96739).</span></span>  
+> <span data-ttu-id="1f6e2-105">Microsoft .NET 프레임 워크 설치, 배포 및 검색에 대 한 자세한 내용은 [Microsoft .NET Framework 버전 3.0 배포](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480198(v=msdn.10))에 대 한 설명을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="1f6e2-105">For more detailed information on installing, deploying, and detecting the Microsoft .NET Framework, see the discussion in [Deploying Microsoft .NET Framework Version 3.0](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480198(v=msdn.10)).</span></span>  
   
 <a name="content_expiration"></a>   
-## <a name="detect-the-net-clr-user-agent-string"></a><span data-ttu-id="bf551-106">".NET CLR" 사용자 에이전트 문자열을 검색 합니다.</span><span class="sxs-lookup"><span data-stu-id="bf551-106">Detect the ".NET CLR" User-Agent String</span></span>  
- <span data-ttu-id="bf551-107">.NET Framework 설치 되 면 MSI는 ".NET CLR" 및 버전 번호를 UserAgent 문자열에 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="bf551-107">When .NET Framework is installed, the MSI adds ".NET CLR" and the version number to the UserAgent string.</span></span> <span data-ttu-id="bf551-108">다음 예에서는 간단한 HTML 페이지에 포함 된 스크립트를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="bf551-108">The following example shows a script embedded in a simple HTML page.</span></span> <span data-ttu-id="bf551-109">이 스크립트는 UserAgent 문자열을 검색 하 여 .NET Framework 설치 되었는지 확인 하 고 검색 결과에 상태 메시지를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="bf551-109">The script searches the UserAgent string to determine whether .NET Framework is installed, and displays a status message on the results of the search.</span></span>  
+## <a name="detect-the-net-clr-user-agent-string"></a><span data-ttu-id="1f6e2-106">".NET CLR" 사용자 에이전트 문자열을 검색 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f6e2-106">Detect the ".NET CLR" User-Agent String</span></span>  
+ <span data-ttu-id="1f6e2-107">.NET Framework 설치 되 면 MSI는 ".NET CLR" 및 버전 번호를 UserAgent 문자열에 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f6e2-107">When .NET Framework is installed, the MSI adds ".NET CLR" and the version number to the UserAgent string.</span></span> <span data-ttu-id="1f6e2-108">다음 예에서는 간단한 HTML 페이지에 포함 된 스크립트를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="1f6e2-108">The following example shows a script embedded in a simple HTML page.</span></span> <span data-ttu-id="1f6e2-109">이 스크립트는 UserAgent 문자열을 검색 하 여 .NET Framework 설치 되었는지 확인 하 고 검색 결과에 상태 메시지를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f6e2-109">The script searches the UserAgent string to determine whether .NET Framework is installed, and displays a status message on the results of the search.</span></span>  
   
 ```html  
 <HTML>  
@@ -113,13 +113,13 @@ ms.locfileid: "71053445"
 </HTML>  
 ```  
   
- <span data-ttu-id="bf551-110">".NET CLR" 버전 검색에 성공 하면 다음과 같은 유형의 상태 메시지가 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="bf551-110">If the search for the ".NET CLR " version is successful, the following type of status message appears:</span></span>  
+ <span data-ttu-id="1f6e2-110">".NET CLR" 버전 검색에 성공 하면 다음과 같은 유형의 상태 메시지가 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="1f6e2-110">If the search for the ".NET CLR " version is successful, the following type of status message appears:</span></span>  
   
  `This machine has the correct version of the .NET Framework 3.0: 3.0.04425.00`  
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 1.1.4322; InfoPath.1; .NET CLR 2.0.50727; .NET CLR 3.0.04425.00).`  
   
- <span data-ttu-id="bf551-111">그렇지 않으면 다음과 같은 유형의 상태 메시지가 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="bf551-111">Otherwise, the following type of status message appears:</span></span>  
+ <span data-ttu-id="1f6e2-111">그렇지 않으면 다음과 같은 유형의 상태 메시지가 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="1f6e2-111">Otherwise, the following type of status message appears:</span></span>  
   
  `This machine does not have correct version of the .NET Framework 3.0.`  
   
