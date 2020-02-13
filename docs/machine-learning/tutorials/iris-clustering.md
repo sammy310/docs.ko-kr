@@ -86,7 +86,7 @@ ms.locfileid: "75716228"
 `ClusterPrediction` 클래스는 `IrisData` 인스턴스에 적용된 클러스터링 모델의 출력을 나타냅니다. [ColumnName](xref:Microsoft.ML.Data.ColumnNameAttribute) 속성을 사용하여 `PredictedClusterId` 및 `Distances` 필드를 각각 **PredictedLabel** 및 **Score** 열에 바인딩합니다. 클러스터링 작업의 경우 이들 열의 의미는 다음과 같습니다.
 
 - **PredictedLabel**열에는 예측된 클러스터의 ID가 있습니다.
-- **Score** 열에는 클러스터 중심까지 제곱 유클리드 거리가 있는 배열이 포함됩니다. 배열 길이는 클러스터와 같습니다.
+- **Score** 열에는 클러스터 중심까지의 유클리드 거리가 제곱인 배열이 포함됩니다. 배열 길이는 클러스터와 같습니다.
 
 > [!NOTE]
 > `float` 유형을 사용하여 입력 및 예측 데이터 클래스에서 부동 소수점 값을 나타냅니다.
