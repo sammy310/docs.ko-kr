@@ -11,14 +11,12 @@ helpviewer_keywords:
 - tracing [.NET Framework], trace listeners
 - logs, trace listeners
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a67bd2c0daa8acc81113a1e38ea463753ae34077
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: ce0df0af32d6798c89c8db6761d18febc1c398bb
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052720"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217438"
 ---
 # <a name="how-to-create-and-initialize-trace-listeners"></a>방법: 추적 수신기 만들기 및 초기화
 
@@ -30,7 +28,7 @@ ms.locfileid: "71052720"
 
 ### <a name="to-create-and-use-a-trace-listener-by-using-a-configuration-file"></a>구성 파일을 사용하여 추적 수신기를 만들고 사용하려면
 
-1. 애플리케이션 구성 파일에서 추적 수신기를 선언합니다. 만드는 수신기에 다른 개체가 필요하면 이들 개체도 선언합니다. 다음 예제에서는 텍스트 파일을 `TextWriterOutput.log`에 쓰는 `myListener`라는 수신기를 만드는 방법을 보여 줍니다.
+1. 애플리케이션 구성 파일에서 추적 수신기를 선언합니다. 만드는 수신기에 다른 개체가 필요하면 이들 개체도 선언합니다. 다음 예제에서는 텍스트 파일을 `myListener`에 쓰는 `TextWriterOutput.log`라는 수신기를 만드는 방법을 보여 줍니다.
 
     ```xml
     <configuration>
@@ -77,7 +75,7 @@ ms.locfileid: "71052720"
     Trace.Flush();
     ```
 
-    \- 또는 -
+    \- 또는-
 
 - 수신기에서 추적 출력을 수신하지 않으려면 <xref:System.Diagnostics.Trace.Listeners%2A> 컬렉션에 수신기를 추가하지 마세요. 수신기의 고유한 출력 메서드를 호출하여 <xref:System.Diagnostics.Trace.Listeners%2A> 컬렉션과 관계없이 수신기를 통해 출력을 내보낼 수 있습니다. 다음 예제에서는 <xref:System.Diagnostics.Trace.Listeners%2A> 컬렉션에 없는 수신기에 줄을 쓰는 방법을 보여 줍니다.
 
@@ -95,9 +93,9 @@ ms.locfileid: "71052720"
     myListener.Flush();
     ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [추적 수신기](trace-listeners.md)
 - [추적 스위치](trace-switches.md)
-- [방법: 응용 프로그램 코드에 Trace 문 추가](how-to-add-trace-statements-to-application-code.md)
-- [응용 프로그램 추적 및 조율](tracing-and-instrumenting-applications.md)
+- [방법: 애플리케이션 코드에 Trace 문 추가](how-to-add-trace-statements-to-application-code.md)
+- [애플리케이션 추적 및 조율](tracing-and-instrumenting-applications.md)

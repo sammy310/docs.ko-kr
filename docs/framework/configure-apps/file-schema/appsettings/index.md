@@ -7,14 +7,12 @@ helpviewer_keywords:
 - Windows Forms, app settings schema
 - configuration schema [.NET Framework], app settings
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 609ddba9cd4d58f9c388cf669039ee128e87efd0
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 0a3363b35a6fc8bd27753eb034f8a1e95feb5292
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088075"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215422"
 ---
 # <a name="app-settings-schema"></a>앱 설정 스키마
 
@@ -26,7 +24,7 @@ ms.locfileid: "74088075"
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<clear>** ](clear-element-for-appsettings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<remove>** ](remove-element-for-appsettings.md)
 
-| 요소 | 설명 |
+| 요소 | Description |
 | ------- | ----------- |
 | [ **\<appSettings>** ](appsettings-element-for-configuration.md) | 애플리케이션 설정을 제어하기 위한 **\<add&gt;** , **\<clear&gt;** 및 **\<remove&gt;** 태그가 포함되어 있습니다. 선택적 **파일** 특성이 있습니다. |
 | [ **\<add>** ](add-element-for-appsettings.md) | 설정을 정의합니다. **\<appSettings>** 의 자식 요소입니다. **키** 및 **값** 특성이 필요합니다. |
@@ -70,7 +68,7 @@ ms.locfileid: "74088075"
 </configuration>
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [애플리케이션 설정 개요](../../../winforms/advanced/application-settings-overview.md)
 - [애플리케이션 설정 아키텍처](../../../winforms/advanced/application-settings-architecture.md)

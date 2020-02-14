@@ -8,14 +8,12 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), failed QueryInterface
 - managed debugging assistants (MDAs), failed QueryInterface
 ms.assetid: 902dc863-34b3-477c-b433-b8a6bb6133c6
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fec1bfb402f3b394ceb36590c3a880f82c5cb101
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4c36ec514645a38ef1228e76bdf6dbd06e886bae
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052789"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217501"
 ---
 # <a name="failedqi-mda"></a>failedQI MDA
 `failedQI` MDA(관리 디버깅 도우미)는 런타임이 RCW(런타임 호출 가능 래퍼)를 대신하여 COM 인터페이스 포인터에서 `QueryInterface`를 호출할 때 활성화되며 `QueryInterface` 호출이 실패합니다.  
@@ -40,7 +38,7 @@ ms.locfileid: "71052789"
 ## <a name="output"></a>출력  
  인터페이스의 관리되는 이름, 인터페이스의 GUID 및 실패 HRESULT입니다.  
   
-## <a name="configuration"></a>Configuration  
+## <a name="configuration"></a>구성  
   
 ```xml  
 <mdaConfig>  
@@ -50,7 +48,7 @@ ms.locfileid: "71052789"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)

@@ -8,14 +8,12 @@ helpviewer_keywords:
 - IUnknown pointers
 - managed debugging assistants (MDAs), invalid IUnknown pointer
 ms.assetid: c7924771-a16b-40fe-b337-ce51dcdf6a12
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ea7f48ab61c16cb0430717074f1b1feab4827763
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5df9a3f506d8c2de6f1a3125459adc2d59d510bf
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052600"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217359"
 ---
 # <a name="invalidiunknown-mda"></a>invalidIUnknown MDA
 `invalidIUnknown` MDA(관리 디버깅 도우미)는 잘못된 `IUnknown` 포인터가 네이티브 코드에서 관리 코드로 전달될 때 활성화됩니다. `IUnknown` 인터페이스에 대해 쿼리될 때 `IUnknown`에서 성공을 반환하지 못합니다.  
@@ -35,7 +33,7 @@ ms.locfileid: "71052600"
 ## <a name="output"></a>출력  
  오류에 대한 설명입니다.  
   
-## <a name="configuration"></a>Configuration  
+## <a name="configuration"></a>구성  
   
 ```xml  
 <mdaConfig>  
@@ -45,7 +43,7 @@ ms.locfileid: "71052600"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)

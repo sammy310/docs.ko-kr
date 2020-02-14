@@ -1,5 +1,5 @@
 ---
-title: 부분 신뢰 코드에서 라이브러리 사용
+title: 부분적으로 신뢰할 수 있는 코드에서 라이브러리 사용
 ms.date: 03/30/2017
 helpviewer_keywords:
 - security [.NET Framework], partially trusted code
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - code access security, partially trusted code
 - APTCA
 ms.assetid: dd66cd4c-b087-415f-9c3e-94e3a1835f74
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 50428e4e28df812a3a0c985d0d1876dab7b5279c
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 6836d6c7f67afba316125b57b2c3e64a59ac648f
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206034"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216984"
 ---
-# <a name="using-libraries-from-partially-trusted-code"></a>부분 신뢰 코드에서 라이브러리 사용
+# <a name="using-libraries-from-partially-trusted-code"></a>부분적으로 신뢰할 수 있는 코드에서 라이브러리 사용
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
 > [!NOTE]
@@ -51,6 +49,6 @@ ms.locfileid: "70206034"
 > [!NOTE]
 > .NET Framework 클래스 라이브러리의 일부 클래스에는 **AllowPartiallyTrustedCallersAttribute** 특성이 없으며 부분적으로 신뢰할 수 있는 코드에서 호출할 수 없습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [코드 액세스 보안](code-access-security.md)

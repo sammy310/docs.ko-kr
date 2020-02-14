@@ -7,15 +7,13 @@ helpviewer_keywords:
 - .NET Framework out-of-band releases
 - out-of-band releases
 ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
-author: mairaw
-ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: e1e2af584c73b1c0b2548cdd3fcbd8517dfa330d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3a5134aa4407598e223fd2c938bfaac02cf9178c
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429343"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215549"
 ---
 # <a name="additional-class-libraries-and-apis"></a>추가 클래스 라이브러리 및 API
 
@@ -25,7 +23,7 @@ ms.locfileid: "74429343"
   
 ## <a name="oob-projects"></a>OOB 프로젝트
   
-| 프로젝트 | 설명 |  
+| Project | Description |  
 | ------- | ----------- |  
 | <xref:System.Collections.Immutable> | 해당 내용을 절대로 변경하지 않도록 보장하는 안전한 스레드인 컬렉션을 제공합니다. |
 | <xref:System.Net.Http.WinHttpHandler> | Windows의 WinHTTP 인터페이스에 따라 <xref:System.Net.Http.HttpClient> 에 메시지 처리기를 제공합니다. |
@@ -34,7 +32,7 @@ ms.locfileid: "74429343"
 
 ## <a name="platform-specific-libraries"></a>플랫폼별 라이브러리
   
-| 프로젝트 | 설명 |  
+| Project | Description |  
 | ------- | ----------- |  
 | <xref:System.Text.CodePagesEncodingProvider> | <xref:System.Text.EncodingProvider> 클래스를 확장 하 여 유니버설 Windows 플랫폼를 대상으로 하는 앱에서 코드 페이지 인코딩을 사용할 수 있도록 합니다. |  
   

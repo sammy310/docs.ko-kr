@@ -8,14 +8,12 @@ helpviewer_keywords:
 - invalid VARIANT types
 - managed debugging assistants (MDAs), invalid variant
 ms.assetid: d273e070-d1b1-4a53-a9c7-7af837b04a3d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c34f160b643a0431168097d3832357b4ac6e4557
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8d686621ae4aa087e1b4f4bea9df7fc3de758d40
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052570"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216270"
 ---
 # <a name="invalidvariant-mda"></a>invalidVariant MDA
 `invalidVariant` MDA(관리 디버깅 도우미)는 네이티브 코드나 비관리 코드에서 관리 코드로 호출하는 동안 잘못된 `VARIANT` 구조가 발생할 때 활성화됩니다.  
@@ -35,7 +33,7 @@ ms.locfileid: "71052570"
 ## <a name="output"></a>출력  
  런타임에서 비관리 모듈을 통해 관리 코드에 전달된 잘못된 `VARIANT`를 감지했음을 나타내는 MDA 메시지입니다.  
   
-## <a name="configuration"></a>Configuration  
+## <a name="configuration"></a>구성  
   
 ```xml  
 <mdaConfig>  
@@ -45,7 +43,7 @@ ms.locfileid: "71052570"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)

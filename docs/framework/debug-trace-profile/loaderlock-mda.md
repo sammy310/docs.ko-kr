@@ -10,14 +10,12 @@ helpviewer_keywords:
 - loader locks
 - locks, threads
 ms.assetid: 8c10fa02-1b9c-4be5-ab03-451d943ac1ee
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c3e8769ec972ec76d04d2f22368fdde99de9c6de
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cd77640a6566f3fd94631dac184ae5bc3ffab5d1
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052540"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217344"
 ---
 # <a name="loaderlock-mda"></a>loaderLock MDA
 `loaderLock` MDA(관리 디버깅 도우미)는 Microsoft Windows 운영 체제 로더 잠금을 보유하는 스레드에서 관리 코드를 실행하려는 시도를 감지합니다.  이와 같은 실행은 운영 체제의 로더에서 초기화하기 전에 DLL을 사용하고 교착 상태를 일으킬 수 있으므로 유효하지 않습니다.  
@@ -34,7 +32,7 @@ ms.locfileid: "71052540"
   
  .NET Framework 버전 2.0용으로 빌드된 혼합된 관리/관리되지 않는 C++ 어셈블리에서는 이러한 문제점이 발생할 가능성이 적으며, 운영 체제의 규칙을 위반하는 관리되지 않는 DLL을 사용하는 애플리케이션과 마찬가지로 위험이 줄어듭니다.  예를 들어, 관리되지 않는 DLL의 `DllMain` 진입점에서 `CoCreateInstance`를 호출하여 COM에 노출된 관리되는 오브젝트를 확보하는 경우 결과적으로 로더 잠금 내에서 관리 코드를 실행하려고 시도합니다. .NET Framework 버전 2.0 이상의 로더 잠금 문제점에 대한 자세한 내용은 [혼합 어셈블리 초기화](/cpp/dotnet/initialization-of-mixed-assemblies)를 참조하세요.  
   
-## <a name="resolution"></a>해결  
+## <a name="resolution"></a>해결 방법  
  Visual C++ .NET 2002 및 Visual C++ NET 2003에서 `/clr` 컴파일러 옵션을 사용하여 컴파일한 DLL을 로드할 때 명확하지 않은 교착 상태에 빠질 수 있습니다. 이 문제를 혼합 DLL 로드 또는 로더 잠금 문제라고 합니다. Visual C++ 2005 이상에서 혼합 DLL 로드 프로세스의 불명확한 요소가 대부분 제거되었습니다. 그러나 일부 시나리오에서는 명확한 로더 잠금 문제가 발생할 수 있습니다. 나머지 로더 잠금 문제의 원인과 해결 방법에 대한 자세한 내용은 [혼합 어셈블리 초기화](/cpp/dotnet/initialization-of-mixed-assemblies)를 참조하세요. 해당 항목에서 로더 잠금 문제를 식별하지 못하는 경우 스레드 스택을 검사하여 로더 잠금이 발생하는 이유와 문제를 정정하는 방법을 판별해야 합니다. 이 MDA가 활성화된 스레드의 스택 추적을 확인합니다.  스레드에서 운영 체제의 로더 잠금을 보유하는 동안 관리 코드를 잘못 호출하려고 합니다.  DLL의 `DllMain` 또는 스택의 해당 진입점이 표시됩니다.  이러한 진입점에서 올바르게 수행할 수 있는 사항에 대한 운영 체제 규칙은 상당히 제한되어 있습니다.  이러한 규칙은 관리되는 모든 실행을 차단합니다.  
   
 ## <a name="effect-on-the-runtime"></a>런타임에 대한 영향  
@@ -45,7 +43,7 @@ ms.locfileid: "71052540"
 ## <a name="output"></a>출력  
  이 MDA는 잘못된 관리 실행이 시도되고 있음을 보고합니다.  스레드 스택을 검사하여 로더 잠금이 발생하는 이유와 문제를 정정하는 방법을 판별해야 합니다.  
   
-## <a name="configuration"></a>Configuration  
+## <a name="configuration"></a>구성  
   
 ```xml  
 <mdaConfig>  
@@ -55,6 +53,6 @@ ms.locfileid: "71052540"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)

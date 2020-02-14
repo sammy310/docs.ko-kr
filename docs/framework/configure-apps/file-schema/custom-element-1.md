@@ -6,21 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ac2d01121e81b545556fb082fa7b82c31cccf9da
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1d0431085a04d3fb817dfe0883779acc4d693084
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73118843"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214781"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>SingleTagSectionHandler에 대 한 사용자 지정 요소
 
 \<section > 요소에 의해 정의 되 고 <xref:System.Configuration.SingleTagSectionHandler> 클래스를 사용 하는 사용자 지정 구성 섹션의 설정을 정의 합니다.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp; *\<sectionName>*
+&nbsp;&nbsp; *\<섹션 이름 >*
 
 ## <a name="syntax"></a>구문
 
@@ -40,9 +38,9 @@ ms.locfileid: "73118843"
 
 ## <a name="child-elements"></a>자식 요소
 
-없음
+None
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 **\<섹션 이름 >** 요소는 [ **\<configsections >** ](configsections-element-for-configuration.md) 요소의 [ **\<섹션 >** ](section-element.md) 태그에 의해 정의 되는 사용자 지정 요소입니다. <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>를 호출할 때 구성 시스템에서 <xref:System.Collections.IDictionary> 개체를 반환 합니다.
 

@@ -10,19 +10,17 @@ helpviewer_keywords:
 - security [.NET Framework], method access
 - method access security
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 74327e10e57c2f63519a3336ab2a600ad2b0a6b8
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5d083af6abc91121ebbc9554d03c635cabe2bbd9
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971051"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217132"
 ---
 # <a name="securing-method-access"></a>메서드 액세스 보안
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- 몇몇 메서드는 임의의 신뢰할 수 없는 코드 호출을 허용하는 데 적합하지 않을 수 있습니다. 이러한 메서드는 여러 가지 위험을 발생 시킵니다. 메서드는 몇 가지 제한 된 정보를 제공할 수 있습니다. 여기에 전달 된 모든 정보를 생각할 수 있습니다. 매개 변수에 대 한 오류 검사를 수행 하지 않을 수 있습니다. 또는 잘못 된 매개 변수를 사용 하는 경우 제대로 작동 하지 않거나 해로운 문제가 발생할 수 있습니다. 이들 경우에 대해 알고 있어야 하고 메서드 보호를 도와주는 조치를 취해야 합니다.  
+ 몇몇 메서드는 임의의 신뢰할 수 없는 코드 호출을 허용하는 데 적합하지 않을 수 있습니다. 이러한 메서드는 위험을 가져옵니다. 메서드가 제한된 정보를 제공하거나, 전달된 임의 정보를 신뢰하거나, 매개 변수에서 오류 검사를 수행하지 않거나, 잘못된 매개 변수를 사용하여 오작동하거나 피해를 줄 수 있습니다. 이들 경우에 대해 알고 있어야 하고 메서드 보호를 도와주는 조치를 취해야 합니다.  
   
  경우에 따라 공용으로 제공되지 않지만 공용으로 사용되어야 하는 메서드를 제한해야 할 수 있습니다. 예를 들어 자체 DLL에서 호출되어야 하고 공용으로도 사용되어야 하는 인터페이스를 포함하지만, 이 인터페이스를 고객이 사용하지 않도록 하고 악성 코드가 구성 요소에 대한 진입점으로 악용하지 못하도록 방지하기 위해 이 인터페이스를 공개적으로 노출하지 않고자 할 수 있습니다. 공용으로 제공되지 않은 메서드를 제한하는 또 다른 일반적인 이유는 완전히 내부적인 인터페이스일 수 있는 내용을 문서화하고 지원할 필요가 없도록 하려는 것입니다.  
   
@@ -40,7 +38,7 @@ ms.locfileid: "70971051"
   
 - 지정된 ID 또는 권한을 포함하도록 특정 메서드를 재정의하는 파생 클래스가 필요합니다.  
   
- 다음 예제에서는 특정 강력한 이름을 통해 호출자에 서명하도록 요구하여 제한된 액세스용 공용 클래스를 보호하도록 도와주는 방법을 보여 줍니다. 이 예제에서는 강력한 <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> 이름에 대 한 **요청과** 함께를 사용 합니다. 강력한 이름을 사용 하 여 어셈블리에 서명 하는 방법에 대 한 작업 기반 정보는 [강력한 이름의 어셈블리 만들기 및 사용](../../standard/assembly/create-use-strong-named.md)을 참조 하세요.  
+ 다음 예제에서는 특정 강력한 이름을 통해 호출자에 서명하도록 요구하여 제한된 액세스용 공용 클래스를 보호하도록 도와주는 방법을 보여 줍니다. 이 예에서는 강력한 이름에 대 한 **요청과** 함께 <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute>를 사용 합니다. 강력한 이름을 사용 하 여 어셈블리에 서명 하는 방법에 대 한 작업 기반 정보는 [강력한 이름의 어셈블리 만들기 및 사용](../../standard/assembly/create-use-strong-named.md)을 참조 하세요.  
   
 ```vb  
 <StrongNameIdentityPermissionAttribute(SecurityAction.Demand, PublicKey := "…hex…", Name := "App1", Version := "0.0.0.0")>  _  
@@ -234,12 +232,12 @@ class Implemented : ICanCastToMe
 ## <a name="virtual-internal-overrides-or-overloads-overridable-friend"></a>Virtual Internal 재정의 또는 Overloads Overridable Friend  
   
 > [!NOTE]
-> 이 섹션에서는 메서드를 `virtual` 및 `internal` (`Overloads` `Overridable` VisualBasic)로선언할때발생하는보안문제에대해경고합니다.`Friend` 이 경고는 .NET Framework 버전 1.0 및 1.1에만 적용 되 고 이후 버전에는 적용 되지 않습니다.  
+> 이 섹션에서는 메서드를 `virtual`와 `internal` (`Friend`의`Overloads` `Overridable` Visual Basic)로 선언할 때 발생 하는 보안 문제에 대해 경고 합니다. 이 경고는 .NET Framework 버전 1.0 및 1.1에만 적용 되 고 이후 버전에는 적용 되지 않습니다.  
   
  .NET Framework 버전 1.0 및 1.1에서는 다른 어셈블리에서 코드를 사용할 수 없다는 것을 확인 하는 경우 형식 시스템 액세스 가능성의 nuance에 대해 알고 있어야 합니다. **가상** 및 **내부** (Visual Basic의**재정의 가능한 Friend** )로 선언 된 메서드는 부모 클래스의 vtable 항목을 재정의할 수 있으며 내부 이기 때문에 동일한 어셈블리 내 에서만 사용할 수 있습니다. 그러나 재정의할 수 있는 액세스 가능성은 **virtual** 키워드에 의해 결정 되며, 해당 코드가 클래스 자체에 액세스할 수 있는 한 다른 어셈블리에서 재정의할 수 있습니다. 재정의가 문제를 발생 시킬 가능성이 있는 경우 선언적 보안을 사용 하 여 문제를 해결 하거나, 꼭 필요 하지 않은 경우 **가상** 키워드를 제거 합니다.  
   
  언어 컴파일러에서 컴파일 오류 때문에 이 재정의가 차단되더라도 다른 컴파일러로 작성된 코드는 재정의될 수 있습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [보안 코딩 지침](../../standard/security/secure-coding-guidelines.md)

@@ -7,14 +7,12 @@ helpviewer_keywords:
 - secure coding, wrapper code
 - code security, wrapper code
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ee78c1c1f92515472bb3ea3ce77405a5e3447fd9
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 3d38a4d4fd33798cf5987f5ce67305725ad9daec
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206107"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215840"
 ---
 # <a name="securing-wrapper-code"></a>래퍼 코드 보안
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -76,13 +74,13 @@ ms.locfileid: "70206107"
 - [LinkDemand](link-demands.md) 는 JIT (just-in-time) 컴파일 시간에 발생 하며 직접 실행 호출자만 검사 합니다. 이 보안 검사는 호출자의 호출자를 검사하지 않습니다. 이 검사가 성공하고 나면 호출자가 호출할 수 있는 횟수에 관계없이 추가 보안 오버헤드가 없습니다. 그러나 유인 공격으로부터 보호되지 않습니다. **LinkDemand**를 사용 하 여 테스트를 통과 하 고 코드를 참조할 수 있는 코드는 악의적인 코드가 권한 있는 코드를 사용 하 여를 호출할 수 있도록 함으로써 보안을 방해할 수 있습니다. 따라서 가능한 모든 약점을 철저 하 게 방지할 수 있는 경우가 아니면 **LinkDemand** 를 사용 하지 마십시오.  
   
     > [!NOTE]
-    > .NET Framework 4에서는 링크 요구가 어셈블리의 <xref:System.Security.SecurityCriticalAttribute> <xref:System.Security.SecurityRuleSet.Level2> 특성으로 대체 되었습니다. 는 <xref:System.Security.SecurityCriticalAttribute> 완전 신뢰에 대 한 링크 요청과 동일 하지만 상속 규칙에도 영향을 줍니다. 이러한 변경에 대 한 자세한 내용은 [보안 투명 코드, 수준 2](security-transparent-code-level-2.md)를 참조 하세요.  
+    > .NET Framework 4에서 링크 요청은 <xref:System.Security.SecurityRuleSet.Level2> 어셈블리에서 <xref:System.Security.SecurityCriticalAttribute> 특성으로 대체 되었습니다. <xref:System.Security.SecurityCriticalAttribute>는 완전 신뢰에 대 한 링크 요구와 동일 합니다. 그러나 상속 규칙에도 영향을 줍니다. 이러한 변경에 대 한 자세한 내용은 [보안 투명 코드, 수준 2](security-transparent-code-level-2.md)를 참조 하세요.  
   
  **LinkDemand** 를 사용할 때 필요한 추가 예방 조치는 개별적으로 프로그래밍 해야 합니다. 보안 시스템에서 적용 하는 데 도움이 될 수 있습니다. 실수는 보안 약점이 됩니다. 사용자 코드를 사용하는 모든 권한 있는 코드는 다음을 수행하여 추가 보안을 구현해야 합니다.  
   
 - 클래스 또는 어셈블리에 대한 호출 코드의 액세스 권한 제한.  
   
-- 호출되는 코드에 표시되는 것과 동일한 보안 검사를 호출 코드에 배치하고 호출자도 이렇게 하도록 강제. 예를 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> 들어 플래그가 지정 <xref:System.Security.Permissions.SecurityPermission> 된을 사용 하 여에 대해 **linkdemand** 로 보호 된 메서드를 호출 하는 코드를 작성 하는 경우 메서드는이에 대 한 **linkdemand** (또는 더 강력한 **요청**)도 만들어야 합니다. 권한이. 예외는 코드의 다른 보안 보호 메커니즘 (예: 요청)을 사용 하 여 코드에서 **LinkDemand**로 보호 된 메서드를 안전 하 게 결정 하는 방식으로 사용 하는 경우입니다. 이 예외적인 경우에서는 내부 코드의 보안 보호 약화에 대한 책임이 호출자에게 있습니다.  
+- 호출되는 코드에 표시되는 것과 동일한 보안 검사를 호출 코드에 배치하고 호출자도 이렇게 하도록 강제. 예를 들어 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> 플래그가 지정 된 <xref:System.Security.Permissions.SecurityPermission>에 대해 **linkdemand** 로 보호 된 메서드를 호출 하는 코드를 작성 하는 경우 메서드는이 권한에 대해 **linkdemand** (또는 더 강력한 **수요**)를 만들어야 합니다. 예외는 코드의 다른 보안 보호 메커니즘 (예: 요청)을 사용 하 여 코드에서 **LinkDemand**로 보호 된 메서드를 안전 하 게 결정 하는 방식으로 사용 하는 경우입니다. 이 예외적인 경우에서는 내부 코드의 보안 보호 약화에 대한 책임이 호출자에게 있습니다.  
   
 - 코드의 호출자가 사용자 코드에서 보호된 코드를 대신 호출하도록 속일 수 없는지 확인. 즉, 호출자는 권한 있는 코드에서 특정 매개 변수를 보호된 코드로 전달하거나 보호된 코드에서 결과를 가져오도록 강제할 수 없습니다.  
   
@@ -101,6 +99,6 @@ ms.locfileid: "70206107"
   
 - 가상 메서드가 구현하는 형식 및 인터페이스 링크 요구를 일관되게 사용해야 합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [보안 코딩 지침](../../standard/security/secure-coding-guidelines.md)

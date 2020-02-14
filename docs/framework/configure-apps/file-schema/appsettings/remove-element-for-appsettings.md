@@ -1,5 +1,5 @@
 ---
-title: <appSettings>에 대한 <remove> 요소
+title: <remove>에 대한 <appSettings> 요소
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/remove
@@ -7,14 +7,12 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a0fcdb75aa733a9d7634ec1c3b31dcbbb87e090e
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 83abbdbf0d3e4dfd16c0e8c649200c4ecc7329f7
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088723"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215485"
 ---
 # <a name="remove-element-for-appsettings"></a>\<appSettings에 대 한 > 요소 \<제거 >
 
@@ -32,21 +30,21 @@ ms.locfileid: "74088723"
 </appSettings>
 ```
 
-### <a name="attribute"></a>특성
+### <a name="attribute"></a>attribute
 
-|         | 설명 |
+|         | Description |
 | ------- | ----------- |
 | **key** | 필수 특성입니다.<br><br>제거할 키의 이름을 지정 합니다. |
 
 ### <a name="parent-element"></a>부모 요소
 
-|     | 설명 |
+|     | Description |
 | --- | ----------- |
 | [ **\<appSettings>** ](appsettings-element-for-configuration.md) | 파일 경로, XML Web services URL 또는 애플리케이션의 기타 사용자 지정 구성 정보와 같은 사용자 지정 애플리케이션 설정이 포함되어 있습니다. |
 
 ## <a name="child-elements"></a>자식 요소
 
-없음
+None
 
 ## <a name="example"></a>예제
 
@@ -58,6 +56,6 @@ ms.locfileid: "74088723"
 </appSettings>
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [.NET Framework에 대 한 구성 파일 스키마](../index.md)

@@ -10,14 +10,12 @@ helpviewer_keywords:
 - Suspend method
 - threading [.NET Framework], managed debugging assistants
 ms.assetid: 3e5efbc5-92e4-4229-b31f-ce368a1adb96
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 860f524820e6b92e58f4a593e2ddf651a5e7094d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4e7e858dfb85eeccbadb23da60d081d1407e89d8
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052903"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216680"
 ---
 # <a name="dangerousthreadingapi-mda"></a>dangerousThreadingAPI MDA
 `dangerousThreadingAPI` MDA(관리 디버깅 도우미)는 <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> 메서드가 현재 스레드 이외의 스레드에서 호출될 때 활성화됩니다.  
@@ -32,7 +30,7 @@ ms.locfileid: "71052903"
   
  동기화 기본 형식이 대상 스레드에서 보류되는 경우 일시 중단 중에 계속 보류됩니다. 기본 형식에 대한 잠금을 획득하려는 시도인 <xref:System.Threading.Thread.Suspend%2A>를 수행하는 스레드 같은 또 다른 스레드인 경우 이로 인해 교착 상태가 발생할 수 있습니다. 이 상황에서는 문제가 교착 상태로 나타납니다.  
   
-## <a name="resolution"></a>해결  
+## <a name="resolution"></a>해결 방법  
  <xref:System.Threading.Thread.Suspend%2A> 및 <xref:System.Threading.Thread.Resume%2A>을 사용해야 하는 디자인을 피합니다. 스레드 간 상호 작용의 경우 <xref:System.Threading.Monitor>, <xref:System.Threading.ReaderWriterLock>, <xref:System.Threading.Mutex> 또는 C# `lock` 문과 같은 동기화 기본 형식을 사용합니다. 이러한 메서드를 사용해야 할 경우 스레드가 일시 중단 상태인 동안 실행되는 기간을 단축하거나 코드 양을 최소화합니다.  
   
 ## <a name="effect-on-the-runtime"></a>런타임에 대한 영향  
@@ -41,7 +39,7 @@ ms.locfileid: "71052903"
 ## <a name="output"></a>출력  
  MDA는 MDA를 활성화시키는 위험한 스레딩 메서드를 식별합니다.  
   
-## <a name="configuration"></a>구성하기  
+## <a name="configuration"></a>구성  
   
 ```xml  
 <mdaConfig>  
@@ -52,7 +50,7 @@ ms.locfileid: "71052903"
 ```  
   
 ## <a name="example"></a>예제  
- 다음 코드 예제에서는 `dangerousThreadingAPI`를 활성화시키는 <xref:System.Threading.Thread.Suspend%2A> 메서드에 대한 호출을 보여 줍니다.  
+ 다음 코드 예제에서는 <xref:System.Threading.Thread.Suspend%2A>를 활성화시키는 `dangerousThreadingAPI` 메서드에 대한 호출을 보여 줍니다.  
   
 ```csharp
 using System.Threading;  
@@ -67,7 +65,7 @@ Thread t = new Thread(delegate() { Thread.Sleep(1000); });
 }  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Threading.Thread>
 - [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)

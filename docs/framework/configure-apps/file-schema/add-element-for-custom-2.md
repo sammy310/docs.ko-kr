@@ -7,14 +7,12 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 0d4ddb53-eb2b-49c0-9c33-a8dec5c39b46
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ac07fc9ba6f030209a5e0d0160689fab95bc1b4a
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 57722f3518fad12cb8e6e35d68f40bb8465bdd86
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088760"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215445"
 ---
 # <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>NameValueSectionHandler 및 DictionarySectionHandler에 대 한 > 요소 \<추가
 
@@ -32,20 +30,20 @@ ms.locfileid: "74088760"
 
 ## <a name="attributes"></a>특성
 
-| 특성 | 설명 |
+| attribute | Description |
 | --------- | ----------- |
 | **key**   | 필수 특성입니다.<br><br>설정의 이름을 지정 합니다. |
 | **value** | 필수 특성입니다.<br><br>설정 값을 지정 합니다. |
 
 ## <a name="parent-element"></a>부모 요소
 
-| 요소 | 설명 |
+| 요소 | Description |
 | ------- | ------------|
 | [ **\<섹션 이름 >** 요소인](custom-element-2.md) | <xref:System.Configuration.NameValueSectionHandler> 및 <xref:System.Configuration.DictionarySectionHandler> 클래스를 사용 하는 사용자 지정 구성 섹션에 대 한 설정을 정의 합니다. |
 
 ## <a name="child-elements"></a>자식 요소
 
-없음
+None
 
 ## <a name="example"></a>예제
 
@@ -66,6 +64,6 @@ ms.locfileid: "74088760"
 
 이 요소는 응용 프로그램 구성 파일 *, 컴퓨터 구성 파일 (machine.config*) 및 응용 프로그램 디렉터리 수준에 없는 *web.config 파일* 에서 사용할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [.NET Framework에 대 한 구성 파일 스키마](index.md)

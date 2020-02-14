@@ -7,14 +7,12 @@ helpviewer_keywords:
 - executable image for debugging
 - debugging [.NET Framework], executable images for
 ms.assetid: 7d90ea7a-150f-4f97-98a7-f9c26541b9a3
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1b64bd1e112932f394bb473a21642d37e28e39d3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 44d512a8ebec0e21e33f51c07428331e5e22b7bf
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052509"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217336"
 ---
 # <a name="making-an-image-easier-to-debug-in-net"></a>.NET에서 쉽게 디버깅할 수 있도록 이미지 만들기
 
@@ -42,7 +40,7 @@ AllowOptimize=0
 
 각 옵션의 값은 0 또는 1로 설정되고 비어 있는 옵션은 기본값으로 0으로 설정됩니다. `GenerateTrackingInfo`를 1로 설정하고 `AllowOptimize`를 0으로 설정하면 디버깅이 가장 쉬워집니다.
 
-.NET Framework 버전 2.0부터 JIT 컴파일러는의 `GenerateTrackingInfo`값에 관계 없이 항상 추적 정보를 생성 하지만 값은 `AllowOptimize` 여전히 효과가 있습니다. [Ngen.exe(네이티브 이미지 생성기)](../tools/ngen-exe-native-image-generator.md)를 사용하여 최적화하지 않고 네이티브 이미지를 사전 컴파일하는 경우 Ngen.exe가 실행될 때 `AllowOptimize=0`인 대상 폴더에 .ini 파일이 있어야 합니다. 최적화 하지 않고 어셈블리를 미리 컴파일한 경우 Ngen.exe를 다시 실행 하 여 최적화 된 상태로 코드를 미리 컴파일하려면 ngen.exe **/uninstall** 옵션을 사용 하 여 미리 컴파일된 코드를 제거 해야 합니다. .Ini 파일이 폴더에 없는 경우 기본적으로 Ngen.exe는 최적화 된 상태로 코드를 미리 컴파일합니다.
+.NET Framework 버전 2.0부터 JIT 컴파일러는 `GenerateTrackingInfo`의 값에 관계 없이 항상 추적 정보를 생성 합니다. 그러나 `AllowOptimize` 값은 여전히 효과가 있습니다. [Ngen.exe(네이티브 이미지 생성기)](../tools/ngen-exe-native-image-generator.md)를 사용하여 최적화하지 않고 네이티브 이미지를 사전 컴파일하는 경우 Ngen.exe가 실행될 때 `AllowOptimize=0`인 대상 폴더에 .ini 파일이 있어야 합니다. 최적화 하지 않고 어셈블리를 미리 컴파일한 경우 Ngen.exe를 다시 실행 하 여 최적화 된 상태로 코드를 미리 컴파일하려면 ngen.exe **/uninstall** 옵션을 사용 하 여 미리 컴파일된 코드를 제거 해야 합니다. .Ini 파일이 폴더에 없는 경우 기본적으로 Ngen.exe는 최적화 된 상태로 코드를 미리 컴파일합니다.
 
 <xref:System.Diagnostics.DebuggableAttribute?displayProperty=nameWithType>을 통해 어셈블리의 설정을 제어합니다. **DebuggableAttribute** 에는 JIT 컴파일러가 추적 정보를 최적화 하 고 생성 해야 하는지 여부를 제어 하는 두 개의 필드가 포함 됩니다. .NET Framework 버전 2.0부터 JIT 컴파일러는 항상 추적 정보를 생성 합니다.
 
@@ -53,7 +51,7 @@ AllowOptimize=0
 > [!NOTE]
 > .NET Framework 버전 1.0에서 **/clr** 및 **/Zi** 컴파일러 옵션이 지정된 경우 Microsoft Visual C++ Compiler에서 **DebuggableAttribute**를 추가합니다. .NET Framework 버전 1.1에서 코드에 수동으로 **DebuggableAttribute** 을 추가 하거나 **/ASSEMBLYDEBUG** 링커 옵션을 사용 해야 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [디버깅, 추적 및 프로파일링](index.md)
 - [JIT 연결 디버깅 설정](enabling-jit-attach-debugging.md)

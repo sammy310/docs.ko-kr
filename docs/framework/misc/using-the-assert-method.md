@@ -16,14 +16,12 @@ helpviewer_keywords:
 - permissions [.NET Framework], overriding security checks
 - permissions [.NET Framework], assertions
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f43ba2963ec447e5193da73452537b2539c51857
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 2bc46714a508990c5ae31b50e7d19a287da2c5c0
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206045"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215812"
 ---
 # <a name="using-the-assert-method"></a>Assert 메서드 사용
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -61,16 +59,16 @@ ms.locfileid: "70206045"
   
  이 시나리오에서 메서드 A는 B를 호출 하 고, B는 C를 호출 하 고, e는 E를 호출 하 고, E를 호출 합니다. c 드라이브에서 파일을 읽을 수 있는 권한 (권한 P1) 및 메서드 E는 C 드라이브의 .txt 파일을 읽을 수 있는 권한을 요구 합니다 (permission P1A). 런타임에 F의 요청이 발생 하는 경우 P1A 권한이 부여 된 F로 시작 하는 F의 모든 호출자에 대 한 사용 권한을 확인 하는 스택 워크가 수행 되기 때문에 스택 워크는 c의 어설션이 검색 된 C의 사용 권한을 검사 합니다. 요청된 권한(P1A)이 어설션된 권한(P1)의 하위 집합이기 때문에 스택 워크가 중지되고 보안 검사가 자동으로 성공합니다. 어셈블리 A와 B에 권한 P1A가 부여되지 않은 것은 중요하지 않습니다. P1을 어설션하여 메서드 C는 호출자에게 리소스에 액세스할 수 있는 권한이 부여되지 않은 경우에도 호출자가 P1로 보호된 리소스에 액세스할 수 있도록 합니다.  
   
- 클래스 라이브러리를 디자인하고 클래스가 보호된 리소스에 액세스하는 경우 대체로 클래스의 호출자에게 적절한 권한을 요구하는 보안 요청을 수행해야 합니다. 그러면 클래스가 대부분의 호출자에 게 권한이 없는 작업을 수행 하 고 이러한 호출자가 코드를 호출할 수 있도록 하는 작업을 수행 하려는 경우에 대해 **assert** 메서드를 호출 하 여 권한을 어설션할 수 있습니다. 코드가 수행 하는 작업을 나타내는 권한 개체입니다. 이러한 방식으로 **Assert** 를 사용 하면 일반적으로 코드를 호출할 수 없는 호출자가 코드를 호출할 수 있습니다. 따라서 권한을 어설션하는 경우 구성 요소가 잘못 사용되지 않도록 사전에 적절한 보안 검사를 수행해야 합니다.  
+ 클래스 라이브러리를 디자인하고 클래스가 보호된 리소스에 액세스하는 경우 대체로 클래스의 호출자에게 적절한 권한을 요구하는 보안 요청을 수행해야 합니다. 그러면 클래스가 대부분의 호출자에 게 권한이 없는 작업을 수행 하 고 이러한 호출자가 코드를 호출할 수 있도록 하는 작업을 수행 하려는 경우 코드에서 수행 하는 작업을 나타내는 권한 개체에 대해 **assert** 메서드를 호출 하 여 사용 권한을 어설션할 수 있습니다. 이러한 방식으로 **Assert** 를 사용 하면 일반적으로 코드를 호출할 수 없는 호출자가 코드를 호출할 수 있습니다. 따라서 권한을 어설션하는 경우 구성 요소가 잘못 사용되지 않도록 사전에 적절한 보안 검사를 수행해야 합니다.  
   
- 예를 들어 신뢰할 수 있는 라이브러리 클래스에 파일을 삭제하는 메서드가 있다고 가정합니다. 관리되지 않은 Win32 함수를 호출하여 파일에 액세스합니다. 호출자는 코드의 **Delete** 메서드를 호출 하 고 삭제할 파일의 이름을 전달 하 여 c:\test.txt **Delete** 메서드 내에서 코드는 <xref:System.Security.Permissions.FileIOPermission> c:\test.txt에 대 한 쓰기 권한을 나타내는 개체를 만듭니다. 파일을 삭제하려면 쓰기 권한이 필요합니다. 그런 다음 코드는 **FileIOPermission** 개체의 **Demand** 메서드를 호출 하 여 명령적 보안 검사를 호출 합니다. 호출 스택의 호출자 중 하나에 이 권한이 없는 경우 <xref:System.Security.SecurityException>이 발생합니다. 예외가 발생하지 않으면 모든 호출자에게 C:\Test.txt에 액세스할 수 있는 권한이 있음을 알고 있습니다. 대부분의 호출자에 게 비관리 코드에 액세스할 수 있는 권한이 없는 것으로 판단 되기 때문에 코드는 비관리 <xref:System.Security.Permissions.SecurityPermission> 코드를 호출할 수 있는 권한을 나타내는 개체를 만들고 개체의 **Assert** 메서드를 호출 합니다. 끝으로, 관리되지 않는 Win32 함수를 호출하여 C:\Text.txt를 삭제하고 호출자에게 컨트롤을 반환합니다.  
+ 예를 들어 신뢰할 수 있는 라이브러리 클래스에 파일을 삭제하는 메서드가 있다고 가정합니다. 관리되지 않은 Win32 함수를 호출하여 파일에 액세스합니다. 호출자는 코드의 **Delete** 메서드를 호출 하 고 삭제할 파일의 이름을 전달 하 여 c:\test.txt **Delete** 메서드 내에서 코드는 c:\test.txt에 대 한 쓰기 권한을 나타내는 <xref:System.Security.Permissions.FileIOPermission> 개체를 만듭니다. (파일을 삭제 하려면 쓰기 권한이 필요 합니다.) 그런 다음 코드는 **FileIOPermission** 개체의 **Demand** 메서드를 호출 하 여 명령적 보안 검사를 호출 합니다. 호출 스택의 호출자 중 하나에 이 권한이 없는 경우 <xref:System.Security.SecurityException>이 발생합니다. 예외가 발생하지 않으면 모든 호출자에게 C:\Test.txt에 액세스할 수 있는 권한이 있음을 알고 있습니다. 대부분의 호출자에 게 비관리 코드에 액세스할 수 있는 권한이 없기 때문에 코드에서 비관리 코드를 호출 하 고 개체의 **Assert** 메서드를 호출할 수 있는 권한을 나타내는 <xref:System.Security.Permissions.SecurityPermission> 개체를 만듭니다. 끝으로, 관리되지 않는 Win32 함수를 호출하여 C:\Text.txt를 삭제하고 호출자에게 컨트롤을 반환합니다.  
   
 > [!CAUTION]
 > 다른 코드가 사용자 코드를 사용하여 어설션하는 권한으로 보호된 리소스를 액세스할 수 있는 상황에서는 코드에서 어설션을 사용하지 않도록 해야 합니다. 예를 들어 이름이 호출자가 매개 변수로 지정 된 파일에 쓰는 코드에서 코드는 타사에서 오용 하기 위해 열려 있기 때문에 파일에 쓰도록 **FileIOPermission** 을 어설션 하지 않습니다.  
   
  명령적 보안 구문을 사용 하는 경우 동일한 메서드에서 여러 사용 권한에 대해 **Assert** 메서드를 호출 하면 보안 예외가 throw 됩니다. 대신 **PermissionSet** 개체를 만들고 호출할 개별 사용 권한을 전달한 다음 **PermissionSet** 개체에 대해 **Assert** 메서드를 호출 해야 합니다. 선언적 보안 구문을 사용 하는 경우 **Assert** 메서드를 두 번 이상 호출할 수 있습니다.  
   
- 다음 예제에서는 **Assert** 메서드를 사용 하 여 보안 검사를 재정의 하는 선언적 구문을 보여 줍니다. **FileIOPermissionAttribute** 구문에는 두 가지 값 <xref:System.Security.Permissions.SecurityAction> , 즉 사용 권한이 부여 될 파일 또는 디렉터리의 위치와 열거형이 사용 됩니다. **Assert** 를 호출 하면 파일에 액세스할 수 있는 `C:\Log.txt` 권한이 호출자에 게 확인 되지 않았더라도에 대 한 액세스 요청이 성공 합니다.  
+ 다음 예제에서는 **Assert** 메서드를 사용 하 여 보안 검사를 재정의 하는 선언적 구문을 보여 줍니다. **FileIOPermissionAttribute** 구문은 <xref:System.Security.Permissions.SecurityAction> 열거와 권한이 부여 될 파일 또는 디렉터리의 위치와 같은 두 값을 사용 합니다. **Assert** 를 호출 하면 파일에 액세스할 수 있는 권한이 호출자에 게 확인 되지 않은 경우에도 `C:\Log.txt`에 대 한 액세스 요청이 성공 합니다.  
   
 ```vb  
 Option Explicit  
@@ -167,7 +165,7 @@ namespace LogUtil
 }  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Security.PermissionSet>
 - <xref:System.Security.Permissions.SecurityPermission>

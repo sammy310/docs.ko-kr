@@ -29,14 +29,12 @@ helpviewer_keywords:
 - output, managed debugging assistants
 - errors [.NET Framework], managed debugging assistants
 ms.assetid: 76994ee6-9fa9-4059-b813-26578d24427c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6cb2a240a2e7e82b7015eb7a6d99c2117fa63045
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 712fbbe9e0ad291385e8eef321c5e8a2fa092a5d
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052895"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216551"
 ---
 # <a name="diagnose-errors-with-managed-debugging-assistants"></a>관리 디버깅 도우미를 사용 하 여 오류 진단
 
@@ -83,7 +81,7 @@ Windows 레지스트리에 키를 추가 하거나 환경 변수를 설정 하 �
 
 ### <a name="registry-key"></a>레지스트리 키
 
-Mda를 사용 하도록 설정 하려면 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\을 추가 합니다.** Windows 레지스트리에서 NETFramework\MDA 하위 키 (REG_SZ, 값 1)를 입력 합니다. 다음 예제를 *Mdaenable .reg*라는 텍스트 파일에 복사 합니다. Windows 레지스트리 편집기 (Regedit.exe)를 열고 **파일** 메뉴에서 **가져오기**를 선택 합니다. *Mdaenable .reg* 파일을 선택 하 여 해당 컴퓨터에서 mda를 사용 하도록 설정 합니다. 하위 키를 문자열 값 **1** 로 설정 하면 (DWORD 값이 **1**이 아닌 경우) *ApplicationName*파일에서 mda 설정을 읽을 수 있습니다. 예를 들어, 메모장의 MDA 구성 파일은 notepad.exe로 이름이 지정 됩니다.
+Mda를 사용 하도록 설정 하려면 **HKEY_LOCAL_MACHINE \software\microsoft\\를 추가 합니다.** Windows 레지스트리에 있는 NETFramework\MDA 하위 키 (유형 REG_SZ, 값 1)입니다. 다음 예제를 *Mdaenable .reg*라는 텍스트 파일에 복사 합니다. Windows 레지스트리 편집기 (Regedit.exe)를 열고 **파일** 메뉴에서 **가져오기**를 선택 합니다. *Mdaenable .reg* 파일을 선택 하 여 해당 컴퓨터에서 mda를 사용 하도록 설정 합니다. 하위 키를 문자열 값 **1** 로 설정 하면 (DWORD 값이 **1**이 아닌 경우) *ApplicationName*파일에서 mda 설정을 읽을 수 있습니다. 예를 들어, 메모장의 MDA 구성 파일은 notepad.exe로 이름이 지정 됩니다.
 
 ```text
 Windows Registry Editor Version 5.00
@@ -129,7 +127,7 @@ MDA 활성화는 레지스트리 키를 재정의하는 환경 변수 COMPLUS_MD
 
 ### <a name="application-specific-configuration-settings"></a>응용 프로그램별 구성 설정
 
-애플리케이션의 MDA 구성 파일에서 일부 도우미를 개별적으로 사용하도록 설정, 사용하지 않도록 설정 및 구성할 수 있습니다. MDA를 구성하는 데 애플리케이션 구성 파일을 사용할 수 있으려면 MDA 레지스트리 키 또는 COMPLUS_MDA 환경 변수를 설정해야 합니다. 애플리케이션 구성 파일은 일반적으로 애플리케이션 실행 파일(.exe)과 동일한 디렉터리에 있습니다. 파일 이름은 *ApplicationName*.mda.config 형식을 사용합니다(예: notepad.exe.mda.config). 응용 프로그램 구성 파일에서 사용하도록 설정된 도우미는 특별히 해당 도우미의 동작을 제어하도록 디자인된 특성 또는 요소를 포함할 있습니다.
+애플리케이션의 MDA 구성 파일에서 일부 도우미를 개별적으로 사용하도록 설정, 사용하지 않도록 설정 및 구성할 수 있습니다. MDA를 구성하는 데 애플리케이션 구성 파일을 사용할 수 있으려면 MDA 레지스트리 키 또는 COMPLUS_MDA 환경 변수를 설정해야 합니다. 애플리케이션 구성 파일은 일반적으로 애플리케이션 실행 파일(.exe)과 동일한 디렉터리에 있습니다. 파일 이름은 *ApplicationName*. mda .config를 사용 합니다. 예를 들어 notepad.exe. 응용 프로그램 구성 파일에서 사용 하도록 설정 된 도우미에는 해당 도우미의 동작을 제어 하기 위해 특별히 디자인 된 특성 또는 요소가 있을 수 있습니다.
 
 다음 예제에서는 [마샬링을](marshaling-mda.md)사용 하도록 설정 하 고 구성 하는 방법을 보여 줍니다.
 
@@ -148,7 +146,7 @@ MDA 활성화는 레지스트리 키를 재정의하는 환경 변수 COMPLUS_MD
 </mdaConfig>
 ```
 
-`Marshaling` MDA는 애플리케이션에서 각 관리되는-관리되지 않는 변환의 관리되지 않는 형식으로 마샬링되는 관리되는 형식에 대한 정보를 내보냅니다. MDA `Marshaling` 는 각각 **methodfilter** 및 **fieldfilter** 자식 요소에 제공 된 메서드 및 구조 필드의 이름을 필터링 할 수도 있습니다.
+`Marshaling` MDA는 애플리케이션에서 각 관리되는-관리되지 않는 변환의 관리되지 않는 형식으로 마샬링되는 관리되는 형식에 대한 정보를 내보냅니다. `Marshaling` MDA는 각각 **methodfilter** 및 **fieldfilter** 자식 요소에 제공 된 메서드 및 구조 필드의 이름을 필터링 할 수도 있습니다.
 
 다음 예제에서는 기본 설정을 사용 하 여 여러 Mda를 사용 하도록 설정 하는 방법을 보여 줍니다.
 
@@ -174,10 +172,10 @@ Visual Studio IDE (통합 개발 환경)에서 코드가 실행 되는 경우 �
 
 ## <a name="mda-output"></a>MDA 출력
 
-Mda 출력은 `PInvokeStackImbalance` mda의 출력을 보여 주는 다음 예제와 유사 합니다.
+MDA 출력은 `PInvokeStackImbalance` MDA의 출력을 보여 주는 다음 예제와 유사 합니다.
 
 **PInvoke 함수 ' MDATest!를 호출 합니다. MDATest. Program:: StdCall '이 (가) 스택에서 불균형 했습니다. 이는 관리 되는 PInvoke 서명이 관리 되지 않는 대상 시그니처와 일치 하지 않기 때문일 수 있습니다. PInvoke 시그니처의 호출 규칙 및 매개 변수가 관리 되지 않는 대상 시그니처와 일치 하는지 확인 합니다.**
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [디버깅, 추적 및 프로파일링](index.md)

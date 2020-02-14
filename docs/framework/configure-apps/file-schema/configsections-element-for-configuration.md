@@ -7,25 +7,23 @@ helpviewer_keywords:
 - configSections Element
 - <configSections> Element
 ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6024144b6f12df22369366f04c3cbad02c5011d5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5b71eb81769db1188f97b1646a608df172ff56c5
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119023"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214819"
 ---
 # <a name="configsections-element-for-configuration"></a>\<구성에 대 한 configSections > 요소를 \<>
 
 구성 섹션과 네임 스페이스 선언을 포함 합니다.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp; **\<configSections>**
+**configSections을\<** &nbsp;&nbsp;>
 
 ## <a name="attributes"></a>특성
 
-없음
+None
 
 ## <a name="parent-element"></a>부모 요소
 
@@ -37,12 +35,12 @@ ms.locfileid: "73119023"
 
 |     | Description |
 | --- | ----------- |
-| [ **\<section>** ](section-element.md) | 구성 섹션 선언을 포함 합니다. |
-| [ **\<sectionGroup>** ](sectiongroup-element-for-configsections.md) | 구성 섹션에 대 한 네임 스페이스를 정의 합니다. |
+| [ **\<섹션 >** ](section-element.md) | 구성 섹션 선언을 포함 합니다. |
+| [ **\<sectionGroup >** ](sectiongroup-element-for-configsections.md) | 구성 섹션에 대 한 네임 스페이스를 정의 합니다. |
 | [ **\<remove>** ](remove-element-for-configsections.md) | 미리 정의 된 섹션 또는 섹션 그룹을 제거 합니다. |
 | [ **\<clear>** ](clear-element-for-configsections.md) | 이전에 정의 된 모든 섹션과 섹션 그룹을 지웁니다. |
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 이 요소는 구성 파일에 있는 경우 **\<configuration >** 요소의 첫 번째 자식 요소 여야 합니다.
 

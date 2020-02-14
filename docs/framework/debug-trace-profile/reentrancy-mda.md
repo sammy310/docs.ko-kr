@@ -13,14 +13,12 @@ helpviewer_keywords:
 - managed code, debugging
 - native debugging, MDAs
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d14ba8724659172711da44e7bb249e9d20768dbc
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8f1621090079c030e3c055a417ed9bcad882bf78
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052333"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217230"
 ---
 # <a name="reentrancy-mda"></a>reentrancy MDA
 이전에 수행된 관리 코드에서 네이티브 코드로의 전환이 순서대로 수행되지 않은 경우 네이티브 코드에서 관리 코드로 전환하려고 하면 `reentrancy` MDA(관리 디버깅 도우미)가 활성화됩니다.  
@@ -35,7 +33,7 @@ ms.locfileid: "71052333"
   
  이 문제는 항상 애플리케이션 코드 때문에 발생합니다.  
   
-## <a name="resolution"></a>해결  
+## <a name="resolution"></a>해결 방법  
  이 MDA가 활성화된 스레드의 스택 추적을 검사합니다.  스레드에서 관리 코드를 올바르지 않게 호출하려고 합니다.  스택 추적은 이 확장 지점, 이 확장 지점을 제공하는 운영 체제 코드 및 확장 지점으로 인해 중단된 관리 코드를 사용하여 애플리케이션 코드를 표시해야 합니다.  
   
  예를 들어 벡터화된 예외 처리기에서 관리 코드를 호출하려고 시도할 때 MDA가 활성화됩니다.  스택에 운영 체제 예외 처리 코드와 <xref:System.DivideByZeroException> 또는 <xref:System.AccessViolationException> 등의 예외를 트리거하는 관리 코드가 일부 표시됩니다.  
@@ -56,7 +54,7 @@ low-level native extensibility points. Managed Debugging Assistant
 ConsoleApplication1\bin\Debug\ConsoleApplication1.vshost.exe'.  
 ```  
   
-## <a name="configuration"></a>구성하기  
+## <a name="configuration"></a>구성  
   
 ```xml  
 <mdaConfig>  
@@ -104,6 +102,6 @@ public class Reenter
 }  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)

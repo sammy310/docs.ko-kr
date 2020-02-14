@@ -5,14 +5,12 @@ helpviewer_keywords:
 - JIT-attach debugging
 - debugging [.NET Framework], JIT-attach debugging
 ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: be619f8e84b176872361fdd43faa9c704832c8e0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 7adf1316a36d781439d364746fa11795a7fe165a
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975595"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217530"
 ---
 # <a name="enabling-jit-attach-debugging"></a>JIT 연결 디버깅 설정
 오류가 발생한 경우 JIT 연결 디버깅은 디버거를 프로세스에 연결하는 방법을 설명하는 데 사용되는 구문이고, 오류가 발생하지 않은 경우 특정 메서드 또는 함수에 의해 트리거될 수 있습니다.  
@@ -35,7 +33,7 @@ ms.locfileid: "73975595"
   
  .NET Framework 4 이전에는 .NET Framework 네이티브 및 관리 되는 디버거의 동작을 제어 하기 위해 별도의 레지스트리 키를 제공 했습니다. .NET Framework 4부터 컨트롤은 단일 레지스트리 키 (HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug.에 통합 됩니다. 해당 키에 대해 설정할 수 있는 값에 따라 디버거 호출 여부가 결정되고 디버거가 호출되는 경우 사용자 조작이 필요한 대화 상자와 함께 호출되는지 여부가 결정됩니다. 이 레지스트리 키를 설정 하는 방법에 대 한 자세한 내용은 [자동 디버깅 구성](/windows/win32/debug/configuring-automatic-debugging)을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅, 추적 및 프로파일링](index.md)
 - [쉽게 디버깅할 수 있도록 이미지 만들기](making-an-image-easier-to-debug.md)

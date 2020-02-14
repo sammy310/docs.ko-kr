@@ -10,14 +10,12 @@ helpviewer_keywords:
 - TRACE directive
 - conditional compilation, tracing code
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a2cb2ef473d6870da47e0e4c00fecf6bd60707f3
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2c3ec54535319f4c7507563a5976038ca40d20aa
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975579"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217448"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>방법: 추적 및 디버그를 사용한 조건부 컴파일
 개발 중에 애플리케이션을 디버그하는 동안 추적 및 디버깅 출력은 둘 다 Visual Studio의 출력 창으로 이동합니다. 그러나 배포된 애플리케이션에 추적 기능을 포함하려면 **TRACE** 컴파일러 지시문을 사용하도록 설정하여 계측된 애플리케이션을 컴파일해야 합니다. 이렇게 하면 추적 코드를 애플리케이션의 릴리스 버전으로 컴파일할 수 있습니다. **TRACE** 지시문을 사용하지 않으면 모든 추적 코드가 컴파일 중에 무시되고 배포할 실행 코드에 포함되지 않습니다.  
@@ -73,7 +71,7 @@ ms.locfileid: "73975579"
   
 1. 소스 코드 파일의 위쪽에서 프로그래밍 언어에 대한 적절한 문을 입력합니다.  
   
-    |언어|문|결과|  
+    |언어|인수를 제거합니다.|결과|  
     |--------------|---------------|------------|  
     |**Visual Basic**|**#CONST TRACE = true**|추적 사용|  
     ||**#CONST TRACE = false**|추적 사용 안 함|  
@@ -88,19 +86,19 @@ ms.locfileid: "73975579"
   
 소스 코드에서 컴파일러 지시문을 삭제합니다.  
   
-\- 또는 -  
+\- 또는-  
   
 컴파일러 지시문을 주석으로 처리합니다.  
   
 > [!NOTE]
 > 컴파일할 준비가 되면 **빌드** 메뉴에서 **빌드**를 선택하거나, **d:** 을 입력하지 않고 명령줄 메서드를 사용하여 조건부 컴파일 기호를 정의합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [애플리케이션 추적 및 조율](tracing-and-instrumenting-applications.md)
 - [방법: 추적 스위치 만들기, 초기화 및 구성](how-to-create-initialize-and-configure-trace-switches.md)
 - [추적 스위치](trace-switches.md)
 - [추적 수신기](trace-listeners.md)
 - [방법: 애플리케이션 코드에 Trace 문 추가](how-to-add-trace-statements-to-application-code.md)
-- [Visual Studio 명령줄에 대 한 환경 변수를 설정 하는 방법](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [Visual Studio 명령줄에 필요한 환경 변수를 설정하는 방법](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
 - [방법: 명령줄 컴파일러 호출](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

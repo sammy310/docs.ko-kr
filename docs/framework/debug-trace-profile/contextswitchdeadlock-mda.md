@@ -12,14 +12,12 @@ helpviewer_keywords:
 - message pumping
 - context switching deadlocks
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7bcdb235ff2a73514c5bb3ad7abc3f4c3fc8e441
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e3fc4a2cb35cdcc713ba0ef362071083af08a27b
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052921"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217564"
 ---
 # <a name="contextswitchdeadlock-mda"></a>contextSwitchDeadlock MDA
 
@@ -62,7 +60,7 @@ STA 메시지 펌핑 관련 COM 규칙을 따릅니다.
 
 현재 컨텍스트 및 대상 컨텍스트를 설명하는 메시지입니다.
 
-## <a name="configuration"></a>Configuration
+## <a name="configuration"></a>구성
 
 ```xml
 <mdaConfig>
@@ -72,7 +70,7 @@ STA 메시지 펌핑 관련 COM 규칙을 따릅니다.
 </mdaConfig>
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)

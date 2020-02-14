@@ -10,14 +10,12 @@ helpviewer_keywords:
 - MarshalCleanupError MDA
 - memory, cleanup errors
 ms.assetid: 2f5d9e7c-ae51-4155-a435-54347aa1f091
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ab3690cac28ef572b19cadb632662590d1ea04c7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1a14c548ce960d53f47934595171189db28edfbb
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052476"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216151"
 ---
 # <a name="marshalcleanuperror-mda"></a>marshalCleanupError MDA
 `marshalCleanupError` MDA(관리 디버깅 도우미)는 네이티브 코드 경계와 관리 코드 경계 간에 데이터 형식을 마샬링하는 데 사용되는 임시 구조 및 메모리를 정리하려고 하는 동안 CLR(공용 언어 런타임)에 오류가 발생하면 활성화됩니다.  
@@ -37,7 +35,7 @@ ms.locfileid: "71052476"
 ## <a name="output"></a>출력  
  정리 중에 실패한 작업을 보고하는 메시지입니다.  
   
-## <a name="configuration"></a>Configuration  
+## <a name="configuration"></a>구성  
   
 ```xml  
 <mdaConfig>  
@@ -47,7 +45,7 @@ ms.locfileid: "71052476"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)

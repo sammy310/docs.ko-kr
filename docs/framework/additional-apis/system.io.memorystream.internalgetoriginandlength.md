@@ -1,7 +1,5 @@
 ---
 title: MemoryStream InternalGetOriginAndLength 메서드 (System.IO)
-author: mairaw
-ms.author: mairaw
 ms.date: 11/19/2019
 topic_type:
 - apiref
@@ -11,12 +9,12 @@ api_location:
 - mscorlib.dll
 api_type:
 - Assembly
-ms.openlocfilehash: d2bfa087fe2fb247f963cfa687c27056363d5696
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d82b5080e9fbd5fc6603f1cddae996c75a06d3a3
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74284044"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215469"
 ---
 # <a name="memorystreaminternalgetoriginandlength-method"></a>MemoryStream InternalGetOriginAndLength 메서드
 
@@ -43,7 +41,7 @@ internal void InternalGetOriginAndLength(out int origin, out int length)
 
 ## <a name="requirements"></a>요구 사항
 
-**네임스페이스:** <xref:System.IO>
+**네임 스페이스:** <xref:System.IO>
 
 **어셈블리:** mscorlib.dll (mscorlib.dll)
 

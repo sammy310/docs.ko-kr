@@ -6,14 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: 2303031f-4c1d-4df4-bca1-e9bd96ca40dc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d73c07d58bb226346cb99a1fe50b12bb0e7e746e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e5c5c6cf5744aa385e6f6700cad623751a4d7427
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73118537"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215486"
 ---
 # <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>NameValueSectionHandler 및 DictionarySectionHandler에 대 한 사용자 지정 요소
 
@@ -24,23 +22,23 @@ ms.locfileid: "73118537"
 
 ## <a name="attributes"></a>특성
 
-없음
+None
 
 ## <a name="parent-element"></a>부모 요소
 
-|     | 설명 |
+|     | Description |
 | --- | ----------- |
 | [ **\<configuration>** ](configuration-element.md) | 공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다. |
 
 ## <a name="child-elements"></a>자식 요소
 
-|     | 설명 |
+|     | Description |
 | --- | ----------- |
 | <xref:System.Configuration.NameValueSectionHandler> 및 <xref:System.Configuration.DictionarySectionHandler>에 대 한 [ **> 추가\<** ](add-element-for-custom-2.md)  | 사용자 지정 응용 프로그램 설정을 추가 합니다. |
 | <xref:System.Configuration.NameValueSectionHandler> 및 <xref:System.Configuration.DictionarySectionHandler>에 대 한 [ **> 제거\<** ](remove-element-for-custom-2.md) | 이전에 정의 된 설정을 제거 합니다. |
 | <xref:System.Configuration.NameValueSectionHandler> 및 <xref:System.Configuration.DictionarySectionHandler>에 대 한 [ **> 지우기\<** ](clear-element-for-custom-2.md) | 섹션에서 이전에 정의 된 모든 설정을 지웁니다. |
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 **\<섹션 이름 >** 요소는 **\<configsections >** 요소의 **\<섹션 >** 태그에 의해 정의 되는 사용자 지정 요소입니다.
 
@@ -80,6 +78,6 @@ ms.locfileid: "73118537"
 
 이 요소는 응용 프로그램 구성 파일 *, 컴퓨터 구성 파일 (machine.config*) 및 응용 프로그램 디렉터리 수준에 없는 *web.config 파일* 에서 사용할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [.NET Framework에 대 한 구성 파일 스키마](index.md)

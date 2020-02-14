@@ -10,14 +10,12 @@ helpviewer_keywords:
 - PInvokeStackImbalance MDA
 - managed debugging assistants (MDAs), platform invoke
 ms.assetid: 34ddc6bd-1675-4f35-86aa-de1645d5c631
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 117e0838f78d43bf9ffa555947bf8749830c9840
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: c789e8cb409bd4c59c91d6b646efe428afe7c86d
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802002"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217250"
 ---
 # <a name="pinvokestackimbalance-mda"></a>PInvokeStackImbalance MDA
 
@@ -36,7 +34,7 @@ ms.locfileid: "74802002"
 
 플랫폼 호출의 관리되는 서명이 호출되는 메서드의 관리되지 않는 서명과 일치하지 않을 수 있습니다.  이 불일치는 관리되는 서명에서 올바른 개수의 매개 변수를 선언하지 않았거나 매개 변수에 대해 적절한 크기를 지정하지 않아서 발생할 수 있습니다.  <xref:System.Runtime.InteropServices.DllImportAttribute> 특성에 지정될 수 있는 호출 규칙이 관리되지 않는 호출 규칙과 일치하지 않아 MDA가 활성화될 수도 있습니다.
 
-## <a name="resolution"></a>해결
+## <a name="resolution"></a>해결 방법
 
 관리되는 플랫폼 호출 서명과 호출 규칙을 검토하여 기본 대상의 서명 및 호출 규칙과 일치하는지 확인합니다.  관리되는 측면과 관리되지 않는 측면 둘 다에서 호출 규칙을 명시적으로 지정합니다. 가능성은 적지만 관리되지 않는 컴파일러의 버그와 같은 다른 이유로 관리되지 않는 함수에서 스택 불균형이 발생했을 수도 있습니다.
 
@@ -44,7 +42,7 @@ ms.locfileid: "74802002"
 
 모든 플랫폼 호출이 CLR에서 최적화되지 않은 경로를 사용하도록 강제합니다.
 
-## <a name="output"></a>Output
+## <a name="output"></a>출력
 
 MDA 메시지는 스택 불균형을 발생시키는 플랫폼 호출 메서드 호출의 이름을 제공합니다. `SampleMethod` 메서드의 플랫폼 호출 샘플 메시지는 다음과 같습니다.
 
@@ -60,7 +58,7 @@ MDA 메시지는 스택 불균형을 발생시키는 플랫폼 호출 메서드 
 </mdaConfig>
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)

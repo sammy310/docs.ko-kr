@@ -7,14 +7,12 @@ helpviewer_keywords:
 - security-transparent code
 - security-critical code
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ea782b346f6c53664a8aeb736c7d7a4509d83985
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 7ac5660c2c431505f4992f5e687974c2b9d06672
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974939"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217003"
 ---
 # <a name="security-transparent-code-level-2"></a>보안 투명 코드, 수준 2
 
@@ -72,12 +70,12 @@ ms.locfileid: "73974939"
 
 다음 표에서는 수준 2에 대 한 어셈블리 수준 동작과 수준 1을 비교 합니다.
 
-|Assembly 특성|수준 2|수준 1|
+|어셈블리 특성|수준 2|수준 1|
 |------------------------|-------------|-------------|
 |부분적으로 신뢰할 수 있는 어셈블리에 대한 특성 없음|형식 및 멤버는 기본적으로 투명하지만 보안에 중요하거나 보안 안전에 중요할 수 있습니다.|모든 형식 및 멤버가 투명합니다.|
 |특성 없음|특성을 지정하지 않으면 공용 언어 런타임이 투명도 규칙을 확인합니다. 보안에 중요하게 되어 상속 규칙을 위반하는 경우를 제외하고 모든 형식 및 멤버가 보안에 중요합니다.|완전히 신뢰할 수 있는 어셈블리(전역 어셈블리 캐시에 포함 또는 `AppDomain`에서 완전 신뢰로 식별됨)에서 모든 형식은 투명하고 모든 멤버는 보안 안전에 중요합니다.|
 |`SecurityTransparent`|모든 형식 및 멤버가 투명합니다.|모든 형식 및 멤버가 투명합니다.|
-|`SecurityCritical(SecurityCriticalScope.Everything)`|해당 없음.|모든 형식 및 멤버가 보안에 중요합니다.|
+|`SecurityCritical(SecurityCriticalScope.Everything)`|해당 사항 없음|모든 형식 및 멤버가 보안에 중요합니다.|
 |`SecurityCritical`|이 어셈블리에서 형식으로 도입되는 모든 코드가 중요합니다. 기타 모든 코드는 투명합니다. 가상 또는 추상 메서드를 재정의하거나 인터페이스 메서드를 구현할 경우 해당 메서드를 `SecurityCritical` 또는 `SecuritySafeCritical`로 명시적으로 주석을 달아야 합니다.|모든 코드가 기본적으로 투명으로 설정됩니다. 그러나 개별 형식 및 멤버는 다른 특성을 포함할 수 있습니다.|
 
 ### <a name="type-and-member-annotation"></a>형식 및 멤버 주석
@@ -160,11 +158,11 @@ ms.locfileid: "73974939"
 
 수준 2 투명도 모델은 <xref:System.Security.Permissions.SecurityAction.LinkDemand>를 <xref:System.Security.SecurityCriticalAttribute> 특성으로 바꿉니다. 레거시(수준 1) 코드에서 <xref:System.Security.Permissions.SecurityAction.LinkDemand>는 자동으로 <xref:System.Security.Permissions.SecurityAction.Demand>로 처리됩니다.
 
-### <a name="reflection"></a>반사
+### <a name="reflection"></a>리플렉션
 
 중요한 메서드를 호출하거나 중요한 필드를 읽으면 private 메서드나 필드를 호출한 것처럼 완전 신뢰에 대한 요청이 트리거됩니다. 따라서 완전 신뢰 코드는 중요한 메서드를 호출할 수 있지만 부분 신뢰 코드는 호출할 수 없습니다.
 
-형식, 메서드 또는 필드가 `SecurityCritical`, `SecuritySafeCritical` 또는 `SecurityTransparent`인지 확인하려고 <xref:System.Reflection> 네임스페이스에 <xref:System.Type.IsSecurityCritical%2A>, <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A> 및 <xref:System.Reflection.MethodBase.IsSecurityTransparent%2A> 속성이 추가되었습니다. 이들 속성을 사용하여 특성이 있는지 확인하는 것이 아니라 리플렉션을 통해 투명도를 확인합니다. 투명도 규칙은 복잡하고 특성이 있는지 확인하는 것으로는 충분하지 않을 수 있습니다.
+형식, 메서드 또는 필드가 <xref:System.Reflection>, `SecurityCritical` 또는 `SecuritySafeCritical`인지 확인하려고 `SecurityTransparent` 네임스페이스에 <xref:System.Type.IsSecurityCritical%2A>, <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A> 및 <xref:System.Reflection.MethodBase.IsSecurityTransparent%2A> 속성이 추가되었습니다. 이들 속성을 사용하여 특성이 있는지 확인하는 것이 아니라 리플렉션을 통해 투명도를 확인합니다. 투명도 규칙은 복잡하고 특성이 있는지 확인하는 것으로는 충분하지 않을 수 있습니다.
 
 > [!NOTE]
 > `SafeCritical` 메서드는 <xref:System.Type.IsSecurityCritical%2A> 및 <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>에 대 한 `true`를 반환 합니다 .이는 중요 한 코드와 동일한 기능을 포함 하지만 투명 코드에서 호출할 수 있기 `SafeCritical` 때문입니다.
@@ -173,13 +171,13 @@ ms.locfileid: "73974939"
 
 ### <a name="skip-verification-in-full-trust"></a>완전 신뢰에서 확인 건너뛰기
 
-<xref:System.Security.SecurityRulesAttribute> 특성에서 <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> 속성을 `true`로 설정하여 완전히 신뢰할 수 있는 어셈블리에 대한 확인을 건너뛸 수 있습니다.
+<xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> 특성에서 `true` 속성을 <xref:System.Security.SecurityRulesAttribute>로 설정하여 완전히 신뢰할 수 있는 어셈블리에 대한 확인을 건너뛸 수 있습니다.
 
 `[assembly: SecurityRules(SecurityRuleSet.Level2, SkipVerificationInFullTrust = true)]`
 
 <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> 속성은 기본적으로 `false`이므로 확인을 건너뛰려면 속성을 `true`로 설정해야 합니다. 이 작업은 최적화 목적으로만 수행해야 합니다. [PEVerify 도구의](../tools/peverify-exe-peverify-tool.md)`transparent` 옵션을 사용 하 여 어셈블리의 투명 코드를 확인할 수 있는지 확인 해야 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [보안 투명 코드, 수준 1](security-transparent-code-level-1.md)
 - [보안 변경 내용](../security/security-changes.md)

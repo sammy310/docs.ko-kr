@@ -9,14 +9,12 @@ helpviewer_keywords:
 - secure coding, exception handling
 - exception handling, security
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 256d9c9b825081e3bcfafd6e0e09de825d046d20
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e0465f2eb6be61e161f5e6b8cadf629a53f11906
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894550"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215795"
 ---
 # <a name="securing-exception-handling"></a>예외 처리 보안
 시각적 개체 C++ 와 Visual Basic에서 스택의 추가 필터 식은 **finally** 문 보다 먼저 실행 됩니다. 해당 필터와 연결 된 **catch** 블록은 **finally** 문 다음에 실행 됩니다. 자세한 내용은 [사용자 필터 예외 사용](../../standard/exceptions/using-user-filtered-exception-handlers.md)을 참조 하세요. 이 섹션에서는이 주문의 보안 의미를 검사 합니다. 필터 문과 **finally** 문이 실행 되는 순서를 보여 주는 다음과 같은 의사 코드 예를 고려해 보세요.  
@@ -60,7 +58,7 @@ Finally
 Catch  
 ```  
   
- 필터는 **finally** 문 보다 먼저 실행 되므로 다른 코드를 실행 하는 데 사용 될 수 있는 상태를 변경 하는 모든 항목에 의해 보안 문제가 발생할 수 있습니다. 예를 들어:  
+ 필터는 **finally** 문 보다 먼저 실행 되므로 다른 코드를 실행 하는 데 사용 될 수 있는 상태를 변경 하는 모든 항목에 의해 보안 문제가 발생할 수 있습니다. 다음은 그 예입니다.  
   
 ```cpp  
 try   
@@ -136,7 +134,7 @@ YourObject.YourMethod()
 }  
 ```  
   
- 이는이 컨트롤을 `FilterFunc` 가져오기 전에 **finally** 문이 실행 되지 않았기 때문에 문제가 해결 되지 않습니다.  
+ 이는 `FilterFunc`가 컨트롤을 가져오기 전에 **finally** 문이 실행 되지 않았기 때문에 문제가 해결 되지 않습니다.  
   
  다음 예제에서는 호출자의 예외 필터 블록에 예외를 제공 하기 전에 **finally** 절이 실행 되도록 하 여 문제를 해결 합니다.  
   
@@ -160,6 +158,6 @@ YourObject.YourMethod()
 }  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [보안 코딩 지침](../../standard/security/secure-coding-guidelines.md)

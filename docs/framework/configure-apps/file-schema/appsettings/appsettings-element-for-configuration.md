@@ -7,21 +7,19 @@ helpviewer_keywords:
 - appSettings Element
 - <appSettings> Element
 ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6112d87afcca8b2f54508d03d3ea4c0781d7e475
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 47d7648aae08544890a4dd2e42cedbf68a8acc72
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119278"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214729"
 ---
 # <a name="appsettings-element-for-configuration"></a>\<구성에 대 한 \<appSettings > 요소 >
 
 사용자 지정 응용 프로그램 설정을 포함 합니다. .NET Framework에서 제공 하는 미리 정의 된 구성 섹션입니다.
 
 [ **\<configuration>** ](../configuration-element.md)   
-&nbsp;&nbsp; **\<appSettings>**
+&nbsp;&nbsp; **\<appSettings >**
 
 ## <a name="syntax"></a>구문
 
@@ -31,7 +29,7 @@ ms.locfileid: "73119278"
 </appSettings>
 ```
 
-## <a name="attribute"></a>특성
+## <a name="attribute"></a>attribute
 
 |           | Description |
 | --------- | ----------- |
@@ -51,7 +49,7 @@ ms.locfileid: "73119278"
 | [ **\<clear>** ](clear-element-for-appsettings.md) | 이전에 정의 된 모든 응용 프로그램 설정을 지웁니다. |
 | [ **\<remove>** ](remove-element-for-appsettings.md) | 이전에 정의 된 응용 프로그램 설정을 제거 합니다. |
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 **\<appSettings >** 요소는 데이터베이스 연결 문자열, 파일 경로, XML Web services url 또는 응용 프로그램에 대 한 기타 사용자 지정 구성 정보와 같은 사용자 지정 응용 프로그램 구성 정보를 저장 합니다. **\<appSettings >** 요소에 지정 된 키/값 쌍은 <xref:System.Configuration.ConfigurationSettings> 클래스를 사용 하 여 코드에서 액세스 됩니다.
 

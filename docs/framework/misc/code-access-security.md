@@ -15,14 +15,12 @@ helpviewer_keywords:
 - user authentication, code access security
 - code access security
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bdb4e84170d4d3b95b8b51f12e0787937aaaf961
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: a8021fade8df2c8bee5e3bf26da784a91526540f
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205652"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215891"
 ---
 # <a name="code-access-security"></a>코드 액세스 보안
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -36,7 +34,7 @@ ms.locfileid: "70205652"
 > [!NOTE]
 > .NET Framework 4에서 코드 액세스 보안에 대 한 주요 변경 내용이 적용 되었습니다. 가장 주목할 만한 변경은 [보안 투명성](security-transparent-code.md)이지만 코드 액세스 보안에 영향을 주는 다른 중요 한 변경 내용도 있습니다. 이러한 변경 내용에 대 한 자세한 내용은 [보안 변경 내용](../security/security-changes.md)을 참조 하세요.  
   
- 코드 액세스 보안은 주로 라이브러리 코드와 부분적으로 신뢰할 수 있는 애플리케이션에 영향을 줍니다. 라이브러리 개발자는 부분적으로 신뢰할 수 있는 애플리케이션의 무단 액세스로부터 코드를 보호해야 합니다. 부분적으로 신뢰할 수 있는 애플리케이션은 인터넷과 같은 외부 소스에서 로드된 애플리케이션입니다. 데스크톱이나 로컬 인트라넷에 설치된 애플리케이션은 완전 신뢰로 실행됩니다. 완전 신뢰 응용 프로그램은 완전히 신뢰할 수 있으므로 [보안 투명](security-transparent-code.md)으로 표시 되지 않는 한 코드 액세스 보안의 영향을 받지 않습니다. 완전 신뢰 애플리케이션에 대한 유일한 제한 사항은 <xref:System.Security.SecurityTransparentAttribute> 특성으로 표시된 애플리케이션이 <xref:System.Security.SecurityCriticalAttribute> 특성으로 표시된 코드를 호출할 수 없다는 것입니다. 코드 액세스 보안을 적용할 수 있도록 부분적으로 신뢰할 수 있는 애플리케이션은 샌드박스(예: Internet Explorer)에서 실행되어야 합니다. 인터넷에서 응용 프로그램을 다운로드 하 여 데스크톱에서 실행 하려고 하면 다음과 같은 메시지가 표시 됩니다 <xref:System.NotSupportedException> . "이전 버전의 .NET Framework에서 어셈블리를 샌드 박싱 한 네트워크 위치에서 어셈블리를 로드 하려고 했습니다. .NET Framework의 이 릴리스는 기본적으로 CAS 정책을 사용하도록 설정하지 않으므로 이러한 로드는 위험할 수 있습니다." 응용 프로그램을 신뢰할 수 있는 경우 [ \<loadFromRemoteSources > 요소](../configure-apps/file-schema/runtime/loadfromremotesources-element.md)를 사용 하 여 완전 신뢰로 실행 되도록 설정할 수 있습니다. 샌드박스에서 응용 프로그램을 실행 [하는 방법에 대 한 자세한 내용은 방법: 샌드박스에서 부분적으로 신뢰할 수 있는 코드 실행](how-to-run-partially-trusted-code-in-a-sandbox.md)의 설명대로 신뢰할 수 없는 코드에 별도의 폴더를 사용합니다.  
+ 코드 액세스 보안은 주로 라이브러리 코드와 부분적으로 신뢰할 수 있는 애플리케이션에 영향을 줍니다. 라이브러리 개발자는 부분적으로 신뢰할 수 있는 애플리케이션의 무단 액세스로부터 코드를 보호해야 합니다. 부분적으로 신뢰할 수 있는 애플리케이션은 인터넷과 같은 외부 소스에서 로드된 애플리케이션입니다. 데스크톱이나 로컬 인트라넷에 설치된 애플리케이션은 완전 신뢰로 실행됩니다. 완전 신뢰 응용 프로그램은 완전히 신뢰할 수 있으므로 [보안 투명](security-transparent-code.md)으로 표시 되지 않는 한 코드 액세스 보안의 영향을 받지 않습니다. 완전 신뢰 애플리케이션에 대한 유일한 제한 사항은 <xref:System.Security.SecurityTransparentAttribute> 특성으로 표시된 애플리케이션이 <xref:System.Security.SecurityCriticalAttribute> 특성으로 표시된 코드를 호출할 수 없다는 것입니다. 코드 액세스 보안을 적용할 수 있도록 부분적으로 신뢰할 수 있는 애플리케이션은 샌드박스(예: Internet Explorer)에서 실행되어야 합니다. 인터넷에서 애플리케이션을 다운로드하고 데스크톱에서 실행하려고 하면 다음 메시지와 함께 <xref:System.NotSupportedException>이 표시됩니다. “이전 버전의 .NET Framework에서 어셈블리에 샌드박스가 적용된 네트워크 위치에서 어셈블리를 로드하려고 했습니다. .NET Framework의 이 릴리스는 기본적으로 CAS 정책을 사용하도록 설정하지 않으므로 이러한 로드는 위험할 수 있습니다." 응용 프로그램을 신뢰할 수 있는 경우 [\<loadFromRemoteSources > 요소](../configure-apps/file-schema/runtime/loadfromremotesources-element.md)를 사용 하 여 완전 신뢰로 실행 되도록 설정할 수 있습니다. 샌드박스에서 애플리케이션을 실행 하는 방법에 대 한 내용은 [방법: 부분적으로 신뢰할 수 있는 코드 실행 샌드박스에서](how-to-run-partially-trusted-code-in-a-sandbox.md)합니다.  
   
  코드에서 단일 코드 액세스 보안 호출을 수행하지 않는 경우에도 공용 언어 런타임을 대상으로 하는 모든 관리 코드가 코드 액세스 보안의 혜택을 받습니다. 자세한 내용은 [코드 액세스 보안 기본 사항](code-access-security-basics.md)을 참조하세요.  
   
@@ -64,11 +62,11 @@ ms.locfileid: "70205652"
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>관련 항목  
   
-|제목|설명|  
+|제목|Description|  
 |-----------|-----------------|  
 |[코드 액세스 보안 기본 사항](code-access-security-basics.md)|코드 액세스 보안 및 가장 일반적인 용도를 설명합니다.|  
 |[보안 투명 코드, 수준 2](security-transparent-code-level-2.md)|.NET Framework 4의 보안 투명성 모델에 대해 설명 합니다.|  
 |[부분적으로 신뢰할 수 있는 코드에서 라이브러리 사용](using-libraries-from-partially-trusted-code.md)|비관리 코드에 라이브러리를 사용할 수 있도록 하는 방법 및 비관리 코드에서 라이브러리를 사용하는 방법을 설명합니다.|  
 |[주요 보안 개념](../../standard/security/key-security-concepts.md)|.NET Framework 보안 시스템에서 사용되는 주요 용어와 개념을 개략적으로 설명합니다.|  
 |[역할 기반 보안](../../standard/security/role-based-security.md)|역할 기반 보안을 통합하는 방법을 설명합니다.|  
-|[Cryptographic Services](../../standard/security/cryptographic-services.md)|애플리케이션에 암호화를 통합하는 방법을 설명합니다.|
+|[암호화 서비스](../../standard/security/cryptographic-services.md)|애플리케이션에 암호화를 통합하는 방법을 설명합니다.|

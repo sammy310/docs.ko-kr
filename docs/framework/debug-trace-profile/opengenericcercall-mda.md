@@ -10,14 +10,12 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), CER calls
 - generics [.NET Framework], open generic CER calls
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 44b6ee3e4f74a523c1e902a4eb48a64b11eb3937
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: de1735103314dfedbabe27623f579ce2c1e728af
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960909"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217271"
 ---
 # <a name="opengenericcercall-mda"></a>openGenericCERCall MDA
 
@@ -37,7 +35,7 @@ ms.locfileid: "72960909"
 
 이 MDA가 활성화되면 잘못된 인스턴스에 대해 CER이 작동하지 않는 증상이 발생할 가능성이 큽니다. 실제로 MDA를 활성화하게 한 환경에서 런타임 시 CER을 구현하지 않았습니다. 따라서 개발자가 CER의 공유 인스턴스를 사용하는 경우, 의도된 CER 지역 내의 JIT 컴파일 오류, 제네릭 형식 로딩 오류 또는 스레드 중단이 발견되지 않습니다.
 
-## <a name="resolution"></a>해결
+## <a name="resolution"></a>해결 방법
 
 CER을 포함할 수 있는 메서드의 개체 참조 형식인 제네릭 형식 변수를 사용하지 마세요.
 
@@ -45,7 +43,7 @@ CER을 포함할 수 있는 메서드의 개체 참조 형식인 제네릭 형�
 
 이 MDA는 CLR에 아무런 영향을 미치지 않습니다.
 
-## <a name="output"></a>Output
+## <a name="output"></a>출력
 
 다음은이 MDA의 출력 샘플입니다.
   
@@ -56,7 +54,7 @@ CER을 포함할 수 있는 메서드의 개체 참조 형식인 제네릭 형�
  declaringType name="OpenGenericCERCall"
  ```
 
-## <a name="configuration"></a>Configuration
+## <a name="configuration"></a>구성
 
 ```xml
 <mdaConfig>
@@ -112,7 +110,7 @@ class MyClass
 }
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution>

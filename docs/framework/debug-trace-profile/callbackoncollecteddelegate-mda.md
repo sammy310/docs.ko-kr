@@ -14,14 +14,12 @@ helpviewer_keywords:
 - garbage collection, run-time errors
 - delegates [.NET Framework], garbage collection
 ms.assetid: 398b0ce0-5cc9-4518-978d-b8263aa21e5b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f7f5a6ef2d4e8d4a987ed74a6a04e31f87cc46f3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: eb14e0df5396d92eb223dde2e562684c4c318295
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052931"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217575"
 ---
 # <a name="callbackoncollecteddelegate-mda"></a>callbackOnCollectedDelegate MDA
 대리자가 함수 포인터로 관리 코드에서 비관리 코드로 마샬링되고 대리자가 가비지 수집된 후 콜백이 해당 함수 포인터에 배치된 경우 `callbackOnCollectedDelegate` MDA(관리 디버깅 도우미)가 활성화됩니다.  
@@ -47,7 +45,7 @@ ms.locfileid: "71052931"
 ## <a name="output"></a>출력  
  MDA는 관리되지 않는 함수 포인터에서 콜백이 시도되기 전에 수집된 대리자의 형식 이름을 보고합니다.  
   
-## <a name="configuration"></a>Configuration  
+## <a name="configuration"></a>구성  
  다음 예제에서는 애플리케이션 구성 옵션을 보여 줍니다. MDA에서 활성 상태로 유지하는 썽크 수를 1,500개로 설정합니다. 기본 `listSize` 값은 1,000이고, 최소값은 50이고, 최대값은 2,000입니다.  
   
 ```xml  
@@ -111,7 +109,7 @@ public class Entry
 }  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)

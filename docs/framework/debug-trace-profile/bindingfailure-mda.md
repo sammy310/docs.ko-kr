@@ -9,14 +9,12 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), binding failures
 - BindingFailure MDA
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 93c426cce792c8f30a3551e2d4626736dd67278f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e3a9a915d25cbe5f052f039055167cf3ae4bf424
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052953"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216921"
 ---
 # <a name="bindingfailure-mda"></a>bindingFailure MDA
 
@@ -40,7 +38,7 @@ ms.locfileid: "71052953"
 
 - 사용자 자격 증명이 파일을 읽는 데 필요한 권한을 제공하지 않습니다.
 
-## <a name="resolution"></a>해결
+## <a name="resolution"></a>해결 방법
 
 첫 번째 단계는 CLR이 요청된 어셈블리에 바인딩할 수 없는 이유를 확인하는 것입니다. 런타임이 원인 섹션에 나열된 시나리오 같이 요청된 어셈블리를 찾거나 로드할 수 없는 많은 이유가 있습니다. 바인딩 실패의 원인을 제거하기 위해 다음 작업이 권장됩니다.
 
@@ -56,7 +54,7 @@ ms.locfileid: "71052953"
 
   - 요청된 어셈블리를 애플리케이션 디렉터리에 복사하고 <xref:System.Reflection.Assembly.Load%2A> 메서드를 호출하여 ID로 어셈블리를 로드합니다.
 
-  - <xref:System.AppDomain.BaseDirectory%2A> 속성을 변경하거나 전용 검색 경로를 추가하여 바인딩 실패가 발생한 응용 프로그램 도메인에 어셈블리 경로가 포함되도록 다시 구성합니다.
+  - <xref:System.AppDomain.BaseDirectory%2A> 속성을 변경하거나 전용 검색 경로를 추가하여 바인딩 실패가 발생한 애플리케이션 도메인에 어셈블리 경로가 포함되도록 다시 구성합니다.
 
   - 로그온한 사용자가 파일을 읽을 수 있도록 파일에 대한 액세스 제어 목록을 변경합니다.
 
@@ -70,7 +68,7 @@ MDA가 요청된 경로 및/또는 표시 이름, 바인딩 컨텍스트, 로드
 
 CLR이 해당 데이터를 사용할 수 없는 경우 표시 이름이나 요청된 경로가 비어 있을 수 있습니다. <xref:System.Reflection.Assembly.Load%2A> 메서드 호출이 실패한 경우 런타임이 어셈블리의 표시 이름을 확인할 수 없어 실패했을 가능성이 큽니다.
 
-## <a name="configuration"></a>구성하기
+## <a name="configuration"></a>구성
 
 ```xml
 <mdaConfig>
@@ -105,6 +103,6 @@ namespace ConsoleApplication1
 }
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)

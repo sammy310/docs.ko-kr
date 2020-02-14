@@ -5,14 +5,12 @@ helpviewer_keywords:
 - transparent code
 - security-transparent code
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f90b64b5e9ab5a167333a594ace7f247b1b2b7e7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ca251ec3084d40269b107e7bd8bef708e8d49622
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975524"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215825"
 ---
 # <a name="security-transparent-code"></a>보안 투명 코드
 
@@ -96,7 +94,7 @@ ms.locfileid: "73975524"
 
 투명도 규칙은 투명도가 계산될 때까지 적용되지 않습니다. 적용 시 투명도 규칙에 위반되면 <xref:System.InvalidOperationException>이 throw됩니다. 투명도 계산 시간은 여러 요소에 따라 다르고 예측할 수 없습니다. 가능한 한 늦게 계산됩니다. .NET Framework 4에서 어셈블리 수준 투명도 계산은 .NET Framework 2.0에서 수행 하는 것 보다 더 빨리 발생 합니다. 투명도 계산은 필요한 시간 이내에 수행됩니다. 이는 메서드가 컴파일되고 해당 메서드에서 오류가 감지되는 시점을 JIT(Just-In-Time ) 컴파일러가 변경하는 방법과 비슷합니다. 코드에 투명도 오류가 없으면 투명도 계산이 표시되지 않습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [보안 투명 코드, 수준 1](security-transparent-code-level-1.md)
 - [보안 투명 코드, 수준 2](security-transparent-code-level-2.md)

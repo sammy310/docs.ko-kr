@@ -7,22 +7,20 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: 77f1d761-ff45-4001-8f36-3a3e5c41fa63
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a45572d0dcb2737558e11f5c38ac2ccc338c754a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e8c9b0479bba839a74dff300f0766838b5d99c8d
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119079"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214832"
 ---
 # <a name="clear-element-for-configsections"></a>\<configSections에 대 한 clear > 요소를 \<>
 
 이전에 정의 된 모든 섹션과 섹션 그룹을 지웁니다.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp;[ **\<configSections>** ](configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
+[**configSections >\<** ](configsections-element-for-configuration.md) &nbsp;&nbsp;   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<clear >**
 
 ## <a name="syntax"></a>구문
 
@@ -30,7 +28,7 @@ ms.locfileid: "73119079"
 <clear/>
 ```
 
-## <a name="attribute"></a>특성
+## <a name="attribute"></a>attribute
 
 |           | Description |
 | --------- | ----------- |
@@ -44,9 +42,9 @@ ms.locfileid: "73119079"
 
 ## <a name="child-elements"></a>자식 요소
 
-없음
+None
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 **\<clear >** 요소는 이전에 현재 구성 파일 또는 구성 파일 계층 구조의 상위 수준에 정의 된 응용 프로그램에서 모든 섹션과 섹션 그룹을 제거 합니다.
 
