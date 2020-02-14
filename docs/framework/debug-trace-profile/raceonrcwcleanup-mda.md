@@ -9,34 +9,32 @@ helpviewer_keywords:
 - RaceOnRCWCleanup MDA
 - runtime callable wrappers
 ms.assetid: bee1e9b1-50a8-4c89-9cd9-7dd6b2458187
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 07b6c674e2608ac46bf9870ae26afc2fc1ec99ba
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: edf1fe3ee5be631f7f3c42f4a6cdb17f1be722cf
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052345"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216190"
 ---
-# <a name="raceonrcwcleanup-mda"></a><span data-ttu-id="4bc54-102">raceOnRCWCleanup MDA</span><span class="sxs-lookup"><span data-stu-id="4bc54-102">raceOnRCWCleanup MDA</span></span>
-<span data-ttu-id="4bc54-103">`raceOnRCWCleanup` MDA(관리 디버깅 도우미)는 CLR(공용 언어 런타임)에서 <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType> 메서드와 같은 명령을 사용하여 해제 호출을 수행할 때 RCW( [런타임 호출 가능 래퍼](../../standard/native-interop/runtime-callable-wrapper.md))가 사용 중임을 발견할 경우 활성화됩니다.</span><span class="sxs-lookup"><span data-stu-id="4bc54-103">The `raceOnRCWCleanup` managed debugging assistant (MDA) is activated when the common language runtime (CLR) detects that a [Runtime Callable Wrapper](../../standard/native-interop/runtime-callable-wrapper.md) (RCW) is in use when a call to release it is made using a command such as the <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType> method.</span></span>  
+# <a name="raceonrcwcleanup-mda"></a><span data-ttu-id="4094d-102">raceOnRCWCleanup MDA</span><span class="sxs-lookup"><span data-stu-id="4094d-102">raceOnRCWCleanup MDA</span></span>
+<span data-ttu-id="4094d-103">`raceOnRCWCleanup` MDA(관리 디버깅 도우미)는 CLR(공용 언어 런타임)에서 [ 메서드와 같은 명령을 사용하여 해제 호출을 수행할 때 RCW( ](../../standard/native-interop/runtime-callable-wrapper.md)런타임 호출 가능 래퍼<xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>)가 사용 중임을 발견할 경우 활성화됩니다.</span><span class="sxs-lookup"><span data-stu-id="4094d-103">The `raceOnRCWCleanup` managed debugging assistant (MDA) is activated when the common language runtime (CLR) detects that a [Runtime Callable Wrapper](../../standard/native-interop/runtime-callable-wrapper.md) (RCW) is in use when a call to release it is made using a command such as the <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType> method.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="4bc54-104">증상</span><span class="sxs-lookup"><span data-stu-id="4bc54-104">Symptoms</span></span>  
- <span data-ttu-id="4bc54-105"><xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> 또는 이와 비슷한 메서드를 사용하여 RCW를 해제하는 중이나 그 이후에 액세스 위반 또는 메모리 손상이 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="4bc54-105">Access violations or memory corruption during or after freeing an RCW using <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> or a similar method.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="4094d-104">증상</span><span class="sxs-lookup"><span data-stu-id="4094d-104">Symptoms</span></span>  
+ <span data-ttu-id="4094d-105"><xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> 또는 이와 비슷한 메서드를 사용하여 RCW를 해제하는 중이나 그 이후에 액세스 위반 또는 메모리 손상이 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="4094d-105">Access violations or memory corruption during or after freeing an RCW using <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> or a similar method.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="4bc54-106">원인</span><span class="sxs-lookup"><span data-stu-id="4bc54-106">Cause</span></span>  
- <span data-ttu-id="4bc54-107">RCW가 다른 스레드나 해제 스레드 스택에서 사용 중입니다.</span><span class="sxs-lookup"><span data-stu-id="4bc54-107">The RCW is in use on another thread or on the freeing thread stack.</span></span>  <span data-ttu-id="4bc54-108">사용 중인 RCW는 해제할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4bc54-108">An RCW that is in use cannot be released.</span></span>  
+## <a name="cause"></a><span data-ttu-id="4094d-106">원인</span><span class="sxs-lookup"><span data-stu-id="4094d-106">Cause</span></span>  
+ <span data-ttu-id="4094d-107">RCW가 다른 스레드나 해제 스레드 스택에서 사용 중입니다.</span><span class="sxs-lookup"><span data-stu-id="4094d-107">The RCW is in use on another thread or on the freeing thread stack.</span></span>  <span data-ttu-id="4094d-108">사용 중인 RCW는 해제할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4094d-108">An RCW that is in use cannot be released.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="4bc54-109">해결 방법</span><span class="sxs-lookup"><span data-stu-id="4bc54-109">Resolution</span></span>  
- <span data-ttu-id="4bc54-110">현재 스레드나 다른 스레드에서 사용 중일 수 있는 RCW는 해제하지 마세요.</span><span class="sxs-lookup"><span data-stu-id="4bc54-110">Do not free an RCW that could be in use either in the current or in other threads.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="4094d-109">해결 방법</span><span class="sxs-lookup"><span data-stu-id="4094d-109">Resolution</span></span>  
+ <span data-ttu-id="4094d-110">현재 스레드나 다른 스레드에서 사용 중일 수 있는 RCW는 해제하지 마세요.</span><span class="sxs-lookup"><span data-stu-id="4094d-110">Do not free an RCW that could be in use either in the current or in other threads.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="4bc54-111">런타임에 대한 영향</span><span class="sxs-lookup"><span data-stu-id="4bc54-111">Effect on the Runtime</span></span>  
- <span data-ttu-id="4bc54-112">이 MDA는 CLR에 아무런 영향을 미치지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4bc54-112">This MDA has no effect on the CLR.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="4094d-111">런타임에 대한 영향</span><span class="sxs-lookup"><span data-stu-id="4094d-111">Effect on the Runtime</span></span>  
+ <span data-ttu-id="4094d-112">이 MDA는 CLR에 아무런 영향을 미치지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4094d-112">This MDA has no effect on the CLR.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="4bc54-113">출력</span><span class="sxs-lookup"><span data-stu-id="4bc54-113">Output</span></span>  
- <span data-ttu-id="4bc54-114">오류를 설명하는 메시지입니다.</span><span class="sxs-lookup"><span data-stu-id="4bc54-114">A message describing the error.</span></span>  
+## <a name="output"></a><span data-ttu-id="4094d-113">출력</span><span class="sxs-lookup"><span data-stu-id="4094d-113">Output</span></span>  
+ <span data-ttu-id="4094d-114">오류를 설명하는 메시지입니다.</span><span class="sxs-lookup"><span data-stu-id="4094d-114">A message describing the error.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="4bc54-115">Configuration</span><span class="sxs-lookup"><span data-stu-id="4bc54-115">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="4094d-115">구성</span><span class="sxs-lookup"><span data-stu-id="4094d-115">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -46,8 +44,8 @@ ms.locfileid: "71052345"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4bc54-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="4bc54-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4094d-116">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4094d-116">See also</span></span>
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [<span data-ttu-id="4bc54-117">관리 디버깅 도우미를 사용하여 오류 진단</span><span class="sxs-lookup"><span data-stu-id="4bc54-117">Diagnosing Errors with Managed Debugging Assistants</span></span>](diagnosing-errors-with-managed-debugging-assistants.md)
-- [<span data-ttu-id="4bc54-118">interop 마샬링</span><span class="sxs-lookup"><span data-stu-id="4bc54-118">Interop Marshaling</span></span>](../interop/interop-marshaling.md)
+- [<span data-ttu-id="4094d-117">관리 디버깅 도우미를 사용하여 오류 진단</span><span class="sxs-lookup"><span data-stu-id="4094d-117">Diagnosing Errors with Managed Debugging Assistants</span></span>](diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="4094d-118">interop 마샬링</span><span class="sxs-lookup"><span data-stu-id="4094d-118">Interop Marshaling</span></span>](../interop/interop-marshaling.md)
