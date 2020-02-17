@@ -4,12 +4,12 @@ description: .NET Core 학습을 위한 자습서에 따라 Mac, Linux 및 Windo
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: 4e0acc357453d3bd3fb877e357264cc1aa715e4c
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: e9fc5544904fc5a1304dcce135e01b1895d3446b
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920435"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215178"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>자습서에서 .NET Core 및 .NET Core SDK 도구 알아보기
 
@@ -47,6 +47,6 @@ ms.locfileid: "76920435"
 - [MSTest 및 .NET Core를 사용한 단위 테스트](../testing/unit-testing-with-mstest.md)
 - [여러 플랫폼에서 사용할 수 있는 도구로 라이브러리 개발](libraries.md)
 - [네이티브 코드에서 .NET Core 호스트](netcore-hosting.md)
-- [dotnet용 사용자 지정 템플릿 새로 만들기](cli-templates-create-item-template.md)
+- [CLI용 템플릿 만들기](cli-templates-create-item-template.md)
 
 ASP.NET Core 웹 애플리케이션 개발에 대한 자습서는 [ASP.NET Core 설명서](/aspnet/core/)를 참조하세요.
