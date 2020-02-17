@@ -1,20 +1,19 @@
 ---
 title: dotnet vstest 명령
 description: dotnet vtest 명령은 프로젝트와 모든 종속성을 빌드합니다.
-author: mairaw
 ms.date: 05/30/2018
-ms.openlocfilehash: ffe3807be2c35fb4d6b46b83ed84200433f551d8
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: c3838617ed539cf56f2840b826e9de58833820fd
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117518"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215307"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>이름
 
 `dotnet-vstest` - 지정한 파일에서 테스트를 실행합니다.
 
@@ -303,7 +302,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 ---
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 `mytestproject.dll`에서 테스트를 실행합니다.
 
