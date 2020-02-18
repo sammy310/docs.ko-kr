@@ -1,7 +1,7 @@
 ---
 title: 부동 소수점 숫자 형식 - C# 참조
-description: 기본 제공 C# 부동 소수점 형식의 개요
-ms.date: 10/22/2019
+description: 기본 제공 C# 부동 소수점 형식인 float, double 및 decimal에 대해 알아보기
+ms.date: 02/10/2020
 f1_keywords:
 - float
 - float_CSharpKeyword
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 9c8b11f9337ee9de90f2d4d96b5be162713bfcbd
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 95b7f266654bbbcdcd0f81e3aa11cfc94af9f0e5
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093216"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215245"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>부동 소수점 숫자 형식(C# 참조)
 
@@ -50,19 +50,21 @@ System.Double b = 12.3;
 
 `decimal` 형식은 `float` 및 `double`보다 정밀도가 높고 범위가 작으므로 재무 및 통화 계산에 적합합니다.
 
-식에서 [정수](integral-numeric-types.md) 형식과 부동 소수점 형식을 혼합할 수 있습니다. 이 경우 정수 형식이 부동 소수점 형식으로 변환됩니다. 식의 계산은 다음 규칙에 따라 수행됩니다.
+식에서 [정수](integral-numeric-types.md) 형식과 `float` 및 `double` 형식을 혼합할 수 있습니다. 이 경우 정수 형식이 암시적으로 부동 소수점 형식 중 하나로 변환되며, 필요한 경우 `float` 형식이 암시적으로 `double`로 변환됩니다. 이 식은 다음과 같이 계산됩니다.
 
-- 부동 소수점 형식 중 하나가 `double`인 경우 식은 관계형 및 같음에 대한 비교에서 `double` 또는 [bool](bool.md)로 계산됩니다.
-- 식에 `double` 형식이 없는 경우 식은 같음에 대한 관계형 또는 비교에서 `float` 또는 [bool](bool.md)로 계산됩니다.
+- 식에 `double` 형식이 있는 경우 식은 관계형 및 같음 비교에서 `double` 또는 [`bool`](bool.md)로 계산됩니다.
+- 식에 `double` 형식이 없는 경우 식은 관계형 및 같음 비교에서 `float` 또는 `bool`로 계산됩니다.
 
-부동 소수점 식에는 다음과 같은 값 집합이 포함될 수 있습니다.
+식에서 정수 형식과 `decimal` 형식을 혼합할 수도 있습니다. 이 경우 정수 형식은 암시적으로 `decimal` 형식으로 변환되고 식은 관계형 및 같음 비교에서 `decimal` 또는 `bool`로 계산됩니다.
 
-- 양수 및 음수 0
-- 양수 및 음수 무한대
-- NaN(Not-a-Number) 값
-- 한정된 0이 아닌 값의 집합
+식에서 `decimal` 형식을 `float` 및 `double` 형식과 혼합할 수 없습니다. 이 경우 산술, 비교 또는 같음 연산을 수행하려면 다음 예제와 같이 명시적으로 피연산자를 `decimal` 형식으로 변환하거나 반대로 변환해야 합니다.
 
-이러한 값에 대한 자세한 내용은 [IEEE](https://www.ieee.org) 웹 사이트에서 제공되는 이진 부동 소수점 연산에 대한 IEEE 표준을 참조하세요.
+```csharp-interactive
+double a = 1.0;
+decimal b = 2.1m;
+Console.WriteLine(a + (double)b);
+Console.WriteLine((decimal)a + b);
+```
 
 [표준 숫자 서식 문자열](../../../standard/base-types/standard-numeric-format-strings.md) 또는 [사용자 지정 숫자 서식 문자열](../../../standard/base-types/custom-numeric-format-strings.md)을 사용하여 부동 소수점 값의 형식을 지정할 수 있습니다.
 

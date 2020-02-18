@@ -1,14 +1,13 @@
 ---
 title: .NET Core SDK 및 도구를 사용한 CI(연속 통합)
 description: 연속 통합을 사용하여 빌드 서버에서 .NET Core SDK 및 해당 도구를 사용하는 방법을 알아봅니다.
-author: mairaw
 ms.date: 05/18/2017
-ms.openlocfilehash: 65d062fce2f364932ebf8091bd9c6cdef561b633
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: bdb3913cbe588377d9fbee0f1c054e682629ac96
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714114"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215227"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>.NET Core SDK 및 CI(연속 통합)의 도구 사용
 
@@ -160,7 +159,7 @@ Azure DevOps Services에서 수동 설치 스크립트를 사용하려면 새 �
 
    ![빌드 단계 추가](./media/using-ci-with-cli/add-build-step.png)
 
-1. **작업 카탈로그**가 표시됩니다. 카탈로그에는 빌드에서 사용할 작업이 포함됩니다. 스크립트가 준비되면 **PowerShell: PowerShell 스크립트 실행**에 대해 **추가** 단추를 선택합니다.
+1. **작업 카탈로그**가 표시됩니다. 카탈로그에는 빌드에서 사용할 작업이 포함됩니다. 스크립트가 준비되면 **PowerShell: PowerShell 스크립트 실행**에 대해 추가 단추를 선택합니다.
 
    ![PowerShell 스크립트 단계 추가](./media/using-ci-with-cli/add-powershell-script.png)
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-ms.openlocfilehash: af812e1e42d57c349e94b5992b768636857d2a0c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 504e315dda4e76f56a88d97149b1515b6743668b
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348276"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124353"
 ---
 # <a name="details-of-regular-expression-behavior"></a>정규식 동작 정보
 
@@ -106,7 +106,7 @@ ms.locfileid: "75348276"
 
 - 균형 조정 그룹 정의: `(?<`*name1*`-`*name2*`>` *subexpression*`)`. 정규식 엔진은 이 기능을 통해 괄호 또는 열고 닫는 대괄호와 같은 중첩된 구문을 추적할 수 있습니다. 예제는 [그룹화 구문](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)을 참조하세요.
 
-- 역추적하지 않는 하위 식(최대 일치 하위 식): `(?>`*subexpression*`)`. 식이 보유한 독립 항목을 실행하는 것처럼 역추적 엔진은 이 기능을 통해 하위 식이 보유한 첫 번째 일치 항목만을 찾는다고 보장할 수 있습니다. 이 생성자를 사용하지 않는 경우 더 큰 식의 역추적 검색은 하위 식의 동작을 변경할 수 있습니다. 예를 들어 정규식 `(a+)\w`이 "a" 문자의 시퀀스를 따르는 단어 문자와 함께 하나 이상의 "a" 문자를 찾고 "a" 문자의 시퀀스를 첫 번째 캡처 그룹에 할당합니다. 하지만 입력 문자열의 마지막 문자가 "a"인 경우 `\w` 언어 요소에 의해 찾게 되며 캡처된 그룹에 포함되지 않습니다.
+- 원자성 그룹: `(?>`*subexpression*`)`. 식이 보유한 독립 항목을 실행하는 것처럼 역추적 엔진은 이 기능을 통해 하위 식이 보유한 첫 번째 일치 항목만을 찾는다고 보장할 수 있습니다. 이 생성자를 사용하지 않는 경우 더 큰 식의 역추적 검색은 하위 식의 동작을 변경할 수 있습니다. 예를 들어 정규식 `(a+)\w`는 “a” 문자의 시퀀스를 따르는 단어 문자와 함께 하나 이상의 “a” 문자를 찾고 “a” 문자의 시퀀스를 첫 번째 캡처링 그룹에 할당합니다. 하지만 입력 문자열의 마지막 문자가 “a”인 경우 `\w` 언어 요소에 의해 찾게 되며 캡처된 그룹에 포함되지 않습니다.
 
      [!code-csharp[Conceptual.RegularExpressions.Design#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/nonbacktracking2.cs#7)]
      [!code-vb[Conceptual.RegularExpressions.Design#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/nonbacktracking2.vb#7)]
@@ -116,7 +116,7 @@ ms.locfileid: "75348276"
      [!code-csharp[Conceptual.RegularExpressions.Design#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/nonbacktracking1.cs#8)]
      [!code-vb[Conceptual.RegularExpressions.Design#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/nonbacktracking1.vb#8)]
 
-     역추적하지 않는 하위 식에 대한 자세한 내용은 [그룹화 구문](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)을 참조하세요.
+     원자성 그룹에 대한 자세한 내용은 [그룹화 구문](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)을 참조하세요.
 
 - 오른쪽에서 왼쪽 찾기는 <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> 옵션을 <xref:System.Text.RegularExpressions.Regex> 클래스 생성자 또는 고정 인스턴스 일치 메서드에 제공하여 지정됩니다. 이 기능은 왼쪽에서 오른쪽이 아닌 오른쪽에서 왼쪽으로 찾는 경우에 유용하고 패턴의 왼쪽이 아닌 패턴의 오른쪽 부분에서 찾기를 시작하는 경우 효율적입니다. 다음 예제와 같이 오른쪽에서 왼쪽 찾기를 사용하면 탐욕적 수량자의 동작을 변경할 수 있습니다. 예제에서는 숫자로 끝나는 문장에 대해 두 개의 검색을 수행합니다. 오른쪽에서 왼쪽 검색이 6자리 모두와 일치하는 반면 탐욕적 수량자를 사용하는 왼쪽에서 오른쪽 검색 `+`은 문장에서 6자리 중 하나와 일치합니다. 정규식 패턴에 대한 설명은 이 섹션 앞부분의 게으른 수량자를 보여 주는 예제를 참조하세요.
 

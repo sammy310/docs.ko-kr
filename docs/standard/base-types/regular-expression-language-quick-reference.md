@@ -14,12 +14,12 @@ helpviewer_keywords:
 - cheat sheet
 - .NET Framework regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-ms.openlocfilehash: fb84e746e1dffedebfbe289c8e7599bc50097f07
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8acf0886215c2d31f949e38401c4705ac9e2aef5
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128084"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124314"
 ---
 # <a name="regular-expression-language---quick-reference"></a>정규식 언어 - 빠른 참조
 
@@ -50,7 +50,7 @@ ms.locfileid: "73128084"
 |`\x` *nn*|16진수 표현을 사용하여 문자를 지정합니다. (*nn*은 정확히 두 자리로 구성됩니다.)|`\w\x20\w`|`"a bc d"`의 `"a b"`, `"c d"`|
 |`\c` *X*<br /><br /> `\c` *x*|*X* 또는 *x*로 지정한 ASCII 제어 문자를 찾습니다. 여기서 *X* 또는 *x*는 제어 문자를 나타내는 문자입니다.|`\cC`|`"\x0003"`의 `"\x0003"`(Ctrl-C)|
 |`\u` *nnnn*|16진수 표현(정확히 네 자리로 구성되는 *nnnn*)을 사용하여 유니코드 문자를 찾습니다.|`\w\u0020\w`|`"a bc d"`의 `"a b"`, `"c d"`|
-|`\`|이 표나 이 항목의 다른 표에 있는 이스케이프된 문자로 인식되지 않는 문자가 뒤에 나올 경우 이 문자를 찾습니다. 예를 들어, `\*`는 `\x2A`와 같고 `\.`는 `\x2E`와 같습니다. 이를 통해 정규식 엔진이 언어 요소(예: \* 또는 ?)와 `\*` 또는 `\?`로 표현되는 문자 리터럴을 구분할 수 있습니다.|`\d+[\+-x\*]\d+`|`"(2+2) * 3*9"` 내 `"2+2"` 및 `"3*9"`|
+|`\`|이 표나 이 항목의 다른 표에 있는 이스케이프된 문자로 인식되지 않는 문자가 뒤에 나올 경우 이 문자를 찾습니다. 예를 들어, `\*`는 `\x2A`와 같고 `\.`는 `\x2E`와 같습니다. 이를 통해 정규식 엔진이 언어 요소(예: \* 또는 ?)와 `\*` 또는 `\?`로 표현되는 문자 리터럴을 구분할 수 있습니다.|`\d+[\+-x\*]\d+`|`"(2+2) * 3*9"`의 `"2+2"` 및 `"3*9"`|
 
 ## <a name="character-classes"></a>문자 클래스
 
@@ -94,14 +94,14 @@ ms.locfileid: "73128084"
 |------------------------|-----------------|-------------|-------------|
 |`(` *subexpression* `)`|일치하는 하위 식을 캡처하고 서수(1부터 시작)를 할당합니다.|`(\w)\1`|`"deep"`의 `"ee"`|
 |`(?<` *name* `>` *subexpression* `)`|일치하는 하위 식을 명령된 그룹에 캡처합니다.|`(?<double>\w)\k<double>`|`"deep"`의 `"ee"`|
-|`(?<` *이름1* `-` *이름2* `>` *subexpression* `)`|균형 조정 그룹 정의를 정의합니다. 자세한 내용은 [그룹화 구문](grouping-constructs-in-regular-expressions.md)의 "균형 조정 그룹 정의" 섹션을 참조하세요.|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|`"3+2^((1-3)*(3-1))"`의 `"((1-3)*(3-1))"`|
+|`(?<` *name1* `-` *name2* `>` *subexpression* `)`|균형 조정 그룹 정의를 정의합니다. 자세한 내용은 [그룹화 구문](grouping-constructs-in-regular-expressions.md)의 "균형 조정 그룹 정의" 섹션을 참조하세요.|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|`"3+2^((1-3)*(3-1))"`의 `"((1-3)*(3-1))"`|
 |`(?:` *subexpression* `)`|비캡처 그룹을 정의합니다.|`Write(?:Line)?`|`"Console.WriteLine()"`의 `"WriteLine"`<br /><br /> `"Console.Write(value)"`의 `"Write"`|
 |`(?imnsx-imnsx:` *subexpression* `)`|*subexpression* 내에서 지정된 옵션을 적용하거나 사용하지 않도록 설정합니다. 자세한 내용은 [정규식 옵션](regular-expression-options.md)을 참조하세요.|`A\d{2}(?i:\w+)\b`|`"A12xl A12XL a12xl"`의 `"A12xl"`, `"A12XL"`|
 |`(?=` *subexpression* `)`|너비가 0인 긍정 우측 어설션입니다.|`\w+(?=\.)`|`"He is. The dog ran. The sun is out."`의 `"is"`, `"ran"` 및 `"out"`|
 |`(?!` *subexpression* `)`|너비가 0인 부정 우측 어설션입니다.|`\b(?!un)\w+\b`|`"unsure sure unity used"`의 `"sure"`, `"used"`|
 |`(?<=` *subexpression* `)`|너비가 0인 긍정 좌측 어설션입니다.|`(?<=19)\d{2}\b`|`"1851 1999 1950 1905 2003"`의 `"99"`, `"50"`, `"05"`|
 |`(?<!` *subexpression* `)`|너비가 0인 부정 좌측 어설션입니다.|`(?<!19)\d{2}\b`|`"1851 1999 1950 1905 2003"`의 `"51"`, `"03"`|
-|`(?>` *subexpression* `)`|역추적하지 않는(또는 "greedy") 하위 식입니다.|`[13579](?>A+B+)`|`"1ABB 3ABBC 5AB 5AC"`의 `"1ABB"`, `"3ABB"` 및 `"5AB"`|
+|`(?>` *subexpression* `)`|원자성 그룹입니다.|`[13579](?>A+B+)`|`"1ABB 3ABBC 5AB 5AC"`의 `"1ABB"`, `"3ABB"` 및 `"5AB"`|
 
 ## <a name="quantifiers"></a>수량자
 
@@ -129,7 +129,7 @@ ms.locfileid: "73128084"
 |역참조 구문|설명|무늬|일치 항목|
 |-----------------------------|-----------------|-------------|-------------|
 |`\` *number*|역참조입니다. 번호가 매겨진 하위 식의 값을 찾습니다.|`(\w)\1`|`"seek"`의 `"ee"`|
-|`\k<` *name* `>`|명명된 역참조입니다. 명명된 식의 값을 찾습니다.|`(?<char>\w)\k<char>`|`"seek"` 내 `"ee"`|
+|`\k<` *name* `>`|명명된 역참조입니다. 명명된 식의 값을 찾습니다.|`(?<char>\w)\k<char>`|`"seek"`의 `"ee"`|
 
 ## <a name="alternation-constructs"></a>교체 구문
 
@@ -162,7 +162,7 @@ ms.locfileid: "73128084"
 
 인라인 옵션을 두 가지 방법으로 지정할 수 있습니다.
 
-- [기타 구문](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`을 사용하여 옵션이나 옵션 집합 앞에 빼기 기호(-)를 추가해 해당 옵션을 해제할 수 있습니다. 예를 들어 `(?i-mn)`은 대/소문자를 구분하지 않는 일치 조건(`i`)을 설정하고 여러 줄 모드(`m`)를 해제하고 명명되지 않은 그룹 캡처(`n`)를 해제합니다. 이 옵션은 옵션이 정의되는 지점부터 정규식 패턴에 적용되고, 패턴 끝 또는 다른 구문이 옵션을 되돌리는 지점까지 유효합니다.
+- [기타 구문](miscellaneous-constructs-in-regular-expressions.md)`(?imnsx-imnsx)`을 사용하여 옵션이나 옵션 집합 앞에 빼기 기호(-)를 추가해 해당 옵션을 해제할 수 있습니다. 예를 들어 `(?i-mn)`은 대/소문자를 구분하지 않는 일치 조건(`i`)을 설정하고 여러 줄 모드(`m`)를 해제하고 명명되지 않은 그룹 캡처(`n`)를 해제합니다. 이 옵션은 옵션이 정의되는 지점부터 정규식 패턴에 적용되고, 패턴 끝 또는 다른 구문이 옵션을 되돌리는 지점까지 유효합니다.
 - [그룹화 구문](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*subexpression*`)`을 사용하여 지정된 그룹에 대해서만 옵션을 정의할 수 있습니다.
 
 .NET 정규식 엔진은 다음 인라인 옵션을 지원합니다.
@@ -182,10 +182,10 @@ ms.locfileid: "73128084"
 |구문|정의|예제|
 |---------------|----------------|-------------|
 |`(?imnsx-imnsx)`|패턴 중간에 대/소문자 구분하지 않음과 같은 옵션을 설정하거나 해제합니다. 자세한 내용은 [정규식 옵션](regular-expression-options.md)을 참조하세요.|`\bA(?i)b\w+\b`는 `"ABA Able Act"`의 `"ABA"`, `"Able"`과 일치합니다.|
-|`(?#` *주석* `)`|인라인 주석입니다. 주석이 첫 번째 닫는 괄호 문자에서 끝납니다.|`\bA(?#Matches words starting with A)\w+\b`|
+|`(?#` *comment* `)`|인라인 주석입니다. 주석이 첫 번째 닫는 괄호 문자에서 끝납니다.|`\bA(?#Matches words starting with A)\w+\b`|
 |`#` [줄의 끝]|X-모드 주석입니다. 주석이 이스케이프되지 않은 `#`에서 시작하여 줄 끝까지 이어집니다.|`(?x)\bA\w+\b#Matches words starting with A`|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Text.RegularExpressions?displayProperty=nameWithType>
 - <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>

@@ -2,15 +2,14 @@
 title: .NET API 분석기
 description: .NET API 분석기가 사용되지 않는 API 및 플랫폼 호환성 문제를 발견하는 데 어떻게 도움이 되는지 알아봅니다.
 author: oliag
-ms.author: mairaw
 ms.date: 04/26/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 584f9f952148ebf72c5d5aaed64a2a078be00ce5
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: efbfa89f431bd02cdf86b8eff8704aec63a29b6c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929359"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124249"
 ---
 # <a name="net-api-analyzer"></a>.NET API 분석기
 
@@ -21,7 +20,7 @@ API 분석기는 NuGet 패키지 [Microsoft.DotNet.Analyzers.Compatibility](http
 > [!NOTE]
 > .NET API 분석기는 여전히 시험판 버전입니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 - Visual Studio 2017 이상 버전 또는 Mac용 Visual Studio(모든 버전).
 
@@ -45,7 +44,7 @@ API 분석기는 개별 경고 표시를 제어할 수 있는 DE(사용 중단 �
 
 다음 예제(`DE004`)와 같이 **오류 목록** 창에는 사용되지 않는 API별 고유 ID가 포함된 경고가 있습니다. 
 
-![“경고 ID 및 설명을 표시하는 오류 목록 창의 스크린샷”](media/api-analyzer/warnings-id-and-descriptions.jpg "경고를 포함하는 오류 목록 창입니다.")
+![“경고 ID 및 설명을 표시하는 오류 목록 창의 스크린샷”](media/api-analyzer/warnings-id-and-descriptions.jpg "경고가 포함된 오류 목록 창입니다.")
 
 ID를 클릭하면 API가 사용되지 않는 이유에 대한 자세한 정보와 사용할 수 있는 대체 API에 대한 제안이 있는 웹 페이지로 이동합니다.
 
@@ -106,13 +105,13 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 
 이러한 모든 진단은 IDE뿐 아니라 명령줄에서도 CI 서버가 포함된 프로젝트 빌드의 일부로 사용할 수 있습니다.
 
-## <a name="configuration"></a>구성
+## <a name="configuration"></a>Configuration
 
 사용자는 진단을 처리하는 방법을 경고, 오류, 제안 또는 해제로 결정합니다. 예를 들어 설계자가 호환성 문제를 오류로 처리하도록 결정하면 일부 사용되지 않는 API에 대한 호출은 경고를 생성하지만 다른 API에 대한 호출은 제안만 생성합니다. 이 방법은 진단 ID 및 프로젝트별로 별도로 구성할 수 있습니다. **솔루션 탐색기**에서 이를 수행하려면 프로젝트 아래의 **종속성** 노드로 이동합니다. 노드 **종속성** > **분석** > **Microsoft.DotNet.Analyzers.Compatibility**를 확장합니다. 진단 ID를 마우스 오른쪽 단추로 클릭하고 **규칙 집합 심각도 설정**을 선택하고 원하는 옵션을 선택합니다.
 
 ![“진단 및 규칙 집합 심각도가 있는 팝업 대화 상자를 표시하는 솔루션 탐색기의 스크린샷”](media/api-analyzer/disable-notifications.jpg)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [API 분석기 소개](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/) 블로그 게시물.
 - YouTube의 [API 분석기](https://youtu.be/eeBEahYXGd0) 데모 동영상.

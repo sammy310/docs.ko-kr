@@ -10,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: cb1764d1a6f363f3011268eae5fbcb2c76d9cc89
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 9b09f5a2505888c6154a58a3512c94c51f89295b
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938006"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124424"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET의 정규식 모범 사례
 
@@ -176,7 +176,7 @@ ms.locfileid: "75938006"
 
 단어 경계는 단어 문자 또는 단어 문자의 일부와 동일하지 않으므로 정규식 엔진이 단어 문자를 찾을 때 단어 경계를 벗어날 가능성은 없습니다. 즉, 이 정규식의 경우 역추적은 전반적인 문자열 검색 성능에 전혀 기여할 수 없으며, 정규식 엔진이 각각의 단어 문자에 대해 성공한 예비 검색에 대한 상태를 강제로 저장해야 하기 때문에 성능 저하만 유발할 수 있습니다.
 
-역추적이 필요하지 않다고 판단될 경우에는 `(?>subexpression)` 언어 요소를 사용하여 역추적을 비활성화할 수 있습니다. 다음 예제에서는 두 개의 정규식을 사용하여 입력 문자열의 구문을 분석합니다. 첫 번째 정규식인 `\b\p{Lu}\w*\b`에는 역추적이 사용되고, 두 번째 정규식인 `\b\p{Lu}(?>\w*)\b`에는 역추적이 사용되지 않습니다. 아래 예제의 결과에서와 같이 두 정규식 모두 동일한 결과를 가져옵니다.
+역추적이 필요하지 않다고 판단될 경우에는 원자성 그룹이라고 하는 `(?>subexpression)` 언어 요소를 사용하여 역추적을 비활성화할 수 있습니다. 다음 예제에서는 두 개의 정규식을 사용하여 입력 문자열의 구문을 분석합니다. 첫 번째 정규식인 `\b\p{Lu}\w*\b`에는 역추적이 사용되고, 두 번째 정규식인 `\b\p{Lu}(?>\w*)\b`에는 역추적이 사용되지 않습니다. 아래 예제의 결과에서와 같이 두 정규식 모두 동일한 결과를 가져옵니다.
 
 [!code-csharp[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack2.cs#10)]
 [!code-vb[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack2.vb#10)]
