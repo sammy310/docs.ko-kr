@@ -2,16 +2,15 @@
 title: .NET 클래스 라이브러리
 description: .NET 클래스 라이브러리를 사용하여 유용한 기능을 여러 애플리케이션에서 사용할 수 있는 모듈로 그룹화하는 방법을 알아봅니다.
 author: richlander
-ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: c918883d8620513749826680f9f1b6d89ae87585
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b7934e5def202760ab05d363ee5fcda5d012ca72
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664597"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124587"
 ---
 # <a name="net-class-libraries"></a>.NET 클래스 라이브러리
 

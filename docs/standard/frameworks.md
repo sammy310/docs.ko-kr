@@ -1,17 +1,15 @@
 ---
 title: SDK 스타일 프로젝트의 대상 프레임워크 - .NET
 description: .NET Core 앱 및 라이브러리의 대상 프레임워크에 대해 알아봅니다.
-author: mairaw
-ms.author: mairaw
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 957671644ae333180b0c1ba4aae6d6e17ae6478b
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 33beb5606cbf857cc41b739f256482b0298f1fb1
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838219"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124600"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>SDK 스타일 프로젝트의 대상 프레임워크
 
@@ -31,7 +29,7 @@ ms.locfileid: "74838219"
 
 | 대상 프레임워크      | 최신 <br/> 안정적인 버전 | TFM(대상 프레임워크 모니커) | 구현된 <br/> .NET 표준 버전 |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
-| .NET Standard         | 2.1                         | netstandard2.1                 | 해당 사항 없음                                     |
+| .NET Standard         | 2.1                         | netstandard2.1                 | N/A                                     |
 | .NET Core             | 3.1                         | netcoreapp3.1                  | 2.1                                     |
 | .NET Framework        | 4.8                         | net48                          | 2.0                                     |
 
@@ -129,7 +127,7 @@ public class MyClass
 | win10                                                                                      | uap10.0     |
 | winrt                                                                                      | netcore45   |
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [패키지, 메타패키지 및 프레임워크](../core/packages.md)
 - [여러 플랫폼에서 사용할 수 있는 도구로 라이브러리 개발](../core/tutorials/libraries.md)
