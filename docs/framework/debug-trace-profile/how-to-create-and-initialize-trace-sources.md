@@ -9,19 +9,19 @@ helpviewer_keywords:
 - initializing trace sources
 - configuration files [.NET Framework], trace sources
 ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
-ms.openlocfilehash: ae5e98a1ebf3753b24127f96ed563eba27eea2fb
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: cc2987499aa094960c08d220940fe1aed5440b2d
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217432"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449961"
 ---
 # <a name="how-to-create-and-initialize-trace-sources"></a>방법: 추적 소스 생성 및 초기화
 <xref:System.Diagnostics.TraceSource> 클래스는 애플리케이션과 연결될 수 있는 추적을 만들기 위해 애플리케이션에서 사용됩니다. <xref:System.Diagnostics.TraceSource>는 이벤트, 추적 데이터 및 문제 정보 추적을 쉽게 추적할 수 있는 추적 메서드를 제공 합니다. 구성 파일을 사용하거나 사용하지 않고 <xref:System.Diagnostics.TraceSource>에서 추적 출력을 만들고 초기화할 수 있습니다. 이 항목에서는 두 가지 옵션 모두에 대한 지침을 제공합니다. 하지만 구성 파일을 사용하여 런타임에 추적 소스에 의해 생성되는 추적을 쉽게 재구성하는 것이 좋습니다.  
   
 ### <a name="to-create-and-initialize-a-trace-source-using-a-configuration-file"></a>구성 파일을 사용하여 추적 소스를 만들고 초기화하려면  
   
-1. Visual Studio 콘솔 애플리케이션 프로젝트를 만들고 제공된 코드를 다음 코드로 바꿉니다. 이 코드는 오류 및 경고를 기록하며 그 중 일부는 콘솔에 출력하고 일부는 구성 파일의 항목에 의해 만들어진 myListener 파일에 출력합니다.  
+1. Visual Studio 콘솔 응용 프로그램 프로젝트 (.NET Framework)를 만들고 제공 된 코드를 다음 코드로 바꿉니다. 이 코드는 오류 및 경고를 기록하며 그 중 일부는 콘솔에 출력하고 일부는 구성 파일의 항목에 의해 만들어진 myListener 파일에 출력합니다.  
   
      [!code-csharp[TraceSourceExample1#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample1/cs/program.cs#1)]
      [!code-vb[TraceSourceExample1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample1/vb/program.vb#1)]  

@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: fabbcd497dc2f321da90188cebbac6ed4e147492
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 3b4f85072b9dcf87d696b979fa6cbf4e59393f82
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867089"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453041"
 ---
 # <a name="cor_prf_rejit_flags-enumeration"></a>COR_PRF_REJIT_FLAGS 열거형
 [ICorProfilerInfo10:: RequestReJITWithInliners](icorprofilerinfo10-requestrejitwithinliners-method.md) API가 동작 하는 방법을 나타내는 값을 포함 합니다.  
@@ -35,15 +35,15 @@ typedef enum
 } COR_PRF_REJIT_FLAGS;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>구성원  
   
-|Member|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`COR_PRF_REJIT_BLOCK_INLINING`| ReJITted 메서드는 다른 메서드에서 인라인 되지 않도록 차단 됩니다. |  
 |`COR_PRF_REJIT_INLINING_CALLBACKS`| ReJITted 하도록 요청 된 메서드를 인라인 하는 모든 메서드에 대 한 `GetFunctionParameters` 콜백을 수신 합니다. |  
 
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [.Net Core 지원 운영 체제](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows)를 참조 하세요.  
+ **플랫폼:** [.Net Core 지원 운영 체제](../../../core/install/dependencies.md?pivots=os-windows)를 참조 하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -51,6 +51,6 @@ typedef enum
   
  **.NET Framework 버전:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)] 
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프로파일링 열거형](profiling-enumerations.md)

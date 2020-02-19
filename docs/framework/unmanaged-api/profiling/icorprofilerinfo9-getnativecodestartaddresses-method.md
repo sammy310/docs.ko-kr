@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 8412020fb98fde245b873a2f0c6a355f6436f712
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 99706fdc3d60a5e1a7f85400c1184d5acc808e42
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868280"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449733"
 ---
 # <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9:: GetNativeCodeStartAddresses 메서드
 
@@ -54,13 +54,13 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 
   \[out] `UINT_PTR`배열로, 각는 지정 된 함수에 대 한 네이티브 본문의 시작 주소입니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 계층화 된 컴파일을 사용 하는 경우 함수에 둘 이상의 네이티브 코드 본문이 있을 수 있습니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼:** [.Net Core 지원 운영 체제](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows)를 참조 하세요.
+**플랫폼:** [.Net Core 지원 운영 체제](../../../core/install/dependencies.md?pivots=os-windows)를 참조 하세요.
 
 **헤더:** CorProf.idl, CorProf.h
 
@@ -68,6 +68,6 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 
 **.Net 버전:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo9 인터페이스](icorprofilerinfo9-interface.md)

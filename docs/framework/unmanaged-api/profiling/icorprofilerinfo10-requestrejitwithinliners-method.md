@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 5822136eb1a7f582bcfae901a99775950e586198
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 99b6893854c358720259095bf3c0270cb3676483
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76863181"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452177"
 ---
 # <a name="icorprofilerinfo10requestrejitwithinliners-method"></a>ICorProfilerInfo10:: RequestReJITWithInliners 메서드
 
@@ -49,13 +49,13 @@ HRESULT RequestReJITWithInliners( [in]                       DWORD       dwRejit
 
   \[in] 다시 컴파일할 함수를 식별 하는 (`module`, `methodDef`) 쌍의 `methodId` 부분을 지정 합니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 [RequestReJIT](icorprofilerinfo4-requestrejit-method.md) 는 인라인 메서드를 추적 하지 않습니다. 프로파일러에서 인라인 된 메서드의 모든 인스턴스가 ReJITted 하는지 확인 하기 위해 인라인 처리를 차단 하거나 인라이닝을 추적 하 고 모든 inliners에 대 한 `RequestReJIT`를 호출 해야 합니다. 프로파일러가 인라인을 모니터링 하기 위해 제공 되지 않으므로 ReJIT on attach에 문제가 발생 합니다. 이 메서드를 호출 하 여 inliners의 전체 집합을 ReJITted 수 있습니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼:** [.Net Core 지원 운영 체제](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows)를 참조 하세요.
+**플랫폼:** [.Net Core 지원 운영 체제](../../../core/install/dependencies.md?pivots=os-windows)를 참조 하세요.
 
 **헤더:** CorProf.idl, CorProf.h
 
@@ -63,6 +63,6 @@ HRESULT RequestReJITWithInliners( [in]                       DWORD       dwRejit
 
 **.Net 버전:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo10 인터페이스](icorprofilerinfo10-interface.md)

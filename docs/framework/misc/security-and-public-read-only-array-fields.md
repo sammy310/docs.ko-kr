@@ -4,18 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [.NET Framework], public read-only array fields
 ms.assetid: 3df28dee-2a9f-40ff-9852-bfdbe59c27f3
-ms.openlocfilehash: 215e8136b4bc3f2982cdb2d8382b0eca6a881f9b
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 2df4acc0606e4fe8fccee4a8acc6ab744dcbbb71
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217043"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452710"
 ---
 # <a name="security-and-public-read-only-array-fields"></a>보안 및 공용 읽기 전용 배열 필드
 읽기 전용 공용 배열 필드를 수정할 수 있으므로 관리 되는 라이브러리의 읽기 전용 공용 배열 필드를 사용 하 여 응용 프로그램의 경계 동작 또는 보안을 정의 하지 마십시오.  
   
 ## <a name="remarks"></a>설명  
- 일부 .NET framework 클래스에는 플랫폼별 경계 매개 변수를 포함 하는 읽기 전용 public 필드가 포함 됩니다.  예를 들어 <xref:System.IO.Path.InvalidPathChars> 필드는 파일 경로 문자열에 허용 되지 않는 문자를 설명 하는 배열입니다.  많은 유사한 필드가 .NET Framework 전체에 표시 됩니다.  
+
+일부 .NET 클래스에는 플랫폼별 경계 매개 변수를 포함 하는 읽기 전용 public 필드가 포함 됩니다. 예를 들어 <xref:System.IO.Path.InvalidPathChars> 필드는 파일 경로 문자열에 허용 되지 않는 문자를 설명 하는 배열입니다. 많은 유사한 필드가 .NET에서 제공 됩니다.  
   
  <xref:System.IO.Path.InvalidPathChars>와 같은 공용 읽기 전용 필드의 값은 코드 또는 코드의 응용 프로그램 도메인을 공유 하는 코드로 수정할 수 있습니다.  응용 프로그램의 경계 동작을 정의 하려면 다음과 같은 읽기 전용 공용 배열 필드를 사용 하면 안 됩니다.  이렇게 하면 악의적인 코드가 경계 정의를 변경 하 고 코드를 예기치 않은 방식으로 사용할 수 있습니다.  
   

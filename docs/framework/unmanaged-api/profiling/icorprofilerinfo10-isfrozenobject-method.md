@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: b6dabefceba038a129148f7ba36d4ffcfc425c80
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 21f9cb415f913a9c865a487f6e80523344db811e
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790033"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452190"
 ---
 # <a name="icorprofilerinfo10isfrozenobject-method"></a>ICorProfilerInfo10:: IsFrozenObject 메서드
 
@@ -41,7 +41,7 @@ HRESULT IsFrozenObject( [in]  ObjectID objectId,
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼:** [.Net Core 지원 운영 체제](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows)를 참조 하세요.
+**플랫폼:** [.Net Core 지원 운영 체제](../../../core/install/dependencies.md?pivots=os-windows)를 참조 하세요.
 
 **헤더:** CorProf.idl, CorProf.h
 
@@ -49,6 +49,6 @@ HRESULT IsFrozenObject( [in]  ObjectID objectId,
 
 **.Net 버전:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo10 인터페이스](icorprofilerinfo10-interface.md)

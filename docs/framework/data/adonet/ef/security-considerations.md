@@ -2,15 +2,15 @@
 title: 보안 고려 사항(Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 9a560db5dbcb7a87a1c933febfb8bf676cc8816b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e2e1fc75049d41b50aa59092fe1aa21e8cdab659
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968411"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452489"
 ---
 # <a name="security-considerations-entity-framework"></a>보안 고려 사항(Entity Framework)
-이 항목에서는 Entity Framework 응용 프로그램 개발, 배포 및 실행과 관련 된 보안 고려 사항에 대해 설명 합니다. 또한 보안 .NET Framework 응용 프로그램을 만들기 위한 권장 사항을 따라야 합니다. 자세한 내용은 [보안 개요](../security-overview.md)를 참조 하세요.  
+이 항목에서는 Entity Framework 응용 프로그램 개발, 배포 및 실행과 관련 된 보안 고려 사항에 대해 설명 합니다. 또한 보안 .NET Framework 응용 프로그램을 만들기 위한 권장 사항을 따라야 합니다. 자세한 내용은 [보안 개요](../security-overview.md)를 참조하세요.  
   
 ## <a name="general-security-considerations"></a>일반적인 보안 고려 사항  
  다음 보안 고려 사항은 Entity Framework를 사용 하는 모든 응용 프로그램에 적용 됩니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "73968411"
  로그온 작업 중에 사용자 암호를 기반으로 하는 정보가 기본 데이터 소스의 네트워크 라이브러리를 통해 서버로 전달됩니다. 악의적인 공급자가 사용자 자격 증명을 도용하거나, 악성 쿼리를 생성하거나, 결과 집합을 조작할 수 있습니다.  
   
 #### <a name="encrypt-your-connection-to-protect-sensitive-data"></a>연결을 암호화하여 중요한 데이터를 보호합니다.  
- Entity Framework는 데이터 암호화를 직접 처리 하지 않습니다. 사용자가 공용 네트워크를 통해 데이터에 액세스하는 경우 애플리케이션에서 데이터 소스에 대해 암호화된 연결을 설정하여 보안을 강화해야 합니다. 자세한 내용은 데이터 소스의 보안 관련 설명서를 참조하세요. SQL Server 데이터 원본에 대해서는 [SQL Server에 대 한 연결 암호화](https://go.microsoft.com/fwlink/?LinkId=119544)를 참조 하세요.  
+ Entity Framework는 데이터 암호화를 직접 처리 하지 않습니다. 사용자가 공용 네트워크를 통해 데이터에 액세스하는 경우 애플리케이션에서 데이터 소스에 대해 암호화된 연결을 설정하여 보안을 강화해야 합니다. 자세한 내용은 데이터 소스의 보안 관련 설명서를 참조하세요. SQL Server 데이터 원본에 대해서는 [SQL Server에 대 한 연결 암호화](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105))를 참조 하세요.  
   
 #### <a name="secure-the-connection-string"></a>연결 문자열을 보호합니다.  
  애플리케이션 보안의 가장 중요한 목표 중 하나는 데이터 소스에 대한 액세스를 보호하는 것입니다. 연결 문자열을 안전하게 보호하지 않거나 잘못 생성하면 이로 인해 보안상 취약한 부분이 생길 수 있습니다. 연결 정보를 일반 텍스트로 저장하거나 메모리에 유지하면 전체 시스템을 손상시킬 위험이 있습니다. 다음은 연결 문자열을 보호하기 위한 권장 방법입니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "73968411"
  자세한 내용은 [연결 정보 보호](../protecting-connection-information.md)를 참조하세요.  
   
 #### <a name="do-not-expose-an-entityconnection-to-untrusted-users"></a>EntityConnection을 신뢰할 수 없는 사용자에게 노출하지 않습니다.  
- <xref:System.Data.EntityClient.EntityConnection> 개체는 기본 연결의 연결 문자열을 노출합니다. <xref:System.Data.EntityClient.EntityConnection> 개체에 액세스할 수 있는 사용자는 기본 연결의 <xref:System.Data.ConnectionState>도 변경할 수 있습니다. <xref:System.Data.EntityClient.EntityConnection> 클래스는 스레드로부터 안전 하지 않습니다.  
+ <xref:System.Data.EntityClient.EntityConnection> 개체는 기본 연결의 연결 문자열을 노출합니다. <xref:System.Data.EntityClient.EntityConnection> 개체에 액세스할 수 있는 사용자는 기본 연결의 <xref:System.Data.ConnectionState>도 변경할 수 있습니다. <xref:System.Data.EntityClient.EntityConnection> 클래스는 스레드로부터 안전하지 않습니다.  
   
 #### <a name="do-not-pass-connections-outside-the-security-context"></a>연결을 보안 컨텍스트 외부로 전달하지 않습니다.  
  연결이 설정된 후 보안 컨텍스트 외부로 해당 연결을 전달하면 안 됩니다. 예를 들어, 연결을 열 수 있는 권한이 있는 스레드에서 연결을 전역 위치에 저장하면 안 됩니다. 전역 위치에서 연결을 사용할 수 있으면 다른 악성 스레드에서 명시적으로 해당 권한이 부여되지 않아도 열린 연결을 사용할 수 있습니다.  
@@ -81,7 +81,7 @@ ms.locfileid: "73968411"
  Entity Framework는 보안 권한을 적용 하지 않으며 신뢰할 수 있는지 여부에 관계 없이 프로세스에서 사용자가 제공한 데이터 개체 코드를 호출 합니다. 클라이언트 인증 및 권한 부여가 데이터 스토리지 및 해당 애플리케이션에서 수행되는지 확인합니다.  
   
 #### <a name="restrict-access-to-all-configuration-files"></a>모든 구성 파일에 대한 액세스를 제한합니다.  
- 관리자는 응용 프로그램에 대 한 구성을 지정 하는 모든 파일에 대 한 쓰기 권한을 제한 해야 합니다. 예를 들어 enterprisesec .config, web.config, machine.config 및 응용 프로그램 구성 파일 \<*응용*프로그램 >를 포함 합니다. exe .config.  
+ 관리자는 응용 프로그램에 대 한 구성을 지정 하는 모든 파일에 대 한 쓰기 권한을 제한 해야 합니다. 예를 들어 enterprisesec .config, web.config, machine.config 및 응용 프로그램 구성 파일 *\<응용 프로그램 >* . .config를 포함 합니다.  
   
  공급자 고정 이름은 app.config에서 수정할 수 있습니다. 클라이언트 응용 프로그램은 강력한 이름을 사용 하 여 표준 공급자 팩터리 모델을 통해 기본 공급자에 액세스 해야 합니다.  
   
@@ -132,12 +132,12 @@ ms.locfileid: "73968411"
  다음 보안 고려 사항은 엔터티 형식을 생성하고 사용할 때 적용됩니다.  
   
 #### <a name="do-not-share-an-objectcontext-across-application-domains"></a>애플리케이션 도메인에서 ObjectContext를 공유하지 않습니다.  
- 둘 이상의 애플리케이션 도메인과 <xref:System.Data.Objects.ObjectContext>를 공유하면 연결 문자열의 정보가 노출될 수 있습니다. 대신, serialized 개체 또는 개체 그래프를 다른 애플리케이션 도메인으로 전송한 다음 해당 애플리케이션 도메인의 <xref:System.Data.Objects.ObjectContext>에 개체를 연결해야 합니다. 자세한 내용은 [개체 직렬화](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100))를 참조 하세요.  
+ 둘 이상의 애플리케이션 도메인과 <xref:System.Data.Objects.ObjectContext>를 공유하면 연결 문자열의 정보가 노출될 수 있습니다. 대신, serialized 개체 또는 개체 그래프를 다른 애플리케이션 도메인으로 전송한 다음 해당 애플리케이션 도메인의 <xref:System.Data.Objects.ObjectContext>에 개체를 연결해야 합니다. 자세한 내용은 [개체 직렬화](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100))합니다.  
   
 #### <a name="prevent-type-safety-violations"></a>형식 안전성을 위반하지 않도록 합니다.  
  형식 안전성을 위반 하는 경우 Entity Framework는 개체의 데이터 무결성을 보장할 수 없습니다. 형식 안전성 위반은 신뢰할 수 없는 애플리케이션이 완전 신뢰 코드 액세스 보안을 사용하여 실행될 수 있도록 하는 경우에 발생할 수 있습니다.  
   
-#### <a name="handle-exceptions"></a>예외 처리  
+#### <a name="handle-exceptions"></a>예외를 처리합니다.  
  <xref:System.Data.Objects.ObjectContext>의 메서드 및 속성은 try-catch 블록 내에서 액세스합니다. 예외를 catch하면 처리되지 않은 예외로 인해 <xref:System.Data.Objects.ObjectStateManager>의 항목이나 테이블 이름 같은 모델 정보가 애플리케이션 사용자에게 노출되는 것을 방지할 수 있습니다.  
   
 ## <a name="security-considerations-for-aspnet-applications"></a>ASP.NET 애플리케이션의 보안 고려 사항  
@@ -162,7 +162,7 @@ ADO.NET metadata service 구성 요소는 개인 정보를 기록 하지 않습�
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>신뢰할 수 없는 소스의 MetadataWorkspace 개체를 허용하지 않습니다.  
  애플리케이션에서 신뢰할 수 없는 소스의 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 클래스 인스턴스를 허용하면 안 됩니다. 대신, 명시적으로 작업 영역을 생성하고 해당 소스에서 채워야 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ADO.NET 애플리케이션 보안](../securing-ado-net-applications.md)
 - [배포 고려 사항](deployment-considerations.md)

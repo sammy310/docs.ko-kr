@@ -2,12 +2,12 @@
 title: Entity Framework 데이터 공급자
 ms.date: 03/30/2017
 ms.assetid: 5252e639-ff11-4818-82e7-07221ed6ae23
-ms.openlocfilehash: 8d02a49af8674a5568c56347c4045552f8477f1a
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: bf3e55833a3dbed29b1f767014c106af93b2526d
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854744"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452541"
 ---
 # <a name="entity-framework-data-providers"></a>Entity Framework 데이터 공급자
 이 섹션에서는 Entity Framework를 지 원하는 데이터 공급자에 대 한 정보를 제공 합니다.  
@@ -19,13 +19,9 @@ ms.locfileid: "70854744"
  [Entity Framework용 SqlClient](sqlclient-for-the-entity-framework.md)  
  SQL Server 데이터베이스에 사용할 Entity Framework를 지 원하는 .NET Framework 데이터 공급자에 대해 설명 합니다.  
   
-## <a name="related-sections"></a>관련 단원  
- [Entity Framework (SQL Server Compact)](https://go.microsoft.com/fwlink/?LinkId=135638)  
+## <a name="related-sections"></a>관련 섹션  
+ [Entity Framework (SQL Server Compact)](https://docs.microsoft.com/previous-versions/sql/compact/sql-server-compact-4.0/cc835494(v=sql.110))  
  공급자 제한 사항 및 SQL Server Compact 데이터베이스에서 Entity Framework를 사용 하는 방법에 대해 설명 합니다.  
-  
- [Entity Framework에 대 한 타사 공급자](https://go.microsoft.com/fwlink/?LinkId=143699)  
- 현재 Entity Framework에 사용할 수 있는 타사 데이터 공급자 목록입니다.  
-  
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [데이터 공급자 작업](working-with-data-providers.md)

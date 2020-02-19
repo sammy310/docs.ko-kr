@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: f0f55c948d10c61ebab57f47e3461531ccf5f610
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 00f01b63cdf9397fe25f28fff08767dfc3a83e69
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559718"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453119"
 ---
 # <a name="animation-overview"></a>애니메이션 개요
 
@@ -184,7 +184,7 @@ ms.locfileid: "75559718"
     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_105](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_105)]
     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_105](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_105)]
 
-### <a name="complete-example"></a>완성된 예제
+### <a name="complete-example"></a>전체 예제
 
 다음은 XAML에서 뷰를 페이드 인 및 페이드 아웃 하는 사각형을 만드는 방법을 보여 줍니다.
 
@@ -341,7 +341,7 @@ ms.locfileid: "75559718"
 
 애니메이션에 데이터 바인딩 또는 애니메이션 변경 내용을 반영하려면 해당 클록이 다시 생성되어야 합니다. 클록은 자동으로 다시 생성되지 않습니다. 애니메이션에 변경 내용이 반영 되도록 하려면 <xref:System.Windows.Media.Animation.BeginStoryboard> 또는 <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 메서드를 사용 하 여 해당 스토리 보드를 다시 적용 합니다. 이러한 메서드 중 하나를 사용하면 애니메이션이 다시 시작됩니다. 코드에서 <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> 메서드를 사용 하 여 storyboard를 이전 위치로 다시 이동할 수 있습니다.
 
-데이터 바인딩된 애니메이션의 예제는 [키 스플라인 애니메이션 샘플](https://go.microsoft.com/fwlink/?LinkID=160011)을 참조 하세요. 애니메이션 및 타이밍 시스템의 작동 방식에 대 한 자세한 내용은 [애니메이션 및 타이밍 시스템 개요](animation-and-timing-system-overview.md)를 참조 하세요.
+데이터 바인딩된 애니메이션의 예제는 [키 스플라인 애니메이션 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/KeySplineAnimations)을 참조 하세요. 애니메이션 및 타이밍 시스템의 작동 방식에 대 한 자세한 내용은 [애니메이션 및 타이밍 시스템 개요](animation-and-timing-system-overview.md)를 참조 하세요.
 
 <a name="otherWaysToAnimateSection"></a>
 
@@ -355,11 +355,11 @@ ms.locfileid: "75559718"
 
 다음 샘플은 애플리케이션에 애니메이션을 추가하는 데 도움이 될 수 있습니다.
 
-- [From, To 및 By 애니메이션 대상 값 샘플](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [From, To 및 By 애니메이션 대상 값 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/TargetValues)
 
   다른 From/To/By 설정을 보여 줍니다.
 
-- [애니메이션 타이밍 동작 샘플](https://go.microsoft.com/fwlink/?LinkID=159970)
+- [애니메이션 타이밍 동작 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/AnimationTiming)
 
   애니메이션의 타이밍 동작을 제어할 수는 여러 가지 방법을 보여 줍니다. 또한 이 샘플은 애니메이션의 대상 값에 대해 데이터 바인딩을 수행하는 방법을 보여 줍니다.
 
@@ -367,7 +367,7 @@ ms.locfileid: "75559718"
 
 ## <a name="related-topics"></a>관련 항목
 
-|제목|설명|
+|제목|Description|
 |-----------|-----------------|
 |[애니메이션 및 타이밍 시스템 개요](animation-and-timing-system-overview.md)|타이밍 시스템에서 <xref:System.Windows.Media.Animation.Timeline>를 사용 하 고 <xref:System.Windows.Media.Animation.Clock> 클래스를 사용 하 여 애니메이션을 만들 수 있는 방법을 설명 합니다.|
 |[애니메이션에 대한 유용한 정보](animation-tips-and-tricks.md)|성능 같은 애니메이션 문제 해결에 도움이 되는 유용한 정보를 나열합니다.|

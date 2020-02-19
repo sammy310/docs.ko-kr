@@ -1,19 +1,19 @@
 ---
-title: .NET Framework 응용 프로그램의 COM 상호 운용성
+title: .NET Framework 애플리케이션의 COM 상호 운용성
 ms.date: 07/20/2015
 helpviewer_keywords:
-- interoperability, COM and .NET framework objects
+- interoperability, COM and .NET Framework objects
 - COM interop [Visual Basic]
 - shared components
 ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
-ms.openlocfilehash: 1c484ae948c247a97dd57539e3b0be263736aceb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c3567464616d3b0b3f91ff57e8a169aca046c866
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348742"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452294"
 ---
-# <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>.NET Framework 응용 프로그램의 COM 상호 운용성(Visual Basic)
+# <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>.NET Framework 애플리케이션의 COM 상호 운용성(Visual Basic)
 
 COM 개체를 사용 하 고 동일한 응용 프로그램에서 개체를 .NET Framework 하려면 개체가 메모리에 존재 하는 방식의 차이를 해결 해야 합니다. .NET Framework 개체는 관리 되는 메모리 (공용 언어 런타임에 의해 제어 되는 메모리)에 있으며 필요에 따라 런타임에 의해 이동 될 수 있습니다. COM 개체는 관리 되지 않는 메모리에 있으며 다른 메모리 위치로 이동할 수 없습니다. Visual Studio 및 .NET Framework는 이러한 관리 되는 구성 요소와 관리 되지 않는 구성 요소의 상호 작용을 제어 하는 도구를 제공 합니다. 관리 코드에 대 한 자세한 내용은 [공용 언어 런타임](../../../standard/clr.md)을 참조 하세요.
 

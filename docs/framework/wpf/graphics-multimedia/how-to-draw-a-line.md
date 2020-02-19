@@ -6,28 +6,28 @@ helpviewer_keywords:
 - graphics [WPF], lines
 - lines [WPF], drawing
 ms.assetid: 0513ee01-6b27-4bb3-85f3-3a3e6710d80e
-ms.openlocfilehash: c11dfb9523834ec2e622cb2e62bd6982a1a78fd4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a803c1be01086ca8911ef4cc33bd67697239e2c0
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947656"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452950"
 ---
 # <a name="how-to-draw-a-line"></a>방법: 선 그리기
-이 예제에서는 사용 하 여 선을 그리는 방법을 보여 줍니다.는 <xref:System.Windows.Shapes.Line> 요소입니다.  
+이 예제에서는 <xref:System.Windows.Shapes.Line> 요소를 사용 하 여 선을 그리는 방법을 보여 줍니다.  
   
- 선을 그리는 만들려면는 <xref:System.Windows.Shapes.Line> 요소입니다. 사용 하 여 해당 <xref:System.Windows.Shapes.Line.X1%2A> 하 고 <xref:System.Windows.Shapes.Line.Y1%2A> 시작점;를 사용 하 여 속성 해당 <xref:System.Windows.Shapes.Line.X2%2A> 및 <xref:System.Windows.Shapes.Line.Y2%2A> 끝점을 설정 하는 속성입니다. 마지막으로 설정 하는 <xref:System.Windows.Shapes.Shape.Stroke%2A> 및 <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> 스트로크 없는 줄에 표시 되지 않으므로 합니다.  
+ 선을 그리려면 <xref:System.Windows.Shapes.Line> 요소를 만듭니다. 해당 <xref:System.Windows.Shapes.Line.X1%2A> 및 <xref:System.Windows.Shapes.Line.Y1%2A> 속성을 사용 하 여 시작점을 설정 합니다. <xref:System.Windows.Shapes.Line.X2%2A> 및 <xref:System.Windows.Shapes.Line.Y2%2A> 속성을 사용 하 여 끝점을 설정 합니다. 마지막으로, 스트로크가 없는 줄이 보이지 않기 때문에 <xref:System.Windows.Shapes.Shape.Stroke%2A>를 설정 하 고 <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> 합니다.  
   
- 설정 된 <xref:System.Windows.Shapes.Shape.Fill%2A> 요소 줄에 대 한 영향을 주지 않습니다, 줄 없는 내부에 있으므로.  
+ 선에는 <xref:System.Windows.Shapes.Shape.Fill%2A> 요소를 설정 해도 아무런 효과가 없습니다.  
   
- 다음 예제에서는 세 줄을 그립니다는 <xref:System.Windows.Controls.Canvas> 요소입니다.  
+ 다음 예제에서는 <xref:System.Windows.Controls.Canvas> 요소 안에 3 개의 줄을 그립니다.  
   
 ## <a name="example"></a>예제  
  [!code-xaml[drawingwithshapeelements#LineExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/lineexample.xaml#lineexample1)]  
   
- 이 예제는 더 큰 샘플;의 일부 전체 샘플을 참조 하세요 [도형 요소 샘플](https://go.microsoft.com/fwlink/?LinkID=160037)합니다.  
+ 이 예제는 더 큰 샘플의 일부입니다. 전체 샘플은 [셰이프 요소 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/ShapeElements)을 참조 하세요.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Shapes.Line>
-- [도형 요소 샘플](https://go.microsoft.com/fwlink/?LinkID=160037)
+- [셰이프 요소 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/ShapeElements)

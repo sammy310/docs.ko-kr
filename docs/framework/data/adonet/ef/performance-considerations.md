@@ -2,12 +2,12 @@
 title: 성능 고려 사항(Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: 2b116a22c0f422377246d8cc0b2d647fd78a289b
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 6cd0adb7963b3cfc05fcd6f30d8a7039a50f9485
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039851"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452463"
 ---
 # <a name="performance-considerations-entity-framework"></a>성능 고려 사항(Entity Framework)
 이 항목에서는 ADO.NET Entity Framework의 성능 특징에 대해 설명하고, Entity Framework 애플리케이션의 성능 개선을 위해 고려해야 할 몇 가지 사항을 알려 줍니다.  
@@ -15,7 +15,7 @@ ms.locfileid: "73039851"
 ## <a name="stages-of-query-execution"></a>쿼리 실행 단계  
  Entity Framework의 쿼리 성능을 보다 잘 이해하기 위해서는 쿼리가 개념적 모델에 대해 실행하고 데이터를 개체로 반환할 때 수행되는 작업을 알고 있는 것이 좋습니다. 다음 표에서는 이러한 일련의 작업에 대해 설명합니다.  
   
-|연산|상대 비용|빈도|주석|  
+|작업(Operation)|상대 비용|빈도|주석|  
 |---------------|-------------------|---------------|--------------|  
 |메타데이터 로드|보통|애플리케이션 도메인당 한 번|Entity Framework에서 사용되는 모델 및 매핑 메타데이터가 <xref:System.Data.Metadata.Edm.MetadataWorkspace>로 로드됩니다. 이 메타데이터는 전역으로 캐시되고 동일한 애플리케이션 도메인의 다른 <xref:System.Data.Objects.ObjectContext> 인스턴스에서 사용할 수 있습니다.|  
 |데이터베이스 연결 열기|보통<sup>1</sup>|필요한 만큼|데이터베이스에 대 한 열린 연결은 중요 한 리소스를 사용 하기 때문에 Entity Framework는 필요한 경우에만 데이터베이스 연결을 열고 닫습니다. 또한 연결을 명시적으로 열 수 있습니다. 자세한 내용은 [연결 및 트랜잭션 관리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))를 참조 하세요.|  
@@ -23,8 +23,8 @@ ms.locfileid: "73039851"
 |쿼리 준비|보통<sup>2</sup>|고유 쿼리당 한 번|쿼리 명령을 작성하고, 모델 및 매핑 메타데이터를 기반으로 명령 트리를 생성하고, 반환된 데이터의 셰이프를 정의하는 비용을 포함합니다. Entity SQL 쿼리 명령과 LINQ 쿼리가 모두 캐시되므로 동일한 쿼리를 나중에 실행하는 경우 시간이 더 적게 걸립니다. 그러나, 여전히 컴파일된 LINQ 쿼리를 사용하여 나중에 실행할 때 이러한 비용을 줄일 수 있으며 컴파일된 쿼리는 자동으로 캐시되는 LINQ 쿼리에서보다 효율적으로 작동합니다. 자세한 내용은 [컴파일된 쿼리 (LINQ to Entities)](./language-reference/compiled-queries-linq-to-entities.md)를 참조 하세요. LINQ 쿼리 실행에 대 한 일반적인 내용은 [LINQ to Entities](./language-reference/linq-to-entities.md)를 참조 하세요. **참고:**  `Enumerable.Contains` 연산자를 메모리 내 컬렉션에 적용 하는 LINQ to Entities 쿼리는 자동으로 캐시 되지 않습니다. 또한 메모리 내 컬렉션은 컴파일된 LINQ 쿼리에서 매개 변수화할 수 없습니다.|  
 |쿼리 실행|낮음<sup>2</sup>|쿼리당 한 번|ADO.NET 데이터 공급자를 사용하여 데이터 소스에 대해 명령을 실행하는 비용입니다. 대부분의 데이터 소스에서 쿼리 계획을 캐시하므로 동일한 쿼리를 나중에 실행하는 경우 시간이 더 적게 걸릴 수 있습니다.|  
 |형식 로드 및 유효성 검사|낮음<sup>3</sup>|<xref:System.Data.Objects.ObjectContext> 인스턴스당 한 번|형식은 개념적 모델에서 정의하는 형식에 대해 로드되고 유효성이 검사됩니다.|  
-|추적|낮음<sup>3</sup>|쿼리에서 반환하는 개체당 한 번 <sup>4</sup>|쿼리에서 <xref:System.Data.Objects.MergeOption.NoTracking> 병합 옵션을 사용하는 경우 이 단계는 성능에 영향을 주지 않습니다.<br /><br /> 쿼리에서 <xref:System.Data.Objects.MergeOption.AppendOnly>, <xref:System.Data.Objects.MergeOption.PreserveChanges> 또는 <xref:System.Data.Objects.MergeOption.OverwriteChanges> 병합 옵션을 사용하는 경우 <xref:System.Data.Objects.ObjectStateManager>에서 쿼리 결과를 추적합니다. 쿼리가 반환한 각 추적된 개체에 대해 <xref:System.Data.EntityKey>가 생성되고 이는 <xref:System.Data.Objects.ObjectStateEntry>에서 <xref:System.Data.Objects.ObjectStateManager>를 만드는 데 사용됩니다. <xref:System.Data.Objects.ObjectStateEntry>에 대한 기존 <xref:System.Data.EntityKey>를 찾을 수 있는 경우 기존 개체가 반환됩니다. <xref:System.Data.Objects.MergeOption.PreserveChanges> 또는 <xref:System.Data.Objects.MergeOption.OverwriteChanges> 옵션이 사용되는 경우 개체를 반환하기 전에 업데이트합니다.<br /><br /> 자세한 내용은 [Id 확인, 상태 관리 및 변경 내용 추적](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896269(v=vs.100))을 참조 하세요.|  
-|개체 구체화|보통<sup>3</sup>|쿼리에서 반환하는 개체당 한 번 <sup>4</sup>|반환된 <xref:System.Data.Common.DbDataReader> 개체를 읽고, <xref:System.Data.Common.DbDataRecord> 클래스의 각 인스턴스에 있는 값을 기준으로 개체를 만들고 속성 값을 설정하는 프로세스입니다. <xref:System.Data.Objects.ObjectContext>에 이미 개체가 있고 쿼리에서 <xref:System.Data.Objects.MergeOption.AppendOnly> 또는 <xref:System.Data.Objects.MergeOption.PreserveChanges> 병합 옵션을 사용하는 경우 이 단계는 성능에 영향을 주지 않습니다. 자세한 내용은 [Id 확인, 상태 관리 및 변경 내용 추적](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896269(v=vs.100))을 참조 하세요.|  
+|추적|낮음<sup>3</sup>|쿼리에서 반환하는 개체당 한 번 <sup>4</sup>|쿼리에서 <xref:System.Data.Objects.MergeOption.NoTracking> 병합 옵션을 사용하는 경우 이 단계는 성능에 영향을 주지 않습니다.<br /><br /> 쿼리에서 <xref:System.Data.Objects.MergeOption.AppendOnly>, <xref:System.Data.Objects.MergeOption.PreserveChanges> 또는 <xref:System.Data.Objects.MergeOption.OverwriteChanges> 병합 옵션을 사용하는 경우 <xref:System.Data.Objects.ObjectStateManager>에서 쿼리 결과를 추적합니다. 쿼리가 반환한 각 추적된 개체에 대해 <xref:System.Data.EntityKey>가 생성되고 이는 <xref:System.Data.Objects.ObjectStateEntry>에서 <xref:System.Data.Objects.ObjectStateManager>를 만드는 데 사용됩니다. <xref:System.Data.Objects.ObjectStateEntry>에 대한 기존 <xref:System.Data.EntityKey>를 찾을 수 있는 경우 기존 개체가 반환됩니다. <xref:System.Data.Objects.MergeOption.PreserveChanges> 또는 <xref:System.Data.Objects.MergeOption.OverwriteChanges> 옵션이 사용되는 경우 개체를 반환하기 전에 업데이트합니다.<br /><br /> 자세한 내용은 [Id 확인, 상태 관리 및 변경 내용 추적](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896269(v=vs.100))합니다.|  
+|개체 구체화|보통<sup>3</sup>|쿼리에서 반환하는 개체당 한 번 <sup>4</sup>|반환된 <xref:System.Data.Common.DbDataReader> 개체를 읽고, <xref:System.Data.Common.DbDataRecord> 클래스의 각 인스턴스에 있는 값을 기준으로 개체를 만들고 속성 값을 설정하는 프로세스입니다. <xref:System.Data.Objects.ObjectContext>에 이미 개체가 있고 쿼리에서 <xref:System.Data.Objects.MergeOption.AppendOnly> 또는 <xref:System.Data.Objects.MergeOption.PreserveChanges> 병합 옵션을 사용하는 경우 이 단계는 성능에 영향을 주지 않습니다. 자세한 내용은 [Id 확인, 상태 관리 및 변경 내용 추적](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896269(v=vs.100))합니다.|  
   
  <sup>1</sup> 데이터 원본 공급자가 연결 풀링을 구현 하는 경우 연결을 여는 비용이 풀 전체에 분산 됩니다. .NET Provider for SQL Server에서는 연결 풀링을 지원합니다.  
   
@@ -32,9 +32,9 @@ ms.locfileid: "73039851"
   
  <sup>3</sup> 쿼리에서 반환 되는 개체 수에 비례하여 총 비용이 늘어납니다.  
   
- <sup>4</sup> entityclient 쿼리는 개체 대신 <xref:System.Data.EntityClient.EntityDataReader>를 반환 하므로 entityclient 쿼리에는이 오버 헤드가 필요 하지 않습니다. 자세한 내용은 [Entity Framework에 대 한 EntityClient 공급자](entityclient-provider-for-the-entity-framework.md)를 참조 하세요.  
+ <sup>4</sup> entityclient 쿼리는 개체 대신 <xref:System.Data.EntityClient.EntityDataReader>를 반환 하므로 entityclient 쿼리에는이 오버 헤드가 필요 하지 않습니다. 자세한 내용은 [Entity Framework용 EntityClient 공급자](entityclient-provider-for-the-entity-framework.md)(영문)를 참조하세요.  
   
-## <a name="additional-considerations"></a>추가 고려 사항  
+## <a name="additional-considerations"></a>기타 고려 사항  
  다음은 Entity Framework 애플리케이션의 성능에 영향을 줄 수 있는 기타 고려 사항입니다.  
   
 ### <a name="query-execution"></a>쿼리 실행  
@@ -128,7 +128,7 @@ ms.locfileid: "73039851"
   
  매우 큰 모델로 작업하는 경우 고려할 사항은 다음과 같습니다.  
   
- .NET 메타데이터 형식은 지정된 이진 파일의 사용자 문자열 문자 수를 16,777,215(0xFFFFFF)로 제한합니다. 매우 큰 모델에 대 한 뷰를 생성 하는 경우 뷰 파일이이 크기 제한에 도달 하면 "남아 있는 논리 공간이 없으므로 사용자 문자열을 더 이상 만들 수 없습니다." 라는 메시지가 나타납니다. 컴파일 오류입니다. 이 크기 제한은 관리되는 모든 이진 파일에 적용됩니다. 자세한 내용은 크고 복잡 한 모델을 사용할 때 오류를 방지 하는 방법을 보여 주는 [블로그](https://go.microsoft.com/fwlink/?LinkId=201476) 를 참조 하세요.  
+ .NET 메타데이터 형식은 지정된 이진 파일의 사용자 문자열 문자 수를 16,777,215(0xFFFFFF)로 제한합니다. 매우 큰 모델에 대 한 뷰를 생성 하는 경우 뷰 파일이이 크기 제한에 도달 하면 "남아 있는 논리 공간이 없으므로 사용자 문자열을 더 이상 만들 수 없습니다." 라는 메시지가 나타납니다. 컴파일 오류입니다. 이 크기 제한은 관리되는 모든 이진 파일에 적용됩니다. 자세한 내용은 크고 복잡 한 모델을 사용할 때 오류를 방지 하는 방법을 보여 주는 [블로그](https://docs.microsoft.com/archive/blogs/appfabriccat/solving-the-no-logical-space-left-to-create-more-user-strings-error-and-improving-performance-of-pre-generated-views-in-visual-studio-net4-entity-framework) 를 참조 하세요.  
   
 #### <a name="consider-using-the-notracking-merge-option-for-queries"></a>쿼리에 대한 NoTracking 병합 옵션 사용  
  개체 컨텍스트에서 반환된 개체를 추적하려면 비용이 필요합니다. 개체에 대한 변경 내용을 감지하고 동일한 논리 엔터티에 대한 여러 요청에서 동일한 개체 인스턴스를 반환하도록 할 경우 개체가 <xref:System.Data.Objects.ObjectContext> 인스턴스에 연결되어야 합니다. 개체를 업데이트 하거나 삭제할 계획이 없고 id 관리가 필요 하지 않은 경우 쿼리를 실행할 때 <xref:System.Data.Objects.MergeOption.NoTracking> 병합 옵션을 사용 하는 것이 좋습니다.  
@@ -145,14 +145,14 @@ ms.locfileid: "73039851"
  응용 프로그램에서 일련의 개체 쿼리를 실행 하거나 <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> 자주 호출 하 여 데이터 원본에 대 한 만들기, 업데이트 및 삭제 작업을 유지 하는 경우 Entity Framework는 데이터 원본에 대 한 연결을 계속 열고 닫아야 합니다. 이러한 경우 해당 작업 시작 시 연결을 수동으로 열고, 작업 완료 시 연결을 수동으로 닫거나 삭제하세요. 자세한 내용은 [연결 및 트랜잭션 관리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))를 참조 하세요.  
   
 ## <a name="performance-data"></a>성능 데이터  
- Entity Framework에 대 한 일부 성능 데이터는 [ADO.NET 팀 블로그의](https://go.microsoft.com/fwlink/?LinkId=91905)다음 게시물에 게시 됩니다.  
+ Entity Framework에 대 한 일부 성능 데이터는 [ADO.NET 팀 블로그의](https://docs.microsoft.com/archive/blogs/adonet/)다음 게시물에 게시 됩니다.  
   
-- [ADO.NET Entity Framework의 성능 살펴보기-1 부](https://go.microsoft.com/fwlink/?LinkId=123907)  
+- [ADO.NET Entity Framework의 성능 살펴보기-1 부](https://docs.microsoft.com/archive/blogs/adonet/exploring-the-performance-of-the-ado-net-entity-framework-part-1)  
   
-- [ADO.NET Entity Framework의 성능 살펴보기 – 2 부](https://go.microsoft.com/fwlink/?LinkId=123909)  
+- [ADO.NET Entity Framework의 성능 살펴보기 – 2 부](https://docs.microsoft.com/archive/blogs/adonet/exploring-the-performance-of-the-ado-net-entity-framework-part-2)  
   
-- [ADO.NET Entity Framework 성능 비교](https://go.microsoft.com/fwlink/?LinkID=123913)  
+- [ADO.NET Entity Framework 성능 비교](https://docs.microsoft.com/archive/blogs/adonet/ado-net-entity-framework-performance-comparison)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [개발 및 배포 고려 사항](development-and-deployment-considerations.md)

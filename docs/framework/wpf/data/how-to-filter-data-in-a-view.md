@@ -9,12 +9,12 @@ helpviewer_keywords:
 - filtering data in views [WPF]
 - data binding [WPF], filtering data in views
 ms.assetid: c76e8606-4cc4-45a8-9110-e2ec66dc6afd
-ms.openlocfilehash: ea49897ca5e9cb6b639cf7d98ff05bd287c51761
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f15bcfd1e3c4175f8b4b97244f120d5edbdec9b8
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453476"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453080"
 ---
 # <a name="how-to-filter-data-in-a-view"></a>방법: 뷰에서 데이터 필터링
 이 예제에서는 뷰에서 데이터를 필터링 하는 방법을 보여 줍니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "73453476"
  [!code-csharp[SortFilter#Unfilter](~/samples/snippets/csharp/VS_Snippets_Wpf/SortFilter/CSharp/Page1.xaml.cs#unfilter)]
  [!code-vb[SortFilter#Unfilter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SortFilter/VisualBasic/Page1.xaml.vb#unfilter)]  
   
- 보기를 만들거나 가져오는 방법에 대 한 자세한 내용은 [데이터 컬렉션의 기본 뷰 가져오기](how-to-get-the-default-view-of-a-data-collection.md)를 참조 하세요. 전체 예제를 보려면 [뷰 샘플에서 항목 정렬 및 필터링](https://go.microsoft.com/fwlink/?LinkID=160040)을 참조 하세요.  
+ 보기를 만들거나 가져오는 방법에 대 한 자세한 내용은 [데이터 컬렉션의 기본 뷰 가져오기](how-to-get-the-default-view-of-a-data-collection.md)를 참조 하세요. 전체 예제를 보려면 [뷰 샘플에서 항목 정렬 및 필터링](https://github.com/Microsoft/WPF-Samples/tree/master/Data%20Binding/SortFilter)을 참조 하세요.  
   
  뷰 개체가 <xref:System.Windows.Data.CollectionViewSource> 개체에서 제공 되는 경우 <xref:System.Windows.Data.CollectionViewSource.Filter> 이벤트에 대 한 이벤트 처리기를 설정 하 여 필터링 논리를 적용 합니다. 다음 예에서는 `listingDataView` <xref:System.Windows.Data.CollectionViewSource>의 인스턴스입니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "73453476"
  [!code-csharp[DataBindingLab#5](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#5)]
  [!code-vb[DataBindingLab#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#5)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Data.CollectionView.CanFilter%2A>
 - <xref:System.Windows.Data.BindingListCollectionView.CustomFilter%2A>

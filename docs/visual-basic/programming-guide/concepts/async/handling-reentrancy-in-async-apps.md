@@ -2,12 +2,12 @@
 title: 비동기 응용 프로그램에서 재진입 처리
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: cd8b43aa9b2373b5ce038e5007678778201f0746
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 44c2cdbadd02aef6b2bbb32bde8bcb9b19f8360d
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354275"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452580"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>비동기 앱에서 재진입 처리 (Visual Basic)
 
@@ -17,7 +17,7 @@ ms.locfileid: "74354275"
 > 예제를 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.
 
 > [!NOTE]
-> 현재 앱 개발에 사용할 최소 버전은 TLS(전송 계층 보안) 버전 1.2입니다. 앱이 .NET Framework 4.7 이전 버전을 대상으로 하는 경우, [.NET Framework를 사용한 TLS(전송 계층 보안) 모범 사례](../../../../framework/network-programming/tls.md)는 다음 문서를 참조하세요. 
+> 현재 앱 개발에 사용할 최소 버전은 TLS(전송 계층 보안) 버전 1.2입니다. 앱이 4.7 이전 버전의 .NET Framework를 대상으로 하는 경우 [.NET Framework를 사용 하는 TLS (Transport Layer Security) 모범 사례](../../../../framework/network-programming/tls.md)에 대 한 다음 문서를 참조 하세요.
 
 ## <a name="BKMK_RecognizingReentrancy"></a> 재진입 인식
 
@@ -556,7 +556,7 @@ End Function
 
 1. Visual Studio를 시작합니다.
 
-2. 메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 차례로 선택합니다.
+2. 주 메뉴에서 **파일**, **새로 만들기**, **프로젝트**를 선택합니다.
 
      **새 프로젝트** 대화 상자가 열립니다.
 
@@ -680,7 +680,7 @@ End Function
 
 11. CTRL+F5 키를 선택하여 프로그램을 실행한 다음 **시작** 버튼을 여러 번 선택합니다.
 
-12. [시작 단추 사용 안 함](#BKMK_DisableTheStartButton), [작업 취소 및 다시 시작](#BKMK_CancelAndRestart) 또는 [여러 작업을 실행하고 출력을 큐 대기](#BKMK_RunMultipleOperations)의 내용을 변경하여 재입력을 처리합니다.
+12. [시작 버튼 사용 안 함](#BKMK_DisableTheStartButton), [작업 취소 및 다시 시작](#BKMK_CancelAndRestart) 또는 [여러 작업을 실행하고 출력을 큐 대기](#BKMK_RunMultipleOperations)의 내용을 변경하여 재진입을 처리합니다.
 
 ## <a name="see-also"></a>참고 항목
 

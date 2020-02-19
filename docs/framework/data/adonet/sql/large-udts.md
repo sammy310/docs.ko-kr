@@ -5,26 +5,26 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: 33f4263c747ac2590234493ec7cb9e6048ed2b96
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 012bddc0b4c29a0b50abc3a0df5c3cd34dc4725a
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794017"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452398"
 ---
 # <a name="large-udts"></a>큰 UDT
-개발자는 UDT(사용자 정의 형식)를 통해 SQL Server 데이터베이스에 CLR(공용 언어 런타임) 개체를 저장하여 서버의 스칼라 형식 시스템을 확장할 수 있습니다. UDT에는 단일 SQL Server 시스템 데이터 형식으로 구성된 일반적인 별칭 데이터 형식과는 달리 여러 요소 및 동작이 포함될 수 있습니다.  
+UDT(사용자 정의 형식)는 개발자가 CLR(공용 언어 런타임) 개체를 SQL Server 데이터베이스에 저장하여 서버의 스칼라 형식 시스템을 확장할 수 있도록 합니다. UDT는 단일 SQL Server 시스템 데이터 형식으로 구성된 일반적인 별칭 데이터 형식과 달리 여러 요소를 포함할 수 있으며 관련 동작이 있을 수 있습니다.  
   
 > [!NOTE]
 > 큰 UDT에 대한 지원이 향상된 SqlClient를 활용하려면 .NET Framework 3.5 SP1 이상을 설치해야 합니다.  
   
- 이전에는 UDT의 최대 크기가 8KB로 제한되었습니다. 그러나 SQL Server 2008에서는 <xref:Microsoft.SqlServer.Server.Format.UserDefined> 형식인 UDT에 대해 이 제한이 제거되었습니다.  
+ 이전에는 UDT의 최대 크기가 8KB로 제한되었습니다. SQL Server 2008에서 <xref:Microsoft.SqlServer.Server.Format.UserDefined> 형식인 UDT에서는 이 제한이 제거되었습니다.  
   
  사용자 정의 형식에 대한 자세한 내용은 현재 사용하고 있는 SQL Server 버전에 해당하는 SQL Server 온라인 설명서 버전을 참조하세요.  
   
- **SQL Server 온라인 설명서**  
+ **SQL Server 설명서**  
   
-1. [CLR 사용자 정의 형식](https://go.microsoft.com/fwlink/?LinkId=98366)  
+1. [CLR 사용자 정의 형식](/sql/relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types)  
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>GetSchema를 사용하여 UDT 스키마 검색  
  <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>의 <xref:System.Data.SqlClient.SqlConnection> 메서드는 데이터베이스 스키마 정보를 <xref:System.Data.DataTable>에 반환합니다. 자세한 내용은 [SQL Server 스키마 컬렉션](../sql-server-schema-collections.md)을 참조 하세요.  
@@ -34,18 +34,18 @@ ms.locfileid: "70794017"
   
 |SqlDataReader 열|SQL Server 2005|SQL Server 2008 이상|  
 |--------------------------|---------------------|-------------------------------|  
-|`ColumnSize`|경우에 따라 다름|경우에 따라 다름|  
+|`ColumnSize`|다양함|다양함|  
 |`NumericPrecision`|255|255|  
 |`NumericScale`|255|255|  
 |`DataType`|`Byte[]`|UDT 인스턴스|  
 |`ProviderSpecificDataType`|`SqlTypes.SqlBinary`|UDT 인스턴스|  
 |`ProviderType`|21 (`SqlDbType.VarBinary`)|29 (`SqlDbType.Udt`)|  
 |`NonVersionedProviderType`|29 (`SqlDbType.Udt`)|29 (`SqlDbType.Udt`)|  
-|`DataTypeName`|`SqlDbType.VarBinary`|세 부분으로 구성 된 이름이 *데이터베이스. SchemaName. TypeName*.|  
-|`IsLong`|경우에 따라 다름|경우에 따라 다름|  
+|`DataTypeName`|`SqlDbType.VarBinary`|*Database.SchemaName.TypeName*과 같이 세 부분으로 지정되는 이름|  
+|`IsLong`|다양함|다양함|  
   
 ## <a name="sqldatareader-considerations"></a>SqlDataReader 고려 사항  
- SQL Server 2008부터 <xref:System.Data.SqlClient.SqlDataReader>는 큰 UDT 값 검색을 지원하도록 확장되었습니다. <xref:System.Data.SqlClient.SqlDataReader>에서는 현재 사용하고 있는 SQL Server 버전뿐만 아니라 연결 문자열에 지정된 `Type System Version`에 따라 큰 UDT를 다르게 처리합니다. 자세한 내용은 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>을 참조하세요.  
+ <xref:System.Data.SqlClient.SqlDataReader>는 큰 UDT 값 검색을 지원하도록 SQL Server 2008부터 확장되었습니다. <xref:System.Data.SqlClient.SqlDataReader>에서는 현재 사용하고 있는 SQL Server 버전뿐만 아니라 연결 문자열에 지정된 `Type System Version`에 따라 큰 UDT를 다르게 처리합니다. 자세한 내용은 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>을 참조하세요.  
   
  <xref:System.Data.SqlClient.SqlDataReader>의 다음 메서드는 <xref:System.Data.SqlTypes.SqlBinary>이 SQL Server 2005로 설정되어 있는 경우 UDT 대신 `Type System Version`를 반환합니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "70794017"
 ## <a name="specifying-sqlparameters"></a>SqlParameter 지정  
  다음 <xref:System.Data.SqlClient.SqlParameter> 속성은 큰 UDT로 작업할 수 있도록 확장되었습니다.  
   
-|SqlParameter|설명|  
+|SqlParameter|Description|  
 |---------------------------|-----------------|  
 |<xref:System.Data.SqlClient.SqlParameter.Value%2A>|매개 변수의 값을 나타내는 개체를 가져오거나 설정합니다. 기본값은 null입니다. 이 속성은 `SqlBinary`, `Byte[]` 또는 관리 개체일 수 있습니다.|  
 |<xref:System.Data.SqlClient.SqlParameter.SqlValue%2A>|매개 변수의 값을 나타내는 개체를 가져오거나 설정합니다. 기본값은 null입니다. 이 속성은 `SqlBinary`, `Byte[]` 또는 관리 개체일 수 있습니다.|  
@@ -131,7 +131,7 @@ Using connection As New SqlConnection( _
 End Using  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [매개 변수 및 매개 변수 데이터 형식 구성](../configuring-parameters-and-parameter-data-types.md)
 - [데이터베이스 스키마 정보 검색](../retrieving-database-schema-information.md)

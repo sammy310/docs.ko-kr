@@ -2,12 +2,12 @@
 title: WCF 단순화 기능
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: dd944ad2963e29fd3aa9254f3a37f2c2b98ce70d
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 28a05053fda8380b55a1a9eee20119b8c4cfccfe
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802390"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452658"
 ---
 # <a name="wcf-simplification-features"></a>WCF 단순화 기능
 
@@ -78,7 +78,7 @@ WCF는 이제 계약 중심 개발을 지원합니다. Svcutil.exe 도구에는 
 
 ## <a name="add-service-reference-from-a-portable-subset-project"></a>이식 가능한 하위 집합 프로젝트의 서비스 참조 추가
 
-이식 가능한 하위 집합 프로젝트를 사용 하면 .NET 어셈블리 프로그래머는 여러 .NET 구현 (데스크톱, Silverlight, Windows Phone 및 XBOX)을 계속 지원 하면서 단일 소스 트리 및 빌드 시스템을 유지 관리할 수 있습니다. 이식 가능한 하위 집합 프로젝트는 .net 구현에서 사용할 수 있는 .net framework 어셈블리인 .NET 이식 가능한 라이브러리만 참조 합니다. 개발자 환경은 다른 WCF 클라이언트 애플리케이션에 서비스 참조를 추가하는 것과 동일합니다. 자세한 내용은 [이식 가능한 하위 집합 프로젝트의 서비스 참조 추가](add-service-reference-in-a-portable-subset-project.md)을 참조 하세요.
+이식 가능한 하위 집합 프로젝트를 사용 하면 .NET 어셈블리 프로그래머는 여러 .NET 구현 (데스크톱, Silverlight, Windows Phone 및 Xbox)을 계속 지원 하면서 단일 소스 트리 및 빌드 시스템을 유지 관리할 수 있습니다. 이식 가능한 하위 집합 프로젝트는 .NET 구현에서 사용할 수 있는 어셈블리인 .NET 이식 가능한 라이브러리만 참조 합니다. 개발자 환경은 다른 WCF 클라이언트 애플리케이션에 서비스 참조를 추가하는 것과 동일합니다. 자세한 내용은 [이식 가능한 하위 집합 프로젝트의 서비스 참조 추가](add-service-reference-in-a-portable-subset-project.md)을 참조 하세요.
 
 ## <a name="aspnet-compatibility-mode-default-changed"></a>ASP.NET 호환 모드 기본값 변경
 
@@ -94,7 +94,7 @@ WCF는 개발자가 WCF 서비스를 작성할 때 ASP.NET HTTP 파이프라인 
 
 다음 표에는 변경된 설정과 추가 정보를 찾을 수 있는 위치가 나와 있습니다.
 
-|속성|On|새 기본값|자세한 내용|
+|속성|설정|새 기본값|추가 정보|
 |--------------|--------|-----------------|----------------------|
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30초|이 속성은 TCP 연결이 .NET 프레이밍 프로토콜을 사용 하 여 자신을 인증 하는 데 사용할 수 있는 시간을 결정 합니다. 서버가 인증을 수행하는 데 충분한 정보를 가지려면 클라이언트가 몇 가지 초기 데이터를 보내야 합니다. 이 시간 제한은 인증되지 않은 악의적 클라이언트가 서버에 너무 오래 연결되지 않도록 ReceiveTimeout(10분)보다 일부러 작게 설정합니다. 기본값은 30초입니다. <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>에 대 한 자세한 내용은|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * 프로세서 수|이 소켓 수준 속성은 대기될 "보류 중 승인" 요청의 수를 설명합니다. 수신 백로그 대기열이 채워지면 새 소켓 요청이 거부됩니다. <xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>에 대 한 자세한 내용은|
@@ -109,7 +109,7 @@ WCF는 개발자가 WCF 서비스를 작성할 때 ASP.NET HTTP 파이프라인 
 
 <xref:System.Xml.XmlDictionaryReaderQuotas>에는 메시지를 만드는 동안 인코더가 사용하는 메모리의 크기를 제한하는 XML 사전 판독기에 대한 구성 가능 할당량 값이 포함됩니다. 이러한 할당량은 구성 가능하지만, 개발자가 이를 명시적으로 설정해야 할 가능성을 줄이기 위해 기본값이 변경되었습니다. 메모리 소비를 제한해서 복잡한 `MaxReceivedMessageSize`를 처리하지 않아도 되도록 <xref:System.Xml.XmlDictionaryReaderQuotas> 할당량은 변경되지 않았습니다. 다음 표에는 할당량, 새 기본값 및 각 할당량의 용도에 대한 간략한 설명이 나와 있습니다.
 
-|할당량 이름|기본값|설명|
+|할당량 이름|기본값|Description|
 |----------------|-------------------|-----------------|
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>|Int32.MaxValue|허용되는 최대 배열 길이를 가져오거나 설정합니다. 이 할당량은 바이트 배열을 포함하여 XML 판독기가 반환하는 기본 형식 배열의 최대 크기를 제한합니다. 이 할당량은 XML 판독기 자체의 메모리 소비량은 제한하지 않지만 판독기를 사용하는 모든 구성 요소의 메모리 소비량을 제한합니다. 예를 들어, <xref:System.Runtime.Serialization.DataContractSerializer> 가 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>로 보안이 설정된 판독기를 사용하는 경우에는 이 할당량보다 큰 바이트 배열을 역직렬화하지 않습니다.|
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A>|Int32.MaxValue|각 읽기에 대해 반환되는 최대 허용 바이트를 가져오거나 설정합니다. 이 할당량은 요소 시작 태그와 해당 특성을 읽을 때 단일 읽기 작업에서 읽는 바이트 수를 제한합니다. 비스트리밍 작업의 경우 요소 이름 자체는 할당량 계산에서 제외됩니다. XML 특성이 너무 많으면 특성 이름의 고유성을 확인해야 하기 때문에 처리 시간이 과도하게 오래 걸릴 수 있습니다. <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> 는 이 위협을 완화합니다.|

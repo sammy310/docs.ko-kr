@@ -9,22 +9,22 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 76fa13d4a12362d04c832fd59ee69db5a6811029
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 3a3f6edc974448ddab9fe30e97bdc1130d3b97dc
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454455"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449974"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>방법: 웹 서비스 바인딩
 이 예제에서는 웹 서비스 메서드 호출에서 반환 되는 개체에 바인딩하는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
- 이 예제에서는 [MSDN/TechNet Publishing 시스템 (MTPS) 콘텐츠 서비스](https://go.microsoft.com/fwlink/?LinkId=95677) 를 사용 하 여 지정 된 문서에서 지원 되는 언어 목록을 검색 합니다.  
+ 이 예제에서는 MSDN/TechNet Publishing 시스템 (MTPS) 콘텐츠 서비스를 사용 하 여 지정 된 문서에서 지원 되는 언어 목록을 검색 합니다.  
   
  웹 서비스를 호출 하기 전에 해당 웹 서비스에 대 한 참조를 만들어야 합니다. Visual Studio를 사용 하 여 MTPS 서비스에 대 한 웹 참조를 만들려면 다음 단계를 수행 합니다.  
   
-1. Visual Studio에서 프로젝트를 엽니다.  
+1. Visual Studio에서 새 프로젝트를 엽니다.  
   
 2. **프로젝트** 메뉴에서 **웹 참조 추가**를 클릭 합니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "73454455"
   
  `getContentResponse`구조에 대 한 자세한 내용은 [콘텐츠 서비스 설명서](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx)를 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [데이터 바인딩 개요](../../../desktop-wpf/data/data-binding-overview.md)
 - [바인딩 소스 개요](binding-sources-overview.md)

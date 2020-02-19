@@ -5,12 +5,12 @@ helpviewer_keywords:
 - loadFromRemoteSources element
 - <loadFromRemoteSources> element
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
-ms.openlocfilehash: a4dbcd0a0b848e5ef57965b5b3f4fcee9161b724
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 454314bf1002a9648f669cc708c8ac42461fccaf
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73116562"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452268"
 ---
 # <a name="loadfromremotesources-element"></a>\<loadFromRemoteSources > 요소
 원격 소스에서 로드 된 어셈블리에 .NET Framework 4 이상에서 완전 신뢰를 부여 해야 하는지 여부를 지정 합니다.
@@ -19,7 +19,7 @@ ms.locfileid: "73116562"
 > Visual Studio 프로젝트 오류 목록 또는 빌드 오류의 오류 메시지 때문에이 문서를 전달 하 [는 경우 방법: Visual studio에서 웹의 어셈블리 사용](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100))을 참조 하세요.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+[ **\<런타임 >** ](runtime-element.md) &nbsp;&nbsp;\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<loadFromRemoteSources >**  
   
 ## <a name="syntax"></a>구문  
@@ -34,28 +34,28 @@ ms.locfileid: "73116562"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |`enabled`|필수 특성입니다.<br /><br /> 원격 소스에서 로드 된 어셈블리에 완전 신뢰 권한을 부여 해야 하는지 여부를 지정 합니다.|  
   
 ## <a name="enabled-attribute"></a>enabled 특성  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
-|`false`|원격 원본에서 응용 프로그램에 완전 신뢰를 부여 하지 마십시오. 기본값입니다.|  
+|`false`|원격 원본에서 응용 프로그램에 완전 신뢰를 부여 하지 마십시오. 이것이 기본값입니다.|  
 |`true`|원격 원본에서 응용 프로그램에 완전 신뢰를 부여 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- 없음.  
+ 없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`runtime`|런타임 초기화 옵션에 대한 정보를 포함합니다.|  
   
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 .NET Framework 3.5 이전 버전에서 원격 위치에서 어셈블리를 로드 하는 경우 어셈블리의 코드는 로드 되는 영역에 따라 권한 부여 집합을 사용 하 여 부분 신뢰로 실행 됩니다. 예를 들어 웹 사이트에서 어셈블리를 로드 하는 경우 인터넷 영역에 로드 되 고 인터넷 권한 집합이 부여 됩니다. 즉, 인터넷 샌드박스에서 실행 됩니다.
 
@@ -70,7 +70,7 @@ to be sandboxed in previous versions of the .NET Framework. This release of the 
 so this load may be dangerous. If this load is not intended to sandbox the assembly, please enable the loadFromRemoteSources switch. 
 ```
 
-어셈블리를 로드 하 고 해당 코드를 실행 하려면 다음 중 하나를 수행 해야 합니다.
+에 어셈블리를 로드 하 고 해당 코드를 실행 하거나 다음을 수행 해야 합니다.
 
 - 어셈블리에 대 한 샌드박스를 명시적으로 만듭니다. [방법: 샌드박스에서 부분적으로 신뢰할 수 있는 코드 실행](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)을 참조 하세요.
 
@@ -89,17 +89,17 @@ so this load may be dangerous. If this load is not intended to sandbox the assem
 
 `<loadFromRemoteSources>` 요소를 `true`로 설정 하면이 예외가 throw 되지 않습니다. 이를 통해 보안을 위해 로드 된 어셈블리를 sandbox 하는 데 공용 언어 런타임에 의존 하지 않도록 지정 하 고 완전 신뢰로 실행 되도록 허용할 수 있습니다.
 
-## <a name="notes"></a>노트
+## <a name="notes"></a>메모
 
 - .NET Framework 4.5 이상 버전에서 로컬 네트워크 공유의 어셈블리는 기본적으로 완전 신뢰로 실행 됩니다. `<loadFromRemoteSources>` 요소를 사용 하도록 설정할 필요는 없습니다.
 
 - 애플리케이션을 웹에서 복사한 경우, Windows에서는 해당 프로그램이 로컬 컴퓨터에 있더라도 웹 애플리케이션이라는 플래그가 지정됩니다. 해당 파일 속성을 변경 하 여 해당 지정을 변경 하거나 `<loadFromRemoteSources>` 요소를 사용 하 여 어셈블리에 완전 신뢰를 부여할 수 있습니다. 또는 <xref:System.Reflection.Assembly.UnsafeLoadFrom%2A> 메서드를 사용하여 운영 체제가 웹에서 로드되었음을 표시하는 로컬 어셈블리를 로드할 수 있습니다.
 
-- Windows 가상 PC 응용 프로그램에서 실행 되는 응용 프로그램에서 <xref:System.IO.FileLoadException>를 가져올 수 있습니다. 호스팅 컴퓨터의 연결 된 폴더에서 파일을 로드 하려고 하면이 문제가 발생할 수 있습니다. [원격 데스크톱 서비스](https://go.microsoft.com/fwlink/?LinkId=182775) (터미널 서비스)를 통해 연결 된 폴더에서 파일을 로드 하려고 할 때에도 발생할 수 있습니다. 예외를 방지 하려면 `enabled`를 `true`로 설정 합니다.
+- Windows 가상 PC 응용 프로그램에서 실행 되는 응용 프로그램에서 <xref:System.IO.FileLoadException>를 가져올 수 있습니다. 호스팅 컴퓨터의 연결 된 폴더에서 파일을 로드 하려고 하면이 문제가 발생할 수 있습니다. [원격 데스크톱 서비스](/windows/win32/termserv/terminal-services-portal) (터미널 서비스)를 통해 연결 된 폴더에서 파일을 로드 하려고 할 때에도 발생할 수 있습니다. 예외를 방지 하려면 `enabled`를 `true`로 설정 합니다.
 
 ## <a name="configuration-file"></a>구성 파일
 
-이 요소는 일반적으로 애플리케이션 구성 파일에서 사용하지만 컨텍스트에 따라 다른 구성 파일에서도 사용할 수 있습니다. 자세한 내용은 .NET 보안 블로그에서 [Ca 정책의 더 암시적인 사용: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839) 문서를 참조 하세요.  
+이 요소는 일반적으로 애플리케이션 구성 파일에서 사용하지만 컨텍스트에 따라 다른 구성 파일에서도 사용할 수 있습니다. 자세한 내용은 .NET 보안 블로그에서 [Ca 정책의 더 암시적인 사용: loadFromRemoteSources](https://docs.microsoft.com/archive/blogs/shawnfa/more-implicit-uses-of-cas-policy-loadfromremotesources) 문서를 참조 하세요.  
 
 ## <a name="example"></a>예제
 
@@ -113,9 +113,9 @@ so this load may be dangerous. If this load is not intended to sandbox the assem
 </configuration>  
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [CAS 정책의 보다 암시적 사용: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)
+- [CAS 정책의 보다 암시적 사용: loadFromRemoteSources](https://docs.microsoft.com/archive/blogs/shawnfa/more-implicit-uses-of-cas-policy-loadfromremotesources)
 - [방법: 샌드박스에서 부분적으로 신뢰할 수 있는 코드 실행](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
 - [런타임 설정 스키마](index.md)
 - [구성 파일 스키마](../index.md)

@@ -2,12 +2,12 @@
 title: SQL Server에서 저장 프로시저를 사용하여 권한 관리
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-ms.openlocfilehash: 412d2a0a292e2ac83e6c42cf721c83e63633408c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 85383c46dd029db825d24d2f67d2dbda00f3bc95
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780958"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452385"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>SQL Server에서 저장 프로시저를 사용하여 권한 관리
 데이터베이스 주변을 방어하는 여러 줄을 작성하는 한 가지 방법은 저장 프로시저 또는 사용자 정의 함수를 사용하여 모든 데이터 액세스를 구현하는 것입니다. 테이블과 같은 원본 개체에 대한 모든 권한을 취소하거나 거부하고 저장 프로시저에 EXECUTE 권한을 부여합니다. 그러면 효율적으로 데이터 및 데이터베이스 개체 주변에 보안 경계를 만듭니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "70780958"
 ## <a name="stored-procedure-execution"></a>저장 프로시저 실행  
  저장 프로시저는 소유권 체인의 장점을 활용하여 데이터에 대한 액세스를 제공하므로 사용자는 데이터베이스 개체에 액세스하기 위해 명시적 권한을 가질 필요가 없습니다. 소유권 체인은 순차적으로 서로 액세스하는 개체가 동일한 사용자에 의해 소유될 때 발생합니다. 예를 들어 저장 프로시저가 다른 저장 프로시저를 호출할 수 있으며 여러 테이블에 액세스할 수 있습니다. 실행 체인에 있는 모든 개체의 소유자가 동일한 경우 SQL Server는 호출자의 다른 개체에 대한 권한이 아닌 호출자에 대한 EXECUTE 권한만 확인합니다. 따라서 저장 프로시저에 EXECUTE 권한만 부여해야 하며 원본 테이블에 대한 모든 권한을 취소하거나 거부할 수 있습니다.  
   
-## <a name="best-practices"></a>최선의 구현 방법  
+## <a name="best-practices"></a>모범 사례  
  저장 프로시저를 작성하는 것만으로 애플리케이션이 충분히 보호되는 것은 아닙니다. 다음과 같은 잠재적인 보안 허점을 고려해야 합니다.  
   
 - 저장 프로시저에서 데이터에 액세스하려는 데이터베이스 역할에 대해 EXECUTE 권한을 부여합니다.  
@@ -52,16 +52,16 @@ ms.locfileid: "70780958"
 ## <a name="external-resources"></a>외부 리소스  
  자세한 내용은 다음 리소스를 참조하세요.  
   
-|리소스|설명|  
+|리소스|Description|  
 |--------------|-----------------|  
-|[저장 프로시저](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) 및 [SQL 삽입](https://go.microsoft.com/fwlink/?LinkId=98234)(SQL Server 온라인 설명서)|저장 프로시저를 만드는 방법과 SQL 삽입이 작동하는 방식을 설명하는 항목입니다.|  
+|[저장 프로시저](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) 및 [SQL 삽입](/sql/relational-databases/security/sql-injection)|문서에서는 저장 프로시저를 만드는 방법과 SQL 삽입이 작동 하는 방식을 설명 합니다.|  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [ADO.NET 응용 프로그램 보안](../securing-ado-net-applications.md)
+- [ADO.NET 애플리케이션 보안](../securing-ado-net-applications.md)
 - [SQL Server 보안 개요](overview-of-sql-server-security.md)
-- [SQL Server의 응용 프로그램 보안 시나리오](application-security-scenarios-in-sql-server.md)
-- [SQL Server에서 동적 보안 SQL 작성](writing-secure-dynamic-sql-in-sql-server.md)
+- [SQL Server의 애플리케이션 보안 시나리오](application-security-scenarios-in-sql-server.md)
+- [SQL Server에서 보안 동적 SQL 작성](writing-secure-dynamic-sql-in-sql-server.md)
 - [SQL Server에서 저장 프로시저에 서명](signing-stored-procedures-in-sql-server.md)
 - [SQL Server에서 가장으로 권한 사용자 지정](customizing-permissions-with-impersonation-in-sql-server.md)
 - [저장 프로시저로 데이터 수정](../modifying-data-with-stored-procedures.md)

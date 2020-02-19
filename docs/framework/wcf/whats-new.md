@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: e01b3a39a004e963e5bb66c5fa71433cb4e7204a
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: b22266efe2e775acd04c400cf9da50bffab28183
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802377"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449506"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Windows Communication Foundation 4.5의 새로운 기능
 
@@ -36,7 +36,7 @@ WCF는 이제 계약 중심 개발을 지원합니다. Svcutil.exe에는 WSDL �
 
 ### <a name="add-service-reference-from-a-portable-subset-project"></a>이식 가능한 하위 집합 프로젝트의 서비스 참조 추가
 
-이식 가능한 하위 집합 프로젝트를 사용하면 복수 .NET 플랫폼(데스크톱, Silverlight, Windows Phone, XBOX)을 지원하면서 .NET 어셈블리 프로그래머가 하나의 소스 트리를 유지하고 시스템을 빌드할 수 있습니다. 이식 가능한 하위 집합 프로젝트는 .net 플랫폼에서 사용할 수 있는 .net framework 어셈블리인 .NET 이식 가능한 라이브러리만 참조 합니다. 개발자 환경은 다른 WCF 클라이언트 애플리케이션에 서비스 참조를 추가하는 것과 동일합니다. 자세한 내용은 [이식 가능한 하위 집합 프로젝트의 서비스 참조 추가](add-service-reference-in-a-portable-subset-project.md)을 참조 하세요.
+이식 가능한 하위 집합 프로젝트를 사용 하면 .NET 어셈블리 프로그래머가 여러 .NET 플랫폼 (데스크톱, Silverlight, Windows Phone 및 Xbox)을 계속 지원 하면서 단일 소스 트리 및 빌드 시스템을 유지 관리할 수 있습니다. 이식 가능한 하위 집합 프로젝트는 .NET 플랫폼에서 사용할 수 있는 어셈블리인 .NET 이식 가능한 라이브러리만 참조 합니다. 개발자 환경은 다른 WCF 클라이언트 애플리케이션에 서비스 참조를 추가하는 것과 동일합니다. 자세한 내용은 [이식 가능한 하위 집합 프로젝트의 서비스 참조 추가](add-service-reference-in-a-portable-subset-project.md)을 참조 하세요.
 
 ### <a name="aspnet-compatibility-mode-default-changed"></a>ASP.NET 호환 모드 기본값 변경
 
@@ -72,13 +72,13 @@ HTTPS에서 엔드포인트 노출을 단순화하기 위해 HTTPS 프로토콜 
 
 ## <a name="websocket-support"></a>WebSocket 지원
 
-WebSocket은 TCP와 유사한 성능 특성으로 포트 80 및 443에서 진정한 의미의 양방향 통신을 제공하는 기술입니다. WebSocket 전송에서 통신을 지원하기 위해 새로운 바인딩 두 개가 추가되었습니다. <xref:System.ServiceModel.NetHttpBinding>와 <xref:System.ServiceModel.NetHttpsBinding>을 참조하세요. 자세한 내용은 [시스템 제공 바인딩](system-provided-bindings.md)을 참조 하세요.
+WebSocket은 TCP와 유사한 성능 특성으로 포트 80 및 443에서 진정한 의미의 양방향 통신을 제공하는 기술입니다. WebSocket 전송에서 통신을 지원하기 위해 새로운 바인딩 두 개가 추가되었습니다. <xref:System.ServiceModel.NetHttpBinding> 및 <xref:System.ServiceModel.NetHttpsBinding> 자세한 내용은 [시스템 제공 바인딩](system-provided-bindings.md)을 참조 하세요.
 
 ## <a name="new-transport-default-values"></a>새 전송 기본값
 
 다음 표에는 변경된 설정과 추가 정보를 찾을 수 있는 위치가 나와 있습니다.
 
-|속성|On|새 기본값|자세한 내용은 을 참조하십시오.|
+|속성|설정|새 기본값|자세한 내용은|
 |--------------|--------|-----------------|------------------------------|
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30초|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * 프로세서 수|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|

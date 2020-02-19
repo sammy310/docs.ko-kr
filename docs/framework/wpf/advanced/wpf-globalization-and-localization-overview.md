@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 665daa14b543a357b17747a7d9d34dac2224711d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: ba49b3ec0f6edebff6278f4e90ae22baba9f1edf
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124561"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452671"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 전역화 및 지역화 개요
 
@@ -215,11 +215,11 @@ ms.locfileid: "77124561"
 |코드|원본 영어 BAML|지역화된 BAML|
 |문화권에 중립적인 리소스|영어로 된 기타 리소스|독일어로 지역화된 기타 리소스|
 
-.NET framework는 응용 프로그램의 `Thread.CurrentThread.CurrentUICulture`을 기반으로 로드할 위성 리소스 어셈블리를 자동으로 선택 합니다. 기본값은 Windows OS의 문화권입니다. 따라서 독일어 창을 사용 하는 경우 de-DE\MyDialog.resources.dll가 로드 되 고 영어 창을 사용 하는 경우 en-US\MyDialog.resources.dll가 로드 됩니다. 프로젝트의 AssemblyInfo에 NeutralResourcesLanguage를 지정 하 여 응용 프로그램에 대 한 최종 대체 (fallback) 리소스를 설정할 수 있습니다.\*. 예를 들면 다음과 같이 지정할 수 있습니다.
+.NET은 응용 프로그램의 <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType>을 기반으로 로드할 위성 리소스 어셈블리를 자동으로 선택 합니다. 기본값은 Windows OS의 문화권입니다. 독일어 창을 사용 하는 경우 *de-DE\MyDialog.resources.dll* 파일이 로드 됩니다. 영어 창을 사용 하는 경우 *en-US\MyDialog.resources.dll* 파일을 로드 합니다. 프로젝트의 *AssemblyInfo* 파일에 `NeutralResourcesLanguage` 특성을 지정 하 여 응용 프로그램에 대 한 최종 대체 (fallback) 리소스를 설정할 수 있습니다. 예를 들어 다음을 지정 하는 경우
 
 `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]`
 
-그러면 de-DE\MyDialog.resources.dll 또는 de\MyDialog.resources.dll을 모두 사용할 수 없는 경우 en-US\MyDialog.resources.dll이 독일어 Windows에 사용됩니다.
+그런 다음 *de-DE\MyDialog.resources.dll* 또는 *DE\MyDialog.resources.dll*파일을 사용할 수 없는 경우 *en-US\MyDialog.resources.dll* 파일이 독일어 창에서 사용 됩니다.
 
 ### <a name="microsoft-saudi-arabia-homepage"></a>Microsoft 사우디아라비아 홈페이지
 
