@@ -2,12 +2,12 @@
 title: project.json에서 .NET Core 마이그레이션
 description: project.json을 사용하여 이전 .NET Core 프로젝트를 마이그레이션하는 방법 알아보기
 ms.date: 07/19/2017
-ms.openlocfilehash: f81d01c052c3632c48a5f961be86eab686c2074e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8a9dc05c82fd5476a70ee36a294a287abbfb68c4
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714349"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450689"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>project.json에서 .NET Core 프로젝트 마이그레이션
 
@@ -65,7 +65,7 @@ Visual Studio에서 선택한 프로젝트가 자동으로 마이그레이션됩
 .NET Core 개발에 DNX를 여전히 사용 중인 경우 다음 두 단계로 마이그레이션 프로세스를 수행해야 합니다.
 
 1. [기존 DNX 마이그레이션 지침](from-dnx.md)에 따라 DNX에서 project-json 사용 CLI로 마이그레이션합니다.
-2. 이전 섹션의 단계에 따라 *project.json*에서 *.csproj*로 마이그레이션합니다.  
+2. 이전 섹션의 단계에 따라 *project.json*에서 *.csproj*로 마이그레이션합니다.
 
 > [!NOTE]
 > DNX는 .NET Core CLI의 Preview 1 릴리스부터 공식적으로 더 이상 사용되지 않습니다.
@@ -80,7 +80,7 @@ Visual Studio에서 선택한 프로젝트가 자동으로 마이그레이션됩
 - 프로젝트의 맨 위와 맨 아래에서 `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` 및 `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` 문을 제거합니다. 이러한 import 문은 SDK에 포함되므로, 프로젝트에 있을 필요가 없습니다.
 - 프로젝트에 `Microsoft.NETCore.App` 또는 `NETStandard.Library` `<PackageReference>` 항목이 있으면 제거해야 합니다. 이러한 패키지 참조는 [SDK에 포함](https://aka.ms/sdkimplicitrefs)되어 있습니다.
 - `Microsoft.NET.Sdk` `<PackageReference>` 요소가 있는 경우 제거합니다. SDK 참조는 `<Project>` 요소의 `Sdk` 특성을 통해 가져옵니다.
-- [SDK에 포함](../tools/csproj.md#default-compilation-includes-in-net-core-projects)된 [glob](https://en.wikipedia.org/wiki/Glob_(programming))을 제거합니다. 프로젝트에 이러한 GLOB를 남겨 두면 컴파일 항목이 중복되므로 빌드 시 오류가 발생합니다.
+- [SDK에 포함](../project-sdk/overview.md#default-compilation-includes)된 [glob](https://en.wikipedia.org/wiki/Glob_(programming))을 제거합니다. 프로젝트에 이러한 GLOB를 남겨 두면 컴파일 항목이 중복되므로 빌드 시 오류가 발생합니다.
 
 이러한 단계를 수행하면 프로젝트가 RTM .NET Core csproj 형식과 완벽히 호환됩니다.
 

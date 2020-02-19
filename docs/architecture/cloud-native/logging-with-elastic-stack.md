@@ -1,20 +1,37 @@
 ---
 title: 탄력적 스택으로 로깅
 description: 탄력적 스택, Logstash 태 시 및 Kibana를 사용 하 여 로깅
-ms.date: 09/23/2019
-ms.openlocfilehash: 989834925bc08541bf484e1a4567a56ac324872f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.date: 02/05/2020
+ms.openlocfilehash: 6863c66b63854fe3ecaabe2919beded2926ea64c
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841740"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448923"
 ---
 # <a name="logging-with-elastic-stack"></a>탄력적 스택으로 로깅
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 다양 한 중앙 집중식 로깅 도구를 사용할 수 있으며, 무료 오픈 소스 도구에서 비용이 많이 드는 옵션에 이르기까지 다양 합니다. 대부분의 경우 무료 도구는 유료 제품 보다 우수 하거나 더 효율적입니다. 이러한 도구 중 하나는 탄력적 검색, Logstash 및 Kibana의 세 가지 오픈 소스 구성 요소를 조합한 것입니다.
+
 이러한 도구를 집합적으로 탄력적 스택 또는 ELK 스택 이라고 합니다.
+
+## <a name="elastic-stack"></a>탄력적 스택
+
+탄력적 스택은 Kubernetes 클러스터에서 정보를 수집 하는 강력한 옵션입니다. Kubernetes는 Elasticsearch 끝점에 로그를 보내는 작업을 지원 하며, [대부분](https://kubernetes.io/docs/tasks/debug-application-cluster/logging-elasticsearch-kibana/)의 경우 그림 7-5에 표시 된 것 처럼 환경 변수를 설정 하기만 하면 됩니다.
+
+```kubernetes
+KUBE_LOGGING_DESTINATION=elasticsearch
+KUBE_ENABLE_NODE_LOGGING=true
+```
+
+**그림 7-5**. Kubernetes에 대 한 구성 변수
+
+그러면 클러스터에 Elasticsearch가 설치 되 고 모든 클러스터 로그를 대상으로 전송 됩니다.
+
+Kubernetes의 수집 로그에 대 한 쿼리 결과를 보여 주는 Kibana 대시보드의 예](./media/kibana-dashboard.png)
+**그림 7-6**을 ![합니다. Kubernetes의 수집 로그에 대 한 쿼리 결과를 보여 주는 Kibana 대시보드의 예
 
 ## <a name="what-are-the-advantages-of-elastic-stack"></a>탄력적 스택의 장점은 무엇 인가요?
 
@@ -24,7 +41,7 @@ ms.locfileid: "73841740"
 
 첫 번째 구성 요소는 [Logstash 태](https://www.elastic.co/products/logstash)입니다. 이 도구는 다양 한 원본에서 로그 정보를 수집 하는 데 사용 됩니다. 예를 들어 Logstash 태는 디스크에서 로그를 읽고 [Serilog](https://serilog.net/)같은 로깅 라이브러리에서 메시지를 받을 수 있습니다. Logstash 태 시 로그에서 몇 가지 기본 필터링 및 확장을 수행할 수 있습니다. 예를 들어 로그에 IP 주소가 포함 되어 있는 경우, Logstash 태 시 지리적 조회를 수행 하 고 해당 메시지에 대 한 국가 또는 시/도를 가져오도록 구성할 수 있습니다.
 
-Serilog는 매개 변수가 있는 로깅을 허용 하는 .NET 언어의 로깅 라이브러리입니다. 필드를 포함 하는 텍스트 로그 메시지를 생성 하는 대신 매개 변수는 별도로 유지 됩니다. 이를 통해 보다 지능적인 필터링 및 검색을 수행할 수 있습니다. Logstash 태 시 쓰기에 대 한 샘플 Serilog 구성은 그림 7-2에 나와 있습니다.
+Serilog는 매개 변수가 있는 로깅을 허용 하는 .NET 언어의 로깅 라이브러리입니다. 필드를 포함 하는 텍스트 로그 메시지를 생성 하는 대신 매개 변수는 별도로 유지 됩니다. 이를 통해 보다 지능적인 필터링 및 검색을 수행할 수 있습니다. Logstash 태 시 쓰기에 대 한 샘플 Serilog 구성은 그림 7-7에 나와 있습니다.
 
 ```csharp
 var log = new LoggerConfiguration()
@@ -32,9 +49,9 @@ var log = new LoggerConfiguration()
          .CreateLogger();
 ```
 
-**그림 7-2** HTTP를 통한 logstash 태에 직접 로그 정보를 쓰기 위한 Serilog config
+**그림 7-7**. HTTP를 통한 logstash 태에 직접 로그 정보를 쓰기 위한 Serilog config
 
-Logstash 태는 그림 7-3에 표시 된 것과 같은 구성을 사용 합니다.
+Logstash 태는 그림 7-8에 표시 된 것과 같은 구성을 사용 합니다.
 
 ```
 input {
@@ -52,7 +69,7 @@ output {
 }
 ```
 
-**그림 7-3** -Serilog에서 로그를 사용 하기 위한 logstash 태 시 구성
+**그림 7-8**. Serilog에서 로그를 사용 하기 위한 Logstash 태 시 구성
 
 광범위 한 로그 조작이 필요 하지 않은 시나리오의 경우 [에는 보다](https://www.elastic.co/products/beats)큰 것으로 알려진 logstash 태의 대안이 있습니다. 비트는 로그에서 네트워크 데이터 및 작동 시간 정보에 이르는 다양 한 데이터를 수집할 수 있는 도구 제품군입니다. 많은 응용 프로그램은 Logstash 태 시와 비트를 모두 사용 합니다.
 
@@ -64,7 +81,7 @@ Logstash 태에서 로그를 수집한 후에는 해당 로그를 저장 해야 
 
 매개 변수를 포함 하기 위해 또는 Logstash 태 시 처리를 통해 분할 된 매개 변수를 포함 하도록 만들어진 로그 메시지는 Elasticsearch에서이 정보를 유지 하기 때문에 직접 쿼리할 수 있습니다.
 
-`jill@example.com`에서 방문한 상위 10 개 페이지를 검색 하는 쿼리는 그림 7-4에 나와 있습니다.
+`jill@example.com`에서 방문한 상위 10 개 페이지를 검색 하는 쿼리는 그림 7-9에 나와 있습니다.
 
 ```
 "query": {
@@ -82,7 +99,7 @@ Logstash 태에서 로그를 수집한 후에는 해당 로그를 저장 해야 
   }
 ```
 
-**그림 7-4** -사용자가 방문 하는 상위 10 개 페이지를 찾기 위한 Elasticsearch 쿼리
+**그림 7-9**. 사용자가 방문 하는 상위 10 개 페이지를 찾기 위한 Elasticsearch 쿼리
 
 ## <a name="visualizing-information-with-kibana-web-dashboards"></a>Kibana 웹 대시보드를 사용 하 여 정보 시각화
 
