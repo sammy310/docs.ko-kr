@@ -2,12 +2,12 @@
 title: 특성
 description: 특성을 F# 사용 하 여 프로그래밍 구문에 메타 데이터를 적용 하는 방법을 알아봅니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 223263f5789b0fc7eb2b3ef2905f6436980bd14a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 1e42dc61d44f31930a7b34799f28a68a2db69c8c
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424792"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504120"
 ---
 # <a name="attributes"></a>특성
 
@@ -19,7 +19,7 @@ ms.locfileid: "73424792"
 [<target:attribute-name(arguments)>]
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 이전 구문에서 *대상은* 선택 사항이 며, 있는 경우 특성이 적용 되는 프로그램 엔터티의 종류를 지정 합니다. *대상* 에 유효한 값은이 문서의 뒷부분에 나오는 표에 표시 됩니다.
 
@@ -39,7 +39,7 @@ property-name = property-value
 
 특성은 *특성* 으로 알려진 개체가 형식 또는 다른 프로그램 요소와 연결 될 수 있도록 하는 .net 프로그래밍 구문입니다. 특성이 적용 되는 program 요소를 *특성 대상*이라고 합니다. 특성은 일반적으로 대상에 대 한 메타 데이터를 포함 합니다. 이 컨텍스트에서 메타 데이터는 필드 및 멤버 이외의 형식에 대 한 모든 데이터가 될 수 있습니다.
 
-의 F# 특성은 함수, 메서드, 어셈블리, 모듈, 형식 (클래스, 레코드, 구조체, 인터페이스, 대리자, 열거형, 공용 구조체 등), 생성자, 속성, 필드와 같은 프로그래밍 구문에 적용 될 수 있습니다. 매개 변수, 형식 매개 변수 및 반환 값을 반환 합니다. 클래스, 식 또는 워크플로 식 내의 `let` 바인딩에서는 특성을 사용할 수 없습니다.
+의 F# 특성은 함수, 메서드, 어셈블리, 모듈, 형식 (클래스, 레코드, 구조체, 인터페이스, 대리자, 열거형, 공용 구조체 등), 생성자, 속성, 필드, 매개 변수, 형식 매개 변수 및 반환 값과 같은 프로그래밍 구문에 적용 될 수 있습니다. 클래스, 식 또는 워크플로 식 내의 `let` 바인딩에서는 특성을 사용할 수 없습니다.
 
 일반적으로 특성 선언은 특성 대상의 선언 바로 앞에 표시 됩니다. 다음과 같이 여러 특성 선언을 함께 사용할 수 있습니다.
 
@@ -73,35 +73,35 @@ property-name = property-value
     <td><pre lang="fsharp"><code>[&lt;assembly: AssemblyVersionAttribute("1.0.0.0")&gt;]</code></pre></td>
   </tr>
   <tr>
-    <td>반환값(return)</td>
+    <td>return</td>
     <td><pre lang="fsharp"><code>let function1 x : [&lt;return: Obsolete&gt;] int = x + 1</code></pre></td>
   </tr>
   <tr>
-    <td>필드(field)</td>
+    <td>필드</td>
     <td><pre lang="fsharp"><code>[&lt;field: DefaultValue&gt;] val mutable x: int</code></pre></td>
   </tr>
   <tr>
-    <td>속성(property)</td>
+    <td>속성</td>
     <td><pre lang="fsharp"><code>[&lt;property: Obsolete&gt;] this.MyProperty = x</code></pre></td>
   </tr>
   <tr>
-    <td>매개변수(param)</td>
+    <td>param</td>
     <td><pre lang="fsharp"><code>member this.MyMethod([&lt;param: Out&gt;] x : ref&lt;int&gt;) = x := 10</code></pre></td>
   </tr>
   <tr>
-    <td>형식(type)</td>
+    <td>type</td>
     <td>
         <pre lang="fsharp"><code>
-[&lt;type: StructLayout(Sequential)&gt;]
+[&lt;type: StructLayout(LayoutKind.Sequential)&gt;]
 type MyStruct =
-struct
-x : byte
-y : int
-end</code></pre>
+  struct
+    val x : byte
+    val y : int
+  end</code></pre>
     </td>
   </tr>
 </table>
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [F# 언어 참조](index.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: e34f7c8a0194e3901453923530a5cd07202801f6
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 1a017267c034fa1d6ea522855b7e0e7f056637ac
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937452"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504030"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>WCF Data Services 개발 및 배포
 
@@ -80,7 +80,7 @@ Visual Studio 2015을 사용 하 여 WCF 데이터 서비스를 ASP.NET 응용 �
 
 - HTTP 검사 프로그램은 요청 및 응답 메시지의 내용을 검사할 수 있도록 하여 데이터 서비스를 디버깅할 때 아주 유용할 수 있습니다. 원시 패킷을 표시할 수 있는 네트워크 패킷 분석기를 사용하여 데이터 서비스와 주고받는 HTTP 요청 및 응답을 검사할 수 있습니다.
 
-- 데이터 서비스를 디버깅할 때 일반 작업을 수행 하는 것 보다 데이터 서비스에서 오류에 대 한 자세한 정보를 얻을 수 있습니다. <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> 에서 <xref:System.Data.Services.DataServiceConfiguration> 속성을 `true` 로 설정하고 데이터 서비스 클래스에서 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 특성의 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 속성을 `true`로 설정하여 데이터 서비스에서 추가 오류 정보를 가져올 수 있습니다. 자세한 내용은 [디버깅 후 WCF Data Services](https://blogs.msdn.microsoft.com/phaniraj/?m=20086)를 참조 하세요. WCF에서 추적을 사용 하도록 설정 하 여 HTTP 메시징 계층에서 발생 하는 예외를 볼 수도 있습니다. 자세한 내용은 [Configuring Tracing](../../wcf/diagnostics/tracing/configuring-tracing.md)을 참조하세요.
+- 데이터 서비스를 디버깅할 때 일반 작업을 수행 하는 것 보다 데이터 서비스에서 오류에 대 한 자세한 정보를 얻을 수 있습니다. <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> 에서 <xref:System.Data.Services.DataServiceConfiguration> 속성을 `true` 로 설정하고 데이터 서비스 클래스에서 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 특성의 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 속성을 `true`로 설정하여 데이터 서비스에서 추가 오류 정보를 가져올 수 있습니다. 자세한 내용은 [디버깅 후 WCF Data Services](https://docs.microsoft.com/archive/blogs/phaniraj/debugging-wcf-data-services)를 참조 하세요. WCF에서 추적을 사용 하도록 설정 하 여 HTTP 메시징 계층에서 발생 하는 예외를 볼 수도 있습니다. 자세한 내용은 [Configuring Tracing](../../wcf/diagnostics/tracing/configuring-tracing.md)을 참조하세요.
 
 - 데이터 서비스는 일반적으로 ASP.NET 응용 프로그램 프로젝트로 개발 되지만 Visual Studio에서 ASP.NET 웹 사이트 프로젝트로 데이터 서비스를 만들 수도 있습니다. 두 프로젝트 형식 간의 차이점에 대 한 자세한 내용은 [웹 응용 프로그램 프로젝트와 Visual Studio의 웹 사이트 프로젝트](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110))를 참조 하세요.
 
@@ -125,8 +125,8 @@ WCF Data Services에서는 데이터 서비스를 호스트하는 프로세스�
 
 - WCF Data Services에는 기본 WCF 구현이 포함 되어 있기 때문에 windows Server AppFabric을 사용 하 여 Windows Server에서 실행 되는 IIS에 배포 된 데이터 서비스를 모니터링할 수 있습니다. Windows Server AppFabric을 사용 하 여 데이터 서비스를 모니터링 하는 방법에 대 한 자세한 내용은 [Windows Server appfabric을 사용 하 여 WCF Data Services 추적](https://docs.microsoft.com/archive/blogs/rjacobs/tracking-wcf-data-services-with-windows-server-appfabric)게시물을 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [데이터 서비스 호스팅](hosting-the-data-service-wcf-data-services.md)
 - [WCF Data Services 보안](securing-wcf-data-services.md)
-- [WCF Data Services 정의](defining-wcf-data-services.md)
+- [Defining WCF Data Services](defining-wcf-data-services.md)
