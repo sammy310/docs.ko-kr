@@ -2,16 +2,16 @@
 title: Wcf 개발자를 위한 gRPC gRPC와 WCF 비교
 description: 분산 응용 프로그램을 빌드하기 위한 WCF 및 gRPC 프레임 워크의 비교입니다.
 ms.date: 09/02/2019
-ms.openlocfilehash: 312492dcce4bdef61feff0bf924c6df287b9c676
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4f54db76c9512b770b4dd993496d95437dd89753
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966960"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503330"
 ---
 # <a name="comparing-wcf-to-grpc"></a>WCF와 gRPC 비교
 
-이전 장은 Protobuf 및 gRPC가 메시지를 처리 하는 방식을 잘 알고 있어야 합니다. WCF에서 gRPC로의 자세한 변환 작업을 수행 하기 전에 현재 WCF에서 사용할 수 있는 기능의 범위가 gRPC에서 처리 되는 방식과 해당 하는 gRPC가 표시 되지 않는 경우 사용할 수 있는 해결 방법을 확인 하는 것이 중요 합니다. 특히이 장에서는 다음 주제를 다룹니다.
+이전 장은 Protobuf 및 gRPC가 메시지를 처리 하는 방식을 잘 알고 있습니다. Windows Communication Foundation (WCF)에서 gRPC로의 자세한 변환 작업을 수행 하기 전에 WCF에서 사용할 수 있는 기능이 gRPC에서 처리 되는 방식과 해당 하는 gRPC가 없는 경우 사용할 수 있는 해결 방법을 알고 있어야 합니다. 특히이 장에서는 다음 주제를 다룹니다.
 
 - 작업 및 메서드
 - 바인딩 및 전송
@@ -37,12 +37,12 @@ service Greeter {
   rpc SayHello (HelloRequest) returns (HelloReply);
 }
 
-// The request message containing the user's name.
+// The request message that contains the user's name.
 message HelloRequest {
   string name = 1;
 }
 
-// The response message containing the greetings.
+// The response message that contains the greetings.
 message HelloReply {
   string message = 1;
 }
@@ -74,7 +74,7 @@ namespace HelloGrpc
 }
 ```
 
-이 장은 gRPC의 다양 한 개념 및 기능을 설명 하는 경우이 예제 코드를 참조 합니다.
+이 장은 gRPC의 다른 개념 및 기능을 설명 하는 경우이 예제 코드를 참조 합니다.
 
 >[!div class="step-by-step"]
 >[이전](protobuf-maps.md)
