@@ -1,101 +1,157 @@
 ---
-title: .NET Core 애플리케이션 배포
-description: .NET Core 애플리케이션을 배포하는 방법을 알아봅니다.
-ms.date: 12/03/2018
-ms.openlocfilehash: 425f0d5bf11fd0572825d2025005aacf65d7d2cd
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+title: 애플리케이션 게시
+description: .NET Core 애플리케이션을 게시하는 방법을 알아봅니다. .NET Core에서는 플랫폼별 또는 플랫폼 간 앱을 게시할 수 있습니다. 앱을 자체 포함이나 런타임 종속으로 게시할 수 있습니다. 각 모드는 사용자가 앱을 실행하는 방법에 영향을 줍니다.
+ms.date: 01/31/2020
+ms.openlocfilehash: 696cca436c73601a3e7825033152d43a659a7dce
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920883"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448986"
 ---
-# <a name="net-core-application-deployment"></a>.NET Core 애플리케이션 배포
+# <a name="net-core-application-publishing-overview"></a>.NET Core 애플리케이션 게시 개요
 
-.NET Core 애플리케이션에 대해 다음 세 가지 유형의 배포를 만들 수 있습니다.
+.NET Core를 사용하여 만든 애플리케이션은 두 가지 모드로 게시할 수 있으며, 모드에 따라 사용자가 앱을 실행하는 방법에 영향을 줍니다.
 
-- 프레임워크 종속 배포. 이름에서 알 수 있듯이 FDD(프레임워크 종속 배포)에서는 대상 시스템에 .NET Core의 공유 시스템 차원 버전이 있어야 합니다. .NET Core가 이미 존재하기 때문에 .NET Core 설치 간에 앱을 이식할 수 있습니다. 앱은 고유한 코드와 .NET Core 라이브러리 외부에 있는 타사 종속성만 포함합니다. FDD는 명령줄에서 [dotnet 유틸리티](../tools/dotnet.md)를 사용하여 시작할 수 있는 *.dll* 파일을 포함합니다. 예를 들어 `dotnet app.dll`은 `app`이라는 애플리케이션을 실행합니다.
+앱을 ‘자체 포함’으로 게시하면 .NET Core 런타임 및 라이브러리와 해당 애플리케이션 및 관련 종속성을 포함하는 애플리케이션이 생성됩니다.  애플리케이션 사용자는 .NET Core 런타임이 설치되지 않은 컴퓨터에서 애플리케이션을 실행할 수 있습니다. 
 
-- 자체 포함 배포. FDD와 달리 SCD(자체 포함 배포)에서는 대상 시스템에 공유 구성 요소가 없어도 됩니다. .NET Core 라이브러리 및 .NET Core 런타임을 비롯한 모든 구성 요소가 애플리케이션에 포함되며 다른 .NET Core 애플리케이션에서는 격리됩니다. SCD는 플랫폼별 .NET Core 호스트의 이름이 변경된 버전인 실행 파일(예: Windows 플랫폼에서 `app`이라는 애플리케이션에 대한 *app.exe*)과 실제 애플리케이션인 *.dll* 파일(예: *app.dll*)을 포함합니다.
+앱을 ‘런타임 종속’으로 게시하면 애플리케이션 자체와 관련 종속성만 포함하는 애플리케이션이 생성됩니다.  애플리케이션 사용자는 .NET Core 런타임을 별도로 설치해야 합니다.
 
-- 프레임워크 종속 실행 파일. 대상 플랫폼에서 실행되는 실행 파일을 생성합니다. FDD와 마찬가지로, FDE(프레임워크 종속 실행 파일)는 플랫폼 특정 실행 파일이며 자체 포함이 아닙니다. 이러한 배포는 여전히 실행할 .NET Core 버전이 공유 시스템 수준에 있어야 합니다. SCD와 달리, 앱에는 사용자 코드와 .NET Core 라이브러리 외부에 있는 타사 종속성만 포함됩니다. FDE는 대상 플랫폼에서 실행되는 실행 파일을 생성합니다.
+두 게시 모드 모두 기본적으로 플랫폼별 실행 파일을 생성합니다. 런타임 종속 애플리케이션은 실행 파일 없이 만들 수 있으며 이 경우 플랫폼 간 애플리케이션입니다.
 
-## <a name="framework-dependent-deployments-fdd"></a>프레임워크 종속 배포(FDD)
+실행 파일을 생성할 때 RID(런타임 식별자)로 대상 플랫폼을 지정할 수 있습니다. RID에 대한 자세한 내용은 [.NET Core RID 카탈로그](../rid-catalog.md)를 참조하세요.
 
-FDD에서는 앱과 타사 종속성만 배포합니다. 앱은 대상 시스템에 있는 .NET Core 버전을 사용합니다. 이는 .NET Core를 대상으로 하는 .NET Core 및 ASP.NET Core 앱의 기본 배포 모델입니다.
+다음 표에서는 앱을 런타임 종속 또는 자체 포함으로 게시하는 데 사용되는 명령을 SDK 버전 별로 간략하게 설명합니다.
 
-### <a name="why-create-a-framework-dependent-deployment"></a>프레임워크 종속 배포를 만드는 이유
+| 형식                                                                                 | SDK 2.1 | SDK 3.x | 명령 |
+| -----------------------------------------------------------------------------------  | ------- | ------- | ------- |
+| 현재 플랫폼용 [런타임 종속 실행 파일](#publish-runtime-dependent) |         | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
+| 특정 플랫폼용 [런타임 종속 실행 파일](#publish-runtime-dependent)  |         | ✔️      | [`dotnet publish -r <RID> --self-contained false`](../tools/dotnet-publish.md) |
+| [런타임 종속 플랫폼 간 이진 파일](#publish-runtime-dependent)               | ✔️      | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
+| [자체 포함 실행 파일](#publish-self-contained)                                | ✔️      | ✔️      | [`dotnet publish -r <RID>`](../tools/dotnet-publish.md) |
 
-FDD 배포에는 다음과 같은 여러 가지 장점이 있습니다.
+자세한 내용은 [.NET Core dotnet publish 명령](../tools/dotnet-publish.md)을 참조하세요.
 
-- .NET Core 앱이 실행될 대상 운영 체제를 미리 정의할 필요가 없습니다. .NET Core는 운영 체제에 관계없이 실행 파일 및 라이브러리에 공용 PE 파일 형식을 사용하므로 기본 운영 체제에 관계없이 앱을 실행할 수 있습니다. PE 파일 형식에 대한 자세한 내용은 [.NET 어셈블리 파일 형식](../../standard/assembly/file-format.md)을 참조하세요.
+## <a name="produce-an-executable"></a>실행 파일 생성
 
-- 배포 패키지의 크기가 작습니다. 앱과 앱의 종속성만 배포하고 .NET Core 자체는 배포하지 않습니다.
+실행 파일은 여러 플랫폼이 아닌 하나의 운영 체제 및 CPU 아키텍처에만 적용됩니다. 앱을 게시하고 실행 파일을 만들 때 앱을 [자체 포함](#publish-self-contained) 또는 [런타임 종속](#publish-runtime-dependent)으로 게시할 수 있습니다. 앱을 자체 포함으로 게시하면 .NET Core 런타임이 앱에 포함되며 앱 사용자는 .NET Core를 설치하지 않고도 앱을 실행할 수 있습니다. 런타임 종속으로 게시된 앱에는 .NET Core 런타임 및 라이브러리가 포함되지 않으며 앱 및 타사 종속성만 포함됩니다.
 
-- 재정의되지 않는 한, FDD는 대상 시스템에 설치된 최신 서비스 런타임을 사용합니다. 이렇게 하면 애플리케이션이 최신 패치 버전의 .NET Core 런타임을 사용할 수 있습니다. 
+실행 파일을 생성하는 명령은 다음과 같습니다.
 
-- 여러 앱에서 동일한 .NET Core 설치를 사용하여 호스트 시스템에서 디스크 공간 및 메모리 사용량을 줄일 수 있습니다.
+| 형식                                                                                 | SDK 2.1 | SDK 3.x | 명령 |
+| ------------------------------------------------------------------------------------ | ------- | ------- | ------- |
+| 현재 플랫폼용 [런타임 종속 실행 파일](#publish-runtime-dependent) |         | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
+| 특정 플랫폼용 [런타임 종속 실행 파일](#publish-runtime-dependent)  |         | ✔️      | [`dotnet publish -r <RID> --self-contained false`](../tools/dotnet-publish.md) |
+| [자체 포함 실행 파일](#publish-self-contained)                                | ✔️      | ✔️      | [`dotnet publish -r <RID>`](../tools/dotnet-publish.md) |
 
-다음과 같은 몇 가지 단점도 있습니다.
+## <a name="produce-a-cross-platform-binary"></a>플랫폼 간 이진 파일을 생성합니다.
 
-- 앱에서 대상으로 지정한 .NET Core 버전이나 [그 이상 버전](../versions/selection.md#framework-dependent-apps-roll-forward)이 호스트 시스템에 이미 설치된 경우에만 앱을 실행할 수 있습니다.
+플랫폼 간 이진 파일은 앱을 [런타임 종속](#publish-runtime-dependent)으로 게시할 때 *dll* 파일 형식으로 생성됩니다. *dll* 파일 이름은 프로젝트 이름을 따라 지정됩니다. 예를 들어 앱 이름이 **word_reader**이면 *word_reader.dll*이라는 파일이 만들어집니다. 이러한 방식으로 게시된 앱은 `dotnet <filename.dll>` 명령으로 실행되며 모든 플랫폼에서 실행할 수 있습니다.
 
-- .NET Core 런타임 및 라이브러리가 향후 릴리스에서 사용자 모르게 변경될 수 있습니다. 드문 경우지만 이로 인해 앱의 동작이 변경될 수 있습니다.
+플랫폼 간 이진 파일은 대상 .NET Core 런타임이 이미 설치되어 있는 경우 모든 운영 체제에서 실행할 수 있습니다. 대상 .NET Core 런타임이 설치되지 않았더라도 앱이 롤포워드되도록 구성된 경우 최신 런타임을 사용하여 앱을 실행할 수 있습니다. 자세한 내용은 [런타임 종속 앱 롤포워드](../versions/selection.md#framework-dependent-apps-roll-forward)를 참조하세요.
 
-## <a name="self-contained-deployments-scd"></a>자체 포함 배포(SCD)
+플랫폼 간 이진 파일을 생성하는 명령은 다음과 같습니다.
 
-자체 포함 배포에서는 앱과 필요한 타사 종속성 외에도 앱을 빌드하는 데 사용한 .NET Core 버전도 배포합니다. SCD를 만들 때 다양한 플랫폼의 [.NET Core에 대한 기본 종속성](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)을 포함하지 않으므로 앱을 실행하려면 이러한 종속성이 있어야 합니다. 런타임 시 버전 바인딩에 대한 자세한 내용은 [.NET Core의 버전 바인딩](../versions/selection.md)에 대한 문서를 참조하세요.
+| 형식                                                                                 | SDK 2.1 | SDK 3.x | 명령 |
+| -----------------------------------------------------------------------------------  | ------- | ------- | ------- |
+| [런타임 종속 플랫폼 간 이진 파일](#publish-runtime-dependent)               | ✔️      | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
 
-NET Core 2.1 SDK(버전 2.1.300)부터 .NET Core는 ‘패치 버전 롤포워드’를 지원합니다.  자체 포함 배포를 만들 때 .NET Core 도구는 애플리케이션에서 대상으로 하는 .NET Core 버전의 최신 서비스 런타임을 자동으로 포함합니다. (최근 서비스 런타임에는 보안 패치 및 기타 버그 수정이 포함됩니다.) 서비스 런타임은 빌드 시스템에 존재하지 않아도 됩니다. NuGet.org에서 자동으로 다운로드됩니다. 패치 버전 롤포워드를 옵트아웃하는 방법을 비롯하여 자세한 내용은 [자체 포함 배포 런타임 롤포워드](runtime-patch-selection.md)를 참조하세요.
+## <a name="publish-runtime-dependent"></a>런타임 종속 게시
 
-FDD 및 SCD 배포는 별도의 호스트 실행 파일을 사용하므로 게시자 서명이 있는 SCD에 대해 호스트 실행 파일에 서명할 수 있습니다.
+런타임 종속으로 게시된 앱은 플랫폼 간이며 .NET Core 런타임을 포함하지 않습니다. 앱 사용자는 .NET Core 런타임을 설치해야 합니다.
 
-### <a name="why-deploy-a-self-contained-deployment"></a>자체 포함 배포를 배포하는 이유
+런타임 종속으로 앱을 게시하면 [플랫폼 간 이진 파일](#produce-a-cross-platform-binary)이 *dll* 파일로 생성되며 현재 플랫폼을 대상으로 하는 [플랫폼별 실행 파일](#produce-an-executable)이 생성됩니다. *dll*은 플랫폼 간 이지만 실행 파일은 그렇지 않습니다. 예를 들어 **word_reader**라는 앱을 게시하고 Windows를 대상으로 지정하면 *word_reader.exe* 실행 파일이 *word_reader.dll*과 함께 만들어집니다. Linux 또는 macOS를 대상으로 지정하는 경우에는 *word_reader* 실행 파일이 *word_reader.dll*과 함께 만들어집니다. RID에 대한 자세한 내용은 [.NET Core RID 카탈로그](../rid-catalog.md)를 참조하세요.
 
-자체 포함 배포를 배포하면 다음과 같은 두 가지 주요 장점이 있습니다.
+> [!IMPORTANT]
+> .NET Core SDK 2.1에서는 앱 런타임 종속을 게시할 때 플랫폼별 실행 파일이 생성되지 않습니다.
 
-- 앱과 함께 배포되는 .NET Core 버전을 유일하게 제어할 수 있습니다. .NET Core만 제공할 수 있습니다.
+앱의 플랫폼 간 이진 파일은 `dotnet <filename.dll>` 명령으로 실행하며 모든 플랫폼에서 실행할 수 있습니다. 앱에서 플랫폼별 구현을 포함하는 NuGet 패키지를 사용하는 경우 플랫폼의 모든 종속성이 앱과 함께 게시 폴더에 복사됩니다.
 
-- 앱이 실행될 .NET Core 버전을 제공하므로 대상 시스템에서 .NET Core 앱을 실행할 수 있다고 보장할 수 있습니다.
+[`dotnet publish`](../tools/dotnet-publish.md) 명령에 `-r <RID> --self-contained false` 매개 변수를 전달하여 특정 플랫폼용 실행 파일을 만들 수 있습니다. `-r` 매개 변수를 생략하면 현재 플랫폼의 실행 파일이 만들어집니다. 대상 플랫폼의 플랫폼별 종속성을 포함하는 모든 NuGet 패키지가 게시 폴더에 복사됩니다.
 
-다음과 같은 여러 가지 단점도 있습니다.
+### <a name="advantages"></a>장점
 
-- .NET Core가 배포 패키지에 포함되므로 배포 패키지를 빌드할 대상 플랫폼을 미리 선택합니다.
+- **소규모 배포**\
+앱과 해당 종속성만 배포됩니다. .NET Core 런타임 및 라이브러리는 사용자가 설치하며 모든 앱에서 런타임을 공유합니다.
 
-- .NET Core뿐만 아니라 앱과 해당 타사 종속성도 포함해야 하므로 배포 패키지의 크기가 상대적으로 큽니다.
+- **플랫폼 간**\
+앱과 모든 NET 기반 라이브러리가 다른 운영 체제에서 실행됩니다. 앱의 대상 플랫폼을 정의할 필요가 없습니다. .NET 파일 형식에 대한 자세한 내용은 [.NET 어셈블리 파일 형식](../../standard/assembly/file-format.md)을 참조하세요.
 
-  .NET Core 2.0부터 .NET Core [*globalization invariant mode*](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)(세계화 고정 모드)를 사용하여 Linux 시스템에서 배포 크기를 약 28MB까지 줄일 수 있습니다. 일반적으로 Linux에서 .NET Core는 세계화 지원에 대해 [ICU 라이브러리](http://icu-project.org)를 사용합니다. 고정 모드에서 라이브러리는 배포에 포함되지 않으며, 모든 문화권은 [고정 문화권](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)처럼 동작합니다.
+- **패치된 최신 런타임 사용**\
+앱은 대상 시스템에 설치된 최신 런타임(대상 .NET Core 주/부 제품군 내에 있음)을 사용합니다. 즉, 앱에서 패치된 최신 버전의 .NET Core 런타임을 자동으로 사용합니다. 이 기본 동작은 재정의할 수 있습니다. 자세한 내용은 [런타임 종속 앱 롤포워드](../versions/selection.md#framework-dependent-apps-roll-forward)를 참조하세요.
 
-- 다양한 자체 포함 .NET Core 앱을 시스템에 배포하면 각 앱에서 .NET Core 파일을 중복하므로 엄청나게 많은 디스크 공간을 사용합니다.
+### <a name="disadvantages"></a>단점
 
-## <a name="framework-dependent-executables-fde"></a>FDE(프레임워크 종속 실행 파일)
+- **런타임을 미리 설치해야 함**\
+앱에서 대상으로 지정한 .NET Core 버전이 호스트 시스템에 이미 설치된 경우에만 앱을 실행할 수 있습니다. 앱에서 특정 버전의 .NET Core를 요구하거나 최신 버전의 .NET Core를 허용하도록 롤포워드 동작을 구성할 수 있습니다. 자세한 내용은 [런타임 종속 앱 롤포워드](../versions/selection.md#framework-dependent-apps-roll-forward)를 참조하세요.
 
-.NET Core 2.2부터 필요한 타사 종속성과 함께 앱을 FDE로 배포할 수 있습니다. 앱은 대상 시스템에 설치된 .NET Core 버전을 사용합니다.
+- **.NET Core가 변경될 수 있음**\
+앱이 실행되는 컴퓨터에서 .NET Core 런타임 및 라이브러리가 업데이트될 수 있습니다. 드문 경우이지만 이로 인해 대부분의 앱에서처럼 .NET Core 라이브러리를 사용하는 경우 앱의 동작이 변경될 수 있습니다. 앱이 최신 버전의 .NET Core를 사용하는 방법을 구성할 수 있습니다. 자세한 내용은 [런타임 종속 앱 롤포워드](../versions/selection.md#framework-dependent-apps-roll-forward)를 참조하세요.
 
-### <a name="why-deploy-a-framework-dependent-executable"></a>프레임워크 종속 실행 파일을 배포하는 이유는 무엇일까요?
+다음 단점은 .NET Core 2.1 SDK에만 적용됩니다.
 
-FDE 배포에는 다음과 같은 여러 가지 장점이 있습니다.
+- **`dotnet` 명령을 사용하여 앱 시작**\
+사용자는 `dotnet <filename.dll>` 명령을 실행하여 앱을 시작해야 합니다. .NET Core 2.1 SDK에서는 런타임 종속으로 게시된 앱의 경우 플랫폼별 실행 파일을 생성하지 않습니다.
 
-- 배포 패키지의 크기가 작습니다. 앱과 앱의 종속성만 배포하고 .NET Core 자체는 배포하지 않습니다.
+### <a name="examples"></a>예
 
-- 여러 앱에서 동일한 .NET Core 설치를 사용하여 호스트 시스템에서 디스크 공간 및 메모리 사용량을 줄일 수 있습니다.
+플랫폼 간 런타임 종속으로 앱을 게시합니다. 현재 플랫폼을 대상으로 하는 실행 파일이 *dll* 파일과 함께 만들어집니다.
 
-- `dotnet` 유틸리티를 직접 호출하지 않고 게시된 실행 파일을 호출하여 앱을 실행할 수 있습니다.
+```dotnet
+dotnet publish
+```
 
-다음과 같은 몇 가지 단점도 있습니다.
+플랫폼 간 런타임 종속으로 앱을 게시합니다. Linux 64비트 실행 파일이 *dll* 파일과 함께 만들어집니다. 이 명령은 .NET Core SDK 2.1에서는 작동하지 않습니다.
 
-- 앱에서 대상으로 지정한 .NET Core 버전이나 [그 이상 버전](../versions/selection.md#framework-dependent-apps-roll-forward)이 호스트 시스템에 이미 설치된 경우에만 앱을 실행할 수 있습니다.
+```dotnet
+dotnet publish -r linux-x64 --self-contained false
+```
 
-- .NET Core 런타임 및 라이브러리가 향후 릴리스에서 사용자 모르게 변경될 수 있습니다. 드문 경우지만 이로 인해 앱의 동작이 변경될 수 있습니다.
+## <a name="publish-self-contained"></a>자체 포함 게시
 
-- 각 대상 플랫폼에 대해 앱을 게시해야 합니다.
+앱을 자체 포함으로 게시하면 플랫폼별 실행 파일이 생성됩니다. 출력 게시 폴더에는 .NET Core 라이브러리 및 대상 런타임을 포함하여 앱의 모든 구성 요소가 포함됩니다. 앱은 다른 .NET Core 앱에서 격리되며 로컬로 설치된 공유 런타임을 사용하지 않습니다. 앱 사용자는 .NET Core를 다운로드하여 설치할 필요가 없습니다.
 
-## <a name="step-by-step-examples"></a>단계별 예제
+지정된 대상 플랫폼의 이진 실행 파일이 생성됩니다. 예를 들어 앱의 이름이 **word_reader**이고 Windows용 자체 포함 실행 파일을 게시하는 경우 *word_reader.exe* 파일이 생성됩니다. Linux 또는 macOS용으로 게시하면 *word_reader* 파일이 생성됩니다. 대상 플랫폼과 아키텍처는 [`dotnet publish`](../tools/dotnet-publish.md) 명령의 `-r <RID>` 매개 변수로 지정합니다. RID에 대한 자세한 내용은 [.NET Core RID 카탈로그](../rid-catalog.md)를 참조하세요.
 
-.NET Core CLI를 사용하여 .NET Core 앱을 배포하는 방법을 보여 주는 단계별 예제는 [.NET Core CLI를 사용하여 .NET Core 앱 게시](deploy-with-cli.md)를 참조하세요. Visual Studio를 사용하여 .NET Core 앱을 배포하는 방법을 보여 주는 단계별 예제는 [Visual Studio를 사용하여 .NET Core 앱 배포](deploy-with-vs.md)를 참조하세요. 
+앱에 플랫폼별 종속성이 포함된 NuGet 패키지와 같은 플랫폼별 종속성이 있는 경우 해당 종속성이 앱과 함께 게시 폴더에 복사됩니다.
+
+### <a name="advantages"></a>장점
+
+- **.NET Core 버전 제어**\
+앱과 함께 배포되는 .NET Core 버전을 제어할 수 있습니다.
+
+- **플랫폼별 대상 지정**\
+각 플랫폼용 앱을 게시해야 하므로 앱이 실행되는 위치를 알 수 있습니다. .NET Core에서 새 플랫폼을 도입하는 경우 해당 플랫폼을 대상으로 하는 버전을 릴리스할 때까지 사용자가 해당 플랫폼에서 앱을 실행할 수 없습니다. 사용자가 새 플랫폼에서 앱을 실행하기 전에 앱의 호환성 문제를 테스트할 수 있습니다.
+
+### <a name="disadvantages"></a>단점
+
+- **대규모 배포**\
+앱에는 .NET Core 런타임 및 모든 앱 종속성이 포함되어 있으므로 필요한 다운로드 크기와 하드 드라이브 공간이 [런타임 종속](#publish-runtime-dependent) 버전보다 큽니다.
+
+  > [!TIP]
+  > .NET Core [*globalization invariant mode*](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)(세계화 고정 모드)를 사용하여 Linux 시스템에서 배포 크기를 약 28MB까지 줄일 수 있습니다. 이렇게 하면 앱이 모든 문화권을 [고정 문화권](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)처럼 처리합니다.
+
+- **.NET Core 버전을 업데이트하기 어려움**\
+앱과 함께 배포되는 .NET Core 런타임은 새 버전의 앱을 릴리스해야만 업그레이드할 수 있습니다. .NET Core 런타임의 보안 패치를 위해 애플리케이션의 업데이트된 버전을 제공해야 합니다. 
+
+### <a name="examples"></a>예
+
+앱을 자체 포함으로 게시합니다. macOS 64비트 실행 파일이 생성됩니다.
+
+```dotnet
+dotnet publish -r osx-x64
+```
+
+앱을 자체 포함으로 게시합니다. Windows 64비트 실행 파일이 생성됩니다.
+
+```dotnet
+dotnet publish -r win-x64
+```
 
 ## <a name="see-also"></a>참조
 
-- [.NET Core CLI를 사용하여 .NET Core 앱 게시](deploy-with-cli.md)
+- [.NET Core CLI를 사용하여 .NET Core 앱 배포](deploy-with-cli.md)
 - [Visual Studio를 사용하여 .NET Core 앱 배포](deploy-with-vs.md)
 - [패키지, 메타패키지 및 프레임워크](../packages.md)
 - [.NET Core RID(런타임 식별자) 카탈로그](../rid-catalog.md)
+- [사용할 .NET Core 버전 선택](../versions/selection.md)

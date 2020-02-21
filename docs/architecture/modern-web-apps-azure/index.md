@@ -3,17 +3,19 @@ title: ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케이션 �
 description: ASP.NET Core 및 Azure를 사용하여 모놀리식 웹 애플리케이션을 빌드하는 방법에 대한 포괄적인 지침을 제공하는 가이드입니다.
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 739dd607aaa45f73e777a30c6495e329236fee17
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.date: 12/4/2019
+ms.openlocfilehash: c19e5e90cfb96463f744cfb064abe72ee5db2e9f
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295170"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449332"
 ---
-# <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>ASP.NET Core와 Azure를 활용한 최신 웹 애플리케이션 설계
+# <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케이션 설계
 
 ![최신 웹 애플리케이션 설계자 가이드의 표지 이미지](./media/index/web-application-guide-cover-image.png)
+
+**EDITION v3.1** - ASP.NET Core 3.1로 업데이트되었습니다
 
 게시자:
 
@@ -25,7 +27,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2019 by Microsoft Corporation
+Copyright © 2020 by Microsoft Corporation
 
 All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 서면 허가 없이는 어떠한 형식이나 방법으로도 복제하거나 전송할 수 없습니다.
 
@@ -104,7 +106,7 @@ Azure에서 호스팅되는 ASP.NET Core를 사용하여 웹 애플리케이션�
 
 이 가이드를 팀에서 자유롭게 공유하고 이러한 여러가지 고려 사항과 기회에 대한 이해를 도모하세요. 모든 사람이 공통적인 용어와 기본 원칙으로 작업하도록 하면 아키텍처 패턴및 사례를 일관성 있게 적용하는 데 도움이 됩니다.
 
-## <a name="references"></a>참조
+## <a name="references"></a>참조 항목
 
 - **서버 앱에 대해 .NET Core와 .NET Framework 중에 선택**  
   [https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server](../../standard/choosing-core-framework-server.md)
