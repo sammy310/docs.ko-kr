@@ -2,12 +2,12 @@
 title: 개요
 ms.date: 12/13/2019
 description: Microsoft.Data.Sqlite 개요
-ms.openlocfilehash: a5dc1366cc0ddfcd5501e26bf2a994456bcd5d98
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: e84c68f0615f187e8dea7ab87ac917c0ad796a1c
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75353468"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543601"
 ---
 # <a name="microsoftdatasqlite-overview"></a>Microsoft.Data.Sqlite 개요
 
@@ -17,13 +17,13 @@ Microsoft.Data.Sqlite는 SQLite용 경량 [ADO.NET](../../../framework/data/adon
 
 안정적인 최신 버전은 [NuGet](https://www.nuget.org/packages/Microsoft.Data.Sqlite)에서 제공됩니다.
 
-### <a name="net-core-clitabnetcore-cli"></a>[.NET Core CLI](#tab/netcore-cli)
+### <a name="net-core-cli"></a>[.NET Core CLI](#tab/netcore-cli)
 
 ```dotnetcli
 dotnet add package Microsoft.Data.Sqlite
 ```
 
-### <a name="visual-studiotabvisual-studio"></a>[Visual Studio](#tab/visual-studio)
+### <a name="visual-studio"></a>[Visual Studio](#tab/visual-studio)
 
 ``` PowerShell
 Install-Package Microsoft.Data.Sqlite
@@ -40,5 +40,5 @@ Install-Package Microsoft.Data.Sqlite
 ## <a name="see-also"></a>참조
 
 * [연결 문자열](connection-strings.md)
-* [API 참조](/dotnet/api/?view=msdata-sqlite-3.0.0)
+* [API 참조](/dotnet/api/?view=msdata-sqlite-3.0)
 * [SQL 구문](https://www.sqlite.org/lang.html)

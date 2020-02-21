@@ -1,13 +1,13 @@
 ---
 title: 특성
 description: 특성을 F# 사용 하 여 프로그래밍 구문에 메타 데이터를 적용 하는 방법을 알아봅니다.
-ms.date: 05/16/2016
-ms.openlocfilehash: 1e42dc61d44f31930a7b34799f28a68a2db69c8c
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.date: 02/19/2020
+ms.openlocfilehash: 77b84713ab9360166b3634d406993cf209c8a623
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504120"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543640"
 ---
 # <a name="attributes"></a>특성
 
@@ -19,7 +19,7 @@ ms.locfileid: "77504120"
 [<target:attribute-name(arguments)>]
 ```
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 이전 구문에서 *대상은* 선택 사항이 며, 있는 경우 특성이 적용 되는 프로그램 엔터티의 종류를 지정 합니다. *대상* 에 유효한 값은이 문서의 뒷부분에 나오는 표에 표시 됩니다.
 
@@ -70,28 +70,28 @@ property-name = property-value
   </tr>
   <tr>
     <td>어셈블리(assembly)</td>
-    <td><pre lang="fsharp"><code>[&lt;assembly: AssemblyVersionAttribute("1.0.0.0")&gt;]</code></pre></td>
+    <td><pre><code class="lang-fsharp">[&lt;assembly: AssemblyVersion("1.0.0.0")&gt;]</code></pre></td>
   </tr>
   <tr>
     <td>return</td>
-    <td><pre lang="fsharp"><code>let function1 x : [&lt;return: Obsolete&gt;] int = x + 1</code></pre></td>
+    <td><pre><code class="lang-fsharp">let function1 x : [&lt;return: MyCustomAttributeThatWorksOnReturns&gt;] int = x + 1</code></pre></td>
   </tr>
   <tr>
     <td>필드</td>
-    <td><pre lang="fsharp"><code>[&lt;field: DefaultValue&gt;] val mutable x: int</code></pre></td>
+    <td><pre><code class="lang-fsharp">[&lt;DefaultValue&gt;] val mutable x: int</code></pre></td>
   </tr>
   <tr>
     <td>속성</td>
-    <td><pre lang="fsharp"><code>[&lt;property: Obsolete&gt;] this.MyProperty = x</code></pre></td>
+    <td><pre><code class="lang-fsharp">[&lt;Obsolete&gt;] this.MyProperty = x</code></pre></td>
   </tr>
   <tr>
     <td>param</td>
-    <td><pre lang="fsharp"><code>member this.MyMethod([&lt;param: Out&gt;] x : ref&lt;int&gt;) = x := 10</code></pre></td>
+    <td><pre><code class="lang-fsharp">member this.MyMethod([&lt;Out&gt;] x : ref&lt;int&gt;) = x := 10</code></pre></td>
   </tr>
   <tr>
-    <td>type</td>
+    <td>형식</td>
     <td>
-        <pre lang="fsharp"><code>
+        <pre><code class="lang-fsharp">
 [&lt;type: StructLayout(LayoutKind.Sequential)&gt;]
 type MyStruct =
   struct

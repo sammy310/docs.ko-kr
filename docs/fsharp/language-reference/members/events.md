@@ -2,12 +2,12 @@
 title: 이벤트
 description: 이벤트를 F# 사용 하 여 함수 호출을 GUI 프로그래밍에서 중요 한 사용자 동작에 연결 하는 방법을 알아봅니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: e581d9c31c1b8f3c114b86c898011dec3bd52535
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: ad60aff318832ab3ba5e9f7c43928898e171cea8
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216465"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543627"
 ---
 # <a name="events"></a>이벤트
 
@@ -28,7 +28,7 @@ Windows Forms 또는 WPF(Windows Presentation Foundation) 같은 GUI 라이브�
 
 ## <a name="creating-custom-events"></a>사용자 지정 이벤트 만들기
 
-F#이벤트는 [IEvent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862) 인터페이스를 F# 구현 하는 [이벤트](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9) 클래스로 표현됩니다. `IEvent`자체는 다른 두 인터페이스 `System.IObservable<'T>` 및 [IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a)의 기능을 결합 하는 인터페이스입니다. 따라서 `Event`에는 다른 언어의 대리자와 동등한 기능에 더해 `IObservable`의 기능이 추가로 포함됩니다. 즉, F# 이벤트는 이벤트 필터링을 지원하며 F# 고급 함수와 람다 식을 이벤트 처리기로 사용할 수 있습니다. 이 기능은 [이벤트 모듈](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7)에서 제공 됩니다.
+F#이벤트는 [IEvent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862) 인터페이스를 F# 구현 하는 [이벤트](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9) 클래스로 표현됩니다. `IEvent`는 다른 두 인터페이스 `System.IObservable<'T>` 및 [IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a)의 기능을 결합 하는 인터페이스입니다. 따라서 `Event`에는 다른 언어의 대리자와 동등한 기능에 더해 `IObservable`의 기능이 추가로 포함됩니다. 즉, F# 이벤트는 이벤트 필터링을 지원하며 F# 고급 함수와 람다 식을 이벤트 처리기로 사용할 수 있습니다. 이 기능은 [이벤트 모듈](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7)에서 제공 됩니다.
 
 클래스에 대해 다른 .NET Framework 이벤트와 같은 방식으로 작동하는 이벤트를 만들려면 클래스의 필드로 `let` 를 정의하는 `Event` 바인딩을 클래스에 추가하면 됩니다. 원하는 이벤트 인수 형식을 형식 인수로 지정하거나, 인수 형식을 비워 두고 컴파일러가 적합한 형식을 유추하도록 할 수 있습니다. 또한 이벤트를 노출하는 이벤트 멤버를 CLI이벤트로 정의해야 합니다. 이 멤버에는 [Clievent](https://msdn.microsoft.com/library/d359f1dd-ffa5-42fb-8808-b4c8131a0333) 특성이 있어야 합니다. 이 클래스는 속성으로 선언 되며, 해당 구현은 이벤트의 [게시](https://msdn.microsoft.com/library/b0fdaad5-25e5-43d0-9c0c-ce37c4aeb68e) 속성에 대 한 호출 일 뿐입니다. 클래스 사용자는 게시된 이벤트의 `Add` 메서드를 사용하여 처리기를 추가할 수 있습니다. `Add` 메서드에 대한 인수는 람다 식일 수 있습니다. 이벤트의 `Trigger` 속성을 사용하여 이벤트를 발생시키고 인수를 처리기 함수에 전달할 수 있습니다. 다음 코드 예제에서는 그 구체적인 방법을 보여 줍니다. 이 예에서 이벤트에 대해 유추된 형식 인수는 람다 식의 인수를 나타내는 튜플입니다.
 
@@ -53,7 +53,7 @@ Given a value: Event occurred.
 
 ## <a name="processing-event-streams"></a>이벤트 스트림 처리
 
-Event [. add](https://msdn.microsoft.com/library/10670d3b-8d47-4f6e-b8df-ebc6f64ef4fd) 함수를 사용 하 여 이벤트에 대 한 이벤트 처리기를 추가 하는 대신 `Event` 모듈의 함수를 사용 하 여 고도로 사용자 지정 된 방식으로 이벤트 스트림을 처리할 수 있습니다. 이를 위해서는 일련의 함수 호출에서 첫째 값으로 이벤트를 사용하고 이후의 함수 호출로는 `|>` 모듈 함수를 사용하면서 전달 파이프(`Event`)를 사용해야 합니다.
+Event [. add](https://msdn.microsoft.com/library/10670d3b-8d47-4f6e-b8df-ebc6f64ef4fd) 함수를 사용 하 여 이벤트에 대 한 이벤트 처리기를 추가 하는 대신 `Event` 모듈의 함수를 사용 하 여 사용자 지정 방식으로 이벤트 스트림을 처리할 수 있습니다. 이를 위해서는 일련의 함수 호출에서 첫째 값으로 이벤트를 사용하고 이후의 함수 호출로는 `|>` 모듈 함수를 사용하면서 전달 파이프(`Event`)를 사용해야 합니다.
 
 다음 코드 예제에서는 특정 조건이 충족될 때만 처리기가 호출되는 이벤트를 설정하는 방법을 보여 줍니다.
 
@@ -80,8 +80,9 @@ type AppForm() as this =
 
     // Set up a click event to change the properties.
     do
-        this.Click |> Event.add(fun evArgs -> this.Property1 <- "text2"
-        this.Property2 <- "text3")
+        this.Click |> Event.add(fun evArgs ->
+            this.Property1 <- "text2"
+            this.Property2 <- "text3")
 
     // This property does not have the property-changed event set.
     member val Property1 : string = "text" with get, set
@@ -134,8 +135,9 @@ type AppForm private (dummy) as this =
 
     // Set up a click event to change the properties.
     do
-        this.Click |> Event.add(fun evArgs -> this.Property1 <- "text2"
-        this.Property2 <- "text3")
+        this.Click |> Event.add(fun evArgs ->
+            this.Property1 <- "text2"
+            this.Property2 <- "text3")
 
     // This property does not have the property changed event set.
     member val Property1 : string = "text" with get, set

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - performance monitoring, tracing code
 - Trace class, instrumentation for .NET applications
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
-ms.openlocfilehash: 1dd7317e38b6bee44dda75319c9f7c2a6567e3b4
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 2dcdbaf50ed053d43fc2df2c80fe7688e7b3e51f
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216032"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77542613"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>응용 프로그램 추적 및 조율
-추적은 실행되는 동안 애플리케이션의 실행을 모니터링하는 방법입니다. 개발할 때 .NET Framework 애플리케이션에 추적 및 디버깅 계측을 추가할 수 있으며, 애플리케이션을 개발하는 동안 및 배포한 후에 해당 계측을 모두 사용할 수 있습니다. <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 및 <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> 클래스를 사용하여 나중에 분석할 수 있도록 오류 및 애플리케이션 실행 정보를 로그, 텍스트 파일 또는 다른 디바이스에 기록할 수 있습니다.  
+추적은 실행되는 동안 애플리케이션의 실행을 모니터링할 수 있는 방법입니다. 개발할 때 .NET Framework 애플리케이션에 추적 및 디버깅 계측을 추가할 수 있으며, 애플리케이션을 개발하는 동안 및 배포한 후에 해당 계측을 모두 사용할 수 있습니다. <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 및 <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> 클래스를 사용하여 나중에 분석할 수 있도록 오류 및 애플리케이션 실행 정보를 로그, 텍스트 파일 또는 다른 디바이스에 기록할 수 있습니다.  
   
  *계측*이란 용어는 제품의 성능 수준을 모니터링하거나 측정하고 오류를 진단하는 기능을 가리킵니다. 프로그래밍에서 이 용어는 다음을 통합하는 애플리케이션 기능을 의미합니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "77216032"
  <xref:System.Diagnostics.Trace> 및 <xref:System.Diagnostics.Debug> 클래스는 개발 중이나 배포 후에 애플리케이션 성능을 모니터링하고 검사할 수 있는 수단을 제공합니다. 예를 들어, 배포된 애플리케이션에서 특정 동작 유형(예: 새 데이터베이스 연결 만들기)이 발생할 때 <xref:System.Diagnostics.Trace> 클래스를 사용하여 해당 동작을 추적할 수 있으므로 애플리케이션의 효율성을 모니터링할 수 있습니다.  
   
 ## <a name="code-tracing-and-debugging"></a>코드 추적 및 디버깅  
- 개발하는 동안 <xref:System.Diagnostics.Debug> 클래스의 출력 메서드를 사용하여 Visual Studio IDE(통합 개발 환경)의 출력 창에 메시지를 표시할 수 있습니다. 다음은 그 예입니다.  
+ 개발하는 동안 <xref:System.Diagnostics.Debug> 클래스의 출력 메서드를 사용하여 Visual Studio IDE(통합 개발 환경)의 출력 창에 메시지를 표시할 수 있습니다. 예를 들면 다음과 같습니다.  
   
 ```vb  
 Trace.WriteLine("Hello World!")  
@@ -58,7 +58,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
  이 경우 애플리케이션을 디버그하고 테스트 환경에서의 해당 동작에 따라 성능을 최적화할 수 있습니다. 모든 디버깅 출력을 받을 수 있도록 <xref:System.Diagnostics.Debug> 조건부 특성을 설정한 상태로 디버그 빌드에서 애플리케이션을 디버깅할 수 있습니다. 애플리케이션을 릴리스할 준비가 된 경우, <xref:System.Diagnostics.Debug> 조건부 특성을 설정하지 않고 릴리스 빌드를 컴파일하면 컴파일러가 디버깅 코드를 최종 실행 파일에 포함시키지 않도록 할 수 있습니다. 자세한 내용은 [방법: 추적 및 디버그를 사용한 조건부 컴파일](how-to-compile-conditionally-with-trace-and-debug.md)을 참조하세요. 애플리케이션의 다양한 빌드 구성에 대한 자세한 내용은 [컴파일 및 빌드](/visualstudio/ide/compiling-and-building-in-visual-studio)를 참조하세요.  
   
- 또한 <xref:System.Diagnostics.Trace> 클래스의 메서드를 사용하여 설치된 애플리케이션에서 코드 실행을 추적할 수 있습니다. 코드에 [추적 스위치](trace-switches.md) 를 배치하여 추적의 발생 여부와 범위를 제어할 수 있습니다. 이렇게 하면 프로덕션 환경에서 애플리케이션의 상태를 모니터링할 수 있습니다. 여러 컴퓨터에서 실행하는 여러 구성 요소를 사용하는 비즈니스 애플리케이션에서 특히 중요합니다. 배포 후 구성 파일을 통해 스위치를 사용하는 방법을 제어할 수 있습니다. 자세한 내용은 [방법: 추적 스위치 만들기, 초기화 및 구성](how-to-create-initialize-and-configure-trace-switches.md)을 참조하세요.  
+ 또한 <xref:System.Diagnostics.Trace> 클래스의 메서드를 사용하여 설치된 애플리케이션에서 코드 실행을 추적할 수 있습니다. 코드에 [추적 스위치](trace-switches.md)를 배치하면 추적 발생 여부와 추적 범위를 제어할 수 있습니다. 이 경우 프로덕션 환경에서 애플리케이션의 상태를 모니터링할 수 있습니다. 이 기능은 여러 컴퓨터에서 실행되는 여러 구성 요소를 사용하는 비즈니스 애플리케이션에서 특히 중요합니다. 배포 후 구성 파일을 통해 스위치를 사용하는 방법을 제어할 수 있습니다. 자세한 내용은 [방법: 추적 스위치 만들기, 초기화 및 구성](how-to-create-initialize-and-configure-trace-switches.md)을 참조하세요.  
   
  추적을 사용하려는 애플리케이션을 개발하는 경우 일반적으로 추적 및 디버깅 메시지 둘 다를 애플리케이션 코드에 포함합니다. 애플리케이션을 배포할 준비가 되면 **디버그** 조건부 특성을 설정하지 않고 릴리스 빌드를 컴파일할 수 있습니다. 그러나 컴파일러가 실행 파일에 추적 코드를 포함하도록 **추적** 조건부 특성을 설정할 수 있습니다. 자세한 내용은 [방법: 추적 및 디버그를 사용한 조건부 컴파일](how-to-compile-conditionally-with-trace-and-debug.md)을 참조하세요.  
   
@@ -91,13 +91,13 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
     - **솔루션 탐색기**에서 **속성 페이지** 대화 상자의 **디버그** 페이지와 함께 **빌드** 메뉴를 사용합니다. 이 절차는 Visual Studio에서 컴파일할 때 사용합니다.  
   
-         \- 또는-  
+         \- 또는 -  
   
     - 컴파일의 명령줄 메서드에 대한 **추적** 및 **디버그** 컴파일러 지시문을 사용합니다. 자세한 내용은 [추적 및 디버그를 사용한 조건부 컴파일](how-to-compile-conditionally-with-trace-and-debug.md)을 참조하세요. 이 절차는 명령줄에서 컴파일할 때 사용합니다.  
   
 7. 런타임 중에 문제가 발생하는 경우 적절한 추적 스위치를 설정합니다. 자세한 내용은 [추적 스위치 구성](how-to-create-initialize-and-configure-trace-switches.md)을 참조하세요.  
   
-     추적 코드는 지정된 대상(예: 화면, 텍스트 파일 또는 이벤트 로그)에 추적 메시지를 씁니다. **Trace.Listeners** 컬렉션에 포함된 수신기의 형식에 따라 대상이 결정됩니다.  
+     추적 코드는 지정된 대상(예: 화면, 텍스트 파일 또는 이벤트 로그)에 추적 메시지를 씁니다. <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> 컬렉션에 포함 된 수신기의 형식에 따라 대상이 결정 됩니다.  
   
 8. 추적 메시지를 분석하여 애플리케이션의 문제를 식별하고 파악합니다.  
   
@@ -118,20 +118,20 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
  추적 정보를 기록하는 여섯 가지 <xref:System.Diagnostics.Debug> 멤버 및 <xref:System.Diagnostics.Trace> 메서드는 다음 표에 나와 있습니다.  
   
-|방법|출력|  
+|메서드|출력|  
 |------------|------------|  
-|**StartupExpression**|지정된 텍스트 또는 지정되지 않은 경우 호출 스택입니다. **Assert** 문에서 인수로 지정된 조건이 **false**인 경우에만 출력이 기록됩니다.|  
-|**Fail**|지정된 텍스트 또는 지정되지 않은 경우 호출 스택입니다.|  
-|**쓰기**|지정된 텍스트입니다.|  
-|**WriteIf**|**WriteIf** 문에서 인수로 지정된 조건이 충족되는 경우 지정된 텍스트입니다.|  
-|**WriteLine**|지정된 텍스트와 캐리지 리턴입니다.|  
-|**WriteLineIf**|**WriteLineIf** 문에서 인수로 지정된 조건이 충족되는 경우 지정된 텍스트와 캐리지 리턴입니다.|  
+|`Assert`|지정된 텍스트 또는 지정되지 않은 경우 호출 스택입니다. `Assert` 문에서 인수로 지정 된 조건이 **false**인 경우에만 출력이 기록 됩니다.|  
+|`Fail`|지정된 텍스트 또는 지정되지 않은 경우 호출 스택입니다.|  
+|`Write`|지정된 텍스트입니다.|  
+|`WriteIf`|`WriteIf` 문에서 인수로 지정 된 조건이 충족 되는 경우 지정 된 텍스트입니다.|  
+|`WriteLine`|지정된 텍스트와 캐리지 리턴입니다.|  
+|`WriteLineIf`|`WriteLineIf` 문에서 인수로 지정 된 조건이 충족 되는 경우 지정 된 텍스트와 캐리지 리턴입니다.|  
   
- <xref:System.Diagnostics.Trace.Listeners%2A> 컬렉션의 모든 수신기는 위 표에 설명된 메시지를 받지만 메시지를 받는 수신기의 종류에 따라 다른 동작이 수행될 수 있습니다. 예를 들어 <xref:System.Diagnostics.DefaultTraceListener>는 **Fail** 또는 **Assert** 오류 알림을 받을 경우 어설션 대화 상자를 표시하지만 <xref:System.Diagnostics.TextWriterTraceListener>는 출력을 해당 스트림에 쓰기만 합니다.  
+ <xref:System.Diagnostics.Trace.Listeners%2A> 컬렉션의 모든 수신기는 위 표에 설명된 메시지를 받지만 메시지를 받는 수신기의 종류에 따라 다른 동작이 수행될 수 있습니다. 예를 들어 <xref:System.Diagnostics.DefaultTraceListener> `Fail` 또는 실패 한 `Assert` 알림을 받을 때 어설션 대화 상자를 표시 하지만 <xref:System.Diagnostics.TextWriterTraceListener>는 단순히 출력을 스트림에 씁니다.  
   
  고유한 수신기를 구현하여 사용자 지정 결과를 생성할 수 있습니다. 예를 들어 사용자 지정 추적 수신기는 메시지 상자에 메시지를 표시하거나 데이터베이스에 연결하여 테이블에 메시지를 추가할 수 있습니다. 모든 사용자 지정 수신기는 위에서 언급한 6가지 메서드를 지원해야 합니다. 개발자 정의 수신기를 만드는 방법에 대한 자세한 내용은 .NET Framework 참조에서 <xref:System.Diagnostics.TraceListener>를 참조하세요.  
   
- **Write** 및 **WriteLine** 메서드는 항상 지정된 텍스트를 씁니다. **Assert**, **WriteIf** 및 **WriteLineIf**에는 지정된 텍스트를 쓸지 여부를 제어하는 부울 인수를 사용해야 합니다. 이들 메서드는 식이 **true**(**WriteIf** 및 **WriteLineIf**) 또는 **false**(**Assert**)인 경우에만 지정된 텍스트를 씁니다. **Fail** 메서드는 항상 지정된 텍스트를 씁니다. 자세한 내용은 [방법: 애플리케이션 코드에 Trace 문 추가](how-to-add-trace-statements-to-application-code.md) 및 .NET Framework 참조를 참조하세요.  
+ `Write` 및 `WriteLine` 메서드는 항상 지정 된 텍스트를 씁니다. `Assert`, `WriteIf`및 `WriteLineIf`에는 지정 된 텍스트를 쓸지 여부를 제어 하는 부울 인수가 필요 합니다. 식이 **true** (`WriteIf` 및 `WriteLineIf`의 경우) 또는 **false** (`Assert`) 인 경우에만 지정 된 텍스트를 작성 합니다. `Fail` 메서드는 항상 지정 된 텍스트를 씁니다. 자세한 내용은 [방법: 애플리케이션 코드에 Trace 문 추가](how-to-add-trace-statements-to-application-code.md) 및 .NET Framework 참조를 참조하세요.  
   
 ## <a name="security-concerns"></a>보안 고려 사항  
  ASP.NET 애플리케이션을 배포하기 전에 추적 및 디버깅을 사용하지 않도록 설정하지 않으면 애플리케이션이 해당 정보를 노출하여 악성 프로그램에서 악용될 수 있습니다. 자세한 내용은 [방법: 추적 및 디버그를 사용한 조건부 컴파일](how-to-compile-conditionally-with-trace-and-debug.md), [컴파일 및 빌드](/visualstudio/ide/compiling-and-building-in-visual-studio) 및 [방법: 추적 스위치 만들기, 초기화 및 구성](how-to-create-initialize-and-configure-trace-switches.md)을 참조하세요. IIS(인터넷 정보 서비스)를 통해 디버깅을 구성할 수도 있습니다.  
