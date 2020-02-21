@@ -111,6 +111,18 @@
           href: tutorials/cli-templates-create-project-template.md
         - name: 3 - 템플릿 팩 만들기
           href: tutorials/cli-templates-create-template-pack.md
+- name: 프로젝트 SDK
+  items:
+    - name: 개요
+      href: project-sdk/overview.md
+    - name: 참고
+      items:
+        - name: Microsoft.NET.Sdk
+          href: project-sdk/msbuild-props.md
+        - name: Microsoft.NET.Sdk.Web
+          href: /aspnet/core/razor-pages/web-sdk?toc=/dotnet/core/toc.json&bc=/dotnet/breadcrumb/toc.json
+        - name: Microsoft.NET.Sdk.Razor
+          href: /aspnet/core/razor-pages/sdk?toc=/dotnet/core/toc.json&bc=/dotnet/breadcrumb/toc.json
 - name: 런타임 구성
   items:
     - name: 설정
