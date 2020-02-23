@@ -2,18 +2,18 @@
 title: dotnet publish 명령
 description: dotnet publish 명령은 .NET Core 프로젝트를 디렉터리에 게시합니다.
 ms.date: 05/29/2018
-ms.openlocfilehash: 4612c8cd1f63550905ef7c6d94af050892b1620c
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 0653a7b1e1abd6d7ffd3d21a0410279235b43a28
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117613"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451294"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>이름
 
 `dotnet publish` - 호스팅 시스템에 배포하기 위해 애플리케이션 및 해당 종속성을 폴더에 압축합니다.
 
@@ -21,7 +21,7 @@ ms.locfileid: "71117613"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 ```dotnetcli
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-build] [--no-dependencies]
@@ -29,7 +29,7 @@ dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--ma
 dotnet publish [-h|--help]
 ```
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 ```dotnetcli
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-dependencies]
@@ -37,7 +37,7 @@ dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--ma
 dotnet publish [-h|--help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 ```dotnetcli
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
@@ -68,7 +68,7 @@ dotnet publish [-h|--help]
 
 ## <a name="options"></a>옵션
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `-c|--configuration {Debug|Release}`
 
@@ -92,7 +92,7 @@ dotnet publish [-h|--help]
 
 `--no-build`
 
-게시하기 전에 프로젝트를 빌드하지 않습니다. 또한 `--no-restore` 플래그를 암시적으로 설정합니다.
+게시하기 전에 프로젝트를 빌드하지 않습니다. 또한 암시적으로 `--no-restore` 플래그를 설정합니다.
 
 `--no-dependencies`
 
@@ -113,7 +113,7 @@ dotnet publish [-h|--help]
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-지정된 런타임에 대한 애플리케이션을 게시합니다. [SCD(자체 포함 배포_](../deploying/index.md#self-contained-deployments-scd)를 만들 때 사용됩니다. RID(런타임 식별자) 목록은 [RID 카탈로그](../rid-catalog.md)를 참조하세요. 기본값은 [FDD(프레임워크 종속 배포)](../deploying/index.md#framework-dependent-deployments-fdd)를 게시하는 것입니다.
+지정된 런타임에 대한 애플리케이션을 게시합니다. [SCD(자체 포함 배포_](../deploying/index.md#publish-self-contained)를 만들 때 사용됩니다. RID(런타임 식별자) 목록은 [RID 카탈로그](../rid-catalog.md)를 참조하세요. 기본값은 [FDD(프레임워크 종속 배포)](../deploying/index.md#publish-runtime-dependent)를 게시하는 것입니다.
 
 `-v|--verbosity <LEVEL>`
 
@@ -123,7 +123,7 @@ dotnet publish [-h|--help]
 
 프로젝트 파일의 버전 필드에서 별표(`*`)를 대신할 버전 접미사를 정의합니다.
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `-c|--configuration {Debug|Release}`
 
@@ -164,7 +164,7 @@ dotnet publish [-h|--help]
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-지정된 런타임에 대한 애플리케이션을 게시합니다. [SCD(자체 포함 배포_](../deploying/index.md#self-contained-deployments-scd)를 만들 때 사용됩니다. RID(런타임 식별자) 목록은 [RID 카탈로그](../rid-catalog.md)를 참조하세요. 기본값은 [FDD(프레임워크 종속 배포)](../deploying/index.md#framework-dependent-deployments-fdd)를 게시하는 것입니다.
+지정된 런타임에 대한 애플리케이션을 게시합니다. [SCD(자체 포함 배포_](../deploying/index.md#publish-self-contained)를 만들 때 사용됩니다. RID(런타임 식별자) 목록은 [RID 카탈로그](../rid-catalog.md)를 참조하세요. 기본값은 [FDD(프레임워크 종속 배포)](../deploying/index.md#publish-runtime-dependent)를 게시하는 것입니다.
 
 `-v|--verbosity <LEVEL>`
 
@@ -174,7 +174,7 @@ dotnet publish [-h|--help]
 
 프로젝트 파일의 버전 필드에서 별표(`*`)를 대신할 버전 접미사를 정의합니다.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `-c|--configuration {Debug|Release}`
 
@@ -199,7 +199,7 @@ dotnet publish [-h|--help]
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-지정된 런타임에 대한 애플리케이션을 게시합니다. [SCD(자체 포함 배포_](../deploying/index.md#self-contained-deployments-scd)를 만들 때 사용됩니다. RID(런타임 식별자) 목록은 [RID 카탈로그](../rid-catalog.md)를 참조하세요. 기본값은 [FDD(프레임워크 종속 배포)](../deploying/index.md#framework-dependent-deployments-fdd)를 게시하는 것입니다.
+지정된 런타임에 대한 애플리케이션을 게시합니다. [SCD(자체 포함 배포_](../deploying/index.md#publish-self-contained)를 만들 때 사용됩니다. RID(런타임 식별자) 목록은 [RID 카탈로그](../rid-catalog.md)를 참조하세요. 기본값은 [FDD(프레임워크 종속 배포)](../deploying/index.md#publish-runtime-dependent)를 게시하는 것입니다.
 
 `-v|--verbosity <LEVEL>`
 
@@ -211,7 +211,7 @@ dotnet publish [-h|--help]
 
 ---
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 현재 디렉터리에 있는 프로젝트를 게시합니다.
 
@@ -233,7 +233,7 @@ dotnet publish [-h|--help]
 
 `dotnet publish --no-dependencies`
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [대상 프레임워크](../../standard/frameworks.md)
 - [RID(런타임 식별자) 카탈로그](../rid-catalog.md)

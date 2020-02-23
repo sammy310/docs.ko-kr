@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f09a593160b21a9a22a8e7c7faeffdaaab41db85
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: dc5f608dc9eb4635e1282a9ca5e15ff1bf7d0e0d
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344863"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449562"
 ---
 ### <a name="private-fields-added-to-built-in-struct-types"></a>기본 제공 구조체 형식에 추가된 프라이빗 필드
 
@@ -35,7 +35,7 @@ if (key.ToString() == "y")
 
 `new` 연산자 또는 [기본 리터럴](../../../../docs/csharp/language-reference/operators/default.md#default-literal)을 사용하여 구조체 형식을 인스턴스화합니다.
 
-예:
+예를 들어:
 
 ```csharp
 ConsoleKeyInfo key = new ConsoleKeyInfo();    // Struct type.
@@ -413,7 +413,7 @@ CoreFx
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `T:System.ConsoleKeyInfo`
 - `T:System.Memory{T}`

@@ -5,12 +5,12 @@ author: leecow
 ms.author: leecow
 ms.date: 12/04/2019
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: a535048fc8756b55068098ad61fdc37fc8c1f04e
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 4164ea5a04d80ab20109168a225b793b02ee616a
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74999010"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448895"
 ---
 # <a name="net-core-dependencies-and-requirements"></a>.NET Core 종속성 및 요구 사항
 
@@ -23,7 +23,7 @@ ms.locfileid: "74999010"
 <!-- markdownlint-disable MD025 -->
 <!-- markdownlint-disable MD024 -->
 
-# <a name="net-core-31tabnetcore31"></a>[.NET Core 3.1](#tab/netcore31)
+# <a name="net-core-31"></a>[.NET Core 3.1](#tab/netcore31)
 
 .NET Core 3.1이 지원되는 Windows 버전은 다음과 같습니다.
 
@@ -39,7 +39,7 @@ ms.locfileid: "74999010"
 
 .NET Core 3.1이 지원되는 운영 체제, 배포 및 수명 주기 정책에 대한 자세한 내용은 [.NET Core 3.1 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md)(.NET Core 3.1이 지원되는 OS 버전)를 참조하세요.
 
-# <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
+# <a name="net-core-30"></a>[.NET Core 3.0](#tab/netcore30)
 
 .NET Core 3.0이 지원되는 Windows 버전은 다음과 같습니다.
 
@@ -55,7 +55,7 @@ ms.locfileid: "74999010"
 
 .NET Core 3.0이 지원되는 운영 체제, 배포 및 수명 주기 정책에 대한 자세한 내용은 [.NET Core 3.0 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)(.NET Core 3.0이 지원되는 OS 버전)를 참조하세요.
 
-# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
+# <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
 
 .NET Core 2.2가 지원되는 Windows 버전은 다음과 같습니다.
 
@@ -71,7 +71,7 @@ ms.locfileid: "74999010"
 
 .NET Core 2.2가 지원되는 운영 체제, 배포 및 수명 주기 정책에 대한 자세한 내용은 [.NET Core 2.2 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)(.NET Core 2.2가 지원되는 OS 버전)를 참조하세요.
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 .NET Core 2.1이 지원되는 Windows 버전은 다음과 같습니다.
 
@@ -118,7 +118,7 @@ ms.locfileid: "74999010"
 
 ::: zone pivot="os-linux"
 
-# <a name="net-core-31tabnetcore31"></a>[.NET Core 3.1](#tab/netcore31)
+# <a name="net-core-31"></a>[.NET Core 3.1](#tab/netcore31)
 
 .NET Core 3.1에서는 Linux를 단일 운영 체제로 취급합니다. 지원되는 Linux 배포에 대한 단일 Linux 빌드(칩 아키텍처당)가 있습니다.
 
@@ -147,7 +147,7 @@ ARM64(커널 4.14+)에 .NET Core 3.1을 설치하는 방법에 대한 자세한 
 > [!IMPORTANT]
 > ARM64 지원을 위해서는 Linux 커널 4.14 이상이 필요합니다. 몇몇 Linux 배포는 이 요구 사항을 충족하고, 그 밖의 배포는 충족하지 않습니다. 예를 들어, Ubuntu 18.04는 지원되지만 Ubuntu 16.04는 지원되지 않습니다.
 
-# <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
+# <a name="net-core-30"></a>[.NET Core 3.0](#tab/netcore30)
 
 .NET Core 3.0에서는 Linux를 단일 운영 체제로 처리합니다. 지원되는 Linux 배포에 대한 단일 Linux 빌드(칩 아키텍처당)가 있습니다.
 
@@ -173,7 +173,7 @@ ARM64(커널 4.14+)에 .NET Core 3.1을 설치하는 방법에 대한 자세한 
 
 ARM64에 .NET Core 3.0을 설치하는 방법에 대한 자세한 내용은 [Linux ARM64에 .NET Core 3.0 설치](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213)를 참조하세요.
 
-# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
+# <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
 
 .NET Core 2.2에서는 Linux를 단일 운영 체제로 처리합니다. 지원되는 Linux 배포에 대한 단일 Linux 빌드(칩 아키텍처당)가 있습니다.
 
@@ -189,7 +189,7 @@ ARM64에 .NET Core 3.0을 설치하는 방법에 대한 자세한 내용은 [Lin
 | Oracle Linux                   |  7                      | X64 |
 | Fedora                         |  29, 30                 | X64 |
 | Debian                         |  9                      | x64, ARM32 |
-| Ubuntu                         |  16.04, 18.04, 18.10, 19.04    | x64, ARM32 |
+| Ubuntu                         |  16.04, 18.04, 18.10    | x64, ARM32 |
 | Linux Mint                     |  17, 18                 | X64 |
 | openSUSE                       |  15+                    | X64 |
 | SLES(SUSE Enterprise Linux)   |  12 SP2+                | X64 |
@@ -197,7 +197,7 @@ ARM64에 .NET Core 3.0을 설치하는 방법에 대한 자세한 내용은 [Lin
 
 .NET Core 2.2가 지원되는 운영 체제, 배포 및 수명 주기 정책에 대한 자세한 내용은 [.NET Core 2.2 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)(.NET Core 2.2가 지원되는 OS 버전)를 참조하세요.
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 .NET Core 2.1에서는 Linux를 단일 운영 체제로 처리합니다. 지원되는 Linux 배포에 대한 단일 Linux 빌드(칩 아키텍처당)가 있습니다.
 
@@ -250,7 +250,7 @@ Ubuntu 배포의 경우 다음과 같은 라이브러리를 설치해야 합니�
 - libgdiplus(버전 6.0.1 이상)
 
 > [!WARNING]
-> 대부분의 Ubuntu 버전은 libgdiplus의 이전 버전을 포함합니다. 시스템에 Mono 리포지토리를 추가하여 최신 버전의 libgdiplus를 설치할 수 있습니다. 자세한 내용은 <https://www.mono-project.com/download/stable/>을 참조하세요.
+> 대부분의 Ubuntu 버전은 libgdiplus의 이전 버전을 포함합니다. 시스템에 Mono 리포지토리를 추가하여 최신 버전의 libgdiplus를 설치할 수 있습니다. 자세한 내용은 <https://www.mono-project.com/download/stable/>를 참조하세요.
 
 ### <a name="centos-and-fedora"></a>CentOS 및 Fedora
 
@@ -277,7 +277,7 @@ Fedora 사용자: OpenSSL의 버전이 1.1보다 크거나 같은 경우 **compa
 - libgdiplus(버전 6.0.1 이상)
 
 > [!WARNING]
-> CentOS와 Fedora의 대부분의 버전은 libgdiplus의 이전 버전을 포함합니다. 시스템에 Mono 리포지토리를 추가하여 최신 버전의 libgdiplus를 설치할 수 있습니다. 자세한 내용은 <https://www.mono-project.com/download/stable/>을 참조하세요.
+> CentOS와 Fedora의 대부분의 버전은 libgdiplus의 이전 버전을 포함합니다. 시스템에 Mono 리포지토리를 추가하여 최신 버전의 libgdiplus를 설치할 수 있습니다. 자세한 내용은 <https://www.mono-project.com/download/stable/>를 참조하세요.
 
 ::: zone-end
 

@@ -5,12 +5,12 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 12/04/2019
 ms.topic: tutorial
-ms.openlocfilehash: d0fe79ef79125c06be9acd8ba80001a33e150adb
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 83d44af080d95ab6f9311ddd3ca4860806757436
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802860"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504034"
 ---
 # <a name="tutorial-structured-streaming-with-net-for-apache-spark"></a>자습서: .NET for Apache Spark를 사용한 구조적 스트리밍 
 
@@ -24,7 +24,7 @@ ms.locfileid: "74802860"
 > * netcat을 사용하여 데이터 스트림 만들기
 > * 사용자 정의 함수 및 SparkSQL를 사용하여 스트리밍 데이터 분석
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 첫 번째 .NET for Apache Spark 애플리케이션인 경우 [자습서 시작](get-started.md)을 먼저 시작하여 기본 사항을 숙지하세요.
 
@@ -32,7 +32,7 @@ ms.locfileid: "74802860"
 
 1. 명령 프롬프트에서 다음 명령을 실행하여 새 콘솔 애플리케이션을 만듭니다.
 
-   ```console
+   ```dotnetcli
    dotnet new console -o mySparkStreamingApp
    cd mySparkStreamingApp
    ```
@@ -41,7 +41,7 @@ ms.locfileid: "74802860"
 
 1. 앱에서 .NET for Apache Spark를 사용하려면 Microsoft.Spark 패키지를 설치합니다. 콘솔에서 다음 명령을 실행합니다.
 
-   ```console
+   ```dotnetcli
    dotnet add package Microsoft.Spark
    ```
 

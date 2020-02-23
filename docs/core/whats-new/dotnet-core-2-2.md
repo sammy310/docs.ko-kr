@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 12/04/2018
-ms.openlocfilehash: 917b51e0cf36cca45135fda4a084eb2bca62e835
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9495288658fa102df8f0fbd643e2fcdf49d8f3b3
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100688"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451982"
 ---
 # <a name="whats-new-in-net-core-22"></a>.NET Core 2.2의 새로운 기능
 
@@ -18,7 +18,7 @@ ms.locfileid: "73100688"
 
 ## <a name="new-deployment-mode"></a>새 배포 모드
 
-.NET Core 2.2부터 **.dll** 파일 대신 **.exe** 파일인 [프레임워크 종속 실행 파일](../deploying/index.md#framework-dependent-executables-fde)을 배포할 수 있습니다. 프레임워크 종속 배포와 기능이 유사한 FDE(프레임워크 종속 실행 파일)를 실행하려면 여전히 공유 시스템 수준의 .NET Core 버전이 있어야 합니다. 앱에는 코드와 타사 종속성만 포함됩니다. 프레임워크 종속 배포와 달리 FDE는 플랫폼에 따라 다릅니다.
+.NET Core 2.2부터 **.dll** 파일 대신 **.exe** 파일인 [프레임워크 종속 실행 파일](../deploying/index.md#publish-runtime-dependent)을 배포할 수 있습니다. 프레임워크 종속 배포와 기능이 유사한 FDE(프레임워크 종속 실행 파일)를 실행하려면 여전히 공유 시스템 수준의 .NET Core 버전이 있어야 합니다. 앱에는 코드와 타사 종속성만 포함됩니다. 프레임워크 종속 배포와 달리 FDE는 플랫폼에 따라 다릅니다.
 
 이 새로운 배포 모드는 라이브러리 대신 실행 파일을 빌드하는 고유한 장점이 있으므로, `dotnet`을 먼저 호출하지 않고 앱을 직접 실행할 수 있습니다.
 
@@ -94,7 +94,7 @@ internal sealed class SimpleEventListener : EventListener
 
 자세한 내용은 [호스트 시작 후크](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/host-startup-hook.md)를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET Core의 새로운 기능](index.md)
 - [ASP.NET Core 2.2의 새로운 기능](/aspnet/core/release-notes/aspnetcore-2.2)

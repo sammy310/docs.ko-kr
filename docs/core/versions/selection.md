@@ -4,12 +4,12 @@ description: .NET Core에서 프로그램에 대한 런타임 버전을 자동�
 author: thraka
 ms.author: adegeo
 ms.date: 06/26/2019
-ms.openlocfilehash: 546725db907937dea6fe0739656fb585a8855644
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 55f04ce81f63753831fca8fa2e44811c44049733
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713981"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451001"
 ---
 # <a name="select-the-net-core-version-to-use"></a>사용할 .NET Core 버전 선택
 
@@ -78,7 +78,7 @@ SDK 버전을 선택하는 프로세스는 다음과 같습니다.
 
 ## <a name="framework-dependent-apps-roll-forward"></a>프레임워크 종속 응용 프로그램 롤포워드
 
-[`dotnet run`](../tools/dotnet-run.md)를 사용하여 소스에서, [`dotnet myapp.dll`](../tools/dotnet.md#description)을 사용하여 [**프레임워크 종속 배포**](../deploying/index.md#framework-dependent-deployments-fdd)에서 또는 `myapp.exe`를 사용하여 [**프레임워크 종속 실행 파일**](../deploying/index.md#framework-dependent-executables-fde)에서 애플리케이션을 실행하는 경우 `dotnet` 실행 파일이 애플리케이션의 **호스트**입니다.
+[`dotnet run`](../tools/dotnet-run.md)를 사용하여 소스에서, [`dotnet myapp.dll`](../tools/dotnet.md#description)을 사용하여 [**프레임워크 종속 배포**](../deploying/index.md#publish-runtime-dependent)에서 또는 `myapp.exe`를 사용하여 [**프레임워크 종속 실행 파일**](../deploying/index.md#publish-runtime-dependent)에서 애플리케이션을 실행하는 경우 `dotnet` 실행 파일이 애플리케이션의 **호스트**입니다.
 
 호스트는 머신에 설치된 최신 패치 버전을 선택합니다. 예를 들어 프로젝트 파일에서 `netcoreapp2.0`을 지정하고 `2.0.4`가 설치된 최신 .NET 런타임인 경우 `2.0.4` 런타임이 사용됩니다.
 
@@ -101,7 +101,7 @@ SDK 버전을 선택하는 프로세스는 다음과 같습니다.
 
 ## <a name="self-contained-deployments-include-the-selected-runtime"></a>자체 포함 배포에 선택한 런타임 포함
 
-애플리케이션을 [**자체 포함 배포**](../deploying/index.md#self-contained-deployments-scd)로 게시할 수 있습니다. 이 방법은 .NET Core 런타임 및 라이브러리를 애플리케이션과 함께 번들로 제공합니다. 자체 포함 배포에는 런타임 환경에 대한 종속성이 없습니다. 런타임 버전 선택은 런타임이 아니라 게시 시간에 수행됩니다.
+애플리케이션을 [**자체 포함 배포**](../deploying/index.md#publish-self-contained)로 게시할 수 있습니다. 이 방법은 .NET Core 런타임 및 라이브러리를 애플리케이션과 함께 번들로 제공합니다. 자체 포함 배포에는 런타임 환경에 대한 종속성이 없습니다. 런타임 버전 선택은 런타임이 아니라 게시 시간에 수행됩니다.
 
 게시 프로세스는 지정된 런타임 제품군의 최신 패치 버전을 선택합니다. 예를 들어 .NET Core 2.0.4가 .NET Core 2.0 런타임 제품군의 최신 패치 버전인 경우 `dotnet publish`는 .NET Core 2.0.4를 선택합니다. 대상 프레임워크(설치된 최신 보안 패치 포함)는 애플리케이션과 함께 패키지됩니다.
 

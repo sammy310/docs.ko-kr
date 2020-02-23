@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9aff20e35469f9e786f0f790fda4ffaa04e76e64
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 5ad9c494fd02059e05cc744aad3b06cfc9399995
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116424"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451894"
 ---
 ### <a name="default-value-of-httprequestmessageversion-changed-to-11"></a>HttpRequestMessage.Version의 기본값은 1.1로 변경되었습니다.
 
@@ -12,7 +12,7 @@ ms.locfileid: "76116424"
 
 #### <a name="version-introduced"></a>도입된 버전
 
-.NET Core 3.0
+3.0
 
 #### <a name="change-description"></a>변경 내용 설명
 
@@ -33,8 +33,8 @@ ms.locfileid: "76116424"
 - <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName>
 
 <!--
-a def
-### Affected APIs
+
+#### Affected APIs
 
 - `P:System.Net.Http.HttpRequestMessage.Version`
 

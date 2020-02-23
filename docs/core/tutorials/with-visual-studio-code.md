@@ -3,12 +3,12 @@ title: C# 및 Visual Studio Code 시작
 description: Visual Studio Code를 사용하여 C#에서 첫 번째 .NET Core 애플리케이션을 만들고 디버그하는 방법을 알아봅니다.
 author: kendrahavens
 ms.date: 12/05/2018
-ms.openlocfilehash: fdf26d67ca06ffb5ae9f8c12aa29819280770d5c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: acd1c300545bc6c107552576180afd7dec6b7382
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715316"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503513"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 및 Visual Studio Code 시작
 
@@ -56,7 +56,7 @@ ms.locfileid: "75715316"
 
 [Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core), [macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS) 또는 [Linux](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu)에 대한 추가 설치 도움말이 제공되는 짧은 비디오 자습서를 볼 수도 있습니다.
 
-## <a name="debug"></a>Debug
+## <a name="debug"></a>디버그
 
 1. *Program.cs*를 클릭하여 엽니다. Visual Studio Code에서 C# 파일을 처음 열면 [OmniSharp](https://www.omnisharp.net/)에서 편집기가 로드됩니다.
 
@@ -129,8 +129,13 @@ ms.locfileid: "75715316"
 
 5. 변경 내용을 저장하고 프로그램을 다시 실행합니다. 추가된 문자열을 포함하는 새 메시지가 표시됩니다.
 
+    ```dotnetcli
+    dotnet run
+    ```
+
+    다음과 같은 출력을 얻습니다.
+
     ```console
-    > dotnet run
     Hello World! Happy coding!
     ```
 

@@ -2,12 +2,12 @@
 title: 런타임 패키지 저장소
 description: 런타임 패키지 저장소를 사용하여 .NET Core에서 사용되는 매니페스트를 대상으로 지정하는 방법을 알아봅니다.
 ms.date: 08/12/2017
-ms.openlocfilehash: 8c58ccdb90e5ae9830313f52c19f58629ea5b0a2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7a833ed95147608c6fb403f8f0dec179d2a73833
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76737779"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448960"
 ---
 # <a name="runtime-package-store"></a>런타임 패키지 저장소
 
@@ -122,11 +122,11 @@ dotnet publish --manifest manifest.xml
 
 ASP.NET Core 암시적 저장소는 ASP.NET Core 2.0에만 적용됩니다. 암시적 저장소를 사용하지 **않는** ASP.NET Core 2.1 이상을 사용하는 애플리케이션을 강력히 권장합니다. ASP.NET Core 2.1 이상에서는 공유 프레임워크를 사용합니다.
 
-런타임 패키지 저장소 기능은 앱이 [FDD(프레임워크 종속 배포)](index.md#framework-dependent-deployments-fdd) 앱으로 배포될 경우 ASP.NET Core 앱에서 암시적으로 사용됩니다. [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk)의 대상에는 대상 시스템의 암시적 패키지 저장소를 참조하는 매니페스트가 포함됩니다. 또한 `Microsoft.AspNetCore.All` 패키지를 사용하는 FDD 앱은 앱과 자산만 포함되고 `Microsoft.AspNetCore.All` 메타패키지에 나열된 패키지가 포함되지 않은 게시된 앱이 됩니다. 해당 패키지는 대상 시스템에 있는 것으로 가정합니다.
+런타임 패키지 저장소 기능은 앱이 [FDD(프레임워크 종속 배포)](index.md#publish-runtime-dependent) 앱으로 배포될 경우 ASP.NET Core 앱에서 암시적으로 사용됩니다. [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk)의 대상에는 대상 시스템의 암시적 패키지 저장소를 참조하는 매니페스트가 포함됩니다. 또한 `Microsoft.AspNetCore.All` 패키지를 사용하는 FDD 앱은 앱과 자산만 포함되고 `Microsoft.AspNetCore.All` 메타패키지에 나열된 패키지가 포함되지 않은 게시된 앱이 됩니다. 해당 패키지는 대상 시스템에 있는 것으로 가정합니다.
 
 런타임 패키지 저장소는 .NET Core SDK가 설치될 때 호스트에 설치됩니다. 다른 설치 관리자에서는 .NET Core SDK, `apt-get`, Red Hat Yum, .NET Core Windows Server 호스팅 번들의 Zip/tarball 설치와 수동 런타임 패키지 저장소 설치를 포함한 런타임 패키지 저장소를 제공할 수 있습니다.
 
-[FDD(프레임워크 종속 배포)](index.md#framework-dependent-deployments-fdd) 앱을 배포할 경우 대상 환경에 .NET Core SDK가 설치되어 있는지 확인합니다. ASP.NET Core가 포함되지 않은 환경에 앱을 배포할 경우 다음 예제와 같이 프로젝트 파일에서 **\<PublishWithAspNetCoreTargetManifest>** 를 `false`로 지정하여 암시적 저장소를 옵트아웃(opt out)할 수 있습니다.
+[FDD(프레임워크 종속 배포)](index.md#publish-runtime-dependent) 앱을 배포할 경우 대상 환경에 .NET Core SDK가 설치되어 있는지 확인합니다. ASP.NET Core가 포함되지 않은 환경에 앱을 배포할 경우 다음 예제와 같이 프로젝트 파일에서 **\<PublishWithAspNetCoreTargetManifest>** 를 `false`로 지정하여 암시적 저장소를 옵트아웃(opt out)할 수 있습니다.
 
 ```xml
 <PropertyGroup>
@@ -135,7 +135,7 @@ ASP.NET Core 암시적 저장소는 ASP.NET Core 2.0에만 적용됩니다. 암�
 ```
 
 > [!NOTE]
-> [SCD(자체 포함된 배포)](index.md#self-contained-deployments-scd) 앱의 경우 대상 시스템에 필수 매니페스트 패키지가 없어도 되는 것으로 가정합니다. 따라서 SCD 앱의 경우 **\<PublishWithAspNetCoreTargetManifest>** 는 `true`로 설정될 수 없습니다.
+> [SCD(자체 포함된 배포)](index.md#publish-self-contained) 앱의 경우 대상 시스템에 필수 매니페스트 패키지가 없어도 되는 것으로 가정합니다. 따라서 SCD 앱의 경우 **\<PublishWithAspNetCoreTargetManifest>** 는 `true`로 설정될 수 없습니다.
 
 배포에 포함되지 않은 매니페스트 종속성을 사용하여 애플리케이션을 배포할 경우(어셈블리가 *bin* 폴더에 있음) 해당 어셈블리의 호스트에서 런타임 패키지 저장소가 *사용되지 않습니다*. *bin* 폴더 어셈블리는 호스트의 런타임 패키지 저장소에 어셈블리가 있는지에 관계없이 사용됩니다.
 

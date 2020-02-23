@@ -2,12 +2,12 @@
 title: DNX에서 .NET Core CLI로 마이그레이션
 description: DNX 도구 사용에서 .NET Core CLI 도구로 마이그레이션합니다.
 ms.date: 06/20/2016
-ms.openlocfilehash: e15e7ce10bb7a36deb2acd2abb9a0bd4ec8cd4a9
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 31317f110ae1e8586b78becd757d0a8ff07f1459
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920620"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503826"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>DNX에서.NET Core CLI(project.json)로 마이그레이션
 
@@ -48,13 +48,13 @@ DNX를 사용한 경우 세 부분(DNX, DNU 또는 DNVM) 중 하나에서 몇 �
 
 | DNX 명령                    | CLI 명령    | 설명                                                                                                     |
 |--------------------------------|----------------|-----------------------------------------------------------------------------------------------------------------|
-| dnx run                        | dotnet run     | 소스에서 코드를 실행합니다.                                                                                           |
-| dnu build                      | dotnet build   | 코드의 IL 바이너리를 빌드합니다.                                                                                |
-| dnu pack                       | dotnet pack    | 코드의 NuGet 패키지를 패키지합니다.                                                                        |
+| dnx run                        | `dotnet run`     | 소스에서 코드를 실행합니다.                                                                                           |
+| dnu build                      | `dotnet build`   | 코드의 IL 바이너리를 빌드합니다.                                                                                |
+| dnu pack                       | `dotnet pack`    | 코드의 NuGet 패키지를 패키지합니다.                                                                        |
 | dnx \[command](예: "dnx web") | 해당 없음\*          | DNX 세계에서 project.json에 정의된 대로 명령을 실행합니다.                                                     |
 | dnu install                    | 해당 없음\*          | DNX 세계에서 종속성으로 패키지를 설치합니다.                                                            |
-| dnu restore                    | dotnet restore | Project.json에 지정된 종속성을 복원합니다. ([참고 참조](#dotnet-restore-note))                                                            |
-| dnu publish                    | dotnet publish | 배포할 애플리케이션을 세 가지 형식(이식 가능, 이식 가능과 네이티브, 독립 실행형) 중 하나로 게시합니다. |
+| dnu restore                    | `dotnet restore` | Project.json에 지정된 종속성을 복원합니다. ([참고 참조](#dotnet-restore-note))                                                            |
+| dnu publish                    | `dotnet publish` | 배포할 애플리케이션을 세 가지 형식(이식 가능, 이식 가능과 네이티브, 독립 실행형) 중 하나로 게시합니다. |
 | dnu wrap                       | 해당 없음\*          | DNX 세계에서 csproj의 project.json을 래핑합니다.                                                                    |
 | dnu commands                   | 해당 없음\*          | DNX 세계에서 전역적으로 설치된 명령을 관리합니다.                                                           |
 

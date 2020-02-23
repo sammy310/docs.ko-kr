@@ -2,12 +2,12 @@
 title: .NET Core CLI 확장성 모델
 description: .NET Core CLI를 확장하는 방법을 알아봅니다.
 ms.date: 04/12/2017
-ms.openlocfilehash: 74da895fb3a3f6c77640a2b9a64acdb2894a954b
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 56a9cedc090ddca446c0ee1a60f2ca49590e7635
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920522"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451157"
 ---
 # <a name="net-core-cli-extensibility-model"></a>.NET Core CLI 확장성 모델
 
@@ -32,7 +32,7 @@ CLI는 세 가지 주요 방법으로 확장할 수 있습니다.
 위에서 간략하게 설명한 세 가지 확장성 메커니즘은 함께 사용할 수 있습니다. 하나 또는 모두 사용하거나 임의로 조합해서 사용할 수 있습니다. 선택하는 방법은 확장을 통해 달성하려는 목표에 따라 크게 달라집니다.
 
 ## <a name="per-project-based-extensibility"></a>프로젝트 단위 기반 확장성
-프로젝트 단위 도구는 NuGet 패키지로 배포되는 [프레임워크 종속 배포](../deploying/index.md#framework-dependent-deployments-fdd)입니다. 도구는 도구를 참조하는 프로젝트의 컨텍스트에서 복원된 프로젝트에 대해서만 사용할 수 있습니다. 프로젝트의 컨텍스트 외부(예: 프로젝트가 포함된 디렉터리 외부)에서 호출하면 명령을 찾을 수 없기 때문에 실패합니다.
+프로젝트 단위 도구는 NuGet 패키지로 배포되는 [프레임워크 종속 배포](../deploying/index.md#publish-runtime-dependent)입니다. 도구는 도구를 참조하는 프로젝트의 컨텍스트에서 복원된 프로젝트에 대해서만 사용할 수 있습니다. 프로젝트의 컨텍스트 외부(예: 프로젝트가 포함된 디렉터리 외부)에서 호출하면 명령을 찾을 수 없기 때문에 실패합니다.
 
 이러한 도구는 빌드 서버에도 완벽한데, 프로젝트 파일 외부의 항목이 필요하지 않기 때문입니다. 빌드 프로세스에서는 빌드하는 프로젝트에 대해 복원을 실행하므로 도구를 사용할 수 있습니다. 각 프로젝트가 하나의 특정 언어로만 작성될 수 있기 때문에 F#과 같은 언어 프로젝트도 이 범주에 속합니다.
 

@@ -3,12 +3,12 @@ title: project.json 및 csproj 비교
 description: project.json 및 csproj e요소 간 매핑을 참조하세요.
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: c31590cf34990867b81af4d073846c2952928798
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: abe515007b47b415ac33e3350a29edced1784d68
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714128"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451107"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json 및 csproj 속성 간 매핑
 
@@ -337,7 +337,7 @@ MSBuild에서 모든 프로젝트는 빌드 중 *이식 가능*하지만 독립 
 
 `dotnet publish --framework netcoreapp1.0 --runtime osx.10.11-x64`
 
-자세한 내용은 [SCD(자체 포함 배포)](../deploying/index.md#self-contained-deployments-scd)를 참조하세요.
+자세한 내용은 [SCD(자체 포함 배포)](../deploying/index.md#publish-self-contained)를 참조하세요.
 
 ## <a name="tools"></a>도구
 

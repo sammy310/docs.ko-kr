@@ -5,12 +5,12 @@ author: thraka
 ms.date: 12/10/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 3a72f68f5634c9ee5b137baf12a279130861e61a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5bc926861dd6a501d7c2d24bd5f7c4116cc78b2c
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787832"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503494"
 ---
 # <a name="tutorial-create-a-template-pack"></a>자습서: 템플릿 팩 만들기
 
@@ -51,8 +51,11 @@ dotnet new console -n templatepack -o .
 
 `-n` 매개 변수는 _.csproj_ 파일 이름을 _templatepack.csproj_로 설정합니다. `-o` 매개 변수는 현재 디렉터리에 파일을 만듭니다. 다음 출력과 유사한 결과가 표시되어야 합니다.
 
+```dotnetcli
+dotnet new console -n templatepack -o .
+```
+
 ```console
-C:\working> dotnet new console -n templatepack -o .
 The template "Console Application" was created successfully.
 
 Processing post-creation actions...
@@ -109,8 +112,11 @@ dotnet pack
 
 이 명령은 프로젝트를 빌드하고 _working\bin\Debug_ 폴더에 NuGet 패키지를 만듭니다.
 
+```dotnetcli
+dotnet pack
+```
+
 ```console
-C:\working> dotnet pack
 Microsoft (R) Build Engine version 16.2.0-preview-19278-01+d635043bd for .NET Core
 Copyright (C) Microsoft Corporation. All rights reserved.
 
@@ -146,8 +152,11 @@ NuGet 패키지를 NuGet 피드에 업로드한 경우 `dotnet new -i PACKAGEID`
 
 _.nupkg_ 파일을 직접 사용하거나 NuGet 피드를 사용하는 등 템플릿 팩을 설치한 방법에 상관없이 템플릿 팩을 제거하는 방법은 동일합니다. 제거하려는 템플릿의 `<PackageId>`를 사용합니다. `dotnet new -u` 명령을 실행하여 설치된 템플릿 목록을 가져올 수 있습니다.
 
+```dotnetcli
+dotnet new -u
+```
+
 ```console
-C:\working> dotnet new -u
 Template Instantiation Commands for .NET Core CLI
 
 Currently installed items:

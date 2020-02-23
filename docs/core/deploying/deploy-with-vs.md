@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 23dc0f691c8a8d80a0bd2a5d301ace0d129007af
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 11a322278ce3ff38964fe2fa389e0b4a58897ec4
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920887"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449025"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Visual Studio를 사용하여 .NET Core 앱 배포
 
@@ -24,7 +24,7 @@ ms.locfileid: "76920887"
 - 자체 포함 배포
 - 타사 종속성이 있는 자체 포함 배포
 
-Visual Studio를 사용하여 .NET Core 애플리케이션을 개발하는 방법에 대한 자세한 내용은 [.NET Core 종속성 및 요구 사항](../install/dependencies.md?tabs=netcore30&pivots=os-windows)을 참조하세요.
+Visual Studio를 사용하여 .NET Core 애플리케이션을 개발하는 방법에 대한 자세한 내용은 [.NET Core 종속성 및 요구 사항](../install/dependencies.md?pivots=os-windows)을 참조하세요.
 
 ## <a name="framework-dependent-deployment"></a>프레임워크 종속 배포
 
@@ -110,7 +110,7 @@ Visual Studio를 사용하여 .NET Core 애플리케이션을 개발하는 방�
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 및 이전 버전](#tab/vs156)
+# <a name="visual-studio-156-and-earlier"></a>[Visual Studio 15.6 및 이전 버전](#tab/vs156)
 
 프로그램을 디버그하고 테스트한 후에는 각 대상 플랫폼에 대해 앱과 함께 배포할 파일을 만듭니다.
 
@@ -176,7 +176,7 @@ Visual Studio에서 앱을 게시하려면 다음을 수행합니다.
 </Project>
 ```
 
-# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 이상](#tab/vs157)
+# <a name="visual-studio-157-and-later"></a>[Visual Studio 15.7 이상](#tab/vs157)
 
 프로그램을 디버그하고 테스트한 후에는 각 대상 플랫폼에 대해 앱과 함께 배포할 파일을 만듭니다. 이렇게 하려면 각 대상 플랫폼에 대해 별도의 프로필을 만들어야 합니다.
 
@@ -274,7 +274,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 
 다음은 이 프로젝트에 대한 전체 *csproj* 파일입니다.
 
-# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 및 이전 버전](#tab/vs156)
+# <a name="visual-studio-156-and-earlier"></a>[Visual Studio 15.6 및 이전 버전](#tab/vs156)
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -289,7 +289,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 </Project>
 ```
 
-# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 이상](#tab/vs157)
+# <a name="visual-studio-157-and-later"></a>[Visual Studio 15.7 이상](#tab/vs157)
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
