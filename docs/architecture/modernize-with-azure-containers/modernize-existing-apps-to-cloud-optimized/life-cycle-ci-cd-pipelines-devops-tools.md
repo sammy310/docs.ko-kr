@@ -2,12 +2,12 @@
 title: 클라우드에서 CI/CD 파이프라인 및 DevOps 도구를 사용하여 앱의 수명 주기 현대화
 description: Azure 클라우드 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화 | 클라우드에서 CI/CD 파이프라인 및 DevOps 도구를 사용하여 앱의 수명 주기 현대화
 ms.date: 04/30/2018
-ms.openlocfilehash: d1aa2e156e87cafe99fb994233786f67bf7a81a1
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 17a78c108bfc61471128a34191ec7a5d7cc28289
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "72396256"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503856"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>클라우드에서 CI/CD 파이프라인 및 DevOps 도구를 사용하여 앱의 수명 주기 현대화
 
@@ -21,7 +21,7 @@ Azure DevOps Services는 공식 Azure DevOps Services 배포 작업을 통해 �
 
 - [Azure Kubernetes Service로 배포](https://docs.microsoft.com/azure/devops/pipelines/apps/cd/deploy-aks?tabs=dotnet-core)
 
-하지만 사용자는 Azure DevOps Services 스크립트 기반 작업을 사용하여 [Docker Swarm](https://blogs.msdn.microsoft.com/jcorioland/2016/11/29/full-ci-cd-pipeline-to-deploy-multi-containers-application-on-azure-container-service-docker-swarm-using-visual-studio-team-services/)이나 DC/OS로 배포할 수도 있습니다.
+하지만 사용자는 Azure DevOps Services 스크립트 기반 작업을 사용하여 [Docker Swarm](https://blog.jcorioland.io/archives/2016/11/29/full-ci-cd-pipeline-to-deploy-multi-containers-application-on-azure-container-service-docker-swarm-using-visual-studio-team-services.html)이나 DC/OS로 배포할 수도 있습니다.
 
 민첩한 배포를 지원하기 위해 이들 도구는 다양한 개발 및 CI/CD 솔루션으로 컨테이너 워크로드에 대해 탁월한 개발-테스트-프로덕션 배포 경험을 제공합니다.
 
