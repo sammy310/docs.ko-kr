@@ -1,19 +1,19 @@
 ---
 title: .NET 마이크로 서비스. 컨테이너화된 .NET 애플리케이션을 위한 아키텍처
 description: 컨테이너화된 .NET 애플리케이션에 대한 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스는 독립적으로 배포 가능한 모듈 형식 서비스입니다. (Linux 및 Windows용) Docker 컨테이너는서비스 및 해당 종속성을 단일 단위로 묶어서 배포 및 테스트를 간소화합니다. 그러면 격리된 환경에서 실행됩니다.
-ms.date: 01/07/2019
-ms.openlocfilehash: 7fa4935fe56ca873a5311812637964083e34170e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.date: 01/30/2020
+ms.openlocfilehash: 5da167de1ffd2169aea44b9872281e71c87927b1
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089905"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502627"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET 마이크로 서비스: 컨테이너화된 .NET 애플리케이션을 위한 아키텍처
 
 ![책 표지](./media/cover-small.png)
 
-**EDITION v2.2** - ASP.NET Core 2.2로 업데이트되었습니다
+**EDITION v3.1** - ASP.NET Core 3.1로 업데이트되었습니다
 
 이 가이드는 마이크로 서비스 기반 애플리케이션을 개발하고 컨테이너를 사용하여 해당 애플리케이션을 관리하는 방법을 소개합니다. 또한 .NET Core 및 Docker 컨테이너를 사용하여 아키텍처를 설계 및 구현하는 방법에 대해 설명합니다.
 
@@ -39,7 +39,7 @@ Windows 및 Linux 에코시스템에서 가장 중요한 공급업체가 지원�
 
 ## <a name="about-this-guide"></a>이 가이드의 내용
 
-이 가이드는 마이크로 서비스 기반 애플리케이션을 개발하고 컨테이너를 사용하여 해당 애플리케이션을 관리하는 방법을 소개합니다. 또한 .NET Core 및 Docker 컨테이너를 사용하여 아키텍처를 설계 및 구현하는 방법에 대해 설명합니다. 컨테이너 및 마이크로 서비스를 더 쉽게 ​​시작할 수 있도록 이 가이드는 탐색 가능한 참조 컨테이너화된 애플리케이션 및 마이크로 서비스 기반 애플리케이션에 중점을 두고 있습니다. 애플리케이션 예제는 [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) GitHub 리포지토리에서 제공합니다.
+이 가이드는 마이크로 서비스 기반 애플리케이션을 개발하고 컨테이너를 사용하여 해당 애플리케이션을 관리하는 방법을 소개합니다. 또한 .NET Core와 Docker 컨테이너를 사용하여 아키텍처를 설계하고 구현하는 방법을 설명합니다. 컨테이너 및 마이크로 서비스를 더 쉽게 ​​시작할 수 있도록 이 가이드는 탐색 가능한 참조 컨테이너화된 애플리케이션 및 마이크로 서비스 기반 애플리케이션에 중점을 두고 있습니다. 애플리케이션 예제는 [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) GitHub 리포지토리에서 제공합니다.
 
 이 가이드는 두 가지 기술 즉, Docker 및 .NET Core에 중점을 둔 개발 환경 수준에서 주로 기본적인 개발 및 아키텍처 지침을 제공합니다. 이 가이드의 목적은 프로덕션 환경의 인프라(클라우드 또는 온-프레미스)에 집중하지 않고 애플리케이션 디자인을 고려할 때 정보를 제공하는 데 있습니다. 인프라에 대한 결정은 나중에 프로덕션이 준비된 애플리케이션을 만들 때 내립니다. 따라서 이 가이드는 인프라와 관계없이 개발 환경 중심적으로 작성되었습니다.
 
@@ -47,7 +47,7 @@ Windows 및 Linux 에코시스템에서 가장 중요한 공급업체가 지원�
 
 ## <a name="version"></a>버전
 
-이 가이드는 **.NET Core 2.2** 버전 및 .NET Core 2.2와 동시에 제공되는 동일한 기술 “웨이브”(즉, Azure 기술 및 타사의 추가 기술)에 관련된 여러 추가 업데이트를 다루도록 수정되었습니다. 이런 이유로 책 버전도 버전 **2.2**로 업데이트되었습니다.
+이 가이드는 .NET Core 3.1 릴리스와 동시에 **.NET Core 3.1** 버전을 다루도록 수정되었으며, 동일한 기술 "웨이브"(즉 Azure 및 추가 타사 기술)와 관련된 여러 추가 업데이트를 포함합니다. 이런 이유로 책 버전도 버전 **3.1**로 업데이트되었습니다.
 
 ## <a name="what-this-guide-does-not-cover"></a>이 가이드에서 다루지 않는 내용
 
@@ -146,7 +146,7 @@ eShopOnContainers 애플리케이션은 Docker 컨테이너를 사용하여 배�
 >
 > **Charles Lowell**, 소프트웨어 엔지니어, Microsoft VS CAT 팀
 >
-> **Miguel Veloso**, 선임 컨설턴트, Turing Challenge
+> **Miguel Veloso**, 소프트웨어 개발 엔지니어, Plain Concepts
 
 ## <a name="copyright"></a>Copyright
 
@@ -162,7 +162,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2019 by Microsoft Corporation
+Copyright © 2020 by Microsoft Corporation
 
 All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 서면 허가 없이는 어떠한 형식이나 방법으로도 복제하거나 전송할 수 없습니다.
 

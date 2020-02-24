@@ -2,14 +2,13 @@
 title: .NET 마이크로 서비스 및 웹 애플리케이션 보안
 description: .NET 마이크로 서비스 및 웹 애플리케이션 보안 - ASP.NET Core 웹 애플리케이션의 인증 옵션을 살펴봅니다.
 author: mjrousos
-ms.author: wiwagn
-ms.date: 10/19/2018
-ms.openlocfilehash: 6d318f4efc6958610947f164d6ca63634f3d7db5
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 01/30/2020
+ms.openlocfilehash: f82212956f5492a51ec99d092e1a5131d1b31313
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777207"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501641"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>.NET 마이크로 서비스 및 웹 애플리케이션 보안
 
@@ -37,17 +36,48 @@ API 게이트웨이는 인증을 중앙 집중 방식으로 관리하는 경우 
 
 애플리케이션의 사용자를 식별하기 위한 ASP.NET Core의 기본 메커니즘은 [ASP.NET Core ID](/aspnet/core/security/authentication/identity) 멤버 자격 시스템입니다. ASP.NET ID는 사용자 정보(로그인 정보, 역할 및 클레임 포함)를 개발자가 구성한 데이터 저장소에 저장합니다. 일반적으로 ASP.NET Core ID 데이터 저장소는 `Microsoft.AspNetCore.Identity.EntityFrameworkCore` 패키지에서 제공된 Entity Framework 저장소입니다. 그러나 사용자 지정 저장소 또는 타사 패키지를 사용하여 Azure Table Storage, CosmosDB 또는 다른 위치에 ID 정보를 저장할 수 있습니다.
 
-다음은 선택된 개별 사용자 계정 인증을 사용하여 ASP.NET Core 웹 애플리케이션 프로젝트 템플릿에서 가져온 코드입니다. Startup.ConfigureServices 메서드에서 EntityFramework.Core를 사용하여 ASP.NET Core ID를 구성하는 방법을 보여 줍니다.
+> [!TIP]
+> ASP.NET Core 2.1 이상에서는 [Razor 클래스 라이브러리](/aspnet/core/razor-pages/ui-class)로 [ASP.NET Core ID](/aspnet/core/security/authentication/identity)를 제공하므로 이전 버전과 마찬가지로 프로젝트에 필요한 코드의 대부분이 표시되지 않습니다. 필요에 맞게 ID 코드를 사용자 지정하는 방법에 대한 자세한 내용은 [ASP.NET Core 프로젝트에서 ID 스캐폴드](/aspnet/core/security/authentication/scaffold-identity)를 참조하세요.
+
+다음은 선택된 개별 사용자 계정 인증을 사용하여 ASP.NET Core 웹 애플리케이션 MVC 3.1 프로젝트 템플릿에서 가져온 코드입니다. `Startup.ConfigureServices` 메서드에서 Entity Framework Core를 사용하여 ASP.NET Core ID를 구성하는 방법을 보여 줍니다.
 
 ```csharp
-services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-    services.AddIdentity<ApplicationUser, IdentityRole>()
-        .AddEntityFrameworkStores<ApplicationDbContext>()
-        .AddDefaultTokenProviders();
+public void ConfigureServices(IServiceCollection services)
+{
+    //...
+    services.AddDbContext<ApplicationDbContext>(options =>
+        options.UseSqlServer(
+            Configuration.GetConnectionString("DefaultConnection")));
+
+    services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+        .AddEntityFrameworkStores<ApplicationDbContext>();
+
+    services.AddRazorPages();
+    //...
+}
 ```
 
-ASP.NET Core ID가 구성되면 서비스의 `Startup.Configure` 메서드에서 app.UseIdentity를 호출하여 사용할 수 있습니다.
+ASP.NET Core ID가 구성되면 서비스의 `Startup.Configure` 메서드에서 다음 코드와 같이 `app.UseAuthentication()` 및 `endpoints.MapRazorPages()`를 추가하여 사용할 수 있습니다.
+
+```csharp
+public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+{
+    //...
+    app.UseRouting();
+
+    app.UseAuthentication();
+    app.UseAuthorization();
+
+    app.UseEndpoints(endpoints =>
+    {
+        endpoints.MapRazorPages();
+    });
+    //...
+}
+```
+
+> [!IMPORTANT]
+> ID가 올바르게 작동하려면 위 코드의 줄이 **표시된 순서대로 되어 있어야만** 합니다.
 
 ASP.NET Core ID를 통해 다음과 같은 몇 가지 시나리오를 사용할 수 있습니다.
 
@@ -65,7 +95,27 @@ ASP.NET Core ID는 로컬 사용자 데이터 저장소를 사용하며 (MVC 웹
 
 ASP.NET Core는 [외부 인증 공급자](/aspnet/core/security/authentication/social/)를 사용하여 사용자가 [OAuth 2.0](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2) 흐름을 통해 로그인할 수 있도록 지원합니다. 즉, 사용자가 Microsoft, Google, Facebook 또는 Twitter와 같은 공급 기업의 기존 인증 프로세스를 사용하여 로그인하고 애플리케이션에서 ASP.NET Core ID와 해당 ID를 연결할 수 있습니다.
 
-외부 인증을 사용하려면 애플리케이션의 HTTP 요청 처리 파이프라인에서 적절한 인증 미들웨어를 포함합니다. 이 미들웨어는 인증 공급자의 URI 경로 반환 요청 처리, ID 정보 캡처, SignInManager.GetExternalLoginInfo 메서드를 통해 사용 가능하도록 설정하는 작업을 담당합니다.
+앞에서 설명한 것처럼 `app.UseAuthentication()` 메서드로 인증 미들웨어를 포함하는 것 외에도 외부 인증을 사용하려면 다음 예제와 같이 `Startup`에서 외부 공급자를 등록해야 합니다.
+
+```csharp
+public void ConfigureServices(IServiceCollection services)
+{
+    //...
+    services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+        .AddEntityFrameworkStores<ApplicationDbContext>();
+
+    services.AddAuthentication()
+        .AddMicrosoftAccount(microsoftOptions =>
+        {
+            microsoftOptions.ClientId = Configuration["Authentication:Microsoft:ClientId"];
+            microsoftOptions.ClientSecret = Configuration["Authentication:Microsoft:ClientSecret"];
+        })
+        .AddGoogle(googleOptions => { ... })
+        .AddTwitter(twitterOptions => { ... })
+        .AddFacebook(facebookOptions => { ... });
+    //...
+}
+```
 
 인기 있는 외부 인증 공급 기업 및 해당 공급 기업과 연결된 NuGet 패키지는 다음 표에 표시됩니다.
 
@@ -76,58 +126,23 @@ ASP.NET Core는 [외부 인증 공급자](/aspnet/core/security/authentication/s
 | **Facebook**  | **Microsoft.AspNetCore.Authentication.Facebook**         |
 | **Twitter**   | **Microsoft.AspNetCore.Authentication.Twitter**          |
 
-모든 경우에 미들웨어는 `Startup.Configure`의 `app.Use{ExternalProvider}Authentication`과 유사한 등록 메서드에 대한 호출에 등록됩니다. 이러한 등록 메서드에서는 공급자의 필요에 따라 애플리케이션 ID 및 비밀 정보(예: 암호)가 포함된 옵션 개체를 사용합니다. 외부 인증 공급자는 사용자 ID에 액세스하는 데 필요한 애플리케이션을 사용자에게 안내하기 위해 ([ASP.NET Core 설명서](/aspnet/core/security/authentication/social/)에서 설명한 것처럼) 등록할 애플리케이션을 요청합니다.
+모든 경우에 공급 업체에 따라 다르며 일반적으로 다음을 포함하는 애플리케이션 등록 절차를 완료해야 합니다.
 
-미들웨어가 `Startup.Configure`에 등록되면 모든 컨트롤러 작업에서 사용자에게 로그인을 요청할 수 있습니다. 이 작업을 수행하려면 인증 공급 기업의 이름 및 리디렉션 URL을 포함하는 `AuthenticationProperties` 개체를 만듭니다. 그런 다음, `AuthenticationProperties` 개체를 전달하는 챌린지 응답을 반환합니다. 다음 코드에서는 예제를 보여 줍니다.
+1. 클라이언트 애플리케이션 ID 가져오기
+2. 클라이언트 애플리케이션 비밀 가져오기
+3. 권한 부여 미들웨어 및 등록된 공급자가 처리하는 리디렉션 URL 구성
+4. (선택 사항) SSO(Single Sign On) 시나리오에서 로그아웃을 제대로 처리하도록 로그아웃 URL 구성
 
-```csharp
-var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider,
-    redirectUrl);
-return Challenge(properties, provider);
-```
+외부 공급자에 대해 앱을 구성하는 방법에 대한 자세한 내용은 [ASP.NET Core 설명서의 외부 공급자 인증](/aspnet/core/security/authentication/social/)을 참조하세요.
 
-redirectUrl 매개 변수는 사용자가 인증되면 외부 공급자가 리디렉션해야 하는 URL을 포함합니다. URL은 다음 단순화된 예제와 같이 외부 ID 정보를 기반으로 사용자가 로그인하는 작업을 나타내야 합니다.
+> [!TIP]
+모든 세부 정보는 앞에서 언급한 권한 부여 미들웨어 및 서비스에 의해 처리됩니다. 따라서 앞서 언급한 외부 공급자 등록 외에 Visual Studio에서 ASP.NET Code 웹 애플리케이션 프로젝트를 만들 때 그림 9-3에 표시된 것처럼 **개별 사용자 계정** 인증 옵션을 선택하기만 하면 됩니다.
 
-```csharp
-// Sign in the user with this external login provider if the user
-// already has a login.
-var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, isPersistent: false);
+![새 ASP.NET Core 웹 애플리케이션 대화 상자의 스크린샷입니다.](./media/index/select-individual-user-account-authentication-option.png)
 
-if (result.Succeeded)
-{
-    return RedirectToLocal(returnUrl);
-}
-else
-{
-    ApplicationUser newUser = new ApplicationUser
-    {
-        // The user object can be constructed with claims from the
-        // external authentication provider, combined with information
-        // supplied by the user after they have authenticated with
-        // the external provider.
-        UserName = info.Principal.FindFirstValue(ClaimTypes.Name),
-        Email = info.Principal.FindFirstValue(ClaimTypes.Email)
-    };
-    var identityResult = await _userManager.CreateAsync(newUser);
-    if (identityResult.Succeeded)
-    {
-        identityResult = await _userManager.AddLoginAsync(newUser, info);
-        if (identityResult.Succeeded)
-        {
-            await _signInManager.SignInAsync(newUser, isPersistent: false);
-        }
-        return RedirectToLocal(returnUrl);
-    }
-}
-```
+**그림 9-3** Visual Studio 2019에서 웹 애플리케이션 프로젝트를 만들 때 외부 인증 사용을 위해 개별 사용자 계정 옵션 선택
 
-Visual Studio에서 ASP.NET Core 웹 애플리케이션 프로젝트를 만들 때 **개별 사용자 계정** 인증 옵션을 선택한 경우 그림 9-3에 표시된 것처럼 외부 공급자를 통해 로그인하는 데 필요한 모든 코드는 이미 프로젝트에 존재합니다.
-
-![새 ASP.NET Core 웹 애플리케이션 대화 상자의 스크린샷입니다.](./media/index/select-external-authentication-option.png)
-
-**그림 9-3** 웹 애플리케이션 프로젝트를 만들 경우 외부 인증 사용 옵션 선택
-
-이전에 나열된 외부 인증 공급자뿐만 아니라 더욱 많은 외부 인증 공급자 사용에 대한 미들웨어를 제공하는 타사 패키지도 사용할 수 있습니다. 자세한 목록은 GitHub에서 [AspNet.Security.OAuth.Providers](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src) 리포지토리를 확인하세요.
+이전에 나열된 외부 인증 공급자뿐만 아니라 더욱 많은 외부 인증 공급자 사용에 대한 미들웨어를 제공하는 타사 패키지도 사용할 수 있습니다. 목록은 GitHub에서 [AspNet.Security.OAuth.Providers](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src) 리포지토리를 확인하세요.
 
 또한, 몇 가지 특별한 요구를 해결하려면 사용자 고유의 외부 인증 미들웨어를 만들 수 있습니다.
 
@@ -147,31 +162,36 @@ ASP.NET Core ID(또는 ID 및 외부 인증 공급자)를 사용한 인증은 �
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 {
     //…
-    // Configure the pipeline to use authentication
     app.UseAuthentication();
     //…
-    app.UseMvc();
+    app.UseEndpoints(endpoints =>
+    {
+        //...
+    });
 }
 
 public void ConfigureServices(IServiceCollection services)
 {
     var identityUrl = Configuration.GetValue<string>("IdentityUrl");
     var callBackUrl = Configuration.GetValue<string>("CallBackUrl");
+    var sessionCookieLifetime = configuration.GetValue("SessionCookieLifetimeMinutes", 60);
 
     // Add Authentication services
 
     services.AddAuthentication(options =>
     {
         options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-        options.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
     })
-    .AddCookie()
+    .AddCookie(setup => setup.ExpireTimeSpan = TimeSpan.FromMinutes(sessionCookieLifetime))
     .AddOpenIdConnect(options =>
     {
         options.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-        options.Authority = identityUrl;
-        options.SignedOutRedirectUri = callBackUrl;
+        options.Authority = identityUrl.ToString();
+        options.SignedOutRedirectUri = callBackUrl.ToString();
+        options.ClientId = useLoadTest ? "mvctest" : "mvc";
         options.ClientSecret = "secret";
+        options.ResponseType = useLoadTest ? "code id_token token" : "code id_token";
         options.SaveTokens = true;
         options.GetClaimsFromUserInfoEndpoint = true;
         options.RequireHttpsMetadata = false;
@@ -218,12 +238,16 @@ IdentityServer4가 사용할 클라이언트와 리소스를 지정할 때 적�
 사용자 지정 IClientStore 형식에서 제공한 메모리 내 리소스 및 클라이언트를 사용하는 IdentityServer4를 위한 샘플 구성은 다음 예제처럼 표시될 수 있습니다.
 
 ```csharp
-// Add IdentityServer services
-services.AddSingleton<IClientStore, CustomClientStore>();
-services.AddIdentityServer()
-    .AddSigningCredential("CN=sts")
-    .AddInMemoryApiResources(MyApiResourceProvider.GetAllResources())
-    .AddAspNetIdentity<ApplicationUser>();
+public IServiceProvider ConfigureServices(IServiceCollection services)
+{
+    //...
+    services.AddSingleton<IClientStore, CustomClientStore>();
+    services.AddIdentityServer()
+        .AddSigningCredential("CN=sts")
+        .AddInMemoryApiResources(MyApiResourceProvider.GetAllResources())
+        .AddAspNetIdentity<ApplicationUser>();
+    //...
+}
 ```
 
 ### <a name="consume-security-tokens"></a>보안 토큰 사용
@@ -241,7 +265,10 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     // Configure the pipeline to use authentication
     app.UseAuthentication();
     //…
-    app.UseMvc();
+    app.UseEndpoints(endpoints =>
+    {
+        //...
+    });
 }
 
 public void ConfigureServices(IServiceCollection services)
@@ -252,8 +279,8 @@ public void ConfigureServices(IServiceCollection services)
 
     services.AddAuthentication(options =>
     {
-        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultAuthenticateScheme = AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme;
 
     }).AddJwtBearer(options =>
     {
