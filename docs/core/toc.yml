@@ -250,17 +250,23 @@
   items:
     - name: 개요
       href: tools/index.md
-    - name: 도구
+    - name: 전역 및 로컬 도구
       expanded: true
       items:
-        - name: 전역 도구
-          expanded: true
+        - name: 도구를 관리하는 방법
+          href: tools/global-tools.md
+        - name: 자습서
           items:
-            - name: 개요
-              href: tools/global-tools.md
-            - name: 전역 도구 만들기
+            - name: 도구 만들기
+              displayName: tools
               href: tools/global-tools-how-to-create.md
-        - name: 도구 사용 문제 해결
+            - name: 전역 도구 설치 및 사용
+              displayName: tools
+              href: tools/global-tools-how-to-use.md
+            - name: 로컬 도구 설치 및 사용
+              displayName: tools
+              href: tools/local-tools-how-to-use.md
+        - name: 문제 해결 도구
           href: tools/troubleshoot-usage-issues.md
     - name: 상승된 액세스 권한
       href: tools/elevated-access.md
@@ -320,6 +326,10 @@
               href: tools/dotnet-tool-install.md
             - name: dotnet tool list
               href: tools/dotnet-tool-list.md
+            - name: dotnet tool restore
+              href: tools/dotnet-tool-restore.md
+            - name: dotnet tool run
+              href: tools/dotnet-tool-run.md
             - name: dotnet tool uninstall
               href: tools/dotnet-tool-uninstall.md
             - name: dotnet tool update
