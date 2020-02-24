@@ -8,12 +8,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 3d3f045eed3bad3624ed4994aebb862c52a4e196
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 30ee13a4174a137481fbcd36ccef721958b94a12
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713776"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450858"
 ---
 # <a name="async-c-reference"></a>async(C# 참조)
 
@@ -71,7 +71,7 @@ Visual Studio에서 이 코드를 WPF(Windows Presentation Foundation) 앱 또�
 
 - <xref:System.Threading.Tasks.Task>
 - <xref:System.Threading.Tasks.Task%601>
-- [void](./void.md). `async void` 메서드는 호출자가 `await` 해당 메서드를 사용할 수 없으며 성공적으로 완료 또는 오류 조건을 보고하는 다른 메커니즘을 구현해야 하기 때문에 이벤트 처리기 이외의 코드에 대해 일반적으로 사용되지 않습니다.
+- [void](../builtin-types/void.md). `async void` 메서드는 호출자가 `await` 해당 메서드를 사용할 수 없으며 성공적으로 완료 또는 오류 조건을 보고하는 다른 메커니즘을 구현해야 하기 때문에 이벤트 처리기 이외의 코드에 대해 일반적으로 사용되지 않습니다.
 - C# 7.0부터 액세스 가능한 `GetAwaiter` 메서드가 있는 모든 형식. `System.Threading.Tasks.ValueTask<TResult>` 형식은 이러한 구현 중 하나입니다. NuGet 패키지 `System.Threading.Tasks.Extensions`를 추가하면 사용할 수 있습니다. 
 
 비동기 메서드는 모든 [in](./in-parameter-modifier.md), [ref](./ref.md) 또는 [out](./out-parameter-modifier.md) 매개 변수를 선언할 수 없고 [참조 반환 값](../../programming-guide/classes-and-structs/ref-returns.md)을 가질 수도 없지만, 이러한 매개 변수가 있는 메서드를 호출할 수는 있습니다.  

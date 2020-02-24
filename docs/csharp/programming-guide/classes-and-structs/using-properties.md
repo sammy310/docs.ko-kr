@@ -6,12 +6,12 @@ helpviewer_keywords:
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: 5f4697ea518e7fe03df4ecac9d748386a8ac6313
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d873f626b660bb6bd94710add4543e21e11823d6
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705407"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452021"
 ---
 # <a name="using-properties-c-programming-guide"></a>속성 사용(C# 프로그래밍 가이드)
 
@@ -21,7 +21,7 @@ ms.locfileid: "75705407"
 
 속성은 여러 가지 용도로 사용됩니다. 변경을 허용하기 전에 데이터의 유효성을 검사하고, 데이터가 실제로 데이터베이스 등의 다른 소스에서 검색되는 클래스에 데이터를 투명하게 공개하고, 데이터 변경 시 이벤트 발생, 다른 필드의 값 변경 등의 작업을 수행할 수 있습니다.
 
-속성은 필드의 액세스 수준, 속성 형식, 속성 이름, `get` 접근자 및/또는 `set` 접근자를 선언하는 코드 블록을 차례로 지정하여 클래스 블록에서 선언됩니다. 예:
+속성은 필드의 액세스 수준, 속성 형식, 속성 이름, `get` 접근자 및/또는 `set` 접근자를 선언하는 코드 블록을 차례로 지정하여 클래스 블록에서 선언됩니다. 예를 들어:
 
 [!code-csharp[csProgGuideProperties#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#7)]
 
@@ -35,7 +35,7 @@ ms.locfileid: "75705407"
 
 [!code-csharp[csProgGuideProperties#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#8)]
 
-할당 대상을 제외하고 속성을 참조하는 경우 속성 값을 읽기 위해 `get` 접근자가 호출됩니다. 예:
+할당 대상을 제외하고 속성을 참조하는 경우 속성 값을 읽기 위해 `get` 접근자가 호출됩니다. 예를 들어:
 
 [!code-csharp[csProgGuideProperties#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#9)]
 
@@ -45,7 +45,7 @@ ms.locfileid: "75705407"
 
 [!code-csharp[csProgGuideProperties#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#10)]
 
-`get` 접근자를 사용하여 필드 값을 반환하거나 계산한 후 반환할 수 있습니다. 예:
+`get` 접근자를 사용하여 필드 값을 반환하거나 계산한 후 반환할 수 있습니다. 예를 들어:
 
 [!code-csharp[csProgGuideProperties#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#11)]
 
@@ -53,11 +53,11 @@ ms.locfileid: "75705407"
 
 ## <a name="the-set-accessor"></a>set 접근자
 
-`set` 접근자는 반환 형식이 [void](../../language-reference/keywords/void.md)인 메서드와 비슷합니다. 형식이 속성의 형식인 `value`라는 암시적 매개 변수를 사용합니다. 다음 예제에서는 `set` 접근자가 `Name` 속성에 추가됩니다.
+`set` 접근자는 반환 형식이 [void](../../language-reference/builtin-types/void.md)인 메서드와 비슷합니다. 형식이 속성의 형식인 `value`라는 암시적 매개 변수를 사용합니다. 다음 예제에서는 `set` 접근자가 `Name` 속성에 추가됩니다.
 
 [!code-csharp[csProgGuideProperties#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#12)]
 
-속성에 값을 할당하는 경우 새 값을 제공하는 인수를 사용하여 `set` 접근자가 호출됩니다. 예:
+속성에 값을 할당하는 경우 새 값을 제공하는 인수를 사용하여 `set` 접근자가 호출됩니다. 예를 들어:
 
 [!code-csharp[csProgGuideProperties#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#13)]
 

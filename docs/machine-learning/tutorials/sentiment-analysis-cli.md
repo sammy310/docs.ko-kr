@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 12/23/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: caf12296b208b3d2e57c3a74300cced225e4db66
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 38ca93f62a066bade988a89b704fca26368b0b2b
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738765"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504154"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>ML.NET CLI를 사용하여 감정 분석
 
@@ -52,7 +52,7 @@ Visual Studio 또는 `dotnet run`(.NET Core CLI)으로 생성된 C# 코드를 �
 
 2. `yelp_labelled.txt` 파일을 이전에 만든 폴더(예: `/cli-test`)에 복사합니다.
 
-3. 기본 설정된 명령 프롬프트를 열고 데이터 세트 파일을 복사한 폴더로 이동합니다. 예:
+3. 기본 설정된 명령 프롬프트를 열고 데이터 세트 파일을 복사한 폴더로 이동합니다. 예를 들어:
 
     ```console
     cd /cli-test
@@ -83,7 +83,7 @@ Visual Studio 또는 `dotnet run`(.NET Core CLI)으로 생성된 C# 코드를 �
 1. 다음 ML.NET CLI 명령을 실행합니다.
 
     ```console
-    mlnet auto-train --task binary-classification --dataset "yelp_labelled.txt" --label-column-index 1 --has-header false --max-exploration-time 10
+    mlnet auto-train --task binary-classification --dataset "yelp_labelled.txt" --label-column-index 1 --has-header false --max-exploration-time 10
     ```
 
     이 명령은 **`mlnet auto-train` 명령**을 사용합니다.
@@ -97,11 +97,11 @@ Visual Studio 또는 `dotnet run`(.NET Core CLI)으로 생성된 C# 코드를 �
 
     <!-- markdownlint-disable MD023 MD025 -->
 
-    # <a name="windowstabwindows"></a>[Windows](#tab/windows)
+    # <a name="windows"></a>[Windows](#tab/windows)
 
     ![PowerShell에서의 ML.NET CLI auto-train](./media/mlnet-cli/mlnet-auto-train-binary-classification-powershell.gif)
 
-    # <a name="macos-bashtabmacosbash"></a>[macOS Bash](#tab/macosbash)
+    # <a name="macos-bash"></a>[macOS Bash](#tab/macosbash)
 
     ![PowerShell에서의 ML.NET CLI auto-train](./media/mlnet-cli/mlnet-auto-train-binary-classification-bash.gif)
 
@@ -174,42 +174,42 @@ Visual Studio 또는 `dotnet run`(.NET Core CLI)으로 생성된 C# 코드를 �
     }
     ```
 
-- 코드의 첫 번째 줄은 ML.NET 코드를 실행할 때마다 필요한 `MLContext` 개체를 만듭니다.
+    - 코드의 첫 번째 줄은 ML.NET 코드를 실행할 때마다 필요한 `MLContext` 개체를 만듭니다.
 
-- 코드의 두 번째 줄은 CLI 도구를 통해 사용자를 위해 이미 학습되어 모델의 Serialize된 .ZIP 파일에 저장되었으므로 모델을 학습할 필요가 없어 주석 처리되었습니다. 하지만 CLI를 통해 *"모델이 학습된 방식"* 을 보고 싶다면 이 줄의 주석 처리를 해제하고 특정 ML 모델에 사용된 학습 코드를 실행/디버깅할 수 있습니다.
+    - 코드의 두 번째 줄은 CLI 도구를 통해 사용자를 위해 이미 학습되어 모델의 Serialize된 .ZIP 파일에 저장되었으므로 모델을 학습할 필요가 없어 주석 처리되었습니다. 하지만 CLI를 통해 *"모델이 학습된 방식"* 을 보고 싶다면 이 줄의 주석 처리를 해제하고 특정 ML 모델에 사용된 학습 코드를 실행/디버깅할 수 있습니다.
 
-- 코드의 세 번째 줄에서는 해당 모델 .ZIP 파일에 대한 경로를 제공하여 `mlContext.Model.Load()` API로 Serialize된 모델 .ZIP 파일에서 모델을 로드합니다.
+    - 코드의 세 번째 줄에서는 해당 모델 .ZIP 파일에 대한 경로를 제공하여 `mlContext.Model.Load()` API로 Serialize된 모델 .ZIP 파일에서 모델을 로드합니다.
 
-- 코드의 네 번째 줄에서는 `mlContext.Model.CreatePredictionEngine<TSrc,TDst>(ITransformer mlModel)` API를 사용하여 `PredictionEngine` 개체를 로드하고 생성합니다. 단일 데이터 샘플(이 경우에는 감정을 예측하기 위한 단일 텍스트 조각)을 대상으로 예측하려고 할 때마다 `PredictionEngine` 개체가 필요합니다.
+    - 코드의 네 번째 줄에서는 `mlContext.Model.CreatePredictionEngine<TSrc,TDst>(ITransformer mlModel)` API를 사용하여 `PredictionEngine` 개체를 로드하고 생성합니다. 단일 데이터 샘플(이 경우에는 감정을 예측하기 위한 단일 텍스트 조각)을 대상으로 예측하려고 할 때마다 `PredictionEngine` 개체가 필요합니다.
 
-- 코드의 다섯 번째 줄은 함수 `CreateSingleDataSample()`을 호출하여 예측에 사용할 *단일 샘플 데이터*를 만듭니다. CLI 도구는 어떤 종류의 샘플 데이터를 사용할지 알지 못하므로, 이 함수 내에 데이터 세트의 첫 번째 행을 로드합니다. 하지만 이러한 경우를 위해 이 함수를 구현하는 이 유사한 코드를 업데이트하여 `CreateSingleDataSample()` 함수의 최신 구현 대신 자체의 ‘하드 코드된’ 데이터를 만들 수도 있습니다.
+    - 코드의 다섯 번째 줄은 함수 `CreateSingleDataSample()`을 호출하여 예측에 사용할 *단일 샘플 데이터*를 만듭니다. CLI 도구는 어떤 종류의 샘플 데이터를 사용할지 알지 못하므로, 이 함수 내에 데이터 세트의 첫 번째 행을 로드합니다. 하지만 이러한 경우를 위해 이 함수를 구현하는 이 유사한 코드를 업데이트하여 `CreateSingleDataSample()` 함수의 최신 구현 대신 자체의 ‘하드 코드된’ 데이터를 만들 수도 있습니다.
 
-    ```csharp
-    private static ModelInput CreateSingleDataSample()
-    {
-        ModelInput sampleForPrediction = new ModelInput() { Col0 = "The ML.NET CLI is great for getting started. Very cool!", Label = true };
-        return sampleForPrediction;
-    }
-    ```
+        ```csharp
+        private static ModelInput CreateSingleDataSample()
+        {
+            ModelInput sampleForPrediction = new ModelInput() { Col0 = "The ML.NET CLI is great for getting started. Very cool!", Label = true };
+            return sampleForPrediction;
+        }
+        ```
 
 1. 데이터 세트의 첫 번째 행에서 로드된 원래 샘플 데이터를 사용하거나 자체 사용자 지정 하드 코드된 샘플 데이터를 제공하여 프로젝트를 실행합니다. 다음과 견줄만한 예측을 해야 합니다.
 
-    # <a name="windowstabwindows"></a>[Windows](#tab/windows)
+    # <a name="windows"></a>[Windows](#tab/windows)
 
     F5 키를 눌러(실행 단추) Visual Studio에서 콘솔 앱을 실행합니다.
 
     ![PowerShell에서의 ML.NET CLI auto-train](./media/mlnet-cli/sample-cli-prediction-execution.png))
 
-    # <a name="macos-bashtabmacosbash"></a>[macOS Bash](#tab/macosbash)
+    # <a name="macos-bash"></a>[macOS Bash](#tab/macosbash)
 
     명령 프롬프트에서 다음 명령을 입력하여 콘솔 앱을 실행합니다.
 
-     ```bash
-     cd SampleBinaryClassification
-     cd SampleBinaryClassification.ConsoleApp
+    ```dotnetcli
+    cd SampleBinaryClassification
+    cd SampleBinaryClassification.ConsoleApp
 
-     dotnet run
-     ```
+    dotnet run
+    ```
 
     ![PowerShell에서의 ML.NET CLI auto-train](./media/mlnet-cli/sample-cli-prediction-execution-bash.png))
 

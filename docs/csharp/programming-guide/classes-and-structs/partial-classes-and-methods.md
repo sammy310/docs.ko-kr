@@ -6,12 +6,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: ea8d95c41df236897761ace1062ec325a069d52b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e359913aad4b8cea001a894d4ba5720fab54d42b
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714740"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451917"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Partial 클래스 및 메서드(C# 프로그래밍 가이드)
 
@@ -151,7 +151,7 @@ partial void onNameChanged()
 }
 ```
 
-- 부분 메서드(Partial Method) 선언은 상황별 키워드 [partial](../../language-reference/keywords/partial-type.md)로 시작해야 하고, 메서드에서 [void](../../language-reference/keywords/void.md)를 반환해야 합니다.
+- 부분 메서드(Partial Method) 선언은 상황별 키워드 [partial](../../language-reference/keywords/partial-type.md)로 시작해야 하고, 메서드에서 [void](../../language-reference/builtin-types/void.md)를 반환해야 합니다.
 
 - 부분 메서드(Partial Method)는 [in](../../language-reference/keywords/in-parameter-modifier.md) 또는 [ref](../../language-reference/keywords/ref.md) 매개 변수를 사용할 수 있지만 [out](../../language-reference/keywords/out-parameter-modifier.md) 매개 변수는 사용할 수 없습니다.
 

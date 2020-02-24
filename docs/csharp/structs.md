@@ -4,12 +4,12 @@ description: 구조체 형식 및 만드는 방법을 알아봅니다.
 ms.date: 10/12/2016
 ms.technology: csharp-fundamentals
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: cdfe2a763058b8f568ede2ff93c918c2dae874f7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 540742ea6a215e09f0cc31b218ac10fbf6192352
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346898"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503982"
 ---
 # <a name="structs"></a>구조체
 
@@ -46,9 +46,6 @@ ms.locfileid: "75346898"
 - 구조체는 값 형식이고 클래스는 참조 형식입니다.
 
 - 클래스와 달리 구조체는 `new` 연산자를 사용하지 않고 인스턴스화할 수 있습니다.
-
-   > [!NOTE]
-   > .NET Core 2.1 이상에서 구조체 형식은 [new 연산자](language-reference/operators/new-operator.md) 또는 [기본 리터럴](language-reference/operators/default.md#default-literal)을 사용하거나 각 프라이빗 필드를 초기화하여 인스턴스화되어야 합니다. 자세한 내용은 [버전 2.0에서 2.1로 마이그레이션 시 호환성이 손상되는 변경](../core/compatibility/2.0-2.1.md#corefx)을 참조하세요.
 
 - 구조체는 매개 변수가 있는 생성자를 선언할 수 있습니다.
 

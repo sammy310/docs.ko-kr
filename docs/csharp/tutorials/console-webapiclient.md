@@ -3,12 +3,12 @@ title: .NET Core를 사용하여 REST 클라이언트 만들기
 description: 이 자습서에서는 .NET Core 및 C# 언어의 다양한 기능에 대해 설명합니다.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: eb7946d669de60c3469ca8098e40b159082ea270
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: f85d50b222d06caa045e22b452d0902aaac66088
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921083"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503978"
 ---
 # <a name="rest-client"></a>REST 클라이언트
 
@@ -51,7 +51,7 @@ dotnet new console --name WebApiClient
 
 이 애플리케이션에는 `System.Runtime.Serialization.Json` 패키지가 필요합니다. 다음 [.NET CLI](../../core/tools/dotnet-add-package.md) 명령을 실행하여 패키지를 프로젝트에 추가합니다.
 
-```console
+```dotnetcli
 dotnet add package System.Text.Json
 ```
 
