@@ -2,12 +2,12 @@
 title: .NET 마이크로 서비스. 컨테이너화된 .NET 애플리케이션을 위한 아키텍처
 description: 컨테이너화된 .NET 애플리케이션에 대한 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스는 독립적으로 배포 가능한 모듈 형식 서비스입니다. (Linux 및 Windows용) Docker 컨테이너는서비스 및 해당 종속성을 단일 단위로 묶어서 배포 및 테스트를 간소화합니다. 그러면 격리된 환경에서 실행됩니다.
 ms.date: 01/30/2020
-ms.openlocfilehash: 5da167de1ffd2169aea44b9872281e71c87927b1
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 1337fe56e78e03a85627737bd52a089fd946b842
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502627"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543536"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET 마이크로 서비스: 컨테이너화된 .NET 애플리케이션을 위한 아키텍처
 
@@ -21,7 +21,7 @@ ms.locfileid: "77502627"
 
 ## <a name="action-links"></a>작업 링크
 
-- 이 eBook을 원하는 형식으로 다운로드(영어 버전에만 해당): | [PDF](https://aka.ms/microservicesebook) | [MOBI](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-mobi) | [EPUB](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-epub) |
+- 이 eBook은 PDF 형식으로도 제공됩니다(영어 버전에만 해당). [다운로드](https://aka.ms/microservicesebook)
 
 - 참조 애플리케이션인 [GitHub의 eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) 클론/포크
 
@@ -78,9 +78,7 @@ eShopOnContainers 애플리케이션은 Docker 컨테이너를 사용하여 배�
 
 ## <a name="send-us-your-feedback"></a>피드백을 보내주세요.
 
-이 가이드는 .NET에서 컨테이너화된 애플리케이션 및 마이크로 서비스의 아키텍처를 쉽게 이해할 수 있도록 작성되었습니다. 가이드 및 관련 참조 애플리케이션은 계속 발전할 예정이므로, 피드백이 있으시면 언제든지 보내주세요! 이 가이드의 개선 방안에 대한 의견이 있으시면 다음 주소로 보내주세요.
-
-[dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com)
+이 가이드는 .NET에서 컨테이너화된 애플리케이션 및 마이크로 서비스의 아키텍처를 쉽게 이해할 수 있도록 작성되었습니다. 가이드 및 관련 참조 애플리케이션은 계속 발전할 예정이므로, 피드백이 있으시면 언제든지 보내주세요! 이 가이드를 개선할 수 있는 방법에 대한 의견이 있으시면 <https://aka.ms/ebookfeedback>에서 피드백을 제출해주세요.
 
 ## <a name="credits"></a>크레딧
 
@@ -149,8 +147,6 @@ eShopOnContainers 애플리케이션은 Docker 컨테이너를 사용하여 배�
 > **Miguel Veloso**, 소프트웨어 개발 엔지니어, Plain Concepts
 
 ## <a name="copyright"></a>Copyright
-
-다운로드 위치: <https://aka.ms/microservicesebook>
 
 게시자:
 
