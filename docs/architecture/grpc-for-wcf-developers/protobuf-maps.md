@@ -1,17 +1,17 @@
 ---
 title: 사전에 대 한 Protobuf 지도-WCF 개발자를 위한 gRPC
-description: Protobuf maps를 사용 하 여를 나타내는 방법을 알아봅니다. NET의 사전 형식입니다.
+description: Protobuf maps를 사용 하 여 .NET에서 사전 형식을 나타내는 방법을 알아봅니다.
 ms.date: 09/09/2019
-ms.openlocfilehash: 8b4f29daa263f329dc533d3ddc596d0f47c1b6e0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: bf848bbc7e3618f6d78e280fcd85d5eb88d5cfae
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967420"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543133"
 ---
 # <a name="protobuf-maps-for-dictionaries"></a>사전용 Protobuf 맵
 
-메시지에 있는 명명 된 값의 컬렉션을 나타낼 수 있는 것이 중요 합니다. .NET에서는 일반적으로 사전 형식을 사용 하 여 처리 됩니다. Protobuf는 .NET <xref:System.Collections.Generic.IDictionary%602> 형식에 해당 하는 `map<key_type, value_type>` 형식입니다. 이 섹션에서는 Protobuf에서 `map`를 선언 하는 방법과 생성 된 코드를 사용 하는 방법을 보여 줍니다.
+메시지에 있는 명명 된 값의 컬렉션을 나타낼 수 있는 것이 중요 합니다. .NET에서이는 일반적으로 사전 형식을 통해 처리 됩니다. Protobuf (프로토콜 버퍼)의 .NET <xref:System.Collections.Generic.IDictionary%602> 형식에 해당 하는 값은 `map<key_type, value_type>` 형식입니다. 이 섹션에서는 Protobuf에서 `map` 형식을 선언 하는 방법과 생성 된 코드를 사용 하는 방법을 보여 줍니다.
 
 ```protobuf
 message StockPrices {
@@ -19,9 +19,9 @@ message StockPrices {
 }
 ```
 
-생성 된 코드에서 `map` 필드는 <xref:System.Collections.Generic.IDictionary%602>를 포함 하 여 표준 .NET 컬렉션 인터페이스를 구현 하는 `Google.Protobuf.Collections.MapField<TKey, TValue>` 클래스를 사용 합니다.
+생성 된 코드에서 `map` 필드는 `Google.Protobuf.Collections.MapField<TKey, TValue>` 클래스를 사용 합니다. 이 클래스는 <xref:System.Collections.Generic.IDictionary%602>을 포함 하 여 표준 .NET 컬렉션 인터페이스를 구현 합니다.
 
-맵 필드는 메시지 정의에서 직접 반복할 수 없지만 다음 예제와 같이 맵을 포함 하는 중첩 된 메시지를 만들고 메시지 유형에 `repeated`를 사용할 수 있습니다.
+맵 필드는 메시지 정의에서 직접 반복할 수 없습니다. 그러나 다음 예제와 같이 맵을 포함 하는 중첩 된 메시지를 만들고 메시지 유형에 `repeated`를 사용할 수 있습니다.
 
 ```protobuf
 message Order {

@@ -2,12 +2,12 @@
 title: 자체 호스팅 gRPC 응용 프로그램-WCF 개발자를 위한 gRPC
 description: ASP.NET Core gRPC 응용 프로그램을 자체 호스팅 서비스로 배포 합니다.
 ms.date: 09/02/2019
-ms.openlocfilehash: 2244f161ad4b5d60138ae0f7b4d6a9c8c8829aa8
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: ee370ba1893b060505b38ddf84235bd84433ad32
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503406"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77542991"
 ---
 # <a name="self-hosted-grpc-applications"></a>자체 호스팅 gRPC 응용 프로그램
 
@@ -90,6 +90,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
   ```dotnetcli
   dotnet publish -c Release -r linux-x64 -o ./publish
   ```
+  
 `publish` 디렉터리의 전체 내용을 Linux 호스트의 설치 폴더에 복사 합니다. 서비스를 등록 하려면 `/etc/systemd/system` 디렉터리에 추가할 *단위 파일*이라는 특수 파일이 필요 합니다. 이 폴더에 파일을 만들려면 루트 권한이 필요 합니다. 사용할 `systemd` 식별자를 사용 하 여 파일의 이름을로, `.service` 확장을 선택 합니다. 예를 들면 `/etc/systemd/system/myapp.service`를 사용합니다.
 
 이 예에 표시 된 것 처럼 서비스 파일에는 INI 형식이 사용 됩니다.
