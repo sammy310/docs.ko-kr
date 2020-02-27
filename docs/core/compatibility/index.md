@@ -2,12 +2,12 @@
 title: 호환성이 손상되는 변경의 형식
 description: .Net Core가 .NET 버전에서 개발자에 대한 호환성을 유지하는 방법 및 호환성이 손상되는 변경으로 간주되는 변경 사항 유형을 알아보세요.
 ms.date: 06/10/2019
-ms.openlocfilehash: 1c5790e39754b91aacbde9e87ed99f9dcc36ce9f
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: bf0cc35d69e6bb501640455604a99a1f48962c4a
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77092982"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628594"
 ---
 # <a name="changes-that-affect-compatibility"></a>호환성에 영향을 미치는 변경 사항
 
@@ -49,7 +49,7 @@ ms.locfileid: "77092982"
 
   *이전* 어셈블리는 새 어셈블리를 가리키는 <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>로 표시해야 합니다.
 
-- ✔️ **허용: [구조체](../../csharp/language-reference/keywords/struct.md) 형식을 `readonly struct` 형식으로 변경**
+- ✔️ **허용: [구조체](../../csharp/language-reference/builtin-types/struct.md) 형식을 `readonly struct` 형식으로 변경**
 
   `readonly struct` 형식을 `struct` 형식으로 변경할 수는 없습니다.
 
@@ -77,11 +77,11 @@ ms.locfileid: "77092982"
 
   인터페이스 제거 규칙의 한 가지 예외로, 제거한 인터페이스에서 파생되는 인터페이스 구현을 추가할 수 있습니다. 예를 들어 이제 <xref:System.IDisposable>을 구현하는 <xref:System.ComponentModel.IComponent>를 형식 또는 인터페이스가 구현하는 경우 <xref:System.IDisposable>을 제거할 수 있습니다.
 
-- ❌ **허용 안 함: `readonly struct` 형식을 [구조체 ](../../csharp/language-reference/keywords/struct.md) 형식으로 변경**
+- ❌ **허용 안 함: `readonly struct` 형식을 [구조체 ](../../csharp/language-reference/builtin-types/struct.md) 형식으로 변경**
 
   `struct` 형식은 `readonly struct` 형식으로 변경할 수 있습니다.
 
-- ❌ **허용 안 함: [구조체](../../csharp/language-reference/keywords/struct.md) 형식을 `ref struct` 형식으로 변경하거나 그 반대로 변경**
+- ❌ **허용 안 함: [구조체](../../csharp/language-reference/builtin-types/struct.md) 형식을 `ref struct` 형식으로 변경하거나 그 반대로 변경**
 
 - ❌ **허용 안 함: 표시 형식 축소**
 
@@ -300,7 +300,7 @@ ms.locfileid: "77092982"
 
 - ✔️ **허용: 매개 변수에 [params](../../csharp/language-reference/keywords/params.md) 추가**
 
-- ❌ **허용 안 함: [구조체](../../csharp/language-reference/keywords/struct.md)를 [클래스](../../csharp/language-reference/keywords/class.md)로 변경하거나 그 반대로 변경**
+- ❌ **허용 안 함: [구조체](../../csharp/language-reference/builtin-types/struct.md)를 [클래스](../../csharp/language-reference/keywords/class.md)로 변경하거나 그 반대로 변경**
 
 - ❌ **허용 안 함: 코드 블록에 [확인됨](../../csharp/language-reference/keywords/virtual.md) 키워드 추가**
 

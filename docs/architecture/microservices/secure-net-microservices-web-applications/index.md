@@ -3,12 +3,12 @@ title: .NET 마이크로 서비스 및 웹 애플리케이션 보안
 description: .NET 마이크로 서비스 및 웹 애플리케이션 보안 - ASP.NET Core 웹 애플리케이션의 인증 옵션을 살펴봅니다.
 author: mjrousos
 ms.date: 01/30/2020
-ms.openlocfilehash: f82212956f5492a51ec99d092e1a5131d1b31313
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 0ac2591f8650e9f8cf29560735a9ec803d29ee4f
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77501641"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628334"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>.NET 마이크로 서비스 및 웹 애플리케이션 보안
 
@@ -135,8 +135,8 @@ public void ConfigureServices(IServiceCollection services)
 
 외부 공급자에 대해 앱을 구성하는 방법에 대한 자세한 내용은 [ASP.NET Core 설명서의 외부 공급자 인증](/aspnet/core/security/authentication/social/)을 참조하세요.
 
-> [!TIP]
-모든 세부 정보는 앞에서 언급한 권한 부여 미들웨어 및 서비스에 의해 처리됩니다. 따라서 앞서 언급한 외부 공급자 등록 외에 Visual Studio에서 ASP.NET Code 웹 애플리케이션 프로젝트를 만들 때 그림 9-3에 표시된 것처럼 **개별 사용자 계정** 인증 옵션을 선택하기만 하면 됩니다.
+>[!TIP]
+>모든 세부 정보는 앞에서 언급한 권한 부여 미들웨어 및 서비스에 의해 처리됩니다. 따라서 앞서 언급한 외부 공급자 등록 외에 Visual Studio에서 ASP.NET Code 웹 애플리케이션 프로젝트를 만들 때 그림 9-3에 표시된 것처럼 **개별 사용자 계정** 인증 옵션을 선택하기만 하면 됩니다.
 
 ![새 ASP.NET Core 웹 애플리케이션 대화 상자의 스크린샷입니다.](./media/index/select-individual-user-account-authentication-option.png)
 
