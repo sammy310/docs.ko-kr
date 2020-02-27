@@ -2,22 +2,24 @@
 title: 컴파일러 옵션
 description: 컴파일러 F# 명령줄 옵션을 사용 하 여 F# 앱 및 라이브러리의 컴파일을 제어 합니다.
 ms.date: 12/10/2018
-ms.openlocfilehash: d0f4d1ca5ae45af25d6c304a2920d5c457700b1a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ecaae538a5db2f5dfefa79cb8e7b8b51d39c440d
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424756"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628880"
 ---
 # <a name="compiler-options"></a>컴파일러 옵션
 
-이 항목에서는 F# 컴파일러 fsc.exe에 대 한 컴파일러 명령줄 옵션에 대해 설명 합니다. 프로젝트 속성을 설정 하 여 컴파일 환경을 제어할 수도 있습니다.
+이 항목에서는 F# 컴파일러 fsc.exe에 대 한 컴파일러 명령줄 옵션에 대해 설명 합니다.
+
+프로젝트 속성을 설정 하 여 컴파일 환경을 제어할 수도 있습니다. .NET Core를 대상으로 하는 프로젝트의 경우 `.fsproj`에 `<OtherFlags>...</OtherFlags>` "기타 플래그" 속성이 추가 명령줄 옵션을 지정 하는 데 사용 됩니다.
 
 ## <a name="compiler-options-listed-alphabetically"></a>컴파일러 옵션 사전순 목록
 
 다음 표에서는 사전순으로 나열 된 컴파일러 옵션을 보여 줍니다. 일부 F# 컴파일러 옵션은 C# 컴파일러 옵션과 유사 합니다. 이 경우 C# 컴파일러 옵션 항목에 대 한 링크가 제공 됩니다.
 
-|컴파일러 옵션|설명|
+|컴파일러 옵션|Description|
 |---------------|-----------|
 |`-a filename.fs`|지정 된 파일에서 라이브러리를 생성 합니다. 이 옵션은 `--target:library filename.fs`의 약식 형태입니다.|
 |`--baseaddress:address`|DLL을 로드할 기본 설정 기준 주소를 지정합니다.<br /><br />이 컴파일러 옵션은 동일한 이름의 C# 컴파일러 옵션과 같습니다. 자세한 내용은 [ &#47;baseaddress &#40;&#35; C 컴파일러 옵션&#41;](https://msdn.microsoft.com/library/2fdbz5xd.aspx)을 참조 하세요.|
@@ -69,7 +71,7 @@ ms.locfileid: "73424756"
 
 ## <a name="related-articles"></a>관련 문서
 
-|제목|설명|
+|제목|Description|
 |-----|-----------|
 |[F# Interactive 옵션](fsharp-interactive-options.md)|F# 인터프리터 인 fsi.exe에서 지 원하는 명령줄 옵션을 설명 합니다.|
 |[프로젝트 속성 참조](/visualstudio/ide/reference/project-properties-reference)|빌드 옵션을 제공 하는 프로젝트 속성 페이지를 비롯 하 여 프로젝트에 대 한 UI를 설명 합니다.|

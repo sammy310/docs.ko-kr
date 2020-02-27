@@ -10,12 +10,12 @@ ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3b88f64fca8d3f11308f1cbfde97de2e6c2f22cc
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0b68a70b55cbf03d480fd388a637a4caf78b6eaa
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740211"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628802"
 ---
 # <a name="walkthrough-arrange-controls-on-windows-forms-using-snaplines"></a>연습: 맞춤선을 사용 하 여 Windows Forms에서 컨트롤 정렬
 
@@ -124,7 +124,7 @@ ms.locfileid: "76740211"
 
 ## <a name="align-a-label-to-a-controls-text"></a>컨트롤의 텍스트에 레이블 맞춤
 
-1. <xref:System.Windows.Forms.TextBox> 도구 상자 **에서** 컨트롤을 폼으로 끌어다 놓습니다. <xref:System.Windows.Forms.TextBox> 컨트롤을 폼에 놓으면 스마트 태그 문자 모양을 클릭 하 고 **텍스트를 textBox1으로 설정** 옵션을 선택 합니다. 자세한 내용은 [연습: Windows Forms 컨트롤에서 스마트 태그를 사용 하 여 일반 작업 수행](performing-common-tasks-using-smart-tags-on-wf-controls.md)을 참조 하세요.
+1. <xref:System.Windows.Forms.TextBox> 도구 상자 **에서** 컨트롤을 폼으로 끌어다 놓습니다. <xref:System.Windows.Forms.TextBox> 컨트롤을 폼에 놓으면 스마트 태그 문자 모양을 클릭 하 고 **텍스트를 textBox1으로 설정** 옵션을 선택 합니다. 자세한 내용은 [연습: 디자이너 작업을 사용 하 여 일반 작업 수행](perform-common-tasks-design-actions.md)을 참조 하세요.
 
 2. <xref:System.Windows.Forms.Label> 도구 상자 **에서** 컨트롤을 폼으로 끌어다 놓습니다.
 

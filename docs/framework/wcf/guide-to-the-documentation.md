@@ -5,17 +5,15 @@ helpviewer_keywords:
 - WCF [WCF], documentation
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
-ms.openlocfilehash: 12408bd9f10e7ed147a6c1adc0497d3b8d797e42
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 705e571e11fa7c8276fcb48d15ed0160fbda2bc5
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319818"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628763"
 ---
 # <a name="guide-to-the-documentation"></a>설명서에 대한 안내
 WCF (Windows Communication Foundation) 설명서에 대 한 지침을 제공 합니다. 구체적인 관심사와 지식 수준에 따라 그룹화된 링크 문서부터 보시는 것이 좋습니다.  
-  
- 설명서 및 도움말 뷰어의 독립 실행형 버전을 설치 하려면 [Microsoft Windows SDK v 7.1](https://go.microsoft.com/fwlink/?LinkID=194146&clcid=0x409)을 다운로드 합니다.  
   
 ## <a name="new-to-windows-communication-foundation-programming"></a>Windows Communication Foundation 프로그래밍을 처음 사용하는 경우  
   
@@ -61,7 +59,7 @@ WCF (Windows Communication Foundation) 설명서에 대 한 지침을 제공 합
 ## <a name="ws--protocols-supported-in-windows-communication-foundation"></a>Windows Communication Foundation에서 지원되는 WS-* 프로토콜  
  시스템 제공 바인딩에서 지원 되는 프로토콜 목록을 보려면 [시스템 제공 상호 운용성 바인딩에서 지 원하는 웹 서비스 프로토콜](./feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)을 참조 하세요. 시스템 제공 바인딩 목록을 보려면 [시스템 제공 바인딩](system-provided-bindings.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Communication Foundation 샘플](./samples/index.md)
 - [개념적 개요](conceptual-overview.md)

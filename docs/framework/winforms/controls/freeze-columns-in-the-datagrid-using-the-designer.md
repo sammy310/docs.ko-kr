@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column freezing
 - data [Windows Forms], displaying
 ms.assetid: 87412dd2-478f-4751-af87-dafc591fc215
-ms.openlocfilehash: af8e07d7b1b0524e33688fd9d879818aa13be041
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 469b32d41798089e3acf4bd62c2ae1172a3ab740
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745671"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628828"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에서 열 고정
 사용자가 Windows Forms <xref:System.Windows.Forms.DataGridView> 컨트롤에 표시된 데이터를 볼 때 단일 열이나 열 집합을 자주 참조해야 하는 경우가 있습니다. 예를 들어 많은 열이 포함 된 고객 정보 테이블을 표시 하는 경우 다른 열을 표시 영역 밖으로 스크롤할 수 있도록 하는 동시에 고객 이름을 항상 표시 하는 것이 유용 합니다.
@@ -23,7 +23,7 @@ ms.locfileid: "76745671"
 
 ## <a name="to-freeze-a-column-using-the-designer"></a>디자이너를 사용 하 여 열을 고정 하려면
 
-1. <xref:System.Windows.Forms.DataGridView> 컨트롤의 오른쪽 위 모퉁이에 있는 스마트 태그 문자 모양 (![스마트 태그 문자 모양](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))을 클릭 한 다음 **열 편집**을 선택 합니다.
+1. <xref:System.Windows.Forms.DataGridView> 컨트롤의 오른쪽 위 모퉁이에 있는 디자이너 작업 문자 모양 (![작은 검은색 화살표](./media/designer-actions-glyph.gif))을 클릭 한 다음 **열 편집**을 선택 합니다.
 
 2. **선택한 열** 목록에서 열을 선택 합니다.
 

@@ -4,12 +4,12 @@ description: .NET Core FIPS(Federal Information Processing Standard) (FIPS) 규�
 ms.date: 11/20/2019
 author: Rick-Anderson
 ms.author: riande
-ms.openlocfilehash: cf640c857e79ae811dd38d57a0e5301b7bc96572
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 84d6edc6975af0484bb67999ad5891eaf4db057d
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74205079"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626960"
 ---
 # <a name="net-core-federal-information-processing-standard-fips-compliance"></a>.NET Core FIPS(Federal Information Processing Standard) (FIPS) 준수
 
@@ -28,4 +28,4 @@ FIPS 규정 준수에 대 한 자세한 내용은 다음 문서를 참조 하세
 
 * [Windows FIPS 준수](/windows/security/threat-protection/fips-140-validation)
 * [FIPS 준수를 위한 Windows 구성](/windows/security/threat-protection/security-policy-settings/system-cryptography-use-fips-compliant-algorithms-for-encryption-hashing-and-signing)
-* [10.2. FIPS (연방 정보 처리 표준)](https://access.redhat.com/documentation/red_hat_enterprise_linux/6/html/security_guide/sect-security_guide-federal_standards_and_regulations-federal_information_processing_standard)
+* [8 장. 연방 표준 및 규정 Red Hat Enterprise Linux 7](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/chap-federal_standards_and_regulations)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], adding columns
 - DataGridView control [Windows Forms], removing columns
 ms.assetid: 9e709f35-0a8c-4e7e-b4c4-bacb7a834077
-ms.openlocfilehash: 717a0074f0750352a23b90a9b6e5eab1dc6c925a
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 8843b1d30f3e5f31a060e27b41b0105e6584f155
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76732355"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628607"
 ---
 # <a name="how-to-add-and-remove-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에서 열 추가 및 제거
 Windows Forms <xref:System.Windows.Forms.DataGridView> 컨트롤은 데이터를 표시 하기 위해 열을 포함 해야 합니다. 컨트롤을 수동으로 채울 계획인 경우 열을 직접 추가 해야 합니다. 또는 데이터 소스에 컨트롤을 바인딩할 수 있습니다. 그러면 열이 자동으로 생성 되 고 채워집니다. 데이터 원본에 표시 하려는 열 보다 많은 열이 포함 된 경우 원하지 않는 열을 제거할 수 있습니다.
@@ -21,7 +21,7 @@ Windows Forms <xref:System.Windows.Forms.DataGridView> 컨트롤은 데이터를
 
 ## <a name="to-add-a-column-using-the-designer"></a>디자이너를 사용 하 여 열을 추가 하려면
 
-1. <xref:System.Windows.Forms.DataGridView> 컨트롤의 오른쪽 위 모퉁이에 있는 스마트 태그 문자 모양 (![스마트 태그 문자 모양](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))을 클릭 한 다음 **열 추가**를 선택 합니다.
+1. <xref:System.Windows.Forms.DataGridView> 컨트롤의 오른쪽 위 모퉁이에 있는 디자이너 작업 문자 모양 (![작은 검은색 화살표](./media/designer-actions-glyph.gif))을 클릭 한 다음 **열 추가**를 선택 합니다.
 
 2. **열 추가** 대화 상자에서 데이터 **바인딩 열** 옵션을 선택 하 고 데이터 원본에서 열을 선택 하거나 **바인딩되지 않은 열** 옵션을 선택 하 고 제공 된 필드를 사용 하 여 열을 정의 합니다.
 

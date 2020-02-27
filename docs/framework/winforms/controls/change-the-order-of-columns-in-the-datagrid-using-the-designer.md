@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Forms, columns
 - data [Windows Forms], displaying
 ms.assetid: 7fe52a98-75d6-448c-97a5-65ca2c568c1a
-ms.openlocfilehash: be4f67ca6530b74fc90cb50a10463b2378edb933
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7540203fb1c0465caeb045275734d1a7c6f25ee8
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743149"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628750"
 ---
 # <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에서 열 순서 변경
 
@@ -22,7 +22,7 @@ Windows Forms <xref:System.Windows.Forms.DataGridView> 컨트롤을 데이터 �
 
 ## <a name="to-change-the-column-order-using-the-designer"></a>디자이너를 사용 하 여 열 순서를 변경 하려면
 
-1. <xref:System.Windows.Forms.DataGridView> 컨트롤의 오른쪽 위 모퉁이에 있는 스마트 태그 문자 모양 (![스마트 태그 문자 모양](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))을 클릭 한 다음 **열 편집**을 선택 합니다.
+1. <xref:System.Windows.Forms.DataGridView> 컨트롤의 오른쪽 위 모퉁이에 있는 디자이너 작업 문자 모양 (![작은 검은색 화살표](./media/designer-actions-glyph.gif))을 클릭 한 다음 **열 편집**을 선택 합니다.
 
 2. **선택한 열** 목록에서 열을 선택 합니다.
 

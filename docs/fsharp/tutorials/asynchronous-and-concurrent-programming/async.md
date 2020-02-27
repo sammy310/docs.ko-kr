@@ -2,12 +2,12 @@
 title: 비동기 프로그래밍
 description: 핵심 함수형 F# 프로그래밍 개념에서 파생 된 언어 수준 프로그래밍 모델을 기반으로 비동기에 대 한 완전 한 지원을 제공 하는 방법을 알아봅니다.
 ms.date: 12/17/2018
-ms.openlocfilehash: 471566befd69f330fb9254dbd57b19569d9f9ad3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 7021d7936d10f9ea6fceb4aa56db3285d21624ad
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344667"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628854"
 ---
 # <a name="async-programming-in-f"></a>F\#의 비동기 프로그래밍
 
@@ -69,7 +69,7 @@ let main argv =
     0
 ```
 
-예제에서 `printTotalFileBytes` 함수는 `string -> Async<unit>`형식입니다. 함수를 호출 하면 실제로 비동기 계산이 실행 되지 않습니다. 대신 비동기적으로 실행할 작업의 *사양* 역할을 하는 `Async<unit>`를 반환 합니다. <xref:System.IO.File.WriteAllBytesAsync%2A>의 결과를 적절 한 형식으로 변환 하는 본문에서 `Async.AwaitTask`를 호출 합니다.
+예제에서 `printTotalFileBytes` 함수는 `string -> Async<unit>`형식입니다. 함수를 호출 하면 실제로 비동기 계산이 실행 되지 않습니다. 대신 비동기적으로 실행할 작업의 *사양* 역할을 하는 `Async<unit>`를 반환 합니다. <xref:System.IO.File.ReadAllBytesAsync%2A>의 결과를 적절 한 형식으로 변환 하는 본문에서 `Async.AwaitTask`를 호출 합니다.
 
 또 다른 중요 한 줄은 `Async.RunSynchronously`에 대 한 호출입니다. F# 비동기 계산을 실제로 실행 하려는 경우 호출 해야 하는 비동기 모듈 시작 함수 중 하나입니다.
 
@@ -144,7 +144,7 @@ let main argv =
 
 비동기 계산 내에서 자식 계산을 시작 합니다. 이렇게 하면 여러 비동기 계산을 동시에 실행할 수 있습니다. 자식 계산은 부모 계산과 함께 취소 토큰을 공유 합니다. 부모 계산이 취소 되 면 자식 계산도 취소 됩니다.
 
-서명:
+서명과
 
 ```fsharp
 computation: Async<'T> - timeout: ?int -> Async<Async<'T>>
@@ -164,7 +164,7 @@ computation: Async<'T> - timeout: ?int -> Async<Async<'T>>
 
 현재 운영 체제 스레드에서 즉시 시작 하는 비동기 계산을 실행 합니다. 이는 계산 중에 호출 스레드에서 무언가를 업데이트 해야 하는 경우에 유용 합니다. 예를 들어 비동기 계산에서 UI를 업데이트 해야 하는 경우 (예: 진행률 표시줄 업데이트) `Async.StartImmediate` 사용 해야 합니다.
 
-서명:
+서명과
 
 ```fsharp
 computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
@@ -182,7 +182,7 @@ computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
 
 스레드 풀에서 계산을 실행 합니다. 계산이 종료 된 후 (결과를 생성 하거나 예외를 throw 하거나 취소 된 경우) 해당 상태에서 완료 되는 <xref:System.Threading.Tasks.Task%601>를 반환 합니다. 취소 토큰을 제공 하지 않으면 기본 취소 토큰이 사용 됩니다.
 
-서명:
+서명과
 
 ```fsharp
 computation: Async<'T> - taskCreationOptions: ?TaskCreationOptions - cancellationToken: ?CancellationToken -> Task<'T>
@@ -200,7 +200,7 @@ computation: Async<'T> - taskCreationOptions: ?TaskCreationOptions - cancellatio
 
 병렬로 실행 되는 비동기 계산의 시퀀스를 예약 합니다. `maxDegreesOfParallelism` 매개 변수를 지정 하 여 병렬 처리 수준을 선택적으로 조정/제한 할 수 있습니다.
 
-서명:
+서명과
 
 ```fsharp
 computations: seq<Async<'T>> - ?maxDegreesOfParallelism: int -> Async<'T[]>
@@ -220,7 +220,7 @@ computations: seq<Async<'T>> - ?maxDegreesOfParallelism: int -> Async<'T[]>
 
 전달 되는 순서 대로 실행 되는 비동기 계산의 시퀀스를 예약 합니다. 첫 번째 계산이 실행 되 고, 그 다음에는 식으로 실행 됩니다. 계산이 병렬로 실행 되지 않습니다.
 
-서명:
+서명과
 
 ```fsharp
 computations: seq<Async<'T>> -> Async<'T[]>
@@ -239,7 +239,7 @@ computations: seq<Async<'T>> -> Async<'T[]>
 
 지정 된 <xref:System.Threading.Tasks.Task%601> 완료 될 때까지 대기 하 고 그 결과를 `Async<'T>`으로 반환 하는 비동기 계산을 반환 합니다.
 
-서명:
+서명과
 
 ```fsharp
 task: Task<'T>  -> Async<'T>
@@ -257,7 +257,7 @@ task: Task<'T>  -> Async<'T>
 
 지정 된 `Async<'T>`를 실행 하 고 `Async<Choice<'T, exn>>`를 반환 하는 비동기 계산을 만듭니다. 지정 된 `Async<'T>` 성공적으로 완료 되 면 결과 값과 함께 `Choice1Of2` 반환 됩니다. 완료 되기 전에 예외가 throw 되 면 발생 한 예외와 함께 `Choice2of2` 반환 됩니다. 여러 계산으로 구성 된 비동기 계산에서 사용 되는 경우 이러한 계산 중 하나가 예외를 throw 하는 경우 포괄 계산이 완전히 중지 됩니다.
 
-서명:
+서명과
 
 ```fsharp
 computation: Async<'T> -> Async<Choice<'T, exn>>
@@ -275,7 +275,7 @@ computation: Async<'T> -> Async<Choice<'T, exn>>
 
 지정 된 계산을 실행 하 고 해당 결과를 무시 하는 비동기 계산을 만듭니다.
 
-서명:
+서명과
 
 ```fsharp
 computation: Async<'T> -> Async<unit>
@@ -293,7 +293,7 @@ computation: Async<'T> -> Async<unit>
 
 비동기 계산을 실행 하 고 호출 스레드에서 해당 결과를 기다립니다 합니다. 이 호출이 차단 되 고 있습니다.
 
-서명:
+서명과
 
 ```fsharp
 computation: Async<'T> - timeout: ?int - cancellationToken: ?CancellationToken -> 'T
@@ -312,7 +312,7 @@ computation: Async<'T> - timeout: ?int - cancellationToken: ?CancellationToken -
 
 `unit`를 반환 하는 스레드 풀에서 비동기 계산을 시작 합니다. 는 결과를 기다리지 않습니다. `Async.Start`에서 시작 된 중첩 계산은 해당 계산을 호출한 부모 계산과 완전히 독립적으로 시작 됩니다. 수명은 부모 계산과 연결 되지 않습니다. 부모 계산이 취소 되 면 자식 계산이 취소 되지 않습니다.
 
-서명:
+서명과
 
 ```fsharp
 computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
@@ -382,9 +382,9 @@ module Async =
 
 는 F# 현재 스레드에서 비동기 계산을 시작 하는 기능을 제공 하지만 (또는 현재 스레드에서 명시적으로는 사용 하지 않음) 비동기 일반적으로 특정 스레딩 전략과 연결 되지 않습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [F# 비동기 프로그래밍 모델](https://www.microsoft.com/research/publication/the-f-asynchronous-programming-model)
 - [Jet의 F# 비동기 가이드](https://medium.com/jettech/f-async-guide-eb3c8a2d180a)
 - [F#재미 있고 이익을 위한 비동기 프로그래밍 가이드](https://fsharpforfunandprofit.com/posts/concurrency-async-and-parallel/)
-- [및 F#의 C# Async: 비동기 알려진 문제C#](http://tomasp.net/blog/csharp-async-gotchas.aspx/)
+- 및 C# F#에서 Async를 [합니다. C#](http://tomasp.net/blog/csharp-async-gotchas.aspx/) 비동기 알려진 문제

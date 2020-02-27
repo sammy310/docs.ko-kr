@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to Windows Forms controls
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-ms.openlocfilehash: d5fab6acc53e5b8be247e958bdba78f0d3647fdc
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: d49a718e42a989c731cdf748fb63a6305ee096bf
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744121"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626331"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에 데이터 바인딩
 디자이너를 사용 하 여 데이터베이스, 비즈니스 개체 또는 웹 서비스를 비롯 한 다양 한 종류의 데이터 원본에 <xref:System.Windows.Forms.DataGridView> 컨트롤을 연결할 수 있습니다. 디자이너를 사용 하 여 컨트롤을 데이터 소스에 바인딩하면 컨트롤이 데이터 소스를 나타내는 <xref:System.Windows.Forms.BindingSource> 구성 요소에 자동으로 바인딩됩니다. 또한 열은 데이터 소스에서 제공하는 스키마 정보와 일치하는 컨트롤에 자동으로 생성됩니다.
@@ -24,13 +24,13 @@ ms.locfileid: "76744121"
 
 ## <a name="to-bind-the-control-to-a-data-source"></a>데이터 소스에 컨트롤을 바인딩하려면
 
-1. <xref:System.Windows.Forms.DataGridView> 컨트롤의 오른쪽 위 모퉁이에 있는 스마트 태그 문자 모양 (![스마트 태그 문자 모양](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))을 클릭 합니다.
+1. <xref:System.Windows.Forms.DataGridView> 컨트롤의 오른쪽 위 모퉁이에 있는 디자이너 작업 문자 모양 (![작은 검은색 화살표](./media/designer-actions-glyph.gif))을 클릭 합니다.
 
 2. **데이터 소스 선택** 옵션에서 드롭다운 화살표를 클릭합니다.
 
 3. 프로젝트에 데이터 소스가 아직 없는 경우 **프로젝트 데이터 소스 추가**를 클릭하고 마법사에 의해 표시된 단계를 따릅니다.
 
-     자세한 내용은 [데이터 소스 구성 마법사](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/w4dd7z6t(v=vs.120))를 참조하세요. 새 데이터 소스은 **데이터 소스 선택** 드롭다운 창에 표시됩니다. 새 데이터 소스에 단일 데이터베이스 테이블과 같은 하나의 구성원만이 포함되는 경우 컨트롤은 해당 구성원에 자동으로 바인딩됩니다. 그렇지 않으면 다음 단계를 계속합니다.
+     자세한 내용은 [데이터 소스 구성 마법사](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/w4dd7z6t(v=vs.120))를 참조하세요. 새 데이터 소스은 **데이터 소스 선택** 드롭다운 창에 표시됩니다. 새 데이터 소스에 단일 데이터베이스 테이블과 같은 하나의 구성원만이 포함되는 경우 컨트롤은 해당 구성원에 자동으로 바인딩됩니다. 그렇지 않은 경우 다음 단계를 계속 진행합니다.
 
 4. **기타 데이터 소스** 및 **프로젝트 데이터 소스** 노드가 아직 확장되지 않은 경우 확장한 다음 컨트롤을 바인딩할 데이터 소스를 선택합니다.
 

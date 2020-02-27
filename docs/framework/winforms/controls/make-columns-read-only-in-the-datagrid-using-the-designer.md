@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 - columns [Windows Forms], read-only
 ms.assetid: b4ef7a75-ab33-4ee3-b2cf-201530e454e9
-ms.openlocfilehash: 51d9488ef83f7d2c1c01c9ffd756edf8944d738d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 2dd3f8bfcad39ca3d530c79a6e6a8170585f7adf
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744970"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627957"
 ---
 # <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에서 열을 읽기 전용으로 설정
 기본적으로 사용자는 Windows Forms <xref:System.Windows.Forms.DataGridView> 컨트롤에 표시 되는 텍스트 및 숫자 데이터를 수정할 수 있습니다. 수정 하기에 적합 하지 않은 데이터를 표시 하려면 데이터를 포함 하는 열을 읽기 전용으로 설정 해야 합니다. 컨트롤을 완전히 읽기 전용으로 설정 하는 방법에 대 한 자세한 내용은 [방법: 디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤에서 행 추가 및 삭제 방지](prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md)를 참조 하세요.
@@ -21,7 +21,7 @@ ms.locfileid: "76744970"
 
 ## <a name="to-make-a-column-read-only-by-using-the-designer"></a>디자이너를 사용 하 여 열을 읽기 전용으로 설정 하려면
 
-1. <xref:System.Windows.Forms.DataGridView> 컨트롤의 오른쪽 위 모퉁이에 있는 스마트 태그 문자 모양 (![스마트 태그 문자 모양](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))을 클릭 한 다음 **열 편집**을 선택 합니다.
+1. <xref:System.Windows.Forms.DataGridView> 컨트롤의 오른쪽 위 모퉁이에 있는 디자이너 작업 문자 모양 (![작은 검은색 화살표](./media/designer-actions-glyph.gif))을 클릭 한 다음 **열 편집**을 선택 합니다.
 
 2. **선택한 열** 목록에서 열을 선택 합니다.
 

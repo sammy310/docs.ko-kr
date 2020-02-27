@@ -1,13 +1,13 @@
 ---
-title: 반복기
+title: Iterators
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-ms.openlocfilehash: 465a8e6650c3d015520164030a146c9502ebe603
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2789ac66690ebfd472b9bae5ccf08b1bdfaa0922
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353734"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628737"
 ---
 # <a name="iterators-visual-basic"></a>반복기 (Visual Basic)
 
@@ -259,7 +259,7 @@ End Function
 
 ## <a name="BKMK_AnonymousMethods"></a>무명 메서드
 
-Visual Basic에서 익명 함수는 반복기 함수 일 수 있습니다. 다음 예제에서는 이것을 보여 줍니다.
+Visual Basic에서 익명 함수는 반복기 함수 일 수 있습니다. 다음은 이에 대한 예입니다.
 
 ```vb
 Dim iterateSequence = Iterator Function() _
@@ -435,7 +435,7 @@ Visual Basic에서 "Yield"는 예약 된 단어가 아니므로 `Iterator` 메�
 
 컴파일러의 용도를 확인하려면 Ildasm.exe 도구를 사용하여 반복기 메서드에 대해 생성되는 Microsoft Intermediate Language 코드를 확인할 수 있습니다.
 
-[클래스](../../../csharp/language-reference/keywords/class.md) 또는 [구조체](../../../csharp/language-reference/keywords/struct.md)에 대 한 반복기를 만들 때 전체 <xref:System.Collections.IEnumerator> 인터페이스를 구현할 필요가 없습니다. 컴파일러는 반복기를 검색할 경우 `Current` 또는 `MoveNext` 인터페이스의 `Dispose`, <xref:System.Collections.IEnumerator> 및 <xref:System.Collections.Generic.IEnumerator%601> 메서드를 자동으로 생성합니다.
+[클래스](../../language-reference/statements/class-statement.md) 또는 [구조체](../../language-reference/statements/structure-statement.md)에 대 한 반복기를 만들 때 전체 <xref:System.Collections.IEnumerator> 인터페이스를 구현할 필요가 없습니다. 컴파일러는 반복기를 검색할 경우 `Current` 또는 `MoveNext` 인터페이스의 `Dispose`, <xref:System.Collections.IEnumerator> 및 <xref:System.Collections.Generic.IEnumerator%601> 메서드를 자동으로 생성합니다.
 
 `For Each…Next` 루프를 연속 반복하거나 `IEnumerator.MoveNext`를 직접 호출하면 다음 반복기 코드 본문이 이전 `Yield` 문 다음에 다시 시작됩니다. 그런 다음 반복기 본문의 끝에 도달 하거나 `Exit Function` 또는 `Return` 문이 발생할 때까지 다음 `Yield` 문으로 계속 합니다.
 
@@ -459,4 +459,4 @@ Visual Basic에서 "Yield"는 예약 된 단어가 아니므로 `Iterator` 메�
 - <xref:System.Collections.Generic.IEnumerable%601>
 - [For Each...Next 문](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
 - [Yield 문](../../../visual-basic/language-reference/statements/yield-statement.md)
-- [반복기](../../../visual-basic/language-reference/modifiers/iterator.md)
+- [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md)

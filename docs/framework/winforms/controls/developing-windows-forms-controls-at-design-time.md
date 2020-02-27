@@ -12,12 +12,12 @@ ms.assetid: e5a8e088-7ec8-4fd9-bcb3-9078fd134829
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: dac049ea6a51037daa0e23dc93476e4410b2df06
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7626e1efbb30ef3bfe9b5b1278c0adb18dd5944b
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745989"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628711"
 ---
 # <a name="develop-windows-forms-controls-at-design-time"></a>디자인 타임에 Windows Forms 컨트롤 개발
 
@@ -36,7 +36,7 @@ C#에서 간단한 복합 컨트롤을 만드는 방법을 보여 줍니다.
 [연습: Windows Forms 컨트롤에서 상속](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)\
 C#에서 상속을 사용하는 간단한 Windows Forms 컨트롤을 만드는 방법을 보여 줍니다.
 
-[연습: Windows Forms 컨트롤에서 스마트 태그를 사용 하 여 일반 작업 수행](performing-common-tasks-using-smart-tags-on-wf-controls.md)\
+[연습: 디자이너 작업을 사용 하 여 일반적인 작업을 수행](perform-common-tasks-design-actions.md)\
 Windows Forms 컨트롤에서 스마트 태그 기능을 사용하는 방법을 보여 줍니다.
 
 [연습: DesignerSerializationVisibilityAttribute\를 사용 하 여 표준 형식의 컬렉션 serialize](serializing-collections-designerserializationvisibilityattribute.md)

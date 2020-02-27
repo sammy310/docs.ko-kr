@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1aa7a4b1-636a-4f5e-b834-b406d72f7120
 topic_type:
 - apiref
-ms.openlocfilehash: a3af57859c5284ff45681ffc2b5aa3ea3cf8fad6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 94ad0073678e88e15d4b083793dca1423130f7e9
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133055"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628088"
 ---
 # <a name="ihosttaskmanagerenterruntime-method"></a>IHostTaskManager::EnterRuntime 메서드
 플랫폼 호출 메서드와 같은 관리 되지 않는 메서드에 대 한 호출이 CLR (공용 언어 런타임)에 실행 제어를 반환 한다는 사실을 호스트에 알립니다.  
@@ -31,19 +31,19 @@ ms.locfileid: "73133055"
 HRESULT EnterRuntime ();  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
-|HRESULT|설명|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`EnterRuntime` 성공적으로 반환 되었습니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자가 잠금을 소유 하지 않습니다.|  
 |HOST_E_ABANDONED|차단 된 스레드나 파이버에서 대기 하는 동안 이벤트를 취소 했습니다.|  
-|E_FAIL|알 수 없는 치명적인 오류가 발생 했습니다. 메서드가 E_FAIL을 반환 하는 경우 프로세스 내에서 더 이상 CLR을 사용할 수 없습니다. 호스팅 메서드에 대 한 후속 호출은 HOST_E_CLRNOTAVAILABLE을 반환 합니다.|  
+|E_FAIL|알 수 없는 치명적인 오류가 발생 했습니다. 메서드가 E_FAIL 반환 하는 경우 해당 프로세스 내에서 더 이상 CLR을 사용할 수 없습니다. 호스팅 메서드를 이후에 호출 하면 HOST_E_CLRNOTAVAILABLE 반환 됩니다.|  
 |E_OUTOFMEMORY|메모리가 부족 하 여 요청 된 할당을 완료할 수 없습니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  [LeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md) 메서드를 이전에 호출 하 고 실행을 완료 했으며 런타임에 실행 제어를 반환 하는 관리 되지 않는 함수를 호스트에 알리기 위해 `EnterRuntime`가 호출 됩니다.  
   
 > [!NOTE]
@@ -58,9 +58,9 @@ HRESULT EnterRuntime ();
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [고급 COM 상호 운용성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx)
+- [고급 COM 상호 운용성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
 - [방법: PInvoke를 사용하여 관리 코드로부터 네이티브 DLL 호출](/cpp/dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke)
 - [ICLRTask 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
 - [ICLRTaskManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
