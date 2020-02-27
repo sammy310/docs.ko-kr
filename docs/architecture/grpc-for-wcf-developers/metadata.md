@@ -1,25 +1,25 @@
 ---
 title: WCF 개발자를 위한 메타 데이터 gRPC
-description: GRPC에서 메타 데이터를 사용 하 여 클라이언트와 서버 간에 추가 컨텍스트를 전달 하는 방법
+description: GRPC에서 메타 데이터를 사용 하 여 클라이언트와 서버 간에 추가 컨텍스트를 전달 하는 방법입니다.
 ms.date: 09/02/2019
-ms.openlocfilehash: 723d877bfbf0c2b0785949ff15939aedbac4d4e9
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 64fa94d1e63af480cbc7363631de161c5b8b8fb8
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971983"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628581"
 ---
-# <a name="metadata"></a><span data-ttu-id="7a812-103">메타데이터</span><span class="sxs-lookup"><span data-stu-id="7a812-103">Metadata</span></span>
+# <a name="metadata"></a><span data-ttu-id="06bd5-103">메타데이터</span><span class="sxs-lookup"><span data-stu-id="06bd5-103">Metadata</span></span>
 
-<span data-ttu-id="7a812-104">"메타 데이터"는 요청 및 응답을 처리 하는 동안 유용할 수 있지만 실제 응용 프로그램 데이터에 포함 되지 않는 추가 데이터를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="7a812-104">"Metadata" refers to additional data that may be useful while processing requests and responses but is not part of the actual application data.</span></span> <span data-ttu-id="7a812-105">메타 데이터에는 모니터링 목적으로 사용할 수 있는 인증 토큰, 요청 식별자 및 태그 또는 데이터 집합의 레코드 수와 같은 데이터에 대 한 정보가 포함 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7a812-105">Metadata might include authentication tokens, request identifiers and tags for monitoring purposes, or information about the data like the number of records in a dataset.</span></span>
+<span data-ttu-id="06bd5-104">*메타 데이터* 는 요청 및 응답을 처리 하는 동안 유용할 수 있지만 실제 응용 프로그램 데이터에 포함 되지 않는 추가 데이터를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="06bd5-104">*Metadata* refers to additional data that might be useful during the processing of requests and responses but that’s not part of the actual application data.</span></span> <span data-ttu-id="06bd5-105">메타 데이터에는 모니터링 목적으로 사용할 수 있는 인증 토큰, 요청 식별자 및 태그, 데이터 집합의 레코드 수와 같은 데이터에 대 한 정보가 포함 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="06bd5-105">Metadata might include authentication tokens, request identifiers and tags for monitoring purposes, and information about the data, like the number of records in a dataset.</span></span>
 
-<span data-ttu-id="7a812-106"><xref:System.ServiceModel.OperationContextScope> 및 <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders?displayProperty=nameWithType> 속성을 사용 하 여 WCF 메시지에 제네릭 키/값 헤더를 추가 하 고 <xref:System.ServiceModel.Channels.MessageProperties>를 사용 하 여 처리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7a812-106">It's possible to add generic key/value headers to WCF messages using an <xref:System.ServiceModel.OperationContextScope> and the <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders?displayProperty=nameWithType> property, and handle them using <xref:System.ServiceModel.Channels.MessageProperties>.</span></span>
+<span data-ttu-id="06bd5-106"><xref:System.ServiceModel.OperationContextScope> 및 <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders?displayProperty=nameWithType> 속성을 사용 하 여 Windows Communication Foundation (WCF) 메시지에 제네릭 키/값 헤더를 추가 하 고 <xref:System.ServiceModel.Channels.MessageProperties>를 사용 하 여 처리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="06bd5-106">It's possible to add generic key/value headers to Windows Communication Foundation (WCF) messages by using an <xref:System.ServiceModel.OperationContextScope> and the <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders?displayProperty=nameWithType> property and handle them by using <xref:System.ServiceModel.Channels.MessageProperties>.</span></span>
 
-<span data-ttu-id="7a812-107">gRPC 호출 및 응답은 HTTP 헤더와 유사한 메타 데이터를 포함할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7a812-107">gRPC calls and responses can also include metadata similar to HTTP headers.</span></span> <span data-ttu-id="7a812-108">이러한 기능은 대부분 gRPC 자체에 표시 되지 않으며 응용 프로그램 코드 또는 미들웨어에서 처리 하기 위해 전달 됩니다.</span><span class="sxs-lookup"><span data-stu-id="7a812-108">These are mostly invisible to gRPC itself and are passed through to be processed by your application code or middleware.</span></span> <span data-ttu-id="7a812-109">메타 데이터는 키가 문자열인 키/값 쌍으로 표시 되 고 값은 문자열 또는 이진 데이터입니다.</span><span class="sxs-lookup"><span data-stu-id="7a812-109">Metadata is represented as key/value pairs where the key is a string and the value is either a string or binary data.</span></span> <span data-ttu-id="7a812-110">`.proto` 파일에서 메타 데이터를 지정할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="7a812-110">You don’t need to specify metadata in the `.proto` file.</span></span>
+<span data-ttu-id="06bd5-107">gRPC 호출 및 응답에는 HTTP 헤더와 유사한 메타 데이터가 포함 될 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="06bd5-107">gRPC calls and responses can also include metadata that's similar to HTTP headers.</span></span> <span data-ttu-id="06bd5-108">이 메타 데이터는 대부분 gRPC 자체에 표시 되지 않으며 응용 프로그램 코드 또는 미들웨어에서 처리 하기 위해 전달 됩니다.</span><span class="sxs-lookup"><span data-stu-id="06bd5-108">This metadata is mostly invisible to gRPC itself and is passed through to be processed by your application code or middleware.</span></span> <span data-ttu-id="06bd5-109">메타 데이터는 키/값 쌍으로 표현 됩니다. 여기서 키는 문자열이 고 값은 문자열 또는 이진 데이터입니다.</span><span class="sxs-lookup"><span data-stu-id="06bd5-109">Metadata is represented as key/value pairs, where the key is a string and the value is either a string or binary data.</span></span> <span data-ttu-id="06bd5-110">`.proto` 파일에서 메타 데이터를 지정할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="06bd5-110">You don’t need to specify metadata in the `.proto` file.</span></span>
 
-<span data-ttu-id="7a812-111">메타 데이터는 [Grpc](https://www.nuget.org/packages/Grpc.Core.Api/) 의 `Metadata` 클래스를 사용 하 여 처리 됩니다.</span><span class="sxs-lookup"><span data-stu-id="7a812-111">Metadata is handled using the `Metadata` class from the [Grpc.Core.Api](https://www.nuget.org/packages/Grpc.Core.Api/) NuGet package.</span></span> <span data-ttu-id="7a812-112">이 클래스는 컬렉션 이니셜라이저 구문과 함께 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7a812-112">This class can be used with collection initializer syntax.</span></span>
+<span data-ttu-id="06bd5-111">메타 데이터는 [Grpc](https://www.nuget.org/packages/Grpc.Core.Api/) 의 `Metadata` 클래스인 NuGet 패키지에서 처리 됩니다.</span><span class="sxs-lookup"><span data-stu-id="06bd5-111">Metadata is handled by the `Metadata` class of the [Grpc.Core.Api](https://www.nuget.org/packages/Grpc.Core.Api/) NuGet package.</span></span> <span data-ttu-id="06bd5-112">이 클래스는 컬렉션 이니셜라이저 구문과 함께 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="06bd5-112">This class can be used with collection initializer syntax.</span></span>
 
-<span data-ttu-id="7a812-113">다음 예제에서는 C# 클라이언트에서 호출에 메타 데이터를 추가 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="7a812-113">The following example shows how to add metadata to a call from a C# client:</span></span>
+<span data-ttu-id="06bd5-113">이 예제에서는 C# 클라이언트에서 호출에 메타 데이터를 추가 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="06bd5-113">This example shows how to add metadata to a call from a C# client:</span></span>
 
 ```csharp
 var metadata = new Metadata
@@ -35,7 +35,7 @@ var request = new GetPortfolioRequest
 var response = await client.GetPortfolioAsync(request, metadata);
 ```
 
-<span data-ttu-id="7a812-114">gRPC 서비스는 `ServerCallContext` 인수의 `RequestHeaders` 속성에서 메타 데이터에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7a812-114">gRPC services can access metadata from the `ServerCallContext` argument's `RequestHeaders` property:</span></span>
+<span data-ttu-id="06bd5-114">gRPC 서비스는 `ServerCallContext` 인수의 `RequestHeaders` 속성에서 메타 데이터에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="06bd5-114">gRPC services can access metadata from the `ServerCallContext` argument's `RequestHeaders` property:</span></span>
 
 ```csharp
 public async Task<GetPortfolioResponse> GetPortfolio(GetPortfolioRequest request, ServerCallContext context)
@@ -49,7 +49,7 @@ public async Task<GetPortfolioResponse> GetPortfolio(GetPortfolioRequest request
 }
 ```
 
-<span data-ttu-id="7a812-115">서비스는 `ServerCallContext`의 `ResponseTrailers` 속성을 사용 하 여 메타 데이터를 클라이언트로 보낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7a812-115">Services can send metadata to clients using the `ResponseTrailers` property of `ServerCallContext`:</span></span>
+<span data-ttu-id="06bd5-115">서비스는 `ServerCallContext`의 `ResponseTrailers` 속성을 사용 하 여 클라이언트에 메타 데이터를 보낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="06bd5-115">Services can send metadata to clients by using the `ResponseTrailers` property of `ServerCallContext`:</span></span>
 
 ```csharp
 public async Task<GetPortfolioResponse> GetPortfolio(GetPortfolioRequest request, ServerCallContext context)
@@ -61,6 +61,6 @@ public async Task<GetPortfolioResponse> GetPortfolio(GetPortfolioRequest request
 ```
 
 >[!div class="step-by-step"]
-><span data-ttu-id="7a812-116">[이전](rpc-types.md)
->[다음](error-handling.md)</span><span class="sxs-lookup"><span data-stu-id="7a812-116">[Previous](rpc-types.md)
+><span data-ttu-id="06bd5-116">[이전](rpc-types.md)
+>[다음](error-handling.md)</span><span class="sxs-lookup"><span data-stu-id="06bd5-116">[Previous](rpc-types.md)
 [Next](error-handling.md)</span></span>
