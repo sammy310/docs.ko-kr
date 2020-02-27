@@ -10,51 +10,51 @@ helpviewer_keywords:
 - Windows Forms, localization
 - localization [Windows Forms], Windows Forms layout
 ms.assetid: d13eff2d-701c-4b6e-8838-3885cbfb7223
-ms.openlocfilehash: 36ffd532b9f539107307144d25c8d9d5f8ba634a
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 9556c03699713b7d14f81a6eacc8e4ab337e869b
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743287"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628633"
 ---
-# <a name="how-to-design-a-windows-forms-layout-that-responds-well-to-localization"></a><span data-ttu-id="71029-102">방법: 지역화에 적합한 Windows Forms 레이아웃 디자인</span><span class="sxs-lookup"><span data-stu-id="71029-102">How to: Design a Windows Forms Layout that Responds Well to Localization</span></span>
-<span data-ttu-id="71029-103">지역화할 준비가 된 폼을 만들면 국제 시장에서 개발 속도를 크게 높일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="71029-103">Creating forms that are ready to be localized greatly speeds development for international markets.</span></span> <span data-ttu-id="71029-104"><xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 사용하여 <xref:System.Windows.Forms.Control.Text%2A> 속성 값 변경 때문에 컨트롤 크기가 조정될 때 정상적으로 응답하는 레이아웃을 구현할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="71029-104">You can use the <xref:System.Windows.Forms.TableLayoutPanel> control to implement layouts that respond gracefully as controls resize due to changes in their <xref:System.Windows.Forms.Control.Text%2A> property values.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="71029-105">예제</span><span class="sxs-lookup"><span data-stu-id="71029-105">Example</span></span>  
- <span data-ttu-id="71029-106">이 폼에서는 표시된 문자열 값을 다른 언어로 번역할 때 비례하여 조정되는 레이아웃을 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="71029-106">This form demonstrates how to create a layout that proportionally adjusts when you translate displayed string values into other languages.</span></span> <span data-ttu-id="71029-107">이 번역 프로세스를 *지역화*라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="71029-107">This process of translation is called *localization*.</span></span> <span data-ttu-id="71029-108">자세한 내용은 [지역화](../../../standard/globalization-localization/localization.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="71029-108">For more information, see [Localization](../../../standard/globalization-localization/localization.md).</span></span>  
-  
- <span data-ttu-id="71029-109">Visual Studio에서는 이 작업이 광범위하게 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="71029-109">There is extensive support for this task in Visual Studio.</span></span>  <span data-ttu-id="71029-110">또한 [연습: 지역화를 위해 비율을 조정하는 레이아웃 만들기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="71029-110">See also [Walkthrough: Creating a Layout That Adjusts Proportion for Localization](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100)).</span></span>  
-  
+# <a name="how-to-design-a-windows-forms-layout-that-responds-well-to-localization"></a><span data-ttu-id="d8a6b-102">방법: 지역화에 적합한 Windows Forms 레이아웃 디자인</span><span class="sxs-lookup"><span data-stu-id="d8a6b-102">How to: Design a Windows Forms Layout that Responds Well to Localization</span></span>
+<span data-ttu-id="d8a6b-103">지역화할 준비가 된 폼을 만들면 국제 시장에서 개발 속도를 크게 높일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d8a6b-103">Creating forms that are ready to be localized greatly speeds development for international markets.</span></span> <span data-ttu-id="d8a6b-104"><xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 사용하여 <xref:System.Windows.Forms.Control.Text%2A> 속성 값 변경 때문에 컨트롤 크기가 조정될 때 정상적으로 응답하는 레이아웃을 구현할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d8a6b-104">You can use the <xref:System.Windows.Forms.TableLayoutPanel> control to implement layouts that respond gracefully as controls resize due to changes in their <xref:System.Windows.Forms.Control.Text%2A> property values.</span></span>
+
+## <a name="example"></a><span data-ttu-id="d8a6b-105">예제</span><span class="sxs-lookup"><span data-stu-id="d8a6b-105">Example</span></span>
+ <span data-ttu-id="d8a6b-106">이 폼에서는 표시된 문자열 값을 다른 언어로 번역할 때 비례하여 조정되는 레이아웃을 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d8a6b-106">This form demonstrates how to create a layout that proportionally adjusts when you translate displayed string values into other languages.</span></span> <span data-ttu-id="d8a6b-107">이 번역 프로세스를 *지역화*라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8a6b-107">This process of translation is called *localization*.</span></span> <span data-ttu-id="d8a6b-108">자세한 내용은 [지역화](../../../standard/globalization-localization/localization.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d8a6b-108">For more information, see [Localization](../../../standard/globalization-localization/localization.md).</span></span>
+
+ <span data-ttu-id="d8a6b-109">Visual Studio에서는 이 작업이 광범위하게 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="d8a6b-109">There is extensive support for this task in Visual Studio.</span></span>  <span data-ttu-id="d8a6b-110">또한 [연습: 지역화를 위해 비율을 조정하는 레이아웃 만들기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d8a6b-110">See also [Walkthrough: Creating a Layout That Adjusts Proportion for Localization](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100)).</span></span>
+
  [!code-csharp[System.Windows.Forms.TableLayoutPanel.LocalizableForm#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.LocalizableForm/CS/localizableform.cs#1)]
- [!code-vb[System.Windows.Forms.TableLayoutPanel.LocalizableForm#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.LocalizableForm/VB/localizableform.vb#1)]  
-  
-## <a name="additional-resources"></a><span data-ttu-id="71029-111">추가 자료</span><span class="sxs-lookup"><span data-stu-id="71029-111">Additional resources</span></span>
+ [!code-vb[System.Windows.Forms.TableLayoutPanel.LocalizableForm#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.LocalizableForm/VB/localizableform.vb#1)]
 
-1. [<span data-ttu-id="71029-112">방법: TableLayoutPanel 컨트롤의 컨트롤 맞춤 및 늘이기</span><span class="sxs-lookup"><span data-stu-id="71029-112">How to: Align and Stretch a Control in a TableLayoutPanel Control</span></span>](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
-  
-2. [<span data-ttu-id="71029-113">연습: FlowLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬</span><span class="sxs-lookup"><span data-stu-id="71029-113">Walkthrough: Arranging Controls on Windows Forms Using a FlowLayoutPanel</span></span>](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
+## <a name="additional-resources"></a><span data-ttu-id="d8a6b-111">추가 리소스</span><span class="sxs-lookup"><span data-stu-id="d8a6b-111">Additional resources</span></span>
 
-3. [<span data-ttu-id="71029-114">방법: TableLayoutPanel 컨트롤에서 행과 열 확장</span><span class="sxs-lookup"><span data-stu-id="71029-114">How to: Span Rows and Columns in a TableLayoutPanel Control</span></span>](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
-  
-4. [<span data-ttu-id="71029-115">방법: TableLayoutPanel 컨트롤에서 열과 행 편집</span><span class="sxs-lookup"><span data-stu-id="71029-115">How to: Edit Columns and Rows in a TableLayoutPanel Control</span></span>](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
-  
-5. [<span data-ttu-id="71029-116">연습: Windows Forms 컨트롤에서 스마트 태그를 사용하여 일반 작업 수행</span><span class="sxs-lookup"><span data-stu-id="71029-116">Walkthrough: Performing Common Tasks Using Smart Tags on Windows Forms Controls</span></span>](performing-common-tasks-using-smart-tags-on-wf-controls.md)  
-  
-6. [<span data-ttu-id="71029-117">연습: TableLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬</span><span class="sxs-lookup"><span data-stu-id="71029-117">Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel</span></span>](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+1. [<span data-ttu-id="d8a6b-112">방법: TableLayoutPanel 컨트롤의 컨트롤 맞춤 및 늘이기</span><span class="sxs-lookup"><span data-stu-id="d8a6b-112">How to: Align and Stretch a Control in a TableLayoutPanel Control</span></span>](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)
 
-7. [<span data-ttu-id="71029-118">연습: Padding, Margins 및 AutoSize 속성을 사용하여 Windows Forms 컨트롤 레이아웃</span><span class="sxs-lookup"><span data-stu-id="71029-118">Walkthrough: Laying Out Windows Forms Controls with Padding, Margins, and the AutoSize Property</span></span>](windows-forms-controls-padding-autosize.md)  
-  
-8. <span data-ttu-id="71029-119">[방법: AutoSize 속성과 TableLayoutPanel 컨트롤을 사용하여 Windows Forms 지역화 지원](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="71029-119">[How to: Support Localization on Windows Forms Using AutoSize and the TableLayoutPanel Control](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))</span></span>  
-  
-9. <span data-ttu-id="71029-120">[연습: 데이터를 입력할 수 있는 크기 조정 가능한 Windows Form 만들기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="71029-120">[Walkthrough: Creating a Resizable Windows Form for Data Entry](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100))</span></span>  
-  
-## <a name="compiling-the-code"></a><span data-ttu-id="71029-121">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="71029-121">Compiling the Code</span></span>  
- <span data-ttu-id="71029-122">이 예제에는 다음 사항이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="71029-122">This example requires:</span></span>  
-  
-- <span data-ttu-id="71029-123">System, System.Data, System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조</span><span class="sxs-lookup"><span data-stu-id="71029-123">References to the System, System.Data, System.Drawing and System.Windows.Forms assemblies.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="71029-124">참고 항목</span><span class="sxs-lookup"><span data-stu-id="71029-124">See also</span></span>
+2. [<span data-ttu-id="d8a6b-113">연습: FlowLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬</span><span class="sxs-lookup"><span data-stu-id="d8a6b-113">Walkthrough: Arranging Controls on Windows Forms Using a FlowLayoutPanel</span></span>](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+
+3. [<span data-ttu-id="d8a6b-114">방법: TableLayoutPanel 컨트롤에서 행과 열 확장</span><span class="sxs-lookup"><span data-stu-id="d8a6b-114">How to: Span Rows and Columns in a TableLayoutPanel Control</span></span>](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)
+
+4. [<span data-ttu-id="d8a6b-115">방법: TableLayoutPanel 컨트롤에서 열과 행 편집</span><span class="sxs-lookup"><span data-stu-id="d8a6b-115">How to: Edit Columns and Rows in a TableLayoutPanel Control</span></span>](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)
+
+5. [<span data-ttu-id="d8a6b-116">연습: 디자이너 작업을 사용 하 여 일반 작업 수행</span><span class="sxs-lookup"><span data-stu-id="d8a6b-116">Walkthrough: Perform common tasks using designer actions</span></span>](perform-common-tasks-design-actions.md)
+
+6. [<span data-ttu-id="d8a6b-117">연습: TableLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬</span><span class="sxs-lookup"><span data-stu-id="d8a6b-117">Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel</span></span>](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+
+7. [<span data-ttu-id="d8a6b-118">연습: Padding, Margins 및 AutoSize 속성을 사용하여 Windows Forms 컨트롤 레이아웃</span><span class="sxs-lookup"><span data-stu-id="d8a6b-118">Walkthrough: Laying Out Windows Forms Controls with Padding, Margins, and the AutoSize Property</span></span>](windows-forms-controls-padding-autosize.md)
+
+8. <span data-ttu-id="d8a6b-119">[방법: AutoSize 속성과 TableLayoutPanel 컨트롤을 사용하여 Windows Forms 지역화 지원](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="d8a6b-119">[How to: Support Localization on Windows Forms Using AutoSize and the TableLayoutPanel Control](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))</span></span>
+
+9. <span data-ttu-id="d8a6b-120">[연습: 데이터를 입력할 수 있는 크기 조정 가능한 Windows Form 만들기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="d8a6b-120">[Walkthrough: Creating a Resizable Windows Form for Data Entry](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100))</span></span>
+
+## <a name="compiling-the-code"></a><span data-ttu-id="d8a6b-121">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="d8a6b-121">Compiling the Code</span></span>
+ <span data-ttu-id="d8a6b-122">이 예제에는 다음 사항이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="d8a6b-122">This example requires:</span></span>
+
+- <span data-ttu-id="d8a6b-123">System, System.Data, System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조</span><span class="sxs-lookup"><span data-stu-id="d8a6b-123">References to the System, System.Data, System.Drawing and System.Windows.Forms assemblies.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="d8a6b-124">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d8a6b-124">See also</span></span>
 
 - <xref:System.Windows.Forms.TableLayoutPanel>
 - <xref:System.Windows.Forms.FlowLayoutPanel>
-- [<span data-ttu-id="71029-125">지역화</span><span class="sxs-lookup"><span data-stu-id="71029-125">Localization</span></span>](../../../standard/globalization-localization/localization.md)
+- [<span data-ttu-id="d8a6b-125">지역화</span><span class="sxs-lookup"><span data-stu-id="d8a6b-125">Localization</span></span>](../../../standard/globalization-localization/localization.md)
