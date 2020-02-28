@@ -82,8 +82,6 @@
       href: tour-of-csharp/statements.md
     - name: 클래스 및 개체
       href: tour-of-csharp/classes-and-objects.md
-    - name: 구조체
-      href: tour-of-csharp/structs.md
     - name: 배열
       href: tour-of-csharp/arrays.md
     - name: 인터페이스
@@ -129,8 +127,6 @@
       href: basic-types.md
     - name: 클래스
       href: programming-guide/classes-and-structs/classes.md
-    - name: 구조체
-      href: structs.md
     - name: 튜플
       href: tuples.md
     - name: 튜플 및 기타 형식 분해
@@ -941,19 +937,12 @@
     - name: 클래스 및 구조체
       items:
         - name: 개요
-          displayName: classes structs
+          displayName: classes
           href: programming-guide/classes-and-structs/index.md
         - name: 클래스
           href: programming-guide/classes-and-structs/classes.md
         - name: 개체
           href: programming-guide/classes-and-structs/objects.md
-        - name: 구조체
-          items:
-            - name: 개요
-              displayName: structs
-              href: programming-guide/classes-and-structs/structs.md
-            - name: 구조체 사용
-              href: programming-guide/classes-and-structs/using-structs.md
         - name: 상속
           href: programming-guide/classes-and-structs/inheritance.md
         - name: 다형성

@@ -1,62 +1,73 @@
 ---
 title: dotnet tool list 명령
-description: dotnet tool list 명령은 컴퓨터에서 지정한 .NET Core Global Tool을 나열합니다.
-ms.date: 05/29/2018
-ms.openlocfilehash: 6d35b1dce0c6d57edb0c6dd5f9711f093bc804aa
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+description: dotnet tool list 명령은 컴퓨터에 설치된 .NET Core 도구를 나열합니다.
+ms.date: 02/14/2020
+ms.openlocfilehash: bb74cfeaf441cf8a1a030d97d16655f85d8267d1
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117555"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543458"
 ---
-# <a name="dotnet-tool-list"></a><span data-ttu-id="d2e3b-103">dotnet tool list</span><span class="sxs-lookup"><span data-stu-id="d2e3b-103">dotnet tool list</span></span>
+# <a name="dotnet-tool-list"></a><span data-ttu-id="b9f4c-103">dotnet tool list</span><span class="sxs-lookup"><span data-stu-id="b9f4c-103">dotnet tool list</span></span>
 
-[!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
+<span data-ttu-id="b9f4c-104">**이 문서의 적용 대상:**  ✔️ .NET Core 2.1 SDK 이상 버전</span><span class="sxs-lookup"><span data-stu-id="b9f4c-104">**This article applies to:** ✔️ .NET Core 2.1 SDK and later versions</span></span>
 
-## <a name="name"></a><span data-ttu-id="d2e3b-104">name</span><span class="sxs-lookup"><span data-stu-id="d2e3b-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="b9f4c-105">이름</span><span class="sxs-lookup"><span data-stu-id="b9f4c-105">Name</span></span>
 
-<span data-ttu-id="d2e3b-105">`dotnet tool list` - 컴퓨터의 기본 디렉터리 또는 지정된 경로에 현재 설치된 모든 [.NET Core Global Tool](global-tools.md)을 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="d2e3b-105">`dotnet tool list` - Lists all [.NET Core Global Tools](global-tools.md) currently installed in the default directory on your machine or in the specified path.</span></span>
+<span data-ttu-id="b9f4c-106">`dotnet tool list` - 컴퓨터에 현재 설치되어 있는 지정된 유형의 모든 [.NET Core 도구](global-tools.md)를 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="b9f4c-106">`dotnet tool list` - Lists all [.NET Core tools](global-tools.md) of the specified type currently installed on your machine.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="d2e3b-106">개요</span><span class="sxs-lookup"><span data-stu-id="d2e3b-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="b9f4c-107">개요</span><span class="sxs-lookup"><span data-stu-id="b9f4c-107">Synopsis</span></span>
 
 ```dotnetcli
 dotnet tool list <-g|--global>
 dotnet tool list <--tool-path>
+dotnet tool list
 dotnet tool list <-h|--help>
 ```
 
-## <a name="description"></a><span data-ttu-id="d2e3b-107">설명</span><span class="sxs-lookup"><span data-stu-id="d2e3b-107">Description</span></span>
+## <a name="description"></a><span data-ttu-id="b9f4c-108">설명</span><span class="sxs-lookup"><span data-stu-id="b9f4c-108">Description</span></span>
 
-<span data-ttu-id="d2e3b-108">`dotnet tool list` 명령은 컴퓨터(현재 사용자 프로필) 또는 지정된 경로에 사용자 수준에서 설치된 모든.NET Core Global Tool을 나열하는 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="d2e3b-108">The `dotnet tool list` command provides a way for you to list all .NET Core Global Tools installed user-wide on your machine (current user profile) or in the specified path.</span></span> <span data-ttu-id="d2e3b-109">이 명령은 패키지 이름, 설치된 버전 및 Global Tool 명령을 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="d2e3b-109">The command lists the package name, version installed, and the Global Tool command.</span></span> <span data-ttu-id="d2e3b-110">목록 명령을 사용하려면 `--global` 옵션을 사용하여 모든 사용자 수준 도구를 표시하도록 지정하거나 `--tool-path` 옵션을 사용하여 사용자 지정 경로를 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d2e3b-110">To use the list command, you either have to specify that you want to see all user-wide tools using the `--global` option or specify a custom path using the `--tool-path` option.</span></span>
+<span data-ttu-id="b9f4c-109">`dotnet tool list` 명령은 컴퓨터에 설치된 모든 .NET Core 전역, 도구 경로 또는 로컬 도구를 나열하는 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="b9f4c-109">The `dotnet tool list` command provides a way for you to list all .NET Core global, tool-path, or local Tools installed on your machine.</span></span> <span data-ttu-id="b9f4c-110">이 명령은 패키지 이름, 설치된 버전 및 도구 명령을 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="b9f4c-110">The command lists the package name, version installed, and the tool command.</span></span>  <span data-ttu-id="b9f4c-111">이 명령을 사용하려면 다음 중 하나를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="b9f4c-111">To use the command, you specify one of the following:</span></span>
 
-## <a name="options"></a><span data-ttu-id="d2e3b-111">옵션</span><span class="sxs-lookup"><span data-stu-id="d2e3b-111">Options</span></span>
+* <span data-ttu-id="b9f4c-112">기본 위치에 설치된 전역 도구입니다.</span><span class="sxs-lookup"><span data-stu-id="b9f4c-112">A global tool installed in the default location.</span></span> <span data-ttu-id="b9f4c-113">`--global` 옵션을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="b9f4c-113">Use the `--global` option</span></span>
+* <span data-ttu-id="b9f4c-114">사용자 지정 위치에 설치된 전역 도구입니다.</span><span class="sxs-lookup"><span data-stu-id="b9f4c-114">A global tool installed in a custom location.</span></span> <span data-ttu-id="b9f4c-115">`--tool-path` 옵션을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="b9f4c-115">Use the `--tool-path` option.</span></span>
+* <span data-ttu-id="b9f4c-116">로컬 도구입니다.</span><span class="sxs-lookup"><span data-stu-id="b9f4c-116">A local tool.</span></span> <span data-ttu-id="b9f4c-117">`--global` 및 `--tool-path` 옵션을 생략합니다.</span><span class="sxs-lookup"><span data-stu-id="b9f4c-117">Omit the `--global` and `--tool-path` options.</span></span>
 
-`-g|--global`
+<span data-ttu-id="b9f4c-118">**로컬 도구는 .NET Core SDK 3.0부터 사용할 수 있습니다.**</span><span class="sxs-lookup"><span data-stu-id="b9f4c-118">**Local tools are available starting with .NET Core SDK 3.0.**</span></span>
 
-<span data-ttu-id="d2e3b-112">사용자 수준 Global Tool을 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="d2e3b-112">Lists user-wide Global Tools.</span></span> <span data-ttu-id="d2e3b-113">`--tool-path` 옵션과 함께 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="d2e3b-113">Can't be combined with the `--tool-path` option.</span></span> <span data-ttu-id="d2e3b-114">이 옵션을 지정하지 않으면 `--tool-path` 옵션을 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d2e3b-114">If you don't specify this option, you must specify the `--tool-path` option.</span></span>
+## <a name="options"></a><span data-ttu-id="b9f4c-119">옵션</span><span class="sxs-lookup"><span data-stu-id="b9f4c-119">Options</span></span>
 
-`-h|--help`
+- **`-g|--global`**
 
-<span data-ttu-id="d2e3b-115">명령에 대한 간단한 도움말을 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="d2e3b-115">Prints out a short help for the command.</span></span>
+  <span data-ttu-id="b9f4c-120">사용자 수준 전역 도구를 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="b9f4c-120">Lists user-wide global tools.</span></span> <span data-ttu-id="b9f4c-121">`--tool-path` 옵션과 함께 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b9f4c-121">Can't be combined with the `--tool-path` option.</span></span> <span data-ttu-id="b9f4c-122">`--global` 및 `--tool-path` 옵션을 모두 생략하면 로컬 도구가 나열됩니다.</span><span class="sxs-lookup"><span data-stu-id="b9f4c-122">Omitting both `--global` and `--tool-path` lists local tools.</span></span> 
 
-`--tool-path <PATH>`
+- **`-h|--help`**
 
-<span data-ttu-id="d2e3b-116">Global Tool을 찾을 사용자 지정 위치를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="d2e3b-116">Specifies a custom location where to find Global Tools.</span></span> <span data-ttu-id="d2e3b-117">PATH는 절대적이거나 상대적일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d2e3b-117">PATH can be absolute or relative.</span></span> <span data-ttu-id="d2e3b-118">`--global` 옵션과 함께 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="d2e3b-118">Can't be combined with the `--global` option.</span></span> <span data-ttu-id="d2e3b-119">이 옵션을 지정하지 않으면 `--global` 옵션을 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d2e3b-119">If you don't specify this option, you must specify the `--global` option.</span></span>
+  <span data-ttu-id="b9f4c-123">명령에 대한 간단한 도움말을 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="b9f4c-123">Prints out a short help for the command.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="d2e3b-120">예제</span><span class="sxs-lookup"><span data-stu-id="d2e3b-120">Examples</span></span>
+- **`--tool-path <PATH>`**
 
-<span data-ttu-id="d2e3b-121">사용자 수준 컴퓨터에 설치된 모든 Global Tool을 나열합니다(현재 사용자 프로필).</span><span class="sxs-lookup"><span data-stu-id="d2e3b-121">Lists all Global Tools installed user-wide on your machine (current user profile):</span></span>
+  <span data-ttu-id="b9f4c-124">전역 도구를 찾을 사용자 지정 위치를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="b9f4c-124">Specifies a custom location where to find global tools.</span></span> <span data-ttu-id="b9f4c-125">PATH는 절대적이거나 상대적일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b9f4c-125">PATH can be absolute or relative.</span></span> <span data-ttu-id="b9f4c-126">`--global` 옵션과 함께 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b9f4c-126">Can't be combined with the `--global` option.</span></span> <span data-ttu-id="b9f4c-127">`--global` 및 `--tool-path` 옵션을 모두 생략하면 로컬 도구가 나열됩니다.</span><span class="sxs-lookup"><span data-stu-id="b9f4c-127">Omitting both `--global` and `--tool-path` lists local tools.</span></span> 
 
-`dotnet tool list -g`
+## <a name="examples"></a><span data-ttu-id="b9f4c-128">예</span><span class="sxs-lookup"><span data-stu-id="b9f4c-128">Examples</span></span>
 
-<span data-ttu-id="d2e3b-122">특정 Windows 폴더의 Global Tool을 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="d2e3b-122">Lists the Global Tools from a specific Windows folder:</span></span>
+- **`dotnet tool list -g`**
 
-`dotnet tool list --tool-path c:\global-tools`
+  <span data-ttu-id="b9f4c-129">사용자 수준에서 컴퓨터에 설치된 모든 전역 도구를 나열합니다(현재 사용자 프로필).</span><span class="sxs-lookup"><span data-stu-id="b9f4c-129">Lists all global tools installed user-wide on your machine (current user profile).</span></span>
 
-<span data-ttu-id="d2e3b-123">특정 Linux/macOS 폴더의 Global Tool을 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="d2e3b-123">Lists the Global Tools from a specific Linux/macOS folder:</span></span>
+- **`dotnet tool list --tool-path c:\global-tools`**
 
-`dotnet tool list --tool-path ~/bin`
+  <span data-ttu-id="b9f4c-130">특정 Windows 디렉터리의 전역 도구를 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="b9f4c-130">Lists the global tools from a specific Windows directory.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="d2e3b-124">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d2e3b-124">See also</span></span>
+- **`dotnet tool list --tool-path ~/bin`**
 
-- [<span data-ttu-id="d2e3b-125">.NET Core Global Tool</span><span class="sxs-lookup"><span data-stu-id="d2e3b-125">.NET Core Global Tools</span></span>](global-tools.md)
+  <span data-ttu-id="b9f4c-131">특정 Linux/macOS 디렉터리의 전역 도구를 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="b9f4c-131">Lists the global tools from a specific Linux/macOS directory.</span></span>
+
+- **`dotnet tool list`**
+
+  <span data-ttu-id="b9f4c-132">현재 디렉터리에서 사용할 수 있는 모든 로컬 도구를 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="b9f4c-132">Lists all local tools available in the current directory.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="b9f4c-133">참조</span><span class="sxs-lookup"><span data-stu-id="b9f4c-133">See also</span></span>
+
+- [<span data-ttu-id="b9f4c-134">.NET Core 도구</span><span class="sxs-lookup"><span data-stu-id="b9f4c-134">.NET Core tools</span></span>](global-tools.md)

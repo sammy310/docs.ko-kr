@@ -1,84 +1,90 @@
 ---
 title: dotnet store 명령
 description: "'dotnet store' 명령은 지정된 어셈블리를 런타임 패키지 저장소에 저장합니다."
-ms.date: 05/29/2018
-ms.openlocfilehash: cc5b4b6160ba296e1529f006c15e238746d9e08a
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: da1d132b2b873ff55ec104b5bb092d0194889bdc
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733056"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503588"
 ---
-# <a name="dotnet-store"></a><span data-ttu-id="d1bba-103">dotnet store</span><span class="sxs-lookup"><span data-stu-id="d1bba-103">dotnet store</span></span>
+# <a name="dotnet-store"></a><span data-ttu-id="d8c17-103">dotnet store</span><span class="sxs-lookup"><span data-stu-id="d8c17-103">dotnet store</span></span>
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-2plus.md)]
+<span data-ttu-id="d8c17-104">**이 문서의 적용 대상:** ✔️ .NET Core 2.x SDK 이상 버전</span><span class="sxs-lookup"><span data-stu-id="d8c17-104">**This article applies to:** ✔️ .NET Core 2.x SDK and later versions</span></span>
 
-## <a name="name"></a><span data-ttu-id="d1bba-104">이름</span><span class="sxs-lookup"><span data-stu-id="d1bba-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="d8c17-105">이름</span><span class="sxs-lookup"><span data-stu-id="d8c17-105">Name</span></span>
 
-<span data-ttu-id="d1bba-105">`dotnet store` - 지정된 어셈블리를 [런타임 패키지 저장소](../deploying/runtime-store.md)에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="d1bba-105">`dotnet store` - Stores the specified assemblies in the [runtime package store](../deploying/runtime-store.md).</span></span>
+<span data-ttu-id="d8c17-106">`dotnet store` - 지정된 어셈블리를 [런타임 패키지 저장소](../deploying/runtime-store.md)에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c17-106">`dotnet store` - Stores the specified assemblies in the [runtime package store](../deploying/runtime-store.md).</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="d1bba-106">개요</span><span class="sxs-lookup"><span data-stu-id="d1bba-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="d8c17-107">개요</span><span class="sxs-lookup"><span data-stu-id="d8c17-107">Synopsis</span></span>
 
-`dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-h|--help] [--output] [--skip-optimization] [--skip-symbols] [-v|--verbosity] [--working-dir]`
+```dotnetcli
+dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-h|--help] [--output] [--skip-optimization] [--skip-symbols] [-v|--verbosity] [--working-dir]
+```
 
-## <a name="description"></a><span data-ttu-id="d1bba-107">설명</span><span class="sxs-lookup"><span data-stu-id="d1bba-107">Description</span></span>
+## <a name="description"></a><span data-ttu-id="d8c17-108">설명</span><span class="sxs-lookup"><span data-stu-id="d8c17-108">Description</span></span>
 
-<span data-ttu-id="d1bba-108">`dotnet store`는 지정된 어셈블리를 [런타임 패키지 저장소](../deploying/runtime-store.md)에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="d1bba-108">`dotnet store` stores the specified assemblies in the [runtime package store](../deploying/runtime-store.md).</span></span> <span data-ttu-id="d1bba-109">기본적으로 어셈블리는 대상 런타임 및 프레임워크에 최적화됩니다.</span><span class="sxs-lookup"><span data-stu-id="d1bba-109">By default, assemblies are optimized for the target runtime and framework.</span></span> <span data-ttu-id="d1bba-110">자세한 내용은 [런타임 패키지 저장소](../deploying/runtime-store.md) 항목을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d1bba-110">For more information, see the [runtime package store](../deploying/runtime-store.md) topic.</span></span>
+<span data-ttu-id="d8c17-109">`dotnet store`는 지정된 어셈블리를 [런타임 패키지 저장소](../deploying/runtime-store.md)에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c17-109">`dotnet store` stores the specified assemblies in the [runtime package store](../deploying/runtime-store.md).</span></span> <span data-ttu-id="d8c17-110">기본적으로 어셈블리는 대상 런타임 및 프레임워크에 최적화됩니다.</span><span class="sxs-lookup"><span data-stu-id="d8c17-110">By default, assemblies are optimized for the target runtime and framework.</span></span> <span data-ttu-id="d8c17-111">자세한 내용은 [런타임 패키지 저장소](../deploying/runtime-store.md) 항목을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d8c17-111">For more information, see the [runtime package store](../deploying/runtime-store.md) topic.</span></span>
 
-## <a name="required-options"></a><span data-ttu-id="d1bba-111">필수 옵션</span><span class="sxs-lookup"><span data-stu-id="d1bba-111">Required options</span></span>
+## <a name="required-options"></a><span data-ttu-id="d8c17-112">필수 옵션</span><span class="sxs-lookup"><span data-stu-id="d8c17-112">Required options</span></span>
 
-`-f|--framework <FRAMEWORK>`
+- **`-f|--framework <FRAMEWORK>`**
 
-<span data-ttu-id="d1bba-112">[대상 프레임워크](../../standard/frameworks.md)를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="d1bba-112">Specifies the [target framework](../../standard/frameworks.md).</span></span>
+  <span data-ttu-id="d8c17-113">[대상 프레임워크](../../standard/frameworks.md)를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c17-113">Specifies the [target framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="d8c17-114">대상 프레임워크는 프로젝트 파일에 지정되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c17-114">The target framework has to be specified in the project file.</span></span>
 
-`-m|--manifest <PATH_TO_MANIFEST_FILE>`
+- **`-m|--manifest <PATH_TO_MANIFEST_FILE>`**
 
-<span data-ttu-id="d1bba-113">*패키지 저장소 매니페스트 파일*은 저장할 패키지 목록이 포함된 XML 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="d1bba-113">The *package store manifest file* is an XML file that contains the list of packages to store.</span></span> <span data-ttu-id="d1bba-114">매니페스트 파일 형식은 SDK 스타일 프로젝트 형식과 호환됩니다.</span><span class="sxs-lookup"><span data-stu-id="d1bba-114">The format of the manifest file is compatible with the SDK-style project format.</span></span> <span data-ttu-id="d1bba-115">따라서 원하는 패키지를 참조하는 프로젝트 파일을 `-m|--manifest` 옵션과 함께 사용하여 런타임 패키지 저장소에 어셈블리를 저장할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d1bba-115">So, a project file that references the desired packages can be used with the `-m|--manifest` option to store assemblies in the runtime package store.</span></span> <span data-ttu-id="d1bba-116">여러 매니페스트 파일을 지정하려면 각 파일에 대해 옵션 및 경로를 반복합니다.</span><span class="sxs-lookup"><span data-stu-id="d1bba-116">To specify multiple manifest files, repeat the option and path for each file.</span></span> <span data-ttu-id="d1bba-117">예를 들어 `--manifest packages1.csproj --manifest packages2.csproj`을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="d1bba-117">For example: `--manifest packages1.csproj --manifest packages2.csproj`.</span></span>
+  <span data-ttu-id="d8c17-115">*패키지 저장소 매니페스트 파일*은 저장할 패키지 목록이 포함된 XML 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="d8c17-115">The *package store manifest file* is an XML file that contains the list of packages to store.</span></span> <span data-ttu-id="d8c17-116">매니페스트 파일 형식은 SDK 스타일 프로젝트 형식과 호환됩니다.</span><span class="sxs-lookup"><span data-stu-id="d8c17-116">The format of the manifest file is compatible with the SDK-style project format.</span></span> <span data-ttu-id="d8c17-117">따라서 원하는 패키지를 참조하는 프로젝트 파일을 `-m|--manifest` 옵션과 함께 사용하여 런타임 패키지 저장소에 어셈블리를 저장할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d8c17-117">So, a project file that references the desired packages can be used with the `-m|--manifest` option to store assemblies in the runtime package store.</span></span> <span data-ttu-id="d8c17-118">여러 매니페스트 파일을 지정하려면 각 파일에 대해 옵션 및 경로를 반복합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c17-118">To specify multiple manifest files, repeat the option and path for each file.</span></span> <span data-ttu-id="d8c17-119">예를 들어 `--manifest packages1.csproj --manifest packages2.csproj`을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="d8c17-119">For example: `--manifest packages1.csproj --manifest packages2.csproj`.</span></span>
 
-`-r|--runtime <RUNTIME_IDENTIFIER>`
+- **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-<span data-ttu-id="d1bba-118">대상으로 지정할 [런타임 식별자](../rid-catalog.md)입니다.</span><span class="sxs-lookup"><span data-stu-id="d1bba-118">The [runtime identifier](../rid-catalog.md) to target.</span></span>
+  <span data-ttu-id="d8c17-120">대상으로 지정할 [런타임 식별자](../rid-catalog.md)입니다.</span><span class="sxs-lookup"><span data-stu-id="d8c17-120">The [runtime identifier](../rid-catalog.md) to target.</span></span>
 
-## <a name="optional-options"></a><span data-ttu-id="d1bba-119">선택적 옵션</span><span class="sxs-lookup"><span data-stu-id="d1bba-119">Optional options</span></span>
+## <a name="optional-options"></a><span data-ttu-id="d8c17-121">선택적 옵션</span><span class="sxs-lookup"><span data-stu-id="d8c17-121">Optional options</span></span>
 
-`--framework-version <FRAMEWORK_VERSION>`
+- **`--framework-version <FRAMEWORK_VERSION>`**
 
-<span data-ttu-id="d1bba-120">.NET Core SDK 버전을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="d1bba-120">Specifies the .NET Core SDK version.</span></span> <span data-ttu-id="d1bba-121">이 옵션을 사용하여 `-f|--framework` 옵션을 통해 지정된 프레임워크가 아닌 특정 프레임워크 버전을 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d1bba-121">This option enables you to select a specific framework version beyond the framework specified by the `-f|--framework` option.</span></span>
+  <span data-ttu-id="d8c17-122">.NET Core SDK 버전을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c17-122">Specifies the .NET Core SDK version.</span></span> <span data-ttu-id="d8c17-123">이 옵션을 사용하여 `-f|--framework` 옵션을 통해 지정된 프레임워크가 아닌 특정 프레임워크 버전을 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d8c17-123">This option enables you to select a specific framework version beyond the framework specified by the `-f|--framework` option.</span></span>
 
-`-h|--help`
+- **`-h|--help`**
 
-<span data-ttu-id="d1bba-122">도움말 정보를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="d1bba-122">Shows help information.</span></span>
+  <span data-ttu-id="d8c17-124">도움말 정보를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c17-124">Shows help information.</span></span>
 
-`-o|--output <OUTPUT_DIRECTORY>`
+- **`-o|--output <OUTPUT_DIRECTORY>`**
 
-<span data-ttu-id="d1bba-123">런타임 패키지 저장소의 경로를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="d1bba-123">Specifies the path to the runtime package store.</span></span> <span data-ttu-id="d1bba-124">지정하지 않으면 기본적으로 사용자 프로필 .NET Core 설치 디렉터리의 *store* 하위 디렉터리가 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="d1bba-124">If not specified, it defaults to the *store* subdirectory of the user profile .NET Core installation directory.</span></span>
+  <span data-ttu-id="d8c17-125">런타임 패키지 저장소의 경로를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c17-125">Specifies the path to the runtime package store.</span></span> <span data-ttu-id="d8c17-126">지정하지 않으면 기본적으로 사용자 프로필 .NET Core 설치 디렉터리의 *store* 하위 디렉터리가 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="d8c17-126">If not specified, it defaults to the *store* subdirectory of the user profile .NET Core installation directory.</span></span>
 
-`--skip-optimization`
+- **`--skip-optimization`**
 
-<span data-ttu-id="d1bba-125">최적화 단계를 건너뜁니다.</span><span class="sxs-lookup"><span data-stu-id="d1bba-125">Skips the optimization phase.</span></span>
+  <span data-ttu-id="d8c17-127">최적화 단계를 건너뜁니다.</span><span class="sxs-lookup"><span data-stu-id="d8c17-127">Skips the optimization phase.</span></span>
 
-`--skip-symbols`
+- **`--skip-symbols`**
 
-<span data-ttu-id="d1bba-126">기호 생성을 건너뜁니다.</span><span class="sxs-lookup"><span data-stu-id="d1bba-126">Skips symbol generation.</span></span> <span data-ttu-id="d1bba-127">현재 Windows 및 Linux에서만 기호를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="d1bba-127">Currently, you can only generate symbols on Windows and Linux.</span></span>
+  <span data-ttu-id="d8c17-128">기호 생성을 건너뜁니다.</span><span class="sxs-lookup"><span data-stu-id="d8c17-128">Skips symbol generation.</span></span> <span data-ttu-id="d8c17-129">현재 Windows 및 Linux에서만 기호를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c17-129">Currently, you can only generate symbols on Windows and Linux.</span></span>
 
-`-v|--verbosity <LEVEL>`
+- **`-v|--verbosity <LEVEL>`**
 
-<span data-ttu-id="d1bba-128">명령의 세부 정보 표시 수준을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="d1bba-128">Sets the verbosity level of the command.</span></span> <span data-ttu-id="d1bba-129">허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다.</span><span class="sxs-lookup"><span data-stu-id="d1bba-129">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
+  <span data-ttu-id="d8c17-130">명령의 세부 정보 표시 수준을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c17-130">Sets the verbosity level of the command.</span></span> <span data-ttu-id="d8c17-131">허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다.</span><span class="sxs-lookup"><span data-stu-id="d8c17-131">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
 
-`-w|--working-dir <INTERMEDIATE_WORKING_DIRECTORY>`
+- **`-w|--working-dir <WORKING_DIRECTORY>`**
 
-<span data-ttu-id="d1bba-130">명령에서 사용되는 작업 디렉터리입니다.</span><span class="sxs-lookup"><span data-stu-id="d1bba-130">The working directory used by the command.</span></span> <span data-ttu-id="d1bba-131">지정하지 않으면 현재 디렉터리의 *obj* 하위 디렉터리가 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="d1bba-131">If not specified, it uses the *obj* subdirectory of the current directory.</span></span>
+  <span data-ttu-id="d8c17-132">명령에서 사용되는 작업 디렉터리입니다.</span><span class="sxs-lookup"><span data-stu-id="d8c17-132">The working directory used by the command.</span></span> <span data-ttu-id="d8c17-133">지정하지 않으면 현재 디렉터리의 *obj* 하위 디렉터리가 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="d8c17-133">If not specified, it uses the *obj* subdirectory of the current directory.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="d1bba-132">예</span><span class="sxs-lookup"><span data-stu-id="d1bba-132">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="d8c17-134">예</span><span class="sxs-lookup"><span data-stu-id="d8c17-134">Examples</span></span>
 
-<span data-ttu-id="d1bba-133">지정된 패키지를 .NET Core 2.0.0에 대한 *packages.csproj* 프로젝트 파일에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="d1bba-133">Store the packages specified in the *packages.csproj* project file for .NET Core 2.0.0:</span></span>
+- <span data-ttu-id="d8c17-135">지정된 패키지를 .NET Core 2.0.0에 대한 *packages.csproj* 프로젝트 파일에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c17-135">Store the packages specified in the *packages.csproj* project file for .NET Core 2.0.0:</span></span>
 
-`dotnet store --manifest packages.csproj --framework-version 2.0.0`
+  ```dotnetcli
+  dotnet store --manifest packages.csproj --framework-version 2.0.0
+  ```
 
-<span data-ttu-id="d1bba-134">지정된 패키지를 최적화 없이 *packages.csproj*에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="d1bba-134">Store the packages specified in the *packages.csproj* without optimization:</span></span>
+- <span data-ttu-id="d8c17-136">지정된 패키지를 최적화 없이 *packages.csproj*에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="d8c17-136">Store the packages specified in the *packages.csproj* without optimization:</span></span>
 
-`dotnet store --manifest packages.csproj --skip-optimization`
+  ```dotnetcli
+  dotnet store --manifest packages.csproj --skip-optimization
+  ```
 
-## <a name="see-also"></a><span data-ttu-id="d1bba-135">참조</span><span class="sxs-lookup"><span data-stu-id="d1bba-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d8c17-137">참조</span><span class="sxs-lookup"><span data-stu-id="d8c17-137">See also</span></span>
 
-- [<span data-ttu-id="d1bba-136">런타임 패키지 저장소</span><span class="sxs-lookup"><span data-stu-id="d1bba-136">Runtime package store</span></span>](../deploying/runtime-store.md)
+- [<span data-ttu-id="d8c17-138">런타임 패키지 저장소</span><span class="sxs-lookup"><span data-stu-id="d8c17-138">Runtime package store</span></span>](../deploying/runtime-store.md)

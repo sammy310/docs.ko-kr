@@ -1,781 +1,733 @@
 ---
 title: dotnet new 명령
 description: dotnet new 명령은 지정된 템플릿을 기반으로 새 .NET Core 프로젝트를 만듭니다.
-ms.date: 05/06/2019
-ms.openlocfilehash: c9529e135f48c80f445c91038294a3e7266486f1
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 02/13/2020
+ms.openlocfilehash: f11512acf5a1fdc4bde49b3d1212ccf6335dff8b
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420470"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451332"
 ---
-# <a name="dotnet-new"></a><span data-ttu-id="6ce23-103">dotnet new</span><span class="sxs-lookup"><span data-stu-id="6ce23-103">dotnet new</span></span>
+# <a name="dotnet-new"></a><span data-ttu-id="ed1f5-103">dotnet new</span><span class="sxs-lookup"><span data-stu-id="ed1f5-103">dotnet new</span></span>
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+<span data-ttu-id="ed1f5-104">**이 문서의 적용 대상:**  ✔️ .NET Core 2.0 SDK 이상 버전</span><span class="sxs-lookup"><span data-stu-id="ed1f5-104">**This article applies to:** ✔️ .NET Core 2.0 SDK and later versions</span></span>
 
-## <a name="name"></a><span data-ttu-id="6ce23-104">name</span><span class="sxs-lookup"><span data-stu-id="6ce23-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="ed1f5-105">이름</span><span class="sxs-lookup"><span data-stu-id="ed1f5-105">Name</span></span>
 
-<span data-ttu-id="6ce23-105">`dotnet new` - 지정된 템플릿을 기반으로 새 프로젝트, 구성 파일 또는 솔루션을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-105">`dotnet new` - Creates a new project, configuration file, or solution based on the specified template.</span></span>
+<span data-ttu-id="ed1f5-106">`dotnet new` - 지정된 템플릿을 기반으로 새 프로젝트, 구성 파일 또는 솔루션을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-106">`dotnet new` - Creates a new project, configuration file, or solution based on the specified template.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="6ce23-106">개요</span><span class="sxs-lookup"><span data-stu-id="6ce23-106">Synopsis</span></span>
-
-<!-- markdownlint-disable MD025 -->
-
-# <a name="net-core-22tabnetcore22"></a>[<span data-ttu-id="6ce23-107">.NET Core 2.2</span><span class="sxs-lookup"><span data-stu-id="6ce23-107">.NET Core 2.2</span></span>](#tab/netcore22)
+## <a name="synopsis"></a><span data-ttu-id="ed1f5-107">개요</span><span class="sxs-lookup"><span data-stu-id="ed1f5-107">Synopsis</span></span>
 
 ```dotnetcli
-dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name] [--nuget-source] [-o|--output] [-u|--uninstall] [Template options]
+dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name] 
+    [--nuget-source] [-o|--output] [-u|--uninstall] [--update-apply] [--update-check] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
 ```
 
-# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="6ce23-108">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="6ce23-108">.NET Core 2.1</span></span>](#tab/netcore21)
-
-```dotnetcli
-dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [--nuget-source] [-o|--output] [-u|--uninstall] [Template options]
-dotnet new <TEMPLATE> [-l|--list] [--type]
-dotnet new [-h|--help]
-```
-
-# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="6ce23-109">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="6ce23-109">.NET Core 2.0</span></span>](#tab/netcore20)
-
-```dotnetcli
-dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [-o|--output] [-u|--uninstall] [Template options]
-dotnet new <TEMPLATE> [-l|--list] [--type]
-dotnet new [-h|--help]
-```
-
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="6ce23-110">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="6ce23-110">.NET Core 1.x</span></span>](#tab/netcore1x)
-
-```dotnetcli
-dotnet new <TEMPLATE> [-lang|--language] [-n|--name] [-o|--output] [-all|--show-all] [-h|--help] [Template options]
-dotnet new <TEMPLATE> [-l|--list]
-dotnet new [-all|--show-all]
-dotnet new [-h|--help]
-```
-
----
-
-## <a name="description"></a><span data-ttu-id="6ce23-111">설명</span><span class="sxs-lookup"><span data-stu-id="6ce23-111">Description</span></span>
-
-<span data-ttu-id="6ce23-112">`dotnet new` 명령은 유효한 .NET Core 프로젝트를 초기화하는 편리한 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-112">The `dotnet new` command provides a convenient way to initialize a valid .NET Core project.</span></span>
-
-<span data-ttu-id="6ce23-113">이 명령은 [템플릿 엔진](https://github.com/dotnet/templating)을 호출하여 지정된 템플릿 및 옵션을 기반으로 디스크에 아티팩트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-113">The command calls the [template engine](https://github.com/dotnet/templating) to create the artifacts on disk based on the specified template and options.</span></span>
-
-## <a name="arguments"></a><span data-ttu-id="6ce23-114">인수</span><span class="sxs-lookup"><span data-stu-id="6ce23-114">Arguments</span></span>
-
-`TEMPLATE`
-
-<span data-ttu-id="6ce23-115">명령이 호출될 때 인스턴스화할 템플릿입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-115">The template to instantiate when the command is invoked.</span></span> <span data-ttu-id="6ce23-116">각 템플릿에는 전달할 수 있는 특정 옵션이 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-116">Each template might have specific options you can pass.</span></span> <span data-ttu-id="6ce23-117">자세한 내용은 [템플릿 옵션](#template-options)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="6ce23-117">For more information, see [Template options](#template-options).</span></span>
-
-<span data-ttu-id="6ce23-118">`TEMPLATE` 값이 **템플릿** 또는 **약식 이름** 열의 텍스트와 정확히 일치하지 않는 경우 해당 두 열에 대해 부분 문자열 일치가 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-118">If the `TEMPLATE` value isn't an exact match on text in the **Templates** or **Short Name** column, a substring match is performed on those two columns.</span></span>
-
-# <a name="net-core-22tabnetcore22"></a>[<span data-ttu-id="6ce23-119">.NET Core 2.2</span><span class="sxs-lookup"><span data-stu-id="6ce23-119">.NET Core 2.2</span></span>](#tab/netcore22)
-
-<span data-ttu-id="6ce23-120">명령에는 템플릿의 기본 목록이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-120">The command contains a default list of templates.</span></span> <span data-ttu-id="6ce23-121">`dotnet new -l`을 사용하여 사용 가능한 템플릿 목록을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-121">Use `dotnet new -l` to obtain a list of the available templates.</span></span> <span data-ttu-id="6ce23-122">다음 표에서는 .NET Core SDK 2.2.100과 함께 사전 설치된 템플릿을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-122">The following table shows the templates that come pre-installed with the .NET Core SDK 2.2.100.</span></span> <span data-ttu-id="6ce23-123">템플릿의 기본 언어는 대괄호 안에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-123">The default language for the template is shown inside the brackets.</span></span>
-
-| <span data-ttu-id="6ce23-124">템플릿</span><span class="sxs-lookup"><span data-stu-id="6ce23-124">Templates</span></span>                                    | <span data-ttu-id="6ce23-125">짧은 이름</span><span class="sxs-lookup"><span data-stu-id="6ce23-125">Short Name</span></span>        | <span data-ttu-id="6ce23-126">언어</span><span class="sxs-lookup"><span data-stu-id="6ce23-126">Language</span></span>     | <span data-ttu-id="6ce23-127">Tags</span><span class="sxs-lookup"><span data-stu-id="6ce23-127">Tags</span></span>                                  |
-|----------------------------------------------|-------------------|--------------|---------------------------------------|
-| <span data-ttu-id="6ce23-128">콘솔 애플리케이션</span><span class="sxs-lookup"><span data-stu-id="6ce23-128">Console Application</span></span>                          | `console`         | <span data-ttu-id="6ce23-129">[C#], F#, VB</span><span class="sxs-lookup"><span data-stu-id="6ce23-129">[C#], F#, VB</span></span> | <span data-ttu-id="6ce23-130">일반/콘솔</span><span class="sxs-lookup"><span data-stu-id="6ce23-130">Common/Console</span></span>                        |
-| <span data-ttu-id="6ce23-131">클래스 라이브러리</span><span class="sxs-lookup"><span data-stu-id="6ce23-131">Class library</span></span>                                | `classlib`        | <span data-ttu-id="6ce23-132">[C#], F#, VB</span><span class="sxs-lookup"><span data-stu-id="6ce23-132">[C#], F#, VB</span></span> | <span data-ttu-id="6ce23-133">일반/라이브러리</span><span class="sxs-lookup"><span data-stu-id="6ce23-133">Common/Library</span></span>                        |
-| <span data-ttu-id="6ce23-134">단위 테스트 프로젝트</span><span class="sxs-lookup"><span data-stu-id="6ce23-134">Unit Test Project</span></span>                            | `mstest`          | <span data-ttu-id="6ce23-135">[C#], F#, VB</span><span class="sxs-lookup"><span data-stu-id="6ce23-135">[C#], F#, VB</span></span> | <span data-ttu-id="6ce23-136">Test/MSTest</span><span class="sxs-lookup"><span data-stu-id="6ce23-136">Test/MSTest</span></span>                           |
-| <span data-ttu-id="6ce23-137">NUnit 3 테스트 프로젝트</span><span class="sxs-lookup"><span data-stu-id="6ce23-137">NUnit 3 Test Project</span></span>                         | `nunit`           | <span data-ttu-id="6ce23-138">[C#], F#, VB</span><span class="sxs-lookup"><span data-stu-id="6ce23-138">[C#], F#, VB</span></span> | <span data-ttu-id="6ce23-139">Test/NUnit</span><span class="sxs-lookup"><span data-stu-id="6ce23-139">Test/NUnit</span></span>                            |
-| <span data-ttu-id="6ce23-140">NUnit 3 테스트 항목</span><span class="sxs-lookup"><span data-stu-id="6ce23-140">NUnit 3 Test Item</span></span>                            | `nunit-test`      | <span data-ttu-id="6ce23-141">[C#], F#, VB</span><span class="sxs-lookup"><span data-stu-id="6ce23-141">[C#], F#, VB</span></span> | <span data-ttu-id="6ce23-142">Test/NUnit</span><span class="sxs-lookup"><span data-stu-id="6ce23-142">Test/NUnit</span></span>                            |
-| <span data-ttu-id="6ce23-143">xUnit 테스트 프로젝트</span><span class="sxs-lookup"><span data-stu-id="6ce23-143">xUnit Test Project</span></span>                           | `xunit`           | <span data-ttu-id="6ce23-144">[C#], F#, VB</span><span class="sxs-lookup"><span data-stu-id="6ce23-144">[C#], F#, VB</span></span> | <span data-ttu-id="6ce23-145">Test/xUnit</span><span class="sxs-lookup"><span data-stu-id="6ce23-145">Test/xUnit</span></span>                            |
-| <span data-ttu-id="6ce23-146">Razor 페이지</span><span class="sxs-lookup"><span data-stu-id="6ce23-146">Razor Page</span></span>                                   | `page`            | <span data-ttu-id="6ce23-147">[C#]</span><span class="sxs-lookup"><span data-stu-id="6ce23-147">[C#]</span></span>         | <span data-ttu-id="6ce23-148">Web/ASP.NET</span><span class="sxs-lookup"><span data-stu-id="6ce23-148">Web/ASP.NET</span></span>                           |
-| <span data-ttu-id="6ce23-149">MVC ViewImports</span><span class="sxs-lookup"><span data-stu-id="6ce23-149">MVC ViewImports</span></span>                              | `viewimports`     | <span data-ttu-id="6ce23-150">[C#]</span><span class="sxs-lookup"><span data-stu-id="6ce23-150">[C#]</span></span>         | <span data-ttu-id="6ce23-151">Web/ASP.NET</span><span class="sxs-lookup"><span data-stu-id="6ce23-151">Web/ASP.NET</span></span>                           |
-| <span data-ttu-id="6ce23-152">MVC ViewStart</span><span class="sxs-lookup"><span data-stu-id="6ce23-152">MVC ViewStart</span></span>                                | `viewstart`       | <span data-ttu-id="6ce23-153">[C#]</span><span class="sxs-lookup"><span data-stu-id="6ce23-153">[C#]</span></span>         | <span data-ttu-id="6ce23-154">Web/ASP.NET</span><span class="sxs-lookup"><span data-stu-id="6ce23-154">Web/ASP.NET</span></span>                           |
-| <span data-ttu-id="6ce23-155">ASP.NET Core 비어 있음</span><span class="sxs-lookup"><span data-stu-id="6ce23-155">ASP.NET Core Empty</span></span>                           | `web`             | <span data-ttu-id="6ce23-156">[C#], F#</span><span class="sxs-lookup"><span data-stu-id="6ce23-156">[C#], F#</span></span>     | <span data-ttu-id="6ce23-157">Web/Empty</span><span class="sxs-lookup"><span data-stu-id="6ce23-157">Web/Empty</span></span>                             |
-| <span data-ttu-id="6ce23-158">ASP.NET Core 웹앱(모델-뷰-컨트롤러)</span><span class="sxs-lookup"><span data-stu-id="6ce23-158">ASP.NET Core Web App (Model-View-Controller)</span></span> | `mvc`             | <span data-ttu-id="6ce23-159">[C#], F#</span><span class="sxs-lookup"><span data-stu-id="6ce23-159">[C#], F#</span></span>     | <span data-ttu-id="6ce23-160">Web/MVC</span><span class="sxs-lookup"><span data-stu-id="6ce23-160">Web/MVC</span></span>                               |
-| <span data-ttu-id="6ce23-161">ASP.NET Core 웹앱</span><span class="sxs-lookup"><span data-stu-id="6ce23-161">ASP.NET Core Web App</span></span>                         | <span data-ttu-id="6ce23-162">`webapp`, `razor`</span><span class="sxs-lookup"><span data-stu-id="6ce23-162">`webapp`, `razor`</span></span> | <span data-ttu-id="6ce23-163">[C#]</span><span class="sxs-lookup"><span data-stu-id="6ce23-163">[C#]</span></span>         | <span data-ttu-id="6ce23-164">Web/MVC/Razor Pages</span><span class="sxs-lookup"><span data-stu-id="6ce23-164">Web/MVC/Razor Pages</span></span>                   |
-| <span data-ttu-id="6ce23-165">ASP.NET Core(Angular 사용)</span><span class="sxs-lookup"><span data-stu-id="6ce23-165">ASP.NET Core with Angular</span></span>                    | `angular`         | <span data-ttu-id="6ce23-166">[C#]</span><span class="sxs-lookup"><span data-stu-id="6ce23-166">[C#]</span></span>         | <span data-ttu-id="6ce23-167">Web/MVC/SPA</span><span class="sxs-lookup"><span data-stu-id="6ce23-167">Web/MVC/SPA</span></span>                           |
-| <span data-ttu-id="6ce23-168">ASP.NET Core(React.js 사용)</span><span class="sxs-lookup"><span data-stu-id="6ce23-168">ASP.NET Core with React.js</span></span>                   | `react`           | <span data-ttu-id="6ce23-169">[C#]</span><span class="sxs-lookup"><span data-stu-id="6ce23-169">[C#]</span></span>         | <span data-ttu-id="6ce23-170">Web/MVC/SPA</span><span class="sxs-lookup"><span data-stu-id="6ce23-170">Web/MVC/SPA</span></span>                           |
-| <span data-ttu-id="6ce23-171">ASP.NET Core(React.js 및 Redux 사용)</span><span class="sxs-lookup"><span data-stu-id="6ce23-171">ASP.NET Core with React.js and Redux</span></span>         | `reactredux`      | <span data-ttu-id="6ce23-172">[C#]</span><span class="sxs-lookup"><span data-stu-id="6ce23-172">[C#]</span></span>         | <span data-ttu-id="6ce23-173">Web/MVC/SPA</span><span class="sxs-lookup"><span data-stu-id="6ce23-173">Web/MVC/SPA</span></span>                           |
-| <span data-ttu-id="6ce23-174">Razor 클래스 라이브러리</span><span class="sxs-lookup"><span data-stu-id="6ce23-174">Razor Class Library</span></span>                          | `razorclasslib`   | <span data-ttu-id="6ce23-175">[C#]</span><span class="sxs-lookup"><span data-stu-id="6ce23-175">[C#]</span></span>         | <span data-ttu-id="6ce23-176">Web/Razor/Library/Razor 클래스 라이브러리</span><span class="sxs-lookup"><span data-stu-id="6ce23-176">Web/Razor/Library/Razor Class Library</span></span> |
-| <span data-ttu-id="6ce23-177">ASP.NET Core 웹 API</span><span class="sxs-lookup"><span data-stu-id="6ce23-177">ASP.NET Core Web API</span></span>                         | `webapi`          | <span data-ttu-id="6ce23-178">[C#], F#</span><span class="sxs-lookup"><span data-stu-id="6ce23-178">[C#], F#</span></span>     | <span data-ttu-id="6ce23-179">Web/WebAPI</span><span class="sxs-lookup"><span data-stu-id="6ce23-179">Web/WebAPI</span></span>                            |
-| <span data-ttu-id="6ce23-180">global.json 파일</span><span class="sxs-lookup"><span data-stu-id="6ce23-180">global.json file</span></span>                             | `globaljson`      |              | <span data-ttu-id="6ce23-181">Config</span><span class="sxs-lookup"><span data-stu-id="6ce23-181">Config</span></span>                                |
-| <span data-ttu-id="6ce23-182">NuGet 구성</span><span class="sxs-lookup"><span data-stu-id="6ce23-182">NuGet Config</span></span>                                 | `nugetconfig`     |              | <span data-ttu-id="6ce23-183">Config</span><span class="sxs-lookup"><span data-stu-id="6ce23-183">Config</span></span>                                |
-| <span data-ttu-id="6ce23-184">웹 구성</span><span class="sxs-lookup"><span data-stu-id="6ce23-184">Web Config</span></span>                                   | `webconfig`       |              | <span data-ttu-id="6ce23-185">Config</span><span class="sxs-lookup"><span data-stu-id="6ce23-185">Config</span></span>                                |
-| <span data-ttu-id="6ce23-186">솔루션 파일</span><span class="sxs-lookup"><span data-stu-id="6ce23-186">Solution File</span></span>                                | `sln`             |              | <span data-ttu-id="6ce23-187">솔루션</span><span class="sxs-lookup"><span data-stu-id="6ce23-187">Solution</span></span>                              |
-
-# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="6ce23-188">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="6ce23-188">.NET Core 2.1</span></span>](#tab/netcore21)
-
-<span data-ttu-id="6ce23-189">명령에는 템플릿의 기본 목록이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-189">The command contains a default list of templates.</span></span> <span data-ttu-id="6ce23-190">`dotnet new -l`을 사용하여 사용 가능한 템플릿 목록을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-190">Use `dotnet new -l` to obtain a list of the available templates.</span></span> <span data-ttu-id="6ce23-191">다음 표에는 .NET Core SDK 2.1.300과 함께 사전 설치된 템플릿이 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-191">The following table shows the templates that come pre-installed with the .NET Core SDK 2.1.300.</span></span> <span data-ttu-id="6ce23-192">템플릿의 기본 언어는 대괄호 안에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-192">The default language for the template is shown inside the brackets.</span></span>
+## <a name="description"></a><span data-ttu-id="ed1f5-108">설명</span><span class="sxs-lookup"><span data-stu-id="ed1f5-108">Description</span></span>
 
-| <span data-ttu-id="6ce23-193">템플릿</span><span class="sxs-lookup"><span data-stu-id="6ce23-193">Templates</span></span>                                    | <span data-ttu-id="6ce23-194">짧은 이름</span><span class="sxs-lookup"><span data-stu-id="6ce23-194">Short Name</span></span>      | <span data-ttu-id="6ce23-195">언어</span><span class="sxs-lookup"><span data-stu-id="6ce23-195">Language</span></span>     | <span data-ttu-id="6ce23-196">Tags</span><span class="sxs-lookup"><span data-stu-id="6ce23-196">Tags</span></span>                                  |
-|----------------------------------------------|-----------------|--------------|---------------------------------------|
-| <span data-ttu-id="6ce23-197">콘솔 애플리케이션</span><span class="sxs-lookup"><span data-stu-id="6ce23-197">Console Application</span></span>                          | `console`       | <span data-ttu-id="6ce23-198">[C#], F#, VB</span><span class="sxs-lookup"><span data-stu-id="6ce23-198">[C#], F#, VB</span></span> | <span data-ttu-id="6ce23-199">일반/콘솔</span><span class="sxs-lookup"><span data-stu-id="6ce23-199">Common/Console</span></span>                        |
-| <span data-ttu-id="6ce23-200">클래스 라이브러리</span><span class="sxs-lookup"><span data-stu-id="6ce23-200">Class library</span></span>                                | `classlib`      | <span data-ttu-id="6ce23-201">[C#], F#, VB</span><span class="sxs-lookup"><span data-stu-id="6ce23-201">[C#], F#, VB</span></span> | <span data-ttu-id="6ce23-202">일반/라이브러리</span><span class="sxs-lookup"><span data-stu-id="6ce23-202">Common/Library</span></span>                        |
-| <span data-ttu-id="6ce23-203">단위 테스트 프로젝트</span><span class="sxs-lookup"><span data-stu-id="6ce23-203">Unit Test Project</span></span>                            | `mstest`        | <span data-ttu-id="6ce23-204">[C#], F#, VB</span><span class="sxs-lookup"><span data-stu-id="6ce23-204">[C#], F#, VB</span></span> | <span data-ttu-id="6ce23-205">Test/MSTest</span><span class="sxs-lookup"><span data-stu-id="6ce23-205">Test/MSTest</span></span>                           |
-| <span data-ttu-id="6ce23-206">xUnit 테스트 프로젝트</span><span class="sxs-lookup"><span data-stu-id="6ce23-206">xUnit Test Project</span></span>                           | `xunit`         | <span data-ttu-id="6ce23-207">[C#], F#, VB</span><span class="sxs-lookup"><span data-stu-id="6ce23-207">[C#], F#, VB</span></span> | <span data-ttu-id="6ce23-208">Test/xUnit</span><span class="sxs-lookup"><span data-stu-id="6ce23-208">Test/xUnit</span></span>                            |
-| <span data-ttu-id="6ce23-209">Razor 페이지</span><span class="sxs-lookup"><span data-stu-id="6ce23-209">Razor Page</span></span>                                   | `page`          | <span data-ttu-id="6ce23-210">[C#]</span><span class="sxs-lookup"><span data-stu-id="6ce23-210">[C#]</span></span>         | <span data-ttu-id="6ce23-211">Web/ASP.NET</span><span class="sxs-lookup"><span data-stu-id="6ce23-211">Web/ASP.NET</span></span>                           |
-| <span data-ttu-id="6ce23-212">MVC ViewImports</span><span class="sxs-lookup"><span data-stu-id="6ce23-212">MVC ViewImports</span></span>                              | `viewimports`   | <span data-ttu-id="6ce23-213">[C#]</span><span class="sxs-lookup"><span data-stu-id="6ce23-213">[C#]</span></span>         | <span data-ttu-id="6ce23-214">Web/ASP.NET</span><span class="sxs-lookup"><span data-stu-id="6ce23-214">Web/ASP.NET</span></span>                           |
-| <span data-ttu-id="6ce23-215">MVC ViewStart</span><span class="sxs-lookup"><span data-stu-id="6ce23-215">MVC ViewStart</span></span>                                | `viewstart`     | <span data-ttu-id="6ce23-216">[C#]</span><span class="sxs-lookup"><span data-stu-id="6ce23-216">[C#]</span></span>         | <span data-ttu-id="6ce23-217">Web/ASP.NET</span><span class="sxs-lookup"><span data-stu-id="6ce23-217">Web/ASP.NET</span></span>                           |
-| <span data-ttu-id="6ce23-218">ASP.NET Core 비어 있음</span><span class="sxs-lookup"><span data-stu-id="6ce23-218">ASP.NET Core Empty</span></span>                           | `web`           | <span data-ttu-id="6ce23-219">[C#], F#</span><span class="sxs-lookup"><span data-stu-id="6ce23-219">[C#], F#</span></span>     | <span data-ttu-id="6ce23-220">Web/Empty</span><span class="sxs-lookup"><span data-stu-id="6ce23-220">Web/Empty</span></span>                             |
-| <span data-ttu-id="6ce23-221">ASP.NET Core 웹앱(모델-뷰-컨트롤러)</span><span class="sxs-lookup"><span data-stu-id="6ce23-221">ASP.NET Core Web App (Model-View-Controller)</span></span> | `mvc`           | <span data-ttu-id="6ce23-222">[C#], F#</span><span class="sxs-lookup"><span data-stu-id="6ce23-222">[C#], F#</span></span>     | <span data-ttu-id="6ce23-223">Web/MVC</span><span class="sxs-lookup"><span data-stu-id="6ce23-223">Web/MVC</span></span>                               |
-| <span data-ttu-id="6ce23-224">ASP.NET Core 웹앱</span><span class="sxs-lookup"><span data-stu-id="6ce23-224">ASP.NET Core Web App</span></span>                         | `razor`         | <span data-ttu-id="6ce23-225">[C#]</span><span class="sxs-lookup"><span data-stu-id="6ce23-225">[C#]</span></span>         | <span data-ttu-id="6ce23-226">Web/MVC/Razor Pages</span><span class="sxs-lookup"><span data-stu-id="6ce23-226">Web/MVC/Razor Pages</span></span>                   |
-| <span data-ttu-id="6ce23-227">ASP.NET Core(Angular 사용)</span><span class="sxs-lookup"><span data-stu-id="6ce23-227">ASP.NET Core with Angular</span></span>                    | `angular`       | <span data-ttu-id="6ce23-228">[C#]</span><span class="sxs-lookup"><span data-stu-id="6ce23-228">[C#]</span></span>         | <span data-ttu-id="6ce23-229">Web/MVC/SPA</span><span class="sxs-lookup"><span data-stu-id="6ce23-229">Web/MVC/SPA</span></span>                           |
-| <span data-ttu-id="6ce23-230">ASP.NET Core(React.js 사용)</span><span class="sxs-lookup"><span data-stu-id="6ce23-230">ASP.NET Core with React.js</span></span>                   | `react`         | <span data-ttu-id="6ce23-231">[C#]</span><span class="sxs-lookup"><span data-stu-id="6ce23-231">[C#]</span></span>         | <span data-ttu-id="6ce23-232">Web/MVC/SPA</span><span class="sxs-lookup"><span data-stu-id="6ce23-232">Web/MVC/SPA</span></span>                           |
-| <span data-ttu-id="6ce23-233">ASP.NET Core(React.js 및 Redux 사용)</span><span class="sxs-lookup"><span data-stu-id="6ce23-233">ASP.NET Core with React.js and Redux</span></span>         | `reactredux`    | <span data-ttu-id="6ce23-234">[C#]</span><span class="sxs-lookup"><span data-stu-id="6ce23-234">[C#]</span></span>         | <span data-ttu-id="6ce23-235">Web/MVC/SPA</span><span class="sxs-lookup"><span data-stu-id="6ce23-235">Web/MVC/SPA</span></span>                           | 
-| <span data-ttu-id="6ce23-236">Razor 클래스 라이브러리</span><span class="sxs-lookup"><span data-stu-id="6ce23-236">Razor Class Library</span></span>                          | `razorclasslib` | <span data-ttu-id="6ce23-237">[C#]</span><span class="sxs-lookup"><span data-stu-id="6ce23-237">[C#]</span></span>         | <span data-ttu-id="6ce23-238">Web/Razor/Library/Razor 클래스 라이브러리</span><span class="sxs-lookup"><span data-stu-id="6ce23-238">Web/Razor/Library/Razor Class Library</span></span> |
-| <span data-ttu-id="6ce23-239">ASP.NET Core 웹 API</span><span class="sxs-lookup"><span data-stu-id="6ce23-239">ASP.NET Core Web API</span></span>                         | `webapi`        | <span data-ttu-id="6ce23-240">[C#], F#</span><span class="sxs-lookup"><span data-stu-id="6ce23-240">[C#], F#</span></span>     | <span data-ttu-id="6ce23-241">Web/WebAPI</span><span class="sxs-lookup"><span data-stu-id="6ce23-241">Web/WebAPI</span></span>                            |
-| <span data-ttu-id="6ce23-242">global.json 파일</span><span class="sxs-lookup"><span data-stu-id="6ce23-242">global.json file</span></span>                             | `globaljson`    |              | <span data-ttu-id="6ce23-243">Config</span><span class="sxs-lookup"><span data-stu-id="6ce23-243">Config</span></span>                                |
-| <span data-ttu-id="6ce23-244">NuGet 구성</span><span class="sxs-lookup"><span data-stu-id="6ce23-244">NuGet Config</span></span>                                 | `nugetconfig`   |              | <span data-ttu-id="6ce23-245">Config</span><span class="sxs-lookup"><span data-stu-id="6ce23-245">Config</span></span>                                |
-| <span data-ttu-id="6ce23-246">웹 구성</span><span class="sxs-lookup"><span data-stu-id="6ce23-246">Web Config</span></span>                                   | `webconfig`     |              | <span data-ttu-id="6ce23-247">Config</span><span class="sxs-lookup"><span data-stu-id="6ce23-247">Config</span></span>                                |
-| <span data-ttu-id="6ce23-248">솔루션 파일</span><span class="sxs-lookup"><span data-stu-id="6ce23-248">Solution File</span></span>                                | `sln`           |              | <span data-ttu-id="6ce23-249">솔루션</span><span class="sxs-lookup"><span data-stu-id="6ce23-249">Solution</span></span>                              |
+<span data-ttu-id="ed1f5-109">`dotnet new` 명령은 템플릿을 기반으로 .NET Core 프로젝트 또는 다른 아티팩트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-109">The `dotnet new` command creates a .NET Core project or other artifacts based on a template.</span></span>
 
-# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="6ce23-250">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="6ce23-250">.NET Core 2.0</span></span>](#tab/netcore20)
+<span data-ttu-id="ed1f5-110">이 명령은 [템플릿 엔진](https://github.com/dotnet/templating)을 호출하여 지정된 템플릿 및 옵션을 기반으로 디스크에 아티팩트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-110">The command calls the [template engine](https://github.com/dotnet/templating) to create the artifacts on disk based on the specified template and options.</span></span>
 
-<span data-ttu-id="6ce23-251">명령에는 템플릿의 기본 목록이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-251">The command contains a default list of templates.</span></span> <span data-ttu-id="6ce23-252">`dotnet new -l`을 사용하여 사용 가능한 템플릿 목록을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-252">Use `dotnet new -l` to obtain a list of the available templates.</span></span> <span data-ttu-id="6ce23-253">다음 표에는 .NET Core SDK 2.0.0과 함께 사전 설치된 템플릿이 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-253">The following table shows the templates that come pre-installed with the .NET Core SDK 2.0.0.</span></span> <span data-ttu-id="6ce23-254">템플릿의 기본 언어는 대괄호 안에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-254">The default language for the template is shown inside the brackets.</span></span>
+## <a name="arguments"></a><span data-ttu-id="ed1f5-111">인수</span><span class="sxs-lookup"><span data-stu-id="ed1f5-111">Arguments</span></span>
 
-| <span data-ttu-id="6ce23-255">템플릿</span><span class="sxs-lookup"><span data-stu-id="6ce23-255">Templates</span></span>                                    | <span data-ttu-id="6ce23-256">짧은 이름</span><span class="sxs-lookup"><span data-stu-id="6ce23-256">Short Name</span></span>    | <span data-ttu-id="6ce23-257">언어</span><span class="sxs-lookup"><span data-stu-id="6ce23-257">Language</span></span>     | <span data-ttu-id="6ce23-258">Tags</span><span class="sxs-lookup"><span data-stu-id="6ce23-258">Tags</span></span>                |
-|----------------------------------------------|---------------|--------------|---------------------|
-| <span data-ttu-id="6ce23-259">콘솔 애플리케이션</span><span class="sxs-lookup"><span data-stu-id="6ce23-259">Console Application</span></span>                          | `console`     | <span data-ttu-id="6ce23-260">[C#], F#, VB</span><span class="sxs-lookup"><span data-stu-id="6ce23-260">[C#], F#, VB</span></span> | <span data-ttu-id="6ce23-261">일반/콘솔</span><span class="sxs-lookup"><span data-stu-id="6ce23-261">Common/Console</span></span>      |
-| <span data-ttu-id="6ce23-262">클래스 라이브러리</span><span class="sxs-lookup"><span data-stu-id="6ce23-262">Class library</span></span>                                | `classlib`    | <span data-ttu-id="6ce23-263">[C#], F#, VB</span><span class="sxs-lookup"><span data-stu-id="6ce23-263">[C#], F#, VB</span></span> | <span data-ttu-id="6ce23-264">일반/라이브러리</span><span class="sxs-lookup"><span data-stu-id="6ce23-264">Common/Library</span></span>      |
-| <span data-ttu-id="6ce23-265">단위 테스트 프로젝트</span><span class="sxs-lookup"><span data-stu-id="6ce23-265">Unit Test Project</span></span>                            | `mstest`      | <span data-ttu-id="6ce23-266">[C#], F#, VB</span><span class="sxs-lookup"><span data-stu-id="6ce23-266">[C#], F#, VB</span></span> | <span data-ttu-id="6ce23-267">Test/MSTest</span><span class="sxs-lookup"><span data-stu-id="6ce23-267">Test/MSTest</span></span>         |
-| <span data-ttu-id="6ce23-268">xUnit 테스트 프로젝트</span><span class="sxs-lookup"><span data-stu-id="6ce23-268">xUnit Test Project</span></span>                           | `xunit`       | <span data-ttu-id="6ce23-269">[C#], F#, VB</span><span class="sxs-lookup"><span data-stu-id="6ce23-269">[C#], F#, VB</span></span> | <span data-ttu-id="6ce23-270">Test/xUnit</span><span class="sxs-lookup"><span data-stu-id="6ce23-270">Test/xUnit</span></span>          |
-| <span data-ttu-id="6ce23-271">ASP.NET Core 비어 있음</span><span class="sxs-lookup"><span data-stu-id="6ce23-271">ASP.NET Core Empty</span></span>                           | `web`         | <span data-ttu-id="6ce23-272">[C#], F#</span><span class="sxs-lookup"><span data-stu-id="6ce23-272">[C#], F#</span></span>     | <span data-ttu-id="6ce23-273">Web/Empty</span><span class="sxs-lookup"><span data-stu-id="6ce23-273">Web/Empty</span></span>           |
-| <span data-ttu-id="6ce23-274">ASP.NET Core 웹앱(모델-뷰-컨트롤러)</span><span class="sxs-lookup"><span data-stu-id="6ce23-274">ASP.NET Core Web App (Model-View-Controller)</span></span> | `mvc`         | <span data-ttu-id="6ce23-275">[C#], F#</span><span class="sxs-lookup"><span data-stu-id="6ce23-275">[C#], F#</span></span>     | <span data-ttu-id="6ce23-276">Web/MVC</span><span class="sxs-lookup"><span data-stu-id="6ce23-276">Web/MVC</span></span>             |
-| <span data-ttu-id="6ce23-277">ASP.NET Core 웹앱</span><span class="sxs-lookup"><span data-stu-id="6ce23-277">ASP.NET Core Web App</span></span>                         | `razor`       | <span data-ttu-id="6ce23-278">[C#]</span><span class="sxs-lookup"><span data-stu-id="6ce23-278">[C#]</span></span>         | <span data-ttu-id="6ce23-279">Web/MVC/Razor Pages</span><span class="sxs-lookup"><span data-stu-id="6ce23-279">Web/MVC/Razor Pages</span></span> |
-| <span data-ttu-id="6ce23-280">ASP.NET Core(Angular 사용)</span><span class="sxs-lookup"><span data-stu-id="6ce23-280">ASP.NET Core with Angular</span></span>                    | `angular`     | <span data-ttu-id="6ce23-281">[C#]</span><span class="sxs-lookup"><span data-stu-id="6ce23-281">[C#]</span></span>         | <span data-ttu-id="6ce23-282">Web/MVC/SPA</span><span class="sxs-lookup"><span data-stu-id="6ce23-282">Web/MVC/SPA</span></span>         |
-| <span data-ttu-id="6ce23-283">ASP.NET Core(React.js 사용)</span><span class="sxs-lookup"><span data-stu-id="6ce23-283">ASP.NET Core with React.js</span></span>                   | `react`       | <span data-ttu-id="6ce23-284">[C#]</span><span class="sxs-lookup"><span data-stu-id="6ce23-284">[C#]</span></span>         | <span data-ttu-id="6ce23-285">Web/MVC/SPA</span><span class="sxs-lookup"><span data-stu-id="6ce23-285">Web/MVC/SPA</span></span>         |
-| <span data-ttu-id="6ce23-286">ASP.NET Core(React.js 및 Redux 사용)</span><span class="sxs-lookup"><span data-stu-id="6ce23-286">ASP.NET Core with React.js and Redux</span></span>         | `reactredux`  | <span data-ttu-id="6ce23-287">[C#]</span><span class="sxs-lookup"><span data-stu-id="6ce23-287">[C#]</span></span>         | <span data-ttu-id="6ce23-288">Web/MVC/SPA</span><span class="sxs-lookup"><span data-stu-id="6ce23-288">Web/MVC/SPA</span></span>         |
-| <span data-ttu-id="6ce23-289">ASP.NET Core 웹 API</span><span class="sxs-lookup"><span data-stu-id="6ce23-289">ASP.NET Core Web API</span></span>                         | `webapi`      | <span data-ttu-id="6ce23-290">[C#], F#</span><span class="sxs-lookup"><span data-stu-id="6ce23-290">[C#], F#</span></span>     | <span data-ttu-id="6ce23-291">Web/WebAPI</span><span class="sxs-lookup"><span data-stu-id="6ce23-291">Web/WebAPI</span></span>          |
-| <span data-ttu-id="6ce23-292">global.json 파일</span><span class="sxs-lookup"><span data-stu-id="6ce23-292">global.json file</span></span>                             | `globaljson`  |              | <span data-ttu-id="6ce23-293">Config</span><span class="sxs-lookup"><span data-stu-id="6ce23-293">Config</span></span>              |
-| <span data-ttu-id="6ce23-294">Nuget 구성</span><span class="sxs-lookup"><span data-stu-id="6ce23-294">Nuget Config</span></span>                                 | `nugetconfig` |              | <span data-ttu-id="6ce23-295">Config</span><span class="sxs-lookup"><span data-stu-id="6ce23-295">Config</span></span>              |
-| <span data-ttu-id="6ce23-296">웹 구성</span><span class="sxs-lookup"><span data-stu-id="6ce23-296">Web Config</span></span>                                   | `webconfig`   |              | <span data-ttu-id="6ce23-297">Config</span><span class="sxs-lookup"><span data-stu-id="6ce23-297">Config</span></span>              |
-| <span data-ttu-id="6ce23-298">솔루션 파일</span><span class="sxs-lookup"><span data-stu-id="6ce23-298">Solution File</span></span>                                | `sln`         |              | <span data-ttu-id="6ce23-299">솔루션</span><span class="sxs-lookup"><span data-stu-id="6ce23-299">Solution</span></span>            |
-| <span data-ttu-id="6ce23-300">Razor 페이지</span><span class="sxs-lookup"><span data-stu-id="6ce23-300">Razor Page</span></span>                                   | `page`        |              | <span data-ttu-id="6ce23-301">Web/ASP.NET</span><span class="sxs-lookup"><span data-stu-id="6ce23-301">Web/ASP.NET</span></span>         |
-| <span data-ttu-id="6ce23-302">MVC ViewImports</span><span class="sxs-lookup"><span data-stu-id="6ce23-302">MVC ViewImports</span></span>                              | `viewimports` |              | <span data-ttu-id="6ce23-303">Web/ASP.NET</span><span class="sxs-lookup"><span data-stu-id="6ce23-303">Web/ASP.NET</span></span>         |
-| <span data-ttu-id="6ce23-304">MVC ViewStart</span><span class="sxs-lookup"><span data-stu-id="6ce23-304">MVC ViewStart</span></span>                                | `viewstart`   |              | <span data-ttu-id="6ce23-305">Web/ASP.NET</span><span class="sxs-lookup"><span data-stu-id="6ce23-305">Web/ASP.NET</span></span>         |
+- **`TEMPLATE`**
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="6ce23-306">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="6ce23-306">.NET Core 1.x</span></span>](#tab/netcore1x)
+  <span data-ttu-id="ed1f5-112">명령이 호출될 때 인스턴스화할 템플릿입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-112">The template to instantiate when the command is invoked.</span></span> <span data-ttu-id="ed1f5-113">각 템플릿에는 전달할 수 있는 특정 옵션이 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-113">Each template might have specific options you can pass.</span></span> <span data-ttu-id="ed1f5-114">자세한 내용은 [템플릿 옵션](#template-options)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-114">For more information, see [Template options](#template-options).</span></span>
 
-<span data-ttu-id="6ce23-307">명령에는 템플릿의 기본 목록이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-307">The command contains a default list of templates.</span></span> <span data-ttu-id="6ce23-308">`dotnet new -all`을 사용하여 사용 가능한 템플릿 목록을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-308">Use `dotnet new -all` to obtain a list of the available templates.</span></span> <span data-ttu-id="6ce23-309">다음 표에는 .NET Core SDK 1.0.1과 함께 사전 설치된 템플릿이 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-309">The following table shows the templates that come pre-installed with the .NET Core SDK 1.0.1.</span></span> <span data-ttu-id="6ce23-310">템플릿의 기본 언어는 대괄호 안에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-310">The default language for the template is shown inside the brackets.</span></span>
+  <span data-ttu-id="ed1f5-115">`dotnet new --list`를 실행하여 설치된 모든 템플릿의 목록을 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-115">You can run `dotnet new --list` to see a list of all installed templates.</span></span> <span data-ttu-id="ed1f5-116">`TEMPLATE` 값이 반환된 테이블의 **템플릿** 또는 **약식 이름** 열의 텍스트와 정확히 일치하지 않는 경우 해당 두 열에 대해 부분 문자열 일치가 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-116">If the `TEMPLATE` value isn't an exact match on text in the **Templates** or **Short Name** column from the returned table, a substring match is performed on those two columns.</span></span>
 
-| <span data-ttu-id="6ce23-311">템플릿</span><span class="sxs-lookup"><span data-stu-id="6ce23-311">Templates</span></span>            | <span data-ttu-id="6ce23-312">짧은 이름</span><span class="sxs-lookup"><span data-stu-id="6ce23-312">Short Name</span></span>    | <span data-ttu-id="6ce23-313">언어</span><span class="sxs-lookup"><span data-stu-id="6ce23-313">Language</span></span> | <span data-ttu-id="6ce23-314">Tags</span><span class="sxs-lookup"><span data-stu-id="6ce23-314">Tags</span></span>           |
-|----------------------|---------------|----------|----------------|
-| <span data-ttu-id="6ce23-315">콘솔 애플리케이션</span><span class="sxs-lookup"><span data-stu-id="6ce23-315">Console Application</span></span>  | `console`     | <span data-ttu-id="6ce23-316">[C#], F#</span><span class="sxs-lookup"><span data-stu-id="6ce23-316">[C#], F#</span></span> | <span data-ttu-id="6ce23-317">일반/콘솔</span><span class="sxs-lookup"><span data-stu-id="6ce23-317">Common/Console</span></span> |
-| <span data-ttu-id="6ce23-318">클래스 라이브러리</span><span class="sxs-lookup"><span data-stu-id="6ce23-318">Class library</span></span>        | `classlib`    | <span data-ttu-id="6ce23-319">[C#], F#</span><span class="sxs-lookup"><span data-stu-id="6ce23-319">[C#], F#</span></span> | <span data-ttu-id="6ce23-320">일반/라이브러리</span><span class="sxs-lookup"><span data-stu-id="6ce23-320">Common/Library</span></span> |
-| <span data-ttu-id="6ce23-321">단위 테스트 프로젝트</span><span class="sxs-lookup"><span data-stu-id="6ce23-321">Unit Test Project</span></span>    | `mstest`      | <span data-ttu-id="6ce23-322">[C#], F#</span><span class="sxs-lookup"><span data-stu-id="6ce23-322">[C#], F#</span></span> | <span data-ttu-id="6ce23-323">Test/MSTest</span><span class="sxs-lookup"><span data-stu-id="6ce23-323">Test/MSTest</span></span>    |
-| <span data-ttu-id="6ce23-324">xUnit 테스트 프로젝트</span><span class="sxs-lookup"><span data-stu-id="6ce23-324">xUnit Test Project</span></span>   | `xunit`       | <span data-ttu-id="6ce23-325">[C#], F#</span><span class="sxs-lookup"><span data-stu-id="6ce23-325">[C#], F#</span></span> | <span data-ttu-id="6ce23-326">Test/xUnit</span><span class="sxs-lookup"><span data-stu-id="6ce23-326">Test/xUnit</span></span>     |
-| <span data-ttu-id="6ce23-327">ASP.NET Core 비어 있음</span><span class="sxs-lookup"><span data-stu-id="6ce23-327">ASP.NET Core Empty</span></span>   | `web`         | <span data-ttu-id="6ce23-328">[C#]</span><span class="sxs-lookup"><span data-stu-id="6ce23-328">[C#]</span></span>     | <span data-ttu-id="6ce23-329">Web/Empty</span><span class="sxs-lookup"><span data-stu-id="6ce23-329">Web/Empty</span></span>      |
-| <span data-ttu-id="6ce23-330">ASP.NET Core 웹앱</span><span class="sxs-lookup"><span data-stu-id="6ce23-330">ASP.NET Core Web App</span></span> | `mvc`         | <span data-ttu-id="6ce23-331">[C#], F#</span><span class="sxs-lookup"><span data-stu-id="6ce23-331">[C#], F#</span></span> | <span data-ttu-id="6ce23-332">Web/MVC</span><span class="sxs-lookup"><span data-stu-id="6ce23-332">Web/MVC</span></span>        |
-| <span data-ttu-id="6ce23-333">ASP.NET Core 웹 API</span><span class="sxs-lookup"><span data-stu-id="6ce23-333">ASP.NET Core Web API</span></span> | `webapi`      | <span data-ttu-id="6ce23-334">[C#]</span><span class="sxs-lookup"><span data-stu-id="6ce23-334">[C#]</span></span>     | <span data-ttu-id="6ce23-335">Web/WebAPI</span><span class="sxs-lookup"><span data-stu-id="6ce23-335">Web/WebAPI</span></span>     |
-| <span data-ttu-id="6ce23-336">Nuget 구성</span><span class="sxs-lookup"><span data-stu-id="6ce23-336">Nuget Config</span></span>         | `nugetconfig` |          | <span data-ttu-id="6ce23-337">Config</span><span class="sxs-lookup"><span data-stu-id="6ce23-337">Config</span></span>         |
-| <span data-ttu-id="6ce23-338">웹 구성</span><span class="sxs-lookup"><span data-stu-id="6ce23-338">Web Config</span></span>           | `webconfig`   |          | <span data-ttu-id="6ce23-339">Config</span><span class="sxs-lookup"><span data-stu-id="6ce23-339">Config</span></span>         |
-| <span data-ttu-id="6ce23-340">솔루션 파일</span><span class="sxs-lookup"><span data-stu-id="6ce23-340">Solution File</span></span>        | `sln`         |          | <span data-ttu-id="6ce23-341">솔루션</span><span class="sxs-lookup"><span data-stu-id="6ce23-341">Solution</span></span>       |
+  <span data-ttu-id="ed1f5-117">.NET Core 3.0 SDK부터 CLI는 다음 조건에서 `dotnet new` 명령을 호출할 때 NuGet.org에서 템플릿을 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-117">Starting with .NET Core 3.0 SDK, the CLI searches for templates in NuGet.org when you invoke the `dotnet new` command in the following conditions:</span></span>
 
----
+  - <span data-ttu-id="ed1f5-118">`dotnet new`를 호출할 때 CLI가 템플릿 일치 또는 부분 일치조차 찾을 수 없는 경우.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-118">If the CLI can’t find a template match when invoking `dotnet new`, not even partial.</span></span>
+  - <span data-ttu-id="ed1f5-119">최신 버전의 템플릿을 사용할 수 있는 경우.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-119">If there’s a newer version of the template available.</span></span> <span data-ttu-id="ed1f5-120">이 경우 프로젝트 또는 아티팩트가 만들어지지만 CLI는 업데이트된 템플릿 버전에 대해 경고합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-120">In this case, the project or artifact is created but the CLI warns you about an updated version of the template.</span></span>
 
-## <a name="options"></a><span data-ttu-id="6ce23-342">옵션</span><span class="sxs-lookup"><span data-stu-id="6ce23-342">Options</span></span>
+  <span data-ttu-id="ed1f5-121">명령에는 템플릿의 기본 목록이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-121">The command contains a default list of templates.</span></span> <span data-ttu-id="ed1f5-122">`dotnet new -l`을 사용하여 사용 가능한 템플릿 목록을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-122">Use `dotnet new -l` to obtain a list of the available templates.</span></span> <span data-ttu-id="ed1f5-123">다음 표에는 .NET Core SDK와 함께 사전 설치된 템플릿이 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-123">The following table shows the templates that come pre-installed with the .NET Core SDK.</span></span> <span data-ttu-id="ed1f5-124">템플릿의 기본 언어는 대괄호 안에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-124">The default language for the template is shown inside the brackets.</span></span> <span data-ttu-id="ed1f5-125">특정 템플릿 옵션을 보려면 약식 이름 링크를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-125">Click on the short name link to see the specific template options.</span></span>
 
-# <a name="net-core-22tabnetcore22"></a>[<span data-ttu-id="6ce23-343">.NET Core 2.2</span><span class="sxs-lookup"><span data-stu-id="6ce23-343">.NET Core 2.2</span></span>](#tab/netcore22)
+| <span data-ttu-id="ed1f5-126">템플릿</span><span class="sxs-lookup"><span data-stu-id="ed1f5-126">Templates</span></span>                                    | <span data-ttu-id="ed1f5-127">짧은 이름</span><span class="sxs-lookup"><span data-stu-id="ed1f5-127">Short name</span></span>                      | <span data-ttu-id="ed1f5-128">언어</span><span class="sxs-lookup"><span data-stu-id="ed1f5-128">Language</span></span>     | <span data-ttu-id="ed1f5-129">Tags</span><span class="sxs-lookup"><span data-stu-id="ed1f5-129">Tags</span></span>                                  | <span data-ttu-id="ed1f5-130">도입</span><span class="sxs-lookup"><span data-stu-id="ed1f5-130">Introduced</span></span> |
+|----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
+| <span data-ttu-id="ed1f5-131">콘솔 애플리케이션</span><span class="sxs-lookup"><span data-stu-id="ed1f5-131">Console Application</span></span>                          | [<span data-ttu-id="ed1f5-132">콘솔</span><span class="sxs-lookup"><span data-stu-id="ed1f5-132">console</span></span>](#console)             | <span data-ttu-id="ed1f5-133">[C#], F#, VB</span><span class="sxs-lookup"><span data-stu-id="ed1f5-133">[C#], F#, VB</span></span> | <span data-ttu-id="ed1f5-134">일반/콘솔</span><span class="sxs-lookup"><span data-stu-id="ed1f5-134">Common/Console</span></span>                        | <span data-ttu-id="ed1f5-135">1.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-135">1.0</span></span>        |
+| <span data-ttu-id="ed1f5-136">클래스 라이브러리</span><span class="sxs-lookup"><span data-stu-id="ed1f5-136">Class library</span></span>                                | [<span data-ttu-id="ed1f5-137">classlib</span><span class="sxs-lookup"><span data-stu-id="ed1f5-137">classlib</span></span>](#classlib)           | <span data-ttu-id="ed1f5-138">[C#], F#, VB</span><span class="sxs-lookup"><span data-stu-id="ed1f5-138">[C#], F#, VB</span></span> | <span data-ttu-id="ed1f5-139">일반/라이브러리</span><span class="sxs-lookup"><span data-stu-id="ed1f5-139">Common/Library</span></span>                        | <span data-ttu-id="ed1f5-140">1.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-140">1.0</span></span>        |
+| <span data-ttu-id="ed1f5-141">WPF 애플리케이션</span><span class="sxs-lookup"><span data-stu-id="ed1f5-141">WPF Application</span></span>                              | [<span data-ttu-id="ed1f5-142">wpf</span><span class="sxs-lookup"><span data-stu-id="ed1f5-142">wpf</span></span>](#wpf)                     | <span data-ttu-id="ed1f5-143">[C#]</span><span class="sxs-lookup"><span data-stu-id="ed1f5-143">[C#]</span></span>         | <span data-ttu-id="ed1f5-144">일반/WPF</span><span class="sxs-lookup"><span data-stu-id="ed1f5-144">Common/WPF</span></span>                            | <span data-ttu-id="ed1f5-145">3.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-145">3.0</span></span>        |
+| <span data-ttu-id="ed1f5-146">WPF 클래스 라이브러리</span><span class="sxs-lookup"><span data-stu-id="ed1f5-146">WPF Class library</span></span>                            | [<span data-ttu-id="ed1f5-147">wpflib</span><span class="sxs-lookup"><span data-stu-id="ed1f5-147">wpflib</span></span>](#wpf)                  | <span data-ttu-id="ed1f5-148">[C#]</span><span class="sxs-lookup"><span data-stu-id="ed1f5-148">[C#]</span></span>         | <span data-ttu-id="ed1f5-149">일반/WPF</span><span class="sxs-lookup"><span data-stu-id="ed1f5-149">Common/WPF</span></span>                            | <span data-ttu-id="ed1f5-150">3.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-150">3.0</span></span>        |
+| <span data-ttu-id="ed1f5-151">WPF 사용자 지정 컨트롤 라이브러리</span><span class="sxs-lookup"><span data-stu-id="ed1f5-151">WPF Custom Control Library</span></span>                   | [<span data-ttu-id="ed1f5-152">wpfcustomcontrollib</span><span class="sxs-lookup"><span data-stu-id="ed1f5-152">wpfcustomcontrollib</span></span>](#wpf)     | <span data-ttu-id="ed1f5-153">[C#]</span><span class="sxs-lookup"><span data-stu-id="ed1f5-153">[C#]</span></span>         | <span data-ttu-id="ed1f5-154">일반/WPF</span><span class="sxs-lookup"><span data-stu-id="ed1f5-154">Common/WPF</span></span>                            | <span data-ttu-id="ed1f5-155">3.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-155">3.0</span></span>        |
+| <span data-ttu-id="ed1f5-156">WPF 사용자 컨트롤 라이브러리</span><span class="sxs-lookup"><span data-stu-id="ed1f5-156">WPF User Control Library</span></span>                     | [<span data-ttu-id="ed1f5-157">wpfusercontrollib</span><span class="sxs-lookup"><span data-stu-id="ed1f5-157">wpfusercontrollib</span></span>](#wpf)       | <span data-ttu-id="ed1f5-158">[C#]</span><span class="sxs-lookup"><span data-stu-id="ed1f5-158">[C#]</span></span>         | <span data-ttu-id="ed1f5-159">일반/WPF</span><span class="sxs-lookup"><span data-stu-id="ed1f5-159">Common/WPF</span></span>                            | <span data-ttu-id="ed1f5-160">3.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-160">3.0</span></span>        |
+| <span data-ttu-id="ed1f5-161">Windows Forms(WinForms) 애플리케이션</span><span class="sxs-lookup"><span data-stu-id="ed1f5-161">Windows Forms (WinForms) Application</span></span>         | [<span data-ttu-id="ed1f5-162">winforms</span><span class="sxs-lookup"><span data-stu-id="ed1f5-162">winforms</span></span>](#winforms)           | <span data-ttu-id="ed1f5-163">[C#]</span><span class="sxs-lookup"><span data-stu-id="ed1f5-163">[C#]</span></span>         | <span data-ttu-id="ed1f5-164">일반/WinForms</span><span class="sxs-lookup"><span data-stu-id="ed1f5-164">Common/WinForms</span></span>                       | <span data-ttu-id="ed1f5-165">3.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-165">3.0</span></span>        |
+| <span data-ttu-id="ed1f5-166">Windows Forms(WinForms) 클래스 라이브러리</span><span class="sxs-lookup"><span data-stu-id="ed1f5-166">Windows Forms (WinForms) Class library</span></span>       | [<span data-ttu-id="ed1f5-167">winformslib</span><span class="sxs-lookup"><span data-stu-id="ed1f5-167">winformslib</span></span>](#winforms)        | <span data-ttu-id="ed1f5-168">[C#]</span><span class="sxs-lookup"><span data-stu-id="ed1f5-168">[C#]</span></span>         | <span data-ttu-id="ed1f5-169">일반/WinForms</span><span class="sxs-lookup"><span data-stu-id="ed1f5-169">Common/WinForms</span></span>                       | <span data-ttu-id="ed1f5-170">3.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-170">3.0</span></span>        |
+| <span data-ttu-id="ed1f5-171">Worker Service</span><span class="sxs-lookup"><span data-stu-id="ed1f5-171">Worker Service</span></span>                               | [<span data-ttu-id="ed1f5-172">worker</span><span class="sxs-lookup"><span data-stu-id="ed1f5-172">worker</span></span>](#web-others)           | <span data-ttu-id="ed1f5-173">[C#]</span><span class="sxs-lookup"><span data-stu-id="ed1f5-173">[C#]</span></span>         | <span data-ttu-id="ed1f5-174">일반/Worker/웹</span><span class="sxs-lookup"><span data-stu-id="ed1f5-174">Common/Worker/Web</span></span>                     | <span data-ttu-id="ed1f5-175">3.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-175">3.0</span></span>        |
+| <span data-ttu-id="ed1f5-176">단위 테스트 프로젝트</span><span class="sxs-lookup"><span data-stu-id="ed1f5-176">Unit Test Project</span></span>                            | [<span data-ttu-id="ed1f5-177">mstest</span><span class="sxs-lookup"><span data-stu-id="ed1f5-177">mstest</span></span>](#test)                 | <span data-ttu-id="ed1f5-178">[C#], F#, VB</span><span class="sxs-lookup"><span data-stu-id="ed1f5-178">[C#], F#, VB</span></span> | <span data-ttu-id="ed1f5-179">Test/MSTest</span><span class="sxs-lookup"><span data-stu-id="ed1f5-179">Test/MSTest</span></span>                           | <span data-ttu-id="ed1f5-180">1.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-180">1.0</span></span>        |
+| <span data-ttu-id="ed1f5-181">NUnit 3 테스트 프로젝트</span><span class="sxs-lookup"><span data-stu-id="ed1f5-181">NUnit 3 Test Project</span></span>                         | [<span data-ttu-id="ed1f5-182">nunit</span><span class="sxs-lookup"><span data-stu-id="ed1f5-182">nunit</span></span>](#nunit)                  | <span data-ttu-id="ed1f5-183">[C#], F#, VB</span><span class="sxs-lookup"><span data-stu-id="ed1f5-183">[C#], F#, VB</span></span> | <span data-ttu-id="ed1f5-184">Test/NUnit</span><span class="sxs-lookup"><span data-stu-id="ed1f5-184">Test/NUnit</span></span>                            | <span data-ttu-id="ed1f5-185">2.1.400</span><span class="sxs-lookup"><span data-stu-id="ed1f5-185">2.1.400</span></span>    |
+| <span data-ttu-id="ed1f5-186">NUnit 3 테스트 항목</span><span class="sxs-lookup"><span data-stu-id="ed1f5-186">NUnit 3 Test Item</span></span>                            | `nunit-test`                    | <span data-ttu-id="ed1f5-187">[C#], F#, VB</span><span class="sxs-lookup"><span data-stu-id="ed1f5-187">[C#], F#, VB</span></span> | <span data-ttu-id="ed1f5-188">Test/NUnit</span><span class="sxs-lookup"><span data-stu-id="ed1f5-188">Test/NUnit</span></span>                            | <span data-ttu-id="ed1f5-189">2.2</span><span class="sxs-lookup"><span data-stu-id="ed1f5-189">2.2</span></span>        |
+| <span data-ttu-id="ed1f5-190">xUnit 테스트 프로젝트</span><span class="sxs-lookup"><span data-stu-id="ed1f5-190">xUnit Test Project</span></span>                           | [<span data-ttu-id="ed1f5-191">xunit</span><span class="sxs-lookup"><span data-stu-id="ed1f5-191">xunit</span></span>](#test)                  | <span data-ttu-id="ed1f5-192">[C#], F#, VB</span><span class="sxs-lookup"><span data-stu-id="ed1f5-192">[C#], F#, VB</span></span> | <span data-ttu-id="ed1f5-193">Test/xUnit</span><span class="sxs-lookup"><span data-stu-id="ed1f5-193">Test/xUnit</span></span>                            | <span data-ttu-id="ed1f5-194">1.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-194">1.0</span></span>        |
+| <span data-ttu-id="ed1f5-195">Razor 구성 요소</span><span class="sxs-lookup"><span data-stu-id="ed1f5-195">Razor Component</span></span>                              | `razorcomponent`                | <span data-ttu-id="ed1f5-196">[C#]</span><span class="sxs-lookup"><span data-stu-id="ed1f5-196">[C#]</span></span>         | <span data-ttu-id="ed1f5-197">Web/ASP.NET</span><span class="sxs-lookup"><span data-stu-id="ed1f5-197">Web/ASP.NET</span></span>                           | <span data-ttu-id="ed1f5-198">3.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-198">3.0</span></span>        |
+| <span data-ttu-id="ed1f5-199">Razor 페이지</span><span class="sxs-lookup"><span data-stu-id="ed1f5-199">Razor Page</span></span>                                   | [<span data-ttu-id="ed1f5-200">page</span><span class="sxs-lookup"><span data-stu-id="ed1f5-200">page</span></span>](#page)                   | <span data-ttu-id="ed1f5-201">[C#]</span><span class="sxs-lookup"><span data-stu-id="ed1f5-201">[C#]</span></span>         | <span data-ttu-id="ed1f5-202">Web/ASP.NET</span><span class="sxs-lookup"><span data-stu-id="ed1f5-202">Web/ASP.NET</span></span>                           | <span data-ttu-id="ed1f5-203">2.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-203">2.0</span></span>        |
+| <span data-ttu-id="ed1f5-204">MVC ViewImports</span><span class="sxs-lookup"><span data-stu-id="ed1f5-204">MVC ViewImports</span></span>                              | [<span data-ttu-id="ed1f5-205">viewimports</span><span class="sxs-lookup"><span data-stu-id="ed1f5-205">viewimports</span></span>](#namespace)       | <span data-ttu-id="ed1f5-206">[C#]</span><span class="sxs-lookup"><span data-stu-id="ed1f5-206">[C#]</span></span>         | <span data-ttu-id="ed1f5-207">Web/ASP.NET</span><span class="sxs-lookup"><span data-stu-id="ed1f5-207">Web/ASP.NET</span></span>                           | <span data-ttu-id="ed1f5-208">2.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-208">2.0</span></span>        |
+| <span data-ttu-id="ed1f5-209">MVC ViewStart</span><span class="sxs-lookup"><span data-stu-id="ed1f5-209">MVC ViewStart</span></span>                                | `viewstart`                     | <span data-ttu-id="ed1f5-210">[C#]</span><span class="sxs-lookup"><span data-stu-id="ed1f5-210">[C#]</span></span>         | <span data-ttu-id="ed1f5-211">Web/ASP.NET</span><span class="sxs-lookup"><span data-stu-id="ed1f5-211">Web/ASP.NET</span></span>                           | <span data-ttu-id="ed1f5-212">2.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-212">2.0</span></span>        |
+| <span data-ttu-id="ed1f5-213">Blazor 서버 앱</span><span class="sxs-lookup"><span data-stu-id="ed1f5-213">Blazor Server App</span></span>                            | [<span data-ttu-id="ed1f5-214">blazorserver</span><span class="sxs-lookup"><span data-stu-id="ed1f5-214">blazorserver</span></span>](#blazorserver)   | <span data-ttu-id="ed1f5-215">[C#]</span><span class="sxs-lookup"><span data-stu-id="ed1f5-215">[C#]</span></span>         | <span data-ttu-id="ed1f5-216">웹/Blazor</span><span class="sxs-lookup"><span data-stu-id="ed1f5-216">Web/Blazor</span></span>                            | <span data-ttu-id="ed1f5-217">3.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-217">3.0</span></span>        |
+| <span data-ttu-id="ed1f5-218">ASP.NET Core 비어 있음</span><span class="sxs-lookup"><span data-stu-id="ed1f5-218">ASP.NET Core Empty</span></span>                           | [<span data-ttu-id="ed1f5-219">web</span><span class="sxs-lookup"><span data-stu-id="ed1f5-219">web</span></span>](#web)                     | <span data-ttu-id="ed1f5-220">[C#], F#</span><span class="sxs-lookup"><span data-stu-id="ed1f5-220">[C#], F#</span></span>     | <span data-ttu-id="ed1f5-221">Web/Empty</span><span class="sxs-lookup"><span data-stu-id="ed1f5-221">Web/Empty</span></span>                             | <span data-ttu-id="ed1f5-222">1.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-222">1.0</span></span>        |
+| <span data-ttu-id="ed1f5-223">ASP.NET Core 웹앱(모델-뷰-컨트롤러)</span><span class="sxs-lookup"><span data-stu-id="ed1f5-223">ASP.NET Core Web App (Model-View-Controller)</span></span> | [<span data-ttu-id="ed1f5-224">mvc</span><span class="sxs-lookup"><span data-stu-id="ed1f5-224">mvc</span></span>](#web-options)             | <span data-ttu-id="ed1f5-225">[C#], F#</span><span class="sxs-lookup"><span data-stu-id="ed1f5-225">[C#], F#</span></span>     | <span data-ttu-id="ed1f5-226">Web/MVC</span><span class="sxs-lookup"><span data-stu-id="ed1f5-226">Web/MVC</span></span>                               | <span data-ttu-id="ed1f5-227">1.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-227">1.0</span></span>        |
+| <span data-ttu-id="ed1f5-228">ASP.NET Core 웹앱</span><span class="sxs-lookup"><span data-stu-id="ed1f5-228">ASP.NET Core Web App</span></span>                         | [<span data-ttu-id="ed1f5-229">webapp, razor</span><span class="sxs-lookup"><span data-stu-id="ed1f5-229">webapp, razor</span></span>](#web-options)   | <span data-ttu-id="ed1f5-230">[C#]</span><span class="sxs-lookup"><span data-stu-id="ed1f5-230">[C#]</span></span>         | <span data-ttu-id="ed1f5-231">Web/MVC/Razor Pages</span><span class="sxs-lookup"><span data-stu-id="ed1f5-231">Web/MVC/Razor Pages</span></span>                   | <span data-ttu-id="ed1f5-232">2.2, 2.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-232">2.2, 2.0</span></span>   |
+| <span data-ttu-id="ed1f5-233">ASP.NET Core(Angular 사용)</span><span class="sxs-lookup"><span data-stu-id="ed1f5-233">ASP.NET Core with Angular</span></span>                    | [<span data-ttu-id="ed1f5-234">angular</span><span class="sxs-lookup"><span data-stu-id="ed1f5-234">angular</span></span>](#spa)                 | <span data-ttu-id="ed1f5-235">[C#]</span><span class="sxs-lookup"><span data-stu-id="ed1f5-235">[C#]</span></span>         | <span data-ttu-id="ed1f5-236">Web/MVC/SPA</span><span class="sxs-lookup"><span data-stu-id="ed1f5-236">Web/MVC/SPA</span></span>                           | <span data-ttu-id="ed1f5-237">2.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-237">2.0</span></span>        |
+| <span data-ttu-id="ed1f5-238">ASP.NET Core(React.js 사용)</span><span class="sxs-lookup"><span data-stu-id="ed1f5-238">ASP.NET Core with React.js</span></span>                   | [<span data-ttu-id="ed1f5-239">react</span><span class="sxs-lookup"><span data-stu-id="ed1f5-239">react</span></span>](#spa)                   | <span data-ttu-id="ed1f5-240">[C#]</span><span class="sxs-lookup"><span data-stu-id="ed1f5-240">[C#]</span></span>         | <span data-ttu-id="ed1f5-241">Web/MVC/SPA</span><span class="sxs-lookup"><span data-stu-id="ed1f5-241">Web/MVC/SPA</span></span>                           | <span data-ttu-id="ed1f5-242">2.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-242">2.0</span></span>        |
+| <span data-ttu-id="ed1f5-243">ASP.NET Core(React.js 및 Redux 사용)</span><span class="sxs-lookup"><span data-stu-id="ed1f5-243">ASP.NET Core with React.js and Redux</span></span>         | [<span data-ttu-id="ed1f5-244">reactredux</span><span class="sxs-lookup"><span data-stu-id="ed1f5-244">reactredux</span></span>](#reactredux)       | <span data-ttu-id="ed1f5-245">[C#]</span><span class="sxs-lookup"><span data-stu-id="ed1f5-245">[C#]</span></span>         | <span data-ttu-id="ed1f5-246">Web/MVC/SPA</span><span class="sxs-lookup"><span data-stu-id="ed1f5-246">Web/MVC/SPA</span></span>                           | <span data-ttu-id="ed1f5-247">2.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-247">2.0</span></span>        |
+| <span data-ttu-id="ed1f5-248">Razor 클래스 라이브러리</span><span class="sxs-lookup"><span data-stu-id="ed1f5-248">Razor Class Library</span></span>                          | [<span data-ttu-id="ed1f5-249">razorclasslib</span><span class="sxs-lookup"><span data-stu-id="ed1f5-249">razorclasslib</span></span>](#razorclasslib) | <span data-ttu-id="ed1f5-250">[C#]</span><span class="sxs-lookup"><span data-stu-id="ed1f5-250">[C#]</span></span>         | <span data-ttu-id="ed1f5-251">Web/Razor/Library/Razor 클래스 라이브러리</span><span class="sxs-lookup"><span data-stu-id="ed1f5-251">Web/Razor/Library/Razor Class Library</span></span> | <span data-ttu-id="ed1f5-252">2.1</span><span class="sxs-lookup"><span data-stu-id="ed1f5-252">2.1</span></span>        |
+| <span data-ttu-id="ed1f5-253">ASP.NET Core 웹 API</span><span class="sxs-lookup"><span data-stu-id="ed1f5-253">ASP.NET Core Web API</span></span>                         | [<span data-ttu-id="ed1f5-254">webapi</span><span class="sxs-lookup"><span data-stu-id="ed1f5-254">webapi</span></span>](#webapi)               | <span data-ttu-id="ed1f5-255">[C#], F#</span><span class="sxs-lookup"><span data-stu-id="ed1f5-255">[C#], F#</span></span>     | <span data-ttu-id="ed1f5-256">Web/WebAPI</span><span class="sxs-lookup"><span data-stu-id="ed1f5-256">Web/WebAPI</span></span>                            | <span data-ttu-id="ed1f5-257">1.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-257">1.0</span></span>        |
+| <span data-ttu-id="ed1f5-258">ASP.NET Core gRPC 서비스</span><span class="sxs-lookup"><span data-stu-id="ed1f5-258">ASP.NET Core gRPC Service</span></span>                    | [<span data-ttu-id="ed1f5-259">grpc</span><span class="sxs-lookup"><span data-stu-id="ed1f5-259">grpc</span></span>](#web-others)             | <span data-ttu-id="ed1f5-260">[C#]</span><span class="sxs-lookup"><span data-stu-id="ed1f5-260">[C#]</span></span>         | <span data-ttu-id="ed1f5-261">Web/gRPC</span><span class="sxs-lookup"><span data-stu-id="ed1f5-261">Web/gRPC</span></span>                              | <span data-ttu-id="ed1f5-262">3.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-262">3.0</span></span>        |
+| <span data-ttu-id="ed1f5-263">프로토콜 버퍼 파일</span><span class="sxs-lookup"><span data-stu-id="ed1f5-263">Protocol Buffer File</span></span>                         | [<span data-ttu-id="ed1f5-264">proto</span><span class="sxs-lookup"><span data-stu-id="ed1f5-264">proto</span></span>](#namespace)             |              | <span data-ttu-id="ed1f5-265">Web/gRPC</span><span class="sxs-lookup"><span data-stu-id="ed1f5-265">Web/gRPC</span></span>                              | <span data-ttu-id="ed1f5-266">3.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-266">3.0</span></span>        |
+| <span data-ttu-id="ed1f5-267">dotnet gitignore 파일</span><span class="sxs-lookup"><span data-stu-id="ed1f5-267">dotnet gitignore file</span></span>                        | `gitignore`                     |              | <span data-ttu-id="ed1f5-268">Config</span><span class="sxs-lookup"><span data-stu-id="ed1f5-268">Config</span></span>                                | <span data-ttu-id="ed1f5-269">3.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-269">3.0</span></span>        |
+| <span data-ttu-id="ed1f5-270">global.json 파일</span><span class="sxs-lookup"><span data-stu-id="ed1f5-270">global.json file</span></span>                             | [<span data-ttu-id="ed1f5-271">globaljson</span><span class="sxs-lookup"><span data-stu-id="ed1f5-271">globaljson</span></span>](#globaljson)       |              | <span data-ttu-id="ed1f5-272">Config</span><span class="sxs-lookup"><span data-stu-id="ed1f5-272">Config</span></span>                                | <span data-ttu-id="ed1f5-273">2.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-273">2.0</span></span>        |
+| <span data-ttu-id="ed1f5-274">NuGet 구성</span><span class="sxs-lookup"><span data-stu-id="ed1f5-274">NuGet Config</span></span>                                 | `nugetconfig`                   |              | <span data-ttu-id="ed1f5-275">Config</span><span class="sxs-lookup"><span data-stu-id="ed1f5-275">Config</span></span>                                | <span data-ttu-id="ed1f5-276">1.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-276">1.0</span></span>        |
+| <span data-ttu-id="ed1f5-277">dotnet local tool 매니페스트 파일</span><span class="sxs-lookup"><span data-stu-id="ed1f5-277">dotnet local tool manifest file</span></span>              | `tool-manifest`                 |              | <span data-ttu-id="ed1f5-278">Config</span><span class="sxs-lookup"><span data-stu-id="ed1f5-278">Config</span></span>                                | <span data-ttu-id="ed1f5-279">3.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-279">3.0</span></span>        |
+| <span data-ttu-id="ed1f5-280">웹 구성</span><span class="sxs-lookup"><span data-stu-id="ed1f5-280">Web Config</span></span>                                   | `webconfig`                     |              | <span data-ttu-id="ed1f5-281">Config</span><span class="sxs-lookup"><span data-stu-id="ed1f5-281">Config</span></span>                                | <span data-ttu-id="ed1f5-282">1.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-282">1.0</span></span>        |
+| <span data-ttu-id="ed1f5-283">솔루션 파일</span><span class="sxs-lookup"><span data-stu-id="ed1f5-283">Solution File</span></span>                                | `sln`                           |              | <span data-ttu-id="ed1f5-284">솔루션</span><span class="sxs-lookup"><span data-stu-id="ed1f5-284">Solution</span></span>                              | <span data-ttu-id="ed1f5-285">1.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-285">1.0</span></span>        |
 
-`--dry-run`
+## <a name="options"></a><span data-ttu-id="ed1f5-286">옵션</span><span class="sxs-lookup"><span data-stu-id="ed1f5-286">Options</span></span>
 
-<span data-ttu-id="6ce23-344">지정된 명령이 실행되어 템플릿 만들기로 이어질 경우 발생하는 작업에 대한 요약을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-344">Displays a summary of what would happen if the given command were run if it would result in a template creation.</span></span>
+- **`--dry-run`**
 
-`--force`
+  <span data-ttu-id="ed1f5-287">지정된 명령이 실행될 경우 발생하는 동작에 대한 요약 정보를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-287">Displays a summary of what would happen if the given command were run.</span></span> <span data-ttu-id="ed1f5-288">.NET Core 2.2 SDK부터 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-288">Available since .NET Core 2.2 SDK.</span></span>
 
-<span data-ttu-id="6ce23-345">기존 파일을 변경할 경우에도 콘텐츠를 강제 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-345">Forces content to be generated even if it would change existing files.</span></span> <span data-ttu-id="6ce23-346">출력 디렉터리에 이미 프로젝트가 포함되어 있는 경우 필수입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-346">This is required when the output directory already contains a project.</span></span>
+- **`--force`**
 
-`-h|--help`
+  <span data-ttu-id="ed1f5-289">기존 파일을 변경할 경우에도 콘텐츠를 강제 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-289">Forces content to be generated even if it would change existing files.</span></span> <span data-ttu-id="ed1f5-290">선택한 템플릿이 출력 디렉터리의 기존 파일을 재정의하는 경우에 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-290">This is required when the template chosen would override existing files in the output directory.</span></span>
 
-<span data-ttu-id="6ce23-347">명령에 대한 도움말을 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-347">Prints out help for the command.</span></span> <span data-ttu-id="6ce23-348">`dotnet new` 명령 자체 또는 `dotnet new mvc --help` 같은 템플릿에 대해 호출될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-348">It can be invoked for the `dotnet new` command itself or for any template, such as `dotnet new mvc --help`.</span></span>
+- **`-h|--help`**
 
-`-i|--install <PATH|NUGET_ID>`
+  <span data-ttu-id="ed1f5-291">명령에 대한 도움말을 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-291">Prints out help for the command.</span></span> <span data-ttu-id="ed1f5-292">`dotnet new` 명령 자체 또는 템플릿에 대해 호출될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-292">It can be invoked for the `dotnet new` command itself or for any template.</span></span> <span data-ttu-id="ed1f5-293">예: `dotnet new mvc --help`.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-293">For example, `dotnet new mvc --help`.</span></span>
 
-<span data-ttu-id="6ce23-349">제공된 `PATH` 또는 `NUGET_ID`에서 소스 또는 템플릿 팩을 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-349">Installs a source or template pack from the `PATH` or `NUGET_ID` provided.</span></span> <span data-ttu-id="6ce23-350">시험판 버전의 템플릿 패키지를 설치하려면 버전을 `<package-name>::<package-version>` 형식으로 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-350">If you want to install a prerelease version of a template package, you need to specify the version in the format of `<package-name>::<package-version>`.</span></span> <span data-ttu-id="6ce23-351">기본적으로 `dotnet new`는 마지막 안정 패키지 버전을 나타내는 버전에 대해 \*를 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-351">By default, `dotnet new` passes \* for the version, which represents the last stable package version.</span></span> <span data-ttu-id="6ce23-352">[예제](#examples) 섹션의 예제를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="6ce23-352">See an example at the [Examples](#examples) section.</span></span>
+- **`-i|--install <PATH|NUGET_ID>`**
 
-<span data-ttu-id="6ce23-353">사용자 지정 템플릿을 만드는 방법에 대한 자세한 내용은 [dotnet new에 대한 사용자 지정 템플릿](custom-templates.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="6ce23-353">For information on creating custom templates, see [Custom templates for dotnet new](custom-templates.md).</span></span>
+  <span data-ttu-id="ed1f5-294">제공된 `PATH` 또는 `NUGET_ID`에서 템플릿 패키지를 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-294">Installs a template pack from the `PATH` or `NUGET_ID` provided.</span></span> <span data-ttu-id="ed1f5-295">시험판 버전의 템플릿 패키지를 설치하려면 버전을 `<package-name>::<package-version>` 형식으로 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-295">If you want to install a prerelease version of a template package, you need to specify the version in the format of `<package-name>::<package-version>`.</span></span> <span data-ttu-id="ed1f5-296">기본적으로 `dotnet new`는 안정적인 최신 패키지 버전을 나타내는 버전에 대해 \*를 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-296">By default, `dotnet new` passes \* for the version, which represents the latest stable package version.</span></span> <span data-ttu-id="ed1f5-297">[예제](#examples) 섹션의 예제를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-297">See an example in the [Examples](#examples) section.</span></span>
+  
+  <span data-ttu-id="ed1f5-298">이 명령을 실행할 때 템플릿의 버전이 이미 설치되어 있는 경우 템플릿이 지정된 버전으로 업데이트되거나 버전이 지정되지 않은 경우 안정적인 최신 버전으로 업데이트됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-298">If a version of the template was already installed when you run this command, the template will be updated to the specified version, or to the latest stable version if no version was specified.</span></span>
 
-`-l|--list`
+  <span data-ttu-id="ed1f5-299">사용자 지정 템플릿을 만드는 방법에 대한 자세한 내용은 [dotnet new에 대한 사용자 지정 템플릿](custom-templates.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-299">For information on creating custom templates, see [Custom templates for dotnet new](custom-templates.md).</span></span>
 
-<span data-ttu-id="6ce23-354">지정된 이름을 포함하는 템플릿을 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-354">Lists templates containing the specified name.</span></span> <span data-ttu-id="6ce23-355">`dotnet new` 명령에 대해 호출되는 경우 지정된 디렉터리에서 사용 가능한 템플릿을 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-355">If invoked for the `dotnet new` command, it lists the possible templates available for the given directory.</span></span> <span data-ttu-id="6ce23-356">예를 들어 디렉터리에 이미 프로젝트가 포함되어 있는 경우 일부 프로젝트 템플릿을 나열하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-356">For example if the directory already contains a project, it doesn't list all project templates.</span></span>
+- **`-l|--list`**
 
-`-lang|--language {C#|F#|VB}`
+  <span data-ttu-id="ed1f5-300">지정된 이름을 포함하는 템플릿을 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-300">Lists templates containing the specified name.</span></span> <span data-ttu-id="ed1f5-301">이름을 지정하지 않으면 모든 템플릿이 나열됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-301">If no name is specified, lists all templates.</span></span>
 
-<span data-ttu-id="6ce23-357">만들 템플릿의 언어입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-357">The language of the template to create.</span></span> <span data-ttu-id="6ce23-358">허용되는 언어는 템플릿에 따라 다릅니다([인수](#arguments) 섹션에서 기본값 참조).</span><span class="sxs-lookup"><span data-stu-id="6ce23-358">The language accepted varies by the template (see defaults in the [arguments](#arguments) section).</span></span> <span data-ttu-id="6ce23-359">일부 템플릿의 경우 유효하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-359">Not valid for some templates.</span></span>
+- **`-lang|--language {C#|F#|VB}`**
 
-> [!NOTE]
-> <span data-ttu-id="6ce23-360">일부 셸은 `#`을 특수 문자로 해석합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-360">Some shells interpret `#` as a special character.</span></span> <span data-ttu-id="6ce23-361">이러한 경우 `dotnet new console -lang "F#"`과 같은 언어 매개 변수 값을 포함해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-361">In those cases, you need to enclose the language parameter value, such as `dotnet new console -lang "F#"`.</span></span>
+  <span data-ttu-id="ed1f5-302">만들 템플릿의 언어입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-302">The language of the template to create.</span></span> <span data-ttu-id="ed1f5-303">허용되는 언어는 템플릿에 따라 다릅니다([인수](#arguments) 섹션에서 기본값 참조).</span><span class="sxs-lookup"><span data-stu-id="ed1f5-303">The language accepted varies by the template (see defaults in the [arguments](#arguments) section).</span></span> <span data-ttu-id="ed1f5-304">일부 템플릿의 경우 유효하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-304">Not valid for some templates.</span></span>
 
-`-n|--name <OUTPUT_NAME>`
+  > [!NOTE]
+  > <span data-ttu-id="ed1f5-305">일부 셸은 `#`을 특수 문자로 해석합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-305">Some shells interpret `#` as a special character.</span></span> <span data-ttu-id="ed1f5-306">이러한 경우 언어 매개 변수 값을 따옴표로 묶습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-306">In those cases, enclose the language parameter value in quotes.</span></span> <span data-ttu-id="ed1f5-307">예: `dotnet new console -lang "F#"`.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-307">For example, `dotnet new console -lang "F#"`.</span></span>
 
-<span data-ttu-id="6ce23-362">생성된 출력에 대한 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-362">The name for the created output.</span></span> <span data-ttu-id="6ce23-363">이름을 지정하지 않으면 현재 디렉터리의 이름이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-363">If no name is specified, the name of the current directory is used.</span></span>
+- **`-n|--name <OUTPUT_NAME>`**
 
-`--nuget-source`
+  <span data-ttu-id="ed1f5-308">생성된 출력에 대한 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-308">The name for the created output.</span></span> <span data-ttu-id="ed1f5-309">이름을 지정하지 않으면 현재 디렉터리의 이름이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-309">If no name is specified, the name of the current directory is used.</span></span>
 
-<span data-ttu-id="6ce23-364">설치 중 사용할 NuGet 소스를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-364">Specifies a NuGet source to use during install.</span></span>
+- **`--nuget-source`**
 
-`-o|--output <OUTPUT_DIRECTORY>`
+  <span data-ttu-id="ed1f5-310">설치 중 사용할 NuGet 소스를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-310">Specifies a NuGet source to use during install.</span></span> <span data-ttu-id="ed1f5-311">.NET Core 2.1 SDK부터 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-311">Available since .NET Core 2.1 SDK.</span></span>
 
-<span data-ttu-id="6ce23-365">생성된 출력을 배치할 위치입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-365">Location to place the generated output.</span></span> <span data-ttu-id="6ce23-366">기본값은 현재 디렉터리입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-366">The default is the current directory.</span></span>
+- **`-o|--output <OUTPUT_DIRECTORY>`**
 
-`--type`
+  <span data-ttu-id="ed1f5-312">생성된 출력을 배치할 위치입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-312">Location to place the generated output.</span></span> <span data-ttu-id="ed1f5-313">기본값은 현재 디렉터리입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-313">The default is the current directory.</span></span>
 
-<span data-ttu-id="6ce23-367">사용 가능한 형식에 따라 템플릿을 필터링합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-367">Filters templates based on available types.</span></span> <span data-ttu-id="6ce23-368">미리 정의된 값은 "project", "item" 또는 "other"입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-368">Predefined values are "project", "item", or "other".</span></span>
+- **`--type`**
 
-`-u|--uninstall <PATH|NUGET_ID>`
+  <span data-ttu-id="ed1f5-314">사용 가능한 형식에 따라 템플릿을 필터링합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-314">Filters templates based on available types.</span></span> <span data-ttu-id="ed1f5-315">미리 정의된 값은 "project", "item" 또는 "other"입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-315">Predefined values are "project", "item", or "other".</span></span>
 
-<span data-ttu-id="6ce23-369">제공된 `PATH` 또는 `NUGET_ID`에서 소스 또는 템플릿 팩을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-369">Uninstalls a source or template pack at the `PATH` or `NUGET_ID` provided.</span></span> <span data-ttu-id="6ce23-370">`<PATH|NUGET_ID>` 값을 제외하면 현재 설치된 모든 템플릿 팩과 연결된 템플릿이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-370">When excluding the `<PATH|NUGET_ID>` value, all currently installed template packs and their associated templates are displayed.</span></span>
+- **`-u|--uninstall [PATH|NUGET_ID]`**
 
-> [!NOTE]
-> <span data-ttu-id="6ce23-371">`PATH`를 사용하여 템플릿을 제거하려면 경로를 정규화해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-371">To uninstall a template using a `PATH`, you need to fully qualify the path.</span></span> <span data-ttu-id="6ce23-372">예를 들어 *C:/Users/\<사용자>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp*는 작동하지만 상위 폴더의 *./GarciaSoftware.ConsoleTemplate.CSharp*는 작동하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-372">For example, *C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* will work, but *./GarciaSoftware.ConsoleTemplate.CSharp* from the containing folder will not.</span></span>
-> <span data-ttu-id="6ce23-373">마지막의 종료하는 디렉터리 슬래시도 템플릿 경로에 포함하지 마세요.</span><span class="sxs-lookup"><span data-stu-id="6ce23-373">Additionally, do not include a final terminating directory slash on your template path.</span></span>
+  <span data-ttu-id="ed1f5-316">제공된 `PATH` 또는 `NUGET_ID`에서 템플릿 패키지를 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-316">Uninstalls a template pack at the `PATH` or `NUGET_ID` provided.</span></span> <span data-ttu-id="ed1f5-317">`<PATH|NUGET_ID>` 값을 지정하지 않으면 현재 설치된 모든 템플릿 팩과 연결된 템플릿이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-317">When the `<PATH|NUGET_ID>` value isn't specified, all currently installed template packs and their associated templates are displayed.</span></span> <span data-ttu-id="ed1f5-318">`NUGET_ID`를 지정하는 경우 버전 번호를 포함하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-318">When specifying `NUGET_ID`, don't include the version number.</span></span>
 
-# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="6ce23-374">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="6ce23-374">.NET Core 2.1</span></span>](#tab/netcore21)
+  <span data-ttu-id="ed1f5-319">이 옵션에 대한 매개 변수를 지정하지 않으면 명령은 설치된 템플릿 및 해당 세부 정보를 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-319">If you don't specify a parameter to this option, the command lists the installed templates and details about them.</span></span>
 
-`--force`
+  > [!NOTE]
+  > <span data-ttu-id="ed1f5-320">`PATH`를 사용하여 템플릿을 제거하려면 경로를 정규화해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-320">To uninstall a template using a `PATH`, you need to fully qualify the path.</span></span> <span data-ttu-id="ed1f5-321">예를 들어 *C:/Users/\<사용자>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp*는 작동하지만 상위 폴더의 *./GarciaSoftware.ConsoleTemplate.CSharp*는 작동하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-321">For example, *C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* will work, but *./GarciaSoftware.ConsoleTemplate.CSharp* from the containing folder will not.</span></span>
+  > <span data-ttu-id="ed1f5-322">템플릿 경로에 마지막 디렉터리 슬래시를 포함하지 마세요.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-322">Don't include a final terminating directory slash on your template path.</span></span>
 
-<span data-ttu-id="6ce23-375">기존 파일을 변경할 경우에도 콘텐츠를 강제 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-375">Forces content to be generated even if it would change existing files.</span></span> <span data-ttu-id="6ce23-376">출력 디렉터리에 이미 프로젝트가 포함되어 있는 경우 필수입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-376">This is required when the output directory already contains a project.</span></span>
+- **`--update-apply`**
 
-`-h|--help`
+  <span data-ttu-id="ed1f5-323">현재 설치된 템플릿 패키지에 사용할 수 있는 업데이트가 있는지 확인하고 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-323">Checks if there are updates available for the template packs that are currently installed and installs them.</span></span> <span data-ttu-id="ed1f5-324">.NET Core 3.0 SDK 이후 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-324">Available since .NET Core 3.0 SDK.</span></span>
 
-<span data-ttu-id="6ce23-377">명령에 대한 도움말을 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-377">Prints out help for the command.</span></span> <span data-ttu-id="6ce23-378">`dotnet new` 명령 자체 또는 `dotnet new mvc --help` 같은 템플릿에 대해 호출될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-378">It can be invoked for the `dotnet new` command itself or for any template, such as `dotnet new mvc --help`.</span></span>
+- **`--update-check`**
 
-`-i|--install <PATH|NUGET_ID>`
+  <span data-ttu-id="ed1f5-325">현재 설치된 템플릿 패키지에 사용할 수 있는 업데이트가 있는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-325">Checks if there are updates available for the template packs that are currently installed.</span></span> <span data-ttu-id="ed1f5-326">.NET Core 3.0 SDK 이후 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-326">Available since .NET Core 3.0 SDK.</span></span>
 
-<span data-ttu-id="6ce23-379">제공된 `PATH` 또는 `NUGET_ID`에서 소스 또는 템플릿 팩을 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-379">Installs a source or template pack from the `PATH` or `NUGET_ID` provided.</span></span> <span data-ttu-id="6ce23-380">시험판 버전의 템플릿 패키지를 설치하려면 버전을 `<package-name>::<package-version>` 형식으로 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-380">If you want to install a prerelease version of a template package, you need to specify the version in the format of `<package-name>::<package-version>`.</span></span> <span data-ttu-id="6ce23-381">기본적으로 `dotnet new`는 마지막 안정 패키지 버전을 나타내는 버전에 대해 \*를 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-381">By default, `dotnet new` passes \* for the version, which represents the last stable package version.</span></span> <span data-ttu-id="6ce23-382">[예제](#examples) 섹션의 예제를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="6ce23-382">See an example at the [Examples](#examples) section.</span></span>
+## <a name="template-options"></a><span data-ttu-id="ed1f5-327">템플릿 옵션</span><span class="sxs-lookup"><span data-stu-id="ed1f5-327">Template options</span></span>
 
-<span data-ttu-id="6ce23-383">사용자 지정 템플릿을 만드는 방법에 대한 자세한 내용은 [dotnet new에 대한 사용자 지정 템플릿](custom-templates.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="6ce23-383">For information on creating custom templates, see [Custom templates for dotnet new](custom-templates.md).</span></span>
+<span data-ttu-id="ed1f5-328">각 프로젝트 템플릿에는 사용할 수 있는 추가 옵션이 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-328">Each project template may have additional options available.</span></span> <span data-ttu-id="ed1f5-329">코어 템플릿에는 다음과 같은 추가 옵션이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-329">The core templates have the following additional options:</span></span>
 
-`-l|--list`
+### <a name="console"></a><span data-ttu-id="ed1f5-330">콘솔</span><span class="sxs-lookup"><span data-stu-id="ed1f5-330">console</span></span>
 
-<span data-ttu-id="6ce23-384">지정된 이름을 포함하는 템플릿을 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-384">Lists templates containing the specified name.</span></span> <span data-ttu-id="6ce23-385">`dotnet new` 명령에 대해 호출되는 경우 지정된 디렉터리에서 사용 가능한 템플릿을 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-385">If invoked for the `dotnet new` command, it lists the possible templates available for the given directory.</span></span> <span data-ttu-id="6ce23-386">예를 들어 디렉터리에 이미 프로젝트가 포함되어 있는 경우 일부 프로젝트 템플릿을 나열하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-386">For example if the directory already contains a project, it doesn't list all project templates.</span></span>
+- **`-f|--framework <FRAMEWORK>`**
 
-`-lang|--language {C#|F#|VB}`
+  <span data-ttu-id="ed1f5-331">대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-331">Specifies the [framework](../../standard/frameworks.md) to target.</span></span> <span data-ttu-id="ed1f5-332">.NET Core 3.0 SDK 이후 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-332">Available since .NET Core 3.0 SDK.</span></span>
 
-<span data-ttu-id="6ce23-387">만들 템플릿의 언어입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-387">The language of the template to create.</span></span> <span data-ttu-id="6ce23-388">허용되는 언어는 템플릿에 따라 다릅니다([인수](#arguments) 섹션에서 기본값 참조).</span><span class="sxs-lookup"><span data-stu-id="6ce23-388">The language accepted varies by the template (see defaults in the [arguments](#arguments) section).</span></span> <span data-ttu-id="6ce23-389">일부 템플릿의 경우 유효하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-389">Not valid for some templates.</span></span>
+  <span data-ttu-id="ed1f5-333">다음 표에서는 사용하는 SDK 버전 번호에 따른 기본값을 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-333">The following table lists the default values according to the SDK version number you're using:</span></span>
 
-> [!NOTE]
-> <span data-ttu-id="6ce23-390">일부 셸은 `#`을 특수 문자로 해석합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-390">Some shells interpret `#` as a special character.</span></span> <span data-ttu-id="6ce23-391">이러한 경우 `dotnet new console -lang "F#"`과 같은 언어 매개 변수 값을 포함해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-391">In those cases, you need to enclose the language parameter value, such as `dotnet new console -lang "F#"`.</span></span>
+  | <span data-ttu-id="ed1f5-334">SDK 버전</span><span class="sxs-lookup"><span data-stu-id="ed1f5-334">SDK version</span></span> | <span data-ttu-id="ed1f5-335">기본값</span><span class="sxs-lookup"><span data-stu-id="ed1f5-335">Default value</span></span>   |
+  |-------------|-----------------|
+  | <span data-ttu-id="ed1f5-336">3.1</span><span class="sxs-lookup"><span data-stu-id="ed1f5-336">3.1</span></span>         | `netcoreapp3.1` |
+  | <span data-ttu-id="ed1f5-337">3.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-337">3.0</span></span>         | `netcoreapp3.0` |
 
-`-n|--name <OUTPUT_NAME>`
+- **`--langVersion <VERSION_NUMBER>`**
 
-<span data-ttu-id="6ce23-392">생성된 출력에 대한 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-392">The name for the created output.</span></span> <span data-ttu-id="6ce23-393">이름을 지정하지 않으면 현재 디렉터리의 이름이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-393">If no name is specified, the name of the current directory is used.</span></span>
+  <span data-ttu-id="ed1f5-338">생성된 프로젝트 파일에서 `LangVersion` 속성을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-338">Sets the `LangVersion` property in the created project file.</span></span> <span data-ttu-id="ed1f5-339">예를 들어 C# 7.3을 사용하려면 `--langVersion 7.3`을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-339">For example, use `--langVersion 7.3` to use C# 7.3.</span></span> <span data-ttu-id="ed1f5-340">F#에서 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-340">Not supported for F#.</span></span> <span data-ttu-id="ed1f5-341">.NET Core 2.2 SDK부터 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-341">Available since .NET Core 2.2 SDK.</span></span>
 
-`--nuget-source`
+  <span data-ttu-id="ed1f5-342">기본 C# 버전 목록은 [기본값](../../csharp/language-reference/configure-language-version.md#defaults)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-342">For a list of default C# versions, see [Defaults](../../csharp/language-reference/configure-language-version.md#defaults).</span></span>
 
-<span data-ttu-id="6ce23-394">설치 중 사용할 NuGet 소스를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-394">Specifies a NuGet source to use during install.</span></span>
+- **`--no-restore`** 
 
-`-o|--output <OUTPUT_DIRECTORY>`
+  <span data-ttu-id="ed1f5-343">지정할 경우 프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-343">If specified, doesn't execute an implicit restore during project creation.</span></span> <span data-ttu-id="ed1f5-344">.NET Core 2.2 SDK부터 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-344">Available since .NET Core 2.2 SDK.</span></span>
 
-<span data-ttu-id="6ce23-395">생성된 출력을 배치할 위치입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-395">Location to place the generated output.</span></span> <span data-ttu-id="6ce23-396">기본값은 현재 디렉터리입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-396">The default is the current directory.</span></span>
+***
 
-`--type`
+### <a name="classlib"></a><span data-ttu-id="ed1f5-345">classlib</span><span class="sxs-lookup"><span data-stu-id="ed1f5-345">classlib</span></span>
 
-<span data-ttu-id="6ce23-397">사용 가능한 형식에 따라 템플릿을 필터링합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-397">Filters templates based on available types.</span></span> <span data-ttu-id="6ce23-398">미리 정의된 값은 “project”, “item” 또는 “other”입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-398">Predefined values are "project", "item" or "other".</span></span>
+- **`-f|--framework <FRAMEWORK>`**
 
-`-u|--uninstall <PATH|NUGET_ID>`
+  <span data-ttu-id="ed1f5-346">대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-346">Specifies the [framework](../../standard/frameworks.md) to target.</span></span> <span data-ttu-id="ed1f5-347">값: `netcoreapp<version>`(.NET Core 클래스 라이브러리를 만드는 경우) 또는 `netstandard<version>`(.NET Standard 클래스 라이브러리를 만드는 경우).</span><span class="sxs-lookup"><span data-stu-id="ed1f5-347">Values: `netcoreapp<version>` to create a .NET Core Class Library or `netstandard<version>` to create a .NET Standard Class Library.</span></span> <span data-ttu-id="ed1f5-348">기본값은 `netstandard2.0`입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-348">The default value is `netstandard2.0`.</span></span>
 
-<span data-ttu-id="6ce23-399">제공된 `PATH` 또는 `NUGET_ID`에서 소스 또는 템플릿 팩을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-399">Uninstalls a source or template pack at the `PATH` or `NUGET_ID` provided.</span></span>
+- **`--langVersion <VERSION_NUMBER>`**
 
-> [!NOTE]
-> <span data-ttu-id="6ce23-400">`PATH`를 사용하여 템플릿을 제거하려면 경로를 정규화해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-400">To uninstall a template using a `PATH`, you need to fully qualify the path.</span></span> <span data-ttu-id="6ce23-401">예를 들어 *C:/Users/\<사용자>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp*는 작동하지만 상위 폴더의 *./GarciaSoftware.ConsoleTemplate.CSharp*는 작동하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-401">For example, *C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* will work, but *./GarciaSoftware.ConsoleTemplate.CSharp* from the containing folder will not.</span></span>
-> <span data-ttu-id="6ce23-402">마지막의 종료하는 디렉터리 슬래시도 템플릿 경로에 포함하지 마세요.</span><span class="sxs-lookup"><span data-stu-id="6ce23-402">Additionally, do not include a final terminating directory slash on your template path.</span></span>
+  <span data-ttu-id="ed1f5-349">생성된 프로젝트 파일에서 `LangVersion` 속성을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-349">Sets the `LangVersion` property in the created project file.</span></span> <span data-ttu-id="ed1f5-350">예를 들어 C# 7.3을 사용하려면 `--langVersion 7.3`을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-350">For example, use `--langVersion 7.3` to use C# 7.3.</span></span> <span data-ttu-id="ed1f5-351">F#에서 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-351">Not supported for F#.</span></span> <span data-ttu-id="ed1f5-352">.NET Core 2.2 SDK부터 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-352">Available since .NET Core 2.2 SDK.</span></span>
 
-# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="6ce23-403">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="6ce23-403">.NET Core 2.0</span></span>](#tab/netcore20)
+  <span data-ttu-id="ed1f5-353">기본 C# 버전 목록은 [기본값](../../csharp/language-reference/configure-language-version.md#defaults)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-353">For a list of default C# versions, see [Defaults](../../csharp/language-reference/configure-language-version.md#defaults).</span></span>
 
-`--force`
+- **`--no-restore`**
 
-<span data-ttu-id="6ce23-404">기존 파일을 변경할 경우에도 콘텐츠를 강제 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-404">Forces content to be generated even if it would change existing files.</span></span> <span data-ttu-id="6ce23-405">출력 디렉터리에 이미 프로젝트가 포함되어 있는 경우 필수입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-405">This is required when the output directory already contains a project.</span></span>
+  <span data-ttu-id="ed1f5-354">프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-354">Doesn't execute an implicit restore during project creation.</span></span>
 
-`-h|--help`
+***
 
-<span data-ttu-id="6ce23-406">명령에 대한 도움말을 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-406">Prints out help for the command.</span></span> <span data-ttu-id="6ce23-407">`dotnet new` 명령 자체 또는 `dotnet new mvc --help` 같은 템플릿에 대해 호출될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-407">It can be invoked for the `dotnet new` command itself or for any template, such as `dotnet new mvc --help`.</span></span>
+### <a name="wpf"></a> <span data-ttu-id="ed1f5-355">wpf, wpflib, wpfcustomcontrollib, wpfusercontrollib</span><span class="sxs-lookup"><span data-stu-id="ed1f5-355">wpf, wpflib, wpfcustomcontrollib, wpfusercontrollib</span></span>
 
-`-i|--install <PATH|NUGET_ID>`
+- **`-f|--framework <FRAMEWORK>`**
 
-<span data-ttu-id="6ce23-408">제공된 `PATH` 또는 `NUGET_ID`에서 소스 또는 템플릿 팩을 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-408">Installs a source or template pack from the `PATH` or `NUGET_ID` provided.</span></span> <span data-ttu-id="6ce23-409">시험판 버전의 템플릿 패키지를 설치하려면 버전을 `<package-name>::<package-version>` 형식으로 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-409">If you want to install a prerelease version of a template package, you need to specify the version in the format of `<package-name>::<package-version>`.</span></span> <span data-ttu-id="6ce23-410">기본적으로 `dotnet new`는 마지막 안정 패키지 버전을 나타내는 버전에 대해 \*를 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-410">By default, `dotnet new` passes \* for the version, which represents the last stable package version.</span></span> <span data-ttu-id="6ce23-411">[예제](#examples) 섹션의 예제를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="6ce23-411">See an example at the [Examples](#examples) section.</span></span>
+  <span data-ttu-id="ed1f5-356">대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-356">Specifies the [framework](../../standard/frameworks.md) to target.</span></span> <span data-ttu-id="ed1f5-357">기본값은 `netcoreapp3.1`입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-357">The default value is `netcoreapp3.1`.</span></span> <span data-ttu-id="ed1f5-358">.NET Core 3.1 SDK부터 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-358">Available since .NET Core 3.1 SDK.</span></span> 
 
-<span data-ttu-id="6ce23-412">사용자 지정 템플릿을 만드는 방법에 대한 자세한 내용은 [dotnet new에 대한 사용자 지정 템플릿](custom-templates.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="6ce23-412">For information on creating custom templates, see [Custom templates for dotnet new](custom-templates.md).</span></span>
+- **`--langVersion <VERSION_NUMBER>`**
 
-`-l|--list`
+  <span data-ttu-id="ed1f5-359">생성된 프로젝트 파일에서 `LangVersion` 속성을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-359">Sets the `LangVersion` property in the created project file.</span></span> <span data-ttu-id="ed1f5-360">예를 들어 C# 7.3을 사용하려면 `--langVersion 7.3`을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-360">For example, use `--langVersion 7.3` to use C# 7.3.</span></span>
 
-<span data-ttu-id="6ce23-413">지정된 이름을 포함하는 템플릿을 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-413">Lists templates containing the specified name.</span></span> <span data-ttu-id="6ce23-414">`dotnet new` 명령에 대해 호출되는 경우 지정된 디렉터리에서 사용 가능한 템플릿을 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-414">If invoked for the `dotnet new` command, it lists the possible templates available for the given directory.</span></span> <span data-ttu-id="6ce23-415">예를 들어 디렉터리에 이미 프로젝트가 포함되어 있는 경우 일부 프로젝트 템플릿을 나열하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-415">For example if the directory already contains a project, it doesn't list all project templates.</span></span>
+  <span data-ttu-id="ed1f5-361">기본 C# 버전 목록은 [기본값](../../csharp/language-reference/configure-language-version.md#defaults)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-361">For a list of default C# versions, see [Defaults](../../csharp/language-reference/configure-language-version.md#defaults).</span></span>
 
-`-lang|--language {C#|F#|VB}`
+- **`--no-restore`**
 
-<span data-ttu-id="6ce23-416">만들 템플릿의 언어입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-416">The language of the template to create.</span></span> <span data-ttu-id="6ce23-417">허용되는 언어는 템플릿에 따라 다릅니다([인수](#arguments) 섹션에서 기본값 참조).</span><span class="sxs-lookup"><span data-stu-id="6ce23-417">The language accepted varies by the template (see defaults in the [arguments](#arguments) section).</span></span> <span data-ttu-id="6ce23-418">일부 템플릿의 경우 유효하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-418">Not valid for some templates.</span></span>
+  <span data-ttu-id="ed1f5-362">프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-362">Doesn't execute an implicit restore during project creation.</span></span>
 
-> [!NOTE]
-> <span data-ttu-id="6ce23-419">일부 셸은 `#`을 특수 문자로 해석합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-419">Some shells interpret `#` as a special character.</span></span> <span data-ttu-id="6ce23-420">이러한 경우 `dotnet new console -lang "F#"`과 같은 언어 매개 변수 값을 포함해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-420">In those cases, you need to enclose the language parameter value, such as `dotnet new console -lang "F#"`.</span></span>
+***
 
-`-n|--name <OUTPUT_NAME>`
+### <a name="winforms"></a> <span data-ttu-id="ed1f5-363">winforms, winformslib</span><span class="sxs-lookup"><span data-stu-id="ed1f5-363">winforms, winformslib</span></span>
 
-<span data-ttu-id="6ce23-421">생성된 출력에 대한 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-421">The name for the created output.</span></span> <span data-ttu-id="6ce23-422">이름을 지정하지 않으면 현재 디렉터리의 이름이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-422">If no name is specified, the name of the current directory is used.</span></span>
+- **`--langVersion <VERSION_NUMBER>`**
 
-`-o|--output <OUTPUT_DIRECTORY>`
+  <span data-ttu-id="ed1f5-364">생성된 프로젝트 파일에서 `LangVersion` 속성을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-364">Sets the `LangVersion` property in the created project file.</span></span> <span data-ttu-id="ed1f5-365">예를 들어 C# 7.3을 사용하려면 `--langVersion 7.3`을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-365">For example, use `--langVersion 7.3` to use C# 7.3.</span></span>
 
-<span data-ttu-id="6ce23-423">생성된 출력을 배치할 위치입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-423">Location to place the generated output.</span></span> <span data-ttu-id="6ce23-424">기본값은 현재 디렉터리입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-424">The default is the current directory.</span></span>
+  <span data-ttu-id="ed1f5-366">기본 C# 버전 목록은 [기본값](../../csharp/language-reference/configure-language-version.md#defaults)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-366">For a list of default C# versions, see [Defaults](../../csharp/language-reference/configure-language-version.md#defaults).</span></span>
 
-`--type`
+- **`--no-restore`**
 
-<span data-ttu-id="6ce23-425">사용 가능한 형식에 따라 템플릿을 필터링합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-425">Filters templates based on available types.</span></span> <span data-ttu-id="6ce23-426">미리 정의된 값은 “project”, “item” 또는 “other”입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-426">Predefined values are "project", "item" or "other".</span></span>
+  <span data-ttu-id="ed1f5-367">프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-367">Doesn't execute an implicit restore during project creation.</span></span>
 
-`-u|--uninstall <PATH|NUGET_ID>`
+***
 
-<span data-ttu-id="6ce23-427">제공된 `PATH` 또는 `NUGET_ID`에서 소스 또는 템플릿 팩을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-427">Uninstalls a source or template pack at the `PATH` or `NUGET_ID` provided.</span></span>
+### <a name="web-others"></a> <span data-ttu-id="ed1f5-368">worker, grpc</span><span class="sxs-lookup"><span data-stu-id="ed1f5-368">worker, grpc</span></span>
 
-> [!NOTE]
-> <span data-ttu-id="6ce23-428">소스 `PATH`를 사용하여 템플릿을 제거하려면 경로를 정규화해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-428">To uninstall a template using a source `PATH`, you need to fully qualify the path.</span></span> <span data-ttu-id="6ce23-429">예를 들어 *C:/Users/\<사용자>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp*는 작동하지만 상위 폴더의 *./GarciaSoftware.ConsoleTemplate.CSharp*는 작동하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-429">For example, *C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* will work, but *./GarciaSoftware.ConsoleTemplate.CSharp* from the containing folder will not.</span></span> <span data-ttu-id="6ce23-430">마지막의 종료하는 디렉터리 슬래시도 템플릿 경로에 포함하지 마세요.</span><span class="sxs-lookup"><span data-stu-id="6ce23-430">Additionally, do not include a final terminating directory slash on your template path.</span></span>
-> 
-> <span data-ttu-id="6ce23-431">템플릿을 제거하는 데 필요한 `PATH` 또는 `NUGET_ID` 인수를 확인할 수 없는 경우, 인수 없이 `dotnet new --uninstall`을 실행하면 설치된 모든 템플릿 및 템플릿을 제거하는 데 필요한 인수가 나열됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-431">If you are unable to determine the `PATH` or `NUGET_ID` argument needed to uninstall a template, running `dotnet new --uninstall` without an argument will list all installed templates and the argument required to uninstall them.</span></span>
+- **`-f|--framework <FRAMEWORK>`**
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="6ce23-432">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="6ce23-432">.NET Core 1.x</span></span>](#tab/netcore1x)
+  <span data-ttu-id="ed1f5-369">대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-369">Specifies the [framework](../../standard/frameworks.md) to target.</span></span> <span data-ttu-id="ed1f5-370">기본값은 `netcoreapp3.1`입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-370">The default value is `netcoreapp3.1`.</span></span> <span data-ttu-id="ed1f5-371">.NET Core 3.1 SDK부터 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-371">Available since .NET Core 3.1 SDK.</span></span> 
 
-`-all|--show-all`
+- **`--exclude-launch-settings`**
 
-<span data-ttu-id="6ce23-433">`dotnet new` 명령의 컨텍스트에서만 실행되는 경우 특정 유형의 프로젝트에 대한 모든 템플릿을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-433">Shows all templates for a specific type of project when running in the context of the `dotnet new` command alone.</span></span> <span data-ttu-id="6ce23-434">`dotnet new web -all`처럼 특정 템플릿의 컨텍스트에서 실행되는 경우 `-all`은 강제 생성 플래그로 해석됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-434">When running in the context of a specific template, such as `dotnet new web -all`, `-all` is interpreted as a force creation flag.</span></span> <span data-ttu-id="6ce23-435">출력 디렉터리에 이미 프로젝트가 포함되어 있는 경우 필수입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-435">This is required when the output directory already contains a project.</span></span>
+  <span data-ttu-id="ed1f5-372">생성된 템플릿에서 *launchSettings.json*을 제외합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-372">Excludes *launchSettings.json* from the generated template.</span></span>
 
-`-h|--help`
+- **`--no-restore`**
 
-<span data-ttu-id="6ce23-436">명령에 대한 도움말을 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-436">Prints out help for the command.</span></span> <span data-ttu-id="6ce23-437">`dotnet new` 명령 자체 또는 `dotnet new mvc --help` 같은 템플릿에 대해 호출될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-437">It can be invoked for the `dotnet new` command itself or for any template, such as `dotnet new mvc --help`.</span></span>
+  <span data-ttu-id="ed1f5-373">프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-373">Doesn't execute an implicit restore during project creation.</span></span>
 
-`-l|--list`
+***
 
-<span data-ttu-id="6ce23-438">지정된 이름을 포함하는 템플릿을 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-438">Lists templates containing the specified name.</span></span> <span data-ttu-id="6ce23-439">`dotnet new` 명령에 대해 호출되는 경우 지정된 디렉터리에서 사용 가능한 템플릿을 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-439">If invoked for the `dotnet new` command, it lists the possible templates available for the given directory.</span></span> <span data-ttu-id="6ce23-440">예를 들어 디렉터리에 이미 프로젝트가 포함되어 있는 경우 일부 프로젝트 템플릿을 나열하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-440">For example if the directory already contains a project, it doesn't list all project templates.</span></span>
+### <a name="test"></a> <span data-ttu-id="ed1f5-374">mstest, xunit</span><span class="sxs-lookup"><span data-stu-id="ed1f5-374">mstest, xunit</span></span>
 
-`-lang|--language {C#|F#}`
+- **`-f|--framework <FRAMEWORK>`**
 
-<span data-ttu-id="6ce23-441">만들 템플릿의 언어입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-441">The language of the template to create.</span></span> <span data-ttu-id="6ce23-442">허용되는 언어는 템플릿에 따라 다릅니다([인수](#arguments) 섹션에서 기본값 참조).</span><span class="sxs-lookup"><span data-stu-id="6ce23-442">The language accepted varies by the template (see defaults in the [arguments](#arguments) section).</span></span> <span data-ttu-id="6ce23-443">일부 템플릿의 경우 유효하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-443">Not valid for some templates.</span></span>
+  <span data-ttu-id="ed1f5-375">대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-375">Specifies the [framework](../../standard/frameworks.md) to target.</span></span> <span data-ttu-id="ed1f5-376">.NET Core 3.0 SDK 이후 사용할 수 있는 옵션입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-376">Option available since .NET Core 3.0 SDK.</span></span>
 
-> [!NOTE]
-> <span data-ttu-id="6ce23-444">일부 셸은 `#`을 특수 문자로 해석합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-444">Some shells interpret `#` as a special character.</span></span> <span data-ttu-id="6ce23-445">이러한 경우 `dotnet new console -lang "F#"`과 같은 언어 매개 변수 값을 포함해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-445">In those cases, you need to enclose the language parameter value, such as `dotnet new console -lang "F#"`.</span></span>
+  <span data-ttu-id="ed1f5-377">다음 표에서는 사용하는 SDK 버전 번호에 따른 기본값을 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-377">The following table lists the default values according to the SDK version number you're using:</span></span>
 
-`-n|--name <OUTPUT_NAME>`
+  | <span data-ttu-id="ed1f5-378">SDK 버전</span><span class="sxs-lookup"><span data-stu-id="ed1f5-378">SDK version</span></span> | <span data-ttu-id="ed1f5-379">기본값</span><span class="sxs-lookup"><span data-stu-id="ed1f5-379">Default value</span></span>   |
+  |-------------|-----------------|
+  | <span data-ttu-id="ed1f5-380">3.1</span><span class="sxs-lookup"><span data-stu-id="ed1f5-380">3.1</span></span>         | `netcoreapp3.1` |
+  | <span data-ttu-id="ed1f5-381">3.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-381">3.0</span></span>         | `netcoreapp3.0` |
 
-<span data-ttu-id="6ce23-446">생성된 출력에 대한 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-446">The name for the created output.</span></span> <span data-ttu-id="6ce23-447">이름을 지정하지 않으면 현재 디렉터리의 이름이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-447">If no name is specified, the name of the current directory is used.</span></span>
+- **`-p|--enable-pack`**
 
-`-o|--output <OUTPUT_DIRECTORY>`
+  <span data-ttu-id="ed1f5-382">[dotnet pack](dotnet-pack.md)을 사용하여 프로젝트에 대한 패키징을 사용하도록 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-382">Enables packaging for the project using [dotnet pack](dotnet-pack.md).</span></span>
 
-<span data-ttu-id="6ce23-448">생성된 출력을 배치할 위치입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-448">Location to place the generated output.</span></span> <span data-ttu-id="6ce23-449">기본값은 현재 디렉터리입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-449">The default is the current directory.</span></span>
+- **`--no-restore`**
 
----
+  <span data-ttu-id="ed1f5-383">프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-383">Doesn't execute an implicit restore during project creation.</span></span>
 
-## <a name="template-options"></a><span data-ttu-id="6ce23-450">템플릿 옵션</span><span class="sxs-lookup"><span data-stu-id="6ce23-450">Template options</span></span>
+***
 
-<span data-ttu-id="6ce23-451">각 프로젝트 템플릿에는 사용할 수 있는 추가 옵션이 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-451">Each project template may have additional options available.</span></span> <span data-ttu-id="6ce23-452">코어 템플릿에는 다음과 같은 추가 옵션이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-452">The core templates have the following additional options:</span></span>
+### <a name="nunit"></a><span data-ttu-id="ed1f5-384">nunit</span><span class="sxs-lookup"><span data-stu-id="ed1f5-384">nunit</span></span>
 
-# <a name="net-core-22tabnetcore22"></a>[<span data-ttu-id="6ce23-453">.NET Core 2.2</span><span class="sxs-lookup"><span data-stu-id="6ce23-453">.NET Core 2.2</span></span>](#tab/netcore22)
+- **`-f|--framework <FRAMEWORK>`**
 
-<span data-ttu-id="6ce23-454">**콘솔**</span><span class="sxs-lookup"><span data-stu-id="6ce23-454">**console**</span></span>
+  <span data-ttu-id="ed1f5-385">대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-385">Specifies the [framework](../../standard/frameworks.md) to target.</span></span>
 
-<span data-ttu-id="6ce23-455">`--langVersion <VERSION_NUMBER>` - 생성된 프로젝트 파일에서 `LangVersion` 속성을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-455">`--langVersion <VERSION_NUMBER>` - Sets the `LangVersion` property in the created project file.</span></span> <span data-ttu-id="6ce23-456">예를 들어 C# 7.3을 사용하려면 `--langVersion 7.3`을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-456">For example, use `--langVersion 7.3` to use C# 7.3.</span></span> <span data-ttu-id="6ce23-457">F#에서 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-457">Not supported for F#.</span></span>
+  <span data-ttu-id="ed1f5-386">다음 표에서는 사용하는 SDK 버전 번호에 따른 기본값을 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-386">The following table lists the default values according to the SDK version number you're using:</span></span>
 
-<span data-ttu-id="6ce23-458">`--no-restore` - 프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-458">`--no-restore` - Doesn't execute an implicit restore during project creation.</span></span>
+  | <span data-ttu-id="ed1f5-387">SDK 버전</span><span class="sxs-lookup"><span data-stu-id="ed1f5-387">SDK version</span></span> | <span data-ttu-id="ed1f5-388">기본값</span><span class="sxs-lookup"><span data-stu-id="ed1f5-388">Default value</span></span>   |
+  |-------------|-----------------|
+  | <span data-ttu-id="ed1f5-389">3.1</span><span class="sxs-lookup"><span data-stu-id="ed1f5-389">3.1</span></span>         | `netcoreapp3.1` |
+  | <span data-ttu-id="ed1f5-390">3.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-390">3.0</span></span>         | `netcoreapp3.0` |
+  | <span data-ttu-id="ed1f5-391">2.2</span><span class="sxs-lookup"><span data-stu-id="ed1f5-391">2.2</span></span>         | `netcoreapp2.2` |
+  | <span data-ttu-id="ed1f5-392">2.1</span><span class="sxs-lookup"><span data-stu-id="ed1f5-392">2.1</span></span>         | `netcoreapp2.1` |
 
-<span data-ttu-id="6ce23-459">**angular, react, reactredux**</span><span class="sxs-lookup"><span data-stu-id="6ce23-459">**angular, react, reactredux**</span></span>
+- **`-p|--enable-pack`**
 
-<span data-ttu-id="6ce23-460">`--exclude-launch-settings` - 생성된 템플릿에서 *launchSettings.json*을 제외합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-460">`--exclude-launch-settings` - Exclude *launchSettings.json* from the generated template.</span></span>
+  <span data-ttu-id="ed1f5-393">[dotnet pack](dotnet-pack.md)을 사용하여 프로젝트에 대한 패키징을 사용하도록 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-393">Enables packaging for the project using [dotnet pack](dotnet-pack.md).</span></span>
 
-<span data-ttu-id="6ce23-461">`--no-restore` - 프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-461">`--no-restore` - Doesn't execute an implicit restore during project creation.</span></span>
+- **`--no-restore`**
 
-<span data-ttu-id="6ce23-462">`--no-https` - 프로젝트에는 HTTPS가 필요하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-462">`--no-https` - Project doesn't require HTTPS.</span></span> <span data-ttu-id="6ce23-463">이 옵션은 `IndividualAuth` 또는 `OrganizationalAuth`를 사용하지 않는 경우에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-463">This option only applies if `IndividualAuth` or `OrganizationalAuth` are not being used.</span></span>
+  <span data-ttu-id="ed1f5-394">프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-394">Doesn't execute an implicit restore during project creation.</span></span>
 
-<span data-ttu-id="6ce23-464">**razorclasslib**</span><span class="sxs-lookup"><span data-stu-id="6ce23-464">**razorclasslib**</span></span>
+***
 
-<span data-ttu-id="6ce23-465">`--no-restore` - 프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-465">`--no-restore` - Doesn't execute an implicit restore during project creation.</span></span>
+### <a name="page"></a><span data-ttu-id="ed1f5-395">페이지</span><span class="sxs-lookup"><span data-stu-id="ed1f5-395">page</span></span>
 
-<span data-ttu-id="6ce23-466">**classlib**</span><span class="sxs-lookup"><span data-stu-id="6ce23-466">**classlib**</span></span>
+- **`-na|--namespace <NAMESPACE_NAME>`**
 
-<span data-ttu-id="6ce23-467">`-f|--framework <FRAMEWORK>` - 대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-467">`-f|--framework <FRAMEWORK>` - Specifies the [framework](../../standard/frameworks.md) to target.</span></span> <span data-ttu-id="6ce23-468">값: `netcoreapp2.2`(.NET Core 클래스 라이브러리를 만드는 경우) 또는 `netstandard2.0`(.NET Standard 클래스 라이브러리를 만드는 경우).</span><span class="sxs-lookup"><span data-stu-id="6ce23-468">Values: `netcoreapp2.2` to create a .NET Core Class Library or `netstandard2.0` to create a .NET Standard Class Library.</span></span> <span data-ttu-id="6ce23-469">기본값은 `netstandard2.0`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-469">The default value is `netstandard2.0`.</span></span>
+  <span data-ttu-id="ed1f5-396">생성된 코드에 대한 네임스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-396">Namespace for the generated code.</span></span> <span data-ttu-id="ed1f5-397">기본값은 `MyApp.Namespace`입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-397">The default value is `MyApp.Namespace`.</span></span>
 
-<span data-ttu-id="6ce23-470">`--langVersion <VERSION_NUMBER>` - 생성된 프로젝트 파일에서 `LangVersion` 속성을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-470">`--langVersion <VERSION_NUMBER>` - Sets the `LangVersion` property in the created project file.</span></span> <span data-ttu-id="6ce23-471">예를 들어 C# 7.3을 사용하려면 `--langVersion 7.3`을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-471">For example, use `--langVersion 7.3` to use C# 7.3.</span></span> <span data-ttu-id="6ce23-472">F#에서 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-472">Not supported for F#.</span></span>
+- **`-np|--no-pagemodel`**
 
-<span data-ttu-id="6ce23-473">`--no-restore` - 프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-473">`--no-restore` - Doesn't execute an implicit restore during project creation.</span></span>
+  <span data-ttu-id="ed1f5-398">PageModel 없이 페이지를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-398">Creates the page without a PageModel.</span></span>
 
-<span data-ttu-id="6ce23-474">**mstest, xunit**</span><span class="sxs-lookup"><span data-stu-id="6ce23-474">**mstest, xunit**</span></span>
+***
 
-<span data-ttu-id="6ce23-475">`-p|--enable-pack` - [dotnet pack](dotnet-pack.md)을 사용하여 프로젝트에 대한 패키징을 사용하도록 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-475">`-p|--enable-pack` - Enables packaging for the project using [dotnet pack](dotnet-pack.md).</span></span>
+### <a name="namespace"></a> <span data-ttu-id="ed1f5-399">viewimports, proto</span><span class="sxs-lookup"><span data-stu-id="ed1f5-399">viewimports, proto</span></span>
 
-<span data-ttu-id="6ce23-476">`--no-restore` - 프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-476">`--no-restore` - Doesn't execute an implicit restore during project creation.</span></span>
+- **`-na|--namespace <NAMESPACE_NAME>`**
 
-<span data-ttu-id="6ce23-477">**nunit**</span><span class="sxs-lookup"><span data-stu-id="6ce23-477">**nunit**</span></span>
+  <span data-ttu-id="ed1f5-400">생성된 코드에 대한 네임스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-400">Namespace for the generated code.</span></span> <span data-ttu-id="ed1f5-401">기본값은 `MyApp.Namespace`입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-401">The default value is `MyApp.Namespace`.</span></span>
 
-<span data-ttu-id="6ce23-478">`-f|--framework <FRAMEWORK>` - 대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-478">`-f|--framework <FRAMEWORK>` - Specifies the [framework](../../standard/frameworks.md) to target.</span></span> <span data-ttu-id="6ce23-479">기본값은 `netcoreapp2.1`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-479">The default value is `netcoreapp2.1`.</span></span>
+***
 
-<span data-ttu-id="6ce23-480">`-p|--enable-pack` - [dotnet pack](dotnet-pack.md)을 사용하여 프로젝트에 대한 패키징을 사용하도록 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-480">`-p|--enable-pack` - Enables packaging for the project using [dotnet pack](dotnet-pack.md).</span></span>
+### <a name="blazorserver"></a><span data-ttu-id="ed1f5-402">blazorserver</span><span class="sxs-lookup"><span data-stu-id="ed1f5-402">blazorserver</span></span>
 
-<span data-ttu-id="6ce23-481">`--no-restore` - 프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-481">`--no-restore` - Doesn't execute an implicit restore during project creation.</span></span>
+- **`-au|--auth <AUTHENTICATION_TYPE>`**
 
-<span data-ttu-id="6ce23-482">**page**</span><span class="sxs-lookup"><span data-stu-id="6ce23-482">**page**</span></span>
+  <span data-ttu-id="ed1f5-403">사용할 인증 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-403">The type of authentication to use.</span></span> <span data-ttu-id="ed1f5-404">가능한 값은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-404">The possible values are:</span></span>
 
-<span data-ttu-id="6ce23-483">`-na|--namespace <NAMESPACE_NAME>` - 생성된 코드에 대한 네임스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-483">`-na|--namespace <NAMESPACE_NAME>` - Namespace for the generated code.</span></span> <span data-ttu-id="6ce23-484">기본값은 `MyApp.Namespace`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-484">The default value is `MyApp.Namespace`.</span></span>
+  - <span data-ttu-id="ed1f5-405">`None` - 인증하지 않습니다(기본값).</span><span class="sxs-lookup"><span data-stu-id="ed1f5-405">`None` - No authentication (Default).</span></span>
+  - <span data-ttu-id="ed1f5-406">`Individual` - 개별 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-406">`Individual` - Individual authentication.</span></span>
+  - <span data-ttu-id="ed1f5-407">`IndividualB2C` - Azure AD B2C를 사용한 개별 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-407">`IndividualB2C` - Individual authentication with Azure AD B2C.</span></span>
+  - <span data-ttu-id="ed1f5-408">`SingleOrg` - 단일 테넌트에 대한 조직적 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-408">`SingleOrg` - Organizational authentication for a single tenant.</span></span>
+  - <span data-ttu-id="ed1f5-409">`MultiOrg` - 여러 테넌트에 대한 조직적 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-409">`MultiOrg` - Organizational authentication for multiple tenants.</span></span>
+  - <span data-ttu-id="ed1f5-410">`Windows` - Windows 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-410">`Windows` - Windows authentication.</span></span>
 
-<span data-ttu-id="6ce23-485">`-np|--no-pagemodel` - PageModel 없이 페이지를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-485">`-np|--no-pagemodel` - Creates the page without a PageModel.</span></span>
+- **`--aad-b2c-instance <INSTANCE>`**
 
-<span data-ttu-id="6ce23-486">**viewimports**</span><span class="sxs-lookup"><span data-stu-id="6ce23-486">**viewimports**</span></span>
+  <span data-ttu-id="ed1f5-411">연결할 Azure Active Directory B2C 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-411">The Azure Active Directory B2C instance to connect to.</span></span> <span data-ttu-id="ed1f5-412">`IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-412">Use with `IndividualB2C` authentication.</span></span> <span data-ttu-id="ed1f5-413">기본값은 `https://login.microsoftonline.com/tfp/`입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-413">The default value is `https://login.microsoftonline.com/tfp/`.</span></span>
 
-<span data-ttu-id="6ce23-487">`-na|--namespace <NAMESPACE_NAME>` - 생성된 코드에 대한 네임스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-487">`-na|--namespace <NAMESPACE_NAME>` - Namespace for the generated code.</span></span> <span data-ttu-id="6ce23-488">기본값은 `MyApp.Namespace`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-488">The default value is `MyApp.Namespace`.</span></span>
+- **`-ssp|--susi-policy-id <ID>`**
 
-<span data-ttu-id="6ce23-489">**web**</span><span class="sxs-lookup"><span data-stu-id="6ce23-489">**web**</span></span>
+  <span data-ttu-id="ed1f5-414">이 프로젝트에 대한 로그인 및 등록 정책 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-414">The sign-in and sign-up policy ID for this project.</span></span> <span data-ttu-id="ed1f5-415">`IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-415">Use with `IndividualB2C` authentication.</span></span>
 
-<span data-ttu-id="6ce23-490">`--exclude-launch-settings` - 생성된 템플릿에서 *launchSettings.json*을 제외합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-490">`--exclude-launch-settings` - Exclude *launchSettings.json* from the generated template.</span></span>
+- **`-rp|--reset-password-policy-id <ID>`**
 
-<span data-ttu-id="6ce23-491">`--no-restore` - 프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-491">`--no-restore` - Doesn't execute an implicit restore during project creation.</span></span>
+  <span data-ttu-id="ed1f5-416">이 프로젝트에 대한 암호 재설정 정책 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-416">The reset password policy ID for this project.</span></span> <span data-ttu-id="ed1f5-417">`IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-417">Use with `IndividualB2C` authentication.</span></span>
 
-<span data-ttu-id="6ce23-492">`--no-https` - 프로젝트에는 HTTPS가 필요하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-492">`--no-https` - Project doesn't require HTTPS.</span></span> <span data-ttu-id="6ce23-493">이 옵션은 `IndividualAuth` 또는 `OrganizationalAuth`를 사용하지 않는 경우에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-493">This option only applies if `IndividualAuth` or `OrganizationalAuth` are not being used.</span></span>
+- **`-ep|--edit-profile-policy-id <ID>`**
 
-<span data-ttu-id="6ce23-494">**mvc, 웹앱**</span><span class="sxs-lookup"><span data-stu-id="6ce23-494">**mvc, webapp**</span></span>
+  <span data-ttu-id="ed1f5-418">이 프로젝트에 대한 프로필 편집 정책 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-418">The edit profile policy ID for this project.</span></span> <span data-ttu-id="ed1f5-419">`IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-419">Use with `IndividualB2C` authentication.</span></span>
 
-<span data-ttu-id="6ce23-495">`-au|--auth <AUTHENTICATION_TYPE>` - 사용할 인증 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-495">`-au|--auth <AUTHENTICATION_TYPE>` - The type of authentication to use.</span></span> <span data-ttu-id="6ce23-496">가능한 값은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-496">The possible values are:</span></span>
+- **`--aad-instance <INSTANCE>`**
 
-- <span data-ttu-id="6ce23-497">`None` - 인증하지 않습니다(기본값).</span><span class="sxs-lookup"><span data-stu-id="6ce23-497">`None` - No authentication (Default).</span></span>
-- <span data-ttu-id="6ce23-498">`Individual` - 개별 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-498">`Individual` - Individual authentication.</span></span>
-- <span data-ttu-id="6ce23-499">`IndividualB2C` - Azure AD B2C를 사용한 개별 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-499">`IndividualB2C` - Individual authentication with Azure AD B2C.</span></span>
-- <span data-ttu-id="6ce23-500">`SingleOrg` - 단일 테넌트에 대한 조직적 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-500">`SingleOrg` - Organizational authentication for a single tenant.</span></span>
-- <span data-ttu-id="6ce23-501">`MultiOrg` - 여러 테넌트에 대한 조직적 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-501">`MultiOrg` - Organizational authentication for multiple tenants.</span></span>
-- <span data-ttu-id="6ce23-502">`Windows` - Windows 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-502">`Windows` - Windows authentication.</span></span>
+  <span data-ttu-id="ed1f5-420">연결할 Azure Active Directory 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-420">The Azure Active Directory instance to connect to.</span></span> <span data-ttu-id="ed1f5-421">`SingleOrg` 또는 `MultiOrg` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-421">Use with `SingleOrg` or `MultiOrg` authentication.</span></span> <span data-ttu-id="ed1f5-422">기본값은 `https://login.microsoftonline.com/`입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-422">The default value is `https://login.microsoftonline.com/`.</span></span>
 
-<span data-ttu-id="6ce23-503">`--aad-b2c-instance <INSTANCE>` - 연결할 Azure Active Directory B2C 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-503">`--aad-b2c-instance <INSTANCE>` - The Azure Active Directory B2C instance to connect to.</span></span> <span data-ttu-id="6ce23-504">`IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-504">Use with `IndividualB2C` authentication.</span></span> <span data-ttu-id="6ce23-505">기본값은 `https://login.microsoftonline.com/tfp/`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-505">The default value is `https://login.microsoftonline.com/tfp/`.</span></span>
+- **`--client-id <ID>`**
 
-<span data-ttu-id="6ce23-506">`-ssp|--susi-policy-id <ID>` - 이 프로젝트에 대한 로그인 및 등록 정책 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-506">`-ssp|--susi-policy-id <ID>` - The sign-in and sign-up policy ID for this project.</span></span> <span data-ttu-id="6ce23-507">`IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-507">Use with `IndividualB2C` authentication.</span></span>
+  <span data-ttu-id="ed1f5-423">이 프로젝트의 클라이언트 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-423">The Client ID for this project.</span></span> <span data-ttu-id="ed1f5-424">`IndividualB2C`, `SingleOrg` 또는 `MultiOrg` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-424">Use with `IndividualB2C`, `SingleOrg`, or `MultiOrg` authentication.</span></span> <span data-ttu-id="ed1f5-425">기본값은 `11111111-1111-1111-11111111111111111`입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-425">The default value is `11111111-1111-1111-11111111111111111`.</span></span>
 
-<span data-ttu-id="6ce23-508">`-rp|--reset-password-policy-id <ID>` - 이 프로젝트에 대한 암호 재설정 정책 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-508">`-rp|--reset-password-policy-id <ID>` - The reset password policy ID for this project.</span></span> <span data-ttu-id="6ce23-509">`IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-509">Use with `IndividualB2C` authentication.</span></span>
+- **`--domain <DOMAIN>`**
 
-<span data-ttu-id="6ce23-510">`-ep|--edit-profile-policy-id <ID>` - 이 프로젝트에 대한 프로필 편집 정책 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-510">`-ep|--edit-profile-policy-id <ID>` - The edit profile policy ID for this project.</span></span> <span data-ttu-id="6ce23-511">`IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-511">Use with `IndividualB2C` authentication.</span></span>
+  <span data-ttu-id="ed1f5-426">디렉터리 테넌트의 도메인입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-426">The domain for the directory tenant.</span></span> <span data-ttu-id="ed1f5-427">`SingleOrg` 또는 `IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-427">Use with `SingleOrg` or `IndividualB2C` authentication.</span></span> <span data-ttu-id="ed1f5-428">기본값은 `qualified.domain.name`입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-428">The default value is `qualified.domain.name`.</span></span>
 
-<span data-ttu-id="6ce23-512">`--aad-instance <INSTANCE>` - 연결할 Azure Active Directory 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-512">`--aad-instance <INSTANCE>` - The Azure Active Directory instance to connect to.</span></span> <span data-ttu-id="6ce23-513">`SingleOrg` 또는 `MultiOrg` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-513">Use with `SingleOrg` or `MultiOrg` authentication.</span></span> <span data-ttu-id="6ce23-514">기본값은 `https://login.microsoftonline.com/`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-514">The default value is `https://login.microsoftonline.com/`.</span></span>
+- **`--tenant-id <ID>`**
 
-<span data-ttu-id="6ce23-515">`--client-id <ID>` - 이 프로젝트의 클라이언트 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-515">`--client-id <ID>` - The Client ID for this project.</span></span> <span data-ttu-id="6ce23-516">`IndividualB2C`, `SingleOrg` 또는 `MultiOrg` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-516">Use with `IndividualB2C`, `SingleOrg`, or `MultiOrg` authentication.</span></span> <span data-ttu-id="6ce23-517">기본값은 `11111111-1111-1111-11111111111111111`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-517">The default value is `11111111-1111-1111-11111111111111111`.</span></span>
+  <span data-ttu-id="ed1f5-429">연결할 디렉터리의 TenantId ID입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-429">The TenantId ID of the directory to connect to.</span></span> <span data-ttu-id="ed1f5-430">`SingleOrg` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-430">Use with `SingleOrg` authentication.</span></span> <span data-ttu-id="ed1f5-431">기본값은 `22222222-2222-2222-2222-222222222222`입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-431">The default value is `22222222-2222-2222-2222-222222222222`.</span></span>
 
-<span data-ttu-id="6ce23-518">`--domain <DOMAIN>` - 디렉터리 테넌트에 대한 도메인입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-518">`--domain <DOMAIN>` - The domain for the directory tenant.</span></span> <span data-ttu-id="6ce23-519">`SingleOrg` 또는 `IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-519">Use with `SingleOrg` or `IndividualB2C` authentication.</span></span> <span data-ttu-id="6ce23-520">기본값은 `qualified.domain.name`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-520">The default value is `qualified.domain.name`.</span></span>
+- **`--callback-path <PATH>`**
 
-<span data-ttu-id="6ce23-521">`--tenant-id <ID>` - 연결할 디렉터리의 TenantId ID입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-521">`--tenant-id <ID>` - The TenantId ID of the directory to connect to.</span></span> <span data-ttu-id="6ce23-522">`SingleOrg` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-522">Use with `SingleOrg` authentication.</span></span> <span data-ttu-id="6ce23-523">기본값은 `22222222-2222-2222-2222-222222222222`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-523">The default value is `22222222-2222-2222-2222-222222222222`.</span></span>
+  <span data-ttu-id="ed1f5-432">리디렉션 URI의 애플리케이션 기본 경로 내 요청 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-432">The request path within the application's base path of the redirect URI.</span></span> <span data-ttu-id="ed1f5-433">`SingleOrg` 또는 `IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-433">Use with `SingleOrg` or `IndividualB2C` authentication.</span></span> <span data-ttu-id="ed1f5-434">기본값은 `/signin-oidc`입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-434">The default value is `/signin-oidc`.</span></span>
 
-<span data-ttu-id="6ce23-524">`--callback-path <PATH>` - 리디렉션 URI의 애플리케이션 기본 경로 내 요청 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-524">`--callback-path <PATH>` - The request path within the application's base path of the redirect URI.</span></span> <span data-ttu-id="6ce23-525">`SingleOrg` 또는 `IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-525">Use with `SingleOrg` or `IndividualB2C` authentication.</span></span> <span data-ttu-id="6ce23-526">기본값은 `/signin-oidc`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-526">The default value is `/signin-oidc`.</span></span>
+- **`-r|--org-read-access`**
 
-<span data-ttu-id="6ce23-527">`-r|--org-read-access` - 디렉터리에 대한 이 애플리케이션 읽기 액세스를 허용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-527">`-r|--org-read-access` - Allows this application read-access to the directory.</span></span> <span data-ttu-id="6ce23-528">`SingleOrg` 또는 `MultiOrg` 인증에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-528">Only applies to `SingleOrg` or `MultiOrg` authentication.</span></span>
+  <span data-ttu-id="ed1f5-435">디렉터리에 대한 이 애플리케이션 읽기 액세스를 허용합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-435">Allows this application read-access to the directory.</span></span> <span data-ttu-id="ed1f5-436">`SingleOrg` 또는 `MultiOrg` 인증에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-436">Only applies to `SingleOrg` or `MultiOrg` authentication.</span></span>
 
-<span data-ttu-id="6ce23-529">`--exclude-launch-settings` - 생성된 템플릿에서 *launchSettings.json*을 제외합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-529">`--exclude-launch-settings` - Exclude *launchSettings.json* from the generated template.</span></span>
+- **`--exclude-launch-settings`**
 
-<span data-ttu-id="6ce23-530">`--no-https` - 프로젝트에는 HTTPS가 필요하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-530">`--no-https` - Project doesn't require HTTPS.</span></span> <span data-ttu-id="6ce23-531">`app.UseHsts` 및 `app.UseHttpsRedirection`은 `Startup.Configure`에 추가되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-531">`app.UseHsts` and `app.UseHttpsRedirection` aren't added to `Startup.Configure`.</span></span> <span data-ttu-id="6ce23-532">이 옵션은 `Individual`, `IndividualB2C`, `SingleOrg` 또는 `MultiOrg`를 사용하지 않는 경우에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-532">This option only applies if `Individual`, `IndividualB2C`, `SingleOrg`, or `MultiOrg` aren't being used.</span></span>
+  <span data-ttu-id="ed1f5-437">생성된 템플릿에서 *launchSettings.json*을 제외합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-437">Excludes *launchSettings.json* from the generated template.</span></span>
 
-<span data-ttu-id="6ce23-533">`-uld|--use-local-db` - SQLite 대신 LocalDB를 사용하도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-533">`-uld|--use-local-db` - Specifies LocalDB should be used instead of SQLite.</span></span> <span data-ttu-id="6ce23-534">`Individual` 또는 `IndividualB2C` 인증에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-534">Only applies to `Individual` or `IndividualB2C` authentication.</span></span>
+- **`--no-https`**
 
-<span data-ttu-id="6ce23-535">`--no-restore` - 프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-535">`--no-restore` - Doesn't execute an implicit restore during project creation.</span></span>
+  <span data-ttu-id="ed1f5-438">HTTPS를 해제합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-438">Turns off HTTPS.</span></span> <span data-ttu-id="ed1f5-439">이 옵션은 `--auth`에 `Individual`, `IndividualB2C`, `SingleOrg` 또는 `MultiOrg`를 사용하지 않는 경우에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-439">This option only applies if `Individual`, `IndividualB2C`, `SingleOrg`, or `MultiOrg` aren't being used for `--auth`.</span></span>
 
-<span data-ttu-id="6ce23-536">**webapi**</span><span class="sxs-lookup"><span data-stu-id="6ce23-536">**webapi**</span></span>
+- **`-uld|--use-local-db`**
 
-<span data-ttu-id="6ce23-537">`-au|--auth <AUTHENTICATION_TYPE>` - 사용할 인증 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-537">`-au|--auth <AUTHENTICATION_TYPE>` - The type of authentication to use.</span></span> <span data-ttu-id="6ce23-538">가능한 값은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-538">The possible values are:</span></span>
+  <span data-ttu-id="ed1f5-440">SQLite 대신 LocalDB를 사용하도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-440">Specifies LocalDB should be used instead of SQLite.</span></span> <span data-ttu-id="ed1f5-441">`Individual` 또는 `IndividualB2C` 인증에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-441">Only applies to `Individual` or `IndividualB2C` authentication.</span></span>
 
-- <span data-ttu-id="6ce23-539">`None` - 인증하지 않습니다(기본값).</span><span class="sxs-lookup"><span data-stu-id="6ce23-539">`None` - No authentication (Default).</span></span>
-- <span data-ttu-id="6ce23-540">`IndividualB2C` - Azure AD B2C를 사용한 개별 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-540">`IndividualB2C` - Individual authentication with Azure AD B2C.</span></span>
-- <span data-ttu-id="6ce23-541">`SingleOrg` - 단일 테넌트에 대한 조직적 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-541">`SingleOrg` - Organizational authentication for a single tenant.</span></span>
-- <span data-ttu-id="6ce23-542">`Windows` - Windows 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-542">`Windows` - Windows authentication.</span></span>
+- **`--no-restore`**
 
-<span data-ttu-id="6ce23-543">`--aad-b2c-instance <INSTANCE>` - 연결할 Azure Active Directory B2C 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-543">`--aad-b2c-instance <INSTANCE>` - The Azure Active Directory B2C instance to connect to.</span></span> <span data-ttu-id="6ce23-544">`IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-544">Use with `IndividualB2C` authentication.</span></span> <span data-ttu-id="6ce23-545">기본값은 `https://login.microsoftonline.com/tfp/`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-545">The default value is `https://login.microsoftonline.com/tfp/`.</span></span>
+  <span data-ttu-id="ed1f5-442">프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-442">Doesn't execute an implicit restore during project creation.</span></span>
 
-<span data-ttu-id="6ce23-546">`-ssp|--susi-policy-id <ID>` - 이 프로젝트에 대한 로그인 및 등록 정책 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-546">`-ssp|--susi-policy-id <ID>` - The sign-in and sign-up policy ID for this project.</span></span> <span data-ttu-id="6ce23-547">`IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-547">Use with `IndividualB2C` authentication.</span></span>
+***
 
-<span data-ttu-id="6ce23-548">`--aad-instance <INSTANCE>` - 연결할 Azure Active Directory 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-548">`--aad-instance <INSTANCE>` - The Azure Active Directory instance to connect to.</span></span> <span data-ttu-id="6ce23-549">`SingleOrg` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-549">Use with `SingleOrg` authentication.</span></span> <span data-ttu-id="6ce23-550">기본값은 `https://login.microsoftonline.com/`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-550">The default value is `https://login.microsoftonline.com/`.</span></span>
+### <a name="web"></a><span data-ttu-id="ed1f5-443">웹</span><span class="sxs-lookup"><span data-stu-id="ed1f5-443">web</span></span>
 
-<span data-ttu-id="6ce23-551">`--client-id <ID>` - 이 프로젝트의 클라이언트 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-551">`--client-id <ID>` - The Client ID for this project.</span></span> <span data-ttu-id="6ce23-552">`IndividualB2C` 또는 `SingleOrg` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-552">Use with `IndividualB2C` or `SingleOrg` authentication.</span></span> <span data-ttu-id="6ce23-553">기본값은 `11111111-1111-1111-11111111111111111`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-553">The default value is `11111111-1111-1111-11111111111111111`.</span></span>
+- **`--exclude-launch-settings`**
 
-<span data-ttu-id="6ce23-554">`--domain <DOMAIN>` - 디렉터리 테넌트에 대한 도메인입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-554">`--domain <DOMAIN>` - The domain for the directory tenant.</span></span> <span data-ttu-id="6ce23-555">`SingleOrg` 또는 `IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-555">Use with `SingleOrg` or `IndividualB2C` authentication.</span></span> <span data-ttu-id="6ce23-556">기본값은 `qualified.domain.name`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-556">The default value is `qualified.domain.name`.</span></span>
+  <span data-ttu-id="ed1f5-444">생성된 템플릿에서 *launchSettings.json*을 제외합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-444">Excludes *launchSettings.json* from the generated template.</span></span>
 
-<span data-ttu-id="6ce23-557">`--tenant-id <ID>` - 연결할 디렉터리의 TenantId ID입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-557">`--tenant-id <ID>` - The TenantId ID of the directory to connect to.</span></span> <span data-ttu-id="6ce23-558">`SingleOrg` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-558">Use with `SingleOrg` authentication.</span></span> <span data-ttu-id="6ce23-559">기본값은 `22222222-2222-2222-2222-222222222222`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-559">The default value is `22222222-2222-2222-2222-222222222222`.</span></span>
+- **`-f|--framework <FRAMEWORK>`**
 
-<span data-ttu-id="6ce23-560">`-r|--org-read-access` - 디렉터리에 대한 이 애플리케이션 읽기 액세스를 허용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-560">`-r|--org-read-access` - Allows this application read-access to the directory.</span></span> <span data-ttu-id="6ce23-561">`SingleOrg` 또는 `MultiOrg` 인증에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-561">Only applies to `SingleOrg` or `MultiOrg` authentication.</span></span>
+  <span data-ttu-id="ed1f5-445">대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-445">Specifies the [framework](../../standard/frameworks.md) to target.</span></span> <span data-ttu-id="ed1f5-446">.NET Core 2.2 SDK에서 사용할 수 없는 옵션입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-446">Option not available in .NET Core 2.2 SDK.</span></span>
 
-<span data-ttu-id="6ce23-562">`--exclude-launch-settings` - 생성된 템플릿에서 *launchSettings.json*을 제외합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-562">`--exclude-launch-settings` - Exclude *launchSettings.json* from the generated template.</span></span>
+  <span data-ttu-id="ed1f5-447">다음 표에서는 사용하는 SDK 버전 번호에 따른 기본값을 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-447">The following table lists the default values according to the SDK version number you're using:</span></span>
 
-<span data-ttu-id="6ce23-563">`--no-https` - 프로젝트에는 HTTPS가 필요하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-563">`--no-https` - Project doesn't require HTTPS.</span></span> <span data-ttu-id="6ce23-564">`app.UseHsts` 및 `app.UseHttpsRedirection`은 `Startup.Configure`에 추가되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-564">`app.UseHsts` and `app.UseHttpsRedirection` aren't added to `Startup.Configure`.</span></span> <span data-ttu-id="6ce23-565">이 옵션은 `Individual`, `IndividualB2C`, `SingleOrg` 또는 `MultiOrg`를 사용하지 않는 경우에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-565">This option only applies if `Individual`, `IndividualB2C`, `SingleOrg`, or `MultiOrg` aren't being used.</span></span>
+  | <span data-ttu-id="ed1f5-448">SDK 버전</span><span class="sxs-lookup"><span data-stu-id="ed1f5-448">SDK version</span></span> | <span data-ttu-id="ed1f5-449">기본값</span><span class="sxs-lookup"><span data-stu-id="ed1f5-449">Default value</span></span>   |
+  |-------------|-----------------|
+  | <span data-ttu-id="ed1f5-450">3.1</span><span class="sxs-lookup"><span data-stu-id="ed1f5-450">3.1</span></span>         | `netcoreapp3.1` |
+  | <span data-ttu-id="ed1f5-451">3.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-451">3.0</span></span>         | `netcoreapp3.0` |
+  | <span data-ttu-id="ed1f5-452">2.1</span><span class="sxs-lookup"><span data-stu-id="ed1f5-452">2.1</span></span>         | `netcoreapp2.1` |
 
-<span data-ttu-id="6ce23-566">`-uld|--use-local-db` - SQLite 대신 LocalDB를 사용하도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-566">`-uld|--use-local-db` - Specifies LocalDB should be used instead of SQLite.</span></span> <span data-ttu-id="6ce23-567">`Individual` 또는 `IndividualB2C` 인증에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-567">Only applies to `Individual` or `IndividualB2C` authentication.</span></span>
+- **`--no-restore`**
 
-<span data-ttu-id="6ce23-568">`--no-restore` - 프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-568">`--no-restore` - Doesn't execute an implicit restore during project creation.</span></span>
+  <span data-ttu-id="ed1f5-453">프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-453">Doesn't execute an implicit restore during project creation.</span></span>
 
-<span data-ttu-id="6ce23-569">**globaljson**</span><span class="sxs-lookup"><span data-stu-id="6ce23-569">**globaljson**</span></span>
+- **`--no-https`**
 
-<span data-ttu-id="6ce23-570">`--sdk-version <VERSION_NUMBER>` - *global.json* 파일에서 사용할 .NET Core SDK 버전을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-570">`--sdk-version <VERSION_NUMBER>` - Specifies the version of the .NET Core SDK to use in the *global.json* file.</span></span>
+  <span data-ttu-id="ed1f5-454">HTTPS를 해제합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-454">Turns off HTTPS.</span></span>
 
-# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="6ce23-571">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="6ce23-571">.NET Core 2.1</span></span>](#tab/netcore21)
+***
 
-<span data-ttu-id="6ce23-572">**console, angular, react, reactredux, razorclasslib**</span><span class="sxs-lookup"><span data-stu-id="6ce23-572">**console, angular, react, reactredux, razorclasslib**</span></span>
+### <a name="web-options"></a> <span data-ttu-id="ed1f5-455">mvc, webapp</span><span class="sxs-lookup"><span data-stu-id="ed1f5-455">mvc, webapp</span></span>
 
-<span data-ttu-id="6ce23-573">`--no-restore` - 프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-573">`--no-restore` - Doesn't execute an implicit restore during project creation.</span></span>
+- **`-au|--auth <AUTHENTICATION_TYPE>`**
 
-<span data-ttu-id="6ce23-574">**classlib**</span><span class="sxs-lookup"><span data-stu-id="6ce23-574">**classlib**</span></span>
+  <span data-ttu-id="ed1f5-456">사용할 인증 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-456">The type of authentication to use.</span></span> <span data-ttu-id="ed1f5-457">가능한 값은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-457">The possible values are:</span></span>
 
-<span data-ttu-id="6ce23-575">`-f|--framework <FRAMEWORK>` - 대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-575">`-f|--framework <FRAMEWORK>` - Specifies the [framework](../../standard/frameworks.md) to target.</span></span> <span data-ttu-id="6ce23-576">값: `netcoreapp2.1`(.NET Core 클래스 라이브러리를 만드는 경우) 또는 `netstandard2.0`(.NET Standard 클래스 라이브러리를 만드는 경우).</span><span class="sxs-lookup"><span data-stu-id="6ce23-576">Values: `netcoreapp2.1` to create a .NET Core Class Library or `netstandard2.0` to create a .NET Standard Class Library.</span></span> <span data-ttu-id="6ce23-577">기본값은 `netstandard2.0`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-577">The default value is `netstandard2.0`.</span></span>
+  - <span data-ttu-id="ed1f5-458">`None` - 인증하지 않습니다(기본값).</span><span class="sxs-lookup"><span data-stu-id="ed1f5-458">`None` - No authentication (Default).</span></span>
+  - <span data-ttu-id="ed1f5-459">`Individual` - 개별 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-459">`Individual` - Individual authentication.</span></span>
+  - <span data-ttu-id="ed1f5-460">`IndividualB2C` - Azure AD B2C를 사용한 개별 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-460">`IndividualB2C` - Individual authentication with Azure AD B2C.</span></span>
+  - <span data-ttu-id="ed1f5-461">`SingleOrg` - 단일 테넌트에 대한 조직적 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-461">`SingleOrg` - Organizational authentication for a single tenant.</span></span>
+  - <span data-ttu-id="ed1f5-462">`MultiOrg` - 여러 테넌트에 대한 조직적 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-462">`MultiOrg` - Organizational authentication for multiple tenants.</span></span>
+  - <span data-ttu-id="ed1f5-463">`Windows` - Windows 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-463">`Windows` - Windows authentication.</span></span>
 
-<span data-ttu-id="6ce23-578">`--no-restore` - 프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-578">`--no-restore` - Doesn't execute an implicit restore during project creation.</span></span>
+- **`--aad-b2c-instance <INSTANCE>`**
 
-<span data-ttu-id="6ce23-579">**mstest, xunit**</span><span class="sxs-lookup"><span data-stu-id="6ce23-579">**mstest, xunit**</span></span>
+  <span data-ttu-id="ed1f5-464">연결할 Azure Active Directory B2C 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-464">The Azure Active Directory B2C instance to connect to.</span></span> <span data-ttu-id="ed1f5-465">`IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-465">Use with `IndividualB2C` authentication.</span></span> <span data-ttu-id="ed1f5-466">기본값은 `https://login.microsoftonline.com/tfp/`입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-466">The default value is `https://login.microsoftonline.com/tfp/`.</span></span>
 
-<span data-ttu-id="6ce23-580">`-p|--enable-pack` - [dotnet pack](dotnet-pack.md)을 사용하여 프로젝트에 대한 패키징을 사용하도록 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-580">`-p|--enable-pack` - Enables packaging for the project using [dotnet pack](dotnet-pack.md).</span></span>
+- **`-ssp|--susi-policy-id <ID>`**
 
-<span data-ttu-id="6ce23-581">`--no-restore` - 프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-581">`--no-restore` - Doesn't execute an implicit restore during project creation.</span></span>
+  <span data-ttu-id="ed1f5-467">이 프로젝트에 대한 로그인 및 등록 정책 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-467">The sign-in and sign-up policy ID for this project.</span></span> <span data-ttu-id="ed1f5-468">`IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-468">Use with `IndividualB2C` authentication.</span></span>
 
-<span data-ttu-id="6ce23-582">**globaljson**</span><span class="sxs-lookup"><span data-stu-id="6ce23-582">**globaljson**</span></span>
+- **`-rp|--reset-password-policy-id <ID>`**
 
-<span data-ttu-id="6ce23-583">`--sdk-version <VERSION_NUMBER>` - *global.json* 파일에서 사용할 .NET Core SDK 버전을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-583">`--sdk-version <VERSION_NUMBER>` - Specifies the version of the .NET Core SDK to use in the *global.json* file.</span></span>
+  <span data-ttu-id="ed1f5-469">이 프로젝트에 대한 암호 재설정 정책 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-469">The reset password policy ID for this project.</span></span> <span data-ttu-id="ed1f5-470">`IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-470">Use with `IndividualB2C` authentication.</span></span>
 
-<span data-ttu-id="6ce23-584">**web**</span><span class="sxs-lookup"><span data-stu-id="6ce23-584">**web**</span></span>
+- **`-ep|--edit-profile-policy-id <ID>`**
 
-<span data-ttu-id="6ce23-585">`--exclude-launch-settings` - 생성된 템플릿에서 *launchSettings.json*을 제외합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-585">`--exclude-launch-settings` - Exclude *launchSettings.json* from the generated template.</span></span>
+  <span data-ttu-id="ed1f5-471">이 프로젝트에 대한 프로필 편집 정책 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-471">The edit profile policy ID for this project.</span></span> <span data-ttu-id="ed1f5-472">`IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-472">Use with `IndividualB2C` authentication.</span></span>
 
-<span data-ttu-id="6ce23-586">`--no-restore` - 프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-586">`--no-restore` - Doesn't execute an implicit restore during project creation.</span></span>
+- **`--aad-instance <INSTANCE>`**
 
-<span data-ttu-id="6ce23-587">`--no-https` - 프로젝트에는 HTTPS가 필요하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-587">`--no-https` - Project doesn't require HTTPS.</span></span> <span data-ttu-id="6ce23-588">이 옵션은 `IndividualAuth` 또는 `OrganizationalAuth`를 사용하지 않는 경우에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-588">This option only applies if `IndividualAuth` or `OrganizationalAuth` are not being used.</span></span>
+  <span data-ttu-id="ed1f5-473">연결할 Azure Active Directory 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-473">The Azure Active Directory instance to connect to.</span></span> <span data-ttu-id="ed1f5-474">`SingleOrg` 또는 `MultiOrg` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-474">Use with `SingleOrg` or `MultiOrg` authentication.</span></span> <span data-ttu-id="ed1f5-475">기본값은 `https://login.microsoftonline.com/`입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-475">The default value is `https://login.microsoftonline.com/`.</span></span>
 
-<span data-ttu-id="6ce23-589">**webapi**</span><span class="sxs-lookup"><span data-stu-id="6ce23-589">**webapi**</span></span>
+- **`--client-id <ID>`**
 
-<span data-ttu-id="6ce23-590">`-au|--auth <AUTHENTICATION_TYPE>` - 사용할 인증 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-590">`-au|--auth <AUTHENTICATION_TYPE>` - The type of authentication to use.</span></span> <span data-ttu-id="6ce23-591">가능한 값은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-591">The possible values are:</span></span>
+  <span data-ttu-id="ed1f5-476">이 프로젝트의 클라이언트 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-476">The Client ID for this project.</span></span> <span data-ttu-id="ed1f5-477">`IndividualB2C`, `SingleOrg` 또는 `MultiOrg` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-477">Use with `IndividualB2C`, `SingleOrg`, or `MultiOrg` authentication.</span></span> <span data-ttu-id="ed1f5-478">기본값은 `11111111-1111-1111-11111111111111111`입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-478">The default value is `11111111-1111-1111-11111111111111111`.</span></span>
 
-- <span data-ttu-id="6ce23-592">`None` - 인증하지 않습니다(기본값).</span><span class="sxs-lookup"><span data-stu-id="6ce23-592">`None` - No authentication (Default).</span></span>
-- <span data-ttu-id="6ce23-593">`IndividualB2C` - Azure AD B2C를 사용한 개별 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-593">`IndividualB2C` - Individual authentication with Azure AD B2C.</span></span>
-- <span data-ttu-id="6ce23-594">`SingleOrg` - 단일 테넌트에 대한 조직적 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-594">`SingleOrg` - Organizational authentication for a single tenant.</span></span>
-- <span data-ttu-id="6ce23-595">`Windows` - Windows 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-595">`Windows` - Windows authentication.</span></span>
+- **`--domain <DOMAIN>`**
 
-<span data-ttu-id="6ce23-596">`--aad-b2c-instance <INSTANCE>` - 연결할 Azure Active Directory B2C 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-596">`--aad-b2c-instance <INSTANCE>` - The Azure Active Directory B2C instance to connect to.</span></span> <span data-ttu-id="6ce23-597">`IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-597">Use with `IndividualB2C` authentication.</span></span> <span data-ttu-id="6ce23-598">기본값은 `https://login.microsoftonline.com/tfp/`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-598">The default value is `https://login.microsoftonline.com/tfp/`.</span></span>
+  <span data-ttu-id="ed1f5-479">디렉터리 테넌트의 도메인입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-479">The domain for the directory tenant.</span></span> <span data-ttu-id="ed1f5-480">`SingleOrg` 또는 `IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-480">Use with `SingleOrg` or `IndividualB2C` authentication.</span></span> <span data-ttu-id="ed1f5-481">기본값은 `qualified.domain.name`입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-481">The default value is `qualified.domain.name`.</span></span>
 
-<span data-ttu-id="6ce23-599">`-ssp|--susi-policy-id <ID>` - 이 프로젝트에 대한 로그인 및 등록 정책 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-599">`-ssp|--susi-policy-id <ID>` - The sign-in and sign-up policy ID for this project.</span></span> <span data-ttu-id="6ce23-600">`IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-600">Use with `IndividualB2C` authentication.</span></span>
+- **`--tenant-id <ID>`**
 
-<span data-ttu-id="6ce23-601">`--aad-instance <INSTANCE>` - 연결할 Azure Active Directory 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-601">`--aad-instance <INSTANCE>` - The Azure Active Directory instance to connect to.</span></span> <span data-ttu-id="6ce23-602">`SingleOrg` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-602">Use with `SingleOrg` authentication.</span></span> <span data-ttu-id="6ce23-603">기본값은 `https://login.microsoftonline.com/`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-603">The default value is `https://login.microsoftonline.com/`.</span></span>
+  <span data-ttu-id="ed1f5-482">연결할 디렉터리의 TenantId ID입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-482">The TenantId ID of the directory to connect to.</span></span> <span data-ttu-id="ed1f5-483">`SingleOrg` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-483">Use with `SingleOrg` authentication.</span></span> <span data-ttu-id="ed1f5-484">기본값은 `22222222-2222-2222-2222-222222222222`입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-484">The default value is `22222222-2222-2222-2222-222222222222`.</span></span>
 
-<span data-ttu-id="6ce23-604">`--client-id <ID>` - 이 프로젝트의 클라이언트 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-604">`--client-id <ID>` - The Client ID for this project.</span></span> <span data-ttu-id="6ce23-605">`IndividualB2C` 또는 `SingleOrg` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-605">Use with `IndividualB2C` or `SingleOrg` authentication.</span></span> <span data-ttu-id="6ce23-606">기본값은 `11111111-1111-1111-11111111111111111`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-606">The default value is `11111111-1111-1111-11111111111111111`.</span></span>
+- **`--callback-path <PATH>`**
 
-<span data-ttu-id="6ce23-607">`--domain <DOMAIN>` - 디렉터리 테넌트에 대한 도메인입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-607">`--domain <DOMAIN>` - The domain for the directory tenant.</span></span> <span data-ttu-id="6ce23-608">`SingleOrg` 또는 `IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-608">Use with `SingleOrg` or `IndividualB2C` authentication.</span></span> <span data-ttu-id="6ce23-609">기본값은 `qualified.domain.name`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-609">The default value is `qualified.domain.name`.</span></span>
+  <span data-ttu-id="ed1f5-485">리디렉션 URI의 애플리케이션 기본 경로 내 요청 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-485">The request path within the application's base path of the redirect URI.</span></span> <span data-ttu-id="ed1f5-486">`SingleOrg` 또는 `IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-486">Use with `SingleOrg` or `IndividualB2C` authentication.</span></span> <span data-ttu-id="ed1f5-487">기본값은 `/signin-oidc`입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-487">The default value is `/signin-oidc`.</span></span>
 
-<span data-ttu-id="6ce23-610">`--tenant-id <ID>` - 연결할 디렉터리의 TenantId ID입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-610">`--tenant-id <ID>` - The TenantId ID of the directory to connect to.</span></span> <span data-ttu-id="6ce23-611">`SingleOrg` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-611">Use with `SingleOrg` authentication.</span></span> <span data-ttu-id="6ce23-612">기본값은 `22222222-2222-2222-2222-222222222222`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-612">The default value is `22222222-2222-2222-2222-222222222222`.</span></span>
+- **`-r|--org-read-access`**
 
-<span data-ttu-id="6ce23-613">`-r|--org-read-access` - 디렉터리에 대한 이 애플리케이션 읽기 액세스를 허용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-613">`-r|--org-read-access` - Allows this application read-access to the directory.</span></span> <span data-ttu-id="6ce23-614">`SingleOrg` 또는 `MultiOrg` 인증에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-614">Only applies to `SingleOrg` or `MultiOrg` authentication.</span></span>
+  <span data-ttu-id="ed1f5-488">디렉터리에 대한 이 애플리케이션 읽기 액세스를 허용합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-488">Allows this application read-access to the directory.</span></span> <span data-ttu-id="ed1f5-489">`SingleOrg` 또는 `MultiOrg` 인증에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-489">Only applies to `SingleOrg` or `MultiOrg` authentication.</span></span>
 
-<span data-ttu-id="6ce23-615">`--exclude-launch-settings` - 생성된 템플릿에서 *launchSettings.json*을 제외합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-615">`--exclude-launch-settings` - Exclude *launchSettings.json* from the generated template.</span></span>
+- **`--exclude-launch-settings`**
 
-<span data-ttu-id="6ce23-616">`-uld|--use-local-db` - SQLite 대신 LocalDB를 사용하도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-616">`-uld|--use-local-db` - Specifies LocalDB should be used instead of SQLite.</span></span> <span data-ttu-id="6ce23-617">`Individual` 또는 `IndividualB2C` 인증에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-617">Only applies to `Individual` or `IndividualB2C` authentication.</span></span>
+  <span data-ttu-id="ed1f5-490">생성된 템플릿에서 *launchSettings.json*을 제외합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-490">Excludes *launchSettings.json* from the generated template.</span></span>
 
-<span data-ttu-id="6ce23-618">`--no-restore` - 프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-618">`--no-restore` - Doesn't execute an implicit restore during project creation.</span></span>
+- **`--no-https`**
 
-<span data-ttu-id="6ce23-619">`--no-https` - 프로젝트에는 HTTPS가 필요하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-619">`--no-https` - Project doesn't require HTTPS.</span></span> <span data-ttu-id="6ce23-620">`app.UseHsts` 및 `app.UseHttpsRedirection`은 `Startup.Configure`에 추가되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-620">`app.UseHsts` and `app.UseHttpsRedirection` aren't added to `Startup.Configure`.</span></span> <span data-ttu-id="6ce23-621">이 옵션은 `Individual`, `IndividualB2C`, `SingleOrg` 또는 `MultiOrg`를 사용하지 않는 경우에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-621">This option only applies if `Individual`, `IndividualB2C`, `SingleOrg`, or `MultiOrg` aren't being used.</span></span>
+  <span data-ttu-id="ed1f5-491">HTTPS를 해제합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-491">Turns off HTTPS.</span></span> <span data-ttu-id="ed1f5-492">이 옵션은 `Individual`, `IndividualB2C`, `SingleOrg` 또는 `MultiOrg`를 사용하지 않는 경우에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-492">This option only applies if `Individual`, `IndividualB2C`, `SingleOrg`, or `MultiOrg` aren't being used.</span></span>
 
-<span data-ttu-id="6ce23-622">**mvc, razor**</span><span class="sxs-lookup"><span data-stu-id="6ce23-622">**mvc, razor**</span></span>
+- **`-uld|--use-local-db`**
 
-<span data-ttu-id="6ce23-623">`-au|--auth <AUTHENTICATION_TYPE>` - 사용할 인증 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-623">`-au|--auth <AUTHENTICATION_TYPE>` - The type of authentication to use.</span></span> <span data-ttu-id="6ce23-624">가능한 값은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-624">The possible values are:</span></span>
+  <span data-ttu-id="ed1f5-493">SQLite 대신 LocalDB를 사용하도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-493">Specifies LocalDB should be used instead of SQLite.</span></span> <span data-ttu-id="ed1f5-494">`Individual` 또는 `IndividualB2C` 인증에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-494">Only applies to `Individual` or `IndividualB2C` authentication.</span></span>
 
-- <span data-ttu-id="6ce23-625">`None` - 인증하지 않습니다(기본값).</span><span class="sxs-lookup"><span data-stu-id="6ce23-625">`None` - No authentication (Default).</span></span>
-- <span data-ttu-id="6ce23-626">`Individual` - 개별 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-626">`Individual` - Individual authentication.</span></span>
-- <span data-ttu-id="6ce23-627">`IndividualB2C` - Azure AD B2C를 사용한 개별 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-627">`IndividualB2C` - Individual authentication with Azure AD B2C.</span></span>
-- <span data-ttu-id="6ce23-628">`SingleOrg` - 단일 테넌트에 대한 조직적 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-628">`SingleOrg` - Organizational authentication for a single tenant.</span></span>
-- <span data-ttu-id="6ce23-629">`MultiOrg` - 여러 테넌트에 대한 조직적 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-629">`MultiOrg` - Organizational authentication for multiple tenants.</span></span>
-- <span data-ttu-id="6ce23-630">`Windows` - Windows 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-630">`Windows` - Windows authentication.</span></span>
+- **`-f|--framework <FRAMEWORK>`**
 
-<span data-ttu-id="6ce23-631">`--aad-b2c-instance <INSTANCE>` - 연결할 Azure Active Directory B2C 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-631">`--aad-b2c-instance <INSTANCE>` - The Azure Active Directory B2C instance to connect to.</span></span> <span data-ttu-id="6ce23-632">`IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-632">Use with `IndividualB2C` authentication.</span></span> <span data-ttu-id="6ce23-633">기본값은 `https://login.microsoftonline.com/tfp/`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-633">The default value is `https://login.microsoftonline.com/tfp/`.</span></span>
+  <span data-ttu-id="ed1f5-495">대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-495">Specifies the [framework](../../standard/frameworks.md) to target.</span></span> <span data-ttu-id="ed1f5-496">.NET Core 3.0 SDK 이후 사용할 수 있는 옵션입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-496">Option available since .NET Core 3.0 SDK.</span></span>
 
-<span data-ttu-id="6ce23-634">`-ssp|--susi-policy-id <ID>` - 이 프로젝트에 대한 로그인 및 등록 정책 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-634">`-ssp|--susi-policy-id <ID>` - The sign-in and sign-up policy ID for this project.</span></span> <span data-ttu-id="6ce23-635">`IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-635">Use with `IndividualB2C` authentication.</span></span>
+  <span data-ttu-id="ed1f5-497">다음 표에서는 사용하는 SDK 버전 번호에 따른 기본값을 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-497">The following table lists the default values according to the SDK version number you're using:</span></span>
 
-<span data-ttu-id="6ce23-636">`-rp|--reset-password-policy-id <ID>` - 이 프로젝트에 대한 암호 재설정 정책 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-636">`-rp|--reset-password-policy-id <ID>` - The reset password policy ID for this project.</span></span> <span data-ttu-id="6ce23-637">`IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-637">Use with `IndividualB2C` authentication.</span></span>
+  | <span data-ttu-id="ed1f5-498">SDK 버전</span><span class="sxs-lookup"><span data-stu-id="ed1f5-498">SDK version</span></span> | <span data-ttu-id="ed1f5-499">기본값</span><span class="sxs-lookup"><span data-stu-id="ed1f5-499">Default value</span></span>   |
+  |-------------|-----------------|
+  | <span data-ttu-id="ed1f5-500">3.1</span><span class="sxs-lookup"><span data-stu-id="ed1f5-500">3.1</span></span>         | `netcoreapp3.1` |
+  | <span data-ttu-id="ed1f5-501">3.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-501">3.0</span></span>         | `netcoreapp3.0` |
 
-<span data-ttu-id="6ce23-638">`-ep|--edit-profile-policy-id <ID>` - 이 프로젝트에 대한 프로필 편집 정책 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-638">`-ep|--edit-profile-policy-id <ID>` - The edit profile policy ID for this project.</span></span> <span data-ttu-id="6ce23-639">`IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-639">Use with `IndividualB2C` authentication.</span></span>
+- **`--no-restore`**
 
-<span data-ttu-id="6ce23-640">`--aad-instance <INSTANCE>` - 연결할 Azure Active Directory 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-640">`--aad-instance <INSTANCE>` - The Azure Active Directory instance to connect to.</span></span> <span data-ttu-id="6ce23-641">`SingleOrg` 또는 `MultiOrg` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-641">Use with `SingleOrg` or `MultiOrg` authentication.</span></span> <span data-ttu-id="6ce23-642">기본값은 `https://login.microsoftonline.com/`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-642">The default value is `https://login.microsoftonline.com/`.</span></span>
+  <span data-ttu-id="ed1f5-502">프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-502">Doesn't execute an implicit restore during project creation.</span></span>
 
-<span data-ttu-id="6ce23-643">`--client-id <ID>` - 이 프로젝트의 클라이언트 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-643">`--client-id <ID>` - The Client ID for this project.</span></span> <span data-ttu-id="6ce23-644">`IndividualB2C`, `SingleOrg` 또는 `MultiOrg` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-644">Use with `IndividualB2C`, `SingleOrg`, or `MultiOrg` authentication.</span></span> <span data-ttu-id="6ce23-645">기본값은 `11111111-1111-1111-11111111111111111`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-645">The default value is `11111111-1111-1111-11111111111111111`.</span></span>
+- **`--use-browserlink`**
 
-<span data-ttu-id="6ce23-646">`--domain <DOMAIN>` - 디렉터리 테넌트에 대한 도메인입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-646">`--domain <DOMAIN>` - The domain for the directory tenant.</span></span> <span data-ttu-id="6ce23-647">`SingleOrg` 또는 `IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-647">Use with `SingleOrg` or `IndividualB2C` authentication.</span></span> <span data-ttu-id="6ce23-648">기본값은 `qualified.domain.name`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-648">The default value is `qualified.domain.name`.</span></span>
+  <span data-ttu-id="ed1f5-503">프로젝트에 BrowserLink를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-503">Includes BrowserLink in the project.</span></span> <span data-ttu-id="ed1f5-504">.NET Core 2.2 및 3.1 SDK에서 사용할 수 없는 옵션입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-504">Option not available in .NET Core 2.2 and 3.1 SDK.</span></span>
 
-<span data-ttu-id="6ce23-649">`--tenant-id <ID>` - 연결할 디렉터리의 TenantId ID입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-649">`--tenant-id <ID>` - The TenantId ID of the directory to connect to.</span></span> <span data-ttu-id="6ce23-650">`SingleOrg` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-650">Use with `SingleOrg` authentication.</span></span> <span data-ttu-id="6ce23-651">기본값은 `22222222-2222-2222-2222-222222222222`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-651">The default value is `22222222-2222-2222-2222-222222222222`.</span></span>
+***
 
-<span data-ttu-id="6ce23-652">`--callback-path <PATH>` - 리디렉션 URI의 애플리케이션 기본 경로 내 요청 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-652">`--callback-path <PATH>` - The request path within the application's base path of the redirect URI.</span></span> <span data-ttu-id="6ce23-653">`SingleOrg` 또는 `IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-653">Use with `SingleOrg` or `IndividualB2C` authentication.</span></span> <span data-ttu-id="6ce23-654">기본값은 `/signin-oidc`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-654">The default value is `/signin-oidc`.</span></span>
+### <a name="spa"></a> <span data-ttu-id="ed1f5-505">angular, react</span><span class="sxs-lookup"><span data-stu-id="ed1f5-505">angular, react</span></span>
 
-<span data-ttu-id="6ce23-655">`-r|--org-read-access` - 디렉터리에 대한 이 애플리케이션 읽기 액세스를 허용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-655">`-r|--org-read-access` - Allows this application read-access to the directory.</span></span> <span data-ttu-id="6ce23-656">`SingleOrg` 또는 `MultiOrg` 인증에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-656">Only applies to `SingleOrg` or `MultiOrg` authentication.</span></span>
+- **`-au|--auth <AUTHENTICATION_TYPE>`**
 
-<span data-ttu-id="6ce23-657">`--exclude-launch-settings` - 생성된 템플릿에서 *launchSettings.json*을 제외합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-657">`--exclude-launch-settings` - Exclude *launchSettings.json* from the generated template.</span></span>
+  <span data-ttu-id="ed1f5-506">사용할 인증 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-506">The type of authentication to use.</span></span> <span data-ttu-id="ed1f5-507">.NET Core 3.0 SDK 이후 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-507">Available since .NET Core 3.0 SDK.</span></span> 
+  
+  <span data-ttu-id="ed1f5-508">가능한 값은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-508">The possible values are:</span></span>
 
-<span data-ttu-id="6ce23-658">`--use-browserlink` - 프로젝트에 BrowserLink를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-658">`--use-browserlink` - Includes BrowserLink in the project.</span></span>
+  - <span data-ttu-id="ed1f5-509">`None` - 인증하지 않습니다(기본값).</span><span class="sxs-lookup"><span data-stu-id="ed1f5-509">`None` - No authentication (Default).</span></span>
+  - <span data-ttu-id="ed1f5-510">`Individual` - 개별 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-510">`Individual` - Individual authentication.</span></span>
 
-<span data-ttu-id="6ce23-659">`-uld|--use-local-db` - SQLite 대신 LocalDB를 사용하도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-659">`-uld|--use-local-db` - Specifies LocalDB should be used instead of SQLite.</span></span> <span data-ttu-id="6ce23-660">`Individual` 또는 `IndividualB2C` 인증에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-660">Only applies to `Individual` or `IndividualB2C` authentication.</span></span>
+- **`--exclude-launch-settings`**
 
-<span data-ttu-id="6ce23-661">`--no-restore` - 프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-661">`--no-restore` - Doesn't execute an implicit restore during project creation.</span></span>
+  <span data-ttu-id="ed1f5-511">생성된 템플릿에서 *launchSettings.json*을 제외합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-511">Excludes *launchSettings.json* from the generated template.</span></span> 
 
-<span data-ttu-id="6ce23-662">`--no-https` - 프로젝트에는 HTTPS가 필요하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-662">`--no-https` - Project doesn't require HTTPS.</span></span> <span data-ttu-id="6ce23-663">`app.UseHsts` 및 `app.UseHttpsRedirection`은 `Startup.Configure`에 추가되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-663">`app.UseHsts` and `app.UseHttpsRedirection` aren't added to `Startup.Configure`.</span></span> <span data-ttu-id="6ce23-664">이 옵션은 `Individual`, `IndividualB2C`, `SingleOrg` 또는 `MultiOrg`를 사용하지 않는 경우에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-664">This option only applies if `Individual`, `IndividualB2C`, `SingleOrg`, or `MultiOrg` aren't being used.</span></span>
+- **`--no-restore`**
 
-<span data-ttu-id="6ce23-665">**page**</span><span class="sxs-lookup"><span data-stu-id="6ce23-665">**page**</span></span>
+  <span data-ttu-id="ed1f5-512">프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-512">Doesn't execute an implicit restore during project creation.</span></span>
 
-<span data-ttu-id="6ce23-666">`-na|--namespace <NAMESPACE_NAME>` - 생성된 코드에 대한 네임스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-666">`-na|--namespace <NAMESPACE_NAME>` - Namespace for the generated code.</span></span> <span data-ttu-id="6ce23-667">기본값은 `MyApp.Namespace`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-667">The default value is `MyApp.Namespace`.</span></span>
+- **`--no-https`**
 
-<span data-ttu-id="6ce23-668">`-np|--no-pagemodel` - PageModel 없이 페이지를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-668">`-np|--no-pagemodel` - Creates the page without a PageModel.</span></span>
+  <span data-ttu-id="ed1f5-513">HTTPS를 해제합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-513">Turns off HTTPS.</span></span> <span data-ttu-id="ed1f5-514">이 옵션은 인증이 `None`인 경우에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-514">This option only applies if authentication is `None`.</span></span>
 
-<span data-ttu-id="6ce23-669">**viewimports**</span><span class="sxs-lookup"><span data-stu-id="6ce23-669">**viewimports**</span></span>
+- **`-uld|--use-local-db`**
 
-<span data-ttu-id="6ce23-670">`-na|--namespace <NAMESPACE_NAME>` - 생성된 코드에 대한 네임스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-670">`-na|--namespace <NAMESPACE_NAME>` - Namespace for the generated code.</span></span> <span data-ttu-id="6ce23-671">기본값은 `MyApp.Namespace`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-671">The default value is `MyApp.Namespace`.</span></span>
+  <span data-ttu-id="ed1f5-515">SQLite 대신 LocalDB를 사용하도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-515">Specifies LocalDB should be used instead of SQLite.</span></span> <span data-ttu-id="ed1f5-516">`Individual` 또는 `IndividualB2C` 인증에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-516">Only applies to `Individual` or `IndividualB2C` authentication.</span></span> <span data-ttu-id="ed1f5-517">.NET Core 3.0 SDK 이후 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-517">Available since .NET Core 3.0 SDK.</span></span>
 
-# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="6ce23-672">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="6ce23-672">.NET Core 2.0</span></span>](#tab/netcore20)
+- **`-f|--framework <FRAMEWORK>`**
 
-<span data-ttu-id="6ce23-673">**console, angular, react, reactredux**</span><span class="sxs-lookup"><span data-stu-id="6ce23-673">**console, angular, react, reactredux**</span></span>
+  <span data-ttu-id="ed1f5-518">대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-518">Specifies the [framework](../../standard/frameworks.md) to target.</span></span> <span data-ttu-id="ed1f5-519">.NET Core 2.2 SDK에서 사용할 수 없는 옵션입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-519">Option not available in .NET Core 2.2 SDK.</span></span>
 
-<span data-ttu-id="6ce23-674">`--no-restore` - 프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-674">`--no-restore` - Doesn't execute an implicit restore during project creation.</span></span>
+  <span data-ttu-id="ed1f5-520">다음 표에서는 사용하는 SDK 버전 번호에 따른 기본값을 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-520">The following table lists the default values according to the SDK version number you're using:</span></span>
 
-<span data-ttu-id="6ce23-675">**classlib**</span><span class="sxs-lookup"><span data-stu-id="6ce23-675">**classlib**</span></span>
+  | <span data-ttu-id="ed1f5-521">SDK 버전</span><span class="sxs-lookup"><span data-stu-id="ed1f5-521">SDK version</span></span> | <span data-ttu-id="ed1f5-522">기본값</span><span class="sxs-lookup"><span data-stu-id="ed1f5-522">Default value</span></span>   |
+  |-------------|-----------------|
+  | <span data-ttu-id="ed1f5-523">3.1</span><span class="sxs-lookup"><span data-stu-id="ed1f5-523">3.1</span></span>         | `netcoreapp3.1` |
+  | <span data-ttu-id="ed1f5-524">3.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-524">3.0</span></span>         | `netcoreapp3.0` |
+  | <span data-ttu-id="ed1f5-525">2.1</span><span class="sxs-lookup"><span data-stu-id="ed1f5-525">2.1</span></span>         | `netcoreapp2.0` |
 
-<span data-ttu-id="6ce23-676">`-f|--framework <FRAMEWORK>` - 대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-676">`-f|--framework <FRAMEWORK>` - Specifies the [framework](../../standard/frameworks.md) to target.</span></span> <span data-ttu-id="6ce23-677">값: `netcoreapp2.0`(.NET Core 클래스 라이브러리를 만드는 경우) 또는 `netstandard2.0`(.NET Standard 클래스 라이브러리를 만드는 경우).</span><span class="sxs-lookup"><span data-stu-id="6ce23-677">Values: `netcoreapp2.0` to create a .NET Core Class Library or `netstandard2.0` to create a .NET Standard Class Library.</span></span> <span data-ttu-id="6ce23-678">기본값은 `netstandard2.0`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-678">The default value is `netstandard2.0`.</span></span>
+***
 
-<span data-ttu-id="6ce23-679">`--no-restore` - 프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-679">`--no-restore` - Doesn't execute an implicit restore during project creation.</span></span>
+### <a name="reactredux"></a><span data-ttu-id="ed1f5-526">reactredux</span><span class="sxs-lookup"><span data-stu-id="ed1f5-526">reactredux</span></span>
 
-<span data-ttu-id="6ce23-680">**mstest, xunit**</span><span class="sxs-lookup"><span data-stu-id="6ce23-680">**mstest, xunit**</span></span>
+- **`--exclude-launch-settings`**
 
-<span data-ttu-id="6ce23-681">`-p|--enable-pack` - [dotnet pack](dotnet-pack.md)을 사용하여 프로젝트에 대한 패키징을 사용하도록 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-681">`-p|--enable-pack` - Enables packaging for the project using [dotnet pack](dotnet-pack.md).</span></span>
+  <span data-ttu-id="ed1f5-527">생성된 템플릿에서 *launchSettings.json*을 제외합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-527">Excludes *launchSettings.json* from the generated template.</span></span> 
 
-<span data-ttu-id="6ce23-682">`--no-restore` - 프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-682">`--no-restore` - Doesn't execute an implicit restore during project creation.</span></span>
+- **`-f|--framework <FRAMEWORK>`**
 
-<span data-ttu-id="6ce23-683">**globaljson**</span><span class="sxs-lookup"><span data-stu-id="6ce23-683">**globaljson**</span></span>
+  <span data-ttu-id="ed1f5-528">대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-528">Specifies the [framework](../../standard/frameworks.md) to target.</span></span> <span data-ttu-id="ed1f5-529">.NET Core 2.2 SDK에서 사용할 수 없는 옵션입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-529">Option not available in .NET Core 2.2 SDK.</span></span>
 
-<span data-ttu-id="6ce23-684">`--sdk-version <VERSION_NUMBER>` - *global.json* 파일에서 사용할 .NET Core SDK 버전을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-684">`--sdk-version <VERSION_NUMBER>` - Specifies the version of the .NET Core SDK to use in the *global.json* file.</span></span>
+  <span data-ttu-id="ed1f5-530">다음 표에서는 사용하는 SDK 버전 번호에 따른 기본값을 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-530">The following table lists the default values according to the SDK version number you're using:</span></span>
 
-<span data-ttu-id="6ce23-685">**web**</span><span class="sxs-lookup"><span data-stu-id="6ce23-685">**web**</span></span>
+  | <span data-ttu-id="ed1f5-531">SDK 버전</span><span class="sxs-lookup"><span data-stu-id="ed1f5-531">SDK version</span></span> | <span data-ttu-id="ed1f5-532">기본값</span><span class="sxs-lookup"><span data-stu-id="ed1f5-532">Default value</span></span>   |
+  |-------------|-----------------|
+  | <span data-ttu-id="ed1f5-533">3.1</span><span class="sxs-lookup"><span data-stu-id="ed1f5-533">3.1</span></span>         | `netcoreapp3.1` |
+  | <span data-ttu-id="ed1f5-534">3.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-534">3.0</span></span>         | `netcoreapp3.0` |
+  | <span data-ttu-id="ed1f5-535">2.1</span><span class="sxs-lookup"><span data-stu-id="ed1f5-535">2.1</span></span>         | `netcoreapp2.0` |
 
-<span data-ttu-id="6ce23-686">`--use-launch-settings` - 생성된 템플릿 출력에 *launchSettings.json*을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-686">`--use-launch-settings` - Includes *launchSettings.json* in the generated template output.</span></span>
+- **`--no-restore`**
 
-<span data-ttu-id="6ce23-687">`--no-restore` - 프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-687">`--no-restore` - Doesn't execute an implicit restore during project creation.</span></span>
+  <span data-ttu-id="ed1f5-536">프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-536">Doesn't execute an implicit restore during project creation.</span></span>
 
-<span data-ttu-id="6ce23-688">**webapi**</span><span class="sxs-lookup"><span data-stu-id="6ce23-688">**webapi**</span></span>
+- **`--no-https`**
 
-<span data-ttu-id="6ce23-689">`-au|--auth <AUTHENTICATION_TYPE>` - 사용할 인증 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-689">`-au|--auth <AUTHENTICATION_TYPE>` - The type of authentication to use.</span></span> <span data-ttu-id="6ce23-690">가능한 값은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-690">The possible values are:</span></span>
+  <span data-ttu-id="ed1f5-537">HTTPS를 해제합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-537">Turns off HTTPS.</span></span>
 
-- <span data-ttu-id="6ce23-691">`None` - 인증하지 않습니다(기본값).</span><span class="sxs-lookup"><span data-stu-id="6ce23-691">`None` - No authentication (Default).</span></span>
-- <span data-ttu-id="6ce23-692">`IndividualB2C` - Azure AD B2C를 사용한 개별 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-692">`IndividualB2C` - Individual authentication with Azure AD B2C.</span></span>
-- <span data-ttu-id="6ce23-693">`SingleOrg` - 단일 테넌트에 대한 조직적 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-693">`SingleOrg` - Organizational authentication for a single tenant.</span></span>
-- <span data-ttu-id="6ce23-694">`Windows` - Windows 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-694">`Windows` - Windows authentication.</span></span>
+***
 
-<span data-ttu-id="6ce23-695">`--aad-b2c-instance <INSTANCE>` - 연결할 Azure Active Directory B2C 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-695">`--aad-b2c-instance <INSTANCE>` - The Azure Active Directory B2C instance to connect to.</span></span> <span data-ttu-id="6ce23-696">`IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-696">Use with `IndividualB2C` authentication.</span></span> <span data-ttu-id="6ce23-697">기본값은 `https://login.microsoftonline.com/tfp/`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-697">The default value is `https://login.microsoftonline.com/tfp/`.</span></span>
+### <a name="razorclasslib"></a><span data-ttu-id="ed1f5-538">razorclasslib</span><span class="sxs-lookup"><span data-stu-id="ed1f5-538">razorclasslib</span></span>
 
-<span data-ttu-id="6ce23-698">`-ssp|--susi-policy-id <ID>` - 이 프로젝트에 대한 로그인 및 등록 정책 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-698">`-ssp|--susi-policy-id <ID>` - The sign-in and sign-up policy ID for this project.</span></span> <span data-ttu-id="6ce23-699">`IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-699">Use with `IndividualB2C` authentication.</span></span>
+- **`--no-restore`**
 
-<span data-ttu-id="6ce23-700">`--aad-instance <INSTANCE>` - 연결할 Azure Active Directory 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-700">`--aad-instance <INSTANCE>` - The Azure Active Directory instance to connect to.</span></span> <span data-ttu-id="6ce23-701">`SingleOrg` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-701">Use with `SingleOrg` authentication.</span></span> <span data-ttu-id="6ce23-702">기본값은 `https://login.microsoftonline.com/`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-702">The default value is `https://login.microsoftonline.com/`.</span></span>
+  <span data-ttu-id="ed1f5-539">프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-539">Doesn't execute an implicit restore during project creation.</span></span>
 
-<span data-ttu-id="6ce23-703">`--client-id <ID>` - 이 프로젝트의 클라이언트 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-703">`--client-id <ID>` - The Client ID for this project.</span></span> <span data-ttu-id="6ce23-704">`IndividualB2C` 또는 `SingleOrg` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-704">Use with `IndividualB2C` or `SingleOrg` authentication.</span></span> <span data-ttu-id="6ce23-705">기본값은 `11111111-1111-1111-11111111111111111`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-705">The default value is `11111111-1111-1111-11111111111111111`.</span></span>
+- **`-s|--support-pages-and-views`**
 
-<span data-ttu-id="6ce23-706">`--domain <DOMAIN>` - 디렉터리 테넌트에 대한 도메인입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-706">`--domain <DOMAIN>` - The domain for the directory tenant.</span></span> <span data-ttu-id="6ce23-707">`SingleOrg` 또는 `IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-707">Use with `SingleOrg` or `IndividualB2C` authentication.</span></span> <span data-ttu-id="6ce23-708">기본값은 `qualified.domain.name`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-708">The default value is `qualified.domain.name`.</span></span>
+  <span data-ttu-id="ed1f5-540">이 라이브러리에 구성 요소 외에 기존의 Razor 페이지와 뷰를 추가하는 것을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-540">Supports adding traditional Razor pages and Views in addition to components to this library.</span></span> <span data-ttu-id="ed1f5-541">.NET Core 3.0 SDK 이후 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-541">Available since .NET Core 3.0 SDK.</span></span>
 
-<span data-ttu-id="6ce23-709">`--tenant-id <ID>` - 연결할 디렉터리의 TenantId ID입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-709">`--tenant-id <ID>` - The TenantId ID of the directory to connect to.</span></span> <span data-ttu-id="6ce23-710">`SingleOrg` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-710">Use with `SingleOrg` authentication.</span></span> <span data-ttu-id="6ce23-711">기본값은 `22222222-2222-2222-2222-222222222222`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-711">The default value is `22222222-2222-2222-2222-222222222222`.</span></span>
+***
+  
+### <a name="webapi"></a><span data-ttu-id="ed1f5-542">webapi</span><span class="sxs-lookup"><span data-stu-id="ed1f5-542">webapi</span></span>
 
-<span data-ttu-id="6ce23-712">`-r|--org-read-access` - 디렉터리에 대한 이 애플리케이션 읽기 액세스를 허용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-712">`-r|--org-read-access` - Allows this application read-access to the directory.</span></span> <span data-ttu-id="6ce23-713">`SingleOrg` 또는 `MultiOrg` 인증에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-713">Only applies to `SingleOrg` or `MultiOrg` authentication.</span></span>
+- **`-au|--auth <AUTHENTICATION_TYPE>`**
 
-<span data-ttu-id="6ce23-714">`--use-launch-settings` - 생성된 템플릿 출력에 *launchSettings.json*을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-714">`--use-launch-settings` - Includes *launchSettings.json* in the generated template output.</span></span>
+  <span data-ttu-id="ed1f5-543">사용할 인증 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-543">The type of authentication to use.</span></span> <span data-ttu-id="ed1f5-544">가능한 값은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-544">The possible values are:</span></span>
 
-<span data-ttu-id="6ce23-715">`-uld|--use-local-db` - SQLite 대신 LocalDB를 사용하도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-715">`-uld|--use-local-db` - Specifies LocalDB should be used instead of SQLite.</span></span> <span data-ttu-id="6ce23-716">`Individual` 또는 `IndividualB2C` 인증에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-716">Only applies to `Individual` or `IndividualB2C` authentication.</span></span>
+  - <span data-ttu-id="ed1f5-545">`None` - 인증하지 않습니다(기본값).</span><span class="sxs-lookup"><span data-stu-id="ed1f5-545">`None` - No authentication (Default).</span></span>
+  - <span data-ttu-id="ed1f5-546">`IndividualB2C` - Azure AD B2C를 사용한 개별 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-546">`IndividualB2C` - Individual authentication with Azure AD B2C.</span></span>
+  - <span data-ttu-id="ed1f5-547">`SingleOrg` - 단일 테넌트에 대한 조직적 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-547">`SingleOrg` - Organizational authentication for a single tenant.</span></span>
+  - <span data-ttu-id="ed1f5-548">`Windows` - Windows 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-548">`Windows` - Windows authentication.</span></span>
 
-<span data-ttu-id="6ce23-717">`--no-restore` - 프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-717">`--no-restore` - Doesn't execute an implicit restore during project creation.</span></span>
+- **`--aad-b2c-instance <INSTANCE>`**
 
-<span data-ttu-id="6ce23-718">**mvc, razor**</span><span class="sxs-lookup"><span data-stu-id="6ce23-718">**mvc, razor**</span></span>
+  <span data-ttu-id="ed1f5-549">연결할 Azure Active Directory B2C 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-549">The Azure Active Directory B2C instance to connect to.</span></span> <span data-ttu-id="ed1f5-550">`IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-550">Use with `IndividualB2C` authentication.</span></span> <span data-ttu-id="ed1f5-551">기본값은 `https://login.microsoftonline.com/tfp/`입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-551">The default value is `https://login.microsoftonline.com/tfp/`.</span></span>
 
-<span data-ttu-id="6ce23-719">`-au|--auth <AUTHENTICATION_TYPE>` - 사용할 인증 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-719">`-au|--auth <AUTHENTICATION_TYPE>` - The type of authentication to use.</span></span> <span data-ttu-id="6ce23-720">가능한 값은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-720">The possible values are:</span></span>
+- **`-ssp|--susi-policy-id <ID>`**
 
-- <span data-ttu-id="6ce23-721">`None` - 인증하지 않습니다(기본값).</span><span class="sxs-lookup"><span data-stu-id="6ce23-721">`None` - No authentication (Default).</span></span>
-- <span data-ttu-id="6ce23-722">`Individual` - 개별 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-722">`Individual` - Individual authentication.</span></span>
-- <span data-ttu-id="6ce23-723">`IndividualB2C` - Azure AD B2C를 사용한 개별 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-723">`IndividualB2C` - Individual authentication with Azure AD B2C.</span></span>
-- <span data-ttu-id="6ce23-724">`SingleOrg` - 단일 테넌트에 대한 조직적 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-724">`SingleOrg` - Organizational authentication for a single tenant.</span></span>
-- <span data-ttu-id="6ce23-725">`MultiOrg` - 여러 테넌트에 대한 조직적 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-725">`MultiOrg` - Organizational authentication for multiple tenants.</span></span>
-- <span data-ttu-id="6ce23-726">`Windows` - Windows 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-726">`Windows` - Windows authentication.</span></span>
+  <span data-ttu-id="ed1f5-552">이 프로젝트에 대한 로그인 및 등록 정책 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-552">The sign-in and sign-up policy ID for this project.</span></span> <span data-ttu-id="ed1f5-553">`IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-553">Use with `IndividualB2C` authentication.</span></span>
 
-<span data-ttu-id="6ce23-727">`--aad-b2c-instance <INSTANCE>` - 연결할 Azure Active Directory B2C 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-727">`--aad-b2c-instance <INSTANCE>` - The Azure Active Directory B2C instance to connect to.</span></span> <span data-ttu-id="6ce23-728">`IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-728">Use with `IndividualB2C` authentication.</span></span> <span data-ttu-id="6ce23-729">기본값은 `https://login.microsoftonline.com/tfp/`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-729">The default value is `https://login.microsoftonline.com/tfp/`.</span></span>
+- **`--aad-instance <INSTANCE>`**
 
-<span data-ttu-id="6ce23-730">`-ssp|--susi-policy-id <ID>` - 이 프로젝트에 대한 로그인 및 등록 정책 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-730">`-ssp|--susi-policy-id <ID>` - The sign-in and sign-up policy ID for this project.</span></span> <span data-ttu-id="6ce23-731">`IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-731">Use with `IndividualB2C` authentication.</span></span>
+  <span data-ttu-id="ed1f5-554">연결할 Azure Active Directory 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-554">The Azure Active Directory instance to connect to.</span></span> <span data-ttu-id="ed1f5-555">`SingleOrg` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-555">Use with `SingleOrg` authentication.</span></span> <span data-ttu-id="ed1f5-556">기본값은 `https://login.microsoftonline.com/`입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-556">The default value is `https://login.microsoftonline.com/`.</span></span>
 
-<span data-ttu-id="6ce23-732">`-rp|--reset-password-policy-id <ID>` - 이 프로젝트에 대한 암호 재설정 정책 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-732">`-rp|--reset-password-policy-id <ID>` - The reset password policy ID for this project.</span></span> <span data-ttu-id="6ce23-733">`IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-733">Use with `IndividualB2C` authentication.</span></span>
+- **`--client-id <ID>`**
 
-<span data-ttu-id="6ce23-734">`-ep|--edit-profile-policy-id <ID>` - 이 프로젝트에 대한 프로필 편집 정책 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-734">`-ep|--edit-profile-policy-id <ID>` - The edit profile policy ID for this project.</span></span> <span data-ttu-id="6ce23-735">`IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-735">Use with `IndividualB2C` authentication.</span></span>
+  <span data-ttu-id="ed1f5-557">이 프로젝트의 클라이언트 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-557">The Client ID for this project.</span></span> <span data-ttu-id="ed1f5-558">`IndividualB2C` 또는 `SingleOrg` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-558">Use with `IndividualB2C` or `SingleOrg` authentication.</span></span> <span data-ttu-id="ed1f5-559">기본값은 `11111111-1111-1111-11111111111111111`입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-559">The default value is `11111111-1111-1111-11111111111111111`.</span></span>
 
-<span data-ttu-id="6ce23-736">`--aad-instance <INSTANCE>` - 연결할 Azure Active Directory 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-736">`--aad-instance <INSTANCE>` - The Azure Active Directory instance to connect to.</span></span> <span data-ttu-id="6ce23-737">`SingleOrg` 또는 `MultiOrg` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-737">Use with `SingleOrg` or `MultiOrg` authentication.</span></span> <span data-ttu-id="6ce23-738">기본값은 `https://login.microsoftonline.com/`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-738">The default value is `https://login.microsoftonline.com/`.</span></span>
+- **`--domain <DOMAIN>`**
 
-<span data-ttu-id="6ce23-739">`--client-id <ID>` - 이 프로젝트의 클라이언트 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-739">`--client-id <ID>` - The Client ID for this project.</span></span> <span data-ttu-id="6ce23-740">`IndividualB2C`, `SingleOrg` 또는 `MultiOrg` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-740">Use with `IndividualB2C`, `SingleOrg`, or `MultiOrg` authentication.</span></span> <span data-ttu-id="6ce23-741">기본값은 `11111111-1111-1111-11111111111111111`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-741">The default value is `11111111-1111-1111-11111111111111111`.</span></span>
+  <span data-ttu-id="ed1f5-560">디렉터리 테넌트의 도메인입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-560">The domain for the directory tenant.</span></span> <span data-ttu-id="ed1f5-561">`IndividualB2C` 또는 `SingleOrg` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-561">Use with `IndividualB2C` or `SingleOrg` authentication.</span></span> <span data-ttu-id="ed1f5-562">기본값은 `qualified.domain.name`입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-562">The default value is `qualified.domain.name`.</span></span>
 
-<span data-ttu-id="6ce23-742">`--domain <DOMAIN>` - 디렉터리 테넌트에 대한 도메인입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-742">`--domain <DOMAIN>` - The domain for the directory tenant.</span></span> <span data-ttu-id="6ce23-743">`SingleOrg` 또는 `IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-743">Use with `SingleOrg` or `IndividualB2C` authentication.</span></span> <span data-ttu-id="6ce23-744">기본값은 `qualified.domain.name`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-744">The default value is `qualified.domain.name`.</span></span>
+- **`--tenant-id <ID>`**
 
-<span data-ttu-id="6ce23-745">`--tenant-id <ID>` - 연결할 디렉터리의 TenantId ID입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-745">`--tenant-id <ID>` - The TenantId ID of the directory to connect to.</span></span> <span data-ttu-id="6ce23-746">`SingleOrg` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-746">Use with `SingleOrg` authentication.</span></span> <span data-ttu-id="6ce23-747">기본값은 `22222222-2222-2222-2222-222222222222`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-747">The default value is `22222222-2222-2222-2222-222222222222`.</span></span>
+  <span data-ttu-id="ed1f5-563">연결할 디렉터리의 TenantId ID입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-563">The TenantId ID of the directory to connect to.</span></span> <span data-ttu-id="ed1f5-564">`SingleOrg` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-564">Use with `SingleOrg` authentication.</span></span> <span data-ttu-id="ed1f5-565">기본값은 `22222222-2222-2222-2222-222222222222`입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-565">The default value is `22222222-2222-2222-2222-222222222222`.</span></span>
 
-<span data-ttu-id="6ce23-748">`--callback-path <PATH>` - 리디렉션 URI의 애플리케이션 기본 경로 내 요청 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-748">`--callback-path <PATH>` - The request path within the application's base path of the redirect URI.</span></span> <span data-ttu-id="6ce23-749">`SingleOrg` 또는 `IndividualB2C` 인증과 함께 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-749">Use with `SingleOrg` or `IndividualB2C` authentication.</span></span> <span data-ttu-id="6ce23-750">기본값은 `/signin-oidc`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-750">The default value is `/signin-oidc`.</span></span>
+- **`-r|--org-read-access`**
 
-<span data-ttu-id="6ce23-751">`-r|--org-read-access` - 디렉터리에 대한 이 애플리케이션 읽기 액세스를 허용합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-751">`-r|--org-read-access` - Allows this application read-access to the directory.</span></span> <span data-ttu-id="6ce23-752">`SingleOrg` 또는 `MultiOrg` 인증에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-752">Only applies to `SingleOrg` or `MultiOrg` authentication.</span></span>
+  <span data-ttu-id="ed1f5-566">디렉터리에 대한 이 애플리케이션 읽기 액세스를 허용합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-566">Allows this application read-access to the directory.</span></span> <span data-ttu-id="ed1f5-567">`SingleOrg` 인증에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-567">Only applies to `SingleOrg` authentication.</span></span>
 
-<span data-ttu-id="6ce23-753">`--use-launch-settings` - 생성된 템플릿 출력에 *launchSettings.json*을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-753">`--use-launch-settings` - Includes *launchSettings.json* in the generated template output.</span></span>
+- **`--exclude-launch-settings`**
 
-<span data-ttu-id="6ce23-754">`--use-browserlink` - 프로젝트에 BrowserLink를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-754">`--use-browserlink` - Includes BrowserLink in the project.</span></span>
+  <span data-ttu-id="ed1f5-568">생성된 템플릿에서 *launchSettings.json*을 제외합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-568">Excludes *launchSettings.json* from the generated template.</span></span>
 
-<span data-ttu-id="6ce23-755">`-uld|--use-local-db` - SQLite 대신 LocalDB를 사용하도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-755">`-uld|--use-local-db` - Specifies LocalDB should be used instead of SQLite.</span></span> <span data-ttu-id="6ce23-756">`Individual` 또는 `IndividualB2C` 인증에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-756">Only applies to `Individual` or `IndividualB2C` authentication.</span></span>
+- **`--no-https`**
 
-<span data-ttu-id="6ce23-757">`--no-restore` - 프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-757">`--no-restore` - Doesn't execute an implicit restore during project creation.</span></span>
+  <span data-ttu-id="ed1f5-569">HTTPS를 해제합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-569">Turns off HTTPS.</span></span> <span data-ttu-id="ed1f5-570">`app.UseHsts` 및 `app.UseHttpsRedirection`은 `Startup.Configure`에 추가되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-570">`app.UseHsts` and `app.UseHttpsRedirection` aren't added to `Startup.Configure`.</span></span> <span data-ttu-id="ed1f5-571">이 옵션은 인증에 `IndividualB2C` 또는 `SingleOrg`를 사용하지 않는 경우에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-571">This option only applies if `IndividualB2C` or `SingleOrg` aren't being used for authentication.</span></span>
 
-<span data-ttu-id="6ce23-758">**page**</span><span class="sxs-lookup"><span data-stu-id="6ce23-758">**page**</span></span>
+- **`-uld|--use-local-db`**
 
-<span data-ttu-id="6ce23-759">`-na|--namespace <NAMESPACE_NAME>` - 생성된 코드에 대한 네임스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-759">`-na|--namespace <NAMESPACE_NAME>`- Namespace for the generated code.</span></span> <span data-ttu-id="6ce23-760">기본값은 `MyApp.Namespace`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-760">The default value is `MyApp.Namespace`.</span></span>
+  <span data-ttu-id="ed1f5-572">SQLite 대신 LocalDB를 사용하도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-572">Specifies LocalDB should be used instead of SQLite.</span></span> <span data-ttu-id="ed1f5-573">`IndividualB2C` 인증에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-573">Only applies to `IndividualB2C` authentication.</span></span>
 
-<span data-ttu-id="6ce23-761">`-np|--no-pagemodel` - PageModel 없이 페이지를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-761">`-np|--no-pagemodel` - Creates the page without a PageModel.</span></span>
+- **`-f|--framework <FRAMEWORK>`**
 
-<span data-ttu-id="6ce23-762">**viewimports**</span><span class="sxs-lookup"><span data-stu-id="6ce23-762">**viewimports**</span></span>
+  <span data-ttu-id="ed1f5-574">대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-574">Specifies the [framework](../../standard/frameworks.md) to target.</span></span> <span data-ttu-id="ed1f5-575">.NET Core 2.2 SDK에서 사용할 수 없는 옵션입니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-575">Option not available in .NET Core 2.2 SDK.</span></span>
 
-<span data-ttu-id="6ce23-763">`-na|--namespace <NAMESPACE_NAME>` - 생성된 코드에 대한 네임스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-763">`-na|--namespace <NAMESPACE_NAME>`- Namespace for the generated code.</span></span> <span data-ttu-id="6ce23-764">기본값은 `MyApp.Namespace`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-764">The default value is `MyApp.Namespace`.</span></span>
+  <span data-ttu-id="ed1f5-576">다음 표에서는 사용하는 SDK 버전 번호에 따른 기본값을 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-576">The following table lists the default values according to the SDK version number you're using:</span></span>
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="6ce23-765">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="6ce23-765">.NET Core 1.x</span></span>](#tab/netcore1x)
+  | <span data-ttu-id="ed1f5-577">SDK 버전</span><span class="sxs-lookup"><span data-stu-id="ed1f5-577">SDK version</span></span> | <span data-ttu-id="ed1f5-578">기본값</span><span class="sxs-lookup"><span data-stu-id="ed1f5-578">Default value</span></span>   |
+  |-------------|-----------------|
+  | <span data-ttu-id="ed1f5-579">3.1</span><span class="sxs-lookup"><span data-stu-id="ed1f5-579">3.1</span></span>         | `netcoreapp3.1` |
+  | <span data-ttu-id="ed1f5-580">3.0</span><span class="sxs-lookup"><span data-stu-id="ed1f5-580">3.0</span></span>         | `netcoreapp3.0` |
+  | <span data-ttu-id="ed1f5-581">2.1</span><span class="sxs-lookup"><span data-stu-id="ed1f5-581">2.1</span></span>         | `netcoreapp2.1` |
 
-<span data-ttu-id="6ce23-766">**console, xunit, mstest, web, webapi**</span><span class="sxs-lookup"><span data-stu-id="6ce23-766">**console, xunit, mstest, web, webapi**</span></span>
+- **`--no-restore`**
 
-<span data-ttu-id="6ce23-767">`-f|--framework <FRAMEWORK>` - 대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-767">`-f|--framework <FRAMEWORK>` - Specifies the [framework](../../standard/frameworks.md) to target.</span></span> <span data-ttu-id="6ce23-768">값: `netcoreapp1.0` 또는 `netcoreapp1.1`.</span><span class="sxs-lookup"><span data-stu-id="6ce23-768">Values: `netcoreapp1.0` or `netcoreapp1.1`.</span></span> <span data-ttu-id="6ce23-769">기본값은 `netcoreapp1.0`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-769">The default value is `netcoreapp1.0`.</span></span>
+  <span data-ttu-id="ed1f5-582">프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-582">Doesn't execute an implicit restore during project creation.</span></span>
 
-<span data-ttu-id="6ce23-770">**classlib**</span><span class="sxs-lookup"><span data-stu-id="6ce23-770">**classlib**</span></span>
+***
 
-<span data-ttu-id="6ce23-771">`-f|--framework <FRAMEWORK>` - 대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-771">`-f|--framework <FRAMEWORK>` - Specifies the [framework](../../standard/frameworks.md) to target.</span></span> <span data-ttu-id="6ce23-772">값: `netcoreapp1.0`, `netcoreapp1.1` 또는 `netstandard1.0`~`netstandard1.6`.</span><span class="sxs-lookup"><span data-stu-id="6ce23-772">Values: `netcoreapp1.0`, `netcoreapp1.1`, or `netstandard1.0` to `netstandard1.6`.</span></span> <span data-ttu-id="6ce23-773">기본값은 `netstandard1.4`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-773">The default value is `netstandard1.4`.</span></span>
+### <a name="globaljson"></a><span data-ttu-id="ed1f5-583">globaljson</span><span class="sxs-lookup"><span data-stu-id="ed1f5-583">globaljson</span></span>
 
-<span data-ttu-id="6ce23-774">**mvc**</span><span class="sxs-lookup"><span data-stu-id="6ce23-774">**mvc**</span></span>
+- **`--sdk-version <VERSION_NUMBER>`**
 
-<span data-ttu-id="6ce23-775">`-f|--framework <FRAMEWORK>` - 대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-775">`-f|--framework <FRAMEWORK>` - Specifies the [framework](../../standard/frameworks.md) to target.</span></span> <span data-ttu-id="6ce23-776">값: `netcoreapp1.0` 또는 `netcoreapp1.1`.</span><span class="sxs-lookup"><span data-stu-id="6ce23-776">Values: `netcoreapp1.0` or `netcoreapp1.1`.</span></span> <span data-ttu-id="6ce23-777">기본값은 `netcoreapp1.0`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-777">The default value is `netcoreapp1.0`.</span></span>
+  <span data-ttu-id="ed1f5-584">*global.json* 파일에서 사용할 .NET Core SDK 버전을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-584">Specifies the version of the .NET Core SDK to use in the *global.json* file.</span></span>
 
-<span data-ttu-id="6ce23-778">`-au|--auth <AUTHENTICATION_TYPE>` - 사용할 인증 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-778">`-au|--auth <AUTHENTICATION_TYPE>` - The type of authentication to use.</span></span> <span data-ttu-id="6ce23-779">값: `None` 또는 `Individual`.</span><span class="sxs-lookup"><span data-stu-id="6ce23-779">Values: `None` or `Individual`.</span></span> <span data-ttu-id="6ce23-780">기본값은 `None`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-780">The default value is `None`.</span></span>
+***
 
-<span data-ttu-id="6ce23-781">`-uld|--use-local-db` - SQLite 대신 LocalDB를 사용할지 여부를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-781">`-uld|--use-local-db` - Specifies whether or not to use LocalDB instead of SQLite.</span></span> <span data-ttu-id="6ce23-782">값: `true` 또는 `false`.</span><span class="sxs-lookup"><span data-stu-id="6ce23-782">Values: `true` or `false`.</span></span> <span data-ttu-id="6ce23-783">기본값은 `false`입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-783">The default value is `false`.</span></span>
+## <a name="examples"></a><span data-ttu-id="ed1f5-585">예</span><span class="sxs-lookup"><span data-stu-id="ed1f5-585">Examples</span></span>
 
----
+- <span data-ttu-id="ed1f5-586">템플릿 이름을 지정하여 C# 콘솔 애플리케이션 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-586">Create a C# console application project by specifying the template name:</span></span>
 
-## <a name="examples"></a><span data-ttu-id="6ce23-784">예</span><span class="sxs-lookup"><span data-stu-id="6ce23-784">Examples</span></span>
+  ```dotnetcli
+  dotnet new "Console Application"
+  ```
 
-<span data-ttu-id="6ce23-785">템플릿 이름을 지정하여 C# 콘솔 애플리케이션 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-785">Create a C# console application project by specifying the template name:</span></span>
+- <span data-ttu-id="ed1f5-587">현재 디렉터리에 F# 콘솔 애플리케이션 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-587">Create an F# console application project in the current directory:</span></span>
 
-`dotnet new "Console Application"`
+  ```dotnetcli
+  dotnet new console -lang F#
+  ```
 
-<span data-ttu-id="6ce23-786">현재 디렉터리에 F# 콘솔 애플리케이션 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-786">Create an F# console application project in the current directory:</span></span>
+- <span data-ttu-id="ed1f5-588">지정된 디렉터리에 .NET Standard 클래스 라이브러리 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-588">Create a .NET Standard class library project in the specified directory:</span></span>
 
-`dotnet new console -lang F#`
+  ```dotnetcli
+  dotnet new classlib -lang VB -o MyLibrary
+  ```
 
-<span data-ttu-id="6ce23-787">지정된 디렉터리에서 .NET Standard 클래스 라이브러리 프로젝트를 만듭니다(.NET Core SDK 2.0 이상 버전에서만 사용 가능).</span><span class="sxs-lookup"><span data-stu-id="6ce23-787">Create a .NET Standard class library project in the specified directory (available only with .NET Core SDK 2.0 or later versions):</span></span>
+- <span data-ttu-id="ed1f5-589">인증 없이 현재 디렉터리에 새 ASP.NET Core C# MVC 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-589">Create a new ASP.NET Core C# MVC project in the current directory with no authentication:</span></span>
 
-`dotnet new classlib -lang VB -o MyLibrary`
+  ```dotnetcli
+  dotnet new mvc -au None
+  ```
 
-<span data-ttu-id="6ce23-788">인증 없이 현재 디렉터리에 새 ASP.NET Core C# MVC 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-788">Create a new ASP.NET Core C# MVC project in the current directory with no authentication:</span></span>
+- <span data-ttu-id="ed1f5-590">새 xUnit 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-590">Create a new xUnit project:</span></span>
 
-`dotnet new mvc -au None`
+  ```dotnetcli
+  dotnet new xunit
+  ```
 
-<span data-ttu-id="6ce23-789">새 xUnit 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-789">Create a new xUnit project:</span></span>
+- <span data-ttu-id="ed1f5-591">SPA(단일 페이지 애플리케이션) 템플릿에 사용할 수 있는 모든 템플릿을 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-591">List all templates available for Single Page Application (SPA) templates:</span></span>
 
-`dotnet new xunit`
+  ```dotnetcli
+  dotnet new spa -l
+  ```
 
-<span data-ttu-id="6ce23-790">MVC에 대해 사용할 수 있는 모든 템플릿을 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-790">List all templates available for MVC:</span></span>
+- <span data-ttu-id="ed1f5-592">*we* 부분 문자열과 일치하는 모든 템플릿을 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-592">List all templates matching the *we* substring.</span></span> <span data-ttu-id="ed1f5-593">정확히 일치하는 항목을 찾을 수 없으므로 부분 문자열 일치는 약식 이름과 열 모두에 대해 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-593">No exact match is found, so substring matching runs against both the short name and name columns.</span></span>
 
-`dotnet new mvc -l`
+  ```dotnetcli
+  dotnet new we -l
+  ```
 
-<span data-ttu-id="6ce23-791">*we* 부분 문자열과 일치하는 모든 템플릿을 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-791">List all templates matching the *we* substring.</span></span> <span data-ttu-id="6ce23-792">정확히 일치하는 항목을 찾을 수 없으므로 부분 문자열 일치는 약식 이름과 열 모두에 대해 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-792">No exact match is found, so substring matching runs against both the short name and name columns.</span></span>
+- <span data-ttu-id="ed1f5-594">*ng*와 일치하는 템플릿을 호출해 보세요.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-594">Attempt to invoke the template matching *ng*.</span></span> <span data-ttu-id="ed1f5-595">단일 일치 항목을 확인할 수 없는 경우 부분적으로 일치하는 템플릿을 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-595">If a single match can't be determined, list the templates that are partial matches.</span></span>
 
-`dotnet new we -l`
+  ```dotnetcli
+  dotnet new ng
+  ```
 
-<span data-ttu-id="6ce23-793">*ng*와 일치하는 템플릿을 호출해 보세요.</span><span class="sxs-lookup"><span data-stu-id="6ce23-793">Attempt to invoke the template matching *ng*.</span></span> <span data-ttu-id="6ce23-794">단일 일치 항목을 확인할 수 없는 경우 부분적으로 일치하는 템플릿을 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce23-794">If a single match can't be determined, list the templates that are partial matches.</span></span>
+- <span data-ttu-id="ed1f5-596">ASP.NET Core용 SPA 템플릿의 버전 2.0을 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-596">Install version 2.0 of the SPA templates for ASP.NET Core:</span></span>
 
-`dotnet new ng`
+  ```dotnetcli
+  dotnet new -i Microsoft.DotNet.Web.Spa.ProjectTemplates::2.0.0
+  ```
 
-<span data-ttu-id="6ce23-795">ASP.NET Core용 단일 페이지 애플리케이션 템플릿 버전 2.0을 설치합니다(.NET Core SDK 1.1 및 이후 버전에서만 사용할 수 있는 명령 옵션).</span><span class="sxs-lookup"><span data-stu-id="6ce23-795">Install version 2.0 of the Single Page Application templates for ASP.NET Core (command option available for .NET Core SDK 1.1 and later versions only):</span></span>
+- <span data-ttu-id="ed1f5-597">설치된 템플릿 및 해당 세부 정보(제거 방법 포함)를 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-597">List the installed templates and details about them, including how to uninstall them:</span></span>
 
-`dotnet new -i Microsoft.DotNet.Web.Spa.ProjectTemplates::2.0.0`
+  ```dotnetcli
+  dotnet new -u
+  ```
 
-<span data-ttu-id="6ce23-796">현재 디렉터리에서 SDK 버전을 2.0.0으로 설정하여 *global.json*을 만듭니다(.NET Core SDK 2.0 이상 버전에서만 사용 가능).</span><span class="sxs-lookup"><span data-stu-id="6ce23-796">Create a *global.json* in the current directory setting the SDK version to 2.0.0 (available only with .NET Core SDK 2.0 or later versions):</span></span>
+- <span data-ttu-id="ed1f5-598">SDK 버전을 3.1.101로 설정하여 현재 디렉터리에 *global.json*을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="ed1f5-598">Create a *global.json* in the current directory setting the SDK version to 3.1.101:</span></span>
 
-`dotnet new globaljson --sdk-version 2.0.0`
+  ```dotnetcli
+  dotnet new globaljson --sdk-version 3.1.101
+  ```
 
-## <a name="see-also"></a><span data-ttu-id="6ce23-797">참고 항목</span><span class="sxs-lookup"><span data-stu-id="6ce23-797">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ed1f5-599">참조</span><span class="sxs-lookup"><span data-stu-id="ed1f5-599">See also</span></span>
 
-- [<span data-ttu-id="6ce23-798">dotnet new에 대한 사용자 지정 템플릿</span><span class="sxs-lookup"><span data-stu-id="6ce23-798">Custom templates for dotnet new</span></span>](custom-templates.md)
-- [<span data-ttu-id="6ce23-799">dotnet용 사용자 지정 템플릿 새로 만들기</span><span class="sxs-lookup"><span data-stu-id="6ce23-799">Create a custom template for dotnet new</span></span>](../tutorials/cli-templates-create-item-template.md)
-- <span data-ttu-id="6ce23-800">[dotnet/dotnet-template-samples GitHub repo](https://github.com/dotnet/dotnet-template-samples)(dotnet/dotnet-template-samples GitHub 리포지토리)</span><span class="sxs-lookup"><span data-stu-id="6ce23-800">[dotnet/dotnet-template-samples GitHub repo](https://github.com/dotnet/dotnet-template-samples)</span></span>
-- <span data-ttu-id="6ce23-801">[Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)(dotnet new에 대한 사용 가능한 템플릿)</span><span class="sxs-lookup"><span data-stu-id="6ce23-801">[Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)</span></span>
+- [<span data-ttu-id="ed1f5-600">dotnet new에 대한 사용자 지정 템플릿</span><span class="sxs-lookup"><span data-stu-id="ed1f5-600">Custom templates for dotnet new</span></span>](custom-templates.md)
+- [<span data-ttu-id="ed1f5-601">dotnet용 사용자 지정 템플릿 새로 만들기</span><span class="sxs-lookup"><span data-stu-id="ed1f5-601">Create a custom template for dotnet new</span></span>](../tutorials/cli-templates-create-item-template.md)
+- <span data-ttu-id="ed1f5-602">[dotnet/dotnet-template-samples GitHub repo](https://github.com/dotnet/dotnet-template-samples)(dotnet/dotnet-template-samples GitHub 리포지토리)</span><span class="sxs-lookup"><span data-stu-id="ed1f5-602">[dotnet/dotnet-template-samples GitHub repo](https://github.com/dotnet/dotnet-template-samples)</span></span>
+- <span data-ttu-id="ed1f5-603">[Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)(dotnet new에 대한 사용 가능한 템플릿)</span><span class="sxs-lookup"><span data-stu-id="ed1f5-603">[Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)</span></span>

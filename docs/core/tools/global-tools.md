@@ -1,141 +1,275 @@
 ---
-title: .NET Core Global Tool
-description: .NET Core Global Tool의 개요와 사용 가능한 .NET Core CLI 명령입니다.
+title: .NET Core 도구
+description: .NET Core 도구를 설치, 사용, 업데이트 및 제거하는 방법을 설명합니다. 전역 도구, 도구 경로 도구 및 로컬 도구를 다룹니다.
 author: KathleenDollard
-ms.date: 05/29/2018
-ms.openlocfilehash: 1531df48b7ca9c816b897d06e725ec375f6cae31
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.date: 02/12/2020
+ms.openlocfilehash: d8ee30df3fe063fd41a85072d145b1b5eec7d0d0
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920499"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543393"
 ---
-# <a name="net-core-global-tools-overview"></a><span data-ttu-id="7441f-103">.NET Core Global Tool 개요</span><span class="sxs-lookup"><span data-stu-id="7441f-103">.NET Core Global Tools overview</span></span>
+# <a name="how-to-manage-net-core-tools"></a><span data-ttu-id="4fcce-104">.NET Core 도구를 관리하는 방법</span><span class="sxs-lookup"><span data-stu-id="4fcce-104">How to manage .NET Core tools</span></span>
 
-[!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
+<span data-ttu-id="4fcce-105">**이 문서의 적용 대상:**  ✔️ .NET Core 2.1 SDK 이상 버전</span><span class="sxs-lookup"><span data-stu-id="4fcce-105">**This article applies to:** ✔️ .NET Core 2.1 SDK and later versions</span></span>
 
-<span data-ttu-id="7441f-104">.NET Core Global Tool은 콘솔 애플리케이션을 포함하는 특별한 NuGet 패키지입니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-104">A .NET Core Global Tool is a special NuGet package that contains a console application.</span></span> <span data-ttu-id="7441f-105">Global Tool은 컴퓨터에서 PATH 환경 변수 또는 사용자 지정 위치에 포함된 기본 위치에 설치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-105">A Global Tool can be installed on your machine on a default location that is included in the PATH environment variable or on a custom location.</span></span>
+<span data-ttu-id="4fcce-106">.NET Core 도구는 콘솔 애플리케이션을 포함하는 특별한 NuGet 패키지입니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-106">A .NET Core tool is a special NuGet package that contains a console application.</span></span> <span data-ttu-id="4fcce-107">다음과 같은 방법으로 컴퓨터에 도구를 설치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-107">A tool can be installed on your machine in the following ways:</span></span>
 
-<span data-ttu-id="7441f-106">.NET Core Global Tool을 사용하려는 경우:</span><span class="sxs-lookup"><span data-stu-id="7441f-106">If you want to use a .NET Core Global Tool:</span></span>
+* <span data-ttu-id="4fcce-108">전역 도구로</span><span class="sxs-lookup"><span data-stu-id="4fcce-108">As a global tool.</span></span>
 
-* <span data-ttu-id="7441f-107">도구에 대한 정보를 찾습니다(일반적으로 웹 사이트 또는 GitHub 페이지).</span><span class="sxs-lookup"><span data-stu-id="7441f-107">Find information about the tool (usually a website or GitHub page).</span></span>
-* <span data-ttu-id="7441f-108">홈에서 피드의 작성자 및 통계를 확인합니다(일반적으로 NuGet.org).</span><span class="sxs-lookup"><span data-stu-id="7441f-108">Check the author and statistics in the home for the feed (usually NuGet.org).</span></span>
-* <span data-ttu-id="7441f-109">도구를 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-109">Install the tool.</span></span>
-* <span data-ttu-id="7441f-110">도구를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-110">Call the tool.</span></span>
-* <span data-ttu-id="7441f-111">도구를 업데이트합니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-111">Update the tool.</span></span>
-* <span data-ttu-id="7441f-112">도구를 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-112">Uninstall the tool.</span></span>
+  <span data-ttu-id="4fcce-109">도구 이진 파일이 PATH 환경 변수에 추가된 기본 디렉터리에 설치됩니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-109">The tool binaries are installed in a default directory that is added to the PATH environment variable.</span></span> <span data-ttu-id="4fcce-110">해당 위치를 지정하지 않고 컴퓨터의 모든 디렉터리에서 도구를 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-110">You can invoke the tool from any directory on the machine without specifying its location.</span></span> <span data-ttu-id="4fcce-111">한 버전의 도구가 컴퓨터의 모든 디렉터리에 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-111">One version of a tool is used for all directories on the machine.</span></span>
+
+* <span data-ttu-id="4fcce-112">사용자 지정 위치에서 전역 도구로(도구 경로 도구라고도 함)</span><span class="sxs-lookup"><span data-stu-id="4fcce-112">As a global tool in a custom location (also known as a tool-path tool).</span></span>
+
+  <span data-ttu-id="4fcce-113">도구 이진 파일이 사용자가 지정하는 위치에 설치됩니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-113">The tool binaries are installed in a location that you specify.</span></span> <span data-ttu-id="4fcce-114">설치 디렉터리에서 또는 명령 이름으로 디렉터리를 제공하거나 PATH 환경 변수에 디렉터리를 추가하여 이 도구를 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-114">You can invoke the tool from the installation directory or by providing the directory with the command name or by adding the directory to the PATH environment variable.</span></span> <span data-ttu-id="4fcce-115">한 버전의 도구가 컴퓨터의 모든 디렉터리에 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-115">One version of a tool is used for all directories on the machine.</span></span>
+
+* <span data-ttu-id="4fcce-116">로컬 도구로(.NET Core SDK 3.0 이상에 적용됨)</span><span class="sxs-lookup"><span data-stu-id="4fcce-116">As a local tool (applies to .NET Core SDK 3.0 and later).</span></span>
+
+  <span data-ttu-id="4fcce-117">도구 이진 파일이 기본 디렉터리에 설치됩니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-117">The tool binaries are installed in a default directory.</span></span> <span data-ttu-id="4fcce-118">설치 디렉터리 또는 하위 디렉터리에서 도구를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-118">You invoke the tool from the installation directory or any of its subdirectories.</span></span> <span data-ttu-id="4fcce-119">디렉터리마다 동일한 도구의 다른 버전을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-119">Different directories can use different versions of the same tool.</span></span>
+  
+  <span data-ttu-id="4fcce-120">.NET CLI는 매니페스트 파일을 사용하여 디렉터리에 로컬로 설치되는 도구를 추적합니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-120">The .NET CLI uses manifest files to keep track of which tools are installed as local to a directory.</span></span> <span data-ttu-id="4fcce-121">매니페스트 파일을 소스 코드 리포지토리의 루트 디렉터리에 저장하면 참가자가 리포지토리를 복제하고 매니페스트 파일에 나열된 모든 도구를 설치하는 단일 .NET Core CLI 명령을 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-121">When the manifest file is saved in the root directory of a source code repository, a contributor can clone the repository and invoke a single .NET Core CLI command that installs all of the tools listed in the manifest files.</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="7441f-113">.NET Core Global Tool이 경로에 나타나고 완전 신뢰 상태로 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-113">.NET Core Global Tools appear on your path and run in full trust.</span></span> <span data-ttu-id="7441f-114">작성자를 신뢰하지 않는 경우 .NET Core Global Tool을 설치하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-114">Do not install .NET Core Global Tools unless you trust the author.</span></span>
+> <span data-ttu-id="4fcce-122">.NET Core 도구는 완전 신뢰로 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-122">.NET Core tools run in full trust.</span></span> <span data-ttu-id="4fcce-123">작성자를 신뢰하지 않는 한 .NET Core 도구를 설치하지 마세요.</span><span class="sxs-lookup"><span data-stu-id="4fcce-123">Do not install a .NET Core tool unless you trust the author.</span></span>
 
-## <a name="find-a-net-core-global-tool"></a><span data-ttu-id="7441f-115">.NET Core Global Tool 찾기</span><span class="sxs-lookup"><span data-stu-id="7441f-115">Find a .NET Core Global Tool</span></span>
+## <a name="find-a-tool"></a><span data-ttu-id="4fcce-124">도구 찾기</span><span class="sxs-lookup"><span data-stu-id="4fcce-124">Find a tool</span></span>
 
-<span data-ttu-id="7441f-116">현재 .NET Core CLI에는 Global Tool 검색 기능이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-116">Currently, there isn't a Global Tool search feature in the .NET Core CLI.</span></span> <span data-ttu-id="7441f-117">다음은 도구를 찾는 방법에 대한 몇 가지 권장 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-117">The following are some recommendations on how to find tools:</span></span>
+<span data-ttu-id="4fcce-125">현재 .NET Core에는 도구 검색 기능이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-125">Currently, .NET Core doesn't have a tool search feature.</span></span> <span data-ttu-id="4fcce-126">다음은 도구를 찾는 몇 가지 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-126">Here are some ways to find tools:</span></span>
 
-* <span data-ttu-id="7441f-118">[NuGet](https://www.nuget.org)에서 .NET Core Global Tool을 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-118">You can find .NET Core Global Tools on [NuGet](https://www.nuget.org).</span></span> <span data-ttu-id="7441f-119">그러나 NuGet에서는 아직 .NET Core Global Tool을 검색할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-119">However, NuGet doesn't yet allow you to search specifically for .NET Core Global Tools.</span></span>
-* <span data-ttu-id="7441f-120">블로그 게시물 또는 [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) GitHub 리포지토리에서 도구 권장 사항을 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-120">You may find tool recommendations in blog posts or in the [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) GitHub repository.</span></span>
-* <span data-ttu-id="7441f-121">[dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/tree/master/src/Tools) GitHub 리포지토리에서 ASP.NET 팀이 만든 Global Tool의 소스 코드를 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-121">You can see the source code for the Global Tools created by the ASP.NET team at the [dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/tree/master/src/Tools) GitHub repository.</span></span>
-* <span data-ttu-id="7441f-122">[.NET Core dotnet 진단 글로벌 도구](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools)에서 진단 도구에 대해 알아볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-122">You can learn about diagnostic tools at [.NET Core dotnet diagnostic Global Tools](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools).</span></span>
+* <span data-ttu-id="4fcce-127">[natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) GitHub 리포지토리에서 도구 목록을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-127">See the list of tools in the [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) GitHub repository.</span></span>
+* <span data-ttu-id="4fcce-128">[ToolGet](https://www.toolget.net/)을 사용하여 .NET 도구를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-128">Use [ToolGet](https://www.toolget.net/) to search for .NET tools.</span></span>
+* <span data-ttu-id="4fcce-129">[dotnet/aspnetcore GitHub 리포지토리의 Tools 디렉터리](https://github.com/dotnet/aspnetcore/tree/master/src/Tools)에서 ASP.NET Core 팀이 만든 도구의 소스 코드를 참조합니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-129">See the source code for the tools created by the ASP.NET Core team in the [Tools directory of the dotnet/aspnetcore GitHub repository](https://github.com/dotnet/aspnetcore/tree/master/src/Tools).</span></span>
+* <span data-ttu-id="4fcce-130">[.NET Core dotnet 진단 도구](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools)에서 진단 도구에 대해 자세히 알아보세요.</span><span class="sxs-lookup"><span data-stu-id="4fcce-130">Learn about diagnostic tools at [.NET Core dotnet diagnostic tools](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools).</span></span>
+* <span data-ttu-id="4fcce-131">[NuGet](https://www.nuget.org) 웹 사이트를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-131">Search the [NuGet](https://www.nuget.org) website.</span></span> <span data-ttu-id="4fcce-132">그러나 NuGet 사이트에는 도구 패키지만 검색할 수 있는 기능이 아직 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-132">However, the NuGet site doesn't yet have a feature that lets you search only for tool packages.</span></span>
 
-## <a name="check-the-author-and-statistics"></a><span data-ttu-id="7441f-123">작성자 및 통계 확인</span><span class="sxs-lookup"><span data-stu-id="7441f-123">Check the author and statistics</span></span>
+## <a name="check-the-author-and-statistics"></a><span data-ttu-id="4fcce-133">작성자 및 통계 확인</span><span class="sxs-lookup"><span data-stu-id="4fcce-133">Check the author and statistics</span></span>
 
-<span data-ttu-id="7441f-124">.NET Core Global Tool은 완전 신뢰 상태로 실행되며 일반적으로 사용자 경로에 설치되므로 매우 강력할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-124">Since .NET Core Global Tools run in full trust and are generally installed on your path, they can be very powerful.</span></span> <span data-ttu-id="7441f-125">신뢰할 수 없는 사용자의 도구를 다운로드하지 마세요.</span><span class="sxs-lookup"><span data-stu-id="7441f-125">Don't download tools from people you don't trust.</span></span>
+<span data-ttu-id="4fcce-134">.NET Core 도구는 완전 신뢰로 실행되고 전역 도구는 PATH 환경 변수에 추가되므로 매우 강력할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-134">Since .NET Core tools run in full trust, and global tools are added to the PATH environment variable, they can be very powerful.</span></span> <span data-ttu-id="4fcce-135">신뢰할 수 없는 사용자의 도구를 다운로드하지 마세요.</span><span class="sxs-lookup"><span data-stu-id="4fcce-135">Don't download tools from people you don't trust.</span></span>
 
-<span data-ttu-id="7441f-126">도구가 NuGet에서 호스팅되는 경우 도구를 검색하여 작성자 및 통계를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-126">If the tool is hosted on NuGet, you can check the author and statistics by searching for the tool.</span></span>
+<span data-ttu-id="4fcce-136">도구가 NuGet에서 호스팅되는 경우 도구를 검색하여 작성자 및 통계를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-136">If the tool is hosted on NuGet, you can check the author and statistics by searching for the tool.</span></span>
 
-## <a name="install-a-global-tool"></a><span data-ttu-id="7441f-127">Global Tool 설치</span><span class="sxs-lookup"><span data-stu-id="7441f-127">Install a Global Tool</span></span>
+## <a name="install-a-global-tool"></a><span data-ttu-id="4fcce-137">전역 도구 설치</span><span class="sxs-lookup"><span data-stu-id="4fcce-137">Install a global tool</span></span>
 
-<span data-ttu-id="7441f-128">Global Tool을 설치하려면 [dotnet tool install](dotnet-tool-install.md) .NET Core CLI 명령을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-128">To install a Global Tool, you use the [dotnet tool install](dotnet-tool-install.md) .NET Core CLI command.</span></span> <span data-ttu-id="7441f-129">다음 예제에서는 기본 위치에 Global Tool을 설치하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-129">The following example shows how to install a Global Tool in the default location:</span></span>
+<span data-ttu-id="4fcce-138">도구를 전역 도구로 설치하려면 다음 예제와 같이 [dotnet tool install](dotnet-tool-install.md)의 `-g` 또는 `--global` 옵션을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-138">To install a tool as a global tool, use the `-g` or `--global` option of [dotnet tool install](dotnet-tool-install.md), as shown in the following example:</span></span>
 
 ```dotnetcli
 dotnet tool install -g dotnetsay
 ```
 
-<span data-ttu-id="7441f-130">도구를 설치할 수 없는 경우 오류 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-130">If the tool can't be installed, error messages are displayed.</span></span> <span data-ttu-id="7441f-131">예상한 피드가 확인되고 있는지 검사합니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-131">Check that the feeds you expected are being checked.</span></span>
-
-<span data-ttu-id="7441f-132">이전 릴리스 버전 또는 특정 버전의 도구를 설치하려는 경우 다음 형식을 사용하여 버전 번호를 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-132">If you're trying to install a pre-release version or a specific version of the tool, you can specify the version number using the following format:</span></span>
-
-```dotnetcli
-dotnet tool install -g <package-name> --version <version-number>
-```
-
-<span data-ttu-id="7441f-133">설치에 성공하면 다음 예와 같이 도구와 설치된 버전을 호출하는 데 사용되는 명령을 보여 주는 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-133">If installation is successful, a message is displayed showing the command used to call the tool and the version installed, similar to the following example:</span></span>
+<span data-ttu-id="4fcce-139">출력은 다음 예제와 같이 도구 및 설치된 버전을 호출하는 데 사용되는 명령을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-139">The output shows the command used to invoke the tool and the version installed, similar to the following example:</span></span>
 
 ```output
 You can invoke the tool using the following command: dotnetsay
-Tool 'dotnetsay' (version '2.0.0') was successfully installed.
+Tool 'dotnetsay' (version '2.1.4') was successfully installed.
 ```
 
-<span data-ttu-id="7441f-134">Global Tool은 기본 디렉터리 또는 특정 위치에 설치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-134">Global Tools can be installed in the default directory or in a specific location.</span></span> <span data-ttu-id="7441f-135">기본 디렉터리는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-135">The default directories are:</span></span>
+<span data-ttu-id="4fcce-140">도구 이진 파일의 기본 위치는 운영 체제에 따라 달라집니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-140">The default location for a tool's binaries depends on the operating system:</span></span>
 
-| <span data-ttu-id="7441f-136">OS</span><span class="sxs-lookup"><span data-stu-id="7441f-136">OS</span></span>          | <span data-ttu-id="7441f-137">경로</span><span class="sxs-lookup"><span data-stu-id="7441f-137">Path</span></span>                          |
+| <span data-ttu-id="4fcce-141">OS</span><span class="sxs-lookup"><span data-stu-id="4fcce-141">OS</span></span>          | <span data-ttu-id="4fcce-142">경로</span><span class="sxs-lookup"><span data-stu-id="4fcce-142">Path</span></span>                          |
 |-------------|-------------------------------|
-| <span data-ttu-id="7441f-138">Linux/macOS</span><span class="sxs-lookup"><span data-stu-id="7441f-138">Linux/macOS</span></span> | `$HOME/.dotnet/tools`         |
-| <span data-ttu-id="7441f-139">Windows</span><span class="sxs-lookup"><span data-stu-id="7441f-139">Windows</span></span>     | `%USERPROFILE%\.dotnet\tools` |
+| <span data-ttu-id="4fcce-143">Linux/macOS</span><span class="sxs-lookup"><span data-stu-id="4fcce-143">Linux/macOS</span></span> | `$HOME/.dotnet/tools`         |
+| <span data-ttu-id="4fcce-144">Windows</span><span class="sxs-lookup"><span data-stu-id="4fcce-144">Windows</span></span>     | `%USERPROFILE%\.dotnet\tools` |
 
-<span data-ttu-id="7441f-140">이러한 위치는 SDK를 처음 실행할 때 사용자 경로에 추가되므로 설치된 Global Tool을 직접 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-140">These locations are added to the user's path when the SDK is first run, so Global Tools installed there can be called directly.</span></span>
+<span data-ttu-id="4fcce-145">이 위치는 SDK를 처음 실행할 때 사용자의 경로에 추가되므로 전역 도구는 도구 위치를 지정하지 않고 모든 디렉터리에서 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-145">This location is added to the user's path when the SDK is first run, so global tools can be invoked from any directory without specifying the tool location.</span></span>
 
-<span data-ttu-id="7441f-141">Global Tool은 컴퓨터 전체가 아니라 사용자별 도구입니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-141">Note that the Global Tools are user-specific, not machine global.</span></span> <span data-ttu-id="7441f-142">사용자별 도구라는 것은 컴퓨터의 모든 사용자가 사용할 수 있는 Global Tool을 설치할 수 없음을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-142">Being user-specific means you cannot install a Global Tool that is available to all users of the machine.</span></span> <span data-ttu-id="7441f-143">이 도구는 도구가 설치된 각 사용자 프로필에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-143">The tool is only available for each user profile where the tool was installed.</span></span>
+<span data-ttu-id="4fcce-146">도구 액세스는 컴퓨터 전역이 아닌 사용자별로 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-146">Tool access is user-specific, not machine global.</span></span> <span data-ttu-id="4fcce-147">전역 도구는 도구를 설치한 사용자만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-147">A global tool is only available to the user that installed the tool.</span></span>
 
-<span data-ttu-id="7441f-144">Global Tool을 특정 디렉터리에 설치할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-144">Global Tools can also be installed in a specific directory.</span></span> <span data-ttu-id="7441f-145">특정 디렉터리에 설치된 경우 사용자는 경로에 해당 디렉터리를 포함하거나, 지정된 디렉터리로 명령을 호출하거나, 지정된 디렉터리 내에서 도구를 호출하여 명령을 사용할 수 있는지 확인해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-145">When installed in a specific directory, the user must ensure the command is available, by including that directory in the path, by calling the command with the directory specified, or calling the tool from within the specified directory.</span></span>
-<span data-ttu-id="7441f-146">이 경우 .NET Core CLI는 이 위치를 PATH 환경 변수에 자동으로 추가하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-146">In this case, the .NET Core CLI doesn't add this location automatically to the PATH environment variable.</span></span>
+### <a name="install-a-global-tool-in-a-custom-location"></a><span data-ttu-id="4fcce-148">사용자 지정 위치에 전역 도구 설치</span><span class="sxs-lookup"><span data-stu-id="4fcce-148">Install a global tool in a custom location</span></span>
 
-## <a name="use-the-tool"></a><span data-ttu-id="7441f-147">도구 사용</span><span class="sxs-lookup"><span data-stu-id="7441f-147">Use the tool</span></span>
+<span data-ttu-id="4fcce-149">도구를 사용자 지정 위치에 전역 도구로 설치하려면 다음 예제와 같이 [dotnet tool install](dotnet-tool-install.md)의 `--tool-path` 옵션을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-149">To install a tool as a global tool in a custom location, use the `--tool-path` option of [dotnet tool install](dotnet-tool-install.md), as shown in the following examples.</span></span>
 
-<span data-ttu-id="7441f-148">도구가 설치되면 명령을 사용하여 도구를 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-148">Once the tool is installed, you can call it by using its command.</span></span> <span data-ttu-id="7441f-149">명령이 패키지 이름과 같지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-149">Note that the command may not be the same as the package name.</span></span>
+<span data-ttu-id="4fcce-150">Windows에서:</span><span class="sxs-lookup"><span data-stu-id="4fcce-150">On Windows:</span></span>
 
-<span data-ttu-id="7441f-150">명령이 `dotnetsay`인 경우 다음을 사용하여 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-150">If the command is `dotnetsay`, you call it with:</span></span>
+```dotnetcli
+dotnet tool install dotnetsay --tool-path c:\dotnet-tools
+```
+
+<span data-ttu-id="4fcce-151">Linux 또는 macOS에서:</span><span class="sxs-lookup"><span data-stu-id="4fcce-151">On Linux or macOS:</span></span>
+
+```dotnetcli
+dotnet tool install dotnetsay --tool-path ~/bin
+```
+
+<span data-ttu-id="4fcce-152">.NET Core SDK는 이 위치를 PATH 환경 변수에 자동으로 추가하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-152">The .NET Core SDK doesn't add this location automatically to the PATH environment variable.</span></span> <span data-ttu-id="4fcce-153">[도구 경로 도구를 호출](#invoke-a-tool-path-tool)하려면 다음 방법 중 하나를 사용하여 명령을 사용할 수 있도록 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-153">To [invoke a tool-path tool](#invoke-a-tool-path-tool), you have to make sure the command is available by using one of the following methods:</span></span>
+
+* <span data-ttu-id="4fcce-154">PATH 환경 변수에 설치 디렉터리를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-154">Add the installation directory to the PATH environment variable.</span></span>
+* <span data-ttu-id="4fcce-155">도구를 호출할 때 전체 경로를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-155">Specify the full path to the tool when you invoke it.</span></span>
+* <span data-ttu-id="4fcce-156">설치 디렉터리 내에서 도구를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-156">Invoke the tool from within the installation directory.</span></span>
+
+## <a name="install-a-local-tool"></a><span data-ttu-id="4fcce-157">로컬 도구 설치</span><span class="sxs-lookup"><span data-stu-id="4fcce-157">Install a local tool</span></span>
+
+<span data-ttu-id="4fcce-158">**.NET Core 3.0 SDK 이상에 적용됩니다.**</span><span class="sxs-lookup"><span data-stu-id="4fcce-158">**Applies to .NET Core 3.0 SDK and later.**</span></span>
+
+<span data-ttu-id="4fcce-159">로컬 액세스 전용(현재 디렉터리 및 하위 디렉터리용) 도구를 설치하려면 매니페스트 파일에 도구를 추가해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-159">To install a tool for local access only (for the current directory and subdirectories), it has to be added to a tool manifest file.</span></span> <span data-ttu-id="4fcce-160">도구 매니페스트 파일을 만들려면 `dotnet new tool-manifest` 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-160">To create a tool manifest file, run the `dotnet new tool-manifest` command:</span></span>
+
+```dotnetcli
+dotnet new tool-manifest
+```
+
+<span data-ttu-id="4fcce-161">이 명령은 *.config* 디렉터리 아래에 *dotnet-tools.json*이라는 매니페스트 파일을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-161">This command creates a manifest file named *dotnet-tools.json* under the *.config* directory.</span></span> <span data-ttu-id="4fcce-162">매니페스트 파일에 로컬 도구를 추가하려면 다음 예제와 같이 [dotnet tool install](dotnet-tool-install.md) 명령을 사용하고 `--global` 및 `--tool-path` 옵션을 **생략**합니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-162">To add a local tool to the manifest file, use the [dotnet tool install](dotnet-tool-install.md) command and **omit** the `--global` and `--tool-path` options, as shown in the following example:</span></span>
+
+```dotnetcli
+dotnet tool install dotnetsay
+```
+
+<span data-ttu-id="4fcce-163">명령 출력은 다음 예제와 같이 새로 설치된 도구가 있는 매니페스트 파일을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-163">The command output shows which manifest file the newly installed tool is in, similar to the following example:</span></span>
+
+```console
+You can invoke the tool from this directory using the following command:
+dotnet tool run dotnetsay
+Tool 'dotnetsay' (version '2.1.4') was successfully installed.
+Entry is added to the manifest file /home/name/botsay/.config/dotnet-tools.json.
+```
+
+<span data-ttu-id="4fcce-164">다음 예제에서는 두 개의 로컬 도구가 설치된 매니페스트 파일을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-164">The following example shows a manifest file with two local tools installed:</span></span>
+
+```json
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "botsay": {
+      "version": "1.0.0",
+      "commands": [
+        "botsay"
+      ]
+    },
+    "dotnetsay": {
+      "version": "2.1.3",
+      "commands": [
+        "dotnetsay"
+      ]
+    }
+  }
+}
+```
+
+<span data-ttu-id="4fcce-165">일반적으로 로컬 도구는 리포지토리의 루트 디렉터리에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-165">You typically add a local tool to the root directory of the repository.</span></span> <span data-ttu-id="4fcce-166">저장소에 매니페스트 파일을 체크 인한 후에는 리포지토리에서 코드를 체크 아웃하는 개발자가 최신 매니페스트 파일을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-166">After you check in the manifest file to the repository, developers who check out code from the repository get the latest manifest file.</span></span> <span data-ttu-id="4fcce-167">매니페스트 파일에 나열된 모든 도구를 설치하려면 `dotnet tool restore` 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-167">To install all of the tools listed in the manifest file, they run the `dotnet tool restore` command:</span></span>
+
+```dotnetcli
+dotnet tool restore
+```
+
+<span data-ttu-id="4fcce-168">출력은 복원된 도구를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-168">The output indicates which tools were restored:</span></span>
+
+```console
+Tool 'botsay' (version '1.0.0') was restored. Available commands: botsay
+Tool 'dotnetsay' (version '2.1.3') was restored. Available commands: dotnetsay
+Restore was successful.
+```
+
+## <a name="install-a-specific-tool-version"></a><span data-ttu-id="4fcce-169">특정 도구 버전 설치</span><span class="sxs-lookup"><span data-stu-id="4fcce-169">Install a specific tool version</span></span>
+
+<span data-ttu-id="4fcce-170">시험판 버전 또는 특정 버전의 도구를 설치하려면 다음 예제와 같이 `--version` 옵션을 사용하여 버전 번호를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-170">To install a pre-release version or a specific version of a tool, specify the version number by using the `--version` option, as shown in the following example:</span></span>
+
+```dotnetcli
+dotnet tool install dotnetsay --version 2.1.3
+```
+
+## <a name="use-a-tool"></a><span data-ttu-id="4fcce-171">도구 사용</span><span class="sxs-lookup"><span data-stu-id="4fcce-171">Use a tool</span></span>
+
+<span data-ttu-id="4fcce-172">도구를 호출하는 데 사용하는 명령은 사용자가 설치하는 패키지의 이름과 다를 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-172">The command that you use to invoke a tool may be different from the name of the package that you install.</span></span> <span data-ttu-id="4fcce-173">현재 컴퓨터에 현재 사용자에 대해 설치되어 있는 모든 도구를 표시하려면 [dotnet tool list](dotnet-tool-list.md) 명령을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-173">To display all of the tools currently installed on the machine for the current user, use the [dotnet tool list](dotnet-tool-list.md) command:</span></span>
+
+```dotnetcli
+dotnet tool list
+```
+
+<span data-ttu-id="4fcce-174">출력에는 다음 예제와 같이 각 도구의 버전 및 명령이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-174">The output shows each tool's version and command, similar to the following example:</span></span>
+
+```console
+Package Id      Version      Commands       Manifest
+-------------------------------------------------------------------------------------------
+botsay          1.0.0        botsay         /home/name/repository/.config/dotnet-tools.json
+dotnetsay       2.1.3        dotnetsay      /home/name/repository/.config/dotnet-tools.json
+```
+
+<span data-ttu-id="4fcce-175">이 예제에서는 목록에 로컬 도구가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-175">As shown in this example, the list shows local tools.</span></span> <span data-ttu-id="4fcce-176">전역 도구를 보려면 `--global` 옵션을 사용하고, 도구 경로 도구를 보려면 `--tool-path` 옵션을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-176">To see global tools, use the `--global` option, and to see tool-path tools, use the `--tool-path` option.</span></span>
+
+### <a name="invoke-a-global-tool"></a><span data-ttu-id="4fcce-177">전역 도구 호출</span><span class="sxs-lookup"><span data-stu-id="4fcce-177">Invoke a global tool</span></span>
+
+<span data-ttu-id="4fcce-178">전역 도구의 경우 도구 명령을 단독으로 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-178">For global tools, use the tool command by itself.</span></span> <span data-ttu-id="4fcce-179">예를 들어 명령이 `dotnetsay` 또는 `dotnet-doc`이면 명령을 호출하는 데 사용하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-179">For example, if the command is `dotnetsay` or `dotnet-doc`, that's what you use to invoke the command:</span></span>
 
 ```console
 dotnetsay
+dotnet-doc
 ```
 
-<span data-ttu-id="7441f-151">도구 작성자가 도구를 `dotnet` 프롬프트 컨텍스트에 표시하려면 도구를 다음과 같이 `dotnet <command>`로 호출하는 방식으로 작성했을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-151">If the tool author wanted the tool to appear in the context of the `dotnet` prompt, they may have written it in a way that you call it as `dotnet <command>`, such as:</span></span>
+<span data-ttu-id="4fcce-180">명령이 접두사 `dotnet-`으로 시작하는 경우 도구를 호출하는 다른 방법은 `dotnet` 명령을 사용하고 도구 명령 접두사를 생략하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-180">If the command begins with the prefix `dotnet-`, an alternative way to invoke the tool is to use the `dotnet` command and omit the tool command prefix.</span></span> <span data-ttu-id="4fcce-181">예를 들어 명령이 `dotnet-doc`인 경우 다음 명령은 도구를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-181">For example, if the command is `dotnet-doc`, the following command invokes the tool:</span></span>
 
 ```dotnetcli
 dotnet doc
 ```
 
-<span data-ttu-id="7441f-152">[dotnet tool list](dotnet-tool-list.md) 명령을 사용하여 설치된 패키지를 나열하면 설치된 Global Tool 패키지에 포함된 도구를 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-152">You can find which tools are included in an installed Global Tool package by listing the installed packages using the [dotnet tool list](dotnet-tool-list.md) command.</span></span>
+<span data-ttu-id="4fcce-182">그러나 다음 시나리오에서는 `dotnet` 명령을 사용하여 전역 도구를 호출할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-182">However, in the following scenario you can't use the `dotnet` command to invoke a global tool:</span></span>
 
-<span data-ttu-id="7441f-153">도구의 웹 사이트에서 사용 지침을 찾거나 다음 명령 중 하나를 입력할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-153">You can also look for usage instructions at the tool's website or by typing one of the following commands:</span></span>
+* <span data-ttu-id="4fcce-183">전역 도구와 로컬 도구는 접두사 `dotnet-`가 있는 동일한 명령을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-183">A global tool and a local tool have the same command prefixed by `dotnet-`.</span></span>
+* <span data-ttu-id="4fcce-184">로컬 도구에 대한 범위에 있는 디렉터리에서 전역 도구를 호출하려고 합니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-184">You want to invoke the global tool from a directory that is in scope for the local tool.</span></span>
 
-```console
-<command> --help
-dotnet <command> --help
+<span data-ttu-id="4fcce-185">이 시나리오에서는 `dotnet doc` 및 `dotnet dotnet-doc`이 로컬 도구를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-185">In this scenario, `dotnet doc` and `dotnet dotnet-doc` invoke the local tool.</span></span> <span data-ttu-id="4fcce-186">전역 도구를 호출하려면 명령을 단독으로 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-186">To invoke the global tool, use the command by itself:</span></span>
+
+```dotnetcli
+dotnet-doc
 ```
 
-## <a name="other-cli-commands"></a><span data-ttu-id="7441f-154">기타 CLI 명령</span><span class="sxs-lookup"><span data-stu-id="7441f-154">Other CLI commands</span></span>
+### <a name="invoke-a-tool-path-tool"></a><span data-ttu-id="4fcce-187">도구 경로 도구 호출</span><span class="sxs-lookup"><span data-stu-id="4fcce-187">Invoke a tool-path tool</span></span>
 
-<span data-ttu-id="7441f-155">.NET Core SDK에는 .NET Core Global Tool을 지원하는 다른 명령이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-155">The .NET Core SDK contains other commands that support .NET Core Global Tools.</span></span> <span data-ttu-id="7441f-156">다음 옵션 중 하나와 함께 `dotnet tool` 명령을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-156">Use any of the `dotnet tool` commands with one of the following options:</span></span>
+<span data-ttu-id="4fcce-188">`tool-path` 옵션을 사용하여 설치된 전역 도구를 호출하려면 [이 문서의 앞부분](#install-a-global-tool-in-a-custom-location)에서 설명한 대로 명령을 사용할 수 있도록 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-188">To invoke a global tool that is installed by using the `tool-path` option, make sure the command is available, as explained [earlier in this article](#install-a-global-tool-in-a-custom-location).</span></span>
 
-* <span data-ttu-id="7441f-157">`--global` 또는 `-g`는 명령을 사용자 수준의 Global Tool에 적용 가능함을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-157">`--global` or `-g` specifies that the command is applicable to user-wide Global Tools.</span></span>
-* <span data-ttu-id="7441f-158">`--tool-path`는 Global Tool의 사용자 지정 위치를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-158">`--tool-path` specifies a custom location for Global Tools.</span></span>
+### <a name="invoke-a-local-tool"></a><span data-ttu-id="4fcce-189">로컬 도구 호출</span><span class="sxs-lookup"><span data-stu-id="4fcce-189">Invoke a local tool</span></span>
 
-<span data-ttu-id="7441f-159">Global Tool에 사용할 수 있는 명령을 확인하려면:</span><span class="sxs-lookup"><span data-stu-id="7441f-159">To find out which commands are available for Global Tools:</span></span>
+<span data-ttu-id="4fcce-190">로컬 도구를 호출하려면 설치 디렉터리 내에서 `dotnet` 명령을 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-190">To invoke a local tool, you have to use the `dotnet` command from within the installation directory.</span></span> <span data-ttu-id="4fcce-191">다음 예제와 같이 긴 형식(`dotnet tool run <COMMAND_NAME>`) 또는 짧은 형식(`dotnet <COMMAND_NAME>`)을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-191">You can use the long form (`dotnet tool run <COMMAND_NAME>`) or the short form (`dotnet <COMMAND_NAME>`), as shown in the following examples:</span></span>
+
+```dotnetcli
+dotnet tool run dotnetsay
+dotnet dotnetsay
+```
+
+<span data-ttu-id="4fcce-192">명령에 접두사 `dotnet-`가 있으면 도구를 호출할 때 접두사를 포함하거나 생략할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-192">If the command is prefixed by `dotnet-`, you can include or omit the prefix when you invoke the tool.</span></span> <span data-ttu-id="4fcce-193">예를 들어 명령이 `dotnet-doc`인 경우 다음 예제 중 하나는 로컬 도구를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-193">For example, if the command is `dotnet-doc`, any of the following examples invokes the local tool:</span></span>
+
+```dotnetcli
+dotnet tool run dotnet-doc
+dotnet dotnet-doc
+dotnet doc
+```
+
+## <a name="update-a-tool"></a><span data-ttu-id="4fcce-194">도구 업데이트</span><span class="sxs-lookup"><span data-stu-id="4fcce-194">Update a tool</span></span>
+
+<span data-ttu-id="4fcce-195">도구 업데이트는 원래 버전을 제거하고 안정적인 최신 버전을 다시 설치하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-195">Updating a tool involves uninstalling and reinstalling it with the latest stable version.</span></span> <span data-ttu-id="4fcce-196">도구를 업데이트하려면 도구를 설치하는 데 사용한 것과 동일한 옵션을 지정하여 [dotnet tool update](dotnet-tool-update.md) 명령을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-196">To update a tool, use the [dotnet tool update](dotnet-tool-update.md) command with the same option that you used to install the tool:</span></span>
+
+```dotnetcli
+dotnet tool update --global <packagename>
+dotnet tool update --tool-path <packagename>
+dotnet tool update <packagename>
+```
+
+<span data-ttu-id="4fcce-197">로컬 도구의 경우 SDK는 현재 디렉터리와 부모 디렉터리를 검색하여 패키지 ID를 포함하는 첫 번째 매니페스트 파일을 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-197">For a local tool, the SDK finds the first manifest file that contains the package ID by looking in the current directory and parent directories.</span></span> <span data-ttu-id="4fcce-198">매니페스트 파일에 이러한 패키지 ID가 없는 경우 SDK는 가장 가까운 매니페스트 파일에 새 항목을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-198">If there is no such package ID in any manifest file, the SDK adds a new entry to the closest manifest file.</span></span>
+
+## <a name="uninstall-a-tool"></a><span data-ttu-id="4fcce-199">도구 제거</span><span class="sxs-lookup"><span data-stu-id="4fcce-199">Uninstall a tool</span></span>
+
+<span data-ttu-id="4fcce-200">도구를 설치하는 데 사용한 것과 동일한 옵션을 지정하여 [dotnet tool uninstall](dotnet-tool-uninstall.md) 명령을 사용하여 도구를 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-200">Remove a tool by using the [dotnet tool uninstall](dotnet-tool-uninstall.md) command with the same option that you used to install the tool:</span></span>
+
+```dotnetcli
+dotnet tool uninstall --global <packagename>
+dotnet tool uninstall --tool-path<packagename>
+dotnet tool uninstall <packagename>
+```
+
+<span data-ttu-id="4fcce-201">로컬 도구의 경우 SDK는 현재 디렉터리와 부모 디렉터리를 검색하여 패키지 ID를 포함하는 첫 번째 매니페스트 파일을 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-201">For a local tool, the SDK finds the first manifest file that contains the package ID by looking in the current directory and parent directories.</span></span>
+
+## <a name="get-help-and-troubleshoot"></a><span data-ttu-id="4fcce-202">도움말 보기 및 문제 해결</span><span class="sxs-lookup"><span data-stu-id="4fcce-202">Get help and troubleshoot</span></span>
+
+<span data-ttu-id="4fcce-203">사용 가능한 `dotnet tool` 명령 목록을 가져오려면 다음 명령을 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="4fcce-203">To get a list of available `dotnet tool` commands, enter the following command:</span></span>
 
 ```dotnetcli
 dotnet tool --help
 ```
 
-<span data-ttu-id="7441f-160">Global Tool을 업데이트하려면 원래 버전을 제거하고 안정적인 최신 버전으로 다시 설치해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-160">Updating a Global Tool involves uninstalling and reinstalling it with the latest stable version.</span></span> <span data-ttu-id="7441f-161">Global Tool을 업데이트하려면 [dotnet tool update](dotnet-tool-update.md) 명령을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-161">To update a Global Tool, use the [dotnet tool update](dotnet-tool-update.md) command:</span></span>
+<span data-ttu-id="4fcce-204">도구 사용 지침을 얻으려면 다음 명령 중 하나를 입력하거나 도구의 웹 사이트를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="4fcce-204">To get tool usage instructions, enter one of the following commands or see the tool's website:</span></span>
 
 ```dotnetcli
-dotnet tool update -g <packagename>
+<command> --help
+dotnet <command> --help
 ```
 
-<span data-ttu-id="7441f-162">[dotnet tool uninstall](dotnet-tool-uninstall.md)을 사용하여 Global Tool을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-162">Remove a Global Tool using the [dotnet tool uninstall](dotnet-tool-uninstall.md):</span></span>
-
-```dotnetcli
-dotnet tool uninstall -g <packagename>
-```
-
-<span data-ttu-id="7441f-163">현재 컴퓨터에 설치된 모든 Global Tool과 해당 버전 및 명령을 표시하려면 [dotnet tool list](dotnet-tool-list.md) 명령을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="7441f-163">To display all of the Global Tools currently installed on the machine, along with their version and commands, use the [dotnet tool list](dotnet-tool-list.md) command:</span></span>
-
-```dotnetcli
-dotnet tool list -g
-```
-
-## <a name="see-also"></a><span data-ttu-id="7441f-164">참조</span><span class="sxs-lookup"><span data-stu-id="7441f-164">See also</span></span>
-
-* [<span data-ttu-id="7441f-165">.NET Core 도구 사용 문제 해결</span><span class="sxs-lookup"><span data-stu-id="7441f-165">Troubleshoot .NET Core tool usage issues</span></span>](troubleshoot-usage-issues.md)
+<span data-ttu-id="4fcce-205">도구를 설치하거나 실행하지 못하는 경우 [.NET Core 도구 사용 문제 해결](troubleshoot-usage-issues.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="4fcce-205">If a tool fails to install or run, see [Troubleshoot .NET Core tool usage issues](troubleshoot-usage-issues.md).</span></span>
