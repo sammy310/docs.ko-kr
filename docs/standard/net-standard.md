@@ -1,20 +1,20 @@
 ---
 title: .NET Standard
 description: .NET Standard, 해당 버전 및 .NET Standard를 지원하는 .NET 구현에 대해 알아봅니다.
-ms.date: 09/23/2019
+ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 25490d5063a1f6c31b76af30ac6d37de6cb8c07f
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 00b40b771a8608bad7e3f992e3c99367ff6bb131
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124639"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452593"
 ---
 # <a name="net-standard"></a>.NET Standard
 
-[.NET Standard](https://github.com/dotnet/standard)는 모든 .NET 구현체에서 사용할 수 있는 .NET API의 공식 규격입니다. .NET Standard는 .NET 에코시스템의 통일성을 높이기 위한 것입니다. [ECMA 335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md)에서는 .NET 구현체의 동작에 관한 통일성을 계속 설정하지만 .NET 라이브러리 구현을 위해 .NET BCL(기본 클래스 라이브러리)에 대한 유사한 사양은 없습니다.
+[.NET Standard](https://github.com/dotnet/standard)는 모든 .NET 구현체에서 사용할 수 있는 .NET API의 공식 규격입니다. .NET Standard는 .NET 에코시스템의 통일성을 높이기 위한 것입니다. [ECMA 335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md)는 .NET 구현 동작에 대한 균일성을 계속 정립하며, ECMA 335는 소규모의 표준 라이브러리 집합을 지정하는 반면, .NET Standard 사양은 보다 광범위한 .NET API를 포함합니다.
 
 .NET Standard를 통해 다음과 같은 주요 시나리오를 사용할 수 있습니다.
 

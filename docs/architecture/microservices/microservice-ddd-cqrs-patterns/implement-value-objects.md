@@ -1,13 +1,13 @@
 ---
 title: 값 개체 구현
 description: 컨테이너화된 .NET 애플리케이션의 .NET 마이크로 서비스 아키텍처 | 새로운 Entity Framework 기능을 사용하여 값 개체를 구현하는 세부 정보 및 옵션을 가져옵니다.
-ms.date: 10/08/2018
-ms.openlocfilehash: 70c92fe86fda20ed4e909b945b843e8e71092f09
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.date: 01/30/2020
+ms.openlocfilehash: 4ace5c141b1cbd2dcfefb7ea7165a4006b130479
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899768"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502510"
 ---
 # <a name="implement-value-objects"></a>값 개체 구현
 
@@ -131,13 +131,13 @@ public class Address : ValueObject
 
 주소의 이 값 개체 구현에 ID가 없으며 따라서 Address 클래스 및 ValueObject 클래스에도 ID 필드가 없도록 하는 방법을 확인할 수 있습니다.
 
-ID가 없는 값 개체를 구현하는 데 크게 데 도움이 되는 EF Core 2.0까지는 클래스에 Entity Framework에서 사용할 ID 필드가 있습니다. 정확한 다음 섹션의 설명입니다.
+ID가 없는 값 개체를 구현하는 데 크게 데 도움이 되는 EF Core 2.0까지는 클래스에 EF(Entity Framework)에서 사용할 ID 필드가 있습니다. 정확한 다음 섹션의 설명입니다.
 
-변경할 수 없는 개체 값이 읽기 전용(예: 가져오기 전용 속성)이라고 주장할 수 있고 실제로 그렇습니다. 그러나 값 개체는 일반적으로 직렬화되고 역직렬화되어 메시지 큐를 거치고, 읽기 전용이므로 역직렬 변환기가 값을 할당하지 않도록 중지합니다. 따라서 값 개체를 읽기 전용이 충분히 실용적인 비공개 세트로 둡니다.
+변경할 수 없는 개체 값이 읽기 전용(즉, 가져오기 전용 속성을 가짐)이라고 주장할 수 있고 실제로 그렇습니다. 그러나 값 개체는 일반적으로 직렬화되고 역직렬화되어 메시지 큐를 거치고, 읽기 전용이므로 역직렬 변환기가 값을 할당하지 않도록 중지합니다. 따라서 값 개체를 읽기 전용이 충분히 실용적인 비공개 세트로 둡니다.
 
-## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20"></a>EF Core 2.0을 사용하여 데이터베이스에서 개체 값을 유지하는 방법
+## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20-and-later"></a>EF Core 2.0 이상을 사용하여 데이터베이스에서 개체 값을 유지하는 방법
 
-도메인 모델에서 값 개체를 정의하는 방법을 알아보았습니다. 하지만 일반적으로 ID가 있는 엔터티를 대상으로 하는 EF(Entity Framework) Core를 통해 개체 값을 데이터베이스에 유지하려면 어떻게 해야 할까요?
+도메인 모델에서 값 개체를 정의하는 방법을 알아보았습니다. 하지만 일반적으로 ID가 있는 엔터티를 대상으로 하므로 Entity Framework Core를 사용하여 개체 값을 데이터베이스에 유지하려면 어떻게 해야 할까요?
 
 ### <a name="background-and-older-approaches-using-ef-core-11"></a>배경 지식 및 EF Core 1.1을 사용한 기존의 접근 방식
 
@@ -160,11 +160,11 @@ void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration)
 
 그러나 값 개체가 데이터베이스에 유지되는 것은 다른 테이블의 일반 엔터티처럼 수행되었습니다.
 
-EF Core 2.0에서는 값 개체를 유지하는 보다 나은 방법이 도입되었습니다.
+EF Core 2.0 이상에서는 값 개체를 유지하는 보다 나은 방법이 도입되었습니다.
 
-## <a name="persist-value-objects-as-owned-entity-types-in-ef-core-20"></a>EF Core 2.0에서 소유된 엔터티 형식으로 값 개체 유지
+## <a name="persist-value-objects-as-owned-entity-types-in-ef-core-20-and-later"></a>EF Core 2.0 이상에서 소유 엔터티 형식으로 값 개체 유지
 
-DDD의 정식 값 개체 패턴과 EF Core의 소유된 엔터티 형식 사이에 차이가 있더라도 현재는 EF Core 2.0을 사용하여 값 개체를 유지하는 것이 가장 좋은 방법입니다. 제한 사항은 이 섹션의 마지막 부분에서 확인할 수 있습니다.
+DDD의 정식 값 개체 패턴과 EF Core의 소유된 엔터티 형식 사이에 차이가 있더라도 현재는 EF Core 2.0 이상을 사용하여 값 개체를 유지하는 것이 가장 좋은 방법입니다. 제한 사항은 이 섹션의 마지막 부분에서 확인할 수 있습니다.
 
 소유된 엔터티 형식 기능은 EF Core 버전 2.0부터 추가되었습니다.
 
@@ -178,7 +178,7 @@ DDD의 정식 값 개체 패턴과 EF Core의 소유된 엔터티 형식 사이�
 
 - 소유자 ID를 가리키는 탐색 속성
 
-- 소유된 형식의 컬렉션인 경우 독립 구성 요소(아직 EF Core 2.0에서 지원되지 않으며 2.2에서 제공될 예정임).
+- 소유된 형식의 컬렉션인 경우 독립 구성 요소(EF Core 2.2 이상에서 지원됨).
 
 예를 들어 eShopOnContainers의 주문 도메인 모델에서, 주문 엔터티의 일부로 주소 값 개체가 소유자 엔터티 내부의 소유된 엔터티 형식으로 구현되며, 이것이 주문 엔터티입니다. 주소는 도메인 모델에 정의된 ID 속성이 없는 형식입니다. 특정 주문의 배송 주소를 지정하기 위한 Order 형식 속성으로 사용됩니다.
 
@@ -275,7 +275,7 @@ public class Address
 
 - 스택의 소유된 형식 인스턴스의 ID(키)는 소유자 형식의 ID와 소유된 형식의 정의로 구성됩니다.
 
-#### <a name="owned-entities-capabilities"></a>소유된 엔터티 기능:
+#### <a name="owned-entities-capabilities"></a>소유 엔터티 기능
 
 - 소유된 형식은 소유된 엔터티(중첩된 소유된 형식) 또는 소유되지 않은 엔터티(다른 엔터티에 대한 일반 참조 탐색 속성)라는 다른 엔터티를 참조할 수 있습니다.
 
@@ -283,19 +283,19 @@ public class Address
 
 - 테이블 분할은 규칙에 따라 설정되지만, ToTable을 사용하여 소유된 형식을 다른 테이블로 매핑하여 옵트아웃할 수 있습니다.
 
-- 즉시 로드는 소유된 형식에서 자동으로 수행되므로 쿼리에서 include()를 호출할 필요가 없습니다.
+- 즉시 로드는 소유된 형식에서 자동으로 수행되므로 쿼리에서 `.Include()`를 호출할 필요가 없습니다.
 
-- EF Core 2.1으로 \[소유된\] 특성을 사용하여 구성될 수 있습니다.
+- EF Core 2.1 이상 버전을 사용하여 특성 `[Owned]`로 구성할 수 있습니다.
 
-#### <a name="owned-entities-limitations"></a>소유된 엔터티의 제한 사항:
+- 소유된 형식의 컬렉션을 처리할 수 있습니다(2.2 이상 버전을 사용).
 
-- 소유된 형식의 DbSet\<T\>를 만들 수 없습니다(설계 상).
+#### <a name="owned-entities-limitations"></a>소유 엔터티의 제한 사항
 
-- 소유된 형식에 대해 ModelBuilder.Entity\<T\>()를 호출할 수 없습니다(현재 설계 상).
+- 소유된 형식의 `DbSet<T>`를 만들 수 없습니다(디자인임).
 
-- 아직 EF Core 2.1로 소유된 형식의 컬렉션이 없습니다(하지만 2.2에서 지원될 예정).
+- 소유된 형식에는 `ModelBuilder.Entity<T>()`를 호출할 수 없습니다(현재 디자인임).
 
-- 동일한 테이블(예: 테이블 분할 사용)에서 소유자로 매핑되는 선택적(예: null 허용) 소유된 형식이 지원되지 않습니다. 각 속성에 대해 매핑이 수행되기 때문에 null 복합 값에 대한 별도 sentinel이 전체로 포함되지 않습니다.
+- 동일한 테이블(예: 테이블 분할 사용)에서 소유자로 매핑되는 선택적(즉, null 허용) 소유된 형식이 지원되지 않습니다. 각 속성에 대해 매핑이 수행되기 때문에 null 복합 값에 대한 별도 sentinel이 전체로 포함되지 않습니다.
 
 - 소유된 형식에 대한 상속 매핑이 지원되지 않지만, 다른 소유된 형식과 상속 계층 구조가 동일한 두 가지 리프 형식을 매핑할 수 있습니다. EF Core는 이러한 형식이 동일한 계층 구조의 일부라는 사실의 근거가 되지 못합니다.
 
@@ -316,8 +316,11 @@ public class Address
 - **Vaughn Vernon. 도메인 기반 디자인 구현.** (도서; 값 개체의 토론 포함) \
   <https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/>
 
+- **소유 엔터티 형식** \
+  <https://docs.microsoft.com/ef/core/modeling/owned-entities>
+
 - **섀도 속성** \
-  [https://docs.microsoft.com/ef/core/modeling/shadow-properties](/ef/core/modeling/shadow-properties)
+  <https://docs.microsoft.com/ef/core/modeling/shadow-properties>
 
 - **복합 형식 및/또는 값 개체**. EF Core GitHub 리포지토리에서 토론(문제 탭) \
   <https://github.com/dotnet/efcore/issues/246>

@@ -1,21 +1,17 @@
 ---
 title: dotnet build 명령
 description: dotnet build 명령은 프로젝트와 모든 종속성을 빌드합니다.
-ms.date: 10/14/2019
-ms.openlocfilehash: ec37d82c9e22a59acf7617f80a7491c0bcab89c9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 9f9a78ec0a6a25c54c8a727c05081ce6835514ee
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734317"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503769"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
-**이 문서의 적용 대상:**  ✔️ .NET Core 1.x SDK 이상 버전
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**이 문서의 적용 대상:** ✔️ .NET Core 2.x SDK 이상 버전
 
 ## <a name="name"></a>이름
 
@@ -75,7 +71,7 @@ dotnet build [-h|--help]
 
 ## <a name="options"></a>옵션
 
-- **`-c|--configuration {Debug|Release}`**
+- **`-c|--configuration <CONFIGURATION>`**
 
   빌드 구성을 정의합니다. 대부분의 프로젝트에 대한 기본값은 `Debug`이지만 프로젝트의 빌드 구성 설정을 재정의할 수 있습니다.
 
@@ -85,7 +81,7 @@ dotnet build [-h|--help]
 
 - **`--force`**
 
-  마지막 복원이 성공한 경우에도 모든 종속성을 강제 확인합니다. 이 플래그를 지정하는 것은 *project.assets.json* 파일을 삭제하는 것과 같습니다. .NET Core 2.0 SDK 이후 사용할 수 있습니다.
+  마지막 복원이 성공한 경우에도 모든 종속성을 강제 확인합니다. 이 플래그를 지정하는 것은 *project.assets.json* 파일을 삭제하는 것과 같습니다.
 
 - **`-h|--help`**
 
@@ -105,7 +101,7 @@ dotnet build [-h|--help]
 
 - **`--no-restore`**
 
-  빌드하는 동안 암시적 복원을 실행하지 않습니다. .NET Core 2.0 SDK 이후 사용할 수 있습니다.
+  빌드하는 동안 암시적 복원을 실행하지 않습니다.
 
 - **`--nologo`**
 

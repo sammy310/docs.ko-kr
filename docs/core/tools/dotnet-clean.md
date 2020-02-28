@@ -1,21 +1,17 @@
 ---
 title: dotnet clean 명령
 description: dotnet clean 명령은 현재 디렉터리를 정리합니다.
-ms.date: 06/26/2019
-ms.openlocfilehash: 736c0bba5d156e919534f1ad811641e815b3ffac
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 186f1ea07718a8e178f88c3d079cf6e2f1f8660b
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734245"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503746"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
-**이 문서의 적용 대상:**  ✔️ .NET Core 1.x SDK 이상 버전
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**이 문서의 적용 대상:** ✔️ .NET Core 2.x SDK 이상 버전
 
 ## <a name="name"></a>이름
 
@@ -41,9 +37,9 @@ dotnet clean [-h|--help]
 
 ## <a name="options"></a>옵션
 
-* **`-c|--configuration {Debug|Release}`**
+* **`-c|--configuration <CONFIGURATION>`**
 
-  빌드 구성을 정의합니다. 기본값은 `Debug`입니다. 이 옵션은 빌드 시에 지정한 경우에만 정리 시에도 필요합니다.
+  빌드 구성을 정의합니다. 대부분의 프로젝트에 대한 기본값은 `Debug`이지만 프로젝트의 빌드 구성 설정을 재정의할 수 있습니다. 이 옵션은 빌드 시에 지정한 경우에만 정리 시에도 필요합니다.
 
 * **`-f|--framework <FRAMEWORK>`**
 
@@ -67,7 +63,7 @@ dotnet clean [-h|--help]
 
 * **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  지정된 런타임의 출력 폴더를 정리합니다. [자체 포함된 배포](../deploying/index.md#self-contained-deployments-scd)가 만들어진 경우 사용됩니다. .NET Core 2.0 SDK 이후 사용할 수 있는 옵션입니다.
+  지정된 런타임의 출력 폴더를 정리합니다. [자체 포함된 배포](../deploying/index.md#publish-self-contained)가 만들어진 경우 사용됩니다.
 
 * **`-v|--verbosity <LEVEL>`**
 

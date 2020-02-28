@@ -1,19 +1,19 @@
 ---
 title: 이벤트 구독
 description: 컨테이너화된 .NET 애플리케이션의.NET 마이크로 서비스 아키텍처 | 통합 이벤트에 대한 게시 및 구독의 세부 정보를 이해합니다.
-ms.date: 10/02/2018
-ms.openlocfilehash: facbb04d322c5df03498a0313556dd9b5b3161d2
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.date: 01/30/2020
+ms.openlocfilehash: 544af8035ed23dd6507dfed4944b0c327c81d943
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937140"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501806"
 ---
 # <a name="subscribing-to-events"></a>이벤트 구독
 
 이벤트 버스를 사용하기 위한 첫 번째 단계는 마이크로 서비스에서 수신하려는 이벤트를 구독하는 것입니다. 구독은 수신자 마이크로 서비스에서 수행해야 합니다.
 
-다음의 간단한 코드는 서비스를 시작할 때(즉, `Startup` 클래스에서) 마이크로 서비스가 필요한 이벤트를 구독할 수 있도록 각 수신자 마이크로 서비스가 무엇을 구현해야 하는가를 나타냅니다. 이 경우 `basket.api` 마이크로 서비스는 `ProductPriceChangedIntegrationEvent` 및 `OrderStartedIntegrationEvent` 메시지를 구독해야 합니다.
+다음의 간단한 코드는 서비스를 시작할 때(즉, `Startup` 클래스에서) 마이크로 서비스가 필요한 이벤트를 구독할 수 있도록 각 수신자 마이크로 서비스가 무엇을 구현해야 하는가를 나타냅니다. 이 경우 `basket-api` 마이크로 서비스는 `ProductPriceChangedIntegrationEvent` 및 `OrderStartedIntegrationEvent` 메시지를 구독해야 합니다.
 
 예를 들어 `ProductPriceChangedIntegrationEvent` 이벤트에 등록하면 장바구니 마이크로 서비스는 제품 가격의 변경 사항을 파악하고 해당 제품이 사용자의 장바구니에 있는 경우 사용자에게 변경 사항을 경고할 수 있습니다.
 
@@ -301,7 +301,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>추가 자료
 
-- **메시지 멱등성 준수**  
+- **메시지 멱등성 준수** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/jj591565(v=pandp.10)#honoring-message-idempotency>
 
 ## <a name="deduplicating-integration-event-messages"></a>통합 이벤트 메시지 중복 제거
@@ -338,7 +338,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
 - **최종 일관성** \
-    [https://en.wikipedia.org/wiki/Eventual\_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
+    <https://en.wikipedia.org/wiki/Eventual_consistency>
 
 - **Philip Brown. 바인딩된 컨텍스트 통합 전략** \
     <https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/>
@@ -359,7 +359,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     <https://dzone.com/articles/event-driven-data-management-for-microservices-1>
 
 - **CAP 원리** \
-    [https://en.wikipedia.org/wiki/CAP\_theorem](https://en.wikipedia.org/wiki/CAP_theorem)
+    <https://en.wikipedia.org/wiki/CAP_theorem>
 
 - **CAP 원리란?** \
     <https://www.quora.com/What-Is-CAP-Theorem-1>
@@ -377,7 +377,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
 
 - **안정성 가이드**(RabbitMQ 설명서) \
-    [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html#consumer)
+    <https://www.rabbitmq.com/reliability.html#consumer>
 
 > [!div class="step-by-step"]
 > [이전](rabbitmq-event-bus-development-test-environment.md)

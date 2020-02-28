@@ -2,14 +2,13 @@
 title: 개발하는 동안 애플리케이션 비밀 저장
 description: .NET 마이크로 서비스 및 웹 애플리케이션의 보안 - 암호, 연결 문자열 또는 API 키와 같은 애플리케이션 비밀을 소스 제어에 저장하지 마세요. ASP.NET Core에서 사용할 수 있는 옵션, 특히 “사용자 비밀”을 처리하는 방법을 이해하고 있어야 합니다.
 author: mjrousos
-ms.author: wiwagn
-ms.date: 10/19/2018
-ms.openlocfilehash: fe8e7fa11c9a4f4cae133c2e09f9e4b4dd40a546
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.date: 01/30/2020
+ms.openlocfilehash: 1ef2246746b9165f1564fa7be64ff7eb28eb1d32
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675700"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501792"
 ---
 # <a name="store-application-secrets-safely-during-development"></a>개발 중에 애플리케이션 비밀을 안전하게 저장
 
@@ -39,7 +38,7 @@ ms.locfileid: "68675700"
 
 ## <a name="store-secrets-with-the-aspnet-core-secret-manager"></a>ASP.NET Core 비밀 관리자를 사용하여 비밀 저장
 
-ASP.NET Core [암호 관리자](/aspnet/core/security/app-secrets#secret-manager) 도구는 소스 코드에서 암호를 유지하는 또 다른 방법을 제공합니다. 비밀 관리자 도구를 사용하려면 **Microsoft.Extensions.Configuration.SecretManager** 패키지를 프로젝트 파일에 설치합니다. 해당 종속성이 표시되고 복원되면 `dotnet user-secrets` 명령을 사용하여 명령줄에서 비밀 값을 설정할 수 있습니다. 이러한 암호는 소스 코드와 다르게 사용자의 프로필 디렉터리에 있는 JSON 파일에 저장됩니다(세부 정보는 운영 체제에 따라 다름).
+ASP.NET Core [암호 관리자](/aspnet/core/security/app-secrets#secret-manager) 도구는 **개발 도중** 소스 코드에서 암호를 유지하는 또 다른 방법을 제공합니다. 비밀 관리자 도구를 사용하려면 **Microsoft.Extensions.Configuration.SecretManager** 패키지를 프로젝트 파일에 설치합니다. 해당 종속성이 표시되고 복원되면 `dotnet user-secrets` 명령을 사용하여 명령줄에서 비밀 값을 설정할 수 있습니다. 이러한 암호는 소스 코드와 다르게 사용자의 프로필 디렉터리에 있는 JSON 파일에 저장됩니다(세부 정보는 운영 체제에 따라 다름).
 
 비밀 관리자 도구에 의해 설정된 비밀은 비밀을 사용하는 프로젝트의 `UserSecretsId` 속성으로 구성됩니다. 따라서 아래 코드 조각과 같이 프로젝트 파일에서 UserSecretsId 속성을 설정해야 합니다. 기본값은 Visual Studio에서 할당된 GUID이지만 컴퓨터에서 고유하기만 하면 실제 문자열은 중요하지 않습니다.
 

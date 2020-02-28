@@ -4,12 +4,12 @@ description: C#의 패턴 일치 식에 대한 자세한 정보
 ms.date: 04/10/2019
 ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: ff84ddd4f07fb77dc9fe648a495a441ed8f9198b
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: db509a0ebf1e205e9996ba8102757fe8c0b9ea3a
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039359"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501623"
 ---
 # <a name="pattern-matching"></a>패턴 일치
 
@@ -136,3 +136,7 @@ match 식 중 하나인 `var`이 소개되면서 패턴 일치에 대한 새 규
 패턴 일치는 모든 데이터 형식에서 작동합니다. 개체를 검사하는 식을 작성하고 해당 조건에 따라 제어 흐름 결정을 내립니다.
 
 추상 `Shape` 및 각각 고유한 가상 메서드 구현으로 면적을 계산하는 특정 파생 셰이프에 대한 클래스 계층 구조를 만들어 수행하는 디자인과 이 샘플의 코드를 비교합니다. 데이터로 작업하고 데이터 스토리지 문제와 동작 문제를 구분하려는 경우 패턴 일치 식은 매우 유용한 도구일 수 있습니다.
+
+## <a name="see-also"></a>참조
+
+- [자습서: 패턴 일치 기능을 사용하여 데이터 형식 확장](tutorials/pattern-matching.md)

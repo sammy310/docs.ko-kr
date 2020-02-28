@@ -11,12 +11,12 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: ac4dafef92bbc900d291a5b653c55ba295f1a6d6
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 4377d113a18d23c8a0f9a669e6112f1a8223cc79
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093229"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450871"
 ---
 # <a name="enumeration-types-c-reference"></a>열거형(C# 참조)
 
@@ -89,5 +89,6 @@ C# 7.3부터 기본 클래스 제약 조건([열거형 제약 조건](../../prog
 
 - [C# 참조](../index.md)
 - [열거형 형식 문자열](../../../standard/base-types/enumeration-format-strings.md)
-- [열거형 명명 규칙](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)
+- [디자인 지침 - 열거형 디자인](../../../standard/design-guidelines/enum.md)
+- [디자인 지침 - 열거형 명명 규칙](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)
 - [switch 문](../keywords/switch.md)

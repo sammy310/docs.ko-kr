@@ -1,13 +1,13 @@
 ---
 title: 단순 데이터 기반 CRUD 마이크로 서비스 만들기
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스 애플리케이션의 컨텍스트 내에서 단순 CRUD(데이터 기반) 마이크로 서비스의 생성을 이해합니다.
-ms.date: 01/07/2019
-ms.openlocfilehash: 56cec488c22b0f3b45b9c1dae9d2f4fd7ef7beaa
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: b72d7defed81e57e2971c5e2b53df2d86b2dc947
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737283"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502347"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>단순 데이터 기반 CRUD 마이크로 서비스 만들기
 
@@ -39,7 +39,7 @@ Docker 컨테이너 안에서 SQL Server 같은 데이터베이스 서버를 실
 
 ![프로젝트의 설정을 보여 주는 Visual Studio의 스크린샷](./media/data-driven-crud-microservice/create-asp-net-core-web-api-project.png)
 
-**그림 6-6** Visual Studio에서 ASP.NET Core Web API 프로젝트 만들기
+**그림 6-6** Visual Studio 2019에서 ASP.NET Core Web API 프로젝트 만들기
 
 ASP.NET Core 웹 API 프로젝트를 만들려면 먼저 ASP.NET Core 웹 애플리케이션을 선택한 다음, API 형식을 선택합니다. 프로젝트를 만든 후에는 다른 Web API 프로젝트에서와 마찬가지로 Entity Framework API 또는 타 API를 사용하여 MVC 컨트롤러를 구현할 수 있습니다. 새 Web API 프로젝트에서는 마이크로 서비스의 종속성이 ASP.NET Core 자체 밖에 없습니다. 내부적으로 *Microsoft.AspNetCore.All* 종속성 내에서는 그림 6-7에서처럼 Entity Framework 및 기타 여러 .NET Core NuGet 패키지를 참조하고 있습니다.
 
@@ -129,12 +129,27 @@ public class CatalogController : ControllerBase
 
     // GET api/v1/[controller]/items[?pageSize=3&pageIndex=10]
     [HttpGet]
-    [Route("[action]")]
+    [Route("items")]
     [ProducesResponseType(typeof(PaginatedItemsViewModel<CatalogItem>), (int)HttpStatusCode.OK)]
-    public async Task<IActionResult> Items([FromQuery]int pageSize = 10,
-                                           [FromQuery]int pageIndex = 0)
-
+    [ProducesResponseType(typeof(IEnumerable<CatalogItem>), (int)HttpStatusCode.OK)]
+    [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+    public async Task<IActionResult> ItemsAsync(
+        [FromQuery]int pageSize = 10,
+        [FromQuery]int pageIndex = 0,
+        string ids = null)
     {
+        if (!string.IsNullOrEmpty(ids))
+        {
+            var items = await GetItemsByIdsAsync(ids);
+
+            if (!items.Any())
+            {
+                return BadRequest("ids value invalid. Must be comma-separated list of numbers");
+            }
+
+            return Ok(items);
+        }
+
         var totalItems = await _catalogContext.CatalogItems
             .LongCountAsync();
 
@@ -172,7 +187,7 @@ ASP.NET Core에서는 DI(Dependency Injection)를 즉시 사용할 수 있습니
 
 위의 `CatalogController` 클래스 예제에서는 `CatalogController()` 생성자를 통해 `CatalogContext` 유형의 개체와 다른 개체를 주입합니다.
 
-Web API 프로젝트를 설정하는 데 중요한 구성은 서비스의 IoC 컨테이너에 DbContext 클래스를 등록하는 것입니다. 일반적으로 다음 예제에서처럼 `ConfigureServices()` 메서드 안에서 `services.AddDbContext<DbContext>()` 메서드를 호출하여 `Startup` 클래스에서 이를 수행합니다.
+Web API 프로젝트를 설정하는 데 중요한 구성은 서비스의 IoC 컨테이너에 DbContext 클래스를 등록하는 것입니다. **단순화된** 다음 예제에서와 같이 일반적으로 `ConfigureServices()` 메서드 안에서 `services.AddDbContext<DbContext>()` 메서드를 호출하여 `Startup` 클래스에서 이를 수행합니다.
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -240,9 +255,9 @@ settings.json 파일에는 ConnectionString 속성 또는 다른 속성에 대�
 # docker-compose.override.yml
 
 #
-catalog.api:
+catalog-api:
   environment:
-    - ConnectionString=Server=sql.data;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word
+    - ConnectionString=Server=sqldata;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word
     # Additional environment variables for this service
   ports:
     - "5101:80"
@@ -350,7 +365,7 @@ Swashbuckle 생성 Swagger UI API 설명서에는 게시된 모든 작업이 포
 
 현재 Swashbuckle은 ASP.NET Core 애플리케이션에 대해 높은 수준의 메타패키지 [Swashbuckle.AspNetCore](https://www.nuget.org/packages/Swashbuckle.AspNetCore)에서 다섯 개의 내부 NuGet 패키지로 구성되어 있습니다.
 
-Web API 프로젝트에 이러한 NuGet 패키지를 설치한 후에 간소화된 다음 코드에서처럼 시작 클래스에 Swagger를 구성해야 합니다.
+Web API 프로젝트에 이러한 NuGet 패키지를 설치한 후에 **단순화된** 다음 코드와 같이 시작 클래스에 Swagger를 구성해야 합니다.
 
 ```csharp
 public class Startup
@@ -366,12 +381,11 @@ public class Startup
         services.AddSwaggerGen(options =>
         {
             options.DescribeAllEnumsAsStrings();
-            options.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info
+            options.SwaggerDoc("v1", new OpenApiInfo
             {
                 Title = "eShopOnContainers - Catalog HTTP API",
                 Version = "v1",
-                Description = "The Catalog Microservice HTTP API. This is a Data-Driven/CRUD microservice sample",
-                TermsOfService = "Terms Of Service"
+                Description = "The Catalog Microservice HTTP API. This is a Data-Driven/CRUD microservice sample"
             });
         });
 
@@ -395,7 +409,7 @@ public class Startup
 
 이 작업이 완료되면 애플리케이션을 시작하고 다음과 같이 URL을 사용하여 다음 Swagger JSON 및 UI 엔드포인트를 탐색할 수 있습니다.
 
-```url
+```console
   http://<your-root-url>/swagger/v1/swagger.json
 
   http://<your-root-url>/swagger/

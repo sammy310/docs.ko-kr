@@ -3,13 +3,13 @@ title: 일반 웹 애플리케이션 아키텍처
 description: ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케이션 설계 | 일반 웹 애플리케이션 아키텍처 둘러보기
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 6a4e971c1cb19a12710ad7893378a49758b4016e
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.date: 12/04/2019
+ms.openlocfilehash: 7ec0d9cece40ba8a99e8ab5e028f7ac491ed6f4d
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74884243"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450186"
 ---
 # <a name="common-web-application-architectures"></a>일반 웹 애플리케이션 아키텍처
 
@@ -99,8 +99,7 @@ Azure에서 웹 애플리케이션을 확장하는 가장 간단한 방법은 �
 
 종속성 반전 원칙과 DDD(도메인 중심 디자인) 원칙을 따르는 애플리케이션은 비슷한 아키텍처에 도달하는 경향이 있습니다. 이 아키텍처는 수년 동안 여러 가지 이름으로 불렸습니다. 첫 번째 이름 중 하나는 육각형 아키텍처이고, 그 다음은 포트 및 어댑터(Ports-and-Adapters)였습니다. 최근에는 [양파형 아키텍처](https://jeffreypalermo.com/blog/the-onion-architecture-part-1/) 또는 [클린 아키텍처](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html)로 불렸습니다. 두 번째 이름인 클린 아키텍처는 이 eBook에서 이 아키텍처에 대한 이름으로 사용됩니다.
 
-> [!NOTE]
-> 클린 아키텍처라는 용어는 DDD 원칙을 사용하여 빌드되는 애플리케이션은 물론이고 DDD 원칙을 사용하지 않는 애플리케이션에도 적용할 수 있습니다. 전자의 경우 이 조합을 "클린 DDD 아키텍처"라고 부를 수 있습니다.
+eShopOnWeb 참조 애플리케이션은 프로젝트에 코드를 구성하는 데 클린 아키텍처 접근 방법을 사용합니다. [ardalis/cleanarchitecture](https://github.com/ardalis/cleanarchitecture) GitHub 리포지토리에서 자체 ASP.NET Core의 시작 지점으로 사용할 수 있는 솔루션 템플릿을 찾을 수 있습니다.
 
 클린 아키텍처는 비즈니스 논리와 애플리케이션 모델을 애플리케이션의 중심에 놓습니다. 비즈니스 논리가 데이터 액세스 또는 다른 인프라 고려 사항에 따라 달라지는 것이 아니라 이 종속성을 반전하여 인프라 및 구현 세부 사항이 애플리케이션 코어에 따라 달라집니다. 이것은 Application Core에서 추상화 또는 인터페이스를 정의하여 달성된 후 인프라 계층에서 정의된 형식에 따라 구현됩니다. 이 아키텍처를 시각화하는 일반적인 방법은 양파와 비슷한 일련의 동심원을 사용하는 것입니다. 그림 5-7은 이 아키텍처 표현 스타일의 예를 보여 줍니다.
 
@@ -152,7 +151,7 @@ Application Core는 비즈니스 모델을 보관하며, 비즈니스 모델에�
 
 - 엔터티(유지되는 비즈니스 모델 클래스)
 - 인터페이스
-- 서비스
+- Services
 - DTO
 
 인프라 프로젝트는 일반적으로 데이터 액세스 구현을 포함합니다. 일반적인 ASP.NET Core 웹 애플리케이션에서는 EF(Entity Framework) DbContext, 정의된 EF Core `Migration` 개체 및 데이터 액세스 구현 클래스가 해당 구현에 포함됩니다. 데이터 액세스 구현 코드를 추상화하는 가장 일반적인 방법은 [리포지토리 디자인 패턴](https://deviq.com/repository-pattern/)을 사용하는 것입니다.
@@ -263,21 +262,19 @@ networks:
 `docker-compose.yml` 파일은 `Web` 프로젝트에서 `Dockerfile`을 참조합니다. `Dockerfile`은 사용할 기본 컨테이너 및 애플리케이션의 구성 방식을 지정하는 데 사용됩니다. `Web`' `Dockerfile`:
 
 ```Dockerfile
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 WORKDIR /app
 
+COPY *.sln .
 COPY . .
 WORKDIR /app/src/Web
 RUN dotnet restore
 
 RUN dotnet publish -c Release -o out
 
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS runtime
 WORKDIR /app
 COPY --from=build /app/src/Web/out ./
-
-# Optional: Set this here if not setting it from docker-compose.yml
-# ENV ASPNETCORE_ENVIRONMENT Development
 
 ENTRYPOINT ["dotnet", "Web.dll"]
 ```
@@ -298,7 +295,7 @@ Visual Studio를 사용하여 애플리케이션에 Docker 지원을 추가하�
   <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
 - **리포지토리 패턴**  
   <https://deviq.com/repository-pattern/>
-- **클린 아키텍처 솔루션 샘플**  
+- **클린 아키텍처 솔루션 템플릿**  
   <https://github.com/ardalis/cleanarchitecture>
 - **마이크로 서비스 설계 eBook**  
   <https://aka.ms/MicroservicesEbook>

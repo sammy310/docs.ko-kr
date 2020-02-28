@@ -10,12 +10,12 @@ helpviewer_keywords:
 - implicit keyword [C#]
 - conversion operator [C#]
 - user-defined conversion [C#]
-ms.openlocfilehash: 2f4858d729093d3520e97610e0eac8600093187a
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 379deb20243a13cc608cb7fe119b341065327c1e
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75936871"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450676"
 ---
 # <a name="user-defined-conversion-operators-c-reference"></a>사용자 정의 전환 연산자(C# 참조)
 
@@ -49,4 +49,5 @@ ms.locfileid: "75936871"
 - [연산자 오버로드](operator-overloading.md)
 - [형식 테스트 및 캐스트 연산자](type-testing-and-cast.md)
 - [캐스팅 및 형식 변환](../../programming-guide/types/casting-and-type-conversions.md)
+- [디자인 지침 - 변환 연산자](../../../standard/design-guidelines/operator-overloads.md#conversion-operators)
 - [Chained user-defined explicit conversions in C#](https://docs.microsoft.com/archive/blogs/ericlippert/chained-user-defined-explicit-conversions-in-c)(C#의 연결된 사용자 정의 명시적 변환)

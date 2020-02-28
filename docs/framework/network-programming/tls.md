@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: e2f8f1304de587e1bedd8cde60e665971d903183
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: bae6bf6a1a5d87241b619bf024c099c48af6af43
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937691"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452684"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework를 사용한 TLS(전송 계층 보안) 모범 사례
 
@@ -140,7 +140,7 @@ WCF 프레임워크는 프로토콜 버전을 명시적으로 구성하지 않�
 
 ## <a name="if-your-app-targets-net-framework-35"></a>앱이 .NET Framework 3.5를 대상으로 하는 경우
 
-.NET Framework 또는 OS에서 보안 프로토콜을 선택하도록 허용하는 대신 보안 프로토콜을 명시적으로 설정해야 하는 경우에는 코드에 `SecurityProtocolTypeExtensions` 및 `SslProtocolsExtension` 열거형을 추가합니다. `SecurityProtocolTypeExtensions` 및 `SslProtocolsExtension`에는 `Tls12`, `Tls11` 및 `SystemDefault` 값이 포함됩니다. [Windows 8.1 및 Windows Server 2012 R2 기반 .NET Framework 3.5에 포함된 TLS 시스템 기본 버전에 대한 지원](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework)을 참조하세요.
+.NET 또는 OS에서 보안 프로토콜을 선택하도록 허용하는 대신 보안 프로토콜을 명시적으로 설정해야 하는 경우에는 코드에 `SecurityProtocolTypeExtensions` 및 `SslProtocolsExtension` 열거형을 추가합니다. `SecurityProtocolTypeExtensions` 및 `SslProtocolsExtension`에는 `Tls12`, `Tls11` 및 `SystemDefault` 값이 포함됩니다. 자세한 내용은 [Windows 8.1 및 Windows Server 2012 R2 기반 .NET Framework 3.5에 포함된 TLS 시스템 기본 버전에 대한 지원](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework)을 참조하세요.
 
 <a name="configuring-security-via-appcontext-switches"></a>
 

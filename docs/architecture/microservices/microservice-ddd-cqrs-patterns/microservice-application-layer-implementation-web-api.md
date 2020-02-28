@@ -1,13 +1,13 @@
 ---
 title: Web API를 사용하여 마이크로 서비스 애플리케이션 계층 구현
-description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | Web API 애플리케이션 계층에서 종속성 주입 및 중재자 패턴과 해당 구현 정보를 이해합니다.
-ms.date: 10/08/2018
-ms.openlocfilehash: 08cb409b06a54c6b30afa393a817e14bd64fbcbf
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+description: Web API 애플리케이션 계층에서 종속성 주입 및 중재자 패턴과 해당 구현 세부 정보를 이해합니다.
+ms.date: 01/30/2020
+ms.openlocfilehash: a88f3bfd11ea06df085ca82ed7265cb37006fc31
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "73737477"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502440"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Web API를 사용하여 마이크로 서비스 에플리케이션 계층 구현
 
@@ -92,11 +92,9 @@ public void ConfigureServices(IServiceCollection services)
 {
     // Register out-of-the-box framework services.
     services.AddDbContext<CatalogContext>(c =>
-    {
-        c.UseSqlServer(Configuration["ConnectionString"]);
-    },
-    ServiceLifetime.Scoped
-    );
+        c.UseSqlServer(Configuration["ConnectionString"]),
+        ServiceLifetime.Scoped);
+
     services.AddMvc();
     // Register custom application dependencies.
     services.AddScoped<IMyCustomRepository, MyCustomSQLRepository>();
@@ -289,7 +287,7 @@ public class CreateOrderCommand
 
 명령의 추가적인 특징은 변경할 수 없다는 점입니다. 예상되는 사용법이 도메인 모델에 의해 직접 처리되기 때문입니다. 예상된 수명 내에 변경할 필요가 없습니다. C# 클래스에서 불변성은 setter 또는 내부 상태를 변경하는 다른 메서드를 두지 않는 방식으로 달성할 수 있습니다.
 
-명령이 직렬화/역직렬화 프로세스를 수행하는 것을 의도하거나 기대한다면 속성에는 전용 setter와 `[DataMember]`(또는 `[JsonProperty]`) 특성이 있어야 하며, 그렇지 않으면 역직렬 변환기는 필요한 값을 사용하여 대상에 개체를 다시 구성할 수 없습니다.
+직렬화/역직렬화 프로세스를 거치는 명령을 원하는 경우 속성에는 private setter와 `[DataMember]`(또는 `[JsonProperty]`) 특성이 있어야 합니다. 그렇지 않으면 역직렬 변환기가 필요한 값을 사용하여 대상에서 개체를 다시 생성할 수 없습니다. 또한 클래스에 모든 속성에 대한 매개 변수를 포함하고 일반적인 camelCase 명명 규칙을 사용하는 생성자가 있고 생성자에 `[JsonConstructor]`로 주석을 추가하는 경우에도 실제로 읽기 전용 속성을 사용할 수 있습니다. 그러나 이 옵션을 사용하려면 더 많은 코드가 필요합니다.
 
 예를 들어 주문 생성을 위한 명령 클래스가 데이터 측면에서는 생성하려는 주문과 유사할 수 있지만 동일한 특성이 필요하지 않을 수도 있습니다. 예를 들어 `CreateOrderCommand`에는 주문 ID가 없는데, 이것은 주문이 아직 생성되지 않았기 때문입니다.
 
@@ -315,7 +313,7 @@ public class UpdateOrderStatusCommand
 
 ### <a name="the-command-handler-class"></a>명령 처리기 클래스
 
-각 명령에 대해 특정 명령 처리기 클래스를 구현해야 합니다. 이런 식으로 패턴이 작동하며 여기에 명령 개체, 도메인 개체 및 인프라 리포지토리 개체를 사용합니다. 명령 처리기는 실제로 CQRS와 DDD 측면에서 애플리케이션 계층의 핵심입니다. 하지만 모든 도메인 논리는 도메인 클래스 내에 포함되어야 합니다. 집계 루트(루트 엔터티), 자식 엔터티 또는 [도메인 서비스](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/) 내에 포함되어야 하지만 애플리케이션 계층의 클래스인 명령 처리기 내에 포함되지 말아야 합니다.
+각 명령에 대해 특정 명령 처리기 클래스를 구현해야 합니다. 이런 식으로 패턴이 작동하며 여기에 명령 개체, 도메인 개체 및 인프라 리포지토리 개체를 사용합니다. 명령 처리기는 실제로 CQRS와 DDD 측면에서 애플리케이션 계층의 핵심입니다. 하지만 모든 도메인 논리는 도메인 클래스에 포함되어야 합니다. 집계 루트(루트 엔터티), 자식 엔터티 또는 [도메인 서비스](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/) 내에 포함되어야 하지만 애플리케이션 계층의 클래스인 명령 처리기 내에 포함되지 말아야 합니다.
 
 명령 처리기 클래스는 이전 섹션에서 언급한 SRP(단일 책임 원칙)를 달성하기 위한 강력한 발판을 제공합니다.
 

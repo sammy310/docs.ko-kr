@@ -1,13 +1,13 @@
 ---
 title: dotnet 명령
 description: dotnet 명령(.NET Core CLI의 일반 드라이버) 및 사용법에 대해 알아봅니다.
-ms.date: 06/04/2018
-ms.openlocfilehash: 7674529980623caa2291987bdeba52f50ce2fc2c
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.date: 02/13/2020
+ms.openlocfilehash: 364978465b63401907b46ead64dbceb2f15c8169
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920542"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451170"
 ---
 # <a name="dotnet-command"></a>dotnet 명령
 
@@ -21,14 +21,14 @@ ms.locfileid: "76920542"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 ```dotnetcli
 dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
     [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--list-runtimes] [--list-sdks] [--roll-forward-on-no-candidate-fx] [--runtimeconfig] [-v|--verbosity] [--version]
 ```
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 ```dotnetcli
 dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
@@ -36,7 +36,7 @@ dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--de
     [--runtimeconfig] [-v|--verbosity] [--version]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 ```dotnetcli
 dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagnostics]
@@ -53,7 +53,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 ## <a name="options"></a>옵션
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `--additional-deps <PATH>`
 
@@ -117,7 +117,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 사용 중인 .NET Core SDK 버전을 출력합니다.
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `--additional-deps <PATH>`
 
@@ -167,7 +167,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 사용 중인 .NET Core SDK 버전을 출력합니다.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `--additionalprobingpath <PATH>`
 
@@ -215,7 +215,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 ### <a name="general"></a>일반
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 | 명령                                       | 기능                                                            |
 | --------------------------------------------- | ------------------------------------------------------------------- |
@@ -234,7 +234,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 | [dotnet store](dotnet-store.md)               | 어셈블리를 런타임 패키지 저장소에 저장합니다.                     |
 | [dotnet test](dotnet-test.md)                 | Test Runner를 사용하여 테스트를 실행합니다.                                     |
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 | 명령                             | 기능                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
@@ -252,7 +252,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 | [dotnet store](dotnet-store.md)     | 어셈블리를 런타임 패키지 저장소에 저장합니다.                     |
 | [dotnet test](dotnet-test.md)       | Test Runner를 사용하여 테스트를 실행합니다.                                     |
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 | 명령                             | 기능                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
@@ -293,16 +293,16 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 [dotnet nuget locals](dotnet-nuget-locals.md) | http-request 캐시, 임시 캐시 또는 시스템 전체의 글로벌 패키지 폴더와 같은 로컬 NuGet 리소스를 지우거나 목록에 포함합니다.
 [dotnet nuget push](dotnet-nuget-push.md) | 서버에 패키지를 푸시하고 게시합니다.
 
-### <a name="global-tools-commands"></a>전역 도구 명령
+### <a name="global-tool-path-and-local-tools-commands"></a>전역, 도구 경로 및 로컬 도구 명령
 
-[.NET Core 전역 도구](global-tools.md)는 .NET Core SDK 2.1.300부터 사용할 수 있습니다.
+도구는 NuGet 패키지에서 설치되고 명령 프롬프트에서 호출되는 콘솔 애플리케이션입니다. 도구를 직접 작성하거나 타사에서 작성한 도구를 설치할 수 있습니다. 도구를 전역 도구, 도구 경로 도구 및 로컬 도구라고도 합니다. 자세한 내용은 [.NET Core 도구 개요](global-tools.md)를 참조하세요. 전역 및 도구 경로 도구는 .NET Core SDK 2.1부터 사용할 수 있습니다. 로컬 도구는 .NET Core SDK 3.0부터 사용할 수 있습니다.
 
 명령 | 기능
 --- | ---
-[dotnet tool install](dotnet-tool-install.md) | 컴퓨터에 전역 도구를 설치합니다.
-[dotnet tool list](dotnet-tool-list.md) | 컴퓨터의 기본 디렉터리 또는 지정된 경로에 현재 설치된 모든 전역 도구를 나열합니다.
-[dotnet tool uninstall](dotnet-tool-uninstall.md) | 컴퓨터에서 전역 도구를 제거합니다.
-[dotnet tool update](dotnet-tool-update.md) | 컴퓨터에서 전역 도구를 업데이트합니다.
+[dotnet tool install](dotnet-tool-install.md) | 컴퓨터에 도구를 설치합니다.
+[dotnet tool list](dotnet-tool-list.md) | 컴퓨터에 현재 설치되어 있는 모든 전역, 도구 경로 또는 로컬 도구를 나열합니다.
+[dotnet tool uninstall](dotnet-tool-uninstall.md) | 컴퓨터에서 도구를 제거합니다.
+[dotnet tool update](dotnet-tool-update.md) | 컴퓨터에 설치된 도구를 업데이트합니다.
 
 ### <a name="additional-tools"></a>추가 도구
 
@@ -340,7 +340,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 ## <a name="environment-variables"></a>환경 변수
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `DOTNET_PACKAGES`
 
@@ -362,7 +362,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 `0`으로 설정된 경우 부 버전 롤포워드를 사용하지 않도록 설정합니다. 자세한 내용은 [롤포워드](../whats-new/dotnet-core-2-1.md#roll-forward)를 참조하세요.
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `DOTNET_PACKAGES`
 
@@ -380,7 +380,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 전역 위치에서 .NET Core 런타임, 공유 프레임워크 또는 SDK가 확인되는지 여부를 지정합니다. 설정하지 않은 경우 기본값은 `true`입니다. 전역 위치에서 확인하지 않고 격리된 .NET Core 설치를 가지려면 `false`로 설정합니다(값 `0` 또는 `false`는 허용됨). 다중 수준의 조회에 대한 자세한 내용은 [다중 수준 SharedFX 조회](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md)를 참조하세요.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `DOTNET_PACKAGES`
 

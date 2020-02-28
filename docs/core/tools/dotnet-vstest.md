@@ -2,12 +2,12 @@
 title: dotnet vstest 명령
 description: dotnet vtest 명령은 프로젝트와 모든 종속성을 빌드합니다.
 ms.date: 05/30/2018
-ms.openlocfilehash: c3838617ed539cf56f2840b826e9de58833820fd
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 3fdb5443d6d0cfbe1e7e88bc824cbb930f211260
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215307"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451183"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
@@ -21,7 +21,7 @@ ms.locfileid: "77215307"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 ```dotnetcli
 dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath]
@@ -30,7 +30,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
     [[--] <args>...]] [-?|--Help|/?|/Help]
 ```
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 ```dotnetcli
 dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath] 
@@ -38,7 +38,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
     [-lt|--ListTests|/lt|/ListTests] [--ParentProcessId|/ParentProcessId] [--Port|/Port] [--Diag|/Diag] [[--] <args>...]] [-?|--Help|/?|/Help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 ```dotnetcli
 dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath]
@@ -60,7 +60,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 ## <a name="options"></a>옵션
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `--Settings|/Settings:<Settings File>`
 
@@ -148,7 +148,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 어댑터에 전달될 추가 인수를 지정합니다. 인수는 `<n>=<v>` 형식의 이름-값 쌍으로 지정됩니다. 여기서 `<n>`은 인수 이름이고 `<v>`는 인수 값입니다. 여러 개의 인수를 구분하려면 공백을 사용합니다.
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `--Settings|/Settings:<Settings File>`
 
@@ -224,7 +224,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 어댑터에 전달될 추가 인수를 지정합니다. 인수는 `<n>=<v>` 형식의 이름-값 쌍으로 지정됩니다. 여기서 `<n>`은 인수 이름이고 `<v>`는 인수 값입니다. 여러 개의 인수를 구분하려면 공백을 사용합니다.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `--Settings|/Settings:<Settings File>`
 

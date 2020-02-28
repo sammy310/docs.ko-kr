@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: f9fa6f893e7f999564c4dcb43d40755547d3c793
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c3db8f7791e510768608e834339526fb82771979
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713120"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451943"
 ---
 # <a name="readonly-c-reference"></a>readonly(C# 참조)
 
@@ -70,7 +70,7 @@ p2.y = 66;        // Error
 
 컴파일러 오류 메시지가 표시됩니다.
 
-`A readonly field cannot be assigned to (except in a constructor or a variable initializer)`
+**읽기 전용 필드에는 할당할 수 없습니다. 단 생성자 또는 변수 이니셜라이저에서는 예외입니다.**
 
 ## <a name="readonly-struct-example"></a>읽기 전용 구조체 예제
 

@@ -1,13 +1,13 @@
 ---
 title: IHostedService 및 BackgroundService 클래스를 사용하여 마이크로 서비스에서 백그라운드 작업 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | IHostedService 및 BackgroundService를 사용하여 마이크로 서비스 .NET Core에서 백그라운드 작업을 구현하는 새 옵션을 이해합니다.
-ms.date: 01/07/2019
-ms.openlocfilehash: d289d8ccc737fa9fc13b95da44e4b617b431f96a
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: fab67c816e90c69a4d593422b4974cb9b8819807
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737169"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502298"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>IHostedService 및 BackgroundService 클래스를 사용하여 마이크로 서비스에서 백그라운드 작업 구현
 
@@ -21,15 +21,15 @@ ms.locfileid: "73737169"
 
 **그림 6-26**. WebHost 및 Host에서 IHostedService 사용 비교
 
-ASP.NET Core 1.x 및 2.x는 웹앱의 백그라운드 프로세스에 대해 IWebHost를 지원합니다. .NET Core 2.1은 일반 콘솔 앱을 사용하는 백그라운드 프로세스에 대해 IHost를 지원합니다. `WebHost`와 `Host` 사이에서 만들어진 차이점입니다.
+ASP.NET Core 1.x 및 2.x는 웹앱의 백그라운드 프로세스에 대해 `IWebHost`를 지원합니다. .NET Core 2.1 이상 버전에서는 일반 콘솔 앱을 사용하는 백그라운드 프로세스에 대해 `IHost`를 지원합니다. `WebHost`와 `Host` 사이에서 만들어진 차이점입니다.
 
-ASP.NET Core 2.0의 `WebHost`(`IWebHost`를 구현하는 기본 클래스)는 MVC 웹앱 또는 Web API 서비스를 구현하는 경우와 같이 프로세스에 HTTP 서버 기능을 제공하는 데 사용하는 인프라 아티팩트입니다. 종속성 주입을 사용하고 요청 파이프라인 등에 미들웨어를 넣고 백그라운드 작업에 대해 이러한 `IHostedServices`를 정확하게 사용할 수 있도록 하는 ASP.NET Core의 새로운 모든 인프라 장점을 제공합니다.
+ASP.NET Core 2.0의 `WebHost`(`IWebHost`를 구현하는 기본 클래스)는 MVC 웹앱 또는 Web API 서비스를 구현하는 경우와 같이 프로세스에 HTTP 서버 기능을 제공하는 데 사용하는 인프라 아티팩트입니다. 종속성 주입을 사용하고 요청 파이프라인에 미들웨어를 삽입하는 등 ASP.NET Core의 새로운 모든 인프라 장점을 제공합니다. `WebHost`는 백그라운드 작업에 대해 이와 동일한 `IHostedServices`를 사용합니다.
 
 `Host`(`IHost`를 구현하는 기본 클래스)는 .NET Core 2.1에서 도입되었습니다. 기본적으로 `Host`를 통해 `WebHost`(종속성 주입, 호스팅 서비스 등)를 사용하여 가진 것보다 유사한 인프라를 가질 수 있지만 이 경우 MVC, Web API 또는 HTTP 서버 기능과 관련이 없는 호스트로 간단하고 쉬운 프로세스를 갖길 원합니다.
 
-따라서 `IHostedServices`를 호스트하기 위해 만들어진 마이크로 서비스와 같은 호스팅 서비스 및 그 밖의 것을 처리하도록 IHost로 특수화된 호스트 프로세스를 선택하고 만들 수 있거나 기존 ASP.NET Core Web API 또는 MVC 앱과 같이 기존 ASP.NET Core `WebHost`를 대안으로 확장할 수 있습니다.
+따라서 `IHostedServices`를 호스트하기 위해 만들어진 마이크로 서비스와 같은 호스팅 서비스 및 그 밖의 것을 처리하도록 `IHost`로 특수화된 호스트 프로세스를 선택하고 만들 수 있거나 기존 ASP.NET Core Web API 또는 MVC 앱과 같이 기존 ASP.NET Core `WebHost`를 대안으로 확장할 수 있습니다.
 
-각 방식은 비즈니스 및 확장성 요구에 따라 장점과 단점을 갖습니다. 요점은 기본적으로 백그라운드 작업에 HTTP(IWebHost)와 아무 관련이 없다면 IHost를 사용해야 합니다.
+각 방식은 비즈니스 및 확장성 요구에 따라 장점과 단점을 갖습니다. 요점은 기본적으로 백그라운드 작업에 HTTP(`IWebHost`)와 아무 관련이 없다면 `IHost`를 사용해야 합니다.
 
 ## <a name="registering-hosted-services-in-your-webhost-or-host"></a>WebHost 또는 Host에서 호스팅 서비스 등록
 
@@ -43,7 +43,7 @@ SignalR은 호스팅 서비스를 사용하는 아티팩트의 한 가지 예이
 - `ILogger`와 같은 공통 서비스를 공유하는 동안 웹앱의 백그라운드에서 메시지 큐의 메시지 처리
 - `Task.Run()`으로 시작한 백그라운드 작업
 
-기본적으로 IHostedService에 따라 백그라운드 작업에 이러한 작업을 오프로드할 수 있습니다.
+기본적으로 `IHostedService`를 구현하는 백그라운드 작업에 이러한 작업을 오프로드할 수 있습니다.
 
 하나 또는 여러 `IHostedServices`를 `WebHost` 또는 `Host`에 추가하는 방법은 ASP.NET Core `WebHost`(또는 .NET Core 2.1 이상의 `Host`)에서 <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions.AddHostedService%2A> 확장 메서드를 통해 등록하는 것입니다. 기본적으로 ASP.NET WebHost의 다음 코드에서처럼 `Startup` 클래스의 친숙한 `ConfigureServices()` 메서드 내에서 호스팅 서비스를 등록해야 합니다.
 
@@ -232,21 +232,21 @@ WebHost.CreateDefaultBuilder(args)
 
 ### <a name="deployment-considerations-and-takeaways"></a>배포 고려 사항 및 요점
 
-ASP.NET Core `WebHost` 또는 .NET Core `Host`를 배포하는 방법은 최종 솔루션에 영향을 줄 수 있습니다. 예를 들어 IIS에서 `WebHost` 또는 일반 Azure App Service를 배포하는 경우 호스트는 앱 풀 재활용으로 인해 종료될 수 있습니다. 하지만 호스트를 컨테이너로 Kubernetes 또는 Service Fabric과 같은 오케스트레이터에 배포하는 경우 호스트의 실제 인스턴스의 보증된 수를 제어할 수 있습니다. 또한 Azure Functions와 같은 해당 시나리오에 대해 특별히 만들어진 클라우드에서 다른 방법을 고려할 수 있습니다. 마지막으로 서비스가 항상 실행 중이어야 하고 Windows Server에 배포하는 경우 Windows 서비스를 사용할 수 있습니다.
+ASP.NET Core `WebHost` 또는 .NET Core `Host`를 배포하는 방법은 최종 솔루션에 영향을 줄 수 있습니다. 예를 들어 IIS에서 `WebHost` 또는 일반 Azure App Service를 배포하는 경우 호스트는 앱 풀 재활용으로 인해 종료될 수 있습니다. 하지만 호스트를 컨테이너로 Kubernetes 같은 오케스트레이터에 배포하는 경우 호스트의 실제 인스턴스의 보증된 수를 제어할 수 있습니다. 또한 Azure Functions와 같은 해당 시나리오에 대해 특별히 만들어진 클라우드에서 다른 방법을 고려할 수 있습니다. 마지막으로 서비스가 항상 실행 중이어야 하고 Windows Server에 배포하는 경우 Windows 서비스를 사용할 수 있습니다.
 
 하지만 앱 풀에 배포된 `WebHost`의 경우에도 애플리케이션의 메모리 내 캐시를 다시 채우거나 플러시하는 등의 시나리오는 계속 적용할 수 있습니다.
 
-`IHostedService` 인터페이스는 ASP.NET Core 웹 애플리케이션(.NET Core 2.0에서) 또는 모든 프로세스/호스트(`IHost`로 .NET Core 2.1에서 시작)에서 백그라운드 작업을 시작하는 편리한 방법을 제공합니다. 주요 혜택은 호스트 자체가 종료될 때 백그라운드 작업의 정리 코드에 대한 정상적인 취소를 얻는 기회입니다.
+`IHostedService` 인터페이스는 ASP.NET Core 웹 애플리케이션(.NET Core 2.0 이상 버전에서) 또는 모든 프로세스/호스트(`IHost`로 .NET Core 2.1에서 시작)에서 백그라운드 작업을 시작하는 편리한 방법을 제공합니다. 주요 혜택은 호스트 자체가 종료될 때 백그라운드 작업의 정리 코드에 대한 정상적인 취소를 얻는 기회입니다.
 
 ## <a name="additional-resources"></a>추가 자료
 
-- **ASP.NET Core/Standard 2.0에서 예약된 작업 빌드**
+- **ASP.NET Core/Standard 2.0에서 예약된 작업 빌드** \
   <https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>
 
-- **ASP.NET Core 2.0에서 IHostedService 구현**
+- **ASP.NET Core 2.0에서 IHostedService 구현** \
   <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>
 
-- **ASP.NET Core 2.1을 사용한 GenericHost 샘플**
+- **ASP.NET Core 2.1을 사용한 GenericHost 샘플** \
   <https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
 
 >[!div class="step-by-step"]

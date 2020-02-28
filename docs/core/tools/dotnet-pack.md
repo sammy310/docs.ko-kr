@@ -1,21 +1,17 @@
 ---
 title: dotnet pack 명령
 description: dotnet pack 명령은 .NET Core 프로젝트에 대한 NuGet 패키지를 만듭니다.
-ms.date: 08/08/2019
-ms.openlocfilehash: 057d1029e5c933912c43c178b6db8a8498f2ed57
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 865262f1eb314f9b7e8ee713c573a965e89ded93
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734115"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503650"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
-**이 문서의 적용 대상:**  ✔️ .NET Core 1.x SDK 이상 버전
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**이 문서의 적용 대상:** ✔️ .NET Core 2.x SDK 이상 버전
 
 ## <a name="name"></a>이름
 
@@ -63,13 +59,13 @@ dotnet pack [-h|--help]
 
 ## <a name="options"></a>옵션
 
-- **`-c|--configuration {Debug|Release}`**
+- **`-c|--configuration <CONFIGURATION>`**
 
-  빌드 구성을 정의합니다. 기본값은 `Debug`입니다.
+  빌드 구성을 정의합니다. 대부분의 프로젝트에 대한 기본값은 `Debug`이지만 프로젝트의 빌드 구성 설정을 재정의할 수 있습니다.
 
 - **`--force`**
 
-  마지막 복원이 성공한 경우에도 모든 종속성을 강제 확인합니다. 이 플래그를 지정하는 것은 *project.assets.json* 파일을 삭제하는 것과 같습니다. .NET Core 2.0 SDK 이후 사용할 수 있는 옵션입니다.
+  마지막 복원이 성공한 경우에도 모든 종속성을 강제 확인합니다. 이 플래그를 지정하는 것은 *project.assets.json* 파일을 삭제하는 것과 같습니다.
 
 - **`-h|--help`**
 
@@ -93,11 +89,11 @@ dotnet pack [-h|--help]
 
 - **`--no-dependencies`**
 
-  프로젝트 간 참조를 무시하고 루트 프로젝트만 복원합니다. .NET Core 2.0 SDK 이후 사용할 수 있는 옵션입니다.
+  프로젝트 간 참조를 무시하고 루트 프로젝트만 복원합니다.
 
 - **`--no-restore`**
 
-  명령을 실행할 때 암시적 복원을 실행하지 않습니다. .NET Core 2.0 SDK 이후 사용할 수 있는 옵션입니다.
+  명령을 실행할 때 암시적 복원을 실행하지 않습니다.
 
 - **`--nologo`**
 
@@ -109,7 +105,7 @@ dotnet pack [-h|--help]
 
 - **`--runtime <RUNTIME_IDENTIFIER>`**
 
-  패키지를 복원할 대상 런타임을 지정합니다. RID(런타임 식별자) 목록은 [RID 카탈로그](../rid-catalog.md)를 참조하세요. .NET Core 2.0 SDK 이후 사용할 수 있는 옵션입니다.
+  패키지를 복원할 대상 런타임을 지정합니다. RID(런타임 식별자) 목록은 [RID 카탈로그](../rid-catalog.md)를 참조하세요.
 
 - **`-s|--serviceable`**
 
@@ -167,7 +163,7 @@ dotnet pack [-h|--help]
   dotnet pack -p:TargetFrameworks=net45
   ```
 
-- 프로젝트를 압축하고 복원 작업에 대한 특정 런타임(Windows 10)을 사용합니다(.NET Core SDK 2.0 이상 버전).
+- 프로젝트를 압축하고 복원 작업에 대한 특정 런타임(Windows 10)을 사용합니다.
 
   ```dotnetcli
   dotnet pack --runtime win10-x64

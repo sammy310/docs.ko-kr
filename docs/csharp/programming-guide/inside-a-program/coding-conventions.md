@@ -6,15 +6,16 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: c56d673de958f49a9ace60350442e89039e1d69f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 77b173a420f26834855e0bdca3c8d04406ac65d4
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712106"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452008"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# 코딩 규칙(C# 프로그래밍 가이드)
- 코딩 규칙은 다음과 같은 용도로 사용됩니다.  
+
+코딩 규칙은 다음과 같은 용도로 사용됩니다.  
   
 - 코드를 확인하는 사용자들이 레이아웃이 아닌 내용에 집중할 수 있도록 일관성 있게 표시되는 코드를 만듭니다.  
   
@@ -24,7 +25,7 @@ ms.locfileid: "75712106"
   
 - C# 모범 사례를 제시합니다.  
 
- 이 항목의 지침은 Microsoft에서 샘플과 설명서를 개발하는 데 사용됩니다.  
+이 문서의 지침은 Microsoft에서 샘플과 설명서를 개발하는 데 사용됩니다.  
   
 ## <a name="naming-conventions"></a>명명 규칙  
   
@@ -35,7 +36,8 @@ ms.locfileid: "75712106"
 - 다른 지침에 맞도록 조정하기 위해 Visual Studio 디자이너 도구를 사용하여 만든 개체 이름을 변경할 필요는 없습니다.  
   
 ## <a name="layout-conventions"></a>레이아웃 규칙  
- 효율적인 레이아웃에서는 서식을 사용하여 코드 구조를 강조하고 코드를 보다 쉽게 읽을 수 있도록 생성합니다. Microsoft 예제 및 샘플은 다음 규칙을 따릅니다.  
+
+효율적인 레이아웃에서는 서식을 사용하여 코드 구조를 강조하고 코드를 보다 쉽게 읽을 수 있도록 생성합니다. Microsoft 예제 및 샘플은 다음 규칙을 따릅니다.  
   
 - 기본 코드 편집기 설정(스마트 들여쓰기, 4자 들여쓰기, 탭을 공백으로 저장)을 사용합니다. 자세한 내용은 [옵션, 텍스트 편집기, C#, 서식](/visualstudio/ide/reference/options-text-editor-csharp-formatting)을 참조하세요.  
   
@@ -66,7 +68,8 @@ ms.locfileid: "75712106"
 - 서식이 지정된 별표 블록으로 주석을 묶지 않습니다.  
   
 ## <a name="language-guidelines"></a>언어 지침  
- 다음 섹션에서는 C# 팀이 코드 예제와 샘플을 준비할 때 따르는 방식에 대해 설명합니다.  
+
+다음 섹션에서는 C# 팀이 코드 예제와 샘플을 준비할 때 따르는 방식에 대해 설명합니다.  
   
 ### <a name="string-data-type"></a>문자열 데이터 형식  
   
@@ -94,33 +97,38 @@ ms.locfileid: "75712106"
   
 - [dynamic](../../language-reference/builtin-types/reference-types.md) 대신 `var`를 사용하지 않습니다.  
   
-- [for](../../language-reference/keywords/for.md) 및 [foreach](../../language-reference/keywords/foreach-in.md) 루프의 루프 변수 형식을 결정하려면 암시적 형식을 사용합니다.  
+- [for](../../language-reference/keywords/for.md) 루프의 루프 변수 형식을 결정하려면 암시적 형식을 사용합니다.  
   
      다음 예제에서는 `for` 문에서 암시적 형식을 사용합니다.  
   
      [!code-csharp[csProgGuideCodingConventions#7](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#7)]  
-  
-     다음 예제에서는 `foreach` 문에서 암시적 형식을 사용합니다.  
-  
-     [!code-csharp[csProgGuideCodingConventions#12](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#12)]  
-  
+
+- [foreach](../../language-reference/keywords/foreach-in.md) 루프의 루프 변수 형식을 결정하기 위해 암시적 형식을 사용하지 마세요.
+
+     다음 예제에서는 `foreach` 문에서 명시적 형식을 사용합니다.
+
+     [!code-csharp[csProgGuideCodingConventions#12](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#12)]
+
+     > [!NOTE]
+     > 반복 가능한 컬렉션의 요소 형식을 실수로 변경하지 않도록 주의해야 합니다. 예를 들어 `foreach` 문에서 <xref:System.Linq.IQueryable?displayProperty=nameWithType>을 <xref:System.Collections.IEnumerable?displayProperty=nameWithType>으로 전환하기 쉬운데 그러면 쿼리 실행이 변경됩니다.
+
 ### <a name="unsigned-data-type"></a>부호 없는 데이터 형식  
   
-- 일반적으로는 부호 없는 형식 대신 `int`를 사용합니다. `int`는 C# 전체에서 일반적으로 사용되며, `int`를 사용하는 경우 다른 라이브러리와 보다 쉽게 상호 작용할 수 있습니다.  
+일반적으로는 부호 없는 형식 대신 `int`를 사용합니다. `int`는 C# 전체에서 일반적으로 사용되며, `int`를 사용하는 경우 다른 라이브러리와 보다 쉽게 상호 작용할 수 있습니다.  
   
 ### <a name="arrays"></a>배열  
   
-- 선언 줄에서 배열을 초기화할 때는 간결한 구문을 사용합니다.  
+선언 줄에서 배열을 초기화할 때는 간결한 구문을 사용합니다.  
   
-     [!code-csharp[csProgGuideCodingConventions#13](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#13)]  
+[!code-csharp[csProgGuideCodingConventions#13](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#13)]  
   
 ### <a name="delegates"></a>대리자  
   
-- 대리자 형식의 인스턴스를 만들려면 간결한 구문을 사용합니다.  
+대리자 형식의 인스턴스를 만들려면 간결한 구문을 사용합니다.  
   
-     [!code-csharp[csProgGuideCodingConventions#14](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#14)]  
+[!code-csharp[csProgGuideCodingConventions#14](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#14)]  
   
-     [!code-csharp[csProgGuideCodingConventions#15](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#15)]  
+[!code-csharp[csProgGuideCodingConventions#15](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#15)]  
   
 ### <a name="try-catch-and-using-statements-in-exception-handling"></a>예외 처리의 try-catch 및 using 문  
   
@@ -134,9 +142,9 @@ ms.locfileid: "75712106"
   
 ### <a name="-and-124124-operators"></a>&& 및 &#124;&#124; 연산자  
   
-- 예외를 방지하고 불필요한 비교를 건너뛰어 성능을 개선하려면 비교를 수행할 때 다음 예제에 나와 있는 것처럼 [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) 대신 [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-)를 사용하고 [&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) 대신 [&#124;&#124;](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-)를 사용합니다.  
+예외를 방지하고 불필요한 비교를 건너뛰어 성능을 개선하려면 비교를 수행할 때 다음 예제에 나와 있는 것처럼 [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) 대신 [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-)를 사용하고 [&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) 대신 [&#124;&#124;](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-)를 사용합니다.  
   
-     [!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
+[!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
   
 ### <a name="new-operator"></a>New 연산자  
   
@@ -154,15 +162,15 @@ ms.locfileid: "75712106"
   
 ### <a name="event-handling"></a>이벤트 처리  
   
-- 나중에 제거할 필요가 없는 이벤트 처리기를 정의하는 경우 람다 식을 사용합니다.  
+나중에 제거할 필요가 없는 이벤트 처리기를 정의하는 경우 람다 식을 사용합니다.  
   
-     [!code-csharp[csProgGuideCodingConventions#22](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#22)]  
+[!code-csharp[csProgGuideCodingConventions#22](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#22)]  
   
-     [!code-csharp[csProgGuideCodingConventions#23](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#23)]  
+[!code-csharp[csProgGuideCodingConventions#23](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#23)]  
   
 ### <a name="static-members"></a>정적 멤버  
   
-- *ClassName.StaticMember*와 같이 클래스 이름을 사용하여 [static](../../language-reference/keywords/static.md) 멤버를 호출합니다. 이렇게 하면 정적 액세스가 명확하게 표시되므로 코드를 보다 쉽게 읽을 수 있습니다.  파생 클래스 이름을 사용하여 기본 클래스에 정의된 정적 멤버를 정규화해서는 안 됩니다.  이 코드는 컴파일되기는 하지만 가독성이 떨어지며 나중에 파생 클래스와 이름이 같은 정적 멤버를 추가하면 코드가 손상될 수도 있습니다.  
+*ClassName.StaticMember*와 같이 클래스 이름을 사용하여 [static](../../language-reference/keywords/static.md) 멤버를 호출합니다. 이렇게 하면 정적 액세스가 명확하게 표시되므로 코드를 보다 쉽게 읽을 수 있습니다.  파생 클래스 이름을 사용하여 기본 클래스에 정의된 정적 멤버를 정규화해서는 안 됩니다.  이 코드는 컴파일되기는 하지만 가독성이 떨어지며 나중에 파생 클래스와 이름이 같은 정적 멤버를 추가하면 코드가 손상될 수도 있습니다.  
   
 ### <a name="linq-queries"></a>LINQ 쿼리  
   
@@ -193,7 +201,8 @@ ms.locfileid: "75712106"
      [!code-csharp[csProgGuideCodingConventions#30](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#30)]  
   
 ## <a name="security"></a>보안  
- [보안 코딩 지침](../../../standard/security/secure-coding-guidelines.md)의 지침을 따르세요.  
+
+[보안 코딩 지침](../../../standard/security/secure-coding-guidelines.md)의 지침을 따르세요.  
   
 ## <a name="see-also"></a>참조
 

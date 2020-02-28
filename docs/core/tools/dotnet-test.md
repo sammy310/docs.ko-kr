@@ -2,18 +2,18 @@
 title: dotnet test 명령
 description: dotnet test 명령은 지정된 프로젝트에서 단위 테스트를 실행하는 데 사용됩니다.
 ms.date: 05/29/2018
-ms.openlocfilehash: c3115d546efb1f076ae9f9731f83a12183aa4154
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 909815151265117395c6d8d13b4443a245c05f9e
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182506"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451196"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>이름
 
 `dotnet test` - 단위 테스트를 실행하는 데 사용하는 .NET 테스트 드라이버입니다.
 
@@ -21,7 +21,7 @@ ms.locfileid: "71182506"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 ```dotnetcli
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
@@ -31,7 +31,7 @@ dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame] [-c|--configuration] 
 dotnet test [-h|--help]
 ```
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 ```dotnetcli
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
@@ -40,7 +40,7 @@ dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect
 dotnet test [-h|--help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 ```dotnetcli
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [-o|--output] [-s|--settings] [-t|--list-tests]  [-v|--verbosity]
@@ -66,7 +66,7 @@ dotnet test [-h|--help]
 
 ## <a name="options"></a>옵션
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
@@ -140,7 +140,7 @@ dotnet test [-h|--help]
 
 RunSettings에 대한 자세한 내용은 [vstest.console.exe: Passing RunSettings args(vstest.console.exe: RunSettings 인수 전달)](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)를 참조하세요.
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
@@ -202,7 +202,7 @@ RunSettings에 대한 자세한 내용은 [vstest.console.exe: Passing RunSettin
 
 명령의 세부 정보 표시 수준을 설정합니다. 허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
@@ -278,16 +278,17 @@ RunSettings에 대한 자세한 내용은 [vstest.console.exe: Passing RunSettin
 
 | 테스트 프레임워크 | 지원되는 속성                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
-| MSTest         | <ul><li>FullyQualifiedName</li><li>name</li><li>ClassName</li><li>우선 순위</li><li>TestCategory</li></ul> |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>이름</li><li>ClassName</li><li>우선 순위</li><li>TestCategory</li></ul> |
 | xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>특성</li></ul>                                   |
 
 `<operator>`은(는) 속성과 값 사이의 관계를 설명합니다.
 
-| 연산자 | 함수        |
+| 연산자 | 기능        |
 | :------: | --------------- |
 | `=`      | 정확하게 일치     |
 | `!=`     | 정확하게 일치하지 않음 |
 | `~`      | 포함        |
+| `!~`     | 포함하지 않음    |
 
 `<value>`는 문자열입니다. 모든 조회는 대/소문자를 구분합니다.
 
@@ -295,7 +296,7 @@ RunSettings에 대한 자세한 내용은 [vstest.console.exe: Passing RunSettin
 
 식은 조건부 연산자와 조인할 수 있습니다.
 
-| 연산자            | 함수 |
+| 연산자            | 기능 |
 | ------------------- | -------- |
 | <code>&#124;</code> | 또는       |
 | `&`                 | AND      |
@@ -304,7 +305,7 @@ RunSettings에 대한 자세한 내용은 [vstest.console.exe: Passing RunSettin
 
 선택적 단위 테스트 필터링을 사용하는 방법에 대한 자세한 내용 및 예제는 [선택적 단위 테스트 실행](../testing/selective-unit-tests.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [프레임워크 및 대상](../../standard/frameworks.md)
 - [.NET Core RID(런타임 식별자) 카탈로그](../rid-catalog.md)

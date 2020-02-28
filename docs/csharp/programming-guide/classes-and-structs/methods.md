@@ -5,12 +5,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 8c90f06bfadc528bd9575ead30e6b01263055fe8
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 8348e080d833e79dd364aee511ac7d05fb53d1cc
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743913"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543562"
 ---
 # <a name="methods-c-programming-guide"></a>메서드(C# 프로그래밍 가이드)
 
@@ -21,7 +21,7 @@ ms.locfileid: "76743913"
 
 ## <a name="method-signatures"></a>메서드 시그니처
 
-메서드는 [클래스](../../language-reference/keywords/class.md) 또는 [구조체](../../language-reference/keywords/struct.md) 에서 `public` 또는 `private`등의 액세스 수준, `abstract` 또는 `sealed`등의 선택적 한정자, 반환 값, 메서드 이름 및 메서드 매개 변수를 지정하여 선언합니다. 이들 파트는 함께 메서드 서명을 구성합니다.
+메서드는 [클래스](../../language-reference/keywords/class.md), [구조체](../../language-reference/keywords/struct.md) 또는 [인터페이스](../interfaces/index.md)에서 액세스 수준(예: `public` 또는 `private`), 선택적 한정자(예: `abstract` 또는 `sealed`), 반환 값, 메서드 이름 및 기타 메서드 매개 변수를 지정하여 선언합니다. 이들 파트는 함께 메서드 서명을 구성합니다.
 
 > [!NOTE]
 > 메서드의 반환 값은 메서드 오버로드를 위한 메서드 서명의 파트가 아닙니다. 그러나 대리자와 대리자가 가리키는 메서드 간의 호환성을 결정할 경우에는 메서드 서명의 파트입니다.
@@ -38,7 +38,7 @@ ms.locfileid: "76743913"
 
 ## <a name="method-parameters-vs-arguments"></a>메서드 매개 변수 및 인수
 
-메서드 정의는 필요한 모든 매개 변수의 이름 및 형식을 지정합니다. 호출하는 코드에서 메서드를 호출할 때 해당 코드는 각 매개 변수에 대한 인수라는 구체적인 값을 제공합니다. 인수는 매개 변수 형식과 호환되어야 하지만 호출하는 코드에 사용된 인수 이름(있는 경우)은 메서드에 정의된 명명된 매개 변수와 동일할 필요가 없습니다. 예:
+메서드 정의는 필요한 모든 매개 변수의 이름 및 형식을 지정합니다. 호출하는 코드에서 메서드를 호출할 때 해당 코드는 각 매개 변수에 대한 인수라는 구체적인 값을 제공합니다. 인수는 매개 변수 형식과 호환되어야 하지만 호출하는 코드에 사용된 인수 이름(있는 경우)은 메서드에 정의된 명명된 매개 변수와 동일할 필요가 없습니다. 예를 들어:
 
 [!code-csharp[csProgGuideObjects#74](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#74)]
 

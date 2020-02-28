@@ -3,16 +3,20 @@ title: 선택적 단위 테스트 실행
 description: 필터 식을 사용하여 .NET Core의 dotnet 테스트 명령을 통해 선택적 단위 테스트를 실행하는 방법입니다.
 author: smadala
 ms.date: 03/22/2017
-ms.openlocfilehash: 57428dad2de6c2507ca2cdc42e3df9e83a1edd69
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b9156300587215e68c01c609e298dbc1a2c53d11
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715454"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543510"
 ---
 # <a name="running-selective-unit-tests"></a>선택적 단위 테스트 실행
 
 .NET Core에서 `dotnet test` 명령과 함께 필터 식을 사용하여 선택적 테스트를 실행할 수 있습니다. 이 문서에서는 실행되는 테스트를 필터링하는 방법을 보여 줍니다. 다음 예제에서는 `dotnet test`를 사용합니다. `vstest.console.exe`를 사용하는 경우 `--filter`를 `--testcasefilter:`로 바꾸세요.
+
+> [!NOTE]
+> `*nix`에서 느낌표(!)를 포함하는 필터를 사용하려면 이스케이프해야 합니다. `!`가 예약되어 있기 때문입니다. 예를 들어 이 필터는 네임스페이스에 IntegrationTests: `dotnet test --filter FullyQualifiedName\!~IntegrationTests`가 포함되어 있으면 모든 테스트를 건너뜁니다.
+> 느낌표 앞에 백슬래시가 온다는 것을 유의하세요.
 
 ## <a name="mstest"></a>MSTest
 

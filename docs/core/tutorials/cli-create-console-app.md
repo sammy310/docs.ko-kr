@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: 6e1c7881aa415ea54307d80214001a2f0fe5b4a6
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: af1b374cd14d5070194c035024ce2328c9016646
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920473"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503549"
 ---
 # <a name="get-started-with-net-core-using-the-net-core-cli"></a>.NET Core CLI를 사용하여 .NET Core 시작하기
 
@@ -64,17 +64,25 @@ dotnet run
 
     [dotnet run](../tools/dotnet-run.md)은 [dotnet build](../tools/dotnet-build.md)를 호출하여 빌드 대상이 빌드되었는지를 확인하고 `dotnet <assembly.dll>`을 호출하여 대상 애플리케이션을 실행합니다.
     
-    ```console
+    ```dotnetcli
     dotnet run
+    ```
 
+    다음과 같은 출력을 얻습니다.
+
+    ```console
     Hello World!
     ```
     
     또한 `dotnet build`를 실행하여 빌드 콘솔 애플리케이션을 실행하지 않고 코드를 컴파일할 수도 있습니다. 그러면 프로젝트 이름에 따라 컴파일된 애플리케이션이 DLL 파일로 만들어집니다. 이 경우 만들어진 파일 이름은 *Hello.dll*입니다. 이 앱은 Windows에서 `dotnet bin\Debug\netcoreapp3.1\Hello.dll`을 사용하여 실행할 수 있습니다(비 Windows 시스템의 경우 `/` 사용).
     
-    ```console
+    ```dotnetcli
     dotnet bin\Debug\netcoreapp3.1\Hello.dll
+    ```
 
+    다음과 같은 출력을 얻습니다.
+
+    ```console
     Hello World!
     ```
     
@@ -98,8 +106,13 @@ dotnet run
 
 03. 앱에 매개 변수를 전달하는 프로그램을 실행합니다. `dotnet` 명령을 사용하여 앱을 실행하는 경우 끝부분에 `--`를 추가합니다. `--`의 오른쪽에 있는 모든 항목은 애플리케이션에 매개 변수로 전달됩니다. 다음 예제에서는 `John` 값이 앱에 전달됩니다.
 
+    ```dotnetcli
+    dotnet run -- John
+    ```
+
+    다음과 같은 출력을 얻습니다.
+
     ```console
-    $ dotnet run -- John
     Hello John!
     Fibonacci Numbers 1-15:
     1: 0
@@ -135,10 +148,15 @@ dotnet run
 
 03. [dotnet build](../tools/dotnet-build.md)를 실행하여 변경 내용을 컴파일합니다.
 
-04. [dotnet run](../tools/dotnet-run.md)을 실행하여 앱을 실행합니다. 다음은 프로그램 출력을 보여 줍니다.
+04. [dotnet run](../tools/dotnet-run.md)을 실행하여 앱을 실행합니다.
+
+    ```dotnetcli
+    dotnet run
+    ```
+
+    다음과 같은 출력을 얻습니다.
 
     ```console
-    $ dotnet run
     0
     1
     1
@@ -160,8 +178,13 @@ dotnet run
 
 앱을 배포할 준비가 되면 [dotnet publish](../tools/dotnet-publish.md) 명령을 사용하여 _bin\\debug\\netcoreapp3.1\\publish\\_ 에서 _publish_ 폴더를 생성합니다(비 Windows 시스템의 경우 `/` 사용). 이미 dotnet 런타임을 설치한 경우에 _publish_ 폴더의 콘텐츠를 다른 플랫폼에 배포할 수 있습니다.
 
-```console
+```dotnetcli
 dotnet publish
+```
+
+그러면 다음과 같은 출력이 표시됩니다.
+
+```console
 Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Core
 Copyright (C) Microsoft Corporation. All rights reserved.
 
@@ -174,9 +197,13 @@ Copyright (C) Microsoft Corporation. All rights reserved.
 
 [dotnet](../tools/dotnet.md) 명령으로 게시된 앱을 실행할 수 있습니다.
 
-```console
+```dotnetcli
 dotnet bin\Debug\netcoreapp3.1\publish\Hello.dll
+```
 
+다음과 같은 출력을 얻습니다.
+
+```console
 Hello World!
 ```
 

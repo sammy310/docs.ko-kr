@@ -2,12 +2,12 @@
 title: ML.NET CLI 명령 참조
 description: ML.NET CLI 도구의 auto-train 명령에 대한 개요, 샘플 및 참조입니다.
 ms.date: 12/18/2019
-ms.openlocfilehash: 5e59eba91721b26622360818a73adb07a654dc28
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 537f8d361c170378f5fe8cf454320831d7c8cbf2
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636122"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449701"
 ---
 # <a name="the-mlnet-cli-command-reference"></a>ML.NET CLI 명령 참조
 
@@ -145,7 +145,7 @@ mlnet auto-train
 1. 첫 번째 부분에서는 모델을 살펴 보고 유효성 검사 데이터(=유효성 검사)를 사용하는 가장 효과적인 접근법을 선택합니다.
 2. 그런 다음, 선택한 접근법의 정확도를 추정합니다(=테스트).
 
-따라서 데이터는 80/10/10 또는 75/15/10으로 분리될 수 있습니다. 예:
+따라서 데이터는 80/10/10 또는 75/15/10으로 분리될 수 있습니다. 예를 들어:
 
 - `training-dataset` 파일에는 데이터의 75%가 있어야 합니다.
 - `validation-dataset` 파일에는 데이터의 15%가 있어야 합니다.

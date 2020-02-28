@@ -4,12 +4,12 @@ description: 하나 이상의 인수를 사용하여 참조된 속성인 인덱�
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 86e646b341cf098d8621f095d4bfc9ea2191940d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 966483e80d8dd0421dce1b7fabdb0d443d73a0fc
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039114"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450884"
 ---
 # <a name="indexers"></a>인덱서
 
@@ -321,7 +321,7 @@ using CityDataMeasurements = System.Collections.Generic.Dictionary<string, Syste
 
 두 문은 생성된 제네릭 형식의 *별칭*을 만듭니다. 이러한 문을 통해 나중에 코드에서 `Dictionary<DateTime, Measurements>` 및 `Dictionary<string, Dictionary<DateTime, Measurements> >`의 제네릭 구문이 아니라 더 설명적인 `DateMeasurements` 및 `CityDateMeasurements` 이름을 사용할 수 있습니다. 이 구문의 경우 `=` 기호의 오른쪽에 정규화된 형식 이름을 사용해야 합니다.
 
-두 번째 방법은 컬렉션에 인덱싱하는 데 사용되는 `DateTime` 개체의 시간 부분을 제거하는 것입니다. .NET Framework는 날짜 전용 형식을 포함하지 않습니다.
+두 번째 방법은 컬렉션에 인덱싱하는 데 사용되는 `DateTime` 개체의 시간 부분을 제거하는 것입니다. .NET에는 날짜 전용 형식이 포함되어 있지 않습니다.
 개발자는 `DateTime` 형식을 사용하지만 `Date` 속성을 사용하여 해당 날짜의 `DateTime` 개체가 모두 같도록 합니다.
 
 ## <a name="summing-up"></a>요약

@@ -2,12 +2,12 @@
 title: C# 둘러보기 - C# 가이드
 description: C#을 처음 사용하시나요? 언어의 기본 사항에 대해 알아봅니다.
 ms.date: 04/05/2019
-ms.openlocfilehash: e2d7af3a35dc9d4fdeddf9eb742d155ab33094b4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b510342f957a259a6c7763441778461b3dd4ef1e
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711664"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673292"
 ---
 # <a name="a-tour-of-the-c-language"></a>C# 언어 둘러보기
 
@@ -64,8 +64,6 @@ C#에 대해 자세히 알아볼 수 있는 많은 리소스가 있습니다. �
   - ***문***을 사용하여 프로그램의 동작을 나타낼 수 있습니다.
 - [클래스 및 개체](classes-and-objects.md)
   - ***클래스***는 C#의 가장 기본적인 형식입니다. ***개체***는 클래스의 인스턴스입니다. 클래스는 ***멤버***를 사용해서 빌드되며 이 내용은 이 항목에도 나와 있습니다.
-- [구조체](structs.md)
-  - ***구조체***는 클래스와 달리 값 형식에 해당하는 데이터 구조체입니다.
 - [배열](arrays.md)
   - ***배열***은 계산된 인덱스를 통해 액세스되는 여러 변수를 포함하는 데이터 구조입니다.
 - [인터페이스](interfaces.md)

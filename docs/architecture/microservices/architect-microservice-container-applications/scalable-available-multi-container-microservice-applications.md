@@ -1,15 +1,15 @@
 ---
-title: 높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
+title: 높은 확장성 및 가용성을 위해 마이크로서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
 description: Kubernetes 애플리케이션 수명 주기를 개발하는 동안 높은 확장성과 가용성 및 Azure Dev Spaces의 가능성을 위해 마이크로 서비스 및 다중 컨테이너 애플리케이션을 오케스트레이션하는 옵션을 검색합니다.
-ms.date: 09/20/2018
-ms.openlocfilehash: 3915e6386e66d40bedc92368bfbcda81790c6923
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.date: 01/30/2020
+ms.openlocfilehash: f9e91d3958e2d567e68257c377f76cc3c2325a0b
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090138"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502990"
 ---
-# <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
+# <a name="orchestrate-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>높은 확장성 및 가용성을 위해 마이크로서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
 
 애플리케이션이 마이크로 서비스를 기반으로 하거나 단순히 여러 컨테이너로 분할되는 경우 프로덕션 지원 애플리케이션에 오케스트레이터를 사용해야 합니다. 이전에 소개한 대로 마이크로 서비스 기반 방법에서 각 마이크로 서비스마다 모델 및 데이터를 소유하므로 개발 및 배포 관점에서 독립적입니다. 그러나 SOA와 같은 여러 서비스로 구성된 기존 애플리케이션이 있는 경우에도 분산 시스템으로 배포해야 하는 단일 비즈니스 애플리케이션을 구성하는 여러 컨테이너 또는 서비스가 제공됩니다. 이러한 종류의 시스템은 규모 확장 및 관리가 복잡합니다. 따라서 프로덕션을 지원하고 확장성 있는 다중 컨테이너 애플리케이션을 원하는 경우 오케스트레이터가 반드시 필요합니다.
 
@@ -72,9 +72,9 @@ AKS를 사용하여 시작하려면 Azure 포털에서 또는 CLI를 사용하�
 
 기본적으로 AKS의 일부로 설치된 소프트웨어에 대해서는 추가 비용이 없습니다. 모든 기본 옵션은 오픈 소스 소프트웨어로 구현됩니다. AKS는 Azure의 여러 가상 머신에서 사용할 수 있습니다. 선택한 컴퓨팅 인스턴스 및 사용되는 다른 기본 인프라 리소스(예: 스토리지 및 네트워킹)에 대해서만 요금이 청구됩니다. AKS 자체에 대한 추가 비용은 없습니다.
 
-kubectl 및 원본 .yaml 파일을 기반으로 Kubernetes에 배포하는 방법에 대한 자세한 구현 정보는 [AKS(Azure Kubernetes Service)에서 eShopOnContainers 설정](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.-Setting-the-solution-up-in-AKS-(Azure-Kubernetes-Service))에 대한 게시물을 확인하세요.
+Kubernetes에 대한 기본 프로덕션 배포 옵션은 다음 섹션에서 소개하는 Helm 차트를 사용하는 것입니다.
 
-## <a name="deploying-with-helm-charts-into-kubernetes-clusters"></a>Helm 차트를 사용하여 Kubernetes 클러스터에 배포
+## <a name="deploy-with-helm-charts-into-kubernetes-clusters"></a>Helm 차트를 사용하여 Kubernetes 클러스터에 배포
 
 애플리케이션을 Kubernetes 클러스터에 배포할 때, 이전 섹션에서 이미 언급한 네이티브 형식(.yaml 파일)에 따라 배포 파일을 사용하여 원래 kubectl.exe CLI 도구를 사용할 수 있습니다. 그러나 복잡한 마이크로 서비스 기반 애플리케이션을 배포할 때와 같이 더 복잡한 Kubernetes 애플리케이션의 경우 [Helm](https://helm.sh/)을 사용하는 것이 좋습니다.
 
@@ -84,7 +84,7 @@ Helm 차트를 사용하면 가장 복잡한 Kubernetes 애플리케이션도 �
 
 Microsoft, Google, Bitnami 및 Helm 기여자 커뮤니티와 협력하여 [CNCF(Cloud Native Computing Foundation)](https://www.cncf.io/)에서 Helm을 유지 관리합니다.
 
-Helm 차트 및 Kubernetes에 대한 자세한 구현 정보는 [Helm 차트를 사용하여 AKS에 eShopOnContainers 배포](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.1-Deploying-to-AKS-using-Helm-Charts)의 게시물을 확인하세요.
+Helm 차트 및 Kubernetes에 대한 자세한 구현 정보는 [Helm 차트를 사용하여 AKS에 eShopOnContainers 배포](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Deploy-to-Azure-Kubernetes-Service-(AKS)) 게시물을 참조하세요.
 
 ## <a name="use-azure-dev-spaces-for-your-kubernetes-application-lifecycle"></a>Kubernetes 애플케이션 수명 주기에 Azure Dev Spaces 사용
 
@@ -92,7 +92,7 @@ Helm 차트 및 Kubernetes에 대한 자세한 구현 정보는 [Helm 차트를 
 
 언급한 바와 같이, Azure Dev Spaces는 컨테이너 기반 애플리케이션을 배포할 때 Helm 차트를 사용합니다.
 
-Azure Dev Spaces는 Visual Studio 2017 또는 Visual Studio Code를 사용하기만 하면 Azure의 글로벌 Kubernetes 클러스터에서 직접 반복하고 디버그할 수 있기 때문에 개발 팀이 Kubernetes에서 생산성을 높일 수 있습니다. Azure에 있는 Kubernetes 클러스터는 공유된 관리 Kubernetes 클러스터이므로, 팀은 함께 협력할 수 있습니다. 코드를 따로 개발한 다음, 글로벌 클러스터에 배포하고 종속성을 복제 또는 모의하지 않고 다른 구성 요소를 사용하여 엔드투엔드 테스트를 수행합니다.
+Azure Dev Spaces는 Visual Studio 2019 또는 Visual Studio Code를 사용하기만 하면 Azure의 글로벌 Kubernetes 클러스터에서 직접 반복하고 디버그할 수 있기 때문에 개발 팀이 Kubernetes에서 생산성을 높일 수 있습니다. Azure에 있는 Kubernetes 클러스터는 공유된 관리 Kubernetes 클러스터이므로, 팀은 함께 협력할 수 있습니다. 코드를 따로 개발한 다음, 글로벌 클러스터에 배포하고 종속성을 복제 또는 모의하지 않고 다른 구성 요소를 사용하여 엔드투엔드 테스트를 수행합니다.
 
 그림 4-26과 같이 Azure Dev Spaces의 가장 다른 기능은 클러스터에 글로벌 배포의 나머지 부분과 통합하여 실행할 수 있는 ' 공간'을 만드는 기능입니다.
 
@@ -100,17 +100,17 @@ Azure Dev Spaces는 Visual Studio 2017 또는 Visual Studio Code를 사용하기
 
 **그림 4-26**. Azure Dev Spaces에서 여러 공간 사용
 
-기본적으로 Azure에 공유 개발 공간을 설정할 수 있습니다. 각 개발자는 애플리케이션에서 자신이 맡은 부분에만 집중할 수 있으며 자신의 시나리오에 의존하는 다른 모든 서비스 및 클라우드 리소스가 포함된 개발 공간에서 커밋 전 코드를 반복해서 개발할 수 있습니다. 종속성은 항상 최신이며, 개발자는 프로덕션을 미러하는 방식으로 작업합니다.
+기본적으로 Azure에 공유 개발 공간을 설정할 수 있습니다. 각 개발자는 애플리케이션에서 자신이 맡은 부분에만 집중할 수 있으며 자신의 시나리오에 의존하는 다른 모든 서비스 및 클라우드 리소스가 포함된 개발 공간에서 커밋 전 코드를 반복해서 개발할 수 있습니다. 종속성은 항상 최신 상태로 유지되며 개발자가 생산을 미러링하는 방식으로 작업합니다.
 
 Azure Dev Spaces는 팀 작업과 분리될 걱정 없이 상대적으로 격리되어 작업할 수 있는 공간의 개념을 제공합니다. 각 개발 공간은 고유하게 작업 중인 마이크로 서비스를 사용하여 "상위" 마스터 개발 공간의 마이크로 서비스(하나 이상)를 재정의할 수 있는 계층 구조의 일부입니다.
 
 이 기능은 URL 접두사를 기반으로 하므로 URL에서 개발 공간 접두사를 사용할 때 요청이 개발 공간에 있는 경우 대상 마이크로 서비스에서 처리됩니다. 그렇지 않으면, 계층 구조에 있는 대상 마이크로 서비스의 첫 번째 인스턴스로 전달되어 결국 맨 위에 있는 마스터 개발 공간에 도달합니다.
 
-구체적인 예에 대한 실용적인 보기를 가져오려면 [Azure Dev Spaces의 eShopOnContainers wiki 페이지](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.1-Using-Azure-Dev-Spaces-and-AKS)를 참조할 수 있습니다.
+구체적인 예제를 살펴보려면 [Azure Dev Spaces의 eShopOnContainers wiki 페이지](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Azure-Dev-Spaces)를 참조하세요.
 
 자세한 내용은 [Azure Dev Spaces로 팀 개발](https://docs.microsoft.com/azure/dev-spaces/team-development-netcore)에 대한 문서를 확인하세요.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 - **AKS(Azure Kubernetes Service) 시작** \
   <https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal>

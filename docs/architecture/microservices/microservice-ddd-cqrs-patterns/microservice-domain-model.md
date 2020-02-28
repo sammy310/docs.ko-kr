@@ -1,13 +1,13 @@
 ---
 title: 마이크로 서비스 도메인 모델 디자인
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | DDD 지향 도메인 모델을 디자인할 때 주요 개념을 이해합니다.
-ms.date: 10/08/2018
-ms.openlocfilehash: 3a02059064305ca148b7909923e2f51e60ee54d5
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: 628fb5c76362ec8f48367b3d69d16ea6ebd24f09
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737470"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502327"
 ---
 # <a name="design-a-microservice-domain-model"></a>마이크로 서비스 도메인 모델 디자인
 
@@ -74,9 +74,9 @@ Eric Evans의 지적처럼 "많은 개체는 개념적 ID를 갖고 있지 않�
 
 성과 이름이 있는 사람은 이런 이름이 다른 사람을 지칭하는 경우처럼 비록 성과 이름이 또 다른 가치 집합과 일치한다 해도 사람은 ID를 갖기 때문에 대개 엔터티입니다.
 
-가치 개체는 EF 같은 ORM과 관계형 데이터베이스에서는 관리하기가 어렵습니다. 반면에 문서 지향 데이터베이스에서는 구현과 사용이 훨신 쉽습니다.
+가치 개체는 EF(Entity Framework) 같은 ORM과 관계형 데이터베이스에서는 관리하기가 어렵습니다. 반면에 문서 지향 데이터베이스에서는 구현과 사용이 훨씬 쉽습니다.
 
-EF Core 2.0에는 값 개체를 더 쉽게 처리할 수 있는 [소유한 엔터티](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting) 기능이 포함되어 있습니다. 자세한 내용은 나중에 살펴보겠습니다.
+EF Core 2.0 이상 버전에는 값 개체를 더 쉽게 처리할 수 있는 [소유한 엔터티](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting) 기능이 포함되어 있습니다. 자세한 내용은 나중에 살펴보겠습니다.
 
 #### <a name="additional-resources"></a>추가 자료
 

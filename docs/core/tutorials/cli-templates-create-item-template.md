@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: fa0ae18221c33d196960239411f8860a561b20ee
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5f4038e863d9bb59df470d3516c08fd2ad29c078
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340376"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503562"
 ---
 # <a name="tutorial-create-an-item-template"></a>자습서: 항목 템플릿 만들기
 
@@ -99,7 +99,7 @@ working
                 template.json
 ```
 
-원하는 텍스트 편집기에서 _template.json_을 열고 다음 JSON 코드를 붙여넣은 다음 저장합니다.
+원하는 텍스트 편집기에서 _template.json_을 열고 다음 JSON 코드를 붙여넣고 저장합니다.
 
 ```json
 {
@@ -151,8 +151,13 @@ Worker Service                                    worker                [C#]    
 
 항목 템플릿을 설치했으므로 이제 템플릿을 테스트합니다. _test/_ 폴더로 이동하고 `dotnet new console`을 사용하여 새 콘솔 애플리케이션을 만듭니다. 그러면 `dotnet run` 명령으로 쉽게 테스트할 수 있는 작업 프로젝트가 생성됩니다.
 
+```dotnetcli
+dotnet new console
+```
+
+그러면 다음과 같은 출력이 표시됩니다.
+
 ```console
-C:\test> dotnet new console
 The template "Console Application" was created successfully.
 
 Processing post-creation actions...
@@ -162,15 +167,27 @@ Running 'dotnet restore' on C:\test\test.csproj...
 Restore succeeded.
 ```
 
+프로젝트를 실행합니다.
+
+```dotnetcli
+dotnet run
+```
+
+다음과 같은 출력을 얻습니다.
+
 ```console
-C:\test> dotnet run
 Hello World!
 ```
 
 이제 `dotnet new stringext`를 실행하여 템플릿에서 _CommonExtensions.cs_를 생성합니다.
 
+```dotnetcli
+dotnet new stringext
+```
+
+다음과 같은 출력을 얻습니다.
+
 ```console
-C:\test> dotnet new stringext
 The template "Example templates: string extensions" was created successfully.
 ```
 
@@ -182,8 +199,13 @@ Console.WriteLine("Hello World!".Reverse());
 
 프로그램을 다시 실행하면 결과가 반전된 것을 알 수 있습니다.
 
+```dotnetcli
+dotnet run
+```
+
+다음과 같은 출력을 얻습니다.
+
 ```console
-C:\test> dotnet run
 !dlroW olleH
 ```
 
@@ -193,8 +215,13 @@ C:\test> dotnet run
 
 파일 경로를 사용하여 템플릿을 설치했으므로 **절대** 파일 경로를 사용하여 템플릿을 제거해야 합니다. `dotnet new -u` 명령을 실행하여 설치된 템플릿 목록을 확인할 수 있습니다. 사용자 템플릿은 마지막에 나열되어야 합니다. `dotnet new -u <ABSOLUTE PATH TO TEMPLATE DIRECTORY>` 명령을 사용하여 템플릿을 제거하려면 나열된 경로를 사용합니다.
 
+```dotnetcli
+dotnet new -u
+```
+
+그러면 다음과 같은 출력이 표시됩니다.
+
 ```console
-C:\working> dotnet new -u
 Template Instantiation Commands for .NET Core CLI
 
 Currently installed items:
@@ -222,8 +249,10 @@ Currently installed items:
       Example templates: string extensions (stringext) C#
 ```
 
-```console
-C:\working> dotnet new -u C:\working\templates\extensions
+템플릿을 제거하려면 다음 명령을 실행합니다.
+
+```dotnetcli
+dotnet new -u C:\working\templates\extensions
 ```
 
 ## <a name="next-steps"></a>다음 단계

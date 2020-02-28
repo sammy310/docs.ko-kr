@@ -2,13 +2,13 @@
 title: .NET Core 도구 사용 문제 해결
 description: .NET Core 도구를 실행할 때 발생하는 일반적인 문제와 가능한 해결 방법을 검색합니다.
 author: kdollard
-ms.date: 09/23/2019
-ms.openlocfilehash: df896405a122050acba220923eee58e87e0b75b6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.date: 02/14/2020
+ms.openlocfilehash: ab5d1be8f201ea283f8537f18886feab46157127
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74282507"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543276"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>.NET Core 도구 사용 문제 해결
 
@@ -59,7 +59,7 @@ Possible reasons for this include:
   * .NET Core 3.0 SDK를 설치했으며 `DOTNET_ADD_GLOBAL_TOOLS_TO_PATH` 환경 변수를 `false`로 설정한 경우
   * .NET Core 2.2 SDK 또는 이전 버전을 설치했으며 `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` 환경 변수를 `true`로 설정한 경우
 
-  전역 도구에 대한 자세한 내용은 [.NET Core 전역 도구 개요](global-tools.md)를 참조하세요.
+  자세한 내용은 [.NET Core 도구](global-tools.md)를 참조하세요.
 
 * 로컬 도구
 
@@ -73,7 +73,7 @@ Possible reasons for this include:
 
 ### <a name="runtime-not-found"></a>런타임을 찾을 수 없음
 
-전역 도구는 [프레임워크 종속 애플리케이션](../deploying/index.md#framework-dependent-deployments-fdd)이므로, 머신에 설치된 .NET Core 런타임을 사용합니다. 필요한 런타임을 찾을 수 없는 경우, 다음과 같은 일반적인 .NET Core 런타임 롤포워드 규칙을 따릅니다.
+전역 도구는 [프레임워크 종속 애플리케이션](../deploying/index.md#publish-runtime-dependent)이므로, 머신에 설치된 .NET Core 런타임을 사용합니다. 필요한 런타임을 찾을 수 없는 경우, 다음과 같은 일반적인 .NET Core 런타임 롤포워드 규칙을 따릅니다.
 
 * 애플리케이션은 지정된 주 및 부 버전의 가장 높은 패치 릴리스로 롤포워드합니다.
 * 일치하는 주 버전 및 부 버전 번호를 가진, 일치하는 런타임이 없으면 다음으로 높은 부 버전이 사용됩니다.
@@ -99,7 +99,7 @@ dotnet --info
 
 ## <a name="net-core-tool-installation-fails"></a>.NET Core 도구 설치 실패
 
-.NET Core 전역 또는 로컬 도구의 설치에 실패할 수 있는 원인에는 여러 가지가 있습니다. 도구 설치에 실패하면 다음과 유사한 메시지가 표시됩니다.
+.NET Core 전역 또는 로컬 도구의 설치에 실패할 수 있는 원인에는 여러 가지가 있습니다. 도구 설치에 실패하면 다음과 같은 메시지가 표시됩니다.
 
 ```console
 Tool '{0}' failed to install. This failure may have been caused by:
@@ -137,9 +137,6 @@ dotnet tool install -g <toolName>
 dotnet tool install -g --version 1.1.0-pre <toolName>
 ```
 
-> [!NOTE]
-> .NET Core CLI 팀은 이 작업이 더 용이하도록, 향후 릴리스에서 `--preview` 스위치를 추가할 계획입니다.
-
 ### <a name="package-isnt-a-net-core-tool"></a>패키지가 .NET Core 도구가 아님
 
 * 이 이름을 가진 NuGet 패키지는 있지만 .NET Core 도구가 아닙니다.
@@ -160,6 +157,6 @@ dotnet tool install -g --version 1.1.0-pre <toolName>
 
 일반적인 실패 원인은 잘못된 도구 이름입니다. 잘못 입력했을 수도 있고, 도구가 이동되었거나 사용 중단되었을 수도 있습니다. NuGet.org 도구의 경우 올바른 이름을 입력하는 한 가지 방법은 NuGet.org에서 도구를 검색하여 설치 명령을 복사하는 것입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-* [.NET Core Global Tool 개요](global-tools.md)
+* [.NET Core 도구](global-tools.md)

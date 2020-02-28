@@ -2,12 +2,12 @@
 title: 클라우드 네이티브 애플리케이션은 어떻습니까?
 description: Azure Cloud 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화 | 클라우드 네이티브 애플리케이션은 어떻습니까?
 ms.date: 04/28/2018
-ms.openlocfilehash: cf4c3b24a4eeb62ed84a5fccb294b675d38fcc36
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: d2a7f89e347d75ddbdae84c8eb57e32447b83297
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "72318425"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543549"
 ---
 # <a name="what-about-cloud-native-applications"></a>클라우드 네이티브 애플리케이션은 어떻습니까?
 
@@ -41,7 +41,10 @@ ms.locfileid: "72318425"
 
 [CNCF(Cloud Native Computing Foundation)](https://www.cncf.io/)는 클라우드 네이티브 원칙의 주요 프로모터입니다. Microsoft는 [CNCF 회원](https://azure.microsoft.com/blog/announcing-cncf/)입니다.
 
-정의 예제 및 클라우드 네이티브 애플리케이션 특성에 대한 자세한 내용은 Gartner 문서 [How to architect and design cloud-native applications](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)를 참조하세요. 클라우드 네이티브 애플리케이션을 구현하는 방법에 대한 Microsoft의 특정 지침은 [.NET microservices: Architecture for containerized .NET applications](https://aka.ms/microservicesebook) eBook을 참조하세요.
+클라우드 네이티브 애플리케이션을 디자인하고 개발하는 방법에 대한 자세한 지침은 다음 무료 eBook을 참고하세요.
+
+* [Azure용 클라우드 네이티브 .NET 애플리케이션 설계](../../cloud-native/introduction.md)
+* [.NET 마이크로 서비스: Architecture for containerized .NET applications](../../microservices/index.md) eBook을 참조하세요.
 
 전체 애플리케이션을 클라우드 네이티브 모델로 마이그레이션하는 경우 고려해야 하는 가장 중요한 요소는 마이크로 서비스 기반 아키텍처를 다시 설계해야 한다는 것입니다. 여기에는 대규모 리팩터링 프로세스가 포함되므로 개발에 상당한 투자가 필요한 것은 확실합니다. 이 옵션은 일반적으로 새로운 수준의 확장성과 장기적인 민첩성이 필요한 중요 업무용 애플리케이션에 대해 선택합니다. 하지만 몇 가지 새로운 시나리오에 대해서만 마이크로 서비스를 추가하여 클라우드 네이티브로 전환을 시작하고 궁극적으로 애플리케이션을 완전히 마이크로 서비스로 리팩터링할 수 있습니다. 이는 일부 시나리오에서 최상의 옵션인 증분 접근 방식입니다.
 

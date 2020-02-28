@@ -1,13 +1,13 @@
 ---
 title: 모놀리식 애플리케이션 컨테이너화
 description: 모놀리식 애플리케이션을 컨테이너화하는 것은 마이크로 서비스 아키텍처에서 모든 이점을 가져올 수 없지만, 즉시 제공할 수 있는 중요한 배포 이점을 가지고 있습니다.
-ms.date: 09/20/2018
-ms.openlocfilehash: e02aa4ff644fc26b7f15721866f8862f6a175cf2
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: 0e6f7504a91d2b1a89193471746168fc34f50956
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737963"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503272"
 ---
 # <a name="containerizing-monolithic-applications"></a>모놀리식 애플리케이션 컨테이너화
 
@@ -61,7 +61,7 @@ Azure에 배포된 컨테이너의 유효성 검사를 수행하거나 애플리
 
 ![Container Registry를 표시하는 App Service 만들기 대화 상자 스크린샷](./media/containerize-monolithic-applications/publish-azure-app-service-container.png)
 
-**그림 4-4** Visual Studio에서 Azure App Service에 단일 컨테이너 애플리케이션 게시
+**그림 4-4** Visual Studio 2019에서 Azure App Service에 단일 컨테이너 애플리케이션 게시
 
 Docker 없이 Azure App Service에서 지원되지 않는 다른 기능, 프레임워크 또는 종속성이 필요한 경우 Azure 팀이 App Service에서 해당 종속성을 업데이트할 때까지 기다려야 했습니다. 또는, 추가 제어 기능이 있고 애플케이션에 필요한 구성 요소 또는 프레임워크를 설치할 수 있는 Azure Cloud Services 또는 VM과 같은 다른 서비스로 전환해야 했습니다.
 

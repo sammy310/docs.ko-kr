@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: d36909e06bd9a3de0940c4c1b2b9eacbf9cafe7f
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: ba50eb222d9eab6bffbb8ebfdf0ecf47951ce719
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740598"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543523"
 ---
 # <a name="install-the-net-core-runtime"></a>.NET Core 런타임 설치
 
@@ -59,7 +59,7 @@ export PATH=$PATH:$HOME/dotnet
 > [!TIP]
 > 이전 `export` 명령은 명령이 실행된 터미널 세션에서만 .NET Core CLI 명령을 사용할 수 있도록 만듭니다.
 >
-> 셸 프로필을 편집하여 명령을 영구적으로 추가할 수 있습니다. 몇 가지 Linux용 셸이 있으며, 각각 다른 프로필을 갖습니다. 예:
+> 셸 프로필을 편집하여 명령을 영구적으로 추가할 수 있습니다. 몇 가지 Linux용 셸이 있으며, 각각 다른 프로필을 갖습니다. 예를 들어:
 >
 > - **Bash 셸**: *~/.bash_profile*, *~/.bashrc*
 > - **Korn 셸**: *~/.kshrc* 또는 *.profile*
@@ -68,6 +68,8 @@ export PATH=$PATH:$HOME/dotnet
 > 셸의 적절한 소스 파일을 편집하고 기존 `PATH` 문의 끝에 `:$HOME/dotnet`을 추가합니다. 포함된 `PATH` 문이 없다면 `export PATH=$PATH:$HOME/dotnet`을 사용하여 새 라인을 추가합니다.
 >
 > 또한, 파일 끝에 `export DOTNET_ROOT=$HOME/dotnet`을 추가합니다.
+
+이 방법을 사용하면 서로 다른 버전을 별도의 위치에 설치하고 애플리케이션에서 사용할 수 있도록 명시적으로 선택할 수 있습니다.
 
 ::: zone-end
 
@@ -85,6 +87,25 @@ dotnet-install.ps1 -Channel 3.1 -Runtime aspnetcore
 
 > [!NOTE]
 > 위 명령은 최대의 호환성을 위해 ASP.NET Core 런타임을 설치합니다. ASP.NET Core 런타임에는 표준 .NET Core 런타임도 포함되어 있습니다.
+
+## <a name="download-and-manually-install"></a>다운로드 및 수동으로 설치
+
+런타임을 추출하고 터미널에서 .NET Core CLI 명령을 사용할 수 있으려면 먼저 .NET Core 이진 릴리스를 [다운로드](#all-net-core-downloads)합니다. 그런 다음 `%USERPROFILE%\dotnet`와 같이 설치할 디렉터리를 만듭니다. 마지막으로 다운로드한 zip 파일을 그 디렉터리로 추출합니다.
+
+기본적으로 .NET Core CLI 명령과 앱은 이러한 방식으로 설치된 .NET Core를 사용하지 않습니다. 이를 사용하려면 명시적으로 선택해야 합니다. 이렇게 하려면 애플리케이션이 시작되는 환경 변수를 변경합니다.
+
+```console
+set DOTNET_ROOT=%USERPROFILE%\dotnet
+set PATH=%USERPROFILE%\dotnet;%PATH%
+```
+
+이 방법을 사용하면 여러 버전을 별도의 위치에 설치한 다음 애플리케이션이 해당 위치를 가리키는 환경 변수를 사용하여 애플리케이션을 실행하는 데 사용해야 하는 설치 위치를 명시적으로 선택할 수 있습니다.
+
+이러한 환경 변수가 설정된 경우에도 .NET Core는 애플리케이션을 실행하는 데 가장 적합한 프레임워크를 선택할 때 기본 전역 설치 위치를 계속 고려합니다. 기본값은 일반적으로 설치 프로그램이 사용하는 `C:\Program Files\dotnet`입니다. 이 환경 변수를 설정하여 사용자 지정 설치 위치만 사용하도록 런타임에 지시할 수도 있습니다.
+
+```console
+set DOTNET_MULTILEVEL_LOOKUP=0
+```
 
 ::: zone-end
 

@@ -1,13 +1,13 @@
 ---
 title: 상태 모니터링
 description: 상태 모니터링을 구현하는 한 가지 방법을 살펴봅니다.
-ms.date: 01/07/2019
-ms.openlocfilehash: f1d63e04bbea95fcf0a9f9d3b50aef0e7d4a830e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: a91e51af66049f9774365cd56b90ab792a4dd4fc
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73732864"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502676"
 ---
 # <a name="health-monitoring"></a>상태 모니터링
 
@@ -19,7 +19,7 @@ ms.locfileid: "73732864"
 
 ## <a name="implement-health-checks-in-aspnet-core-services"></a>ASP.NET Core 서비스에서 상태 검사 구현
 
-ASP.NET Core 마이크로 서비스나 웹 애플리케이션을 개발하는 경우 ASP .NET Core 2.2에 릴리스된 기본 제공 상태 검사 기능을 사용할 수 있습니다. 다수의 ASP.NET Core 기능과 마찬가지로 상태 검사에는 일련의 서비스와 미들웨어가 함께 제공됩니다.
+ASP.NET Core 마이크로 서비스나 웹 애플리케이션을 개발하는 경우 ASP .NET Core 3.1에 릴리스된 기본 제공 상태 검사 기능([Microsoft.Extensions.Diagnostics.HealthChecks](https://www.nuget.org/packages/Microsoft.Extensions.Diagnostics.HealthChecks))을 사용할 수 있습니다. 다수의 ASP.NET Core 기능과 마찬가지로 상태 검사에는 일련의 서비스와 미들웨어가 함께 제공됩니다.
 
 상태 검사 서비스와 미들웨어는 사용하기 쉽고 SQL Server 데이터베이스 또는 원격 API와 같은 애플리케이션에 필요한 외부 리소스가 제대로 작동하는지 확인하는 기능을 제공합니다. 이 기능을 사용하면 리소스가 정상이라는 의미를 결정할 수 있으며, 이 내용은 나중에 설명하겠습니다.
 
@@ -27,20 +27,23 @@ ASP.NET Core 마이크로 서비스나 웹 애플리케이션을 개발하는 �
 
 ### <a name="use-the-healthchecks-feature-in-your-back-end-aspnet-microservices"></a>백 엔드 ASP.NET 마이크로 서비스에서 HealthChecks 기능 사용
 
-이 섹션에서는 샘플 ASP.NET Core 2.2 Web API 애플리케이션에서 HealthChecks 기능을 사용하는 방법을 알아봅니다. eShopOnContainers와 같은 대규모 마이크로 서비스에 이러한 기능을 구현하는 방법은 뒷부분 섹션에 설명되어 있습니다. 시작하려면 각 마이크로 서비스에 대한 성능 상태를 구성하는 항목을 정의해야 합니다. 샘플 애플리케이션에서 마이크로 서비스 API가 HTTP를 통해 액세스할 수 있고 관련 SQL Server 데이터베이스도 사용할 수 있으면 마이크로 서비스가 정상입니다.
+이 섹션에서는 [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks)에 구현된 HealthChecks 기능이 샘플 ASP.NET Core 3.1 Web API 애플리케이션에서 사용되는 방법을 알아봅니다. eShopOnContainers와 같은 대규모 마이크로 서비스에 이러한 기능을 구현하는 방법은 뒷부분 섹션에 설명되어 있습니다. 시작하려면 각 마이크로 서비스에 대한 성능 상태를 구성하는 항목을 정의해야 합니다. 샘플 애플리케이션에서 마이크로 서비스 API가 HTTP를 통해 액세스할 수 있고 관련 SQL Server 데이터베이스도 사용할 수 있으면 마이크로 서비스가 정상입니다.
 
-기본 제공 API가 있는 .NET Core 2.2에서는 다음과 같은 방법으로 서비스를 구성하고 마이크로 서비스 및 종속 SQL Server 데이터베이스에 대한 상태 검사를 추가할 수 있습니다.
+기본 제공 API가 있는 .NET Core 3.1에서는 다음과 같은 방법으로 서비스를 구성하고 마이크로 서비스 및 종속 SQL Server 데이터베이스에 대한 상태 검사를 추가할 수 있습니다.
 
 ```csharp
-// Startup.cs from .NET Core 2.2 Web Api sample
+// Startup.cs from .NET Core 3.1 Web API sample
 //
 public void ConfigureServices(IServiceCollection services)
 {
     //...
     // Registers required services for health checks
     services.AddHealthChecks()
-    // Add a health check for a SQL database
-    .AddCheck("MyDatabase", new SqlConnectionHealthCheck(Configuration["ConnectionStrings:DefaultConnection"]));
+        // Add a health check for a SQL Server database
+        .AddSqlServer(
+            configuration["ConnectionString"],
+            name: "OrderingDB-check",
+            tags: new string[] { "orderingdb" });
 }
 ```
 
@@ -98,17 +101,26 @@ public class SqlConnectionHealthCheck : IHealthCheck
 }
 ```
 
-이전 코드에서 `Select 1`은 데이터베이스의 상태를 확인하는 데 사용되는 쿼리입니다. Kubernetes 및 Service Fabric과 같은 오케스트레이션은 마이크로 서비스의 가용성을 모니터링하기 위해 정기적으로 마이크로 서비스 테스트 요청을 보내 상태 검사를 수행합니다. 이러한 작업이 신속하고 리소스 사용률이 높아지지 않도록 데이터베이스 쿼리를 효율적으로 유지하는 것이 중요합니다.
+이전 코드에서 `Select 1`은 데이터베이스의 상태를 확인하는 데 사용되는 쿼리입니다. Kubernetes 같은 오케스트레이션은 마이크로 서비스의 가용성을 모니터링하기 위해 정기적으로 마이크로 서비스 테스트 요청을 보내 상태 검사를 수행합니다. 이러한 작업이 신속하고 리소스 사용률이 높아지지 않도록 데이터베이스 쿼리를 효율적으로 유지하는 것이 중요합니다.
 
-마지막으로 url 경로, "/hc"에 응답하는 미들웨어를 만듭니다.
+마지막으로 url 경로 `/hc`에 응답하는 미들웨어를 추가합니다.
 
 ```csharp
-// Startup.cs from .NET Core 2.2 Web Api sample
+// Startup.cs from .NET Core 3.1 Web Api sample
 //
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 {
     //…
-    app.UseHealthChecks("/hc");
+    app.UseEndpoints(endpoints =>
+    {
+        //...
+        endpoints.MapHealthChecks("/hc", new HealthCheckOptions()
+        {
+            Predicate = _ => true,
+            ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+        });
+        //...
+    });
     //…
 }
 ```
@@ -119,7 +131,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 
 eShopOnContainers의 마이크로 서비스는 여러 가지 서비스에 의존하여 작업을 수행합니다. 예를 들어, eShopOnContainers의 `Catalog.API` 마이크로 서비스는 Azure Blob Storage, SQL Server 및 RabbitMQ와 같은 많은 서비스에 의존합니다. 따라서 `AddCheck()` 메서드를 사용하여 몇 가지 상태 검사가 추가됩니다. 모든 종석 서비스에 대해, 각 상태를 정의하는 사용자 지정 `IHealthCheck` 구현을 추가해야 합니다.
 
-오픈 소스 프로젝트 [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks)는 .NET Core 2.2를 기반으로 구축된 이러한 엔터프라이즈 서비스마다 사용자 지정 상태 검사 구현을 제공하여 이 문제를 해결합니다. 각 상태 검사는 개별 NuGet 패키지로 제공되기 때문에 프로젝트에 쉽게 추가할 수 있습니다. eShopOnContainers는 이것을 모든 마이크로 서비스에 광범위하게 사용합니다.
+오픈 소스 프로젝트 [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks)는 .NET Core 3.1를 기반으로 구축된 이러한 엔터프라이즈 서비스마다 사용자 지정 상태 검사 구현을 제공하여 이 문제를 해결합니다. 각 상태 검사는 개별 NuGet 패키지로 제공되기 때문에 프로젝트에 쉽게 추가할 수 있습니다. eShopOnContainers는 이것을 모든 마이크로 서비스에 광범위하게 사용합니다.
 
 예를 들어, `Catalog.API` 마이크로 서비스에는 다음과 같은 NuGet 패키지가 추가되었습니다.
 
@@ -279,7 +291,7 @@ Azure Service Fabric은 단순한 상태 검사보다 더 향상된 고급 기�
 - **Service Fabric 상태 모니터링 소개** \
   [https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction](/azure/service-fabric/service-fabric-health-introduction)
 
-- **Azure Monitor**  
+- **Azure Monitor** \
   <https://azure.microsoft.com/services/monitor/>
 
 >[!div class="step-by-step"]

@@ -2,21 +2,17 @@
 title: dotnet nuget locals 명령
 description: dotnet nuget locals 명령은 http-request 캐시, 임시 캐시 또는 컴퓨터 전체의 글로벌 패키지 폴더와 같은 로컬 NuGet 리소스를 지우거나 목록에 포함합니다.
 author: karann-msft
-ms.date: 06/26/2019
-ms.openlocfilehash: b57c127650555e412af08df6656fb62d75c8ed7c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 3fdd7d946b08b4c18cfaeb65013de259b927a7fa
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734085"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503688"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
-**이 문서의 적용 대상:**  ✔️ .NET Core 1.x SDK 이상 버전
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**이 문서의 적용 대상:** ✔️ .NET Core 2.x SDK 이상 버전
 
 ## <a name="name"></a>이름
 
@@ -35,7 +31,7 @@ dotnet nuget locals [-h|--help]
 
 ## <a name="arguments"></a>인수
 
-* **`CACHE_LOCATION`**
+- **`CACHE_LOCATION`**
 
   나열하거나 지울 캐시 위치입니다. 다음 값 중 하나를 허용합니다.
 
@@ -46,49 +42,49 @@ dotnet nuget locals [-h|--help]
 
 ## <a name="options"></a>옵션
 
-* **`--force-english-output`**
+- **`--force-english-output`**
 
   고정 영어 기반 문화권을 사용하여 애플리케이션을 강제로 실행합니다.
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   명령에 대한 간단한 도움말을 출력합니다.
 
-* **`-c|--clear`**
+- **`-c|--clear`**
 
   지우기 옵션은 지정된 캐시 유형에 지우기 작업을 실행합니다. 캐시 디렉터리의 콘텐츠는 재귀적으로 삭제됩니다. 실행 중인 사용자/그룹에게 캐시 디렉터리의 파일에 대한 사용 권한이 있어야 합니다. 그렇지 않은 경우에는 지우지 않은 파일/폴더가 있음을 나타내는 오류가 표시됩니다.
 
-* **`-l|--list`**
+- **`-l|--list`**
 
   목록 옵션은 지정된 캐시 형식의 위치를 표시하는 데 사용됩니다.
 
 ## <a name="examples"></a>예
 
-* 모든 로컬 캐시 디렉터리(http-cache 디렉터리, 전역 패키지 캐시 디렉터리 및 임시 캐시 디렉터리)의 경로를 표시합니다.
+- 모든 로컬 캐시 디렉터리(http-cache 디렉터리, 전역 패키지 캐시 디렉터리 및 임시 캐시 디렉터리)의 경로를 표시합니다.
 
   ```dotnetcli
   dotnet nuget locals all –l
   ```
 
-* 로컬 http-cache 디렉터리의 경로를 표시합니다.
+- 로컬 http-cache 디렉터리의 경로를 표시합니다.
 
   ```dotnetcli
   dotnet nuget locals http-cache --list
   ```
 
-* 모든 로컬 캐시 디렉터리(http-cache 디렉터리, 전역 패키지 캐시 디렉터리 및 임시 캐시 디렉터리)에서 모든 파일을 지웁니다.
+- 모든 로컬 캐시 디렉터리(http-cache 디렉터리, 전역 패키지 캐시 디렉터리 및 임시 캐시 디렉터리)에서 모든 파일을 지웁니다.
 
   ```dotnetcli
   dotnet nuget locals all --clear
   ```
 
-* 로컬 글로벌 패키지 캐시 디렉터리에 있는 모든 파일을 지웁니다.
+- 로컬 글로벌 패키지 캐시 디렉터리에 있는 모든 파일을 지웁니다.
 
   ```dotnetcli
   dotnet nuget locals global-packages -c
   ```
 
-* 로컬 임시 캐시 디렉터리에 있는 모든 파일을 지웁니다.
+- 로컬 임시 캐시 디렉터리에 있는 모든 파일을 지웁니다.
 
   ```dotnetcli
   dotnet nuget locals temp -c

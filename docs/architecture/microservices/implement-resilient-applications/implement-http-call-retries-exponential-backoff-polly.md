@@ -1,13 +1,13 @@
 ---
 title: Polly를 통해 지수 백오프를 사용하여 HTTP 호출 다시 시도 구현
 description: Polly와 HttpClientFactory를 사용하여 HTTP 오류를 처리하는 방법을 알아봅니다.
-ms.date: 01/07/2019
-ms.openlocfilehash: 551cd1230c565b30c81090c984747e726680b9ed
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.date: 01/30/2020
+ms.openlocfilehash: 60943360c9674f93b246b37b2667b48dab659e0e
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089965"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502662"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>HttpClientFactory 및 Polly 정책을 통해 지수 백오프를 사용하여 HTTP 호출 다시 시도 구현
 
@@ -19,9 +19,9 @@ Polly는 복원력 및 일시적인 오류 처리 기능을 제공하는 .NET �
 
 다음 단계에서는 이전 섹션에서 설명한 HttpClientFactory에 통합된 Polly를 통해 Http 다시 시도를 사용하는 방법을 보여 줍니다.
 
-**ASP.NET Core 2.2 패키지 참조**
+**ASP.NET Core 3.1 패키지 참조**
 
-`HttpClientFactory`를 .NET Core 2.1부터 사용할 수 있지만 프로젝트에서 NuGet의 최신 ASP.NET Core 2.2 패키지를 사용하는 것이 좋습니다. 일반적으로 `AspNetCore` 메타패키지와 `Microsoft.Extensions.Http.Polly` 확장 패키지가 필요합니다.
+`HttpClientFactory`를 .NET Core 2.1부터 사용할 수 있지만 프로젝트에서 NuGet의 최신 ASP.NET Core 3.1 패키지를 사용하는 것이 좋습니다. 또한 일반적으로 확장 패키지 `Microsoft.Extensions.Http.Polly`를 참조해야 합니다.
 
 **스타트업에서 Polly의 재시도 정책을 사용하여 클라이언트 구성**
 
@@ -68,7 +68,7 @@ var retryWithJitterPolicy = HttpPolicyExtensions
 
 Polly는 프로젝트 웹 사이트를 통해 프로덕션 준비가 완료된 지터 알고리즘을 제공합니다.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 - **패턴 다시 시도**  
   [https://docs.microsoft.com/azure/architecture/patterns/retry](/azure/architecture/patterns/retry)

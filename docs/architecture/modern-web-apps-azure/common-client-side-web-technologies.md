@@ -3,13 +3,13 @@ title: 일반 클라이언트측 웹 기술
 description: ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케이션 설계 | 일반 클라이언트측 웹 기술
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 7dd3765b1b71d8c1ef22d714a00be3e171fab523
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.date: 12/04/2019
+ms.openlocfilehash: 2809c8539b42e8e2250039dceed1389b3cbdcd8a
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093125"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449376"
 ---
 # <a name="common-client-side-web-technologies"></a>일반 클라이언트측 웹 기술
 
@@ -18,11 +18,14 @@ ms.locfileid: "77093125"
 
 ASP.NET Core 애플리케이션은 웹 애플리케이션이며 일반적으로 HTML, CSS 및 JavaScript와 같은 클라이언트측 웹 기술에 의존합니다. 레이아웃과 스타일(CSS), 동작(JavaScript를 통해)에서 페이지(HTML)의 콘텐츠를 분리하면 복잡한 웹앱에서 관심사 분리 원칙을 활용할 수 있습니다. 이러한 관심사가 긴밀히 연결되어 있지 않으면 향후에 애플리케이션의 구조, 디자인 또는 동작을 더 쉽게 변경할 수 있습니다.
 
-HTML 및 CSS는 상대적으로 안정적인 반면, JavaScript는 웹 기반 애플리케이션 빌드를 위해 애플리케이션 프레임워크와 유틸리티 개발자가 함께 일하는 덕분에 빠른 속도로 발전하고 있습니다. 이 장에서는 웹 개발자가 JavaScript를 사용하는 몇 가지 방법을 살펴보고 Angular 및 React 클라이언트 측 라이브러리의 간단한 개요를 제공합니다.
+HTML 및 CSS는 상대적으로 안정적인 반면, JavaScript는 웹 기반 애플리케이션 빌드를 위해 애플리케이션 프레임워크와 유틸리티 개발자가 함께 일하는 덕분에 빠른 속도로 발전하고 있습니다. 이 장에서는 웹 개발자가 JavaScript를 사용하는 몇 가지 방법을 살펴보고 Angular 및 React 클라이언트 쪽 라이브러리의 간단한 개요를 제공합니다.
+
+> [!NOTE]
+> Blazor는 풍부한 대화형 클라이언트 사용자 인터페이스를 빌드하기 위한 JavaScript 프레임워크에 대한 대안을 제공합니다. 클라이언트 쪽 Blazor 지원은 아직 미리 보기 상태이므로 지금은 이 장의 범위를 벗어납니다.
 
 ## <a name="html"></a>HTML
 
-HTML(HyperText Markup Language)은 웹 페이지 및 웹 애플리케이션을 만드는 데 사용되는 표준 표시 언어입니다. 해당 요소는 서식 있는 텍스트, 이미지, 입력 구성 및 다른 구조를 나타내는 페이지의 구성 요소를 형성합니다. 브라우저가 URL에 대한 요청을 만들 때 페이지나 애플리케이션을 페치하는지 상관 없이 가장 먼저 반환되는 것은 HTML 문서입니다. 이 HTML 문서는 CSS 양식의 모양과 레이아웃에 대한 추가 정보 또는 JavaScript 양식의 동작을 참조하거나 포함할 수 있습니다.
+HTML은 웹 페이지 및 웹 애플리케이션을 만드는 데 사용되는 표준 표시 언어입니다. 해당 요소는 서식 있는 텍스트, 이미지, 입력 구성 및 다른 구조를 나타내는 페이지의 구성 요소를 형성합니다. 브라우저가 URL에 대한 요청을 만들 때 페이지나 애플리케이션을 페치하는지 상관 없이 가장 먼저 반환되는 것은 HTML 문서입니다. 이 HTML 문서는 CSS 양식의 모양과 레이아웃에 대한 추가 정보 또는 JavaScript 양식의 동작을 참조하거나 포함할 수 있습니다.
 
 ## <a name="css"></a>CSS
 
@@ -36,13 +39,13 @@ CSS(CSS 스타일시트)는 HTML 요소의 모양과 레이아웃을 제어하�
 
 ### <a name="css-preprocessors"></a>CSS 프로세서
 
-CSS 스타일시트에는 조건부 논리, 변수 및 다른 프로그래밍 언어의 기능에 대한 지원이 부족합니다. 따라서 같은 색, 글꼴 또는 기타 설정이 HTML 요소 및 CSS 클래스의 여러 다른 변형에 적용되는 것처럼 큰 스타일 시트에는 종종 많은 반복이 포함됩니다. CSS 프로세서는 변수 및 논리에 대한 지원을 추가하여 [DRY 원칙](https://deviq.com/don-t-repeat-yourself/)을 따르는 사용자의 스타일시트에 도움이 될 수 있습니다.
+CSS 스타일시트에는 조건부 논리, 변수 및 다른 프로그래밍 언어의 기능에 대한 지원이 부족합니다. 따라서 같은 색, 글꼴 또는 기타 설정이 HTML 요소 및 CSS 클래스의 여러 다른 변형에 적용되는 것처럼 큰 스타일 시트에는 종종 상당한 반복이 포함됩니다. CSS 프로세서는 변수 및 논리에 대한 지원을 추가하여 [DRY 원칙](https://deviq.com/don-t-repeat-yourself/)을 따르는 사용자의 스타일시트에 도움이 될 수 있습니다.
 
 가장 인기 있는 CSS 프로세서는 Sass와 LESS입니다. 둘 다 CSS를 확장하며 이전 버전과 호환됩니다. 즉, 일반 CSS 파일은 유효한 Sass 또는 LESS 파일입니다. Sass는 Ruby를 기반으로 하며, LESS는 JavaScript를 기반으로 합니다. 일반적으로 둘 다 로컬 개발 프로세스의 일환으로 실행합니다. 둘 다 Gulp 또는 Grunt 작업을 사용하여 실행할 수 있도록 Visual Studio의 기본 제공 지원뿐만 아니라 사용 가능한 명령줄 도구가 있습니다.
 
 ## <a name="javascript"></a>JavaScript
 
-JavaScript는 ECMAScript 언어 사양에 표준화된 동적이고 해석된 프로그래밍 언어이며, 웹의 프로그래밍 언어입니다. CSS와 마찬가지로 JavaScript는 페이지 내 또는 개별 파일의 스크립트 차단과 같이 HTML 요소 내 특성으로 정의될 수 있습니다. CSS와 마찬가지로, 일반적으로 JavaScript를 개별 웹 페이지나 애플리케이션 뷰에 있는 HTML로부터 최대한 분리하여 별도 파일에 구성하는 것이 좋습니다.
+JavaScript는 ECMAScript 언어 사양에 표준화된 동적이고 해석된 프로그래밍 언어이며, 웹의 프로그래밍 언어입니다. CSS와 마찬가지로 JavaScript는 페이지 내 또는 개별 파일의 스크립트 차단과 같이 HTML 요소 내 특성으로 정의될 수 있습니다. CSS와 마찬가지로, JavaScript를 개별 웹 페이지나 애플리케이션 뷰에 있는 HTML로부터 최대한 분리하여 별도 파일에 구성하는 것이 좋습니다.
 
 웹 애플리케이션에서 JavaScript를 작업할 때 일반적으로 수행해야 하는 다음과 같은 몇 가지 작업이 있습니다.
 
@@ -79,7 +82,7 @@ JavaScript 프레임워크 표준에서 유래되었음에도 jQuery는 여전�
 
 ### <a name="angular-spas"></a>Angular SPA
 
-AngularJS는 빠르게 세계에서 가장 인기 있는 JavaScript 프레임워크 중 하나가 되었습니다. Angular 2를 사용하면 팀이 처음부터 프레임워크를 다시 빌드하고([TypeScript](https://www.typescriptlang.org/) 사용) AngularJS에서 간단히 Angular로 브랜드를 변경할 수 있습니다. 버전 4인 현재 Angular는 여전히 단일 페이지 애플리케이션을 빌드하기 위한 강력한 프레임워크입니다.
+Angular는 세계에서 가장 인기 있는 JavaScript 프레임워크 중 하나로 남아 있습니다. Angular 2부터 팀이 처음부터 프레임워크를 다시 빌드하고([TypeScript](https://www.typescriptlang.org/) 사용) 원래 AngularJS 이름에서 간단히 Angular로 브랜드를 변경할 수 있습니다. 이제 몇 년이 지나 다시 디자인된 Angular는 여전히 단일 페이지 애플리케이션을 빌드하기 위한 강력한 프레임워크입니다.
 
 Angular 애플리케이션은 구성 요소에서 빌드됩니다. 구성 요소는 특정 개체와 HTML 템플릿을 결합하고 페이지의 일부를 제어합니다. Angular 문서의 간단한 구성 요소는 다음과 같습니다.
 
@@ -104,7 +107,7 @@ Microsoft는 Angular SPA 구현을 포함하는 [eShopOnContainers](https://aka.
 
 ### <a name="react"></a>React
 
-전체 모델-뷰-컨트롤러 패턴 구현을 제공하는 Angular와 달리, React는 오직 뷰와 관련이 있습니다. 프레임워크가 아닌 라이브러리일 뿐이므로 SPA를 빌드하려면 추가 라이브러리를 활용해야 합니다.
+전체 모델-뷰-컨트롤러 패턴 구현을 제공하는 Angular와 달리, React는 오직 뷰와 관련이 있습니다. 프레임워크가 아닌 라이브러리일 뿐이므로 SPA를 빌드하려면 추가 라이브러리를 활용해야 합니다. React와 함께 사용하여 풍부한 단일 페이지 애플리케이션을 생성하도록 설계된 많은 라이브러리가 있습니다.
 
 React의 가장 중요한 기능 중 하나는 가상 DOM을 사용하는 것입니다. 가상 DOM은 React에 성능(가상 DOM은 업데이트가 필요한 실제 DOM의 부분을 최적화할 수 있음) 및 테스트 용이성(React와 해당 가상 DOM과의 상호 작용을 테스트하기 위해 브라우저가 필요하지 않음)을 포함한 여러 장점을 제공합니다.
 
@@ -121,6 +124,40 @@ React의 가장 중요한 기능 중 하나는 가상 DOM을 사용하는 것입
 JavaScript에 대해 이미 알고 있다면 React는 이해하기 쉬울 것입니다. Angular 또는 다른 인기 있는 라이브러리를 사용하는 것만큼 곡선이나 특수 구문이 거의 포함되어 있지 않습니다.
 
 React는 전체 프레임워크가 아니므로 라우팅, 웹 API 호출 및 종속성 관리와 같은 작업을 처리하기 위해 일반적으로 다른 라이브러리가 필요할 수도 있습니다. 장점은 이러한 각 작업에 최선의 라이브러리를 사용자가 고를 수 있다는 점이며, 단점은 이러한 모든 결정을 사용자가 내려야 하며, 작업을 완료했을 때 함께 제대로 작동하는지 선택한 모든 라이브러리의 유효성을 검사해야 한다는 점입니다. 시작점을 찾고 있다면, 일련의 호환 가능한 라이브러리를 React와 함께 패키지로 묶은 React Slingshot 같은 시작키트를 사용해 보세요.
+
+### <a name="vue"></a>Vue
+
+시작 가이드를 인용하자면 "Vue는 사용자 인터페이스를 빌드하기 위한 프로그레시브 프레임워크입니다. 다른 모놀리식 프레임워크와 달리 Vue는 처음부터 증분식으로 채택할 수 있도록 설계되었습니다. 핵심 라이브러리는 뷰 계층에만 초점을 맞추고, 용이하게 선택하여 다른 라이브러리 또는 기존 프로젝트와 통합할 수 있습니다. 반면 Vue는 최신 도구 및 지원 라이브러리와 함께 사용될 때 정교한 단일 페이지 애플리케이션을 완벽하게 제공할 수 있습니다."
+
+Vue를 시작하려면 HTML 파일 내에 스크립트를 포함하기만 하면 됩니다.
+
+```html
+<!-- development version, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+```
+
+프레임워크가 추가되면 Vue의 간단한 템플릿 구문을 사용하여 데이터를 DOM에 선언적으로 렌더링할 수 있습니다.
+
+```html
+<div id="app">
+  {{ message }}
+</div>
+```
+
+그리고 다음 스크립트를 추가합니다.
+
+```js
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
+```
+
+이렇게 하면 페이지에서 "Hello Vue!"를 렌더링하는 데 충분합니다. 그러나 Vue는 단순히 메시지를 div로 한 번 렌더링하지 않습니다. `message` 값이 변경되면 `<div>`의 값이 즉시 업데이트되어 이를 반영하도록 데이터 바인딩 및 동적 업데이트를 지원합니다.
+
+물론, 이는 Vue에서 사용할 수 있는 기능의 일부에 불과합니다. 지난 몇 년간 많은 인기를 얻으며 대규모 커뮤니티가 형성되었습니다. Vue와 함께 사용하여 그 기능을 확장할 수 있는 [지원 구성 요소 및 라이브러리](https://github.com/vuejs/awesome-vue#redux)는 방대하며 계속 확장되고 있습니다. 웹 애플리케이션에 클라이언트 쪽 동작을 추가하거나 전체 SPA를 빌드하려는 경우 Vue는 고려할 가치가 있습니다.
 
 ### <a name="choosing-a-spa-framework"></a>SPA 프레임워크 선택
 
@@ -157,13 +194,13 @@ JavaScript 프레임워크는 지속적으로 매우 빠르게 발전하고 있�
 > - **Angular**  
 > <https://angular.io/>
 > - **React**  
-> <https://facebook.github.io/react/>
-> - **React Slingshot**  
-> <https://github.com/coryhouse/react-slingshot>
-> - **React 대 Angular 2 비교**  
-> <https://www.codementor.io/codementorteam/react-vs-angular-2-comparison-beginners-guide-lvz5710ha>
-> - **2017년 최고 JavaScript 프레임워크 5위**  
-> <https://hackernoon.com/5-best-javascript-frameworks-in-2017-7a63b3870282>
+> <https://reactjs.org/>
+> - **Vue**  
+> <https://vuejs.org/>
+> - **Angular vs React vs Vue: 2020년에 선택할 프레임워크**
+> <https://www.codeinwp.com/blog/angular-vs-vue-vs-react/>
+> - **2020년 프런트 엔드 개발용 상위 JavaScript 프레임워크**  
+> <https://www.freecodecamp.org/news/complete-guide-for-front-end-developers-javascript-frameworks-2019/>
 
 >[!div class="step-by-step"]
 >[이전](common-web-application-architectures.md)

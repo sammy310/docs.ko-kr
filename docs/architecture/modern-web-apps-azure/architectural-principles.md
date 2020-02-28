@@ -3,13 +3,13 @@ title: 아키텍처 원칙
 description: ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케이션 설계 | 아키텍처 원칙
 author: ardalis
 ms.author: wiwagn
-ms.date: 02/16/2019
-ms.openlocfilehash: 656c92c417283366e4bb757489c189ecbc0ea815
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 12/04/2019
+ms.openlocfilehash: ffc890bf8cd6b07bd70d8fc7b2b8cfeaf474ae35
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416695"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450273"
 ---
 # <a name="architectural-principles"></a>아키텍처 원칙
 
@@ -99,7 +99,7 @@ ms.locfileid: "73416695"
 
 적어도 개별 웹 애플리케이션은 다른 애플리케이션과 데이터베이스를 공유하지 않고 자신의 비즈니스 모델에 대한 자체 지속성 저장소를 통해 자체 바인딩된 컨텍스트가 되기 위해 노력해야 합니다. 바인딩된 컨텍스트 간의 통신은 공유 데이터베이스가 아닌 프로그래밍 방식 인터페이스를 통해 발생하며, 발생하는 변경 내용에 대응하여 비즈니스 논리 및 이벤트가 발생하는 것을 허용합니다. 바인딩된 컨텍스트는 마이크로 서비스와 긴밀하게 매핑되며, 또한 자체적인 개별 바인딩된 컨텍스트로 이상적으로 구현됩니다.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 - [JAVA 디자인 패턴: 원칙](https://java-design-patterns.com/principles/)
 - [바인딩된 컨텍스트](https://martinfowler.com/bliki/BoundedContext.html)

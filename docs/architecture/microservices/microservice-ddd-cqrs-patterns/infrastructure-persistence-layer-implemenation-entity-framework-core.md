@@ -1,13 +1,13 @@
 ---
 title: Entity Framework Core를 사용하여 인프라 지속성 레이어 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | Entity Framework Core를 사용하여 인프라 지속성 계층에 대한 구현 세부 정보를 탐색합니다.
-ms.date: 10/08/2018
-ms.openlocfilehash: b70ede6b47cbf990d0435aef841416c68f6439b4
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: 63579dc74ba52551bc1ee02a57337c1b17fdf396
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737902"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502492"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Entity Framework Core를 사용하여 인프라 지속성 레이어 구현
 
@@ -273,49 +273,73 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 {
     public void Configure(EntityTypeBuilder<Order> orderConfiguration)
     {
-            orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
+        orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
 
-            orderConfiguration.HasKey(o => o.Id);
+        orderConfiguration.HasKey(o => o.Id);
 
-            orderConfiguration.Ignore(b => b.DomainEvents);
+        orderConfiguration.Ignore(b => b.DomainEvents);
 
-            orderConfiguration.Property(o => o.Id)
-                .ForSqlServerUseSequenceHiLo("orderseq", OrderingContext.DEFAULT_SCHEMA);
+        orderConfiguration.Property(o => o.Id)
+            .UseHiLo("orderseq", OrderingContext.DEFAULT_SCHEMA);
 
-            //Address Value Object persisted as owned entity type supported since EF Core 2.0
-            orderConfiguration.OwnsOne(o => o.Address);
+        //Address value object persisted as owned entity type supported since EF Core 2.0
+        orderConfiguration
+            .OwnsOne(o => o.Address, a =>
+            {
+                a.WithOwner();
+            });
 
-            orderConfiguration.Property<DateTime>("OrderDate").IsRequired();
-            orderConfiguration.Property<int?>("BuyerId").IsRequired(false);
-            orderConfiguration.Property<int>("OrderStatusId").IsRequired();
-            orderConfiguration.Property<int?>("PaymentMethodId").IsRequired(false);
-            orderConfiguration.Property<string>("Description").IsRequired(false);
+        orderConfiguration
+            .Property<int?>("_buyerId")
+            .UsePropertyAccessMode(PropertyAccessMode.Field)
+            .HasColumnName("BuyerId")
+            .IsRequired(false);
 
-            var navigation = orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems));
+        orderConfiguration
+            .Property<DateTime>("_orderDate")
+            .UsePropertyAccessMode(PropertyAccessMode.Field)
+            .HasColumnName("OrderDate")
+            .IsRequired();
 
-            // DDD Patterns comment:
-            //Set as field (New since EF 1.1) to access the OrderItem collection property through its field
-            navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+        orderConfiguration
+            .Property<int>("_orderStatusId")
+            .UsePropertyAccessMode(PropertyAccessMode.Field)
+            .HasColumnName("OrderStatusId")
+            .IsRequired();
 
-            orderConfiguration.HasOne<PaymentMethod>()
-                .WithMany()
-                .HasForeignKey("PaymentMethodId")
-                .IsRequired(false)
-                .OnDelete(DeleteBehavior.Restrict);
+        orderConfiguration
+            .Property<int?>("_paymentMethodId")
+            .UsePropertyAccessMode(PropertyAccessMode.Field)
+            .HasColumnName("PaymentMethodId")
+            .IsRequired(false);
 
-            orderConfiguration.HasOne<Buyer>()
-                .WithMany()
-                .IsRequired(false)
-                .HasForeignKey("BuyerId");
+        orderConfiguration.Property<string>("Description").IsRequired(false);
 
-            orderConfiguration.HasOne(o => o.OrderStatus)
-                .WithMany()
-                .HasForeignKey("OrderStatusId");
+        var navigation = orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems));
+
+        // DDD Patterns comment:
+        //Set as field (New since EF 1.1) to access the OrderItem collection property through its field
+        navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+
+        orderConfiguration.HasOne<PaymentMethod>()
+            .WithMany()
+            .HasForeignKey("_paymentMethodId")
+            .IsRequired(false)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        orderConfiguration.HasOne<Buyer>()
+            .WithMany()
+            .IsRequired(false)
+            .HasForeignKey("_buyerId");
+
+        orderConfiguration.HasOne(o => o.OrderStatus)
+            .WithMany()
+            .HasForeignKey("_orderStatusId");
     }
 }
 ```
 
-동일한 OnModelCreating 메서드 내에서 모든 흐름 API 매핑을 설정할 수 있지만, 예제에 보이는 것처럼 해당 코드를 분할하여 여러 구성 클래스를 두는 것이 좋습니다. 특히 매우 큰 모델의 경우 여러 엔터티 형식을 구성하기 위한 별도의 클래스를 두는 것이 좋습니다.
+동일한 `OnModelCreating` 메서드 내에서 모든 흐름 API 매핑을 설정할 수 있지만, 예제에 보이는 것처럼 해당 코드를 분할하여 여러 구성 클래스를 두는 것이 좋습니다. 특히 대형 모델의 경우 여러 엔터티 형식을 구성하기 위한 별도의 클래스를 두는 것이 좋습니다.
 
 예제의 코드는 몇 가지 명시적 선언 및 매핑을 보여줍니다. 그러나 EF Core 규칙에서 이러한 매핑의 상당수를 자동으로 처리하므로 필요한 실제 코드 크기는 더 작아질 수 있습니다.
 
@@ -333,7 +357,7 @@ Hi/Lo 알고리즘은 관련 데이터베이스 시퀀스에서 고유 ID의 일
 
 - GUID를 사용하는 기술은 달리, 사람이 읽을 수 있는 식별자를 생성합니다.
 
-EF Core는 앞의 예제와 같이 ForSqlServerUseSequenceHiLo 메서드를 통해 [HiLo](https://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm)를 지원합니다.
+EF Core는 위 예제와 같이 `UseHiLo` 메서드를 사용하여 [HiLo](https://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm)를 지원합니다.
 
 ### <a name="map-fields-instead-of-properties"></a>속성 대신 필드 매핑
 
@@ -410,6 +434,7 @@ public class BasketWithItemsSpecification : BaseSpecification<Basket>
     {
         AddInclude(b => b.Items);
     }
+
     public BasketWithItemsSpecification(string buyerId)
         : base(b => b.BuyerId == buyerId)
     {
@@ -445,7 +470,7 @@ public IEnumerable<T> List(ISpecification<T> spec)
 
 사양은 필터링 논리를 캡슐화할 뿐 아니라 채울 속성을 포함하여 반환될 데이터의 모양을 지정할 수 있습니다.
 
-리포지토리에서 IQueryable을 반환하는 것을 권장하지는 않지만, 리포지토리 내에서 사용하여 결과 집합을 빌드하는 데 사용하는 것은 아무 문제 없습니다. 위의 List 메서드에 이 접근 방식이 사용된 것을 볼 수 있습니다. 중간 IQueryable 식을 사용하여 쿼리의 포함 목록을 빌드한 후 마지막 줄에서 사양의 기준을 사용하여 쿼리가 실행됩니다.
+리포지토리에서 `IQueryable`을 반환하는 것을 권장하지는 않지만, 리포지토리 내에서 사용하여 결과 집합을 빌드하는 데 사용하는 것은 아무 문제 없습니다. 위의 List 메서드에 이 접근 방식이 사용된 것을 볼 수 있습니다. 중간 `IQueryable` 식을 사용하여 쿼리의 포함 목록을 빌드한 후 마지막 줄에서 사양의 기준을 사용하여 쿼리가 실행됩니다.
 
 ### <a name="additional-resources"></a>추가 자료
 

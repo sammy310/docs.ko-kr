@@ -2,12 +2,12 @@
 title: 비동기 앱에서 재진입 처리(C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: 9a6189624eff988ec6b0ac8a93330d591ed46a8c
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 67fbbd294ffe6219b58065f974543b2dd483a92c
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772032"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451865"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>비동기 앱에서 재진입 처리(C#)
 
@@ -31,7 +31,7 @@ ms.locfileid: "72772032"
 > 예제를 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.
 
 > [!NOTE]
-> 현재 앱 개발에 사용할 최소 버전은 TLS(전송 계층 보안) 버전 1.2입니다. 앱이 .NET Framework 4.7 이전 버전을 대상으로 하는 경우, [.NET Framework를 사용한 TLS(전송 계층 보안) 모범 사례](../../../../framework/network-programming/tls.md)는 다음 문서를 참조하세요. 
+> 현재 앱 개발에 사용할 최소 버전은 TLS(전송 계층 보안) 버전 1.2입니다. 앱이 .NET Framework 4.7 이전 버전을 대상으로 하는 경우, 다음 문서에서 [.NET Framework를 사용한 TLS(전송 계층 보안) 모범 사례](../../../../framework/network-programming/tls.md)를 참조하세요.
 
 ## <a name="BKMK_RecognizingReentrancy"></a> 재진입 인식
 
@@ -728,7 +728,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 
 12. [시작 버튼 사용 안 함](#BKMK_DisableTheStartButton), [작업 취소 및 다시 시작](#BKMK_CancelAndRestart) 또는 [여러 작업을 실행하고 출력을 큐 대기](#BKMK_RunMultipleOperations)의 내용을 변경하여 재진입을 처리합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [연습: async 및 await를 사용하여 웹에 액세스(C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [async 및 await를 사용한 비동기 프로그래밍(C#)](./index.md)

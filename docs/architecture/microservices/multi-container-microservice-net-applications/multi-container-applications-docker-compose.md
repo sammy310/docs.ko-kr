@@ -1,13 +1,13 @@
 ---
 title: docker-compose.yml을 사용하여 다중 컨테이너 애플리케이션 정의
 description: docker-compose.yml을 사용하여 다중 컨테이너 애플리케이션에서 마이크로 서비스 컴퍼지션을 지정하는 방법입니다.
-ms.date: 10/02/2018
-ms.openlocfilehash: f9cab35ac8e11ca89a83f646c29bf72f84e66ef4
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.date: 01/30/2020
+ms.openlocfilehash: 86d6feda343df7f4b72374f93fc45b3246780cdf
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116547"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502460"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml을 사용하여 다중 컨테이너 애플리케이션 정의
 
@@ -26,20 +26,20 @@ services:
   webmvc:
     image: eshop/webmvc
     environment:
-      - CatalogUrl=http://catalog.api
-      - OrderingUrl=http://ordering.api
-      - BasketUrl=http://basket.api
+      - CatalogUrl=http://catalog-api
+      - OrderingUrl=http://ordering-api
+      - BasketUrl=http://basket-api
     ports:
       - "5100:80"
     depends_on:
-      - catalog.api
-      - ordering.api
-      - basket.api
+      - catalog-api
+      - ordering-api
+      - basket-api
 
-  catalog.api:
-    image: eshop/catalog.api
+  catalog-api:
+    image: eshop/catalog-api
     environment:
-      - ConnectionString=Server=sql.data;Initial Catalog=CatalogData;User Id=sa;Password=your@password
+      - ConnectionString=Server=sqldata;Initial Catalog=CatalogData;User Id=sa;Password=your@password
     expose:
       - "80"
     ports:
@@ -48,37 +48,37 @@ services:
     extra_hosts:
       - "CESARDLSURFBOOK:10.0.75.1"
     depends_on:
-      - sql.data
+      - sqldata
 
-  ordering.api:
-    image: eshop/ordering.api
+  ordering-api:
+    image: eshop/ordering-api
     environment:
-      - ConnectionString=Server=sql.data;Database=Services.OrderingDb;User Id=sa;Password=your@password
+      - ConnectionString=Server=sqldata;Database=Services.OrderingDb;User Id=sa;Password=your@password
     ports:
       - "5102:80"
     #extra hosts can be used for standalone SQL Server or services at the dev PC
     extra_hosts:
       - "CESARDLSURFBOOK:10.0.75.1"
     depends_on:
-      - sql.data
+      - sqldata
 
-  basket.api:
-    image: eshop/basket.api
+  basket-api:
+    image: eshop/basket-api
     environment:
-      - ConnectionString=sql.data
+      - ConnectionString=sqldata
     ports:
       - "5103:80"
     depends_on:
-      - sql.data
+      - sqldata
 
-  sql.data:
+  sqldata:
     environment:
       - SA_PASSWORD=your@password
       - ACCEPT_EULA=Y
     ports:
       - "5434:1433"
 
-  basket.data:
+  basketdata:
     image: redis
 ```
 
@@ -87,21 +87,21 @@ services:
 | 서비스 이름 | 설명 |
 |--------------|-------------|
 | webmvc       | 서버 쪽 C\#에서 마이크로 서비스를 사용하는 ASP.NET Core MVC 애플리케이션을 포함하는 컨테이너|
-| catalog.api  | Catalog ASP.NET Core Web API 마이크로 서비스를 포함하는 컨테이너 |
-| ordering.api | Ordering ASP.NET Core Web API 마이크로 서비스를 포함하는 컨테이너 |
-| sql.data     | 마이크로 서비스 데이터베이스를 보유하는 Linux용 SQL Server를 실행하는 컨테이너 |
-| basket.api   | Basket ASP.NET Core Web API 마이크로 서비스가 있는 컨테이너 |
-| basket.data  | REDIS 캐시로 바구니 데이터베이스가 있는 REDIS 캐시 서비스를 실행하는 컨테이너 |
+| catalog-api  | Catalog ASP.NET Core Web API 마이크로 서비스를 포함하는 컨테이너 |
+| ordering-api | Ordering ASP.NET Core Web API 마이크로 서비스를 포함하는 컨테이너 |
+| sqldata     | 마이크로 서비스 데이터베이스를 보유하는 Linux용 SQL Server를 실행하는 컨테이너 |
+| basket-api   | Basket ASP.NET Core Web API 마이크로 서비스가 있는 컨테이너 |
+| basketdata  | REDIS 캐시로 바구니 데이터베이스가 있는 REDIS 캐시 서비스를 실행하는 컨테이너 |
 
 ### <a name="a-simple-web-service-api-container"></a>단순한 Web Service API 컨테이너
 
-단일 컨테이너에 집중하는 catalog.api 컨테이너 마이크로 서비스에는 간단한 정의가 있습니다.
+단일 컨테이너에 집중하는 catalog-api 컨테이너 마이크로 서비스에는 간단한 정의가 있습니다.
 
 ```yml
-  catalog.api:
-    image: eshop/catalog.api
+  catalog-api:
+    image: eshop/catalog-api
     environment:
-      - ConnectionString=Server=sql.data;Initial Catalog=CatalogData;User Id=sa;Password=your@password
+      - ConnectionString=Server=sqldata;Initial Catalog=CatalogData;User Id=sa;Password=your@password
     expose:
       - "80"
     ports:
@@ -110,32 +110,32 @@ services:
     extra_hosts:
       - "CESARDLSURFBOOK:10.0.75.1"
     depends_on:
-      - sql.data
+      - sqldata
 ```
 
 이 컨테이너화된 서비스에는 다음과 같은 기본 구성이 있습니다.
 
-- 사용자 지정 eshop/catalog.api 이미지를 기반으로 합니다. 편의상 파일에 키 설정이라는 빌드가 없습니다. 즉, 이미지는 모든 Docker 레지스트리에서 이전에 docker 빌드로 빌드되었거나 docker pull 명령으로 다운로드되었어야 합니다.
+- 사용자 지정 **eshop/catalog-api** 이미지를 기반으로 합니다. 편의상 파일에 키 설정이라는 빌드가 없습니다. 즉, 이미지는 모든 Docker 레지스트리에서 이전에 docker 빌드로 빌드되었거나 docker pull 명령으로 다운로드되었어야 합니다.
 
 - 카탈로그 데이터 모델을 포함하는 SQL Server 인스턴스에 액세스하기 위해 Entity Framework에서 사용되는 연결 문자열로 ConnectionString이라는 환경 변수를 정의합니다. 이 경우 동일한 SQL Server 컨테이너는 여러 데이터베이스를 보유하고 있습니다. 따라서 Docker에 대한 개발 컴퓨터에 적은 메모리가 필요합니다. 그러나 각 마이크로 서비스 데이터베이스에 대해 하나의 SQL Server 컨테이너를 배포할 수도 있습니다.
 
-- SQL Server 이름은 sql.data입니다. 이는 Linux용 SQL Server 인스턴스를 실행하는 컨테이너에 사용되는 동일한 이름입니다. 이 방법은 편리합니다. 이 이름 확인(Docker 호스트에 대한 내부)을 사용할 수 있는 것은 네트워크 주소를 해결하므로 다른 컨테이너에서 액세스하는 컨테이너에 대한 내부 IP를 알지 않아도 됩니다.
+- SQL Server 이름은 **sqldata**입니다. 이는 Linux용 SQL Server 인스턴스를 실행하는 컨테이너에 사용되는 동일한 이름입니다. 이 방법은 편리합니다. 이 이름 확인(Docker 호스트에 대한 내부)을 사용할 수 있는 것은 네트워크 주소를 해결하므로 다른 컨테이너에서 액세스하는 컨테이너에 대한 내부 IP를 알지 않아도 됩니다.
 
 연결 문자열은 환경 변수에 의해 정의되므로 다른 메커니즘을 통해 다른 시간에 해당 변수를 설정할 수 있습니다. 예를 들어 최종 호스트에서 프로덕션에 배포할 때 또는 Azure DevOps Services 또는 기본 DevOps 시스템의 CI/CD 파이프라인에서 수행하여 다른 연결 문자열을 설정할 수 있습니다.
 
-- Docker 호스트 내에서 catalog.api 서비스에 대한 내부 엑세스에 대해 포트 80을 노출합니다. 호스트는 Linux용 Docker 이미지를 기반으로 하므로 현재 Linux VM이지만 Windows 이미지에서 대신 실행하도록 컨테이너를 구성할 수 있습니다.
+- Docker 호스트 내에서 **catalog-api** 서비스에 대한 내부 엑세스에 대해 포트 80을 노출합니다. 호스트는 Linux용 Docker 이미지를 기반으로 하므로 현재 Linux VM이지만 Windows 이미지에서 대신 실행하도록 컨테이너를 구성할 수 있습니다.
 
 - 컨테이너의 노출된 포트 80을 Docker 호스트 컴퓨터(Linux VM)의 포트 5101에 전달합니다.
 
-- 웹 서비스를 sql.data 서비스(컨테이너에서 실행되는 Linux 데이터베이스에 대한 SQL Server 인스턴스)에 연결합니다. 이 종속성을 지정하면 catalog.api 컨테이너는 sql.data 컨테이너가 시작하기 전까지 시작하지 않습니다. catalog.api는 실행 중인 SQL Server 데이터베이스가 먼저 있어야 하기 때문에 중요합니다. 그러나 이러한 종류의 컨테이너 종속성은 Docker가 컨테이너 수준에서만 확인하기 때문에 많은 경우에서 충분하지 않습니다. 경우에 따라 서비스(이 경우 SQL Server)는 여전히 준비되지 않을 수 있으므로 클라이언트 마이크로 서비스에서 지수 백오프로 재시도 논리를 구현하는 것이 좋습니다. 이런 방식으로 종속성 컨테이너가 짧은 시간 동안 준비되지 않는 경우 애플리케이션은 계속해서 복원됩니다.
+- 웹 서비스를 **sqldata** 서비스(컨테이너에서 실행되는 Linux 데이터베이스에 대한 SQL Server 인스턴스)에 연결합니다. 이 종속성을 지정하면 catalog-api 컨테이너는 sqldata 컨테이너가 시작하기 전까지 시작하지 않습니다. catalog-api는 실행 중인 SQL Server 데이터베이스가 먼저 있어야 하기 때문에 중요합니다. 그러나 이러한 종류의 컨테이너 종속성은 Docker가 컨테이너 수준에서만 확인하기 때문에 많은 경우에서 충분하지 않습니다. 경우에 따라 서비스(이 경우 SQL Server)는 여전히 준비되지 않을 수 있으므로 클라이언트 마이크로 서비스에서 지수 백오프로 재시도 논리를 구현하는 것이 좋습니다. 이런 방식으로 종속성 컨테이너가 짧은 시간 동안 준비되지 않는 경우 애플리케이션은 계속해서 복원됩니다.
 
 - 외부 서버에 대한 액세스를 허용하도록 구성됩니다. 추가\_호스트 설정을 통해 개발 PC의 로컬 SQL Server 인스턴스와 같은 외부 서버 또는 Docker 호스트 외부의 컴퓨터에 액세스할 수 있습니다(즉, 개발 Docker 호스트인 기본 Linux VM의 외부).
 
-다음 섹션에서 다룰 더욱 고급의 다른 docker-compose.yml 설정도 있습니다.
+다음 섹션에서 설명하는 다른 고급 `docker-compose.yml` 설정도 있습니다.
 
 ### <a name="using-docker-compose-files-to-target-multiple-environments"></a>여러 환경을 대상으로 하는 docker-compose 파일 사용
 
-docker-compose.yml 파일은 정의 파일이며 해당 형식을 이해하는 여러 인프라에서 사용될 수 있습니다. 가장 간단한 도구는 docker-compose 명령입니다.
+`docker-compose.*.yml` 파일은 정의 파일이며 해당 형식을 이해하는 여러 인프라에서 사용될 수 있습니다. 가장 간단한 도구는 docker-compose 명령입니다.
 
 따라서 docker-compose 명령을 사용하여 다음과 같은 주요 시나리오를 대상으로 지정할 수 있습니다.
 
@@ -179,13 +179,13 @@ Compose를 사용하여 원격 Docker 엔진에 배포할 수도 있습니다. �
 
 ![Docker Compose 프로젝트 파일의 스크린샷](./media/multi-container-applications-docker-compose/docker-compose-file-visual-studio.png)
 
-**그림 6-11**. Visual Studio 2017의 docker-compose 파일
+**그림 6-11**. Visual Studio 2019의 docker-compose 파일
 
 **Docker Compose** 프로젝트 파일 구조:
 
-* *.dockerignore* - 파일을 무시하는 데 사용
-* *docker-compose.yml* - 마이크로 서비스를 작성하는 데 사용
-* *docker-compose.override.yml* - 마이크로 서비스 환경을 구성하는 데 사용
+- *.dockerignore* - 파일을 무시하는 데 사용
+- *docker-compose.yml* - 마이크로 서비스를 작성하는 데 사용
+- *docker-compose.override.yml* - 마이크로 서비스 환경을 구성하는 데 사용
 
 Visual Studio Code 또는 Sublime과 같은 편집기를 사용하여 docker-compose 파일을 편집하고 docker-compose up 명령을 사용하여 애플리케이션을 실행할 수 있습니다.
 
@@ -207,34 +207,34 @@ Visual Studio Code 또는 Sublime과 같은 편집기를 사용하여 docker-com
 #docker-compose.yml (Base)
 version: '3.4'
 services:
-  basket.api:
-    image: eshop/basket.api:${TAG:-latest}
+  basket-api:
+    image: eshop/basket-api:${TAG:-latest}
     build:
       context: .
       dockerfile: src/Services/Basket/Basket.API/Dockerfile
     depends_on:
-      - basket.data
-      - identity.api
+      - basketdata
+      - identity-api
       - rabbitmq
 
-  catalog.api:
-    image: eshop/catalog.api:${TAG:-latest}
+  catalog-api:
+    image: eshop/catalog-api:${TAG:-latest}
     build:
       context: .
       dockerfile: src/Services/Catalog/Catalog.API/Dockerfile
     depends_on:
-      - sql.data
+      - sqldata
       - rabbitmq
 
-  marketing.api:
-    image: eshop/marketing.api:${TAG:-latest}
+  marketing-api:
+    image: eshop/marketing-api:${TAG:-latest}
     build:
       context: .
       dockerfile: src/Services/Marketing/Marketing.API/Dockerfile
     depends_on:
-      - sql.data
-      - nosql.data
-      - identity.api
+      - sqldata
+      - nosqldata
+      - identity-api
       - rabbitmq
 
   webmvc:
@@ -243,19 +243,19 @@ services:
       context: .
       dockerfile: src/Web/WebMVC/Dockerfile
     depends_on:
-      - catalog.api
-      - ordering.api
-      - identity.api
-      - basket.api
-      - marketing.api
+      - catalog-api
+      - ordering-api
+      - identity-api
+      - basket-api
+      - marketing-api
 
-  sql.data:
-    image: microsoft/mssql-server-linux:2017-latest
+  sqldata:
+    image: mcr.microsoft.com/mssql/server:2017-latest
 
-  nosql.data:
+  nosqldata:
     image: mongo
 
-  basket.data:
+  basketdata:
     image: redis
 
   rabbitmq:
@@ -286,12 +286,12 @@ version: '3.4'
 services:
 # Simplified number of services here:
 
-  basket.api:
+  basket-api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
-      - ConnectionString=${ESHOP_AZURE_REDIS_BASKET_DB:-basket.data}
-      - identityUrl=http://identity.api
+      - ConnectionString=${ESHOP_AZURE_REDIS_BASKET_DB:-basketdata}
+      - identityUrl=http://identity-api
       - IdentityUrlExternal=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5105
       - EventBusConnection=${ESHOP_AZURE_SERVICE_BUS:-rabbitmq}
       - EventBusUserName=${ESHOP_SERVICE_BUS_USERNAME}
@@ -304,11 +304,11 @@ services:
     ports:
       - "5103:80"
 
-  catalog.api:
+  catalog-api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
-      - ConnectionString=${ESHOP_AZURE_CATALOG_DB:-Server=sql.data;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word}
+      - ConnectionString=${ESHOP_AZURE_CATALOG_DB:-Server=sqldata;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word}
       - PicBaseUrl=${ESHOP_AZURE_STORAGE_CATALOG_URL:-http://localhost:5202/api/v1/catalog/items/[0]/pic/}
       - EventBusConnection=${ESHOP_AZURE_SERVICE_BUS:-rabbitmq}
       - EventBusUserName=${ESHOP_SERVICE_BUS_USERNAME}
@@ -323,17 +323,17 @@ services:
     ports:
       - "5101:80"
 
-  marketing.api:
+  marketing-api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
-      - ConnectionString=${ESHOP_AZURE_MARKETING_DB:-Server=sql.data;Database=Microsoft.eShopOnContainers.Services.MarketingDb;User Id=sa;Password=Pass@word}
-      - MongoConnectionString=${ESHOP_AZURE_COSMOSDB:-mongodb://nosql.data}
+      - ConnectionString=${ESHOP_AZURE_MARKETING_DB:-Server=sqldata;Database=Microsoft.eShopOnContainers.Services.MarketingDb;User Id=sa;Password=Pass@word}
+      - MongoConnectionString=${ESHOP_AZURE_COSMOSDB:-mongodb://nosqldata}
       - MongoDatabase=MarketingDb
       - EventBusConnection=${ESHOP_AZURE_SERVICE_BUS:-rabbitmq}
       - EventBusUserName=${ESHOP_SERVICE_BUS_USERNAME}
       - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}
-      - identityUrl=http://identity.api
+      - identityUrl=http://identity-api
       - IdentityUrlExternal=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5105
       - CampaignDetailFunctionUri=${ESHOP_AZUREFUNC_CAMPAIGN_DETAILS_URI}
       - PicBaseUrl=${ESHOP_AZURE_STORAGE_MARKETING_URL:-http://localhost:5110/api/v1/campaigns/[0]/pic/}
@@ -354,12 +354,12 @@ services:
       - PurchaseUrl=http://webshoppingapigw
       - IdentityUrl=http://10.0.75.1:5105
       - MarketingUrl=http://webmarketingapigw
-      - CatalogUrlHC=http://catalog.api/hc
-      - OrderingUrlHC=http://ordering.api/hc
-      - IdentityUrlHC=http://identity.api/hc
-      - BasketUrlHC=http://basket.api/hc
-      - MarketingUrlHC=http://marketing.api/hc
-      - PaymentUrlHC=http://payment.api/hc
+      - CatalogUrlHC=http://catalog-api/hc
+      - OrderingUrlHC=http://ordering-api/hc
+      - IdentityUrlHC=http://identity-api/hc
+      - BasketUrlHC=http://basket-api/hc
+      - MarketingUrlHC=http://marketing-api/hc
+      - PaymentUrlHC=http://payment-api/hc
       - SignalrHubUrl=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5202
       - UseCustomizationData=True
       - ApplicationInsights__InstrumentationKey=${INSTRUMENTATION_KEY}
@@ -367,16 +367,16 @@ services:
       - UseLoadTest=${USE_LOADTEST:-False}
     ports:
       - "5100:80"
-  sql.data:
+  sqldata:
     environment:
       - SA_PASSWORD=Pass@word
       - ACCEPT_EULA=Y
     ports:
       - "5433:1433"
-  nosql.data:
+  nosqldata:
     ports:
       - "27017:27017"
-  basket.data:
+  basketdata:
     ports:
       - "6379:6379"
   rabbitmq:
@@ -412,7 +412,7 @@ IdentityUrl=http://${ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP}:5105
 
 다음 예제에서는 eShopOnContainers 애플리케이션에 대한 [.env](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/.env) 파일과 같은 .env 파일을 보여 줍니다.
 
-```env
+```sh
 # .env file
 
 ESHOP_EXTERNAL_DNS_NAME_OR_IP=localhost
@@ -437,7 +437,7 @@ docker-compose는 .env 파일의 각 줄이 \<변수\>=\<값\> 형식이 되도�
 인터넷에서 원본의 Docker 및 .NET Core를 탐색하는 경우 원본을 컨테이너에 복사하여 Docker 이미지를 빌드하는 것의 용이함을 보여 주는 Dockerfile을 찾을 수 있습니다. 이러한 예제는 간단한 구성을 사용하는 것을 제안합니다. 애플리케이션과 함께 제공되는 환경으로 Docker 이미지를 가질 수 있습니다. 다음 예제에서는 이 맥락에서 간단한 Dockerfile을 보여 줍니다.
 
 ```Dockerfile
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1
 WORKDIR /app
 ENV ASPNETCORE_URLS http://+:80
 EXPOSE 80
@@ -463,7 +463,7 @@ ENTRYPOINT ["dotnet", "run"]
 1. **sdk**: 개발 및 빌드 시나리오용
 1. **aspnet**: ASP.NET 프로덕션 시나리오용
 1. **runtime**: .NET 프로덕션 시나리오용
-1. **runtime-deps**: [자체 포함된 애플리케이션](../../../core/deploying/index.md#self-contained-deployments-scd)의 프로덕션 시나리오용.
+1. **runtime-deps**: [자체 포함된 애플리케이션](../../../core/deploying/index.md#publish-self-contained)의 프로덕션 시나리오용.
 
 빠른 시작을 위해 런타임 이미지도 자동으로 aspnetcore\_urls를 포트 80으로 설정하고 Ngen을 사용하여 어셈블리의 네이티브 이미지 캐시를 만듭니다.
 

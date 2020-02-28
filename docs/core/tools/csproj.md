@@ -2,12 +2,12 @@
 title: .NET Core용 csproj 형식에 대한 추가 사항
 description: 기존 및 .NET Core csproj 파일 간의 차이점에 대해 알아보기
 ms.date: 04/08/2019
-ms.openlocfilehash: 202c1867ae6404db074e6196b28ffe5f453ef5bf
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 2fb00e830380c5c4cbf7b6dcd2c8a585e1617b4b
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965609"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451371"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core용 csproj 형식에 대한 추가 사항
 
@@ -35,7 +35,7 @@ ms.locfileid: "76965609"
 
 - .NET Core 또는 .NET Standard를 대상으로 하는 경우 절대로 프로젝트 파일의 `<PackageReference>` 항목을 통해 `Microsoft.NETCore.App` 또는 `NETStandard.Library` 메타패키지를 명시적으로 참조하지 않습니다.
 - .NET Core를 대상으로 할 때 특정 버전의 런타임이 필요한 경우 메타패키지를 참조하는 대신 프로젝트의 `<RuntimeFrameworkVersion>` 속성(예: `1.0.4`)을 사용해야 합니다.
-  - 예를 들어 [자체 포함 배포](../deploying/index.md#self-contained-deployments-scd)를 사용하고, 1.0.0 LTS 런타임이라는 특정 패치 버전이 필요한 경우 이런 일이 발생할 수 있습니다.
+  - 예를 들어 [자체 포함 배포](../deploying/index.md#publish-self-contained)를 사용하고, 1.0.0 LTS 런타임이라는 특정 패치 버전이 필요한 경우 이런 일이 발생할 수 있습니다.
 - .NET Standard를 대상으로 할 때 특정 버전의 `NETStandard.Library` 메타패키지가 필요한 경우 `<NetStandardImplicitPackageVersion>` 속성을 사용하고 필요한 버전을 설정할 수 있습니다.
 - .NET Framework 프로젝트의 `Microsoft.NETCore.App` 또는 `NETStandard.Library` 메타패키지에 참조를 명시적으로 추가하거나 업데이트하지 마십시오. .NET Standard 기반 NuGet 패키지를 사용할 때 모든 버전의 `NETStandard.Library`가 필요한 경우 NuGet은 자동으로 해당 버전을 설치합니다.
 
@@ -55,12 +55,12 @@ ms.locfileid: "76965609"
 
 > 알려진 문제: .NET Core 2.1 SDK는 프로젝트에서 Microsoft.NET.Sdk.Web을 사용하는 경우에만 이 구문을 지원했습니다. 이 문제는 .NET Core 2.2 SDK에서 해결되었습니다.
 
-ASP.NET Core 메타패키지에 대한 이 참조의 동작은 대부분의 일반 NuGet 패키지와 약간 다릅니다. 이 메타패키지를 사용하는 애플리케이션의 [프레임워크 종속 배포](../deploying/index.md#framework-dependent-deployments-fdd)에서는 자동으로 ASP.NET Core 공유 프레임워크를 활용합니다. 메타패키지를 사용할 경우, 참조되는 ASP.NET Core NuGet 패키지의 자산이 애플리케이션을 사용하여 배포되지 **않습니다**. 이 자산은 ASP.NET Core 공유 프레임워크에 포함됩니다. 공유 프레임워크의 자산은 애플리케이션 시작 시간을 개선하기 위해 대상 플랫폼에 최적화됩니다. 공유 프레임워크에 대한 자세한 내용은 [.NET Core 배포 패키징](../distribution-packaging.md)을 참조하세요.
+ASP.NET Core 메타패키지에 대한 이 참조의 동작은 대부분의 일반 NuGet 패키지와 약간 다릅니다. 이 메타패키지를 사용하는 애플리케이션의 [프레임워크 종속 배포](../deploying/index.md#publish-runtime-dependent)에서는 자동으로 ASP.NET Core 공유 프레임워크를 활용합니다. 메타패키지를 사용할 경우, 참조되는 ASP.NET Core NuGet 패키지의 자산이 애플리케이션을 사용하여 배포되지 **않습니다**. 이 자산은 ASP.NET Core 공유 프레임워크에 포함됩니다. 공유 프레임워크의 자산은 애플리케이션 시작 시간을 개선하기 위해 대상 플랫폼에 최적화됩니다. 공유 프레임워크에 대한 자세한 내용은 [.NET Core 배포 패키징](../distribution-packaging.md)을 참조하세요.
 
 버전이 지정되면 프레임워크 종속 배포의 경우 ASP.NET Core 공유 프레임워크의 최소 버전으로 처리되고, 자체 포함 배포의 경우 정확한 버전으로 처리됩니다.    다음과 같은 결과가 나타날 수 있습니다.
 
 - 서버에 설치된 ASP.NET Core 버전이 PackageReference에 지정된 버전보다 낮으면 .NET Core 프로세스가 시작되지 않습니다. Azure와 같은 호스팅 환경에서 업데이트를 제공되기 전에 일반적으로 NuGet.org에서 메타패키지 업데이트를 사용할 수 있습니다. ASP.NET Core에 대한 PackageReference에서 버전을 업데이트하면 배포된 애플리케이션이 실패할 수 있습니다.
-- 애플리케이션이 [자체 포함 배포](../deploying/index.md#self-contained-deployments-scd)로 배포되면 애플리케이션에는 .NET Core에 대한 최신 보안 업데이트가 포함되지 않을 수 있습니다. 버전이 지정되지 않으면 SDK는 자체 포함 배포에 최신 버전의 ASP.NET Core를 자동으로 포함할 수 있습니다.
+- 애플리케이션이 [자체 포함 배포](../deploying/index.md#publish-self-contained)로 배포되면 애플리케이션에는 .NET Core에 대한 최신 보안 업데이트가 포함되지 않을 수 있습니다. 버전이 지정되지 않으면 SDK는 자체 포함 배포에 최신 버전의 ASP.NET Core를 자동으로 포함할 수 있습니다.
 
 ## <a name="default-compilation-includes-in-net-core-projects"></a>.NET Core 프로젝트의 기본 컴파일 포함 사항
 
@@ -289,6 +289,10 @@ UI 표시를 위한 패키지에 대한 자세한 설명입니다.
 ### <a name="packagerequirelicenseacceptance"></a>PackageRequireLicenseAcceptance
 
 클라이언트에서, 소비자가 패키지를 설치하기 전에 패키지 라이선스에 동의하도록 물어야 할지 여부를 지정하는 부울 값입니다. 기본값은 `false`입니다.
+
+### <a name="developmentdependency"></a>DevelopmentDependency
+
+패키지가 다른 패키지의 종속성으로 포함되지 않도록 패키지를 개발 전용 종속성으로 표시할지 여부를 지정하는 부울 값입니다. PackageReference(NuGet 4.8 이상)를 사용하는 경우 이 플래그는 컴파일 시간 자산이 컴파일에서 제외된다는 의미이기도 합니다. 자세한 내용은 [PackageReference에 대한 DevelopmentDependency 지원](https://github.com/NuGet/Home/wiki/DevelopmentDependency-support-for-PackageReference)을 참조하세요.
 
 ### <a name="packagelicenseexpression"></a>PackageLicenseExpression
 

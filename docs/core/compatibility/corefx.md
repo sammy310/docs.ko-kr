@@ -2,12 +2,12 @@
 title: 기본 클래스 라이브러리 호환성이 손상되는 변경
 description: 기본 클래스 라이브러리인 .NET CoreFx 관련 호환성이 손상되는 변경 목록입니다.
 ms.date: 09/20/2019
-ms.openlocfilehash: 9e8a00abfae8bf8f5301a4879cb5274492a2b6fd
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 7c59f2a96545e74e4099b6078ff52009740699c6
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093086"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449561"
 ---
 # <a name="corefx-breaking-changes"></a>CoreFx 관련 호환성이 손상되는 변경
 
@@ -15,21 +15,25 @@ CoreFx는 .NET Core에서 사용되는 기본 형식과 기타 일반적인 형�
 
 이 페이지에는 다음과 같은 주요 변경 사항이 설명되어 있습니다.
 
-- [버전을 보고하는 API가 이제 파일 버전이 아닌 제품 버전을 보고함](#apis-that-report-version-now-report-product-and-not-file-version)
-- [사용자 지정 EncoderFallbackBuffer 인스턴스는 재귀적으로 대체될 수 없음](#custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively)
-- [부동 소수점 서식 및 구문 분석 동작 변경](#floating-point-formatting-and-parsing-behavior-changed)
-- [부동 소수점 구문 분석 작업은 더 이상 실패하거나 OverflowException을 throw하지 않음](#floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception)
-- [InvalidAsynchronousStateException이 다른 어셈블리로 이동됨](#invalidasynchronousstateexception-moved-to-another-assembly)
-- [.NET Core 3.0이 잘못된 형식의 UTF-8 바이트 시퀀스를 대체할 때 유니코드 모범 사례를 적용](#net-core-30-follows-unicode-best-practices-when-replacing-ill-formed-utf-8-byte-sequences)
-- [TypeDescriptionProviderAttribute가 다른 어셈블리로 이동됨](#typedescriptionproviderattribute-moved-to-another-assembly)
-- [ZipArchiveEntry가 더 이상 일치하지 않는 항목 크기의 아카이브를 처리하지 않음](#ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes)
-- [JSON 직렬 변환기 예외 형식이 JsonException에서 NotSupportedException으로 변경됨](#json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception)
-- [Utf8JsonWriter에서 (문자열)null의 의미 체계가 변경됨](#change-in-semantics-of-stringnull-in-utf8jsonwriter)
-- [JsonEncodedText.Encode 메서드에 JavaScriptEncoder 인수 추가](#jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument)
-- [JsonFactoryConverter.CreateConverter 서명이 변경되었습니다.](#jsonfactoryconvertercreateconverter-signature-changed)
-- [JsonElement API 변경 내용](#jsonelement-api-changes)
-- [기본 제공 구조체 형식에 추가된 프라이빗 필드](#private-fields-added-to-built-in-struct-types)
-- [UseShellExecute의 기본값 변경](#change-in-default-value-of-useshellexecute)
+| 주요 변경 내용 | 도입된 버전 |
+| - | :-: |
+| [버전을 보고하는 API가 이제 파일 버전이 아닌 제품 버전을 보고함](#apis-that-report-version-now-report-product-and-not-file-version) | 3.0 |
+| [사용자 지정 EncoderFallbackBuffer 인스턴스는 재귀적으로 대체될 수 없음](#custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively) | 3.0 |
+| [부동 소수점 서식 및 구문 분석 동작 변경](#floating-point-formatting-and-parsing-behavior-changed) | 3.0 |
+| [부동 소수점 구문 분석 작업은 더 이상 실패하거나 OverflowException을 throw하지 않음](#floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception) | 3.0 |
+| [InvalidAsynchronousStateException이 다른 어셈블리로 이동됨](#invalidasynchronousstateexception-moved-to-another-assembly) | 3.0 |
+| [.NET Core 3.0이 잘못된 형식의 UTF-8 바이트 시퀀스를 대체할 때 유니코드 모범 사례를 적용](#net-core-30-follows-unicode-best-practices-when-replacing-ill-formed-utf-8-byte-sequences) | 3.0 |
+| [TypeDescriptionProviderAttribute가 다른 어셈블리로 이동됨](#typedescriptionproviderattribute-moved-to-another-assembly) | 3.0 |
+| [ZipArchiveEntry가 더 이상 일치하지 않는 항목 크기의 아카이브를 처리하지 않음](#ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes) | 3.0 |
+| [JSON 직렬 변환기 예외 형식이 JsonException에서 NotSupportedException으로 변경됨](#json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception) | 3.0 |
+| [Utf8JsonWriter에서 (문자열)null의 의미 체계가 변경됨](#change-in-semantics-of-stringnull-in-utf8jsonwriter) | 3.0 |
+| [JsonEncodedText.Encode 메서드에 JavaScriptEncoder 인수 추가](#jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument) | 3.0 |
+| [JsonFactoryConverter.CreateConverter 서명이 변경되었습니다.](#jsonfactoryconvertercreateconverter-signature-changed) | 3.0 |
+| [JsonElement API 변경 내용](#jsonelement-api-changes) | 3.0 |
+| [FieldInfo.SetValue가 초기화 전용 정적 필드에 대해 예외를 throw](#fieldinfosetvalue-throws-exception-for-static-init-only-fields) | 3.0 |
+| [기본 제공 구조체 형식에 추가된 프라이빗 필드](#private-fields-added-to-built-in-struct-types) | 2.1 |
+| [UseShellExecute의 기본값 변경](#change-in-default-value-of-useshellexecute) | 2.1 |
+| [FileSystemInfo.Attributes가 throw하는 UnauthorizedAccessException](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes) | 1.0 |
 
 ## <a name="net-core-30"></a>.NET Core 3.0
 
@@ -65,13 +69,9 @@ CoreFx는 .NET Core에서 사용되는 기본 형식과 기타 일반적인 형�
 
 ***
 
-## <a name="net-core-30-preview-9"></a>.NET Core 3.0 미리 보기 9
-
 [!INCLUDE[JSON serializer exception type changed from JsonException to NotSupportedException](~/includes/core-changes/corefx/3.0/serializer-throws-notsupportedexception.md)]
 
 ***
-
-## <a name="net-core-30-preview-8"></a>.NET Core 3.0 미리 보기 8
 
 [!INCLUDE[Change in semantics of (string)null in Utf8JsonWriter](~/includes/core-changes/corefx/3.0/change-in-null-in-utf8jsonwriter.md)]
 
@@ -85,9 +85,11 @@ CoreFx는 .NET Core에서 사용되는 기본 형식과 기타 일반적인 형�
 
 ***
 
-## <a name="net-core-30-preview-7"></a>.NET Core 3.0 미리 보기 7
-
 [!INCLUDE[JsonElement API changes](~/includes/core-changes/corefx/3.0/jsonelement-api-changes.md)]
+
+***
+
+[!INCLUDE [FieldInfo.SetValue throws exception for static, init-only fields](~/includes/core-changes/corefx/3.0/fieldinfo-setvalue-exception.md)]
 
 ***
 
@@ -98,5 +100,11 @@ CoreFx는 .NET Core에서 사용되는 기본 형식과 기타 일반적인 형�
 ***
 
 [!INCLUDE[Change in default value of UseShellExecute](~/includes/core-changes/corefx/2.1/process-start-changes.md)]
+
+***
+
+## <a name="net-core-10"></a>.NET Core 1.0
+
+[!INCLUDE [UnauthorizedAccessException thrown by FileSystemInfo.Attributes](~/includes/core-changes/corefx/1.0/filesysteminfo-attributes-exceptions.md)]
 
 ***

@@ -1,26 +1,24 @@
 ---
 title: Ocelot을 사용하여 API 게이트웨이 구현
 description: Ocelot을 사용하여 API 게이트웨이를 구현하는 방법과 컨테이너 기반 환경에서 Ocelot을 사용하는 방법을 알아봅니다.
-ms.date: 10/02/2018
-ms.openlocfilehash: c0bcd240b6bd190dd02266c7faaf9fd668eb23bb
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 01/30/2020
+ms.openlocfilehash: 0eb834829a418cfa1ccdf13c5fc8849f6855c4ba
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777302"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502423"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Ocelot을 사용하여 API 게이트웨이 구현
 
-[eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)에서는 eShopOnContainers에서 사용되는 다음 환경과 같이 마이크로 서비스/컨테이너와 함께 어디서나 배포할 수 있는 간단하고 가벼운 API 게이트웨이므로 참조 마이크로 서비스 애플리케이션인 [Ocelot](https://github.com/ThreeMammals/Ocelot)을 사용합니다.
-
-- 로컬 개발 PC, 온-프레미스 또는 클라우드에 있는 Docker 호스트
-- 온-프레미스 또는 관리되는 클라우드(예: AKS(Azure Kubernetes Service))에 있는 Kubernetes 클러스터
-- 온-프레미스 또는 클라우드에 있는 Service Fabric 클러스터
-- Azure에 있는 Service Fabric 메시(예: PaaS/Serverless)
+> [!IMPORTANT]
+> 참조 마이크로 서비스 애플리케이션 [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)는 현재 [Envoy](https://www.envoyproxy.io/)에서 제공하는 기능을 사용하여 이전에 참조된 [Ocelot](https://github.com/ThreeMammals/Ocelot) 대신 API 게이트웨이를 구현합니다.
+> Envoy가 eShopOnContainers에서 구현되는 새로운 gRPC 서비스 간 통신에 필요한 WebSocket 프로토콜을 기본적으로 지원하기 때문에 이 디자인을 선택했습니다.
+> 그러나 가이드에서는 프로덕션 등급 시나리오에 적합한 간단하고, 사용할 수 있고, 가벼운 API 게이트웨이로 Ocelot을 고려할 수 있도록 이 섹션을 할애했습니다.
 
 ## <a name="architect-and-design-your-api-gateways"></a>API 게이트웨이 구성 및 설계
 
-다음 아키텍처 다이어그램에서는 eShopOnContainers에서 Ocelot을 사용하여 API 게이트웨이를 구현하는 방법을 보여 줍니다.
+다음 아키텍처 다이어그램에서는 eShopOnContainers에서 Ocelot을 사용하여 API 게이트웨이를 구현한 방법을 보여 줍니다.
 
 ![eShopOnContainers 아키텍처를 보여주는 다이어그램입니다.](./media/implement-api-gateways-with-ocelot/eshoponcontainers-architecture.png)
 
@@ -89,7 +87,7 @@ HTTP 요청은 마이크로 서비스 데이터베이스에 액세스하는 종�
 마이크로 서비스 URL과 관련하여 컨테이너가 로컬 개발 PC(로컬 Docker 호스트)에 배포되면 각 마이크로 서비스의 컨테이너에는 항상 다음 Dockerfile과 같이 Dockerfile에 지정된 내부 포트(일반적으로 포트 80)가 포함됩니다.
 
 ```Dockerfile
-FROM microsoft/aspnetcore:2.0.5 AS base
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
 WORKDIR /app
 EXPOSE 80
 ```
@@ -105,7 +103,7 @@ EXPOSE 80
 다음은 Catalog 마이크로 서비스에 대한 `docker-compose.override.yml` 파일의 예제입니다.
 
 ```yml
-catalog.api:
+catalog-api:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
     - ASPNETCORE_URLS=http://0.0.0.0:80
@@ -123,10 +121,10 @@ docker-compose.override.yml 구성에서 Catalog 컨테이너에 대한 내부 �
 로컬 Docker 호스트에서 Catalog 마이크로 서비스를 실행합니다. Visual Studio에서 전체 eShopOnContainers 솔루션을 실행하거나(Docker-Compose 파일의 모든 서비스 실행) CMD 또는 PowerShell에서 `docker-compose.yml` 및 `docker-compose.override.yml`이 배치된 폴더에 있는 CMD 또는 PowerShell에서 다음 Docker-Compose 명령으로 Catalog 마이크로 서비스를 시작합니다.
 
 ```console
-docker-compose run --service-ports catalog.api
+docker-compose run --service-ports catalog-api
 ```
 
-이 명령은 catalog.api 서비스 컨테이너와 docker-compose.yml에 지정된 종속성만 실행합니다. 이 경우 SQL Server 컨테이너와 RabbitMQ 컨테이너가 있습니다.
+이 명령은 catalog-api 서비스 컨테이너와 docker-compose.yml에 지정된 종속성만 실행합니다. 이 경우 SQL Server 컨테이너와 RabbitMQ 컨테이너가 있습니다.
 
 그런 다음, Catalog 마이크로 서비스에 직접 액세스하고 해당 "외부" 포트(이 경우 `http://localhost:5101/swagger`)를 통해 직접 액세스하는 Swagger UI를 통해 해당 메서드를 볼 수 있습니다.
 
@@ -142,7 +140,7 @@ docker-compose run --service-ports catalog.api
 
 Ocelot은 기본적으로 특정 순서로 적용할 수 있는 일단의 미들웨어입니다.
 
-Ocelot은 ASP.NET Core에서만 작동하도록 설계되었습니다. .NET Core 2.0 런타임 및 .NET Framework 4.6.1 런타임 이상이 포함된 .NET Standard 2.0이 지원되는 곳이면 어디서나 사용할 수 있도록 netstandard2.0을 대상으로 합니다.
+Ocelot은 ASP.NET Core에서만 작동하도록 설계되었습니다. .NET Core 2.0 런타임 및 .NET Framework 4.6.1 런타임 이상이 포함된 .NET Standard 2.0이 지원되는 곳이면 어디서나 사용할 수 있도록 `netstandard2.0`을 대상으로 합니다.
 
 Visual Studio에서 [Ocelot의 NuGet 패키지](https://www.nuget.org/packages/Ocelot/)를 사용하여 ASP.NET Core 프로젝트에 Ocelot 및 해당 종속성을 설치합니다.
 
@@ -207,7 +205,7 @@ eShopOnContainers의 API 게이트웨이 중 하나에 있는 [ 구성 파일](h
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "catalog.api",
+          "Host": "catalog-api",
           "Port": 80
         }
       ],
@@ -219,7 +217,7 @@ eShopOnContainers의 API 게이트웨이 중 하나에 있는 [ 구성 파일](h
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "basket.api",
+          "Host": "basket-api",
           "Port": 80
         }
       ],
@@ -249,7 +247,7 @@ Ocelot API 게이트웨이의 주요 기능은 들어오는 HTTP 요청을 가�
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "basket.api",
+          "Host": "basket-api",
           "Port": 80
         }
       ],
@@ -318,7 +316,7 @@ eShopOnContainers에서는 "OcelotApiGw"라는 프로젝트와 docker-compose.ym
 mobileshoppingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api
+    - IdentityUrl=http://identity-api
   ports:
     - "5200:80"
   volumes:
@@ -327,7 +325,7 @@ mobileshoppingapigw:
 mobilemarketingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api
+    - IdentityUrl=http://identity-api
   ports:
     - "5201:80"
   volumes:
@@ -336,7 +334,7 @@ mobilemarketingapigw:
 webshoppingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api
+    - IdentityUrl=http://identity-api
   ports:
     - "5202:80"
   volumes:
@@ -345,7 +343,7 @@ webshoppingapigw:
 webmarketingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api
+    - IdentityUrl=http://identity-api
   ports:
     - "5203:80"
   volumes:
@@ -362,13 +360,13 @@ API 게이트웨이를 여러 API 게이트웨이로 분할하면 마이크로 �
 
 이제 API 게이트웨이(eShopOnContainers-ServicesAndWebApps.sln 솔루션을 열거나 "docker-compose up"을 실행하는 경우 기본적으로 VS에 포함됨)를 사용하여 eShopOnContainers를 실행하면 다음과 같은 샘플 경로가 수행됩니다.
 
-예를 들어 webshoppingapigw API 게이트웨이에서 제공하는 업스트림 URL(`http://localhost:5202/api/v1/c/catalog/items/2/`)을 방문하면 다음 브라우저와 같이 Docker 호스트 내의 내부 다운스트림 URL(`http://catalog.api/api/v1/2`)에서 동일한 결과를 가져옵니다.
+예를 들어 webshoppingapigw API 게이트웨이에서 제공하는 업스트림 URL(`http://localhost:5202/api/v1/c/catalog/items/2/`)을 방문하면 다음 브라우저와 같이 Docker 호스트 내의 내부 다운스트림 URL(`http://catalog-api/api/v1/2`)에서 동일한 결과를 가져옵니다.
 
 ![API 게이트웨이를 통해 전달되는 응답을 보여주는 브라우저의 스크린샷입니다.](./media/implement-api-gateways-with-ocelot/access-microservice-through-url.png)
 
 **그림 6-35** API 게이트웨이에서 제공하는 URL을 통해 마이크로 서비스에 액세스
 
-테스트 또는 디버깅 이유로 인해 API 게이트웨이를 통과하지 않고 Catalog Docker 컨테이너에 직접 액세스하려는 경우(개발 환경에서만), 'catalog.api'는 Docker 호스트 내부의 DNS 확인(docker-compose 서비스 이름으로 처리되는 서비스 검색)이므로 컨테이너에 직접 액세스하는 유일한 방법은 다음 브라우저의 `http://localhost:5101/api/v1/Catalog/items/1`과 같이 개발 테스트용으로만 제공되는 docker-compose.override.yml에 게시된 외부 포트를 통해 액세스하는 것입니다.
+테스트 또는 디버깅 이유로 인해 API 게이트웨이를 통과하지 않고 Catalog Docker 컨테이너에 직접 액세스하려는 경우(개발 환경에서만), 'catalog-api'는 Docker 호스트 내부의 DNS 확인(docker-compose 서비스 이름으로 처리되는 서비스 검색)이므로 컨테이너에 직접 액세스하는 유일한 방법은 다음 브라우저의 `http://localhost:5101/api/v1/Catalog/items/1`과 같이 개발 테스트용으로만 제공되는 docker-compose.override.yml에 게시된 외부 포트를 통해 액세스하는 것입니다.
 
 ![Catalog.api에 대한 직접적 응답을 보여주는 브라우저의 스크린샷입니다.](./media/implement-api-gateways-with-ocelot/direct-access-microservice-testing.png)
 
@@ -426,7 +424,7 @@ API 게이트웨이 수준에서 인증을 통해 모든 서비스를 보호하�
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "basket.api",
+          "Host": "basket-api",
           "Port": 80
         }
       ],

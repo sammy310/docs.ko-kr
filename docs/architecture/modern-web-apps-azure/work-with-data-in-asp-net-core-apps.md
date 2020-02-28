@@ -3,13 +3,13 @@ title: ASP.NET Core 앱에서 데이터 작업
 description: ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케이션 설계 | ASP.NET Core 앱에서 데이터 작업
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: d3c91f594eedd2636cbf08285f0dee352bc4835a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 12/04/2019
+ms.openlocfilehash: f37bdca688559236d9b07b97f7ee7459b3be4f39
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777125"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449350"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core 앱에서 데이터 작업
 
@@ -200,9 +200,9 @@ private void ConfigureOrder(EntityTypeBuilder<Order> builder)
 }
 ```
 
-다음 예제에서 `ShipToAddress` 속성은 `Address` 형식입니다. `Address`는 `Street` 및 `City`와 같은 여러 속성을 포함한 값 개체입니다. EF Core는 `Order` 개체를 `Address` 속성당 하나의 열을 포함한 해당 테이블에 매핑하여 각 열 이름의 접두사를 속성의 이름으로 지정합니다. 이 예제에서 `Order` 테이블에는 `ShipToAddress_Street` 및 `ShipToAddress_City`와 같은 열이 포함됩니다.
+다음 예제에서 `ShipToAddress` 속성은 `Address` 형식입니다. `Address`는 `Street` 및 `City`와 같은 여러 속성을 포함한 값 개체입니다. EF Core는 `Order` 개체를 `Address` 속성당 하나의 열을 포함한 해당 테이블에 매핑하여 각 열 이름의 접두사를 속성의 이름으로 지정합니다. 이 예제에서 `Order` 테이블에는 `ShipToAddress_Street` 및 `ShipToAddress_City`와 같은 열이 포함됩니다. 원하는 경우 별도의 테이블에 소유된 형식을 저장할 수도 있습니다.
 
-[EF Core 2.2는 소유된 엔터티의 컬렉션에 대한 지원 제공](https://docs.microsoft.com/ef/core/what-is-new/ef-core-2.2#collections-of-owned-entities)
+[EF Core에서 소유 엔터티 지원](/ef/core/modeling/owned-entities)에 대해 자세히 알아보세요.
 
 ### <a name="resilient-connections"></a>복원력 있는 연결
 

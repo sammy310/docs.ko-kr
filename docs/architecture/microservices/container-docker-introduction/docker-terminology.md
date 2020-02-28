@@ -1,13 +1,13 @@
 ---
 title: Docker 용어
 description: 컨테이너화된 .NET 애플리케이션을 위한 .NET 마이크로 서비스 아키텍처 | Docker 용어
-ms.date: 01/07/2019
-ms.openlocfilehash: 33f2918df5b63cc4bd54ddb84900c6bd91e9f77e
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.date: 01/30/2020
+ms.openlocfilehash: 5ffc7e791df8cbc999c6ababf62670bae46e1d5e
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921015"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502832"
 ---
 # <a name="docker-terminology"></a>Docker 용어
 
@@ -31,7 +31,7 @@ ms.locfileid: "76921015"
 
 **레지스트리**: 리포지토리에 대한 액세스를 제공하는 서비스입니다. 대부분의 공용 이미지에 대한 기본 레지스트리는 [Docker 허브](https://hub.docker.com/)(조직인 Docker에서 소유함)입니다. 레지스트리는 일반적으로 여러 팀의 리포지토리를 포함합니다. 회사에는 대체로 만든 이미지를 저장하고 관리하기 위한 개인 레지스트리가 있습니다. Azure Container Registry는 또 다른 예입니다.
 
-**다중 아키텍처 이미지**: 다중 아키텍처의 경우, Docker가 실행되는 플랫폼에 따라 적절한 이미지의 선택을 간소화하는 기능입니다. 예를 들어 Dockerfile이 레지스트리에서 기본 이미지 **FROM mcr.microsoft.com/dotnet/core/sdk:2.2**를 요청하는 경우 실제로는 Docker가 실행되는 운영 체제 및 버전에 따라 **2.2-sdk-nanoserver-1709**, **2.2-sdk-nanoserver-1803**, **2.2-sdk-nanoserver-1809** 또는 **2.2-sdk-stretch**를 얻게 됩니다.
+**다중 아키텍처 이미지**: 다중 아키텍처에서 Docker가 실행되는 플랫폼에 따라 적절한 이미지 선택을 간소화하는 기능입니다. 예를 들어 Dockerfile이 레지스트리에서 기본 이미지 **FROM mcr.microsoft.com/dotnet/core/sdk:3.1**을 요청하는 경우 Docker가 실행되는 운영 체제 및 버전에 따라 **3.1-sdk-nanoserver-1909**, **3.1-sdk-nanoserver-1809** 또는 **3.1-sdk-buster-slim**을 가져옵니다.
 
 **Docker 허브**: 이미지를 업로드하고 여기에서 작업하는 공개 레지스트리입니다. Docker 허브는 Docker 이미지 호스팅, 공개 또는 개인 레지스트리, 빌드 트리거 및 웹후크, GitHub 및 Bitbucket과 통합을 제공합니다.
 

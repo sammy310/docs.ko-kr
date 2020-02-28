@@ -1,23 +1,23 @@
 ---
 title: System.Delegate 및 `delegate` 키워드
-description: .NET Framework에서 대리자를 지원하는 클래스와 해당 클래스가 ‘delegate’ 키워드에 매핑되는 방법을 설명합니다.
+description: .NET에서 대리자를 지원하는 클래스와 해당 클래스가 ‘delegate’ 키워드에 매핑되는 방법을 설명합니다.
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: f4635ff623feec9407021792cabd1677184b4d34
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 3cfc9925be0f191dc3fc93c02f4a8f9a40b71895
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420363"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450923"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate 및 `delegate` 키워드
 
 [이전](delegates-overview.md)
 
-이 문서에서는 .NET Core Framework에서 대리자를 지원하는 클래스와 해당 클래스가 `delegate` 키워드에 매핑되는 방법을 설명합니다.
+이 문서에서는 .NET에서 대리자를 지원하는 클래스와 해당 클래스가 `delegate` 키워드에 매핑되는 방법을 다룹니다.
 
-## <a name="defining-delegate-types"></a>대리자 형식 정의
+## <a name="define-delegate-types"></a>대리자 유형 정의
 
 먼저 'delegate' 키워드를 살펴보겠습니다. 대리자 작업을 수행할 때 기본적으로 이 키워드를 사용하기 때문입니다. `delegate` 키워드를 사용할 때 컴파일러가 생성하는 코드는 <xref:System.Delegate> 및 <xref:System.MulticastDelegate> 클래스의 멤버를 호출하는 메서드 호출에 매핑됩니다. 
 
@@ -41,7 +41,7 @@ public delegate int Comparison<in T>(T left, T right);
 
 이 클래스의 클라이언트가 인스턴스의 호출 목록에서 메서드를 추가 및 제거할 수 있도록 컴파일러에서는 이 새로운 형식에 대한 추가 및 제거 처리기를 생성합니다. 컴파일러는 추가되거나 제거되는 메서드의 시그니처가 메서드를 선언할 대 사용된 시그니처와 일치하도록 지정합니다. 
 
-## <a name="declaring-instances-of-delegates"></a>대리자의 인스턴스 선언
+## <a name="declare-instances-of-delegates"></a>대리자 인스턴스 선언
 
 대리자를 정의한 후 해당 형식의 인스턴스를 만들 수 있습니다.
 C#의 모든 변수처럼 네임스페이스에서 직접 또는 전역 네임스페이스에서 대리자 인스턴스를 선언할 수 없습니다.
@@ -57,7 +57,7 @@ public Comparison<T> comparator;
  
  위의 코드 조각에서는 클래스 내부에 멤버 변수를 선언했습니다. 메서드에 대한 인수 또는 지역 변수인 대리자 변수를 선언할 수도 있습니다.
 
-## <a name="invoking-delegates"></a>대리자 호출
+## <a name="invoke-delegates"></a>대리자 호출
 
 대리자를 호출하여 대리자 호출 목록에 있는 메서드를 호출합니다. `Sort()` 메서드 내부에서 코드는 비교 메서드를 호출하여 개체를 배치할 순서를 결정합니다.
 
@@ -70,7 +70,7 @@ int result = comparator(left, right);
 
 해당 코드 줄은 안전하지 않은 가정을 생성합니다. 대상이 대리자에 추가되었다는 보장이 없습니다. 대상이 연결되지 않은 경우 위 줄은 `NullReferenceException`을 throw합니다. 이 문제를 해결하는 데 사용된 관용구는 간단한 null 검사보다 더 복잡하고 이 [시리즈](delegates-patterns.md)의 뒷부분에서 설명합니다.
 
-## <a name="assigning-adding-and-removing-invocation-targets"></a>호출 대상 할당, 추가 및 제거
+## <a name="assign-add-and-remove-invocation-targets"></a>호출 대상 할당, 추가 및 제거
 
 이 방법으로 대리자 형식을 정의하고 대리자 인스턴스를 선언 및 호출합니다.
 

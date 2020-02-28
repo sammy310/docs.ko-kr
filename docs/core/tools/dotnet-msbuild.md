@@ -1,17 +1,17 @@
 ---
 title: dotnet msbuild 명령
 description: dotnet msbuild 명령은 MSBuild 명령줄에 대한 액세스 권한을 제공합니다.
-ms.date: 12/03/2018
-ms.openlocfilehash: dae1e9f0ca355166d41c11fbafb80c7c9fb29748
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 28a32a460d644d3e22f16b5dd9416222ae466e2e
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733193"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503670"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+**이 문서의 적용 대상:** ✔️ .NET Core 2.x SDK 이상 버전
 
 ## <a name="name"></a>이름
 
@@ -31,25 +31,25 @@ ms.locfileid: "76733193"
 
 ## <a name="examples"></a>예
 
-* 프로젝트 및 해당 종속성을 빌드합니다.
+- 프로젝트 및 해당 종속성을 빌드합니다.
 
   ```dotnetcli
   dotnet msbuild
   ```
 
-* 릴리스 구성을 사용하여 프로젝트 및 해당 종속성을 빌드합니다.
+- 릴리스 구성을 사용하여 프로젝트 및 해당 종속성을 빌드합니다.
 
   ```dotnetcli
   dotnet msbuild -property:Configuration=Release
   ```
 
-* 게시 대상을 실행하고 `osx.10.11-x64` RID에 대해 게시합니다.
+- 게시 대상을 실행하고 `osx.10.11-x64` RID에 대해 게시합니다.
 
   ```dotnetcli
   dotnet msbuild -target:Publish -property:RuntimeIdentifiers=osx.10.11-x64
   ```
 
-* SDK를 통해 포함된 모든 대상이 있는 전체 프로젝트를 확인합니다.
+- SDK를 통해 포함된 모든 대상이 있는 전체 프로젝트를 확인합니다.
 
   ```dotnetcli
   dotnet msbuild -preprocess

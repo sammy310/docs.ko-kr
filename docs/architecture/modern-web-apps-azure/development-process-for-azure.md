@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 최신 웹 애플리케이�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 830271d76e5a87ed782d81fa9491328c580f0f87
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7a641c1b6665af6e9e78ef182174b360041d74aa
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849580"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450047"
 ---
 # <a name="development-process-for-azure"></a>Azure 개발 프로세스
 
@@ -26,13 +26,9 @@ ms.locfileid: "70849580"
 
 개발자가 완전하고 강력한 IDE를 선호하든 아니면 가볍고 민첩한 편집기를 선호하든, Microsoft에서는 ASP.NET Core 애플리케이션 개발에 필요한 모든 것을 제공해 드립니다.
 
-**Visual Studio 2017.** *Visual Studio 2017*을 사용하는 경우 *.NET Core 플랫폼 간 개발* 워크로드가 설치되어 있다면 ASP.NET Core 애플리케이션을 빌드할 수 있습니다. 그림 10-1은 Visual Studio 2017 설정 대화 상자에서 필요한 워크로드를 보여줍니다.
+**Visual Studio 2019.** Visual Studio 2019는 ASP.NET Core용 애플리케이션을 개발하기 위한 동급 최고의 IDE입니다. 개발자의 생산성을 향상시키는 다양한 기능을 제공합니다. 이를 사용하여 애플리케이션을 개발하고 성능 및 기타 특성을 분석할 수 있습니다. 통합 디버거를 사용하면 코드 실행을 일시 중지하고 코드를 실행하면서 즉석에서 전후 단계로 이동할 수 있습니다. 기본 제공 테스트 실행기를 사용하면 테스트와 해당 결과를 구성할 수 있고 코딩하는 동안 라이브 유닛 테스트를 수행할 수도 있습니다. Live Share를 사용하면 다른 개발자와 실시간으로 공동 작업하여 네트워크를 통해 코드 세션을 원활하게 공유할 수 있습니다. 준비가 되면 Visual Studio에는 애플리케이션을 Azure 또는 원하는 호스트에 게시하는 데 필요한 모든 항목이 포함되어 있습니다.
 
-![Visual Studio 2017에 .NET Core 워크로드 설치](./media/image10-1.png)
-
-**그림 10-1.** Visual Studio 2017에 .NET Core 워크로드 설치.
-
-[Visual Studio 2017 다운로드](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+[Visual Studio 2019 다운로드](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
 **Visual Studio Code 및 dotnet CLI**(Mac, Linux 및 Windows용 플랫폼 간 도구). 모든 개발 언어를 지원하는 가벼운 플랫폼 간 편집기를 선호하는 경우 Microsoft Visual Studio Code 및 docker CLI를 사용하면 됩니다. 이러한 제품은 간단하지만 강력한 환경을 제공하여 개발자 워크플로를 간소화합니다. 또한 Visual Studio Code는 C\# 확장 및 웹 개발을 지원하며, 편집기 내에서 인텔리전스 및 바로 가기 작업을 제공합니다.
 
@@ -58,7 +54,7 @@ CI/CD를 사용하여 ASP.NET Core 애플리케이션 개발을 시작하려면 
 
 ![AzureWebApp](./media/image10-2.png)
 
-**그림 10-2.** Azure Portal에서 새 Azure App Service 웹앱을 만듭니다.
+**그림 10-1.** Azure Portal에서 새 Azure App Service 웹앱을 만듭니다.
 
 CI 빌드 프로세스는 프로젝트의 소스 제어 리포지토리에 새 코드가 커밋될 때마다 자동화된 빌드를 수행합니다. 이렇게 하면 코드에서 빌드하고(그리고 이상적으로 자동화된 테스트를 전달하고) 잠재적으로 배포할 수 있습니다. 이 CI 빌드는 웹 배포 패키지 아티팩트를 생성하고 CD 프로세스에서 사용할 수 있도록 게시합니다.
 
@@ -74,11 +70,11 @@ CI/CD 파이프라인이 구성되면 간단하게 웹앱을 업데이트하고 
 
 ### <a name="workflow-for-developing-azure-hosted-aspnet-core-applications"></a>Azure에서 호스트되는 ASP.NET Core 애플리케이션을 개발하는 워크플로
 
-Azure 계정 및 CI/CD 프로세스 구성이 완료되면 Azure에서 호스트되는 ASP.NET Core 애플리케이션을 간단하게 개발할 수 있습니다. 다음은 그림 10-3처럼 Azure App Service에 웹앱으로 호스트되는 ASP.NET Core 앱을 빌드할 때 수행하는 기본 단계입니다.
+Azure 계정 및 CI/CD 프로세스 구성이 완료되면 Azure에서 호스트되는 ASP.NET Core 애플리케이션을 간단하게 개발할 수 있습니다. 다음은 그림 10-2처럼 Azure App Service에 웹앱으로 호스트되는 ASP.NET Core 앱을 빌드할 때 수행하는 기본 단계입니다.
 
 ![EndToEndDevDeployWorkflow](./media/image10-3.png)
 
-**그림 10-3.** ASP.NET Core 앱을 빌드하고 Azure에서 호스팅하기 위한 단계별 워크플로
+**그림 10-2.** ASP.NET Core 앱을 빌드하고 Azure에서 호스팅하기 위한 단계별 워크플로
 
 #### <a name="step-1-local-dev-environment-inner-loop"></a>1단계: 로컬 개발 환경 내부 루프
 
@@ -104,7 +100,7 @@ Azure에 배포할 ASP.NET Core 애플리케이션 개발은 일반적인 애플
 
 웹앱이 실행되는 동안 애플리케이션의 상태를 모니터링하고 진단 및 사용자 동작 데이터를 수집할 수 있습니다. Application Insights는 Visual Studio에 포함되어 있으며, ASP.NET 앱을 위한 자동 계측 기능을 제공합니다. 사용량, 예외, 요청, 성능 및 로그에 대한 정보를 제공할 수 있습니다.
 
-## <a name="references"></a>참조
+## <a name="references"></a>참조 항목
 
 **ASP.NET Core 앱을 빌드하고 Azure에 배포**  
 <https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core>

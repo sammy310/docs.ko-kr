@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 64b029f87135c3424d01a6833619f0aec3833883
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f53f4037f832265a35f65bf2e5096c7e5a37bcf1
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340361"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503525"
 ---
 # <a name="tutorial-create-a-project-template"></a>자습서: 프로젝트 템플릿 만들기
 
@@ -85,10 +85,17 @@ namespace consoleasync
 
 ## <a name="build-the-project"></a>프로젝트 빌드
 
-프로젝트 템플릿을 완료하기 전에 테스트하여 올바르게 컴파일되고 실행되는지 확인해야 합니다. 터미널에서 `dotnet run` 명령을 실행하면 다음 출력이 표시되어야 합니다.
+프로젝트 템플릿을 완료하기 전에 테스트하여 올바르게 컴파일되고 실행되는지 확인해야 합니다.
+
+터미널에서 다음 명령을 실행합니다.
+
+```dotnetcli
+dotnet run
+```
+
+다음과 같은 출력을 얻습니다.
 
 ```console
-C:\working\templates\consoleasync> dotnet run
 Hello World with C# 8.0!
 ```
 
@@ -112,7 +119,7 @@ working
                 template.json
 ```
 
-원하는 텍스트 편집기에서 _template.json_을 열고 다음 json 코드를 붙여넣은 다음 저장합니다.
+원하는 텍스트 편집기에서 _template.json_을 열고 다음 JSON 코드를 붙여넣고 저장합니다.
 
 ```json
 {
@@ -133,12 +140,17 @@ working
 
 `classifications` 항목은 `dotnet new`를 실행할 때 표시되고 템플릿 목록을 가져오는 **태그** 열을 나타냅니다. 사용자는 분류 태그를 기준으로 검색할 수도 있습니다. .json 파일의 `tags` 속성을 `classifications` 태그 목록과 혼동하지 마세요. 불행히도 두 항목은 이름이 비슷합니다. *template.json* 파일에 대한 전체 스키마는 [JSON Schema Store](http://json.schemastore.org/template)(JSON 스키마 저장소)에서 찾을 수 있습니다. *template.json* 파일에 대한 자세한 내용은 [dotnet 템플릿 wiki](https://github.com/dotnet/templating/wiki)를 참조하세요.
 
-유효한 _.template.config/template.json_ 파일이 있으므로 이제 템플릿을 설치할 준비가 되었습니다. 템플릿을 설치하기 전에 _bin_ 또는 _obj_ 폴더와 같이 템플릿에 포함하지 않을 추가 파일 폴더 및 파일을 삭제해야 합니다. 터미널에서 _consoleasync_ 폴더로 이동하고 `dotnet new -i .\`를 실행하여 현재 폴더에 있는 템플릿을 설치합니다. Linux 또는 MacOS 운영 체제를 사용하는 경우 슬래시를 사용합니다(`dotnet new -i ./`).
+유효한 _.template.config/template.json_ 파일이 있으므로 이제 템플릿을 설치할 준비가 되었습니다. 템플릿을 설치하기 전에 _bin_ 또는 _obj_ 폴더와 같이 템플릿에 포함하지 않을 추가 파일 폴더 및 파일을 삭제해야 합니다. 터미널에서 _consoleasync_ 폴더로 이동하고 `dotnet new -i .\`를 실행하여 현재 폴더에 있는 템플릿을 설치합니다. Linux 또는 macOS 운영 체제를 사용하는 경우 슬래시를 사용합니다(`dotnet new -i ./`).
 
 이 명령은 사용자 템플릿을 포함하여 설치된 템플릿 목록을 출력합니다.
 
+```dotnetcli
+dotnet new -i .\
+```
+
+그러면 다음과 같은 출력이 표시됩니다.
+
 ```console
-C:\working\templates\consoleasync> dotnet new -i .\
 Usage: new [options]
 
 Options:
@@ -159,17 +171,33 @@ Worker Service                                    worker                [C#]    
 
 ### <a name="test-the-project-template"></a>프로젝트 템플릿 테스트
 
-항목 템플릿을 설치했으므로 이제 템플릿을 테스트합니다. _test_ 폴더로 이동하고 `dotnet new consoleasync`을 사용하여 새 콘솔 애플리케이션을 만듭니다. 그러면 `dotnet run` 명령으로 쉽게 테스트할 수 있는 작업 프로젝트가 생성됩니다.
+항목 템플릿을 설치했으므로 이제 템플릿을 테스트합니다.
 
-```console
-C:\test> dotnet new consoleasync
-The template "Example templates: async project" was created successfully.
-```
+1. _test_ 폴더로 이동합니다.
 
-```console
-C:\test> dotnet run
-Hello World with C# 8.0!
-```
+1. `dotnet run` 명령으로 쉽게 테스트할 수 있는 작업 프로젝트를 생성하는 다음 명령을 사용하여 새 콘솔 애플리케이션을 만듭니다.
+
+    ```dotnetcli
+    dotnet new consoleasync
+    ```
+
+    다음과 같은 출력을 얻습니다.
+
+    ```console
+    The template "Example templates: async project" was created successfully.
+    ```
+
+1. 다음 명령을 사용하여 프로젝트를 실행합니다.
+
+    ```dotnetcli
+    dotnet run
+    ```
+
+    다음과 같은 출력을 얻습니다.
+
+    ```console
+    Hello World with C# 8.0!
+    ```
 
 지금까지 .NET Core를 사용하여 프로젝트 템플릿을 만들고 배포했습니다. 이 자습서 시리즈의 다음 부분에 대비하여, 여기서 만든 템플릿을 제거해야 합니다. 또한 _test_ 폴더에서 모든 파일을 삭제해야 합니다. 그러면 이 자습서의 다음 주요 섹션을 위해 정리된 상태로 되돌아갑니다.
 
@@ -177,8 +205,13 @@ Hello World with C# 8.0!
 
 파일 경로를 사용하여 템플릿을 설치했으므로 **절대** 파일 경로를 사용하여 템플릿을 제거해야 합니다. `dotnet new -u` 명령을 실행하여 설치된 템플릿 목록을 확인할 수 있습니다. 사용자 템플릿은 마지막에 나열되어야 합니다. `dotnet new -u <ABSOLUTE PATH TO TEMPLATE DIRECTORY>` 명령을 사용하여 템플릿을 제거하려면 나열된 경로를 사용합니다.
 
+```dotnetcli
+dotnet new -u
+```
+
+그러면 다음과 같은 출력이 표시됩니다.
+
 ```console
-C:\working> dotnet new -u
 Template Instantiation Commands for .NET Core CLI
 
 Currently installed items:
@@ -206,8 +239,10 @@ Currently installed items:
       Example templates: async project (consoleasync) C#
 ```
 
-```console
-C:\working> dotnet new -u C:\working\templates\consoleasync
+템플릿을 제거하려면 다음 명령을 실행합니다.
+
+```dotnetcli
+dotnet new -u C:\working\templates\consoleasync
 ```
 
 ## <a name="next-steps"></a>다음 단계

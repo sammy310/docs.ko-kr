@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Action delegate, creating with lambda expression
 - lambda expressions, with Action and Func
 ms.assetid: 645b2c17-29d0-4ffa-8684-430743cc2f2d
-ms.openlocfilehash: d1b716e977702d03db176da70be00a1e5c789a4b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4e5be295a52edc1a7f0a0a3aa98f55335ae3e31b
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129027"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453002"
 ---
 # <a name="lambda-expressions-in-plinq-and-tpl"></a>PLINQ 및 TPL의 람다 식
 
@@ -26,19 +26,19 @@ TPL(작업 병렬 라이브러리)에는 대리자의 <xref:System.Func%601?disp
 
 ## <a name="func-delegate"></a>Func 대리자
 
-`Func` 대리자는 값을 반환하는 메서드를 캡슐화합니다. Func 서명에서 마지막 또는 가장 오른쪽에 있는 형식 매개 변수는 항상 반환 형식을 지정합니다. 컴파일러 오류의 일반적인 원인 중 하나는 두 개의 입력 매개 변수를 <xref:System.Func%602?displayProperty=nameWithType>에 전달하려고 하기 때문입니다. 실제로 이 형식은 하나의 입력 매개 변수만 사용합니다. 프레임워크 클래스 라이브러리는 `Func`: <xref:System.Func%601?displayProperty=nameWithType>, <xref:System.Func%602?displayProperty=nameWithType>, <xref:System.Func%603?displayProperty=nameWithType>에서 <xref:System.Func%6017?displayProperty=nameWithType>까지 17가지 버전을 정의합니다.
+`Func` 대리자는 값을 반환하는 메서드를 캡슐화합니다. `Func` 서명에서 마지막 또는 가장 오른쪽에 있는 형식 매개 변수는 항상 반환 형식을 지정합니다. 컴파일러 오류의 일반적인 원인 중 하나는 두 개의 입력 매개 변수를 <xref:System.Func%602?displayProperty=nameWithType>에 전달하려고 하기 때문입니다. 실제로 이 형식은 하나의 입력 매개 변수만 사용합니다. .NET은 <xref:System.Func%601?displayProperty=nameWithType>, <xref:System.Func%602?displayProperty=nameWithType>, <xref:System.Func%603?displayProperty=nameWithType> 등에서 <xref:System.Func%6017?displayProperty=nameWithType>까지 17개 버전의 `Func`를 정의합니다.
 
 ## <a name="action-delegate"></a>Action 대리자
 
-<xref:System.Action?displayProperty=nameWithType> 대리자는 값을 반환하지 않는 메서드(Visual Basic의 하위)를 캡슐화하거나 [void](../../csharp/language-reference/keywords/void.md)를 반환합니다. Action 형식 서명에서 형식 매개 변수는 입력 매개 변수만을 나타냅니다. Func처럼 Framework 클래스 라이브러리는 16개의 형식 매개 변수가 있는 버전을 통해 형식 매개 변수가 없는 버전에서 17개 버전의 Action을 정의합니다.
+<xref:System.Action?displayProperty=nameWithType> 대리자는 값을 반환하지 않는 메서드(Visual Basic의 하위)를 캡슐화합니다. `Action` 형식 서명에서 형식 매개 변수는 입력 매개 변수만을 나타냅니다. `Func`와 마찬가지로 .NET은 형식 매개 변수가 없는 버전에서 16개 형식 매개 변수가 있는 버전까지 17개 버전의 `Action`을 정의합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 <xref:System.Threading.Tasks.Parallel.ForEach%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%601%7D%2CSystem.Func%7B%60%600%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%601%2C%60%601%7D%2CSystem.Action%7B%60%601%7D%29?displayProperty=nameWithType> 메서드의 다음 예제는 람다 식을 사용하여 Func 및 Action 대리자를 모두 표현하는 방법을 보여줍니다.
 
 [!code-csharp[System.Threading.Tasks.Parallel#02](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.parallel/cs/parallelforeach.cs#02)]
 [!code-vb[System.Threading.Tasks.Parallel#02](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallel/vb/parallelforeach.vb#02)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [병렬 프로그래밍](../../../docs/standard/parallel-programming/index.md)

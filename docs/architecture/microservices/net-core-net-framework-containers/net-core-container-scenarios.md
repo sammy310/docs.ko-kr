@@ -1,13 +1,13 @@
 ---
 title: Docker 컨테이너에 대해 .NET Core를 선택할 경우
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | Docker 컨테이너에 대해 .NET Core를 선택할 경우
-ms.date: 09/11/2018
-ms.openlocfilehash: d17b6b7620f485f09f8f18ac792418a48ae40037
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.date: 01/30/2020
+ms.openlocfilehash: b3cb1eefe739b4ffdbbdd0bdcb3c74b51862704b
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920987"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501841"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Docker 컨테이너에 대해 .NET Core를 선택할 경우
 
@@ -35,11 +35,11 @@ IDE 및 편집기 외에도 지원되는 모든 플랫폼에 [.NET Core CLI](../
 
 컨테이너는 아키텍처 패턴을 따르는 웹앱 또는 서비스를 컨테이너화하는 데 사용할 수 있지만 일반적으로 마이크로 서비스 아키텍처와 연계하여 사용됩니다. Windows 컨테이너에 .NET Framework를 사용할 수 있지만 .NET Core는 모듈 방식이며 가볍기 때문에 컨테이너와 마이크로 서비스 아키텍처에 적합합니다. 컨테이너를만들어 배포할 때 이미지 크기는 .NET Framework보다 .NET Core에서 훨씬 작습니다.
 
-## <a name="creating-and-deploying-microservices-on-containers"></a>컨테이너에서 마이크로 서비스 만들기 및 배포
+## <a name="create-and-deploy-microservices-on-containers"></a>컨테이너에서 마이크로 서비스 만들기 및 배포
 
-기존 .NET Framework를 통해 일반 프로세스를 사용하여 컨테이너 없는 마이크로 서비스 기반 애플리케이션을 구축할 수 있습니다. 이렇게 하면 .NET Framework가 이미 설치되어 프로세스 간에 공유되기 때문에 프로세스가 가볍고 신속하게 시작됩니다. 그러나 컨테이너를 사용할 경우 기존 .NET Framework의 이미지가 Windows Server Core를 기반으로 할 수 있어 컨테이너 위의 마이크로 서비스 방식에 대해서는 너무 무거워집니다.
+기존 .NET Framework를 통해 일반 프로세스를 사용하여 컨테이너 없는 마이크로 서비스 기반 애플리케이션을 구축할 수 있습니다. 이렇게 하면 .NET Framework가 이미 설치되어 프로세스 간에 공유되기 때문에 프로세스가 가볍고 신속하게 시작됩니다. 그러나 컨테이너를 사용할 경우 기존 .NET Framework의 이미지가 Windows Server Core를 기반으로 할 수 있어 컨테이너 위의 마이크로 서비스 방식에 대해서는 너무 무거워집니다. 그러나 팀은 .NET Framework 사용자의 환경을 개선할 수 있는 기회도 찾고 있습니다. 최근 [Windows Server Core 컨테이너 이미지의 크기가 40% 이상 작아졌습니다](https://devblogs.microsoft.com/dotnet/we-made-windows-server-core-container-images-40-smaller). 
 
-반면 컨테이너 기반의 마이크로 서비스 중심 시스템을 포괄하려면 .NET Core가 가장 적합합니다. .NET Core는 가볍기 때문입니다. 또한 Linux 이미지나 Windows Nano 이미지 등, 관련된 컨테이너 이미지가 더 나은 선택으로, 작아서 컨테이너를 더 가볍고 신속하게 시작할 수 있습니다.
+반면 컨테이너 기반의 마이크로 서비스 중심 시스템을 포괄하려면 .NET Core가 가장 적합합니다. .NET Core는 가볍기 때문입니다. 또한 Linux나 Windows Nano Server의 경우 관련 컨테이너 이미지가 간결하고 작아 컨테이너를 가볍고 빠르게 시작할 수 있습니다.
 
 마이크로 서비스는 가능한 작아야 합니다. 즉 신속하게 가공되고 작은 공간을 사용해야 하며 경계가 지정된 컨텍스트가 적어야 하고(DDD([도메인 기반 디자인](https://en.wikipedia.org/wiki/Domain-driven_design)) 확인) 우려되는 부분이 적어야 하며 신속하게 시작 및 중지할 수 있어야 합니다. 이러한 요구 사항을 위해 .NET Core 컨테이너 이미지 같이 신속하게 인스턴스화할 수 있는 작은 이미지를 사용하고자 할 수 있습니다.
 

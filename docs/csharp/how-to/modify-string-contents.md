@@ -3,12 +3,12 @@ title: 문자열 내용 수정 방법 - C# 가이드
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 539e313173d46c2c92399cefe94207c8beed03b4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ecedd9a9027aa925c753f8e187d611b19d3db991
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973261"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543263"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>C\#에서 문자열 내용을 수정하는 방법
 
@@ -62,16 +62,17 @@ ms.locfileid: "73973261"
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#6)]
 
-## <a name="unsafe-modifications-to-string"></a>문자열에 대한 안전하지 않은 수정
+## <a name="programmatically-build-up-string-content"></a>프로그래밍 방식으로 문자열 콘텐츠 작성
 
-**unsafe** 코드를 사용하여 만들어진 후 문자열을 "적절히" 수정할 수 있습니다. 안전하지 않은 코드는 코드에서 특정 유형의 버그를 최소화하도록 설계된 .NET의 많은 기능을 무시합니다. 문자열 클래스는 **변경할 수 없는** 유형으로 디자인되었으므로 안전하지 않은 코드를 사용하여 문자열을 적절히 수정해야 합니다. 만들어지면 해당 값은 변경되지 않습니다. 안전하지 않은 코드는 일반 `string` 메서드를 사용하지 않고 `string`에서 사용되는 메모리에 액세스하고 수정하여 이 속성을 회피합니다.
-다음 예제는 안전하지 않은 코드를 사용하여 문자열을 적절히 수정하려는 드문 경우를 위해 제공됩니다. 이 예제에서는 `fixed` 키워드를 사용하는 방법을 보여 줍니다. `fixed` 키워드는 코드가 안전하지 않은 포인터를 사용하여 메모리에 액세스하는 동안 GC(가비지 수집기)가 메모리에서 문자열 개체를 이동하는 것을 방지합니다. 또한 문자열에 대한 안전하지 않은 작업의 가능한 부작용 중 하나를 보여 줍니다. 이 부작용은 C# 컴파일러가 문자열을 내부적으로 저장(intern)하는 방식에서 발생합니다. 일반적으로 이 방식은 반드시 필요한 경우에만 사용해야 합니다. [안전하지 않은](../language-reference/keywords/unsafe.md) 및 [수정 사항](../language-reference/keywords/fixed-statement.md)에 대해 문서에서 자세히 알아볼 수 있습니다. <xref:System.String.Intern%2A>의 API 참조는 문자열 인터닝에 대한 정보를 포함합니다.
+문자열은 변경할 수 없으므로 이전 예제에서는 모두 임시 문자열 또는 문자 배열을 만듭니다. 고성능 시나리오에서는 이러한 힙 할당을 방지하는 것이 좋습니다. .NET Core는 중간 임시 문자열 할당을 방지하면서 콜백을 통해 문자열의 문자 콘텐츠를 프로그래밍 방식으로 채울 수 있는 <xref:System.String.Create%2A?displayProperty=nameWithType> 메서드를 제공합니다.
 
-[!code-csharp[unsafe ways to create a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
+[!code-csharp[using string.Create to programmatically build the string content for a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
+
+안전하지 않은 코드를 사용하여 고정 블록의 문자열을 수정할 수 있지만 문자열을 만든 후에는 문자열 내용을 수정하지 않는 것이 **좋습니다**. 그렇게 하면 예측할 수 없는 방식으로 작업이 중단되기 때문입니다. 예를 들어 다른 사용자가 자신이 소유하는 것과 동일한 내용이 포함된 문자열을 인턴하는 경우에는 복사본을 얻게 되며 해당 문자열을 수정하는 것으로 간주되지 않습니다.
 
 [GitHub 리포지토리](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)의 코드를 확인하여 이러한 샘플을 시험해 볼 수 있습니다. 또는 샘플을 [zip 파일로](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip) 다운로드할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET Framework 정규식](../../standard/base-types/regular-expressions.md)
 - [정규식 언어 - 빠른 참조](../../standard/base-types/regular-expression-language-quick-reference.md)

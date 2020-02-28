@@ -1,22 +1,25 @@
 ---
 title: 암호화 관련 호환성이 손상되는 변경
-description: .NET Core의 암호화 관련 호환성이 손상되는 변경 목록입니다.
-ms.date: 09/20/2019
-ms.openlocfilehash: fcef4b65245a5dd9219cbdbb548ca575a823a949
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+description: .NET Core의 암호화 관련 호환성이 손상되는 변경 사항을 나열합니다.
+ms.date: 02/10/2020
+ms.openlocfilehash: c25eefa8e3ee01ed7a1df4ec4aa9225f2c347a4d
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093034"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449225"
 ---
 # <a name="cryptography-breaking-changes"></a>암호화 관련 호환성이 손상되는 변경
 
 이 페이지에는 다음과 같은 주요 변경 사항이 설명되어 있습니다.
 
-- [EnvelopedCms를 기본적으로 AES-256 암호화로 설정](#envelopedcms-defaults-to-aes-256-encryption)
-- [RSAOpenSsl 키 생성 최소 크기가 증가](#minimum-size-for-rsaopenssl-key-generation-has-increased)
-- [.NET Core 3.0은 OpenSSL 1.0.x보다 OpenSSL 1.1.x를 권장합니다.](#net-core-30-prefers-openssl-11x-to-openssl-10x)
-- [Pkcs8PrivateKeyInfo 생성자의 인수 유효성 검사를 개선](#better-argument-validation-in-the-pkcs8privatekeyinfo-constructor)
+| 주요 변경 내용 | 도입된 버전 |
+| - | :-: |
+| [EnvelopedCms를 기본적으로 AES-256 암호화로 설정](#envelopedcms-defaults-to-aes-256-encryption) | 3.0 |
+| [RSAOpenSsl 키 생성 최소 크기가 증가](#minimum-size-for-rsaopenssl-key-generation-has-increased) | 3.0 |
+| [.NET Core 3.0은 OpenSSL 1.0.x보다 OpenSSL 1.1.x를 권장합니다.](#net-core-30-prefers-openssl-11x-to-openssl-10x) | 3.0 |
+| [Pkcs8PrivateKeyInfo 생성자의 인수 유효성 검사를 개선](#better-argument-validation-in-the-pkcs8privatekeyinfo-constructor) | 3.0 |
+| [SignedCms.ComputeSignature의 부울 매개 변수를 적용](#boolean-parameter-of-signedcmscomputesignature-is-respected) | 2.1 |
 
 ## <a name="net-core-30"></a>.NET Core 3.0
 
@@ -32,8 +35,12 @@ ms.locfileid: "77093034"
 
 ***
 
-## <a name="net-core-30-preview-9"></a>.NET Core 3.0 미리 보기 9
-
 [!INCLUDE[Better argument validation in the Pkcs8PrivateKeyInfo constructor](~/includes/core-changes/cryptography/3.0/better-argument-validation-in-pkcs8privatekeyinfo-ctor.md)]
+
+***
+
+## <a name="net-core-21"></a>.NET Core 2.1
+
+[!INCLUDE [Boolean parameter of SignedCms.ComputeSignature is respected](~/includes/core-changes/cryptography/2.1/compute-signature-silent-parameter.md)]
 
 ***

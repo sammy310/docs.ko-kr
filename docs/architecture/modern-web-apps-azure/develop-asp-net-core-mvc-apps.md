@@ -3,13 +3,13 @@ title: ASP.NET Core MVC 앱 개발
 description: ASP.NET Core 및 Azure를 사용하여 최신 웹 애플리케이션 설계 | ASP.NET Core MVC 앱 개발
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 7bc30db084f361e6c4654b89e69230b379b0136c
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.date: 12/04/2019
+ms.openlocfilehash: a18b4dfc60c7d3971136f73f333b7225735710b3
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116534"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503950"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC 앱 개발
 
@@ -26,7 +26,7 @@ ASP.NET Core MVC는 웹 기반 API 및 앱을 빌드하기 위해 유용한 많�
 
 ### <a name="why-razor-pages"></a>Razor Pages를 사용하는 이유는 무엇인가요?
 
-Razor Pages는 Visual Studio의 새로운 웹 애플리케이션에 대한 기본 옵션입니다. Razor Pages는 SPA가 아닌 양식과 같은 페이지 기반 애플리케이션 기능을 빌드하는 간단한 방법을 제공합니다. 컨트롤러 및 보기를 사용하면 여러 가지 다른 종속성 및 보기 모델과 함께 작동하고 여러 가지 다른 보기를 반환하는 매우 큰 컨트롤러가 애플리케이션에 일반적으로 포함됩니다. 그러면 복잡성이 엄청나게 증가하고 Single Responsibility Principle(단일 책임 원칙) 또는 Open/Closed Principles(개방/폐쇄 원칙)을 효율적으로 수행하지 못하는 결과가 발생할 가능성이 높습니다. Razor Pages는 Razor 태그를 사용하여 웹 애플리케이션에서 지정된 논리 "페이지"의 서버 쪽 논리를 캡슐화하여 이 문제를 해결합니다. 서버 쪽 논리가 없는 Razor Page는 간단히 Razor 파일로 이루어질 수 있습니다(예: "Index.cshtml"). 그러나 대부분의 특수 Razor Pages에는 연결된 페이지 모델 클래스가 포함됩니다. 해당 항목은 규칙에 따라 ".cs" 확장명인 Razor 파일과 동일하게 명명됩니다(예: "Index.cshtml.cs").
+Razor Pages는 Visual Studio의 새로운 웹 애플리케이션에 대한 기본 옵션입니다. Razor Pages는 SPA가 아닌 양식과 같은 페이지 기반 애플리케이션 기능을 빌드하는 간단한 방법을 제공합니다. 컨트롤러 및 보기를 사용하면 여러 가지 다른 종속성 및 보기 모델과 함께 작동하고 여러 가지 다른 보기를 반환하는 매우 큰 컨트롤러가 애플리케이션에 일반적으로 포함됩니다. 그러면 복잡성이 증가하고 Single Responsibility(단일 책임) 원칙 또는 Open/Closed Principles(개방/폐쇄) 원칙을 효율적으로 수행하지 못하는 결과가 발생할 가능성이 높습니다. Razor Pages는 Razor 태그를 사용하여 웹 애플리케이션에서 지정된 논리 "페이지"의 서버 쪽 논리를 캡슐화하여 이 문제를 해결합니다. 서버 쪽 논리가 없는 Razor Page는 간단히 Razor 파일로 이루어질 수 있습니다(예: "Index.cshtml"). 그러나 대부분의 특수 Razor Pages에는 연결된 페이지 모델 클래스가 포함됩니다. 해당 항목은 규칙에 따라 ".cs" 확장명인 Razor 파일과 동일하게 명명됩니다(예: "Index.cshtml.cs").
 
 Razor Page의 페이지 모델은 MVC 컨트롤러 및 보기 모델의 책임을 결합합니다. 컨트롤러 작업 메서드를 사용하여 요청을 처리하는 대신 "OnGet()"과 같은 페이지 모델 처리기를 실행하여 기본적으로 연결된 해당 페이지를 렌더링합니다. Razor Pages는 ASP.NET Core 앱에서 개별 페이지를 빌드하는 프로세스를 간소화하는 동시에 ASP.NET Core MVC의 모든 아키텍처 기능을 제공합니다. 새 페이지 기반 기능에서 기본적으로 선택하는 것이 좋습니다.
 
@@ -43,15 +43,15 @@ ASP.NET Core 앱은 본질적으로 들어오는 요청을 나가는 응답에 �
 ASP.NET Core MVC 앱은 기본 경로, 특성 경로 또는 둘 다를 사용할 수 있습니다. 기본 경로는 코드에 정의되며, 아래 예제와 같은 구문을 사용하여 라우팅 _규칙_을 지정합니다.
 
 ```csharp
-app.UseMvc(routes =>
+app.UseEndpoints(endpoints =>
 {
-    routes.MapRoute("default","{controller=Home}/{action=Index}/{id?}");
+    endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
 });
 ```
 
 이 예제에서는 "default"라는 경로가 라우팅 테이블에 추가되었습니다. _controller_, _action_ 및 _id_에 대한 자리 표시자를 사용하여 경로 템플릿을 정의합니다. controller와 action 자리 표시자에는 기본값(각각 "Home"과 "Index")이 지정되어 있고, id 자리 표시자("?"가 적용됨)는 선택 사항입니다. 여기에 정의된 규칙에 따르면 요청의 첫 번째 부분과 두 번째 부분이 각각 컨트롤러의 이름 및 작업과 일치해야 하고, 필요한 경우 세 번째 부분은 id 매개 변수를 나타냅니다. 기본 경로는 일반적으로 Startup 클래스의 Configure 메서드와 같이 애플리케이션의 한 위치에 정의됩니다.
 
-특성 경로는 전역적으로 지정되지 않고 컨트롤러와 작업에 직접 적용됩니다. 이렇게 하면 특정 메서드를 볼 때 훨씬 더 쉽게 검색할 수 있다는 이점이 있지만, 라우팅 정보가 애플리케이션의 한 위치에서 유지되지 않습니다. 특성 경로를 사용하면 지정된 작업에 대해 여러 경로를 쉽게 지정할 수 있을 뿐만 아니라 컨트롤러와 작업 간의 경로를 결합할 수도 있습니다. 예:
+특성 경로는 전역적으로 지정되지 않고 컨트롤러와 작업에 직접 적용됩니다. 이렇게 하면 특정 메서드를 볼 때 훨씬 더 쉽게 검색할 수 있다는 이점이 있지만, 라우팅 정보가 애플리케이션의 한 위치에서 유지되지 않습니다. 특성 경로를 사용하면 지정된 작업에 대해 여러 경로를 쉽게 지정할 수 있을 뿐만 아니라 컨트롤러와 작업 간의 경로를 결합할 수도 있습니다. 예를 들어:
 
 ```csharp
 [Route("Home")]
@@ -129,9 +129,9 @@ public class Startup
     public Startup(IHostingEnvironment env)
     {
         var builder = new ConfigurationBuilder()
-        .SetBasePath(env.ContentRootPath)
-        .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-        .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
+            .SetBasePath(env.ContentRootPath)
+            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+            .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
     }
 }
 ```
@@ -152,7 +152,7 @@ public void Configure(IApplicationBuilder app,
 ConfigureServices 메서드는 이 동작에 대한 예외이며, IServiceCollection 형식의 매개 변수 하나만 사용해야 합니다. 한편으로는 서비스 컨테이너에 개체를 추가해야 하며, 다른 한편으로는 IServiceCollection 매개 변수를 통해 현재 구성된 모든 서비스에 액세스할 수 있으므로 종속성 주입을 지원할 필요가 없습니다. 따라서 필요한 서비스를 매개 변수로 요청하거나 ConfigureServices에서 IServiceCollection을 사용하여 Startup 클래스의 모든 부분에서 ASP.NET Core 서비스 컬렉션에 정의된 종속성을 사용할 수 있습니다.
 
 > [!NOTE]
-> Startup 클래스에서 특정 서비스를 사용할 수 있는지 확인해야 하는 경우 WebHostBuilder 및 해당 ConfigureServices 메서드를 사용하여 구성할 수 있습니다.
+> 시작 클래스에서 특정 서비스를 사용할 수 있도록 하려는 경우 CreateDefaultBuilder 호출 내부에서 IWebHostBuilder 및 해당 ConfigureServices 메서드를 사용하여 구성할 수 있습니다.
 
 Startup 클래스는 컨트롤러에서 미들웨어, 필터, 자체의 서비스에 이르기까지 ASP.NET Core 애플리케이션의 다른 부분을 구조화하는 방법에 대한 모델입니다. 각각의 경우에서 [명시적 종속성 원칙](https://deviq.com/explicit-dependencies-principle/)을 따르고, 종속성을 직접 생성하지 않는 대신 요청하고, 애플리케이션 전체에서 종속성 주입을 활용해야 합니다. 구현, 특히 인프라에서 작동하거나 부작용이 있는 서비스와 개체를 직접 인스턴스화하는 위치와 방법에 주의해야 합니다. 애플리케이션 코어에 정의되고 특정 구현 형식에 대한 하드 코딩 참조에 인수로 전달되는 추상화 작업을 선호합니다.
 
@@ -191,15 +191,10 @@ public class HomeController
 또한 경로에도 영역 지원을 추가해야 합니다.
 
 ```csharp
-app.UseMvc(routes =>
+app.UseEndpoints(endpoints =>
 {
-    // Areas support
-    routes.MapRoute(
-    name: "areaRoute",
-    template: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
-    routes.MapRoute(
-    name: "default",
-    template: "{controller=Home}/{action=Index}/{id?}");
+    endpoints.MapControllerRoute(name: "areaRoute", pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+    endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
 });
 ```
 
@@ -237,7 +232,7 @@ public class FeatureConvention : IControllerModelConvention
 services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 ```
 
-또한 ASP.NET Core MVC는 규칙을 사용하여 뷰를 찾습니다. 위의 FeatureConvention에서 제공한 기능 이름을 사용하여 뷰가 사용자의 기능 폴더에 배치되도록 사용자 지정 규칙을 사용하여 이를 재정의할 수 있습니다. [ASP.NET Core MVC용 기능 분할 영역](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc) MSDN 문서에서 이 방법에 대해 자세히 알아보고 작업용 샘플을 다운로드할 수 있습니다.
+또한 ASP.NET Core MVC는 규칙을 사용하여 뷰를 찾습니다. 위의 FeatureConvention에서 제공한 기능 이름을 사용하여 뷰가 사용자의 기능 폴더에 배치되도록 사용자 지정 규칙을 사용하여 이를 재정의할 수 있습니다. [ASP.NET Core MVC용 기능 분할 영역](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc) MSDN Magazine 문서에서 이 방법에 대해 자세히 알아보고 작업용 샘플을 다운로드할 수 있습니다.
 
 ### <a name="cross-cutting-concerns"></a>교차 편집 문제
 
@@ -311,17 +306,17 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-[실제 ASP.NET Core MVC 필터](https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters) MSDN 문서에서 필터 구현에 대한 자세한 내용을 알아보고 작업용 샘플을 다운로드할 수 있습니다.
+[실제 ASP.NET Core MVC 필터](https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters) MSDN Magazine 문서에서 필터 구현에 대한 자세한 내용을 알아보고 작업용 샘플을 다운로드할 수 있습니다.
 
 > ### <a name="references--structuring-applications"></a>참조 - 애플리케이션 구성
 >
-> - **영역**  
+> - **Areas**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
 > - **MSDN Magazine – ASP.NET Core MVC용 기능 분할**  
 >   <https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc>
 > - **필터**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
-> - **MSDN – 실제 ASP.NET Core MVC 필터**  
+> - **MSDN Magazine – 실제 ASP.NET Core MVC 필터**  
 >   <https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters>
 
 ## <a name="security"></a>보안
@@ -356,11 +351,9 @@ public void Configure(IApplicationBuilder app)
 {
     app.UseStaticFiles();
     app.UseIdentity();
-    app.UseMvc(routes =>
+    app.UseEndpoints(endpoints =>
     {
-        routes.MapRoute(
-        name: "default",
-        template: "{controller=Home}/{action=Index}/{id?}");
+        endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
     });
 }
 ```
@@ -444,8 +437,6 @@ public void ConfigureServices(IServiceCollection services)
 ## <a name="client-communication"></a>클라이언트 통신
 
 ASP.NET Core 앱은 페이지를 제공하고 웹 API를 통해 데이터에 대한 요청에 응답하는 것 외에도, 연결된 클라이언트와 직접 통신할 수 있습니다. 이 아웃바운드 통신에는 다양한 전송 기술이 사용될 수 있으며, WebSockets가 가장 일반적인 기술입니다. ASP.NET Core SignalR은 애플리케이션에 실시간 서버-클라이언트 통신 기능을 간단하게 추가할 수 있게 해 주는 라이브러리입니다. SignalR은 WebSockets를 포함한 다양한 전송 기술을 지원하며 개발자의 다양한 구현 세부 정보를 추상화합니다.
-
-ASP.NET Core SignalR은 ASP.NET Core 2.1부터 제공됩니다.
 
 WebSockets를 직접 사용하든 다른 기술을 사용하든 실시간 클라이언트 통신은 다양한 애플리케이션 시나리오에 유용합니다. 예를 들면 다음과 같습니다.
 
@@ -555,11 +546,11 @@ DDD는 모델링, 아키텍처 및 통신에 대한 투자를 수반하며, 더 
 
 ## <a name="deployment"></a>배포
 
-호스팅되는 위치에 관계없이 ASP.NET Core 애플리케이션을 배포하는 프로세스에는 몇 가지 단계가 포함됩니다. 첫 번째 단계는 dotnet publish CLI 명령을 사용하여 수행할 수 있는 애플리케이션을 게시하는 것입니다. 이렇게 하면 애플리케이션이 컴파일되고 애플리케이션을 실행하는 데 필요한 모든 파일이 지정된 폴더에 배치됩니다. Visual Studio에서 배포하는 경우 이 단계가 자동으로 수행됩니다. 게시 폴더에는 애플리케이션 및 해당 종속성에 대한 .exe 및 .dll 파일이 포함됩니다. 자체 포함된 애플리케이션에는 .NET 런타임 버전도 포함됩니다. ASP.NET Core 애플리케이션에는 구성 파일, 정적 클라이언트 자산 및 MVC 뷰도 포함됩니다.
+호스팅되는 위치에 관계없이 ASP.NET Core 애플리케이션을 배포하는 프로세스에는 몇 가지 단계가 포함됩니다. 첫 번째 단계는 `dotnet publish` CLI 명령을 사용하여 수행할 수 있는 애플리케이션을 게시하는 것입니다. 이렇게 하면 애플리케이션이 컴파일되고 애플리케이션을 실행하는 데 필요한 모든 파일이 지정된 폴더에 배치됩니다. Visual Studio에서 배포하는 경우 이 단계가 자동으로 수행됩니다. 게시 폴더에는 애플리케이션 및 해당 종속성에 대한 .exe 및 .dll 파일이 포함됩니다. 자체 포함된 애플리케이션에는 .NET 런타임 버전도 포함됩니다. ASP.NET Core 애플리케이션에는 구성 파일, 정적 클라이언트 자산 및 MVC 뷰도 포함됩니다.
 
 ASP.NET Core 애플리케이션은 애플리케이션(또는 서버)이 충돌하는 경우 서버를 부팅하고 다시 시작할 때 시작해야 하는 콘솔 애플리케이션입니다. 프로세스 관리자는 이 프로세스를 자동화하는 데 사용할 수 있습니다. ASP.NET Core에 대한 가장 일반적인 프로세스 관리자는 Linux의 Nginx 및 Apache와 Windows의 IIS 또는 Windows 서비스입니다.
 
-프로세스 관리자 외에도, Kestrel 웹 서버에서 호스팅되는 ASP.NET Core 애플리케이션은 역방향 프록시 서버를 사용해야 합니다. 역방향 프록시 서버는 인터넷에서 HTTP 요청을 받고, 몇 가지 항목을 사전 처리한 후에 Kestrel에 전달합니다. 역방향 프록시 서버는 애플리케이션에 대한 보안 계층을 제공하며, 에지 배포(인터넷의 트래픽에 노출됨)에 필요합니다. Kestrel은 비교적 새롭고 특정 공격에 대한 방어 체계를 제공하지 않습니다. 또한 Kestrel은 동일한 포트에서 여러 애플리케이션을 호스팅하도록 지원하지 않으므로, 호스트 헤더와 같은 기술은 동일한 포트 및 IP 주소에서 여러 애플리케이션을 호스팅하도록 설정하는 데 사용할 수 없습니다.
+프로세스 관리자 이외에 ASP.NET Core 애플리케이션은 역방향 프록시 서버를 사용할 수 있습니다. 역방향 프록시 서버는 인터넷에서 HTTP 요청을 수신하고 몇몇 사전 처리 후에 Kestrel에 전달합니다. 역방향 프록시 서버는 애플리케이션에 대한 보안 계층을 제공합니다. 또한 Kestrel은 동일한 포트에서 여러 애플리케이션을 호스팅하도록 지원하지 않으므로, 호스트 헤더와 같은 기술은 동일한 포트 및 IP 주소에서 여러 애플리케이션을 호스팅하도록 설정하는 데 사용할 수 없습니다.
 
 ![인터넷에 대한 Kestrel](./media/image7-5.png)
 

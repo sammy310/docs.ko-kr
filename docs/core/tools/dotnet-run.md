@@ -1,21 +1,17 @@
 ---
 title: dotnet run 명령
 description: dotnet run 명령은 소스 코드에서 애플리케이션을 실행하는 편리한 옵션을 제공합니다.
-ms.date: 10/31/2019
-ms.openlocfilehash: 5920f0d1f04204b286fdf6f51f5fd13644846390
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/19/2020
+ms.openlocfilehash: 415d7079db6a3da80c4fcf2074307ea760e84982
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734110"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503615"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
-**이 문서의 적용 대상:**  ✔️ .NET Core 1.x SDK 이상 버전
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**이 문서의 적용 대상:** ✔️ .NET Core 2.x SDK 이상 버전
 
 ## <a name="name"></a>이름
 
@@ -23,40 +19,12 @@ ms.locfileid: "76734110"
 
 ## <a name="synopsis"></a>개요
 
-<!-- markdownlint-disable MD025 -->
-
-# <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
-
 ```dotnetcli
-dotnet run [-c|--configuration] [-f|--framework] [--force] [--interactive] [--launch-profile] [--no-build] [--no-dependencies]
-    [--no-launch-profile] [--no-restore] [-p|--project] [-r|--runtime] [-v|--verbosity] [[--] [application arguments]]
+dotnet run [-c|--configuration] [-f|--framework] [--force] [--interactive] [--launch-profile] 
+    [--no-build] [--no-dependencies] [--no-launch-profile] [--no-restore] [-p|--project] 
+    [-r|--runtime] [-v|--verbosity] [[--] [application arguments]]
 dotnet run [-h|--help]
 ```
-
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
-
-```dotnetcli
-dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies]
-    [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [-v|--verbosity] [[--] [application arguments]]
-dotnet run [-h|--help]
-```
-
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
-
-```dotnetcli
-dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies]
-    [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [[--] [application arguments]]
-dotnet run [-h|--help]
-```
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-```dotnetcli
-dotnet run [-c|--configuration] [-f|--framework] [-p|--project] [[--] [application arguments]]
-dotnet run [-h|--help]
-```
-
----
 
 ## <a name="description"></a>설명
 
@@ -80,209 +48,84 @@ dotnet myapp.dll
 
 ## <a name="options"></a>옵션
 
-# <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
+- **`--`**
 
-`--`
+  실행 중인 애플리케이션에 대한 인수에서 `dotnet run`에 대한 인수를 구분합니다. 이 구분 기호 다음의 모든 인수가 실행 중인 애플리케이션에 전달됩니다.
 
-실행 중인 애플리케이션에 대한 인수에서 `dotnet run`에 대한 인수를 구분합니다. 이 구분 기호 다음의 모든 인수가 실행 중인 애플리케이션에 전달됩니다.
+- **`-c|--configuration <CONFIGURATION>`**
 
-`-c|--configuration {Debug|Release}`
+  빌드 구성을 정의합니다. 대부분의 프로젝트에 대한 기본값은 `Debug`이지만 프로젝트의 빌드 구성 설정을 재정의할 수 있습니다.
 
-빌드 구성을 정의합니다. 대부분의 프로젝트 기본값은 `Debug`입니다.
+- **`-f|--framework <FRAMEWORK>`**
 
-`-f|--framework <FRAMEWORK>`
+  지정된 [프레임워크](../../standard/frameworks.md)를 사용하여 앱을 빌드하고 실행합니다. 프레임워크는 프로젝트 파일에 지정되어야 합니다.
 
-지정된 [프레임워크](../../standard/frameworks.md)를 사용하여 앱을 빌드하고 실행합니다. 프레임워크는 프로젝트 파일에 지정되어야 합니다.
+- **`--force`**
 
-`--force`
+  마지막 복원이 성공한 경우에도 모든 종속성을 강제 확인합니다. 이 플래그를 지정하는 것은 *project.assets.json* 파일을 삭제하는 것과 같습니다.
 
-마지막 복원이 성공한 경우에도 모든 종속성을 강제 확인합니다. 이 플래그를 지정하는 것은 *project.assets.json* 파일을 삭제하는 것과 같습니다.
+- **`-h|--help`**
 
-`-h|--help`
+  명령에 대한 간단한 도움말을 출력합니다.
 
-명령에 대한 간단한 도움말을 출력합니다.
+- **`--interactive`**
 
-`--interactive`
+  명령이 중지되고 사용자 입력 또는 작업을 대기할 수 있도록 허용합니다(예: 인증 완료). .NET Core 3.0 SDK 이후 사용할 수 있습니다.
 
-명령이 중지되고 사용자 입력 또는 작업을 대기할 수 있도록 허용합니다(예: 인증 완료).
+- **`--launch-profile <NAME>`**
 
-`--launch-profile <NAME>`
+  애플리케이션을 시작할 때 사용할 시작 프로필(있는 경우)의 이름입니다. 시작 프로필은 *launchSettings.json* 파일에서 정의되고 일반적으로 `Development`, `Staging` 및 `Production`이라고 합니다. 자세한 내용은 [여러 환경 사용](/aspnet/core/fundamentals/environments)을 참조하세요.
 
-애플리케이션을 시작할 때 사용할 시작 프로필(있는 경우)의 이름입니다. 시작 프로필은 *launchSettings.json* 파일에서 정의되고 일반적으로 `Development`, `Staging` 및 `Production`이라고 합니다. 자세한 내용은 [여러 환경 사용](/aspnet/core/fundamentals/environments)을 참조하세요.
+- **`--no-build`**
 
-`--no-build`
+  실행하기 전에 프로젝트를 빌드하지 않습니다. 또한 `--no-restore` 플래그를 암시적으로 설정합니다.
 
-실행하기 전에 프로젝트를 빌드하지 않습니다. 또한 `--no-restore` 플래그를 암시적으로 설정합니다.
+- **`--no-dependencies`**
 
-`--no-dependencies`
+  프로젝트 간(P2P) 참조를 사용하여 프로젝트를 복원할 경우 참조가 아닌 루트 프로젝트를 복원하세요.
 
-프로젝트 간(P2P) 참조를 사용하여 프로젝트를 복원할 경우 참조가 아닌 루트 프로젝트를 복원하세요.
+- **`--no-launch-profile`**
 
-`--no-launch-profile`
+  애플리케이션을 구성하는 데 *launchSettings.json*을 사용하지 않습니다.
 
-애플리케이션을 구성하는 데 *launchSettings.json*을 사용하지 않습니다.
+- **`--no-restore`**
 
-`--no-restore`
+  명령을 실행할 때 암시적 복원을 실행하지 않습니다.
 
-명령을 실행할 때 암시적 복원을 실행하지 않습니다.
+- **`-p|--project <PATH>`**
 
-`-p|--project <PATH>`
+  실행할 프로젝트 파일의 경로를 지정합니다(폴더 이름 또는 전체 경로). 지정하지 않으면 현재 디렉터리로 기본 설정됩니다.
 
-실행할 프로젝트 파일의 경로를 지정합니다(폴더 이름 또는 전체 경로). 지정하지 않으면 현재 디렉터리로 기본 설정됩니다.
+- **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-`--runtime <RUNTIME_IDENTIFIER>`
+  패키지를 복원할 대상 런타임을 지정합니다. RID(런타임 식별자) 목록은 [RID 카탈로그](../rid-catalog.md)를 참조하세요. .NET Core 3.0 SDK 이후 사용할 수 있는 `-r` 짧은 옵션입니다.
 
-패키지를 복원할 대상 런타임을 지정합니다. RID(런타임 식별자) 목록은 [RID 카탈로그](../rid-catalog.md)를 참조하세요.
+- **`-v|--verbosity <LEVEL>`**
 
-`-v|--verbosity <LEVEL>`
-
-명령의 세부 정보 표시 수준을 설정합니다. 허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다.
-
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
-
-`--`
-
-실행 중인 애플리케이션에 대한 인수에서 `dotnet run`에 대한 인수를 구분합니다. 이 구분 기호 다음의 모든 인수가 실행 중인 애플리케이션에 전달됩니다.
-
-`-c|--configuration {Debug|Release}`
-
-빌드 구성을 정의합니다. 대부분의 프로젝트 기본값은 `Debug`입니다.
-
-`-f|--framework <FRAMEWORK>`
-
-지정된 [프레임워크](../../standard/frameworks.md)를 사용하여 앱을 빌드하고 실행합니다. 프레임워크는 프로젝트 파일에 지정되어야 합니다.
-
-`--force`
-
-마지막 복원이 성공한 경우에도 모든 종속성을 강제 확인합니다. 이 플래그를 지정하는 것은 *project.assets.json* 파일을 삭제하는 것과 같습니다.
-
-`-h|--help`
-
-명령에 대한 간단한 도움말을 출력합니다.
-
-`--launch-profile <NAME>`
-
-애플리케이션을 시작할 때 사용할 시작 프로필(있는 경우)의 이름입니다. 시작 프로필은 *launchSettings.json* 파일에서 정의되고 일반적으로 `Development`, `Staging` 및 `Production`이라고 합니다. 자세한 내용은 [여러 환경 사용](/aspnet/core/fundamentals/environments)을 참조하세요.
-
-`--no-build`
-
-실행하기 전에 프로젝트를 빌드하지 않습니다. 또한 `--no-restore` 플래그를 암시적으로 설정합니다.
-
-`--no-dependencies`
-
-프로젝트 간(P2P) 참조를 사용하여 프로젝트를 복원할 경우 참조가 아닌 루트 프로젝트를 복원하세요.
-
-`--no-launch-profile`
-
-애플리케이션을 구성하는 데 *launchSettings.json*을 사용하지 않습니다.
-
-`--no-restore`
-
-명령을 실행할 때 암시적 복원을 실행하지 않습니다.
-
-`-p|--project <PATH>`
-
-실행할 프로젝트 파일의 경로를 지정합니다(폴더 이름 또는 전체 경로). 지정하지 않으면 현재 디렉터리로 기본 설정됩니다.
-
-`--runtime <RUNTIME_IDENTIFIER>`
-
-패키지를 복원할 대상 런타임을 지정합니다. RID(런타임 식별자) 목록은 [RID 카탈로그](../rid-catalog.md)를 참조하세요.
-
-`-v|--verbosity <LEVEL>`
-
-명령의 세부 정보 표시 수준을 설정합니다. 허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다.
-
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
-
-`--`
-
-실행 중인 애플리케이션에 대한 인수에서 `dotnet run`에 대한 인수를 구분합니다. 이 구분 기호 다음의 모든 인수가 실행 중인 애플리케이션에 전달됩니다.
-
-`-c|--configuration {Debug|Release}`
-
-빌드 구성을 정의합니다. 대부분의 프로젝트 기본값은 `Debug`입니다.
-
-`-f|--framework <FRAMEWORK>`
-
-지정된 [프레임워크](../../standard/frameworks.md)를 사용하여 앱을 빌드하고 실행합니다. 프레임워크는 프로젝트 파일에 지정되어야 합니다.
-
-`--force`
-
-마지막 복원이 성공한 경우에도 모든 종속성을 강제 확인합니다. 이 플래그를 지정하는 것은 *project.assets.json* 파일을 삭제하는 것과 같습니다.
-
-`-h|--help`
-
-명령에 대한 간단한 도움말을 출력합니다.
-
-`--launch-profile <NAME>`
-
-애플리케이션을 시작할 때 사용할 시작 프로필(있는 경우)의 이름입니다. 시작 프로필은 *launchSettings.json* 파일에서 정의되고 일반적으로 `Development`, `Staging` 및 `Production`이라고 합니다. 자세한 내용은 [여러 환경 사용](/aspnet/core/fundamentals/environments)을 참조하세요.
-
-`--no-build`
-
-실행하기 전에 프로젝트를 빌드하지 않습니다. 또한 `--no-restore` 플래그를 암시적으로 설정합니다.
-
-`--no-dependencies`
-
-프로젝트 간(P2P) 참조를 사용하여 프로젝트를 복원할 경우 참조가 아닌 루트 프로젝트를 복원하세요.
-
-`--no-launch-profile`
-
-애플리케이션을 구성하는 데 *launchSettings.json*을 사용하지 않습니다.
-
-`--no-restore`
-
-명령을 실행할 때 암시적 복원을 실행하지 않습니다.
-
-`-p|--project <PATH>`
-
-실행할 프로젝트 파일의 경로를 지정합니다(폴더 이름 또는 전체 경로). 지정하지 않으면 현재 디렉터리로 기본 설정됩니다.
-
-`--runtime <RUNTIME_IDENTIFIER>`
-
-패키지를 복원할 대상 런타임을 지정합니다. RID(런타임 식별자) 목록은 [RID 카탈로그](../rid-catalog.md)를 참조하세요.
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-`--`
-
-실행 중인 애플리케이션에 대한 인수에서 `dotnet run`에 대한 인수를 구분합니다. 이 구분 기호 다음의 모든 인수가 실행 중인 애플리케이션에 전달됩니다.
-
-`-c|--configuration {Debug|Release}`
-
-빌드 구성을 정의합니다. 대부분의 프로젝트 기본값은 `Debug`입니다.
-
-`-f|--framework <FRAMEWORK>`
-
-지정된 [프레임워크](../../standard/frameworks.md)를 사용하여 앱을 빌드하고 실행합니다. 프레임워크는 프로젝트 파일에 지정되어야 합니다.
-
-`-h|--help`
-
-명령에 대한 간단한 도움말을 출력합니다.
-
-`-p|--project <PATH/PROJECT.csproj>`
-
-프로젝트 파일의 경로 및 이름을 지정합니다. (참고 참조) 지정하지 않으면 현재 디렉터리로 기본 설정됩니다.
-
-> [!NOTE]
-> `-p|--project` 옵션과 함께 프로젝트 파일의 경로와 이름을 사용합니다. CLI의 재발로 인해 폴더 경로에 .NET Core SDK 1.x를 제공할 수 없습니다. 이 문제에 대한 자세한 내용은 [dotnet run -p, can not start a project (dotnet/cli #5992)](https://github.com/dotnet/cli/issues/5992)(dotnet run -p로 프로젝트를 시작할 수 없음(dotnet/cli #5992))를 참조하세요.
-
----
+  명령의 세부 정보 표시 수준을 설정합니다. 허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다. 기본값은 `m`입니다. .NET Core 2.1 SDK부터 사용할 수 있습니다. 
 
 ## <a name="examples"></a>예
 
-현재 디렉터리에 있는 프로젝트를 실행합니다.
+- 현재 디렉터리에 있는 프로젝트를 실행합니다.
 
-`dotnet run`
+  ```dotnetcli
+  dotnet run
+  ```
 
-지정된 프로젝트를 실행합니다.
+- 지정된 프로젝트를 실행합니다.
 
-`dotnet run --project ./projects/proj1/proj1.csproj`
+  ```dotnetcli
+  dotnet run --project ./projects/proj1/proj1.csproj
+  ```
 
-현재 디렉터리에 있는 프로젝트를 실행합니다. 비어 있는 `--` 옵션을 사용하므로 이 예제의 `--help` 인수는 애플리케이션에 전달됩니다.
+- 현재 디렉터리에 있는 프로젝트를 실행합니다. 비어 있는 `--` 옵션을 사용하므로 이 예제의 `--help` 인수는 애플리케이션에 전달됩니다.
 
-`dotnet run --configuration Release -- --help`
+  ```dotnetcli
+  dotnet run --configuration Release -- --help
+  ```
 
-최소 출력만을 표시하는 현재 디렉터리에 프로젝트에 대한 종속성 및 도구를 저장한 다음, 프로젝트를 실행합니다(.NET Core SDK 2.0 이상 버전).
+- 최소 출력만을 표시하는 현재 디렉터리에 프로젝트에 대한 종속성 및 도구를 저장한 다음, 프로젝트를 실행합니다(.NET Core SDK 2.0 이상 버전).
 
-`dotnet run --verbosity m`
+  ```dotnetcli
+  dotnet run --verbosity m
+  ```

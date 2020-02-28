@@ -3,13 +3,13 @@ title: ASP.NET Core MVC 앱 테스트
 description: ASP.NET Core 및 Azure를 사용하여 최신 웹 애플리케이션 설계 | ASP.NET Core MVC 앱 테스트
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 5f63e350e2f1ba8699bb002a54492cbf9501948e
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.date: 12/04/2019
+ms.openlocfilehash: 164e820ffa6030b3dcb9180d56e57ce39bb03143
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965778"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503938"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>ASP.NET Core MVC 앱 테스트
 
@@ -70,7 +70,7 @@ Martin Fowler는 피라미드형 테스트에 대해 글을 썼으며. 그 예�
 
 **그림9-2** 솔루션의 테스트 구성
 
-원하는 테스트 프레임워크를 사용할 수 있습니다. xUnit 프레임워크는 제대로 작동하며 모든 ASP.NET Core 및 EF Core 테스트가 작성된 것입니다. 그림 9-3에 표시된 템플릿을 사용하여 Visual Studio에서 또는 dotnet new xunit을 사용하여 CLI에서 xUnit 테스트 프로젝트를 추가할 수 있습니다.
+원하는 테스트 프레임워크를 사용할 수 있습니다. xUnit 프레임워크는 제대로 작동하며 모든 ASP.NET Core 및 EF Core 테스트가 작성된 것입니다. 그림 9-3에 표시된 템플릿을 사용하여 Visual Studio에서 또는 `dotnet new xunit`을 사용하여 CLI에서 xUnit 테스트 프로젝트를 추가할 수 있습니다.
 
 ![Visual Studio에서 xUnit 테스트 프로젝트 추가](./media/image9-3.png)
 
@@ -106,7 +106,7 @@ Martin Fowler는 피라미드형 테스트에 대해 글을 썼으며. 그 예�
 
 ## <a name="unit-testing-aspnet-core-apps"></a>ASP.NET Core 앱 단위 테스트
 
-잘 디자인된 ASP.NET Core 애플리케이션에서 대부분의 복잡성과 비즈니스 논리는 비즈니스 엔터티 및 다양한 서비스에 캡슐화됩니다. 컨트롤러, 필터, viewmodel 및 뷰와 함께 ASP.NET Core MVC 응용 프로그램 자체에는 단위 테스트가 거의 필요하지 않습니다. 지정된 작업의 기능 대부분은 작업 메서드 자체의 외부에 있습니다. 단위 테스트를 사용하여 라우팅 또는 전역 오류 처리가 올바르게 작동하는지를 테스트하는 것은 효과적으로 수행할 수 없습니다. 마찬가지로, 모델 유효성 검사, 인증 및 권한 부여 필터를 포함하여 모든 필터는 단위 테스트할 수 없습니다. 이러한 동작 소스가 없는 경우 대부분의 작업 메서드는 사소하게 작아야 하며, 이러한 메서드를 사용하는 컨트롤러와 관계없이 테스트할 수 있는 서비스에 대량의 작업을 위임해야 합니다.
+잘 디자인된 ASP.NET Core 애플리케이션에서 대부분의 복잡성과 비즈니스 논리는 비즈니스 엔터티 및 다양한 서비스에 캡슐화됩니다. 컨트롤러, 필터, viewmodel 및 뷰와 함께 ASP.NET Core MVC 응용 프로그램 자체에는 단위 테스트가 거의 필요하지 않습니다. 지정된 작업의 기능 대부분은 작업 메서드 자체의 외부에 있습니다. 단위 테스트를 사용하여 라우팅 또는 전역 오류 처리가 올바르게 작동하는지를 테스트하는 것은 효과적으로 수행할 수 없습니다. 마찬가지로 모델 유효성 검사, 인증 및 권한 부여 필터를 비롯한 모든 필터는 컨트롤러의 동작 메서드를 대상으로 하는 테스트를 사용하여 단위 테스트할 수 없습니다. 이러한 동작 소스가 없는 경우 대부분의 작업 메서드는 사소하게 작아야 하며, 이러한 메서드를 사용하는 컨트롤러와 관계없이 테스트할 수 있는 서비스에 대량의 작업을 위임해야 합니다.
 
 단위 테스트를 위해 코드를 리팩터링해야 하는 경우가 있습니다. 여기에는 인프라에 대해 직접 코딩하는 대신 테스트하려는 코드의 추상화에 액세스하기 위해 추상화 식별 및 종속성 주입 사용이 자주 포함됩니다. 예를 들어 이미지를 표시하는 다음과 같은 간단한 작업 메서드를 살펴보겠습니다.
 
@@ -153,7 +153,7 @@ ASP.NET Core 앱의 통합 테스트는 대부분 인프라 프로젝트에 정�
 
 ## <a name="functional-testing-aspnet-core-apps"></a>ASP.NET Core 앱 기능 테스트
 
-ASP.NET Core 애플리케이션의 경우 `TestServer` 클래스를 사용하면 기능 테스트를 매우 쉽게 작성할 수 있습니다. 일반적으로 애플리케이션에서 수행하는 대로 `WebHostBuilder`를 직접 사용하거나 버전 2.1부터 사용할 수 있는 `WebApplicationFactory` 형식을 사용하여 `TestServer`를 구성합니다. 프로덕션 호스트에 테스트 호스트를 최대한 일치시켜야 테스트가 앱이 프로덕션 환경에서 수행하는 것과 유사한 동작을 실행합니다. `WebApplicationFactory` 클래스는 ASP.NET Core에서 보기와 같은 정적 리소스를 찾는 데 사용되는 TestServer의 ContentRoot를 구성하는 데 유용합니다.
+ASP.NET Core 애플리케이션의 경우 `TestServer` 클래스를 사용하면 기능 테스트를 매우 쉽게 작성할 수 있습니다. 일반적으로 애플리케이션에서 수행하는 대로 `WebHostBuilder`(또는 `HostBuilder`)를 직접 사용하거나 버전 2.1부터 사용할 수 있는 `WebApplicationFactory` 형식을 사용하여 `TestServer`를 구성합니다. 테스트는 앱이 프로덕션 환경에서 수행하는 것과 유사한 동작을 실행하므로 프로덕션 호스트에 테스트 호스트를 최대한 유사하게 일치시켜야 합니다. `WebApplicationFactory` 클래스는 ASP.NET Core에서 보기와 같은 정적 리소스를 찾는 데 사용되는 TestServer의 ContentRoot를 구성하는 데 유용합니다.
 
 TEntry가 웹 애플리케이션의 스타트업 클래스인 IClassFixture\<WebApplicationFactory\<TEntry>>를 구현하는 테스트 클래스를 만들면 간단한 기능 테스트를 만들 수 있습니다. 이를 구현하면 테스트 픽스쳐에서 팩터리의 CreateClient 메서드를 사용하여 클라이언트를 만들 수 있습니다.
 
@@ -175,6 +175,7 @@ public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
 
 ```cs
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.eShopWeb.Infrastructure.Data;
@@ -184,32 +185,35 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
 
-namespace Microsoft.eShopWeb.FunctionalTests.Web.Controllers
+namespace Microsoft.eShopWeb.FunctionalTests.Web
 {
-    public class CustomWebApplicationFactory<TStartup>
-    : WebApplicationFactory<Startup>
+    public class WebTestFixture : WebApplicationFactory<Startup>
     {
         protected override void ConfigureWebHost(IWebHostBuilder builder)
         {
+            builder.UseEnvironment("Testing");
+
             builder.ConfigureServices(services =>
             {
+                 services.AddEntityFrameworkInMemoryDatabase();
+
                 // Create a new service provider.
-                var serviceProvider = new ServiceCollection()
+                var provider = services
                     .AddEntityFrameworkInMemoryDatabase()
                     .BuildServiceProvider();
 
-                // Add a database context (ApplicationDbContext) using an in-memory
+                // Add a database context (ApplicationDbContext) using an in-memory 
                 // database for testing.
                 services.AddDbContext<CatalogContext>(options =>
                 {
                     options.UseInMemoryDatabase("InMemoryDbForTesting");
-                    options.UseInternalServiceProvider(serviceProvider);
+                    options.UseInternalServiceProvider(provider);
                 });
 
                 services.AddDbContext<AppIdentityDbContext>(options =>
                 {
                     options.UseInMemoryDatabase("Identity");
-                    options.UseInternalServiceProvider(serviceProvider);
+                    options.UseInternalServiceProvider(provider);
                 });
 
                 // Build the service provider.
@@ -224,7 +228,7 @@ namespace Microsoft.eShopWeb.FunctionalTests.Web.Controllers
                     var loggerFactory = scopedServices.GetRequiredService<ILoggerFactory>();
 
                     var logger = scopedServices
-                        .GetRequiredService<ILogger<CustomWebApplicationFactory<TStartup>>>();
+                        .GetRequiredService<ILogger<WebTestFixture>>();
 
                     // Ensure the database is created.
                     db.Database.EnsureCreated();
@@ -233,6 +237,11 @@ namespace Microsoft.eShopWeb.FunctionalTests.Web.Controllers
                     {
                         // Seed the database with test data.
                         CatalogContextSeed.SeedAsync(db, loggerFactory).Wait();
+
+                        // seed sample user data
+                        var userManager = scopedServices.GetRequiredService<UserManager<ApplicationUser>>();
+                        var roleManager = scopedServices.GetRequiredService<RoleManager<IdentityRole>>();
+                        AppIdentityDbContextSeed.SeedAsync(userManager, roleManager).Wait();
                     }
                     catch (Exception ex)
                     {
@@ -249,17 +258,17 @@ namespace Microsoft.eShopWeb.FunctionalTests.Web.Controllers
 테스트는 이 사용자 지정 WebApplicationFactory를 사용할 수 있습니다. 이를 사용하여 클라이언트를 만든 다음, 이 클라이언트 인스턴스를 사용하는 애플리케이션에 요청을 수행합니다. 애플리케이션에는 테스트의 어설션의 일부로 사용할 수 있는 시드된 데이터가 생깁니다. 다음 테스트는 eShopOnWeb 애플리케이션의 홈페이지가 올바르게 로드되고 시드 데이터의 일부로 애플리케이션에 추가된 제품 목록이 포함되어 있는지 확인합니다.
 
 ```cs
-using Microsoft.eShopWeb.FunctionalTests.Web.Controllers;
-using Microsoft.eShopWeb.Web;
+using Microsoft.eShopWeb.FunctionalTests.Web;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
 
 namespace Microsoft.eShopWeb.FunctionalTests.WebRazorPages
 {
-    public class HomePageOnGet : IClassFixture<CustomWebApplicationFactory<Startup>>
+    [Collection("Sequential")]
+    public class HomePageOnGet : IClassFixture<WebTestFixture>
     {
-        public HomePageOnGet(CustomWebApplicationFactory<Startup> factory)
+        public HomePageOnGet(WebTestFixture factory)
         {
             Client = factory.CreateClient();
         }
@@ -293,8 +302,6 @@ namespace Microsoft.eShopWeb.FunctionalTests.WebRazorPages
 >   <https://docs.microsoft.com/ef/core/miscellaneous/testing/>
 > - **ASP.NET Core의 통합 테스트** \
 >   <https://docs.microsoft.com/aspnet/core/test/integration-tests>
-> - **ASP.NET 커뮤니티 스탠드업 - 2018년 5월 15일 - Javier C. Nelson과 MVC 테스트** - YouTube 동영상 \
->   <https://www.youtube.com/watch?v=wtOE-xmFJkw&list=PL1rZQsJPBU2StolNg0aqvQswETPcYnNKL&index=5>
 
 >[!div class="step-by-step"]
 >[이전](work-with-data-in-asp-net-core-apps.md)

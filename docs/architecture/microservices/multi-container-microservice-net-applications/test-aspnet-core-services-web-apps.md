@@ -1,13 +1,13 @@
 ---
 title: ASP.NET Core 서비스 및 웹앱 테스트
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 컨테이너에서 ASP.NET Core 서비스 및 웹앱을 테스트하기 위한 아키텍처를 탐색합니다.
-ms.date: 10/02/2018
-ms.openlocfilehash: 324b71d830bca43be71e8847fe2dd1b8b1593556
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: ab3ae6276ea4e4c741731f050913d956046271ca
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739484"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501981"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core 서비스 및 웹앱 테스트
 
@@ -140,8 +140,6 @@ public class PrimeWebDefaultRequestShould
 
 3. **애플리케이션 기능/통합 테스트**: 여러 마이크로 서비스를 실행하는 테스트 사례를 사용하여 마이크로 서비스 통합에 집중합니다. 이러한 테스트는 프로젝트 **Application.FunctionalTests**에 있습니다.
 
-4. **부하 테스트**: 각 마이크로 서비스의 응답 시간에 집중합니다. 이러한 테스트는 프로젝트 **LoadTest**에 있으며 Visual Studio 2017 Enterprise Edition이 필요합니다.
-
 마이크로 서비스별 단위 및 통합 테스트는 각 마이크로 서비스 테스트 폴더에 포함되어 있으며, 애플리케이션 부하 테스트는 그림 6-25와 같이 솔루션 폴더의 테스트 폴더 아래에 포함되어 있습니다.
 
 ![솔루션의 테스트 프로젝트 중 일부를 가리키는 VS의 스크린샷](./media/test-aspnet-core-services-web-apps/eshoponcontainers-test-folder-structure.png)
@@ -160,9 +158,9 @@ services:
     image: redis:alpine
   rabbitmq:
     image: rabbitmq:3-management-alpine
-  sql.data:
-    image: microsoft/mssql-server-linux:2017-latest
-  nosql.data:
+  sqldata:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+  nosqldata:
     image: mongo
 ```
 
@@ -179,13 +177,13 @@ services:
     ports:
       - "15672:15672"
       - "5672:5672"
-  sql.data:
+  sqldata:
     environment:
       - SA_PASSWORD=Pass@word
       - ACCEPT_EULA=Y
     ports:
       - "5433:1433"
-  nosql.data:
+  nosqldata:
     ports:
       - "27017:27017"
 ```

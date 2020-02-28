@@ -5,12 +5,12 @@ ms.date: 12/17/2019
 author: billwagner
 ms.author: wiwagn
 ms.custom: updateeachrelease
-ms.openlocfilehash: 82fbccdec0323b54d313960279fcbfeeb6033319
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 71c11825981c6259a779e1ac8f947a41618e922d
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920408"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503472"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>.NET Core 런타임 및 SDK를 제거하는 방법
 
@@ -28,10 +28,17 @@ ms.locfileid: "76920408"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="windowstabwindows"></a>[Windows](#tab/windows)
+# <a name="windows"></a>[Windows](#tab/windows)
+
+다음 명령을 실행합니다.
+
+```dotnetcli
+dotnet --list-sdks
+```
+
+그러면 다음과 같은 출력이 표시됩니다.
 
 ```console
-C:\> dotnet --list-sdks
 2.1.200-preview-007474 [C:\Program Files\dotnet\sdk]
 2.1.200-preview-007480 [C:\Program Files\dotnet\sdk]
 2.1.200-preview-007509 [C:\Program Files\dotnet\sdk]
@@ -47,8 +54,17 @@ C:\> dotnet --list-sdks
 2.1.400-preview-009063 [C:\Program Files\dotnet\sdk]
 2.1.400-preview-009088 [C:\Program Files\dotnet\sdk]
 2.1.400-preview-009171 [C:\Program Files\dotnet\sdk]
+```
 
-C:\> dotnet --list-runtimes
+그리고 다음 명령을 실행합니다.
+
+```dotnetcli
+dotnet --list-runtimes
+```
+
+그러면 다음과 같은 출력이 표시됩니다.
+
+```console
 Microsoft.AspNetCore.All 2.1.0-preview2-final [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.1.0 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.1.1 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.All]
@@ -66,10 +82,17 @@ Microsoft.NETCore.App 2.1.1 [C:\Program Files\dotnet\shared\Microsoft.NETCore.Ap
 Microsoft.NETCore.App 2.1.2 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
 ```
 
-# <a name="linuxtablinux"></a>[Linux](#tab/linux)
+# <a name="linux"></a>[Linux](#tab/linux)
+
+다음 명령을 실행합니다.
+
+```dotnetcli
+dotnet --list-sdks
+```
+
+그러면 다음과 같은 출력이 표시됩니다.
 
 ```console
-$ dotnet --list-sdks
 1.0.1 [/usr/share/dotnet/sdk]
 1.0.4 [/usr/share/dotnet/sdk]
 2.0.0-preview1-005977 [/usr/share/dotnet/sdk]
@@ -79,8 +102,17 @@ $ dotnet --list-sdks
 2.1.300-preview2-008530 [/usr/share/dotnet/sdk]
 2.1.300 [/usr/share/dotnet/sdk]
 2.1.301 [/usr/share/dotnet/sdk]
+```
 
-$ dotnet --list-runtimes
+그리고 다음 명령을 실행합니다.
+
+```dotnetcli
+dotnet --list-runtimes
+```
+
+그러면 다음과 같은 출력이 표시됩니다.
+
+```console
 Microsoft.AspNetCore.All 2.1.0-preview2-final [/usr/share/dotnet/shared/Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.1.0 [/usr/share/dotnet/shared/Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.1.1 [/usr/share/dotnet/shared/Microsoft.AspNetCore.All]
@@ -100,10 +132,17 @@ Microsoft.NETCore.App 2.1.0 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
 Microsoft.NETCore.App 2.1.1 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
 ```
 
-# <a name="macostabmacos"></a>[macOS](#tab/macos)
+# <a name="macos"></a>[macOS](#tab/macos)
+
+다음 명령을 실행합니다.
+
+```dotnetcli
+dotnet --list-sdks
+```
+
+그러면 다음과 같은 출력이 표시됩니다.
 
 ```console
-$ dotnet --list-sdks
 1.0.1 [/usr/local/share/dotnet/sdk]
 1.0.4 [/usr/local/share/dotnet/sdk]
 2.0.0-preview1-005977 [/usr/local/share/dotnet/sdk]
@@ -113,8 +152,17 @@ $ dotnet --list-sdks
 2.1.300-preview2-008530 [/usr/local/share/dotnet/sdk]
 2.1.300 [/usr/local/share/dotnet/sdk]
 2.1.301 [/usr/local/share/dotnet/sdk]
+```
 
-$ dotnet --list-runtimes
+그리고 다음 명령을 실행합니다.
+
+```dotnetcli
+dotnet --list-runtimes
+```
+
+그러면 다음과 같은 출력이 표시됩니다.
+
+```console
 Microsoft.AspNetCore.All 2.1.0-preview2-final [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.1.0 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.1.1 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.All]
@@ -138,7 +186,7 @@ Microsoft.NETCore.App 2.1.1 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ## <a name="uninstall-net-core"></a>.NET Core 제거
 
-# <a name="windowstabwindows"></a>[Windows](#tab/windows)
+# <a name="windows"></a>[Windows](#tab/windows)
 
 .NET core는 Windows **프로그램 추가/제거** 대화 상자를 사용하여 .NET Core 런타임 및 SDK의 버전을 제거합니다. 다음 그림에서는 여러 버전의 .NET 런타임 및 SDK가 설치된 **프로그램 추가/제거** 대화 상자를 보여 줍니다.
 
@@ -146,7 +194,7 @@ Microsoft.NETCore.App 2.1.1 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 머신에서 제거할 버전을 선택하고 **제거**를 클릭합니다.
 
-# <a name="linuxtablinux"></a>[Linux](#tab/linux)
+# <a name="linux"></a>[Linux](#tab/linux)
 
 Linux에서 .NET Core(SDK 또는 런타임)를 제거하는 옵션이 더 있습니다. .NET Core를 제거하는 가장 좋은 방법은 .NET Core 설치에 사용한 작업을 미러링하는 것입니다. 세부 정보는 선택한 배포 및 설치 방법에 따라 다릅니다.
 
@@ -189,7 +237,7 @@ sudo rm -rf /usr/share/dotnet/host/fxr/1.0.1
 
 SDK 및 런타임에 대한 부모 디렉터리는 이전 표에 표시된 것처럼 `dotnet --list-sdks` 및 `dotnet --list-runtimes` 명령의 출력에 나열됩니다.
 
-# <a name="macostabmacos"></a>[macOS](#tab/macos)
+# <a name="macos"></a>[macOS](#tab/macos)
 
 Mac에서는 해당 버전을 포함하는 디렉터리를 제거하여 SDK와 런타임을 별도로 제거해야 합니다. 예는 들어 1.0.1 SDK 및 런타임을 제거하려면 다음 bash 명령을 사용합니다.
 
