@@ -3,12 +3,12 @@ title: .NET Core CLI
 titleSuffix: ''
 description: .NET Core CLI 및 해당 기능에 대한 개요입니다.
 ms.date: 02/13/2020
-ms.openlocfilehash: 1078d68ddc088274fa14b0094a81765f7af69dad
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: c491088f26a9aa1c065414e76fb0b80d554380b4
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543316"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625984"
 ---
 # <a name="net-core-cli-overview"></a>.NET Core CLI 개요
 
@@ -87,7 +87,7 @@ dotnet /build_output/my_app.dll
 dotnet build
 ```
 
-먼저 드라이버는 사용할 SDK 버전을 확인합니다. ['global.json'](global-json.md)이 없는 경우 사용 가능한 최신 버전의 SDK가 사용됩니다. 이는 머신의 최신 버전에 따라 미리 보기 또는 안정적인 버전일 수 있습니다.  SDK 버전이 확인되면 명령을 실행합니다.
+먼저 드라이버는 사용할 SDK 버전을 확인합니다. [global.json](global-json.md) 파일이 없는 경우 사용 가능한 최신 버전의 SDK가 사용됩니다. 이는 머신의 최신 버전에 따라 미리 보기 또는 안정적인 버전일 수 있습니다.  SDK 버전이 확인되면 명령을 실행합니다.
 
 ### <a name="command"></a>명령
 

@@ -49,25 +49,7 @@
     - name: 지역화된 IntelliSense 설치
       href: install/localized-intellisense.md
 - name: 시작
-  items:
-    - name: 시작
-      href: get-started.md
-    - name: 'C# 및 Visual Studio Code 시작'
-      href: tutorials/with-visual-studio-code.md
-    - name: Visual Studio Code를 사용하여 macOS에서 .NET Core 시작
-      href: tutorials/using-on-macos.md
-    - name: Visual Studio에서 첫 번째 콘솔 앱 만들기
-      href: tutorials/with-visual-studio.md
-    - name: Visual Studio를 사용하여 애플리케이션 디버그
-      href: tutorials/debugging-with-visual-studio.md
-    - name: Visual Studio를 사용하여 애플리케이션 게시
-      href: tutorials/publishing-with-visual-studio.md
-    - name: Visual Studio에서 .NET Standard 라이브러리 만들기
-      href: tutorials/library-with-visual-studio.md
-    - name: Visual Studio에서 .NET Standard 라이브러리 테스트
-      href: tutorials/testing-library-with-visual-studio.md
-    - name: Visual Studio에서 .NET Standard 라이브러리 사용
-      href: tutorials/consuming-library-with-visual-studio.md
+  href: get-started.md
 - name: .NET Core의 새로운 기능
   items:
     - name: .NET Core 3.1의 새로운 기능
@@ -87,12 +69,28 @@
   items:
     - name: 개요
       href: tutorials/index.md
-    - name: Mac용 Visual Studio를 사용하여 .NET Core 시작
-      href: tutorials/using-on-mac-vs.md
-    - name: macOS에서 완전한 .NET Core 솔루션 빌드
-      href: tutorials/using-on-mac-vs-full-solution.md
+    - name: Visual Studio를 사용하여 .NET Core 시작
+      href: tutorials/with-visual-studio.md
+    - name: Visual Studio Code를 사용하여 .NET Core 시작
+      href: tutorials/with-visual-studio-code.md
     - name: CLI를 사용하여 .NET Core 시작
       href: tutorials/cli-create-console-app.md
+    - name: macOS에서 Visual Studio Code를 사용하여 .NET Core 시작
+      href: tutorials/using-on-macos.md
+    - name: Mac용 Visual Studio를 사용하여 .NET Core 시작
+      href: tutorials/using-on-mac-vs.md
+    - name: Visual Studio를 사용하여 애플리케이션 디버그
+      href: tutorials/debugging-with-visual-studio.md
+    - name: Visual Studio를 사용하여 애플리케이션 게시
+      href: tutorials/publishing-with-visual-studio.md
+    - name: Visual Studio에서 .NET Standard 라이브러리 만들기
+      href: tutorials/library-with-visual-studio.md
+    - name: Visual Studio에서 .NET Standard 라이브러리 테스트
+      href: tutorials/testing-library-with-visual-studio.md
+    - name: Visual Studio에서 .NET Standard 라이브러리 사용
+      href: tutorials/consuming-library-with-visual-studio.md
+    - name: macOS에서 완전한 .NET Core 솔루션 빌드
+      href: tutorials/using-on-mac-vs-full-solution.md
     - name: .NET Core CLI를 사용하여 프로젝트 구성 및 테스트
       href: tutorials/testing-with-cli.md
     - name: 플랫폼 간 도구로 라이브러리 개발

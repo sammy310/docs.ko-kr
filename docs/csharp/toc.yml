@@ -1337,8 +1337,9 @@
                 - name: 열거형 형식
                   href: language-reference/builtin-types/enum.md
                   displayName: 'enum, bit flags, bit field'
-                - name: struct
-                  href: language-reference/keywords/struct.md
+                - name: 구조체 형식
+                  href: language-reference/builtin-types/struct.md
+                  displayName: struct type
                 - name: Nullable 값 형식
                   href: language-reference/builtin-types/nullable-value-types.md
                   displayName: '? token, ? symbol'
