@@ -14,12 +14,12 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: a53a8123db64948503bd6d2da9a27fc414dc1e1f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: b8ed028bc1edabf14d7b2dd67d94b28d574d2eb4
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423534"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159626"
 ---
 # <a name="handling-and-raising-events"></a>이벤트 처리 및 발생
 
@@ -78,7 +78,7 @@ ms.locfileid: "73423534"
 [!code-vb[EventsOverview#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#2)]  
   
 ## <a name="static-and-dynamic-event-handlers"></a>정적 및 동적 이벤트 처리기  
- 
+
 .NET에서는 구독자가 정적이나 동적으로 이벤트 알림을 등록할 수 있습니다. 고정 이벤트 처리기는 해당 이벤트가 처리되는 클래스의 전체 수명 동안 적용됩니다. 동적 이벤트 처리기는 특정 조건부 프로그램 논리에 대한 응답에서 일반적으로 프로그램을 실행하는 동안 명시적으로 활성화되고 비활성화됩니다. 예를 들어 이벤트 알림이 특정 조건 하에서만 필요하거나 애플리케이션이 여러 이벤트 처리기를 제공하고 런타임 조건에서 사용할 적절한 이벤트 처리기를 정의하는 경우에 사용될 수 있습니다. 이전 섹션의 예제에서는 이벤트 처리기를 동적으로 추가하는 방법을 보여 줍니다. 자세한 내용은 [이벤트](../../visual-basic/programming-guide/language-features/events/index.md)(Visual Basic의 경우) 및 [이벤트](../../csharp/programming-guide/events/index.md)(C#의 경우)를 참조하세요.  
   
 ## <a name="raising-multiple-events"></a>여러 이벤트 발생  
@@ -95,7 +95,7 @@ ms.locfileid: "73423534"
 |[관찰자 디자인 패턴](observer-design-pattern.md)|구독자가 공급자를 등록하고 공급자로부터 알림을 수신하는 데 사용할 수 있는 디자인 패턴에 대해 설명합니다.|  
 |[방법: Web Forms 애플리케이션에서 이벤트 사용](how-to-consume-events-in-a-web-forms-application.md)|Web Forms 컨트롤에서 발생한 이벤트를 처리하는 방법을 보여 줍니다.|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.EventHandler>
 - <xref:System.EventHandler%601>

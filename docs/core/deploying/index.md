@@ -2,18 +2,18 @@
 title: 애플리케이션 게시
 description: .NET Core 애플리케이션을 게시하는 방법을 알아봅니다. .NET Core에서는 플랫폼별 또는 플랫폼 간 앱을 게시할 수 있습니다. 앱을 자체 포함이나 런타임 종속으로 게시할 수 있습니다. 각 모드는 사용자가 앱을 실행하는 방법에 영향을 줍니다.
 ms.date: 01/31/2020
-ms.openlocfilehash: 696cca436c73601a3e7825033152d43a659a7dce
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 3b9c3b7f29af12477874b7a31ef0de4750719de0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448986"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157937"
 ---
 # <a name="net-core-application-publishing-overview"></a>.NET Core 애플리케이션 게시 개요
 
 .NET Core를 사용하여 만든 애플리케이션은 두 가지 모드로 게시할 수 있으며, 모드에 따라 사용자가 앱을 실행하는 방법에 영향을 줍니다.
 
-앱을 ‘자체 포함’으로 게시하면 .NET Core 런타임 및 라이브러리와 해당 애플리케이션 및 관련 종속성을 포함하는 애플리케이션이 생성됩니다.  애플리케이션 사용자는 .NET Core 런타임이 설치되지 않은 컴퓨터에서 애플리케이션을 실행할 수 있습니다. 
+앱을 ‘자체 포함’으로 게시하면 .NET Core 런타임 및 라이브러리와 해당 애플리케이션 및 관련 종속성을 포함하는 애플리케이션이 생성됩니다.  애플리케이션 사용자는 .NET Core 런타임이 설치되지 않은 컴퓨터에서 애플리케이션을 실행할 수 있습니다.
 
 앱을 ‘런타임 종속’으로 게시하면 애플리케이션 자체와 관련 종속성만 포함하는 애플리케이션이 생성됩니다.  애플리케이션 사용자는 .NET Core 런타임을 별도로 설치해야 합니다.
 
@@ -132,7 +132,7 @@ dotnet publish -r linux-x64 --self-contained false
   > .NET Core [*globalization invariant mode*](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)(세계화 고정 모드)를 사용하여 Linux 시스템에서 배포 크기를 약 28MB까지 줄일 수 있습니다. 이렇게 하면 앱이 모든 문화권을 [고정 문화권](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)처럼 처리합니다.
 
 - **.NET Core 버전을 업데이트하기 어려움**\
-앱과 함께 배포되는 .NET Core 런타임은 새 버전의 앱을 릴리스해야만 업그레이드할 수 있습니다. .NET Core 런타임의 보안 패치를 위해 애플리케이션의 업데이트된 버전을 제공해야 합니다. 
+앱과 함께 배포되는 .NET Core 런타임은 새 버전의 앱을 릴리스해야만 업그레이드할 수 있습니다. .NET Core 런타임의 보안 패치를 위해 애플리케이션의 업데이트된 버전을 제공해야 합니다.
 
 ### <a name="examples"></a>예
 

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: f04b6fcd1641a53efe75d38ab7122967bff6a58d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7f20e5108ad8bff602f5b761e65f093d987f2608
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708373"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156311"
 ---
 # <a name="generics-in-net"></a>.NET의 제네릭
 
@@ -124,7 +124,7 @@ ms.locfileid: "75708373"
   
  공용 언어 런타임에서는 <xref:System.Reflection.Emit.OpCodes.Stelem>, <xref:System.Reflection.Emit.OpCodes.Ldelem>, <xref:System.Reflection.Emit.OpCodes.Unbox_Any>, <xref:System.Reflection.Emit.OpCodes.Constrained>, <xref:System.Reflection.Emit.OpCodes.Readonly>등의 MSIL(Microsoft Intermediate Language)에서 제네릭 형식을 지원하기 위한 새로운 opcode 및 접두사를 제공합니다.  
   
- Visual C++, C# 및 Visual Basic은 모두 제네릭 정의 및 사용을 위한 모든 지원을 제공합니다. 언어 지원에 대한 자세한 내용은 [Visual Basic의 제네릭 형식](../../visual-basic/programming-guide/language-features/data-types/generic-types.md), [제네릭 소개](../../csharp/programming-guide/generics/index.md) 및 [Visual C++의 제네릭 개요](/cpp/windows/overview-of-generics-in-visual-cpp)를 참조하세요. 
+ Visual C++, C# 및 Visual Basic은 모두 제네릭 정의 및 사용을 위한 모든 지원을 제공합니다. 언어 지원에 대한 자세한 내용은 [Visual Basic의 제네릭 형식](../../visual-basic/programming-guide/language-features/data-types/generic-types.md), [제네릭 소개](../../csharp/programming-guide/generics/index.md) 및 [Visual C++의 제네릭 개요](/cpp/windows/overview-of-generics-in-visual-cpp)를 참조하세요.
 
 ## <a name="nested-types-and-generics"></a>중첩 형식 및 제네릭  
  제네릭 형식에 중첩된 형식은 바깥쪽 제네릭 형식의 형식 매개 변수에 따라 달라질 수 있습니다. 공용 언어 런타임은 고유한 제네릭 형식 매개 변수를 포함하지 않는 중첩 형식도 제네릭으로 간주합니다. 중첩 형식의 인스턴스를 만들 때는 모든 바깥쪽 제네릭 형식에 대해 형식 인수를 지정해야 합니다.  

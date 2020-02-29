@@ -12,12 +12,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 968eaf2befb44eb893699d1114b315a4f5df3097
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: f85fef37ac952c91ac73570f26d80d8a46f4eedf
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921364"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156507"
 ---
 # <a name="assemblies-in-net"></a>.NET 어셈블리
 
@@ -85,7 +85,7 @@ Visual Studio에서 또는 .NET Core 명령줄 인터페이스 도구를 사용�
 애플리케이션에서 어셈블리를 사용하려면 어셈블리에 대한 참조를 추가해야 합니다. 어셈블리가 참조되면 해당 코드가 소스 파일에 속해 있는 것처럼 해당 네임스페이스의 액세스 가능한 모든 유형, 속성, 메서드 및 기타 멤버를 애플리케이션에서 사용할 수 있습니다.
 
 > [!NOTE]
-> .NET 클래스 라이브러리의 대부분의 어셈블리는 자동으로 참조됩니다. 시스템 어셈블리가 자동으로 참조되지 않으면 .NET Core의 경우 어셈블리를 포함하는 NuGet 패키지에 대한 참조를 추가할 수 있습니다. Visual Studio에서 NuGet 패키지 관리자를 사용하거나 어셈블리의 [\<PackageReference>](../../core/tools/dependencies.md#the-new-packagereference-element) 요소를 *.csproj* 또는 *.vbproj* 프로젝트에 추가합니다. .NET framework에서 Visual Studio의 **참조 추가** 대화 상자를 사용하거나 [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md)의 `-reference` 명령줄 옵션 또는 [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) 컴파일러를 사용하여 어셈블리에 대한 참조를 추가할 수 있습니다.
+> .NET 클래스 라이브러리의 대부분의 어셈블리는 자동으로 참조됩니다. 시스템 어셈블리가 자동으로 참조되지 않으면 .NET Core의 경우 어셈블리를 포함하는 NuGet 패키지에 대한 참조를 추가할 수 있습니다. Visual Studio에서 NuGet 패키지 관리자를 사용하거나 어셈블리의 [\<PackageReference>](../../core/tools/dependencies.md#the-packagereference-element) 요소를 *.csproj* 또는 *.vbproj* 프로젝트에 추가합니다. .NET framework에서 Visual Studio의 **참조 추가** 대화 상자를 사용하거나 [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md)의 `-reference` 명령줄 옵션 또는 [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) 컴파일러를 사용하여 어셈블리에 대한 참조를 추가할 수 있습니다.
 
 C#에서는 단일 애플리케이션에서 동일한 어셈블리의 두 버전을 사용할 수 있습니다. 자세한 내용은 [extern alias](../../csharp/language-reference/keywords/extern-alias.md)를 참조하세요.
 

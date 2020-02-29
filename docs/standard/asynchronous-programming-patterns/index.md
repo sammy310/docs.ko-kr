@@ -6,12 +6,12 @@ helpviewer_keywords:
 - asynchronous design patterns, .NET
 - .NET Framework, asynchronous design patterns
 ms.assetid: 4ece5c0b-f8fe-4114-9862-ac02cfe5a5d7
-ms.openlocfilehash: dfce69ee18b8346cd802b4934de63bf0a39c72f0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e1efe9c3eb57f317def91e527506c358eb086679
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124266"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160055"
 ---
 # <a name="asynchronous-programming-patterns"></a>비동기 프로그래밍 패턴
 
@@ -59,13 +59,13 @@ public class MyClass
 public class MyClass  
 {  
     public IAsyncResult BeginRead(  
-        byte [] buffer, int offset, int count,   
+        byte [] buffer, int offset, int count,
         AsyncCallback callback, object state);  
     public int EndRead(IAsyncResult asyncResult);  
 }  
 ```  
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [비동기에 대한 자세한 설명](../async-in-depth.md)
 - [C#의 비동기 프로그래밍](../../csharp/async.md)
