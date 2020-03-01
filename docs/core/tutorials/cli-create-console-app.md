@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: af1b374cd14d5070194c035024ce2328c9016646
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 1a691ad0c1f8dbfadd642360d7f9629a136ff3ab
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503549"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156662"
 ---
 # <a name="get-started-with-net-core-using-the-net-core-cli"></a>.NET Core CLI를 사용하여 .NET Core 시작하기
 
@@ -40,30 +40,30 @@ dotnet run
 01. `dotnet new console`
 
     [dotnet new](../tools/dotnet-new.md)는 콘솔 앱을 빌드하는 데 필요한 종속성이 있는 최신 *Hello.csproj* 프로젝트 파일입니다. 애플리케이션에 대한 진입점을 포함하는 기본 파일인 *Program.cs*도 만듭니다.
-    
+
     *Hello.csproj*:
-    
+
     [!code-xml[Hello.csproj](~/samples/core/console-apps/HelloMsBuild/Hello.csproj)]
-    
+
     프로젝트 파일은 종속성을 복원하고 프로그램을 빌드하는 데 필요한 모든 항목을 지정합니다.
-    
+
     - `<OutputType>` 요소는 실행 파일, 즉 콘솔 애플리케이션을 빌드하고 있음을 지정합니다.
     - `<TargetFramework>` 요소는 대상으로 하는 .NET 구현을 지정합니다. 고급 시나리오에서는 여러 대상 프레임워크를 지정하고 이 모든 프레임워크를 단일 작업으로 빌드할 수 있습니다. 이 자습서에서는 .NET Core 3.1에 대해서만 빌드합니다.
-    
+
     *Program.cs*:
-    
+
     [!code-csharp[Program.cs](~/samples/core/console-apps/HelloMsBuild/Program.cs)]
-    
+
     프로그램은 `using System`으로 시작됩니다. 즉, "`System` 네임스페이스의 모든 항목을 이 파일 범위로 가져옵니다". `System` 네임스페이스는 `Console` 클래스를 포함합니다.
-    
+
     그런 다음 `Hello`라는 네임스페이스를 정의합니다. 이 이름은 원하는 값으로 변경할 수 있습니다. `Program`이라는 클래스는 해당 네임스페이스 내에서 `args`라는 문자열 배열을 사용하는 `Main` 메서드로 정의됩니다. 이 배열에는 프로그램이 실행될 때 전달되는 인수 목록이 포함되어 있습니다. 이 상태 그대로 배열은 사용되지 않으며 프로그램은 단순히 "Hello World!"라는 텍스트를 작성합니다. 표시합니다. 나중에 이 인수를 사용하는 코드를 변경할 예정입니다.
-    
+
     `dotnet new`는 [dotnet restore](../tools/dotnet-restore.md)를 암시적으로 호출합니다. `dotnet restore`는 [NuGet](https://www.nuget.org/)(.NET 패키지 관리자)을 호출하여 종속성 트리를 복원합니다. NuGet은 *Hello.csproj* 파일을 분석하고, 파일에 정의된 종속성을 다운로드하고(또는 머신의 캐시에서 종속성을 가져오고), 샘플을 컴파일 및 실행하는 데 필요한 *obj/project.assets.json* 파일을 작성합니다.
 
 02. `dotnet run`
 
     [dotnet run](../tools/dotnet-run.md)은 [dotnet build](../tools/dotnet-build.md)를 호출하여 빌드 대상이 빌드되었는지를 확인하고 `dotnet <assembly.dll>`을 호출하여 대상 애플리케이션을 실행합니다.
-    
+
     ```dotnetcli
     dotnet run
     ```
@@ -73,9 +73,9 @@ dotnet run
     ```console
     Hello World!
     ```
-    
+
     또한 `dotnet build`를 실행하여 빌드 콘솔 애플리케이션을 실행하지 않고 코드를 컴파일할 수도 있습니다. 그러면 프로젝트 이름에 따라 컴파일된 애플리케이션이 DLL 파일로 만들어집니다. 이 경우 만들어진 파일 이름은 *Hello.dll*입니다. 이 앱은 Windows에서 `dotnet bin\Debug\netcoreapp3.1\Hello.dll`을 사용하여 실행할 수 있습니다(비 Windows 시스템의 경우 `/` 사용).
-    
+
     ```dotnetcli
     dotnet bin\Debug\netcoreapp3.1\Hello.dll
     ```
@@ -85,7 +85,7 @@ dotnet run
     ```console
     Hello World!
     ```
-    
+
     앱이 컴파일되면 운영 체제별 실행 파일이 `Hello.dll`과 함께 만들어집니다. Windows에서는 `Hello.exe`, Linux 또는 macOS에서는 `hello`가 만들어집니다. 위의 예제에서 파일은 `Hello.exe` 또는 `Hello`로 이름이 지정됩니다. 해당 실행 파일을 직접 실행할 수 있습니다.
 
     ```console

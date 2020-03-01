@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 12/10/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: a82934fd2ea9568681a3bec82c3b15513decc926
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: bdd6e28713bdece2bd144e6763bd84d719e91449
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741571"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156636"
 ---
 # <a name="publish-your-net-core-hello-world-application-with-visual-studio"></a>Visual Studio를 사용하여 .NET Core Hello World 애플리케이션 게시
 
@@ -25,15 +25,15 @@ ms.locfileid: "76741571"
 1. **HelloWorld** 프로젝트(HelloWorld 솔루션 아님)를 마우스 오른쪽 단추로 클릭하고 메뉴에서 **게시**를 선택합니다. (주 **빌드** 메뉴에서 **HelloWorld 게시**를 선택할 수도 있습니다.)
 
    ![Visual Studio 게시 상황에 맞는 메뉴](media/publishing-with-visual-studio/publish-context-menu.png)
-   
+
 1. **게시 대상 선택** 페이지에서 **폴더**를 선택한 다음 **프로필 만들기**를 선택합니다.
 
    ![Visual Studio에서 게시 대상 선택](media/publishing-with-visual-studio/pick-publish-target.png)
-   
+
 1. **게시** 페이지에서 **게시**를 선택합니다.
 
    ![Visual Studio 게시 창](media/publishing-with-visual-studio/publish-page.png)
-   
+
 ## <a name="inspect-the-files"></a>파일 검사
 
 게시 프로세스는 프레임워크 종속 배포를 만듭니다. 이 배포는 시스템에 .NET Core가 설치되어 있으면 게시된 애플리케이션이 .NET Core에서 지원하는 모든 플랫폼에서 실행되는 배포 유형입니다. 사용자는 실행 파일을 두 번 클릭하거나 명령 프롬프트에서 `dotnet HelloWorld.dll` 명령을 실행하여 게시된 앱을 실행할 수 있습니다.
@@ -59,7 +59,7 @@ ms.locfileid: "76741571"
          애플리케이션의 [프레임워크 종속 배포](../deploying/deploy-with-cli.md#framework-dependent-deployment)입니다. 이 동적 연결 라이브러리를 실행하려면 명령 프롬프트에 `dotnet HelloWorld.dll`을 입력합니다.
 
       * *HelloWorld.exe*
-      
+
          애플리케이션의 [프레임워크 종속 실행 파일](../deploying/deploy-with-cli.md#framework-dependent-executable)입니다. 이를 실행하려면 명령 프롬프트에서 `HelloWorld.exe`를 입력합니다.
 
       * *HelloWorld.pdb*(배포에 대한 선택 사항)

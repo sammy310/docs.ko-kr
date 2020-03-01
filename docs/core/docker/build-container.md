@@ -4,12 +4,12 @@ description: 이 자습서에서는 Docker를 사용하여 .NET Core 애플리�
 ms.date: 01/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 17d3dfbe58770b19a75be1dad3ae03406584992c
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: e1904430a591b0e74a69d50a53869a130fc0a248
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900108"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157832"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>자습서: .NET Core 앱 컨테이너화
 
@@ -141,7 +141,7 @@ dotnet publish -c Release
 
 이 명령은 앱을 *publish* 폴더로 컴파일합니다. 작업 폴더에서 *publish* 폴더의 경로는 `.\app\bin\Release\netcoreapp3.1\publish\`이어야 합니다.
 
-*app* 폴더에서 publish 폴더의 디렉터리 목록을 가져오고 *myapp.dll*이 생성되었는지 확인합니다. 
+*app* 폴더에서 publish 폴더의 디렉터리 목록을 가져오고 *myapp.dll*이 생성되었는지 확인합니다.
 
 ```console
 > dir bin\Release\netcoreapp3.1\publish

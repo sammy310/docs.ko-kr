@@ -3,12 +3,12 @@ title: C# 및 Visual Studio Code 시작
 description: Visual Studio Code를 사용하여 C#에서 첫 번째 .NET Core 애플리케이션을 만들고 디버그하는 방법을 알아봅니다.
 author: kendrahavens
 ms.date: 12/05/2018
-ms.openlocfilehash: acd1c300545bc6c107552576180afd7dec6b7382
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: ef7134e26c1ded3926faa51748c1b6d4a461008f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503513"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156610"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 및 Visual Studio Code 시작
 
@@ -113,7 +113,7 @@ ms.locfileid: "77503513"
 
     ```csharp
     using System;
-    
+
     namespace HelloWorld
     {
         class Program

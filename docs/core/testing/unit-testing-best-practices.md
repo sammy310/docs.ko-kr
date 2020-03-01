@@ -4,12 +4,12 @@ description: .NET Core 및 .NET 표준 프로젝트에 대한 코드 품질 및 
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 387d66bfeaf48359a27a532247a799c319f38caa
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a65cf3fbfb6562dbd9aaf815e1bfe469585c0fc0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714292"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157390"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core 및.NET 표준을 사용하는 단위 테스트 모범 사례
 
@@ -169,7 +169,7 @@ mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같
 
 매직 문자열은 테스트 판독기에 혼동을 일으킬 수 있습니다. 문자열이 일반적이지 않은 경우 매개 변수 또는 반환 값에 대해 특정 값이 선택된 이유가 궁금할 수 있습니다. 이를 통해 테스트에 집중하기보다는 구현 세부 사항을 더 자세히 살펴볼 수 있습니다.
 
-> [!TIP] 
+> [!TIP]
 > 테스트를 작성할 때는 가능한 한 많은 의도를 표현하는 것을 목표로 해야 합니다. 매직 문자열의 경우 좋은 방법은 이러한 값을 상수에 할당하는 것입니다.
 
 #### <a name="bad"></a>Bad:
@@ -208,7 +208,7 @@ mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같
 
 단위 테스트 프레임워크에서 `Setup`은 단위 테스트 도구 모음 내의 각각의 모든 단위 테스트 전에 호출됩니다. 일부는 이를 유용한 도구로 볼 수 있지만, 일반적으로 테스트를 읽기에는 비대해지고 어렵워집니다. 각 테스트는 일반적으로 테스트를 시작하고 실행하기 위한 요구 사항이 다릅니다. 아쉽게도 `Setup`에서는 각 테스트에 대해 정확히 동일한 요구 사항을 사용해야 합니다.
 
-> [!NOTE] 
+> [!NOTE]
 > xUnit은 버전 2.x에서 SetUp 및 TearDown을 모두 제거했습니다.
 
 #### <a name="bad"></a>Bad:
@@ -239,7 +239,7 @@ mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같
 
 - 하나의 Assert가 실패하면 후속 Assert는 평가되지 않습니다.
 - 테스트에 여러 사례를 어설션하지 않도록 합니다.
-- 테스트가 실패한 이유에 대한 전체 그림을 제공합니다. 
+- 테스트가 실패한 이유에 대한 전체 그림을 제공합니다.
 
 테스트 사례에 다중 어설션을 도입할 때 모든 어설션이 실행된다는 보장은 없습니다. 대부분의 단위 테스트 프레임워크에서 단위 테스트에 어설션이 실패하면 절차 테스트는 자동으로 실패한 것으로 간주됩니다. 실제로 작동하는 기능이 실패한 것으로 표시되므로 혼란스러울 수 있습니다.
 
@@ -253,7 +253,7 @@ mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같
 [!code-csharp[AfterMultipleAsserts](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterMultipleAsserts)]
 
 ### <a name="validate-private-methods-by-unit-testing-public-methods"></a>공용 메서드를 테스트하여 전용 메서드 유효성 검사
-대부분의 경우 전용 메서드를 테스트할 필요는 없습니다. 전용 메서드는 구현 세부 정보입니다. 전용 메서드는 절대 분리되어 존재하지 않는다고 생각할 수 있습니다. 특정 시점에서는 구현의 일부로 전용 메서드를 호출하는 공용 연결 메서드가 있을 것입니다. 주의해야 할 것은 사적인 것을 호출하는 공용 메서드의 최종 결과입니다. 
+대부분의 경우 전용 메서드를 테스트할 필요는 없습니다. 전용 메서드는 구현 세부 정보입니다. 전용 메서드는 절대 분리되어 존재하지 않는다고 생각할 수 있습니다. 특정 시점에서는 구현의 일부로 전용 메서드를 호출하는 공용 연결 메서드가 있을 것입니다. 주의해야 할 것은 사적인 것을 호출하는 공용 메서드의 최종 결과입니다.
 
 다음 경우를 참조
 
@@ -270,9 +270,9 @@ private string TrimInput(string input)
 }
 ```
 
-첫 번째 반응은 메서드가 예상대로 작동하는지 확인하려고 하기 때문에 `TrimInput`에 대한 테스트를 작성하는 것일 수 있습니다. 그러나 `ParseLogLine`에서 예상하지 못한 방식으로 `sanitizedInput`을 조작하여 쓸모없는 `TrimInput`에 대한 테스트를 렌더링하는 것은 전적으로 가능합니다. 
+첫 번째 반응은 메서드가 예상대로 작동하는지 확인하려고 하기 때문에 `TrimInput`에 대한 테스트를 작성하는 것일 수 있습니다. 그러나 `ParseLogLine`에서 예상하지 못한 방식으로 `sanitizedInput`을 조작하여 쓸모없는 `TrimInput`에 대한 테스트를 렌더링하는 것은 전적으로 가능합니다.
 
-실제 테스트는 공용 연결 메서드 `ParseLogLine`에 대해 수행되어야 합니다. 이는 최종적으로 주의를 기울여야 하는 것이기 때문이다. 
+실제 테스트는 공용 연결 메서드 `ParseLogLine`에 대해 수행되어야 합니다. 이는 최종적으로 주의를 기울여야 하는 것이기 때문이다.
 
 ```csharp
 public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
@@ -293,11 +293,11 @@ public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
 ```csharp
 public int GetDiscountedPrice(int price)
 {
-    if(DateTime.Now.DayOfWeek == DayOfWeek.Tuesday) 
+    if(DateTime.Now.DayOfWeek == DayOfWeek.Tuesday)
     {
         return price / 2;
     }
-    else 
+    else
     {
         return price;
     }
@@ -326,7 +326,7 @@ public void GetDiscountedPrice_OnTuesday_ReturnsHalfPrice()
 }
 ```
 
-아쉽게도 테스트에 몇 가지 문제점이 있습니다. 
+아쉽게도 테스트에 몇 가지 문제점이 있습니다.
 
 - 테스트 도구 모음을 화요일에 실행하면 두 번째 테스트는 통과하지만 첫 번째 테스트는 실패합니다.
 - 테스트 도구 모음을 다른 날에 실행하면 첫 번째 테스트는 통과하지만 두 번째 테스트는 실패합니다.
@@ -341,11 +341,11 @@ public interface IDateTimeProvider
 
 public int GetDiscountedPrice(int price, IDateTimeProvider dateTimeProvider)
 {
-    if(dateTimeProvider.DayOfWeek() == DayOfWeek.Tuesday) 
+    if(dateTimeProvider.DayOfWeek() == DayOfWeek.Tuesday)
     {
         return price / 2;
     }
-    else 
+    else
     {
         return price;
     }

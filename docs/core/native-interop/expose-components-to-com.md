@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 8d9b8eb274777a0ed019a207c6e8610cc73ec390
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 301177113f67748b62ea2686615cfe5378fdc2fd
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973305"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157546"
 ---
 # <a name="exposing-net-core-components-to-com"></a>COM에 .NET Core 구성 요소 공개
 
@@ -23,7 +23,7 @@ ms.locfileid: "73973305"
 - .NET Core 라이브러리를 빌드하는 동안 COM 서버를 생성합니다.
 - 레지스트리 없는 COM을 위한 병렬 서버 매니페스트를 자동으로 생성합니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 - [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download) 또는 최신 버전을 설치합니다.
 
@@ -32,14 +32,14 @@ ms.locfileid: "73973305"
 첫 번째 단계는 라이브러리를 만드는 것입니다.
 
 1. 새 폴더를 만든 다음, 해당 폴더에서 다음 명령을 실행합니다.
-    
+
     ```dotnetcli
     dotnet new classlib
     ```
 
 2. `Class1.cs`를 엽니다.
 3. `using System.Runtime.InteropServices;`를 파일의 맨 위에 추가합니다.
-4. `IServer` 인터페이스를 만듭니다. 예:
+4. `IServer` 인터페이스를 만듭니다. 예를 들어:
 
    [!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
 

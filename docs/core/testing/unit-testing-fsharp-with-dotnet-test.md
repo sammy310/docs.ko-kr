@@ -4,12 +4,12 @@ description: dotnet test 및 xUnit을 사용하여 샘플 솔루션을 단계별
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: 9cf301533046951f8fd3f9829afabadf6bba3d64
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5fe4a8faddd87334439513368f24d808abc58e65
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715436"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157312"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-xunit"></a>dotnet test 및 xUnit을 사용하여 .NET Core에서 F# 라이브러리 유닛 테스트
 
@@ -82,7 +82,7 @@ GitHub의 [샘플 리포지토리](https://github.com/dotnet/samples/blob/master
         MathServiceTests.fsproj
 ```
 
-*unit-testing-with-fsharp* 디렉터리에서 `dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`를 실행합니다. 
+*unit-testing-with-fsharp* 디렉터리에서 `dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`를 실행합니다.
 
 ## <a name="creating-the-first-test"></a>첫 번째 테스트 만들기
 
@@ -158,9 +158,9 @@ let ``SquaresOfOdds works`` () =
 let private square x = x * x
 let private isOdd x = x % 2 <> 0
 
-let squaresOfOdds xs = 
-    xs 
-    |> Seq.filter isOdd 
+let squaresOfOdds xs =
+    xs
+    |> Seq.filter isOdd
     |> Seq.map square
 ```
 

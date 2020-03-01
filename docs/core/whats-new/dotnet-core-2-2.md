@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 12/04/2018
-ms.openlocfilehash: 9495288658fa102df8f0fbd643e2fcdf49d8f3b3
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: e045c39240c99777d05ca86ee0a8cd1fa4309c4f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451982"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156584"
 ---
 # <a name="whats-new-in-net-core-22"></a>.NET Core 2.2의 새로운 기능
 
@@ -26,7 +26,7 @@ ms.locfileid: "77451982"
 
 **런타임 서비스에서 이벤트 처리**
 
-GC, JIT, ThreadPool 등의 런타임 서비스에 대한 애플리케이션 사용을 자주 모니터링하여 해당 서비스가 애플리케이션에 미치는 영향을 파악하고 싶을 수 있습니다. Windows 시스템에서 이 작업은 일반적으로 현재 프로세스의 ETW 이벤트를 모니터링하여 수행됩니다. 이 방법을 계속 사용할 수도 있지만, 낮은 권한 환경이나 Linux 또는 macOS에서 실행하는 경우 항상 ETW를 사용할 수 있는 것은 아닙니다. 
+GC, JIT, ThreadPool 등의 런타임 서비스에 대한 애플리케이션 사용을 자주 모니터링하여 해당 서비스가 애플리케이션에 미치는 영향을 파악하고 싶을 수 있습니다. Windows 시스템에서 이 작업은 일반적으로 현재 프로세스의 ETW 이벤트를 모니터링하여 수행됩니다. 이 방법을 계속 사용할 수도 있지만, 낮은 권한 환경이나 Linux 또는 macOS에서 실행하는 경우 항상 ETW를 사용할 수 있는 것은 아닙니다.
 
 .NET Core 2.2부터 이제 <xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithType> 클래스를 사용하여 CoreCLR 이벤트를 사용할 수 있습니다. 이러한 이벤트는 GC, JIT, ThreadPool 및 interop와 같은 런타임 서비스의 동작을 설명합니다. 이는 CoreCLR ETW 공급자의 일부로 공개되는 동일한 이벤트입니다.  이 공급자를 통해 애플리케이션은 이러한 이벤트를 이용하거나, 전송 메커니즘을 사용하여 원격 분석 집계 서비스에 보낼 수 있습니다. 다음 코드 샘플에서 이벤트 구독 방법을 확인할 수 있습니다.
 

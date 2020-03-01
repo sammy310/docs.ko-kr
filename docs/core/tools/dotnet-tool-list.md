@@ -2,12 +2,12 @@
 title: dotnet tool list 명령
 description: dotnet tool list 명령은 컴퓨터에 설치된 .NET Core 도구를 나열합니다.
 ms.date: 02/14/2020
-ms.openlocfilehash: bb74cfeaf441cf8a1a030d97d16655f85d8267d1
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: f231dcfe64a925f75f948d508e7a2d83befd9a00
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543458"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156987"
 ---
 # <a name="dotnet-tool-list"></a>dotnet tool list
 
@@ -40,7 +40,7 @@ dotnet tool list <-h|--help>
 
 - **`-g|--global`**
 
-  사용자 수준 전역 도구를 나열합니다. `--tool-path` 옵션과 함께 사용할 수 없습니다. `--global` 및 `--tool-path` 옵션을 모두 생략하면 로컬 도구가 나열됩니다. 
+  사용자 수준 전역 도구를 나열합니다. `--tool-path` 옵션과 함께 사용할 수 없습니다. `--global` 및 `--tool-path` 옵션을 모두 생략하면 로컬 도구가 나열됩니다.
 
 - **`-h|--help`**
 
@@ -48,7 +48,7 @@ dotnet tool list <-h|--help>
 
 - **`--tool-path <PATH>`**
 
-  전역 도구를 찾을 사용자 지정 위치를 지정합니다. PATH는 절대적이거나 상대적일 수 있습니다. `--global` 옵션과 함께 사용할 수 없습니다. `--global` 및 `--tool-path` 옵션을 모두 생략하면 로컬 도구가 나열됩니다. 
+  전역 도구를 찾을 사용자 지정 위치를 지정합니다. PATH는 절대적이거나 상대적일 수 있습니다. `--global` 옵션과 함께 사용할 수 없습니다. `--global` 및 `--tool-path` 옵션을 모두 생략하면 로컬 도구가 나열됩니다.
 
 ## <a name="examples"></a>예
 

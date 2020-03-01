@@ -4,12 +4,12 @@ description: dotnet test 및 MSTest를 사용하여 샘플 솔루션을 단계�
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.openlocfilehash: 2d432f5efd6f8de3593f939abbd488f9fe68b73e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1b21e961ffceb3fce2697ad3254e79ed258aaa1a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715392"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157339"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>MSTest 및 .NET Core를 사용한 C# 유닛 테스트
 
@@ -36,15 +36,15 @@ namespace Prime.Services
 {
     public class PrimeService
     {
-        public bool IsPrime(int candidate) 
+        public bool IsPrime(int candidate)
         {
             throw new NotImplementedException("Please create a test first.");
-        } 
+        }
     }
 }
 ```
 
-디렉터리를 다시 *unit-testing-using-mstest* 디렉터리로 변경합니다. [`dotnet sln add PrimeService/PrimeService.csproj`](../tools/dotnet-sln.md)를 실행하여 클래스 라이브러리 프로젝트를 솔루션에 추가합니다. 
+디렉터리를 다시 *unit-testing-using-mstest* 디렉터리로 변경합니다. [`dotnet sln add PrimeService/PrimeService.csproj`](../tools/dotnet-sln.md)를 실행하여 클래스 라이브러리 프로젝트를 솔루션에 추가합니다.
 
 ## <a name="create-the-test-project"></a>테스트 프로젝트 만들기
 
@@ -90,7 +90,7 @@ GitHub의 [샘플 리포지토리](https://github.com/dotnet/samples/blob/master
         PrimeServiceTests.csproj
 ```
 
-*unit-testing-using-mstest* 디렉터리에서 [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md)를 실행합니다. 
+*unit-testing-using-mstest* 디렉터리에서 [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md)를 실행합니다.
 
 ## <a name="create-the-first-test"></a>첫 번째 테스트 만들기
 
@@ -123,7 +123,7 @@ namespace Prime.UnitTests.Services
 }
 ```
 
-[TestClass 특성](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute)은 단위 테스트가 포함된 클래스를 나타냅니다. [TestMethod 특성](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute)은 메서드가 테스트 메서드임을 나타냅니다. 
+[TestClass 특성](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute)은 단위 테스트가 포함된 클래스를 나타냅니다. [TestMethod 특성](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute)은 메서드가 테스트 메서드임을 나타냅니다.
 
 이 파일을 저장하고 [`dotnet test`](../tools/dotnet-test.md)를 실행하여 테스트 및 클래스 라이브러리를 빌드한 다음 테스트를 실행합니다. MSTest Test Runner에는 테스트를 실행할 프로그램 진입점이 포함되어 있습니다. `dotnet test`는 만든 단위 테스트 프로젝트를 사용하여 Test Runner를 시작합니다.
 

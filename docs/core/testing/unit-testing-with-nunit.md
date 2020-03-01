@@ -3,12 +3,12 @@ title: NUnit 및 .NET Core를 사용한 C# 유닛 테스트
 description: dotnet test 및 NUnit을 사용하여 샘플 솔루션을 단계별로 빌드하는 대화형 환경을 통해 C# 및 .NET Core의 단위 테스트 개념을 알아봅니다.
 author: rprouse
 ms.date: 08/31/2018
-ms.openlocfilehash: 1ea17d9f830d8ac20e2bad79eebab5db767e0af8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8c099695b48e96ac47e41794082cd8dccaa0457a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714221"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157273"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>NUnit 및 .NET Core를 사용한 C# 유닛 테스트
 
@@ -28,7 +28,7 @@ ms.locfileid: "75714221"
 ```dotnetcli
 dotnet new sln
 ```
- 
+
 다음으로 *PrimeService* 디렉터리를 만듭니다. 다음 개요는 지금까지의 디렉터리와 파일 구조를 보여 줍니다.
 
 ```console
@@ -137,11 +137,11 @@ namespace Prime.UnitTests.Services
 
             Assert.IsFalse(result, "1 should not be prime");
         }
-        
+
         /*
         More tests
         */
-        
+
         private PrimeService CreatePrimeService()
         {
              return new PrimeService();

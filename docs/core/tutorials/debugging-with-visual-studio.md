@@ -3,12 +3,12 @@ title: Visual Studio를 사용하여 Hello World .NET Core 애플리케이션 �
 description: Visual Studio에서 C# 또는 Visual Basic으로 작성된 Hello World 앱을 디버그하는 방법을 알아봅니다.
 ms.date: 12/05/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: bc2736165ec827c1f2670605f23f549ceed4e83a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b2ee1401fc89f990c5f930d80d1a510a117e63a0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714051"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156675"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio"></a>Visual Studio 2017을 사용하여 C# 또는 Visual Basic .NET Core Hello World 애플리케이션 디버그
 
@@ -28,7 +28,7 @@ ms.locfileid: "75714051"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. 줄의 코드 창에 있는 왼쪽 여백을 클릭하여 `Console.WriteLine($"\nHello, {name}, on {date:d} at {date:t}!");`을 읽는 줄에 *중단점*을 설정합니다. 코드 줄에 캐럿을 배치하고 **F9**를 누르거나 메뉴 모음에서 **디버그** > **중단점 설정/해제**를 선택하여 중단점을 설정할 수도 있습니다.
 
@@ -64,12 +64,12 @@ ms.locfileid: "75714051"
 
 1. 아무 키나 눌러 애플리케이션을 종료하고 디버깅을 중지합니다.
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. 줄의 코드 창에 있는 왼쪽 여백을 클릭하여 `Console.WriteLine($"{vbCrLf}Hello, {name}, on {currentDate:d} at {currentDate:t}!")`을 읽는 줄에 *중단점*을 설정합니다. 코드 줄에 캐럿을 배치하고 메뉴 모음에서 **디버그** > **중단점 설정/해제**를 선택하여 중단점을 설정할 수도 있습니다.
 
    중단점은 중단점이 설정된 줄이 실행되기 *전에* 애플리케이션 실행을 일시적으로 중단합니다.
-   
+
    다음 그림에서 볼 수 있듯이 Visual Studio에서는 중단점이 설정된 줄을 강조 표시하고 왼쪽 여백에 빨간색 원을 표시합니다.
 
    ![중단점이 설정된 Visual Studio 프로그램 창](./media/debugging-with-visual-studio/vb/set-breakpoint-in-editor.png)
@@ -104,7 +104,7 @@ ms.locfileid: "75714051"
 
 조건부 중단점을 설정하고 사용자가 문자열을 입력하지 못한 경우에 발생하는 상황을 테스트하려면 다음을 수행합니다.
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. 중단점을 나타내는 빨간색 점을 마우스 오른쪽 단추로 클릭합니다. 상황에 맞는 메뉴에서 **조건**을 선택하여 **중단점 설정** 대화 상자를 엽니다. 아직 선택하지 않은 경우 **조건** 확인란을 선택합니다.
 
@@ -142,7 +142,7 @@ ms.locfileid: "75714051"
 
 1. 코드 줄을 선택한 사이 코드 창 왼쪽 여백에 있는 점을 클릭하거나 행을 선택하고 **디버그 > 중단점 설정/해제**를 선택하여 중단점을 지웁니다.
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. 중단점을 나타내는 빨간색 점을 마우스 오른쪽 단추로 클릭합니다. 상황에 맞는 메뉴에서 **조건**을 선택하여 **중단점 설정** 대화 상자를 엽니다. **조건** 확인란을 선택합니다.
 
@@ -185,7 +185,7 @@ ms.locfileid: "75714051"
 
 Visual Studio에서 프로그램을 한 줄씩 단계별로 실행하고 해당 실행을 모니터링할 수도 있습니다. 일반적으로 중단점을 설정하고 이 기능을 사용하여 프로그램 코드 일부의 프로그램 흐름을 따라가면서 확인할 수 있습니다. 여기서는 프로그램이 작으므로 전체 프로그램을 단계별로 실행할 수 있습니다.
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. 메뉴 모음에서 **디버그** > **한 단계씩 코드 실행**을 선택하거나 **F11**을 누릅니다. Visual Studio에서 다음에 실행될 줄을 강조 표시하고 옆에 화살표를 표시합니다.
 
@@ -211,7 +211,7 @@ Visual Studio에서 프로그램을 한 줄씩 단계별로 실행하고 해당 
 
 1. 아무 키나 눌러 콘솔 창을 닫고 디버깅을 중지합니다.
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. 메뉴 모음에서 **디버그** > **한 단계씩 코드 실행**을 선택하거나 **F11**을 누릅니다. Visual Studio에서 다음에 실행될 줄을 강조 표시하고 옆에 화살표를 표시합니다.
 

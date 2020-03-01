@@ -2,12 +2,12 @@
 title: dotnet tool install 명령
 description: dotnet tool install 명령은 컴퓨터에 지정된 .NET Core 도구를 설치합니다.
 ms.date: 02/14/2020
-ms.openlocfilehash: 2705defe9b77009ca1411da28dd86d144ccc19e6
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 641e6a2753b1cf3bfc334ba2495342f7c42421fc
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543471"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156976"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
@@ -30,7 +30,7 @@ dotnet tool install <-h|--help>
 
 `dotnet tool install` 명령은 컴퓨터에서 .NET Core 도구를 설치하는 방법을 제공합니다. 이 명령을 사용하려면 다음 설치 옵션 중 하나를 지정합니다.
 
-* 전역 도구를 기본 위치에 설치하려면 `--tool-path` 옵션을 사용합니다.
+* 전역 도구를 기본 위치에 설치하려면 `--global` 옵션을 사용합니다.
 * 전역 도구를 사용자 지정 위치에 설치하려면 `--tool-path` 옵션을 사용합니다.
 * 로컬 도구를 설치하려면 `--global` 및 `--tool-path` 옵션을 생략합니다.
 
@@ -73,7 +73,7 @@ dotnet new tool-manifest
 
 - **`-g|--global`**
 
-  사용자 전체 설치임을 지정합니다. `--tool-path` 옵션과 함께 사용할 수 없습니다. `--global` 및 `--tool-path` 옵션을 모두 생략하면 로컬 도구 설치가 지정됩니다. 
+  사용자 전체 설치임을 지정합니다. `--tool-path` 옵션과 함께 사용할 수 없습니다. `--global` 및 `--tool-path` 옵션을 모두 생략하면 로컬 도구 설치가 지정됩니다.
 
 - **`-h|--help`**
 
@@ -81,7 +81,7 @@ dotnet new tool-manifest
 
 - **`tool-path <PATH>`**
 
-  전역 도구를 설치할 위치를 지정합니다. 경로는 절대 또는 상대 경로일 수 있습니다. 경로가 존재하지 않는 경우 이 명령은 해당 경로를 만들려고 합니다. `--global` 및 `--tool-path` 옵션을 모두 생략하면 로컬 도구 설치가 지정됩니다. 
+  전역 도구를 설치할 위치를 지정합니다. 경로는 절대 또는 상대 경로일 수 있습니다. 경로가 존재하지 않는 경우 이 명령은 해당 경로를 만들려고 합니다. `--global` 및 `--tool-path` 옵션을 모두 생략하면 로컬 도구 설치가 지정됩니다.
 
 - **`-v|--verbosity <LEVEL>`**
 

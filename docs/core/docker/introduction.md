@@ -3,12 +3,12 @@ title: Docker 소개
 description: 이 문서에서는 .NET Core 애플리케이션 컨텍스트에서 Docker를 소개하고 간략하게 설명합니다.
 ms.date: 03/20/2019
 ms.custom: mvc
-ms.openlocfilehash: 40c8a3c8d81d23c621ccb83a283f49aa34a58ac1
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: eedfd1e7c1b361beb9d4f271e739657ef5e894a6
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920816"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157793"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 및 Docker 소개
 
@@ -18,7 +18,7 @@ Docker를 설치하는 방법에 대한 자세한 내용은 [Docker Desktop: Com
 
 ## <a name="docker-basics"></a>Docker 기본 사항
 
-익숙해져야 하는 몇 가지 개념이 있습니다. Docker 클라이언트에는 이미지 및 컨테이너를 관리하는 데 사용할 수 있는 CLI가 있습니다. 앞에서 언급한 대로 시간을 내 [Docker 개요](https://docs.docker.com/engine/docker-overview/) 문서를 읽어 봐야 합니다. 
+익숙해져야 하는 몇 가지 개념이 있습니다. Docker 클라이언트에는 이미지 및 컨테이너를 관리하는 데 사용할 수 있는 CLI가 있습니다. 앞에서 언급한 대로 시간을 내 [Docker 개요](https://docs.docker.com/engine/docker-overview/) 문서를 읽어 봐야 합니다.
 
 ### <a name="images"></a>이미지
 
@@ -34,7 +34,7 @@ Docker를 설치하는 방법에 대한 자세한 내용은 [Docker Desktop: Com
 
 컨테이너 레지스트리는 이미지 리포지토리의 컬렉션입니다. 레지스트리 이미지를 기반으로 한 이미지를 만들 수 있습니다. 레지스트리의 이미지에서 곧바로 컨테이너를 생성할 수 있습니다. [Docker 컨테이너, 이미지 및 레지스트리 간의 관계](../../architecture/microservices/container-docker-introduction/docker-containers-images-registries.md)는 [컨테이너화된 애플리케이션이나 마이크로 서비스를 설계 및 빌드](../../architecture/microservices/architect-microservice-container-applications/index.md)할 때 중요한 개념입니다. 이 접근 방식은 개발과 배포 간의 시간을 크게 줄여 줍니다.
 
-Docker에는 [Docker 허브](https://hub.docker.com/)에서 호스트하는, 사용 가능한 공용 레지스트리가 있습니다. [.NET Core 관련 이미지](https://hub.docker.com/_/microsoft-dotnet-core/)는 Docker 허브에 나열됩니다. 
+Docker에는 [Docker 허브](https://hub.docker.com/)에서 호스트하는, 사용 가능한 공용 레지스트리가 있습니다. [.NET Core 관련 이미지](https://hub.docker.com/_/microsoft-dotnet-core/)는 Docker 허브에 나열됩니다.
 
 MCR(Microsoft 컨테이너 레지스트리)은 Microsoft가 제공하는 컨테이너 이미지의 공식 소스입니다. MCR은 Azure CDN에서 빌드되어 글로벌 복제 이미지를 제공합니다. 그러나 MCR은 공용 웹 사이트가 없으며, Microsoft가 제공하는 컨테이너 이미지에 대해 배우는 기본적인 방법은 [Microsoft Docker 허브 페이지](https://hub.docker.com/_/microsoft-dotnet-core/)를 통하는 것입니다.
 
@@ -44,7 +44,7 @@ MCR(Microsoft 컨테이너 레지스트리)은 Microsoft가 제공하는 컨테�
 
 ## <a name="net-core-images"></a>.NET Core 이미지
 
-공식 .NET Core Docker 이미지는 MCR(Microsoft 컨테이너 레지스트리)에 게시되며 [Microsoft .NET Core Docker 허브 리포지토리](https://hub.docker.com/_/microsoft-dotnet-core/)에서 찾을 수 있습니다. 각 리포지토리에는 사용할 수 있는 .NET(SDK 또는 Runtime)과 OS가 다양하게 조합된 이미지가 포함되어 있습니다. 
+공식 .NET Core Docker 이미지는 MCR(Microsoft 컨테이너 레지스트리)에 게시되며 [Microsoft .NET Core Docker 허브 리포지토리](https://hub.docker.com/_/microsoft-dotnet-core/)에서 찾을 수 있습니다. 각 리포지토리에는 사용할 수 있는 .NET(SDK 또는 Runtime)과 OS가 다양하게 조합된 이미지가 포함되어 있습니다.
 
 Microsoft는 특정 시나리오를 위한 맞춤형 이미지를 제공합니다. 예를 들어 [ASP.NET Core 리포지토리](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/)는 프로덕션에서 ASP.NET Core 앱을 실행하기 위해 빌드된 이미지를 제공합니다.
 

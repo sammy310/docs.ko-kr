@@ -2,12 +2,12 @@
 title: dotnet new 명령
 description: dotnet new 명령은 지정된 템플릿을 기반으로 새 .NET Core 프로젝트를 만듭니다.
 ms.date: 02/13/2020
-ms.openlocfilehash: f11512acf5a1fdc4bde49b3d1212ccf6335dff8b
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: d3c609419596b123f5bfb3ca85cf292a61154a70
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451332"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157221"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -20,7 +20,7 @@ ms.locfileid: "77451332"
 ## <a name="synopsis"></a>개요
 
 ```dotnetcli
-dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name] 
+dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name]
     [--nuget-source] [-o|--output] [-u|--uninstall] [--update-apply] [--update-check] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
@@ -174,7 +174,7 @@ dotnet new [-h|--help]
 
   기본 C# 버전 목록은 [기본값](../../csharp/language-reference/configure-language-version.md#defaults)을 참조하세요.
 
-- **`--no-restore`** 
+- **`--no-restore`**
 
   지정할 경우 프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다. .NET Core 2.2 SDK부터 사용할 수 있습니다.
 
@@ -202,7 +202,7 @@ dotnet new [-h|--help]
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다. 기본값은 `netcoreapp3.1`입니다. .NET Core 3.1 SDK부터 사용할 수 있습니다. 
+  대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다. 기본값은 `netcoreapp3.1`입니다. .NET Core 3.1 SDK부터 사용할 수 있습니다.
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -234,7 +234,7 @@ dotnet new [-h|--help]
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다. 기본값은 `netcoreapp3.1`입니다. .NET Core 3.1 SDK부터 사용할 수 있습니다. 
+  대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다. 기본값은 `netcoreapp3.1`입니다. .NET Core 3.1 SDK부터 사용할 수 있습니다.
 
 - **`--exclude-launch-settings`**
 
@@ -503,7 +503,7 @@ dotnet new [-h|--help]
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
-  사용할 인증 형식입니다. .NET Core 3.0 SDK 이후 사용할 수 있습니다. 
+  사용할 인증 형식입니다. .NET Core 3.0 SDK 이후 사용할 수 있습니다.
   
   가능한 값은 다음과 같습니다.
 
@@ -512,7 +512,7 @@ dotnet new [-h|--help]
 
 - **`--exclude-launch-settings`**
 
-  생성된 템플릿에서 *launchSettings.json*을 제외합니다. 
+  생성된 템플릿에서 *launchSettings.json*을 제외합니다.
 
 - **`--no-restore`**
 
@@ -544,7 +544,7 @@ dotnet new [-h|--help]
 
 - **`--exclude-launch-settings`**
 
-  생성된 템플릿에서 *launchSettings.json*을 제외합니다. 
+  생성된 템플릿에서 *launchSettings.json*을 제외합니다.
 
 - **`-f|--framework <FRAMEWORK>`**
 

@@ -2,12 +2,12 @@
 title: 지역화된 IntelliSense 파일 설치
 description: Visual Studio에서 .NET Core 프로젝트에 대해 지역화된 IntelliSense 파일을 사용하도록 개발 머신을 설정하는 방법을 알아봅니다.
 ms.date: 01/23/2020
-ms.openlocfilehash: 58b462507edf953a6c28aadbb9e3239a5cbe05b2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: e45e225e58865ca2b529000ada0984fbeca850f3
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733656"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157715"
 ---
 # <a name="how-to-install-localized-intellisense-files-for-net-core"></a>.NET Core에 대해 지역화된 IntelliSense 파일을 설치하는 방법
 
@@ -42,7 +42,7 @@ ms.locfileid: "76733656"
       | .NET Core       | *Microsoft.NETCore.App.Ref*        |
       | Windows 바탕 화면 | *Microsoft.WindowsDesktop.App.Ref* |
       | .NET Standard   | *NETStandard.Library.Ref*          |
-   
+
    1. 지역화된 IntelliSense를 설치하려는 버전으로 이동합니다. 예: *3.1.0*.
    1. *ref* 폴더를 엽니다.
    1. 모니커 폴더를 엽니다. 예: *netcoreapp3.1*.
@@ -116,7 +116,7 @@ Visual Studio에서 IntelliSense에 다른 언어를 사용하도록 하려면 �
 
 1. **환경** 노드 아래에서 **국가별 설정**을 선택합니다.
 
-1. **언어** 드롭다운에서 원하는 언어를 선택합니다. **확인**을 선택합니다. 
+1. **언어** 드롭다운에서 원하는 언어를 선택합니다. **확인**을 선택합니다.
 
 1. 변경 내용을 적용하려면 Visual Studio를 다시 시작해야 함을 알리는 대화 상자가 표시됩니다. **확인**을 선택합니다.
 

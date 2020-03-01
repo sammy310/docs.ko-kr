@@ -3,12 +3,12 @@ title: .NET Core로 라이브러리 포팅
 description: .NET Framework에서 .NET Core로 라이브러리 프로젝트를 이식하는 방법에 관해 알아봅니다.
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: 646587120de2e51280c2af4de36bf3a6b0f60c2d
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 68fe36e543d949dc76bdb0c19ef3482936ad9e79
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920616"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157533"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>.NET Core로 .NET Framework 라이브러리 포팅
 
@@ -97,7 +97,7 @@ ms.locfileid: "76920616"
 1. 사용할 수 없는 .NET Framework API의 고유한 구현을 작성하는 것이 합리적일까요?
    [.NET Framework 참조 소스](https://github.com/Microsoft/referencesource)에서 코드를 복사, 수정 및 사용하는 것이 좋을 수 있습니다. 참조 소스 코드는 [MIT 라이선스](https://github.com/Microsoft/referencesource/blob/master/LICENSE.txt)에 따라 라이선스가 부여되므로, 소스를 자신의 코드에 대한 기초로 매우 자유롭게 사용할 수 있습니다. 코드에서 Microsoft 특성을 제대로 지정하기만 하면 됩니다.
 1. 필요에 따라 다른 프로젝트에 대해 이 프로세스를 반복합니다.
- 
+
 분석 단계는 코드베이스의 크기에 따라 다소 시간이 걸릴 수 있습니다. 이 단계에서 시간을 할애하여 필요한 변경의 범위를 철저하게 이해하고 계획을 개발하면 장기 실행, 특히 복잡한 코드베이스가 있는 경우 일반적으로 시간이 절약됩니다.
 
 계획에 코드베이스의 중요한 변경 작업을 포함하는 동시에 .NET Framework 4.7.2를 계속 대상으로 지정할 수 있으므로 이전 접근 방식보다 더 구조화된 버전으로 만들 수 있습니다. 계획 실행을 시작하는 방법은 코드베이스에 따라 달라집니다.

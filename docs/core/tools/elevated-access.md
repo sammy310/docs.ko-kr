@@ -3,16 +3,16 @@ title: dotnet 명령에 대한 관리자 액세스 권한
 description: 관리자 액세스 권한이 필요한 dotnet 명령에 대한 모범 사례를 알아봅니다.
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: fe33cbe966d175f71ba350737b283c1e83f64fa6
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 4aff9badfa8ad9b83adc4496d4ebd6df29252e36
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543432"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156766"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>dotnet 명령에 대한 관리자 액세스 권한
 
-소프트웨어 개발 모범 사례는 개발자에게 최소한의 권한만 요구하는 소프트웨어를 작성하도록 안내합니다. 그러나 성능 모니터링 도구와 같은 일부 소프트웨어는 운영 체제 규칙 때문에 관리자 권한이 필요합니다. 다음 지침은 이러한 소프트웨어를 .NET Core로 작성하기 위해 지원되는 시나리오를 설명합니다. 
+소프트웨어 개발 모범 사례는 개발자에게 최소한의 권한만 요구하는 소프트웨어를 작성하도록 안내합니다. 그러나 성능 모니터링 도구와 같은 일부 소프트웨어는 운영 체제 규칙 때문에 관리자 권한이 필요합니다. 다음 지침은 이러한 소프트웨어를 .NET Core로 작성하기 위해 지원되는 시나리오를 설명합니다.
 
 다음 명령을 관리자 권한으로 실행할 수 있습니다.
 
@@ -35,8 +35,8 @@ ms.locfileid: "77543432"
 
 `%ProgramFiles%\dotnet-tools` 폴더가 이미 있는 경우 다음을 수행하여 "사용자" 그룹에 해당 디렉터리를 쓰거나 수정할 수 있는 권한이 있는지 확인합니다.
 
-- `%ProgramFiles%\dotnet-tools` 폴더를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **명령 속성** 대화 상자가 열립니다. 
-- **보안** 탭을 선택합니다. **그룹 또는 사용자 이름**에서 “사용자” 그룹에 디렉터리를 쓰거나 수정할 수 있는 권한이 있는지 확인합니다. 
+- `%ProgramFiles%\dotnet-tools` 폴더를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **명령 속성** 대화 상자가 열립니다.
+- **보안** 탭을 선택합니다. **그룹 또는 사용자 이름**에서 “사용자” 그룹에 디렉터리를 쓰거나 수정할 수 있는 권한이 있는지 확인합니다.
 - "사용자" 그룹에 디렉터리를 쓰거나 수정할 수 있는 경우 *dotnet-tools*가 아닌 도구를 설치할 때 다른 디렉터리 이름을 사용합니다.
 
 도구를 설치하려면 관리자 권한 프롬프트에서 다음 명령을 실행합니다. 설치 중에 *dotnet-tools* 폴더를 만듭니다.
@@ -97,7 +97,7 @@ dotnet tool uninstall PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools"
    dotnet build
    sudo ./bin/Debug/netcoreapp3.0/APPLICATIONNAME
    ```
-    
+
 - 새 이진 파일을 생성하지 않으려면 `—no-build` 플래그와 함께 [dotnet 실행](dotnet-run.md) 명령 사용:
 
    ```dotnetcli

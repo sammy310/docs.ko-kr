@@ -2,12 +2,12 @@
 title: '자습서: Visual Studio Code를 사용하여 macOS에서 .NET Core 솔루션 만들기'
 description: 이 문서에서는 Visual Studio Code를 사용하여 .NET Core 솔루션을 만드는 단계와 워크플로를 제공합니다.
 ms.date: 12/19/2019
-ms.openlocfilehash: e3c210d4391c0e3c9c3455ecf23dd138abdb4363
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: f5da16d413ddc25587ff35550fe9f308dc87f4bb
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741546"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156597"
 ---
 # <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 macOS에서 .NET Core 솔루션 만들기
 
@@ -155,7 +155,7 @@ namespace TestApp
 *golden* 폴더에서 다음 명령을 실행합니다.
 
 ```dotnetcli
-dotnet restore 
+dotnet restore
 dotnet test test-library/test-library.csproj
 ```
 
