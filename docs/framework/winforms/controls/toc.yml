@@ -1181,7 +1181,7 @@
           href: walkthrough-authoring-a-composite-control-with-visual-csharp.md
         - name: '연습: 컨트롤에서 상속'
           href: walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md
-        - name: '연습: 스마트 태그를 사용하여 일반 작업 수행'
+        - name: '연습: 디자인 작업을 사용하여 일반 작업 수행'
           href: perform-common-tasks-design-actions.md
         - name: '연습: 표준 형식의 컬렉션 직렬화'
           href: serializing-collections-designerserializationvisibilityattribute.md

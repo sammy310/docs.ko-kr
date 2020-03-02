@@ -121,5 +121,7 @@
       href: resources/index.md
     - name: 용어
       href: resources/glossary.md
+    - name: Azure 학습 리소스
+      href: resources/azure-training-concepts-model-builder.md
     - name: CLI 원격 분석
       href: resources/ml-net-cli-telemetry.md
