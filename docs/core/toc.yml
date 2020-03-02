@@ -12,6 +12,8 @@
       href: install/runtime.md
     - name: 지원되는 OS 및 종속성
       href: install/dependencies.md
+    - name: macOS 공증 문제
+      href: install/macos-notarization-issues.md
     - name: .NET Core 버전 확인 방법
       href: install/how-to-detect-installed-versions.md
     - name: Linux 패키지 관리자
@@ -109,6 +111,17 @@
           href: tutorials/cli-templates-create-project-template.md
         - name: 3 - 템플릿 팩 만들기
           href: tutorials/cli-templates-create-template-pack.md
+    - name: CLI용 도구 만들기
+      items:
+        - name: 1 - 도구 만들기
+          displayName: 'tools, tutorials'
+          href: tools/global-tools-how-to-create.md
+        - name: 2 - 전역 도구 사용
+          displayName: 'tools, tutorials'
+          href: tools/global-tools-how-to-use.md
+        - name: 3 - 로컬 도구 사용
+          href: tools/local-tools-how-to-use.md
+          displayName: 'tools, tutorials'
 - name: 프로젝트 SDK
   items:
     - name: 개요
@@ -121,163 +134,12 @@
           href: /aspnet/core/razor-pages/web-sdk?toc=/dotnet/core/toc.json&bc=/dotnet/breadcrumb/toc.json
         - name: Microsoft.NET.Sdk.Razor
           href: /aspnet/core/razor-pages/sdk?toc=/dotnet/core/toc.json&bc=/dotnet/breadcrumb/toc.json
-- name: 런타임 구성
-  items:
-    - name: 설정
-      href: run-time-config/index.md
-    - name: 컴파일 설정
-      href: run-time-config/compilation.md
-    - name: 디버깅 및 프로파일링 설정
-      href: run-time-config/debugging-profiling.md
-    - name: 가비지 수집기 설정
-      href: run-time-config/garbage-collector.md
-    - name: 전역 설정
-      href: run-time-config/globalization.md
-    - name: 네트워킹 설정
-      href: run-time-config/networking.md
-    - name: 스레딩 설정
-      href: run-time-config/threading.md
-- name: 기본 상호 운용성
-  items:
-    - name: COM에 .NET Core 구성 요소 공개
-      href: native-interop/expose-components-to-com.md
-- name: '패키지, 메타패키지 및 프레임워크'
-  href: packages.md
-- name: 마이그레이션
-  items:
-    - name: .NET Core 2.0 ~ 2.1
-      href: migration/20-21.md
-    - name: Project. json에서 마이그레이션
-      href: migration/index.md
-    - name: project.json 및 csproj 간 매핑
-      href: tools/project-json-to-csproj.md
-    - name: CLI의 변경 내용 개요
-      href: tools/cli-msbuild-architecture.md
-    - name: csproj 형식에 대한 추가 사항
-      href: tools/csproj.md
-    - name: DNX에서 마이그레이션
-      href: migration/from-dnx.md
-- name: 애플리케이션 배포
-  items:
-    - name: 개요
-      href: deploying/index.md
-    - name: CLI를 사용하여 앱 게시
-      href: deploying/deploy-with-cli.md
-    - name: Visual Studio를 사용한 앱 배포
-      href: deploying/deploy-with-vs.md
-    - name: CLI를 사용하여 NuGet 패키지 만들기
-      href: deploying/creating-nuget-packages.md
-    - name: 자체 포함된 배포 런타임 롤포워드
-      href: deploying/runtime-patch-selection.md
-    - name: 런타임 패키지 저장소
-      href: deploying/runtime-store.md
-- name: Docker
-  items:
-    - name: .NET 및 Docker 소개
-      href: docker/introduction.md
-    - name: .NET Core 앱 컨테이너화
-      href: docker/build-container.md
-    - name: Visual Studio의 컨테이너 도구
-      href: /visualstudio/containers/overview
-- name: 진단 도구
-  items:
-    - name: 개요
-      href: diagnostics/index.md
-    - name: 관리형 디버거
-      href: diagnostics/managed-debuggers.md
-    - name: 로깅 및 추적
-      href: diagnostics/logging-tracing.md
-    - name: .NET Core CLI 전역 도구
-      items:
-        - name: dotnet-counters
-          href: diagnostics/dotnet-counters.md
-        - name: dotnet-dump
-          href: diagnostics/dotnet-dump.md
-        - name: dotnet-trace
-          href: diagnostics/dotnet-trace.md
-    - name: .NET Core 진단 자습서
-      items:
-        - name: 메모리 누수 디버그
-          href: diagnostics/debug-memory-leak.md
-- name: 단위 테스트
-  href: testing/index.md
-  items:
-    - name: 개요
-      href: testing/index.md
-    - name: 단위 테스트 모범 사례
-      href: testing/unit-testing-best-practices.md
-    - name: 'xUnit을 사용한 C# 단위 테스트'
-      href: testing/unit-testing-with-dotnet-test.md
-    - name: 'NUnit을 사용한 C# 단위 테스트'
-      href: testing/unit-testing-with-nunit.md
-    - name: 'MSTest를 사용한 C# 단위 테스트'
-      href: testing/unit-testing-with-mstest.md
-    - name: 'xUnit을 사용한 F# 단위 테스트'
-      href: testing/unit-testing-fsharp-with-dotnet-test.md
-    - name: 'NUnit을 사용한 F# 단위 테스트'
-      href: testing/unit-testing-fsharp-with-nunit.md
-    - name: 'MSTest를 사용한 F# 단위 테스트'
-      href: testing/unit-testing-fsharp-with-mstest.md
-    - name: xUnit을 사용한 VB 단위 테스트
-      href: testing/unit-testing-visual-basic-with-dotnet-test.md
-    - name: NUnit을 사용한 VB 단위 테스트
-      href: testing/unit-testing-visual-basic-with-nunit.md
-    - name: MSTest를 사용한 VB 단위 테스트
-      href: testing/unit-testing-visual-basic-with-mstest.md
-    - name: 선택적 단위 테스트 실행
-      href: testing/selective-unit-tests.md
-    - name: 게시된 출력 단위 테스트
-      href: testing/unit-testing-published-output.md
-    - name: Visual Studio를 사용하여 .NET Core 프로젝트 라이브 단위 테스트
-      href: /visualstudio/test/live-unit-testing-start
-- name: 연속 통합
-  href: tools/using-ci-with-cli.md
-- name: 버전 관리
-  items:
-    - name: 개요
-      href: versions/index.md
-    - name: .NET Core 버전 선택
-      href: versions/selection.md
-    - name: 오래된 런타임 및 SDK 제거
-      href: versions/remove-runtime-sdk-versions.md
-- name: RID(런타임 식별자) 카탈로그
-  href: rid-catalog.md
 - name: .NET Core SDK 개요
   href: sdk.md
 - name: .NET Core CLI
   items:
     - name: 개요
       href: tools/index.md
-    - name: 전역 및 로컬 도구
-      expanded: true
-      items:
-        - name: 도구를 관리하는 방법
-          href: tools/global-tools.md
-        - name: 자습서
-          items:
-            - name: 도구 만들기
-              displayName: tools
-              href: tools/global-tools-how-to-create.md
-            - name: 전역 도구 설치 및 사용
-              displayName: tools
-              href: tools/global-tools-how-to-use.md
-            - name: 로컬 도구 설치 및 사용
-              displayName: tools
-              href: tools/local-tools-how-to-use.md
-        - name: 문제 해결 도구
-          href: tools/troubleshoot-usage-issues.md
-    - name: 상승된 액세스 권한
-      href: tools/elevated-access.md
-    - name: 확장성 모델
-      href: tools/extensibility.md
-    - name: 사용자 지정 템플릿
-      href: tools/custom-templates.md
-    - name: Tab 완성 기능 사용
-      href: tools/enable-tab-autocomplete.md
-    - name: 원격 분석
-      href: tools/telemetry.md
-    - name: global.json 개요
-      href: tools/global-json.md
     - name: 참고
       items:
         - name: dotnet
@@ -352,6 +214,44 @@
               href: tools/dotnet-list-package.md
             - name: dotnet remove package
               href: tools/dotnet-remove-package.md
+    - name: 전역 및 로컬 도구
+      items:
+        - name: 도구 관리
+          href: tools/global-tools.md
+        - name: 문제 해결 도구
+          href: tools/troubleshoot-usage-issues.md
+    - name: global.json 개요
+      href: tools/global-json.md
+    - name: 사용자 지정 템플릿
+      href: tools/custom-templates.md
+    - name: 원격 분석
+      href: tools/telemetry.md
+    - name: 상승된 액세스 권한
+      href: tools/elevated-access.md
+    - name: Tab 완성 기능 사용
+      href: tools/enable-tab-autocomplete.md
+    - name: 확장성 모델
+      href: tools/extensibility.md
+- name: 진단 도구
+  items:
+    - name: 개요
+      href: diagnostics/index.md
+    - name: 관리형 디버거
+      href: diagnostics/managed-debuggers.md
+    - name: 로깅 및 추적
+      href: diagnostics/logging-tracing.md
+    - name: .NET Core CLI 전역 도구
+      items:
+        - name: dotnet-counters
+          href: diagnostics/dotnet-counters.md
+        - name: dotnet-dump
+          href: diagnostics/dotnet-dump.md
+        - name: dotnet-trace
+          href: diagnostics/dotnet-trace.md
+    - name: .NET Core 진단 자습서
+      items:
+        - name: 메모리 누수 디버그
+          href: diagnostics/debug-memory-leak.md
 - name: .NET Core 추가 도구
   items:
     - name: 개요
@@ -366,6 +266,58 @@
       href: additional-tools/dotnet-svcutil.xmlserializer-guide.md
     - name: XML Serializer Generator
       href: additional-tools/xml-serializer-generator.md
+- name: 애플리케이션 배포
+  items:
+    - name: 개요
+      href: deploying/index.md
+    - name: CLI를 사용하여 앱 게시
+      href: deploying/deploy-with-cli.md
+    - name: Visual Studio를 사용한 앱 배포
+      href: deploying/deploy-with-vs.md
+    - name: CLI를 사용하여 NuGet 패키지 만들기
+      href: deploying/creating-nuget-packages.md
+    - name: 자체 포함된 배포 런타임 롤포워드
+      href: deploying/runtime-patch-selection.md
+    - name: 런타임 패키지 저장소
+      href: deploying/runtime-store.md
+- name: Docker
+  items:
+    - name: .NET 및 Docker 소개
+      href: docker/introduction.md
+    - name: .NET Core 앱 컨테이너화
+      href: docker/build-container.md
+    - name: Visual Studio의 컨테이너 도구
+      href: /visualstudio/containers/overview
+- name: 런타임 구성
+  items:
+    - name: 설정
+      href: run-time-config/index.md
+    - name: 컴파일 설정
+      href: run-time-config/compilation.md
+    - name: 디버깅 및 프로파일링 설정
+      href: run-time-config/debugging-profiling.md
+    - name: 가비지 수집기 설정
+      href: run-time-config/garbage-collector.md
+    - name: 전역 설정
+      href: run-time-config/globalization.md
+    - name: 네트워킹 설정
+      href: run-time-config/networking.md
+    - name: 스레딩 설정
+      href: run-time-config/threading.md
+- name: 마이그레이션
+  items:
+    - name: .NET Core 2.0 ~ 2.1
+      href: migration/20-21.md
+    - name: Project. json에서 마이그레이션
+      href: migration/index.md
+    - name: project.json 및 csproj 간 매핑
+      href: tools/project-json-to-csproj.md
+    - name: CLI의 변경 내용 개요
+      href: tools/cli-msbuild-architecture.md
+    - name: csproj 형식에 대한 추가 사항
+      href: tools/csproj.md
+    - name: DNX에서 마이그레이션
+      href: migration/from-dnx.md
 - name: .NET Framework 포트
   items:
     - name: 개요
@@ -388,6 +340,47 @@
       href: porting/wpf.md
     - name: 포트 C++/CLI 프로젝트
       href: porting/cpp-cli.md
+- name: 단위 테스트
+  href: testing/index.md
+  items:
+    - name: 개요
+      href: testing/index.md
+    - name: 단위 테스트 모범 사례
+      href: testing/unit-testing-best-practices.md
+    - name: 'xUnit을 사용한 C# 단위 테스트'
+      href: testing/unit-testing-with-dotnet-test.md
+    - name: 'NUnit을 사용한 C# 단위 테스트'
+      href: testing/unit-testing-with-nunit.md
+    - name: 'MSTest를 사용한 C# 단위 테스트'
+      href: testing/unit-testing-with-mstest.md
+    - name: 'xUnit을 사용한 F# 단위 테스트'
+      href: testing/unit-testing-fsharp-with-dotnet-test.md
+    - name: 'NUnit을 사용한 F# 단위 테스트'
+      href: testing/unit-testing-fsharp-with-nunit.md
+    - name: 'MSTest를 사용한 F# 단위 테스트'
+      href: testing/unit-testing-fsharp-with-mstest.md
+    - name: xUnit을 사용한 VB 단위 테스트
+      href: testing/unit-testing-visual-basic-with-dotnet-test.md
+    - name: NUnit을 사용한 VB 단위 테스트
+      href: testing/unit-testing-visual-basic-with-nunit.md
+    - name: MSTest를 사용한 VB 단위 테스트
+      href: testing/unit-testing-visual-basic-with-mstest.md
+    - name: 선택적 단위 테스트 실행
+      href: testing/selective-unit-tests.md
+    - name: 게시된 출력 단위 테스트
+      href: testing/unit-testing-published-output.md
+    - name: Visual Studio를 사용하여 .NET Core 프로젝트 라이브 단위 테스트
+      href: /visualstudio/test/live-unit-testing-start
+- name: 버전 관리
+  items:
+    - name: 개요
+      href: versions/index.md
+    - name: .NET Core 버전 선택
+      href: versions/selection.md
+    - name: 오래된 런타임 및 SDK 제거
+      href: versions/remove-runtime-sdk-versions.md
+- name: RID(런타임 식별자) 카탈로그
+  href: rid-catalog.md
 - name: 종속성 관리 및 로딩
   items:
     - name: 종속성 관리
@@ -414,3 +407,9 @@
           href: ../standard/assembly/unloadability-howto.md
 - name: .NET Core 배포 패키징
   href: distribution-packaging.md
+- name: COM에 .NET Core 구성 요소 공개
+  href: native-interop/expose-components-to-com.md
+- name: '패키지, 메타패키지 및 프레임워크'
+  href: packages.md
+- name: 연속 통합
+  href: tools/using-ci-with-cli.md

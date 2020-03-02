@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: ade2cba857a1a32039f8fd07881f13f63f0dbe1a
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: a094e6e8ab9094fb14ce9a2ca8a180cbf9b273cb
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628139"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673396"
 ---
 # <a name="types-c-programming-guide"></a>형식(C# 프로그래밍 가이드)
 
@@ -113,7 +113,7 @@ char c = 'Z';
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 
-구조체에 대한 자세한 내용은 [구조체](../classes-and-structs/structs.md)를 참조하세요. 값 형식에 대한 자세한 내용은 [값 형식](../../language-reference/builtin-types/value-types.md)을 참조하세요.
+구조체에 대한 자세한 내용은 [구조 형식](../../language-reference/builtin-types/struct.md)을 참조하세요. 값 형식에 대한 자세한 내용은 [값 형식](../../language-reference/builtin-types/value-types.md)을 참조하세요.
 
 값 형식의 다른 범주는 [enum](../../language-reference/builtin-types/enum.md)입니다. 열거형은 명명된 정수 상수 집합을 정의합니다. 예를 들어, .NET 클래스 라이브러리의 <xref:System.IO.FileMode?displayProperty=nameWithType> 열거형에는 파일을 여는 방법을 지정하는 명명된 상수 정수 집합이 포함됩니다. 이 패턴은 다음 예제와 같이 정의됩니다.
 
@@ -205,3 +205,4 @@ stringList.Add(4);
 - [C# 프로그래밍 가이드](../index.md)
 - [XML 데이터 형식 변환](../../../standard/data/xml/conversion-of-xml-data-types.md)
 - [정수 형식](../../language-reference/builtin-types/integral-numeric-types.md)
+ 
