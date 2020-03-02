@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: 561d0759af4f7557bae39540cbb00f8038726ddc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 439b862612d7997c9277ffb2cf4f15b14bd0b106
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950804"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156051"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>최선의 이벤트 기반 비동기 패턴 구현 방법
 이벤트 기반 비동기 패턴은 익숙한 이벤트 및 대리자 의미 체계를 사용하여 클래스에 비동기 동작을 노출하는 효과적인 방법을 제공합니다. 이벤트 기반 비동기 패턴을 구현하려면 몇 가지 구체적인 동작 요구 사항을 따라야 합니다. 다음 섹션에서는 이벤트 기반 비동기 패턴을 따르는 클래스를 구현할 때 고려해야 할 요구 사항 및 지침을 설명합니다.  
@@ -43,14 +43,14 @@ ms.locfileid: "69950804"
   
 ```csharp  
 // Good design  
-private void Form1_MethodNameCompleted(object sender, xxxCompletedEventArgs e)   
-{   
+private void Form1_MethodNameCompleted(object sender, xxxCompletedEventArgs e)
+{
     DemoType result = e.Result;  
 }  
   
 // Bad design  
-private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventArgs e)   
-{   
+private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventArgs e)
+{
     DemoType result = (DemoType)(e.Result);  
 }  
 ```  
@@ -143,7 +143,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - 모든 종류의 다중 스레딩을 사용할 때는 매우 심각하고 복잡한 버그에 잠재적으로 노출됩니다. 다중 스레딩을 사용하는 솔루션을 구현하기 전에 [관리되는 스레딩을 구현하는 최선의 방법](../../../docs/standard/threading/managed-threading-best-practices.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.ComponentModel.AsyncOperation>
 - <xref:System.ComponentModel.AsyncOperationManager>

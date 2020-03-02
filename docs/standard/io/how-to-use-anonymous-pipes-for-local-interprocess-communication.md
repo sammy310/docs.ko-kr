@@ -13,12 +13,12 @@ helpviewer_keywords:
 - one-way communication [.NET Framework]
 - local computer communication [.NET Framework], pipes
 ms.assetid: e7773c77-c646-4a01-8a96-a003d59fc4c9
-ms.openlocfilehash: 16018be820951a2739d602edb99845eb89495d5e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ea4aee60d090a56eb0cf3f2a81c1b05c04806d4b
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706649"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627996"
 ---
 # <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>방법: 로컬 프로세스 간 통신에 익명 파이프 사용
 익명 파이프는 로컬 컴퓨터에서 프로세스 간 통신을 제공합니다. 명명된 파이프보다 적은 기능을 제공하지만 오버로드를 더 적게 필요로 합니다. 익명 파이프를 사용하면 로컬 컴퓨터에서 프로세스 간 통신을 더욱 쉽게 만들 수 있습니다. 네트워크를 통한 통신에는 익명 파이프를 사용할 수 없습니다.  
@@ -35,6 +35,8 @@ ms.locfileid: "75706649"
  [!code-cpp[System.IO.Pipes.AnonymousPipeServerStream_Sample#01](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeServerStream_Sample/cpp/program.cpp#01)]
  [!code-csharp[System.IO.Pipes.AnonymousPipeServerStream_Sample#01](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeServerStream_Sample/cs/Program.cs#01)]
  [!code-vb[System.IO.Pipes.AnonymousPipeServerStream_Sample#01](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeServerStream_Sample/vb/program.vb#01)]  
+
+[!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
   
 ## <a name="example"></a>예제  
  다음 예제는 클라이언트 프로세스를 보여줍니다. 서버 프로세스는 클라이언트 프로세스를 시작하고 해당 프로세스에 클라이언트 핸들을 제공합니다. 클라이언트 코드의 결과 실행 파일 이름은 `pipeClient.exe`이어야 하며 서버 프로세스를 실행하기 전에 서버 실행 파일과 동일한 디렉터리로 복사해야 합니다.  

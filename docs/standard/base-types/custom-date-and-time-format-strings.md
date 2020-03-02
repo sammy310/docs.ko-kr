@@ -14,12 +14,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: 87436b7d9e2041afb14b146ae0c16201c8593154
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b33366922677b26f8fe99454206cacd5bb124f32
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348288"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159275"
 ---
 # <a name="custom-date-and-time-format-strings"></a>사용자 지정 날짜 및 시간 서식 문자열
 
@@ -30,7 +30,7 @@ ms.locfileid: "75348288"
 
 사용자 지정 날짜 및 시간 형식 문자열은 <xref:System.DateTime>과 <xref:System.DateTimeOffset> 값 모두에 사용할 수 있습니다.
 
-[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-partial-note.md)] 
+[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-partial-note.md)]
 
 <a name="table"></a> 형식 작업에서 사용자 지정 날짜 및 시간 형식 문자열은 날짜 및 시간 인스턴스의 `ToString` 메서드 또는 복합 형식 메서드와 사용할 수 있습니다. 다음 예제에서는 두 가지 사용 방법을 모두 보여 줍니다.
 
@@ -398,7 +398,7 @@ ms.locfileid: "75348288"
 [!code-csharp[Formatting.DateAndTime.Custom#11](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#11)]
 [!code-vb[Formatting.DateAndTime.Custom#11](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#11)]
 
-[표로 이동](#table) 
+[표로 이동](#table)
 
 ## <a name="MM_Specifier"></a> “MM” 사용자 지정 형식 지정자
 

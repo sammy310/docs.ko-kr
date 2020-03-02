@@ -4,12 +4,12 @@ description: .NET Standard, .NET 구현, .NET 런타임 및 도구와 같은 .NE
 author: cartermp
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: af28863ac98ff5ffb5a8133fb98f2f1e7036985d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: eadcf05069edfa32a52c5e73045b4cebd1a9a6ac
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124392"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160380"
 ---
 # <a name="net-architectural-components"></a>.NET 아키텍처 구성 요소
 
@@ -70,7 +70,7 @@ UWP의 자세한 내용은 [유니버설 Windows 플랫폼 소개](/windows/uwp/
 
 - .NET Framework에 대한 CLR(공용 언어 런타임)
 - .NET Core에 대한 CoreCLR(Core 공용 언어 런타임)
-- 유니버설 Windows 플랫폼용 .NET 네이티브 
+- 유니버설 Windows 플랫폼용 .NET 네이티브
 - Xamarin.iOS와 Xamarin.Android, Xamarin.Mac, Mono 데스크톱 프레임워크에 대한 Mono 런타임
 
 ## <a name="net-tooling-and-common-infrastructure"></a>.NET 도구 및 공통 인프라
@@ -96,7 +96,7 @@ C# 언어 및 CLI(공용 언어 인프라) 사양은 [Ecma International® ](htt
 - **C# 언어 표준(버전 5.0)** : [ECMA-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
 - **CLI(공용 언어 인프라)** : [pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf) 양식 및 [zip](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip) 양식으로 제공됩니다.
 - **파티션 IV XML 파일에서 파생된 정보**: [pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) 및 [zip](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip) 양식으로 제공됩니다.
- 
+
 공식 ISO/IEC 문서는 ISO/IEC [공개적으로 사용할 수 있는 표준](https://standards.iso.org/ittf/PubliclyAvailableStandards/) 페이지에서 사용할 수 있습니다. 이러한 링크는 해당 페이지에서 직접 제공됩니다.
 
 - **정보 기술 - 프로그래밍 언어- C#** : [ISO/IEC 23270:2018](https://standards.iso.org/ittf/PubliclyAvailableStandards/c075178_ISO_IEC_23270_2018.zip)

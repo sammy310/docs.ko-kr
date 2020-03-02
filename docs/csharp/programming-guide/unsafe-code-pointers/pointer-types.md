@@ -4,12 +4,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: ad6e6f17f9a8c30339a74b8ab41af3a99e716d3f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: dc03744559a87a2548c5bee9452c22cd20f337b8
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745351"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627712"
 ---
 # <a name="pointer-types-c-programming-guide"></a>포인터 형식(C# 프로그래밍 가이드)
 
@@ -24,14 +24,14 @@ void* identifier; //allowed but not recommended
 
 포인터 형식은 [개체](../../language-reference/builtin-types/reference-types.md)에서 상속되지 않으며 포인터 형식과 `object`는 서로 변환되지 않습니다. 또한 boxing과 unboxing은 포인터를 지원하지 않습니다. 그러나 다른 포인터 형식 간의 변환 및 포인터 형식과 정수 형식 사이의 변환은 허용됩니다.
 
-동일한 선언에서 여러 포인터를 선언하는 경우 별표(*)는 기본 형식에만 함께 사용되고 각 포인터 이름의 접두사로는 사용되지 않습니다. 예:
+동일한 선언에서 여러 포인터를 선언하는 경우 별표(*)는 기본 형식에만 함께 사용되고 각 포인터 이름의 접두사로는 사용되지 않습니다. 예를 들어:
 
 ```csharp
 int* p1, p2, p3;   // Ok
 int *p1, *p2, *p3;   // Invalid in C#
 ```
 
-개체 참조는 포인터가 해당 개체 참조를 가리키는 경우에도 가비지 수집될 수 있으므로 포인터는 참조나 참조가 들어 있는 [구조체](../../language-reference/keywords/struct.md)를 가리킬 수 없습니다. 가비지 수집기는 포인터 형식에서 개체를 가리키는지 여부를 추적하지 않습니다.
+개체 참조는 포인터가 해당 개체 참조를 가리키는 경우에도 가비지 수집될 수 있으므로 포인터는 참조나 참조가 들어 있는 [구조체](../../language-reference/builtin-types/struct.md)를 가리킬 수 없습니다. 가비지 수집기는 포인터 형식에서 개체를 가리키는지 여부를 추적하지 않습니다.
 
 `myType*` 형식의 포인터 변수 값은 `myType` 형식의 변수 주소입니다. 다음은 포인터 형식 선언의 예제입니다.
 

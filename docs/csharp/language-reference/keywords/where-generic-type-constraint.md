@@ -6,12 +6,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 19bf7682916336173ed93619fb6f0ff1242a1b30
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d236420c5019f7529b729155b13df50807dc1dab
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712808"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626713"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where(제네릭 형식 제약 조건)(C# 참조)
 
@@ -32,7 +32,7 @@ ms.locfileid: "75712808"
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#3)]
 
-`where` 절은 `notnull` 제약 조건을 포함할 수 있습니다. `notnull` 제약 조건은 형식 매개 변수를 Null을 허용하지 않는 형식으로 제한합니다. 해당 형식은 [값 형식](struct.md)이거나 nullable이 아닌 참조 형식일 수 있습니다. [`nullable enable` 컨텍스트](../../nullable-references.md#nullable-contexts)에서 컴파일된 코드에 대해 C# 8.0부터 `notnull` 제약 조건을 사용할 수 있습니다. 다른 제약 조건과 달리 형식 인수가 `notnull` 제약 조건을 위반하면 컴파일러는 오류 대신 경고를 생성합니다. 경고는 `nullable enable` 컨텍스트에서만 생성됩니다. 
+`where` 절은 `notnull` 제약 조건을 포함할 수 있습니다. `notnull` 제약 조건은 형식 매개 변수를 Null을 허용하지 않는 형식으로 제한합니다. 해당 형식은 [값 형식](../builtin-types/value-types.md)이거나 nullable이 아닌 참조 형식일 수 있습니다. [`nullable enable` 컨텍스트](../../nullable-references.md#nullable-contexts)에서 컴파일된 코드에 대해 C# 8.0부터 `notnull` 제약 조건을 사용할 수 있습니다. 다른 제약 조건과 달리 형식 인수가 `notnull` 제약 조건을 위반하면 컴파일러는 오류 대신 경고를 생성합니다. 경고는 `nullable enable` 컨텍스트에서만 생성됩니다.
 
 > [!IMPORTANT]
 > `notnull` 제약 조건을 포함하는 제네릭 선언은 nullable 형식을 감지하지 않는 컨텍스트에서 사용될 수 있지만 컴파일러는 제약 조건을 적용하지 않습니다.
@@ -43,7 +43,7 @@ ms.locfileid: "75712808"
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#4)]
 
-`where` 절에 `new()` 생성자 제약 조건이 포함될 수도 있습니다. 이 제약 조건을 사용하면 `new` 연산자를 사용하여 형식 매개 변수의 인스턴스를 만들 수 있습니다. [new () 제약 조건](new-constraint.md)을 사용하면 컴파일러에서 제공된 형식 인수에 액세스 가능하고 매개 변수가 없는 생성자가 있어야 한다는 것을 알게 됩니다. 예:
+`where` 절에 `new()` 생성자 제약 조건이 포함될 수도 있습니다. 이 제약 조건을 사용하면 `new` 연산자를 사용하여 형식 매개 변수의 인스턴스를 만들 수 있습니다. [new () 제약 조건](new-constraint.md)을 사용하면 컴파일러에서 제공된 형식 인수에 액세스 가능하고 매개 변수가 없는 생성자가 있어야 한다는 것을 알게 됩니다. 예를 들어:
 
 [!code-csharp[using the new constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#5)]
 

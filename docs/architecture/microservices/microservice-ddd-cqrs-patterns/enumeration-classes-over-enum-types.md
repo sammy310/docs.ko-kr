@@ -2,12 +2,12 @@
 title: 열거형 형식 대신 열거형 클래스 사용
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 후자의 몇 가지 제한 사항을 해결하는 방법으로 열거형 대신 열거형 클래스를 사용하는 방법을 배웁니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: 6752adb28b1bd0982c66fa2d021b04b999447c6e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 82bd80d19b3b73eb2f45ede8cc7ad4593c688277
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337686"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628464"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>열거형 형식 대신 열거형 클래스 사용하기
 
@@ -81,12 +81,6 @@ public class CardType : Enumeration
 ```
 
 ## <a name="additional-resources"></a>추가 자료
-
-- **열거형을 의심할 것 - 업데이트** \
-  <https://www.planetgeek.ch/2009/07/01/enums-are-evil/>
-
-- **Daniel Hardman 열거형이 질병을 전파하는 방법 - 및 질병 치료 방법** \
-  <https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/>
 
 - **Jimmy Bogard. 열거형 클래스** \
   <https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/>

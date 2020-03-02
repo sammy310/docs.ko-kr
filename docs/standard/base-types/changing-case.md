@@ -14,12 +14,12 @@ helpviewer_keywords:
 - uppercase
 - lowercase
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
-ms.openlocfilehash: 91fc0022eae3f036e0ec046ea12446871926ab27
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 135cfa815c10d1a9dd9056604a4601678da9d5c4
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711469"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159353"
 ---
 # <a name="changing-case-in-net"></a>.NET에서 대/소문자 바꾸기
 사용자 입력을 수락하는 애플리케이션을 작성하는 경우 데이터를 입력할 때 사용하는 대/소문자를 확신할 수 없습니다. 특히 사용자 인터페이스에 표시하는 경우 문자열의 대/소문자를 일관되게 표시하려는 경우가 많습니다. 다음 표에서는 세 가지 대/소문자 변경 메서드를 설명합니다. 처음 두 메서드는 문화권을 수락하는 오버로드를 제공합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "75711469"
 > [!WARNING]
 > 문자열을 비교하거나 같은지 테스트하기 위해 <xref:System.String.ToUpper%2A?displayProperty=nameWithType> 및 <xref:System.String.ToLower%2A?displayProperty=nameWithType> 메서드를 사용하여 문자열을 변환하면 안 됩니다. 자세한 내용은 [대/소문자가 혼합된 문자열 비교](#Comparing) 섹션을 참조하세요.  
   
-<a name="Comparing"></a>   
+<a name="Comparing"></a>
 ## <a name="comparing-strings-of-mixed-case"></a>대/소문자가 혼합된 문자열 비교  
  대/소문자가 혼합된 문자열을 비교하여 순서를 확인하려면 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 메서드의 오버로드 중 하나를 `comparisonType` 매개 변수와 함께 호출하고 `comparisonType` 인수에 대해 <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType>, <xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType> 또는 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 값을 제공합니다. 현재 문화권이 아닌 특정 문화권을 사용하여 비교하려면 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 메서드의 오버로드를 `culture` 및 `options` 매개 변수 둘 다와 함께 호출하고 `options` 인수로 <xref:System.Globalization.CompareOptions.IgnoreCase?displayProperty=nameWithType> 값을 제공합니다.  
   

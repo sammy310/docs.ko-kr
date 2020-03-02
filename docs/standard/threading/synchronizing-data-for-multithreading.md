@@ -7,12 +7,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: ecc1e234b03cb45075c40ff6698f71f8ce18d0de
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a70bd3070d8b1dcd06e55d330a01d29071293f6c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128971"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159392"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>다중 스레딩을 위한 데이터 동기화
 
@@ -30,12 +30,12 @@ ms.locfileid: "73128971"
   
  공용 언어 런타임은 클래스가 요구 사항에 따라 다양한 서로 다른 방식으로 동기화될 수 있는 범주의 수로 나뉘는 스레드 모델을 제공합니다. 다음 표는 지정된 동기화 범주로 필드 및 메서드에 대해 제공되는 동기화 지원을 보여 줍니다.  
   
-|Category|전역 필드|정적 필드|정적 메서드|인스턴스 필드|인스턴스 메서드|특정 코드 블록|  
+|범주|전역 필드|정적 필드|정적 메서드|인스턴스 필드|인스턴스 메서드|특정 코드 블록|  
 |--------------|-------------------|-------------------|--------------------|---------------------|----------------------|--------------------------|  
 |동기화 없음|아니요|아니요|아니요|아니요|아니요|아니요|  
 |동기화된 컨텍스트|아니요|아니요|아니요|예|예|아니요|  
 |동기화된 코드 영역|아니요|아니요|표시된 경우에만|아니요|표시된 경우에만|표시된 경우에만|  
-|수동 동기화|수동|설명서|설명서|설명서|설명서|설명서|  
+|수동 동기화|수동|수동|수동|수동|수동|수동|  
   
 ## <a name="no-synchronization"></a>동기화 없음  
  이것은 개체의 기본값입니다. 모든 스레드는 언제든지 모든 메서드 또는 필드에 액세스할 수 있습니다. 한 번에 하나의 스레드만 이러한 개체에 액세스해야 합니다.  
@@ -64,10 +64,10 @@ ms.locfileid: "73128971"
  두 경우 모두 코드 블록에서 예외가 throw되는 경우 **lock** 또는 **SyncLock**으로 획득된 잠금이 자동으로 해제됩니다. C# 및 Visual Basic 컴파일러는 시도의 초반에 **Monitor.Enter**로 **try**/**finally** 블록을 내보내고 **finally** 블록에서 **Monitor.Exit**을 내보냅니다. **lock** 또는 **SyncLock** 블록 내에서 예외가 throw되는 경우 **finally** 처리기가 정리 작업을 수행할 수 있도록 실행됩니다.  
   
 ## <a name="synchronized-context"></a>동기화된 컨텍스트  
- 
+
 .NET Framework 및 Xamarin 애플리케이션에서만 모든 <xref:System.ContextBoundObject>에 <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>를 사용하여 모든 인스턴스 메서드와 필드를 동기화할 수 있습니다. 동일한 컨텍스트 도메인에 있는 모든 개체는 동일한 잠금을 공유합니다. 여러 스레드가 메서드 및 필드에 액세스할 수 있지만 한 번에 하나의 스레드만 허용됩니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
 - [스레드 및 스레딩](../../../docs/standard/threading/threads-and-threading.md)

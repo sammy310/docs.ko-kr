@@ -3,12 +3,12 @@ title: 비관리형 형식 - C# 참조
 ms.date: 09/06/2019
 helpviewer_keywords:
 - unmanaged type [C#]
-ms.openlocfilehash: 97aa4dd629e385dbe9641d82a7da21a0aaa63e92
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 042cf382879cc4010a388fb75f41099b4342c9d9
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75342586"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626947"
 ---
 # <a name="unmanaged-types-c-reference"></a>비관리형 형식(C# 참조)
 
@@ -17,7 +17,7 @@ ms.locfileid: "75342586"
 - `sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, `double`, `decimal` 또는 `bool`
 - 임의의 [열거형](enum.md) 형식
 - 임의의 [포인터](../../programming-guide/unsafe-code-pointers/pointer-types.md) 형식
-- 관리되지 않는 형식의 필드만 포함하고 C# 7.3 및 이전 버전에서 사용자 정의된 [구조체](../keywords/struct.md) 형식은 생성 형식(하나 이상의 형식 인수를 포함하는 형식)이 아닙니다.
+- 관리되지 않는 형식의 필드만 포함하고 C# 7.3 및 이전 버전에서 사용자 정의된 [구조체](struct.md) 형식은 생성 형식(하나 이상의 형식 인수를 포함하는 형식)이 아닙니다.
 
 C# 7.3부터 [`unmanaged` 제약 조건](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint)을 사용하여 형식 매개 변수가 nullable이 아니며 비포인터 및 비관리형 형식임을 지정할 수 있습니다.
 

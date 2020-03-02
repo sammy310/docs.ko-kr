@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 01/25/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 7e64b00eb6fd2c2dbb12c54a2c725590b4d22e15
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: dd69671e709549fe0ad0f582e4d09b43f7321df2
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345944"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155999"
 ---
 # <a name="the-net-framework-analyzer"></a>.NET Framework 분석기
 
@@ -22,7 +22,8 @@ ms.locfileid: "74345944"
 
 .NET Framework 분석기를 실행하려는 모든 프로젝트에서 NuGet 패키지로 설치해야 합니다. 한 명의 개발자만이 이를 프로젝트에 추가해야 합니다. 분석기 패키지는 프로젝트에 종속된 기능이며 업데이트된 솔루션이 포함되면 모든 개발자의 컴퓨터에서 실행됩니다.
 
-.NET Framework 분석기는 [Microsoft.NetFramework.Analyzers](https://www.nuget.org/packages/Microsoft.NetFramework.Analyzers/) NuGet 패키지에서 제공됩니다. 이 패키지는 보안 분석기를 포함하는 .NET Framework에 특정 분석기만을 제공합니다. 대부분의 경우에 [Microsoft.CodeAnalysis.FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) NuGet 패키지가 필요합니다. FxCopAnalyzers 집계 패키지에는 다음 분석기뿐만 아니라 Framework.Analyzers 패키지에 포함된 모든 프레임워크 분석기가 포함됩니다.
+.NET Framework 분석기는 [Microsoft.NetFramework.Analyzers](https://www.nuget.org/packages/Microsoft.NetFramework.Analyzers/) NuGet 패키지에서 제공됩니다. 이 패키지는 보안 분석기를 포함하는 .NET Framework에 특정 분석기만을 제공합니다. 대부분의 경우에 [Microsoft.CodeAnalysis.FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) NuGet 패키지가 필요합니다.
+FxCopAnalyzers 집계 패키지에는 다음 분석기뿐만 아니라 Framework.Analyzers 패키지에 포함된 모든 프레임워크 분석기가 포함됩니다.
 
 - [Microsoft.CodeQuality.Analyzers](https://www.nuget.org/packages/Microsoft.CodeQuality.Analyzers): .NET 표준 API에 대한 일반 지침 및 지침을 제공합니다.
 - [Microsoft.NetCore.Analyzers](https://www.nuget.org/packages/Microsoft.NetCore.Analyzers): .NET Core API에 특정된 분석기를 제공합니다.
@@ -46,7 +47,7 @@ NuGet 패키지를 설치하면 솔루션을 빌드합니다. 분석기는 코�
 
 ### <a name="ca1058-types-should-not-extend-certain-base-types"></a>CA1058: 형식은 특정 기본 형식을 확장하면 안 됩니다.
 
-.NET Framework에 직접 파생하지 않은 몇몇 형식이 있습니다. 
+.NET Framework에 직접 파생하지 않은 몇몇 형식이 있습니다.
 
 **범주:** 디자인
 

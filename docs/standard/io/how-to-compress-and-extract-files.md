@@ -10,12 +10,12 @@ helpviewer_keywords:
 - compression
 - compress files
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
-ms.openlocfilehash: 6345b467e9ade085a38de6dc9758b1bd99d1ae62
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5aa25e265ed6ffb613e9916414c6f2335a4aaf57
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708104"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159379"
 ---
 # <a name="how-to-compress-and-extract-files"></a>방법: 파일 압축 및 추출
 
@@ -31,9 +31,9 @@ ms.locfileid: "75708104"
 
 ## <a name="example-1-create-and-extract-a-zip-file"></a>예제 1: .zip 파일 만들기 및 추출
 
-다음 예제에서는 <xref:System.IO.Compression.ZipFile> 클래스를 사용하여 압축된 *.zip* 파일을 만들고 추출하는 방법을 보여줍니다. 이 예제는 폴더의 콘텐츠를 새로운 *.zip* 파일로 압축한 다음, zip을 새 폴더에 추출합니다. 
+다음 예제에서는 <xref:System.IO.Compression.ZipFile> 클래스를 사용하여 압축된 *.zip* 파일을 만들고 추출하는 방법을 보여줍니다. 이 예제는 폴더의 콘텐츠를 새로운 *.zip* 파일로 압축한 다음, zip을 새 폴더에 추출합니다.
 
-샘플을 실행하려면 프로그램 폴더에 *start* 폴더를 만들어서 zip 파일로 채웁니다. 
+샘플을 실행하려면 프로그램 폴더에 *start* 폴더를 만들어서 zip 파일로 채웁니다.
 
 "'ZipFile' 이름이 현재 컨텍스트에 없습니다."라는 빌드 오류가 발생하면 `System.IO.Compression.FileSystem` 어셈블리에 대한 참조를 프로젝트에 추가합니다.
 
@@ -42,13 +42,13 @@ ms.locfileid: "75708104"
 
 ## <a name="example-2-extract-specific-file-extensions"></a>예제 2: 특정 파일 확장명 추출
 
-다음 예제는 기존 *.zip* 파일의 콘텐츠를 반복하고 확장명이 *.txt*인 파일을 추출합니다. <xref:System.IO.Compression.ZipArchive> 클래스를 사용하여 zip에 액세스하고 <xref:System.IO.Compression.ZipArchiveEntry> 클래스를 사용하여 개별 항목을 검사합니다. <xref:System.IO.Compression.ZipArchiveEntry> 개체의 <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A> 확장 메서드는 <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType> 클래스에서 사용할 수 있습니다. 
+다음 예제는 기존 *.zip* 파일의 콘텐츠를 반복하고 확장명이 *.txt*인 파일을 추출합니다. <xref:System.IO.Compression.ZipArchive> 클래스를 사용하여 zip에 액세스하고 <xref:System.IO.Compression.ZipArchiveEntry> 클래스를 사용하여 개별 항목을 검사합니다. <xref:System.IO.Compression.ZipArchiveEntry> 개체의 <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A> 확장 메서드는 <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType> 클래스에서 사용할 수 있습니다.
 
-샘플을 실행하려면 *result.zip*이라는 *.zip* 파일을 프로그램 폴더에 둡니다. 메시지가 표시되면 추출할 폴더 이름을 입력합니다. 
+샘플을 실행하려면 *result.zip*이라는 *.zip* 파일을 프로그램 폴더에 둡니다. 메시지가 표시되면 추출할 폴더 이름을 입력합니다.
 
 "'ZipFile' 이름이 현재 컨텍스트에 없습니다."라는 빌드 오류가 발생하면 `System.IO.Compression.FileSystem` 어셈블리에 대한 참조를 프로젝트에 추가합니다.
 
-"'ZipArchive' 형식이 참조되지 않은 어셈블리에 정의되었습니다."라는 오류가 발생하면 `System.IO.Compression` 어셈블리에 대한 참조를 프로젝트에 추가합니다. 
+"'ZipArchive' 형식이 참조되지 않은 어셈블리에 정의되었습니다."라는 오류가 발생하면 `System.IO.Compression` 어셈블리에 대한 참조를 프로젝트에 추가합니다.
 
 > [!IMPORTANT]
 > 파일 압축을 풀 때는 압축을 풀 디렉터리에서 이스케이프할 수 있는 악성 파일 경로를 찾아야 합니다. 이를 경로 통과 공격이라고 합니다. 다음 예제는 악성 파일 경로를 확인하는 방법과 안전하게 압축을 푸는 방법을 보여줍니다.

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET Framework],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-ms.openlocfilehash: 2c3215fd42e8cf6d6427d23f94c14db4230ddd02
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6c14c60b30f8f70aa5e888ed45d6f867154e18d8
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138056"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159652"
 ---
 # <a name="exceptions-in-managed-threads"></a>관리되는 스레드의 예외
 NET Framework 버전 2.0부터 공용 언어 런타임을 통해 스레드에 있는 대부분의 처리되지 않은 예외가 정상적으로 진행됩니다. 즉, 대부분의 경우에서 처리되지 않은 예외는 애플리케이션을 종료시킵니다.  
@@ -41,7 +41,7 @@ NET Framework 버전 2.0부터 공용 언어 런타임을 통해 스레드에 �
   
  운영 체제가 응용 프로그램을 종료시킬 때까지 스레드의 처리되지 않은 예외가 정상적으로 진행되도록 허용하면 개발이나 테스트하는 동안 이러한 문제에 노출됩니다. 프로그램 종료에 대한 오류 보고서는 디버깅을 지원합니다.  
   
-<a name="ChangeFromPreviousVersions"></a>   
+<a name="ChangeFromPreviousVersions"></a>
 ## <a name="change-from-previous-versions"></a>이전 버전의 변경 내용  
  가장 중대한 변경은 관리되는 스레드와 관련됩니다. NET Framework 버전 1.0 및 1.1에서는 공용 언어 런타임이 다음과 같은 상황에서 처리되지 않은 예외에 백업을 제공합니다.  
   
@@ -76,6 +76,6 @@ NET Framework 버전 2.0부터 공용 언어 런타임을 통해 스레드에 �
 ## <a name="host-override"></a>호스트 재정의  
  .NET Framework 버전 2.0에서는 관리되지 않는 호스트가 호스팅 API의 [ICLRPolicyManager](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) 인터페이스를 사용하여 공용 언어 런타임의 기본 처리되지 않은 예외를 재정의할 수 있습니다. [ICLRPolicyManager::SetUnhandledExceptionPolicy](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) 함수를 사용하여 처리되지 않은 예외에 대한 정책을 설정합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [관리되는 스레딩 기본 사항](../../../docs/standard/threading/managed-threading-basics.md)

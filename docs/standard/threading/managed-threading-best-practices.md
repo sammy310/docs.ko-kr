@@ -10,12 +10,12 @@ helpviewer_keywords:
 - threading [.NET Framework], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-ms.openlocfilehash: 26b0535fa918a802dd0922554ae197ba10396d56
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a76cc40f308ac2f636a650cd4a17da0e94e23a34
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129559"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160263"
 ---
 # <a name="managed-threading-best-practices"></a>관리 스레딩을 구현하는 최선의 방법
 다중 스레딩에는 신중한 프로그래밍이 필요합니다. 대부분의 작업의 경우 스레드 풀 스레드로 실행에 대한 요청을 큐에 대기시켜 복잡성을 줄일 수 있습니다. 이 항목에서는 다중 스레드의 작업 조정 또는 차단되는 스레드 처리 등의 더욱 어려운 상황을 다룹니다.  
@@ -107,7 +107,7 @@ else {
     ```  
   
     ```csharp  
-    lock(lockObject)   
+    lock(lockObject)
     {  
         myField++;  
     }  
@@ -172,7 +172,7 @@ else {
   
 - 정적 상태를 변경하는 정적 메서드를 제공 하지 마세요. 일반적인 서버 시나리오에서 정적 상태는 요청 간 공유되며 여러 스레드가 동시에 해당 코드를 실행할 수 있음을 의미합니다. 스레드 버그가 발생할 가능성을 엽니다. 요청 간에 공유되지 않는 인스턴스로 데이터를 캡슐화하는 디자인 패턴을 사용하는 것이 좋습니다. 또한 정적 데이터가 동기화되는 경우 상태를 변경하는 정적 메서드 간 호출은 성능에 부정적인 영향을 주어 교착 상태 또는 중복된 동기화를 발생시킬 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [스레딩](../../../docs/standard/threading/index.md)
 - [스레드 및 스레딩](../../../docs/standard/threading/threads-and-threading.md)

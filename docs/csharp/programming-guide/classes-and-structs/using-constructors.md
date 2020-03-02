@@ -4,16 +4,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: faab6ac57629db11c60ee5b563ea95ebb90016dd
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 7c227b61c6d5b4ead00fced0dba046b90683fde1
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964352"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626414"
 ---
 # <a name="using-constructors-c-programming-guide"></a>생성자 사용(C# 프로그래밍 가이드)
 
-[class](../../language-reference/keywords/class.md) 또는 [struct](../../language-reference/keywords/struct.md)가 만들어지면 생성자가 호출됩니다. 생성자는 클래스 또는 구조체와 이름이 같으며 일반적으로 새 개체의 데이터 멤버를 초기화합니다.  
+[class](../../language-reference/keywords/class.md) 또는 [struct](../../language-reference/builtin-types/struct.md)가 만들어지면 생성자가 호출됩니다. 생성자는 클래스 또는 구조체와 이름이 같으며 일반적으로 새 개체의 데이터 멤버를 초기화합니다.  
   
  다음 예제에서는 간단한 생성자를 사용하여 `Taxi`란 이름의 클래스를 정의합니다. 그런 다음 [new](../../language-reference/operators/new-operator.md) 연산자를 사용하여 이 클래스를 인스턴스화합니다. 새 개체에 메모리가 할당된 직후 `new` 연산자가 `Taxi` 생성자를 호출합니다.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "75964352"
   
  자세한 내용은 [전용 생성자](./private-constructors.md)를 참조하세요.  
   
- [struct](../../language-reference/keywords/struct.md) 형식의 생성자는 class 생성자와 비슷하지만, `structs`는 컴파일러에서 자동으로 제공되므로 명시적 매개 변수 없는 생성자를 포함할 수 없습니다. 이 생성자는 `struct`의 각 필드를 [기본값](../../language-reference/builtin-types/default-values.md)으로 초기화합니다. 그러나 이 매개 변수 없는 생성자는 `struct`가 `new`로 인스턴스화될 경우에만 호출됩니다. 예를 들어, 이 코드는 <xref:System.Int32>에 매개 변수 없는 생성자를 사용하므로 정수가 초기화되었음을 확신할 수 있습니다.  
+ [struct](../../language-reference/builtin-types/struct.md) 형식의 생성자는 class 생성자와 비슷하지만, `structs`는 컴파일러에서 자동으로 제공되므로 명시적 매개 변수 없는 생성자를 포함할 수 없습니다. 이 생성자는 `struct`의 각 필드를 [기본값](../../language-reference/builtin-types/default-values.md)으로 초기화합니다. 그러나 이 매개 변수 없는 생성자는 `struct`가 `new`로 인스턴스화될 경우에만 호출됩니다. 예를 들어, 이 코드는 <xref:System.Int32>에 매개 변수 없는 생성자를 사용하므로 정수가 초기화되었음을 확신할 수 있습니다.  
   
 ```csharp  
 int i = new int();  
@@ -54,7 +54,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
  따라서 값 형식에 대해 매개 변수 없는 생성자를 호출할 필요가 없습니다.  
   
- 클래스와 `structs` 모두 매개 변수를 사용하는 생성자를 정의할 수 있습니다. 매개 변수를 사용하는 생성자는 `new` 문 또는 [base](../../language-reference/keywords/base.md) 문을 통해 호출해야 합니다. 클래스 및 `structs`는 여러 생성자를 정의할 수 있으며, 매개 변수 없는 생성자를 정의하는 데에는 둘 다 필요하지 않습니다. 예:  
+ 클래스와 `structs` 모두 매개 변수를 사용하는 생성자를 정의할 수 있습니다. 매개 변수를 사용하는 생성자는 `new` 문 또는 [base](../../language-reference/keywords/base.md) 문을 통해 호출해야 합니다. 클래스 및 `structs`는 여러 생성자를 정의할 수 있으며, 매개 변수 없는 생성자를 정의하는 데에는 둘 다 필요하지 않습니다. 예를 들어:  
   
  [!code-csharp[csProgGuideObjects#54](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#54)]  
   
@@ -62,7 +62,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
  [!code-csharp[csProgGuideObjects#55](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#55)]  
   
- 생성자는 `base` 키워드를 사용하여 기본 클래스의 생성자를 호출할 수 있습니다. 예:  
+ 생성자는 `base` 키워드를 사용하여 기본 클래스의 생성자를 호출할 수 있습니다. 예를 들어:  
   
  [!code-csharp[csProgGuideObjects#56](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#56)]  
   

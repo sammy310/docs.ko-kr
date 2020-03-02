@@ -6,16 +6,16 @@ helpviewer_keywords:
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: 465dbb9120e6e81e5ef216c34dc6a92283956033
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 8eedfaed111f01cc2ec55a2f42df66d4588bd42f
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964668"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626739"
 ---
 # <a name="constructors-c-programming-guide"></a>생성자(C# 프로그래밍 가이드)
 
-[class](../../language-reference/keywords/class.md) 또는 [struct](../../language-reference/keywords/struct.md)를 만들 때마다 해당 생성자가 호출됩니다. 클래스 또는 구조체에는 서로 다른 인수를 사용하는 여러 생성자가 있을 수 있습니다. 프로그래머는 생성자를 통해 기본값을 설정하고, 인스턴스화를 제한하며, 유연하고 읽기 쉬운 코드를 작성할 수 있습니다. 자세한 내용 및 예제는 [생성자 사용](./using-constructors.md) 및 [인스턴스 생성자](./instance-constructors.md)를 참조하세요.  
+[class](../../language-reference/keywords/class.md) 또는 [struct](../../language-reference/builtin-types/struct.md)를 만들 때마다 해당 생성자가 호출됩니다. 클래스 또는 구조체에는 서로 다른 인수를 사용하는 여러 생성자가 있을 수 있습니다. 프로그래머는 생성자를 통해 기본값을 설정하고, 인스턴스화를 제한하며, 유연하고 읽기 쉬운 코드를 작성할 수 있습니다. 자세한 내용 및 예제는 [생성자 사용](./using-constructors.md) 및 [인스턴스 생성자](./instance-constructors.md)를 참조하세요.  
 
 ## <a name="parameterless-constructors"></a>매개 변수 없는 생성자
   

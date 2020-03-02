@@ -13,17 +13,17 @@ helpviewer_keywords:
 - reading data, strings
 - streams, reading characters from string
 ms.assetid: 27ea5e52-6db8-42d8-980a-50bcfc7fd270
-ms.openlocfilehash: 0c3516c4abadfd22609c3568beffc14e027ef69e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ed267ad62e46f6216c94906df1bcefb0684ab51b
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706675"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155765"
 ---
 # <a name="how-to-read-characters-from-a-string"></a>방법: 문자열에서 문자 읽기
 다음 코드 예제는 문자열에서 동기식 또는 비동기식으로 문자를 읽는 방법을 보여줍니다.  
   
-## <a name="example-read-characters-synchronously"></a>예: 동기식으로 문자 읽기 
+## <a name="example-read-characters-synchronously"></a>예: 동기식으로 문자 읽기
  이 예제에서는 문자열에서 동기식으로 13자를 읽고, 배열에 저장하고, 표시합니다. 그런 다음, 문자열의 나머지 문자를 읽고, 6번째 요소에서 시작하는 배열에 저장하고, 배열의 콘텐츠를 표시합니다.  
   
  [!code-csharp[Conceptual.StringReader#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.stringreader/cs/source.cs#1)]

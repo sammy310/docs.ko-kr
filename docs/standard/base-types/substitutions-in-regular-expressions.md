@@ -13,12 +13,12 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-ms.openlocfilehash: db0e2234055c6869c4cf55196d9f3b62a6996c96
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3562bd113ae4c9a3f721d8858a5d3625ef548d3a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972059"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160081"
 ---
 # <a name="substitutions-in-regular-expressions"></a>정규식의 대체
 대체는 바꾸기 패턴에서만 인식되는 언어 요소입니다. 정규식 패턴을 사용하여 입력 문자열에서 일치하는 텍스트를 바꿀 텍스트의 전부 또는 일부를 정의합니다. 바꾸기 패턴은 리터럴 문자와 하나 이상의 대체로 구성될 수 있습니다. <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 매개 변수가 포함된 `replacement` 메서드의 오버로드와 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 메서드에 대해 바꾸기 패턴이 제공됩니다. 해당 메서드는 일치하는 패턴을 `replacement` 매개 변수에 정의된 패턴으로 바꿉니다.  
@@ -144,7 +144,7 @@ ms.locfileid: "73972059"
 |2|5|aa1bb|aaaabb**aa1bb**cc3dd4ee5|  
 |3|8|aa1bb2cc|aaaabbaa1bbcc**aa1bb2cc**dd4ee5|  
 |4|11|aa1bb2cc3dd|aaaabbaa1bbccaa1bb2ccdd**aa1bb2cc3dd**ee5|  
-|5|14|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee**aa1bb2cc3dd4ee**| 
+|5|14|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee**aa1bb2cc3dd4ee**|
 
 ## <a name="substituting-the-text-after-the-match"></a>일치하는 문자열 뒤에 있는 텍스트 대체  
  `$'` 대체는 일치하는 문자열을 일치하는 문자열 뒤의 전체 입력 문자열로 바꿉니다. 즉, 일치하는 텍스트를 제거하는 동안 일치하는 문자열 뒤의 입력 문자열을 복제합니다. 일치하는 텍스트 앞에 나오는 텍스트는 결과 문자열에서 변경되지 않습니다. 일치하는 부분이 없으면  `$'` 대체가 아무 효과가 없습니다.  
@@ -197,6 +197,6 @@ ms.locfileid: "73972059"
 |1|3|123|ABC**ABC123DEF456**DEF456|  
 |2|5|456|ABCABC123DEF456DEF**ABC123DEF456**|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [정규식 언어 - 빠른 참조](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

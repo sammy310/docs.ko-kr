@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
-ms.openlocfilehash: 3b44b981a65dee5d216f882198a74b5fb61adfad
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7413c3fae7d7189ec8dca43b0c77f6b56158f416
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708044"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159470"
 ---
 # <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>방법: .NET Framework와 Windows 런타임 스트림 간의 변환(Windows에만 해당)
 
@@ -28,7 +28,7 @@ Windows 런타임 스트림에서 .NET Framework 스트림으로 변환하려면
   
 - <xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead%2A?displayProperty=nameWithType>은 Windows 런타임의 입력 스트림을 UWP용 .NET 앱의 관리형 스트림으로 변환합니다.
 
-Windows 런타임은 읽기 전용, 쓰기 전용 또는 읽기 및 쓰기를 지원하는 스트림 형식을 제공합니다. 이러한 기능은 Windows 런타임 스트림을 .NET Framework 스트림으로 변환할 때 유지됩니다. 더구나 Windows 런타임 스트림을 .NET Framework 스트림으로 변환하고 그 반대로 변환하는 경우 원래 Windows 런타임 인스턴스를 다시 얻습니다. 
+Windows 런타임은 읽기 전용, 쓰기 전용 또는 읽기 및 쓰기를 지원하는 스트림 형식을 제공합니다. 이러한 기능은 Windows 런타임 스트림을 .NET Framework 스트림으로 변환할 때 유지됩니다. 더구나 Windows 런타임 스트림을 .NET Framework 스트림으로 변환하고 그 반대로 변환하는 경우 원래 Windows 런타임 인스턴스를 다시 얻습니다.
 
 변환하려는 Windows 런타임 스트림의 기능과 일치하는 변환 메서드를 사용하는 것이 가장 좋습니다. 하지만 <xref:Windows.Storage.Streams.IRandomAccessStream>을 읽고 쓸 수 있으므로(<xref:Windows.Storage.Streams.IOutputStream>과 <xref:Windows.Storage.Streams.IInputStream> 둘 다 구현함) 변환 메서드는 원본 스트림의 기능을 유지합니다. 예를 들어 <xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead%2A?displayProperty=nameWithType>을 사용하여 <xref:Windows.Storage.Streams.IRandomAccessStream>을 변환하면 변환된 .NET Framework 스트림을 읽을 수 있도록 제한하지 않습니다. 쓰기도 가능합니다.
 

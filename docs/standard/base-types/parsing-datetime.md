@@ -14,12 +14,12 @@ helpviewer_keywords:
 - base types, parsing strings
 - DateTime object
 - time strings
-ms.openlocfilehash: 16daa0ef3133b6cd04dc48b7f79fd365098e4bdf
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 9555304e570226b2ed3b040735cf099b5a018f93
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348067"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156545"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>.NET에서 날짜 및 시간 문자열 구문 분석
 
@@ -72,7 +72,7 @@ ms.locfileid: "75348067"
 
 [!code-csharp[Parsing.DateAndTime#3](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#3)]
 [!code-vb[Parsing.DateAndTime#3](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#3)]
- 
+
 ## <a name="parseexact"></a>ParseExact
 
 <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> 메서드는 지정된 문자열 패턴 중 하나를 따르는 문자열을 <xref:System.DateTime> 개체로 변환합니다. 지정된 형식 중 하나가 아닌 문자열을 이 메서드에 전달하면 <xref:System.FormatException>이 throw됩니다. 표준 날짜 및 시간 형식 지정자 또는 사용자 지정 형식 지정자의 조합 중 하나를 지정할 수 있습니다. 사용자 지정 서식 지정자를 사용하면 사용자 지정 문자열을 생성할 수 있습니다. 지정자에 대한 설명은 [표준 날짜 및 시간 서식 문자열](standard-date-and-time-format-strings.md) 및 [사용자 지정 날짜 및 시간 서식 문자열](custom-date-and-time-format-strings.md)의 항목을 참조하세요.  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach, parallel version
 - parallel programming, foreach
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
-ms.openlocfilehash: 528e22d6b54179181d1479f4feaedfbf82933c58
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 02b94b673dc4468e68a1dadd83aab0e3bfcfaa16
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921206"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160302"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>방법: 간단한 Parallel.ForEach 루프 작성
 
@@ -50,7 +50,7 @@ Visual Studio에는 Windows Desktop 및 .NET Core용 Visual Basic 및 C# 콘솔 
 명령줄에서 .NET Core CLI 명령(예: `dotnet new console` 또는 `dotnet new console -lang vb`)을 사용하거나 .NET Framework 애플리케이션에서 파일을 만들고 명령줄 컴파일러를 사용할 수 있습니다.
 
 .NET Core 프로젝트에서 **System.Drawing.Common** NuGet 패키지를 참조해야 합니다. Visual Studio에서 NuGet 패키지 관리자를 사용하여 패키지를 설치합니다. 혹은 \*.csproj 또는 \*.vbproj 파일에서 패키지에 대한 참조를 추가할 수 있습니다.
- 
+
 ```xml
 <ItemGroup>
      <PackageReference Include="System.Drawing.Common" Version="4.5.1" />

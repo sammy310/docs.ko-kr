@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 14bb8227a4a6c8beff6ab04c58d8e1a43db69856
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 578413b053fc1daab0c3162d9032f4d64d3e470d
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093138"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626700"
 ---
 # <a name="equality-operators-c-reference"></a>같음 연산자(C# 참조)
 
@@ -41,7 +41,7 @@ ms.locfileid: "77093138"
 
 기본 정수 형식의 해당 값이 같은 경우 동일한 [열거형](../builtin-types/enum.md) 형식의 피연산자가 동일합니다.
 
-사용자 정의 [구조체](../keywords/struct.md) 형식은 기본적으로 `==` 연산자를 지원하지 않습니다. `==` 연산자를 지원하려면 사용자 정의 구조체가 해당 연산자를 [오버로드](operator-overloading.md)해야 합니다.
+사용자 정의 [구조체](../builtin-types/struct.md) 형식은 기본적으로 `==` 연산자를 지원하지 않습니다. `==` 연산자를 지원하려면 사용자 정의 구조체가 해당 연산자를 [오버로드](operator-overloading.md)해야 합니다.
 
 C# 7.3부터는 `==` 및 `!=` 연산자가 C# [튜플](../../tuples.md)에서 지원됩니다. 자세한 내용은 [C# 튜플 형식](../../tuples.md) 문서의 [같음 및 튜플](../../tuples.md#equality-and-tuples) 섹션을 참조하세요.
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: ae0ba0bf15b6a02df5130d34d277322897826697
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b1ec8cfc0f8c6e660d716c51bf3c3387b73a278f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338521"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159314"
 ---
 # <a name="composite-formatting"></a>복합 형식 지정
 
@@ -31,7 +31,7 @@ ms.locfileid: "75338521"
   
 - 서식이 지정된 결과 문자열을 반환하는 <xref:System.String.Format%2A?displayProperty=nameWithType>.  
   
-- 서식이 지정된 결과 문자열을 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 개체에 추가하는 <xref:System.Text.StringBuilder>.   
+- 서식이 지정된 결과 문자열을 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 개체에 추가하는 <xref:System.Text.StringBuilder>.
 - 콘솔에 서식이 지정된 결과 문자열을 표시하는 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 메서드의 과부하.  
   
 - 스트림 또는 파일에 서식이 지정된 결과 문자열을 쓰는 <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType> 메서드의 과부하. <xref:System.IO.TextWriter> 및 <xref:System.IO.StreamWriter>와 같은 <xref:System.Web.UI.HtmlTextWriter>에서 파생된 클래스도 이 기능을 공유합니다.  

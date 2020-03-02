@@ -13,15 +13,15 @@ helpviewer_keywords:
 - base streams
 - streams, backing stores
 ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
-ms.openlocfilehash: 689cc9537cd7a5fe6a677d42e5790bbcf1b3aefa
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3f18712793254f4942c092c87a3e64c73b492ae0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708150"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160107"
 ---
 # <a name="compose-streams"></a>스트림 작성
-백업 저장소(*backing store*)는 디스크 또는 메모리와 같은 스토리지 매체입니다. 다양한 각 백업 저장소는 <xref:System.IO.Stream> 클래스의 구현으로 고유한 스트림을 구현합니다. 
+백업 저장소(*backing store*)는 디스크 또는 메모리와 같은 스토리지 매체입니다. 다양한 각 백업 저장소는 <xref:System.IO.Stream> 클래스의 구현으로 고유한 스트림을 구현합니다.
 
 각 스트림 유형은 지정된 백업 저장소에 유입 또는 유출되는 바이트를 읽고 씁니다. 백업 저장소에 연결되는 스트림을 기본 스트림(*base stream*)이라고 합니다. 기본 스트림에는 스트림을 백업 저장소에 연결하는 데 필요한 매개 변수가 포함된 생성자가 있습니다. 예를 들어 <xref:System.IO.FileStream>에는 프로세스가 경로 매개 변수를 지정하는 생성자가 있으며, 이것은 프로세스가 파일을 공유하는 방법을 지정합니다.  
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - try/finally block
 - garbage collection, encapsulating resources
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
-ms.openlocfilehash: 979cd782e5ab094b6dea010fc7a0b27caa390e67
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c5232aa89064c514e71f3a18bc754159e9c9b15b
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141347"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160285"
 ---
 # <a name="using-objects-that-implement-idisposable"></a>IDisposable을 구현하는 개체 사용
 
@@ -56,9 +56,9 @@ C#의 `using` 문과 Visual Basic의 `Using` 문은 개체를 만들고 정리�
 [!code-csharp[Conceptual.Disposable#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/using5.cs#6)]
 [!code-vb[Conceptual.Disposable#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/using5.vb#6)]  
   
-프로그래밍 언어가 `using` 문을 지원하지 않지만, <xref:System.IDisposable.Dispose%2A> 메서드에 대한 직접 호출을 허용하므로 `try/finally` 블록을 구현하도록 선택하거나 구현해야 하는 경우 이 기본 패턴을 따를 수 있습니다. 
+프로그래밍 언어가 `using` 문을 지원하지 않지만, <xref:System.IDisposable.Dispose%2A> 메서드에 대한 직접 호출을 허용하므로 `try/finally` 블록을 구현하도록 선택하거나 구현해야 하는 경우 이 기본 패턴을 따를 수 있습니다.
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [관리되지 않는 리소스 정리](../../../docs/standard/garbage-collection/unmanaged.md)
 - [using 문(C# 참조)](../../csharp/language-reference/keywords/using-statement.md)

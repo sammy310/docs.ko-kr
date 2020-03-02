@@ -4,12 +4,12 @@ description: .NET API 분석기가 사용되지 않는 API 및 플랫폼 호환�
 author: oliag
 ms.date: 02/20/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: f6cf2d8109c564447972afd18c6d6d587711304b
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: e214c91f2beebc7f3b3324f4879deba9a5623f86
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77542626"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156136"
 ---
 # <a name="net-api-analyzer"></a>.NET API 분석기
 
@@ -47,7 +47,7 @@ API 분석기는 개별 경고 표시를 제어할 수 있는 DE(사용 중단 �
    3. **시험판 포함**을 선택합니다.
    4. **Microsoft.DotNet.Analyzers.Compatibility**를 검색합니다.
    5. 목록에서 해당 패키지를 선택합니다.
-   6. **설치** 단추를 선택합니다. 
+   6. **설치** 단추를 선택합니다.
    7. **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 **라이선스 승인** 대화 상자에서 **동의함** 단추를 선택합니다.
 
 ### <a name="use-the-api-analyzer"></a>API 분석기 사용
@@ -56,13 +56,13 @@ API 분석기는 개별 경고 표시를 제어할 수 있는 DE(사용 중단 �
 
 ![“왼쪽에 있는 녹색 물결선과 전구가 있는 WebClient API의 스크린샷”](media/api-analyzer/green-squiggle.jpg)
 
-다음 예제(`DE004`)와 같이 **오류 목록** 창에는 사용되지 않는 API별 고유 ID가 포함된 경고가 있습니다. 
+다음 예제(`DE004`)와 같이 **오류 목록** 창에는 사용되지 않는 API별 고유 ID가 포함된 경고가 있습니다.
 
 ![“경고 ID 및 설명을 표시하는 오류 목록 창의 스크린샷”](media/api-analyzer/warnings-id-and-descriptions.jpg "경고가 포함된 오류 목록 창입니다.")
 
 ID를 클릭하면 API가 사용되지 않는 이유에 대한 자세한 정보와 사용할 수 있는 대체 API에 대한 제안이 있는 웹 페이지로 이동합니다.
 
-강조 표시된 멤버를 마우스 오른쪽 단추로 클릭하고 **\<진단 ID>을(를) 표시하지 않음**을 선택하여 모든 경고를 표시하지 않을 수 있습니다. 경고를 표시하지 않는 두 가지 방법이 있습니다. 
+강조 표시된 멤버를 마우스 오른쪽 단추로 클릭하고 **\<진단 ID>을(를) 표시하지 않음**을 선택하여 모든 경고를 표시하지 않을 수 있습니다. 경고를 표시하지 않는 두 가지 방법이 있습니다.
 
 - [로컬로(소스)](#suppress-warnings-locally)
 - [전역으로(비표시 오류(Suppression) 파일)](#suppress-warnings-globally) - 권장됨

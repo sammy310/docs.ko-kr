@@ -4,12 +4,12 @@ description: 라이브러리의 공용 API 화면만 포함하는 .NET에서 특
 author: MSDN-WhiteKnight
 ms.date: 09/12/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 7d2cc01861e8a3fdc260a2990ca0652878c386b0
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 3b85e51a015cca1e53ee2503c7bfa58c504fc718
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089264"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156467"
 ---
 # <a name="reference-assemblies"></a>참조 어셈블리
 
@@ -70,7 +70,7 @@ NuGet 패키지와 함께 참조 어셈블리를 배포하려는 경우 구현 �
 > [!NOTE]
 > 이 섹션의 정보는 C# 버전 7.1 또는 Visual Basic 버전 15.3부터 Roslyn 컴파일러가 생성한 참조 어셈블리에만 적용됩니다. .NET Framework 및 .NET Core 라이브러리의 참조 어셈블리 구조는 자체적으로 참조 어셈블리를 생성하는 메커니즘을 사용하므로 일부 세부 정보가 다를 수 있습니다. 예를 들어 `throw null` 본문이 아닌 완전히 빈 메서드 본문이 있을 수 있습니다. 그러나 일반적인 원칙은 여전히 적용됩니다. 사용 가능한 메서드 구현이 없고 공개 API 관점에서 관찰 가능한 영향을 미치는 멤버에 대한 메타데이터만 포함합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET 어셈블리](index.md)
 - [Framework 대상 지정 개요](/visualstudio/ide/visual-studio-multi-targeting-overview)

@@ -12,12 +12,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: edd398cd3e42e23301dcc992093d14d087754e76
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d6314fae266505fbb4410aaaa351973070ab3811
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347249"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156441"
 ---
 # <a name="resolve-assembly-loads"></a>어셈블리 로드 해결
 .NET에서는 어셈블리 로드를 보다 효율적으로 제어해야 하는 애플리케이션에 대해 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 이벤트를 제공합니다. 이 이벤트를 처리하면 애플리케이션이 정상적인 검색 경로 외부에서 로드 컨텍스트에 어셈블리를 로드하고, 여러 어셈블리 버전 중에서 로드할 버전을 선택하고, 동적 어셈블리를 내보내 반환하는 작업 등을 수행할 수 있습니다. 이 항목에서는 <xref:System.AppDomain.AssemblyResolve> 이벤트 처리 지침을 제공합니다.  
@@ -81,7 +81,7 @@ using namespace System::Reflection;
 ref class Example
 {
 internal:
-    static Assembly^ MyHandler(Object^ source, ResolveEventArgs^ e) 
+    static Assembly^ MyHandler(Object^ source, ResolveEventArgs^ e)
     {
         Console::WriteLine("Resolving {0}", e->Name);
         return Assembly::Load(e->Name);
@@ -98,7 +98,7 @@ void main()
         Object^ obj = ad->CreateInstanceAndUnwrap(
             "MyAssembly, version=1.2.3.4, culture=neutral, publicKeyToken=null",
             "MyType");
-    } 
+    }
     catch (Exception^ ex)
     {
         Console::WriteLine(ex->Message);
@@ -133,19 +133,19 @@ class BadExample
             object obj = ad.CreateInstanceAndUnwrap(
                 "MyAssembly, version=1.2.3.4, culture=neutral, publicKeyToken=null",
                 "MyType");
-        } 
+        }
         catch (Exception ex)
         {
             Console.WriteLine(ex.Message);
         }
     }
 
-    static Assembly MyHandler(object source, ResolveEventArgs e) 
+    static Assembly MyHandler(object source, ResolveEventArgs e)
     {
         Console.WriteLine("Resolving {0}", e.Name);
         return Assembly.Load(e.Name);
     }
-} 
+}
 
 /* This example produces output similar to the following:
 
@@ -165,7 +165,7 @@ Imports System.Reflection
 Class BadExample
 
     Shared Sub Main()
-    
+
         Dim ad As AppDomain = AppDomain.CreateDomain("Test")
         AddHandler ad.AssemblyResolve, AddressOf MyHandler
 
@@ -196,7 +196,7 @@ End Class
 'Process is terminated due to StackOverflowException.
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [최선의 어셈블리 로드 방법](../../framework/deployment/best-practices-for-assembly-loading.md)
 - [애플리케이션 도메인 사용](../../framework/app-domains/use.md)

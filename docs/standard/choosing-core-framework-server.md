@@ -3,12 +3,12 @@ title: 서버 앱에 대해 .NET Core와 .NET Framework 중에 선택
 description: .NET에서 서버 앱을 구축할 때 고려해야 할 .NET 구현에 대한 가이드입니다.
 author: cartermp
 ms.date: 06/19/2018
-ms.openlocfilehash: c202e42a46c4a72bdceca1fb250170d381603a8d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 0b6bf4c2eb66aa4de497923a0a16b65a955ba6fc
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124626"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159977"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>서버 앱에 대해 .NET Core와 .NET Framework 중에 선택
 
@@ -75,7 +75,7 @@ Docker 컨테이너는 고유한 Linux 또는 Windows 인프라나 [Azure Kubern
 
 라이브러리는 .NET Standard를 신속하게 수용하고 있습니다. .NET Standard에서는 .NET Core를 포함한 모든 .NET 구현에서 코드를 공유할 수 있습니다. .NET Standard 2.0을 사용하면 훨씬 더 쉬워집니다.
 
-- API 노출 영역이 훨씬 더 커졌습니다. 
+- API 노출 영역이 훨씬 더 커졌습니다.
 - .NET Framework 호환 모드가 도입되었습니다. 이 호환 모드에서는 .NET Standard/.NET Core 프로젝트에서 .NET Framework 라이브러리를 참조할 수 있습니다. 호환 모드에 대한 자세한 내용은 [.NET Standard 2.0 발표](https://devblogs.microsoft.com/dotnet/announcing-net-standard-2-0/)를 참조하세요.
 
 따라서 라이브러리 또는 NuGet 패키지가 .NET Standard/.NET Core에서 사용할 수 없는 기술을 사용하는 경우에만 .NET Framework를 사용해야 합니다.
@@ -86,7 +86,7 @@ Docker 컨테이너는 고유한 Linux 또는 Windows 인프라나 [Azure Kubern
 
 - ASP.NET Web Forms 애플리케이션: ASP.NET Web Forms는 .NET Framework에서만 사용할 수 있습니다. ASP.NET Core는 ASP.NET Web Forms에 사용할 수 없습니다. .NET Core에 ASP.NET Web Forms를 적용할 계획은 없습니다.
 
-- ASP.NET 웹 페이지 애플리케이션: ASP.NET 웹 페이지는 ASP.NET Core에 포함되지 않습니다. 
+- ASP.NET 웹 페이지 애플리케이션: ASP.NET 웹 페이지는 ASP.NET Core에 포함되지 않습니다.
 
 - WCF 서비스 구현. .NET Core에서 WCF 서비스를 사용할 수 있는 [WCF-클라이언트 라이브러리](https://github.com/dotnet/wcf)가 있더라도 WCF 서버 구현은 현재 .NET Framework에서만 사용할 수 있습니다. 이 시나리오는 .NET Core에 대한 현재 계획의 일부가 아니지만 차후에 고려될 예정입니다.
 

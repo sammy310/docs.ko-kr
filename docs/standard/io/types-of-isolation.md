@@ -18,12 +18,12 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-ms.openlocfilehash: aa8a62ee0c653a1905283696b97f55a3e6ffff85
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 99e1f3f96465d05c100a0dbb2bc5218810c33754
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706545"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159431"
 ---
 # <a name="types-of-isolation"></a>격리 유형
 격리된 스토리지에 대한 액세스는 항상 스토리지를 만든 사용자로 제한됩니다. 이 유형의 격리를 구현하기 위해 공용 언어 런타임은 운영 체제에서 인식하고 저장소가 열릴 때 코드가 실행 중인 프로세스에 연결된 ID인 사용자 ID의 동일한 표기법을 사용합니다. 이 ID는 인증된 사용자 ID이지만 가장으로 인해 현재 사용자의 ID가 동적으로 변경될 수 있습니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "75706545"
 > [!IMPORTANT]
 > Windows 8.x 스토어 앱에는 격리된 스토리지를 사용할 수 없습니다. 대신에 Windows Runtime API에 포함된 `Windows.Storage` 네임스페이스의 애플리케이션 데이터 클래스를 사용하여 로컬 데이터 및 파일을 저장합니다. 자세한 내용은 Windows 개발자 센터에서 [애플리케이션 데이터](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) 를 참조하세요.  
   
-<a name="UserAssembly"></a>   
+<a name="UserAssembly"></a>
 ## <a name="isolation-by-user-and-assembly"></a>사용자 및 어셈블리별 격리  
  데이터 저장소를 사용하는 어셈블리를 애플리케이션 도메인에서 액세스할 수 있어야 하는 경우 사용자 및 어셈블리별로 격리하는 것이 적절합니다. 일반적으로 이 상황에서 격리된 스토리지는 여러 애플리케이션에 적용되는 데이터를 저장하는 데 사용되며 사용자 이름 또는 라이선스 정보와 같은 특정 애플리케이션에 연결되지 않습니다. 사용자 및 어셈블리별로 격리된 스토리지에 액세스하려면 애플리케이션 간에 정보를 전송하기 위해 코드를 신뢰할 수 있어야 합니다. 일반적으로 사용자 및 어셈블리별 격리는 인트라넷에서 허용되지만 인터넷에는 허용되지 않습니다. 정적 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A?displayProperty=nameWithType> 메서드를 호출하고 사용자 및 어셈블리로 전달하면 <xref:System.IO.IsolatedStorage.IsolatedStorageScope>는 이 유형의 격리를 통해 스토리지를 반환합니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "75706545"
  [!code-csharp[Conceptual.IsolatedStorage#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source11.cs#18)]
  [!code-vb[Conceptual.IsolatedStorage#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source11.vb#18)]  
   
-<a name="UserDomainAssembly"></a>   
+<a name="UserDomainAssembly"></a>
 ## <a name="isolation-by-user-domain-and-assembly"></a>사용자, 도메인 및 어셈블리별 격리  
  애플리케이션에서 개인 데이터 스토리지가 필요한 타사 어셈블리를 사용하는 경우 격리된 스토리지를 사용하여 개인 데이터를 저장할 수 있습니다. 사용자, 도메인 및 어셈블리별 격리를 사용하면 어셈블리가 저장소를 만들 때 실행 중이던 애플리케이션에서 어셈블리가 사용될 경우 및 저장소를 만든 사용자가 애플리케이션을 실행하는 경우에만 지정된 어셈블리의 코드만 해당 데이터에 액세스할 수 있습니다. 사용자, 도메인 및 어셈블리별 격리를 사용하면 타사 어셈블리에 의해 데이터가 다른 애플리케이션으로 누출되지 않습니다. 격리된 스토리지를 사용하려고 하지만 어떤 격리 유형을 사용할지 확신할 수 없는 경우에는 기본적으로 이 격리 유형을 선택해야 합니다. <xref:System.IO.IsolatedStorage.IsolatedStorageFile>의 정적 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> 메서드를 호출하고 사용자, 도메인 및 어셈블리로 전달하면 <xref:System.IO.IsolatedStorage.IsolatedStorageScope>는 이 유형의 격리를 통해 스토리지를 반환합니다.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "75706545"
  [!code-csharp[Conceptual.IsolatedStorage#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source10.cs#15)]
  [!code-vb[Conceptual.IsolatedStorage#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source10.vb#15)]  
   
-<a name="Roaming"></a>   
+<a name="Roaming"></a>
 ## <a name="isolated-storage-and-roaming"></a>격리된 스토리지 및 로밍  
  로밍 사용자 프로필은 사용자가 네트워크에서 ID를 설정하고 해당 ID를 사용하여 모든 개인 설정을 적용하여 네트워크 컴퓨터에 로그인하도록 하는 Windows 기능입니다. 격리된 스토리지를 사용하는 어셈블리는 사용자의 격리된 스토리지가 로밍 사용자 프로필과 함께 이동되도록 지정할 수 있습니다. 로밍은 사용자 및 어셈블리별 격리 및 사용자, 도메인 및 어셈블리별 격리와 함께 사용할 수 있습니다. 로밍 범위를 사용하지 않으면 로밍 사용자 프로필이 사용되는 경우에도 저장소가 로밍되지 않습니다.  
   

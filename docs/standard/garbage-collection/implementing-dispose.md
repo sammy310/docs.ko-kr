@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: 0583329ae75fa54cf000212479895ccebdbd30d8
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: a7e03a833886a1486e0dc081d6ef059791a464b5
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74142060"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156337"
 ---
 # <a name="implementing-a-dispose-method"></a>Dispose 메서드 구현
 
@@ -125,7 +125,7 @@ SafeHandle을 사용하는 파생된 클래스에 대한 삭제 패턴을 구현
 > [!NOTE]
 > C#에서 [소멸자](../../csharp/programming-guide/classes-and-structs/destructors.md)를 정의하여 <xref:System.Object.Finalize%2A?displayProperty=nameWithType>를 재정의합니다.  
   
-<a name="SafeHandles"></a>   
+<a name="SafeHandles"></a>
 ## <a name="using-safe-handles"></a>SafeHandle 사용
 
 개체 종료자에 대한 코드를 작성하는 작업은 올바르게 수행되지 않을 경우 문제를 일으킬 수 있는 복잡한 작업입니다. 따라서 종료자를 구현하는 대신 <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> 개체를 생성하는 것이 좋습니다.  
@@ -142,7 +142,7 @@ SafeHandle을 사용하는 파생된 클래스에 대한 삭제 패턴을 구현
   
 - 대기 핸들에 대한 <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> 클래스  
   
-<a name="base"></a>   
+<a name="base"></a>
 ## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-base-class"></a>SafeHandle을 사용하여 기본 클래스에 대한 삭제 패턴 구현
 
 다음 예제는 SafeHandle을 사용하여 관리되지 않는 리소스를 캡슐화하는 기본 클래스에 대한 삭제 패턴인 `DisposableStreamResource`를 보여 줍니다. 이는 `DisposableResource`을 사용하여 열려 있는 파일을 나타내는 <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> 개체를 래핑하는 <xref:System.IO.Stream> 클래스를 정의합니다. 또한 `DisposableResource` 메서드에는 파일 스트림에서 총 바이트 수를 반환하는 단일 속성인 `Size`도 포함됩니다.  
@@ -150,7 +150,7 @@ SafeHandle을 사용하는 파생된 클래스에 대한 삭제 패턴을 구현
 [!code-csharp[Conceptual.Disposable#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/base1.cs#9)]
 [!code-vb[Conceptual.Disposable#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/base1.vb#9)]  
   
-<a name="derived"></a>   
+<a name="derived"></a>
 ## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-derived-class"></a>SafeHandle을 사용하여 파생된 클래스에 대한 삭제 패턴 구현
 
 다음 예제는 이전 예제에 제공된 `DisposableStreamResource2` 클래스에서 상속되는 파생된 클래스에 대한 삭제 패턴인 `DisposableStreamResource`를 보여 줍니다. 클래스에서 추가 메서드인 `WriteFileInfo`를 추가하고 <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> 개체를 사용하여 쓰기 가능 파일의 핸들을 래핑합니다.  
@@ -158,7 +158,7 @@ SafeHandle을 사용하는 파생된 클래스에 대한 삭제 패턴을 구현
 [!code-csharp[Conceptual.Disposable#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/derived1.cs#10)]
 [!code-vb[Conceptual.Disposable#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/derived1.vb#10)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.GC.SuppressFinalize%2A>
 - <xref:System.IDisposable>

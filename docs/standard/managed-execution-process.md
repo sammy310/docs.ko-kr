@@ -10,12 +10,12 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-ms.openlocfilehash: 0ce7182af33a795188d01ac457b9d45b8ad305dd
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 46a266849f137076170287aeb10becedf83ccf78
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960391"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160224"
 ---
 # <a name="managed-execution-process"></a>관리되는 실행 프로세스
 <a name="introduction"></a> 관리되는 실행 프로세스에는 이 항목의 뒷부분에서 설명하는 다음 단계가 포함됩니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "74960391"
   
      공용 언어 런타임은 실행을 가능하게 하는 인프라와 실행 중에 사용할 수 있는 서비스를 제공합니다.  
   
-<a name="choosing_a_compiler"></a>   
+<a name="choosing_a_compiler"></a>
 ## <a name="choosing-a-compiler"></a>컴파일러 선택  
  CLR(공용 언어 런타임)에서 제공되는 이점을 얻으려면 런타임을 대상으로 지정하는 Visual Basic, C#, Visual C++, F# 또는 다양한 타사 컴파일러의 하나(예: Eiffel, Perl 또는 COBOL 컴파일러) 등의 언어 컴파일러를 하나 이상 사용해야 합니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "74960391"
   
  [맨 위로 이동](#introduction)  
   
-<a name="compiling_to_msil"></a>   
+<a name="compiling_to_msil"></a>
 ## <a name="compiling-to-msil"></a>MSIL로 컴파일  
  관리 코드를 컴파일하는 경우 컴파일러는 소스 코드를 네이티브 코드로 효율적으로 변환될 수 있는 CPU 독립적인 명령 집합인 MSIL(Microsoft Intermediate Language)로 변환합니다. MSIL에는 개체에 대한 메서드를 로드, 저장, 초기화, 호출하는 명령과 산술 및 논리 연산, 제어 흐름, 직접 메모리 액세스, 예외 처리 및 기타 작업에 대한 명령이 포함됩니다. 코드를 실행하기 전에 보통 [JIT(Just-In-Time) 컴파일러](#compiling_msil_to_native_code)를 통해 MSIL을 CPU 특정 코드로 변환해야 합니다. 공용 언어 런타임은 지원하는 각 컴퓨터 아키텍처에 대해 JIT 컴파일러를 하나 이상 제공하므로 같은 MSIL 집합이 JIT로 컴파일되고 지원되는 모든 아키텍처에서 실행될 수 있습니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "74960391"
   
  [맨 위로 이동](#introduction)  
   
-<a name="compiling_msil_to_native_code"></a>   
+<a name="compiling_msil_to_native_code"></a>
 ## <a name="compiling-msil-to-native-code"></a>MSIL을 네이티브 코드로 컴파일  
  MSIL(Microsoft Intermediate Language)을 실행하기 전에 공용 언어 런타임을 기반으로 MSIL을 대상 컴퓨터 아키텍처에 대한 네이티브 코드로 컴파일해야 합니다. .NET Framework는 이 변환을 수행하는 두 가지 방법을 제공합니다.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "74960391"
   
  [맨 위로 이동](#introduction)  
   
-<a name="running_code"></a>   
+<a name="running_code"></a>
 ## <a name="running-code"></a>코드 실행  
  공용 언어 런타임은 관리되는 실행을 가능하게 하는 인프라와 실행 중에 사용할 수 있는 서비스를 제공합니다. 메서드를 실행하기 전에 프로세서 특정 코드로 컴파일해야 합니다. MSIL이 생성된 각 메서드는 처음 호출될 때 JIT로 컴파일되고 나서 실행됩니다. 다음에 메서드가 실행될 때 기존의 JIT로 컴파일된 네이티브 코드가 실행됩니다. 코드를 JIT로 컴파일하고 나서 실행하는 프로세스는 실행이 완료될 때까지 반복됩니다.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "74960391"
   
  [맨 위로 이동](#introduction)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [개요](../../docs/framework/get-started/overview.md)
 - [언어 독립성 및 언어 독립적 구성 요소](../../docs/standard/language-independence-and-language-independent-components.md)

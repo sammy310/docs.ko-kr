@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], explicitly implementing
 ms.assetid: 514cde76-f981-474e-8b40-9493619f899c
-ms.openlocfilehash: d006db2a7501a3273f5cd11e82bc589b21e1ce9f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: dff094aca237ed6146bd9b52813c40549bc99b9b
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712093"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627787"
 ---
 # <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>인터페이스 멤버를 명시적으로 구현하는 방법(C# 프로그래밍 가이드)
-이 예제에서는 [interface](../../language-reference/keywords/interface.md)`IDimensions` 및 `Box` 클래스를 선언합니다. 이 클래스는 인터페이스 멤버 `getLength` 및 `getWidth`를 명시적으로 구현합니다. 멤버는 인터페이스 인스턴스 `dimensions`를 통해 액세스합니다.  
+이 예제에서는 [interface](../../language-reference/keywords/interface.md)`IDimensions` 및 `Box` 클래스를 선언합니다. 이 클래스는 인터페이스 멤버 `GetLength` 및 `GetWidth`를 명시적으로 구현합니다. 멤버는 인터페이스 인스턴스 `dimensions`를 통해 액세스합니다.  
   
 ## <a name="example"></a>예제  
  [!code-csharp[csProgGuideInheritance#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#8)]  

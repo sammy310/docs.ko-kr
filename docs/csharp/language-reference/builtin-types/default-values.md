@@ -5,12 +5,12 @@ ms.date: 12/18/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 2447db25e837cdcd6d67847b8677d7d44da551a9
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 93b6079b9a3bbf6d537094cab9dfb305ace7f6bf
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964874"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625867"
 ---
 # <a name="default-values-of-c-types-c-reference"></a>C# 형식의 기본값(C# 참조)
 
@@ -24,7 +24,7 @@ ms.locfileid: "75964874"
 |[bool](bool.md)|`false`|
 |[char](char.md)|`'\0'`(U+0000)|
 |[enum](enum.md)|식 `(E)0`로 생성한 값이며 여기서 `E`는 열거형 식별자입니다.|
-|[struct](../keywords/struct.md)|모든 값 형식 필드를 기본값으로 설정하고 모든 참조 형식 필드를 `null`로 설정하여 생성한 값입니다.|
+|[struct](struct.md)|모든 값 형식 필드를 기본값으로 설정하고 모든 참조 형식 필드를 `null`로 설정하여 생성한 값입니다.|
 |Any [Null 허용 값 형식](nullable-value-types.md)|<xref:System.Nullable%601.HasValue%2A> 속성은 `false`이고 <xref:System.Nullable%601.Value%2A> 속성은 정의되지 않은 인스턴스입니다. 이 기본값은 null 허용 값 형식의 *null* 값으로도 알려져 있습니다.|
 
 [기본 연산자](../operators/default.md)를 사용하여 다음 예제와 같이 형식의 기본값을 생성합니다.

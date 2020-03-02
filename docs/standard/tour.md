@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 0154910b91df0b2f72daebe802e4c75bbca964bb
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f4cd2e47da236d276a42b972265ffd1a2fe27310
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337573"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160341"
 ---
 # <a name="tour-of-net"></a>.NET 둘러보기
 
@@ -21,13 +21,13 @@ ms.locfileid: "75337573"
 
 ## <a name="how-to-run-the-code-samples"></a>코드 샘플을 실행하는 방법
 
-코드 샘플을 실행하기 위한 개발 환경 설정 방법은 [시작](get-started.md) 항목을 참조하세요. 이 페이지의 코드 샘플을 복사하여 샘플을 실행할 환경에 붙여넣으세요. 
+코드 샘플을 실행하기 위한 개발 환경 설정 방법은 [시작](get-started.md) 항목을 참조하세요. 이 페이지의 코드 샘플을 복사하여 샘플을 실행할 환경에 붙여넣으세요.
 
 ## <a name="programming-languages"></a>프로그래밍 언어
 
 .NET은 여러 프로그래밍 언어를 지원합니다. .NET 구현은 무엇보다 언어와 관련이 없는 런타임과 언어 상호 운용성을 지정하는 [CLI(공용 언어 인프라)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/)를 구현합니다. 즉 어떤 .NET 언어를 선택해도 .NET에서 앱과 서비스를 빌드할 수 있습니다.
 
-Microsoft에서는 C#과 F#, Visual Basic 이 세 가지 .NET 언어를 적극적으로 개발하고 지원합니다. 
+Microsoft에서는 C#과 F#, Visual Basic 이 세 가지 .NET 언어를 적극적으로 개발하고 지원합니다.
 
 * C#은 C 스타일 언어의 표현력과 우아함은 그대로 유지하면서 간단하고 형식이 안전한 개체 지향 언어입니다. C나 이와 비슷한 언어에 익숙한 사용자라면 누구나 거의 문제 없이 C#을 사용할 수 있을 것입니다. C#에 대한 자세한 내용은 [C# 가이드](../csharp/index.yml)를 참조하세요.
 

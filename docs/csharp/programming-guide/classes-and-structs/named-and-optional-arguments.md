@@ -13,12 +13,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 6afa8a2bd2dfee8d7c36b58342036d18241317a8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3685482caebd892c460a3cc2ecf3a22acbe3c9ec
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714794"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673409"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>명명된 인수와 선택적 인수(C# 프로그래밍 가이드)
 C# 4에서는 명명된 인수와 선택적 인수가 도입되었습니다. *명명된 인수*를 사용하면 인수를 매개 변수 목록 내의 매개 변수 위치가 아니라 매개 변수 이름과 연결하여 특정 매개 변수에 대한 인수를 지정할 수 있습니다. *선택적 인수*를 사용하면 일부 매개 변수에 대한 인수를 생략할 수 있습니다. 두 기법 모두 메서드, 인덱서, 생성자 및 대리자에 사용할 수 있습니다.  
@@ -69,7 +69,7 @@ C# 4에서는 명명된 인수와 선택적 인수가 도입되었습니다. *�
   
 - 상수 식  
   
-- `new ValType()` 형태의 식. 여기서 `ValType`은 [enum](../../language-reference/builtin-types/enum.md) 또는 [struct](structs.md)와 같은 값 형식입니다.  
+- `new ValType()` 형태의 식. 여기서 `ValType`은 [enum](../../language-reference/builtin-types/enum.md) 또는 [struct](../../language-reference/builtin-types/struct.md)와 같은 값 형식입니다.  
   
 - [default(ValType)](../../language-reference/operators/default.md) 형태의 식. 여기서 `ValType`은 값 형식입니다.  
   

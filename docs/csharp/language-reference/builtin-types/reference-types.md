@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: d5ca0593d802d331d980cf35c701e0a79d54abee
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: 6b65d7e79e4eac30171eb0aad650f7c1e3880e30
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163100"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627272"
 ---
 # <a name="built-in-reference-types-c-reference"></a>기본 제공 참조 형식(C# 참조)
 
@@ -39,7 +39,7 @@ C#에는 여러 가지 기본 제공 참조 형식이 있습니다. .NET 라이�
 
 `string` 형식은 0자 이상의 유니코드 문자 시퀀스를 나타냅니다. `string`는 .NET에서 <xref:System.String?displayProperty=nameWithType>의 별칭입니다.
 
-`string`은 참조 형식이지만 [같음 연산자 `==` 및 `!=`](../operators/equality-operators.md#string-equality)는 참조가 아니라 `string` 개체의 값을 비교하도록 정의됩니다. 이 때문에 좀 더 직관적으로 문자열이 같은지 테스트할 수 있습니다. 예:
+`string`은 참조 형식이지만 [같음 연산자 `==` 및 `!=`](../operators/equality-operators.md#string-equality)는 참조가 아니라 `string` 개체의 값을 비교하도록 정의됩니다. 이 때문에 좀 더 직관적으로 문자열이 같은지 테스트할 수 있습니다. 예를 들어:
 
 ```csharp-interactive
 string a = "hello";
@@ -97,15 +97,15 @@ for (int i = 0; i < str.Length; i++)
 ```csharp-interactive
 string a = "\\\u0066\n F";
 Console.WriteLine(a);
-\\ Output:
-\\ \f
-\\  F
+// Output:
+// \f
+//  F
 ```
 
 > [!NOTE]
 > 이스케이프 코드 `\udddd`(여기서 `dddd`는 4자리 숫자)는 유니코드 문자 U+`dddd`를 나타냅니다. 8자리 유니코드 이스케이프 코드 `\Udddddddd`도 인식됩니다.
 
-[축자 문자열 리터럴](../tokens/verbatim.md)은 `@`로 시작하며 큰따옴표로 묶여 있습니다. 예:
+[축자 문자열 리터럴](../tokens/verbatim.md)은 `@`로 시작하며 큰따옴표로 묶여 있습니다. 예를 들어:
 
 ```csharp
 @"good morning"  // a string literal

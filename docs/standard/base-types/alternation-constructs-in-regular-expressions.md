@@ -15,12 +15,12 @@ helpviewer_keywords:
 - constructs, alternation
 - .NET Framework regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-ms.openlocfilehash: 8db9ef72415f148aca2c975fc4e8b70421e3adc3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 02664bd2812f89649ec933483161263bae530a75
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711560"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159691"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>정규식의 교체 구문
 
@@ -62,7 +62,7 @@ ms.locfileid: "75711560"
 |<code>(\d{2}-\d{7}&#124;\d{3}-\d{2}-\d{4})</code>|10진수 2개, 하이픈, 10진수 7개 순의 일치 항목이나 10진수 3개, 하이픈, 10진수 2개, 또 다른 하이픈, 10진수 4개 순의 일치 항목을 찾습니다.|  
 |`\d`|단어 경계에서 일치 항목 찾기를 끝냅니다.|  
   
-<a name="Conditional_Expr"></a>   
+<a name="Conditional_Expr"></a>
 ## <a name="conditional-matching-with-an-expression"></a>식을 사용한 조건부 일치
 
 이 언어 요소는 초기 패턴을 찾을지 여부에 따라 두 패턴의 하나를 찾으려고 합니다. 사용되는 구문은 다음과 같습니다.  

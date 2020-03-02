@@ -5,12 +5,12 @@ ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: f9bff86ac559e40136ed016b862eef8ba0863ce3
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 1d66c0c166724f195a3cafd9bcbe3c7414c08ebb
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972692"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159509"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly"></a>방법: 파일이 어셈블리인지 확인
 
@@ -30,7 +30,7 @@ ms.locfileid: "70972692"
   
 2. <xref:System.BadImageFormatException> 예외가 throw되는 경우 파일이 어셈블리가 아닙니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
 이 예제에서는 DLL을 테스트하여 어셈블리인지 확인합니다.  
 
 ```csharp
@@ -88,10 +88,10 @@ End Module
 ' Output (with .NET Framework 3.5 installed):  
 '        Yes, the file is an Assembly.  
 ```
- 
+
 <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> 메서드는 테스트 파일을 로드한 다음 정보를 읽고 나면 해제합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Reflection.AssemblyName>
 - [C# 프로그래밍 가이드](../../csharp/programming-guide/index.md)

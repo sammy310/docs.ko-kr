@@ -7,12 +7,12 @@ helpviewer_keywords:
 - I/O [.NET], buffers
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: e42f165bfedec3b1fa54615ee7e2a2028f40aadb
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: f939164cd56b2fb2feeeb171236b0e1171327e19
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960476"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160120"
 ---
 # <a name="work-with-buffers-in-net"></a>.NET에서 버퍼 작업
 
@@ -115,6 +115,8 @@ SequencePosition? FindIndexOf(in ReadOnlySequence<byte> buffer, byte data) => bu
 
 [!code-csharp[](~/samples/snippets/csharp/buffers/MyClass.cs?name=snippet5)]
 
+[!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
+
 ##### <a name="process-text-data"></a>텍스트 데이터 처리
 
 다음 예제가 하는 일:
@@ -146,7 +148,7 @@ SequencePosition? FindIndexOf(in ReadOnlySequence<byte> buffer, byte data) => bu
 - 두 개의 `SequencePosition`를 비교할 수 없어 다음 작업을 수행하기 어렵습니다.
   - 한 위치가 다른 위치보다 크거나 작은 경우를 확인합니다.
   - 몇 가지 구문 분석 알고리즘을 작성합니다.
-- `ReadOnlySequence<T>`는 개체 참조보다 크고, 가능하면 [in](../../csharp/language-reference/keywords/in-parameter-modifier.md) 또는 [ref](../../csharp/language-reference/keywords/ref.md)에 의해 전달되어야 합니다. `in` 또는 `ref`를 통해 `ReadOnlySequence<T>`를 전달하면 [구조체](../../csharp/language-reference/keywords/struct.md) 복사본이 줄어듭니다.
+- `ReadOnlySequence<T>`는 개체 참조보다 크고, 가능하면 [in](../../csharp/language-reference/keywords/in-parameter-modifier.md) 또는 [ref](../../csharp/language-reference/keywords/ref.md)에 의해 전달되어야 합니다. `in` 또는 `ref`를 통해 `ReadOnlySequence<T>`를 전달하면 [구조체](../../csharp/language-reference/builtin-types/struct.md) 복사본이 줄어듭니다.
 - 빈 세그먼트:
   - `ReadOnlySequence<T>` 내에서 유효합니다.
   - `ReadOnlySequence<T>.TryGet` 메서드를 사용하여 반복할 때 표시될 수 있습니다.

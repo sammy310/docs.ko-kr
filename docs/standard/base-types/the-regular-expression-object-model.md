@@ -35,15 +35,15 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-ms.openlocfilehash: e637b2527ce0f7e1b48b713549cb87b2c13881db
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8956be3cf8f96a8dd255f378d4927404c172c908
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124804"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160003"
 ---
 # <a name="the-regular-expression-object-model"></a>Regular Expression 개체 모델
-<a name="introduction"></a> 이 항목에서는 .NET 정규식 작업을 수행하는 데 사용되는 개체 모델을 설명합니다. 여기에는 다음 섹션이 포함됩니다.  
+<a name="introduction"></a> 이 항목에서는 .NET 정규식 작업을 수행하는 데 사용되는 개체 모델을 설명합니다. 여기에는 다음 단원이 포함되어 있습니다.  
   
 - [정규식 엔진](#Engine)  
   
@@ -57,7 +57,7 @@ ms.locfileid: "73124804"
   
 - [개별 캡처](#the_individual_capture)  
   
-<a name="Engine"></a>   
+<a name="Engine"></a>
 ## <a name="the-regular-expression-engine"></a>정규식 엔진  
  .NET의 정규식 엔진은 <xref:System.Text.RegularExpressions.Regex> 클래스로 표현됩니다. 정규식 엔진은 정규식을 구문 분석 및 컴파일하고, 정규식 패턴을 입력 문자열과 일치시키는 작업 수행을 담당합니다. 이 엔진은 .NET 정규식 개체 모델의 중심 구성 요소입니다.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "73124804"
   
  정규식 패턴 `^\d{3}-\d{2}-\d{4}$` 는 다음 테이블과 같이 해석됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`^`|입력 문자열의 시작 부분을 찾습니다.|  
 |`\d{3}`|세 개의 10진수를 찾습니다.|  
@@ -107,7 +107,7 @@ ms.locfileid: "73124804"
   
  정규식 패턴 `\b(\w+)\W+(\1)\b` 는 다음 테이블과 같이 해석됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`\b`|단어 경계에서 일치 항목 찾기를 시작합니다.|  
 |`(\w+)`|하나 이상의 단어 문자를 찾습니다. 이 그룹은 첫 번째 캡처링 그룹입니다.|  
@@ -129,7 +129,7 @@ ms.locfileid: "73124804"
   
  정규식 패턴 `\b\d+\.\d{2}\b` 는 다음 테이블과 같이 해석됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`\b`|단어 경계에서 일치 항목 찾기를 시작합니다.|  
 |`\d+`|하나 이상의 10진수 숫자가 일치하는지 확인합니다.|  
@@ -139,7 +139,7 @@ ms.locfileid: "73124804"
   
  바꾸기 패턴 `$$$&`는 다음 테이블과 같이 해석됩니다.  
   
-|패턴|바꾸기 문자열|  
+|무늬|바꾸기 문자열|  
 |-------------|------------------------|  
 |`$$`|달러 기호($) 문자|  
 |`$&`|일치하는 전제 부분 문자열|  
@@ -152,18 +152,18 @@ ms.locfileid: "73124804"
   
  정규식 패턴 `\b\d{1,2}\.\s` 는 다음 테이블과 같이 해석됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`\b`|단어 경계에서 일치 항목 찾기를 시작합니다.|  
 |`\d{1,2}`|한 개 또는 두 개의 10진수를 찾습니다.|  
 |`\.`|마침표를 찾습니다.|  
 |`\s`|공백 문자를 찾습니다.|  
   
-<a name="Match_and_MCollection"></a>   
+<a name="Match_and_MCollection"></a>
 ## <a name="the-matchcollection-and-match-objects"></a>MatchCollection 및 Match 개체  
  정규식 메서드가 정규식 개체 모델의 일부인 두 개체 <xref:System.Text.RegularExpressions.MatchCollection> 개체 및 <xref:System.Text.RegularExpressions.Match> 개체를 반환합니다.  
   
-<a name="the_match_collection"></a>   
+<a name="the_match_collection"></a>
 ### <a name="the-match-collection"></a>일치 컬렉션  
  <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 메서드는 정규식 엔진이 입력 문자열에서 찾은 모든 일치 항목(입력 문자열에서 나타나는 순서대로)을 나타내는 <xref:System.Text.RegularExpressions.MatchCollection> 개체가 포함된 <xref:System.Text.RegularExpressions.Match> 개체를 반환합니다. 일치 항목이 없는 경우 이 메서드는 멤버 없이 <xref:System.Text.RegularExpressions.MatchCollection> 개체를 반환합니다. <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> 속성을 사용하여 인덱스(0에서 <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> 속성 값보다 1 작은 값까지)별로 컬렉션의 개별 멤버에 액세스할 수 있습니다. <xref:System.Text.RegularExpressions.MatchCollection.Item%2A>은 컬렉션의 인덱서(C#의 경우) 및 기본 속성(Visual Basic의 경우)입니다.  
   
@@ -174,7 +174,7 @@ ms.locfileid: "73124804"
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/matchcollection1.cs#6)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/matchcollection1.vb#6)]  
   
-<a name="the_match"></a>   
+<a name="the_match"></a>
 ### <a name="the-match"></a>일치  
  <xref:System.Text.RegularExpressions.Match> 클래스는 단일 정규식 일치의 결과를 나타냅니다. 다음과 같은 두 가지 방법으로 <xref:System.Text.RegularExpressions.Match> 개체에 액세스할 수 있습니다.  
   
@@ -215,7 +215,7 @@ ms.locfileid: "73124804"
   
  정규식 패턴 `\b\d+(,\d{3})*\.\d{2}\b` 는 다음 테이블과 같이 정의됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`\b`|단어 경계에서 일치 항목 찾기를 시작합니다.|  
 |`\d+`|하나 이상의 10진수 숫자가 일치하는지 확인합니다.|  
@@ -228,7 +228,7 @@ ms.locfileid: "73124804"
   
  [맨 위로 이동](#introduction)  
   
-<a name="GroupCollection"></a>   
+<a name="GroupCollection"></a>
 ## <a name="the-group-collection"></a>그룹 컬렉션  
  <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 속성은 단일 일치 항목에서 캡처된 그룹을 나타내는 <xref:System.Text.RegularExpressions.GroupCollection> 개체가 포함된 <xref:System.Text.RegularExpressions.Group> 개체를 반환합니다. 컬렉션의 첫 번째 <xref:System.Text.RegularExpressions.Group> 개체(인덱스 0에 있음)는 전체 일치를 나타냅니다. 뒤에 나오는 각 개체는 단일 캡처링 그룹의 결과를 나타냅니다.  
   
@@ -246,7 +246,7 @@ ms.locfileid: "73124804"
   
  정규식 패턴 `\b(\w+)\s(\d{1,2}),\s(\d{4})\b` 는 다음 테이블과 같이 정의됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`\b`|단어 경계에서 일치 항목 찾기를 시작합니다.|  
 |`(\w+)`|하나 이상의 단어 문자를 찾습니다. 이 그룹은 첫 번째 캡처링 그룹입니다.|  
@@ -259,7 +259,7 @@ ms.locfileid: "73124804"
   
  [맨 위로 이동](#introduction)  
   
-<a name="the_captured_group"></a>   
+<a name="the_captured_group"></a>
 ## <a name="the-captured-group"></a>캡처된 그룹  
  <xref:System.Text.RegularExpressions.Group> 클래스는 단일 캡처링 그룹의 결과를 나타냅니다. 정규식에 정의된 캡처링 그룹을 나타내는 그룹 개체는 <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> 속성에서 반환하는 <xref:System.Text.RegularExpressions.GroupCollection> 개체의 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 속성에서 반환합니다. <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> 속성은 <xref:System.Text.RegularExpressions.Group> 클래스의 인덱스(C#의 경우) 및 기본 속성(Visual Basic의 경우)입니다. 또한 `foreach` 또는 `For Each` 구문을 사용하여 컬렉션을 반복함으로써 개별 멤버를 검색할 수 있습니다. 예제는 이전 섹션을 참조하세요.  
   
@@ -275,7 +275,7 @@ ms.locfileid: "73124804"
   
  정규식 패턴 `^(?<name>\w+):(?<value>\w+)` 는 다음 테이블과 같이 정의됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`^`|입력 문자열의 시작 부분에서 일치 항목 찾기를 시작합니다.|  
 |`(?<name>\w+)`|하나 이상의 단어 문자를 찾습니다. 캡처링 그룹은 이름은 `name`입니다.|  
@@ -306,7 +306,7 @@ ms.locfileid: "73124804"
   
  [맨 위로 이동](#introduction)  
   
-<a name="CaptureCollection"></a>   
+<a name="CaptureCollection"></a>
 ## <a name="the-capture-collection"></a>캡처 컬렉션  
  <xref:System.Text.RegularExpressions.Group> 개체는 마지막 캡처에 대한 정보만 포함합니다. 그러나 캡처링 그룹에 의해 만들어진 캡처의 전체 집합은 <xref:System.Text.RegularExpressions.CaptureCollection> 속성에서 반환하는 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 개체에서 계속 제공합니다. 컬렉션의 각 멤버는 해당 캡처링 그룹에 의해 만들어진 캡처를 캡처된 순서(및 따라서 캡처된 문자열이 입력 문자열에서 왼쪽에서 오른쪽으로 검색된 순서)대로 나타내는 <xref:System.Text.RegularExpressions.Capture> 개체입니다. 다음과 같은 두 가지 방법 중 하나로 컬력션에서 개별 <xref:System.Text.RegularExpressions.Capture> 개체를 검색할 수 있습니다.  
   
@@ -328,7 +328,7 @@ ms.locfileid: "73124804"
   
  [맨 위로 이동](#introduction)  
   
-<a name="the_individual_capture"></a>   
+<a name="the_individual_capture"></a>
 ## <a name="the-individual-capture"></a>개별 캡처  
  <xref:System.Text.RegularExpressions.Capture> 클래스는 단일 하위 식 캡처의 결과를 포함합니다. <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType> 속성은 일치하는 텍스트를 포함하고, <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType> 속성은 입력 문자열에서 일치하는 하위 문장열이 시작하는 위치(0부터 시작함)를 나타냅니다.  
   
@@ -339,7 +339,7 @@ ms.locfileid: "73124804"
   
  정규식은 다음 테이블과 같이 정의됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`\w+`|하나 이상의 단어 문자를 찾습니다.|  
 |`(\s\w+)*`|공백 문자 다음에 하나 이상의 단어 문자가 있는 0개 이상의 일치 항목을 찾습니다. 이 패턴에서는 여러 단어로 된 도시 이름을 찾습니다. 이 그룹은 세 번째 캡처링 그룹입니다.|  
@@ -349,7 +349,7 @@ ms.locfileid: "73124804"
 |`;`|세미콜론을 하나 찾습니다.|  
 |`((\w+(\s\w+)*),(\d+);)+`|단어 하나 다음에 추가 단어가 있고 그 다음에 쉼표 하나, 하나 이상의 숫자 및 세미콜론 하나가 한 번 이상 나타나는 패턴을 찾습니다. 이 그룹은 첫 번째 캡처링 그룹입니다.|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Text.RegularExpressions>
 - [.NET 정규식](../../../docs/standard/base-types/regular-expressions.md)

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
-ms.openlocfilehash: b315d1f04c9e74700afba8ee7871b23ab4b2fd28
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 473f5f8e226f0a144746ac943afcffdccd4777c7
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744688"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625854"
 ---
 # <a name="no-loc-textinterface-c-reference"></a>:::no-loc text="interface":::(C# 참조)
 
-인터페이스는 계약을 정의합니다. 해당 계약을 구현 하는 [`class`](class.md) 또는 [`struct`](struct.md)는 인터페이스에 정의된 구성원의 구현을 제공해야 합니다. C# 8.0부터 인터페이스는 구성원에 대한 기본 구현을 정의할 수 있습니다. 공통적인 기능에 대해 단일 구현을 제공하기 위해 [`static`](static.md) 구성원을 정의할 수도 있습니다.
+인터페이스는 계약을 정의합니다. 해당 계약을 구현 하는 [`class`](class.md) 또는 [`struct`](../builtin-types/struct.md)는 인터페이스에 정의된 구성원의 구현을 제공해야 합니다. C# 8.0부터 인터페이스는 구성원에 대한 기본 구현을 정의할 수 있습니다. 공통적인 기능에 대해 단일 구현을 제공하기 위해 [`static`](static.md) 구성원을 정의할 수도 있습니다.
 
 다음 예제에서 `ImplementationClass` 클래스는 매개 변수가 없고 `void`를 반환하는 `SampleMethod`라는 메서드를 구현해야 합니다.
 
@@ -78,6 +78,4 @@ public interface INamed
 - [인터페이스](../../programming-guide/interfaces/index.md)
 - [속성 사용](../../programming-guide/classes-and-structs/using-properties.md)
 - [인덱서 사용](../../programming-guide/indexers/using-indexers.md)
-- [class](class.md)
-- [struct](struct.md)
 - [인터페이스](../../programming-guide/interfaces/index.md)

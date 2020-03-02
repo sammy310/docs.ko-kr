@@ -11,15 +11,15 @@ helpviewer_keywords:
 - log files, appending to
 - I/O [.NET Framework], log files
 ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
-ms.openlocfilehash: b0e399ba3c0cfa0ad3b92afbc7e07af7659e8ae6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a549aba3a763bcfc5a3889efd65e2495eca7622c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706714"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155713"
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>방법: 열기 및 로그 파일에 추가
-<xref:System.IO.StreamWriter> 및 <xref:System.IO.StreamReader>는 스트림에서 문자를 쓰고 문자를 읽습니다. 다음 코드 예제는 입력을 위해 *log.txt* 파일을 열거나, 파일이 존재하지 않는 경우 파일을 만들고 파일의 끝에 로그 정보를 추가합니다. 이 예제는 파일의 콘텐츠를 디스플레이의 표준 출력에 씁니다. 
+<xref:System.IO.StreamWriter> 및 <xref:System.IO.StreamReader>는 스트림에서 문자를 쓰고 문자를 읽습니다. 다음 코드 예제는 입력을 위해 *log.txt* 파일을 열거나, 파일이 존재하지 않는 경우 파일을 만들고 파일의 끝에 로그 정보를 추가합니다. 이 예제는 파일의 콘텐츠를 디스플레이의 표준 출력에 씁니다.
 
 이 예제의 대안으로, 정보를 단일 문자열 또는 문자열 배열로 저장하고, <xref:System.IO.File.WriteAllText%2A?displayProperty=nameWithType> 또는 <xref:System.IO.File.WriteAllLines%2A?displayProperty=nameWithType> 메서드를 사용하여 동일한 기능을 수행할 수도 있습니다.  
   

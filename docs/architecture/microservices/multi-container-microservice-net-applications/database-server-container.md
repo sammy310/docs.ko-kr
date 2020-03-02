@@ -2,12 +2,12 @@
 title: 컨테이너로 실행되는 데이터베이스 서버 사용
 description: 컨테이너로 실행되는 데이터베이스 서버를 개발용으로만 사용하는 중요성을 이해합니다. 절대 프로덕션용이 아닙니다.
 ms.date: 01/30/2020
-ms.openlocfilehash: 816ac196636f78a368a9f20e8eedcc6a22567fa7
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 0cbc933003aac10970814378c27e88b5cb0ddbe5
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502284"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628529"
 ---
 # <a name="use-a-database-server-running-as-a-container"></a>컨테이너로 실행되는 데이터베이스 서버 사용
 
@@ -48,10 +48,10 @@ SQL Server를 컨테이너로 실행하면 SQL Server의 인스턴스에 대한 
 ### <a name="additional-resources"></a>추가 자료
 
 - **Linux, Mac 또는 Windows에서 SQL Server Docker 이미지 실행** \
-    <https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker>
+  <https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker>
 
 - **sqlcmd를 사용하여 Linux에서 SQL Server 연결 및 쿼리** \
-    <https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd>
+  <https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd>
 
 ## <a name="seeding-with-test-data-on-web-application-startup"></a>웹 애플리케이션 시작 시 테스트 데이터로 시드
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - managed heap
 - runtime, automatic memory management
 ms.assetid: d4850de5-fa63-4936-a250-5678d118acba
-ms.openlocfilehash: d112bf6d145893bd7b0f99e2b233fc83e72fe227
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1038f16dca507e58005189c9558a9ec8dae4b34f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140575"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159704"
 ---
 # <a name="automatic-memory-management"></a>Automatic Memory Management
 자동 메모리 관리는 [관리되는 실행](../../docs/standard/managed-execution-process.md)을 수행하는 중에 공용 언어 런타임에서 제공되는 서비스 중 하나입니다. CLR의 가비지 수집기에서 애플리케이션의 메모리 할당과 해제를 관리합니다. 즉, 관리되는 애플리케이션을 개발할 때 개발자는 메모리 관리 작업을 수행하기 위해 코드를 작성할 필요가 없습니다. 자동 메모리 관리를 사용하면 실수로 개체 비우기를 수행하지 않거나 메모리 누수를 유발하거나 또는 이미 비워진 개체를 찾기 위해 메모리에 액세스하려는 경우 등의 일반적인 문제를 해결할 수 있습니다. 이 단원에서는 가비지 수집기에서 메모리를 할당하고 해제하는 방법에 대해 설명합니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "73140575"
   
  관리되는 힙에서 메모리를 할당하면 관리되지 않는 힙에서 메모리를 할당하는 것보다 속도가 더 빠릅니다. 런타임에서는 포인터에 값을 더하여 개체에 메모리를 할당하기 때문에, 스택에서 메모리를 할당하는 속도만큼 빠릅니다. 또한, 연속으로 할당된 새 개체는 관리되는 힙에 인접하여 저장되므로 애플리케이션에서 개체에 상당히 빠른 속도로 액세스할 수 있습니다.  
   
-<a name="cpconautomaticmemorymanagementreleasingmemoryanchor1"></a>   
+<a name="cpconautomaticmemorymanagementreleasingmemoryanchor1"></a>
 ## <a name="releasing-memory"></a>메모리 해제  
  가비지 수집기의 최적화 엔진은 수행 중인 할당에 따라 수집을 수행하기에 가장 적합한 시간을 결정합니다. 수집을 수행할 때 가비지 수집기는 애플리케이션에서 더 이상 사용되지 않는 개체에 대한 메모리를 해제합니다. 가비지 수집기는 애플리케이션의 루트를 검사하여 더 이상 사용되지 않는 개체를 결정합니다. 모든 애플리케이션에는 여러 개의 루트가 있습니다. 각 루트는 관리되는 힙에 있는 개체를 참조하거나 Null로 설정됩니다. 애플리케이션 루트에는 정적 필드, 스레드 스택의 지역 변수와 매개 변수 및 CPU 레지스터가 포함되어 있습니다. 가비지 수집기는 [JIT(Just-In-Time) 컴파일러](../../docs/standard/managed-execution-process.md)와 런타임에서 관리하는 활성 루트 목록에 액세스할 수 있습니다. 가비지 수집기는 이 목록을 사용하여 애플리케이션 루트를 검사하고 이 과정에서 그래프를 만드는데, 이 그래프에는 루트에서 연결할 수 있는 모든 개체가 포함되어 있습니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "73140575"
 ## <a name="releasing-memory-for-unmanaged-resources"></a>관리되지 않는 리소스의 메모리 할당 해제  
  가비지 수집기는 사용자 애플리케이션에서 만들어지는 대부분의 개체에 대해 메모리 관리 작업을 자동으로 수행할 수 있습니다. 하지만 관리되지 않는 리소스의 경우는 명시적으로 정리할 필요가 있습니다. 가장 일반적인 형태의 관리되지 않는 리소스로는 파일 핸들, 창 핸들 또는 네트워크 연결 등의 운영 체제 리소스를 래핑하는 개체를 들 수 있습니다. 가비지 수집기에서는 관리되지 않는 리소스를 캡슐화하는 데 사용되는 관리되는 개체의 수명을 추적할 수 있지만, 리소스 정리 방법에 대한 구체적인 정보는 알 수 없습니다. 관리되지 않는 리소스를 캡슐화해 주는 개체를 만드는 경우 관리되지 않는 리소스를 정리하는 데 필요한 코드를 공용 **Dispose** 메서드에 제공하는 것이 좋습니다. 개체 사용자는 **Dispose** 메서드를 사용하여 메모리 할당을 명시적으로 해제할 수 있습니다. 관리되지 않는 리소스를 캡슐화해 주는 개체를 사용하는 경우 사용자는 **Dispose** 메서드를 알아 두고 필요한 경우 이 메서드를 호출해야 합니다. 관리되지 않는 리소스 정리 및 **Dispose**를 구현하는 디자인 패턴 예제에 대해서는 [가비지 수집](../../docs/standard/garbage-collection/index.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.GC>
 - [가비지 수집](../../docs/standard/garbage-collection/index.md)

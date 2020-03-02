@@ -5,12 +5,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: b5be6892a265f0a2b7f3109321fdcf46d4b0ea22
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9005c425badc5a4ed74e6af3447e563daf61229e
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711846"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627801"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>고정 크기 버퍼(C# 프로그래밍 가이드)
 
@@ -22,7 +22,7 @@ private fixed char name[30];
 
 ## <a name="remarks"></a>설명
 
-안전한 코드에서 배열을 포함하는 C# 구조체는 배열 요소를 포함하지 않습니다. 대신 구조체에 요소에 대한 참조가 포함되어 있습니다. [unsafe](../../language-reference/keywords/unsafe.md) 코드 블록에서 사용될 경우 [struct](../../language-reference/keywords/struct.md)에 고정 크기 배열을 포함할 수 있습니다.
+안전한 코드에서 배열을 포함하는 C# 구조체는 배열 요소를 포함하지 않습니다. 대신 구조체에 요소에 대한 참조가 포함되어 있습니다. [unsafe](../../language-reference/keywords/unsafe.md) 코드 블록에서 사용될 경우 [struct](../../language-reference/builtin-types/struct.md)에 고정 크기 배열을 포함할 수 있습니다.
 
 다음 `struct`은 8바이트 크기입니다. `pathName` 배열은 참조입니다.
 

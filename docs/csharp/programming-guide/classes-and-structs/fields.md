@@ -4,16 +4,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: 665c99302887c51c69b4d818619dd6bedd43b644
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 46d4f77a4a490b2acdb5da20b9a477f27c38d410
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714942"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628243"
 ---
 # <a name="fields-c-programming-guide"></a>필드(C# 프로그래밍 가이드)
 
-*필드*는 [클래스](../../language-reference/keywords/class.md) 또는 [구조체](../../language-reference/keywords/struct.md)에서 직접 선언되는 모든 형식의 변수입니다. 필드는 포함하는 형식의 *멤버*입니다.
+*필드*는 [클래스](../../language-reference/keywords/class.md) 또는 [구조체](../../language-reference/builtin-types/struct.md)에서 직접 선언되는 모든 형식의 변수입니다. 필드는 포함하는 형식의 *멤버*입니다.
 
 클래스 또는 구조체에는 인스턴스 필드, 정적 필드 또는 둘 다 있을 수 있습니다. 인스턴스 필드는 형식의 인스턴스와 관련이 있습니다. 인스턴스 필드가 F인 T 클래스가 있는 경우 형식이 T인 개체 두 개를 만들고 각 개체에서 다른 개체의 값에 영향을 주지 않고 F 값을 수정할 수 있습니다. 반면 정적 필드는 클래스 자체에 속하며 해당 클래스의 모든 인스턴스에서 공유됩니다. 클래스 이름을 사용해야만 정적 필드에 액세스할 수 있습니다. 인스턴스 이름으로 정적 필드에 액세스 하는 경우 [CS0176](../../misc/cs0176.md) 컴파일 시간 오류가 발생합니다.
 
@@ -21,11 +21,11 @@ ms.locfileid: "75714942"
 
 필드는 일반적으로 둘 이상의 클래스 메서드에서 액세스할 수 있고 단일 메서드의 수명보다 오랫동안 저장되어야 하는 데이터를 저장합니다. 예를 들어 달력 날짜를 나타내는 클래스에는 각각 월, 일 및 연도에 대한 세 개의 정수 필드가 있을 수 있습니다. 단일 메서드 범위 내에서만 사용되는 변수는 메서드 본문 자체 내에 *지역 변수*로 선언해야 합니다.
 
-필드는 필드의 액세스 수준을 지정한 다음 필드의 형식, 필드의 이름순으로 지정하여 클래스 블록에서 선언됩니다. 예:
+필드는 필드의 액세스 수준을 지정한 다음 필드의 형식, 필드의 이름순으로 지정하여 클래스 블록에서 선언됩니다. 예를 들어:
 
 [!code-csharp[csProgGuideObjects#61](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#61)]
 
-개체의 필드에 액세스하려면 `objectname.fieldname`와 같이 개체 이름과 필드 이름 뒤에 마침표를 추가합니다. 예:
+개체의 필드에 액세스하려면 `objectname.fieldname`와 같이 개체 이름과 필드 이름 뒤에 마침표를 추가합니다. 예를 들어:
 
 [!code-csharp[csProgGuideObjects#62](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#62)]
 

@@ -11,12 +11,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 64f3a51b29a7116c736fea0e76465a4a73c640c2
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 9998e69e8bf1505bcfc7a9103e9d89616dad9633
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738772"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160315"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>방법: 강력한 이름으로 어셈블리 서명
 
@@ -73,9 +73,9 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
 ## <a name="sign-an-assembly-with-a-strong-name-by-using-attributes"></a>특성을 사용하여 강력한 이름으로 어셈블리 서명  
   
 1. <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=nameWithType> 또는 <xref:System.Reflection.AssemblyKeyNameAttribute> 특성을 소스 코드 모듈에 추가하고, 강력한 이름으로 어셈블리를 서명할 때 사용할 키 쌍이 포함된 컨테이너 또는 파일의 이름을 지정합니다.  
-   
+
 2. 소스 코드 파일을 정상적으로 컴파일합니다.  
-   
+
    > [!NOTE]
    > C# 및 Visual Basic 컴파일러에서는 소스 코드에 <xref:System.Reflection.AssemblyKeyFileAttribute> 또는 <xref:System.Reflection.AssemblyKeyNameAttribute> 특성이 나올 때 컴파일러 경고(각각 CS1699 및 BC41008)를 발생시킵니다. 이런 경고는 무시할 수 있습니다.  
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: c88f205a616587e5437bf4fc81bcbdcbbc19a9ac
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8e4518718d0975f8b4a65870f15d8c52d692c2f5
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712639"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625737"
 ---
 # <a name="sizeof-operator-c-reference"></a>sizeof 연산자(C# 참조)
 
@@ -42,7 +42,7 @@ ms.locfileid: "75712639"
 
 [!code-csharp[sizeof examples](~/samples/csharp/language-reference/operators/SizeOfOperator.cs)]
 
-`sizeof` 연산자는 관리되는 메모리의 공용 언어 런타임에서 할당하는 바이트 수를 반환합니다. [구조체](../keywords/struct.md) 형식의 경우 앞의 예제에서 보여 주는 것처럼 해당 값에 안쪽 여백이 포함됩니다. `sizeof` 연산자의 결과는 ‘관리되지 않는’ 메모리의 형식 크기를 반환하는 <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType> 메서드의 결과와 다를 수 있습니다. 
+`sizeof` 연산자는 관리되는 메모리의 공용 언어 런타임에서 할당하는 바이트 수를 반환합니다. [구조체](../builtin-types/struct.md) 형식의 경우 앞의 예제에서 보여 주는 것처럼 해당 값에 안쪽 여백이 포함됩니다. `sizeof` 연산자의 결과는 ‘관리되지 않는’ 메모리의 형식 크기를 반환하는 <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType> 메서드의 결과와 다를 수 있습니다. 
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 

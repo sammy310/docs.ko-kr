@@ -12,15 +12,15 @@ helpviewer_keywords:
 - data streams, reading text from files
 - I/O [.NET Framework], reading text from files
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
-ms.openlocfilehash: 49ea989a2b11c6572dc08970cf96e2df5f4fa024
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8676e5f0acd0646b4854df7dde060ec15548ec3e
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706662"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155726"
 ---
 # <a name="how-to-read-text-from-a-file"></a>방법: 파일에서 텍스트 읽기
-다음 예제에서는 데스크톱 응용 프로그램용 .NET을 사용하여 텍스트 파일에서 텍스트를 동기 또는 비동기적으로 읽는 방법을 보여줍니다. 두 예제에서는 <xref:System.IO.StreamReader> 클래스의 인스턴스를 만들 때 파일의 상대 또는 절대 경로를 제공합니다. 
+다음 예제에서는 데스크톱 응용 프로그램용 .NET을 사용하여 텍스트 파일에서 텍스트를 동기 또는 비동기적으로 읽는 방법을 보여줍니다. 두 예제에서는 <xref:System.IO.StreamReader> 클래스의 인스턴스를 만들 때 파일의 상대 또는 절대 경로를 제공합니다.
   
 > [!NOTE]
 > Windows 런타임에서는 파일을 읽고 파일에 쓰는 다양한 스트림 형식을 제공하기 때문에 이러한 코드 예제는 UWP(유니버설 Windows 플랫폼) 앱 개발에는 적용되지 않습니다. UWP 앱에서 파일의 텍스트를 읽는 방법을 보여주는 예제는 [빠른 시작: 파일 읽기 및 쓰기](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10))를 참조하세요. .NET Framework 스트림과 Windows 런타임 스트림 간의 변환 방법을 보여주는 예제는 [방법: .NET Framework 스트림과 Windows 런타임 스트림 간 변환](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)을 참조하세요.  
@@ -34,7 +34,7 @@ ms.locfileid: "75706662"
  [!code-csharp[Conceptual.BasicIO.TextFiles#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source3.cs#3)]
  [!code-vb[Conceptual.BasicIO.TextFiles#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source3.vb#3)]  
   
-## <a name="example-asynchronous-read-in-a-wpf-app"></a>예: WPF 앱에서 비동기식 읽기 
+## <a name="example-asynchronous-read-in-a-wpf-app"></a>예: WPF 앱에서 비동기식 읽기
  다음 예제에서는 WPF(Windows Presentation Foundation) 앱에서 비동기식 읽기 작업을 보여줍니다.  
   
 > [!IMPORTANT]

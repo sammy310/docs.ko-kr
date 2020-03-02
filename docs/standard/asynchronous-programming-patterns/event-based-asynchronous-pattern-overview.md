@@ -16,12 +16,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: 05b5ab19c5206395ab138465eccf2035b5cebe3e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: cce01a7c87f6f20b5e6c46881b8c863bb5a72a88
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046480"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160069"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>이벤트 기반 비동기 패턴 개요
 많은 작업을 동시에 수행하면서 사용자 상호 작용에 대해 응답성을 유지하는 애플리케이션에는 일반적으로 여러 스레드를 사용하는 디자인이 필요합니다. <xref:System.Threading> 네임스페이스는 고성능 다중 스레드 애플리케이션을 만드는 데 필요한 모든 도구를 제공하지만 이러한 도구를 효과적으로 사용하려면 다중 스레드 소프트웨어 엔지니어링에 대한 풍부한 경험이 필요합니다. 비교적 단순한 다중 스레드 애플리케이션의 경우 <xref:System.ComponentModel.BackgroundWorker> 구성 요소가 간단한 솔루션을 제공합니다. 보다 정교한 비동기 애플리케이션의 경우 이벤트 기반 비동기 패턴을 준수하는 클래스 구현을 고려하세요.  
@@ -60,19 +60,19 @@ ms.locfileid: "70046480"
 ```vb  
 Public Class AsyncExample  
     ' Synchronous methods.  
-    Public Function Method1(ByVal param As String) As Integer   
-    Public Sub Method2(ByVal param As Double)   
+    Public Function Method1(ByVal param As String) As Integer
+    Public Sub Method2(ByVal param As Double)
   
     ' Asynchronous methods.  
-    Overloads Public Sub Method1Async(ByVal param As String)   
-    Overloads Public Sub Method1Async(ByVal param As String, ByVal userState As Object)   
+    Overloads Public Sub Method1Async(ByVal param As String)
+    Overloads Public Sub Method1Async(ByVal param As String, ByVal userState As Object)
     Public Event Method1Completed As Method1CompletedEventHandler  
   
-    Overloads Public Sub Method2Async(ByVal param As Double)   
-    Overloads Public Sub Method2Async(ByVal param As Double, ByVal userState As Object)   
+    Overloads Public Sub Method2Async(ByVal param As Double)
+    Overloads Public Sub Method2Async(ByVal param As Double, ByVal userState As Object)
     Public Event Method2Completed As Method2CompletedEventHandler  
   
-    Public Sub CancelAsync(ByVal userState As Object)   
+    Public Sub CancelAsync(ByVal userState As Object)
   
     Public ReadOnly Property IsBusy () As Boolean  
   
@@ -131,7 +131,7 @@ public class AsyncExample
   
  일부 클래스는 비동기 작업이 진행됨에 따라 증분 결과를 보고할 수 있습니다. 이러한 결과는 <xref:System.ComponentModel.ProgressChangedEventArgs>에서 파생되는 클래스에 저장되며 파생 클래스에 속성으로 나타납니다. `ProgressChanged` 속성에 액세스하는 것처럼 <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> 이벤트의 이벤트 처리기에서 이러한 결과에 액세스할 수 있습니다. 보류 중인 비동기 작업이 여러 개인 경우 <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A> 속성을 사용하여 증분 결과를 보고 중인 작업을 구별할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.ComponentModel.ProgressChangedEventArgs>
 - <xref:System.ComponentModel.BackgroundWorker>

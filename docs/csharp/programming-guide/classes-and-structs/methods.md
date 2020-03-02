@@ -5,12 +5,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 8348e080d833e79dd364aee511ac7d05fb53d1cc
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 114fa2973c50be9a4199db9729e3cd9ea6122866
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543562"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626531"
 ---
 # <a name="methods-c-programming-guide"></a>메서드(C# 프로그래밍 가이드)
 
@@ -21,7 +21,7 @@ ms.locfileid: "77543562"
 
 ## <a name="method-signatures"></a>메서드 시그니처
 
-메서드는 [클래스](../../language-reference/keywords/class.md), [구조체](../../language-reference/keywords/struct.md) 또는 [인터페이스](../interfaces/index.md)에서 액세스 수준(예: `public` 또는 `private`), 선택적 한정자(예: `abstract` 또는 `sealed`), 반환 값, 메서드 이름 및 기타 메서드 매개 변수를 지정하여 선언합니다. 이들 파트는 함께 메서드 서명을 구성합니다.
+메서드는 [클래스](../../language-reference/keywords/class.md), [구조체](../../language-reference/builtin-types/struct.md) 또는 [인터페이스](../interfaces/index.md)에서 액세스 수준(예: `public` 또는 `private`), 선택적 한정자(예: `abstract` 또는 `sealed`), 반환 값, 메서드 이름 및 기타 메서드 매개 변수를 지정하여 선언합니다. 이들 파트는 함께 메서드 서명을 구성합니다.
 
 > [!NOTE]
 > 메서드의 반환 값은 메서드 오버로드를 위한 메서드 서명의 파트가 아닙니다. 그러나 대리자와 대리자가 가리키는 메서드 간의 호환성을 결정할 경우에는 메서드 서명의 파트입니다.

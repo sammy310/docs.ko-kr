@@ -2,12 +2,12 @@
 title: 높은 확장성 및 가용성을 위해 마이크로서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
 description: Kubernetes 애플리케이션 수명 주기를 개발하는 동안 높은 확장성과 가용성 및 Azure Dev Spaces의 가능성을 위해 마이크로 서비스 및 다중 컨테이너 애플리케이션을 오케스트레이션하는 옵션을 검색합니다.
 ms.date: 01/30/2020
-ms.openlocfilehash: f9e91d3958e2d567e68257c377f76cc3c2325a0b
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: ea204941a461794fbeeb2482aa11973b79437027
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502990"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628503"
 ---
 # <a name="orchestrate-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>높은 확장성 및 가용성을 위해 마이크로서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
 
@@ -36,7 +36,7 @@ ms.locfileid: "77502990"
 ## <a name="software-platforms-for-container-clustering-orchestration-and-scheduling"></a>컨테이너 클러스터링, 오케스트레이션 및 예약용 소프트웨어 플랫폼
 
 |     |   |
-|-----|---|
+|:---:|---|
 | **Kubernetes** <br> ![Kubernetes로고 이미지입니다.](./media/scalable-available-multi-container-microservice-applications/kubernetes-container-orchestration-system-logo.png) | [*Kubernetes*](https://kubernetes.io/)는 클러스터 인프라와 컨테이너 예약에서 기능 오케스트레이션에 이르기까지 다양한 기능을 제공하는 오픈 소스 제품입니다. 이를 통해 호스트 클러스터 전체에서 애플리케이션 컨테이너의 배포, 확장 및 작업을 자동화할 수 있습니다. <br><br> *Kubernetes*는 쉽게 관리하고 검색할 수 있도록 애플리케이션 컨테이너를 논리 단위로 그룹화하는 컨테이너 중심 인프라를 제공합니다. <br><br> *Kubernetes*의 완성도는 Linux에서 높았지만, Windows에서는 그렇지 못했습니다. |
 | **AKS(Azure Kubernetes Service)** <br> ![Azure Kubernetes Service 로고의 이미지입니다.](./media/scalable-available-multi-container-microservice-applications/azure-kubernetes-service-logo.png) | [AKS](https://azure.microsoft.com/services/kubernetes-service/)는 관리되는 Kubernetes 컨테이너 오케스트레이션 서비스로 Kubernetes 클러스터의 관리, 배포 및 운영을 간소화합니다. |
 

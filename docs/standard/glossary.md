@@ -3,12 +3,12 @@ title: .NET 용어
 description: .NET 설명서에서 사용되는 선택한 용어의 의미를 알아봅니다.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 822d6c9513d49dcc6bc57421003441d9bcc7c281
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 8da1d858835210590a80a624fb8989fbfe8e0a91
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921119"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160094"
 ---
 # <a name="net-glossary"></a>.NET 용어
 
@@ -22,11 +22,11 @@ Ahead-Of-Time 컴파일러입니다.
 
 [CoreRT](#corert)와 [.NET 네이티브](#net-native)를 참조하세요.
 
-## <a name="aspnet"></a>ASP.NET 
+## <a name="aspnet"></a>ASP.NET
 
 .NET Framework와 함께 제공되는 원래 ASP.NET 구현체입니다.
 
-경우에 따라 ASP.NET은 ASP.NET Core를 포함한 두가지 ASP.NET 구현체를 나타내는 포괄적인 용어입니다. 지정된 인스턴스에서 이 용어가 전달하는 의미는 컨텍스트에 의해 결정됩니다. 두 구현체을 모두 의미하는 데 ASP.NET을 사용하지 않는 것을 분명히 하려는 경우 ASP.NET 4.x를 참조하세요. 
+경우에 따라 ASP.NET은 ASP.NET Core를 포함한 두가지 ASP.NET 구현체를 나타내는 포괄적인 용어입니다. 지정된 인스턴스에서 이 용어가 전달하는 의미는 컨텍스트에 의해 결정됩니다. 두 구현체을 모두 의미하는 데 ASP.NET을 사용하지 않는 것을 분명히 하려는 경우 ASP.NET 4.x를 참조하세요.
 
 [ASP.NET 설명서](/aspnet/#pivot=aspnet)를 참조하세요.
 
@@ -78,7 +78,7 @@ CLR/CoreCLR과 달리 CoreRT는 가상 머신이 아닙니다. 즉, [JIT](#jit)�
 
 “.NET 에코시스템”이라는 용어는 타사 앱 및 라이브러리를 포함한다는 점에서 “.NET 스택”과 같은 유사한 용어와 다릅니다. 다음은 문장에서의 예제입니다.
 
-- “[.NET Standard](#net-standard)는 .NET 에코시스템의 통일성을 높이기 위한 것입니다.” 
+- “[.NET Standard](#net-standard)는 .NET 에코시스템의 통일성을 높이기 위한 것입니다.”
 
 ## <a name="framework"></a>프레임워크
 
@@ -96,7 +96,7 @@ CLR/CoreCLR과 달리 CoreRT는 가상 머신이 아닙니다. 즉, [JIT](#jit)�
 
 가비지 수집기입니다.
 
-가비지 수집기는 자동 메모리 관리의 구현체입니다.  GC는 개체가 사용한 메모리에서 더 이상 사용되지 않는 메모리를 해제합니다. 
+가비지 수집기는 자동 메모리 관리의 구현체입니다.  GC는 개체가 사용한 메모리에서 더 이상 사용되지 않는 메모리를 해제합니다.
 
 [가비지 수집](garbage-collection/index.md)을 참조하세요.
 
@@ -157,7 +157,7 @@ Mono의 자세한 내용은 [Mono 설명서](https://www.mono-project.com/docs/)
 
 [.NET 가이드](index.md)를 참조하세요.
 
-## <a name="net-core"></a>.NET Core 
+## <a name="net-core"></a>.NET Core
 
 다양한 .NET 플랫폼에서 사용할 수 있는 고성능 오픈 소스 구현체입니다. CoreCLR(Core 공용 언어 런타임)과 Core AOT 런타임(CoreRT, 개발 중), Core 기본 클래스 라이브러리, Core SDK를 포함합니다.
 
@@ -217,7 +217,7 @@ Windows와 macOS, Linux, iOS, Android 같은 운영 체제와 해당 운영 체�
 
 다음은 문장에서의 사용 예입니다.
 
-- “.NET Core는 다양한 플랫폼에서 사용할 수 있는 .NET의 구현체입니다.” 
+- “.NET Core는 다양한 플랫폼에서 사용할 수 있는 .NET의 구현체입니다.”
 - “PCL 프로필은 Microsoft 플랫폼을 나타내지만 .NET Standard는 플랫폼에 독립적입니다.”
 
 .NET 설명서에서는 .NET의 구현체나 모든 구현체를 포함하는 .NET 스택을 의미하는 용어로 “.NET 플랫폼”을 자주 사용합니다. 이렇게 사용한 부분은 모두 기본적인(OS/하드웨어) 의미와 혼동되므로 설명서에서 이러한 사용을 제거할 예정입니다.
@@ -239,13 +239,13 @@ OS는 런타임 환경의 일부이지만 .NET 런타임의 일부는 아닙니�
 - “여러 런타임에서 실행되도록 만들어진 라이브러리는 이 프레임워크를 대상으로 해야 합니다.” (.NET Standard를 참조)
 - “다양한 .NET 런타임에서 특정 버전의 .NET Standard를 구현합니다. … 각 .NET 런타임 버전은 지원하는 최신 .NET Standard 버전을 보급합니다.”
 
-이와 같이 일관성 없이 사용한 부분을 제거할 예정입니다. 
+이와 같이 일관성 없이 사용한 부분을 제거할 예정입니다.
 
 ## <a name="stack"></a>스택
 
 애플리케이션을 만들고 실행하는 데 사용되는 프로그래밍 기술 집합입니다.
 
-“.NET 스택”은 .NET Standard 및 모든 .NET 구현체를 나타냅니다. “.NET 스택”이라는 문구는 하나의 .NET 구현체를 나타냅니다. 
+“.NET 스택”은 .NET Standard 및 모든 .NET 구현체를 나타냅니다. “.NET 스택”이라는 문구는 하나의 .NET 구현체를 나타냅니다.
 
 ## <a name="target-framework"></a>대상 프레임워크(target framework)
 
