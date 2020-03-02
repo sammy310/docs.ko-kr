@@ -185,7 +185,7 @@ ms.locfileid: "70989818"
   
 1. Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.  
   
-     워크플로를 실행 하는 방법에 대 한 지침은 다음 항목을 참조 하십시오. 방법: [ 워크플로를 실행 합니다](how-to-run-a-workflow.md). [를 이미 완료 한 경우 방법: 워크플로의 다른 스타일을 사용 하 여 워크플로](how-to-run-a-workflow.md) 단계를 실행 하 고이 단계에서 상태 시스템 워크플로를 사용 하 여 실행 하려는 경우에는 다음을 수행 하는 방법 [의 [응용 프로그램을 빌드하고 실행 하려면](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) 섹션으로 건너뜁니다. ](how-to-run-a-workflow.md)워크플로를 실행 합니다.  
+     워크플로를 실행 하는 방법에 대 한 지침은 다음 항목을 참조 하십시오. 방법: [ 워크플로를 실행 합니다](how-to-run-a-workflow.md). [를 이미 완료 한 경우 방법: 워크플로의 다른 스타일을 사용 하 여 워크플로](how-to-run-a-workflow.md) 단계를 실행 하 고이 단계에서 상태 시스템 워크플로를 사용 하 여 실행 하려는 경우에는 다음을 수행 하는 방법 의 [응용 프로그램을 빌드하고 실행 하려면](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) [섹션으로 건너뜁니다: 워크플로를 실행 합니다](how-to-run-a-workflow.md).  
   
 ## <a name="see-also"></a>참고 항목
 
