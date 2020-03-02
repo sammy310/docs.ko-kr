@@ -28,7 +28,7 @@ ms.locfileid: "76731363"
 
 1. 디자이너에서 <xref:System.Windows.Forms.DataGridView> 컨트롤을 선택 합니다.
 
-2. **속성** 창에서 <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>, <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>또는 <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> 속성 옆에 있는 줄임표 단추 (...)를 클릭 하 여 Visual](./media/visual-studio-ellipsis-button.png)Studio의 속성 창에 있는 줄임표 단추 (...)를![합니다. **CellStyle 작성기** 대화 상자가 나타납니다.
+2. **속성** 창에서 <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>, <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>또는 <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> 속성 옆에 있는 줄임표 단추 (...)를 클릭 하 여 ![Visual Studio의 속성 창에 있는 줄임표 단추 (...)를](./media/visual-studio-ellipsis-button.png)합니다. **CellStyle 작성기** 대화 상자가 나타납니다.
 
 3. **미리 보기** 창을 사용 하 여 선택 내용을 확인 하 고 속성을 설정 하 여 스타일을 정의 합니다.
 
@@ -43,7 +43,7 @@ ms.locfileid: "76731363"
 
 2. **선택한 열** 목록에서 열을 선택 합니다.
 
-3. **열 속성** 표에서 <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> 속성 옆에 있는 줄임표 단추 (...)를 클릭 하 여 Visual](./media/visual-studio-ellipsis-button.png)Studio의 속성 창에 있는 줄임표 단추 (...)를![합니다. **CellStyle 작성기** 대화 상자가 나타납니다.
+3. **열 속성** 표에서 <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> 속성 옆에 있는 줄임표 단추 (...)를 클릭 하 여 ![Visual Studio의 속성 창에 있는 줄임표 단추 (...)를](./media/visual-studio-ellipsis-button.png)합니다. **CellStyle 작성기** 대화 상자가 나타납니다.
 
 4. **미리 보기** 창을 사용 하 여 선택 내용을 확인 하 고 속성을 설정 하 여 스타일을 정의 합니다.
 
@@ -51,7 +51,7 @@ ms.locfileid: "76731363"
 
 1. 위의 절차 중 하나를 사용 하 여 기본 셀 스타일 속성과 관련 된 **CellStyle 작성기** 대화 상자를 표시 합니다.
 
-2. **CellStyle 작성기** 대화 상자에서 <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> 속성 옆에 있는 줄임표 단추 (...)를 클릭 하 여 Visual](./media/visual-studio-ellipsis-button.png)Studio의 속성 창에 있는 줄임표 단추 (...)를![합니다. **형식 문자열** 대화 상자가 나타납니다.
+2. **CellStyle 작성기** 대화 상자에서 <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> 속성 옆에 있는 줄임표 단추 (...)를 클릭 하 여 ![Visual Studio의 속성 창에 있는 줄임표 단추 (...)를](./media/visual-studio-ellipsis-button.png)합니다. **형식 문자열** 대화 상자가 나타납니다.
 
 3. 서식 유형을 선택한 다음 **샘플** 상자를 사용 하 여 선택 항목을 확인 하는 유형의 세부 정보 (예: 표시할 소수 자릿수)를 수정 합니다.
 
