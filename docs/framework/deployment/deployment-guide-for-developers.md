@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 597bfd2c16f6289a2bcb931c3896918dcb6d9a4d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 26c168040b0fa5e975e64a7518b0d0bf250c4711
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094139"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628126"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>개발자를 위한 .NET Framework 배포 가이드
 이 항목에서는 앱과 함께 .NET Framework 4.5에서 [!INCLUDE[net_current](../../../includes/net-current-version.md)] 사이의 .NET Framework 버전을 설치하려는 개발자를 위한 정보를 제공합니다.
@@ -134,21 +134,7 @@ InstallAware는 단일 소스에서 Windows 앱(APPX), Windows Installer(MSI), �
 
 ### <a name="installshield-deployment"></a>InstallShield 배포
 
-Visual Studio에서 InstallShield 배포를 선택하고 .NET Framework에 대한 종속성을 추가합니다.
-
-1. Visual Studio 메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 선택합니다.
-
-2. **새 프로젝트** 대화 상자의 왼쪽 창에서 **기타 프로젝트 형식**, **설치 및 배포**, **InstallShield LE**를 선택합니다.
-
-3. **이름** 상자에 프로젝트 이름을 입력한 다음 **확인**을 선택합니다.
-
-4. 설치 및 배포 프로젝트를 처음으로 만들 경우 **InstallShield로 이동** 또는 **InstallShield Limited Edition 사용**을 선택하여 사용 중인 Microsoft Visual Studio 버전의 InstallShield Limited Edition을 다운로드합니다. Visual Studio를 다시 시작합니다.
-
-5. **프로젝트 도우미** 마법사로 이동한 다음 **애플리케이션 파일** 을 선택하여 프로젝트 출력을 추가합니다. 이 마법사를 사용하여 다른 프로젝트 특성을 구성할 수 있습니다.
-
-6. **설치 요구 사항** 으로 이동한 다음 운영 체제 및 설치할 .NET Framework의 버전을 선택합니다.
-
-7. 설치 프로젝트에 대한 바로 가기 메뉴를 열고 **빌드**를 선택합니다.
+InstallShield는 Windows 앱 패키지(MSIX, APPX), Windows Installer 패키지(MSI) 및 네이티브 코드(EXE) 설치 관리자를 빌드합니다. InstallShield는 Visual Studio 통합도 제공합니다. 자세한 내용은 [InstallShield](https://www.flexerasoftware.com/install/products/installshield.html) 웹 사이트를 참조하세요.
 
 <a name="wix"></a>
 
