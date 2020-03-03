@@ -2,12 +2,12 @@
 title: 의사 결정 테이블. Docker에 사용할 .NET Framework
 description: 컨테이너화된 .NET 애플리케이션을 위한 .NET 마이크로 서비스 아키텍처 | 의사 결정 테이블, Docker에 사용할 .NET Framework
 ms.date: 09/11/2018
-ms.openlocfilehash: 0087d80c2d949daf14e1edd773dd310f47c508a9
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8ffe2b7bc0bee976d3a63b274994dbcc8aef0c61
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039674"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628321"
 ---
 # <a name="decision-table-net-frameworks-to-use-for-docker"></a>의사 결정 테이블: Docker에 사용할 .NET Framework
 
@@ -27,7 +27,7 @@ ms.locfileid: "71039674"
 | ASP.NET 4(MVC 5, Web API 2 및 Web Forms) | -- | .NET Framework |
 | SignalR 서비스 | .NET Core 2.1 이상 버전 | .NET Framework <br/> .NET Core 2.1 이상 버전 |
 | WCF, WF 및 기타 레거시 프레임워크 | .NET Core의 WCF(클라이언트 라이브러리 전용) | .NET Framework <br/> .NET Core의 WCF(클라이언트 라이브러리 전용) |
-| Azure 서비스 사용 | .NET Core <br/> (궁극적으로 모든 Azure 서비스 클라이언트에서 SDKs for .NET Core 제공) | .NET Framework <br/> .NET Core <br/> (궁극적으로 모든 Azure 서비스 클라이언트에서 SDKs for .NET Core 제공) |
+| Azure 서비스 사용 | .NET Core <br/> (궁극적으로 대부분 Azure 서비스에서 .NET Core용 클라이언트 SDK를 제공할 예정) | .NET Framework <br/> .NET Core <br/> (궁극적으로 대부분 Azure 서비스에서 .NET Core용 클라이언트 SDK를 제공할 예정) |
 
 >[!div class="step-by-step"]
 >[이전](net-framework-container-scenarios.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: 54b5f97aca131f52b9b5d9f54d7fa5ec00ba3d5b
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: b18b2bf31787fa58e614cd4f057fba9037fe8ad8
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423671"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627554"
 ---
 # <a name="systemiopipelines-in-net"></a>.NET의 System.IO.Pipelines
 
@@ -67,6 +67,8 @@ async Task ProcessLinesAsync(NetworkStream stream)
 [!code-csharp[](~/samples/snippets/csharp/pipelines/ProcessLinesAsync.cs?name=snippet)]
 
 이전 코드는 복잡하며, 식별된 모든 문제를 해결하지는 않습니다. 고성능 네트워킹은 일반적으로 성능을 최대화하는 매우 복잡한 코드를 작성하는 것을 의미합니다. `System.IO.Pipelines`는 이러한 종류의 코드 작성을 더 쉽게 만들기 위해 설계되었습니다.
+
+[!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
 
 ## <a name="pipe"></a>파이프
 
@@ -148,7 +150,7 @@ var pipe = new Pipe(options);
 
 일반적으로 `async` 및 `await`를 사용하는 경우 비동기 코드는 <xref:System.Threading.Tasks.TaskScheduler> 또는 현재 <xref:System.Threading.SynchronizationContext>에서 다시 시작됩니다.
 
-I/O를 수행하는 경우 I/O가 수행되는 위치를 세부적으로 제어하는 것이 중요합니다. 이 컨트롤을 사용하면 CPU 캐시를 효과적으로 활용할 수 있습니다. 효율적인 캐싱은 웹 서버와 같은 고성능 앱에 매우 중요합니다. <xref:System.IO.Pipelines.PipeScheduler>는 비동기 콜백이 실행되는 위치에 대한 제어를 제공합니다. 기본적으로:
+I/O를 수행하는 경우 I/O가 수행되는 위치를 세부적으로 제어하는 것이 중요합니다. 이 컨트롤을 사용하면 CPU 캐시를 효과적으로 활용할 수 있습니다. 효율적인 캐싱은 웹 서버와 같은 고성능 앱에 매우 중요합니다. <xref:System.IO.Pipelines.PipeScheduler>는 비동기 콜백이 실행되는 위치에 대한 제어를 제공합니다. 기본적으로 다음과 같습니다.
 
 * 현재 <xref:System.Threading.SynchronizationContext>가 사용됩니다.
 * `SynchronizationContext`가 없으면 스레드 풀을 사용하여 콜백을 실행합니다.
@@ -163,7 +165,7 @@ I/O를 수행하는 경우 I/O가 수행되는 위치를 세부적으로 제어�
 
 ## <a name="pipereader"></a>PipeReader
 
-<xref:System.IO.Pipelines.PipeReader>는 호출자를 대신하여 메모리를 관리합니다. **항상** <xref:System.IO.Pipelines.PipeReader.ReadAsync%2A?displayProperty=nameWithType>를 호출한 후 <xref:System.IO.Pipelines.PipeReader.AdvanceTo%2A?displayProperty=nameWithType>를 호출합니다. 이를 통해 `PipeReader`는 호출자가 메모리를 작업을 완료하는 시기를 알 수 있어서 메모리를 추적할 수 있습니다. `PipeReader.ReadAsync`에서 반환된 `ReadOnlySequence<byte>`는 `PipeReader.AdvanceTo`를 호출할 때까지만 유효합니다. `PipeReader.AdvanceTo`를 호출한 후에는 `ReadOnlySequence<byte>`를 사용할 수 없습니다.
+<xref:System.IO.Pipelines.PipeReader>는 호출자를 대신하여 메모리를 관리합니다. **항상**<xref:System.IO.Pipelines.PipeReader.ReadAsync%2A?displayProperty=nameWithType>를 호출한 후 <xref:System.IO.Pipelines.PipeReader.AdvanceTo%2A?displayProperty=nameWithType>를 호출합니다. 이를 통해 `PipeReader`는 호출자가 메모리를 작업을 완료하는 시기를 알 수 있어서 메모리를 추적할 수 있습니다. `PipeReader.ReadAsync`에서 반환된 `ReadOnlySequence<byte>`는 `PipeReader.AdvanceTo`를 호출할 때까지만 유효합니다. `PipeReader.AdvanceTo`를 호출한 후에는 `ReadOnlySequence<byte>`를 사용할 수 없습니다.
 
 `PipeReader.AdvanceTo`는 두 개의 <xref:System.SequencePosition> 인수를 사용합니다.
 

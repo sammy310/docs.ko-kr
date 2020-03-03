@@ -11,12 +11,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 427550e1fbeb38cefbb4afe97d80e198ac2d6cb0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: adda4ed2ab5c59e3518b8e724044529a79840ad0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127643"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156480"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>방법: 강력한 이름의 어셈블리 참조
 강력한 이름의 어셈블리에서 형식이나 리소스를 참조하는 프로세스는 일반적으로 투명합니다. 컴파일 시간(초기 바인딩) 또는 런타임에 참조를 만들 수 있습니다.  
@@ -44,12 +44,12 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
 강력한 이름의 어셈블리에 대한 런타임 참조를 만드는 경우(예: <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 또는 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> 메서드 사용), 참조되는 강력한 이름의 어셈블리의 표시 이름을 사용해야 합니다. 표시 이름의 구문은 다음과 같습니다.  
 
-\<*assembly name*> **,** \<*version number*> **,** \<*culture*> **,** \<*public key token*>  
+\<*어셈블리 이름*> **,** \<*버전 번호*> **,** \<*문화권*> **,** \<*공개 키 토큰*>  
 
-예:  
+예를 들어:  
 
 ```console
-myDll, Version=1.1.0.0, Culture=en, PublicKeyToken=03689116d3a4ae33   
+myDll, Version=1.1.0.0, Culture=en, PublicKeyToken=03689116d3a4ae33
 ```  
 
 이 예제에서 `PublicKeyToken`은 16진수 형식의 공개 키 토큰입니다. 문화권 값이 없는 경우 `Culture=neutral`을 사용합니다.  
@@ -73,12 +73,12 @@ Dim myDll As Assembly = _
 
 다음 [강력한 이름(Sn.exe)](../../framework/tools/sn-exe-strong-name-tool.md) 명령을 사용하여 특정 어셈블리에 대한 공개 키와 공개 키 토큰의 16진수 형식을 인쇄할 수 있습니다.  
 
-**sn -Tp \<** *assembly* **>**  
+**sn -Tp \<** *어셈블리* **>**  
 
 공개 키 파일이 있는 경우 다음 명령을 대신 사용할 수 있습니다(명령줄 옵션의 대/소문자 차이 확인).  
 
-**sn -tp \<** ‘공개 키 파일’ **>**   
+**sn -tp \<** *공개 키 파일* **>**  
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [강력한 이름의 어셈블리 만들기 및 사용](create-use-strong-named.md)
