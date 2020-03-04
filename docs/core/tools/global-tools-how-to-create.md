@@ -2,12 +2,12 @@
 title: '자습서: .NET Core 도구 만들기'
 description: .NET Core 도구를 만드는 방법을 알아봅니다. 도구는 .NET Core CLI를 사용하여 설치되는 콘솔 애플리케이션입니다.
 ms.date: 02/12/2020
-ms.openlocfilehash: 558bf9e37efc8de68a61f1384fababe342ab7d66
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 88cc3be7b149834ace0c5f3ba8ac8c039199908f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543406"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156727"
 ---
 # <a name="tutorial-create-a-net-core-tool-using-the-net-core-cli"></a>자습서: .NET Core CLI를 사용하여 .NET Core 도구 만들기
 
@@ -31,24 +31,18 @@ ms.locfileid: "77543406"
 
 1. 명령 프롬프트를 열고 *repository*라는 폴더를 만듭니다.
 
-1. *repository* 폴더로 이동하여 다음 명령을 입력하고 `<name>`을 고유한 값으로 바꿔 프로젝트 이름을 고유하게 만듭니다. 
+1. *repository* 폴더로 이동하여 다음 명령을 입력합니다.
 
    ```dotnetcli
-   dotnet new console -n botsay-<name>
+   dotnet new console -n microsoft.botsay
    ```
 
-   예를 들어, 다음 명령을 실행할 수 있습니다.
+   이 명령은 *repository* 폴더 아래에 *microsoft.botsay*라는 새 폴더를 만듭니다.
 
-   ```dotnetcli
-   dotnet new console -n botsay-nancydavolio
-   ```
-
-   이 명령은 *repository* 폴더 아래에 *botsay-\<name>* 이라는 새 폴더를 만듭니다.
-
-1. *botsay-\<name>* 폴더로 이동합니다.
+1. *microsoft.botsay* 폴더로 이동합니다.
 
    ```console
-   cd botsay-<name>
+   cd microsoft.botsay
    ```
 
 ## <a name="add-the-code"></a>코드 추가
@@ -151,9 +145,9 @@ dotnet run -- Hello from the bot
 
 ## <a name="package-the-tool"></a>도구 패키징
 
-애플리케이션을 도구로 패키지하고 배포하려면 먼저 프로젝트 파일을 수정해야 합니다. 
+애플리케이션을 도구로 패키지하고 배포하려면 먼저 프로젝트 파일을 수정해야 합니다.
 
-1. *botsay-\<name>.csproj* 파일을 열고 다음 세 개의 새 XML 노드를 `<PropertyGroup>` 노드의 끝에 추가합니다.
+1. *microsoft.botsay.csproj* 파일을 열고 `<PropertyGroup>` 노드 끝에 다음 세 개의 새 XML 노드를 추가합니다.
 
    ```xml
    <PackAsTool>true</PackAsTool>
@@ -190,7 +184,7 @@ dotnet run -- Hello from the bot
    dotnet pack
    ```
 
-   *botsay-\<name>.1.0.0.nupkg* 파일은 *botsay-\<name>.csproj* 파일의 `<PackageOutputPath>` 값으로 식별되는 폴더(이 예제에서는 *./nupkg* 폴더)에 만들어집니다.
+   *microsoft.botsay.1.0.0.nupkg* 파일은 *microsoft.botsay.csproj* 파일의 `<PackageOutputPath>` 값으로 식별되는 폴더(이 예제에서는 *./nupkg* 폴더)에 만들어집니다.
   
    공개적으로 도구를 릴리스하려면 `https://www.nuget.org`에 업로드할 수 있습니다. NuGet에서 도구를 사용할 수 있게 되면 개발자는 [dotnet tool install](dotnet-tool-install.md) 명령을 사용하여 도구를 설치할 수 있습니다. 이 자습서에서는 로컬 *nupkg* 폴더에서 패키지를 직접 설치하므로 NuGet에 패키지를 업로드할 필요가 없습니다.
 

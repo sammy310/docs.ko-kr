@@ -4,12 +4,12 @@ description: 모든 C# 프로그램의 핵심 형식(숫자, 문자열 및 개�
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: ad496a9cbb0a654ec10ac38b374a76b042911302
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: bb2177026afb2eef2e14ece0c306bfd3ffe7af39
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093294"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673266"
 ---
 # <a name="types-variables-and-values"></a>형식, 변수 및 값
 
@@ -82,9 +82,10 @@ C#에서는 정수, 부동 소수점 값, 부울 식, 텍스트 문자, 10진수
   
 - 형식 시스템은 상속 원칙을 지원합니다. 형식은 *기본 형식*이라는 다른 형식에서 파생될 수 있습니다. 파생 형식은 기본 형식의 메서드, 속성 및 기타 멤버를 상속합니다(몇 가지 제한 사항 있음). 기본 형식이 다른 형식에서 파생될 수도 있습니다. 이 경우 파생 형식은 상속 계층 구조에 있는 두 기본 형식의 멤버를 상속합니다. <xref:System.Int32> (C# 키워드: `int`)와 같은 기본 제공 숫자 형식을 포함한 모든 형식은 기본적으로 단일 기본 형식 <xref:System.Object> (C# 키워드: `object`)에서 파생됩니다. 이 통합 형식 계층 구조를 CTS([공용 형식 시스템](../standard/common-type-system.md))라고 합니다. C#의 상속에 대한 자세한 내용은 [상속](programming-guide/classes-and-structs/inheritance.md)을 참조하세요.  
   
-- CTS의 각 형식은 *값 형식* 또는 *참조 형식*으로 정의됩니다. 여기에는 .NET Framework 클래스 라이브러리의 모든 사용자 지정 형식과 자체 사용자 지정 형식도 포함됩니다. [struct](language-reference/keywords/struct.md)를 사용하여 정의한 형식은 값 형식이고, 모든 기본 제공 숫자 형식은 **구조체**입니다. 값 형식에 대한 자세한 내용은 [구조체](structs.md)를 참조하세요. [class](language-reference/keywords/class.md) 키워드를 사용하여 정의한 형식은 참조 형식입니다. 참조 형식에 대한 자세한 내용은 [클래스](programming-guide/classes-and-structs/classes.md)를 참조하세요. 참조 형식과 값 형식의 컴파일 시간 규칙 및 런타임 동작은 서로 다릅니다.
+- CTS의 각 형식은 *값 형식* 또는 *참조 형식*으로 정의됩니다. 여기에는 .NET 클래스 라이브러리의 모든 사용자 지정 형식과 자체 사용자 정의 형식도 포함됩니다. `struct` 또는 `enum` 키워드를 사용하여 정의하는 형식은 값 형식입니다. 값 형식에 대한 자세한 내용은 [값 형식](language-reference/builtin-types/value-types.md)을 참조하세요. [class](language-reference/keywords/class.md) 키워드를 사용하여 정의한 형식은 참조 형식입니다. 참조 형식에 대한 자세한 내용은 [클래스](programming-guide/classes-and-structs/classes.md)를 참조하세요. 참조 형식과 값 형식의 컴파일 시간 규칙 및 런타임 동작은 서로 다릅니다.
 
 ## <a name="see-also"></a>참조
 
-- [구조체](structs.md)
+- [구조체 형식](language-reference/builtin-types/struct.md)
+- [열거형 형식](language-reference/builtin-types/enum.md)
 - [클래스](programming-guide/classes-and-structs/classes.md)

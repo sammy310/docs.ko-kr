@@ -2,12 +2,12 @@
 title: '자습서: .NET Core 로컬 도구 설치 및 사용'
 description: .NET 도구를 로컬 도구로 설치하고 사용하는 방법을 알아봅니다.
 ms.date: 02/12/2020
-ms.openlocfilehash: 6de620772cec1e9d1b1f57380b72c0163d68337c
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: a4355886513040e2436bdbd87905e5baee2dd7a5
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543817"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156701"
 ---
 # <a name="tutorial-install-and-use-a-net-core-local-tool-using-the-net-core-cli"></a>자습서: .NET Core CLI를 사용하여 .NET Core 로컬 도구 설치 및 사용
 
@@ -20,13 +20,13 @@ ms.locfileid: "77543817"
 * [이 시리즈의 첫 번째 자습서](global-tools-how-to-create.md)를 완료합니다.
 * .NET Core 2.1 런타임을 설치합니다.
 
-  이 자습서에서는 .NET Core 2.1을 대상으로 하는 도구를 설치하고 사용하므로 해당 런타임이 컴퓨터에 설치되어 있어야 합니다. 2\.1 런타임을 설치하려면 [.NET Core 2.1 다운로드 페이지](https://dotnet.microsoft.com/download/dotnet-core/2.1)로 이동하여 **앱 실행 - 런타임** 열에서 런타임 설치 링크를 찾습니다.
+  이 자습서에서는 .NET Core 2.1을 대상으로 하는 도구를 설치하고 사용하므로 해당 런타임이 머신에 설치되어 있어야 합니다. 2\.1 런타임을 설치하려면 [.NET Core 2.1 다운로드 페이지](https://dotnet.microsoft.com/download/dotnet-core/2.1)로 이동하여 **앱 실행 - 런타임** 열에서 런타임 설치 링크를 찾습니다.
 
 ## <a name="create-a-manifest-file"></a>매니페스트 파일 만들기
 
-로컬 액세스 전용(현재 디렉터리 및 하위 디렉터리용) 도구를 설치하려면 매니페스트 파일에 추가해야 합니다. 
+로컬 액세스 전용(현재 디렉터리 및 하위 디렉터리용) 도구를 설치하려면 매니페스트 파일에 추가해야 합니다.
 
-*botsay-\<name>* 폴더에서 한 수준 위로 이동하여 *repository* 폴더로 이동합니다.
+*microsoft.botsay* 폴더에서 한 수준 위인 *repository* 폴더로 이동합니다.
 
 ```console
 cd ..
@@ -63,7 +63,7 @@ The template "Dotnet local tool manifest file" was created successfully.
 첫 번째 자습서에서 만든 패키지에서 도구를 설치합니다.
 
 ```dotnetcli
-dotnet tool install --add-source ./botsay-<name>/nupkg botsay-<name>
+dotnet tool install --add-source ./microsoft.botsay/nupkg microsoft.botsay
 ```
 
 이 명령은 이전 단계에서 만든 매니페스트 파일에 도구를 추가합니다. 명령 출력에는 새로 설치된 도구가 있는 매니페스트 파일이 표시됩니다.
@@ -71,7 +71,7 @@ dotnet tool install --add-source ./botsay-<name>/nupkg botsay-<name>
  ```console
  You can invoke the tool from this directory using the following command:
  'dotnet tool run botsay' or 'dotnet botsay'
- Tool 'botsay-<name>' (version '1.0.0') was successfully installed.
+ Tool 'microsoft.botsay' (version '1.0.0') was successfully installed.
  Entry is added to the manifest file /home/name/repository/.config/dotnet-tools.json
  ```
 
@@ -82,7 +82,7 @@ dotnet tool install --add-source ./botsay-<name>/nupkg botsay-<name>
   "version": 1,
   "isRoot": true,
   "tools": {
-    "botsay-<name>": {
+    "microsoft.botsay": {
       "version": "1.0.0",
       "commands": [
         "botsay"
@@ -111,7 +111,7 @@ dotnet tool run botsay hello from the bot
      "version": 1,
      "isRoot": true,
      "tools": {
-       "botsay-<name>": {
+       "microsoft.botsay": {
          "version": "1.0.0",
          "commands": [
            "botsay"
@@ -131,7 +131,7 @@ dotnet tool run botsay hello from the bot
 
 1. 변경 내용을 저장합니다.
 
-   이러한 변경을 수행하는 것은 다른 사용자가 프로젝트 디렉터리에 대한 패키지 `dotnetsay`를 설치한 후 리포지토리의 최신 버전을 가져오는 것과 같습니다. 
+   이러한 변경을 수행하는 것은 다른 사용자가 프로젝트 디렉터리에 대한 패키지 `dotnetsay`를 설치한 후 리포지토리의 최신 버전을 가져오는 것과 같습니다.
 
 1. `dotnet tool restore` 명령을 실행합니다.
 
@@ -142,7 +142,7 @@ dotnet tool run botsay hello from the bot
    이 명령은 다음 예제와 같은 출력을 생성합니다.
 
    ```console
-   Tool 'botsay-<name>' (version '1.0.0') was restored. Available commands: botsay
+   Tool 'microsoft.botsay' (version '1.0.0') was restored. Available commands: botsay
    Tool 'dotnetsay' (version '2.1.3') was restored. Available commands: dotnetsay
    Restore was successful.
    ```
@@ -157,9 +157,9 @@ dotnet tool run botsay hello from the bot
 
    ```console
    Package Id      Version      Commands       Manifest
-   -------------------------------------------------------------------------------------------
-   botsay-<name>   1.0.0        botsay         /home/name/repository/.config/dotnet-tools.json
-   dotnetsay       2.1.3        dotnetsay      /home/name/repository/.config/dotnet-tools.json
+   --------------------------------------------------------------------------------------------
+   microsoft.botsay 1.0.0        botsay         /home/name/repository/.config/dotnet-tools.json
+   dotnetsay        2.1.3        dotnetsay      /home/name/repository/.config/dotnet-tools.json
    ```
 
 1. 도구를 테스트합니다.
@@ -191,7 +191,7 @@ Tool 'dotnetsay' was successfully updated from version '2.1.3' to version '2.1.4
 [dotnet tool uninstall](dotnet-tool-uninstall.md) 명령을 실행하여 설치된 도구를 제거합니다.
 
 ```dotnetcli
-dotnet tool uninstall botsay-<name>
+dotnet tool uninstall microsoft.botsay
 ```
 
 ```dotnetcli

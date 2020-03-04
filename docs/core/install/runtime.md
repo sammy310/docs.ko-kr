@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: ba50eb222d9eab6bffbb8ebfdf0ecf47951ce719
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: a41bbdf5419585f06773583dbe82ab0d84ebaa4c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543523"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157638"
 ---
 # <a name="install-the-net-core-runtime"></a>.NET Core 런타임 설치
 
@@ -35,6 +35,19 @@ Windows에는 .NET Core 3.1 런타임을 설치하는 데 사용할 수 있는 �
 macOS에는 .NET Core 3.1 런타임을 설치하는 데 사용할 수 있는 독립 실행형 설치 프로그램이 있습니다.
 
 - [x64(64비트) CPU](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+
+## <a name="download-and-manually-install"></a>다운로드 및 수동으로 설치
+
+.NET Core용 macOS 설치 프로그램의 대안으로, 런타임을 다운로드하여 수동으로 설치할 수 있습니다.
+
+런타임을 실행하고 터미널에서 사용 가능한 .NET Core CLI 명령을 사용하도록 설정하려면 먼저 .NET Core 이진 릴리스를 [다운로드](#all-net-core-downloads)합니다. 그런 다음 터미널을 열고 다음 명령을 실행합니다. 런타임이 `~/Downloads/dotnet-runtime.pkg` 파일로 다운로드되었다고 가정합니다.
+
+```bash
+mkdir -p $HOME/dotnet
+sudo installer -pkg ~/Downloads/dotnet-runtime.pkg -target $HOME/dotnet
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=$PATH:$HOME/dotnet
+```
 
 ::: zone-end
 
@@ -64,7 +77,7 @@ export PATH=$PATH:$HOME/dotnet
 > - **Bash 셸**: *~/.bash_profile*, *~/.bashrc*
 > - **Korn 셸**: *~/.kshrc* 또는 *.profile*
 > - **Z 셸**: *~/.zshrc* 또는 *.zprofile*
-> 
+>
 > 셸의 적절한 소스 파일을 편집하고 기존 `PATH` 문의 끝에 `:$HOME/dotnet`을 추가합니다. 포함된 `PATH` 문이 없다면 `export PATH=$PATH:$HOME/dotnet`을 사용하여 새 라인을 추가합니다.
 >
 > 또한, 파일 끝에 `export DOTNET_ROOT=$HOME/dotnet`을 추가합니다.

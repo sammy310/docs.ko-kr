@@ -1,17 +1,17 @@
 ---
 title: dotnet test 명령
 description: dotnet test 명령은 지정된 프로젝트에서 단위 테스트를 실행하는 데 사용됩니다.
-ms.date: 05/29/2018
-ms.openlocfilehash: 909815151265117395c6d8d13b4443a245c05f9e
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 02/27/2020
+ms.openlocfilehash: 6e906ab396a788905c99f50e73390b765b240efc
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451196"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157013"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+**이 문서의 적용 대상:**  ✔️ .NET Core 2.1 SDK 이상 버전
 
 ## <a name="name"></a>이름
 
@@ -19,36 +19,15 @@ ms.locfileid: "77451196"
 
 ## <a name="synopsis"></a>개요
 
-<!-- markdownlint-disable MD025 -->
-
-# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
-
 ```dotnetcli
-dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
-    [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] 
-    [-v|--verbosity] [-- <RunSettings arguments>]
+dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame]
+    [-c|--configuration] [--collect] [-d|--diag] [-f|--framework]
+    [--filter] [-l|--logger] [--no-build] [--no-restore]
+    [-o|--output] [-r|--results-directory] [-s|--settings]
+    [-t|--list-tests] [-v|--verbosity] [-- <RunSettings arguments>]
 
 dotnet test [-h|--help]
 ```
-
-# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
-
-```dotnetcli
-dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
-    [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
-
-dotnet test [-h|--help]
-```
-
-# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-```dotnetcli
-dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [-o|--output] [-s|--settings] [-t|--list-tests]  [-v|--verbosity]
-
-dotnet test [-h|--help]
-```
-
----
 
 ## <a name="description"></a>설명
 
@@ -60,213 +39,103 @@ dotnet test [-h|--help]
 
 ## <a name="arguments"></a>인수
 
-`PROJECT`
+- **`PROJECT`**
 
-테스트 프로젝트의 경로입니다. 지정하지 않으면 현재 디렉터리로 기본 설정됩니다.
+  테스트 프로젝트의 경로입니다. 지정하지 않으면 현재 디렉터리로 기본 설정됩니다.
 
 ## <a name="options"></a>옵션
 
-# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
+- **`a|--test-adapter-path <PATH_TO_ADAPTER>`**
 
-`-a|--test-adapter-path <PATH_TO_ADAPTER>`
+  테스트 실행에 지정된 경로에서 사용자 지정 테스트 어댑터를 사용합니다.
 
-테스트 실행에 지정된 경로에서 사용자 지정 테스트 어댑터를 사용합니다.
+- **`-blame`**
 
-`--blame`
+  테스트를 원인 모드로 실행합니다. 이 옵션은 테스트 호스트의 크래시를 유발하는 문제가 있는 테스트를 격리하는 데 유용합니다. 현재 디렉터리에 크래시 전에 테스트 실행 순서를 캡처하는 *Sequence.xml*이라는 출력 파일을 만듭니다.
 
-테스트를 원인 모드로 실행합니다. 이 옵션은 테스트 호스트를 충돌시키는 문제가 있는 테스트를 격리하는 데 유용합니다. 현재 디렉터리에 크래시 전에 테스트 실행 순서를 캡처하는 *Sequence.xml*이라는 출력 파일을 만듭니다.
+- **`c|--configuration {Debug|Release}`**
 
-`-c|--configuration {Debug|Release}`
+  빌드 구성을 정의합니다. 기본값은 `Debug`이지만 프로젝트의 구성으로 이 기본 SDK 설정이 재정의될 수 있습니다.
 
-빌드 구성을 정의합니다. 기본값은 `Debug`이지만 프로젝트의 구성으로 이 기본 SDK 설정이 재정의될 수 있습니다.
+- **`-collect <DATA_COLLECTOR_FRIENDLY_NAME>`**
 
-`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`
+  테스트 실행에 대한 데이터 수집기를 사용하도록 설정합니다. 자세한 내용은 [테스트 실행 모니터링 및 분석](https://aka.ms/vstest-collect)을 참조하세요.
 
-테스트 실행에 대한 데이터 수집기를 사용하도록 설정합니다. 자세한 내용은 [테스트 실행 모니터링 및 분석](https://aka.ms/vstest-collect)을 참조하세요.
+- **`d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
-`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
+  테스트 플랫폼에 대한 진단 모드를 사용하도록 설정하고 지정된 파일에 진단 메시지를 기록합니다.
 
-테스트 플랫폼에 대한 진단 모드를 사용하도록 설정하고 지정된 파일에 진단 메시지를 기록합니다.
+- **`f|--framework <FRAMEWORK>`**
 
-`-f|--framework <FRAMEWORK>`
+  특정 [프레임워크](../../standard/frameworks.md)에 대한 테스트 이진 파일을 찾습니다.
 
-특정 [프레임워크](../../standard/frameworks.md)에 대한 테스트 이진 파일을 찾습니다.
+- **`--filter <EXPRESSION>`**
 
-`--filter <EXPRESSION>`
+  지정된 식을 사용하여 현재 프로젝트의 테스트를 필터링합니다. 자세한 내용은 [필터 옵션 세부 정보](#filter-option-details) 섹션을 참조하세요. 선택적 단위 테스트 필터링을 사용하는 방법에 대한 자세한 내용 및 예제는 [선택적 단위 테스트 실행](../testing/selective-unit-tests.md)을 참조하세요.
 
-지정된 식을 사용하여 현재 프로젝트의 테스트를 필터링합니다. 자세한 내용은 [필터 옵션 세부 정보](#filter-option-details) 섹션을 참조하세요. 선택적 단위 테스트 필터링을 사용하는 방법에 대한 자세한 내용 및 예제는 [선택적 단위 테스트 실행](../testing/selective-unit-tests.md)을 참조하세요.
+- **`h|--help`**
 
-`-h|--help`
+  명령에 대한 간단한 도움말을 출력합니다.
 
-명령에 대한 간단한 도움말을 출력합니다.
+- **`l|--logger <LoggerUri/FriendlyName>`**
 
-`-l|--logger <LoggerUri/FriendlyName>`
+  테스트 결과에 대해 로거를 지정합니다.
 
-테스트 결과에 대해 로거를 지정합니다.
+- **`--no-build`**
 
-`--no-build`
+  테스트 프로젝트를 실행하기 전에 빌드하지 않습니다. 또한 `--no-restore` 플래그를 암시적으로 설정합니다.
 
-테스트 프로젝트를 실행하기 전에 빌드하지 않습니다. 또한 `--no-restore` 플래그를 암시적으로 설정합니다.
+- **`--no-restore`**
 
-`--no-restore`
+  명령을 실행할 때 암시적 복원을 실행하지 않습니다.
 
-명령을 실행할 때 암시적 복원을 실행하지 않습니다.
+- **`-o|--output <OUTPUT_DIRECTORY>`**
 
-`-o|--output <OUTPUT_DIRECTORY>`
+  실행할 이진 파일을 찾을 디렉터리입니다.
 
-실행할 이진 파일을 찾을 디렉터리입니다.
+- **`-r|--results-directory <PATH>`**
 
-`-r|--results-directory <PATH>`
+  테스트 결과가 배치될 디렉터리입니다. 지정한 디렉터리가 없으면 생성됩니다.
 
-테스트 결과가 배치될 디렉터리입니다. 지정한 디렉터리가 없으면 생성됩니다.
+- **`-s|--settings <SETTINGS_FILE>`**
 
-`-s|--settings <SETTINGS_FILE>`
+  테스트 실행에 사용할 `.runsettings` 파일입니다. [`.runsettings` 파일을 사용하여 단위 테스트를 구성합니다.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
 
-테스트 실행에 사용할 `.runsettings` 파일입니다. [`.runsettings` 파일을 사용하여 단위 테스트를 구성합니다.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
+- **`-t|--list-tests`**
 
-`-t|--list-tests`
+  현재 프로젝트에서 검색된 테스트를 모두 나열합니다.
 
-현재 프로젝트에서 검색된 테스트를 모두 나열합니다.
+- **`-v|--verbosity <LEVEL>`**
 
-`-v|--verbosity <LEVEL>`
+  명령의 세부 정보 표시 수준을 설정합니다. 허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다.
 
-명령의 세부 정보 표시 수준을 설정합니다. 허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다.
+- `RunSettings` 인수
 
-`RunSettings arguments`
+  인수는 테스트의 `RunSettings` 구성으로서 전달됩니다. 인수는 “-- ” 뒤에 `[name]=[value]` 쌍으로 지정됩니다(-- 뒤 공백 주의). 공백은 여러 `[name]=[value]` 쌍을 구분하는 데 사용됩니다.
 
-테스트를 위해 RunSettings 구성으로 전달되는 인수입니다. 인수는 “-- ” 뒤에 `[name]=[value]` 쌍으로 지정됩니다(-- 뒤 공백 주의). 공백은 여러 `[name]=[value]` 쌍을 구분하는 데 사용됩니다.
+  예: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
-예: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
-
-RunSettings에 대한 자세한 내용은 [vstest.console.exe: Passing RunSettings args(vstest.console.exe: RunSettings 인수 전달)](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)를 참조하세요.
-
-# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
-
-`-a|--test-adapter-path <PATH_TO_ADAPTER>`
-
-테스트 실행에 지정된 경로에서 사용자 지정 테스트 어댑터를 사용합니다.
-
-`-c|--configuration {Debug|Release}`
-
-빌드 구성을 정의합니다. 기본값은 `Debug`이지만 프로젝트의 구성으로 이 기본 SDK 설정이 재정의될 수 있습니다.
-
-`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`
-
-테스트 실행에 대한 데이터 수집기를 사용하도록 설정합니다. 자세한 내용은 [테스트 실행 모니터링 및 분석](https://aka.ms/vstest-collect)을 참조하세요.
-
-`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
-
-테스트 플랫폼에 대한 진단 모드를 사용하도록 설정하고 지정된 파일에 진단 메시지를 기록합니다.
-
-`-f|--framework <FRAMEWORK>`
-
-특정 [프레임워크](../../standard/frameworks.md)에 대한 테스트 이진 파일을 찾습니다.
-
-`--filter <EXPRESSION>`
-
-지정된 식을 사용하여 현재 프로젝트의 테스트를 필터링합니다. 자세한 내용은 [필터 옵션 세부 정보](#filter-option-details) 섹션을 참조하세요. 선택적 단위 테스트 필터링을 사용하는 방법에 대한 자세한 내용 및 예제는 [선택적 단위 테스트 실행](../testing/selective-unit-tests.md)을 참조하세요.
-
-`-h|--help`
-
-명령에 대한 간단한 도움말을 출력합니다.
-
-`-l|--logger <LoggerUri/FriendlyName>`
-
-테스트 결과에 대해 로거를 지정합니다.
-
-`--no-build`
-
-테스트 프로젝트를 실행하기 전에 빌드하지 않습니다. 또한 `--no-restore` 플래그를 암시적으로 설정합니다.
-
-`--no-restore`
-
-명령을 실행할 때 암시적 복원을 실행하지 않습니다.
-
-`-o|--output <OUTPUT_DIRECTORY>`
-
-실행할 이진 파일을 찾을 디렉터리입니다.
-
-`-r|--results-directory <PATH>`
-
-테스트 결과가 배치될 디렉터리입니다. 지정한 디렉터리가 없으면 생성됩니다.
-
-`-s|--settings <SETTINGS_FILE>`
-
-테스트 실행에 사용할 `.runsettings` 파일입니다. [`.runsettings` 파일을 사용하여 단위 테스트를 구성합니다.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
-
-`-t|--list-tests`
-
-현재 프로젝트에서 검색된 테스트를 모두 나열합니다.
-
-`-v|--verbosity <LEVEL>`
-
-명령의 세부 정보 표시 수준을 설정합니다. 허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다.
-
-# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-`-a|--test-adapter-path <PATH_TO_ADAPTER>`
-
-테스트 실행에 지정된 경로에서 사용자 지정 테스트 어댑터를 사용합니다.
-
-`-c|--configuration {Debug|Release}`
-
-빌드 구성을 정의합니다. 기본값은 `Debug`이지만 프로젝트의 구성으로 이 기본 SDK 설정이 재정의될 수 있습니다.
-
-`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
-
-테스트 플랫폼에 대한 진단 모드를 사용하도록 설정하고 지정된 파일에 진단 메시지를 기록합니다.
-
-`-f|--framework <FRAMEWORK>`
-
-특정 [프레임워크](../../standard/frameworks.md)에 대한 테스트 이진 파일을 찾습니다.
-
-`--filter <EXPRESSION>`
-
-지정된 식을 사용하여 현재 프로젝트의 테스트를 필터링합니다. 자세한 내용은 [필터 옵션 세부 정보](#filter-option-details) 섹션을 참조하세요. 선택적 단위 테스트 필터링을 사용하는 방법에 대한 자세한 내용 및 예제는 [선택적 단위 테스트 실행](../testing/selective-unit-tests.md)을 참조하세요.
-
-`-h|--help`
-
-명령에 대한 간단한 도움말을 출력합니다.
-
-`-l|--logger <LoggerUri/FriendlyName>`
-
-테스트 결과에 대해 로거를 지정합니다.
-
-`--no-build`
-
-테스트 프로젝트를 실행하기 전에 빌드하지 않습니다.
-
-`-o|--output <OUTPUT_DIRECTORY>`
-
-실행할 이진 파일을 찾을 디렉터리입니다.
-
-`-s|--settings <SETTINGS_FILE>`
-
-테스트 실행에 사용할 `.runsettings` 파일입니다. [`.runsettings` 파일을 사용하여 단위 테스트를 구성합니다.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
-
-`-t|--list-tests`
-
-현재 프로젝트에서 검색된 테스트를 모두 나열합니다.
-
-`-v|--verbosity <LEVEL>`
-
-명령의 세부 정보 표시 수준을 설정합니다. 허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다.
-
----
+  자세한 내용은 [vstest.console.exe: Passing RunSettings args(vstest.console.exe: RunSettings 인수 전달)](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)를 참조하세요.
 
 ## <a name="examples"></a>예
 
-현재 디렉터리에 있는 프로젝트에서 테스트를 실행합니다.
+- 현재 디렉터리에 있는 프로젝트에서 테스트를 실행합니다.
 
-`dotnet test`
+  ```dotnetcli
+  dotnet test
+  ```
 
-`test1` 프로젝트에서 테스트를 실행합니다.
+- `test1` 프로젝트에서 테스트를 실행합니다.
 
-`dotnet test ~/projects/test1/test1.csproj`
+  ```dotnetcli
+  dotnet test ~/projects/test1/test1.csproj
+  ```
 
-현재 디렉터리의 프로젝트에서 테스트를 실행하고 trx 형식으로 테스트 결과 파일을 생성합니다.
+- 현재 디렉터리의 프로젝트에서 테스트를 실행하고 trx 형식으로 테스트 결과 파일을 생성합니다.
 
-`dotnet test --logger trx`
+  ```dotnetcli
+  dotnet test --logger trx
+  ```
 
 ## <a name="filter-option-details"></a>필터 옵션 세부 정보
 

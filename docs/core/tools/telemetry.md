@@ -3,18 +3,18 @@ title: .NET Core SDK 원격 분석
 description: 어떤 데이터가 수집되고 수집 기능을 사용하지 않도록 설정하는 방법에 대한 분석을 위해 사용량 정보를 수집하는 .NET Core SDK 원격 분석 기능을 살펴봅니다.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: 8bde344ee393e113502a0895ee55c241cbf24c57
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9d5d7ff09ade89712f2fbbe35224851bb1c28b4c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714112"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156688"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 원격 분석
 
-[.NET Core SDK](index.md)에는 .NET Core CLI에서 크래시가 발생할 때 사용량 현황 데이터 및 예외 정보를 수집하는 원격 분석 기능이 포함되어 있습니다. .NET Core CLI는 .NET Core SDK와 함께 제공되며 .NET Core 앱을 빌드, 테스트 및 게시하는 데 사용되는 동사 세트입니다. .NET 팀이 이 도구를 개선하려면 이 도구가 어떻게 사용되는지 이해해야 합니다. 오류에 대한 정보는 팀이 문제를 해결하고 버그를 수정하는 데 도움이 됩니다.
+[.NET Core SDK](index.md)에는 .NET Core CLI에서 크래시가 발생할 때 사용량 현황 데이터 및 예외 정보를 수집하는 원격 분석 기능이 포함되어 있습니다. .NET Core CLI는 .NET Core SDK와 함께 제공되며 .NET Core 앱을 빌드, 테스트 및 게시하는 데 사용되는 동사 집합입니다. .NET 팀이 이 도구를 개선하려면 이 도구가 어떻게 사용되는지 이해해야 합니다. 오류에 대한 정보는 팀이 문제를 해결하고 버그를 수정하는 데 도움이 됩니다.
 
-수집된 데이터는 익명이며 [Creative Commons Attribution 라이선스](https://creativecommons.org/licenses/by/4.0/)에 따라 모두 집계하여 게시됩니다. 
+수집된 데이터는 익명이며 [Creative Commons Attribution 라이선스](https://creativecommons.org/licenses/by/4.0/)에 따라 모두 집계하여 게시됩니다.
 
 ## <a name="scope"></a>Scope
 
@@ -30,7 +30,7 @@ ms.locfileid: "75714112"
 
 ## <a name="how-to-opt-out"></a>옵트아웃(opt out)하는 방법
 
-.NET Core SDK 원격 분석 기능은 기본적으로 사용됩니다. 원격 분석 기능을 옵트아웃하려면 `DOTNET_CLI_TELEMETRY_OPTOUT` 환경 변수를 `1` 또는 `true`로 설정합니다. 
+.NET Core SDK 원격 분석 기능은 기본적으로 사용됩니다. 원격 분석 기능을 옵트아웃하려면 `DOTNET_CLI_TELEMETRY_OPTOUT` 환경 변수를 `1` 또는 `true`로 설정합니다.
 
 설치에 성공하면 .NET Core SDK 설치 관리자는 단일 원격 분석 항목을 보냅니다. 옵트아웃하려면 .NET Core SDK를 설치하기 전에 `DOTNET_CLI_TELEMETRY_OPTOUT` 환경 변수를 설정합니다.
 
@@ -128,11 +128,11 @@ at Microsoft.DotNet.Cli.Program.ProcessArgs(String[] args, ITelemetry telemetryC
 at Microsoft.DotNet.Cli.Program.Main(String[] args)
 ```
 
-### <a name="avoid-inadvertent-disclosure-information"></a>의도하지 않은 정보 공개 방지
+### <a name="avoid-inadvertent-disclosure-of-information"></a>의도하지 않은 정보 공개 방지
 
 .NET Core 기여자 및 자체적으로 빌드한 .NET Core SDK 버전을 실행하는 사용자는 SDK 소스 코드의 경로를 고려해야 합니다. 사용자 지정 디버그 빌드이거나 사용자 지정 빌드 기호 파일로 구성된 .NET Core SDK를 사용하는 동안 크래시가 발생하면 빌드 머신의 SDK 소스 파일 경로는 스택 추적의 일부로 수집되며 해시되지 않습니다.
 
-따라서 .NET Core SDK의 사용자 지정 빌드는 경로 이름이 개인 정보나 중요한 정보를 공개하는 디렉터리에 있으면 안 됩니다. 
+따라서 .NET Core SDK의 사용자 지정 빌드는 경로 이름이 개인 정보나 중요한 정보를 공개하는 디렉터리에 있으면 안 됩니다.
 
 ## <a name="see-also"></a>참조
 

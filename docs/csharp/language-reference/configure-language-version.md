@@ -1,19 +1,24 @@
 ---
 title: C# 언어 버전 관리 - C# 가이드
-description: 프로젝트에 따라 C# 언어 버전이 결정되는 방법과 수동으로 조정할 수 있는 다양한 값에 대해 알아봅니다.
-ms.date: 07/10/2019
-ms.openlocfilehash: 3c1035d983660ea0a945e4d4b7b72c69736c90cb
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+description: C# 언어 버전은 프로젝트에 따라 결정된다는 사실과 그 이유를 알아봅니다. 기본값을 수동으로 재정의하는 방법을 알아봅니다.
+ms.date: 02/21/2020
+ms.openlocfilehash: 2be76fdac471a7175b661d896b0da2910b3609f3
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980134"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626766"
 ---
 # <a name="c-language-versioning"></a>C# 언어 버전 관리
 
-최신 C# 컴파일러는 프로젝트의 대상 프레임워크를 기반으로 기본 언어 버전을 결정합니다. C# 언어는 모든 .NET 구현에서 사용할 수 없는 유형 또는 런타임 구성 요소를 사용하는 기능이 있을 수 있기 때문입니다. 또한 프로젝트가 빌드된 대상에 상관없이 기본적으로 가장 호환성이 높은 언어 버전을 제공합니다.
+최신 C# 컴파일러는 프로젝트의 대상 프레임워크를 기반으로 기본 언어 버전을 결정합니다. Visual Studio는 이 값을 변경하는 UI를 제공하지 않지만, *csproj* 파일을 편집하여 값을 변경할 수 있습니다. 기본값이 이렇게 선택되면 항상 대상 프레임워크와 호환되는 최신 언어 버전을 사용할 수 있게 됩니다. 프로젝트의 대상과 호환되는 최신 언어 기능을 이용할 수 있다는 이점이 있습니다. 또한, 기본값이 이렇게 선택되면 대상 프레임워크에서 사용할 수 없는 형식이나 런타임 동작이 필요한 언어를 사용하지 않을 수 있습니다. 기본값보다 최신의 언어 버전을 선택할 경우 컴파일 시간 및 런타임 오류를 진단하기 어려워질 수 있습니다.
 
-이 문서의 규칙은 Visual Studio 2019 또는 .NET Core 3.0 SDK와 함께 제공되는 컴파일러에 적용됩니다. Visual Studio 2017 설치 또는 이전 .NET Core SDK 버전의 일부인 C# 컴파일러는 기본적으로 C# 7.0을 대상으로 합니다. 
+C# 8.0(이상)은 .NET Core 3.x 및 이후 버전에서만 지원됩니다. 대부분의 최신 기능에는 .NET Core 3.x에서 도입된 라이브러리 및 런타임 기능이 필요합니다.
+
+- 기본 인터페이스 멤버를 구현하려면 .NET Core 3.0 CLR의 새로운 기능이 필요합니다.
+- 비동기 스트림에는 새로운 형식인 <xref:System.IAsyncDisposable?displayProperty=nameWithType>, <xref:System.Collections.Generic.IAsyncEnumerable%601?displayProperty=nameWithType> 및 <xref:System.Collections.Generic.IAsyncEnumerator%601?displayProperty=nameWithType>이 필요합니다.
+- 인덱스와 범위에는 새로운 형식인 <xref:System.Index?displayProperty=nameWithType> 및 <xref:System.Range?displayProperty=nameWithType>이 필요합니다.
+- null 허용 참조 형식은 더 효과적인 경고를 제공하기 위해 몇 가지 [특성](../nullable-attributes.md)을 사용하는데, 이러한 특성은 .NET Core 3.0에서 추가되었습니다. 다른 대상 프레임워크는 이러한 특성으로 주석이 추가되지 않았습니다. 즉, null 허용 경고가 잠재적인 문제를 정확하게 반영하지 못할 수 있습니다.
 
 ## <a name="defaults"></a>기본값
 
@@ -28,9 +33,7 @@ ms.locfileid: "76980134"
 |.NET Standard|1.x|C# 7.3|
 |.NET Framework|모두|C# 7.3|
 
-## <a name="default-for-previews"></a>미리 보기에 대한 기본값
-
-프로젝트가 해당 미리 보기 언어 버전이 있는 미리 보기 프레임워크를 대상으로 하는 경우 사용되는 언어 버전은 미리 보기 언어 버전입니다. 이렇게 하면 릴리스된 .NET Core 버전을 대상으로 하는 프로젝트에 영향을 주지 않고 모든 환경에서 해당 미리 보기로 작업할 수 있는 최신 기능을 사용할 수 있습니다.
+프로젝트가 해당 미리 보기 언어 버전이 있는 미리 보기 프레임워크를 대상으로 하는 경우 사용되는 언어 버전은 미리 보기 언어 버전입니다. 따라서 릴리스된 .NET Core 버전을 대상으로 하는 프로젝트에 영향을 주지 않으면서 모든 환경에서 해당 미리 보기의 최신 기능을 사용할 수 있습니다.
 
 ## <a name="override-a-default"></a>기본값 재정의
 
@@ -64,11 +67,11 @@ C# 버전을 명시적으로 지정해야 하는 경우 다음과 같은 여러 
 </Project>
 ```
 
-이제 해당 파일을 포함하는 디렉터리의 모든 하위 디렉터리에 있는 빌드는 미리 보기 C# 버전을 사용합니다. 자세한 내용은 [빌드 사용자 지정](/visualstudio/msbuild/customize-your-build)에 대한 문서를 참조하세요.
+해당 파일을 포함하는 디렉터리의 모든 하위 디렉터리에 있는 빌드는 미리 보기 C# 버전을 사용합니다. 자세한 내용은 [빌드 사용자 지정](/visualstudio/msbuild/customize-your-build)에 대한 문서를 참조하세요.
 
 ## <a name="c-language-version-reference"></a>C# 언어 버전 참조
 
-모든 표는 현재 C# 언어 버전을 보여줍니다. 컴파일러가 오래된 것이라면 모든 값을 반드시 파악하지 못할 수도 있습니다. .NET Core 3.0을 설치하면 나열된 모든 항목에 액세스할 수 있습니다.
+모든 표는 현재 C# 언어 버전을 보여줍니다. 컴파일러가 오래된 것이라면 일부 값을 파악하지 못할 수 있습니다. .NET Core 3.0 이상을 설치하면 나열된 모든 항목에 액세스할 수 있습니다.
 
 |값|의미|
 |------------|-------------|

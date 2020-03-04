@@ -3,12 +3,12 @@ title: C#의 역사 - C# 가이드
 description: 이 언어의 초창기 버전은 어떤 모습이었으며 이후 어떻게 변했는가?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 83934d9c8194d5109cea0e847d287c01c32a2955
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 9114395a5c6cfd8df5da18024921c35828947e0b
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739099"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673279"
 ---
 # <a name="the-history-of-c"></a>C\#의 역사
 
@@ -37,7 +37,7 @@ C# 버전 1.0은 오늘날보다 기능이 없는 편이었습니다. 좀 더 �
 C# 1.0의 주요 기능에는 다음이 포함되어 있습니다.
 
 - [클래스](../programming-guide/classes-and-structs/classes.md)
-- [구조체](../programming-guide/classes-and-structs/structs.md)
+- [구조체](../language-reference/builtin-types/struct.md)
 - [인터페이스](../programming-guide/interfaces/index.md)
 - [이벤트](../events-overview.md)
 - [속성](../properties.md)
@@ -122,7 +122,7 @@ Visual Studio 2012과 함께 릴리스된 C# 버전 5.0은 언어에 중점을 �
 - [비동기 멤버](../async.md)
 - [호출자 정보 특성](../programming-guide/concepts/caller-information.md)
 
-### <a name="see-also"></a>참고 항목
+### <a name="see-also"></a>관련 항목
 
 - [코드 프로젝트: C# 5.0의 호출자 정보 특성](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
@@ -173,4 +173,4 @@ Visual Studio 2012과 함께 릴리스된 C# 버전 5.0은 언어에 중점을 �
 
 그러나 C#은 더욱 광범위하게 사용되고 있습니다. .NET Core는 이제 모든 운영 체제를 대상으로 하며 클라우드와 휴대성에 확실히 집중하고 있습니다.  이는 새로운 기능을 제공하는 것 외에도 언어 디자이너가 많이 생각하고 시간을 투자하게 만듭니다.
 
-_아티클_ [_NDepend 블로그에 최초로 게시됨_](https://blog.ndepend.com/c-versions-look-language-history/) _, Erik Dietrich 및 Patrick Smacchia 제공_
+‘이 문서는 [NDepend 블로그에 최초로 게시되었습니다.](https://blog.ndepend.com/c-versions-look-language-history/) Erik Dietrich 및 Patrick Smacchia 제공.’   

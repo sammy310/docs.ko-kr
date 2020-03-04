@@ -1,13 +1,13 @@
 ---
 title: dotnet-counters - .NET Core
 description: dotnet-counter 명령줄 도구를 설치하고 사용하는 방법에 대해 알아봅니다.
-ms.date: 10/14/2019
-ms.openlocfilehash: 399d5908e8ac52bcd4a20c1a819fc6c99f4de2f4
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/26/2020
+ms.openlocfilehash: 88f701a60d0ee03dd0236ae54c57679943e14939
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76737712"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157884"
 ---
 # <a name="dotnet-counters"></a>dotnet-counters
 
@@ -45,8 +45,53 @@ dotnet-counters [-h|--help] [--version] <command>
 
 | 명령                                             |
 | --------------------------------------------------- |
+| [dotnet-counters collect](#dotnet-counters-collect) |
 | [dotnet-counters 목록](#dotnet-counters-list)       |
 | [dotnet-counters 모니터](#dotnet-counters-monitor) |
+| [dotnet-counters ps](#dotnet-counters-ps) |
+
+## <a name="dotnet-counters-collect"></a>dotnet-counters collect
+
+선택한 카운터 값을 주기적으로 수집하고 후처리를 위해 지정된 파일 형식으로 내보냅니다.
+
+### <a name="synopsis"></a>개요
+
+```console
+dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [counter_list] [--format] [-o|--output]
+```
+
+### <a name="options"></a>옵션
+
+- **`-p|--process-id <PID>`**
+
+  모니터링할 프로세스의 ID입니다.
+
+- **`--refresh-interval <SECONDS>`**
+
+  표시된 카운터 업데이트 사이의 지연 시간(초)입니다.
+
+- **`counter_list <COUNTERS>`**
+
+  공백으로 구분된 카운터의 목록입니다. 카운터는 `provider_name[:counter_name]`을 지정할 수 있습니다. 한정된 `counter_name` 없이 `provider_name`을 사용하면 모든 카운터가 표시됩니다. 공급자 및 카운터 이름을 검색하려면 [dotnet-counters 목록](#dotnet-counters-list) 명령을 사용합니다.
+
+- **`--format <csv|json>`**
+
+  내보낼 형식입니다. 현재 csv와 json을 사용할 수 있습니다.
+
+- **`-o|--output <output>`**
+
+  출력 파일의 이름입니다.
+
+### <a name="examples"></a>예
+
+- 3초의 새로 고침 간격으로 모든 카운터를 수집하고 csv를 출력으로 생성합니다.
+
+  ```console
+  > dotnet-counters collect --process-id 1902 --refresh-interval 3 --format csv
+
+  counter_list is unspecified. Monitoring all counters by default.
+  Starting a counter session. Press Q to quit.
+  ```
 
 ## <a name="dotnet-counters-list"></a>dotnet-counters 목록
 
@@ -135,3 +180,22 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
   Press p to pause, r to resume, q to quit.
       request                                      100
   ```
+  
+## <a name="dotnet-counters-ps"></a>dotnet-counters ps 
+
+모니터링할 수 있는 dotnet 프로세스의 목록을 표시합니다.
+
+### <a name="synopsis"></a>개요
+
+```console
+dotnet-counters ps [-h|--help]
+```
+
+### <a name="example"></a>예제
+
+```console
+> dotnet-counters ps
+  
+  15683 WebApi     /home/suwhang/repos/WebApi/WebApi
+  16324 dotnet     /usr/local/share/dotnet/dotnet
+```

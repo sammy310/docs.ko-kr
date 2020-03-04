@@ -8,16 +8,16 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 6b96d65f657f2af1af5c9a245e956640ee06260e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 76f4a3ed929e3ac8e3e6cc74158e75af7a6c8cf2
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76748490"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625949"
 ---
 # <a name="value-types-c-reference"></a>값 형식(C# 참조)
 
-*값 형식* 및 [참조 형식](../keywords/reference-types.md)은 C# 형식의 두 가지 주요 범주입니다. 값 형식의 변수에는 형식의 인스턴스가 포함되어 있습니다. 이는 형식 인스턴스에 대한 참조를 포함하는 참조 형식의 변수와 다릅니다. 기본적으로 [할당](../operators/assignment-operator.md)에서 메서드에 인수를 전달하거나, 메서드 결과를 반환하면 변수 값이 복사됩니다. 값 형식 변수의 경우 해당 형식 인스턴스가 복사됩니다. 다음 예제에서는 해당 동작을 보여줍니다.
+*값 형식* 및 [참조 형식](../keywords/reference-types.md)은 C# 형식의 두 가지 주요 범주입니다. 값 형식의 변수에는 형식의 인스턴스가 포함되어 있습니다. 이는 형식 인스턴스에 대한 참조를 포함하는 참조 형식의 변수와 다릅니다. 기본적으로 변수 값은 [할당](../operators/assignment-operator.md) 시에, 인수를 메서드에 전달할 때, 그리고 메서드 결과를 반환할 때 복사됩니다. 값 형식 변수의 경우 해당 형식 인스턴스가 복사됩니다. 다음 예제에서는 해당 동작을 보여줍니다.
 
 [!code-csharp[copy of values](~/samples/csharp/language-reference/builtin-types/ValueTypes.cs#ValueTypeCopied)]
 
@@ -34,7 +34,7 @@ ms.locfileid: "76748490"
 
 값 형식은 다음 두 가지 중 하나일 수 있습니다.
 
-- 데이터 및 관련 기능을 캡슐화하는[구조 형식](../keywords/struct.md)
+- 데이터 및 관련 기능을 캡슐화하는[구조 형식](struct.md)
 - 명명된 상수 집합으로 정의되고 선택 사항 또는 선택 사항의 조합을 나타내는 [열거 형식](enum.md)
 
 기본 값 형식 `T`의 모든 값과 추가 [Null](../keywords/null.md) 값을 나타내는 [ 값 형식](nullable-value-types.md) `T?` Null 허용 값 형식인 경우를 제외하고는 값 형식의 변수에 `null`을 할당할 수 없습니다.

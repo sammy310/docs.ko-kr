@@ -1,18 +1,18 @@
 ---
 title: C# 인터페이스 - C# 언어 둘러보기
 description: 인터페이스는 C#의 형식이 구현하는 계약을 정의합니다.
-ms.date: 08/10/2016
+ms.date: 02/27/2020
 ms.assetid: a9bf82f4-efd1-4216-bd34-4ef0fa48c968
-ms.openlocfilehash: d10d9f69cebe9a05cdff9b9ff5d817237bf8c56f
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 62d94462fa481379cf70d63a598deb7f36be204f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346836"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159132"
 ---
 # <a name="interfaces"></a>인터페이스
 
-***인터페이스***는 클래스 및 구조체에서 구현될 수 있는 계약을 정의합니다. 인터페이스는 메서드, 속성, 이벤트 및 인덱서를 포함할 수 있습니다. 인터페이스는 정의하는 멤버의 구현을 제공하지 않으며 단순히 인터페이스를 구현하는 클래스 또는 구조체에서 제공해야 하는 멤버를 지정합니다.
+***인터페이스***는 클래스 및 구조체에서 구현될 수 있는 계약을 정의합니다. 인터페이스는 메서드, 속성, 이벤트 및 인덱서를 포함할 수 있습니다. 인터페이스는 해당 인터페이스가 정의하는 멤버의 구현을 제공하지 않으며 단지 해당 인터페이스를 구현하는 클래스 또는 구조체에서 제공해야 하는 멤버를 지정합니다.
 
 인터페이스는 ***다중 상속***을 사용할 수 있습니다. 다음 예제에서 인터페이스 `IComboBox`는 `ITextBox` 및 `IListBox`를 둘 다 상속합니다.
 

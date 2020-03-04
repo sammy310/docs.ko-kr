@@ -5,12 +5,12 @@ author: leecow
 ms.author: leecow
 ms.date: 12/04/2019
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 4164ea5a04d80ab20109168a225b793b02ee616a
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: ca86b3c158bb38c1293cd4303dcf4c00ea9175b1
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448895"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157814"
 ---
 # <a name="net-core-dependencies-and-requirements"></a>.NET Core 종속성 및 요구 사항
 
@@ -294,6 +294,14 @@ Fedora 사용자: OpenSSL의 버전이 1.1보다 크거나 같은 경우 **compa
 | 3.0               | High Sierra(10.13+)  | X64 | [추가 정보](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) |
 | 2.2               | Sierra(10.12+)       | X64 | [추가 정보](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) |
 | 2.1               | Sierra(10.12+)       | X64 | [추가 정보](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) |
+
+macOS Catalina(버전10.15)부터, 2019년 6월 1일 이후에 빌드되어 개발자 ID로 배포되는 모든 소프트웨어는 공증을 받아야 합니다. 이 요구 사항은 .NET Core 런타임, .NET Core SDK, 그리고 .NET Core로 만든 소프트웨어에 적용됩니다.
+
+.NET Core(런타임 및 SDK) 버전 3.1, 3.0, 2.1용 설치 프로그램은 2020년 2월 18일부터 공증되었습니다. 그 전에 릴리스된 버전은 공증되지 않았습니다. 공증되지 않은 앱을 실행하면 다음 이미지와 비슷한 오류가 표시됩니다.
+
+![macOS Catalina 공증 경고](media/dependencies/macos-notarized-pkg-warning.png)
+
+공증 요구 사항이 적용됨에 따라 .NET Core(및 .NET Core 앱)에 미치는 영향에 대해 자세히 알아보려면 [macOS Catalina 공증 관련 사항](macos-notarization-issues.md)을 참조하세요.
 
 ## <a name="libgdiplus"></a>libgdiplus
 

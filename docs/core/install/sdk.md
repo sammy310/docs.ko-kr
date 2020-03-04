@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 4a6c8b27812e9f60e52132169dda0464c24abcc2
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 0aa323533dd9136372c2bbc330c9c3056fdf428c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740571"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157573"
 ---
 # <a name="install-the-net-core-sdk"></a>.NET Core SDK 설치
 
@@ -36,6 +36,19 @@ macOS에는 .NET Core 3.1 SDK를 설치하는 데 사용할 수 있는 독립 �
 
 - [x64(64비트) CPU](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
+## <a name="download-and-manually-install"></a>다운로드 및 수동으로 설치
+
+.NET Core용 macOS 설치 프로그램의 대안으로, SDK를 다운로드하여 수동으로 설치할 수 있습니다.
+
+SDK를 추출하고 터미널에서 .NET Core CLI 명령을 사용할 수 있으려면 먼저 .NET Core 이진 릴리스를 [다운로드](#all-net-core-downloads)합니다. 그런 다음 터미널을 열고 다음 명령을 실행합니다. 런타임이 `~/Downloads/dotnet-sdk.pkg` 파일로 다운로드되었다고 가정합니다.
+
+```bash
+mkdir -p $HOME/dotnet
+sudo installer -pkg ~/Downloads/dotnet-sdk.pkg -target $HOME/dotnet
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=$PATH:$HOME/dotnet
+```
+
 ::: zone-end
 
 ::: zone pivot="os-linux"
@@ -59,7 +72,7 @@ export PATH=$PATH:$HOME/dotnet
 > [!TIP]
 > 이전 `export` 명령은 명령이 실행된 터미널 세션에서만 .NET Core CLI 명령을 사용할 수 있도록 만듭니다.
 >
-> 셸 프로필을 편집하여 명령을 영구적으로 추가할 수 있습니다. 몇 가지 Linux용 셸이 있으며, 각각 다른 프로필을 갖습니다. 예:
+> 셸 프로필을 편집하여 명령을 영구적으로 추가할 수 있습니다. 몇 가지 Linux용 셸이 있으며, 각각 다른 프로필을 갖습니다. 예를 들어:
 >
 > - **Bash 셸**: *~/.bash_profile*, *~/.bashrc*
 > - **Korn 셸**: *~/.kshrc* 또는 *.profile*
@@ -98,12 +111,31 @@ Visual Studio가 최신 .NET Core SDK 및 런타임을 설치할 수 있습니�
 
 Visual Studio를 설치하거나 수정할 때는 빌드하려는 애플리케이션의 종류에 따라 다음 워크로드 중 하나 이상을 선택합니다.
 
-- **기타 도구 세트** 섹션의 **.NET Core 플랫폼 간 개발** 워크로드
+- **기타 도구 집합** 섹션의 **.NET Core 플랫폼 간 개발** 워크로드
 - **웹 및 클라우드** 섹션의 **ASP.NET 및 웹 개발** 워크로드
 - **웹 및 클라우드** 섹션의 **Azure 개발** 워크로드
 - **데스크톱 및 모바일** 섹션의 **.NET 데스크톱 개발** 워크로드
 
 [![Windows Visual Studio 2019 및 .NET Core 워크로드](media/install-sdk/windows-install-visual-studio-2019.png)](media/install-sdk/windows-install-visual-studio-2019.png#lightbox)
+
+## <a name="download-and-manually-install"></a>다운로드 및 수동으로 설치
+
+런타임을 추출하고 터미널에서 .NET Core CLI 명령을 사용할 수 있으려면 먼저 .NET Core 이진 릴리스를 [다운로드](#all-net-core-downloads)합니다. 그런 다음 `%USERPROFILE%\dotnet`와 같이 설치할 디렉터리를 만듭니다. 마지막으로 다운로드한 zip 파일을 그 디렉터리로 추출합니다.
+
+기본적으로 .NET Core CLI 명령과 앱은 이러한 방식으로 설치된 .NET Core를 사용하지 않습니다. 이를 사용하려면 명시적으로 선택해야 합니다. 이렇게 하려면 애플리케이션이 시작되는 환경 변수를 변경합니다.
+
+```console
+set DOTNET_ROOT=%USERPROFILE%\dotnet
+set PATH=%USERPROFILE%\dotnet;%PATH%
+```
+
+이 방법을 사용하면 여러 버전을 별도의 위치에 설치한 다음 애플리케이션이 해당 위치를 가리키는 환경 변수를 사용하여 애플리케이션을 실행하는 데 사용해야 하는 설치 위치를 명시적으로 선택할 수 있습니다.
+
+이러한 환경 변수가 설정된 경우에도 .NET Core는 애플리케이션을 실행하는 데 가장 적합한 프레임워크를 선택할 때 기본 전역 설치 위치를 계속 고려합니다. 기본값은 일반적으로 설치 프로그램이 사용하는 `C:\Program Files\dotnet`입니다. 이 환경 변수를 설정하여 사용자 지정 설치 위치만 사용하도록 런타임에 지시할 수도 있습니다.
+
+```console
+set DOTNET_MULTILEVEL_LOOKUP=0
+```
 
 ::: zone-end
 
@@ -186,6 +218,7 @@ Docker 컨테이너에서 .NET Core를 사용하는 방법에 대한 자세한 �
 
 ::: zone pivot="os-macos"
 
+- [macOS Catalina 공증 관련 사항](macos-notarization-issues.md)
 - [자습서: macOS에서 시작](../tutorials/using-on-mac-vs.md)
 - [자습서: Visual Studio Code를 사용하여 새 앱 만들기](../tutorials/with-visual-studio-code.md)
 - [자습서: .NET Core 앱 컨테이너화](../docker/build-container.md)

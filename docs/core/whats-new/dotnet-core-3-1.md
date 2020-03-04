@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 0905cbebb2d966570be4ac3aefb40f4377b97061
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 323a2390f079c17b81db01e4e3787916251943bf
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742581"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156558"
 ---
 # <a name="whats-new-in-net-core-31"></a>.NET Core 3.1의 새로운 기능
 
@@ -36,6 +36,34 @@ Visual Studio 2019을 사용하는 경우 .NET Core 3.1 프로젝트와 함께 �
 | .NET Core 2.1 | 2021년 8월 21일에 수명이 종료됩니다.    |
 
 자세한 내용은 [.NET Core 지원 정책](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)을 참조하세요.
+
+## <a name="macos-apphost-and-notarization"></a>macOS appHost 및 공증
+
+‘macOS만 해당’ 
+
+공증된 macOS용 .NET Core SDK 3.1부터, appHost 설정이 기본적으로 사용하지 않도록 설정됩니다. 자세한 내용은 [macOS Catalina 공증과 이것이 .NET Core 다운로드 및 프로젝트에 미치는 영향](../install/macos-notarization-issues.md)을 참조하세요.
+
+appHost 설정이 사용하도록 설정된 경우, 빌드 또는 게시할 때 .NET Core가 네이티브 Mach-O 실행 파일을 생성합니다. 앱을 `dotnet run` 명령을 사용하여 소스 코드에서 실행하거나 Mach-O 실행 파일을 직접 시작하면 앱이 appHost 컨텍스트에서 실행됩니다.
+
+사용자가 appHost 없이 [런타임 종속](../deploying/index.md#publish-runtime-dependent) 앱을 시작할 유일할 방법은 `dotnet <filename.dll>` 명령을 사용하는 것입니다. appHost는 앱을 [자체 포함](../deploying/index.md#publish-self-contained) 방식으로 게시하면 항상 만들어집니다.
+
+appHost는 다음과 같이 프로젝트 수준에서 구성하거나 `-p:UseAppHost` 매개 변수를 사용하여 특정 `dotnet` 명령에 대해 켜거나 끌 수 있습니다.
+
+- 프로젝트 파일
+
+  ```xml
+  <PropertyGroup>
+    <UseAppHost>true</UseAppHost>
+  </PropertyGroup>
+  ```
+
+- 명령줄 매개 변수
+
+  ```dotnetcli
+  dotnet run -p:UseAppHost=true
+  ```
+
+`UseAppHost` 설정에 대한 자세한 내용은 [MSBuild properties for Microsoft.NET.Sdk](../project-sdk/msbuild-props.md#useapphost)(Microsoft.NET.Sdk의 MSBuild 속성)를 참조하세요.
 
 ## <a name="windows-forms"></a>Windows Forms
 

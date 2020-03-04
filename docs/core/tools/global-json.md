@@ -3,12 +3,12 @@ title: global.json 개요
 description: .NET Core CLI 명령을 실행할 때 global.json 파일을 사용하여 .NET Core SDK 버전을 설정하는 방법에 대해 알아보세요.
 ms.date: 01/14/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 8582c495be58e38ca19320f14e20f8c511a9c821
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 70257566e1ff30f5c97212a5e0e3c308c27738b7
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920505"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625997"
 ---
 # <a name="globaljson-overview"></a>global.json 개요
 
@@ -132,9 +132,9 @@ SDK 버전을 선택할 때, 특정 SDK 버전이 누락된 경우 대체하거�
 
 ## <a name="globaljson-and-the-net-core-cli"></a>global.json 및 .NET Core CLI
 
-*global json* 파일에 버전을 설정하기 위해서는 컴퓨터에 설치된 SDK 버전을 알고 있는 것이 좋습니다. 이 작업을 수행하는 방법에 대한 자세한 내용은 [.NET Core가 이미 설치되어 있는지 확인하는 방법](../install/how-to-detect-installed-versions.md#check-sdk-versions)을 참조하세요.
+*global json* 파일에 버전을 설정하기 위해서는 머신에 설치된 SDK 버전을 알고 있는 것이 좋습니다. 이 작업을 수행하는 방법에 대한 자세한 내용은 [.NET Core가 이미 설치되어 있는지 확인하는 방법](../install/how-to-detect-installed-versions.md#check-sdk-versions)을 참조하세요.
 
-컴퓨터에 추가 .NET Core SDK 버전을 설치하려면 [.NET Core 다운로드](https://dotnet.microsoft.com/download/dotnet-core) 페이지를 방문하세요.
+머신에 추가 .NET Core SDK 버전을 설치하려면 [.NET Core 다운로드](https://dotnet.microsoft.com/download/dotnet-core) 페이지를 방문하세요.
 
 다음 예제와 비슷한 [dotnet new](dotnet-new.md) 명령을 실행하여 현재 디렉터리에서 *global.json* 파일을 새로 만들 수 있습니다.
 
@@ -147,7 +147,7 @@ dotnet new globaljson --sdk-version 3.0.100
 > [!NOTE]
 > 일치 규칙은 설치된 모든 .NET Core 설치 런타임에서 공통으로 사용되는 `dotnet.exe` 진입점에 의해 관리됩니다. 여러 개의 런타임이 나란히 설치된 경우 최신 버전의 .NET Corea Runtime에 대한 일치하는 규칙이 사용됩니다.
 
-## <a name="net-core-3xtabnetcore3x"></a>[.NET Core 3.x](#tab/netcore3x)
+## <a name="net-core-3x"></a>[.NET Core 3.x](#tab/netcore3x)
 
 .NET Core 3.0부터는 어떤 SDK 버전을 사용할지 결정할 때 다음 규칙이 적용됩니다.
 
@@ -160,7 +160,7 @@ dotnet new globaljson --sdk-version 3.0.100
   - `rollFoward` 값이 설정되지 않은 경우 `latestPatch`를 기본 `rollForward` 정책으로 사용합니다. 그렇지 않으면 [롤포워드](#rollforward) 섹션에서 각 값과 해당 동작을 확인하세요.
   - 시험판 버전을 고려하는지와 `allowPrerelease`가 설정되지 않은 경우의 기본 동작은 [allowPrerelease](#allowprerelease) 섹션에 설명되어 있습니다.
 
-## <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+## <a name="net-core-2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 .NET Core 2.x SDK에서는 어떤 SDK 버전을 사용할지 결정할 때 다음 규칙이 적용됩니다.
 
@@ -182,17 +182,19 @@ SDK 버전은 다음과 같은 부분으로 구성됩니다.
 
 ---
 
-## <a name="troubleshooting-build-warnings"></a>빌드 경고 문제 해결
+## <a name="troubleshoot-build-warnings"></a>빌드 경고 문제 해결
 
-> [!WARNING]
-> .NET Core SDK의 미리보기 버전으로 작업하고 있습니다. SDK 버전은 현재 프로젝트의 global.json 파일을 통해 정의할 수 있습니다. 자세한 내용은 <https://go.microsoft.com/fwlink/?linkid=869452> 참조
+* 다음 경고는 .NET Core SDK의 시험판 버전을 사용하여 프로젝트를 컴파일했음을 나타냅니다.
 
-이 경고는 .NET Core SDK의 시험판 버전을 사용하여 프로젝트를 컴파일했음을 나타냅니다. .NET Core SDK 버전은 높은 품질의 기록과 약정을 가지고 있습니다. 그러나 시험판 버전을 사용하지 않으려면 [allowPrerelease](#allowprerelease) 섹션의 .NET Core 3.0 SDK 이상 버전에서 사용할 수 있는 다양한 전략을 확인하세요. .NET Core 3.0 이상 런타임 또는 SDK가 설치된 적이 없던 컴퓨터의 경우 *global.json* 파일을 만들고 사용할 정확한 버전을 지정해야 합니다.
+  > .NET Core SDK의 미리보기 버전으로 작업하고 있습니다. SDK 버전은 현재 프로젝트의 global.json 파일을 통해 정의할 수 있습니다. 자세한 내용은 <https://go.microsoft.com/fwlink/?linkid=869452>를 참조하세요.
 
-> [!WARNING]
-> 스타트업 프로젝트 '{startupProject}'는 '.NETCoreApp' 버전 '{targetFrameworkVersion}' 프레임워크를 대상으로 합니다. 이 버전의 Entity Framework Core .NET 명령줄 도구는 버전 2.0 이상만 지원합니다. 이전 버전의 도구 사용에 대한 자세한 내용은 <https://go.microsoft.com/fwlink/?linkid=871254>를 참조하세요.
+  .NET Core SDK 버전은 높은 품질의 기록과 약정을 가지고 있습니다. 그러나 시험판 버전을 사용하지 않으려면 [allowPrerelease](#allowprerelease) 섹션의 .NET Core 3.0 SDK 이상 버전에서 사용할 수 있는 다양한 전략을 확인하세요. .NET Core 3.0 이상 런타임 또는 SDK가 설치된 적이 없던 머신의 경우 *global.json* 파일을 만들고 사용할 정확한 버전을 지정해야 합니다.
 
-.NET Core 2.1 SDK(버전 2.1.300)부터 `dotnet ef` 명령이 SDK에 포함되었습니다. 이 경고는 프로젝트가 EF Core 1.0 또는 1.1을 대상으로 하고 .NET Core 2.1 SDK 이상 버전과 호환되지 않음을 나타냅니다. 프로젝트를 컴파일하려면 .NET Core 2.0 SDK(버전 2.1.201) 및 이전 버전을 머신에 설치하고 *global.json* 파일을 사용하여 원하는 SDK 버전을 정의합니다. `dotnet ef` 명령에 대한 자세한 내용은 [EF Core .NET 명령줄 도구](/ef/core/miscellaneous/cli/dotnet)를 참조하세요.
+* 다음 경고는 프로젝트가 .NET Core 2.1 SDK 이상 버전과 호환되지 않는 EF Core 1.0 또는 1.1을 대상으로 함을 나타냅니다.
+
+  > 스타트업 프로젝트 '{startupProject}'는 '.NETCoreApp' 버전 '{targetFrameworkVersion}' 프레임워크를 대상으로 합니다. 이 버전의 Entity Framework Core .NET 명령줄 도구는 버전 2.0 이상만 지원합니다. 이전 버전의 도구 사용에 대한 자세한 내용은 <https://go.microsoft.com/fwlink/?linkid=871254>를 참조하세요.
+
+  .NET Core 2.1 SDK(버전 2.1.300)부터 `dotnet ef` 명령이 SDK에 포함되었습니다. 프로젝트를 컴파일하려면 머신에 .NET Core 2.0 SDK(버전 2.1.201) 또는 이전 버전을 설치하고 *global.json* 파일을 사용하여 원하는 SDK 버전을 정의하세요. `dotnet ef` 명령에 대한 자세한 내용은 [EF Core .NET 명령줄 도구](/ef/core/miscellaneous/cli/dotnet)를 참조하세요.
 
 ## <a name="see-also"></a>참조
 

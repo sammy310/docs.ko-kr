@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 187a49131e903e00cab54d9db43b6cd8eb359a3a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 500160d3bc9280b866e5f5ba24c5edc623e752c1
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713688"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673097"
 ---
 # <a name="class-c-reference"></a>class(C# 참조)
 
@@ -33,9 +33,9 @@ C#에서는 단일 상속만 허용됩니다. 즉, 한 클래스는 하나의 �
 |상속|예제|
 |-----------------|-------------|
 |없음|`class ClassA { }`|
-|Single|`class DerivedClass: BaseClass { }`|
-|없음. 두 개의 인터페이스 구현|`class ImplClass: IFace1, IFace2 { }`|
-|단일. 하나의 인터페이스 구현|`class ImplDerivedClass: BaseClass, IFace1 { }`|
+|Single|`class DerivedClass : BaseClass { }`|
+|없음. 두 개의 인터페이스 구현|`class ImplClass : IFace1, IFace2 { }`|
+|단일. 하나의 인터페이스 구현|`class ImplDerivedClass : BaseClass, IFace1 { }`|
 
 다른 클래스 내에 중첩되는 것이 아니라 네임스페이스 내에서 직접 선언되는 클래스는 [public](./public.md) 또는 [internal](./internal.md)일 수 있습니다. 기본적으로 클래스는 `internal`입니다.
 
@@ -71,9 +71,9 @@ C#에서는 단일 상속만 허용됩니다. 즉, 한 클래스는 하나의 �
 
 - [인터페이스](../../programming-guide/interfaces/index.md)
 
-- [구조체](../../programming-guide/classes-and-structs/structs.md)
+- [구조체 형식](../builtin-types/struct.md)
 
-- [열거형](../builtin-types/enum.md)
+- [열거형 형식](../builtin-types/enum.md)
 
 ## <a name="example"></a>예제
 

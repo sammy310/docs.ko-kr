@@ -6,16 +6,16 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: e359913aad4b8cea001a894d4ba5720fab54d42b
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 50b192d5a7416a982f41d0c3ac13e9c1bfe3397c
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451917"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673357"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Partial 클래스 및 메서드(C# 프로그래밍 가이드)
 
-[클래스](../../language-reference/keywords/class.md), [구조체](../../language-reference/keywords/struct.md), [인터페이스](../../language-reference/keywords/interface.md) 또는 메서드의 정의를 둘 이상의 소스 파일에 분할할 수 있습니다. 각 소스 파일에는 형식 또는 메서드 정의 섹션이 있으며 모든 부분은 애플리케이션이 컴파일될 때 결합됩니다.
+[클래스](../../language-reference/keywords/class.md), [구조체](../../language-reference/builtin-types/struct.md), [인터페이스](../../language-reference/keywords/interface.md) 또는 메서드의 정의를 둘 이상의 소스 파일에 분할할 수 있습니다. 각 소스 파일에는 형식 또는 메서드 정의 섹션이 있으며 모든 부분은 애플리케이션이 컴파일될 때 결합됩니다.
 
 ## <a name="partial-classes"></a>partial 클래스
 
@@ -173,6 +173,6 @@ partial void onNameChanged()
 
 - [C# 프로그래밍 가이드](../index.md)
 - [클래스](./classes.md)
-- [구조체](./structs.md)
+- [구조체 형식](../../language-reference/builtin-types/struct.md)
 - [인터페이스](../interfaces/index.md)
 - [partial(형식)](../../language-reference/keywords/partial-type.md)

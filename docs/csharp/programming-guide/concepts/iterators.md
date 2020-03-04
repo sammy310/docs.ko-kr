@@ -2,12 +2,12 @@
 title: C#의 컬렉션 반복
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: d47dcf6e7748f85978b1b0bcf739b5d1280263f3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: aceedd11466c75cedad3c67224c3a5595b4cabfa
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594971"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626272"
 ---
 # <a name="iterators-c"></a>반복기(C#)
 
@@ -324,11 +324,11 @@ public class Stack<T> : IEnumerable<T>
 
 반복기는 메서드 또는 `get` 접근자로 발생할 수 있습니다. 이벤트, 인스턴스 생성자, 정적 생성자 또는 정적 종료자에서는 반복기가 발생할 수 없습니다.
 
-`yield return` 문의 식 형식을 반복기에서 반환된 IEnumerable\<T>의 형식 인수로 암시적으로 변환해야 합니다.
+반복기에서 반환된 `IEnumerable<T>`의 형식 인수에 대한 `yield return` 문의 식 형식에는 암시적 변환이 있어야 합니다.
 
 C#에서 반복기 메서드는 `in`, `ref` 또는 `out` 매개 변수를 사용할 수 없습니다.
 
-C#에서 "yield"는 예약어가 아니며 `return` 또는 `break` 키워드 앞에서 사용되는 경우에만 특별한 의미가 있습니다.
+C#에서 `yield`는 예약어가 아니며 `return` 또는 `break` 키워드 앞에서 사용되는 경우에만 특별한 의미가 있습니다.
 
 ## <a name="technical-implementation"></a>기술 구현
 
@@ -336,7 +336,7 @@ C#에서 "yield"는 예약어가 아니며 `return` 또는 `break` 키워드 앞
 
 컴파일러의 용도를 확인하려면 Ildasm.exe 도구를 사용하여 반복기 메서드에 대해 생성되는 Microsoft Intermediate Language 코드를 확인할 수 있습니다.
 
-[class](../../language-reference/keywords/class.md) 또는 [struct](../../language-reference/keywords/struct.md)에 대해 반복기를 만드는 경우 전체 <xref:System.Collections.IEnumerator> 인터페이스를 구현할 필요가 없습니다. 컴파일러는 반복기를 검색할 경우 <xref:System.Collections.IEnumerator> 또는 <xref:System.Collections.Generic.IEnumerator%601> 인터페이스의 `Current`, `MoveNext` 및 `Dispose` 메서드를 자동으로 생성합니다.
+[class](../../language-reference/keywords/class.md) 또는 [struct](../../language-reference/builtin-types/struct.md)에 대해 반복기를 만드는 경우 전체 <xref:System.Collections.IEnumerator> 인터페이스를 구현할 필요가 없습니다. 컴파일러는 반복기를 검색할 경우 <xref:System.Collections.IEnumerator> 또는 <xref:System.Collections.Generic.IEnumerator%601> 인터페이스의 `Current`, `MoveNext` 및 `Dispose` 메서드를 자동으로 생성합니다.
 
 `foreach` 루프를 연속 반복하거나 `IEnumerator.MoveNext`를 직접 호출하면 다음 반복기 코드 본문이 이전 `yield return` 문 다음에 다시 시작됩니다. 그런 후 반복기 본문의 끝에 도달하거나 `yield break` 문이 나타날 때까지 다음 `yield return` 문을 계속 실행합니다.
 
@@ -354,7 +354,7 @@ C#에서 "yield"는 예약어가 아니며 `return` 또는 `break` 키워드 앞
 
 - 반복기에서 목록 작성을 캡슐화합니다. 반복기 메서드에서 목록을 빌드한 후 루프에서 각 결과를 생성할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Collections.Generic>
 - <xref:System.Collections.Generic.IEnumerable%601>

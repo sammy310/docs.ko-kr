@@ -1,32 +1,34 @@
 ---
-title: .NET Core 도구에서 종속성 관리
-description: .NET Core 도구로 종속성을 관리하는 방법을 설명합니다.
-ms.date: 03/06/2017
-ms.openlocfilehash: 916daca0240c10dc63ca96048590a426bc51d450
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+title: .NET Core에서 종속성 관리
+description: .NET Core 애플리케이션의 프로젝트 종속성을 관리하는 방법을 설명합니다.
+no-loc:
+- dotnet add package
+- dotnet remove package
+- dotnet list package
+ms.date: 02/25/2020
+ms.openlocfilehash: 367be7eb04d58bffc0846de1d035a5801e8d9376
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965622"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157247"
 ---
-# <a name="manage-dependencies-with-net-core-sdk-10"></a>.NET Core SDK 1.0으로 종속성 관리
+# <a name="manage-dependencies-in-net-core-applications"></a>.NET Core 애플리케이션에서 종속성 관리
 
-.NET Core 프로젝트가 project.json에서 csproj 및 MSBuild로 전환하면서 상당한 투자가 발생했으며, 그 결과 종속성 추적을 허용하는 프로젝트 파일과 자산 통합이 이루어졌습니다. .NET Core 프로젝트의 경우 project.json의 경우와 비슷합니다. NuGet 종속성을 추적하는 별도 JSON 또는 XML 파일이 없습니다. 이 변경으로 `<PackageReference>`라는 csproj 구문에 대한 다른 *참조* 형식도 소개하였습니다.
+이 문서에서는 프로젝트 파일을 편집하거나 CLI를 사용하여 종속성을 추가하고 제거하는 방법을 설명합니다.
 
-이 문서에서는 새 참조 형식을 설명합니다. 또한 프로젝트에 대한 이 새 참조 형식을 사용하여 패키지 종속성을 추가하는 방법을 보여 줍니다.
+## <a name="the-packagereference-element"></a>\<PackageReference> 요소
 
-## <a name="the-new-packagereference-element"></a>새 \<PackageReference> 요소
-
-`<PackageReference>`의 기본 구조는 다음과 같습니다.
+`<PackageReference>` 프로젝트 파일 요소는 다음과 같은 구조를 갖습니다.
 
 ```xml
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" />
 ```
 
-MSBuild에 익숙한 경우 이미 존재하는 다른 참조 형식에 익숙할 것입니다. 키는 프로젝트에 추가할 패키지 ID를 지정하는 `Include` 문입니다. `<Version>` 자식 요소는 가져올 버전을 지정합니다. 버전은 [NuGet 버전 규칙](/nuget/create-packages/dependency-versions#version-ranges)에 따라 지정됩니다.
+`Include` 특성은 프로젝트에 추가할 패키지의 ID를 지정합니다. `Version` 특성은 가져올 버전을 지정합니다. 버전은 [NuGet 버전 규칙](/nuget/create-packages/dependency-versions#version-ranges)에 따라 지정됩니다.
 
 > [!NOTE]
-> project-file 구문에 대해 잘 알고 있지 않은 경우 자세한 내용은[MSBuild 프로젝트 참조](/visualstudio/msbuild/msbuild-project-file-schema-reference) 설명서를 참조하세요.
+> project-file 구문에 대해 잘 모르면 [MSBuild 프로젝트 참조](/visualstudio/msbuild/msbuild-project-file-schema-reference) 설명서에서 자세한 내용을 참조하세요.
 
 특정 대상에만 사용할 수 있는 종속성을 추가하려면 다음 예와 같이 조건을 사용합니다.
 
@@ -34,39 +36,47 @@ MSBuild에 익숙한 경우 이미 존재하는 다른 참조 형식에 익숙�
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp2.1'" />
 ```
 
-종속성은 지정된 대상에 대해 빌드가 발생한 경우에만 유효합니다. 조건에서 `$(TargetFramework)`는 프로젝트에 설정되는 MSBuild 속성입니다. 가장 일반적인.NET Core 애플리케이션의 경우 이 작업을 수행하지 않아도 됩니다.
+앞에 나온 예제의 종속성은 해당 대상에 대해 빌드가 발생한 경우에만 유효합니다. 조건에서 `$(TargetFramework)`는 프로젝트에 설정되는 MSBuild 속성입니다. 대부분의 일반적인 .NET Core 애플리케이션에서는 이 작업을 수행하지 않아도 됩니다.
 
-## <a name="add-a-dependency-to-the-project"></a>프로젝트에 종속성 추가
+## <a name="add-a-dependency-by-editing-the-project-file"></a>프로젝트 파일을 편집하여 종속성 추가
 
-프로젝트에 종속성을 추가하는 작업은 간단합니다. 다음은 Json.NET 버전 `9.0.1`을 프로젝트에 추가하는 방법을 보여 주는 예입니다. 물론, 다른 NuGet 종속성에 적용됩니다.
-
-프로젝트 파일에 둘 이상의 `<ItemGroup>` 노드가 있습니다. 노드 중 하나에 이미 `<PackageReference>` 요소가 있습니다. 이 노드에 새 종속성을 추가하거나 새로 만들 수 있습니다. 결과는 동일합니다.
-
-다음 예는 `dotnet new console`에 의해 삭제된 기본 템플릿을 사용합니다. 이는 간단한 콘솔 애플리케이션입니다. 프로젝트를 열면 이미 기존 `<PackageReference>`가 있는 `<ItemGroup>`을 찾을 수 있습니다. 여기에 다음을 추가합니다.
+종속성을 추가하려면 `<ItemGroup>` 요소 안에 `<PackageReference>` 요소를 추가합니다. 기존 `<ItemGroup>`에 추가하거나 새로 만들 수 있습니다. 다음 예제에서는 `dotnet new console`로 만든 기본 콘솔 애플리케이션 프로젝트를 사용합니다.
 
 ```xml
-<PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
-```
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
-그 다음 프로젝트를 저장하고 `dotnet restore` 명령을 실행하여 종속성을 설치합니다.
-
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
-
-전체 프로젝트는 다음과 같습니다.
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.2" />
   </ItemGroup>
+
 </Project>
 ```
 
-## <a name="remove-a-dependency-from-the-project"></a>프로젝트에서 종속성 제거
+## <a name="add-a-dependency-by-using-the-cli"></a>CLI를 사용하여 종속성 추가
 
-프로젝트 파일에서 종속성을 제거하는 작업은 프로젝트 파일에서 `<PackageReference>`를 단순히 제거하는 것입니다.
+종속성을 추가하려면 다음 예제와 같이 [dotnet add package](dotnet-add-package.md) 명령을 실행합니다.
+
+```dotnetcli
+dotnet add package Microsoft.EntityFrameworkCore
+```
+
+## <a name="remove-a-dependency-by-editing-the-project-file"></a>프로젝트 파일을 편집하여 종속성 제거
+
+종속성을 제거하려면 프로젝트 파일에서 `<PackageReference>` 요소를 제거합니다.
+
+## <a name="remove-a-dependency-by-using-the-cli"></a>CLI를 사용하여 종속성 제거
+
+종속성을 제거하려면 다음 예제와 같이 [dotnet remove package](dotnet-remove-package.md) 명령을 실행합니다.
+
+```dotnetcli
+dotnet remove package Microsoft.EntityFrameworkCore
+```
+
+## <a name="see-also"></a>참조
+
+* [프로젝트 파일의 NuGet 패키지](../project-sdk/msbuild-props.md#nuget-packages)
+* [dotnet list package 명령](dotnet-remove-package.md)

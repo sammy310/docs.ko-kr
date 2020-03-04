@@ -1,14 +1,14 @@
 ---
 title: C# 배열 - C# 언어 둘러보기
 description: 배열은 C# 언어에서 가장 기본적인 컬렉션 형식입니다.
-ms.date: 08/10/2016
+ms.date: 02/27/2020
 ms.assetid: a440704c-9e88-4c75-97dd-bfe30ca0fb97
-ms.openlocfilehash: 56a053ac8525d4c6c34592d6092f3f162cb04247
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3e045c0933a21beab6958c7851546ba6e0b55ef9
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634599"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159197"
 ---
 # <a name="arrays"></a>배열
 
@@ -35,14 +35,14 @@ new 연산자는 ***배열 이니셜라이저***를 사용하여 구분 기호 `
 
 [!code-csharp[ArrayInitialization](../../../samples/snippets/csharp/tour/arrays/Program.cs#L39-L39)]
 
-배열의 길이는 {와 } 사이의 식 수에서 유추됩니다. 지역 변수 및 필드 선언은 배열 형식을 다시 시작할 필요가 없도록 좀 더 줄일 수 있습니다.
+배열의 길이는 {와 } 사이에 있는 식의 개수에서 유추됩니다. 지역 변수 및 필드 선언은 배열 형식을 다시 시작할 필요가 없도록 좀 더 줄일 수 있습니다.
 
 [!code-csharp[ArrayInitialization](../../../samples/snippets/csharp/tour/arrays/Program.cs#L44-L44)]
 
-앞의 두 예제는 다음 예제와 동일합니다.
+앞의 두 예제는 다음 코드와 동일합니다.
 
 [!code-csharp[ArrayAssignment](../../../samples/snippets/csharp/tour/arrays/Program.cs#L49-L53)]
 
 >[!div class="step-by-step"]
->[이전](structs.md)
+>[이전](classes-and-objects.md)
 >[다음](interfaces.md)

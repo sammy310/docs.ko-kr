@@ -5,12 +5,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 95735d5032a8896570918b991f12b853af88fb68
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 09b290713f3bc2a7a7824bb19c98138943ad5b2c
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705485"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673383"
 ---
 # <a name="objects-c-programming-guide"></a>개체(C# 프로그래밍 가이드)
 클래스 또는 구조체 정의는 형식이 수행할 수 있는 작업을 지정하는 청사진과 비슷합니다. 개체는 기본적으로 청사진에 따라 구성 및 할당된 메모리 블록입니다. 프로그램에서 동일한 클래스의 많은 개체를 만들 수 있습니다. 개체를 인스턴스라고도 하며, 명명된 변수나 배열 또는 컬렉션에 저장할 수 있습니다. 클라이언트 코드는 이러한 변수를 사용하여 메서드를 호출하고 개체의 공용 속성에 액세스하는 코드입니다. C#과 같은 개체 지향 언어에서 일반적인 프로그램은 동적으로 상호 작용하는 여러 개체로 구성됩니다.  
@@ -52,8 +52,6 @@ ms.locfileid: "75705485"
   
 - [클래스](./classes.md)  
   
-- [구조체](./structs.md)  
-  
 - [생성자](./constructors.md)  
   
 - [종료자](./destructors.md)  
@@ -66,6 +64,6 @@ ms.locfileid: "75705485"
 - [object](../../language-reference/builtin-types/reference-types.md)
 - [상속](./inheritance.md)
 - [class](../../language-reference/keywords/class.md)
-- [struct](../../language-reference/keywords/struct.md)
+- [구조체 형식](../../language-reference/builtin-types/struct.md)
 - [new 연산자](../../language-reference/operators/new-operator.md)
 - [공용 형식 시스템](../../../standard/base-types/common-type-system.md)

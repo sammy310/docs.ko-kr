@@ -1,14 +1,14 @@
 ---
 title: C# 문 - C# 언어 둘러보기
 description: 문을 사용하여 C# 프로그램 동작 만들기
-ms.date: 11/06/2016
+ms.date: 02/27/2020
 ms.assetid: 5409c379-5622-4fae-88b5-1654276ea8d4
-ms.openlocfilehash: 26b151bc116dde9120757f954bdcf3aee041c5f5
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ced13b1bfd17977acb98bf33c0a477161cf08a93
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634538"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159106"
 ---
 # <a name="statements"></a>문
 
@@ -20,11 +20,11 @@ ms.locfileid: "65634538"
 
 *식 문*은 식을 평가하는 데 사용됩니다. 문으로 사용할 수 있는 식에는 메서드 호출, `new` 연산자를 사용하는 개체 할당, `=` 및 복합 할당 연산자를 사용하는 대입, `++` 및 `--` 연산자를 사용하는 증가 및 감소 연산, `await` 식이 포함됩니다.
 
-*선택 문*은 일부 식 값에 따라 실행할 수 있는 다양한 문 중에서 하나를 선택하는 데 사용됩니다. 이 그룹에는 `if` 및 `switch` 문이 포함됩니다.
+*선택 문*은 일부 식 값에 따라 실행할 수 있는 다양한 문 중에서 하나를 선택하는 데 사용됩니다. 이 그룹에는 `if` 문과 `switch` 문이 포함됩니다.
 
-*반복 문*은 포함 문을 반복해서 실행하는 데 사용됩니다. 이 그룹에는 `while`, `do`, `for` 및 `foreach` 문이 포함됩니다.
+*반복 문*은 포함 문을 반복해서 실행하는 데 사용됩니다. 이 그룹에는 `while` 문, `do` 문, `for` 문과 `foreach` 문이 포함됩니다.
 
-*점프 문*은 제어를 전달하는 데 사용됩니다. 이 그룹에는 `break`, `continue`, `goto`, `throw`, `return` 및 `yield` 문이 포함됩니다.
+*점프 문*은 제어를 전달하는 데 사용됩니다. 이 그룹에는 `break` 문, `continue` 문, `goto` 문, `throw` 문, `return` 문과 `yield` 문이 포함됩니다.
 
 `try`... `catch` 문은 블록 실행 중에 발생하는 예외를 catch하는 데 사용되고 `try`... `finally` 문은 예외 발생 여부에 관계 없이 항상 실행되는 종료 코드를 지정하는 데 사용됩니다.
 

@@ -3,13 +3,13 @@ title: Windows에서 .NET for Apache Spark 애플리케이션 빌드
 description: Windows에서 .NET for Apache Spark 애플리케이션을 빌드하는 방법을 알아봅니다.
 ms.date: 01/29/2020
 ms.topic: conceptual
-ms.custom: mvc,how-to
-ms.openlocfilehash: e6dec09f7d3e8d478cdcccf9df1c3e72d5f884eb
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.custom: how-to
+ms.openlocfilehash: 640459c8c80b6d798718b89d4965802cdacd6c63
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76928063"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628659"
 ---
 # <a name="learn-how-to-build-your-net-for-apache-spark-application-on-windows"></a>Windows에서 .NET for Apache Spark 애플리케이션을 빌드하는 방법
 
@@ -27,22 +27,22 @@ ms.locfileid: "76928063"
      * .NET Core 플랫폼 간 개발
        * 필요한 모든 구성 요소
   3. **[Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)** 을 설치합니다. 
-     - 운영 체제에 적합한 버전을 선택합니다(예: Win x64 컴퓨터의 경우 jdk-8u201-windows-x64.exe).
+     - 운영 체제에 적합한 버전을 선택합니다. 예를 들어 Windows x64 머신의 경우 *jdk-8u201-windows-x64.exe*를 선택합니다.
      - 설치 프로그램을 사용하여 설치하고 명령줄에서 `java`를 실행할 수 있는지 확인합니다.
   4. **[Apache Maven 3.6.0+](https://maven.apache.org/download.cgi)** 를 설치합니다.
-     - [Apache Maven 3.6.0](http://mirror.metrocast.net/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.zip)을 다운로드합니다.
-     - 로컬 디렉터리(예: `C:\bin\apache-maven-3.6.0\`)에 압축을 풉니다.
-     - Apache Maven을 [PATH 환경 변수](https://www.java.com/en/download/help/path.xml)에 추가합니다(예: `C:\bin\apache-maven-3.6.0\bin`).
+     - [Apache Maven 3.6.0](http://mirror.metrocast.net/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip)을 다운로드합니다.
+     - 로컬 디렉터리로 추출합니다. 예를 들어 *C:\bin\apache-maven-3.6.0\*으로 추출합니다.
+     - Apache Maven을 [PATH 환경 변수](https://www.java.com/en/download/help/path.xml)에 추가합니다. 예를 들어 *C:\bin\apache-maven-3.6.0\bin*과 같이 추가합니다.
      - 명령줄에서 `mvn`을 실행할 수 있는지 확인합니다.
   5. **[Apache Spark 2.3+](https://spark.apache.org/downloads.html)** 를 설치합니다.
-     - [Apache Spark 2.3+](https://spark.apache.org/downloads.html)를 다운로드하고 [7-zip](https://www.7-zip.org/)을 사용하여 로컬 폴더(예: `C:\bin\spark-2.3.2-bin-hadoop2.7\`)에 압축을 풉니다. (지원되는 Spark 버전은 2.3.*, 2.4.0, 2.4.1, 2.4.3, 2.4.4입니다.)
-     - [새 환경 변수](https://www.java.com/en/download/help/path.xml) `SPARK_HOME`을 추가합니다(예: `C:\bin\spark-2.3.2-bin-hadoop2.7\`).
+     - [Apache Spark 2.3+](https://spark.apache.org/downloads.html)를 다운로드하고 [7-zip](https://www.7-zip.org/)을 사용하여 로컬 폴더(예: *C:\bin\spark-2.3.2-bin-hadoop2.7\*)로 추출합니다. (지원되는 Spark 버전은 2.3.* , 2.4.0, 2.4.1, 2.4.3, 2.4.4입니다.)
+     - [새 환경 변수](https://www.java.com/en/download/help/path.xml) `SPARK_HOME`을 추가합니다. 예를 들어 *C:\bin\spark-2.3.2-bin-hadoop2.7\*과 같이 추가합니다.
 
        ```powershell
        set SPARK_HOME=C:\bin\spark-2.3.2-bin-hadoop2.7\       
        ```
 
-     - Apache Spark를 [PATH 환경 변수](https://www.java.com/en/download/help/path.xml)에 추가합니다(예: `C:\bin\spark-2.3.2-bin-hadoop2.7\bin`).
+     - Apache Spark를 [PATH 환경 변수](https://www.java.com/en/download/help/path.xml)에 추가합니다. 예를 들어 *C:\bin\spark-2.3.2-bin-hadoop2.7\bin*과 같이 추가합니다.
 
        ```powershell       
        set PATH=%SPARK_HOME%\bin;%PATH%
@@ -70,28 +70,28 @@ ms.locfileid: "76928063"
         </details>
 
   6. **[WinUtils](https://github.com/steveloughran/winutils)** 를 설치합니다.
-     - [WinUtils 리포지토리](https://github.com/steveloughran/winutils)에서 `winutils.exe` 이진 파일을 다운로드합니다. Spark 배포의 컴파일에 사용된 Hadoop 버전을 선택해야 합니다(예: Spark 2.3.2에는 Hadoop-2.7.1 사용).
-     - `winutils.exe` 이진 파일을 선택한 디렉터리에 저장합니다(예: `C:\hadoop\bin`).
+     - [WinUtils 리포지토리](https://github.com/steveloughran/winutils)에서 `winutils.exe` 이진 파일을 다운로드합니다. 해당 Spark 배포의 컴파일에 사용된 Hadoop 버전을 선택해야 합니다. 예를 들어 Spark 2.3.2의 경우 hadoop-2.7.1을 사용합니다.
+     - `winutils.exe` 이진 파일을 원하는 디렉터리에 저장합니다. 예를 들어 *C:\hadoop\bin*에 저장합니다.
      - (bin 없이) winutils.exe가 있는 디렉터리를 반영하도록 `HADOOP_HOME`을 설정합니다. 예를 들어 명령줄을 사용하여
 
        ```powershell
        set HADOOP_HOME=C:\hadoop
        ```
 
-     - `%HADOOP_HOME%\bin`을 포함하도록 PATH 환경 변수를 설정합니다. 예를 들어 명령줄을 사용하여
+     - `%HADOOP_HOME%\bin`을 포함하도록 PATH 환경 변수를 설정합니다. 예를 들어 다음과 같이 명령줄을 사용하여 설정합니다.
 
        ```powershell
        set PATH=%HADOOP_HOME%\bin;%PATH%
        ```
 
-다음 섹션으로 이동하기 전에 명령줄에서 `dotnet`, `java`, `mvn`, `spark-shell`을 실행할 수 있는지 확인합니다. 더 나은 방법이 있나요? [문제를 열고](https://github.com/dotnet/spark/issues) 자유롭게 참여하세요.
+다음 섹션으로 이동하기 전에 명령줄에서 `dotnet`, `java`, `mvn`, `spark-shell`을 실행할 수 있는지 확인합니다. 더 나은 방법이 있나요? [문제를 만들고](https://github.com/dotnet/spark/issues) 자유롭게 참여하세요.
 
 > [!NOTE]
 > 환경 변수가 업데이트된 경우 명령줄의 새 인스턴스가 필요할 수 있습니다.
 
 ## <a name="build"></a>빌드
 
-이 가이드의 나머지 부분에서는 .NET for Apache Spark 리포지토리를 컴퓨터에 복제해야 합니다. 복제된 리포지토리의 위치를 선택할 수 있습니다(예: `C:\github\dotnet-spark\`).
+이 가이드의 나머지 부분에서는 .NET for Apache Spark 리포지토리를 머신에 복제해야 합니다. 복제된 리포지토리의 위치를 선택할 수 있습니다. 예를 들어 *C:\github\dotnet-spark\*를 사용합니다.
 
 ```bash
 git clone https://github.com/dotnet/spark.git C:\github\dotnet-spark
@@ -99,7 +99,7 @@ git clone https://github.com/dotnet/spark.git C:\github\dotnet-spark
 
 ### <a name="build-net-for-apache-spark-scala-extensions-layer"></a>.NET for Apache Spark Scala 확장 레이어 빌드
 
-.NET 애플리케이션을 제출하면 .NET for Apache Spark에서 필요한 논리가 Scala로 작성되어 요청(예: 새 Spark 세션 만들기 요청, .NET 쪽에서 JVM 쪽으로 데이터 전송 요청 등)을 처리하는 방법을 Apache Spark에게 알려줍니다. 이 논리는 [.NET for Spark Scala 소스 코드](https://github.com/dotnet/spark/tree/master/src/scala)에서 찾을 수 있습니다.
+.NET 애플리케이션을 제출하면 .NET for Apache Spark에서 필요한 논리가 Scala로 작성되어 요청(예: 새 Spark 세션 만들기 요청, .NET 쪽에서 JVM 쪽으로 데이터 전송 요청 등)을 처리하는 방법을 Apache Spark에 알려줍니다. 이 논리는 [.NET for Spark Scala 소스 코드](https://github.com/dotnet/spark/tree/master/src/scala)에서 찾을 수 있습니다.
 
 .NET Framework를 사용하는지 .NET Core를 사용하는지에 상관없이 .NET for Apache Spark Scala 확장 레이어를 빌드해야 합니다.
 
@@ -212,13 +212,13 @@ mvn clean package
 
 샘플을 빌드한 후에는 .NET Framework 또는 .NET Core를 대상으로 하는지 여부에 관계 없이 `spark-submit`을 통해 샘플이 실행됩니다. [사전 요구 사항](#prerequisites) 섹션에 따라 Apache Spark를 설치했는지 확인합니다.
 
-  1. `Microsoft.Spark.Worker` 이진 파일이 생성된 경로(예: .NET Framework의 경우에는 `C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.Worker\Debug\net461`, .NET Core의 경우에는 `C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\Debug\netcoreapp2.1\win10-x64\publish`)가 포함되도록 `DOTNET_WORKER_DIR` 또는 `PATH` 환경 변수를 설정합니다.
+  1. `Microsoft.Spark.Worker` 이진 파일이 생성된 경로(예: .NET Framework의 경우 *C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.Worker\Debug\net461*, .NET Core의 경우 *C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\Debug\netcoreapp2.1\win10-x64\publish*)를 포함하도록 `DOTNET_WORKER_DIR` 또는 `PATH` 환경 변수를 설정합니다.
 
       ```powershell
       set DOTNET_WORKER_DIR=C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\Debug\netcoreapp2.1\win10-x64\publish
       ```
   
-  2. Powershell을 열고 앱 이진 파일이 생성된 디렉터리(예: .NET Framework의 경우에는 `C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\net461`, .NET Core의 경우에는 `C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\publish`)로 이동합니다.
+  2. Powershell을 열고 앱 이진 파일이 생성된 디렉터리(예: .NET Framework의 경우 *C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\net461*, .NET Core의 경우 *C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\publish*)로 이동합니다.
 
       ```powershell
       cd C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\publish
