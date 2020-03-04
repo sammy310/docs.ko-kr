@@ -15,36 +15,36 @@ helpviewer_keywords:
 - encryption [.NET Framework], asymmetric keys
 - decryption keys
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
-ms.openlocfilehash: 8ca4c4c5b1257411ecdf86858040bf428a9e6ce0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 6b703156b38f52513c86f7b2507ac6c185a9dd50
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706060"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155947"
 ---
-# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a><span data-ttu-id="7b8a3-102">방법: 키 컨테이너에 비대칭 키 저장</span><span class="sxs-lookup"><span data-stu-id="7b8a3-102">How to: Store Asymmetric Keys in a Key Container</span></span>
-<span data-ttu-id="7b8a3-103">비대칭 프라이빗 키는 로컬 컴퓨터에 축자로 저장하거나 일반 텍스트로 저장해서는 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="7b8a3-103">Asymmetric private keys should never be stored verbatim or in plain text on the local computer.</span></span> <span data-ttu-id="7b8a3-104">프라이빗 키를 저장해야 하는 경우에는 키 컨테이너를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b8a3-104">If you need to store a private key, you should use a key container.</span></span> <span data-ttu-id="7b8a3-105">키 컨테이너에 대한 자세한 내용은 [컴퓨터 수준 및 사용자 수준 RSA 키 컨테이너 이해](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100))를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="7b8a3-105">For more information on key containers, see [Understanding Machine-Level and User-Level RSA Key Containers](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100)).</span></span>  
+# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a><span data-ttu-id="25f07-102">방법: 키 컨테이너에 비대칭 키 저장</span><span class="sxs-lookup"><span data-stu-id="25f07-102">How to: Store Asymmetric Keys in a Key Container</span></span>
+<span data-ttu-id="25f07-103">비대칭 프라이빗 키는 로컬 컴퓨터에 축자로 저장하거나 일반 텍스트로 저장해서는 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="25f07-103">Asymmetric private keys should never be stored verbatim or in plain text on the local computer.</span></span> <span data-ttu-id="25f07-104">프라이빗 키를 저장해야 하는 경우에는 키 컨테이너를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="25f07-104">If you need to store a private key, you should use a key container.</span></span> <span data-ttu-id="25f07-105">키 컨테이너에 대한 자세한 내용은 [컴퓨터 수준 및 사용자 수준 RSA 키 컨테이너 이해](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100))를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="25f07-105">For more information on key containers, see [Understanding Machine-Level and User-Level RSA Key Containers](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100)).</span></span>  
   
-### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a><span data-ttu-id="7b8a3-106">비대칭 키를 만들어 키 컨테이너에 저장하려면</span><span class="sxs-lookup"><span data-stu-id="7b8a3-106">To create an asymmetric key and save it in a key container</span></span>  
+### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a><span data-ttu-id="25f07-106">비대칭 키를 만들어 키 컨테이너에 저장하려면</span><span class="sxs-lookup"><span data-stu-id="25f07-106">To create an asymmetric key and save it in a key container</span></span>  
   
-1. <span data-ttu-id="7b8a3-107"><xref:System.Security.Cryptography.CspParameters> 클래스의 새 인스턴스를 만들고 키 컨테이너를 호출 하려는 이름을 <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> 필드로 전달 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b8a3-107">Create a new instance of a <xref:System.Security.Cryptography.CspParameters> class and pass the name that you want to call the key container to the <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> field.</span></span>  
+1. <span data-ttu-id="25f07-107"><xref:System.Security.Cryptography.CspParameters> 클래스의 새 인스턴스를 만들고 키 컨테이너를 호출 하려는 이름을 <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> 필드로 전달 합니다.</span><span class="sxs-lookup"><span data-stu-id="25f07-107">Create a new instance of a <xref:System.Security.Cryptography.CspParameters> class and pass the name that you want to call the key container to the <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> field.</span></span>  
   
-2. <span data-ttu-id="7b8a3-108"><xref:System.Security.Cryptography.AsymmetricAlgorithm> 클래스 (일반적으로 **RSACryptoServiceProvider** 또는 **DSACryptoServiceProvider**)에서 파생 되는 클래스의 새 인스턴스를 만들고 이전에 만든 **cspparameters** 개체를 해당 생성자에 전달 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b8a3-108">Create a new instance of a class that derives from the <xref:System.Security.Cryptography.AsymmetricAlgorithm> class (usually **RSACryptoServiceProvider** or **DSACryptoServiceProvider**) and pass the previously created **CspParameters** object to its constructor.</span></span>  
+2. <span data-ttu-id="25f07-108"><xref:System.Security.Cryptography.AsymmetricAlgorithm> 클래스 (일반적으로 **RSACryptoServiceProvider** 또는 **DSACryptoServiceProvider**)에서 파생 되는 클래스의 새 인스턴스를 만들고 이전에 만든 **cspparameters** 개체를 해당 생성자에 전달 합니다.</span><span class="sxs-lookup"><span data-stu-id="25f07-108">Create a new instance of a class that derives from the <xref:System.Security.Cryptography.AsymmetricAlgorithm> class (usually **RSACryptoServiceProvider** or **DSACryptoServiceProvider**) and pass the previously created **CspParameters** object to its constructor.</span></span>  
   
-### <a name="to-delete-the-key-from-a-key-container"></a><span data-ttu-id="7b8a3-109">키 컨테이너에서 키를 삭제하려면</span><span class="sxs-lookup"><span data-stu-id="7b8a3-109">To delete the key from a key container</span></span>  
+### <a name="to-delete-the-key-from-a-key-container"></a><span data-ttu-id="25f07-109">키 컨테이너에서 키를 삭제하려면</span><span class="sxs-lookup"><span data-stu-id="25f07-109">To delete the key from a key container</span></span>  
   
-1. <span data-ttu-id="7b8a3-110">**CspParameters** 클래스의 새 인스턴스를 만들고 키 컨테이너에 지정하려는 이름을 **CspParameters.KeyContainerName** 필드에 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="7b8a3-110">Create a new instance of a **CspParameters** class and pass the name that you want to call the key container to the **CspParameters.KeyContainerName** field.</span></span>  
+1. <span data-ttu-id="25f07-110">**CspParameters** 클래스의 새 인스턴스를 만들고 키 컨테이너에 지정하려는 이름을 **CspParameters.KeyContainerName** 필드에 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="25f07-110">Create a new instance of a **CspParameters** class and pass the name that you want to call the key container to the **CspParameters.KeyContainerName** field.</span></span>  
   
-2. <span data-ttu-id="7b8a3-111">**AsymmetricAlgorithm** 클래스에서 파생된 클래스의 새 인스턴스를 만들고(일반적으로 **RSACryptoServiceProvider** 또는 **DSACryptoServiceProvider**) 이전에 만든 **CspParameters** 개체를 해당 생성자에 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="7b8a3-111">Create a new instance of a class that derives from the **AsymmetricAlgorithm** class (usually **RSACryptoServiceProvider** or **DSACryptoServiceProvider**) and pass the previously created **CspParameters** object to its constructor.</span></span>  
+2. <span data-ttu-id="25f07-111">**AsymmetricAlgorithm** 클래스에서 파생된 클래스의 새 인스턴스를 만들고(일반적으로 **RSACryptoServiceProvider** 또는 **DSACryptoServiceProvider**) 이전에 만든 **CspParameters** 개체를 해당 생성자에 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="25f07-111">Create a new instance of a class that derives from the **AsymmetricAlgorithm** class (usually **RSACryptoServiceProvider** or **DSACryptoServiceProvider**) and pass the previously created **CspParameters** object to its constructor.</span></span>  
   
-3. <span data-ttu-id="7b8a3-112">**AsymmetricAlgorithm**에서 파생된 클래스의 **PersistKeyInCSP**속성을 **false**(Visual Basic의 경우 **False**)로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="7b8a3-112">Set the **PersistKeyInCSP** property of the class that derives from **AsymmetricAlgorithm** to **false** (**False** in Visual Basic).</span></span>  
+3. <span data-ttu-id="25f07-112">**AsymmetricAlgorithm**에서 파생된 클래스의 **PersistKeyInCSP**속성을 **false**(Visual Basic의 경우 **False**)로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="25f07-112">Set the **PersistKeyInCSP** property of the class that derives from **AsymmetricAlgorithm** to **false** (**False** in Visual Basic).</span></span>  
   
-4. <span data-ttu-id="7b8a3-113">**AsymmetricAlgorithm**에서 파생된 클래스의 **Clear** 메서드를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="7b8a3-113">Call the **Clear** method of the class that derives from **AsymmetricAlgorithm**.</span></span> <span data-ttu-id="7b8a3-114">이 메서드는 클래스의 모든 리소스를 해제하고 키 컨테이너를 지웁니다.</span><span class="sxs-lookup"><span data-stu-id="7b8a3-114">This method releases all resources of the class and clears the key container.</span></span>  
+4. <span data-ttu-id="25f07-113">**AsymmetricAlgorithm**에서 파생된 클래스의 **Clear** 메서드를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="25f07-113">Call the **Clear** method of the class that derives from **AsymmetricAlgorithm**.</span></span> <span data-ttu-id="25f07-114">이 메서드는 클래스의 모든 리소스를 해제하고 키 컨테이너를 지웁니다.</span><span class="sxs-lookup"><span data-stu-id="25f07-114">This method releases all resources of the class and clears the key container.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7b8a3-115">예</span><span class="sxs-lookup"><span data-stu-id="7b8a3-115">Example</span></span>  
- <span data-ttu-id="7b8a3-116">다음 예제에서는 비대칭 키를 만들어 키 컨테이너에 저장하고 나중에 키를 검색하며 컨테이너에서 키를 삭제하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="7b8a3-116">The following example demonstrates how to create an asymmetric key, save it in a key container, retrieve the key at a later time, and delete the key from the container.</span></span>  
+## <a name="example"></a><span data-ttu-id="25f07-115">예제</span><span class="sxs-lookup"><span data-stu-id="25f07-115">Example</span></span>  
+ <span data-ttu-id="25f07-116">다음 예제에서는 비대칭 키를 만들어 키 컨테이너에 저장하고 나중에 키를 검색하며 컨테이너에서 키를 삭제하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="25f07-116">The following example demonstrates how to create an asymmetric key, save it in a key container, retrieve the key at a later time, and delete the key from the container.</span></span>  
   
- <span data-ttu-id="7b8a3-117">`GenKey_SaveInContainer` 메서드와 `GetKeyFromContainer` 메서드의 해당 코드는 유사합니다.</span><span class="sxs-lookup"><span data-stu-id="7b8a3-117">Notice that code in the `GenKey_SaveInContainer` method and the `GetKeyFromContainer` method is similar.</span></span>  <span data-ttu-id="7b8a3-118"><xref:System.Security.Cryptography.CspParameters> 개체의 키 컨테이너 이름을 지정하여 <xref:System.Security.Cryptography.AsymmetricAlgorithm> 속성 또는 <xref:System.Security.Cryptography.RSACryptoServiceProvider.PersistKeyInCsp%2A> 속성을 true로 설정한 상태로 <xref:System.Security.Cryptography.DSACryptoServiceProvider.PersistKeyInCsp%2A> 개체에 전달하면 다음과 같은 상황이 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="7b8a3-118">When you specify a key container name for a <xref:System.Security.Cryptography.CspParameters> object and pass it to an <xref:System.Security.Cryptography.AsymmetricAlgorithm> object with the <xref:System.Security.Cryptography.RSACryptoServiceProvider.PersistKeyInCsp%2A> property or <xref:System.Security.Cryptography.DSACryptoServiceProvider.PersistKeyInCsp%2A> property set to true, the following occurs.</span></span>  <span data-ttu-id="7b8a3-119">지정된 이름의 키 컨테이너가 없는 경우 해당 이름의 키 컨테이너가 만들어지고 키가 지속됩니다.</span><span class="sxs-lookup"><span data-stu-id="7b8a3-119">If a key container with the specified name does not exist, then one is created and the key is persisted.</span></span>  <span data-ttu-id="7b8a3-120">지정된 이름의 키 컨테이너가 있는 경우 컨테이너의 키가 현재 <xref:System.Security.Cryptography.AsymmetricAlgorithm> 개체에 자동으로 로드됩니다.</span><span class="sxs-lookup"><span data-stu-id="7b8a3-120">If a key container with the specified name does exist, then the key in the container is automatically loaded into the current <xref:System.Security.Cryptography.AsymmetricAlgorithm> object.</span></span>  <span data-ttu-id="7b8a3-121">따라서 `GenKey_SaveInContainer` 메서드의 코드는 첫 번째로 실행되었기 때문에 키를 지속하는 반면, `GetKeyFromContainer` 메서드의 코드는 두 번째로 실행되었기 때문에 키를 로드합니다.</span><span class="sxs-lookup"><span data-stu-id="7b8a3-121">Therefore, the code in the `GenKey_SaveInContainer` method persists the key because it is run first, while the code in the `GetKeyFromContainer` method loads the key because it is run second.</span></span>  
+ <span data-ttu-id="25f07-117">`GenKey_SaveInContainer` 메서드와 `GetKeyFromContainer` 메서드의 해당 코드는 유사합니다.</span><span class="sxs-lookup"><span data-stu-id="25f07-117">Notice that code in the `GenKey_SaveInContainer` method and the `GetKeyFromContainer` method is similar.</span></span>  <span data-ttu-id="25f07-118"><xref:System.Security.Cryptography.CspParameters> 개체의 키 컨테이너 이름을 지정하여 <xref:System.Security.Cryptography.AsymmetricAlgorithm> 속성 또는 <xref:System.Security.Cryptography.RSACryptoServiceProvider.PersistKeyInCsp%2A> 속성을 true로 설정한 상태로 <xref:System.Security.Cryptography.DSACryptoServiceProvider.PersistKeyInCsp%2A> 개체에 전달하면 다음과 같은 상황이 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="25f07-118">When you specify a key container name for a <xref:System.Security.Cryptography.CspParameters> object and pass it to an <xref:System.Security.Cryptography.AsymmetricAlgorithm> object with the <xref:System.Security.Cryptography.RSACryptoServiceProvider.PersistKeyInCsp%2A> property or <xref:System.Security.Cryptography.DSACryptoServiceProvider.PersistKeyInCsp%2A> property set to true, the following occurs.</span></span>  <span data-ttu-id="25f07-119">지정된 이름의 키 컨테이너가 없는 경우 해당 이름의 키 컨테이너가 만들어지고 키가 지속됩니다.</span><span class="sxs-lookup"><span data-stu-id="25f07-119">If a key container with the specified name does not exist, then one is created and the key is persisted.</span></span>  <span data-ttu-id="25f07-120">지정된 이름의 키 컨테이너가 있는 경우 컨테이너의 키가 현재 <xref:System.Security.Cryptography.AsymmetricAlgorithm> 개체에 자동으로 로드됩니다.</span><span class="sxs-lookup"><span data-stu-id="25f07-120">If a key container with the specified name does exist, then the key in the container is automatically loaded into the current <xref:System.Security.Cryptography.AsymmetricAlgorithm> object.</span></span>  <span data-ttu-id="25f07-121">따라서 `GenKey_SaveInContainer` 메서드의 코드는 첫 번째로 실행되었기 때문에 키를 지속하는 반면, `GetKeyFromContainer` 메서드의 코드는 두 번째로 실행되었기 때문에 키를 로드합니다.</span><span class="sxs-lookup"><span data-stu-id="25f07-121">Therefore, the code in the `GenKey_SaveInContainer` method persists the key because it is run first, while the code in the `GetKeyFromContainer` method loads the key because it is run second.</span></span>  
   
 ```vb  
 Imports System  
@@ -76,7 +76,7 @@ Public Class StoreKey
     End Sub  
   
     Public Shared Sub GenKey_SaveInContainer(ByVal ContainerName As String)  
-        ' Create the CspParameters object and set the key container   
+        ' Create the CspParameters object and set the key container
         ' name used to store the RSA key pair.  
         Dim cp As New CspParameters()  
         cp.KeyContainerName = ContainerName  
@@ -90,7 +90,7 @@ Public Class StoreKey
     End Sub  
   
     Public Shared Sub GetKeyFromContainer(ByVal ContainerName As String)  
-        ' Create the CspParameters object and set the key container   
+        ' Create the CspParameters object and set the key container
         '  name used to store the RSA key pair.  
         Dim cp As New CspParameters()  
         cp.KeyContainerName = ContainerName  
@@ -104,7 +104,7 @@ Public Class StoreKey
     End Sub  
   
     Public Shared Sub DeleteKeyFromContainer(ByVal ContainerName As String)  
-        ' Create the CspParameters object and set the key container   
+        ' Create the CspParameters object and set the key container
         '  name used to store the RSA key pair.  
         Dim cp As New CspParameters()  
         cp.KeyContainerName = ContainerName  
@@ -160,7 +160,7 @@ public class StoreKey
   
     public static void GenKey_SaveInContainer(string ContainerName)  
     {  
-        // Create the CspParameters object and set the key container   
+        // Create the CspParameters object and set the key container
         // name used to store the RSA key pair.  
         CspParameters cp = new CspParameters();  
         cp.KeyContainerName = ContainerName;  
@@ -175,7 +175,7 @@ public class StoreKey
   
     public static void GetKeyFromContainer(string ContainerName)  
     {  
-        // Create the CspParameters object and set the key container   
+        // Create the CspParameters object and set the key container
         // name used to store the RSA key pair.  
         CspParameters cp = new CspParameters();  
         cp.KeyContainerName = ContainerName;  
@@ -190,7 +190,7 @@ public class StoreKey
   
     public static void DeleteKeyFromContainer(string ContainerName)  
     {  
-        // Create the CspParameters object and set the key container   
+        // Create the CspParameters object and set the key container
         // name used to store the RSA key pair.  
         CspParameters cp = new CspParameters();  
         cp.KeyContainerName = ContainerName;  
@@ -221,9 +221,9 @@ Key added to container:
 Key deleted.  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7b8a3-122">참조</span><span class="sxs-lookup"><span data-stu-id="7b8a3-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="25f07-122">참고 항목</span><span class="sxs-lookup"><span data-stu-id="25f07-122">See also</span></span>
 
-- [<span data-ttu-id="7b8a3-123">암호화 및 해독용 키 생성</span><span class="sxs-lookup"><span data-stu-id="7b8a3-123">Generating Keys for Encryption and Decryption</span></span>](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
-- [<span data-ttu-id="7b8a3-124">데이터 암호화</span><span class="sxs-lookup"><span data-stu-id="7b8a3-124">Encrypting Data</span></span>](../../../docs/standard/security/encrypting-data.md)
-- [<span data-ttu-id="7b8a3-125">데이터 해독</span><span class="sxs-lookup"><span data-stu-id="7b8a3-125">Decrypting Data</span></span>](../../../docs/standard/security/decrypting-data.md)
-- [<span data-ttu-id="7b8a3-126">Cryptographic Services</span><span class="sxs-lookup"><span data-stu-id="7b8a3-126">Cryptographic Services</span></span>](../../../docs/standard/security/cryptographic-services.md)
+- [<span data-ttu-id="25f07-123">암호화 및 해독용 키 생성</span><span class="sxs-lookup"><span data-stu-id="25f07-123">Generating Keys for Encryption and Decryption</span></span>](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
+- [<span data-ttu-id="25f07-124">데이터 암호화</span><span class="sxs-lookup"><span data-stu-id="25f07-124">Encrypting Data</span></span>](../../../docs/standard/security/encrypting-data.md)
+- [<span data-ttu-id="25f07-125">데이터 해독</span><span class="sxs-lookup"><span data-stu-id="25f07-125">Decrypting Data</span></span>](../../../docs/standard/security/decrypting-data.md)
+- [<span data-ttu-id="25f07-126">암호화 서비스</span><span class="sxs-lookup"><span data-stu-id="25f07-126">Cryptographic Services</span></span>](../../../docs/standard/security/cryptographic-services.md)

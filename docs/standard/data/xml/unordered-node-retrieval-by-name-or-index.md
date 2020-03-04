@@ -6,25 +6,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
-ms.openlocfilehash: 577de6b60e579b37eb54ea69de72f3534f1d23ac
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 55ea0e31bb8a2863dc0e0eb30f6ca5700c3110b8
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628906"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155739"
 ---
-# <a name="unordered-node-retrieval-by-name-or-index"></a><span data-ttu-id="d3dc9-102">이름 또는 인덱스별로 정렬되지 않은 노드 검색</span><span class="sxs-lookup"><span data-stu-id="d3dc9-102">Unordered Node Retrieval by Name or Index</span></span>
-<span data-ttu-id="d3dc9-103">**XmlNamedNodeMap**은 W3C(World Wide Web 컨소시엄) 사양에서 NamedNodeMap으로 설명되며 이름이나 인덱스를 사용하여 노드를 참조할 수 있는 정렬되지 않은 노드 집합 처리에 필수적입니다.</span><span class="sxs-lookup"><span data-stu-id="d3dc9-103">The **XmlNamedNodeMap** is described in the World Wide Web Consortium (W3C) specification as the NamedNodeMap and is required to handle an unordered set of nodes with the ability to reference nodes by their name or index.</span></span> <span data-ttu-id="d3dc9-104">**XmlNamedNodeMap**에 액세스할 수 있는 유일한 방법은 메서드나 속성을 통해 **XmlNamedNodeMap**을 반환하는 경우입니다.</span><span class="sxs-lookup"><span data-stu-id="d3dc9-104">The only way you have access to an **XmlNamedNodeMap** is when an **XmlNamedNodeMap** is returned through a method or property.</span></span> <span data-ttu-id="d3dc9-105">다음과 같은 세 가지 메서드나 속성이 **XmlNamedNodeMap**을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="d3dc9-105">There are three methods or properties that return an **XmlNamedNodeMap**:</span></span>  
+# <a name="unordered-node-retrieval-by-name-or-index"></a><span data-ttu-id="2a19e-102">이름 또는 인덱스별로 정렬되지 않은 노드 검색</span><span class="sxs-lookup"><span data-stu-id="2a19e-102">Unordered Node Retrieval by Name or Index</span></span>
+<span data-ttu-id="2a19e-103">**XmlNamedNodeMap**은 W3C(World Wide Web 컨소시엄) 사양에서 NamedNodeMap으로 설명되며 이름이나 인덱스를 사용하여 노드를 참조할 수 있는 정렬되지 않은 노드 집합 처리에 필수적입니다.</span><span class="sxs-lookup"><span data-stu-id="2a19e-103">The **XmlNamedNodeMap** is described in the World Wide Web Consortium (W3C) specification as the NamedNodeMap and is required to handle an unordered set of nodes with the ability to reference nodes by their name or index.</span></span> <span data-ttu-id="2a19e-104">**XmlNamedNodeMap**에 액세스할 수 있는 유일한 방법은 메서드나 속성을 통해 **XmlNamedNodeMap**을 반환하는 경우입니다.</span><span class="sxs-lookup"><span data-stu-id="2a19e-104">The only way you have access to an **XmlNamedNodeMap** is when an **XmlNamedNodeMap** is returned through a method or property.</span></span> <span data-ttu-id="2a19e-105">다음과 같은 세 가지 메서드나 속성이 **XmlNamedNodeMap**을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="2a19e-105">There are three methods or properties that return an **XmlNamedNodeMap**:</span></span>  
   
-- <span data-ttu-id="d3dc9-106">XmlElement.Attributes</span><span class="sxs-lookup"><span data-stu-id="d3dc9-106">XmlElement.Attributes</span></span>  
+- <span data-ttu-id="2a19e-106">XmlElement.Attributes</span><span class="sxs-lookup"><span data-stu-id="2a19e-106">XmlElement.Attributes</span></span>  
   
-- <span data-ttu-id="d3dc9-107">XmlDocumentType.Entities</span><span class="sxs-lookup"><span data-stu-id="d3dc9-107">XmlDocumentType.Entities</span></span>  
+- <span data-ttu-id="2a19e-107">XmlDocumentType.Entities</span><span class="sxs-lookup"><span data-stu-id="2a19e-107">XmlDocumentType.Entities</span></span>  
   
-- <span data-ttu-id="d3dc9-108">XmlDocumentType.Notations</span><span class="sxs-lookup"><span data-stu-id="d3dc9-108">XmlDocumentType.Notations</span></span>  
+- <span data-ttu-id="2a19e-108">XmlDocumentType.Notations</span><span class="sxs-lookup"><span data-stu-id="2a19e-108">XmlDocumentType.Notations</span></span>  
   
- <span data-ttu-id="d3dc9-109">예를 들어, **XmlDocumentType.Entities** 속성은 문서 형식 선언에 선언된 **XmlEntity** 노드의 컬렉션을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="d3dc9-109">For example, the **XmlDocumentType.Entities** property gets the collection of **XmlEntity** nodes declared in the document type declaration.</span></span> <span data-ttu-id="d3dc9-110">이 컬렉션은 **XmlNamedNodeMap**으로 반환되고 **Count** 속성을 사용하여 컬렉션을 반복하고 엔터티 정보를 표시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d3dc9-110">This collection is returned as an **XmlNamedNodeMap**, and you can iterate through the collection with the use of the **Count** property and display entity information.</span></span> <span data-ttu-id="d3dc9-111">**XmlNamedNodeMap**을 반복하는 예를 보려면 <xref:System.Xml.XmlDocumentType.Entities%2A>를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d3dc9-111">For an example of iterating through an **XmlNamedNodeMap**, see <xref:System.Xml.XmlDocumentType.Entities%2A>.</span></span>  
+ <span data-ttu-id="2a19e-109">예를 들어, **XmlDocumentType.Entities** 속성은 문서 형식 선언에 선언된 **XmlEntity** 노드의 컬렉션을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="2a19e-109">For example, the **XmlDocumentType.Entities** property gets the collection of **XmlEntity** nodes declared in the document type declaration.</span></span> <span data-ttu-id="2a19e-110">이 컬렉션은 **XmlNamedNodeMap**으로 반환되고 **Count** 속성을 사용하여 컬렉션을 반복하고 엔터티 정보를 표시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2a19e-110">This collection is returned as an **XmlNamedNodeMap**, and you can iterate through the collection with the use of the **Count** property and display entity information.</span></span> <span data-ttu-id="2a19e-111">**XmlNamedNodeMap**을 반복하는 예를 보려면 <xref:System.Xml.XmlDocumentType.Entities%2A>를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="2a19e-111">For an example of iterating through an **XmlNamedNodeMap**, see <xref:System.Xml.XmlDocumentType.Entities%2A>.</span></span>  
   
- <span data-ttu-id="d3dc9-112">**XmlAttributeCollection**은 **XmlNamedNodeMap**에서 파생되며, 표기법 및 엔터티는 읽기 전용이지만 특성의 경우에는 수정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d3dc9-112">The **XmlAttributeCollection** is derived from **XmlNamedNodeMap** and only attributes are modifiable, while notations and entities are read-only.</span></span> <span data-ttu-id="d3dc9-113">특성에 대해 **XmlNamedNodeMap**을 사용하면 XML 이름을 기준으로 특성에 대한 노드를 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d3dc9-113">Using the **XmlNamedNodeMap** for the attributes, you can get nodes for those attributes based on their XML names.</span></span> <span data-ttu-id="d3dc9-114">이렇게 하면 요소 노드에서 특성 컬렉션을 손쉽게 처리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d3dc9-114">This provides an easy method for manipulating the collection of attributes on an element node.</span></span> <span data-ttu-id="d3dc9-115">이것은 **IEnumerable** 인터페이스를 구현하지만 문자열 대신 인덱스 접근자를 사용하는 **XmlNodeList**와 반대라고 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d3dc9-115">This can be contrasted directly with **XmlNodeList**, which also implements the **IEnumerable** interface, but with an index accessor rather than a string.</span></span> <span data-ttu-id="d3dc9-116">**RemoveNamedItem** 및 **SetNamedItem** 메서드는 **XmlAttributeCollection**에 대해서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d3dc9-116">The **RemoveNamedItem** and **SetNamedItem** methods are only used against an **XmlAttributeCollection**.</span></span> <span data-ttu-id="d3dc9-117">**AttributeCollection** 또는 **XmlNamedNodeMap** 구현을 통해 특성 컬렉션에서 추가하거나 제거하면 요소의 특성 컬렉션이 수정됩니다.</span><span class="sxs-lookup"><span data-stu-id="d3dc9-117">Adding or removing from an attribute collection, whether using the **AttributeCollection** or the **XmlNamedNodeMap** implementation, modifies the attribute collection on the element.</span></span> <span data-ttu-id="d3dc9-118">다음 코드 예제에서는 특성을 이동하고 새 특성을 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d3dc9-118">The following code example shows how to move an attribute and create a new attribute.</span></span>  
+ <span data-ttu-id="2a19e-112">**XmlAttributeCollection**은 **XmlNamedNodeMap**에서 파생되며, 표기법 및 엔터티는 읽기 전용이지만 특성의 경우에는 수정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2a19e-112">The **XmlAttributeCollection** is derived from **XmlNamedNodeMap** and only attributes are modifiable, while notations and entities are read-only.</span></span> <span data-ttu-id="2a19e-113">특성에 대해 **XmlNamedNodeMap**을 사용하면 XML 이름을 기준으로 특성에 대한 노드를 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2a19e-113">Using the **XmlNamedNodeMap** for the attributes, you can get nodes for those attributes based on their XML names.</span></span> <span data-ttu-id="2a19e-114">이렇게 하면 요소 노드에서 특성 컬렉션을 손쉽게 처리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2a19e-114">This provides an easy method for manipulating the collection of attributes on an element node.</span></span> <span data-ttu-id="2a19e-115">이것은 **IEnumerable** 인터페이스를 구현하지만 문자열 대신 인덱스 접근자를 사용하는 **XmlNodeList**와 반대라고 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2a19e-115">This can be contrasted directly with **XmlNodeList**, which also implements the **IEnumerable** interface, but with an index accessor rather than a string.</span></span> <span data-ttu-id="2a19e-116">**RemoveNamedItem** 및 **SetNamedItem** 메서드는 **XmlAttributeCollection**에 대해서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2a19e-116">The **RemoveNamedItem** and **SetNamedItem** methods are only used against an **XmlAttributeCollection**.</span></span> <span data-ttu-id="2a19e-117">**AttributeCollection** 또는 **XmlNamedNodeMap** 구현을 통해 특성 컬렉션에서 추가하거나 제거하면 요소의 특성 컬렉션이 수정됩니다.</span><span class="sxs-lookup"><span data-stu-id="2a19e-117">Adding or removing from an attribute collection, whether using the **AttributeCollection** or the **XmlNamedNodeMap** implementation, modifies the attribute collection on the element.</span></span> <span data-ttu-id="2a19e-118">다음 코드 예제에서는 특성을 이동하고 새 특성을 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="2a19e-118">The following code example shows how to move an attribute and create a new attribute.</span></span>  
   
 ```vb  
 Imports System  
@@ -87,7 +87,7 @@ class test {
         // Print out the number of attributes and their names.  
         Console.WriteLine( "Number of Attributes: "+ac.Count );  
         for( int i = 0; i < ac.Count; i++ )  
-            Console.WriteLine( (i+1) + ".  Attribute Name: '" +ac[i].Name+ "'  Attribute Value:  '"+ ac[i].Value +"'" );   
+            Console.WriteLine( (i+1) + ".  Attribute Name: '" +ac[i].Name+ "'  Attribute Value:  '"+ ac[i].Value +"'" );
   
         // Get the 'attr1' from child1.  
         XmlAttribute attr = doc.DocumentElement.ChildNodes[0].Attributes[0];  
@@ -97,9 +97,9 @@ class test {
   
         // 'attr1' will be removed from 'child1' and added to 'child2'.  
         // Print out the number of attributes and their names.  
-        Console.WriteLine( "Number of Attributes: "+ac.Count );          
+        Console.WriteLine( "Number of Attributes: "+ac.Count );
         for( int i = 0; i < ac.Count; i++ )  
-            Console.WriteLine( (i+1) + ".  Attribute Name: '" +ac[i].Name+ "'  Attribute Value:  '"+ ac[i].Value +"'" );   
+            Console.WriteLine( (i+1) + ".  Attribute Name: '" +ac[i].Name+ "'  Attribute Value:  '"+ ac[i].Value +"'" );
   
         // Create a new attribute and add to the collection.  
         XmlAttribute attr2 = doc.CreateAttribute( "attr4" );  
@@ -107,16 +107,16 @@ class test {
         ac.SetNamedItem( attr2 );  
   
         // Print out the number of attributes and their names.  
-        Console.WriteLine( "Number of Attributes: "+ac.Count );          
+        Console.WriteLine( "Number of Attributes: "+ac.Count );
         for( int i = 0; i < ac.Count; i++ )  
-            Console.WriteLine( (i+1) + ".  Attribute Name: '" +ac[i].Name+ "'  Attribute Value:  '"+ ac[i].Value +"'" );           
+            Console.WriteLine( (i+1) + ".  Attribute Name: '" +ac[i].Name+ "'  Attribute Value:  '"+ ac[i].Value +"'" );
   
     }  
 }  
 ```  
   
- <span data-ttu-id="d3dc9-119">**AttributeCollection**에서 특성을 제거하는 추가 코드 예제를 보려면 [XmlNamedNodeMap.RemoveNamedItem 메서드](xref:System.Xml.XmlNamedNodeMap.RemoveNamedItem%2A)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d3dc9-119">To see an additional code example which shows an attribute being removed from an **AttributeCollection**, see [XmlNamedNodeMap.RemoveNamedItem Method](xref:System.Xml.XmlNamedNodeMap.RemoveNamedItem%2A).</span></span> <span data-ttu-id="d3dc9-120">메서드 및 속성에 대한 자세한 내용은 [XmlNamedNodeMap 멤버](xref:System.Xml.XmlNamedNodeMap)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d3dc9-120">For more information on the methods and properties, see [XmlNamedNodeMap Members](xref:System.Xml.XmlNamedNodeMap).</span></span>  
+ <span data-ttu-id="2a19e-119">**AttributeCollection**에서 특성을 제거하는 추가 코드 예제를 보려면 [XmlNamedNodeMap.RemoveNamedItem 메서드](xref:System.Xml.XmlNamedNodeMap.RemoveNamedItem%2A)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="2a19e-119">To see an additional code example which shows an attribute being removed from an **AttributeCollection**, see [XmlNamedNodeMap.RemoveNamedItem Method](xref:System.Xml.XmlNamedNodeMap.RemoveNamedItem%2A).</span></span> <span data-ttu-id="2a19e-120">메서드 및 속성에 대한 자세한 내용은 [XmlNamedNodeMap 멤버](xref:System.Xml.XmlNamedNodeMap)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="2a19e-120">For more information on the methods and properties, see [XmlNamedNodeMap Members](xref:System.Xml.XmlNamedNodeMap).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d3dc9-121">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d3dc9-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2a19e-121">참고 항목</span><span class="sxs-lookup"><span data-stu-id="2a19e-121">See also</span></span>
 
-- [<span data-ttu-id="d3dc9-122">XML DOM(문서 개체 모델)</span><span class="sxs-lookup"><span data-stu-id="d3dc9-122">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [<span data-ttu-id="2a19e-122">XML DOM(문서 개체 모델)</span><span class="sxs-lookup"><span data-stu-id="2a19e-122">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

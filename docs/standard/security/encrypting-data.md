@@ -11,20 +11,20 @@ helpviewer_keywords:
 - cryptography [.NET Framework], asymmetric
 - asymmetric encryption
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
-ms.openlocfilehash: b335e0d39c1809b028e2005a472fe77729e9d267
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 669b9c77ca0102ed94d8743cf37b18c0d0c528dc
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706216"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159405"
 ---
-# <a name="encrypting-data"></a><span data-ttu-id="52b5a-102">데이터 암호화</span><span class="sxs-lookup"><span data-stu-id="52b5a-102">Encrypting Data</span></span>
-<span data-ttu-id="52b5a-103">대칭 암호화와 비대칭 암호화는 서로 다른 프로세스를 사용하여 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="52b5a-103">Symmetric encryption and asymmetric encryption are performed using different processes.</span></span> <span data-ttu-id="52b5a-104">대칭 암호화는 스트림에서 수행되므로 많은 양의 데이터를 암호화하는 데 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="52b5a-104">Symmetric encryption is performed on streams and is therefore useful to encrypt large amounts of data.</span></span> <span data-ttu-id="52b5a-105">비대칭 암호화는 적은 수의 바이트에서 수행되므로 적은 양의 데이터에만 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="52b5a-105">Asymmetric encryption is performed on a small number of bytes and is therefore useful only for small amounts of data.</span></span>  
+# <a name="encrypting-data"></a><span data-ttu-id="b0ee5-102">데이터 암호화</span><span class="sxs-lookup"><span data-stu-id="b0ee5-102">Encrypting Data</span></span>
+<span data-ttu-id="b0ee5-103">대칭 암호화와 비대칭 암호화는 서로 다른 프로세스를 사용하여 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="b0ee5-103">Symmetric encryption and asymmetric encryption are performed using different processes.</span></span> <span data-ttu-id="b0ee5-104">대칭 암호화는 스트림에서 수행되므로 많은 양의 데이터를 암호화하는 데 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="b0ee5-104">Symmetric encryption is performed on streams and is therefore useful to encrypt large amounts of data.</span></span> <span data-ttu-id="b0ee5-105">비대칭 암호화는 적은 수의 바이트에서 수행되므로 적은 양의 데이터에만 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="b0ee5-105">Asymmetric encryption is performed on a small number of bytes and is therefore useful only for small amounts of data.</span></span>  
   
-## <a name="symmetric-encryption"></a><span data-ttu-id="52b5a-106">대칭 암호화</span><span class="sxs-lookup"><span data-stu-id="52b5a-106">Symmetric Encryption</span></span>  
- <span data-ttu-id="52b5a-107">관리되는 대칭 암호화 클래스는 읽은 데이터를 스트림으로 암호화하는 <xref:System.Security.Cryptography.CryptoStream> 이라는 특수 스트림 클래스와 함께 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="52b5a-107">The managed symmetric cryptography classes are used with a special stream class called a <xref:System.Security.Cryptography.CryptoStream> that encrypts data read into the stream.</span></span> <span data-ttu-id="52b5a-108">**CryptoStream** 클래스는 관리되는 스트림 클래스, 암호화 알고리즘을 구현하는 클래스에서 만든 <xref:System.Security.Cryptography.ICryptoTransform> () 인터페이스를 구현하는 클래스 및 <xref:System.Security.Cryptography.CryptoStreamMode> CryptoStream **에 허용되는 액세스 형식을 설명하는**열거형을 사용하여 초기화됩니다.</span><span class="sxs-lookup"><span data-stu-id="52b5a-108">The **CryptoStream** class is initialized with a managed stream class, a class implements the <xref:System.Security.Cryptography.ICryptoTransform> interface (created from a class that implements a cryptographic algorithm), and a <xref:System.Security.Cryptography.CryptoStreamMode> enumeration that describes the type of access permitted to the **CryptoStream**.</span></span> <span data-ttu-id="52b5a-109">**,** 및 <xref:System.IO.Stream> 을 포함하여 <xref:System.IO.FileStream>클래스에서 파생되는 클래스를 사용하여 <xref:System.IO.MemoryStream>CryptoStream <xref:System.Net.Sockets.NetworkStream>클래스를 초기화할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="52b5a-109">The **CryptoStream** class can be initialized using any class that derives from the <xref:System.IO.Stream> class, including <xref:System.IO.FileStream>, <xref:System.IO.MemoryStream>, and <xref:System.Net.Sockets.NetworkStream>.</span></span> <span data-ttu-id="52b5a-110">이러한 클래스를 사용하여 다양한 스트림 개체에 대해 대칭 암호화를 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="52b5a-110">Using these classes, you can perform symmetric encryption on a variety of stream objects.</span></span>  
+## <a name="symmetric-encryption"></a><span data-ttu-id="b0ee5-106">대칭 암호화</span><span class="sxs-lookup"><span data-stu-id="b0ee5-106">Symmetric Encryption</span></span>  
+ <span data-ttu-id="b0ee5-107">관리되는 대칭 암호화 클래스는 읽은 데이터를 스트림으로 암호화하는 <xref:System.Security.Cryptography.CryptoStream> 이라는 특수 스트림 클래스와 함께 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="b0ee5-107">The managed symmetric cryptography classes are used with a special stream class called a <xref:System.Security.Cryptography.CryptoStream> that encrypts data read into the stream.</span></span> <span data-ttu-id="b0ee5-108">**CryptoStream** 클래스는 관리되는 스트림 클래스, 암호화 알고리즘을 구현하는 클래스에서 만든 <xref:System.Security.Cryptography.ICryptoTransform> () 인터페이스를 구현하는 클래스 및 <xref:System.Security.Cryptography.CryptoStreamMode> CryptoStream **에 허용되는 액세스 형식을 설명하는**열거형을 사용하여 초기화됩니다.</span><span class="sxs-lookup"><span data-stu-id="b0ee5-108">The **CryptoStream** class is initialized with a managed stream class, a class implements the <xref:System.Security.Cryptography.ICryptoTransform> interface (created from a class that implements a cryptographic algorithm), and a <xref:System.Security.Cryptography.CryptoStreamMode> enumeration that describes the type of access permitted to the **CryptoStream**.</span></span> <span data-ttu-id="b0ee5-109">**,** 및 <xref:System.IO.Stream> 을 포함하여 <xref:System.IO.FileStream>클래스에서 파생되는 클래스를 사용하여 <xref:System.IO.MemoryStream>CryptoStream <xref:System.Net.Sockets.NetworkStream>클래스를 초기화할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0ee5-109">The **CryptoStream** class can be initialized using any class that derives from the <xref:System.IO.Stream> class, including <xref:System.IO.FileStream>, <xref:System.IO.MemoryStream>, and <xref:System.Net.Sockets.NetworkStream>.</span></span> <span data-ttu-id="b0ee5-110">이러한 클래스를 사용하여 다양한 스트림 개체에 대해 대칭 암호화를 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0ee5-110">Using these classes, you can perform symmetric encryption on a variety of stream objects.</span></span>  
   
- <span data-ttu-id="52b5a-111">다음 예제에서는 Rijndael 암호화 알고리즘을 구현하는 <xref:System.Security.Cryptography.RijndaelManaged> 의 새 인스턴스를 만들고 **CryptoStream** 클래스에서 암호화를 수행하는 데 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="52b5a-111">The following example illustrates how to create a new instance of the <xref:System.Security.Cryptography.RijndaelManaged> class, which implements the Rijndael encryption algorithm, and use it to perform encryption on a **CryptoStream** class.</span></span> <span data-ttu-id="52b5a-112">이 예제에서 **CryptoStream** 은 임의 형식의 관리되는 스트림일 수 있는 `myStream` 이라는 스트림 개체를 사용하여 초기화됩니다.</span><span class="sxs-lookup"><span data-stu-id="52b5a-112">In this example, the **CryptoStream** is initialized with a stream object called `myStream` that can be any type of managed stream.</span></span> <span data-ttu-id="52b5a-113">**RijndaelManaged** 클래스의 **CreateEncryptor** 메서드에는 암호화에 사용되는 키 및 IV가 전달됩니다.</span><span class="sxs-lookup"><span data-stu-id="52b5a-113">The **CreateEncryptor** method from the **RijndaelManaged** class is passed the key and IV that are used for encryption.</span></span> <span data-ttu-id="52b5a-114">이 경우 `rmCrypto` 에서 생성되는 기본 키 및 IV가 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="52b5a-114">In this case, the default key and IV generated from `rmCrypto` are used.</span></span> <span data-ttu-id="52b5a-115">끝으로, **CryptoStreamMode.Write** 가 전달되어 스트림에 대한 쓰기 권한을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="52b5a-115">Finally, the **CryptoStreamMode.Write** is passed, specifying write access to the stream.</span></span>  
+ <span data-ttu-id="b0ee5-111">다음 예제에서는 Rijndael 암호화 알고리즘을 구현하는 <xref:System.Security.Cryptography.RijndaelManaged> 의 새 인스턴스를 만들고 **CryptoStream** 클래스에서 암호화를 수행하는 데 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b0ee5-111">The following example illustrates how to create a new instance of the <xref:System.Security.Cryptography.RijndaelManaged> class, which implements the Rijndael encryption algorithm, and use it to perform encryption on a **CryptoStream** class.</span></span> <span data-ttu-id="b0ee5-112">이 예제에서 **CryptoStream** 은 임의 형식의 관리되는 스트림일 수 있는 `myStream` 이라는 스트림 개체를 사용하여 초기화됩니다.</span><span class="sxs-lookup"><span data-stu-id="b0ee5-112">In this example, the **CryptoStream** is initialized with a stream object called `myStream` that can be any type of managed stream.</span></span> <span data-ttu-id="b0ee5-113">**RijndaelManaged** 클래스의 **CreateEncryptor** 메서드에는 암호화에 사용되는 키 및 IV가 전달됩니다.</span><span class="sxs-lookup"><span data-stu-id="b0ee5-113">The **CreateEncryptor** method from the **RijndaelManaged** class is passed the key and IV that are used for encryption.</span></span> <span data-ttu-id="b0ee5-114">이 경우 `rmCrypto` 에서 생성되는 기본 키 및 IV가 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="b0ee5-114">In this case, the default key and IV generated from `rmCrypto` are used.</span></span> <span data-ttu-id="b0ee5-115">끝으로, **CryptoStreamMode.Write** 가 전달되어 스트림에 대한 쓰기 권한을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="b0ee5-115">Finally, the **CryptoStreamMode.Write** is passed, specifying write access to the stream.</span></span>  
   
 ```vb  
 Dim rmCrypto As New RijndaelManaged()  
@@ -36,12 +36,12 @@ RijndaelManaged rmCrypto = new RijndaelManaged();
 CryptoStream cryptStream = new CryptoStream(myStream, rmCrypto.CreateEncryptor(), CryptoStreamMode.Write);  
 ```  
   
- <span data-ttu-id="52b5a-116">이 코드를 실행하면 **CryptoStream** 개체에 기록된 모든 데이터가 Rijndael 알고리즘을 사용하여 암호화됩니다.</span><span class="sxs-lookup"><span data-stu-id="52b5a-116">After this code is executed, any data written to the **CryptoStream** object is encrypted using the Rijndael algorithm.</span></span>  
+ <span data-ttu-id="b0ee5-116">이 코드를 실행하면 **CryptoStream** 개체에 기록된 모든 데이터가 Rijndael 알고리즘을 사용하여 암호화됩니다.</span><span class="sxs-lookup"><span data-stu-id="b0ee5-116">After this code is executed, any data written to the **CryptoStream** object is encrypted using the Rijndael algorithm.</span></span>  
   
- <span data-ttu-id="52b5a-117">다음 예제에서는 스트림을 만들고, 스트림을 암호화하고, 스트림에 쓰고, 스트림을 닫는 전체 프로세스를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="52b5a-117">The following example shows the entire process of creating a stream, encrypting the stream, writing to the stream, and closing the stream.</span></span> <span data-ttu-id="52b5a-118">이 예제에서는 **CryptoStream** 클래스 및 **RijndaelManaged** 클래스를 사용하여 암호화된 네트워크 스트림을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="52b5a-118">This example creates a network stream that is encrypted using the **CryptoStream** class and the **RijndaelManaged** class.</span></span> <span data-ttu-id="52b5a-119"><xref:System.IO.StreamWriter> 클래스를 사용하여 암호화된 스트림에 메시지가 기록됩니다.</span><span class="sxs-lookup"><span data-stu-id="52b5a-119">A message is written to the encrypted stream with the <xref:System.IO.StreamWriter> class.</span></span>  
+ <span data-ttu-id="b0ee5-117">다음 예제에서는 스트림을 만들고, 스트림을 암호화하고, 스트림에 쓰고, 스트림을 닫는 전체 프로세스를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b0ee5-117">The following example shows the entire process of creating a stream, encrypting the stream, writing to the stream, and closing the stream.</span></span> <span data-ttu-id="b0ee5-118">이 예제에서는 **CryptoStream** 클래스 및 **RijndaelManaged** 클래스를 사용하여 암호화된 네트워크 스트림을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="b0ee5-118">This example creates a network stream that is encrypted using the **CryptoStream** class and the **RijndaelManaged** class.</span></span> <span data-ttu-id="b0ee5-119"><xref:System.IO.StreamWriter> 클래스를 사용하여 암호화된 스트림에 메시지가 기록됩니다.</span><span class="sxs-lookup"><span data-stu-id="b0ee5-119">A message is written to the encrypted stream with the <xref:System.IO.StreamWriter> class.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="52b5a-120">이 예제를 사용하여 파일에 쓸 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="52b5a-120">You can also use this example to write to a file.</span></span> <span data-ttu-id="52b5a-121">이렇게 하려면 <xref:System.Net.Sockets.TcpClient> 참조를 삭제하고 <xref:System.Net.Sockets.NetworkStream> 을 <xref:System.IO.FileStream>으로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="52b5a-121">To do that, delete the <xref:System.Net.Sockets.TcpClient> reference and replace the <xref:System.Net.Sockets.NetworkStream> with a <xref:System.IO.FileStream>.</span></span>  
+> <span data-ttu-id="b0ee5-120">이 예제를 사용하여 파일에 쓸 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b0ee5-120">You can also use this example to write to a file.</span></span> <span data-ttu-id="b0ee5-121">이렇게 하려면 <xref:System.Net.Sockets.TcpClient> 참조를 삭제하고 <xref:System.Net.Sockets.NetworkStream> 을 <xref:System.IO.FileStream>으로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="b0ee5-121">To do that, delete the <xref:System.Net.Sockets.TcpClient> reference and replace the <xref:System.Net.Sockets.NetworkStream> with a <xref:System.IO.FileStream>.</span></span>  
   
 ```vb  
 Imports System  
@@ -54,11 +54,11 @@ Sub Main()
    Try  
       'Create a TCP connection to a listening TCP process.  
       'Use "localhost" to specify the current computer or  
-      'replace "localhost" with the IP address of the   
-      'listening process.   
+      'replace "localhost" with the IP address of the
+      'listening process.
       Dim tcp As New TcpClient("localhost", 11000)  
   
-      'Create a network stream from the TCP connection.   
+      'Create a network stream from the TCP connection.
       Dim netStream As NetworkStream = tcp.GetStream()  
   
       'Create a new instance of the RijndaelManaged class  
@@ -68,11 +68,11 @@ Sub Main()
             Dim key As Byte() = {&H1, &H2, &H3, &H4, &H5, &H6, &H7, &H8, &H9, &H10, &H11, &H12, &H13, &H14, &H15, &H16}  
             Dim iv As Byte() = {&H1, &H2, &H3, &H4, &H5, &H6, &H7, &H8, &H9, &H10, &H11, &H12, &H13, &H14, &H15, &H16}  
   
-      'Create a CryptoStream, pass it the NetworkStream, and encrypt   
+      'Create a CryptoStream, pass it the NetworkStream, and encrypt
       'it with the Rijndael class.  
       Dim cryptStream As New CryptoStream(netStream, rmCrypto.CreateEncryptor(key, iv), CryptoStreamMode.Write)  
   
-      'Create a StreamWriter for easy writing to the   
+      'Create a StreamWriter for easy writing to the
       'network stream.  
       Dim sWriter As New StreamWriter(cryptStream)  
   
@@ -110,11 +110,11 @@ public class main
       {  
          //Create a TCP connection to a listening TCP process.  
          //Use "localhost" to specify the current computer or  
-         //replace "localhost" with the IP address of the   
-         //listening process.    
+         //replace "localhost" with the IP address of the
+         //listening process.
          TcpClient tcp = new TcpClient("localhost",11000);  
   
-         //Create a network stream from the TCP connection.   
+         //Create a network stream from the TCP connection.
          NetworkStream netStream = tcp.GetStream();  
   
          //Create a new instance of the RijndaelManaged class  
@@ -124,13 +124,13 @@ public class main
          byte[] key = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16};  
          byte[] iv = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16};  
   
-         //Create a CryptoStream, pass it the NetworkStream, and encrypt   
+         //Create a CryptoStream, pass it the NetworkStream, and encrypt
          //it with the Rijndael class.  
-         CryptoStream cryptStream = new CryptoStream(netStream,   
-         rmCrypto.CreateEncryptor(key, iv),     
+         CryptoStream cryptStream = new CryptoStream(netStream,
+         rmCrypto.CreateEncryptor(key, iv),
          CryptoStreamMode.Write);  
   
-         //Create a StreamWriter for easy writing to the   
+         //Create a StreamWriter for easy writing to the
          //network stream.  
          StreamWriter sWriter = new StreamWriter(cryptStream);  
   
@@ -156,22 +156,22 @@ public class main
 }  
 ```  
   
- <span data-ttu-id="52b5a-122">이전 예제가 성공적으로 실행되려면 <xref:System.Net.Sockets.TcpClient> 클래스에 지정된 IP 주소 및 포트 번호에서 수신 대기하는 프로세스가 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="52b5a-122">For the previous example to execute successfully, there must be a process listening on the IP address and port number specified in the <xref:System.Net.Sockets.TcpClient> class.</span></span> <span data-ttu-id="52b5a-123">수신 대기 프로세스가 있는 경우 코드가 수신 대기 프로세스에 연결하고, Rijndael 대칭 알고리즘을 사용하여 스트림을 암호화하며, 스트림에 "Hello World!"를</span><span class="sxs-lookup"><span data-stu-id="52b5a-123">If a listening process exists, the code will connect to the listening process, encrypt the stream using the Rijndael symmetric algorithm, and write "Hello World!"</span></span> <span data-ttu-id="52b5a-124">씁니다.</span><span class="sxs-lookup"><span data-stu-id="52b5a-124">to the stream.</span></span> <span data-ttu-id="52b5a-125">코드가 성공하면 콘솔에 다음 텍스트가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="52b5a-125">If the code is successful, it displays the following text to the console:</span></span>  
+ <span data-ttu-id="b0ee5-122">이전 예제가 성공적으로 실행되려면 <xref:System.Net.Sockets.TcpClient> 클래스에 지정된 IP 주소 및 포트 번호에서 수신 대기하는 프로세스가 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0ee5-122">For the previous example to execute successfully, there must be a process listening on the IP address and port number specified in the <xref:System.Net.Sockets.TcpClient> class.</span></span> <span data-ttu-id="b0ee5-123">수신 대기 프로세스가 있는 경우 코드가 수신 대기 프로세스에 연결하고, Rijndael 대칭 알고리즘을 사용하여 스트림을 암호화하며, 스트림에 "Hello World!"를</span><span class="sxs-lookup"><span data-stu-id="b0ee5-123">If a listening process exists, the code will connect to the listening process, encrypt the stream using the Rijndael symmetric algorithm, and write "Hello World!"</span></span> <span data-ttu-id="b0ee5-124">씁니다.</span><span class="sxs-lookup"><span data-stu-id="b0ee5-124">to the stream.</span></span> <span data-ttu-id="b0ee5-125">코드가 성공하면 콘솔에 다음 텍스트가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="b0ee5-125">If the code is successful, it displays the following text to the console:</span></span>  
   
 ```console  
 The message was sent.  
 ```  
   
- <span data-ttu-id="52b5a-126">그러나 수신 대기 프로세스가 없거나 예외가 발생하는 경우 코드가 콘솔에 다음 텍스트를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="52b5a-126">However, if no listening process is found or an exception is raised, the code displays the following text to the console:</span></span>  
+ <span data-ttu-id="b0ee5-126">그러나 수신 대기 프로세스가 없거나 예외가 발생하는 경우 코드가 콘솔에 다음 텍스트를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="b0ee5-126">However, if no listening process is found or an exception is raised, the code displays the following text to the console:</span></span>  
   
 ```console  
 The connection failed.  
 ```  
   
-## <a name="asymmetric-encryption"></a><span data-ttu-id="52b5a-127">비대칭 암호화</span><span class="sxs-lookup"><span data-stu-id="52b5a-127">Asymmetric Encryption</span></span>  
- <span data-ttu-id="52b5a-128">비대칭 알고리즘은 일반적으로 대칭 키 및 IV의 암호화와 같은 적은 양의 데이터를 암호화하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="52b5a-128">Asymmetric algorithms are usually used to encrypt small amounts of data such as the encryption of a symmetric key and IV.</span></span> <span data-ttu-id="52b5a-129">일반적으로 비대칭 암호화를 수행하는 개인은 다른 당사자가 생성한 공개 키를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="52b5a-129">Typically, an individual performing asymmetric encryption uses the public key generated by another party.</span></span> <span data-ttu-id="52b5a-130"><xref:System.Security.Cryptography.RSACryptoServiceProvider> 클래스는 이 목적을 위해 .NET Framework에서 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="52b5a-130">The <xref:System.Security.Cryptography.RSACryptoServiceProvider> class is provided by the .NET Framework for this purpose.</span></span>  
+## <a name="asymmetric-encryption"></a><span data-ttu-id="b0ee5-127">비대칭 암호화</span><span class="sxs-lookup"><span data-stu-id="b0ee5-127">Asymmetric Encryption</span></span>  
+ <span data-ttu-id="b0ee5-128">비대칭 알고리즘은 일반적으로 대칭 키 및 IV의 암호화와 같은 적은 양의 데이터를 암호화하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="b0ee5-128">Asymmetric algorithms are usually used to encrypt small amounts of data such as the encryption of a symmetric key and IV.</span></span> <span data-ttu-id="b0ee5-129">일반적으로 비대칭 암호화를 수행하는 개인은 다른 당사자가 생성한 공개 키를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="b0ee5-129">Typically, an individual performing asymmetric encryption uses the public key generated by another party.</span></span> <span data-ttu-id="b0ee5-130"><xref:System.Security.Cryptography.RSACryptoServiceProvider> 클래스는 이 목적을 위해 .NET Framework에서 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="b0ee5-130">The <xref:System.Security.Cryptography.RSACryptoServiceProvider> class is provided by the .NET Framework for this purpose.</span></span>  
   
- <span data-ttu-id="52b5a-131">다음 예제에서는 공개 키 정보를 사용하여 대칭 키 및 IV를 암호화합니다.</span><span class="sxs-lookup"><span data-stu-id="52b5a-131">The following example uses public key information to encrypt a symmetric key and IV.</span></span> <span data-ttu-id="52b5a-132">타사의 공개 키를 나타내는 2바이트 배열이 초기화됩니다.</span><span class="sxs-lookup"><span data-stu-id="52b5a-132">Two byte arrays are initialized that represent the public key of a third party.</span></span> <span data-ttu-id="52b5a-133"><xref:System.Security.Cryptography.RSAParameters> 개체는 이러한 값으로 초기화됩니다.</span><span class="sxs-lookup"><span data-stu-id="52b5a-133">An <xref:System.Security.Cryptography.RSAParameters> object is initialized to these values.</span></span> <span data-ttu-id="52b5a-134">다음에는 **메서드를 사용하여** RSAParameters **개체(이 개체가 나타내는 공개 키 포함)를** RSACryptoServiceProvider <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType> 로 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="52b5a-134">Next, the **RSAParameters** object (along with the public key it represents) is imported into an **RSACryptoServiceProvider** using the <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="52b5a-135">끝으로, <xref:System.Security.Cryptography.RijndaelManaged> 클래스에서 만든 프라이빗 키 및 IV가 암호화됩니다.</span><span class="sxs-lookup"><span data-stu-id="52b5a-135">Finally, the private key and IV created by a <xref:System.Security.Cryptography.RijndaelManaged> class are encrypted.</span></span> <span data-ttu-id="52b5a-136">이 예제에서는 시스템에 128비트 암호화가 설치되어 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="52b5a-136">This example requires systems to have 128-bit encryption installed.</span></span>  
+ <span data-ttu-id="b0ee5-131">다음 예제에서는 공개 키 정보를 사용하여 대칭 키 및 IV를 암호화합니다.</span><span class="sxs-lookup"><span data-stu-id="b0ee5-131">The following example uses public key information to encrypt a symmetric key and IV.</span></span> <span data-ttu-id="b0ee5-132">타사의 공개 키를 나타내는 2바이트 배열이 초기화됩니다.</span><span class="sxs-lookup"><span data-stu-id="b0ee5-132">Two byte arrays are initialized that represent the public key of a third party.</span></span> <span data-ttu-id="b0ee5-133"><xref:System.Security.Cryptography.RSAParameters> 개체는 이러한 값으로 초기화됩니다.</span><span class="sxs-lookup"><span data-stu-id="b0ee5-133">An <xref:System.Security.Cryptography.RSAParameters> object is initialized to these values.</span></span> <span data-ttu-id="b0ee5-134">다음에는 **메서드를 사용하여** RSAParameters **개체(이 개체가 나타내는 공개 키 포함)를** RSACryptoServiceProvider <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType> 로 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="b0ee5-134">Next, the **RSAParameters** object (along with the public key it represents) is imported into an **RSACryptoServiceProvider** using the <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="b0ee5-135">끝으로, <xref:System.Security.Cryptography.RijndaelManaged> 클래스에서 만든 프라이빗 키 및 IV가 암호화됩니다.</span><span class="sxs-lookup"><span data-stu-id="b0ee5-135">Finally, the private key and IV created by a <xref:System.Security.Cryptography.RijndaelManaged> class are encrypted.</span></span> <span data-ttu-id="b0ee5-136">이 예제에서는 시스템에 128비트 암호화가 설치되어 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0ee5-136">This example requires systems to have 128-bit encryption installed.</span></span>  
   
 ```vb  
 Imports System  
@@ -195,7 +195,7 @@ Module Module1
         'Create a new instance of the RSAParameters structure.  
         Dim rsaKeyInfo As New RSAParameters()  
   
-        'Set rsaKeyInfo to the public key values.   
+        'Set rsaKeyInfo to the public key values.
         rsaKeyInfo.Modulus = publicKey  
         rsaKeyInfo.Exponent = exponent  
   
@@ -243,7 +243,7 @@ class Class1
       //Create a new instance of the RSAParameters structure.  
       RSAParameters rsaKeyInfo = new RSAParameters();  
   
-      //Set rsaKeyInfo to the public key values.   
+      //Set rsaKeyInfo to the public key values.
       rsaKeyInfo.Modulus = publicKey;  
       rsaKeyInfo.Exponent = exponent;  
   
@@ -260,8 +260,8 @@ class Class1
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="52b5a-137">참조</span><span class="sxs-lookup"><span data-stu-id="52b5a-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b0ee5-137">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b0ee5-137">See also</span></span>
 
-- [<span data-ttu-id="52b5a-138">암호화 및 해독용 키 생성</span><span class="sxs-lookup"><span data-stu-id="52b5a-138">Generating Keys for Encryption and Decryption</span></span>](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
-- [<span data-ttu-id="52b5a-139">데이터 해독</span><span class="sxs-lookup"><span data-stu-id="52b5a-139">Decrypting Data</span></span>](../../../docs/standard/security/decrypting-data.md)
-- [<span data-ttu-id="52b5a-140">Cryptographic Services</span><span class="sxs-lookup"><span data-stu-id="52b5a-140">Cryptographic Services</span></span>](../../../docs/standard/security/cryptographic-services.md)
+- [<span data-ttu-id="b0ee5-138">암호화 및 해독용 키 생성</span><span class="sxs-lookup"><span data-stu-id="b0ee5-138">Generating Keys for Encryption and Decryption</span></span>](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
+- [<span data-ttu-id="b0ee5-139">데이터 해독</span><span class="sxs-lookup"><span data-stu-id="b0ee5-139">Decrypting Data</span></span>](../../../docs/standard/security/decrypting-data.md)
+- [<span data-ttu-id="b0ee5-140">암호화 서비스</span><span class="sxs-lookup"><span data-stu-id="b0ee5-140">Cryptographic Services</span></span>](../../../docs/standard/security/cryptographic-services.md)
