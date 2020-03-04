@@ -4,20 +4,20 @@ description: 이 문서에서는 PowerShell, Bash 및 zsh용 .NET Core CLI에 �
 author: thraka
 ms.author: adegeo
 ms.date: 11/03/2019
-ms.openlocfilehash: 649b723c2abfa74443a16914594284a77e0eafc0
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 31328be14811760bc8d7fb527e0d55abfe6b1493
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920530"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156753"
 ---
-# <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a><span data-ttu-id="6beac-103">.NET Core CLI에 대한 탭 완성 기능을 사용하는 방법</span><span class="sxs-lookup"><span data-stu-id="6beac-103">How to enable TAB completion for the .NET Core CLI</span></span>
+# <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a><span data-ttu-id="ee20f-103">.NET Core CLI에 대한 탭 완성 기능을 사용하는 방법</span><span class="sxs-lookup"><span data-stu-id="ee20f-103">How to enable TAB completion for the .NET Core CLI</span></span>
 
-<span data-ttu-id="6beac-104">.NET Core 2.0 SDK부터 .NET Core CLI는 탭 완성 기능을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="6beac-104">Starting with .NET Core 2.0 SDK, the .NET Core CLI supports tab completion.</span></span> <span data-ttu-id="6beac-105">이 문서에서는 세 개의 셸, PowerShell, Bash 및 zsh에 대한 탭 완성 기능을 구성하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="6beac-105">This article describes how to configure tab completion for three shells, PowerShell, Bash, and zsh.</span></span> <span data-ttu-id="6beac-106">다른 셸에는 자동 완성에 대한 지원이 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6beac-106">Other shells may have support for auto completion.</span></span> <span data-ttu-id="6beac-107">자동 완성을 구성하는 방법에 대해 해당 설명서를 참조하세요. 단계는 이 문서에 설명된 단계와 유사해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6beac-107">Refer to their documentation on how to configure auto completion, the steps should be similar to the steps described in this article.</span></span>
+<span data-ttu-id="ee20f-104">**이 문서의 적용 대상:**  ✔️ .NET Core 2.1 SDK 이상 버전</span><span class="sxs-lookup"><span data-stu-id="ee20f-104">**This article applies to:** ✔️ .NET Core 2.1 SDK and later versions</span></span>
 
-[!INCLUDE [topic-appliesto-net-core-2plus](~/includes/topic-appliesto-net-core-2plus.md)]
+<span data-ttu-id="ee20f-105">이 문서에서는 세 개의 셸, PowerShell, Bash 및 zsh에 대한 탭 완성 기능을 구성하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="ee20f-105">This article describes how to configure tab completion for three shells, PowerShell, Bash, and zsh.</span></span> <span data-ttu-id="ee20f-106">그 밖의 셸은 해당 셸의 설명서에서 탭 완성 기능을 구현하는 방법을 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="ee20f-106">For other shells, refer to their documentation on how to configure tab completion.</span></span>
 
-<span data-ttu-id="6beac-108">설정되면 .NET Core CLI에 대한 탭 완성 기능이 셸에서 `dotnet` 명령을 입력한 다음, TAB 키를 눌러서 트리거됩니다.</span><span class="sxs-lookup"><span data-stu-id="6beac-108">Once setup, tab completion for the .NET Core CLI is triggered by typing a `dotnet` command in the shell, and then pressing the TAB key.</span></span> <span data-ttu-id="6beac-109">현재 명령줄은 `dotnet complete` 명령으로 전송되고, 결과는 셸에 의해 처리됩니다.</span><span class="sxs-lookup"><span data-stu-id="6beac-109">The current command line is sent to the `dotnet complete` command, and the results are processed by your shell.</span></span> <span data-ttu-id="6beac-110">`dotnet complete` 명령으로 직접 전송하여 탭 완성 기능을 사용하지 않고 결과를 테스트할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6beac-110">You can test the results without enabling tab completion by sending something directly to the `dotnet complete` command.</span></span> <span data-ttu-id="6beac-111">예:</span><span class="sxs-lookup"><span data-stu-id="6beac-111">For example:</span></span>
+<span data-ttu-id="ee20f-107">설정되면 셸에서 `dotnet` 명령을 입력하고 TAB 키를 누르면 .NET Core CLI의 탭 완성 기능이 트리거됩니다.</span><span class="sxs-lookup"><span data-stu-id="ee20f-107">Once set up, tab completion for the .NET Core CLI is triggered by typing a `dotnet` command in the shell, and then pressing the TAB key.</span></span> <span data-ttu-id="ee20f-108">현재 명령줄은 `dotnet complete` 명령으로 전송되고, 결과는 셸에 의해 처리됩니다.</span><span class="sxs-lookup"><span data-stu-id="ee20f-108">The current command line is sent to the `dotnet complete` command, and the results are processed by your shell.</span></span> <span data-ttu-id="ee20f-109">`dotnet complete` 명령으로 직접 전송하여 탭 완성 기능을 사용하지 않고 결과를 테스트할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ee20f-109">You can test the results without enabling tab completion by sending something directly to the `dotnet complete` command.</span></span> <span data-ttu-id="ee20f-110">예를 들어:</span><span class="sxs-lookup"><span data-stu-id="ee20f-110">For example:</span></span>
 
 ```console
 > dotnet complete "dotnet a"
@@ -28,28 +28,28 @@ migrate
 pack
 ```
 
-<span data-ttu-id="6beac-112">해당 명령이 작동하지 않는 경우 .NET Core 2.0 SDK 이상이 설치되었는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="6beac-112">If that command doesn't work, make sure that .NET Core 2.0 SDK or above is installed.</span></span> <span data-ttu-id="6beac-113">설치되었지만 해당 명령이 여전히 작동하지 않는 경우 `dotnet` 명령이 .NET Core 2.0 SDK 이상 버전으로 확인되는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="6beac-113">If it's installed, but that command still doesn't work, make sure that the `dotnet` command resolves to a version of .NET Core 2.0 SDK and above.</span></span> <span data-ttu-id="6beac-114">`dotnet --version` 명령을 사용하여 현재 경로가 확인되는 `dotnet`의 버전을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="6beac-114">Use the `dotnet --version` command to see what version of `dotnet` your current path is resolving to.</span></span> <span data-ttu-id="6beac-115">자세한 내용은 [사용할 .NET Core 버전 선택](../versions/selection.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="6beac-115">For more information, see [Select the .NET Core version to use](../versions/selection.md).</span></span>
+<span data-ttu-id="ee20f-111">해당 명령이 작동하지 않는 경우 .NET Core 2.0 SDK 이상이 설치되었는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="ee20f-111">If that command doesn't work, make sure that .NET Core 2.0 SDK or above is installed.</span></span> <span data-ttu-id="ee20f-112">설치되었지만 해당 명령이 여전히 작동하지 않는 경우 `dotnet` 명령이 .NET Core 2.0 SDK 이상 버전으로 확인되는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="ee20f-112">If it's installed, but that command still doesn't work, make sure that the `dotnet` command resolves to a version of .NET Core 2.0 SDK and above.</span></span> <span data-ttu-id="ee20f-113">`dotnet --version` 명령을 사용하여 현재 경로가 확인되는 `dotnet`의 버전을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="ee20f-113">Use the `dotnet --version` command to see what version of `dotnet` your current path is resolving to.</span></span> <span data-ttu-id="ee20f-114">자세한 내용은 [사용할 .NET Core 버전 선택](../versions/selection.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ee20f-114">For more information, see [Select the .NET Core version to use](../versions/selection.md).</span></span>
 
-### <a name="examples"></a><span data-ttu-id="6beac-116">예</span><span class="sxs-lookup"><span data-stu-id="6beac-116">Examples</span></span>
+### <a name="examples"></a><span data-ttu-id="ee20f-115">예</span><span class="sxs-lookup"><span data-stu-id="ee20f-115">Examples</span></span>
 
-<span data-ttu-id="6beac-117">탭 완성 기능에서 제공하는 몇 가지 예제는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="6beac-117">Here are some examples of what tab completion provides:</span></span>
+<span data-ttu-id="ee20f-116">탭 완성 기능에서 제공하는 몇 가지 예제는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="ee20f-116">Here are some examples of what tab completion provides:</span></span>
 
-<span data-ttu-id="6beac-118">입력</span><span class="sxs-lookup"><span data-stu-id="6beac-118">Input</span></span>                                | <span data-ttu-id="6beac-119">다음이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="6beac-119">becomes</span></span>                                                                     | <span data-ttu-id="6beac-120">이유</span><span class="sxs-lookup"><span data-stu-id="6beac-120">because</span></span>
+<span data-ttu-id="ee20f-117">입력</span><span class="sxs-lookup"><span data-stu-id="ee20f-117">Input</span></span>                                | <span data-ttu-id="ee20f-118">다음이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="ee20f-118">becomes</span></span>                                                                     | <span data-ttu-id="ee20f-119">이유</span><span class="sxs-lookup"><span data-stu-id="ee20f-119">because</span></span>
 :------------------------------------|:----------------------------------------------------------------------------|:--------------------------------
-`dotnet a⇥`                          | `dotnet add`                                                                 | <span data-ttu-id="6beac-121">`add`는 사전순으로 첫 번째 하위 명령입니다.</span><span class="sxs-lookup"><span data-stu-id="6beac-121">`add` is the first subcommand, alphabetically.</span></span>
-`dotnet add p⇥`                      | `dotnet add --help`                                                          | <span data-ttu-id="6beac-122">탭 완성 기능은 부분 문자열과 일치하고 `--help`가 사전순으로 먼저 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="6beac-122">Tab completion matches substrings and `--help` comes first alphabetically.</span></span>
-`dotnet add p⇥⇥`                    | `dotnet add package`                                                          | <span data-ttu-id="6beac-123">탭 키를 두 번째로 누르면 다음 제안이 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="6beac-123">Pressing tab a second time brings up the next suggestion.</span></span>      
-`dotnet add package Microsoft⇥`      | `dotnet add package Microsoft.ApplicationInsights.Web`                      | <span data-ttu-id="6beac-124">결과는 사전순으로 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="6beac-124">Results are returned alphabetically.</span></span>
-`dotnet remove reference ⇥`          | `dotnet remove reference ..\..\src\OmniSharp.DotNet\OmniSharp.DotNet.csproj` | <span data-ttu-id="6beac-125">탭 완성 기능은 프로젝트 파일 인식입니다.</span><span class="sxs-lookup"><span data-stu-id="6beac-125">Tab completion is project file aware.</span></span>
+`dotnet a⇥`                          | `dotnet add`                                                                 | <span data-ttu-id="ee20f-120">`add`는 사전순으로 첫 번째 하위 명령입니다.</span><span class="sxs-lookup"><span data-stu-id="ee20f-120">`add` is the first subcommand, alphabetically.</span></span>
+`dotnet add p⇥`                      | `dotnet add --help`                                                          | <span data-ttu-id="ee20f-121">탭 완성 기능은 부분 문자열과 일치하고 `--help`가 사전순으로 먼저 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="ee20f-121">Tab completion matches substrings and `--help` comes first alphabetically.</span></span>
+`dotnet add p⇥⇥`                    | `dotnet add package`                                                          | <span data-ttu-id="ee20f-122">탭 키를 두 번째로 누르면 다음 제안이 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="ee20f-122">Pressing tab a second time brings up the next suggestion.</span></span>
+`dotnet add package Microsoft⇥`      | `dotnet add package Microsoft.ApplicationInsights.Web`                      | <span data-ttu-id="ee20f-123">결과는 사전순으로 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="ee20f-123">Results are returned alphabetically.</span></span>
+`dotnet remove reference ⇥`          | `dotnet remove reference ..\..\src\OmniSharp.DotNet\OmniSharp.DotNet.csproj` | <span data-ttu-id="ee20f-124">탭 완성 기능은 프로젝트 파일 인식입니다.</span><span class="sxs-lookup"><span data-stu-id="ee20f-124">Tab completion is project file aware.</span></span>
 
-## <a name="powershell"></a><span data-ttu-id="6beac-126">PowerShell</span><span class="sxs-lookup"><span data-stu-id="6beac-126">PowerShell</span></span>
+## <a name="powershell"></a><span data-ttu-id="ee20f-125">PowerShell</span><span class="sxs-lookup"><span data-stu-id="ee20f-125">PowerShell</span></span>
 
-<span data-ttu-id="6beac-127">.NET Core CLI에 대한 **PowerShell**에 탭 완성 기능을 추가하려면 변수 `$PROFILE`에 저장된 프로필을 만들거나 편집합니다.</span><span class="sxs-lookup"><span data-stu-id="6beac-127">To add tab completion to **PowerShell** for the .NET Core CLI, create or edit the profile stored in the variable `$PROFILE`.</span></span> <span data-ttu-id="6beac-128">자세한 내용은 [프로필을 만드는 방법](/powershell/module/microsoft.powershell.core/about/about_profiles#how-to-create-a-profile) 및 [프로필 및 실행 정책](/powershell/module/microsoft.powershell.core/about/about_profiles#profiles-and-execution-policy)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="6beac-128">For more information, see [How to create your profile](/powershell/module/microsoft.powershell.core/about/about_profiles#how-to-create-a-profile) and [Profiles and execution policy](/powershell/module/microsoft.powershell.core/about/about_profiles#profiles-and-execution-policy).</span></span> 
+<span data-ttu-id="ee20f-126">.NET Core CLI에 대한 **PowerShell**에 탭 완성 기능을 추가하려면 변수 `$PROFILE`에 저장된 프로필을 만들거나 편집합니다.</span><span class="sxs-lookup"><span data-stu-id="ee20f-126">To add tab completion to **PowerShell** for the .NET Core CLI, create or edit the profile stored in the variable `$PROFILE`.</span></span> <span data-ttu-id="ee20f-127">자세한 내용은 [프로필을 만드는 방법](/powershell/module/microsoft.powershell.core/about/about_profiles#how-to-create-a-profile) 및 [프로필 및 실행 정책](/powershell/module/microsoft.powershell.core/about/about_profiles#profiles-and-execution-policy)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ee20f-127">For more information, see [How to create your profile](/powershell/module/microsoft.powershell.core/about/about_profiles#how-to-create-a-profile) and [Profiles and execution policy](/powershell/module/microsoft.powershell.core/about/about_profiles#profiles-and-execution-policy).</span></span>
 
-<span data-ttu-id="6beac-129">프로필에 다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="6beac-129">Add the following code to your profile:</span></span>
+<span data-ttu-id="ee20f-128">프로필에 다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="ee20f-128">Add the following code to your profile:</span></span>
 
 ```powershell
-# PowerShell parameter completion shim for the dotnet CLI 
+# PowerShell parameter completion shim for the dotnet CLI
 Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
      param($commandName, $wordToComplete, $cursorPosition)
          dotnet complete --position $cursorPosition "$wordToComplete" | ForEach-Object {
@@ -58,9 +58,9 @@ Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
  }
 ```
 
-## <a name="bash"></a><span data-ttu-id="6beac-130">bash</span><span class="sxs-lookup"><span data-stu-id="6beac-130">bash</span></span>
+## <a name="bash"></a><span data-ttu-id="ee20f-129">bash</span><span class="sxs-lookup"><span data-stu-id="ee20f-129">bash</span></span>
 
-<span data-ttu-id="6beac-131">.NET Core CLI에 대한 **bash** 셸에 탭 완성 기능을 추가하려면 `.bashrc` 파일에 다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="6beac-131">To add tab completion to your **bash** shell for the .NET Core CLI, add the following code to your `.bashrc` file:</span></span>
+<span data-ttu-id="ee20f-130">.NET Core CLI에 대한 **bash** 셸에 탭 완성 기능을 추가하려면 `.bashrc` 파일에 다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="ee20f-130">To add tab completion to your **bash** shell for the .NET Core CLI, add the following code to your `.bashrc` file:</span></span>
 
 ```bash
 # bash parameter completion for the dotnet CLI
@@ -81,14 +81,14 @@ _dotnet_bash_complete()
 complete -f -F _dotnet_bash_complete dotnet
 ```
 
-## <a name="zsh"></a><span data-ttu-id="6beac-132">zsh</span><span class="sxs-lookup"><span data-stu-id="6beac-132">zsh</span></span>
+## <a name="zsh"></a><span data-ttu-id="ee20f-131">zsh</span><span class="sxs-lookup"><span data-stu-id="ee20f-131">zsh</span></span>
 
-<span data-ttu-id="6beac-133">.NET Core CLI에 대한 **zsh** 셸에 탭 완성 기능을 추가하려면 `.zshrc` 파일에 다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="6beac-133">To add tab completion to your **zsh** shell for the .NET Core CLI, add the following code to your `.zshrc` file:</span></span>
+<span data-ttu-id="ee20f-132">.NET Core CLI에 대한 **zsh** 셸에 탭 완성 기능을 추가하려면 `.zshrc` 파일에 다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="ee20f-132">To add tab completion to your **zsh** shell for the .NET Core CLI, add the following code to your `.zshrc` file:</span></span>
 
 ```zsh
 # zsh parameter completion for the dotnet CLI
 
-_dotnet_zsh_complete() 
+_dotnet_zsh_complete()
 {
   local completions=("$(dotnet complete "$words")")
 

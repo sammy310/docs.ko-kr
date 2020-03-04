@@ -1,239 +1,172 @@
 ---
 title: dotnet publish 명령
-description: dotnet publish 명령은 .NET Core 프로젝트를 디렉터리에 게시합니다.
-ms.date: 05/29/2018
-ms.openlocfilehash: 0653a7b1e1abd6d7ffd3d21a0410279235b43a28
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+description: dotnet publish 명령은 .NET Core 프로젝트 또는 솔루션을 디렉터리에 게시합니다.
+ms.date: 02/24/2020
+ms.openlocfilehash: cf41ee09244faad03feb8ccda19135b8c7780106
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451294"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157001"
 ---
-# <a name="dotnet-publish"></a><span data-ttu-id="b93a7-103">dotnet publish</span><span class="sxs-lookup"><span data-stu-id="b93a7-103">dotnet publish</span></span>
+# <a name="dotnet-publish"></a><span data-ttu-id="02210-103">dotnet publish</span><span class="sxs-lookup"><span data-stu-id="02210-103">dotnet publish</span></span>
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+<span data-ttu-id="02210-104">**이 문서의 적용 대상:**  ✔️ .NET Core 2.1 SDK 이상 버전</span><span class="sxs-lookup"><span data-stu-id="02210-104">**This article applies to:** ✔️ .NET Core 2.1 SDK and later versions</span></span>
 
-## <a name="name"></a><span data-ttu-id="b93a7-104">이름</span><span class="sxs-lookup"><span data-stu-id="b93a7-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="02210-105">이름</span><span class="sxs-lookup"><span data-stu-id="02210-105">Name</span></span>
 
-<span data-ttu-id="b93a7-105">`dotnet publish` - 호스팅 시스템에 배포하기 위해 애플리케이션 및 해당 종속성을 폴더에 압축합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-105">`dotnet publish` - Packs the application and its dependencies into a folder for deployment to a hosting system.</span></span>
+<span data-ttu-id="02210-106">`dotnet publish` - 호스팅 시스템에 배포하기 위해 애플리케이션 및 해당 종속성을 폴더에 게시합니다.</span><span class="sxs-lookup"><span data-stu-id="02210-106">`dotnet publish` - Publishes the application and its dependencies to a folder for deployment to a hosting system.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="b93a7-106">개요</span><span class="sxs-lookup"><span data-stu-id="b93a7-106">Synopsis</span></span>
-
-<!-- markdownlint-disable MD025 -->
-
-# <a name="net-core-21"></a>[<span data-ttu-id="b93a7-107">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="b93a7-107">.NET Core 2.1</span></span>](#tab/netcore21)
+## <a name="synopsis"></a><span data-ttu-id="02210-107">개요</span><span class="sxs-lookup"><span data-stu-id="02210-107">Synopsis</span></span>
 
 ```dotnetcli
-dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-build] [--no-dependencies]
-    [--no-restore] [-o|--output] [-r|--runtime] [--self-contained] [-v|--verbosity] [--version-suffix]
+dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration] 
+    [-f|--framework] [--force] [--interactive] [--manifest]
+    [--no-build] [--no-dependencies] [--no-restore] [--nologo]
+    [-o|--output] [-r|--runtime] [--self-contained]
+    [--no-self-contained] [-v|--verbosity] [--version-suffix]
+
 dotnet publish [-h|--help]
 ```
 
-# <a name="net-core-20"></a>[<span data-ttu-id="b93a7-108">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="b93a7-108">.NET Core 2.0</span></span>](#tab/netcore20)
+## <a name="description"></a><span data-ttu-id="02210-108">설명</span><span class="sxs-lookup"><span data-stu-id="02210-108">Description</span></span>
 
-```dotnetcli
-dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-dependencies]
-    [--no-restore] [-o|--output] [-r|--runtime] [--self-contained] [-v|--verbosity] [--version-suffix]
-dotnet publish [-h|--help]
-```
+<span data-ttu-id="02210-109">`dotnet publish`는 애플리케이션을 컴파일하고 프로젝트 파일에 지정된 종속성을 읽은 다음 결과 파일 집합을 디렉터리에 게시합니다.</span><span class="sxs-lookup"><span data-stu-id="02210-109">`dotnet publish` compiles the application, reads through its dependencies specified in the project file, and publishes the resulting set of files to a directory.</span></span> <span data-ttu-id="02210-110">출력에는 다음과 같은 자산이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="02210-110">The output includes the following assets:</span></span>
 
-# <a name="net-core-1x"></a>[<span data-ttu-id="b93a7-109">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="b93a7-109">.NET Core 1.x</span></span>](#tab/netcore1x)
+- <span data-ttu-id="02210-111">*dll* 확장과 함께 어셈블리의 IL(중간 언어) 코드</span><span class="sxs-lookup"><span data-stu-id="02210-111">Intermediate Language (IL) code in an assembly with a *dll* extension.</span></span>
+- <span data-ttu-id="02210-112">프로젝트의 종속성을 모두 포함하는 *.deps.json* 파일</span><span class="sxs-lookup"><span data-stu-id="02210-112">A *.deps.json* file that includes all of the dependencies of the project.</span></span>
+- <span data-ttu-id="02210-113">런타임에 대한 기타 구성 옵션(예: 가비지 수집 유형)과 애플리케이션에서 예상하는 공유 런타임을 지정하는 *.runtimeconfig.json* 파일</span><span class="sxs-lookup"><span data-stu-id="02210-113">A *.runtimeconfig.json* file that specifies the shared runtime that the application expects, as well as other configuration options for the runtime (for example, garbage collection type).</span></span>
+- <span data-ttu-id="02210-114">애플리케이션의 종속성은 NuGet 캐시에서 출력 폴더로 복사됩니다.</span><span class="sxs-lookup"><span data-stu-id="02210-114">The application's dependencies, which are copied from the NuGet cache into the output folder.</span></span>
 
-```dotnetcli
-dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
-    [--version-suffix]
-dotnet publish [-h|--help]
-```
+<span data-ttu-id="02210-115">`dotnet publish` 명령의 출력이 실행을 위해 호스팅 시스템(예: 서버, PC, Mac, 랩톱)에 배포할 준비가 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="02210-115">The `dotnet publish` command's output is ready for deployment to a hosting system (for example, a server, PC, Mac, laptop) for execution.</span></span> <span data-ttu-id="02210-116">이는 배포를 위해 애플리케이션을 준비하는 데 공식적으로 지원되는 유일한 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="02210-116">It's the only officially supported way to prepare the application for deployment.</span></span> <span data-ttu-id="02210-117">프로젝트에서 지정하는 배포 유형에 따라 호스팅 시스템에 .NET Core 공유 런타임이 설치되어 있을 수도 있고 그렇지 않을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="02210-117">Depending on the type of deployment that the project specifies, the hosting system may or may not have the .NET Core shared runtime installed on it.</span></span>
 
----
+## <a name="arguments"></a><span data-ttu-id="02210-118">인수</span><span class="sxs-lookup"><span data-stu-id="02210-118">Arguments</span></span>
 
-## <a name="description"></a><span data-ttu-id="b93a7-110">설명</span><span class="sxs-lookup"><span data-stu-id="b93a7-110">Description</span></span>
+- **`PROJECT|SOLUTION`**
 
-<span data-ttu-id="b93a7-111">`dotnet publish`는 애플리케이션을 컴파일하고 프로젝트 파일에 지정된 종속성을 읽은 다음 결과 파일 집합을 디렉터리에 게시합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-111">`dotnet publish` compiles the application, reads through its dependencies specified in the project file, and publishes the resulting set of files to a directory.</span></span> <span data-ttu-id="b93a7-112">출력에는 다음과 같은 자산이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-112">The output includes the following assets:</span></span>
+  <span data-ttu-id="02210-119">게시할 프로젝트 또는 솔루션입니다.</span><span class="sxs-lookup"><span data-stu-id="02210-119">The project or solution to publish.</span></span>
+  
+  * <span data-ttu-id="02210-120">`PROJECT`는 [C#](csproj.md), F# 또는 Visual Basic 프로젝트 파일의 경로 및 파일 이름이거나 C#, F# 또는 Visual Basic 프로젝트 파일을 포함하는 디렉터리의 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="02210-120">`PROJECT` is the path and filename of a [C#](csproj.md), F#, or Visual Basic project file, or the path to a directory that contains a C#, F#, or Visual Basic project file.</span></span> <span data-ttu-id="02210-121">디렉터리를 지정하지 않으면 현재 디렉터리로 기본 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="02210-121">If the directory is not specified, it defaults to the current directory.</span></span>
 
-- <span data-ttu-id="b93a7-113">*dll* 확장과 함께 어셈블리의 IL(중간 언어) 코드</span><span class="sxs-lookup"><span data-stu-id="b93a7-113">Intermediate Language (IL) code in an assembly with a *dll* extension.</span></span>
-- <span data-ttu-id="b93a7-114">프로젝트의 종속성을 모두 포함하는 *.deps.json* 파일</span><span class="sxs-lookup"><span data-stu-id="b93a7-114">*.deps.json* file that includes all of the dependencies of the project.</span></span>
-- <span data-ttu-id="b93a7-115">런타임에 대한 기타 구성 옵션(예: 가비지 수집 유형)뿐만 아니라 애플리케이션에서 예상하는 공유 런타임을 지정하는 *.runtimeconfig.json* 파일</span><span class="sxs-lookup"><span data-stu-id="b93a7-115">*.runtimeconfig.json* file that specifies the shared runtime that the application expects, as well as other configuration options for the runtime (for example, garbage collection type).</span></span>
-- <span data-ttu-id="b93a7-116">애플리케이션의 종속성은 NuGet 캐시에서 출력 폴더로 복사됩니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-116">The application's dependencies, which are copied from the NuGet cache into the output folder.</span></span>
+  * <span data-ttu-id="02210-122">`SOLUTION`은 솔루션 파일 ( *.sln* 확장명)의 경로 및 파일 이름이거나 솔루션 파일을 포함하는 디렉터리의 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="02210-122">`SOLUTION` is the path and filename of a solution file (*.sln* extension), or the path to a directory that contains a solution file.</span></span> <span data-ttu-id="02210-123">디렉터리를 지정하지 않으면 현재 디렉터리로 기본 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="02210-123">If the directory is not specified, it defaults to the current directory.</span></span> <span data-ttu-id="02210-124">**.NET Core 3.0 SDK부터 사용 가능합니다.**</span><span class="sxs-lookup"><span data-stu-id="02210-124">**Available starting with .NET Core 3.0 SDK.**</span></span> 
 
-<span data-ttu-id="b93a7-117">`dotnet publish` 명령의 출력이 실행을 위해 호스팅 시스템(예: 서버, PC, Mac, 랩톱)에 배포할 준비가 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-117">The `dotnet publish` command's output is ready for deployment to a hosting system (for example, a server, PC, Mac, laptop) for execution.</span></span> <span data-ttu-id="b93a7-118">이는 배포를 위해 애플리케이션을 준비하는 데 공식적으로 지원되는 유일한 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-118">It's the only officially supported way to prepare the application for deployment.</span></span> <span data-ttu-id="b93a7-119">프로젝트에서 지정하는 배포 유형에 따라 호스팅 시스템에 .NET Core 공유 런타임이 설치되어 있을 수도 있고 그렇지 않을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-119">Depending on the type of deployment that the project specifies, the hosting system may or may not have the .NET Core shared runtime installed on it.</span></span> <span data-ttu-id="b93a7-120">자세한 내용은 [.NET Core 애플리케이션 배포](../deploying/index.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="b93a7-120">For more information, see [.NET Core Application Deployment](../deploying/index.md).</span></span> <span data-ttu-id="b93a7-121">게시된 애플리케이션의 디렉터리 구조에 대해서는 [디렉터리 구조](/aspnet/core/hosting/directory-structure)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="b93a7-121">For the directory structure of a published application, see [Directory structure](/aspnet/core/hosting/directory-structure).</span></span>
+## <a name="options"></a><span data-ttu-id="02210-125">옵션</span><span class="sxs-lookup"><span data-stu-id="02210-125">Options</span></span>
 
-[!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
+- **`-c|--configuration <CONFIGURATION>`**
 
-## <a name="arguments"></a><span data-ttu-id="b93a7-122">인수</span><span class="sxs-lookup"><span data-stu-id="b93a7-122">Arguments</span></span>
+  <span data-ttu-id="02210-126">빌드 구성을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="02210-126">Defines the build configuration.</span></span> <span data-ttu-id="02210-127">대부분의 프로젝트에 대한 기본값은 `Debug`이지만 프로젝트의 빌드 구성 설정을 재정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="02210-127">The default for most projects is `Debug`, but you can override the build configuration settings in your project.</span></span>
 
-`PROJECT`
+- **`-f|--framework <FRAMEWORK>`**
 
-<span data-ttu-id="b93a7-123">게시할 프로젝트입니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-123">The project to publish.</span></span> <span data-ttu-id="b93a7-124">[C#](csproj.md), F# 또는 Visual Basic 프로젝트 파일의 경로 및 파일 이름이거나 C#, F# 또는 Visual Basic 프로젝트 파일을 포함하는 디렉터리의 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-124">It's either the path and filename of a [C#](csproj.md), F#, or Visual Basic project file, or the path to a directory that contains a C#, F#, or Visual Basic project file.</span></span> <span data-ttu-id="b93a7-125">지정하지 않으면 현재 디렉터리로 기본 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-125">If not specified, it defaults to the current directory.</span></span>
+  <span data-ttu-id="02210-128">지정한 [대상 프레임워크](../../standard/frameworks.md)에 대한 애플리케이션을 게시합니다.</span><span class="sxs-lookup"><span data-stu-id="02210-128">Publishes the application for the specified [target framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="02210-129">프로젝트 파일에 대상 프레임워크를 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="02210-129">You must specify the target framework in the project file.</span></span>
 
-## <a name="options"></a><span data-ttu-id="b93a7-126">옵션</span><span class="sxs-lookup"><span data-stu-id="b93a7-126">Options</span></span>
+- **`--force`**
 
-# <a name="net-core-21"></a>[<span data-ttu-id="b93a7-127">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="b93a7-127">.NET Core 2.1</span></span>](#tab/netcore21)
+  <span data-ttu-id="02210-130">마지막 복원이 성공한 경우에도 모든 종속성을 강제 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="02210-130">Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="02210-131">이 플래그를 지정하는 것은 *project.assets.json* 파일을 삭제하는 것과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="02210-131">Specifying this flag is the same as deleting the *project.assets.json* file.</span></span>
 
-`-c|--configuration {Debug|Release}`
+- **`-h|--help`**
 
-<span data-ttu-id="b93a7-128">빌드 구성을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-128">Defines the build configuration.</span></span> <span data-ttu-id="b93a7-129">기본값은 `Debug`입니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-129">The default value is `Debug`.</span></span>
+  <span data-ttu-id="02210-132">명령에 대한 간단한 도움말을 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="02210-132">Prints out a short help for the command.</span></span>
 
-`-f|--framework <FRAMEWORK>`
+- <span data-ttu-id="02210-133">**`--interactive`** **.NET Core 3.0 SDK부터 사용 가능합니다.**</span><span class="sxs-lookup"><span data-stu-id="02210-133">**`--interactive`** **Available starting with .NET Core 3.0 SDK.**</span></span>
 
-<span data-ttu-id="b93a7-130">지정한 [대상 프레임워크](../../standard/frameworks.md)에 대한 애플리케이션을 게시합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-130">Publishes the application for the specified [target framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="b93a7-131">프로젝트 파일에 대상 프레임워크를 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-131">You must specify the target framework in the project file.</span></span>
+  <span data-ttu-id="02210-134">명령이 중지되고 사용자 입력 또는 작업을 대기할 수 있도록 허용합니다.</span><span class="sxs-lookup"><span data-stu-id="02210-134">Allows the command to stop and wait for user input or action.</span></span> <span data-ttu-id="02210-135">예를 들어 인증을 완료합니다.</span><span class="sxs-lookup"><span data-stu-id="02210-135">For example, to complete authentication.</span></span> 
 
-`--force`
+- **`--manifest <PATH_TO_MANIFEST_FILE>`**
 
-<span data-ttu-id="b93a7-132">마지막 복원이 성공한 경우에도 모든 종속성을 강제 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-132">Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="b93a7-133">이 플래그를 지정하는 것은 *project.assets.json* 파일을 삭제하는 것과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-133">Specifying this flag is the same as deleting the *project.assets.json* file.</span></span>
+  <span data-ttu-id="02210-136">앱을 통해 게시된 패키지 집합을 잘라내는 데 사용할 하나 이상의 [대상 매니페스트](../deploying/runtime-store.md)를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="02210-136">Specifies one or several [target manifests](../deploying/runtime-store.md) to use to trim the set of packages published with the app.</span></span> <span data-ttu-id="02210-137">매니페스트 파일은 [`dotnet store` 명령](dotnet-store.md) 출력의 일부입니다.</span><span class="sxs-lookup"><span data-stu-id="02210-137">The manifest file is part of the output of the [`dotnet store` command](dotnet-store.md).</span></span> <span data-ttu-id="02210-138">여러 매니페스트를 지정하려면 각 매니페스트에 대해 `--manifest` 옵션을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="02210-138">To specify multiple manifests, add a `--manifest` option for each manifest.</span></span>
 
-`-h|--help`
+- **`--no-build`**
 
-<span data-ttu-id="b93a7-134">명령에 대한 간단한 도움말을 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-134">Prints out a short help for the command.</span></span>
+  <span data-ttu-id="02210-139">게시하기 전에 프로젝트를 빌드하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="02210-139">Doesn't build the project before publishing.</span></span> <span data-ttu-id="02210-140">또한 암시적으로 `--no-restore` 플래그를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="02210-140">It also implicitly sets the `--no-restore` flag.</span></span>
 
-`--manifest <PATH_TO_MANIFEST_FILE>`
+- **`--no-dependencies`**
 
-<span data-ttu-id="b93a7-135">앱을 통해 게시된 패키지 집합을 잘라내는 데 사용할 하나 이상의 [대상 매니페스트](../deploying/runtime-store.md)를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-135">Specifies one or several [target manifests](../deploying/runtime-store.md) to use to trim the set of packages published with the app.</span></span> <span data-ttu-id="b93a7-136">매니페스트 파일은 [`dotnet store` 명령](dotnet-store.md) 출력의 일부입니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-136">The manifest file is part of the output of the [`dotnet store` command](dotnet-store.md).</span></span> <span data-ttu-id="b93a7-137">여러 매니페스트를 지정하려면 각 매니페스트에 대해 `--manifest` 옵션을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-137">To specify multiple manifests, add a `--manifest` option for each manifest.</span></span> <span data-ttu-id="b93a7-138">이 옵션은 .NET Core 2.0 SDK부터 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-138">This option is available starting with .NET Core 2.0 SDK.</span></span>
+  <span data-ttu-id="02210-141">프로젝트 간 참조를 무시하고 루트 프로젝트만 복원합니다.</span><span class="sxs-lookup"><span data-stu-id="02210-141">Ignores project-to-project references and only restores the root project.</span></span>
 
-`--no-build`
+- <span data-ttu-id="02210-142">**`--nologo`** **.NET Core 3.0 SDK부터 사용 가능합니다.**</span><span class="sxs-lookup"><span data-stu-id="02210-142">**`--nologo`** **Available starting with .NET Core 3.0 SDK.**</span></span>
 
-<span data-ttu-id="b93a7-139">게시하기 전에 프로젝트를 빌드하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-139">Doesn't build the project before publishing.</span></span> <span data-ttu-id="b93a7-140">또한 암시적으로 `--no-restore` 플래그를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-140">It also implicitly sets the `--no-restore` flag.</span></span>
+  <span data-ttu-id="02210-143">시작 배너 또는 저작권 메시지를 표시하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="02210-143">Doesn't display the startup banner or the copyright message.</span></span> 
 
-`--no-dependencies`
+- **`--no-restore`**
 
-<span data-ttu-id="b93a7-141">프로젝트 간 참조를 무시하고 루트 프로젝트만 복원합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-141">Ignores project-to-project references and only restores the root project.</span></span>
+  <span data-ttu-id="02210-144">명령을 실행할 때 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="02210-144">Doesn't execute an implicit restore when running the command.</span></span>
 
-`--no-restore`
+- **`-o|--output <OUTPUT_DIRECTORY>`**
 
-<span data-ttu-id="b93a7-142">명령을 실행할 때 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-142">Doesn't execute an implicit restore when running the command.</span></span>
+  <span data-ttu-id="02210-145">출력 디렉터리의 경로를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="02210-145">Specifies the path for the output directory.</span></span> <span data-ttu-id="02210-146">지정하지 않으면 런타임 종속 실행 파일과 플랫폼 간 이진 파일에 대해 *./bin/[configuration]/[framework]/publish/* 로 기본 설정되고</span><span class="sxs-lookup"><span data-stu-id="02210-146">If not specified, it defaults to *./bin/[configuration]/[framework]/publish/* for a runtime-dependent executable and cross-platform binaries.</span></span> <span data-ttu-id="02210-147">자체 포함 실행 파일에 대해 *./bin/[configuration]/[framework]/[runtime]/publish/* 로 기본 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="02210-147">It defaults to *./bin/[configuration]/[framework]/[runtime]/publish/* for a self-contained executable.</span></span>
 
-`-o|--output <OUTPUT_DIRECTORY>`
+  <span data-ttu-id="02210-148">상대 경로인 경우 생성된 출력 디렉터리는 현재 작업 디렉터리가 아닌 프로젝트 파일 위치에 상대적입니다.</span><span class="sxs-lookup"><span data-stu-id="02210-148">If the path is relative, the output directory generated is relative to the project file location, not to the current working directory.</span></span>
 
-<span data-ttu-id="b93a7-143">출력 디렉터리의 경로를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-143">Specifies the path for the output directory.</span></span> <span data-ttu-id="b93a7-144">지정하지 않으면 프레임워크 종속 배포의 경우 *./bin/[configuration]/[framework]/publish/* 로, 자체 포함 배포의 경우 *./bin/[configuration]/[framework]/[runtime]/publish/* 로 기본 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-144">If not specified, it defaults to *./bin/[configuration]/[framework]/publish/* for a framework-dependent deployment or *./bin/[configuration]/[framework]/[runtime]/publish/* for a self-contained deployment.</span></span>
-<span data-ttu-id="b93a7-145">상대 경로인 경우 생성된 출력 디렉터리는 현재 작업 디렉터리가 아닌 프로젝트 파일 위치에 상대적입니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-145">If the path is relative, the output directory generated is relative to the project file location, not to the current working directory.</span></span>
+- **`--self-contained [true|false]`**
 
-`--self-contained`
+  <span data-ttu-id="02210-149">대상 머신에 런타임을 설치할 필요가 없도록 애플리케이션을 통해 .NET Core 런타임을 게시합니다.</span><span class="sxs-lookup"><span data-stu-id="02210-149">Publishes the .NET Core runtime with your application so the runtime doesn't need to be installed on the target machine.</span></span> <span data-ttu-id="02210-150">런타임 식별자를 지정할 경우 기본값은 `true`입니다.</span><span class="sxs-lookup"><span data-stu-id="02210-150">Default is `true` if a runtime identifier is specified.</span></span> <span data-ttu-id="02210-151">자세한 내용은 [.NET Core application publishing](../deploying/index.md)(.NET Core 애플리케이션 게시) 및 [Publish .NET Core apps with the .NET Core CLI](../deploying/deploy-with-cli.md)(.NET Core CLI를 사용하여 .NET Core 앱 게시)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="02210-151">For more information, see [.NET Core application publishing](../deploying/index.md) and [Publish .NET Core apps with the .NET Core CLI](../deploying/deploy-with-cli.md).</span></span>
 
-<span data-ttu-id="b93a7-146">대상 컴퓨터에 런타임을 설치할 필요가 없도록 애플리케이션을 통해 .NET Core 런타임을 게시합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-146">Publishes the .NET Core runtime with your application so the runtime doesn't need to be installed on the target machine.</span></span> <span data-ttu-id="b93a7-147">런타임 식별자를 지정할 경우 기본값은 `true`입니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-147">If a runtime identifier is specified, its default value is `true`.</span></span> <span data-ttu-id="b93a7-148">다른 배포 형식에 대한 자세한 내용은 [.NET Core 애플리케이션 배포](../deploying/index.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="b93a7-148">For more information about the different deployment types, see [.NET Core application deployment](../deploying/index.md).</span></span>
+- <span data-ttu-id="02210-152">**`--no-self-contained`**  **.NET Core 3.0 SDK부터 사용 가능합니다.**</span><span class="sxs-lookup"><span data-stu-id="02210-152">**`--no-self-contained`**  **Available starting with .NET Core 3.0 SDK.**</span></span>
 
-`-r|--runtime <RUNTIME_IDENTIFIER>`
+  <span data-ttu-id="02210-153">`--self-contained false`과 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="02210-153">Equivalent to `--self-contained false`.</span></span>
 
-<span data-ttu-id="b93a7-149">지정된 런타임에 대한 애플리케이션을 게시합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-149">Publishes the application for a given runtime.</span></span> <span data-ttu-id="b93a7-150">[SCD(자체 포함 배포_](../deploying/index.md#publish-self-contained)를 만들 때 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-150">This is used when creating a [self-contained deployment (SCD)](../deploying/index.md#publish-self-contained).</span></span> <span data-ttu-id="b93a7-151">RID(런타임 식별자) 목록은 [RID 카탈로그](../rid-catalog.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="b93a7-151">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span> <span data-ttu-id="b93a7-152">기본값은 [FDD(프레임워크 종속 배포)](../deploying/index.md#publish-runtime-dependent)를 게시하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-152">Default is to publish a [framework-dependent deployment (FDD)](../deploying/index.md#publish-runtime-dependent).</span></span>
+- **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-`-v|--verbosity <LEVEL>`
+  <span data-ttu-id="02210-154">지정된 런타임에 대한 애플리케이션을 게시합니다.</span><span class="sxs-lookup"><span data-stu-id="02210-154">Publishes the application for a given runtime.</span></span> <span data-ttu-id="02210-155">RID(런타임 식별자) 목록은 [RID 카탈로그](../rid-catalog.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="02210-155">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span> <span data-ttu-id="02210-156">자세한 내용은 [.NET Core application publishing](../deploying/index.md)(.NET Core 애플리케이션 게시) 및 [Publish .NET Core apps with the .NET Core CLI](../deploying/deploy-with-cli.md)(.NET Core CLI를 사용하여 .NET Core 앱 게시)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="02210-156">For more information, see [.NET Core application publishing](../deploying/index.md) and [Publish .NET Core apps with the .NET Core CLI](../deploying/deploy-with-cli.md).</span></span>
 
-<span data-ttu-id="b93a7-153">명령의 세부 정보 표시 수준을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-153">Sets the verbosity level of the command.</span></span> <span data-ttu-id="b93a7-154">허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-154">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
+- **`-v|--verbosity <LEVEL>`**
 
-`--version-suffix <VERSION_SUFFIX>`
+  <span data-ttu-id="02210-157">명령의 세부 정보 표시 수준을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="02210-157">Sets the verbosity level of the command.</span></span> <span data-ttu-id="02210-158">허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다.</span><span class="sxs-lookup"><span data-stu-id="02210-158">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
 
-<span data-ttu-id="b93a7-155">프로젝트 파일의 버전 필드에서 별표(`*`)를 대신할 버전 접미사를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-155">Defines the version suffix to replace the asterisk (`*`) in the version field of the project file.</span></span>
+- **`--version-suffix <VERSION_SUFFIX>`**
 
-# <a name="net-core-20"></a>[<span data-ttu-id="b93a7-156">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="b93a7-156">.NET Core 2.0</span></span>](#tab/netcore20)
+  <span data-ttu-id="02210-159">프로젝트 파일의 버전 필드에서 별표(`*`)를 대신할 버전 접미사를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="02210-159">Defines the version suffix to replace the asterisk (`*`) in the version field of the project file.</span></span>
 
-`-c|--configuration {Debug|Release}`
+## <a name="examples"></a><span data-ttu-id="02210-160">예</span><span class="sxs-lookup"><span data-stu-id="02210-160">Examples</span></span>
 
-<span data-ttu-id="b93a7-157">빌드 구성을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-157">Defines the build configuration.</span></span> <span data-ttu-id="b93a7-158">기본값은 `Debug`입니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-158">The default value is `Debug`.</span></span>
+- <span data-ttu-id="02210-161">현재 디렉터리에 있는 프로젝트에 대해 [런타임 종속 플랫폼 간 이진 파일](../deploying/index.md#produce-a-cross-platform-binary)을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="02210-161">Create a [runtime-dependent cross-platform binary](../deploying/index.md#produce-a-cross-platform-binary) for the project in the current directory:</span></span>
 
-`-f|--framework <FRAMEWORK>`
+  ```dotnetcli
+  dotnet publish
+  ```
 
-<span data-ttu-id="b93a7-159">지정한 [대상 프레임워크](../../standard/frameworks.md)에 대한 애플리케이션을 게시합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-159">Publishes the application for the specified [target framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="b93a7-160">프로젝트 파일에 대상 프레임워크를 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-160">You must specify the target framework in the project file.</span></span>
+  <span data-ttu-id="02210-162">.NET Core 3.0 SDK부터, 이 예제는 현재 플랫폼에 대해 [런타임 종속 실행 파일](../deploying/index.md#publish-runtime-dependent)도 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="02210-162">Starting with .NET Core 3.0 SDK, this example also creates a [runtime-dependent executable](../deploying/index.md#publish-runtime-dependent) for the current platform.</span></span>
 
-`--force`
+- <span data-ttu-id="02210-163">현재 디렉터리에 있는 프로젝트에 대해 특정 런타임에 대한 [자체 포함 실행 파일](../deploying/index.md#publish-self-contained)을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="02210-163">Create a [self-contained executable](../deploying/index.md#publish-self-contained) for the project in the current directory, for a specific runtime:</span></span>
 
-<span data-ttu-id="b93a7-161">마지막 복원이 성공한 경우에도 모든 종속성을 강제 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-161">Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="b93a7-162">이 플래그를 지정하는 것은 *project.assets.json* 파일을 삭제하는 것과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-162">Specifying this flag is the same as deleting the *project.assets.json* file.</span></span>
+  ```dotnetcli
+  dotnet publish --runtime osx.10.11-x64
+  ```
 
-`-h|--help`
+  <span data-ttu-id="02210-164">RID가 프로젝트 파일 안에 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="02210-164">The RID must be in the project file.</span></span>
 
-<span data-ttu-id="b93a7-163">명령에 대한 간단한 도움말을 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-163">Prints out a short help for the command.</span></span>
+- <span data-ttu-id="02210-165">현재 디렉터리에 있는 프로젝트에 대해 특정 플랫폼에 대한 [런타임 종속 실행 파일](../deploying/index.md#publish-runtime-dependent)을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="02210-165">Create a [runtime-dependent executable](../deploying/index.md#publish-runtime-dependent) for the project in the current directory, for a specific platform:</span></span>
 
-`--manifest <PATH_TO_MANIFEST_FILE>`
+  ```dotnetcli
+  dotnet publish --runtime osx.10.11-x64 --self-contained false
+  ```
 
-<span data-ttu-id="b93a7-164">앱을 통해 게시된 패키지 집합을 잘라내는 데 사용할 하나 이상의 [대상 매니페스트](../deploying/runtime-store.md)를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-164">Specifies one or several [target manifests](../deploying/runtime-store.md) to use to trim the set of packages published with the app.</span></span> <span data-ttu-id="b93a7-165">매니페스트 파일은 [`dotnet store` 명령](dotnet-store.md) 출력의 일부입니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-165">The manifest file is part of the output of the [`dotnet store` command](dotnet-store.md).</span></span> <span data-ttu-id="b93a7-166">여러 매니페스트를 지정하려면 각 매니페스트에 대해 `--manifest` 옵션을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-166">To specify multiple manifests, add a `--manifest` option for each manifest.</span></span> <span data-ttu-id="b93a7-167">이 옵션은 .NET Core 2.0 SDK부터 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-167">This option is available starting with .NET Core 2.0 SDK.</span></span>
+  <span data-ttu-id="02210-166">RID가 프로젝트 파일 안에 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="02210-166">The RID must be in the project file.</span></span> <span data-ttu-id="02210-167">이 예제는 .NET Core 3.0 SDK 이상 버전에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="02210-167">This example applies to .NET Core 3.0 SDK and later versions.</span></span>
 
-`--no-dependencies`
+- <span data-ttu-id="02210-168">현재 디렉터리에 있는 프로젝트를 특정 런타임 및 대상 프레임워크에 대해 게시합니다.</span><span class="sxs-lookup"><span data-stu-id="02210-168">Publish the project in the current directory, for a specific runtime and target framework:</span></span>
 
-<span data-ttu-id="b93a7-168">프로젝트 간 참조를 무시하고 루트 프로젝트만 복원합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-168">Ignores project-to-project references and only restores the root project.</span></span>
+  ```dotnetcli
+  dotnet publish --framework netcoreapp3.1 --runtime osx.10.11-x64
+  ```
 
-`--no-restore`
+- <span data-ttu-id="02210-169">지정된 프로젝트 파일을 게시합니다.</span><span class="sxs-lookup"><span data-stu-id="02210-169">Publish the specified project file:</span></span>
 
-<span data-ttu-id="b93a7-169">명령을 실행할 때 암시적 복원을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-169">Doesn't execute an implicit restore when running the command.</span></span>
+  ```dotnetcli
+  dotnet publish ~/projects/app1/app1.csproj
+  ```
 
-`-o|--output <OUTPUT_DIRECTORY>`
+- <span data-ttu-id="02210-170">현재 애플리케이션을 게시하되 복원 작업 중에 프로젝트 간(P2P) 참조는 복원하지 않고 루트 프로젝트만 복원합니다.</span><span class="sxs-lookup"><span data-stu-id="02210-170">Publish the current application but don't restore project-to-project (P2P) references, just the root project during the restore operation:</span></span>
 
-<span data-ttu-id="b93a7-170">출력 디렉터리의 경로를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-170">Specifies the path for the output directory.</span></span> <span data-ttu-id="b93a7-171">지정하지 않으면 프레임워크 종속 배포의 경우 *./bin/[configuration]/[framework]/publish/* 로, 자체 포함 배포의 경우 *./bin/[configuration]/[framework]/[runtime]/publish/* 로 기본 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-171">If not specified, it defaults to *./bin/[configuration]/[framework]/publish/* for a framework-dependent deployment or *./bin/[configuration]/[framework]/[runtime]/publish/* for a self-contained deployment.</span></span>
-<span data-ttu-id="b93a7-172">상대 경로인 경우 생성된 출력 디렉터리는 현재 작업 디렉터리가 아닌 프로젝트 파일 위치에 상대적입니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-172">If the path is relative, the output directory generated is relative to the project file location, not to the current working directory.</span></span>
+  ```dotnetcli
+  dotnet publish --no-dependencies
+  ```
 
-`--self-contained`
+## <a name="see-also"></a><span data-ttu-id="02210-171">참조</span><span class="sxs-lookup"><span data-stu-id="02210-171">See also</span></span>
 
-<span data-ttu-id="b93a7-173">대상 컴퓨터에 런타임을 설치할 필요가 없도록 애플리케이션을 통해 .NET Core 런타임을 게시합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-173">Publishes the .NET Core runtime with your application so the runtime doesn't need to be installed on the target machine.</span></span> <span data-ttu-id="b93a7-174">런타임 식별자를 지정할 경우 기본값은 `true`입니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-174">If a runtime identifier is specified, its default value is `true`.</span></span> <span data-ttu-id="b93a7-175">다른 배포 형식에 대한 자세한 내용은 [.NET Core 애플리케이션 배포](../deploying/index.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="b93a7-175">For more information about the different deployment types, see [.NET Core application deployment](../deploying/index.md).</span></span>
-
-`-r|--runtime <RUNTIME_IDENTIFIER>`
-
-<span data-ttu-id="b93a7-176">지정된 런타임에 대한 애플리케이션을 게시합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-176">Publishes the application for a given runtime.</span></span> <span data-ttu-id="b93a7-177">[SCD(자체 포함 배포_](../deploying/index.md#publish-self-contained)를 만들 때 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-177">This is used when creating a [self-contained deployment (SCD)](../deploying/index.md#publish-self-contained).</span></span> <span data-ttu-id="b93a7-178">RID(런타임 식별자) 목록은 [RID 카탈로그](../rid-catalog.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="b93a7-178">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span> <span data-ttu-id="b93a7-179">기본값은 [FDD(프레임워크 종속 배포)](../deploying/index.md#publish-runtime-dependent)를 게시하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-179">Default is to publish a [framework-dependent deployment (FDD)](../deploying/index.md#publish-runtime-dependent).</span></span>
-
-`-v|--verbosity <LEVEL>`
-
-<span data-ttu-id="b93a7-180">명령의 세부 정보 표시 수준을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-180">Sets the verbosity level of the command.</span></span> <span data-ttu-id="b93a7-181">허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-181">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
-
-`--version-suffix <VERSION_SUFFIX>`
-
-<span data-ttu-id="b93a7-182">프로젝트 파일의 버전 필드에서 별표(`*`)를 대신할 버전 접미사를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-182">Defines the version suffix to replace the asterisk (`*`) in the version field of the project file.</span></span>
-
-# <a name="net-core-1x"></a>[<span data-ttu-id="b93a7-183">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="b93a7-183">.NET Core 1.x</span></span>](#tab/netcore1x)
-
-`-c|--configuration {Debug|Release}`
-
-<span data-ttu-id="b93a7-184">빌드 구성을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-184">Defines the build configuration.</span></span> <span data-ttu-id="b93a7-185">기본값은 `Debug`입니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-185">The default value is `Debug`.</span></span>
-
-`-f|--framework <FRAMEWORK>`
-
-<span data-ttu-id="b93a7-186">지정한 [대상 프레임워크](../../standard/frameworks.md)에 대한 애플리케이션을 게시합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-186">Publishes the application for the specified [target framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="b93a7-187">프로젝트 파일에 대상 프레임워크를 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-187">You must specify the target framework in the project file.</span></span>
-
-`-h|--help`
-
-<span data-ttu-id="b93a7-188">명령에 대한 간단한 도움말을 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-188">Prints out a short help for the command.</span></span>
-
-`--manifest <PATH_TO_MANIFEST_FILE>`
-
-<span data-ttu-id="b93a7-189">앱을 통해 게시된 패키지 집합을 잘라내는 데 사용할 하나 이상의 [대상 매니페스트](../deploying/runtime-store.md)를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-189">Specifies one or several [target manifests](../deploying/runtime-store.md) to use to trim the set of packages published with the app.</span></span> <span data-ttu-id="b93a7-190">매니페스트 파일은 [`dotnet store` 명령](dotnet-store.md) 출력의 일부입니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-190">The manifest file is part of the output of the [`dotnet store` command](dotnet-store.md).</span></span> <span data-ttu-id="b93a7-191">여러 매니페스트를 지정하려면 각 매니페스트에 대해 `--manifest` 옵션을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-191">To specify multiple manifests, add a `--manifest` option for each manifest.</span></span> <span data-ttu-id="b93a7-192">이 옵션은 .NET Core 2.0 SDK부터 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-192">This option is available starting with .NET Core 2.0 SDK.</span></span>
-
-`-o|--output <OUTPUT_DIRECTORY>`
-
-<span data-ttu-id="b93a7-193">출력 디렉터리의 경로를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-193">Specifies the path for the output directory.</span></span> <span data-ttu-id="b93a7-194">지정하지 않으면 프레임워크 종속 배포의 경우 *./bin/[configuration]/[framework]/publish/* 로, 자체 포함 배포의 경우 *./bin/[configuration]/[framework]/[runtime]/publish/* 로 기본 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-194">If not specified, it defaults to *./bin/[configuration]/[framework]/publish/* for a framework-dependent deployment or *./bin/[configuration]/[framework]/[runtime]/publish/* for a self-contained deployment.</span></span>
-<span data-ttu-id="b93a7-195">상대 경로인 경우 생성된 출력 디렉터리는 현재 작업 디렉터리가 아닌 프로젝트 파일 위치에 상대적입니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-195">If the path is relative, the output directory generated is relative to the project file location, not to the current working directory.</span></span>
-
-`-r|--runtime <RUNTIME_IDENTIFIER>`
-
-<span data-ttu-id="b93a7-196">지정된 런타임에 대한 애플리케이션을 게시합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-196">Publishes the application for a given runtime.</span></span> <span data-ttu-id="b93a7-197">[SCD(자체 포함 배포_](../deploying/index.md#publish-self-contained)를 만들 때 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-197">This is used when creating a [self-contained deployment (SCD)](../deploying/index.md#publish-self-contained).</span></span> <span data-ttu-id="b93a7-198">RID(런타임 식별자) 목록은 [RID 카탈로그](../rid-catalog.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="b93a7-198">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span> <span data-ttu-id="b93a7-199">기본값은 [FDD(프레임워크 종속 배포)](../deploying/index.md#publish-runtime-dependent)를 게시하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-199">Default is to publish a [framework-dependent deployment (FDD)](../deploying/index.md#publish-runtime-dependent).</span></span>
-
-`-v|--verbosity <LEVEL>`
-
-<span data-ttu-id="b93a7-200">명령의 세부 정보 표시 수준을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-200">Sets the verbosity level of the command.</span></span> <span data-ttu-id="b93a7-201">허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-201">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
-
-`--version-suffix <VERSION_SUFFIX>`
-
-<span data-ttu-id="b93a7-202">프로젝트 파일의 버전 필드에서 별표(`*`)를 대신할 버전 접미사를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-202">Defines the version suffix to replace the asterisk (`*`) in the version field of the project file.</span></span>
-
----
-
-## <a name="examples"></a><span data-ttu-id="b93a7-203">예</span><span class="sxs-lookup"><span data-stu-id="b93a7-203">Examples</span></span>
-
-<span data-ttu-id="b93a7-204">현재 디렉터리에 있는 프로젝트를 게시합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-204">Publish the project in the current directory:</span></span>
-
-`dotnet publish`
-
-<span data-ttu-id="b93a7-205">지정된 프로젝트 파일을 사용하여 애플리케이션을 게시합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-205">Publish the application using the specified project file:</span></span>
-
-`dotnet publish ~/projects/app1/app1.csproj`
-
-<span data-ttu-id="b93a7-206">`netcoreapp1.1` 프레임워크를 사용하여 현재 디렉터리에 있는 프로젝트를 게시합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-206">Publish the project in the current directory using the `netcoreapp1.1` framework:</span></span>
-
-`dotnet publish --framework netcoreapp1.1`
-
-<span data-ttu-id="b93a7-207">`netcoreapp1.1` 프레임워크 및 `OS X 10.10`에 대한 런타임을 사용하여 현재 애플리케이션을 게시합니다. 프로젝트 파일에서 이 RID를 나열해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b93a7-207">Publish the current application using the `netcoreapp1.1` framework and the runtime for `OS X 10.10` (you must list this RID in the project file).</span></span>
-
-`dotnet publish --framework netcoreapp1.1 --runtime osx.10.11-x64`
-
-<span data-ttu-id="b93a7-208">현재 애플리케이션을 게시하지만 프로젝트 간(P2P) 참조를 복원하지 않습니다. 복원 작업 중 루트 프로젝트만 복원합니다(.NET Core SDK 2.0 이상 버전).</span><span class="sxs-lookup"><span data-stu-id="b93a7-208">Publish the current application but don't restore project-to-project (P2P) references, just the root project during the restore operation (.NET Core SDK 2.0 and later versions):</span></span>
-
-`dotnet publish --no-dependencies`
-
-## <a name="see-also"></a><span data-ttu-id="b93a7-209">참조</span><span class="sxs-lookup"><span data-stu-id="b93a7-209">See also</span></span>
-
-- [<span data-ttu-id="b93a7-210">대상 프레임워크</span><span class="sxs-lookup"><span data-stu-id="b93a7-210">Target frameworks</span></span>](../../standard/frameworks.md)
-- [<span data-ttu-id="b93a7-211">RID(런타임 식별자) 카탈로그</span><span class="sxs-lookup"><span data-stu-id="b93a7-211">Runtime IDentifier (RID) catalog</span></span>](../rid-catalog.md)
+- <span data-ttu-id="02210-172">[.NET Core application publishing overview](../deploying/index.md)(.NET Core 애플리케이션 게시 개요)</span><span class="sxs-lookup"><span data-stu-id="02210-172">[.NET Core application publishing overview](../deploying/index.md)</span></span>
+- [<span data-ttu-id="02210-173">.NET Core CLI를 사용하여 .NET Core 앱 게시</span><span class="sxs-lookup"><span data-stu-id="02210-173">Publish .NET Core apps with the .NET Core CLI</span></span>](../deploying/deploy-with-cli.md)
+- [<span data-ttu-id="02210-174">대상 프레임워크</span><span class="sxs-lookup"><span data-stu-id="02210-174">Target frameworks</span></span>](../../standard/frameworks.md)
+- [<span data-ttu-id="02210-175">RID(런타임 식별자) 카탈로그</span><span class="sxs-lookup"><span data-stu-id="02210-175">Runtime IDentifier (RID) catalog</span></span>](../rid-catalog.md)
+- <span data-ttu-id="02210-176">[macOS Catalina 공증 관련 사항](../install/macos-notarization-issues.md) 자세한 내용은 다음 리소스를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="02210-176">[Working with macOS Catalina Notarization](../install/macos-notarization-issues.md) For more information, see he following resources:</span></span>
+- <span data-ttu-id="02210-177">[Directory structure of a published application](/aspnet/core/hosting/directory-structure)(게시된 애플리케이션의 디렉터리 구조)</span><span class="sxs-lookup"><span data-stu-id="02210-177">[Directory structure of a published application](/aspnet/core/hosting/directory-structure)</span></span>

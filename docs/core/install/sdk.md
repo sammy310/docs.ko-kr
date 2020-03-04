@@ -6,49 +6,62 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 4a6c8b27812e9f60e52132169dda0464c24abcc2
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 0aa323533dd9136372c2bbc330c9c3056fdf428c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740571"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157573"
 ---
-# <a name="install-the-net-core-sdk"></a><span data-ttu-id="2f85f-104">.NET Core SDK 설치</span><span class="sxs-lookup"><span data-stu-id="2f85f-104">Install the .NET Core SDK</span></span>
+# <a name="install-the-net-core-sdk"></a><span data-ttu-id="cb5ce-104">.NET Core SDK 설치</span><span class="sxs-lookup"><span data-stu-id="cb5ce-104">Install the .NET Core SDK</span></span>
 
-<span data-ttu-id="2f85f-105">이 문서에서는 .NET Core SDK를 설치하는 방법을 알아봅니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-105">In this article, you'll learn how to install the .NET Core SDK.</span></span> <span data-ttu-id="2f85f-106">.NET Core SDK는 .NET Core 앱과 라이브러리를 만드는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-106">The .NET Core SDK is used to create .NET Core apps and libraries.</span></span> <span data-ttu-id="2f85f-107">.NET Core 런타임은 항상 SDK와 함께 설치됩니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-107">The .NET Core runtime is always installed with the SDK.</span></span>
+<span data-ttu-id="cb5ce-105">이 문서에서는 .NET Core SDK를 설치하는 방법을 알아봅니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-105">In this article, you'll learn how to install the .NET Core SDK.</span></span> <span data-ttu-id="cb5ce-106">.NET Core SDK는 .NET Core 앱과 라이브러리를 만드는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-106">The .NET Core SDK is used to create .NET Core apps and libraries.</span></span> <span data-ttu-id="cb5ce-107">.NET Core 런타임은 항상 SDK와 함께 설치됩니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-107">The .NET Core runtime is always installed with the SDK.</span></span>
 
 ::: zone pivot="os-windows"
 
-## <a name="install-with-an-installer"></a><span data-ttu-id="2f85f-108">설치 프로그램을 사용하여 설치</span><span class="sxs-lookup"><span data-stu-id="2f85f-108">Install with an installer</span></span>
+## <a name="install-with-an-installer"></a><span data-ttu-id="cb5ce-108">설치 프로그램을 사용하여 설치</span><span class="sxs-lookup"><span data-stu-id="cb5ce-108">Install with an installer</span></span>
 
-<span data-ttu-id="2f85f-109">Windows에는 .NET Core 3.1 SDK를 설치하는 데 사용할 수 있는 독립 실행형 설치 프로그램이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-109">Windows has standalone installers that can be used to install the .NET Core 3.1 SDK:</span></span>
+<span data-ttu-id="cb5ce-109">Windows에는 .NET Core 3.1 SDK를 설치하는 데 사용할 수 있는 독립 실행형 설치 프로그램이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-109">Windows has standalone installers that can be used to install the .NET Core 3.1 SDK:</span></span>
 
-- [<span data-ttu-id="2f85f-110">x64(64비트) CPU</span><span class="sxs-lookup"><span data-stu-id="2f85f-110">x64 (64-bit) CPUs</span></span>](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-- [<span data-ttu-id="2f85f-111">x86(32비트) CPU</span><span class="sxs-lookup"><span data-stu-id="2f85f-111">x86 (32-bit) CPUs</span></span>](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [<span data-ttu-id="cb5ce-110">x64(64비트) CPU</span><span class="sxs-lookup"><span data-stu-id="cb5ce-110">x64 (64-bit) CPUs</span></span>](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [<span data-ttu-id="cb5ce-111">x86(32비트) CPU</span><span class="sxs-lookup"><span data-stu-id="cb5ce-111">x86 (32-bit) CPUs</span></span>](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
 ::: zone-end
 
 ::: zone pivot="os-macos"
 
-## <a name="install-with-an-installer"></a><span data-ttu-id="2f85f-112">설치 프로그램을 사용하여 설치</span><span class="sxs-lookup"><span data-stu-id="2f85f-112">Install with an installer</span></span>
+## <a name="install-with-an-installer"></a><span data-ttu-id="cb5ce-112">설치 프로그램을 사용하여 설치</span><span class="sxs-lookup"><span data-stu-id="cb5ce-112">Install with an installer</span></span>
 
-<span data-ttu-id="2f85f-113">macOS에는 .NET Core 3.1 SDK를 설치하는 데 사용할 수 있는 독립 실행형 설치 프로그램이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-113">macOS has standalone installers that can be used to install the .NET Core 3.1 SDK:</span></span>
+<span data-ttu-id="cb5ce-113">macOS에는 .NET Core 3.1 SDK를 설치하는 데 사용할 수 있는 독립 실행형 설치 프로그램이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-113">macOS has standalone installers that can be used to install the .NET Core 3.1 SDK:</span></span>
 
-- [<span data-ttu-id="2f85f-114">x64(64비트) CPU</span><span class="sxs-lookup"><span data-stu-id="2f85f-114">x64 (64-bit) CPUs</span></span>](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [<span data-ttu-id="cb5ce-114">x64(64비트) CPU</span><span class="sxs-lookup"><span data-stu-id="cb5ce-114">x64 (64-bit) CPUs</span></span>](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+
+## <a name="download-and-manually-install"></a><span data-ttu-id="cb5ce-115">다운로드 및 수동으로 설치</span><span class="sxs-lookup"><span data-stu-id="cb5ce-115">Download and manually install</span></span>
+
+<span data-ttu-id="cb5ce-116">.NET Core용 macOS 설치 프로그램의 대안으로, SDK를 다운로드하여 수동으로 설치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-116">As an alternative to the macOS installers for .NET Core, you can download and manually install the SDK.</span></span>
+
+<span data-ttu-id="cb5ce-117">SDK를 추출하고 터미널에서 .NET Core CLI 명령을 사용할 수 있으려면 먼저 .NET Core 이진 릴리스를 [다운로드](#all-net-core-downloads)합니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-117">To extract the SDK and make the .NET Core CLI commands available at the terminal, first [download](#all-net-core-downloads) a .NET Core binary release.</span></span> <span data-ttu-id="cb5ce-118">그런 다음 터미널을 열고 다음 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-118">Then, open a terminal and run the following commands.</span></span> <span data-ttu-id="cb5ce-119">런타임이 `~/Downloads/dotnet-sdk.pkg` 파일로 다운로드되었다고 가정합니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-119">It's assumed the runtime is downloaded to the `~/Downloads/dotnet-sdk.pkg` file.</span></span>
+
+```bash
+mkdir -p $HOME/dotnet
+sudo installer -pkg ~/Downloads/dotnet-sdk.pkg -target $HOME/dotnet
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=$PATH:$HOME/dotnet
+```
 
 ::: zone-end
 
 ::: zone pivot="os-linux"
 
-## <a name="install-with-a-package-manager"></a><span data-ttu-id="2f85f-115">패키지 관리자를 사용하여 설치</span><span class="sxs-lookup"><span data-stu-id="2f85f-115">Install with a package manager</span></span>
+## <a name="install-with-a-package-manager"></a><span data-ttu-id="cb5ce-120">패키지 관리자를 사용하여 설치</span><span class="sxs-lookup"><span data-stu-id="cb5ce-120">Install with a package manager</span></span>
 
-<span data-ttu-id="2f85f-116">널리 사용되는 여러 Linux 패키지 관리자를 사용하여 .NET Core SDK를 설치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-116">You can install the .NET Core SDK with many of the common Linux package managers.</span></span> <span data-ttu-id="2f85f-117">자세한 내용은 [Linux 패키지 관리자 - .NET Core 설치](linux-package-managers.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="2f85f-117">For more information, see [Linux Package Manager - Install .NET Core](linux-package-managers.md).</span></span>
+<span data-ttu-id="cb5ce-121">널리 사용되는 여러 Linux 패키지 관리자를 사용하여 .NET Core SDK를 설치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-121">You can install the .NET Core SDK with many of the common Linux package managers.</span></span> <span data-ttu-id="cb5ce-122">자세한 내용은 [Linux 패키지 관리자 - .NET Core 설치](linux-package-managers.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-122">For more information, see [Linux Package Manager - Install .NET Core](linux-package-managers.md).</span></span>
 
-<span data-ttu-id="2f85f-118">패키지 관리자를 사용한 설치는 x64 아키텍처에서만 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-118">Installing with a package manager is only supported on the x64 architecture.</span></span> <span data-ttu-id="2f85f-119">ARM과 같은 다른 아키텍처를 사용하여 .NET Core SDK를 설치하는 경우 아래 지침을 [다운로드하고 수동으로 설치](#download-and-manually-install)합니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-119">If you're installing the .NET Core SDK with a different architecture, such as ARM, follow the [Download and manually install](#download-and-manually-install) instructions below.</span></span> <span data-ttu-id="2f85f-120">지원되는 아키텍처에 대한 자세한 내용은 [.NET Core 종속성 및 요구 사항](dependencies.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="2f85f-120">For more information about what architectures are supported, see [.NET Core dependencies and requirements](dependencies.md).</span></span>
+<span data-ttu-id="cb5ce-123">패키지 관리자를 사용한 설치는 x64 아키텍처에서만 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-123">Installing with a package manager is only supported on the x64 architecture.</span></span> <span data-ttu-id="cb5ce-124">ARM과 같은 다른 아키텍처를 사용하여 .NET Core SDK를 설치하는 경우 아래 지침을 [다운로드하고 수동으로 설치](#download-and-manually-install)합니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-124">If you're installing the .NET Core SDK with a different architecture, such as ARM, follow the [Download and manually install](#download-and-manually-install) instructions below.</span></span> <span data-ttu-id="cb5ce-125">지원되는 아키텍처에 대한 자세한 내용은 [.NET Core 종속성 및 요구 사항](dependencies.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-125">For more information about what architectures are supported, see [.NET Core dependencies and requirements](dependencies.md).</span></span>
 
-## <a name="download-and-manually-install"></a><span data-ttu-id="2f85f-121">다운로드 및 수동으로 설치</span><span class="sxs-lookup"><span data-stu-id="2f85f-121">Download and manually install</span></span>
+## <a name="download-and-manually-install"></a><span data-ttu-id="cb5ce-126">다운로드 및 수동으로 설치</span><span class="sxs-lookup"><span data-stu-id="cb5ce-126">Download and manually install</span></span>
 
-<span data-ttu-id="2f85f-122">SDK를 추출하고 터미널에서 .NET Core CLI 명령을 사용할 수 있으려면 먼저 .NET Core 이진 릴리스를 [다운로드](#all-net-core-downloads)합니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-122">To extract the SDK and make the .NET Core CLI commands available at the terminal, first [download](#all-net-core-downloads) a .NET Core binary release.</span></span> <span data-ttu-id="2f85f-123">그런 다음 터미널을 열고 다음 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-123">Then, open a terminal and run the following commands.</span></span>
+<span data-ttu-id="cb5ce-127">SDK를 추출하고 터미널에서 .NET Core CLI 명령을 사용할 수 있으려면 먼저 .NET Core 이진 릴리스를 [다운로드](#all-net-core-downloads)합니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-127">To extract the SDK and make the .NET Core CLI commands available at the terminal, first [download](#all-net-core-downloads) a .NET Core binary release.</span></span> <span data-ttu-id="cb5ce-128">그런 다음 터미널을 열고 다음 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-128">Then, open a terminal and run the following commands.</span></span>
 
 ```bash
 mkdir -p $HOME/dotnet && tar zxf dotnet-sdk-3.1.100-linux-x64.tar.gz -C $HOME/dotnet
@@ -57,83 +70,102 @@ export PATH=$PATH:$HOME/dotnet
 ```
 
 > [!TIP]
-> <span data-ttu-id="2f85f-124">이전 `export` 명령은 명령이 실행된 터미널 세션에서만 .NET Core CLI 명령을 사용할 수 있도록 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-124">The preceding `export` commands only make the .NET Core CLI commands available for the terminal session in which it was run.</span></span>
+> <span data-ttu-id="cb5ce-129">이전 `export` 명령은 명령이 실행된 터미널 세션에서만 .NET Core CLI 명령을 사용할 수 있도록 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-129">The preceding `export` commands only make the .NET Core CLI commands available for the terminal session in which it was run.</span></span>
 >
-> <span data-ttu-id="2f85f-125">셸 프로필을 편집하여 명령을 영구적으로 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-125">You can edit your shell profile to permanently add the commands.</span></span> <span data-ttu-id="2f85f-126">몇 가지 Linux용 셸이 있으며, 각각 다른 프로필을 갖습니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-126">There are a number of different shells available for Linux and each has a different profile.</span></span> <span data-ttu-id="2f85f-127">예:</span><span class="sxs-lookup"><span data-stu-id="2f85f-127">For example:</span></span>
+> <span data-ttu-id="cb5ce-130">셸 프로필을 편집하여 명령을 영구적으로 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-130">You can edit your shell profile to permanently add the commands.</span></span> <span data-ttu-id="cb5ce-131">몇 가지 Linux용 셸이 있으며, 각각 다른 프로필을 갖습니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-131">There are a number of different shells available for Linux and each has a different profile.</span></span> <span data-ttu-id="cb5ce-132">예를 들어:</span><span class="sxs-lookup"><span data-stu-id="cb5ce-132">For example:</span></span>
 >
-> - <span data-ttu-id="2f85f-128">**Bash 셸**: *~/.bash_profile*, *~/.bashrc*</span><span class="sxs-lookup"><span data-stu-id="2f85f-128">**Bash Shell**: *~/.bash_profile*, *~/.bashrc*</span></span>
-> - <span data-ttu-id="2f85f-129">**Korn 셸**: *~/.kshrc* 또는 *.profile*</span><span class="sxs-lookup"><span data-stu-id="2f85f-129">**Korn Shell**: *~/.kshrc* or *.profile*</span></span>
-> - <span data-ttu-id="2f85f-130">**Z 셸**: *~/.zshrc* 또는 *.zprofile*</span><span class="sxs-lookup"><span data-stu-id="2f85f-130">**Z Shell**: *~/.zshrc* or *.zprofile*</span></span>
+> - <span data-ttu-id="cb5ce-133">**Bash 셸**: *~/.bash_profile*, *~/.bashrc*</span><span class="sxs-lookup"><span data-stu-id="cb5ce-133">**Bash Shell**: *~/.bash_profile*, *~/.bashrc*</span></span>
+> - <span data-ttu-id="cb5ce-134">**Korn 셸**: *~/.kshrc* 또는 *.profile*</span><span class="sxs-lookup"><span data-stu-id="cb5ce-134">**Korn Shell**: *~/.kshrc* or *.profile*</span></span>
+> - <span data-ttu-id="cb5ce-135">**Z 셸**: *~/.zshrc* 또는 *.zprofile*</span><span class="sxs-lookup"><span data-stu-id="cb5ce-135">**Z Shell**: *~/.zshrc* or *.zprofile*</span></span>
 >
-> <span data-ttu-id="2f85f-131">셸의 적절한 소스 파일을 편집하고 기존 `PATH` 문의 끝에 `:$HOME/dotnet`을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-131">Edit the appropriate source file for your shell and add `:$HOME/dotnet` to the end of the existing `PATH` statement.</span></span> <span data-ttu-id="2f85f-132">포함된 `PATH` 문이 없다면 `export PATH=$PATH:$HOME/dotnet`을 사용하여 새 라인을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-132">If no `PATH` statement is included, add a new line with `export PATH=$PATH:$HOME/dotnet`.</span></span>
+> <span data-ttu-id="cb5ce-136">셸의 적절한 소스 파일을 편집하고 기존 `PATH` 문의 끝에 `:$HOME/dotnet`을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-136">Edit the appropriate source file for your shell and add `:$HOME/dotnet` to the end of the existing `PATH` statement.</span></span> <span data-ttu-id="cb5ce-137">포함된 `PATH` 문이 없다면 `export PATH=$PATH:$HOME/dotnet`을 사용하여 새 라인을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-137">If no `PATH` statement is included, add a new line with `export PATH=$PATH:$HOME/dotnet`.</span></span>
 >
-> <span data-ttu-id="2f85f-133">또한, 파일 끝에 `export DOTNET_ROOT=$HOME/dotnet`을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-133">Also, add `export DOTNET_ROOT=$HOME/dotnet` to the end of the file.</span></span>
+> <span data-ttu-id="cb5ce-138">또한, 파일 끝에 `export DOTNET_ROOT=$HOME/dotnet`을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-138">Also, add `export DOTNET_ROOT=$HOME/dotnet` to the end of the file.</span></span>
 
 ::: zone-end
 
 ::: zone pivot="os-windows"
 
-## <a name="install-with-visual-studio"></a><span data-ttu-id="2f85f-134">Visual Studio를 사용하여 설치</span><span class="sxs-lookup"><span data-stu-id="2f85f-134">Install with Visual Studio</span></span>
+## <a name="install-with-visual-studio"></a><span data-ttu-id="cb5ce-139">Visual Studio를 사용하여 설치</span><span class="sxs-lookup"><span data-stu-id="cb5ce-139">Install with Visual Studio</span></span>
 
-<span data-ttu-id="2f85f-135">Visual Studio를 사용하여 .NET Core 앱을 개발하는 경우, 다음 표에서 대상 .NET Core SDK 버전에 따라 필요한 Visual Studio의 최소 버전을 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="2f85f-135">If you're using Visual Studio to develop .NET Core apps, the following table describes the minimum required version of Visual Studio based on the target .NET Core SDK version.</span></span>
+<span data-ttu-id="cb5ce-140">Visual Studio를 사용하여 .NET Core 앱을 개발하는 경우, 다음 표에서 대상 .NET Core SDK 버전에 따라 필요한 Visual Studio의 최소 버전을 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-140">If you're using Visual Studio to develop .NET Core apps, the following table describes the minimum required version of Visual Studio based on the target .NET Core SDK version.</span></span>
 
-| <span data-ttu-id="2f85f-136">.NET Core SDK 버전</span><span class="sxs-lookup"><span data-stu-id="2f85f-136">.NET Core SDK version</span></span> | <span data-ttu-id="2f85f-137">Visual Studio 버전</span><span class="sxs-lookup"><span data-stu-id="2f85f-137">Visual Studio version</span></span>                      |
+| <span data-ttu-id="cb5ce-141">.NET Core SDK 버전</span><span class="sxs-lookup"><span data-stu-id="cb5ce-141">.NET Core SDK version</span></span> | <span data-ttu-id="cb5ce-142">Visual Studio 버전</span><span class="sxs-lookup"><span data-stu-id="cb5ce-142">Visual Studio version</span></span>                      |
 | --------------------- | ------------------------------------------ |
-| <span data-ttu-id="2f85f-138">3.1</span><span class="sxs-lookup"><span data-stu-id="2f85f-138">3.1</span></span>                   | <span data-ttu-id="2f85f-139">Visual Studio 2019 버전 16.4 이상</span><span class="sxs-lookup"><span data-stu-id="2f85f-139">Visual Studio 2019 version 16.4 or higher.</span></span> |
-| <span data-ttu-id="2f85f-140">3.0</span><span class="sxs-lookup"><span data-stu-id="2f85f-140">3.0</span></span>                   | <span data-ttu-id="2f85f-141">Visual Studio 2019 버전 16.3 이상</span><span class="sxs-lookup"><span data-stu-id="2f85f-141">Visual Studio 2019 version 16.3 or higher.</span></span> |
-| <span data-ttu-id="2f85f-142">2.2</span><span class="sxs-lookup"><span data-stu-id="2f85f-142">2.2</span></span>                   | <span data-ttu-id="2f85f-143">Visual Studio 2017 버전 15.9 이상</span><span class="sxs-lookup"><span data-stu-id="2f85f-143">Visual Studio 2017 version 15.9 or higher.</span></span> |
-| <span data-ttu-id="2f85f-144">2.1</span><span class="sxs-lookup"><span data-stu-id="2f85f-144">2.1</span></span>                   | <span data-ttu-id="2f85f-145">Visual Studio 2017 버전 15.7 이상</span><span class="sxs-lookup"><span data-stu-id="2f85f-145">Visual Studio 2017 version 15.7 or higher.</span></span> |
+| <span data-ttu-id="cb5ce-143">3.1</span><span class="sxs-lookup"><span data-stu-id="cb5ce-143">3.1</span></span>                   | <span data-ttu-id="cb5ce-144">Visual Studio 2019 버전 16.4 이상</span><span class="sxs-lookup"><span data-stu-id="cb5ce-144">Visual Studio 2019 version 16.4 or higher.</span></span> |
+| <span data-ttu-id="cb5ce-145">3.0</span><span class="sxs-lookup"><span data-stu-id="cb5ce-145">3.0</span></span>                   | <span data-ttu-id="cb5ce-146">Visual Studio 2019 버전 16.3 이상</span><span class="sxs-lookup"><span data-stu-id="cb5ce-146">Visual Studio 2019 version 16.3 or higher.</span></span> |
+| <span data-ttu-id="cb5ce-147">2.2</span><span class="sxs-lookup"><span data-stu-id="cb5ce-147">2.2</span></span>                   | <span data-ttu-id="cb5ce-148">Visual Studio 2017 버전 15.9 이상</span><span class="sxs-lookup"><span data-stu-id="cb5ce-148">Visual Studio 2017 version 15.9 or higher.</span></span> |
+| <span data-ttu-id="cb5ce-149">2.1</span><span class="sxs-lookup"><span data-stu-id="cb5ce-149">2.1</span></span>                   | <span data-ttu-id="cb5ce-150">Visual Studio 2017 버전 15.7 이상</span><span class="sxs-lookup"><span data-stu-id="cb5ce-150">Visual Studio 2017 version 15.7 or higher.</span></span> |
 
-<span data-ttu-id="2f85f-146">Visual Studio가 이미 설치되어 있다면 다음 단계에 따라 버전을 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-146">If you already have Visual Studio installed, you can check your version with the following steps.</span></span>
+<span data-ttu-id="cb5ce-151">Visual Studio가 이미 설치되어 있다면 다음 단계에 따라 버전을 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-151">If you already have Visual Studio installed, you can check your version with the following steps.</span></span>
 
-01. <span data-ttu-id="2f85f-147">Visual Studio를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-147">Open Visual Studio.</span></span>
-01. <span data-ttu-id="2f85f-148">**도움말** > **Microsoft Visual Studio 정보**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-148">Select **Help** > **About Microsoft Visual Studio**.</span></span>
-01. <span data-ttu-id="2f85f-149">**정보** 대화 상자에서 버전 번호를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-149">Read the version number from the **About** dialog.</span></span>
+01. <span data-ttu-id="cb5ce-152">Visual Studio를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-152">Open Visual Studio.</span></span>
+01. <span data-ttu-id="cb5ce-153">**도움말** > **Microsoft Visual Studio 정보**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-153">Select **Help** > **About Microsoft Visual Studio**.</span></span>
+01. <span data-ttu-id="cb5ce-154">**정보** 대화 상자에서 버전 번호를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-154">Read the version number from the **About** dialog.</span></span>
 
-<span data-ttu-id="2f85f-150">Visual Studio가 최신 .NET Core SDK 및 런타임을 설치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-150">Visual Studio can install the latest .NET Core SDK and runtime.</span></span>
+<span data-ttu-id="cb5ce-155">Visual Studio가 최신 .NET Core SDK 및 런타임을 설치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-155">Visual Studio can install the latest .NET Core SDK and runtime.</span></span>
 
-- <span data-ttu-id="2f85f-151">[Visual Studio를 다운로드](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)합니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-151">[Download Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019).</span></span>
+- <span data-ttu-id="cb5ce-156">[Visual Studio를 다운로드](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)합니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-156">[Download Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019).</span></span>
 
-### <a name="select-a-workload"></a><span data-ttu-id="2f85f-152">워크로드 선택</span><span class="sxs-lookup"><span data-stu-id="2f85f-152">Select a workload</span></span>
+### <a name="select-a-workload"></a><span data-ttu-id="cb5ce-157">워크로드 선택</span><span class="sxs-lookup"><span data-stu-id="cb5ce-157">Select a workload</span></span>
 
-<span data-ttu-id="2f85f-153">Visual Studio를 설치하거나 수정할 때는 빌드하려는 애플리케이션의 종류에 따라 다음 워크로드 중 하나 이상을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-153">When installing or modifying Visual Studio, select one or more of the following workloads, depending on the kind of application you're building:</span></span>
+<span data-ttu-id="cb5ce-158">Visual Studio를 설치하거나 수정할 때는 빌드하려는 애플리케이션의 종류에 따라 다음 워크로드 중 하나 이상을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-158">When installing or modifying Visual Studio, select one or more of the following workloads, depending on the kind of application you're building:</span></span>
 
-- <span data-ttu-id="2f85f-154">**기타 도구 세트** 섹션의 **.NET Core 플랫폼 간 개발** 워크로드</span><span class="sxs-lookup"><span data-stu-id="2f85f-154">The **.NET Core cross-platform development** workload in the **Other Toolsets** section.</span></span>
-- <span data-ttu-id="2f85f-155">**웹 및 클라우드** 섹션의 **ASP.NET 및 웹 개발** 워크로드</span><span class="sxs-lookup"><span data-stu-id="2f85f-155">The **ASP.NET and web development** workload in the **Web & Cloud** section.</span></span>
-- <span data-ttu-id="2f85f-156">**웹 및 클라우드** 섹션의 **Azure 개발** 워크로드</span><span class="sxs-lookup"><span data-stu-id="2f85f-156">The **Azure development** workload in the **Web & Cloud** section.</span></span>
-- <span data-ttu-id="2f85f-157">**데스크톱 및 모바일** 섹션의 **.NET 데스크톱 개발** 워크로드</span><span class="sxs-lookup"><span data-stu-id="2f85f-157">The **.NET desktop development** workload in the **Desktop & Mobile** section.</span></span>
+- <span data-ttu-id="cb5ce-159">**기타 도구 집합** 섹션의 **.NET Core 플랫폼 간 개발** 워크로드</span><span class="sxs-lookup"><span data-stu-id="cb5ce-159">The **.NET Core cross-platform development** workload in the **Other Toolsets** section.</span></span>
+- <span data-ttu-id="cb5ce-160">**웹 및 클라우드** 섹션의 **ASP.NET 및 웹 개발** 워크로드</span><span class="sxs-lookup"><span data-stu-id="cb5ce-160">The **ASP.NET and web development** workload in the **Web & Cloud** section.</span></span>
+- <span data-ttu-id="cb5ce-161">**웹 및 클라우드** 섹션의 **Azure 개발** 워크로드</span><span class="sxs-lookup"><span data-stu-id="cb5ce-161">The **Azure development** workload in the **Web & Cloud** section.</span></span>
+- <span data-ttu-id="cb5ce-162">**데스크톱 및 모바일** 섹션의 **.NET 데스크톱 개발** 워크로드</span><span class="sxs-lookup"><span data-stu-id="cb5ce-162">The **.NET desktop development** workload in the **Desktop & Mobile** section.</span></span>
 
-<span data-ttu-id="2f85f-158">[![Windows Visual Studio 2019 및 .NET Core 워크로드](media/install-sdk/windows-install-visual-studio-2019.png)](media/install-sdk/windows-install-visual-studio-2019.png#lightbox)</span><span class="sxs-lookup"><span data-stu-id="2f85f-158">[![Windows Visual Studio 2019 with .NET Core workload](media/install-sdk/windows-install-visual-studio-2019.png)](media/install-sdk/windows-install-visual-studio-2019.png#lightbox)</span></span>
+<span data-ttu-id="cb5ce-163">[![Windows Visual Studio 2019 및 .NET Core 워크로드](media/install-sdk/windows-install-visual-studio-2019.png)](media/install-sdk/windows-install-visual-studio-2019.png#lightbox)</span><span class="sxs-lookup"><span data-stu-id="cb5ce-163">[![Windows Visual Studio 2019 with .NET Core workload](media/install-sdk/windows-install-visual-studio-2019.png)](media/install-sdk/windows-install-visual-studio-2019.png#lightbox)</span></span>
+
+## <a name="download-and-manually-install"></a><span data-ttu-id="cb5ce-164">다운로드 및 수동으로 설치</span><span class="sxs-lookup"><span data-stu-id="cb5ce-164">Download and manually install</span></span>
+
+<span data-ttu-id="cb5ce-165">런타임을 추출하고 터미널에서 .NET Core CLI 명령을 사용할 수 있으려면 먼저 .NET Core 이진 릴리스를 [다운로드](#all-net-core-downloads)합니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-165">To extract the runtime and make the .NET Core CLI commands available at the terminal, first [download](#all-net-core-downloads) a .NET Core binary release.</span></span> <span data-ttu-id="cb5ce-166">그런 다음 `%USERPROFILE%\dotnet`와 같이 설치할 디렉터리를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-166">Then, create a directory to install to, for example `%USERPROFILE%\dotnet`.</span></span> <span data-ttu-id="cb5ce-167">마지막으로 다운로드한 zip 파일을 그 디렉터리로 추출합니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-167">Finally, extract the downloaded zip file into that directory.</span></span>
+
+<span data-ttu-id="cb5ce-168">기본적으로 .NET Core CLI 명령과 앱은 이러한 방식으로 설치된 .NET Core를 사용하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-168">By default, .NET Core CLI commands and apps will not use .NET Core installed in this way.</span></span> <span data-ttu-id="cb5ce-169">이를 사용하려면 명시적으로 선택해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-169">You have to explicitly choose to use it.</span></span> <span data-ttu-id="cb5ce-170">이렇게 하려면 애플리케이션이 시작되는 환경 변수를 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-170">To do so, change the environment variables with which an application is started:</span></span>
+
+```console
+set DOTNET_ROOT=%USERPROFILE%\dotnet
+set PATH=%USERPROFILE%\dotnet;%PATH%
+```
+
+<span data-ttu-id="cb5ce-171">이 방법을 사용하면 여러 버전을 별도의 위치에 설치한 다음 애플리케이션이 해당 위치를 가리키는 환경 변수를 사용하여 애플리케이션을 실행하는 데 사용해야 하는 설치 위치를 명시적으로 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-171">This approach lets you install multiple versions into separate locations, then explicitly choose which install location an application should use by running the application with environment variables pointing at that location.</span></span>
+
+<span data-ttu-id="cb5ce-172">이러한 환경 변수가 설정된 경우에도 .NET Core는 애플리케이션을 실행하는 데 가장 적합한 프레임워크를 선택할 때 기본 전역 설치 위치를 계속 고려합니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-172">Even when these environment variables are set, .NET Core still considers the default global install location when selecting the best framework for running the application.</span></span> <span data-ttu-id="cb5ce-173">기본값은 일반적으로 설치 프로그램이 사용하는 `C:\Program Files\dotnet`입니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-173">The default is typically `C:\Program Files\dotnet`, which the installers use.</span></span> <span data-ttu-id="cb5ce-174">이 환경 변수를 설정하여 사용자 지정 설치 위치만 사용하도록 런타임에 지시할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-174">You can instruct the runtime to only use the custom install location by setting this environment variable as well:</span></span>
+
+```console
+set DOTNET_MULTILEVEL_LOOKUP=0
+```
 
 ::: zone-end
 
 ::: zone pivot="os-macos"
 
-## <a name="install-with-visual-studio-for-mac"></a><span data-ttu-id="2f85f-159">Mac용 Visual Studio를 사용하여 설치</span><span class="sxs-lookup"><span data-stu-id="2f85f-159">Install with Visual Studio for Mac</span></span>
+## <a name="install-with-visual-studio-for-mac"></a><span data-ttu-id="cb5ce-175">Mac용 Visual Studio를 사용하여 설치</span><span class="sxs-lookup"><span data-stu-id="cb5ce-175">Install with Visual Studio for Mac</span></span>
 
-<span data-ttu-id="2f85f-160">Mac용 Visual Studio는 **.NET Core** 워크로드가 선택된 경우 .NET Core SDK를 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-160">Visual Studio for Mac installs the .NET Core SDK when the **.NET Core** workload is selected.</span></span> <span data-ttu-id="2f85f-161">macOS에서 .NET Core 개발을 시작하려면 [Mac용 Visual Studio 2019 설치](/visualstudio/mac/installation)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="2f85f-161">To get started with .NET Core development on macOS, see [Install Visual Studio 2019 for Mac](/visualstudio/mac/installation).</span></span> <span data-ttu-id="2f85f-162">최신 릴리스인 .NET Core 3.1의 경우 Mac용 Visual Studio 8.4 미리 보기를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-162">For the latest release, .NET Core 3.1, you must use the Visual Studio for Mac 8.4 Preview.</span></span>
+<span data-ttu-id="cb5ce-176">Mac용 Visual Studio는 **.NET Core** 워크로드가 선택된 경우 .NET Core SDK를 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-176">Visual Studio for Mac installs the .NET Core SDK when the **.NET Core** workload is selected.</span></span> <span data-ttu-id="cb5ce-177">macOS에서 .NET Core 개발을 시작하려면 [Mac용 Visual Studio 2019 설치](/visualstudio/mac/installation)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-177">To get started with .NET Core development on macOS, see [Install Visual Studio 2019 for Mac](/visualstudio/mac/installation).</span></span> <span data-ttu-id="cb5ce-178">최신 릴리스인 .NET Core 3.1의 경우 Mac용 Visual Studio 8.4 미리 보기를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-178">For the latest release, .NET Core 3.1, you must use the Visual Studio for Mac 8.4 Preview.</span></span>
 
-<span data-ttu-id="2f85f-163">[![macOS Mac용 Visual Studio 2019 및 .NET Core 워크로드의 특징](media/install-sdk/mac-install-selection.png)](media/install-sdk/mac-install-selection.png#lightbox)</span><span class="sxs-lookup"><span data-stu-id="2f85f-163">[![macOS Visual Studio 2019 for Mac with .NET Core workload feature](media/install-sdk/mac-install-selection.png)](media/install-sdk/mac-install-selection.png#lightbox)</span></span>
+<span data-ttu-id="cb5ce-179">[![macOS Mac용 Visual Studio 2019 및 .NET Core 워크로드의 특징](media/install-sdk/mac-install-selection.png)](media/install-sdk/mac-install-selection.png#lightbox)</span><span class="sxs-lookup"><span data-stu-id="cb5ce-179">[![macOS Visual Studio 2019 for Mac with .NET Core workload feature](media/install-sdk/mac-install-selection.png)](media/install-sdk/mac-install-selection.png#lightbox)</span></span>
 
 ::: zone-end
 
-## <a name="install-alongside-visual-studio-code"></a><span data-ttu-id="2f85f-164">Visual Studio Code와 함께 설치</span><span class="sxs-lookup"><span data-stu-id="2f85f-164">Install alongside Visual Studio Code</span></span>
+## <a name="install-alongside-visual-studio-code"></a><span data-ttu-id="cb5ce-180">Visual Studio Code와 함께 설치</span><span class="sxs-lookup"><span data-stu-id="cb5ce-180">Install alongside Visual Studio Code</span></span>
 
-<span data-ttu-id="2f85f-165">Visual Studio Code는 데스크톱에서 실행되는 강력한 경량 소스 코드 편집기입니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-165">Visual Studio Code is a powerful and lightweight source code editor that runs on your desktop.</span></span> <span data-ttu-id="2f85f-166">Visual Studio Code는 Windows, macOS 및 Linux에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-166">Visual Studio Code is available for Windows, macOS, and Linux.</span></span>
+<span data-ttu-id="cb5ce-181">Visual Studio Code는 데스크톱에서 실행되는 강력한 경량 소스 코드 편집기입니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-181">Visual Studio Code is a powerful and lightweight source code editor that runs on your desktop.</span></span> <span data-ttu-id="cb5ce-182">Visual Studio Code는 Windows, macOS 및 Linux에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-182">Visual Studio Code is available for Windows, macOS, and Linux.</span></span>
 
-<span data-ttu-id="2f85f-167">Visual Studio Code에 Visual Studio처럼 자동화된 .NET Core 설치 프로그램이 포함되지 않은 경우, 간편하게 .NET Core 지원을 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-167">While Visual Studio Code doesn't come with an automated .NET Core installer like Visual Studio does, adding .NET Core support is simple.</span></span>
+<span data-ttu-id="cb5ce-183">Visual Studio Code에 Visual Studio처럼 자동화된 .NET Core 설치 프로그램이 포함되지 않은 경우, 간편하게 .NET Core 지원을 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-183">While Visual Studio Code doesn't come with an automated .NET Core installer like Visual Studio does, adding .NET Core support is simple.</span></span>
 
-01. <span data-ttu-id="2f85f-168">[Visual Studio Code를 다운로드하여 설치합니다](https://code.visualstudio.com/Download).</span><span class="sxs-lookup"><span data-stu-id="2f85f-168">[Download and install Visual Studio Code](https://code.visualstudio.com/Download).</span></span>
-01. <span data-ttu-id="2f85f-169">[.NET Core SDK를 다운로드하여 설치합니다](https://dotnet.microsoft.com/download/dotnet-core).</span><span class="sxs-lookup"><span data-stu-id="2f85f-169">[Download and install the .NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core).</span></span>
-01. <span data-ttu-id="2f85f-170">[Visual Studio Code Marketplace에서 C# 확장을 설치합니다](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp).</span><span class="sxs-lookup"><span data-stu-id="2f85f-170">[Install the C# extension from the Visual Studio Code marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp).</span></span>
+01. <span data-ttu-id="cb5ce-184">[Visual Studio Code를 다운로드하여 설치합니다](https://code.visualstudio.com/Download).</span><span class="sxs-lookup"><span data-stu-id="cb5ce-184">[Download and install Visual Studio Code](https://code.visualstudio.com/Download).</span></span>
+01. <span data-ttu-id="cb5ce-185">[.NET Core SDK를 다운로드하여 설치합니다](https://dotnet.microsoft.com/download/dotnet-core).</span><span class="sxs-lookup"><span data-stu-id="cb5ce-185">[Download and install the .NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core).</span></span>
+01. <span data-ttu-id="cb5ce-186">[Visual Studio Code Marketplace에서 C# 확장을 설치합니다](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp).</span><span class="sxs-lookup"><span data-stu-id="cb5ce-186">[Install the C# extension from the Visual Studio Code marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp).</span></span>
 
 ::: zone pivot="os-windows"
 
-## <a name="install-with-powershell-automation"></a><span data-ttu-id="2f85f-171">PowerShell 자동화를 사용하여 설치</span><span class="sxs-lookup"><span data-stu-id="2f85f-171">Install with PowerShell automation</span></span>
+## <a name="install-with-powershell-automation"></a><span data-ttu-id="cb5ce-187">PowerShell 자동화를 사용하여 설치</span><span class="sxs-lookup"><span data-stu-id="cb5ce-187">Install with PowerShell automation</span></span>
 
-<span data-ttu-id="2f85f-172">[dotnet-install 스크립트](../tools/dotnet-install-script.md)는 자동화 및 SDK의 관리자가 아닌 일반 설치를 수행하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-172">The [dotnet-install scripts](../tools/dotnet-install-script.md) are used for automation and non-admin installs of the SDK.</span></span> <span data-ttu-id="2f85f-173">스크립트는 [dotnet-install 스크립트 참조 페이지](../tools/dotnet-install-script.md)에서 다운로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-173">You can download the script from the [dotnet-install script reference page](../tools/dotnet-install-script.md).</span></span>
+<span data-ttu-id="cb5ce-188">[dotnet-install 스크립트](../tools/dotnet-install-script.md)는 자동화 및 SDK의 관리자가 아닌 일반 설치를 수행하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-188">The [dotnet-install scripts](../tools/dotnet-install-script.md) are used for automation and non-admin installs of the SDK.</span></span> <span data-ttu-id="cb5ce-189">스크립트는 [dotnet-install 스크립트 참조 페이지](../tools/dotnet-install-script.md)에서 다운로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-189">You can download the script from the [dotnet-install script reference page](../tools/dotnet-install-script.md).</span></span>
 
-<span data-ttu-id="2f85f-174">스크립트는 기본적으로 최신 [LTS(장기 지원)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 버전(.NET Core 3.1)을 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-174">The script defaults to installing the latest [long term support (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) version, which is .NET Core 3.1.</span></span> <span data-ttu-id="2f85f-175">.NET Core의 최신 릴리스를 설치하려면 다음 스위치와 함께 스크립트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-175">To install the current release of .NET Core, run the script with the following switch.</span></span>
+<span data-ttu-id="cb5ce-190">스크립트는 기본적으로 최신 [LTS(장기 지원)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 버전(.NET Core 3.1)을 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-190">The script defaults to installing the latest [long term support (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) version, which is .NET Core 3.1.</span></span> <span data-ttu-id="cb5ce-191">.NET Core의 최신 릴리스를 설치하려면 다음 스위치와 함께 스크립트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-191">To install the current release of .NET Core, run the script with the following switch.</span></span>
 
 ```powershell
 dotnet-install.ps1 -Channel Current
@@ -143,11 +175,11 @@ dotnet-install.ps1 -Channel Current
 
 ::: zone pivot="os-linux,os-macos"
 
-## <a name="install-with-bash-automation"></a><span data-ttu-id="2f85f-176">배시 자동화를 사용하여 설치</span><span class="sxs-lookup"><span data-stu-id="2f85f-176">Install with bash automation</span></span>
+## <a name="install-with-bash-automation"></a><span data-ttu-id="cb5ce-192">배시 자동화를 사용하여 설치</span><span class="sxs-lookup"><span data-stu-id="cb5ce-192">Install with bash automation</span></span>
 
-<span data-ttu-id="2f85f-177">[dotnet-install 스크립트](../tools/dotnet-install-script.md)는 자동화 및 SDK의 관리자가 아닌 일반 설치를 수행하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-177">The [dotnet-install scripts](../tools/dotnet-install-script.md) are used for automation and non-admin installs of the SDK.</span></span> <span data-ttu-id="2f85f-178">스크립트는 [dotnet-install 스크립트 참조 페이지](../tools/dotnet-install-script.md)에서 다운로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-178">You can download the script from the [dotnet-install script reference page](../tools/dotnet-install-script.md).</span></span>
+<span data-ttu-id="cb5ce-193">[dotnet-install 스크립트](../tools/dotnet-install-script.md)는 자동화 및 SDK의 관리자가 아닌 일반 설치를 수행하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-193">The [dotnet-install scripts](../tools/dotnet-install-script.md) are used for automation and non-admin installs of the SDK.</span></span> <span data-ttu-id="cb5ce-194">스크립트는 [dotnet-install 스크립트 참조 페이지](../tools/dotnet-install-script.md)에서 다운로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-194">You can download the script from the [dotnet-install script reference page](../tools/dotnet-install-script.md).</span></span>
 
-<span data-ttu-id="2f85f-179">스크립트는 기본적으로 최신 [LTS(장기 지원)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 버전(.NET Core 3.1)을 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-179">The script defaults to installing the latest [long term support (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) version, which is .NET Core 3.1.</span></span> <span data-ttu-id="2f85f-180">.NET Core의 최신 릴리스를 설치하려면 다음 스위치와 함께 스크립트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-180">To install the current release of .NET Core, run the script with the following switch.</span></span>
+<span data-ttu-id="cb5ce-195">스크립트는 기본적으로 최신 [LTS(장기 지원)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 버전(.NET Core 3.1)을 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-195">The script defaults to installing the latest [long term support (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) version, which is .NET Core 3.1.</span></span> <span data-ttu-id="cb5ce-196">.NET Core의 최신 릴리스를 설치하려면 다음 스위치와 함께 스크립트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-196">To install the current release of .NET Core, run the script with the following switch.</span></span>
 
 ```bash
 ./dotnet-install.sh -c Current
@@ -155,46 +187,47 @@ dotnet-install.ps1 -Channel Current
 
 ::: zone-end
 
-## <a name="all-net-core-downloads"></a><span data-ttu-id="2f85f-181">모든 .NET Core 다운로드</span><span class="sxs-lookup"><span data-stu-id="2f85f-181">All .NET Core downloads</span></span>
+## <a name="all-net-core-downloads"></a><span data-ttu-id="cb5ce-197">모든 .NET Core 다운로드</span><span class="sxs-lookup"><span data-stu-id="cb5ce-197">All .NET Core downloads</span></span>
 
-<span data-ttu-id="2f85f-182">다음 링크 중 하나를 사용하여 .NET Core를 직접 다운로드하여 설치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-182">You can download and install .NET Core directly with one of the following links:</span></span>
+<span data-ttu-id="cb5ce-198">다음 링크 중 하나를 사용하여 .NET Core를 직접 다운로드하여 설치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-198">You can download and install .NET Core directly with one of the following links:</span></span>
 
-- [<span data-ttu-id="2f85f-183">.NET Core 3.1 다운로드</span><span class="sxs-lookup"><span data-stu-id="2f85f-183">.NET Core 3.1 downloads</span></span>](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-- [<span data-ttu-id="2f85f-184">.NET Core 3.0 다운로드</span><span class="sxs-lookup"><span data-stu-id="2f85f-184">.NET Core 3.0 downloads</span></span>](https://dotnet.microsoft.com/download/dotnet-core/3.0)
-- [<span data-ttu-id="2f85f-185">.NET Core 2.2 다운로드</span><span class="sxs-lookup"><span data-stu-id="2f85f-185">.NET Core 2.2 downloads</span></span>](https://dotnet.microsoft.com/download/dotnet-core/2.2)
-- [<span data-ttu-id="2f85f-186">.NET Core 2.1 다운로드</span><span class="sxs-lookup"><span data-stu-id="2f85f-186">.NET Core 2.1 downloads</span></span>](https://dotnet.microsoft.com/download/dotnet-core/2.1)
+- [<span data-ttu-id="cb5ce-199">.NET Core 3.1 다운로드</span><span class="sxs-lookup"><span data-stu-id="cb5ce-199">.NET Core 3.1 downloads</span></span>](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [<span data-ttu-id="cb5ce-200">.NET Core 3.0 다운로드</span><span class="sxs-lookup"><span data-stu-id="cb5ce-200">.NET Core 3.0 downloads</span></span>](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+- [<span data-ttu-id="cb5ce-201">.NET Core 2.2 다운로드</span><span class="sxs-lookup"><span data-stu-id="cb5ce-201">.NET Core 2.2 downloads</span></span>](https://dotnet.microsoft.com/download/dotnet-core/2.2)
+- [<span data-ttu-id="cb5ce-202">.NET Core 2.1 다운로드</span><span class="sxs-lookup"><span data-stu-id="cb5ce-202">.NET Core 2.1 downloads</span></span>](https://dotnet.microsoft.com/download/dotnet-core/2.1)
 
-## <a name="docker"></a><span data-ttu-id="2f85f-187">Docker</span><span class="sxs-lookup"><span data-stu-id="2f85f-187">Docker</span></span>
+## <a name="docker"></a><span data-ttu-id="cb5ce-203">Docker</span><span class="sxs-lookup"><span data-stu-id="cb5ce-203">Docker</span></span>
 
-<span data-ttu-id="2f85f-188">컨테이너는 호스트 시스템의 나머지 부분으로부터 애플리케이션을 격리하는 경량 방식을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-188">Containers provide a lightweight way to isolate your application from the rest of the host system.</span></span> <span data-ttu-id="2f85f-189">동일한 머신에 있는 컨테이너는 커널만 공유하고 애플리케이션에 주어진 리소스를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-189">Containers on the same machine share just the kernel and use resources given to your application.</span></span>
+<span data-ttu-id="cb5ce-204">컨테이너는 호스트 시스템의 나머지 부분으로부터 애플리케이션을 격리하는 경량 방식을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-204">Containers provide a lightweight way to isolate your application from the rest of the host system.</span></span> <span data-ttu-id="cb5ce-205">동일한 머신에 있는 컨테이너는 커널만 공유하고 애플리케이션에 주어진 리소스를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-205">Containers on the same machine share just the kernel and use resources given to your application.</span></span>
 
-<span data-ttu-id="2f85f-190">.NET Core는 Docker 컨테이너에서 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-190">.NET Core can run in a Docker container.</span></span> <span data-ttu-id="2f85f-191">공식 .NET Core Docker 이미지는 MCR(Microsoft 컨테이너 레지스트리)에 게시되며 [Microsoft .NET Core Docker 허브 리포지토리](https://hub.docker.com/_/microsoft-dotnet-core/)에서 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-191">Official .NET Core Docker images are published to the Microsoft Container Registry (MCR) and are discoverable at the [Microsoft .NET Core Docker Hub repository](https://hub.docker.com/_/microsoft-dotnet-core/).</span></span> <span data-ttu-id="2f85f-192">각 리포지토리에는 사용할 수 있는 .NET(SDK 또는 Runtime)과 OS가 다양하게 조합된 이미지가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-192">Each repository contains images for different combinations of the .NET (SDK or Runtime) and OS that you can use.</span></span>
+<span data-ttu-id="cb5ce-206">.NET Core는 Docker 컨테이너에서 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-206">.NET Core can run in a Docker container.</span></span> <span data-ttu-id="cb5ce-207">공식 .NET Core Docker 이미지는 MCR(Microsoft 컨테이너 레지스트리)에 게시되며 [Microsoft .NET Core Docker 허브 리포지토리](https://hub.docker.com/_/microsoft-dotnet-core/)에서 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-207">Official .NET Core Docker images are published to the Microsoft Container Registry (MCR) and are discoverable at the [Microsoft .NET Core Docker Hub repository](https://hub.docker.com/_/microsoft-dotnet-core/).</span></span> <span data-ttu-id="cb5ce-208">각 리포지토리에는 사용할 수 있는 .NET(SDK 또는 Runtime)과 OS가 다양하게 조합된 이미지가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-208">Each repository contains images for different combinations of the .NET (SDK or Runtime) and OS that you can use.</span></span>
 
-<span data-ttu-id="2f85f-193">Microsoft는 특정 시나리오를 위한 맞춤형 이미지를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-193">Microsoft provides images that are tailored for specific scenarios.</span></span> <span data-ttu-id="2f85f-194">예를 들어 [ASP.NET Core 리포지토리](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/)는 프로덕션에서 ASP.NET Core 앱을 실행하기 위해 빌드된 이미지를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="2f85f-194">For example, the [ASP.NET Core repository](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) provides images that are built for running ASP.NET Core apps in production.</span></span>
+<span data-ttu-id="cb5ce-209">Microsoft는 특정 시나리오를 위한 맞춤형 이미지를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-209">Microsoft provides images that are tailored for specific scenarios.</span></span> <span data-ttu-id="cb5ce-210">예를 들어 [ASP.NET Core 리포지토리](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/)는 프로덕션에서 ASP.NET Core 앱을 실행하기 위해 빌드된 이미지를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-210">For example, the [ASP.NET Core repository](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) provides images that are built for running ASP.NET Core apps in production.</span></span>
 
-<span data-ttu-id="2f85f-195">Docker 컨테이너에서 .NET Core를 사용하는 방법에 대한 자세한 내용은 [.NET 및 Docker 소개](../docker/introduction.md)와 [Samples](https://github.com/dotnet/dotnet-docker/blob/master/samples/README.md)(샘플)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="2f85f-195">For more information about using .NET Core in a Docker container, see [Introduction to .NET and Docker](../docker/introduction.md) and [Samples](https://github.com/dotnet/dotnet-docker/blob/master/samples/README.md).</span></span>
+<span data-ttu-id="cb5ce-211">Docker 컨테이너에서 .NET Core를 사용하는 방법에 대한 자세한 내용은 [.NET 및 Docker 소개](../docker/introduction.md)와 [Samples](https://github.com/dotnet/dotnet-docker/blob/master/samples/README.md)(샘플)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="cb5ce-211">For more information about using .NET Core in a Docker container, see [Introduction to .NET and Docker](../docker/introduction.md) and [Samples](https://github.com/dotnet/dotnet-docker/blob/master/samples/README.md).</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="2f85f-196">다음 단계</span><span class="sxs-lookup"><span data-stu-id="2f85f-196">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="cb5ce-212">다음 단계</span><span class="sxs-lookup"><span data-stu-id="cb5ce-212">Next steps</span></span>
 
 ::: zone pivot="os-windows"
 
-- <span data-ttu-id="2f85f-197">[자습서: Hello World 자습서](../tutorials/with-visual-studio.md)</span><span class="sxs-lookup"><span data-stu-id="2f85f-197">[Tutorial: Hello World tutorial](../tutorials/with-visual-studio.md).</span></span>
-- <span data-ttu-id="2f85f-198">[자습서: Visual Studio Code를 사용하여 새 앱 만들기](../tutorials/with-visual-studio-code.md)</span><span class="sxs-lookup"><span data-stu-id="2f85f-198">[Tutorial: Create a new app with Visual Studio Code](../tutorials/with-visual-studio-code.md).</span></span>
-- <span data-ttu-id="2f85f-199">[자습서: .NET Core 앱 컨테이너화](../docker/build-container.md)</span><span class="sxs-lookup"><span data-stu-id="2f85f-199">[Tutorial: Containerize a .NET Core app](../docker/build-container.md).</span></span>
+- <span data-ttu-id="cb5ce-213">[자습서: Hello World 자습서](../tutorials/with-visual-studio.md)</span><span class="sxs-lookup"><span data-stu-id="cb5ce-213">[Tutorial: Hello World tutorial](../tutorials/with-visual-studio.md).</span></span>
+- <span data-ttu-id="cb5ce-214">[자습서: Visual Studio Code를 사용하여 새 앱 만들기](../tutorials/with-visual-studio-code.md)</span><span class="sxs-lookup"><span data-stu-id="cb5ce-214">[Tutorial: Create a new app with Visual Studio Code](../tutorials/with-visual-studio-code.md).</span></span>
+- <span data-ttu-id="cb5ce-215">[자습서: .NET Core 앱 컨테이너화](../docker/build-container.md)</span><span class="sxs-lookup"><span data-stu-id="cb5ce-215">[Tutorial: Containerize a .NET Core app](../docker/build-container.md).</span></span>
 
 ::: zone-end
 
 ::: zone pivot="os-macos"
 
-- <span data-ttu-id="2f85f-200">[자습서: macOS에서 시작](../tutorials/using-on-mac-vs.md)</span><span class="sxs-lookup"><span data-stu-id="2f85f-200">[Tutorial: Get started on macOS](../tutorials/using-on-mac-vs.md).</span></span>
-- <span data-ttu-id="2f85f-201">[자습서: Visual Studio Code를 사용하여 새 앱 만들기](../tutorials/with-visual-studio-code.md)</span><span class="sxs-lookup"><span data-stu-id="2f85f-201">[Tutorial: Create a new app with Visual Studio Code](../tutorials/with-visual-studio-code.md).</span></span>
-- <span data-ttu-id="2f85f-202">[자습서: .NET Core 앱 컨테이너화](../docker/build-container.md)</span><span class="sxs-lookup"><span data-stu-id="2f85f-202">[Tutorial: Containerize a .NET Core app](../docker/build-container.md).</span></span>
+- <span data-ttu-id="cb5ce-216">[macOS Catalina 공증 관련 사항](macos-notarization-issues.md)</span><span class="sxs-lookup"><span data-stu-id="cb5ce-216">[Working with macOS Catalina notarization](macos-notarization-issues.md).</span></span>
+- <span data-ttu-id="cb5ce-217">[자습서: macOS에서 시작](../tutorials/using-on-mac-vs.md)</span><span class="sxs-lookup"><span data-stu-id="cb5ce-217">[Tutorial: Get started on macOS](../tutorials/using-on-mac-vs.md).</span></span>
+- <span data-ttu-id="cb5ce-218">[자습서: Visual Studio Code를 사용하여 새 앱 만들기](../tutorials/with-visual-studio-code.md)</span><span class="sxs-lookup"><span data-stu-id="cb5ce-218">[Tutorial: Create a new app with Visual Studio Code](../tutorials/with-visual-studio-code.md).</span></span>
+- <span data-ttu-id="cb5ce-219">[자습서: .NET Core 앱 컨테이너화](../docker/build-container.md)</span><span class="sxs-lookup"><span data-stu-id="cb5ce-219">[Tutorial: Containerize a .NET Core app](../docker/build-container.md).</span></span>
 
 ::: zone-end
 
 ::: zone pivot="os-linux"
 
-- <span data-ttu-id="2f85f-203">[자습서: Visual Studio Code를 사용하여 새 앱 만들기](../tutorials/with-visual-studio-code.md)</span><span class="sxs-lookup"><span data-stu-id="2f85f-203">[Tutorial: Create a new app with Visual Studio Code](../tutorials/with-visual-studio-code.md).</span></span>
-- <span data-ttu-id="2f85f-204">[자습서: .NET Core 앱 컨테이너화](../docker/build-container.md)</span><span class="sxs-lookup"><span data-stu-id="2f85f-204">[Tutorial: Containerize a .NET Core app](../docker/build-container.md).</span></span>
+- <span data-ttu-id="cb5ce-220">[자습서: Visual Studio Code를 사용하여 새 앱 만들기](../tutorials/with-visual-studio-code.md)</span><span class="sxs-lookup"><span data-stu-id="cb5ce-220">[Tutorial: Create a new app with Visual Studio Code](../tutorials/with-visual-studio-code.md).</span></span>
+- <span data-ttu-id="cb5ce-221">[자습서: .NET Core 앱 컨테이너화](../docker/build-container.md)</span><span class="sxs-lookup"><span data-stu-id="cb5ce-221">[Tutorial: Containerize a .NET Core app](../docker/build-container.md).</span></span>
 
 ::: zone-end
