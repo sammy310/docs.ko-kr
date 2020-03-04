@@ -15,12 +15,12 @@ helpviewer_keywords:
 - encryption [.NET Framework], asymmetric keys
 - decryption keys
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
-ms.openlocfilehash: 8ca4c4c5b1257411ecdf86858040bf428a9e6ce0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 6b703156b38f52513c86f7b2507ac6c185a9dd50
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706060"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155947"
 ---
 # <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>방법: 키 컨테이너에 비대칭 키 저장
 비대칭 프라이빗 키는 로컬 컴퓨터에 축자로 저장하거나 일반 텍스트로 저장해서는 안 됩니다. 프라이빗 키를 저장해야 하는 경우에는 키 컨테이너를 사용해야 합니다. 키 컨테이너에 대한 자세한 내용은 [컴퓨터 수준 및 사용자 수준 RSA 키 컨테이너 이해](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100))를 참조하세요.  
@@ -41,7 +41,7 @@ ms.locfileid: "75706060"
   
 4. **AsymmetricAlgorithm**에서 파생된 클래스의 **Clear** 메서드를 호출합니다. 이 메서드는 클래스의 모든 리소스를 해제하고 키 컨테이너를 지웁니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 비대칭 키를 만들어 키 컨테이너에 저장하고 나중에 키를 검색하며 컨테이너에서 키를 삭제하는 방법을 보여 줍니다.  
   
  `GenKey_SaveInContainer` 메서드와 `GetKeyFromContainer` 메서드의 해당 코드는 유사합니다.  <xref:System.Security.Cryptography.CspParameters> 개체의 키 컨테이너 이름을 지정하여 <xref:System.Security.Cryptography.AsymmetricAlgorithm> 속성 또는 <xref:System.Security.Cryptography.RSACryptoServiceProvider.PersistKeyInCsp%2A> 속성을 true로 설정한 상태로 <xref:System.Security.Cryptography.DSACryptoServiceProvider.PersistKeyInCsp%2A> 개체에 전달하면 다음과 같은 상황이 발생합니다.  지정된 이름의 키 컨테이너가 없는 경우 해당 이름의 키 컨테이너가 만들어지고 키가 지속됩니다.  지정된 이름의 키 컨테이너가 있는 경우 컨테이너의 키가 현재 <xref:System.Security.Cryptography.AsymmetricAlgorithm> 개체에 자동으로 로드됩니다.  따라서 `GenKey_SaveInContainer` 메서드의 코드는 첫 번째로 실행되었기 때문에 키를 지속하는 반면, `GetKeyFromContainer` 메서드의 코드는 두 번째로 실행되었기 때문에 키를 로드합니다.  
@@ -76,7 +76,7 @@ Public Class StoreKey
     End Sub  
   
     Public Shared Sub GenKey_SaveInContainer(ByVal ContainerName As String)  
-        ' Create the CspParameters object and set the key container   
+        ' Create the CspParameters object and set the key container
         ' name used to store the RSA key pair.  
         Dim cp As New CspParameters()  
         cp.KeyContainerName = ContainerName  
@@ -90,7 +90,7 @@ Public Class StoreKey
     End Sub  
   
     Public Shared Sub GetKeyFromContainer(ByVal ContainerName As String)  
-        ' Create the CspParameters object and set the key container   
+        ' Create the CspParameters object and set the key container
         '  name used to store the RSA key pair.  
         Dim cp As New CspParameters()  
         cp.KeyContainerName = ContainerName  
@@ -104,7 +104,7 @@ Public Class StoreKey
     End Sub  
   
     Public Shared Sub DeleteKeyFromContainer(ByVal ContainerName As String)  
-        ' Create the CspParameters object and set the key container   
+        ' Create the CspParameters object and set the key container
         '  name used to store the RSA key pair.  
         Dim cp As New CspParameters()  
         cp.KeyContainerName = ContainerName  
@@ -160,7 +160,7 @@ public class StoreKey
   
     public static void GenKey_SaveInContainer(string ContainerName)  
     {  
-        // Create the CspParameters object and set the key container   
+        // Create the CspParameters object and set the key container
         // name used to store the RSA key pair.  
         CspParameters cp = new CspParameters();  
         cp.KeyContainerName = ContainerName;  
@@ -175,7 +175,7 @@ public class StoreKey
   
     public static void GetKeyFromContainer(string ContainerName)  
     {  
-        // Create the CspParameters object and set the key container   
+        // Create the CspParameters object and set the key container
         // name used to store the RSA key pair.  
         CspParameters cp = new CspParameters();  
         cp.KeyContainerName = ContainerName;  
@@ -190,7 +190,7 @@ public class StoreKey
   
     public static void DeleteKeyFromContainer(string ContainerName)  
     {  
-        // Create the CspParameters object and set the key container   
+        // Create the CspParameters object and set the key container
         // name used to store the RSA key pair.  
         CspParameters cp = new CspParameters();  
         cp.KeyContainerName = ContainerName;  
@@ -221,9 +221,9 @@ Key added to container:
 Key deleted.  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [암호화 및 해독용 키 생성](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
 - [데이터 암호화](../../../docs/standard/security/encrypting-data.md)
 - [데이터 해독](../../../docs/standard/security/decrypting-data.md)
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [암호화 서비스](../../../docs/standard/security/cryptographic-services.md)

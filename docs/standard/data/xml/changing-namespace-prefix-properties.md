@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d5c87cbe-4d69-429f-aad5-3103c2ca2770
-ms.openlocfilehash: e6b811d58ef9d98c51e9a45a46a1965c4fa12b55
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b1df520d00d3a98b2e518092d4eff51b5d0b7741
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711118"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78158027"
 ---
 # <a name="changing-namespace-prefix-properties"></a>네임스페이스 접두사 속성 변경
 **XmlNode** 클래스를 사용하면 지정된 노드와 연결된 네임스페이스 접두사를 변경할 수 있습니다. 예를 들어, 다음 코드에서는 변경될 요소의 접두사를 보여 줍니다.  
@@ -27,12 +27,12 @@ Console.WriteLine(doc.InnerXml)
 ```csharp  
 XmlDocument doc = new XmlDocument();  
 doc.LoadXml("<a:test xmlns:a='123' xmlns:b='456'/>");  
-XmlElement e = doc.DocumentElement;         
+XmlElement e = doc.DocumentElement;
 e.Prefix = "b";  
 Console.WriteLine(doc.InnerXml);  
 ```  
   
- **Output**  
+ **출력**  
   
 ```xml  
 <b:test xmlns:a="123" xmlns:b="456" />  
@@ -51,19 +51,19 @@ Console.WriteLine(doc.InnerXml)
 ```csharp  
 XmlDocument doc = new XmlDocument();  
 doc.LoadXml("<test xmlns='123'/>");  
-XmlElement e = doc.DocumentElement;         
+XmlElement e = doc.DocumentElement;
 e.Prefix = "a";  
 Console.WriteLine(doc.InnerXml);  
 ```  
   
- **Output**  
+ **출력**  
   
 ```xml  
 <a:test xmlns="123" xmlns:a="123" />  
 ```  
   
- **doc.InnerXml**을 호출한 결과로 트리가 문자열에 유지된 경우에는 `test` 요소의 네임스페이스를 유지하기 위해 `xmlns:a='123'` 특성이 추가되었습니다. 원래 `'123'`이었으며 `'123'`을 유지했습니다.  
+ **doc.InnerXml**을 호출한 결과로 트리가 문자열에 유지된 경우에는 `xmlns:a='123'` 요소의 네임스페이스를 유지하기 위해 `test` 특성이 추가되었습니다. 원래 `'123'`이었으며 `'123'`을 유지했습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [XML DOM(문서 개체 모델)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - time zones [.NET Framework], enumerating
 - enumerating time zones [.NET Framework]
 ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
-ms.openlocfilehash: 662e389f4fecc77244e378f1c0672935403fa456
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: aa8962c8aea208778983610041937dc3f75c1f1e
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129117"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159444"
 ---
 # <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>방법: 컴퓨터에 있는 표준 시간대 열거
 
@@ -25,7 +25,7 @@ ms.locfileid: "73129117"
 
 ### <a name="to-enumerate-the-time-zones-present-on-the-local-system"></a>로컬 시스템에 있는 표준 시간대를 열거하려면
 
-1. <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType> 메서드를 호출합니다. 메서드는 <xref:System.TimeZoneInfo> 개체의 제네릭 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 컬렉션을 반환 합니다. 컬렉션의 항목은 <xref:System.TimeZoneInfo.DisplayName%2A> 속성을 기준으로 정렬 됩니다. 예를 들면,
+1. <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType> 메서드를 호출합니다. 메서드는 <xref:System.TimeZoneInfo> 개체의 제네릭 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 컬렉션을 반환 합니다. 컬렉션의 항목은 <xref:System.TimeZoneInfo.DisplayName%2A> 속성을 기준으로 정렬 됩니다. 예들 들어 다음과 같습니다.
 
    [!code-csharp[System.TimeZone2.Concepts#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#1)]
    [!code-vb[System.TimeZone2.Concepts#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#1)]
@@ -55,7 +55,7 @@ ms.locfileid: "73129117"
 <xref:System.Windows.Forms.ListBox?displayProperty=nameWithType> 또는 <xref:System.Web.UI.WebControls.BulletedList?displayProperty=nameWithType> 컨트롤과 같은 대부분의 목록 컨트롤을 사용 하면 해당 컬렉션이 <xref:System.Collections.IEnumerable> 인터페이스를 구현 하는 한 개체 변수의 컬렉션을 `DataSource` 속성에 할당할 수 있습니다. 제네릭 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 클래스가이를 수행 합니다. 컬렉션에 개별 개체를 표시 하기 위해 컨트롤은 개체의 `ToString` 메서드를 호출 하 여 개체를 나타내는 데 사용 되는 문자열을 추출 합니다. <xref:System.TimeZoneInfo> 개체의 경우 `ToString` 메서드는 <xref:System.TimeZoneInfo> 개체의 표시 이름 (<xref:System.TimeZoneInfo.DisplayName%2A> 속성의 값)을 반환 합니다.
 
 > [!NOTE]
-> 목록 컨트롤은 개체의 `ToString` 메서드를 호출 하기 때문에 <xref:System.TimeZoneInfo> 개체의 컬렉션을 컨트롤에 할당 하 고, 컨트롤에 각 개체에 대 한 의미 있는 이름을 표시 하 고, 사용자가 선택한 <xref:System.TimeZoneInfo> 개체를 검색할 수 있습니다. 이렇게 하면 컬렉션의 각 개체에 대 한 문자열을 추출 하 고, 컨트롤의 `DataSource` 속성에 할당 된 컬렉션에 문자열을 할당 하 고, 사용자가 선택한 문자열을 검색 한 다음이 문자열을 사용 하 여 개체를 추출할 필요가 없습니다. 설명 합니다. 
+> 목록 컨트롤은 개체의 `ToString` 메서드를 호출 하기 때문에 <xref:System.TimeZoneInfo> 개체의 컬렉션을 컨트롤에 할당 하 고, 컨트롤에 각 개체에 대 한 의미 있는 이름을 표시 하 고, 사용자가 선택한 <xref:System.TimeZoneInfo> 개체를 검색할 수 있습니다. 이렇게 하면 컬렉션의 각 개체에 대 한 문자열을 추출 하 고, 컨트롤의 `DataSource` 속성에 할당 된 컬렉션에 문자열을 할당 하 고, 사용자가 선택한 문자열을 검색 한 다음,이 문자열을 사용 하 여 설명 하는 개체를 추출할 필요가 없습니다.
 
 ## <a name="compiling-the-code"></a>코드 컴파일
 
@@ -67,7 +67,7 @@ ms.locfileid: "73129117"
 
   <xref:System.Collections.ObjectModel>
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [날짜, 시간 및 표준 시간대](../../../docs/standard/datetime/index.md)
 - [방법: 포함 리소스에 표준 시간대 저장](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)

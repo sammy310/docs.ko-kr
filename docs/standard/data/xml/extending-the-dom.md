@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
-ms.openlocfilehash: 41b6959843e866b89da46a9cedfb54a2f5ed001a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 11c7e8c8d2ea3b49fe73ab4dde4e2ccc8bc917ff
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710884"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159678"
 ---
 # <a name="extending-the-dom"></a>DOM 확장
 
@@ -42,9 +42,9 @@ End Class 'LineInfoDocument
 ```
 
 ```csharp
-class LineInfoDocument : XmlDocument 
+class LineInfoDocument : XmlDocument
 {
-    public override XmlElement CreateElement(string prefix, string localname, string nsURI) 
+    public override XmlElement CreateElement(string prefix, string localname, string nsURI)
     {
         LineInfoElement elem = new LineInfoElement(prefix, localname, nsURI, this);
         return elem;
@@ -120,7 +120,7 @@ class LineInfoElement : XmlElement, IXmlLineInfo {
 } // End LineInfoElement class.
 ```
 
-### <a name="example"></a>예
+### <a name="example"></a>예제
 
 다음 예제에서는 XML 문서의 요소 수를 계산합니다.
 
@@ -232,7 +232,7 @@ book.xml
 </book>
 ```
 
-#### <a name="output"></a>Output
+#### <a name="output"></a>출력
 
 ```console
 Number of elements in book.xml: 3
@@ -250,6 +250,6 @@ Number of elements in book.xml: 3
 
 파생 클래스에서 <xref:System.Xml.XmlDocument.CreateElement%2A> 메서드를 재정의하면 문서를 편집하면서 새 요소를 만들 때 기본 특성이 추가되지 않습니다. 이것은 편집하는 동안에만 발생하는 문제입니다. <xref:System.Xml.XmlDocument.CreateElement%2A> 메서드는 <xref:System.Xml.XmlDocument>에 기본 특성을 추가하는 기능을 수행하므로 <xref:System.Xml.XmlDocument.CreateElement%2A> 메서드에 이 기능을 수행하는 코드를 추가해야 합니다. 기본 특성을 포함한 <xref:System.Xml.XmlDocument>를 로드하면 해당 문서는 올바르게 처리됩니다. 기본 특성에 대한 자세한 내용은 [DOM에서 요소의 새 특성 만들기](creating-new-attributes-for-elements-in-the-dom.md)를 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [XML DOM(문서 개체 모델)](xml-document-object-model-dom.md)

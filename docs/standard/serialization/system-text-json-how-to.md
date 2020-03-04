@@ -9,12 +9,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: fdca8d957bb2453e90652af1dfe5ef99b33b1b2c
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: 8025f84f2425f5b91e08b28ddb24d105d8c4d1a3
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163204"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159587"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>.NET에서 JSON을 serialize 및 deserialize (marshal 및 트랜잭션의 역마샬링 위해) 하는 방법
 
@@ -61,7 +61,7 @@ JSON을 문자열 또는 파일에 쓰려면 <xref:System.Text.Json.JsonSerializ
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithPOCOs)]
 
-이전 형식의 인스턴스를 serialize 하는 JSON 출력은 다음 예제와 같습니다. JSON 출력은 기본적으로 축소 되어 있습니다. 
+이전 형식의 인스턴스를 serialize 하는 JSON 출력은 다음 예제와 같습니다. JSON 출력은 기본적으로 축소 되어 있습니다.
 
 ```json
 {"Date":"2019-08-01T00:00:00-07:00","TemperatureCelsius":25,"Summary":"Hot","DatesAvailable":["2019-08-01T00:00:00-07:00","2019-08-02T00:00:00-07:00"],"TemperatureRanges":{"Cold":{"High":20,"Low":-10},"Hot":{"High":60,"Low":20}},"SummaryWords":["Cool","Windy","Humid"]}
@@ -191,7 +191,7 @@ JSON 출력을 잘 인쇄 하려면 <xref:System.Text.Json.JsonSerializerOptions
 * [모든 속성 이름을 카멜식 대/소문자로 변환](#use-camel-case-for-all-json-property-names)
 * [사용자 지정 속성 명명 정책 구현](#use-a-custom-json-property-naming-policy)
 * [사전 키를 카멜식 대/소문자로 변환](#camel-case-dictionary-keys)
-* [문자열 및 카멜식 대/소문자로 열거형 변환](#enums-as-strings) 
+* [문자열 및 카멜식 대/소문자로 열거형 변환](#enums-as-strings)
 
 JSON 속성 이름 및 값을 특수 하 게 처리 해야 하는 다른 시나리오의 경우 [사용자 지정 변환기를 구현할](system-text-json-converters-how-to.md)수 있습니다.
 
@@ -380,7 +380,7 @@ Serialize 할 개체의 속성이 `Dictionary<string,TValue>`형식이 면 `stri
 
 |속성 |값  |
 |---------|---------|
-| 날짜    | 오전 8/1/2019 12:00:00-07:00|
+| Date    | 오전 8/1/2019 12:00:00-07:00|
 | TemperatureCelsius| 25 |
 | 요약| null|
 
@@ -507,7 +507,7 @@ Serialize 할 개체의 속성이 `Dictionary<string,TValue>`형식이 면 `stri
 ```
 
 > [!IMPORTANT]
-> 이러한 접근 방식은 루트 개체의 속성이 아니라 serialize 될 루트 개체에 대해서만 다형성 serialization을 제공 합니다. 
+> 이러한 접근 방식은 루트 개체의 속성이 아니라 serialize 될 루트 개체에 대해서만 다형성 serialization을 제공 합니다.
 
 `object`형식으로 정의 하는 경우 하위 수준 개체에 대해 다형성 serialization을 가져올 수 있습니다. 예를 들어 `WeatherForecast` 클래스에 `WeatherForecast` 또는 `object`형식으로 정의할 수 있는 `PreviousForecast` 라는 속성이 있다고 가정 합니다.
 
@@ -566,7 +566,7 @@ Serialize 할 개체의 속성이 `Dictionary<string,TValue>`형식이 면 `stri
 }
 ```
 
-다형 **직렬화**에 대 한 자세한 내용과 **deserialization**에 대 한 자세한 내용은 [Newtonsoft.Json에서 System.Text.Json로 마이그레이션하는 방법 ](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization)을 참조 하세요.
+다형 **직렬화**에 대 한 자세한 내용과 **deserialization**에 대 한 자세한 내용은 [Newtonsoft.json에서 system.string으로 마이그레이션하는 방법](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization)을 참조 하세요.
 
 ## <a name="allow-comments-and-trailing-commas"></a>주석과 후행 쉼표 허용
 
@@ -634,11 +634,11 @@ Deserialize 할 JSON은 다음과 같습니다.
 
 앞에서 설명한 JSON을이 샘플 형식으로 deserialize 하는 경우 추가 데이터는 `ExtensionData` 속성의 키-값 쌍이 됩니다.
 
-|속성 |값  |참고  |
+|속성 |값  |참고 사항  |
 |---------|---------|---------|
-| 날짜    | 오전 8/1/2019 12:00:00-07:00||
+| Date    | 오전 8/1/2019 12:00:00-07:00||
 | TemperatureCelsius| 0 | 대/소문자를 구분 하는 불일치 (JSON의`temperatureCelsius`) 이므로 속성은 설정 되지 않습니다. |
-| 요약 | 높음 ||
+| 요약 | 핫 ||
 | ExtensionData | temperatureCelsius: 25 |Case가 일치 하지 않기 때문에이 JSON 속성은 추가 이며 사전에서 키-값 쌍이 됩니다.|
 || DatesAvailable:<br>  오전 8/1/2019 12:00:00-07:00<br>오전 8/2/2019 12:00:00-07:00 |JSON의 추가 속성은 키-값 쌍이 되며 배열은 값 개체로 사용 됩니다.|
 | |요약 단어:<br>표<br>바람<br>Humid |JSON의 추가 속성은 키-값 쌍이 되며 배열은 값 개체로 사용 됩니다.|
@@ -709,10 +709,10 @@ JSON의 Null 값은 유효한 경우에만 무시 됩니다. Null을 허용 하�
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/JsonDocumentDataAccess.cs?name=SnippetAverageGrades1)]
 
-위의 코드:
+위의 코드는:
 
 * JSON을 분석 하는 것이 `jsonString`라는 문자열에 있다고 가정 합니다.
-* `Grade` 속성이 있는 `Students` 배열의 개체에 대 한 평균 등급을 계산 합니다. 
+* `Grade` 속성이 있는 `Students` 배열의 개체에 대 한 평균 등급을 계산 합니다.
 * 등급이 없는 학생의 기본 등급 (70)을 할당 합니다.
 * 각 반복으로 `count` 변수를 증가 시켜 학생 수를 계산 합니다. 다른 방법은 다음 예제와 같이 <xref:System.Text.Json.JsonElement.GetArrayLength%2A>를 호출 하는 것입니다.
 
@@ -728,11 +728,11 @@ JSON의 Null 값은 유효한 경우에만 무시 됩니다. Null을 허용 하�
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/JsonDocumentWriteJson.cs?name=SnippetSerialize)]
 
-위의 코드:
+위의 코드는:
 
 * JSON 파일을 읽고, `JsonDocument`에 데이터를 로드 하 고, 서식 있는 (예쁜 인쇄) JSON을 파일에 씁니다.
 * <xref:System.Text.Json.JsonDocumentOptions>를 사용 하 여 입력 JSON의 주석이 허용 되지만 무시 되도록 지정 합니다.
-* 완료 되 면 작성기에서 <xref:System.Text.Json.Utf8JsonWriter.Flush%2A>를 호출 합니다. 또는 삭제 될 때 작성자가 autoflush 수 있도록 하는 것이 좋습니다. 
+* 완료 되 면 작성기에서 <xref:System.Text.Json.Utf8JsonWriter.Flush%2A>를 호출 합니다. 또는 삭제 될 때 작성자가 autoflush 수 있도록 하는 것이 좋습니다.
 
 예제 코드에서 처리할 JSON 입력의 예는 다음과 같습니다.
 
@@ -762,14 +762,14 @@ JSON의 Null 값은 유효한 경우에만 무시 됩니다. Null을 허용 하�
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/Utf8ReaderFromFile.cs)]
 
-위의 코드:
+위의 코드는:
 
 * JSON에 개체 배열이 포함 되어 있다고 가정 하 고 각 개체에 문자열 형식의 "name" 속성이 포함 될 수 있습니다.
 * "대학"으로 끝나는 개체 및 "이름" 속성 값의 개수를 계산 합니다.
 * 는 파일이 u t f-16으로 인코딩되고 u t f-8로 코드 변환 가정 합니다. U t f-8로 인코딩된 파일은 다음 코드를 사용 하 여 `ReadOnlySpan<byte>`직접 읽을 수 있습니다.
 
   ```csharp
-  ReadOnlySpan<byte> jsonReadOnlySpan = File.ReadAllBytes(fileName); 
+  ReadOnlySpan<byte> jsonReadOnlySpan = File.ReadAllBytes(fileName);
   ```
 
   파일에 UTF-8 바이트 순서 표시 (BOM)가 포함 된 경우 판독기가 텍스트를 예상 하므로 `Utf8JsonReader`바이트를 전달 하기 전에이를 제거 합니다. 그렇지 않으면 BOM은 잘못 된 JSON으로 간주 되며 판독기는 예외를 throw 합니다.

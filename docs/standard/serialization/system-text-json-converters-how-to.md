@@ -10,23 +10,23 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: f72d2d83d701b20648140900d65c9098a8abb721
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: 310967f39c3aa7a46d79087bcbf0cb016f7d7284
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76164062"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159574"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>.NET에서 JSON serialization에 대 한 사용자 지정 변환기를 작성 하는 방법 (마샬링)
 
-이 문서에서는 <xref:System.Text.Json> 네임 스페이스에 제공 된 JSON serialization 클래스에 대 한 사용자 지정 변환기를 만드는 방법을 보여 줍니다. `System.Text.Json`에 대 한 소개는 [.net에서 JSON을 serialize 및 deserialize 하는 방법](system-text-json-how-to.md)을 참조 하세요.
+이 문서에서는 <xref:[!OP.NO-LOC(System.Text.Json)]> 네임 스페이스에 제공 된 JSON serialization 클래스에 대 한 사용자 지정 변환기를 만드는 방법을 보여 줍니다. `[!OP.NO-LOC(System.Text.Json)]`에 대 한 소개는 [.net에서 JSON을 serialize 및 deserialize 하는 방법](system-text-json-how-to.md)을 참조 하세요.
 
-*변환기* 는 개체 또는 값을 JSON으로 변환 하는 클래스입니다. `System.Text.Json` 네임 스페이스에는 JavaScript 기본 형식에 매핑되는 대부분의 기본 형식에 대 한 기본 제공 변환기가 있습니다. 사용자 지정 변환기를 작성할 수 있습니다.
+*변환기* 는 개체 또는 값을 JSON으로 변환 하는 클래스입니다. `[!OP.NO-LOC(System.Text.Json)]` 네임 스페이스에는 JavaScript 기본 형식에 매핑되는 대부분의 기본 형식에 대 한 기본 제공 변환기가 있습니다. 사용자 지정 변환기를 작성할 수 있습니다.
 
 * 기본 제공 변환기의 기본 동작을 재정의 합니다. 예를 들어 `DateTime` 값을 기본 ISO 8601-1:2019 형식 대신 mm/dd/yyyy 형식으로 표시 하도록 할 수 있습니다.
 * 사용자 지정 값 형식을 지원 하려면입니다. 예를 들어 `PhoneNumber` 구조체입니다.
 
-현재 릴리스에 포함 되지 않은 기능을 사용 하 여 `System.Text.Json`를 사용자 지정 하거나 확장 하는 사용자 지정 변환기를 작성할 수도 있습니다. 이 문서의 뒷부분에서 설명 하는 시나리오는 다음과 같습니다.
+현재 릴리스에 포함 되지 않은 기능을 사용 하 여 `[!OP.NO-LOC(System.Text.Json)]`를 사용자 지정 하거나 확장 하는 사용자 지정 변환기를 작성할 수도 있습니다. 이 문서의 뒷부분에서 설명 하는 시나리오는 다음과 같습니다.
 
 * [유추 된 형식을 개체 속성으로 Deserialize](#deserialize-inferred-types-to-object-properties)합니다.
 * [문자열이 아닌 키로 사전을 지원](#support-dictionary-with-non-string-key)합니다.
@@ -58,7 +58,7 @@ ms.locfileid: "76164062"
 
 ## <a name="sample-factory-pattern-converter"></a>샘플 팩터리 패턴 변환기
 
-다음 코드에서는 `Dictionary<Enum,TValue>`와 함께 작동 하는 사용자 지정 변환기를 보여 줍니다. 첫 번째 제네릭 형식 매개 변수가 `Enum` 고 두 번째는 열려 있기 때문에 코드는 팩터리 패턴을 따릅니다. `CanConvert` 메서드는 두 개의 제네릭 매개 변수를 사용 하는 `Dictionary`에 대 한 `true` 반환 합니다 .이 중 첫 번째 매개 변수는 `Enum` 형식입니다. 내부 변환기는 `TValue`위해 런타임에 제공 되는 형식을 처리 하기 위해 기존 변환기를 가져옵니다. 
+다음 코드에서는 `Dictionary<Enum,TValue>`와 함께 작동 하는 사용자 지정 변환기를 보여 줍니다. 첫 번째 제네릭 형식 매개 변수가 `Enum` 고 두 번째는 열려 있기 때문에 코드는 팩터리 패턴을 따릅니다. `CanConvert` 메서드는 두 개의 제네릭 매개 변수를 사용 하는 `Dictionary`에 대 한 `true` 반환 합니다 .이 중 첫 번째 매개 변수는 `Enum` 형식입니다. 내부 변환기는 `TValue`위해 런타임에 제공 되는 형식을 처리 하기 위해 기존 변환기를 가져옵니다.
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DictionaryTKeyEnumTValueConverter.cs)]
 
@@ -68,47 +68,47 @@ ms.locfileid: "76164062"
 
 다음 단계에서는 기본 패턴을 따라 변환기를 만드는 방법을 설명 합니다.
 
-* <xref:System.Text.Json.Serialization.JsonConverter%601>에서 파생 되는 클래스를 만듭니다. 여기서 `T`는 serialize 및 deserialize 할 형식입니다.
-* `Read` 메서드를 재정의 하 여 들어오는 JSON을 deserialize 하 고 `T`형식으로 변환 합니다. 메서드에 전달 된 <xref:System.Text.Json.Utf8JsonReader>를 사용 하 여 JSON을 읽습니다.
-* `Write` 메서드를 재정의 하 여 `T`형식의 들어오는 개체를 serialize 합니다. 메서드에 전달 된 <xref:System.Text.Json.Utf8JsonWriter>를 사용 하 여 JSON을 작성 합니다.
+* <xref:[!OP.NO-LOC(System.Text.Json)].Serialization.JsonConverter%601>에서 파생 되는 클래스를 만듭니다. 여기서 `T`는 serialize 및 deserialize 할 형식입니다.
+* `Read` 메서드를 재정의 하 여 들어오는 JSON을 deserialize 하 고 `T`형식으로 변환 합니다. 메서드에 전달 된 <xref:[!OP.NO-LOC(System.Text.Json)].Utf8JsonReader>를 사용 하 여 JSON을 읽습니다.
+* `Write` 메서드를 재정의 하 여 `T`형식의 들어오는 개체를 serialize 합니다. 메서드에 전달 된 <xref:[!OP.NO-LOC(System.Text.Json)].Utf8JsonWriter>를 사용 하 여 JSON을 작성 합니다.
 * 필요한 경우에만 `CanConvert` 메서드를 재정의 합니다. 변환할 형식이 `T`형식일 때 기본 구현에서는 `true`을 반환 합니다. 따라서 형식 `T` 지 원하는 변환기는이 메서드를 재정의할 필요가 없습니다. 이 메서드를 재정의 해야 하는 변환기에 대 한 예제는이 문서의 뒷부분에 있는 [다형 deserialization](#support-polymorphic-deserialization) 단원을 참조 하세요.
 
-[기본 제공 변환기 소스 코드](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters/) 를 참조 구현으로 참조 하 여 사용자 지정 변환기를 작성할 수 있습니다.
+[기본 제공 변환기 소스 코드](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/[!OP.NO-LOC(System.Text.Json)]/src/[!OP.NO-LOC(System/Text/Json)]/Serialization/Converters/) 를 참조 구현으로 참조 하 여 사용자 지정 변환기를 작성할 수 있습니다.
 
 ## <a name="steps-to-follow-the-factory-pattern"></a>팩터리 패턴을 따르는 단계
 
 다음 단계는 팩터리 패턴을 따라 변환기를 만드는 방법을 설명 합니다.
 
-* <xref:System.Text.Json.Serialization.JsonConverterFactory>에서 파생되는 클래스를 만듭니다.
-* 변환할 형식이 변환기에서 처리할 수 있는 형식인 경우 true를 반환 하도록 `CanConvert` 메서드를 재정의 합니다. 예를 들어 `List<T>`에 대 한 변환기 인 경우 `List<int>`, `List<string>`및 `List<DateTime>`만 처리할 수 있습니다. 
+* <xref:[!OP.NO-LOC(System.Text.Json)].Serialization.JsonConverterFactory>에서 파생되는 클래스를 만듭니다.
+* 변환할 형식이 변환기에서 처리할 수 있는 형식인 경우 true를 반환 하도록 `CanConvert` 메서드를 재정의 합니다. 예를 들어 `List<T>`에 대 한 변환기 인 경우 `List<int>`, `List<string>`및 `List<DateTime>`만 처리할 수 있습니다.
 * 런타임에 제공 되는 변환 형식을 처리할 변환기 클래스의 인스턴스를 반환 하도록 `CreateConverter` 메서드를 재정의 합니다.
-* `CreateConverter` 메서드가 인스턴스화하는 변환기 클래스를 만듭니다. 
+* `CreateConverter` 메서드가 인스턴스화하는 변환기 클래스를 만듭니다.
 
 개체를 문자열로 변환 하는 코드는 모든 형식에 대해 동일 하지 않기 때문에 개방형 제네릭에 팩터리 패턴이 필요 합니다. 개방형 제네릭 형식 (예:`List<T>`)에 대 한 변환기는 폐쇄형 제네릭 형식 (예:`List<DateTime>`)에 대 한 변환기를 백그라운드에서 만들어야 합니다. 변환기가 처리할 수 있는 각 폐쇄형 제네릭 형식을 처리 하기 위해 코드를 작성 해야 합니다.
 
-`Enum` 형식은 개방형 제네릭 형식과 유사 합니다. `Enum`에 대 한 변환기는 내부적으로 특정 `Enum` (예:`WeekdaysEnum`)의 변환기를 만들어야 합니다. 
+`Enum` 형식은 개방형 제네릭 형식과 유사 합니다. `Enum`에 대 한 변환기는 내부적으로 특정 `Enum` (예:`WeekdaysEnum`)의 변환기를 만들어야 합니다.
 
 ## <a name="error-handling"></a>오류 처리
 
-오류 처리 코드에서 예외를 throw 해야 하는 경우에는 메시지 없이 <xref:System.Text.Json.JsonException>를 throw 하는 것이 좋습니다. 이 예외 형식은 오류를 발생 시킨 JSON 부분의 경로를 포함 하는 메시지를 자동으로 만듭니다. 예를 들어 `throw new JsonException();` 문은 다음 예제와 같이 오류 메시지를 생성 합니다.
+오류 처리 코드에서 예외를 throw 해야 하는 경우에는 메시지 없이 <xref:[!OP.NO-LOC(System.Text.Json)].JsonException>를 throw 하는 것이 좋습니다. 이 예외 형식은 오류를 발생 시킨 JSON 부분의 경로를 포함 하는 메시지를 자동으로 만듭니다. 예를 들어 `throw new JsonException();` 문은 다음 예제와 같이 오류 메시지를 생성 합니다.
 
 ```
-Unhandled exception. System.Text.Json.JsonException: 
-The JSON value could not be converted to System.Object. 
+Unhandled exception. [!OP.NO-LOC(System.Text.Json)].JsonException:
+The JSON value could not be converted to System.Object.
 Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 ```
 
-`throw new JsonException("Error occurred")`와 같이 메시지를 제공 하는 경우 예외는 여전히 <xref:System.Text.Json.JsonException.Path> 속성의 경로를 제공 합니다.
+`throw new JsonException("Error occurred")`와 같이 메시지를 제공 하는 경우 예외는 여전히 <xref:[!OP.NO-LOC(System.Text.Json)].JsonException.Path> 속성의 경로를 제공 합니다.
 
 ## <a name="register-a-custom-converter"></a>사용자 지정 변환기 등록
 
 사용자 지정 변환기를 *등록* 하 여 `Serialize` 및 `Deserialize` 메서드가 사용 하도록 합니다. 다음 방법 중 하나를 선택 합니다.
 
-* <xref:System.Text.Json.JsonSerializerOptions.Converters?displayProperty=nameWithType> 컬렉션에 변환기 클래스의 인스턴스를 추가 합니다.
-* [[JsonConverter]](xref:System.Text.Json.Serialization.JsonConverterAttribute) 특성을 사용자 지정 변환기가 필요한 속성에 적용 합니다.
-* 사용자 지정 값 형식을 나타내는 구조체 또는 클래스에 [[JsonConverter]](xref:System.Text.Json.Serialization.JsonConverterAttribute) 특성을 적용 합니다.
+* <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.Converters?displayProperty=nameWithType> 컬렉션에 변환기 클래스의 인스턴스를 추가 합니다.
+* [[JsonConverter]](xref:[!OP.NO-LOC(System.Text.Json)].Serialization.JsonConverterAttribute) 특성을 사용자 지정 변환기가 필요한 속성에 적용 합니다.
+* 사용자 지정 값 형식을 나타내는 구조체 또는 클래스에 [[JsonConverter]](xref:[!OP.NO-LOC(System.Text.Json)].Serialization.JsonConverterAttribute) 특성을 적용 합니다.
 
-## <a name="registration-sample---converters-collection"></a>등록 샘플-변환기 컬렉션 
+## <a name="registration-sample---converters-collection"></a>등록 샘플-변환기 컬렉션
 
 다음은 형식 <xref:System.DateTimeOffset>의 속성에 대 한 기본값을 <xref:System.ComponentModel.DateTimeOffsetConverter> 하는 예제입니다.
 
@@ -296,7 +296,7 @@ Serialization에서 JSON 출력은 다음 예제와 같습니다.
 * [Deserialize 할 때 문자열 및 숫자 값을 모두 허용 하는 Int32 변환기](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Int32.cs)
 * [Enum 변환기](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Enum.cs)
 * [외부 데이터를 허용 하는\<T > 변환기 나열](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.List.cs)
-* [쉼표로 구분 된 숫자 목록과 함께 작동 하는 Long [] 변환기](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Array.cs) 
+* [쉼표로 구분 된 숫자 목록과 함께 작동 하는 Long [] 변환기](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Array.cs)
 
 기존 기본 제공 변환기의 동작을 수정 하는 변환기를 만들어야 하는 경우 사용자 지정을 위한 시작 지점으로 사용할 [기존 변환기의 소스 코드](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters) 를 가져올 수 있습니다.
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - literal XML serialization
 - serialization, attributes
 ms.assetid: a416192f-8102-458e-bc0a-0b8f3f784da9
-ms.openlocfilehash: c8e4e848cb37ac1b2d147b570d98777a7beaf1bb
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 2301f30a55e136b9a75a414d9325e4cf71c161da
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460259"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159535"
 ---
 # <a name="xml-serialization-with-xml-web-services"></a>XML Web Services의 XML Serialization
 XML serialization은 XML Web services 아키텍처에 사용되며 <xref:System.Xml.Serialization.XmlSerializer> 클래스에 의해 수행되는 내부 전송 메커니즘입니다. XML Web services로 생성된 XML을 제어하려면 [XML serialization을 제어하는 특성](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) 및 [인코드된 SOAP serialization을 제어하는 특성](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)에 나열된 특성을 XML Web services(.asmx)를 만드는 데 사용된 파일의 클래스, 반환 값, 매개 변수 및 필드에 적용할 수 있습니다. XML Web Services를 만드는 방법에 대 한 자세한 내용은 [ASP.NET를 사용 하는 Xml 웹 서비스](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ba0z6a33(v=vs.100))를 참조 하세요.  
@@ -51,12 +51,12 @@ End Class
   
 Public Class MyService  
     <WebMethod, SoapDocumentMethod> _  
-    public Function MyLiteralMethod() As Order   
+    public Function MyLiteralMethod() As Order
         Dim myOrder As Order = New Order()  
         return myOrder  
     End Function  
     <WebMethod, SoapRpcMethod> _  
-    public Function MyEncodedMethod() As Order   
+    public Function MyEncodedMethod() As Order
         Dim myOrder As Order = New Order()  
         return myOrder  
     End Function  
@@ -90,7 +90,7 @@ public class MyService {
 }  
 ```  
   
- 다음 코드 예제에서는 `MyLiteralMethod`를 호출 합니다. 요소 이름이 "LiteralOrderID"로 변경됩니다.  
+ 다음 코드 예제에서는 `MyLiteralMethod`를 호출합니다. 요소 이름이 "LiteralOrderID"로 변경됩니다.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -105,7 +105,7 @@ public class MyService {
 </soap:Envelope>  
 ```  
   
- 다음 코드 예제에서는 `MyEncodedMethod`를 호출 합니다. 요소 이름은 "EncodedOrderID"입니다.  
+ 다음 코드 예제에서는 `MyEncodedMethod`를 호출합니다. 요소 이름은 "EncodedOrderID"입니다.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -129,7 +129,7 @@ public class MyService {
 public Function MyLiteralMethod() As _  
 <XmlElement(Namespace:="http://www.cohowinery.com", _  
 ElementName:= "BookOrder")> _  
-Order   
+Order
     Dim myOrder As Order = New Order()  
     return myOrder  
 End Function  
@@ -169,7 +169,7 @@ public Function MyLiteralMethod(<XmlElement _
 ("MyOrderID", Namespace:="http://www.microsoft.com")>ID As String) As _  
 <XmlElement(Namespace:="http://www.cohowinery.com", _  
 ElementName:= "BookOrder")> _  
-Order   
+Order
     Dim myOrder As Order = New Order()  
     myOrder.OrderID = ID  
     return myOrder  
@@ -180,12 +180,12 @@ End Function
 [return: XmlElement(Namespace = "http://www.cohowinery.com",  
 ElementName = "BookOrder")]  
 [WebMethod][SoapDocumentMethod]  
-public Order MyLiteralMethod([XmlElement("MyOrderID",   
+public Order MyLiteralMethod([XmlElement("MyOrderID",
 Namespace="http://www.microsoft.com")] string ID){  
     Order myOrder = new Order();  
     myOrder.OrderID = ID;  
     return myOrder;  
-}   
+}
 ```  
   
  SOAP 요청은 다음과 같습니다.  
@@ -258,7 +258,7 @@ public class Order {
 </BookOrderForm>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [XML 및 SOAP serialization](xml-and-soap-serialization.md)
 - [인코딩된 SOAP serialization을 제어하는 특성](attributes-that-control-encoded-soap-serialization.md)
@@ -266,4 +266,4 @@ public class Order {
 - [방법: 인코딩된 SOAP XML serialization 재정의](how-to-override-encoded-soap-xml-serialization.md)
 - [XML serialization 소개](introducing-xml-serialization.md)
 - [방법: 개체 직렬화](how-to-serialize-an-object.md)
-- [방법: 개체 deserialize](how-to-deserialize-an-object.md)
+- [방법: 개체 역직렬화](how-to-deserialize-an-object.md)

@@ -1,18 +1,18 @@
 ---
-title: <schemaImporterExtensions>에 대한 <add> 요소
+title: <add>에 대한 <schemaImporterExtensions> 요소
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XML serialization, configuration
 - <add> element for <schemaImporterExtensions> element
 ms.assetid: c828a558-094b-441e-9065-790b87315fa0
-ms.openlocfilehash: 89196b094d5631c9e243a51a718e53f9c06db20d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f47623aa305ae6e98625acc3d199a76e27d2ea5
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794981"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159938"
 ---
-# <a name="add-element-for-schemaimporterextensions"></a>\<추가 > 요소에 대 한 \<schemaImporterExtensions >
+# <a name="add-element-for-schemaimporterextensions"></a>\<schemaImporterExtensions에 대 한 > 요소 \<추가 >
 <xref:System.Xml.Serialization.XmlSchemaImporter>에서 XSD 형식을 .NET Framework 형식으로 매핑하는 데 사용하는 형식을 추가합니다. 구성 파일에 대한 자세한 내용은 [구성 파일 스키마](../../../docs/framework/configure-apps/file-schema/index.md)를 참조하세요.  
   
  \<configuration>  
@@ -52,15 +52,15 @@ ms.locfileid: "61794981"
 <configuration>  
   <system.xml.serialization>  
     <schemaImporterExtensions>  
-       <add name="contoso" type="System.Web.Mobile.MobileCapabilities,   
-       System.Web.Mobile, Version=2.0.0.0, Culture=neutral,   
-       PublicKeyToken=b03f5f7f11d50a3a" />   
+       <add name="contoso" type="System.Web.Mobile.MobileCapabilities,
+       System.Web.Mobile, Version=2.0.0.0, Culture=neutral,
+       PublicKeyToken=b03f5f7f11d50a3a" />
     </schemaImporterExtensions>  
   </system.xml.serialization>  
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
 - [\<system.xml.serialization> 요소](../../../docs/standard/serialization/system-xml-serialization-element.md)

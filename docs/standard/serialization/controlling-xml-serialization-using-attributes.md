@@ -15,12 +15,12 @@ helpviewer_keywords:
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-ms.openlocfilehash: e089924900196ae369de1becfe3d0b8f0a00b79c
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d4e30984a232b17d1f40e300655c519ec1a6e191
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459279"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159912"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>특성을 사용하여 XML Serialization 제어
 
@@ -250,7 +250,7 @@ serialize된 인스턴스는 다음과 같을 수 있습니다.
 <xref:System.Xml.Serialization.XmlElementAttribute>가 필드에 적용되는 경우 결과 스키마는 다음과 같이 요소를 설명합니다.
 
 ```xml
-<xs:element minOccurs="0" maxOccurs="unbounded" name="Employees" type="Employee" /> 
+<xs:element minOccurs="0" maxOccurs="unbounded" name="Employees" type="Employee" />
 ```
 
 ## <a name="serializing-an-arraylist"></a>ArrayList serialize
@@ -267,7 +267,7 @@ End Class
 
 ```csharp
 public class Group {
-    [XmlElement(Type = typeof(Employee)), 
+    [XmlElement(Type = typeof(Employee)),
     XmlElement(Type = typeof(Manager))]
     public ArrayList Info;
 }
@@ -315,7 +315,7 @@ public class Group {
 
 public 속성이나 필드를 serialize할 필요가 없는 상황이 있을 수 있습니다. 예를 들어 메타데이터를 포함하기 위해 필드나 속성을 사용할 수 있습니다. 이러한 경우에는 <xref:System.Xml.Serialization.XmlIgnoreAttribute>를 필드 또는 속성에 적용하면 <xref:System.Xml.Serialization.XmlSerializer>가 이를 건너뜁니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [XML serialization을 제어하는 특성](attributes-that-control-xml-serialization.md)
 - [인코딩된 SOAP serialization을 제어하는 특성](attributes-that-control-encoded-soap-serialization.md)
@@ -323,4 +323,4 @@ public 속성이나 필드를 serialize할 필요가 없는 상황이 있을 수
 - [XML serialization 예제](examples-of-xml-serialization.md)
 - [방법: XML 스트림의 대체 요소 이름 지정](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
 - [방법: 개체 직렬화](how-to-serialize-an-object.md)
-- [방법: 개체 deserialize](how-to-deserialize-an-object.md)
+- [방법: 개체 역직렬화](how-to-deserialize-an-object.md)

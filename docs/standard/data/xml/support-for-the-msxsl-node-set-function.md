@@ -3,12 +3,12 @@ title: msxsl:node-set() 함수에 대한 지원
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
-ms.openlocfilehash: b9603f6c910e8e29309618c8e01e283c28ae2bff
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5022b298cb20796edbc54e951d8b06043697d832
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710130"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155596"
 ---
 # <a name="support-for-the-msxslnode-set-function"></a>msxsl:node-set() 함수에 대한 지원
 `msxsl:node-set` 함수를 사용하면 결과 트리 조각을 노드 집합으로 변환할 수 있습니다. 결과로 만들어지는 노드 집합은 트리의 루트 노드로서 항상 단일 노드를 포함합니다.  
@@ -18,7 +18,7 @@ ms.locfileid: "75710130"
   
  `msxsl:node-set` 함수를 사용하면 결과 트리 조각을 노드 집합으로 변환할 수 있습니다. 결과로 만들어지는 노드 집합은 트리의 루트 노드로서 항상 단일 노드를 포함합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서 `$var`는 스타일시트의 노드 트리인 변수입니다. for-each 문과 `node-set` 함수를 함께 사용하면 이 노드 트리를 노드 집합으로 반복할 수 있습니다.  
   
 ## <a name="nodesetxsl"></a>nodeset.xsl  
@@ -35,7 +35,7 @@ ms.locfileid: "75710130"
   
     <xsl:template match="/">  
         <authors>  
-            <xsl:for-each select="msxsl:node-set($books)/book">   
+            <xsl:for-each select="msxsl:node-set($books)/book">
                 <author><xsl:value-of select="@author"/></author>  
             </xsl:for-each>  
         </authors>  
@@ -43,7 +43,7 @@ ms.locfileid: "75710130"
 </xsl:stylesheet>  
 ```  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>출력  
  변환 결과  
   
 ```xml  
@@ -51,6 +51,6 @@ ms.locfileid: "75710130"
 <authors><author>Michael Howard</author><author>Michael Kay</author></authors>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [XslTransform 클래스의 XSLT 프로세서 구현](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

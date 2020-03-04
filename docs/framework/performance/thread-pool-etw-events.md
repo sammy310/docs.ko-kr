@@ -5,12 +5,12 @@ helpviewer_keywords:
 - thread pool events [.NET Framework]
 - ETW, thread pool events (CLR)
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
-ms.openlocfilehash: e1deb17dfdfea4c8b66eb8d836a10bf888727e1a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 249d0607ddd280bcb4e9cf3ef34b28ff8ada3b04
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715897"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240495"
 ---
 # <a name="thread-pool-etw-events"></a>스레드 풀 ETW 이벤트
 이러한 이벤트는 작업자 스레드 및 I/O 스레드에 대한 정보를 수집합니다.  
@@ -27,13 +27,13 @@ ms.locfileid: "75715897"
 ### <a name="threadpoolworkerthreadstart-and-threadpoolworkerthreadstop"></a>ThreadPoolWorkerThreadStart 및 ThreadPoolWorkerThreadStop  
  다음 표에서는 이러한 이벤트의 키워드 및 수준을 보여 줍니다. 자세한 내용은 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)을 참조하세요.  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|이벤트를 발생시키기 위한 키워드|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|정보(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|Event|이벤트 ID|발생 시기|  
+|이벤트(event)|이벤트 ID|발생 시기|  
 |-|-|-|  
 |`ThreadPoolWorkerThreadStart`|50|작업자 스레드가 생성됩니다.|  
 |`ThreadPoolWorkerThreadStop`|51|작업자 스레드가 중지됩니다.|  
@@ -54,13 +54,13 @@ ms.locfileid: "75715897"
 #### <a name="threadpoolworkerthreadadjustmentsample"></a>ThreadPoolWorkerThreadAdjustmentSample  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|이벤트를 발생시키기 위한 키워드|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|정보(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|Event|이벤트 ID|설명|  
+|이벤트(event)|이벤트 ID|설명|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentSample`|54|한 샘플의 정보 컬렉션을 나타냅니다. 즉, 특정 시점에 특정 동시성 수준으로 처리량을 측정한 것입니다.|  
   
@@ -74,13 +74,13 @@ ms.locfileid: "75715897"
 #### <a name="threadpoolworkerthreadadjustmentadjustment"></a>ThreadPoolWorkerThreadAdjustmentAdjustment  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|이벤트를 발생시키기 위한 키워드|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|정보(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|Event|이벤트 ID|설명|  
+|이벤트(event)|이벤트 ID|설명|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentAdjustment`|55|스레드 삽입(언덕 오르기) 알고리즘이 동시성 수준에서 변화를 감지할 때 제어의 변경을 기록합니다.|  
   
@@ -96,13 +96,13 @@ ms.locfileid: "75715897"
 #### <a name="threadpoolworkerthreadadjustmentstats"></a>ThreadPoolWorkerThreadAdjustmentStats  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|이벤트를 발생시키기 위한 키워드|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|정보(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|Event|이벤트 ID|설명|  
+|이벤트(event)|이벤트 ID|설명|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentStats`|56|스레드 풀의 데이터를 수집합니다.|  
   
@@ -110,12 +110,12 @@ ms.locfileid: "75715897"
   
 |필드 이름|데이터 형식|설명|  
 |----------------|---------------|-----------------|  
-|지속 시간|win:Double|이러한 통계가 수집된 시간(초)입니다.|  
+|기간|win:Double|이러한 통계가 수집된 시간(초)입니다.|  
 |처리량|win:Double|이 간격 동안의 초당 평균 완료 수입니다.|  
-|ThreadWave|win:Double|내부 용도로 예약되어 있습니다.|  
-|ThroughputWave|win:Double|내부 용도로 예약되어 있습니다.|  
-|ThroughputErrorEstimate|win:Double|내부 용도로 예약되어 있습니다.|  
-|AverageThroughputErrorEstimate|win:Double|내부 용도로 예약되어 있습니다.|  
+|ThreadWave|win:Double|내부용으로 예약됩니다.|  
+|ThroughputWave|win:Double|내부용으로 예약됩니다.|  
+|ThroughputErrorEstimate|win:Double|내부용으로 예약됩니다.|  
+|AverageThroughputErrorEstimate|win:Double|내부용으로 예약됩니다.|  
 |ThroughputRatio|win:Double|이 간격 동안 활성 작업자 스레드 수의 변화로 인해 발생한 처리량의 상대적인 증가량입니다.|  
 |Confidence|win:Double|ThroughputRatio 필드의 유효성 측정값입니다.|  
 |NewcontrolSetting|win:Double|활성 스레드 개수에서 미래의 변동에 대한 기준으로 사용될 활성 작업자 스레드 수입니다.|  
@@ -128,13 +128,13 @@ ms.locfileid: "75715897"
 ### <a name="iothreadcreate_v1"></a>IOThreadCreate_V1  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|이벤트를 발생시키기 위한 키워드|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|정보(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|Event|이벤트 ID|발생 시기|  
+|이벤트(event)|이벤트 ID|발생 시기|  
 |-|-|-|  
 |`IOThreadCreate_V1`|44|스레드 풀에서 I/O 스레드가 생성됩니다.|  
   
@@ -149,13 +149,13 @@ ms.locfileid: "75715897"
 ### <a name="iothreadretire_v1"></a>IOThreadRetire_V1  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|이벤트를 발생시키기 위한 키워드|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|정보(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|Event|이벤트 ID|발생 시기|  
+|이벤트(event)|이벤트 ID|발생 시기|  
 |-----------|--------------|-----------------|  
 |`IOThreadRetire_V1`|46|I/O 스레드가 만료 후보가 됩니다.|  
   
@@ -170,13 +170,13 @@ ms.locfileid: "75715897"
 ### <a name="iothreadunretire_v1"></a>IOThreadUnretire_V1  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|이벤트를 발생시키기 위한 키워드|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|정보(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|Event|이벤트 ID|발생 시기|  
+|이벤트(event)|이벤트 ID|발생 시기|  
 |-----------|--------------|-----------------|  
 |`IOThreadUnretire_V1`|47|스레드가 만료 후보가 된 후 대기 기간 내에 도착하는 I/O 때문에 I/O 스레드가 만료 취소됩니다.|  
   
@@ -191,15 +191,15 @@ ms.locfileid: "75715897"
 ### <a name="iothreadterminate"></a>IOThreadTerminate  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|이벤트를 발생시키기 위한 키워드|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|정보(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
-|Event|이벤트 ID|발생 시기|  
+|이벤트(event)|이벤트 ID|발생 시기|  
 |-----------|--------------|-----------------|  
-|`IOThreadTerminate`|45|스레드 풀에서 I/O 스레드가 생성됩니다.|  
+|`IOThreadTerminate`|45|스레드 풀에서 i/o 스레드가 종료 됩니다.|  
   
  다음 표에서는 이벤트 데이터를 보여 줍니다.  
   
@@ -209,6 +209,6 @@ ms.locfileid: "75715897"
 |NumRetired|win:UInt64|만료된 I/O 스레드의 수입니다.|  
 |ClrInstanceID|Win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [CLR ETW 이벤트](clr-etw-events.md)

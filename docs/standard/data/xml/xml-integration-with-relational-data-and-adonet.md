@@ -3,12 +3,12 @@ title: XML과 관계형 데이터 및 ADO.NET의 통합
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
-ms.openlocfilehash: 373e28d1fffd8c47acb4acb70271db056aa3a27b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 30b788c77a2352d0d02ee772ab3f428381facd9f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709935"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155622"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>XML과 관계형 데이터 및 ADO.NET의 통합
 **XmlDataDocument** 클래스는 **XmlDocument**의 파생 클래스이며 XML 데이터를 포함합니다. **XmlDataDocument**의 이점은 관계형 데이터와 계층형 데이터 간을 연결해 준다는 것입니다. **XmlDocument**는 **DataSet**에 바인딩할 수 있는 클래스입니다. 이러한 두 클래스는 모두 클래스에 포함된 데이터의 변경 내용을 동기화할 수 있습니다. **DataSet**에 바인딩된 **XmlDocument**를 통해 XML을 관계형 데이터와 통합할 수 있으므로 데이터를 XML 또는 관계형 형식으로 나타낼 필요가 없습니다. 데이터를 두 가지 형식으로 나타낼 수 있으며 한 가지 형식으로만 제약되지 않습니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "75709935"
   
  **XmlDataDocument**는 **XmlDocument**에서 상속되므로 W3C DOM의 구현을 제공합니다. **XmlDataDocument**가 **DataSet**과 연관되어 있고 DataSet 내부에 해당 데이터 하위 세트를 저장하므로 DataSet은 **XmlDocument**의 용도를 제한하거나 변경하지 않습니다. **XmlDocument**를 사용하도록 작성된 코드는 **XmlDataDocument**에 대해서도 동일하게 작동됩니다. **DataSet**은 테이블, 열, 관계 및 제약 조건을 정의하여 동일한 데이터를 관계형으로 표시하는 독립 실행형, 메모리 내 사용자 데이터 저장소입니다.  
   
- 다음 그림은 XML 데이터의 **DataSet** 및 **XmlDataDocument**와의 다양한 연관성을 보여줍니다. 
+ 다음 그림은 XML 데이터의 **DataSet** 및 **XmlDataDocument**와의 다양한 연관성을 보여줍니다.
   
  ![XML DataSet와의 다양한 연관성을 보여주는 다이어그램.](./media/xml-integration-with-relational-data-and-adonet/xml-integration-relational-data-adodotnet.gif)  
   
@@ -45,6 +45,6 @@ ms.locfileid: "75709935"
   
  필요한 **XmlDataDocument** 주소에서 **DataSet**을 로드하는 경우 [데이터 세트를 XML 문서와 동기화](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)를 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [데이터 세트에서 XML 사용](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)

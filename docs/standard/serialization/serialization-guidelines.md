@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: 603306ad4a739f168716fd7f6169a79923585b82
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 067f32a026e3354e6c4256602ed17fd7d7bde0b8
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645057"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159795"
 ---
 # <a name="serialization-guidelines"></a>Serialization 지침
 이 문서에서는 serialize될 API를 디자인할 때 고려해야 할 지침을 보여 줍니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "64645057"
   
  .NET에서는 다양한 serialization 시나리오에 적합한 세 가지의 기본 serialization 기술을 제공합니다. 다음 표에서는 이러한 기술 및 해당 기술과 관련된 기본 .NET 형식을 보여 줍니다.  
   
-|기술|관련 클래스|노트|  
+|기술|관련 클래스|참고 사항|  
 |----------------|----------------------|-----------|  
 |데이터 계약 Serialization|<xref:System.Runtime.Serialization.DataContractAttribute><br /><br /> <xref:System.Runtime.Serialization.DataMemberAttribute><br /><br /> <xref:System.Runtime.Serialization.DataContractSerializer><br /><br /> <xref:System.Runtime.Serialization.NetDataContractSerializer><br /><br /> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer><br /><br /> <xref:System.Runtime.Serialization.ISerializable>|일반 지속성<br /><br /> 웹 서비스<br /><br /> JSON|  
 |XML Serialization|<xref:System.Xml.Serialization.XmlSerializer>|XML 형식 <br />모든 권한 포함|  
@@ -55,26 +55,25 @@ ms.locfileid: "64645057"
  [!code-csharp[SerializationGuidelines#1](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#1)]
  [!code-vb[SerializationGuidelines#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#1)]  
   
-1. 부분 신뢰에서 사용할 수 있는 형식의 경우 형식의 데이터 멤버를 public으로 표시하는 것이 좋습니다. 완전 신뢰에서는 데이터 계약 serializer가 public이 아닌 형식 및 멤버를 serialize 및 deserialize할 수 있지만 부분 신뢰에서는 public 형식만 serialize 및 deserialize할 수 있습니다.  
+1. 부분 신뢰에서 사용할 수 있는 형식의 경우 형식의 데이터 멤버를 public으로 표시하는 것이 좋습니다. 완전 신뢰에서는 데이터 계약 직렬 변환기가 public이 아닌 형식 및 멤버를 직렬화 및 역직렬화할 수 있지만 부분 신뢰에서는 public 형식만 직렬화 및 역직렬화할 수 있습니다.  
   
 2. Data-MemberAttribute가 있는 모든 속성에 대해 getter 및 setter를 구현하십시오. serialize 가능한 형식으로 간주되게 하려면 데이터 계약 serializer에 getter와 setter가 필요합니다. 부분 신뢰에서 사용하지 않을 형식의 경우에는 두 속성 접근자 중 하나 또는 둘 다 public이 아닐 수 있습니다.  
   
      [!code-csharp[SerializationGuidelines#2](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#2)]
      [!code-vb[SerializationGuidelines#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#2)]  
   
-3. deserialize된 인스턴스의 초기화에 serialization 콜백을 사용하는 것이 좋습니다.  
+3. 역직렬화된 인스턴스의 초기화에 serialization 콜백을 사용하는 것이 좋습니다.  
   
-     개체가 deserialize될 때는 생성자가 호출되지 않습니다. 따라서 정상적인 생성이 수행되는 동안 실행되는 논리는 모두 *serialization 콜백* 중 하나로 구현되어야 합니다.  
+     개체가 역직렬화될 때는 생성자가 호출되지 않습니다. 따라서 정상적인 생성이 수행되는 동안 실행되는 논리는 모두 *serialization 콜백* 중 하나로 구현되어야 합니다.  
   
      [!code-csharp[SerializationGuidelines#3](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#3)]
      [!code-vb[SerializationGuidelines#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#3)]  
   
-     <xref:System.Runtime.Serialization.OnDeserializedAttribute> 특성은 가장 일반적으로 사용되는 콜백 특성입니다. 패밀리의 다른 특성은 다음과 같습니다. <xref:System.Runtime.Serialization.OnDeserializingAttribute>,    
-    <xref:System.Runtime.Serialization.OnSerializingAttribute> 및 <xref:System.Runtime.Serialization.OnSerializedAttribute> 이 특성은 deserialization하기 전, serialization하기 전 및 마지막으로 serialization한 후에 각각 실행되는 콜백을 표시하는 데 사용할 수 있습니다.  
+     <xref:System.Runtime.Serialization.OnDeserializedAttribute> 특성은 가장 일반적으로 사용되는 콜백 특성입니다. 패밀리의 다른 특성은 <xref:System.Runtime.Serialization.OnDeserializingAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute>및 <xref:System.Runtime.Serialization.OnSerializedAttribute>입니다. 이 특성은 deserialization하기 전, serialization하기 전 및 마지막으로 serialization한 후에 각각 실행되는 콜백을 표시하는 데 사용할 수 있습니다.  
   
-4. <xref:System.Runtime.Serialization.KnownTypeAttribute>를 사용하여 복합 개체 그래프를 deserialize할 때 사용되어야 하는 추상 형식을 나타내는 것이 좋습니다.  
+4. <xref:System.Runtime.Serialization.KnownTypeAttribute>를 사용하여 복합 개체 그래프를 역직렬화할 때 사용되어야 하는 추상 형식을 나타내는 것이 좋습니다.  
   
-     예를 들어 deserialize된 데이터 멤버의 형식이 추상 클래스로 표현되는 경우 직렬 변환기가 인스턴스화할 추상 형식을 결정하고 멤버에 할당하려면 *알려진 형식* 정보가 필요합니다. 특성을 사용하여 알려진 형식을 지정하지 않으면 알려진 형식을 serializer 생성자에 전달하여 명시적으로 serializer에 전달하거나 구성 파일에 지정해야 합니다.  
+     예를 들어 역직렬화된 데이터 멤버의 형식이 추상 클래스로 표현되는 경우 직렬 변환기가 인스턴스화할 추상 형식을 결정하고 멤버에 할당하려면 *알려진 형식* 정보가 필요합니다. 특성을 사용하여 알려진 형식을 지정하지 않으면 알려진 형식을 serializer 생성자에 전달하여 명시적으로 serializer에 전달하거나 구성 파일에 지정해야 합니다.  
   
      [!code-csharp[SerializationGuidelines#4](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#4)]
      [!code-vb[SerializationGuidelines#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#4)]  
@@ -83,11 +82,11 @@ ms.locfileid: "64645057"
   
 5. serialize 가능한 형식을 만들거나 변경할 때 이전 버전과의 호환성과 이후 버전과의 호환성을 사용하는 것이 좋습니다.  
   
-     이후 버전의 형식에 대한 serialize된 스트림을 현재 버전의 형식으로 deserialize할 수 있고, 그 반대로 deserialize할 수도 있습니다. 데이터 계약 특성에 명시적 매개 변수를 사용하여 계약을 유지할 목적으로 특별히 주의하는 경우를 제외하면 private 멤버이거나 내부 멤버인 경우를 포함하여 데이터 멤버는 이후 버전의 형식에서 해당 멤버의 이름, 형식 또는 순서를 변경할 수 없습니다. 이 경우에는 새 버전을 이전 버전으로 deserialize하거나 이전 버전을 새 버전으로 deserialize하십시오.  
+     이후 버전의 형식에 대한 직렬화된 스트림을 현재 버전의 형식으로 역직렬화할 수 있고, 그 반대로 역직렬화할 수도 있습니다. 데이터 계약 특성에 명시적 매개 변수를 사용하여 계약을 유지할 목적으로 특별히 주의하는 경우를 제외하면 private 멤버이거나 내부 멤버인 경우를 포함하여 데이터 멤버는 이후 버전의 형식에서 해당 멤버의 이름, 형식 또는 순서를 변경할 수 없습니다. 이 경우에는 새 버전을 이전 버전으로 역직렬화하거나 이전 버전을 새 버전으로 역직렬화하십시오.  
   
 6. 서로 다른 버전의 형식 간에 라운드트립이 가능하도록 <xref:System.Runtime.Serialization.IExtensibleDataObject> 인터페이스를 구현하는 것이 좋습니다.  
   
-     이 인터페이스를 사용하면 serializer에서 라운드트립하는 동안 데이터가 손실되지 않습니다. <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> 속성은 현재 버전에서는 알 수 없는 이후 버전 형식의 모든 데이터를 저장합니다. 이후에 현재 버전을 이후 버전으로 직렬화하거나 deserialize하면 **ExtensionData** 속성 값을 통해 직렬화된 스트림에서 추가 데이터를 사용할 수 있습니다.  
+     이 인터페이스를 사용하면 serializer에서 라운드트립하는 동안 데이터가 손실되지 않습니다. <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> 속성은 현재 버전에서는 알 수 없는 이후 버전 형식의 모든 데이터를 저장합니다. 이후에 현재 버전을 이후 버전으로 직렬화하거나 역직렬화하면 **ExtensionData** 속성 값을 통해 직렬화된 스트림에서 추가 데이터를 사용할 수 있습니다.  
   
      [!code-csharp[SerializationGuidelines#5](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#5)]
      [!code-vb[SerializationGuidelines#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#5)]  
@@ -104,21 +103,21 @@ ms.locfileid: "64645057"
      [!code-csharp[SerializationGuidelines#6](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#6)]
      [!code-vb[SerializationGuidelines#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#6)]  
   
-2. XML Serialization 특성을 적용하는 방법보다 serialize된 XML의 모양을 더 구체적으로 제어하려면 <xref:System.Xml.Serialization.IXmlSerializable> 인터페이스를 구현하는 것이 좋습니다. 인터페이스의 두 가지 방법 <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> 고 <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>, serialize 된 XML 스트림을 완전히 제어할 수 있습니다. <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 특성을 적용하여 형식에 대해 생성되는 XML 스키마를 제어할 수도 있습니다.  
+2. XML Serialization 특성을 적용하는 방법보다 serialize된 XML의 모양을 더 구체적으로 제어하려면 <xref:System.Xml.Serialization.IXmlSerializable> 인터페이스를 구현하는 것이 좋습니다. <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> 및 <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>인터페이스의 두 가지 메서드를 사용 하 여 serialize 된 XML 스트림을 완전히 제어할 수 있습니다. <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 특성을 적용하여 형식에 대해 생성되는 XML 스키마를 제어할 수도 있습니다.  
   
 #### <a name="supporting-runtime-serialization"></a>런타임 Serialization 지원  
  *Runtime serialization*은 .NET Remoting에 사용되는 기술입니다. .NET Remoting을 사용하여 형식이 전송될 것으로 판단되면 해당 형식이 런타임 serialization을 지원하는지 확인해야 합니다.  
   
- <xref:System.SerializableAttribute> 특성을 적용하여 *런타임 serialization*에 대한 기본 지원을 제공할 수 있으며 고급 시나리오에는 단순한 *런타임 직렬화 가능 패턴*의 구현이 포함됩니다. <xref:System.Runtime.Serialization.ISerializable>을 구현하고 serialization 생성자를 제공해야 합니다.  
+ *특성을 적용하여*런타임 serialization<xref:System.SerializableAttribute>에 대한 기본 지원을 제공할 수 있으며 고급 시나리오에는 단순한 *런타임 직렬화 가능 패턴*의 구현이 포함됩니다. <xref:System.Runtime.Serialization.ISerializable>을 구현하고 serialization 생성자를 제공해야 합니다.  
   
 1. .NET Remoting과 함께 형식을 사용하지 않는 경우 런타임 serialization을 지원하는 것이 좋습니다. 예를 들어 <xref:System.AddIn> 네임스페이스는 .NET Remoting을 사용하므로 **System.AddIn** 추가 기능 간에 교환된 모든 형식이 런타임 serialization을 지원해야 합니다.  
   
      [!code-csharp[SerializationGuidelines#7](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#7)]
      [!code-vb[SerializationGuidelines#7](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#7)]  
   
-2. serialization 프로세스를 완전하게 제어하려면 *런타임 직렬화 가능 패턴*을 구현하는 것이 좋습니다. 데이터가 serialize 또는 deserialize될 때 데이터를 변환하려는 경우를 예로 들 수 있습니다.  
+2. serialization 프로세스를 완전하게 제어하려면 *런타임 직렬화 가능 패턴*을 구현하는 것이 좋습니다. 데이터가 직렬화 또는 역직렬화될 때 데이터를 변환하려는 경우를 예로 들 수 있습니다.  
   
-     이 패턴은 아주 단순합니다. <xref:System.Runtime.Serialization.ISerializable> 인터페이스를 구현하고, 개체가 deserialize될 때 사용되는 특별한 생성자를 제공하기만 하면 됩니다.  
+     이 패턴은 아주 단순합니다. <xref:System.Runtime.Serialization.ISerializable> 인터페이스를 구현하고, 개체가 역직렬화될 때 사용되는 특별한 생성자를 제공하기만 하면 됩니다.  
   
      [!code-csharp[SerializationGuidelines#8](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#8)]
      [!code-vb[SerializationGuidelines#8](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#8)]  
@@ -138,12 +137,12 @@ ms.locfileid: "64645057"
      [!code-csharp[SerializationGuidelines#11](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#11)]
      [!code-vb[SerializationGuidelines#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#11)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [데이터 계약 사용](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [데이터 계약 직렬 변환기](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)
-- [데이터 계약 직렬 변환기에서 지원하는 형식](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [Types Supported by the Data Contract Serializer](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
 - [이진 serialization](binary-serialization.md)
-- [.NET remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
+- [.NET Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
 - [XML 및 SOAP serialization](xml-and-soap-serialization.md)
 - [보안 및 Serialization](../../../docs/framework/misc/security-and-serialization.md)

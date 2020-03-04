@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 221d19ee6441614324d375b66e8b13a90f683890
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: e0a6912c10baa0be4a8ef9f6536948ae27f235c7
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921285"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159561"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Newtonsoft.json에서 System.object로 마이그레이션하는 방법
 
@@ -81,7 +81,7 @@ ms.locfileid: "76921285"
 
 <xref:System.Text.Json>은 기본적으로 엄격 하며, 호출자를 대신 하 여 추측 또는 해석을 방지 하 여 결정적 동작을 강조 합니다. 라이브러리는 이러한 방식으로 성능 및 보안을 위해 의도적으로 설계 되었습니다. `Newtonsoft.Json`은 기본적으로 유연 합니다. 이러한 기본적인 디자인의 차이점은 기본 동작의 다음과 같은 몇 가지 중요 한 차이점입니다.
 
-### <a name="case-insensitive-deserialization"></a>대/소문자를 구분 하지 않는 deserialization 
+### <a name="case-insensitive-deserialization"></a>대/소문자를 구분 하지 않는 deserialization
 
 Deserialization을 수행 하는 동안 `Newtonsoft.Json`는 기본적으로 대/소문자를 구분 하지 않는 속성 이름을 비교 합니다. <xref:System.Text.Json> 기본값은 대/소문자를 구분 하며,이는 정확히 일치 하는 항목을 수행 하기 때문에 더 나은 성능을 제공 합니다. 대/소문자를 구분 하지 않는 일치를 수행 하는 방법은 대/소문자를 구분 하지 않는 [속성 일치](system-text-json-how-to.md#case-insensitive-property-matching)를 참조 하세요.
 
@@ -194,7 +194,7 @@ The JSON value could not be converted to System.String.
 
 JSON 문자열로 표시 되는 숫자를 직렬화 하거나 deserialize 할 수 `Newtonsoft.Json` (따옴표로 묶인). 예를 들어, `{"DegreesCelsius":23}`대신 `{"DegreesCelsius":"23"}`를 수락할 수 있습니다. <xref:System.Text.Json>에서 해당 동작을 사용 하도록 설정 하려면 다음 예제와 같이 사용자 지정 변환기를 구현 합니다. 변환기는 `long`으로 정의 된 속성을 처리 합니다.
 
-* JSON 문자열로 serialize 합니다. 
+* JSON 문자열로 serialize 합니다.
 * Deserialize 하는 동안 따옴표 안의 JSON 숫자 및 숫자를 허용 합니다.
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/LongToStringConverter.cs)]
@@ -238,7 +238,7 @@ JSON 문자열로 표시 되는 숫자를 직렬화 하거나 deserialize 할 �
 
 `object` 속성에 대 한 형식 유추를 구현 하려면 [사용자 지정 변환기를 작성 하는 방법](system-text-json-converters-how-to.md#deserialize-inferred-types-to-object-properties)의 예제와 같은 변환기를 만듭니다.
 
-### <a name="deserialize-null-to-non-nullable-type"></a>Null을 허용 하지 않는 형식으로 Deserialize 합니다. 
+### <a name="deserialize-null-to-non-nullable-type"></a>Null을 허용 하지 않는 형식으로 Deserialize 합니다.
 
 다음 시나리오에서는 `Newtonsoft.Json` 예외를 throw 하지 않습니다.
 
@@ -326,7 +326,7 @@ JSON에 `Date` 속성이 없는 경우 deserialization이 실패 하도록 하�
 
 `Newtonsoft.Json`는 serialization 또는 deserialization에서 속성을 조건부로 무시 하는 여러 가지 방법이 있습니다.
 
-* `DefaultContractResolver`를 사용 하 여 임의 조건에 따라 포함 하거나 제외할 속성을 선택할 수 있습니다. 
+* `DefaultContractResolver`를 사용 하 여 임의 조건에 따라 포함 하거나 제외할 속성을 선택할 수 있습니다.
 * `JsonSerializerSettings`의 `NullValueHandling` 및 `DefaultValueHandling` 설정을 사용 하 여 모든 null 값 또는 기본 값 속성을 무시 하도록 지정할 수 있습니다.
 * `[JsonProperty]` 특성의 `NullValueHandling` 및 `DefaultValueHandling` 설정을 사용 하면 null 또는 기본값으로 설정 된 경우 무시 해야 하는 개별 속성을 지정할 수 있습니다.
 
@@ -341,7 +341,7 @@ JSON에 `Date` 속성이 없는 경우 deserialization이 실패 하도록 하�
 * 형식에 대 한 기본값이 있는 모든 속성을 무시 합니다.
 * 형식에 대 한 기본값이 있는 선택한 속성을 무시 합니다.
 * 해당 값이 null 인 경우 선택한 속성을 무시 합니다.
-* 런타임에 평가 되는 임의의 조건에 따라 선택한 속성을 무시 합니다. 
+* 런타임에 평가 되는 임의의 조건에 따라 선택한 속성을 무시 합니다.
 
 이 기능을 위해 사용자 지정 변환기를 작성할 수 있습니다. 다음은이 접근 방식을 보여 주는 샘플 POCO 및 사용자 지정 변환기입니다.
 
@@ -349,7 +349,7 @@ JSON에 `Date` 속성이 없는 경우 deserialization이 실패 하도록 하�
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecastRuntimeIgnoreConverter.cs)]
 
-변환기를 설정 하면 해당 값이 null, 빈 문자열 또는 "N/A" 인 경우 serialization에서 `Summary` 속성이 생략 됩니다. 
+변환기를 설정 하면 해당 값이 null, 빈 문자열 또는 "N/A" 인 경우 serialization에서 `Summary` 속성이 생략 됩니다.
 
 [클래스에서 특성을 사용](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type) 하거나 <xref:System.Text.Json.JsonSerializerOptions.Converters> 컬렉션에 [변환기를 추가](system-text-json-converters-how-to.md#registration-sample---converters-collection) 하 여이 사용자 지정 변환기를 등록 합니다.
 
@@ -446,7 +446,7 @@ JSON에 대상 형식에 없는 속성이 포함 된 경우 deserialization 하�
 
 ### <a name="jsondocument-is-idisposable"></a>JsonDocument는 IDisposable입니다.
 
-`JsonDocument`는 풀링된 버퍼에 데이터의 메모리 내 뷰를 빌드합니다. 따라서 `Newtonsoft.Json`에서 `JObject` 또는 `JArray`와 달리 `JsonDocument` 형식은 `IDisposable`를 구현 하며 using 블록 내에서 사용 해야 합니다. 
+`JsonDocument`는 풀링된 버퍼에 데이터의 메모리 내 뷰를 빌드합니다. 따라서 `Newtonsoft.Json`에서 `JObject` 또는 `JArray`와 달리 `JsonDocument` 형식은 `IDisposable`를 구현 하며 using 블록 내에서 사용 해야 합니다.
 
 수명 소유권을 양도 하 고 호출자에 게 책임을 삭제 하려는 경우에만 API에서 `JsonDocument`을 반환 합니다. 대부분의 시나리오에서는 필요 하지 않습니다. 호출자가 전체 JSON 문서를 사용 해야 하는 경우 <xref:System.Text.Json.JsonElement><xref:System.Text.Json.JsonDocument.RootElement%2A><xref:System.Text.Json.JsonElement.Clone%2A> 반환 합니다. 호출자가 JSON 문서 내의 특정 요소를 사용 해야 하는 경우 해당 <xref:System.Text.Json.JsonElement>의 <xref:System.Text.Json.JsonElement.Clone%2A> 반환 합니다. `Clone`하지 않고 `RootElement` 또는 하위 요소를 직접 반환 하는 경우 호출자는이를 소유 하는 `JsonDocument` 삭제 된 후 반환 된 `JsonElement`에 액세스할 수 없습니다.
 
@@ -456,7 +456,7 @@ JSON에 대상 형식에 없는 속성이 포함 된 경우 deserialization 하�
 public JsonElement LookAndLoad(JsonElement source)
 {
     string json = File.ReadAllText(source.GetProperty("fileName").GetString());
-   
+
     using (JsonDocument doc = JsonDocument.Parse(json))
     {
         return doc.RootElement.Clone();
@@ -464,9 +464,9 @@ public JsonElement LookAndLoad(JsonElement source)
 }
 ```
 
-위의 코드에는 `fileName` 속성을 포함 하는 `JsonElement` 필요 합니다. JSON 파일을 열고 `JsonDocument`를 만듭니다. 메서드는 호출자가 전체 문서를 사용 하 고 있는 것으로 가정 하 여 `RootElement``Clone` 반환 합니다. 
+위의 코드에는 `fileName` 속성을 포함 하는 `JsonElement` 필요 합니다. JSON 파일을 열고 `JsonDocument`를 만듭니다. 메서드는 호출자가 전체 문서를 사용 하 고 있는 것으로 가정 하 여 `RootElement``Clone` 반환 합니다.
 
-`JsonElement` 받고 하위 요소를 반환 하는 경우 하위 요소의 `Clone`를 반환할 필요가 없습니다. 호출자는 전달 된 `JsonElement`이 속한 `JsonDocument`의 활성 상태를 유지 해야 합니다. 예를 들면 다음과 같습니다.:
+`JsonElement` 받고 하위 요소를 반환 하는 경우 하위 요소의 `Clone`를 반환할 필요가 없습니다. 호출자는 전달 된 `JsonElement`이 속한 `JsonDocument`의 활성 상태를 유지 해야 합니다. 예들 들어 다음과 같습니다.
 
 ```csharp
 public JsonElement ReturnFileName(JsonElement source)
@@ -514,7 +514,7 @@ public JsonElement ReturnFileName(JsonElement source)
 
 `Utf8JsonReader`는 u t f-8로 인코딩된 [ReadOnlySpan\<byte >](xref:System.ReadOnlySpan%601) 또는 [ReadOnlySequence\<바이트 >](xref:System.Buffers.ReadOnlySequence%601) (<xref:System.IO.Pipelines.PipeReader>에서 읽은 결과)에서 읽기를 지원 합니다.
 
-동기 읽기의 경우 스트림의 끝에서 바이트 배열로 JSON 페이로드를 읽은 후 판독기에 전달할 수 있습니다. U t f-16으로 인코딩된 문자열에서 읽으려면 <xref:System.Text.Encoding.UTF8>를 호출 합니다.<xref:System.Text.Encoding.GetBytes%2A> 먼저 문자열을 u t f-8로 인코딩된 바이트 배열로 변환 합니다. 그런 다음 `Utf8JsonReader`에 전달 합니다. 
+동기 읽기의 경우 스트림의 끝에서 바이트 배열로 JSON 페이로드를 읽은 후 판독기에 전달할 수 있습니다. U t f-16으로 인코딩된 문자열에서 읽으려면 <xref:System.Text.Encoding.UTF8>를 호출 합니다.<xref:System.Text.Encoding.GetBytes%2A> 먼저 문자열을 u t f-8로 인코딩된 바이트 배열로 변환 합니다. 그런 다음 `Utf8JsonReader`에 전달 합니다.
 
 `Utf8JsonReader`는 입력을 JSON 텍스트로 간주 하므로 UTF-8 BOM (바이트 순서 표시)은 잘못 된 JSON으로 간주 됩니다. 호출자는 데이터를 판독기에 전달 하기 전에 필터링 해야 합니다.
 

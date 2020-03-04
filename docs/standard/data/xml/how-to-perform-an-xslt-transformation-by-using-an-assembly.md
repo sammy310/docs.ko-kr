@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
-ms.openlocfilehash: 9fd8656594730f29d28cbfdd130d322bfc000614
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 447cf18c7a9d24addf9d0a4ad523f46a45a5d27a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710832"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155977"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>방법: 어셈블리를 사용하여 XSLT 변형 수행
 XSLT 컴파일러(xsltc.exe)에서는 XSLT 스타일시트를 컴파일하여 어셈블리를 생성합니다. 그런 다음 어셈블리를 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 메서드로 직접 전달할 수 있습니다.  
@@ -171,15 +171,15 @@ XSLT 컴파일러(xsltc.exe)에서는 XSLT 스타일시트를 컴파일하여 �
 xslt.Load(typeof(Transform));  
 ```  
   
-를 사용하는 경우  
+을(를) 다음으로 바꾸면 됩니다.  
   
-```csharp 
+```csharp
 xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"));  
-``` 
+```
   
 으로 대체합니다. 어셈블리에 대 한 자세한 내용은 Load 메서드에 대 한 자세한 내용은 <xref:System.Reflection.Assembly.Load%2A>를 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Xml.Xsl.XslCompiledTransform>
 - [XSLT 컴파일러(xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)

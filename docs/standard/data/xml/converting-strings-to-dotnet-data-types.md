@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-ms.openlocfilehash: ac7e1b68f3f43a0c84c7330666825207e5b90004
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e54990785cafd6061c6d53c13af6476a4b46e20e
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711053"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160354"
 ---
 # <a name="converting-strings-to-net-framework-data-types"></a>문자열을 .NET Framework 데이터 형식으로 변환
 문자열을 .NET Framework 데이터 형식으로 변환하려면 애플리케이션 요구 사항에 적합한 **XmlConvert** 메서드를 사용합니다. **XmlConvert** 클래스에서 사용 가능한 변환 메서드의 전체 목록은 <xref:System.Xml.XmlConvert>를 참조하세요.  
@@ -33,7 +33,7 @@ ms.locfileid: "75711053"
 > [!NOTE]
 > **ToString** 메서드를 사용하여 이 테이블에 나열된 특정 .NET Framework 형식을 변환하는 경우, 반환되는 문자열의 형식은 기본 형식이 아니라 XSD(XML 스키마) 문자열 형식입니다.  
   
- **DateTime** 및 **Timespan**의 값 형식은 다릅니다. 즉, **DateTime**은 순간적인 시각을 나타내며 **TimeSpan**은 시간 간격을 나타냅니다. **DateTime** 및 **Timespan** 형식은 XSD(XML 스키마) 데이터 형식 사양에 지정되어 있습니다. 예를 들면 다음과 같습니다.:  
+ **DateTime** 및 **Timespan**의 값 형식은 다릅니다. 즉, **DateTime**은 순간적인 시각을 나타내며 **TimeSpan**은 시간 간격을 나타냅니다. **DateTime** 및 **Timespan** 형식은 XSD(XML 스키마) 데이터 형식 사양에 지정되어 있습니다. 예들 들어 다음과 같습니다.  
   
 ```vb  
 Dim writer As New XmlTextWriter("myfile.xml", Nothing)  
@@ -47,7 +47,7 @@ DateTime date = new DateTime (2001, 08, 04);
 writer.WriteElementString("Date", XmlConvert.ToString(date));  
 ```  
   
- **Output**  
+ **출력**  
   
  `<Date>2001-08-04T00:00:00</Date>`.  
   
@@ -65,7 +65,7 @@ Int32 value = 200;
 writer.WriteElementString("Number", XmlConvert.ToString(value));  
 ```  
   
- **Output**  
+ **출력**  
   
  `<Number>200</Number>`  
   
@@ -87,7 +87,7 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
   
 ```xml  
 <Boolean>true</Boolean>  
-<Boolean>1</Boolean>   
+<Boolean>1</Boolean>
 ```  
   
  두 가지 모두 다음 코드에 의해 파악되며, **bvalue**는 **System.Boolean.True**입니다.  
@@ -131,7 +131,7 @@ Double value = Double.PositiveInfinity;
 writer.WriteElementString("Infinity", XmlConvert.ToString(value));  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [XML 데이터 형식 변환](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)
 - [.NET Framework 형식을 문자열로 변환](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)

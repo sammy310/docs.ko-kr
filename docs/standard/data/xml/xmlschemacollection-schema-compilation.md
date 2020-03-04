@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76f28770-7126-428f-9ed5-7b5ae8bad5ee
-ms.openlocfilehash: 1f300bab01f94af8c70c8b67a69a73fbc5ba5bac
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: af6df3729f1bd926e9a47cc5b9d9bf460c8e1225
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709831"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159288"
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>XmlSchemaCollection 스키마 컴파일
 **XmlSchemaCollection**은 XDR(XML 데이터 축소) 및 XSD(XML 스키마 정의 언어) 스키마를 저장하고 유효성 검사를 수행할 수 있는 캐시 또는 라이브러리입니다. **XmlSchemaCollection**에서는 파일이나 URL에서 스키마에 액세스하는 대신 메모리에 있는 스키마를 캐시하여 성능을 향상시킵니다.  
@@ -51,11 +51,11 @@ vr.Schemas.Add(xsc)
 XmlTextReader tr = new XmlTextReader("Books.xml");  
 XmlValidatingReader vr = new XmlValidatingReader(tr);  
 XmlSchemaCollection xsc = new XmlSchemaCollection();  
-xsc.Add("urn:bookstore-schema", "Books.xsd");    
+xsc.Add("urn:bookstore-schema", "Books.xsd");
 vr.Schemas.Add(xsc);  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [XmlSchemaCollection을 사용하여 XDR 유효성 검사](../../../../docs/standard/data/xml/xdr-validation-with-xmlschemacollection.md)
 - [XmlSchemaCollection을 사용하여 XSD(XML 스키마) 유효성 검사](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemacollection.md)

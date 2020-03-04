@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
-ms.openlocfilehash: ec08b668bf54c5460e078bbb27bfbc370aff4e4a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e6ec30e3c7c2318b199122cd63c7f56584707a98
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711183"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78158053"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>XPathNavigator를 사용하여 강력한 형식의 XML 데이터 액세스
 XPath 2.0 데이터 모델의 인스턴스로서 <xref:System.Xml.XPath.XPathNavigator> 클래스는 CLR(공용 언어 런타임) 형식에 매핑되는 강력한 형식의 데이터를 포함할 수 있습니다. XPath 2.0 데이터 모델에 따르면 요소와 특성에만 강력한 형식의 데이터를 포함할 수 있습니다. <xref:System.Xml.XPath.XPathNavigator> 클래스는 데이터 형식을 변환하는 메커니즘뿐 아니라 강력한 형식의 데이터로 <xref:System.Xml.XPath.XPathDocument> 또는 <xref:System.Xml.XmlDocument> 개체 내의 데이터에 액세스할 수 있는 메커니즘도 제공합니다.  
@@ -111,9 +111,9 @@ Console.WriteLine(navigator.SchemaInfo.SchemaElement.MinOccurs);
  이 예제에서는 또한 `books.xsd` 스키마를 입력으로 사용합니다.  
   
 ```xml  
-<xs:schema xmlns="http://www.contoso.com/books"   
-attributeFormDefault="unqualified" elementFormDefault="qualified"   
-targetNamespace="http://www.contoso.com/books"   
+<xs:schema xmlns="http://www.contoso.com/books"
+attributeFormDefault="unqualified" elementFormDefault="qualified"
+targetNamespace="http://www.contoso.com/books"
 xmlns:xs="http://www.w3.org/2001/XMLSchema">  
     <xs:simpleType name="publishedType">  
         <xs:restriction base="xs:date">  
@@ -183,7 +183,7 @@ Console.WriteLine("The price of the book has been dropped 20% from {0:C} to {1:C
   
  스키마 기본 제공 형식에서 CLR 형식으로 매핑하는 방법에 대한 자세한 내용은 [System.Xml 클래스의 형식 지원](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)을 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

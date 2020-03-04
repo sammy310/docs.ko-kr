@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Date data type, converting
 - local time conversions
 ms.assetid: b605ff97-0c45-4c24-833f-4c6a3e8be64c
-ms.openlocfilehash: 428553f75db2cca6705ac72873e86e120e94d134
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5c19296f75e9e002e88263c5e5efa9917e185ebc
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132589"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156038"
 ---
 # <a name="converting-between-datetime-and-datetimeoffset"></a>DateTime과 DateTimeOffset 간 변환
 
@@ -99,7 +99,7 @@ UTC 및 로컬 <xref:System.DateTime> 값의 경우 결과 <xref:System.DateTime
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#7)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#7)]
 
-<xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> 속성을 사용 하 여 <xref:System.DateTimeOffset> 값을 로컬 <xref:System.DateTime> 값으로 변환할 수도 있습니다. 반환 된 <xref:System.DateTime> 값의 <xref:System.DateTime.Kind%2A> 속성은 <xref:System.DateTimeKind.Local>입니다. 다음 코드에서는 현지 표준 시간대의 오프셋에 해당 하는 <xref:System.DateTimeOffset> 값을 변환할 때 <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> 속성을 사용 합니다. 
+<xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> 속성을 사용 하 여 <xref:System.DateTimeOffset> 값을 로컬 <xref:System.DateTime> 값으로 변환할 수도 있습니다. 반환 된 <xref:System.DateTime> 값의 <xref:System.DateTime.Kind%2A> 속성은 <xref:System.DateTimeKind.Local>입니다. 다음 코드에서는 현지 표준 시간대의 오프셋에 해당 하는 <xref:System.DateTimeOffset> 값을 변환할 때 <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> 속성을 사용 합니다.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#10](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#10)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#10)]
@@ -127,6 +127,6 @@ UTC 및 로컬 <xref:System.DateTime> 값의 경우 결과 <xref:System.DateTime
 
 - 현지 표준 시간대 오프셋과 동일한 오프셋의 날짜와 시간이 현지 표준 시간대를 나타낸다고 가정합니다. 그러나 날짜 및 시간 값이 원래 표준 시간대와 관련이 없기 때문에 이와 다른 경우가 있을 수 있습니다. 날짜와 시간은 동일한 오프셋을 사용하는 다른 표준 시간대에서 가져올 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [날짜, 시간 및 표준 시간대](../../../docs/standard/datetime/index.md)

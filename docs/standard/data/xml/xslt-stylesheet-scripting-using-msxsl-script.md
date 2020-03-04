@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-ms.openlocfilehash: 01e11ed62b0855b9027dfd7999f8b787c075028a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9bf57e0f74a353fb6512a24214e9479c1d813aab
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709675"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160211"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>\<msxsl:script>를 사용한 XSLT 스타일시트 스크립팅
 <xref:System.Xml.Xsl.XslTransform> 클래스는 `script` 요소를 사용하여 포함 스크립트를 지원합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "75709675"
   
 |기본 네임스페이스|설명|  
 |------------------------|-----------------|  
-|System|System 클래스|  
+|시스템|System 클래스|  
 |System.Collection|Collection 클래스|  
 |System.Text|Text 클래스|  
 |System.Text.RegularExpressions|정규식 클래스|  
@@ -64,11 +64,11 @@ ms.locfileid: "75709675"
   
 |형식|해당 .NET Framework 클래스(형식)|XPath 형식 또는 XSLT 형식|  
 |----------|----------------------------------------------|-----------------------------|  
-|문자열|System.String|XPath|  
-|Boolean|System.Boolean|XPath|  
-|Number|System.Double|XPath|  
+|문자열|System.String|XPath입니다.|  
+|Boolean|System.Boolean|XPath입니다.|  
+|번호|System.Double|XPath입니다.|  
 |결과 트리 조각|System.Xml.XPath.XPathNavigator|XSLT|  
-|노드 집합|System.Xml.XPath.XPathNodeIterator|XPath|  
+|노드 집합|System.Xml.XPath.XPathNodeIterator|XPath입니다.|  
   
  스크립트 함수에서 Int16, UInt16, Int32, UInt32, Int64, UInt64, Single 또는 Decimal과 같은 숫자 형식을 사용한다면 W3C XPath 형식의 숫자에 매핑되는 Double이 됩니다. 기타 모든 형식은 `ToString` 메서드 호출을 통해 문자열 형식이 됩니다.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "75709675"
   
  이 경우 앰퍼샌드가 이스케이프되지 않기 때문에 예외가 throw됩니다. 문서는 XML로 로드되고 `msxsl:script` 요소 태그 사이의 텍스트에는 특별한 작업이 수행되지 않습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 포함 스크립트를 사용하여 주어진 반지름으로 원의 원주를 계산합니다.  
   
 ```vb  
@@ -122,14 +122,14 @@ Public Class Sample
     'Load the XML data file.  
     Dim doc As XPathDocument = New XPathDocument(filename)  
   
-    'Create an XmlTextWriter to output to the console.               
+    'Create an XmlTextWriter to output to the console.
     Dim writer As XmlTextWriter = New XmlTextWriter(Console.Out)  
     writer.Formatting = Formatting.Indented  
   
     'Transform the file.  
     xslt.Transform(doc, Nothing, writer, Nothing)  
     writer.Close()  
-  End Sub   
+  End Sub
 End Class  
 ```  
   
@@ -154,7 +154,7 @@ public class Sample
     //Load the XML data file.  
     XPathDocument doc = new XPathDocument(filename);  
   
-    //Create an XmlTextWriter to output to the console.               
+    //Create an XmlTextWriter to output to the console.
     XmlTextWriter writer = new XmlTextWriter(Console.Out);  
     writer.Formatting = Formatting.Indented;  
   
@@ -198,14 +198,14 @@ public class Sample
       ]]>  
    </msxsl:script>  
   
-  <xsl:template match="data">    
+  <xsl:template match="data">
   <circles>  
   
   <xsl:for-each select="circle">  
     <circle>  
     <xsl:copy-of select="node()"/>  
        <circumference>  
-          <xsl:value-of select="user:circumference(radius)"/>   
+          <xsl:value-of select="user:circumference(radius)"/>
        </circumference>  
     </circle>  
   </xsl:for-each>  
@@ -214,7 +214,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>출력  
   
 ```xml  
 <circles xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:user="urn:my-scripts">  
@@ -226,9 +226,9 @@ public class Sample
     <radius>37.5</radius>  
     <circumference>235.5</circumference>  
   </circle>  
-</circles>    
+</circles>
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [XslTransform 클래스의 XSLT 프로세서 구현](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

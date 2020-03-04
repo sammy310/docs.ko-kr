@@ -6,17 +6,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-ms.openlocfilehash: ecbed7e57628b4e140e0f4dbcd600643617b075a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b27c51572b1ba83480d90eba4add7f930715a4e5
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710897"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156532"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>XmlNodeChangedEventArgs를 사용한 XML 문서의 이벤트 처리
 **XmlNodeChangedEventArgs**는 이벤트 처리를 위해 **XmlDocument** 개체에 등록된 이벤트 처리기에 전달되는 인수를 캡슐화합니다. 다음 표에서는 이벤트와 해당 이벤트가 발생하는 시기에 대해 설명합니다.  
   
-|Event|발생 시기|  
+|이벤트(event)|발생 시기|  
 |-----------|-----------|  
 |<xref:System.Xml.XmlDocument.NodeInserting>|현재 문서에 속한 노드가 다른 노드에 삽입되기 직전|  
 |<xref:System.Xml.XmlDocument.NodeInserted>|현재 문서에 속한 노드가 다른 노드에 삽입된 후|  
@@ -34,16 +34,16 @@ ms.locfileid: "75710897"
 ' Attach the event handler, NodeInsertedHandler, to the NodeInserted  
 ' event.  
 Dim doc as XmlDocument = new XmlDocument()  
-Dim XmlNodeChgEHdlr as XmlNodeChangedEventHandler = new XmlNodeChangedEventHandler(addressof MyNodeChangedEvent)   
-AddHandler doc.NodeInserted, XmlNodeChgEHdlr   
+Dim XmlNodeChgEHdlr as XmlNodeChangedEventHandler = new XmlNodeChangedEventHandler(addressof MyNodeChangedEvent)
+AddHandler doc.NodeInserted, XmlNodeChgEHdlr
   
 Dim n as XmlNode = doc.CreateElement( "element" )  
-Console.WriteLine( "Before Event Inserting" )   
+Console.WriteLine( "Before Event Inserting" )
   
 ' This is the point where the new node is being inserted in the tree,  
 ' and this is the point where the NodeInserted event is raised.  
 doc.AppendChild( n )  
-Console.WriteLine( "After Event Inserting" )   
+Console.WriteLine( "After Event Inserting" )
   
 ' Define the event handler that handles the NodeInserted event.  
 sub NodeInsertedHandler(src as Object, args as XmlNodeChangedEventArgs)  
@@ -62,7 +62,7 @@ Console.WriteLine( "Before Event Inserting" );
 // This is the point where the new node is being inserted in the tree,  
 // and this is the point where the NodeInserted event is raised.  
 doc.AppendChild( n );  
-Console.WriteLine( "After Event Inserting" );   
+Console.WriteLine( "After Event Inserting" );
   
 // Define the event handler that handles the NodeInserted event.  
 void NodeInsertedHandler(Object src, XmlNodeChangedEventArgs args)  
@@ -173,7 +173,7 @@ public class Sample
      doc.DocumentElement.AppendChild(newElem);  
   
      Console.WriteLine("\r\nDisplay the modified XML...");  
-     Console.WriteLine(doc.OuterXml);             
+     Console.WriteLine(doc.OuterXml);
   
   }  
   
@@ -201,11 +201,11 @@ public class Sample
         Console.WriteLine("");  
   }  
   
-} // End class   
+} // End class
 ```  
   
- 자세한 내용은 <xref:System.Xml.XmlNodeChangedEventArgs> 및 <xref:System.Xml.XmlNodeChangedEventHandler>을 참조하세요.  
+ 자세한 내용은 <xref:System.Xml.XmlNodeChangedEventArgs> 및 <xref:System.Xml.XmlNodeChangedEventHandler>를 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [XML DOM(문서 개체 모델)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

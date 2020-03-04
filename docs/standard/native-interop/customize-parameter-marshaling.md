@@ -2,12 +2,12 @@
 title: 매개 변수 마샬링 사용자 지정 - .NET
 description: .NET에서 매개 변수를 네이티브 표현으로 마샬링하는 방식을 사용자 지정하는 방법을 알아봅니다.
 ms.date: 01/18/2019
-ms.openlocfilehash: 36fb8c105a8836d77b862095a616de3ba641073c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ff646ad942cf051ce90cd75b24c8562e536182d9
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706363"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159613"
 ---
 # <a name="customizing-parameter-marshaling"></a>매개 변수 마샬링 사용자 지정
 
@@ -21,10 +21,10 @@ ms.locfileid: "75706363"
 
 이러한 형식은 각각 Null 종료 문자열을 네이티브 코드에 전달하며, 네이티브 문자열의 인코딩에 따라 다릅니다.
 
-| `System.Runtime.InteropServices.UnmanagedType` 값 | Encoding |
+| `System.Runtime.InteropServices.UnmanagedType` 값 | 인코딩 |
 |------------------------------------------------------|----------|
 | LPStr | ANSI |
-| LPUTF8Str | UTF-8 | 
+| LPUTF8Str | UTF-8 |
 | LPWStr | UTF-16 |
 | LPTStr | UTF-16 |
 
@@ -38,7 +38,7 @@ WinRT API를 조작하는 경우 <xref:System.Runtime.InteropServices.UnmanagedT
 
 ## <a name="customizing-array-parameters"></a>배열 매개 변수 사용자 지정
 
-.NET에서는 배열 매개 변수를 마샬링하는 몇 가지 방법도 제공합니다. C 스타일 배열을 사용하는 API를 호출하는 경우 <xref:System.Runtime.InteropServices.UnmanagedType.LPArray?displayProperty=nameWithType> 비관리형 형식을 사용합니다. 배열의 값에 사용자 지정 마샬링이 필요한 경우 해당 배열의 `[MarshalAs]` 특성에 있는 <xref:System.Runtime.InteropServices.MarshalAsAttribute.ArraySubType> 필드를 사용할 수 있습니다.
+.NET에서는 배열 매개 변수를 마샬링하는 몇 가지 방법도 제공합니다. C 스타일 배열을 사용하는 API를 호출하는 경우 <xref:System.Runtime.InteropServices.UnmanagedType.LPArray?displayProperty=nameWithType> 비관리형 형식을 사용합니다. 배열의 값에 사용자 지정 마샬링이 필요한 경우 해당 배열의 <xref:System.Runtime.InteropServices.MarshalAsAttribute.ArraySubType> 특성에 있는 `[MarshalAs]` 필드를 사용할 수 있습니다.
 
 COM API를 사용하는 경우 배열 매개 변수를 `SAFEARRAY*`로 마샬링해야 할 가능성이 큽니다. 이렇게 하려면 <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType> 비관리형 형식을 사용할 수 있습니다. `SAFEARRAY` 요소의 기본 형식은 [`object` 필드 사용자 지정](./customize-struct-marshaling.md#marshaling-systemobjects)에 대한 표에서 확인할 수 있습니다. <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType?displayProperty=nameWithType> 및 <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType?displayProperty=nameWithType> 필드를 사용하여 `SAFEARRAY`의 정확한 요소 형식을 사용자 지정할 수 있습니다.
 
@@ -52,7 +52,7 @@ Windows에서 .NET 런타임은 개체 매개 변수를 네이티브 코드로 �
 
 ### <a name="marshaling-as-specific-com-interfaces"></a>특정 COM 인터페이스로 마샬링
 
-API에서 COM 개체에 대한 포인터를 사용하는 경우 `object` 형식 매개 변수에 다음과 같은 `UnmanagedType` 형식 중 하나를 사용하여 이러한 특정 인터페이스로 마샬링하도록 .NET에 지정할 수 있습니다.
+API에서 COM 개체에 대한 포인터를 사용하는 경우 `UnmanagedType` 형식 매개 변수에 다음과 같은 `object` 형식 중 하나를 사용하여 이러한 특정 인터페이스로 마샬링하도록 .NET에 지정할 수 있습니다.
 
 - `IUnknown`
 - `IDispatch`
@@ -62,7 +62,7 @@ API에서 COM 개체에 대한 포인터를 사용하는 경우 `object` 형식 
 
 ### <a name="marshaling-to-a-variant"></a>`VARIANT`로 마샬링
 
-네이티브 API에서 Win32 `VARIANT`를 사용하는 경우 `object` 매개 변수의 <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> 형식을 사용하여 개체를 `VARIANT`로 마샬링할 수 있습니다. .NET 형식과 `VARIANT` 형식 간의 매핑에 대해서는 [`object` 필드 사용자 지정](customize-struct-marshaling.md#marshaling-systemobjects) 문서를 참조하세요.
+네이티브 API에서 Win32 `VARIANT`를 사용하는 경우 <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> 매개 변수의 `object` 형식을 사용하여 개체를 `VARIANT`로 마샬링할 수 있습니다. .NET 형식과 [ 형식 간의 매핑에 대해서는 `object`](customize-struct-marshaling.md#marshaling-systemobjects) 필드 사용자 지정`VARIANT` 문서를 참조하세요.
 
 ### <a name="custom-marshalers"></a>사용자 설정 마샬러
 

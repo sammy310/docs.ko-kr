@@ -3,17 +3,17 @@ title: XML 문서의 네임스페이스 관리
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-ms.openlocfilehash: 64ef9fd4ca3a9a83b9cd3eba9cb952b0f668e9f0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7b219788895ab2f89fa285c2e1b7de62639bfcf9
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710702"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160042"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>XML 문서의 네임스페이스 관리
 XML 네임스페이스는 XML 문서의 요소 및 특성 이름을 사용자 지정 및 미리 정의된 URI와 연결합니다. 이러한 연결을 만들려면 네임스페이스 URI의 접두사를 정의하고 해당 접두사를 사용하여 XML 데이터의 요소 및 특성 이름을 한정합니다. 네임스페이스는 요소 및 특성 이름이 충돌하는 것을 막고 동일한 이름의 요소 및 특성이 처리 및 확인되도록 하는 역할을 합니다.  
   
-<a name="declare"></a>   
+<a name="declare"></a>
 ## <a name="declaring-namespaces"></a>네임스페이스 선언  
  요소의 네임스페이스를 선언하려면 `xmlns:` 특성을 사용합니다.  
   
@@ -30,7 +30,7 @@ XML 네임스페이스는 XML 문서의 요소 및 특성 이름을 사용자 �
   
  요소가 특정 네임스페이스의 일부임을 나타내기 위해 네임스페이스 접두사를 추가합니다. 예를 들어 `Author` 요소가 `mybook` 네임스페이스에 속하는 경우에는 `<mybook:Author>`로 선언됩니다.  
   
-<a name="scope"></a>   
+<a name="scope"></a>
 ## <a name="declaration-scope"></a>선언 범위  
  네임스페이스는 선언 지점부터 선언된 요소의 끝까지 유효합니다. 이 예에서 `BOOK` 요소에서 정의된 네임스페이스는 `BOOK` 요소와 같은 `Publisher` 요소 외부의 요소에는 적용되지 않습니다.  
   
@@ -65,7 +65,7 @@ XML 네임스페이스는 XML 문서의 요소 및 특성 이름을 사용자 �
   
  다음은 <xref:System.Xml.XmlNamespaceManager> 클래스로 수행할 수 있는 관리 및 조회 작업입니다. 자세한 내용 및 예제는 각 메서드 또는 속성의 참조 페이지에 대한 링크를 참조하세요.  
   
-|변환 대상|사용|  
+|대상|관리 그룹을 연결하거나 연결된 관리 그룹의 속성을 편집하려면 관리 작업 영역의|  
 |--------|---------|  
 |네임스페이스 추가|<xref:System.Xml.XmlNamespaceManager.AddNamespace%2A> 메서드|  
 |네임스페이스 제거|<xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A> 메서드|  
@@ -77,7 +77,7 @@ XML 네임스페이스는 XML 문서의 요소 및 특성 이름을 사용자 �
 |접두사가 현재 범위에서 정의되어 있는지 확인|<xref:System.Xml.XmlNamespaceManager.HasNamespace%2A> 메서드|  
 |접두사와 URI를 찾는 데 사용된 이름 테이블 가져오기|<xref:System.Xml.XmlNamespaceManager.NameTable%2A> 속성|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Xml.XmlNamespaceManager>
 - [XML 문서 및 데이터](../../../../docs/standard/data/xml/index.md)

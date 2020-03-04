@@ -6,12 +6,12 @@ helpviewer_keywords:
 - schemaImporterExtensions element
 - <schemaImporterExtensions> element
 ms.assetid: 465ef2a0-f909-4ac1-9a56-0ead5c849698
-ms.openlocfilehash: 43f8439708c73e8e5241a923360caf549bf09d8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ed80ac370e34d6b62bb2b601cb7bd978228a302
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017967"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159821"
 ---
 # <a name="schemaimporterextensions-element"></a>\<schemaImporterExtensions > 요소
 <xref:System.Xml.Serialization.XmlSchemaImporter>에서 XSD 형식을 .NET Framework 형식으로 매핑하는 데 사용되는 형식을 포함합니다. 구성 파일에 대한 자세한 내용은 [구성 파일 스키마](../../../docs/framework/configure-apps/file-schema/index.md)를 참조하세요.  
@@ -28,7 +28,7 @@ ms.locfileid: "62017967"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<추가 > 요소에 대 한 \<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)|<xref:System.Xml.Serialization.XmlSchemaImporter>에서 매핑을 만들기 위해 사용하는 형식을 추가합니다.|  
+|[\<schemaImporterExtensions에 대 한 > 요소 \<추가 >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)|<xref:System.Xml.Serialization.XmlSchemaImporter>에서 매핑을 만들기 위해 사용하는 형식을 추가합니다.|  
   
 ## <a name="parent-elements"></a>부모 요소  
   
@@ -42,19 +42,19 @@ ms.locfileid: "62017967"
 ```xml  
 <system.xml.serialization>  
     <schemaImporterExtensions>  
-        <add name = "MobileCapabilities" type =   
-        "System.Web.Mobile.MobileCapabilities,   
-        System.Web.Mobile, Version - 2.0.0.0, Culture = neutral,   
+        <add name = "MobileCapabilities" type =
+        "System.Web.Mobile.MobileCapabilities,
+        System.Web.Mobile, Version - 2.0.0.0, Culture = neutral,
         PublicKeyToken = b03f5f6f11d40a3a" />  
     </schemaImporterExtensions>  
 </system.xml.serialization>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
 - [구성 파일 스키마](../../../docs/framework/configure-apps/file-schema/index.md)
 - [\<dateTimeSerialization> 요소](../../../docs/standard/serialization/datetimeserialization-element.md)
-- [\<추가 > 요소에 대 한 \<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
+- [\<schemaImporterExtensions에 대 한 > 요소 \<추가 >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
 - [\<system.xml.serialization> 요소](../../../docs/standard/serialization/system-xml-serialization-element.md)

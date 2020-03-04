@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
-ms.openlocfilehash: 2ca5f27bdea75f6c6ce8f954f553b6a58a1a9204
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 642a7e5321d0150865f74a66a811914bc9f5d21d
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124256"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160029"
 ---
 # <a name="mapping-the-object-hierarchy-to-xml-data"></a>XML 데이터에 개체 계층 구조 매핑
 메모리에 있는 XML 문서를 개념적으로 표현한 것이 트리입니다. 프로그래밍의 경우에는 트리 노드에 액세스하는 개체 계층 구조가 있습니다. 다음 예제에서는 XML 내용이 노드가 되는 방법을 보여 줍니다.  
@@ -68,8 +68,8 @@ Public Class Sample
         Dim reader As XmlTextReader = Nothing  
   
         Try  
-            ' Load the reader with the data file and   
-            'ignore all white space nodes.   
+            ' Load the reader with the data file and
+            'ignore all white space nodes.
             reader = New XmlTextReader(filename)  
             reader.WhitespaceHandling = WhitespaceHandling.None  
   
@@ -122,7 +122,7 @@ public class Sample
   
         try  
         {  
-            // Load the reader with the data file and ignore   
+            // Load the reader with the data file and ignore
             // all white space nodes.  
             reader = new XmlTextReader(filename);  
             reader.WhitespaceHandling = WhitespaceHandling.None;  
@@ -176,7 +176,7 @@ public class Sample
   
  예제의 출력은 데이터의 노드 형식 매핑을 보여 줍니다.  
   
- **Output**  
+ **출력**  
   
 ```xml  
 <?xml version='1.0'?><!--This is a sample XML document --><!DOCTYPE Items [<!ENTITY number "123">]<Items><Item>Test with an entity: 123</Item><Item>test with a child element <more> stuff</Item><Item>test with a CDATA section <![CDATA[<456>]]> def</Item><Item>Test with a char entity: A</Item><--Fourteen chars in this element.--><Item>1234567890ABCD</Item></Items>  
@@ -184,7 +184,7 @@ public class Sample
   
  한 번에 한 줄씩 입력하고 코드에서 생성된 출력을 사용하면 다음 표를 사용하여 출력 줄을 생성한 노드 테스트를 분석할 수 있어 어떤 XML 데이터가 어떤 노드 형식이 되는지 이해할 수 있습니다.  
   
-|입력|Output|노드 형식 테스트|  
+|입력|출력|노드 형식 테스트|  
 |-----------|------------|--------------------|  
 |\<?xml version="1.0"?>|\<?xml version='1.0'?>|XmlNodeType.XmlDeclaration|  
 |\<!-- This is a sample XML document -->|\<!--This is a sample XML document -->|XmlNodeType.Comment|  
@@ -218,6 +218,6 @@ public class Sample
   
  DOM에 새 노드를 추가하려면 [XML 문서에 노드 삽입](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md)을 참조하세요. DOM에서 노드를 제거하려면 [XML 문서에서 노드, 내용 및 값 제거](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md)를 참조하세요. DOM에서 노드 내용을 수정하려면 [XML 문서에서 노드, 내용 및 값 수정](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md)을 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [XML DOM(문서 개체 모델)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

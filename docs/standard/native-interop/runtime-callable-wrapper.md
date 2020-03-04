@@ -8,12 +8,12 @@ helpviewer_keywords:
 - runtime callable wrappers
 - interoperation with unmanaged code, COM wrappers
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
-ms.openlocfilehash: 70ed4176872e18ccafa00808630fcc51337b8479
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0b448379fba965060fdf3bf067e65374f40d1fc2
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123206"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156012"
 ---
 # <a name="runtime-callable-wrapper"></a>RCW
 공용 언어 런타임은 RCW(런타임 호출 가능 래퍼)라는 프록시를 통해 COM 개체를 노출합니다. RCW는 .NET 클라이언트에 일반적인 개체인 것처럼 나타나지만 주요 기능이 .NET 클라이언트와 COM 개체 간의 호출을 마샬링하는 것입니다.  
@@ -31,9 +31,9 @@ ms.locfileid: "73123206"
  표준 래퍼는 기본 제공 마샬링 규칙을 적용합니다. 예를 들어 .NET 클라이언트가 관리되지 않는 개체에 문자열 형식을 인수의 일부로 전달하는 경우 래퍼가 문자열을 BSTR 형식으로 변환합니다. COM 개체가 관리되는 호출자에게 BSTR을 반환하는 경우 호출자는 문자열을 수신합니다. 클라이언트와 서버 둘 다 익숙한 데이터를 보내고 받습니다. 다른 형식은 변환이 필요하지 않습니다. 예를 들어 표준 래퍼는 형식을 변환하지 않고 관리 코드와 비관리 코드 간에 항상 4바이트 정수를 전달합니다.  
   
 ## <a name="marshaling-selected-interfaces"></a>선택한 인터페이스 마샬링  
- RCW([런타임 호출 가능 래퍼](runtime-callable-wrapper.md))의 주요 목표는 관리되는 프로그래밍 모델과 관리되지 않는 프로그래밍 모델 간의 차이를 숨기는 것입니다. 매끄러운 전환을 만들기 위해 RCW는 다음 그림과 같이 .NET 클라이언트에 노출하지 않고 선택한 COM 인터페이스를 사용합니다. 
+ RCW([런타임 호출 가능 래퍼](runtime-callable-wrapper.md))의 주요 목표는 관리되는 프로그래밍 모델과 관리되지 않는 프로그래밍 모델 간의 차이를 숨기는 것입니다. 매끄러운 전환을 만들기 위해 RCW는 다음 그림과 같이 .NET 클라이언트에 노출하지 않고 선택한 COM 인터페이스를 사용합니다.
 
- 다음 이미지에서는 COM 인터페이스 및 런타임 호출 가능 래퍼를 보여줍니다. 
+ 다음 이미지에서는 COM 인터페이스 및 런타임 호출 가능 래퍼를 보여줍니다.
   
  ![인터페이스를 사용하는 런타임 호출 가능 래퍼 스크린샷.](./media/runtime-callable-wrapper/runtime-callable-wrapper-interfaces.gif)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "73123206"
 |**IDispatchEx**(.NET Framework만 해당) |클래스가 **IDispatchEx**를 구현하는 경우 RCW는 **IExpando**를 구현합니다. **IDispatchEx** 인터페이스는 **IDispatch**와 달리 멤버의 대/소문자 구분 호출, 열거형, 추가, 삭제를 가능하게 하는 **IDispatch** 인터페이스의 확장입니다.|  
 |**IEnumVARIANT**|열거형을 지원하는 COM 형식이 컬렉션으로 처리될 수 있게 합니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [COM 래퍼](com-wrappers.md)
 - [COM 호출 가능 래퍼](com-callable-wrapper.md)

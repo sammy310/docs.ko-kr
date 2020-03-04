@@ -11,12 +11,12 @@ helpviewer_keywords:
 - secure coding, race conditions
 - code security, race conditions
 ms.assetid: ea3edb80-b2e8-4e85-bfed-311b20cb59b6
-ms.openlocfilehash: 8980122acdd069bc840aa09129483a1cb9a379fd
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: bc0d9f481fd212ede55bffde6cc20c3e080629e4
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705875"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159418"
 ---
 # <a name="security-and-race-conditions"></a>보안 및 경합 상태
 또 다른 문제는 경합 상태에서 악용 되는 보안 허점을 일으킬 수 있다는 것입니다. 이는 여러 가지 방법으로 발생할 수 있습니다. 다음 하위 항목은 개발자가 피해 야 하는 주요 문제 중 일부를 간략하게 설명 합니다.  
@@ -34,9 +34,9 @@ End Sub
 ```  
   
 ```csharp  
-void Dispose()   
+void Dispose()
 {  
-    if (myObj != null)   
+    if (myObj != null)
     {  
         Cleanup(myObj);  
         myObj = null;  
@@ -72,22 +72,22 @@ End Sub
 ```  
   
 ```csharp  
-void SomeSecureFunction()   
+void SomeSecureFunction()
 {  
-    if (SomeDemandPasses())   
+    if (SomeDemandPasses())
     {  
         fCallersOk = true;  
         DoOtherWork();  
         fCallersOk = false;  
     }  
 }  
-void DoOtherWork()   
+void DoOtherWork()
 {  
-    if (fCallersOK)   
+    if (fCallersOK)
     {  
         DoSomethingTrusted();  
     }  
-    else   
+    else
     {  
         DemandSomething();  
         DoSomethingTrusted();  
@@ -102,6 +102,6 @@ void DoOtherWork()
 ## <a name="race-conditions-in-finalizers"></a>종료자의 경합 상태  
  경합 상태는 해당 종료자에서 해제할 정적 또는 관리 되지 않는 리소스를 참조 하는 개체 에서도 발생할 수 있습니다. 여러 개체가 클래스의 종료자에서 조작 되는 리소스를 공유 하는 경우 개체는 해당 리소스에 대 한 모든 액세스를 동기화 해야 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [보안 코딩 지침](../../../docs/standard/security/secure-coding-guidelines.md)
