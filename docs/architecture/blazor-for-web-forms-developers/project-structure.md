@@ -5,11 +5,11 @@ author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
 ms.openlocfilehash: 2c383e86ff22f5a3460476998992b66e9417cc11
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841908"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78674998"
 ---
 # <a name="project-structure-for-blazor-apps"></a>Blazor apps에 대 한 프로젝트 구조
 
@@ -137,7 +137,7 @@ Blazor 프로젝트에서 대부분의 파일은 *razor* 파일입니다. Razor�
 @using BlazorApp1.Shared
 ```
 
-## <a name="pages"></a>Pages
+## <a name="pages"></a>페이지
 
 Blazor apps의 페이지는 어디에 있나요? Blazor는 ASP.NET Web Forms apps의 *.aspx* 파일과 같이 주소 지정 가능한 페이지에 대 한 별도의 파일 확장명을 정의 하지 않습니다. 대신, 페이지는 구성 요소에 경로를 할당 하 여 정의 됩니다. 경로는 일반적으로 `@page` Razor 지시문을 사용 하 여 할당 됩니다. 예를 들어 *Pages/Counter. razor* 파일에서 작성 된 `Counter` 구성 요소는 다음 경로를 정의 합니다.
 

@@ -3,11 +3,11 @@ title: WCF 개발자를 위한 RPC gRPC의 유형
 description: WCF에서 지원 되는 원격 프로시저 호출의 유형 및 gRPC의 해당 항목에 대 한 검토
 ms.date: 09/02/2019
 ms.openlocfilehash: 58f097bac61395e6810155e8ae9a6bbf2219ec5e
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503435"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78675165"
 ---
 # <a name="types-of-rpc"></a>RPC 형식
 
@@ -23,7 +23,7 @@ WCF (Windows Communication Foundation) 개발자는 다음과 같은 형식의 R
 
 | WCF | gRPC |
 | --- | ---- |
-| 일반 요청/회신 | 단항 |
+| 일반 요청/회신 | 단항 연산자 |
 | 클라이언트 콜백 인터페이스를 사용 하는 세션을 사용 하는 이중 서비스 | 서버 스트리밍 |
 | 세션이 포함 된 전이중 서비스 | 양방향 스트리밍 |
 | 단방향 작업 | 클라이언트 스트리밍 |

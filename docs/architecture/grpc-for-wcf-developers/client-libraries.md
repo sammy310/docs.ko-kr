@@ -3,11 +3,11 @@ title: GRPC 클라이언트 라이브러리 만들기-WCF 개발자를 위한 gR
 description: GRPC 서비스용 공유 클라이언트 라이브러리/패키지에 대 한 설명입니다.
 ms.date: 09/02/2019
 ms.openlocfilehash: bb58cb3cda4b0cbb3a5d34129961349bcb0093e9
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711452"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78675167"
 ---
 # <a name="create-grpc-client-libraries"></a>GRPC 클라이언트 라이브러리 만들기
 
