@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Sending data to a host, using WebRequest class
 ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
 ms.openlocfilehash: 2467b289df7a0361b51ad91d4458d32742c42275
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70040823"
 ---
 # <a name="how-to-send-data-by-using-the-webrequest-class"></a>방법: WebRequest 클래스를 사용하여 데이터 보내기
@@ -21,7 +21,7 @@ ms.locfileid: "70040823"
 
 ## <a name="to-send-data-to-a-host-server"></a>호스트에 데이터를 보내려면
 
-1. 스크립트 또는 ASP.NET 페이지와 같이 데이터를 허용하는 리소스의 URI에서 <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>을 호출하여 <xref:System.Net.WebRequest> 인스턴스를 만듭니다. 예:
+1. 스크립트 또는 ASP.NET 페이지와 같이 데이터를 허용하는 리소스의 URI에서 <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>을 호출하여 <xref:System.Net.WebRequest> 인스턴스를 만듭니다. 예를 들어:
 
     ```csharp
     WebRequest request = WebRequest.Create("http://www.contoso.com/PostAccepter.aspx");
@@ -56,7 +56,7 @@ ms.locfileid: "70040823"
     request.Method = "POST"
     ```
 
-4. <xref:System.Web.HttpRequest.ContentLength> 속성을 요청에 포함된 바이트 수로 설정합니다. 예:
+4. <xref:System.Web.HttpRequest.ContentLength> 속성을 요청에 포함된 바이트 수로 설정합니다. 예를 들어:
 
     ```csharp
     request.ContentLength = byteArray.Length;
@@ -66,7 +66,7 @@ ms.locfileid: "70040823"
     request.ContentLength = byteArray.Length
     ```
 
-5. <xref:System.Web.HttpRequest.ContentType> 속성을 적절한 값으로 설정합니다. 예:
+5. <xref:System.Web.HttpRequest.ContentType> 속성을 적절한 값으로 설정합니다. 예를 들어:
 
     ```csharp
     request.ContentType = "application/x-www-form-urlencoded";
@@ -76,7 +76,7 @@ ms.locfileid: "70040823"
     request.ContentType = "application/x-www-form-urlencoded"
     ```
 
-6. <xref:System.Net.WebRequest.GetRequestStream%2A> 메서드를 호출하여 요청 데이터를 포함하는 스트림을 가져옵니다. 예:
+6. <xref:System.Net.WebRequest.GetRequestStream%2A> 메서드를 호출하여 요청 데이터를 포함하는 스트림을 가져옵니다. 예를 들어:
 
     ```csharp
     Stream dataStream = request.GetRequestStream();
@@ -86,7 +86,7 @@ ms.locfileid: "70040823"
     Dim dataStream As Stream = request.GetRequestStream()
     ```
 
-7. `GetRequestStream` 메서드에서 반환된 <xref:System.IO.Stream> 개체에 데이터를 기록합니다. 예:
+7. `GetRequestStream` 메서드에서 반환된 <xref:System.IO.Stream> 개체에 데이터를 기록합니다. 예를 들어:
 
     ```csharp
     dataStream.Write(byteArray, 0, byteArray.Length);
@@ -96,7 +96,7 @@ ms.locfileid: "70040823"
     dataStream.Write(byteArray, 0, byteArray.Length)
     ```
 
-8. <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> 메서드를 호출하여 요청 스트림을 닫습니다. 예:
+8. <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> 메서드를 호출하여 요청 스트림을 닫습니다. 예를 들어:
 
     ```csharp
     dataStream.Close();
@@ -106,7 +106,7 @@ ms.locfileid: "70040823"
     dataStream.Close()
     ```
 
-9. <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType>를 호출하여 요청을 서버에 보냅니다. 이 메서드는 서버 응답을 포함하는 개체를 반환합니다. 반환된 `WebResponse` 개체의 형식은 요청 URI 구성표에 따라 결정됩니다. 예:
+9. <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType>를 호출하여 요청을 서버에 보냅니다. 이 메서드는 서버 응답을 포함하는 개체를 반환합니다. 반환된 `WebResponse` 개체의 형식은 요청 URI 구성표에 따라 결정됩니다. 예를 들어:
 
     ```csharp
     WebResponse response = request.GetResponse();
@@ -128,7 +128,7 @@ ms.locfileid: "70040823"
     Console.WriteLine(CType(response, HttpWebResponse).StatusDescription)
     ```
 
-11. 서버에서 전송된 응답 데이터를 포함하는 스트림을 가져오려면 `WebResponse` 개체의 <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> 메서드를 호출합니다. 예:
+11. 서버에서 전송된 응답 데이터를 포함하는 스트림을 가져오려면 `WebResponse` 개체의 <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> 메서드를 호출합니다. 예를 들어:
 
     ```csharp
     Stream dataStream = response.GetResponseStream();
@@ -138,7 +138,7 @@ ms.locfileid: "70040823"
     Dim dataStream As Stream = response.GetResponseStream()
     ```
 
-12. 응답 개체에서 데이터를 읽은 후에 <xref:System.Net.WebResponse.Close%2A?displayProperty=nameWithType> 메서드를 사용하여 해당 개체를 닫거나 <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> 메서드를 사용하여 응답 스트림을 닫습니다. 응답이나 스트림을 닫지 않으면 애플리케이션이 서버 연결을 모두 사용하여 추가 요청을 처리하지 못하게 될 수 있습니다. `WebResponse.Close` 메서드가 응답을 닫으면 `Stream.Close`를 호출하기 때문에 모든 응답 및 스트림 개체에서 `Close`를 호출할 필요가 없지만 유해하지도 않습니다. 예:
+12. 응답 개체에서 데이터를 읽은 후에 <xref:System.Net.WebResponse.Close%2A?displayProperty=nameWithType> 메서드를 사용하여 해당 개체를 닫거나 <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> 메서드를 사용하여 응답 스트림을 닫습니다. 응답이나 스트림을 닫지 않으면 애플리케이션이 서버 연결을 모두 사용하여 추가 요청을 처리하지 못하게 될 수 있습니다. `WebResponse.Close` 메서드가 응답을 닫으면 `Stream.Close`를 호출하기 때문에 모든 응답 및 스트림 개체에서 `Close`를 호출할 필요가 없지만 유해하지도 않습니다. 예를 들어:
 
     ```csharp
     response.Close();
@@ -148,14 +148,14 @@ ms.locfileid: "70040823"
     response.Close()
     ```
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 웹 서버에 데이터를 보내고 응답에서 데이터를 읽는 방법을 보여줍니다.
 
 [!code-csharp[SendDataUsingWebRequest](../../../samples/snippets/csharp/VS_Snippets_Network/SendDataUsingWebRequest/cs/WebRequestPostExample.cs)]
 [!code-vb[SendDataUsingWebRequest](../../../samples/snippets/visualbasic/VS_Snippets_Network/SendDataUsingWebRequest/vb/WebRequestPostExample.vb)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [인터넷 요청 만들기](creating-internet-requests.md)
 - [네트워크에서 스트림 사용](using-streams-on-the-network.md)

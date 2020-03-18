@@ -5,10 +5,10 @@ ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
 ms.openlocfilehash: e0a5c791926b36fe5a35c5446471c3dcdb75cd7b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "72774385"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET 이식성 분석기
@@ -57,7 +57,7 @@ Visual Studio에서 분석을 실행한 후 .NET 이식성 보고서 파일 링�
 
 보고서의 이식성 요약 섹션에는 실행에 포함된 각 어셈블리에 대한 이식성 백분율이 표시됩니다. 이전 예제에서 `svcutil` 앱에 사용되는 .NET Framework API의 71.24%는 .NET Core + 플랫폼 확장에서 사용할 수 있습니다. 여러 어셈블리에 대해 .NET Portability Analyzer 도구를 실행하는 경우 각 어셈블리에는 이식성 요약 보고서에 행이 있어야 합니다.
 
-#### <a name="details"></a>세부 정보
+#### <a name="details"></a>설명
 
 ![이식성 세부 정보의 스크린샷](./media/portability-analyzer/api-catalog-portablility-details.png)
 

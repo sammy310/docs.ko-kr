@@ -4,11 +4,11 @@ description: C#에서 LINQ 쿼리 식의 예외를 처리하는 방법을 알아
 ms.date: 12/01/2016
 ms.assetid: 2bf0c397-13fb-4f68-bc2b-531c6c88a167
 ms.openlocfilehash: f900669412026e69598d3939c51ff8208b51b7ec
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857504"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61688503"
 ---
 # <a name="handle-exceptions-in-query-expressions"></a>쿼리 식의 예외 처리
 

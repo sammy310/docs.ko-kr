@@ -3,10 +3,10 @@ title: Microsoft 도구를 사용하는 Docker 애플리케이션 DevOps 워크�
 description: Microsoft 플랫폼 및 도구가 포함된 컨테이너화된 Docker 애플리케이션 수명 주기 및 Microsoft 도구를 사용하는 DevOps 워크플로
 ms.date: 02/15/2019
 ms.openlocfilehash: 6b138301a7e6794ce0a7b15957684b3b73e9f89f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70295074"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Microsoft 도구를 사용하는 Docker 애플리케이션 DevOps 워크플로

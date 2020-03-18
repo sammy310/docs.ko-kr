@@ -9,10 +9,10 @@ helpviewer_keywords:
 - addmodule compiler option [C#]
 ms.assetid: ed604546-0dc2-4bd4-9a3e-610a8d973e58
 ms.openlocfilehash: 148a63c37cfbc4c60448adccde10947e91e22bb9
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70970181"
 ---
 # <a name="-addmodule-c-compiler-options"></a>-addmodule(C# 컴파일러 옵션)
@@ -37,7 +37,7 @@ ms.locfileid: "70970181"
   
  이 컴파일러 옵션은 Visual Studio에서 사용할 수 없습니다. 프로젝트에서 모듈을 참조할 수 없습니다. 또한 이 컴파일러 옵션은 프로그래밍 방식으로 변경할 수 없습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  소스 파일 `input.cs`를 컴파일하고 `metad1.netmodule` 및 `metad2.netmodule`의 메타데이터를 추가하여 `out.exe`를 생성합니다.  
   
 ```console  

@@ -4,11 +4,11 @@ description: C#에서 LINQ를 사용하여 왼쪽 외부 조인을 수행하는 
 ms.date: 12/01/2016
 ms.assetid: f542cee6-3169-4dcf-a631-3a6a79ccd473
 ms.openlocfilehash: cc08a1c8670623a10d1e0bf10221d02037a8d7bc
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857582"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61688581"
 ---
 # <a name="perform-left-outer-joins"></a>왼쪽 우선 외부 조인 수행
 
@@ -27,7 +27,7 @@ ms.locfileid: "54857582"
 
 [!code-csharp[CsLINQProgJoining#7](~/samples/snippets/csharp/concepts/linq/how-to-perform-left-outer-joins_1.cs)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Linq.Enumerable.Join%2A>
 - <xref:System.Linq.Enumerable.GroupJoin%2A>

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: b0e1d6d720a1c9b827fb4585606e64b545d395d7
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394372"
 ---
 ### <a name="kestrel-request-trailer-headers-moved-to-new-collection"></a>Kestrel: 요청 트레일러 헤더가 새 컬렉션으로 이동됨
@@ -39,7 +39,7 @@ HTTP/2 트레일러는 클라이언트에서 수신한 후 사용할 수 있습�
 
 트레일러는 gRPC와 같은 시나리오의 주요 기능입니다. 트레일러를 병합하여 헤더를 요청하는 것은 사용자에게 혼동을 줍니다.
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 `HttpRequest`에서 트레일러 관련 확장 메서드를 사용하여 트레일러에 액세스합니다.
 

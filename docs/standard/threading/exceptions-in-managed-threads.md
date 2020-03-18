@@ -9,10 +9,10 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
 ms.openlocfilehash: 6c14c60b30f8f70aa5e888ed45d6f867154e18d8
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159652"
 ---
 # <a name="exceptions-in-managed-threads"></a>관리되는 스레드의 예외
@@ -23,7 +23,7 @@ NET Framework 버전 2.0부터 공용 언어 런타임을 통해 스레드에 �
   
  공용 언어 런타임은 프로그램 흐름을 제어하는 데 사용되는 처리되지 않은 예외에 백업을 제공합니다.  
   
-- <xref:System.Threading.Thread.Abort%2A>가 호출되었으므로 스레드에서 <xref:System.Threading.ThreadAbortException>이 throw됩니다.  
+- <xref:System.Threading.ThreadAbortException>가 호출되었으므로 스레드에서 <xref:System.Threading.Thread.Abort%2A>이 throw됩니다.  
   
 - 스레드가 실행 중인 애플리케이션 도메인이 언로드되는 중이므로 스레드에서 <xref:System.AppDomainUnloadedException>이 throw됩니다.  
   
@@ -47,7 +47,7 @@ NET Framework 버전 2.0부터 공용 언어 런타임을 통해 스레드에 �
   
 - 스레드 풀 스레드에 처리되지 않은 예외가 없습니다. 작업이 처리하지 않는 예외를 throw하는 경우 런타임은 해당 예외의 스택 추적을 콘솔에 출력한 다음 해당 스레드를 스레드 풀에 반환합니다.  
   
-- <xref:System.Threading.Thread> 클래스의 <xref:System.Threading.Thread.Start%2A> 메서드를 사용하여 만들어진 스레드에는 처리되지 않은 예외가 없습니다. 해당 스레드에서 실행되는 코드가 처리하지 않는 예외를 throw하는 경우 런타임은 해당 예외의 스택 추적을 콘솔에 출력한 다음 해당 스레드를 종료합니다.  
+- <xref:System.Threading.Thread.Start%2A> 클래스의 <xref:System.Threading.Thread> 메서드를 사용하여 만들어진 스레드에는 처리되지 않은 예외가 없습니다. 해당 스레드에서 실행되는 코드가 처리하지 않는 예외를 throw하는 경우 런타임은 해당 예외의 스택 추적을 콘솔에 출력한 다음 해당 스레드를 종료합니다.  
   
 - 종료자 스레드에 처리되지 않은 예외가 없습니다. 종료자가 처리하지 않는 예외를 throw하는 경우 런타임은 해당 예외의 스택 추적을 콘솔에 출력한 다음 해당 종료자 스레드가 종료자 실행을 다시 시작하도록 합니다.  
   
@@ -76,6 +76,6 @@ NET Framework 버전 2.0부터 공용 언어 런타임을 통해 스레드에 �
 ## <a name="host-override"></a>호스트 재정의  
  .NET Framework 버전 2.0에서는 관리되지 않는 호스트가 호스팅 API의 [ICLRPolicyManager](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) 인터페이스를 사용하여 공용 언어 런타임의 기본 처리되지 않은 예외를 재정의할 수 있습니다. [ICLRPolicyManager::SetUnhandledExceptionPolicy](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) 함수를 사용하여 처리되지 않은 예외에 대한 정책을 설정합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [관리되는 스레딩 기본 사항](../../../docs/standard/threading/managed-threading-basics.md)

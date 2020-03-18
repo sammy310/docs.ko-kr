@@ -3,16 +3,16 @@ title: Word 문서에서 텍스트 찾기(C#)
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
 ms.openlocfilehash: 173472b9dbd669476c3e5529655d111b88b0dba2
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70205388"
 ---
 # <a name="finding-text-in-word-documents-c"></a>Word 문서에서 텍스트 찾기(C#)
 이 항목에서는 이전 쿼리를 확장하여 문서에 있는 문자열을 모두 찾습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 WordprocessingML 문서를 처리하여 문서에 있는 특정 텍스트 부분을 모두 찾습니다. 이렇게 하려면 "Hello" 문자열을 찾는 쿼리를 사용합니다. 이 예제는 이 자습서의 이전 예제를 기반으로 합니다. 새 쿼리는 아래에 있는 코드의 주석에서 호출됩니다.  
   
  이 예제의 소스 문서 만들기에 대한 지침은 [원본 Office Open XML 문서 만들기(C#)](./creating-the-source-office-open-xml-document.md)를 참조하세요.  

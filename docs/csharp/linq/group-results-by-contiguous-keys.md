@@ -4,11 +4,11 @@ description: C#의 LINQ를 사용하여 연속 키를 기준으로 결과를 그
 ms.date: 08/14/2018
 ms.assetid: cbda9c08-151b-4c9e-82f7-c3d7f3dac66b
 ms.openlocfilehash: b5753c85bb07be4fc84b78a299eece961969ff9d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47193007"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61659906"
 ---
 # <a name="group-results-by-contiguous-keys"></a>연속 키를 기준으로 결과 그룹화
 
@@ -16,7 +16,7 @@ ms.locfileid: "47193007"
 
 |Key|값|
 |---------|-----------|
-|A|수|
+|A|We|
 |A|think|
 |A|that|
 |B|Linq|
@@ -41,7 +41,7 @@ ms.locfileid: "47193007"
 
 스레드로부터의 안전성을 달성하려면 소스 코드 요소에 설명된 대로 소스 시퀀스가 반복됨에 따라 각 그룹 또는 청크의 복사본을 만듭니다. 소스 시퀀스에 연속 항목의 큰 시퀀스가 포함된 경우 공용 언어 런타임이 <xref:System.OutOfMemoryException>을 throw할 수 있습니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 확장 메서드 및 이를 사용하는 클라이언트 코드를 보여 줍니다.
 

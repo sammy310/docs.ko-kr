@@ -3,18 +3,18 @@ title: 확장 메서드를 사용하여 리팩터링(C#)
 ms.date: 07/20/2015
 ms.assetid: c5fc123d-af10-4a2f-b8e4-db921efb2639
 ms.openlocfilehash: 8546c2cb834107cf2e099af40f9a7df4d5858b4b
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70253090"
 ---
 # <a name="refactoring-using-an-extension-method-c"></a>확장 메서드를 사용하여 리팩터링(C#)
 이 예제는 확장 메서드로 구현된 순수 함수를 사용하여 문자열의 연결을 리팩터링하는 방법으로 이전 예제인 [단락의 텍스트 검색(C#)](./retrieving-the-text-of-the-paragraphs.md)을 기반으로 작성되었습니다.  
   
- 이전 예제에서는 <xref:System.Linq.Enumerable.Aggregate%2A> 표준 쿼리 연산자를 사용하여 여러 문자열을 한 문자열로 연결합니다. 그러나 생성되는 쿼리가 더 작고 간단하기 때문에 이 작업을 수행하는 확장 메서드를 작성하는 것이 간편합니다.  
+ 이전 예제에서는 <xref:System.Linq.Enumerable.Aggregate%2A> 표준 쿼리 연산자를 사용하여 여러 문자열을 한 문자열로 연결합니다. 그러나 생성되는 쿼리가 더 작고 간단하기 때문에 이 작업을 수행하는 확장명 메서드를 작성하는 것이 간편합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 WordprocessingML 문서를 처리하여 단락, 각 단락의 스타일 및 각 단락의 텍스트를 검색합니다. 이 예제는 이 자습서의 이전 예제를 기반으로 합니다.  
   
  이 예제에는 `StringConcatenate` 메서드의 오버로드가 여러 개 포함되어 있습니다.  
@@ -62,7 +62,7 @@ public static class LocalExtensions
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  `StringConcatenate` 메서드의 오버로드는 네 가지가 있습니다. 한 오버로드는 문자열의 컬렉션을 가져와서 단일 문자열을 반환합니다. 다른 오버로드는 원하는 형식의 컬렉션과 컬렉션의 singleton에서 문자열로 프로젝션하는 대리자를 사용할 수 있습니다. 나머지 두 오버로드는 구분 기호 문자열을 지정할 수 있도록 합니다.  
   
  다음 코드에서는 네 오버로드를 모두 사용합니다.  
@@ -87,7 +87,7 @@ one:two:three:
 1:2:3:  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이제 새 확장명 메서드를 활용하기 위해 예제를 수정할 수 있습니다.  
   
 ```csharp  

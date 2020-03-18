@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Assembly Binding Log Viewer
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 ms.openlocfilehash: 2f0018dca6e5add2c5bc531103a4078307a8c8c6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73129842"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe(어셈블리 바인딩 로그 뷰어)
@@ -229,7 +229,7 @@ Discarding native image.
     > [!NOTE]
     > Windows 8 이상에서만 상자가 활성화됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.TypeLoadException>
 - [도구](index.md)

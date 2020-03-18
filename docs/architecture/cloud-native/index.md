@@ -4,10 +4,10 @@ description: Azure의 컨테이너, 마이크로 서비스 및 서버리스 기�
 author: ardalis
 ms.date: 03/07/2019
 ms.openlocfilehash: 7f14a690d0153edc43f0ce7f4e91c9e9cd2c6858
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71696788"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Azure용 클라우드 네이티브 .NET 애플리케이션 설계

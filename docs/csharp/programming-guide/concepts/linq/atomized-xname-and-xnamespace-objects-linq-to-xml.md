@@ -3,10 +3,10 @@ title: 원자화된 XName 및 XNamespace 개체(LINQ to XML)(C#)
 ms.date: 07/20/2015
 ms.assetid: a5b21433-b49d-415c-b00e-bcbfb0d267d7
 ms.openlocfilehash: bc5066440d87f5485ae9099d7a7f4f5e9e66b4ec
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70204267"
 ---
 # <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-c"></a>원자화된 XName 및 XNamespace 개체(LINQ to XML)(C#)
@@ -19,7 +19,7 @@ ms.locfileid: "70204267"
   
  <xref:System.Xml.Linq.XName> 및 <xref:System.Xml.Linq.XNamespace>는 비교하는 두 개체가 같은 인스턴스를 참조하는지 확인하기 위해 같음 연산자 및 같지 않음 연산자도 구현합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드에서는 몇 가지 <xref:System.Xml.Linq.XElement> 개체를 만들어 동일한 이름이 같은 인스턴스를 공유함을 보여 줍니다.  
   
 ```csharp  

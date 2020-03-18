@@ -3,10 +3,10 @@ title: 마이크로 서비스별 데이터 주권
 description: 마이크로 서비스별 데이터 주권은 마이크로 서비스의 핵심 포인트 중 하나입니다. 각 마이크로 서비스는 데이터베이스의 유일한 소유자여야 하며, 다른 것과 공유하지 않아야 합니다. 물론 모든 마이크로 서비스 인스턴스는 동일한 고가용성 데이터베이스에 연결됩니다.
 ms.date: 09/20/2018
 ms.openlocfilehash: f606d6314f38bf3e2c163871af432806dddc7446
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73191913"
 ---
 # <a name="data-sovereignty-per-microservice"></a>마이크로 서비스별 데이터 주권
@@ -47,9 +47,9 @@ ms.locfileid: "73191913"
 
 DDD는 실제 경계를 분산된 마이크로 서비스의 형태로 가져오는 마이크로 서비스의 이점을 활용합니다. 하지만 마이크로 서비스 간에 모델을 공유하지 않는 아이디어는 경계가 지정된 컨텍스트에도 사용할 수 있습니다.
 
-### <a name="additional-resources"></a>추가 리소스
+### <a name="additional-resources"></a>추가 자료
 
-- **Chris Richardson. 패턴 서비스별 데이터베이스** \
+- **Chris Richardson. 패턴: 서비스별 데이터베이스** \
   <https://microservices.io/patterns/data/database-per-service.html>
 
 - **Martin Fowler. BoundedContext** \

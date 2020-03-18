@@ -10,10 +10,10 @@ helpviewer_keywords:
 - long paths
 - path formats, Windows
 ms.openlocfilehash: b3510be5d417b555d2db163636eac5ce0c0779e4
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77628048"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 시스템의 파일 경로 형식
@@ -30,7 +30,7 @@ ms.locfileid: "77628048"
 
 세 구성 요소가 모두 존재하면 절대 경로입니다. 볼륨 또는 드라이브 문자가 지정되지 않았으며 디렉터리 이름이 [디렉터리 구분 문자](<xref:System.IO.Path.DirectorySeparatorChar>)로 시작하는 경우 현재 드라이브의 루트에 대한 상대 경로입니다. 그렇지 않으면 현재 디렉터리를 기준으로 하는 상대 경로입니다. 다음 표는 몇몇 가능한 디렉터리 및 파일 경로를 보여 줍니다.
 
-|Path  |설명  |
+|경로  |설명  |
 | -- | -- |
 | `C:\Documents\Newsletters\Summer2018.pdf` | 드라이브 C의 루트에서 시작하는 절대 파일 경로: |
 | `\Program Files\Custom Utilities\StringFinder.exe` | 현재 드라이브의 루트에서 시작하는 절대 경로입니다. |
@@ -95,7 +95,7 @@ DOS 디바이스 경로는 다음 구성 요소로 구성됩니다.
 
    디바이스 경로 지정자 뒤에 오는 DOS 디바이스 경로의 첫 번째 세그먼트는 볼륨 또는 드라이브를 식별합니다. (예를 들어 `\\?\C:\` 및 `\\.\BootPartition\`)
 
-   호출된 UNC에 대한 특정 링크가 있습니다(당연히 `UNC`). 예를 들어:
+   호출된 UNC에 대한 특정 링크가 있습니다(당연히 `UNC`). 예들 들어 다음과 같습니다.
 
   `\\.\UNC\Server\Share\Test\Foo.txt`
   `\\?\UNC\Server\Share\Test\Foo.txt`
@@ -104,7 +104,7 @@ DOS 디바이스 경로는 다음 구성 요소로 구성됩니다.
 
 DOS 디바이스 경로는 정의에 의해 정규화됩니다. 상대 디렉터리 세그먼트(`.` 및 `..`)는 허용되지 않습니다. 현재 디렉터리는 해당 사용에 포함되지 않습니다.
 
-## <a name="example-ways-to-refer-to-the-same-file"></a>예: 동일한 파일을 참조하는 방법
+## <a name="example-ways-to-refer-to-the-same-file"></a>예: 같은 파일을 참조하는 방법
 
 다음 예제는 <xref:System.IO> 네임스페이스에서 API를 사용할 때 파일을 참조할 수 있는 몇 가지 방법을 보여 줍니다. 이 예제는 <xref:System.IO.FileInfo> 개체를 인스턴스화하고 해당 개체의 <xref:System.IO.FileInfo.Name> 및 <xref:System.IO.FileInfo.Length> 속성을 사용하여 파일 이름 및 파일의 길이를 표시합니다.
 
@@ -121,7 +121,7 @@ Windows API에 전달되는 거의 모든 경로는 정규화됩니다. 정규�
 - 상대 디렉터리 구성 요소(현재 디렉터리의 경우 `.` 및 부모 디렉터리의 경우 `..`)를 평가합니다.
 - 특정 문자를 잘라냅니다.
 
-이 정규화는 암시적으로 일어나지만 [GetFullPathName() 함수](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) 호출을 래핑하는 <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType> 메서드를 호출하여 명시적으로 수행할 수도 있습니다. 또한 P/Invoke를 사용하여 Windows [GetFullPathName() 함수](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)를 직접 호출할 수도 있습니다.
+이 정규화는 암시적으로 일어나지만 <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType>GetFullPathName() 함수[ 호출을 래핑하는 ](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) 메서드를 호출하여 명시적으로 수행할 수도 있습니다. 또한 P/Invoke를 사용하여 Windows [GetFullPathName() 함수](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)를 직접 호출할 수도 있습니다.
 
 ### <a name="identifying-the-path"></a>경로 식별
 
@@ -202,7 +202,7 @@ Windows API에 전달되는 거의 모든 경로는 정규화됩니다. 정규�
 
 `\\?\`로 시작하는 경로는 [GetFullPathName 함수](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)에 명시적으로 전달하더라도 여전히 정규화됩니다.
 
-`MAX_PATH` 문자보다 큰 경로는 `\\?\` 없이 [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)에 전달할 수 있습니다. 이는 Windows에서 처리할 수 있는 최대 문자열 크기까지 임의 길이의 경로를 지원합니다.
+`MAX_PATH` 문자보다 큰 경로는 [ 없이 ](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)GetFullPathName`\\?\`에 전달할 수 있습니다. 이는 Windows에서 처리할 수 있는 최대 문자열 크기까지 임의 길이의 경로를 지원합니다.
 
 ## <a name="case-and-the-windows-file-system"></a>대/소문자 및 Windows 파일 시스템
 

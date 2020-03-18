@@ -9,10 +9,10 @@ helpviewer_keywords:
 - threading [.NET Framework], cross-process synchronization
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
 ms.openlocfilehash: 874f879697db0b47c73626350eeb05a01b38e1bc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73127560"
 ---
 # <a name="mutexes"></a>뮤텍스
@@ -25,7 +25,7 @@ ms.locfileid: "73127560"
   
  스레드는 해당 <xref:System.Threading.Mutex.ReleaseMutex%2A> 메서드를 호출하여 뮤텍스를 해제합니다. 뮤텍스에는 스레드 선호도가 있습니다. 즉, 뮤텍스를 소유하는 스레드에 의해서만 해제될 수 있습니다. 스레드가 소유하지 않는 뮤텍스를 해제하는 경우 스레드에서 <xref:System.ApplicationException>이 throw됩니다.  
   
- <xref:System.Threading.Mutex> 클래스는 <xref:System.Threading.WaitHandle>에서 파생되므로 <xref:System.Threading.WaitHandle>의 정적 <xref:System.Threading.WaitHandle.WaitAll%2A> 또는 <xref:System.Threading.WaitHandle.WaitAny%2A> 메서드를 호출하여 다른 대기 핸들과 결합하여 <xref:System.Threading.Mutex>의 소유권을 요청할 수도 있습니다.  
+ <xref:System.Threading.Mutex> 클래스는 <xref:System.Threading.WaitHandle>에서 파생되므로 <xref:System.Threading.WaitHandle.WaitAll%2A>의 정적 <xref:System.Threading.WaitHandle.WaitAny%2A> 또는 <xref:System.Threading.WaitHandle> 메서드를 호출하여 다른 대기 핸들과 결합하여 <xref:System.Threading.Mutex>의 소유권을 요청할 수도 있습니다.  
   
  스레드가 <xref:System.Threading.Mutex>를 소유하는 경우 해당 스레드는 해당 실행을 차단하지 않고 반복되는 대기 요청 호출에서 동일한 <xref:System.Threading.Mutex>를 지정할 수 있지만 소유권을 해제하는 횟수만큼 <xref:System.Threading.Mutex>를 해제해야 합니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "73127560"
 ### <a name="access-control-security-for-system-mutexes"></a>시스템 뮤텍스에 대한 액세스 제어 보안  
  .NET Framework 버전 2.0은 명명된 시스템 개체에 대해 Windows 액세스 제어 보안을 쿼리 및 설정하는 기능을 제공합니다. 시스템 개체는 전역적이며 따라서 코드에서 잠글 수 있으므로 생성 순간부터 시스템 뮤텍스를 보호하는 것이 좋습니다.  
   
- 뮤텍스의 액세스 제어 보안에 대한 자세한 내용은 <xref:System.Security.AccessControl.MutexSecurity> 및 <xref:System.Security.AccessControl.MutexAccessRule> 클래스, <xref:System.Security.AccessControl.MutexRights> 열거형, <xref:System.Threading.Mutex> 클래스의 <xref:System.Threading.Mutex.GetAccessControl%2A>, <xref:System.Threading.Mutex.SetAccessControl%2A> 및 <xref:System.Threading.Mutex.OpenExisting%2A> 메서드, <xref:System.Threading.Mutex.%23ctor%28System.Boolean%2CSystem.String%2CSystem.Boolean%40%2CSystem.Security.AccessControl.MutexSecurity%29> 생성자를 참조하세요.  
+ 뮤텍스의 액세스 제어 보안에 대한 자세한 내용은 <xref:System.Security.AccessControl.MutexSecurity> 및 <xref:System.Security.AccessControl.MutexAccessRule> 클래스, <xref:System.Security.AccessControl.MutexRights> 열거형, <xref:System.Threading.Mutex.GetAccessControl%2A> 클래스의 <xref:System.Threading.Mutex.SetAccessControl%2A>, <xref:System.Threading.Mutex.OpenExisting%2A> 및 <xref:System.Threading.Mutex> 메서드, <xref:System.Threading.Mutex.%23ctor%28System.Boolean%2CSystem.String%2CSystem.Boolean%40%2CSystem.Security.AccessControl.MutexSecurity%29> 생성자를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 

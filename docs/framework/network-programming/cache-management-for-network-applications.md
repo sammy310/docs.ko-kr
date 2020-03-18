@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Internet, caching
 ms.assetid: fc258a40-f370-434f-ae09-4a8cb11ddaeb
 ms.openlocfilehash: 7e131963999db3e3d5e0e6f3fa110da36e6452a1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048882"
 ---
 # <a name="cache-management-for-network-applications"></a>네트워크 애플리케이션에 대한 캐시 관리

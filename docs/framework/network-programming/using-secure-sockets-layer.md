@@ -16,10 +16,10 @@ helpviewer_keywords:
 - Internet, Secure Sockets Layer
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
 ms.openlocfilehash: ef2abc7574aea1b4f77ff93545ad84678c66ce48
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71046900"
 ---
 # <a name="using-secure-sockets-layer"></a>SSL(Secure Sockets Layer) 사용
@@ -27,11 +27,11 @@ ms.locfileid: "71046900"
   
  HTTP 연결의 경우 <xref:System.Net.WebRequest> 및 <xref:System.Net.WebResponse> 클래스는 SSL을 사용하여 SSL을 지원하는 웹 호스트와 통신합니다. 제공된 URI에 따라 <xref:System.Net.WebRequest> 클래스가 SSL 사용을 결정합니다. URI가 “https:”로 시작하는 경우 SSL이 사용됩니다. URI가 “http:”로 시작하는 경우에는 암호화되지 않은 연결이 사용됩니다.  
   
- FTP(파일 전송 프로토콜)와 함께 SSL을 사용하려면 <xref:System.Net.FtpWebRequest.GetResponse>를 호출하기 전에 <xref:System.Net.FtpWebRequest.EnableSsl> 속성을 true로 설정합니다. 마찬가지로, SMTP(Simple Mail Transfer Protocol)와 함께 SSL을 사용하려면 이메일을 보내기 전에 <xref:System.Net.Mail.SmtpClient.EnableSsl> 속성을 true로 설정합니다.  
+ FTP(파일 전송 프로토콜)와 함께 SSL을 사용하려면 <xref:System.Net.FtpWebRequest.EnableSsl>를 호출하기 전에 <xref:System.Net.FtpWebRequest.GetResponse> 속성을 true로 설정합니다. 마찬가지로, SMTP(Simple Mail Transfer Protocol)와 함께 SSL을 사용하려면 이메일을 보내기 전에 <xref:System.Net.Mail.SmtpClient.EnableSsl> 속성을 true로 설정합니다.  
   
  <xref:System.Net.Security.SslStream> 클래스는 SSL에 대한 스트림 기반 추상화를 제공하고 SSL 핸드셰이크를 구성할 수 있는 여러 가지 방법을 제공합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ### <a name="code"></a>코드  
   

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: ae5a5fbf97ed4a03de7d35b9d5d5ca8de3aebc39
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72393890"
 ---
 ### <a name="caching-responsecaching-pubternal-types-changed-to-internal"></a>캐싱: ResponseCaching "pubternal" 유형이 내부로 변경됨
@@ -32,7 +32,7 @@ ASP.NET Core에서 "pubternal" 유형은 `public`으로 선언되지만 `.Intern
 
 `internal` 범위는 지원되지 않는 정책을 더 잘 반영합니다.
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 앱 또는 라이브러리에서 사용하는 형식을 복사합니다.
 

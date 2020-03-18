@@ -3,10 +3,10 @@ title: Docker 컨테이너에 대해 .NET Core와 .NET Framework 중에 선택
 description: 컨테이너화된 .NET 애플리케이션에 대한 .NET 마이크로 서비스 아키텍처 | Docker 컨테이너에 대해 .NET Core와 .NET Framework 중에 선택
 ms.date: 09/11/2018
 ms.openlocfilehash: b01aaf25f4071e8e4a07905a12ec9dd0d89a738d
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70849279"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-docker-containers"></a>Docker 컨테이너에 대해 .NET Core와 .NET Framework 중에 선택

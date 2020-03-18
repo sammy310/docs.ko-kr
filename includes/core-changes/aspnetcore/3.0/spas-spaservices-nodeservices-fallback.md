@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: e5355387d5cb6d9e6de89f5b85e64bc100b32ae1
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72522664"
 ---
 ### <a name="spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger"></a>SPA: SpaServices 및 NodeServices가 더 이상 콘솔 로거로 대체되지 않습니다.
@@ -26,7 +26,7 @@ ms.locfileid: "72522664"
 
 다른 ASP.NET Core 패키지에서 로깅을 구현하는 방법에 맞춰 조정할 필요가 있습니다.
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 이전 동작이 필요한 경우 콘솔 로깅을 구성하려면 `Setup.ConfigureServices` 메서드에 `services.AddLogging(builder => builder.AddConsole())`을 추가합니다.
 

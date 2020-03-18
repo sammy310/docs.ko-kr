@@ -9,16 +9,16 @@ helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
 ms.openlocfilehash: 14f4f1402f564d38bb508e893521a3951c1509f4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139715"
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>방법: 스레드 로컬 변수를 사용하는 Parallel.For 루프 작성
 이 예제에서는 스레드 지역 변수를 사용하여, <xref:System.Threading.Tasks.Parallel.For%2A> 루프에 의해 만들어진 각 별도 작업의 상태를 저장하고 검색하는 방법을 보여 줍니다. 스레드 로컬 데이터를 사용하여, 공유 상태에 대한 많은 수의 액세스를 동기화하는 오버헤드를 방지할 수 있습니다. 반복할 때마다 공유 리소스에 쓰는 대신 작업의 반복이 모두 완료될 때까지 값을 계산하여 저장합니다. 그런 다음 공유 리소스에 최종 결과를 한 번 쓰거나, 최종 결과를 다른 메서드로 전달할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> 메서드를 호출하여 1백만 개의 요소가 포함된 배열의 값 합계를 계산합니다. 각 요소의 값은 해당 인덱스와 같습니다.  
   
  [!code-csharp[TPL_Parallel#05](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/forandforeach_simple.cs#05)]

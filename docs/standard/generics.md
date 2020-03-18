@@ -5,17 +5,17 @@ author: kuhlenh
 ms.author: wiwagn
 ms.date: 10/09/2018
 ms.openlocfilehash: 3c1181f5be717f328ae906c6009fc8a34b904c89
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465427"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "61923853"
 ---
 # <a name="generic-types-overview"></a>제네릭 형식 개요
 
 개발자는 암시적이든 명시적이든 .NET에서 항상 제네릭을 사용합니다. .NET에서 LINQ를 사용할 때 <xref:System.Collections.Generic.IEnumerable%601>로 작업하고 있다는 것을 알아차리셨나요? 또는 Entity Framework를 사용하여 데이터베이스에 통신하기 위한 "제네릭 리포지토리"의 온라인 샘플을 본 적이 있다면 대부분의 메서드가 IQueryable\<T>를 반환하는 것을 보셨나요? 이러한 예제에서 **T**가 무엇이고 왜 사용되는지 궁금하게 여겼을 수도 있습니다.
 
-.NET Framework 2.0에서 처음 소개된 **제네릭**은 기본적으로 개발자가 실제 데이터 형식에 커밋하지 않고 [형식이 안전한](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hbzz1a9a(v=vs.100)) 데이터 구조를 정의할 수 있게 해주는 “코드 템플릿”입니다. 예를 들어 <xref:System.Collections.Generic.List%601>는 `List<int>`, `List<string>` 또는 `List<Person>`과 같은 모든 형식으로 선언하고 사용할 수 있는 [제네릭 컬렉션](xref:System.Collections.Generic)입니다.
+.NET Framework 2.0에서 처음 소개된 **제네릭**은 기본적으로 개발자가 실제 데이터 형식에 커밋하지 않고 [형식이 안전한](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hbzz1a9a(v=vs.100)) 데이터 구조를 정의할 수 있게 해주는 “코드 템플릿”입니다. 예를 들어 <xref:System.Collections.Generic.List%601>는 [, ](xref:System.Collections.Generic) 또는 `List<int>`과 같은 모든 형식으로 선언하고 사용할 수 있는 `List<string>`제네릭 컬렉션`List<Person>`입니다.
 
 제네릭이 유용한 이유를 이해하려면 제네릭을 추가하기 전과 이후의 특정 클래스인 <xref:System.Collections.ArrayList>를 살펴보아야 합니다. .NET Framework 1.0에서 `ArrayList` 요소는 <xref:System.Object> 형식이었습니다. 이는 추가된 모든 요소가 자동으로 `Object`로 변환되었음을 의미합니다. 목록에서 요소를 읽을 때 동일한 작업이 수행됩니다. [boxing 및 unboxing](../csharp/programming-guide/types/boxing-and-unboxing.md)이라고 하는 이 프로세스는 성능에 영향을 줍니다. 그러나 이보다 더 중요한 사항은 컴파일 시간에 목록에 있는 데이터 형식을 확인할 방법이 없다는 것입니다. 이 때문에 손상되기 쉬운 일부 코드가 발생합니다. 제네릭은 목록의 각 인스턴스에 포함될 데이터 형식을 정의하여 이 문제를 해결합니다. 예를 들어 `List<int>`에는 정수만 추가하고 `List<Person>`에는 사용자만 추가하면 됩니다.
 

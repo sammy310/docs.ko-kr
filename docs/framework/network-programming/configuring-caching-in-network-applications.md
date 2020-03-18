@@ -5,10 +5,10 @@ helpviewer_keywords:
 - cache [.NET Framework], configuring
 ms.assetid: 3f694a1c-de5d-47cf-a6eb-cfc369fb8a9f
 ms.openlocfilehash: d8ff64e4ab42283732d7f632efab6b4e9afad0a0
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048698"
 ---
 # <a name="configuring-caching-in-network-applications"></a>네트워크 애플리케이션에서 캐싱 구성
@@ -16,9 +16,9 @@ ms.locfileid: "71048698"
   
 - [방법: 애플리케이션에 대해 위치 기반 캐시 정책 설정](how-to-set-a-location-based-cache-policy-for-an-application.md)  
   
-- [방법: 애플리케이션의 기본 시간 기반 캐시 정책 설정](how-to-set-the-default-time-based-cache-policy-for-an-application.md)  
+- [방법: 애플리케이션에 대해 시간 기반 캐시 정책 설정](how-to-set-the-default-time-based-cache-policy-for-an-application.md)  
   
-- [방법: 시간 기반 캐시 정책 사용자 지정](how-to-customize-a-time-based-cache-policy.md)  
+- [방법: 시간 기반 캐시 정책을 사용자 지정](how-to-customize-a-time-based-cache-policy.md)  
   
 - [방법: 요청에 캐시 정책 설정](how-to-set-cache-policy-for-a-request.md)  
   

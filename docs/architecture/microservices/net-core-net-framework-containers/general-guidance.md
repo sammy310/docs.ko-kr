@@ -3,10 +3,10 @@ title: 일반 지침
 description: 컨테이너화된 .NET 애플리케이션을 위한 .NET 마이크로 서비스 아키텍처 | 일반 지침
 ms.date: 09/11/2018
 ms.openlocfilehash: 2fa66d7593b764a8df4d9acc20f93d3f8fb26174
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73089644"
 ---
 # <a name="general-guidance"></a>일반 지침
@@ -35,7 +35,7 @@ ms.locfileid: "73089644"
 
 Docker에서 .NET Framework를 사용하면 배포 문제 최소화를 통해 배포 환경을 개선할 수 있습니다. 이러한 [“이동 전환”(lift and shift) 시나리오](https://aka.ms/liftandshiftwithcontainersebook)는 ASP.NET WebForms, MVC 웹앱 또는 WCF(Windows Communication Foundation) 서비스 같은 기존 .NET Framework로 개발된 레거시 애플리케이션을 컨테이너화하는 데 중요합니다.
 
-### <a name="additional-resources"></a>추가 리소스
+### <a name="additional-resources"></a>추가 자료
 
 - **전자책: Azure 및 Windows 컨테이너를 사용하여 기존 .NET Framework 애플리케이션 최신화**  
     https://aka.ms/liftandshiftwithcontainersebook

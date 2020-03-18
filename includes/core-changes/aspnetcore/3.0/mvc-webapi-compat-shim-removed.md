@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 75945e7ff26c1c6db891d12cef4c16ed210da6af
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394402"
 ---
 ### <a name="mvc-web-api-compatibility-shim-removed"></a>MVC: 웹 API 호환성 shim이 제거됨
@@ -22,7 +22,7 @@ ASP.NET Core 3.0부터는 `Microsoft.AspNetCore.Mvc.WebApiCompatShim` 패키지�
 
 Web API 호환성 shim은 마이그레이션 도구였습니다. ASP.NET Core에 추가된 새로운 기능에 대한 사용자 액세스를 제한합니다.
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 이 shim의 사용을 제거하고 ASP.NET Core 자체의 유사한 기능으로 직접 마이그레이션합니다.
 

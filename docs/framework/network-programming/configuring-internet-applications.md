@@ -22,16 +22,16 @@ helpviewer_keywords:
 - Internet, default proxy
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
 ms.openlocfilehash: ee4dc87383153ae4e8df0a3bed7cce5220e65405
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048628"
 ---
 # <a name="configuring-internet-applications"></a>인터넷 애플리케이션 구성
 [\<system.Net&gt; 요소(네트워크 설정)](../configure-apps/file-schema/network/system-net-element-network-settings.md) 구성 요소에는 애플리케이션에 대한 네트워크 구성 정보가 들어 있습니다. [\<system.Net&gt; 요소(네트워크 설정)](../configure-apps/file-schema/network/system-net-element-network-settings.md) 구성 요소를 사용하여 프록시 서버를 설정하고, 연결 관리 매개 변수를 설정하고, 애플리케이션에 사용자 지정 인증 및 요청 모듈을 포함할 수 있습니다.  
   
- [\<defaultProxy> 요소(네트워크 설정)](../configure-apps/file-schema/network/defaultproxy-element-network-settings.md) 구성 요소는 `GlobalProxySelection` 클래스에서 반환된 프록시 서버를 정의합니다. 자체적인 <xref:System.Net.HttpWebRequest.Proxy%2A> 속성이 특정 값으로 설정되지 않은 <xref:System.Net.HttpWebRequest>는 기본 프록시를 사용합니다. 프록시 주소를 설정하는 것 이외에 프록시를 사용하지 않을 서버 주소 목록을 만들고 로컬 주소에 프록시를 사용하지 않도록 지정할 수 있습니다.  
+ [\<defaultProxy> 요소(네트워크 설정)](../configure-apps/file-schema/network/defaultproxy-element-network-settings.md) 구성 요소는 `GlobalProxySelection` 클래스에서 반환된 프록시 서버를 정의합니다. 자체적인 <xref:System.Net.HttpWebRequest> 속성이 특정 값으로 설정되지 않은 <xref:System.Net.HttpWebRequest.Proxy%2A>는 기본 프록시를 사용합니다. 프록시 주소를 설정하는 것 이외에 프록시를 사용하지 않을 서버 주소 목록을 만들고 로컬 주소에 프록시를 사용하지 않도록 지정할 수 있습니다.  
   
  Microsoft Internet Explorer 설정은 구성 설정과 결합되고 구성 설정이 우선 적용된다는 점을 기억해야 합니다.  
   

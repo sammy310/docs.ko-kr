@@ -14,10 +14,10 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
 ms.openlocfilehash: d8546980dd0cf58ca7c095750f2749d5a6bc7723
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73084220"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>정규식 예제: HREF 스캐닝
@@ -36,7 +36,7 @@ ms.locfileid: "73084220"
   
  정규식 패턴 `href\s*=\s*(?:["'](?<1>[^"']*)["']|(?<1>\S+))` 는 다음 테이블과 같이 해석됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`href`|리터럴 문자열 "href"과 일치합니다. 일치 항목 찾기에서는 대/소문자를 구분하지 않습니다.|  
 |`\s*`|0개 이상의 공백 문자가 일치하는지 확인합니다.|  
@@ -54,6 +54,6 @@ ms.locfileid: "73084220"
   
  이러한 문제를 해결하기 위해 <xref:System.Text.RegularExpressions.Regex> 클래스는 `(?<name>…)` 구문이 지정된 슬롯에 일치 항목을 캡처하도록 지원합니다(문자열 또는 정수를 사용하여 슬롯에 이름을 지정할 수 있음. 정수를 더 신속하게 다시 호출할 수 있음). 따라서 동일한 문자열의 대체 일치 항목은 모두 동일한 위치로 지정될 수 있습니다. 충돌이 발생할 경우 슬롯에 삭제된 마지막 일치 항목이 성공적인 일치입니다. (그러나 단일 슬롯에 대한 여러 일치 항목이 있는 경우 전체 목록을 사용할 수 있습니다. 자세한 내용은 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 컬렉션을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET 정규식](../../../docs/standard/base-types/regular-expressions.md)

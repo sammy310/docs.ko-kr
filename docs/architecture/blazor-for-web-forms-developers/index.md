@@ -5,10 +5,10 @@ author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
 ms.openlocfilehash: 394d11038b59f4cbe9e9955df43b6198eb5daaf8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73088125"
 ---
 # <a name="blazor-for-aspnet-web-forms-developers"></a>ASP.NET Web Forms용 Blazor 개발자
@@ -35,7 +35,7 @@ All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 �
 
 이 가이드는 작성자의 견해와 의견을 "있는 그대로" 제공하고 전달합니다. URL 및 기타 인터넷 웹 사이트 참조를 비롯하여 이 가이드에 제공된 견해, 의견 및 정보는 예고 없이 변경될 수 있습니다.
 
-여기에 설명된 일부 예제는 예시 용도로만 제공되며 실제 데이터가 아닙니다. 실제로 연관시키거나 관련시키려고 의도하거나 추론해서는 안 됩니다.
+여기에 설명된 일부 예제는 예시 용도로만 제공되며 실제 데이터가 아닙니다. 어떠한 실제 사례와도 연관시킬 의도가 없으며 그렇게 유추해서도 안 됩니다.
 
 "상표" 웹 페이지의 <https://www.microsoft.com>에 나열된 Microsoft 및 상표는 Microsoft 그룹 계열사의 상표입니다.
 

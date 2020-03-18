@@ -3,10 +3,10 @@ title: 연결된 쿼리의 성능(LINQ to XML)(C#)
 ms.date: 07/20/2015
 ms.assetid: b2f1d715-8946-4dc0-8d56-fb3d1bba54a6
 ms.openlocfilehash: 7deff9205e6535877efabd85257baa5b3906f41a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70253121"
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-c"></a>연결된 쿼리의 성능(LINQ to XML)(C#)
@@ -55,4 +55,4 @@ foreach (var i in query2)
 
 반복기에 대한 자세한 내용은 [yield](../../../language-reference/keywords/yield.md)를 참조하세요.
 
-여러 쿼리를 연결하는 방법에 대한 자세한 자습서를 보려면 [자습서: 여러 쿼리 연결(C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)을 참조하세요.
+쿼리를 연결하는 방법을 설명하는 자세한 자습서를 보려면 [자습서: 여러 쿼리 연결](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)을 참조하세요.

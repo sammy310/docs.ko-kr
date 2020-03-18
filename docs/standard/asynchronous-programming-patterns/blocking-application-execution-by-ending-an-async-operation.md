@@ -12,10 +12,10 @@ dev_langs:
 - csharp
 - vb
 ms.openlocfilehash: aed3b18c154d4b7a4390b28fb1f14536690f6b3a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73121324"
 ---
 # <a name="blocking-application-execution-by-ending-an-async-operation"></a>비동기 작업을 종료하여 애플리케이션 실행 차단
@@ -23,17 +23,17 @@ ms.locfileid: "73121324"
   
 - 비동기 작업 **End**_OperationName_ 메서드를 호출합니다. 이 항목에서 이 방법을 설명합니다.  
   
-- 비동기 작업의 **Begin**_OperationName_ 메서드에 의해 반환된 <xref:System.IAsyncResult>의 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 속성을 사용합니다. 이 방법을 설명하는 예제는 [AsyncWaitHandle을 사용하는 애플리케이션 실행 블로킹](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md)을 참조하세요.  
+- 비동기 작업의 <xref:System.IAsyncResult.AsyncWaitHandle%2A>Begin<xref:System.IAsyncResult>**OperationName** 메서드에 의해 반환된 _의_  속성을 사용합니다. 이 방법을 설명하는 예제는 [AsyncWaitHandle을 사용하는 애플리케이션 실행 블로킹](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md)을 참조하세요.  
   
  **End**_OperationName_ 메서드를 사용하여 비동기 작업이 완료될 때까지 차단하는 애플리케이션은 일반적으로 **Begin**_OperationName_ 메서드를 호출하고, 작업 결과 없이 완료할 수 있는 작업을 수행한 다음, **End**_OperationName_을 호출합니다.  
   
-## <a name="example"></a>예  
- 다음 코드 예제는 <xref:System.Net.Dns> 클래스에서 비동기 메서드를 사용하여 사용자가 지정한 컴퓨터의 Domain Name System 정보를 검색하는 방법을 보여줍니다. 이 방법을 사용할 경우 이러한 인수가 필요하지 않기 때문에 <xref:System.Net.Dns.BeginGetHostByName%2A>`requestCallback` 및 `stateObject` 매개 변수에 대해 `null`(Visual Basic의 `Nothing`)이 전달됩니다.  
+## <a name="example"></a>예제  
+ 다음 코드 예제는 <xref:System.Net.Dns> 클래스에서 비동기 메서드를 사용하여 사용자가 지정한 컴퓨터의 Domain Name System 정보를 검색하는 방법을 보여줍니다. 이 방법을 사용할 경우 이러한 인수가 필요하지 않기 때문에 `null``Nothing` 및 <xref:System.Net.Dns.BeginGetHostByName%2A> 매개 변수에 대해 `requestCallback`(Visual Basic의 `stateObject`)이 전달됩니다.  
   
  [!code-csharp[AsyncDesignPattern#1](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDesignPattern/CS/Async_EndBlock.cs#1)]
  [!code-vb[AsyncDesignPattern#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDesignPattern/VB/Async_EndBlock.vb#1)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [EAP(이벤트 기반 비동기 패턴)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
+- [이벤트 기반 비동기 패턴(EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
 - [이벤트 기반 비동기 패턴 개요](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

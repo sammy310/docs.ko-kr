@@ -9,10 +9,10 @@ helpviewer_keywords:
 - application domains, resource monitoring
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
 ms.openlocfilehash: 54e300bef1818fd08f27d7920eec68ee1f2c45bb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141386"
 ---
 # <a name="application-domain-resource-monitoring"></a>애플리케이션 도메인 리소스 모니터링
@@ -87,7 +87,7 @@ ARM은 애플리케이션 도메인에서 사용하는 총 프로세서 시간 �
 
 관리되지 않는 호스팅 API를 사용하는 경우 호스트는 [IHostGCManager](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md) 인터페이스의 구현을 CLR에 전달해야 합니다. CLR은 컬렉션이 발생하는 동안 일시 중단된 스레드의 실행을 다시 시작할 때 [IHostGCManager::SuspensionEnding](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) 메서드를 호출합니다. CLR이 완료된 컬렉션의 생성을 메서드의 매개 변수로 전달하므로 호스트는 컬렉션이 전체인지 또는 부분인지 확인할 수 있습니다. [IHostGCManager::SuspensionEnding](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) 메서드를 구현하면 유지된 메모리를 쿼리하여 수가 업데이트되는 즉시 수를 검색하도록 할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>
 - [ICLRAppDomainResourceMonitor 인터페이스](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)

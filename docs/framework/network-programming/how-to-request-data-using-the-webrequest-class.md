@@ -12,10 +12,10 @@ helpviewer_keywords:
 - Internet, requesting data
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
 ms.openlocfilehash: e670a2a503ce704eff847e9e0b3ee340ab52fe62
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048161"
 ---
 # <a name="how-to-request-data-by-using-the-webrequest-class"></a>방법: WebRequest 클래스를 사용하여 데이터 요청
@@ -24,7 +24,7 @@ ms.locfileid: "71048161"
 
 ## <a name="to-request-data-from-a-host-server"></a>호스트 서버의 데이터를 요청하려면
 
-1. 리소스 URI를 통해 <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>를 호출하여 <xref:System.Net.WebRequest> 인스턴스를 만듭니다. 예:
+1. 리소스 URI를 통해 <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>를 호출하여 <xref:System.Net.WebRequest> 인스턴스를 만듭니다. 예를 들어:
 
     ```csharp
     WebRequest request = WebRequest.Create("https://docs.microsoft.com");
@@ -49,7 +49,7 @@ ms.locfileid: "71048161"
     request.Credentials = CredentialCache.DefaultCredentials
     ```
 
-3. <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType>를 호출하여 요청을 서버에 보냅니다. 이 메서드는 서버 응답을 포함하는 개체를 반환합니다. 반환된 <xref:System.Net.WebResponse> 개체의 형식은 요청 URI 구성표에 따라 결정됩니다. 예:
+3. <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType>를 호출하여 요청을 서버에 보냅니다. 이 메서드는 서버 응답을 포함하는 개체를 반환합니다. 반환된 <xref:System.Net.WebResponse> 개체의 형식은 요청 URI 구성표에 따라 결정됩니다. 예를 들어:
 
     ```csharp
     WebResponse response = request.GetResponse();
@@ -71,7 +71,7 @@ ms.locfileid: "71048161"
     Console.WriteLine(CType(response,HttpWebResponse).StatusDescription)
     ```
 
-5. 서버에서 전송된 응답 데이터를 포함하는 스트림을 가져오려면 <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> 메서드를 호출합니다. 예:
+5. 서버에서 전송된 응답 데이터를 포함하는 스트림을 가져오려면 <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> 메서드를 호출합니다. 예를 들어:
 
     ```csharp
     Stream dataStream = response.GetResponseStream();
@@ -81,7 +81,7 @@ ms.locfileid: "71048161"
     Dim dataStream As Stream = response.GetResponseStream()
     ```
 
-6. 응답 개체에서 데이터를 읽은 후에 <xref:System.Net.WebResponse.Close%2A?displayProperty=nameWithType> 메서드를 사용하여 해당 개체를 닫거나 <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> 메서드를 사용하여 응답 스트림을 닫습니다. 응답 개체나 스트림을 닫지 않으면 애플리케이션이 서버 연결을 모두 사용하여 추가 요청을 처리하지 못하게 될 수 있습니다. `WebResponse.Close` 메서드가 응답을 닫으면 `Stream.Close`를 호출하기 때문에 모든 응답 및 스트림 개체에서 `Close`를 호출할 필요가 없지만 유해하지도 않습니다. 예:
+6. 응답 개체에서 데이터를 읽은 후에 <xref:System.Net.WebResponse.Close%2A?displayProperty=nameWithType> 메서드를 사용하여 해당 개체를 닫거나 <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> 메서드를 사용하여 응답 스트림을 닫습니다. 응답 개체나 스트림을 닫지 않으면 애플리케이션이 서버 연결을 모두 사용하여 추가 요청을 처리하지 못하게 될 수 있습니다. `WebResponse.Close` 메서드가 응답을 닫으면 `Stream.Close`를 호출하기 때문에 모든 응답 및 스트림 개체에서 `Close`를 호출할 필요가 없지만 유해하지도 않습니다. 예를 들어:
 
     ```csharp
     response.Close();
@@ -91,14 +91,14 @@ ms.locfileid: "71048161"
     response.Close()
     ```
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 코드 예제에서는 웹 서버에 데이터를 만들고 응답에서 데이터를 읽는 방법을 보여줍니다.
 
 [!code-csharp[RequestDataUsingWebRequest](../../../samples/snippets/csharp/VS_Snippets_Network/RequestDataUsingWebRequest/cs/WebRequestGetExample.cs)]
 [!code-vb[RequestDataUsingWebRequest](../../../samples/snippets/visualbasic/VS_Snippets_Network/RequestDataUsingWebRequest/vb/WebRequestGetExample.vb)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [인터넷 요청 만들기](creating-internet-requests.md)
 - [네트워크에서 스트림 사용](using-streams-on-the-network.md)

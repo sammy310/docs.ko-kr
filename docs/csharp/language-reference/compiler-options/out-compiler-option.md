@@ -9,10 +9,10 @@ helpviewer_keywords:
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
 ms.openlocfilehash: 6c8408c0c613e361dae0c1db19f854e9421ca467
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70970375"
 ---
 # <a name="-out-c-compiler-options"></a>-out(C# 컴파일러 옵션)
@@ -57,7 +57,7 @@ ms.locfileid: "70970375"
   
      이 컴파일러 옵션을 프로그래밍 방식으로 설정하려면: <xref:VSLangProj80.ProjectProperties3.OutputFileName%2A>은 프로젝트 형식(exe, 라이브러리 등)과 어셈블리 이름의 조합으로 결정되는 읽기 전용 속성입니다. 출력 파일 이름을 설정하려면 이러한 속성 중 하나 또는 둘 다를 수정해야 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  `t.cs`를 컴파일하고 출력 파일 `t.exe`를 만들 뿐만 아니라 `t2.cs`를 작성하고 모듈 출력 파일 `mymodule.netmodule`을 만듭니다.  
   
 ```console  

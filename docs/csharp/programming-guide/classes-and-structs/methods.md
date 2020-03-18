@@ -6,10 +6,10 @@ helpviewer_keywords:
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
 ms.openlocfilehash: 114fa2973c50be9a4199db9729e3cd9ea6122866
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77626531"
 ---
 # <a name="methods-c-programming-guide"></a>메서드(C# 프로그래밍 가이드)
@@ -38,7 +38,7 @@ ms.locfileid: "77626531"
 
 ## <a name="method-parameters-vs-arguments"></a>메서드 매개 변수 및 인수
 
-메서드 정의는 필요한 모든 매개 변수의 이름 및 형식을 지정합니다. 호출하는 코드에서 메서드를 호출할 때 해당 코드는 각 매개 변수에 대한 인수라는 구체적인 값을 제공합니다. 인수는 매개 변수 형식과 호환되어야 하지만 호출하는 코드에 사용된 인수 이름(있는 경우)은 메서드에 정의된 명명된 매개 변수와 동일할 필요가 없습니다. 예를 들어:
+메서드 정의는 필요한 모든 매개 변수의 이름 및 형식을 지정합니다. 호출하는 코드에서 메서드를 호출할 때 해당 코드는 각 매개 변수에 대한 인수라는 구체적인 값을 제공합니다. 인수는 매개 변수 형식과 호환되어야 하지만 호출하는 코드에 사용된 인수 이름(있는 경우)은 메서드에 정의된 명명된 매개 변수와 동일할 필요가 없습니다. 예들 들어 다음과 같습니다.
 
 [!code-csharp[csProgGuideObjects#74](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#74)]
 
@@ -132,7 +132,7 @@ public static void FillMatrix(int[,] matrix)
 
 [!code-csharp[csAsyncMethod#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncmethod/cs/mainwindow.xaml.cs#2)]
 
-비동기 메서드는 모든 [ref](../../language-reference/keywords/ref.md) 또는 [out](../../language-reference/keywords/out-parameter-modifier.md) 매개 변수를 선언할 수 없지만, 이러한 매개 변수가 있는 메서드를 호출할 수는 있습니다.
+비동기 메서드는 [ref](../../language-reference/keywords/ref.md) 또는 [out](../../language-reference/keywords/out-parameter-modifier.md) 매개 변수를 선언할 수 없지만, 이러한 매개 변수가 있는 메서드를 호출할 수는 있습니다.
 
 비동기 메서드에 대한 자세한 내용은 [async 및 await를 사용한 비동기 프로그래밍](../concepts/async/index.md), [비동기 프로그램의 제어 흐름](../concepts/async/control-flow-in-async-programs.md) 및 [비동기 반환 형식](../concepts/async/async-return-types.md)을 참조하세요.
 
@@ -153,11 +153,11 @@ public Customer this[long id] => store.LookupCustomer(id);
 
 ## <a name="iterators"></a>Iterators
 
-반복기는 배열 목록과 같은 컬렉션에 대해 사용자 지정 반복을 수행합니다. 반복기는 [yield return](../../language-reference/keywords/yield.md) 문을 사용하여 각 요소를 따로따로 반환할 수 있습니다. [yield return](../../language-reference/keywords/yield.md) 문에 도달하면 코드의 현재 위치가 기억됩니다. 다음에 반복기가 호출되면 해당 위치에서 실행이 다시 시작됩니다.
+반복기는 배열 목록과 같은 컬렉션에 대해 사용자 지정 반복을 수행합니다. 반복기는 [yield return](../../language-reference/keywords/yield.md) 문을 사용하여 각 요소를 한 번에 하나씩 반환합니다. [yield return](../../language-reference/keywords/yield.md) 문에 도달하면 코드의 현재 위치가 기억됩니다. 다음에 반복기가 호출되면 해당 위치에서 실행이 다시 시작됩니다.
 
 [foreach](../../language-reference/keywords/foreach-in.md) 문을 사용하여 클라이언트 코드에서 반복기를 호출합니다.
 
-반복기의 반환 형식은 <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> 또는 <xref:System.Collections.Generic.IEnumerator%601>일 수 있습니다.
+반복기의 반환 형식은 <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>또는 <xref:System.Collections.Generic.IEnumerator%601>일 수 있습니다.
 
 자세한 내용은 [반복기](../concepts/iterators.md)를 참조하세요.
 
@@ -165,7 +165,7 @@ public Customer this[long id] => store.LookupCustomer(id);
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [클래스 및 구조체](index.md)

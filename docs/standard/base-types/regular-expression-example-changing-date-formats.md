@@ -14,16 +14,16 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, examples
 ms.assetid: 5fcc75a5-09d7-45ae-a4c0-9ad6085ac83d
 ms.openlocfilehash: 358e26957747073fec9dfe9eb0d404cb438afaf9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73084187"
 ---
 # <a name="regular-expression-example-changing-date-formats"></a>정규식 예제: 날짜 형식 변경
 다음 코드 예제에서는 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 메서드를 사용하여 *mm*/*dd*/*yy* 형식의 날짜를 *dd*-*mm*-*yy* 형식의 날짜로 바꿉니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-csharp[RegularExpressions.Examples.ChangeDateFormats#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.ChangeDateFormats/cs/Example_ChangeDateFormats1.cs#1)]
  [!code-vb[RegularExpressions.Examples.ChangeDateFormats#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.ChangeDateFormats/vb/Example_ChangeDateFormats1.vb#1)]  
   
@@ -35,7 +35,7 @@ ms.locfileid: "73084187"
 ## <a name="comments"></a>설명  
  정규식 패턴 `\b(?<month>\d{1,2})/(?<day>\d{1,2})/(?<year>\d{2,4})\b`는 다음 표와 같이 해석됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`\b`|단어 경계에서 일치 항목 찾기를 시작합니다.|  
 |`(?<month>\d{1,2})`|한 개 또는 두 개의 10진수를 찾습니다. 캡처된 `month` 그룹입니다.|  
@@ -47,7 +47,7 @@ ms.locfileid: "73084187"
   
  `${day}-${month}-${year}` 패턴은 다음 표와 같이 대체 문자열을 정의합니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`$(day)`|`day` 캡처링 그룹에 의해 캡처된 부분 문자열을 추가합니다.|  
 |`-`|하이픈을 추가합니다.|  

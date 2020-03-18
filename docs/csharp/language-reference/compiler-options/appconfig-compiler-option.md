@@ -9,10 +9,10 @@ helpviewer_keywords:
 - appconfig compiler option [C#]
 ms.assetid: 1cdbcbcc-7813-4010-b5b8-e67c107c5a98
 ms.openlocfilehash: 7a7e8e61f65704a2e99385a1be320048d950324c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69922516"
 ---
 # <a name="-appconfig-c-compiler-options"></a>-appconfig(C# 컴파일러 옵션)
@@ -40,7 +40,7 @@ ms.locfileid: "69922516"
 > [!NOTE]
 > Microsoft Build Engine(MSBuild)을 사용하여 애플리케이션을 빌드하는 경우 .csproj 파일에 속성 태그를 추가하여 **-appconfig** 컴파일러 옵션을 설정할 수 있습니다. 프로젝트에 이미 설정된 app.config 파일을 사용하려면 속성 태그 `<UseAppConfigForCompiler>`를 .csproj 파일에 추가하고 해당 값을 `true`로 설정합니다. 다른 app.config 파일을 지정하려면 속성 태그 `<AppConfigForCompiler>`를 추가하고 해당 값을 파일 위치로 설정합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 애플리케이션이 두 구현에 모두 있는 .NET Framework 어셈블리의 .NET Framework for Silverlight 구현과 .NET Framework 구현 둘 다에 대한 참조를 사용할 수 있도록 하는 app.config 파일을 보여 줍니다. **-appconfig** 컴파일러 옵션은 이 app.config 파일의 위치를 지정합니다.  
   
 ```xml  

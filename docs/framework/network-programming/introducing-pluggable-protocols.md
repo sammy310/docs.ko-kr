@@ -23,10 +23,10 @@ helpviewer_keywords:
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
 ms.openlocfilehash: 72b47b8159f9f6f0dc3a19c5cbf94335507d9e7d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047868"
 ---
 # <a name="introducing-pluggable-protocols"></a>플러그형 프로토콜 소개
@@ -47,7 +47,7 @@ Microsoft .NET Framework는 더 빠르고 쉽게 애플리케이션에 통합할
 ## <a name="requests-and-responses-in-the-net-framework"></a>.NET Framework의 요청 및 응답  
  .NET Framework는 특정 클래스를 사용하여 요청/응답 모델을 통해 인터넷 리소스에 액세스하는 데 필요한 세 가지 정보인 검색할 인터넷 리소스의 URI가 포함된 <xref:System.Uri> 클래스, 리소스 요청이 포함된 <xref:System.Net.WebRequest> 클래스 및 들어오는 응답에 대한 컨테이너를 제공하는 <xref:System.Net.WebResponse> 클래스를 제공합니다.  
   
- 클라이언트 애플리케이션은 네트워크 리소스의 URI를 <xref:System.Net.WebRequest.Create%2A> 메서드에 전달하여 `WebRequest` 인스턴스를 만듭니다. 이 정적 메서드는 HTTP와 같은 특정 프로토콜에 대한 `WebRequest`를 만듭니다. 반환되는 `WebRequest`를 통해 서버에 대한 요청을 제어하는 속성에 액세스하고 요청이 생성될 때 전송되는 데이터 스트림에 액세스할 수 있습니다. `WebRequest`의 <xref:System.Net.WebRequest.GetResponse%2A> 메서드는 클라이언트 애플리케이션에서 URI로 식별되는 서버로 요청을 보냅니다. 응답이 지연될 수 있는 경우 **WebRequest**에서 <xref:System.Net.WebRequest.BeginGetResponse%2A> 메서드를 사용하여 비동기적으로 요청을 만들 수 있고 나중에 <xref:System.Net.WebRequest.EndGetResponse%2A> 메서드를 사용하여 응답을 반환할 수 있습니다.  
+ 클라이언트 애플리케이션은 네트워크 리소스의 URI를 `WebRequest` 메서드에 전달하여 <xref:System.Net.WebRequest.Create%2A> 인스턴스를 만듭니다. 이 정적 메서드는 HTTP와 같은 특정 프로토콜에 대한 `WebRequest`를 만듭니다. 반환되는 `WebRequest`를 통해 서버에 대한 요청을 제어하는 속성에 액세스하고 요청이 생성될 때 전송되는 데이터 스트림에 액세스할 수 있습니다. <xref:System.Net.WebRequest.GetResponse%2A>의 `WebRequest` 메서드는 클라이언트 애플리케이션에서 URI로 식별되는 서버로 요청을 보냅니다. 응답이 지연될 수 있는 경우 <xref:System.Net.WebRequest.BeginGetResponse%2A>WebRequest**에서**  메서드를 사용하여 비동기적으로 요청을 만들 수 있고 나중에 <xref:System.Net.WebRequest.EndGetResponse%2A> 메서드를 사용하여 응답을 반환할 수 있습니다.  
   
  **GetResponse** 및 **EndGetResponse** 메서드는 서버에서 반환되는 데이터에 액세스할 수 있는 **WebResponse**를 반환합니다. 이 데이터는 <xref:System.Net.WebResponse.GetResponseStream%2A> 메서드를 통해 요청하는 애플리케이션에 스트림으로 제공되므로 데이터 스트림이 사용되는 모든 애플리케이션에서 사용할 수 있습니다.  
   
@@ -57,7 +57,7 @@ Microsoft .NET Framework는 더 빠르고 쉽게 애플리케이션에 통합할
   
  요청/응답 트랜잭션으로 표현될 수 있는 모든 프로토콜을 **WebRequest**에서 사용할 수 있습니다. **WebRequest** 및 **WebResponse**에서 프로토콜별 클래스를 파생시킨 다음 정적 <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType> 메서드를 사용하여 애플리케이션에서 사용하도록 등록할 수 있습니다.  
   
- 인터넷 요청에 대한 클라이언트 권한 부여가 필요할 경우 **WebRequest**의 <xref:System.Net.WebRequest.Credentials%2A> 속성이 필요한 자격 증명을 제공합니다. 이러한 자격 증명은 기본 HTTP 또는 다이제스트 인증의 경우 간단한 이름/암호 쌍이고, NTLM 또는 Kerberos 인증의 경우 이름/암호/도메인 집합일 수 있습니다. 하나의 자격 증명 집합을 <xref:System.Net.NetworkCredential> 인스턴스에 저장하거나 여러 집합을 동시에 <xref:System.Net.CredentialCache> 인스턴스에 저장할 수 있습니다. **CredentialCache**는 서버에 보낼 자격 증명을 결정하기 위해 서버에서 지원하는 인증 체계 및 요청 URI를 사용합니다.  
+ 인터넷 요청에 대한 클라이언트 권한 부여가 필요할 경우 <xref:System.Net.WebRequest.Credentials%2A>WebRequest**의**  속성이 필요한 자격 증명을 제공합니다. 이러한 자격 증명은 기본 HTTP 또는 다이제스트 인증의 경우 간단한 이름/암호 쌍이고, NTLM 또는 Kerberos 인증의 경우 이름/암호/도메인 집합일 수 있습니다. 하나의 자격 증명 집합을 <xref:System.Net.NetworkCredential> 인스턴스에 저장하거나 여러 집합을 동시에 <xref:System.Net.CredentialCache> 인스턴스에 저장할 수 있습니다. **CredentialCache**는 서버에 보낼 자격 증명을 결정하기 위해 서버에서 지원하는 인증 체계 및 요청 URI를 사용합니다.  
   
 ## <a name="simple-requests-with-webclient"></a>WebClient를 사용한 간단한 요청  
  인터넷 리소스에 대한 간단한 요청을 만들어야 하는 애플리케이션의 경우 <xref:System.Net.WebClient> 클래스는 인터넷 서버에서 데이터를 업로드하거나 다운로드할 수 있는 일반적인 메서드를 제공합니다. **WebClient**는 **WebRequest** 클래스를 사용하여 인터넷 리소스에 액세스할 수 있으므로 **WebClient** 클래스는 모든 등록된 플러그형 프로토콜을 사용할 수 있습니다.  

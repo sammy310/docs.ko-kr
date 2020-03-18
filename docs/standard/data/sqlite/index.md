@@ -3,10 +3,10 @@ title: 개요
 ms.date: 12/13/2019
 description: Microsoft.Data.Sqlite 개요
 ms.openlocfilehash: e84c68f0615f187e8dea7ab87ac917c0ad796a1c
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77543601"
 ---
 # <a name="microsoftdatasqlite-overview"></a>Microsoft.Data.Sqlite 개요
@@ -37,7 +37,7 @@ Install-Package Microsoft.Data.Sqlite
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/HelloWorldSample/Program.cs?name=snippet_HelloWorld)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 * [연결 문자열](connection-strings.md)
 * [API 참조](/dotnet/api/?view=msdata-sqlite-3.0)

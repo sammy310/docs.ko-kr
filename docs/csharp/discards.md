@@ -4,10 +4,10 @@ description: 할당되지 않은 무시 가능한 변수인 무시 항목에 대
 ms.technology: csharp-fundamentals
 ms.date: 07/21/2017
 ms.openlocfilehash: a76e7fc13f92ec0de87153bb35eb3924bb317616
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73100632"
 ---
 # <a name="discards---c-guide"></a>무시 항목 - C# 가이드
@@ -47,7 +47,7 @@ C# 7.0에서 무시 항목은 다음 컨텍스트의 할당에서 지원됩니�
 
 *무시 패턴*은 [is](language-reference/keywords/is.md) 및 [switch](language-reference/keywords/switch.md) 키워드를 사용한 패턴 일치에서 사용할 수 있습니다. 모든 식은 무시 패턴과 항상 일치됩니다.
 
-다음 예제에서는 [is](language-reference/keywords/is.md) 문을 사용하여 개체가 <xref:System.IFormatProvider> 구현을 제공하고 개체가 `null`인지 테스트하는지를 결정하는 `ProvidesFormatInfo` 메서드를 정의합니다. 또한 무시 패턴을 사용하여 다른 형식의 null이 아닌 개체도 처리합니다.
+다음 예제에서는 `ProvidesFormatInfo`is[ 문을 사용하여 개체가 ](language-reference/keywords/is.md) 구현을 제공하고 개체가 <xref:System.IFormatProvider>인지 테스트하는지를 결정하는 `null` 메서드를 정의합니다. 또한 무시 패턴을 사용하여 다른 형식의 null이 아닌 개체도 처리합니다.
 
 [!code-csharp[discard-pattern](../../samples/snippets/csharp/programming-guide/discards/discard-pattern2.cs)]
 
@@ -67,15 +67,15 @@ C# 7.0에서 무시 항목은 다음 컨텍스트의 할당에서 지원됩니�
 
 `_`은 유효한 식별자이기도 합니다. 지원되는 컨텍스트 외부에서 사용하면 `_`은 무시 항목이 아니라 유효한 변수로 처리됩니다. `_`이라는 식별자가 이미 범위 내에 있는 경우 `_`을 독립 실행형 무시 항목으로 사용하면 다음과 같은 결과가 발생할 수 있습니다.
 
-- 범위 내 `_` 변수 값을 실수로 수정하여 의도한 무시 항목의 값 할당. 예:
+- 범위 내 `_` 변수 값을 실수로 수정하여 의도한 무시 항목의 값 할당. 예들 들어 다음과 같습니다.
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#1)]
 
-- 형식 안전성 위반으로 인한 컴파일러 오류. 예:
+- 형식 안전성 위반으로 인한 컴파일러 오류. 예들 들어 다음과 같습니다.
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#2)]
 
-- 컴파일러 오류 CS0136, “이름이 ‘\_’인 지역 또는 매개 변수는 이 범위에서 선언될 수 없습니다. 해당 이름이 지역 또는 매개 변수를 정의하기 위해 바깥쪽 지역 범위에서 사용되었습니다.” 예:
+- 컴파일러 오류 CS0136, “이름이 ‘\_’인 지역 또는 매개 변수는 이 범위에서 선언될 수 없습니다. 해당 이름이 지역 또는 매개 변수를 정의하기 위해 바깥쪽 지역 범위에서 사용되었습니다.” 예들 들어 다음과 같습니다.
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#3)]
 

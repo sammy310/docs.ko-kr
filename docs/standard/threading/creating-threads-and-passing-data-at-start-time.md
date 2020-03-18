@@ -12,15 +12,15 @@ helpviewer_keywords:
 - threading [.NET Framework], retrieving data from threads
 ms.assetid: 52b32222-e185-4f42-91a7-eaca65c0ab6d
 ms.openlocfilehash: a628cbb4c9ec8e1c9ccd9fd73e72a82ecf2b2836
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138098"
 ---
 # <a name="creating-threads-and-passing-data-at-start-time"></a>스레드 만들기 및 시작할 때 데이터 전달
 
-운영 체제 프로세스가 작성될 때 운영 체제에서는 원래 애플리케이션 도메인을 포함하여 이 프로세스에서 코드를 실행하는 스레드를 삽입합니다. 이 시점부터, 운영 체제 스레드를 꼭 만들거나 삭제하지 않고도 애플리케이션 도메인을 만들거나 삭제할 수 있습니다. 실행되는 코드가 관리 코드인 경우 현재 애플리케이션 도메인에서 실행 중인 스레드에 대한 <xref:System.Threading.Thread> 개체는 <xref:System.Threading.Thread> 형식의 정적 <xref:System.Threading.Thread.CurrentThread%2A> 속성을 검색하여 얻을 수 있습니다. 이 항목에서는 스레드 만들기를 설명하고 스레드 프로시저에 데이터를 전달하기 위한 대체 방법을 설명합니다.  
+운영 체제 프로세스가 작성될 때 운영 체제에서는 원래 애플리케이션 도메인을 포함하여 이 프로세스에서 코드를 실행하는 스레드를 삽입합니다. 이 시점부터, 운영 체제 스레드를 꼭 만들거나 삭제하지 않고도 애플리케이션 도메인을 만들거나 삭제할 수 있습니다. 실행되는 코드가 관리 코드인 경우 현재 애플리케이션 도메인에서 실행 중인 스레드에 대한 <xref:System.Threading.Thread> 개체는 <xref:System.Threading.Thread.CurrentThread%2A> 형식의 정적 <xref:System.Threading.Thread> 속성을 검색하여 얻을 수 있습니다. 이 항목에서는 스레드 만들기를 설명하고 스레드 프로시저에 데이터를 전달하기 위한 대체 방법을 설명합니다.  
   
 ## <a name="creating-a-thread"></a>스레드 만들기
 
@@ -41,7 +41,7 @@ ms.locfileid: "73138098"
 
  .NET Framework 버전 2.0에서 <xref:System.Threading.ParameterizedThreadStart> 대리자는 <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> 메서드 오버로드를 호출할 때 데이터를 포함하는 개체를 스레드에 전달하는 간편한 방법을 제공합니다. 코드 예는 <xref:System.Threading.ParameterizedThreadStart>를 참조하십시오.  
   
- <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> 메서드 오버로드가 모든 개체를 허용하므로 <xref:System.Threading.ParameterizedThreadStart> 대리자 사용은 형식이 안전한 데이터 전달 방법이 아닙니다. 대체 방법은 도우미 클래스로 스레드 프로시저 및 데이터를 캡슐화하고 <xref:System.Threading.ThreadStart> 대리자를 사용하여 스레드 프로시저를 실행하는 것입니다. 다음 예제에서는 이 기술을 설명합니다.
+ <xref:System.Threading.ParameterizedThreadStart> 메서드 오버로드가 모든 개체를 허용하므로 <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> 대리자 사용은 형식이 안전한 데이터 전달 방법이 아닙니다. 대체 방법은 도우미 클래스로 스레드 프로시저 및 데이터를 캡슐화하고 <xref:System.Threading.ThreadStart> 대리자를 사용하여 스레드 프로시저를 실행하는 것입니다. 다음 예제에서는 이 기술을 설명합니다.
 
  [!code-cpp[System.Threading.ThreadStart2#3](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CPP/source3.cpp#3)]
  [!code-csharp[System.Threading.ThreadStart2#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CS/source3.cs#3)]

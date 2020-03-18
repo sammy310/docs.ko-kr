@@ -4,10 +4,10 @@ description: .NET Core CLI 명령을 실행할 때 global.json 파일을 사용�
 ms.date: 01/14/2020
 ms.custom: updateeachrelease
 ms.openlocfilehash: 70257566e1ff30f5c97212a5e0e3c308c27738b7
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77625997"
 ---
 # <a name="globaljson-overview"></a>global.json 개요
@@ -132,9 +132,9 @@ SDK 버전을 선택할 때, 특정 SDK 버전이 누락된 경우 대체하거�
 
 ## <a name="globaljson-and-the-net-core-cli"></a>global.json 및 .NET Core CLI
 
-*global json* 파일에 버전을 설정하기 위해서는 머신에 설치된 SDK 버전을 알고 있는 것이 좋습니다. 이 작업을 수행하는 방법에 대한 자세한 내용은 [.NET Core가 이미 설치되어 있는지 확인하는 방법](../install/how-to-detect-installed-versions.md#check-sdk-versions)을 참조하세요.
+*global json* 파일에 버전을 설정하기 위해서는 컴퓨터에 설치된 SDK 버전을 알고 있는 것이 좋습니다. 이 작업을 수행하는 방법에 대한 자세한 내용은 [.NET Core가 이미 설치되어 있는지 확인하는 방법](../install/how-to-detect-installed-versions.md#check-sdk-versions)을 참조하세요.
 
-머신에 추가 .NET Core SDK 버전을 설치하려면 [.NET Core 다운로드](https://dotnet.microsoft.com/download/dotnet-core) 페이지를 방문하세요.
+컴퓨터에 추가 .NET Core SDK 버전을 설치하려면 [.NET Core 다운로드](https://dotnet.microsoft.com/download/dotnet-core) 페이지를 방문하세요.
 
 다음 예제와 비슷한 [dotnet new](dotnet-new.md) 명령을 실행하여 현재 디렉터리에서 *global.json* 파일을 새로 만들 수 있습니다.
 
@@ -188,7 +188,7 @@ SDK 버전은 다음과 같은 부분으로 구성됩니다.
 
   > .NET Core SDK의 미리보기 버전으로 작업하고 있습니다. SDK 버전은 현재 프로젝트의 global.json 파일을 통해 정의할 수 있습니다. 자세한 내용은 <https://go.microsoft.com/fwlink/?linkid=869452>를 참조하세요.
 
-  .NET Core SDK 버전은 높은 품질의 기록과 약정을 가지고 있습니다. 그러나 시험판 버전을 사용하지 않으려면 [allowPrerelease](#allowprerelease) 섹션의 .NET Core 3.0 SDK 이상 버전에서 사용할 수 있는 다양한 전략을 확인하세요. .NET Core 3.0 이상 런타임 또는 SDK가 설치된 적이 없던 머신의 경우 *global.json* 파일을 만들고 사용할 정확한 버전을 지정해야 합니다.
+  .NET Core SDK 버전은 높은 품질의 기록과 약정을 가지고 있습니다. 그러나 시험판 버전을 사용하지 않으려면 [allowPrerelease](#allowprerelease) 섹션의 .NET Core 3.0 SDK 이상 버전에서 사용할 수 있는 다양한 전략을 확인하세요. .NET Core 3.0 이상 런타임 또는 SDK가 설치된 적이 없던 컴퓨터의 경우 *global.json* 파일을 만들고 사용할 정확한 버전을 지정해야 합니다.
 
 * 다음 경고는 프로젝트가 .NET Core 2.1 SDK 이상 버전과 호환되지 않는 EF Core 1.0 또는 1.1을 대상으로 함을 나타냅니다.
 

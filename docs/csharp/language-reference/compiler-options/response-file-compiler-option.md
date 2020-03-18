@@ -8,10 +8,10 @@ helpviewer_keywords:
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
 ms.openlocfilehash: d8e5c0ec148754c3e4cebfa32ad9f44a0bb0119e
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70202904"
 ---
 # <a name="-c-compiler-options"></a>@(C# 컴파일러 옵션)
@@ -30,7 +30,7 @@ ms.locfileid: "70202904"
 ## <a name="remarks"></a>설명  
  컴파일러 옵션 및 소스 코드 파일은 명령줄에 지정된 것처럼 컴파일러에서 처리됩니다.  
   
- 컴파일에 지시 파일을 둘 이상 지정하려면 여러 지시 파일 옵션을 지정합니다. 예:  
+ 컴파일에 지시 파일을 둘 이상 지정하려면 여러 지시 파일 옵션을 지정합니다. 예들 들어 다음과 같습니다.  
   
 ```console  
 @file1.rsp @file2.rsp  
@@ -46,7 +46,7 @@ ms.locfileid: "70202904"
   
  Visual Studio 개발 환경에서는 이 컴파일러 옵션을 설정할 수 없으며 프로그래밍 방식으로 변경할 수도 없습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음은 샘플 지시 파일의 몇 줄입니다.  
   
 ```console  

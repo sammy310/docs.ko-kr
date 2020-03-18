@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 6679e38aefa7d61ce430dc5375ff3b35c641ea27
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394174"
 ---
 ### <a name="identity-signinasync-throws-exception-for-unauthenticated-identity"></a>ID: SignInAsync는 인증되지 않은 ID에 대해 예외를 throw합니다.
@@ -26,7 +26,7 @@ ms.locfileid: "72394174"
 
 기본적으로 이러한 보안 주체는 `[Authorize]` / `RequireAuthenticatedUser()`에 의해 거부되었기 때문에 이전 동작은 문제가 있었습니다.
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 ASP.NET Core 3.0 Preview 6에서는 기본적으로 `true`인 `AuthenticationOptions`에 `RequireAuthenticatedSignIn` 플래그가 있습니다. 이전 동작을 복원하려면 이 플래그를 `false`로 설정합니다.
 

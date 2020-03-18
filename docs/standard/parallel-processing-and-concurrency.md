@@ -9,10 +9,10 @@ helpviewer_keywords:
 - asynchronous programming [.NET]
 ms.assetid: e573faa8-0212-44b1-a850-ce85dc54f47f
 ms.openlocfilehash: 08a1b45759b1b78368f867161a13cf2af4db1a60
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73123194"
 ---
 # <a name="parallel-processing-concurrency-and-async-programming-in-net"></a>.NET의 병렬 처리, 동시성 및 비동기 프로그래밍

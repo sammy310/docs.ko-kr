@@ -3,10 +3,10 @@ title: AKS/Kubernetes 클러스터에 Linux 컨테이너로 배포된 ASP.NET Co
 description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 애플리케이션 수명 주기
 ms.date: 02/25/2019
 ms.openlocfilehash: ab64a0423ceceb8285c159af276d6d97e12379d8
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70848746"
 ---
 # <a name="build-aspnet-core-22-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>AKS/Kubernetes 오케스트레이터에 Linux 컨테이너로 배포된 ASP.NET Core 2.2 애플리케이션 빌드

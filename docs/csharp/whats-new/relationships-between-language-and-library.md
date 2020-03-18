@@ -3,11 +3,11 @@ title: 언어 기능 및 라이브러리 형식 간의 관계 | Microsoft Docs
 description: 언어 기능은 종종 구현에 대한 라이브러리 형식에 의존합니다. 해당 관계를 이해합니다.
 ms.date: 07/20/2017
 ms.openlocfilehash: dfae7972af0a251a92700d7d33bd6f971eb1870e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360085"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61706028"
 ---
 # <a name="relationships-between-language-features-and-library-types"></a>언어 기능 및 라이브러리 형식 간의 관계
 

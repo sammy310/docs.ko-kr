@@ -3,16 +3,16 @@ title: 정적으로 컴파일된 쿼리(LINQ to XML)(C#)
 ms.date: 07/20/2015
 ms.assetid: 3bf558fe-0705-479d-86d4-00188f5fcf9c
 ms.openlocfilehash: 98725cece1006ba13afb64bb8ae17ae6e62c53cf
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70253027"
 ---
 # <a name="statically-compiled-queries-linq-to-xml-c"></a>정적으로 컴파일된 쿼리(LINQ to XML)(C#)
 <xref:System.Xml.XmlDocument>와는 달리 LINQ to XML의 가장 큰 성능 이점 중 하나는 LINQ to XML의 쿼리가 정적으로 컴파일된다는 점입니다. 반면 XPath 쿼리는 런타임에 해석되어야 합니다. 이 기능은 LINQ to XML에 기본 제공되므로 이를 활용하기 위해 별도의 단계를 수행할 필요는 없습니다. 그러나 이 두 가지 기술 중 하나를 선택해야 하는 경우를 위해 그 차이를 알고 있는 것이 좋습니다. 이 항목에서는 그 차이에 대해 설명합니다.  
   
-## <a name="statically-compiled-queries-vs-xpath"></a>정적으로 컴파일된 쿼리와 XPath  
+## <a name="statically-compiled-queries-vs-xpath"></a>정적으로 컴파일된 쿼리와 XPath 비교  
  다음 예제에서는 지정된 이름을 가진 하위 요소와 지정된 값을 가진 특성이 포함된 하위 요소를 가져오는 방법을 보여 줍니다.  
   
  다음은 이에 해당하는 XPath 식입니다. `//Address[@Type='Shipping']`

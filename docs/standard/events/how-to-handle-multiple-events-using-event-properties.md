@@ -13,10 +13,10 @@ helpviewer_keywords:
 - events [.NET Framework], multiple
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
 ms.openlocfilehash: f74d75a09da350b34dfb067c3d0db8fc669116ac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73124776"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>방법: 이벤트 속성을 사용하여 여러 이벤트 처리
@@ -38,8 +38,8 @@ ms.locfileid: "73124776"
   
 5. public 이벤트 속성을 사용하여 이벤트를 처리하는 클래스에서 이벤트 처리기 대리자를 추가 및 제거합니다.  
   
-## <a name="example"></a>예  
- 다음 C# 예제에서는 <xref:System.ComponentModel.EventHandlerList>를 사용하여 각 이벤트의 대리자를 저장하는 이벤트 속성 `MouseDown` 및 `MouseUp`을 구현합니다. 이벤트 속성 구문의 키워드는 굵은 글꼴로 표시됩니다.  
+## <a name="example"></a>예제  
+ 다음 C# 예제에서는 `MouseDown`를 사용하여 각 이벤트의 대리자를 저장하는 이벤트 속성 `MouseUp` 및 <xref:System.ComponentModel.EventHandlerList>을 구현합니다. 이벤트 속성 구문의 키워드는 굵은 글꼴로 표시됩니다.  
   
  [!code-cpp[Conceptual.Events.Other#31](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.events.other/cpp/example3.cpp#31)]
  [!code-csharp[Conceptual.Events.Other#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.events.other/cs/example3.cs#31)]

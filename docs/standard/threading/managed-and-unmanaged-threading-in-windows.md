@@ -10,10 +10,10 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
 ms.openlocfilehash: 6ab0cc7c1ec2f7bbc633ac966dd18ab3ea7a395b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73127551"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Windows에서 관리되는 스레딩 및 관리되지 않는 스레딩
@@ -71,7 +71,7 @@ ms.locfileid: "73127551"
 
 .NET 스레딩 모델은 [파이버](/windows/desktop/procthread/fibers)를 지원하지 않습니다. 파이버를 사용하여 구현된 관리되지 않는 함수를 호출하면 안 됩니다. 이러한 호출로 인해 .NET 런타임에서 크래시가 발생할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>
 - <xref:System.Threading.ThreadState>

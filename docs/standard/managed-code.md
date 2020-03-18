@@ -5,17 +5,17 @@ ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
 ms.openlocfilehash: 9133859bd9c999e076effcf0d4d631c59db02f33
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678760"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "61910119"
 ---
 # <a name="what-is-managed-code"></a>"관리 코드"란?
 
 .NET Framework로 작업하는 경우 “관리 코드”라는 용어를 자주 발견하게 됩니다. 이 문서에서는 이 용어의 의미 및 관련된 추가 정보를 설명합니다.
 
-간단히 말해서, 관리 코드란 런타임에서 실행이 관리되는 코드입니다. 이 경우 해당 런타임을 구현([Mono](https://www.mono-project.com/), .NET Framework 또는 .NET Core)에 관계없이 **공용 언어 런타임** 또는 CLR이라고 합니다. CLR은 관리 코드를 가져와서 기계어 코드로 컴파일한 다음 실행합니다. 이 외에도 런타임에서는 자동 메모리 관리, 보안 경계, 형식 안전성 등 몇 가지 중요한 서비스를 제공합니다.
+간단히 말해서, 관리 코드란 런타임에서 실행이 관리되는 코드입니다. 이 경우 해당 런타임을 구현(**Mono**, .NET Framework 또는 .NET Core)에 관계없이 [공용 언어 런타임](https://www.mono-project.com/) 또는 CLR이라고 합니다. CLR은 관리 코드를 가져와서 기계어 코드로 컴파일한 다음 실행합니다. 이 외에도 런타임에서는 자동 메모리 관리, 보안 경계, 형식 안전성 등 몇 가지 중요한 서비스를 제공합니다.
 
 “비관리 코드”라고도 하는 C/C++ 프로그램 실행 방법과 이를 대조해 보세요. 관리되지 않는 환경에서는 프로그래머가 거의 모든 작업을 수행합니다. 실제 프로그램은 기본적으로 OS(운영 체제)에서 메모리에 로드하고 시작하는 이진 파일입니다. 메모리 관리에서 보안 고려 사항에 이르기까지 다른 모든 작업은 프로그래머의 몫입니다.
 

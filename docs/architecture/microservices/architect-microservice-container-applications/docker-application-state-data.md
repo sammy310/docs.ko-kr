@@ -3,10 +3,10 @@ title: Docker 애플리케이션의 상태 및 데이터
 description: Docker 애플리케이션의 상태 및 데이터 관리. 마이크로 서비스 인스턴스는 소모용(그러나 데이터는 아님)이며 마이크로 서비스로 이를 처리하는 방법입니다.
 ms.date: 09/20/2018
 ms.openlocfilehash: 1157ea3c4ca8fc389769308cc0a1141b5f92bb88
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72771436"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker 애플리케이션의 상태 및 데이터

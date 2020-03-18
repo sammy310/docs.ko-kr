@@ -3,10 +3,10 @@ title: 컨테이너 및 마이크로 서비스 기반 애플리케이션 설계
 description: 컨테이너 및 마이크로 서비스 기반 애플리케이션 설계는 간단한 작업이 아니므로 가볍게 여겨서는 안 됩니다. 이 장에서 핵심 개념을 알아보세요.
 ms.date: 09/20/2018
 ms.openlocfilehash: aff30c907f1140b94dbcae330ed7cb633b0a744b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70295020"
 ---
 # <a name="architecting-container-and-microservice-based-applications"></a>컨테이너 및 마이크로 서비스 기반 애플리케이션 설계

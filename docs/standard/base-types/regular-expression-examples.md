@@ -8,10 +8,10 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 ms.assetid: e9fd53f2-ed56-4b09-b2ea-e9bc9d65e6d6
 ms.openlocfilehash: 788fa2a6793e14189def4c30a0baf0d4a5cf6b0a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73128090"
 ---
 # <a name="regular-expression-examples"></a>정규식 예제
@@ -33,7 +33,7 @@ ms.locfileid: "73128090"
  [방법: 문자열에서 유효하지 않은 문자 제거](../../../docs/standard/base-types/how-to-strip-invalid-characters-from-a-string.md)  
  문자열에서 유효하지 않은 영숫자가 아닌 문자를 제거하는 예제를 제공합니다.  
   
- [방법: 문자열이 유효한 전자 메일 형식인지 확인](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)  
+ [방법: 문자열이 올바른 전자 메일 형식인지 확인](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)  
  문자열이 유효한 전자 메일 형식인지 확인하는 예제를 제공합니다.  
   
 ## <a name="reference"></a>참조  

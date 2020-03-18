@@ -9,10 +9,10 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
 ms.openlocfilehash: bec769043ab630b37609bed12302ceff5b90474a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139236"
 ---
 # <a name="managed-threading-basics"></a>관리형 스레딩 기본 사항
@@ -41,7 +41,7 @@ ms.locfileid: "73139236"
  [Windows에서 관리되는 스레딩 및 관리되지 않는 스레딩](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)  
  관리되는 스레딩과 관리되지 않는 스레딩, 간의 관계에 대해 설명하고, Windows 스레딩 API에 대해 관리되는 스레딩을 나열하고, COM 아파트 및 관리되는 스레드의 상호 작용에 대해 설명합니다.  
   
- [스레드 로컬 스토리지: 스레드 관련 정적 필드 및 데이터 슬롯](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
+ [스레드 로컬 스토리지: 스레드 상대 정적 필드 및 데이터 슬롯](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
  스레드 관련 스토리지 메커니즘을 설명합니다.  
   
 ## <a name="reference"></a>참조

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - PLINQ queries, performance tuning
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
 ms.openlocfilehash: 07b5027d560a4caccc6c0a516c3f70c11df6be83
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139910"
 ---
 # <a name="understanding-speedup-in-plinq"></a>PLINQ의 속도 향상 이해
@@ -68,7 +68,7 @@ PLINQ의 기본 목적은 다중 코어 컴퓨터에서 쿼리 대리자를 병�
 ## <a name="when-plinq-chooses-sequential-mode"></a>PLINQ가 순차 모드를 선택할 경우  
  PLINQ는 항상 최소한 쿼리가 순차적으로 실행되는 것만큼 쿼리를 빠르게 실행하려고 합니다. PLINQ는 사용자 대리자의 계산 비용이 얼마나 비싼지 또는 입력 소스가 얼마나 큰지 확인하지 않지만 특정 쿼리 “모양”를 검색합니다. 특히, 일반적으로 병렬 모드에서 쿼리를 더 느리게 실행하는 쿼리 연산자 또는 연산자 조합을 검색합니다. 이러한 모양을 찾으면 PLINQ는 기본적으로 순차 모드로 돌아갑니다.  
   
- 그러나 특정 쿼리 성능을 측정한 후 실제로 병렬 모드에서 더 빠르게 실행되는 것을 확인할 수 있습니다. 이 경우에는 <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> 메서드를 통해 <xref:System.Linq.ParallelExecutionMode.ForceParallelism?displayProperty=nameWithType> 플래그를 사용하여 쿼리를 병렬 처리하도록 PLINQ에 지시할 수 있습니다. 자세한 내용은 [방법: PLINQ에 실행 모드 지정](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md)을 참조하세요.  
+ 그러나 특정 쿼리 성능을 측정한 후 실제로 병렬 모드에서 더 빠르게 실행되는 것을 확인할 수 있습니다. 이 경우에는 <xref:System.Linq.ParallelExecutionMode.ForceParallelism?displayProperty=nameWithType> 메서드를 통해 <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> 플래그를 사용하여 쿼리를 병렬 처리하도록 PLINQ에 지시할 수 있습니다. 자세한 내용은 [방법: PLINQ에 실행 모드 지정](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md)을 참조하세요.  
   
  다음 목록은 PLINQ가 기본적으로 순차 모드에서 실행할 쿼리 형태를 설명합니다.  
   

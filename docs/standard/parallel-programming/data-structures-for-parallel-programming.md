@@ -6,10 +6,10 @@ helpviewer_keywords:
 - data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 ms.openlocfilehash: a2271feae78100940b4ecac3c42c9bfefa7e1769
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73123146"
 ---
 # <a name="data-structures-for-parallel-programming"></a>병렬 프로그래밍을 위한 데이터 구조
@@ -20,7 +20,7 @@ ms.locfileid: "73123146"
   
  다음 표에는 새로운 동시 컬렉션 클래스가 나와 있습니다.  
   
-|Type|설명|  
+|형식|설명|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>|<xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType>을 구현하는 스레드로부터 안전한 컬렉션에 대한 차단 및 경계 기능을 제공합니다. 슬롯을 사용할 수 없거나 컬렉션이 가득 차면 생산자 스레드가 차단됩니다. 컬렉션이 비어 있으면 소비자 스레드가 차단됩니다. 이 형식은 소비자 및 생산자가 비차단 액세스도 지원합니다. <xref:System.Collections.Concurrent.BlockingCollection%601>은 <xref:System.Collections.Generic.IEnumerable%601>을 지원하는 모든 컬렉션 클래스에 대한 차단 및 결합을 제공하기 위한 기본 클래스 또는 백업 저장소로 사용할 수 있습니다.|  
 |<xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>|확장 가능한 추가 및 가져오기 작업을 제공하는 스레드로부터 안전한 모음 구현.|  
@@ -35,7 +35,7 @@ ms.locfileid: "73123146"
   
  다음 표에는 새 동기화 형식이 나와 있습니다.  
   
-|Type|설명|  
+|형식|설명|  
 |----------|-----------------|  
 |<xref:System.Threading.Barrier?displayProperty=nameWithType>|각 작업이 도착에 대한 신호를 보낸 다음, 일부 또는 모든 작업이 도착할 때까지 차단될 수 있는 지점을 제공하여 여러 스레드가 하나의 알고리즘에서 병렬로 작동하도록 합니다. 자세한 내용은 [Barrier](../../../docs/standard/threading/barrier.md)를 참조하세요.|  
 |<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|쉽게 랑데부 메커니즘을 제공하여 포크 및 조인 시나리오를 간소화합니다. 자세한 내용은 [CountdownEvent](../../../docs/standard/threading/countdownevent.md)를 참조하세요.|  
@@ -44,7 +44,7 @@ ms.locfileid: "73123146"
 |<xref:System.Threading.SpinLock?displayProperty=nameWithType>|퀀텀을 일시 중단하기 전에 일정 시간 동안 잠금을 획득하려고 시도 중인 스레드가 루프 또는 ‘스핀’에서 대기하도록 하는 상호 배제 잠금 기본 형식입니다.  잠금 대기가 짧아야 하는 시나리오에서 <xref:System.Threading.SpinLock>은 다른 형태의 잠금보다 향상된 성능을 제공합니다. 자세한 내용은 [SpinLock](../../../docs/standard/threading/spinlock.md)을 참조하세요.|  
 |<xref:System.Threading.SpinWait?displayProperty=nameWithType>|지정된 시간 동안 스핀하고 스핀 수를 초과하는 경우 결국 스레드를 대기 상태로 전환하는 작고 간단한 형식입니다.  자세한 내용은 [SpinWait](../../../docs/standard/threading/spinwait.md)을 참조하세요.|  
   
- 자세한 내용은 다음을 참조하세요.  
+ 자세한 내용은 다음을 참조하십시오.  
   
 - [방법: 낮은 수준의 동기화에 SpinLock 사용](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "73123146"
   
  다음 표에는 초기화 지연 형식이 나와 있습니다.  
   
-|Type|설명|  
+|형식|설명|  
 |----------|-----------------|  
 |<xref:System.Lazy%601?displayProperty=nameWithType>|간단하고 스레드로부터 안전한 초기화 지연을 제공합니다.|  
 |<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>|각 스레드가 초기화 함수 호출을 지연시켜 스레드별 기준으로 초기화가 지연된 값을 제공합니다.|  

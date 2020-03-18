@@ -16,16 +16,16 @@ helpviewer_keywords:
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
 ms.openlocfilehash: 3e0b5cd58270cec758db5d4dad6f3ad48962921a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047913"
 ---
 # <a name="internet-authentication"></a>인터넷 인증
 <xref:System.Net> 클래스는 표준 인터넷 인증 방법인 기본, 다이제스트, 협상, NTLM 및 Kerberos 인증뿐 아니라 직접 만들 수 있는 사용자 지정 방법을 포함한 다양한 클라이언트 인증 메커니즘을 지원합니다.  
   
- 인증 자격 증명은 <xref:System.Net.ICredentials> 인터페이스를 구현하는 <xref:System.Net.NetworkCredential> 및 <xref:System.Net.CredentialCache> 클래스에 저장됩니다. 이러한 클래스 중 하나를 쿼리하여 자격 증명이 있는지 확인할 경우 해당 클래스는 **NetworkCredential** 클래스의 인스턴스를 반환합니다. 인증 프로세스는 <xref:System.Net.AuthenticationManager> 클래스에서 관리되고 실제 인증 프로세스는 <xref:System.Net.IAuthenticationModule> 인터페이스를 구현하는 인증 모듈 클래스에서 수행됩니다. 사용자 지정 인증 모듈을 사용하기 전에 **AuthenticationManager**에 등록해야 합니다. 기본, 다이제스트, 협상, NTLM 및 Kerberos 인증 방법용 모듈은 기본적으로 등록되어 있습니다.  
+ 인증 자격 증명은 <xref:System.Net.NetworkCredential> 인터페이스를 구현하는 <xref:System.Net.CredentialCache> 및 <xref:System.Net.ICredentials> 클래스에 저장됩니다. 이러한 클래스 중 하나를 쿼리하여 자격 증명이 있는지 확인할 경우 해당 클래스는 **NetworkCredential** 클래스의 인스턴스를 반환합니다. 인증 프로세스는 <xref:System.Net.AuthenticationManager> 클래스에서 관리되고 실제 인증 프로세스는 <xref:System.Net.IAuthenticationModule> 인터페이스를 구현하는 인증 모듈 클래스에서 수행됩니다. 사용자 지정 인증 모듈을 사용하기 전에 **AuthenticationManager**에 등록해야 합니다. 기본, 다이제스트, 협상, NTLM 및 Kerberos 인증 방법용 모듈은 기본적으로 등록되어 있습니다.  
   
  **NetworkCredential**은 URI로 식별되는 단일 인터넷 리소스와 연결된 자격 증명 집합을 저장하고 <xref:System.Net.NetworkCredential.GetCredential%2A> 메서드 호출에 대한 응답으로 자격 증명을 반환합니다. **NetworkCredential** 클래스는 일반적으로 제한된 수의 인터넷 리소스에 액세스하는 애플리케이션에서 사용되거나 모든 경우에 동일한 자격 증명 집합을 사용하는 애플리케이션에서 사용됩니다.  
   

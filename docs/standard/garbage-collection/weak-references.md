@@ -9,10 +9,10 @@ helpviewer_keywords:
 - garbage collection, weak references
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
 ms.openlocfilehash: 120777ca3c26b1634bd2143863547cfa4ea5deac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141337"
 ---
 # <a name="weak-references"></a>약한 참조
@@ -35,13 +35,13 @@ ms.locfileid: "73141337"
   
      가비지 수집에서 개체를 회수하는 경우 Short Weak Reference의 대상은 `null`이 됩니다. Weak Reference는 자체 관리되는 개체이며 다른 관리되는 개체와 마찬가지로 가비지 수집의 대상입니다.  짧은 약한 참조는 <xref:System.WeakReference>의 매개 변수 없는 생성자입니다.  
   
-- long  
+- Long  
   
-     개체의 <xref:System.Object.Finalize%2A> 메서드가 호출된 후에 긴 약한 참조는 유지됩니다. 이렇게 하면 개체를 다시 만들 수 있지만 개체의 상태는 예측할 수 없게 됩니다. 긴 참조를 사용하려면 <xref:System.WeakReference> 생성자에서 `true`를 지정합니다.  
+     개체의 <xref:System.Object.Finalize%2A> 메서드가 호출된 후에 긴 약한 참조는 유지됩니다. 이렇게 하면 개체를 다시 만들 수 있지만 개체의 상태는 예측할 수 없게 됩니다. 긴 참조를 사용하려면 `true` 생성자에서 <xref:System.WeakReference>를 지정합니다.  
   
      개체의 형식에 <xref:System.Object.Finalize%2A> 메서드가 없는 경우 짧은 약한 참조 기능이 적용되며 약한 참조는 대상이 수집될 때까지만 유효합니다. 이는 종료자가 실행된 후에 언제든지 발생할 수 있습니다.  
   
- 강한 참조를 설정하고 개체를 다시 사용하려면 <xref:System.WeakReference>의 <xref:System.WeakReference.Target%2A> 속성을 개체의 형식에 캐스트합니다. <xref:System.WeakReference.Target%2A> 속성이 `null`을 반환하는 경우 개체가 수집되었습니다. 그러지 않으면, 애플리케이션이 해당 개체에 대한 강한 참조를 회복하기 때문에 개체를 계속 사용할 수 있습니다.  
+ 강한 참조를 설정하고 개체를 다시 사용하려면 <xref:System.WeakReference.Target%2A>의 <xref:System.WeakReference> 속성을 개체의 형식에 캐스트합니다. <xref:System.WeakReference.Target%2A> 속성이 `null`을 반환하는 경우 개체가 수집되었습니다. 그러지 않으면, 애플리케이션이 해당 개체에 대한 강한 참조를 회복하기 때문에 개체를 계속 사용할 수 있습니다.  
   
 ## <a name="guidelines-for-using-weak-references"></a>Weak References를 사용하기 위한 지침  
  종료된 후에 개체의 상태를 예측할 수 없기 때문에 필요한 경우에만 Long Weak Referencs를 사용합니다.  

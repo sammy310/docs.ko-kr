@@ -3,10 +3,10 @@ title: 순수 함수로 리팩터링(C#)
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
 ms.openlocfilehash: 4cf91ff078bd1c4582daa05475a91c4a4ecaba3e
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70253108"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>순수 함수로 리팩터링(C#)
@@ -112,7 +112,7 @@ class Program
   
  자세한 내용은 [표준 쿼리 연산자 개요(C#)](./standard-query-operators-overview.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [순수 함수 변환 소개(C#)](./introduction-to-pure-functional-transformations.md)
 - [함수형 프로그래밍과 명령형 프로그래밍 비교(C#)](./functional-programming-vs-imperative-programming.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - .NET Framework, asynchronous design patterns
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 ms.openlocfilehash: f80e6ae520ab03c0f5f4edc30c0b7102193ee6c5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139822"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>작업 기반 비동기 패턴 사용
@@ -128,7 +128,7 @@ private async void btnDownload_Click(object sender, RoutedEventArgs e)
  <xref:System.Threading.Tasks> 네임스페이스에는 작업을 구성하고 사용하기 위한 몇 가지 메서드가 포함되어 있습니다.
 
 ### <a name="taskrun"></a>Task.Run
- <xref:System.Threading.Tasks.Task> 클래스에는 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601> 개체로 스레드 풀에 작업을 쉽게 오프로드할 수 있게 하는 몇 가지 <xref:System.Threading.Tasks.Task.Run%2A> 메서드가 포함되어 있습니다. 예를 들면 다음과 같습니다.
+ <xref:System.Threading.Tasks.Task> 클래스에는 <xref:System.Threading.Tasks.Task.Run%2A> 또는 <xref:System.Threading.Tasks.Task> 개체로 스레드 풀에 작업을 쉽게 오프로드할 수 있게 하는 몇 가지 <xref:System.Threading.Tasks.Task%601> 메서드가 포함되어 있습니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 public async void button1_Click(object sender, EventArgs e)
@@ -141,7 +141,7 @@ public async void button1_Click(object sender, EventArgs e)
 }
 ```
 
- <xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> 오버로드와 같은 이러한 <xref:System.Threading.Tasks.Task.Run%2A> 메서드 중 일부는 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 메서드의 축약형으로 존재합니다.  <xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType>과 같은 다른 오버로드를 사용하면 오프로드된 작업 내에서 await를 사용할 수 있습니다. 예를 들면 다음과 같습니다.
+ <xref:System.Threading.Tasks.Task.Run%2A> 오버로드와 같은 이러한 <xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> 메서드 중 일부는 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 메서드의 축약형으로 존재합니다.  <xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType>과 같은 다른 오버로드를 사용하면 오프로드된 작업 내에서 await를 사용할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 public async void button1_Click(object sender, EventArgs e)
@@ -158,7 +158,7 @@ public async void button1_Click(object sender, EventArgs e)
  이러한 오버로드는 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 메서드를 작업 병렬 라이브러리의 <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> 확장 메서드와 함께 사용하는 것과 논리적으로 동일합니다.
 
 ### <a name="taskfromresult"></a>Task.FromResult
- 데이터를 이미 사용할 수 있거나 <xref:System.Threading.Tasks.Task%601>에 리프트된 작업 반환 메서드에서 데이터를 반환하기만 하면 되는 시나리오에서는 <xref:System.Threading.Tasks.Task.FromResult%2A> 메서드를 사용합니다.
+ 데이터를 이미 사용할 수 있거나 <xref:System.Threading.Tasks.Task.FromResult%2A>에 리프트된 작업 반환 메서드에서 데이터를 반환하기만 하면 되는 시나리오에서는 <xref:System.Threading.Tasks.Task%601> 메서드를 사용합니다.
 
 ```csharp
 public Task<int> GetValueAsync(string key)
@@ -185,7 +185,7 @@ IEnumerable<Task> asyncOps = from addr in addrs select SendMailAsync(addr);
 await Task.WhenAll(asyncOps);
 ```
 
- 이 코드는 발생할 수 있는 예외를 명시적으로 처리하지 않지만 <xref:System.Threading.Tasks.Task.WhenAll%2A>의 결과 작업에 대한 `await`에서 예외가 전파되도록 합니다.  예외를 처리하려면 다음과 같은 코드를 사용할 수 있습니다.
+ 이 코드는 발생할 수 있는 예외를 명시적으로 처리하지 않지만 `await`의 결과 작업에 대한 <xref:System.Threading.Tasks.Task.WhenAll%2A>에서 예외가 전파되도록 합니다.  예외를 처리하려면 다음과 같은 코드를 사용할 수 있습니다.
 
 ```csharp
 IEnumerable<Task> asyncOps = from addr in addrs select SendMailAsync(addr);
@@ -199,7 +199,7 @@ catch(Exception exc)
 }
 ```
 
- 이 경우 비동기 작업이 실패하면 모든 예외가 <xref:System.AggregateException> 예외에서 통합되어 <xref:System.Threading.Tasks.Task.WhenAll%2A> 메서드에서 반환되는 <xref:System.Threading.Tasks.Task>에 저장됩니다.  그러나 이러한 예외 중 하나만 `await` 키워드에 의해 전파됩니다.  모든 예외를 검사하려는 경우 앞의 코드를 다음과 같이 다시 작성할 수 있습니다.
+ 이 경우 비동기 작업이 실패하면 모든 예외가 <xref:System.AggregateException> 예외에서 통합되어 <xref:System.Threading.Tasks.Task> 메서드에서 반환되는 <xref:System.Threading.Tasks.Task.WhenAll%2A>에 저장됩니다.  그러나 이러한 예외 중 하나만 `await` 키워드에 의해 전파됩니다.  모든 예외를 검사하려는 경우 앞의 코드를 다음과 같이 다시 작성할 수 있습니다.
 
 ```csharp
 Task [] asyncOps = (from addr in addrs select SendMailAsync(addr)).ToArray();
@@ -245,15 +245,15 @@ catch(Exception exc)
 ### <a name="taskwhenany"></a>Task.WhenAny
  <xref:System.Threading.Tasks.Task.WhenAny%2A> 메서드를 사용하여 작업(task)으로 표현되는 여러 비동기 작업 중 하나가 완료될 때까지만 비동기적으로 대기할 수 있습니다.  이 메서드는 다음 네 가지 기본 사용 사례를 따릅니다.
 
-- 중복성:  작업을 여러 번 수행하고 먼저 완료되는 작업을 선택합니다(예를 들어, 단일의 결과를 생성하는 여러 주식 시세 웹 서비스에 연결하고 가장 빨리 완료되는 결과를 선택).
+- 중복: 작업을 여러 번 수행하고 먼저 완료되는 작업을 선택합니다(예를 들어, 단일의 결과를 생성하는 여러 주식 시세 웹 서비스에 연결하고 가장 빨리 완료되는 결과를 선택).
 
-- 인터리브:  여러 작업을 시작하고 모두 완료해야 하지만 완료되었을 때 작업을 처리합니다.
+- 인터리브: 여러 작업을 시작하고 모두 완료해야 하지만 완료되었을 때 작업을 처리합니다.
 
-- 스로틀:  다른 작업이 완료되면 추가 작업을 시작할 수 있습니다.  이것은 인터리브 시나리오의 확장입니다.
+- 스로틀: 다른 작업이 완료되면 추가 작업을 시작할 수 있습니다.  이것은 인터리브 시나리오의 확장입니다.
 
-- 초기 재귀 한도 초과:  예를 들어, 작업 t1으로 표시되는 작업은 다른 작업 t2를 사용하여 <xref:System.Threading.Tasks.Task.WhenAny%2A> 작업에서 그룹화할 수 있으며 <xref:System.Threading.Tasks.Task.WhenAny%2A> 작업에서 대기할 수 있습니다. 작업 t2는 시간 제한 또는 취소를 나타내거나 t1이 완료되기 전에 <xref:System.Threading.Tasks.Task.WhenAny%2A> 작업이 완료되도록 하는 일부 다른 신호를 나타낼 수 있습니다.
+- 초기 재귀 한도: 예를 들어, 작업 t1으로 표시되는 작업은 다른 작업 t2를 사용하여 <xref:System.Threading.Tasks.Task.WhenAny%2A> 작업에서 그룹화할 수 있으며 <xref:System.Threading.Tasks.Task.WhenAny%2A> 작업에서 대기할 수 있습니다. 작업 t2는 시간 제한 또는 취소를 나타내거나 t1이 완료되기 전에 <xref:System.Threading.Tasks.Task.WhenAny%2A> 작업이 완료되도록 하는 일부 다른 신호를 나타낼 수 있습니다.
 
-#### <a name="redundancy"></a>중복
+#### <a name="redundancy"></a>중복성
  주식 구매 여부를 결정하려는 경우를 고려해 봅니다.  신뢰할 수 있는 일부 주식 권장 웹 서비스가 있지만 매일의 부하에 따라 각 서비스가 서로 다른 시간에 느려질 수 있습니다.  다음과 같이 <xref:System.Threading.Tasks.Task.WhenAny%2A> 메서드를 사용하면 작업이 완료될 때 알림을 받을 수 있습니다.
 
 ```csharp
@@ -288,7 +288,7 @@ while(recommendations.Count > 0)
 }
 ```
 
- 또한 첫 번째 작업이 성공적으로 완료되더라도 후속 작업은 실패할 수 있습니다.  이 시점에서는 예외를 처리하는 몇 가지 옵션이 있습니다.  <xref:System.Threading.Tasks.Task.WhenAll%2A> 메서드를 사용할 수 있는 경우 시작된 모든 작업이 완료될 때까지 기다릴 수도 있고 또는 모든 예외가 중요하며 로그온해야 한다고 결정할 수도 있습니다.  이를 위해 연속 작업을 사용하여 작업이 비동기적으로 완료되었을 때 알림을 받을 수 있습니다.
+ 또한 첫 번째 작업이 성공적으로 완료되더라도 후속 작업은 실패할 수 있습니다.  이 시점에서 예외를 처리할 수 있는 여러 옵션이 있습니다. <xref:System.Threading.Tasks.Task.WhenAll%2A> 메서드를 사용할 수 있는 경우 시작된 모든 작업이 완료될 때까지 기다릴 수도 있고 또는 모든 예외가 중요하며 로그온해야 한다고 결정할 수도 있습니다.  이를 위해 연속 작업을 사용하여 작업이 비동기적으로 완료되었을 때 알림을 받을 수 있습니다.
 
 ```csharp
 foreach(Task recommendation in recommendations)
@@ -379,7 +379,7 @@ while(imageTasks.Count > 0)
 }
 ```
 
-#### <a name="throttling"></a>제한
+#### <a name="throttling"></a>스로틀
  사용자가 너무 많은 이미지를 다운로드하여 다운로드를 조절해야 하는 경우를 제외하고, 인터리브 예제를 고려해 보세요. 예를 들어 특정 횟수의 다운로드만 동시에 발생하도록 할 수 있습니다. 이를 위해 비동기 작업 일부를 시작할 수 있습니다.  작업이 완료되면 추가 작업을 추가해서 시작되도록 할 수 있습니다.
 
 ```csharp

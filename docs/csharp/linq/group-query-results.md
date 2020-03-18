@@ -4,11 +4,11 @@ description: C#에서 LINQ를 사용하여 결과를 그룹화하는 방법을 �
 ms.date: 12/01/2016
 ms.assetid: 2e4ec27f-06fb-4de7-8973-0189906d4520
 ms.openlocfilehash: 577a358c31fcf5346e7aab7a2e2b6be10fd1beff
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857855"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61688464"
 ---
 # <a name="group-query-results"></a>쿼리 결과 그룹화
 

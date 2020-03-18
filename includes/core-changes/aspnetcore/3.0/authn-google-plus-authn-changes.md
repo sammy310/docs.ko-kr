@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: c634c43e72d345721f2d8f2e9f45760e927a86ab
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72393956"
 ---
 ### <a name="authentication-google-deprecated-and-replaced"></a>인증: Google+가 더 이상 사용되지 않고 대체됨
@@ -20,7 +20,7 @@ Google의 대체 API는 다른 데이터 원본 및 형식을 사용합니다. �
 
 모든 버전. 이 변경 내용은 ASP.NET Core 외부에 있습니다.
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 ##### <a name="owin-with-aspnet-web-forms-and-mvc"></a>ASP.NET Web Forms 및 MVC를 사용한 Owin
 

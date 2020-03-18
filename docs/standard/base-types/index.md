@@ -8,10 +8,10 @@ helpviewer_keywords:
 - type system, base types
 ms.assetid: 028d0ce8-ebc2-4a88-a16f-17508f6d0bd6
 ms.openlocfilehash: 8fa22ce749dc7d117a4a37de5d09abd9892eeab7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73103541"
 ---
 # <a name="working-with-base-types-in-net"></a>.NET의 기본 형식 작업
@@ -27,7 +27,7 @@ ms.locfileid: "73103541"
  [문자열 조작](../../../docs/standard/base-types/manipulating-strings.md)  
  문자열을 조작하고 형식을 지정하는 방법을 설명합니다.  
   
- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)  
+ [문자열 구문 분석](../../../docs/standard/base-types/parsing-strings.md)  
  문자열을 .NET Framework 형식으로 변환하는 방법을 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  

@@ -12,10 +12,10 @@ helpviewer_keywords:
 - link compiler option [C#]
 ms.assetid: 00da70c6-9ea1-43c2-86f2-aa7f26c03475
 ms.openlocfilehash: 4c96f7be5ac500886ea036c93b4651fa814ee58a
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70970103"
 ---
 # <a name="-link-c-compiler-options"></a>-link(C# 컴파일러 옵션)
@@ -59,12 +59,12 @@ ms.locfileid: "70970103"
  다음 섹션에서는 interop 형식을 포함하는 애플리케이션에서 제네릭 형식을 사용할 경우의 제한 사항에 대해 설명합니다.  
   
 ### <a name="generic-interfaces"></a>제네릭 인터페이스  
- interop 어셈블리에서 포함되는 제네릭 인터페이스는 사용할 수 없습니다. 다음 예제에서 이를 확인할 수 있습니다.  
+ interop 어셈블리에서 포함되는 제네릭 인터페이스는 사용할 수 없습니다. 이는 다음 예에서 확인할 수 있습니다.  
   
  [!code-csharp[VbLinkCompilerCS#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vblinkcompilercs/cs/program.cs#1)]  
   
 ### <a name="types-that-have-generic-parameters"></a>제네릭 매개 변수가 있는 형식  
- 형식이 interop 어셈블리에서 포함된 제네릭 매개 변수가 있는 형식은 해당 형식이 외부 어셈블리에서 제공된 경우 사용할 수 없습니다. 인터페이스에는 이 제한이 적용되지 않습니다. 예를 들어 <xref:Microsoft.Office.Interop.Excel> 어셈블리에 정의된 <xref:Microsoft.Office.Interop.Excel.Range> 인터페이스를 살펴보세요. 다음 코드 예제와 같이 라이브러리가 <xref:Microsoft.Office.Interop.Excel> 어셈블리의 interop 형식을 포함하고 형식이 <xref:Microsoft.Office.Interop.Excel.Range> 인터페이스인 매개 변수가 있는 제네릭 형식을 반환하는 메서드를 노출하는 경우 해당 메서드는 제네릭 인터페이스를 반환해야 합니다.  
+ 형식이 interop 어셈블리에서 포함된 제네릭 매개 변수가 있는 형식은 해당 형식이 외부 어셈블리에서 제공된 경우 사용할 수 없습니다. 인터페이스에는 이 제한이 적용되지 않습니다. 예를 들어 <xref:Microsoft.Office.Interop.Excel.Range> 어셈블리에 정의된 <xref:Microsoft.Office.Interop.Excel> 인터페이스를 살펴보세요. 다음 코드 예제와 같이 라이브러리가 <xref:Microsoft.Office.Interop.Excel> 어셈블리의 interop 형식을 포함하고 형식이 <xref:Microsoft.Office.Interop.Excel.Range> 인터페이스인 매개 변수가 있는 제네릭 형식을 반환하는 메서드를 노출하는 경우 해당 메서드는 제네릭 인터페이스를 반환해야 합니다.  
   
  [!code-csharp[VbLinkCompilerCS#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vblinkcompilercs/cs/utility.cs#2)]  
 [!code-csharp[VbLinkCompilerCS#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vblinkcompilercs/cs/utility.cs#3)]  
@@ -74,7 +74,7 @@ ms.locfileid: "70970103"
   
  [!code-csharp[VbLinkCompilerCS#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vblinkcompilercs/cs/program.cs#5)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드는 소스 파일 `OfficeApp.cs`와 `COMData1.dll` 및 `COMData2.dll`의 참조 어셈블리를 컴파일하여 `OfficeApp.exe`를 생성합니다.  
   
 ```csharp  

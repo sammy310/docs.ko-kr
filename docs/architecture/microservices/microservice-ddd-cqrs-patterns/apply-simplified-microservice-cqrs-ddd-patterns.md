@@ -3,10 +3,10 @@ title: 마이크로 서비스에서 간소화된 CQRS 및 DDD 패턴 적용
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | CQRS 및 DDD 간의 전반적인 관계를 이해합니다.
 ms.date: 10/08/2018
 ms.openlocfilehash: f42b553fd30fdffdc6e325b11740fe9162aab7c8
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71834309"
 ---
 # <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>마이크로 서비스에서 간소화된 CQRS 및 DDD 패턴 적용

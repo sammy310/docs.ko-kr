@@ -9,16 +9,16 @@ helpviewer_keywords:
 - cancellation, how to poll for requests
 ms.assetid: c7f2f022-d08e-4e00-b4eb-ae84844cb1bc
 ms.openlocfilehash: df76674e3003bbb77ef062e90b1dc3283f681d35
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138021"
 ---
 # <a name="how-to-listen-for-cancellation-requests-by-polling"></a>방법: 폴링을 통해 취소 요청 수신 대기
 다음 예제는 사용자 코드가 정기적으로 취소 토큰을 폴링하여 호출 스레드에서 취소가 요청되었는지 여부를 확인하는 방법을 보여줍니다. 이 예제에서는 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 유형을 사용하지만, 동일한 패턴이 <xref:System.Threading.ThreadPool?displayProperty=nameWithType> 유형 또는 <xref:System.Threading.Thread?displayProperty=nameWithType> 유형으로 직접 생성된 비동기 작업에 적용됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  폴링에는 부울 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 속성의 값을 정기적으로 읽을 수 있는 특정한 종류의 루프 또는 순환 코드가 필요합니다. <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 유형을 사용 중이고 작업이 호출 스레드에서 완료될 때까지 대기 중인 경우 <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> 메서드를 사용하여 속성을 확인하고 예외를 throw할 수 있습니다. 이 메서드를 사용하여 요청에 대한 응답으로 올바른 예외가 throw되도록 합니다. <xref:System.Threading.Tasks.Task>를 사용하는 경우 이 메서드를 호출하는 것이 <xref:System.OperationCanceledException>를 수동으로 throw하는 것보다 좋습니다. 예외를 throw할 필요가 없는 경우 속성을 확인하고 속성이 `true`인 경우 메서드에서 반환할 수 있습니다.  
   
  [!code-csharp[Cancellation#11](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex11.cs#11)]

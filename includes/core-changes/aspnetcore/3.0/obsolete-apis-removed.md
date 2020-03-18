@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: b4a20599ce6b7d8fd642e4f0e5b5f7d3fbcdac92
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394041"
 ---
 ### <a name="obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed"></a>사용되지 않는 위조 방지, CORS, 진단, MVC 및 라우팅 API가 제거됨
@@ -18,7 +18,7 @@ ASP.NET Core 2.2에서 사용되지 않는 멤버 및 호환성 스위치가 제
 
 시간에 따른 API 표면 개선.
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 .NET Core 2.2를 대상으로 하는 동안 사용되지 않는 빌드 메시지의 지침에 따라 새 API를 대신 채택합니다.
 

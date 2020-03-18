@@ -12,10 +12,10 @@ helpviewer_keywords:
 ms.assetid: ba72d648-9553-4849-b829-069ad5ea014b
 author: ghogen
 ms.openlocfilehash: 61f969c22ac06bd6ed20ccfa9124db3bb35d0692
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71053550"
 ---
 # <a name="develop-windows-service-apps"></a>Windows 서비스 앱 개발
@@ -25,7 +25,7 @@ Visual Studio 또는 .NET Framework SDK를 사용하면 서비스로 설치되�
 > [!NOTE]
 > Visual Studio에서는 필요한 경우 기존 C++ 코드와 상호 운용될 수 있는 Visual C# 또는 Visual Basic의 관리 코드에서 서비스를 만들 수 있습니다. 또는 [ATL 프로젝트 마법사](/cpp/atl/reference/atl-project-wizard)를 사용하여 네이티브 C++에서 Windows 서비스를 만들 수 있습니다.
 
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
 [Windows 서비스 애플리케이션 소개](introduction-to-windows-service-applications.md)
 
@@ -47,8 +47,8 @@ Windows 서비스 프로젝트 템플릿을 사용하여 Windows 서비스를 �
 
 <xref:System.ServiceProcess.ServiceBase> - 서비스를 만드는 데 사용되는 <xref:System.ServiceProcess.ServiceBase> 클래스의 주요 기능에 대해 설명합니다.
 
-<xref:System.ServiceProcess.ServiceProcessInstaller> - 서비스를 설치 및 제거하기 위해 <xref:System.ServiceProcess.ServiceInstaller> 클래스와 함께 사용되는 <xref:System.ServiceProcess.ServiceProcessInstaller> 클래스의 기능에 대해 설명합니다.
+<xref:System.ServiceProcess.ServiceProcessInstaller> - 서비스를 설치 및 제거하기 위해 <xref:System.ServiceProcess.ServiceProcessInstaller> 클래스와 함께 사용되는 <xref:System.ServiceProcess.ServiceInstaller> 클래스의 기능에 대해 설명합니다.
 
-<xref:System.ServiceProcess.ServiceInstaller> - 서비스를 설치 및 제거하기 위해 <xref:System.ServiceProcess.ServiceProcessInstaller> 클래스와 함께 사용되는 <xref:System.ServiceProcess.ServiceInstaller> 클래스의 기능에 대해 설명합니다.
+<xref:System.ServiceProcess.ServiceInstaller> - 서비스를 설치 및 제거하기 위해 <xref:System.ServiceProcess.ServiceInstaller> 클래스와 함께 사용되는 <xref:System.ServiceProcess.ServiceProcessInstaller> 클래스의 기능에 대해 설명합니다.
 
 [템플릿에서 프로젝트 만들기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0fyc0azh(v=vs.120)) - 이 챕터에서 사용되는 프로젝트 유형과 이들 유형 중에서 선택하는 방법을 설명합니다.

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - cancellation, waiting with wait handles
 ms.assetid: 6e2aa49b-fc84-4bcf-962b-17db98b7edcb
 ms.openlocfilehash: 43ca52359a48d3ac5a27933fcc8ce56c07159cac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73137983"
 ---
 # <a name="how-to-listen-for-cancellation-requests-that-have-wait-handles"></a>방법: 대기 핸들이 있는 취소 요청 수신 대기
@@ -21,14 +21,14 @@ ms.locfileid: "73137983"
 > [!NOTE]
 > “내 코드만”이 사용하도록 설정된 경우 Visual Studio가 예외를 발생시키는 줄에서 중단하고 "예외가 사용자 코드에서 처리되지 않았다"는 오류 메시지를 표시합니다. 이 오류는 심각하지는 않습니다. F5 키를 눌러 계속하고 아래 예제에 설명된 예외 처리 동작을 확인할 수 있습니다. 첫 번째 오류 지점에서 Visual Studio가 실행을 중단하지 않도록 하려면 **도구, 옵션, 디버깅, 일반**을 차례로 선택하고 “내 코드만” 확인란의 선택을 취소하기만 하면 됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제는 <xref:System.Threading.ManualResetEvent>를 사용하여 통합 취소를 지원하지 않는 대기 핸들을 차단 해제하는 방법을 보여줍니다.  
   
  [!code-csharp[Cancellation#9](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex9.cs#9)]
  [!code-vb[Cancellation#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex9.vb#9)]  
   
-## <a name="example"></a>예  
- 다음 예제는 <xref:System.Threading.ManualResetEventSlim>를 사용하여 통합 취소를 지원하는 조정의 기본 형식을 차단 해제하는 방법을 보여줍니다. 동일한 접근 방식을 <xref:System.Threading.Semaphore> `Slim` 및 <xref:System.Threading.CountdownEvent>과 같은 다른 간단한 조정의 기본 형식과 함께 사용할 수 있습니다.  
+## <a name="example"></a>예제  
+ 다음 예제는 <xref:System.Threading.ManualResetEventSlim>를 사용하여 통합 취소를 지원하는 조정의 기본 형식을 차단 해제하는 방법을 보여줍니다. 동일한 접근 방식을 <xref:System.Threading.Semaphore>`Slim` 및 <xref:System.Threading.CountdownEvent>과 같은 다른 간단한 조정의 기본 형식과 함께 사용할 수 있습니다.  
   
  [!code-csharp[Cancellation#10](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex10.cs#10)]
  [!code-vb[Cancellation#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex10.vb#10)]  

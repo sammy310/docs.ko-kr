@@ -18,14 +18,14 @@ helpviewer_keywords:
 - age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
 ms.openlocfilehash: 0edde8e716d5ce3b1444e994234def5835341475
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047121"
 ---
 # <a name="time-based-cache-policies"></a>시간 기반 캐시 정책
-시간 기반 캐시 정책은 리소스가 검색된 시간, 리소스와 함께 반환된 헤더, 현재 시간을 사용하여 캐시된 항목의 새로 고침을 정의합니다. 시간 기반 캐시 정책을 설정하는 경우 <xref:System.Net.Cache.HttpRequestCacheLevel.Default> 시간 기반 정책을 사용하거나 사용자 지정 시간 기반 정책을 만들 수 있습니다. HTTP(Hypertext Transfer Protocol)를 사용하여 얻은 리소스에 대한 기본 시간 기반 정책을 사용하는 경우 정확한 캐시 동작은 [IETF(Internet Engineering Task Force)](https://www.ietf.org/) 웹 사이트에 있는 RFC 2616의 섹션 13 및 14에 지정된 동작 및 캐시된 응답에 포함된 헤더에 의해 결정됩니다. HTTP 리소스에 대한 기본 시간 기반 정책을 설정하는 방법을 보여 주는 코드 예제는 [방법: 애플리케이션의 기본 시간 기반 캐시 정책 설정](how-to-set-the-default-time-based-cache-policy-for-an-application.md)을 참조하세요. 캐시 정책을 만들고 사용하는 방법을 보여 주는 코드 예제는 [네트워크 애플리케이션에서 캐싱 구성](configuring-caching-in-network-applications.md)을 참조하세요.  
+시간 기반 캐시 정책은 리소스가 검색된 시간, 리소스와 함께 반환된 헤더, 현재 시간을 사용하여 캐시된 항목의 새로 고침을 정의합니다. 시간 기반 캐시 정책을 설정하는 경우 <xref:System.Net.Cache.HttpRequestCacheLevel.Default> 시간 기반 정책을 사용하거나 사용자 지정 시간 기반 정책을 만들 수 있습니다. HTTP(Hypertext Transfer Protocol)를 사용하여 얻은 리소스에 대한 기본 시간 기반 정책을 사용하는 경우 정확한 캐시 동작은 [IETF(Internet Engineering Task Force)](https://www.ietf.org/) 웹 사이트에 있는 RFC 2616의 섹션 13 및 14에 지정된 동작 및 캐시된 응답에 포함된 헤더에 의해 결정됩니다. HTTP 리소스에 대한 기본 시간 기반 정책을 설정하는 방법을 보여 주는 코드 예제는 [방법: 애플리케이션에 대한 기본 시간 기반 캐시 정책 설정](how-to-set-the-default-time-based-cache-policy-for-an-application.md)을 참조하세요. 캐시 정책을 만들고 사용하는 방법을 보여 주는 코드 예제는 [네트워크 애플리케이션에서 캐싱 구성](configuring-caching-in-network-applications.md)을 참조하세요.  
   
 ## <a name="criteria-to-determine-freshness-of-cached-entries"></a>캐시된 항목의 새로 고침을 결정하는 조건  
  시간 기반 캐시 정책을 사용자 지정하려면 다음 조건 중 하나 이상을 사용하여 캐시된 항목의 새로 고침을 결정하도록 지정할 수 있습니다.  

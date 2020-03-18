@@ -4,11 +4,11 @@ description: C#에서 LINQ를 사용하여 런타임에 동적으로 조건자 �
 ms.date: 12/01/2016
 ms.assetid: 90238470-0767-497c-916c-52d0d16845e0
 ms.openlocfilehash: 314be8f98b9ff014f14bef11a1f3581eff8574b4
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857738"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61659945"
 ---
 # <a name="dynamically-specify-predicate-filters-at-runtime"></a>런타임에 동적으로 조건자 필터 지정
 
@@ -18,15 +18,15 @@ ms.locfileid: "54857738"
 
 1. 새 콘솔 애플리케이션을 열고 이름을 `PredicateFilters`로 지정합니다.
 
-2. [개체의 컬렉션 쿼리](query-a-collection-of-objects.md)에서 `StudentClass` 클래스를 복사하여 `Program` 클래스 아래의 `PredicateFilters` 네임스페이스에 붙여 넣습니다. `StudentClass`는 `Student` 개체 목록을 제공합니다.
+2. `StudentClass`개체의 컬렉션 쿼리[에서 ](query-a-collection-of-objects.md) 클래스를 복사하여 `PredicateFilters` 클래스 아래의 `Program` 네임스페이스에 붙여 넣습니다. `StudentClass`는 `Student` 개체 목록을 제공합니다.
 
-3. `StudentClass`에서 `Main` 메서드를 주석으로 처리합니다.
+3. `Main`에서 `StudentClass` 메서드를 주석으로 처리합니다.
 
 4. `Program` 클래스를 다음 코드로 바꿉니다.
 
      [!code-csharp[csProgGuideLINQ#26](~/samples/snippets/csharp/concepts/linq/how-to-dynamically-specify-predicate-filters-at-runtime_1.cs)]
 
-5. `ids`의 선언 아래에서 `DynamicPredicates` 클래스의 `Main` 메서드에 다음 줄을 추가합니다.
+5. `Main`의 선언 아래에서 `DynamicPredicates` 클래스의 `ids` 메서드에 다음 줄을 추가합니다.
 
      ```csharp
      QueryById(ids);
@@ -42,9 +42,9 @@ ms.locfileid: "54857738"
 
      Omelchenko: 111
 
-8. 다음 단계로 프로젝트를 다시 실행합니다. 이번에는 `ids` 배열 대신 런타임에 입력된 입력을 사용합니다. `Main` 메서드에서 `QueryByID(ids)`를 `QueryByID(args)`로 변경합니다.
+8. 다음 단계로 프로젝트를 다시 실행합니다. 이번에는 `ids` 배열 대신 런타임에 입력된 입력을 사용합니다. `QueryByID(ids)` 메서드에서 `QueryByID(args)`를 `Main`로 변경합니다.
 
-9. 명령줄 인수 `122 117 120 115`를 사용하여 프로젝트를 실행합니다. 프로젝트가 실행되면 해당 값은 `Main` 메서드의 매개 변수인 `args`의 요소가 됩니다.
+9. 명령줄 인수 `122 117 120 115`를 사용하여 프로젝트를 실행합니다. 프로젝트가 실행되면 해당 값은 `args` 메서드의 매개 변수인 `Main`의 요소가 됩니다.
 
 10. 다음 출력이 콘솔 창에 표시됩니다.
 
@@ -64,7 +64,7 @@ ms.locfileid: "54857738"
 
      [!code-csharp[csProgGuideLINQ#27](~/samples/snippets/csharp/concepts/linq//how-to-dynamically-specify-predicate-filters-at-runtime_2.cs)]
 
-3. `Main` 메서드에서 `QueryByID` 호출을 `QueryByYear(args[0])` 호출로 바꿔 `args` 배열의 첫 번째 요소를 인수로 전송합니다.
+3. `Main` 메서드에서 `QueryByID` 호출을 `args` 호출로 바꿔 `QueryByYear(args[0])` 배열의 첫 번째 요소를 인수로 전송합니다.
 
 4. 1에서 4 사이의 정수 값인 명령줄 인수를 사용하여 프로젝트를 실행합니다.
 

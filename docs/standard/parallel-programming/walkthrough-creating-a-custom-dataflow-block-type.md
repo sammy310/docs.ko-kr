@@ -11,16 +11,16 @@ helpviewer_keywords:
 - dataflow blocks, creating custom in TPL
 ms.assetid: a6147146-0a6a-4d9b-ab0f-237b3c1ac691
 ms.openlocfilehash: cb953952bbed90edd2db799e92d44ec9f062babf
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139887"
 ---
 # <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>연습: 사용자 지정 데이터 흐름 블록 형식 만들기
 TPL 데이터 흐름 라이브러리는 다양한 기능을 구현하는 여러 데이터 흐름 블록 형식을 제공하지만 사용자 지정 블록 형식을 만들 수도 있습니다. 이 문서에서는 사용자 지정 동작을 구현하는 데이터 흐름 블록 형식을 만드는 방법을 설명합니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 문서를 읽기 전에 [데이터 흐름](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)을 읽어 보세요.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -37,7 +37,7 @@ TPL 데이터 흐름 라이브러리는 다양한 기능을 구현하는 여러 
  [!code-vb[TPLDataflow_SlidingWindowBlock#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_slidingwindowblock/vb/slidingwindowblock.vb#1)]  
   
 ## <a name="deriving-from-ipropagatorblock-to-define-the-sliding-window-dataflow-block"></a>IPropagatorBlock에서 파생시켜 슬라이딩 윈도우 데이터 흐름 블록 정의  
- 다음 예제에서는 `SlidingWindowBlock` 클래스를 보여줍니다. 이 클래스는 <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602>에서 파생되므로 데이터의 소스 및 대상 역할을 할 수 있습니다. 이전 예제와 같이 `SlidingWindowBlock` 클래스는 기존 데이터 흐름 블록 형식에 빌드됩니다. 그러나 `SlidingWindowBlock` 클래스는 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>, <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 및 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock> 인터페이스에 필요한 메서드도 구현합니다. 이러한 메서드는 모두 미리 정의된 데이터 흐름 블록 형식 멤버에 대한 작업을 전달합니다. 예를 들어 `Post` 메서드는 작업을 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 개체이기도 한 `m_target` 데이터 멤버로 전달합니다.  
+ 다음 예제에서는 `SlidingWindowBlock` 클래스를 보여줍니다. 이 클래스는 <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602>에서 파생되므로 데이터의 소스 및 대상 역할을 할 수 있습니다. 이전 예제와 같이 `SlidingWindowBlock` 클래스는 기존 데이터 흐름 블록 형식에 빌드됩니다. 그러나 `SlidingWindowBlock` 클래스는 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>, <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 및 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock> 인터페이스에 필요한 메서드도 구현합니다. 이러한 메서드는 모두 미리 정의된 데이터 흐름 블록 형식 멤버에 대한 작업을 전달합니다. 예를 들어 `Post` 메서드는 작업을 `m_target` 개체이기도 한 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 데이터 멤버로 전달합니다.  
   
  이 방법은 사용자 지정 데이터 흐름 기능이 필요하고 추가 메서드, 속성 또는 필드를 제공하는 형식도 필요한 경우 유용합니다. 예를 들어 `SlidingWindowBlock` 클래스는 <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601>에서 파생되므로 <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceive%2A> 및 <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceiveAll%2A> 메서드를 제공할 수 있습니다. 또한 `SlidingWindowBlock` 클래스는 슬라이딩 윈도우에서 요소 수를 검색하는 `WindowSize` 속성을 제공하여 확장성을 보여줍니다.  
   

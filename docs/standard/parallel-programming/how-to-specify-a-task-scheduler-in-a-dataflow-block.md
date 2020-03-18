@@ -1,5 +1,5 @@
 ---
-title: '방법: 데이터 흐름 블록에서 작업 스케줄러 지정'
+title: '방법: 데이터 흐름 블록의 작업 Scheduler 지정'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - task scheduler, linking from TPL
 ms.assetid: 27ece374-ed5b-49ef-9cec-b20db34a65e8
 ms.openlocfilehash: 2abac1ccf45fc9c9c28e27c132e72fe483a24d75
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73122228"
 ---
-# <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>방법: 데이터 흐름 블록에서 작업 스케줄러 지정
+# <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>방법: 데이터 흐름 블록의 작업 Scheduler 지정
 이 문서에서는 애플리케이션에서 데이터 흐름을 사용하는 경우 특정 작업 스케줄러를 연결하는 방법을 보여 줍니다. 예제에서는 Windows Forms 애플리케이션에서 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> 클래스를 사용하여 판독기 작업이 활성화된 경우와 작성기 작업이 활성화된 경우를 표시합니다. 또한 <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> 메서드를 사용하여 데이터 흐름 블록이 사용자 인터페이스 스레드에서 실행될 수 있도록 합니다.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "73122228"
   
 1. Visual C# 또는 Visual Basic **Windows Forms 애플리케이션** 프로젝트를 만듭니다. 다음 단계에서 프로젝트의 이름은 `WriterReadersWinForms`입니다.  
   
-2. 기본 폼인 Form1.cs(Visual Basic에서는 Form1.vb)의 폼 디자이너에서 네 개 <xref:System.Windows.Forms.CheckBox> 컨트롤을 추가합니다. <xref:System.Windows.Forms.Control.Text%2A> 속성을 `checkBox1`의 경우 **Reader 1**, `checkBox2`의 경우 **Reader 2**, `checkBox3`의 경우 **Reader 3**, `checkBox4`의 경우 **Writer**로 설정합니다. 각 컨트롤의 <xref:System.Windows.Forms.Control.Enabled%2A> 속성을 `False`로 설정합니다.  
+2. 기본 폼인 Form1.cs(Visual Basic에서는 Form1.vb)의 폼 디자이너에서 네 개 <xref:System.Windows.Forms.CheckBox> 컨트롤을 추가합니다. <xref:System.Windows.Forms.Control.Text%2A> 속성을 **의 경우** Reader 1`checkBox1`, **의 경우** Reader 2`checkBox2`, **의 경우** Reader 3`checkBox3`, **의 경우** Writer`checkBox4`로 설정합니다. 각 컨트롤의 <xref:System.Windows.Forms.Control.Enabled%2A> 속성을 `False`로 설정합니다.  
   
 3. 폼에 <xref:System.Windows.Forms.Timer> 컨트롤을 추가합니다. <xref:System.Windows.Forms.Timer.Interval%2A> 속성을 `2500`으로 설정합니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "73122228"
   
  또한 이 예제에서는 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> 클래스를 사용하여 일부 데이터 흐름 블록이 동시에 동작할 수 있도록 하고 다른 데이터 흐름 블록이 동일한 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> 개체에서 실행되는 다른 모든 데이터 흐름 블록과 독립적으로 동작할 수 있도록 합니다. 이 방법은 여러 데이터 흐름 블록이 리소스를 공유할 때 해당 리소스에 대한 액세스를 수동으로 동기화할 필요를 없애기 위해 일부 데이터 흐름 블록에 해당 리소스에 대한 배타적 액세스 권한이 필요한 경우에 유용합니다. 수동 동기화를 제거하면 코드의 효율성이 향상될 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 Form1.cs(Visual Basic에서는 Form1.vb)의 전체 코드를 보여 줍니다.  
   
  [!code-csharp[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#100)]

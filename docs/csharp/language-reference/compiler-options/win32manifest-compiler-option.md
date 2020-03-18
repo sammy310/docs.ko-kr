@@ -9,10 +9,10 @@ helpviewer_keywords:
 - -win32manifest compiler option [C#]
 ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
 ms.openlocfilehash: 24677b145974af03e6ddcac1b9bab5907ab70c7b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69924681"
 ---
 # <a name="-win32manifest-c-compiler-options"></a>-win32manifest(C# 컴파일러 옵션)
@@ -46,7 +46,7 @@ ms.locfileid: "69924681"
   
  [/nowin32manifest(C# 컴파일러 옵션)](./nowin32manifest-compiler-option.md) 옵션을 사용하여 애플리케이션 매니페스트를 사용자 지정 빌드 후 단계 또는 Win32 리소스 파일의 일부로 제공할 수 있습니다. 애플리케이션이 Windows Vista에서 파일 또는 레지스트리 가상화의 적용을 받도록 하려면 동일한 옵션을 사용합니다. 이렇게 하면 컴파일러가 PE(이식 가능한 실행 파일) 파일에 기본 매니페스트를 만들고 포함할 수 없습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제는 Visual C# 컴파일러가 PE에 삽입하는 기본 매니페스트를 보여 줍니다.  
   
 > [!NOTE]

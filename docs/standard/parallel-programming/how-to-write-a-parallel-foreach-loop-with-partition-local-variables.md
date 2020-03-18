@@ -9,10 +9,10 @@ helpviewer_keywords:
 - parallel foreach loop, how to use local state
 ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
 ms.openlocfilehash: cca48889670c3bd67366c879ccede94c89542c8d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139689"
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>방법: 파티션 로컬 변수를 사용하는 Parallel.ForEach 루프 작성
@@ -23,7 +23,7 @@ ms.locfileid: "73139689"
 
 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 루프에서 파티션 지역 변수를 사용하려면 두 가지 형식의 매개 변수를 사용하는 메서드 오버로드 중 하나를 호출해야 합니다. 첫 번째 형식 매개 변수인 `TSource`는 원본 요소의 형식을 지정하고, 두 번째 형식 매개 변수인 `TLocal`은 파티션 로컬 변수의 형식을 지정합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 <xref:System.Threading.Tasks.Parallel.ForEach%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%601%7D%2CSystem.Func%7B%60%600%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%601%2C%60%601%7D%2CSystem.Action%7B%60%601%7D%29?displayProperty=nameWithType> 오버로드를 호출하여 1백만 개의 요소가 포함된 배열의 합계를 컴퓨팅합니다. 이 오버로드에는 다음과 같은 4개의 매개 변수가 있습니다.
 

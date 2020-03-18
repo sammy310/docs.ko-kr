@@ -9,10 +9,10 @@ helpviewer_keywords:
 - PLINQ queries, how to handle exceptions
 ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
 ms.openlocfilehash: 3645f5dc470ef53710aa7f4c78c60431fb27ecfa
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73123100"
 ---
 # <a name="how-to-handle-exceptions-in-a-plinq-query"></a>방법: PLINQ 쿼리의 예외 처리
@@ -26,7 +26,7 @@ PLINQ가 순차적 실행으로 대체되고 예외가 발생하는 일부 경�
 >
 > 이 예제는 사용법을 보여 주기 위한 것이며, 동일한 순차 LINQ to Objects 쿼리보다 빠르게 실행되지 않을 수도 있습니다. 속도 향상에 대한 자세한 내용은 [PLINQ의 속도 향상 이해](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)를 참조하세요.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 이 예제는 throw된 <xref:System.AggregateException?displayProperty=nameWithType>을 catch하는 쿼리를 실행하는 코드 주위에 try-catch 블록을 넣는 방법을 보여줍니다.
 
@@ -35,7 +35,7 @@ PLINQ가 순차적 실행으로 대체되고 예외가 발생하는 일부 경�
 
 이 예제에서는 예외가 throw된 후 쿼리를 계속할 수 없습니다. 애플리케이션 코드가 예외를 catch할 때까지 PLINQ가 모든 스레드에서 쿼리를 이미 중지했습니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제는 예외를 catch하고 쿼리 실행을 계속할 수 있도록 대리자에 try-catch 블록을 넣는 방법을 보여줍니다.
 

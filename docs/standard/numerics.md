@@ -12,10 +12,10 @@ helpviewer_keywords:
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
 ms.openlocfilehash: e5815058898cac165e7a47d761ee86bb9c4cb940
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73091598"
 ---
 # <a name="numerics-in-net"></a>.NET의 숫자
@@ -26,7 +26,7 @@ ms.locfileid: "73091598"
 
 .NET은 다음 표에 나열된 부호 있는/부호 없는 8비트, 16비트, 32비트 및 64비트 정수 형식을 모두 지원합니다.
   
-|Type|부호 있음/부호 없음|크기(바이트)|최솟값|최댓값|  
+|형식|부호 있음/부호 없음|크기(바이트)|최소값|최대값|  
 |----------|----------------------|--------------------|-------------------|-------------------|  
 |<xref:System.Byte?displayProperty=nameWithType>|부호 없음|1|0|255|  
 |<xref:System.Int16?displayProperty=nameWithType>|서명|2|-32,768|32,767|  
@@ -42,7 +42,7 @@ ms.locfileid: "73091598"
 <xref:System.BitConverter?displayProperty=nameWithType> 클래스를 사용하여 정수 값의 개별 비트를 사용할 수도 있습니다.  
 
 > [!NOTE]  
-> 부호 없는 정수 형식은 CLS 규격이 아닙니다. 자세한 내용은 [언어 독립성 및 언어 독립적 구성 요소](language-independence-and-language-independent-components.md)을 참조하십시오.
+> 부호 없는 정수 형식은 CLS 규격이 아닙니다. 자세한 내용은 [언어 독립성 및 언어 독립적 구성 요소](language-independence-and-language-independent-components.md)를 참조하세요.
 
 ## <a name="biginteger"></a>BigInteger
 
@@ -52,7 +52,7 @@ ms.locfileid: "73091598"
 
 .NET에는 다음 표에 나열된 세 가지 기본 부동 소수점 형식이 포함되어 있습니다.
   
-|Type|크기(바이트)|근사 범위|자릿수|  
+|형식|크기(바이트)|근사 범위|자릿수|  
 |----------|--------|---------------------|--------------------|  
 |<xref:System.Single?displayProperty=nameWithType>|4|±1.5 x 10<sup>−45</sup> ~ ±3.4 x 10<sup>38</sup>|~6-9개 자릿수|  
 |<xref:System.Double?displayProperty=nameWithType>|8|±5.0 × 10<sup>−324</sup> ~ ±1.7 × 10<sup>308</sup>|~15-17개 자릿수|  
@@ -60,16 +60,16 @@ ms.locfileid: "73091598"
   
 <xref:System.Single> 및 <xref:System.Double> 형식은 숫자가 아니고 무한대임을 나타내는 특수 값을 지원합니다. 예를 들어 <xref:System.Double> 형식은 <xref:System.Double.NaN?displayProperty=nameWithType>, <xref:System.Double.NegativeInfinity?displayProperty=nameWithType> 및 <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>와 같은 값을 제공합니다. <xref:System.Double.IsNaN%2A?displayProperty=nameWithType>, <xref:System.Double.IsInfinity%2A?displayProperty=nameWithType>, <xref:System.Double.IsPositiveInfinity%2A?displayProperty=nameWithType> 및 <xref:System.Double.IsNegativeInfinity%2A?displayProperty=nameWithType> 메서드를 사용하여 이러한 특수 값을 테스트합니다.
 
-각 부동 소수점 형식은 표준 산술 연산자 집합을 지원합니다. <xref:System.Math?displayProperty=nameWithType> 클래스는 광범위한 수학 함수 집합에 대한 메서드를 제공합니다. .NET Core 2.0 이상에는 <xref:System.Single> 형식의 인수를 허용하는 메서드를 제공하는 <xref:System.MathF?displayProperty=nameWithType> 클래스가 포함되어 있습니다.
+각 부동 소수점 형식은 표준 산술 연산자 집합을 지원합니다. <xref:System.Math?displayProperty=nameWithType> 클래스는 광범위한 수학 함수 집합에 대한 메서드를 제공합니다. .NET Core 2.0 이상에는 <xref:System.MathF?displayProperty=nameWithType> 형식의 인수를 허용하는 메서드를 제공하는 <xref:System.Single> 클래스가 포함되어 있습니다.
 
-<xref:System.BitConverter?displayProperty=nameWithType> 클래스를 사용하여 <xref:System.Double> 및 <xref:System.Single> 값의 개별 비트를 사용할 수도 있습니다. <xref:System.Decimal?displayProperty=nameWithType> 구조체에는 10진수 값의 개별 비트를 사용하기 위한 고유한 메서드인 <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> 및 <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=nameWithType>와 몇몇 추가적인 수치 연산을 수행하기 위한 고유한 메서드 집합이 있습니다.
+<xref:System.Double> 클래스를 사용하여 <xref:System.Single> 및 <xref:System.BitConverter?displayProperty=nameWithType> 값의 개별 비트를 사용할 수도 있습니다. <xref:System.Decimal?displayProperty=nameWithType> 구조체에는 10진수 값의 개별 비트를 사용하기 위한 고유한 메서드인 <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> 및 <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=nameWithType>와 몇몇 추가적인 수치 연산을 수행하기 위한 고유한 메서드 집합이 있습니다.
   
 <xref:System.Double> 및 <xref:System.Single> 형식은 기본적으로 정확하지 않은 값(예: 두 별 사이의 거리) 및 정밀도가 높고 반올림 오류가 적을 필요 없는 애플리케이션에 사용해야 합니다. 정밀도가 더 높아야 하고 반올림 오류가 최소화되어야 하는 경우에는 <xref:System.Decimal?displayProperty=nameWithType> 형식을 사용해야 합니다.
 
 > [!NOTE]
 > <xref:System.Decimal> 형식을 사용하면 반올림이 필요하지 않습니다. 오히려 반올림으로 인한 오류를 최소화합니다.
   
-## <a name="complex"></a>Complex
+## <a name="complex"></a>복합
 
 <xref:System.Numerics.Complex?displayProperty=nameWithType> 구조체는 실수 부분과 허수 부분이 포함된 숫자인 복소수를 나타냅니다. 이 형식은 산술, 비교, 같음, 명시적 및 암시적 변환 연산자의 표준 집합과 수치, 대수 및 삼각 메서드를 지원합니다.  
   

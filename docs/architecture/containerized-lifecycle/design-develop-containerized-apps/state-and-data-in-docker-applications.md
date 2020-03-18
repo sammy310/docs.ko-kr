@@ -3,10 +3,10 @@ title: Docker 애플리케이션의 상태 및 데이터
 description: 컨테이너화된 애플리케이션에서 상태를 저장하는 데 사용할 수 있는 옵션을 알아봅니다.
 ms.date: 02/15/2019
 ms.openlocfilehash: b2368efb0eff2bdce48b77b2addcc4de89822c74
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394628"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker 애플리케이션의 상태 및 데이터

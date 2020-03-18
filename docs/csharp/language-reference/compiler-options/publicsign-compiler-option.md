@@ -8,11 +8,11 @@ helpviewer_keywords:
 - publicsign compiler option [C#]
 - /publicsign compiler option [C#]
 ms.openlocfilehash: de7d9c98b0f279b52bc93711c5b986a2b2e57215
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738068"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61662532"
 ---
 # <a name="-publicsign-c-compiler-options"></a>-publicsign(C# 컴파일러 옵션)
 
@@ -28,13 +28,13 @@ ms.locfileid: "54738068"
 
 없음
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 **-publicsign** 옵션에는 [-keyfile](keyfile-compiler-option.md) 또는 [-keycontainer](keycontainer-compiler-option.md)를 사용해야 합니다. **keyfile** 또는 **keycontainer** 옵션은 공개 키를 지정합니다.
 
 **-publicsign** 및 **-delaysign** 옵션은 함께 사용할 수 없습니다.
 
-“모조 서명” 또는 “OSS 서명”이라고도 하는 공개 서명은 출력 어셈블리에 공개 키를 포함하고 “서명된” 플래그를 설정하지만 개인 키를 사용하여 어셈블리에 실제로 서명하지는 않습니다. 이 서명은 릴리스된 “완전히 서명된” 어셈블리와 호환되지만 어셈블리 서명에 사용된 개인 키에는 액세스할 수 없는 어셈블리를 빌드하려는 오픈 소스 프로젝트에 유용합니다. 어셈블리가 완전히 서명되었는지 실제로 확인해야 하는 소비자는 거의 없으므로 완전히 서명된 어셈블리가 사용되는 거의 모든 시나리오에서 이러한 공개적으로 빌드된 어셈블리를 사용할 수 있습니다.
+“모조 서명” 또는 “OSS 서명”이라고도 하는 퍼블릭 서명은 출력 어셈블리에 퍼블릭 키를 포함하고 “서명된” 플래그를 설정하지만 프라이빗 키를 사용하여 어셈블리에 실제로 서명하지는 않습니다. 이 서명은 릴리스된 “완전히 서명된” 어셈블리와 호환되지만 어셈블리 서명에 사용된 프라이빗 키에는 액세스할 수 없는 어셈블리를 빌드하려는 오픈 소스 프로젝트에 유용합니다. 어셈블리가 완전히 서명되었는지 실제로 확인해야 하는 소비자는 거의 없으므로 완전히 서명된 어셈블리가 사용되는 거의 모든 시나리오에서 이러한 공개적으로 빌드된 어셈블리를 사용할 수 있습니다.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면
 

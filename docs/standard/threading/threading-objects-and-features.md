@@ -7,10 +7,10 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
 ms.openlocfilehash: dd9b7b8cb194353d0a1c285af10d54dc7366896e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73128966"
 ---
 # <a name="threading-objects-and-features"></a>스레딩 개체 및 기능
@@ -27,8 +27,8 @@ ms.locfileid: "73128966"
 |[뮤텍스](mutexes.md)|공유 리소스에 대한 배타적 액세스 권한을 부여하는 <xref:System.Threading.Mutex?displayProperty=nameWithType> 클래스를 설명합니다.|
 |[세마포 및 SemaphoreSlim](semaphore-and-semaphoreslim.md)|공유 리소스 또는 리소스 풀에 동시에 액세스할 수 있는 스레드 수를 제한하는 <xref:System.Threading.Semaphore?displayProperty=nameWithType> 클래스를 설명합니다.|
 |[장벽](barrier.md)|단계별 작업에서 스레드를 조정하기 위해 장벽 패턴을 구현하는 <xref:System.Threading.Barrier?displayProperty=nameWithType> 클래스를 설명합니다.|
-|[스핀 잠금](spinlock.md)|특정 하위 수준 잠금 시나리오의 <xref:System.Threading.Monitor?displayProperty=nameWithType> 클래스에 대한 간단한 대체 항목인 <xref:System.Threading.SpinLock?displayProperty=nameWithType> 구조체를 설명합니다.|
-|[스핀 대기](spinwait.md)|회전 기반 대기를 지원하는 <xref:System.Threading.SpinWait?displayProperty=nameWithType> 구조체를 설명합니다.|
+|[SpinLock](spinlock.md)|특정 하위 수준 잠금 시나리오의 <xref:System.Threading.SpinLock?displayProperty=nameWithType> 클래스에 대한 간단한 대체 항목인 <xref:System.Threading.Monitor?displayProperty=nameWithType> 구조체를 설명합니다.|
+|[SpinWait](spinwait.md)|회전 기반 대기를 지원하는 <xref:System.Threading.SpinWait?displayProperty=nameWithType> 구조체를 설명합니다.|
 
 ## <a name="see-also"></a>참고 항목
 

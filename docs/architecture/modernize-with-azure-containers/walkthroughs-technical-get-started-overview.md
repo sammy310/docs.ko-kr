@@ -3,10 +3,10 @@ title: 연습 및 기술 시작 개요
 description: Azure Cloud 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화 | 연습 및 기술 시작 개요
 ms.date: 04/28/2018
 ms.openlocfilehash: 190b33c4307b09bab0543d481e66ac9328074a0d
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69660893"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>연습 및 기술 시작 개요
