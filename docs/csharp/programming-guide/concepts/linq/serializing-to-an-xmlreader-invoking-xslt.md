@@ -3,17 +3,17 @@ title: XmlReader로 serialize(XSLT 호출)(C#)
 ms.date: 07/20/2015
 ms.assetid: 4cc3ee03-ef4c-429b-a408-fedd10b728cd
 ms.openlocfilehash: b079fe05fa8c230f644e011dcb62ec54f55cae60
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "66487183"
 ---
-# <a name="serializing-to-an-xmlreader-invoking-xslt-c"></a><span data-ttu-id="504ee-102">XmlReader로 serialize(XSLT 호출)(C#)</span><span class="sxs-lookup"><span data-stu-id="504ee-102">Serializing to an XmlReader (Invoking XSLT) (C#)</span></span>
-<span data-ttu-id="504ee-103">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]의 <xref:System.Xml?displayProperty=nameWithType> 상호 운용성 기능을 사용할 때 <xref:System.Xml.Linq.XNode.CreateReader%2A>를 사용하여 <xref:System.Xml.XmlReader>를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="504ee-103">When you use the <xref:System.Xml?displayProperty=nameWithType> interoperability capabilities of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], you can use <xref:System.Xml.Linq.XNode.CreateReader%2A> to create an <xref:System.Xml.XmlReader>.</span></span> <span data-ttu-id="504ee-104">만들어진 <xref:System.Xml.XmlReader>에서 읽는 모듈은 XML 트리에서 노드를 읽고 적절하게 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="504ee-104">The module that reads from this <xref:System.Xml.XmlReader> reads the nodes from the XML tree and processes them accordingly.</span></span>  
+# <a name="serializing-to-an-xmlreader-invoking-xslt-c"></a><span data-ttu-id="b9384-102">XmlReader로 serialize(XSLT 호출)(C#)</span><span class="sxs-lookup"><span data-stu-id="b9384-102">Serializing to an XmlReader (Invoking XSLT) (C#)</span></span>
+<span data-ttu-id="b9384-103"><xref:System.Xml?displayProperty=nameWithType>의 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 상호 운용성 기능을 사용할 때 <xref:System.Xml.Linq.XNode.CreateReader%2A>를 사용하여 <xref:System.Xml.XmlReader>를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b9384-103">When you use the <xref:System.Xml?displayProperty=nameWithType> interoperability capabilities of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], you can use <xref:System.Xml.Linq.XNode.CreateReader%2A> to create an <xref:System.Xml.XmlReader>.</span></span> <span data-ttu-id="b9384-104">만들어진 <xref:System.Xml.XmlReader>에서 읽는 모듈은 XML 트리에서 노드를 읽고 적절하게 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="b9384-104">The module that reads from this <xref:System.Xml.XmlReader> reads the nodes from the XML tree and processes them accordingly.</span></span>  
   
-## <a name="invoking-an-xslt-transformation"></a><span data-ttu-id="504ee-105">XSLT 변환 호출</span><span class="sxs-lookup"><span data-stu-id="504ee-105">Invoking an XSLT Transformation</span></span>  
- <span data-ttu-id="504ee-106">이 메서드를 사용할 수 있는 한 가지 경우는 XSLT 변환을 호출할 때입니다.</span><span class="sxs-lookup"><span data-stu-id="504ee-106">One possible use for this method is when invoking an XSLT transformation.</span></span> <span data-ttu-id="504ee-107">XML 트리를 만들고 XML 트리에서 <xref:System.Xml.XmlReader>를 만든 다음 새 문서를 만들고 새 문서에 쓸 <xref:System.Xml.XmlWriter>를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="504ee-107">You can create an XML tree, create an <xref:System.Xml.XmlReader> from the XML tree, create a new document, and then create an <xref:System.Xml.XmlWriter> to write into the new document.</span></span> <span data-ttu-id="504ee-108">그런 다음 XSLT 변형을 호출하여 <xref:System.Xml.XmlReader> 및 <xref:System.Xml.XmlWriter>를 전달할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="504ee-108">Then, you can invoke the XSLT transformation, passing in <xref:System.Xml.XmlReader> and <xref:System.Xml.XmlWriter>.</span></span> <span data-ttu-id="504ee-109">변환이 성공적으로 완료된 후 새 XML 트리가 변환의 결과로 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="504ee-109">After the transformation successfully completes, the new XML tree is populated with the results of the transformation.</span></span>  
+## <a name="invoking-an-xslt-transformation"></a><span data-ttu-id="b9384-105">XSLT 변환 호출</span><span class="sxs-lookup"><span data-stu-id="b9384-105">Invoking an XSLT Transformation</span></span>  
+ <span data-ttu-id="b9384-106">이 메서드를 사용할 수 있는 한 가지 경우는 XSLT 변환을 호출할 때입니다.</span><span class="sxs-lookup"><span data-stu-id="b9384-106">One possible use for this method is when invoking an XSLT transformation.</span></span> <span data-ttu-id="b9384-107">XML 트리를 만들고 XML 트리에서 <xref:System.Xml.XmlReader>를 만든 다음 새 문서를 만들고 새 문서에 쓸 <xref:System.Xml.XmlWriter>를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b9384-107">You can create an XML tree, create an <xref:System.Xml.XmlReader> from the XML tree, create a new document, and then create an <xref:System.Xml.XmlWriter> to write into the new document.</span></span> <span data-ttu-id="b9384-108">그런 다음 XSLT 변형을 호출하여 <xref:System.Xml.XmlReader> 및 <xref:System.Xml.XmlWriter>를 전달할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b9384-108">Then, you can invoke the XSLT transformation, passing in <xref:System.Xml.XmlReader> and <xref:System.Xml.XmlWriter>.</span></span> <span data-ttu-id="b9384-109">변환이 성공적으로 완료된 후 새 XML 트리가 변환의 결과로 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="b9384-109">After the transformation successfully completes, the new XML tree is populated with the results of the transformation.</span></span>  
   
 ```csharp  
 string xslMarkup = @"<?xml version='1.0'?>  
@@ -50,7 +50,7 @@ using (XmlWriter writer = newTree.CreateWriter()) {
 Console.WriteLine(newTree);  
 ```  
   
- <span data-ttu-id="504ee-110">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="504ee-110">This example produces the following output:</span></span>  
+ <span data-ttu-id="b9384-110">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="b9384-110">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -59,6 +59,6 @@ Console.WriteLine(newTree);
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="504ee-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="504ee-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b9384-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b9384-111">See also</span></span>
 
-- [<span data-ttu-id="504ee-112">XML 트리 serialize(C#)</span><span class="sxs-lookup"><span data-stu-id="504ee-112">Serializing XML Trees (C#)</span></span>](serializing-to-files-textwriters-and-xmlwriters.md)
+- [<span data-ttu-id="b9384-112">XML 트리 serialize(C#)</span><span class="sxs-lookup"><span data-stu-id="b9384-112">Serializing XML Trees (C#)</span></span>](serializing-to-files-textwriters-and-xmlwriters.md)

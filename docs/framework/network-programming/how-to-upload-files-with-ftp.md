@@ -7,17 +7,17 @@ dev_langs:
 - vb
 ms.assetid: e40f17c5-dd12-4c62-9dbf-00ab491382dc
 ms.openlocfilehash: 670bbc65078e6530cffbcfa7d324c36238014ffb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "65632815"
 ---
-# <a name="how-to-upload-files-with-ftp"></a><span data-ttu-id="4e5fb-103">방법: FTP를 사용하여 파일 업로드</span><span class="sxs-lookup"><span data-stu-id="4e5fb-103">How to: Upload files with FTP</span></span>
+# <a name="how-to-upload-files-with-ftp"></a><span data-ttu-id="a7cbc-103">방법: FTP를 사용하여 파일 업로드</span><span class="sxs-lookup"><span data-stu-id="a7cbc-103">How to: Upload files with FTP</span></span>
 
-<span data-ttu-id="4e5fb-104">이 샘플은 파일을 FTP 서버에 업로드하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4e5fb-104">This sample shows how to upload a file to an FTP server.</span></span>
+<span data-ttu-id="a7cbc-104">이 샘플은 파일을 FTP 서버에 업로드하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a7cbc-104">This sample shows how to upload a file to an FTP server.</span></span>
 
-## <a name="example"></a><span data-ttu-id="4e5fb-105">예제</span><span class="sxs-lookup"><span data-stu-id="4e5fb-105">Example</span></span>
+## <a name="example"></a><span data-ttu-id="a7cbc-105">예제</span><span class="sxs-lookup"><span data-stu-id="a7cbc-105">Example</span></span>
 
 ```csharp
 using System;

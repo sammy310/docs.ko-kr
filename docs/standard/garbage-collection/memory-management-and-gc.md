@@ -8,21 +8,21 @@ helpviewer_keywords:
 - garbage collection [.NET Framework profiling]
 ms.assetid: fd0462f7-57ad-4858-bf62-958378873602
 ms.openlocfilehash: e4b8d7fc0882e16643a7b46aafe3e00c70ca67ca
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140287"
 ---
-# <a name="memory-management-and-garbage-collection-in-net"></a><span data-ttu-id="ae687-102">.NET에서 메모리 관리 및 가비지 수집</span><span class="sxs-lookup"><span data-stu-id="ae687-102">Memory Management and Garbage Collection in .NET</span></span>
-<span data-ttu-id="ae687-103">설명서의 이 섹션에서는 .NET에서의 메모리 관리에 대한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="ae687-103">This section of the documentation provides information about managing memory in .NET.</span></span>  
+# <a name="memory-management-and-garbage-collection-in-net"></a><span data-ttu-id="01aa9-102">.NET에서 메모리 관리 및 가비지 수집</span><span class="sxs-lookup"><span data-stu-id="01aa9-102">Memory Management and Garbage Collection in .NET</span></span>
+<span data-ttu-id="01aa9-103">설명서의 이 섹션에서는 .NET에서의 메모리 관리에 대한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="01aa9-103">This section of the documentation provides information about managing memory in .NET.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ae687-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="ae687-104">In This Section</span></span>  
- [<span data-ttu-id="ae687-105">관리되지 않는 리소스 정리</span><span class="sxs-lookup"><span data-stu-id="ae687-105">Cleaning Up Unmanaged Resources</span></span>](../../../docs/standard/garbage-collection/unmanaged.md)  
- <span data-ttu-id="ae687-106">관리되지 않는 리소스를 제대로 관리 및 정리하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="ae687-106">Describes how to properly manage and clean up unmanaged resources..</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="01aa9-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="01aa9-104">In This Section</span></span>  
+ [<span data-ttu-id="01aa9-105">관리되지 않는 리소스 정리</span><span class="sxs-lookup"><span data-stu-id="01aa9-105">Cleaning Up Unmanaged Resources</span></span>](../../../docs/standard/garbage-collection/unmanaged.md)  
+ <span data-ttu-id="01aa9-106">관리되지 않는 리소스를 제대로 관리 및 정리하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="01aa9-106">Describes how to properly manage and clean up unmanaged resources..</span></span>  
   
- [<span data-ttu-id="ae687-107">가비지 수집</span><span class="sxs-lookup"><span data-stu-id="ae687-107">Garbage Collection</span></span>](../../../docs/standard/garbage-collection/index.md)  
- <span data-ttu-id="ae687-108">.NET 가비지 수집기에 대한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="ae687-108">Provides information about the .NET garbage collector.</span></span>  
+ [<span data-ttu-id="01aa9-107">가비지 수집</span><span class="sxs-lookup"><span data-stu-id="01aa9-107">Garbage Collection</span></span>](../../../docs/standard/garbage-collection/index.md)  
+ <span data-ttu-id="01aa9-108">.NET 가비지 수집기에 대한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="01aa9-108">Provides information about the .NET garbage collector.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="ae687-109">관련 단원</span><span class="sxs-lookup"><span data-stu-id="ae687-109">Related Sections</span></span>  
- [<span data-ttu-id="ae687-110">개발 가이드</span><span class="sxs-lookup"><span data-stu-id="ae687-110">Development Guide</span></span>](../../../docs/framework/development-guide.md)
+## <a name="related-sections"></a><span data-ttu-id="01aa9-109">관련 단원</span><span class="sxs-lookup"><span data-stu-id="01aa9-109">Related Sections</span></span>  
+ [<span data-ttu-id="01aa9-110">개발 가이드</span><span class="sxs-lookup"><span data-stu-id="01aa9-110">Development Guide</span></span>](../../../docs/framework/development-guide.md)

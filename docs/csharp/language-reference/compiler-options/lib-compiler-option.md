@@ -9,65 +9,65 @@ helpviewer_keywords:
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
 ms.openlocfilehash: 0c230147be055170ca015f27bd42bb096399405d
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69606827"
 ---
-# <a name="-lib-c-compiler-options"></a><span data-ttu-id="01450-102">-lib(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="01450-102">-lib (C# Compiler Options)</span></span>
-<span data-ttu-id="01450-103">**-lib** 옵션은 [-reference(C# 컴파일러 옵션)](./reference-compiler-option.md) 옵션을 통해 참조되는 어셈블리의 위치를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="01450-103">The **-lib** option specifies the location of assemblies referenced by means of the [-reference (C# Compiler Options)](./reference-compiler-option.md) option.</span></span>  
+# <a name="-lib-c-compiler-options"></a><span data-ttu-id="d48a4-102">-lib(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="d48a4-102">-lib (C# Compiler Options)</span></span>
+<span data-ttu-id="d48a4-103">**-lib** 옵션은 [-reference(C# 컴파일러 옵션)](./reference-compiler-option.md) 옵션을 통해 참조되는 어셈블리의 위치를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="d48a4-103">The **-lib** option specifies the location of assemblies referenced by means of the [-reference (C# Compiler Options)](./reference-compiler-option.md) option.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="01450-104">구문</span><span class="sxs-lookup"><span data-stu-id="01450-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d48a4-104">구문</span><span class="sxs-lookup"><span data-stu-id="d48a4-104">Syntax</span></span>  
   
 ```console  
 -lib:dir1[,dir2]  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="01450-105">인수</span><span class="sxs-lookup"><span data-stu-id="01450-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="d48a4-105">인수</span><span class="sxs-lookup"><span data-stu-id="d48a4-105">Arguments</span></span>  
  `dir1`  
- <span data-ttu-id="01450-106">참조된 어셈블리를 현재 작업 디렉터리(컴파일러를 호출하는 디렉터리) 또는 공용 언어 런타임의 시스템 디렉터리에서 찾을 수 없는 경우 컴파일러에서 확인할 디렉터리입니다.</span><span class="sxs-lookup"><span data-stu-id="01450-106">A directory for the compiler to look in if a referenced assembly is not found in the current working directory (the directory from which you are invoking the compiler) or in the common language runtime's system directory.</span></span>  
+ <span data-ttu-id="d48a4-106">참조된 어셈블리를 현재 작업 디렉터리(컴파일러를 호출하는 디렉터리) 또는 공용 언어 런타임의 시스템 디렉터리에서 찾을 수 없는 경우 컴파일러에서 확인할 디렉터리입니다.</span><span class="sxs-lookup"><span data-stu-id="d48a4-106">A directory for the compiler to look in if a referenced assembly is not found in the current working directory (the directory from which you are invoking the compiler) or in the common language runtime's system directory.</span></span>  
   
  `dir2`  
- <span data-ttu-id="01450-107">어셈블리 참조를 검색할 하나 이상의 추가 디렉터리입니다.</span><span class="sxs-lookup"><span data-stu-id="01450-107">One or more additional directories to search in for assembly references.</span></span> <span data-ttu-id="01450-108">이름 사이에 공백 없이 추가 디렉터리 이름을 쉼표로 구분합니다.</span><span class="sxs-lookup"><span data-stu-id="01450-108">Separate additional directory names with a comma, and without white space between them.</span></span>  
+ <span data-ttu-id="d48a4-107">어셈블리 참조를 검색할 하나 이상의 추가 디렉터리입니다.</span><span class="sxs-lookup"><span data-stu-id="d48a4-107">One or more additional directories to search in for assembly references.</span></span> <span data-ttu-id="d48a4-108">이름 사이에 공백 없이 추가 디렉터리 이름을 쉼표로 구분합니다.</span><span class="sxs-lookup"><span data-stu-id="d48a4-108">Separate additional directory names with a comma, and without white space between them.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="01450-109">설명</span><span class="sxs-lookup"><span data-stu-id="01450-109">Remarks</span></span>  
- <span data-ttu-id="01450-110">컴파일러는 정규화되지 않은 어셈블리 참조를 다음 순서대로 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="01450-110">The compiler searches for assembly references that are not fully qualified in the following order:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d48a4-109">설명</span><span class="sxs-lookup"><span data-stu-id="d48a4-109">Remarks</span></span>  
+ <span data-ttu-id="d48a4-110">컴파일러는 정규화되지 않은 어셈블리 참조를 다음 순서대로 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="d48a4-110">The compiler searches for assembly references that are not fully qualified in the following order:</span></span>  
   
-1. <span data-ttu-id="01450-111">현재 작업 디렉터리입니다.</span><span class="sxs-lookup"><span data-stu-id="01450-111">Current working directory.</span></span> <span data-ttu-id="01450-112">컴파일러가 호출되는 디렉터리입니다.</span><span class="sxs-lookup"><span data-stu-id="01450-112">This is the directory from which the compiler is invoked.</span></span>  
+1. <span data-ttu-id="d48a4-111">현재 작업 디렉터리입니다.</span><span class="sxs-lookup"><span data-stu-id="d48a4-111">Current working directory.</span></span> <span data-ttu-id="d48a4-112">컴파일러가 호출되는 디렉터리입니다.</span><span class="sxs-lookup"><span data-stu-id="d48a4-112">This is the directory from which the compiler is invoked.</span></span>  
   
-2. <span data-ttu-id="01450-113">공용 언어 런타임 시스템 디렉터리입니다.</span><span class="sxs-lookup"><span data-stu-id="01450-113">The common language runtime system directory.</span></span>  
+2. <span data-ttu-id="d48a4-113">공용 언어 런타임 시스템 디렉터리입니다.</span><span class="sxs-lookup"><span data-stu-id="d48a4-113">The common language runtime system directory.</span></span>  
   
-3. <span data-ttu-id="01450-114">**-lib**로 지정된 디렉터리입니다.</span><span class="sxs-lookup"><span data-stu-id="01450-114">Directories specified by **-lib**.</span></span>  
+3. <span data-ttu-id="d48a4-114">**-lib**로 지정된 디렉터리입니다.</span><span class="sxs-lookup"><span data-stu-id="d48a4-114">Directories specified by **-lib**.</span></span>  
   
-4. <span data-ttu-id="01450-115">LIB 환경 변수로 지정된 디렉터리입니다.</span><span class="sxs-lookup"><span data-stu-id="01450-115">Directories specified by the LIB environment variable.</span></span>  
+4. <span data-ttu-id="d48a4-115">LIB 환경 변수로 지정된 디렉터리입니다.</span><span class="sxs-lookup"><span data-stu-id="d48a4-115">Directories specified by the LIB environment variable.</span></span>  
   
- <span data-ttu-id="01450-116">어셈블리 참조를 지정하려면 **-reference**를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="01450-116">Use **-reference** to specify an assembly reference.</span></span>  
+ <span data-ttu-id="d48a4-116">어셈블리 참조를 지정하려면 **-reference**를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="d48a4-116">Use **-reference** to specify an assembly reference.</span></span>  
   
- <span data-ttu-id="01450-117">**-lib**는 가감되므로 두 번 이상 지정하면 이전 값에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="01450-117">**-lib** is additive; specifying it more than once appends to any prior values.</span></span>  
+ <span data-ttu-id="d48a4-117">**-lib**는 가감되므로 두 번 이상 지정하면 이전 값에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="d48a4-117">**-lib** is additive; specifying it more than once appends to any prior values.</span></span>  
   
- <span data-ttu-id="01450-118">**-lib**를 사용하는 대신 필요한 모든 어셈블리를 작업 디렉터리에 복사할 수도 있습니다. 이렇게 하면 단순히 어셈블리 이름을 **-reference**에 전달할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="01450-118">An alternative to using **-lib** is to copy into the working directory any required assemblies; this will allow you to simply pass the assembly name to **-reference**.</span></span> <span data-ttu-id="01450-119">그런 다음 작업 디렉터리에서 어셈블리를 삭제할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="01450-119">You can then delete the assemblies from the working directory.</span></span> <span data-ttu-id="01450-120">종속 어셈블리의 경로는 어셈블리 매니페스트에 지정되지 않으므로 애플리케이션이 대상 컴퓨터에서 시작될 수 있으며, 전역 어셈블리 캐시에서 어셈블리를 찾아 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="01450-120">Since the path to the dependent assembly is not specified in the assembly manifest, the application can be started on the target computer and will find and use the assembly in the global assembly cache.</span></span>  
+ <span data-ttu-id="d48a4-118">**-lib**를 사용하는 대신 필요한 모든 어셈블리를 작업 디렉터리에 복사할 수도 있습니다. 이렇게 하면 단순히 어셈블리 이름을 **-reference**에 전달할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d48a4-118">An alternative to using **-lib** is to copy into the working directory any required assemblies; this will allow you to simply pass the assembly name to **-reference**.</span></span> <span data-ttu-id="d48a4-119">그런 다음 작업 디렉터리에서 어셈블리를 삭제할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d48a4-119">You can then delete the assemblies from the working directory.</span></span> <span data-ttu-id="d48a4-120">종속 어셈블리의 경로는 어셈블리 매니페스트에 지정되지 않으므로 애플리케이션이 대상 컴퓨터에서 시작될 수 있으며, 전역 어셈블리 캐시에서 어셈블리를 찾아 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="d48a4-120">Since the path to the dependent assembly is not specified in the assembly manifest, the application can be started on the target computer and will find and use the assembly in the global assembly cache.</span></span>  
   
- <span data-ttu-id="01450-121">컴파일러가 어셈블리를 참조할 수 있다고 해서 공용 언어 런타임이 런타임에 어셈블리를 찾아 로드할 수 있다는 의미는 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="01450-121">Because the compiler can reference the assembly does not imply the common language runtime will be able to find and load the assembly at runtime.</span></span> <span data-ttu-id="01450-122">런타임에서 참조된 어셈블리를 검색하는 방법에 대한 자세한 내용은 [런타임에서 어셈블리를 찾는 방법](../../../framework/deployment/how-the-runtime-locates-assemblies.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="01450-122">See [How the Runtime Locates Assemblies](../../../framework/deployment/how-the-runtime-locates-assemblies.md) for details on how the runtime searches for referenced assemblies.</span></span>  
+ <span data-ttu-id="d48a4-121">컴파일러가 어셈블리를 참조할 수 있다고 해서 공용 언어 런타임이 런타임에 어셈블리를 찾아 로드할 수 있다는 의미는 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="d48a4-121">Because the compiler can reference the assembly does not imply the common language runtime will be able to find and load the assembly at runtime.</span></span> <span data-ttu-id="d48a4-122">런타임에서 참조된 어셈블리를 검색하는 방법에 대한 자세한 내용은 [런타임에서 어셈블리를 찾는 방법](../../../framework/deployment/how-the-runtime-locates-assemblies.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d48a4-122">See [How the Runtime Locates Assemblies](../../../framework/deployment/how-the-runtime-locates-assemblies.md) for details on how the runtime searches for referenced assemblies.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="01450-123">Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면</span><span class="sxs-lookup"><span data-stu-id="01450-123">To set this compiler option in the Visual Studio development environment</span></span>  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="d48a4-123">Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면</span><span class="sxs-lookup"><span data-stu-id="d48a4-123">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1. <span data-ttu-id="01450-124">프로젝트의 **속성 페이지** 대화 상자를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="01450-124">Open the project's **Property Pages** dialog box.</span></span>  
+1. <span data-ttu-id="d48a4-124">프로젝트의 **속성 페이지** 대화 상자를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="d48a4-124">Open the project's **Property Pages** dialog box.</span></span>  
   
-2. <span data-ttu-id="01450-125">**참조 경로** 속성 페이지를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="01450-125">Click the **References Path** property page.</span></span>  
+2. <span data-ttu-id="d48a4-125">**참조 경로** 속성 페이지를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="d48a4-125">Click the **References Path** property page.</span></span>  
   
-3. <span data-ttu-id="01450-126">목록 상자 내용을 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="01450-126">Modify the contents of the list box.</span></span>  
+3. <span data-ttu-id="d48a4-126">목록 상자 내용을 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="d48a4-126">Modify the contents of the list box.</span></span>  
   
- <span data-ttu-id="01450-127">이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="01450-127">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>.</span></span>  
+ <span data-ttu-id="d48a4-127">이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d48a4-127">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="01450-128">예</span><span class="sxs-lookup"><span data-stu-id="01450-128">Example</span></span>  
- <span data-ttu-id="01450-129">t2.cs를 컴파일하여 .exe 파일을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="01450-129">Compile t2.cs to create an .exe file.</span></span> <span data-ttu-id="01450-130">컴파일러는 작업 디렉터리 및 C 드라이브의 루트 디렉터리에서 어셈블리 참조를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="01450-130">The compiler will look in the working directory and in the root directory of the C drive for assembly references.</span></span>  
+## <a name="example"></a><span data-ttu-id="d48a4-128">예제</span><span class="sxs-lookup"><span data-stu-id="d48a4-128">Example</span></span>  
+ <span data-ttu-id="d48a4-129">t2.cs를 컴파일하여 .exe 파일을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="d48a4-129">Compile t2.cs to create an .exe file.</span></span> <span data-ttu-id="d48a4-130">컴파일러는 작업 디렉터리 및 C 드라이브의 루트 디렉터리에서 어셈블리 참조를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="d48a4-130">The compiler will look in the working directory and in the root directory of the C drive for assembly references.</span></span>  
   
 ```console  
 csc -lib:c:\ -reference:t2.dll t2.cs  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="01450-131">참고 항목</span><span class="sxs-lookup"><span data-stu-id="01450-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d48a4-131">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d48a4-131">See also</span></span>
 
-- [<span data-ttu-id="01450-132">C# 컴파일러 옵션</span><span class="sxs-lookup"><span data-stu-id="01450-132">C# Compiler Options</span></span>](./index.md)
-- [<span data-ttu-id="01450-133">프로젝트 및 솔루션 속성 관리</span><span class="sxs-lookup"><span data-stu-id="01450-133">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+- [<span data-ttu-id="d48a4-132">C# 컴파일러 옵션</span><span class="sxs-lookup"><span data-stu-id="d48a4-132">C# Compiler Options</span></span>](./index.md)
+- [<span data-ttu-id="d48a4-133">프로젝트 및 솔루션 속성 관리</span><span class="sxs-lookup"><span data-stu-id="d48a4-133">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
