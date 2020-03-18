@@ -6,10 +6,10 @@ ms.date: 10/04/2018
 dev_langs:
 - fsharp
 ms.openlocfilehash: 3347e5b90c31589e9a0f99ac0d9298927a717f56
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75715442"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>dotnet test 및 NUnit을 사용하여 .NET Core에서 F# 라이브러리 유닛 테스트
@@ -18,7 +18,7 @@ ms.locfileid: "75715442"
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 - [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 이상 버전.
 - 선택하는 텍스트 편집기 또는 코드 편집기입니다.
@@ -151,7 +151,7 @@ member this.TestEvenSequence() =
     Assert.That(actual, Is.EqualTo(expected))
 ```
 
-`expected` 시퀀스가 목록으로 변환되었습니다. NUnit 프레임워크는 많은 표준 .NET 형식을 사용합니다. 해당 종속성으로 인해 공용 인터페이스 및 예상 결과에서 <xref:System.Collections.IEnumerable> 대신 <xref:System.Collections.ICollection>을 지원합니다.
+`expected` 시퀀스가 목록으로 변환되었습니다. NUnit 프레임워크는 많은 표준 .NET 형식을 사용합니다. 해당 종속성으로 인해 공용 인터페이스 및 예상 결과에서 <xref:System.Collections.ICollection> 대신 <xref:System.Collections.IEnumerable>을 지원합니다.
 
 테스트를 실행하면 테스트가 실패합니다. 구현은 아직 만들지 않았습니다. MathService 프로젝트의 *Library.fs* 클래스에서 작동하는 가장 간단한 코드를 작성하여 이 테스트를 통과시킵니다.
 
@@ -210,7 +210,7 @@ let squaresOfOdds xs =
 
 작은 라이브러리 및 이 라이브러리에 대한 단위 테스트 집합을 작성했습니다. 새 패키지 및 테스트 추가가 정상 워크플로에 포함되도록 솔루션을 구조화했습니다. 애플리케이션의 목표를 해결하는 데 대부분의 시간과 노력을 들였습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [dotnet add reference](../tools/dotnet-add-reference.md)
 - [dotnet test](../tools/dotnet-test.md)

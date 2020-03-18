@@ -10,12 +10,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: 5289dbe3aff0a9e1f1024a293ff469df44d34a3b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3d4315a09869b77b4ae8cbb43646f9a96280b678
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713029"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173473"
 ---
 # <a name="try-catch-c-reference"></a>try-catch(C# 참조)
 
@@ -62,7 +62,7 @@ catch (FileNotFoundException e)
 }
 catch (IOException e)
 {
-    // Extract some information from this exception, and then 
+    // Extract some information from this exception, and then
     // throw it to the parent method.
     if (e.Source != null)
         Console.WriteLine("IOException source: {0}", e.Source);
@@ -73,7 +73,7 @@ catch (IOException e)
 하나의 예외를 catch하고 다른 예외를 throw할 수 있습니다. 이 작업을 할 때 다음 예제와 같이 내부 예외로 catch한 예외를 지정합니다.
 
 ```csharp
-catch (InvalidCastException e) 
+catch (InvalidCastException e)
 {
     // Perform some action here, and then throw a new exception.
     throw new YourCustomException("Put your error message here.", e);
@@ -97,22 +97,22 @@ catch (InvalidCastException e)
 ```
 
 > [!NOTE]
-> 예외 필터를 사용하여 유사한 결과를 더 깔끔하게 얻을 수도 있습니다(물론 이 문서의 앞 부분에서 설명한 것처럼 스택을 수정하지 않음). 다음 예제에서는 이전 예제와 같은 호출자에 대한 유사한 동작을 보여 줍니다. `e.Data`가 `null`일 때 함수는 호출자에게 `InvalidCastException`을 다시 throw합니다.
-> 
+> 예외 필터를 사용하여 유사한 결과를 더 깔끔하게 얻을 수도 있습니다(물론 이 문서의 앞 부분에서 설명한 것처럼 스택을 수정하지 않음). 다음 예제에서는 이전 예제와 같은 호출자에 대한 유사한 동작을 보여 줍니다. `InvalidCastException`가 `e.Data`일 때 함수는 호출자에게 `null`을 다시 throw합니다.
+>
 > ```csharp
-> catch (InvalidCastException e) when (e.Data != null) 
+> catch (InvalidCastException e) when (e.Data != null)
 > {
 >     // Take some action.
 > }
-> ``` 
+> ```
 
-`try` 블록 내부에서 선언된 변수만 초기화합니다. 그렇지 않으면 블록의 예외가 완료되기 전에 다른 예외가 발생할 수 있습니다. 예를 들어 다음 코드 예제에서 `n` 변수는 `try` 블록 내부에서 초기화됩니다. `Write(n)` 문의 `try` 블록 외부에서 이 변수를 사용하려고 하면 컴파일러 오류가 발생합니다.
+`try` 블록 내부에서 선언된 변수만 초기화합니다. 그렇지 않으면 블록의 예외가 완료되기 전에 다른 예외가 발생할 수 있습니다. 예를 들어 다음 코드 예제에서 `n` 변수는 `try` 블록 내부에서 초기화됩니다. `try` 문의 `Write(n)` 블록 외부에서 이 변수를 사용하려고 하면 컴파일러 오류가 발생합니다.
 
 ```csharp
-static void Main() 
+static void Main()
 {
     int n;
-    try 
+    try
     {
         // Do not initialize this variable here.
         n = 123;
@@ -157,7 +157,7 @@ catch에 대한 자세한 내용은 [try-catch-finally](try-catch-finally.md)를
 
 ## <a name="async-method-example"></a>비동기 메서드 예제
 
-다음 예제에서는 비동기 메서드에 대한 예외 처리를 보여 줍니다. 비동기 작업에서 throw하는 예외를 catch하려면 `try` 블록에 `await` 식을 배치하고 `catch` 블록에서 예외를 catch합니다.
+다음 예제에서는 비동기 메서드에 대한 예외 처리를 보여 줍니다. 비동기 작업에서 throw하는 예외를 catch하려면 `await` 블록에 `try` 식을 배치하고 `catch` 블록에서 예외를 catch합니다.
 
 예제에서 `throw new Exception` 줄의 주석 처리를 제거하여 예외 처리를 보여 줍니다. 작업의 `IsFaulted` 속성이 `True`로 설정되고, 작업의 `Exception.InnerException` 속성이 예외로 설정되고, 예외가 `catch` 블록에서 catch됩니다.
 
@@ -169,15 +169,15 @@ catch에 대한 자세한 내용은 [try-catch-finally](try-catch-finally.md)를
 
 다음 예제에서는 여러 작업에서 여러 예외가 발생할 수 있는 경우 예외 처리를 보여 줍니다. `try` 블록은 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>에 대한 호출에서 반환된 작업을 기다립니다. WhenAll이 적용된 작업 세 개가 완료되면 작업이 완료됩니다.
 
-세 작업에서 각각 예외가 발생합니다. `catch` 블록은 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>에서 반환된 작업의 `Exception.InnerExceptions` 속성에 있는 예외를 반복합니다.
+세 작업에서 각각 예외가 발생합니다. `catch` 블록은 `Exception.InnerExceptions`에서 반환된 작업의 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 속성에 있는 예외를 반복합니다.
 
 [!code-csharp[csAsyncExceptions#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncexceptions/cs/class1.cs#4)]
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [try 문](~/_csharplang/spec/statements.md#the-try-statement) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/statements.md#the-try-statement)의 [try 문](~/_csharplang/spec/introduction.md) 섹션을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

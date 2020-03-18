@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
-ms.openlocfilehash: 8e104de891d72e709ae20055737540516109da68
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 01b686702250c68131e8a46b410ce05e67e7c950
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048421"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180840"
 ---
 # <a name="how-to-assign-user-information-to-group-connections"></a>방법: 그룹 연결에 사용자 정보 할당
 
@@ -45,7 +45,7 @@ ms.locfileid: "71048421"
 3. 웹 요청에 대한 자격 증명 및 연결 그룹 이름을 설정하고 **GetResponse**를 호출하여 **WebResponse** 개체를 검색합니다.  
   
     ```csharp  
-    myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);   
+    myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);
     myWebRequest.ConnectionGroupName = secureGroupName;  
   
     WebResponse myWebResponse=myWebRequest.GetResponse();  
@@ -68,7 +68,7 @@ ms.locfileid: "71048421"
     MyWebResponse.Close()  
     ```  
   
- 예  
+ 예제  
   
 ```csharp  
 // Create a connection group name.  
@@ -79,7 +79,7 @@ String secureGroupName = Encoding.Default.GetString(updHash);
 // Create a request for a specific URL.  
 WebRequest myWebRequest=WebRequest.Create("http://www.contoso.com");  
   
-myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);   
+myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);
 myWebRequest.ConnectionGroupName = secureGroupName;  
   
 WebResponse myWebResponse=myWebRequest.GetResponse();  

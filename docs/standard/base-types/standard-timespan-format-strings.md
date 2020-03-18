@@ -18,10 +18,10 @@ helpviewer_keywords:
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
 ms.openlocfilehash: ec06edc16829c6d4caf8c760922aac1471e365c2
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75346623"
 ---
 # <a name="standard-timespan-format-strings"></a>표준 TimeSpan 서식 문자열
@@ -124,4 +124,4 @@ ms.locfileid: "75346623"
 
 - [형식 서식 지정](../../../docs/standard/base-types/formatting-types.md)
 - [사용자 지정 TimeSpan 서식 문자열](../../../docs/standard/base-types/custom-timespan-format-strings.md)
-- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)
+- [.NET에서 문자열 구문 분석](../../../docs/standard/base-types/parsing-strings.md)

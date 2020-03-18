@@ -14,12 +14,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 72b02209d74b6b183af6c11d9bd037889ea08543
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 179b240bb06a319ff71009e14323d5c8f2740e5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347052"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187383"
 ---
 # <a name="how-to-view-assembly-contents"></a>방법: 어셈블리 콘텐츠 보기
 
@@ -33,7 +33,7 @@ ildasm Hello.exe
 
 어셈블리 매니페스트 정보를 보려면 MSIL 디스어셈블러 창에서 **매니페스트** 아이콘을 두 번 클릭합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제는 기본 "Hello World" 프로그램으로 시작합니다. 프로그램을 컴파일한 후 *Ildasm.exe*를 사용하여 *Hello.exe* 어셈블리를 디스어셈블하고 어셈블리 매니페스트를 봅니다.
 
@@ -118,10 +118,10 @@ End Class
 
 어셈블리 매니페스트에는 어셈블리의 내용에 따라 여러 다른 지시문이 포함될 수 있습니다. 어셈블리 매니페스트에 있는 지시문의 광범위한 목록은 ECMA 설명서, 특히 "파티션 II: 메타데이터 정의 및 의미 체계" "파티션 III: CIL 명령 집합"을 참조하세요.
 
-- [ECMA C# 및 공용 언어 인프라 표준](/dotnet/standard/components#applicable-standards)
+- [ECMA C# 및 공용 언어 인프라 표준](../components.md#applicable-standards)
 - [표준 ECMA-335 - CLI(공용 언어 인프라)](http://www.ecma-international.org/publications/standards/Ecma-335.htm)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [애플리케이션 도메인 및 어셈블리](../../framework/app-domains/application-domains.md#application-domains-and-assemblies)
 - [애플리케이션 도메인 및 어셈블리 방법 항목](../../framework/app-domains/application-domains-and-assemblies-how-to-topics.md)

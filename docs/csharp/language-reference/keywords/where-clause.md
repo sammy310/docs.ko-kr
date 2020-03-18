@@ -7,12 +7,12 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: 42932809d58c739afc165676c0b90c5a23f568de
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 33616e4eacb484b9c6eda3862cd86fdd1e6df165
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712821"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173486"
 ---
 # <a name="where-clause-c-reference"></a>where 절(C# 참조)
 
@@ -44,11 +44,11 @@ ms.locfileid: "75712821"
 
 컴파일 시간에 `where` 키워드는 <xref:System.Linq.Enumerable.Where%2A> 표준 쿼리 연산자 메서드에 대한 호출로 변환됩니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [쿼리 키워드(LINQ)](query-keywords.md)
 - [from 절](from-clause.md)
 - [select 절](select-clause.md)
 - [데이터 필터링](../../programming-guide/concepts/linq/filtering-data.md)
 - [C#의 LINQ](../../linq/index.md)
-- [C#에서 LINQ 시작](/dotnet/csharp/programming-guide/concepts/linq/)
+- [LINQ(Language-Integrated Query)](../../programming-guide/concepts/linq/index.md)

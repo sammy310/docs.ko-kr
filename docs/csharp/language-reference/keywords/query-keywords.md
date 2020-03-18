@@ -5,18 +5,18 @@ helpviewer_keywords:
 - query keywords [C#]
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
-ms.openlocfilehash: 3c08c2b6ecdaa4b875f118531e7e77f7164dd784
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 01134eda540c5141afbd11b2c89ff779da495a9a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713159"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173525"
 ---
 # <a name="query-keywords-c-reference"></a>쿼리 키워드(C# 참조)
 
 이 섹션에는 쿼리 식에 사용되는 상황별 키워드가 포함되어 있습니다.
 
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
 |절|설명|
 |------------|-----------------|
@@ -35,9 +35,8 @@ ms.locfileid: "75713159"
 |[ascending](ascending.md)|[orderby](orderby-clause.md) 절의 상황별 키워드입니다.|
 |[descending](descending.md)|[orderby](orderby-clause.md) 절의 상황별 키워드입니다.|
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 키워드](index.md)
 - [LINQ(Language-Integrated Query)](../../programming-guide/concepts/linq/index.md)
 - [C#의 LINQ](../../linq/index.md)
-- [C#에서 LINQ 시작](/dotnet/csharp/programming-guide/concepts/linq/)

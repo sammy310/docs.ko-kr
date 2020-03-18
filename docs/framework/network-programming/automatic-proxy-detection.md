@@ -14,12 +14,12 @@ helpviewer_keywords:
 - network
 - WPAD (Web Proxy Auto-Discovery)
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
-ms.openlocfilehash: 6a52a38473e339b892673e7c1a2f9e1f58dad359
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4c5bc9e0efb39032d388d141e8bccf3e520ebd45
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048938"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180889"
 ---
 # <a name="automatic-proxy-detection"></a>자동 프록시 검색
 자동 프록시 검색은 웹 프록시 서버가 시스템에 의해 식별되고 클라이언트 대신 요청을 보내는 데 사용되는 프로세스입니다. 이 기능을 WPAD(웹 프록시 자동 검색)라고도 합니다. 자동 프록시 검색을 사용하면 시스템이 요청에 사용할 수 있는 프록시 집합을 반환하는 프록시 구성 스크립트를 찾으려고 시도합니다. 프록시 구성 스크립트가 발견되면 <xref:System.Net.WebProxy> 인스턴스를 사용하는 요청에 대한 프록시 정보, 요청 스트림 또는 응답이 확보될 때 로컬 컴퓨터에서 스크립트가 다운로드, 컴파일 및 실행됩니다.  
@@ -62,7 +62,7 @@ Public Shared Sub DisableForMyRequest(ByVal resource As Uri)
     Dim request As WebRequest = WebRequest.Create(resource)  
     request.Proxy = Nothing  
     Dim response As WebResponse = request.GetResponse()  
-    End Sub   
+    End Sub
 ```  
   
  프록시가 없는 요청은 <xref:System.Net.WebRequest.DefaultWebProxy%2A> 속성에서 사용할 수 있는 애플리케이션 도메인의 기본 프록시를 사용합니다.  

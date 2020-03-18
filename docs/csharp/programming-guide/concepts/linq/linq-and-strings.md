@@ -3,15 +3,15 @@ title: LINQ 및 문자열(C#)
 ms.date: 07/20/2015
 ms.assetid: dbe2d657-b3f3-487e-b645-21fb2d71cd7b
 ms.openlocfilehash: b805bc7318b8c5fe70ab1c060d1058a6bbc4f177
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635537"
 ---
 # <a name="linq-and-strings-c"></a>LINQ 및 문자열(C#)
 
-LINQ를 사용하여 문자열 및 문자열 컬렉션을 쿼리하고 변환할 수 있습니다. 텍스트 파일의 반구조적 데이터에 특히 유용할 수 있습니다. LINQ 쿼리에 기존의 문자열 함수 및 정규식을 결합할 수 있습니다. 예를 들어 <xref:System.String.Split%2A?displayProperty=nameWithType> 또는 <xref:System.Text.RegularExpressions.Regex.Split%2A?displayProperty=nameWithType> 메서드를 사용하여 문자열 배열을 만든 다음 LINQ를 사용하여 쿼리하거나 수정할 수 있습니다. LINQ 쿼리의 `where` 절에 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 메서드를 사용할 수 있습니다. 또한 LINQ를 사용하여 정규식에서 반환된 <xref:System.Text.RegularExpressions.MatchCollection> 결과를 쿼리하거나 수정할 수 있습니다.
+LINQ를 사용하여 문자열 및 문자열 컬렉션을 쿼리하고 변환할 수 있습니다. 텍스트 파일의 반구조적 데이터에 특히 유용할 수 있습니다. LINQ 쿼리에 기존의 문자열 함수 및 정규식을 결합할 수 있습니다. 예를 들어 <xref:System.String.Split%2A?displayProperty=nameWithType> 또는 <xref:System.Text.RegularExpressions.Regex.Split%2A?displayProperty=nameWithType> 메서드를 사용하여 문자열 배열을 만든 다음 LINQ를 사용하여 쿼리하거나 수정할 수 있습니다. LINQ 쿼리의 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 절에 `where` 메서드를 사용할 수 있습니다. 또한 LINQ를 사용하여 정규식에서 반환된 <xref:System.Text.RegularExpressions.MatchCollection> 결과를 쿼리하거나 수정할 수 있습니다.
 
 이 섹션에 설명된 기법을 사용하여 반구조적 텍스트 데이터를 XML로 변환할 수도 있습니다. 자세한 내용은 [CSV 파일에서 XML을 생성하는 방법](how-to-generate-xml-from-csv-files.md)을 참조하세요.
 
@@ -72,7 +72,7 @@ LINQ를 사용하여 문자열 및 문자열 컬렉션을 쿼리하고 변환할
   
   .csv 파일의 텍스트 데이터에 대해 수학적 계산을 수행하는 방법을 보여 줍니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [LINQ(Language-Integrated Query)(C#)](index.md)
 - [CSV 파일에서 XML을 생성하는 방법](how-to-generate-xml-from-csv-files.md)

@@ -4,12 +4,12 @@ description: Apache Spark 작업자 및 사용자 정의 함수 이진 파일용
 ms.date: 01/21/2019
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: f9197ca3cf8066f0849ebbe70d7757c9035d02f6
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: f373ccee398149adcadeac91f02d9896214706b0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76748544"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187591"
 ---
 # <a name="deploy-net-for-apache-spark-worker-and-user-defined-function-binaries"></a>Apache Spark 작업자 및 사용자 정의 함수 이진 파일용 .NET 배포
 
@@ -19,19 +19,19 @@ ms.locfileid: "76748544"
 구성에는 Apache Spark 작업자 및 사용자 정의 함수 이진 파일용 .NET을 배포하기 위해 일반적인 환경 변수 및 매개 변수 설정이 표시됩니다.
 
 ### <a name="environment-variables"></a>환경 변수
-작업자를 배포하고 UDF를 작성하는 경우 다음과 같은 일반적으로 사용되는 몇 가지 환경 변수를 설정해야 할 수 있습니다. 
+작업자를 배포하고 UDF를 작성하는 경우 다음과 같은 일반적으로 사용되는 몇 가지 환경 변수를 설정해야 할 수 있습니다.
 
 | 환경 변수         | 설명
-| :--------------------------- | :---------- 
+| :--------------------------- | :----------
 | DOTNET_WORKER_DIR            | <code>Microsoft.Spark.Worker</code> 이진 파일이 생성된 경로입니다.</br>Spark 드라이버에서 사용되며 Spark 실행기에 전달됩니다. 이 변수가 설정되지 않은 경우 Spark 실행기는 <code>PATH</code> 환경 변수에 지정된 경로를 검색합니다.</br>_예: "C:\bin\Microsoft.Spark.Worker"_
 | DOTNET_ASSEMBLY_SEARCH_PATHS | <code>Microsoft.Spark.Worker</code>에서 어셈블리를 로드할 쉼표로 구분된 경로입니다.</br>경로가 "."으로 시작하면 작업 디렉터리가 앞에 배치됩니다. **Yarn 모드**인 경우 "."은 컨테이너의 작업 디렉터리를 나타냅니다.</br>_예: "C:\Users\\&lt;사용자 이름&gt;\\&lt;mysparkapp&gt;\bin\Debug\\&lt;dotnet 버전&gt;"_
 | DOTNET_WORKER_DEBUG          | <a href="https://github.com/dotnet/spark/blob/master/docs/developer-guide.md#debugging-user-defined-function-udf">UDF를 디버그</a>하려면 <code>spark-submit</code>를 실행하기 전에 이 환경 변수를 <code>1</code>로 설정합니다.
 
 ### <a name="parameter-options"></a>매개 변수 옵션
-Spark 애플리케이션이 [번들로 제공](https://spark.apache.org/docs/latest/submitting-applications.html#bundling-your-applications-dependencies)되면 `spark-submit`을 사용하여 시작할 수 있습니다. 다음 표에서는 일반적으로 사용되는 일부 옵션을 보여 줍니다. 
+Spark 애플리케이션이 [번들로 제공](https://spark.apache.org/docs/latest/submitting-applications.html#bundling-your-applications-dependencies)되면 `spark-submit`을 사용하여 시작할 수 있습니다. 다음 표에서는 일반적으로 사용되는 일부 옵션을 보여 줍니다.
 
 | 매개 변수 이름        | 설명
-| :---------------------| :---------- 
+| :---------------------| :----------
 | --class               | 애플리케이션의 진입점입니다.</br>_예: org.apache.spark.deploy.dotnet.DotnetRunner_
 | --master              | 클러스터의 <a href="https://spark.apache.org/docs/latest/submitting-applications.html#master-urls">마스터 URL</a>입니다.</br>_예: Yarn_
 | --deploy-mode         | 작업자 노드(<code>cluster</code>) 또는 외부 클라이언트(<code>client</code>)로 로컬 배포할지 여부입니다.</br>기본값: <code>client</code>

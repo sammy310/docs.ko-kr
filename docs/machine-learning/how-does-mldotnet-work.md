@@ -4,12 +4,12 @@ description: ML.NET은 온라인 또는 오프라인 시나리오에서 .NET 애
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: bc157b22201c66bceecf78aaa36b9c653fe6a131
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 169250adf81992ad0025e78eb9c8f151107bcf40
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794570"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79185866"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>ML.NET은 무엇이며 어떻게 작동하나요?
 
@@ -25,16 +25,16 @@ ML.NET을 사용하여 수행할 수 있는 예측 유형은 다음과 같습니
 
 |||
 |-|-|
-|분류/범주화|고객 피드백을 긍정과 부정 범주로 자동 구분|
+|분류/범주화|사용자 의견을 긍정 및 부정 범주로 자동으로 구분|
 |재발/연속 값 예측|크기 및 위치에 따라 주택 가격 예측|
 |변칙 검색|사기성 은행 거래 검색 |
-|권장 사항|이전 구매 내역에 기반하여 온라인 구매자가 구매하려는 제품 제안|
+|권장 사항|이전 구매에 따라 온라인 쇼핑객이 구매하려고 할 수 있는 제품 제안|
 |시계열/순차 데이터|날씨/제품 판매 예측|
 |이미지 분류|의료 이미지에서 병리학 분류|
 
 ## <a name="hello-mlnet-world"></a>Hello ML.NET World
 
-다음 코드 조각의 코드는 가장 단순한 ML.NET 애플리케이션을 보여줍니다. 이 예제에서는 집 크기 및 가격 데이터를 사용하여 주택 가격을 예측하도록 선형 회귀 모델을 구성합니다. 
+다음 코드 조각의 코드는 가장 단순한 ML.NET 애플리케이션을 보여줍니다. 이 예제에서는 집 크기 및 가격 데이터를 사용하여 주택 가격을 예측하도록 선형 회귀 모델을 구성합니다.
 
  ```csharp
     using System;

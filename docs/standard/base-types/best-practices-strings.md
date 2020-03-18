@@ -19,10 +19,10 @@ helpviewer_keywords:
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 ms.openlocfilehash: c88776ea9d8ba17d86767b704e8b0eaff5b6cb89
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711482"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>.NET에서 문자열 사용에 대한 모범 사례
@@ -199,7 +199,7 @@ LATIN SMALL LETTER A 문자 “a”(\u0061)는 COMBINING RING ABOVE 문자 “+ 
 
 다음 표에서는 의미 체계 문자열 컨텍스트에서 <xref:System.StringComparison> 열거형 멤버로의 매핑을 간략하게 설명합니다.
 
-|데이터|동작|해당 System.StringComparison<br /><br /> 값|
+|데이터|동작|해당 System.StringComparison<br /><br /> value|
 |----------|--------------|-----------------------------------------------------|
 |대/소문자 구분 내부 식별자.<br /><br /> XML 및 HTTP와 같은 표준의 대/소문자 구분 식별자.<br /><br /> 대/소문자 구분 보안 관련 설정.|바이트가 정확히 일치하는 비언어적 식별자.|<xref:System.StringComparison.Ordinal>|
 |대/소문자를 구분하지 않는 내부 식별자.<br /><br /> XML 및 HTTP와 같은 표준의 대/소문자를 구분하지 않는 식별자.<br /><br /> 파일 경로.<br /><br /> 레지스트리 키 및 값.<br /><br /> 환경 변수.<br /><br /> 리소스 식별자(예: 핸들 이름).<br /><br /> 대/소문자를 구분하지 않는 보안 관련 설정.|대/소문자가 불규칙한 비언어적 식별자, 특히 대부분 Windows 시스템 서비스에 저장된 데이터.|<xref:System.StringComparison.OrdinalIgnoreCase>|

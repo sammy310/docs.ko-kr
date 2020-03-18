@@ -6,10 +6,10 @@ helpviewer_keywords:
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
 ms.openlocfilehash: 09802431d0a5954b67687e9878f572541eeaac79
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705511"
 ---
 # <a name="members-c-programming-guide"></a>멤버(C# 프로그래밍 가이드)
@@ -31,7 +31,7 @@ ms.locfileid: "75705511"
 |[종료자](./destructors.md)|종료자는 C#에서 매우 드물게 사용됩니다. 메모리에서 개체를 제거할 때 런타임 실행 엔진이 호출하는 메서드입니다. 일반적으로 해제해야 하는 리소스가 적절하게 처리되도록 하는 데 사용됩니다.|  
 |[중첩 형식](./nested-types.md)|중첩 형식은 다른 형식 내에서 선언된 형식입니다. 중첩 형식은 대체로 개체를 포함하는 형식에서만 사용되는 개체를 설명하는 데 사용됩니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [클래스](./classes.md)

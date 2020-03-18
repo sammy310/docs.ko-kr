@@ -3,12 +3,12 @@ title: C#의 숫자 - C# 소개 자습서
 description: 숫자 형식, 해당 속성 및 메서드를 살펴보면서 C#을 학습합니다.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 7537bb597665461021946a792e342149f29c0e95
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7e9af4b3b859f74d7e92ff10b3964ddd59d2473b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75694662"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156547"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>C\#에서 정수 및 부동 소수점 수 조작
 
@@ -66,7 +66,7 @@ Console.WriteLine(c);
 > C# (또는 다른 프로그래밍 언어)를 살펴보면서 코드를 작성할 때 실수를 하게 될 것입니다. **컴파일러**는 그러한 오류를 찾아 사용자에게 보고합니다. 출력에 오류 메시지가 포함되어 있으면 예제 코드와 창의 코드를 자세히 살펴보고 수정 사항을 확인하세요.
 > 이 연습은 C# 코드의 구조를 학습하는 데 도움이 됩니다.
 
-첫 번째 단계를 완료했습니다. 다음 섹션을 시작하기 전에 현재 코드를 별도의 메서드로 이동합니다. 이렇게 하면 새 예제 작업을 쉽게 시작할 수 있습니다. `Main` 메서드의 이름을 `WorkingWithIntegers`로 바꾸고 `WorkingWithIntegers`를 호출하는 새 `Main` 메서드를 작성합니다. 작업을 마치면 코드가 다음과 같이 됩니다.
+첫 번째 단계를 완료했습니다. 다음 섹션을 시작하기 전에 현재 코드를 별도의 메서드로 이동합니다. 이렇게 하면 새 예제 작업을 쉽게 시작할 수 있습니다. `Main` 메서드의 이름을 `WorkingWithIntegers`로 바꾸고 `Main`를 호출하는 새 `WorkingWithIntegers` 메서드를 작성합니다. 작업을 마치면 코드가 다음과 같이 됩니다.
 
 ```csharp
 using System;
@@ -79,19 +79,19 @@ namespace NumbersInCSharp
         {
             int a = 18;
             int b = 6;
-            
+
             // addition
             int c = a + b;
             Console.WriteLine(c);
-            
+
             // subtraction
             c = a - b;
             Console.WriteLine(c);
-            
+
             // multiplication
             c = a * b;
             Console.WriteLine(c);
-            
+
             // division
             c = a / b;
             Console.WriteLine(c);
@@ -171,19 +171,19 @@ namespace NumbersInCSharp
         {
             int a = 18;
             int b = 6;
-            
+
             // addition
             int c = a + b;
             Console.WriteLine(c);
-            
+
             // subtraction
             c = a - b;
             Console.WriteLine(c);
-            
+
             // multiplication
             c = a * b;
             Console.WriteLine(c);
-            
+
             // division
             c = a / b;
             Console.WriteLine(c);
@@ -224,7 +224,7 @@ namespace NumbersInCSharp
 ## <a name="explore-integer-precision-and-limits"></a>정수 전체 자릿수 및 한도 살펴보기
 
 마지막 샘플에서는 정수 나누기가 결과를 자르는 것을 보여 줍니다.
-**modulo** 연산자(`%` 문자)를 사용하여 **나머지**를 얻을 수 있습니다. `Main` 메서드에 다음 코드를 사용해 봅니다.
+**modulo** 연산자(**문자)를 사용하여**나머지`%`를 얻을 수 있습니다. `Main` 메서드에 다음 코드를 사용해 봅니다.
 
 ```csharp
 int a = 7;

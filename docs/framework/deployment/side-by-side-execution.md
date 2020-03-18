@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - side-by-side execution
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
-ms.openlocfilehash: 5202e4c26220bc9ea08d6d941ee5a7821cbbdefd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e965702943149d3ed34be39bb2923ad52dcf90ca
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122233"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181653"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>.NET Framework의 Side-by-Side 실행
 
@@ -28,7 +28,7 @@ Side-by-side 실행은 동일한 컴퓨터에서 여러 버전의 애플리케�
 Side-by-Side 실행을 사용하면 애플리케이션이 바인딩하는 구성 요소 버전과 애플리케이션이 사용하는 런타임 버전을 보다 강력하게 제어할 수 있습니다.  
   
 ## <a name="benefits-of-side-by-side-execution"></a>Side-by-Side 실행의 장점  
- 
+
 Windows XP 및 .NET Framework 이전에는 애플리케이션이 동일한 코드의 호환되지 않는 여러 버전을 구분할 수 없었으므로 DLL 충돌이 발생했습니다. DLL에 포함된 형식 정보는 파일 이름에만 바인딩되었습니다. 애플리케이션은 DLL에 포함된 형식이 애플리케이션을 빌드할 때 사용된 형식과 같은지를 알 수 없었습니다. 따라서 새 버전의 구성 요소가 이전 버전을 덮어쓰고 애플리케이션을 중단시킬 수 있었습니다.  
   
 Side-by-Side 실행 및 .NET Framework는 DLL 충돌을 없애기 위한 다음과 같은 기능을 제공합니다.  
@@ -61,7 +61,7 @@ Side-by-Side 실행 및 .NET Framework는 DLL 충돌을 없애기 위한 다음�
   
 ### <a name="runtime-version-information-in-the-application-configuration-file"></a>애플리케이션 구성 파일의 런타임 버전 정보  
 
-PE 파일 헤더의 정보 외에도 런타임 버전 정보를 제공하는 애플리케이션 구성 파일을 사용하여 애플리케이션을 배포할 수 있습니다. 애플리케이션 구성 파일은 애플리케이션과 함께 제공되는, 애플리케이션 개발자가 만든 XML 기반 파일입니다. [\<startup&gt; 섹션](../configure-apps/file-schema/startup/startup-element.md)의 [\<requiredRuntime&gt; 요소](../configure-apps/file-schema/startup/requiredruntime-element.md)(이 파일에 있는 경우)는 애플리케이션이 지원하는 구성 요소 버전 및 런타임 버전을 지정합니다. 다양한 런타임 버전과 애플리케이션 간의 호환성을 테스트하는 데 이 파일을 사용할 수도 있습니다.  
+PE 파일 헤더의 정보 외에도 런타임 버전 정보를 제공하는 애플리케이션 구성 파일을 사용하여 애플리케이션을 배포할 수 있습니다. 애플리케이션 구성 파일은 애플리케이션과 함께 제공되는, 애플리케이션 개발자가 만든 XML 기반 파일입니다. [\<startup&gt; 섹션](../configure-apps/file-schema/startup/requiredruntime-element.md)의 [\<requiredRuntime&gt; 요소](../configure-apps/file-schema/startup/startup-element.md)(이 파일에 있는 경우)는 애플리케이션이 지원하는 구성 요소 버전 및 런타임 버전을 지정합니다. 다양한 런타임 버전과 애플리케이션 간의 호환성을 테스트하는 데 이 파일을 사용할 수도 있습니다.  
   
 COM 및 COM + 애플리케이션을 비롯한 비관리 코드에는 런타임에서 관리 코드와 상호 작용하는 데 사용하는 애플리케이션 구성 파일이 포함될 수 있습니다. 애플리케이션 구성 파일은 COM을 통해 활성화하는 모든 관리 코드에 영향을 줍니다. 파일에서 지원하는 런타임 버전 및 어셈블리 리디렉션을 지정할 수 있습니다. 기본적으로 관리 코드를 호출하는 COM interop 애플리케이션은 컴퓨터에 설치된 최신 버전의 런타임을 사용합니다.  
   
@@ -102,13 +102,13 @@ Side-by-Side 문제의 잠재적 소스이므로 부분적으로 정규화된 �
  다음 예제에서는 `myAssembly`라는 어셈블리를 정규화하는 애플리케이션 구성 파일 항목을 보여 줍니다.  
   
 ```xml  
-<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">   
-<qualifyAssembly partialName="myAssembly"   
+<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+<qualifyAssembly partialName="myAssembly"
 fullName="myAssembly,  
-      version=1.0.0.0,   
-publicKeyToken=...,   
-      culture=neutral"/>   
-</assemblyBinding>   
+      version=1.0.0.0,
+publicKeyToken=...,
+      culture=neutral"/>
+</assemblyBinding>
 ```  
   
  어셈블리 로드 문이 `myAssembly`를 참조할 때마다 이러한 구성 파일 설정으로 인해 런타임이 부분적으로 정규화된 `myAssembly` 참조를 정규화된 참조로 자동으로 변환합니다. 예를들어 Assembly.Load("myAssembly")가 Assembly.Load("myAssembly, version=1.0.0.0, publicKeyToken=..., culture=neutral")이 됩니다.  

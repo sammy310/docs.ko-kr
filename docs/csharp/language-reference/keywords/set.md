@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - set keyword [C#]
 ms.assetid: 30d7e4e5-cc2e-4635-a597-14a724879619
-ms.openlocfilehash: 97b0dbf8716edc4cd465eb5ac693efa0ecaa498b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0b293709abe64a0a82d8575f6793a07ca6c9533b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713081"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173499"
 ---
 # <a name="set-c-reference"></a>set(C# 참조)
 
 `set` 키워드는 속성 또는 인덱서 요소에 값을 할당하는 속성 또는 인덱서의 *accessor* 메서드를 정의합니다. 자세한 내용 및 예제는 [속성](../../programming-guide/classes-and-structs/properties.md), [자동 구현 속성](../../programming-guide/classes-and-structs/auto-implemented-properties.md) 및 [인덱서](../../programming-guide/indexers/index.md)를 참조하세요.
 
-다음 예제에서는 `Seconds`라는 속성의 `get` 및 `set` 접근자를 둘 다 정의합니다. `_seconds`라는 private 필드를 사용하여 속성 값을 지원합니다.
+다음 예제에서는 `get`라는 속성의 `set` 및 `Seconds` 접근자를 둘 다 정의합니다. `_seconds`라는 private 필드를 사용하여 속성 값을 지원합니다.
 
 [!code-csharp[set#1](~/samples/snippets/csharp/language-reference/keywords/get/get-1.cs)]
 
@@ -26,7 +26,7 @@ ms.locfileid: "75713081"
 
 [!code-csharp[set#3](~/samples/snippets/csharp/language-reference/keywords/get/get-3.cs)]
   
-속성의 `get` 및 `set` 접근자가 private 지원 필드의 값 설정 또는 검색 이외의 다른 작업을 수행하지 않는 간단한 사례의 경우 자동 구현 속성에 대한 C# 컴파일러의 지원을 활용할 수 있습니다. 다음 예제에서는 `Hours`를 자동 구현 속성으로 구현합니다. 
+속성의 `get` 및 `set` 접근자가 private 지원 필드의 값 설정 또는 검색 이외의 다른 작업을 수행하지 않는 간단한 사례의 경우 자동 구현 속성에 대한 C# 컴파일러의 지원을 활용할 수 있습니다. 다음 예제에서는 `Hours`를 자동 구현 속성으로 구현합니다.
 
 [!code-csharp[set#2](~/samples/snippets/csharp/language-reference/keywords/get/get-2.cs)]
   
@@ -34,7 +34,7 @@ ms.locfileid: "75713081"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../../language-reference/index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

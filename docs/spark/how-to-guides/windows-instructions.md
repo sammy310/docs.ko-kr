@@ -4,12 +4,12 @@ description: Windows에서 .NET for Apache Spark 애플리케이션을 빌드하
 ms.date: 01/29/2020
 ms.topic: conceptual
 ms.custom: how-to
-ms.openlocfilehash: 640459c8c80b6d798718b89d4965802cdacd6c63
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: cb7154185fc9aa08bc447cb846798995301a6651
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628659"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79185754"
 ---
 # <a name="learn-how-to-build-your-net-for-apache-spark-application-on-windows"></a>Windows에서 .NET for Apache Spark 애플리케이션을 빌드하는 방법
 
@@ -26,7 +26,7 @@ ms.locfileid: "77628659"
          * .NET Framework 4.6.1 개발 도구
      * .NET Core 플랫폼 간 개발
        * 필요한 모든 구성 요소
-  3. **[Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)** 을 설치합니다. 
+  3. **[Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)** 을 설치합니다.
      - 운영 체제에 적합한 버전을 선택합니다. 예를 들어 Windows x64 머신의 경우 *jdk-8u201-windows-x64.exe*를 선택합니다.
      - 설치 프로그램을 사용하여 설치하고 명령줄에서 `java`를 실행할 수 있는지 확인합니다.
   4. **[Apache Maven 3.6.0+](https://maven.apache.org/download.cgi)** 를 설치합니다.
@@ -39,16 +39,16 @@ ms.locfileid: "77628659"
      - [새 환경 변수](https://www.java.com/en/download/help/path.xml) `SPARK_HOME`을 추가합니다. 예를 들어 *C:\bin\spark-2.3.2-bin-hadoop2.7\*과 같이 추가합니다.
 
        ```powershell
-       set SPARK_HOME=C:\bin\spark-2.3.2-bin-hadoop2.7\       
+       set SPARK_HOME=C:\bin\spark-2.3.2-bin-hadoop2.7\
        ```
 
      - Apache Spark를 [PATH 환경 변수](https://www.java.com/en/download/help/path.xml)에 추가합니다. 예를 들어 *C:\bin\spark-2.3.2-bin-hadoop2.7\bin*과 같이 추가합니다.
 
-       ```powershell       
+       ```powershell
        set PATH=%SPARK_HOME%\bin;%PATH%
        ```
-     
-     - 명령줄에서 `spark-shell`을 실행할 수 있는지 확인합니다.        
+
+     - 명령줄에서 `spark-shell`을 실행할 수 있는지 확인합니다.
         샘플 콘솔 출력:
 
         ```
@@ -91,7 +91,7 @@ ms.locfileid: "77628659"
 
 ## <a name="build"></a>빌드
 
-이 가이드의 나머지 부분에서는 .NET for Apache Spark 리포지토리를 머신에 복제해야 합니다. 복제된 리포지토리의 위치를 선택할 수 있습니다. 예를 들어 *C:\github\dotnet-spark\*를 사용합니다.
+이 가이드의 나머지 부분에서는 .NET for Apache Spark 리포지토리를 컴퓨터에 복제해야 합니다. 복제된 리포지토리의 위치를 선택할 수 있습니다. 예를 들어 *C:\github\dotnet-spark\*를 사용합니다.
 
 ```bash
 git clone https://github.com/dotnet/spark.git C:\github\dotnet-spark
@@ -105,7 +105,7 @@ git clone https://github.com/dotnet/spark.git C:\github\dotnet-spark
 
 ```powershell
 cd src\scala
-mvn clean package 
+mvn clean package
 ```
 
 지원되는 Spark 버전에 대해 생성된 JAR이 표시됩니다.
@@ -138,9 +138,9 @@ mvn clean package
         df.Filter(df["age"] > 21).Show();
       ```
 
-     빌드가 성공하면 출력 디렉터리에 생성된 적절한 이진 파일이 표시됩니다.     
+     빌드가 성공하면 출력 디렉터리에 생성된 적절한 이진 파일이 표시됩니다.
      샘플 콘솔 출력:
-     
+
       ```powershell
             Directory: C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\net461
 
@@ -159,7 +159,7 @@ mvn clean package
         -a----        3/16/2019  12:00 AM          23552 Microsoft.Spark.Worker.xml
         -a----        3/16/2019  12:00 AM         332363 Microsoft.Spark.xml
         ------------------------------------------- More framework files -------------------------------------
-      ```     
+      ```
 
 #### <a name="using-net-core-cli-for-net-core"></a>.NET Core용 .NET Core CLI 사용
 
@@ -172,7 +172,7 @@ mvn clean package
       cd C:\github\dotnet-spark\src\csharp\Microsoft.Spark.Worker\
       dotnet publish -f netcoreapp2.1 -r win10-x64
       ```
-      
+
       샘플 콘솔 출력:
 
       ```powershell
@@ -185,7 +185,7 @@ mvn clean package
         Microsoft.Spark -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark\Debug\netstandard2.0\Microsoft.Spark.dll
         Microsoft.Spark.Worker -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\Debug\netcoreapp2.1\win10-x64\Microsoft.Spark.Worker.dll
         Microsoft.Spark.Worker -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\Debug\netcoreapp2.1\win10-x64\publish\
-      ```    
+      ```
 
   2. 샘플 빌드:
 
@@ -193,7 +193,7 @@ mvn clean package
       cd C:\github\dotnet-spark\examples\Microsoft.Spark.CSharp.Examples\
       dotnet publish -f netcoreapp2.1 -r win10-x64
       ```
-   
+
       샘플 콘솔 출력:
 
       ```powershell
@@ -206,7 +206,7 @@ mvn clean package
         Microsoft.Spark -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark\Debug\netstandard2.0\Microsoft.Spark.dll
         Microsoft.Spark.CSharp.Examples -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\Microsoft.Spark.CSharp.Examples.dll
         Microsoft.Spark.CSharp.Examples -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\publish\
-      ```     
+      ```
 
 ## <a name="run-the-net-for-spark-sample-applications"></a>.NET for Spark 샘플 애플리케이션 실행
 
@@ -271,7 +271,7 @@ mvn clean package
      - **[Microsoft.Spark.Examples.Sql.Streaming.StructuredKafkaWordCount(jars 제공됨)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**
 
          ```powershell
-         spark-submit.cmd 
+         spark-submit.cmd
          --jars path\to\net.jpountz.lz4\lz4-1.3.0.jar,path\to\org.apache.kafka\kafka-clients-0.10.0.1.jar,path\to\org.apache.spark\spark-sql-kafka-0-10_2.11-2.3.2.jar,`path\to\org.slf4j\slf4j-api-1.7.6.jar,path\to\org.spark-project.spark\unused-1.0.0.jar,path\to\org.xerial.snappy\snappy-java-1.1.2.6.jar `
          --class org.apache.spark.deploy.dotnet.DotnetRunner `
          --master local `

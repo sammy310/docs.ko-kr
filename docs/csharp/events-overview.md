@@ -3,12 +3,12 @@ title: 이벤트 소개
 description: 이 개요에서는 .NET Core의 이벤트와 이벤트에 대한 언어 디자인 목표를 알아봅니다.
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: ceae2b9319a1de9f01102987735c7db2c2883f18
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 4e660f85eecfd5668919baf21a0d26f858faf5a6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74138526"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146116"
 ---
 # <a name="introduction-to-events"></a>이벤트 소개
 
@@ -59,11 +59,11 @@ Progress?.Invoke(this, new FileListArgs(file));
 
 [대리자](delegates-patterns.md)에 대한 섹션에서 설명한 대로 ?.
 연산자를 사용하면 해당 이벤트에 대한 구독자가 없을 때 이벤트를 발생시키지 않도록 하기가 쉽습니다.
- 
+
 `+=` 연산자를 사용하여 이벤트를 구독합니다.
 
 ```csharp
-EventHandler<FileListArgs> onProgress = (sender, eventArgs) => 
+EventHandler<FileListArgs> onProgress = (sender, eventArgs) =>
     Console.WriteLine(eventArgs.FoundFile);
 
 fileLister.Progress += onProgress;

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
 ms.openlocfilehash: ee1e5bd15183dad9ffe97824f9b194668e9d3b17
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705303"
 ---
 # <a name="exception-handling-c-programming-guide"></a>예외 처리(C# 프로그래밍 가이드)
@@ -26,7 +26,7 @@ ms.locfileid: "75705303"
  `try` 블록에 `catch` 또는 `finally` 블록이 없으면 컴파일러 오류가 발생합니다.  
   
 ## <a name="catch-blocks"></a>catch 블록  
- `catch` 블록에서는 catch할 예외의 형식을 지정할 수 있습니다. 형식 사양을 *예외 필터*라고 합니다. 예외 형식은 <xref:System.Exception>에서 파생되어야 합니다. 일반적으로 `try` 블록에서 throw될 수 있는 모든 예외를 처리하는 방법을 알고 있거나 `catch` 블록의 끝에 [throw](../../language-reference/keywords/throw.md) 문을 포함한 경우가 아니라면 <xref:System.Exception>을 예외 필터로 지정하지 마세요.  
+ `catch` 블록에서는 catch할 예외의 형식을 지정할 수 있습니다. 형식 사양을 *예외 필터*라고 합니다. 예외 형식은 <xref:System.Exception>에서 파생되어야 합니다. 일반적으로 <xref:System.Exception> 블록에서 throw될 수 있는 모든 예외를 처리하는 방법을 알고 있거나 `try` 블록의 끝에 [throw](../../language-reference/keywords/throw.md) 문을 포함한 경우가 아니라면 `catch`을 예외 필터로 지정하지 마세요.  
   
  다른 예외 필터를 사용하는 여러 `catch` 블록을 함께 연결할 수 있습니다. `catch` 블록은 코드의 위에서 아래로 계산되지만 throw되는 각 예외에 대해 하나의 `catch` 블록만 실행됩니다. throw된 예외의 정확한 형식이나 기본 클래스를 지정하는 첫 번째 `catch` 블록이 실행됩니다. `catch` 블록에서 일치하는 예외 필터를 지정하지 않으면 `catch` 블록이 문에 있는 경우 필터가 없는 블록이 선택됩니다. 먼저 가장 구체적인(즉, 최다 파생) 예외 형식을 사용하여 `catch` 블록을 배치해야 합니다.  
   
@@ -53,9 +53,9 @@ ms.locfileid: "75705303"
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
 
-자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)의 [예외](~/_csharplang/spec/exceptions.md) 및 [try 문](~/_csharplang/spec/statements.md#the-try-statement)을 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/exceptions.md)의 [예외](~/_csharplang/spec/statements.md#the-try-statement) 및 [try 문](/dotnet/csharp/language-reference/language-specification/introduction)을 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../../language-reference/index.md)
 - [C# 프로그래밍 가이드](../index.md)

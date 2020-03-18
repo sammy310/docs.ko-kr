@@ -2,12 +2,12 @@
 title: .NET Core 정보
 description: .NET Core에 대한 자세히 알아봅니다.
 ms.date: 09/17/2019
-ms.openlocfilehash: 7908cf70e91dcd68668008c2c3082dc293330ec1
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 89740b67b294650f78cf36361548c2fe24ac80cb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965843"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79147362"
 ---
 # <a name="about-net-core"></a>.NET Core 정보
 
@@ -26,7 +26,7 @@ ms.locfileid: "76965843"
 C#, Visual Basic 및 F# 언어를 사용하여 .NET Core에 대한 애플리케이션 및 라이브러리를 작성할 수 있습니다. 이러한 언어는 즐겨 찾는 텍스트 편집기나 다음과 같은 IDE(통합 개발 환경)에서 사용할 수 있습니다.
 
 - [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
-- [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
+- [Visual Studio Code](https://code.visualstudio.com/download)
 - Sublime 텍스트
 - Vim
 

@@ -6,14 +6,14 @@ helpviewer_keywords:
 - COM, exposing Visual C# objects to
 ms.assetid: 6504dea9-ad1c-4993-a794-830fec5270af
 ms.openlocfilehash: 6af85d0314a44acbde0996cecbe6dad82cdcc8db
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712080"
 ---
 # <a name="example-com-class-c-programming-guide"></a>COM 클래스 예제(C# 프로그래밍 가이드)
-다음은 COM 개체로 노출되는 클래스의 예제입니다. 이 코드를 .cs 파일에 배치하고 프로젝트에 추가한 후 **COM Interop 등록** 속성을 **True**로 설정합니다. 자세한 내용은 [방법: COM Interop에 대한 구성 요소 등록](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w29wacsy(v=vs.100))을 참조하세요.
+다음은 COM 개체로 노출되는 클래스의 예제입니다. 이 코드를 .cs 파일에 배치하고 프로젝트에 추가한 후 **COM Interop 등록** 속성을 **True**로 설정합니다. 자세한 내용은 [방법: 구성 요소 COM Interop 등록](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w29wacsy(v=vs.100))을 참조하세요.
   
  Visual C# 개체를 COM에 노출하려면 클래스 인터페이스, 필요한 경우 이벤트 인터페이스 및 클래스 자체를 선언해야 합니다. 클래스 멤버가 COM에 표시되려면 다음 규칙을 따라야 합니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "75712080"
 ## <a name="example"></a>예제  
  [!code-csharp[csProgGuideInterop#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInterop/CS/ExampleCOM.cs#8)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [상호 운용성](./index.md)

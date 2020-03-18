@@ -6,10 +6,10 @@ helpviewer_keywords:
 - constants [C#]
 ms.assetid: 43f511be-346c-4b8a-995e-aded94542ece
 ms.openlocfilehash: 15526655de8af6fed464376db1ac761468215210
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75337662"
 ---
 # <a name="how-to-define-constants-in-c"></a>C\#에서 상수 정의 방법
@@ -27,6 +27,6 @@ ms.locfileid: "75337662"
   
  클래스 이름 한정자를 통해 사용자와 상수를 사용하는 다른 사용자가 상수이며 수정할 수 없음을 쉽게 파악할 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [클래스 및 구조체](./index.md)

@@ -13,21 +13,21 @@ helpviewer_keywords:
 - implicitly throwing exceptions
 ms.assetid: 72bdd157-caa9-4478-9ee3-cb4500b84528
 ms.openlocfilehash: 750da20b8c1c40901cc363ac0eff8af888821ce9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75708864"
 ---
 # <a name="how-to-explicitly-throw-exceptions"></a>명시적으로 예외를 throw하는 방법
 
 C# [`throw`](../../csharp/language-reference/keywords/throw.md) 또는 Visual Basic [`Throw`](../../visual-basic/language-reference/statements/throw-statement.md) 문을 사용하여 명시적으로 예외를 throw할 수 있습니다. `throw` 문을 사용하여 catch된 예외를 다시 throw할 수도 있습니다. 디버그 시 자세한 정보를 제공하기 위해 다시 throw되는 예외에 정보를 추가하는 것은 좋은 코딩 방법입니다.
 
-다음 코드 예제에서는 `try`/`catch` 블록을 사용하여 가능한 <xref:System.IO.FileNotFoundException>을 catch합니다. `try` 블록 뒤에는 <xref:System.IO.FileNotFoundException>을 catch하고 데이터 파일을 찾을 수 없는 경우 콘솔에 메시지를 쓰는 `catch` 블록이 있습니다. 다음 문은 새 <xref:System.IO.FileNotFoundException>을 throw하고 예외에 텍스트 정보를 추가하는 `throw` 문입니다.
+다음 코드 예제에서는 `try`/`catch` 블록을 사용하여 가능한 <xref:System.IO.FileNotFoundException>을 catch합니다. `try` 블록 뒤에는 `catch`을 catch하고 데이터 파일을 찾을 수 없는 경우 콘솔에 메시지를 쓰는 <xref:System.IO.FileNotFoundException> 블록이 있습니다. 다음 문은 새 `throw`을 throw하고 예외에 텍스트 정보를 추가하는 <xref:System.IO.FileNotFoundException> 문입니다.
 
 [!code-csharp[Exception.Throwing#1](~/samples/snippets/csharp/VS_Snippets_CLR/Exception.Throwing/CS/throw.cs#1)]
 [!code-vb[Exception.Throwing#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Exception.Throwing/VB/throw.vb#1)]  
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [예외](index.md)

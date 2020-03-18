@@ -10,14 +10,14 @@ helpviewer_keywords:
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
 ms.openlocfilehash: d401a1d1bb2c6fccb203c440f367bd14c80e70e3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705017"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>텍스트 파일에서 읽는 방법(C# 프로그래밍 가이드)
-이 예제에서는 <xref:System.IO.File?displayProperty=nameWithType> 클래스의 정적 메서드 <xref:System.IO.File.ReadAllText%2A> 및 <xref:System.IO.File.ReadAllLines%2A>를 사용하여 텍스트 파일의 내용을 읽습니다.  
+이 예제에서는 <xref:System.IO.File.ReadAllText%2A> 클래스의 정적 메서드 <xref:System.IO.File.ReadAllLines%2A> 및 <xref:System.IO.File?displayProperty=nameWithType>를 사용하여 텍스트 파일의 내용을 읽습니다.  
   
 <xref:System.IO.StreamReader>를 사용하는 예제는 [텍스트 파일을 한 번에 한 줄씩 읽는 방법](./how-to-read-a-text-file-one-line-at-a-time.md)을 참조하세요.
   
@@ -40,7 +40,7 @@ ms.locfileid: "75705017"
 ## <a name="net-framework-security"></a>.NET Framework 보안  
  파일 이름을 사용하여 파일 내용을 확인하지 마세요. 예를 들어 `myFile.cs` 파일이 C# 소스 파일이 아닐 수도 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.IO?displayProperty=nameWithType>
 - [C# 프로그래밍 가이드](../index.md)

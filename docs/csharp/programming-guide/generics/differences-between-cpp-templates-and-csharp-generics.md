@@ -5,10 +5,10 @@ helpviewer_keywords:
 - generics [C#], vs. C++ templates
 ms.assetid: 1da6beeb-d4a4-4da0-87b7-0cfbe04920b7
 ms.openlocfilehash: e44f67353410c58c406620109270972df17f9f86
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75703535"
 ---
 # <a name="differences-between-c-templates-and-c-generics-c-programming-guide"></a>C++ 템플릿과 C# 제네릭의 차이점(C# 프로그래밍 가이드)
@@ -32,7 +32,7 @@ C# 제네릭 및 C++ 템플릿은 둘 다 매개 변수가 있는 형식을 지�
   
 - C++에서는 템플릿의 일부 형식 매개 변수에 적합하지 않아 형식 매개 변수로 사용되는 특정 형식을 확인하는 코드를 허용합니다. C#에서는 제약 조건을 충족하는 모든 형식에서 작동하는 방식으로 작성할 코드가 클래스에 필요합니다. 예를 들어 C++에서는 산술 연산자 `+` 및 `-`를 사용하는 함수를 형식 매개 변수의 개체에서 작성하여 이러한 연산자를 지원하지 않는 형식으로 템플릿을 인스턴스화할 때 오류를 생성할 수 있습니다. C#에서는 이를 허용하지 않습니다. 허용되는 유일한 언어 구문은 제약 조건에서 추론할 수 있는 구문입니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [제네릭 소개](./index.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: 21bbf8e1253641317750b911e052ee5ff0a0d063
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 36bfa46cebd2b35c4985dfc23dbe84f8f5dc9201
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036166"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846319"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! (null-forgiving) 연산자(C# 참조)
 
@@ -25,23 +25,23 @@ nullable 참조 형식 기능에 대한 자세한 내용은 [nullable 참조 형
 
 null-forgiving 연산자의 사용 사례 중 하나는 인수 유효성 검사 논리를 테스트하는 것입니다. 예를 들어 다음 클래스를 예로 들어 볼 수 있습니다.
 
-[!code-csharp[Person class](~/samples/csharp/language-reference/operators/NullForgivingOperator.cs#PersonClass)]
+[!code-csharp[Person class](snippets/NullForgivingOperator.cs#PersonClass)]
 
 [MSTest 테스트 프레임워크](../../../core/testing/unit-testing-with-mstest.md)를 사용하여 생성자에서 유효성 검사 논리에 대해 다음 테스트를 만들 수 있습니다.
 
-[!code-csharp[Person test](~/samples/csharp/language-reference/operators/NullForgivingOperator.cs#TestPerson)]
+[!code-csharp[Person test](snippets/NullForgivingOperator.cs#TestPerson)]
 
 null-forgiving 연산자가 없으면 컴파일러가 이전 코드에 대해 다음 경고를 생성합니다. `Warning CS8625: Cannot convert null literal to non-nullable reference type`. null-forgiving 연산자를 사용하여 `null`이 전달될 것이고 경고를 표시하지 않아야 함을 컴파일러에 알립니다.
 
 식이 절대로 `null`이 될 수 없지만 컴파일러가 이를 인식할 수 없음이 확실할 경우에도 null-forgiving 연산자를 사용할 수 있습니다. 다음 예에서는 `IsValid` 메서드가 `true`를 반환하는 경우 해당 인수는 `null`이 아니므로 안전하게 역참조할 수 있습니다.
 
-[!code-csharp[Use null-forgiving operator](~/samples/csharp/language-reference/operators/NullForgivingOperator.cs#UseNullForgiving)]
+[!code-csharp[Use null-forgiving operator](snippets/NullForgivingOperator.cs#UseNullForgiving)]
 
 null-forgiving 연산자가 없으면 컴파일러가 `p.Name` 코드에 대해 다음 경고를 생성합니다. `Warning CS8602: Dereference of a possibly null reference`.
 
 `IsValid` 메서드를 수정할 수 있는 경우 [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute) 특성을 사용하여 메서드가 `true`를 반환할 때 `IsValid` 메서드의 인수는 `null`일 수 없다는 것을 컴파일러에 알릴 수 있습니다.
 
-[!code-csharp[Use an attribute](~/samples/csharp/language-reference/operators/NullForgivingOperator.cs#UseAttribute)]
+[!code-csharp[Use an attribute](snippets/NullForgivingOperator.cs#UseAttribute)]
 
 앞의 예제에서는 컴파일러가 `if` 문 내에서 `p`가 `null`일 수 없다는 것을 확인할 수 있는 충분한 정보를 제공하기 때문에 null-forgiving 연산자를 사용할 필요가 없습니다. 변수의 null 상태에 대한 추가 정보를 제공하는 데 사용할 수 있는 특성에 대한 자세한 내용은 [null 예상을 정의하는 특성을 포함한 API 업그레이드](../../nullable-attributes.md)를 참조하세요.
 
@@ -49,7 +49,7 @@ null-forgiving 연산자가 없으면 컴파일러가 `p.Name` 코드에 대해 
 
 자세한 내용은 [Nullable 참조 형식 사양 초안](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator)의 [null-forgiving 연산자](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md) 섹션을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 연산자](index.md)

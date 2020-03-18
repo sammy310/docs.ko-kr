@@ -4,12 +4,12 @@ description: 식 트리를 사용하여 코드를 데이터로 해석하고 해�
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: eb687ebd-1149-4453-9fc1-12a084495a66
-ms.openlocfilehash: 43715c94b70f1cd7f758cde91ae7c8d1b2f70f9f
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 513244a987e295c81cfb5d00d9a0cfd6912074e0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036750"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79145893"
 ---
 # <a name="expression-trees-summary"></a>식 트리 요약
 
@@ -19,7 +19,7 @@ ms.locfileid: "73036750"
 
 식 트리를 검사하여 알고리즘의 의도를 파악할 수 있습니다. 해당 코드 검사 이상을 수행할 수 있습니다. 원래 코드의 수정된 버전을 나타내는 새로운 식 트리를 작성할 수 있습니다.
 
-또한 식 트리를 사용하여 알고리즘을 확인하고 해당 알고리즘을 다른 언어나 환경으로 변환할 수 있습니다. 
+또한 식 트리를 사용하여 알고리즘을 확인하고 해당 알고리즘을 다른 언어나 환경으로 변환할 수 있습니다.
 
 ## <a name="limitations"></a>제한 사항
 

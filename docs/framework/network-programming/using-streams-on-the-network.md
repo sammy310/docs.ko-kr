@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, streams
 - streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
-ms.openlocfilehash: aa3fc56dc461d4fe22e2ff391f3561d8834128d8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7d5a2e3eec9b49731a09f6eb41a8d8500a59b45c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046871"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180620"
 ---
 # <a name="using-streams-on-the-network"></a>네트워크에서 스트림 사용
 네트워크 리소스는 .NET Framework에서 스트림으로 표현됩니다. 스트림을 일반적으로 처리하여 .NET Framework는 다음과 같은 기능을 제공합니다.  
@@ -33,12 +33,12 @@ ms.locfileid: "71046871"
   
 - 데이터 도착 시 처리. 스트림은 전체 데이터 집합이 다운로드될 때까지 애플리케이션을 강제로 대기시키는 대신 네트워크에서 도착하는 대로 데이터에 대한 액세스를 제공합니다.  
   
- <xref:System.Net.Sockets> 네임스페이스에는 네트워크 리소스에 사용할 수 있도록 특별히 고안된 <xref:System.IO.Stream> 클래스를 구현하는 **NetworkStream** 클래스가 포함되어 있습니다. <xref:System.Net.Sockets> 네임스페이스에 있는 클래스는 **NetworkStream** 클래스를 사용하여 스트림을 나타냅니다.  
+ <xref:System.Net.Sockets> 네임스페이스에는 네트워크 리소스에 사용할 수 있도록 특별히 고안된 **클래스를 구현하는**NetworkStream<xref:System.IO.Stream> 클래스가 포함되어 있습니다. <xref:System.Net.Sockets> 네임스페이스에 있는 클래스는 **NetworkStream** 클래스를 사용하여 스트림을 나타냅니다.  
   
- 반환된 스트림을 사용하여 데이터를 네트워크에 보내려면 <xref:System.Net.WebRequest>에서 <xref:System.Net.WebRequest.GetRequestStream%2A>을 호출합니다. **WebRequest**는 요청 헤더를 서버에 보냅니다. 그러면 반환된 스트림에서 <xref:System.IO.Stream.BeginWrite%2A>, <xref:System.IO.Stream.EndWrite%2A> 또는 <xref:System.IO.Stream.Write%2A> 메서드를 호출하여 데이터를 네트워크 리소스에 보낼 수 있습니다. HTTP와 같은 일부 프로토콜의 경우 데이터를 보내기 전에 프로토콜 관련 속성을 설정해야 할 수도 있습니다. 다음 코드 예제에서는 데이터 전송을 위한 HTTP 관련 속성을 설정하는 방법을 보여 줍니다. `sendData` 변수에 보낼 데이터가 들어 있고 `sendLength` 변수는 보낼 데이터의 바이트 수라고 가정합니다.  
+ 반환된 스트림을 사용하여 데이터를 네트워크에 보내려면 <xref:System.Net.WebRequest.GetRequestStream%2A>에서 <xref:System.Net.WebRequest>을 호출합니다. **WebRequest**는 요청 헤더를 서버에 보냅니다. 그러면 반환된 스트림에서 <xref:System.IO.Stream.BeginWrite%2A>, <xref:System.IO.Stream.EndWrite%2A> 또는 <xref:System.IO.Stream.Write%2A> 메서드를 호출하여 데이터를 네트워크 리소스에 보낼 수 있습니다. HTTP와 같은 일부 프로토콜의 경우 데이터를 보내기 전에 프로토콜 관련 속성을 설정해야 할 수도 있습니다. 다음 코드 예제에서는 데이터 전송을 위한 HTTP 관련 속성을 설정하는 방법을 보여 줍니다. `sendData` 변수에 보낼 데이터가 들어 있고 `sendLength` 변수는 보낼 데이터의 바이트 수라고 가정합니다.  
   
 ```csharp  
-HttpWebRequest request =   
+HttpWebRequest request =
    (HttpWebRequest) WebRequest.Create("http://www.contoso.com/");  
 request.Method = "POST";  
 request.ContentLength = sendLength;  
@@ -68,7 +68,7 @@ Catch
 End Try  
 ```  
   
- 네트워크에서 데이터를 수신하려면 <xref:System.Net.WebResponse>에서 <xref:System.Net.WebResponse.GetResponseStream%2A>을 호출합니다. 반환된 스트림에서 <xref:System.IO.Stream.BeginRead%2A>, <xref:System.IO.Stream.EndRead%2A> 또는 <xref:System.IO.Stream.Read%2A> 메서드를 호출하여 네트워크 리소스에서 데이터를 읽을 수 있습니다.  
+ 네트워크에서 데이터를 수신하려면 <xref:System.Net.WebResponse.GetResponseStream%2A>에서 <xref:System.Net.WebResponse>을 호출합니다. 반환된 스트림에서 <xref:System.IO.Stream.BeginRead%2A>, <xref:System.IO.Stream.EndRead%2A> 또는 <xref:System.IO.Stream.Read%2A> 메서드를 호출하여 네트워크 리소스에서 데이터를 읽을 수 있습니다.  
   
  네트워크 리소스의 스트림을 사용하는 경우 다음 사항에 유의하세요.  
   
@@ -86,7 +86,7 @@ End Try
 // Create a response object.  
 WebResponse response = request.GetResponse();  
 // Get a readable stream from the server.  
-StreamReader sr =   
+StreamReader sr =
    new StreamReader(response.GetResponseStream(), Encoding.ASCII);  
 // Use the stream. Remember when you are through with the stream to close it.  
 sr.Close();  
@@ -96,7 +96,7 @@ sr.Close();
 ' Create a response object.  
 Dim response As WebResponse = request.GetResponse()  
 ' Get a readable stream from the server.  
-Dim sr As _   
+Dim sr As _
    New StreamReader(response.GetResponseStream(), Encoding.ASCII)  
 ' Use the stream. Remember when you are through with the stream to close it.  
 sr.Close()  

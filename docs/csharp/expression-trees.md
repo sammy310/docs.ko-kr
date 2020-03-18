@@ -4,18 +4,18 @@ description: .NET Core의 식 트리에 대해 알아본 다음 이를 사용하
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.openlocfilehash: b7d039ea4585953473dc88cebcc516ea240cdc3a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: e1026ef70860da519b688a9d67181b88d03f6f0b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036317"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79145841"
 ---
 # <a name="expression-trees"></a>식 트리
 
 LINQ를 사용했다면 `Func` 형식이 API 집합의 일부인 풍부한 라이브러리 경험이 있는 것입니다. LINQ에 익숙하지 않은 경우 [LINQ 자습서](linq/index.md) 및 [람다 식](./programming-guide/statements-expressions-operators/lambda-expressions.md)에 대한 문서를 먼저 읽어보는 것이 좋습니다. *식 트리*에서는 함수인 인수를 사용하는 보다 풍부한 조작을 제공합니다.
 
-LINQ 쿼리를 만들 때 일반적으로 람다 식을 사용하여 함수 인수를 작성합니다. 일반적인 LINQ 쿼리에서 이러한 함수 인수는 컴파일러가 만드는 대리자로 변환됩니다. 
+LINQ 쿼리를 만들 때 일반적으로 람다 식을 사용하여 함수 인수를 작성합니다. 일반적인 LINQ 쿼리에서 이러한 함수 인수는 컴파일러가 만드는 대리자로 변환됩니다.
 
 보다 풍부한 조작을 원하는 경우 *식 트리*를 사용해야 합니다.
 식 트리는 검사, 수정 또는 실행할 수 있는 구조로 코드를 나타냅니다. 이러한 도구는 런타임에 코드를 조작할 수 있는 강력한 기능을 제공합니다. 실행 중인 알고리즘을 검사하고 새 기능을 삽입하는 코드를 작성할 수 있습니다. 보다 고급 시나리오에서는 실행 중인 알고리즘을 수정하고 C# 식을 다른 형태로 변환하여 다른 환경에서 실행할 수도 있습니다.
@@ -28,11 +28,11 @@ LINQ 쿼리를 만들 때 일반적으로 람다 식을 사용하여 함수 인�
 1. [식 트리 설명](expression-trees-explained.md)
 
     *식 트리*의 구조와 개념을 이해합니다.
-    
+
 2. [식 트리를 지원하는 프레임워크 형식](expression-classes.md)
-    
+
     식 트리를 정의하고 조작하는 구조 및 클래스에 대해 알아봅니다.
-    
+
 3. [식 실행](expression-trees-execution.md)
 
     람다 식으로 표시되는 식 트리를 대리자로 변환하고 결과 대리자를 실행하는 방법을 알아봅니다.

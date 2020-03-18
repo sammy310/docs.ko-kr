@@ -5,18 +5,18 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 12/13/2019
 ms.topic: tutorial
-ms.openlocfilehash: bd91fb401b9beb6ae74c4599b25e43284473f8b0
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 460c37e66c2c0a8a9b197a9abaff9eead842bdeb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75466426"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187561"
 ---
 # <a name="tutorial-do-batch-processing-with-net-for-apache-spark"></a>자습서: .NET for Apache Spark를 사용한 일괄 처리
 
-이 자습서에서는 .NET for Apache Spark를 사용하여 일괄 처리하는 방법을 알아봅니다. 일괄 처리는 미사용 데이터의 변환으로 원본 데이터가 이미 데이터 스토리지에 로드되었음을 의미합니다. 
+이 자습서에서는 .NET for Apache Spark를 사용하여 일괄 처리하는 방법을 알아봅니다. 일괄 처리는 미사용 데이터의 변환으로 원본 데이터가 이미 데이터 스토리지에 로드되었음을 의미합니다.
 
-일괄 처리는 일반적으로 추가 분석을 준비해야 하는 대량의 플랫 데이터 세트를 대상으로 수행합니다. 로그 처리 및 데이터 웨어하우징은 일반적인 일괄 처리 시나리오입니다. 이 시나리오에서는 각 프로젝트가 분기된 횟수 또는 프로젝트 업데이트 후 경과한 기간과 같이 GitHub 프로젝트 정보를 분석합니다. 
+일괄 처리는 일반적으로 추가 분석을 준비해야 하는 대량의 플랫 데이터 세트를 대상으로 수행합니다. 로그 처리 및 데이터 웨어하우징은 일반적인 일괄 처리 시나리오입니다. 이 시나리오에서는 각 프로젝트가 분기된 횟수 또는 프로젝트 업데이트 후 경과한 기간과 같이 GitHub 프로젝트 정보를 분석합니다.
 
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 
@@ -26,7 +26,7 @@ ms.locfileid: "75466426"
 > * DataFrame으로 데이터를 읽고 분석 준비
 > * Spark SQL을 사용하여 데이터 처리
 
-## <a name="prerequisites"></a>사전 요구 사항 
+## <a name="prerequisites"></a>사전 요구 사항
 
 .NET for Apache Spark를 처름 사용하는 경우 [.NET for Apache Spark 시작](../tutorials/get-started.md) 자습서를 확인하여 환경을 준비하고 첫 번째 .NET for Apache Spark 애플리케이션을 실행하는 방법을 알아봅니다.
 
@@ -128,7 +128,7 @@ Spark SQL을 사용하면 데이터에 대한 SQL 호출을 수행할 수 있습
 
    ```csharp
    // Sort by most forked languages first
-   groupedDF.OrderBy(Desc("avg(forked_from)")).Show(); 
+   groupedDF.OrderBy(Desc("avg(forked_from)")).Show();
    ```
 
 1. 다음 코드 블록은 최근 프로젝트가 어떻게 업데이트되었는지 보여줍니다. *MyUDF*라는 새 사용자 정의 함수를 등록하고 자습서의 시작 부분에 선언된 날짜인 *s_referenceDate*와 비교합니다. 각 프로젝트의 날짜가 참조 날짜와 비교됩니다. 그런 다음 Spark SQL을 사용하여 데이터의 각 행에서 UDF를 호출하고 데이터 세트의 각 프로젝트를 분석합니다.
@@ -137,8 +137,8 @@ Spark SQL을 사용하면 데이터에 대한 SQL 호출을 수행할 수 있습
    spark.Udf().Register<string, bool>(
        "MyUDF",
        (date) => DateTime.TryParse(date, out DateTime convertedDate) &&
-           (convertedDate > s_referenceDate);   
-   cleanedProjects.CreateOrReplaceTempView("dateView"); 
+           (convertedDate > s_referenceDate);
+   cleanedProjects.CreateOrReplaceTempView("dateView");
 
    DataFrame dateDf = spark.Sql(
        "SELECT *, MyUDF(dateView.updated_at) AS datebefore FROM dateView");

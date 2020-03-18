@@ -2,12 +2,13 @@
 title: ML.NET CLI(명령줄 인터페이스) 도구를 설치하는 방법
 description: ML.NET CLI(명령줄 인터페이스) 도구를 설치, 업그레이드, 다운그레이드 및 제거하는 방법에 대해 알아봅니다.
 ms.date: 12/18/2019
-ms.openlocfilehash: 350122f2d2d2f03484ab6e272b482adf2094495c
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.custom: mlnet-tooling
+ms.openlocfilehash: 9f678c7117d32bf817139951db7eef2c3d0f5eb2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739974"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78848641"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>ML.NET CLI(명령줄 인터페이스) 도구를 설치하는 방법
 

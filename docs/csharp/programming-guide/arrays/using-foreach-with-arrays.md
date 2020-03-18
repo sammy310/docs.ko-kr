@@ -6,10 +6,10 @@ helpviewer_keywords:
 - foreach statement [C#], using with arrays
 ms.assetid: 5f2da2a9-1f56-4de5-94cc-e07f4f7a0244
 ms.openlocfilehash: bb121b0f5d990ef6e596b34a45606e2abde6811a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705680"
 ---
 # <a name="using-foreach-with-arrays-c-programming-guide"></a>배열에 foreach 사용(C# 프로그래밍 가이드)
@@ -26,7 +26,7 @@ ms.locfileid: "75705680"
 
 그러나 다차원 배열에서 중첩 [for](../../language-reference/keywords/for.md) 루프를 사용하면 배열 요소를 처리하는 순서를 더 강력하게 제어할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Array>
 - [C# 프로그래밍 가이드](../index.md)

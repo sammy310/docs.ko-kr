@@ -2,18 +2,18 @@
 title: dotnet add package 명령
 description: ‘dotnet add package’ 명령은 NuGet 패키지 참조를 프로젝트에 추가하는 편리한 옵션을 제공합니다.
 ms.date: 02/14/2020
-ms.openlocfilehash: cb44805f91ac4047dd50fd7e88d4eac5f15f2508
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 8121539a50d2ac2837693ccc35581f7fde1d1fc1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503803"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146608"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
 **이 문서의 적용 대상:** ✔️ .NET Core 2.x SDK 이상 버전
 
-## <a name="name"></a>이름
+## <a name="name"></a>name
 
 `dotnet add package` - 패키지 참조를 프로젝트 파일에 추가합니다.
 
@@ -30,7 +30,7 @@ ms.locfileid: "77503803"
 예를 들어 `Newtonsoft.Json`를 *ToDo.csproj*에 추가하면 다음 예제와 유사한 출력이 생성됩니다.
 
 ```console
-  Writing C:\Users\mairaw\AppData\Local\Temp\tmp95A8.tmp
+Writing C:\Users\me\AppData\Local\Temp\tmp95A8.tmp
 info : Adding PackageReference for package 'Newtonsoft.Json' into project 'C:\projects\ToDo\ToDo.csproj'.
 log  : Restoring packages for C:\Temp\projects\consoleproj\consoleproj.csproj...
 info :   GET https://api.nuget.org/v3-flatcontainer/newtonsoft.json/index.json
@@ -108,7 +108,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
   dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json
   ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [NuGet에서 글로벌 패키지, 캐시 및 임시 폴더 관리](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)
 - [NuGet 패키지 버전 관리](https://docs.microsoft.com/nuget/reference/package-versioning)

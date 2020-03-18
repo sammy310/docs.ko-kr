@@ -2,12 +2,12 @@
 title: 복원력 있는 애플리케이션 구현
 description: 마이크로 서비스 아키텍처의 핵심 개념인 복원력에 대해 알아봅니다. 일시적 오류가 발생하면 해당 오류를 적절하게 처리하는 방법을 알아야 합니다.
 ms.date: 01/30/2020
-ms.openlocfilehash: ccdb2470c727ad4bd89c4e0634da8564b8010e63
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 46276a6b9b36a494bfae657275692ca9d5554d86
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502649"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78847234"
 ---
 # <a name="implement-resilient-applications"></a>복원력 있는 애플리케이션 구현
 
@@ -22,7 +22,7 @@ ms.locfileid: "77502649"
 >[!IMPORTANT]
 > eShopOnContainer는 릴리스 3.0.0까지 [Polly 라이브러리](http://www.thepollyproject.org/)를 사용하여 [형식화된 클라이언트](./use-httpclientfactory-to-implement-resilient-http-requests.md)로 복원력을 구현해 왔습니다.
 >
-> 릴리스 3.0.0부터 HTTP 호출 복원력이 코드에서 해당 문제를 처리할 필요 없이 Kubernetes 클러스터 내에서 투명하고 구성가능한 방식으로 재시도를 처리하는 [Linkerd 메시](https://linkerd.io/)를 사용하여 구현됩니다.
+> 릴리스 3.0.0부터는 Kubernetes 클러스터 내에서 투명하고 구성 가능한 방식으로 재시도를 처리하기 때문에 코드에서 문제를 처리할 필요가 없는 [Linkerd 메시](https://linkerd.io/)를 사용하여 HTTP 호출 복원력이 구현됩니다.
 >
 > Polly 라이브러리는 특히 서비스를 시작하는 동안 데이터베이스 연결에 복원력을 더하는 데 여전히 사용됩니다.
 

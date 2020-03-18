@@ -7,24 +7,24 @@ helpviewer_keywords:
 - DataContractJsonSerializer changes
 - serialization changes
 ms.assetid: e065d458-a128-44f2-9f17-66af9d5be954
-ms.openlocfilehash: b6468bc4ae37765d969a1f92b16967cc656ab7ff
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: b60b78f9ee944552fafbe75754ecd29d60dd4093
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452632"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181207"
 ---
 # <a name="mitigation-serialization-of-control-characters-with-the-datacontractjsonserializer"></a>완화: DataContractJsonSerializer로 제어 문자 직렬화
 
-.NET Framework 4.7부터 제어 문자가 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>로 직렬화되는 방식이 ECMAScript V6 및 V8에 맞게 변경되었습니다. 
- 
+.NET Framework 4.7부터 제어 문자가 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>로 직렬화되는 방식이 ECMAScript V6 및 V8에 맞게 변경되었습니다.
+
 ## <a name="impact"></a>영향
 
 .NET Framework 4.6.2 이하 버전에서는 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>가 ECMAScript V6 및 V8 표준과 호환되는 방식으로 `\b`, `\f`, `\t` 등의 일부 특수 제어 문자를 serialize하지 않았습니다.
 
 .NET Framework 4.7 이상의 .NET Framework 버전을 대상으로 하는 앱의 경우 이러한 제어 문자의 직렬화가 ECMAScript V6 및 V8과 호환됩니다. 다음 API가 영향을 받습니다.
 
-- <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> 
+- <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A>
 
 ## <a name="mitigation"></a>완화
 
@@ -37,7 +37,7 @@ ms.locfileid: "77452632"
    <AppContextSwitchOverrides value="Switch.System.Runtime.Serialization.DoNotUseECMAScriptV6EscapeControlCharacter=false" />
 </runtime>
 ```
- 
+
 ## <a name="see-also"></a>참조
 
 - [애플리케이션 호환성](application-compatibility.md)

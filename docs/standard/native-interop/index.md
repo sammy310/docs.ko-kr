@@ -3,10 +3,10 @@ title: 네이티브 상호 운용성 - .NET
 description: .NET에서 네이티브 구성 요소와 상호 작용하는 방법을 알아봅니다.
 ms.date: 01/18/2019
 ms.openlocfilehash: 330466d74cc268214f74c4f575e6a2961f678972
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75706337"
 ---
 # <a name="native-interoperability"></a>기본 상호 운용성
@@ -24,7 +24,7 @@ ms.locfileid: "75706337"
 > [!NOTE]
 > 이 섹션의 예제는 대부분 .NET Core에 지원되는 세 가지 모두 플랫폼(Windows, Linux 및 macOS)에 대해 제공됩니다. 그러나 간략하고 명확한 일부 예제의 경우 Windows 파일 이름과 확장명(즉, 라이브러리의 경우 “dll”)을 사용하는 한 가지 샘플만 표시됩니다. Linux 또는 macOS에서 해당 기능을 사용할 수 없다는 의미는 아니며, 단지 편의를 위한 것입니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [P/Invoke(플랫폼 호출)](pinvoke.md)
 - [형식 마샬링](type-marshaling.md)

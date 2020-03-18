@@ -4,12 +4,12 @@ description: XML 문서 주석을 사용하여 코드를 문서화하고 컴파�
 ms.date: 01/21/2020
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 1ec088db1de7c953bdb20b1129c5fd40f9e31454
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 1ed39c4733c36b3932fcb85bf50d4f4c0e53aa6f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965934"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146319"
 ---
 # <a name="document-your-code-with-xml-comments"></a>XML 주석을 사용하여 코드 문서화
 
@@ -26,9 +26,9 @@ XML 문서 주석은 모든 다른 주석처럼 컴파일러에서 무시됩니�
    ```xml
    <GenerateDocumentationFile>true</GenerateDocumentationFile>
    ```
-   
+
    이 식은 다음 식과 같습니다.
-   
+
    ```xml
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
    ```
@@ -37,7 +37,7 @@ XML 문서 주석은 모든 다른 주석처럼 컴파일러에서 무시됩니�
 
 - 명령줄에서 .NET Framework 애플리케이션을 컴파일할 경우 컴파일 시 [-doc 컴파일러 옵션](language-reference/compiler-options/doc-compiler-option.md)을 추가합니다.  
 
-XML 문서 주석에는 삼중 슬래시(`///`) 및 XML 형식의 주석 본문이 사용됩니다. 예:
+XML 문서 주석에는 삼중 슬래시(`///`) 및 XML 형식의 주석 본문이 사용됩니다. 예를 들어:
 
 [!code-csharp[XML Documentation Comment](../../samples/snippets/csharp/concepts/codedoc/xml-comment.cs)]
 

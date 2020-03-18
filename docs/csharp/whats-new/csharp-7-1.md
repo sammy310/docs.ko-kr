@@ -3,11 +3,11 @@ title: C# 7.1의 새로운 기능
 description: C# 7.1의 새로운 기능에 대한 개요입니다.
 ms.date: 04/09/2019
 ms.openlocfilehash: 5d2d6f51b6422f5b4db5c6bd275b5ffce1f695f8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714586"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398354"
 ---
 # <a name="whats-new-in-c-71"></a>C# 7.1의 새로운 기능
 
@@ -26,7 +26,7 @@ C# 7.1은 [언어 버전 선택](../language-reference/configure-language-versio
 - [제네릭 형식 매개 변수의 패턴 일치](#pattern-matching-on-generic-type-parameters)
   - 형식이 제네릭 형식 매개 변수인 변수에서 패턴 일치 식을 사용할 수 있습니다.
 
-마지막으로 컴파일러에는 [참조 어셈블리 생성](#reference-assembly-generation)을 제어하는 두 가지 옵션 `-refout` 및 `-refonly`가 있습니다.
+마지막으로 컴파일러에는 `-refout`참조 어셈블리 생성`-refonly`을 제어하는 두 가지 옵션 [ 및 ](#reference-assembly-generation)가 있습니다.
 
 포인트 릴리스에서 최신 기능을 사용하려면 [컴파일러 언어 버전을 구성](../language-reference/configure-language-version.md)하고 해당 버전을 선택해야 합니다.
 
@@ -39,7 +39,7 @@ C# 7.1은 [언어 버전 선택](../language-reference/configure-language-versio
 
 ## <a name="async-main"></a>비동기 기본
 
-*비동기 기본* 메서드를 통해 `Main` 메서드에서 `await`를 사용할 수 있습니다.
+*비동기 기본* 메서드를 통해 `await` 메서드에서 `Main`를 사용할 수 있습니다.
 이전에 다음을 작성해야 했습니다.
 
 ```csharp
@@ -60,7 +60,7 @@ static async Task<int> Main()
 }
 ```
 
-프로그램이 종료 코드를 반환하지 않는 경우 <xref:System.Threading.Tasks.Task>를 반환하는 `Main` 메서드를 선언할 수 있습니다.
+프로그램이 종료 코드를 반환하지 않는 경우 `Main`를 반환하는 <xref:System.Threading.Tasks.Task> 메서드를 선언할 수 있습니다.
 
 ```csharp
 static async Task Main()
@@ -86,7 +86,7 @@ Func<string, bool> whereClause = default(Func<string, bool>);
 Func<string, bool> whereClause = default;
 ```
 
-자세한 내용은 [기본 연산자](../language-reference/operators/default.md) 문서의 [기본 리터럴](../language-reference/operators/default.md#default-literal) 섹션을 참조하세요.
+자세한 내용은 [기본 연산자](../language-reference/operators/default.md#default-literal) 문서의 [기본 리터럴](../language-reference/operators/default.md) 섹션을 참조하세요.
 
 ## <a name="inferred-tuple-element-names"></a>유추된 튜플 요소 이름
 

@@ -2,12 +2,12 @@
 title: '완화: 경로 정규화'
 ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
-ms.openlocfilehash: 1e7b540975b84320d099ca004df5b6a87aa60f6a
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 61c8eec2043aa2fb9309ee6052e27fc2c91c6c6a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457890"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181227"
 ---
 # <a name="mitigation-path-normalization"></a>완화: 경로 정규화
 .NET Framework 4.6.2를 대상으로 하는 앱부터 .NET Framework의 경로 정규화가 변경되었습니다.  
@@ -42,12 +42,12 @@ ms.locfileid: "73457890"
   
 .NET Framework 4.6.1 이하 버전을 대상으로 하지만 .NET Framework 4.6.2 이상에서 실행되는 앱은 이러한 변경에 의해 영향을 받지 않습니다.  
   
-## <a name="mitigation"></a>완화  
+## <a name="mitigation"></a>완화 방법  
  .NET Framework 4.6.2 이상을 대상으로 하는 앱은 애플리케이션 구성 파일의 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 섹션에 다음을 추가하여 이 변경을 옵트아웃하고 레거시 정규화를 사용할 수 있습니다.  
   
 ```xml  
 <runtime>  
-    <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=true" />    
+    <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=true" />
 </runtime>  
 ```  
   
@@ -55,7 +55,7 @@ ms.locfileid: "73457890"
   
 ```xml  
 <runtime>  
-    <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=false" />    
+    <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=false" />
 </runtime>  
 ```  
   

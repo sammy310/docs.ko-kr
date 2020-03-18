@@ -2,12 +2,12 @@
 title: 인프라 지속성 계층 디자인
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 인프라 지속성 계층 디자인에서 리포지토리 패턴을 탐색합니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: f1c5df1cc5672760374610a416ae22b45cd76c25
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: e10c8c1569089d5c8274df655ad7a12f2ebb7c22
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737934"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846811"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>인프라 지속성 계층 디자인
 
@@ -109,9 +109,6 @@ eShopOnContainers에 구현된 리포지토리는 해당 변경 추적기를 사
 ## <a name="additional-resources"></a>추가 자료
 
 ### <a name="repository-pattern"></a>리포지토리 패턴
-
-- **리포지토리 패턴** \
-  <https://deviq.com/repository-pattern/>
 
 - **Edward Hieatt와 Rob Mee. 리포지토리 패턴.** \
   <https://martinfowler.com/eaaCatalog/repository.html>

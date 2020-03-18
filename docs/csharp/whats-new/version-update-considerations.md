@@ -3,11 +3,11 @@ title: C# 개발자를 위한 버전 및 업데이트 고려 사항
 description: 라이브러리에 새로운 언어 기능을 도입하면 해당 라이브러리를 사용하는 코드에 영향을 줄 수 있습니다.
 ms.date: 09/19/2018
 ms.openlocfilehash: 3ffe2f6fd64a391fddf28233dccb022c95851884
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634483"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398150"
 ---
 # <a name="version-and-update-considerations-for-c-developers"></a>C# 개발자를 위한 버전 및 업데이트 고려 사항
 

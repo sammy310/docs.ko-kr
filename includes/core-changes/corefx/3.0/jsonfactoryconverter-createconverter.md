@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9052f509ec6df4e4b911e2f33b5c8197adb9a2c3
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 3bce796191e0ebe6dbe4650457abe5a20c383f02
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568129"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79147564"
 ---
 ### <a name="jsonfactoryconvertercreateconverter-signature-changed"></a>JsonFactoryConverter.CreateConverter 서명이 변경되었습니다
 
@@ -42,13 +42,13 @@ namespace System.Text.Json.Serialization
 
 3.0 미리 보기 8
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 파생 클래스를 업데이트하고 다시 컴파일해야 합니다.
 
 #### <a name="affected-apis"></a>영향을 받는 API
 
-<xref:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter(System.Type,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType>.
+- <xref:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter(System.Type,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType>
 
 <!-- For tool use only
 

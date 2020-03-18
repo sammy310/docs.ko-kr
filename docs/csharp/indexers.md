@@ -4,12 +4,12 @@ description: 하나 이상의 인수를 사용하여 참조된 속성인 인덱�
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 966483e80d8dd0421dce1b7fabdb0d443d73a0fc
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 8e583b8a7cedab61ea6fdd56587608907610b6b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450884"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79145686"
 ---
 # <a name="indexers"></a>인덱서
 
@@ -39,7 +39,7 @@ public int this[string key]
 
 속성 작업에서 배운 거의 모든 내용을 인덱서에 적용할 수 있습니다. 해당 규칙의 유일한 예외는 *자동 구현 속성*입니다. 컴파일러가 항상 인덱서에 올바른 스토리지를 생성할 수 있는 것은 아닙니다.
 
-항목 집합의 항목을 참조하는 인수의 존재 여부로 인덱서와 속성을 구분합니다. 각 인덱서의 인수 목록이 고유하기만 하면 형식에 여러 인덱서를 정의할 수 있습니다. 클래스 정의에 하나 이상의 인덱서를 사용할 수 있는 다양한 시나리오를 살펴보겠습니다. 
+항목 집합의 항목을 참조하는 인수의 존재 여부로 인덱서와 속성을 구분합니다. 각 인덱서의 인수 목록이 고유하기만 하면 형식에 여러 인덱서를 정의할 수 있습니다. 클래스 정의에 하나 이상의 인덱서를 사용할 수 있는 다양한 시나리오를 살펴보겠습니다.
 
 ## <a name="scenarios"></a>시나리오
 
@@ -50,7 +50,7 @@ API가 해당 컬렉션에 대한 인수가 정의되는 일부 컬렉션을 모
 
 ### <a name="arrays-and-vectors"></a>배열 및 벡터
 
-인덱서를 만들기 위한 가장 일반적인 시나리오 중 하나는 형식이 배열 또는 벡터를 모델링하는 경우입니다. 인덱서를 만들어 정렬된 데이터 목록을 모델링할 수 있습니다. 
+인덱서를 만들기 위한 가장 일반적인 시나리오 중 하나는 형식이 배열 또는 벡터를 모델링하는 경우입니다. 인덱서를 만들어 정렬된 데이터 목록을 모델링할 수 있습니다.
 
 사용자 고유의 인덱서를 만드는 경우 해당 컬렉션에 대한 스토리지를 요구 사항에 맞게 정의할 수 있다는 장점이 있습니다. 너무 커서 한 번에 메모리에 로드할 수 없는 기록 데이터를 형식이 모델링하는 시나리오를 가정합니다. 사용량에 따라 컬렉션의 섹션을 로드 및 언로드해야 합니다. 다음 예제에서는 이 동작을 모델링합니다. 존재하는 데이터 요소 수를 보고합니다. 필요에 따라 데이터 섹션이 포함될 페이지를 만듭니다. 최신 요청에 필요한 페이지의 공간을 만들기 위해 메모리에서 페이지를 제거합니다.
 
@@ -177,7 +177,7 @@ public class DataSamples
 
 ### <a name="dictionaries"></a>사전
 
-또 다른 일반적인 시나리오는 사전 또는 맵을 모델링해야 하는 경우입니다. 이 시나리오는 형식이 키, 일반적으로 텍스트 키에 따라 값을 저장하는 경우입니다. 이 예제에서는 해당 옵션을 관리하는 [람다 식](delegates-overview.md)에 명령줄 인수를 매핑하는 사전을 만듭니다. 다음 예제에서는 명령줄 옵션을 `Action` 대리자에 매핑하는 `ArgsActions` 클래스와 해당 옵션을 발견할 경우 `ArgsActions`를 사용하여 각 `Action`을 실행하는 `ArgsProcessor` 클래스 등 두 개의 클래스를 보여 줍니다.
+또 다른 일반적인 시나리오는 사전 또는 맵을 모델링해야 하는 경우입니다. 이 시나리오는 형식이 키, 일반적으로 텍스트 키에 따라 값을 저장하는 경우입니다. 이 예제에서는 해당 옵션을 관리하는 [람다 식](delegates-overview.md)에 명령줄 인수를 매핑하는 사전을 만듭니다. 다음 예제에서는 명령줄 옵션을 `ArgsActions` 대리자에 매핑하는 `Action` 클래스와 해당 옵션을 발견할 경우 `ArgsProcessor`를 사용하여 각 `ArgsActions`을 실행하는 `Action` 클래스 등 두 개의 클래스를 보여 줍니다.
 
 ```csharp
 public class ArgsProcessor
@@ -224,9 +224,10 @@ public class ArgsActions
 
 ### <a name="multi-dimensional-maps"></a>다차원 맵
 
-여러 인수를 사용하는 인덱서를 만들 수 있습니다. 또한 이러한 인수는 같은 형식으로 제한되지 않습니다. 두 가지 예제를 살펴보겠습니다.   
+여러 인수를 사용하는 인덱서를 만들 수 있습니다. 또한 이러한 인수는 같은 형식으로 제한되지 않습니다. 두 가지 예제를 살펴보겠습니다.
 
-첫 번째 예제는 Mandelbrot 집합의 값을 생성하는 클래스를 보여 줍니다. 집합 뒤의 수학에 대한 자세한 내용은 [이 문서](https://en.wikipedia.org/wiki/Mandelbrot_set)를 참조하세요. 인덱서는 두 개의 double을 사용하여 X, Y 평면의 한 지점을 정의합니다.
+첫 번째 예제는 Mandelbrot 집합의 값을 생성하는 클래스를 보여 줍니다. 집합 뒤의 수학에 대한 자세한 내용은 [이 문서](https://en.wikipedia.org/wiki/Mandelbrot_set)를 참조하세요.
+인덱서는 두 개의 double을 사용하여 X, Y 평면의 한 지점을 정의합니다.
 get 접근자는 한 지점이 집합에 없는 것으로 확인될 때까지 반복 횟수를 계산합니다. 최대 반복 횟수에 도달하면 지점이 집합에 있고 클래스의 maxIterations 값이 반환됩니다. Mandelbrot 집합에 대해 잘 알려진 컴퓨터 생성 이미지는 한 지점이 집합 외부에 있음을 확인하는 데 필요한 반복 횟수의 색을 정의합니다.
 
 ```csharp
@@ -267,9 +268,9 @@ Mandelbrot 집합은 실수 값의 모든 (x, y) 좌표에서 값을 정의합�
 인덱서가 서로 다른 형식의 여러 인수를 사용하는 인덱서의 마지막 사용 방법을 살펴보겠습니다. 기록 온도 데이터를 관리하는 프로그램을 가정합니다. 이 인덱서는 도시 및 날짜를 사용하여 해당 위치의 상한 및 하한 온도를 설정하거나 가져옵니다.
 
 ```csharp
-using DateMeasurements = 
+using DateMeasurements =
     System.Collections.Generic.Dictionary<System.DateTime, IndexersSamples.Common.Measurements>;
-using CityDataMeasurements = 
+using CityDataMeasurements =
     System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<System.DateTime, IndexersSamples.Common.Measurements>>;
 
 public class HistoricalWeatherData
@@ -319,7 +320,8 @@ using DateMeasurements = System.Collections.Generic.Dictionary<System.DateTime, 
 using CityDataMeasurements = System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<System.DateTime, IndexersSamples.Common.Measurements>>;
 ```
 
-두 문은 생성된 제네릭 형식의 *별칭*을 만듭니다. 이러한 문을 통해 나중에 코드에서 `Dictionary<DateTime, Measurements>` 및 `Dictionary<string, Dictionary<DateTime, Measurements> >`의 제네릭 구문이 아니라 더 설명적인 `DateMeasurements` 및 `CityDateMeasurements` 이름을 사용할 수 있습니다. 이 구문의 경우 `=` 기호의 오른쪽에 정규화된 형식 이름을 사용해야 합니다.
+두 문은 생성된 제네릭 형식의 *별칭*을 만듭니다. 이러한 문을 통해 나중에 코드에서 `DateMeasurements` 및 `CityDateMeasurements`의 제네릭 구문이 아니라 더 설명적인 `Dictionary<DateTime, Measurements>` 및 `Dictionary<string, Dictionary<DateTime, Measurements> >` 이름을 사용할 수 있습니다.
+이 구문의 경우 `=` 기호의 오른쪽에 정규화된 형식 이름을 사용해야 합니다.
 
 두 번째 방법은 컬렉션에 인덱싱하는 데 사용되는 `DateTime` 개체의 시간 부분을 제거하는 것입니다. .NET에는 날짜 전용 형식이 포함되어 있지 않습니다.
 개발자는 `DateTime` 형식을 사용하지만 `Date` 속성을 사용하여 해당 날짜의 `DateTime` 개체가 모두 같도록 합니다.

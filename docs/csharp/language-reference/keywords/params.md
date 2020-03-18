@@ -8,12 +8,12 @@ helpviewer_keywords:
 - parameters [C#], params
 - params keyword [C#]
 ms.assetid: 1690815e-b52b-4967-8380-5780aff08012
-ms.openlocfilehash: 90d224080f607cbac96514aaf5ac6d67affef9e0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f462ccc2421fef3ea111d263ec035a701cf04775
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713237"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173551"
 ---
 # <a name="params-c-reference"></a>params(C# 참조)
 
@@ -29,13 +29,13 @@ ms.locfileid: "75713237"
 
 다음 예제에서는 `params` 매개 변수에 인수를 보낼 수 있는 다양한 방법을 보여 줍니다.
 
-[!code-csharp[csrefKeywordsMethodParams#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsMethodParams/CS/csrefKeywordsMethodParams.cs#5)] 
+[!code-csharp[csrefKeywordsMethodParams#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsMethodParams/CS/csrefKeywordsMethodParams.cs#5)]
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

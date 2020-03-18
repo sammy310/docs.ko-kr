@@ -13,12 +13,12 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 247fb222eaacdb5ee60df2dded3a857f0395eb34
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3e6a999d528be111ba2b92886f4e6e3ebf185d5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606576"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173668"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference(C# 컴파일러 옵션)
 **-reference** 옵션을 사용하면 컴파일러가 지정된 파일의 [public](../keywords/public.md) 형식 정보를 현재 프로젝트로 가져오므로 지정된 어셈블리 파일의 메타데이터를 참조할 수 있습니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "69606576"
 ## <a name="remarks"></a>설명  
  둘 이상의 파일에서 가져오려면 각 파일에 대해 **-reference** 옵션을 포함합니다.  
   
- 가져오는 파일에 매니페스트가 포함되어 있어야 합니다. 출력 파일이 [-target:module](./target-module-compiler-option.md) 이외의 [-target](./target-compiler-option.md) 옵션 중 하나로 컴파일된 상태여야 합니다.  
+ 가져오는 파일에 매니페스트가 포함되어 있어야 합니다. 출력 파일이 [-target:module](./target-compiler-option.md) 이외의 [-target](./target-module-compiler-option.md) 옵션 중 하나로 컴파일된 상태여야 합니다.  
   
  **-r**은 **-reference**의 약식입니다.  
   
@@ -61,9 +61,9 @@ ms.locfileid: "69606576"
  자주 사용되는 .NET Framework 어셈블리를 참조하는 csc 지시 파일(.rsp)이 기본적으로 사용됩니다. 컴파일러에서 csc.rsp를 사용하지 않도록 하려면 [-noconfig](./noconfig-compiler-option.md)를 사용합니다.  
   
 > [!NOTE]
-> Visual Studio에서 **참조 추가** 대화 상자를 사용합니다. 자세한 내용은 [방법: 참조 관리자를 사용하여 참조 추가 또는 제거](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager). `-reference`를 사용한 참조 추가와 **참조 추가** 대화 상자를 사용한 참조 추가의 동작이 같도록 하려면 추가하는 어셈블리에 대한 **Interop 형식 포함** 속성을 **False**로 설정합니다. 이 속성의 기본값은 **True**입니다.  
+> Visual Studio에서 **참조 추가** 대화 상자를 사용합니다. 자세한 내용은 [How to: Add or Remove References By Using the Reference Manager](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)를 참조하세요. `-reference`를 사용한 참조 추가와 **참조 추가** 대화 상자를 사용한 참조 추가의 동작이 같도록 하려면 추가하는 어셈블리에 대한 **Interop 형식 포함** 속성을 **False**로 설정합니다. 이 속성의 기본값은 **True**입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 [extern 별칭](../keywords/extern-alias.md) 기능을 사용하는 방법을 보여 줍니다.  
   
  소스 파일을 컴파일하고, 이전에 컴파일된 `grid.dll` 및 `grid20.dll`에서 메타데이터를 가져옵니다. 두 DLL에는 동일한 구성 요소의 서로 다른 버전이 포함되어 있으며, 두 **-reference**를 별칭 옵션과 함께 사용하여 소스 파일을 컴파일합니다. 옵션은 다음과 같습니다.  
@@ -80,16 +80,16 @@ extern alias GridV2;
 // Using statements go here.  
 ```  
   
- 이 작업이 완료되면 다음과 같이 컨트롤 이름 앞에 `GridV1`을 추가하여 `grid.dll`에서 그리드 컨트롤을 참조할 수 있습니다.  
+ 이 작업이 완료되면 다음과 같이 컨트롤 이름 앞에 `grid.dll`을 추가하여 `GridV1`에서 그리드 컨트롤을 참조할 수 있습니다.  
   
 ```csharp  
 GridV1::Grid  
 ```  
   
- 또한, 다음과 같이 컨트롤 이름 앞에 `GridV2`를 추가하여 `grid20.dll`에서 그리드 컨트롤을 참조할 수 있습니다.  
+ 또한, 다음과 같이 컨트롤 이름 앞에 `grid20.dll`를 추가하여 `GridV2`에서 그리드 컨트롤을 참조할 수 있습니다.  
   
 ```csharp  
-GridV2::Grid   
+GridV2::Grid
 ```  
   
 ## <a name="see-also"></a>참고 항목

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 30ee13a4174a137481fbcd36ccef721958b94a12
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 92e94d6fe1c07ab5cd8f29d040401a737a1db78e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450858"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173655"
 ---
 # <a name="async-c-reference"></a>async(C# 참조)
 
@@ -46,7 +46,7 @@ Visual Studio에서 이 코드를 WPF(Windows Presentation Foundation) 앱 또�
 ```xaml
 <Button Content="Button" HorizontalAlignment="Left" Margin="88,77,0,0" VerticalAlignment="Top" Width="75"  
         Click="StartButton_Click" Name="StartButton"/>  
-<TextBox HorizontalAlignment="Left" Height="137" Margin="88,140,0,0" TextWrapping="Wrap"   
+<TextBox HorizontalAlignment="Left" Height="137" Margin="88,140,0,0" TextWrapping="Wrap"
          Text="&lt;Enter a URL&gt;" VerticalAlignment="Top" Width="310" Name="ResultsTextBox"/>  
 ```
   
@@ -64,7 +64,7 @@ Visual Studio에서 이 코드를 WPF(Windows Presentation Foundation) 앱 또�
 [!code-csharp[wpf-async](../../../../samples/snippets/csharp/language-reference/keywords/async/wpf/mainwindow.xaml.cs#1)]
   
 > [!IMPORTANT]
-> 작업 및 작업 완료를 기다리는 동안 실행되는 코드에 대한 자세한 내용은 [async 및 await를 사용한 비동기 프로그래밍](../../programming-guide/concepts/async/index.md)을 참조하세요. 비슷한 요소를 사용하는 전체 WPF 예제를 보려면 [연습: Async 및 Await를 사용하여 웹에 액세스](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)를 참조하세요.  
+> 작업 및 작업 완료를 기다리는 동안 실행되는 코드에 대한 자세한 내용은 [async 및 await를 사용한 비동기 프로그래밍](../../programming-guide/concepts/async/index.md)을 참조하세요. 비슷한 요소를 사용하는 전체 WPF 예제에 대해서는 [연습: Async 및 Await를 사용하여 웹에 액세스](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)를 참조하세요.  
   
 ## <a name="return-types"></a>반환 형식  
 비동기 메서드의 반환 형식은 다음과 같을 수 있습니다.
@@ -72,19 +72,19 @@ Visual Studio에서 이 코드를 WPF(Windows Presentation Foundation) 앱 또�
 - <xref:System.Threading.Tasks.Task>
 - <xref:System.Threading.Tasks.Task%601>
 - [void](../builtin-types/void.md). `async void` 메서드는 호출자가 `await` 해당 메서드를 사용할 수 없으며 성공적으로 완료 또는 오류 조건을 보고하는 다른 메커니즘을 구현해야 하기 때문에 이벤트 처리기 이외의 코드에 대해 일반적으로 사용되지 않습니다.
-- C# 7.0부터 액세스 가능한 `GetAwaiter` 메서드가 있는 모든 형식. `System.Threading.Tasks.ValueTask<TResult>` 형식은 이러한 구현 중 하나입니다. NuGet 패키지 `System.Threading.Tasks.Extensions`를 추가하면 사용할 수 있습니다. 
+- C# 7.0부터 액세스 가능한 `GetAwaiter` 메서드가 있는 모든 형식. `System.Threading.Tasks.ValueTask<TResult>` 형식은 이러한 구현 중 하나입니다. NuGet 패키지 `System.Threading.Tasks.Extensions`를 추가하면 사용할 수 있습니다.
 
 비동기 메서드는 모든 [in](./in-parameter-modifier.md), [ref](./ref.md) 또는 [out](./out-parameter-modifier.md) 매개 변수를 선언할 수 없고 [참조 반환 값](../../programming-guide/classes-and-structs/ref-returns.md)을 가질 수도 없지만, 이러한 매개 변수가 있는 메서드를 호출할 수는 있습니다.  
   
-메서드의 [return](./return.md) 문에서 `TResult` 형식의 피연산자를 지정할 경우 비동기 메서드의 반환 형식으로 `Task<TResult>`를 지정합니다. 메서드가 완료되었을 때 의미 있는 값이 반환되지 않을 경우 `Task`를 사용합니다. 즉, 이 메서드를 호출하면 `Task`가 반환되지만 `Task`가 완료되면 `await`를 기다리는 모든 `Task` 식이 `void`가 됩니다.  
+메서드의 `Task<TResult>`return[ 문에서 ](./return.md) 형식의 피연산자를 지정할 경우 비동기 메서드의 반환 형식으로 `TResult`를 지정합니다. 메서드가 완료되었을 때 의미 있는 값이 반환되지 않을 경우 `Task`를 사용합니다. 즉, 이 메서드를 호출하면 `Task`가 반환되지만 `Task`가 완료되면 `await`를 기다리는 모든 `Task` 식이 `void`가 됩니다.  
   
 `void` 반환 형식은 주로 해당 반환 형식이 필요한 이벤트 처리기를 정의할 때 사용합니다. `void` 반환 비동기 메서드의 호출자는 기다릴 수 없으므로 메서드가 throw하는 예외를 catch할 수 없습니다.  
 
-C# 7.0부터 `GetAwaiter` 메서드가 있는 다른 형식(일반적으로 값 형식)을 반환하여 성능이 중요한 코드 섹션에서 메모리 할당을 최소화합니다. 
+C# 7.0부터 `GetAwaiter` 메서드가 있는 다른 형식(일반적으로 값 형식)을 반환하여 성능이 중요한 코드 섹션에서 메모리 할당을 최소화합니다.
 
 자세한 내용과 예제는 [비동기 반환 형식](../../programming-guide/concepts/async/async-return-types.md)을 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>
 - [await](../operators/await.md)

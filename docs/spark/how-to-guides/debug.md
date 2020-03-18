@@ -4,12 +4,12 @@ description: Windows에서 .NET for Apache Spark 애플리케이션을 디버그
 ms.date: 01/29/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 25f5291c47dc1cdf2668cb077fae7439e330cc1c
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: dac6aed1f7faba7f07b722a6dac0da930ab9ec66
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919933"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79185804"
 ---
 # <a name="debug-a-net-for-apache-spark-application"></a>.NET for Apache Spark 애플리케이션 디버그
 
@@ -63,7 +63,7 @@ if (EnvironmentUtils.GetEnvironmentVariableAsBool("DOTNET_WORKER_DEBUG"))
 
 `F5`를 눌러 애플리케이션을 계속하면 중단점이 결국 적중됩니다.
 
-> [!NOTE] 
+> [!NOTE]
 > 각 작업에 대해 Just-In-Time 디버거 선택 창이 팝업됩니다. 지나치게 많은 팝업을 방지하려면 실행기 수를 낮은 수로 설정하세요. 예를 들어 spark-submit의 **--master local[1]** 옵션을 사용하여 작업 수를 1로 설정하면 단일 디버거 인스턴스만 시작됩니다.
 
 ## <a name="debug-scala-code"></a>Scala 코드 디버그

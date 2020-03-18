@@ -5,10 +5,10 @@ helpviewer_keywords:
 - command-line arguments [C#], displaying
 ms.assetid: b8479f2d-9e05-4d38-82da-2e61246e5437
 ms.openlocfilehash: 210dad71220572535a0325fac925b0453b0d4e03
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712028"
 ---
 # <a name="how-to-display-command-line-arguments-c-programming-guide"></a>명령줄 인수를 표시하는 방법(C# 프로그래밍 가이드)
@@ -28,7 +28,7 @@ ms.locfileid: "75712028"
   
  [!code-csharp[csProgGuideMain#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#9)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [csc.exe를 사용한 명령줄 빌드](../../language-reference/compiler-options/command-line-building-with-csc-exe.md)

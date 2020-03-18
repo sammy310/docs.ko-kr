@@ -7,10 +7,10 @@ helpviewer_keywords:
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
 ms.openlocfilehash: 16974db950a3a460416cfb917147439707e1d007
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635446"
 ---
 # <a name="how-to-create-a-key-in-the-registry-c-programming-guide"></a>레지스트리에 키를 만드는 방법(C# 프로그래밍 가이드)
@@ -49,13 +49,13 @@ key.Close();
 - 레지스트리 키가 읽기 전용인 경우  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
- 로컬 컴퓨터(`Microsoft.Win32.Registry.LocalMachine`)보다 사용자 폴더(`Microsoft.Win32.Registry.CurrentUser`)에 데이터를 쓰는 것이 더 안전합니다.  
+ 로컬 컴퓨터(`Microsoft.Win32.Registry.CurrentUser`)보다 사용자 폴더(`Microsoft.Win32.Registry.LocalMachine`)에 데이터를 쓰는 것이 더 안전합니다.  
   
  레지스트리 값을 만들 때 해당 값이 이미 있는 경우 수행할 작업을 결정해야 합니다. 다른 악성 프로세스에서 값을 이미 만들고 액세스했을 수도 있습니다. 레지스트리 값에 데이터를 넣으면 다른 프로세스에서 해당 데이터를 사용할 수 있습니다. 이를 방지하려면 `Overload:Microsoft.Win32.RegistryKey.GetValue` 메서드를 재정의합니다. 키가 아직 없는 경우 null이 반환됩니다.  
   
  레지스트리 키가 ACL(액세스 제어 목록)로 보호된 경우에도 암호 등을 레지스트리에 일반 텍스트로 저장하는 것은 안전하지 않습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.IO?displayProperty=nameWithType>
 - [C# 프로그래밍 가이드](../index.md)

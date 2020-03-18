@@ -10,10 +10,10 @@ helpviewer_keywords:
 - .NET Framework Client Profile
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
 ms.openlocfilehash: 32fc29500a8a2e95b52ba16847020cdb390caceb
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716565"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
@@ -25,9 +25,9 @@ ms.locfileid: "75716565"
   
  .NET Framework 4.5를 설치한 경우 .NET Framework 4 Client Profile은 .NET Framework의 정식 버전으로 업데이트됩니다. .NET Framework 4.5 설치에 대한 자세한 내용은 [개발자용 .NET Framework 설치](../install/guide-for-developers.md)를 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [.NET Framework 클라이언트 프로필(.NET Framework 4)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29)
 - [Visual Studio 멀티 타기팅 개요](/visualstudio/ide/visual-studio-multi-targeting-overview)
 - [.NET Framework 타기팅 오류 문제 해결](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)
-- [방법: .NET Framework 버전 대상 지정](/visualstudio/ide/visual-studio-multi-targeting-overview)
+- [방법: 한 버전의 .NET Framework를 대상으로 지정](/visualstudio/ide/visual-studio-multi-targeting-overview)

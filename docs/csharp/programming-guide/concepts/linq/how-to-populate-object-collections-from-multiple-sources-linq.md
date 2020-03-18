@@ -3,10 +3,10 @@ title: 여러 소스로 개체 컬렉션을 채우는 방법(LINQ)(C#)
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
 ms.openlocfilehash: 3d841e5ca25afde94674af0fedc9a824c382be5b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345751"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>여러 소스로 개체 컬렉션을 채우는 방법(LINQ)(C#)
@@ -139,7 +139,7 @@ foreach (var student in queryNamesScores2)
 }
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [LINQ 및 문자열(C#)](./linq-and-strings.md)
 - [개체 이니셜라이저 및 컬렉션 이니셜라이저](../../classes-and-structs/object-and-collection-initializers.md)

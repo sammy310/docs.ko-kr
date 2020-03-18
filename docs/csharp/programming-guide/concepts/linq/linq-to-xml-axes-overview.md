@@ -3,10 +3,10 @@ title: LINQ to XML 축 개요(C#)
 ms.date: 07/20/2015
 ms.assetid: 516792fb-461d-40a8-8a50-9993a51258fc
 ms.openlocfilehash: c8b64731925f37d54bded62fae4ccae9933ffbe9
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635524"
 ---
 # <a name="linq-to-xml-axes-overview-c"></a>LINQ to XML 축 개요(C#)
@@ -16,7 +16,7 @@ XML 트리를 만들거나 XML 문서를 XML 트리에 로드한 후 XML 트리�
   
  컬렉션을 반환하는 축 메서드 외에도 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리에서 일반적으로 사용하는 두 메서드가 있습니다. <xref:System.Xml.Linq.XContainer.Element%2A> 메서드는 단일 <xref:System.Xml.Linq.XElement>를 반환합니다. <xref:System.Xml.Linq.XElement.Attribute%2A> 메서드는 단일 <xref:System.Xml.Linq.XAttribute>를 반환합니다.  
   
- LINQ 쿼리는 트리를 검사하고, 트리에서 데이터를 추출하고, 트리를 변환하는 가장 강력한 방법을 여러 용도에 제공합니다. LINQ 쿼리는 <xref:System.Collections.Generic.IEnumerable%601>를 구현하는 개체에 대해 작동하며 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 축은 <xref:System.Xml.Linq.XElement> 컬렉션의 <xref:System.Collections.Generic.IEnumerable%601>와 <xref:System.Xml.Linq.XAttribute> 컬렉션의 <xref:System.Collections.Generic.IEnumerable%601>를 반환합니다. 쿼리를 수행하려면 이러한 컬렉션이 필요합니다.  
+ LINQ 쿼리는 트리를 검사하고, 트리에서 데이터를 추출하고, 트리를 변환하는 가장 강력한 방법을 여러 용도에 제공합니다. LINQ 쿼리는 <xref:System.Collections.Generic.IEnumerable%601>를 구현하는 개체에 대해 작동하며 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 축은 <xref:System.Collections.Generic.IEnumerable%601> 컬렉션의 <xref:System.Xml.Linq.XElement>와 <xref:System.Collections.Generic.IEnumerable%601> 컬렉션의 <xref:System.Xml.Linq.XAttribute>를 반환합니다. 쿼리를 수행하려면 이러한 컬렉션이 필요합니다.  
   
  요소와 특성의 컬렉션을 검색하는 축 메서드 외에도 트리를 매우 자세히 반복하는 데 사용할 수 있는 축 메서드가 있습니다. 예를 들어, 요소와 특성을 처리하는 대신 트리의 노드로 작업할 수 있습니다. 노드는 요소와 특성보다 세부적인 단위입니다. 노드로 작업할 때 XML 주석, 텍스트 노드, 처리 명령 등을 검사할 수 있습니다. 이 기능은 워드 프로세서를 작성 중인 사용자가 문서를 XML로 저장하려는 경우 등에 중요합니다. 그러나 XML 프로그래머의 대다수는 요소, 특성 및 해당 값에 주로 관심이 있습니다.  
   
@@ -54,6 +54,6 @@ XML 트리를 만들거나 XML 문서를 XML 트리에 로드한 후 XML 트리�
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>|지정된 <xref:System.Xml.Linq.XAttribute>을 가진 <xref:System.Xml.Linq.XName>를 반환합니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [LINQ to XML 축(C#)](linq-to-xml-axes-overview.md)

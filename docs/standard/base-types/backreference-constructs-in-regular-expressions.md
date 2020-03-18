@@ -13,10 +13,10 @@ helpviewer_keywords:
 - regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
 ms.openlocfilehash: 905578d763ebe5d5b8eb96a9056fbe11fbfab137
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711534"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>정규식의 역참조 구문
@@ -87,7 +87,7 @@ ms.locfileid: "75711534"
 [!code-csharp[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference3.cs#3)]
 [!code-vb[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference3.vb#3)]
 
-*이름*이 숫자의 문자열 표현이고 해당 이름을 가 진 캡처링 그룹이 없는 경우 `\k<`*이름*`>`은 역참조 `\` *숫자*와 같습니다. 여기서 *번호*는 캡처의 서수 위치입니다. 다음 예제에는 `char`라는 단일 캡처링 그룹이 있습니다. 역참조 구문은 `\k<1>`로 참조합니다. 예제의 출력이 표시한 대로 `char`가 첫 번째 캡처링 그룹이기 때문에 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>에 대한 호출이 성공합니다.
+*이름*이 숫자의 문자열 표현이고 해당 이름을 가 진 캡처링 그룹이 없는 경우 `\k<`*이름*`>`은 역참조 `\` *숫자*와 같습니다. 여기서 *번호*는 캡처의 서수 위치입니다. 다음 예제에는 `char`라는 단일 캡처링 그룹이 있습니다. 역참조 구문은 `\k<1>`로 참조합니다. 예제의 출력이 표시한 대로 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>가 첫 번째 캡처링 그룹이기 때문에 `char`에 대한 호출이 성공합니다.
 
 [!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference6.cs)]
 [!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference6.vb)]
@@ -136,6 +136,6 @@ ms.locfileid: "75711534"
 [!code-csharp[RegularExpressions.Language.Backreferences#5](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference5.cs#5)]
 [!code-vb[RegularExpressions.Language.Backreferences#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference5.vb#5)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [정규식 언어 - 빠른 참조](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

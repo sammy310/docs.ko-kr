@@ -4,12 +4,12 @@ description: Windows, MacOS 및 Ubuntu에서 .NET Core를 사용하여 .NET for 
 ms.date: 01/31/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 018c21804bf942233e07039281d7ec22a6bef763
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 7375c385245a05d7dc29d5df89d875bf6cb4141a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77092319"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187548"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>자습서: .NET for Apache Spark 시작
 
@@ -121,7 +121,7 @@ Microsoft.Spark.Worker 압축을 풀려면:
 
 **Windows**에서 [새 환경 변수](https://www.java.com/en/download/help/path.xml) `DOTNET_WORKER_DIR`을 만들고 Microsoft.Spark.Worker(예: `C:\bin\Microsoft.Spark.Worker\`)를 다운로드하여 추출한 디렉터리로 설정합니다.
 
-**MacOS**에서 `export DOTNET_WORKER_DIR <your_path>`을 사용하여 새 환경 변수를 만들고 Microsoft.Spark.Worker(예: *~/bin/Microsoft.Spark.Worker/* )를 다운로드하여 추출한 디렉터리로 설정합니다. 
+**MacOS**에서 `export DOTNET_WORKER_DIR <your_path>`을 사용하여 새 환경 변수를 만들고 Microsoft.Spark.Worker(예: *~/bin/Microsoft.Spark.Worker/* )를 다운로드하여 추출한 디렉터리로 설정합니다.
 
 **Ubuntu**에서 [새 환경 변수](https://help.ubuntu.com/community/EnvironmentVariables) `DOTNET_WORKER_DIR`을 만들고 Microsoft.Spark.Worker(예: *~/bin/Microsoft.Spark.Worker*)를 다운로드하여 추출한 디렉터리로 설정합니다.
 

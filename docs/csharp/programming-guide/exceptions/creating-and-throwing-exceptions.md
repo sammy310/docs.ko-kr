@@ -8,14 +8,14 @@ helpviewer_keywords:
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
 ms.openlocfilehash: f775a0917560a219f24329adcb1542f605d47dc2
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712301"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>예외 만들기 및 Throw(C# 프로그래밍 가이드)
-예외는 프로그램을 실행하는 동안 오류가 발생했음을 나타내는 데 사용됩니다. 오류를 설명하는 예외 개체가 만들어지고 [throw](../../language-reference/keywords/throw.md) 키워드를 통해 *throw*됩니다. 그런 다음 런타임에 가장 호환성이 높은 예외 처리기를 검색합니다.  
+예외는 프로그램을 실행하는 동안 오류가 발생했음을 나타내는 데 사용됩니다. 오류를 설명하는 예외 개체가 만들어지고 *throw* 키워드를 통해 [throw](../../language-reference/keywords/throw.md)됩니다. 그런 다음 런타임에 가장 호환성이 높은 예외 처리기를 검색합니다.  
   
  프로그래머는 다음 조건 중 하나 이상에 해당할 경우 예외를 throw해야 합니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "75712301"
 - 릴리스 모드가 아닌 디버그 모드에서 throw될 수 있는 예외를 만들지 마세요. 개발 단계에서 런타임 오류를 식별하려면 대신 디버그 어설션을 사용하세요.  
   
 ## <a name="defining-exception-classes"></a>예외 클래스 정의  
- 프로그램에서는 <xref:System> 네임스페이스의 미리 정의된 예외 클래스를 throw하거나(이전에 언급한 위치 제외) <xref:System.Exception>에서 파생시켜 자체 예외 클래스를 만들 수 있습니다. 파생 클래스는 매개 변수 없는 생성자, 메시지 속성을 설정하는 생성자, <xref:System.Exception.Message%2A> 및 <xref:System.Exception.InnerException%2A> 속성을 설정하는 생성자 두 개를 포함하여 네 개 이상의 생성자를 정의해야 합니다. 네 번째 생성자는 예외를 serialize하는 데 사용됩니다. 새 예외 클래스는 serialize할 수 있어야 합니다. 예:  
+ 프로그램에서는 <xref:System> 네임스페이스의 미리 정의된 예외 클래스를 throw하거나(이전에 언급한 위치 제외) <xref:System.Exception>에서 파생시켜 자체 예외 클래스를 만들 수 있습니다. 파생 클래스는 매개 변수 없는 생성자, 메시지 속성을 설정하는 생성자, <xref:System.Exception.Message%2A> 및 <xref:System.Exception.InnerException%2A> 속성을 설정하는 생성자 두 개를 포함하여 네 개 이상의 생성자를 정의해야 합니다. 네 번째 생성자는 예외를 serialize하는 데 사용됩니다. 새 예외 클래스는 serialize할 수 있어야 합니다. 예들 들어 다음과 같습니다.  
   
  [!code-csharp[csProgGuideExceptions#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#15)]  
   
@@ -63,9 +63,9 @@ ms.locfileid: "75712301"
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
 
-자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)의 [예외](~/_csharplang/spec/exceptions.md) 및 [throw 문](~/_csharplang/spec/statements.md#the-throw-statement)을 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/exceptions.md)의 [예외](~/_csharplang/spec/statements.md#the-throw-statement) 및 [throw 문](/dotnet/csharp/language-reference/language-specification/introduction)을 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [예외 및 예외 처리](./index.md)

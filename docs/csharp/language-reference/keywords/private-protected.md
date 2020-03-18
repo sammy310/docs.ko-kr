@@ -3,10 +3,10 @@ title: private protected - C# 참조
 ms.date: 11/15/2017
 author: sputier
 ms.openlocfilehash: a73d61712075cf24d2b94c505104df1fade629e9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713211"
 ---
 # <a name="private-protected-c-reference"></a>private protected (C# Reference)
@@ -59,8 +59,8 @@ class DerivedClass2 : BaseClass
 ```
 
 이 예제에는 `Assembly1.cs` 및 `Assembly2.cs`의 두 파일이 포함되어 있습니다.
-첫 번째 파일은 공용 기본 클래스인 `BaseClass`를 포함하고 여기에서 파생된 형식인 `DerivedClass1`을 포함합니다. `BaseClass`는 `DerivedClass1`이 두 가지 방법으로 액세스를 시도하는 private protected 멤버인 `myValue`를 소유합니다. `BaseClass`의 인스턴스를 통한 `myValue` 액세스의 첫 번째 시도는 오류를 생성합니다. 그러나 `DerivedClass1`에서 상속된 멤버로 사용하려는 시도는 성공합니다.
-두 번째 파일에서 `DerivedClass2`의 상속된 멤버로 `myValue`에 액세스하는 시도는 Assembly1에서 파생된 형식으로만 액세스할 수 있으므로 오류를 생성합니다.
+첫 번째 파일은 공용 기본 클래스인 `BaseClass`를 포함하고 여기에서 파생된 형식인 `DerivedClass1`을 포함합니다. `BaseClass`는 `myValue`이 두 가지 방법으로 액세스를 시도하는 private protected 멤버인 `DerivedClass1`를 소유합니다. `myValue`의 인스턴스를 통한 `BaseClass` 액세스의 첫 번째 시도는 오류를 생성합니다. 그러나 `DerivedClass1`에서 상속된 멤버로 사용하려는 시도는 성공합니다.
+두 번째 파일에서 `myValue`의 상속된 멤버로 `DerivedClass2`에 액세스하는 시도는 Assembly1에서 파생된 형식으로만 액세스할 수 있으므로 오류를 생성합니다.
 
 구조체를 상속할 수 없기 때문에 구조체 멤버는 `private protected`일 수 없습니다.  
 
@@ -68,7 +68,7 @@ class DerivedClass2 : BaseClass
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

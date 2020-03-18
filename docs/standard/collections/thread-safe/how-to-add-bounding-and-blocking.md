@@ -1,18 +1,18 @@
 ---
-title: '방법: 컬렉션에 경계 지정 및 차단 기능 추가'
+title: '방법: 컬렉션에 한계 지정 및 차단 기능 추가'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, custom blocking collections
 ms.assetid: 4c2492de-3876-4873-b5a1-000bb404d770
 ms.openlocfilehash: 33c0b5a93a9c63e3e743a04e69bb7353ac69fa8a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711287"
 ---
-# <a name="how-to-add-bounding-and-blocking-functionality-to-a-collection"></a>방법: 컬렉션에 경계 지정 및 차단 기능 추가
+# <a name="how-to-add-bounding-and-blocking-functionality-to-a-collection"></a>방법: 컬렉션에 한계 지정 및 차단 기능 추가
 이 예제에서는 클래스에서 <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType> 인터페이스를 구현한 다음, 클래스 인스턴스를 <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>의 내부 스토리지 메커니즘으로 사용하여 사용자 지정 컬렉션 클래스에 한계 지정 및 차단 기능을 추가하는 방법을 보여 줍니다. 한계 지정 및 차단에 대한 자세한 내용은 [BlockingCollection 개요](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)를 참조하십시오.  
   
 ## <a name="example"></a>예제  
@@ -26,6 +26,6 @@ ms.locfileid: "75711287"
   
  기본적으로 <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>의 스토리지는 <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType>입니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [스레드로부터 안전한 컬렉션](../../../../docs/standard/collections/thread-safe/index.md)

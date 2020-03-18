@@ -6,10 +6,10 @@ ms.date: 08/20/2019
 ms.technology: dotnet-standard
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
 ms.openlocfilehash: 4cf6522d66d7a1efccde45078768a773db6e6cb0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711586"
 ---
 # <a name="net-assembly-file-format"></a>.NET 어셈블리 파일 형식
@@ -24,7 +24,7 @@ ms.locfileid: "75711586"
 
 .NET 어셈블리 형식은 지정된 프로그램 또는 라이브러리의 구조에 대해 매우 설명적이기도 합니다. 어셈블리의 내부 구성 요소, 특히 정의된 어셈블리 참조 및 형식과 해당 내부 구조를 설명합니다. 도구 또는 API는 표시하거나 프로그래밍 방식으로 결정을 내리기 위해 이 정보를 읽고 처리할 수 있습니다.
 
-## <a name="format"></a>서식
+## <a name="format"></a>형식
 
 .NET 이진 형식은 Windows [PE 파일](https://en.wikipedia.org/wiki/Portable_Executable) 형식을 기반으로 합니다. 실제로 .NET 클래스 라이브러리는 규칙에 부합되는 Windows PE이며, 처음에는 Windows DLL(동적 연결 라이브러리) 또는 EXE(애플리케이션 실행 파일)처럼 보입니다. 이는 Windows에서 매우 유용한 특성으로, 네이티브 실행 이진 파일로 가장하고 동일한 처리 중 일부(예: OS 로드, PE 도구)를 얻을 수 있습니다.
 

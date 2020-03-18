@@ -3,10 +3,10 @@ title: 로깅 및 추적 - .NET Core
 description: .NET Core 로깅 및 추적에 대해 간략히 설명합니다.
 ms.date: 08/05/2019
 ms.openlocfilehash: 392b88c9ea3c31c919a605ac0a5c886f7d63f79a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714419"
 ---
 # <a name="net-core-logging-and-tracing"></a>.NET Core 로깅 및 추적
@@ -42,7 +42,7 @@ ms.locfileid: "75714419"
 - <xref:System.Diagnostics.Debug?displayProperty=nameWithType>
   - `DEBUG`가 정의된 경우에만 사용하도록 설정됩니다.
   - 연결된 디버거에 씁니다.
-  - `COMPlus_DebugWriteToStdErr`가 설정된 경우 `*nix`에서 stderr에 씁니다.
+  - `*nix`가 설정된 경우 `COMPlus_DebugWriteToStdErr`에서 stderr에 씁니다.
   - 디버그 빌드에서만 사용하도록 설정될 로그를 만드는 경우 이 API를 사용합니다.
 
 ### <a name="logging-events"></a>이벤트 로깅
@@ -87,7 +87,7 @@ ms.locfileid: "75714419"
 
 - [방법: 추적 및 디버그를 사용한 조건부 컴파일](../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
 
-- [방법: 애플리케이션 코드에 추적 문 추가](../../framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [방법: 애플리케이션 코드에 Trace 문 추가](../../framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 
 - [ASP.NET 로깅](/aspnet/core/fundamentals/logging)은 지원하는 로깅 기술에 대해 간략히 설명합니다.
 

@@ -5,12 +5,12 @@ ms.topic: reference
 ms.date: 02/27/2020
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 866fd5a90d13f85f2f8a1aa45ff0e1efb0096642
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: a19e13955d0eaea344109eb817f3a3959c3dd883
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159301"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79185817"
 ---
 # <a name="model-builder-azure-training-resources"></a>모델 작성기 Azure 학습 리소스
 
@@ -28,7 +28,7 @@ Azure Machine Learning 실험은 Azure에서 모델 작성기 학습을 실행�
 
 Azure Machine Learning 작업 영역을 만들려면 다음이 필요합니다.
 
-- 이름: 3~33자 길이의 작업 영역 이름입니다. 이름은 영숫자 문자와 하이픈만 포함할 수 있습니다. 
+- 이름: 3~33자 길이의 작업 영역 이름입니다. 이름은 영숫자 문자와 하이픈만 포함할 수 있습니다.
 - 지역: 작업 영역 및 리소스가 배포되는 데이터 센터의 지리적 위치입니다. 귀하 또는 귀하의 고객이 있는 위치와 가까운 위치를 선택하는 것이 좋습니다.
 - 리소스 그룹: Azure 솔루션의 모든 관련 리소스를 포함하는 컨테이너입니다.
 

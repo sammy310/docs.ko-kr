@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /d compiler option [C#]
 - d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
-ms.openlocfilehash: cb9de387b319ff4b81dcd1ccc37f04d8b6b3123a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4a3622b6acc8ebe9c590b01b67074ae59396fc34
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924789"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173746"
 ---
 # <a name="-define-c-compiler-options"></a>-define(C# 컴파일러 옵션)
 **-define** 옵션은 프로그램의 모든 소스 코드 파일에서 `name`을 기호로 정의합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "69924789"
   
  **-d**는 **-define**의 약식 형태입니다.  
   
- 세미콜론 또는 쉼표를 사용해서 기호 이름을 구분하여 **-define**으로 여러 기호를 정의할 수 있습니다. 예:  
+ 세미콜론 또는 쉼표를 사용해서 기호 이름을 구분하여 **-define**으로 여러 기호를 정의할 수 있습니다. 예들 들어 다음과 같습니다.  
   
 ```console  
 -define:DEBUG;TUESDAY  
@@ -57,7 +57,7 @@ ms.locfileid: "69924789"
   
  이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DefineConstants%2A>을 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```csharp  
 // preprocessor_define.cs  
@@ -65,11 +65,11 @@ ms.locfileid: "69924789"
 // or uncomment the next line  
 // #define xx  
 using System;  
-public class Test   
+public class Test
 {  
-    public static void Main()   
+    public static void Main()
     {  
-        #if (xx)   
+        #if (xx)
             Console.WriteLine("xx defined");  
         #else  
             Console.WriteLine("xx not defined");  

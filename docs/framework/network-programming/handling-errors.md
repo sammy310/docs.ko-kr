@@ -31,18 +31,18 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: 7084c4579dd5fca0075c7516754195f7cea9e27c
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f5be5d8e14d7aa2d98009fc10c9cce314e745ed1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458045"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180867"
 ---
 # <a name="handling-errors"></a>오류 처리
 
-<xref:System.Net.WebRequest> 및 <xref:System.Net.WebResponse> 클래스는 시스템 예외(예: <xref:System.ArgumentException>) 및 웹 관련 예외(<xref:System.Net.WebRequest.GetResponse%2A> 메서드에서 throw된 <xref:System.Net.WebException>)를 둘 다 throw합니다.  
+<xref:System.Net.WebRequest> 및 <xref:System.Net.WebResponse> 클래스는 시스템 예외(예: <xref:System.ArgumentException>) 및 웹 관련 예외(<xref:System.Net.WebException> 메서드에서 throw된 <xref:System.Net.WebRequest.GetResponse%2A>)를 둘 다 throw합니다.  
   
-각 **WebException**에는 <xref:System.Net.WebExceptionStatus> 열거형의 값을 포함하는 <xref:System.Net.WebException.Status%2A> 속성이 포함됩니다. **Status** 속성을 검사하여 발생한 오류를 확인하고 적절한 단계를 수행하여 오류를 해결할 수 있습니다.  
+각 **WebException**에는 <xref:System.Net.WebException.Status%2A> 열거형의 값을 포함하는 <xref:System.Net.WebExceptionStatus> 속성이 포함됩니다. **Status** 속성을 검사하여 발생한 오류를 확인하고 적절한 단계를 수행하여 오류를 해결할 수 있습니다.  
   
 다음 표에서는 **Status** 속성의 가능한 값을 설명합니다.  
   
@@ -72,19 +72,19 @@ ms.locfileid: "73458045"
 다음 예제에서는 **WebException**을 catch하는 방법을 보여 줍니다.  
   
 ```csharp  
-try   
+try
 {  
     // Create a request instance.  
-    WebRequest myRequest =   
+    WebRequest myRequest =
     WebRequest.Create("http://www.contoso.com");  
     // Get the response.  
     WebResponse myResponse = myRequest.GetResponse();  
-    //Get a readable stream from the server.   
+    //Get a readable stream from the server.
     Stream sr = myResponse.GetResponseStream();  
   
     //Read from the stream and write any data to the console.  
     bytesread = sr.Read( myBuffer, 0, length);  
-    while( bytesread > 0 )   
+    while( bytesread > 0 )
     {  
         for (int i=0; i<bytesread; i++) {  
             Console.Write( "{0}", myBuffer[i]);  
@@ -95,7 +95,7 @@ try
     sr.Close();  
     myResponse.Close();  
 }  
-catch (WebException webExcp)   
+catch (WebException webExcp)
 {  
     // If you reach this point, an exception has been caught.  
     Console.WriteLine("A WebException has been caught.");  
@@ -103,8 +103,8 @@ catch (WebException webExcp)
     Console.WriteLine(webExcp.ToString());  
     // Get the WebException status code.  
     WebExceptionStatus status =  webExcp.Status;  
-    // If status is WebExceptionStatus.ProtocolError,   
-    //   there has been a protocol error and a WebResponse   
+    // If status is WebExceptionStatus.ProtocolError,
+    //   there has been a protocol error and a WebResponse
     //   should exist. Display the protocol error.  
     if (status == WebExceptionStatus.ProtocolError) {  
         Console.Write("The server returned protocol error ");  
@@ -114,7 +114,7 @@ catch (WebException webExcp)
            + httpResponse.StatusCode);  
     }  
 }  
-catch (Exception e)   
+catch (Exception e)
 {  
     // Code to catch other exceptions goes here.  
 }  
@@ -126,10 +126,10 @@ Try
     Dim myRequest As WebRequest = WebRequest.Create("http://www.contoso.com")  
     ' Get the response.  
     Dim myResponse As WebResponse = myRequest.GetResponse()  
-    'Get a readable stream from the server.   
+    'Get a readable stream from the server.
     Dim sr As Stream = myResponse.GetResponseStream()  
   
-    Dim i As Integer      
+    Dim i As Integer
     'Read from the stream and write any data to the console.  
     bytesread = sr.Read(myBuffer, 0, length)  
     While bytesread > 0  
@@ -148,8 +148,8 @@ Catch webExcp As WebException
     Console.WriteLine(webExcp.ToString())  
     ' Get the WebException status code.  
     Dim status As WebExceptionStatus = webExcp.Status  
-    ' If status is WebExceptionStatus.ProtocolError,   
-    '   there has been a protocol error and a WebResponse   
+    ' If status is WebExceptionStatus.ProtocolError,
+    '   there has been a protocol error and a WebResponse
     '   should exist. Display the protocol error.  
     If status = WebExceptionStatus.ProtocolError Then  
         Console.Write("The server returned protocol error ")  

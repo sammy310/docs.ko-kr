@@ -11,12 +11,12 @@ helpviewer_keywords:
 - request cache policies
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
-ms.openlocfilehash: 150198c2bda220e4b37981e461e19b8e4e30e483
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6fe569e781b005461ea41e3d6b90859666f9601a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048130"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180773"
 ---
 # <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>방법: 애플리케이션에 대해 위치 기반 캐시 정책 설정
 위치 기반 캐시 정책을 사용하면 애플리케이션이 요청된 리소스의 위치를 기반으로 캐싱 동작을 명시적으로 정의할 수 있습니다. 이 항목에서는 캐시 정책을 프로그래밍 방식으로 설정하는 방법을 보여 줍니다. 구성 파일을 사용하여 애플리케이션에 대한 정책을 설정하는 방법에 대한 자세한 내용은 [\<requestCaching&gt; 요소(네트워크 설정)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)를 참조하세요.  
@@ -55,7 +55,7 @@ ms.locfileid: "71048130"
     ```csharp  
     public static void DoNotUseCache()  
     {  
-    HttpRequestCachePolicy policy = new HttpRequestCachePolicy   
+    HttpRequestCachePolicy policy = new HttpRequestCachePolicy
             (HttpRequestCacheLevel.NoCacheNoStore);  
         HttpWebRequest.DefaultCachePolicy = policy;  
     }  
@@ -76,7 +76,7 @@ ms.locfileid: "71048130"
     ```csharp  
     public static void OnlyUseCache()  
     {  
-        HttpRequestCachePolicy policy = new HttpRequestCachePolicy   
+        HttpRequestCachePolicy policy = new HttpRequestCachePolicy
             (HttpRequestCacheLevel.CacheOnly);  
         HttpWebRequest.DefaultCachePolicy = policy;  
     }  
@@ -97,7 +97,7 @@ ms.locfileid: "71048130"
     ```csharp  
     public static void DoNotUseLocalCache()  
     {  
-     HttpRequestCachePolicy policy = new HttpRequestCachePolicy   
+     HttpRequestCachePolicy policy = new HttpRequestCachePolicy
             (HttpRequestCacheLevel.Refresh);  
         HttpWebRequest.DefaultCachePolicy = policy;  
     }  
@@ -118,7 +118,7 @@ ms.locfileid: "71048130"
     ```csharp  
     public static void SendToServer()  
     {  
-    HttpRequestCachePolicy policy = new HttpRequestCachePolicy   
+    HttpRequestCachePolicy policy = new HttpRequestCachePolicy
             (HttpRequestCacheLevel.Reload);  
         HttpWebRequest.DefaultCachePolicy = policy;  
     }  

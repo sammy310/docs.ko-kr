@@ -5,14 +5,14 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 12/04/2019
 ms.topic: tutorial
-ms.openlocfilehash: 83d44af080d95ab6f9311ddd3ca4860806757436
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 125ef834da8e42c99c8080a3d5414a7927ce7636
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504034"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79186508"
 ---
-# <a name="tutorial-structured-streaming-with-net-for-apache-spark"></a>자습서: .NET for Apache Spark를 사용한 구조적 스트리밍 
+# <a name="tutorial-structured-streaming-with-net-for-apache-spark"></a>자습서: .NET for Apache Spark를 사용한 구조적 스트리밍
 
 이 자습서에서는 .NET for Apache Spark를 사용하여 Spark 구조적 스트리밍을 호출하는 방법을 설명합니다. Spark 구조적 스트리밍은 실시간 데이터 스트림을 처리하기 위한 Apache Spark의 지원 기능입니다. 스트림 처리는 라이브 데이터를 생성하는 동안 분석하는 것을 의미합니다.
 
@@ -47,7 +47,7 @@ ms.locfileid: "77504034"
 
 ## <a name="establish-and-connect-to-a-data-stream"></a>데이터 스트림 설정 및 연결
 
-스트림 처리를 테스트하는 일반적인 방법 중 하나는 **netcat**을 사용하는 것입니다. netcat(*nc*라고도 함)를 사용하여 네트워크 연결에서 읽고 쓸 수 있습니다. 터미널 창에서 netcat을 사용하여 네트워크 연결을 설정합니다. 
+스트림 처리를 테스트하는 일반적인 방법 중 하나는 **netcat**을 사용하는 것입니다. netcat(*nc*라고도 함)를 사용하여 네트워크 연결에서 읽고 쓸 수 있습니다. 터미널 창에서 netcat을 사용하여 네트워크 연결을 설정합니다.
 
 ### <a name="create-a-data-stream-with-netcat"></a>netcat을 사용하여 데이터 스트림 만들기
 
@@ -108,14 +108,14 @@ DataFrame lines = spark
 
 Spark 애플리케이션에서 *사용자 정의 함수*인 UDF를 사용하여 데이터에 대한 계산 및 분석을 수행할 수 있습니다.
 
-`Main` 메서드에 다음 코드를 추가하여 `udfArray`라는 UDF를 등록합니다. 
+`Main` 메서드에 다음 코드를 추가하여 `udfArray`라는 UDF를 등록합니다.
 
 ```csharp
 Func<Column, Column> udfArray =
     Udf<string, string[]>((str) => new string[] { str, $"{str} {str.Length}" });
 ```
 
-이 UDF는 netcat 터미널에서 수신하는 각 문자열을 처리하여 원래 문자열(*str*에 포함됨)과 원래 문자열의 길이가 연결된 원래 문자열을 포함하는 배열을 생성합니다. 
+이 UDF는 netcat 터미널에서 수신하는 각 문자열을 처리하여 원래 문자열(*str*에 포함됨)과 원래 문자열의 길이가 연결된 원래 문자열을 포함하는 배열을 생성합니다.
 
 예를 들어 netcat 터미널에 *Hello world*를 입력하면 다음과 같은 배열이 생성됩니다.
 

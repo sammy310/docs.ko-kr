@@ -2,26 +2,26 @@
 title: .NET Core 및 오픈 소스
 ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
-ms.openlocfilehash: 4032ba771d917d25473c8de350cc752bd052f94d
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: b5aa42d0460d743bffe8f17a2603773c03c09ce0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75752553"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181604"
 ---
 # <a name="net-core-and-open-source"></a>.NET Core 및 오픈 소스
 
 이 문서에서는 .NET Core에 대한 간략한 개요 및 자세한 정보를 찾는 방법을 보여줍니다. .NET Core 설명서에 대한 전체 목록은 [.NET Core 가이드](../../core/index.md)를 참조하세요.
-  
-<a name="BKMK_WhatisNETCore"></a>   
+
 ## <a name="what-is-net-core"></a>.NET Core란?  
- .NET Core는 .NET Standard의 일반적인 용도를 위한 모듈식 플랫폼 간 오픈 소스 구현입니다. .NET Framework와 동일한 많은 API를 포함하고 있으며(.NET Core는 작은 집합) 다양한 운영 체제 및 대상 칩을 지원하는 런타임, 프레임워크, 컴파일러 및 도구 구성 요소를 포함합니다. .NET Core 구현은 주로 ASP.NET Core 작업을 기반으로 하지만 많은 최신 구현에 대한 필요와 욕구에 의해서도 구현됩니다. 디바이스, 클라우드 및 포함/IoT 시나리오에 사용할 수 있습니다.  
+
+.NET Core는 .NET Standard의 일반적인 용도를 위한 모듈식 플랫폼 간 오픈 소스 구현입니다. .NET Framework와 동일한 많은 API를 포함하고 있으며(.NET Core는 작은 집합) 다양한 운영 체제 및 대상 칩을 지원하는 런타임, 프레임워크, 컴파일러 및 도구 구성 요소를 포함합니다. .NET Core 구현은 주로 ASP.NET Core 작업을 기반으로 하지만 많은 최신 구현에 대한 필요와 욕구에 의해서도 구현됩니다. 디바이스, 클라우드 및 포함/IoT 시나리오에 사용할 수 있습니다.  
   
- .NET Core를 시작하려면 .NET 자습서 [Hello World 10분 완성](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)를 방문하세요.  
+.NET Core를 시작하려면 .NET 자습서 [Hello World 10분 완성](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)를 방문하세요.  
   
 다음은 .NET Core의 주요 특성입니다.
   
-- **플랫폼 간:** .NET Core는 필요한 앱 기능을 구현하고 플랫폼 대상에 관계없이 이 코드를 재사용하기 위한 주요 기능을 제공합니다. 현재 세 개의 주요 OS(운영 체제)를 지원합니다. Windows, Linux 및 macOS. 지원되는 운영 체제 간에 수정하지 않고 실행되는 앱과 라이브러리를 작성할 수 있습니다. 지원되는 운영 체제의 목록을 보려면 [.NET Core roadmap](https://github.com/dotnet/core/blob/master/roadmap.md)(.NET Core 로드맵)을 방문하세요.
+- **플랫폼 간:** .NET Core는 필요한 앱 기능을 구현하고 플랫폼 대상에 관계없이 이 코드를 재사용하기 위한 주요 기능을 제공합니다. 현재 Windows, Linux 및 macOS의 세 개 주요 운영 체제(OS)를 지원합니다. 지원되는 운영 체제 간에 수정하지 않고 실행되는 앱과 라이브러리를 작성할 수 있습니다. 지원되는 운영 체제의 목록을 보려면 [.NET Core roadmap](https://github.com/dotnet/core/blob/master/roadmap.md)(.NET Core 로드맵)을 방문하세요.
   
 - **오픈 소스:** .NET Core는 [.NET Foundation](https://www.dotnetfoundation.org/)에서 관리하는 여러 프로젝트 중 하나이며 [GitHub](https://github.com/)에서 사용 가능합니다.  오픈 소스 프로젝트로서의 .NET Core는 더욱 투명한 개발 프로세스를 장려하고 활동 및 참여 커뮤니티를 촉진합니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "75752553"
   
 - [ASP.NET Core](https://github.com/dotnet/aspnetcore)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [.NET 자습서 - Hello World 10분 완성](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)
 - [.NET Core 가이드](../../core/index.md)

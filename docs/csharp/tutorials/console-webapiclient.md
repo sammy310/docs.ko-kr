@@ -3,12 +3,12 @@ title: .NET Core를 사용하여 REST 클라이언트 만들기
 description: 이 자습서에서는 .NET Core 및 C# 언어의 다양한 기능에 대해 설명합니다.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: f85d50b222d06caa045e22b452d0902aaac66088
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 5796df2d2fd8c4d9aaca783d720448c90858c067
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503978"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156859"
 ---
 # <a name="rest-client"></a>REST 클라이언트
 
@@ -161,7 +161,7 @@ namespace WebAPIClient
 JSON serializer는 사용되는 클래스 형식에 포함되지 않은 정보를 무시합니다.
 이 특징 때문에 JSON 패킷의 필드 일부에만 작용하는 형식을 보다 쉽게 만들 수 있습니다.
 
-이제 형식을 만들었으므로 역직렬화를 수행해 보겠습니다. 
+이제 형식을 만들었으므로 역직렬화를 수행해 보겠습니다.
 
 다음으로, serializer를 사용하여 JSON을 C# 개체로 변환합니다. `ProcessRepositories` 메서드의 <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)> 호출을 다음 세 줄로 바꿉니다.
 

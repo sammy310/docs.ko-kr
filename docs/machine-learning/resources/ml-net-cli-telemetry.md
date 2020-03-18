@@ -3,13 +3,13 @@ title: ML.NET CLI의 원격 분석 수집
 description: 어떤 데이터가 수집되고 수집 기능을 사용하지 않도록 설정하는 방법에 대한 분석을 위해 사용 정보를 수집하는 ML.NET CLI 원격 분석 기능을 살펴봅니다. 또한 Microsoft의 GDPR 규정 준수에 대한 정보와 .NET 라이선스 링크를 확인합니다.
 ms.topic: conceptual
 ms.date: 09/03/2019
-ms.custom: ''
-ms.openlocfilehash: edd74b6f3d3c50d5eff012629f0b1db6b62d9021
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.custom: mlnet-tooling
+ms.openlocfilehash: 99e11acba343cc689c3219ca9316144fc62cd618
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977259"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78849746"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>ML.NET CLI의 원격 분석 수집
 
@@ -21,11 +21,11 @@ ms.locfileid: "73977259"
 
 제품 팀은 이 인사이트가 중요하지만 모두가 이런 데이터를 보내고자 하는 것은 아닙니다. [원격 분석을 사용하지 않도록 설정하는 방법을 살펴봅니다.](#opt-out-of-data-collection)
 
-## <a name="scope"></a>범위
+## <a name="scope"></a>Scope
 
 `mlnet` 명령은 ML.NET CLI를 시작하지만 명령 자체는 원격 분석을 수집하지 않습니다.
 
-연결된 명령 없이 `mlnet` 명령만 실행할 경우 원격 분석을 *사용할 수 없습니다*. 예:
+연결된 명령 없이 `mlnet` 명령만 실행할 경우 원격 분석을 *사용할 수 없습니다*. 예를 들어:
 
 - `mlnet`
 - `mlnet --help`
@@ -74,7 +74,7 @@ ML.NET CLI의 Microsoft 배포는 [Microsoft 소프트웨어 사용 조건: Micr
 
 `mlnet auto-train` 같은 [ML.NET CLI 명령](../reference/ml-net-cli-reference.md)을 처음 실행하면 ML.NET CLI 도구가 원격 분석에서 옵트아웃하는 방법을 설명하는 공개 텍스트를 표시합니다. 실행 중인 CLI 버전에 따라 텍스트가 약간 달라질 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ML.NET CLI 참조](../reference/ml-net-cli-reference.md)
 - [Microsoft 소프트웨어 사용 조건: Microsoft .NET 라이브러리](https://aka.ms/dotnet-core-eula)

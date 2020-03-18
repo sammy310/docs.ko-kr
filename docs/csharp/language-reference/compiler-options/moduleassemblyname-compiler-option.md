@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: 7562c0609d61b2388f5063bc480a4dfc715155db
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 1477eeb0f2e16e18cb86009739bc8e7d9dee2ac0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970083"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173720"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname(C# 컴파일러 옵션)
 .netmodule에서 public이 아닌 형식에 액세스할 수 있는 어셈블리를 지정합니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "70970083"
   
  이 컴파일러 옵션은 Visual Studio에서 사용할 수 없으며 프로그래밍 방식으로 변경할 수 없습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 샘플에서는 private 형식을 사용하여 어셈블리를 빌드하므로 friend 어셈블리가 csman_an_assembly라는 어셈블리에 액세스할 수 있습니다.  
   
 ```csharp  
@@ -56,16 +56,16 @@ using System.Runtime.CompilerServices;
   
 [assembly:InternalsVisibleTo ("csman_an_assembly")]  
   
-class An_Internal_Class   
+class An_Internal_Class
 {  
-    public void Test()   
-    {   
-        Console.WriteLine("An_Internal_Class.Test called");   
+    public void Test()
+    {
+        Console.WriteLine("An_Internal_Class.Test called");
     }  
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 샘플은 어셈블리 moduleassemblyname_1.dll에 public이 아닌 형식에 액세스하는 .netmodule을 빌드합니다. 이 .netmodule이 csman_an_assembly라는 어셈블리에 빌드될 것임을 알기 때문에 **-moduleassemblyname**을 지정하여 .netmodule이 friend 어셈블리(friend assembly)에 csman_an_assembly에 대한 액세스를 부여한 어셈블리의 public이 아닌 형식에 액세스하도록 할 수 있습니다.  
   
 ```csharp  
@@ -79,7 +79,7 @@ class B {
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 코드 샘플에서는 이전에 빌드한 어셈블리와 .netmodule을 참조하여 csman_an_assembly 어셈블리를 빌드합니다.  
   
 ```csharp  

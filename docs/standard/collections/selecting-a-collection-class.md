@@ -11,10 +11,10 @@ helpviewer_keywords:
 - grouping data in collections, selecting collection class
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
 ms.openlocfilehash: fb03200c810290c970f7aa56a0e15d385aca7ca8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711352"
 ---
 # <a name="selecting-a-collection-class"></a>Collection 클래스 선택
@@ -50,11 +50,11 @@ ms.locfileid: "75711352"
   
 - 각 요소에 값 한 개, 키 한 개와 값 한 개의 조합 또는 키 한 개와 여러 값의 조합이 포함되나요?  
   
-  - 하나의 값: <xref:System.Collections.IList> 인터페이스 또는 <xref:System.Collections.Generic.IList%601> 제네릭 인터페이스를 기준으로 컬렉션을 사용합니다.  
+  - 값 한 개: <xref:System.Collections.IList> 인터페이스 또는 <xref:System.Collections.Generic.IList%601> 제네릭 인터페이스를 기준으로 컬렉션을 사용합니다.  
   
-  - 하나의 키와 하나의 값: <xref:System.Collections.IDictionary> 인터페이스 또는 <xref:System.Collections.Generic.IDictionary%602> 제네릭 인터페이스를 기준으로 컬렉션을 사용합니다.  
+  - 키 한 개와 값 한 개: <xref:System.Collections.IDictionary> 인터페이스 또는 <xref:System.Collections.Generic.IDictionary%602> 제네릭 인터페이스를 기준으로 컬렉션을 사용합니다.  
   
-  - 포함 키가 있는 하나의 값: <xref:System.Collections.ObjectModel.KeyedCollection%602> 제네릭 클래스를 사용합니다.  
+  - 포함된 키가 있는 값 한 개: <xref:System.Collections.ObjectModel.KeyedCollection%602> 제네릭 클래스를 사용합니다.  
   
   - 키 한 개와 여러 값: <xref:System.Collections.Specialized.NameValueCollection> 클래스를 사용합니다.  
   
@@ -62,9 +62,9 @@ ms.locfileid: "75711352"
   
   - <xref:System.Collections.Hashtable> 클래스는 해시 코드를 기준으로 요소를 정렬합니다.  
   
-  - <xref:System.Collections.SortedList> 클래스와 <xref:System.Collections.Generic.SortedList%602> 및 <xref:System.Collections.Generic.SortedDictionary%602> 제네릭 클래스는 키를 기준으로 요소를 정렬합니다. 정렬 순서는 <xref:System.Collections.SortedList> 클래스의 <xref:System.Collections.IComparer> 인터페이스 구현과 <xref:System.Collections.Generic.SortedList%602> 및 <xref:System.Collections.Generic.SortedDictionary%602> 제네릭 클래스의 <xref:System.Collections.Generic.IComparer%601> 제네릭 인터페이스 구현을 기반으로 합니다. 두 개의 제네릭 형식에서 <xref:System.Collections.Generic.SortedDictionary%602>는 <xref:System.Collections.Generic.SortedList%602>보다 성능이 더 뛰어나지만 <xref:System.Collections.Generic.SortedList%602>가 더 적은 메모리를 사용합니다.  
+  - <xref:System.Collections.SortedList> 클래스와 <xref:System.Collections.Generic.SortedList%602> 및 <xref:System.Collections.Generic.SortedDictionary%602> 제네릭 클래스는 키를 기준으로 요소를 정렬합니다. 정렬 순서는 <xref:System.Collections.IComparer> 클래스의 <xref:System.Collections.SortedList> 인터페이스 구현과 <xref:System.Collections.Generic.IComparer%601> 및 <xref:System.Collections.Generic.SortedList%602> 제네릭 클래스의 <xref:System.Collections.Generic.SortedDictionary%602> 제네릭 인터페이스 구현을 기반으로 합니다. 두 개의 제네릭 형식에서 <xref:System.Collections.Generic.SortedDictionary%602>는 <xref:System.Collections.Generic.SortedList%602>보다 성능이 더 뛰어나지만 <xref:System.Collections.Generic.SortedList%602>가 더 적은 메모리를 사용합니다.  
   
-  - <xref:System.Collections.ArrayList>에서는 <xref:System.Collections.IComparer> 구현을 매개 변수로 사용하는 <xref:System.Collections.ArrayList.Sort%2A> 메서드를 제공합니다. 해당하는 제네릭 항목인 <xref:System.Collections.Generic.List%601> 제네릭 클래스는 <xref:System.Collections.Generic.IComparer%601> 제네릭 인터페이스의 구현을 매개 변수로 사용하는 <xref:System.Collections.Generic.List%601.Sort%2A> 메서드를 제공합니다.  
+  - <xref:System.Collections.ArrayList>에서는 <xref:System.Collections.ArrayList.Sort%2A> 구현을 매개 변수로 사용하는 <xref:System.Collections.IComparer> 메서드를 제공합니다. 해당하는 제네릭 항목인 <xref:System.Collections.Generic.List%601> 제네릭 클래스는 <xref:System.Collections.Generic.List%601.Sort%2A> 제네릭 인터페이스의 구현을 매개 변수로 사용하는 <xref:System.Collections.Generic.IComparer%601> 메서드를 제공합니다.  
   
 - 빠른 검색 및 정보 검색이 필요한가요?  
   
@@ -74,14 +74,14 @@ ms.locfileid: "75711352"
   
   - <xref:System.Collections.Specialized.StringCollection>(<xref:System.Collections.IList> 기반) 및 <xref:System.Collections.Specialized.StringDictionary>(<xref:System.Collections.IDictionary> 기반)는 <xref:System.Collections.Specialized> 네임스페이스에 있습니다.  
   
-  - 또한 제네릭 형식 인수에 대해 <xref:System.String> 클래스를 지정하여 <xref:System.Collections.Generic> 네임스페이스의 제네릭 컬렉션 클래스 중 하나를 강력한 형식의 문자열 컬렉션으로 사용할 수 있습니다. 예를 들어, [List\<String>](xref:System.Collections.Generic.List%601) 또는 [Dictionary<String,String>](xref:System.Collections.Generic.Dictionary%602) 형식의 변수를 선언할 수 있습니다.
+  - 또한 제네릭 형식 인수에 대해 <xref:System.Collections.Generic> 클래스를 지정하여 <xref:System.String> 네임스페이스의 제네릭 컬렉션 클래스 중 하나를 강력한 형식의 문자열 컬렉션으로 사용할 수 있습니다. 예를 들어, [List\<String>](xref:System.Collections.Generic.List%601) 또는 [Dictionary<String,String>](xref:System.Collections.Generic.Dictionary%602) 형식의 변수를 선언할 수 있습니다.
   
 ## <a name="linq-to-objects-and-plinq"></a>LINQ to Objects 및 PLINQ  
  LINQ to Objects를 사용하면 개체 형식이 <xref:System.Collections.IEnumerable> 또는 <xref:System.Collections.Generic.IEnumerable%601>를 구현하는 경우 개발자가 LINQ 쿼리를 통해 메모리 내 개체에 액세스할 수 있습니다. LINQ 쿼리는 데이터 액세스를 위한 일반 패턴을 제공하고, 표준 `foreach` 루프에 비해 간결하고 쉽게 읽을 수 있으며, 필터링, 순서 지정 및 그룹화 기능을 제공합니다. 자세한 내용은 [LINQ to Objects(C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md) 및 [LINQ to Objects(Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)를 참조하세요.  
   
  PLINQ는 다중 코어 컴퓨터의 보다 효율적인 사용을 통해 많은 시나리오에서 더 빠른 쿼리 실행을 제공할 수 있는 LINQ to Objects의 병렬 구현을 제공합니다. 자세한 내용은 [PLINQ(병렬 LINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)를 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Collections>
 - <xref:System.Collections.Specialized>

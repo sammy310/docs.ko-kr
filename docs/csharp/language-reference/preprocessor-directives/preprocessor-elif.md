@@ -7,14 +7,14 @@ helpviewer_keywords:
 - '#elif directive [C#]'
 ms.assetid: 731d78df-08e0-4d51-b8c8-f193c27de13f
 ms.openlocfilehash: c78818f40b76414d289af6c704ff019b63befe37
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712574"
 ---
 # <a name="elif-c-reference"></a>#elif(C# 참조)
-`#elif`를 사용하면 복합 조건부 지시문을 만들 수 있습니다. `#elif` 식이 계산되는 경우는 [#if](./preprocessor-if.md)와 앞의 선택적 `#elif` 지시문 식이 모두 `true`로 계산되지 않는 경우입니다. `#elif` 식이 `true`이면 컴파일러는 `#elif`와 다음 조건부 지시문 사이에 있는 모든 코드를 평가합니다. 예:  
+`#elif`를 사용하면 복합 조건부 지시문을 만들 수 있습니다. `#elif` 식이 계산되는 경우는 [#if](./preprocessor-if.md)와 앞의 선택적 `#elif` 지시문 식이 모두 `true`로 계산되지 않는 경우입니다. `#elif` 식이 `true`이면 컴파일러는 `#elif`와 다음 조건부 지시문 사이에 있는 모든 코드를 평가합니다. 예들 들어 다음과 같습니다.  
   
 ```csharp
 #define VC7  
@@ -38,9 +38,9 @@ ms.locfileid: "75712574"
   
  `#elif`를 사용하는 것이 더 간단합니다. 각 `#if`에는 [#endif](./preprocessor-endif.md)가 필요한 반면, `#elif`는 짝이 되는 `#endif` 없이 사용할 수 있기 때문입니다.  
   
- `#elif`를 사용하는 방법에 대한 예제는 [#if](./preprocessor-if.md)를 참조하세요.  
+ [를 사용하는 방법에 대한 예제는 ](./preprocessor-if.md)#if`#elif`를 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

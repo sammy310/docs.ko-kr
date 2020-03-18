@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 0c88d40e34d2d6458bb463a09d716dea42b711fe
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901800"
 ---
 ### <a name="authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters"></a>권한 부여: AuthorizationFilterContext.Filters에서 IAllowAnonymous 제거됨
@@ -28,7 +28,7 @@ ASP.NET Core 3.0을 기준으로 MVC에서 컨트롤러 및 작업 메서드에�
 
 #### <a name="recommended-action"></a>권장 조치
 
-`IAllowAnonymous`에 대한 엔드포인트 메타데이터를 검색합니다. 예:
+`IAllowAnonymous`에 대한 엔드포인트 메타데이터를 검색합니다. 예를 들어:
 
 ```csharp
 var endpoint = context.HttpContext.GetEndpoint();

@@ -3,10 +3,10 @@ title: CSV 파일에서 XML을 생성하는 방법(C#)
 ms.date: 07/20/2015
 ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
 ms.openlocfilehash: 643c05cb440165c4461c3e9c80e69701241ab8d1
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635810"
 ---
 # <a name="how-to-generate-xml-from-csv-files-c"></a>CSV 파일에서 XML을 생성하는 방법(C#)

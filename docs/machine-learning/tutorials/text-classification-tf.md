@@ -4,12 +4,12 @@ description: 이 자습서에서는 미리 학습된 TensorFlow 모델을 사용
 ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 7a6043f56a2ecaca633ba5545170f27a85a22efc
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 688c5b83cef8f21eef8fa24521a85449a9cfbd48
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77092397"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78241119"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>자습서: ML.NET에서 미리 학습된 TensorFlow 모델을 사용하여 영화 리뷰의 감정 분석
 
@@ -64,11 +64,11 @@ ms.locfileid: "77092397"
 
 1. *Program.cs* 파일 맨 위에 다음 추가 `using` 문을 추가합니다.
 
-   [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TextClassificationTF/Program.cs#AddUsings "Add necessary usings")]
+   [!code-csharp[AddUsings](../../../samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#AddUsings "Add necessary usings")]
 
 1. 저장된 모델 파일 경로와 기능 벡터 길이를 보관할 두 개의 전역 변수를 `Main` 메서드 바로 위에 만듭니다.
 
-   [!code-csharp[DeclareGlobalVariables](../../../samples/machine-learning/tutorials/TextClassificationTF/Program.cs#DeclareGlobalVariables "Declare global variables")]
+   [!code-csharp[DeclareGlobalVariables](../../../samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#DeclareGlobalVariables "Declare global variables")]
 
     * `_modelPath`는 학습된 모델의 파일 경로입니다.
     * `FeatureLength`는 모델에 필요한 정수 기능 배열의 길이입니다.
@@ -94,13 +94,13 @@ ms.locfileid: "77092397"
 
 1. `Main` 메서드 다음에 입력 데이터에 대한 클래스를 만듭니다.
 
-    [!code-csharp[MovieReviewClass](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#MovieReviewClass "Declare movie review type")]
+    [!code-csharp[MovieReviewClass](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#MovieReviewClass "Declare movie review type")]
 
     입력 데이터 클래스 `MovieReview`에는 사용자 댓글(`ReviewText`)의 `string`이 있습니다.
 
 1. `Main` 메서드 다음에 가변 길이 기능에 대한 클래스를 만듭니다.
 
-    [!code-csharp[VariableLengthFeatures](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#VariableLengthFeatures "Declare variable length features type")]
+    [!code-csharp[VariableLengthFeatures](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#VariableLengthFeatures "Declare variable length features type")]
 
     `VariableLengthFeatures` 속성에는 이를 벡터로 지정하기 위한 [VectorType](xref:Microsoft.ML.Data.VectorTypeAttribute.%23ctor%2A) 특성이 있습니다.  모든 벡터 요소는 같은 유형이어야 합니다. 열 수가 많은 데이터 세트에서 여러 열을 단일 벡터로 로드하면 데이터 변환을 적용할 때 데이터 전달 횟수가 줄어듭니다.
 
@@ -108,7 +108,7 @@ ms.locfileid: "77092397"
 
 1. `Main` 메서드 다음에 고정 길이 기능에 대한 클래스를 만듭니다.
 
-    [!code-csharp[FixedLengthFeatures](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#FixedLengthFeatures)]
+    [!code-csharp[FixedLengthFeatures](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#FixedLengthFeatures)]
 
     이 클래스는 `ResizeFeatures` 작업에 사용됩니다. 해당 속성(이 경우에는 하나뿐)의 이름은 사용자 지정 매핑 동작에 대한 _출력_으로 사용할 수 있는 DataView의 열을 나타내는 데 사용됩니다.
 
@@ -116,7 +116,7 @@ ms.locfileid: "77092397"
 
 1. `Main` 메서드 다음에 예측에 대한 클래스를 만듭니다.
 
-    [!code-csharp[Prediction](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#Prediction "Declare prediction class")]
+    [!code-csharp[Prediction](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#Prediction "Declare prediction class")]
 
     `MovieReviewSentimentPrediction`은 모델 학습 후 사용되는 예측 클래스입니다. `MovieReviewSentimentPrediction`에는 단일 `float` 배열(`Prediction`)과 `VectorType` 특성이 있습니다.
 
@@ -126,7 +126,7 @@ ms.locfileid: "77092397"
 
 1. `Main` 메서드의 `Console.WriteLine("Hello World!")` 줄을 다음 코드로 바꾸어 mlContext 변수를 선언하고 초기화합니다.
 
-   [!code-csharp[CreateMLContext](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CreateMLContext "Create the ML Context")]
+   [!code-csharp[CreateMLContext](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#CreateMLContext "Create the ML Context")]
 
 1. 다음 표에 표시된 것처럼 [`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%2A) 메서드를 사용하여 파일에서 매핑 데이터를 로드하여 단어를 정수로 인코딩하는 사전을 만듭니다.
 
@@ -140,21 +140,21 @@ ms.locfileid: "77092397"
 
     아래 코드를 추가하여 조회 맵을 만듭니다.
 
-    [!code-csharp[CreateLookupMap](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CreateLookupMap)]
+    [!code-csharp[CreateLookupMap](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#CreateLookupMap)]
 
 1. 다음 코드 줄을 사용하여 가변 길이 단어 정수 배열의 크기를 고정 크기 정수 배열로 조정하는 `Action`을 추가합니다.
 
-   [!code-csharp[ResizeFeatures](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#ResizeFeatures)]
+   [!code-csharp[ResizeFeatures](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#ResizeFeatures)]
 
 ## <a name="load-the-pre-trained-tensorflow-model"></a>미리 학습된 TensorFlow 모델 로드
 
 1. 코드를 추가하여 TensorFlow 모델을 로드합니다.
 
-    [!code-csharp[LoadTensorFlowModel](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#LoadTensorFlowModel)]
+    [!code-csharp[LoadTensorFlowModel](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#LoadTensorFlowModel)]
 
     모델이 로드되면 해당 입력 및 출력 스키마를 추출할 수 있습니다. 스키마는 관심 및 학습 전용으로 표시됩니다. 최종 애플리케이션이 작동하기 위해 이 코드가 필요하지는 않습니다.
 
-    [!code-csharp[GetModelSchema](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#GetModelSchema)]
+    [!code-csharp[GetModelSchema](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#GetModelSchema)]
 
     입력 스키마는 정수 인코딩 단어의 고정 길이 배열입니다. 출력 스키마는 리뷰의 감정이 부정적인지 또는 긍정적인지를 나타내는 확률의 부동 소수점 배열입니다. 긍정적 감정의 확률과 부정적 감정의 확률은 보수이므로 이들 값의 합은 1입니다.
 
@@ -162,27 +162,27 @@ ms.locfileid: "77092397"
 
 1. 파이프라인을 만들고 다음 코드 줄과 같이 [TokenizeIntoWords](xref:Microsoft.ML.TextCatalog.TokenizeIntoWords%2A) 변환을 사용하여 텍스트를 단어로 분할해 입력 텍스트를 단어로 나눕니다.
 
-   [!code-csharp[TokenizeIntoWords](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#TokenizeIntoWords)]
+   [!code-csharp[TokenizeIntoWords](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#TokenizeIntoWords)]
 
    [TokenizeIntoWords](xref:Microsoft.ML.TextCatalog.TokenizeIntoWords%2A) 변환은 공백을 사용하여 텍스트/문자열을 단어로 구문 분석합니다. 새 열을 만들고 각 입력 문자열을 사용자 정의 구분 기호를 기반으로 하는 부분 문자열의 벡터로 분할합니다.
 
 1. 위에서 선언한 조회 테이블을 사용하여 단어를 해당 정수 인코딩으로 매핑합니다.
 
-    [!code-csharp[MapValue](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#MapValue)]
+    [!code-csharp[MapValue](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#MapValue)]
 
 1. 가변 길이 정수 인코딩의 크기를 모델에 필요한 고정 길이에 맞게 조정합니다.
 
-    [!code-csharp[CustomMapping](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CustomMapping)]
+    [!code-csharp[CustomMapping](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#CustomMapping)]
 
 1. 로드된 TensorFlow 모델을 사용하여 입력을 분류합니다.
 
-    [!code-csharp[ScoreTensorFlowModel](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#ScoreTensorFlowModel)]
+    [!code-csharp[ScoreTensorFlowModel](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#ScoreTensorFlowModel)]
 
     TensorFlow 모델 출력은 `Prediction/Softmax`입니다. `Prediction/Softmax`은 TensorFlow 모델에 의해 결정된 이름입니다. 이 이름은 변경할 수 없습니다.
 
 1. 출력 예측에 대한 새 열을 만듭니다.
 
-    [!code-csharp[SnippetCopyColumns](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#SnippetCopyColumns)]
+    [!code-csharp[SnippetCopyColumns](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#SnippetCopyColumns)]
 
     `Prediction/Softmax` 열을 C# 클래스에서 속성으로 사용할 수 있는 이름을 가진 열로 복사해야 합니다. `Prediction`. C# 속성 이름에 `/` 문자는 허용되지 않습니다.
 
@@ -190,7 +190,7 @@ ms.locfileid: "77092397"
 
 1. 코드를 추가하여 파이프라인에서 모델을 만듭니다.
 
-    [!code-csharp[SnippetCreateModel](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#SnippetCreateModel)]
+    [!code-csharp[SnippetCreateModel](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#SnippetCreateModel)]
 
     ML.NET 모델은 `Fit` 메서드를 호출하여 파이프라인의 추정기 체인에서 만들어집니다. 이 경우에는 TensorFlow 모델이 이미 학습되었으므로 모델을 만들기 위해 데이터 맞춤을 수행하지 않습니다. `Fit` 메서드의 요구 사항을 충족하기 위해 빈 데이터 보기 개체를 제공합니다.
 
@@ -207,7 +207,7 @@ ms.locfileid: "77092397"
 
 1. `PredictSentiment()` 메서드의 첫째 줄과 같이 다음 코드를 추가하여 `PredictionEngine`을 만듭니다.
 
-    [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CreatePredictionEngine)]
+    [!code-csharp[CreatePredictionEngine](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#CreatePredictionEngine)]
 
     [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602)은 데이터의 단일 인스턴스에 대한 예측을 수행할 수 있는 편리한 API입니다. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)은 스레드로부터 안전하지 않습니다. 단일 스레드 또는 프로토타입 환경에서 사용할 수 있습니다. 프로덕션 환경에서 성능 및 스레드 보안을 개선하려면 `PredictionEnginePool` 서비스를 사용합니다. 이 서비스는 애플리케이션 전체에서 사용할 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 개체의 [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)을 만듭니다. [ASP.NET Core Web API에서 `PredictionEnginePool`을 사용하는 방법](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)에 대한 이 가이드를 참조하세요.
 
@@ -216,11 +216,11 @@ ms.locfileid: "77092397"
 
 1. `MovieReview` 인스턴스를 만들어 댓글을 추가하여 `Predict()` 메서드에서 학습된 모델의 예측을 테스트합니다.
 
-    [!code-csharp[CreateTestData](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CreateTestData)]
+    [!code-csharp[CreateTestData](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#CreateTestData)]
 
 1. `PredictSentiment()` 메서드의 다음 코드 줄을 추가하여 테스트 댓글 데이터를 `Prediction Engine`에 전달합니다.
 
-    [!code-csharp[Predict](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#Predict)]
+    [!code-csharp[Predict](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#Predict)]
 
 1. [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) 함수는 단일 데이터 행에 대한 예측을 수행합니다.
 
@@ -230,11 +230,11 @@ ms.locfileid: "77092397"
 
 1. 다음 코드를 사용하여 감정 예측을 표시합니다.
 
-    [!code-csharp[DisplayPredictions](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#DisplayPredictions)]
+    [!code-csharp[DisplayPredictions](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#DisplayPredictions)]
 
 1. `Main` 메서드의 끝에 `PredictSentiment` 호출을 추가합니다.
 
-    [!code-csharp[CallPredictSentiment](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CallPredictSentiment)]
+    [!code-csharp[CallPredictSentiment](~/samples/snippets/machine-learning/TextClassificationTF/csharp/Program.cs#CallPredictSentiment)]
 
 ## <a name="results"></a>결과
 

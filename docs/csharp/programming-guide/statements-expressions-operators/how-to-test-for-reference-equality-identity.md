@@ -6,10 +6,10 @@ helpviewer_keywords:
 - reference equality [C#]
 ms.assetid: 91307fda-267b-4fd2-a338-2aada39ee791
 ms.openlocfilehash: 77ce2ef0ccf47d619134c120101ba2aa04f485e6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75699056"
 ---
 # <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a>참조 같음(ID)을 테스트하는 방법(C# 프로그래밍 가이드)
@@ -22,10 +22,10 @@ ms.locfileid: "75699056"
 ## <a name="example"></a>예제  
  [!code-csharp[csProgGuideObjects#90](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#90)]  
   
- <xref:System.Object?displayProperty=nameWithType> 유니버설 기본 클래스의 `Equals` 구현에서도 참조 같음 검사를 수행하지만 클래스가 메서드를 재정의할 경우 결과가 예상과 다를 수 있기 때문에 이 기능은 사용하지 않는 것이 좋습니다. `==` 및 `!=` 연산자의 경우도 마찬가지입니다. 참조 형식에서 작동하는 경우 `==` 및 `!=`의 기본 동작은 참조 같음 검사를 수행하는 것입니다. 그러나 파생 클래스에서 연산자를 오버로드하여 값 같음 검사를 수행할 수 있습니다. 잠재적인 오류를 최소화하려면 두 개체에 참조 같음이 있는지 여부를 확인해야 할 때 항상 <xref:System.Object.ReferenceEquals%2A>를 사용하는 것이 좋습니다.  
+ `Equals` 유니버설 기본 클래스의 <xref:System.Object?displayProperty=nameWithType> 구현에서도 참조 같음 검사를 수행하지만 클래스가 메서드를 재정의할 경우 결과가 예상과 다를 수 있기 때문에 이 기능은 사용하지 않는 것이 좋습니다. `==` 및 `!=` 연산자의 경우도 마찬가지입니다. 참조 형식에서 작동하는 경우 `==` 및 `!=`의 기본 동작은 참조 같음 검사를 수행하는 것입니다. 그러나 파생 클래스에서 연산자를 오버로드하여 값 같음 검사를 수행할 수 있습니다. 잠재적인 오류를 최소화하려면 두 개체에 참조 같음이 있는지 여부를 확인해야 할 때 항상 <xref:System.Object.ReferenceEquals%2A>를 사용하는 것이 좋습니다.  
   
  동일한 어셈블리 내의 상수 문자열은 항상 런타임에서 인턴 지정됩니다. 즉, 고유한 각 리터럴 문자열의 인스턴스 하나만 유지됩니다. 그러나 런타임은 런타임에 생성된 문자열이 인턴 지정되도록 보장하지 않으며, 서로 다른 어셈블리에 있는 동일한 두 상수 문자열이 인턴 지정되도록 보장하지도 않습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [같음 비교](./equality-comparisons.md)

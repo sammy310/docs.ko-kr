@@ -4,12 +4,12 @@ description: 로컬 함수가 람다 식보다 더 적합한 선택일 수 있�
 ms.date: 06/27/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
-ms.openlocfilehash: a644b6868a37b3d6231a514dc37030cae062785a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 13cc3fe47bbcd6a465347a6c991b2006586c78fa
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038809"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173343"
 ---
 # <a name="local-functions-compared-to-lambda-expressions"></a>로컬 함수 및 람다 식 비교
 
@@ -46,7 +46,7 @@ int M()
 컴파일러는 `LocalFunction`에서 호출될 때 `y`를 한정적으로 할당하는지 확인할 수 있습니다. `LocalFunction`은 `return` 문 전에 호출되므로 `y`는 `return` 문에서 한정적으로 할당됩니다.
 
 예제 분석을 활성화하는 분석은 네 번째 차이점을 활성화합니다.
-해당 용도에 따라 로컬 함수는 람다 식에 항상 필요한 힙 할당을 피할 수 있습니다. 로컬 함수가 대리자로 변환되지 않고 로컬 함수에 의해 캡처된 변수가 대리자로 변환된 다른 람다 식 또는 로컬 함수에 의해 캡처되지 않는 경우 컴파일러는 힙 할당을 피할 수 있습니다. 
+해당 용도에 따라 로컬 함수는 람다 식에 항상 필요한 힙 할당을 피할 수 있습니다. 로컬 함수가 대리자로 변환되지 않고 로컬 함수에 의해 캡처된 변수가 대리자로 변환된 다른 람다 식 또는 로컬 함수에 의해 캡처되지 않는 경우 컴파일러는 힙 할당을 피할 수 있습니다.
 
 다음 비동기 예제를 살펴보세요.
 

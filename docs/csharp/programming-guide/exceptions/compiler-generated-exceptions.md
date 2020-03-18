@@ -5,10 +5,10 @@ helpviewer_keywords:
 - exceptions [C#], compiler-generated
 ms.assetid: 53b52f97-b366-4ed7-b05b-9eb78096b7f9
 ms.openlocfilehash: 2a6b2c3fa053f1c555856df8098975340e78e2b2
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705316"
 ---
 # <a name="compiler-generated-exceptions-c-programming-guide"></a>컴파일러 생성 예외(C# 프로그래밍 가이드)
@@ -27,7 +27,7 @@ ms.locfileid: "75705316"
 |<xref:System.StackOverflowException>|보류 중인 메서드 호출이 너무 많아 실행 스택이 모두 사용될 경우 throw됩니다. 대개 매우 깊은 재귀나 무한 재귀를 나타냅니다.|  
 |<xref:System.TypeInitializationException>|정적 생성자가 예외를 throw하고 이 예외를 catch할 수 있는 호환되는 `catch` 절이 없는 경우 throw됩니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [예외 및 예외 처리](./index.md)

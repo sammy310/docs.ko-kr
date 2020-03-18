@@ -7,10 +7,10 @@ helpviewer_keywords:
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
 ms.openlocfilehash: cfb0190ee263e65e8130a8925f76357a382eafa3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712002"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>익명 함수(C# 프로그래밍 가이드)
@@ -29,9 +29,9 @@ ms.locfileid: "75712002"
   
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [익명 함수 식](~/_csharplang/spec/expressions.md#anonymous-function-expressions) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/expressions.md#anonymous-function-expressions)의 [익명 함수 식](~/_csharplang/spec/introduction.md) 섹션을 참조하세요.
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [문, 식, 연산자](./index.md)
 - [람다 식](./lambda-expressions.md)

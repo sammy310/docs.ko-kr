@@ -4,12 +4,12 @@ ms.date: 06/25/2019
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: beb55f0765e7f9090f0587f1d2a06cf03ea90ab8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 84131bc503a106961419a27fc4e3e0f2d82306a8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712665"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846235"
 ---
 # <a name="new-operator-c-reference"></a>new 연산자(C# 참조)
 
@@ -19,23 +19,23 @@ ms.locfileid: "75712665"
 
 ## <a name="constructor-invocation"></a>생성자 호출
 
-새 인스턴스 유형을 만들려면 일반적으로 `new` 연산자를 사용하여 해당 유형의 [생성자](../../programming-guide/classes-and-structs/constructors.md) 중 하나를 호출합니다.
+새 인스턴스 유형을 만들려면 일반적으로 [ 연산자를 사용하여 해당 유형의 ](../../programming-guide/classes-and-structs/constructors.md)생성자`new` 중 하나를 호출합니다.
 
-[!code-csharp-interactive[invoke constructor](~/samples/csharp/language-reference/operators/NewOperator.cs#Constructor)]
+[!code-csharp-interactive[invoke constructor](snippets/NewOperator.cs#Constructor)]
 
-다음 예제와 같이 `new` 연산자와 함께 [개체 또는 컬렉션 이니셜라이저](../../programming-guide/classes-and-structs/object-and-collection-initializers.md)를 사용하여 하나의 명령문에서 개체를 인스턴스화하고 초기화할 수 있습니다.
+다음 예제와 같이 [ 연산자와 함께 ](../../programming-guide/classes-and-structs/object-and-collection-initializers.md)개체 또는 컬렉션 이니셜라이저`new`를 사용하여 하나의 명령문에서 개체를 인스턴스화하고 초기화할 수 있습니다.
 
-[!code-csharp-interactive[constructor with initializer](~/samples/csharp/language-reference/operators/NewOperator.cs#ConstructorWithInitializer)]
+[!code-csharp-interactive[constructor with initializer](snippets/NewOperator.cs#ConstructorWithInitializer)]
 
 ## <a name="array-creation"></a>배열 생성
 
 또한 다음 예제와 같이 `new` 연산자를 사용하여 배열 인스턴스를 만듭니다.
 
-[!code-csharp-interactive[create array](~/samples/csharp/language-reference/operators/NewOperator.cs#Array)]
+[!code-csharp-interactive[create array](snippets/NewOperator.cs#Array)]
 
 배열 초기화 구문을 사용하여 배열 인스턴스를 만들고 하나의 명령문에 요소를 채웁니다. 다음 예제에서는 이를 수행하는 다양한 방법을 보여줍니다.
 
-[!code-csharp-interactive[initialize array](~/samples/csharp/language-reference/operators/NewOperator.cs#ArrayInitialization)]
+[!code-csharp-interactive[initialize array](snippets/NewOperator.cs#ArrayInitialization)]
 
 배열에 대한 자세한 내용은 [배열](../../programming-guide/arrays/index.md)을 참조하세요.
 
@@ -43,7 +43,7 @@ ms.locfileid: "75712665"
 
 [익명 형식](../../programming-guide/classes-and-structs/anonymous-types.md)의 인스턴스를 만들려면 `new` 연산자와 개체 이니셜라이저 구문을 사용합니다.
 
-[!code-csharp-interactive[anonymous type](~/samples/csharp/language-reference/operators/NewOperator.cs#AnonymousType)]
+[!code-csharp-interactive[anonymous type](snippets/NewOperator.cs#AnonymousType)]
 
 ## <a name="destruction-of-type-instances"></a>형식 인스턴스의 소멸
 
@@ -57,9 +57,9 @@ ms.locfileid: "75712665"
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [new 연산자](~/_csharplang/spec/expressions.md#the-new-operator) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/expressions.md#the-new-operator)의 [new 연산자](~/_csharplang/spec/introduction.md) 섹션을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 연산자](index.md)

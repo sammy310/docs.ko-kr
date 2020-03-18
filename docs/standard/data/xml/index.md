@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 ms.openlocfilehash: e0c3f3e99b06b65caf79d87a7831369f6fb33b08
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75710793"
 ---
 # <a name="xml-documents-and-data"></a>XML 문서 및 데이터
@@ -26,7 +26,7 @@ ms.locfileid: "75710793"
 
 전체 목록을 보려면 [.NET API 브라우저](https://docs.microsoft.com/dotnet/api/?term=system.xml)에서 "System.Xml"을 검색하세요.
 
-이러한 네임스페이스의 클래스는 W3C(World Wide Web 컨소시엄) 권장 사항을 지원합니다. 예:
+이러한 네임스페이스의 클래스는 W3C(World Wide Web 컨소시엄) 권장 사항을 지원합니다. 예를 들어:
 
 - <xref:System.Xml.XmlDocument?displayProperty=nameWithType> 클래스는 [W3C DOM(문서 개체 모델) Level 1 Core](https://www.w3.org/TR/REC-DOM-Level-1/) 및 [DOM Level 2 Core](https://www.w3.org/TR/DOM-Level-2-Core/) 권장 사항을 구현합니다.
 

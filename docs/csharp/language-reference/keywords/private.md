@@ -8,10 +8,10 @@ helpviewer_keywords:
 - private keyword [C#]
 ms.assetid: 654c0bb8-e6ac-4086-bf96-7474fa6aa1c8
 ms.openlocfilehash: a13e9ef18b0f6452c3ff1497dc97110bc21c433d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75715192"
 ---
 # <a name="private-c-reference"></a>private(C# 참조)
@@ -44,9 +44,9 @@ class Employee
 
 ## <a name="c-language-specification"></a>C# 언어 사양  
 
-자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)의 [선언된 내게 필요한 옵션](~/_csharplang/spec/basic-concepts.md#declared-accessibility)을 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/basic-concepts.md#declared-accessibility)의 [선언된 내게 필요한 옵션](/dotnet/csharp/language-reference/language-specification/introduction)을 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

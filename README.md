@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: fe99a2ac81b54ae6aa3cb64af9b5995a548c0c2b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 1e84a0c3636f36794ca7795ac54d192d3cb44217
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76727879"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79141096"
 ---
 # <a name="net-docs"></a>.NET 문서
 
@@ -18,7 +18,7 @@ API 참조 리포지토리를 제외한 모든 리포지토리의 이슈 및 작
 
 .NET 문서를 개선하고 완성하는 데 도움이 되는 기여를 환영합니다. 이는 많은 영역을 포함하는 대규모 리포지토리입니다. 처음 방문하는 경우 이 리포지토리의 문제 및 프로젝트를 탐색하는 데 도움을 받을 수 있는 [레이블 및 프로젝트 로드맵](styleguide/labels-projects.md)을 참조하세요.
 
-기여하려면 [Projects for .NET Community Contributors](https://github.com/dotnet/docs/projects/35)를 참조하여 아이디어를 얻어보세요. [기여 가이드](CONTRIBUTING.md)에는 우리가 사용하는 프로시저에 대한 지침이 있습니다. 
+기여하려면 [Projects for .NET Community Contributors](https://github.com/dotnet/docs/projects/35)를 참조하여 아이디어를 얻어보세요. [기여 가이드](CONTRIBUTING.md)에는 우리가 사용하는 프로시저에 대한 지침이 있습니다.
 
 .NET Framework를 대상으로 하는 기존 코드를 [만료된 코드 갤러리](https://docs.microsoft.com/teamblog/msdn-code-gallery-retired) 사이트에서, [샘플 리포지토리](https://github.com/dotnet/samples)에 저장되고 [샘플 브라우저](https://docs.microsoft.com/samples/browse)에서 다운로드할 수 있는 .NET Core 애플리케이션으로 마이그레이션하도록 지원하려면 [코드 갤러리 마이그레이션](https://github.com/dotnet/docs/projects/88) 프로젝트를 참조하세요. 코드 갤러리 샘플이 [Microsoft Archive](https://github.com/microsoftarchive?q=msdn-code-gallery) 조직으로 이동되었습니다.
 

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - indexers [C#], vs. properties
 ms.assetid: 3358a89f-44a0-4a4d-bf8c-07237a90af39
 ms.openlocfilehash: 330d222083ce599719698c023803196dfe88da84
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712132"
 ---
 # <a name="comparison-between-properties-and-indexers-c-programming-guide"></a>속성 및 인덱서 비교(C# 프로그래밍 가이드)
@@ -24,7 +24,7 @@ ms.locfileid: "75712132"
 |속성의 [set](../../language-reference/keywords/set.md) 접근자에는 암시적 `value` 매개 변수가 포함되어 있습니다.|인덱서의 `set` 접근자에는 인덱서와 동일한 형식 매개 변수 목록이 있으며 [value](../../language-reference/keywords/value.md) 매개 변수도 있습니다.|  
 |[자동으로 구현된 속성](../classes-and-structs/auto-implemented-properties.md)을 사용하여 약식 구문을 지원합니다.|가져오기만 수행(Get only) 인덱서를 위한 식 본문 멤버를 지원합니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [인덱서](./index.md)

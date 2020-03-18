@@ -8,12 +8,12 @@ helpviewer_keywords:
 - select keyword [C#]
 - select clause [C#]
 ms.assetid: df01e266-5781-4aaa-80c4-67cf28ea093f
-ms.openlocfilehash: b4d25f80e4cdb08fbc28fa4db3cb1c790b1145e6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 68ea7ad6fc7cf5580dbdd0ae7f012f36566db0dc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713094"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173512"
 ---
 # <a name="select-clause-c-reference"></a>select 절(C# 참조)
 
@@ -37,7 +37,7 @@ ms.locfileid: "75713094"
 
 컴파일 시간에 `select` 절은 <xref:System.Linq.Enumerable.Select%2A> 표준 쿼리 연산자에 대한 메서드 호출로 변환됩니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [쿼리 키워드(LINQ)](query-keywords.md)
@@ -45,4 +45,4 @@ ms.locfileid: "75713094"
 - [partial(메서드)(C# 참조)](partial-method.md)
 - [익명 형식](../../programming-guide/classes-and-structs/anonymous-types.md)
 - [C#의 LINQ](../../linq/index.md)
-- [C#에서 LINQ 시작](/dotnet/csharp/programming-guide/concepts/linq/)
+- [LINQ(Language-Integrated Query)](../../programming-guide/concepts/linq/index.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-ms.openlocfilehash: c462a6df2d5221907a6b574c33bb8fa1c52abac5
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 13e2661b67ba3b717b8917e80118175acb09e756
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741345"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181673"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>런타임에서 어셈블리를 찾는 방법
 
@@ -141,7 +141,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ### <a name="machine-configuration-file"></a>컴퓨터 구성 파일
 셋째, 런타임은 컴퓨터 구성 파일을 검사합니다. Machine.config라는 이 파일은 로컬 컴퓨터에서 런타임이 설치된 루트 디렉터리의 Config 하위 디렉터리에 상주합니다. 관리자는 이 파일을 사용하여 해당 컴퓨터에 로컬로 적용되는 어셈블리 바인딩 제한 사항을 지정할 수 있습니다. 컴퓨터 구성 파일의 설정은 다른 모든 구성 설정보다 우선합니다. 그러나 모든 구성 설정을 이 파일에 넣어야 한다는 의미는 아닙니다. 관리자 정책 파일에서 결정된 버전이 최종 버전이며 재정의할 수 없습니다. Machine.config 파일에서 지정된 재정의는 모든 애플리케이션에 영향을 줍니다. 구성 파일에 대한 자세한 내용은 [구성 파일을 사용하여 앱 구성](../configure-apps/index.md)을 참조하세요.
 
-<a name="step2"></a> 
+<a name="step2"></a>
 
 ## <a name="step-2-checking-for-previously-referenced-assemblies"></a>2단계: 이전에 참조된 어셈블리 확인
 

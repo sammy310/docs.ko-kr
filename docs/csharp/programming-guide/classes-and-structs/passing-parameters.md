@@ -9,10 +9,10 @@ helpviewer_keywords:
 - C# language, method parameters
 ms.assetid: a5c3003f-7441-4710-b8b1-c79de77e0b77
 ms.openlocfilehash: 60ac7a8d982e7788f07debce114896859385c8e2
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705472"
 ---
 # <a name="passing-parameters-c-programming-guide"></a>매개 변수 전달(C# 프로그래밍 가이드)
@@ -30,9 +30,9 @@ C#에서는 인수를 값 또는 참조로 매개 변수에 전달할 수 있습
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
 
-자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)의 [인수 목록](~/_csharplang/spec/expressions.md#argument-lists)을 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/expressions.md#argument-lists)의 [인수 목록](/dotnet/csharp/language-reference/language-specification/introduction)을 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [메서드](./methods.md)

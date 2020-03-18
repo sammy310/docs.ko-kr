@@ -4,12 +4,12 @@ description: 식 트리를 실행 가능한 중간 언어(IL) 명령으로 변�
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: 9af4b346962cb743daddf774e8b3c1f8fa722ae4
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 802a83f52f9c05a99c3f49f8f6511eff81ef3eaa
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037107"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146023"
 ---
 # <a name="executing-expression-trees"></a>식 트리 실행
 
@@ -21,7 +21,7 @@ ms.locfileid: "73037107"
 ## <a name="lambda-expressions-to-functions"></a>람다 식을 함수로 변환
 
 모든 LambdaExpression 또는 LambdaExpression에서 파생된 모든 형식을 실행 가능한 IL로 변환할 수 있습니다. 다른 식 형식은 코드로 직접 변환할 수 없습니다. 실제로 이 제한은 거의 효과가 없습니다. 람다 식은 실행 가능한 IL(중간 언어)로 변환하여 실행하려는 식의 유일한 형식입니다. `ConstantExpression`을 직접 실행하는 것의 의미를 생각해 보세요. 유용한 의미가 있나요? `LambdaExpression`이거나 `LambdaExpression`에서 파생된 형식인 모든 식 트리는 IL로 변환할 수 있습니다.
-식 형식 `Expression<TDelegate>` 는 .NET Core 라이브러리에서 유일하게 구체적인 예제입니다. 이 형식은 모든 대리자 형식에 매핑되는 식을 나타내는 데 사용됩니다. 이 형식은 대리자 형식에 매핑되므로 .NET에서 식을 검사하고 람다 식의 시그니처와 일치하는 적절한 대리자에 대해 IL을 생성할 수 있습니다. 
+식 형식 `Expression<TDelegate>` 는 .NET Core 라이브러리에서 유일하게 구체적인 예제입니다. 이 형식은 모든 대리자 형식에 매핑되는 식을 나타내는 데 사용됩니다. 이 형식은 대리자 형식에 매핑되므로 .NET에서 식을 검사하고 람다 식의 시그니처와 일치하는 적절한 대리자에 대해 IL을 생성할 수 있습니다.
 
 대부분의 경우 식과 해당 대리자 간에 간단한 매핑이 만들어집니다. 예를 들어 `Expression<Func<int>>`로 표시되는 식 트리는 `Func<int>` 형식의 대리자로 변환됩니다. 반환 형식 및 인수 목록을 사용하는 람다 식의 경우 람다 식으로 표시된 실행 코드의 대상 형식인 대리자 형식이 있습니다.
 
@@ -50,7 +50,7 @@ Console.WriteLine(answer);
 
 ## <a name="caveats"></a>주의 사항
 
-람다 식을 대리자로 컴파일하고 해당 대리자를 호출하는 것은 식 트리로 수행할 수 있는 가장 간단한 작업 중 하나입니다. 그러나 이 간단한 작업에서도 주의해야 할 사항이 있습니다. 
+람다 식을 대리자로 컴파일하고 해당 대리자를 호출하는 것은 식 트리로 수행할 수 있는 가장 간단한 작업 중 하나입니다. 그러나 이 간단한 작업에서도 주의해야 할 사항이 있습니다.
 
 람다 식은 식에서 참조되는 모든 지역 변수에 대해 클로저를 만듭니다. 대리자의 일부가 되는 모든 변수는 `Compile`을 호출하는 위치 및 결과 대리자를 실행할 때 사용할 수 있도록 보장해야 합니다.
 
@@ -108,7 +108,7 @@ private static Func<int, int> CreateBoundResource()
 }
 ```
 
-이 메서드에서 반환된 대리자는 `constant`를 통해 닫히고 삭제되었습니다. 이 대리자는 `using` 문에서 선언되었기 때문에 삭제되었습니다. 
+이 메서드에서 반환된 대리자는 `constant`를 통해 닫히고 삭제되었습니다. 이 대리자는 `using` 문에서 선언되었기 때문에 삭제되었습니다.
 
 이제 이 메서드에서 반환된 대리자를 실행하면 실행 시점에 `ObjectDisposedException`이 throw됩니다.
 

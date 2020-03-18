@@ -5,12 +5,12 @@ helpviewer_keywords:
 - in-process side-by-side execution
 - side-by-side execution, in-process
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
-ms.openlocfilehash: 0c699f90143a87b7e7bee24c892efe2936a9399e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5ca2f03576946a23b3133bbe7532d46c4ad758ab
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716475"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181659"
 ---
 # <a name="in-process-side-by-side-execution"></a>In-Process Side-by-Side 실행
 .NET Framework 4부터 In-Process Side-By-Side 호스팅을 사용하여 단일 프로세스에서 여러 버전의 CLR(공용 언어 런타임)을 실행할 수 있습니다. 기본적으로 관리되는 COM 구성 요소는 프로세스에 대해 로드된 .NET Framework 버전에 관계없이 빌드 시 사용된 .NET Framework 버전을 사용하여 실행됩니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "75716475"
 > [!NOTE]
 > .NET Framework 버전 3.0 및 3.5는 버전 2.0에서 증분 방식으로 빌드되었으며 병렬 실행할 필요가 없습니다. 이들은 기본적으로 동일한 버전입니다.  
   
-<a name="scenarios"></a>   
+<a name="scenarios"></a>
 ## <a name="common-side-by-side-hosting-scenarios"></a>일반적인 병렬 호스팅 시나리오  
   
 - **시나리오 1:** 이전 버전의 .NET Framework를 사용하여 빌드된 COM 구성 요소를 사용하는 네이티브 애플리케이션.  
@@ -151,7 +151,7 @@ int _tmain(int argc, _TCHAR* argv[])
     IDispatch* pPrintInfo;  
     pUnk->QueryInterface(IID_IDispatch, (void**)&pPrintInfo);  
     OLECHAR FAR* szMethod[1];  
-    szMethod[0]=OLESTR("PrintInfo");   
+    szMethod[0]=OLESTR("PrintInfo");
     hr = pPrintInfo->GetIDsOfNames(IID_NULL,szMethod, 1, LOCALE_SYSTEM_DEFAULT, &dispid);  
     DISPPARAMS dispparams;  
     dispparams.cNamedArgs = 0;  

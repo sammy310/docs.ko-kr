@@ -2,12 +2,12 @@
 title: '방법: IPv6 지원을 사용하도록 컴퓨터 구성 파일 수정'
 ms.date: 03/30/2017
 ms.assetid: 5611b677-b9cc-43b8-a434-60e18d89aada
-ms.openlocfilehash: 98fb57abfff985ab96cb5139f15ae4c29c986a18
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 73408afe9fcb35daa898c08b087a3411a6cb342b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040616"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180807"
 ---
 # <a name="how-to-modify-the-computer-configuration-file-to-enable-ipv6-support"></a>방법: IPv6 지원을 사용하도록 컴퓨터 구성 파일 수정
 다음 코드 예제에서는 컴퓨터 구성 파일 *machine.config*를 수정하여 IPv6 지원을 사용하도록 설정하는 방법을 보여 줍니다. *machine.config* 파일은 Windows가 설치된 디렉터리의 *%Windir%\Microsoft.NET\Framework* 폴더에 저장됩니다. 컴퓨터에 설치된 .NET Framework의 각 버전에 해당하는 *%Windir%\Microsoft.NET\Framework* 아래의 폴더에는 개별 *machine.config* 파일이 있습니다(예: *C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config*).  
@@ -21,14 +21,14 @@ ms.locfileid: "73040616"
 > [!NOTE]
 > .NET Framework 버전 2.0 이상의 경우 기본적으로 IPv6이 사용됩니다. .NET Framework 버전 1.1 이하의 경우 IPv6은 기본적으로 사용되지 않습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```xml  
 <system.net>  
     …………  
     <settings>  
         …………  
-        <ipv6 enabled="true"/>   
+        <ipv6 enabled="true"/>
     ……………  
     </settings>  
     ………………  

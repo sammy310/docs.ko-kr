@@ -12,22 +12,22 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 ms.assetid: afb07899-2707-49ab-a57f-e0caf20d0171
-ms.openlocfilehash: ae8451089dc645c925848489a61c5fb55c468032
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 29c649abb7ff5db74cadfdbe5b7c11f9322f75f8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047300"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180688"
 ---
 # <a name="security-in-network-programming"></a>네트워크 프로그래밍의 보안
 
 .NET Framework <xref:System.Net> 네임스페이스 클래스에서는 가장 인기 있는 인터넷 애플리케이션 인증 메커니즘과 .NET Framework 코드 액세스 권한을 기본적으로 지원합니다.  
   
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
 [.NET Framework를 사용한 TLS(전송 계층 보안) 모범 사례](tls.md)  
 .NET Framwork로 TLS 모범 사례를 설명합니다.
- 
+
 [SSL(Secure Sockets Layer) 사용](using-secure-sockets-layer.md)  
 SSL(Secure Sockets Layer) 연결 사용 방법을 설명합니다.  
   

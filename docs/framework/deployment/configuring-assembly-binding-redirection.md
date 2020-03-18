@@ -5,12 +5,12 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: d266cbd8-bf91-41d1-baf0-afbc481a741f
-ms.openlocfilehash: c7b9dcb99e08a1ef2844c5811897aa87ff86f866
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5b24d99aa23358272eecd042c40001413965d7f0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716561"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181689"
 ---
 # <a name="configuring-assembly-binding-redirection"></a>어셈블리 바인딩 리디렉션 구성
 기본적으로 애플리케이션에서는 애플리케이션을 컴파일하는 데 사용된 런타임 버전과 함께 제공된 .NET Framework 어셈블리 집합을 사용합니다. 애플리케이션 구성 파일에서 [\<assemblyBinding&gt;](../configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) 요소에 대해 **appliesTo** 특성을 사용하여 어셈블리 바인딩 참조를 .NET Framework 어셈블리의 특정 버전으로 리디렉션할 수 있습니다. 이 선택적 특성은 .NET Framework 버전을 사용하여 특성이 적용되는 버전을 지정합니다. **appliesTo** 특성이 지정되지 않으면 **\<assemblyBinding>** 요소는 .NET Framework의 모든 버전에 적용됩니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "75716561"
 ```xml  
 <runtime>  
         <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1" appliesTo="v1.0.3705">  
-            <dependentAssembly>   
+            <dependentAssembly>
                * assembly information goes here *  
             </dependentAssembly>  
        </assemblyBinding>  
@@ -37,16 +37,16 @@ ms.locfileid: "75716561"
  예를 들어 한 참조를 .NET Framework 버전 1.0 어셈블리로 리디렉션하고 다른 참조를 .NET Framework 버전 1.1 어셈블리로 리디렉션하려면 다음 의사 코드에 표시된 패턴을 사용합니다.  
   
 ```xml  
-<assemblyBinding xmlns="..." appliesTo="v1.0.3705">   
-  <!-- .NET Framework version 1.0 redirects here. -->   
-</assemblyBinding>   
+<assemblyBinding xmlns="..." appliesTo="v1.0.3705">
+  <!-- .NET Framework version 1.0 redirects here. -->
+</assemblyBinding>
   
-<assemblyBinding xmlns="..." appliesTo="v1.1.4322">   
-  <!-- .NET Framework version 1.1 redirects here. -->   
-</assemblyBinding>   
+<assemblyBinding xmlns="..." appliesTo="v1.1.4322">
+  <!-- .NET Framework version 1.1 redirects here. -->
+</assemblyBinding>
   
-<assemblyBinding xmlns="...">   
-  <!-- Redirects meant for all versions of the .NET Framework. -->   
+<assemblyBinding xmlns="...">
+  <!-- Redirects meant for all versions of the .NET Framework. -->
 </assemblyBinding>  
 ```  
   

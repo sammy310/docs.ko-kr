@@ -4,12 +4,12 @@ description: .NET Core로 빌드된 .NET Core 런타임, SDK 및 앱을 설치�
 author: thraka
 ms.author: adegeo
 ms.date: 02/14/2020
-ms.openlocfilehash: b16ef4074f829246df0aedebf7ffe4df75faed51
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: be39c1ea56699f84736a2b37bc958507b16e826b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78165352"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146751"
 ---
 # <a name="macos-catalina-notarization-and-the-impact-on-net-core-downloads-and-projects"></a>macOS Catalina 공증과 이것이 .NET Core 다운로드 및 프로젝트에 미치는 영향
 
@@ -78,7 +78,7 @@ ASP.NET Core 인증서 문제를 해결하는 방법에 대한 자세한 내용�
 ## <a name="default-entitlements"></a>기본 자격
 
 .NET Core의 기본 호스트(`dotnet` 명령)는 기본 자격 집합을 갖습니다. 이러한 자격은 .NET Core가 올바르게 작동하는 데 필요합니다. 애플리케이션에 그 밖의 자격이 필요한 경우가 있는데, 이 경우 [appHost](#apphost-is-disabled-by-default)를 생성하여 사용한 다음 로컬에서 필수 자격을 추가해야 합니다.
- 
+
 .NET Core의 기본 자격 집합
 
 - `com.apple.security.cs.allow-jit`

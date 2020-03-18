@@ -2,12 +2,12 @@
 title: dotnet-counters - .NET Core
 description: dotnet-counter 명령줄 도구를 설치하고 사용하는 방법에 대해 알아봅니다.
 ms.date: 02/26/2020
-ms.openlocfilehash: 88f701a60d0ee03dd0236ae54c57679943e14939
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: dc95297478784ca06fe442a939f8489a40b29da7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157884"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79147180"
 ---
 # <a name="dotnet-counters"></a>dotnet-counters
 
@@ -181,7 +181,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
       request                                      100
   ```
   
-## <a name="dotnet-counters-ps"></a>dotnet-counters ps 
+## <a name="dotnet-counters-ps"></a>dotnet-counters ps
 
 모니터링할 수 있는 dotnet 프로세스의 목록을 표시합니다.
 

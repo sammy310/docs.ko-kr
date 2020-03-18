@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Ngen.exe
 - Ngen.exe, profilers and native images
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
-ms.openlocfilehash: b90971e072c0d075479523dc70187894cd0c8565
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0052475697dae2c3ad891db18d300b5ec08a7e62
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715745"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180343"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe(관리되는 프로필 기반 최적화 도구)
 
@@ -104,7 +104,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
   
 - 기본적으로 Mpgo.exe는 Visual Studio 빌드 경로에 없습니다. Visual Studio에 경로를 추가하거나 또는 Mpgo 명령줄에서 전체 경로를 지정해야 합니다. Visual Studio의 빌드 후 이벤트에서 `–Scenario` 또는 `–Import` 매개 변수를 사용할 수 있습니다. 그러나 일반적인 프로세스는 Visual Studio용 개발자 명령 프롬프트에서 `–Scenario`를 한 번 사용한 후 `–Import`를 사용하여 각 빌드 후 최적화된 어셈블리를 업데이트하는 것입니다(예: `"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`).  
   
-<a name="samples"></a>   
+<a name="samples"></a>
 ## <a name="examples"></a>예  
  Visual Studio용 개발자 명령 프롬프트의 다음 Mpgo.exe 명령은 세금 애플리케이션을 최적화합니다.  
   

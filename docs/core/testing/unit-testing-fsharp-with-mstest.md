@@ -5,10 +5,10 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.openlocfilehash: a685ed8a56393fb6e1c1b9400f0ed4bcef15f9b5
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714273"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>dotnet test 및 MSTest를 사용하여 .NET Core에서 F# 라이브러리 유닛 테스트
@@ -82,7 +82,7 @@ GitHub의 [샘플 리포지토리](https://github.com/dotnet/samples/blob/master
         MathServiceTests.fsproj
 ```
 
-*unit-testing-with-fsharp* 디렉터리에서 `dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`를 실행합니다.
+`dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`unit-testing-with-fsharp*디렉터리에서*를 실행합니다.
 
 ## <a name="creating-the-first-test"></a>첫 번째 테스트 만들기
 
@@ -120,7 +120,7 @@ member this.TestEvenSequence() =
     Assert.AreEqual(expected, actual)
 ```
 
-`expected` 시퀀스가 목록으로 변환되었습니다. MSTest 라이브러리는 많은 표준 .NET 형식을 사용합니다. 해당 종속성으로 인해 공용 인터페이스 및 예상 결과에서 <xref:System.Collections.IEnumerable> 대신 <xref:System.Collections.ICollection>을 지원합니다.
+`expected` 시퀀스가 목록으로 변환되었습니다. MSTest 라이브러리는 많은 표준 .NET 형식을 사용합니다. 해당 종속성으로 인해 공용 인터페이스 및 예상 결과에서 <xref:System.Collections.ICollection> 대신 <xref:System.Collections.IEnumerable>을 지원합니다.
 
 테스트를 실행하면 테스트가 실패합니다. 구현은 아직 만들지 않았습니다. `Mathservice` 클래스에서 작동하는 가장 간단한 코드를 작성하여 이 테스트를 통과시킵니다.
 
@@ -180,7 +180,7 @@ let squaresOfOdds xs =
 
 작은 라이브러리 및 이 라이브러리에 대한 단위 테스트 집합을 작성했습니다. 새 패키지 및 테스트 추가가 정상 워크플로에 포함되도록 솔루션을 구조화했습니다. 애플리케이션의 목표를 해결하는 데 대부분의 시간과 노력을 들였습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [dotnet new](../tools/dotnet-new.md)
 - [dotnet sln](../tools/dotnet-sln.md)

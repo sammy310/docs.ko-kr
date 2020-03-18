@@ -8,10 +8,10 @@ helpviewer_keywords:
 - C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
 ms.openlocfilehash: 3a70d2ae077552bab536e96367cab0fda1661310
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75712054"
 ---
 # <a name="interoperability-c-programming-guide"></a>상호 운용성(C# 프로그래밍 가이드)
@@ -40,9 +40,9 @@ ms.locfileid: "75712054"
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
 
-자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)의 [기본 개념](~/_csharplang/spec/unsafe-code.md)을 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/unsafe-code.md)의 [기본 개념](/dotnet/csharp/language-reference/language-specification/introduction)을 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>
 - [C# 프로그래밍 가이드](../index.md)

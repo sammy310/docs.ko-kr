@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 최신 웹 애플리케이�
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 164e820ffa6030b3dcb9180d56e57ce39bb03143
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 2b347442c4a9b7b6cf912ec461248f901dc45417
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503938"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79147493"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>ASP.NET Core MVC 앱 테스트
 
@@ -40,7 +40,7 @@ ms.locfileid: "77503938"
 
 > "시스템 개발은 집의 건축에 비유되는 경우가 많습니다. 이 비유가 그다지 정확한 것은 아니지만 단위 테스트와 기능 테스트의 차이점을 이해하기 위해 확장할 수 있습니다. 단위 테스트는 집의 건축 현장을 방문하는 건물 감독관과 유사합니다. 그는 집의 다양한 내부 시스템, 기초, 골조, 전기, 배관 등에 초점을 맞추고 있습니다. 그는 집의 구성 부분이 안전하게 제대로 작동하는지, 즉, 건축 법규를 충족하는지 확인(테스트)합니다. 이 시나리오의 기능 테스트는 이 건축 현장을 방문하는 주택 소유자와 유사합니다. 그는 내부 시스템이 적절히 작동하고 건물 감독관이 자신의 임무를 수행하고 있다고 가정합니다. 주택 소유자는 이 집에서 사는 것이 어떤 것일지에 초점을 맞추고 있습니다. 그는 집이 어떻게 보이는지, 여러 방이 편안한 크기인지, 집이 가족의 요구에 부응하는지, 아침 햇살이 드는 좋은 장소에 창문이 있는지 등에 관심이 있습니다. 주택 소유자는 사용자의 관점에서 집에 대한 기능 테스트를 수행하고 있습니다. 한편 건물 감독관은 건축가의 관점에서 집에 대한 단위 테스트를 수행하고 있습니다."
 
-소스: [단위 테스트 및 기능 테스트](https://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html)
+출처: [단위 테스트 및 기능 테스트](https://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html)
 
 "개발자로서 우리는 두 가지 방법에서 실패합니다. 즉 작업을 잘못 빌드하거나 잘못된 작업을 빌드합니다."라고 말하고 싶습니다. 단위 테스트를 통해 작업을 올바르게 빌드할 수 있으며, 기능 테스트를 통해 올바른 작업을 빌드할 수 있습니다.
 
@@ -153,7 +153,7 @@ ASP.NET Core 앱의 통합 테스트는 대부분 인프라 프로젝트에 정�
 
 ## <a name="functional-testing-aspnet-core-apps"></a>ASP.NET Core 앱 기능 테스트
 
-ASP.NET Core 애플리케이션의 경우 `TestServer` 클래스를 사용하면 기능 테스트를 매우 쉽게 작성할 수 있습니다. 일반적으로 애플리케이션에서 수행하는 대로 `WebHostBuilder`(또는 `HostBuilder`)를 직접 사용하거나 버전 2.1부터 사용할 수 있는 `WebApplicationFactory` 형식을 사용하여 `TestServer`를 구성합니다. 테스트는 앱이 프로덕션 환경에서 수행하는 것과 유사한 동작을 실행하므로 프로덕션 호스트에 테스트 호스트를 최대한 유사하게 일치시켜야 합니다. `WebApplicationFactory` 클래스는 ASP.NET Core에서 보기와 같은 정적 리소스를 찾는 데 사용되는 TestServer의 ContentRoot를 구성하는 데 유용합니다.
+ASP.NET Core 애플리케이션의 경우 `TestServer` 클래스를 사용하면 기능 테스트를 매우 쉽게 작성할 수 있습니다. 일반적으로 애플리케이션에서 수행하는 대로 `TestServer`(또는 `WebHostBuilder`)를 직접 사용하거나 버전 2.1부터 사용할 수 있는 `HostBuilder` 형식을 사용하여 `WebApplicationFactory`를 구성합니다. 테스트는 앱이 프로덕션 환경에서 수행하는 것과 유사한 동작을 실행하므로 프로덕션 호스트에 테스트 호스트를 최대한 유사하게 일치시켜야 합니다. `WebApplicationFactory` 클래스는 ASP.NET Core에서 보기와 같은 정적 리소스를 찾는 데 사용되는 TestServer의 ContentRoot를 구성하는 데 유용합니다.
 
 TEntry가 웹 애플리케이션의 스타트업 클래스인 IClassFixture\<WebApplicationFactory\<TEntry>>를 구현하는 테스트 클래스를 만들면 간단한 기능 테스트를 만들 수 있습니다. 이를 구현하면 테스트 픽스쳐에서 팩터리의 CreateClient 메서드를 사용하여 클라이언트를 만들 수 있습니다.
 
@@ -202,7 +202,7 @@ namespace Microsoft.eShopWeb.FunctionalTests.Web
                     .AddEntityFrameworkInMemoryDatabase()
                     .BuildServiceProvider();
 
-                // Add a database context (ApplicationDbContext) using an in-memory 
+                // Add a database context (ApplicationDbContext) using an in-memory
                 // database for testing.
                 services.AddDbContext<CatalogContext>(options =>
                 {
