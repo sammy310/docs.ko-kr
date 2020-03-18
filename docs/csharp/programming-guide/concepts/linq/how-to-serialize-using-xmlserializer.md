@@ -3,17 +3,17 @@ title: XmlSerializer를 사용하여 직렬화하는 방법(C#)
 ms.date: 07/20/2015
 ms.assetid: 2e0a0bbc-c548-4fe2-8741-be5a9ccd0cbb
 ms.openlocfilehash: 0ec19e964471382c6f10f07d6d4bb25f88fd532f
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347390"
 ---
-# <a name="how-to-serialize-using-xmlserializer-c"></a><span data-ttu-id="6c016-102">XmlSerializer를 사용하여 직렬화하는 방법(C#)</span><span class="sxs-lookup"><span data-stu-id="6c016-102">How to serialize using XmlSerializer (C#)</span></span>
-<span data-ttu-id="6c016-103">이 항목에서는 <xref:System.Xml.Serialization.XmlSerializer>를 사용하여 직렬화하고 역직렬화하는 예제를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6c016-103">This topic shows an example that serializes and deserializes using <xref:System.Xml.Serialization.XmlSerializer>.</span></span>  
+# <a name="how-to-serialize-using-xmlserializer-c"></a><span data-ttu-id="87af1-102">XmlSerializer를 사용하여 직렬화하는 방법(C#)</span><span class="sxs-lookup"><span data-stu-id="87af1-102">How to serialize using XmlSerializer (C#)</span></span>
+<span data-ttu-id="87af1-103">이 항목에서는 <xref:System.Xml.Serialization.XmlSerializer>를 사용하여 직렬화하고 역직렬화하는 예제를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="87af1-103">This topic shows an example that serializes and deserializes using <xref:System.Xml.Serialization.XmlSerializer>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6c016-104">예제</span><span class="sxs-lookup"><span data-stu-id="6c016-104">Example</span></span>  
- <span data-ttu-id="6c016-105">다음 예제에서는 <xref:System.Xml.Linq.XElement> 개체가 포함된 많은 개체를 만든 다음</span><span class="sxs-lookup"><span data-stu-id="6c016-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="6c016-106">메모리 스트림으로 개체를 직렬화하고 메모리 스트림에서 개체를 역직렬화합니다.</span><span class="sxs-lookup"><span data-stu-id="6c016-106">It then serializes them to a memory stream, and then deserializes them from the memory stream.</span></span>  
+## <a name="example"></a><span data-ttu-id="87af1-104">예제</span><span class="sxs-lookup"><span data-stu-id="87af1-104">Example</span></span>  
+ <span data-ttu-id="87af1-105">다음 예제에서는 <xref:System.Xml.Linq.XElement> 개체가 포함된 많은 개체를 만든 다음</span><span class="sxs-lookup"><span data-stu-id="87af1-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="87af1-106">메모리 스트림으로 개체를 직렬화하고 메모리 스트림에서 개체를 역직렬화합니다.</span><span class="sxs-lookup"><span data-stu-id="87af1-106">It then serializes them to a memory stream, and then deserializes them from the memory stream.</span></span>  
   
 ```csharp  
 using System;  
@@ -78,7 +78,7 @@ class XLinqTest
 }  
 ```  
   
- <span data-ttu-id="6c016-107">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="6c016-107">This example produces the following output:</span></span>  
+ <span data-ttu-id="87af1-107">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="87af1-107">This example produces the following output:</span></span>  
   
 ```output  
 Testing for type: XElementNullContainer  
