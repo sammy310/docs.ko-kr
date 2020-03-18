@@ -6,10 +6,10 @@ helpviewer_keywords:
 - My.Computer.Network object, tasks
 ms.assetid: 8ecc47ce-7730-49cd-b21d-3a13477eec6b
 ms.openlocfilehash: cb39f45ec9382e39569a08e5ba400d43cbc6bbd2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74345549"
 ---
 # <a name="performing-network-operations-visual-basic"></a>네트워크 작업 수행(Visual Basic)

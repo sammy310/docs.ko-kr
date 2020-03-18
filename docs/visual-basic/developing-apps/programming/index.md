@@ -6,17 +6,17 @@ helpviewer_keywords:
 - programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
 ms.openlocfilehash: 048bc70c2b5416d4377c5abcfdaf18a9312068db
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74352111"
 ---
 # <a name="programming-in-visual-basic"></a>Visual Basic의 프로그래밍
 
 이 섹션에서는 Visual Basic 애플리케이션을 만들 때 배우면 도움이 될 수 있는 프로그래밍 작업에 대해 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
 
  [컴퓨터 리소스에 액세스](../../../visual-basic/developing-apps/programming/computer-resources/index.md)  
  `My.Computer` 개체를 사용하여 애플리케이션이 실행되는 컴퓨터에 대한 정보에 액세스하는 방법과 컴퓨터를 제어하는 방법에 대한 설명서를 포함합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "74352111"
  [애플리케이션 웹 서비스 액세스](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
  `My.WebServices` 개체를 사용하여 애플리케이션에서 참조하는 웹 서비스에 액세스하는 방법에 대한 설명서를 포함합니다.  
   
- [애플리케이션 설정 액세스(Visual Basic)](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
+ [Accessing Application Settings](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
  `My.Settings` 개체를 사용하여 애플리케이션 설정에 액세스하는 방법에 대한 설명서를 포함합니다.  
   
  [드라이브, 디렉터리 및 파일 처리](drives-directories-files/index.md)  

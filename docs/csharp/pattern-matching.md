@@ -4,12 +4,12 @@ description: C#의 패턴 일치 식에 대한 자세한 정보
 ms.date: 04/10/2019
 ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: db509a0ebf1e205e9996ba8102757fe8c0b9ea3a
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 0c302499543c90bd01427e2791435968d580f644
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77501623"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170386"
 ---
 # <a name="pattern-matching"></a>패턴 일치
 
@@ -27,7 +27,7 @@ ms.locfileid: "77501623"
 
 추상 셰이프 정의로 시작하고 다른 특정 셰이프 클래스를 추가하는 대신 각 도형에 대한 간단한 데이터 전용 정의로 시작하겠습니다.
 
-[!code-csharp[ShapeDefinitions](../../samples/csharp/PatternMatching/Shapes.cs#01_ShapeDefinitions "Shape definitions")]
+[!code-csharp[ShapeDefinitions](../../samples/snippets/csharp/PatternMatching/Shapes.cs#01_ShapeDefinitions "Shape definitions")]
 
 이러한 구조체에서 일부 셰이프의 면적을 계산하는 메서드를 작성하겠습니다.
 
@@ -35,13 +35,13 @@ ms.locfileid: "77501623"
 
 C# 7.0 이전에는 일련의 `if` 및 `is` 문에서 각 형식을 테스트해야 했습니다.
 
-[!code-csharp[ClassicIsExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Classic type pattern using is")]
+[!code-csharp[ClassicIsExpression](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Classic type pattern using is")]
 
 위의 코드는 ‘형식 패턴’의 클래식 식입니다.  변수를 테스트하여 해당 형식을 확인하고 해당 형식에 따라 다른 작업을 수행합니다.
 
 `is` 식에 대한 확장을 사용하여 테스트에 성공할 경우 변수를 할당하면 이 코드가 더 간단해집니다.
 
-[!code-csharp[IsPatternExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#03_IsPatternExpression "is pattern expression")]
+[!code-csharp[IsPatternExpression](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#03_IsPatternExpression "is pattern expression")]
 
 이 업데이트된 버전에서 `is` 식은 변수를 테스트하고 적절한 형식의 새로운 변수에 할당합니다. 또한 이 버전에는 `struct`인 `Rectangle` 형식이 포함되어 있습니다. 새 `is` 식은 참조 형식뿐 아니라 값 형식에서도 작동합니다.
 
@@ -59,17 +59,17 @@ C# 7.0 이전에는 일련의 `if` 및 `is` 문에서 각 형식을 테스트해
 
 ## <a name="using-pattern-matching-switch-statements"></a>패턴 일치 `switch` 문 사용
 
-시간이 흐르면서 다른 셰이프 형식을 지원해야 할 수도 있습니다. 테스트하는 조건 수가 증가함에 따라 `is` 패턴 일치 식 사용이 불편해질 수 있습니다. 확인하려는 각 형식에 대한 `if` 문이 필요할 뿐 아니라 `is` 식은 입력이 단일 형식과 일치하는지 여부의 테스트로 제한됩니다. 이 경우 `switch` 패턴 일치 식을 선택하는 것이 더 나을 수 있습니다. 
+시간이 흐르면서 다른 셰이프 형식을 지원해야 할 수도 있습니다. 테스트하는 조건 수가 증가함에 따라 `is` 패턴 일치 식 사용이 불편해질 수 있습니다. 확인하려는 각 형식에 대한 `if` 문이 필요할 뿐 아니라 `is` 식은 입력이 단일 형식과 일치하는지 여부의 테스트로 제한됩니다. 이 경우 `switch` 패턴 일치 식을 선택하는 것이 더 나을 수 있습니다.
 
 기존의 `switch` 문은 패턴 식이었으며 상수 패턴을 지원했습니다.
 `case` 문에서 사용된 상수와 변수를 비교할 수 있습니다.
 
-[!code-csharp[ClassicSwitch](../../samples/csharp/PatternMatching/GeometricUtilities.cs#04_ClassicSwitch "Classic switch statement")]
+[!code-csharp[ClassicSwitch](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#04_ClassicSwitch "Classic switch statement")]
 
 `switch` 문이 지원하는 패턴은 상수 패턴뿐이었습니다. 숫자 형식과 `string` 형식으로 더욱 제한되었습니다.
 이러한 제한 사항이 제거되었으며, 이제 형식 패턴을 사용하여 `switch` 문을 작성할 수 있습니다.
 
-[!code-csharp[Switch Type Pattern](../../samples/csharp/PatternMatching/GeometricUtilities.cs#05_SwitchTypePattern "Compute with `switch` expression")]
+[!code-csharp[Switch Type Pattern](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#05_SwitchTypePattern "Compute with `switch` expression")]
 
 패턴 일치 `switch` 문은 기존의 C 스타일 `switch` 문을 사용한 개발자에게 친숙한 구문을 사용합니다. 각 `case`가 평가되고, 입력 변수와 일치하는 조건 아래에 있는 코드가 실행됩니다. 코드 실행은 case 식 간에 “이동”할 수 없습니다. `case` 문의 구문에서는 각 `case`가 `break`, `return` 또는 `goto`로 끝나야 합니다.
 
@@ -87,7 +87,7 @@ C# 7.0 이전에는 일련의 `if` 및 `is` 문에서 각 형식을 테스트해
 
 `case` 레이블에 `when` 절을 사용하여 면적이 0인 해당 셰이프에 대한 특수 사례를 만들 수 있습니다. 측면 길이가 0인 사각형 또는 반지름이 0인 원은 면적이 0입니다. `case` 레이블에 `when` 절을 사용하여 해당 조건을 지정할 수 있습니다.  
 
-[!code-csharp[ComputeDegenerateShapes](../../samples/csharp/PatternMatching/GeometricUtilities.cs#07_ComputeDegenerateShapes "Compute shapes with 0 area")]
+[!code-csharp[ComputeDegenerateShapes](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#07_ComputeDegenerateShapes "Compute shapes with 0 area")]
 
 이 변경 내용은 새 구문에 대한 몇 가지 중요한 사항을 보여 줍니다. 첫째, 여러 `case` 레이블을 하나의 `switch` 섹션에 적용할 수 있습니다. 문 블록은 이러한 레이블이 `true`인 경우에 실행됩니다. 이 인스턴스에서 `switch` 식이 면적이 0인 원 또는 사각형인 경우 메서드가 상수 0을 반환합니다.
 
@@ -98,13 +98,13 @@ C# 7.0 이전에는 일련의 `if` 및 `is` 문에서 각 형식을 테스트해
 
 면적이 0인 셰이프를 추가한 경우 사각형과 삼각형인 셰이프 유형 두 개를 더 추가하겠습니다.
 
-[!code-csharp[AddRectangleAndTriangle](../../samples/csharp/PatternMatching/GeometricUtilities.cs#09_AddRectangleAndTriangle "Add rectangle and triangle")]
+[!code-csharp[AddRectangleAndTriangle](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#09_AddRectangleAndTriangle "Add rectangle and triangle")]
 
- 이 변경 내용 집합은 degenerate 사례에 대한 `case` 레이블과 새로운 각 셰이프에 대한 레이블 및 블록을 추가합니다. 
+ 이 변경 내용 집합은 degenerate 사례에 대한 `case` 레이블과 새로운 각 셰이프에 대한 레이블 및 블록을 추가합니다.
 
 마지막으로, `null` case를 추가하여 인수가 `null`이 아닌지 확인할 수 있습니다.
 
-[!code-csharp[NullCase](../../samples/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "Add null case")]
+[!code-csharp[NullCase](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "Add null case")]
 
 `null` 패턴의 특수 동작은 패턴에서 형식이 없는 `null` 상수를 모든 참조 형식 또는 nullable 형식으로 변환할 수 있기 때문에 흥미롭습니다. `null`을 임의 형식으로 변환하는 대신, 언어에서 `null` 값은 변수의 컴파일 시간 형식과 관계없이 어떠한 형식 패턴과도 일치하지 않는다고 정의합니다. 이 동작을 통해 새 `switch` 기반 형식 패턴이 `is` 문과 일치하게 됩니다. `is` 문은 확인되는 값이 `null`일 경우 항상 `false`를 반환합니다. 더 간단하기도 합니다. 형식을 확인한 후에는 추가 null 검사가 필요하지 않습니다. 위 샘플의 case 블록에 null 검사가 없다는 사실에서 이를 확인할 수 있습니다. 형식 패턴 일치를 통해 null이 아닌 값이 보장되므로 null 검사가 필요하지 않습니다.
 
@@ -124,7 +124,7 @@ match 식 중 하나인 `var`이 소개되면서 패턴 일치에 대한 새 규
 
 세 번째 규칙은 `var` 사례가 유용할 수 있는 사용법을 소개합니다. 입력이 문자열이고 알려진 명령 값을 검색하는 패턴 일치를 수행한다고 가정해 봅니다. 다음과 같이 작성할 수 있습니다.
 
-[!code-csharp[VarCaseExpression](../../samples/csharp/PatternMatching/Program.cs#VarCaseExpression "use a var case expression to filter white space")]
+[!code-csharp[VarCaseExpression](../../samples/snippets/csharp/PatternMatching/Program.cs#VarCaseExpression "use a var case expression to filter white space")]
 
 `var` 사례는 `null`, 빈 문자열, 또는 공백만 포함하는 문자열과 일치합니다. 앞의 코드에서는 `?.` 연산자를 사용하여 실수로 <xref:System.NullReferenceException>을 throw하지 않도록 합니다. `default` case는 이 명령 파서에서 인식되지 않는 기타 문자열 값을 처리합니다.
 

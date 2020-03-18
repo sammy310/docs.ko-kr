@@ -2,12 +2,12 @@
 title: 문자열 컬렉션의 결합 및 비교 방법(LINQ)(C#)
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: 23089835e710a7905693f8e3e3b57173085d0694
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: f73a31e109933a4b6dd0078934d89d3bb770de5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141420"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169456"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-c"></a>문자열 컬렉션의 결합 및 비교 방법(LINQ)(C#)
 이 예제에서는 텍스트 줄이 포함된 파일을 병합하고 결과를 정렬하는 방법을 보여 줍니다. 특히, 두 개의 텍스트 줄 집합에 대한 단순 연결, 합집합 및 교집합을 수행하는 방법을 보여 줍니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "74141420"
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```csharp  
 class MergeStrings  
@@ -74,7 +74,7 @@ class MergeStrings
                 fileA.Intersect(fileB);  
             OutputQueryResults(commonNamesQuery, "Merge based on intersect:");  
   
-            // Find the matching fields in each list. Merge the two   
+            // Find the matching fields in each list. Merge the two
             // results by using Concat, and then  
             // sort using the default string comparer.  
             string nameMatch = "Garcia";  

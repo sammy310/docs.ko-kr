@@ -16,10 +16,10 @@ helpviewer_keywords:
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
 ms.openlocfilehash: 99e2a837877494dd4c7e0106047bce3cc39a9282
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75342361"
 ---
 # <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>Visual Studio 명령줄에 필요한 환경 변수를 설정하는 방법
@@ -50,6 +50,6 @@ VsDevCmd.BAT에 사용 가능한 옵션을 보려면 `-help` 옵션을 사용하
 VsDevCmd.bat -help
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [csc.exe를 사용한 명령줄 빌드](./command-line-building-with-csc-exe.md)

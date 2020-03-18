@@ -7,10 +7,10 @@ helpviewer_keywords:
 - single-file assemblies
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
 ms.openlocfilehash: bee9d5422ec3101b2486f233ae0816ae3643f4e7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75345568"
 ---
 # <a name="assembly-contents"></a>어셈블리 콘텐츠
@@ -33,7 +33,7 @@ ms.locfileid: "75345568"
 
 소스 코드를 디자인하는 경우 애플리케이션의 기능을 하나 이상의 파일로 분리하는 방법에 대해 명시적으로 결정해야 합니다. 또한 .NET 코드를 디자인하는 경우에도 해당 기능을 하나 이상의 어셈블리로 분리하는 방법에 대해 결정해야 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [.NET 어셈블리](index.md)
 - [어셈블리 매니페스트](manifest.md)

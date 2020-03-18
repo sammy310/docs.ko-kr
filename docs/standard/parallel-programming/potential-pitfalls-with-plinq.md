@@ -9,10 +9,10 @@ helpviewer_keywords:
 - PLINQ queries, pitfalls
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
 ms.openlocfilehash: 3ddc0c013335e6a7b4708a5dd8be0b2247b2f60c
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74716250"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>PLINQ에서 발생할 수 있는 문제
@@ -29,7 +29,7 @@ ms.locfileid: "74716250"
 
 ## <a name="avoid-over-parallelization"></a>과도한 병렬화 방지
 
-`AsParallel` 메서드를 사용하면 소스 컬렉션을 분할하고 작업자 스레드를 동기화하는 오버헤드 비용이 발생합니다. 병렬화의 이점은 컴퓨터의 프로세서 수로 더 제한됩니다. 하나의 프로세서에서 여러 계산 바인딩된 스레드를 실행하여 얻을 수 있는 속도 향상이 없습니다. 따라서 쿼리를 과도하게 병렬 처리하지 않도록 주의해야 합니다.
+`AsParallel` 메서드를 사용하면 소스 컬렉션을 분할하고 작업자 스레드를 동기화하는 오버헤드 비용이 발생합니다. 병렬화의 이점은 컴퓨터의 프로세서 수로 더 제한됩니다. 하나의 프로세서에서 여러 컴퓨팅 바인딩된 스레드를 실행하여 얻을 수 있는 속도 향상이 없습니다. 따라서 쿼리를 과도하게 병렬 처리하지 않도록 주의해야 합니다.
 
 과도한 병렬 처리가 발생할 수 있는 가장 일반적인 시나리오는 다음 코드 조각에 표시된 대로 중첩된 루프에 있습니다.
 
@@ -121,6 +121,6 @@ Enumerable.Range(0, Environment.ProcessorCount * 100).AsParallel().ForAll((j) =>
 
 특히 병렬 루프의 하나의 반복은 다른 루프의 반복이 진행되기를 기다리면 안 됩니다. 병렬 루프가 반대 순서로 순차적으로 반복되도록 결정하는 경우 교착 상태가 발생합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [PLINQ(병렬 LINQ)](parallel-linq-plinq.md)

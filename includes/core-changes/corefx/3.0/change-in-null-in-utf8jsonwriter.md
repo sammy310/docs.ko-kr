@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 7c39fe7ffd59fa7a5564bb45f32a6a2fbe0ddb33
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568152"
 ---
 ### <a name="change-in-semantics-of-stringnull-in-utf8jsonwriter"></a>Utf8JsonWriter에서 `(string)null` 의미 체계 변경
@@ -58,7 +58,7 @@ using (Utf8JsonWriter writer = new Utf8JsonWriter(stream))
 
 3.0 미리 보기 8
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 <xref:System.Text.Json.Utf8JsonWriter> 클래스를 사용하여 속성 이름 및 값을 쓸 때
 

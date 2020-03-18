@@ -4,10 +4,10 @@ description: Project.json 기반의 라이브러리를 만들 때 패키지 종�
 author: cartermp
 ms.date: 06/20/2016
 ms.openlocfilehash: 48ba3ef578388fd98fe7cb830df313512d359483
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75740833"
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>project.json으로 패키지 종속성 감소
@@ -24,7 +24,7 @@ ms.locfileid: "75740833"
 
 현재로서는 패키지 참조를 잘라내는 공식 `dotnet` 명령이 없습니다.  이 작업을 수동으로 수행해야 합니다.  일반적인 프로세스는 다음과 같습니다.
 
-1. `project.json`의 `dependencies` 섹션에서 `NETStandard.Library` 버전 `1.6.0`을 참조합니다.
+1. `NETStandard.Library`의 `1.6.0` 섹션에서 `dependencies` 버전 `project.json`을 참조합니다.
 2. 명령줄에서 `dotnet restore`([참고 참조](#dotnet-restore-note))로 패키지를 복원합니다.
 3. `project.lock.json` 파일을 검사하고 `NETStandard.Library` 섹션을 찾습니다.  파일의 시작 부분에 있습니다.
 4. `dependencies` 아래에 나열된 모든 패키지를 복사합니다.
@@ -56,7 +56,7 @@ ms.locfileid: "75740833"
 
 그런 다음 `dotnet restore`([참고 참조](#dotnet-restore-note))로 패키지를 복원하고, `project.lock.json` 파일을 검사하고, `NETStandard.Library`에 대해 복원된 모든 패키지를 찾습니다.
 
-다음은 `netstandard1.0`을 대상으로 할 때 `project.lock.json` 파일의 관련 섹션이 어떤 모양인지를 보여줍니다.
+다음은 `project.lock.json`을 대상으로 할 때 `netstandard1.0` 파일의 관련 섹션이 어떤 모양인지를 보여줍니다.
 
 ```json
 "NETStandard.Library/1.6.0":{
@@ -89,7 +89,7 @@ ms.locfileid: "75740833"
 }
 ```
 
-그런 다음, 라이브러리의 `project.json` 파일에 있는 `dependencies` 섹션으로 패키지 참조를 복사하여 `NETStandard.Library` 참조를 교체합니다.
+그런 다음, 라이브러리의 `dependencies` 파일에 있는 `project.json` 섹션으로 패키지 참조를 복사하여 `NETStandard.Library` 참조를 교체합니다.
 
 ```json
 {

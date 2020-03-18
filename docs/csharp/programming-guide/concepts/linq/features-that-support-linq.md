@@ -5,10 +5,10 @@ helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
 ms.openlocfilehash: 9fc8adaa49d02f8b69c2db6e94a28b9fab36b3b0
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635797"
 ---
 # <a name="c-features-that-support-linq"></a>LINQ를 지원하는 C# 기능
@@ -46,7 +46,7 @@ var query = from str in stringArray
 
 ## <a name="object-and-collection-initializers"></a>개체 및 컬렉션 이니셜라이저
 
-개체 및 컬렉션 이니셜라이저를 사용하면 개체에 대한 생성자를 명시적으로 호출하지 않고 개체를 초기화할 수 있습니다. 일반적으로 이니셜라이저는 소스 데이터를 새 데이터 형식으로 프로젝션할 때 쿼리 식에서 사용됩니다. public `Name` 및 `Phone` 속성이 있는 `Customer`라는 클래스를 가정할 경우 다음 코드에서처럼 개체 이니셜라이저를 사용할 수 있습니다.
+개체 및 컬렉션 이니셜라이저를 사용하면 개체에 대한 생성자를 명시적으로 호출하지 않고 개체를 초기화할 수 있습니다. 일반적으로 이니셜라이저는 소스 데이터를 새 데이터 형식으로 프로젝션할 때 쿼리 식에서 사용됩니다. public `Customer` 및 `Name` 속성이 있는 `Phone`라는 클래스를 가정할 경우 다음 코드에서처럼 개체 이니셜라이저를 사용할 수 있습니다.
 
 ```csharp
 var cust = new Customer { Name = "Mike", Phone = "555-1212" };
@@ -66,7 +66,7 @@ var newLargeOrderCustomers = from o in IncomingOrders
 var newLargeOrderCustomers = IncomingOrders.Where(x => x.OrderSize > 5).Select(y => new Customer { Name = y.Name, Phone = y.Phone });
 ```
 
-자세한 내용은 다음을 참조하세요.
+자세한 내용은 다음을 참조하십시오.
 
 - [개체 이니셜라이저 및 컬렉션 이니셜라이저](../../classes-and-structs/object-and-collection-initializers.md)
 
@@ -92,7 +92,7 @@ select new {name = cust.Name, phone = cust.Phone};
 
 람다 식은 => 연산자를 사용하여 함수 본문에서 입력 매개 변수를 구분하는 인라인 함수이며 컴파일 시간에 대리자나 식 트리로 변환할 수 있습니다. LINQ 프로그래밍에서는 표준 쿼리 연산자에 대한 메서드를 직접 호출할 때 람다 식이 나타납니다.
 
-자세한 내용은 다음을 참조하세요.
+자세한 내용은 다음을 참조하십시오.
 
 - [익명 함수](../../statements-expressions-operators/anonymous-functions.md)
 
@@ -100,6 +100,6 @@ select new {name = cust.Name, phone = cust.Phone};
 
 - [식 트리(C#)](../expression-trees/index.md)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [LINQ(Language-Integrated Query)(C#)](./index.md)

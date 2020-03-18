@@ -8,10 +8,10 @@ helpviewer_keywords:
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
 ms.openlocfilehash: 9a0640a7ce73fa8454442cd301157bf5c265f9de
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713893"
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>여러 문자열 연결 방법(C# 가이드)
@@ -37,7 +37,7 @@ ms.locfileid: "75713893"
 
 문자열을 연결하는 다른 메서드는 <xref:System.String.Format%2A?displayProperty=nameWithType>입니다. 이 메서드는 작은 수의 구성 요소 문자열에서 문자열을 빌드할 때 잘 작동합니다.
 
-다른 경우는 결합하는 문자열의 개수를 모르는 루프에서 문자열을 결합할 수 있으며, 소스 문자열의 실제 개수는 매우 클 수 있습니다. <xref:System.Text.StringBuilder> 클래스는 이러한 시나리오를 위해 설계되었습니다. 다음 코드는 <xref:System.Text.StringBuilder> 클래스의 <xref:System.Text.StringBuilder.Append%2A> 메서드를 사용하여 문자열을 연결합니다.  
+다른 경우는 결합하는 문자열의 개수를 모르는 루프에서 문자열을 결합할 수 있으며, 소스 문자열의 실제 개수는 매우 클 수 있습니다. <xref:System.Text.StringBuilder> 클래스는 이러한 시나리오를 위해 설계되었습니다. 다음 코드는 <xref:System.Text.StringBuilder.Append%2A> 클래스의 <xref:System.Text.StringBuilder> 메서드를 사용하여 문자열을 연결합니다.  
   
 [!code-csharp-interactive[string concatenation using string builder](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#4)]  
 
@@ -53,7 +53,7 @@ ms.locfileid: "75713893"
 
 [GitHub 리포지토리](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)의 코드를 확인하여 이러한 샘플을 시험해 볼 수 있습니다. 또는 샘플을 [zip 파일로](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip) 다운로드할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.String>
 - <xref:System.Text.StringBuilder>

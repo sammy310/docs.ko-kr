@@ -5,10 +5,10 @@ helpviewer_keywords:
 - arrays [C#], passing as arguments
 ms.assetid: f3a0971e-c87c-4a1f-8262-bc0a3b712772
 ms.openlocfilehash: 2e53008910a9062ada25680eb4b8e54a225fd226
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705693"
 ---
 # <a name="passing-arrays-as-arguments-c-programming-guide"></a>배열을 인수로 전달(C# 프로그래밍 가이드)
@@ -55,7 +55,7 @@ ms.locfileid: "75705693"
 
 [!code-csharp[csProgGuideArrays#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#31)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [배열](index.md)

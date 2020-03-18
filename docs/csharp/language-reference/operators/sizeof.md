@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: 8e4518718d0975f8b4a65870f15d8c52d692c2f5
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: a9e80ecb3288479a2ca81b43c9d088809ed5f2f0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77625737"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847289"
 ---
 # <a name="sizeof-operator-c-reference"></a>sizeof 연산자(C# 참조)
 
@@ -40,15 +40,15 @@ ms.locfileid: "77625737"
 
 다음 예제에서는 `sizeof` 연산자의 사용법을 보여 줍니다.
 
-[!code-csharp[sizeof examples](~/samples/csharp/language-reference/operators/SizeOfOperator.cs)]
+[!code-csharp[sizeof examples](snippets/SizeOfOperator.cs)]
 
 `sizeof` 연산자는 관리되는 메모리의 공용 언어 런타임에서 할당하는 바이트 수를 반환합니다. [구조체](../builtin-types/struct.md) 형식의 경우 앞의 예제에서 보여 주는 것처럼 해당 값에 안쪽 여백이 포함됩니다. `sizeof` 연산자의 결과는 ‘관리되지 않는’ 메모리의 형식 크기를 반환하는 <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType> 메서드의 결과와 다를 수 있습니다. 
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [sizeof 연산자](~/_csharplang/spec/unsafe-code.md#the-sizeof-operator) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/unsafe-code.md#the-sizeof-operator)의 [sizeof 연산자](~/_csharplang/spec/introduction.md) 섹션을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 연산자](index.md)

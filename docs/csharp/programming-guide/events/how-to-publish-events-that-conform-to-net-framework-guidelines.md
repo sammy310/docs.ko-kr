@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: 0ae240d0c078b5eaa690f128c037ee2471325872
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 90c079b9f7dbf2a1d963b7eee4447145d7a10432
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705342"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167538"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>.NET Framework 지침을 따르는 이벤트를 게시하는 방법(C# 프로그래밍 가이드)
 다음 절차에서는 표준 .NET Framework 패턴을 따르는 이벤트를 클래스와 구조체에 추가하는 방법을 보여 줍니다. .NET Framework 클래스 라이브러리의 모든 이벤트는 다음과 같이 정의된 <xref:System.EventHandler> 대리자를 기반으로 합니다.  
@@ -38,7 +38,7 @@ public delegate void EventHandler(object sender, EventArgs e);
         public string Message  
         {  
             get { return msg; }  
-        }   
+        }
     }  
     ```  
   

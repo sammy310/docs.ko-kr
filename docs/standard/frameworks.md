@@ -5,11 +5,11 @@ ms.date: 12/03/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
 ms.openlocfilehash: 33beb5606cbf857cc41b739f256482b0298f1fb1
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124600"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398798"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>SDK 스타일 프로젝트의 대상 프레임워크
 
@@ -29,7 +29,7 @@ ms.locfileid: "77124600"
 
 | 대상 프레임워크      | 최신 <br/> 안정적인 버전 | TFM(대상 프레임워크 모니커) | 구현된 <br/> .NET 표준 버전 |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
-| .NET Standard         | 2.1                         | netstandard2.1                 | N/A                                     |
+| .NET 표준         | 2.1                         | netstandard2.1                 | 해당 없음                                     |
 | .NET Core             | 3.1                         | netcoreapp3.1                  | 2.1                                     |
 | .NET Framework        | 4.8                         | net48                          | 2.0                                     |
 
@@ -39,14 +39,14 @@ ms.locfileid: "77124600"
 
 | 대상 프레임워크           | TFM |
 | -------------------------- | --- |
-| .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0<br>netstandard2.1 |
+| .NET 표준              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0<br>netstandard2.1 |
 | .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1<br>netcoreapp2.2<br>netcoreapp3.0<br>netcoreapp3.1 |
 | .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472<br>net48 |
 | Windows 스토어              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
 | .NET Micro Framework       | netmf |
 | Silverlight                | sl4<br>sl5 |
 | Windows Phone              | wp [wp7]<br>wp7<br>wp75<br>wp8<br>wp81<br>wpa81 |
-| UWP | uap [uap10.0]<br>uap10.0 [win10] [netcore50] |
+| 유니버설 Windows 플랫폼 | uap [uap10.0]<br>uap10.0 [win10] [netcore50] |
 
 ## <a name="how-to-specify-target-frameworks"></a>대상 프레임워크를 지정하는 방법
 
@@ -127,7 +127,7 @@ public class MyClass
 | win10                                                                                      | uap10.0     |
 | winrt                                                                                      | netcore45   |
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [패키지, 메타패키지 및 프레임워크](../core/packages.md)
 - [여러 플랫폼에서 사용할 수 있는 도구로 라이브러리 개발](../core/tutorials/libraries.md)

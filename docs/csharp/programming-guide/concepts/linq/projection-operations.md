@@ -2,12 +2,12 @@
 title: 프로젝션 작업(C#)
 ms.date: 07/20/2015
 ms.assetid: 98df573a-aad9-4b8c-9a71-844be2c4fb41
-ms.openlocfilehash: a2a2ae762d63d5ff26c7018caef1a83558042fb5
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f76eeeb779ab08a575e758a9d974573b700ae652
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346517"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168338"
 ---
 # <a name="projection-operations-c"></a>프로젝션 작업(C#)
 프로젝션은 주로 이후에 사용할 속성으로만 구성된 새 양식으로 개체를 변환하는 작업을 가리킵니다. 프로젝션을 사용하면 각 개체를 기반으로 만들어지는 새 형식을 생성할 수 있습니다. 속성을 프로젝션하고 속성에서 수학 함수를 수행할 수 있습니다. 원래 개체를 변경하지 않고 프로젝션할 수도 있습니다.  
@@ -101,7 +101,7 @@ static void SelectVsSelectMany()
         new Bouquet{ Flowers = new List<string> { "larkspur", "lilac", "iris", "dahlia" }}  
     };  
   
-    // *********** Select ***********              
+    // *********** Select ***********
     IEnumerable<List<string>> query1 = bouquets.Select(bq => bq.Flowers);  
   
     // ********* SelectMany *********  
@@ -159,7 +159,7 @@ static void SelectVsSelectMany()
 }  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Linq>
 - [표준 쿼리 연산자 개요(C#)](./standard-query-operators-overview.md)

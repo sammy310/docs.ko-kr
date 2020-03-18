@@ -9,11 +9,11 @@ helpviewer_keywords:
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 ms.openlocfilehash: 66643021ce4939505af24cf3a72ab194662a15f7
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965921"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398606"
 ---
 # <a name="install-the-net-framework-for-developers"></a>개발자용 .NET Framework 설치
 
@@ -26,7 +26,7 @@ ms.locfileid: "76965921"
 
 [!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
 
-.NET Framework 버전에 대한 자세한 내용 및 컴퓨터에 설치된 버전을 확인하는 방법은 [버전 및 종속성](../migration-guide/versions-and-dependencies.md) 및 [방법: 설치된 .NET Framework 버전 확인](../migration-guide/how-to-determine-which-versions-are-installed.md)을 참조하세요.
+.NET Framework 버전 및 컴퓨터에 설치된 버전을 확인하는 방법에 대한 자세한 내용은 [버전 및 종속성](../migration-guide/versions-and-dependencies.md) 및 [방법: 설치되는 .NET Framework 버전 결정](../migration-guide/how-to-determine-which-versions-are-installed.md)을 참조하십시오.
 
 > [!NOTE]
 > .NET Framework 3.5에 대한 자세한 내용은 [Windows 10, Windows 8.1 및 Windows 8에 .NET Framework 3.5 설치](dotnet-35-windows-10.md)를 참조하세요.
@@ -35,10 +35,10 @@ ms.locfileid: "76965921"
 
 | .NET Framework 버전 | 설치 프로그램(개발자 팩 및 런타임) | 플랫폼 지원 |
 | ---------------------- | -------------------------------------- | ---------------- |
-|**4.8**   | [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)    | **포함된 운영 체제:**<br/><br/>Windows 10 2019년 5월 업데이트<br/>[Visual Studio 2019(16.3 업데이트)](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **설치 가능한 운영 체제:**<br/><br/>Windows 10 2018년 10월 업데이트<br/>Windows 10 2018년 4월 업데이트<br/>Windows 10 Fall Creators Update<br/>Windows 10 크리에이터스 업데이트 <br /> Windows 10 1주년 업데이트<br /> Windows 8.1 및 이전 버전<br /> Windows Server 2019<br/>Windows Server, 버전 1809<br/>Windows Server, 버전 1803<br /><br/> (전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)||
-|**4.7.2** | [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472) | **포함된 운영 체제:** <br/><br/>Windows 10 2018년 10월 업데이트<br/>Windows 10 2018년 4월 업데이트<br/>Windows Server 2019<br/>Windows Server, 버전 1809<br/>Windows Server, 버전 1803<br/>[Visual Studio 2017(15.8 업데이트)](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **설치 가능한 운영 체제:**<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 크리에이터스 업데이트 <br /> Windows 10 1주년 업데이트<br /> Windows 8.1 및 이전 버전<br /> Windows Server, 버전 1709 이상<br /><br/> (전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)||
-|**4.7.1** | [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471) | **포함된 운영 체제:** <br/><br/>Windows 10 Fall Creators Update<br/>Windows Server, 버전 1709<br/>[Visual Studio 2017(15.5 업데이트)](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **설치 가능한 운영 체제:**<br/><br/> Windows 10 크리에이터스 업데이트 <br /> Windows 10 1주년 업데이트<br /> Windows 8.1 및 이전 버전<br /> Windows Server 2016 이상<br /> (전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)||
-|**4.7**   | [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)    | **포함된 운영 체제:** <br/><br/>Windows 10 크리에이터스 업데이트<br/>[Visual Studio 2017(15.3 업데이트)](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **설치 가능한 운영 체제:**<br /><br/> Windows 10 1주년 업데이트<br /> Windows 8.1 및 이전 버전<br /> Windows Server 2016 이상<br /> (전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)||
+|**4.8**   | [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)    | **포함된 운영 체제:**<br/><br/>Windows 10 2019년 5월 업데이트<br/>[Visual Studio 2019(16.3 업데이트)](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **설치 가능한 운영 체제:**<br/><br/>Windows 10 2018년 10월 업데이트<br/>Windows 10 2018년 4월 업데이트<br/>Windows 10 Fall Creators Update<br/>Windows 10 작성자 업데이트 <br /> Windows 10 1주년 업데이트<br /> Windows 8.1 및 이전 버전<br /> Windows Server 2019<br/>Windows Server, 버전 1809<br/>Windows Server, 버전 1803<br /><br/> (전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)||
+|**4.7.2** | [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472) | **포함된 운영 체제:** <br/><br/>Windows 10 2018년 10월 업데이트<br/>Windows 10 2018년 4월 업데이트<br/>Windows Server 2019<br/>Windows Server, 버전 1809<br/>Windows Server, 버전 1803<br/>[Visual Studio 2017(15.8 업데이트)](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **설치 가능한 운영 체제:**<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 작성자 업데이트 <br /> Windows 10 1주년 업데이트<br /> Windows 8.1 및 이전 버전<br /> Windows Server, 버전 1709 이상<br /><br/> (전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)||
+|**4.7.1** | [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471) | **포함된 운영 체제:** <br/><br/>Windows 10 Fall Creators Update<br/>Windows Server, 버전 1709<br/>[Visual Studio 2017(15.5 업데이트)](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **설치 가능한 운영 체제:**<br/><br/> Windows 10 작성자 업데이트 <br /> Windows 10 1주년 업데이트<br /> Windows 8.1 및 이전 버전<br /> Windows Server 2016 이상<br /> (전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)||
+|**4.7**   | [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)    | **포함된 운영 체제:** <br/><br/>Windows 10 작성자 업데이트<br/>[Visual Studio 2017(15.3 업데이트)](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **설치 가능한 운영 체제:**<br /><br/> Windows 10 1주년 업데이트<br /> Windows 8.1 및 이전 버전<br /> Windows Server 2016 이상<br /> (전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)||
 |**4.6.2** | [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462) | **포함된 운영 체제:** <br/><br/>Windows 10 1주년 업데이트<br /><br /> **설치 가능한 운영 체제:**<br /><br/> Windows 10 11월 업데이트 <br/> Windows 10 <br /> Windows 8.1 및 이전 버전<br /> Windows Server 2012 R2 및 이전 버전<br /> (전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)|
 |**4.6.1** | [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461) | **포함된 운영 체제:** <br/><br/>[Visual Studio 2015 업데이트 2](https://my.visualstudio.com/Downloads?q=visual%20studio%202015)<br/><br/>**설치 가능한 운영 체제:**<br /><br/> Windows 10 <br /> Windows 8.1 및 이전 버전<br /> Windows Server 2012 R2 및 이전 버전<br /> (전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)|
 |**4.6**   | [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)    | **포함된 운영 체제:** <br/><br/> Windows 10 <br />[Visual Studio 2015](https://my.visualstudio.com/Downloads?q=visual%20studio%202015)<br /><br /> **설치 가능한 운영 체제:**<br /><br/> Windows 8.1 및 이전 버전<br /> Windows Server 2012 R2 및 이전 버전<br /> (전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)|
@@ -166,7 +166,7 @@ Visual Studio에서 애플리케이션을 빌드하거나 명령줄에서 MSBuil
 
 다음 표에서는 지원되는 언어 목록을 보여 줍니다.
 
-| 언어              | culture |
+| 언어              | 문화권 |
 | --------------------- | :-----: |
 | 아랍어                | ar      |
 | 체코어                 | cs      |
@@ -207,7 +207,7 @@ Visual Studio에서 애플리케이션을 빌드하거나 명령줄에서 MSBuil
 
 - 온라인에서 .NET Framework 소스 코드를 검색하려면 [.NET Framework 참조 소스](https://referencesource.microsoft.com/)를 참조하세요. 참조 소스는 [GitHub](https://github.com/Microsoft/referencesource)에서도 사용할 수 있습니다. [참조 소스를 다운로드](https://referencesource.microsoft.com/download.html)하여 오프라인에서 살펴보고, 디버그 시 소스(패치 및 업데이트 포함)를 단계별로 실행할 수 있습니다. 자세한 내용은 블로그 항목 [.NET 참조 소스의 새로운 디자인](https://devblogs.microsoft.com/dotnet/a-new-look-for-net-reference-source/)을 참조하십시오.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [개발자를 위한 배포 가이드](../deployment/deployment-guide-for-developers.md)
 - [관리자를 위한 배포 가이드](../deployment/guide-for-administrators.md)

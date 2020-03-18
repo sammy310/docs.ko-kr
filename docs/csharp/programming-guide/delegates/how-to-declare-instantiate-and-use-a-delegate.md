@@ -5,10 +5,10 @@ helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
 ms.openlocfilehash: 7ac1d736e19c4dcf1c8408db944505c399762778
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712366"
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>대리자를 선언, 인스턴스화, 사용하는 방법(C# 프로그래밍 가이드)
@@ -55,7 +55,7 @@ C# 1.0 이상 버전에서는 다음 예제와 같이 대리자를 선언할 수
   
      [!code-csharp[csProgGuideDelegates#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#17)]  
   
-     이렇게 하면 [정적](../../language-reference/keywords/static.md) 메서드 `Test.PrintTitle`에 연결된 새 대리자 개체가 생성됩니다. 마찬가지로 개체 `totaller`의 비정적 메서드 `AddBookToTotal`도 다음 예제와 같이 전달됩니다.  
+     이렇게 하면 [정적](../../language-reference/keywords/static.md) 메서드 `Test.PrintTitle`에 연결된 새 대리자 개체가 생성됩니다. 마찬가지로 개체 `AddBookToTotal`의 비정적 메서드 `totaller`도 다음 예제와 같이 전달됩니다.  
   
      [!code-csharp[csProgGuideDelegates#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#18)]  
   
@@ -71,7 +71,7 @@ C# 1.0 이상 버전에서는 다음 예제와 같이 대리자를 선언할 수
   
      대리자는 이 예제와 같이 동기적으로 호출할 수도 있고 `BeginInvoke` 및 `EndInvoke` 메서드를 사용하여 비동기적으로 호출할 수도 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [이벤트](../events/index.md)

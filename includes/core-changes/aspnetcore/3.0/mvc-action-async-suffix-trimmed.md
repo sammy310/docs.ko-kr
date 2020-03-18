@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 58b1190e3e6a3168d35700eed655f6756e076a29
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901893"
 ---
 ### <a name="mvc-async-suffix-trimmed-from-controller-action-names"></a>MVC: 컨트롤러 작업 이름에서 잘린 비동기 접미사
@@ -29,7 +29,7 @@ public class ProductController : Controller
 }
 ```
 
-작업은 `Product/ListAsync`를 통해 라우팅할 수 있습니다. 링크 생성을 위해서는 `Async` 접미사를 지정해야 합니다. 예:
+작업은 `Product/ListAsync`를 통해 라우팅할 수 있습니다. 링크 생성을 위해서는 `Async` 접미사를 지정해야 합니다. 예를 들어:
 
 ```cshtml
 <a asp-controller="Product" asp-action="ListAsync">List</a>
@@ -37,7 +37,7 @@ public class ProductController : Controller
 
 #### <a name="new-behavior"></a>새 동작
 
-ASP.NET Core 3.0에서 작업은 `Product/List`를 통해 라우팅할 수 있습니다. 링크 생성 코드는 `Async` 접미사를 생략해야 합니다. 예:
+ASP.NET Core 3.0에서 작업은 `Product/List`를 통해 라우팅할 수 있습니다. 링크 생성 코드는 `Async` 접미사를 생략해야 합니다. 예를 들어:
 
 ```cshtml
 <a asp-controller="Product" asp-action="List">List</a>

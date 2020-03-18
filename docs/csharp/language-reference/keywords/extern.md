@@ -9,10 +9,10 @@ helpviewer_keywords:
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
 ms.openlocfilehash: c121d810e64b5fa27f105f814253c0752e028a95
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713535"
 ---
 # <a name="extern-c-reference"></a>extern(C# 참조)
@@ -51,7 +51,7 @@ extern 키워드는 C++보다 C#에서 사용이 제한적입니다. C# 키워�
     }
     ```
 
-2. Visual Studio 설치 디렉터리에서 Visual Studio x64(또는 x32) 네이티브 도구 명령 프롬프트 창을 열고 명령 프롬프트에서 **cl -LD cmdll.c**를 입력하여 `cmdll.c` 파일을 컴파일합니다.
+2. Visual Studio 설치 디렉터리에서 Visual Studio x64(또는 x32) 네이티브 도구 명령 프롬프트 창을 열고 명령 프롬프트에서 `cmdll.c`cl -LD cmdll.c**를 입력하여**  파일을 컴파일합니다.
 
 3. 같은 디렉터리에서 다음 C# 파일을 만들고 이름을 `cm.cs`로 지정합니다.
 
@@ -87,7 +87,7 @@ extern 키워드는 C++보다 C#에서 사용이 제한적입니다. C# 키워�
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=nameWithType>
 - [C# 참조](../index.md)

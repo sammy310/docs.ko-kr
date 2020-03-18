@@ -7,10 +7,10 @@ ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
 ms.openlocfilehash: 0abcc73e31eab89c422513acf778bc8bd092e788
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75345549"
 ---
 # <a name="delegates-and-lambdas"></a>대리자 및 람다 식
@@ -106,7 +106,7 @@ public class Program
 }
 ```
 
-보시는 것처럼 대리자 본문은 다른 모든 대리자와 마찬가지로 단순히 식 집합일 뿐입니다. 그러나 별도의 정의가 아니라 <xref:System.Collections.Generic.List%601.FindAll%2A?displayProperty=nameWithType> 메서드 호출에서 _임시로_ 도입했습니다.
+보시는 것처럼 대리자 본문은 다른 모든 대리자와 마찬가지로 단순히 식 집합일 뿐입니다. 그러나 별도의 정의가 아니라 _메서드 호출에서_임시로<xref:System.Collections.Generic.List%601.FindAll%2A?displayProperty=nameWithType> 도입했습니다.
 
 그러나 이 방법의 경우에도 제거할 수 있는 많은 코드가 있습니다. 이때 **람다 식**이 유용합니다.
 

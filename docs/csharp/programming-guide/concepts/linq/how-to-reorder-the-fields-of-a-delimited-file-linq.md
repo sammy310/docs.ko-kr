@@ -3,10 +3,10 @@ title: 구분된 파일의 필드를 다시 정렬하는 방법(LINQ)(C#)
 ms.date: 07/20/2015
 ms.assetid: 4e62d82c-61b7-4f18-b9a1-86723746d7d2
 ms.openlocfilehash: 6bc502ff12a908edf43f9ff7f5f63f98c3ff29c4
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347648"
 ---
 # <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-c"></a>구분된 파일의 필드를 다시 정렬하는 방법(LINQ)(C#)
@@ -78,7 +78,7 @@ class CSVFiles
 ## <a name="compiling-the-code"></a>코드 컴파일  
 System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 통해 C# 콘솔 애플리케이션 프로젝트를 만듭니다.
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [LINQ 및 문자열(C#)](./linq-and-strings.md)
 - [LINQ 및 파일 디렉터리(C#)](./linq-and-file-directories.md)

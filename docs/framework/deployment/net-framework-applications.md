@@ -6,10 +6,10 @@ helpviewer_keywords:
 - .NET Framework, deploying apps
 ms.assetid: 139d4cb1-5972-40f4-bdd8-1ce68e4dfb80
 ms.openlocfilehash: c025643b6dd103e35231df5c983a06c899af02b1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716438"
 ---
 # <a name="deploying-net-framework-applications"></a>.NET Framework 애플리케이션 배포
@@ -22,6 +22,6 @@ ms.locfileid: "75716438"
  [최선의 어셈블리 로드 방법](best-practices-for-assembly-loading.md)  
  <xref:System.InvalidCastException>, <xref:System.MissingMethodException> 및 다른 오류를 발생시킬 수 있는 형식 ID 문제를 방지하는 방법을 설명합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [개발 가이드](../development-guide.md)

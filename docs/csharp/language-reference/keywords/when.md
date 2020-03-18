@@ -8,22 +8,22 @@ helpviewer_keywords:
 - when keyword [C#]
 ms.assetid: dd543335-ae37-48ac-9560-bd5f047b9aea
 ms.openlocfilehash: 6a61c42ba2d01e84ffae376bf95c99877437be85
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712834"
 ---
 # <a name="when-c-reference"></a>when(C# 참조)
 
 `when` 상황별 키워드를 사용하여 두 가지 상황에서 필터 조건을 지정할 수 있습니다.
 
-- [try/catch](try-catch.md) 또는 [try/catch/finally](try-catch-finally.md) 블록의 `catch` 문에서
-- [switch](switch.md) 문의 `case` 레이블에서
+- `catch`try/catch[ 또는 ](try-catch.md)try/catch/finally[ 블록의 ](try-catch-finally.md) 문에서
+- `case`switch[ 문의 ](switch.md) 레이블에서
 
-## <a name="when-in-a-catch-statement"></a>`catch` 문의 `when`
+## <a name="when-in-a-catch-statement"></a>`when` 문의 `catch`
 
-C# 6부터, 특정 예외에 대한 처리기를 실행하기 위해 참이 되어야 하는 조건을 지정하기 위해 `catch` 문에서 `when`을 사용할 수 있습니다. 사용되는 구문은 다음과 같습니다.
+C# 6부터, 특정 예외에 대한 처리기를 실행하기 위해 참이 되어야 하는 조건을 지정하기 위해 `when` 문에서 `catch`을 사용할 수 있습니다. 사용되는 구문은 다음과 같습니다.
 
 ```csharp
 catch (ExceptionType [e]) when (expr)
@@ -35,7 +35,7 @@ catch (ExceptionType [e]) when (expr)
 
 [!code-csharp[when-with-catch](~/samples/snippets/csharp/language-reference/keywords/when/catch.cs)]
 
-## <a name="when-in-a-switch-statement"></a>`switch` 문의 `when`
+## <a name="when-in-a-switch-statement"></a>`when` 문의 `switch`
 
 C# 7.0부터 `case` 레이블은 더 이상 상호 배타적일 필요가 없으며, `case` 레이블이 `switch` 문에 나타나는 순서에 따라 실행되는 스위치 블록을 결정할 수 있습니다. 필터 조건도 참인 경우에만 관련 사례 레이블을 참으로 만드는 필터 조건을 지정하려면 `when` 키워드를 사용할 수 있습니다. 사용되는 구문은 다음과 같습니다.
 
@@ -49,7 +49,7 @@ case (expr) when (when-condition):
 
 [!code-csharp[when-with-case#1](~/samples/snippets/csharp/language-reference/keywords/when/when.cs#1)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [switch 문](switch.md)
 - [try/catch 문](try-catch.md)

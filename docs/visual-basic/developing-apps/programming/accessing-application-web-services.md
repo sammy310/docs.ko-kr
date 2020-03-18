@@ -1,5 +1,5 @@
 ---
-title: 응용 프로그램 웹 서비스 액세스
+title: 애플리케이션 웹 서비스 액세스
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Web services [Visual Basic], My.WebServices object
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - applications [Visual Basic], Web services
 ms.assetid: 8ad5405b-e771-42b1-82d3-ce97af2cea9e
 ms.openlocfilehash: ad616bd46f92261ec5ad6ae81d0db48138631ed1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74349221"
 ---
 # <a name="accessing-application-web-services-visual-basic"></a>애플리케이션 웹 서비스 액세스(Visual Basic)

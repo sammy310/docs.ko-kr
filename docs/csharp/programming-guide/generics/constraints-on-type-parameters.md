@@ -6,12 +6,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 3ce68ecc1f0740fdb43ccf22b636dcd4bc05ea0a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 76cd00b9c84f128d2a181115293df910d8deb6cb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712236"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398408"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>형식 매개 변수에 대한 제약 조건(C# 프로그래밍 가이드)
 
@@ -76,7 +76,7 @@ ms.locfileid: "75712236"
 
 ## <a name="notnull-constraint"></a>NotNull 제약 조건
 
-C# 8.0부터는 `notnull` 제약 조건을 사용하여 형식 인수가 nullable이 아닌 값 형식 또는 nullable이 아닌 참조 형식이어야 함을 지정할 수 있습니다. `notnull` 제약 조건은 `nullable enable` 컨텍스트에서만 사용할 수 있습니다. nullable 형식을 감지하지 않는 컨텍스트에서 `notnull` 제약 조건을 추가하는 경우 컴파일러가 경고를 생성합니다. 
+C# 8.0부터는 `notnull` 제약 조건을 사용하여 형식 인수가 nullable이 아닌 값 형식 또는 nullable이 아닌 참조 형식이어야 함을 지정할 수 있습니다. `notnull` 제약 조건은 `nullable enable` 컨텍스트에서만 사용할 수 있습니다. nullable 형식을 감지하지 않는 컨텍스트에서 `notnull` 제약 조건을 추가하는 경우 컴파일러가 경고를 생성합니다.
 
 다른 제약 조건과 달리 형식 인수가 `notnull` 제약 조건을 위반하면 컴파일러는 해당 코드가 `nullable enable` 컨텍스트에서 컴파일될 때 경고를 생성합니다. 코드가 nullable 형식을 감지하지 않는 컨텍스트에서 컴파일된 경우에는 컴파일러가 경고나 오류를 생성하지 않습니다.
 
@@ -86,7 +86,7 @@ C# 7.3부터 `unmanaged` 제약 조건을 사용하여 형식 매개 변수가 n
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#15)]
 
-앞의 메서드는 기본 제공 형식으로 알려지지 않은 형식에서 `sizeof` 연산자를 사용하므로 `unsafe` 컨텍스트에서 컴파일해야 합니다. `unmanaged` 제약 조건이 없으면 `sizeof` 연산자를 사용할 수 없습니다.
+앞의 메서드는 기본 제공 형식으로 알려지지 않은 형식에서 `unsafe` 연산자를 사용하므로 `sizeof` 컨텍스트에서 컴파일해야 합니다. `unmanaged` 제약 조건이 없으면 `sizeof` 연산자를 사용할 수 없습니다.
 
 `unmanaged` 제약 조건은 `struct` 제약 조건을 나타내며 함께 사용할 수 없습니다. `struct` 제약 조건은 `new()` 제약 조건을 나타내며 `unmanaged` 제약 조건은 `new()` 제약 조건과 결합할 수 없습니다.
 
@@ -116,7 +116,7 @@ C# 7.3부터 <xref:System.Enum?displayProperty=nameWithType> 형식을 기본 �
 
 [!code-csharp[using the enum constrained method](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#20)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Collections.Generic>
 - [C# 프로그래밍 가이드](../index.md)

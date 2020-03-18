@@ -7,10 +7,10 @@ helpviewer_keywords:
 - properties [C#], indexed
 ms.assetid: 756bfc1e-7c28-4d4d-b114-ac9288c73882
 ms.openlocfilehash: 864e2274f0e0e79b4843e0bb67b5c4384eac8588
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712067"
 ---
 # <a name="how-to-use-indexed-properties-in-com-interop-programming-c-programming-guide"></a>COM interop 프로그래밍에서 인덱싱된 속성을 사용하는 방법(C# 프로그래밍 가이드)
@@ -27,7 +27,7 @@ ms.locfileid: "75712067"
 > [!NOTE]
 > 또한 앞의 예제에서는 [선택적 인수](../classes-and-structs/named-and-optional-arguments.md) 기능을 사용하므로 `Type.Missing`을 생략할 수 있습니다.  
   
- 마찬가지로, C# 3.0 이하에서 <xref:Microsoft.Office.Interop.Excel.Range> 개체의 `Value` 속성 값을 설정하려면 두 개의 인수가 필요합니다. 하나는 범위 값의 형식을 지정하는 선택적 매개 변수의 인수를 제공합니다. 다른 하나는 `Value` 속성의 값을 제공합니다. 다음 예제에서는 이러한 기법을 보여 줍니다. 둘 다 A1 셀의 값을 `Name`으로 설정합니다.
+ 마찬가지로, C# 3.0 이하에서 `Value` 개체의 <xref:Microsoft.Office.Interop.Excel.Range> 속성 값을 설정하려면 두 개의 인수가 필요합니다. 하나는 범위 값의 형식을 지정하는 선택적 매개 변수의 인수를 제공합니다. 다른 하나는 `Value` 속성의 값을 제공합니다. 다음 예제에서는 이러한 기법을 보여 줍니다. 둘 다 A1 셀의 값을 `Name`으로 설정합니다.
   
  [!code-csharp[csProgGuideIndexedProperties#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideindexedproperties/cs/program.cs#3)]  
   
@@ -42,7 +42,7 @@ ms.locfileid: "75712067"
   
  [!code-csharp[csProgGuideIndexedProperties#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideindexedproperties/cs/program.cs#5)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [명명된 인수 및 선택적 인수](../classes-and-structs/named-and-optional-arguments.md)
 - [dynamic](../../language-reference/builtin-types/reference-types.md)

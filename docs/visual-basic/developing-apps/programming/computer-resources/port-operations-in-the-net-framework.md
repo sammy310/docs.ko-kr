@@ -5,15 +5,15 @@ helpviewer_keywords:
 - ports, Visual Basic
 ms.assetid: 1eba223b-7bd3-401a-b097-982bce96df1b
 ms.openlocfilehash: 68f0c67b8135c6bb7ce8a134e2a324bc12c0aad9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74345512"
 ---
 # <a name="port-operations-in-the-net-framework-with-visual-basic"></a>Visual Basic을 사용한 .NET Framework의 포트 작업
 
-<xref:System.IO.Ports?displayProperty=nameWithType> 네임스페이스의 .NET Framework 클래스를 통해 컴퓨터의 직렬 포트에 액세스할 수 있습니다. 가장 중요한 클래스인 <xref:System.IO.Ports.SerialPort>는 동기 및 이벤트 구동 I/O, 핀 및 중단 상태 액세스, 그리고 직렬 드라이버 속성 액세스를 위한 프레임워크를 제공합니다. 이 클래스는 <xref:System.IO.Ports.SerialPort.BaseStream> 속성을 통해 액세스 가능한 <xref:System.IO.Stream> 개체에 래핑할 수 있습니다. <xref:System.IO.Stream> 개체에 <xref:System.IO.Ports.SerialPort>를 래핑하면 스트림을 사용하는 클래스가 직렬 포트에 액세스할 수 있습니다. 네임스페이스에는 직렬 포트의 제어를 간소화하는 열거형이 포함됩니다.
+<xref:System.IO.Ports?displayProperty=nameWithType> 네임스페이스의 .NET Framework 클래스를 통해 컴퓨터의 직렬 포트에 액세스할 수 있습니다. 가장 중요한 클래스인 <xref:System.IO.Ports.SerialPort>는 동기 및 이벤트 구동 I/O, 핀 및 중단 상태 액세스, 그리고 직렬 드라이버 속성 액세스를 위한 프레임워크를 제공합니다. 이 클래스는 <xref:System.IO.Stream> 속성을 통해 액세스 가능한 <xref:System.IO.Ports.SerialPort.BaseStream> 개체에 래핑할 수 있습니다. <xref:System.IO.Ports.SerialPort> 개체에 <xref:System.IO.Stream>를 래핑하면 스트림을 사용하는 클래스가 직렬 포트에 액세스할 수 있습니다. 네임스페이스에는 직렬 포트의 제어를 간소화하는 열거형이 포함됩니다.
 
 <xref:System.IO.Ports.SerialPort> 개체를 만드는 가장 간단한 방법은 <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A> 메서드를 사용하는 것입니다.
 

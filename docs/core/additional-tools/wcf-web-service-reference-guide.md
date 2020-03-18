@@ -5,10 +5,10 @@ author: dasetser
 ms.date: 10/29/2019
 ms.custom: mvc
 ms.openlocfilehash: cdd6b457d289dd7b752c97c5645f0797f24b72aa
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75715679"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>WCF Web Service Reference Provider 도구 사용
@@ -18,7 +18,7 @@ ms.locfileid: "75715679"
 > [!IMPORTANT]
 > 신뢰할 수 있는 원본의 서비스만 참조해야 합니다. 신뢰할 수 없는 원본에서 참조를 추가하면 보안이 손상될 수 있습니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 - [Visual Studio 2017 버전 15.5](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 이상 버전
 
@@ -76,7 +76,7 @@ ms.locfileid: "75715679"
 
 이러한 과정을 완료하면 생성된 WCF 클라이언트 형식의 인스턴스를 만들고 서비스 작업을 호출할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Communication Foundation 애플리케이션 시작하기](../../framework/wcf/getting-started-tutorial.md)
 - [Windows Communication Foundation 서비스 및 Visual Studio의 WCF.NET 데이터 서비스](/visualstudio/data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio)
@@ -84,7 +84,7 @@ ms.locfileid: "75715679"
 
 ## <a name="feedback--questions"></a>사용자 의견 및 질문
 
-질문이나 피드백이 있는 경우 [문제 보고](/visualstudio/ide/how-to-report-a-problem-with-visual-studio) 도구를 사용하여 [개발자 커뮤니티](https://developercommunity.visualstudio.com/)에 보고하세요.
+질문이나 피드백이 있는 경우 [문제 보고](https://developercommunity.visualstudio.com/) 도구를 사용하여 [개발자 커뮤니티](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)에 보고하세요.
 
 ## <a name="release-notes"></a>릴리스 정보
 

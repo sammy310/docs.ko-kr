@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 276268d31670b5e7dcd0ae9c0b7a61c3c38ca663
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 16ee73bfc0ab33b04ea3e2fa6d0eec521a9b8634
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451895"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78967886"
 ---
 ### <a name="resource-manifest-file-names"></a>리소스 매니페스트 파일 이름
 
@@ -63,7 +63,7 @@ ms.locfileid: "77451895"
   *MyTypes.cs* 및 *MyTypes.resx* 또는 *MyTypes.fr-FR.resx* 파일이 동일한 폴더에 있습니다.
   
   **생성된 리소스 매니페스트 파일 이름**: *Namespace.Classname.resources* 또는 *Namespace.Classname.fr-FR.resources*(여기서 `Namespace.Classname`은 *MyTypes.cs*의 첫 번째 클래스 이름).
-    
+
 - 위 규칙이 모두 적용되지 않는 경우 생성된 리소스 매니페스트 파일 이름은 *RootNamespace.RelativePathWithDotsForSlashes.\[Culture.]resources*입니다. 상대 경로는 설정된 경우 `EmbeddedResource` 요소의 `Link` 특성 값입니다. 그렇지 않으면 상대 경로는 `EmbeddedResource` 요소의 `Identity` 특성 값입니다. Visual Studio에서 이 경로는 프로젝트 루트에서 솔루션 탐색기 내 파일까지의 경로입니다.
 
 #### <a name="recommended-action"></a>권장 조치

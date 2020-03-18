@@ -4,17 +4,17 @@ description: .NET Framework에서 .NET Core로 라이브러리 프로젝트를 �
 author: cartermp
 ms.date: 12/07/2018
 ms.openlocfilehash: 68fe36e543d949dc76bdb0c19ef3482936ad9e79
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157533"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79397910"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>.NET Core로 .NET Framework 라이브러리 포팅
 
 .NET Framework 라이브러리 코드를 .NET Core로 포팅하고, 플랫폼 간에 실행하고, 코드를 사용하는 앱의 도달 범위를 확장하는 방법을 알아봅니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 문서에서는 다음을 전제로 합니다.
 

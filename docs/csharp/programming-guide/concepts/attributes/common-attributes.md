@@ -3,11 +3,11 @@ title: 공통 특성(C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
 ms.openlocfilehash: 7988dad410c6e51869ec9d7e40d94e874443a5f8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595465"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398384"
 ---
 # <a name="common-attributes-c"></a>공통 특성(C#)
 이 항목에서는 C# 프로그램에서 가장 일반적으로 사용되는 특성을 설명합니다.  
@@ -42,9 +42,9 @@ ms.locfileid: "69595465"
   
  다음 표에서는 ID 특성들을 보여 줍니다.  
   
-|특성|용도|  
+|attribute|용도|  
 |---------------|-------------|  
-|<xref:System.Reflection.AssemblyName>|어셈블리의 ID를 모두 설명합니다.|  
+|<xref:System.Reflection.AssemblyName>|어셈블리의 ID를 완전히 설명합니다.|  
 |<xref:System.Reflection.AssemblyVersionAttribute>|어셈블리의 버전을 지정합니다.|  
 |<xref:System.Reflection.AssemblyCultureAttribute>|어셈블리에서 지원하는 문화권을 지정합니다.|  
 |<xref:System.Reflection.AssemblyFlagsAttribute>|어셈블리가 같은 컴퓨터, 같은 프로세스 또는 같은 애플리케이션 도메인에서 Side-by-side 실행을 지원하는지 지정합니다.|  
@@ -52,7 +52,7 @@ ms.locfileid: "69595465"
 ### <a name="informational-attributes"></a>정보 특성  
  정보 특성을 사용하여 어셈블리와 연관된 회사 또는 제품에 대한 추가적인 정보를 제공할 수 있습니다. 다음 표에서는 <xref:System.Reflection?displayProperty=nameWithType> 네임스페이스에 정의된 정보 특성을 보여 줍니다.  
   
-|특성|용도|  
+|attribute|용도|  
 |---------------|-------------|  
 |<xref:System.Reflection.AssemblyProductAttribute>|어셈블리 매니페스트에 대한 제품 이름을 지정하는 사용자 지정 특성을 정의합니다.|  
 |<xref:System.Reflection.AssemblyTrademarkAttribute>|어셈블리 매니페스트에 대한 상표를 지정하는 사용자 지정 특성을 정의합니다.|  
@@ -65,7 +65,7 @@ ms.locfileid: "69595465"
 ### <a name="assembly-manifest-attributes"></a>어셈블리 매니페스트 특성  
  어셈블리 매니페스트 특성을 사용하여 어셈블리 매니페스트의 정보를 제공할 수 있습니다. 정보에는 제목, 설명, 기본 별칭 및 구성이 포함됩니다. 다음 표에서는 <xref:System.Reflection?displayProperty=nameWithType> 네임스페이스에 정의된 어셈블리 매니페스트 특성을 보여 줍니다.  
   
-|특성|용도|  
+|attribute|용도|  
 |---------------|-------------|  
 |<xref:System.Reflection.AssemblyTitleAttribute>|어셈블리 매니페스트에 대한 어셈블리 제목을 지정하는 사용자 지정 특성을 정의합니다.|  
 |<xref:System.Reflection.AssemblyDescriptionAttribute>|어셈블리 매니페스트에 대한 어셈블리 설명을 지정하는 사용자 지정 특성을 정의합니다.|  
@@ -73,7 +73,7 @@ ms.locfileid: "69595465"
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|어셈블리 매니페스트에 대한 친숙한 기본 별칭을 정의합니다.|  
   
 ## <a name="Obsolete"></a> 사용되지 않는 특성  
- `Obsolete` 특성은 프로그램 엔터티를 더 이상 사용이 권장되지 않는 항목으로 표시합니다. 나중에 사용되지 않음으로 표시된 엔터티를 사용할 때마다 특성 구성 방법에 따라 경고나 오류가 생성됩니다. 예를 들면 다음과 같습니다:  
+ `Obsolete` 특성은 프로그램 엔터티를 더 이상 사용이 권장되지 않는 항목으로 표시합니다. 나중에 사용되지 않음으로 표시된 엔터티를 사용할 때마다 특성 구성 방법에 따라 경고나 오류가 생성됩니다. 예들 들어 다음과 같습니다.  
   
 ```csharp  
 [System.Obsolete("use class B")]  
@@ -151,7 +151,7 @@ static void DebugMethod()
 }  
 ```  
   
- 조건부로 표시된 메서드를 호출하면 지정된 전처리 기호가 있는지 여부에 따라 호출을 포함 또는 생략할지 결정됩니다. 기호가 정의되면 호출이 포함되고, 정의되지 않으면 호출이 생략됩니다. 다음과 같이 메서드를 `#if…#endif` 블록 내부에 포함하는 것보다 `Conditional`을 사용하는 것이 더 분명하고 더 정교하며 오류 가능성이 더 적습니다.  
+ 조건부로 표시된 메서드를 호출하면 지정된 전처리 기호가 있는지 여부에 따라 호출을 포함 또는 생략할지 결정됩니다. 기호가 정의되면 호출이 포함되고, 정의되지 않으면 호출이 생략됩니다. 다음과 같이 메서드를 `Conditional` 블록 내부에 포함하는 것보다 `#if…#endif`을 사용하는 것이 더 분명하고 더 정교하며 오류 가능성이 더 적습니다.  
   
 ```csharp  
 #if DEBUG  
@@ -221,7 +221,7 @@ class SampleClass
   
  멤버 호출자 정보를 얻으려면 선택적 매개 변수에 적용되는 특성을 사용합니다. 각 선택적 매개 변수는 기본값을 지정합니다. 다음 표에서는 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 네임스페이스에 정의된 호출자 정보 특성을 보여줍니다.  
   
-|특성|설명|형식|  
+|attribute|설명|형식|  
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|호출자를 포함한 소스 파일의 전체 경로입니다. 컴파일 시간의 경로입니다.|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|메서드가 호출되는 소스 파일의 줄 번호입니다.|`Integer`|  

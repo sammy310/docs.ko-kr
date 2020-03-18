@@ -6,10 +6,10 @@ helpviewer_keywords:
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
 ms.openlocfilehash: c5ac5b3692266010f0be8672ef744baaa32e6a03
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75711859"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>dynamic 형식 사용(C# 프로그래밍 가이드)
@@ -33,7 +33,7 @@ C# 4에서는 새로운 `dynamic` 형식이 도입되었습니다. 이 형식은
 * `dynamic`에서 다른 형식으로의 전환.
 * `dynamic` 형식의 인수를 포함하는 생성자 호출.
 
-예를 들어 다음 선언에서 `testInstance`의 형식은 `dynamic`이 아니라 `ExampleClass`입니다.
+예를 들어 다음 선언에서 `testInstance`의 형식은 `ExampleClass`이 아니라 `dynamic`입니다.
 
 [!code-csharp[CsProgGuideTypes#52](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/usingdynamic.cs#52)]
 

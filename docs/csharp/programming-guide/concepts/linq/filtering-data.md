@@ -3,10 +3,10 @@ title: 데이터 필터링(C#)
 ms.date: 07/20/2015
 ms.assetid: fbaece0d-0f23-47f7-89c5-f3ea8db692b6
 ms.openlocfilehash: 74399244990f8ff2deaa1d10576ea94a57c16bee
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75346988"
 ---
 # <a name="filtering-data-c"></a>데이터 필터링(C#)
@@ -22,7 +22,7 @@ ms.locfileid: "75346988"
   
 |메서드 이름|설명|C# 쿼리 식 구문|추가 정보|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|OfType|지정된 형식으로 캐스트할 수 있는지 여부에 따라 값을 선택합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
+|OfType|지정된 형식으로 캐스트할 수 있는지 여부에 따라 값을 선택합니다.|적용할 수 없음|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
 |Where|조건자 함수를 기반으로 하는 값을 선택합니다.|`where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>쿼리 식 구문 예제  
@@ -45,7 +45,7 @@ foreach (string str in query)
 */  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Linq>
 - [표준 쿼리 연산자 개요(C#)](./standard-query-operators-overview.md)

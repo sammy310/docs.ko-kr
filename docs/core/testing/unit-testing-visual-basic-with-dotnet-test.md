@@ -4,12 +4,12 @@ description: dotnet test 및 xUnit을 사용하여 샘플 Visual Basic 솔루션
 author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
-ms.openlocfilehash: 2a2bed9628d50ea1fc635334766023dfb6de4248
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 9a99d9031711a3e958132416d0235df76f4a9092
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157299"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240950"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-xunit"></a>dotnet test 및 xUnit을 사용하여 Visual Basic .NET Core 라이브러리 유닛 테스트
 
@@ -87,7 +87,7 @@ GitHub의 [샘플 리포지토리](https://github.com/dotnet/samples/blob/master
         PrimeServiceTests.vbproj
 ```
 
-*unit-testing-vb-using-dotnet-test* 디렉터리에서 [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj`](../tools/dotnet-sln.md)를 실행합니다.
+[unit-testing-vb-using-dotnet-test`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj` 디렉터리에서 ](../tools/dotnet-sln.md)  를 실행합니다.
 
 ## <a name="creating-the-first-test"></a>첫 번째 테스트 만들기
 
@@ -128,11 +128,11 @@ End Function
 
 ## <a name="adding-more-features"></a>더 많은 기능 추가
 
-이제 하나의 테스트를 통과했으므로 더 작성할 수 있습니다. 소수에 대한 몇 가지 다른 간단한 사례가 있습니다 (0, -1). 이러한 사례를 `<Fact>` 특성과 함께 새 테스트로 추가할 수도 있지만, 이렇게 하면 금방 지루해질 수 있습니다. 비슷한 테스트 모음을 작성하는 데 사용할 수 있는 다른 xUnit 특성이 있습니다.  `<Theory>` 특성은 같은 코드를 실행하는 테스트 모음을 나타내지만, 서로 다른 입력 인수를 가지고 있습니다. `<InlineData>` 특성을 사용하여 그러한 입력의 값을 지정할 수 있습니다.
+이제 하나의 테스트를 통과했으므로 더 작성할 수 있습니다. 소수에 대한 몇 가지 다른 간단한 사례가 있습니다(0, -1). 이러한 사례를 `<Fact>` 특성과 함께 새 테스트로 추가할 수도 있지만, 이렇게 하면 금방 지루해질 수 있습니다. 비슷한 테스트 모음을 작성하는 데 사용할 수 있는 다른 xUnit 특성이 있습니다.  `<Theory>` 특성은 같은 코드를 실행하는 테스트 모음을 나타내지만, 서로 다른 입력 인수를 가지고 있습니다. `<InlineData>` 특성을 사용하여 그러한 입력의 값을 지정할 수 있습니다.
 
 새 테스트를 만드는 대신 이러한 두 특성을 적용하여 단일 이론을 만듭니다. 이 이론은 가장 작은 소수인 2보다 작은 몇 가지 값을 테스트하는 메서드입니다.
 
-[!code-vb[Sample_TestCode](../../../samples/core/getting-started/unit-testing-vb-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.vb?name=Sample_TestCode)]
+[!code-vb[Sample_TestCode](../../../samples/snippets/core/testing/unit-testing-vb-dotnet-test/vb/PrimeService.Tests/PrimeService_IsPrimeShould.vb?name=Sample_TestCode)]
 
 `dotnet test`를 실행합니다. 그러면 이러한 테스트 중 2개가 실패합니다. 모든 테스트가 통과하도록 하려면 메서드의 시작 부분에서 `if` 절을 변경합니다.
 

@@ -1,36 +1,36 @@
 ---
-title: WCF 개발자를 위한 RPC gRPC의 유형
-description: WCF에서 지원 되는 원격 프로시저 호출의 유형 및 gRPC의 해당 항목에 대 한 검토
+title: WCF 개발자를 위한 RPC 유형 - gRPC
+description: WCF에서 지원하는 원격 프로시저 호출 유형 및 gRPC에서 이에 상응하는 형식 검토
 ms.date: 09/02/2019
-ms.openlocfilehash: 58f097bac61395e6810155e8ae9a6bbf2219ec5e
-ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
+ms.openlocfilehash: b9d4ce7cae693ed7904229483cbccfe3b299b640
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78675165"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401786"
 ---
 # <a name="types-of-rpc"></a>RPC 형식
 
-WCF (Windows Communication Foundation) 개발자는 다음과 같은 형식의 RPC (원격 프로시저 호출)를 처리 하는 데 사용 될 것입니다.
+WCF(Windows 통신 재단) 개발자는 다음과 같은 RPC(원격 프로시저 호출) 유형을 처리하는 데 익숙할 것입니다.
 
 - 요청/회신
-- 양면지
-  - 세션을 사용 하는 단방향 이중
-  - 세션이 포함 된 전이중
+- 이중:
+  - 세션이 있는 단방향 양면
+  - 세션이 있는 전체 양면
 - 단방향
 
-이러한 RPC 형식을 기존 gRPC 개념에 매우 자연스럽 게 매핑할 수 있습니다. 이 장에서는 이러한 각 영역을 차례로 살펴보겠습니다. [5 장에서](migrate-wcf-to-grpc.md) 는 비슷한 예를 더 자세히 살펴봅니다.
+이러한 RPC 형식을 기존 gRPC 개념에 상당히 자연스럽게 매핑할 수 있습니다. 이 장에서는 이러한 각 영역을 차례로 살펴봅니다. [5장에서는](migrate-wcf-to-grpc.md) 비슷한 예제를 더 자세히 살펴봅습니다.
 
 | WCF | gRPC |
 | --- | ---- |
-| 일반 요청/회신 | 단항 연산자 |
-| 클라이언트 콜백 인터페이스를 사용 하는 세션을 사용 하는 이중 서비스 | 서버 스트리밍 |
-| 세션이 포함 된 전이중 서비스 | 양방향 스트리밍 |
+| 정기적인 요청/회신 | 단항 연산자 |
+| 클라이언트 콜백 인터페이스를 사용하는 세션이 있는 양면 서비스 | 서버 스트리밍 |
+| 세션이 있는 전체 이중 서비스 | 양방향 스트리밍 |
 | 단방향 작업 | 클라이언트 스트리밍 |
 
 ## <a name="requestreply"></a>요청/회신
 
-적은 양의 데이터를 사용 하 고 반환 하는 간단한 요청/회신 방법의 경우 가장 간단한 gRPC 패턴 인 단항 RPC를 사용 합니다.
+소량의 데이터를 가져 와서 반환하는 간단한 요청 / 회신 방법을 보려면 가장 간단한 gRPC 패턴인 unary RPC를 사용합니다.
 
 ```protobuf
 service Things {
@@ -57,21 +57,21 @@ public async Task ShowThing(int thingId)
 }
 ```
 
-여기에서 볼 수 있듯이 gRPC 단항 RPC 서비스 메서드를 구현 하는 것은 WCF 작업을 구현 하는 것과 비슷합니다. GRPC의 경우 인터페이스를 구현 하는 대신 기본 클래스 메서드를 재정의 한다는 점이 다릅니다. 클라이언트는 서비스를 호출 하는 비동기 및 차단 메서드를 모두 제공 하지만 서버에서 gRPC 기본 메서드는 항상 <xref:System.Threading.Tasks.Task%601>을 반환 합니다.
+보시다시피 gRPC unary RPC 서비스 메서드를 구현하는 것은 WCF 작업을 구현하는 것과 유사합니다. 차이점은 gRPC를 사용하면 인터페이스를 구현하는 대신 기본 클래스 메서드를 재정의한다는 것입니다. 클라이언트는 서비스를 호출하는 비동기 <xref:System.Threading.Tasks.Task%601>및 차단 메서드를 모두 제공하지만 서버에서 gRPC 기본 메서드는 항상 반환됩니다.
 
-## <a name="wcf-duplex-one-way-to-client"></a>WCF 이중, 클라이언트에 대 한 한 가지 방법
+## <a name="wcf-duplex-one-way-to-client"></a>WCF 이중, 클라이언트에 대한 한 가지 방법
 
-WCF 응용 프로그램 (특정 바인딩 사용)은 클라이언트와 서버 간에 영구 연결을 만들 수 있습니다. 서버는 <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> 속성에 지정 된 *콜백 인터페이스* 를 사용 하 여 연결이 닫힐 때까지 클라이언트에 데이터를 비동기적으로 보낼 수 있습니다.
+특정 바인딩이 있는 WCF 응용 프로그램은 클라이언트와 서버 간에 지속적인 연결을 만들 수 있습니다. 서버는 <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> 속성에 지정된 *콜백 인터페이스를* 사용하여 연결이 닫혀도 클라이언트에 데이터를 비동기적으로 보낼 수 있습니다.
 
-gRPC 서비스는 메시지 스트림과 비슷한 기능을 제공 합니다. 스트림은 구현 측면에서 WCF 이중 서비스와 *정확히* 매핑되지 않지만 동일한 결과를 달성할 수 있습니다.
+gRPC 서비스는 메시지 스트림과 유사한 기능을 제공합니다. 스트림은 구현 측면에서 WCF 듀플렉스 서비스에 *정확히* 매핑되지 는 않지만 동일한 결과를 얻을 수 있습니다.
 
 ### <a name="grpc-streaming"></a>gRPC 스트리밍
 
-gRPC는 클라이언트에서 서버로, 그리고 서버에서 클라이언트로의 영구적 스트림을 만들 수 있도록 지원 합니다. 두 스트림 유형 모두 동시에 활성화 될 수 있습니다. 이 기능을 양방향 스트리밍 이라고 합니다. 
+gRPC는 클라이언트에서 서버로, 서버에서 클라이언트로 영구 스트림을 만드는 것을 지원합니다. 두 유형의 스트림이 동시에 활성화될 수 있습니다. 이 기능을 양방향 스트리밍이라고 합니다.
 
-시간에 따른 임의의 비동기 메시징의 스트림을 사용할 수 있습니다. 또는 단일 요청이 나 응답으로 생성 하 여 전송 하기에 너무 큰 큰 데이터 집합을 전달 하는 데 사용할 수 있습니다.
+시간에 따라 임의의 비동기 메시징에 스트림을 사용할 수 있습니다. 또는 단일 요청 또는 응답을 생성하고 전송하기에는 너무 큰 큰 데이터 집합을 전달하는 데 사용할 수 있습니다.
 
-다음 예제에서는 서버 스트리밍 RPC를 보여 줍니다.
+다음 예제에서는 서버 스트리밍 RPC를 보여 주며 있습니다.
 
 ```protobuf
 service ClockStreamer {
@@ -96,7 +96,7 @@ public class ClockStreamerService : ClockStreamer.ClockStreamerBase
 }
 ```
 
-다음 코드와 같이이 서버 스트림은 클라이언트 응용 프로그램에서 사용 될 수 있습니다.
+다음 코드와 같이 이 서버 스트림을 클라이언트 응용 프로그램에서 사용할 수 있습니다.
 
 ```csharp
 public async Task TellTheTimeAsync(CancellationToken token)
@@ -115,19 +115,19 @@ public async Task TellTheTimeAsync(CancellationToken token)
 ```
 
 > [!NOTE]
-> 서버 스트리밍 Rpc는 구독 스타일 서비스에 유용 합니다. 또한 메모리에서 전체 데이터 집합을 빌드하는 것이 비효율적 이거나 불가능 한 경우에도 많은 데이터 집합을 보내는 데 유용 합니다. 그러나 스트리밍 응답은 단일 메시지에 `repeated` 필드를 전송 하는 만큼 빠르지 않습니다. 일반적으로 작은 데이터 집합에는 스트리밍을 사용할 수 없습니다.
+> 서버 스트리밍 RPC는 구독 스타일 서비스에 유용합니다. 또한 전체 데이터 집합을 메모리에 빌드하는 것이 비효율적이거나 불가능한 경우 큰 데이터 집합을 보내는 데도 유용합니다. 그러나 스트리밍 응답은 단일 메시지에서 필드를 `repeated` 보내는 것만큼 빠르지 않습니다. 일반적으로 작은 데이터 집합에는 스트리밍을 사용해서는 안 됩니다.
 
-### <a name="differences-from-wcf"></a>WCF와의 차이점
+### <a name="differences-from-wcf"></a>WCF의 차이점
 
-WCF 이중 서비스는 여러 메서드를 사용할 수 있는 클라이언트 콜백 인터페이스를 사용 합니다. GRPC 서버-스트리밍 서비스는 단일 스트림으로만 메시지를 보낼 수 있습니다. 여러 메서드를 사용 해야 하는 경우에는 [임의의 필드 또는 필드 중 하나](protobuf-any-oneof.md) 를 사용 하 여 메시지 유형을 사용 하 여 다른 메시지를 보내고 클라이언트에서 코드를 작성 하 여 처리 합니다.
+WCF 듀플렉스 서비스는 여러 메서드를 가질 수 있는 클라이언트 콜백 인터페이스를 사용합니다. gRPC 서버 스트리밍 서비스는 단일 스트림을 통해서만 메시지를 보낼 수 있습니다. 여러 메서드가 필요한 경우 [Any 필드 또는 필드 중 하나가](protobuf-any-oneof.md) 있는 메시지 형식을 사용하여 다른 메시지를 보내고 이를 처리하기 위해 클라이언트에 코드를 작성합니다.
 
-WCF에서 세션이 있는 [ServiceContract](xref:System.ServiceModel.ServiceContractAttribute) 클래스는 연결이 닫힐 때까지 활성 상태로 유지 됩니다. 세션 내에서 여러 메서드를 호출할 수 있습니다. GRPC에서 구현 메서드가 반환 하는 `Task` 연결이 닫힐 때까지 완료 되지 않습니다.
+WCF에서 세션이 있는 [ServiceContract](xref:System.ServiceModel.ServiceContractAttribute) 클래스는 연결이 닫혀있을 때까지 유지됩니다. 세션 내에서 여러 메서드를 호출할 수 있습니다. gRPC에서 구현 `Task` 메서드가 반환하는 것은 연결이 닫혀야 합니다.
 
 ## <a name="wcf-one-way-operations-and-grpc-client-streaming"></a>WCF 단방향 작업 및 gRPC 클라이언트 스트리밍
 
-WCF는 전송 관련 승인을 반환 하는 단방향 작업 (`[OperationContract(IsOneWay = true)]`로 표시 됨)을 제공 합니다. gRPC 서비스 메서드는 비어 있는 경우에도 항상 응답을 반환 합니다. 클라이언트는 항상 해당 응답을 대기 해야 합니다. GRPC에서 "실행 후 제거" 유형의 메시징에 대 한 클라이언트 스트리밍 서비스를 만들 수 있습니다.
+WCF는 전송 관련 승인을 `[OperationContract(IsOneWay = true)]`반환하는 단방향 작업(표시)을 제공합니다. gRPC 서비스 메서드는 비어 있더라도 항상 응답을 반환합니다. 클라이언트는 항상 해당 응답을 기다려야 합니다. gRPC에서 메시징의 "불과 잊어버린" 스타일의 경우 클라이언트 스트리밍 서비스를 만들 수 있습니다.
 
-### <a name="thing_logproto"></a>thing_log proto
+### <a name="thing_logproto"></a>thing_log.프로토
 
 ```protobuf
 service ThingLog {
@@ -158,7 +158,7 @@ public class ThingLogService : Protos.ThingLog.ThingLogBase
 }
 ```
 
-### <a name="thinglog-client-example"></a>ThingLog client 예제
+### <a name="thinglog-client-example"></a>ThingLog 클라이언트 예제
 
 ```csharp
 public class ThingLogger : IAsyncDisposable
@@ -189,13 +189,13 @@ public class ThingLogger : IAsyncDisposable
 }
 ```
 
-이전 예제에 표시 된 것 처럼 화재 및 잊은 메시징의 클라이언트 스트리밍 Rpc를 사용할 수 있습니다. 이를 사용 하 여 매우 큰 데이터 집합을 서버에 보낼 수도 있습니다. 성능에 대 한 동일한 경고가 발생 합니다. 작은 데이터 집합의 경우 일반 메시지의 `repeated` 필드를 사용 합니다.
+이전 예제와 같이 클라이언트 스트리밍 RPC를 사용하여 화재 및 잊어버린 메시징을 사용할 수 있습니다. 매우 큰 데이터 집합을 서버에 보내는 데 사용할 수도 있습니다. 성능에 대한 동일한 경고가 적용됩니다: `repeated` 작은 데이터 집합의 경우 일반 메시지에서 필드를 사용합니다.
 
 ## <a name="wcf-full-duplex-services"></a>WCF 전이중 서비스
 
-WCF 이중 바인딩은 서비스 인터페이스와 클라이언트 콜백 인터페이스 모두에서 여러 단방향 작업을 지원 합니다. 이 지원을 통해 클라이언트와 서버 간의 지속적인 대화를 수행할 수 있습니다. gRPC는 양방향 스트리밍 Rpc와 유사한 항목을 지원 합니다. 두 매개 변수는 모두 `stream` 한정자로 표시 됩니다.
+WCF 듀플렉스 바인딩은 서비스 인터페이스와 클라이언트 콜백 인터페이스 모두에서 여러 단방향 작업을 지원합니다. 이 지원을 통해 클라이언트와 서버 간의 지속적인 대화를 수행할 수 있습니다. gRPC는 양방향 스트리밍 RPC와 유사한 것을 지원하며, 여기서 `stream` 두 매개 변수는 수정자로 표시됩니다.
 
-### <a name="chatproto"></a>채팅-프로토콜
+### <a name="chatproto"></a>채팅.프로토
 
 ```protobuf
 service Chatter {
@@ -228,9 +228,9 @@ public class ChatterService : Chatter.ChatterBase
 }
 ```
 
-이전 예제에서 구현 메서드가 요청 스트림 (`IAsyncStreamReader<MessageRequest>`)과 응답 스트림 (`IServerStreamWriter<MessageResponse>`)을 모두 수신 하는 것을 볼 수 있습니다. 메서드는 연결이 닫힐 때까지 메시지를 읽고 쓸 수 있습니다.
+이전 예제에서 구현 메서드는 요청 스트림()`IAsyncStreamReader<MessageRequest>`및 응답 스트림()을`IServerStreamWriter<MessageResponse>`모두 수신하는 것을 볼 수 있습니다. 메서드는 연결이 닫혀야 메시지를 읽고 쓸 수 있습니다.
 
-### <a name="chatter-client"></a>Chatter 클라이언트
+### <a name="chatter-client"></a>채터 클라이언트
 
 ```csharp
 public class Chat : IAsyncDisposable

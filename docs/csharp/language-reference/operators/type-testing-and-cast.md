@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: c3550a593eafb9b50fa7e419e2f747c3e7a0e2ea
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 037ddc8eeda418b2e4858ab98be6cd362ca0e1e2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972646"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398174"
 ---
 # <a name="type-testing-and-cast-operators-c-reference"></a>형식 테스트 및 캐스트 연산자(C# 참조)
 
@@ -46,17 +46,17 @@ E is T
 
 여기서 `E`는 값을 반환하는 식이고, `T`는 형식 또는 형식 매개 변수의 이름입니다. `E`은 무명 메서드 또는 람다 식일 수 없습니다.
 
-`E is T` 식은 `E`의 결과가 null이 아니고 참조 변환, boxing 변환 또는 unboxing 변환을 통해 `T` 형식으로 변환될 수 있는 경우 `true`를 반환하고, 변환될 수 없으면 `false`를 반환합니다. `is` 연산자는 사용자 정의 변환을 고려하지 않습니다.
+`E is T` 식은 `true`의 결과가 null이 아니고 참조 변환, boxing 변환 또는 unboxing 변환을 통해 `E` 형식으로 변환될 수 있는 경우 `T`를 반환하고, 변환될 수 없으면 `false`를 반환합니다. `is` 연산자는 사용자 정의 변환을 고려하지 않습니다.
 
 다음 예제에서는 식 결과의 런타임 형식이 지정된 형식에서 파생되는 경우, 즉 형식 간에 참조 변환이 있는 경우 `is` 연산자가 `true`를 반환하는 것을 보여 줍니다.
 
-[!code-csharp[is with reference conversion](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#IsWithReferenceConversion)]
+[!code-csharp[is with reference conversion](snippets/TypeTestingAndConversionOperators.cs#IsWithReferenceConversion)]
 
 다음 예제에서는 `is` 연산자가 boxing 및 unboxing 변환은 고려하지만 [숫자 변환](../builtin-types/numeric-conversions.md)을 고려하지 않는 것을 보여 줍니다.
 
-[!code-csharp-interactive[is with int](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#IsWithInt)]
+[!code-csharp-interactive[is with int](snippets/TypeTestingAndConversionOperators.cs#IsWithInt)]
 
-C# 변환에 대한 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [변환](~/_csharplang/spec/conversions.md) 장을 참조하세요.
+C# 변환에 대한 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/conversions.md)의 [변환](~/_csharplang/spec/introduction.md) 장을 참조하세요.
 
 ### <a name="type-testing-with-pattern-matching"></a>패턴 일치를 사용한 형식 테스트
 
@@ -70,7 +70,7 @@ E is T v
 
 다음 예제에서는 형식 패턴과 `is` 연산자를 사용하는 방법을 보여 줍니다.
 
-[!code-csharp-interactive[is with type pattern](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#IsTypePattern)]
+[!code-csharp-interactive[is with type pattern](snippets/TypeTestingAndConversionOperators.cs#IsTypePattern)]
 
 형식 패턴 및 기타 지원되는 패턴에 대한 자세한 내용은 [is를 사용한 패턴 일치](../keywords/is.md#pattern-matching-with-is)를 참조하세요.
 
@@ -96,7 +96,7 @@ E is T ? (T)(E) : (T)null
 
 다음 예제에서는 `as` 연산자의 사용법을 보여 줍니다.
 
-[!code-csharp-interactive[as operator](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#AsOperator)]
+[!code-csharp-interactive[as operator](snippets/TypeTestingAndConversionOperators.cs#AsOperator)]
 
 > [!NOTE]
 > 앞의 예제와 같이, `as` 식의 결과를 `null`과 비교하여 변환에 성공했는지 확인해야 합니다. C# 7.0부터, [is 연산자](#type-testing-with-pattern-matching)를 사용하여 변환에 성공하는지 테스트하고, 성공한 경우 해당 결과를 새 변수에 할당할 수 있습니다.
@@ -107,9 +107,9 @@ E is T ? (T)(E) : (T)null
 
 다음 예제에서는 명시적 숫자 및 참조 변환을 보여 줍니다.
 
-[!code-csharp-interactive[cast expression](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#Cast)]
+[!code-csharp-interactive[cast expression](snippets/TypeTestingAndConversionOperators.cs#Cast)]
 
-지원되는 명시적 변환에 대한 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [명시적 변환](~/_csharplang/spec/conversions.md#explicit-conversions) 섹션을 참조하세요. 사용자 지정 명시적 또는 암시적 형식 변환을 정의하는 방법에 대한 자세한 내용은 [사용자 정의 변환 연산자](user-defined-conversion-operators.md)를 참조하세요.
+지원되는 명시적 변환에 대한 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/conversions.md#explicit-conversions)의 [명시적 변환](~/_csharplang/spec/introduction.md) 섹션을 참조하세요. 사용자 지정 명시적 또는 암시적 형식 변환을 정의하는 방법에 대한 자세한 내용은 [사용자 정의 변환 연산자](user-defined-conversion-operators.md)를 참조하세요.
 
 ### <a name="other-usages-of-"></a>다른 () 용도
 
@@ -121,11 +121,11 @@ E is T ? (T)(E) : (T)null
 
 `typeof` 연산자는 형식의 <xref:System.Type?displayProperty=nameWithType> 인스턴스를 가져옵니다. `typeof` 연산자의 인수는 다음 예제와 같이 형식 또는 형식 매개 변수의 이름이어야 합니다.
 
-[!code-csharp-interactive[typeof operator](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#TypeOf)]
+[!code-csharp-interactive[typeof operator](snippets/TypeTestingAndConversionOperators.cs#TypeOf)]
 
 바인딩되지 않은 제네릭 형식과 `typeof` 연산자를 사용할 수도 있습니다. 바인딩되지 않은 제네릭 형식의 이름에는 형식 매개 변수 개수보다 하나 더 적은 적절한 개수의 쉼표가 포함되어야 합니다. 다음 예제에서는 바인딩되지 않은 제네릭 형식과 `typeof` 연산자를 사용하는 방법을 보여 줍니다.
 
-[!code-csharp-interactive[typeof unbound generic](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#TypeOfUnboundGeneric)]
+[!code-csharp-interactive[typeof unbound generic](snippets/TypeTestingAndConversionOperators.cs#TypeOfUnboundGeneric)]
 
 식은 `typeof` 연산자의 인수가 될 수 없습니다. 식 결과의 런타임 형식에 대한 <xref:System.Type?displayProperty=nameWithType> 인스턴스를 가져오려면 <xref:System.Object.GetType%2A?displayProperty=nameWithType> 메서드를 사용합니다.
 
@@ -133,7 +133,7 @@ E is T ? (T)(E) : (T)null
 
 `typeof` 연산자를 사용하여 식 결과의 런타임 형식이 지정된 형식과 정확히 일치하는지 확인합니다. 다음 예제에서는 `typeof` 연산자와 [is 연산자](#is-operator)를 사용한 형식 검사의 차이점을 보여 줍니다.
 
-[!code-csharp[typeof vs is](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#TypeCheckWithTypeOf)]
+[!code-csharp[typeof vs is](snippets/TypeTestingAndConversionOperators.cs#TypeCheckWithTypeOf)]
 
 ## <a name="operator-overloadability"></a>연산자 오버로드 가능성
 

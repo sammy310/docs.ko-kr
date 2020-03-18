@@ -2,17 +2,17 @@
 title: LINQ to XML 개요(C#)
 ms.date: 10/30/2018
 ms.assetid: 716b94d3-0091-4de1-8e05-41bc069fa9dd
-ms.openlocfilehash: d8b606e1d3287f13a2112b75d5239fd1ac7dd7dc
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 334788a50832b8fe42ecc9a3272dd71f2f2af4ee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635511"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168417"
 ---
 # <a name="linq-to-xml-overview-c"></a>LINQ to XML 개요(C#)
 
-LINQ to XML에서는 .NET LINQ(Language-Integrated Query) Framework를 사용하는 메모리 내 XML 프로그래밍 인터페이스를 제공합니다. LINQ to XML은 .NET 기능을 사용하며 업데이트되고 다시 디자인된 DOM(문서 개체 모델) XML 프로그래밍 인터페이스와 유사합니다. 
- 
+LINQ to XML에서는 .NET LINQ(Language-Integrated Query) Framework를 사용하는 메모리 내 XML 프로그래밍 인터페이스를 제공합니다. LINQ to XML은 .NET 기능을 사용하며 업데이트되고 다시 디자인된 DOM(문서 개체 모델) XML 프로그래밍 인터페이스와 유사합니다.
+
 XML은 다양한 컨텍스트에서 데이터의 형식을 지정하는 방법으로 널리 채택되고 있습니다. 예를 들어, 웹에 있는 구성 파일, Microsoft Office Word 파일 및 데이터베이스에서 XML을 찾을 수 있습니다.
 
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]은 XML을 사용한 프로그래밍을 위해 다시 디자인된 최신 방법입니다. DOM(문서 개체 모델)의 메모리 내 문서 수정 기능을 제공하며 LINQ 쿼리 식을 지원합니다. 이러한 쿼리 식은 구문적으로 XPath와 다르지만 유사한 기능을 제공합니다.

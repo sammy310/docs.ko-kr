@@ -3,11 +3,11 @@ title: Windows Forms 관련 호환성이 손상되는 변경
 description: .NET Core용 Windows Forms 관련 호환성이 손상되는 변경 목록입니다.
 ms.date: 01/08/2020
 ms.openlocfilehash: 7fba78382d011bc9d489924fa185a44e598c5a76
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093021"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398012"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Windows Forms 관련 호환성이 손상되는 변경
 
@@ -95,6 +95,6 @@ Windows Forms 지원이 버전 3.0의 .NET Core에 추가되었습니다. 이 �
 
 ***
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [.NET Core에 Windows Forms 앱 포팅](../porting/winforms.md)

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 ms.openlocfilehash: c574719da9b89b468b92b042e1f2b5b10fbe3c0d
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159327"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398522"
 ---
 # <a name="common-type-system"></a>공용 형식 시스템
 공용 형식 시스템은 공용 언어 런타임에 형식을 선언하고 사용 및 관리하는 방법을 정의할 뿐 아니라 언어 간 통합에 대한 런타임 지원의 중요한 부분을 차지합니다. 공용 형식 시스템은 다음과 같은 기능을 수행합니다.  

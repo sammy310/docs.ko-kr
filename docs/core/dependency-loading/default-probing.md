@@ -5,11 +5,11 @@ ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.openlocfilehash: 500ee6ee863b1f311970a9e718936f57f7d4efd6
-ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72303685"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398006"
 ---
 # <a name="default-probing"></a>기본 검색
 
@@ -58,7 +58,7 @@ ms.locfileid: "72303685"
 
 관리 어셈블리를 찾기 위해 검색할 때 <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType>은 다음을 순서대로 검색합니다.
 
-- 파일 확장명을 제거한 후 `TRUSTED_PLATFORM_ASSEMBLIES`에서 <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType>과 일치하는 파일입니다.
+- 파일 확장명을 제거한 후 <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType>에서 `TRUSTED_PLATFORM_ASSEMBLIES`과 일치하는 파일입니다.
 - 일반 파일 확장자가 있는 `APP_NI_PATHS`의 네이티브 이미지 어셈블리 파일입니다.
 - 일반 파일 확장자가 있는 `APP_PATHS`의 어셈블리 파일입니다.
 

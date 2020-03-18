@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: d48ced9d0201a33f9149aba155ddd3d8bc04c93f
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74643852"
 ---
 ### <a name="serializableattribute-removed-from-some-windows-forms-types"></a>일부 Windows Forms 형식에서 SerializableAttribute 제거됨
@@ -34,7 +34,7 @@ ms.locfileid: "74643852"
 
 3.0 미리 보기 9
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 이러한 형식이 직렬화 가능으로 표시되어야 하는 코드를 모두 업데이트합니다.
 
@@ -44,7 +44,7 @@ Windows Forms
 
 #### <a name="affected-apis"></a>영향을 받는 API
 
-- 없음
+- None
 
 <!--
 

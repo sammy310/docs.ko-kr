@@ -12,10 +12,10 @@ helpviewer_keywords:
 - exceptions, user-defined
 ms.assetid: 25819a5a-f915-4fc8-b924-a76915674e04
 ms.openlocfilehash: 6de00490a17fff005dd50a7acc5247089c073f68
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75708877"
 ---
 # <a name="how-to-create-user-defined-exceptions"></a>사용자 정의 예외를 만드는 방법
@@ -31,6 +31,6 @@ ms.locfileid: "75708877"
 > [!NOTE]
 > 원격을 사용하는 경우 사용자 정의 예외에 대한 메타데이터를 서버(호출 수신자) 및 클라이언트(프록시 개체 또는 호출자)에서 사용할 수 있는지 확인해야 합니다. 자세한 내용은 [예외에 대한 모범 사례](best-practices-for-exceptions.md)를 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [예외](index.md)

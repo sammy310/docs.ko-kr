@@ -4,12 +4,12 @@ description: .NET Core 및 .NET 표준 프로젝트에 대한 코드 품질 및 
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: a65cf3fbfb6562dbd9aaf815e1bfe469585c0fc0
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 586373381bcb18384cbf29bb2ca2bd220a2b2d3d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157390"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240963"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core 및.NET 표준을 사용하는 단위 테스트 모범 사례
 
@@ -32,7 +32,7 @@ ms.locfileid: "78157390"
 단위 테스트를 사용하면 모든 빌드 후에 또는 코드 줄을 변경한 후에도 전체 테스트 도구 모음을 다시 실행할 수 있습니다. 새 코드가 기존 기능을 중단시키지 않는다는 신뢰를 줍니다.
 
 ### <a name="executable-documentation"></a>실행 가능한 설명서
-특정 메서드가 무엇을 하는지 또는 특정 입력이 지정된 동작이 어떻게 수행되는지 항상 명확하지는 않을 수 있습니다. 빈 문자열을 전달하면 이 메서드는 어떻게 작동하는가를 자문해 볼 수 있습니다. Null?
+특정 메서드가 무엇을 하는지 또는 특정 입력이 지정된 동작이 어떻게 수행되는지 항상 명확하지는 않을 수 있습니다. 빈 문자열을 전달하면 이 메서드는 어떻게 작동하는가를 직접 요청할 수 있습니다. Null?
 
 이름이 잘 지정된 단위 테스트의 도구 모음이 있는 경우 각 테스트는 지정된 입력에 대해 예상되는 출력을 명확하게 설명할 수 있어야 합니다. 또한 실제로 작동하는지 확인할 수 있어야 합니다.
 
@@ -102,7 +102,7 @@ Assert.True(mockOrder.Validated);
 
 mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같지만, mock 개체에 대해 어설션하는 반면 stub에 대해서는 어설션하지 않습니다.
 
-## <a name="best-practices"></a>최선의 구현 방법
+## <a name="best-practices"></a>모범 사례
 
 ### <a name="naming-your-tests"></a>테스트 이름 지정
 테스트의 이름은 다음 세 부분으로 구성되어야 합니다.
@@ -118,10 +118,10 @@ mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같
 테스트는 단순히 코드가 작동하는지 확인하는 것 이상이며, 문서도 제공합니다. 단위 테스트 도구 모음을 살펴봄으로써 코드 자체를 조회하지 않고도 코드의 동작을 유추할 수 있습니다. 또한 테스트가 실패하는 경우 기대치를 충족하지 못하는 시나리오를 정확히 확인할 수 있습니다.
 
 #### <a name="bad"></a>Bad:
-[!code-csharp[BeforeNaming](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeNaming)]
+[!code-csharp[BeforeNaming](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeNaming)]
 
 #### <a name="better"></a>Better:
-[!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
+[!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
 
 ### <a name="arranging-your-tests"></a>테스트 정렬
 **정렬, 동작, 어설션**은 단위 테스트 시 일반적인 패턴입니다. 이름에서 알 수 있듯이 세 가지 주요 작업으로 구성됩니다.
@@ -138,10 +138,10 @@ mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같
 가독성은 테스트를 작성할 때 가장 중요한 측면 중 하나입니다. 테스트 내에서 이러한 작업을 각각 구분하면 코드를 호출하는 데 필요한 종속성, 코드 호출 방법 및 어설션하려는 대상이 명확하게 강조 표시할 수 있습니다. 몇 가지 단계를 결합하여 테스트의 크기를 줄일 수 있지만, 기본적인 목표는 가능한 한 테스트를 최대한으로 읽을 수 있도록 하는 것입니다.
 
 #### <a name="bad"></a>Bad:
-[!code-csharp[BeforeArranging](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeArranging)]
+[!code-csharp[BeforeArranging](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeArranging)]
 
 #### <a name="better"></a>Better:
-[!code-csharp[AfterArranging](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterArranging)]
+[!code-csharp[AfterArranging](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterArranging)]
 
 ### <a name="write-minimally-passing-tests"></a>최소한의 테스트 통과 작성
 단위 테스트에 사용할 입력은 현재 테스트 중인 동작을 확인하기 위해 가능한 한 가장 간단해야 합니다.
@@ -154,10 +154,10 @@ mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같
 테스트를 통과하는 데 필요한 것보다 많은 정보를 포함하는 테스트는 테스트에 오류가 발생할 가능성이 높으며 테스트의 의도를 덜 명확하게 할 수 있습니다. 테스트를 작성할 때 동작에 집중하려고 합니다. 모델의 추가 속성을 설정하거나 필요하지 않을 때 0이 아닌 값을 사용하면 증명하려고 시도한 것만 손상됩니다.
 
 #### <a name="bad"></a>Bad:
-[!code-csharp[BeforeMinimallyPassing](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeMinimallyPassing)]
+[!code-csharp[BeforeMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMinimallyPassing)]
 
 #### <a name="better"></a>Better:
-[!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
+[!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
 
 ### <a name="avoid-magic-strings"></a>매직 문자열 방지
 단위 테스트의 이름 지정 변수는(프로덕션 코드의 이름 지정 변수보다 더 중요하지는 않지만) 중요합니다. 단위 테스트에는 매직 문자열이 없어야 합니다.
@@ -173,10 +173,10 @@ mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같
 > 테스트를 작성할 때는 가능한 한 많은 의도를 표현하는 것을 목표로 해야 합니다. 매직 문자열의 경우 좋은 방법은 이러한 값을 상수에 할당하는 것입니다.
 
 #### <a name="bad"></a>Bad:
-[!code-csharp[BeforeMagicString](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeMagicString)]
+[!code-csharp[BeforeMagicString](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMagicString)]
 
 #### <a name="better"></a>Better:
-[!code-csharp[AfterMagicString](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterMagicString)]
+[!code-csharp[AfterMagicString](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterMagicString)]
 
 ### <a name="avoid-logic-in-tests"></a>테스트에서 논리 방지
 단위 테스트를 작성할 때 수동 문자열 연결 및 `if`, `while`, `for`, `switch` 등의 논리 조건을 방지합니다.
@@ -192,10 +192,10 @@ mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같
 > 테스트의 논리가 불가피한 경우 테스트를 두 개 이상의 다른 테스트로 분할하는 것이 좋습니다.
 
 #### <a name="bad"></a>Bad:
-[!code-csharp[LogicInTests](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#LogicInTests)]
+[!code-csharp[LogicInTests](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#LogicInTests)]
 
 #### <a name="better"></a>Better:
-[!code-csharp[AfterTestLogic](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterTestLogic)]
+[!code-csharp[AfterTestLogic](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterTestLogic)]
 
 ### <a name="prefer-helper-methods-to-setup-and-teardown"></a>설정 및 해제할 도우미 방법 선호
 테스트에 비슷한 개체나 상태가 필요한 경우 Setup 및 Teardown 특성이 있는 경우보다 도우미 메서드를 선호합니다.
@@ -212,22 +212,22 @@ mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같
 > xUnit은 버전 2.x에서 SetUp 및 TearDown을 모두 제거했습니다.
 
 #### <a name="bad"></a>Bad:
-[!code-csharp[BeforeSetup](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeSetup)]
+[!code-csharp[BeforeSetup](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeSetup)]
 
 ```csharp
 // more tests...
 ```
 
-[!code-csharp[BeforeHelperMethod](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeHelperMethod)]
+[!code-csharp[BeforeHelperMethod](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeHelperMethod)]
 
 #### <a name="better"></a>Better:
-[!code-csharp[AfterHelperMethod](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterHelperMethod)]
+[!code-csharp[AfterHelperMethod](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterHelperMethod)]
 
 ```csharp
 // more tests...
 ```
 
-[!code-csharp[AfterSetup](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterSetup)]
+[!code-csharp[AfterSetup](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterSetup)]
 
 ### <a name="avoid-multiple-asserts"></a>다중 어설션 방지
 테스트를 작성할 때 테스트당 하나의 Assert만 포함하려고 합니다. 하나의 어설션만 사용하는 일반적인 방법은 다음과 같습니다.
@@ -247,10 +247,10 @@ mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같
 > 이 규칙에 대한 일반적인 예외는 개체에 대해 어설션할 때 발생합니다. 이 경우 일반적으로 각 속성에 대해 다중 어설션을 허용하여 개체가 예상되는 상태에 있는지 확인하는 것이 좋습니다.
 
 #### <a name="bad"></a>Bad:
-[!code-csharp[BeforeMultipleAsserts](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeMultipleAsserts)]
+[!code-csharp[BeforeMultipleAsserts](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMultipleAsserts)]
 
 #### <a name="better"></a>Better:
-[!code-csharp[AfterMultipleAsserts](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterMultipleAsserts)]
+[!code-csharp[AfterMultipleAsserts](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterMultipleAsserts)]
 
 ### <a name="validate-private-methods-by-unit-testing-public-methods"></a>공용 메서드를 테스트하여 전용 메서드 유효성 검사
 대부분의 경우 전용 메서드를 테스트할 필요는 없습니다. 전용 메서드는 구현 세부 정보입니다. 전용 메서드는 절대 분리되어 존재하지 않는다고 생각할 수 있습니다. 특정 시점에서는 구현의 일부로 전용 메서드를 호출하는 공용 연결 메서드가 있을 것입니다. 주의해야 할 것은 사적인 것을 호출하는 공용 메서드의 최종 결과입니다.

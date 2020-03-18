@@ -2,12 +2,12 @@
 title: XSLT 스타일에서 주석을 사용하여 LINQ to XML 트리를 변환하는 방법(C#)
 ms.date: 07/20/2015
 ms.assetid: 12a95902-a6b7-4a1e-ad52-04a518db226f
-ms.openlocfilehash: 109e1a49530f34e7197f8c975de8c04245b11734
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 7d6d646bb9b7b344750c22cb24bc81999da5210d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347290"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168559"
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a>XSLT 스타일에서 주석을 사용하여 LINQ to XML 트리를 변환하는 방법(C#)
 주석을 사용하여 XML 트리를 쉽게 변환할 수 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "75347290"
   
 - 주석으로 추가된 새 요소는 새 자식 노드를 포함할 수 있으며 원하는 모양의 하위 트리를 형성할 수 있습니다.  
   
-- 특별한 규칙이 있습니다. 새 요소의 자식 노드가 이 목적을 위해 구성된 다른 네임스페이스(이 예제에서는 네임스페이스가 `http://www.microsoft.com/LinqToXmlTransform/2007`임)에 있으면 해당 자식 요소가 새 트리에 복사되지 않습니다. 대신 네임스페이스가 위에서 언급한 특수 네임스페이스이고 요소의 로컬 이름이 `ApplyTransforms`이면 소스 트리에 있는 요소의 자식 노드가 반복되고 새 트리에 복사됩니다. 단, 주석이 달린 자식 요소는 이러한 규칙에 따라 스스로 변환됩니다.  
+- 한 가지 특별한 규칙이 있습니다. 새 요소의 자식 노드가 이 목적을 위해 구성된 다른 네임스페이스(이 예제에서는 `http://www.microsoft.com/LinqToXmlTransform/2007`)에 있으면 해당 자식 요소가 새 트리에 복사되지 않습니다. 대신 네임스페이스가 위에서 언급한 특수 네임스페이스이고 요소의 로컬 이름이 `ApplyTransforms`이면 소스 트리에 있는 요소의 자식 노드가 반복되고 새 트리에 복사됩니다. 단, 주석이 달린 자식 요소는 이러한 규칙에 따라 스스로 변환됩니다.  
   
 - 이 방법은 XSL의 변환 사양과 다소 유사합니다. 일련의 노드를 선택하는 쿼리는 템플릿에 대한 XPath 식과 유사합니다. 주석으로 저장된 새 <xref:System.Xml.Linq.XElement>를 만들 코드는 XSL의 시퀀스 생성자와 유사하고 `ApplyTransforms` 요소는 XSL의 `xsl:apply-templates` 요소와 기능 면에서 유사합니다.  
   
@@ -148,7 +148,7 @@ After Transform
 - 이 함수의 의사(pseudo) 코드는 매우 간단합니다.  
   
 ```text  
-The function takes an XElement as an argument and returns an XElement.   
+The function takes an XElement as an argument and returns an XElement.
 If an element has an XElement annotation, then  
     Return a new XElement  
         The name of the new XElement is the annotation element's name.  
@@ -233,10 +233,10 @@ static XElement XForm(XElement source)
                 )  
         );  
     }  
-}   
+}
 ```  
   
-## <a name="complete-example"></a>완성된 예제  
+## <a name="complete-example"></a>전체 예제  
  다음 코드는 `XForm` 함수가 포함된 전체 예제입니다. 이 코드에는 이러한 유형의 변환에 대한 몇 가지 일반적인 사용이 포함되어 있습니다.  
   
 ```csharp  

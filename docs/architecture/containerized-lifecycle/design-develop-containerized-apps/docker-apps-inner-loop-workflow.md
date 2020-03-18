@@ -3,10 +3,10 @@ title: Docker 앱을 위한 내부 루프 개발 워크플로
 description: Docker 애플리케이션 개발을 위한 "내부 루프" 워크플로에 대해 알아봅니다.
 ms.date: 02/15/2019
 ms.openlocfilehash: 3d2fc889d22dbf02acccfbf9231ad98fca224cff
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75936807"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 앱을 위한 내부 루프 개발 워크플로

@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 0aa323533dd9136372c2bbc330c9c3056fdf428c
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 13600ea01e18ad47e6295653ba3b79ce53ff3257
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157573"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79397958"
 ---
 # <a name="install-the-net-core-sdk"></a>.NET Core SDK 설치
 
@@ -111,7 +111,7 @@ Visual Studio가 최신 .NET Core SDK 및 런타임을 설치할 수 있습니�
 
 Visual Studio를 설치하거나 수정할 때는 빌드하려는 애플리케이션의 종류에 따라 다음 워크로드 중 하나 이상을 선택합니다.
 
-- **기타 도구 집합** 섹션의 **.NET Core 플랫폼 간 개발** 워크로드
+- **기타 도구 세트** 섹션의 **.NET Core 플랫폼 간 개발** 워크로드
 - **웹 및 클라우드** 섹션의 **ASP.NET 및 웹 개발** 워크로드
 - **웹 및 클라우드** 섹션의 **Azure 개발** 워크로드
 - **데스크톱 및 모바일** 섹션의 **.NET 데스크톱 개발** 워크로드
@@ -157,7 +157,7 @@ Visual Studio Code에 Visual Studio처럼 자동화된 .NET Core 설치 프로�
 
 01. [Visual Studio Code를 다운로드하여 설치합니다](https://code.visualstudio.com/Download).
 01. [.NET Core SDK를 다운로드하여 설치합니다](https://dotnet.microsoft.com/download/dotnet-core).
-01. [Visual Studio Code Marketplace에서 C# 확장을 설치합니다](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp).
+01. [Visual Studio Code Marketplace에서 C# 확장을 설치합니다](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
 
 ::: zone pivot="os-windows"
 

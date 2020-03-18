@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: b60f74947a537c602c7bd1a89587b76bd847c82a
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937268"
 ---
 ### <a name="target-framework-net-framework-support-dropped"></a>대상 프레임워크: .NET Framework 지원 삭제
@@ -47,7 +47,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>영향을 받는 API
 
-없음
+None
 
 <!-- 
 

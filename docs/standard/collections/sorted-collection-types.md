@@ -10,10 +10,10 @@ helpviewer_keywords:
 - collections [.NET Framework], SortedList collection type
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
 ms.openlocfilehash: adabda4801abc7a11a9b22181701eb233b35a251
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711339"
 ---
 # <a name="sorted-collection-types"></a>Sorted 컬렉션 형식
@@ -46,7 +46,7 @@ ms.locfileid: "75711339"
   
  .NET Framework 4부터 <xref:System.Collections.Generic.SortedSet%601> 클래스는 삽입, 삭제 및 검색 후에 정렬된 순서에 따라 데이터를 유지 관리하는 자체 균형 조정 트리를 제공합니다. 이 클래스와 <xref:System.Collections.Generic.HashSet%601> 클래스는 <xref:System.Collections.Generic.ISet%601> 인터페이스를 구현합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Collections.IDictionary?displayProperty=nameWithType>
 - <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>

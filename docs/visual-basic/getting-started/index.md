@@ -1,15 +1,15 @@
 ---
-title: 시작
+title: 시작하기
 ms.date: 09/10/2018
 helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
 ms.openlocfilehash: 0221889f6d736b41546b564273ebb41d49dfb039
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75559887"
 ---
 # <a name="get-started-with-visual-basic"></a>Visual Basic 시작
@@ -28,7 +28,7 @@ ms.locfileid: "75559887"
 
 - [Visual Basic 프로그래머를 위한 추가 리소스](additional-resources.md) 일반적인 문제의 답변을 찾을 수 있는 웹 사이트 및 뉴스 그룹 목록을 제공합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Visual Basic 다운로드](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 체험 버전을 포함하여 Visual Basic 지원이 포함된 Visual Studio 버전에 대한 다운로드 링크를 제공합니다.
 

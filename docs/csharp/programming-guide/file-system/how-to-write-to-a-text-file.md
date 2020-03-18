@@ -9,10 +9,10 @@ helpviewer_keywords:
 - text, writing to files [C#]
 ms.assetid: 2e99f184-d88b-4719-a7f1-d9ec482aa809
 ms.openlocfilehash: ac16fb971eae5654a55e2f1753d78a6458f03315
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712249"
 ---
 # <a name="how-to-write-to-a-text-file-c-programming-guide"></a>텍스트 파일에 쓰는 방법(C# 프로그래밍 가이드)
@@ -32,7 +32,7 @@ ms.locfileid: "75712249"
   
 - 디스크가 꽉 찬 경우  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [파일 시스템 및 레지스트리(C# 프로그래밍 가이드)](./index.md)

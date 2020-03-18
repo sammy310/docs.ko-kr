@@ -2,12 +2,12 @@
 title: CSV 텍스트 파일의 열 값을 컴퓨팅하는 방법(LINQ)(C#)
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: a48850e8f6229b80ebd9207bb1b7353f8b0c9e02
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 458950d58b15dcd572329228d76d85881043e07a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141364"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169352"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>CSV 텍스트 파일의 열 값을 컴퓨팅하는 방법(LINQ)(C#)
 이 예제에서는 .csv 파일의 열에 대해 Sum, Average, Min 및 Max 등의 집계 계산을 수행하는 방법을 보여 줍니다. 여기 표시된 예제 원칙은 다른 형식의 구조화된 텍스트에 적용할 수 있습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "74141364"
     122, 94, 92, 91, 91  
     ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```csharp  
 class SumColumns  
@@ -61,14 +61,14 @@ class SumColumns
     {  
         Console.WriteLine("Single Column Query:");  
   
-        // Parameter examNum specifies the column to   
+        // Parameter examNum specifies the column to
         // run the calculations on. This value could be  
-        // passed in dynamically at runtime.               
+        // passed in dynamically at runtime.
   
         // Variable columnQuery is an IEnumerable<int>.  
         // The following query performs two steps:  
-        // 1) use Split to break each row (a string) into an array   
-        //    of strings,   
+        // 1) use Split to break each row (a string) into an array
+        //    of strings,
         // 2) convert the element at position examNum to an int  
         //    and select it.  
         var columnQuery =  
@@ -95,17 +95,17 @@ class SumColumns
         Console.WriteLine("Multi Column Query:");  
   
         // Create a query, multiColQuery. Explicit typing is used  
-        // to make clear that, when executed, multiColQuery produces   
+        // to make clear that, when executed, multiColQuery produces
         // nested sequences. However, you get the same results by  
         // using 'var'.  
   
         // The multiColQuery query performs the following steps:  
-        // 1) use Split to break each row (a string) into an array   
-        //    of strings,   
-        // 2) use Skip to skip the "Student ID" column, and store the   
+        // 1) use Split to break each row (a string) into an array
+        //    of strings,
+        // 2) use Skip to skip the "Student ID" column, and store the
         //    rest of the row in scores.  
         // 3) convert each score in the current row from a string to  
-        //    an int, and select that entire sequence as one row   
+        //    an int, and select that entire sequence as one row
         //    in the results.  
         IEnumerable<IEnumerable<int>> multiColQuery =  
             from line in strs  
@@ -115,7 +115,7 @@ class SumColumns
                     select Convert.ToInt32(str));  
   
         // Execute the query and cache the results to improve  
-        // performance.   
+        // performance.
         // ToArray could be used instead of ToList.  
         var results = multiColQuery.ToList();  
   
@@ -123,11 +123,11 @@ class SumColumns
         int columnCount = results[0].Count();  
   
         // Perform aggregate calculations Average, Max, and  
-        // Min on each column.              
-        // Perform one iteration of the loop for each column   
+        // Min on each column.
+        // Perform one iteration of the loop for each column
         // of scores.  
-        // You can use a for loop instead of a foreach loop   
-        // because you already executed the multiColQuery   
+        // You can use a for loop instead of a foreach loop
+        // because you already executed the multiColQuery
         // query by calling ToList.  
         for (int column = 0; column < columnCount; column++)  
         {  

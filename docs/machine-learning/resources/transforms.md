@@ -3,11 +3,11 @@ title: 데이터 변환
 description: ML.NET에서 지원되는 기능 엔지니어링 구성 요소를 탐색합니다.
 ms.date: 04/02/2019
 ms.openlocfilehash: ca410b475c556db5ad4c3862fb79755b455d6830
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739594"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397754"
 ---
 # <a name="data-transformations"></a>데이터 변환
 
@@ -21,7 +21,7 @@ ms.locfileid: "75739594"
 
 일부 데이터 변환의 경우 해당 매개 변수를 계산하려면 학습 데이터가 필요합니다. 예를 들어 <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> 변환기는 `Fit()` 작업 중에 학습 데이터의 평균 및 분산을 계산하고 해당 매개 변수를 `Transform()` 작업에서 사용합니다.
 
-다른 데이터 변환에는 학습 데이터가 필요하지 않습니다. 예를 들어 <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale%2A> 변환은 `Fit()` 작업 중에 학습 데이터를 확인하지 않고 `Transform()` 작업을 수행할 수 있습니다.
+다른 데이터 변환에는 학습 데이터가 필요하지 않습니다. 예를 들어 <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale%2A> 변환은 `Transform()` 작업 중에 학습 데이터를 확인하지 않고 `Fit()` 작업을 수행할 수 있습니다.
 
 ## <a name="column-mapping-and-grouping"></a>열 매핑 및 그룹화
 
