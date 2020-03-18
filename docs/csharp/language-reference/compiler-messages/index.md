@@ -7,32 +7,32 @@ helpviewer_keywords:
 - errors [C#]
 ms.assetid: 57262ab1-6c50-4f9c-81ad-9fba48477416
 ms.openlocfilehash: af1ec49e6c7eb94c4e324b947e8ead8149d0a997
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "72771871"
 ---
-# <a name="c-compiler-errors"></a><span data-ttu-id="925e1-102">C# 컴파일러 오류</span><span class="sxs-lookup"><span data-stu-id="925e1-102">C# Compiler Errors</span></span>
+# <a name="c-compiler-errors"></a><span data-ttu-id="1d61e-102">C# 컴파일러 오류</span><span class="sxs-lookup"><span data-stu-id="1d61e-102">C# Compiler Errors</span></span>
 
-<span data-ttu-id="925e1-103">일부 C# 컴파일러 오류는 오류가 생성된 이유 및 경우에 따라 오류 수정 방법을 설명하는 항목이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="925e1-103">Some C# compiler errors have corresponding topics that explain why the error is generated, and, in some cases, how to fix the error.</span></span> <span data-ttu-id="925e1-104">특정 오류 메시지에 대해 도움말을 사용할 수 있는지 여부를 확인하려면 다음 단계 중 하나를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="925e1-104">Use one of the following steps to see whether help is available for a particular error message.</span></span>  
+<span data-ttu-id="1d61e-103">일부 C# 컴파일러 오류는 오류가 생성된 이유 및 경우에 따라 오류 수정 방법을 설명하는 항목이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1d61e-103">Some C# compiler errors have corresponding topics that explain why the error is generated, and, in some cases, how to fix the error.</span></span> <span data-ttu-id="1d61e-104">특정 오류 메시지에 대해 도움말을 사용할 수 있는지 여부를 확인하려면 다음 단계 중 하나를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="1d61e-104">Use one of the following steps to see whether help is available for a particular error message.</span></span>  
   
-- <span data-ttu-id="925e1-105">오류 번호(예: CS0029)를 [출력 창](/visualstudio/ide/reference/output-window)에서 찾고 Microsoft Docs에서 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="925e1-105">Find the error number (for example, CS0029) in the [Output Window](/visualstudio/ide/reference/output-window), and then search for it on Microsoft Docs.</span></span>  
+- <span data-ttu-id="1d61e-105">오류 번호(예: CS0029)를 [출력 창](/visualstudio/ide/reference/output-window)에서 찾고 Microsoft Docs에서 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="1d61e-105">Find the error number (for example, CS0029) in the [Output Window](/visualstudio/ide/reference/output-window), and then search for it on Microsoft Docs.</span></span>  
   
-- <span data-ttu-id="925e1-106">오류 번호(예: CS0029)를 [출력 창](/visualstudio/ide/reference/output-window)에서 선택하고 F1 키를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="925e1-106">Choose the error number (for example, CS0029) in the [Output Window](/visualstudio/ide/reference/output-window), and then choose the F1 key.</span></span>  
+- <span data-ttu-id="1d61e-106">오류 번호(예: CS0029)를 [출력 창](/visualstudio/ide/reference/output-window)에서 선택하고 F1 키를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="1d61e-106">Choose the error number (for example, CS0029) in the [Output Window](/visualstudio/ide/reference/output-window), and then choose the F1 key.</span></span>  
   
-- <span data-ttu-id="925e1-107">인덱스에서 **찾을 대상** 상자에 오류 번호를 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="925e1-107">In the Index, enter the error number in the **Look for** box.</span></span>  
+- <span data-ttu-id="1d61e-107">인덱스에서 **찾을 대상** 상자에 오류 번호를 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="1d61e-107">In the Index, enter the error number in the **Look for** box.</span></span>  
   
- <span data-ttu-id="925e1-108">위의 단계를 수행해도 오류에 대한 정보를 얻을 수 없으면 이 페이지 끝으로 이동하여 오류 번호나 텍스트를 포함한 피드백을 보내십시오.</span><span class="sxs-lookup"><span data-stu-id="925e1-108">If none of these steps leads to information about your error, go to the end of this page, and send feedback that includes the number or text of the error.</span></span>  
+ <span data-ttu-id="1d61e-108">위의 단계를 수행해도 오류에 대한 정보를 얻을 수 없으면 이 페이지 끝으로 이동하여 오류 번호나 텍스트를 포함한 피드백을 보내십시오.</span><span class="sxs-lookup"><span data-stu-id="1d61e-108">If none of these steps leads to information about your error, go to the end of this page, and send feedback that includes the number or text of the error.</span></span>  
   
- <span data-ttu-id="925e1-109">C#에서 오류 및 경고 옵션을 구성하는 방법에 대한 자세한 내용은 [프로젝트 디자이너, 빌드 페이지(C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="925e1-109">For information about how to configure error and warning options in C#, see [Build Page, Project Designer (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).</span></span>  
+ <span data-ttu-id="1d61e-109">C#에서 오류 및 경고 옵션을 구성하는 방법에 대한 자세한 내용은 [프로젝트 디자이너, 빌드 페이지(C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1d61e-109">For information about how to configure error and warning options in C#, see [Build Page, Project Designer (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).</span></span>  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="925e1-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="925e1-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1d61e-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="1d61e-110">See also</span></span>
 
-- [<span data-ttu-id="925e1-111">C# 컴파일러 옵션</span><span class="sxs-lookup"><span data-stu-id="925e1-111">C# Compiler Options</span></span>](../compiler-options/index.md)
-- [<span data-ttu-id="925e1-112">죄송합니다. 이 C# 오류에 대한 구체적인 정보가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="925e1-112">Sorry, we don't have specifics on this C# error</span></span>](../../misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)
-- [<span data-ttu-id="925e1-113">프로젝트 디자이너, 빌드 페이지(C#)</span><span class="sxs-lookup"><span data-stu-id="925e1-113">Build Page, Project Designer (C#)</span></span>](/visualstudio/ide/reference/build-page-project-designer-csharp)
-- [<span data-ttu-id="925e1-114">-warn(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="925e1-114">-warn (C# Compiler Options)</span></span>](../compiler-options/warn-compiler-option.md)
-- [<span data-ttu-id="925e1-115">-nowarn(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="925e1-115">-nowarn (C# Compiler Options)</span></span>](../compiler-options/nowarn-compiler-option.md)
+- [<span data-ttu-id="1d61e-111">C# 컴파일러 옵션</span><span class="sxs-lookup"><span data-stu-id="1d61e-111">C# Compiler Options</span></span>](../compiler-options/index.md)
+- [<span data-ttu-id="1d61e-112">죄송합니다. 이 C# 오류에 대한 구체적인 정보가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="1d61e-112">Sorry, we don't have specifics on this C# error</span></span>](../../misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)
+- [<span data-ttu-id="1d61e-113">프로젝트 디자이너, 빌드 페이지(C#)</span><span class="sxs-lookup"><span data-stu-id="1d61e-113">Build Page, Project Designer (C#)</span></span>](/visualstudio/ide/reference/build-page-project-designer-csharp)
+- [<span data-ttu-id="1d61e-114">-warn(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="1d61e-114">-warn (C# Compiler Options)</span></span>](../compiler-options/warn-compiler-option.md)
+- [<span data-ttu-id="1d61e-115">-nowarn(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="1d61e-115">-nowarn (C# Compiler Options)</span></span>](../compiler-options/nowarn-compiler-option.md)
