@@ -3,16 +3,16 @@ title: XSLT를 사용하여 XML 트리 변환(C#)
 ms.date: 07/20/2015
 ms.assetid: 373a2699-d4c5-471b-9bda-c1f0ab73b477
 ms.openlocfilehash: 7ebcfbd6be86fdd5e12bfc48a0fe80a084c6f9b5
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74140917"
 ---
-# <a name="using-xslt-to-transform-an-xml-tree-c"></a><span data-ttu-id="fe7e0-102">XSLT를 사용하여 XML 트리 변환(C#)</span><span class="sxs-lookup"><span data-stu-id="fe7e0-102">Using XSLT to Transform an XML Tree (C#)</span></span>
-<span data-ttu-id="fe7e0-103">XML 트리를 만들고 XML 트리에서 <xref:System.Xml.XmlReader>를 만든 다음 새 문서를 만들고 새 문서에 쓸 <xref:System.Xml.XmlWriter>를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fe7e0-103">You can create an XML tree, create an <xref:System.Xml.XmlReader> from the XML tree, create a new document, and create an <xref:System.Xml.XmlWriter> that will write into the new document.</span></span> <span data-ttu-id="fe7e0-104">그런 다음 <xref:System.Xml.XmlReader> 및 <xref:System.Xml.XmlWriter>를 변환에 전달하여 XSLT 변환을 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fe7e0-104">Then, you can invoke the XSLT transformation, passing the <xref:System.Xml.XmlReader> and <xref:System.Xml.XmlWriter> to the transformation.</span></span> <span data-ttu-id="fe7e0-105">변환이 성공적으로 완료된 후 새 XML 트리가 변환의 결과로 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="fe7e0-105">After the transformation successfully completes, the new XML tree is populated with the results of the transform.</span></span>  
+# <a name="using-xslt-to-transform-an-xml-tree-c"></a><span data-ttu-id="31e07-102">XSLT를 사용하여 XML 트리 변환(C#)</span><span class="sxs-lookup"><span data-stu-id="31e07-102">Using XSLT to Transform an XML Tree (C#)</span></span>
+<span data-ttu-id="31e07-103">XML 트리를 만들고 XML 트리에서 <xref:System.Xml.XmlReader>를 만든 다음 새 문서를 만들고 새 문서에 쓸 <xref:System.Xml.XmlWriter>를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="31e07-103">You can create an XML tree, create an <xref:System.Xml.XmlReader> from the XML tree, create a new document, and create an <xref:System.Xml.XmlWriter> that will write into the new document.</span></span> <span data-ttu-id="31e07-104">그런 다음 <xref:System.Xml.XmlReader> 및 <xref:System.Xml.XmlWriter>를 변환에 전달하여 XSLT 변환을 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="31e07-104">Then, you can invoke the XSLT transformation, passing the <xref:System.Xml.XmlReader> and <xref:System.Xml.XmlWriter> to the transformation.</span></span> <span data-ttu-id="31e07-105">변환이 성공적으로 완료된 후 새 XML 트리가 변환의 결과로 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="31e07-105">After the transformation successfully completes, the new XML tree is populated with the results of the transform.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="fe7e0-106">예</span><span class="sxs-lookup"><span data-stu-id="fe7e0-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="31e07-106">예제</span><span class="sxs-lookup"><span data-stu-id="31e07-106">Example</span></span>  
   
 ```csharp  
 string xslt = @"<?xml version='1.0'?>  
@@ -58,7 +58,7 @@ string result = newDocument.ToString();
 Console.WriteLine(result);
 ```  
   
- <span data-ttu-id="fe7e0-107">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="fe7e0-107">This example produces the following output:</span></span>  
+ <span data-ttu-id="31e07-107">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="31e07-107">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -67,7 +67,7 @@ Console.WriteLine(result);
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="fe7e0-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="fe7e0-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="31e07-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="31e07-108">See also</span></span>
 
 - <xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=nameWithType>

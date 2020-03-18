@@ -3,19 +3,19 @@ title: MSBuild 호환성이 손상되는 변경 사항
 description: .NET Core용 MSBuild의 호환성이 손상되는 변경 사항을 나열합니다.
 ms.date: 02/10/2020
 ms.openlocfilehash: 42588fc885c38a3d543fa94b11765e77633e209c
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77453765"
 ---
-# <a name="msbuild-breaking-changes"></a><span data-ttu-id="be1a0-103">MSBuild 호환성이 손상되는 변경 사항</span><span class="sxs-lookup"><span data-stu-id="be1a0-103">MSBuild breaking changes</span></span>
+# <a name="msbuild-breaking-changes"></a><span data-ttu-id="b15b3-103">MSBuild 호환성이 손상되는 변경 사항</span><span class="sxs-lookup"><span data-stu-id="b15b3-103">MSBuild breaking changes</span></span>
 
-<span data-ttu-id="be1a0-104">이 페이지에는 다음과 같은 주요 변경 사항이 설명되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="be1a0-104">The following breaking changes are documented on this page:</span></span>
+<span data-ttu-id="b15b3-104">이 페이지에는 다음과 같은 주요 변경 사항이 설명되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b15b3-104">The following breaking changes are documented on this page:</span></span>
 
-- [<span data-ttu-id="be1a0-105">리소스 매니페스트 파일 이름 변경</span><span class="sxs-lookup"><span data-stu-id="be1a0-105">Resource manifest file name change</span></span>](#resource-manifest-file-names)
+- [<span data-ttu-id="b15b3-105">리소스 매니페스트 파일 이름 변경</span><span class="sxs-lookup"><span data-stu-id="b15b3-105">Resource manifest file name change</span></span>](#resource-manifest-file-names)
 
-## <a name="net-core-30"></a><span data-ttu-id="be1a0-106">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="be1a0-106">.NET Core 3.0</span></span>
+## <a name="net-core-30"></a><span data-ttu-id="b15b3-106">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="b15b3-106">.NET Core 3.0</span></span>
 
 [!INCLUDE[Resource file names](~/includes/core-changes/msbuild/3.0/resource-manifest-name.md)]
 

@@ -11,63 +11,63 @@ helpviewer_keywords:
 - formatting [.NET Framework], enumeration
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
 ms.openlocfilehash: da7634758f5c4319fa18612d216682dc141318fd
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78155960"
 ---
-# <a name="enumeration-format-strings"></a><span data-ttu-id="4aa2e-102">열거형 형식 문자열</span><span class="sxs-lookup"><span data-stu-id="4aa2e-102">Enumeration format strings</span></span>
+# <a name="enumeration-format-strings"></a><span data-ttu-id="52c15-102">열거형 형식 문자열</span><span class="sxs-lookup"><span data-stu-id="52c15-102">Enumeration format strings</span></span>
 
-<span data-ttu-id="4aa2e-103"><xref:System.Enum.ToString%2A?displayProperty=nameWithType> 메서드를 사용하여 열거형 멤버의 숫자, 16진수 또는 문자열 값을 나타내는 새 문자열 개체를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4aa2e-103">You can use the <xref:System.Enum.ToString%2A?displayProperty=nameWithType> method to create a new string object that represents the numeric, hexadecimal, or string value of an enumeration member.</span></span> <span data-ttu-id="4aa2e-104">이 메서드는 열거형 형식 문자열 중 하나를 사용하여 반환할 값을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4aa2e-104">This method takes one of the enumeration formatting strings to specify the value that you want returned.</span></span>
+<span data-ttu-id="52c15-103"><xref:System.Enum.ToString%2A?displayProperty=nameWithType> 메서드를 사용하여 열거형 멤버의 숫자, 16진수 또는 문자열 값을 나타내는 새 문자열 개체를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="52c15-103">You can use the <xref:System.Enum.ToString%2A?displayProperty=nameWithType> method to create a new string object that represents the numeric, hexadecimal, or string value of an enumeration member.</span></span> <span data-ttu-id="52c15-104">이 메서드는 열거형 형식 문자열 중 하나를 사용하여 반환할 값을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="52c15-104">This method takes one of the enumeration formatting strings to specify the value that you want returned.</span></span>
 
-<span data-ttu-id="4aa2e-105">다음 섹션에서는 열거형 형식 문자열과 반환되는 값을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4aa2e-105">The following sections list the enumeration formatting strings and the values they return.</span></span> <span data-ttu-id="4aa2e-106">이러한 형식 지정자는 대/소문자를 구분하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4aa2e-106">These format specifiers are not case-sensitive.</span></span>
+<span data-ttu-id="52c15-105">다음 섹션에서는 열거형 형식 문자열과 반환되는 값을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="52c15-105">The following sections list the enumeration formatting strings and the values they return.</span></span> <span data-ttu-id="52c15-106">이러한 형식 지정자는 대/소문자를 구분하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="52c15-106">These format specifiers are not case-sensitive.</span></span>
 
-## <a name="g-or-g"></a><span data-ttu-id="4aa2e-107">G 또는 g</span><span class="sxs-lookup"><span data-stu-id="4aa2e-107">G or g</span></span>
+## <a name="g-or-g"></a><span data-ttu-id="52c15-107">G 또는 g</span><span class="sxs-lookup"><span data-stu-id="52c15-107">G or g</span></span>
 
-<span data-ttu-id="4aa2e-108">가능한 경우 열거형 항목을 문자열 값으로 표시하고, 가능하지 않은 경우 현재 인스턴스의 정수 값을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="4aa2e-108">Displays the enumeration entry as a string value, if possible, and otherwise displays the integer value of the current instance.</span></span> <span data-ttu-id="4aa2e-109">**Flags** 특성을 설정하여 열거형을 정의한 경우 유효한 각 항목의 문자열 값이 쉼표로 구분되어 서로 연결됩니다.</span><span class="sxs-lookup"><span data-stu-id="4aa2e-109">If the enumeration is defined with the **Flags** attribute set, the string values of each valid entry are concatenated together, separated by commas.</span></span> <span data-ttu-id="4aa2e-110">**Flags** 특성을 설정하지 않은 경우 잘못된 값이 숫자 항목으로 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="4aa2e-110">If the **Flags** attribute is not set, an invalid value is displayed as a numeric entry.</span></span> <span data-ttu-id="4aa2e-111">다음 예제에서는 G 형식 지정자를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4aa2e-111">The following example illustrates the G format specifier.</span></span>
+<span data-ttu-id="52c15-108">가능한 경우 열거형 항목을 문자열 값으로 표시하고, 가능하지 않은 경우 현재 인스턴스의 정수 값을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="52c15-108">Displays the enumeration entry as a string value, if possible, and otherwise displays the integer value of the current instance.</span></span> <span data-ttu-id="52c15-109">**Flags** 특성을 설정하여 열거형을 정의한 경우 유효한 각 항목의 문자열 값이 쉼표로 구분되어 서로 연결됩니다.</span><span class="sxs-lookup"><span data-stu-id="52c15-109">If the enumeration is defined with the **Flags** attribute set, the string values of each valid entry are concatenated together, separated by commas.</span></span> <span data-ttu-id="52c15-110">**Flags** 특성을 설정하지 않은 경우 잘못된 값이 숫자 항목으로 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="52c15-110">If the **Flags** attribute is not set, an invalid value is displayed as a numeric entry.</span></span> <span data-ttu-id="52c15-111">다음 예제에서는 G 형식 지정자를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="52c15-111">The following example illustrates the G format specifier.</span></span>
 
 [!code-csharp[Formatting.Enum#1](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#1)]
 [!code-vb[Formatting.Enum#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#1)]
 
-## <a name="f-or-f"></a><span data-ttu-id="4aa2e-112">F 또는 f</span><span class="sxs-lookup"><span data-stu-id="4aa2e-112">F or f</span></span>
+## <a name="f-or-f"></a><span data-ttu-id="52c15-112">F 또는 f</span><span class="sxs-lookup"><span data-stu-id="52c15-112">F or f</span></span>
 
-<span data-ttu-id="4aa2e-113">열거형 항목을 문자열 값으로 표시합니다(가능한 경우).</span><span class="sxs-lookup"><span data-stu-id="4aa2e-113">Displays the enumeration entry as a string value, if possible.</span></span> <span data-ttu-id="4aa2e-114">**Flags** 특성이 없어도 열거형 항목의 총합으로 값을 완전히 표시할 수 있는 경우 유효한 각 항목의 문자열 값이 쉼표로 구분되어 서로 연결됩니다.</span><span class="sxs-lookup"><span data-stu-id="4aa2e-114">If the value can be completely displayed as a summation of the entries in the enumeration (even if the **Flags** attribute is not present), the string values of each valid entry are concatenated together, separated by commas.</span></span> <span data-ttu-id="4aa2e-115">열거형 항목으로 값을 완전히 확인할 수 없는 경우에는 값의 형식이 정수 값으로 지정됩니다.</span><span class="sxs-lookup"><span data-stu-id="4aa2e-115">If the value cannot be completely determined by the enumeration entries, then the value is formatted as the integer value.</span></span> <span data-ttu-id="4aa2e-116">다음 예제에서는 F 형식 지정자를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4aa2e-116">The following example illustrates the F format specifier.</span></span>
+<span data-ttu-id="52c15-113">열거형 항목을 문자열 값으로 표시합니다(가능한 경우).</span><span class="sxs-lookup"><span data-stu-id="52c15-113">Displays the enumeration entry as a string value, if possible.</span></span> <span data-ttu-id="52c15-114">**Flags** 특성이 없어도 열거형 항목의 총합으로 값을 완전히 표시할 수 있는 경우 유효한 각 항목의 문자열 값이 쉼표로 구분되어 서로 연결됩니다.</span><span class="sxs-lookup"><span data-stu-id="52c15-114">If the value can be completely displayed as a summation of the entries in the enumeration (even if the **Flags** attribute is not present), the string values of each valid entry are concatenated together, separated by commas.</span></span> <span data-ttu-id="52c15-115">열거형 항목으로 값을 완전히 확인할 수 없는 경우에는 값의 형식이 정수 값으로 지정됩니다.</span><span class="sxs-lookup"><span data-stu-id="52c15-115">If the value cannot be completely determined by the enumeration entries, then the value is formatted as the integer value.</span></span> <span data-ttu-id="52c15-116">다음 예제에서는 F 형식 지정자를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="52c15-116">The following example illustrates the F format specifier.</span></span>
 
 [!code-csharp[Formatting.Enum#2](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#2)]
 [!code-vb[Formatting.Enum#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#2)]
 
-## <a name="d-or-d"></a><span data-ttu-id="4aa2e-117">D 또는 d</span><span class="sxs-lookup"><span data-stu-id="4aa2e-117">D or d</span></span>
+## <a name="d-or-d"></a><span data-ttu-id="52c15-117">D 또는 d</span><span class="sxs-lookup"><span data-stu-id="52c15-117">D or d</span></span>
 
-<span data-ttu-id="4aa2e-118">열거형 항목을 가능한 가장 짧은 표현의 정수 값으로 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="4aa2e-118">Displays the enumeration entry as an integer value in the shortest representation possible.</span></span> <span data-ttu-id="4aa2e-119">다음 예제에서는 D 형식 지정자를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4aa2e-119">The following example illustrates the D format specifier.</span></span>
+<span data-ttu-id="52c15-118">열거형 항목을 가능한 가장 짧은 표현의 정수 값으로 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="52c15-118">Displays the enumeration entry as an integer value in the shortest representation possible.</span></span> <span data-ttu-id="52c15-119">다음 예제에서는 D 형식 지정자를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="52c15-119">The following example illustrates the D format specifier.</span></span>
 
 [!code-csharp[Formatting.Enum#3](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#3)]
 [!code-vb[Formatting.Enum#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#3)]
 
-## <a name="x-or-x"></a><span data-ttu-id="4aa2e-120">X 또는 x</span><span class="sxs-lookup"><span data-stu-id="4aa2e-120">X or x</span></span>
+## <a name="x-or-x"></a><span data-ttu-id="52c15-120">X 또는 x</span><span class="sxs-lookup"><span data-stu-id="52c15-120">X or x</span></span>
 
-<span data-ttu-id="4aa2e-121">열거형 항목을 16진수 값으로 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="4aa2e-121">Displays the enumeration entry as a hexadecimal value.</span></span> <span data-ttu-id="4aa2e-122">결과 문자열이 열거형의 [기본 숫자 형식](xref:System.Enum.GetUnderlyingType%2A)에서 바이트마다 2개 문자를 갖도록 하기 위해 필요에 따라 앞에 0이 오는 값으로 표현됩니다.</span><span class="sxs-lookup"><span data-stu-id="4aa2e-122">The value is represented with leading zeros as necessary, to ensure that the result string has two characters for each byte in the enumeration type's [underlying numeric type](xref:System.Enum.GetUnderlyingType%2A).</span></span> <span data-ttu-id="4aa2e-123">다음 예제에서는 X 형식 지정자를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4aa2e-123">The following example illustrates the X format specifier.</span></span> <span data-ttu-id="4aa2e-124">예제에서 <xref:System.ConsoleColor> 및 <xref:System.IO.FileAttributes>의 기본 형식은 <xref:System.Int32> 또는 8 글자 결과 문자열을 생성하는 32비트(또는 4바이트) 정수입니다.</span><span class="sxs-lookup"><span data-stu-id="4aa2e-124">In the example, the underlying type of both <xref:System.ConsoleColor> and <xref:System.IO.FileAttributes> is <xref:System.Int32>, or a 32-bit (or 4-byte) integer, which produces an 8-character result string.</span></span>
+<span data-ttu-id="52c15-121">열거형 항목을 16진수 값으로 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="52c15-121">Displays the enumeration entry as a hexadecimal value.</span></span> <span data-ttu-id="52c15-122">결과 문자열이 열거형의 [기본 숫자 형식](xref:System.Enum.GetUnderlyingType%2A)에서 바이트마다 2개 문자를 갖도록 하기 위해 필요에 따라 앞에 0이 오는 값으로 표현됩니다.</span><span class="sxs-lookup"><span data-stu-id="52c15-122">The value is represented with leading zeros as necessary, to ensure that the result string has two characters for each byte in the enumeration type's [underlying numeric type](xref:System.Enum.GetUnderlyingType%2A).</span></span> <span data-ttu-id="52c15-123">다음 예제에서는 X 형식 지정자를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="52c15-123">The following example illustrates the X format specifier.</span></span> <span data-ttu-id="52c15-124">예제에서 <xref:System.ConsoleColor> 및 <xref:System.IO.FileAttributes>의 기본 형식은 <xref:System.Int32> 또는 8 글자 결과 문자열을 생성하는 32비트(또는 4바이트) 정수입니다.</span><span class="sxs-lookup"><span data-stu-id="52c15-124">In the example, the underlying type of both <xref:System.ConsoleColor> and <xref:System.IO.FileAttributes> is <xref:System.Int32>, or a 32-bit (or 4-byte) integer, which produces an 8-character result string.</span></span>
 
 [!code-csharp[Formatting.Enum#4](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)]
 [!code-vb[Formatting.Enum#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#4)]
 
-## <a name="example"></a><span data-ttu-id="4aa2e-125">예제</span><span class="sxs-lookup"><span data-stu-id="4aa2e-125">Example</span></span>
+## <a name="example"></a><span data-ttu-id="52c15-125">예제</span><span class="sxs-lookup"><span data-stu-id="52c15-125">Example</span></span>
 
-<span data-ttu-id="4aa2e-126">다음 예제에서는 세 개의 항목 `Red`, `Blue` 및 `Green`으로 구성된 `Colors`라는 열거형을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="4aa2e-126">The following example defines an enumeration called `Colors` that consists of three entries: `Red`, `Blue`, and `Green`.</span></span>
+<span data-ttu-id="52c15-126">다음 예제에서는 세 개의 항목 `Colors`, `Red` 및 `Blue`으로 구성된 `Green`라는 열거형을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="52c15-126">The following example defines an enumeration called `Colors` that consists of three entries: `Red`, `Blue`, and `Green`.</span></span>
 
 [!code-csharp[Formatting.Enum#5](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#5)]
 [!code-vb[Formatting.Enum#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#5)]
 
-<span data-ttu-id="4aa2e-127">열거형이 정의되면 다음과 같이 인스턴스를 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4aa2e-127">After the enumeration is defined, an instance can be declared in the following manner.</span></span>
+<span data-ttu-id="52c15-127">열거형이 정의되면 다음과 같이 인스턴스를 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="52c15-127">After the enumeration is defined, an instance can be declared in the following manner.</span></span>
 
 [!code-csharp[Formatting.Enum#6](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#6)]
 [!code-vb[Formatting.Enum#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#6)]
 
-<span data-ttu-id="4aa2e-128">그런 다음 `Color.ToString(System.String)` 메서드를 사용하여 전달된 형식 지정자에 따라 열거형 값을 다양한 방식으로 표시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4aa2e-128">The `Color.ToString(System.String)` method can then be used to display the enumeration value in different ways, depending on the format specifier passed to it.</span></span>
+<span data-ttu-id="52c15-128">그런 다음 `Color.ToString(System.String)` 메서드를 사용하여 전달된 형식 지정자에 따라 열거형 값을 다양한 방식으로 표시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="52c15-128">The `Color.ToString(System.String)` method can then be used to display the enumeration value in different ways, depending on the format specifier passed to it.</span></span>
 
 [!code-csharp[Formatting.Enum#7](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#7)]
 [!code-vb[Formatting.Enum#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#7)]
 
-## <a name="see-also"></a><span data-ttu-id="4aa2e-129">참조</span><span class="sxs-lookup"><span data-stu-id="4aa2e-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="52c15-129">참고 항목</span><span class="sxs-lookup"><span data-stu-id="52c15-129">See also</span></span>
 
-- [<span data-ttu-id="4aa2e-130">형식 서식 지정</span><span class="sxs-lookup"><span data-stu-id="4aa2e-130">Formatting Types</span></span>](formatting-types.md)
+- [<span data-ttu-id="52c15-130">형식 서식 지정</span><span class="sxs-lookup"><span data-stu-id="52c15-130">Formatting Types</span></span>](formatting-types.md)
