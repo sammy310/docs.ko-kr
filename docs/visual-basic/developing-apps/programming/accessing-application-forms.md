@@ -1,5 +1,5 @@
 ---
-title: 응용 프로그램 폼 액세스
+title: 애플리케이션 폼 액세스
 ms.date: 07/20/2015
 helpviewer_keywords:
 - forms [Visual Basic], communicating between
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - forms [Visual Basic], accessing all open
 ms.assetid: 9aaf5aaf-2012-4f97-89c7-6e62b9d17863
 ms.openlocfilehash: 332b6a7563160528b6c17210170af0db6e9bc0e7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74349233"
 ---
 # <a name="accessing-application-forms-visual-basic"></a>애플리케이션 폼 액세스(Visual Basic)
@@ -23,7 +23,7 @@ ms.locfileid: "74349233"
 
  다음 표에는 애플리케이션의 양식에 액세스하는 방법을 보여 주는 예제가 나와 있습니다.  
   
-|대상|참조|  
+|대상|참조 항목|  
 |---|---|  
 |애플리케이션의 다른 폼에서 한 폼에 액세스합니다.|[My.Forms 개체](../../../visual-basic/language-reference/objects/my-forms-object.md)|  
 |애플리케이션의 열려 있는 모든 폼의 제목을 표시합니다.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>|  

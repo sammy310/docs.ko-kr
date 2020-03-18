@@ -6,10 +6,10 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to, title-hack-0625
 ms.openlocfilehash: 83aaae2d2e75b3076841750bf5d505390a538bc0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74344750"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>파일 및 기타 소스에서 데이터 로드
@@ -57,8 +57,8 @@ public class HousingData
 
 다음과 같이 열을 로드합니다.
 
-- `HousingData` 클래스에서 `Size` 및 `CurrentPrices` 같은 개별 열
-- `HousingData` 클래스에서 `HistoricalPrices` 같이 벡터 형식으로 한 번에 여러 열
+- `Size` 클래스에서 `CurrentPrices` 및 `HousingData` 같은 개별 열
+- `HistoricalPrices` 클래스에서 `HousingData` 같이 벡터 형식으로 한 번에 여러 열
 
 벡터 속성이 있는 경우 [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) 특성을 데이터 모델의 속성에 적용합니다. 벡터의 모든 요소는 같은 반드시 형식이어야 합니다. 열을 분리된 상태로 유지하면 기능 엔지니어링을 쉽고 유연하게 사용할 수 있지만, 열 수가 매우 많은 경우 개별 열에 대해 작업하면 학습 속도에 영향을 줍니다.
 
@@ -200,7 +200,7 @@ HousingData[] inMemoryCollection = new HousingData[]
 };
 ```
 
-[`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) 메서드로 메모리 내 컬렉션을 [`IDataView`](xref:Microsoft.ML.IDataView)에 로드합니다.
+[`IDataView`](xref:Microsoft.ML.IDataView) 메서드로 메모리 내 컬렉션을 [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*)에 로드합니다.
 
 > [!IMPORTANT]
 > [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*)에서는 로드하는 [`IEnumerable`](xref:System.Collections.IEnumerable)이 스레드로부터 안전하다고 가정합니다.

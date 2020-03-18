@@ -3,10 +3,10 @@ title: LINQ 쿼리에 대한 데이터 소스 활성화
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
 ms.openlocfilehash: 9a143f0da74d4e91ef697f468d7fda225e75245b
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635771"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>LINQ 쿼리에 대한 데이터 소스 활성화
@@ -37,9 +37,9 @@ ms.locfileid: "75635771"
   
  복잡성이 보통인 `IQueryable` 공급자는 부분적으로 표현되는 쿼리 언어가 있는 데이터 소스를 대상으로 할 수 있습니다. 공급자가 웹 서비스를 대상으로 하는 경우 둘 이상의 웹 서비스 메서드에 대한 인터페이스를 제공하고 쿼리가 노출하는 질문에 따라 호출할 메서드를 선택할 수 있습니다. 복잡성이 보통인 공급자는 복잡성이 낮은 공급자보다 풍부한 형식 시스템을 가질 수 있지만 여전히 고정된 형식 시스템을 유지합니다. 예를 들어 이 공급자는 이동 가능한 일대다 관계가 있는 형식을 노출할 수 있지만 사용자 정의 형식에 대한 매핑 기술을 제공하지 않습니다.  
   
- [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 공급자와 같은 복잡한 `IQueryable` 공급자가 전체 LINQ 쿼리를 SQL과 같이 표현이 가능한 쿼리 언어로 변환할 수 있습니다. 복잡한 공급자가 덜 복잡한 공급자보다 더욱 다양하고 방대한 질문을 쿼리로 처리할 수 있기 때문에 더 일반적이라 할 수 있습니다. 또한 개방형 형식 시스템을 가지므로 사용자 정의 형식을 매핑하는 확장 인프라를 포함해야 합니다. 복잡성이 높은 공급자를 개발하려면 상당한 노력이 필요합니다.  
+ `IQueryable` 공급자와 같은 복잡한 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 공급자가 전체 LINQ 쿼리를 SQL과 같이 표현이 가능한 쿼리 언어로 변환할 수 있습니다. 복잡한 공급자가 덜 복잡한 공급자보다 더욱 다양하고 방대한 질문을 쿼리로 처리할 수 있기 때문에 더 일반적이라 할 수 있습니다. 또한 개방형 형식 시스템을 가지므로 사용자 정의 형식을 매핑하는 확장 인프라를 포함해야 합니다. 복잡성이 높은 공급자를 개발하려면 상당한 노력이 필요합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Linq.IQueryable%601>
 - <xref:System.Collections.Generic.IEnumerable%601>

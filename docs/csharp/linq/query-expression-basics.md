@@ -3,12 +3,12 @@ title: 쿼리 식 기본 사항(C#의 LINQ)
 description: 쿼리 식과 관련된 개념 소개
 ms.date: 11/30/2016
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-ms.openlocfilehash: 5ebe2163df47c60c677d7ac911ce0f65529835eb
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 83beaa82d4b4b42ff9da5230edddd391b33a0717
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635862"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173356"
 ---
 # <a name="query-expression-basics"></a>쿼리 식 기본 사항
 
@@ -156,7 +156,7 @@ LINQ에서 쿼리 변수는 쿼리의 *결과* 대신 *쿼리*를 저장하는 �
 
 [into](../language-reference/keywords/into.md) 키워드를 사용하여 `join` 작업의 결과를 임시 변수에 저장함으로써 그룹 조인을 수행할 수 있습니다. 자세한 내용은 [join 절](../language-reference/keywords/join-clause.md)을 참조하세요.
 
-#### <a name="let-clause"></a>let 절 
+#### <a name="let-clause"></a>let 절
 
 식의 결과(예: 메서드 호출)를 새 범위 변수에 저장하려면 `let` 절을 사용합니다. 다음 예제에서 범위 변수 `firstName`은 `Split`에서 반환하는 문자열 배열의 첫 번째 요소를 저장합니다.
 

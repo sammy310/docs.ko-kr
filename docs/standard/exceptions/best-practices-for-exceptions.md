@@ -10,10 +10,10 @@ helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
 ms.openlocfilehash: 1de231b01e3fa97e78a87ae6b0595a9b5536374e
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160172"
 ---
 # <a name="best-practices-for-exceptions"></a>예외에 대한 모범 사례
@@ -22,7 +22,7 @@ ms.locfileid: "78160172"
 
 ## <a name="use-trycatchfinally-blocks-to-recover-from-errors-or-release-resources"></a>Try/catch/finally 블록을 사용하여 오류를 복구하거나 리소스를 해제합니다.
 
-잠재적으로 예외를 생성***하고*** 코드가 해당 예외에서 복구될 수 있는 코드 주위에 `try`/`catch` 블록을 사용합니다. `catch` 블록에서 항상 가장 많이 파생된 것부터 가장 적게 파생된 것까지 예외를 정렬합니다. 모든 예외는 <xref:System.Exception>에서 파생됩니다. 더 많이 파생된 예외는 기본 예외 클래스에 대한 catch 절 앞에 오는 catch 절에 의해 처리되지 않습니다. 예외에서 코드를 복구할 수 없는 경우 해당 예외를 catch하지 마세요. 가능한 경우 메서드를 호출 스택 위에 추가하여 복구하세요.
+잠재적으로 예외를 생성`try`하고/ 코드가 해당 예외에서 복구될 수 있는 코드 주위에 `catch`****** 블록을 사용합니다. `catch` 블록에서 항상 가장 많이 파생된 것부터 가장 적게 파생된 것까지 예외를 정렬합니다. 모든 예외는 <xref:System.Exception>에서 파생됩니다. 더 많이 파생된 예외는 기본 예외 클래스에 대한 catch 절 앞에 오는 catch 절에 의해 처리되지 않습니다. 예외에서 코드를 복구할 수 없는 경우 해당 예외를 catch하지 마세요. 가능한 경우 메서드를 호출 스택 위에 추가하여 복구하세요.
 
 `using` 문 또는 `finally` 블록으로 할당된 리소스를 정리하세요. 예외가 throw될 때 리소스를 자동으로 정리하려면 `using` 문을 사용하는 것이 좋습니다. `finally` 블록을 사용하여 <xref:System.IDisposable>을 구현하지 않는 리소스를 정리합니다. `finally` 절의 코드는 예외가 throw되더라도 거의 항상 실행됩니다.
 
@@ -56,7 +56,7 @@ ms.locfileid: "78160172"
 
 예외를 방지하는 또 다른 방법은 매우 일반적인 오류의 경우 예외를 throw하는 대신 null(또는 기본값)을 반환하는 것입니다. 매우 흔한 오류 사례는 정상적인 제어 흐름으로 간주할 수 있습니다. 이러한 경우에 null(또는 기본값)을 반환함으로써, 앱의 성능에 미치는 영향을 최소화합니다.
 
-값 유형의 경우, 오류 표시기로 `Nullable<T>` 또는 기본값 중 무엇을 사용할지 여부는 특정 앱에서 고려해야 할 사항입니다. `Nullable<Guid>`를 사용하면 `default`는 `Guid.Empty` 대신 `null`이 됩니다. 값이 있거나 없는 경우 `Nullable<T>`을 추가하여 더 명확하게 만들 수도 있습니다. 또는 `Nullable<T>`을 추가하여 불필요한지를 확인하는 추가 사례를 만들고 오류의 잠재적 원인을 만드는 역할만 할 수도 있습니다.
+값 유형의 경우, 오류 표시기로 `Nullable<T>` 또는 기본값 중 무엇을 사용할지 여부는 특정 앱에서 고려해야 할 사항입니다. `Nullable<Guid>`를 사용하면 `default`는 `null` 대신 `Guid.Empty`이 됩니다. 값이 있거나 없는 경우 `Nullable<T>`을 추가하여 더 명확하게 만들 수도 있습니다. 또는 `Nullable<T>`을 추가하여 불필요한지를 확인하는 추가 사례를 만들고 오류의 잠재적 원인을 만드는 역할만 할 수도 있습니다.
 
 ## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>오류 코드를 반환하는 대신 예외 throw
 
@@ -64,7 +64,7 @@ ms.locfileid: "78160172"
 
 ## <a name="use-the-predefined-net-exception-types"></a>미리 정의된 .NET 예외 형식 사용
 
-새 예외 클래스는 미리 정의된 예외 클래스가 적용되지 않는 경우에만 도입합니다. 예를 들어:
+새 예외 클래스는 미리 정의된 예외 클래스가 적용되지 않는 경우에만 도입합니다. 예들 들어 다음과 같습니다.
 
 - 개체의 현재 상태에서 속성 집합이나 메서드 호출이 적절하지 않을 경우 <xref:System.InvalidOperationException> 예외를 throw합니다.
 
@@ -72,7 +72,7 @@ ms.locfileid: "78160172"
 
 ## <a name="end-exception-class-names-with-the-word-exception"></a>예외 클래스 이름 뒤에 단어 `Exception` 추가
 
-사용자 지정 예외가 필요한 경우 적절한 이름을 지정하고 <xref:System.Exception> 클래스에서 파생합니다. 예를 들어:
+사용자 지정 예외가 필요한 경우 적절한 이름을 지정하고 <xref:System.Exception> 클래스에서 파생합니다. 예들 들어 다음과 같습니다.
 
 [!code-cpp[Conceptual.Exception.Handling#4](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#4)]
 [!code-csharp[Conceptual.Exception.Handling#4](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#4)]
@@ -88,7 +88,7 @@ ms.locfileid: "78160172"
 
 - 문자열 메시지와 내부 예외를 허용하는 <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>.
 
-예는 [방법: 사용자 정의 예외 만들기](how-to-create-user-defined-exceptions.md)를 참조하세요.
+예를 들어 [방법: 사용자 정의 예외 만들기](how-to-create-user-defined-exceptions.md)를 참조하세요.
 
 ## <a name="ensure-that-exception-data-is-available-when-code-executes-remotely"></a>코드를 원격으로 실행하는 경우 예외 데이터를 사용할 수 있는지 확인
 
@@ -108,7 +108,7 @@ ms.locfileid: "78160172"
 
 ## <a name="include-a-localized-string-message-in-every-exception"></a>모든 예외에 지역화된 문자열 메시지를 포함합니다.
 
-사용자에게 표시되는 오류 메시지는 예외 클래스 이름에서 파생된 메시지가 아니라 throw된 예외의 <xref:System.Exception.Message?displayProperty=nameWithType> 속성에서 파생된 메시지입니다. 일반적으로 [예외 생성자](xref:System.Exception.%23ctor%2A)의 `message` 인수에 메시지 문자열을 전달하여 값을 <xref:System.Exception.Message?displayProperty=nameWithType> 속성에 할당합니다.
+사용자에게 표시되는 오류 메시지는 예외 클래스 이름에서 파생된 메시지가 아니라 throw된 예외의 <xref:System.Exception.Message?displayProperty=nameWithType> 속성에서 파생된 메시지입니다. 일반적으로 <xref:System.Exception.Message?displayProperty=nameWithType>예외 생성자`message`의 [ 인수에 메시지 문자열을 전달하여 값을 ](xref:System.Exception.%23ctor%2A) 속성에 할당합니다.
 
 지역화된 애플리케이션의 경우 애플리케이션에서 throw할 수 있는 모든 예외에 대해 지역화된 메시지 문자열을 제공해야 합니다. 리소스 파일을 사용하여 지역화된 오류 메시지를 제공합니다. 애플리케이션을 지역화하고 지역화된 문자열을 검색하는 방법은 다음 문서를 참조하세요.
 
@@ -126,7 +126,7 @@ ms.locfileid: "78160172"
 
 ## <a name="use-exception-builder-methods"></a>예외 작성기 메서드 사용
 
-클래스는 구현된 여러 위치에서 동일한 예외를 throw하는 것이 일반적입니다. 코드를 많이 사용하지 않으려면 예외를 만들어 반환하는 도우미 메서드를 사용합니다. 예를 들어:
+클래스는 구현된 여러 위치에서 동일한 예외를 throw하는 것이 일반적입니다. 코드를 많이 사용하지 않으려면 예외를 만들어 반환하는 도우미 메서드를 사용합니다. 예들 들어 다음과 같습니다.
 
 [!code-cpp[Conceptual.Exception.Handling#6](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#6)]
 [!code-csharp[Conceptual.Exception.Handling#6](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]
@@ -214,6 +214,6 @@ Catch ex As Exception
 End Try
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [예외](index.md)

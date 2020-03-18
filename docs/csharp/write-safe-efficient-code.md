@@ -4,12 +4,12 @@ description: 최근 C# 언어의 향상된 기능을 통해 성능이 이전에�
 ms.date: 10/23/2018
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: f590a338d35966e2cd3a507164057a49b8a5f6f8
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: d4a7916b80e15c7f00fa0a7da213ed0593e0959d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346710"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78239978"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>안전하고 효율적인 C# 코드 작성
 
@@ -154,7 +154,7 @@ public struct Point3D
 
 호출 사이트에서 호출자가 `Origin` 속성을 `ref readonly` 또는 값으로 사용하도록 선택할 수 있습니다.
 
-[!code-csharp[AssignRefReadonly](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#AssignRefReadonly "Assigning a ref readonly")]
+[!code-csharp[AssignRefReadonly](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#AssignRefReadonly "Assigning a ref readonly")]
 
 이전 코드의 첫 번째 할당에서는 `Origin` 상수의 복사본을 만들고 해당 복사본을 할당합니다. 두 번째 할당에서는 참조를 할당합니다. `readonly` 한정자는 변수 선언의 일부여야 합니다. 참조하는 항목에 대한 참조는 수정할 수 없습니다. 이를 수행하려고 시도하면 컴파일 시간 오류가 발생합니다.
 
@@ -180,7 +180,7 @@ public struct Point3D
 
 다음 코드는 3D 공간에서 두 점 사이의 거리를 계산하는 메서드의 예를 보여 줍니다.
 
-[!code-csharp[InArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
+[!code-csharp[InArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
 
 인수는 각각 세 개의 double을 포함하는 두 개의 구조입니다. double은 8바이트이므로 각 인수는 24바이트입니다. `in` 한정자를 지정하여 머신 아키텍처에 따라 해당 인수에 4바이트 또는 8바이트 참조를 전달합니다. 크기의 차이는 작지만, 애플리케이션이 다양한 값을 사용하여 연속 루프에서 이 메서드를 호출하면 늘어납니다.
 
@@ -190,7 +190,7 @@ public struct Point3D
 
 `in` 매개 변수의 다른 기능은 `in` 매개 변수에 대한 인수에 리터럴 값 또는 상수를 사용하는 것입니다. 또한 `ref` 또는 `out` 매개 변수와 달리 호출 사이트에서 `in` 한정자를 적용할 필요가 없습니다. 다음 코드는 `CalculateDistance` 메서드를 호출하는 두 가지 예를 보여 줍니다. 첫 번째 예에서는 참조로 전달된 두 개의 로컬 변수를 사용합니다. 두 번째 예는 메서드 호출의 일부로 만들어진 임시 변수를 포함합니다.
 
-[!code-csharp[UseInArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#UseInArgument "Specifying an In argument")]
+[!code-csharp[UseInArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#UseInArgument "Specifying an In argument")]
 
 컴파일러가 `in` 인수의 읽기 전용 특성을 강제 적용하는 여러 가지 방법이 있습니다.  먼저, 호출된 메서드는 `in` 매개 변수에 직접 할당할 수 없습니다. 값이 `struct` 형식일 때 `in` 매개 변수의 모든 필드에 직접 할당할 수 없습니다. 또한 `ref` 또는 `out` 한정자를 사용하여 모든 메서드에 `in` 매개 변수를 전달할 수 없습니다.
 이러한 규칙은 필드가 `struct` 형식이고 매개 변수 또한 `struct` 형식인 경우 `in` 매개 변수의 모든 필드에 적용됩니다. 사실 이러한 규칙은 멤버 액세스의 모든 수준에서 형식이 `structs`인 경우 멤버 액세스의 여러 계층에 적용됩니다.
@@ -204,11 +204,11 @@ public struct Point3D
 
 이러한 규칙은 읽기 전용 참조 인수를 사용하도록 기존 코드를 업데이트할 때 유용합니다. 호출된 메서드 내에서 by 값 매개 변수를 사용하는 모든 인스턴스 메서드를 호출할 수 있습니다. 이러한 경우 `in` 매개 변수의 복사본이 만들어집니다. 컴파일러가 `in` 매개 변수에 대한 임시 변수를 만들 수 있으므로 사용자는 `in` 매개 변수에 대한 기본값을 지정할 수도 있습니다. 다음 코드에서는 원점(포인트 0,0)을 두 번째 점의 기본값으로 지정합니다.
 
-[!code-csharp[InArgumentDefault](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgumentDefault "Specifying defaults for an in parameter")]
+[!code-csharp[InArgumentDefault](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgumentDefault "Specifying defaults for an in parameter")]
 
 컴파일러가 읽기 전용 인수를 참조로 전달하도록 하려면 다음 코드에 나와 있는 것처럼 호출 사이트의 인수에 `in` 한정자를 지정합니다.
 
-[!code-csharp[UseInArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ExplicitInArgument "Specifying an In argument")]
+[!code-csharp[UseInArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ExplicitInArgument "Specifying an In argument")]
 
 이 동작을 통해 성능 향상이 가능한 대규모 코드 베이스에서 시간이 지남에 따라 `in` 매개 변수를 보다 쉽게 채택할 수 있습니다. 먼저 메서드 서명에 `in` 한정자를 추가합니다. 그런 다음, 호출 사이트에 `in` 한정자를 추가하고 `readonly struct` 형식을 생성하여 컴파일러가 더 많은 위치에서 `in` 매개 변수의 방어 복사본을 만들지 않도록 할 수 있습니다.
 
@@ -218,13 +218,13 @@ public struct Point3D
 
 앞에서 설명한 기술은 반환 참조에 의한 복사 및 참조로 값 전달을 방지하는 방법을 설명합니다. 이러한 기술은 인수 형식이 `readonly struct` 형식으로 선언되는 경우에 가장 적합합니다. 그렇지 않은 경우, 인수의 읽기 전용 특성을 적용하기 위해 많은 상황에서 컴파일러는 **방어 복사본**을 만들어야 합니다. 원점에서 3D 요소의 거리를 계산하는 다음과 같은 예제를 살펴보세요.
 
-[!code-csharp[InArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
+[!code-csharp[InArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
 
 `Point3D` 구조체는 읽기 전용 구조체가 *아닙니다*. 이 메서드의 본문에는 6개의 서로 다른 속성 액세스 호출이 있습니다. 첫 번째 검사에서 이러한 액세스가 안전하다고 생각했을 것입니다. 결국 `get` 접근자는 개체의 상태를 수정하면 안됩니다. 하지만 이를 적용하는 언어 규칙이 없습니다. 일반적인 관습일 뿐입니다. 모든 형식은 내부 상태를 수정한 `get` 접근자를 구현할 수 있습니다. 일부 언어 보장 없이 컴파일러는 모든 멤버를 호출하기 전에 인수의 임시 복사본을 만들어야 합니다. 임시 스토리지가 스택에 만들어지고, 인수 값이 임시 스토리지에 복사되며, 값이 `this` 인수로 각 멤버 액세스에 대한 스택으로 복사됩니다. 다양한 상황에서 이러한 복사는 인수 형식이 `readonly struct`가 아닌 경우 값으로 전달이 읽기 전용 참조로 전달보다 더 빠를 정도로 성능을 저하시킵니다.
 
 대신, 거리 계산에서 변경이 불가능한 구조체인 `ReadonlyPoint3D`를 사용하는 경우에는 임시 개체가 필요하지 않습니다.
 
-[!code-csharp[readonlyInArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ReadOnlyInArgument "Specifying a readonly in argument")]
+[!code-csharp[readonlyInArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ReadOnlyInArgument "Specifying a readonly in argument")]
 
 컴파일러가 `readonly struct`의 멤버를 호출할 때 더 효율적인 코드를 생성합니다. 수신기의 복사본 대신 `this` 참조는 항상 멤버 메서드에 대한 참조로 전달된 `in` 매개 변수입니다. 이 최적화는 `readonly struct`를 `in` 인수로 사용하는 경우 복사본을 저장합니다.
 

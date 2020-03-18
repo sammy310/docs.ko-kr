@@ -3,10 +3,10 @@ title: XSD를 사용하여 유효성을 검사하는 방법(LINQ to XML)(C#)
 ms.date: 07/20/2015
 ms.assetid: 6a7f83a9-2d74-4c2b-8417-0a8595879516
 ms.openlocfilehash: 29830457b63f36dd401a412364060339344f35cb
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347246"
 ---
 # <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>XSD를 사용하여 유효성을 검사하는 방법(LINQ to XML)(C#)
@@ -76,11 +76,11 @@ doc2 did not validate
 ```  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 [샘플 XML 파일: Customers 및 Orders(LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)에서 XML 문서의 유효성을 검사하고 [샘플 XSD 파일: Customer 및 Order](./sample-xsd-file-customers-and-orders1.md)에서 스키마별로 유효한지 확인합니다. 소스 XML 문서를 수정합니다. 여기에서는 첫 번째 고객에 대한 `CustomerID` 특성을 변경합니다. 변경한 후에는 주문이 존재하지 않는 고객을 참조하게 되므로 XML 문서가 더 이상 유효하지 않습니다.  
+ 다음 예제에서는 [샘플 XML 파일: Customers 및 Orders(LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)의 XML 문서가 [샘플 XSD 파일: Customers 및 Orders](./sample-xsd-file-customers-and-orders1.md)의 스키마별로 유효한지 확인합니다. 소스 XML 문서를 수정합니다. 여기에서는 첫 번째 고객에 대한 `CustomerID` 특성을 변경합니다. 변경한 후에는 주문이 존재하지 않는 고객을 참조하게 되므로 XML 문서가 더 이상 유효하지 않습니다.  
   
- 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: Customers 및 Orders(LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ 이 예제에서는 XML 문서 [샘플 XML 파일: 고객 및 주문(LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)을 사용합니다.  
   
- 이 예제에서는 XSD 스키마을 사용합니다. [샘플 XSD 파일: Customer 및 Order](./sample-xsd-file-customers-and-orders1.md).  
+ 이 예제에서는 XSD 스키마로 [샘플 XSD 파일: Customers 및 Orders](./sample-xsd-file-customers-and-orders1.md)을 사용합니다.  
   
 ```csharp  
 XmlSchemaSet schemas = new XmlSchemaSet();  
@@ -120,7 +120,7 @@ The key sequence 'AAAAA' in Keyref fails to refer to some key.
 custOrdDoc did not validate  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Xml.Schema.Extensions.Validate%2A>
 - [XML 트리 만들기(C#)](creating-xml-trees-linq-to-xml-2.md)

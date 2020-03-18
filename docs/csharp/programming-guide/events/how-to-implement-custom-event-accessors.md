@@ -9,10 +9,10 @@ helpviewer_keywords:
 - remove accessor [C#]
 ms.assetid: bf903abf-03a4-4f7b-ab6b-b7e59bc2ee1e
 ms.openlocfilehash: 34e816799f472e8945962e334b9a90b2582e0393
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705355"
 ---
 # <a name="how-to-implement-custom-event-accessors-c-programming-guide"></a>사용자 지정 이벤트 접근자를 구현하는 방법(C# 프로그래밍 가이드)
@@ -23,7 +23,7 @@ ms.locfileid: "75705355"
   
 [!code-csharp[IDrawingObject.OnDraw](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEvents/CS/Events.cs#IDrawingObjectOnDraw)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [이벤트](./index.md)
 - [event](../../language-reference/keywords/event.md)

@@ -3,10 +3,10 @@ title: 높은 확장성 및 가용성을 위해 마이크로서비스 및 다중
 description: Kubernetes 애플리케이션 수명 주기를 개발하는 동안 높은 확장성과 가용성 및 Azure Dev Spaces의 가능성을 위해 마이크로 서비스 및 다중 컨테이너 애플리케이션을 오케스트레이션하는 옵션을 검색합니다.
 ms.date: 01/30/2020
 ms.openlocfilehash: ea204941a461794fbeeb2482aa11973b79437027
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77628503"
 ---
 # <a name="orchestrate-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>높은 확장성 및 가용성을 위해 마이크로서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
@@ -60,7 +60,7 @@ Azure Kubernetes Service는 Azure용으로 특별히 인기 있는 Docker 클러
 
 ## <a name="development-environment-for-kubernetes"></a>Kubernetes를 위한 개발 환경
 
-개발 환경에서 Kubernetes가 [Docker Desktop](https://docs.docker.com/install/)을 설치하기만 하면 단일 개발 머신(Windows 10 또는 macOS)에서도 실행할 수 있는 [Docker를 2018년 7월에 발표](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/)했습니다. 그림 4-25와 같이 나중에 통합 테스트를 위해 클라우드(AKS)에 배포할 수 있습니다.
+개발 환경에서 Kubernetes가 [Docker Desktop](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/)을 설치하기만 하면 단일 개발 머신(Windows 10 또는 macOS)에서도 실행할 수 있는 [Docker를 2018년 7월에 발표](https://docs.docker.com/install/)했습니다. 그림 4-25와 같이 나중에 통합 테스트를 위해 클라우드(AKS)에 배포할 수 있습니다.
 
 ![AKS에 배포되는 개발 머신의 Kubernetes를 보여 주는 다이어그램입니다.](./media/scalable-available-multi-container-microservice-applications/kubernetes-development-environment.png)
 

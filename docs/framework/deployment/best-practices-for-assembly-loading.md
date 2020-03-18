@@ -12,12 +12,12 @@ helpviewer_keywords:
 - LoadWithPartialName method
 - load-from context
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
-ms.openlocfilehash: d1b6c2cd9f96a4acf48cbced48a86bc3e3409562
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7575c40edf47e977335bcc34fcd9e49debab0980
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716582"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181697"
 ---
 # <a name="best-practices-for-assembly-loading"></a>최선의 어셈블리 로드 방법
 이 문서에서는 <xref:System.InvalidCastException>, <xref:System.MissingMethodException> 및 다른 오류를 발생시킬 수 있는 형식 ID 문제를 방지하는 방법을 설명합니다. 이 문서에서는 다음 권장 사항을 설명합니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "75716582"
   
  첫 번째 권장 사항인 [로드 컨텍스트의 장점 및 단점 이해](#load_contexts)에서는 다른 권장 사항에 대한 배경 정보를 제공합니다. 그 이유는 권장 사항은 모두 로드 컨텍스트의 지식에 의존하기 때문입니다.  
   
-<a name="load_contexts"></a>   
+<a name="load_contexts"></a>
 ## <a name="understand-the-advantages-and-disadvantages-of-load-contexts"></a>로드 컨텍스트의 장점 및 단점 이해  
  애플리케이션 도메인 내에서 어셈블리는 세 개의 컨텍스트 중 하나로 로드되거나 컨텍스트 없이 로드될 수 있습니다.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "75716582"
   
 - .NET Framework 버전 1.0 및 1.1에서는 정책이 적용되지 않습니다.  
   
-<a name="avoid_partial_names"></a>   
+<a name="avoid_partial_names"></a>
 ## <a name="avoid-binding-on-partial-assembly-names"></a>부분 어셈블리 이름에 대한 바인딩 방지  
  부분 이름 바인딩은 어셈블리 로드 시 어셈블리 표시 이름(<xref:System.Reflection.Assembly.FullName%2A>)의 일부만 지정할 경우 발생합니다. 예를 들어 버전, 문화권 및 공개 키 토큰을 생략한 어셈블리의 간단한 이름만 사용하여 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 메서드를 호출할 수 있습니다. 또는 <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> 메서드를 호출할 수 있습니다. 이 메서드는 먼저 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 메서드를 호출하고, 어셈블리를 찾지 못하면 전역 어셈블리 캐시를 검색하고 가장 최근 사용 가능한 버전의 어셈블리를 로드합니다.  
   
@@ -115,15 +115,15 @@ ms.locfileid: "75716582"
   
  어셈블리를 쉽게 로드할 수 있기 때문에 <xref:System.Reflection.Assembly.LoadWithPartialName%2A> 메서드를 사용하려는 경우 누락된 어셈블리를 나타내는 오류 메시지와 함께 애플리케이션이 실패하게 하면 알 수 없는 버전의 어셈블리를 자동으로 사용하여 예측할 수 없는 동작 및 보안 허점을 유발하는 것보다 사용자에게 더 나은 환경이 제공될 수 있습니다.  
   
-<a name="avoid_loading_into_multiple_contexts"></a>   
+<a name="avoid_loading_into_multiple_contexts"></a>
 ## <a name="avoid-loading-an-assembly-into-multiple-contexts"></a>여러 컨텍스트에 어셈블리 로드 방지  
  어셈블리를 여러 컨텍스트에 로드하면 형식 ID 문제가 발생할 수 있습니다. 같은 형식이 같은 어셈블리에서 두 개의 다른 컨텍스트로 로드되는 경우는 같은 이름을 가진 두 개의 다른 형식이 로드된 것과 같습니다. 한 형식을 다른 형식으로 캐스팅하려고 하면 <xref:System.InvalidCastException>이 throw되고 `MyType` 형식을 `MyType` 형식으로 캐스팅할 수 없다는 혼동되는 메시지가 표시됩니다.  
   
- 예를 들어 프로그램에서 참조되거나 프로그램이 로드하는 다른 어셈블리에서 참조되는 `Utility` 어셈블리에 `ICommunicate` 인터페이스가 선언된 경우를 살펴봅니다. 이러한 다른 어셈블리에는 프로그램에서 사용할 수 있도록 `ICommunicate` 인터페이스를 구현하는 형식이 포함됩니다.  
+ 예를 들어 프로그램에서 참조되거나 프로그램이 로드하는 다른 어셈블리에서 참조되는 `ICommunicate` 어셈블리에 `Utility` 인터페이스가 선언된 경우를 살펴봅니다. 이러한 다른 어셈블리에는 프로그램에서 사용할 수 있도록 `ICommunicate` 인터페이스를 구현하는 형식이 포함됩니다.  
   
  이제 프로그램이 실행될 경우 어떤 일이 발생하는지 살펴봅니다. 프로그램에서 참조하는 어셈블리는 기본 로드 컨텍스트로 로드됩니다. <xref:System.Reflection.Assembly.Load%2A> 메서드를 사용하여 ID로 대상 어셈블리를 로드하면 어셈블리 및 종속성이 기본 로드 컨텍스트에 포함됩니다. 프로그램 및 대상 어셈블리는 둘 다 같은 `Utility` 어셈블리를 사용하게 됩니다.  
   
- 하지만 <xref:System.Reflection.Assembly.LoadFile%2A> 메서드를 사용하여 파일 경로로 대상 어셈블리를 로드하는 경우를 살펴봅니다. 어셈블리는 컨텍스트 없이 로드되므로 종속성이 자동으로 로드되지 않습니다. 종속성을 제공하기 위한 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 이벤트 처리기가 있을 수 있고 이 처리기가 <xref:System.Reflection.Assembly.LoadFile%2A> 메서드를 사용하여 `Utility` 어셈블리를 컨텍스트 없이 로드할 수 있습니다. 이제 대상 어셈블리에 포함된 형식의 인스턴스를 만들고 인스턴스에 `ICommunicate` 형식의 변수를 지정하려고 하면 <xref:System.InvalidCastException>이 throw됩니다. 그 이유는 런타임은 `Utility` 어셈블리의 두 가지 복사본에 있는 `ICommunicate` 인터페이스를 서로 다른 형식으로 간주하기 때문입니다.  
+ 하지만 <xref:System.Reflection.Assembly.LoadFile%2A> 메서드를 사용하여 파일 경로로 대상 어셈블리를 로드하는 경우를 살펴봅니다. 어셈블리는 컨텍스트 없이 로드되므로 종속성이 자동으로 로드되지 않습니다. 종속성을 제공하기 위한 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 이벤트 처리기가 있을 수 있고 이 처리기가 `Utility` 메서드를 사용하여 <xref:System.Reflection.Assembly.LoadFile%2A> 어셈블리를 컨텍스트 없이 로드할 수 있습니다. 이제 대상 어셈블리에 포함된 형식의 인스턴스를 만들고 인스턴스에 `ICommunicate` 형식의 변수를 지정하려고 하면 <xref:System.InvalidCastException>이 throw됩니다. 그 이유는 런타임은 `ICommunicate` 어셈블리의 두 가지 복사본에 있는 `Utility` 인터페이스를 서로 다른 형식으로 간주하기 때문입니다.  
   
  어셈블리를 여러 컨텍스트에 로드할 수 있는 다양한 다른 시나리오가 있습니다. 가장 좋은 방법은 대상 어셈블리를 애플리케이션 경로에 재배치하고 <xref:System.Reflection.Assembly.Load%2A> 메서드를 전체 표시 이름과 함께 사용하여 충돌을 피하는 것입니다. 어셈블리는 기본 로드 컨텍스트에 로드되고 두 어셈블리는 모두 같은 `Utility` 어셈블리를 사용합니다.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "75716582"
   
  [기본 로드 컨텍스트로 전환 고려](#switch_to_default) 섹션에서는 <xref:System.Reflection.Assembly.LoadFile%2A> 및 <xref:System.Reflection.Assembly.LoadFrom%2A>과 같은 파일 경로 로드 대신 사용할 수 있는 방법을 설명합니다.  
   
-<a name="avoid_loading_multiple_versions"></a>   
+<a name="avoid_loading_multiple_versions"></a>
 ## <a name="avoid-loading-multiple-versions-of-an-assembly-into-the-same-context"></a>같은 컨텍스트에 어셈블리의 여러 버전 로드 방지  
  여러 버전의 어셈블리를 하나의 로드 컨텍스트에 로드하면 형식 ID 문제가 발생할 수 있습니다. 같은 형식이 같은 어셈블리의 두 가지 버전에서 로드되는 경우는 같은 이름을 가진 두 개의 다른 형식이 로드된 것과 같습니다. 한 형식을 다른 형식으로 캐스팅하려고 하면 <xref:System.InvalidCastException>이 throw되고 `MyType` 형식을 `MyType` 형식으로 캐스팅할 수 없다는 혼동되는 메시지가 표시됩니다.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "75716582"
   
  어셈블리의 한 가지 버전만 로드되도록 코드를 주의해서 검토하세요. <xref:System.AppDomain.GetAssemblies%2A?displayProperty=nameWithType> 메서드를 사용하여 특정 시점에 로드되는 어셈블리를 결정할 수 있습니다.  
   
-<a name="switch_to_default"></a>   
+<a name="switch_to_default"></a>
 ## <a name="consider-switching-to-the-default-load-context"></a>기본 로드 컨텍스트로 전환 고려  
  애플리케이션 어셈블리 로드 및 배포 패턴을 살펴봅니다. 바이트 배열에서 로드된 어셈블리를 제거할 수 있나요? 어셈블리를 검색 경로로 이동할 수 있나요? 어셈블리가 전역 어셈블리 캐시 또는 애플리케이션 도메인의 검색 경로(<xref:System.AppDomainSetup.ApplicationBase%2A> 및 <xref:System.AppDomainSetup.PrivateBinPath%2A>)에 있는 경우 ID로 어셈블리를 로드할 수 있습니다.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "75716582"
   
  이러한 어셈블리를 로드하는 데는 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 메서드를 사용할 수 있습니다. 이제 어셈블리가 검색 경로에 있으므로 어셈블리는 로드 소스 컨텍스트가 아닌 기본 로드 컨텍스트에 로드됩니다. 하지만 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 메서드로 전환하고 전체 어셈블리 표시 이름을 제공하여 올바른 버전이 항상 사용되는지 확인하는 것이 좋습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>

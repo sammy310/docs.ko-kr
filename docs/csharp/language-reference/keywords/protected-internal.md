@@ -3,10 +3,10 @@ title: protected internal - C# 참조
 ms.date: 11/15/2017
 author: sputier
 ms.openlocfilehash: 877df74b51fb859043171619f5687ecddb8409d1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713198"
 ---
 # <a name="protected-internal-c-reference"></a>protected internal(C# 참조)
@@ -56,8 +56,8 @@ class DerivedClass : BaseClass
 ```
 
 이 예제에는 `Assembly1.cs` 및 `Assembly2.cs`의 두 파일이 포함되어 있습니다.
-첫 번째 파일은 공용 기본 클래스인 `BaseClass`와 다른 클래스인 `TestAccess`을 포함합니다. `BaseClass`는 `TestAccess` 형식으로 액세스되는 protected internal 멤버인 `myValue`를 소유합니다.
-두 번째 파일에서 `BaseClass`의 인스턴스를 통한 `myValue` 액세스의 시도는 오류를 생성하지만 파생된 클래스 `DerivedClass`의 인스턴스를 통한 이 멤버로의 액세스는 성공합니다.
+첫 번째 파일은 공용 기본 클래스인 `BaseClass`와 다른 클래스인 `TestAccess`을 포함합니다. `BaseClass`는 `myValue` 형식으로 액세스되는 protected internal 멤버인 `TestAccess`를 소유합니다.
+두 번째 파일에서 `myValue`의 인스턴스를 통한 `BaseClass` 액세스의 시도는 오류를 생성하지만 파생된 클래스 `DerivedClass`의 인스턴스를 통한 이 멤버로의 액세스는 성공합니다.
 
 구조체를 상속할 수 없기 때문에 구조체 멤버는 `protected internal`일 수 없습니다.
 
@@ -65,7 +65,7 @@ class DerivedClass : BaseClass
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

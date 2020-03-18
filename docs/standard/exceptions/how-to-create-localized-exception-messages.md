@@ -7,10 +7,10 @@ dev_langs:
 - vb
 ms.date: 09/13/2019
 ms.openlocfilehash: 5a02c71b16e2c8e5ade5128866af7dc46a03ba4a
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160185"
 ---
 # <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>방법: 지역화된 예외 메시지를 사용하여 사용자 정의 예외 생성
@@ -21,7 +21,7 @@ ms.locfileid: "78160185"
 
 .NET에는 사용할 수 있는 다양한 예외가 포함되어 있습니다. 그러나 사용자의 요구를 충족하는 항목이 없는 경우에는 사용자 지정 예외를 직접 만들 수 있습니다.
 
-`StudentName` 속성을 포함하는 `StudentNotFoundException`을 만들려고 한다고 가정해 보겠습니다.
+`StudentNotFoundException` 속성을 포함하는 `StudentName`을 만들려고 한다고 가정해 보겠습니다.
 사용자 지정 예외를 만들려면 다음 단계를 수행합니다.
 
 1. <xref:System.Exception>에서 상속된 serializable 클래스를 만듭니다. 클래스 이름은 "Exception"으로 끝나야 합니다.
@@ -165,7 +165,7 @@ Throw New StudentNotFoundException("The student cannot be found.", "John")
     > [!NOTE]
     > 프로젝트 이름이 `TestProject`이고 리소스 파일 *ExceptionMessages.resx*가 프로젝트의 *Resources* 폴더에 있는 경우 리소스 파일의 정규화된 이름은 `TestProject.Resources.ExceptionMessages`입니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [사용자 정의 예외를 만드는 방법](how-to-create-user-defined-exceptions.md)
 - [데스크톱 응용 프로그램용 위성 어셈블리 만들기](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md)

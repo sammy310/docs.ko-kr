@@ -158,14 +158,14 @@ helpviewer_keywords:
 - error messages, Winmdexp.exe
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
 ms.openlocfilehash: e99bdd106c845964f63915c87617e30eb51488f4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74447305"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe 오류 메시지
-Visual Studio 2012에서 **Windows 런타임 구성 요소** 템플릿을 사용할 때 빌드 프로세스는 [Winmdexp.exe(Windows 런타임 메타데이터 내보내기 도구)](winmdexp-exe-windows-runtime-metadata-export-tool.md)를 호출하므로 Winmdexp.exe 오류 메시지가 **오류 목록**에 표시됩니다. Winmdexp.exe는 `/target:winmdobj` 옵션으로 컴파일된 모듈에서 작동합니다. 컴파일된 모듈이 입력으로 필요하므로 컴파일에 성공하지 않으면 해당 오류 메시지가 나타나지 않습니다.  
+Visual Studio 2012에서 [Windows 런타임 구성 요소](winmdexp-exe-windows-runtime-metadata-export-tool.md) 템플릿을 사용할 때 빌드 프로세스는 **Winmdexp.exe(Windows 런타임 메타데이터 내보내기 도구)** 를 호출하므로 Winmdexp.exe 오류 메시지가 **오류 목록**에 표시됩니다. Winmdexp.exe는 `/target:winmdobj` 옵션으로 컴파일된 모듈에서 작동합니다. 컴파일된 모듈이 입력으로 필요하므로 컴파일에 성공하지 않으면 해당 오류 메시지가 나타나지 않습니다.  
   
  오류 메시지는 보고되는 오류 조건을 해결하는 데 필요한 모든 정보를 포함하도록 설계되었습니다. 그러나 몇 가지 문제에는 메시지에 표시되는 것보다 많은 정보가 필요합니다. 추가 정보는 [Windows 런타임 구성 요소 오류 조건 진단](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110))에서 찾을 수 있습니다.  
   

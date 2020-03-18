@@ -7,10 +7,10 @@ dev_langs:
 - vb
 ms.custom: vs-dotnet, seodoc18
 ms.openlocfilehash: 307261088f5c7c69c0e69fbd6b99940c04842eec
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156623"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio"></a>Visual Studio에서 .NET Core를 사용하여 .NET Standard 라이브러리 테스트
@@ -21,7 +21,7 @@ ms.locfileid: "78156623"
 
 단위 테스트 프로젝트를 만들려면 다음을 수행합니다.
 
-1. [Visual Studio에서 .NET Standard 라이브러리 빌드](library-with-visual-studio.md) 문서에서 만든 `ClassLibraryProjects` 솔루션을 엽니다.
+1. `ClassLibraryProjects`Visual Studio에서 .NET Standard 라이브러리 빌드[ 문서에서 만든 ](library-with-visual-studio.md) 솔루션을 엽니다.
 
 1. "StringLibraryTest"라는 새 단위 테스트 프로젝트를 솔루션에 추가합니다.
 
@@ -85,11 +85,11 @@ ms.locfileid: "78156623"
 
 ## <a name="add-and-run-unit-test-methods"></a>단위 테스트 메서드 추가 및 실행
 
-Visual Studio는 단위 테스트를 실행할 때 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> 특성이 적용되는 클래스인 단위 테스트 클래스에서 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 특성이 표시된 각 메서드를 실행합니다. 테스트 메서드는 첫 번째 오류가 발생하거나 메서드에 포함된 모든 테스트가 성공적으로 수행되면 종료됩니다.
+Visual Studio는 단위 테스트를 실행할 때 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 특성이 적용되는 클래스인 단위 테스트 클래스에서 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> 특성이 표시된 각 메서드를 실행합니다. 테스트 메서드는 첫 번째 오류가 발생하거나 메서드에 포함된 모든 테스트가 성공적으로 수행되면 종료됩니다.
 
 가장 일반적인 테스트는 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> 클래스의 멤버를 호출합니다. 많은 어설션 메서드에는 2개 이상의 매개 변수가 포함되며, 그 중 하나는 예상된 테스트 결과이고, 다른 하나는 실제 테스트 결과입니다. `Assert` 클래스에서 가장 자주 호출되는 일부 메서드는 다음 표에 나와 있습니다.
 
-| Assert 메서드     | 기능 |
+| Assert 메서드     | 함수 |
 | ------------------ | -------- |
 | `Assert.AreEqual`  | 두 개의 값이나 개체가 같은지를 확인합니다. 값이나 개체가 같지 않으면 어설션이 실패합니다. |
 | `Assert.AreSame`   | 두 개의 개체 변수가 같은 개체를 참조하는지를 확인합니다. 변수가 서로 다른 개체를 참조하면 어설션이 실패합니다. |
@@ -136,7 +136,7 @@ Visual Studio는 단위 테스트를 실행할 때 <xref:Microsoft.VisualStudio.
 
 테스트를 실행할 때 오류가 발생하지는 않았지만 테스트 메서드 중 하나가 실패하도록 약간 변경해 보겠습니다.
 
-1. `TestDoesNotStartWithUpper` 메서드의 `words` 배열이 "Error" 문자열을 포함하도록 수정합니다. 테스트를 실행하도록 솔루션을 빌드하면 Visual Studio에서 열려 있는 파일을 자동으로 저장하기 때문에 파일을 저장할 필요가 없습니다.
+1. `words` 메서드의 `TestDoesNotStartWithUpper` 배열이 "Error" 문자열을 포함하도록 수정합니다. 테스트를 실행하도록 솔루션을 빌드하면 Visual Studio에서 열려 있는 파일을 자동으로 저장하기 때문에 파일을 저장할 필요가 없습니다.
 
    ```csharp
    string[] words = { "alphabet", "Error", "zebra", "abc", "αυτοκινητοβιομηχανία", "государство",
@@ -181,6 +181,6 @@ Visual Studio는 단위 테스트를 실행할 때 <xref:Microsoft.VisualStudio.
 
 라이브러리에 테스트를 마쳤으므로 다음 단계는 호출자가 사용할 수 있도록 하는 것입니다. 하나 이상의 애플리케이션과 함께 번들로 묶거나 NuGet 패키지로 배포할 수 있습니다. 자세한 내용은 [.NET Standard 클래스 라이브러리 사용](consuming-library-with-visual-studio.md)을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [단위 테스트 기본 사항 - Visual Studio](/visualstudio/test/unit-test-basics)

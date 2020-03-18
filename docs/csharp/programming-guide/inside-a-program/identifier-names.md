@@ -3,10 +3,10 @@ title: 식별자 이름
 description: C# 프로그래밍 언어에서 올바른 식별자 이름에 대한 규칙을 알아봅니다.
 ms.date: 08/21/2018
 ms.openlocfilehash: bef6e2ea285b5391af3350ae42a4105d140c6d1b
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77673370"
 ---
 # <a name="identifier-names"></a>식별자 이름

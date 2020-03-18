@@ -3,10 +3,10 @@ title: 텍스트를 XML로 변환 스트리밍을 수행하는 방법(C#)
 ms.date: 07/20/2015
 ms.assetid: 9b3bd941-d0ff-4f2d-ae41-7c3b81d8fae6
 ms.openlocfilehash: 496535b7f868095a62be2b72b1eea2b082e00a44
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345791"
 ---
 # <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>텍스트를 XML로 변환 스트리밍을 수행하는 방법(C#)
@@ -88,6 +88,6 @@ class Program
 </Root>
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Xml.Linq.XStreamingElement>

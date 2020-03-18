@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: f4cd2e47da236d276a42b972265ffd1a2fe27310
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 61d4792b1f1b92dd59442ee38810da96c6cf63bd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160341"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78241145"
 ---
 # <a name="tour-of-net"></a>.NET 둘러보기
 
@@ -41,7 +41,7 @@ Microsoft에서는 C#과 F#, Visual Basic 이 세 가지 .NET 언어를 적극�
 
 다음 두 줄에서는 모두 메모리를 할당합니다.
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L1-L2)]
+[!code-csharp[MemoryManagement](../../samples/snippets/csharp/snippets/tour/MemoryManagement.csx#L1-L2)]
 
 할당 취소는 가비지 수집기의 예약 실행을 통해 메모리를 회수할 때 자동으로 수행되기 때문에 메모리 할당을 취소하는 유사 키워드는 없습니다.
 
@@ -49,7 +49,7 @@ Microsoft에서는 C#과 F#, Visual Basic 이 세 가지 .NET 언어를 적극�
 
 다음 예제에서 런타임은 <xref:System.IndexOutOfRangeException> 예외를 throw하여 메모리 안전성을 강화합니다.
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
+[!code-csharp[MemoryManagement](../../samples/snippets/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
 ## <a name="working-with-unmanaged-resources"></a>관리되지 않는 리소스로 작업하기
 
@@ -57,7 +57,7 @@ Microsoft에서는 C#과 F#, Visual Basic 이 세 가지 .NET 언어를 적극�
 
 .NET에서는 관리되지 않는 리소스를 참조하는 개체가 <xref:System.IDisposable> 인터페이스를 구현합니다. 개체 사용을 마치면 관리되지 않는 모든 리소스 릴리스를 담당하는 개체의 <xref:System.IDisposable.Dispose> 메서드를 호출합니다. 다음 예제와 같이 .NET 언어는 이러한 개체에 대해 편리한 [`using` 문](../csharp/language-reference/keywords/using.md)을 제공합니다.
 
-[!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
+[!code-csharp[UnmanagedResources](../../samples/snippets/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 
 `using` 블록이 완료되면 .NET 런타임은 파일 핸들을 릴리스하는 `stream` 개체의 <xref:System.IDisposable.Dispose> 메서드를 자동으로 호출합니다. 예외로 인해 블록에 대한 제어가 없어지는 경우에도 런타임은 같은 방식으로 호출합니다.
 
@@ -73,15 +73,15 @@ Microsoft에서는 C#과 F#, Visual Basic 이 세 가지 .NET 언어를 적극�
 
 .NET 언어는 기본 및 파생 클래스의 계층 구조로 이루어진 개체 지향 언어입니다. .NET 런타임에서는 개체 계층 구조에 맞는 개체 캐스트 및 호출만 허용됩니다. .NET 언어에서 정의된 모든 형식은 기본 <xref:System.Object> 형식에서 파생됩니다.
 
-[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L19-L23)]
+[!code-csharp[TypeSafety](../../samples/snippets/csharp/snippets/tour/TypeSafety.csx#L19-L23)]
 
 또한 형식 안전성은 접근자 키워드의 충실도를 보장하여 캡슐화 적용을 지원하는 데 사용됩니다. 접근자 키워드는 다른 코드에서 지정된 형식의 멤버에 대한 액세스를 제어하는 아티팩트입니다. 일반적으로 형식 내에서 해당 동작을 관리하는 데 사용하는 다양한 종류의 데이터에 사용됩니다.
 
-[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
+[!code-csharp[TypeSafety](../../samples/snippets/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
 
 C#, Visual Basic 및 F# 지원 로컬 *형식 유추*. 형식 유추는 컴파일러가 오른쪽에 있는 식에서 왼쪽에 있는 식의 형식을 유추함을 의미합니다. 형식 안전성이 손상되거나 무시되는 것은 아닙니다. 결과 형식은 강력한 형식이며 수반되는 모든 특성을 포함합니다. 이전 예제에서 `dog`는 형식 유추를 도입하도록 다시 작성하고 나머지는 변경하지 않습니다.
 
-[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
+[!code-csharp[TypeSafety](../../samples/snippets/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 
 F#에는 C# 및 Visual Basic에 있는 메서드-지역 형식 유추보다 더 심화된 형식 유추 기능이 있습니다. 자세한 내용은 [형식 유추](../fsharp/language-reference/type-inference.md)를 참조하세요.
 
@@ -101,7 +101,7 @@ F#에는 C# 및 Visual Basic에 있는 메서드-지역 형식 유추보다 더 
 
 다음 샘플에서는 <xref:System.Collections.Generic.List%601> 형식 인스턴스를 사용하여 실행 중인 기본 프로그램을 보여 줍니다.
 
-[!code-csharp[GenericsShort](../../samples/csharp/snippets/tour/GenericsShort.csx)]
+[!code-csharp[GenericsShort](../../samples/snippets/csharp/snippets/tour/GenericsShort.csx)]
 
 자세한 내용은 [제네릭 형식(제네릭) 개요](generics.md) 항목을 참조하세요.
 
@@ -133,7 +133,7 @@ Java 및 Objective-C에 대한 Mono(및 Xamarin)의 상호 운용성 지원은 �
 
 다음 예제에서는 `StringBuilder` 클래스에서 `ToString()` 메서드의 수정된 버전입니다. `unsafe` 코드를 통해 메모리 청크를 직접 이동하여 알고리즘을 효율적으로 구현할 수 있는 방법을 보여 줍니다.
 
-[!code-csharp[Unsafe](../../samples/csharp/snippets/tour/Unsafe.csx)]
+[!code-csharp[Unsafe](../../samples/snippets/csharp/snippets/tour/Unsafe.csx)]
 
 ## <a name="next-steps"></a>다음 단계
 

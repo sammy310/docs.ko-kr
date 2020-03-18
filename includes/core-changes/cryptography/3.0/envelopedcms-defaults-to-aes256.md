@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: f9000b19997201c2d3de0643669f9029ff1ca31c
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568008"
 ---
 ### <a name="envelopedcms-defaults-to-aes-256-encryption"></a>EnvelopedCms를 기본적으로 AES-256 암호화로 설정
@@ -28,9 +28,9 @@ return cms.Encode();
 
 3.0 미리 보기 8
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
-이 변경으로 부정적인 영향을 받는 경우 다음과 같이 <xref:System.Security.Cryptography.Pkcs.AlgorithmIdentifier> 형식의 매개 변수를 포함하는 <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> 생성자에서 암호화 알고리즘 식별자를 명시적으로 지정하여 TripleDES 암호화를 복원할 수 있습니다.
+이 변경으로 부정적인 영향을 받는 경우 다음과 같이 <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> 형식의 매개 변수를 포함하는 <xref:System.Security.Cryptography.Pkcs.AlgorithmIdentifier> 생성자에서 암호화 알고리즘 식별자를 명시적으로 지정하여 TripleDES 암호화를 복원할 수 있습니다.
 
 ```csharp
 Oid tripleDesOid = new Oid("1.2.840.113549.3.7", null);

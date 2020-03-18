@@ -8,10 +8,10 @@ helpviewer_keywords:
 - using keyword [C#]
 ms.assetid: 124e1a63-2a4b-4132-b269-3b6d8d3ef72d
 ms.openlocfilehash: a1307acf331cec50b1dbbd0f6e908a0c3baaf7ac
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712938"
 ---
 # <a name="using-c-reference"></a>using(C# 참조)
@@ -22,7 +22,7 @@ ms.locfileid: "75712938"
 - [using 지시문](using-directive.md)은 네임스페이스의 별칭을 만들거나 네임스페이스에 정의된 형식을 가져옵니다.
 - [using static 지시문](using-static.md)은 단일 클래스의 멤버를 가져옵니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

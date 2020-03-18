@@ -4,10 +4,10 @@ description: 기계 학습 모델에 사용할 ML.NET 알고리즘을 선택하�
 ms.topic: overview
 ms.date: 06/05/2019
 ms.openlocfilehash: 0fed33203c02303e37e47f548e08ec131eeb1c77
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75739999"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>ML.NET 알고리즘을 선택하는 방법
@@ -95,7 +95,7 @@ ML.NET을 사용하여 동일한 알고리즘을 다른 작업에 적용할 수 
 |----------|--------|
 |변칙 검색에 사용|<xref:Microsoft.ML.Trainers.RandomizedPcaTrainer>|
 
-## <a name="naive-bayes"></a>이브 베이즈(Naive Bayes)
+## <a name="naive-bayes"></a>Naive Bayes
 
 |속성|트레이너|
 |----------|--------|

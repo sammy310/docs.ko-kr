@@ -5,10 +5,10 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
 ms.openlocfilehash: 7a641c1b6665af6e9e78ef182174b360041d74aa
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77450047"
 ---
 # <a name="development-process-for-azure"></a>Azure 개발 프로세스
@@ -76,7 +76,7 @@ Azure 계정 및 CI/CD 프로세스 구성이 완료되면 Azure에서 호스트
 
 **그림 10-2.** ASP.NET Core 앱을 빌드하고 Azure에서 호스팅하기 위한 단계별 워크플로
 
-#### <a name="step-1-local-dev-environment-inner-loop"></a>1단계: 로컬 개발 환경 내부 루프
+#### <a name="step-1-local-dev-environment-inner-loop"></a>1단계. 로컬 개발 환경 내부 루프
 
 Azure에 배포할 ASP.NET Core 애플리케이션 개발은 일반적인 애플리케이션 개발과 다르지 않습니다. Visual Studio 2017, dotnet CLI, Visual Studio Code 또는 원하는 편집기 중 자신에게 편한 로컬 개발 환경을 사용하시면 됩니다. 코드를 작성하고, 변경 내용을 실행 및 디버그하고, 자동화된 테스트를 실행하고, 변경 내용을 공유 소스 제어 리포지토리에 푸시할 준비가 완료될 때까지 소스 제어에 로컬로 커밋할 수 있습니다.
 
@@ -84,7 +84,7 @@ Azure에 배포할 ASP.NET Core 애플리케이션 개발은 일반적인 애플
 
 코드를 팀과 공유할 준비가 완료되면 로컬 소스 리포지토리의 변경 내용을 팀의 공유 소스 리포지토리에 푸시해야 합니다. 사용자 지정 분기에서 작업한 경우 이 단계에서 일반적으로 코드를 공유 분기에 병합(아마도 [끌어오기 요청](https://docs.microsoft.com/azure/devops/git/pull-requests)을 사용하여)하는 작업이 포함됩니다.
 
-#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>3단계. 빌드 서버: 지속적인 통합 빌드, 테스트, 패키지
+#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>3단계. 빌드 서버: 연속 통합. 빌드, 테스트, 패키지
 
 공유 애플리케이션 코드 리포지토리에 새 커밋이 만들어질 때마다 빌드 서버에서 새 빌드가 트리거됩니다. CI 프로세스의 일환으로, 이 빌드는 애플리케이션을 완전히 컴파일하고 자동화된 테스트를 실행하여 모든 것이 예상대로 작동하는지 확인해야 합니다. CI 프로세스의 최종 결과는 즉시 배포가 가능한 웹앱의 패키지 버전이어야 합니다.
 
@@ -100,7 +100,7 @@ Azure에 배포할 ASP.NET Core 애플리케이션 개발은 일반적인 애플
 
 웹앱이 실행되는 동안 애플리케이션의 상태를 모니터링하고 진단 및 사용자 동작 데이터를 수집할 수 있습니다. Application Insights는 Visual Studio에 포함되어 있으며, ASP.NET 앱을 위한 자동 계측 기능을 제공합니다. 사용량, 예외, 요청, 성능 및 로그에 대한 정보를 제공할 수 있습니다.
 
-## <a name="references"></a>참조 항목
+## <a name="references"></a>참조
 
 **ASP.NET Core 앱을 빌드하고 Azure에 배포**  
 <https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core>

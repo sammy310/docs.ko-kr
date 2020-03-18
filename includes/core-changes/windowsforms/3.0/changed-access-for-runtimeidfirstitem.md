@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 5bbbf9075683b0f124e126b661b4ab85011e6c2e
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74643930"
 ---
 ### <a name="change-of-access-for-accessibleobjectruntimeidfirstitem"></a>AccessibleObject에 대한 액세스 변경
@@ -18,7 +18,7 @@ ms.locfileid: "74643930"
 
 3.0 RC1
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 <xref:System.Windows.Forms.AccessibleObject>에서 파생되는 형식을 사용하여 .NET Core 앱을 개발하고 `RuntimeIDFirstItem` 필드에 액세스하는 경우 변경 내용이 영향을 받을 수 있습니다. 이 경우 로컬 상수를 다음과 같이 정의할 수 있습니다.
 

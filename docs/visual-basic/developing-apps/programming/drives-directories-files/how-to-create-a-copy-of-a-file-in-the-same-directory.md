@@ -10,10 +10,10 @@ helpviewer_keywords:
 - I/O [Visual Basic], copying files
 ms.assetid: b2fdda86-e666-42c2-9706-9527e9fa68ff
 ms.openlocfilehash: 33a4f5424ac50de7b5dc988034ca15127dc1ed02
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348820"
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-the-same-directory-in-visual-basic"></a>방법: Visual Basic에서 동일한 디렉터리에 파일의 복사본 만들기
@@ -22,13 +22,13 @@ ms.locfileid: "74348820"
   
 ### <a name="to-create-a-copy-of-a-file-in-the-same-folder"></a>동일한 폴더에 파일의 복사본을 만들려면  
   
-- 대상 파일과 위치를 제공하여 `CopyFile` 메서드를 사용합니다. 다음 예제에서는 `test2.txt`라는 `test.txt`의 복사본을 만듭니다.  
+- 대상 파일과 위치를 제공하여 `CopyFile` 메서드를 사용합니다. 다음 예제에서는 `test.txt`라는 `test2.txt`의 복사본을 만듭니다.  
   
      [!code-vb[VbVbcnMyFileSystem#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#51)]  
   
 ### <a name="to-create-a-copy-of-a-file-in-the-same-folder-overwriting-existing-files"></a>동일한 폴더에 파일의 복사본을 만들고 기존 파일을 덮어쓰려면  
   
-- 대상 파일과 위치를 제공하고 `overwrite`를 `True`로 설정하여 `CopyFile` 메서드를 사용합니다. 다음 예제에서는 `test2.txt`라는 `test.txt`의 복사본을 만들고 해당 이름의 기존 파일을 덮어씁니다.  
+- 대상 파일과 위치를 제공하고 `CopyFile`를 `overwrite`로 설정하여 `True` 메서드를 사용합니다. 다음 예제에서는 `test.txt`라는 `test2.txt`의 복사본을 만들고 해당 이름의 기존 파일을 덮어씁니다.  
   
      [!code-vb[VbVbcnMyFileSystem#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#52)]  
   
@@ -42,7 +42,7 @@ ms.locfileid: "74348820"
   
 - 경로가 `Nothing`이기 때문에 올바르지 않은 경우(<xref:System.ArgumentNullException>)  
   
-- 소스 파일이 잘못되었거나 없는 경우(<xref:System.IO.FileNotFoundException>)  
+- 소스 파일이 잘못되었거나 존재하지 않는 경우(<xref:System.IO.FileNotFoundException>)  
   
 - 조합된 경로가 기존 디렉터리를 가리키는 경우(<xref:System.IO.IOException>)  
   
@@ -69,7 +69,7 @@ ms.locfileid: "74348820"
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>
 - <xref:Microsoft.VisualBasic.FileIO.UICancelOption>
-- [방법: 특정 패턴의 파일을 디렉터리로 복사](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)
+- [방법: 특정 패턴의 파일을 디렉터리에 복사](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)
 - [방법: 다른 디렉터리에 파일의 복사본 만들기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)
 - [방법: 디렉터리를 다른 디렉터리에 복사](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)
 - [방법: 파일 이름 바꾸기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)

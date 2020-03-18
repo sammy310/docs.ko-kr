@@ -6,10 +6,10 @@ helpviewer_keywords:
 - assemblies [.NET Framework], names
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 ms.openlocfilehash: 7a1a4d2512ebb002a3153fe2d51f47157136744d
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73733108"
 ---
 # <a name="assembly-names"></a>어셈블리 이름
@@ -22,7 +22,7 @@ myTypes, Version=1.0.1234.0, Culture=en-US, PublicKeyToken=b77a5c561934e089c, Pr
 ```
 
 > [!NOTE]
-> .NET Framework 버전 2.0에서는 어셈블리의 프로세서별 버전을 허용하기 위해 프로세서 아키텍처가 어셈블리 ID에 추가됩니다. 프로세서 아키텍처를 통해서만 ID가 다른 어셈블리의 버전을 만들 수 있습니다(예: 32비트 및 64비트 프로세서별 버전). 강력한 이름에는 프로세서 아키텍처가 필요하지 않습니다. 자세한 내용은 <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A?displayProperty=nameWithType>을 참조하세요.
+> .NET Framework 버전 2.0에서는 어셈블리의 프로세서별 버전을 허용하기 위해 프로세서 아키텍처가 어셈블리 ID에 추가됩니다. 프로세서 아키텍처를 통해서만 ID가 다른 어셈블리의 버전을 만들 수 있습니다(예: 32비트 및 64비트 프로세서별 버전). 강력한 이름에는 프로세서 아키텍처가 필요하지 않습니다. 자세한 내용은 <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A?displayProperty=nameWithType>를 참조하세요.
 
  이 예제에서 정규화된 이름은 `myTypes` 어셈블리에 공개 키 토큰과 함께 강력한 이름이 있고, 영어(미국)에 대한 문화권 값이 있고, 버전 번호 1.0.1234.0이 있음을 나타냅니다. 해당 프로세서 아키텍처는 "msil"이며, 이는 운영 체제 및 프로세서에 따라 32비트 코드 또는 64비트 코드로 JIT(Just-In-Time) 컴파일될 것임을 의미합니다.
 
@@ -55,7 +55,7 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 > [!NOTE]
 > .NET Framework에서는 강력한 이름의 어셈블리를 전역 어셈블리 캐시에 넣는 경우 어셈블리의 파일 이름이 어셈블리 이름( *.exe* 또는 *.dll* 등의 파일 이름 확장명 제외)과 일치해야 합니다. 예를 들어 어셈블리의 파일 이름이 *myAssembly.dll*이면 어셈블리 이름은 `myAssembly`여야 합니다. 루트 애플리케이션 디렉터리에만 배포된 프라이빗 어셈블리의 이름은 파일 이름과 다를 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [방법: 어셈블리의 정규화된 이름 식별](find-fully-qualified-name.md)
 - [어셈블리 만들기](create.md)

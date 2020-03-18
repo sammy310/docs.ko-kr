@@ -8,10 +8,10 @@ helpviewer_keywords:
 - while keyword [C#]
 ms.assetid: 72a0765c-6852-4aca-b327-4a11cb7f5c59
 ms.openlocfilehash: eb9aa2ea8d6b1c96e0be7d377f7c047194b598de
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712795"
 ---
 # <a name="while-c-reference"></a>while(C# 참조)
@@ -20,9 +20,9 @@ ms.locfileid: "75712795"
 
 `while` 문 블록 내의 어느 지점에서나 [break](break.md) 문을 사용하여 루프를 중단할 수 있습니다.
 
-[continue](continue.md) 문을 사용하여 `while` 식의 계산을 직접 실행할 수 있습니다. 식이 `true`로 계산될 경우 루프의 첫 번째 문에서 계속 실행됩니다. 그렇지 않으면 실행은 루프 뒤에 나오는 첫 번째 문에서 계속됩니다.
+`while`continue[ 문을 사용하여 ](continue.md) 식의 계산을 직접 실행할 수 있습니다. 식이 `true`로 계산될 경우 루프의 첫 번째 문에서 계속 실행됩니다. 그렇지 않으면 실행은 루프 뒤에 나오는 첫 번째 문에서 계속됩니다.
 
-[goto](goto.md), [return](return.md) 또는 [throw](throw.md) 문으로 `while` 루프를 종료할 수도 있습니다.
+`while`goto[, ](goto.md)return[ 또는 ](return.md)throw[ 문으로 ](throw.md) 루프를 종료할 수도 있습니다.
 
 ## <a name="example"></a>예제
 
@@ -32,9 +32,9 @@ ms.locfileid: "75712795"
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)의 [while 문](~/_csharplang/spec/statements.md#the-while-statement) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/statements.md#the-while-statement)의 [while 문](/dotnet/csharp/language-reference/language-specification/introduction) 섹션을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

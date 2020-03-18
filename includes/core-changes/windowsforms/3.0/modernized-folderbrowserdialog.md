@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 24141f4b95cda2ae382a923da034e75c329b8555
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74643858"
 ---
 ### <a name="modernization-of-the-folderbrowserdialog"></a>FolderBrowserDialog의 현대화
@@ -24,7 +24,7 @@ ms.locfileid: "74643858"
 
 3.0
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 대화 상자가 자동으로 업그레이드됩니다.
 

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
 ms.openlocfilehash: 11c544e7fc923b0820141fb2e096ef7707f0a95f
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74552468"
 ---
 # <a name="c-operators-c-reference"></a>C# 연산자(C# 참조)
@@ -78,7 +78,7 @@ Console.WriteLine($"a = {a}, b = {b}");  // output: a = 1, b = 6
 
 연산자 우선 순위 및 결합성과 관계없이 식의 피연산자는 왼쪽에서 오른쪽으로 계산됩니다. 다음 예제는 연산자와 피연산자가 계산되는 순서를 보여 줍니다.
 
-| 식 | 계산 순서 |
+| 식 | 평가 순서 |
 | ---------- | ------------------- |
 |`a + b`|a, b, +|
 |`a + b * c`|a, b, c, *, +|
@@ -89,7 +89,7 @@ Console.WriteLine($"a = {a}, b = {b}");  // output: a = 1, b = 6
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [연산자](~/_csharplang/spec/expressions.md#operators) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/expressions.md#operators)의 [연산자](~/_csharplang/spec/introduction.md) 섹션을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

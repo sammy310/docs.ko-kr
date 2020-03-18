@@ -7,10 +7,10 @@ helpviewer_keywords:
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
 ms.openlocfilehash: 617b940d2cf15779ae3c10e4663b63c9771d44b6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74345892"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Visual Basic에서 애플리케이션 로그 작업
@@ -106,7 +106,7 @@ C:\Documents and Settings\\`username`\Application Data
 
 - **서비스 거부가 발생하지 않도록 합니다.** 애플리케이션에서 로그에 너무 많은 정보를 쓰면 로그가 가득 차거나 중요한 정보를 찾기가 어려워질 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - [애플리케이션의 정보 기록](../../../../visual-basic/developing-apps/programming/log-info/index.md)

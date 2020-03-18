@@ -6,10 +6,10 @@ helpviewer_keywords:
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
 ms.openlocfilehash: c46f36133b68a550a17cf882844fd2481eee8851
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705615"
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>추상 속성 정의 방법(C# 프로그래밍 가이드)
@@ -17,7 +17,7 @@ ms.locfileid: "75705615"
   
  이 샘플은 개별적으로 컴파일된 파일 3개로 구성되었으며, 결과로 생성된 어셈블리는 다음 컴파일 시 참조됩니다.  
   
-- abstractshape.cs: 추상 `Area` 속성이 포함된 `Shape` 클래스입니다.  
+- abstractshape.cs: 추상 `Shape` 속성이 포함된 `Area` 클래스입니다.  
   
 - shapes.cs: `Shape` 클래스의 서브클래스입니다.  
   
@@ -30,11 +30,11 @@ ms.locfileid: "75705615"
  그러면 shapetest.exe 실행 파일이 생성됩니다.  
   
 ## <a name="example"></a>예제  
- 이 파일에서는 `double` 형식의 `Area` 속성을 포함하는 `Shape` 클래스를 선언합니다.  
+ 이 파일에서는 `Shape` 형식의 `Area` 속성을 포함하는 `double` 클래스를 선언합니다.  
   
  [!code-csharp[csProgGuideInheritance#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#1)]  
   
-- 속성의 한정자는 속성 선언 자체에 배치됩니다. 예:  
+- 속성의 한정자는 속성 선언 자체에 배치됩니다. 예들 들어 다음과 같습니다.  
   
     ```csharp  
     public abstract double Area  
@@ -52,7 +52,7 @@ ms.locfileid: "75705615"
   
  [!code-csharp[csProgGuideInheritance#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#3)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [클래스 및 구조체](./index.md)

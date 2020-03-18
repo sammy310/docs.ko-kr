@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 394ed636cece766d61b1a10403b98c73f1d3cb93
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 99153bb9cf3287951a1e52e716c799ee64eb82ad
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73041262"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78950987"
 ---
 # <a name="labels-and-projects-roadmap"></a>레이블 및 프로젝트 로드맵
 
-.NET docs 팀은 [GitHub 레이블](https://github.com/dotnet/docs/labels)을 광범위하게 사용하여 작업을 구성합니다. 레이블 조합을 필터링하여 [.NET docs 웹 사이트](https://docs.microsoft.com/dotnet)의 관심 섹션에 빠르게 집중할 수 있습니다. 
+.NET docs 팀은 [GitHub 레이블](https://github.com/dotnet/docs/labels)을 광범위하게 사용하여 작업을 구성합니다. 레이블 조합을 필터링하여 [.NET docs 웹 사이트](https://docs.microsoft.com/dotnet)의 관심 섹션에 빠르게 집중할 수 있습니다.
 
 또한 [GitHub 프로젝트](https://github.com/dotnet/docs/projects)를 사용하여 스프린트 및 기타 목표 지향 에픽을 구성합니다.
 
@@ -28,7 +28,7 @@ ms.locfileid: "73041262"
 
 ### <a name="find-a-single-net-guide"></a>단일 .NET 가이드 찾기
 
-각 아키텍처 전자책 및 각 .NET 가이드에 대해 레이블을 사용합니다. 
+각 아키텍처 전자책 및 각 .NET 가이드에 대해 레이블을 사용합니다.
 
 ![:book: 연한 녹색 배경의 가이드](./images/guide.png "아키텍처 가이드 레이블의 접두사")
 
@@ -97,7 +97,7 @@ ms.locfileid: "73041262"
 
 ![:checkered_flag: 릴리스: 진한 노랑](./images/release.png "릴리스 레이블의 접두사")
 
-특정 릴리스에 대해 태그가 지정된 문제는 `:checkered_flag: Release:` 접두사로 표시되고 진한 노란색 배경이 있습니다. 
+특정 릴리스에 대해 태그가 지정된 문제는 `:checkered_flag: Release:` 접두사로 표시되고 진한 노란색 배경이 있습니다.
 
 - .NET Core 2.2
 - .NET Core 3.0
@@ -116,7 +116,7 @@ ms.locfileid: "73041262"
 
 ## <a name="projects"></a>프로젝트
 
-참가자는 [.NET 커뮤니티 협력자에 대한 프로젝트](https://github.com/dotnet/docs/projects/35)를 확인해야 합니다. 유지 관리, 문서 업데이트 및 새 콘텐츠 작업을 위해 다른 열을 만들었습니다. 이를 통해 관심 작업을 찾을 수 있습니다. (위에 설명 된 레이블을 사용하여 프로젝트 보기를 필터링할 수 있습니다.) 
+참가자는 [.NET 커뮤니티 협력자에 대한 프로젝트](https://github.com/dotnet/docs/projects/35)를 확인해야 합니다. 유지 관리, 문서 업데이트 및 새 콘텐츠 작업을 위해 다른 열을 만들었습니다. 이를 통해 관심 작업을 찾을 수 있습니다. (위에 설명 된 레이블을 사용하여 프로젝트 보기를 필터링할 수 있습니다.)
 
 또한 다음과 같은 두 가지 방법으로 프로젝트를 사용합니다.
 

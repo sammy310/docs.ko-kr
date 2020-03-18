@@ -16,10 +16,10 @@ helpviewer_keywords:
 - data storage using isolated storage, deleting stores
 ms.assetid: 3947e333-5af6-4601-b2f1-24d4d6129cf3
 ms.openlocfilehash: 6b1e8e651fd8e18c79dd629c154fb6c4d74243e3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75707829"
 ---
 # <a name="how-to-delete-stores-in-isolated-storage"></a>방법: 격리된 스토리지에서 저장소 삭제
@@ -30,13 +30,13 @@ ms.locfileid: "75707829"
 - 정적 메서드 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%28System.IO.IsolatedStorage.IsolatedStorageScope%29> 는 <xref:System.IO.IsolatedStorage.IsolatedStorageScope.User> 열거형 값을 사용하여 코드를 실행 중인 사용자의 모든 저장소를 삭제합니다. 이 작업을 수행하려면 <xref:System.Security.Permissions.IsolatedStorageFilePermission> 값에 대한 <xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser> 권한이 필요합니다.  
   
 ## <a name="example"></a>예제  
- 다음 코드 예제에서는 정적 및 인스턴스 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A> 메서드를 사용하는 방법을 보여 줍니다. 이 클래스는 사용자 및 어셈블리에 대해 격리된 저장소와 사용자, 도메인 및 어셈블리에 대해 격리된 저장소를 가져옵니다. 그런 다음, 격리된 스토리지 파일 `isoStore1`의 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove> 메서드를 호출하여 사용자, 도메인 및 어셈블리 저장소를 삭제합니다. 마지막으로 정적 메서드인 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%28System.IO.IsolatedStorage.IsolatedStorageScope%29>를 호출하여 사용자에 대한 나머지 저장소를 삭제합니다.  
+ 다음 코드 예제에서는 정적 및 인스턴스 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A> 메서드를 사용하는 방법을 보여 줍니다. 이 클래스는 사용자 및 어셈블리에 대해 격리된 저장소와 사용자, 도메인 및 어셈블리에 대해 격리된 저장소를 가져옵니다. 그런 다음, 격리된 스토리지 파일 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove>의 `isoStore1` 메서드를 호출하여 사용자, 도메인 및 어셈블리 저장소를 삭제합니다. 마지막으로 정적 메서드인 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%28System.IO.IsolatedStorage.IsolatedStorageScope%29>를 호출하여 사용자에 대한 나머지 저장소를 삭제합니다.  
   
  [!code-cpp[Conceptual.IsolatedStorage#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source3.cpp#3)]
  [!code-csharp[Conceptual.IsolatedStorage#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source3.cs#3)]
  [!code-vb[Conceptual.IsolatedStorage#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source3.vb#3)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - [격리된 스토리지](../../../docs/standard/io/isolated-storage.md)

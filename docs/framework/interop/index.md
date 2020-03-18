@@ -11,10 +11,10 @@ helpviewer_keywords:
 - components [.NET Framework], interoperation with unmanaged code
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
 ms.openlocfilehash: 12183f390a5178f038c6dd2122a72a33e31ae0ee
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457962"
 ---
 # <a name="interoperating-with-unmanaged-code"></a>비관리 코드와의 상호 운용
@@ -23,7 +23,7 @@ ms.locfileid: "73457962"
 
 런타임 제어를 기반으로 실행되는 코드를 관리 코드라고 합니다. 이와 달리 런타임 외부에서 실행되는 코드를 비관리 코드라고 합니다. 비관리 코드로는 COM 구성 요소, ActiveX 인터페이스, Windows API 함수 등이 있습니다.
 
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
 [.NET Framework에 COM 구성 요소 노출](exposing-com-components.md)  
 .NET Framework 애플리케이션에서 COM 구성 요소를 사용하는 방법을 설명합니다.

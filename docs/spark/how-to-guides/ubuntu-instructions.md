@@ -4,24 +4,24 @@ description: Ubuntu에서 .NET for Apache Spark 애플리케이션을 빌드하�
 ms.date: 01/29/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: a12c861d0f231910f715a13fd41d1f3f0d6748a7
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 6dd6f60bb89a51c47fe17182fc47de818cd00b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76928069"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187567"
 ---
 # <a name="learn-how-to-build-your-net-for-apache-spark-application-on-ubuntu"></a>Ubuntu에서 .NET for Apache Spark 애플리케이션을 빌드하는 방법
 
 이 문서에서는 Ubuntu에서 .NET for Apache Spark 애플리케이션을 빌드하는 방법을 배웁니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 다음 사전 요구 사항이 모두 있는 경우 [빌드](#build) 단계로 건너뛰세요.
 
 1. **[.NET Core 2.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.1)** 또는 **[.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1)** 를 다운로드하고 설치합니다. SDK를 설치하면 경로에 `dotnet` 도구 체인이 추가됩니다.  .NET Core 2.1, 2.2, 3.1이 지원됩니다.
 
-2. **[OpenJDK 8](https://openjdk.java.net/install/)** 을 설치합니다. 
+2. **[OpenJDK 8](https://openjdk.java.net/install/)** 을 설치합니다.
 
    - 다음 명령을 사용할 수 있습니다.
 
@@ -29,10 +29,10 @@ ms.locfileid: "76928069"
    sudo apt install openjdk-8-jdk
    ```
 
-   * 명령줄에서 `java`를 실행할 수 있는지 확인합니다.       
+   * 명령줄에서 `java`을 실행할 수 있는지 확인합니다.
 
       샘플 java -version 출력:
-          
+
       ```bash
       openjdk version "1.8.0_191"
       OpenJDK Runtime Environment (build 1.8.0_191-8u191-b12-2ubuntu0.18.04.1-b12)
@@ -59,13 +59,13 @@ ms.locfileid: "76928069"
       export PATH=${M2_HOME}/bin:${PATH}
       source ~/.bashrc
       ```
-       
-       이러한 환경 변수는 터미널을 닫을 때 손실됩니다. 변경 내용을 영구적으로 적용하려면 `~/.bashrc` 파일에 `export` 줄을 추가합니다.
 
-   * 명령줄에서 `mvn`을 실행할 수 있는지 확인합니다.       
+       이러한 환경 변수는 터미널을 닫을 때 손실됩니다. 변경 내용을 영구적으로 적용하려면 `export` 파일에 `~/.bashrc` 줄을 추가합니다.
+
+   * 명령줄에서 `mvn`을 실행할 수 있는지 확인합니다.
 
        샘플 mvn -version 출력:
-       
+
        ```
        Apache Maven 3.6.0 (97c98ec64a1fdfee7767ce5ffb20918da4f719f3; 2018-10-24T18:41:47Z)
        Maven home: ~/bin/apache-maven-3.6.0
@@ -88,13 +88,13 @@ ms.locfileid: "76928069"
       export PATH="$SPARK_HOME/bin:$PATH"
       source ~/.bashrc
       ```
-       
-      이러한 환경 변수는 터미널을 닫을 때 손실됩니다. 변경 내용을 영구적으로 적용하려면 `~/.bashrc` 파일에 `export` 줄을 추가합니다.
+
+      이러한 환경 변수는 터미널을 닫을 때 손실됩니다. 변경 내용을 영구적으로 적용하려면 `export` 파일에 `~/.bashrc` 줄을 추가합니다.
 
    * 명령줄에서 `spark-shell`을 실행할 수 있는지 확인합니다.
 
       샘플 콘솔 출력:
-      
+
       ```
       Welcome to
             ____              __
@@ -109,7 +109,7 @@ ms.locfileid: "76928069"
 
       scala> sc
       res0: org.apache.spark.SparkContext = org.apache.spark.SparkContext@6eaa6b0c
-      ```                      
+      ```
 
 다음 섹션으로 이동하기 전에 명령줄에서 `dotnet`, `java`, `mvn`, `spark-shell`을 실행할 수 있는지 확인합니다. 더 나은 방법이 있나요? [문제를 열고](https://github.com/dotnet/spark/issues) 자유롭게 참여하세요.
 
@@ -129,7 +129,7 @@ git clone https://github.com/dotnet/spark.git ~/dotnet.spark
 
 ```bash
 cd src/scala
-mvn clean package 
+mvn clean package
 ```
 
 지원되는 Spark 버전에 대해 생성된 JAR이 표시됩니다.
@@ -147,14 +147,14 @@ mvn clean package
    cd ~/dotnet.spark/src/csharp/Microsoft.Spark.Worker/
    dotnet publish -f netcoreapp2.1 -r ubuntu.18.04-x64
    ```
-      
+
    샘플 콘솔 출력:
 
    ```bash
    user@machine:/home/user/dotnet.spark/src/csharp/Microsoft.Spark.Worker$ dotnet publish -f netcoreapp2.1 -r ubuntu.18.04-x64
    Microsoft (R) Build Engine version 16.0.462+g62fb89029d for .NET Core
    Copyright (C) Microsoft Corporation. All rights reserved.
-      
+
       Restore completed in 36.03 ms for /home/user/dotnet.spark/src/csharp/Microsoft.Spark.Worker/Microsoft.Spark.Worker.csproj.
       Restore completed in 35.94 ms for /home/user/dotnet.spark/src/csharp/Microsoft.Spark/Microsoft.Spark.csproj.
       Microsoft.Spark -> /home/user/dotnet.spark/artifacts/bin/Microsoft.Spark/Debug/netstandard2.0/Microsoft.Spark.dll
@@ -168,7 +168,7 @@ mvn clean package
    cd ~/dotnet.spark/examples/Microsoft.Spark.CSharp.Examples/
    dotnet publish -f netcoreapp2.1 -r ubuntu.18.04-x64
    ```
-      
+
    샘플 콘솔 출력:
 
    ```bash
@@ -187,7 +187,7 @@ mvn clean package
 
 샘플을 빌드한 후 `spark-submit`을 사용하여 .NET Core 앱을 제출할 수 있습니다. [사전 요구 사항](#prerequisites) 섹션에 따라 Apache Spark를 설치했는지 확인합니다.
 
-1. `Microsoft.Spark.Worker` 이진 파일이 생성된 경로(예: `~/dotnet.spark/artifacts/bin/Microsoft.Spark.Worker/Debug/netcoreapp2.1/ubuntu.18.04-x64/publish`)가 포함되도록 `DOTNET_WORKER_DIR` 또는 `PATH` 환경 변수를 설정합니다.
+1. `DOTNET_WORKER_DIR` 이진 파일이 생성된 경로(예: `PATH`)가 포함되도록 `Microsoft.Spark.Worker` 또는 `~/dotnet.spark/artifacts/bin/Microsoft.Spark.Worker/Debug/netcoreapp2.1/ubuntu.18.04-x64/publish` 환경 변수를 설정합니다.
 
    ```bash
    export DOTNET_WORKER_DIR=~/dotnet.spark/artifacts/bin/Microsoft.Spark.Worker/Debug/netcoreapp2.1/ubuntu.18.04-x64/publish

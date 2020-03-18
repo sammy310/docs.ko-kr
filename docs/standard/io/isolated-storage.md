@@ -19,10 +19,10 @@ helpviewer_keywords:
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
 ms.openlocfilehash: ed784bafda2aed829f2e97d7e7e8b2716c48c7ba
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75706584"
 ---
 # <a name="isolated-storage"></a>격리된 스토리지
@@ -31,7 +31,7 @@ ms.locfileid: "75706584"
 > [!IMPORTANT]
 > Windows 8.x 스토어 앱에는 격리된 스토리지를 사용할 수 없습니다. 대신에 Windows Runtime API에 포함된 `Windows.Storage` 네임스페이스의 애플리케이션 데이터 클래스를 사용하여 로컬 데이터 및 파일을 저장합니다. 자세한 내용은 Windows 개발자 센터에서 [애플리케이션 데이터](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) 를 참조하세요.
 
-이 항목에는 다음과 같은 단원이 포함되어 있습니다.
+이 항목의 섹션:
 
 - [데이터 구획 및 저장소](#data_compartments_and_stores)
 
@@ -169,7 +169,7 @@ ms.locfileid: "75706584"
 |[방법: 격리된 스토리지의 저장소 열거](../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|<xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> 메서드를 사용하여 사용자에 대한 모든 격리된 스토리지 크기를 계산하는 방법을 보여 줍니다.|
 |[방법: 격리된 스토리지에서 저장소 삭제](../../../docs/standard/io/how-to-delete-stores-in-isolated-storage.md)|<xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A?displayProperty=nameWithType> 메서드를 두 가지 방법으로 사용하여 격리된 저장소를 삭제하는 방법을 보여 줍니다.|
 |[방법: 격리된 스토리지의 공간 부족 상태 예상](../../../docs/standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md)|격리된 저장소에서 남은 공간을 측정하는 방법을 보여 줍니다.|
-|[방법: 격리된 스토리지의 파일 및 디렉터리 만들기](../../../docs/standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|격리된 저장소에서 파일 및 디렉터리를 만드는 몇 가지 예제를 제공합니다.|
+|[방법: 격리된 스토리지에 파일 및 디렉터리 만들기](../../../docs/standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|격리된 저장소에서 파일 및 디렉터리를 만드는 몇 가지 예제를 제공합니다.|
 |[방법: 격리된 스토리지의 기존 파일 및 디렉터리 찾기](../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|격리된 스토리지에서 디렉터리 구조 및 파일을 읽는 방법을 보여 줍니다.|
 |[방법: 격리된 스토리지의 파일 읽기 및 쓰기](../../../docs/standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|격리된 스토리지 파일에 문자열을 쓰고 다시 문자열을 읽는 예제를 제공합니다.|
 |[방법: 격리된 스토리지의 파일 및 디렉터리 삭제](../../../docs/standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|격리된 스토리지 파일 및 디렉터리를 삭제하는 방법을 보여 줍니다.|
@@ -177,7 +177,7 @@ ms.locfileid: "75706584"
 
 <a name="reference"></a>
 
-## <a name="reference"></a>참고
+## <a name="reference"></a>참조
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorage?displayProperty=nameWithType>
 

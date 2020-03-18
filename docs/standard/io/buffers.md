@@ -8,10 +8,10 @@ helpviewer_keywords:
 author: rick-anderson
 ms.author: riande
 ms.openlocfilehash: f939164cd56b2fb2feeeb171236b0e1171327e19
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160120"
 ---
 # <a name="work-with-buffers-in-net"></a>.NET에서 버퍼 작업
@@ -29,11 +29,11 @@ ms.locfileid: "78160120"
 
 위의 메서드는,
 
-- `GetSpan(5)`을 사용하여 `IBufferWriter<byte>`에서 최소 5바이트의 버퍼를 요청합니다.
+- `IBufferWriter<byte>`을 사용하여 `GetSpan(5)`에서 최소 5바이트의 버퍼를 요청합니다.
 - 반환된 `Span<byte>`에 ASCII 문자열 "Hello"를 위한 바이트를 씁니다.
 - <xref:System.Buffers.IBufferWriter%601>를 호출하여 버퍼에 쓴 바이트 수를 표시합니다.
 
-이 쓰기 메서드는 `IBufferWriter<T>`에서 제공하는 `Memory<T>`/`Span<T>` 버퍼를 사용합니다. 또는 <xref:System.Buffers.BuffersExtensions.Write%2A> 확장 메서드를 사용하여 기존 버퍼를 `IBufferWriter<T>`에 복사할 수 있습니다. `Write`가 필요에 따라 `GetSpan`/`Advance`를 호출하는 작업을 수행하므로 쓰기 후 `Advance`를 호출할 필요가 없습니다.
+이 쓰기 메서드는 `Memory<T>`에서 제공하는 /`Span<T>``IBufferWriter<T>` 버퍼를 사용합니다. 또는 <xref:System.Buffers.BuffersExtensions.Write%2A> 확장 메서드를 사용하여 기존 버퍼를 `IBufferWriter<T>`에 복사할 수 있습니다. `Write`가 필요에 따라 `GetSpan`/`Advance`를 호출하는 작업을 수행하므로 쓰기 후 `Advance`를 호출할 필요가 없습니다.
 
 [!code-csharp[](~/samples/snippets/csharp/buffers/MyClass.cs?name=snippet2)]
 
@@ -57,7 +57,7 @@ ms.locfileid: "78160120"
 
 세 번째 표현은 `ReadOnlySequence<T>`의 다양한 작업에 대한 성능에 영향을 미치므로 가장 흥미로운 부분입니다.
 
-|표현|연산|복잡성|
+|표현|작업|복잡성|
 ---|---|---|
 |`T[]`/`ReadOnlyMemory<T>`|`Length`|`O(1)`|
 |`T[]`/`ReadOnlyMemory<T>`|`GetPosition(long)`|`O(1)`|
@@ -104,7 +104,7 @@ SequencePosition? FindIndexOf(in ReadOnlySequence<byte> buffer, byte data) => bu
 - 구문 분석된 세그먼트 내에서 `SequencePosition` 및 인덱스를 추적하여 데이터를 세그먼트 단위로 구문 분석합니다. 이렇게 하면 불필요한 할당을 피할 수 있지만 특히 버퍼가 작은 경우에는 비효율적입니다.
 - `ReadOnlySequence<T>`를 연속된 배열에 복사하고 단일 버퍼처럼 처리합니다.
   - `ReadOnlySequence<T>` 크기가 작으면 [stackalloc](../../csharp/language-reference/operators/stackalloc.md) 연산자를 사용하여 스택 할당 버퍼에 데이터를 복사하는 것이 합리적입니다.
-  - <xref:System.Buffers.ArrayPool%601.Shared%2A?displayProperty=nameWithType>를 사용하여 `ReadOnlySequence<T>`를 풀링된 배열에 복사합니다.
+  - `ReadOnlySequence<T>`를 사용하여 <xref:System.Buffers.ArrayPool%601.Shared%2A?displayProperty=nameWithType>를 풀링된 배열에 복사합니다.
   - [`ReadOnlySequence<T>.ToArray()`](xref:System.Buffers.BuffersExtensions.ToArray%2A)를 사용합니다. 이는 힙에서 새 `T[]`를 할당하므로 실행 부하 과다 경로에는 권장되지 않습니다.
 
 다음 예제에서는 `ReadOnlySequence<byte>`를 처리하는 몇 가지 일반적인 사례를 보여 줍니다.
@@ -121,7 +121,7 @@ SequencePosition? FindIndexOf(in ReadOnlySequence<byte> buffer, byte data) => bu
 
 다음 예제가 하는 일:
 
-- `ReadOnlySequence<byte>`에서 첫 번째 줄 바꿈(`\r\n`)을 찾아 out 'line' 매개 변수를 통해 반환합니다.
+- `\r\n`에서 첫 번째 줄 바꿈(`ReadOnlySequence<byte>`)을 찾아 out 'line' 매개 변수를 통해 반환합니다.
 - 입력 버퍼에서 `\r\n`을 제외하고 해당 줄을 자릅니다.
 
 [!code-csharp[](~/samples/snippets/csharp/buffers/MyClass.cs?name=snippet6)]
@@ -134,7 +134,7 @@ SequencePosition? FindIndexOf(in ReadOnlySequence<byte> buffer, byte data) => bu
 
 위의 코드는 빈 세그먼트를 사용하여 `ReadOnlySequence<byte>`를 만들고 이러한 빈 세그먼트가 다양한 API에 미치는 영향을 보여 줍니다.
 
-- `SequencePosition`이 빈 세그먼트를 가리키는 `ReadOnlySequence<T>.Slice`는 해당 세그먼트를 유지합니다.
+- `ReadOnlySequence<T>.Slice`이 빈 세그먼트를 가리키는 `SequencePosition`는 해당 세그먼트를 유지합니다.
 - 정수가 포함된 `ReadOnlySequence<T>.Slice`는 빈 세그먼트를 건너뜁니다.
 - `ReadOnlySequence<T>`를 열거하면 빈 세그먼트가 열거됩니다.
 
@@ -143,12 +143,12 @@ SequencePosition? FindIndexOf(in ReadOnlySequence<byte> buffer, byte data) => bu
 `ReadOnlySequence<T>`/`SequencePosition`을 처리할 때 일반 `ReadOnlySpan<T>`/`ReadOnlyMemory<T>`/`T[]`/`int`에 비해 비정상적인 결과가 몇 가지 있습니다.
 
 - `SequencePosition`은 절대 위치가 아니라 특정 `ReadOnlySequence<T>`의 위치 표식입니다. 특정 `ReadOnlySequence<T>`를 기준으로 하기 때문에 이 메서드가 시작된 `ReadOnlySequence<T>`의 외부에서 사용하는 경우 의미가 없습니다.
-- `ReadOnlySequence<T>` 없이는 `SequencePosition`에서 산술 연산을 수행할 수 없습니다. 즉 `position++`와 같은 기본 작업을 실행하면 `ReadOnlySequence<T>.GetPosition(position, 1)`이 작성됩니다.
+- `SequencePosition` 없이는 `ReadOnlySequence<T>`에서 산술 연산을 수행할 수 없습니다. 즉 `position++`와 같은 기본 작업을 실행하면 `ReadOnlySequence<T>.GetPosition(position, 1)`이 작성됩니다.
 - `GetPosition(long)`은 음수 인덱스를 지원하지 **않습니다**. 즉, 모든 세그먼트를 탐색하지 않고 두 번째에서 마지막까지 문자를 가져올 수 없습니다.
 - 두 개의 `SequencePosition`를 비교할 수 없어 다음 작업을 수행하기 어렵습니다.
   - 한 위치가 다른 위치보다 크거나 작은 경우를 확인합니다.
   - 몇 가지 구문 분석 알고리즘을 작성합니다.
-- `ReadOnlySequence<T>`는 개체 참조보다 크고, 가능하면 [in](../../csharp/language-reference/keywords/in-parameter-modifier.md) 또는 [ref](../../csharp/language-reference/keywords/ref.md)에 의해 전달되어야 합니다. `in` 또는 `ref`를 통해 `ReadOnlySequence<T>`를 전달하면 [구조체](../../csharp/language-reference/builtin-types/struct.md) 복사본이 줄어듭니다.
+- `ReadOnlySequence<T>`는 개체 참조보다 크고, 가능하면 [in](../../csharp/language-reference/keywords/in-parameter-modifier.md) 또는 [ref](../../csharp/language-reference/keywords/ref.md)에 의해 전달되어야 합니다. `ReadOnlySequence<T>` 또는 `in`를 통해 `ref`를 전달하면 [구조체](../../csharp/language-reference/builtin-types/struct.md) 복사본이 줄어듭니다.
 - 빈 세그먼트:
   - `ReadOnlySequence<T>` 내에서 유효합니다.
   - `ReadOnlySequence<T>.TryGet` 메서드를 사용하여 반복할 때 표시될 수 있습니다.
@@ -174,7 +174,7 @@ SequencePosition? FindIndexOf(in ReadOnlySequence<byte> buffer, byte data) => bu
 
 ### <a name="use-position"></a>위치 사용
 
-다음 코드는 `SequenceReader<T>`를 사용한 `FindIndexOf` 구현 예제입니다.
+다음 코드는 `FindIndexOf`를 사용한 `SequenceReader<T>` 구현 예제입니다.
 
 [!code-csharp[](~/samples/snippets/csharp/buffers/MyClass.cs?name=snippet9)]
 

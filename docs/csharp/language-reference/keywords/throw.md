@@ -10,11 +10,11 @@ helpviewer_keywords:
 - throw keyword [C#]
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
 ms.openlocfilehash: 04d3138e3390627355b4b2d4e25c6b00248cec1a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713055"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398114"
 ---
 # <a name="throw-c-reference"></a>throw(C# 참조)
 
@@ -28,7 +28,7 @@ ms.locfileid: "75713055"
 throw [e];
 ```
 
-여기서 `e`는 <xref:System.Exception?displayProperty=nameWithType>에서 파생된 클래스의 인스턴스입니다. 다음 예제에서는 `throw` 문을 사용하여 `GetNumber`라는 메서드에 전달된 인수가 내부 배열의 유효한 인덱스에 해당하지 않는 경우  <xref:System.IndexOutOfRangeException> 을 throw합니다.
+여기서 `e`는 <xref:System.Exception?displayProperty=nameWithType>에서 파생된 클래스의 인스턴스입니다. 다음 예제에서는 `throw` 문을 사용하여 <xref:System.IndexOutOfRangeException>라는 메서드에 전달된 인수가 내부 배열의 유효한 인덱스에 해당하지 않는 경우 `GetNumber`을 throw합니다.
 
 [!code-csharp[csrefKeyword#1](~/samples/snippets/csharp/language-reference/keywords/throw/throw-1.cs#1)]
 
@@ -38,12 +38,12 @@ throw [e];
 
 ## <a name="re-throwing-an-exception"></a>예외 다시 throw
 
-`catch` 블록에서 `throw`를 사용하여 `catch` 블록에서 처리된 예외를 다시 throw할 수도 있습니다.  이 경우 `throw`는 예외 피연산자를 사용하지 않습니다. 이는 메서드가 호출자의 인수를 다른 일부 라이브러리 메서드에 전달하고 라이브러리 메서드가 호출자에게 전달되어야 하는 예외를 throw하는 경우에 가장 유용합니다. 예를 들어 다음 예제에서는 초기화되지 않은 문자열의 첫 번째 문자를 검색하려고 할 때 throw되는 <xref:System.NullReferenceException>을 다시 throw합니다.
+`throw` 블록에서 `catch`를 사용하여 `catch` 블록에서 처리된 예외를 다시 throw할 수도 있습니다.  이 경우 `throw`는 예외 피연산자를 사용하지 않습니다. 이는 메서드가 호출자의 인수를 다른 일부 라이브러리 메서드에 전달하고 라이브러리 메서드가 호출자에게 전달되어야 하는 예외를 throw하는 경우에 가장 유용합니다. 예를 들어 다음 예제에서는 초기화되지 않은 문자열의 첫 번째 문자를 검색하려고 할 때 throw되는 <xref:System.NullReferenceException>을 다시 throw합니다.
 
 [!code-csharp[csrefKeyword#3](~/samples/snippets/csharp/language-reference/keywords/throw/throw-3.cs#3)]
 
 > [!IMPORTANT]
-> `catch` 블록의 `throw e` 구문을 사용하여 호출자에게 전달하는 새 예외를 인스턴스화할 수도 있습니다. 이 경우 <xref:System.Exception.StackTrace> 속성에서 제공되는 원래 예외의 스택 추적이 유지되지 않습니다.
+> `throw e` 블록의 `catch` 구문을 사용하여 호출자에게 전달하는 새 예외를 인스턴스화할 수도 있습니다. 이 경우 <xref:System.Exception.StackTrace> 속성에서 제공되는 원래 예외의 스택 추적이 유지되지 않습니다.
 
 ## <a name="the-throw-expression"></a>`throw` 식
 
@@ -57,7 +57,7 @@ C# 7.0부터 `throw`를 명령문뿐만 아니라 식으로도 사용할 수 있
 
    [!code-csharp[csrefKeyword#5](~/samples/snippets/csharp/language-reference/keywords/throw/coalescing.cs#1)]
 
-- 식 본문 [람다](../../programming-guide/statements-expressions-operators/lambda-expressions.md) 또는 메서드. 다음 예제에서는 <xref:System.DateTime> 값으로 변환이 지원되지 않기 때문에 <xref:System.InvalidCastException>을 throw하는 식 본문 메서드를 보여 줍니다.
+- 식 본문 [람다](../../programming-guide/statements-expressions-operators/lambda-expressions.md) 또는 메서드. 다음 예제에서는 <xref:System.InvalidCastException> 값으로 변환이 지원되지 않기 때문에 <xref:System.DateTime>을 throw하는 식 본문 메서드를 보여 줍니다.
 
    [!code-csharp[csrefKeyword#6](~/samples/snippets/csharp/language-reference/keywords/throw/exp-bodied.cs#1)]
 
@@ -65,7 +65,7 @@ C# 7.0부터 `throw`를 명령문뿐만 아니라 식으로도 사용할 수 있
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

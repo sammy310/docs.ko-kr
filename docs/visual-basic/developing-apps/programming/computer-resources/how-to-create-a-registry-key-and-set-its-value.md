@@ -12,17 +12,17 @@ helpviewer_keywords:
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
 ms.openlocfilehash: 459c4b3f971009ee4b6b669c55bc058db0826595
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74349194"
 ---
-# <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>방법: Visual Basic에서 레지스트리 키 만들기 및 해당 값 설정
+# <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>방법: Visual Basic에서 레지스트리 키 만들기 및 값 설정
 
-`My.Computer.Registry` 개체의 `CreateSubKey` 메서드를 사용하여 레지스트리 키를 만들 수 있습니다.
+`CreateSubKey` 개체의 `My.Computer.Registry` 메서드를 사용하여 레지스트리 키를 만들 수 있습니다.
 
-## <a name="procedure"></a>프로시저
+## <a name="procedure"></a>절차
 
 ### <a name="to-create-a-registry-key"></a>레지스트리 키를 만들려면
 
@@ -40,7 +40,7 @@ ms.locfileid: "74349194"
 
     [!code-vb[VbResourceTasks#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#14)]
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 이 예제에서는 HKEY_CURRENT_USER 아래에 레지스트리 키 `MyTestKey`를 만든 다음 문자열 값 `MyTestKeyValue`를 `This is a test value`로 설정합니다.
 
@@ -52,7 +52,7 @@ ms.locfileid: "74349194"
 
 웹 애플리케이션에서 레지스트리를 읽는 경우 현재 사용자는 웹 애플리케이션에 구현된 인증 및 가장에 따라 결정됩니다.
 
-로컬 컴퓨터(<xref:Microsoft.Win32.Registry.LocalMachine>)보다 사용자 폴더(<xref:Microsoft.Win32.Registry.CurrentUser>)에 데이터를 쓰는 것이 더 안전합니다.
+로컬 컴퓨터(<xref:Microsoft.Win32.Registry.CurrentUser>)보다 사용자 폴더(<xref:Microsoft.Win32.Registry.LocalMachine>)에 데이터를 쓰는 것이 더 안전합니다.
 
 레지스트리 값을 만들 때 해당 값이 이미 있는 경우 수행할 작업을 결정해야 합니다. 다른 악성 프로세스에서 값을 이미 만들고 액세스했을 수도 있습니다. 레지스트리 값에 데이터를 넣으면 다른 프로세스에서 해당 데이터를 사용할 수 있습니다. 이를 방지하려면 <xref:Microsoft.Win32.RegistryKey.GetValue%2A> 메서드를 사용합니다. 키가 아직 없는 경우 `Nothing`이 반환됩니다.
 

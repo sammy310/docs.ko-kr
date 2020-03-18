@@ -2,13 +2,13 @@
 title: 모델 작성기란 무엇이며 어떻게 작동하나요?
 description: ML.NET 모델 작성기를 사용하여 기계 학습 모델을 자동으로 학습하는 방법
 ms.date: 01/07/2020
-ms.custom: overview
-ms.openlocfilehash: ac704b7961a8442a9174cdef5a4cd2a619236a4e
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.custom: overview, mlnet-tooling
+ms.openlocfilehash: cff4601843ec9ca7201ea7dbdbfbcfa18f50e46e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75777404"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397808"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>모델 작성기란 무엇이며 어떻게 작동하나요?
 
@@ -27,7 +27,7 @@ ML.NET 모델 작성기는 사용자 지정 기계 학습 모델을 빌드, 학�
 
 애플리케이션에 대한 기계 학습 모델을 생성하기 위해 모델 작성기에 다양한 시나리오를 가져올 수 있습니다.
 
-시나리오는 데이터를 사용하여 수행할 예측 유형에 대한 설명입니다. 예:
+시나리오는 데이터를 사용하여 수행할 예측 유형에 대한 설명입니다. 예를 들어:
 
 - 과거 판매 데이터를 기반으로 향후 제품 판매량 예측
 - 고객 리뷰에 따라 감정을 긍정 또는 부정으로 분류
@@ -159,7 +159,7 @@ ML.NET 모델 작성기는 사용자 지정 기계 학습 모델을 빌드, 학�
 
 평가는 모델의 성능을 측정하는 프로세스입니다. 모델 작성기는 학습된 모델을 통해 새 테스트 데이터를 사용하여 예측한 다음, 예측이 얼마나 올바른지를 측정합니다.
 
-모델 작성기는 학습 데이터를 학습 집합과 테스트 집합으로 분할합니다. 학습 데이터(80%)는 모델을 학습하는 데 사용되며, 테스트 데이터(20%)는 모델을 평가하기 위해 보류됩니다. 
+모델 작성기는 학습 데이터를 학습 집합과 테스트 집합으로 분할합니다. 학습 데이터(80%)는 모델을 학습하는 데 사용되며, 테스트 데이터(20%)는 모델을 평가하기 위해 보류됩니다.
 
 ### <a name="how-do-i-understand-my-model-performance"></a>모델 성능을 어떻게 이해할까요?
 

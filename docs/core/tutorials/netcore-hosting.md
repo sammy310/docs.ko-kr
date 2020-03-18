@@ -3,12 +3,12 @@ title: 사용자 지정 .NET Core 런타임 호스트 작성
 description: .NET Core 런타임의 작동 방식을 제어해야 하는 고급 시나리오를 지원하기 위해 네이티브 코드에서 .NET Core 런타임을 호스트하는 방법을 알아봅니다.
 author: mjrousos
 ms.date: 12/21/2018
-ms.openlocfilehash: 83012dd70c2480ce488c361e821694fb957d12d9
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.openlocfilehash: 46c7873a1865db04cf1c2b1bb2ded2b5dacbcc8d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75777228"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78239900"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>사용자 지정 .NET Core 호스트를 작성하여 네이티브 코드에서 .NET 런타임 제어
 
@@ -51,19 +51,19 @@ ms.locfileid: "75777228"
 
 `get_hostfxr_path`를 사용하여 `hostfxr` 라이브러리를 찾습니다. 라이브러리가 로드되고, 해당 내보내기가 검색됩니다.
 
-[!code-cpp[HostFxrHost#LoadHostFxr](~/samples/core/hosting/HostWithHostFxr/src/NativeHost/nativehost.cpp#LoadHostFxr)]
+[!code-cpp[HostFxrHost#LoadHostFxr](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithHostFxr/src/NativeHost/nativehost.cpp#LoadHostFxr)]
 
 ### <a name="step-2---initialize-and-start-the-net-core-runtime"></a>2단계 - .NET Core 런타임 초기화 및 시작
 
 `hostfxr_initialize_for_runtime_config` 및 `hostfxr_get_runtime_delegate` 함수는 로드되는 관리형 구성 요소에 대한 런타임 구성을 사용하여 .NET Core 런타임을 초기화하고 시작합니다. `hostfxr_get_runtime_delegate` 함수는 관리형 어셈블리를 로드하고 해당 어셈블리의 정적 메서드에 대한 함수 포인터를 가져올 수 있도록 런타임 대리자를 가져오는 데 사용됩니다.
 
-[!code-cpp[HostFxrHost#Initialize](~/samples/core/hosting/HostWithHostFxr/src/NativeHost/nativehost.cpp#Initialize)]
+[!code-cpp[HostFxrHost#Initialize](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithHostFxr/src/NativeHost/nativehost.cpp#Initialize)]
 
 ### <a name="step-3---load-managed-assembly-and-get-function-pointer-to-a-managed-method"></a>3단계 - 관리형 어셈블리 로드 및 관리형 메서드에 대한 함수 포인터 가져오기
 
 관리형 어셈블리를 로드하고 관리형 메서드에 대한 함수 포인터를 가져오기 위해 런타임 대리자가 호출됩니다. 대리자는 어셈블리 경로, 형식 이름 및 메서드 이름을 입력으로 사용하고, 관리형 메서드를 호출하는 데 사용할 수 있는 함수 포인터를 반환합니다.
 
-[!code-cpp[HostFxrHost#LoadAndGet](~/samples/core/hosting/HostWithHostFxr/src/NativeHost/nativehost.cpp#LoadAndGet)]
+[!code-cpp[HostFxrHost#LoadAndGet](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithHostFxr/src/NativeHost/nativehost.cpp#LoadAndGet)]
 
 샘플에서는 런타임 대리자를 호출할 때 `nullptr`을 대리자 형식 이름으로 전달하여 기본 시그니처를 관리형 메서드에 사용합니다.
 
@@ -77,7 +77,7 @@ public delegate int ComponentEntryPoint(IntPtr args, int sizeBytes);
 
 이제 기본 호스트가 관리형 메서드를 호출하고 원하는 매개 변수를 전달할 수 있습니다.
 
-[!code-cpp[HostFxrHost#CallManaged](~/samples/core/hosting/HostWithHostFxr/src/NativeHost/nativehost.cpp#CallManaged)]
+[!code-cpp[HostFxrHost#CallManaged](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithHostFxr/src/NativeHost/nativehost.cpp#CallManaged)]
 
 ## <a name="create-a-host-using-coreclrhosth"></a>CoreClrHost.h를 사용하여 호스트 만들기
 
@@ -91,7 +91,7 @@ public delegate int ComponentEntryPoint(IntPtr args, int sizeBytes);
 
 발견된 라이브러리는 `LoadLibraryEx`(Windows) 또는 `dlopen`(Linux/macOS)을 사용하여 로드됩니다.
 
-[!code-cpp[CoreClrHost#1](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#1)]
+[!code-cpp[CoreClrHost#1](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithCoreClrHost/src/SampleHost.cpp#1)]
 
 ### <a name="step-2---get-net-core-hosting-functions"></a>2단계 - .NET Core 호스팅 함수 가져오기
 
@@ -105,7 +105,7 @@ CoreClrHost에는 .NET Core를 호스팅하는 데 유용한 중요 메서드가
 
 CoreCLR 라이브러리를 로드한 후 다음 단계는 `GetProcAddress`(Windows) 또는 `dlsym`(Linux/macOS)을 사용하여 이러한 함수에 대한 참조를 가져오는 것입니다.
 
-[!code-cpp[CoreClrHost#2](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#2)]
+[!code-cpp[CoreClrHost#2](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithCoreClrHost/src/SampleHost.cpp#2)]
 
 ### <a name="step-3---prepare-runtime-properties"></a>3단계 - 런타임 속성 준비
 
@@ -121,23 +121,23 @@ CoreCLR 라이브러리를 로드한 후 다음 단계는 `GetProcAddress`(Windo
 
 이 샘플 호스트에서는 현재 디렉터리의 모든 라이브러리를 나열하기만 하면 TPA 목록이 작성됩니다.
 
-[!code-cpp[CoreClrHost#7](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#7)]
+[!code-cpp[CoreClrHost#7](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithCoreClrHost/src/SampleHost.cpp#7)]
 
 간단한 샘플이기 때문에 `TRUSTED_PLATFORM_ASSEMBLIES` 속성만 있으면 됩니다.
 
-[!code-cpp[CoreClrHost#3](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#3)]
+[!code-cpp[CoreClrHost#3](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithCoreClrHost/src/SampleHost.cpp#3)]
 
 ### <a name="step-4---start-the-runtime"></a>4단계 - 런타임 시작
 
 mscoree.h 호스팅 API(아래에 설명)와 달리 CoreCLRHost.h API는 런타임을 시작하고 기본 AppDomain을 만드는 작업을 모두 단일 호출로 처리합니다. `coreclr_initialize` 함수는 이전에 설명한 기본 경로, 이름, 속성을 허용하고, `hostHandle` 매개 변수를 통해 호스트에 대한 핸들을 다시 반환합니다.
 
-[!code-cpp[CoreClrHost#4](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#4)]
+[!code-cpp[CoreClrHost#4](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithCoreClrHost/src/SampleHost.cpp#4)]
 
 ### <a name="step-5---run-managed-code"></a>5단계 - 관리 코드 실행
 
 런타임이 시작되면 호스트가 관리 코드를 호출할 수 있습니다. 이는 두 가지 방법으로 수행할 수 있습니다. 이 자습서에 연결된 샘플 코드는 `coreclr_create_delegate` 함수를 사용하여 정적 관리 메서드에 대한 대리자를 만듭니다. 이 API는 [어셈블리 이름](../../standard/assembly/names.md), 네임스페이스로 한정된 형식 이름, 메서드 이름을 입력으로 허용하고, 메서드를 호출하는 데 사용할 수 있는 대리자를 반환합니다.
 
-[!code-cpp[CoreClrHost#5](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#5)]
+[!code-cpp[CoreClrHost#5](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithCoreClrHost/src/SampleHost.cpp#5)]
 
 이 샘플에서 호스트는 이제 `managedDelegate`를 호출하여 `ManagedWorker.DoWork` 메서드를 실행할 수 있습니다.
 
@@ -157,7 +157,7 @@ int hr = executeAssembly(
 
 마지막으로 호스트가 관리 코드 실행을 완료하면 `coreclr_shutdown` 또는 `coreclr_shutdown_2`를 사용하여 .NET Core 런타임이 종료됩니다.
 
-[!code-cpp[CoreClrHost#6](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#6)]
+[!code-cpp[CoreClrHost#6](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithCoreClrHost/src/SampleHost.cpp#6)]
 
 CoreCLR은 다시 초기화 또는 언로드를 지원하지 않습니다. `coreclr_initialize`를 다시 호출하거나 CoreCLR 라이브러리를 언로드하지 마세요.
 
@@ -173,7 +173,7 @@ CoreCLR은 다시 초기화 또는 언로드를 지원하지 않습니다. `core
 ### <a name="step-1---identify-the-managed-entry-point"></a>1단계 - 관리되는 진입점 식별
 필요한 헤더(예: [mscoree.h](https://github.com/dotnet/runtime/blob/master/src/coreclr/src/pal/prebuilt/inc/mscoree.h) 및 stdio.h)를 참조한 후 .NET Core 호스트에서는 가장 먼저 사용할 관리되는 진입점을 찾아야 합니다. 샘플 호스트에서는 `main` 메서드가 실행될 관리되는 이진 파일에 대한 경로로 첫 번째 명령줄 인수를 호스트로 사용하여 관리되는 진입점을 찾습니다.
 
-[!code-cpp[NetCoreHost#1](~/samples/core/hosting/HostWithMscoree/host.cpp#1)]
+[!code-cpp[NetCoreHost#1](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#1)]
 
 ### <a name="step-2---find-and-load-coreclr"></a>2단계 - CoreCLR 찾기 및 로드
 .NET Core 런타임 API는 *CoreCLR.dll*(Windows)에 있습니다. 호스팅 인터페이스(`ICLRRuntimeHost4`)를 가져오려면 *CoreCLR.dll*를 찾고 로드해야 합니다. 호스트에 따라 *CoreCLR.dll*을 찾는 방법에 대한 규칙을 정의합니다. 일부 호스트에서는 잘 알려진 머신 수준의 위치(예: *%programfiles%\dotnet\shared\Microsoft.NETCore.App\2.1.6*)에 파일이 있습니다. 다른 호스트에서는 *CoreCLR.dll*이 호스트 자체 또는 호스트되는 앱 옆의 위치에서 로드됩니다. 라이브러리를 찾기 위해 환경 변수를 참조할 수 있습니다.
@@ -182,17 +182,17 @@ Linux 또는 macOS에서 핵심 런타임 라이브러리는 각각 *libcoreclr.
 
 샘플 호스트는 *CoreCLR.dll*에 대해 몇 가지 일반적인 위치를 검색합니다. 위치를 찾으면 `LoadLibrary`(또는 Linux/macOS에서`dlopen`)를 통해 로드되어야 합니다.
 
-[!code-cpp[NetCoreHost#2](~/samples/core/hosting/HostWithMscoree/host.cpp#2)]
+[!code-cpp[NetCoreHost#2](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#2)]
 
 ### <a name="step-3---get-an-iclrruntimehost4-instance"></a>3단계 - ICLRRuntimeHost4 인스턴스 가져오기
 `ICLRRuntimeHost4` 호스팅 인터페이스는 `GetCLRRuntimeHost`에서 `GetProcAddress`(또는 Linux/macOS에서 `dlsym`)를 호출한 다음 해당 함수를 호출하여 검색됩니다.
 
-[!code-cpp[NetCoreHost#3](~/samples/core/hosting/HostWithMscoree/host.cpp#3)]
+[!code-cpp[NetCoreHost#3](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#3)]
 
 ### <a name="step-4---set-startup-flags-and-start-the-runtime"></a>4단계 - 시작 플래그 설정 및 런타임 시작
 `ICLRRuntimeHost4`를 사용하여 이제 전체 런타임의 시작 플래그를 지정하고 런타임을 시작할 수 있습니다. 시작 플래그는 사용할 GC(가비지 수집기)(동시 또는 서버), 단일 AppDomain을 사용할지 여러 AppDomain을 사용할지 여부, 사용할 로더 최적화 정책(도메인 중립적인 어셈블리 로드에 대해)을 결정합니다.
 
-[!code-cpp[NetCoreHost#4](~/samples/core/hosting/HostWithMscoree/host.cpp#4)]
+[!code-cpp[NetCoreHost#4](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#4)]
 
 런타임은 `Start` 함수에 대한 호출로 시작됩니다.
 
@@ -205,7 +205,7 @@ hr = runtimeHost->Start();
 
 AppDomain 플래그는 보안 및 interop와 관련된 AppDomain 동작을 지정합니다. 이전 Silverlight 호스트는 샌드박스 사용자 코드에 이러한 설정을 사용했지만, 최신.NET Core 호스트는 완전 신뢰 상태로 사용자 코드를 실행하고 interop을 사용하도록 설정합니다.
 
-[!code-cpp[NetCoreHost#5](~/samples/core/hosting/HostWithMscoree/host.cpp#5)]
+[!code-cpp[NetCoreHost#5](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#5)]
 
 사용할 AppDomain 플래그를 결정한 후 AppDomain 속성을 정의해야 합니다. 속성은 문자열의 키/값 쌍입니다. 많은 속성은 AppDomain이 어셈블리를 로드하는 방법과 관련됩니다.
 
@@ -219,17 +219,17 @@ AppDomain 플래그는 보안 및 interop와 관련된 AppDomain 동작을 지�
 
 [간단한 샘플 호스트](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithMscoree)에서는 이러한 속성이 다음과 같이 설정됩니다.
 
-[!code-cpp[NetCoreHost#6](~/samples/core/hosting/HostWithMscoree/host.cpp#6)]
+[!code-cpp[NetCoreHost#6](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#6)]
 
 ### <a name="step-6---create-the-appdomain"></a>6단계 - AppDomain 만들기
 모든 AppDomain 플래그 및 속성이 준비되면 `ICLRRuntimeHost4::CreateAppDomainWithManager`를 사용하여 AppDomain을 설정할 수 있습니다. 이 함수는 선택적으로 정규화된 어셈블리 이름 및 형식 이름을 가져와서 도메인의 AppDomain 관리자로 사용합니다. AppDomain 관리자는 호스트에서 AppDomain 동작의 일부 측면을 제어하도록 허용할 수 있고, 호스트에서 사용자 코드를 직접 호출하지 않는 경우 관리 코드를 실행하기 위한 진입점을 제공할 수 있습니다.
 
-[!code-cpp[NetCoreHost#7](~/samples/core/hosting/HostWithMscoree/host.cpp#7)]
+[!code-cpp[NetCoreHost#7](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#7)]
 
 ### <a name="step-7---run-managed-code"></a>7단계 - 관리 코드 실행
 AppDomain이 실행 중이면 호스트에서 이제 관리 코드를 실행할 수 있습니다. `ICLRRuntimeHost4::ExecuteAssembly`를 사용하여 관리되는 어셈블리의 진입점 메서드를 호출하면 가장 쉽게 관리 코드를 실행할 수 있습니다. 이 함수는 단일 도메인 시나리오에서만 작동합니다.
 
-[!code-cpp[NetCoreHost#8](~/samples/core/hosting/HostWithMscoree/host.cpp#8)]
+[!code-cpp[NetCoreHost#8](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#8)]
 
 `ExecuteAssembly`가 호스트의 요구 사항을 충족하지 않는 경우 `CreateDelegate`를 사용하여 정적 관리 메서드에 대한 함수 포인터를 만듭니다. 이 경우 호스트에서 호출하는 메서드의 시그니처를 알아야 하지만(함수 포인터 형식을 만들기 위해) 호스트는 어셈블리의 진입점이 아닌 코드를 호출할 수 있습니다. 두 번째 매개 변수에 제공된 어셈블리 이름은 로드할 라이브러리의 [전체 관리형 어셈블리 이름](../../standard/assembly/names.md) 입니다.
 
@@ -248,7 +248,7 @@ hr = runtimeHost->CreateDelegate(
 ### <a name="step-8---clean-up"></a>8단계 - 정리
 마지막으로 호스트는 AppDomain을 언로드하고, 런타임을 중지하고, `ICLRRuntimeHost4` 참조를 릴리스하여 자체 정리해야 합니다.
 
-[!code-cpp[NetCoreHost#9](~/samples/core/hosting/HostWithMscoree/host.cpp#9)]
+[!code-cpp[NetCoreHost#9](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#9)]
 
 CoreCLR은 언로드를 지원하지 않습니다. CoreCLR 라이브러리를 언로드하지 마세요.
 

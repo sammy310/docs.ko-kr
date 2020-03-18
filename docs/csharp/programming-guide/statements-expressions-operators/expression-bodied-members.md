@@ -5,10 +5,10 @@ helpviewer_keywords:
 - expression-bodied members[C#]
 - C# language, expresion-bodied members
 ms.openlocfilehash: f212bb707d3dd2d4a7cc917d335a83cff01ed0cf
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75711989"
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>식 본문 멤버(C# 프로그래밍 가이드)
@@ -36,7 +36,7 @@ C# 6에서는 메서드 및 읽기 전용 속성에 식 본문 정의 지원이 
 
 식 본문 메서드는 형식이 메서드의 반환 형식과 일치하는 값을 반환하거나 `void`를 반환하는 메서드의 경우 일부 작업을 수행하는 단일 식으로 구성됩니다. 예를 들어 <xref:System.Object.ToString%2A> 메서드를 재정의하는 형식에는 일반적으로 현재 개체의 문자열 표현을 반환하는 단일 식이 포함되어 있습니다.
 
-다음 예제에<xref:System.Object.ToString%2A> 메서드를 식 본문 정의로 재정의하는 `Person` 클래스를 정의합니다. 또한 이름을 콘솔에 표시하는 `DisplayName` 메서드를 정의합니다. `return` 키워드는 `ToString` 식 본문 정의에 사용되지 않습니다.
+다음 예제에`Person` 메서드를 식 본문 정의로 재정의하는 <xref:System.Object.ToString%2A> 클래스를 정의합니다. 또한 이름을 콘솔에 표시하는 `DisplayName` 메서드를 정의합니다. `return` 키워드는 `ToString` 식 본문 정의에 사용되지 않습니다.
 
 [!code-csharp[expression-bodied-methods](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-methods.cs)]  
 
@@ -68,7 +68,7 @@ C# 7.0부터는 식 본문 정의를 사용하여 `get` 및 `set` 속성 접근�
 
 생성자에 대한 식 본문 정의는 일반적으로 생성자의 인수를 처리하거나 인스턴스 상태를 초기화하는 단일 할당 식 또는 메서드 호출로 구성됩니다.
 
-다음 예제에서는 생성자에 *name*이라는 단일 문자열 매개 변수가 있는 `Location` 클래스를 정의합니다. 식 본문 정의에서 `Name` 속성에 인수를 할당합니다.
+다음 예제에서는 생성자에 `Location`name*이라는 단일 문자열 매개 변수가 있는*  클래스를 정의합니다. 식 본문 정의에서 `Name` 속성에 인수를 할당합니다.
 
 [!code-csharp[expression-bodied-constructor](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
 
@@ -88,7 +88,7 @@ C# 7.0부터는 식 본문 정의를 사용하여 `get` 및 `set` 속성 접근�
 
 속성과 마찬가지로, `get` 접근자가 값을 반환하는 단일 식으로 구성되거나 `set` 접근자가 단순 할당을 수행하는 경우 인덱서의 `get` 및 `set` 접근자는 식 본문 정의로 구성됩니다.
 
-다음 예제에서는 다양한 스포츠의 이름이 포함된 내부 <xref:System.String> 배열을 포함하는 `Sports`라는 클래스를 정의합니다. 인덱서의 `get` 및 `set` 접근자는 둘 다 식 본문 정의로 구현됩니다.
+다음 예제에서는 다양한 스포츠의 이름이 포함된 내부 `Sports` 배열을 포함하는 <xref:System.String>라는 클래스를 정의합니다. 인덱서의 `get` 및 `set` 접근자는 둘 다 식 본문 정의로 구현됩니다.
 
 [!code-csharp[expression-bodied-indexer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-indexers.cs#1)]
 

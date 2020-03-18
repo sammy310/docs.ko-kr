@@ -3,10 +3,10 @@ title: 클라우드 네이티브 애플리케이션은 어떻습니까?
 description: Azure Cloud 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화 | 클라우드 네이티브 애플리케이션은 어떻습니까?
 ms.date: 04/28/2018
 ms.openlocfilehash: d2a7f89e347d75ddbdae84c8eb57e32447b83297
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77543549"
 ---
 # <a name="what-about-cloud-native-applications"></a>클라우드 네이티브 애플리케이션은 어떻습니까?

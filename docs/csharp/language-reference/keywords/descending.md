@@ -8,10 +8,10 @@ helpviewer_keywords:
 - descending keyword [C#]
 ms.assetid: 8d2cd1e5-9c1c-4dfc-b84c-60e2d3240927
 ms.openlocfilehash: e17963e58abef2757594d0f6f3f7c5e805a1c966
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713587"
 ---
 # <a name="descending-c-reference"></a>descending(C# 참조)
@@ -20,11 +20,11 @@ ms.locfileid: "75713587"
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 [orderby 절](./orderby-clause.md)에 `descending`을 사용하는 방법을 보여 줍니다.
+다음 예제에서는 `descending`orderby 절[에 ](./orderby-clause.md)을 사용하는 방법을 보여 줍니다.
 
 [!code-csharp[csrefKeywordsContextual#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#11)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C#의 LINQ](../../linq/index.md)

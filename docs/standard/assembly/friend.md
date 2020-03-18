@@ -6,10 +6,10 @@ dev_langs:
 - csharp
 - vb
 ms.openlocfilehash: a74d4b74ead8492028a092e090f9281231802a87
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348173"
 ---
 # <a name="friend-assemblies"></a>Friend 어셈블리
@@ -94,7 +94,7 @@ friend로 명시적으로 지정하는 어셈블리만 `internal`(C#) 또는 `Fr
 
 모듈 파일(확장명이 *.netmodule*인 파일)에서 어셈블리의 `internal`(C#) 또는 `Friend`(Visual Basic) 형식 및 메서드에 액세스하는 방법에 대한 자세한 내용은 [-moduleassemblyname(C#)](../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md) 또는 [-moduleassemblyname(Visual Basic)](../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - <xref:System.Security.Permissions.StrongNameIdentityPermission>

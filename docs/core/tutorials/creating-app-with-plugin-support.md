@@ -4,23 +4,23 @@ description: 플러그 인을 지원하는 .NET Core 애플리케이션을 만�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: 4c03c70edcdba52c4e6029402b92d5478a0d312c
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: eae792ddaa6655bfdcd932d3cb695f9dafa68130
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156649"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240846"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>플러그 인을 사용하여 .NET Core 애플리케이션 만들기
 
-이 자습서에서는 플러그 인을 로드할 사용자 지정 <xref:System.Runtime.Loader.AssemblyLoadContext>를 만드는 방법을 보여 줍니다. <xref:System.Runtime.Loader.AssemblyDependencyResolver>는 플러그 인의 종속성을 확인하는 데 사용됩니다. 이 자습서에서는 플러그 인의 종속성을 호스팅 애플리케이션에서 올바르게 격리합니다. 다음을 수행하는 방법을 알아봅니다.
+이 자습서에서는 플러그 인을 로드할 사용자 지정 <xref:System.Runtime.Loader.AssemblyLoadContext>를 만드는 방법을 보여 줍니다. <xref:System.Runtime.Loader.AssemblyDependencyResolver>는 플러그 인의 종속성을 확인하는 데 사용됩니다. 이 자습서에서는 플러그 인의 종속성을 호스팅 애플리케이션에서 올바르게 격리합니다. 이 문서에서 배울 내용은 다음과 같습니다.
 
 - 플러그 인을 지원하는 프로젝트를 구성합니다.
 - 각 플러그 인을 로드하는 사용자 지정 <xref:System.Runtime.Loader.AssemblyLoadContext>를 만듭니다.
 - <xref:System.Runtime.Loader.AssemblyDependencyResolver?displayProperty=fullName> 형식을 사용하여 플러그 인에 종속성을 포함할 수 있습니다.
 - 빌드 아티팩트를 복사하기만 하면 쉽게 배포할 수 있는 작성자 플러그 인입니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 - [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download) 또는 최신 버전을 설치합니다.
 
@@ -105,11 +105,11 @@ namespace AppWithPlugin
 
 프로젝트의 루트 폴더에서 `dotnet new classlib -o PluginBase`를 실행합니다. 또한 `dotnet sln add PluginBase/PluginBase.csproj`를 실행하여 솔루션 파일에 프로젝트를 추가합니다. `PluginBase/Class1.cs` 파일을 삭제하고, `PluginBase` 폴더에서 다음 인터페이스 정의를 포함한 `ICommand.cs`라는 새 파일을 만듭니다.
 
-[!code-csharp[the-plugin-interface](~/samples/core/extensions/AppWithPlugin/PluginBase/ICommand.cs)]
+[!code-csharp[the-plugin-interface](~/samples/snippets/core/tutorials/creating-app-with-plugin-support/csharp/PluginBase/ICommand.cs)]
 
 이 `ICommand` 인터페이스는 모든 플러그 인이 구현할 인터페이스입니다.
 
-이제 `ICommand` 인터페이스가 정의되어, 애플리케이션 프로젝트를 좀 더 채울 수 있습니다. 루트 폴더에서 `dotnet add AppWithPlugin\AppWithPlugin.csproj reference PluginBase\PluginBase.csproj` 명령을 사용하여 `AppWithPlugin` 프로젝트부터 `PluginBase` 프로젝트까지 참조를 추가합니다.
+이제 `ICommand` 인터페이스가 정의되어, 애플리케이션 프로젝트를 좀 더 채울 수 있습니다. 루트 폴더에서 `AppWithPlugin` 명령을 사용하여 `PluginBase` 프로젝트부터 `dotnet add AppWithPlugin\AppWithPlugin.csproj reference PluginBase\PluginBase.csproj` 프로젝트까지 참조를 추가합니다.
 
 지정된 파일 경로에서 플러그 인을 로드할 수 있도록 `// Load commands from plugins` 주석을 다음 코드 조각으로 바꿉니다.
 
@@ -148,7 +148,7 @@ if (command == null)
 command.Execute();
 ```
 
-마지막으로, 여기에 표시된 것처럼 `LoadPlugin` 및 `CreateCommands`라는 `Program` 클래스에 정적 메서드를 추가합니다.
+마지막으로, 여기에 표시된 것처럼 `Program` 및 `LoadPlugin`라는 `CreateCommands` 클래스에 정적 메서드를 추가합니다.
 
 ```csharp
 static Assembly LoadPlugin(string relativePath)
@@ -187,9 +187,9 @@ static IEnumerable<ICommand> CreateCommands(Assembly assembly)
 
 이제 애플리케이션은 로드된 플러그 인 어셈블리에서 명령을 올바르게 로드하고 인스턴스화할 수 있지만 플러그 인 어셈블리를 로드할 수는 없습니다. 다음 콘텐츠를 사용하여 *AppWithPlugin* 폴더에 *PluginLoadContext.cs*라는 파일을 만듭니다.
 
-[!code-csharp[loading-plugins](~/samples/core/extensions/AppWithPlugin/AppWithPlugin/PluginLoadContext.cs)]
+[!code-csharp[loading-plugins](~/samples/snippets/core/tutorials/creating-app-with-plugin-support/csharp/AppWithPlugin/PluginLoadContext.cs)]
 
-`PluginLoadContext` 형식은 <xref:System.Runtime.Loader.AssemblyLoadContext> 형식에서 파생됩니다. `AssemblyLoadContext` 형식은 어셈블리 버전이 충돌하지 않도록 하기 위해 개발자가 로드된 어셈블리를 다른 그룹으로 격리할 수 있는 런타임의 특수 형식입니다. 또한 사용자 지정 `AssemblyLoadContext`는 어셈블리를 로드하고 기본 동작을 재정의하는 다른 경로를 선택할 수 있습니다. `PluginLoadContext`는 .NET Core 3.0에 포함된 `AssemblyDependencyResolver` 형식의 인스턴스를 사용하여 경로에 대한 어셈블리 이름을 확인합니다. `AssemblyDependencyResolver` 개체는 .NET 클래스 라이브러리에 대한 경로를 사용하여 생성됩니다. 경로가 `AssemblyDependencyResolver` 생성자에 전달된 클래스 라이브러리의 경우 *.deps.json* 파일에 따라 상대 경로에 대한 어셈블리 및 네이티브 라이브러리를 확인합니다. 사용자 지정 `AssemblyLoadContext`를 사용하면 플러그 인에 고유한 종속성을 포함할 수 있고, `AssemblyDependencyResolver`를 통해 정확한 종속성을 쉽게 로드할 수 있습니다.
+`PluginLoadContext` 형식은 <xref:System.Runtime.Loader.AssemblyLoadContext> 형식에서 파생됩니다. `AssemblyLoadContext` 형식은 어셈블리 버전이 충돌하지 않도록 하기 위해 개발자가 로드된 어셈블리를 다른 그룹으로 격리할 수 있는 런타임의 특수 형식입니다. 또한 사용자 지정 `AssemblyLoadContext`는 어셈블리를 로드하고 기본 동작을 재정의하는 다른 경로를 선택할 수 있습니다. `PluginLoadContext`는 .NET Core 3.0에 포함된 `AssemblyDependencyResolver` 형식의 인스턴스를 사용하여 경로에 대한 어셈블리 이름을 확인합니다. `AssemblyDependencyResolver` 개체는 .NET 클래스 라이브러리에 대한 경로를 사용하여 생성됩니다. 경로가 *생성자에 전달된 클래스 라이브러리의 경우*.deps.json`AssemblyDependencyResolver` 파일에 따라 상대 경로에 대한 어셈블리 및 네이티브 라이브러리를 확인합니다. 사용자 지정 `AssemblyLoadContext`를 사용하면 플러그 인에 고유한 종속성을 포함할 수 있고, `AssemblyDependencyResolver`를 통해 정확한 종속성을 쉽게 로드할 수 있습니다.
 
 이제 `AppWithPlugin` 프로젝트에는 `PluginLoadContext` 형식이 포함되므로 다음 본문을 사용하여 `Program.LoadPlugin` 메서드를 업데이트합니다.
 
@@ -231,7 +231,7 @@ static Assembly LoadPlugin(string relativePath)
 
 3. *HelloPlugin/Class1.cs* 파일을 다음 콘텐츠를 포함하는 *HelloCommand.cs*라는 파일로 바꿉니다.
 
-[!code-csharp[the-hello-plugin](~/samples/core/extensions/AppWithPlugin/HelloPlugin/HelloCommand.cs)]
+[!code-csharp[the-hello-plugin](~/samples/snippets/core/tutorials/creating-app-with-plugin-support/csharp/HelloPlugin/HelloCommand.cs)]
 
 이제 *HelloPlugin.csproj* 파일을 엽니다. 결과는 다음과 비슷합니다.
 
@@ -257,15 +257,15 @@ static Assembly LoadPlugin(string relativePath)
 </ItemGroup>
 ```
 
-`<Private>false</Private>` 요소는 중요합니다. 그러면 MSBuild에서 *PluginBase.dll*을 HelloPlugin의 출력 디렉터리에 복사하지 않도록 지시합니다. *PluginBase.dll* 어셈블리가 출력 디렉터리에 표시되는 경우 `PluginLoadContext`는 *HelloPlugin.dll* 어셈블리를 로드할 때 거기서 해당 어셈블리를 찾아 함께 로드합니다. 이 시점에서 `HelloPlugin.HelloCommand` 형식은 기본 로드 컨텍스트에 로드된 `ICommand` 인터페이스가 아닌 `HelloPlugin` 프로젝트의 출력 디렉터리에서 *PluginBase.dll*의 `ICommand` 인터페이스를 구현합니다. 런타임에서 이러한 두 가지 형식을 다른 어셈블리와 다른 형식으로 인식하므로 `AppWithPlugin.Program.CreateCommands` 메서드는 해당 명령을 찾지 못합니다. 결과적으로, 플러그 인 인터페이스를 포함하는 어셈블리에 대한 참조에 `<Private>false</Private>` 메타데이터가 필요합니다.
+`<Private>false</Private>` 요소는 중요합니다. 그러면 MSBuild에서 *PluginBase.dll*을 HelloPlugin의 출력 디렉터리에 복사하지 않도록 지시합니다. *PluginBase.dll* 어셈블리가 출력 디렉터리에 표시되는 경우 `PluginLoadContext`는 *HelloPlugin.dll* 어셈블리를 로드할 때 거기서 해당 어셈블리를 찾아 함께 로드합니다. 이 시점에서 `HelloPlugin.HelloCommand` 형식은 기본 로드 컨텍스트에 로드된 `ICommand` 인터페이스가 아닌 *프로젝트의 출력 디렉터리에서*PluginBase.dll`HelloPlugin`의 `ICommand` 인터페이스를 구현합니다. 런타임에서 이러한 두 가지 형식을 다른 어셈블리와 다른 형식으로 인식하므로 `AppWithPlugin.Program.CreateCommands` 메서드는 해당 명령을 찾지 못합니다. 결과적으로, 플러그 인 인터페이스를 포함하는 어셈블리에 대한 참조에 `<Private>false</Private>` 메타데이터가 필요합니다.
 
-마찬가지로 `PluginBase`가 다른 패키지를 참조하는 경우 `<ExcludeAssets>runtime</ExcludeAssets>` 요소도 중요합니다. 이 설정은 `<Private>false</Private>`와 효과가 동일하지만 `PluginBase` 프로젝트 또는 해당 종속성 중 하나에 포함될 수 있는 패키지 참조에서 작동합니다.
+마찬가지로 `<ExcludeAssets>runtime</ExcludeAssets>`가 다른 패키지를 참조하는 경우 `PluginBase` 요소도 중요합니다. 이 설정은 `<Private>false</Private>`와 효과가 동일하지만 `PluginBase` 프로젝트 또는 해당 종속성 중 하나에 포함될 수 있는 패키지 참조에서 작동합니다.
 
-이제 `HelloPlugin` 프로젝트가 완료되었으므로 `HelloPlugin` 플러그 인을 찾을 수 있는 위치를 인식하도록 `AppWithPlugin` 프로젝트를 업데이트해야 합니다. `// Paths to plugins to load` 주석 뒤에 `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"`을 `pluginPaths` 배열의 요소로 추가합니다.
+이제 `HelloPlugin` 프로젝트가 완료되었으므로 `AppWithPlugin` 플러그 인을 찾을 수 있는 위치를 인식하도록 `HelloPlugin` 프로젝트를 업데이트해야 합니다. `// Paths to plugins to load` 주석 뒤에 `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"`을 `pluginPaths` 배열의 요소로 추가합니다.
 
 ## <a name="plugin-with-library-dependencies"></a>라이브러리 종속성이 있는 플러그 인
 
-모든 플러그 인은 "Hello World"보다 복잡하며, 여러 플러그 인에는 다른 라이브러리에 대한 종속성이 포함됩니다. 샘플에서 `JsonPlugin` 및 `OldJson` 플러그 인 프로젝트는 `Newtonsoft.Json`에 대한 NuGet 패키지 종속성을 포함한 플러그 인의 두 가지 예제를 보여줍니다. 프로젝트 파일 자체에는 프로젝트 참조에 대한 특수 정보가 없으며, (`pluginPaths` 배열에 플러그 인 경로를 추가한 후) AppWithPlugin 앱과 동일하게 실행하는 경우에도 플러그 인은 완벽하게 실행됩니다. 그러나 이러한 프로젝트는 참조된 어셈블리를 출력 디렉터리에 복사하지 않습니다. 따라서 어셈블리는 플러그 인이 작동하도록 사용자의 머신에 표시되어야 합니다. 이 문제는 두 가지 방법으로 해결할 수 있습니다. 첫 번째 방법은 클래스 라이브러리를 게시하는 `dotnet publish` 명령을 사용하는 것입니다. 또는 플러그 인에서 `dotnet build`의 출력을 사용하려는 경우 플러그 인의 프로젝트 파일에서 `<PropertyGroup>` 태그 사이에 `<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>` 속성을 추가하면 됩니다. 예제는 `XcopyablePlugin` 플러그 인 프로젝트를 참조하세요.
+모든 플러그 인은 "Hello World"보다 복잡하며, 여러 플러그 인에는 다른 라이브러리에 대한 종속성이 포함됩니다. 샘플에서 `JsonPlugin` 및 `OldJson` 플러그 인 프로젝트는 `Newtonsoft.Json`에 대한 NuGet 패키지 종속성을 포함한 플러그 인의 두 가지 예제를 보여줍니다. 프로젝트 파일 자체에는 프로젝트 참조에 대한 특수 정보가 없으며, (`pluginPaths` 배열에 플러그 인 경로를 추가한 후) AppWithPlugin 앱과 동일하게 실행하는 경우에도 플러그 인은 완벽하게 실행됩니다. 그러나 이러한 프로젝트는 참조된 어셈블리를 출력 디렉터리에 복사하지 않습니다. 따라서 어셈블리는 플러그 인이 작동하도록 사용자의 머신에 표시되어야 합니다. 이 문제는 두 가지 방법으로 해결할 수 있습니다. 첫 번째 방법은 클래스 라이브러리를 게시하는 `dotnet publish` 명령을 사용하는 것입니다. 또는 플러그 인에서 `dotnet build`의 출력을 사용하려는 경우 플러그 인의 프로젝트 파일에서 `<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>` 태그 사이에 `<PropertyGroup>` 속성을 추가하면 됩니다. 예제는 `XcopyablePlugin` 플러그 인 프로젝트를 참조하세요.
 
 ## <a name="other-examples-in-the-sample"></a>이 샘플의 기타 예제
 
@@ -273,7 +273,7 @@ static Assembly LoadPlugin(string relativePath)
 
 ## <a name="reference-a-plugin-interface-from-a-nuget-package"></a>NuGet 패키지에서 플러그 인 인터페이스 참조
 
-`A.PluginBase`라는 NuGet 패키지에 정의된 플러그 인 인터페이스가 포함된 앱 A가 있다고 가정하겠습니다. 플러그 인 프로젝트에서 패키지를 올바르게 참조하려면 어떻게 할까요? 프로젝트 참조의 경우 프로젝트 파일의 `ProjectReference` 요소에서 `<Private>false</Private>` 메타데이터를 사용하면 dll이 출력에 복사되지 않도록 방지합니다.
+`A.PluginBase`라는 NuGet 패키지에 정의된 플러그 인 인터페이스가 포함된 앱 A가 있다고 가정하겠습니다. 플러그 인 프로젝트에서 패키지를 올바르게 참조하려면 어떻게 할까요? 프로젝트 참조의 경우 프로젝트 파일의 `<Private>false</Private>` 요소에서 `ProjectReference` 메타데이터를 사용하면 dll이 출력에 복사되지 않도록 방지합니다.
 
 `A.PluginBase` 패키지를 올바르게 참조하기 위해 프로젝트 파일에서 `<PackageReference>` 요소를 다음으로 변경하는 것이 좋습니다.
 

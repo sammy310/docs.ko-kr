@@ -8,17 +8,17 @@ helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
 ms.openlocfilehash: fc6a23cabd93323cacc33dfc4388116881c1fc84
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74552262"
 ---
 # <a name="for-c-reference"></a>for(C# 참조)
 
 `for` 문은 지정된 부울 식이 `true`로 계산되는 동안 문 또는 문 블록을 실행합니다.
 
-`for` 문 블록 내 원하는 지점에서 [break](break.md) 문을 사용하여 루프를 중단하거나 [continue](continue.md) 문을 사용하여 루프의 다음 반복을 한 단계 실행할 수 있습니다. [goto](goto.md), [return](return.md) 또는 [throw](throw.md) 문으로 `for` 루프를 종료할 수도 있습니다.
+`for` 문 블록 내 원하는 지점에서 [break](break.md) 문을 사용하여 루프를 중단하거나 [continue](continue.md) 문을 사용하여 루프의 다음 반복을 한 단계 실행할 수 있습니다. `for`goto[, ](goto.md)return[ 또는 ](return.md)throw[ 문으로 ](throw.md) 루프를 종료할 수도 있습니다.
 
 ## <a name="structure-of-the-for-statement"></a>`for` 문의 구조
 
@@ -95,7 +95,7 @@ i++
 
 ## <a name="examples"></a>예
 
-다음 예제에서는 *initializer* 섹션에서 외부 루프 변수에 값 할당, *initializer* 및 *iterator* 섹션에서 메서드 호출, *iterator* 섹션에서 두 변수의 값 변경과 같이 `for` 문 섹션의 여러 가지 덜 일반적인 사용법을 보여 줍니다. **Run**을 선택하여 예제 코드를 실행합니다. 그런 다음, 코드를 수정하고 다시 실행할 수 있습니다.
+다음 예제에서는 `for`initializer*섹션에서 외부 루프 변수에 값 할당,* initializer*및*iterator*섹션에서 메서드 호출,* iterator*섹션에서 두 변수의 값 변경과 같이* 문 섹션의 여러 가지 덜 일반적인 사용법을 보여 줍니다. **Run**을 선택하여 예제 코드를 실행합니다. 그런 다음, 코드를 수정하고 다시 실행할 수 있습니다.
 
 [!code-csharp-interactive[not typical for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#6)]
 
@@ -105,7 +105,7 @@ i++
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)의 [for 문](~/_csharplang/spec/statements.md#the-for-statement) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/statements.md#the-for-statement)의 [for 문](/dotnet/csharp/language-reference/language-specification/introduction) 섹션을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

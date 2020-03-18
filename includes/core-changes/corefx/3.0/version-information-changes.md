@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 5612ebce67946e22aaeeba861115ce4f8967e1f5
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75344450"
 ---
 ### <a name="apis-that-report-version-now-report-product-and-not-file-version"></a>버전을 보고하는 API가 이제 파일 버전이 아닌 제품 버전을 보고함
@@ -14,7 +14,7 @@ ms.locfileid: "75344450"
 
 .NET Core 2.2 및 이전 버전에서는 <xref:System.Environment.Version?displayProperty=nameWithType>, <xref:System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription?displayProperty=nameWithType> 등의 메서드와 .NET Core 어셈블리의 파일 속성 대화 상자에 파일 버전이 반영됩니다. .NET Core 3.0부터는 제품 버전이 반영됩니다.
 
-다음 그림은 **Windows 탐색기** 파일 속성 대화 상자에 표시되는 .NET Core 2.2(왼쪽) 및 .NET Core 3.0(오른쪽)에 대한 *System.Runtime.dll* 어셈블리의 버전 정보 차이를 보여 줍니다.
+다음 그림은 *Windows 탐색기* 파일 속성 대화 상자에 표시되는 .NET Core 2.2(왼쪽) 및 .NET Core 3.0(오른쪽)에 대한 **System.Runtime.dll** 어셈블리의 버전 정보 차이를 보여 줍니다.
 
 ![제품 버전 정보 차이](~/docs/images/core-changes/corefx/version-information-changes/file-details.png)
 

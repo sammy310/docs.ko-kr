@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 5741e8cdd51e00d5459c4c1032a56682429aab17
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901724"
 ---
 ### <a name="mvc-pubternal-types-changed-to-internal"></a>MVC: "Pubternal" 유형이 내부로 변경됨

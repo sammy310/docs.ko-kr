@@ -3,17 +3,17 @@ title: dotnet build-server 명령
 description: dotnet build-server 명령은 빌드에서 시작된 서버와 상호 작용합니다.
 ms.date: 02/14/2020
 ms.openlocfilehash: a6a9cd6de66371caef66d1101b3f844dffc771ef
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503783"
 ---
 # <a name="dotnet-build-server"></a>dotnet build-server
 
 **이 문서의 적용 대상:**  ✔️ .NET Core 2.1 SDK 이상 버전
 
-## <a name="name"></a>이름
+## <a name="name"></a>name
 
 `dotnet build-server` - 빌드에서 시작된 서버와 상호 작용합니다.
 

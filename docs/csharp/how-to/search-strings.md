@@ -7,10 +7,10 @@ helpviewer_keywords:
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
 ms.openlocfilehash: 15ea77d13a93d88bd996a22b6fe1aaad81df572d
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74959704"
 ---
 # <a name="how-to-search-strings"></a>문자열 검색 방법
@@ -19,7 +19,7 @@ ms.locfileid: "74959704"
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-<xref:System.String?displayProperty=nameWithType> 클래스의 별칭인 [string](../language-reference/builtin-types/reference-types.md#the-string-type) 형식은 문자열 내용을 검색하기 위한 여러 가지 유용한 메서드를 제공합니다. 그중에 <xref:System.String.Contains%2A>, <xref:System.String.StartsWith%2A>, <xref:System.String.EndsWith%2A>, <xref:System.String.IndexOf%2A>, <xref:System.String.LastIndexOf%2A>입니다. <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 클래스는 텍스트에서 패턴을 검색하는 풍부한 어휘를 제공합니다. 이 문서에서는 이러한 기술 및 요구 사항에 대해 최상의 메서드를 선택하는 방법을 알아봅니다.
+[ 클래스의 별칭인 ](../language-reference/builtin-types/reference-types.md#the-string-type)string<xref:System.String?displayProperty=nameWithType> 형식은 문자열 내용을 검색하기 위한 여러 가지 유용한 메서드를 제공합니다. 그중에 <xref:System.String.Contains%2A>, <xref:System.String.StartsWith%2A>, <xref:System.String.EndsWith%2A>, <xref:System.String.IndexOf%2A>, <xref:System.String.LastIndexOf%2A>입니다. <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 클래스는 텍스트에서 패턴을 검색하는 풍부한 어휘를 제공합니다. 이 문서에서는 이러한 기술 및 요구 사항에 대해 최상의 메서드를 선택하는 방법을 알아봅니다.
 
 ## <a name="does-a-string-contain-text"></a>문자열에 텍스트가 포함되어 있나요?
 
@@ -41,9 +41,9 @@ ms.locfileid: "74959704"
 
 다음 코드 예제에서는 문장에서 "the" 또는 "their"라는 문자를 검색하고 대/소문자를 무시합니다. 고정 메서드 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>은 검색을 수행합니다. 검색할 문자열 및 검색 패턴을 입력합니다. 이 경우에 세 번째 인수는 대/소문자 구분 검색을 지정합니다. 자세한 내용은 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>을 참조하세요.  
 
-검색 패턴은 검색할 텍스트를 설명합니다. 다음 표에서는 검색 패턴의 각 요소에 대해 설명합니다. (아래 표에서는 C# 문자열에서 `\\`로 이스케이프되어야 하는 단일 `\`을 사용합니다.)
+검색 패턴은 검색할 텍스트를 설명합니다. 다음 표에서는 검색 패턴의 각 요소에 대해 설명합니다. (아래 표에서는 C# 문자열에서 `\`로 이스케이프되어야 하는 단일 `\\`을 사용합니다.)
 
-| 패턴  | 의미     |
+| pattern  | 의미     |
 | -------- |-------------|
 | the      | 텍스트 "the" 일치 |
 | (eir)?   | “eir”과 0 또는 1개 항목 일치 |
@@ -58,7 +58,7 @@ ms.locfileid: "74959704"
 
 다음 코드는 정규식을 사용하여 배열에서 각 문자열 형식의 유효성을 검사합니다. 유효성 검사에서는 각 문자열이 전화 번호의 형식을 사용해야 합니다. 이 경우 3개의 숫자 그룹이 대시로 구분되고, 처음 두 그룹에는 세 자리 숫자가 포함되며, 세 번째 그룹에는 네 자리 숫자가 포함됩니다. 검색 패턴은 정규식 `^\\d{3}-\\d{3}-\\d{4}$`을 사용합니다. 자세한 내용은 [정규식 언어 - 빠른 참조](../../standard/base-types/regular-expression-language-quick-reference.md)를 참조하세요.
 
-| 패턴  | 의미                             |
+| pattern  | 의미                             |
 | -------- |-------------------------------------|
 | ^        | 문자열의 시작 부분 일치 |
 | \d{3}    | 정확히 3자리 문자 일치  |

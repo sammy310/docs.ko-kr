@@ -1,5 +1,5 @@
 ---
-title: '방법: Try-Catch 블록을 사용하여 예외 catch'
+title: '방법: Try/Catch 블록을 사용하여 예외 catch'
 ms.date: 02/06/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - catch blocks
 ms.assetid: a3ce6dfd-1f64-471b-8ad8-8cfaf406275d
 ms.openlocfilehash: 5a9218d394b76e897f4263708a10f1bc895ad4e1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75708468"
 ---
 # <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a>try/catch 블록을 사용하여 예외를 catch하는 방법
 
-예외를 발생시키거나 throw할 수 있는 모든 코드 문을 `try` 블록에 배치하고, 예외를 처리하는 데 사용되는 명령문을 `try` 블록 아래에 있는 하나 이상의 `catch` 블록에 배치합니다. 각 `catch` 블록은 예외 형식을 포함하고 해당 예외 형식을 처리하는 데 필요한 추가 명령문을 포함할 수 있습니다.
+예외를 발생시키거나 throw할 수 있는 모든 코드 문을 `try` 블록에 배치하고, 예외를 처리하는 데 사용되는 명령문을 `catch` 블록 아래에 있는 하나 이상의 `try` 블록에 배치합니다. 각 `catch` 블록은 예외 형식을 포함하고 해당 예외 형식을 처리하는 데 필요한 추가 명령문을 포함할 수 있습니다.
 
 다음 예제에서 <xref:System.IO.StreamReader>는 *data.txt*라는 파일을 열고 해당 파일에서 줄을 검색합니다. 코드는 세 가지 예외 중 하나를 throw할 수 있으므로 `try` 블록에 위치합니다. 세 개 `catch` 블록이 예외를 catch하고 콘솔에 결과를 표시하여 예외를 처리합니다.
 
@@ -36,7 +36,7 @@ CLR(공용 언어 런타임)은 `catch` 블록에서 처리되지 않은 예외�
 > [!NOTE]
 > 대부분의 코드가 예외를 throw할 수 있고, <xref:System.OutOfMemoryException>과 같은 일부 예외는 언제든지 CLR에서 throw될 수 있습니다. 애플리케이션은 이러한 예외를 처리할 필요가 없지만 다른 사용자가 사용할 라이브러리를 작성하는 경우 이러한 가능성에 유의해야 합니다. `try` 블록에서 코드를 설정하는 경우에 대한 제안 사항은 [예외에 대한 모범 사례](best-practices-for-exceptions.md)를 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [예외](index.md)
 - [.NET에서 I/O 오류 처리](../io/handling-io-errors.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
 ms.openlocfilehash: 1d487edff2cdc2e63f81963bfaa1f68a06e5b36e
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75936849"
 ---
 # <a name="using-threads-and-threading"></a>스레드 및 스레딩 사용
@@ -52,7 +52,7 @@ ms.locfileid: "75936849"
 |<xref:System.Threading.Thread.Priority%2A>|운영 체제에서 스레드 예약의 우선 순위를 지정하는 데 사용되는 <xref:System.Threading.ThreadPriority> 값을 가져오거나 설정합니다. 자세한 내용은 [스레드 예약](scheduling-threads.md) 및 <xref:System.Threading.ThreadPriority> 참조를 참조하세요.|  
 |<xref:System.Threading.Thread.ThreadState%2A>|현재 스레드의 상태를 포함하는 <xref:System.Threading.ThreadState> 값을 가져옵니다.|  
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Threading.Thread?displayProperty=nameWithType>
 - [스레드 및 스레딩](threads-and-threading.md)

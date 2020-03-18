@@ -6,21 +6,21 @@ helpviewer_keywords:
 - folders [Visual Basic], creating
 ms.assetid: 0351a2ca-24d8-43b5-bb39-9b99e6401cff
 ms.openlocfilehash: 3d838352a0a3dd69a1555dc34b8acba3afba278b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348809"
 ---
 # <a name="how-to-create-a-directory-in-visual-basic"></a>방법: Visual Basic에서 디렉터리 만들기
 
-`My.Computer.FileSystem` 개체의 `CreateDirectory` 메서드를 사용하여 디렉터리를 만듭니다.  
+`CreateDirectory` 개체의 `My.Computer.FileSystem` 메서드를 사용하여 디렉터리를 만듭니다.  
   
  디렉터리가 이미 있는 경우 예외가 throw되지 않습니다.  
   
 ### <a name="to-create-a-directory"></a>디렉터리를 만들려면  
   
-- 디렉터리를 만들어야 하는 위치의 전체 경로를 지정하여 `CreateDirectory` 메서드를 사용합니다. 이 예제에서는 `C:\Documents and Settings\All Users\Documents`에 `NewDirectory` 디렉터리를 만듭니다.  
+- 디렉터리를 만들어야 하는 위치의 전체 경로를 지정하여 `CreateDirectory` 메서드를 사용합니다. 이 예제에서는 `NewDirectory`에 `C:\Documents and Settings\All Users\Documents` 디렉터리를 만듭니다.  
   
      [!code-vb[VbVbcnMyFileSystem#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#2)]  
   

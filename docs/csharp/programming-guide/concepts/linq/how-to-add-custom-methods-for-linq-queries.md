@@ -3,10 +3,10 @@ title: LINQ 쿼리용 사용자 지정 메서드를 추가하는 방법(C#)
 ms.date: 07/20/2015
 ms.assetid: 1a500f60-2e10-49fb-8b2a-d8d08e4817cb
 ms.openlocfilehash: e16175d3332b6ce36458eaa78af093e4f8772723
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141477"
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-c"></a>LINQ 쿼리용 사용자 지정 메서드를 추가하는 방법(C#)
@@ -19,7 +19,7 @@ ms.locfileid: "74141477"
 
 집계 메서드는 값 집합에서 하나의 값을 계산합니다. LINQ는 <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Min%2A> 및 <xref:System.Linq.Enumerable.Max%2A>를 포함하여 여러 집계 메서드를 제공합니다. <xref:System.Collections.Generic.IEnumerable%601> 인터페이스에 확장 메서드를 추가하여 고유한 집계 메서드를 만들 수 있습니다.
 
-다음 코드 예제에서는 `double` 형식의 숫자 시퀀스에 대한 중앙값을 계산하는 `Median`이라는 확장 메서드를 만드는 방법을 보여 줍니다.
+다음 코드 예제에서는 `Median` 형식의 숫자 시퀀스에 대한 중앙값을 계산하는 `double`이라는 확장 메서드를 만드는 방법을 보여 줍니다.
 
 ```csharp
 public static class LINQExtension
@@ -53,7 +53,7 @@ public static class LINQExtension
 
 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스에서 다른 집계 메서드를 호출하는 것과 같은 방식으로 열거 가능한 컬렉션에 대해 이 확장 메서드를 호출합니다.
 
-다음 코드 예제에서는 `double` 형식의 배열에 대해 `Median` 메서드를 사용하는 방법을 보여 줍니다.
+다음 코드 예제에서는 `Median` 형식의 배열에 대해 `double` 메서드를 사용하는 방법을 보여 줍니다.
 
 ```csharp
 double[] numbers1 = { 1.9, 2, 8, 4, 5.7, 6, 7.2, 0 };
@@ -77,7 +77,7 @@ Console.WriteLine("double: Median = " + query1);
 
 #### <a name="to-create-an-overload-for-each-type"></a>각 형식에 대한 오버로드를 만들려면
 
-지원하려는 각 형식에 대한 특정 오버로드를 만들 수 있습니다. 다음 코드 예제에서는 `integer` 형식에 대한 `Median` 메서드의 오버로드를 보여 줍니다.
+지원하려는 각 형식에 대한 특정 오버로드를 만들 수 있습니다. 다음 코드 예제에서는 `Median` 형식에 대한 `integer` 메서드의 오버로드를 보여 줍니다.
 
 ```csharp
 //int overload
@@ -88,7 +88,7 @@ public static double Median(this IEnumerable<int> source)
 }
 ```
 
-이제 다음 코드와 같이 `integer` 및 `double` 형식에 대한 `Median` 오버로드를 호출할 수 있습니다.
+이제 다음 코드와 같이 `Median` 및 `integer` 형식에 대한 `double` 오버로드를 호출할 수 있습니다.
 
 ```csharp
 double[] numbers1 = { 1.9, 2, 8, 4, 5.7, 6, 7.2, 0 };
@@ -119,7 +119,7 @@ Console.WriteLine("int: Median = " + query2);
 
 제네릭 개체의 시퀀스를 허용하는 오버로드를 만들 수도 있습니다. 이 오버로드는 대리자를 매개 변수로 사용하여 제네릭 형식의 개체 시퀀스를 특정 형식으로 변환합니다.
 
-다음 코드에서는 <xref:System.Func%602> 대리자를 매개 변수로 사용하는 `Median` 메서드의 오버로드를 보여 줍니다. 이 대리자는 제네릭 형식 T의 개체를 사용하고 `double` 형식의 개체를 반환합니다.
+다음 코드에서는 `Median` 대리자를 매개 변수로 사용하는 <xref:System.Func%602> 메서드의 오버로드를 보여 줍니다. 이 대리자는 제네릭 형식 T의 개체를 사용하고 `double` 형식의 개체를 반환합니다.
 
 ```csharp
 // Generic overload.

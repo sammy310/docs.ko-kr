@@ -7,10 +7,10 @@ helpviewer_keywords:
 - obsolete types [.NET Framework]
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 ms.openlocfilehash: b7932a553f39e1f1da2a3946878d6224099da8da
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74802689"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework에서 사용되지 않는 형식
@@ -86,7 +86,7 @@ ms.locfileid: "74802689"
 |<xref:System.Collections.IHashCodeProvider?displayProperty=nameWithType>|대신 <xref:System.Collections.IEqualityComparer?displayProperty=nameWithType>를 사용하십시오.|
 |<xref:System.Configuration.Assemblies.AssemblyHash?displayProperty=nameWithType>|<xref:System.Configuration.Assemblies.AssemblyHash> 클래스는 사용되지 않습니다.|
 |<xref:System.Diagnostics.Contracts.Internal.ContractHelper?displayProperty=nameWithType>|.NET Framework 4.5에서 처음으로 사용되지 않음 System.Runtime.CompilerServices 네임스페이스의 <xref:System.Runtime.CompilerServices.ContractHelper?displayProperty=nameWithType> 클래스를 대신 사용합니다.|
-|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|대체 API를 사용할 수 있습니다. 대신 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 사용자 지정 특성을 내보냅니다.|
+|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|대체 API 사용 가능: <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 사용자 지정 특성을 대신 내보냅니다.|
 |<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=nameWithType>를 사용하세요.|
 |<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=nameWithType>를 사용하세요.|
 |<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=nameWithType>를 사용하세요.|
@@ -132,7 +132,7 @@ ms.locfileid: "74802689"
 |<xref:System.Runtime.InteropServices.UCOMITypeInfo?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo?displayProperty=nameWithType>를 사용하세요.|
 |<xref:System.Runtime.InteropServices.UCOMITypeLib?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.ITypeLib?displayProperty=nameWithType>를 사용하세요.|
 |<xref:System.Runtime.InteropServices.VARDESC?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.VARDESC?displayProperty=nameWithType>를 사용하세요.|
-|<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=nameWithType> 를 사용하세요.|
+|<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=nameWithType>를 사용하세요.|
 |<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalScope>는 .NET 2.0 투명도 호환성을 위한 용도로만 사용됩니다.|
 |<xref:System.Security.SecurityTreatAsSafeAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityTreatAsSafeAttribute>는 .NET 2.0 투명도 호환성을 위한 용도로만 사용됩니다. 대신 <xref:System.Security.SecuritySafeCriticalAttribute?displayProperty=nameWithType>를 사용하십시오.|
 |<xref:System.Security.Policy.FirstMatchCodeGroup?displayProperty=nameWithType>|이 형식은 사용되지 않으며 .NET Framework의 이후 릴리스에서 제거됩니다.|
@@ -621,8 +621,8 @@ IEHost.dll 및 IEExec.exe 어셈블리는 .NET Framework에서 제거되었습�
 
 |형식|메시지|
 |----------|-------------|
-|<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|이 클래스는 사용되지 않습니다. 대신 *Microsoft.Build* 어셈블리의 <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType>을 사용하세요.|
-|<xref:Microsoft.Build.BuildEngine.Project?displayProperty=nameWithType>|이 클래스는 사용되지 않습니다. 대신 *Microsoft.Build* 어셈블리의 <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType>을 사용하세요.|
+|<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|이 클래스는 사용되지 않습니다. 대신 <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType>Microsoft.Build*어셈블리의*을 사용하세요.|
+|<xref:Microsoft.Build.BuildEngine.Project?displayProperty=nameWithType>|이 클래스는 사용되지 않습니다. 대신 <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType>Microsoft.Build*어셈블리의*을 사용하세요.|
 
 [맨 위로 이동](#introduction)
 

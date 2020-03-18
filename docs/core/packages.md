@@ -4,11 +4,11 @@ description: 패키지, 메타패키지 및 프레임워크 용어에 관해 알
 author: richlander
 ms.date: 06/20/2016
 ms.openlocfilehash: 657519edf1c0860ee3222c71ce85723e19029a9d
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965895"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79397934"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>패키지, 메타패키지 및 프레임워크
 
@@ -106,11 +106,11 @@ ms.locfileid: "76965895"
 - `netstandard`
 - `netcoreapp`
 
-### <a name="net-standard"></a>.NET Standard
+### <a name="net-standard"></a>.NET 표준
 
 .NET Standard([대상 프레임워크 모니커](../standard/frameworks.md): `netstandard`) 프레임워크는 [.NET Standard](../standard/net-standard.md)에 의해 정의되고 그 위에 빌드되는 API를 나타냅니다. 여러 런타임에서 실행되도록 만들어진 라이브러리는 이 프레임워크를 대상으로 하며, .NET Core, .NET Framework 및 Mono/Xamarin 같은 .NET Standard 호환 런타임에서 지원됩니다. 이러한 각 런타임은 구현하는 API에 따라 .NET 표준 버전 집합을 지원합니다.
 
-`netstandard` 프레임워크는 [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library) 메타패키지를 암시적으로 참조합니다. 예를 들어 다음 MSBuild 프로젝트 파일은 프로젝트가 [`NETStandard.Library` 버전 1.6](https://www.nuget.org/packages/NETStandard.Library/1.6.0) 메타패키지를 참조하는 `netstandard1.6`을 대상으로 지정함을 나타냅니다.
+`netstandard` 프레임워크는 [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library) 메타패키지를 암시적으로 참조합니다. 예를 들어 다음 MSBuild 프로젝트 파일은 프로젝트가 `netstandard1.6`[ 버전 1.6`NETStandard.Library` 메타패키지를 참조하는 ](https://www.nuget.org/packages/NETStandard.Library/1.6.0)을 대상으로 지정함을 나타냅니다.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -133,7 +133,7 @@ ms.locfileid: "76965895"
 
 `netstandard1.3`을 대상으로 하지만 `NETStandard.Library`의 1.6.0 버전을 사용하는 것이 이상하게 보일 수 있습니다. 메타패키지가 이전 `netstandard` 버전에 대한 지원을 유지하므로 이는 유효한 사용 사례입니다. 메타패키지의 1.6.0 버전에서 표준화하고 모든 라이브러리에 사용하여 다양한 `netstandard` 버전을 대상으로 하는 사례일 수 있습니다. 이 방법을 통해 `NETStandard.Library` 1.6.0만을 복원할 수 있으며 그 이전 버전은 복원할 수 없습니다.
 
-`NETStandard.Library`의 1.3.0 버전으로 `netstandard1.6`를 대상으로 하는 반대의 경우는 유효하지 않습니다. 더 낮은 메타패키지로 더 높은 프레임워크를 대상으로 할 수 없습니다. 더 낮은 버전의 메타패키지는 더 높은 프레임워크의 자산을 노출하지 않기 때문입니다. 메타패키지의 버전 관리 체계는 메타패키지가 프레임워크의 최고 버전과 일치해야 한다고 주장합니다. 버전 관리 체계 덕분에, `netstandard1.6` 자산을 포함하는 경우 `NETStandard.Library`의 첫 번째 버전은 v1.6.0입니다. (이전 예제와의 대칭을 위해 여기에는 v1.3.0이 사용되지만 실제로는 존재하지 않습니다.)
+`netstandard1.6`의 1.3.0 버전으로 `NETStandard.Library`를 대상으로 하는 반대의 경우는 유효하지 않습니다. 더 낮은 메타패키지로 더 높은 프레임워크를 대상으로 할 수 없습니다. 더 낮은 버전의 메타패키지는 더 높은 프레임워크의 자산을 노출하지 않기 때문입니다. 메타패키지의 버전 관리 체계는 메타패키지가 프레임워크의 최고 버전과 일치해야 한다고 주장합니다. 버전 관리 체계 덕분에, `NETStandard.Library` 자산을 포함하는 경우 `netstandard1.6`의 첫 번째 버전은 v1.6.0입니다. (이전 예제와의 대칭을 위해 여기에는 v1.3.0이 사용되지만 실제로는 존재하지 않습니다.)
 
 ### <a name="net-core-application"></a>.NET Core 애플리케이션
 
@@ -141,4 +141,4 @@ ms.locfileid: "76965895"
 
 `Microsoft.NETCore.App` 메타패키지는 `netcoreapp` 프레임워크를 대상으로 합니다. 최대 60개 라이브러리, `NETStandard.Library` 패키지에서 제공하는 최대 40개 및 추가 20개에 대한 액세스를 제공합니다. 추가 API에 대한 액세스 권한을 얻기 위해 `netcoreapp` 또는 호환 프레임워크(예: `netstandard`)를 대상으로 하는 추가 라이브러리를 참조할 수 있습니다.
 
-다른 `netstandard` 라이브러리에서 종속성을 충족하는 경우 `Microsoft.NETCore.App`에서 제공하는 추가 라이브러리 대부분은 또한 `netstandard`를 대상으로 합니다. 즉, `netstandard` 라이브러리 역시 해당 패키지를 종속성으로 참조할 수 있습니다.
+다른 `Microsoft.NETCore.App` 라이브러리에서 종속성을 충족하는 경우 `netstandard`에서 제공하는 추가 라이브러리 대부분은 또한 `netstandard`를 대상으로 합니다. 즉, `netstandard` 라이브러리 역시 해당 패키지를 종속성으로 참조할 수 있습니다.

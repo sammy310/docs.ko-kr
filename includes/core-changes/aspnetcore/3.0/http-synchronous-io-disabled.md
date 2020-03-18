@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 53d2c989120c92f4e2d18f50ce4b364bd4c9b604
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901607"
 ---
 ### <a name="http-synchronous-io-disabled-in-all-servers"></a>HTTP: 모든 서버에서 동기 IO 비활성화
@@ -29,7 +29,7 @@ ASP.NET Core 3.0부터 동기 서버 작업은 기본적으로 비활성화되�
 
 각 서버에는 이 동작을 제어하는 `AllowSynchronousIO` 옵션이 있으며 모든 항목에 대한 기본값은 이제 `false`입니다.
 
-이 동작은 요청에 따라 임시 완화로 재정의할 수도 있습니다. 예:
+이 동작은 요청에 따라 임시 완화로 재정의할 수도 있습니다. 예를 들어:
 
 ```csharp
 var syncIOFeature = HttpContext.Features.Get<IHttpBodyControlFeature>();

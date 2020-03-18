@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: ce4f09908b1025e8e5a0380c9bf035c6b0db479a
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568111"
 ---
 ### <a name="floating-point-formatting-and-parsing-behavior-changed"></a>부동 소수점 서식 및 구문 분석 동작 변경됨
@@ -20,7 +20,7 @@ ms.locfileid: "74568111"
 
 3.0
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 [Floating-point parsing and formatting improvements in .NET Core 3.0](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/)(.NET Core 3.0의 부동 소수점 구문 분석 및 서식 개선 사항) 블로그 게시물의 “기존 코드에 대한 잠재적 영향” 섹션에서는 .NET Core 2.2 애플리케이션과 비교해서 동작이 변경된 경우 코드를 변경하도록 제안합니다. 이 제안을 따르려면 일반적으로 다른 표준 또는 사용자 지정 형식 문자열을 사용하여 필요한 동작을 적용해야 합니다. 이전에 잘못된 일부 결과는 해결 방법이 없을 수도 있습니다.
 

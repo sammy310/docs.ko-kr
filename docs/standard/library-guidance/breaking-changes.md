@@ -3,11 +3,11 @@ title: 호환성이 손상되는 변경 및 .NET 라이브러리
 description: .NET 라이브러리를 만들 때 호환성이 손상되는 변경 탐색을 위한 모범 사례 권장 사항.
 ms.date: 10/02/2018
 ms.openlocfilehash: 2cbd9e0a818b52aede6c9b1f60fdf52dcbd7b96f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76731472"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398510"
 ---
 # <a name="breaking-changes"></a>호환성이 손상되는 변경
 
@@ -54,7 +54,7 @@ public class Task
 
 기능을 추가하고 잘못된 동작을 개선하는 것은 좋은 것이지만, 주의하지 않으면 기존 사용자가 업그레이드하기가 매우 어려울 수 있습니다. 개발자가 동작 주요 변경 내용을 처리하는 데 도움이 되는 한 가지 방법은 설정 뒤에 숨기는 것입니다. 설정을 통해 개발자가 최신 버전의 라이브러리로 업데이트하는 동시에 주요 변경 내용을 옵트인하거나 옵트아웃하도록 선택할 수 있습니다. 이 전략을 사용하면 개발자는 소비 코드를 시간 경과에 따라 조정하면서 최신 상태로 유지할 수 있습니다.
 
-예를 들어 ASP.NET Core MVC는 `MvcOptions`에서 활성화 및 비활성화 기능을 수정하는 [호환성 버전](/aspnet/core/mvc/compatibility-version)의 개념을 가지고 있습니다.
+예를 들어 ASP.NET Core MVC는 [에서 활성화 및 비활성화 기능을 수정하는 ](/aspnet/core/mvc/compatibility-version)호환성 버전`MvcOptions`의 개념을 가지고 있습니다.
 
 ✔️ 기존 사용자에게 영향을 줄 경우 기본적으로 새 기능을 사용하지 않고 개발자가 설정을 사용하여 기능을 옵트인하도록 허용하는 것을 고려하세요.
 
@@ -96,7 +96,7 @@ public class Document
 
 > API를 제거하는 것은 이진 호환성이 손상되는 변경입니다. 사용되지 않는 형식 및 메서드를 유지 관리하는 것이 비용이 저렴하고 라이브러리에 많은 기술적 문제가 추가되지 않은 경우 이를 유지하는 것을 고려해 보세요. 형식 및 메서드를 제거하지 않으면 위에서 언급한 최악의 시나리오를 방지할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 개발자를 위한 버전 및 업데이트 고려 사항](../../csharp/whats-new/version-update-considerations.md)
 - [.NET에서의 API 주요 변경 내용에 대한 명확한 지침](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net)

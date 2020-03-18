@@ -4,10 +4,10 @@ description: .NET Core 앱의 디버깅 및 프로파일링을 구성하는 런�
 ms.date: 11/27/2019
 ms.topic: reference
 ms.openlocfilehash: c57cfa7233f48def890ded3c9d589b7f268147df
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74998860"
 ---
 # <a name="run-time-configuration-options-for-debugging-and-profiling"></a>디버깅 및 프로파일링을 위한 런타임 구성 옵션
@@ -19,7 +19,7 @@ ms.locfileid: "74998860"
 
 | | 설정 이름 | 값 |
 | - | - | - |
-| **runtimeconfig.json** | 해당 사항 없음 | 해당 사항 없음 |
+| **runtimeconfig.json** | N/A | N/A |
 | **환경 변수** | `COMPlus_EnableDiagnostics` | `1` - 사용<br/>`0` - 사용 안 함 |
 
 ## <a name="enable-profiling"></a>프로파일링 사용
@@ -29,7 +29,7 @@ ms.locfileid: "74998860"
 
 | | 설정 이름 | 값 |
 | - | - | - |
-| **runtimeconfig.json** | 해당 사항 없음 | 해당 사항 없음 |
+| **runtimeconfig.json** | N/A | N/A |
 | **환경 변수** | `CORECLR_ENABLE_PROFILING` | `0` - 사용 안 함<br/>`1` - 사용 |
 
 ## <a name="profiler-guid"></a>프로파일러 GUID
@@ -38,7 +38,7 @@ ms.locfileid: "74998860"
 
 | | 설정 이름 | 값 |
 | - | - | - |
-| **runtimeconfig.json** | 해당 사항 없음 | 해당 사항 없음 |
+| **runtimeconfig.json** | N/A | N/A |
 | **환경 변수** | `CORECLR_PROFILER` | *string-guid* |
 
 ## <a name="profiler-location"></a>프로파일러 위치
@@ -60,7 +60,7 @@ ms.locfileid: "74998860"
 
 | | 설정 이름 | 값 |
 | - | - | - |
-| **runtimeconfig.json** | 해당 사항 없음 | 해당 사항 없음 |
+| **runtimeconfig.json** | N/A | N/A |
 | **환경 변수** | `COMPlus_PerfMapEnabled` | `0` - 사용 안 함<br/>`1` - 사용 |
 
 ## <a name="perf-log-markers"></a>Perf 로그 마커
@@ -70,5 +70,5 @@ ms.locfileid: "74998860"
 
 | | 설정 이름 | 값 |
 | - | - | - |
-| **runtimeconfig.json** | 해당 사항 없음 | 해당 사항 없음 |
+| **runtimeconfig.json** | N/A | N/A |
 | **환경 변수** | `COMPlus_PerfMapIgnoreSignal` | `0` - 사용 안 함<br/>`1` - 사용 |

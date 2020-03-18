@@ -3,10 +3,10 @@ title: 요소 컬렉션을 검색하는 방법(LINQ to XML)(C#)
 ms.date: 07/20/2015
 ms.assetid: b849668c-7976-4974-b8e1-1cd587d34258
 ms.openlocfilehash: 89799b17115fb56a93bda5fbc144b21b334a6974
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345015"
 ---
 # <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-c"></a>요소 컬렉션을 검색하는 방법(LINQ to XML)(C#)
@@ -15,7 +15,7 @@ ms.locfileid: "75345015"
 ## <a name="example"></a>예제  
  이 예제에서는 `purchaseOrder` 요소의 자식 요소를 반복합니다.  
   
- 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 일반적인 구매 주문(LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md)에서 설명하는 것과 같은 일반적인 XML 구매 주문이 있을 수 있습니다.  
+ 이 예제에서는 XML 문서 [샘플 XML 파일: 일반적인 구매 주문(LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md)을 사용합니다.  
   
 ```csharp  
 XElement po = XElement.Load("PurchaseOrder.xml");  
@@ -35,6 +35,6 @@ Name: DeliveryNotes
 Name: Items  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [LINQ to XML 축(C#)](./linq-to-xml-axes-overview.md)
