@@ -4,10 +4,10 @@ description: Visual Studio 2017 버전 15.7 이상에서 사용할 수 있는 Do
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
 ms.openlocfilehash: 2b6fdc33f9cf850cf9e52fca4a1a9754cd412567
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68673880"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>Windows에서 Visual Studio 2017의 Docker 도구 사용
@@ -72,7 +72,7 @@ Docker 지원을 추가하거나 사용하도록 설정하면 Visual Studio가 �
 
 다음 표는 이러한 옵션을 설정하는 방법을 결정하는 데 도움이 될 수 있습니다.
 
-| name | 기본 설정 | 적용 대상 | 설명 |
+| 이름 | 기본 설정 | 적용 대상 | 설명 |
 | -----|:---------------:|:----------:| ----------- |
 | 프로젝트 로드 시 필요한 Docker 이미지를 자동으로 끌어오기 | 켜기 | Docker Compose | 프로젝트를 로드할 때 성능을 향상하기 위해 Visual Studio는 백그라운드에서 Docker 끌어오기 작업을 수행합니다. 이렇게 하면 코드를 실행할 준비가 되었을 때 이미지가 이미 다운로드되어 있거나 다운로드 중입니다. 단순히 프로젝트를 로드하고 코드를 검색하려는 경우에는 불필요한 컨테이너 이미지를 다운로드하지 않도록 이 기능을 끄면 됩니다. |
 | 백그라운드에서 자동으로 컨테이너 시작 | 켜기 | Docker Compose | 마찬가지로 성능을 향상하기 위해 Visual Studio는 개발자가 컨테이너를 빌드하고 실행할 때 볼륨 탑재가 완료된 컨테이너를 만듭니다. 컨테이너를 만드는 시기를 제어하려면 이 기능을 끕니다. |

@@ -12,10 +12,10 @@ helpviewer_keywords:
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
 ms.openlocfilehash: 06132509860b16d1e22cfdf7e3226c968d16b7cf
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73040652"
 ---
 # <a name="how-to-configure-network-tracing"></a>방법: 네트워크 추적 구성
@@ -86,7 +86,7 @@ ms.locfileid: "73040652"
 
 `<switches>` 블록에 이름을 추가할 때, 추적 출력에는 이름과 관련된 일부 메서드에서 가져온 정보가 포함됩니다. 다음 표에서는 출력을 설명합니다.
 
-|name|출력되는 위치|
+|이름|출력되는 위치|
 |----------|-----------------|
 |`System.Net.Sockets`|<xref:System.Net.Sockets.Socket>, <xref:System.Net.Sockets.TcpListener>, <xref:System.Net.Sockets.TcpClient> 및 <xref:System.Net.Dns> 클래스의 일부 퍼블릭 메서드|
 |`System.Net`|<xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpWebResponse>, <xref:System.Net.FtpWebRequest> 및 <xref:System.Net.FtpWebResponse> 클래스의 일부 퍼블릭 메서드와 SSL 디버그 정보(잘못된 인증서, 누락된 발급자 목록, 클라이언트 인증서 오류)|
@@ -105,7 +105,7 @@ ms.locfileid: "73040652"
 |`maxdatasize`|선택적 <xref:System.Int32> 특성입니다. 각 줄 추적에 포함된 네트워크 데이터의 최대 바이트 수를 설정합니다. 기본값은 1024입니다.<br /><br />**source** 요소에 이 특성을 설정해야 합니다. **switches** 요소 아래에 있는 요소에 이 특성을 설정하면 예외가 throw됩니다.<br/><br/>예: `<source name="System.Net" tracemode="includehex" maxdatasize="1024">`|
 |`tracemode`|선택적 <xref:System.String> 특성입니다. 16진수 및 텍스트 형식으로 프로토콜 추적을 표시하려면 `includehex`로 설정합니다. 텍스트만 표시하려면 `protocolonly`로 설정합니다. 기본값은 `includehex`입니다.<br /><br />**source** 요소에 이 특성을 설정해야 합니다. **switches** 요소 아래에 있는 요소에 이 특성을 설정하면 예외가 throw됩니다.<br/><br/>예: `<source name="System.Net" tracemode="includehex" maxdatasize="1024">`|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [네트워크 추적 해석](interpreting-network-tracing.md)
 - [.NET Framework의 네트워크 추적](network-tracing.md)

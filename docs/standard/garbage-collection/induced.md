@@ -6,10 +6,10 @@ helpviewer_keywords:
 - garbage collection, forced
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
 ms.openlocfilehash: 604b49ef577a46204b523ebf5a8575a30b81635e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73120928"
 ---
 # <a name="induced-collections"></a>인덱싱된 컬렉션
@@ -18,7 +18,7 @@ ms.locfileid: "73120928"
  애플리케이션 코드의 특정 지점에서 사용되는 메모리양이 상당히 감소하는 경우 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 메서드를 사용합니다. 예를 들어 애플리케이션이 몇 가지 컨트롤이 있는 복잡한 대화 상자를 사용하는 경우 대화 상자를 닫을 때 <xref:System.GC.Collect%2A>를 호출하면 즉시 대화 상자에서 사용하는 메모리를 확보하여 성능을 개선할 수 있습니다. 가비지 수집기가 최적이 아닌 시간에 개체를 회수하려고 하는 경우 성능이 저하될 수 있기 때문에 애플리케이션이 너무 자주 가비지 수집을 발생시키지 않도록 합니다. 다음 섹션에서 설명된 대로 <xref:System.GCCollectionMode.Optimized?displayProperty=nameWithType> 열거형 값을 <xref:System.GC.Collect%2A> 메서드에 제공하여 수집의 생산성이 높은 경우에만 수집할 수 있습니다.  
   
 ## <a name="gc-collection-mode"></a>GC 컬렉션 모드  
- 다음과 같이 <xref:System.GCCollectionMode> 값을 포함하는 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 메서드 오버로드 중 하나를 사용하여 강제된 컬렉션에 대한 동작을 지정할 수 있습니다.  
+ 다음과 같이 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 값을 포함하는 <xref:System.GCCollectionMode> 메서드 오버로드 중 하나를 사용하여 강제된 컬렉션에 대한 동작을 지정할 수 있습니다.  
   
 |`GCCollectionMode` 값|설명|  
 |------------------------------|-----------------|  

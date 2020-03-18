@@ -3,10 +3,10 @@ title: 구문 분석 오류를 Catch하는 방법(C#)
 ms.date: 07/20/2015
 ms.assetid: bfb612d4-5605-48ef-8c93-915cf9d5dcfb
 ms.openlocfilehash: 1a05037892061dec85e7837472e8ec13e076724b
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141488"
 ---
 # <a name="how-to-catch-parsing-errors-c"></a>구문 분석 오류를 Catch하는 방법(C#)
@@ -14,7 +14,7 @@ ms.locfileid: "74141488"
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]은(는) <xref:System.Xml.XmlReader>를 사용하여 구현됩니다. 잘못 구성되었거나 유효하지 않은 XML이 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에 전달되면 기본 <xref:System.Xml.XmlReader> 클래스에서 예외를 throw합니다. XML의 구문을 분석하는 <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>와 같은 다양한 메서드는 예외를 catch하지 않습니다. 예외는 애플리케이션에 의해 catch될 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드에서는 유효하지 않은 XML의 구문 분석을 시도합니다.  
   
 ```csharp  

@@ -14,10 +14,10 @@ helpviewer_keywords:
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
 ms.openlocfilehash: ef65c50111d6ba91ab70d0b9c8cb90c606f9366c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73103828"
 ---
 # <a name="creating-new-strings-in-net"></a>.NET에서 새 문자열 만들기
@@ -64,7 +64,7 @@ ms.locfileid: "73103828"
  [!code-csharp[Strings.Creating#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#3)]
  [!code-vb[Strings.Creating#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#3)]  
   
-### <a name="insert"></a>삽입  
+### <a name="insert"></a>Insert  
  **String.Insert** 메서드는 다른 문자열의 지정된 위치에 문자열을 삽입하여 새 문자열을 만듭니다. 이 메서드는 0부터 시작하는 인덱스를 사용합니다. 다음 예제에서는 `MyString`의 다섯 번째 인덱스 위치에 문자열을 삽입하고 이 값으로 새 문자열을 만듭니다.  
   
  [!code-csharp[Strings.Creating#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#4)]

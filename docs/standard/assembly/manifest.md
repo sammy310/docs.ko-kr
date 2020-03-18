@@ -9,10 +9,10 @@ helpviewer_keywords:
 - assemblies [.NET Framework], metadata
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
 ms.openlocfilehash: f1913f8c41ba4a7b54f7abcdfb97400503da8ac5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73107148"
 ---
 # <a name="assembly-manifest"></a>어셈블리 매니페스트
@@ -39,7 +39,7 @@ ms.locfileid: "73107148"
 ## <a name="assembly-manifest-contents"></a>어셈블리 매니페스트 내용  
  다음 표에서는 어셈블리 매니페스트에 포함되는 정보를 보여 줍니다. 어셈블리의 ID는 처음 네 개 항목(어셈블리 이름, 버전 번호, 문화권 및 강력한 이름 정보)으로 구성됩니다.  
   
-|정보|설명|  
+|Information|설명|  
 |-----------------|-----------------|  
 |어셈블리 이름|어셈블리의 이름을 나타내는 텍스트 문자열입니다.|  
 |버전 번호|주 버전 번호와 부 버전 번호 및 수정 번호와 빌드 번호입니다. 공용 언어 런타임은 이들 번호를 사용하여 버전 정책을 적용합니다.|  

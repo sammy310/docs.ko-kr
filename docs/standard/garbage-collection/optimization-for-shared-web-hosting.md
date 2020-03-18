@@ -8,14 +8,14 @@ helpviewer_keywords:
 - garbage collection, shared Web hosting
 ms.assetid: be98c0ab-7ef8-409f-8a0d-cb6e5b75ff20
 ms.openlocfilehash: 07a100e2cd6aaff2b54b99144c9d762c8979fb47
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140277"
 ---
 # <a name="optimization-for-shared-web-hosting"></a>공유 웹 호스팅을 위한 최적화
-여러 소규모 웹 사이트를 호스트하여 공유되는 서버의 관리자인 경우 .NET 디렉터리의 Aspnet.config 파일에서 `runtime` 노드에 ​​다음 `gcTrimCommitOnLowMemory` 설정을 추가하여 성능을 최적화하고 사이트 용량을 늘릴 수 있습니다.  
+여러 소규모 웹 사이트를 호스트하여 공유되는 서버의 관리자인 경우 .NET 디렉터리의 Aspnet.config 파일에서 `gcTrimCommitOnLowMemory` 노드에 ​​다음 `runtime` 설정을 추가하여 성능을 최적화하고 사이트 용량을 늘릴 수 있습니다.  
   
  `<gcTrimCommitOnLowMemory enabled="true|false"/>`  
   
@@ -28,7 +28,7 @@ ms.locfileid: "73140277"
   
  조건이 허용되는 경우 가비지 수집기는 `gcTrimCommitOnLowMemory` 설정으로 현재 애플리케이션을 지원하지 않고 무시하도록 결정할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 XML 조각은 `gcTrimCommitOnLowMemory` 설정을 사용하는 방법을 보여줍니다. 줄임표는 `runtime` 노드에 있는 기타 설정을 나타냅니다.  
   
 ```xml  

@@ -3,10 +3,10 @@ title: 일반적인 컨테이너 설계 원칙
 description: 적절한 컨테이너 디자인의 기본적인 원리를 알아봅니다. 이는 컨테이너를 하나의 프로세스만 호스팅해야 한다는 것입니다.
 ms.date: 02/15/2019
 ms.openlocfilehash: 69f3ff6c9303f0c4082695d861a8c90031295b6a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68672500"
 ---
 # <a name="common-container-design-principles"></a>일반적인 컨테이너 설계 원칙

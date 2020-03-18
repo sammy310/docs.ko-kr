@@ -11,10 +11,10 @@ helpviewer_keywords:
 - pausing threads
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
 ms.openlocfilehash: 3020694b93479d5f1d64d31c203f8fe033a10320
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73129001"
 ---
 # <a name="pausing-and-interrupting-threads"></a>스레드 일시 중지 및 중단
@@ -29,7 +29,7 @@ ms.locfileid: "73129001"
   
  한 스레드가 다른 스레드에서 <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>를 호출할 수는 없습니다.  <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>은 현재 스레드를 항상 일시 중지하는 정적 메서드입니다.  
   
- <xref:System.Threading.Timeout.Infinite?displayProperty=nameWithType> 값을 사용하여 <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>을 호출하면 일시 중지 스레드에서 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 메서드를 호출하는 다른 스레드에 의해 중단될 때까지 또는 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 메서드 호출에 의해 종료될 때까지 스레드가 일시 중지됩니다.  다음 예제에서는 대기 중인 스레드를 중단하는 두 가지 메서드를 보여 줍니다.  
+ <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> 값을 사용하여 <xref:System.Threading.Timeout.Infinite?displayProperty=nameWithType>을 호출하면 일시 중지 스레드에서 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 메서드를 호출하는 다른 스레드에 의해 중단될 때까지 또는 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 메서드 호출에 의해 종료될 때까지 스레드가 일시 중지됩니다.  다음 예제에서는 대기 중인 스레드를 중단하는 두 가지 메서드를 보여 줍니다.  
   
  [!code-csharp[Conceptual.Threading.Resuming#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.Threading.Resuming/cs/Sleep1.cs#1)]
  [!code-vb[Conceptual.Threading.Resuming#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.Threading.Resuming/vb/Sleep1.vb#1)]  

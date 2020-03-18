@@ -3,10 +3,10 @@ title: 지수 백오프를 사용하여 다시 시도 구현
 description: 지수 백오프를 사용하여 다시 시도를 구현하는 방법을 알아봅니다.
 ms.date: 10/16/2018
 ms.openlocfilehash: 1b948e399495eeb12016006442ac08d2b04f2e69
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68674540"
 ---
 # <a name="implement-retries-with-exponential-backoff"></a>지수 백오프를 사용하여 다시 시도 구현

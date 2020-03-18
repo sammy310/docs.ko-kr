@@ -17,10 +17,10 @@ helpviewer_keywords:
 - strings [.NET Framework], StringBuilder object
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
 ms.openlocfilehash: 19ee90f3300e3b610eeefd4949baa2759b834a60
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73121672"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>.NET에서 StringBuilder 클래스 사용
@@ -60,7 +60,7 @@ ms.locfileid: "73121672"
 ## <a name="modifying-the-stringbuilder-string"></a>StringBuilder 문자열 수정  
  다음 표에서는 **StringBuilder**의 내용을 수정하는 데 사용할 수 있는 메서드를 보여 줍니다.  
   
-|메서드 이름|사용|  
+|메서드 이름|기능|  
 |-----------------|---------|  
 |<xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType>|현재 **StringBuilder**의 끝에 정보를 추가합니다.|  
 |<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>|문자열에 전달된 서식 지정자를 서식 있는 텍스트로 바꿉니다.|  
@@ -82,7 +82,7 @@ ms.locfileid: "73121672"
  [!code-csharp[Conceptual.StringBuilder#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#5)]
  [!code-vb[Conceptual.StringBuilder#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#5)]  
   
-### <a name="insert"></a>삽입  
+### <a name="insert"></a>Insert  
  <xref:System.Text.StringBuilder.Insert%2A> 메서드는 현재 <xref:System.Text.StringBuilder> 개체의 지정된 위치에 문자열 또는 개체를 추가합니다. 다음 예에서는 이 메서드를 사용하여 <xref:System.Text.StringBuilder> 개체의 여섯 번째 위치에 단어를 삽입합니다.  
   
  [!code-cpp[Conceptual.StringBuilder#6](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#6)]
@@ -109,7 +109,7 @@ ms.locfileid: "73121672"
  [!code-csharp[Conceptual.StringBuilder#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/tostringexample1.cs#10)]
  [!code-vb[Conceptual.StringBuilder#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/tostringexample1.vb#10)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Text.StringBuilder?displayProperty=nameWithType>
 - [기본적인 문자열 작업](../../../docs/standard/base-types/basic-string-operations.md)

@@ -5,10 +5,10 @@ author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
 ms.openlocfilehash: 2c0ad086640409ac187c3aa882add4d6b39b6ff9
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72522854"
 ---
 # <a name="durable-azure-functions"></a>지속 가능한 Azure Functions
@@ -69,15 +69,15 @@ public static async Task<string> PlaceOrder([OrchestrationTrigger] DurableOrches
 }
 ```
 
-오케스트레이션의 여러 인스턴스를 동시에 시작하고 실행할 수 있습니다. `DurableOrchestrationClient`에서 `StartNewAsync` 메서드를 호출하면 오케스트레이션의 새 인스턴스가 시작됩니다. 이 메서드는 오케스트레이션이 시작되면 완료되는 `Task<string>`를 반환합니다. 오케스트레이션이 30초 이내에 시작되지 않으면 `TimeoutException` 형식의 예외가 throw됩니다.
+오케스트레이션의 여러 인스턴스를 동시에 시작하고 실행할 수 있습니다. `StartNewAsync`에서 `DurableOrchestrationClient` 메서드를 호출하면 오케스트레이션의 새 인스턴스가 시작됩니다. 이 메서드는 오케스트레이션이 시작되면 완료되는 `Task<string>`를 반환합니다. 오케스트레이션이 30초 이내에 시작되지 않으면 `TimeoutException` 형식의 예외가 throw됩니다.
 
-`StartNewAsync`에서 완료된 `Task<string>`는 오케스트레이션 인스턴스의 고유 ID를 포함해야 합니다. 이 인스턴스 ID는 특정 오케스트레이션에 대한 작업을 호출하는 데 사용할 수 있습니다. 오케스트레이션에 대해 상태 또는 전송 이벤트 알림을 쿼리할 수 있습니다.
+`Task<string>`에서 완료된 `StartNewAsync`는 오케스트레이션 인스턴스의 고유 ID를 포함해야 합니다. 이 인스턴스 ID는 특정 오케스트레이션에 대한 작업을 호출하는 데 사용할 수 있습니다. 오케스트레이션에 대해 상태 또는 전송 이벤트 알림을 쿼리할 수 있습니다.
 
 ### <a name="the-activity-functions"></a>활동 함수
 
 활동 함수는 워크플로를 만들기 위해 오케스트레이션 함수 내에 함께 구성된 개별 작업입니다. 여기서 실제 작업이 대부분 수행됩니다. 이들은 비즈니스 논리, 장기 실행 프로세스 및 더 큰 솔루션에 대한 퍼즐 조각을 나타냅니다.
 
-`ActivityTriggerAttribute`는 `DurableActivityContext` 형식의 함수 매개 변수에 주석을 추가하는 데 사용됩니다. 주석을 사용하면 해당 함수가 활동 함수로 사용될 것임을 런타임에 알립니다. 활동 함수에 대한 입력 값은 `DurableActivityContext` 매개 변수의 `GetInput<T>` 메서드를 사용하여 검색됩니다.
+`ActivityTriggerAttribute`는 `DurableActivityContext` 형식의 함수 매개 변수에 주석을 추가하는 데 사용됩니다. 주석을 사용하면 해당 함수가 활동 함수로 사용될 것임을 런타임에 알립니다. 활동 함수에 대한 입력 값은 `GetInput<T>` 매개 변수의 `DurableActivityContext` 메서드를 사용하여 검색됩니다.
 
 오케스트레이션 함수와 마찬가지로 활동 함수의 반환 형식은 void, Task 또는 JSON 직렬화 가능한 값이어야 합니다.
 

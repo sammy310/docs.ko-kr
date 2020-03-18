@@ -13,10 +13,10 @@ helpviewer_keywords:
 - extending metadata
 ms.assetid: 30386922-1e00-4602-9ebf-526b271a8b87
 ms.openlocfilehash: b3a106eb58de4865e260a43c8466019e738510f5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73130895"
 ---
 # <a name="extending-metadata-using-attributes"></a>특성을 사용하여 메타데이터 확장

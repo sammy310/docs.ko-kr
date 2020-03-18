@@ -3,10 +3,10 @@ title: 프로덕션 환경에서 구성된 마이크로서비스 기반 애플�
 description: 프로덕션 환경에서 컨테이너 기반 애플리케이션을 실행하기 위한 주요 구성 요소를 알아봅니다.
 ms.date: 02/15/2019
 ms.openlocfilehash: 69df3d39a00b91cbe59c96e5fcab841a60943bcc
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68672920"
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>프로덕션 환경에서 구성된 마이크로서비스 기반 애플리케이션 실행

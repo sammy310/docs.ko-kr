@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Deriving from WebResponse
 ms.assetid: f11d4866-a199-4087-9306-a5a4c18b13db
 ms.openlocfilehash: bd06928b08eb085ef13371687fb1e5b92c6c1d86
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048576"
 ---
 # <a name="deriving-from-webresponse"></a>WebResponse에서 파생
@@ -28,7 +28,7 @@ ms.locfileid: "71048576"
  헤더 메타데이터를 사용하기 위해 **Headers** 속성을 사용할 필요가 없습니다. 프로토콜별 메타데이터는 속성으로 노출됩니다. 예를 들어 <xref:System.Net.HttpWebResponse.LastModified%2A?displayProperty=nameWithType> 속성은 **Last-Modified** HTTP 헤더를 노출합니다. 헤더 메타데이터를 속성으로 노출할 경우 **Headers** 속성을 사용하여 동일한 속성을 설정하도록 허용하면 안 됩니다.  
   
 ## <a name="responseuri-property"></a>ResponseUri 속성  
- <xref:System.Net.WebResponse.ResponseUri%2A> 속성에는 실제로 응답을 제공하는 리소스의 URI가 포함됩니다. 리디렉션을 지원하지 않는 프로토콜이 경우 **ResponseUri**는 응답을 만든 **WebRequest**의 <xref:System.Net.WebRequest.RequestUri%2A> 속성과 같습니다. 프로토콜이 요청 리디렉션을 지원할 경우 **ResponseUri**에는 응답의 URI가 포함됩니다.  
+ <xref:System.Net.WebResponse.ResponseUri%2A> 속성에는 실제로 응답을 제공하는 리소스의 URI가 포함됩니다. 리디렉션을 지원하지 않는 프로토콜이 경우 **ResponseUri**는 응답을 만든 <xref:System.Net.WebRequest.RequestUri%2A>WebRequest**의**  속성과 같습니다. 프로토콜이 요청 리디렉션을 지원할 경우 **ResponseUri**에는 응답의 URI가 포함됩니다.  
   
 ## <a name="close-method"></a>Close 메서드  
  <xref:System.Net.WebResponse.Close%2A> 메서드는 요청 및 응답을 통해 생성된 모든 연결을 닫고 응답에서 사용된 리소스를 정리합니다. **Close** 메서드는 응답에서 사용된 모든 스트림 인스턴스를 닫지만 응답 스트림이 이전에 <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> 메서드 호출을 통해 닫힌 경우 예외를 throw하지 않습니다.  

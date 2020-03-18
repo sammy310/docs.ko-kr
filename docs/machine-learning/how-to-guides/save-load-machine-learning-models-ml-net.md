@@ -6,10 +6,10 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
 ms.openlocfilehash: e3cebe979b5c279ce8cb90db5510f8758c24c2b4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73977003"
 ---
 # <a name="save-and-load-trained-models"></a>학습된 모델 저장 및 로드
@@ -60,16 +60,16 @@ ITransformer trainedModel = pipelineEstimator.Fit(data);
 mlContext.Model.Save(trainedModel, data.Schema, "model.zip");
 ```
 
-대부분의 모델 및 데이터 준비 파이프라인은 같은 클래스 집합에서 상속되므로 이 구성 요소에 대한 저장 및 로드 메서드 서명은 같습니다. 사용 사례에 따라 데이터 준비 파이프라인 및 모델을 한 [`ITransformer`](xref:Microsoft.ML.ITransformer)를 출력하는 단일 [`EstimatorChain`](xref:Microsoft.ML.Data.TransformerChain%601)에 결합하거나 별도로 구분하여 각각에 대한 개별 [`ITransformer`](xref:Microsoft.ML.ITransformer)를 만듭니다.
+대부분의 모델 및 데이터 준비 파이프라인은 같은 클래스 집합에서 상속되므로 이 구성 요소에 대한 저장 및 로드 메서드 서명은 같습니다. 사용 사례에 따라 데이터 준비 파이프라인 및 모델을 한 [`EstimatorChain`](xref:Microsoft.ML.Data.TransformerChain%601)를 출력하는 단일 [`ITransformer`](xref:Microsoft.ML.ITransformer)에 결합하거나 별도로 구분하여 각각에 대한 개별 [`ITransformer`](xref:Microsoft.ML.ITransformer)를 만듭니다.
 
 ## <a name="save-a-model-locally"></a>로컬로 모델 저장
 
 모델을 저장할 때는 다음 두 가지가 필요합니다.
 
 1. 모델의 [`ITransformer`](xref:Microsoft.ML.ITransformer)
-2. [`ITransformer`](xref:Microsoft.ML.ITransformer) 예상 입력의 [`DataViewSchema`](xref:Microsoft.ML.DataViewSchema)
+2. [`DataViewSchema`](xref:Microsoft.ML.DataViewSchema) 예상 입력의 [`ITransformer`](xref:Microsoft.ML.ITransformer)
 
-모델을 학습한 후에는 [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) 메서드를 통해 학습된 모델을 입력 데이터의 `DataViewSchema`를 사용하여 `model.zip` 파일에 저장합니다.
+모델을 학습한 후에는 [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) 메서드를 통해 학습된 모델을 입력 데이터의 `model.zip`를 사용하여 `DataViewSchema` 파일에 저장합니다.
 
 ```csharp
 // Save Trained Model
@@ -92,7 +92,7 @@ ITransformer trainedModel = mlContext.Model.Load("model.zip", out modelSchema);
 
 ## <a name="load-a-model-stored-remotely"></a>원격으로 저장된 모델 로드
 
-원격 위치에 저장된 데이터 준비 파이프라인과 모델을 애플리케이션에 로드하려면 [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) 메서드에서 파일 경로 대신 [`Stream`](xref:System.IO.Stream)을 사용합니다.
+원격 위치에 저장된 데이터 준비 파이프라인과 모델을 애플리케이션에 로드하려면 [`Stream`](xref:System.IO.Stream) 메서드에서 파일 경로 대신 [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*)을 사용합니다.
 
 ```csharp
 // Create MLContext

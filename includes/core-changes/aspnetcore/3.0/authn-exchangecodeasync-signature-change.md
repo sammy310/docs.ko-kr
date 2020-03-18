@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: a4e20e0468d861138ad801c9dbfa15340b3f388c
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394286"
 ---
 ### <a name="authentication-oauthhandler-exchangecodeasync-signature-changed"></a>인증: OAuthHandler ExchangeCodeAsync 서명이 변경됨
@@ -36,7 +36,7 @@ protected virtual System.Threading.Tasks.Task<Microsoft.AspNetCore.Authenticatio
 
 이러한 변경으로 인해 추가 매개 변수가 중단되지 않은 방식으로 제공될 수 있습니다. 새 `ExchangeCodeAsync` 오버로드를 만들 필요가 없습니다.
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 적절한 `code` 및 `redirectUri` 값을 사용하여 `OAuthCodeExchangeContext`를 구성합니다. <xref:Microsoft.AspNetCore.Authentication.AuthenticationProperties> 인스턴스를 제공해야 합니다. 이 단일 `OAuthCodeExchangeContext` 인스턴스는 여러 인수 대신 `OAuthHandler.ExchangeCodeAsync`에 전달할 수 있습니다.
 

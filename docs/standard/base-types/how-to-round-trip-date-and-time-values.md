@@ -13,10 +13,10 @@ helpviewer_keywords:
 - formatting strings [.NET Framework], round-trip values
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 ms.openlocfilehash: 2e3a58ffe8332e0afec62461f6897d673e1da09f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73132000"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>방법: 날짜 및 시간 값 라운드트립
@@ -25,30 +25,30 @@ ms.locfileid: "73132000"
 
 ### <a name="to-round-trip-a-datetime-value"></a>DateTime 값을 라운드트립하려면
 
-1. “o” 형식 지정자와 함께 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 메서드를 호출하여 <xref:System.DateTime> 값을 해당 문자열 표현으로 변환합니다.
+1. “o” 형식 지정자와 함께 <xref:System.DateTime> 메서드를 호출하여 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 값을 해당 문자열 표현으로 변환합니다.
 
 2. <xref:System.DateTime> 값의 문자열 표현을 파일에 저장하거나 프로세스, 애플리케이션 도메인 또는 컴퓨터 경계를 넘어 전달합니다.
 
 3. <xref:System.DateTime> 값을 나타내는 문자열을 검색합니다.
 
-4. <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> 메서드를 호출하고 `styles` 매개 변수의 값으로 <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType>를 전달합니다.
+4. <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> 메서드를 호출하고 <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> 매개 변수의 값으로 `styles`를 전달합니다.
 
 다음 예제는 <xref:System.DateTime> 값을 라운드트립하는 방법을 보여줍니다.
 
 [!code-csharp[Formatting.HowTo.RoundTrip#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/cs/RoundTrip.cs#1)]
 [!code-vb[Formatting.HowTo.RoundTrip#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/vb/RoundTrip.vb#1)]
 
-<xref:System.DateTime> 값을 라운드트립할 경우 이 기술은 모든 현지 시간 및 세계시에 대한 시간을 성공적으로 유지합니다. 예를 들어 로컬 <xref:System.DateTime> 값이 미국에 있는 시스템에 저장되는 경우입니다. 태평양 표준 시간대는 미국에 있는 시스템에서 복원됩니다. 중앙 표준 시간대인 복원된 날짜 및 시간은 원래 시간보다 2시간이 늦어지며 이것은 두 표준 시간대 사이의 시간 차이를 반영합니다. 그러나 이 기술은 지정되지 않은 시간에 대해 반드시 정확하지는 않습니다. <xref:System.DateTime.Kind%2A> 속성이 <xref:System.DateTimeKind.Unspecified>인 모든 <xref:System.DateTime> 값은 로컬 시간인 것처럼 취급됩니다. 그러지 않은 경우 <xref:System.DateTime>은 올바른 시점을 성공적으로 식별하지 못합니다. 이 제한에 대한 해결책은 저장 및 복원 작업의 표준 시간대와 날짜 및 시간 값을 밀접하게 연결하는 것입니다.
+<xref:System.DateTime> 값을 라운드트립할 경우 이 기술은 모든 현지 시간 및 세계시에 대한 시간을 성공적으로 유지합니다. 예를 들어, 로컬 <xref:System.DateTime> 값이 미국 태평양 표준 시간대의 시스템에 저장되고, 미국 중앙 표준 시간대의 시스템에서 복원되면, 두 표준 시간대 간의 차이를 반영하여 복원된 날짜 및 시간은 원래 시간보다 2시간 늦은 시간으로 나타납니다. 그러나 이 기술은 지정되지 않은 시간에 대해 반드시 정확하지는 않습니다. <xref:System.DateTime> 속성이 <xref:System.DateTime.Kind%2A>인 모든 <xref:System.DateTimeKind.Unspecified> 값은 로컬 시간인 것처럼 취급됩니다. 그러지 않은 경우 <xref:System.DateTime>은 올바른 시점을 성공적으로 식별하지 못합니다. 이 제한에 대한 해결책은 저장 및 복원 작업의 표준 시간대와 날짜 및 시간 값을 밀접하게 연결하는 것입니다.
 
 ### <a name="to-round-trip-a-datetimeoffset-value"></a>DateTimeOffset 값을 라운드트립하려면
 
-1. “o” 형식 지정자와 함께 <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> 메서드를 호출하여 <xref:System.DateTimeOffset> 값을 해당 문자열 표현으로 변환합니다.
+1. “o” 형식 지정자와 함께 <xref:System.DateTimeOffset> 메서드를 호출하여 <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> 값을 해당 문자열 표현으로 변환합니다.
 
 2. <xref:System.DateTimeOffset> 값의 문자열 표현을 파일에 저장하거나 프로세스, 애플리케이션 도메인 또는 컴퓨터 경계를 넘어 전달합니다.
 
 3. <xref:System.DateTimeOffset> 값을 나타내는 문자열을 검색합니다.
 
-4. <xref:System.DateTimeOffset.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> 메서드를 호출하고 `styles` 매개 변수의 값으로 <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType>를 전달합니다.
+4. <xref:System.DateTimeOffset.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> 메서드를 호출하고 <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> 매개 변수의 값으로 `styles`를 전달합니다.
 
 다음 예제는 <xref:System.DateTimeOffset> 값을 라운드트립하는 방법을 보여줍니다.
 
@@ -70,7 +70,7 @@ ms.locfileid: "73132000"
 
 4. <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A> 메서드를 사용하여 개체를 복원합니다.
 
-5. deserialize된 개체를 적절한 형식의 개체로 캐스트(C#에서)하거나 변환(Visual Basic에서)합니다.
+5. 역직렬화된 개체를 적절한 형식의 개체로 캐스트(C#에서)하거나 변환(Visual Basic에서)합니다.
 
 다음 예제는 날짜 및 시간과 표준 시간대 정보를 모두 저장하는 개체를 라운드트립하는 방법을 보여줍니다.
 
@@ -101,4 +101,4 @@ ms.locfileid: "73132000"
 
 - [서식 지정 작업 수행](../../../docs/standard/base-types/performing-formatting-operations.md)
 - [DateTime, DateTimeOffset, TimeSpan 및 TimeZoneInfo 중 선택](../../../docs/standard/datetime/choosing-between-datetime.md)
-- [표준 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)

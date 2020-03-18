@@ -3,10 +3,10 @@ title: -target:winmdobj(C# 컴파일러 옵션)
 ms.date: 07/20/2015
 ms.assetid: 1819a045-659d-498a-9457-c466e902986f
 ms.openlocfilehash: 85ae9a3f5e9b038c0c56935ec5af2b9b09d19f20
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74204487"
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a>-target:winmdobj(C# 컴파일러 옵션)
@@ -39,7 +39,7 @@ ms.locfileid: "74204487"
   
  이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>을 참조하십시오.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 명령은 `filename.cs`를 중간 .winmdobj 파일로 컴파일합니다.  
   
 ```console  

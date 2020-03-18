@@ -10,10 +10,10 @@ helpviewer_keywords:
 - TPL dataflow library, receiving data
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
 ms.openlocfilehash: 89ab2bb18e5fe00a4d1b79d911bb0f7524b83104
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73124210"
 ---
 # <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>방법: 데이터 흐름 블록에서 데이터를 받을 경우 작업 수행
@@ -21,7 +21,7 @@ ms.locfileid: "73124210"
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 데이터 흐름을 사용하여 디스크에서 파일을 읽고 파일에서 0인 바이트 수를 계산합니다. 이 예제에서는 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>을 사용하여 파일을 읽고 0바이트의 수를 계산하고, <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>을 사용하여 콘솔에 0바이트의 수를 출력합니다. <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 개체는 블록이 데이터를 받을 때 작업을 수행할 <xref:System.Func%602> 개체를 지정합니다. <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 개체는 람다 식을 사용하여 콘솔에 읽은 0바이트의 수를 출력합니다.  
   
  [!code-csharp[TPLDataflow_ExecutionBlocks#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_executionblocks/cs/dataflowexecutionblocks.cs#1)]

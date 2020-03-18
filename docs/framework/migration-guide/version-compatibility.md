@@ -8,15 +8,15 @@ helpviewer_keywords:
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 ms.openlocfilehash: e0de18b5a40875d1fec2633c16688111d8f4b9ee
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73974951"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>.NET Framework의 버전 호환성
 
-이전 버전과의 호환성은 특정 버전의 플랫폼용으로 개발된 앱이 해당 플랫폼의 다음 버전에서도 실행되는 것을 의미합니다. .NET Framework는 이전 버전과의 호환성을 최대한 지원하려고 합니다. 한 버전의 .NET Framework용으로 작성된 소스 코드는 다음 버전의 .NET Framework에서 컴파일되어야 하며, 한 버전의 .NET Framework에서 실행되는 이진 파일은 다음 버전의 .NET Framework에서 동일하게 작동해야 합니다.
+이전 버전과의 호환성은 특정 버전의 플랫폼용으로 개발된 앱이 해당 플랫폼의 다음 버전에서도 실행되는 것을 의미합니다. .NET Framework에서는 이전 버전과의 호환성을 최대한 지원하려고 합니다. 한 버전의 .NET Framework용으로 작성된 소스 코드는 다음 버전의 .NET Framework에서 컴파일되어야 하며 한 버전의 .NET Framework에서 실행되는 이진 파일은 다음 버전의 .NET Framework에서 동일하게 작동해야 합니다.
 
 ## <a name="Apps"></a> 앱의 버전 호환성
 
@@ -33,7 +33,7 @@ ms.locfileid: "73974951"
 </configuration>
 ```
 
-자세한 내용은 [방법: NET Framework 4 또는 4.x를 지원하도록 앱 구성](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)을 참조하세요.
+자세한 내용은 [방법: .NET Framework 4 또는 4.x를 지원하도록 앱 구성](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)을 참조하십시오.
 
 ## <a name="version-compatibility-for-components"></a>구성 요소의 버전 호환성
 

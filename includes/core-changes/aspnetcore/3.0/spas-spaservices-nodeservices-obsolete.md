@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: ac5a3c4f3aefbb59418ad92b2d795f36916f877f
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394098"
 ---
 ### <a name="spas-spaservices-and-nodeservices-marked-obsolete"></a>SPA: 사용되지 않는 것으로 표시된 SpaServices 및 NodeServices
@@ -46,7 +46,7 @@ ASP.NET Core는 Angular, React 및 Redux를 React를 포함한 다양한 SPA(단
 - 2\.1 이전 통합 메커니즘은 사용되지 않는 것으로 표시되었습니다.
 - 지원되는 npm 패키지는 더 이상 사용되지 않는 것으로 표시됩니다.
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 이러한 패키지를 사용하는 경우 다음 기능을 사용하도록 앱을 업데이트합니다.
 

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - deterministic compiler option [C#]
 - /deterministic compiler option [C#]
 ms.openlocfilehash: ed5d1db4618649391f88affad67e62dd9fc95925
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73455178"
 ---
 # <a name="-deterministic"></a>-deterministic

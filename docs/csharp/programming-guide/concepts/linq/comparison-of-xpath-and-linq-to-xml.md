@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 87d361b1-daa9-4fd4-a53a-cbfa40111ad3
 ms.openlocfilehash: e9bf192a2075653802f0c5a8b4e44ff0ceacb975
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "66487536"
 ---
 # <a name="comparison-of-xpath-and-linq-to-xml"></a>XPath 및 LINQ to XML 비교
@@ -29,7 +29,7 @@ XPath와 LINQ to XML은 유사한 기능을 제공합니다. XML 트리를 쿼�
   
  이와 반대로 대부분의 LINQ to XML 축은 문서 순서로 컬렉션을 반환하지만 그 중 <xref:System.Xml.Linq.XNode.Ancestors%2A> 및 <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>는 문서 순서의 역순으로 컬렉션을 반환합니다. 다음 표에서는 축을 열거하고 각 축의 컬렉션 순서를 나타냅니다.  
   
-|LINQ to XML 축|정렬|  
+|LINQ to XML 축|순서|  
 |----------------------|--------------|  
 |XContainer.DescendantNodes|문서 순서|  
 |XContainer.Descendants|문서 순서|  
@@ -101,6 +101,6 @@ customers.Elements("Customer").Elements("CompanyName")
 |descendant-or-self|<xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A?displayProperty=nameWithType><br /><br /> 또는<br /><br /> <xref:System.Xml.Linq.XElement.DescendantNodesAndSelf%2A?displayProperty=nameWithType>|  
 |following-sibling|<xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A?displayProperty=nameWithType><br /><br /> 또는<br /><br /> <xref:System.Xml.Linq.XNode.NodesAfterSelf%2A?displayProperty=nameWithType>|  
 |preceding-sibling|<xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType><br /><br /> 또는<br /><br /> <xref:System.Xml.Linq.XNode.NodesBeforeSelf%2A?displayProperty=nameWithType>|  
-|following|직접적으로 해당하는 축이 없음|  
-|preceding|직접적으로 해당하는 축이 없음|  
+|following|직접적으로 해당하는 항목이 없습니다.|  
+|preceding|직접적으로 해당하는 항목이 없습니다.|  
   

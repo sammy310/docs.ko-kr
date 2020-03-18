@@ -3,10 +3,10 @@ title: 비동기 메시지 기반 통신
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 비동기 메시지 기반 통신은 마이크로 서비스 아키텍처에서 필수 개념입니다. 마이크로 서비스를 서로 독립적인 상태로 유지하는 동시에, 결국은 동기화된 상태로 유지하는 가장 좋은 방법이기 때문입니다.
 ms.date: 09/20/2018
 ms.openlocfilehash: 84eaf70178cce91a86dae8a55badb0b4ddd6a7c1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73454237"
 ---
 # <a name="asynchronous-message-based-communication"></a>비동기 메시지 기반 통신
@@ -81,7 +81,7 @@ ms.locfileid: "73454237"
 
 비동기 통신을 사용할 때 고려해야 할 추가 토픽은 메시지 idempotence 및 메시지 중복입니다. 이들 토픽은 이 가이드의 뒷부분에 나오는 [마이크로 서비스(통합 이벤트) 간 이벤트 기반 통신 구현](../multi-container-microservice-net-applications/integration-event-based-microservice-communications.md) 섹션에서 다룹니다.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 - **이벤트 기반 메시징** \
   <https://soapatterns.org/design_patterns/event_driven_messaging>

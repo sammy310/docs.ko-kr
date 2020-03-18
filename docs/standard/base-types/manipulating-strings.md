@@ -7,10 +7,10 @@ helpviewer_keywords:
 - manipulating strings
 ms.assetid: d4568ff3-9f83-4549-acd8-47aec2194ac0
 ms.openlocfilehash: 5188c4f1099aad486e921dfba0c6c4216613ba4e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73135227"
 ---
 # <a name="manipulating-strings-in-net"></a>.NET에서 문자열 조작
@@ -33,5 +33,5 @@ ms.locfileid: "73135227"
  [형식 서식 지정](../../../docs/standard/base-types/formatting-types.md)  
  기본 클래스 라이브러리를 사용하여 서식 지정을 구현하는 방법, 숫자 형식의 서식을 지정하는 방법, 문자열 형식의 서식을 지정하는 방법 및 특정 문화권에 대한 서식을 지정하는 방법을 제공합니다.  
   
- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)  
+ [문자열 구문 분석](../../../docs/standard/base-types/parsing-strings.md)  
  개체를 해당 개체의 문자열 표현으로 표시되는 값으로 초기화하는 방법에 대해 설명합니다. 구문 분석은 형식 지정의 역순으로 진행됩니다.

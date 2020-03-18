@@ -5,10 +5,10 @@ author: pkulikov
 ms.technology: csharp-fundamentals
 ms.date: 09/02/2019
 ms.openlocfilehash: b901ae661ebd4af625d9f3c999b0eb50dda1990d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73039206"
 ---
 # <a name="string-interpolation-in-c"></a>C\#의 문자열 보간
@@ -45,7 +45,7 @@ ms.locfileid: "73039206"
 
 [!code-csharp-interactive[format string example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#2)]
 
-자세한 내용은 [복합 서식 지정](../../standard/base-types/composite-formatting.md) 항목의 [문자열 구성 요소 서식 지정](../../standard/base-types/composite-formatting.md#format-string-component) 섹션을 참조하세요. 해당 섹션에서는 .NET 기본 형식에서 지원하는 표준 및 사용자 지정 서식 지정 문자열을 설명하는 항목에 대한 링크를 제공합니다.
+자세한 내용은 [복합 서식 지정](../../standard/base-types/composite-formatting.md#format-string-component) 항목의 [문자열 구성 요소 서식 지정](../../standard/base-types/composite-formatting.md) 섹션을 참조하세요. 해당 섹션에서는 .NET 기본 형식에서 지원하는 표준 및 사용자 지정 서식 지정 문자열을 설명하는 항목에 대한 링크를 제공합니다.
 
 ## <a name="how-to-control-the-field-width-and-alignment-of-the-formatted-interpolation-expression"></a>필드 너비와 서식이 지정된 보간 식의 맞춤을 제어하는 방법
 
@@ -69,15 +69,15 @@ ms.locfileid: "73039206"
 
 출력 표시 예제에서 볼 수 있듯이 서식이 지정된 식 결과의 길이가 지정된 필드 너비를 초과하는 경우 *맞춤* 값은 무시됩니다.
 
-자세한 내용은 [복합 서식 지정](../../standard/base-types/composite-formatting.md) 항목의 [맞춤 구성 요소](../../standard/base-types/composite-formatting.md#alignment-component) 섹션을 참조하세요.
+자세한 내용은 [복합 서식 지정](../../standard/base-types/composite-formatting.md#alignment-component) 항목의 [맞춤 구성 요소](../../standard/base-types/composite-formatting.md) 섹션을 참조하세요.
 
 ## <a name="how-to-use-escape-sequences-in-an-interpolated-string"></a>보간된 문자열에서 이스케이프 시퀀스를 사용하는 방법
 
 보간된 문자열에서는 일반 문자열 리터럴을 사용할 수 있는 모든 이스케이프 시퀀스를 지원합니다. 자세한 내용은 [문자열 이스케이프 시퀀스](../programming-guide/strings/index.md#string-escape-sequences)를 참조하세요.
 
-이스케이프 시퀀스를 문자 그대로 해석하려면 [약어](../language-reference/tokens/verbatim.md) 리터럴 문자열을 사용합니다. 보간된 약어 문자열은 `@` 문자가 뒤에 오는 `$` 문자로 시작합니다. C# 8.0부터는 `$` 및 `@` 토큰을 순서에 관계없이 사용할 수 있습니다. `$@"..."` 및 `@$"..."`는 모두 유효한 보간된 약어 문자열입니다.
+이스케이프 시퀀스를 문자 그대로 해석하려면 [약어](../language-reference/tokens/verbatim.md) 리터럴 문자열을 사용합니다. 보간된 약어 문자열은 `$` 문자가 뒤에 오는 `@` 문자로 시작합니다. C# 8.0부터는 `$` 및 `@` 토큰을 순서에 관계없이 사용할 수 있습니다. `$@"..."` 및 `@$"..."`는 모두 유효한 보간된 약어 문자열입니다.
 
-중괄호("{" 또는 "}")를 포함하려면 결과 문자열에서 2개의 중괄호("{{" 또는 "}}")를 사용합니다. 자세한 내용은 [복합 서식 지정](../../standard/base-types/composite-formatting.md) 항목의 [중괄호 이스케이프 처리](../../standard/base-types/composite-formatting.md#escaping-braces) 섹션을 참조하세요.
+중괄호("{" 또는 "}")를 포함하려면 결과 문자열에서 2개의 중괄호("{{" 또는 "}}")를 사용합니다. 자세한 내용은 [복합 서식 지정](../../standard/base-types/composite-formatting.md#escaping-braces) 항목의 [중괄호 이스케이프 처리](../../standard/base-types/composite-formatting.md) 섹션을 참조하세요.
 
 다음 예제에서는 결과 문자열에 중괄호를 포함하고 약어 보간된 문자열을 만드는 방법을 보여줍니다.
 

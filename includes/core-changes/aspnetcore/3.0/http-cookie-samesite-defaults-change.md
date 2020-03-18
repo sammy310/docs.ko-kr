@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 15ba678431b97e7c961c119d83546569bdf9bad2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74282521"
 ---
 ### <a name="http-some-cookie-samesite-defaults-changed-to-none"></a>HTTP: 일부 쿠키 SameSite 기본값이 없음으로 변경됨
@@ -26,7 +26,7 @@ ms.locfileid: "74282521"
 
 `SameSite`을(를) 옵트인 기능으로 설정하도록 기본값이 변경되었습니다.
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 쿠키를 내보내는 각 구성 요소는 `SameSite`이(가) 시나리오에 적합한지 여부를 결정해야 합니다. 영향을 받는 API의 사용을 검토하고 필요에 따라 `SameSite`을(를) 다시 구성합니다.
 

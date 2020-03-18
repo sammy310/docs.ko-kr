@@ -3,10 +3,10 @@ title: 컨테이너화된 애플리케이션 서비스 모니터링
 description: 컨테이너 아키텍처 모니터링의 주요 특징을 알아봅니다.
 ms.date: 02/15/2019
 ms.openlocfilehash: e14553d510751d8a75020a1b6beb9fd7bc29596e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68673460"
 ---
 # <a name="monitor-containerized-application-services"></a>컨테이너화된 애플리케이션 서비스 모니터링

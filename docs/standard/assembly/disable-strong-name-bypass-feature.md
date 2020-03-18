@@ -6,10 +6,10 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 ms.openlocfilehash: a4c4ae7ea61a659d3bede532da3c1bdaea448873
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141112"
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>방법: 강력한 이름 건너뛰기 기능 사용 안 함
@@ -51,7 +51,7 @@ ms.locfileid: "73141112"
 > [!NOTE]
 > 컴퓨터에서 건너뛰기 기능이 사용되는 경우에만 애플리케이션에 대해 강력한 이름 유효성 검사를 켜고 끌 수 있습니다. 컴퓨터에서 건너뛰기 기능이 해제된 경우 모든 애플리케이션에 대해 강력한 이름 유효성이 검사되며, 단일 애플리케이션에 대해 유효성 검사를 건너뛸 수 없습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Sn.exe(강력한 이름 도구)](../../framework/tools/sn-exe-strong-name-tool.md)
 - [\<bypassTrustedAppStrongNames> 요소](../../framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)
