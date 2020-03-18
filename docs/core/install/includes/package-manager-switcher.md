@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 6557c2277e4c8063b7d7d08ae7bc2ba5414a5d9d
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: 24e990d0561f1f0faade2c8e62ca640e4daba93f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163230"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78848082"
 ---
 
 > [!div class="op_single_selector"]
@@ -20,9 +20,9 @@ ms.locfileid: "76163230"
 > - [Fedora 30 - x64](../linux-package-manager-fedora30.md)
 > - [Fedora 29 - x64](../linux-package-manager-fedora29.md)
 > - [OpenSUSE 15 - x64](../linux-package-manager-opensuse15.md)
-> - [RHEL 8.1 - x64](../linux-package-manager-rhel81.md)
+> - [RHEL 8 - x64](../linux-package-manager-rhel8.md)
 > - [RHEL 7 - x64](../linux-package-manager-rhel7.md)
 > - [SLES 15 - x64](../linux-package-manager-sles15.md)
 > - [SLES 12 - x64](../linux-package-manager-sles12.md)
 
-<span data-ttu-id="cd123-116">_패키지 관리자 설치는 **x64** 아키텍처에서만 지원됩니다_.</span><span class="sxs-lookup"><span data-stu-id="cd123-116">_Package manager installs are only supported on the **x64** architecture_.</span></span> <span data-ttu-id="cd123-117">**ARM**과 같은 다른 아키텍처는 [.NET Core SDK를 수동으로 설치](../sdk.md?pivots=os-linux#download-and-manually-install)하거나 [.NET Core 런타임을 수동으로 설치](../runtime.md?pivots=os-linux#download-and-manually-install)해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="cd123-117">Other architectures, such as **ARM**, must [manually install the .NET Core SDK](../sdk.md?pivots=os-linux#download-and-manually-install) or [manually install the .NET Core Runtime](../runtime.md?pivots=os-linux#download-and-manually-install).</span></span> <span data-ttu-id="cd123-118">자세한 내용은 [.NET Core 종속성 및 요구 사항](../dependencies.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="cd123-118">For more information, see [.NET Core dependencies and requirements](../dependencies.md).</span></span>
+<span data-ttu-id="c6301-116">_패키지 관리자 설치는 **x64** 아키텍처에서만 지원됩니다_.</span><span class="sxs-lookup"><span data-stu-id="c6301-116">_Package manager installs are only supported on the **x64** architecture_.</span></span> <span data-ttu-id="c6301-117">**ARM**과 같은 다른 아키텍처는 [.NET Core SDK를 수동으로 설치](../sdk.md?pivots=os-linux#download-and-manually-install)하거나 [.NET Core 런타임을 수동으로 설치](../runtime.md?pivots=os-linux#download-and-manually-install)해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c6301-117">Other architectures, such as **ARM**, must [manually install the .NET Core SDK](../sdk.md?pivots=os-linux#download-and-manually-install) or [manually install the .NET Core Runtime](../runtime.md?pivots=os-linux#download-and-manually-install).</span></span> <span data-ttu-id="c6301-118">자세한 내용은 [.NET Core 종속성 및 요구 사항](../dependencies.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c6301-118">For more information, see [.NET Core dependencies and requirements](../dependencies.md).</span></span>
