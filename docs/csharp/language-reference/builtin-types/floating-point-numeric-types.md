@@ -19,10 +19,10 @@ helpviewer_keywords:
 - double data type [C#]
 - decimal keyword [C#]
 ms.openlocfilehash: 95b7f266654bbbcdcd0f81e3aa11cfc94af9f0e5
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77215245"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>부동 소수점 숫자 형식(C# 참조)
@@ -33,7 +33,7 @@ ms.locfileid: "77215245"
 
 C#은 다음과 같은 미리 정의된 부동 소수점 형식을 지원합니다.
   
-|C# 형식/키워드|근사 범위|전체 자릿수|Size|.NET 형식|
+|C# 형식/키워드|근사 범위|자릿수|Size|.NET 형식|
 |----------|-----------------------|---------------|--------------|--------------|
 |`float`|±1.5 x 10<sup>−45</sup> ~ ±3.4 x 10<sup>38</sup>|~6-9개 자릿수|4바이트|<xref:System.Single?displayProperty=nameWithType>|
 |`double`|±5.0 × 10<sup>−324</sup> ~ ±1.7 × 10<sup>308</sup>|~15-17개 자릿수|8바이트|<xref:System.Double?displayProperty=nameWithType>|
@@ -90,7 +90,7 @@ decimal myMoney = 3_000.5m;
 myMoney = 400.75M;
 ```
 
-앞의 예제에서는 C# 7.0부터 지원되는 *숫자 구분 기호*인 `_`를 사용하는 방법도 보여 줍니다. 모든 종류의 숫자 리터럴에서 숫자 구분 기호를 사용할 수 있습니다.
+앞의 예제에서는 C# 7.0부터 지원되는 `_`숫자 구분 기호*인* 를 사용하는 방법도 보여 줍니다. 모든 종류의 숫자 리터럴에서 숫자 구분 기호를 사용할 수 있습니다.
 
 또한 다음 예제와 같이 과학적 표기법을 사용하여 real 리터럴의 지수 부분을 지정할 수도 있습니다.
 
@@ -117,11 +117,11 @@ Console.WriteLine(m);  // output: 1500000
 - [10진 형식](~/_csharplang/spec/types.md#the-decimal-type)
 - [real 리터럴](~/_csharplang/spec/lexical-structure.md#real-literals)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [값 형식](value-types.md)
 - [정수 형식](integral-numeric-types.md)
-- [표준 숫자 형식 문자열](../../../standard/base-types/standard-numeric-format-strings.md)
+- [표준 숫자 서식 문자열](../../../standard/base-types/standard-numeric-format-strings.md)
 - [.NET의 숫자](../../../standard/numerics.md)
 - <xref:System.Numerics.Complex?displayProperty=nameWithType>

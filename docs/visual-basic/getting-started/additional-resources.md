@@ -9,13 +9,13 @@ helpviewer_keywords:
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
 ms.openlocfilehash: 9e55910573b3aa3aecf9082f1b77659a45f883a1
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73196991"
 ---
-# <a name="additional-resources"></a>추가 리소스
+# <a name="additional-resources"></a>추가 자료
 
 다음 웹 사이트에서는 관련 지침과 일반적인 문제에 대한 대답을 제공합니다.
 

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 8979b7ffc09726c6588fe3ba60b916202697648f
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72522709"
 ---
 ### <a name="signalr-hubconnectioncontext-constructors-changed"></a>SignalR: HubConnectionContext 생성자가 변경됨
@@ -35,7 +35,7 @@ public HubConnectionContext(ConnectionContext connectionContext, HubConnectionCo
 
 새 생성자는 새 옵션 개체를 사용합니다. 따라서 나중에 추가 생성자 및 호환성이 손상되는 변경 없이 `HubConnectionContext`의 기능을 확장할 수 있습니다.
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 다음 생성자 사용하는 대신:
 

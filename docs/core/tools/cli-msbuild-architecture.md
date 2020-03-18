@@ -3,10 +3,10 @@ title: .NET Core 명령줄 도구 아키텍처
 description: .NET Core 도구 레이어 및 최신 버전의 변경 내용에 대해 알아봅니다.
 ms.date: 03/06/2017
 ms.openlocfilehash: fde1a0acb6af9dd65aa3466b4ea37473b2eab6fb
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77092917"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>.NET Core 도구의 변경 내용에 대한 대략적인 개요

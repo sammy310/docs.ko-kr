@@ -8,10 +8,10 @@ helpviewer_keywords:
 - running .NET Framework tools
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 ms.openlocfilehash: 4503e2cff18f4aa901d20c76cfe4076a7fed3600
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75715773"
 ---
 # <a name="net-framework-tools"></a>.NET Framework 도구
@@ -27,7 +27,7 @@ ms.locfileid: "75715773"
 > [!NOTE]
 > 일부 도구는 32비트 컴퓨터 또는 64비트 컴퓨터 전용입니다. 컴퓨터에 적절한 버전의 도구를 실행하세요.
 
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
 - [Al.exe(어셈블리 링커)](al-exe-assembly-linker.md)  
 모듈 또는 리소스 파일로부터 어셈블리 매니페스트가 있는 파일을 생성합니다.

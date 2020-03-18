@@ -8,10 +8,10 @@ helpviewer_keywords:
 - buffers"
 - pipeline processing
 ms.openlocfilehash: b61b1dbbedf4658fe113986fbb4a792a2f574534
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73121995"
 ---
 # <a name="memory--and-span-related-types"></a>메모리 및 범위 관련 형식
@@ -37,7 +37,7 @@ ms.locfileid: "73121995"
 - <xref:System.MemoryExtensions?displayProperty=nameWithType> - 문자열, 배열 및 배열 세그먼트를 <xref:System.Memory%601> 블록으로 변환하기 위한 확장 메서드 컬렉션입니다.
 
 > [!NOTE]
-> 이전 프레임워크의 경우 [System.Memory NuGet 패키지](https://www.nuget.org/packages/System.Memory/)에서 <xref:System.Span%601> 및 <xref:System.Memory%601>를 사용할 수 있습니다.
+> 이전 프레임워크의 경우 <xref:System.Span%601>System.Memory NuGet 패키지<xref:System.Memory%601>에서 [ 및 ](https://www.nuget.org/packages/System.Memory/)를 사용할 수 있습니다.
 
 자세한 내용은 <xref:System.Buffers?displayProperty=nameWithType> 네임스페이스를 참조하세요.
 

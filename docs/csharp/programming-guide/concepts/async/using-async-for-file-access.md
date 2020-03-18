@@ -3,10 +3,10 @@ title: 파일 액세스에 Async 사용(C#)
 ms.date: 07/20/2015
 ms.assetid: bb018fea-5313-4c80-ab3f-7c24b2145bd9
 ms.openlocfilehash: e6b0370049d9b9315de6a72d0e84c080aac12481
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69595540"
 ---
 # <a name="using-async-for-file-access-c"></a>파일 액세스에 Async 사용(C#)
@@ -41,7 +41,7 @@ using System.Threading.Tasks;
 ## <a name="use-of-the-filestream-class"></a>FileStream 클래스 사용  
  이 항목의 예제에서는 운영 체제 수준에서 비동기 I/O를 일으키는 옵션이 있는 <xref:System.IO.FileStream> 클래스를 사용합니다. 이 옵션을 사용하면 많은 경우 ThreadPool 스레드를 차단하지 않아도 됩니다. 이 옵션을 사용하도록 설정하려면 생성자 호출에서 `useAsync=true` 또는 `options=FileOptions.Asynchronous` 인수를 지정합니다.  
   
- 파일 경로를 지정하여 직접 여는 경우에는 <xref:System.IO.StreamReader> 및 <xref:System.IO.StreamWriter>와 함께 이 옵션을 사용할 수 없습니다. 그러나 <xref:System.IO.FileStream> 클래스에서 열린 <xref:System.IO.Stream>을 제공하면 이 옵션을 사용할 수 있습니다. 대기 중에는 UI 스레드가 차단되지 않으므로, ThreadPool 스레드가 차단된 경우에도 UI 앱에서 비동기 호출이 더 빠릅니다.  
+ 파일 경로를 지정하여 직접 여는 경우에는 <xref:System.IO.StreamReader> 및 <xref:System.IO.StreamWriter>와 함께 이 옵션을 사용할 수 없습니다. 그러나 <xref:System.IO.Stream> 클래스에서 열린 <xref:System.IO.FileStream>을 제공하면 이 옵션을 사용할 수 있습니다. 대기 중에는 UI 스레드가 차단되지 않으므로, ThreadPool 스레드가 차단된 경우에도 UI 앱에서 비동기 호출이 더 빠릅니다.  
   
 ## <a name="writing-text"></a>텍스트 쓰기  
  다음 예제에서는 파일에 텍스트를 씁니다. 각 await 문에서 메서드가 즉시 종료됩니다. 파일 I/O가 완료되면 await 문 뒤에 오는 문에서 메서드가 다시 시작됩니다. async 한정자는 await 문을 사용하는 메서드의 정의에 있습니다.  
@@ -127,7 +127,7 @@ private async Task<string> ReadTextAsync(string filePath)
 ## <a name="parallel-asynchronous-io"></a>병렬 비동기 I/O  
  다음 예제에서는 10개의 텍스트 파일을 작성하여 병렬 처리를 보여 줍니다. 각 파일에서 <xref:System.IO.Stream.WriteAsync%2A> 메서드는 작업 목록에 추가되는 작업을 반환합니다. `await Task.WhenAll(tasks);` 문은 메서드를 종료하고, 파일 처리가 모든 작업에 대해 완료되면 메서드 내에서 다시 시작됩니다.  
   
- 이 예제는 작업이 완료된 후 `finally` 블록에서 모든 <xref:System.IO.FileStream> 인스턴스를 닫습니다. 대신 `using` 문에 각 `FileStream`이 만들어진 경우 작업이 완료되기 전에 `FileStream`이 삭제될 수 있습니다.  
+ 이 예제는 작업이 완료된 후 <xref:System.IO.FileStream> 블록에서 모든 `finally` 인스턴스를 닫습니다. 대신 `FileStream` 문에 각 `using`이 만들어진 경우 작업이 완료되기 전에 `FileStream`이 삭제될 수 있습니다.  
   
  성능 향상은 거의 대부분 비동기 처리가 아닌 병렬 처리에서 발생합니다. 비동기의 장점은 다중 스레드를 묶어 두지 않고 사용자 인터페이스 스레드를 묶어 두지 않는다는 것입니다.  
   

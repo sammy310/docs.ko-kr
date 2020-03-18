@@ -6,10 +6,10 @@ ms.author: wiwagn
 ms.date: 12/09/2019
 ms.custom: vs-dotnet
 ms.openlocfilehash: ba996e4add1cfe44681154b00a6530b1f3e70b37
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714005"
 ---
 # <a name="tutorial-create-your-first-net-core-console-application-in-visual-studio-2019"></a>자습서: Visual Studio 2019에서 첫 번째 .NET Core 콘솔 애플리케이션 만들기
@@ -28,7 +28,7 @@ ms.locfileid: "75714005"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. Visual Studio 2019를 엽니다.
 
@@ -53,7 +53,7 @@ ms.locfileid: "75714005"
 
    ![Visual Studio 및 새 HelloWorld 프로젝트](./media/with-visual-studio/visual-studio-main-window.png)
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. Visual Studio 2019를 엽니다.
 
@@ -96,7 +96,7 @@ ms.locfileid: "75714005"
 
 사용자에게 이름을 입력하라는 메시지를 표시한 다음 사용자 이름을 날짜 및 시간과 함께 표시하도록 애플리케이션을 개선합니다. 다음 지침에 따라 앱을 수정하고 다시 실행합니다.
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. 현재 `Console.WriteLine`을 호출하는 줄인 `Main` 메서드의 내용을 다음 코드로 바꿉니다.
 
@@ -114,7 +114,7 @@ ms.locfileid: "75714005"
 
 1. 콘솔 창을 닫으려면 아무 키나 누릅니다.
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. 현재 `Console.WriteLine`을 호출하는 줄인 `Main` 메서드의 내용을 다음 코드로 바꿉니다.
 

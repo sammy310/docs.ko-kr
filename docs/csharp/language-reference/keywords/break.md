@@ -8,10 +8,10 @@ helpviewer_keywords:
 - break keyword [C#]
 ms.assetid: be2571ed-efb0-4965-b122-81e5b09db0b9
 ms.openlocfilehash: ef276fd9e8da0ea25695c5afdf06a300bbd2a123
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713759"
 ---
 # <a name="break-c-reference"></a>break(C# 참조)
@@ -26,7 +26,7 @@ ms.locfileid: "75713759"
 
 ## <a name="example"></a>예제
 
-이 예제에서는 [switch](./switch.md) 문에서 `break`의 사용을 보여 줍니다.
+이 예제에서는 `break`switch[ 문에서 ](./switch.md)의 사용을 보여 줍니다.
 
 [!code-csharp[csrefKeywordsJump#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#2)]
 
@@ -45,7 +45,7 @@ Sorry, invalid selection.
 
 ## <a name="example"></a>예제
 
-이 예제에서 `break` 문은 루프의 각 반복 중에 현재 분기를 중단하는 데만 사용됩니다. 루프 자체는 중첩된 [switch](./switch.md) 문에 속하는 `break`의 인스턴스에 영향을 받지 않습니다.
+이 예제에서 `break` 문은 루프의 각 반복 중에 현재 분기를 중단하는 데만 사용됩니다. 루프 자체는 중첩된 `break`switch[ 문에 속하는 ](./switch.md)의 인스턴스에 영향을 받지 않습니다.
 
 [!code-csharp[csrefKeywordsJump#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#8)]
 
@@ -53,7 +53,7 @@ Sorry, invalid selection.
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 959f3959c28c7d0159be7a213986345e2865b9a2
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394204"
 ---
 ### <a name="shared-framework-removed-microsoftaspnetcoreall"></a>공유 프레임워크: 제거된 Microsoft.AspNetCore.All
@@ -26,7 +26,7 @@ ASP.NET Core 3.0부터 `Microsoft.AspNetCore.All` 메타패키지 및 일치하�
 
 `Microsoft.AspNetCore.All` 메타패키지에는 많은 수의 외부 종속성이 포함되어 있습니다.
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 `Microsoft.AspNetCore.App` 프레임워크를 사용하도록 프로젝트를 마이그레이션합니다. 이전에 `Microsoft.AspNetCore.All`에서 사용할 수 있었던 구성 요소는 NuGet에서 계속 사용할 수 있습니다. 이러한 구성 요소는 이제 공유 프레임워크에 포함되지 않고 앱과 함께 배포됩니다.
 

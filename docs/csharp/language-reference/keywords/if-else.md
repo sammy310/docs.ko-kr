@@ -11,10 +11,10 @@ helpviewer_keywords:
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
 ms.openlocfilehash: 98c1a8dceec3e5a47627841988e2d722c56fc36c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75715257"
 ---
 # <a name="if-else-c-reference"></a>if-else(C# 참조)
@@ -61,7 +61,7 @@ if (condition)
 
 [!code-csharp[csrefKeywordsSelection#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#3)]
 
-조건 `(m > 10)`이 false이면 `Result2`가 나타납니다.
+조건`Result2` 이 false이면 `(m > 10)` 가 나타납니다.
 
 ## <a name="example"></a>예제
 
@@ -81,7 +81,7 @@ if (condition)
 
 [!code-csharp[csrefKeywordsSelection#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#6)]
 
-else 블록 또는 then 블록의 문이 유효한 모든 문일 수 있는 것과 마찬가지로 유효한 모든 부울 식을 조건에 대해 사용할 수 있습니다. `!`, `&&`, `||`, `&`, `|` 및 `^`와 같은 [논리 연산자](../operators/boolean-logical-operators.md)를 사용하여 복합 조건을 만들 수 있습니다. 다음 코드는 예제를 보여 줍니다.
+else 블록 또는 then 블록의 문이 유효한 모든 문일 수 있는 것과 마찬가지로 유효한 모든 부울 식을 조건에 대해 사용할 수 있습니다. [, ](../operators/boolean-logical-operators.md), `!`, `&&`, `||` 및 `&`와 같은 `|`논리 연산자`^`를 사용하여 복합 조건을 만들 수 있습니다. 다음 코드는 예제를 보여 줍니다.
 
 ```csharp
 // NOT
@@ -134,7 +134,7 @@ if (!(m >= n || m >= p))
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

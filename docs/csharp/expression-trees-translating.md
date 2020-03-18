@@ -5,10 +5,10 @@ ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
 ms.openlocfilehash: f60c447d5c89aa83f85073e642e621608131ed8d
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76115782"
 ---
 # <a name="translate-expression-trees"></a>식 트리 변환
@@ -190,7 +190,7 @@ Computed sum: 10
 
 최종 해답은 동일하지만 트리 통과는 완전히 다릅니다. 먼저 발생하는 다른 작업으로 트리가 생성되었기 때문에 다른 순서로 노드를 이동합니다.
 
-## <a name="learning-more"></a>자세한 정보
+## <a name="learning-more"></a>자세히 알아보기
 
 이 샘플에서는 식 트리로 표시되는 알고리즘을 트래버스하고 해석하기 위해 작성하는 코드의 작은 하위 집합을 보여 줍니다. 식 트리를 다른 언어로 변환하는 일반적인 용도의 라이브러리를 작성하는 데 필요한 모든 작업에 대한 자세한 내용은 Matt Warren의 [이 시리즈](https://docs.microsoft.com/archive/blogs/mattwar/linq-building-an-iqueryable-provider-series)를 참조하세요. 이 시리즈는 식 트리에서 찾을 수 있는 코드를 변환하는 방법에 대해 상세히 설명합니다.
 

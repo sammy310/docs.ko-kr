@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: d1ddba72ce25c5e01025d916d52f785b5a1a9e71
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901661"
 ---
 ### <a name="hosting-generic-host-restricts-startup-constructor-injection"></a>호스팅: 제네릭 호스트는 시작 생성자 주입을 제한합니다.
@@ -34,7 +34,7 @@ ASP.NET Core 3.0 이전에는 `Startup` 클래스의 생성자에 있는 임의 
 
 #### <a name="recommended-action"></a>권장 조치
 
-`Startup.Configure` 메서드 서명에 서비스를 주입합니다. 예:
+`Startup.Configure` 메서드 서명에 서비스를 주입합니다. 예를 들어:
 
 ```csharp
 public void Configure(IApplicationBuilder app, IOptions<MyOptions> options)

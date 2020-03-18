@@ -3,10 +3,10 @@ title: 호환성이 손상되는 변경
 description: 각 .NET Core 버전의 호환성이 손상되는 변경에 대해 알아봅니다.
 ms.date: 11/27/2019
 ms.openlocfilehash: 664d83f5bfa455764de8823c4bbdb4a2018e1875
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093073"
 ---
 # <a name="breaking-change-selectors"></a>호환성이 손상되는 변경 선택기
@@ -33,6 +33,6 @@ ms.locfileid: "77093073"
 - ASP.NET Core의 경우 [aspnet/Announcements](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0) 리포지토리.
 - Entity Framework Core의 경우 [dotnet/efcore](https://github.com/dotnet/efcore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change) 리포지토리.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [.NET Framework에서 .NET Core로 마이그레이션](../porting/index.md)

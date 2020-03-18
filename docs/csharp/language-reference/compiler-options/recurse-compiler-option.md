@@ -9,10 +9,10 @@ helpviewer_keywords:
 - -recurse compiler option [C#]
 ms.assetid: 4e8212e5-04e3-45b1-8a42-41bc50e683b0
 ms.openlocfilehash: c82e3019e1a1e3ba45a7000312b54b9d7f64a2db
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69606748"
 ---
 # <a name="-recurse-c-compiler-options"></a>-recurse(C# 컴파일러 옵션)
@@ -25,7 +25,7 @@ ms.locfileid: "69606748"
 ```  
   
 ## <a name="arguments"></a>인수  
- `dir` (선택 사항)  
+ `dir`(선택 사항)  
  검색을 시작하려는 디렉터리입니다. 지정하지 않으면 프로젝트 디렉터리에서 검색이 시작됩니다.  
   
  `file`  
@@ -38,7 +38,7 @@ ms.locfileid: "69606748"
   
  이 컴파일러 옵션은 Visual Studio에서 사용할 수 없으며 프로그래밍 방식으로 변경할 수 없습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  현재 디렉터리의 모든 C# 파일을 컴파일합니다.  
   
 ```console  

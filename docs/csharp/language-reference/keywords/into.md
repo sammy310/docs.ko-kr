@@ -8,10 +8,10 @@ helpviewer_keywords:
 - into keyword [C#]
 ms.assetid: 81ec62c1-f0b1-4755-8a31-959876e77f65
 ms.openlocfilehash: f0f5ff1e56a65e83385f814df2fadd957f53561e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713619"
 ---
 # <a name="into-c-reference"></a>into(C# 참조)
@@ -24,11 +24,11 @@ ms.locfileid: "75713619"
 
 [!code-csharp[cscsrefQueryKeywords#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Into.cs#18)]
 
-각 그룹에서 추가 쿼리 작업을 수행하려는 경우에만 `group` 절에 `into`를 사용하면 됩니다. 자세한 내용은 [group 절](group-clause.md)을 참조하세요.
+각 그룹에서 추가 쿼리 작업을 수행하려는 경우에만 `into` 절에 `group`를 사용하면 됩니다. 자세한 내용은 [group 절](group-clause.md)을 참조하세요.
 
-`join` 절에 `into`를 사용하는 방법의 예는 [join 절](join-clause.md)을 참조하세요.
+`into` 절에 `join`를 사용하는 방법의 예는 [join 절](join-clause.md)을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [쿼리 키워드(LINQ)](query-keywords.md)
 - [C#의 LINQ](../../linq/index.md)

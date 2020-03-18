@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Parallel Programming
 ms.assetid: b8f99f43-9104-45fd-9bff-385a20488a23
 ms.openlocfilehash: 487fe48462803ac19318f450f2576989f196a9be
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139962"
 ---
 # <a name="task-parallel-library-tpl"></a>TPL(작업 병렬 라이브러리)

@@ -3,10 +3,10 @@ title: ‘이 애플리케이션을 시작할 수 없음’ 문제 해결
 description: "'이 애플리케이션을 시작할 수 없음' 대화 상자가 표시되면 어떻게 해야 하는지 알아보세요."
 ms.date: 09/05/2019
 ms.openlocfilehash: 864c6ea23e9a048f060eee39d904bd4377be5084
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/02/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76965908"
 ---
 # <a name="troubleshooting-a-this-application-could-not-be-started-error-message"></a>‘이 애플리케이션을 시작할 수 없음’ 오류 메시지 문제 해결
@@ -59,7 +59,7 @@ ms.locfileid: "76965908"
 
    ![이 문제를 해결할 수 없음](media/application-not-started/install-3-5.png)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [.NET Framework 시스템 요구 사항](../get-started/system-requirements.md)
 - [.NET Framework 설치 가이드](index.md)

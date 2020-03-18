@@ -4,10 +4,10 @@ description: Visual Studio를 사용하여 C# 또는 Visual Basic으로 작성�
 ms.date: 12/09/2019
 ms.custom: vs-dotnet
 ms.openlocfilehash: 748a1499e0c3a4a41613a69b715dbcfbd585bfe3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714014"
 ---
 # <a name="build-a-net-standard-library-in-visual-studio"></a>Visual Studio에서 .NET Standard 라이브러리 빌드
@@ -17,7 +17,7 @@ ms.locfileid: "75714014"
 > [!NOTE]
 > .NET Standard 버전 및 지원되는 플랫폼 목록은 [.NET Standard](../../standard/net-standard.md)를 참조하세요.
 
-이 항목에서는 단일 문자열 처리 메서드를 포함하는 간단한 유틸리티 라이브러리를 만들어 보겠습니다. <xref:System.String> 클래스의 멤버인 것처럼 호출할 수 있도록 [확장 메서드](../../csharp/programming-guide/classes-and-structs/extension-methods.md)로 구현하겠습니다.
+이 항목에서는 단일 문자열 처리 메서드를 포함하는 간단한 유틸리티 라이브러리를 만들어 보겠습니다. [ 클래스의 멤버인 것처럼 호출할 수 있도록 ](../../csharp/programming-guide/classes-and-structs/extension-methods.md)확장 메서드<xref:System.String>로 구현하겠습니다.
 
 ## <a name="create-a-visual-studio-solution"></a>Visual Studio 솔루션 만들기
 
@@ -42,7 +42,7 @@ ms.locfileid: "75714014"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. “StringLibrary”라는 새로운 C# .NET Standard 클래스 라이브러리 프로젝트를 솔루션에 추가합니다.
 
@@ -64,7 +64,7 @@ ms.locfileid: "75714014"
 
 1. 메뉴 모음에서 **빌드** > **솔루션 빌드**를 선택합니다.
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. “StringLibrary”라는 새로운 Visual Basic .NET Standard 클래스 라이브러리 프로젝트를 솔루션에 추가합니다.
 

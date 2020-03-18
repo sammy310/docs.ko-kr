@@ -3,10 +3,10 @@ title: 함수형 프로그래밍과 명령형 프로그래밍 비교(C#)
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
 ms.openlocfilehash: a163a62912ed2a44d6ea8cad5bc536f03343f15c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69594318"
 ---
 # <a name="functional-programming-vs-imperative-programming-c"></a>함수형 프로그래밍과 명령형 프로그래밍 비교(C#)
@@ -50,7 +50,7 @@ ms.locfileid: "69594318"
   
  다행히도 C#에서는 명령형 프로그래밍 방법과 함수형 프로그래밍 방법을 모두 지원하기 때문에 함수형 프로그래밍으로 완전히 전환할 필요가 없습니다. 개발자는 특정 시나리오에 가장 적합한 방법을 선택할 수 있습니다. 실제로 프로그램에는 흔히 두 방법이 결합되어 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [순수 함수 변환 소개(C#)](./introduction-to-pure-functional-transformations.md)
 - [XSLT 변환](../../../../standard/data/xml/xslt-transformations.md)

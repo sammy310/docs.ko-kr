@@ -4,17 +4,17 @@ description: .NET Core CLI를 사용하여 .NET Core 라이브러리를 만드�
 author: cartermp
 ms.date: 05/01/2017
 ms.openlocfilehash: c23c1f027b4d6d09c50eb2257d34f72ec56302f4
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503501"
 ---
 # <a name="develop-libraries-with-the-net-core-cli"></a>.NET Core CLI를 사용하여 라이브러리 개발
 
 이 문서에서는 .NET Core CLI를 사용하여 .NET용 라이브러리를 작성하는 방법에 대해 설명합니다. CLI는 지원되는 운영 체제에서 작동하는 효율적인 하위 수준 환경을 제공합니다. Visual Studio로 라이브러리를 빌드할 수 있습니다. 그러한 환경을 선호하는 경우 [Visual Studio 설명서를 참조하세요](library-with-visual-studio.md).
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 컴퓨터에 [.NET Core SDK 및 CLI](https://dotnet.microsoft.com/download)를 설치해야 합니다.
 
@@ -96,7 +96,7 @@ ms.locfileid: "77503501"
 </Project>
 ```
 
-됐습니다! 이는 .NET Framework 4에 대해서만 컴파일되지만 이후 버전의 .NET Framework에서 라이브러리를 사용할 수 있습니다.
+이것으로 끝입니다! 이는 .NET Framework 4에 대해서만 컴파일되지만 이후 버전의 .NET Framework에서 라이브러리를 사용할 수 있습니다.
 
 ## <a name="how-to-multitarget"></a>멀티 타기팅 방법
 
@@ -105,7 +105,7 @@ ms.locfileid: "77503501"
 
 프로젝트가 .NET Framework 및 .NET Core를 모두 지원하는 경우 이전 버전의 .NET Framework를 대상으로 해야 할 수 있습니다. 이 시나리오에서, 최신 대상에 최신 API 및 언어 구조를 사용하려는 경우 코드에 `#if` 지시문을 사용하세요. 각각의 경우에 필요한 API를 포함하기 위해 대상으로 지정하는 각 플랫폼마다 서로 다른 패키지와 종속성을 추가해야 할 수도 있습니다.
 
-예를 들어 HTTP를 통해 네트워킹 작업을 수행하는 라이브러리가 있다고 가정해 보겠습니다. .NET 표준 및 .NET Framework 버전 4.5 이상 경우 `System.Net.Http` 네임스페이스의 `HttpClient` 클래스를 사용할 수 있습니다. 그러나 이전 버전의 .NET Framework에는 `HttpClient` 클래스가 없으므로, 이에 대해 `System.Net` 네임스페이스의 `WebClient` 클래스를 사용할 수 있습니다.
+예를 들어 HTTP를 통해 네트워킹 작업을 수행하는 라이브러리가 있다고 가정해 보겠습니다. .NET 표준 및 .NET Framework 버전 4.5 이상 경우 `HttpClient` 네임스페이스의 `System.Net.Http` 클래스를 사용할 수 있습니다. 그러나 이전 버전의 .NET Framework에는 `HttpClient` 클래스가 없으므로, 이에 대해 `WebClient` 네임스페이스의 `System.Net` 클래스를 사용할 수 있습니다.
 
 프로젝트 파일이 다음과 같이 표시될 수 있습니다.
 
@@ -131,8 +131,8 @@ ms.locfileid: "77503501"
 여기서 다음 세 가지 주요 변경 내용을 확인할 수 있습니다.
 
 1. `TargetFramework` 노드가 `TargetFrameworks`로 대체되었으며, 세 개의 TFM이 내부에 표시됩니다.
-1. `net40` 대상에는 .NET Framework 참조 하나를 끌어오는 `<ItemGroup>` 노드가 있습니다.
-1. `net45` 대상에는 .NET Framework 참조 두 개를 끌어오는 `<ItemGroup>` 노드가 있습니다.
+1. `<ItemGroup>` 대상에는 .NET Framework 참조 하나를 끌어오는 `net40` 노드가 있습니다.
+1. `<ItemGroup>` 대상에는 .NET Framework 참조 두 개를 끌어오는 `net45` 노드가 있습니다.
 
 빌드 시스템은 `#if` 지시문에 사용된 다음의 전처리기 기호를 인식합니다.
 
@@ -239,7 +239,7 @@ netstandard1.4/
    |__MyProject.Test/
    ```
 
-1. 테스트 프로젝트의 디렉터리로 이동한 다음 `MyProject`의 `MyProject.Test`에 대한 참조를 추가합니다.
+1. 테스트 프로젝트의 디렉터리로 이동한 다음 `MyProject.Test`의 `MyProject`에 대한 참조를 추가합니다.
 
    ```dotnetcli
    cd MyProject.Test
@@ -257,7 +257,7 @@ netstandard1.4/
 
 1. `dotnet test` 명령을 실행하여 xUnit가 실행되는지 확인합니다. MSTest를 사용하도록 선택한 경우 MSTest 콘솔 실행기가 대신 실행되어야 합니다.
 
-됐습니다! 이제 명령줄 도구를 사용하여 모든 플랫폼 라이브러리를 테스트할 수 있습니다. 이제 모든 것이 설정되어 계속해서 테스트하려는 경우 라이브러리 테스트는 매우 간단합니다.
+이것으로 끝입니다! 이제 명령줄 도구를 사용하여 모든 플랫폼 라이브러리를 테스트할 수 있습니다. 이제 모든 것이 설정되어 계속해서 테스트하려는 경우 라이브러리 테스트는 매우 간단합니다.
 
 1. 라이브러리를 변경합니다.
 1. 명령줄의 테스트 디렉터리에서 `dotnet test` 명령으로 테스트를 실행합니다.

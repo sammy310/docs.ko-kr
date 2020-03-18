@@ -7,15 +7,15 @@ helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
 ms.openlocfilehash: d047b88f202341a795834809d0b601706c30fcb4
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75899849"
 ---
 # <a name="if-c-reference"></a>#if(C# 참조)
 
-C# 컴파일러는 `#if` 지시문과 [#endif](preprocessor-endif.md) 지시문이 차례로 확인되면 지정된 기호가 정의되어 있어야 지시문 사이의 코드를 컴파일합니다. C 및 C++와 달리, 기호에 숫자 값을 할당할 수 없습니다. C#의 `#if` 문은 부울이고, 기호가 정의되었는지 여부만 테스트합니다. 예:
+C# 컴파일러는 `#if` 지시문과 [#endif](preprocessor-endif.md) 지시문이 차례로 확인되면 지정된 기호가 정의되어 있어야 지시문 사이의 코드를 컴파일합니다. C 및 C++와 달리, 기호에 숫자 값을 할당할 수 없습니다. C#의 `#if` 문은 부울이고, 기호가 정의되었는지 여부만 테스트합니다. 예들 들어 다음과 같습니다.
 
 ```csharp
 #if DEBUG
@@ -89,7 +89,7 @@ public class MyClass
 }
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

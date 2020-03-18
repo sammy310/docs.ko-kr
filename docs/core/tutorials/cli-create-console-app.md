@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: 1a691ad0c1f8dbfadd642360d7f9629a136ff3ab
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: fe69521a6ac88055e3e8c8502a7e19a72667dbef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156662"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240859"
 ---
 # <a name="get-started-with-net-core-using-the-net-core-cli"></a>.NET Core CLI를 사용하여 .NET Core 시작하기
 
@@ -19,7 +19,7 @@ ms.locfileid: "78156662"
 
 .NET Core CLI에 익숙하지 않은 경우 [.NET Core CLI 개요](../tools/index.md)를 참조하세요.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 - [.NET Core SDK 3.1](https://dotnet.microsoft.com/download) 이상 버전
 - 선택하는 텍스트 편집기 또는 코드 편집기입니다.
@@ -43,7 +43,7 @@ dotnet run
 
     *Hello.csproj*:
 
-    [!code-xml[Hello.csproj](~/samples/core/console-apps/HelloMsBuild/Hello.csproj)]
+    [!code-xml[Hello.csproj](~/samples/snippets/core/tutorials/cli-create-console-app/HelloMsBuild/csharp/Hello.csproj)]
 
     프로젝트 파일은 종속성을 복원하고 프로그램을 빌드하는 데 필요한 모든 항목을 지정합니다.
 
@@ -52,11 +52,11 @@ dotnet run
 
     *Program.cs*:
 
-    [!code-csharp[Program.cs](~/samples/core/console-apps/HelloMsBuild/Program.cs)]
+    [!code-csharp[Program.cs](~/samples/snippets/core/tutorials/cli-create-console-app/HelloMsBuild/csharp/Program.cs)]
 
     프로그램은 `using System`으로 시작됩니다. 즉, "`System` 네임스페이스의 모든 항목을 이 파일 범위로 가져옵니다". `System` 네임스페이스는 `Console` 클래스를 포함합니다.
 
-    그런 다음 `Hello`라는 네임스페이스를 정의합니다. 이 이름은 원하는 값으로 변경할 수 있습니다. `Program`이라는 클래스는 해당 네임스페이스 내에서 `args`라는 문자열 배열을 사용하는 `Main` 메서드로 정의됩니다. 이 배열에는 프로그램이 실행될 때 전달되는 인수 목록이 포함되어 있습니다. 이 상태 그대로 배열은 사용되지 않으며 프로그램은 단순히 "Hello World!"라는 텍스트를 작성합니다. 표시합니다. 나중에 이 인수를 사용하는 코드를 변경할 예정입니다.
+    그런 다음 `Hello`라는 네임스페이스를 정의합니다. 이 이름은 원하는 값으로 변경할 수 있습니다. `Program`이라는 클래스는 해당 네임스페이스 내에서 `Main`라는 문자열 배열을 사용하는 `args` 메서드로 정의됩니다. 이 배열에는 프로그램이 실행될 때 전달되는 인수 목록이 포함되어 있습니다. 이 상태 그대로 배열은 사용되지 않으며 프로그램은 단순히 "Hello World!"라는 텍스트를 작성합니다. 보여 줍니다. 나중에 이 인수를 사용하는 코드를 변경할 예정입니다.
 
     `dotnet new`는 [dotnet restore](../tools/dotnet-restore.md)를 암시적으로 호출합니다. `dotnet restore`는 [NuGet](https://www.nuget.org/)(.NET 패키지 관리자)을 호출하여 종속성 트리를 복원합니다. NuGet은 *Hello.csproj* 파일을 분석하고, 파일에 정의된 종속성을 다운로드하고(또는 머신의 캐시에서 종속성을 가져오고), 샘플을 컴파일 및 실행하는 데 필요한 *obj/project.assets.json* 파일을 작성합니다.
 
@@ -100,7 +100,7 @@ dotnet run
 
 01. *Program.cs* 파일의 내용을 다음 코드로 바꿉니다.
 
-    [!code-csharp[Fibonacci](~/samples/core/console-apps/fibonacci-msbuild/Program.cs)]
+    [!code-csharp[Fibonacci](~/samples/snippets/core/tutorials/cli-create-console-app/fibonacci-msbuild/csharp/Program.cs)]
 
 02. [dotnet build](../tools/dotnet-build.md)를 실행하여 변경 내용을 컴파일합니다.
 
@@ -132,7 +132,7 @@ dotnet run
     15: 377
     ```
 
-됐습니다! 원하는 대로 *Program.cs*를 수정할 수 있습니다.
+이것으로 끝입니다! 원하는 대로 *Program.cs*를 수정할 수 있습니다.
 
 ## <a name="working-with-multiple-files"></a>여러 파일 작업
 
@@ -140,11 +140,11 @@ dotnet run
 
 01. 다음 코드를 사용하여 *Hello* 디렉터리 내에 *FibonacciGenerator.cs*라는 새 파일을 추가합니다.
 
-    [!code-csharp[Fibonacci Generator](~/samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]
+    [!code-csharp[Fibonacci Generator](~/samples/snippets/core/tutorials/cli-create-console-app/FibonacciBetterMsBuild/csharp/FibonacciGenerator.cs)]
 
-02. 다음 예제에서처럼 *Program.cs* 파일의 `Main` 메서드를 변경하여 새 클래스를 인스턴스화하고 메서드를 호출합니다.
+02. 다음 예제에서처럼 `Main`Program.cs*파일의* 메서드를 변경하여 새 클래스를 인스턴스화하고 메서드를 호출합니다.
 
-    [!code-csharp[New Program.cs](~/samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
+    [!code-csharp[New Program.cs](~/samples/snippets/core/tutorials/cli-create-console-app/FibonacciBetterMsBuild/csharp/Program.cs)]
 
 03. [dotnet build](../tools/dotnet-build.md)를 실행하여 변경 내용을 컴파일합니다.
 
@@ -176,7 +176,7 @@ dotnet run
 
 ## <a name="publish-your-app"></a>앱 게시
 
-앱을 배포할 준비가 되면 [dotnet publish](../tools/dotnet-publish.md) 명령을 사용하여 _bin\\debug\\netcoreapp3.1\\publish\\_ 에서 _publish_ 폴더를 생성합니다(비 Windows 시스템의 경우 `/` 사용). 이미 dotnet 런타임을 설치한 경우에 _publish_ 폴더의 콘텐츠를 다른 플랫폼에 배포할 수 있습니다.
+앱을 배포할 준비가 되면 [dotnet publish](../tools/dotnet-publish.md) 명령을 사용하여 _bin_debug_netcoreapp3.1\\publish\\\\에서 \\publish_ 폴더를 생성합니다(비 Windows 시스템의 경우 `/` 사용). 이미 dotnet 런타임을 설치한 경우에 _publish_ 폴더의 콘텐츠를 다른 플랫폼에 배포할 수 있습니다.
 
 ```dotnetcli
 dotnet publish
@@ -217,9 +217,9 @@ Hello World!
 
 ## <a name="conclusion"></a>결론
 
-됐습니다! 이제 여기에서 배운 기본 개념을 활용하여 고유의 프로그램을 만들 수 있습니다.
+이것으로 끝입니다! 이제 여기에서 배운 기본 개념을 활용하여 고유의 프로그램을 만들 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [.NET Core CLI를 사용하여 프로젝트 구성 및 테스트](testing-with-cli.md)
 - [.NET Core CLI를 사용하여 .NET Core 앱 게시](../deploying/deploy-with-cli.md)

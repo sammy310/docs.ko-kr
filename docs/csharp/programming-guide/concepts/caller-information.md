@@ -3,10 +3,10 @@ title: 호출자 정보(C#)
 ms.date: 07/20/2015
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
 ms.openlocfilehash: 4b2c34945b47db01b0e655f68f92e4dae7445c2c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69595345"
 ---
 # <a name="caller-information-c"></a>호출자 정보(C#)
@@ -15,13 +15,13 @@ ms.locfileid: "69595345"
 
 이 정보를 얻으려면 각각 기본값이 있는 선택적 매개 변수에 적용되는 특성을 사용합니다. 다음 표에서는 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 네임스페이스에 정의된 호출자 정보 특성을 보여줍니다.
 
-|특성|설명|형식|
+|attribute|설명|형식|
 |---|---|---|
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|호출자를 포함한 소스 파일의 전체 경로입니다. 컴파일 시간의 파일 경로입니다.|`String`|
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|메서드가 호출되는 소스 파일의 줄 번호입니다.|`Integer`|
 |<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|호출자의 메서드 또는 속성 이름입니다. 이 항목의 뒷부분에 있는 [멤버 이름](#member-names)을 참조하세요.|`String`|
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 호출자 정보 특성을 사용하는 방법을 보여줍니다. `TraceMessage` 메서드에 대한 각 호출에서 호출자 정보는 선택적 매개 변수에 대한 인수로 대체됩니다.
 

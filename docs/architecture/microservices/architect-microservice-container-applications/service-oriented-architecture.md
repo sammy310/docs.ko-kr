@@ -3,10 +3,10 @@ title: 서비스 지향 아키텍처
 description: 마이크로 서비스 및 SOA(서비스 지향 아키텍처) 간의 근본적인 차이점을 알아봅니다.
 ms.date: 09/20/2018
 ms.openlocfilehash: 84786539fbac0e8b38a81a2580232474774cd355
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68674930"
 ---
 # <a name="service-oriented-architecture"></a>서비스 지향 아키텍처

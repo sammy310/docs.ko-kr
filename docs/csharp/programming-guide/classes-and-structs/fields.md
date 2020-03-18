@@ -5,10 +5,10 @@ helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
 ms.openlocfilehash: 46d4f77a4a490b2acdb5da20b9a477f27c38d410
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77628243"
 ---
 # <a name="fields-c-programming-guide"></a>필드(C# 프로그래밍 가이드)
@@ -21,11 +21,11 @@ ms.locfileid: "77628243"
 
 필드는 일반적으로 둘 이상의 클래스 메서드에서 액세스할 수 있고 단일 메서드의 수명보다 오랫동안 저장되어야 하는 데이터를 저장합니다. 예를 들어 달력 날짜를 나타내는 클래스에는 각각 월, 일 및 연도에 대한 세 개의 정수 필드가 있을 수 있습니다. 단일 메서드 범위 내에서만 사용되는 변수는 메서드 본문 자체 내에 *지역 변수*로 선언해야 합니다.
 
-필드는 필드의 액세스 수준을 지정한 다음 필드의 형식, 필드의 이름순으로 지정하여 클래스 블록에서 선언됩니다. 예를 들어:
+필드는 필드의 액세스 수준을 지정한 다음 필드의 형식, 필드의 이름순으로 지정하여 클래스 블록에서 선언됩니다. 예들 들어 다음과 같습니다.
 
 [!code-csharp[csProgGuideObjects#61](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#61)]
 
-개체의 필드에 액세스하려면 `objectname.fieldname`와 같이 개체 이름과 필드 이름 뒤에 마침표를 추가합니다. 예를 들어:
+개체의 필드에 액세스하려면 `objectname.fieldname`와 같이 개체 이름과 필드 이름 뒤에 마침표를 추가합니다. 예들 들어 다음과 같습니다.
 
 [!code-csharp[csProgGuideObjects#62](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#62)]
 
@@ -48,7 +48,7 @@ ms.locfileid: "77628243"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [클래스 및 구조체](./index.md)

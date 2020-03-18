@@ -16,10 +16,10 @@ helpviewer_keywords:
 - custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
 ms.openlocfilehash: 151bf40cf042517b7441b89688122373259dc7dc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140069"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>방법: 사용자 지정 숫자 형식 공급 기업 정의 및 사용
@@ -61,7 +61,7 @@ ms.locfileid: "73140069"
   
 2. <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 서식 지정 메서드를 호출하여 사용자 지정 서식 지정 개체, 형식 지정자(또는 지정자를 사용하지 않는 경우 <xref:System.String.Empty?displayProperty=nameWithType>) 및 서식을 지정할 숫자 값을 전달합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 미국 전화 번호를 나타내는 숫자를 NANP 또는 E.123 형식으로 변환하는 `TelephoneFormatter`라는 사용자 지정 숫자 형식 공급자를 정의합니다. 메서드는 두 가지 형식 지정자 "N"(NANP 형식 출력)과 "I"(국제 E.123 형식 출력)를 처리합니다.  
   
  [!code-csharp[Formatting.HowTo.NumericValue#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.NumericValue/cs/Telephone1.cs#1)]
@@ -86,6 +86,6 @@ ms.locfileid: "73140069"
   
  이 예제의 경우 <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType>을 구현하는 메서드는 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 메서드에 대한 콜백 메서드 역할을 하기 위한 것입니다. 따라서 이 메서드는 `formatProvider` 매개 변수를 검사하여 현재 `TelephoneFormatter` 개체에 대한 참조가 있는지 여부를 확인합니다. 그러나 코드에서 메서드를 직접 호출할 수도 있습니다. 이 경우 `formatProvider` 매개 변수를 사용하여 문화권별 서식 지정 정보를 제공하는 <xref:System.Globalization.CultureInfo> 또는 <xref:System.Globalization.NumberFormatInfo> 개체를 제공할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [서식 지정 작업 수행](../../../docs/standard/base-types/performing-formatting-operations.md)

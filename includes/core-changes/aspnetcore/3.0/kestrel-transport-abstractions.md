@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: f95c3916f4da8164cf927344f60f2845f04ddc5c
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72393917"
 ---
 ### <a name="kestrel-transport-abstractions-removed-and-made-public"></a>Kestrel: 전송 추상화 제거 및 공개
@@ -29,7 +29,7 @@ ms.locfileid: "72393917"
 
 ASP.NET Core 3.0은 "pubternal" API에서 벗어나 이동했습니다.
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 #### <a name="category"></a>범주
 

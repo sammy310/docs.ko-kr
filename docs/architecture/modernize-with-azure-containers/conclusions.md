@@ -3,10 +3,10 @@ title: 결론
 description: Azure Cloud 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화 | 결론
 ms.date: 10/26/2017
 ms.openlocfilehash: c7c4042b224577238ae74bd786d4803e487998e7
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69578486"
 ---
 # <a name="conclusions"></a>결론

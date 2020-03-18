@@ -8,10 +8,10 @@ helpviewer_keywords:
 - unsafe keyword [C#]
 ms.assetid: 7e818009-1c6e-4b9e-b769-3728a01586a0
 ms.openlocfilehash: ef98809eae0329c028dfb318c4a437aae4736db1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712990"
 ---
 # <a name="unsafe-c-reference"></a>unsafe(C# 참조)
@@ -33,7 +33,7 @@ unsafe static void FastCopy(byte[] src, byte[] dst, int count)
 unsafe static void FastCopy ( byte* ps, byte* pd, int count ) {...}
 ```
 
-안전하지 않은 블록을 통해 이 블록 내에서 안전하지 않은 코드를 사용할 수도 있습니다. 예:
+안전하지 않은 블록을 통해 이 블록 내에서 안전하지 않은 코드를 사용할 수도 있습니다. 예들 들어 다음과 같습니다.
 
 ```csharp
 unsafe
@@ -50,9 +50,9 @@ unsafe
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)의 [안전하지 않은 코드](~/_csharplang/spec/unsafe-code.md)를 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/unsafe-code.md)의 [안전하지 않은 코드](/dotnet/csharp/language-reference/language-specification/introduction)를 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

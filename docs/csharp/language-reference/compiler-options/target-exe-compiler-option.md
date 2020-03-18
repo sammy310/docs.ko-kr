@@ -9,10 +9,10 @@ helpviewer_keywords:
 - -target compiler options [C#], /target:exe
 ms.assetid: bda5717d-1b91-4848-956b-fcf85c30e432
 ms.openlocfilehash: 6087a64bea5a59bfcfc5372f6a9d6eb8b9c940cb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69606460"
 ---
 # <a name="-targetexe-c-compiler-options"></a>-target:exe(C# 컴파일러 옵션)
@@ -45,7 +45,7 @@ ms.locfileid: "69606460"
   
  이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>을 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 명령줄은 각각 `in.cs`를 컴파일하고 `in.exe`를 만듭니다.  
   
 ```console  

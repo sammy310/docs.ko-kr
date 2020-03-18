@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: eb3fa768a491f6c0ff4b15479beabd71b0670338
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937288"
 ---
 ### <a name="hosting-https-redirection-enabled-for-iis-out-of-process-apps"></a>호스팅: IIS Out of Process 앱에 대해 HTTPS 리디렉션 사용
@@ -37,7 +37,7 @@ ASP.NET Core 3.0 기능이 향상되었습니다.
 모든 클라이언트가 HTTPS를 사용하도록 하려면 작업이 필요 없습니다. 일부 클라이언트가 HTTPS를 사용하도록 허용하려면 다음 단계 중 하나를 수행합니다.
 
 * 프로젝트의 `Startup.Configure` 메서드에서 `UseHttpsRedirection` 및 `UseHsts`에 대한 호출을 제거하고 앱을 다시 배포하세요.
-* *web.config* 파일에서 `ASPNETCORE_HTTPS_PORT` 환경 변수를 빈 문자열로 설정하세요. 변경은 앱을 다시 배포하지 않고 서버에서 직접 발생할 수 있습니다. 예:
+* *web.config* 파일에서 `ASPNETCORE_HTTPS_PORT` 환경 변수를 빈 문자열로 설정하세요. 변경은 앱을 다시 배포하지 않고 서버에서 직접 발생할 수 있습니다. 예를 들어:
 
     ```xml
     <aspNetCore processPath="dotnet" arguments=".\WebApplication3.dll" stdoutLogEnabled="false" stdoutLogFile="\\?\%home%\LogFiles\stdout" >

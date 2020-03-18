@@ -6,10 +6,10 @@ helpviewer_keywords:
 - getting started, Visual C#
 ms.date: 04/05/2019
 ms.openlocfilehash: aff810aa7ba533682f9976fbb59ef4d7ec43ca58
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75713928"
 ---
 # <a name="get-started-with-c"></a>C\# 시작
@@ -52,6 +52,6 @@ ms.locfileid: "75713928"
 
     C#을 사용하는 프로그래밍 연습 및 각 연습에 대한 간단한 설명에 대한 링크를 제공합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Visual Studio를 사용한 C# 개발](/visualstudio/get-started/csharp/)

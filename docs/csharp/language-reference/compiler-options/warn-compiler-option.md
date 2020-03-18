@@ -13,10 +13,10 @@ helpviewer_keywords:
 - warn compiler option [C#]
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
 ms.openlocfilehash: 5b05e944a37e16fc1fcc422271be00c09a271a33
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69602397"
 ---
 # <a name="-warn-c-compiler-options"></a>-warn(C# 컴파일러 옵션)
@@ -30,7 +30,7 @@ ms.locfileid: "69602397"
   
 ## <a name="arguments"></a>인수  
  `option`  
- 컴파일에 표시할 경고 수준: 숫자가 낮을수록 높은 심각도 경고만 표시되고 숫자가 높을수록 많은 경고가 표시됩니다. 유효한 값은 0-4입니다.  
+ 컴파일에 대해 표시할 경고 수준입니다. 숫자가 낮으면 높은 심각도 경고만 표시되고, 숫자가 높으면 더 많은 경고가 표시됩니다. 유효한 값은 0-4입니다.  
   
 |경고 수준|의미|  
 |-------------------|-------------|  
@@ -57,7 +57,7 @@ ms.locfileid: "69602397"
   
  이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>을 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  `in.cs`를 컴파일하고 컴파일러에서 수준 1 경고만 표시하도록 합니다.  
   
 ```console  

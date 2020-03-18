@@ -9,10 +9,10 @@ helpviewer_keywords:
 - synchronization primitives, CountdownEvent
 ms.assetid: eec3812a-e20f-4ecd-bfef-6921d508b708
 ms.openlocfilehash: 628d6a96606117d447c61d01595d13dd4a957ce4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138119"
 ---
 # <a name="countdownevent"></a>CountdownEvent
@@ -29,10 +29,10 @@ ms.locfileid: "73138119"
   
 - <xref:System.Threading.CountdownEvent.Wait%2A>가 <xref:System.Threading.CountdownEvent.Reset%2A> 메서드를 호출하여 반환한 후 인스턴스를 재사용할 수 있습니다.  
   
-- 인스턴스는 <xref:System.Threading.WaitHandle.WaitAll%2A>와 같은 다른 .NET Framework 동기화 API와의 통합을 위해 <xref:System.Threading.WaitHandle>을 표시합니다.  
+- 인스턴스는 <xref:System.Threading.WaitHandle>와 같은 다른 .NET Framework 동기화 API와의 통합을 위해 <xref:System.Threading.WaitHandle.WaitAll%2A>을 표시합니다.  
   
 ## <a name="basic-usage"></a>기본 사용  
- 다음 예제는 <xref:System.Threading.ThreadPool> 작업 항목에 <xref:System.Threading.CountdownEvent>를 사용하는 방법을 보여줍니다.  
+ 다음 예제는 <xref:System.Threading.CountdownEvent> 작업 항목에 <xref:System.Threading.ThreadPool>를 사용하는 방법을 보여줍니다.  
   
  [!code-csharp[CDS_CountdownEvent#01](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_countdownevent/cs/countdownevent.cs#01)]
  [!code-vb[CDS_CountdownEvent#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_countdownevent/vb/module1.vb#01)]  

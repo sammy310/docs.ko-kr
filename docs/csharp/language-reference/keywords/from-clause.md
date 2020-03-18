@@ -9,10 +9,10 @@ helpviewer_keywords:
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
 ms.openlocfilehash: 388b9c0245b112d619fc173f6019b3f7dbf59940
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75715285"
 ---
 # <a name="from-clause-c-reference"></a>from 절(C# 참조)
@@ -31,7 +31,7 @@ ms.locfileid: "75715285"
 
 ## <a name="the-range-variable"></a>범위 변수
 
-컴파일러는 데이터 소스가 <xref:System.Collections.Generic.IEnumerable%601>을 구현할 경우 범위 변수의 형식을 유추합니다. 예를 들어, 소스의 형식이 `IEnumerable<Customer>`일 경우 범위 변수는 `Customer`로 유추됩니다. 소스가 <xref:System.Collections.ArrayList>와 같이 제네릭이 아닌 `IEnumerable` 형식인 경우에만 형식을 명시적으로 지정하면 됩니다. 자세한 내용은 [LINQ를 사용하여 ArrayList를 쿼리하는 방법](../../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)을 참조하세요.
+컴파일러는 데이터 소스가 <xref:System.Collections.Generic.IEnumerable%601>을 구현할 경우 범위 변수의 형식을 유추합니다. 예를 들어, 소스의 형식이 `IEnumerable<Customer>`일 경우 범위 변수는 `Customer`로 유추됩니다. 소스가 `IEnumerable`와 같이 제네릭이 아닌 <xref:System.Collections.ArrayList> 형식인 경우에만 형식을 명시적으로 지정하면 됩니다. 자세한 내용은 [LINQ를 사용하여 ArrayList를 쿼리하는 방법](../../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)을 참조하세요.
 
 위의 예제에서 `num`은 `int` 형식으로 유추됩니다. 범위 변수가 강력한 형식이므로 범위 변수에서 메서드를 호출하거나 다른 작업에서 범위 변수를 사용할 수 있습니다. 예를 들어 `select num`을 작성하는 대신에 `select num.ToString()`을 작성하여 쿼리 식에서 정수 대신 문자열 시퀀스를 반환하게 할 수 있습니다. 또는 `select num + 10`을 작성하여 식에서 14, 11, 13, 12, 10 시퀀스를 반환하게 할 수 있습니다. 자세한 내용은 [select 절](select-clause.md)을 참조하세요.
 
@@ -39,7 +39,7 @@ ms.locfileid: "75715285"
 
 ## <a name="compound-from-clauses"></a>복합 from 절
 
-경우에 따라 소스 시퀀스의 각 요소 자체가 시퀀스이거나 시퀀스를 포함할 수 있습니다. 예를 들어, 시퀀스의 각 학생 개체에 테스트 점수 목록이 포함된 `IEnumerable<Student>`가 데이터 소스일 수 있습니다. 각 `Student` 요소 내의 내부 목록에 액세스하려면 복합 `from` 절을 사용합니다. 이 기술은 중첩된 [foreach](foreach-in.md) 문을 사용하는 것과 같습니다. [where](partial-method.md) 또는 [orderby](orderby-clause.md) 절을 둘 중 하나의 `from` 절에 추가하여 결과를 필터링할 수 있습니다. 다음 예제에서는 테스트 점수를 나타내는 정수의 내부 `List`를 각각 포함하는 `Student` 개체의 시퀀스를 보여 줍니다. 내부 목록에 액세스하려면 복합 `from` 절을 사용합니다. 필요한 경우 두 `from` 절 사이에 다른 절을 삽입할 수 있습니다.
+경우에 따라 소스 시퀀스의 각 요소 자체가 시퀀스이거나 시퀀스를 포함할 수 있습니다. 예를 들어, 시퀀스의 각 학생 개체에 테스트 점수 목록이 포함된 `IEnumerable<Student>`가 데이터 소스일 수 있습니다. 각 `Student` 요소 내의 내부 목록에 액세스하려면 복합 `from` 절을 사용합니다. 이 기술은 중첩된 [foreach](foreach-in.md) 문을 사용하는 것과 같습니다. [where](partial-method.md) 또는 [orderby](orderby-clause.md) 절을 둘 중 하나의 `from` 절에 추가하여 결과를 필터링할 수 있습니다. 다음 예제에서는 테스트 점수를 나타내는 정수의 내부 `Student`를 각각 포함하는 `List` 개체의 시퀀스를 보여 줍니다. 내부 목록에 액세스하려면 복합 `from` 절을 사용합니다. 필요한 경우 두 `from` 절 사이에 다른 절을 삽입할 수 있습니다.
 
 [!code-csharp[cscsrefQueryKeywords#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/From.cs#2)]
 
@@ -53,7 +53,7 @@ ms.locfileid: "75715285"
 
 여러 `from` 절을 사용하는 조인 작업에 대한 자세한 내용은 [왼쪽 우선 외부 조인 수행](../../linq/perform-left-outer-joins.md)을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [쿼리 키워드(LINQ)](query-keywords.md)
 - [LINQ(Language-Integrated Query)](../../linq/index.md)

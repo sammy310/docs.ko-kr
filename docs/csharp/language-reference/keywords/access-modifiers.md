@@ -5,10 +5,10 @@ helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
 ms.openlocfilehash: 754949e42771de30cc2dce7e4e610f70ada6dfd4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713851"
 ---
 # <a name="access-modifiers-c-reference"></a>액세스 한정자(C# 참조)
@@ -35,13 +35,13 @@ ms.locfileid: "75713851"
   
  이 섹션에서는 다음 내용도 소개합니다.  
   
-- [액세스 가능성 수준](./accessibility-levels.md): 네 가지 액세스 한정자를 사용하여 여섯 가지 액세스 가능성 수준을 선언합니다.  
+- [접근성 수준](./accessibility-levels.md): 네 가지 액세스 한정자를 사용하여 여섯 가지 접근성 수준을 선언합니다.  
   
-- [액세스 가능성 도메인](./accessibility-domain.md): 프로그램 섹션에서 멤버를 참조할 수 있는 위치를 지정합니다.  
+- [접근성 도메인](./accessibility-domain.md): 프로그램 섹션에서 멤버를 참조할 수 있는 위치를 지정합니다.  
   
-- [액세스 가능성 수준 사용에 대한 제한](./restrictions-on-using-accessibility-levels.md): 선언된 접근성 수준 사용에 대한 제한 요약입니다.  
+- [접근성 수준 사용에 대한 제한](./restrictions-on-using-accessibility-levels.md): 선언된 접근성 수준 사용에 대한 제한 사항 요약입니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

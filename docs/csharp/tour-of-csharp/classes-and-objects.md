@@ -4,10 +4,10 @@ description: C#을 처음 사용하시나요? 클래스, 개체 및 상속에 �
 ms.date: 02/27/2020
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
 ms.openlocfilehash: c178e11b5667905f75538555c8a309e2fdb4a9ef
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78159184"
 ---
 # <a name="classes-and-objects"></a>클래스 및 개체

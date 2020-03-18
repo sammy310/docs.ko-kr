@@ -8,10 +8,10 @@ helpviewer_keywords:
 - network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
 ms.openlocfilehash: 5f8f1a3ca9aaf4bea56f342857d2df0bb18a9ba8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047627"
 ---
 # <a name="network-programming-how-to-topics"></a>네트워크 프로그래밍 방법 항목
@@ -43,7 +43,7 @@ ms.locfileid: "71047627"
   
 - [방법: FTP를 사용하여 파일 업로드](how-to-upload-files-with-ftp.md)  
   
-- [방법: FTP를 사용하여 디렉터리 내용 나열](how-to-list-directory-contents-with-ftp.md)  
+- [방법: FTP로 디렉터리 내용 나열](how-to-list-directory-contents-with-ftp.md)  
   
  **인터넷 프로토콜 버전 6:**  
   
@@ -57,9 +57,9 @@ ms.locfileid: "71047627"
   
 - [방법: 애플리케이션에 대해 위치 기반 캐시 정책 설정](how-to-set-a-location-based-cache-policy-for-an-application.md)  
   
-- [방법: 애플리케이션의 기본 시간 기반 캐시 정책 설정](how-to-set-the-default-time-based-cache-policy-for-an-application.md)  
+- [방법: 애플리케이션에 대해 시간 기반 캐시 정책 설정](how-to-set-the-default-time-based-cache-policy-for-an-application.md)  
   
-- [방법: 시간 기반 캐시 정책 사용자 지정](how-to-customize-a-time-based-cache-policy.md)  
+- [방법: 시간 기반 캐시 정책을 사용자 지정](how-to-customize-a-time-based-cache-policy.md)  
   
 - [방법: 요청에 캐시 정책 설정](how-to-set-cache-policy-for-a-request.md)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "71047627"
   
 - [방법: 프록시를 사용하여 인터넷과 통신하도록 WebRequest 설정](how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
   
-- [방법: 글로벌 프록시 선택 재정의](how-to-override-a-global-proxy-selection.md)  
+- [방법: 전역 프록시 선택 재정의](how-to-override-a-global-proxy-selection.md)  
   
  **네트워크 정보**  
   

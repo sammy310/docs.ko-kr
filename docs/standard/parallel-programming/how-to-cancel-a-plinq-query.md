@@ -10,10 +10,10 @@ helpviewer_keywords:
 - cancellation, PLINQ
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
 ms.openlocfilehash: 272f25d62cb63c60209be3bc54dc5e76fb30df54
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73134226"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>방법: PLINQ 쿼리 취소
@@ -24,20 +24,20 @@ ms.locfileid: "73134226"
 >
 > 이 예제는 사용법을 보여 주기 위한 것이며, 동일한 순차 LINQ to Objects 쿼리보다 빠르게 실행되지 않을 수도 있습니다. 속도 향상에 대한 자세한 내용은 [PLINQ의 속도 향상 이해](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)를 참조하세요.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 [!code-csharp[PLINQ#16](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#16)]
 [!code-vb[PLINQ#16](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#16)]
 
-PLINQ 프레임워크는 단일 <xref:System.OperationCanceledException>을 <xref:System.AggregateException?displayProperty=nameWithType>으로 롤링하지 않습니다. <xref:System.OperationCanceledException>은 별도의 catch 블록에서 처리되어야 합니다. 하나 이상의 사용자 대리자가 <xref:System.Threading.CancellationToken?displayProperty=nameWithType>을 사용하여 OperationCanceledException(externalCT)을 throw하지만 다른 예외를 throw하지 않고 쿼리가 `AsParallel().WithCancellation(externalCT)`로 정의된 경우 PLINQ는 <xref:System.AggregateException?displayProperty=nameWithType>이 아닌 단일 <xref:System.OperationCanceledException> (externalCT)을 throw합니다. 그러나 하나의 사용자 대리자가 <xref:System.OperationCanceledException>을 throw하고 다른 대리자가 다른 예외 형식을 throw할 경우에는 두 예외가 모두 <xref:System.AggregateException>으로 롤링됩니다.
+PLINQ 프레임워크는 단일 <xref:System.OperationCanceledException>을 <xref:System.AggregateException?displayProperty=nameWithType>으로 롤링하지 않습니다. <xref:System.OperationCanceledException>은 별도의 catch 블록에서 처리되어야 합니다. 하나 이상의 사용자 대리자가 <xref:System.Threading.CancellationToken?displayProperty=nameWithType>을 사용하여 OperationCanceledException(externalCT)을 throw하지만 다른 예외를 throw하지 않고 쿼리가 `AsParallel().WithCancellation(externalCT)`로 정의된 경우 PLINQ는 <xref:System.OperationCanceledException>이 아닌 단일 <xref:System.AggregateException?displayProperty=nameWithType> (externalCT)을 throw합니다. 그러나 하나의 사용자 대리자가 <xref:System.OperationCanceledException>을 throw하고 다른 대리자가 다른 예외 형식을 throw할 경우에는 두 예외가 모두 <xref:System.AggregateException>으로 롤링됩니다.
 
 취소에 대한 일반 지침은 다음과 같습니다.
 
 1. 사용자 대리자 취소를 수행하는 경우 외부 <xref:System.Threading.CancellationToken>에 대해 PLINQ에 알리고 <xref:System.OperationCanceledException>(externalCT)을 throw해야 합니다.
 
-2. 취소가 발생하고 다른 예외가 throw되지 않으면 <xref:System.AggregateException>이 아닌 <xref:System.OperationCanceledException>을 처리해야 합니다.
+2. 취소가 발생하고 다른 예외가 throw되지 않으면 <xref:System.OperationCanceledException>이 아닌 <xref:System.AggregateException>을 처리해야 합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제는 사용자 코드에서 계산을 많이 해야 하는 경우 취소를 처리하는 방법을 보여줍니다.
 

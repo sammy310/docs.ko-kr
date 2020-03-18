@@ -7,10 +7,10 @@ helpviewer_keywords:
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 ms.openlocfilehash: 72cf742aae26f9441229b355dc6e70da7a5fc9cd
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75900576"
 ---
 # <a name="garbage-collection-and-performance"></a>가비지 컬렉션 및 성능
@@ -423,7 +423,7 @@ CLR(공용 언어 런타임) 프로파일링 인터페이스는 가비지 수집
 
   관리되는 힙이 크면 **dumpheap**을 완료하는 데 오랜 시간이 걸릴 수 있습니다.
 
-  가장 많은 공간을 사용하는 개체를 나열하는 출력의 마지막 몇 줄에서 분석을 시작하는 것이 좋습니다. 예:
+  가장 많은 공간을 사용하는 개체를 나열하는 출력의 마지막 몇 줄에서 분석을 시작하는 것이 좋습니다. 예를 들어:
 
   ```console
   2c6108d4   173712     14591808 DevExpress.XtraGrid.Views.Grid.ViewInfo.GridCellInfo

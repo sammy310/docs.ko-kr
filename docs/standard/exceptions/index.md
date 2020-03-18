@@ -12,10 +12,10 @@ helpviewer_keywords:
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
 ms.openlocfilehash: 8e78b2a8d7a815637e143eeb88bcfb51ded33771
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75741348"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>.NET의 예외 처리 및 Throw
@@ -56,11 +56,11 @@ ms.locfileid: "75741348"
 | <xref:System.ArgumentNullException> | 인수에 Null을 허용하지 않는 메서드에서 발생됩니다. | `String s = null;` <br /> `"Calculate".IndexOf(s);`|
 | <xref:System.ArgumentOutOfRangeException> | 인수가 지정된 범위에 있는지 확인하는 메서드에서 발생됩니다. | `String s = "string";` <br /> `s.Substring(s.Length+1);` |
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Exception 클래스 및 속성](exception-class-and-properties.md)
-- [방법: Try-Catch 블록을 사용하여 예외 catch](how-to-use-the-try-catch-block-to-catch-exceptions.md)
-- [방법: catch 블록에서 특정 예외 사용](how-to-use-specific-exceptions-in-a-catch-block.md)
+- [방법: Try/Catch 블록을 사용하여 예외 catch](how-to-use-the-try-catch-block-to-catch-exceptions.md)
+- [방법: Catch 블록에 특정 예외 사용](how-to-use-specific-exceptions-in-a-catch-block.md)
 - [방법: 명시적으로 예외 Throw](how-to-explicitly-throw-exceptions.md)
 - [방법: 사용자 정의 예외 만들기](how-to-create-user-defined-exceptions.md)
 - [사용자 필터 예외 처리기 사용](using-user-filtered-exception-handlers.md)

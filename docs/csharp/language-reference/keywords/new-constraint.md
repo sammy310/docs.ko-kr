@@ -5,10 +5,10 @@ helpviewer_keywords:
 - new constraint keyword [C#]
 ms.assetid: 58850b64-cb97-4136-be50-1f3bc7fc1da9
 ms.openlocfilehash: cd67aeb82d736b8941b0637494089723e7815505
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713350"
 ---
 # <a name="new-constraint-c-reference"></a>new 제약 조건(C# 참조)
@@ -29,9 +29,9 @@ ms.locfileid: "75713350"
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [유형 매개 변수 제약 조건](~/_csharplang/spec/classes.md#type-parameter-constraints) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/classes.md#type-parameter-constraints)의 [유형 매개 변수 제약 조건](~/_csharplang/spec/introduction.md) 섹션을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../../language-reference/index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

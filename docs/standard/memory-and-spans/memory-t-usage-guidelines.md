@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Memory&lt;T&gt; and Span&lt;T&gt; best practices
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 ms.openlocfilehash: 0a614f628faa98be778c627573e4dddc462c9107
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73121969"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Memory\<T> 및 Span\<T> 사용 지침
@@ -184,7 +184,7 @@ static void Log(ReadOnlyMemory<char> message)
 
 **규칙 #5: 생성자가 Memory\<T>를 매개 변수로 사용하는 경우 생성된 개체의 인스턴스 메서드가 Memory\<T> 인스턴스의 소비자로 간주됩니다.**
 
-다음 예제를 살펴보세요.
+다음 예제를 참조하세요.
 
 ```csharp
 class OddValueExtractor
@@ -366,7 +366,7 @@ private class MyCompletedCallbackState
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Memory%601?displayProperty=nameWithType>
 - <xref:System.Buffers.IMemoryOwner%601?displayProperty=nameWithType>

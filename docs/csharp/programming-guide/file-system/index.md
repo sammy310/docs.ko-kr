@@ -7,17 +7,17 @@ helpviewer_keywords:
 - files [C#]
 ms.assetid: 0f2511cf-2b02-4b41-b001-b1754677c38f
 ms.openlocfilehash: f160df456f1a3437e11de2d3660d158ae4d4bb67
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75900571"
 ---
 # <a name="file-system-and-the-registry-c-programming-guide"></a>파일 시스템 및 레지스트리(C# 프로그래밍 가이드)
 
 다음 문서들은 C# 및 .NET를 사용하여 파일, 폴더 및 레지스트리에서 다양한 기본 작업을 수행하는 방법을 보여 줍니다.
 
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
 |**제목**|**설명**|
 |---------------|---------------------|

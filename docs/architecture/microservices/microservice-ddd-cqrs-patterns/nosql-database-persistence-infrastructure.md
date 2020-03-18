@@ -3,10 +3,10 @@ title: NoSQL 데이터베이스를 지속성 인프라로 사용
 description: 지속성을 구현하기 위한 옵션으로 일반적인 경우 NoSql 데이터베이스, 특정한 경우 Azure Cosmos DB의 사용을 이해합니다.
 ms.date: 01/30/2020
 ms.openlocfilehash: 7da4141d9aadc4aaa265ac97d328bc4b7569a0cb
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77502390"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>NoSQL 데이터베이스를 지속성 인프라로 사용

@@ -3,17 +3,17 @@ title: dotnet help 명령
 description: dotnet help 명령은 지정된 명령에 대한 자세한 온라인 설명서를 표시합니다.
 ms.date: 02/14/2020
 ms.openlocfilehash: f5d9221ae18653451a3bf97dc82fae396ae4e288
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503722"
 ---
 # <a name="dotnet-help-reference"></a>dotnet help reference
 
 **이 문서의 적용 대상:**  ✔️ .NET Core 2.0 SDK 이상 버전
 
-## <a name="name"></a>이름
+## <a name="name"></a>name
 
 `dotnet help` - 지정된 명령에 대한 자세한 온라인 설명서를 표시합니다.
 

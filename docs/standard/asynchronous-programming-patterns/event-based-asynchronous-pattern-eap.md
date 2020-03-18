@@ -8,10 +8,10 @@ helpviewer_keywords:
 - asynchronous programming
 ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
 ms.openlocfilehash: ee8c90d63478e444b7d25cb7cbb5c969963d7c63
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73130938"
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a>이벤트 기반 비동기 패턴(EAP)
@@ -33,7 +33,7 @@ ms.locfileid: "73130938"
  이벤트 기반 비동기 패턴에 따라 비동기 기능을 노출하기 위한 요구 사항을 설명합니다.  
   
  [이벤트 기반 비동기 패턴 구현 시기 결정](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
- [APM(비동기 프로그래밍 모델)](asynchronous-programming-model-apm.md)에서 나타내는 <xref:System.IAsyncResult> 패턴 대신 이벤트 기반 비동기 패턴을 구현하도록 선택해야 하는 경우를 결정하는 방법을 설명합니다.
+ <xref:System.IAsyncResult>APM(비동기 프로그래밍 모델)[에서 나타내는 ](asynchronous-programming-model-apm.md) 패턴 대신 이벤트 기반 비동기 패턴을 구현하도록 선택해야 하는 경우를 결정하는 방법을 설명합니다.
   
  [방법: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 구현](component-that-supports-the-event-based-asynchronous-pattern.md)  
  이벤트 기반 비동기 패턴을 구현하는 구성 요소를 만드는 방법을 설명합니다. 구성 요소가 모든 애플리케이션 모델에서 올바르게 작동하도록 하는 <xref:System.ComponentModel?displayProperty=nameWithType> 네임스페이스의 도우미 클래스를 사용하는 것이 좋습니다.  

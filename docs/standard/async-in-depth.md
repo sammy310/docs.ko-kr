@@ -7,10 +7,10 @@ ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
 ms.openlocfilehash: 91fd37ce329c03b43b5472e4579be7f5ef961738
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70169116"
 ---
 # <a name="async-in-depth"></a>비동기에 대한 자세한 설명
@@ -144,7 +144,7 @@ public async Task<int> CalculateResult(InputData data)
 
 `async` 및 `await`는 응답성이 필요할 때 CPU 바인딩된 작업을 관리하는 모범 사례입니다. CPU 바인딩된 작업에 비동기를 사용하는 여러 가지 패턴이 있습니다. 비동기 사용 시 작은 비용이 발생하며 타이트 루프에는 권장되지 않습니다.  이 새로운 기능과 관련된 코드 작성 방법은 사용자가 결정할 사항입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C#의 비동기 프로그래밍](../csharp/async.md)
 - [async 및 await를 사용한 비동기 프로그래밍(C#)](../csharp/programming-guide/concepts/async/index.md)

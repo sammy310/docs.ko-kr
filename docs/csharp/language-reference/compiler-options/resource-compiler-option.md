@@ -12,10 +12,10 @@ helpviewer_keywords:
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
 ms.openlocfilehash: e14bf59f5922a918b627af22c052c8efd9081e84
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69602521"
 ---
 # <a name="-resource-c-compiler-options"></a>-resource(C# 컴파일러 옵션)
@@ -31,10 +31,10 @@ ms.locfileid: "69602521"
  `filename`  
  출력 파일에 포함하려는 .NET Framework 리소스 파일입니다.  
   
- `identifier` (선택 사항)  
+ `identifier`(선택 사항)  
  리소스의 논리적 이름으로, 리소스를 로드하는 데 사용되는 이름입니다. 기본값은 파일 이름입니다.  
   
- `accessibility-modifier` (선택 사항)  
+ `accessibility-modifier`(선택 사항)  
  리소스의 접근성으로, public 또는 private입니다. 기본값은 public입니다.  
   
 ## <a name="remarks"></a>설명  
@@ -60,7 +60,7 @@ ms.locfileid: "69602521"
   
  이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.FileProperties2.BuildAction%2A>을 참조하십시오.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  `in.cs`를 컴파일하고 리소스 파일 `rf.resource`를 첨부합니다.  
   
 ```console  

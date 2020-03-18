@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /target compiler options [C#], /target:library
 ms.assetid: c5670e88-2126-47c1-8d1c-217923837d17
 ms.openlocfilehash: c947b2015c19d0809cab4535e989ee83ebf17fd9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69606398"
 ---
 # <a name="-targetlibrary-c-compiler-options"></a>-target:library(C# 컴파일러 옵션)
@@ -43,7 +43,7 @@ ms.locfileid: "69606398"
   
  이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>을 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  `in.cs`를 컴파일하고 `in.dll`을 만듭니다.  
   
 ```console  

@@ -3,10 +3,10 @@ title: DNX에서 .NET Core CLI로 마이그레이션
 description: DNX 도구 사용에서 .NET Core CLI 도구로 마이그레이션합니다.
 ms.date: 06/20/2016
 ms.openlocfilehash: 31317f110ae1e8586b78becd757d0a8ff07f1459
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503826"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>DNX에서.NET Core CLI(project.json)로 마이그레이션
@@ -110,7 +110,7 @@ CLI와 DNX는 둘 다 `project.json` 파일 기반의 동일한 기본 프로젝
 
 이렇게 하면 `dotnet build`는 애플리케이션의 진입점을 내보내서 코드 실행이 효과적으로 수행되도록 합니다. 클래스 라이브러리를 빌드하는 경우 위 섹션을 생략하면 됩니다. 물론 위 코드 조각을 `project.json` 파일에 추가한 후 정적 진입점을 추가해야 합니다. DNX에서 나오면 DNX가 지원하는 DI를 더 이상 사용할 수 없으므로 `static void Main()`이 기본 .NET 진입점이 되어야 합니다.
 
-`project.json`에 "commands" 섹션이 있는 경우 이를 제거할 수 있습니다. DNU 명령으로 사용되었던 명령 중 일부(예: Entity Framework CLI 명령)는 CLI에 프로젝트별 확장으로 이식됩니다. 프로젝트에서 사용하는 명령을 빌드한 경우 이를 CLI 확장으로 교체해야 합니다. 이 경우 `project.json`의 `commands` 노드를 `tools` 노드로 교체하고, 도구 종속성을 나열해야 합니다.
+`project.json`에 "commands" 섹션이 있는 경우 이를 제거할 수 있습니다. DNU 명령으로 사용되었던 명령 중 일부(예: Entity Framework CLI 명령)는 CLI에 프로젝트별 확장으로 이식됩니다. 프로젝트에서 사용하는 명령을 빌드한 경우 이를 CLI 확장으로 교체해야 합니다. 이 경우 `commands`의 `project.json` 노드를 `tools` 노드로 교체하고, 도구 종속성을 나열해야 합니다.
 
 이러한 작업이 완료되면 어떤 이식성 유형을 앱에 사용할지를 결정해야 합니다. .NET Core에서는 선택 가능한 폭넓은 이식성 옵션이 제공됩니다. 예를 들어 완전히 *이식 가능한* 애플리케이션을 원할 수도 있고 *자체 포함* 애플리케이션을 원할 수도 있습니다. 이식 가능한 애플리케이션 옵션은 .NET Framework 애플리케이션 작업과 유사하며, 대상 컴퓨터(.NET Core)에서 실행하기 위한 공유 구성 요소가 필요합니다. 자체 포함 애플리케이션의 경우 .NET Core를 대상에 설치할 필요가 없지만, 지원할 각 OS에 대해 하나의 애플리케이션을 생성해야 합니다. 이러한 이식성 형식 등에 대해서는 [애플리케이션 이식성 유형](../deploying/index.md) 문서에서 설명합니다.
 
@@ -119,13 +119,13 @@ CLI와 DNX는 둘 다 `project.json` 파일 기반의 동일한 기본 프로젝
 1. `netcoreapp1.0`- .NET Core에서 애플리케이션을 작성하는 경우(ASP.NET Core 애플리케이션 포함)
 2. `netstandard1.6`- .NET Core용 클래스 라이브러리를 작성하는 경우
 
-`dnx451` 같은 다른 `dnx` 대상을 사용 중인 경우에도 역시 변경해야 합니다. `dnx451`을`net451` 로 변경해야 합니다.
+`dnx` 같은 다른 `dnx451` 대상을 사용 중인 경우에도 역시 변경해야 합니다. `dnx451`을`net451` 로 변경해야 합니다.
 자세한 내용은 [.NET 표준](../../standard/net-standard.md) 항목을 참조하세요.
 
 `project.json`이 거의 준비되었습니다. 종속성 목록을 살펴보고, 특히 ASP.NET Core 종속성을 사용하는 경우 종속성을 새 버전으로 업데이트해야 합니다. 별도의 BCL API용 패키지를 사용한 경우 [애플리케이션 이식성 유형](../deploying/index.md) 문서에 설명된 대로 런타임 패키지를 사용할 수 있습니다.
 
-준비가 되면 `dotnet restore`([참고 참조](#dotnet-restore-note))로 복원을 시도할 수 있습니다. 종속성의 버전에 따라, NuGet이 위의 대상 프레임워크 중 하나에 대한 종속성을 확인할 수 없는 경우 오류가 발생할 수 있습니다. 이는 "시점" 문제입니다. 시간이 지나면서 이러한 프레임워크를 지원하는 패키지가 점점 더 많아질 것입니다. 지금은 `framework` 노드 내에서 `imports` 문을 사용하여, 프레임워크를 대상으로 하는 패키지를 복원할 수 있는 NuGet을 "imports" 문 내에 지정할 수 있습니다.
-이 경우 표시되는 복원 오류는 어떤 프레임워크를 가져와야 하는지에 대한 충분한 정보를 제공합니다. 잘 모르는 경우 일반적으로 `imports` 문에서 `dnxcore50` 및 `portable-net45+win8`을 지정하면 도움이 될 수 있습니다. 다음의 JSON 코드 조각은 이를 보여 줍니다.
+준비가 되면 `dotnet restore`([참고 참조](#dotnet-restore-note))로 복원을 시도할 수 있습니다. 종속성의 버전에 따라, NuGet이 위의 대상 프레임워크 중 하나에 대한 종속성을 확인할 수 없는 경우 오류가 발생할 수 있습니다. 이는 "시점" 문제입니다. 시간이 지나면서 이러한 프레임워크를 지원하는 패키지가 점점 더 많아질 것입니다. 지금은 `imports` 노드 내에서 `framework` 문을 사용하여, 프레임워크를 대상으로 하는 패키지를 복원할 수 있는 NuGet을 "imports" 문 내에 지정할 수 있습니다.
+이 경우 표시되는 복원 오류는 어떤 프레임워크를 가져와야 하는지에 대한 충분한 정보를 제공합니다. 잘 모르는 경우 일반적으로 `dnxcore50` 문에서 `portable-net45+win8` 및 `imports`을 지정하면 도움이 될 수 있습니다. 다음의 JSON 코드 조각은 이를 보여 줍니다.
 
 ```json
     "frameworks": {

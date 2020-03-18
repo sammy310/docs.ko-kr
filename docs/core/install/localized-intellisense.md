@@ -3,10 +3,10 @@ title: 지역화된 IntelliSense 파일 설치
 description: Visual Studio에서 .NET Core 프로젝트에 대해 지역화된 IntelliSense 파일을 사용하도록 개발 머신을 설정하는 방법을 알아봅니다.
 ms.date: 01/23/2020
 ms.openlocfilehash: e45e225e58865ca2b529000ada0984fbeca850f3
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78157715"
 ---
 # <a name="how-to-install-localized-intellisense-files-for-net-core"></a>.NET Core에 대해 지역화된 IntelliSense 파일을 설치하는 방법
@@ -16,7 +16,7 @@ ms.locfileid: "78157715"
 - 이러한 파일의 지역화된 버전을 설치하는 방법
 - 다른 언어를 사용하도록 Visual Studio 설치를 수정하는 방법
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 - [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) 이상 버전
 - [Visual Studio 2019 버전 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 이상 버전
@@ -40,8 +40,8 @@ ms.locfileid: "78157715"
       | SDK 형식        | 경로                               |
       | --------------- | ---------------------------------- |
       | .NET Core       | *Microsoft.NETCore.App.Ref*        |
-      | Windows 바탕 화면 | *Microsoft.WindowsDesktop.App.Ref* |
-      | .NET Standard   | *NETStandard.Library.Ref*          |
+      | Windows Desktop | *Microsoft.WindowsDesktop.App.Ref* |
+      | .NET 표준   | *NETStandard.Library.Ref*          |
 
    1. 지역화된 IntelliSense를 설치하려는 버전으로 이동합니다. 예: *3.1.0*.
    1. *ref* 폴더를 엽니다.
@@ -124,6 +124,6 @@ Visual Studio에서 IntelliSense에 다른 언어를 사용하도록 하려면 �
 
 그러면 방금 설치한 IntelliSense 파일의 버전을 대상으로 하는 .NET Core 프로젝트를 열 때 IntelliSense가 예상대로 작동합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Visual Studio의 IntelliSense](/visualstudio/ide/using-intellisense)

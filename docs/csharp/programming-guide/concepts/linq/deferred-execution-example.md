@@ -3,16 +3,16 @@ title: 지연된 실행 예제(C#)
 ms.date: 07/20/2015
 ms.assetid: 50f4fbac-81fe-4f26-aedf-506e21419b19
 ms.openlocfilehash: 0816594ad016f19af4c97198160b4bafb9b4b8b4
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70204125"
 ---
 # <a name="deferred-execution-example-c"></a>지연된 실행 예제(C#)
 이 항목에서는 지연된 실행과 지연 계산이 LINQ to XML 쿼리의 실행에 미치는 영향을 보여 줍니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 지연된 실행을 사용하는 확장 메서드를 사용하는 경우의 실행 순서를 보여 줍니다. 이 예제에서는 세 문자열의 배열을 선언한 다음 `ConvertCollectionToUpperCase`에서 반환하는 컬렉션을 반복합니다.  
   
 ```csharp  

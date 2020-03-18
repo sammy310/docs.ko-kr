@@ -10,10 +10,10 @@ helpviewer_keywords:
 - .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 ms.openlocfilehash: b1ba9810b4b0d5a1688318db1093a9ce9bdf8fda
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716470"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>.NET Framework 및 애플리케이션 배포
@@ -32,7 +32,7 @@ ms.locfileid: "75716470"
 
     - [웹 설치 관리자](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
-    - [오프라인 설치 관리자](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
+    - [Offline installer](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
   - 설치 모드:
 
@@ -118,7 +118,7 @@ ms.locfileid: "75716470"
 
 .NET Framework에 대한 패키징 및 배포 정보 중 일부는 설명서의 다른 섹션에서 설명합니다. 이러한 섹션에서는 레지스트리 항목이 필요 없는 [어셈블리](../../standard/assembly/index.md)라는 자체 설명적 단위, 이름 고유성을 유지하고 이름 스푸핑을 방지하는 [강력한 이름의 어셈블리](../../standard/assembly/strong-named.md) 및 DLL 충돌과 관련된 많은 문제를 해결하는 [어셈블리 버전 관리](../../standard/assembly/versioning.md)에 대한 정보를 제공합니다. 다음 섹션에서는 .NET Framework 애플리케이션 패키징 및 배포에 대한 정보를 제공합니다.
 
-### <a name="packaging"></a>패키지
+### <a name="packaging"></a>패키징
 
 .NET Framework는 다음과 같은 애플리케이션 패키징 옵션을 제공합니다.
 
@@ -134,7 +134,7 @@ ms.locfileid: "75716470"
 
      이 옵션을 사용하는 경우 Windows Installer에서 사용할 .msi 파일을 만들거나 다른 설치 관리자에서 사용하기 위해 애플리케이션을 패키징합니다.
 
-### <a name="distribution"></a>분포
+### <a name="distribution"></a>배포
 
 .NET Framework는 다음과 같은 애플리케이션 배포 옵션을 제공합니다.
 
@@ -169,8 +169,8 @@ ms.locfileid: "75716470"
 |[ClickOnce 애플리케이션 게시](/visualstudio/deployment/publishing-clickonce-applications)|Windows Forms 애플리케이션을 패키징하고 ClickOnce로 네트워크의 클라이언트 컴퓨터에 배포하는 방법을 설명합니다.|
 |[리소스 패키징 및 배포](../resources/packaging-and-deploying-resources-in-desktop-apps.md)|.NET Framework에서 리소스를 패키징 및 배포하는 데 사용하는 허브 및 스포크 모델을 설명합니다. 리소스 명명 규칙, 대체(fallback) 프로세스 및 패키징 대안을 설명합니다.|
 |[Interop 애플리케이션 배포](../interop/deploying-an-interop-application.md)|일반적으로 .NET Framework 클라이언트 어셈블리, 고유한 COM 형식 라이브러리를 나타내는 하나 이상의 interop 어셈블리 및 하나 이상의 등록된 COM 구성 요소를 포함하는 interop 애플리케이션을 제공하고 설치하는 방법을 설명합니다.|
-|[방법: .NET Framework 4.5 설치 관리자에서 진행률 가져오기](how-to-get-progress-from-the-dotnet-installer.md)|설치 진행 상황을 자체적으로 표시하면서 .NET Framework 설치 프로세스를 자동으로 시작하고 추적하는 방법을 설명합니다.|
+|[How to: Get Progress from the .NET Framework 4.5 Installer](how-to-get-progress-from-the-dotnet-installer.md)|설치 진행 상황을 자체적으로 표시하면서 .NET Framework 설치 프로세스를 자동으로 시작하고 추적하는 방법을 설명합니다.|
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [개발 가이드](../development-guide.md)

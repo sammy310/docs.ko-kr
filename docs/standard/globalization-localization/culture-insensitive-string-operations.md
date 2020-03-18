@@ -13,17 +13,17 @@ helpviewer_keywords:
 - culture-insensitive string operations
 ms.assetid: e6e2bb94-a95d-44e2-b68c-cfdd1db77784
 ms.openlocfilehash: 06c46033936e16355b8d2eb6650e8731a04af6e9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141280"
 ---
 # <a name="culture-insensitive-string-operations"></a>문화권을 구분하지 않는 문자열 작업
 
 문화권 구분 문자열 작업은 문화권별로 사용자에게 결과를 표시하도록 디자인된 애플리케이션을 만드는 경우에 유용할 수 있습니다. 기본적으로 문화권 구분 메서드는 사용할 문화권을 현재 스레드의 <xref:System.Globalization.CultureInfo.CurrentCulture%2A> 속성에서 가져옵니다.
 
-문화권 구분 문자열 작업이 항상 필요한 것은 아닙니다. 결과가 문화권의 영향을 받지 않아야 하는 경우 문화권 구분 작업을 사용하면, 사용자 지정 연결과 정렬 규칙을 포함한 지정된 문화권에서의 애플리케이션 코드가 제대로 실행되지 않을 수 있습니다. 예제는 [문자열 사용에 대한 모범 사례](../../../docs/standard/base-types/best-practices-strings.md) 문서에서 ["현재 문화권을 사용하는 문자열 비교"](../../../docs/standard/base-types/best-practices-strings.md#string-comparisons-that-use-the-current-culture) 섹션을 참조하세요.
+문화권 구분 문자열 작업이 항상 필요한 것은 아닙니다. 결과가 문화권의 영향을 받지 않아야 하는 경우 문화권 구분 작업을 사용하면, 사용자 지정 연결과 정렬 규칙을 포함한 지정된 문화권에서의 애플리케이션 코드가 제대로 실행되지 않을 수 있습니다. 예제는 [문자열 사용에 대한 모범 사례](../../../docs/standard/base-types/best-practices-strings.md#string-comparisons-that-use-the-current-culture) 문서에서 ["현재 문화권을 사용하는 문자열 비교"](../../../docs/standard/base-types/best-practices-strings.md) 섹션을 참조하세요.
 
 문자열 작업의 문화권 구분 여부는 애플리케이션에서 작업 결과를 사용하는 방식에 따라 결정됩니다. 사용자에게 결과를 표시하는 문자열 작업은 일반적으로 문화권을 구분해야 합니다. 예를 들어 애플리케이션에서 지역화된 문자열 목록을 정렬하여 목록 상자에 표시하는 경우 애플리케이션에서 문화권 구분 정렬을 수행해야 합니다.
 

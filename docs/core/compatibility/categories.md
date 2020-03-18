@@ -3,10 +3,10 @@ title: 호환성이 손상되는 변경 범주
 description: .NET Core에서 주요 변경 내용을 분류하는 방법을 알아봅니다.
 ms.date: 06/10/2019
 ms.openlocfilehash: b273ebbb82da803cde66ea34760aa1779c6c1ca5
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093047"
 ---
 # <a name="breaking-change-categories"></a>호환성이 손상되는 변경 범주
@@ -52,6 +52,6 @@ ms.locfileid: "77093047"
 
 이후 버전과의 호환성을 유지하는 것은 .NET Core의 목표가 아닙니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [.NET Core의 호환성이 손상되는 변경 평가](index.md)

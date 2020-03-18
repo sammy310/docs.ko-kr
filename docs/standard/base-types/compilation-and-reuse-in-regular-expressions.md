@@ -13,10 +13,10 @@ helpviewer_keywords:
 - regular expressions, engines
 ms.assetid: 182ec76d-5a01-4d73-996c-0b0d14fcea18
 ms.openlocfilehash: 3e1dfe8373145286b03e503f038e267ff0d4c4f3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73091739"
 ---
 # <a name="compilation-and-reuse-in-regular-expressions"></a>정규식의 컴파일 및 다시 사용
@@ -44,6 +44,6 @@ ms.locfileid: "73091739"
   
  개체 인스턴스화 및 정규식 컴파일의 오버헤드 때문에 수많은 <xref:System.Text.RegularExpressions.Regex> 개체를 만들고 금세 삭제할 경우 매우 큰 비용이 듭니다. 다수의 정규식을 사용하는 애플리케이션의 경우 정적 `Regex` 메서드 호출을 사용하고 정규식 캐시의 크기를 늘려 성능을 최적화할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET 정규식](../../../docs/standard/base-types/regular-expressions.md)

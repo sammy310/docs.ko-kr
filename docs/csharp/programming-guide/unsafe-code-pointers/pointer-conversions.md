@@ -5,10 +5,10 @@ helpviewer_keywords:
 - pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
 ms.openlocfilehash: 517166331d2bcf73132269ce2adcf68d5f60b4fe
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76745369"
 ---
 # <a name="pointer-conversions-c-programming-guide"></a>포인터 변환(C# 프로그래밍 가이드)
@@ -16,7 +16,7 @@ ms.locfileid: "76745369"
   
 ## <a name="implicit-pointer-conversions"></a>암시적 포인터 변환  
   
-|시작|대상|  
+|보낸 사람|대상|  
 |----------|--------|  
 |임의의 포인터 형식|void*|  
 |null|임의의 포인터 형식|  
@@ -25,7 +25,7 @@ ms.locfileid: "76745369"
   
 ## <a name="explicit-pointer-conversions"></a>명시적 포인터 변환  
   
-|시작|대상|  
+|보낸 사람|대상|  
 |----------|--------|  
 |임의의 포인터 형식|다른 포인터 형식|  
 |sbyte, byte, short, ushort, int, uint, long 또는 ulong|임의의 포인터 형식|  
@@ -38,7 +38,7 @@ ms.locfileid: "76745369"
   
  [!code-csharp[csProgGuidePointers#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers.cs#4)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [포인터 형식](pointer-types.md)

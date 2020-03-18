@@ -10,10 +10,10 @@ helpviewer_keywords:
 - win32res compiler option [C#]
 ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
 ms.openlocfilehash: 39f02c4c2e060c4be40002a2f48b0da31004a9ae
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69606203"
 ---
 # <a name="-win32res-c-compiler-options"></a>-win32res(C# 컴파일러 옵션)
@@ -44,7 +44,7 @@ ms.locfileid: "69606203"
   
 3. **리소스 파일** 단추를 클릭한 다음 콤보 상자를 사용하여 파일을 선택합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  `in.cs`를 컴파일하고 Win32 리소스 파일 `rf.res`를 첨부하여 `in.exe`를 생성합니다.  
   
 ```console  

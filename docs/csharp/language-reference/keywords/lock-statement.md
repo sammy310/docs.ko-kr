@@ -9,10 +9,10 @@ helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
 ms.openlocfilehash: 467881dd36c97b6b18b7f31d4e4af25152b0d012
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713395"
 ---
 # <a name="lock-statement-c-reference"></a>lock 문(C# 참조)
@@ -46,7 +46,7 @@ finally
 
 코드에서 [try...finally](try-finally.md) 블록을 사용하므로 `lock` 문의 본문 내에서 예외가 throw되더라도 잠금이 해제됩니다.
 
-`lock` 문의 본문에서 [await 연산자](../operators/await.md)를 사용할 수 없습니다.
+[ 문의 본문에서 ](../operators/await.md)await 연산자`lock`를 사용할 수 없습니다.
 
 ## <a name="remarks"></a>설명
 
@@ -58,15 +58,15 @@ finally
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 전용 `balanceLock` 인스턴스에 잠금을 설정하여 해당 개인 `balance` 필드에 대한 액세스를 동기화하는 `Account` 클래스를 정의합니다. 동일한 인스턴스를 잠금에 사용하면 `Debit` 또는 `Credit` 메서드를 동시에 호출하려는 두 스레드에 의해 `balance` 필드가 동시에 업데이트되지 않습니다.
+다음 예제에서는 전용 `Account` 인스턴스에 잠금을 설정하여 해당 개인 `balance` 필드에 대한 액세스를 동기화하는 `balanceLock` 클래스를 정의합니다. 동일한 인스턴스를 잠금에 사용하면 `balance` 또는 `Debit` 메서드를 동시에 호출하려는 두 스레드에 의해 `Credit` 필드가 동시에 업데이트되지 않습니다.
 
 [!code-csharp[lock-statement-example](~/samples/snippets/csharp/keywords/LockStatementExample.cs)]
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [lock 문](~/_csharplang/spec/statements.md#the-lock-statement) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/statements.md#the-lock-statement)의 [lock 문](~/_csharplang/spec/introduction.md) 섹션을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Threading.Monitor?displayProperty=nameWithType>
 - <xref:System.Threading.SpinLock?displayProperty=nameWithType>

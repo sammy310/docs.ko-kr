@@ -3,17 +3,17 @@ title: dotnet list reference 명령
 description: dotnet list reference 명령은 프로젝트 간 참조를 나열하는 편리한 옵션을 제공합니다.
 ms.date: 02/14/2020
 ms.openlocfilehash: 43c4dbc94b33e717c6ba0a1c1c5317ac006f5bba
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503707"
 ---
 # <a name="dotnet-list-reference"></a>dotnet list reference
 
 **이 문서의 적용 대상:** ✔️ .NET Core 2.x SDK 이상 버전
 
-## <a name="name"></a>이름
+## <a name="name"></a>name
 
 `dotnet list reference` - 프로젝트 간 참조를 나열합니다.
 

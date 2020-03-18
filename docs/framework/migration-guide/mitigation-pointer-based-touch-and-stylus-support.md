@@ -8,10 +8,10 @@ helpviewer_keywords:
 - WPF pointer-based touch and stylus stack
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
 ms.openlocfilehash: 023c38f66611bd0022699d3f62d90c3923585012
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77094477"
 ---
 # <a name="mitigation-pointer-based-touch-and-stylus-support"></a>완화: 포인터 기반 터치 및 스타일러스 지원
@@ -52,6 +52,6 @@ ms.locfileid: "77094477"
 
 이 항목을 제거하거나 해당 값을 `false`로 설정하면 이 선택적 스택이 해제됩니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [애플리케이션 호환성](application-compatibility.md)

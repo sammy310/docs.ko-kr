@@ -8,10 +8,10 @@ helpviewer_keywords:
 - pathmap compiler option [C#]
 - /pathmap compiler option [C#]
 ms.openlocfilehash: 48e96d2ec2ccbea83d573c0eb3630b1591c407a9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69606633"
 ---
 # <a name="-pathmap-c-compiler-options"></a>-pathmap(C# 컴파일러 옵션)
@@ -42,9 +42,9 @@ ms.locfileid: "69606633"
 
 이 옵션은 컴파일러가 실행되는 컴퓨터의 실제 경로 각각을 출력 파일에 써야 하는 해당 경로에 매핑합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
-**C:\\work\\tests** 디렉터리에 `t.cs`를 컴파일하고 출력에서 디렉터리를 **\publish**에 매핑합니다.
+`t.cs`C:**work\\tests\\ 디렉터리에** 를 컴파일하고 출력에서 디렉터리를 **\publish**에 매핑합니다.
 
 ```console
 csc -pathmap:C:\work\tests=\publish t.cs

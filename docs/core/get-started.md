@@ -6,10 +6,10 @@ ms.author: adegeo
 ms.date: 12/03/2019
 ms.custom: vs-dotnet
 ms.openlocfilehash: 0968d9db1dbfbdc8c586328ee8e02315f17950b9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714389"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core 시작
@@ -43,7 +43,7 @@ Hello World!
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="windowstabwindows"></a>[Windows](#tab/windows)
+# <a name="windows"></a>[Windows](#tab/windows)
 
 - [Visual Studio 2019에서 첫 번째 .NET Core 콘솔 애플리케이션 만들기](./tutorials/with-visual-studio.md)
 - [Visual Studio에서 .NET Standard를 사용하여 클래스 라이브러리 빌드](./tutorials/library-with-visual-studio.md)
@@ -56,7 +56,7 @@ Hello World!
 
 지원되는 Windows 버전 목록은 [.NET Core 종속성 및 요구 사항](install/dependencies.md?pivots=os-windows) 문서를 참조하세요.
 
-# <a name="linuxtablinux"></a>[Linux](#tab/linux)
+# <a name="linux"></a>[Linux](#tab/linux)
 
 다음 단계별 자습서에 따라 .NET Core 애플리케이션 개발을 시작합니다.
 
@@ -68,7 +68,7 @@ Hello World!
 
 지원되는 Linux 배포판 및 버전 목록은 [.NET Core 종속성 및 요구 사항](install/dependencies.md?pivots=os-linux) 문서를 참조하세요.
 
-# <a name="macostabmacos"></a>[macOS](#tab/macos)
+# <a name="macos"></a>[macOS](#tab/macos)
 
 다음 단계별 자습서에 따라 .NET Core 애플리케이션 개발을 시작합니다.
 

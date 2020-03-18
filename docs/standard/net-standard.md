@@ -1,18 +1,18 @@
 ---
-title: .NET Standard
+title: .NET 표준
 description: .NET Standard, 해당 버전 및 .NET Standard를 지원하는 .NET 구현에 대해 알아봅니다.
 ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
 ms.openlocfilehash: 00b40b771a8608bad7e3f992e3c99367ff6bb131
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77452593"
 ---
-# <a name="net-standard"></a>.NET Standard
+# <a name="net-standard"></a>.NET 표준
 
 [.NET Standard](https://github.com/dotnet/standard)는 모든 .NET 구현체에서 사용할 수 있는 .NET API의 공식 규격입니다. .NET Standard는 .NET 에코시스템의 통일성을 높이기 위한 것입니다. [ECMA 335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md)는 .NET 구현 동작에 대한 균일성을 계속 정립하며, ECMA 335는 소규모의 표준 라이브러리 집합을 지정하는 반면, .NET Standard 사양은 보다 광범위한 .NET API를 포함합니다.
 
@@ -56,15 +56,15 @@ ms.locfileid: "77452593"
 두 가지 기본 버전 관리 규칙이 있습니다.
 
 - 추가: .NET 표준 버전은 논리적으로 동심원입니다. 더 높은 버전이 이전 버전의 모든 API를 통합합니다. 버전 간에 큰 차이는 없습니다.
-- 변경할 수 없음: 제공되고 나면 .NET 표준 버전은 고정됩니다. 새 API는 먼저 특정 .NET 구현(예: .NET Core)에서 제공됩니다. .NET Standard 심사 위원회에서 새 API가 모든 곳에서 사용 가능하다고 판단하면 새 .NET Standard 버전에 추가됩니다.
+- 변경 불가능: 제공되고 나면 .NET Standard 버전은 고정됩니다. 새 API는 먼저 특정 .NET 구현(예: .NET Core)에서 제공됩니다. .NET Standard 심사 위원회에서 새 API가 모든 곳에서 사용 가능하다고 판단하면 새 .NET Standard 버전에 추가됩니다.
 
-## <a name="specification"></a>규격
+## <a name="specification"></a>사양
 
 .NET Standard 규격은 표준화된 API의 집합입니다. 이 규격은 .NET을 구현한 사람, 특히 Microsoft(.NET Framework, .NET Core, Mono 포함)와 Unity에서 유지 관리합니다. 공개 피드백 절차는 [GitHub](https://github.com/dotnet/standard)을 통해 새로운 .NET Standard 버전을 만드는 과정의 일부입니다.
 
 ### <a name="official-artifacts"></a>공식 아티팩트
 
-공식 규격은 표준의 일부인 API를 정의하는 .cs 파일 집합입니다. [dotnet/standard repository](https://github.com/dotnet/standard)(dotnet/표준 리포지토리)의 [ref directory](https://github.com/dotnet/standard/tree/master/src/netstandard/ref)(ref 디렉터리)는 .NET Standard API를 정의합니다.
+공식 규격은 표준의 일부인 API를 정의하는 .cs 파일 집합입니다. [dotnet/standard repository](https://github.com/dotnet/standard/tree/master/src/netstandard/ref)(dotnet/표준 리포지토리)의 [ref directory](https://github.com/dotnet/standard)(ref 디렉터리)는 .NET Standard API를 정의합니다.
 
 [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) 메타패키지([소스](https://github.com/dotnet/standard/blob/master/src/netstandard/pkg/NETStandard.Library.dependencies.props))는 하나 이상의 .NET Standard 버전을 부분적으로 정의하는 라이브러리 집합에 대해 설명합니다.
 
@@ -84,7 +84,7 @@ ms.locfileid: "77452593"
 
 NuGet 패키지는 하나 이상의 [프레임워크](frameworks.md)를 대상으로 합니다. .NET 표준 패키지는 “.NET 표준” 프레임워크를 대상으로 합니다. `netstandard` [압축 TFM](frameworks.md)(예: `netstandard1.4`)을 사용하여 .NET Standard 프레임워크를 대상으로 지정할 수 있습니다. 여러 런타임에서 실행되도록 만들어진 라이브러리는 이 프레임워크를 대상으로 하며, 광범위한 API의 경우 사용 가능한 API 수가 .NET Standard 1.6과 2.0 간에 세 배 이상 증가하므로 `netstandard2.0`을 대상으로 지정합니다.
 
-[`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/) 메타패키지는 .NET Standard를 정의하는 NuGet 패키지의 전체 집합을 참조합니다.  `netstandard`를 대상으로 지정하는 가장 일반적인 방법은 이 메타패키지를 참조하는 것입니다. 이 메타패키지는 최대 40개의 .NET 라이브러리 및 .NET 표준을 정의하는 관련 API를 설명하고 액세스할 수 있도록 합니다. 추가 API에 액세스하기 위해 `netstandard`를 대상으로 하는 추가 패키지를 참조할 수 있습니다.
+[`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/) 메타패키지는 .NET Standard를 정의하는 NuGet 패키지의 전체 집합을 참조합니다.  `netstandard`를 대상으로 지정하는 가장 일반적인 방법은 이 메타패키지를 참조하는 것입니다. 이 메타패키지는 최대 40개의 .NET 라이브러리 및 .NET 표준을 정의하는 관련 API를 설명하고 액세스할 수 있도록 합니다. 추가 API에 대한 액세스를 얻기 위해 `netstandard`를 대상으로 하는 추가 패키지를 참조할 수 있습니다.
 
 ### <a name="versioning"></a>버전 관리
 
@@ -102,7 +102,7 @@ NuGet 패키지는 하나 이상의 [프레임워크](frameworks.md)를 대상�
 
 ## <a name="targeting-net-standard"></a>.NET 표준을 대상으로 지정
 
-`netstandard` 프레임워크와 NETStandard.Library 메타패키지의 조합을 사용하여 [.NET 표준 라이브러리를 빌드](../core/tutorials/libraries.md)할 수 있습니다. [.NET Core 도구를 사용하여 .NET 표준을 대상으로 지정](../core/packages.md)하는 예를 확인할 수 있습니다.
+[ 프레임워크와 NETStandard.Library 메타패키지의 조합을 사용하여 ](../core/tutorials/libraries.md).NET 표준 라이브러리를 빌드`netstandard`할 수 있습니다. [.NET Core 도구를 사용하여 .NET 표준을 대상으로 지정](../core/packages.md)하는 예를 확인할 수 있습니다.
 
 ## <a name="net-framework-compatibility-mode"></a>.NET Framework 호환 모드
 
@@ -145,7 +145,7 @@ Visual Studio에서 .NET Standard 라이브러리를 빌드하기 위해 Windows
 
 .NET 표준과 호환되는 PCL 프로필 집합을 확인할 수 있습니다.
 
-| PCL 프로필 | .NET Standard | PCL 플랫폼
+| PCL 프로필 | .NET 표준 | PCL 플랫폼
 |:-----------:|:-------------:|------------------------------------------------------------------------------
 | Profile7    | 1.1           | .NET Framework 4.5, Windows 8
 | Profile31   | 1.0           | Windows 8.1, Windows Phone Silverlight 8.1
@@ -159,7 +159,7 @@ Visual Studio에서 .NET Standard 라이브러리를 빌드하기 위해 Windows
 | Profile157  | 1.0           | Windows 8.1, Windows Phone 8.1, Windows Phone Silverlight 8.1
 | Profile259  | 1.0           | .NET Framework 4.5, Windows 8, Windows Phone 8.1, Windows Phone Silverlight 8
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [.NET Standard Versions](https://github.com/dotnet/standard/blob/master/docs/versions.md)(.NET 표준 버전)
 - [.NET Standard 라이브러리 빌드](../core/tutorials/library-with-visual-studio.md)

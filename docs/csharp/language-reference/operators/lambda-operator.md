@@ -7,12 +7,12 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: 61cc3c3ab4f0b22c4040a9b8a025c81071f4d942
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 15c02e11610866f359e3e3a7e2751ded918154b7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712704"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846257"
 ---
 # <a name="-operator-c-reference"></a>=> 연산자(C# 참조)
 
@@ -24,15 +24,15 @@ ms.locfileid: "75712704"
 
 다음 예제에서는 메서드 구문이 포함된 [LINQ](../../programming-guide/concepts/linq/index.md) 기능을 사용하여 람다 식의 사용법을 보여줍니다.
 
-[!code-csharp-interactive[infer types of input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#InferredTypes)]
+[!code-csharp-interactive[infer types of input variables](snippets/LambdaOperator.cs#InferredTypes)]
 
 람다 식의 입력 매개 변수는 컴파일 시 강력한 형식을 지정합니다. 위의 예제와 같이 컴파일러가 입력 매개 변수의 형식을 추론하는 경우, 형식 선언을 생략할 수 있습니다. 입력 매개 변수의 형식을 지정해야 하는 경우 다음 예제와 같이 각 매개 변수에 대해 입력매개 변수를 지정해야 합니다.
 
-[!code-csharp-interactive[specify types of input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#ExplicitTypes)]
+[!code-csharp-interactive[specify types of input variables](snippets/LambdaOperator.cs#ExplicitTypes)]
 
 다음 예제에서는 입력 매개 변수 없이 람다 식을 정의하는 방법을 보여줍니다.
 
-[!code-csharp-interactive[without input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#WithoutInput)]
+[!code-csharp-interactive[without input variables](snippets/LambdaOperator.cs#WithoutInput)]
 
 자세한 내용은 [람다 식](../../programming-guide/statements-expressions-operators/lambda-expressions.md)을 참조하세요.
 
@@ -71,9 +71,9 @@ public override string ToString()
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-람다 연산자에 대한 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [익명 함수 식](~/_csharplang/spec/expressions.md#anonymous-function-expressions) 섹션을 참조하세요.
+람다 연산자에 대한 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/expressions.md#anonymous-function-expressions)의 [익명 함수 식](~/_csharplang/spec/introduction.md) 섹션을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 연산자](index.md)

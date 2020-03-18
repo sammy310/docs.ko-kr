@@ -21,10 +21,10 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
 ms.openlocfilehash: ac034ff37b0b39f41d6f58381286706f9a9ac602
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73121708"
 ---
 # <a name="net-regular-expressions"></a>.NET 정규식
@@ -65,7 +65,7 @@ ms.locfileid: "73121708"
   
  정규식 패턴 `(Mr\.? |Mrs\.? |Miss |Ms\.? )`는 모든 "Mr", "Mr.", "Mrs", "Mrs.", "Miss", "Ms" 또는 "Ms."가 발생하는 것과 일치합니다. <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 메서드에 대한 호출은 일치하는 문자열을 <xref:System.String.Empty?displayProperty=nameWithType>로 바꿉니다. 즉, 원래 문자열에서 일치하는 문자열을 제거합니다.  
   
-### <a name="example-2-identifying-duplicated-words"></a>예 2: 중복된 단어 식별  
+### <a name="example-2-identifying-duplicated-words"></a>예제 2: 중복된 단어 식별  
  실수로 단어를 중복하는 것은 작성자가 흔히 하는 실수입니다. 다음 예제에서 보여 주는 것처럼 정규식을 사용하여 중복된 단어를 식별할 수 있습니다.  
   
  [!code-csharp[Conceptual.Regex#3](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example2.cs#3)]
@@ -85,7 +85,7 @@ ms.locfileid: "73121708"
   
  입력 문자열에 부분 문자열 "this? This"가 포함되어 있습니다. 그러나 문장 부호가 중간에 있어 이는 중복으로 식별되지 않습니다.  
   
-### <a name="example-3-dynamically-building-a-culture-sensitive-regular-expression"></a>예 3: 동적으로 문화권 구분 정규식 작성  
+### <a name="example-3-dynamically-building-a-culture-sensitive-regular-expression"></a>예제 3: 동적으로 문화권 구분 정규식 작성  
  다음 예제에서는 정규식이 .NET의 전역화 기능에서 제공하는 유연성과 결합되었을 때의 성능을 설명합니다. 이 예제에서는 <xref:System.Globalization.NumberFormatInfo> 개체를 사용하여 시스템의 현재 문화권의 통화 값 형식을 확인합니다. 그런 다음 해당 정보를 사용하여 텍스트에서 통화 값을 추출하는 정규식을 동적으로 구성합니다. 각 일치 항목에 대해 숫자 문자열만 포함된 하위 그룹을 추출하여 <xref:System.Decimal> 값으로 변환하고 누계를 계산합니다.  
   
  [!code-csharp[Conceptual.Regex#1](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example.cs#1)]
@@ -116,7 +116,7 @@ ms.locfileid: "73121708"
 |[정규식 동작 정보](details-of-regular-expression-behavior.md)|.NET 정규식의 기능 및 동작에 대한 정보를 제공합니다.|  
 |[정규식 예제](regular-expression-examples.md)|정규식의 일반적인 사용을 보여 주는 코드 예제를 제공합니다.|  
   
-## <a name="reference"></a>참조  
+## <a name="reference"></a>참고  
  <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
  <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>  
  [정규식 - 빠른 참조(Word 형식으로 다운로드)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  

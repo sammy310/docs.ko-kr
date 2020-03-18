@@ -2,12 +2,13 @@
 title: ML.NET CLI 명령 참조
 description: ML.NET CLI 도구의 auto-train 명령에 대한 개요, 샘플 및 참조입니다.
 ms.date: 12/18/2019
-ms.openlocfilehash: 537f8d361c170378f5fe8cf454320831d7c8cbf2
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.custom: mlnet-tooling
+ms.openlocfilehash: bb161c596a76134876ee2bf0a6229bc551e0dad2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449701"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78848927"
 ---
 # <a name="the-mlnet-cli-command-reference"></a>ML.NET CLI 명령 참조
 

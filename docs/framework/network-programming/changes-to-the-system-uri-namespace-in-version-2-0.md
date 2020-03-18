@@ -3,11 +3,11 @@ title: 버전 2.0에서 System.Uri 네임스페이스 변경 내용
 ms.date: 03/30/2017
 ms.assetid: 35883fe9-2d09-4d8b-80ca-cf23a941e459
 ms.openlocfilehash: 987010b8367069e8089df3f809d23f258bb68f2b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188438"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "61642765"
 ---
 # <a name="changes-to-the-systemuri-namespace-in-version-20"></a>버전 2.0에서 System.Uri 네임스페이스 변경 내용
 

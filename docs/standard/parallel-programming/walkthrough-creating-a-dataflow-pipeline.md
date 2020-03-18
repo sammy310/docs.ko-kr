@@ -11,10 +11,10 @@ helpviewer_keywords:
 - TPL dataflow library, creating dataflow pipeline
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
 ms.openlocfilehash: 284be7789b6411055a6421fd07cc1b0605f6ea0c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139865"
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>연습: 데이터 흐름 파이프라인 만들기
@@ -34,7 +34,7 @@ ms.locfileid: "73139865"
   
 6. 파이프라인에서 모든 작업을 완료할 때까지 기다립니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 연습을 시작하기 전에 [데이터 흐름](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)을 읽어 보세요.  
   
 ## <a name="creating-a-console-application"></a>콘솔 애플리케이션 만들기  
@@ -53,7 +53,7 @@ ms.locfileid: "73139865"
  [!code-csharp[TPLDataflow_Palindromes#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#3)]
  [!code-vb[TPLDataflow_Palindromes#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#3)]  
   
-|멤버|Type|설명|  
+|멤버|형식|설명|  
 |------------|----------|-----------------|  
 |`downloadString`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|웹에서 책 텍스트를 다운로드합니다.|  
 |`createWordList`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|책 텍스트를 단어의 배열로 나눕니다.|  
@@ -66,7 +66,7 @@ ms.locfileid: "73139865"
 ## <a name="forming-the-pipeline"></a>파이프라인 만들기  
  다음 코드를 추가하여 각 블록을 파이프라인의 다음 블록에 연결합니다.  
   
- <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> 메서드를 호출하여 소스 데이터 흐름 블록을 대상 데이터 흐름 블록에 연결하는 경우, 소스 데이터 흐름 블록은 데이터를 사용할 수 있게 되면 대상 블록에 데이터를 전파합니다. <xref:System.Threading.Tasks.Dataflow.DataflowLinkOptions.PropagateCompletion>을 true로 설정하고 <xref:System.Threading.Tasks.Dataflow.DataflowLinkOptions>를 제공하면 파이프라인에 있는 한 블록의 완료 성공 및 실패로 인해 파이프라인에서 다음 블록이 완료됩니다.
+ <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> 메서드를 호출하여 소스 데이터 흐름 블록을 대상 데이터 흐름 블록에 연결하는 경우, 소스 데이터 흐름 블록은 데이터를 사용할 수 있게 되면 대상 블록에 데이터를 전파합니다. <xref:System.Threading.Tasks.Dataflow.DataflowLinkOptions>을 true로 설정하고 <xref:System.Threading.Tasks.Dataflow.DataflowLinkOptions.PropagateCompletion>를 제공하면 파이프라인에 있는 한 블록의 완료 성공 및 실패로 인해 파이프라인에서 다음 블록이 완료됩니다.
   
  [!code-csharp[TPLDataflow_Palindromes#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#4)]
  [!code-vb[TPLDataflow_Palindromes#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#4)]  

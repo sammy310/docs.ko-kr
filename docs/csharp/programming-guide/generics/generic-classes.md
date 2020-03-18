@@ -6,10 +6,10 @@ helpviewer_keywords:
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
 ms.openlocfilehash: 1fdfaa833ad32428d341b6f3a61cc7f638036183
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937515"
 ---
 # <a name="generic-classes-c-programming-guide"></a>제네릭 클래스(C# 프로그래밍 가이드)
@@ -33,7 +33,7 @@ ms.locfileid: "75937515"
   
 - 제네릭 인터페이스를 하나 이상 구현할지 여부  
   
-     예를 들어 제네릭 기반 컬렉션에 항목을 만드는 데 사용될 클래스를 디자인할 경우 클래스 형식이 `T`인 <xref:System.IComparable%601>와 같은 인터페이스를 구현해야 할 수 있습니다.  
+     예를 들어 제네릭 기반 컬렉션에 항목을 만드는 데 사용될 클래스를 디자인할 경우 클래스 형식이 <xref:System.IComparable%601>인 `T`와 같은 인터페이스를 구현해야 할 수 있습니다.  
   
  간단한 제네릭 클래스의 예제를 보려면 [제네릭 소개](./index.md)를 참조하세요.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "75937515"
   
  제네릭 클래스는 고정적입니다. 즉, 입력 매개 변수에서 `List<BaseClass>`를 지정하면 `List<DerivedClass>`를 제공하려고 할 때 컴파일 시간 오류가 발생합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Collections.Generic>
 - [C# 프로그래밍 가이드](../index.md)

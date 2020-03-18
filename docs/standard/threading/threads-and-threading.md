@@ -8,10 +8,10 @@ helpviewer_keywords:
 - threading [.NET], multiple threads
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
 ms.openlocfilehash: ad36789579b95e0129e402765194b9f5e45a4cc1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73127511"
 ---
 # <a name="threads-and-threading"></a>스레드 및 스레딩
@@ -47,7 +47,7 @@ TPL 및 PLINQ는 <xref:System.Threading.ThreadPool> 스레드를 사용합니다
 
 스레드에서 예외를 처리합니다. 스레드에서 처리되지 않은 예외가 있으면 일반적으로 프로세스가 종료됩니다. 자세한 내용은 [관리 스레드의 예외](exceptions-in-managed-threads.md)를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [스레딩 개체 및 기능](threading-objects-and-features.md)
 - [관리 스레딩을 구현하는 최선의 방법](managed-threading-best-practices.md)

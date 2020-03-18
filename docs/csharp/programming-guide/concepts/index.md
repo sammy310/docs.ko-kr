@@ -3,10 +3,10 @@ title: 프로그래밍 개념(C#)
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
 ms.openlocfilehash: 3fcb1ca76c49919b00b74d955b7aadaa2e882f2a
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70168337"
 ---
 # <a name="programming-concepts-c"></a>프로그래밍 개념(C#)

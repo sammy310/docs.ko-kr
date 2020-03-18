@@ -6,10 +6,10 @@ helpviewer_keywords:
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
 ms.openlocfilehash: be3931a23e7a88affcf4d0abf617ec00bd35297a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712262"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>디렉터리 트리를 반복하는 방법(C# 프로그래밍 가이드)
@@ -56,7 +56,7 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
 ## <a name="robust-programming"></a>강력한 프로그래밍  
  강력한 파일 반복 코드는 파일 시스템의 여러 복잡성을 고려해야 합니다. Windows 파일 시스템에 대한 자세한 내용은 [NTFS 개요](/windows-server/storage/file-server/ntfs-overview)를 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.IO>
 - [LINQ 및 파일 디렉터리](../concepts/linq/linq-and-file-directories.md)

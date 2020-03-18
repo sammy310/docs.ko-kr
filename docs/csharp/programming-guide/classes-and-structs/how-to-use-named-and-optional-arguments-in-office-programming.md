@@ -7,10 +7,10 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
 ms.openlocfilehash: 36b5c8b49404606c8240d24953c3677d5612d30e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714872"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Office 프로그래밍에 명명된 인수와 선택적 인수를 사용하는 방법(C# 프로그래밍 가이드)
@@ -59,7 +59,7 @@ C# 4에서 도입된 명명된 인수와 선택적 인수는 C# 프로그래밍�
 
 ## <a name="to-display-text-in-a-word-document"></a>Word 문서에 텍스트를 표시하려면
 
-1. *Program.cs*의 `Program` 클래스에서 다음 메서드를 추가하여 Word 애플리케이션과 Word 문서를 만듭니다. [Add](<xref:Microsoft.Office.Interop.Word.Documents.Add%2A>) 메서드에는 선택적 매개 변수 4개가 있습니다. 이 예제에서는 해당 기본값을 사용합니다. 따라서 호출하는 문에 인수가 필요하지 않습니다.
+1. `Program`Program.cs*의*  클래스에서 다음 메서드를 추가하여 Word 애플리케이션과 Word 문서를 만듭니다. [Add](<xref:Microsoft.Office.Interop.Word.Documents.Add%2A>) 메서드에는 선택적 매개 변수 4개가 있습니다. 이 예제에서는 해당 기본값을 사용합니다. 따라서 호출하는 문에 인수가 필요하지 않습니다.
 
      [!code-csharp[csProgGuideNamedAndOptional#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#6)]
 
@@ -107,6 +107,6 @@ C# 4에서 도입된 명명된 인수와 선택적 인수는 C# 프로그래밍�
 
  [!code-csharp[csProgGuideNamedAndOptional#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#12)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [명명된 인수 및 선택적 인수](./named-and-optional-arguments.md)

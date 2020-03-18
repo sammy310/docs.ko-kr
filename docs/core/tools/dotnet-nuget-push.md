@@ -4,17 +4,17 @@ description: dotnet nuget push 명령은 서버에 패키지를 푸시하고 게
 author: karann-msft
 ms.date: 02/14/2020
 ms.openlocfilehash: d4ef8e58908fe488c712debff3b313ac0908b43e
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503663"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
 **이 문서의 적용 대상:** ✔️ .NET Core 2.x SDK 이상 버전
 
-## <a name="name"></a>이름
+## <a name="name"></a>name
 
 `dotnet nuget push` - 서버에 패키지를 푸시하고 게시합니다.
 
@@ -100,7 +100,7 @@ dotnet nuget push [-h|--help]
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://api.nuget.org/v3/index.json
   ```
   
-  * 사용자 지정 푸시 소스 `https://customsource`에 *foo.nupkg*를 푸시하여 API 키를 지정합니다.
+  * 사용자 지정 푸시 소스 *에* foo.nupkg`https://customsource`를 푸시하여 API 키를 지정합니다.
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/

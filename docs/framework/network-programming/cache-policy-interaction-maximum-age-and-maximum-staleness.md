@@ -10,10 +10,10 @@ helpviewer_keywords:
 - age of cached resources
 ms.assetid: 7f775925-89a1-4956-ba90-c869c1749a94
 ms.openlocfilehash: e21cfc28407ba67afdce8d72e5e52c12ab359059
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048837"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-maximum-staleness"></a>캐시 정책 조작 -최대 사용 기간 및 최대 부실
@@ -27,7 +27,7 @@ ms.locfileid: "71048837"
   
 - 캐시 정책이 `maxAge` = 5일, `maxStale` = 1일을 설정하는 경우 `maxAge` 값에 따라 1월 6일까지 콘텐츠를 사용할 수 있습니다. `maxStale` 값에 따라 콘텐츠를 1월 5일까지 사용할 수 있습니다. 따라서 1월 5일에 콘텐츠 유효성이 재검사됩니다.  
   
- 최대 사용 기간이 콘텐츠 만료 날짜보다 이전이면 보다 보수적인 캐싱 동작이 항상 우선 적용되고 최대 부실 값은 영향을 주지 않습니다. 다음 예제에서는 콘텐츠가 만료되기 전에 최대 사용 기간(`maxAge`)에 도달할 경우 최대 부실(`maxStale`) 값을 설정할 경우의 영향을 보여 줍니다.  
+ 최대 사용 기간이 콘텐츠 만료 날짜보다 이전이면 보다 보수적인 캐싱 동작이 항상 우선 적용되고 최대 부실 값은 영향을 주지 않습니다. 다음 예제에서는 콘텐츠가 만료되기 전에 최대 사용 기간(`maxStale`)에 도달할 경우 최대 부실(`maxAge`) 값을 설정할 경우의 영향을 보여 줍니다.  
   
 - 캐시 정책이 `maxAge` = 1일을 설정하고 `maxStale` 값을 지정하지 않을 경우 콘텐츠가 만료되지 않았어도 1월 2일에 유효성이 재검사됩니다.  
   

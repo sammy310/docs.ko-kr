@@ -9,10 +9,10 @@ helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
 ms.openlocfilehash: d4bbf30923d65ad7aeced80efa626136ae27491b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138135"
 ---
 # <a name="cancellation-in-managed-threads"></a>관리되는 스레드의 취소
@@ -146,6 +146,6 @@ ms.locfileid: "73138135"
   
  <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 및 <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>은 이들 지침을 따르는 클래스의 예입니다. 자세한 내용은 [작업 취소](../../../docs/standard/parallel-programming/task-cancellation.md) 및 [방법: PLINQ 쿼리 취소](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [관리되는 스레딩 기본 사항](../../../docs/standard/threading/managed-threading-basics.md)

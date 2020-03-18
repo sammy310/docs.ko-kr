@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 3eab49acd3eaa5b6d5802af5f4e6f0fe2699ee97
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937059"
 ---
 ### <a name="uselegacyimages-compatibility-switch-not-supported"></a>UseLegacyImages 호환성 스위치가 지원되지 않음
@@ -30,7 +30,7 @@ Windows Forms
 
 #### <a name="affected-apis"></a>영향을 받는 API
 
-- 없음
+- None
 
 <!-- 
 

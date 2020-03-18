@@ -3,10 +3,10 @@ title: SOA 애플리케이션
 description: 컨테이너는 SOA 애플리케이션을 배포하는 유용한 옵션이기도 합니다.
 ms.date: 02/15/2019
 ms.openlocfilehash: aa56ada7b14a465fb3dafd02b03b815782ac765b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68672360"
 ---
 # <a name="service-oriented-applications"></a>서비스 지향 애플리케이션

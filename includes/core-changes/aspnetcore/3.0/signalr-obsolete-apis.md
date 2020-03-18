@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 2a65caedea2af65796267aa145e275ebff814bf8
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394018"
 ---
 ### <a name="signalr-usesignalr-and-useconnections-methods-marked-obsolete"></a>SignalR: 사용되지 않는 것으로 표시된 UseSignalR 및 UseConnections 메서드
@@ -26,7 +26,7 @@ ms.locfileid: "72394018"
 
 미들웨어가 새 엔드포인트 라우팅 시스템으로 이동되고 있습니다. 미들웨어를 추가하는 이전 방법은 사용되지 않습니다.
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 `UseSignalR` 및 `UseEndpoints` 교체:
 

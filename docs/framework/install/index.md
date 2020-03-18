@@ -3,10 +3,10 @@ title: .NET Framework 설치 가이드
 description: Windows에서.NET Framework를 설치하는 방법을 알아봅니다.
 ms.date: 08/03/2017
 ms.openlocfilehash: b14be7a429138069545ede835025dff33b4f3919
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716362"
 ---
 # <a name="installation-guide"></a>설치 가이드
@@ -25,7 +25,7 @@ ms.locfileid: "75716362"
 
 - [Windows XP 및 Windows Server 2003](on-windows-xp.md)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [.NET Framework 다운로드](https://dotnet.microsoft.com/download)
 - [차단된 .NET Framework 설치 및 제거 문제 해결](troubleshoot-blocked-installations-and-uninstallations.md)

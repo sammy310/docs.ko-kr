@@ -12,10 +12,10 @@ helpviewer_keywords:
 - numbers [.NET Framework], format strings
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
 ms.openlocfilehash: bc3c4b75c484274c214141d8fbfcf8ac592b0b99
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73131983"
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>방법: 숫자 앞에 0으로 채우기
@@ -32,7 +32,7 @@ ms.locfileid: "73131983"
 
     - 정수를 16진수 값으로 표시하려면 해당 `ToString(String)` 메서드를 호출하고 문자열 "X*n*"을 서식 매개 변수의 값으로 전달합니다. 여기서 *n*은 문자열의 최소 길이를 나타냅니다.
 
-[C#](../../csharp/language-reference/tokens/interpolated.md) 및 [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) 모두의 보간된 문자열에서 형식 문자열을 사용할 수도 있습니다. 또는 [복합 서식 지정](../../../docs/standard/base-types/composite-formatting.md)을 사용하는 <xref:System.String.Format%2A?displayProperty=nameWithType> 또는 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>과 같은 메서드를 호출할 수 있습니다.
+[C#](../../csharp/language-reference/tokens/interpolated.md) 및 [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) 모두의 보간된 문자열에서 형식 문자열을 사용할 수도 있습니다. 또는 <xref:System.String.Format%2A?displayProperty=nameWithType>복합 서식 지정<xref:System.Console.WriteLine%2A?displayProperty=nameWithType>을 사용하는 [ 또는 ](../../../docs/standard/base-types/composite-formatting.md)과 같은 메서드를 호출할 수 있습니다.
 
 다음 예제에서는 서식이 지정된 숫자의 전체 길이가 8자 이상이 되도록 앞에 오는 0으로 여러 정수 값의 서식을 지정합니다.
 
@@ -102,6 +102,6 @@ ms.locfileid: "73131983"
 
 ## <a name="see-also"></a>참고 항목
 
-- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)
-- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)
+- [사용자 지정 숫자 형식 문자열](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [표준 숫자 형식 문자열](../../../docs/standard/base-types/standard-numeric-format-strings.md)
 - [복합 형식 지정](../../../docs/standard/base-types/composite-formatting.md)

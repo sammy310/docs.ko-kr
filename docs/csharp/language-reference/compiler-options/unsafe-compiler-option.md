@@ -8,10 +8,10 @@ helpviewer_keywords:
 - unsafe compiler option [C#]
 - /unsafe compiler option [C#]
 ms.openlocfilehash: 146299fda103567b111c66400c17edf36addd843
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "65877986"
 ---
 # <a name="-unsafe-c-compiler-options"></a>-unsafe(C# 컴파일러 옵션)
@@ -24,7 +24,7 @@ ms.locfileid: "65877986"
 -unsafe  
 ```  
   
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 안전하지 않은 코드에 대한 자세한 내용은 [안전하지 않은 코드 및 포인터](../../programming-guide/unsafe-code-pointers/index.md)를 참조하세요.  
   

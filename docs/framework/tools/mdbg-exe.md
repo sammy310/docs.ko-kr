@@ -6,10 +6,10 @@ helpviewer_keywords:
 - MDbg.exe
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 ms.openlocfilehash: 58502626fed6c9cee52acb673ae34f6024f78b9b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75715757"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe(.NET Framework 명령줄 디버거)
@@ -50,12 +50,12 @@ MDbg [ProgramName[arguments]] [options]
 |**fo**[**reach**] [*OtherCommand*]|모든 스레드에서 명령을 수행합니다. *OtherCommand*는 한 스레드에서 작동하는 유효한 명령이며, **foreach** *OtherCommand*는 모든 스레드에서 같은 명령을 수행합니다.|  
 |**f**[**unceval**] [`-ad` *Num*] *functionName* [*args ...* ]|실행할 함수가 *functionName*인 현재 활성 스레드에서 함수 실행을 수행합니다. 함수 이름은 네임스페이스를 포함하는 정규화된 이름이어야 합니다.<br /><br /> `-ad` 옵션은 함수 확인에 사용할 애플리케이션 도메인을 지정합니다. `-ad` 옵션을 지정하지 않으면 확인에 사용되는 애플리케이션 도메인이 기본적으로 함수 실행에 사용된 스레드가 있는 애플리케이션으로 지정됩니다.<br /><br /> 실행 중인 함수가 정적 함수가 아닌 경우 전달된 첫 번째 매개 변수는 `this` 포인터여야 합니다. 모든 애플리케이션 도메인에서 함수 실행에 대한 인수가 검색됩니다.<br /><br /> 애플리케이션 도메인에서 값을 요청하려면 변수에 접두사를 모듈과 애플리케이션 도메인 이름으로 붙입니다(예: `funceval -ad 0 System.Object.ToString hello.exe#0!MyClass.g_rootRef`). 이 명령은 애플리케이션 도메인 `System.Object.ToString`에서 `0` 함수를 실행합니다. `ToString` 메서드는 인스턴스 함수이므로 첫 번째 매개 변수는 `this` 포인터여야 합니다.|  
 |**g**[**o**]|중단점을 만나거나 프로그램이 종료되거나 이벤트(예: 처리되지 않은 예외)가 프로그램을 중단시킬 때까지 프로그램이 계속되도록 합니다.|  
-|**h**[**elp**] [*command*]<br /><br /> 또는<br /><br /> **?** [*command*]|모든 명령에 대한 설명이나 지정한 명령에 대한 자세한 설명을 표시합니다.|  
+|**h**[**elp**] [*command*]<br /><br /> 또는<br /><br /> Azure Portal에서 ?가 앞에 나오는 SAS 토큰을 생성하므로 **?** 는 [*command*]|모든 명령에 대한 설명이나 지정한 명령에 대한 자세한 설명을 표시합니다.|  
 |**ig**[**nore**] [*event*]|디버거가 처리되지 않은 예외에서만 중지되도록 합니다.|  
 |**int**[**ercept**] *FrameNumber*|디버거를 지정한 프레임 번호로 롤백합니다.<br /><br /> 디버거에서 예외가 발생한 경우 디버거를 지정한 프레임 번호로 롤백하려면 이 명령을 사용합니다. **set** 명령을 사용하여 프로그램 상태를 변경하고 **go** 명령을 사용하여 계속할 수 있습니다.|  
 |**k**[**ill**]|활성 프로세스를 중지합니다.|  
 |**l**[**ist**] [*modules* &#124; *appdomains* &#124; *assemblies*]|로드된 모듈, 애플리케이션 도메인 또는 어셈블리를 표시합니다.|  
-|**lo**[**ad**] *assemblyName*|다음 방법으로 확장을 로드합니다. 지정한 어셈블리가 로드되고 `Microsoft.Tools.Mdbg.Extension.Extension` 형식에서 정적 메서드 `LoadExtension`을 실행하려고 시도합니다.|  
+|**lo**[**ad**] *assemblyName*|지정한 어셈블리를 로드한 다음 `LoadExtension` 형식에서 정적 메서드 `Microsoft.Tools.Mdbg.Extension.Extension`을 실행하려고 시도하는 방식으로 확장을 로드합니다.|  
 |**log** [*eventType*]|기록할 이벤트를 설정 또는 표시합니다.|  
 |**mo**[**de**] [*option on/off*]|다양한 디버거 옵션을 설정합니다. 옵션 없이 `mode`를 사용하여 디버깅 모드와 현재 설정 목록을 가져옵니다.|  
 |**mon**[**itorInfo**] *monitorReference*|개체 모니터 잠금 정보를 표시합니다.|  
@@ -79,9 +79,9 @@ MDbg [ProgramName[arguments]] [options]
 |**t**[**hread**] [*newThread*] [-*nick nickname*`]`|매개 변수가 없는 스레드 명령은 현재 프로세스의 관리되는 모든 스레드를 표시합니다. 스레드는 대개 해당 스레드 번호로 식별되지만 스레드에 할당된 애칭이 있는 경우 애칭이 대신 표시됩니다. `-nick` 매개 변수를 사용하여 애칭을 스레드에 할당할 수 있습니다.<br /><br /> -   **thread** `-nick` *threadName*은 현재 실행 중인 스레드에 애칭을 할당합니다.<br /><br /> 애칭은 숫자일 수 없습니다. 현재 스레드에 이미 할당된 애칭이 있으면 이전 애칭이 새 애칭으로 대체됩니다. 새로운 애칭이 빈 문자열("")인 경우 현재 스레드의 애칭이 삭제되고 스레드에 지정되는 새로운 애칭은 없습니다.|  
 |**u**[**p**]|활성 스택 프레임을 위로 이동합니다.|  
 |**uwgc**[**handle**] [*var*] &#124; [*address*]|핸들에 의해 추적되는 변수를 인쇄합니다. 핸들을 이름이나 주소로 지정할 수 있습니다.|  
-|**when**|현재 활성 `when` 문을 표시합니다.<br /><br /> **when** **delete all** &#124; `num` [`num` [`num` …]] - 번호로 지정된 `when` 문을 삭제하며 `all`이 지정된 경우는 모든 `when` 문을 삭제합니다.<br /><br /> **when** `stopReason` [`specific_condition`] **do**`cmd` [`cmd` [`cmd` …] ] - *stopReason* 매개 변수는 다음 중 하나일 수 있습니다.<br /><br /> `StepComplete`, `ProcessExited`, `ThreadCreated`, `BreakpointHit`, `ModuleLoaded`, `ClassLoaded`, `AssemblyLoaded`, `AssemblyUnloaded`, `ControlCTrapped`, `ExceptionThrown`, `UnhandledExceptionThrown`, `AsyncStop`, `AttachComplete`, `UserBreak`, `EvalComplete`, `EvalException`, `RemapOpportunityReached`, `NativeStop`.<br /><br /> *specific_condition*은 다음 중 하나일 수 있습니다.<br /><br /> -   *number* - `ThreadCreated` 및 `BreakpointHit`의 경우 같은 값을 가진 스레드 ID/중단점 번호에 의해 중단될 때만 작업을 트리거합니다.<br />-   [`!`]*name* - `ModuleLoaded`, `ClassLoaded`, `AssemblyLoaded`, `AssemblyUnloaded`, `ExceptionThrown` 및 `UnhandledExceptionThrown`의 경우 이름이 *stopReason* 이름과 일치할 때만 작업을 트리거합니다.<br /><br /> *specific_condition*은 *stopReason*의 다른 값을 위해 비어 있어야 합니다.|  
+|**when**|현재 활성 `when` 문을 표시합니다.<br /><br /> **when** **delete all** &#124; `num` [`num` [`num` …]] - 번호로 지정된 `when` 문을 삭제하며 `when`이 지정된 경우는 모든 `all` 문을 삭제합니다.<br /><br /> **when** `stopReason` [`specific_condition`] **do**`cmd` [`cmd` [`cmd` …] ] - *stopReason* 매개 변수는 다음 중 하나일 수 있습니다.<br /><br /> `StepComplete`, `ProcessExited`, `ThreadCreated`, `BreakpointHit`, `ModuleLoaded`, `ClassLoaded`, `AssemblyLoaded`, `AssemblyUnloaded`, `ControlCTrapped`, `ExceptionThrown`, `UnhandledExceptionThrown`, `AsyncStop`, `AttachComplete`, `UserBreak`, `EvalComplete`, `EvalException`, `RemapOpportunityReached`, `NativeStop`.<br /><br /> *specific_condition*은 다음 중 하나일 수 있습니다.<br /><br /> -   *number* - `ThreadCreated` 및 `BreakpointHit`의 경우 같은 값을 가진 스레드 ID/중단점 번호에 의해 중단될 때만 작업을 트리거합니다.<br />-   [`!`]*name* - `ModuleLoaded`, `ClassLoaded`, `AssemblyLoaded`, `AssemblyUnloaded`, `ExceptionThrown` 및 `UnhandledExceptionThrown`의 경우 이름이 *stopReason* 이름과 일치할 때만 작업을 트리거합니다.<br /><br /> *specific_condition*은 *stopReason*의 다른 값을 위해 비어 있어야 합니다.|  
 |**w**[**here**] [`-v`] [`-c` *depth*] [*threadID*]|스택 프레임에 대한 디버그 정보를 표시합니다.<br /><br /> -   `-v` 옵션은 표시된 각 스택 프레임에 대한 자세한 정보를 제공합니다.<br />-   `depth`의 수를 지정하면 표시되는 프레임 수가 제한됩니다. 모든 프레임을 표시하려면 **all** 명령을 사용합니다. 기본값은 100입니다.<br />-   *threadID* 매개 변수를 지정하면 스택과 연결할 스레드를 제어할 수 있습니다. 기본값은 현재 스레드만입니다. 모든 스레드를 가져오려면 **all** 명령을 사용합니다.|  
-|**x** [`-c`*numSymbols*] [*module*[`!`*pattern*]]|모듈의 `pattern`이 일치하는 함수를 표시합니다.<br /><br /> *numSymbols*를 지정하면 출력이 지정한 수로 제한됩니다. *pattern*에 대해 `!`(정규식을 나타냄)를 지정하지 않으면 모든 함수가 표시됩니다. *module*을 제공하지 않으면 로드된 모든 모듈이 표시됩니다. 기호( *~#* )를 사용하면 **break** 명령을 통해 중단점을 설정할 수 있습니다.|  
+|**x** [`-c`*numSymbols*] [*module*[`!`*pattern*]]|모듈의 `pattern`이 일치하는 함수를 표시합니다.<br /><br /> *numSymbols*를 지정하면 출력이 지정한 수로 제한됩니다. `!`pattern*에 대해* (정규식을 나타냄)를 지정하지 않으면 모든 함수가 표시됩니다. *module*을 제공하지 않으면 로드된 모든 모듈이 표시됩니다. 기호( *~#* )를 사용하면 **break** 명령을 통해 중단점을 설정할 수 있습니다.|  
   
 ## <a name="remarks"></a>설명  
  컴파일러가 디버깅 기호를 생성하도록 하는 컴파일러 특정 플래그를 사용하여 디버깅할 애플리케이션을 컴파일합니다. 이러한 플래그에 대한 자세한 내용은 해당 컴파일러의 설명서를 참조하십시오. 최적화된 애플리케이션을 디버깅할 수 있지만 일부 디버깅 정보가 손실됩니다. 예를 들어, 다수의 지역 변수가 표시되지 않으며 소스 줄이 정확하지 않게 됩니다.  
@@ -102,7 +102,7 @@ mdbg>
   
  디버거에서는 이전 섹션에 설명된 명령과 인수를 사용하십시오.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [도구](index.md)
 - [명령 프롬프트](developer-command-prompt-for-vs.md)

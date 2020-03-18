@@ -7,10 +7,10 @@ helpviewer_keywords:
 - SOS.dll
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 ms.openlocfilehash: 4c3a7f2798791f0c8a6b752f06bc2937fc970d40
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75715727"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll(SOS 디버깅 확장)
@@ -33,7 +33,7 @@ SOS 디버깅 확장명(SOS.dll)을 사용하면 내부 CLR(공용 언어 런타
 |**COMState**|각 스레드의 COM 아파트 모델과 `Context` 포인터를 나열합니다(사용할 수 있는 경우).|
 |**DumpArray** [ **-start** \<*startIndex*>] [ **-length** \<*length*>] [ **-details**] [ **-nofields**] \<*array object address*><br /><br /> 또는<br /><br /> **DA** [ **-start** \<*startIndex*>] [ **-length** \<*length*>] [ **-detail**] [ **-nofields**] *array object address*>|배열 개체의 요소를 검사합니다.<br /><br /> **-start** 옵션은 요소를 표시할 시작 인덱스를 지정합니다.<br /><br /> **-length** 옵션은 표시할 요소의 수를 지정합니다.<br /><br /> **-details** 옵션은 **DumpObj** 및 **DumpVC** 형식을 사용하여 요소의 세부 정보를 표시합니다.<br /><br /> **-nofields** 옵션은 배열이 표시되지 않도록 합니다. 이 옵션은 **-detail** 옵션을 지정한 경우에만 사용할 수 있습니다.|
 |**DumpAssembly** \<*assembly address*>|어셈블리에 대한 정보를 표시합니다.<br /><br /> **DumpAssembly** 명령은 여러 모듈을 나열합니다(있는 경우).<br /><br /> **DumpDomain** 명령을 사용하여 어셈블리 주소를 가져올 수 있습니다.|
-|**DumpClass** \<*EEClass address*>|형식과 연관된 `EEClass` 구조체에 대한 정보를 표시합니다.<br /><br /> **DumpClass** 명령은 정적 필드 값을 표시하지만, 비정적 필드 값은 표시하지 않습니다.<br /><br /> `EEClass` 구조체 주소를 가져오려면 **DumpMT**, **DumpObj**, **Name2EE** 또는 **Token2EE** 명령을 사용합니다.|
+|**DumpClass** \<*EEClass address*>|형식과 연관된 `EEClass` 구조체에 대한 정보를 표시합니다.<br /><br /> **DumpClass** 명령은 정적 필드 값을 표시하지만, 비정적 필드 값은 표시하지 않습니다.<br /><br /> **구조체 주소를 가져오려면**DumpMT **,** DumpObj **,** Name2EE**또는**Token2EE`EEClass` 명령을 사용합니다.|
 |**DumpDomain** [\<*domain address*>]|지정된 <xref:System.Reflection.Assembly> 개체 주소 내에 로드된 각 <xref:System.AppDomain> 개체를 열거합니다.  매개 변수 없이 호출된 경우 **DumpDomain** 명령은 프로세스의 모든 <xref:System.AppDomain> 개체를 나열합니다.|
 |**DumpHeap** [ **-stat**] [ **-strings**] [ **-short**] [ **-min** \<*size*>] [ **-max** \<*size*>] [ **-thinlock**] [ **-startAtLowerBound**] [ **-mt** \<*MethodTable address*>] [ **-type** \<*partial type name*>][*start* [*end*]]|가비지 컬렉션된 힙에 대한 정보와 개체에 대한 컬렉션 통계를 표시합니다.<br /><br /> **DumpHeap** 명령은 가비지 수집기 힙에서 과도한 조각화를 감지하면 경고를 표시합니다.<br /><br /> **-stat** 옵션은 출력을 통계 형식 요약으로 제한합니다.<br /><br /> **-strings** 옵션은 출력을 통계 형식 문자열 값 요약으로 제한합니다.<br /><br /> **-short** 옵션은 출력을 각 개체의 주소로 제한합니다. 이 명령의 출력을 자동화를 위해 다른 디버거 명령에 쉽게 파이프할 수 있습니다.<br /><br /> **-min** 옵션은 바이트로 지정된 `size` 매개 변수보다 작은 개체를 무시합니다.<br /><br /> **-max** 옵션은 바이트로 지정된 `size` 매개 변수보다 큰 개체를 무시합니다.<br /><br /> **-thinlock** 옵션은 ThinLocks를 보고합니다.  자세한 내용은 **SyncBlk** 명령을 참조하세요.<br /><br /> `-startAtLowerBound` 옵션은 제공된 주소 범위의 하한에서 힙 워크가 시작되도록 만듭니다. 계획 단계 동안에는 개체가 이동 중이기 때문에 종종 힙을 움직일 수 없습니다. 이 옵션은 **DumpHeap**이 지정된 하한에서 Walk를 시작하도록 합니다. 이 옵션이 작동하려면 유효한 개체의 주소를 하한으로 제공해야 합니다. 다음 메서드 테이블을 수동으로 찾기 위해 잘못된 개체의 주소에서 메모리를 표시할 수 있습니다. 가비지 수집이 현재 `memcopy`에 대한 호출에 있는 경우 크기를 매개 변수로 제공되는 시작 주소에 추가하여 다음 개체의 주소를 찾을 수도 있습니다.<br /><br /> **-mt** 옵션은 지정된 `MethodTable` 구조체에 해당하는 개체만 나열합니다.<br /><br /> **-type** 옵션은 형식 이름이 지정된 문자열의 부분 문자열과 일치하는 개체만 나열합니다.<br /><br /> `start` 매개 변수는 지정된 주소부터 나열을 시작합니다.<br /><br /> `end` 매개 변수는 지정된 주소에서 나열을 중지합니다.|
 |**DumpIL** \<*Managed DynamicMethod object*> &#124;       \<*DynamicMethodDesc pointer*> &#124;        \<*MethodDesc pointer*>|관리되는 메서드와 연관된 MSIL(Microsoft intermediate language)을 표시합니다.<br /><br /> 동적 MSIL은 어셈블리에서 로드된 MSIL과는 다르게 내보내집니다. 동적 MSIL은 메타데이터 토큰 대신 관리되는 개체 배열의 개체를 참조합니다.|
@@ -42,7 +42,7 @@ SOS 디버깅 확장명(SOS.dll)을 사용하면 내부 CLR(공용 언어 런타
 |**DumpMT** [ **-MD**] \<*MethodTable address*>|지정된 주소의 메서드 테이블에 대한 정보를 표시합니다. **-MD** 옵션을 지정하면 개체와 함께 정의된 모든 메서드의 목록을 표시합니다.<br /><br /> 관리되는 각 개체에는 메서드 테이블 포인터가 들어 있습니다.|
 |**DumpMethodSig** \<*sigaddr*> <*moduleadd*`r`>|지정된 주소의 `MethodSig` 구조체에 대한 정보를 표시합니다.|
 |**DumpModule** [ **-mt**] \<*Module address*>|지정된 주소의 모듈에 대한 정보를 표시합니다. **-mt** 옵션은 모듈에 정의된 형식과 모듈에서 참조하는 형식을 표시합니다.<br /><br /> **DumpDomain** 또는 **DumpAssembly** 명령을 사용하여 모듈의 주소를 검색할 수 있습니다.|
-|**DumpObj** [ **-nofields**] \<*object address*><br /><br /> 또는<br /><br /> **DO** \<*object address*>|지정된 주소의 개체에 대한 정보를 표시합니다. **DumpObj** 명령은 필드, `EEClass` 구조체 정보, 메서드 테이블 및 개체 크기를 표시합니다.<br /><br /> **DumpStackObjects** 명령을 사용하여 개체의 주소를 검색할 수 있습니다.<br /><br /> `CLASS` 형식의 필드도 개체이므로 이러한 필드에서 **DumpObj** 명령을 실행할 수 있습니다.<br /><br /> `-`**nofields** 옵션은 개체의 필드가 표시되지 않도록 방지하며, String과 같은 개체에 유용합니다.|
+|**DumpObj** [ **-nofields**] \<*object address*><br /><br /> 또는<br /><br /> **DO** \<*object address*>|지정된 주소의 개체에 대한 정보를 표시합니다. **DumpObj** 명령은 필드, `EEClass` 구조체 정보, 메서드 테이블 및 개체 크기를 표시합니다.<br /><br /> **DumpStackObjects** 명령을 사용하여 개체의 주소를 검색할 수 있습니다.<br /><br /> **형식의 필드도 개체이므로 이러한 필드에서**DumpObj`CLASS` 명령을 실행할 수 있습니다.<br /><br /> `-`**nofields** 옵션은 개체의 필드가 표시되지 않도록 방지하며, String과 같은 개체에 유용합니다.|
 |**DumpRuntimeTypes**|가비지 수집기 힙에 있는 런타임 형식 개체를 표시하고 해당 개체에 연관된 형식 이름과 메서드 테이블을 나열합니다.|
 |**DumpStack** [ **-EE**] [ **-n**] [`top` *stack* [`bottom` *stac*`k`]]|스택 추적을 표시합니다.<br /><br /> **-EE** 옵션을 사용하면 **DumpStack** 명령이 관리되는 함수만 표시합니다. x86 플랫폼에 표시되는 스택 프레임을 제한하려면 `top` 및 `bottom` 매개 변수를 사용합니다.<br /><br /> **-n** 옵션은 소스 파일 이름과 줄 번호의 표시를 사용하지 않도록 설정합니다. 디버거에 옵션 SYMOPT_LOAD_LINES가 지정된 경우 SOS는 관리되는 모든 프레임에 대한 기호를 조회하고, 성공한 경우, 해당 소스 파일 이름과 줄 번호를 표시합니다. 이 동작을 사용하지 않으려면 **-n**(줄 번호 없음) 매개 변수를 지정할 수 있습니다.<br /><br /> x86 및 x64 플랫폼에서 **DumpStack** 명령은 자세한 스택 추적을 만듭니다.<br /><br /> IA-64 기반 플랫폼에서 **DumpStack** 명령은 디버거의 **K** 명령과 비슷하게 작동합니다. `top` 및 `bottom` 매개 변수는 IA-64 기반 플랫폼에서 무시됩니다.|
 |**DumpSig** \<*sigaddr*> \<*moduleaddr*>|지정된 주소의 `Sig` 구조체에 대한 정보를 표시합니다.|
@@ -84,7 +84,7 @@ SOS 디버깅 확장명(SOS.dll)을 사용하면 내부 CLR(공용 언어 런타
 |**ThreadPool**|큐에 대기 중인 작업 요청 수, 완료 포트 스레드 수 및 타이머 수를 비롯하여 관리되는 스레드 풀에 대한 정보를 표시합니다.|
 |**Token2EE** \<*module name*> \<*token*>|지정된 모듈의 지정된 메타데이터 토큰을 `MethodTable` 구조체나 `MethodDesc` 구조체로 전환합니다.<br /><br /> module name 매개 변수에 `*`를 전달하면 로드된 모든 관리되는 모듈에서 해당 토큰이 매핑되는 대상을 확인할 수 있습니다. `mscorlib` 또는 `image00400000`과 같이 모듈의 디버거 이름을 전달할 수도 있습니다.|
 |**Threads** [ **-live**] [ **-special**]|프로세스의 관리되는 모든 스레드를 표시합니다.<br /><br /> **Threads** 명령은 디버거 약식 ID, CLR 스레드 ID 및 운영 체제 스레드 ID를 표시합니다.  또한 **Threads** 명령은 스레드가 실행 중인 애플리케이션 도메인을 나타내는 Domain 열, COM 아파트 모드를 표시하는 APT 열 및 스레드에서 마지막으로 throw된 예외를 표시하는 Exception 열을 표시합니다.<br /><br /> **-live** 옵션은 라이브 스레드와 연결된 스레드를 표시합니다.<br /><br /> **-special** 옵션은 CLR에서 만들어진 모든 특수 스레드를 표시합니다. 특수 스레드에는 가비지 수집 스레드(동시 및 서버 가비지 수집), 디버거 도우미 스레드, 종료자 스레드, <xref:System.AppDomain> 언로드 스레드 및 스레드 풀 타이머 스레드가 포함됩니다.|
-|**ThreadState \<** *State value field* **>**|스레드의 현재 상태를 표시합니다. `value` 매개 변수는 **Threads** 보고서 출력의 `State` 필드 값입니다.<br /><br /> 예제:<br /><br /> `0:003> !Threads     ThreadCount:      2     UnstartedThread:  0     BackgroundThread: 1     PendingThread:    0     DeadThread:       0     Hosted Runtime:   no                                           PreEmptive   GC Alloc           Lock            ID OSID ThreadOBJ    State     GC       Context       Domain   Count APT Exception        0    1  250 0019b068      a020 Disabled 02349668:02349fe8 0015def0     0 MTA        2    2  944 001a6020      b220 Enabled  00000000:00000000 0015def0     0 MTA (Finalizer)     0:003> !ThreadState b220         Legal to Join         Background         CLR Owns         CoInitialized         In Multi Threaded Apartment`|
+|**ThreadState \<** *State value field* **>**|스레드의 현재 상태를 표시합니다. `value` 매개 변수는 `State`Threads**보고서 출력의** 필드 값입니다.<br /><br /> 예:<br /><br /> `0:003> !Threads     ThreadCount:      2     UnstartedThread:  0     BackgroundThread: 1     PendingThread:    0     DeadThread:       0     Hosted Runtime:   no                                           PreEmptive   GC Alloc           Lock            ID OSID ThreadOBJ    State     GC       Context       Domain   Count APT Exception        0    1  250 0019b068      a020 Disabled 02349668:02349fe8 0015def0     0 MTA        2    2  944 001a6020      b220 Enabled  00000000:00000000 0015def0     0 MTA (Finalizer)     0:003> !ThreadState b220         Legal to Join         Background         CLR Owns         CoInitialized         In Multi Threaded Apartment`|
 |**TraverseHeap** [ **-xml**] \<*filename*>|힙 정보를 CLR 프로파일러에서 인식할 수 있는 형식으로 지정된 파일에 씁니다. **-xml** 옵션을 사용하면 **TraverseHeap** 명령은 파일을 XML 형식으로 지정합니다.<br /><br /> CLR 프로파일러는 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkID=67325)에서 다운로드할 수 있습니다.|
 |**U** [ **-gcinfo**] [ **-ehinfo**] [ **-n**] \<*MethodDesc address*> &#124; \<*Code address*>|메서드의 `MethodDesc` 구조체 포인터나 메서드 본문 내의 코드 주소로 지정된 관리되는 메서드에 대해 주석이 지정된 디스어셈블리를 표시합니다. **U** 명령은 메타데이터 토큰을 이름으로 변환하는 주석과 함께 전체 메서드를 처음부터 끝까지 표시합니다.<br /><br /> **-gcinfo** 옵션을 사용하면 **U** 명령은 메서드의 `GCInfo` 구조체를 표시합니다.<br /><br /> **-ehinfo** 옵션은 메서드에 대한 예외 정보를 표시합니다. **EHInfo** 명령을 사용하여 이 정보를 얻을 수도 있습니다.<br /><br /> **-n** 옵션은 소스 파일 이름과 줄 번호의 표시를 사용하지 않도록 설정합니다. 디버거에 옵션 SYMOPT_LOAD_LINES가 지정된 경우 SOS는 관리되는 모든 프레임에 대한 기호를 조회하고, 성공한 경우, 해당 소스 파일 이름과 줄 번호를 표시합니다. 이 동작을 사용하지 않으려면 **-n** 옵션을 지정할 수 있습니다.|
 |**VerifyHeap**|가비지 수집기 힙에서 손상된 곳이 있는지 확인하고 찾은 오류를 표시합니다.<br /><br /> 플랫폼 호출이 잘못 구성되면 힙이 손상될 수 있습니다.|
@@ -202,7 +202,7 @@ WinDbg.exe 및 Visual Studio에서는 현재 사용 중인 Mscorwks.dll 버전�
 !token2ee unittest.exe 02000003
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [도구](index.md)
 - [명령 프롬프트](developer-command-prompt-for-vs.md)

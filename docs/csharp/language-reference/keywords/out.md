@@ -9,10 +9,10 @@ helpviewer_keywords:
 - out keyword [C#]
 ms.assetid: 7e911a0c-3f98-4536-87be-d539b7536ca8
 ms.openlocfilehash: 75b556535c5c0c0b55bf029cc400eb61b1002cb2
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713263"
 ---
 # <a name="out-c-reference"></a>out(C# 참조)
@@ -23,6 +23,6 @@ ms.locfileid: "75713263"
 
 - 형식 매개 변수를 공변(covariant)으로 지정하는 인터페이스 및 대리자에 대한 [제네릭 형식 매개 변수 선언](out-generic-modifier.md)에서 사용
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)

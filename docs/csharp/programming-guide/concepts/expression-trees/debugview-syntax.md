@@ -9,10 +9,10 @@ helpviewer_keywords:
 - expression trees
 - debugview
 ms.openlocfilehash: ba695fc808108c49a4eee3c70a305b24c91769d8
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "67661724"
 ---
 # <a name="debugview-syntax"></a>`DebugView` 구문
@@ -27,7 +27,7 @@ ms.locfileid: "67661724"
 
 매개 변수에 이름이 없으면 자동으로 생성된 이름이 할당됩니다(예: `$var1` 또는 `$var2`).
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 ```csharp
 ParameterExpression numParam =  Expression.Parameter(typeof(int), "num");
@@ -43,7 +43,7 @@ ParameterExpression numParam =  Expression.Parameter(typeof(int));
 
 ## <a name="constantexpression"></a>ConstantExpression
 
-정수 값, 문자열 및 `null`을 나타내는 <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> 개체의 경우 상수 값이 표시됩니다.
+정수 값, 문자열 및 <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType>을 나타내는 `null` 개체의 경우 상수 값이 표시됩니다.
 
 표준 접미사인 C# 리터럴이 있는 숫자 형식의 경우 접미사가 값에 추가됩니다. 다음 표에서는 다양한 숫자 형식과 연결된 접미사를 보여 줍니다.
 
@@ -56,7 +56,7 @@ ParameterExpression numParam =  Expression.Parameter(typeof(int));
 | <xref:System.Single?displayProperty=nameWithType> | [float](../../../language-reference/builtin-types/floating-point-numeric-types.md) | F |
 | <xref:System.Decimal?displayProperty=nameWithType> | [decimal](../../../language-reference/builtin-types/floating-point-numeric-types.md) | M |
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 ```csharp
 int num = 10;
@@ -76,7 +76,7 @@ ConstantExpression expr = Expression.Constant(num);
 
 <xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> 개체의 형식이 블록에 있는 마지막 식의 형식과 다를 경우 형식은 꺾쇠 괄호(`<` 및 `>`) 안에 표시됩니다. 같을 경우 <xref:System.Linq.Expressions.BlockExpression> 개체의 형식이 표시되지 않습니다.
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 ```csharp
 BlockExpression block = Expression.Block(Expression.Constant("test"));
@@ -100,7 +100,7 @@ BlockExpression block =  Expression.Block(typeof(Object), Expression.Constant("t
 
 람다 식에 이름이 없으면 자동으로 생성된 이름이 할당됩니다(예: `#Lambda1` 또는 `#Lambda2`).
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 ```csharp
 LambdaExpression lambda =  Expression.Lambda<Func<int>>(Expression.Constant(1));
@@ -126,7 +126,7 @@ LambdaExpression lambda =  Expression.Lambda<Func<int>>(Expression.Constant(1), 
 
 레이블에 이름이 없으면 자동으로 생성된 이름이 할당됩니다(예: `#Label1` 또는 `#Label2`).
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 ```csharp
 LabelTarget target = Expression.Label(typeof(int), "SampleLabel");
@@ -161,7 +161,7 @@ BlockExpression block = Expression.Block(
 
 확인된 연산자는 연산자 앞에 `#` 기호가 표시됩니다. 예를 들어 확인된 더하기 연산자는 `#+`로 표시됩니다.
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 ```csharp
 Expression expr = Expression.AddChecked( Expression.Constant(1), Expression.Constant(2));

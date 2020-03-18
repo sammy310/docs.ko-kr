@@ -5,10 +5,10 @@ author: cartermp
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
 ms.openlocfilehash: 3f8e75a501cfc48e1c416f71e91290cab1a4ffae
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76920914"
 ---
 # <a name="how-to-create-a-nuget-package-with-the-net-core-cli"></a>.NET Core CLI를 사용하여 NuGet 패키지를 만드는 방법
@@ -18,7 +18,7 @@ ms.locfileid: "76920914"
 
 .NET Standard 및 .NET Core 라이브러리는 NuGet 패키지로 배포해야 합니다. 이는 실제로 모든 .NET 표준 라이브러리가 배포되고 사용되는 방법이며, `dotnet pack` 명령을 사용하여 가장 쉽게 수행할 수 있습니다.
 
-NuGet을 통해 배포하려는 놀라운 새 라이브러리를 작성했다고 가정해 보세요. 플랫폼 간 도구를 사용하여 NuGet 패키지를 만들면 이 작업을 정확하게 수행할 수 있습니다. 다음 예제에서는 `netstandard1.0`을 대상으로 하는 **SuperAwesomeLibrary**라는 라이브러리를 가정합니다.
+NuGet을 통해 배포하려는 놀라운 새 라이브러리를 작성했다고 가정해 보세요. 플랫폼 간 도구를 사용하여 NuGet 패키지를 만들면 이 작업을 정확하게 수행할 수 있습니다. 다음 예제에서는 **을 대상으로 하는** SuperAwesomeLibrary`netstandard1.0`라는 라이브러리를 가정합니다.
 
 전이적 종속성 즉, 다른 패키지에 종속된 프로젝트가 있는 경우 NuGet 패키지를 만들기 전에 `dotnet restore` 명령을 사용하여 전체 솔루션에 대한 패키지를 복원해야 합니다. 이렇게 복원하지 않으면 `dotnet pack` 명령이 제대로 작동하지 않습니다.
 
@@ -66,6 +66,6 @@ SuperAwesomeLibrary.1.0.0.symbols.nupkg
 
 어떤 지점에서도 `dotnet publish` 명령은 관련되지 않습니다. `dotnet publish` 명령은 애플리케이션 및 모든 종속성을 동일한 번들로 배포하기 위한 것이며 NuGet을 통해 배포하고 사용할 NuGet 패키지를 생성하기 위한 것이 아닙니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [빠른 시작: 패키지 만들기 및 게시](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)

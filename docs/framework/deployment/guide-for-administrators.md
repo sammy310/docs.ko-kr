@@ -6,10 +6,10 @@ helpviewer_keywords:
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 ms.openlocfilehash: be15ce0b0bed37da6fe400e98bfdd118c48f7ba0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716531"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>관리자를 위한 .NET Framework 배포 가이드
@@ -21,7 +21,7 @@ ms.locfileid: "75716531"
 >
 > .NET Framework 지원의 자세한 내용은 Microsoft 지원 웹 사이트에서 [.NET Framework 공식 지원 정책](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)을 참조하세요.
 
-이 항목에는 다음과 같은 단원이 포함되어 있습니다.
+이 항목의 섹션:
 
 - [배포 프로세스](#the_deployment_process)
 - [.NET Framework 배포](#deploying_in_a_test_environment)
@@ -188,7 +188,7 @@ Configuration Manager를 사용하여 .NET Framework 4.5의 자동 설치를 배
 9. 마법사의 **사용자 경험** 페이지에서 기본값을 사용하고 **다음**을 선택합니다.
 
     > [!WARNING]
-    > 프로덕션 환경에는 배포 일정에 대해 다른 선택 항목을 요구하는 정책이 있을 수도 있습니다. 이러한 옵션에 대한 자세한 내용은 [보급 알림 이름 속성: 일정 탭](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694016%28v=technet.10%29)을 참조하세요.
+    > 프로덕션 환경에는 배포 일정에 대해 다른 선택 항목을 요구하는 정책이 있을 수도 있습니다. 이러한 옵션에 대한 자세한 내용은 [Advertisement Name Properties: Schedule Tab](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694016%28v=technet.10%29)(보급 알림 이름 속성: 일정 탭)을 참조하세요.
 
 10. 마법사의 **배포 지점** 페이지에서 기본값을 사용하고 **다음**을 선택합니다.
 
@@ -276,7 +276,7 @@ Configuration Manager를 사용하여 .NET Framework 4.5의 자동 설치를 배
 
 - [Windows 업데이트 에이전트 결과 코드](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc720442(v=ws.10))
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [개발자를 위한 배포 가이드](deployment-guide-for-developers.md)
 - [시스템 요구 사항](../get-started/system-requirements.md)
