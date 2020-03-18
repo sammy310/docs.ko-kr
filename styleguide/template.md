@@ -14,12 +14,12 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: ed9fd55fd84606d2083e0576581391331769a1e6
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 1ddeeaca4645bd4788f03018643a0bc2682c731a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089278"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79186912"
 ---
 # <a name="metadata-and-markdown-template"></a>메타데이터 및 Markdown 템플릿
 
@@ -36,7 +36,7 @@ Markdown 파일을 만들 때는 이 템플릿을 새 파일로 복사하고, �
 - 제목 등의 값에 콜론이 포함되어 있으면 메타데이터 파서가 중단됩니다. 이 경우 `title: "Writing .NET Core console apps: An advanced step-by-step guide"`와 같이 큰따옴표를 사용하여 제목을 묶습니다.
 - **title**: 검색 엔진 결과에 표시됩니다. 제목(title)은 H1 제목(heading)의 제목(title)과 같을 필요는 없으며 60자 이내로 작성해야 합니다.
 - **설명**: 문서의 내용을 요약합니다. 일반적으로 검색 결과 페이지에 표시되지만 검색 순위에는 사용되지 않습니다. 길이는 공백을 포함하여 115~145자여야 합니다.
-- **author** 및 **ms.author**: author 필드는 작성자의 별칭이 아닌 **GitHub 사용자 이름**을 포함해야 합니다.  반면 **ms.author** 필드에서는 Microsoft 별칭을 포함해야 하며, 문서 유지 관리를 담당하는 개인을 표시합니다.
+- **author** 및 **ms.author**: author 필드에는 작성자의 별칭이 아닌 **GitHub 사용자 이름**을 포함해야 합니다. 반면 **ms.author** 필드에서는 Microsoft 별칭을 포함해야 하며, 문서 유지 관리를 담당하는 개인을 표시합니다.
 - **ms.topic**: 토픽 유형입니다. 가장 일반적인 값은 `conceptual`이고 전역 수준에서 설정됩니다. 기타 일반적으로 사용되는 값은 `tutorial`, `overview` 및 `reference`입니다.
 - **dev_langs**에서는 토픽에 대해 표시된 언어 필터를 정의합니다. 지원되는 값 목록은 [지원되는 언어](#supported-languages) 섹션에서 확인할 수 있습니다. 토픽에 포함된 프로그래밍 언어가 둘 이상 있는 경우에만 설정해야 합니다. 일반적으로 당사의 콘텐츠에서는 이 값으로 `csharp`, `vb`, `fsharp` 및 `cpp`만 사용합니다.
 - **ms.prod**: BI 용도로 사용되는 제품 ID입니다. 이 ID는 일반적으로 전역 수준에서 설정되므로 대개 각 문서의 메타데이터 블록에 표시되지 않습니다.
@@ -254,7 +254,7 @@ UID에 특수 문자 \`, \# 또는 \*가 포함된 경우 UID 값은 각각 `%60
 
 - `<queryoption>` 및 `<queryoptionvalue>`(*선택 사항*)
   - 파일에서 코드를 검색하는 방법을 지정하는 데 함께 사용됩니다.
-    - `#`:  `#L{startlinenumber}-L{endlinenumber}`(줄 범위) *또는* `#{tagname}`(태그 이름).
+    - `#`:  `#L{startlinenumber}-L{endlinenumber}`(줄 범위) ‘또는’ `#{tagname}`(태그 이름)입니다. 
     하지만 줄 번호는 변경되기 쉬우므로 사용하지 않는 것이 좋습니다. 태그 이름은 코드 조각을 참조하는 기본 방법입니다.
     - `range`: `?range=1,3-5` 줄의 범위입니다. 이 예에는 줄 1, 3, 4 및 5가 포함됩니다.
     - `dedent`: `?dedent=8` 공백 수(이 경우 8)만큼 줄 들여쓰기를 취소합니다. 이는 `range` 및 파일 줄의 하위 집합을 선택하는 기타 쿼리 옵션과 결합할 수 있습니다.
@@ -276,7 +276,7 @@ UID에 특수 문자 \`, \# 또는 \*가 포함된 경우 UID 값은 각각 `%60
 
 #### <a name="supported-languages"></a>지원되는 언어
 
-|name|Markdown 레이블|
+|이름|Markdown 레이블|
 |-----|-------|
 |.NET 콘솔|dotnetcli|
 |ASP.NET(C#)|aspx-csharp|
@@ -411,7 +411,7 @@ function fancyAlert(arg) {
 > [!VIDEO <channel9_video_link>]
 ```
 
-동영상의 올바른 URL을 가져오려면 동영상 프레임 아래의 **포함** 탭을 선택하고 `<iframe>` 요소에서 URL을 복사합니다. 예:
+동영상의 올바른 URL을 가져오려면 동영상 프레임 아래의 **포함** 탭을 선택하고 `<iframe>` 요소에서 URL을 복사합니다. 예를 들어:
 
 ```markdown
 > [!VIDEO https://channel9.msdn.com/Blogs/dotnet/NET-Core-20-Released/player]
@@ -425,7 +425,7 @@ function fancyAlert(arg) {
 > [!VIDEO <youtube_video_link>]
 ```
 
-예:
+예를 들어:
 
 ```markdown
 > [!VIDEO https://www.youtube.com/embed/Q2mMbjw6cLA]
@@ -458,7 +458,7 @@ docs.microsoft는 GitHub Flavored Markdown에 대해 몇 가지 추가 확장을
 
 그러면 이러한 항목은 다음과 같이 렌더링됩니다. ![경고 스타일](../images/alerts.png)
 
-### <a name="includes"></a>포함되는 내용
+### <a name="includes"></a>Includes
 
 Include를 사용하여 한 파일의 Markdown을 다른 파일에 포함할 수 있습니다.
 

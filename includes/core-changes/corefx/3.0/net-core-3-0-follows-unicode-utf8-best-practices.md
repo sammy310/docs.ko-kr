@@ -1,14 +1,14 @@
 ---
 ms.openlocfilehash: db1d09c8c9e606b5327a42977a74a74703282d84
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568222"
 ---
 ### <a name="net-core-30-follows-unicode-best-practices-when-replacing-ill-formed-utf-8-byte-sequences"></a>.NET Core 3.0이 잘못된 형식의 UTF-8 바이트 시퀀스를 대체할 때 유니코드 모범 사례를 적용
 
-<xref:System.Text.UTF8Encoding> 클래스는 바이트-문자 트랜스코딩을 수행하는 동안 잘못된 형식의 UTF-8 바이트 시퀀스가 발견되면 출력 문자열에서 해당 시퀀스를 ‘�' 문자(U+FFFD 대체 문자)로 바꿉니다. .NET Core 3.0은 이전 버전의 .NET Core 및 .NET Framework와 달리 트랜스코딩 작업 도중 이 대체를 수행하기 위해 유니코드 모범 사례를 따릅니다.
+바이트-문자 코드 변환 작업 중에 <xref:System.Text.UTF8Encoding> 클래스에서 형식이 잘못된 UTF-8 바이트 시퀀스가 있는 경우 출력 문자열에서 이 시퀀스가 '�' 문자(U+FFFD 대체 문자)로 바뀝니다. .NET Core 3.0은 이전 버전의 .NET Core 및 .NET Framework와 달리 트랜스코딩 작업 도중 이 대체를 수행하기 위해 유니코드 모범 사례를 따릅니다.
 
 이는 새로운 <xref:System.Text.Unicode.Utf8?displayProperty=nameWithType> 및 <xref:System.Text.Rune?displayProperty=nameWithType> 형식을 포함하여 .NET 전체에서 UTF-8 처리를 향상하기 위해 기울인 보다 많은 노력의 일환입니다. <xref:System.Text.UTF8Encoding> 형식에는 새로 도입된 형식과 일치하는 출력을 생성하도록 향상된 오류 처리 메커니즘이 적용되었습니다.
 
@@ -30,7 +30,7 @@ ms.locfileid: "74568222"
 
 3.0
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 개발자는 아무 작업도 수행하지 않아도 됩니다.
 
