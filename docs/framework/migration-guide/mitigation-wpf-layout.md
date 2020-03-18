@@ -3,39 +3,39 @@ title: '완화: WPF 레이아웃'
 ms.date: 03/30/2017
 ms.assetid: 805ffd7f-8d1e-427e-a648-601ca8ec37a5
 ms.openlocfilehash: 7a074698fd203d0c5f9b799bfee8a6a9cb40800e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457779"
 ---
-# <a name="mitigation-wpf-layout"></a><span data-ttu-id="40761-102">완화: WPF 레이아웃</span><span class="sxs-lookup"><span data-stu-id="40761-102">Mitigation: WPF Layout</span></span>
-<span data-ttu-id="40761-103">WPF 컨트롤의 레이아웃은 약간 변경될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="40761-103">The layout of WPF controls can change slightly.</span></span>  
+# <a name="mitigation-wpf-layout"></a><span data-ttu-id="da317-102">완화: WPF 레이아웃</span><span class="sxs-lookup"><span data-stu-id="da317-102">Mitigation: WPF Layout</span></span>
+<span data-ttu-id="da317-103">WPF 컨트롤의 레이아웃은 약간 변경될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="da317-103">The layout of WPF controls can change slightly.</span></span>  
   
-## <a name="impact"></a><span data-ttu-id="40761-104">영향</span><span class="sxs-lookup"><span data-stu-id="40761-104">Impact</span></span>  
- <span data-ttu-id="40761-105">레이아웃을 변경한 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="40761-105">As a result of this change:</span></span>  
+## <a name="impact"></a><span data-ttu-id="da317-104">영향</span><span class="sxs-lookup"><span data-stu-id="da317-104">Impact</span></span>  
+ <span data-ttu-id="da317-105">레이아웃을 변경한 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="da317-105">As a result of this change:</span></span>  
   
-- <span data-ttu-id="40761-106">요소의 너비나 높이가 최대 1픽셀씩 늘어나거나 줄어들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="40761-106">The width or height of elements may grow or shrink by at most one pixel.</span></span>  
+- <span data-ttu-id="da317-106">요소의 너비나 높이가 최대 1픽셀씩 늘어나거나 줄어들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="da317-106">The width or height of elements may grow or shrink by at most one pixel.</span></span>  
   
-- <span data-ttu-id="40761-107">개체의 배치가 최대 1픽셀씩 이동할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="40761-107">The placement of an object can move by at most one pixel.</span></span>  
+- <span data-ttu-id="da317-107">개체의 배치가 최대 1픽셀씩 이동할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="da317-107">The placement of an object can move by at most one pixel.</span></span>  
   
-- <span data-ttu-id="40761-108">가운데 맞춤 요소가 가로 또는 세로로 최대 1픽셀씩 가운데에서 벗어날 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="40761-108">Centered elements can be vertically or horizontally off center by at most one pixel.</span></span>  
+- <span data-ttu-id="da317-108">가운데 맞춤 요소가 가로 또는 세로로 최대 1픽셀씩 가운데에서 벗어날 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="da317-108">Centered elements can be vertically or horizontally off center by at most one pixel.</span></span>  
   
- <span data-ttu-id="40761-109">기본적으로 이 새 레이아웃은 .NET Framework 4.6을 대상으로 하는 앱에 대해서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="40761-109">By default, this new layout is enabled only for apps that target the .NET Framework 4.6.</span></span>  
+ <span data-ttu-id="da317-109">기본적으로 이 새 레이아웃은 .NET Framework 4.6을 대상으로 하는 앱에 대해서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="da317-109">By default, this new layout is enabled only for apps that target the .NET Framework 4.6.</span></span>  
   
-## <a name="mitigation"></a><span data-ttu-id="40761-110">완화</span><span class="sxs-lookup"><span data-stu-id="40761-110">Mitigation</span></span>  
- <span data-ttu-id="40761-111">이 수정은 높은 DPI에서 WPF 컨트롤의 오른쪽 또는 아래쪽의 클리핑을 제거하는 경향이 있으므로 이전 버전의 .NET Framework를 대상으로 하지만 NET Framework 4.6에서 실행되는 앱은 다음 줄을 app.config 파일의 `<runtime>` 섹션에 추가하여 이 새 동작을 옵트인(opt in)할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="40761-111">Since this modification tends to eliminate clipping of the right or bottom of WPF controls at high DPIs, apps that target earlier versions of the .NET Framework but are running on the .NET Framework 4.6 can opt into this new behavior by adding the following line to the `<runtime>` section of the app.config file:</span></span>  
+## <a name="mitigation"></a><span data-ttu-id="da317-110">완화 방법</span><span class="sxs-lookup"><span data-stu-id="da317-110">Mitigation</span></span>  
+ <span data-ttu-id="da317-111">이 수정은 높은 DPI에서 WPF 컨트롤의 오른쪽 또는 아래쪽의 클리핑을 제거하는 경향이 있으므로 이전 버전의 .NET Framework를 대상으로 하지만 NET Framework 4.6에서 실행되는 앱은 다음 줄을 app.config 파일의 `<runtime>` 섹션에 추가하여 이 새 동작을 옵트인(opt in)할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="da317-111">Since this modification tends to eliminate clipping of the right or bottom of WPF controls at high DPIs, apps that target earlier versions of the .NET Framework but are running on the .NET Framework 4.6 can opt into this new behavior by adding the following line to the `<runtime>` section of the app.config file:</span></span>  
   
 ```xml  
 <AppContextSwitchOverrides value="Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness=false" />  
 ```  
   
- <span data-ttu-id="40761-112">.NET Framework 4.6을 대상으로 하지만 이전 레이아웃 알고리즘을 사용하여 WPF 컨트롤을 렌더링하려는 앱은 다음 줄을 app.config 파일의 `<runtime>` 섹션에 추가하여 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="40761-112">Apps that target the .NET Framework 4.6 but want WPF controls to render using the previous layout algorithm can do so by adding the following line to the  `<runtime>` section of the app.config file:</span></span>  
+ <span data-ttu-id="da317-112">.NET Framework 4.6을 대상으로 하지만 이전 레이아웃 알고리즘을 사용하여 WPF 컨트롤을 렌더링하려는 앱은 다음 줄을 app.config 파일의 `<runtime>` 섹션에 추가하여 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="da317-112">Apps that target the .NET Framework 4.6 but want WPF controls to render using the previous layout algorithm can do so by adding the following line to the  `<runtime>` section of the app.config file:</span></span>  
   
 ```xml  
 <AppContextSwitchOverrides value="Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness=true" />  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="40761-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="40761-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="da317-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="da317-113">See also</span></span>
 
-- [<span data-ttu-id="40761-114">애플리케이션 호환성</span><span class="sxs-lookup"><span data-stu-id="40761-114">Application compatibility</span></span>](application-compatibility.md)
+- [<span data-ttu-id="da317-114">애플리케이션 호환성</span><span class="sxs-lookup"><span data-stu-id="da317-114">Application compatibility</span></span>](application-compatibility.md)

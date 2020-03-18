@@ -6,32 +6,32 @@ dev_langs:
 - csharp
 - vb
 ms.openlocfilehash: 1d66c0c166724f195a3cafd9bcbe3c7414c08ebb
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159509"
 ---
-# <a name="how-to-determine-if-a-file-is-an-assembly"></a><span data-ttu-id="5c4f7-102">방법: 파일이 어셈블리인지 확인</span><span class="sxs-lookup"><span data-stu-id="5c4f7-102">How to: Determine if a file is an assembly</span></span>
+# <a name="how-to-determine-if-a-file-is-an-assembly"></a><span data-ttu-id="7d355-102">방법: 파일이 어셈블리인지 확인</span><span class="sxs-lookup"><span data-stu-id="7d355-102">How to: Determine if a file is an assembly</span></span>
 
-<span data-ttu-id="5c4f7-103">파일은 관리되고 해당 메타데이터에 어셈블리 항목을 포함하는 경우에만 어셈블리입니다.</span><span class="sxs-lookup"><span data-stu-id="5c4f7-103">A file is an assembly if and only if it is managed, and contains an assembly entry in its metadata.</span></span> <span data-ttu-id="5c4f7-104">어셈블리 및 메타데이터에 대한 자세한 내용은 [어셈블리 매니페스트](manifest.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="5c4f7-104">For more information on assemblies and metadata, see [Assembly manifest](manifest.md).</span></span>  
+<span data-ttu-id="7d355-103">파일은 관리되고 해당 메타데이터에 어셈블리 항목을 포함하는 경우에만 어셈블리입니다.</span><span class="sxs-lookup"><span data-stu-id="7d355-103">A file is an assembly if and only if it is managed, and contains an assembly entry in its metadata.</span></span> <span data-ttu-id="7d355-104">어셈블리 및 메타데이터에 대한 자세한 내용은 [어셈블리 매니페스트](manifest.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="7d355-104">For more information on assemblies and metadata, see [Assembly manifest](manifest.md).</span></span>  
   
-## <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a><span data-ttu-id="5c4f7-105">파일이 어셈블리인지 수동으로 확인하는 방법</span><span class="sxs-lookup"><span data-stu-id="5c4f7-105">How to manually determine if a file is an assembly</span></span>  
+## <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a><span data-ttu-id="7d355-105">파일이 어셈블리인지 수동으로 확인하는 방법</span><span class="sxs-lookup"><span data-stu-id="7d355-105">How to manually determine if a file is an assembly</span></span>  
   
-1. <span data-ttu-id="5c4f7-106">[Ildasm.exe(IL 디스어셈블러)](../../framework/tools/ildasm-exe-il-disassembler.md)를 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="5c4f7-106">Start the [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md).</span></span>  
+1. <span data-ttu-id="7d355-106">[Ildasm.exe(IL 디스어셈블러)](../../framework/tools/ildasm-exe-il-disassembler.md)를 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="7d355-106">Start the [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md).</span></span>  
   
-2. <span data-ttu-id="5c4f7-107">테스트하려는 파일을 로드합니다.</span><span class="sxs-lookup"><span data-stu-id="5c4f7-107">Load the file you want to test.</span></span>  
+2. <span data-ttu-id="7d355-107">테스트하려는 파일을 로드합니다.</span><span class="sxs-lookup"><span data-stu-id="7d355-107">Load the file you want to test.</span></span>  
   
-3. <span data-ttu-id="5c4f7-108">**ILDASM**에서 파일이 PE(이식 가능) 파일이 아니라고 보고하는 경우에는 어셈블리가 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="5c4f7-108">If **ILDASM** reports that the file is not a portable executable (PE) file, then it is not an assembly.</span></span> <span data-ttu-id="5c4f7-109">자세한 내용은 항목 [방법: 어셈블리 콘텐츠 보기](view-contents.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="5c4f7-109">For more information, see the topic [How to: View assembly contents](view-contents.md).</span></span>  
+3. <span data-ttu-id="7d355-108">**ILDASM**에서 파일이 PE(이식 가능) 파일이 아니라고 보고하는 경우에는 어셈블리가 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="7d355-108">If **ILDASM** reports that the file is not a portable executable (PE) file, then it is not an assembly.</span></span> <span data-ttu-id="7d355-109">자세한 내용은 항목 [방법: 어셈블리 콘텐츠 보기](view-contents.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="7d355-109">For more information, see the topic [How to: View assembly contents](view-contents.md).</span></span>  
   
-## <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a><span data-ttu-id="5c4f7-110">파일이 어셈블리인지 프로그래밍 방식으로 확인하는 방법</span><span class="sxs-lookup"><span data-stu-id="5c4f7-110">How to programmatically determine if a file is an assembly</span></span>  
+## <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a><span data-ttu-id="7d355-110">파일이 어셈블리인지 프로그래밍 방식으로 확인하는 방법</span><span class="sxs-lookup"><span data-stu-id="7d355-110">How to programmatically determine if a file is an assembly</span></span>  
   
-1. <span data-ttu-id="5c4f7-111">테스트하는 파일의 전체 파일 경로와 이름을 전달하여 <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> 메서드를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="5c4f7-111">Call the <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> method, passing the full file path and name of the file you are testing.</span></span>  
+1. <span data-ttu-id="7d355-111">테스트하는 파일의 전체 파일 경로와 이름을 전달하여 <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> 메서드를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="7d355-111">Call the <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> method, passing the full file path and name of the file you are testing.</span></span>  
   
-2. <span data-ttu-id="5c4f7-112"><xref:System.BadImageFormatException> 예외가 throw되는 경우 파일이 어셈블리가 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="5c4f7-112">If a <xref:System.BadImageFormatException> exception is thrown, the file is not an assembly.</span></span>  
+2. <span data-ttu-id="7d355-112"><xref:System.BadImageFormatException> 예외가 throw되는 경우 파일이 어셈블리가 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="7d355-112">If a <xref:System.BadImageFormatException> exception is thrown, the file is not an assembly.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5c4f7-113">예제</span><span class="sxs-lookup"><span data-stu-id="5c4f7-113">Example</span></span>  
-<span data-ttu-id="5c4f7-114">이 예제에서는 DLL을 테스트하여 어셈블리인지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="5c4f7-114">This example tests a DLL to see if it is an assembly.</span></span>  
+## <a name="example"></a><span data-ttu-id="7d355-113">예제</span><span class="sxs-lookup"><span data-stu-id="7d355-113">Example</span></span>  
+<span data-ttu-id="7d355-114">이 예제에서는 DLL을 테스트하여 어셈블리인지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="7d355-114">This example tests a DLL to see if it is an assembly.</span></span>  
 
 ```csharp
 class TestAssembly  
@@ -89,11 +89,11 @@ End Module
 '        Yes, the file is an Assembly.  
 ```
 
-<span data-ttu-id="5c4f7-115"><xref:System.Reflection.AssemblyName.GetAssemblyName%2A> 메서드는 테스트 파일을 로드한 다음 정보를 읽고 나면 해제합니다.</span><span class="sxs-lookup"><span data-stu-id="5c4f7-115">The <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> method loads the test file, and then releases it once the information is read.</span></span>  
+<span data-ttu-id="7d355-115"><xref:System.Reflection.AssemblyName.GetAssemblyName%2A> 메서드는 테스트 파일을 로드한 다음 정보를 읽고 나면 해제합니다.</span><span class="sxs-lookup"><span data-stu-id="7d355-115">The <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> method loads the test file, and then releases it once the information is read.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5c4f7-116">참조</span><span class="sxs-lookup"><span data-stu-id="5c4f7-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7d355-116">참조</span><span class="sxs-lookup"><span data-stu-id="7d355-116">See also</span></span>
 
 - <xref:System.Reflection.AssemblyName>
-- [<span data-ttu-id="5c4f7-117">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="5c4f7-117">C# programming guide</span></span>](../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="5c4f7-118">프로그래밍 개념(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5c4f7-118">Programming concepts (Visual Basic)</span></span>](../../visual-basic/programming-guide/concepts/index.md)
-- [<span data-ttu-id="5c4f7-119">.NET 어셈블리</span><span class="sxs-lookup"><span data-stu-id="5c4f7-119">Assemblies in .NET</span></span>](index.md)
+- [<span data-ttu-id="7d355-117">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="7d355-117">C# programming guide</span></span>](../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="7d355-118">프로그래밍 개념(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7d355-118">Programming concepts (Visual Basic)</span></span>](../../visual-basic/programming-guide/concepts/index.md)
+- [<span data-ttu-id="7d355-119">.NET 어셈블리</span><span class="sxs-lookup"><span data-stu-id="7d355-119">Assemblies in .NET</span></span>](index.md)

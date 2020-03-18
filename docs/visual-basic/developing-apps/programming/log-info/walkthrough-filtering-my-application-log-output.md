@@ -7,94 +7,94 @@ helpviewer_keywords:
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
 ms.openlocfilehash: f18556bbe1ca2d77925482319246d403892d31ef
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74353596"
 ---
-# <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a><span data-ttu-id="cb0a7-102">연습: My.Application.Log 출력 필터링(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cb0a7-102">Walkthrough: Filtering My.Application.Log Output (Visual Basic)</span></span>
+# <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a><span data-ttu-id="16690-102">연습: My.Application.Log 출력 필터링(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="16690-102">Walkthrough: Filtering My.Application.Log Output (Visual Basic)</span></span>
 
-<span data-ttu-id="cb0a7-103">이 연습에서는 `My.Application.Log` 개체에 대한 기본 로그 필터링을 변경하여 `Log` 개체에서 수신기로 전달되는 정보 및 수신기가 작성하는 정보를 제어하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-103">This walkthrough demonstrates how to change the default log filtering for the `My.Application.Log` object, to control what information is passed from the `Log` object to the listeners and what information is written by the listeners.</span></span> <span data-ttu-id="cb0a7-104">구성 정보가 애플리케이션의 구성 파일에 저장되므로 애플리케이션을 빌드한 후에도 로깅 동작을 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-104">You can change the logging behavior even after building the application, because the configuration information is stored in the application's configuration file.</span></span>
+<span data-ttu-id="16690-103">이 연습에서는 `My.Application.Log` 개체에 대한 기본 로그 필터링을 변경하여 `Log` 개체에서 수신기로 전달되는 정보 및 수신기가 작성하는 정보를 제어하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="16690-103">This walkthrough demonstrates how to change the default log filtering for the `My.Application.Log` object, to control what information is passed from the `Log` object to the listeners and what information is written by the listeners.</span></span> <span data-ttu-id="16690-104">구성 정보가 애플리케이션의 구성 파일에 저장되므로 애플리케이션을 빌드한 후에도 로깅 동작을 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="16690-104">You can change the logging behavior even after building the application, because the configuration information is stored in the application's configuration file.</span></span>
 
-## <a name="getting-started"></a><span data-ttu-id="cb0a7-105">시작</span><span class="sxs-lookup"><span data-stu-id="cb0a7-105">Getting Started</span></span>
+## <a name="getting-started"></a><span data-ttu-id="16690-105">시작하기</span><span class="sxs-lookup"><span data-stu-id="16690-105">Getting Started</span></span>
 
-<span data-ttu-id="cb0a7-106">`My.Application.Log`에서 작성하는 각 메시지에는 연결된 심각도 수준이 있으며, 필터링 메커니즘은 로그 출력을 제어하는 데 이를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-106">Each message that `My.Application.Log` writes has an associated severity level, which filtering mechanisms use to control the log output.</span></span> <span data-ttu-id="cb0a7-107">이 샘플 애플리케이션은 `My.Application.Log` 메서드를 사용하여 서로 다른 심각도 수준으로 여러 로그 메시지를 작성합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-107">This sample application uses `My.Application.Log` methods to write several log messages with different severity levels.</span></span>
+<span data-ttu-id="16690-106">`My.Application.Log`에서 작성하는 각 메시지에는 연결된 심각도 수준이 있으며, 필터링 메커니즘은 로그 출력을 제어하는 데 이를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-106">Each message that `My.Application.Log` writes has an associated severity level, which filtering mechanisms use to control the log output.</span></span> <span data-ttu-id="16690-107">이 샘플 애플리케이션은 `My.Application.Log` 메서드를 사용하여 서로 다른 심각도 수준으로 여러 로그 메시지를 작성합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-107">This sample application uses `My.Application.Log` methods to write several log messages with different severity levels.</span></span>
 
-#### <a name="to-build-the-sample-application"></a><span data-ttu-id="cb0a7-108">샘플 애플리케이션을 빌드하려면</span><span class="sxs-lookup"><span data-stu-id="cb0a7-108">To build the sample application</span></span>
+#### <a name="to-build-the-sample-application"></a><span data-ttu-id="16690-108">샘플 애플리케이션을 빌드하려면</span><span class="sxs-lookup"><span data-stu-id="16690-108">To build the sample application</span></span>
 
-1. <span data-ttu-id="cb0a7-109">새 Visual Basic Windows 애플리케이션 프로젝트를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-109">Open a new Visual Basic Windows Application project.</span></span>
+1. <span data-ttu-id="16690-109">새 Visual Basic Windows 애플리케이션 프로젝트를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="16690-109">Open a new Visual Basic Windows Application project.</span></span>
 
-2. <span data-ttu-id="cb0a7-110">Button1이라는 단추를 Form1에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-110">Add a button named Button1 to Form1.</span></span>
+2. <span data-ttu-id="16690-110">Button1이라는 단추를 Form1에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-110">Add a button named Button1 to Form1.</span></span>
 
-3. <span data-ttu-id="cb0a7-111">Button1에 대한 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기에 다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-111">In the <xref:System.Windows.Forms.Control.Click> event handler for Button1, add the following code:</span></span>
+3. <span data-ttu-id="16690-111">Button1에 대한 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기에 다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-111">In the <xref:System.Windows.Forms.Control.Click> event handler for Button1, add the following code:</span></span>
 
      [!code-vb[VbVbcnMyApplicationLogFiltering#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyApplicationLogFiltering/VB/Form1.vb#1)]
 
-4. <span data-ttu-id="cb0a7-112">디버거에서 애플리케이션을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-112">Run the application in the debugger.</span></span>
+4. <span data-ttu-id="16690-112">디버거에서 애플리케이션을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-112">Run the application in the debugger.</span></span>
 
-5. <span data-ttu-id="cb0a7-113">**Button1**을 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-113">Press **Button1**.</span></span>
+5. <span data-ttu-id="16690-113">**Button1**을 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="16690-113">Press **Button1**.</span></span>
 
-     <span data-ttu-id="cb0a7-114">애플리케이션이 다음 정보를 애플리케이션의 디버그 출력 및 로그 파일에 기록합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-114">The application writes the following information to the application's debug output and log file.</span></span>
+     <span data-ttu-id="16690-114">애플리케이션이 다음 정보를 애플리케이션의 디버그 출력 및 로그 파일에 기록합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-114">The application writes the following information to the application's debug output and log file.</span></span>
 
      `DefaultSource Information: 0 : In Button1_Click`
 
      `DefaultSource Error: 2 : Error in the application.`
 
-6. <span data-ttu-id="cb0a7-115">애플리케이션을 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-115">Close the application.</span></span>
+6. <span data-ttu-id="16690-115">애플리케이션을 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="16690-115">Close the application.</span></span>
 
-     <span data-ttu-id="cb0a7-116">애플리케이션의 디버그 출력 창을 보는 방법에 대한 자세한 내용은 [출력 창](/visualstudio/ide/reference/output-window)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-116">For information on how to view the application's debug output window, see [Output Window](/visualstudio/ide/reference/output-window).</span></span> <span data-ttu-id="cb0a7-117">애플리케이션의 로그 파일 위치에 대한 정보는 [연습: My.Application.Log가 정보를 기록하는 위치 확인](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-117">For information on the location of the application's log file, see [Walkthrough: Determining Where My.Application.Log Writes Information](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).</span></span>
+     <span data-ttu-id="16690-116">애플리케이션의 디버그 출력 창을 보는 방법에 대한 자세한 내용은 [출력 창](/visualstudio/ide/reference/output-window)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="16690-116">For information on how to view the application's debug output window, see [Output Window](/visualstudio/ide/reference/output-window).</span></span> <span data-ttu-id="16690-117">애플리케이션 로그 파일의 위치에 대한 자세한 내용은 [연습: My.Application.Log가 정보를 기록하는 위치 확인](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="16690-117">For information on the location of the application's log file, see [Walkthrough: Determining Where My.Application.Log Writes Information](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="cb0a7-118">기본적으로 애플리케이션을 닫으면 애플리케이션이 로그 파일 출력을 플러시합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-118">By default, the application flushes the log-file output when the application closes.</span></span>
+    > <span data-ttu-id="16690-118">기본적으로 애플리케이션을 닫으면 애플리케이션이 로그 파일 출력을 플러시합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-118">By default, the application flushes the log-file output when the application closes.</span></span>
 
-     <span data-ttu-id="cb0a7-119">위의 예제에서 <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> 메서드에 대한 두 번째 호출 및 <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> 메서드에 대한 호출은 로그 출력을 생성하지만, `WriteEntry` 메서드에 대한 첫 번째 및 마지막 호출은 로그 출력을 생성하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-119">In the example above, the second call to the <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> method and the call to the <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> method produces log output, while the first and last calls to the `WriteEntry` method do not.</span></span> <span data-ttu-id="cb0a7-120">`WriteEntry` 및 `WriteException`의 심각도 수준은 "정보" 및 "오류"이므로, 둘 다 `My.Application.Log` 개체의 기본 로그 필터링에서 허용됩니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-120">This is because the severity levels of `WriteEntry` and `WriteException` are "Information" and "Error", both of which are allowed by the `My.Application.Log` object's default log filtering.</span></span> <span data-ttu-id="cb0a7-121">그러나 "시작" 및 "중지" 심각도 수준의 이벤트는 로그 출력 생성이 금지됩니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-121">However, events with "Start" and "Stop" severity levels are prevented from producing log output.</span></span>
+     <span data-ttu-id="16690-119">위의 예제에서 <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> 메서드에 대한 두 번째 호출 및 <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> 메서드에 대한 호출은 로그 출력을 생성하지만, `WriteEntry` 메서드에 대한 첫 번째 및 마지막 호출은 로그 출력을 생성하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="16690-119">In the example above, the second call to the <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> method and the call to the <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> method produces log output, while the first and last calls to the `WriteEntry` method do not.</span></span> <span data-ttu-id="16690-120">`WriteEntry` 및 `WriteException`의 심각도 수준은 "정보" 및 "오류"이므로, 둘 다 `My.Application.Log` 개체의 기본 로그 필터링에서 허용됩니다.</span><span class="sxs-lookup"><span data-stu-id="16690-120">This is because the severity levels of `WriteEntry` and `WriteException` are "Information" and "Error", both of which are allowed by the `My.Application.Log` object's default log filtering.</span></span> <span data-ttu-id="16690-121">그러나 "시작" 및 "중지" 심각도 수준의 이벤트는 로그 출력 생성이 금지됩니다.</span><span class="sxs-lookup"><span data-stu-id="16690-121">However, events with "Start" and "Stop" severity levels are prevented from producing log output.</span></span>
 
-## <a name="filtering-for-all-myapplicationlog-listeners"></a><span data-ttu-id="cb0a7-122">모든 My.Application.Log 수신기에 대한 필터링</span><span class="sxs-lookup"><span data-stu-id="cb0a7-122">Filtering for All My.Application.Log Listeners</span></span>
+## <a name="filtering-for-all-myapplicationlog-listeners"></a><span data-ttu-id="16690-122">모든 My.Application.Log 수신기에 대한 필터링</span><span class="sxs-lookup"><span data-stu-id="16690-122">Filtering for All My.Application.Log Listeners</span></span>
 
-<span data-ttu-id="cb0a7-123">`My.Application.Log` 개체는 `DefaultSwitch`라고 명명된 <xref:System.Diagnostics.SourceSwitch>를 사용하여 `WriteEntry` 및 `WriteException` 메서드에서 로그 수신기로 전달할 메시지를 제어합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-123">The `My.Application.Log` object uses a <xref:System.Diagnostics.SourceSwitch> named `DefaultSwitch` to control which messages it passes from the `WriteEntry` and `WriteException` methods to the log listeners.</span></span> <span data-ttu-id="cb0a7-124">해당 값을 <xref:System.Diagnostics.SourceLevels> 열거형 값 중 하나로 설정하여 애플리케이션의 구성 파일에서 `DefaultSwitch`를 구성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-124">You can configure `DefaultSwitch` in the application's configuration file by setting its value to one of the <xref:System.Diagnostics.SourceLevels> enumeration values.</span></span> <span data-ttu-id="cb0a7-125">기본적으로 값은 "정보"입니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-125">By default, its value is "Information".</span></span>
+<span data-ttu-id="16690-123">`My.Application.Log` 개체는 <xref:System.Diagnostics.SourceSwitch>라고 명명된 `DefaultSwitch`를 사용하여 `WriteEntry` 및 `WriteException` 메서드에서 로그 수신기로 전달할 메시지를 제어합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-123">The `My.Application.Log` object uses a <xref:System.Diagnostics.SourceSwitch> named `DefaultSwitch` to control which messages it passes from the `WriteEntry` and `WriteException` methods to the log listeners.</span></span> <span data-ttu-id="16690-124">해당 값을 `DefaultSwitch` 열거형 값 중 하나로 설정하여 애플리케이션의 구성 파일에서 <xref:System.Diagnostics.SourceLevels>를 구성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="16690-124">You can configure `DefaultSwitch` in the application's configuration file by setting its value to one of the <xref:System.Diagnostics.SourceLevels> enumeration values.</span></span> <span data-ttu-id="16690-125">기본적으로 값은 "정보"입니다.</span><span class="sxs-lookup"><span data-stu-id="16690-125">By default, its value is "Information".</span></span>
 
-<span data-ttu-id="cb0a7-126">다음 표는 특정 `DefaultSwitch` 설정이 지정된 경우 로그가 메시지를 수신기에 기록하는 데 필요한 심각도 수준을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-126">This table shows the severity level required for Log to write a message to the listeners, given a particular `DefaultSwitch` setting.</span></span>
+<span data-ttu-id="16690-126">다음 표는 특정 `DefaultSwitch` 설정이 지정된 경우 로그가 메시지를 수신기에 기록하는 데 필요한 심각도 수준을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="16690-126">This table shows the severity level required for Log to write a message to the listeners, given a particular `DefaultSwitch` setting.</span></span>
 
-|<span data-ttu-id="cb0a7-127">DefaultSwitch 값</span><span class="sxs-lookup"><span data-stu-id="cb0a7-127">DefaultSwitch Value</span></span>|<span data-ttu-id="cb0a7-128">출력에 필요한 메시지 심각도</span><span class="sxs-lookup"><span data-stu-id="cb0a7-128">Message severity required for output</span></span>|
+|<span data-ttu-id="16690-127">DefaultSwitch 값</span><span class="sxs-lookup"><span data-stu-id="16690-127">DefaultSwitch Value</span></span>|<span data-ttu-id="16690-128">출력에 필요한 메시지 심각도</span><span class="sxs-lookup"><span data-stu-id="16690-128">Message severity required for output</span></span>|
 |---|---|
 |`Critical`|`Critical`|
-|`Error`|<span data-ttu-id="cb0a7-129">`Critical` 또는 `Error`</span><span class="sxs-lookup"><span data-stu-id="cb0a7-129">`Critical` or `Error`</span></span>|
-|`Warning`|<span data-ttu-id="cb0a7-130">`Critical`, `Error`또는 `Warning`</span><span class="sxs-lookup"><span data-stu-id="cb0a7-130">`Critical`, `Error`, or `Warning`</span></span>|
-|`Information`|<span data-ttu-id="cb0a7-131">`Critical`, `Error`, `Warning` 또는 `Information`</span><span class="sxs-lookup"><span data-stu-id="cb0a7-131">`Critical`, `Error`, `Warning`, or `Information`</span></span>|
-|`Verbose`|<span data-ttu-id="cb0a7-132">`Critical`, `Error`, `Warning`, `Information` 또는 `Verbose`</span><span class="sxs-lookup"><span data-stu-id="cb0a7-132">`Critical`, `Error`, `Warning`, `Information`, or `Verbose`</span></span>|
-|`ActivityTracing`|<span data-ttu-id="cb0a7-133">`Start`, `Stop`, `Suspend`, `Resume` 또는 `Transfer`</span><span class="sxs-lookup"><span data-stu-id="cb0a7-133">`Start`, `Stop`, `Suspend`, `Resume`, or `Transfer`</span></span>|
-|`All`|<span data-ttu-id="cb0a7-134">모든 메시지를 허용합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-134">All messages are allowed.</span></span>|
-|`Off`|<span data-ttu-id="cb0a7-135">모든 메시지를 차단합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-135">All messages are blocked.</span></span>|
+|`Error`|<span data-ttu-id="16690-129">`Critical` 또는 `Error`</span><span class="sxs-lookup"><span data-stu-id="16690-129">`Critical` or `Error`</span></span>|
+|`Warning`|<span data-ttu-id="16690-130">`Critical`, `Error` 또는 `Warning`</span><span class="sxs-lookup"><span data-stu-id="16690-130">`Critical`, `Error`, or `Warning`</span></span>|
+|`Information`|<span data-ttu-id="16690-131">`Critical`, `Error`, `Warning` 또는 `Information`</span><span class="sxs-lookup"><span data-stu-id="16690-131">`Critical`, `Error`, `Warning`, or `Information`</span></span>|
+|`Verbose`|<span data-ttu-id="16690-132">`Critical`, `Error`, `Warning`, `Information` 또는 `Verbose`</span><span class="sxs-lookup"><span data-stu-id="16690-132">`Critical`, `Error`, `Warning`, `Information`, or `Verbose`</span></span>|
+|`ActivityTracing`|<span data-ttu-id="16690-133">`Start`, `Stop`, `Suspend`, `Resume` 또는 `Transfer`</span><span class="sxs-lookup"><span data-stu-id="16690-133">`Start`, `Stop`, `Suspend`, `Resume`, or `Transfer`</span></span>|
+|`All`|<span data-ttu-id="16690-134">모든 메시지를 허용합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-134">All messages are allowed.</span></span>|
+|`Off`|<span data-ttu-id="16690-135">모든 메시지를 차단합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-135">All messages are blocked.</span></span>|
 
 > [!NOTE]
-> <span data-ttu-id="cb0a7-136">`WriteEntry` 및 `WriteException` 메서드는 각각 심각도 수준을 지정하지 않는 오버로드를 가지고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-136">The `WriteEntry` and `WriteException` methods each have an overload that does not specify a severity level.</span></span> <span data-ttu-id="cb0a7-137">`WriteEntry` 오버로드에 대한 암시적 심각도 수준은 "정보"이며, `WriteException` 오버로드에 대한 암시적 심각도 수준은 "오류"입니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-137">The implicit severity level for the `WriteEntry` overload is "Information", and the implicit severity level for the `WriteException` overload is "Error".</span></span>
+> <span data-ttu-id="16690-136">`WriteEntry` 및 `WriteException` 메서드는 각각 심각도 수준을 지정하지 않는 오버로드를 가지고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="16690-136">The `WriteEntry` and `WriteException` methods each have an overload that does not specify a severity level.</span></span> <span data-ttu-id="16690-137">`WriteEntry` 오버로드에 대한 암시적 심각도 수준은 "정보"이며, `WriteException` 오버로드에 대한 암시적 심각도 수준은 "오류"입니다.</span><span class="sxs-lookup"><span data-stu-id="16690-137">The implicit severity level for the `WriteEntry` overload is "Information", and the implicit severity level for the `WriteException` overload is "Error".</span></span>
 
-<span data-ttu-id="cb0a7-138">다음 표는 이전 예제에 나와 있는 로그 출력을 설명합니다. 기본 `DefaultSwitch` 설정이 "정보"인 경우 `WriteEntry` 메서드에 대한 두 번째 호출 및 `WriteException` 메서드에 대한 호출만이 로그 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-138">This table explains the log output shown in the previous example: with the default `DefaultSwitch` setting of "Information", only the second call to the `WriteEntry` method and the call to the `WriteException` method produce log output.</span></span>
+<span data-ttu-id="16690-138">다음 표는 이전 예제에 나와 있는 로그 출력을 설명합니다. 기본 `DefaultSwitch` 설정이 "정보"인 경우 `WriteEntry` 메서드에 대한 두 번째 호출 및 `WriteException` 메서드에 대한 호출만이 로그 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-138">This table explains the log output shown in the previous example: with the default `DefaultSwitch` setting of "Information", only the second call to the `WriteEntry` method and the call to the `WriteException` method produce log output.</span></span>
 
-#### <a name="to-log-only-activity-tracing-events"></a><span data-ttu-id="cb0a7-139">작업 추적 이벤트만 기록하려면</span><span class="sxs-lookup"><span data-stu-id="cb0a7-139">To log only activity tracing events</span></span>
+#### <a name="to-log-only-activity-tracing-events"></a><span data-ttu-id="16690-139">작업 추적 이벤트만 기록하려면</span><span class="sxs-lookup"><span data-stu-id="16690-139">To log only activity tracing events</span></span>
 
-1. <span data-ttu-id="cb0a7-140">**솔루션 탐색기**에서 app.config를 마우스 오른쪽 단추로 클릭하고 **열기**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-140">Right-click app.config in the **Solution Explorer** and select **Open**.</span></span>
+1. <span data-ttu-id="16690-140">**솔루션 탐색기**에서 app.config를 마우스 오른쪽 단추로 클릭하고 **열기**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-140">Right-click app.config in the **Solution Explorer** and select **Open**.</span></span>
 
-     <span data-ttu-id="cb0a7-141">또는</span><span class="sxs-lookup"><span data-stu-id="cb0a7-141">-or-</span></span>
+     <span data-ttu-id="16690-141">또는</span><span class="sxs-lookup"><span data-stu-id="16690-141">-or-</span></span>
 
-     <span data-ttu-id="cb0a7-142">app.config 파일이 없는 경우</span><span class="sxs-lookup"><span data-stu-id="cb0a7-142">If there is no app.config file:</span></span>
+     <span data-ttu-id="16690-142">app.config 파일이 없는 경우</span><span class="sxs-lookup"><span data-stu-id="16690-142">If there is no app.config file:</span></span>
 
-    1. <span data-ttu-id="cb0a7-143">**프로젝트** 메뉴에서 **새 항목 추가**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-143">On the **Project** menu, choose **Add New Item**.</span></span>
+    1. <span data-ttu-id="16690-143">**프로젝트** 메뉴에서 **새 항목 추가**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-143">On the **Project** menu, choose **Add New Item**.</span></span>
 
-    2. <span data-ttu-id="cb0a7-144">**새 항목 추가** 대화 상자에서 **애플리케이션 구성 파일**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-144">From the **Add New Item** dialog box, choose **Application Configuration File**.</span></span>
+    2. <span data-ttu-id="16690-144">**새 항목 추가** 대화 상자에서 **애플리케이션 구성 파일**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-144">From the **Add New Item** dialog box, choose **Application Configuration File**.</span></span>
 
-    3. <span data-ttu-id="cb0a7-145">**추가**를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-145">Click **Add**.</span></span>
+    3. <span data-ttu-id="16690-145">**추가**를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-145">Click **Add**.</span></span>
 
-2. <span data-ttu-id="cb0a7-146">최상위 `<configuration>` 섹션의 `<system.diagnostics>` 섹션에 있는 `<switches>` 섹션으로 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-146">Locate the `<switches>` section, which is in the `<system.diagnostics>` section, which is in the top-level `<configuration>` section.</span></span>
+2. <span data-ttu-id="16690-146">최상위 `<switches>` 섹션의 `<system.diagnostics>` 섹션에 있는 `<configuration>` 섹션으로 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-146">Locate the `<switches>` section, which is in the `<system.diagnostics>` section, which is in the top-level `<configuration>` section.</span></span>
 
-3. <span data-ttu-id="cb0a7-147">스위치 컬렉션에 `DefaultSwitch`를 추가하는 요소를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-147">Find the element that adds `DefaultSwitch` to the collection of switches.</span></span> <span data-ttu-id="cb0a7-148">이 요소는 다음과 유사합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-148">It should look similar to this element:</span></span>
+3. <span data-ttu-id="16690-147">스위치 컬렉션에 `DefaultSwitch`를 추가하는 요소를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="16690-147">Find the element that adds `DefaultSwitch` to the collection of switches.</span></span> <span data-ttu-id="16690-148">이 요소는 다음과 유사합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-148">It should look similar to this element:</span></span>
 
      `<add name="DefaultSwitch" value="Information" />`
 
-4. <span data-ttu-id="cb0a7-149">`value` 특성의 값을 "ActivityTracing"으로 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-149">Change the value of the `value` attribute to "ActivityTracing".</span></span>
+4. <span data-ttu-id="16690-149">`value` 특성의 값을 "ActivityTracing"으로 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-149">Change the value of the `value` attribute to "ActivityTracing".</span></span>
 
-5. <span data-ttu-id="cb0a7-150">app.config 파일의 내용은 다음 XML과 비슷합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-150">The content of the app.config file should be similar to the following XML:</span></span>
+5. <span data-ttu-id="16690-150">app.config 파일의 내용은 다음 XML과 비슷합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-150">The content of the app.config file should be similar to the following XML:</span></span>
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -123,50 +123,50 @@ ms.locfileid: "74353596"
     </configuration>
     ```
 
-6. <span data-ttu-id="cb0a7-151">디버거에서 애플리케이션을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-151">Run the application in the debugger.</span></span>
+6. <span data-ttu-id="16690-151">디버거에서 애플리케이션을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-151">Run the application in the debugger.</span></span>
 
-7. <span data-ttu-id="cb0a7-152">**Button1**을 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-152">Press **Button1**.</span></span>
+7. <span data-ttu-id="16690-152">**Button1**을 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="16690-152">Press **Button1**.</span></span>
 
-     <span data-ttu-id="cb0a7-153">애플리케이션이 다음 정보를 애플리케이션의 디버그 출력 및 로그 파일에 기록합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-153">The application writes the following information to the application's debug output and log file:</span></span>
+     <span data-ttu-id="16690-153">애플리케이션이 다음 정보를 애플리케이션의 디버그 출력 및 로그 파일에 기록합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-153">The application writes the following information to the application's debug output and log file:</span></span>
 
      `DefaultSource Start: 4 : Entering Button1_Click`
 
      `DefaultSource Stop: 5 : Leaving Button1_Click`
 
-8. <span data-ttu-id="cb0a7-154">애플리케이션을 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-154">Close the application.</span></span>
+8. <span data-ttu-id="16690-154">애플리케이션을 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="16690-154">Close the application.</span></span>
 
-9. <span data-ttu-id="cb0a7-155">`value` 특성의 값을 다시 "정보"로 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-155">Change the value of the `value` attribute back to "Information".</span></span>
+9. <span data-ttu-id="16690-155">`value` 특성의 값을 다시 "정보"로 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-155">Change the value of the `value` attribute back to "Information".</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="cb0a7-156">`DefaultSwitch` 스위치 설정은 `My.Application.Log`만 제어합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-156">The `DefaultSwitch` switch setting controls only `My.Application.Log`.</span></span> <span data-ttu-id="cb0a7-157">.NET Framework <xref:System.Diagnostics.Trace?displayProperty=nameWithType> 및 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 클래스 동작은 변경되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-157">It does not change how the .NET Framework <xref:System.Diagnostics.Trace?displayProperty=nameWithType> and <xref:System.Diagnostics.Debug?displayProperty=nameWithType> classes behave.</span></span>
+    > <span data-ttu-id="16690-156">`DefaultSwitch` 스위치 설정은 `My.Application.Log`만 제어합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-156">The `DefaultSwitch` switch setting controls only `My.Application.Log`.</span></span> <span data-ttu-id="16690-157">.NET Framework <xref:System.Diagnostics.Trace?displayProperty=nameWithType> 및 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 클래스 동작은 변경되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="16690-157">It does not change how the .NET Framework <xref:System.Diagnostics.Trace?displayProperty=nameWithType> and <xref:System.Diagnostics.Debug?displayProperty=nameWithType> classes behave.</span></span>
 
-## <a name="individual-filtering-for-myapplicationlog-listeners"></a><span data-ttu-id="cb0a7-158">My.Application.Log 수신기에 대한 개별 필터링</span><span class="sxs-lookup"><span data-stu-id="cb0a7-158">Individual Filtering For My.Application.Log Listeners</span></span>
+## <a name="individual-filtering-for-myapplicationlog-listeners"></a><span data-ttu-id="16690-158">My.Application.Log 수신기에 대한 개별 필터링</span><span class="sxs-lookup"><span data-stu-id="16690-158">Individual Filtering For My.Application.Log Listeners</span></span>
 
-<span data-ttu-id="cb0a7-159">이전 예제에서는 모든 `My.Application.Log` 출력에 대한 필터링을 변경하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-159">The previous example shows how to change the filtering for all `My.Application.Log` output.</span></span> <span data-ttu-id="cb0a7-160">이 예제에서는 개별 로그 수신기를 필터링하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-160">This example demonstrates how to filter an individual log listener.</span></span> <span data-ttu-id="cb0a7-161">기본적으로 애플리케이션에는 각각 애플리케이션의 디버그 출력 및 로그 파일에 기록하는 두 개의 수신기가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-161">By default, an application has two listeners that write to the application's debug output and the log file.</span></span>
+<span data-ttu-id="16690-159">이전 예제에서는 모든 `My.Application.Log` 출력에 대한 필터링을 변경하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="16690-159">The previous example shows how to change the filtering for all `My.Application.Log` output.</span></span> <span data-ttu-id="16690-160">이 예제에서는 개별 로그 수신기를 필터링하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="16690-160">This example demonstrates how to filter an individual log listener.</span></span> <span data-ttu-id="16690-161">기본적으로 애플리케이션에는 각각 애플리케이션의 디버그 출력 및 로그 파일에 기록하는 두 개의 수신기가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="16690-161">By default, an application has two listeners that write to the application's debug output and the log file.</span></span>
 
-<span data-ttu-id="cb0a7-162">구성 파일은 각 로그 수신기에 `My.Application.Log`용 스위치와 비슷한 필터를 허용하여 로그 수신기의 동작을 제어합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-162">The configuration file controls the behavior of the log listeners by allowing each one to have a filter, which is similar to a switch for `My.Application.Log`.</span></span> <span data-ttu-id="cb0a7-163">로그 수신기는 로그의 `DefaultSwitch` 및 로그 수신기의 필터에서 메시지의 심각도를 허용하는 경우에만 메시지를 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-163">A log listener will output a message only if the message's severity is allowed by both the log's `DefaultSwitch` and the log listener's filter.</span></span>
+<span data-ttu-id="16690-162">구성 파일은 각 로그 수신기에 `My.Application.Log`용 스위치와 비슷한 필터를 허용하여 로그 수신기의 동작을 제어합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-162">The configuration file controls the behavior of the log listeners by allowing each one to have a filter, which is similar to a switch for `My.Application.Log`.</span></span> <span data-ttu-id="16690-163">로그 수신기는 로그의 `DefaultSwitch` 및 로그 수신기의 필터에서 메시지의 심각도를 허용하는 경우에만 메시지를 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-163">A log listener will output a message only if the message's severity is allowed by both the log's `DefaultSwitch` and the log listener's filter.</span></span>
 
-<span data-ttu-id="cb0a7-164">이 예제는 새 디버그 수신기에 대한 필터링을 구성하고 `Log` 개체에 추가하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-164">This example demonstrates how to configure filtering for a new debug listener and add it to the `Log` object.</span></span> <span data-ttu-id="cb0a7-165">기본 디버그 수신기는 `Log` 개체에서 제거해야 하므로, 디버그 메시지가 새 디버그 수신기에서 오는 것이 분명합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-165">The default debug listener should be removed from the `Log` object, so it is clear that the debug messages come from the new debug listener.</span></span>
+<span data-ttu-id="16690-164">이 예제는 새 디버그 수신기에 대한 필터링을 구성하고 `Log` 개체에 추가하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="16690-164">This example demonstrates how to configure filtering for a new debug listener and add it to the `Log` object.</span></span> <span data-ttu-id="16690-165">기본 디버그 수신기는 `Log` 개체에서 제거해야 하므로, 디버그 메시지가 새 디버그 수신기에서 오는 것이 분명합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-165">The default debug listener should be removed from the `Log` object, so it is clear that the debug messages come from the new debug listener.</span></span>
 
-#### <a name="to-log-only-activity-tracing-events"></a><span data-ttu-id="cb0a7-166">동작 추적 이벤트만 기록하려면</span><span class="sxs-lookup"><span data-stu-id="cb0a7-166">To log only activity-tracing events</span></span>
+#### <a name="to-log-only-activity-tracing-events"></a><span data-ttu-id="16690-166">동작 추적 이벤트만 기록하려면</span><span class="sxs-lookup"><span data-stu-id="16690-166">To log only activity-tracing events</span></span>
 
-1. <span data-ttu-id="cb0a7-167">**솔루션 탐색기**에서 app.config를 마우스 오른쪽 단추로 클릭하고 **열기**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-167">Right-click app.config in the **Solution Explorer** and choose **Open**.</span></span>
+1. <span data-ttu-id="16690-167">**솔루션 탐색기**에서 app.config를 마우스 오른쪽 단추로 클릭하고 **열기**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-167">Right-click app.config in the **Solution Explorer** and choose **Open**.</span></span>
 
-     <span data-ttu-id="cb0a7-168">\-또는-</span><span class="sxs-lookup"><span data-stu-id="cb0a7-168">\-or-</span></span>
+     <span data-ttu-id="16690-168">\-또는-</span><span class="sxs-lookup"><span data-stu-id="16690-168">\-or-</span></span>
 
-     <span data-ttu-id="cb0a7-169">app.config 파일이 없는 경우</span><span class="sxs-lookup"><span data-stu-id="cb0a7-169">If there is no app.config file:</span></span>
+     <span data-ttu-id="16690-169">app.config 파일이 없는 경우</span><span class="sxs-lookup"><span data-stu-id="16690-169">If there is no app.config file:</span></span>
 
-    1. <span data-ttu-id="cb0a7-170">**프로젝트** 메뉴에서 **새 항목 추가**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-170">On the **Project** menu, choose **Add New Item**.</span></span>
+    1. <span data-ttu-id="16690-170">**프로젝트** 메뉴에서 **새 항목 추가**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-170">On the **Project** menu, choose **Add New Item**.</span></span>
 
-    2. <span data-ttu-id="cb0a7-171">**새 항목 추가** 대화 상자에서 **애플리케이션 구성 파일**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-171">From the **Add New Item** dialog box, choose **Application Configuration File**.</span></span>
+    2. <span data-ttu-id="16690-171">**새 항목 추가** 대화 상자에서 **애플리케이션 구성 파일**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-171">From the **Add New Item** dialog box, choose **Application Configuration File**.</span></span>
 
-    3. <span data-ttu-id="cb0a7-172">**추가**를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-172">Click **Add**.</span></span>
+    3. <span data-ttu-id="16690-172">**추가**를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-172">Click **Add**.</span></span>
 
-2. <span data-ttu-id="cb0a7-173">**솔루션 탐색기**에서 app.config를 마우스 오른쪽 단추로 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-173">Right-click app.config in **Solution Explorer**.</span></span> <span data-ttu-id="cb0a7-174">**열기**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-174">Choose **Open**.</span></span>
+2. <span data-ttu-id="16690-173">**솔루션 탐색기**에서 app.config를 마우스 오른쪽 단추로 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-173">Right-click app.config in **Solution Explorer**.</span></span> <span data-ttu-id="16690-174">**열기**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-174">Choose **Open**.</span></span>
 
-3. <span data-ttu-id="cb0a7-175">`<sources>` 섹션 아래에서 `name` 특성이 "DefaultSource"인 `<source>` 섹션에서 `<listeners>` 섹션을 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-175">Locate the `<listeners>` section, in the `<source>` section with the `name` attribute "DefaultSource", which is under the `<sources>` section.</span></span> <span data-ttu-id="cb0a7-176">`<sources>` 섹션은 최상위 `<configuration>` 섹션의 `<system.diagnostics>` 섹션에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-176">The `<sources>` section is under the `<system.diagnostics>` section, in the top-level `<configuration>` section.</span></span>
+3. <span data-ttu-id="16690-175">`<listeners>` 섹션 아래에서 `<source>` 특성이 "DefaultSource"인 `name` 섹션에서 `<sources>` 섹션을 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="16690-175">Locate the `<listeners>` section, in the `<source>` section with the `name` attribute "DefaultSource", which is under the `<sources>` section.</span></span> <span data-ttu-id="16690-176">`<sources>` 섹션은 최상위 `<system.diagnostics>` 섹션의 `<configuration>` 섹션에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="16690-176">The `<sources>` section is under the `<system.diagnostics>` section, in the top-level `<configuration>` section.</span></span>
 
-4. <span data-ttu-id="cb0a7-177">이 요소를 `<listeners>` 섹션에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-177">Add this element to the `<listeners>` section:</span></span>
+4. <span data-ttu-id="16690-177">이 요소를 `<listeners>` 섹션에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-177">Add this element to the `<listeners>` section:</span></span>
 
     ```xml
     <!-- Remove the default debug listener. -->
@@ -175,9 +175,9 @@ ms.locfileid: "74353596"
     <add name="NewDefault"/>
     ```
 
-5. <span data-ttu-id="cb0a7-178">최상위 `<sharedListeners>` 섹션의 `<system.diagnostics>` 섹션에서 `<configuration>` 섹션을 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-178">Locate the `<sharedListeners>` section, in the `<system.diagnostics>` section, in the top-level `<configuration>` section.</span></span>
+5. <span data-ttu-id="16690-178">최상위 `<sharedListeners>` 섹션의 `<system.diagnostics>` 섹션에서 `<configuration>` 섹션을 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="16690-178">Locate the `<sharedListeners>` section, in the `<system.diagnostics>` section, in the top-level `<configuration>` section.</span></span>
 
-6. <span data-ttu-id="cb0a7-179">다음 요소를 `<sharedListeners>` 섹션에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-179">Add this element to that `<sharedListeners>` section:</span></span>
+6. <span data-ttu-id="16690-179">다음 요소를 `<sharedListeners>` 섹션에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-179">Add this element to that `<sharedListeners>` section:</span></span>
 
     ```xml
     <add name="NewDefault"
@@ -190,9 +190,9 @@ ms.locfileid: "74353596"
     </add>
     ```
 
-     <span data-ttu-id="cb0a7-180"><xref:System.Diagnostics.EventTypeFilter> 필터는 <xref:System.Diagnostics.SourceLevels> 열거형 값 중 하나를 해당 `initializeData` 특성으로 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-180">The <xref:System.Diagnostics.EventTypeFilter> filter takes one of the <xref:System.Diagnostics.SourceLevels> enumeration values as its `initializeData` attribute.</span></span>
+     <span data-ttu-id="16690-180"><xref:System.Diagnostics.EventTypeFilter> 필터는 <xref:System.Diagnostics.SourceLevels> 열거형 값 중 하나를 해당 `initializeData` 특성으로 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-180">The <xref:System.Diagnostics.EventTypeFilter> filter takes one of the <xref:System.Diagnostics.SourceLevels> enumeration values as its `initializeData` attribute.</span></span>
 
-7. <span data-ttu-id="cb0a7-181">app.config 파일의 내용은 다음 XML과 비슷합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-181">The content of the app.config file should be similar to the following XML:</span></span>
+7. <span data-ttu-id="16690-181">app.config 파일의 내용은 다음 XML과 비슷합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-181">The content of the app.config file should be similar to the following XML:</span></span>
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -233,29 +233,29 @@ ms.locfileid: "74353596"
     </configuration>
     ```
 
-8. <span data-ttu-id="cb0a7-182">디버거에서 애플리케이션을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-182">Run the application in the debugger.</span></span>
+8. <span data-ttu-id="16690-182">디버거에서 애플리케이션을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-182">Run the application in the debugger.</span></span>
 
-9. <span data-ttu-id="cb0a7-183">**Button1**을 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-183">Press **Button1**.</span></span>
+9. <span data-ttu-id="16690-183">**Button1**을 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="16690-183">Press **Button1**.</span></span>
 
-     <span data-ttu-id="cb0a7-184">애플리케이션이 다음 정보를 애플리케이션의 로그 파일에 기록합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-184">The application writes the following information to the application's log file:</span></span>
+     <span data-ttu-id="16690-184">애플리케이션이 다음 정보를 애플리케이션의 로그 파일에 기록합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-184">The application writes the following information to the application's log file:</span></span>
 
      `Default Information: 0 : In Button1_Click`
 
      `Default Error: 2 : Error in the application.`
 
-     <span data-ttu-id="cb0a7-185">애플리케이션은 좀 더 제한적인 필터링 때문에 애플리케이션의 디버그 출력에 정보를 더 적게 기록합니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-185">The application writes less information to the application's debug output because of the more restrictive filtering.</span></span>
+     <span data-ttu-id="16690-185">애플리케이션은 좀 더 제한적인 필터링 때문에 애플리케이션의 디버그 출력에 정보를 더 적게 기록합니다.</span><span class="sxs-lookup"><span data-stu-id="16690-185">The application writes less information to the application's debug output because of the more restrictive filtering.</span></span>
 
      `Default Error   2   Error`
 
-10. <span data-ttu-id="cb0a7-186">애플리케이션을 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-186">Close the application.</span></span>
+10. <span data-ttu-id="16690-186">애플리케이션을 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="16690-186">Close the application.</span></span>
 
-<span data-ttu-id="cb0a7-187">배포 후 로그 설정을 변경하는 방법에 대한 자세한 내용은 [애플리케이션 로그 작업](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="cb0a7-187">For more information about changing log settings after deployment, see [Working with Application Logs](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).</span></span>
+<span data-ttu-id="16690-187">배포 후 로그 설정을 변경하는 방법에 대한 자세한 내용은 [애플리케이션 로그 작업](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="16690-187">For more information about changing log settings after deployment, see [Working with Application Logs](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="cb0a7-188">참고 항목</span><span class="sxs-lookup"><span data-stu-id="cb0a7-188">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="16690-188">참고 항목</span><span class="sxs-lookup"><span data-stu-id="16690-188">See also</span></span>
 
-- [<span data-ttu-id="cb0a7-189">연습: My.Application.Log가 정보를 기록하는 위치 확인</span><span class="sxs-lookup"><span data-stu-id="cb0a7-189">Walkthrough: Determining Where My.Application.Log Writes Information</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
-- [<span data-ttu-id="cb0a7-190">연습: My.Application.Log가 정보를 기록하는 위치 변경</span><span class="sxs-lookup"><span data-stu-id="cb0a7-190">Walkthrough: Changing Where My.Application.Log Writes Information</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
-- [<span data-ttu-id="cb0a7-191">연습: 사용자 지정 로그 수신기 만들기</span><span class="sxs-lookup"><span data-stu-id="cb0a7-191">Walkthrough: Creating Custom Log Listeners</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)
-- [<span data-ttu-id="cb0a7-192">방법: 로그 메시지 쓰기</span><span class="sxs-lookup"><span data-stu-id="cb0a7-192">How to: Write Log Messages</span></span>](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [<span data-ttu-id="cb0a7-193">추적 스위치</span><span class="sxs-lookup"><span data-stu-id="cb0a7-193">Trace Switches</span></span>](../../../../framework/debug-trace-profile/trace-switches.md)
-- [<span data-ttu-id="cb0a7-194">애플리케이션의 정보 기록</span><span class="sxs-lookup"><span data-stu-id="cb0a7-194">Logging Information from the Application</span></span>](../../../../visual-basic/developing-apps/programming/log-info/index.md)
+- [<span data-ttu-id="16690-189">연습: My.Application.Log가 정보를 기록하는 위치 확인</span><span class="sxs-lookup"><span data-stu-id="16690-189">Walkthrough: Determining Where My.Application.Log Writes Information</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
+- [<span data-ttu-id="16690-190">연습: My.Application.Log가 정보를 기록하는 위치 변경</span><span class="sxs-lookup"><span data-stu-id="16690-190">Walkthrough: Changing Where My.Application.Log Writes Information</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [<span data-ttu-id="16690-191">연습: 사용자 지정 로그 수신기 만들기</span><span class="sxs-lookup"><span data-stu-id="16690-191">Walkthrough: Creating Custom Log Listeners</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)
+- [<span data-ttu-id="16690-192">방법: 로그 메시지 쓰기</span><span class="sxs-lookup"><span data-stu-id="16690-192">How to: Write Log Messages</span></span>](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [<span data-ttu-id="16690-193">추적 스위치</span><span class="sxs-lookup"><span data-stu-id="16690-193">Trace Switches</span></span>](../../../../framework/debug-trace-profile/trace-switches.md)
+- [<span data-ttu-id="16690-194">애플리케이션의 정보 기록</span><span class="sxs-lookup"><span data-stu-id="16690-194">Logging Information from the Application</span></span>](../../../../visual-basic/developing-apps/programming/log-info/index.md)
