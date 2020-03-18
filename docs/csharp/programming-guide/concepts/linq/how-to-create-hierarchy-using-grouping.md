@@ -3,19 +3,19 @@ title: 그룹화를 사용하여 계층 구조를 만드는 방법(C#)
 ms.date: 07/20/2015
 ms.assetid: 0213d59e-5f76-438c-9cab-4bf11f7b971d
 ms.openlocfilehash: c5a96b02595446b2efa01868cc88377c3a5151c9
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141308"
 ---
-# <a name="how-to-create-hierarchy-using-grouping-c"></a><span data-ttu-id="8237a-102">그룹화를 사용하여 계층 구조를 만드는 방법(C#)</span><span class="sxs-lookup"><span data-stu-id="8237a-102">How to create hierarchy using grouping (C#)</span></span>
-<span data-ttu-id="8237a-103">이 예제에서는 데이터를 그룹화한 다음 그룹화에 따라 XML을 생성하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8237a-103">This example shows how to group data, and then generate XML based on the grouping.</span></span>  
+# <a name="how-to-create-hierarchy-using-grouping-c"></a><span data-ttu-id="f07ce-102">그룹화를 사용하여 계층 구조를 만드는 방법(C#)</span><span class="sxs-lookup"><span data-stu-id="f07ce-102">How to create hierarchy using grouping (C#)</span></span>
+<span data-ttu-id="f07ce-103">이 예제에서는 데이터를 그룹화한 다음 그룹화에 따라 XML을 생성하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f07ce-103">This example shows how to group data, and then generate XML based on the grouping.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8237a-104">예</span><span class="sxs-lookup"><span data-stu-id="8237a-104">Example</span></span>  
- <span data-ttu-id="8237a-105">이 예제에서는 먼저 범주를 기준으로 데이터를 그룹화한 다음 XML 계층 구조가 그룹화를 반영하는 XML 파일을 새로 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="8237a-105">This example first groups data by a category, then generates a new XML file in which the XML hierarchy reflects the grouping.</span></span>  
+## <a name="example"></a><span data-ttu-id="f07ce-104">예제</span><span class="sxs-lookup"><span data-stu-id="f07ce-104">Example</span></span>  
+ <span data-ttu-id="f07ce-105">이 예제에서는 먼저 범주를 기준으로 데이터를 그룹화한 다음 XML 계층 구조가 그룹화를 반영하는 XML 파일을 새로 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="f07ce-105">This example first groups data by a category, then generates a new XML file in which the XML hierarchy reflects the grouping.</span></span>  
   
- <span data-ttu-id="8237a-106">이 예제에서는 다음 XML 문서를 사용합니다. [샘플 XML 파일: 숫자 데이터(LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="8237a-106">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="f07ce-106">이 예제에서는 XML 문서 [샘플 XML 파일: 숫자 데이터(LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md)를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="f07ce-106">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XElement doc = XElement.Load("Data.xml");  
@@ -35,7 +35,7 @@ var newData =
 Console.WriteLine(newData);  
 ```  
   
- <span data-ttu-id="8237a-107">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="8237a-107">This example produces the following output:</span></span>  
+ <span data-ttu-id="f07ce-107">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="f07ce-107">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  

@@ -6,17 +6,17 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
 ms.openlocfilehash: e3cebe979b5c279ce8cb90db5510f8758c24c2b4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73977003"
 ---
-# <a name="save-and-load-trained-models"></a><span data-ttu-id="53d9d-103">학습된 모델 저장 및 로드</span><span class="sxs-lookup"><span data-stu-id="53d9d-103">Save and load trained models</span></span>
+# <a name="save-and-load-trained-models"></a><span data-ttu-id="8994c-103">학습된 모델 저장 및 로드</span><span class="sxs-lookup"><span data-stu-id="8994c-103">Save and load trained models</span></span>
 
-<span data-ttu-id="53d9d-104">애플리케이션에서 학습된 모델을 저장 및 로드하는 방법을 알아봅니다.</span><span class="sxs-lookup"><span data-stu-id="53d9d-104">Learn how to save and load trained models in your application.</span></span>
+<span data-ttu-id="8994c-104">애플리케이션에서 학습된 모델을 저장 및 로드하는 방법을 알아봅니다.</span><span class="sxs-lookup"><span data-stu-id="8994c-104">Learn how to save and load trained models in your application.</span></span>
 
-<span data-ttu-id="53d9d-105">모델 빌드 프로세스 전체에서 모델은 메모리에 상주하며 애플리케이션의 수명 주기 동안 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="53d9d-105">Throughout the model building process, a model lives in memory and is accessible throughout the application's lifecycle.</span></span> <span data-ttu-id="53d9d-106">그러나 애플리케이션이 실행을 멈추었을 때 모델이 로컬 또는 원격으로 저장되지 않은 경우 더 이상 액세스할 수 없게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="53d9d-106">However, once the application stops running, if the model is not saved somewhere locally or remotely, it's no longer accessible.</span></span> <span data-ttu-id="53d9d-107">일반적으로 모델은 유추 또는 재교육을 위해 다른 애플리케이션에서 학습한 뒤에 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="53d9d-107">Typically models are used at some point after training in other applications either for inference or re-training.</span></span> <span data-ttu-id="53d9d-108">따라서 모델을 저장하는 것이 중요합니다.</span><span class="sxs-lookup"><span data-stu-id="53d9d-108">Therefore, it's important to store the model.</span></span> <span data-ttu-id="53d9d-109">아래 설명한 것처럼 데이터 준비 및 모델 학습 파이프라인을 사용할 때는 이 문서의 후속 섹션에서 설명하는 단계를 통해 모델을 저장 및 로드합니다.</span><span class="sxs-lookup"><span data-stu-id="53d9d-109">Save and load models using the steps described in subsequent sections of this document when using data preparation and model training pipelines like the one detailed below.</span></span> <span data-ttu-id="53d9d-110">이 샘플은 선형 회귀 모델을 사용하지만 같은 프로세스가 다른 ML.NET 알고리즘에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="53d9d-110">Although this sample uses a linear regression model, the same process applies to other ML.NET algorithms.</span></span>
+<span data-ttu-id="8994c-105">모델 빌드 프로세스 전체에서 모델은 메모리에 상주하며 애플리케이션의 수명 주기 동안 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8994c-105">Throughout the model building process, a model lives in memory and is accessible throughout the application's lifecycle.</span></span> <span data-ttu-id="8994c-106">그러나 애플리케이션이 실행을 멈추었을 때 모델이 로컬 또는 원격으로 저장되지 않은 경우 더 이상 액세스할 수 없게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8994c-106">However, once the application stops running, if the model is not saved somewhere locally or remotely, it's no longer accessible.</span></span> <span data-ttu-id="8994c-107">일반적으로 모델은 유추 또는 재교육을 위해 다른 애플리케이션에서 학습한 뒤에 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="8994c-107">Typically models are used at some point after training in other applications either for inference or re-training.</span></span> <span data-ttu-id="8994c-108">따라서 모델을 저장하는 것이 중요합니다.</span><span class="sxs-lookup"><span data-stu-id="8994c-108">Therefore, it's important to store the model.</span></span> <span data-ttu-id="8994c-109">아래 설명한 것처럼 데이터 준비 및 모델 학습 파이프라인을 사용할 때는 이 문서의 후속 섹션에서 설명하는 단계를 통해 모델을 저장 및 로드합니다.</span><span class="sxs-lookup"><span data-stu-id="8994c-109">Save and load models using the steps described in subsequent sections of this document when using data preparation and model training pipelines like the one detailed below.</span></span> <span data-ttu-id="8994c-110">이 샘플은 선형 회귀 모델을 사용하지만 같은 프로세스가 다른 ML.NET 알고리즘에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="8994c-110">Although this sample uses a linear regression model, the same process applies to other ML.NET algorithms.</span></span>
 
 ```csharp
 HousingData[] housingData = new HousingData[]
@@ -60,27 +60,27 @@ ITransformer trainedModel = pipelineEstimator.Fit(data);
 mlContext.Model.Save(trainedModel, data.Schema, "model.zip");
 ```
 
-<span data-ttu-id="53d9d-111">대부분의 모델 및 데이터 준비 파이프라인은 같은 클래스 집합에서 상속되므로 이 구성 요소에 대한 저장 및 로드 메서드 서명은 같습니다.</span><span class="sxs-lookup"><span data-stu-id="53d9d-111">Because most models and data preparation pipelines inherit from the same set of classes, the save and load method signatures for these components is the same.</span></span> <span data-ttu-id="53d9d-112">사용 사례에 따라 데이터 준비 파이프라인 및 모델을 한 [`ITransformer`](xref:Microsoft.ML.ITransformer)를 출력하는 단일 [`EstimatorChain`](xref:Microsoft.ML.Data.TransformerChain%601)에 결합하거나 별도로 구분하여 각각에 대한 개별 [`ITransformer`](xref:Microsoft.ML.ITransformer)를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="53d9d-112">Depending on your use case, you can either combine the data preparation pipeline and model into a single [`EstimatorChain`](xref:Microsoft.ML.Data.TransformerChain%601) which would output a single [`ITransformer`](xref:Microsoft.ML.ITransformer) or separate them thus creating a separate [`ITransformer`](xref:Microsoft.ML.ITransformer) for each.</span></span>
+<span data-ttu-id="8994c-111">대부분의 모델 및 데이터 준비 파이프라인은 같은 클래스 집합에서 상속되므로 이 구성 요소에 대한 저장 및 로드 메서드 서명은 같습니다.</span><span class="sxs-lookup"><span data-stu-id="8994c-111">Because most models and data preparation pipelines inherit from the same set of classes, the save and load method signatures for these components is the same.</span></span> <span data-ttu-id="8994c-112">사용 사례에 따라 데이터 준비 파이프라인 및 모델을 한 [`EstimatorChain`](xref:Microsoft.ML.Data.TransformerChain%601)를 출력하는 단일 [`ITransformer`](xref:Microsoft.ML.ITransformer)에 결합하거나 별도로 구분하여 각각에 대한 개별 [`ITransformer`](xref:Microsoft.ML.ITransformer)를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="8994c-112">Depending on your use case, you can either combine the data preparation pipeline and model into a single [`EstimatorChain`](xref:Microsoft.ML.Data.TransformerChain%601) which would output a single [`ITransformer`](xref:Microsoft.ML.ITransformer) or separate them thus creating a separate [`ITransformer`](xref:Microsoft.ML.ITransformer) for each.</span></span>
 
-## <a name="save-a-model-locally"></a><span data-ttu-id="53d9d-113">로컬로 모델 저장</span><span class="sxs-lookup"><span data-stu-id="53d9d-113">Save a model locally</span></span>
+## <a name="save-a-model-locally"></a><span data-ttu-id="8994c-113">로컬로 모델 저장</span><span class="sxs-lookup"><span data-stu-id="8994c-113">Save a model locally</span></span>
 
-<span data-ttu-id="53d9d-114">모델을 저장할 때는 다음 두 가지가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="53d9d-114">When saving a model you need two things:</span></span>
+<span data-ttu-id="8994c-114">모델을 저장할 때는 다음 두 가지가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="8994c-114">When saving a model you need two things:</span></span>
 
-1. <span data-ttu-id="53d9d-115">모델의 [`ITransformer`](xref:Microsoft.ML.ITransformer)</span><span class="sxs-lookup"><span data-stu-id="53d9d-115">The [`ITransformer`](xref:Microsoft.ML.ITransformer) of the model.</span></span>
-2. <span data-ttu-id="53d9d-116">[`ITransformer`](xref:Microsoft.ML.ITransformer) 예상 입력의 [`DataViewSchema`](xref:Microsoft.ML.DataViewSchema)</span><span class="sxs-lookup"><span data-stu-id="53d9d-116">The [`DataViewSchema`](xref:Microsoft.ML.DataViewSchema) of the [`ITransformer`](xref:Microsoft.ML.ITransformer)'s expected input.</span></span>
+1. <span data-ttu-id="8994c-115">모델의 [`ITransformer`](xref:Microsoft.ML.ITransformer)</span><span class="sxs-lookup"><span data-stu-id="8994c-115">The [`ITransformer`](xref:Microsoft.ML.ITransformer) of the model.</span></span>
+2. <span data-ttu-id="8994c-116">[`DataViewSchema`](xref:Microsoft.ML.DataViewSchema) 예상 입력의 [`ITransformer`](xref:Microsoft.ML.ITransformer)</span><span class="sxs-lookup"><span data-stu-id="8994c-116">The [`DataViewSchema`](xref:Microsoft.ML.DataViewSchema) of the [`ITransformer`](xref:Microsoft.ML.ITransformer)'s expected input.</span></span>
 
-<span data-ttu-id="53d9d-117">모델을 학습한 후에는 [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) 메서드를 통해 학습된 모델을 입력 데이터의 `DataViewSchema`를 사용하여 `model.zip` 파일에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="53d9d-117">After training the model, use the [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) method to save the trained model to a file called `model.zip` using the `DataViewSchema` of the input data.</span></span>
+<span data-ttu-id="8994c-117">모델을 학습한 후에는 [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) 메서드를 통해 학습된 모델을 입력 데이터의 `model.zip`를 사용하여 `DataViewSchema` 파일에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="8994c-117">After training the model, use the [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) method to save the trained model to a file called `model.zip` using the `DataViewSchema` of the input data.</span></span>
 
 ```csharp
 // Save Trained Model
 mlContext.Model.Save(trainedModel, data.Schema, "model.zip");
 ```
 
-## <a name="load-a-model-stored-locally"></a><span data-ttu-id="53d9d-118">로컬로 저장된 모델 로드</span><span class="sxs-lookup"><span data-stu-id="53d9d-118">Load a model stored locally</span></span>
+## <a name="load-a-model-stored-locally"></a><span data-ttu-id="8994c-118">로컬로 저장된 모델 로드</span><span class="sxs-lookup"><span data-stu-id="8994c-118">Load a model stored locally</span></span>
 
-<span data-ttu-id="53d9d-119">로컬로 저장된 모델은 `ASP.NET Core` 및 `Serverless Web Applications`처럼 다른 프로세스나 애플리케이션에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="53d9d-119">Models stored locally can be used in other processes or applications like `ASP.NET Core` and `Serverless Web Applications`.</span></span> <span data-ttu-id="53d9d-120">자세한 정보는 [웹 API에서 ML.NET 사용](./serve-model-web-api-ml-net.md) 및 [ML.NET 서버리스 웹앱 배포](./serve-model-serverless-azure-functions-ml-net.md) 방법 문서를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="53d9d-120">See [Use ML.NET in Web API](./serve-model-web-api-ml-net.md) and [Deploy ML.NET Serverless Web App](./serve-model-serverless-azure-functions-ml-net.md) how-to articles to learn more.</span></span>
+<span data-ttu-id="8994c-119">로컬로 저장된 모델은 `ASP.NET Core` 및 `Serverless Web Applications`처럼 다른 프로세스나 애플리케이션에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8994c-119">Models stored locally can be used in other processes or applications like `ASP.NET Core` and `Serverless Web Applications`.</span></span> <span data-ttu-id="8994c-120">자세한 정보는 [웹 API에서 ML.NET 사용](./serve-model-web-api-ml-net.md) 및 [ML.NET 서버리스 웹앱 배포](./serve-model-serverless-azure-functions-ml-net.md) 방법 문서를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="8994c-120">See [Use ML.NET in Web API](./serve-model-web-api-ml-net.md) and [Deploy ML.NET Serverless Web App](./serve-model-serverless-azure-functions-ml-net.md) how-to articles to learn more.</span></span>
 
-<span data-ttu-id="53d9d-121">별도의 애플리케이션이나 프로세스에서는 파일 경로와 함께 [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) 메서드를 사용하여 학습된 모델을 애플리케이션에 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="53d9d-121">In a separate application or process, use the [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) method along with the file path to get the trained model into your application.</span></span>
+<span data-ttu-id="8994c-121">별도의 애플리케이션이나 프로세스에서는 파일 경로와 함께 [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) 메서드를 사용하여 학습된 모델을 애플리케이션에 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="8994c-121">In a separate application or process, use the [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) method along with the file path to get the trained model into your application.</span></span>
 
 ```csharp
 //Define DataViewSchema for data preparation pipeline and trained model
@@ -90,9 +90,9 @@ DataViewSchema modelSchema;
 ITransformer trainedModel = mlContext.Model.Load("model.zip", out modelSchema);
 ```
 
-## <a name="load-a-model-stored-remotely"></a><span data-ttu-id="53d9d-122">원격으로 저장된 모델 로드</span><span class="sxs-lookup"><span data-stu-id="53d9d-122">Load a model stored remotely</span></span>
+## <a name="load-a-model-stored-remotely"></a><span data-ttu-id="8994c-122">원격으로 저장된 모델 로드</span><span class="sxs-lookup"><span data-stu-id="8994c-122">Load a model stored remotely</span></span>
 
-<span data-ttu-id="53d9d-123">원격 위치에 저장된 데이터 준비 파이프라인과 모델을 애플리케이션에 로드하려면 [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) 메서드에서 파일 경로 대신 [`Stream`](xref:System.IO.Stream)을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="53d9d-123">To load data preparation pipelines and models stored in a remote location into your application, use a [`Stream`](xref:System.IO.Stream) instead of a file path in the [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) method.</span></span>
+<span data-ttu-id="8994c-123">원격 위치에 저장된 데이터 준비 파이프라인과 모델을 애플리케이션에 로드하려면 [`Stream`](xref:System.IO.Stream) 메서드에서 파일 경로 대신 [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*)을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="8994c-123">To load data preparation pipelines and models stored in a remote location into your application, use a [`Stream`](xref:System.IO.Stream) instead of a file path in the [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) method.</span></span>
 
 ```csharp
 // Create MLContext
@@ -111,14 +111,14 @@ using (HttpClient client = new HttpClient())
 }
 ```
 
-## <a name="working-with-separate-data-preparation-and-model-pipelines"></a><span data-ttu-id="53d9d-124">별도 데이터 준비 및 모델 파이프라인 작업</span><span class="sxs-lookup"><span data-stu-id="53d9d-124">Working with separate data preparation and model pipelines</span></span>
+## <a name="working-with-separate-data-preparation-and-model-pipelines"></a><span data-ttu-id="8994c-124">별도 데이터 준비 및 모델 파이프라인 작업</span><span class="sxs-lookup"><span data-stu-id="8994c-124">Working with separate data preparation and model pipelines</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="53d9d-125">별도 데이터 준비 및 모델 학습 파이프라인 작업은 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="53d9d-125">Working with separate data preparation and model training pipelines is optional.</span></span> <span data-ttu-id="53d9d-126">파이프라인을 분리하면 더 쉽게 학습된 모델 매개 변수를 검사할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="53d9d-126">Separation of pipelines makes it easier to inspect the learned model parameters.</span></span> <span data-ttu-id="53d9d-127">예측을 위해 데이터 준비 및 모델 학습 작업을 포함하는 단일 파이프라인을 더 쉽게 저장 및 로드합니다.</span><span class="sxs-lookup"><span data-stu-id="53d9d-127">For predictions, it's easier to save and load a single pipeline that includes the data preparation and model training operations.</span></span>
+> <span data-ttu-id="8994c-125">별도 데이터 준비 및 모델 학습 파이프라인 작업은 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="8994c-125">Working with separate data preparation and model training pipelines is optional.</span></span> <span data-ttu-id="8994c-126">파이프라인을 분리하면 더 쉽게 학습된 모델 매개 변수를 검사할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8994c-126">Separation of pipelines makes it easier to inspect the learned model parameters.</span></span> <span data-ttu-id="8994c-127">예측을 위해 데이터 준비 및 모델 학습 작업을 포함하는 단일 파이프라인을 더 쉽게 저장 및 로드합니다.</span><span class="sxs-lookup"><span data-stu-id="8994c-127">For predictions, it's easier to save and load a single pipeline that includes the data preparation and model training operations.</span></span>
 
-<span data-ttu-id="53d9d-128">별도 데이터 준비 파이프라인 및 모델을 작업할 경우 두 파이프라인을 동시에 저장 및 로드해야 한다는 점을 제외하고는 단일 파이프라인과 동일한 프로세스가 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="53d9d-128">When working with separate data preparation pipelines and models, the same process as single pipelines applies; except now both pipelines need to be saved and loaded simultaneously.</span></span>
+<span data-ttu-id="8994c-128">별도 데이터 준비 파이프라인 및 모델을 작업할 경우 두 파이프라인을 동시에 저장 및 로드해야 한다는 점을 제외하고는 단일 파이프라인과 동일한 프로세스가 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="8994c-128">When working with separate data preparation pipelines and models, the same process as single pipelines applies; except now both pipelines need to be saved and loaded simultaneously.</span></span>
 
-<span data-ttu-id="53d9d-129">별도 데이터 준비 및 모델 학습 파이프라인 제공:</span><span class="sxs-lookup"><span data-stu-id="53d9d-129">Given separate data preparation and model training pipelines:</span></span>
+<span data-ttu-id="8994c-129">별도 데이터 준비 및 모델 학습 파이프라인 제공:</span><span class="sxs-lookup"><span data-stu-id="8994c-129">Given separate data preparation and model training pipelines:</span></span>
 
 ```csharp
 // Define data preparation estimator
@@ -139,9 +139,9 @@ IDataView transformedData = dataPrepTransformer.Transform(data);
 RegressionPredictionTransformer<LinearRegressionModelParameters> trainedModel = sdcaEstimator.Fit(transformedData);
 ```
 
-### <a name="save-data-preparation-pipeline-and-trained-model"></a><span data-ttu-id="53d9d-130">데이터 준비 파이프라인 및 학습된 모델 저장</span><span class="sxs-lookup"><span data-stu-id="53d9d-130">Save data preparation pipeline and trained model</span></span>
+### <a name="save-data-preparation-pipeline-and-trained-model"></a><span data-ttu-id="8994c-130">데이터 준비 파이프라인 및 학습된 모델 저장</span><span class="sxs-lookup"><span data-stu-id="8994c-130">Save data preparation pipeline and trained model</span></span>
 
-<span data-ttu-id="53d9d-131">데이터 준비 파이프라인 및 학습된 모델을 저장하려면 다음 명령을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="53d9d-131">To save both the data preparation pipeline and trained model, use the following commands:</span></span>
+<span data-ttu-id="8994c-131">데이터 준비 파이프라인 및 학습된 모델을 저장하려면 다음 명령을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="8994c-131">To save both the data preparation pipeline and trained model, use the following commands:</span></span>
 
 ```csharp
 // Save Data Prep transformer
@@ -151,9 +151,9 @@ mlContext.Model.Save(dataPrepTransformer, data.Schema, "data_preparation_pipelin
 mlContext.Model.Save(trainedModel, transformedData.Schema, "model.zip");
 ```
 
-### <a name="load-data-preparation-pipeline-and-trained-model"></a><span data-ttu-id="53d9d-132">데이터 준비 파이프라인 및 학습된 모델 로드</span><span class="sxs-lookup"><span data-stu-id="53d9d-132">Load data preparation pipeline and trained model</span></span>
+### <a name="load-data-preparation-pipeline-and-trained-model"></a><span data-ttu-id="8994c-132">데이터 준비 파이프라인 및 학습된 모델 로드</span><span class="sxs-lookup"><span data-stu-id="8994c-132">Load data preparation pipeline and trained model</span></span>
 
-<span data-ttu-id="53d9d-133">별도 프로세스나 애플리케이션에서 다음과 같이 데이터 준비 파이프라인과 학습된 모델을 로드합니다.</span><span class="sxs-lookup"><span data-stu-id="53d9d-133">In a separate process or application, load the data preparation pipeline and trained model simultaneously as follows:</span></span>
+<span data-ttu-id="8994c-133">별도 프로세스나 애플리케이션에서 다음과 같이 데이터 준비 파이프라인과 학습된 모델을 로드합니다.</span><span class="sxs-lookup"><span data-stu-id="8994c-133">In a separate process or application, load the data preparation pipeline and trained model simultaneously as follows:</span></span>
 
 ```csharp
 // Create MLContext
