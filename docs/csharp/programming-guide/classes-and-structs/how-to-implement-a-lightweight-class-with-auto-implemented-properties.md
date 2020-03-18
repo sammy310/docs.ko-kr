@@ -5,12 +5,12 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: e9b2ab32fb79b80649305843abdd935b8c582bc0
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 6d121f6be768d41d22ea01d871662913b2daae2b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628217"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170275"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>자동으로 구현된 속성을 사용하여 간단한 클래스를 구현하는 방법(C# 프로그래밍 가이드)
 
@@ -39,7 +39,7 @@ class Contact
     }
 
     // Name isn't assignable here. This will generate a compile error.
-    //public void ChangeName(string newName) => Name = newName; 
+    //public void ChangeName(string newName) => Name = newName;
 
     // Address is assignable here.
     public void ChangeAddress(string newAddress) => Address = newAddress
@@ -145,7 +145,7 @@ public class Program
 
 컴파일러는 각 자동 구현 속성에 대해 지원 필드를 만듭니다. 이 필드는 소스 코드에서 직접 액세스할 수 없습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [속성](./properties.md)
 - [struct](../../language-reference/builtin-types/struct.md)

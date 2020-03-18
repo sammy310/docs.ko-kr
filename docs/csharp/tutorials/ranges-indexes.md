@@ -1,15 +1,15 @@
 ---
 title: 인덱스 및 범위를 사용하여 데이터 범위 탐색
 description: 이 고급 자습서에서는 인덱스 및 범위를 사용하여 순차적 데이터 세트를 검사하는 데이터 탐색을 살펴봅니다.
-ms.date: 09/20/2019
+ms.date: 03/11/2020
 ms.technology: csharp-fundamentals
 ms.custom: mvc
-ms.openlocfilehash: 3d4c022ff8d6e7f260632e34d6f28277014c85c8
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 82aad968e2efc437c82a7c8250bcd108b60b09e1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345625"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156496"
 ---
 # <a name="indices-and-ranges"></a>인덱스 및 범위
 
@@ -32,7 +32,7 @@ ms.locfileid: "75345625"
 - <xref:System.Range?displayProperty=nameWithType>는 시퀀스의 하위 범위를 나타냅니다.
 - 범위의 시작과 끝을 피연산자로 지정하는 범위 연산자 `..`입니다.
 
-인덱스에 대한 규칙을 사용하여 시작하겠습니다. `sequence`배열을 고려합니다. `0` 인덱스는 `sequence[0]`과 동일합니다. `^0` 인덱스는 `sequence[sequence.Length]`와 동일합니다. `sequence[^0]`은 `sequence[sequence.Length]`처럼 예외를 throw합니다. `n`이 어떤 숫자이든, 인덱스 `^n`은 `sequence[sequence.Length - n]`과 동일합니다.
+인덱스에 대한 규칙을 사용하여 시작하겠습니다. `sequence`배열을 고려합니다. `0` 인덱스는 `sequence[0]`과 동일합니다. `^0` 인덱스는 `sequence[sequence.Length]`와 동일합니다. `sequence[^0]` 식은 `sequence[sequence.Length]`처럼 예외를 throw합니다. `n`이 어떤 숫자이든, 인덱스 `^n`은 `sequence[sequence.Length - n]`과 동일합니다.
 
 ```csharp
 string[] words = new string[]
@@ -52,44 +52,46 @@ string[] words = new string[]
 
 다음과 같이 `^1` 인덱스를 사용하여 마지막 단어를 가져올 수 있습니다. 초기화 아래에 다음 코드를 추가합니다.
 
-[!code-csharp[LastIndex](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_LastIndex)]
+[!code-csharp[LastIndex](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_LastIndex)]
 
-한 범위는 어떤 범위의 *시작* 및 *끝*을 지정합니다. 여러 범위는 배타적입니다. 즉, *끝*이 범위에 포함되지 않습니다. `[0..sequence.Length]`가 전체 범위를 나타내는 것처럼 `[0..^0]` 범위는 전체 범위를 나타냅니다. 
+한 범위는 어떤 범위의 *시작* 및 *끝*을 지정합니다. 여러 범위는 배타적입니다. 즉, ‘끝’이 범위에 포함되지 않습니다.  `[0..sequence.Length]`가 전체 범위를 나타내는 것처럼 `[0..^0]` 범위는 전체 범위를 나타냅니다.
 
 다음 코드는 “quick”, “brown”, “fox”라는 단어를 포함하는 하위 범위를 만듭니다. 이 하위 범위에는 `words[1]`부터 `words[3]`까지 포함되며, `words[4]` 요소가 범위에 없습니다. 다음 코드를 같은 메서드에 추가합니다. 대화형 창의 맨 아래에 다음 코드를 복사하여 붙여넣습니다.
 
-[!code-csharp[Range](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_Range)]
+[!code-csharp[Range](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_Range)]
 
 다음 코드는 “lazy”와 “dog”를 포함하는 하위 범위를 만듭니다. 이 하위 범위에는 `words[^2]`과 `words[^1]`이 포함되며. 끝 인덱스 `words[^0]`는 포함되지 않습니다. 다음 코드도 추가합니다.
 
-[!code-csharp[LastRange](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_LastRange)]
+[!code-csharp[LastRange](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_LastRange)]
 
 다음 예제는 시작만, 끝만, 그리고 시작과 끝이 모두 열린 범위를 만듭니다.
 
-[!code-csharp[PartialRange](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_PartialRanges)]
+[!code-csharp[PartialRange](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_PartialRanges)]
 
 범위나 인덱스를 변수로 선언할 수도 있습니다. 그러면 이 변수를 `[` 및 `]` 문자 사이에 사용할 수 있습니다.
 
-[!code-csharp[IndexRangeTypes](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_RangeIndexTypes)]
+[!code-csharp[IndexRangeTypes](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_RangeIndexTypes)]
 
 다음 샘플에서는 이러한 선택에 대한 여러 이유를 보여 줍니다. `x`, `y` 및 `z`를 수정하여 다양한 조합을 시도해 봅니다. 실험할 때는 올바른 조합을 위해 `x`가 `y`보다 작고 `y`가 `z`보다 작은 값을 사용합니다. 새 메서드에 다음 코드를 추가합니다. 다양한 조합을 시도해 봅니다.
 
-[!code-csharp[SemanticsExamples](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_Semantics)]
+[!code-csharp[SemanticsExamples](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_Semantics)]
 
 ## <a name="type-support-for-indices-and-ranges"></a>인덱스 및 범위에 대한 형식 지원
 
 인덱스 및 범위는 시퀀스에서 단일 요소 또는 요소의 하위 범위에 액세스하기 위한 명확하고 간결한 구문을 제공합니다. 인덱스 식은 일반적으로 시퀀스의 요소 형식을 반환합니다. 범위 식은 일반적으로 소스 시퀀스와 동일한 시퀀스 형식을 반환합니다.
 
-형식이 <xref:System.Index> 또는 <xref:System.Range> 매개 변수를 사용하여 [인덱서](../programming-guide/indexers/index.md)를 제공하는 경우 각각 인덱스 또는 범위를 명시적으로 지원합니다. 형식이 단일 <xref:System.Range> 매개 변수를 사용하는 인덱서를 제공하는 경우 <xref:System.Span%601?displayProperty=nameWithType>와 같은 다른 시퀀스 형식을 반환 하도록 선택할 수 있습니다.
+<xref:System.Index> 또는 <xref:System.Range> 매개 변수를 사용하여 [인덱서](../programming-guide/indexers/index.md)를 제공하는 형식은 각각 인덱스 또는 범위를 명시적으로 지원합니다. 단일 <xref:System.Range> 매개 변수를 사용하는 인덱서는 다양한 시퀀스 형식(예: <xref:System.Span%601?displayProperty=nameWithType>)을 반환할 수 있습니다.
 
 이름이 `Length` 또는 `Count`이고 액세스 가능한 getter 및 반환 형식 `int`를 갖는 속성이 있는 경우 형식은 **countable**입니다. 인덱스 또는 범위를 명시적으로 지원하지 않는 countable 형식은 해당 형식에 대한 암시적 지원을 제공할 수 있습니다. 자세한 내용은 [기능 제한 참고](~/_csharplang/proposals/csharp-8.0/ranges.md)의 [암시적 인덱스 지원](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support) 및 [암시적 범위 지원](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support) 섹션을 참조하세요. 암시적 범위 지원을 사용하는 범위는 소스 시퀀스와 동일한 시퀀스 형식을 반환합니다.
 
-예를 들어, .NET 형식 <xref:System.Array>, <xref:System.String>, <xref:System.Span%601> 및 <xref:System.ReadOnlySpan%601>은 인덱스와 범위를 모두 지원합니다. <xref:System.Collections.Generic.List%601>는 인덱스는 지원하고 범위는 지원하지 않습니다.
+예를 들어, .NET 형식 <xref:System.String>, <xref:System.Span%601> 및 <xref:System.ReadOnlySpan%601>은 인덱스와 범위를 모두 지원합니다. <xref:System.Collections.Generic.List%601>는 인덱스는 지원하고 범위는 지원하지 않습니다.
+
+<xref:System.Array>에는 좀 더 미묘한 동작이 더 있습니다. 1차원 배열은 인덱스와 범위를 모두 지원합니다. 다차원 배열은 그렇지 않습니다. 다차원 배열에 대한 인덱서에는 단일 매개 변수가 아닌 여러 개의 매개 변수가 있습니다. 배열의 배열이라고도 하는 가변 배열은 범위와 인덱서를 모두 지원합니다. 다음 예에서는 가변 배열의 사각형 하위 섹션을 반복하는 방법을 보여 줍니다. 첫 행과 마지막 3개 행을 제외하고, 선택된 각 행에서 첫 열과 마지막 2개 열을 제외하고 중앙의 섹션을 반복합니다.
+
+[!code-csharp[JaggedArrays](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_JaggedArrays)]
 
 ## <a name="scenarios-for-indices-and-ranges"></a>인덱스 및 범위에 대한 시나리오
 
-전체 시퀀스의 하위 범위에 대한 특정 분석을 수행할 때 범위와 인덱스를 사용하게 됩니다. 새 구문에서는 어떤 하위 범위가 관련되었는지 더 명확히 이해할 수 있습니다. 로컬 함수 `MovingAverage`는 <xref:System.Range>를 인수로 사용합니다. 그러면 메서드가 최솟값, 최댓값, 평균을 계산할 때 이 범위만 열거합니다. 프로젝트에 다음 코드를 시도해 봅니다.
+더 큰 시퀀스의 하위 범위를 분석할 때 자주 범위와 인덱스를 사용하게 됩니다. 새 구문에서는 어떤 하위 범위가 관련되었는지 더 명확히 이해할 수 있습니다. 로컬 함수 `MovingAverage`는 <xref:System.Range>를 인수로 사용합니다. 그러면 메서드가 최솟값, 최댓값, 평균을 계산할 때 이 범위만 열거합니다. 프로젝트에 다음 코드를 시도해 봅니다.
 
-[!code-csharp[MovingAverages](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_MovingAverage)]
-
-완료된 코드는 [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/RangesIndexes) 리포지토리에서 다운로드할 수 있습니다.
+[!code-csharp[MovingAverages](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_MovingAverage)]

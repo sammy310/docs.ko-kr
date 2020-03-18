@@ -4,12 +4,12 @@ description: C# 및 .NET에서 버전 관리의 작동 방식 이해
 ms.date: 01/08/2017
 ms.technology: csharp-advanced-concepts
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 3fadbc1257ae758fc220685fa074a4fa68b20ba1
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 124cce51865f04a555bc121fb6ce18cc95591bdc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039663"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156469"
 ---
 # <a name="versioning-in-c"></a>C\#으로 버전 관리
 
@@ -35,7 +35,8 @@ SemVer에 대한 가장 기본적인 접근법은 3개 구성 요소 형식 `MAJ
 ### <a name="backwards-compatibility"></a>이전 버전과의 호환성
 
 라이브러리의 새 버전을 릴리스하면 이전 버전과의 호환성이 주요 관심사 중 하나가 될 것입니다.
-이전 버전에 종속된 코드가 다시 컴파일할 때 새 버전과 작동하는 경우, 라이브러리의 새 버전은 이전 버전과 소스가 호환됩니다. 이전 버전을 사용하는 애플리케이션이 다시 컴파일하지 않고도 새 버전과 작동하는 경우 라이브러리의 새 버전은 이진 호환됩니다.
+이전 버전에 종속된 코드가 다시 컴파일할 때 새 버전과 작동하는 경우, 라이브러리의 새 버전은 이전 버전과 소스가 호환됩니다.
+이전 버전을 사용하는 애플리케이션이 다시 컴파일하지 않고도 새 버전과 작동하는 경우 라이브러리의 새 버전은 이진 호환됩니다.
 
 라이브러리 이전 버전과의 호환성을 유지하고자 할 경우 다음 사항을 고려해야 합니다.
 
@@ -82,7 +83,7 @@ SemVer에 대한 가장 기본적인 접근법은 3개 구성 요소 형식 `MAJ
 
 다음 예제를 참조하세요.
 
-[!code-csharp[Sample usage of the 'new' modifier](~/samples/csharp/versioning/new/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'new' modifier](~/samples/snippets/csharp/versioning/new/Program.cs#sample)]
 
 **출력**
 
@@ -96,11 +97,11 @@ A derived method
 
 `new` 한정자를 지정하지 않으면 파생 클래스는 기본 클래스에서 충돌하는 멤버를 기본적으로 숨깁니다. 컴파일러 경고가 생성되지만 코드는 여전히 컴파일됩니다. 즉, 기존 클래스에 새 멤버를 추가하기만 하면 라이브러리의 새 버전이 소스와 이진 모두 여기에 종속된 코드와 호환됩니다.
 
-### <a name="override"></a>재정의
+### <a name="override"></a>override
 
 `override` 한정자를 사용하면 파생된 구현은 기본 클래스 멤버의 구현을 숨기는 대신 확장합니다. 기본 클래스 멤버에 `virtual` 한정자를 적용해야 합니다.
 
-[!code-csharp[Sample usage of the 'override' modifier](../../samples/csharp/versioning/override/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'override' modifier](../../samples/snippets/csharp/versioning/override/Program.cs#sample)]
 
 **출력**
 

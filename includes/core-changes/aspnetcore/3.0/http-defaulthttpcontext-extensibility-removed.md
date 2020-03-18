@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 1b4b0aba3ea24682ae972bf283ac387692c83781
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 9d138f79fcede4acac837f8d7793aa343ced737c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901739"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78290739"
 ---
 ### <a name="http-defaulthttpcontext-extensibility-removed"></a>HTTP: DefaultHttpContext 확장성이 제거됨
 
 ASP.NET Core 3.0 성능 향상의 일환으로 `DefaultHttpContext`의 확장성이 제거되었습니다. 클래스는 이제 `sealed`입니다. 자세한 내용은 [dotnet/aspnetcore#6504](https://github.com/dotnet/aspnetcore/pull/6504)를 참조하세요.
 
-단위 테스트에서 `Mock<DefaultHttpContext>`를 사용하는 경우, 대신 `Mock<HttpContext>`를 사용합니다.
+단위 테스트에 `Mock<DefaultHttpContext>`가 사용되는 경우에는 대신 `Mock<HttpContext>` 또는 `new DefaultHttpContext()`를 사용합니다.
 
 토론은 [dotnet/aspnetcore#6534](https://github.com/dotnet/aspnetcore/issues/6534)를 참조하세요.
 

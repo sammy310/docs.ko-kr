@@ -4,12 +4,12 @@ description: 라이브러리의 공용 API 화면만 포함하는 .NET에서 특
 author: MSDN-WhiteKnight
 ms.date: 09/12/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 3b85e51a015cca1e53ee2503c7bfa58c504fc718
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 938942caf81c54a8aa9207dbe87559438ffb252e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156467"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79141070"
 ---
 # <a name="reference-assemblies"></a>참조 어셈블리
 
@@ -29,7 +29,7 @@ ms.locfileid: "78156467"
 
 **참조 추가** 대화 상자를 사용하여 Visual Studio에서 .NET Framework 어셈블리에 대한 참조를 추가하는 경우 목록에서 어셈블리를 선택하면 Visual Studio는 프로젝트에서 선택한 대상 프레임워크 버전에 해당하는 참조 어셈블리를 자동으로 찾습니다. [참조](/visualstudio/msbuild/common-msbuild-project-items#reference) 프로젝트 항목을 사용하여 MSBuild 프로젝트에 참조를 직접 추가하는 경우에도 동일하게 적용됩니다. 전체 파일 경로가 아닌 어셈블리 이름만 지정하면 됩니다. `-reference` 컴파일러 옵션([C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) 및 [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md))을 사용하거나 Roslyn API의 <xref:Microsoft.CodeAnalysis.Compilation.AddReferences%2A?displayProperty=nameWithType> 메서드를 사용하여 명령줄에서 이러한 어셈블리에 대한 참조를 추가할 때 올바른 대상 플랫폼 버전에 대한 참조 어셈블리 파일을 수동으로 지정해야 합니다. .NET Framework 참조 어셈블리 파일은 *%ProgramFiles(x86)%\\Reference Assemblies\\Microsoft\\Framework\\.NETFramework* 디렉터리에 있습니다. .NET Core의 경우 `PreserveCompilationContext` 프로젝트 속성을 `true`로 설정하여 게시 작업이 대상 플랫폼의 참조 어셈블리를 출력 디렉터리의 *publish/refs* 하위 디렉터리로 복사하도록 할 수 있습니다. 그런 다음 이러한 참조 어셈블리 파일을 컴파일러에 전달할 수 있습니다. [Microsoft.Extensions.DependencyModel](https://www.nuget.org/packages/Microsoft.Extensions.DependencyModel/) 패키지에서 `DependencyContext`를 사용하면 해당 경로를 찾을 수 있습니다.
 
-여기에는 구현이 포함되어 있지 않으므로 참조 어셈블리를 로드하여 실행할 수 없습니다. 실행하려고 하면 <xref:System.BadImageFormatException?displayProperty=nameWithType>의 결과가 발생합니다. 그러나 콘텐츠를 검사해야 하는 경우 리플렉션 전용 컨텍스트(<xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> 메서드 사용)에 로드할 수 있습니다.
+여기에는 구현이 포함되어 있지 않으므로 참조 어셈블리를 로드하여 실행할 수 없습니다. 실행하려고 하면 <xref:System.BadImageFormatException?displayProperty=nameWithType>이 발생합니다. 참조 어셈블리의 내용을 검사하려면 .NET Framework(<xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> 메서드 사용)의 리플렉션 전용 컨텍스트나 .NET Core의 <xref:System.Reflection.MetadataLoadContext>에 로드하면 됩니다.
 
 ## <a name="generating-reference-assemblies"></a>참조 어셈블리 생성
 

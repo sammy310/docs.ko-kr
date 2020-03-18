@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 25c74317ce9033ef10735ee0087f275632b6bd17
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 05f0bd8566851678203a3f064b96bfff7dee18b6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715181"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398132"
 ---
 # <a name="ref-c-reference"></a>ref(C# 참조)
 
@@ -20,7 +20,7 @@ ms.locfileid: "75715181"
 
 - 메서드 시그니처 및 메서드 호출에서 인수를 메서드에 참조로 전달합니다. 자세한 내용은 [참조로 인수 전달](#passing-an-argument-by-reference)을 참조하세요.
 - 메서드 시그니처에서 값을 호출자에게 참조로 반환합니다. 자세한 내용은 [참조 반환 값](#reference-return-values)을 참조하세요.
-- 멤버 본문에서 참조 반환 값이 호출자가 수정하려는 참조로 로컬에 저장되거나 일반적으로 로컬 변수가 참조를 기준으로 다른 값에 액세스 함을 나타냅니다. 자세한 내용은 [ref 로컬](#ref-locals)을 참조하세요.
+- 멤버 본문에서 참조 반환 값이 호출자가 수정하려는 참조로 로컬에 저장되거나 일반적으로 지역 변수가 참조를 기준으로 다른 값에 액세스 함을 나타냅니다. 자세한 내용은 [ref 로컬](#ref-locals)을 참조하세요.
 - `ref struct` 또는 `readonly ref struct`을 선언하기 위한 `struct` 선언서. 자세한 내용은 [ref struct 형식](#ref-struct-types)을 참조하세요.
 
 ## <a name="passing-an-argument-by-reference"></a>참조로 인수 전달
@@ -41,7 +41,7 @@ ms.locfileid: "75715181"
 ```csharp
 class CS0663_Example
 {
-    // Compiler error CS0663: "Cannot define overloaded 
+    // Compiler error CS0663: "Cannot define overloaded
     // methods that differ only on ref and out".
     public void SampleMethod(out int i) { }
     public void SampleMethod(ref int i) { }
@@ -81,15 +81,15 @@ class CS0663_Example
 public ref decimal GetCurrentPrice()
 ```
 
-- 메서드의 `return` 문에서 반환된 `return` 토큰과 변수 간에. 예:
+- 메서드의 `return` 문에서 반환된 `return` 토큰과 변수 간에. 예를 들어:
 
 ```csharp
 return ref DecimalArray[0];
 ```
 
-호출자가 개체 상태를 수정하려면 참조 반환 값을 [참조 로컬](#ref-locals)로 명시적으로 정의된 변수에 저장해야 합니다.
+호출자가 개체 상태를 수정하려면 참조 반환 값을 [참조 지역](#ref-locals)으로 명시적으로 정의된 변수에 저장해야 합니다.
 
-호출된 메서드는 `ref readonly`로 반환 값을 선언하여 참조를 통해 값을 반환하고 호출 코드가 반환된 값을 수정할 수 없도록 합니다. 호출 메서드는 로컬 [ref readonly](#ref-readonly-locals) 변수에 값을 저장하여 반환된 값을 복사하지 않도록 할 수 있습니다.
+호출된 메서드는 `ref readonly`로 반환 값을 선언하여 참조를 통해 값을 반환하고 호출 코드가 반환된 값을 수정할 수 없도록 합니다. 호출 메서드는 지역 [ref readonly](#ref-readonly-locals) 변수에 값을 저장하여 반환된 값을 복사하지 않도록 할 수 있습니다.
 
 예를 들어 [ref 반환 및 ref 지역 예제](#a-ref-returns-and-ref-locals-example)를 참조하세요.
 
@@ -97,7 +97,7 @@ return ref DecimalArray[0];
 
 참조 지역 변수는 `return ref`을 사용하여 반환된 값을 참조하는 데 사용됩니다. 참조 지역 변수는 비참조 반환 값으로 초기화할 수 없습니다. 즉, 초기화의 오른쪽은 참조여야 합니다. 참조 로컬 값의 수정 내용은 메서드가 값을 참조로 반환하는 개체 상태에 반영됩니다.
 
-변수 선언 앞, 값을 참조로 반환하는 메서드 호출 직전에 `ref` 키워드를 사용하여 참조 로컬을 정의합니다.
+변수 선언 앞, 값을 참조로 반환하는 메서드 호출 직전에 `ref` 키워드를 사용하여 참조 지역을 정의합니다.
 
 예를 들어 다음 문은 `GetEstimatedValue` 메서드에서 반환되는 참조 로컬 값을 정의합니다.
 
@@ -115,9 +115,11 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
 
 C# 7.3부터 `foreach` 문의 반복 변수는 ref 지역 또는 ref readonly 지역 변수일 수 있습니다. 자세한 내용은 [foreach 문](foreach-in.md) 문서를 참조하세요.
 
+또한 C# 7.3부터 [ref 대입 연산자](../operators/assignment-operator.md#ref-assignment-operator)를 사용하여 ref 지역 또는 ref readonly 지역 변수를 다시 할당할 수 있습니다.
+
 ## <a name="ref-readonly-locals"></a>Ref readonly 로컬
 
-Ref readonly 로컬은 해당 시그니처에 `ref readonly`가 있고 `return ref`를 사용하는 메서드 또는 속성을 통해 반환된 값을 참조하는 데 사용됩니다. `ref readonly` 변수는 `ref` 지역 변수의 속성을 `readonly` 변수와 결합합니다. 이는 할당된 스토리지의 별칭이고 수정할 수 없습니다. 
+Ref readonly 로컬은 해당 시그니처에 `ref readonly`가 있고 `return ref`를 사용하는 메서드 또는 속성을 통해 반환된 값을 참조하는 데 사용됩니다. `ref readonly` 변수는 `ref` 지역 변수의 속성을 `readonly` 변수와 결합합니다. 이는 할당된 스토리지의 별칭이고 수정할 수 없습니다.
 
 ## <a name="a-ref-returns-and-ref-locals-example"></a>참조 반환 및 참조 로컬 예제
 
@@ -137,9 +139,9 @@ Ref readonly 로컬은 해당 시그니처에 `ref readonly`가 있고 `return r
 
 - `ref struct`를 boxing할 수 없습니다. `ref struct` 형식을 `object`, `dynamic` 형식 또는 인터페이스 유형의 변수에 할당할 수 없습니다.
 - `ref struct` 형식은 인터페이스를 구현할 수 없습니다.
-- `ref struct`를 클래스 또는 일반 구조체의 필드 멤버로 선언할 수 없습니다. 여기에는 컴파일러에서 생성된 지원 필드를 만드는 자동 구현 속성의 선언이 포함됩니다. 
-- 비동기 메서드에 `ref struct` 형식인 로컬 변수를 선언할 수 없습니다. <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> 또는 `Task`와 유사한 형식을 반환하는 동기 메서드에 선언할 수 있습니다.
-- 반복기에 `ref struct` 로컬 변수를 선언할 수 없습니다.
+- `ref struct`를 클래스 또는 일반 구조체의 필드 멤버로 선언할 수 없습니다. 여기에는 컴파일러에서 생성된 지원 필드를 만드는 자동 구현 속성의 선언이 포함됩니다.
+- 비동기 메서드에 `ref struct` 형식인 지역 변수를 선언할 수 없습니다. <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> 또는 `Task`와 유사한 형식을 반환하는 동기 메서드에 선언할 수 있습니다.
+- 반복기에 `ref struct` 지역 변수를 선언할 수 없습니다.
 - 람다 식 또는 로컬 함수에서 `ref struct` 변수를 캡처할 수 없습니다.
 
 이러한 제한 사항은 실수로 `ref struct`를 관리되는 힙으로 수준 올릴 수 있는 방식으로 이 구조체를 사용하지 않게 해줍니다.
@@ -155,7 +157,6 @@ Ref readonly 로컬은 해당 시그니처에 `ref readonly`가 있고 `return r
 - [안전하고 효율적인 코드 작성](../../write-safe-efficient-code.md)
 - [Ref return 및 ref local](../../programming-guide/classes-and-structs/ref-returns.md)
 - [조건부 ref 식](../operators/conditional-operator.md#conditional-ref-expression)
-- [ref 대입 연산자](../operators/assignment-operator.md#ref-assignment-operator)
 - [매개 변수 전달](../../programming-guide/classes-and-structs/passing-parameters.md)
 - [메서드 매개 변수](method-parameters.md)
 - [C# 참조](../index.md)

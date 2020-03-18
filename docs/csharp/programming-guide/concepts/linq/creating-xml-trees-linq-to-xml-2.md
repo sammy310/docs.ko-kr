@@ -2,12 +2,12 @@
 title: C#에서 XML 트리 만들기(LINQ to XML)
 ms.date: 08/31/2018
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
-ms.openlocfilehash: a77171ebbc07e54f6988fb97aff197b4c6d31721
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 4794e4fe019b30d8f2acb3eb255bb77ba2f7f290
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594627"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169547"
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>C#에서 XML 트리 만들기(LINQ to XML)
 이 단원에서는 C#에서 XML 트리를 만드는 방법에 대해 설명합니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "69594627"
 XElement contacts =  
     new XElement("Contacts",  
         new XElement("Contact",  
-            new XElement("Name", "Patrick Hines"),   
+            new XElement("Name", "Patrick Hines"),
             new XElement("Phone", "206-555-0144"),  
             new XElement("Address",  
                 new XElement("Street1", "123 Main St"),  
@@ -139,7 +139,7 @@ Console.WriteLine(address);
 XElement contacts =  
     new XElement("Contacts",  
         new XElement("Contact",  
-            new XElement("Name", "Patrick Hines"),                                                   
+            new XElement("Name", "Patrick Hines"),
             new XElement("Phone", "206-555-0144"),  
             new XElement("Address",  
                 new XElement("Street1", "123 Main St"),  
@@ -183,7 +183,7 @@ Console.WriteLine(phone);
   
 ```xml  
 <Phone Type="Home">555-555-5555</Phone>
-```   
+```
 
 ### <a name="creating-an-empty-element"></a>빈 요소 만들기  
  빈 <xref:System.Xml.Linq.XElement>를 만들려면 내용을 생성자에 전달하지 않습니다. 다음 예제에서는 빈 요소를 만듭니다.  

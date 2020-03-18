@@ -3,12 +3,12 @@ title: .NET Core 도구
 description: .NET Core 도구를 설치, 사용, 업데이트 및 제거하는 방법을 설명합니다. 전역 도구, 도구 경로 도구 및 로컬 도구를 다룹니다.
 author: KathleenDollard
 ms.date: 02/12/2020
-ms.openlocfilehash: d8ee30df3fe063fd41a85072d145b1b5eec7d0d0
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 2f0101c6385c41eda49bcb2458428c1f14552617
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543393"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847791"
 ---
 # <a name="how-to-manage-net-core-tools"></a>.NET Core 도구를 관리하는 방법
 
@@ -273,3 +273,9 @@ dotnet <command> --help
 ```
 
 도구를 설치하거나 실행하지 못하는 경우 [.NET Core 도구 사용 문제 해결](troubleshoot-usage-issues.md)을 참조하세요.
+
+## <a name="see-also"></a>참조
+
+- [자습서: .NET Core CLI를 사용하여 .NET Core 도구 만들기](global-tools-how-to-create.md)
+- [자습서: .NET Core CLI를 사용하여 .NET Core 전역 도구 설치 및 사용](global-tools-how-to-use.md)
+- [자습서: .NET Core CLI를 사용하여 .NET Core 로컬 도구 설치 및 사용](local-tools-how-to-use.md)

@@ -2,12 +2,12 @@
 title: dotnet test 명령
 description: dotnet test 명령은 지정된 프로젝트에서 단위 테스트를 실행하는 데 사용됩니다.
 ms.date: 02/27/2020
-ms.openlocfilehash: 6e906ab396a788905c99f50e73390b765b240efc
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: bac2f0e613c34bc9f657551a5eac4038207a93ed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157013"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847900"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -20,11 +20,13 @@ ms.locfileid: "78157013"
 ## <a name="synopsis"></a>개요
 
 ```dotnetcli
-dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame]
-    [-c|--configuration] [--collect] [-d|--diag] [-f|--framework]
-    [--filter] [-l|--logger] [--no-build] [--no-restore]
-    [-o|--output] [-r|--results-directory] [-s|--settings]
-    [-t|--list-tests] [-v|--verbosity] [-- <RunSettings arguments>]
+dotnet test [<PROJECT> | <SOLUTION>]
+    [-a|--test-adapter-path] [--blame] [-c|--configuration]
+    [--collect] [-d|--diag] [-f|--framework] [--filter]
+    [--interactive] [-l|--logger] [--no-build] [--nologo]
+    [--no-restore] [-o|--output] [-r|--results-directory]
+    [--runtime] [-s|--settings] [-t|--list-tests]
+    [-v|--verbosity] [[--] <RunSettings arguments>]
 
 dotnet test [-h|--help]
 ```
@@ -39,9 +41,9 @@ dotnet test [-h|--help]
 
 ## <a name="arguments"></a>인수
 
-- **`PROJECT`**
+- **`PROJECT | SOLUTION`**
 
-  테스트 프로젝트의 경로입니다. 지정하지 않으면 현재 디렉터리로 기본 설정됩니다.
+  테스트 프로젝트 또는 솔루션의 경로입니다. 지정하지 않으면 현재 디렉터리로 기본 설정됩니다.
 
 ## <a name="options"></a>옵션
 
@@ -53,7 +55,7 @@ dotnet test [-h|--help]
 
   테스트를 원인 모드로 실행합니다. 이 옵션은 테스트 호스트의 크래시를 유발하는 문제가 있는 테스트를 격리하는 데 유용합니다. 현재 디렉터리에 크래시 전에 테스트 실행 순서를 캡처하는 *Sequence.xml*이라는 출력 파일을 만듭니다.
 
-- **`c|--configuration {Debug|Release}`**
+- **`c|--configuration <CONFIGURATION>`**
 
   빌드 구성을 정의합니다. 기본값은 `Debug`이지만 프로젝트의 구성으로 이 기본 SDK 설정이 재정의될 수 있습니다.
 
@@ -77,6 +79,10 @@ dotnet test [-h|--help]
 
   명령에 대한 간단한 도움말을 출력합니다.
 
+- **`--interactive`**
+
+  명령이 중지되고 사용자 입력 또는 작업을 대기할 수 있도록 허용합니다. 예를 들어 인증을 완료합니다. .NET Core 3.0 SDK 이후 사용할 수 있습니다.
+
 - **`l|--logger <LoggerUri/FriendlyName>`**
 
   테스트 결과에 대해 로거를 지정합니다.
@@ -84,6 +90,10 @@ dotnet test [-h|--help]
 - **`--no-build`**
 
   테스트 프로젝트를 실행하기 전에 빌드하지 않습니다. 또한 `--no-restore` 플래그를 암시적으로 설정합니다.
+
+- **`--nologo`**
+
+  Microsoft TestPlatform 배너를 표시하지 않고 테스트를 실행합니다. .NET Core 3.0 SDK 이후 사용할 수 있습니다.
 
 - **`--no-restore`**
 
@@ -96,6 +106,10 @@ dotnet test [-h|--help]
 - **`-r|--results-directory <PATH>`**
 
   테스트 결과가 배치될 디렉터리입니다. 지정한 디렉터리가 없으면 생성됩니다.
+
+- **`--runtime <RUNTIME_IDENTIFIER>`**
+
+  테스트할 대상 런타임입니다.
 
 - **`-s|--settings <SETTINGS_FILE>`**
 

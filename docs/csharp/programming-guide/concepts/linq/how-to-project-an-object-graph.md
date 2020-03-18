@@ -2,18 +2,18 @@
 title: 개체 그래프를 프로젝션하는 방법(C#)
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-ms.openlocfilehash: 93fabe26fd3d9ff0b61d8b8dfc33425715452c88
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: eafb3d9064159c43fc98e0b241f0045465fca824
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635693"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168962"
 ---
 # <a name="how-to-project-an-object-graph-c"></a>개체 그래프를 프로젝션하는 방법(C#)
 이 항목에서는 XML에서 개체 그래프를 프로젝션하거나 채우는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
- 다음 코드에서는 `Address`, `PurchaseOrder` 및 `PurchaseOrderItem` 클래스를 사용하여 [샘플 XML 파일: 일반적인 구매 주문(LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML 문서에서 개체 그래프를 채웁니다.  
+ 다음 코드에서는 `Address`샘플 XML 파일: 일반적인 구매 주문(LINQ to XML)`PurchaseOrder` XML 문서의 `PurchaseOrderItem`, [ 및 ](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) 클래스를 사용하여 개체 그래프를 채웁니다.  
   
 ```csharp  
 class Address  
@@ -185,7 +185,7 @@ class Program {
                             from a in po.Elements("Address")  
                             select new Address {  
                                 AddressType = ((string)a.Attribute("Type") == "Shipping") ?  
-                                    Address.AddressUse.Shipping :   
+                                    Address.AddressUse.Shipping :
                                     Address.AddressUse.Billing,  
                                 Name = (string)a.Element("Name"),  
                                 Street = (string)a.Element("Street"),  
@@ -214,7 +214,7 @@ class Program {
 }  
 ```  
   
- 이 예제에서는 LINQ 쿼리의 결과가 `PurchaseOrderItem`의 <xref:System.Collections.Generic.IEnumerable%601>로 반환됩니다. `PurchaseOrder` 클래스의 항목은 <xref:System.Collections.Generic.IEnumerable%601>의 `PurchaseOrderItem` 형식입니다. 이 코드에서는 <xref:System.Linq.Enumerable.ToList%2A> 확장 메서드를 사용하여 쿼리 결과에서 <xref:System.Collections.Generic.List%601> 컬렉션을 만듭니다.  
+ 이 예제에서는 LINQ 쿼리의 결과가 <xref:System.Collections.Generic.IEnumerable%601>의 `PurchaseOrderItem`로 반환됩니다. `PurchaseOrder` 클래스의 항목은 <xref:System.Collections.Generic.IEnumerable%601>의 `PurchaseOrderItem` 형식입니다. 이 코드에서는 <xref:System.Linq.Enumerable.ToList%2A> 확장 메서드를 사용하여 쿼리 결과에서 <xref:System.Collections.Generic.List%601> 컬렉션을 만듭니다.  
   
  예제의 결과는 다음과 같습니다.  
   
@@ -255,7 +255,7 @@ USPrice: 39.98
 ShipDate: 5/21/1999  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Linq.Enumerable.Select%2A>
 - <xref:System.Linq.Enumerable.ToList%2A>

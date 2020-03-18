@@ -5,10 +5,10 @@ ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.openlocfilehash: 312a320676be6eb453697e0704ab771a6707618b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73973504"
 ---
 # <a name="managed-assembly-loading-algorithm"></a>관리 어셈블리 로드 알고리즘
@@ -47,7 +47,7 @@ ms.locfileid: "73973504"
     - 다른 API는 `active` <xref:System.Runtime.Loader.AssemblyLoadContext>를 유추합니다. 이러한 API의 경우 <xref:System.Runtime.Loader.AssemblyLoadContext.CurrentContextualReflectionContext?displayProperty=nameWithType> 속성이 사용됩니다. 해당 값이 `null`이면 유추된 <xref:System.Runtime.Loader.AssemblyLoadContext> 인스턴스가 사용됩니다.
     - 위의 표를 참조하세요.
 
-2. `Load-by-name` 메서드의 경우 활성 <xref:System.Runtime.Loader.AssemblyLoadContext>가 어셈블리를 로드합니다. 우선순위에 따라 정렬:
+2. `Load-by-name` 메서드의 경우 활성 <xref:System.Runtime.Loader.AssemblyLoadContext>가 어셈블리를 로드합니다. 우선 순위에 따라 정렬:
     - 해당 `cache-by-name`을 확인 중입니다.
 
     - <xref:System.Runtime.Loader.AssemblyLoadContext.Load%2A?displayProperty=nameWithType> 함수를 호출 중입니다.
@@ -58,7 +58,7 @@ ms.locfileid: "73973504"
 
     - <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 이벤트가 발생 중입니다.
 
-3. 다른 유형의 로드의 경우 `active` <xref:System.Runtime.Loader.AssemblyLoadContext>가 어셈블리를 로드합니다. 우선순위에 따라 정렬:
+3. 다른 유형의 로드의 경우 `active` <xref:System.Runtime.Loader.AssemblyLoadContext>가 어셈블리를 로드합니다. 우선 순위에 따라 정렬:
     - 해당 `cache-by-name`을 확인 중입니다.
 
     - 지정된 경로 또는 원시 어셈블리 개체에서 로드하는 중입니다.
@@ -67,4 +67,4 @@ ms.locfileid: "73973504"
    - <xref:System.AppDomain.AssemblyLoad?displayProperty=nameWithType> 이벤트가 발생합니다.
    - 참조가 어셈블리의 <xref:System.Runtime.Loader.AssemblyLoadContext> 인스턴스의 `cache-by-name`에 추가됩니다.
 
-5. 어셈블리가 있는 경우 `active` <xref:System.Runtime.Loader.AssemblyLoadContext> 인스턴스의 `cache-by-name`에 참조가 필요에 따라 추가됩니다.
+5. 어셈블리가 있는 경우 필요에 따라 `active` <xref:System.Runtime.Loader.AssemblyLoadContext> 인스턴스의 `cache-by-name`에 참조가 추가됩니다.

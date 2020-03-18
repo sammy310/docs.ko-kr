@@ -7,12 +7,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 6dc058f3850e30d8c424d4372c47b127c7d361b6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9f541ae9c26eb12acdcf9a8c59bab98c4772c3b0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712743"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173447"
 ---
 # <a name="await-operator-c-reference"></a>await 연산자(C# 참조)
 
@@ -20,7 +20,7 @@ ms.locfileid: "75712743"
 
 다음 예제에서 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> 메서드는 완료 시 바이트 배열을 생성하는 비동기 작업을 나타내는 `Task<byte[]>` 인스턴스를 반환합니다. 작업이 완료될 때까지 `await` 연산자는 `DownloadDocsMainPageAsync` 메서드를 일시 중단합니다. `DownloadDocsMainPageAsync`가 일시 중단되면 제어는 `DownloadDocsMainPageAsync`의 호출자인 `Main` 메서드에 반환됩니다. `Main` 메서드는 `DownloadDocsMainPageAsync` 메서드가 수행한 비동기 작업의 결과가 필요할 때까지 실행됩니다. <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A>가 모든 바이트를 가져오면 나머지 `DownloadDocsMainPageAsync` 메서드가 평가됩니다. 그 후에는 나머지 `Main` 메서드가 평가됩니다.
 
-[!code-csharp[await example](~/samples/csharp/language-reference/operators/AwaitOperator.cs)]
+[!code-csharp[await example](snippets/AwaitOperator.cs)]
 
 앞의 예제에서는 C# 7.1부터 가능한 [비동기 `Main` 메서드](../../programming-guide/main-and-command-args/index.md)를 사용합니다. 자세한 내용은 [Main 메서드 섹션의 await 연산자](#await-operator-in-the-main-method)를 참조하세요.
 
@@ -31,7 +31,7 @@ ms.locfileid: "75712743"
 
 `await` 연산자의 피연산자는 일반적으로 .NET 형식인 <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.ValueTask> 또는 <xref:System.Threading.Tasks.ValueTask%601> 중 하나에 해당합니다. 그러나 대기 가능한 모든 식은 `await` 연산자의 피연산자일 수 있습니다. 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [대기 가능 식](~/_csharplang/spec/expressions.md#awaitable-expressions) 섹션을 참조하세요.
 
-C# 8.0부터, `await foreach` 문을 사용하여 비동기 데이터 스트림을 사용할 수 있습니다. 자세한 내용은 [C# 8.0의 새로운 기능](../../whats-new/csharp-8.md) 문서의 [비동기 스트림](../../whats-new/csharp-8.md#asynchronous-streams) 섹션을 참조하세요.
+C# 8.0부터, `await foreach` 문을 사용하여 비동기 데이터 스트림을 사용할 수 있습니다. 자세한 내용은 [`foreach` 문](../keywords/foreach-in.md) 문서 및 [C# 8.0의 새로운 기능](../../whats-new/csharp-8.md) 문서의 [비동기 스트림](../../whats-new/csharp-8.md#asynchronous-streams) 섹션을 참조하세요.
 
 `t` 식의 형식이 <xref:System.Threading.Tasks.Task%601> 또는 <xref:System.Threading.Tasks.ValueTask%601>이면 `await t` 식의 형식은 `TResult`입니다. `t` 형식이 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.ValueTask>이면 `await t` 형식은 `void`입니다. 두 경우 모두 `t`가 예외를 throw하면 `await t`는 예외를 다시 throw합니다. 예외 처리에 대한 자세한 내용은 [try-catch 문](../keywords/try-catch.md) 문서에서 [비동기 메서드의 예외](../keywords/try-catch.md#exceptions-in-async-methods) 섹션을 참조하세요.
 

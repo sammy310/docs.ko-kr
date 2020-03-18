@@ -2,12 +2,12 @@
 title: 요소 값을 검색하는 방법(LINQ to XML)(C#)
 ms.date: 07/20/2015
 ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
-ms.openlocfilehash: 775e7282408910cc06b7d660d84cb6f80ef47949
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 6f2d355eac9914cd4c03d3a4521992b346b92f0b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347423"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168689"
 ---
 # <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>요소 값을 검색하는 방법(LINQ to XML)(C#)
 이 항목에서는 요소의 값을 가져오는 방법을 보여 줍니다. 두 가지 주요 방법으로 요소의 값을 가져올 수 있습니다. 한 가지 방법은 <xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XAttribute>를 원하는 형식으로 캐스팅하는 것입니다. 명시적 변환 연산자는 요소나 특성의 내용을 지정된 형식으로 변환하고 변수에 할당합니다. 또는 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 속성이나 <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> 속성을 사용할 수 있습니다.  
@@ -54,7 +54,7 @@ Value of e:44
  <xref:System.Xml.Linq.XElement.Value%2A> 속성을 사용하여 요소의 내용을 검색할 수 있습니다.  
   
 ```csharp  
-XElement e = new XElement("StringElement", "abcde");   
+XElement e = new XElement("StringElement", "abcde");
 Console.WriteLine(e);  
 Console.WriteLine("Value of e:" + e.Value);  
 ```  
@@ -145,6 +145,6 @@ v4:element does not exist
   
  일반적으로 요소 및 특성 내용을 검색하는 데 캐스팅을 사용하면 보다 간단한 코드를 작성할 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [LINQ to XML 축(C#)](./linq-to-xml-axes-overview.md)

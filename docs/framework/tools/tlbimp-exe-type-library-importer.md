@@ -10,12 +10,12 @@ helpviewer_keywords:
 - type libraries
 - converting type definitions
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
-ms.openlocfilehash: fcbbc99c06e7c9666d58133bef20b84ef40c98d5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d942378888b06049022188c75456f438d4b187e3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104326"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180242"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe(형식 라이브러리 가져오기)
 형식 라이브러리 가져오기 도구는 COM 형식 라이브러리에 있는 형식 정의를 공용 언어 런타임 어셈블리의 동등한 정의로 변환합니다. Tlbimp.exe의 출력은 원본 형식 라이브러리에 정의된 형식의 런타임 메타데이터를 포함하는 이진 파일(어셈블리)입니다. [Ildasm.exe](ildasm-exe-il-disassembler.md)와 같은 도구를 사용하여 이 파일을 검토할 수 있습니다.  
@@ -69,7 +69,7 @@ tlbimp tlbFile [options]
 |**/?**|이 도구의 명령 구문 및 옵션을 표시합니다.|  
   
 > [!NOTE]
-> Tlbimp.exe의 명령줄 옵션은 대/소문자를 구분하지 않으며 순서에 관계없이 지정할 수 있습니다. 또한, 고유하게 식별할 수 있을 정도로만 옵션을 지정하면 됩니다. 따라서 **/n**은 **/nologo**와 같고, **/ou:** *outfile.dll*은 **/out:** *outfile.dll*과 같습니다.  
+> Tlbimp.exe의 명령줄 옵션은 대/소문자를 구분하지 않으며 순서에 관계없이 지정할 수 있습니다. 또한, 고유하게 식별할 수 있을 정도로만 옵션을 지정하면 됩니다. 따라서 **/n**은 **/nologo**와 같고 **/ou:** *outfile.dll*은 **/out:** *outfile.dll*과 같습니다.  
   
 ## <a name="remarks"></a>설명  
  Tlbimp.exe는 한 번에 전체 형식 라이브러리 변환을 수행합니다. 이 도구를 사용하여 단일 형식 라이브러리 내에 정의된 형식의 하위 집합에 대한 형식 정보를 생성할 수는 없습니다.  
@@ -77,16 +77,16 @@ tlbimp tlbFile [options]
  어셈블리에 [강력한 이름](../../standard/assembly/strong-named.md)을 할당하는 것이 종종 유용하거나 필요합니다. 따라서 Tlbimp.exe는 강력한 이름의 어셈블리를 생성하는 데 필요한 정보를 제공하는 옵션을 포함합니다. **/keyfile:** 및 **/keycontainer:** 옵션은 둘 다 강력한 이름으로 어셈블리를 서명합니다. 그러므로 한 번에 한 옵션만 지정하면 됩니다.  
   
  **/reference** 옵션을 여러 번 사용하여 여러 개의 참조 어셈블리를 지정할 수 있습니다.
- 
+
  Tlbimp.exe가 어셈블리를 생성하는 방식으로 인해 어셈블리를 다른 `mscorlib` 버전으로 다시 대상 지정할 수 없습니다. 예를 들어 .NET Framework 2.0을 대상으로 하는 어셈블리를 생성하려는 경우 .NET Framework 2.0/3.0/3.5 SDK와 함께 제공되는 Tlbimp.exe를 사용해야 합니다. .NET Framework 4.x를 대상으로 하려면 .NET Framework 4.x SDK와 함께 제공되는 Tlbimp.exe를 사용해야 합니다.
- 
+
  여러 개의 형식 라이브러리를 포함하는 모듈에서 형식 라이브러리를 가져오는 경우 선택적으로 리소스 ID를 형식 라이브러리 파일에 추가할 수 있습니다. 이 파일이 현재 디렉터리에 있거나 전체 경로를 지정하는 경우에만 Tlbimp.exe를 사용하여 파일을 찾을 수 있습니다. 이 항목의 뒷부분에 있는 예제를 참조하십시오.  
   
 ## <a name="examples"></a>예  
  다음 명령을 사용하여 `myTest.tlb`에 있는 형식 라이브러리와 이름이 같고 확장명이 .dll인 어셈블리를 생성합니다.  
   
 ```console  
-tlbimp myTest.tlb   
+tlbimp myTest.tlb
 ```  
   
  다음 명령을 사용하여 `myTest.dll`이라는 이름의 어셈블리를 생성합니다.  
@@ -125,7 +125,7 @@ bool SomeMethod();
 void SomeMethod(out bool x);  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [도구](index.md)
 - [Tlbexp.exe(형식 라이브러리 내보내기)](tlbexp-exe-type-library-exporter.md)

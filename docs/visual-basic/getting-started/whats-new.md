@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 45763504c2d25596b0adfb4b8a0236b332d89e8c
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 3ab468f6c68429a3a5cb8706152288afae520df3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802051"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187137"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic의 새로운 기능
 
@@ -186,7 +186,7 @@ Visual Basic의 튜플 지원을 사용하면 튜플을 신속하게 정의하�
 
 C# 7.0부터 C#에서 참조 반환 값을 지원합니다. 즉, 호출하는 메서드가 참조로 반환된 값을 받을 때 참조 값을 변경할 수 있습니다. Visual Basic에서 참조 반환 값이 있는 메서드를 작성할 수는 없지만 참조 반환 값을 사용하고 수정할 수 있습니다.
 
-예를 들어 C#으로 작성된 다음 `Sentence` 클래스에는 문장 내에서 지정한 하위 문자열로 시작하는 다음 단어를 찾는 `FindNext` 메서드가 포함되어 있습니다. 문자열은 참조 반환 값으로 반환되며, 메서드에 참조로 전달된 `Boolean` 변수는 검색에 성공했는지 여부를 나타냅니다. 즉, 호출자는 반환된 값을 읽을 수 있을 뿐만 아니라 수정할 수도 있으며, 수정 내용이 `Sentence` 클래스에 반영됩니다.
+예를 들어 C#으로 작성된 다음 `Sentence` 클래스에는 문장 내에서 지정한 하위 문자열로 시작하는 다음 단어를 찾는 `FindNext` 메서드가 포함되어 있습니다. 문자열은 참조 반환 값으로 반환되며, 메서드에 참조로 전달된 `Boolean` 변수는 검색에 성공했는지 여부를 나타냅니다. 즉, 호출자는 반환된 값을 읽을 뿐 아니라 수정할 수도 있으며 수정 내용이 `Sentence` 클래스에 반영됩니다.
 
 [!code-csharp[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-returns.cs)]
 
@@ -289,7 +289,7 @@ End Interface
 
 이제 컴파일러에서 일반 오버로드 확인 규칙을 사용하여 호출하는 데 가장 적합한 `GetDetails`를 선택하며, 샘플에서와 같이 Visual Basic에서 인터페이스 관계를 선언할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Visual Studio 2017의 새로운 기능](/visualstudio/ide/whats-new-visual-studio-2017)
 - [Visual Studio 2019의 새로운 기능](/visualstudio/ide/whats-new-visual-studio-2019)

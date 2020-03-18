@@ -2,12 +2,12 @@
 title: C# 8.0의 새로운 기능 - C# 가이드
 description: C# 8.0의 새로운 기능을 살펴봅니다.
 ms.date: 09/20/2019
-ms.openlocfilehash: 540b95beaf00c17812a3b602602504278be69b0e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0013f621268e2a4f1b916b226d83d18c68445ed1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429394"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398330"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0의 새로운 기능
 
@@ -319,7 +319,7 @@ static int WriteLinesToFile(IEnumerable<string> lines)
 
 ## <a name="static-local-functions"></a>정적 로컬 함수
 
-이제 로컬 함수가 바깥쪽 범위의 변수를 참조하는 경우가 없도록 로컬 함수에 `static` 한정자를 추가할 수 있습니다. 이렇게 하면 `CS8421` "정적 로컬 함수는 \<variable>에 대한 참조를 포함할 수 없습니다."를 생성합니다. 
+이제 로컬 함수가 바깥쪽 범위의 변수를 참조하는 경우가 없도록 로컬 함수에 `static` 한정자를 추가할 수 있습니다. 이렇게 하면 `CS8421` "정적 로컬 함수는 \<variable>에 대한 참조를 포함할 수 없습니다."를 생성합니다.
 
 다음과 같은 코드를 생각해 볼 수 있습니다. 여기서 로컬 함수 `LocalFunction`은 바깥쪽 범위(메서드 `M`)에서 선언된 변수 `y`에 액세스합니다. 따라서 `LocalFunction`을 `static` 한정자와 함께 선언할 수 없습니다.
 
@@ -355,7 +355,7 @@ int M()
 
 nullable 주석 컨텍스트에서 참조 형식의 변수는 모두 **nullable이 아닌 참조 형식**으로 간주됩니다. 변수가 null이 될 수 있음을 나타내려면 형식 이름 뒤에 `?`를 추가하여 해당 변수를 **nullable 참조 형식**으로 선언해야 합니다.
 
-nullable이 아닌 참조 형식의 경우, 로컬 변수가 선언될 때 null이 아닌 값으로 초기화되도록 컴파일러가 흐름 분석을 사용합니다. 필드는 생성 시점에 초기화되어야 합니다. 사용 가능한 생성자 호출이나 이니셜라이저를 통해 변수가 설정되지 않으면 컴파일러에서 경고를 생성합니다. 또한, nullable이 아닌 참조 형식은 null이 될 수 있는 값에 할당할 수 없습니다.
+nullable이 아닌 참조 형식의 경우, 지역 변수가 선언될 때 null이 아닌 값으로 초기화되도록 컴파일러가 흐름 분석을 사용합니다. 필드는 생성 시점에 초기화되어야 합니다. 사용 가능한 생성자 호출이나 이니셜라이저를 통해 변수가 설정되지 않으면 컴파일러에서 경고를 생성합니다. 또한, nullable이 아닌 참조 형식은 null이 될 수 있는 값에 할당할 수 없습니다.
 
 nullable 참조 형식은 할당되지 않았는지 또는 null로 초기화되었는지 검사되지 않습니다. 단, nullable 참조 형식의 변수가 액세스되거나 nullable이 아닌 참조 형식에 할당되기 전에 null에 대해 검사되도록 컴파일러가 흐름 분석을 사용합니다.
 
@@ -391,7 +391,7 @@ await foreach (var number in GenerateSequence())
 }
 ```
 
-[비동기 스트림 생성 및 사용](../tutorials/generate-consume-asynchronous-stream.md) 자습서에서 직접 비동기 스트림을 사용해 볼 수 있습니다.
+[비동기 스트림 생성 및 사용](../tutorials/generate-consume-asynchronous-stream.md) 자습서에서 직접 비동기 스트림을 사용해 볼 수 있습니다. 기본적으로 스트림 요소는 캡처된 컨텍스트에서 처리됩니다. 컨텍스트 캡처를 사용하지 않도록 설정하려면 <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> 확장 메서드를 사용합니다. 동기화 컨텍스트 및 현재 컨텍스트 캡처에 대한 자세한 내용은 [작업 기반 비동기 패턴 사용](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)에 대한 문서를 참조하세요.
 
 ## <a name="indices-and-ranges"></a>인덱스 및 범위
 

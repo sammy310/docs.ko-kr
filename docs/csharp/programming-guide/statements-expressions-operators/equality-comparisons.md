@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: d366fb6f79593866cb8cb2ae761ba656fe33c598
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: f09d9891f79eda44c428d5509e341a54ad3a3eee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867375"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79157106"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>같음 비교(C# 프로그래밍 가이드)
 
@@ -33,7 +33,7 @@ ms.locfileid: "76867375"
 int a = GetOriginalValue();  
 int b = GetCurrentValue();  
   
-// Test for value equality.   
+// Test for value equality.
 if (b == a)
 {  
     // The two integers are equal.  
@@ -57,6 +57,6 @@ if (b == a)
 |[C# 프로그래밍 가이드](../index.md)|.NET Framework를 통해 C#에 제공되는 기능 및 중요한 C# 언어 기능에 대한 자세한 정보 링크를 제공합니다.|  
 |[유형](../types/index.md)|C# 형식 시스템에 대한 정보 및 추가 정보 링크를 제공합니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)

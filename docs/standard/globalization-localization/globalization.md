@@ -13,18 +13,18 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: 953d8d3055dff48cd943b748771f20803a4d6573
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fe03bbdd7d037a9f1fb4985b62b447c6ef9c6535
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120897"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79174786"
 ---
 # <a name="globalization"></a>전역화
 
 전역화는 다양한 문화권의 사용자를 위해 현지화된 인터페이스와 국가별 데이터를 지원하는 지역화 대비 응용 프로그램을 디자인하고 개발하는 작업을 수반합니다. 디자인 단계를 시작하기 전에 앱에서 지원할 문화권을 결정해야 합니다. 앱이 기본적으로 단일 문화권이나 국가를 대상으로 하더라도, 다른 문화권이나 국가의 사용자에게 쉽게 확장될 수 있도록 디자인하고 작성할 수 있습니다.
 
-모든 개발자는 각 문화권에 의해 형성된 사용자 인터페이스와 데이터에 대해 가정하는 부분이 있습니다. 예를 들어, 미국에서 영어를 사용하는 개발자가 날짜 및 시간 데이터를 `MM/dd/yyyy hh:mm:ss` 서식의 문자열로 serialize하는 것은 매우 합당해 보입니다. 하지만 그 문자열을 다른 문화권의 시스템에서 deserialize하면 <xref:System.FormatException> 예외를 throw하거나 정확하지 않은 데이터를 생성할 수 있습니다. 전역화는 문화권별 가정을 식별하고 그것이 앱의 디자인이나 코드에 영향을 미치지 않도록 합니다.
+모든 개발자는 각 문화권에 의해 형성된 사용자 인터페이스와 데이터에 대해 가정하는 부분이 있습니다. 예를 들어, 미국에서 영어를 사용하는 개발자가 날짜 및 시간 데이터를 `MM/dd/yyyy hh:mm:ss` 서식의 문자열로 serialize하는 것은 매우 합당해 보입니다. 하지만 그 문자열을 다른 문화권의 시스템에서 역직렬화하면 <xref:System.FormatException> 예외를 throw하거나 정확하지 않은 데이터를 생성할 수 있습니다. 전역화는 문화권별 가정을 식별하고 그것이 앱의 디자인이나 코드에 영향을 미치지 않도록 합니다.
 
 이 문서에서는 세계화된 앱에서 고려해야 할 몇 가지 주요 문제와 문자열, 날짜, 시간 값과 숫자 값을 처리할 때 따를 수 있는 모범 사례를 설명합니다.
 
@@ -66,7 +66,7 @@ Windows 운영 체제를 비롯한 많은 애플리케이션과 운영 체제는
 > [!TIP]
 > 문자열의 개별 문자 보다는 텍스트 요소에 <xref:System.Globalization.StringInfo> 클래스를 사용할 수 있습니다.
 
-문자열 검색 및 비교 시 일반적인 실수는 문자열을 각각 <xref:System.Char> 개체로 표시되는 문자의 컬렉션으로 다루는 것입니다. 실제, 단일 문자는 하나, 둘, 또는 그 이상의 <xref:System.Char> 개체로 형성될 수 있습니다. 이러한 문자는 알파벳이 유니코드 기본 라틴 문자의 범위(U+0021 ~ U+007E)에 속하지 않는 문자로 구성된 문화권의 문자열에서 가장 빈번하게 나타납니다. 다음 예제는 문자열에서 LATIN CAPITAL LETTER A WITH GRAVE 문자(U+00C0)의 인덱스를 찾으려고 합니다. 하지만 이 문자는 단일 코드 단위(U+00C0) 또는 복합 문자(두 코드 단위: U+0021 및 U+007E)처럼 두 가지 다른 방법으로 나타낼 수 있습니다. 이런 경우, 문자는 2개의 <xref:System.Char> 개체 즉, U+0021 및 U+007E를 통해 문자열 인스턴스로 표현됩니다. 예제 코드는 문자열 인스턴스 내에서 이 문자의 위치를 찾기 위해 <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> 및 <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> 오버로드를 호출하지만 이것은 다른 결과를 반환합니다. 첫 번째 메서드 호출에는 <xref:System.Char> 인수가 있고, 이것이 서수 비교를 수행하기 때문에 일치하는 값을 찾을 수 없습니다. 두 번째 호출에는 <xref:System.String> 인수가 있고, 이것은 문화권구분 비교를 수행하기 때문에 일치하는 값을 찾습니다.
+문자열 검색 및 비교 시 일반적인 실수는 문자열을 각각 <xref:System.Char> 개체로 표시되는 문자의 컬렉션으로 다루는 것입니다. 실제, 단일 문자는 하나, 둘, 또는 그 이상의 <xref:System.Char> 개체로 형성될 수 있습니다. 이러한 문자는 알파벳이 유니코드 기본 라틴 문자의 범위(U+0021 ~ U+007E)에 속하지 않는 문자로 구성된 문화권의 문자열에서 가장 빈번하게 나타납니다. 다음 예제는 문자열에서 LATIN CAPITAL LETTER A WITH GRAVE 문자(U+00C0)의 인덱스를 찾으려고 합니다. 하지만 이 문자는 단일 코드 단위(U+00C0) 또는 복합 문자(두 코드 단위: U+0041 및 U+0300)라는 두 방법으로 표현됩니다. 이런 경우, 문자는 2개의 <xref:System.Char> 개체 즉, U+0041 및 U+0300을 통해 문자열 인스턴스로 표현됩니다. 예제 코드는 문자열 인스턴스 내에서 이 문자의 위치를 찾기 위해 <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> 및 <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> 오버로드를 호출하지만 이것은 다른 결과를 반환합니다. 첫 번째 메서드 호출에는 <xref:System.Char> 인수가 있고, 이것이 서수 비교를 수행하기 때문에 일치하는 값을 찾을 수 없습니다. 두 번째 호출에는 <xref:System.String> 인수가 있고, 이것은 문화권구분 비교를 수행하기 때문에 일치하는 값을 찾습니다.
 
 [!code-csharp[Conceptual.Globalization#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/search1.cs#18)]
 [!code-vb[Conceptual.Globalization#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/search1.vb#18)]
@@ -179,7 +179,7 @@ Windows 운영 체제를 비롯한 많은 애플리케이션과 운영 체제는
 [!code-csharp[Conceptual.Globalization#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates4.cs#10)]
 [!code-vb[Conceptual.Globalization#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates4.vb#10)]
 
-데이터가 serialize된 시스템과 표준 시간대가 같은 시스템에서 데이터가 복원되면, deserialize된 날짜 및 시간 값이 원래 값을 정확하게 반영하고 다음과 같이 출력됩니다.
+데이터가 serialize된 시스템과 표준 시간대가 같은 시스템에서 데이터가 복원되면, 역직렬화된 날짜 및 시간 값이 원래 값을 정확하게 반영하고 다음과 같이 출력됩니다.
 
 ```console
 '3/30/2013 6:00:00 PM' --> 3/30/2013 6:00:00 PM Unspecified
@@ -199,22 +199,22 @@ Windows 운영 체제를 비롯한 많은 애플리케이션과 운영 체제는
 3/30/2013 6:00:00 PM Local
 ```
 
-데이터가 deserialize된 시스템의 표준 시간대와 상관없이 단일 순간을 나타내는 날짜 및 시간 값을 정확하게 반영하려면 다음 중 하나를 수행합니다.
+데이터가 역직렬화된 시스템의 표준 시간대와 상관없이 단일 순간을 나타내는 날짜 및 시간 값을 정확하게 반영하려면 다음 중 하나를 수행합니다.
 
-- "o"(라운드트립) 표준 서식 문자열을 사용하여 값을 문자열로 저장합니다. 그런 다음 대상 시스템에서 값을 deserialize합니다.
+- "o"(라운드트립) 표준 서식 문자열을 사용하여 값을 문자열로 저장합니다. 그런 다음 대상 시스템에서 값을 역직렬화합니다.
 
-- 값을 UTC로 변환하고 "r"(RFC1123) 표준 서식 문자열을 사용하여 문자열로 저장합니다. 그런 다음 대상 시스템에서 값을 deserialize하고 현지 시간으로 변환합니다.
+- 값을 UTC로 변환하고 "r"(RFC1123) 표준 서식 문자열을 사용하여 문자열로 저장합니다. 그런 다음 대상 시스템에서 값을 역직렬화하고 현지 시간으로 변환합니다.
 
-- 값을 UTC로 변환하고 "u"(정렬 가능한 유니버설) 표준 서식 문자열을 사용하여 문자열로 저장합니다. 그런 다음 대상 시스템에서 값을 deserialize하고 현지 시간으로 변환합니다.
+- 값을 UTC로 변환하고 "u"(정렬 가능한 유니버설) 표준 서식 문자열을 사용하여 문자열로 저장합니다. 그런 다음 대상 시스템에서 값을 역직렬화하고 현지 시간으로 변환합니다.
 
-- 값을 UTC로 변환하고 이진 형식으로 저장합니다. 그런 다음 대상 시스템에서 값을 deserialize하고 현지 시간으로 변환합니다.
+- 값을 UTC로 변환하고 이진 형식으로 저장합니다. 그런 다음 대상 시스템에서 값을 역직렬화하고 현지 시간으로 변환합니다.
 
 다음 예제는 각 방법을 보여 줍니다.
 
 [!code-csharp[Conceptual.Globalization#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates8.cs#11)]
 [!code-vb[Conceptual.Globalization#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates8.vb#11)]
 
-데이터가 태평양 표준 시간대 시스템에서 serialize되고 로망스 표준 시간대 시스템에서 deserialize되는 경우에, 예제는 다음과 같이 출력됩니다.
+데이터가 태평양 표준 시간대 시스템에서 직렬화되고 로망스 표준 시간대 시스템에서 역직렬화되는 경우에, 예제는 다음과 같이 출력됩니다.
 
 ```console
 '2013-03-30T18:00:00.0000000-07:00' --> 3/31/2013 3:00:00 AM Local
@@ -301,17 +301,17 @@ Windows 운영 체제를 비롯한 많은 애플리케이션과 운영 체제는
 
 - 숫자를 이진 형식이 아닌 문자열 형식으로 serialize합니다.
 
-다음 예제에서 마지막 방법을 보여 줍니다. <xref:System.Double> 값의 배열을 serialize한 다음 deserialize하고 영어(미국) 및 프랑스어(프랑스) 문화권의 서식 규칙을 사용하여 나타냅니다.
+다음 예제에서 마지막 방법을 보여 줍니다. <xref:System.Double> 값의 배열을 직렬화한 다음 역직렬화하고 영어(미국) 및 프랑스어(프랑스) 문화권의 서식 규칙을 사용하여 나타냅니다.
 
 [!code-csharp[Conceptual.Globalization#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/numbers3.cs#7)]
 [!code-vb[Conceptual.Globalization#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/numbers3.vb#7)]
 
-통화 값 serialize는 특별한 경우입니다. 통화 값은 값이 표현되는 통화의 단위에 따라 달라지므로, 이것을 독립적인 숫자 값으로 처리하는 것은 합당하지 않습니다. 하지만, 통화 값을 통화 기호를 포함하는 서식이 지정된 문자열로 저장하면, 다음 예제에서 볼 수 있듯이, 다른 통화 기호를 사용하는 기본 문화권의 시스템에서 deserialize될 수 없습니다.
+통화 값 serialize는 특별한 경우입니다. 통화 값은 값이 표현되는 통화의 단위에 따라 달라지므로, 이것을 독립적인 숫자 값으로 처리하는 것은 합당하지 않습니다. 하지만, 통화 값을 통화 기호를 포함하는 서식이 지정된 문자열로 저장하면, 다음 예제에서 볼 수 있듯이, 다른 통화 기호를 사용하는 기본 문화권의 시스템에서 역직렬화될 수 없습니다.
 
 [!code-csharp[Conceptual.Globalization#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/currency1.cs#16)]
 [!code-vb[Conceptual.Globalization#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/currency1.vb#16)]
 
-대신, 값과 그에 대한 통화 기호가 현재 문화권과 관계 없이 deserialize될 수 있도록, 숫자 값을 문화권 정보(예: 문화권의 이름)와 함께 serialize해야 합니다. 다음 예제에서는 두 가지 멤버 즉, <xref:System.Decimal> 값과 그 값이 속하는 문화권의 이름으로 `CurrencyValue` 구조를 정의하여 이것을 구현합니다.
+대신, 값과 그에 대한 통화 기호가 현재 문화권과 관계 없이 역직렬화될 수 있도록, 숫자 값을 문화권 정보(예: 문화권의 이름)와 함께 serialize해야 합니다. 다음 예제에서는 두 가지 멤버 즉, <xref:System.Decimal> 값과 그 값이 속하는 문화권의 이름으로 `CurrencyValue` 구조를 정의하여 이것을 구현합니다.
 
 [!code-csharp[Conceptual.Globalization#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/currency2.cs#17)]
 [!code-vb[Conceptual.Globalization#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/currency2.vb#17)]
@@ -338,7 +338,7 @@ Windows 운영 체제를 비롯한 많은 애플리케이션과 운영 체제는
 
 - Windows 시스템에서 사용자는 제어판의 **국가 및 언어** 앱을 사용하여 문화권별 설정을 사용자 지정할 수 있습니다. <xref:System.Globalization.CultureInfo> 개체를 인스턴스화할 때, <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 생성자를 호출하여 사용자 지정을 반영할지 여부를 결정할 수 있습니다. 일반적으로 최종 사용자 앱에 대해서는 사용자가 예상하는 서식으로 사용자에게 데이터가 표시되도록 사용자 기본 설정을 고려해야 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [전역화 및 지역화](../../../docs/standard/globalization-localization/index.md)
 - [문자열 사용에 대한 모범 사례](../../../docs/standard/base-types/best-practices-strings.md)

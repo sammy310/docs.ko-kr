@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: 74a6f2e1e9296551f4faf73a905b49d3e2e3687e
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 7fbdfa8656e3c4832226370dc6efe56964e14934
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635719"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168507"
 ---
 # <a name="introduction-to-linq-queries-c"></a>LINQ 쿼리 소개(C#)
 *쿼리*는 데이터 소스에서 데이터를 검색하는 식입니다. 쿼리는 일반적으로 특수화된 쿼리 언어로 표현됩니다. 관계형 데이터베이스에는 SQL이 사용되고 XML에는 XQuery가 사용되는 것처럼 시간에 따라 다양한 형식의 데이터 소스에 대해 서로 다른 언어가 개발되었습니다. 따라서 개발자는 지원해야 하는 데이터 소스의 형식이나 데이터 형식에 따라 새로운 쿼리 언어를 배워야 했습니다. LINQ는 다양한 데이터 소스 및 형식에 사용할 수 있는 일관된 모델을 제공함으로써 이러한 상황을 단순화합니다. LINQ 쿼리에서는 항상 개체를 사용합니다. XML 문서, SQL 데이터베이스, ADO.NET 데이터 세트, .NET 컬렉션 및 LINQ 공급자를 사용할 수 있는 다른 모든 형식에서 데이터를 쿼리하고 변환하는 데 동일한 기본 코딩 패턴을 사용합니다.  
@@ -61,7 +61,7 @@ IQueryable<Customer> custQuery =
 ## <a name="query"></a> 쿼리  
  쿼리는 데이터 소스 또는 소스에서 검색할 정보를 지정합니다. 필요한 경우 쿼리는 정보를 반환하기 전에 해당 정보를 정렬, 그룹화 및 구체화하는 방법도 지정합니다. 쿼리는 쿼리 변수에 저장되고 쿼리 식으로 초기화됩니다. 쿼리를 쉽게 작성할 수 있도록 C#에서는 새로운 쿼리 구문이 도입되었습니다.  
   
- 이전 예제의 쿼리는 정수 배열에서 모든 짝수를 반환합니다. 쿼리 식에는 `from`, `where` 및 `select`의 세 가지 절이 포함됩니다. SQL에 익숙한 경우 절의 순서가 SQL의 순서와 반대임을 알고 있을 것입니다. `from` 절은 데이터 소스를 지정하고 `where` 절은 필터를 적용하며 `select` 절은 반환되는 요소의 형식을 지정합니다. 이러한 쿼리 절 및 다른 쿼리 절은 [LINQ 쿼리 식](../../../linq/index.md) 섹션에서 자세히 설명합니다. 여기에서 중요한 점은 LINQ에서 쿼리 변수 자체는 아무 작업도 수행하지 않고 데이터를 반환하지 않는다는 것입니다. 나중에 쿼리가 실행될 때 결과를 생성하는 데 필요한 정보를 저장합니다. 백그라운드에서 쿼리를 생성하는 방법에 대한 자세한 내용은 [표준 쿼리 연산자 개요(C#)](./standard-query-operators-overview.md)를 참조하세요.  
+ 이전 예제의 쿼리는 정수 배열에서 모든 짝수를 반환합니다. 쿼리 식에는 `from`, `where` 및 `select`의 세 가지 절이 포함됩니다. SQL에 익숙한 경우 절의 순서가 SQL의 순서와 반대임을 알고 있을 것입니다. `from` 절은 데이터 소스를 지정하고 `where` 절은 필터를 적용하며 `select` 절은 반환되는 요소의 형식을 지정합니다. 이러한 쿼리 절 및 다른 쿼리 절은 [LINQ(Language Integrated Query)](../../../linq/index.md) 섹션에서 자세히 설명합니다. 여기에서 중요한 점은 LINQ에서 쿼리 변수 자체는 아무 작업도 수행하지 않고 데이터를 반환하지 않는다는 것입니다. 나중에 쿼리가 실행될 때 결과를 생성하는 데 필요한 정보를 저장합니다. 백그라운드에서 쿼리를 생성하는 방법에 대한 자세한 내용은 [표준 쿼리 연산자 개요(C#)](./standard-query-operators-overview.md)를 참조하세요.  
   
 > [!NOTE]
 > 쿼리는 메서드 구문을 사용하여 표현할 수도 있습니다. 자세한 내용은 [LINQ의 쿼리 구문 및 메서드 구문](./query-syntax-and-method-syntax-in-linq.md)을 참조하세요.  
@@ -90,8 +90,8 @@ IQueryable<Customer> custQuery =
   
 ## <a name="see-also"></a>참조
 
-- [C#에서 LINQ 시작](/dotnet/csharp/programming-guide/concepts/linq/)
+- [C#에서 LINQ 시작](index.md)
 - [연습: C#에서 쿼리 작성](./walkthrough-writing-queries-linq.md)
-- [LINQ 쿼리 식](../../../linq/index.md)
+- [LINQ(Language-Integrated Query)](../../../linq/index.md)
 - [foreach, in](../../../language-reference/keywords/foreach-in.md)
 - [쿼리 키워드(LINQ)](../../../language-reference/keywords/query-keywords.md)

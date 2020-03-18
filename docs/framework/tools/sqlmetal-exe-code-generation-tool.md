@@ -10,10 +10,10 @@ helpviewer_keywords:
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
 ms.openlocfilehash: d5b4c2b59b585b3d3a3584ef9055e70c9d998e85
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71044084"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe(코드 생성 도구)
@@ -132,7 +132,7 @@ sqlmetal [options] [<input file>]
 > [!NOTE]
 > Northwind 샘플 데이터베이스에 **/pluralize** 옵션을 사용하는 경우에는 다음 동작에 유의하세요. SqlMetal이 테이블에 대해 행 형식 이름을 만들면 테이블 이름은 단수가 됩니다. 그리고 테이블에 대해 <xref:System.Data.Linq.DataContext> 속성을 만드는 경우에는 테이블 이름이 복수가 됩니다. 이와 동시에 Northwind 샘플 데이터베이스의 테이블은 미리 복수로 지정되어 있습니다. 그러므로 이러한 작업이 실제로 수행되는지 확인할 수는 없습니다. 일반적으로는 데이터베이스 테이블 이름을 단수로 지정하지만 .NET에서는 컬렉션 이름을 복수로 지정하는 경우도 많습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [방법: Visual Basic 또는 C#에서 개체 모델 생성](../data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
 - [LINQ to SQL에서 코드 생성](../data/adonet/sql/linq/code-generation-in-linq-to-sql.md)

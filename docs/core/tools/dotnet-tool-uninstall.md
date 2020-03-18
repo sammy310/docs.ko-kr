@@ -2,12 +2,12 @@
 title: dotnet tool uninstall 명령
 description: dotnet tool uninstall 명령은 컴퓨터에서 지정된 .NET Core 도구를 제거합니다.
 ms.date: 02/14/2020
-ms.openlocfilehash: 7a15c169c73cf5a743e0fa6f47645d6bccedbde3
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 82799404c40baa3a39f4e2a5fdb414fb745ef448
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157047"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847835"
 ---
 # <a name="dotnet-tool-uninstall"></a>dotnet tool uninstall
 
@@ -21,8 +21,11 @@ ms.locfileid: "78157047"
 
 ```dotnetcli
 dotnet tool uninstall <PACKAGE_NAME> <-g|--global>
+
 dotnet tool uninstall <PACKAGE_NAME> <--tool-path>
+
 dotnet tool uninstall <PACKAGE_NAME>
+
 dotnet tool uninstall <-h|--help>
 ```
 
@@ -77,3 +80,5 @@ dotnet tool uninstall <-h|--help>
 ## <a name="see-also"></a>참조
 
 - [.NET Core 도구](global-tools.md)
+- [자습서: .NET Core CLI를 사용하여 .NET Core 전역 도구 설치 및 사용](global-tools-how-to-use.md)
+- [자습서: .NET Core CLI를 사용하여 .NET Core 로컬 도구 설치 및 사용](local-tools-how-to-use.md)

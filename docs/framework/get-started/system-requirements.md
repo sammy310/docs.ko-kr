@@ -10,16 +10,16 @@ helpviewer_keywords:
 - operating systems supported
 - hardware requirements
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
-ms.openlocfilehash: f853663bef4dd0de7ac61e706dedf8c6a19b5b51
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 6f67d01b4af4a72fb09e5f2aa225e226e268eee2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75545018"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181581"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework 시스템 요구 사항
 
-이 항목의 표에는 다음 .NET Framework 버전의 하드웨어, 운영 체제 및 소프트웨어 요구 사항이 나와 있습니다.
+이 문서의 표에는 다음 .NET Framework 버전의 하드웨어, 운영 체제 및 소프트웨어 요구 사항이 나와 있습니다.
 
 - .NET Framework 4.5 및 해당 포인트 릴리스(4.5.1 및 4.5.2)
 - .NET Framework 4.6 및 해당 포인트 릴리스(4.6.1 및 4.6.2)
@@ -78,7 +78,7 @@ ms.locfileid: "75545018"
 
 - 최상의 호환성 및 보안을 위해 모든 플랫폼에 대해 [Windows 업데이트](https://support.microsoft.com/help/12373/windows-update-faq)에서 제공하는 최신 Windows 서비스 팩으로 업그레이드하고 중요 업데이트를 설치하는 것이 좋습니다.
 
-- 64비트 운영 체제에서는 .NET Framework가 WOW64(64비트 컴퓨터의 32비트 프로세싱) 및 64비트 프로세싱을 둘 다 지원합니다.
+- 64비트 운영 체제에서는 .NET Framework가 WOW64(64비트 컴퓨터의 32비트 프로세싱) 및 64비트 프로세싱을 모두 지원합니다.
 
 ## <a name="supported-server-operating-systems"></a>지원되는 서버 운영 체제
 
@@ -94,7 +94,7 @@ ms.locfileid: "75545018"
 | Windows Server 2008 R2 SP1|64비트 | -- | .NET Framework 4<br /><br /> .NET Framework 4.5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
 | Windows Server 2008 SP2|32비트 및 64비트 | -- | .NET Framework 4<br /><br /> .NET Framework 4.5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6 |
 
- **참고:**
+**참고:**
 
 - Windows Server 2012에 .NET Framework 4.5가 포함되므로 별도로 설치할 필요가 없습니다. 마찬가지로 Windows Server 2012 R2에는 .NET Framework 4.5.1이 포함되어 있습니다.
 
@@ -106,7 +106,7 @@ ms.locfileid: "75545018"
 
 - 최상의 호환성 및 보안을 위해 모든 플랫폼에 대해 [Windows 업데이트](https://support.microsoft.com/help/12373/windows-update-faq)에서 제공하는 최신 Windows 서비스 팩 및 중요 업데이트를 업그레이드하는 것이 좋습니다. 일부 운영 체제에서는 최신 Windows 서비스 팩을 설치해야 할 수도 있습니다.
 
-- 64비트 운영 체제에서는 .NET Framework가 WOW64(64비트 컴퓨터의 32비트 프로세싱) 및 64비트 프로세싱을 둘 다 지원합니다.
+- 64비트 운영 체제에서는 .NET Framework가 WOW64(64비트 컴퓨터의 32비트 프로세싱) 및 64비트 프로세싱을 모두 지원합니다.
 
 ## <a name="see-also"></a>참조
 

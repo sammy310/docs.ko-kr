@@ -15,12 +15,12 @@ helpviewer_keywords:
 - binary resources files
 - embedding files in runtime binary executable
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
-ms.openlocfilehash: 5fc2bcb03ae6814d69e229ba083c1d5c44ae8ff3
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: cf79e7c76fd54c6cb6b235251a57aba33c28552b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204623"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180339"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe(리소스 파일 생성기)
 리소스 파일 생성기(Resgen.exe)를 사용하면 텍스트 파일(.txt 또는 .restext)과 XML 기반 리소스 형식 파일(.resx)을 런타임 이진 실행 파일에 포함하거나 위성 어셈블리에 포함할 수 있는 공용 언어 런타임의 이진 파일(.resources)로 변환할 수 있습니다. [리소스 파일 만들기](../resources/creating-resource-files-for-desktop-apps.md)를 참조하세요.  
@@ -60,7 +60,7 @@ resgen /?
 ## <a name="syntax"></a>구문  
   
 ```console  
-resgen  [-define:symbol1[,symbol2,...]] [/useSourcePath] filename.extension  | /compile filename.extension... [outputFilename.extension] [/r:assembly] [/str:lang[,namespace[,class[,file]]] [/publicclass]]   
+resgen  [-define:symbol1[,symbol2,...]] [/useSourcePath] filename.extension  | /compile filename.extension... [outputFilename.extension] [/r:assembly] [/str:lang[,namespace[,class[,file]]] [/publicclass]]
 ```  
   
 ```console  
@@ -126,14 +126,14 @@ resgen filename.extension [outputDirectory]
   
 - [강력한 형식의 리소스 클래스 생성](resgen-exe-resource-file-generator.md#Strong)  
   
-<a name="Compiling"></a>   
+<a name="Compiling"></a>
 ### <a name="compiling-resources-into-a-binary-file"></a>이진 파일에 리소스 컴파일  
  resgen.exe는 텍스트 기반 리소스 파일(.txt 또는 .restext) 또는 XML 기반 리소스 파일(.resx 파일)을 이진 .resources 파일로 컴파일하는 데 가장 일반적으로 사용됩니다. 언어 컴파일러를 사용하여 메인 어셈블리에 출력 파일을 포함시키거나, [어셈블리 링커(Al.exe)](al-exe-assembly-linker.md)를 사용하여 위성 어셈블리에 포함시킬 수 있습니다.  
   
  리소스 파일을 컴파일하는 구문은 다음과 같습니다.  
   
 ```console  
-resgen inputFilename [outputFilename]   
+resgen inputFilename [outputFilename]
 ```  
   
  여기서 매개 변수는 다음과 같습니다.  
@@ -149,7 +149,7 @@ resgen inputFilename [outputFilename]
  다음 명령을 사용하여 Resources.txt에 있는 이름/값 쌍을 읽고 Resources.resources라는 이진 리소스 파일을 작성합니다. 출력 파일 이름은 명시적으로 지정되지 않기 때문에 기본적으로 입력 파일과 같은 이름을 받습니다.  
   
 ```console  
-resgen Resources.txt   
+resgen Resources.txt
 ```  
   
  다음 명령을 사용하여 Resources.restext에 있는 이름/값 쌍을 읽고 StringResources.resources라는 이진 리소스 파일을 작성합니다.  
@@ -164,7 +164,7 @@ resgen Resources.restext StringResources.resources
 resgen Resources.resx Resources.resources  
 ```  
   
-<a name="Convert"></a>   
+<a name="Convert"></a>
 ### <a name="converting-between-resource-file-types"></a>리소스 파일 형식 간 변환  
  텍스트 기반 또는 XML 기반 리소스 파일을 이진 .resources 파일로 컴파일하는 것 이외에, Resgen.exe는 지원되는 모든 파일 형식을 지원되는 다른 파일 형식으로 변환할 수 있습니다. 이것은 다음과 변환을 수행할 수 있음을 의미합니다.  
   
@@ -199,7 +199,7 @@ resgen Resources.resx Resources.txt
 resgen Resources.resx Resources.restext  
 ```  
   
-<a name="Multiple"></a>   
+<a name="Multiple"></a>
 ### <a name="compiling-or-converting-multiple-files"></a>다중 파일 컴파일 또는 변환  
  `/compile` 스위치를 사용하여 단일 연산에서 하나의 포맷으로부터 다른 포맷으로 리소스 파일 목록을 전환할 수 있습니다. 사용되는 구문은 다음과 같습니다.  
   
@@ -213,7 +213,7 @@ resgen /compile filename.extension [filename.extension...]
 resgen /compile StringResources.txt TableResources.resx ImageResources.resx  
 ```  
   
-<a name="Exporting"></a>   
+<a name="Exporting"></a>
 ### <a name="exporting-resources-to-a-resw-file"></a>.resw 파일에 리소스 내보내기  
  Windows 8.x 스토어 앱을 개발하는 경우, 기존 데스크톱 앱의 리소스가 필요할 수 있습니다. 하지만 두 종류의 애플리케이션은 다른 파일 형식을 지원합니다. 데스크톱 응용 프로그램에서 텍스트(.txt 또는.restext) 또는.resx 파일의 리소스는 이진 .resources 파일로 컴파일됩니다. Windows 8.x 스토어 앱에서 .resw 파일은 이진 패키지 리소스 인덱스(PRI) 파일로 컴파일됩니다. 실행 가능한 또는 위성 어셈블리에서 리소스를 추출하거나 Windows 8.x 스토어 앱 개발 시 사용할 수 있는 하나 이상의 .resw 파일을 작성하여 이 간격을 연결하는 데 Resgen.exe을 사용할 수 있습니다.  
   
@@ -240,7 +240,7 @@ resgen filename.extension  [outputDirectory]
 resgen MyApp.exe Win8Resources  
 ```  
   
-<a name="Conditional"></a>   
+<a name="Conditional"></a>
 ### <a name="conditionally-compiling-resources"></a>리소스 조건부 컴파일  
  .NET Framework 4.5로 시작하는 Resgen.exe에서는 텍스트(.txt 및 .restext) 파일로 된 문자열 리소스의 조건부 컴파일을 지원합니다. 이것은 여러 빌드 구성에 단일 텍스트 기반 리소스 파일을 사용할 수 있도록 합니다.  
   
@@ -250,7 +250,7 @@ resgen MyApp.exe Win8Resources
   
 ```text
 #ifdef PRODUCTION  
-AppTitle=My Software Company Project Manager   
+AppTitle=My Software Company Project Manager
 #endif  
 #ifdef CONSULT  
 AppTitle=My Consulting Company Project Manager  
@@ -269,7 +269,7 @@ resgen /define:CONSULT UIResources.restext
   
  그러면 두 문자열 리소스가 있는 리소스 파일이 생성됩니다. `AppTitle` 리소스 값은 "내 컨설팅 회사 프로젝트 관리자"입니다.  
   
-<a name="Strong"></a>   
+<a name="Strong"></a>
 ### <a name="generating-a-strongly-typed-resource-class"></a>강력한 형식의 리소스 클래스 생성  
  Resgen.exe는 강력한 형식의 리소스를 지원하고, 이러한 리소스는 컴파일 타임에 읽기 전용의 정적 속성을 포함하는 클래스를 만들어 리소스에 대한 액세스를 캡슐화합니다. 이 기능은 리소스를 검색하기 위해 <xref:System.Resources.ResourceManager> 클래스의 메서드를 직접 호출하는 대신 사용할 수 있습니다. `/str` 클래스의 함수를 래핑하는 Resgen.exe의 <xref:System.Resources.Tools.StronglyTypedResourceBuilder> 옵션을 사용하여 강력한 형식의 리소스 지원이 가능합니다. `/str` 옵션을 지정하면 입력 매개 변수에서 참조되는 리소스와 일치하는 강력한 형식의 속성이 포함된 클래스가 Resgen.exe의 출력이 됩니다. 이 클래스는 처리된 파일에서 사용할 수 있는 리소스에 대한 강력한 형식의 읽기 전용 액세스를 제공합니다.  
   
@@ -324,10 +324,10 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
  예를 들어, 다음 명령은 StringResources.txt라는 리소스 파일을 StringResources.resources로 컴파일하고 리소스 관리자에 액세스하는 데 사용할 수 있는 StringResources.vb라는 Visual Basic 소스 코드 파일에서 `StringResources`라는 클래스를 생성합니다.  
   
 ```console  
-resgen StringResources.txt /str:vb,,StringResources   
+resgen StringResources.txt /str:vb,,StringResources
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [도구](index.md)
 - [데스크톱 앱의 리소스](../resources/index.md)

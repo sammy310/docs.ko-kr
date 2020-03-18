@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 1a1f539e80f8d843f40640fa798cf6122f316a9f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e64b690482419963a92764b2c97a42dbb231fbfc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715235"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398306"
 ---
 # <a name="is-c-reference"></a>is(C# 참조)
 
@@ -26,7 +26,7 @@ C# 7.0부터는 `is` 및 [switch](switch.md) 문에서 패턴 일치를 지원�
 
 - [상수 패턴](#constant-pattern) - 식이 지정된 상수 값으로 평가되는지 여부를 테스트합니다.
 
-- [var 패턴](#var-pattern) - 항상 성공하고 식의 값을 새 로컬 변수에 바인딩하는 일치입니다.
+- [var 패턴](#var-pattern) - 항상 성공하고 식의 값을 새 지역 변수에 바인딩하는 일치입니다.
 
 ### <a name="type-pattern"></a>형식 패턴
 
@@ -36,7 +36,7 @@ C# 7.0부터는 `is` 및 [switch](switch.md) 문에서 패턴 일치를 지원�
    expr is type varname
 ```
 
-여기서 *expr*은 일부 형식의 인스턴스로 평가되는 식이고 *type*은 *expr*의 결과가 변환될 형식의 이름이며 *varname*은 `is` 테스트가 `true`인 경우 *expr*의 결과가 변환되는 개체입니다. 
+여기서 *expr*은 일부 형식의 인스턴스로 평가되는 식이고 *type*은 *expr*의 결과가 변환될 형식의 이름이며 *varname*은 `is` 테스트가 `true`인 경우 *expr*의 결과변환가 되는 개체입니다.
 
 *expr*이 `null`이 아니고 다음 중 하나가 true일 경우 `is` 식은 `true`입니다.
 
@@ -106,15 +106,21 @@ C# 7.1부터 *expr*은 제네릭 형식 매개 변수 및 해당 제약 조건�
 
 ### <a name="var-pattern"></a>var 패턴
 
-`var` 패턴은 모든 형식 또는 값에 대해 catch-all입니다. *expr*의 값은 항상 *expr*의 컴파일 시간 형식과 동일한 형식의 지역 변수에 할당됩니다. `is` 식의 결과는 항상 `true`입니다. 사용되는 구문은 다음과 같습니다.
+`var` 패턴을 사용한 패턴 일치는 항상 성공합니다. 사용되는 구문은 다음과 같습니다.
 
 ```csharp
    expr is var varname
 ```
 
-다음 예제에서는 var 패턴을 사용하여 `obj`라는 변수에 식을 할당합니다. 그런 다음 `obj`의 값과 형식을 표시합니다.
+여기서 *expr*의 값은 항상 *varname*이라는 지역 변수에 할당됩니다. *varname*은 컴파일 시간 형식의 *expr*과 동일한 형식의 변수입니다.
+
+*expr*이 `null`로 평가되는 경우 `is` 식은 `true`를 생성하고 *varname*에 `null`을 할당합니다. var 패턴은 `null` 값에 대해 `true`를 생성하는 흔치 않은 `is` 용도 중 하나입니다.
+
+다음 예와 같이 `var` 패턴을 사용하여 부울 식 내에 임시 변수를 만들 수 있습니다.
 
 [!code-csharp[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
+
+앞의 예에서 임시 변수는 비용이 많이 드는 작업의 결과를 저장하는 데 사용됩니다. 그런 다음 변수를 여러 번 사용할 수 있습니다.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
   

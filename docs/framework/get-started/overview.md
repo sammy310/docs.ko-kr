@@ -7,18 +7,18 @@ helpviewer_keywords:
 - common language runtime, about
 - common language runtime, overview
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
-ms.openlocfilehash: 397a78514dc5878e83708882ceeb4d92160d9a78
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: de9cbdab5d5786b9d59d23ba675fa3f78f807716
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975651"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181600"
 ---
-# <a name="overview-of-the-net-framework"></a>.NET Framework의 개요
+# <a name="overview-of-net-framework"></a>.NET Framework의 개요
 
-.NET Framework는 차세대 앱 및 XML 웹 서비스의 빌드 및 실행을 지원하는 기술입니다. .NET Framework는 다음과 같은 목적을 달성하기 위해 디자인되었습니다.
+.NET Framework는 Windows 앱 및 웹 서비스를 빌드하고 실행하도록 지원하는 기술입니다. .NET Framework는 다음과 같은 목적을 달성하기 위해 디자인되었습니다.
 
-- 개체 코드가 로컬로 저장 및 실행되든, 로컬로 실행되지만 인터넷을 통해 분산되든, 원격으로 실행되든 상관 없이 일관된 개체 지향 프로그래밍 환경을 제공합니다.
+- 개체 코드가 로컬로 저장 및 실행되든, 로컬로 실행되지만 웹을 통해 분산되든, 원격으로 실행되든 상관없이 일관된 개체 지향 프로그래밍 환경을 제공합니다.
 
 - 소프트웨어 배포 및 버전 관리 충돌을 최소화하는 코드 실행 환경을 제공합니다.
 
@@ -31,13 +31,13 @@ ms.locfileid: "73975651"
 - .NET Framework를 기반으로 하는 코드가 다른 모든 코드와 통합되도록 모든 통신을 산업 표준을 토대로 빌드합니다.
 
 > [!NOTE]
-> 사용자와 개발자 모두를 위한 .NET Framework에 대한 일반적인 소개는 [시작](index.md)을 참조하십시오.
+> 사용자와 개발자 모두를 위한 .NET Framework에 대한 일반적인 소개는 [시작](index.md)을 참조하세요.
 
 .NET Framework는 CLR(공용 언어 런타임)과 .NET Framework 클래스 라이브러리로 구성되어 있습니다. 공용 언어 런타임은 .NET Framework의 기초입니다. 런타임은 실행 시 코드를 관리하는 에이전트로서, 메모리 관리, 스레드 관리, 원격 서비스 등의 핵심 서비스를 제공하며 동시에 엄격한 형식 안전성 및 다른 형태의 코드 정확성을 유지하므로 보안과 안정성을 강화합니다. 사실, 코드 관리의 개념은 런타임의 기본 원칙입니다. 런타임을 대상으로 하는 코드는 관리 코드라고 하지만, 런타임을 대상으로 하지 않는 코드는 비관리 코드라고 합니다. 클래스 라이브러리는 재사용 가능 형식의 포괄적 개체 지향 컬렉션으로, 기존 명령줄 또는 GUI(그래픽 사용자 인터페이스) 앱에서 ASP.NET이 제공하는 Web Forms 및 XML Web services 같은 최신의 혁신적인 기능을 기반으로 하는 앱에 이르기까지 다양한 앱을 개발하는 데 사용할 수 있습니다.
 
 .NET Framework는 공용 언어 런타임을 해당 프로세스로 로드하고 관리 코드의 실행을 시작하는 관리되지 않는 구성 요소에 의해 호스팅되므로, 관리되는 기능과 관리되지 않는 기능을 모두 사용하는 소프트웨어 환경을 만들 수 있습니다. .NET Framework에서는 몇 가지 런타임 호스트를 제공할 뿐만 아니라 타사 런타임 호스트의 개발도 지원합니다.
 
-예를 들어, ASP.NET에서는 런타임을 호스팅하여 관리 코드에 대해 확장 가능한 서버 쪽 환경을 제공합니다. ASP.NET은 런타임과 함께 직접 작동하여 ASP.NET 앱 및 XML Web services를 활성화합니다. 이 둘에 대한 내용은 이 항목의 뒷부분에서 설명합니다.
+예를 들어, ASP.NET에서는 런타임을 호스팅하여 관리 코드에 대해 확장 가능한 서버 쪽 환경을 제공합니다. ASP.NET은 런타임과 함께 직접 작동하여 ASP.NET 앱 및 XML Web services를 활성화합니다. 이 둘에 대한 내용은 이 문서의 뒷부분에서 설명합니다.
 
 Internet Explorer는 MIME 형식 확장의 형식으로 런타임을 호스트하는 관리되지 않는 앱의 예입니다. Internet Explorer를 사용하여 런타임을 호스팅하면 HTML 문서에 관리되는 구성 요소 또는 Windows Forms 컨트롤을 포함시킬 수 있습니다. 이러한 방식으로 런타임을 호스트하면 관리되는 모바일 코드를 사용할 수 있게 되며, 관리 코드에서만 제공하는 부분 신뢰 실행 및 격리된 파일 스토리지 등의 획기적으로 향상된 기능도 사용할 수 있습니다.
 
@@ -89,7 +89,7 @@ Internet Explorer는 MIME 형식 확장의 형식으로 런타임을 호스트�
 
 Windows Forms 클래스는 Windows GUI 개발을 매우 단순하게 하는 다시 사용할 수 있는 형식의 포괄적인 집합입니다. ASP.NET Web Form 앱을 작성하는 경우 Web Forms 클래스를 사용할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [시스템 요구 사항](system-requirements.md)
 - [설치 가이드](../install/index.md)

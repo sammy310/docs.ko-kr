@@ -5,10 +5,10 @@ ms.date: 10/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.openlocfilehash: c651aa6e0f37a968e6f8b26d1909def6fa488ccd
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72303697"
 ---
 # <a name="unmanaged-native-library-loading-algorithm"></a>관리되지 않는(네이티브) 라이브러리 로드 알고리즘
@@ -23,7 +23,7 @@ ms.locfileid: "72303697"
 
 1. `active` <xref:System.Runtime.Loader.AssemblyLoadContext>를 확인합니다. 관리되지 않는 로드 라이브러리의 경우 `active` AssemblyLoadContext는 `PInvoke`를 정의하는 어셈블리를 사용합니다.
 
-2. `active` <xref:System.Runtime.Loader.AssemblyLoadContext>의 경우 다음을 통해 우선순위를 기준으로 어셈블리를 찾습니다.
+2. `active` <xref:System.Runtime.Loader.AssemblyLoadContext>의 경우 다음을 통해 우선 순위를 기준으로 어셈블리를 찾습니다.
     * 해당 캐시를 확인하는 중입니다.
 
     * <xref:System.Runtime.InteropServices.NativeLibrary.SetDllImportResolver(System.Reflection.Assembly,System.Runtime.InteropServices.DllImportResolver)?displayProperty=nameWithType> 함수로 설정된 현재 <xref:System.Runtime.InteropServices.DllImportResolver?displayProperty=nameWithType> 대리자를 호출하는 중입니다.

@@ -2,12 +2,12 @@
 title: 리플렉션을 사용하여 어셈블리의 메타데이터를 쿼리하는 방법(LINQ)(C#)
 ms.date: 07/20/2015
 ms.assetid: c4cdce49-b1c8-4420-b12a-9ff7e6671368
-ms.openlocfilehash: 65f27ae17d77553bfd7a78c1310febd337a55a6e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 6e68cfea2bf3e03aed9de3e4a18cf9941ece34e3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345695"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168923"
 ---
 # <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>리플렉션을 사용하여 어셈블리의 메타데이터를 쿼리하는 방법(LINQ)(C#)
 
@@ -30,7 +30,7 @@ class ReflectionHowTO
         var pubTypesQuery = from type in assembly.GetTypes()  
                     where type.IsPublic  
                         from method in type.GetMethods()  
-                        where method.ReturnType.IsArray == true 
+                        where method.ReturnType.IsArray == true
                             || ( method.ReturnType.GetInterface(  
                                 typeof(System.Collections.Generic.IEnumerable<>).FullName ) != null  
                             && method.ReturnType.FullName != "System.String" )  
@@ -51,8 +51,8 @@ class ReflectionHowTO
 }
 ```  
 
-이 예제에서는 <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> 메서드를 사용하여 지정된 어셈블리의 형식 배열을 반환합니다. public 형식만 반환되도록 [where](../../../language-reference/keywords/where-clause.md) 필터가 적용됩니다. 각 public 형식에 대해 <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> 호출에서 반환된 <xref:System.Reflection.MethodInfo> 배열을 사용하여 하위 쿼리가 생성됩니다. 이러한 결과는 해당 반환 형식이 배열이거나 <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 형식인 메서드만 반환하도록 필터링됩니다. 마지막으로, 이러한 결과는 형식 이름을 키로 사용하여 그룹화됩니다.  
+이 예제에서는 <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> 메서드를 사용하여 지정된 어셈블리의 형식 배열을 반환합니다. public 형식만 반환되도록 [where](../../../language-reference/keywords/where-clause.md) 필터가 적용됩니다. 각 public 형식에 대해 <xref:System.Reflection.MethodInfo> 호출에서 반환된 <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> 배열을 사용하여 하위 쿼리가 생성됩니다. 이러한 결과는 해당 반환 형식이 배열이거나 <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 형식인 메서드만 반환하도록 필터링됩니다. 마지막으로, 이러한 결과는 형식 이름을 키로 사용하여 그룹화됩니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [LINQ to Objects(C#)](./linq-to-objects.md)

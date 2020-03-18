@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: dc5f608dc9eb4635e1282a9ca5e15ff1bf7d0e0d
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 711b51c590be149545fda3130148e2bcaef8be4f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449562"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78261985"
 ---
 ### <a name="private-fields-added-to-built-in-struct-types"></a>기본 제공 구조체 형식에 추가된 프라이빗 필드
 
-프라이빗 필드가 [참조 어셈블리](../../../../docs/standard/assembly/reference-assemblies.md)의 기본 제공 구조체 형식에 추가되었습니다. 그 결과 C#에서 구조체 형식은 항상 [new 연산자](../../../../docs/csharp/language-reference/operators/new-operator.md) 또는 [기본 리터럴](../../../../docs/csharp/language-reference/operators/default.md#default-literal) 사용, 또는 각 프라이빗 필드의 초기화를 통해 인스턴스화되어야 합니다.
+프라이빗 필드가 [참조 어셈블리](../../../../docs/standard/assembly/reference-assemblies.md)의 [특정 구조체 형식](#affected-apis)에 추가되었습니다. 그 결과 C#에서 이러한 구조체 형식은 항상 [new 연산자](../../../../docs/csharp/language-reference/operators/new-operator.md) 또는 [기본 리터럴](../../../../docs/csharp/language-reference/operators/default.md#default-literal)을 사용하여 인스턴스화해야 합니다.
 
 #### <a name="change-description"></a>변경 내용 설명
 
-.NET Core 2.0 및 이전 버전에서 <xref:System.ConsoleKeyInfo>와 같은 일부 기본 제공 구조체 형식은 C#에서 `new` 연산자 또는 [기본 리터럴](../../../../docs/csharp/language-reference/operators/default.md#default-literal)을 사용하지 않고 인스턴스화될 수 있습니다. 이는 C# 컴파일러에서 사용하는 [참조 어셈블리](../../../../docs/standard/assembly/reference-assemblies.md)에 구조체에 대한 프라이빗 필드가 포함되지 않았기 때문입니다. .NET 구조체 형식에 대한 모든 프라이빗 필드는 .NET Core 2.1에서 시작하는 참조 어셈블리에 추가됩니다.
+.NET Core 2.0 및 이전 버전에서 제공되는 일부 구조체 형식(예: <xref:System.ConsoleKeyInfo>)은 C#에서 `new` 연산자 또는 [기본 리터럴](../../../../docs/csharp/language-reference/operators/default.md#default-literal)을 사용하지 않고도 인스턴스화할 수 있습니다. 이는 C# 컴파일러에서 사용하는 [참조 어셈블리](../../../../docs/standard/assembly/reference-assemblies.md)에 구조체에 대한 프라이빗 필드가 포함되지 않았기 때문입니다. .NET 구조체 형식에 대한 모든 프라이빗 필드는 .NET Core 2.1에서 시작하는 참조 어셈블리에 추가됩니다.
 
 예를 들어 다음 C# 코드는 .NET Core 2.0에서 컴파일되지만 .NET Core 2.1에서는 컴파일되지 않습니다.
 
@@ -49,16 +49,6 @@ ConsoleKeyInfo key = default;    // Struct type.
 
 if (key.ToString() == "y")
     Console.WriteLine("Yes!");
-```
-
-```csharp
-ConsoleKeyInfo[] keys = new ConsoleKeyInfo[5];    // Array of structs.
-
-for (int i = 0; i < keys.Length; i++)
-{
-    // Initialize each array element with the new operator.
-    keys[i] = new ConsoleKeyInfo();
-}
 ```
 
 #### <a name="category"></a>범주

@@ -1,13 +1,13 @@
 ---
 title: Ocelot을 사용하여 API 게이트웨이 구현
 description: Ocelot을 사용하여 API 게이트웨이를 구현하는 방법과 컨테이너 기반 환경에서 Ocelot을 사용하는 방법을 알아봅니다.
-ms.date: 01/30/2020
-ms.openlocfilehash: 0eb834829a418cfa1ccdf13c5fc8849f6855c4ba
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.date: 03/02/2020
+ms.openlocfilehash: 28b9ca22d232baf3545d71b876cecf72fea05c92
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502423"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846948"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Ocelot을 사용하여 API 게이트웨이 구현
 
@@ -140,7 +140,7 @@ docker-compose run --service-ports catalog-api
 
 Ocelot은 기본적으로 특정 순서로 적용할 수 있는 일단의 미들웨어입니다.
 
-Ocelot은 ASP.NET Core에서만 작동하도록 설계되었습니다. .NET Core 2.0 런타임 및 .NET Framework 4.6.1 런타임 이상이 포함된 .NET Standard 2.0이 지원되는 곳이면 어디서나 사용할 수 있도록 `netstandard2.0`을 대상으로 합니다.
+Ocelot은 ASP.NET Core에서만 작동하도록 설계되었습니다. 최신 버전의 패키지는 `.NETCoreApp 3.1`을 대상으로 하므로 .NET Framework 애플리케이션에 적합하지 않습니다.
 
 Visual Studio에서 [Ocelot의 NuGet 패키지](https://www.nuget.org/packages/Ocelot/)를 사용하여 ASP.NET Core 프로젝트에 Ocelot 및 해당 종속성을 설치합니다.
 

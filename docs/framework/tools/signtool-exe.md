@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-ms.openlocfilehash: 636aa76a17a887aefe51b7e7858099c541dbb21f
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 8ce31b1399700906d6d6e2a369dcfc4b61fe9646
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801846"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180320"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe(서명 도구)
 서명 도구는 파일에 디지털 서명을 하고, 파일의 서명을 확인하고, 파일에 타임스탬프를 기록하는 명령줄 도구입니다.  
@@ -50,7 +50,7 @@ signtool [command] [options] [file_name | ...]
 |**/v**|명령이 성공적으로 실행되는지 또는 실패하는지 여부와 상관없이 자세한 정보 출력을 표시하고 경고 메시지를 표시합니다.|  
 |**/debug**|디버깅 정보를 표시합니다.|  
   
-<a name="catdb"></a>   
+<a name="catdb"></a>
 ## <a name="catdb-command-options"></a>catdb 명령 옵션  
  다음 표에는 `catdb` 명령에 사용할 수 있는 옵션이 나열되어 있습니다.  
   
@@ -61,7 +61,7 @@ signtool [command] [options] [file_name | ...]
 |`/r`|지정된 카탈로그를 카탈로그 데이터베이스에서 제거합니다. 이 옵션을 지정하지 않으면 서명 도구는 지정된 카탈로그를 카탈로그 데이터베이스에 추가합니다.|  
 |`/u`|추가된 카탈로그 파일에 대해 고유한 이름이 자동으로 생성되도록 지정합니다. 필요한 경우 기존 카탈로그 파일과의 이름 충돌을 방지하기 위해 카탈로그 파일의 이름을 바꿉니다. 이 옵션을 지정하지 않으면 서명 도구는 추가하려는 카탈로그와 같은 이름의 기존 카탈로그를 덮어씁니다.|  
   
-<a name="sign"></a>   
+<a name="sign"></a>
 ## <a name="sign-command-options"></a>sign 명령 옵션  
  다음 표에는 `sign` 명령에 사용할 수 있는 옵션이 나열되어 있습니다.  
   
@@ -81,7 +81,7 @@ signtool [command] [options] [file_name | ...]
 |`/n`  *SubjectName*|서명 인증서의 주체 이름을 지정합니다. 이 값은 주체의 전체 이름에서 부분 문자열이 될 수 있습니다.|  
 |`/nph`|지원되는 경우 실행 파일에 대한 페이지 해시를 억제합니다. 기본값은 SIGNTOOL_PAGE_HASHES 환경 변수 및 wintrust.dll 버전에 의해 결정됩니다. PE 파일이 아닌 경우 이 옵션이 무시됩니다.|  
 |`/p`  *Password*|PFX 파일을 열 때 사용할 암호를 지정합니다. (`/f` 옵션을 사용하여 PFX 파일을 지정합니다.)|  
-|`/p7` *Path*|지정된 각 콘텐츠 파일에 대한 PKCS(공개 키 암호화 표준) #7 파일이 생성되도록 지정합니다. PKCS #7 파일의 이름은 *path*\\*filename*.p7입니다.|  
+|`/p7` *경로*|지정된 각 콘텐츠 파일에 대한 PKCS(공개 키 암호화 표준) #7 파일이 생성되도록 지정합니다. PKCS #7 파일의 이름은 *path*\\*filename*.p7입니다.|  
 |`/p7ce` *Value*|서명된 PKCS #7 콘텐츠에 대한 옵션을 지정합니다. 서명된 콘텐츠를 PKCS #7 파일에 포함하려면 *Value*를 "Embedded"로 설정하고, 분리된 PKCS #7 파일의 서명된 데이터 부분을 생성하려면 "DetachedSignedData"로 설정합니다. `/p7ce` 옵션을 사용하지 않을 경우 서명된 내용이 기본으로 포함됩니다.|  
 |`/p7co` *\<OID>*|서명된 PKCS #7 콘텐츠를 식별하는 OID(개체 식별자)를 지정합니다.|  
 |`/ph`|지원되지 않는 경우 실행 파일에 대한 페이지 해시를 생성합니다.|  
@@ -97,7 +97,7 @@ signtool [command] [options] [file_name | ...]
   
  사용 예제는 [SignTool을 사용하여 파일에 서명](/windows/desktop/SecCrypto/using-signtool-to-sign-a-file)을 참조하세요.  
   
-<a name="TimeStamp"></a>   
+<a name="TimeStamp"></a>
 ## <a name="timestamp-command-options"></a>TimeStamp 명령줄 옵션  
  다음 표에는 `TimeStamp` 명령에 사용할 수 있는 옵션이 나열되어 있습니다.  
   
@@ -111,7 +111,7 @@ signtool [command] [options] [file_name | ...]
   
  사용 예제는 [이전에 서명한 파일에 타임스탬프 추가](/windows/desktop/SecCrypto/adding-time-stamps-to-previously-signed-files)를 참조하세요.  
   
-<a name="Verify"></a>   
+<a name="Verify"></a>
 ## <a name="verify-command-options"></a>명령 옵션 확인  
   
 |옵션 확인|설명|  
@@ -137,7 +137,7 @@ signtool [command] [options] [file_name | ...]
   
  사용 예제는 [SignTool을 사용하여 파일 시그니처 확인](/windows/desktop/SecCrypto/using-signtool-to-verify-a-file-signature)을 참조하세요.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  서명 도구는 종료할 때 다음 종료 코드 중 하나를 반환합니다.  
   
 |종료 코드|설명|  
@@ -207,7 +207,7 @@ signtool verify /a SystemFile.dll
 signtool verify /c MyCatalog.cat SystemFile.dll  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [도구](index.md)
 - [명령 프롬프트](developer-command-prompt-for-vs.md)

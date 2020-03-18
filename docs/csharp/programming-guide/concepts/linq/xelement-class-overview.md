@@ -2,12 +2,12 @@
 title: XElement 클래스 개요(C#)
 ms.date: 07/20/2015
 ms.assetid: 2b9f0cd8-a1d1-4037-accf-0f38a410fa11
-ms.openlocfilehash: d77c725b3c786b8a8fa2b0eeab4bc4b30f298218
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 6a93dd4bdaf16fddff800b08b0f3146ecb63f9b7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635472"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167896"
 ---
 # <a name="xelement-class-overview-c"></a>XElement 클래스 개요(C#)
 <xref:System.Xml.Linq.XElement> 클래스는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]의 기본 클래스 중 하나이며 XML 요소를 나타냅니다. 이 클래스를 사용하여 요소를 만들거나, 요소의 내용을 변경하거나, 자식 요소를 추가, 변경 또는 삭제하거나, 특성을 요소에 추가하거나, 요소의 내용을 텍스트 형태로 serialize할 수 있습니다. 또한 <xref:System.Xml?displayProperty=nameWithType>, <xref:System.Xml.XmlReader> 및 <xref:System.Xml.XmlWriter>과 같은 <xref:System.Xml.Xsl.XslCompiledTransform>의 다른 클래스와 상호 운용할 수도 있습니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "75635472"
   
 - <xref:System.IO.TextReader>, 텍스트 파일 또는 웹 주소(URL)와 같은 다양한 소스에서 XML의 구문을 분석할 수 있습니다. 자세한 내용은 [XML 구문 분석(C#)](./how-to-parse-a-string.md)을 참조하세요.  
   
-- <xref:System.Xml.XmlReader>를 사용하여 트리를 채울 수 있습니다. 자세한 내용은 <xref:System.Xml.Linq.XNode.ReadFrom%2A>를 참조하세요.  
+- <xref:System.Xml.XmlReader>를 사용하여 트리를 채울 수 있습니다. 자세한 내용은 <xref:System.Xml.Linq.XNode.ReadFrom%2A>을 참조하세요.  
   
 - 내용을 <xref:System.Xml.XmlWriter>에 쓸 수 있는 모듈이 있는 경우 <xref:System.Xml.Linq.XContainer.CreateWriter%2A> 메서드를 사용하여 작성기를 만들고 모듈에 작성기를 전달한 다음 <xref:System.Xml.XmlWriter>에 쓴 내용을 사용하여 XML 트리를 채울 수 있습니다.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "75635472"
 XElement contacts =  
     new XElement("Contacts",  
         new XElement("Contact",  
-            new XElement("Name", "Patrick Hines"),   
+            new XElement("Name", "Patrick Hines"),
             new XElement("Phone", "206-555-0144"),  
             new XElement("Address",  
                 new XElement("Street1", "123 Main St"),  
@@ -95,6 +95,6 @@ Console.WriteLine(xmlTree);
   
  자세한 내용은 [XML 트리 수정(LINQ to XML)(C#)](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md)을 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [LINQ to XML 프로그래밍 개요(C#)](serializing-to-files-textwriters-and-xmlwriters.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
-ms.openlocfilehash: 22e7c670f93293bd37edcb181c8130cdbe9ceb26
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 748745ca6799005dccdbfcbcc37a8c2a38f2a88e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047057"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180642"
 ---
 # <a name="using-an-asynchronous-client-socket"></a>비동기 클라이언트 소켓 사용
 비동기 클라이언트 소켓은 네트워크 작업이 완료될 때까지 기다리는 동안 애플리케이션을 일시 중단하지 않습니다. 대신, 표준 .NET Framework 비동기 프로그래밍 모델을 사용하여 애플리케이션이 원래 스레드에서 계속 실행되는 동안 한 스레드에서 네트워크 연결을 처리합니다. 비동기 소켓은 네트워크를 많이 사용하거나 계속하기 전에 네트워크 작업이 완료될 때까지 기다릴 수 없는 애플리케이션에 적합합니다.  
@@ -46,14 +46,14 @@ End Sub 'Connect
   
 ```csharp  
 public static void Connect(EndPoint remoteEP, Socket client) {  
-    client.BeginConnect(remoteEP,   
+    client.BeginConnect(remoteEP,
         new AsyncCallback(ConnectCallback), client );  
   
    connectDone.WaitOne();  
 }  
 ```  
   
- 연결 콜백 메서드 `ConnectCallback`은 <xref:System.AsyncCallback> 대리자를 구현합니다. 원격 디바이스를 사용할 수 있는 경우 원격 디바이스에 연결한 다음 **ManualResetEvent**`connectDone`을 설정하여 연결이 완료되었음을 애플리케이션 스레드에 알립니다. 다음 코드에서는 `ConnectCallback` 메서드를 구현합니다.  
+ 연결 콜백 메서드 `ConnectCallback`은 <xref:System.AsyncCallback> 대리자를 구현합니다. 원격 디바이스를 사용할 수 있는 경우 원격 디바이스에 연결한 다음 **ManualResetEvent** `connectDone`을 설정하여 연결이 완료되었음을 애플리케이션 스레드에 알립니다. 다음 코드에서는 `ConnectCallback` 메서드를 구현합니다.  
   
 ```vb  
 Private Shared Sub ConnectCallback(ar As IAsyncResult)  
@@ -162,11 +162,11 @@ private static void SendCallback(IAsyncResult ar) {
 ```vb  
 Public Class StateObject  
     ' Client socket.  
-    Public workSocket As Socket = Nothing   
+    Public workSocket As Socket = Nothing
     ' Size of receive buffer.  
     Public BufferSize As Integer = 256  
     ' Receive buffer.  
-    Public buffer(256) As Byte   
+    Public buffer(256) As Byte
     ' Received data string.  
     Public sb As New StringBuilder()  
 End Class 'StateObject  
@@ -219,14 +219,14 @@ private static void Receive(Socket client) {
 }  
 ```  
   
- 수신 콜백 메서드 `ReceiveCallback`은 **AsyncCallback** 대리자를 구현합니다. 네트워크 디바이스에서 데이터를 수신하고 메시지 문자열을 작성합니다. 네트워크에서 1바이트 이상의 데이터를 데이터 버퍼로 읽어온 다음 클라이언트에서 보낸 데이터가 완료될 때까지 **BeginReceive** 메서드를 다시 호출합니다. 클라이언트에서 모든 데이터를 읽은 후 `ReceiveCallback`은 **ManualResetEvent**`sendDone`을 설정하여 데이터가 완료되었음을 애플리케이션 스레드에 알립니다.  
+ 수신 콜백 메서드 `ReceiveCallback`은 **AsyncCallback** 대리자를 구현합니다. 네트워크 디바이스에서 데이터를 수신하고 메시지 문자열을 작성합니다. 네트워크에서 1바이트 이상의 데이터를 데이터 버퍼로 읽어온 다음 클라이언트에서 보낸 데이터가 완료될 때까지 **BeginReceive** 메서드를 다시 호출합니다. 클라이언트에서 모든 데이터를 읽은 후 `ReceiveCallback`은 **ManualResetEvent** `sendDone`을 설정하여 데이터가 완료되었음을 애플리케이션 스레드에 알립니다.  
   
  다음 예제 코드에서는 `ReceiveCallback` 메서드를 구현합니다. 받은 문자열을 저장하는 `response`라는 전역 문자열과 `receiveDone`이라는 전역 **ManualResetEvent**를 가정합니다. 서버는 네트워크 세션을 종료하기 위해 클라이언트 소켓을 정상적으로 종료해야 합니다.  
   
 ```vb  
 Private Shared Sub ReceiveCallback(ar As IAsyncResult)  
     Try  
-        ' Retrieve the state object and the client socket   
+        ' Retrieve the state object and the client socket
         ' from the asynchronous state object.  
         Dim state As StateObject = CType(ar.AsyncState, StateObject)  
         Dim client As Socket = state.workSocket  
@@ -259,7 +259,7 @@ End Sub 'ReceiveCallback
 ```csharp  
 private static void ReceiveCallback( IAsyncResult ar ) {  
     try {  
-        // Retrieve the state object and the client socket   
+        // Retrieve the state object and the client socket
         // from the asynchronous state object.  
         StateObject state = (StateObject) ar.AsyncState;  
         Socket client = state.workSocket;  
@@ -285,7 +285,7 @@ private static void ReceiveCallback( IAsyncResult ar ) {
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [동기 클라이언트 소켓 사용](using-a-synchronous-client-socket.md)
 - [소켓으로 수신](listening-with-sockets.md)

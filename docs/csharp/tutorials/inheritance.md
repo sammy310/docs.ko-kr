@@ -4,18 +4,18 @@ description: C# 라이브러리 및 애플리케이션에서 상속 사용 방�
 ms.date: 07/05/2018
 ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: b69da841c7c7a2e518191ad34f2ff5b368899728
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b72badb7833e018dfcbf5d2583b17f17c800c382
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120126"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156755"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 및 .NET의 상속
 
 이 자습서에서는 C#의 상속에 대해 소개합니다. 상속은 특정 기능(데이터 및 동작)을 제공하는 기본 클래스를 정의하고 해당 기능을 상속하거나 재정의하는 파생 클래스를 정의할 수 있는 개체 지향 프로그래밍 언어의 기능입니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 자습서에서는 .NET Core SDK를 설치했다고 가정합니다. 다운로드하려면 [.NET Core 다운로드](https://dotnet.microsoft.com/download) 페이지를 방문하세요. 코드 편집기도 필요합니다. 원하는 어떤 코드 편집기도 사용 가능하지만 이 자습서에서는 [Visual Studio Code](https://code.visualstudio.com)를 사용합니다.
 
@@ -141,7 +141,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 | 형식 범주 | 다음에서 암시적으로 상속                                                      |
 | ------------- | ----------------------------------------------------------------------------- |
-| 클래스         | <xref:System.Object>                                                          |
+| class         | <xref:System.Object>                                                          |
 | struct        | <xref:System.ValueType>, <xref:System.Object>                                 |
 | enum          | <xref:System.Enum>, <xref:System.ValueType>, <xref:System.Object>             |
 | 대리자(delegate)      | <xref:System.MulticastDelegate>, <xref:System.Delegate>, <xref:System.Object> |
@@ -291,11 +291,11 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
 
-다음 예제에서는 `Shape`에서 파생된 개체를 사용합니다. 또한 `Shape`에서 파생된 개체의 배열을 인스턴스화하고 반환 `Shape` 속성 값을 래핑하는 `Shape` 클래스의 정적 메서드를 호출합니다. 런타임에서는 파생 형식의 재정의된 속성에서 값을 검색합니다. 또한 이 예제에서는 배열의 각 `Shape` 개체를 해상 파생 형식으로 캐스팅하고, 캐스팅이 성공하면 `Shape`의 해당 특정 하위 클래스 속성을 검색합니다. 
+다음 예제에서는 `Shape`에서 파생된 개체를 사용합니다. 또한 `Shape`에서 파생된 개체의 배열을 인스턴스화하고 반환 `Shape` 속성 값을 래핑하는 `Shape` 클래스의 정적 메서드를 호출합니다. 런타임에서는 파생 형식의 재정의된 속성에서 값을 검색합니다. 또한 이 예제에서는 배열의 각 `Shape` 개체를 해상 파생 형식으로 캐스팅하고, 캐스팅이 성공하면 `Shape`의 해당 특정 하위 클래스 속성을 검색합니다.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [클래스 및 개체](../tour-of-csharp/classes-and-objects.md)
 - [상속(C# 프로그래밍 가이드)](../programming-guide/classes-and-structs/inheritance.md)

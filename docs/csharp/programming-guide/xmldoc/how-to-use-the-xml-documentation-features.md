@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 57034fb835d4c82b5bf658e61ec78ef226c2551e
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e279b13d9216120e25f454faa14dc71ad24c74ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789780"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79157002"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>XML 문서 기능을 사용하는 방법
 
@@ -62,7 +62,7 @@ ms.locfileid: "76789780"
             </summary>
             <param name="s"> Parameter description for s goes here.</param>
             <seealso cref="T:System.String">
-            You can use the cref attribute on any tag to reference a type or member 
+            You can use the cref attribute on any tag to reference a type or member
             and the compiler will check that the reference exists.
             </seealso>
         </member>
@@ -124,14 +124,14 @@ XML 문서는 ///로 시작합니다. 새 프로젝트를 만드는 경우 마�
 
   - \<param> 태그는 매개 변수를 설명하는 데 사용됩니다. 사용되는 경우 컴파일러는 매개 변수가 있고 모든 매개 변수가 문서에서 설명되었는지 확인합니다. 확인에 실패하면 컴파일러가 경고를 실행합니다.
 
-  - `cref` 특성을 태그에 연결하여 코드 요소에 대한 참조를 제공할 수 있습니다. 컴파일러에서 이 코드 요소가 있는지 확인합니다. 확인에 실패하면 컴파일러가 경고를 실행합니다. 컴파일러는 `cref` 특성에 설명된 형식을 찾을 때 모든 `using` 문을 따릅니다.
+  - `cref` 특성을 태그에 연결하여 코드 요소에 대한 참조를 제공할 수 있습니다. 컴파일러에서 이 코드 요소가 있는지 확인합니다. 확인에 실패하면 컴파일러가 경고를 실행합니다. 컴파일러는 `using` 특성에 설명된 형식을 찾을 때 모든 `cref` 문을 따릅니다.
 
   - \<summary> 태그는 Visual Studio 내의 IntelliSense에서 형식 또는 멤버에 대한 추가 정보를 표시하는 데 사용됩니다.
 
     > [!NOTE]
     > XML 파일은 형식 및 멤버에 대한 전체 정보를 제공하지 않습니다(예: 형식 정보가 포함되지 않음). 형식 또는 멤버에 대한 전체 정보를 가져오려면 실제 형식 또는 멤버에 대한 리플렉션과 함께 문서 파일을 사용해야 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [-doc(C# 컴파일러 옵션)](../../language-reference/compiler-options/doc-compiler-option.md)

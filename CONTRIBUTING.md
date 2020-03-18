@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 469be53e14c42775f21ef1ef815becd5cad03a97
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: e5da9a98e8725880223df3737dc60f773db8d20e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75336716"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79141135"
 ---
 # <a name="contributing"></a>참여
 
@@ -25,6 +25,10 @@ ms.locfileid: "75336716"
 - 이 리포지토리의 [코드 샘플 및 코드 조각](https://github.com/dotnet/samples) 문제 및 작업은 [dotnet/docs/issues](https://github.com/dotnet/docs/issues)에서 추적됩니다.
 - 이 리포지토리의 [.NET API 참조](https://github.com/dotnet/dotnet-api-docs) 문제 및 작업은 [dotnet/dotnet-api-docs/issues](https://github.com/dotnet/dotnet-api-docs/issues)에서 추적됩니다.
 - 이 리포지토리의 [.NET Compiler Platform SDK 참조](https://github.com/dotnet/roslyn-api-docs) 문제 및 작업은 [dotnet/docs/issues](https://github.com/dotnet/docs/issues)에서 추적됩니다.
+
+### <a name="contributing-to-international-content"></a>국가별 콘텐츠 기여
+
+MT(기계 번역) 콘텐츠 기여는 현재 허용되지 않습니다. MT 콘텐츠의 품질을 개선하기 위해 인공신경망 MT 엔진으로 전환했습니다. 인공신경망 MT 엔진을 학습하는 데 사용되는 HT(사람 번역) 콘텐츠 기여를 허용하고 권장합니다. 따라서 시간이 지남에 따라 HT 콘텐츠 기여는 HT 및 MT의 품질을 모두 개선합니다. MT 항목에는 항목의 일부가 MT일 수 있다는 고지 사항이 포함되며, **편집** 단추는 사용할 수 없기 때문에 표시되지 않습니다.
 
 ## <a name="dos-and-donts"></a>권고 및 금지
 
