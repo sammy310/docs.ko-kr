@@ -5,10 +5,10 @@ author: janvorli
 ms.author: janvorli
 ms.date: 02/05/2019
 ms.openlocfilehash: 267c2209556b66ab3541c9c79c99d7eceb2024da
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159743"
 ---
 # <a name="how-to-use-and-debug-assembly-unloadability-in-net-core"></a>.NET Core에서 어셈블리 언로드 기능을 사용하고 디버그하는 방법
@@ -21,8 +21,8 @@ ms.locfileid: "78159743"
 
 - 호출 스택에서 `AssemblyLoadContext`에 로드된 어셈블리의 메서드가 있는 스레드가 없습니다.
 - `AssemblyLoadContext`에 로드된 어셈블리의 유형, 해당 유형의 인스턴스 및 어셈블리 자체는 다음에서 참조하지 않습니다.
-  - 약한 참조(<xref:System.WeakReference> 또는 <xref:System.WeakReference%601>)를 제외한 `AssemblyLoadContext` 외부의 참조.
-  - `AssemblyLoadContext` 내부 및 외부로부터의 강력한 GC(가비지 수집기) 핸들([GCHandleType.Normal](xref:System.Runtime.InteropServices.GCHandleType.Normal) 또는 [GCHandleType.Pinned](xref:System.Runtime.InteropServices.GCHandleType.Pinned)).
+  - 약한 참조(`AssemblyLoadContext` 또는 <xref:System.WeakReference>)를 제외한 <xref:System.WeakReference%601> 외부의 참조.
+  - [ 내부 및 외부로부터의 강력한 GC(가비지 수집기) 핸들(](xref:System.Runtime.InteropServices.GCHandleType.Normal)GCHandleType.Normal[ 또는 ](xref:System.Runtime.InteropServices.GCHandleType.Pinned)GCHandleType.Pinned`AssemblyLoadContext`).
 
 ## <a name="use-collectible-assemblyloadcontext"></a>수집 가능한 AssemblyLoadContext 사용
 
@@ -38,7 +38,7 @@ ms.locfileid: "78159743"
 
 여기에서 볼 수 있듯이 `Load` 메서드는 `null`을 반환합니다. 즉, 모든 종속성 어셈블리가 기본 컨텍스트에 로드되고 새 컨텍스트에는 명시적으로 로드된 어셈블리만 포함됩니다.
 
-종속 항목의 일부 또는 전체를 `AssemblyLoadContext`에 로드하려는 경우 `Load` 메서드에서 `AssemblyDependencyResolver`를 사용할 수 있습니다. `AssemblyDependencyResolver`는 어셈블리 이름을 절대 어셈블리 파일 경로로 확인합니다. 확인자는 컨텍스트에 로드된 주 어셈블리의 디렉터리에 있는 *.deps.json* 파일 및 어셈블리 파일을 사용합니다.
+종속 항목의 일부 또는 전체를 `AssemblyLoadContext`에 로드하려는 경우 `AssemblyDependencyResolver` 메서드에서 `Load`를 사용할 수 있습니다. `AssemblyDependencyResolver`는 어셈블리 이름을 절대 어셈블리 파일 경로로 확인합니다. 확인자는 컨텍스트에 로드된 주 어셈블리의 디렉터리에 있는 *.deps.json* 파일 및 어셈블리 파일을 사용합니다.
 
 [!code-csharp[Advanced custom AssemblyLoadContext](~/samples/snippets/standard/assembly/unloading/complex_assemblyloadcontext.cs)]
 
@@ -56,7 +56,7 @@ ms.locfileid: "78159743"
 
 [!code-csharp[Part 2](~/samples/snippets/standard/assembly/unloading/simple_example.cs#4)]
 
-`Main` 메서드가 리턴하고 나면 사용자 지정 `AssemblyLoadContext`에서 `Unload` 메서드를 호출하거나 `AssemblyLoadContext`에 대한 참조를 제거하여 언로드를 시작할 수 있습니다.
+`Main` 메서드가 리턴하고 나면 사용자 지정 `Unload`에서 `AssemblyLoadContext` 메서드를 호출하거나 `AssemblyLoadContext`에 대한 참조를 제거하여 언로드를 시작할 수 있습니다.
 
 [!code-csharp[Part 3](~/samples/snippets/standard/assembly/unloading/simple_example.cs#5)]
 
@@ -88,7 +88,7 @@ ms.locfileid: "78159743"
   - 이러한 어셈블리에 있는 형식의 인스턴스입니다.
 - 수집 가능한 `AssemblyLoadContext`에 로드된 어셈블리의 스레드 실행 코드.
 - 수집 가능한 `AssemblyLoadContext` 내부에서 만들어진 수집 불가능한 사용자 지정 `AssemblyLoadContext` 형식의 인스턴스
-- 콜백이 사용자 지정 `AssemblyLoadContext`의 메서드로 설정된 보류 중인 <xref:System.Threading.RegisteredWaitHandle> 인스턴스
+- 콜백이 사용자 지정 <xref:System.Threading.RegisteredWaitHandle>의 메서드로 설정된 보류 중인 `AssemblyLoadContext` 인스턴스
 
 > [!TIP]
 > 스택 슬롯 또는 프로세서 레지스터에 저장되고 다음과 같은 상황에서 `AssemblyLoadContext` 언로드를 금지할 수 있는 개체 참조
@@ -98,7 +98,7 @@ ms.locfileid: "78159743"
 
 ## <a name="debug-unloading-issues"></a>디버그 언로드 문제
 
-언로드 관련 문제를 디버깅하는 것이 지루한 작업이 될 수 있습니다. `AssemblyLoadContext`를 활성 상태로 유지할 수 있는 항목을 알 수 없지만 언로드가 실패하는 상황이 발생할 수 있습니다. 이 문제를 해결하는 가장 좋은 방법은 SOS 플러그 인을 사용하는 WinDbg(Unix의 LLDB)입니다. 특정 `AssemblyLoadContext`에 속한 `LoaderAllocator`를 활성 상태로 유지하는 사항을 찾아야 합니다. SOS 플러그 인을 사용하면 GC 힙 개체, 해당 계층 구조 및 루트를 확인할 수 있습니다.
+언로드 관련 문제를 디버깅하는 것이 지루한 작업이 될 수 있습니다. `AssemblyLoadContext`를 활성 상태로 유지할 수 있는 항목을 알 수 없지만 언로드가 실패하는 상황이 발생할 수 있습니다. 이 문제를 해결하는 가장 좋은 방법은 SOS 플러그 인을 사용하는 WinDbg(Unix의 LLDB)입니다. 특정 `LoaderAllocator`에 속한 `AssemblyLoadContext`를 활성 상태로 유지하는 사항을 찾아야 합니다. SOS 플러그 인을 사용하면 GC 힙 개체, 해당 계층 구조 및 루트를 확인할 수 있습니다.
 
 플러그 인을 디버거로 로드하려면 디버거 명령줄에서 다음 명령을 입력합니다.
 
@@ -137,7 +137,7 @@ Statistics:
 Total 2 objects
 ```
 
-아래 “통계” 파트에서 주의해야 할 개체인 `System.Reflection.LoaderAllocator`에 속한 `MT`(`MethodTable`)을 확인합니다. 그런 다음 시작 부분에 있는 목록에서 해당 항목과 일치하는 `MT`가 있는 항목을 찾아 개체 자체의 주소를 가져옵니다. 이 경우 "000002b78000ce40"입니다.
+아래 “통계” 파트에서 주의해야 할 개체인 `MT`에 속한 `MethodTable`(`System.Reflection.LoaderAllocator`)을 확인합니다. 그런 다음 시작 부분에 있는 목록에서 해당 항목과 일치하는 `MT`가 있는 항목을 찾아 개체 자체의 주소를 가져옵니다. 이 경우 "000002b78000ce40"입니다.
 
 이제 `LoaderAllocator` 개체의 주소를 알고 있으므로 다른 명령을 사용하여 GC 루트를 찾을 수 있음
 
@@ -176,9 +176,9 @@ Found 3 roots.
 
 다음 단계는 문제를 해결할 수 있도록 루트의 위치를 파악하는 것입니다. 가장 쉬운 사례는 루트가 스택 슬롯 또는 프로세서 레지스터인 경우입니다. 이 경우 `gcroot`는 프레임에 해당 함수를 실행하는 루트 및 스레드가 포함된 함수의 이름을 표시합니다. 루트가 정적 변수이거나 GC 핸들인 경우 해결하기가 어렵습니다.
 
-이전 예제에서 첫 번째 루트는 `rbp-20` 주소(여기서 `rbp`는 프로세서 레지스터 `rbp`이고 -20은 해당 레지스터로부터의 16진수 오프셋임)에서 `example.Program.Main(System.String[])` 함수의 프레임에 저장된 `System.Reflection.RuntimeMethodInfo` 형식의 로컬입니다.
+이전 예제에서 첫 번째 루트는 `System.Reflection.RuntimeMethodInfo` 주소(여기서 `example.Program.Main(System.String[])`는 프로세서 레지스터 `rbp-20`이고 -20은 해당 레지스터로부터의 16진수 오프셋임)에서 `rbp` 함수의 프레임에 저장된 `rbp` 형식의 로컬입니다.
 
-두 번째 루트는 `test.Test` 클래스의 인스턴스에 대한 참조를 보유하는 기본 (강력) `GCHandle`입니다.
+두 번째 루트는 `GCHandle` 클래스의 인스턴스에 대한 참조를 보유하는 기본 (강력) `test.Test`입니다.
 
 세 번째 루트는 고정된 `GCHandle`입니다. 실제로는 정적 변수이지만 알 수 있는 방법은 없습니다. 참조 형식의 정적은 내부 런타임 구조체의 관리형 개체 배열에 저장됩니다.
 
@@ -249,6 +249,6 @@ OS Thread Id: 0x60bc (7)
 
 ## <a name="program-loaded-into-the-testassemblyloadcontext"></a>TestAssemblyLoadContext에 로드된 프로그램
 
-다음 코드는 기본 테스트 프로그램의 `ExecuteAndUnload` 메서드에 전달되는 *test.dll*을 나타냅니다.
+다음 코드는 기본 테스트 프로그램의 *메서드에 전달되는*test.dll`ExecuteAndUnload`을 나타냅니다.
 
 [!code-csharp[Program loaded into the TestAssemblyLoadContext](~/samples/snippets/standard/assembly/unloading/unloadability_issues_example_test.cs)]

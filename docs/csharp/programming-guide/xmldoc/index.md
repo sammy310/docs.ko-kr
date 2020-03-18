@@ -12,10 +12,10 @@ helpviewer_keywords:
 - XML documentation comments [C#]
 ms.assetid: 803b7f7b-7428-4725-b5db-9a6cff273199
 ms.openlocfilehash: f5a507bc35b0cc0a679fd055bfc255bb3cb9a090
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76789788"
 ---
 # <a name="xml-documentation-comments-c-programming-guide"></a>XML 문서 주석(C# 프로그래밍 가이드)
@@ -36,7 +36,7 @@ XML 요소를 참조하려면(예를 들어, 함수가 XML 문서 주석에서 �
 > [!NOTE]
 > XML 문서 주석은 메타데이터가 아닙니다. 이러한 주석은 컴파일된 어셈블리에 포함되지 않으므로 리플렉션을 통해 액세스할 수 없습니다.
 
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
 - [문서 주석에 대한 권장 태그](./recommended-tags-for-documentation-comments.md)
 
@@ -48,7 +48,7 @@ XML 요소를 참조하려면(예를 들어, 함수가 XML 문서 주석에서 �
 
 ## <a name="related-sections"></a>관련 단원
 
-자세한 내용은 다음을 참조하세요.
+자세한 내용은 다음을 참조하십시오.
 
 - [-설명서(문서 주석 처리)](../../language-reference/compiler-options/doc-compiler-option.md)
 
@@ -56,6 +56,6 @@ XML 요소를 참조하려면(예를 들어, 함수가 XML 문서 주석에서 �
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)

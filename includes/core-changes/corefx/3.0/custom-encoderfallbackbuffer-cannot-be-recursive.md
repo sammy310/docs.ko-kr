@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 58d1c8cd3aff52703522391c14348bd81c108587
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568116"
 ---
 ### <a name="custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively"></a>사용자 지정 EncoderFallbackBuffer 인스턴스는 재귀적으로 대체될 수 없음
@@ -30,11 +30,11 @@ ms.locfileid: "74568116"
 
 3.0
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 대부분의 개발자는 아무 작업도 수행하지 않아도 됩니다.
 
-애플리케이션이 사용자 지정 <xref:System.Text.EncoderFallback> 및 <xref:System.Text.EncoderFallbackBuffer> 클래스를 사용하는 경우 런타임이 처음 <xref:System.Text.EncoderFallbackBuffer.Fallback%2A> 메서드를 호출할 때 <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 구현이 대상 인코딩으로 직접 변환할 수 있는 올바른 형식의 UTF-16 데이터로 대체 버퍼를 채우도록 합니다.
+애플리케이션이 사용자 지정 <xref:System.Text.EncoderFallback> 및 <xref:System.Text.EncoderFallbackBuffer> 클래스를 사용하는 경우 런타임이 처음 <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 메서드를 호출할 때 <xref:System.Text.EncoderFallbackBuffer.Fallback%2A> 구현이 대상 인코딩으로 직접 변환할 수 있는 올바른 형식의 UTF-16 데이터로 대체 버퍼를 채우도록 합니다.
 
 #### <a name="category"></a>범주
 

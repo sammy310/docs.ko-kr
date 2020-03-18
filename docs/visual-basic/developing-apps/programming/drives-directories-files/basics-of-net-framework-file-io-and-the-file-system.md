@@ -10,17 +10,17 @@ helpviewer_keywords:
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
 ms.openlocfilehash: 5d60d0089d042c0be343c741c26de0b4b7778d6d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348940"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework 파일 I/O 및 파일 시스템의 기본 사항(Visual Basic)
 
 <xref:System.IO> 네임스페이스의 클래스는 드라이브, 파일 및 디렉터리 작업에 사용됩니다.
 
-<xref:System.IO> 네임스페이스는 <xref:System.IO.File> 및 <xref:System.IO.Directory> 클래스를 포함하며, 이러한 클래스는 파일 및 디렉터리를 조작하는 .NET Framework 기능을 제공합니다. 이러한 개체의 메서드는 정적 멤버 또는 공유 멤버이므로, 먼저 클래스의 인스턴스를 만들지 않고 직접 사용할 수 있습니다. `My` 기능의 사용자에게 익숙한 <xref:System.IO.FileInfo> 및 <xref:System.IO.DirectoryInfo> 클래스가 이러한 클래스와 연관되어 있습니다. 이러한 클래스를 사용하려면 이름을 정규화하거나, 영향받는 코드의 시작 부분에 `Imports` 문을 포함하여 적절한 네임스페이스를 가져와야 합니다. 자세한 내용은 [Imports 문(.NET 네임스페이스 및 형식)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)을 참조하세요.
+<xref:System.IO> 네임스페이스는 <xref:System.IO.File> 및 <xref:System.IO.Directory> 클래스를 포함하며, 이러한 클래스는 파일 및 디렉터리를 조작하는 .NET Framework 기능을 제공합니다. 이러한 개체의 메서드는 정적 멤버 또는 공유 멤버이므로, 먼저 클래스의 인스턴스를 만들지 않고 직접 사용할 수 있습니다. <xref:System.IO.FileInfo> 기능의 사용자에게 익숙한 <xref:System.IO.DirectoryInfo> 및 `My` 클래스가 이러한 클래스와 연관되어 있습니다. 이러한 클래스를 사용하려면 이름을 정규화하거나, 영향받는 코드의 시작 부분에 `Imports` 문을 포함하여 적절한 네임스페이스를 가져와야 합니다. 자세한 내용은 [Imports 문(.NET 네임스페이스 및 형식)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)을 참조하세요.
 
 > [!NOTE]
 > 이 섹션의 다른 항목은 드라이브, 파일 및 디렉터리 작업에 `My.Computer.FileSystem` 클래스 대신 `System.IO` 개체를 사용합니다. `My.Computer.FileSystem` 개체의 주요 용도는 Visual Basic 프로그램에서 사용하는 것입니다. `System.IO` 클래스는 Visual Basic을 포함하여 .NET Framework를 지원하는 모든 언어에서 사용할 수 있습니다.
@@ -62,7 +62,7 @@ ms.locfileid: "74348940"
 |대상|참조 항목|
 |---|---|
 |데이터 파일 읽기 및 쓰기|[방법: 새로 만든 데이터 파일 읽기 및 쓰기](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|
-|파일에서 텍스트 읽기|[방법: 파일에서 텍스트 읽기](../../../../standard/io/how-to-read-text-from-a-file.md)|
+|파일에서 텍스트 읽기|[방법: 파일의 텍스트 읽기](../../../../standard/io/how-to-read-text-from-a-file.md)|
 |파일에 텍스트 쓰기|[방법: 파일에 텍스트 쓰기](../../../../standard/io/how-to-write-text-to-a-file.md)|
 |문자열에서 문자 읽기|[방법: 문자열에서 문자 읽기](../../../../standard/io/how-to-read-characters-from-a-string.md)|
 |문자열에 문자 쓰기|[방법: 문자열에 문자 쓰기](../../../../standard/io/how-to-write-characters-to-a-string.md)|
@@ -71,7 +71,7 @@ ms.locfileid: "74348940"
 
 ## <a name="file-access-and-attributes"></a>파일 액세스 및 특성
 
-<xref:System.IO.FileStream> 클래스의 생성자가 사용하는 플래그가 포함된 <xref:System.IO.FileAccess>, <xref:System.IO.FileMode> 및 <xref:System.IO.FileShare> 열거형을 사용하여 파일을 만들고 열고 공유하는 방법을 제어할 수 있습니다. 예를 들어 새 <xref:System.IO.FileStream>을 열거나 만들 때 <xref:System.IO.FileMode> 열거형을 사용하면 추가하기 위해 파일을 열지 여부, 지정된 파일이 없을 경우 새 파일을 만들지 여부, 파일을 덮어쓸지 여부 등을 지정할 수 있습니다.
+<xref:System.IO.FileAccess> 클래스의 생성자가 사용하는 플래그가 포함된 <xref:System.IO.FileMode>, <xref:System.IO.FileShare> 및 <xref:System.IO.FileStream> 열거형을 사용하여 파일을 만들고 열고 공유하는 방법을 제어할 수 있습니다. 예를 들어 새 <xref:System.IO.FileStream>을 열거나 만들 때 <xref:System.IO.FileMode> 열거형을 사용하면 추가하기 위해 파일을 열지 여부, 지정된 파일이 없을 경우 새 파일을 만들지 여부, 파일을 덮어쓸지 여부 등을 지정할 수 있습니다.
 
 <xref:System.IO.FileAttributes> 열거형을 사용하면 파일에 관한 정보를 수집할 수 있습니다. <xref:System.IO.FileAttributes> 열거형은 압축, 암호화, 숨김, 읽기 전용, 보관, 디렉터리, 시스템 파일 또는 임시 파일과 같은 파일의 저장된 특성을 반환합니다.
 
@@ -97,7 +97,7 @@ ms.locfileid: "74348940"
 |격리된 저장소 만들기|[방법: 격리된 스토리지의 저장소 가져오기](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|
 |격리된 저장소 열거|[방법: 격리된 스토리지의 저장소 열거](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|
 |격리된 저장소 삭제|[방법: 격리된 스토리지에서 저장소 삭제](../../../../standard/io/how-to-delete-stores-in-isolated-storage.md)|
-|격리된 스토리지에서 파일 또는 디렉터리 만들기|[방법: 격리된 스토리지의 파일 및 디렉터리 만들기](../../../../standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|
+|격리된 스토리지에서 파일 또는 디렉터리 만들기|[방법: 격리된 스토리지에 파일 및 디렉터리 만들기](../../../../standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|
 |격리된 스토리지에서 파일 찾기|[방법: 격리된 스토리지의 기존 파일 및 디렉터리 찾기](../../../../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|
 |격리된 스토리지에서 파일 읽기 또는 쓰기|[방법: 격리된 스토리지의 파일 읽기 및 쓰기](../../../../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|
 |격리된 스토리지에서 파일 또는 디렉터리 삭제|[방법: 격리된 스토리지의 파일 및 디렉터리 삭제](../../../../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|
@@ -110,5 +110,5 @@ ms.locfileid: "74348940"
 
 - [스트림 작성](../../../../standard/io/composing-streams.md)
 - [파일 및 스트림 I/O](../../../../standard/io/index.md)
-- [비동기 파일 I/O](../../../../standard/io/asynchronous-file-i-o.md)
+- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)
 - [.NET Framework 파일 I/O 및 파일 시스템에 사용되는 클래스(Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

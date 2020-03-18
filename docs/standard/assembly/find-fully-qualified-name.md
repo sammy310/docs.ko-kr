@@ -11,10 +11,10 @@ dev_langs:
 - vb
 - cpp
 ms.openlocfilehash: 49ebaeabee7a346fb84f09e5a9e34590d1ea9811
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348194"
 ---
 # <a name="how-to-find-an-assemblys-fully-qualified-name"></a>방법: 어셈블리의 정규화된 이름 찾기
@@ -60,7 +60,7 @@ ms.locfileid: "74348194"
 
 버전, 문화권 및 어셈블리 이름과 같은 어셈블리 특성 설정에 대한 자세한 내용은 [어셈블리 특성 설정](set-attributes.md)을 참조하세요. 어셈블리에 강력한 이름을 지정하는 방법에 대한 자세한 내용은 [강력한 이름의 어셈블리 만들기 및 사용](create-use-strong-named.md)을 참조하세요.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제는 지정된 클래스를 포함하는 어셈블리의 정규화된 이름을 콘솔에 표시하는 방법을 보여 줍니다. 이 예제는 <xref:System.Type.Assembly?displayProperty=nameWithType> 속성을 사용하여 해당 어셈블리에 정의된 형식에서 어셈블리에 대한 참조를 검색합니다.
 
@@ -118,7 +118,7 @@ Class asmname
 End Class
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [어셈블리 이름](names.md)
 - [어셈블리 만들기](create.md)

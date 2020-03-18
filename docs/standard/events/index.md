@@ -15,10 +15,10 @@ helpviewer_keywords:
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 ms.openlocfilehash: b8ed028bc1edabf14d7b2dd67d94b28d574d2eb4
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159626"
 ---
 # <a name="handling-and-raising-events"></a>이벤트 처리 및 발생
@@ -95,7 +95,7 @@ ms.locfileid: "78159626"
 |[관찰자 디자인 패턴](observer-design-pattern.md)|구독자가 공급자를 등록하고 공급자로부터 알림을 수신하는 데 사용할 수 있는 디자인 패턴에 대해 설명합니다.|  
 |[방법: Web Forms 애플리케이션에서 이벤트 사용](how-to-consume-events-in-a-web-forms-application.md)|Web Forms 컨트롤에서 발생한 이벤트를 처리하는 방법을 보여 줍니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.EventHandler>
 - <xref:System.EventHandler%601>

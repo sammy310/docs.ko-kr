@@ -1,5 +1,5 @@
 ---
-title: 응용 프로그램의 정보 기록
+title: 애플리케이션의 정보 기록
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Log object
@@ -10,10 +10,10 @@ helpviewer_keywords:
 - examples [Visual Basic], logging application information
 ms.assetid: 8bf4f047-22d6-48d6-aec5-93b98ad5b8e8
 ms.openlocfilehash: dace4bac3bf7529b8c50a492a092ad478f4d9e2d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74353251"
 ---
 # <a name="logging-information-from-the-application-visual-basic"></a>애플리케이션의 정보 기록(Visual Basic)
@@ -29,7 +29,7 @@ ms.locfileid: "74353251"
 |대상|참조 항목|  
 |--------|---------|  
 |애플리케이션의 로그에 이벤트 정보를 씁니다.|[방법: 로그 메시지 쓰기](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)|  
-|애플리케이션의 로그에 예외 정보를 씁니다.|[방법: 로그 예외](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)|  
+|애플리케이션의 로그에 예외 정보를 씁니다.|[방법: 예외 기록](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)|  
 |애플리케이션을 시작 및 종료할 때 애플리케이션의 로그에 추적 정보를 씁니다.|[방법: 애플리케이션이 시작 또는 종료될 때 메시지 기록](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-messages-when-the-application-starts-or-shuts-down.md)|  
 |텍스트 파일에 정보를 쓰도록 `My.Application.Log`를 구성합니다.|[방법: 텍스트 파일에 이벤트 정보 쓰기](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)|  
 |이벤트 로그에 정보를 쓰도록 `My.Application.Log`를 구성합니다.|[방법: 애플리케이션 이벤트 로그에 쓰기](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)|  

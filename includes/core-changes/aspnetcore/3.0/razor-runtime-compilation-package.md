@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: cd13e7560ee98e0c862c5e2293521c6aaa273455
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75344300"
 ---
 ### <a name="razor-runtime-compilation-moved-to-a-package"></a>Razor: 런타임 컴파일이 패키지로 이동됨
@@ -38,7 +38,7 @@ Razor 뷰 및 Razor Pages의 런타임 컴파일을 지원하기 위해 별도�
 Razor 파일의 런타임 컴파일 또는 재컴파일이 필요한 앱은 다음 단계를 수행해야 합니다.
 
 1. `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation` 패키지에 대한 참조를 추가합니다.
-1. `AddRazorRuntimeCompilation`에 대한 호출을 포함하도록 프로젝트의 `Startup.ConfigureServices` 메서드를 업데이트합니다. 예:
+1. `AddRazorRuntimeCompilation`에 대한 호출을 포함하도록 프로젝트의 `Startup.ConfigureServices` 메서드를 업데이트합니다. 예를 들어:
 
     ```csharp
     services.AddMvc()

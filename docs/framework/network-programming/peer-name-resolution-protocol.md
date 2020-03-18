@@ -3,10 +3,10 @@ title: 피어 이름 확인 프로토콜
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
 ms.openlocfilehash: c8b7b2190349323bf212d816a77f5f7810f6ca2c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74428214"
 ---
 # <a name="peer-name-resolution-protocol"></a>피어 이름 확인 프로토콜
@@ -38,7 +38,7 @@ ms.locfileid: "74428214"
   
 - <xref:System.Net.PeerToPeer.Cloud>: 해당 범위를 포함하여 사용 가능한 PNRP 클라우드를 설명하는 정보를 정의합니다.  
   
-- <xref:System.Net.PeerToPeer.PeerName>: 클라우드 내에서 피어를 등록하고 이후에 확인하는 데 사용할 수 있는 피어 이름을 정의합니다.  
+- <xref:System.Net.PeerToPeer.PeerName>: 등록하는 데 사용한 다음 클라우드에서 피어를 확인하는 데 사용하는 피어 이름을 정의합니다.  
   
 - <xref:System.Net.PeerToPeer.PeerNameRecord>: 피어의 등록 정보를 포함하는 레코드를 PNRP 클라우드에 정의합니다. 이 레코드에는 피어에 연결할 수 있는 네트워크 엔드포인트가 포함되어 있습니다.  
   
