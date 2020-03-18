@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 79901d0b57816915ca7ea73cfe7fa3d40820434e
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568108"
 ---
 ### <a name="jsonelement-api-changes"></a>JsonElement API 변경 내용
@@ -41,17 +41,17 @@ ms.locfileid: "74568108"
     }
     ```
 
-1. 이제 <xref:System.Text.Json.JsonElement.WriteTo%2A>는 메서드 매개 변수가 `null`인 경우 <xref:System.ArgumentNullException>을 throw합니다.
+1. 이제 <xref:System.Text.Json.JsonElement.WriteTo%2A>는 메서드 매개 변수가 <xref:System.ArgumentNullException>인 경우 `null`을 throw합니다.
 
 #### <a name="version-introduced"></a>도입된 버전
 
 3.0 미리 보기 7
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 코드가 이러한 변경의 영향을 받는 경우 다음을 수행할 수 있습니다.
 
-- <xref:System.Text.Json.JsonElement>에서 `WriteProperty` 오버로드에 대한 대체 API는 없습니다. 대신, <xref:System.Text.Json.JsonElement.WriteTo%2A> 메서드와 함께 <xref:System.Text.Json.Utf8JsonWriter.WritePropertyName%2A?displayProperty=nameWithType> 오버로드 중 하나를 호출하여 동일한 결과를 달성할 수 있습니다. 예:
+- `WriteProperty`에서 <xref:System.Text.Json.JsonElement> 오버로드에 대한 대체 API는 없습니다. 대신, <xref:System.Text.Json.Utf8JsonWriter.WritePropertyName%2A?displayProperty=nameWithType> 메서드와 함께 <xref:System.Text.Json.JsonElement.WriteTo%2A> 오버로드 중 하나를 호출하여 동일한 결과를 달성할 수 있습니다. 예들 들어 다음과 같습니다.
 
    ```csharp
    using (JsonDocument doc = JsonDocument.Parse(jsonString))
@@ -72,7 +72,7 @@ ms.locfileid: "74568108"
    }
    ```
 
-- <xref:System.Text.Json.JsonElement.WriteTo%2A> 메서드에 대한 호출에서 <xref:System.ArgumentNullException>을 처리합니다.
+- <xref:System.ArgumentNullException> 메서드에 대한 호출에서 <xref:System.Text.Json.JsonElement.WriteTo%2A>을 처리합니다.
 
 #### <a name="affected-apis"></a>영향을 받는 API
 

@@ -3,11 +3,11 @@ title: 버전 관리 및 .NET 라이브러리
 description: .NET 라이브러리의 버전을 관리하는 모범 사례 권장 사항입니다.
 ms.date: 12/10/2018
 ms.openlocfilehash: a274410714791e2790da0e3deb2a595390ee9389
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745020"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398498"
 ---
 # <a name="versioning"></a>버전 관리
 

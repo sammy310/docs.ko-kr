@@ -13,10 +13,10 @@ helpviewer_keywords:
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
 ms.openlocfilehash: e05cfb949ee3f206f212ca7015f3ff4c22cd2a12
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73423033"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>관리되지 않는 리소스 정리
@@ -27,11 +27,11 @@ ms.locfileid: "73423033"
 
 - [삭제 패턴](implementing-dispose.md)을 구현합니다. 이를 수행하려면 관리되지 않는 리소스의 명확한 해제를 활성화하기 위해 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 구현을 제공해야 합니다. 개체 및 해당 개체에서 사용하는 리소스가 더 이상 필요하지 않은 경우 형식의 소비자가 <xref:System.IDisposable.Dispose%2A>를 호출합니다. <xref:System.IDisposable.Dispose%2A> 메서드가 관리되지 않는 리소스를 즉시 해제합니다.
 
-- 형식의 소비자가 실수로 <xref:System.IDisposable.Dispose%2A>를 호출하지 않은 경우 해제되는 관리되지 않는 리소스를 제공합니다. 이 작업을 수행하는 방법에는 다음 두 가지가 있습니다.
+- 형식의 소비자가 실수로 <xref:System.IDisposable.Dispose%2A>를 호출하지 않은 경우 해제되는 관리되지 않는 리소스를 제공합니다. 이때 다음과 같은 두 가지 방법을 사용할 수 있습니다.
 
-  - SafeHandle을 사용하여 관리되지 않는 리소스를 래핑합니다. 이 방법을 사용하는 것이 좋습니다. SafeHandle은 <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> 클래스에서 파생되며, 강력한 <xref:System.Object.Finalize%2A> 메서드를 포함합니다. SafeHandle을 사용하면 <xref:System.IDisposable> 인터페이스를 간단하게 구현하고 <xref:System.Runtime.InteropServices.SafeHandle.Dispose%2A> 구현에서 SafeHandle의 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 메서드를 호출할 수 있습니다. <xref:System.IDisposable.Dispose%2A> 메서드가 호출되지 않는 경우 가비지 수집기에 의해 SafeHandle의 종료자가 자동으로 호출됩니다.
+  - SafeHandle을 사용하여 관리되지 않는 리소스를 래핑합니다. 이것이 권장되는 방법입니다. SafeHandle은 <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> 클래스에서 파생되며, 강력한 <xref:System.Object.Finalize%2A> 메서드를 포함합니다. SafeHandle을 사용하면 <xref:System.IDisposable> 인터페이스를 간단하게 구현하고 <xref:System.Runtime.InteropServices.SafeHandle.Dispose%2A> 구현에서 SafeHandle의 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 메서드를 호출할 수 있습니다. <xref:System.IDisposable.Dispose%2A> 메서드가 호출되지 않는 경우 가비지 수집기에 의해 SafeHandle의 종료자가 자동으로 호출됩니다.
 
-    또는
+    —또는—
 
   - <xref:System.Object.Finalize%2A?displayProperty=nameWithType> 메서드를 재정의합니다. 종료를 사용하면 형식의 소비자가 명확하게 삭제할 수 있도록 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>를 호출하지 못한 경우 관리되지 않는 리소스가 명확하지 않게 해제됩니다. 그러나 개체 종료가 복잡하고 오류가 발생하기 쉬운 작업일 수 있기 때문에 고유한 종료자를 제공하는 대신 SafeHandle을 사용하는 것이 좋습니다.
 

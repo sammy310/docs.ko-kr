@@ -6,10 +6,10 @@ ms.author: wiwagn
 ms.date: 12/10/2019
 ms.custom: vs-dotnet
 ms.openlocfilehash: bdd6e28713bdece2bd144e6763bd84d719e91449
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156636"
 ---
 # <a name="publish-your-net-core-hello-world-application-with-visual-studio"></a>Visual Studio를 사용하여 .NET Core Hello World 애플리케이션 게시

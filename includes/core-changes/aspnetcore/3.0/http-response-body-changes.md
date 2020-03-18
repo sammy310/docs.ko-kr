@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: cd66317bc93343e03a73dec74dff534776ca42e4
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73198505"
 ---
 ### <a name="http-response-body-infrastructure-changes"></a>HTTP: 응답 본문 인프라 변경
@@ -30,7 +30,7 @@ HTTP 응답 본문과 관련된 세 가지 API가 있습니다.
 
 응답 본문 API를 새로운 단일 기능 인터페이스로 결합하는 것이 좋습니다.
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 이전에 `IHttpResponseFeature.Body`, `IHttpSendFileFeature` 또는 `IHttpBufferingFeature`를 사용했던 `IHttpResponseBodyFeature`를 사용합니다.
 

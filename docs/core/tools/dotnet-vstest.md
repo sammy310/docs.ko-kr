@@ -3,10 +3,10 @@ title: dotnet vstest 명령
 description: dotnet vtest 명령은 프로젝트와 모든 종속성을 빌드합니다.
 ms.date: 02/27/2020
 ms.openlocfilehash: 88e5b6a8966d78d0746f9ea5ccbccab142a2e0f6
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156935"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
@@ -61,7 +61,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings] [--Tests]
 
 - **`--Parallel`**
 
-  테스트를 병렬로 실행합니다. 기본적으로 머신의 사용 가능한 모든 코어를 사용할 수 있습니다. *runsettings* 파일에서 `RunConfiguration`. 노드 아래의 `MaxCpuCount` 속성을 설정하여 코어의 개수를 명시적으로 지정합니다.
+  테스트를 병렬로 실행합니다. 기본적으로 컴퓨터의 사용 가능한 모든 코어를 사용할 수 있습니다. *runsettings* 파일에서 `RunConfiguration`. 노드 아래의 `MaxCpuCount` 속성을 설정하여 코어의 개수를 명시적으로 지정합니다.
 
 - **`--TestCaseFilter <Expression>`**
 

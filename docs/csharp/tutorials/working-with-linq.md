@@ -4,12 +4,12 @@ description: 이 자습서에서는 LINQ를 사용하여 시퀀스를 생성하�
 ms.date: 10/29/2018
 ms.technology: csharp-linq
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 8984fdf0ff26726b6d05e8bee8a9e8ae1c350ea7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: ece001e82c0aa44a91999bea78d2fd695ff9362b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345616"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240017"
 ---
 # <a name="work-with-language-integrated-query-linq"></a>LINQ(Language-Integrated Query) 작업
 
@@ -29,7 +29,7 @@ ms.locfileid: "75345616"
 
 이 자습서는 여러 단계로 구성됩니다. 각 단계 후에 애플리케이션을 실행하고 진행 상황을 확인할 수 있습니다. [완료된 샘플](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq)은 GitHub의 dotnet/samples 리포지토리에서도 확인할 수 있습니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 .NET Core를 실행하려면 컴퓨터에 설정해야 합니다. [.NET Core 다운로드](https://dotnet.microsoft.com/download) 페이지에서 설치 지침을 확인할 수 있습니다. Windows, Ubuntu Linux나 OS X 또는 Docker 컨테이너에서 이 애플리케이션을 실행할 수 있습니다. 선호하는 코드 편집기를 설치해야 합니다. 아래 설명에서는 오픈 소스 플랫폼 간 편집기인 [Visual Studio Code](https://code.visualstudio.com/)를 사용합니다. 그러나 익숙한 어떤 도구도 사용 가능합니다.
 
@@ -41,7 +41,7 @@ ms.locfileid: "75345616"
 
 ## <a name="create-the-data-set"></a>데이터 세트 만들기
 
-시작하기 전에 `dotnet new console`에서 생성된 `Program.cs` 파일의 맨 위에 다음 줄이 있는지 확인합니다.
+시작하기 전에 `Program.cs`에서 생성된 `dotnet new console` 파일의 맨 위에 다음 줄이 있는지 확인합니다.
 
 ```csharp
 // Program.cs
@@ -52,7 +52,7 @@ using System.Linq;
 
 이러한 세 줄(`using` 문)이 파일 맨 위에 없으면 프로그램이 컴파일되지 않습니다.
 
-이제 필요한 참조가 모두 있으므로 카드 데크의 구성 요소를 고려합니다. 일반적으로 플레잉 카드 데크에는 네 개의 짝패가 있으며, 각 짝패에 13개의 값이 있습니다. 일반적으로 즉시 `Card` 클래스를 만들고 `Card` 개체 컬렉션을 수동으로 채우는 것을 고려할 수 있습니다. LINQ를 사용하면 일반적인 방법보다 더 간결하게 카드 데크 생성을 처리할 수 있습니다. `Card` 클래스를 만드는 대신, 각각 짝패와 순위를 나타내는 두 개의 시퀀스를 만들 수 있습니다. 순위와 짝패를 <xref:System.Collections.Generic.IEnumerable%601> 문자열로 생성하는 간단한 [*반복기 메서드*](../iterators.md#enumeration-sources-with-iterator-methods) 쌍을 만듭니다.
+이제 필요한 참조가 모두 있으므로 카드 데크의 구성 요소를 고려합니다. 일반적으로 플레잉 카드 데크에는 네 개의 짝패가 있으며, 각 짝패에 13개의 값이 있습니다. 일반적으로 즉시 `Card` 클래스를 만들고 `Card` 개체 컬렉션을 수동으로 채우는 것을 고려할 수 있습니다. LINQ를 사용하면 일반적인 방법보다 더 간결하게 카드 데크 생성을 처리할 수 있습니다. `Card` 클래스를 만드는 대신, 각각 짝패와 순위를 나타내는 두 개의 시퀀스를 만들 수 있습니다. 순위와 짝패를 [ 문자열로 생성하는 간단한  반복기 메서드](../iterators.md#enumeration-sources-with-iterator-methods)<xref:System.Collections.Generic.IEnumerable%601> 쌍을 만듭니다.
 
 ```csharp
 // Program.cs
@@ -84,7 +84,7 @@ static IEnumerable<string> Ranks()
 }
 ```
 
-이 코드를 `Program.cs` 파일의 `Main` 메서드 아래에 배치합니다. 이러한 두 메서드는 `yield return` 구문을 활용하여 실행 시 시퀀스를 생성합니다. 컴파일러는 <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 개체를 빌드하고 요청 시 문자열 시퀀스를 생성합니다.
+이 코드를 `Main` 파일의 `Program.cs` 메서드 아래에 배치합니다. 이러한 두 메서드는 `yield return` 구문을 활용하여 실행 시 시퀀스를 생성합니다. 컴파일러는 <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 개체를 빌드하고 요청 시 문자열 시퀀스를 생성합니다.
 
 이제 이러한 반복기 메서드를 사용하여 카드 데크를 만듭니다. LINQ 쿼리를 `Main` 메서드에 배치합니다. 다음과 같이 표시됩니다.
 
@@ -145,7 +145,7 @@ public static void Main(string[] args)
 
 LINQ 쿼리에서 반환되는 <xref:System.Collections.Generic.IEnumerable%601>을 조작하는 방법에 몇 가지 기능을 추가하려면 [확장 메서드](../programming-guide/classes-and-structs/extension-methods.md)라는 특수한 종류의 메서드를 작성해야 합니다. 간단히 말해, 확장 메서드는 기능을 추가하려는 원래 형식을 수정하지 않고 기존 형식에 새로운 기능을 추가하는 특별한 용도의 *정적 메서드*입니다.
 
-`Extensions.cs`라는 프로그램에 새 ‘정적’ 클래스 파일을 추가하여 확장 메서드에 새로운 홈을 제공한 다음, 첫 번째 확장 메서드 빌드를 시작합니다. 
+*라는 프로그램에 새 ‘정적’ 클래스 파일을 추가하여 확장 메서드에 새로운 홈을 제공한 다음, 첫 번째 확장 메서드 빌드를 시작합니다.* `Extensions.cs`
 
 ```csharp
 // Extensions.cs
@@ -179,7 +179,7 @@ public static IEnumerable<T> InterleaveSequenceWith<T> (this IEnumerable<T> firs
 
 해당 메서드의 구현은 다음과 같습니다.
 
-[!CODE-csharp[InterleaveSequenceWith](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet1)]
+[!CODE-csharp[InterleaveSequenceWith](../../../samples/snippets/csharp/getting-started/console-linq/extensions.cs?name=snippet1)]
 
 이 메서드를 작성했으므로 `Main` 메서드로 돌아가 데크 순서를 한 번 섞습니다.
 
@@ -213,7 +213,7 @@ public static void Main(string[] args)
 
 두 시퀀스가 서로 같은지를 확인하는 메서드를 작성하는 작업은 간단합니다. 데크를 섞기 위해 작성한 메서드와 비슷한 구조를 갖습니다. 그렇지만 이번에는 각 요소를 `yield return`하는 대신, 각 시퀀스의 일치하는 요소를 비교합니다. 전체 시퀀스가 열거된 경우 모든 요소가 일치하면 시퀀스도 같습니다.
 
-[!CODE-csharp[SequenceEquals](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet2)]
+[!CODE-csharp[SequenceEquals](../../../samples/snippets/csharp/getting-started/console-linq/extensions.cs?name=snippet2)]
 
 다음에서는 두 번째 LINQ 관용구인 터미널 메서드를 보여 줍니다. 여기서는 시퀀스를 입력으로 사용하고(또는 이 경우 두 개의 시퀀스) 단일 스칼라 값을 반환합니다. 터미널 메서드를 사용하는 경우, 항상 LINQ 쿼리의 메서드 체인에서 최종 메서드이므로 이름이 “터미널”입니다.
 
@@ -259,7 +259,7 @@ shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
 
 프로그램을 다시 실행합니다. 그러면 데크가 자체적으로 순서를 변경하는 데 52회 반복된다는 것을 알 수 있습니다. 또한 프로그램이 계속 실행될 때 몇 가지 심각한 성능 저하를 알 수 있습니다.
 
-그 이유로는 여러 가지가 있습니다. 이 성능 저하의 주요 원인 중 하나인 비효율적인 [‘지연 계산’](../programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md) 사용을 해결할 수 있습니다. 
+그 이유로는 여러 가지가 있습니다. 이 성능 저하의 주요 원인 중 하나인 비효율적인 [‘지연 계산’ *사용을 해결할 수 있습니다.* ](../programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
 
 간단히 말해, 지연 계산은 해당 값이 필요할 때까지 문이 계산되지 않음을 나타냅니다. LINQ 쿼리는 지연 계산되는 문입니다. 요소가 요청될 때만 시퀀스가 생성됩니다. 일반적으로 이것이 LINQ의 큰 장점입니다. 그러나 이러한 프로그램에서 사용하면 실행 시간이 기하급수적으로 늘어납니다.
 
@@ -267,7 +267,7 @@ LINQ 쿼리를 사용하여 원래 데크를 생성했습니다. 각 순서 섞�
 
 `Extensions.cs` 파일에서 아래 메서드를 입력하거나 복사합니다. 이 확장 메서드는 프로젝트 디렉터리에 `debug.log`라는 새 파일을 만들고 현재 실행 중인 쿼리를 로그 파일에 기록합니다. 이 확장 메서드를 임의 쿼리에 추가하여 해당 쿼리가 실행되었음을 표시할 수 있습니다.
 
-[!CODE-csharp[LogQuery](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
+[!CODE-csharp[LogQuery](../../../samples/snippets/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
 
 `File` 아래에 빨간색 물결이 나타나면 존재하지 않는다는 것을 의미합니다. 컴파일러가 `File`을 인식하지 못하기 때문에 컴파일되지 않습니다. 이 문제를 해결하려면 `Extensions.cs`의 첫 번째 줄 아래에 다음 코드 줄을 추가해야 합니다.
 
@@ -329,7 +329,7 @@ public static void Main(string[] args)
 
 여기서 코드 성능을 개선하여 수행하는 실행 횟수를 줄일 수 있습니다. 간단한 해결 방법은 카드 데크를 구성하는 원래 LINQ 쿼리의 결과를 ‘캐시’하는 것입니다.  현재, do-while 루프가 반복될 때마다 쿼리를 계속해서 다시 실행하고 카드 데크를 다시 구성하며 매번 순서를 변경합니다. 카드 데크를 캐시하려면 LINQ 메서드 <xref:System.Linq.Enumerable.ToArray%2A> 및 <xref:System.Linq.Enumerable.ToList%2A>를 활용합니다. 두 메서드를 쿼리에 추가하면 지정된 대로 동일한 작업을 수행하지만, 이제 호출하도록 선택한 메서드에 따라 배열이나 목록에 결과를 저장합니다. LINQ 메서드 <xref:System.Linq.Enumerable.ToArray%2A>를 두 쿼리에 모두 추가하고 프로그램을 다시 실행합니다.
 
-[!CODE-csharp[Main](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
+[!CODE-csharp[Main](../../../samples/snippets/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
 
 이제 외부 순서 섞기가 30개 쿼리로 줄었습니다. 내부 순서 섞기로 다시 실행해도 비슷하게 개선된 것을 확인할 수 있습니다. 이제 162개 쿼리가 실행됩니다.
 

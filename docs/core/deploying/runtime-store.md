@@ -3,10 +3,10 @@ title: 런타임 패키지 저장소
 description: 런타임 패키지 저장소를 사용하여 .NET Core에서 사용되는 매니페스트를 대상으로 지정하는 방법을 알아봅니다.
 ms.date: 08/12/2017
 ms.openlocfilehash: 7a833ed95147608c6fb403f8f0dec179d2a73833
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77448960"
 ---
 # <a name="runtime-package-store"></a>런타임 패키지 저장소
@@ -116,7 +116,7 @@ dotnet publish --manifest manifest.xml
 </PropertyGroup>
 ```
 
-.NET Core 프로젝트와 같이 앱의 대상 환경이 잘 알려진 경우에만 프로젝트 파일에서 대상 매니페스트를 지정합니다. 오픈 소스 프로젝트에는 이 방법을 사용할 수 없습니다. 오픈 소스 프로젝트의 사용자는 일반적으로 앱을 다양한 프로덕션 환경에 배포합니다. 이러한 프로덕션 환경에는 대개 여러 가지 패키지 집합이 미리 설치되어 있습니다. 이런 환경에서는 대상 매니페스트에 대한 가정을 세울 수 없으므로 [`dotnet publish`](../tools/dotnet-publish.md)의 `--manifest` 옵션을 사용해야 합니다.
+.NET Core 프로젝트와 같이 앱의 대상 환경이 잘 알려진 경우에만 프로젝트 파일에서 대상 매니페스트를 지정합니다. 오픈 소스 프로젝트에는 이 방법을 사용할 수 없습니다. 오픈 소스 프로젝트의 사용자는 일반적으로 앱을 다양한 프로덕션 환경에 배포합니다. 이러한 프로덕션 환경에는 대개 여러 가지 패키지 집합이 미리 설치되어 있습니다. 이런 환경에서는 대상 매니페스트에 대한 가정을 세울 수 없으므로 `--manifest`[`dotnet publish`의 ](../tools/dotnet-publish.md) 옵션을 사용해야 합니다.
 
 ## <a name="aspnet-core-implicit-store"></a>ASP.NET Core 암시적 저장소
 
@@ -143,7 +143,7 @@ ASP.NET Core 암시적 저장소는 ASP.NET Core 2.0에만 적용됩니다. 암�
 
 게시할 때 배포가 *트리밍*될 경우에는 게시된 출력에서 지정한 매니페스트 패키지의 특정 버전만 보류됩니다. 앱을 시작하려면 지정된 버전의 패키지가 호스트에 있어야 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [dotnet-publish](../tools/dotnet-publish.md)
 - [dotnet-store](../tools/dotnet-store.md)

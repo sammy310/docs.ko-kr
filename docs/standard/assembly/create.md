@@ -8,10 +8,10 @@ helpviewer_keywords:
 - multifile assemblies
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
 ms.openlocfilehash: 81fffb2b2e1d56d6068bf6f663a13fad6968a383
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73740513"
 ---
 # <a name="create-assemblies"></a>어셈블리 만들기
@@ -44,7 +44,7 @@ Visual Studio 등의 IDE 또는 Windows SDK에서 제공된 컴파일러와 도�
 
 공용 언어 런타임 어셈블리를 비관리 COM 애플리케이션에서 사용할 수 있도록 하려면 특별히 고려해야 할 사항이 있습니다. 비관리 코드 사용에 대한 자세한 내용은 [.NET Framework 구성 요소를 COM에 노출](../../framework/interop/exposing-dotnet-components-to-com.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [어셈블리 버전 관리](versioning.md)
 - [방법: 단일 파일 어셈블리 빌드](../../framework/app-domains/build-single-file-assembly.md)

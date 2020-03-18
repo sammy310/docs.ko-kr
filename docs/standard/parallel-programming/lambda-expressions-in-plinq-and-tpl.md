@@ -11,10 +11,10 @@ helpviewer_keywords:
 - lambda expressions, with Action and Func
 ms.assetid: 645b2c17-29d0-4ffa-8684-430743cc2f2d
 ms.openlocfilehash: 4e5be295a52edc1a7f0a0a3aa98f55335ae3e31b
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77453002"
 ---
 # <a name="lambda-expressions-in-plinq-and-tpl"></a>PLINQ 및 TPL의 람다 식
@@ -26,7 +26,7 @@ TPL(작업 병렬 라이브러리)에는 대리자의 <xref:System.Func%601?disp
 
 ## <a name="func-delegate"></a>Func 대리자
 
-`Func` 대리자는 값을 반환하는 메서드를 캡슐화합니다. `Func` 서명에서 마지막 또는 가장 오른쪽에 있는 형식 매개 변수는 항상 반환 형식을 지정합니다. 컴파일러 오류의 일반적인 원인 중 하나는 두 개의 입력 매개 변수를 <xref:System.Func%602?displayProperty=nameWithType>에 전달하려고 하기 때문입니다. 실제로 이 형식은 하나의 입력 매개 변수만 사용합니다. .NET은 <xref:System.Func%601?displayProperty=nameWithType>, <xref:System.Func%602?displayProperty=nameWithType>, <xref:System.Func%603?displayProperty=nameWithType> 등에서 <xref:System.Func%6017?displayProperty=nameWithType>까지 17개 버전의 `Func`를 정의합니다.
+`Func` 대리자는 값을 반환하는 메서드를 캡슐화합니다. `Func` 서명에서 마지막 또는 가장 오른쪽에 있는 형식 매개 변수는 항상 반환 형식을 지정합니다. 컴파일러 오류의 일반적인 원인 중 하나는 두 개의 입력 매개 변수를 <xref:System.Func%602?displayProperty=nameWithType>에 전달하려고 하기 때문입니다. 실제로 이 형식은 하나의 입력 매개 변수만 사용합니다. .NET은 `Func`, <xref:System.Func%601?displayProperty=nameWithType>, <xref:System.Func%602?displayProperty=nameWithType> 등에서 <xref:System.Func%603?displayProperty=nameWithType>까지 17개 버전의 <xref:System.Func%6017?displayProperty=nameWithType>를 정의합니다.
 
 ## <a name="action-delegate"></a>Action 대리자
 
@@ -39,6 +39,6 @@ TPL(작업 병렬 라이브러리)에는 대리자의 <xref:System.Func%601?disp
 [!code-csharp[System.Threading.Tasks.Parallel#02](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.parallel/cs/parallelforeach.cs#02)]
 [!code-vb[System.Threading.Tasks.Parallel#02](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallel/vb/parallelforeach.vb#02)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [병렬 프로그래밍](../../../docs/standard/parallel-programming/index.md)

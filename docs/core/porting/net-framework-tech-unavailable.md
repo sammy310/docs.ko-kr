@@ -5,10 +5,10 @@ description: .NET Core에서 사용할 수 없는 .NET Framework 기술에 대�
 author: cartermp
 ms.date: 04/30/2019
 ms.openlocfilehash: bd2488de653ecdfed261100b4c9019bea58fcab3
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77092943"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Core에서 사용할 수 없는 .NET Framework 기술
@@ -21,7 +21,7 @@ API 또는 기술이 현재 구현되지 않았기 때문에 이들을 고의로
 
 애플리케이션 도메인(AppDomains)은 앱을 서로 분리합니다. AppDomain에는 런타임 지원이 필요하고, 일반적으로 상당히 비싸므로 추가 앱 도메인을 만드는 것은 지원되지 않으며 향후 이 기능을 추가할 계획은 없습니다. 코드 격리의 경우 별도의 프로세스 또는 컨테이너를 대신 사용하세요. 어셈블리를 동적으로 로드하려면 <xref:System.Runtime.Loader.AssemblyLoadContext> 클래스를 사용합니다.
 
-.NET Framework에서 코드를 쉽게 마이그레이션할 수 있도록 .NET Core에서는 <xref:System.AppDomain> API 표면의 일부를 공개했습니다. API 중 일부는 정상적으로 작동하고(예: <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>), 일부 멤버는 아무것도 수행하지 않고(예: <xref:System.AppDomain.SetCachePath%2A>), 일부는 <xref:System.PlatformNotSupportedException>을 throw합니다(예: <xref:System.AppDomain.CreateDomain%2A>). [dotnet/runtime GitHub 리포지토리](https://github.com/dotnet/runtime)의 [`System.AppDomain` 참조 소스](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Private.CoreLib/src/System/AppDomain.cs)에 대해 사용하는 유형을 확인합니다. 구현된 버전과 일치하는 분기를 선택해야 합니다.
+.NET Framework에서 코드를 쉽게 마이그레이션할 수 있도록 .NET Core에서는 <xref:System.AppDomain> API 표면의 일부를 공개했습니다. API 중 일부는 정상적으로 작동하고(예: <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>), 일부 멤버는 아무것도 수행하지 않고(예: <xref:System.AppDomain.SetCachePath%2A>), 일부는 <xref:System.PlatformNotSupportedException>을 throw합니다(예: <xref:System.AppDomain.CreateDomain%2A>). [dotnet/runtime GitHub 리포지토리`System.AppDomain`의 ](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Private.CoreLib/src/System/AppDomain.cs)[ 참조 소스](https://github.com/dotnet/runtime)에 대해 사용하는 유형을 확인합니다. 구현된 버전과 일치하는 분기를 선택해야 합니다.
 
 ## <a name="remoting"></a>원격 통신
 
@@ -47,6 +47,6 @@ CAS와 마찬가지로 보안 투명도는 샌드박스 코드를 보안상 중�
 
 System.EnterpriseServices(COM+)는 .NET Core에서 지원되지 않습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [.NET Framework에서 .NET Core로의 이식 개요](../porting/index.md)

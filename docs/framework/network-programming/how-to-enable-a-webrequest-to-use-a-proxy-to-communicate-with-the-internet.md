@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 63c0ef2c-44b5-4c54-9804-ba0b9b001ac7
 ms.openlocfilehash: 8b38973e4cb2c83ce32b8a08e54d828a8eeef879
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73039546"
 ---
 # <a name="how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet"></a>방법: 프록시를 사용하여 인터넷과 통신하도록 WebRequest 설정
@@ -32,8 +32,8 @@ GlobalProxySelection.Select = proxyObject
 
 이 예제에는 다음 사항이 필요합니다.
 
-- **System.Net** 네임스페이스에 대한 C# [`using` 지시문](../../csharp/language-reference/keywords/using-directive.md)
-- **System.Net** 네임스페이스에 대한 Visual Basic [`Imports` 문](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [System.Net`using` 네임스페이스에 대한 C# ](../../csharp/language-reference/keywords/using-directive.md) **지시문**
+- [System.Net`Imports` 네임스페이스에 대한 Visual Basic ](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) **문**
 
 ## <a name="see-also"></a>참고 항목
 

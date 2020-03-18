@@ -6,10 +6,10 @@ helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 ms.openlocfilehash: 486b320ca30323684d301630ad29f8f4615764ee
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77504051"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 버전 및 종속성
@@ -236,7 +236,7 @@ CLR은 고유한 버전 번호로 식별됩니다. .NET Framework 버전 번호�
 |-|-|
 |**CLR 버전**|2.0|
 |**포함된 Visual Studio 버전**|2005|
-|**Windows 버전**|N/A|
+|**Windows 버전**|해당 없음|
 |**Windows Server 버전**|✔️ 2008 R2 SP1<br />✔️ 2008 SP2<br />✔️ 2003|
 |**설치된 .NET 버전 확인 방법**|[지침](how-to-determine-which-versions-are-installed.md) 참조|
 
@@ -252,7 +252,7 @@ CLR은 고유한 버전 번호로 식별됩니다. .NET Framework 버전 번호�
 |-|-|
 |**CLR 버전**|1.1|
 |**포함된 Visual Studio 버전**|2003|
-|**Windows 버전**|N/A|
+|**Windows 버전**|해당 없음|
 |**Windows Server 버전**|✔️ 2003|
 |**설치된 .NET 버전 확인 방법**|[지침](how-to-determine-which-versions-are-installed.md) 참조|
 
@@ -262,8 +262,8 @@ CLR은 고유한 버전 번호로 식별됩니다. .NET Framework 버전 번호�
 |-|-|
 |**CLR 버전**|1.0|
 |**포함된 Visual Studio 버전**|Visual Studio .NET|
-|**Windows 버전**|N/A|
-|**Windows Server 버전**|N/A|
+|**Windows 버전**|해당 없음|
+|**Windows Server 버전**|해당 없음|
 |**설치된 .NET 버전 확인 방법**|[지침](how-to-determine-which-versions-are-installed.md) 참조|
 
 > [!NOTE]
@@ -300,9 +300,9 @@ CLR은 고유한 버전 번호로 식별됩니다. .NET Framework 버전 번호�
 
 - 앱을 새로운 버전의 NET Framework로 마이그레이션하는 방법에 대한 자세한 내용은 [마이그레이션 가이드](index.md)를 참조하세요.
 
-- 컴퓨터에 설치된 버전이나 업데이트를 확인하는 방법에 대한 자세한 내용은 [방법: 설치된 .NET Framework 버전 확인](how-to-determine-which-versions-are-installed.md) 및 [방법: 설치된 .NET Framework 업데이트 확인](how-to-determine-which-net-framework-updates-are-installed.md)을 참조하세요.
+- 컴퓨터에 설치된 버전 또는 업데이트 확인에 대한 자세한 내용은 [방법: 설치된 .NET Framework 버전 확인](how-to-determine-which-versions-are-installed.md) 및 [방법: 설치된 .NET Framework 업데이트 확인](how-to-determine-which-net-framework-updates-are-installed.md)을 참조하십시오.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [버전 호환성](version-compatibility.md)
 | [.NET Framework 공식 지원 정책](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)

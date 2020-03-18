@@ -6,10 +6,10 @@ helpviewer_keywords:
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
 ms.openlocfilehash: f692e66672b1804a309c6ac04c158af948a1b1ab
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789867"
 ---
 # <a name="command-line-build-with-cscexe"></a>csc.exe를 사용한 명령줄 빌드
@@ -24,7 +24,7 @@ Windows SDK(소프트웨어 개발 키트)만 있는 컴퓨터에서 작업하�
 
 또한 MSBuild를 사용하여 프로그래밍 방식으로 C# 프로그램을 빌드할 수도 있습니다. 자세한 내용은 [MSBuild](/visualstudio/msbuild/msbuild)를 참조하세요.
 
-*csc.exe* 실행 파일은 대개 *Windows* 디렉터리 아래의 Microsoft.NET\Framework\\*\<Version>* 폴더에 있습니다. 이 위치는 개별 컴퓨터의 구성에 따라 다를 수 있습니다. 컴퓨터에 .NET Framework 버전이 두 개 이상 설치된 경우 이 파일의 여러 버전을 찾을 수 있습니다. 해당 설치에 대한 자세한 내용은 [방법: 설치된 .NET Framework 버전 확인](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md)을 참조하세요.
+*csc.exe* 실행 파일은 대개 \\Windows *디렉터리 아래의 Microsoft.NET\Framework\<* *Version>* 폴더에 있습니다. 이 위치는 개별 컴퓨터의 구성에 따라 다를 수 있습니다. 컴퓨터에 .NET Framework 버전이 두 개 이상 설치된 경우 이 파일의 여러 버전을 찾을 수 있습니다. 해당 설치에 대한 자세한 내용은 [방법: 설치된 .NET Framework 버전 확인](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md)을 참조하세요.
 
 > [!TIP]
 > Visual Studio IDE를 사용하여 프로젝트를 빌드할 때 **출력** 창에 **csc** 명령과 관련 컴파일러 옵션을 표시할 수 있습니다. 이 정보를 표시하려면 [방법: 빌드 로그 파일 보기, 저장 및 구성](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log)의 지침에 따라 로그 데이터의 세부 정보 표시 수준을 **보통** 또는 **자세히**로 변경합니다. 프로젝트를 다시 빌드한 후 **출력** 창에서 **csc**를 검색하여 C# 컴파일러 호출을 찾습니다.
@@ -95,9 +95,9 @@ C# 컴파일러에서는 운영 체제 명령줄에 지정된 인수를 해석�
 
 ## <a name="differences-between-c-compiler-and-c-compiler-output"></a>C# 컴파일러 및 C++ 컴파일러 출력의 차이점
 
-C# 컴파일러를 호출하면 개체 파일(*.obj*)은 만들어지지 않고 출력 파일이 직접 만들어집니다. 따라서 C# 컴파일러에는 링커가 필요하지 않습니다.
+C# 컴파일러를 호출하면 개체 파일( *.obj*)은 만들어지지 않고 출력 파일이 직접 만들어집니다. 따라서 C# 컴파일러에는 링커가 필요하지 않습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 컴파일러 옵션](./index.md)
 - [사전순 C# 컴파일러 옵션 목록](./listed-alphabetically.md)

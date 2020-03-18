@@ -6,10 +6,10 @@ helpviewer_keywords:
 - application compatibility
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 ms.openlocfilehash: c1c3298d87ad0f481fa30182e40cd5edcd535d6a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73975614"
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 마이그레이션 문제
@@ -298,7 +298,7 @@ ms.locfileid: "73975614"
 | **엔터티 참조** | 데이터 손상을 방지하기 위해, 엔터티 참조가 더 이상 XML 특성에서 두 번 엔터티화되지 않습니다.<br><br>사용자가 엔터티를 `xmlns` 특성에 쓰려고 하거나 <xref:System.Xml.XmlWriter.WriteEntityRef%2A> 메서드를 사용하여 `xml:lang` 또는 `xml:space` 특성에 쓰려고 하면, 엔터티가 출력에서 두 번 엔터티화되어 데이터가 손상됩니다. |
 | **줄 바꿈 처리** | 데이터 손상을 방지하기 위해 <xref:System.Xml.XmlWriter> 개체가 <xref:System.Xml.NewLineHandling> 옵션을 존중합니다. |
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET Framework 4의 새 형식 및 멤버](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff641764%28v=vs.100%29)
 - [.NET Framework 4 마이그레이션 가이드](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29)

@@ -6,10 +6,10 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
 ms.openlocfilehash: c1163a41cd2feb0e8785ae9d4c6a71dfbedf3f12
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77092618"
 ---
 # <a name="interpret-model-predictions-using-permutation-feature-importance"></a>순열 기능 중요도를 사용하여 모델 예측 해석
@@ -26,7 +26,7 @@ PFI(순열 기능 중요도)를 사용하여 ML.NET 기계 학습 모델 예측�
 
 이 샘플에 사용되는 데이터 세트의 기능은 1-12열에 있습니다. 목표는 `Price` 예측입니다.
 
-| Column | 기능 | 설명
+| 열 | 기능 | 설명
 | --- | --- | --- |
 | 1 | CrimeRate | 인당 범죄율
 | 2 | ResidentialZones | 도시 내 주거지
@@ -36,11 +36,11 @@ PFI(순열 기능 중요도)를 사용하여 ML.NET 기계 학습 모델 예측�
 | 6 | AverageRoomNumber | 가구 내 평균 방 수
 | 7 | HomeAge | 가구 연령
 | 8 | BusinessCenterDistance | 가장 가까운 비즈니스 지구까지 거리
-| 9 | HighwayAccess | 고속도로 근접성
+| 10 | HighwayAccess | 고속도로 근접성
 | 10 | TaxRate | 재산세율
 | 11 | StudentTeacherRatio | 교사 학생 비율
 | 12 | PercentPopulationBelowPoverty | 빈곤 인구 비율
-| 13 | 가격 | 주택 가격
+| 13 | Price | 주택 가격
 
 데이터 세트의 샘플은 다음과 같습니다.
 
@@ -137,7 +137,7 @@ ImmutableArray<RegressionMetricsStatistics> permutationFeatureImportance =
         .PermutationFeatureImportance(sdcaModel, preprocessedTrainData, permutationCount:3);
 ```
 
-학습 데이터 세트에 [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions)를 사용한 결과는 [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) 개체의 [`ImmutableArray`](xref:System.Collections.Immutable.ImmutableArray)입니다. [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics)는 `permutationCount` 매개 변수에서 지정한 순열 수에 해당하는 여러 [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics) 관찰에 대해 평균, 표준 편차 같은 요약 통계를 제공합니다.
+학습 데이터 세트에 [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions)를 사용한 결과는 [`ImmutableArray`](xref:System.Collections.Immutable.ImmutableArray) 개체의 [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics)입니다. [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics)는 [ 매개 변수에서 지정한 순열 수에 해당하는 여러 `RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics)`permutationCount` 관찰에 대해 평균, 표준 편차 같은 요약 통계를 제공합니다.
 
 중요도, 이 경우 [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions)에서 계산한 R 제곱 메트릭의 절대 평균 감소를 가장 중요함에서 가장 중요하지 않음의 순서로 지정할 수 있습니다.
 

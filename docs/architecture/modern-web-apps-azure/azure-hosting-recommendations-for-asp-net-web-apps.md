@@ -5,10 +5,10 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 06/06/2019
 ms.openlocfilehash: 5587b8b20da8a6801d77b722e9c3326f6e695574
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73416723"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>ASP.NET Core 웹앱에 대한 Azure 호스팅 권장 사항
@@ -80,14 +80,14 @@ Web Apps for Containers가 가장 적합한 몇 가지 시나리오가 있습니
 
 AKS(Azure Kubernetes Service)는 컨테이너 오케스트레이션 전문 지식 없이도 컨테이너화된 애플리케이션을 빠르고 쉽게 배포 및 관리할 수 있도록 해주는 호스트된 Kubernetes 환경을 관리합니다. 또한 애플리케이션을 오프라인으로 전환하지 않고 요청 시 리소스를 프로비전, 업그레이드 및 크기 조정하여 진행 중인 작업 및 유지 관리 부담을 덜어줍니다.
 
-AKS는 대부분의 책임을 Azure로 오프로드함으로써 Kubernetes 클러스터 관리에 대한 복잡성 및 운영 오버헤드를 줄입니다. 호스트된 Kubernetes 서비스처럼, Azure는 상태 모니터링 및 유지 관리와 같은 중요 작업을 처리합니다. 또한 사용자는 마스터가 아닌 사용자 클러스터 내 에이전트 노드에 대해서만 비용을 지불합니다. 관리되는 Kubernetes 서비스로서 AKS는 다음을 제공합니다.
+AKS는 대부분의 책임을 Azure로 오프로드함으로써 Kubernetes 클러스터 관리에 대한 복잡성 및 운영 오버헤드를 줄입니다. 호스트된 Kubernetes 서비스처럼, Azure는 상태 모니터링 및 유지 관리와 같은 중요 작업을 처리합니다. 또한 사용자는 마스터가 아닌 사용자 클러스터 내 에이전트 노드에 대해서만 비용을 지불합니다. Managed Kubernetes 서비스 형태인 AKS는 다음을 제공합니다.
 
 - 자동화된 Kubernetes 버전 업그레이드 및 패치.
 - 간편한 클러스터 크기 조정.
 - 자체 복구 호스팅된 컨트롤 평면(마스터).
 - 비용 절감 - 실행 중인 에이전트 풀 노드에 대해서만 지불.
 
-이제 AKS 클러스터의 노드 관리를 처리하는 Azure를 사용하면 클러스터 업그레이드와 같은 여러 작업을 수동으로 수행하지 않아도 됩니다. Azure가 사용자를 위해 이와 같은 중요한 유지 관리 작업을 처리하므로 AKS는 클러스터에 대한 직접 액세스를 제공하지 않습니다(예: SSH 사용).
+AKS 클러스터의 노드 관리를 Azure가 처리하므로 클러스터 업그레이드 등의 여러 작업을 수행할 필요가 없어집니다. Azure가 사용자를 위해 이와 같은 중요한 유지 관리 작업을 처리하므로 AKS는 클러스터에 대한 직접 액세스를 제공하지 않습니다(예: SSH 사용).
 
 AKS를 활용하는 팀은 Azure Dev Spaces를 이용할 수도 있습니다. Azure Dev Spaces는 AKS에서 실행 중인 전체 마이크로서비스 아키텍처 또는 애플리케이션으로 직접 작업할 수 있도록 함으로써 팀이 마이크로서비스 애플리케이션의 개발과 빠른 반복에 집중할 수 있도록 도와줍니다. Azure Dev Spaces는 또한 AKS 클러스터나 다른 개발자에게 영향을 주지 않으면서 마이크로서비스 아키텍처의 일부를 독립적으로 업데이트할 수 있는 방법을 제공합니다.
 
@@ -110,7 +110,7 @@ App Service에서 실행하려면 상당한 수정이 필요한 기존 애플리
 
 애플리케이션의 나머지 부분과 분리될 수 있는 개별 논리 프로세스는 "서버가 없는" 방식으로 Azure Functions에 별도로 배포할 수 있습니다. Azure Functions를 사용하면 코드를 실행할 애플리케이션 또는 인프라에 대한 걱정 없이 주어진 문제에 필요한 코드를 작성할 수 있습니다. C\#, F\#, Node.js, Python 및 PHP를 포함하는 다양한 프로그래밍 언어 중에서 작업에 가장 생산적인 언어를 선택할 수 있습니다. 대부분의 클라우드 기반 솔루션과 마찬가지로 사용 시간만큼 요금을 지불하고 Azure Functions를 필요에 따라 확장할 수 있습니다.
 
-## <a name="data"></a>데이터
+## <a name="data"></a>data
 
 Azure는 다양한 데이터 스토리지 옵션을 제공하므로, 애플리케이션이 해당 데이터에 대해 적절한 데이터 공급자를 사용할 수 있습니다.
 

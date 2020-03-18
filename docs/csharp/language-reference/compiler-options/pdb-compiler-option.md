@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /pdb compiler option [C#]
 ms.assetid: e9d0f96a-5b75-45d6-9765-92538dd5f823
 ms.openlocfilehash: 3081f4716e8cd858d789db6050e635af941aa05c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69602571"
 ---
 # <a name="-pdb-c-compiler-options"></a>-pdb(C# 컴파일러 옵션)
@@ -35,7 +35,7 @@ ms.locfileid: "69602571"
   
  Visual Studio 개발 환경에서는 이 컴파일러 옵션을 설정할 수 없으며 프로그래밍 방식으로 변경할 수도 없습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  `t.cs`를 컴파일하고 tt.pdb라는 .pdb 파일을 만듭니다.  
   
 ```console  

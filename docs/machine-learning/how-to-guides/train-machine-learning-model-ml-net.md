@@ -6,10 +6,10 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
 ms.openlocfilehash: 0e0f43225b9bf243c31b3095817bdcbdb3123012
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73976766"
 ---
 # <a name="train-and-evaluate-a-model"></a>모델 학습 및 평가
@@ -82,7 +82,7 @@ HousingData[] housingData = new HousingData[]
 };
 ```
 
-[`TrainTestSplit`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit*) 메서드를 사용하여 데이터를 학습 및 테스트 집합으로 분할합니다. 그 결과는 학습 집합용 하나와 테스트 집합용 하나 등, 두 [`IDataView`](xref:Microsoft.ML.IDataView) 멤버를 갖는 [`TrainTestData`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData) 개체가 됩니다. 데이터 분할 백분율은 `testFraction` 매개 변수로 결정됩니다. 아래 코드 조각은 원래 데이터의 20%를 테스트 집합용으로 보유합니다.
+[`TrainTestSplit`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit*) 메서드를 사용하여 데이터를 학습 및 테스트 집합으로 분할합니다. 그 결과는 학습 집합용 하나와 테스트 집합용 하나 등, 두 [`TrainTestData`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData) 멤버를 갖는 [`IDataView`](xref:Microsoft.ML.IDataView) 개체가 됩니다. 데이터 분할 백분율은 `testFraction` 매개 변수로 결정됩니다. 아래 코드 조각은 원래 데이터의 20%를 테스트 집합용으로 보유합니다.
 
 ```csharp
 DataOperationsCatalog.TrainTestData dataSplit = mlContext.Data.TrainTestSplit(data, testFraction: 0.2);

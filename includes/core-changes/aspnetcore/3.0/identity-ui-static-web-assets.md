@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: c5e4b5619394f99a419fe48aee190ad741ea8c0d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73041661"
 ---
 ### <a name="identity-ui-uses-static-web-assets-feature"></a>ID: UI는 정적 웹 자산 기능을 사용합니다.
@@ -33,7 +33,7 @@ ID UI의 기본 UI 프레임워크는 **부트스트랩 4**입니다. UI 프레�
 
 정적 웹 자산 기능을 채택하려면 UI 프레임워크 구성이 MSBuild로 이동해야 했습니다. 포함할 프레임워크를 결정하는 것은 런타임 결정이 아니라 빌드 시간 결정입니다.
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 사이트 UI를 검토하여 새 부트스트랩 4 구성 요소가 호환되는지 확인합니다. 필요한 경우 `IdentityUIFrameworkVersion` MSBuild 속성을 사용하여 부트스트랩 3으로 되돌립니다. 프로젝트 파일의 `<PropertyGroup>` 요소에 속성을 추가합니다.
 

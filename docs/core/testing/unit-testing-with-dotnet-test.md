@@ -1,15 +1,15 @@
 ---
-title: dotnet test 및 xUnit을 사용하여 .NET Core에서 C# 코드 유닛 테스트
+title: dotnet 테스트 및 xUnit을 사용하여 .NET Core에서 C# 단위 테스트
 description: dotnet test 및 xUnit을 사용하여 샘플 솔루션을 단계별로 빌드하는 대화형 환경을 통해 C# 및 .NET Core의 단위 테스트 개념을 알아봅니다.
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 226db54047747fbd065c64f5e4812094921c7f62
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c9e3d63a2cf4f560591459833340b729ffec1b95
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714231"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240898"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>dotnet 테스트 및 xUnit을 사용하여 .NET Core에서 C# 단위 테스트
 
@@ -66,7 +66,7 @@ ms.locfileid: "75714231"
     }
   ```
 
-* 위의 코드는
+* 위의 코드는:
   * 구현되지 않았음을 나타내는 메시지와 함께 <xref:System.NotImplementedException>을 throw합니다.
   * 자습서의 뒷부분에서 업데이트됩니다.
 
@@ -205,9 +205,9 @@ public void IsPrime_InputIs1_ReturnFalse()
 }
 ```
 
-다음 코드로 바꾸기:
+다음 코드와 바꿉니다.
 
-[!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
+[!code-csharp[Sample_TestCode](../../../samples/snippets/core/testing/unit-testing-using-dotnet-test/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
 앞의 코드에서 `[Theory]` 및 `[InlineData]`를 사용하여 2보다 작은 몇 가지 값을 테스트할 수 있습니다. 2는 가장 작은 소수입니다.
 

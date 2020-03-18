@@ -15,10 +15,10 @@ helpviewer_keywords:
 - DateTime object
 - time strings
 ms.openlocfilehash: 9555304e570226b2ed3b040735cf099b5a018f93
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78156545"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>.NET에서 날짜 및 시간 문자열 구문 분석
@@ -42,13 +42,13 @@ ms.locfileid: "78156545"
 
 문자열에 날짜가 있으면 월과 일 또는 연도 중 하나를 포함해야 합니다. 시간이 있으면 시와 분 또는 AM/PM 지정자 중 하나를 포함해야 합니다.
 
-<xref:System.Globalization.DateTimeStyles.NoCurrentDateDefault> 상수를 지정하여 이러한 기본값을 재정의할 수 있습니다. 이 상수를 사용하면 누락된 연도, 월 또는 일 속성이 값 `1`로 설정됩니다. <xref:System.DateTime.Parse%2A>를 사용하는 [마지막 예제](#styles-example)에서 이 동작을 보여줍니다.
+<xref:System.Globalization.DateTimeStyles.NoCurrentDateDefault> 상수를 지정하여 이러한 기본값을 재정의할 수 있습니다. 이 상수를 사용하면 누락된 연도, 월 또는 일 속성이 값 `1`로 설정됩니다. [를 사용하는 ](#styles-example)마지막 예제<xref:System.DateTime.Parse%2A>에서 이 동작을 보여줍니다.
 
-날짜 및 시간 구성 요소 외에도 날짜 및 시간의 문자열 표현은 시간이 UTC(협정 세계시)와 얼마나 다른지를 나타내는 오프셋을 포함할 수 있습니다. 예를 들어, 문자열 "2/14/2007 5:32:00 -7:00"는 UTC보다 7시간 이전인 시간을 가리킵니다. 시간의 문자열 표현에서 오프셋을 생략하면 구문 분석은 해당 <xref:System.DateTime.Kind%2A> 속성이 <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>로 설정된 <xref:System.DateTime> 개체를 반환합니다. 오프셋을 지정하면 구문 분석은 <xref:System.DateTime.Kind%2A> 속성이 <xref:System.DateTimeKind.Local?displayProperty=nameWithType>로 설정되고 해당 값이 컴퓨터의 로컬 표준 시간대로 조정된 <xref:System.DateTime> 개체를 반환합니다. 구문 분석 메서드에서 <xref:System.Globalization.DateTimeStyles> 값을 사용하여 이 동작을 수정할 수 있습니다.
+날짜 및 시간 구성 요소 외에도 날짜 및 시간의 문자열 표현은 시간이 UTC(협정 세계시)와 얼마나 다른지를 나타내는 오프셋을 포함할 수 있습니다. 예를 들어, 문자열 "2/14/2007 5:32:00 -7:00"는 UTC보다 7시간 이전인 시간을 가리킵니다. 시간의 문자열 표현에서 오프셋을 생략하면 구문 분석은 해당 <xref:System.DateTime> 속성이 <xref:System.DateTime.Kind%2A>로 설정된 <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> 개체를 반환합니다. 오프셋을 지정하면 구문 분석은 <xref:System.DateTime> 속성이 <xref:System.DateTime.Kind%2A>로 설정되고 해당 값이 컴퓨터의 로컬 표준 시간대로 조정된 <xref:System.DateTimeKind.Local?displayProperty=nameWithType> 개체를 반환합니다. 구문 분석 메서드에서 <xref:System.Globalization.DateTimeStyles> 값을 사용하여 이 동작을 수정할 수 있습니다.
   
 서식 공급자는 모호한 날짜를 해석하는 데에도 사용됩니다. “02/03/04” 문자열에서 나타내는 날짜의 구성 요소 중 무엇이 월, 일 및 연도인지가 명확하지 않습니다. 이들 구성 요소는 형식 공급자에서 비슷한 날짜 형식의 순서에 따라 해석됩니다.
 
-## <a name="parse"></a>Parse
+## <a name="parse"></a>구문 분석
 
 다음 예제에서는 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 메서드를 사용하여 `string`을 <xref:System.DateTime>으로 변환하는 방법을 설명합니다. 이 예제는 현재 스레드와 연결된 문화권을 사용합니다. 현재 문화권과 연결된 <xref:System.Globalization.CultureInfo>가 입력 문자열을 구문 분석할 수 없는 경우 <xref:System.FormatException>이 throw됩니다.
 
@@ -61,7 +61,7 @@ ms.locfileid: "78156545"
 [!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
 [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]
 
-문자열을 구문 분석할 때 어느 문화권의 서식 규칙을 사용할지 명시적으로 정의할 수도 있습니다. 즉, <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 속성에서 반환하는 표준 <xref:System.Globalization.DateTimeFormatInfo> 개체 중 하나를 지정합니다. 다음 예제에서는 형식 공급자를 사용하여 독일어 문자열을 <xref:System.DateTime>으로 구문 분석합니다. 여기서는 `de-DE` 문화권을 나타내는 <xref:System.Globalization.CultureInfo>를 만듭니다. 이 `CultureInfo` 개체는 이 특정 문자열이 성공적으로 구문 분석되도록 합니다. 그러면 <xref:System.Threading.Thread.CurrentThread>의 <xref:System.Threading.Thread.CurrentCulture>에 있는 모든 설정이 불가능합니다.  
+문자열을 구문 분석할 때 어느 문화권의 서식 규칙을 사용할지 명시적으로 정의할 수도 있습니다. 즉, <xref:System.Globalization.DateTimeFormatInfo> 속성에서 반환하는 표준 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 개체 중 하나를 지정합니다. 다음 예제에서는 형식 공급자를 사용하여 독일어 문자열을 <xref:System.DateTime>으로 구문 분석합니다. 여기서는 <xref:System.Globalization.CultureInfo> 문화권을 나타내는 `de-DE`를 만듭니다. 이 `CultureInfo` 개체는 이 특정 문자열이 성공적으로 구문 분석되도록 합니다. 그러면 <xref:System.Threading.Thread.CurrentCulture>의 <xref:System.Threading.Thread.CurrentThread>에 있는 모든 설정이 불가능합니다.  
   
 [!code-csharp[Parsing.DateAndTime#2](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#2)]
 [!code-vb[Parsing.DateAndTime#2](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#2)]
@@ -82,11 +82,11 @@ ms.locfileid: "78156545"
 [!code-csharp[Parsing.DateAndTime#4](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#4)]
 [!code-vb[Parsing.DateAndTime#4](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#4)]
 
-<xref:System.DateTime.Parse%2A> 및 <xref:System.DateTime.ParseExact%2A> 메서드의 각 오버로드에는 문자열의 서식 지정에 대한 문화권별 정보를 제공하는 <xref:System.IFormatProvider> 매개 변수도 있습니다. 이 <xref:System.IFormatProvider> 개체는 표준 문화권을 나타내는 <xref:System.Globalization.CultureInfo> 개체이거나 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 속성에서 반환하는 <xref:System.Globalization.DateTimeFormatInfo> 개체입니다.  <xref:System.DateTime.ParseExact%2A>는 하나 이상의 사용자 지정 날짜 및 시간 형식을 정의하는 추가 문자열이나 문자열 배열 인수도 사용합니다.  
+<xref:System.DateTime.Parse%2A> 및 <xref:System.DateTime.ParseExact%2A> 메서드의 각 오버로드에는 문자열의 서식 지정에 대한 문화권별 정보를 제공하는 <xref:System.IFormatProvider> 매개 변수도 있습니다. 이 <xref:System.IFormatProvider> 개체는 표준 문화권을 나타내는 <xref:System.Globalization.CultureInfo> 개체이거나 <xref:System.Globalization.DateTimeFormatInfo> 속성에서 반환하는 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 개체입니다.  <xref:System.DateTime.ParseExact%2A>는 하나 이상의 사용자 지정 날짜 및 시간 형식을 정의하는 추가 문자열이나 문자열 배열 인수도 사용합니다.  
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [.NET에서 문자열 구문 분석](parsing-strings.md)
+- [문자열 구문 분석](parsing-strings.md)
 - [형식 서식 지정](formatting-types.md)
 - [.NET에서 형식 변환](type-conversion.md)
 - [표준 날짜 및 시간 형식](standard-date-and-time-format-strings.md)

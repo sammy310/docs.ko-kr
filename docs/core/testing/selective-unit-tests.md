@@ -4,10 +4,10 @@ description: 필터 식을 사용하여 .NET Core의 dotnet 테스트 명령을 
 author: smadala
 ms.date: 03/22/2017
 ms.openlocfilehash: b9156300587215e68c01c609e298dbc1a2c53d11
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77543510"
 ---
 # <a name="running-selective-unit-tests"></a>선택적 단위 테스트 실행
@@ -57,9 +57,9 @@ namespace MSTestNamespace
 
 | 식 | 결과 |
 | ---------- | ------ |
-| <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | `FullyQualifiedName`에 `UnitTest1`이 **있거나**`TestCategory`가 `CategoryA`인 테스트를 실행합니다. |
-| `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | `FullyQualifiedName`에 `UnitTest1`**이 있고**`TestCategory`가 `CategoryA`인 테스트를 실행합니다. |
-| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | `UnitTest1`을 포함하는 `FullyQualifiedName` **이 있고** `TestCategory`가 `CategoryA` **이거나** `Priority`가 1인 테스트를 실행합니다. |
+| <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | `UnitTest1`에 `FullyQualifiedName`이 **있거나**`TestCategory`가 `CategoryA`인 테스트를 실행합니다. |
+| `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | `UnitTest1`에 `FullyQualifiedName`**이 있고**`TestCategory`가 `CategoryA`인 테스트를 실행합니다. |
+| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | `FullyQualifiedName`을 포함하는 `UnitTest1` **이 있고** `TestCategory`가 `CategoryA` **이거나** `Priority`가 1인 테스트를 실행합니다. |
 
 ## <a name="xunit"></a>xUnit
 
@@ -103,9 +103,9 @@ namespace XUnitNamespace
 
 | 식 | 결과 |
 | ---------- | ------ |
-| <code>dotnet test --filter "FullyQualifiedName~TestClass1&#124;Category=CategoryA"</code> | `FullyQualifiedName`에 `TestClass1`이 **있거나**`Category`가 `CategoryA`인 테스트를 실행합니다. |
-| `dotnet test --filter "FullyQualifiedName~TestClass1&Category=CategoryA"` | `FullyQualifiedName`에 `TestClass1` **이 있고** `Category`가 `CategoryA`인 테스트를 실행합니다. |
-| <code>dotnet test --filter "(FullyQualifiedName~TestClass1&Category=CategoryA)&#124;Priority=1"</code> | `TestClass1`을 포함하는 `FullyQualifiedName` **이 있고** `Category`가 `CategoryA` **이거나** `Priority`가 1인 테스트를 실행합니다. |
+| <code>dotnet test --filter "FullyQualifiedName~TestClass1&#124;Category=CategoryA"</code> | `TestClass1`에 `FullyQualifiedName`이 **있거나**`Category`가 `CategoryA`인 테스트를 실행합니다. |
+| `dotnet test --filter "FullyQualifiedName~TestClass1&Category=CategoryA"` | `TestClass1`에 `FullyQualifiedName` **이 있고** `Category`가 `CategoryA`인 테스트를 실행합니다. |
+| <code>dotnet test --filter "(FullyQualifiedName~TestClass1&Category=CategoryA)&#124;Priority=1"</code> | `FullyQualifiedName`을 포함하는 `TestClass1` **이 있고** `Category`가 `CategoryA` **이거나** `Priority`가 1인 테스트를 실행합니다. |
 
 ## <a name="nunit"></a>NUnit
 
@@ -145,6 +145,6 @@ namespace NUnitNamespace
 
 | 식 | 결과 |
 | ---------- | ------ |
-| <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | `FullyQualifiedName`에 `UnitTest1`이 **있거나**`TestCategory`가 `CategoryA`인 테스트를 실행합니다. |
-| `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | `FullyQualifiedName`에 `UnitTest1`**이 있고**`TestCategory`가 `CategoryA`인 테스트를 실행합니다. |
-| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | `UnitTest1`을 포함하는 `FullyQualifiedName` **이 있고** `TestCategory`가 `CategoryA` **이거나** `Priority`가 1인 테스트를 실행합니다. |
+| <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | `UnitTest1`에 `FullyQualifiedName`이 **있거나**`TestCategory`가 `CategoryA`인 테스트를 실행합니다. |
+| `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | `UnitTest1`에 `FullyQualifiedName`**이 있고**`TestCategory`가 `CategoryA`인 테스트를 실행합니다. |
+| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | `FullyQualifiedName`을 포함하는 `UnitTest1` **이 있고** `TestCategory`가 `CategoryA` **이거나** `Priority`가 1인 테스트를 실행합니다. |

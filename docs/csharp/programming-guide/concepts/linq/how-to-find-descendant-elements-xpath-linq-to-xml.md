@@ -3,10 +3,10 @@ title: 하위 요소를 찾는 방법(XPath 및 LINQ to XML)(C#)
 ms.date: 07/20/2015
 ms.assetid: b318da39-bb8b-4c56-a019-e13b12b01831
 ms.openlocfilehash: c90651502629284c67cc16de8a1aa59c392ae178
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141107"
 ---
 # <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a>하위 요소를 찾는 방법(XPath 및 LINQ to XML)(C#)
@@ -14,10 +14,10 @@ ms.locfileid: "74141107"
   
  XPath 식은 `//Name`입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 `Name`이라는 모든 하위 요소를 찾습니다.  
   
- 이 예제에서는 다음 XML 문서를 사용합니다. [샘플 XML 파일: 여러 구매 주문(LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ 이 예제에서는 XML 문서 [샘플 XML 파일: 여러 구매 주문(LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)을 사용합니다.  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  

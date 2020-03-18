@@ -4,10 +4,10 @@ description: .NET 마이크로 서비스 및 웹 애플리케이션의 보안 - 
 author: mjrousos
 ms.date: 01/30/2020
 ms.openlocfilehash: 1ef2246746b9165f1564fa7be64ff7eb28eb1d32
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77501792"
 ---
 # <a name="store-application-secrets-safely-during-development"></a>개발 중에 애플리케이션 비밀을 안전하게 저장
@@ -50,7 +50,7 @@ ASP.NET Core [암호 관리자](/aspnet/core/security/app-secrets#secret-manager
 
 애플리케이션에서 비밀 관리자를 통해 저장된 비밀을 사용하려면 ConfigurationBuilder 인스턴스에서 `AddUserSecrets<T>`를 호출하여 애플리케이션의 비밀을 해당 구성에 포함해야 합니다. 제네릭 매개 변수 T는 UserSecretId를 적용할 어셈블리의 형식이어야 합니다. 일반적으로 `AddUserSecrets<Startup>`을 사용해도 됩니다.
 
-*Program.cs*의 `CreateDefaultBuilder` 메서드를 사용하는 경우 개발 환경의 기본 옵션에 `AddUserSecrets<Startup>()`이 포함됩니다.
+`AddUserSecrets<Startup>()`Program.cs`CreateDefaultBuilder`의 *메서드를 사용하는 경우 개발 환경의 기본 옵션에*이 포함됩니다.
 
 >[!div class="step-by-step"]
 >[이전](authorization-net-microservices-web-applications.md)

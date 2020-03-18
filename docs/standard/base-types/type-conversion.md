@@ -25,10 +25,10 @@ helpviewer_keywords:
 - data types [.NET Framework], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
 ms.openlocfilehash: 0e88303f2bac2dae90a97f9d2de92af1d2a0f80d
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73976487"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>.NET Framework의 형식 변환
@@ -190,7 +190,7 @@ ms.locfileid: "73976487"
   
  변환기를 사용하여 변환을 수행하는 방법에 대한 자세한 내용은 <xref:System.ComponentModel.TypeConverter?displayProperty=nameWithType>를 참조하십시오.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Convert?displayProperty=nameWithType>
 - <xref:System.IConvertible>

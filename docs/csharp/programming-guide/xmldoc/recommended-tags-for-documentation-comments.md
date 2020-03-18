@@ -6,10 +6,10 @@ helpviewer_keywords:
 - XML documentation [C#], tags
 ms.assetid: 6e98f7a9-38f4-4d74-b644-1ff1b23320fd
 ms.openlocfilehash: c746615d0d7a7a3058fbe2f8506a7a7c5c4a8779
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789720"
 ---
 # <a name="recommended-tags-for-documentation-comments-c-programming-guide"></a>문서 주석에 대한 권장 태그(C# 프로그래밍 가이드)
@@ -23,7 +23,7 @@ C# 컴파일러는 코드의 문서 주석을 처리하고 **/doc** 명령줄 �
   
  컴파일러는 유효한 XML인 태그를 모두 처리합니다. 다음 태그는 사용자 문서에서 일반적으로 사용되는 기능을 제공합니다.  
   
-## <a name="tags"></a>Tags  
+## <a name="tags"></a>태그들  
   
 |||||  
 |---|---|---|---|
@@ -36,7 +36,7 @@ C# 컴파일러는 코드의 문서 주석을 처리하고 **/doc** 명령줄 �
   
 (\* 컴파일러에서 구문을 확인함을 나타냅니다.)
 
-문서 주석의 텍스트에 꺾쇠 괄호를 표시하려면 각각 `&lt;` 및 `&gt;`인 `<` 및 `>`의 HTML 인코딩을 사용합니다. 이 인코딩은 다음 예제에서 확인할 수 있습니다.
+문서 주석의 텍스트에 꺾쇠 괄호를 표시하려면 각각 `<` 및 `>`인 `&lt;` 및 `&gt;`의 HTML 인코딩을 사용합니다. 이 인코딩은 다음 예제에서 확인할 수 있습니다.
 
 ```csharp
 /// <summary>
@@ -44,7 +44,7 @@ C# 컴파일러는 코드의 문서 주석을 처리하고 **/doc** 명령줄 �
 /// </summary>
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [-doc(C# 컴파일러 옵션)](../../language-reference/compiler-options/doc-compiler-option.md)

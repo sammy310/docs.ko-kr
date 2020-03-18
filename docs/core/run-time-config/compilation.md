@@ -4,10 +4,10 @@ description: .NET Core 앱에 대해 JIT 컴파일러가 작동하는 방식을 
 ms.date: 11/27/2019
 ms.topic: reference
 ms.openlocfilehash: adf1f01dba7387b89ee56784e33653d6a132c0e3
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77092891"
 ---
 # <a name="run-time-configuration-options-for-compilation"></a>컴파일을 위한 런타임 구성 옵션

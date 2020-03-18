@@ -5,10 +5,10 @@ ms.date: 10/15/2019
 ms.topic: conceptual
 ms.custom: mvc
 ms.openlocfilehash: 653f355d09a045feabb3dee0f5737cb691cf2dc4
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73458168"
 ---
 # <a name="what-is-apache-spark"></a>Apache Spark란?
@@ -23,7 +23,7 @@ ms.locfileid: "73458168"
 
 [ETL(추출, 변환 및 로드)](/azure/architecture/data-guide/relational-data/etl)은 하나 이상의 원본에서 데이터를 수집하고, 데이터를 수정하고, 데이터를 새 데이터 저장소로 이동하는 프로세스입니다. 다음을 포함하여 데이터를 변환하는 몇 가지 방법이 있습니다.
 
-* 필터링
+* Filtering
 * 정렬
 * 집계
 * 조인
@@ -33,7 +33,7 @@ ms.locfileid: "73458168"
 
 ### <a name="real-time-data-stream-processing"></a>실시간 데이터 스트림 처리
 
-스트리밍 또는 실시간 데이터는 이동 중인 데이터입니다. IoT 디바이스, 웹 로그, 클릭스트림의 원격 분석은 모두 데이터 스트리밍의 예입니다. 실시간 데이터를 처리하여 지리 공간적 분석, 원격 모니터링 및 변칙 검색과 같은 유용한 정보를 제공할 수 있습니다. 관계형 데이터와 마찬가지로 데이터를 출력 싱크로 이동하기 전에 스트리밍 데이터를 필터링, 집계 및 준비할 수 있습니다. Apache Spark는 [Spark Streaming](https://spark.apache.org/streaming/)을 통해 [실시간 데이터 스트림 처리](/azure/architecture/data-guide/big-data/real-time-processing)를 지원합니다.
+스트리밍 또는 실시간 데이터는 이동 중인 데이터입니다. IoT 디바이스, 웹 로그, 클릭스트림의 원격 분석은 모두 데이터 스트리밍의 예입니다. 실시간 데이터를 처리하여 지리 공간적 분석, 원격 모니터링 및 변칙 검색과 같은 유용한 정보를 제공할 수 있습니다. 관계형 데이터와 마찬가지로 데이터를 출력 싱크로 이동하기 전에 스트리밍 데이터를 필터링, 집계 및 준비할 수 있습니다. Apache Spark는 [Spark Streaming](/azure/architecture/data-guide/big-data/real-time-processing)을 통해 [실시간 데이터 스트림 처리](https://spark.apache.org/streaming/)를 지원합니다.
 
 ### <a name="batch-processing"></a>일괄 처리
 

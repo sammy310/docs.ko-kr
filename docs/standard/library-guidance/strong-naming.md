@@ -3,10 +3,10 @@ title: 강력한 이름 지정 및 .NET 라이브러리
 description: .NET 라이브러리에 강력한 이름을 지정하는 모범 사례 권장 사항입니다.
 ms.date: 10/16/2018
 ms.openlocfilehash: db268093b07a2ece7cdb8329fd789b52da9c5c32
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76744529"
 ---
 # <a name="strong-naming"></a>강력한 이름 지정

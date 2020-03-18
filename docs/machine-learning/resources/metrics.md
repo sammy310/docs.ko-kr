@@ -3,11 +3,11 @@ title: ML.NET 메트릭
 description: ML.NET 모델의 성능을 평가하기 위해 사용한 메트릭 이해
 ms.date: 12/17/2019
 ms.openlocfilehash: 8e823fd8cc344c1b8e0ecd709b527137368cbfa0
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739609"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397802"
 ---
 # <a name="evaluate-your-mlnet-model-with-metrics"></a>메트릭을 사용하여 ML.NET 모델 평가
 

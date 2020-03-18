@@ -5,15 +5,15 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
 ms.openlocfilehash: d4ed76455001c1a0b8e2e2f1bb90ce8715dd0052
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77450110"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>기존 웹앱 및 SPA(단일 페이지 앱) 중에서 선택
 
-> "Atwood의 법칙: JavaScript로 작성할 수 있는 모든 애플리케이션은 결국 JavaScript로 작성됩니다."  
+> "Atwood의 법칙: JavaScript로 작성할 수 있는 모든 애플리케이션은 결국 JavaScript로 작성됩니다.”  
 > _\- Jeff Atwood_
 
 오늘날 웹 애플리케이션을 빌드하는 방법은 일반적으로 두 가지가 있습니다. 서버에서 대부분의 애플리케이션 논리를 수행하는 기존 웹 애플리케이션과 웹 브라우저에서 대부분의 사용자 인터페이스 논리를 수행하며 기본적으로 웹 API를 사용하여 웹 서버와 통신하는 SPA(단일 페이지 애플리케이션)가 바로 그것입니다. 혼합 방식도 가능합니다. 가장 간단한 방법은 더 큰 기존 웹 애플리케이션 내에서 하나 이상의 풍부한 SPA와 같은 하위 애플리케이션을 호스트하는 것입니다.

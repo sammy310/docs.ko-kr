@@ -3,10 +3,10 @@ title: 공식 .NET Docker 이미지
 description: 컨테이너화된 .NET 애플리케이션을 위한 .NET 마이크로 서비스 아키텍처 | 공식 .NET Docker 이미지
 ms.date: 01/30/2020
 ms.openlocfilehash: 50a50587b35f811859841c4e049f40cb99479372
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77501874"
 ---
 # <a name="official-net-docker-images"></a>공식 .NET Docker 이미지
@@ -45,7 +45,7 @@ Microsoft에서는 개발자를 위한 Docker 이미지를 빌드할 때 다음�
 
 Docker 허브에서 .NET 이미지 리포지토리를 탐색하는 경우 태그로 분류되거나 표시된 여러 이미지 버전을 찾을 수 있습니다. 이러한 태그를 통해 다음 표와 같이 필요한 버전에 따라 사용할 항목을 결정할 수 있습니다.
 
-| 이미지 | 주석 |
+| 이미지 | 설명 |
 |-------|----------|
 | mcr.microsoft.com/dotnet/core/aspnet:**3.1** | Linux 및 Windows에서 런타임 전용 및 ASP.NET Core 최적화가 포함된 ASP.NET Core(다중 아키텍처) |
 | mcr.microsoft.com/dotnet/core/sdk:**3.1** | Linux 및 Windows에서 SDK가 포함된 .NET Core(다중 아키텍처) |

@@ -4,10 +4,10 @@ ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
 ms.openlocfilehash: ecedd9a9027aa925c753f8e187d611b19d3db991
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77543263"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>C\#에서 문자열 내용을 수정하는 방법
@@ -40,7 +40,7 @@ ms.locfileid: "77543263"
 
 ## <a name="remove-text"></a>텍스트 제거
 
-<xref:System.String.Remove%2A?displayProperty=nameWithType> 메서드를 사용하여 문자열에서 텍스트를 제거할 수 있습니다. 이 메서드는 특정 인덱스에서 시작하는 문자 수를 제거합니다. 다음 예제에서는 <xref:System.String.Remove%2A>가 뒤에 오는 <xref:System.String.IndexOf%2A?displayProperty=nameWithType>을 사용하여 문자열에서 텍스트를 제거하는 방법을 보여 줍니다.
+<xref:System.String.Remove%2A?displayProperty=nameWithType> 메서드를 사용하여 문자열에서 텍스트를 제거할 수 있습니다. 이 메서드는 특정 인덱스에서 시작하는 문자 수를 제거합니다. 다음 예제에서는 <xref:System.String.IndexOf%2A?displayProperty=nameWithType>가 뒤에 오는 <xref:System.String.Remove%2A>을 사용하여 문자열에서 텍스트를 제거하는 방법을 보여 줍니다.
 
 [!code-csharp-interactive[remove text](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#4)]
 
@@ -72,7 +72,7 @@ ms.locfileid: "77543263"
 
 [GitHub 리포지토리](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)의 코드를 확인하여 이러한 샘플을 시험해 볼 수 있습니다. 또는 샘플을 [zip 파일로](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip) 다운로드할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [.NET Framework 정규식](../../standard/base-types/regular-expressions.md)
 - [정규식 언어 - 빠른 참조](../../standard/base-types/regular-expression-language-quick-reference.md)

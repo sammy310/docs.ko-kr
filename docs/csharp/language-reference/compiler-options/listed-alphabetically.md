@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
 ms.openlocfilehash: d6d471cd27f35de6325a130e6c909d13cb1dcc85
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73972737"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>C# 컴파일러 옵션 사전순 목록
@@ -86,7 +86,7 @@ ms.locfileid: "73972737"
 |[-win32manifest](win32manifest-compiler-option.md)|사용자 지정 win32 매니페스트 파일을 지정합니다.|
 |[/win32res:](win32res-compiler-option.md)|win32 리소스 파일(.res)을 지정합니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 컴파일러 옵션](index.md)
 - [범주별 C# 컴파일러 옵션 목록](listed-by-category.md)

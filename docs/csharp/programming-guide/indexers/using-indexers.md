@@ -5,15 +5,15 @@ helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
 ms.openlocfilehash: 17162a0dc959a85c03a5cb5757e2b91fe10b0ab3
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77628165"
 ---
 # <a name="using-indexers-c-programming-guide"></a>인덱서 사용(C# 프로그래밍 가이드)
 
-인덱서는 클라이언트 애플리케이션이 배열처럼 액세스할 수 있는 [class](../../language-reference/keywords/class.md), [struct](../../language-reference/builtin-types/struct.md), [interface](../../language-reference/keywords/interface.md)를 만들 수 있게 해주는 편리한 구문입니다. 인덱서는 내부 컬렉션 또는 배열을 캡슐화하는 데 주로 사용되는 형식에서 자주 구현됩니다. 예를 들어 24시간 동안 10회 기록된 화씨온도를 나타내는 `TempRecord`라는 클래스가 있다고 가정합니다. 클래스에는 온도 값을 저장할 `float[]` 형식의 배열 `temps`가 포함됩니다. 이 클래스에서 인덱서를 구현하면 클라이언트가 `TempRecord` 인스턴스의 온도에 `float temp = tr.temps[4]` 대신 `float temp = tr[4]`로 액세스할 수 있습니다. 인덱서 표기법은 클라이언트 애플리케이션에 대한 구문을 간소화할 뿐 아니라 클래스와 해당 용도를 다른 개발자가 이해하기 쉽게 만듭니다.  
+인덱서는 클라이언트 애플리케이션이 배열처럼 액세스할 수 있는 [class](../../language-reference/keywords/class.md), [struct](../../language-reference/builtin-types/struct.md), [interface](../../language-reference/keywords/interface.md)를 만들 수 있게 해주는 편리한 구문입니다. 인덱서는 내부 컬렉션 또는 배열을 캡슐화하는 데 주로 사용되는 형식에서 자주 구현됩니다. 예를 들어 24시간 동안 10회 기록된 화씨온도를 나타내는 `TempRecord`라는 클래스가 있다고 가정합니다. 클래스에는 온도 값을 저장할 `temps` 형식의 배열 `float[]`가 포함됩니다. 이 클래스에서 인덱서를 구현하면 클라이언트가 `TempRecord` 인스턴스의 온도에 `float temp = tr[4]` 대신 `float temp = tr.temps[4]`로 액세스할 수 있습니다. 인덱서 표기법은 클라이언트 애플리케이션에 대한 구문을 간소화할 뿐 아니라 클래스와 해당 용도를 다른 개발자가 이해하기 쉽게 만듭니다.  
   
 클래스 또는 구조체에서 인덱서를 선언하려면 다음 예제에 표시된 대로 [this](../../language-reference/keywords/this.md) 키워드를 사용합니다.
 
@@ -72,7 +72,7 @@ C#은 인덱스 매개 변수 형식을 정수로 제한되지 않습니다. 예
   
 - [get](../../language-reference/keywords/get.md) 및 [set](../../language-reference/keywords/set.md) 접근자의 접근성을 적절하게 제한적으로 설정합니다. 특히 `set` 접근자의 경우 이 작업이 중요합니다. 자세한 내용은 [접근자 액세스 가능성 제한](../classes-and-structs/restricting-accessor-accessibility.md)을 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [인덱서](./index.md)

@@ -8,17 +8,17 @@ helpviewer_keywords:
 - SendKeys.SendWait examples
 ms.assetid: f1303184-fce4-44fb-88b4-aac5f42d5d77
 ms.openlocfilehash: 033999c07bb5839a264122b2ca330916bdf844b8
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "72919385"
 ---
 # <a name="how-to-start-an-application-and-send-it-keystrokes-visual-basic"></a>방법: 애플리케이션 시작 및 키 입력 보내기(Visual Basic)
 
 이 예제에서는 <xref:Microsoft.VisualBasic.Interaction.Shell%2A> 메서드를 사용하여 메모장 애플리케이션을 시작한 다음, [My.Computer.Keyboard.SendKeys](xref:Microsoft.VisualBasic.Devices.Keyboard.SendKeys%2A) 메서드를 통해 키 입력을 보내 문장을 출력합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 [!code-vb[VbVbalrMyComputer#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#25)]
 

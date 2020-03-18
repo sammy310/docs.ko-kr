@@ -6,10 +6,10 @@ helpviewer_keywords:
 - My.Computer.Ports object [Visual Basic], tasks
 ms.assetid: b04a2f76-992a-4585-ab41-8bbbdbd554a1
 ms.openlocfilehash: e790a41fc945a395feebc63f8d26efdc51dc4fa9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74329592"
 ---
 # <a name="accessing-the-computers-ports-visual-basic"></a>컴퓨터 포트에 액세스(Visual Basic)
@@ -18,7 +18,7 @@ ms.locfileid: "74329592"
   
 ## <a name="in-this-section"></a>섹션 내용  
 
- [방법: 사용 가능한 직렬 포트 표시](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)  
+ [방법: 사용할 수 있는 직렬 포트 표시](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)  
  사용할 수 있는 직렬 포트를 표시하는 방법을 보여 줍니다.  
   
  [방법: 직렬 포트에 연결된 모뎀 전화 접속](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)  
@@ -42,7 +42,7 @@ ms.locfileid: "74329592"
  컴퓨터에 있는 직렬 포트의 이름 컬렉션을 가져오는 `SerialPortNames` 속성을 설명합니다.  
   
  <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>  
- <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> 개체를 만들고 여는 `OpenSerialPort` 메서드를 설명합니다.  
+ `OpenSerialPort` 개체를 만들고 여는 <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> 메서드를 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
 

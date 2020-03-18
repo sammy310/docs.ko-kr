@@ -6,17 +6,17 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
 ms.openlocfilehash: b6801b7de5a17257be706f77a7a67aa87df96524
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733312"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397760"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>ASP.NET Core Web API에 모델 배포
 
 ASP.NET Core Web API를 사용하여 웹에서 미리 학습된 ML.NET 기계 학습 모델을 서비스하는 방법을 살펴봅니다. 웹 API를 통해 모델을 서비스하면 표준 HTTP 메서드를 통한 예측을 사용할 수 있습니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 - “.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2017 버전 15.6 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)
 - PowerShell.
@@ -100,7 +100,7 @@ ASP.NET Core Web API를 사용하여 웹에서 미리 학습된 ML.NET 기계 �
 
 ## <a name="register-predictionenginepool-for-use-in-the-application"></a>애플리케이션에서 사용하기 위해 PredictionEnginePool 등록
 
-단일 예측을 수행하려면 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)을 만들어야 합니다. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)은 스레드로부터 안전하지 않습니다. 또한 애플리케이션 내에서 필요한 모든 위치에서 인스턴스를 만들어야 합니다. 애플리케이션이 커지면 이 프로세스를 관리할 수 없게 됩니다. 성능 및 스레드 보안을 개선하려면 종속성 주입과 `PredictionEnginePool` 서비스를 함께 사용합니다. 이 서비스는 애플리케이션 전체에서 사용할 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 개체의 [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)을 만듭니다.
+단일 예측을 수행하려면 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)을 만들어야 합니다. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)은 스레드로부터 안전하지 않습니다. 또한 애플리케이션 내에서 필요한 모든 위치에서 인스턴스를 만들어야 합니다. 애플리케이션이 커지면 이 프로세스를 관리할 수 없게 됩니다. 성능 및 스레드 보안을 개선하려면 종속성 주입과 `PredictionEnginePool` 서비스를 함께 사용합니다. 이 서비스는 애플리케이션 전체에서 사용할 [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) 개체의 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)을 만듭니다.
 
 다음 링크에서는 [ASP.NET Core에서 종속성 주입](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1)에 대한 자세한 정보를 제공합니다.
 
@@ -186,7 +186,7 @@ ASP.NET Core Web API를 사용하여 웹에서 미리 학습된 ML.NET 기계 �
     }
     ```
 
-이 코드는 종속성 주입을 통해 가져오는 컨트롤러의 생성자에 `PredictionEnginePool`을 전달하여 할당합니다. 그런 다음, `Predict` 컨트롤러의 `Post` 메서드가 `PredictionEnginePool`을 사용하여 `Startup` 클래스에 등록된 `SentimentAnalysisModel`로 예측을 수행하고 성공하면 결과를 사용자에게 다시 반환합니다.
+이 코드는 종속성 주입을 통해 가져오는 컨트롤러의 생성자에 `PredictionEnginePool`을 전달하여 할당합니다. 그런 다음, `Predict` 컨트롤러의 `Post` 메서드가 `PredictionEnginePool`을 사용하여 `SentimentAnalysisModel` 클래스에 등록된 `Startup`로 예측을 수행하고 성공하면 결과를 사용자에게 다시 반환합니다.
 
 ## <a name="test-web-api-locally"></a>로컬로 Web API 테스트
 

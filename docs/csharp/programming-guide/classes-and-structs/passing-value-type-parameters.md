@@ -6,14 +6,14 @@ helpviewer_keywords:
 - parameters [C#], value
 ms.assetid: 193ab86f-5f9b-4359-ac29-7cdf8afad3a6
 ms.openlocfilehash: 670af18d4b2b356aa33a0a03a29c05f5ba9bf78f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76744488"
 ---
 # <a name="passing-value-type-parameters-c-programming-guide"></a>값 형식 매개 변수 전달(C# 프로그래밍 가이드)
-데이터에 대한 참조가 포함되어 있는 [참조 형식](../../language-reference/keywords/reference-types.md) 변수와는 달리, [값 형식](../../language-reference/builtin-types/value-types.md) 변수에는 해당 데이터가 직접 포함됩니다. 값 형식 변수를 메서드에 값으로 전달하는 것은 변수의 복사본을 메서드에 전달하는 것과 같습니다. 메서드 내에서 수행되는 매개 변수 변경 작업은 인수 변수에 저장된 원래 데이터에는 영향을 주지 않습니다. 호출된 메서드가 인수 값을 변경하도록 하려면 [ref](../../language-reference/keywords/ref.md) 또는 [out](../../language-reference/keywords/out-parameter-modifier.md) 키워드를 사용하여 해당 메서드를 참조로 전달해야 합니다. [in](../../language-reference/keywords/in-parameter-modifier.md) 키워드를 사용하여 값이 변경되지 않도록 보장하는 동안 복사를 방지하도록 참조로 값 매개 변수를 전달할 수도 있습니다. 간단한 설명을 위해 다음 예제에서는 `ref`를 사용합니다.  
+데이터에 대한 참조가 포함되어 있는 [참조 형식](../../language-reference/builtin-types/value-types.md) 변수와는 달리, [값 형식](../../language-reference/keywords/reference-types.md) 변수에는 해당 데이터가 직접 포함됩니다. 값 형식 변수를 메서드에 값으로 전달하는 것은 변수의 복사본을 메서드에 전달하는 것과 같습니다. 메서드 내에서 수행되는 매개 변수 변경 작업은 인수 변수에 저장된 원래 데이터에는 영향을 주지 않습니다. 호출된 메서드가 인수 값을 변경하도록 하려면 [ref](../../language-reference/keywords/ref.md) 또는 [out](../../language-reference/keywords/out-parameter-modifier.md) 키워드를 사용하여 해당 메서드를 참조로 전달해야 합니다. [in](../../language-reference/keywords/in-parameter-modifier.md) 키워드를 사용하여 값이 변경되지 않도록 보장하는 동안 복사를 방지하도록 참조로 값 매개 변수를 전달할 수도 있습니다. 간단한 설명을 위해 다음 예제에서는 `ref`를 사용합니다.  
   
 ## <a name="passing-value-types-by-value"></a>값으로 값 형식 전달  
  다음 예제에서는 값 형식 매개 변수를 값으로 전달하는 방법을 보여 줍니다. `n` 변수가 `SquareIt` 메서드에 값으로 전달됩니다. 메서드 내에서 수행되는 변경 작업은 변수의 원래 값에는 영향을 주지 않습니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "76744488"
  `n` 변수는 값 형식이며 값 `5` 5를 데이터로 포함합니다. `SquareIt`을 호출하면 `n`의 내용이 `x` 매개 변수로 복사됩니다. 그러면 메서드 내에서 이 매개 변수의 값을 제곱합니다. 그러나 `Main`에서는 `n`의 값이 `SquareIt` 메서드를 호출한 후에도 호출 전과 동일합니다. 즉, 메서드 내에서 수행되는 변경은 지역 변수 `x`에만 적용됩니다.  
   
 ## <a name="passing-value-types-by-reference"></a>참조로 값 형식 전달  
- 다음 예제는 인수가 `ref` 매개 변수로 전달된다는 점을 제외하면 이전 예제와 동일합니다. 메서드에서 `x`가 변경되면 기본 인수 `n`의 값도 변경됩니다.  
+ 다음 예제는 인수가 `ref` 매개 변수로 전달된다는 점을 제외하면 이전 예제와 동일합니다. 메서드에서 `n`가 변경되면 기본 인수 `x`의 값도 변경됩니다.  
   
  [!code-csharp[csProgGuideParameters#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideParameters/CS/Parameters.cs#4)]  
   
@@ -38,7 +38,7 @@ ms.locfileid: "76744488"
   
  [!code-csharp[csProgGuideParameters#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideParameters/CS/Parameters.cs#6)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [매개 변수 전달](./passing-parameters.md)

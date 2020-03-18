@@ -6,10 +6,10 @@ helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
 ms.openlocfilehash: 93b6079b9a3bbf6d537094cab9dfb305ace7f6bf
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77625867"
 ---
 # <a name="default-values-of-c-types-c-reference"></a>C# 형식의 기본값(C# 참조)
@@ -55,7 +55,7 @@ Console.WriteLine(n);  // output: (0, 0)
 - [기본값](~/_csharplang/spec/variables.md#default-values)
 - [기본 생성자](~/_csharplang/spec/types.md#default-constructors)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [생성자](../../programming-guide/classes-and-structs/constructors.md)

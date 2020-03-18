@@ -9,10 +9,10 @@ helpviewer_keywords:
 - <code> C# XML tag
 ms.assetid: f235e3bc-a709-43cf-8a9f-bd57cabdf6da
 ms.openlocfilehash: 1b292f0e1f93f815cc31ef3dfb7015b8950bf8a6
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789845"
 ---
 # <a name="code-c-programming-guide"></a>\<code>(C# 프로그래밍 가이드)
@@ -37,9 +37,9 @@ ms.locfileid: "76789845"
 
 ## <a name="example"></a>예제
 
-\<code> 태그를 사용하는 방법의 예는 [\<example>](./example.md) 항목을 참조하세요.
+[code> 태그를 사용하는 방법의 예는 \<](./example.md)example>\< 항목을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [문서 주석에 대한 권장 태그](./recommended-tags-for-documentation-comments.md)

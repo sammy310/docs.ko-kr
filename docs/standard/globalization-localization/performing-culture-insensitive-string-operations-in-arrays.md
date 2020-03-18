@@ -8,10 +8,10 @@ helpviewer_keywords:
 - comparer parameter
 ms.assetid: f12922e1-6234-4165-8896-63f0653ab478
 ms.openlocfilehash: 051ee77ae5d6552e26e0216d58734d90188475f9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73120802"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-arrays"></a>배열에서 문화권을 구분하지 않는 문자열 작업 수행

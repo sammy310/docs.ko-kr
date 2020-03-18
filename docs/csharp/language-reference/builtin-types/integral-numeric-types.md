@@ -33,10 +33,10 @@ helpviewer_keywords:
 - long keyword [C#]
 - ulong keyword [C#]
 ms.openlocfilehash: 394a809a9a2f45f4aee652d0eca892f62f0f2e54
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093203"
 ---
 # <a name="integral-numeric-types--c-reference"></a>정수 숫자 형식(C# 참조)
@@ -85,7 +85,7 @@ var hexLiteral = 0x2A;
 var binaryLiteral = 0b_0010_1010;
 ```
 
-앞의 예제에서는 C# 7.0부터 지원되는 *숫자 구분 기호*인 `_`를 사용하는 방법도 보여 줍니다. 모든 종류의 숫자 리터럴에서 숫자 구분 기호를 사용할 수 있습니다.
+앞의 예제에서는 C# 7.0부터 지원되는 `_`숫자 구분 기호*인* 를 사용하는 방법도 보여 줍니다. 모든 종류의 숫자 리터럴에서 숫자 구분 기호를 사용할 수 있습니다.
 
 정수 리터럴의 형식은 접미사로 다음과 같이 결정됩니다.
 
@@ -127,10 +127,10 @@ var longVariable = (long)42;
 - [정수 형식](~/_csharplang/spec/types.md#integral-types)
 - [정수 리터럴](~/_csharplang/spec/lexical-structure.md#integer-literals)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [값 형식](value-types.md)
 - [부동 소수점 형식](floating-point-numeric-types.md)
-- [표준 숫자 형식 문자열](../../../standard/base-types/standard-numeric-format-strings.md)
+- [표준 숫자 서식 문자열](../../../standard/base-types/standard-numeric-format-strings.md)
 - [.NET의 숫자](../../../standard/numerics.md)

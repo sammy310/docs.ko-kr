@@ -9,10 +9,10 @@ helpviewer_keywords:
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
 ms.openlocfilehash: 007b10f6f27233c43caad4c1910e3d1158682950
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76920363"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion(C# 컴파일러 옵션)
@@ -66,7 +66,7 @@ C# 언어 버전을 지정하는 다른 방법은 [C# 언어 버전 선택](../c
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-|버전|링크|설명|
+|Version|링크|설명|
 |-------|----|-----------|
 |C# 7.0 이상||현재 사용할 수 없음|
 |C# 6.0|[링크](/dotnet/csharp/language-reference/language-specification/introduction)|C# 언어 사양 버전 6 - 비공식 초안: .NET Foundation|
@@ -94,7 +94,7 @@ C# 언어 버전을 지정하는 다른 방법은 [C# 언어 버전 선택](../c
 |C# 2| Microsoft Visual Studio/Build Tools 2005 또는 번들 .NET Framework 2.0 컴파일러 |
 |C# 1.0/1.2 | Microsoft Visual Studio/Build Tools .NET 2002 또는 번들된 .NET Framework 1.0 컴파일러 |
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 컴파일러 옵션](index.md)
 - [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)

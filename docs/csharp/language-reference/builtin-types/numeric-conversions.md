@@ -9,11 +9,11 @@ helpviewer_keywords:
 - conversions [C#], implicit numeric
 - conversions [C#], explicit numeric
 ms.openlocfilehash: 5380e8480c39d1940df13b2ecb50a0f394367388
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72776020"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398288"
 ---
 # <a name="built-in-numeric-conversions-c-reference"></a>기본 제공 숫자 변환(C# 참조)
 
@@ -23,7 +23,7 @@ C#에서는 [정수](integral-numeric-types.md) 및 [부동 소수점](floating-
 
 다음 표에서는 기본 제공 숫자 형식 간의 미리 정의된 암시적 숫자 변환을 보여 줍니다.
 
-|시작|대상|
+|보낸 사람|대상|
 |----------|--------|
 |[sbyte](integral-numeric-types.md)|`short`, `int`, `long`, `float`, `double` 또는 `decimal`|
 |[byte](integral-numeric-types.md)|`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` 또는 `decimal`|
@@ -31,8 +31,8 @@ C#에서는 [정수](integral-numeric-types.md) 및 [부동 소수점](floating-
 |[ushort](integral-numeric-types.md)|`int`, `uint`, `long`, `ulong`, `float`, `double` 또는 `decimal`|
 |[int](integral-numeric-types.md)|`long`, `float`, `double` 또는 `decimal`|
 |[uint](integral-numeric-types.md)|`long`, `ulong`, `float`, `double` 또는 `decimal`|
-|[long](integral-numeric-types.md)|`float`, `double`또는 `decimal`|
-|[ulong](integral-numeric-types.md)|`float`, `double`또는 `decimal`|
+|[long](integral-numeric-types.md)|`float`, `double` 또는 `decimal`|
+|[ulong](integral-numeric-types.md)|`float`, `double` 또는 `decimal`|
 |[float](floating-point-numeric-types.md)|`double`|
 
 > [!NOTE]
@@ -59,12 +59,12 @@ C#에서는 [정수](integral-numeric-types.md) 및 [부동 소수점](floating-
 
 다음 표에서는 [암시적 변환](#implicit-numeric-conversions)이 없는 기본 제공 숫자 형식 간의 미리 정의된 명시적 변환을 보여 줍니다.
 
-|시작|대상|
+|보낸 사람|대상|
 |----------|--------|
 |[sbyte](integral-numeric-types.md)|`byte`, `ushort`, `uint` 또는 `ulong`|
 |[byte](integral-numeric-types.md)|`sbyte`|
 |[short](integral-numeric-types.md)|`sbyte`, `byte`, `ushort`, `uint` 또는 `ulong`|
-|[ushort](integral-numeric-types.md)|`sbyte`, `byte`또는 `short`|
+|[ushort](integral-numeric-types.md)|`sbyte`, `byte` 또는 `short`|
 |[int](integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `uint` 또는 `ulong`|
 |[uint](integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort` 또는 `int`|
 |[long](integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint` 또는 `ulong`|

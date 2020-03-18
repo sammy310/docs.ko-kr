@@ -4,17 +4,17 @@ description: C#의 LINQ에 대한 더 자세한 정보를 제공하는 항목의
 ms.date: 11/30/2016
 ms.assetid: 8eb3284f-0ab9-4cad-9216-2da58d9761a5
 ms.openlocfilehash: 0b9301074996528cd1fbcfebde3a0a57b15e2f15
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73421758"
 ---
 # <a name="linq-in-c"></a>C\#의 LINQ
 
 이 섹션에는 LINQ에 대한 자세한 정보를 제공하는 항목의 링크가 포함되어 있습니다.
 
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
 [LINQ 쿼리 소개](../programming-guide/concepts/linq/introduction-to-linq-queries.md)  
 모든 언어 및 데이터 소스에서 공통된 기본 LINQ 쿼리 작업의 세 가지 부분에 대해 설명합니다.  

@@ -6,15 +6,15 @@ helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
 ms.openlocfilehash: dda3ec8cb6a0131867e6ea3bb0cf7199d86058ff
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73973329"
 ---
 # <a name="how-to-compare-strings-in-c"></a>C\#에서 문자열을 비교하는 방법
 
-문자열을 비교하여 다음 두 가지 질문 중 하나를 해결할 수 있습니다. "이 두 문자열이 같나요?" 또는 "정렬할 때 이 문자열을 어떤 순서로 정렬해야 하는가?"
+문자열을 비교하여 두 가지 질문 중 하나를 해결할 수 있습니다. "두 문자열이 같은가?" 또는 "정렬할 때 이 문자열을 어떤 순서로 정렬해야 하는가?"
 
 이러한 두 가지 질문은 문자열 비교에 영향을 주는 요소에 의해 복잡해 집니다.
 
@@ -45,8 +45,8 @@ ms.locfileid: "73973329"
 
 ## <a name="case-insensitive-ordinal-comparisons"></a>대/소문자를 구분하지 않는 서수 비교
 
-<xref:System.String.Equals(System.String,System.StringComparison)?displayProperty=nameWithType> 메서드를 사용하면 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>의 <xref:System.StringComparison> 값을 지정하여
-대/소문자를 구분하지 않는 서수 비교. <xref:System.StringComparison> 인수에 대해 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 값을 지정하는 경우 대/소문자를 구분 하지 않는 서수 비교를 수행하는 정적 <xref:System.String.Compare(System.String,System.String,System.StringComparison)?displayProperty=nameWithType> 메서드도 있습니다. 이는 다음 코드에서 확인할 수 있습니다.
+<xref:System.String.Equals(System.String,System.StringComparison)?displayProperty=nameWithType> 메서드를 사용하면 <xref:System.StringComparison>의 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 값을 지정하여
+대/소문자를 구분하지 않는 서수 비교. <xref:System.String.Compare(System.String,System.String,System.StringComparison)?displayProperty=nameWithType> 인수에 대해 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 값을 지정하는 경우 대/소문자를 구분 하지 않는 서수 비교를 수행하는 정적 <xref:System.StringComparison> 메서드도 있습니다. 이는 다음 코드에서 확인할 수 있습니다.
 
 [!code-csharp-interactive[Comparing strings ignoring case](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#2)]
 
@@ -96,7 +96,7 @@ Windows에서 언어 비교를 서수 비교로 변경하면 "cop", "coop" 및 "
 
 ## <a name="linguistic-sorting-and-searching-strings-in-arrays"></a>배열의 언어적 정렬 및 문자열 검색
 
-다음 예에서는 현재 문화권에 따라 언어 비교를 사용하여 배열에서 문자열을 정렬하고 검색하는 방법을 보여줍니다. <xref:System.StringComparer?displayProperty=nameWithType> 매개 변수를 사용하는 정적 <xref:System.Array> 메서드를 사용합니다.
+다음 예에서는 현재 문화권에 따라 언어 비교를 사용하여 배열에서 문자열을 정렬하고 검색하는 방법을 보여줍니다. <xref:System.Array> 매개 변수를 사용하는 정적 <xref:System.StringComparer?displayProperty=nameWithType> 메서드를 사용합니다.
 
 이 예에서는 현재 문화권을 사용하여 문자열 배열을 정렬하는 방법을 보여줍니다.
 
@@ -118,7 +118,7 @@ Windows에서 언어 비교를 서수 비교로 변경하면 "cop", "coop" 및 "
 
 정렬 및 검색 시 항상 동일한 형식의 비교를 사용하도록 하세요. 정렬 및 검색에 대해 서로 다른 비교 형식을 사용하면 예기치 않은 결과가 발생합니다.
 
-<xref:System.Collections.Hashtable?displayProperty=nameWithType>, <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>, <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 등의 컬렉션 클래스는 요소 또는 키의 형식이 `string`인 경우 <xref:System.StringComparer?displayProperty=nameWithType> 매개 변수를 사용하는 생성자를 포함합니다. 일반적으로 가능하면 이러한 생성자를 사용하고 <xref:System.StringComparer.Ordinal?displayProperty=nameWithType> 또는 <xref:System.StringComparer.OrdinalIgnoreCase?displayProperty=nameWithType>를 지정해야 합니다.
+<xref:System.Collections.Hashtable?displayProperty=nameWithType>, <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>, <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 등의 컬렉션 클래스는 요소 또는 키의 형식이 <xref:System.StringComparer?displayProperty=nameWithType>인 경우 `string` 매개 변수를 사용하는 생성자를 포함합니다. 일반적으로 가능하면 이러한 생성자를 사용하고 <xref:System.StringComparer.Ordinal?displayProperty=nameWithType> 또는 <xref:System.StringComparer.OrdinalIgnoreCase?displayProperty=nameWithType>를 지정해야 합니다.
 
 ## <a name="reference-equality-and-string-interning"></a>참조 동일성과 문자열 인터닝
 
@@ -127,7 +127,7 @@ Windows에서 언어 비교를 서수 비교로 변경하면 "cop", "coop" 및 "
 [!code-csharp-interactive[Demonstrating string interning](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#9)]
 
 > [!NOTE]
-> 문자열의 동일성을 테스트할 때, 어떤 유형의 비교를 수행할지 명시적으로 지정하는 메서드를 사용해야 합니다. 코드를 훨씬 더 쉽게 유지 관리하고 읽을 수 있습니다. <xref:System.StringComparison> 열거형 매개 변수를 사용하는 <xref:System.String?displayProperty=nameWithType> 및 <xref:System.Array?displayProperty=nameWithType> 클래스의 메서드 오버로드를 사용합니다. 수행할 비교 형식을 지정합니다. 동일성을 테스트할 때 `==` 및 `!=` 연산자를 사용하지 않습니다. <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 인스턴스 메서드는 항상 서수 대/소문자 구분 비교를 수행합니다. 주로 알파벳순으로 문자열을 정렬하는 데 적합합니다.
+> 문자열의 동일성을 테스트할 때, 어떤 유형의 비교를 수행할지 명시적으로 지정하는 메서드를 사용해야 합니다. 코드를 훨씬 더 쉽게 유지 관리하고 읽을 수 있습니다. <xref:System.String?displayProperty=nameWithType> 열거형 매개 변수를 사용하는 <xref:System.Array?displayProperty=nameWithType> 및 <xref:System.StringComparison> 클래스의 메서드 오버로드를 사용합니다. 수행할 비교 형식을 지정합니다. 동일성을 테스트할 때 `==` 및 `!=` 연산자를 사용하지 않습니다. <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 인스턴스 메서드는 항상 서수 대/소문자 구분 비교를 수행합니다. 주로 알파벳순으로 문자열을 정렬하는 데 적합합니다.
 
 <xref:System.String.Intern%2A?displayProperty=nameWithType> 메서드를 호출하여 문자열을 인터트하거나 기존의 인턴된 문자열에 대한 참조를 검색할 수 있습니다. 문자열이 인턴트되었는지 확인하려면 <xref:System.String.IsInterned%2A?displayProperty=nameWithType> 메서드를 호출합니다.
 

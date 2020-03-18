@@ -5,10 +5,10 @@ helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
 ms.openlocfilehash: 4f7ddad8c3dc12391ef6bf345a73ebb384400b38
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093151"
 ---
 # <a name="using-directive-c-reference"></a>using 지시문(C# 참조)
@@ -35,7 +35,7 @@ ms.locfileid: "77093151"
     using Project = PC.MyCompany.Project;
     ```
 
-`using` 키워드는 파일 및 글꼴과 같은 <xref:System.IDisposable> 개체가 제대로 처리될 수 있게 도와주는 *using 문*을 만드는 데도 사용됩니다. 자세한 내용은 [using 문](using-statement.md)을 참조하세요.
+`using` 키워드는 파일 및 글꼴과 같은 *개체가 제대로 처리될 수 있게 도와주는*using 문<xref:System.IDisposable>을 만드는 데도 사용됩니다. 자세한 내용은 [using 문](using-statement.md)을 참조하세요.
 
 ## <a name="using-static-type"></a>정적 형식 사용
 
@@ -91,9 +91,9 @@ using alias 지시문의 오른쪽에는 공개 제네릭 형식이 포함될 �
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)의 [Using 지시문](~/_csharplang/spec/namespaces.md#using-directives)을 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/namespaces.md#using-directives)의 [Using 지시문](/dotnet/csharp/language-reference/language-specification/introduction)을 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

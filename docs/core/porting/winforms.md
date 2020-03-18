@@ -5,10 +5,10 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.openlocfilehash: dbd522851faa0a4fe435199914a034ee230d3455
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76116028"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>.NET Core에 Windows Forms 데스크톱 앱을 포팅하는 방법
@@ -24,7 +24,7 @@ ms.locfileid: "76116028"
 | **MyFormsCore.csproj** | 만들 새 .NET Core 프로젝트의 이름입니다. |
 | **MyAppCore.exe** | .NET Core Windows Forms 앱 실행 파일입니다. |
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 - 수행할 디자이너 작업용 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)
 
@@ -127,7 +127,7 @@ dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
 - **RootNamespace**\
 프로젝트에서 사용되는 기본 네임스페이스입니다. 이 네임스페이스는 .NET Framework 프로젝트의 기본 네임스페이스와 일치해야 합니다.
 
-`MyFormsCore.csproj` 파일의 `<PropertyGroup>` 노드에 다음 세 개의 요소를 추가합니다.
+`<PropertyGroup>` 파일의 `MyFormsCore.csproj` 노드에 다음 세 개의 요소를 추가합니다.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">

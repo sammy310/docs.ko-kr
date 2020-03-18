@@ -4,10 +4,10 @@ description: Infer.NET과 함께 확률적 프로그래밍을 사용하여 TrueS
 ms.date: 01/30/2020
 ms.custom: mvc,how-to
 ms.openlocfilehash: 8e489d61c5e6cca53ba12b13fddd0b73c7f85ef9
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77092605"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Infer.NET 및 확률적 프로그래밍을 사용하여 게임 대전 목록 앱 만들기
@@ -18,7 +18,7 @@ ms.locfileid: "77092605"
 
 확률적 프로그래밍을 사용하면 실제와 같은 프로세스의 통계 모델을 만들 수 있습니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 - 로컬 개발 환경 설정
 
@@ -33,7 +33,7 @@ dotnet new console -o myApp
 cd myApp
 ```
 
-`dotnet` 명령은 `console` 형식의 `new` 애플리케이션을 만듭니다. `-o` 매개 변수는 앱이 저장되는 `myApp`이라는 디렉터리를 만들고 필요한 파일로 채웁니다. `cd myApp` 명령을 실행하면 새로 만들어진 앱 디렉터리로 이동합니다.
+`dotnet` 명령은 `new` 형식의 `console` 애플리케이션을 만듭니다. `-o` 매개 변수는 앱이 저장되는 `myApp`이라는 디렉터리를 만들고 필요한 파일로 채웁니다. `cd myApp` 명령을 실행하면 새로 만들어진 앱 디렉터리로 이동합니다.
 
 ## <a name="install-infernet-package"></a>Infer.NET 패키지 설치
 

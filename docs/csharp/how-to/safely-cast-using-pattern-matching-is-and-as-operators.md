@@ -7,10 +7,10 @@ helpviewer_keywords:
 - as operator [C#]
 - is operator [C#]
 ms.openlocfilehash: 762f8135063f7256ce7a167c65013703d9249039
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73973086"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>패턴 일치와 is 및 as 연산자를 사용하여 안전하게 캐스트하는 방법
@@ -29,7 +29,7 @@ ms.locfileid: "73973086"
 
 위의 샘플은 변환에 사용하기 위한 패턴 일치의 다른 기능을 보여 줍니다. 구체적으로 `null` 값을 확인하여 null 패턴에 대한 변수를 테스트할 수 있습니다. 변수의 런타임 값이 `null`일 때 형식을 확인하는 `is` 문은 항상 `false`를 반환합니다. 패턴 일치 `is` 문은 `int?` 또는 `Nullable<int>`과 같은 nullable 값 형식을 허용하지 않지만 다른 값 형식을 테스트할 수 있습니다. 앞의 예제에서 `is` 패턴은 nullable 값 형식으로 제한되지 않습니다. 이러한 패턴을 사용하여 참조 형식의 변수에 값이 있는지 또는 값이 `null`인지 테스트할 수도 있습니다.
 
-위의 샘플도 변수가 여러 형식 중 하나일 수 있는 `switch` 문에서 패턴 일치 `is` 식을 사용하는 방법을 보여 줍니다.
+위의 샘플도 변수가 여러 형식 중 하나일 수 있는 `is` 문에서 패턴 일치 `switch` 식을 사용하는 방법을 보여 줍니다.
 
 변수가 지정된 형식인지 테스트하지만 새 변수에 할당하지 않으려는 경우, 참조 형식 및 nullable 형식에 대해 `is` 및 `as` 연산자를 사용할 수 있습니다. 다음 코드는 변수가 지정된 형식인지 테스트하기 위해 패턴 일치가 도입되기 전에 C# 언어의 일부인 `is` 및 `as` 문을 사용하는 방법을 보여 줍니다.
 

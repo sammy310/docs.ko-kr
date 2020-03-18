@@ -6,10 +6,10 @@ ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
 ms.openlocfilehash: d4444b6d080afa92a4e7fd9f30c5f9358f02f0ef
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159236"
 ---
 # <a name="framework-libraries"></a>프레임워크 라이브러리
@@ -22,7 +22,7 @@ ms.locfileid: "78159236"
 
 BCL은 가장 기본적인 형식과 유틸리티 기능을 제공하며 다른 모든 .NET 클래스 라이브러리의 기초가 됩니다. BCL의 목적은 어떠한 작업에도 편향되지 않고 매우 일반적인 구현을 제공하는 것입니다. 앱에서 높은 처리량보다 짧은 대기 시간 우선, 낮은 CPU 사용량보다 낮은 메모리 사용량 우선 등의 특정 정책을 선호할 수 있으므로 성능은 항상 중요한 고려 사항입니다. 이 라이브러리는 일반적으로 고성능으로 설계되었으며 이러한 다양한 성능 문제에 따라 중도적인 방식을 선택합니다. 대부분의 앱에서 이 방식은 매우 성공적이었습니다.
 
-## <a name="primitive-types"></a>기본 형식
+## <a name="primitive-types"></a>기본 유형
 
 .NET에는 모든 프로그램에서 사용되는(다양한 수준으로) 기본 형식 집합이 있습니다. 이러한 형식은 숫자, 문자열, 바이트, 임의 개체 등의 데이터를 포함합니다. C# 언어에는 이 형식의 키워드가 있습니다. 이러한 형식의 샘플 집합 및 일치하는 C# 키워드가 아래에 나와 있습니다.
 
@@ -34,7 +34,7 @@ BCL은 가장 기본적인 형식과 유틸리티 기능을 제공하며 다른 
 * <xref:System.Byte?displayProperty=nameWithType>([byte](../csharp/language-reference/builtin-types/integral-numeric-types.md)) - 1바이트의 메모리를 나타내는 부호 없는 8비트 정수입니다.
 * <xref:System.Boolean?displayProperty=nameWithType>([bool](../csharp/language-reference/builtin-types/bool.md)) - `true` 또는 `false`를 나타내는 부울 형식입니다.
 * <xref:System.Char?displayProperty=nameWithType>([char](../csharp/language-reference/builtin-types/char.md)) - 유니코드 문자를 나타내는 16비트 숫자 형식입니다.
-* <xref:System.String?displayProperty=nameWithType>([string](../csharp/language-reference/builtin-types/reference-types.md#the-string-type)) - 일련의 문자를 나타냅니다. `char[]`와 다르지만 `string`의 각 개별 `char`를 인덱싱할 수 있습니다.
+* <xref:System.String?displayProperty=nameWithType>([string](../csharp/language-reference/builtin-types/reference-types.md#the-string-type)) - 일련의 문자를 나타냅니다. `char[]`와 다르지만 `char`의 각 개별 `string`를 인덱싱할 수 있습니다.
 
 ## <a name="data-structures"></a>데이터 구조
 

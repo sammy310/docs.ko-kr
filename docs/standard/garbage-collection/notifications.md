@@ -10,10 +10,10 @@ helpviewer_keywords:
 - garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
 ms.openlocfilehash: d5646c4969c95350ab4cd63b16f6f99ffba3a4ec
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73131543"
 ---
 # <a name="garbage-collection-notifications"></a>가비지 컬렉션 알림
@@ -61,7 +61,7 @@ ms.locfileid: "73131543"
   
  너무 낮은 값을 지정하는 경우 알림을 받기에 충분한 시간이 경과하기도 전에 런타임이 수집을 일으킬 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ### <a name="description"></a>설명  
  다음 예제에서 서버 그룹이 들어오는 웹 요청을 처리합니다. 요청 처리의 워크로드를 시뮬레이트하기 위해 바이트 배열을 <xref:System.Collections.Generic.List%601> 컬렉션에 추가합니다. 각 서버는 가비지 수집 알림에 등록한 후 `WaitForFullGCProc` 사용자 메서드의 스레드를 시작하여 <xref:System.GC.WaitForFullGCApproach%2A> 및 <xref:System.GC.WaitForFullGCComplete%2A> 메서드에서 반환하는 <xref:System.GCNotificationStatus> 열거형을 지속적으로 모니터링합니다.  
@@ -120,6 +120,6 @@ ms.locfileid: "73131543"
  [!code-csharp[GCNotification#1](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#1)]
  [!code-vb[GCNotification#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#1)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [가비지 수집](../../../docs/standard/garbage-collection/index.md)

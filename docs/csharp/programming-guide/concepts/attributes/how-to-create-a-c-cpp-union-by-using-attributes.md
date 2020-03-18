@@ -3,17 +3,17 @@ title: 특성을 사용하여 C/C++ 공용 구조체 만드는 방법(C#)
 ms.date: 07/20/2015
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
 ms.openlocfilehash: ff8ce560444581a28b257820573224f89a274cd9
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141581"
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>특성을 사용하여 C/C++ 공용 구조체 만드는 방법(C#)
 
 특성을 사용하여 메모리에서 구조체가 레이아웃되는 방식을 필요에 맞게 변경할 수 있습니다. 예를 들어 `StructLayout(LayoutKind.Explicit)` 및 `FieldOffset` 특성을 사용하여 C/C++에서 공용 구조체로 알려진 항목을 만들 수 있습니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 이 코드 세그먼트에서 `TestUnion`의 모든 필드는 메모리의 같은 위치에서 시작합니다.
 
@@ -37,7 +37,7 @@ struct TestUnion
 }
 ```
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음은 명시적으로 설정된 다른 위치에서 필드가 시작하는 또 다른 예제입니다.
 

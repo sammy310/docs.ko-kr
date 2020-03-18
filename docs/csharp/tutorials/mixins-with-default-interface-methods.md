@@ -3,12 +3,12 @@ title: 기본 인터페이스 메서드를 사용하여 mixin 형식 만들기
 description: 기본 인터페이스 멤버를 사용하여 구현자에 대한 선택적 기본 구현으로 인터페이스를 확장할 수 있습니다.
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: f97410124a4ca5bbb10972ab5e7942fa4af68d72
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: aaf8d34e27c9c56d95560656eb7a7b24b152c053
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921454"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240108"
 ---
 # <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>자습서: 기본 인터페이스 메서드를 사용하는 인터페이스를 통해 클래스를 만드는 경우의 기능 혼합
 
@@ -53,21 +53,21 @@ C# 8.0부터 기본 구현을 인터페이스 메서드로 선언할 수 있습�
 
 모든 광원의 동작을 정의하는 인터페이스를 만드는 것부터 시작합니다.
 
-[!code-csharp[Declare base interface](~/samples/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetILightInterfaceV1)]
+[!code-csharp[Declare base interface](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetILightInterfaceV1)]
 
 기본 오버헤드 광원 픽스쳐는 다음 코드와 같이 이 인터페이스를 구현할 수 있습니다.
 
-[!code-csharp[First overhead light](~/samples/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetOverheadLightV1)]
+[!code-csharp[First overhead light](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetOverheadLightV1)]
 
 이 자습서에서 코드는 IoT 디바이스를 구동하지 않지만 콘솔에 메시지를 작성하여 해당 활동을 에뮬레이트합니다. 집을 자동화하지 않고 코드를 탐색할 수 있습니다.
 
 다음으로 시간 제한 후 자동으로 꺼질 수 있는 광원의 인터페이스를 정의해 보겠습니다.
 
-[!code-csharp[pure Timer interface](~/samples/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetPureTimerInterface)]
+[!code-csharp[pure Timer interface](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetPureTimerInterface)]
 
 기본 구현을 오버헤드 광원에 추가할 수 있지만, 이 인터페이스 정의를 수정하여 `virtual` 기본 구현을 제공하는 것이 더 좋습니다.
 
-[!code-csharp[Timer interface](~/samples/csharp/tutorials/mixins-with-interfaces/ITimerLight.cs?name=SnippetTimerLightFinal)]
+[!code-csharp[Timer interface](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ITimerLight.cs?name=SnippetTimerLightFinal)]
 
 이러한 변경 사항 추가로 `OverheadLight` 클래스는 인터페이스에 대한 지원을 선언하여 타이머 함수를 구현할 수 있습니다.
 
@@ -77,7 +77,7 @@ public class OverheadLight : ITimerLight { }
 
 다른 광원 형식은 보다 정교한 프로토콜을 지원할 수 있습니다. 다음 코드와 같이 `TurnOnFor`에 대한 자체 구현을 제공할 수 있습니다.
 
-[!code-csharp[Override the timer function](~/samples/csharp/tutorials/mixins-with-interfaces/HalogenLight.cs?name=SnippetHalogenLight)]
+[!code-csharp[Override the timer function](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/HalogenLight.cs?name=SnippetHalogenLight)]
 
 가상 클래스 메서드를 재정의하는 것과 달리 `HalogenLight` 클래스의 `TurnOnFor` 선언에는 `override` 키워드가 사용되지 않습니다.
 
@@ -85,19 +85,19 @@ public class OverheadLight : ITimerLight { }
 
 고급 기능을 도입할수록 기본 인터페이스 방법의 장점이 더 명확해집니다. 인터페이스를 사용하면 기능을 조합하고 일치시킬 수 있습니다. 또한 각 클래스 작성자가 기본 구현과 사용자 지정 구현 중에서 선택할 수 있습니다. 깜박이는 광원에 대한 기본 구현으로 인터페이스를 추가해 보겠습니다.
 
-[!code-csharp[Define the blinking light interface](~/samples/csharp/tutorials/mixins-with-interfaces/IBlinkingLight.cs?name=SnippetBlinkingLight)]
+[!code-csharp[Define the blinking light interface](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/IBlinkingLight.cs?name=SnippetBlinkingLight)]
 
 기본 구현을 사용하면 모든 광원이 깜박일 수 있습니다. 오버헤드 광원은 기본 구현을 사용하여 타이머 및 깜박임 기능을 모두 추가할 수 있습니다.
 
-[!code-csharp[Use the default blink function](~/samples/csharp/tutorials/mixins-with-interfaces/OverheadLight.cs?name=SnippetOverheadLight)]
+[!code-csharp[Use the default blink function](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/OverheadLight.cs?name=SnippetOverheadLight)]
 
 새로운 광원 형식인 `LEDLight`는 timer 함수와 blink 함수를 직접 지원합니다. 이 광원 스타일은 `ITimerLight` 및 `IBlinkingLight` 인터페이스를 모두 구현하고 `Blink` 메서드를 재정의합니다.
 
-[!code-csharp[Override the blink function](~/samples/csharp/tutorials/mixins-with-interfaces/LEDLight.cs?name=SnippetLEDLight)]
+[!code-csharp[Override the blink function](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/LEDLight.cs?name=SnippetLEDLight)]
 
 `ExtraFancyLight`는 blink 및 timer 함수를 직접 지원할 수 있습니다.
 
-[!code-csharp[Override the blink and timer function](~/samples/csharp/tutorials/mixins-with-interfaces/ExtraFancyLight.cs?name=SnippetExtraFancyLight)]
+[!code-csharp[Override the blink and timer function](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ExtraFancyLight.cs?name=SnippetExtraFancyLight)]
 
 이전에 만든 `HalogenLight`는 깜박임을 지원하지 않습니다. 따라서 지원되는 인터페이스 목록에 `IBlinkingLight`를 추가하지 마세요.
 
@@ -105,21 +105,21 @@ public class OverheadLight : ITimerLight { }
 
 다음으로 몇 가지 테스트 코드를 작성해 보겠습니다. C#의 [패턴 일치](../pattern-matching.md) 기능을 사용하여 지원되는 인터페이스를 검사하고 광원의 기능을 결정할 수 있습니다.  다음 메서드는 각 광원의 지원되는 기능을 연습합니다.
 
-[!code-csharp[Test a light's capabilities](~/samples/csharp/tutorials/mixins-with-interfaces/Program.cs?name=SnippetTestLightFunctions)]
+[!code-csharp[Test a light's capabilities](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/Program.cs?name=SnippetTestLightFunctions)]
 
 `Main` 메서드의 다음 코드는 각 광원 형식을 차례로 만들고 해당 광원을 테스트합니다.
 
-[!code-csharp[Test a light's capabilities](~/samples/csharp/tutorials/mixins-with-interfaces/Program.cs?name=SnippetMainMethod)]
+[!code-csharp[Test a light's capabilities](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/Program.cs?name=SnippetMainMethod)]
 
 ## <a name="how-the-compiler-determines-best-implementation"></a>컴파일러가 최선의 구현을 결정하는 방법
 
 이 시나리오에서는 구현이 없는 기본 인터페이스를 보여 줍니다. `ILight` 인터페이스에 메서드를 추가하면 새로운 복잡성이 발생합니다. 기본 인터페이스 메서드를 제어하는 언어 규칙은 여러 파생 인터페이스를 구현하는 구체적인 클래스에 대한 영향을 최소화합니다. 새 메서드로 원래 인터페이스를 개선하여 사용 방법을 변경할 수 있는 방법을 확인해 보겠습니다. 모든 표시등 광원은 해당 전원 상태를 열거형 값으로 보고할 수 있습니다.
 
-[!code-csharp[Enumeration for power status](~/samples/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetPowerStatus)]
+[!code-csharp[Enumeration for power status](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetPowerStatus)]
 
 기본 구현에서는 AC 전원이라고 가정합니다.
 
-[!code-csharp[Report a default power status](~/samples/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetILightInterface)]
+[!code-csharp[Report a default power status](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetILightInterface)]
 
 `ExtraFancyLight`에서 `ILight` 인터페이스 및 파생된 인터페이스, `ITimerLight` 및 `IBlinkingLight`에 대한 지원을 선언하더라도 이러한 변경 내용은 완전히 컴파일됩니다. `ILight` 인터페이스에 선언된 "가장 가까운" 구현은 하나뿐입니다. 재정의를 선언한 모든 클래스는 하나의 "가장 가까운" 구현이 됩니다. 이전 클래스에서 다른 파생 인터페이스의 멤버를 재정의하는 예를 살펴보았습니다.
 

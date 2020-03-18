@@ -8,10 +8,10 @@ dev_langs:
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
 ms.openlocfilehash: e1f419dd57c1e90d7ebb57ef572f338a34d1c509
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73423630"
 ---
 # <a name="language-independence-and-language-independent-components"></a>언어 독립성 및 언어 독립적 구성 요소
@@ -21,7 +21,7 @@ ms.locfileid: "73423630"
 > [!NOTE]
 > 이 문서의 첫 부분에서는 언어 독립적 구성 요소, 즉 모든 언어로 작성된 앱에서 사용할 수 있는 구성 요소를 만드는 방법을 설명합니다. 여러 언어로 작성된 소스 코드에서 구성 요소나 앱을 하나 만들 수도 있습니다. 이 문서의 두 번째 부분에서 [언어 간 상호 운용성](#cross-language-interoperability)을 참조하세요.
 
-어떠한 언어로 작성된 다른 개체와도 완전하게 상호 작용하려면 개체는 모든 언어에 공통적인 기능만 호출자에게 노출해야 합니다. 기능의 공통 집합은 생성된 어셈블리에 적용되는 규칙 집합인 CLS(공용 언어 사양)에서 정의됩니다. 공용 언어 사양은 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)의 Partition I, Clauses 7~11에 정의되어 있습니다.
+어떠한 언어로 작성된 다른 개체와도 완전하게 상호 작용하려면 개체는 모든 언어에 공통적인 기능만 호출자에게 노출해야 합니다. 기능의 공통 집합은 생성된 어셈블리에 적용되는 규칙 집합인 CLS(공용 언어 사양)에서 정의됩니다. 공용 언어 사양은 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)에서 Partition I, Clauses 7~11에 정의되어 있습니다.
 
 구성 요소가 공용 언어 사양을 따르는 경우, 이 구성 요소는 CLS 규격임이 보장되고 CLS를 지원하는 모든 프로그래밍 언어로 작성된 어셈블리 코드에서 액세스할 수 있습니다. [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) 특성을 소스 코드에 적용하여 구성 요소가 컴파일 시간에 공용 언어 사양을 준수하는지 여부를 확인할 수 있습니다. 자세한 내용은 [CLSCompliantAttribute 특성](#the-clscompliantattribute-attribute)을 참조하세요.
 
@@ -53,7 +53,7 @@ ms.locfileid: "73423630"
 
   * [이벤트](#events)
 
-  * [오버로드](#overloads)
+  * [Overloads](#overloads)
 
   * [예외](#exceptions)
 
@@ -65,7 +65,7 @@ ms.locfileid: "73423630"
 
 ## <a name="cls-compliance-rules"></a>CLS 규격 규칙
 
-이 섹션에서는 CLS 규격 구성 요소를 만드는 규칙을 설명합니다. 규칙의 전체 목록은 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)의 Partition I, Clauses 11에 정의되어 있습니다.
+이 섹션에서는 CLS 규격 구성 요소를 만드는 규칙을 설명합니다. 규칙의 전체 목록은 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)에서 Partition I, Clause 11을 참조하세요.
 
 > [!NOTE]
 > 공용 언어 사양에서는 소비자(CLS 규격인 구성 요소를 프로그래밍 방식으로 액세스하는 개발자), 프레임워크(언어 컴파일러를 사용하여 CLS 규격 라이브러리를 만드는 개발자) 및 extender(CLS 규격 구성 요소를 생성하는 언어 컴파일러 또는 코드 파서 등의 도구를 만드는 개발자)에게 적용되는 CLS 규격에 대한 각 규칙을 설명합니다. 이 문서에서는 프레임워크에 적용되는 규칙에 초점을 맞춥니다. 그러나 extender에 적용되는 규칙 중 일부는 [Reflection.Emit](xref:System.Reflection.Emit)를 사용하여 만든 어셈블리에도 적용할 수 있습니다.
@@ -75,7 +75,7 @@ ms.locfileid: "73423630"
 > [!IMPORTANT]
 > CLS 규격의 규칙은 구성 요소의 public 인터페이스에만 적용되고 private 구현에는 적용되지 않습니다.
 
-예를 들어 [Byte](xref:System.Byte) 이외의 부호 없는 정수는 CLS 규격이 아닙니다. 다음 예제의 `Person` 클래스는 [UInt16](xref:System.UInt16) 형식의 `Age` 속성을 표시하므로 다음 코드에서 컴파일러 경고가 표시됩니다.
+예를 들어 [Byte](xref:System.Byte) 이외의 부호 없는 정수는 CLS 규격이 아닙니다. 다음 예제의 `Person` 클래스는 `Age`UInt16[ 형식의 ](xref:System.UInt16) 속성을 표시하므로 다음 코드에서 컴파일러 경고가 표시됩니다.
 
 ```csharp
 using System;
@@ -150,21 +150,21 @@ End Class
 
 * 공용 클래스의 공용 메서드에 대한 매개 변수 및 반환 형식, 파생 클래스에서 액세스할 수 있는 메서드에 대한 매개 변수 및 반환 형식
 
-CLS 규격의 규칙은 다음 표에 나와 있습니다. 규칙의 텍스트는 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)(Copyright 2012 by Ecma International)에서 가져온 약어입니다. 이러한 규칙에 대한 보다 자세한 내용은 다음 섹션에서 찾을 수 있습니다.
+CLS 규격의 규칙은 다음 표에 나와 있습니다. 규칙 텍스트는 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)에서 그대로 가져온 것으로, Copyright 2012 by Ecma International입니다. 이러한 규칙에 대한 보다 자세한 내용은 다음 섹션에서 찾을 수 있습니다.
 
-범주 | 참조 | 규칙 | 규칙 번호
+범주 | 참조 항목 | 규칙 | 규칙 번호
 -------- | --- | ---- | -----------
-접근성 | [멤버 접근성](#member-accessibility) | `family-or-assembly` 액세스 가능성을 갖는 다른 어셈블리에서 상속된 메서드를 재정의하는 경우를 제외하고는, 상속된 메서드를 재정의할 때 액세스 가능성이 변경되어서는 안 됩니다. 이 경우, 재정의는 `family` 액세스 가능성을 가져야 합니다. | 10
+액세스 가능성 | [멤버 접근성](#member-accessibility) | `family-or-assembly` 액세스 가능성을 갖는 다른 어셈블리에서 상속된 메서드를 재정의하는 경우를 제외하고는, 상속된 메서드를 재정의할 때 액세스 가능성이 변경되어서는 안 됩니다. 이 경우, 재정의는 `family` 액세스 가능성을 가져야 합니다. | 10
 액세스 가능성 | [멤버 접근성](#member-accessibility) | 형식과 멤버의 표시 유형 및 접근성은 해당 멤버가 표시되고 액세스 가능한 경우 모든 멤버의 시그니처에 있는 해당 형식이 표시되고 액세스 가능해야 합니다. 예를 들어 어셈블리 외부에 표시되는 공용 메서드는 어셈블리 내부에서만 표시되는 형식의 인수를 가질 수 없습니다. 해당 멤버가 표시되고 액세스 가능한 경우 모든 멤버의 시그니처에 사용된 인스턴스화된 제네릭 형식을 구성하는 형식의 표시 유형과 액세스 가능성은 표시되고 액세스 가능해야 합니다. 예를 들어 어셈블리 외부에 표시되는 멤버의 시그니처에 있는 인스턴스화된 제네릭 형식은 어셈블리 내부에서만 표시되는 형식의 제네릭 인수를 가질 수 없습니다. | 12
 배열 | [배열](#arrays) | 배열에는 CLS 규격 형식의 요소가 있어야 하며 배열의 모든 차원은 하한이 0이어야 합니다. 항목은 배열이며 이 배열의 요소 형식은 오버로드 간에 구분되어야 합니다. 오버로드가 2개 이상의 배열 형식에 기반하는 경우 요소 형식은 명명된 형식이어야 합니다. | 16
 특성 | [특성](#attributes) | 특성은 [System.Attribute](xref:System.Attribute) 형식 또는 이 형식에서 상속받는 형식입니다. | 41
-특성 | [특성](#attributes) | CLS에서는 사용자 지정 특성 인코딩의 하위 집합만을 허용합니다. 이러한 인코딩에 표시될 수 있는 유일한 형식은 다음과 같습니다(Partition IV 참조). [System.Type](xref:System.Type), [System.String](xref:System.String), [System.Char](xref:System.Char), [System.Boolean](xref:System.Boolean), [System.Byte](xref:System.Byte), [System.Int16](xref:System.Int16), [System.Int32](xref:System.Int32), [System.Int64](xref:System.Int64), [System.Single](xref:System.Single), [System.Double](xref:System.Double) 및 CLS 규격 기본 정수 형식을 기반으로 하는 열거형 형식 | 34
+특성 | [특성](#attributes) | CLS에서는 사용자 지정 특성 인코딩의 하위 집합만을 허용합니다. 이러한 인코딩에 표시되는 형식은(Partition IV 참조) [System.Type](xref:System.Type), [System.String](xref:System.String), [System.Char](xref:System.Char), [System.Boolean](xref:System.Boolean), [System.Byte](xref:System.Byte), [System.Int16](xref:System.Int16), [System.Int32](xref:System.Int32), [System.Int64](xref:System.Int64), [System.Single](xref:System.Single), [System.Double](xref:System.Double) 및 CLS 규격 기본 정수 형식을 기반으로 하는 열거형 형식뿐입니다. | 34
 특성 | [특성](#attributes) | CLS에서는 공개적으로 표시되는 필수 한정자(`modreq`)를 허용하지 않지만, CLS에서 인식할 수 없는 선택적 한정자(`modopt`, Partition II 참조)는 허용합니다. | 35
 생성자 | [생성자](#constructors) | 개체 생성자는 상속된 인스턴스 데이터에 액세스하기 전에 기본 클래스의 일부 인스턴스 생성자를 호출해야 합니다. (생성자가 필요하지 않은 값 형식에는 적용되지 않습니다.)  | 21
 생성자 | [생성자](#constructors) | 개체 생성자는 개체 만들기 작업의 일부로 호출되는 것을 제외하고 호출되어서는 안 되며 개체는 두 번 초기화해서는 안 됩니다. | 22
 열거형 | [열거형](#enumerations) | 열거형의 기본 형식은 기본 제공 CLS 정수 형식이고, 필드의 이름은 "value__"이며, 해당 필드는 `RTSpecialName`으로 표시되어야 합니다. |  7
 열거형 | [열거형](#enumerations) | [System.FlagsAttribute](xref:System.FlagsAttribute)(Partition IV 라이브러리 참조) 사용자 지정 특성의 존재 여부에 따라 지정되는 두 가지 종류의 열거형이 있습니다. 하나는 명명된 정수 값을 나타내며, 다른 하나는 명명되지 않은 값을 생성하도록 결합될 수 있는 명명된 비트 플래그를 나타냅니다. `enum`의 값은 지정된 값으로 제한되지 않습니다. |  8
-열거형 | [열거형](#enumerations) | 열거형의 리터럴 정적 필드는 그 자체가 열거형 형식을 갖습니다. |  9
+열거형 | [열거형](#enumerations) | 열거형의 리터럴 정적 필드는 그 자체가 열거형 형식을 갖습니다. |  10
 이벤트 | [이벤트](#events) | 이벤트를 구현하는 메서드는 메타데이터에서 `SpecialName`으로 표시됩니다. |29
 이벤트 | [이벤트](#events) | 이벤트와 접근자의 액세스 가능성이 동일해야 합니다. |30
 이벤트 | [이벤트](#events) | 이벤트에 대한 `add` 및 `remove` 메서드는 모두 있거나 모두 없어야 합니다. |31
@@ -187,20 +187,20 @@ CLS 규격의 규칙은 다음 표에 나와 있습니다. 규칙의 텍스트�
 명명 규칙 | [명명 규칙](#naming-conventions) | 어셈블리는 시작하고 식별자에 포함할 수 있는 문자 집합을 규정하는 유니코드 표준 3.0 기술 보고서 15의 부록 7을 준수합니다. [Unicode Normalization Forms](https://www.unicode.org/unicode/reports/tr15/tr15-18.html)에서 온라인으로 확인할 수 있습니다. 식별자는 유니코드 정규화 형식 C에서 정의된 정규 형식입니다. CLS에서 소문자 매핑(유니코드 로캘 비구분으로 지정된, 일 대 일 소문자 매핑)이 같은 두 개의 식별자는 서로 같습니다. 즉, 두 식별자가 CLS에서 서로 다른 것으로 간주되는 경우 단순히 대/소문자 이상의 차이가 있습니다. 그러나 상속된 정의를 재정의하기 위해서는 CLI가 원래 선언에 정확한 인코딩을 사용해야 합니다. | 4
 오버로딩 | [명명 규칙](#naming-conventions) | CLS 규격 범위에 소개된 모든 이름은 이름이 동일한 경우를 제외하고는 종류가 독립적이고 고유한 이름이어야 하며 오버로드를 통해 확인됩니다. 즉, CTS에서는 메서드 및 필드에 동일한 이름을 사용하는 단일 형식이 허용되지만 CLS에서는 그렇지 않습니다. | 5
 오버로딩 | [명명 규칙](#naming-conventions) | CTS로 고유 시그니처가 구분될 수 있지만 필드 및 중첩 형식은 식별자 비교만으로 구분됩니다. 식별자를 비교했을 때 CLS 규칙 39에 지정된 경우를 제외하고 동일한 이름을 갖는 메서드, 속성 및 이벤트는 반환 형식 이상의 차이가 있습니다. | 6
-오버로딩 | [오버로드](#overloads) | 속성 및 메서드만 오버로드될 수 있습니다. | 37
-오버로딩 | [오버로드](#overloads) |반환 형식에 따라서도 오버로드될 수 있는 이름이 `op_Implicit` 및 `op_Explicit`인 변환 연산자를 제외하고, 속성 및 메서드는 매개 변수의 형식과 수에 따라서만 오버로드될 수 있습니다. | 38
+오버로딩 | [Overloads](#overloads) | 속성 및 메서드만 오버로드될 수 있습니다. | 37
+오버로딩 | [Overloads](#overloads) |반환 형식에 따라서도 오버로드될 수 있는 이름이 `op_Implicit` 및 `op_Explicit`인 변환 연산자를 제외하고, 속성 및 메서드는 매개 변수의 형식과 수에 따라서만 오버로드될 수 있습니다. | 38
 오버로딩 | -- | 한 형식에서 선언된 둘 이상의 CLS 규격 메서드의 이름이 같고 형식 인스턴스화의 특정 집합에 대해 매개 변수와 반환 형식이 같다면 이러한 모든 메서드는 해당 형식 인스턴스화에서 의미상 동일합니다. | 48
-properties | [속성](#properties) | 속성의 getter 및 setter 메서드를 구현하는 메서드는 메타데이터에서 `SpecialName`으로 표시됩니다. | 24
+속성 | [속성](#properties) | 속성의 getter 및 setter 메서드를 구현하는 메서드는 메타데이터에서 `SpecialName`으로 표시됩니다. | 24
 속성 | [속성](#properties) | 속성의 접근자는 모두 static이거나 모두 virtual이거나 또는 모두 instance여야 합니다. | 26
 속성 | [속성](#properties) | 속성의 형식은 getter의 반환 형식이며 setter의 마지막 인수의 형식이어야 합니다. 속성의 매개 변수 형식은 getter의 매개 변수 형식 및 setter의 마지막 매개 변수 형식을 제외한 모든 형식이어야 합니다. 이들 형식은 모두 CLS 규격이어야 하며 관리되는 포인터일 수 없습니다. 즉, 참조로 전달될 수 없습니다. | 27
 속성 | [속성](#properties) | 속성은 특정 이름 지정 패턴을 따라야 합니다. CLS 규칙 24에서 참조되는 `SpecialName` 특성은 적절한 이름 비교에서 무시되고 식별자 규칙을 따릅니다. 속성에는 getter 메서드, setter 메서드 또는 둘 모두가 있어야 합니다. | 28
 형식 변환 | [형식 변환](#type-conversion) | op_Implicit 또는 op_Explicit가 제공되는 경우 강제 변환을 제공하는 대체 방법이 제공됩니다. | 39
-형식 | [형식 및 형식 멤버 시그니처](#types-and-type-member-signatures) | boxed 값 형식은 CLS 규격이 아닙니다. | 3
-형식 | [형식 및 형식 멤버 시그니처](#types-and-type-member-signatures) | 시그니처에 나타나는 모든 형식은 CLS 규격이어야 합니다. 인스턴스화된 제네릭 형식을 구성하는 모든 형식은 CLS 규격이어야 합니다. | 11
-형식 | [형식 및 형식 멤버 시그니처](#types-and-type-member-signatures) | 형식화된 참조는 CLS 규격이 아닙니다. | 14
-형식 | [형식 및 형식 멤버 시그니처](#types-and-type-member-signatures) | 관리되지 않는 포인터 형식은 CLS 규격이 아닙니다. | 17
-형식 | [형식 및 형식 멤버 시그니처](#types-and-type-member-signatures) | CLS 규격 클래스, 값 형식 및 인터페이스에는 CLS 규격이 아닌 멤버 구현이 필요하지 않습니다. | 20
-형식 | [형식 및 형식 멤버 시그니처](#types-and-type-member-signatures) | [System.Object](xref:System.Object)는 CLS 규격입니다. 다른 CLS 규격 클래스는 모두 CLS 규격 클래스에서 상속해야 합니다. | 23
+유형 | [형식 및 형식 멤버 시그니처](#types-and-type-member-signatures) | boxed 값 형식은 CLS 규격이 아닙니다. | 3
+유형 | [형식 및 형식 멤버 시그니처](#types-and-type-member-signatures) | 시그니처에 나타나는 모든 형식은 CLS 규격이어야 합니다. 인스턴스화된 제네릭 형식을 구성하는 모든 형식은 CLS 규격이어야 합니다. | 11
+유형 | [형식 및 형식 멤버 시그니처](#types-and-type-member-signatures) | 형식화된 참조는 CLS 규격이 아닙니다. | 14
+유형 | [형식 및 형식 멤버 시그니처](#types-and-type-member-signatures) | 관리되지 않는 포인터 형식은 CLS 규격이 아닙니다. | 17
+유형 | [형식 및 형식 멤버 시그니처](#types-and-type-member-signatures) | CLS 규격 클래스, 값 형식 및 인터페이스에는 CLS 규격이 아닌 멤버 구현이 필요하지 않습니다. | 20
+유형 | [형식 및 형식 멤버 시그니처](#types-and-type-member-signatures) | [System.Object](xref:System.Object)는 CLS 규격입니다. 다른 CLS 규격 클래스는 모두 CLS 규격 클래스에서 상속해야 합니다. | 23
 
 ### <a name="types-and-type-member-signatures"></a>형식 및 형식 멤버 시그니처
 
@@ -341,7 +341,7 @@ CLS 규격 형식 | 설명
 
 .NET Framework 클래스 라이브러리 또는 기타 다른 클래스 라이브러리는 다음 예시와 같은 CLS 규격이 아닌 기타 형식을 포함할 수 있습니다.
 
-* boxed 값 형식. 다음 C# 예제에서는 이름이 `Value`인 `int`* 형식의 public 속성이 있는 클래스를 만듭니다. `int`*는 boxed 값 형식이므로 컴파일러에서 CLS 비규격으로 플래그를 지정합니다.
+* boxed 값 형식. 다음 C# 예제에서는 이름이 `int`인 `Value`* 형식의 public 속성이 있는 클래스를 만듭니다. `int`*는 boxed 값 형식이므로 컴파일러에서 CLS 비규격으로 플래그를 지정합니다.
 
 ```csharp
 using System;
@@ -367,7 +367,7 @@ public unsafe class TestClass
 
 * 형식화된 참조란 개체에 대한 참조 및 형식에 대한 참조를 포함하는 특수 생성자로서,
 
-형식이 CLS 규격이 아닌 경우 *isCompliant* 매개 변수를 `false` 값으로 지정하여 [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) 특성을 적용해야 합니다. 자세한 내용은 [CLSCompliantAttribute 특성](#the-clscompliantattribute-attribute) 섹션을 참조하세요.
+형식이 CLS 규격이 아닌 경우 [isCompliant](xref:System.CLSCompliantAttribute) 매개 변수를 *값으로 지정하여*CLSCompliantAttribute`false` 특성을 적용해야 합니다. 자세한 내용은 [CLSCompliantAttribute 특성](#the-clscompliantattribute-attribute) 섹션을 참조하세요.
 
 다음 예제에서는 메서드 시그니처와 제네릭 형식 인스턴스화의 CLS 규격 문제를 보여 줍니다. `InvoiceItem` 클래스를 [UInt32](xref:System.UInt32) 형식의 속성, [Nullable(Of UInt32)](xref:System.Nullable%601) 형식의 속성, `UInt32` 및 `Nullable(Of UInt32)` 형식의 매개 변수가 있는 생성자로 정의합니다. 이 예제를 컴파일하려고 할 때 4개의 컴파일러 경고가 표시됩니다.
 
@@ -996,7 +996,7 @@ CLS 규격 배열은 다음 규칙을 따릅니다.
   End Class
   ```
 
-* 모든 배열 요소는 CLS 규격 형식으로 구성되어야 합니다. 다음 예제에서는 CLS 비규격 배열을 반환하는 두 개의 메서드를 정의합니다. 첫 번째는 [UInt32](xref:System.UInt32) 값의 배열을 반환합니다. 두 번째는 [Int32](xref:System.Int32) 및 `UInt32` 값이 포함된 [Object](xref:System.Object) 배열을 반환합니다. 컴파일러는 `UInt32` 형식 때문에 첫 번째 배열을 비규격으로 식별하지만 두 번째 배열이 CLS 비규격 요소를 포함하는지 인식하지 못합니다.
+* 모든 배열 요소는 CLS 규격 형식으로 구성되어야 합니다. 다음 예제에서는 CLS 비규격 배열을 반환하는 두 개의 메서드를 정의합니다. 첫 번째는 [UInt32](xref:System.UInt32) 값의 배열을 반환합니다. 두 번째는 [Int32](xref:System.Object) 및 [ 값이 포함된 ](xref:System.Int32)Object`UInt32` 배열을 반환합니다. 컴파일러는 `UInt32` 형식 때문에 첫 번째 배열을 비규격으로 식별하지만 두 번째 배열이 CLS 비규격 요소를 포함하는지 인식하지 못합니다.
 
   ```csharp
   using System;
@@ -1325,7 +1325,7 @@ CLS 규격 열거형은 다음 규칙을 따라야 합니다.
 
 상속된 멤버를 재정의하면 해당 멤버의 액세스 가능성을 변경할 수 없습니다. 예를 들어 파생된 클래스의 private 메서드가 기본 클래스의 public 메서드를 재정의할 수 없습니다. 한 가지 예외는 다른 어셈블리의 형식으로 재정의된 한 어셈블리에 있는 `protected internal`(C#의 경우) 또는 `Protected Friend`(Visual Basic의 경우) 멤버입니다.  이 경우, 재정의에 대한 액세스 가능성은 `Protected`입니다.
 
-다음 예제에서는 [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) 특성이 `true`로 설정되고 `Animal`에서 파생된 `Person` 클래스가 `Species` 속성의 접근성을 public에서 private으로 변경하려고 할 때 생성되는 오류를 보여 줍니다. 이 예제는 해당 액세스 가능성이 public으로 변경되는 경우 성공적으로 컴파일됩니다.
+다음 예제에서는 [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) 특성이 `true`로 설정되고 `Person`에서 파생된 `Animal` 클래스가 `Species` 속성의 접근성을 public에서 private으로 변경하려고 할 때 생성되는 오류를 보여 줍니다. 이 예제는 해당 액세스 가능성이 public으로 변경되는 경우 성공적으로 컴파일됩니다.
 
 ```csharp
 using System;
@@ -1523,7 +1523,7 @@ End Enum
 
 중첩 형식에는 적어도 바깥쪽 형식과 같은 수의 제네릭 매개 변수가 항상 있어야 합니다. 이러한 값은 바깥쪽 형식의 제네릭 매개 변수와 위치가 같습니다. 제네릭 형식은 새 제네릭 매개 변수를 포함할 수도 있습니다.
 
-포함 형식의 제네릭 형식 매개 변수와 중첩 형식 사이의 관계는 개별 언어의 구문에 의해 숨겨질 수 있습니다. 다음 예제에서 제네릭 형식 `Outer<T>`에는 두 개의 중첩된 클래스인 `Inner1A` 및 `Inner1B<U>`가 포함됩니다. `Object.ToString`에서 각 클래스가 상속받는 `ToString` 메서드 호출은 포함하는 클래스의 형식 매개 변수가 각 중첩 클래스에 포함되는 것을 보여 줍니다.
+포함 형식의 제네릭 형식 매개 변수와 중첩 형식 사이의 관계는 개별 언어의 구문에 의해 숨겨질 수 있습니다. 다음 예제에서 제네릭 형식 `Outer<T>`에는 두 개의 중첩된 클래스인 `Inner1A` 및 `Inner1B<U>`가 포함됩니다. `ToString`에서 각 클래스가 상속받는 `Object.ToString` 메서드 호출은 포함하는 클래스의 형식 매개 변수가 각 중첩 클래스에 포함되는 것을 보여 줍니다.
 
 ```csharp
 using System;
@@ -1849,7 +1849,7 @@ End Class
 
 공용 언어 사양에서는 중첩된 형식 및 protected 멤버에 대해 보수적인 인스턴스화별 모델을 적용합니다. 개방형 제네릭 형식은 protected 중첩 제네릭 형식의 특정 인스턴스화를 포함하는 시그니처로 필드 또는 멤버를 노출할 수 없습니다. 제네릭 기본 클래스나 인터페이스의 특정 인스턴스화를 확장하는 제네릭이 아닌 형식은 protected 중첩 제네릭 형식의 다른 인스턴스화를 포함하는 서명이 있는 필드나 멤버를 노출할 수 없습니다.
 
-다음 예제에서는 제네릭 형식 `C1<T>`와 protected 클래스 `C1<T>.N`을 정의합니다. `C1<T>`에는 `M1` 및 `M2`의 두 메서드가 있습니다. 하지만 `M1`은 `C1<T>`에서 `C1<int>.N` 개체를 반환하려고 하므로 CLS 규격이 아닙니다. 두 번째 클래스인 `C2`는 `C1<long>`에서 파생됩니다. 여기에는 `M3` 및 `M4`의 두 메서드가 있습니다. `M3`는 `C1<long>`의 하위 클래스에서 `C1<int>.N` 개체를 반환하려고 하므로 CLS 규격이 아닙니다. 언어 컴파일러는 훨씬 더 제한적일 수 있습니다. 이 예제에서는 Visual Basic에서 `M4`를 컴파일하려고 하면 오류를 표시합니다.
+다음 예제에서는 제네릭 형식 `C1<T>`와 protected 클래스 `C1<T>.N`을 정의합니다. `C1<T>`에는 `M1` 및 `M2`의 두 메서드가 있습니다. 하지만 `M1`은 `C1<int>.N`에서 `C1<T>` 개체를 반환하려고 하므로 CLS 규격이 아닙니다. 두 번째 클래스인 `C2`는 `C1<long>`에서 파생됩니다. 여기에는 `M3` 및 `M4`의 두 메서드가 있습니다. `M3`는 `C1<int>.N`의 하위 클래스에서 `C1<long>` 개체를 반환하려고 하므로 CLS 규격이 아닙니다. 언어 컴파일러는 훨씬 더 제한적일 수 있습니다. 이 예제에서는 Visual Basic에서 `M4`를 컴파일하려고 하면 오류를 표시합니다.
 
 ```csharp
 using System;
@@ -2048,11 +2048,11 @@ CLS 규격 클래스의 생성자와 구조체는 다음 규칙을 따라야 합
 
 * 개체 생성자는 개체를 만드는 경우를 제외하고는 호출할 수 없습니다. 또한 개체는 두 번 초기화할 수 없습니다. 예를 들어 `Object.MemberwiseClone`은 생성자를 호출해서는 안 됩니다.
 
-### <a name="properties"></a>properties
+### <a name="properties"></a>속성
 
 CLS 규격 형식의 속성은 다음 규칙을 따라야 합니다.
 
-* 속성에는 setter, getter 또는 둘 모두가 있어야 합니다. 어셈블리에서 이러한 메서드는 특수한 메서드로 구현됩니다. 즉, 어셈블리의 메타데이터에 `SpecialName`으로 표시되는 별도 메서드(getter의 이름은 `get`\_*propertyname*이고, setter의 이름은 `set`\_*propertyname*임)로 나타납니다. C# 컴파일러에서는 <xref:System.CLSCompliantAttribute> 특성을 적용할 필요 없이 자동으로 이 규칙을 적용합니다.
+* 속성에는 setter, getter 또는 둘 모두가 있어야 합니다. 어셈블리에서 이러한 메서드는 특수한 메서드로 구현됩니다. 즉, 어셈블리의 메타데이터에 `get`으로 표시되는 별도 메서드(getter의 이름은 \_  propertyname`set`이고, setter의 이름은 \_  propertyname`SpecialName`임)로 나타납니다. C# 컴파일러에서는 <xref:System.CLSCompliantAttribute> 특성을 적용할 필요 없이 자동으로 이 규칙을 적용합니다.
 
 * 속성의 형식은 속성 getter의 반환 형식이며 setter의 마지막 인수입니다. 이러한 형식은 CLS 규격이어야 하며 인수는 참조로 속성에 할당할 수 없습니다. 즉, 관리되는 포인터일 수 없습니다.
 
@@ -2336,7 +2336,7 @@ Public Class Example
 End Class
 ```
 
-### <a name="overloads"></a>Overloads
+### <a name="overloads"></a>Shadows
 
 공용 언어 사양에서는 오버로드된 멤버에 대해 다음과 같은 요구 사항을 적용합니다.
 
@@ -2582,11 +2582,11 @@ CLS 규격 특성의 속성 또는 생성자는 다음과 같은 형식만 노�
 
 * [String](xref:System.String)
 
-* [형식](xref:System.Type)
+* [Type](xref:System.Type)
 
 * 기본 형식이 `Byte`, `Int16`, `Int32` 또는 `Int64`인 열거형 형식입니다.
 
-다음 예제에서는 [Attribute](xref:System.Attribute)에서 파생된 `DescriptionAttribute` 클래스를 정의합니다. 클래스 생성자에 `Descriptor` 형식의 매개 변수가 있으므로 이 클래스는 CLS 규격이 아닙니다. C# 컴파일러에서 경고를 표시하지만 성공적으로 컴파일됩니다.
+다음 예제에서는 `DescriptionAttribute`Attribute[에서 파생된 ](xref:System.Attribute) 클래스를 정의합니다. 클래스 생성자에 `Descriptor` 형식의 매개 변수가 있으므로 이 클래스는 CLS 규격이 아닙니다. C# 컴파일러에서 경고를 표시하지만 성공적으로 컴파일됩니다.
 
 ```csharp
 using System;
@@ -2663,11 +2663,11 @@ End Class
 > [!WARNING]
 > 경우에 따라 언어 컴파일러는 `CLSCompliantAttribute` 특성 사용 여부에 관계없이 CLS 규격 규칙을 적용합니다. 예를 들어 인터페이스에서 `*static` 멤버를 정의하면 CLS 규칙에 위반됩니다. 하지만 인터페이스에서 `*static` 멤버를 정의하는 경우 C# 컴파일러에서 오류 메시지가 표시되고 응용 프로그램이 컴파일되지 않습니다.
 
-`CLSCompliantAttribute` 특성은 값이 `AttributeTargets.All`인 [AttributeUsageAttribute](xref:System.AttributeUsageAttribute) 특성으로 표시됩니다. 이 값을 사용하면 `CLSCompliantAttribute` 특성을 어셈블리, 모듈, 형식(클래스, 구조체, 열거형, 인터페이스 및 대리자), 형식 멤버(생성자, 메서드, 속성, 필드 및 이벤트), 매개 변수, 제네릭 매개 변수 및 반환 값 등 어떤 프로그램 요소에도 적용할 수 있습니다. 그러나 실제로는 어셈블리, 형식 및 형식 멤버에만 이 특성을 적용해야 합니다. 그러지 않으면 컴파일러는 특성을 무시하고 라이브러리의 공용 인터페이스에서 비규격 매개 변수, 제네릭 매개 변수 또는 반환 값이 발생할 때마다 컴파일러 경고를 계속해서 생성합니다.
+`CLSCompliantAttribute` 특성은 값이 [인 ](xref:System.AttributeUsageAttribute)AttributeUsageAttribute`AttributeTargets.All` 특성으로 표시됩니다. 이 값을 사용하면 `CLSCompliantAttribute` 특성을 어셈블리, 모듈, 형식(클래스, 구조체, 열거형, 인터페이스 및 대리자), 형식 멤버(생성자, 메서드, 속성, 필드 및 이벤트), 매개 변수, 제네릭 매개 변수 및 반환 값 등 어떤 프로그램 요소에도 적용할 수 있습니다. 그러나 실제로는 어셈블리, 형식 및 형식 멤버에만 이 특성을 적용해야 합니다. 그러지 않으면 컴파일러는 특성을 무시하고 라이브러리의 공용 인터페이스에서 비규격 매개 변수, 제네릭 매개 변수 또는 반환 값이 발생할 때마다 컴파일러 경고를 계속해서 생성합니다.
 
 `CLSCompliantAttribute` 특성의 값은 포함된 프로그램 요소에 의해 상속됩니다. 예를 들어, 어셈블리가 CLS 규격으로 표시되어 있으면 해당 형식도 CLS 규격입니다. 또한 형식이 CLS 규격으로 표시되어 있으면 해당 중첩 형식 및 멤버도 CLS 규격입니다.
 
-포함된 프로그램 요소에 `CLSCompliantAttribute` 특성을 적용하여 상속된 규격을 명시적으로 재정의할 수 있습니다. 예를 들어 *isCompliant* 값을 `false`로 지정하여 `CLSCompliantAttribute` 특성을 사용하면 규격 어셈블리에서 비규격 형식을 정의할 수 있고, *isCompliant* 값을 `true`로 지정하여 해당 특성을 사용하면 비규격 어셈블리에서 규격 형식을 정의할 수 있습니다. 또한 규격 형식으로 비규격 멤버를 정의할 수도 있습니다. 하지만 비규격 형식은 규격 멤버를 가질 수 없기 때문에 비규격 형식의 상속을 재정의하기 위해 *isCompliant* 값을 `true`로 지정해서 이 특성을 사용할 수는 없습니다.
+포함된 프로그램 요소에 `CLSCompliantAttribute` 특성을 적용하여 상속된 규격을 명시적으로 재정의할 수 있습니다. 예를 들어 `CLSCompliantAttribute`isCompliant*값을*로 지정하여 `false` 특성을 사용하면 규격 어셈블리에서 비규격 형식을 정의할 수 있고, *isCompliant* 값을 `true`로 지정하여 해당 특성을 사용하면 비규격 어셈블리에서 규격 형식을 정의할 수 있습니다. 또한 규격 형식으로 비규격 멤버를 정의할 수도 있습니다. 하지만 비규격 형식은 규격 멤버를 가질 수 없기 때문에 비규격 형식의 상속을 재정의하기 위해 *isCompliant* 값을 `true`로 지정해서 이 특성을 사용할 수는 없습니다.
 
 구성 요소를 개발하는 경우 어셈블리 및 해당 형식과 멤버가 CLS 규격인지 여부를 나타내는 `CLSCompliantAttribute` 특성을 반드시 사용해야 합니다.
 
@@ -2810,7 +2810,7 @@ End Class
 
 언어 독립성은 여러 가지 의미를 가질 수 있습니다. 한 가지 의미는 한 언어로 작성된 형식을 다른 언어로 작성된 앱에서 원활하게 사용할 수 있다는 것입니다. 이 문서의 핵심이기도 한 두 번째 의미는 여러 언어로 작성된 코드를 단일 .NET Framework 어셈블리로 결합하는 것입니다.
 
-다음 예제에서는 두 클래스 `NumericLib` 및 `StringLib`를 포함하는 Utilities.dll이라는 클래스 라이브러리를 만들어 언어 간 상호 운용성을 보여 줍니다. `NumericLib` 클래스는 C#으로 작성되었고 `StringLib` 클래스는 Visual Basic으로 작성되었습니다. 다음은 단일 멤버 `ToTitleCase`를 해당 `StringLib` 클래스에 포함하는 `StringUtil.vb`용 소스 코드입니다.
+다음 예제에서는 두 클래스 `NumericLib` 및 `StringLib`를 포함하는 Utilities.dll이라는 클래스 라이브러리를 만들어 언어 간 상호 운용성을 보여 줍니다. `NumericLib` 클래스는 C#으로 작성되었고 `StringLib` 클래스는 Visual Basic으로 작성되었습니다. 다음은 단일 멤버 `StringUtil.vb`를 해당 `ToTitleCase` 클래스에 포함하는 `StringLib`용 소스 코드입니다.
 
 ```vb
 Imports System.Collections.Generic

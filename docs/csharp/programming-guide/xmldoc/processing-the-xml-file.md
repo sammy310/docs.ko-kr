@@ -6,10 +6,10 @@ helpviewer_keywords:
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
 ms.openlocfilehash: bc72cade9ce6edddb88d741a3424405bba0a7ad8
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76793386"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>XML 파일 처리(C# 프로그래밍 가이드)
@@ -26,7 +26,7 @@ XML 파일은 코드의 계층적 표현이 아니며 각 요소에 대해 생�
 
     |문자|설명|
     |---------------|-----------------|
-    |N|네임스페이스(namespace)<br /><br /> 네임스페이스에 문서 주석을 추가할 수는 없지만 지원되는 경우 문서 주석에 대한 cref 참조를 만들 수는 있습니다.|
+    |N|namespace<br /><br /> 네임스페이스에 문서 주석을 추가할 수는 없지만 지원되는 경우 문서 주석에 대한 cref 참조를 만들 수는 있습니다.|
     |T|유형: 클래스, 인터페이스, 구조체, 열거형 또는 대리자|
     |F|필드(field)|
     |P|속성(인덱서 또는 기타 인덱싱된 속성 포함)|
@@ -70,7 +70,7 @@ XML 파일은 코드의 계층적 표현이 아니며 각 요소에 대해 생�
 
 - 변환 연산자(op_Implicit 및 op_Explicit)에 한해 메서드의 반환 값은 위에 인코딩되어 있는 것처럼 '~'에 반환 형식이 붙는 문자열로 인코딩됩니다.
 
-- 제네릭 형식의 경우에는 형식 이름 뒤에 역따옴표와 제네릭 형식 매개 변수의 수를 나타내는 숫자가 차례로 붙습니다. 예:
+- 제네릭 형식의 경우에는 형식 이름 뒤에 역따옴표와 제네릭 형식 매개 변수의 수를 나타내는 숫자가 차례로 붙습니다. 예를 들어:
 
      ``<member name="T:SampleClass`2">``는 `public class SampleClass<T, U>`로 정의된 형식의 태그입니다.
 

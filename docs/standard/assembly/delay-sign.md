@@ -13,10 +13,10 @@ dev_langs:
 - vb
 - cpp
 ms.openlocfilehash: 113df1ad3fc3ac1e27ebfef572494c1f15a3dbb5
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73733169"
 ---
 # <a name="delay-sign-an-assembly"></a>어셈블리 지연 서명
@@ -35,7 +35,7 @@ ms.locfileid: "73733169"
 
    - <xref:System.Reflection.AssemblyDelaySignAttribute> - 매개 변수로 **true**를 생성자에 전달하여 서명 지연에 사용 중임을 나타냅니다.
 
-   예:
+   예를 들어:
 
    ```cpp
    [assembly:AssemblyKeyFileAttribute("myKey.snk")];
@@ -84,7 +84,7 @@ ms.locfileid: "73733169"
    sn -R myAssembly.dll sgKey.snk
    ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [어셈블리 만들기](create.md)
 - [방법: 퍼블릭/프라이빗 키 쌍 만들기](create-public-private-key-pair.md)

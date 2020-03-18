@@ -4,11 +4,11 @@ description: C# 언어 버전 7.0의 새로운 기능을 살펴봅니다.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
 ms.openlocfilehash: a6ac5c00ceb2ce8e5e56e2a86a8cde937d5108e2
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448636"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398342"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0의 새로운 기능
 
@@ -80,7 +80,7 @@ C#에서는 디자인 의도를 설명하는 데 사용되는 클래스 및 구�
 
 [!code-csharp[CallingWithDeconstructor](~/samples/snippets/csharp/new-in-7/program.cs#CallingWithDeconstructor "Deconstructing a tuple")]
 
-.NET에 있는 형식에 대한 비슷한 분해를 제공할 수도 있습니다. `Deconstruct` 메서드를 클래스의 멤버로 작성합니다. 해당 `Deconstruct` 메서드는 추출하려는 각 속성에 대한 `out` 인수 집합을 제공합니다. `X` 및 `Y` 좌표를 추출하는 분해자 메서드를 제공하는 이 `Point` 클래스를 살펴봅니다.
+.NET에 있는 형식에 대한 비슷한 분해를 제공할 수도 있습니다. `Deconstruct` 메서드를 클래스의 멤버로 작성합니다. 해당 `Deconstruct` 메서드는 추출하려는 각 속성에 대한 `out` 인수 집합을 제공합니다. `Point` 및 `X` 좌표를 추출하는 분해자 메서드를 제공하는 이 `Y` 클래스를 살펴봅니다.
 
 [!code-csharp[PointWithDeconstruction](~/samples/snippets/csharp/new-in-7/point.cs#PointWithDeconstruction "Point with deconstruction method")]
 
@@ -126,7 +126,7 @@ if (input is int count)
 switch 일치 식에는 이미 C# 언어의 일부인 `switch` 문에 기반을 둔 친숙한 구문이 있습니다. 업데이트된 switch 문에는 몇 가지 새로운 구문이 포함됩니다.
 
 - `switch` 식의 관리 형식은 더 이상 정수 형식, `Enum` 형식, `string` 또는 해당 형식 중 하나에 해당하는 nullable 형식으로 제한되지 않습니다. 모든 형식을 사용할 수 있습니다.
-- 각 `case` 레이블에서 `switch` 식 형식을 테스트할 수 있습니다. `is` 식과 마찬가지로 해당 형식에 새 변수를 할당할 수 있습니다.
+- 각 `switch` 레이블에서 `case` 식 형식을 테스트할 수 있습니다. `is` 식과 마찬가지로 해당 형식에 새 변수를 할당할 수 있습니다.
 - `when` 절을 해당 변수의 추가 테스트 조건에 추가할 수 있습니다.
 - 이제 `case` 레이블의 순서가 중요합니다. 일치하는 첫 번째 분기가 실행됩니다. 다른 분기는 건너뜁니다.
 
@@ -215,14 +215,14 @@ ref local 및 ref return을 추가하면 값을 복사하거나 역참조 작업
 
 ## <a name="more-expression-bodied-members"></a>추가 식 본문 멤버
 
-C# 6에서는 멤버 함수의 [식 본문 멤버](csharp-6.md#expression-bodied-function-members) 및 읽기 전용 속성을 추가했습니다. C# 7.0에서는 식으로 구현될 수 있는 허용 멤버를 확장합니다. C# 7.0에서는 *속성* 및 *인덱서*에 대한 *생성자*, *종료자* 및 `get`/`set` 접근자를 구현할 수 있습니다. 다음 코드는 각각에 대한 예제를 보여 줍니다.
+C# 6에서는 멤버 함수의 [식 본문 멤버](csharp-6.md#expression-bodied-function-members) 및 읽기 전용 속성을 추가했습니다. C# 7.0에서는 식으로 구현될 수 있는 허용 멤버를 확장합니다. C# 7.0에서는 *속성* 및 *인덱서*에 대한 `get`생성자`set`, *종료자* 및 */* 접근자를 구현할 수 있습니다. 다음 코드는 각각에 대한 예제를 보여 줍니다.
 
 [!code-csharp[ExpressionBodiedMembers](~/samples/snippets/csharp/new-in-7/expressionmembers.cs#ExpressionBodiedEverything "new expression-bodied members")]
 
 > [!NOTE]
 > 이 예제에는 종료자가 필요하지 않지만 구문을 보여 주기 위해 표시됩니다. 관리되지 않는 리소스를 릴리스해야 하는 경우가 아니면 클래스에서 종료자를 구현하면 안 됩니다. 관리되지 않는 리소스를 직접 관리하지 않고 <xref:System.Runtime.InteropServices.SafeHandle> 클래스를 사용하는 것도 고려해야 합니다.
 
-식 본문 멤버의 새 위치는 C# 언어의 중요한 마일스톤을 나타냅니다. 이러한 기능은 오픈 소스 [Roslyn](https://github.com/dotnet/Roslyn) 프로젝트에서 작업하는 커뮤니티 멤버에 의해 구현되었습니다.
+식 본문 멤버의 이러한 새 위치는 C# 언어에 대한 중요한 기준을 나타냅니다. 이러한 기능은 오픈 소스 [Roslyn](https://github.com/dotnet/Roslyn) 프로젝트에 대한 작업을 수행하는 커뮤니티 멤버가 구현했습니다.
 
 메서드를 식 본문 멤버로 변경하는 것은 [이진 호환 가능 변경](version-update-considerations.md#binary-compatible-changes)입니다.
 
@@ -241,7 +241,7 @@ C#에서 `throw`는 항상 문이었습니다. `throw`는 식이 아닌 명령�
 [!code-csharp[UsingValueTask](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#UsingValueTask "Using ValueTask")]
 
 > [!NOTE]
-> <xref:System.Threading.Tasks.ValueTask%601> 형식을 사용하려면 NuGet 패키지 [`System.Threading.Tasks.Extensions`](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/)를 추가해야 합니다.
+> [ 형식을 사용하려면 NuGet 패키지 `System.Threading.Tasks.Extensions`](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/)<xref:System.Threading.Tasks.ValueTask%601>를 추가해야 합니다.
 
 이 개선 사항은 라이브러리 작성자가 성능이 중요한 코드에서 `Task`를 할당하지 않도록 방지하는 데 유용합니다.
 

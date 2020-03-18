@@ -36,10 +36,10 @@ helpviewer_keywords:
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
 ms.openlocfilehash: 8956be3cf8f96a8dd255f378d4927404c172c908
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160003"
 ---
 # <a name="the-regular-expression-object-model"></a>Regular Expression 개체 모델
@@ -87,7 +87,7 @@ ms.locfileid: "78160003"
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/validate1.cs#1)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/validate1.vb#1)]  
   
- 정규식 패턴 `^\d{3}-\d{2}-\d{4}$` 는 다음 테이블과 같이 해석됩니다.  
+ 정규식 패턴 `^\d{3}-\d{2}-\d{4}$`는 다음 테이블과 같이 해석됩니다.  
   
 |무늬|설명|  
 |-------------|-----------------|  
@@ -105,7 +105,7 @@ ms.locfileid: "78160003"
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/match1.cs#2)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/match1.vb#2)]  
   
- 정규식 패턴 `\b(\w+)\W+(\1)\b` 는 다음 테이블과 같이 해석됩니다.  
+ 정규식 패턴 `\b(\w+)\W+(\1)\b`는 다음 테이블과 같이 해석됩니다.  
   
 |무늬|설명|  
 |-------------|-----------------|  
@@ -127,7 +127,7 @@ ms.locfileid: "78160003"
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/replace1.cs#4)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/replace1.vb#4)]  
   
- 정규식 패턴 `\b\d+\.\d{2}\b` 는 다음 테이블과 같이 해석됩니다.  
+ 정규식 패턴 `\b\d+\.\d{2}\b`는 다음 테이블과 같이 해석됩니다.  
   
 |무늬|설명|  
 |-------------|-----------------|  
@@ -150,7 +150,7 @@ ms.locfileid: "78160003"
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/split1.cs#5)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/split1.vb#5)]  
   
- 정규식 패턴 `\b\d{1,2}\.\s` 는 다음 테이블과 같이 해석됩니다.  
+ 정규식 패턴 `\b\d{1,2}\.\s`는 다음 테이블과 같이 해석됩니다.  
   
 |무늬|설명|  
 |-------------|-----------------|  
@@ -167,7 +167,7 @@ ms.locfileid: "78160003"
 ### <a name="the-match-collection"></a>일치 컬렉션  
  <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 메서드는 정규식 엔진이 입력 문자열에서 찾은 모든 일치 항목(입력 문자열에서 나타나는 순서대로)을 나타내는 <xref:System.Text.RegularExpressions.MatchCollection> 개체가 포함된 <xref:System.Text.RegularExpressions.Match> 개체를 반환합니다. 일치 항목이 없는 경우 이 메서드는 멤버 없이 <xref:System.Text.RegularExpressions.MatchCollection> 개체를 반환합니다. <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> 속성을 사용하여 인덱스(0에서 <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> 속성 값보다 1 작은 값까지)별로 컬렉션의 개별 멤버에 액세스할 수 있습니다. <xref:System.Text.RegularExpressions.MatchCollection.Item%2A>은 컬렉션의 인덱서(C#의 경우) 및 기본 속성(Visual Basic의 경우)입니다.  
   
- 기본적으로 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 메서드에 대한 호출에서는 지연 평가를 사용하여 <xref:System.Text.RegularExpressions.MatchCollection> 개체를 채웁니다. 완전히 채워진 컬렉션이 필요한 속성(예: <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> 및 <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> 속성)에 액세스할 경우 성능이 저하될 수 있습니다. 따라서 <xref:System.Collections.IEnumerator> 메서드에서 반환하는 <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType> 개체를 사용하여 컬렉션에 액세스하는 것이 좋습니다. 개별 언어는 컬렉션의 <xref:System.Collections.IEnumerator> 인터페이스를 래핑하는 생성자(예: Visual Basic의 경우 `For Each` 및 C#의 경우 `foreach`)를 제공합니다.  
+ 기본적으로 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 메서드에 대한 호출에서는 지연 평가를 사용하여 <xref:System.Text.RegularExpressions.MatchCollection> 개체를 채웁니다. 완전히 채워진 컬렉션이 필요한 속성(예: <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> 및 <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> 속성)에 액세스할 경우 성능이 저하될 수 있습니다. 따라서 <xref:System.Collections.IEnumerator> 메서드에서 반환하는 <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType> 개체를 사용하여 컬렉션에 액세스하는 것이 좋습니다. 개별 언어는 컬렉션의 `For Each` 인터페이스를 래핑하는 생성자(예: Visual Basic의 경우 `foreach` 및 C#의 경우 <xref:System.Collections.IEnumerator>)를 제공합니다.  
   
  다음 예제에서는 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%29?displayProperty=nameWithType> 메서드를 사용하여, 입력 문자열에서 찾은 모든 일치 항목으로 <xref:System.Text.RegularExpressions.MatchCollection> 개체를 채웁니다. 이 예제에서는 컬렉션을 열거하고 문자열 배열에 일치 항목을 복사하며 정수 배열에 문자 위치를 기록합니다.  
   
@@ -213,7 +213,7 @@ ms.locfileid: "78160003"
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/result1.cs#9)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/result1.vb#9)]  
   
- 정규식 패턴 `\b\d+(,\d{3})*\.\d{2}\b` 는 다음 테이블과 같이 정의됩니다.  
+ 정규식 패턴 `\b\d+(,\d{3})*\.\d{2}\b`는 다음 테이블과 같이 정의됩니다.  
   
 |무늬|설명|  
 |-------------|-----------------|  
@@ -244,7 +244,7 @@ ms.locfileid: "78160003"
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/groupcollection1.cs#10)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/groupcollection1.vb#10)]  
   
- 정규식 패턴 `\b(\w+)\s(\d{1,2}),\s(\d{4})\b` 는 다음 테이블과 같이 정의됩니다.  
+ 정규식 패턴 `\b(\w+)\s(\d{1,2}),\s(\d{4})\b`는 다음 테이블과 같이 정의됩니다.  
   
 |무늬|설명|  
 |-------------|-----------------|  
@@ -273,7 +273,7 @@ ms.locfileid: "78160003"
  [!code-csharp[RegularExpressions.Classes#8](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Classes/cs/Example.cs#8)]
  [!code-vb[RegularExpressions.Classes#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Classes/vb/Example.vb#8)]  
   
- 정규식 패턴 `^(?<name>\w+):(?<value>\w+)` 는 다음 테이블과 같이 정의됩니다.  
+ 정규식 패턴 `^(?<name>\w+):(?<value>\w+)`는 다음 테이블과 같이 정의됩니다.  
   
 |무늬|설명|  
 |-------------|-----------------|  
@@ -299,7 +299,7 @@ ms.locfileid: "78160003"
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/nocapture1.cs#11)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/nocapture1.vb#11)]  
   
-- 수량자는 캡처링 그룹에 의해 정의된 패턴과 여러 번 일치할 수 있습니다. 이 경우 `Value` 개체의 `Length` 및 <xref:System.Text.RegularExpressions.Group> 속성은 캡처된 마지막 부분 문자열에 대한 정보만 포함합니다. 예를 들어, 다음 정규식은 마침표로 끝나는 단일 문장과 일치합니다. 두 개의 그룹화 구문을 사용합니다. 첫 번째 그룹화 구문은 개별 단어를 공백 문자와 함께 캡처하고, 두 번째 그룹화 구문은 개별 단어를 캡처합니다. 예제의 출력이 보여 주는 것처럼, 정규식이 전체 문장을 캡처하는 데 성공하더라도 두 번째 캡처링 그룹은 마지막 단어만 캡처합니다.  
+- 수량자는 캡처링 그룹에 의해 정의된 패턴과 여러 번 일치할 수 있습니다. 이 경우 `Value` 개체의 `Length` 및 <xref:System.Text.RegularExpressions.Group> 속성은 캡처된 마지막 부분 문자열에 대한 정보만 포함합니다. 예를 들어, 다음 정규식은 마침표로 끝나는 단일 문장과 일치합니다. 이 정규식에서는 두 개의 그룹화 구문을 사용하는데, 첫 번째 그룹화 구문은 개별 단어를 공백 문자와 함께 캡처하고, 두 번째 그룹화 구문은 개별 단어를 캡처합니다. 예제의 출력이 보여 주는 것처럼, 정규식이 전체 문장을 캡처하는 데 성공하더라도 두 번째 캡처링 그룹은 마지막 단어만 캡처합니다.  
   
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/lastcapture1.cs#12)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/lastcapture1.vb#12)]  
@@ -349,7 +349,7 @@ ms.locfileid: "78160003"
 |`;`|세미콜론을 하나 찾습니다.|  
 |`((\w+(\s\w+)*),(\d+);)+`|단어 하나 다음에 추가 단어가 있고 그 다음에 쉼표 하나, 하나 이상의 숫자 및 세미콜론 하나가 한 번 이상 나타나는 패턴을 찾습니다. 이 그룹은 첫 번째 캡처링 그룹입니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Text.RegularExpressions>
 - [.NET 정규식](../../../docs/standard/base-types/regular-expressions.md)

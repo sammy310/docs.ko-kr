@@ -3,11 +3,11 @@ title: 런타임 구성 옵션
 description: 런타임 구성 설정을 사용하여 .NET Core 애플리케이션을 구성하는 방법을 알아봅니다.
 ms.date: 01/21/2020
 ms.openlocfilehash: ddf68c30e620a06856f65e71bd050e1b77618f20
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733442"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397613"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>.NET Core 런타임 구성 설정
 
@@ -39,7 +39,7 @@ ms.locfileid: "76733442"
 > [!NOTE]
 > 그러면 *[앱 이름].runtimeconfig.json* 파일이 다음 번 빌드에서 덮어쓰입니다.
 
-*runtimeconfig.json* 파일의 **configProperties** 섹션에 런타임 구성 옵션을 지정합니다. 이 섹션은 형식은 다음과 같습니다.
+**runtimeconfig.json** 파일의 *configProperties* 섹션에 런타임 구성 옵션을 지정합니다. 이 섹션은 형식은 다음과 같습니다.
 
 ```json
 "configProperties": {

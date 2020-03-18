@@ -7,10 +7,10 @@ helpviewer_keywords:
 - computer resources [Visual Basic], accessing
 ms.assetid: 75b81c88-f7c0-46e0-95c8-0c006d2120f9
 ms.openlocfilehash: 27310a50289b9b2c315f52ad471da1f32ef0721a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74345530"
 ---
 # <a name="accessing-computer-resources-visual-basic"></a>컴퓨터 리소스에 액세스(Visual Basic)
@@ -28,7 +28,7 @@ ms.locfileid: "74345530"
 - <xref:Microsoft.VisualBasic.Devices.Ports>
 - 레지스트리(<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>)
 
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
 [소리 재생](../../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md)  
 백그라운드에서 소리를 재생하는 것과 같이 `My.Computer.Audio`와 연결된 작업을 나열합니다.

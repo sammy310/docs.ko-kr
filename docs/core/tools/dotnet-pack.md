@@ -3,17 +3,17 @@ title: dotnet pack 명령
 description: dotnet pack 명령은 .NET Core 프로젝트에 대한 NuGet 패키지를 만듭니다.
 ms.date: 02/14/2020
 ms.openlocfilehash: 865262f1eb314f9b7e8ee713c573a965e89ded93
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503650"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
 **이 문서의 적용 대상:** ✔️ .NET Core 2.x SDK 이상 버전
 
-## <a name="name"></a>이름
+## <a name="name"></a>name
 
 `dotnet pack` - 코드를 NuGet 패키지로 압축합니다.
 
@@ -85,7 +85,7 @@ dotnet pack [-h|--help]
 
 - **`--no-build`**
 
-  압축하기 전에 프로젝트를 빌드하지 않습니다. 또한 암시적으로 `--no-restore` 플래그를 설정합니다.
+  압축하기 전에 프로젝트를 빌드하지 않습니다. 또한 `--no-restore` 플래그를 암시적으로 설정합니다.
 
 - **`--no-dependencies`**
 
@@ -145,13 +145,13 @@ dotnet pack [-h|--help]
   dotnet pack --no-build --output nupkgs
   ```
 
-- *.csproj* 파일에서 프로젝트의 버전 접미사를 `<VersionSuffix>$(VersionSuffix)</VersionSuffix>`로 구성한 상태로 현재 프로젝트를 압축하고 결과 패키지 버전을 지정된 접미사로 업데이트합니다.
+- `<VersionSuffix>$(VersionSuffix)</VersionSuffix>`.csproj*파일에서 프로젝트의 버전 접미사를*로 구성한 상태로 현재 프로젝트를 압축하고 결과 패키지 버전을 지정된 접미사로 업데이트합니다.
 
   ```dotnetcli
   dotnet pack --version-suffix "ci-1234"
   ```
 
-- `PackageVersion` MSBuild 속성을 사용하여 패키지 버전을 `2.1.0`으로 설정합니다.
+- `2.1.0` MSBuild 속성을 사용하여 패키지 버전을 `PackageVersion`으로 설정합니다.
 
   ```dotnetcli
   dotnet pack -p:PackageVersion=2.1.0

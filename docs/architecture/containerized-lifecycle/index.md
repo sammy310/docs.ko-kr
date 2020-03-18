@@ -3,10 +3,10 @@ title: 컨테이너 및 Docker 소개
 description: Docker 사용의 주요 이점에 대한 간략적인 개요를 가져옵니다.
 ms.date: 02/15/2019
 ms.openlocfilehash: 9ac08a64cd2465b4b88a266c1ec0925f37680bf9
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73738184"
 ---
 # <a name="introduction-to-containers-and-docker"></a>컨테이너 및 Docker 소개

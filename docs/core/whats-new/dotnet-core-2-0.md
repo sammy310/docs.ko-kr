@@ -3,11 +3,11 @@ title: .NET Core 2.0의 새로운 기능
 description: .NET Core에서 볼 수 있는 새로운 기능에 대해 알아봅니다.
 ms.date: 08/13/2017
 ms.openlocfilehash: 115b3adc72b6798c6a7bac9cc18044a8822808a6
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801898"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79397844"
 ---
 # <a name="whats-new-in-net-core-20"></a>.NET Core 2.0의 새로운 기능
 
@@ -159,6 +159,6 @@ Live Unit Testing이 코드를 수정하려면 언제든지 자동으로 백그�
 - [Xamarin을 사용하는 모바일 애플리케이션](/xamarin/xamarin-forms/enterprise-application-patterns/index)
 - [Azure에서 클라우드에 배포되는 애플리케이션](/azure/architecture/reference-architectures/index)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ASP.NET Core 2.0의 새로운 기능](/aspnet/core/aspnetcore-2.0)

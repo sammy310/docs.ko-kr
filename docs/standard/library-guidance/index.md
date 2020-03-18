@@ -3,10 +3,10 @@ title: 오픈 소스 .NET 라이브러리 지침
 description: 고품질 .NET 라이브러리를 만드는 개발자를 위한 모범 사례 권장 사항입니다.
 ms.date: 10/17/2018
 ms.openlocfilehash: 4c76dfae6ffc39df7f15381be64e33657067d79d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76731431"
 ---
 # <a name="open-source-library-guidance"></a>오픈 소스 라이브러리 지침
@@ -28,9 +28,9 @@ ms.locfileid: "76731431"
 
 ## <a name="types-of-recommendations"></a>권장 사항 유형
 
-각 문서에는 네 가지 유형의 권장 사항이 나와 있습니다. **수행**, **고려**, **회피**, **금지**입니다. 각 권장 사항 유형은 수행해야 하는 필요성의 정도를 나타냅니다.
+각 문서에서는 **수행**, **고려**, **회피** 및 **금지**의 네 가지 권장 사항 유형을 제공합니다. 각 권장 사항 유형은 수행해야 하는 필요성의 정도를 나타냅니다.
 
-**수행** 권장 사항은 거의 항상 따라야 합니다. 예:
+**수행** 권장 사항은 거의 항상 따라야 합니다. 예들 들어 다음과 같습니다.
 
 ✔️ 수행 NuGet 패키지를 사용하여 라이브러리를 배포합니다.
 

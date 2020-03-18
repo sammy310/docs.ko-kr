@@ -3,12 +3,12 @@ title: 구문 분석 시작(Roslyn API)
 description: 구문 트리를 트래버스하고, 탐색하고, 쿼리하는 방법을 소개합니다.
 ms.date: 02/05/2018
 ms.custom: mvc
-ms.openlocfilehash: d4163e8aadf577a5a5cbed225b26a0ec8390277e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 22d1303c9daa2ae35cf130b0c857cd7a5efdbe76
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347008"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240521"
 ---
 # <a name="get-started-with-syntax-analysis"></a>구문 분석 시작
 
@@ -58,7 +58,7 @@ C# 코드 구조의 분석에 구문 API를 사용합니다. **구문 API**는 �
 
 퀴즈, 토큰 및 노드는 Visual Basic 또는 C# 코드의 일부에 있는 모든 항목을 완전치 나타내는 트리를 형성하기 위해 계층적으로 구성됩니다. **구문 시각화 도우미** 창을 사용하여 이 구조를 확인할 수 있습니다. Visual Studio에서 **보기** > **다른 창** > **구문 시각화 도우미**를 선택합니다. 예를 들어 **구문 시각화 도우미**를 사용하여 검사된 위의 C# 원본 파일은 다음 그림처럼 표시됩니다.
 
-**SyntaxNode**: Blue | **SyntaxToken**: Green | **SyntaxTrivia**: Red ![C# 코드 파일](media/walkthrough-csharp-syntax-figure1.png)
+**SyntaxNode**: 파랑 | **SyntaxToken**: 초록색 | **SyntaxTrivia**: 빨강 ![C# 코드 파일](media/walkthrough-csharp-syntax-figure1.png)
 
 이 트리 구조를 탐색하여 코드 파일에서 문, 식, 토큰 또는 공백을 찾을 수 있습니다.
 
@@ -84,35 +84,35 @@ C# 코드 구조의 분석에 구문 API를 사용합니다. **구문 API**는 �
 앞에 표시된 기본 "Hello World!" 프로그램을 분석하려고 합니다.
 Hello World 프로그램의 텍스트를 `Program` 클래스의 상수로 추가합니다.
 
-[!code-csharp[Declare the program text](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#1 "Declare a constant string for the program text to analyze")]
+[!code-csharp[Declare the program text](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#1 "Declare a constant string for the program text to analyze")]
 
-다음으로 `programText` 상수에서 코드 텍스트의 **구문 트리**를 빌드하는 다음 코드를 추가합니다.  `Main` 메서드에 다음 줄을 추가합니다.
+다음으로 **상수에서 코드 텍스트의**구문 트리`programText`를 빌드하는 다음 코드를 추가합니다.  `Main` 메서드에 다음 줄을 추가합니다.
 
-[!code-csharp[Create the tree](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#2 "Create the syntax tree")]
+[!code-csharp[Create the tree](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#2 "Create the syntax tree")]
 
 해당 두 줄은 트리를 만들고 해당 트리의 루트 노드를 검색합니다. 이제 트리에서 노드를 검사할 수 있습니다. 다음과 같은 줄을 `Main` 메서드에 추가하여 트리에서 루트 노드 속성 중 일부를 표시합니다.
 
-[!code-csharp[Examine the root node](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#3 "Examine the root node")]
+[!code-csharp[Examine the root node](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#3 "Examine the root node")]
 
 애플리케이션을 실행하여 코드가 이 트리에서 루트 노드에 대해 검색한 내용을 확인합니다.
 
 일반적으로 코드에 대해 자세히 알아보려면 트리를 탐색합니다. 이 예제에서는 API를 탐색하기 위해 알아야 하는 코드를 분석합니다. 다음 코드를 추가하여 `root` 노드의 첫 번째 멤버를 검사합니다.
 
-[!code-csharp[Find the first member](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#4 "Find the first member")]
+[!code-csharp[Find the first member](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#4 "Find the first member")]
 
 해당 멤버는 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NamespaceDeclarationSyntax?displayProperty=nameWithType>입니다. `namespace HelloWorld` 선언 범위에 있는 모든 항목을 나타냅니다. 다음 코드를 추가하여 노드가 `HelloWorld` 네임스페이스 내에서 선언된 내용을 검사합니다.
 
-[!code-csharp[Find the class declaration](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#5 "Find the class declaration")]
+[!code-csharp[Find the class declaration](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#5 "Find the class declaration")]
 
 배운 내용을 확인하기 위해 프로그램을 실행합니다.
 
 이제 선언이 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ClassDeclarationSyntax?displayProperty=nameWithType>임을 알았으므로 해당 형식의 새로운 변수를 선언하여 클래스 선언을 검사합니다. 이 클래스에는 `Main` 메서드라는 하나의 멤버만이 포함됩니다. 다음 코드를 추가하여 `Main` 메서드를 찾고 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax?displayProperty=nameWithType>로 캐스팅합니다.
 
-[!code-csharp[Find the main declaration](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#6 "Find the main declaration")]
+[!code-csharp[Find the main declaration](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#6 "Find the main declaration")]
 
 메서드 선언 노드에는 메서드에 대한 모든 구문 정보가 포함됩니다. `Main` 메서드의 반환 형식, 인수의 수와 형식 및 메서드의 본문 텍스트를 표시하겠습니다. 다음 코드를 추가합니다.
 
-[!code-csharp[Examine the syntax of the main method](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#7 "Display information about the main method")]
+[!code-csharp[Examine the syntax of the main method](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#7 "Display information about the main method")]
 
 프로그램을 실행하여 이 프로그램에 대해 알게 된 모든 정보를 확인합니다.
 
@@ -144,7 +144,7 @@ The body text of the Main method follows:
 
 이러한 쿼리 메서드를 사용하여 트리를 탐색하는 대신 `Main` 메서드에 대한 인수를 찾을 수 있습니다. `Main` 메서드의 맨 아래에 다음 코드를 추가합니다.
 
-[!code-csharp[Query the tree for the arguments to Main](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#8 "Query the tree for the arguments to Main")]
+[!code-csharp[Query the tree for the arguments to Main](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#8 "Query the tree for the arguments to Main")]
 
 첫 번째 문은 LINQ 식 및 <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A> 메서드를 사용하여 앞의 예제와 동일한 매개 변수를 찾습니다.
 
@@ -156,7 +156,7 @@ The body text of the Main method follows:
 
 구문 트리에서 특정 종류의 모든 노드를 찾을 수도 있습니다(예: 파일의 모든 속성 선언). <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker?displayProperty=nameWithType> 클래스를 확장하고 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitPropertyDeclaration(Microsoft.CodeAnalysis.CSharp.Syntax.PropertyDeclarationSyntax)> 메서드를 재정의하여 해당 구조를 미리 알지 못해도 구문 트리에서 모든 속성 선언을 처리할 수 있습니다. <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>는 노드와 해당 자식 항목을 재귀적으로 방문하는 특정 종류의 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor>입니다.
 
-이 예제에서는 구문 트리를 검사하는 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>를 구현합니다. `System` 네임스페이스를 가져오지 않는 `using` 지시문을 찾아 수집합니다.
+이 예제에서는 구문 트리를 검사하는 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>를 구현합니다. `using` 네임스페이스를 가져오지 않는 `System` 지시문을 찾아 수집합니다.
 
 새 C# **독립 실행형 코드 분석 도구** 프로젝트를 만들고 이름을 "**SyntaxWalker**"로 지정합니다.
 
@@ -164,33 +164,33 @@ The body text of the Main method follows:
 
 앞의 예제와 같이 분석하려는 프로그램의 텍스트를 포함하도록 문자열 상수를 정의할 수 있습니다.
 
-[!code-csharp[Define the code text to analyzer](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#1 "Define the program text to analyze")]
+[!code-csharp[Define the code text to analyzer](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#1 "Define the program text to analyze")]
 
-이 원본 텍스트에는 파일 수준, 최상위 네임스페이스 및 두 개의 중첩된 네임스페이스와 같은 네 가지 위치에 분산된 `using` 지시문이 포함됩니다. 이 예제에서는 코드를 쿼리하는 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> 클래스를 사용하는 핵심 시나리오를 강조 표시합니다. using 선언을 찾기 위해 루트 구문 트리에서 모든 노드를 방문하기는 번거롭습니다. 대신, 파생된 클래스를 만들고 트리의 현재 노드가 using 지시문인 경우에만 호출되는 메서드를 재정의합니다. 방문자는 다른 노드 형식에서 작업을 수행하지 않습니다. 이 단일 메서드는 각 `using` 문을 검사하고 `System` 네임스페이스에 위치하지 않는 네임스페이스의 컬렉션을 빌드합니다. 모든 `using` 문이 아닌 `using` 문을 검사하는 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>를 빌드합니다.
+이 원본 텍스트에는 파일 수준, 최상위 네임스페이스 및 두 개의 중첩된 네임스페이스와 같은 네 가지 위치에 분산된 `using` 지시문이 포함됩니다. 이 예제에서는 코드를 쿼리하는 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> 클래스를 사용하는 핵심 시나리오를 강조 표시합니다. using 선언을 찾기 위해 루트 구문 트리에서 모든 노드를 방문하기는 번거롭습니다. 대신, 파생된 클래스를 만들고 트리의 현재 노드가 using 지시문인 경우에만 호출되는 메서드를 재정의합니다. 방문자는 다른 노드 형식에서 작업을 수행하지 않습니다. 이 단일 메서드는 각 `using` 문을 검사하고 `System` 네임스페이스에 위치하지 않는 네임스페이스의 컬렉션을 빌드합니다. 모든 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> 문이 아닌 `using` 문을 검사하는 `using`를 빌드합니다.
 
 이제 프로그램 텍스트를 정의했으므로 `SyntaxTree`를 만들고 해당 트리의 루트를 가져와야 합니다.
 
-[!code-csharp[Create the Syntax tree and access the root](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#2 "Create the Syntax tree and access the root node.")]
+[!code-csharp[Create the Syntax tree and access the root](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#2 "Create the Syntax tree and access the root node.")]
 
 다음으로 새 클래스를 만듭니다. Visual Studio에서 **프로젝트** > **새 항목 추가**를 선택합니다. **새 항목 추가** 대화 상자에서 파일 이름으로 *UsingCollector.cs*를 입력합니다.
 
-`UsingCollector` 클래스에서 `using` 방문자 기능을 구현합니다. <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>에서 파생된 `UsingCollector` 클래스를 만들기 시작합니다.
+`using` 클래스에서 `UsingCollector` 방문자 기능을 구현합니다. `UsingCollector`에서 파생된 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> 클래스를 만들기 시작합니다.
 
-[!code-csharp[Declare the base class for the using collector](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#3 "Declare the base class for the UsingCollector")]
+[!code-csharp[Declare the base class for the using collector](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#3 "Declare the base class for the UsingCollector")]
 
 수집 중인 네임스페이스 노드를 포함하는 스토리지가 있어야 합니다.  `UsingCollector` 클래스에서 공용 읽기 전용 속성을 선언합니다. 이 변수를 사용하여 찾은 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax> 노드를 저장합니다.
 
-[!code-csharp[Declare storage for the using syntax nodes](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#4 "Declare storage for the using syntax nodes")]
+[!code-csharp[Declare storage for the using syntax nodes](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#4 "Declare storage for the using syntax nodes")]
 
 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> 기본 클래스는 구문 트리에서 각 노드를 방문하는 논리를 구현합니다. 파생된 클래스는 관심이 있는 특정 노드에 호출되는 메서드를 재정의합니다. 이 경우에 `using` 지시문을 사용합니다. 즉, <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitUsingDirective(Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax)> 메서드를 재정의해야 합니다. 이 메서드에 대한 인수는 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax?displayProperty=nameWithType> 개체입니다. 방문자를 사용하는 중요한 장점은 특정 노드 형식에 캐스팅된 인수를 사용하여 재정의된 메서드를 호출한다는 것입니다. <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax?displayProperty=nameWithType> 클래스에는 가져온 네임스페이스의 이름을 저장하는 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax.Name> 속성이 있습니다. <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType>입니다. <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitUsingDirective(Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax)> 재정의에서 다음 코드를 추가합니다.
 
-[!code-csharp[Examine using nodes for the System namespace](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#5 "Examine all using nodes for the System namespace.")]
+[!code-csharp[Examine using nodes for the System namespace](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#5 "Examine all using nodes for the System namespace.")]
 
 이전 예제에서 다양한 `WriteLine` 문을 추가하여 이 메서드를 이해할 수 있었습니다. 호출할 시기 및 이 때 전달된 인수를 확인할 수 있습니다.
 
 마지막으로 `UsingCollector`를 만들고 루트 노드를 방문하게 만드는 두 개의 코드 줄을 추가해야 합니다. 그러면 모든 `using` 문을 수집합니다. 그런 다음, `foreach` 루프를 추가하여 수집기에서 찾은 `using` 문을 모두 표시합니다.
 
-[!code-csharp[Create the UsingCollector and visit the root node.](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#6 "Create the UsingCollector and visit the root node.")]
+[!code-csharp[Create the UsingCollector and visit the root node.](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#6 "Create the UsingCollector and visit the root node.")]
 
 프로그램을 컴파일하고 실행합니다. 다음과 같은 내용이 출력됩니다.
 

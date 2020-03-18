@@ -4,10 +4,10 @@ description: .NET 기술 제품군을 시작합니다.
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
 ms.openlocfilehash: 20332f4dcc0664287873a27e0064a4765b1ecde7
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77124223"
 ---
 # <a name="welcome-to-net"></a>.NET 시작
@@ -20,7 +20,7 @@ ms.locfileid: "77124223"
 
 .NET에 대한 뉴스는 다음 블로그를 참조하세요.
 
-- [.NET 블로그](https://devblogs.microsoft.com/dotnet/)
+- [.NET Blog](https://devblogs.microsoft.com/dotnet/)
 - [ASP.NET 블로그](https://devblogs.microsoft.com/aspnet/)
 - [Visual Studio 블로그](https://devblogs.microsoft.com/visualstudio/)
 - [Visual Basic 팀](https://devblogs.microsoft.com/vbteam/)

@@ -3,10 +3,10 @@ title: C# 7.3의 새로운 기능
 description: C# 7.3의 새로운 기능에 대한 개요입니다.
 ms.date: 05/16/2018
 ms.openlocfilehash: ba4cea302d91b395e88940d087fcaed306920840
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74204554"
 ---
 # <a name="whats-new-in-c-73"></a>C# 7.3의 새로운 기능
@@ -56,7 +56,7 @@ unsafe struct S
 }
 ```
 
-이전 버전의 C#에서는 `myFixedField`의 일부인 정수 중 하나에 액세스하려면 변수를 고정해야 했습니다. 이제 다음 코드는 별도의 `fixed` 문 안에 `p` 변수를 고정하지 않고 컴파일됩니다.
+이전 버전의 C#에서는 `myFixedField`의 일부인 정수 중 하나에 액세스하려면 변수를 고정해야 했습니다. 이제 다음 코드는 별도의 `p` 문 안에 `fixed` 변수를 고정하지 않고 컴파일됩니다.
 
 ```csharp
 class C
@@ -70,7 +70,7 @@ class C
 }
 ```
 
-`p` 변수는 `myFixedField`의 한 요소에 액세스합니다. 별도의 `int*` 변수를 선언할 필요가 없습니다. `unsafe` 컨텍스트는 계속 필요합니다. 이전 버전의 C#에서는 두 번째 고정된 포인터를 선언해야 합니다.
+`p` 변수는 `myFixedField`의 한 요소에 액세스합니다. 별도의 `int*` 변수를 선언할 필요가 없습니다. 하지만 `unsafe` 컨텍스트는 계속 필요합니다. 이전 버전의 C#에서는 두 번째 고정된 포인터를 선언해야 합니다.
 
 ```csharp
 class C
@@ -121,7 +121,7 @@ Span<int> arr = stackalloc [] {1, 2, 3};
 
 ### <a name="more-types-support-the-fixed-statement"></a>더 많은 형식이 `fixed` 문을 지원함
 
-`fixed` 문은 제한된 형식 집합을 지원했습니다. C# 7.3부터 `ref T` 또는 `ref readonly T`를 반환하는 `GetPinnableReference()` 메서드를 포함하는 모든 형식이 `fixed`일 수 있습니다. 이 기능을 추가하면 `fixed`를 <xref:System.Span%601?displayProperty=nameWithType> 및 관련 형식과 함께 사용할 수 있습니다.
+`fixed` 문은 제한된 형식 집합을 지원했습니다. C# 7.3부터 `GetPinnableReference()` 또는 `ref T`를 반환하는 `ref readonly T` 메서드를 포함하는 모든 형식이 `fixed`일 수 있습니다. 이 기능을 추가하면 `fixed`를 <xref:System.Span%601?displayProperty=nameWithType> 및 관련 형식과 함께 사용할 수 있습니다.
 
 자세한 내용은 언어 참조에서 [`fixed` 문](../language-reference/keywords/fixed-statement.md) 문서를 참조하세요.
 
@@ -141,7 +141,7 @@ Span<int> arr = stackalloc [] {1, 2, 3};
 
 ### <a name="tuples-support--and-"></a>튜플은 `==` 및 `!=`를 지원합니다.
 
-C# 튜플 형식은 이제 `==` 및 `!=`를 지원합니다. 자세한 내용은 [튜플](../tuples.md)에 대한 문서에서 [같음](../tuples.md#equality-and-tuples)을 다루는 섹션을 참조하세요.
+C# 튜플 형식은 이제 `==` 및 `!=`를 지원합니다. 자세한 내용은 [튜플](../tuples.md#equality-and-tuples)에 대한 문서에서 [같음](../tuples.md)을 다루는 섹션을 참조하세요.
 
 ### <a name="attach-attributes-to-the-backing-fields-for-auto-implemented-properties"></a>자동 구현 속성의 지원 필드에 특성 연결
 

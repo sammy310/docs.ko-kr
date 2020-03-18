@@ -3,15 +3,15 @@ title: dotnet 설치 스크립트
 description: .NET Core SDK 및 공유 런타임을 설치하는 dotnet-install 스크립트에 대해 알아봅니다.
 ms.date: 01/23/2020
 ms.openlocfilehash: bf28f872be3ac2b4115b1d5e5c06e32afec0b49e
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77092865"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 스크립트 참조
 
-## <a name="name"></a>이름
+## <a name="name"></a>name
 
 `dotnet-install.ps1` | `dotnet-install.sh` - .NET Core SDK 및 공유 런타임을 설치하는 데 사용되는 스크립트입니다.
 
@@ -56,7 +56,7 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
 
 - **`-Channel|--channel <CHANNEL>`**
 
-  설치에 대한 소스 채널을 지정합니다. 가능한 값은 다음과 같습니다.
+  설치에 대한 소스 채널을 지정합니다. 사용 가능한 값은
 
   - `Current` - 최신 릴리스입니다.
   - `LTS` - 장기 지원 채널(지원되는 최신 릴리스)입니다.
@@ -67,11 +67,11 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
 
 - **`-Version|--version <VERSION>`**
 
-  특정 빌드 버전을 나타냅니다. 가능한 값은 다음과 같습니다.
+  특정 빌드 버전을 나타냅니다. 사용 가능한 값은
 
   - `latest` - 채널의 최신 빌드입니다(`-Channel` 옵션과 함께 사용됨).
   - `coherent` - 채널의 일관된 최신 빌드로, 안정적인 최신 패키지 조합을 사용합니다(분기 이름 `-Channel` 옵션과 함께 사용됨).
-  - 특정 빌드 버전을 나타내는 X.Y.Z 형식의 세 부분으로 구성된 버전이며 `-Channel` 옵션을 대체합니다. 예를 들어 `2.0.0-preview2-006120`을 참조하십시오.
+  - 특정 빌드 버전을 나타내는 X.Y.Z 형식의 세 부분으로 구성된 버전이며 `-Channel` 옵션을 대체합니다. 예: `2.0.0-preview2-006120`
 
   지정하지 않으면 `-Version`은 기본값인 `latest`로 설정됩니다.
 
@@ -96,7 +96,7 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
 
 - **`-Runtime|--runtime <RUNTIME>`**
 
-  전체 SDK가 아닌 공유 런타임만 설치합니다. 가능한 값은 다음과 같습니다.
+  전체 SDK가 아닌 공유 런타임만 설치합니다. 사용 가능한 값은
 
   - `dotnet` - `Microsoft.NETCore.App` 공유 런타임입니다.
   - `aspnetcore` - `Microsoft.AspNetCore.App` 공유 런타임입니다.
@@ -216,7 +216,7 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
   curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
   ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [.NET Core 릴리스](https://github.com/dotnet/core/releases)
 - [.NET Core 런타임 및 SDK 다운로드 아카이브](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)

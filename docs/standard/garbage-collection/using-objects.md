@@ -11,15 +11,15 @@ helpviewer_keywords:
 - garbage collection, encapsulating resources
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
 ms.openlocfilehash: c5232aa89064c514e71f3a18bc754159e9c9b15b
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160285"
 ---
 # <a name="using-objects-that-implement-idisposable"></a>IDisposable을 구현하는 개체 사용
 
-공용 언어 런타임의 가비지 수집기는 관리되는 개체에서 사용하는 메모리를 회수하지만, 관리되지 않는 리소스를 사용하는 유형에서는 관리되지 않는 이러한 리소스에 할당된 메모리를 회수할 수 있게 하는 <xref:System.IDisposable> 인터페이스를 구현합니다. <xref:System.IDisposable>을 구현하는 개체의 사용을 마치면 해당 개체의 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 구현을 호출해야 합니다. 이 작업은 다음 두 가지 방법 중 하나로 수행할 수 있습니다.  
+공용 언어 런타임의 가비지 수집기는 관리되는 개체에서 사용하는 메모리를 회수하지만, 관리되지 않는 리소스를 사용하는 유형에서는 관리되지 않는 이러한 리소스에 할당된 메모리를 회수할 수 있게 하는 <xref:System.IDisposable> 인터페이스를 구현합니다. <xref:System.IDisposable>을 구현하는 개체의 사용을 마치면 해당 개체의 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 구현을 호출해야 합니다. 이 작업은 다음 두 가지 방법 중 한 가지로 수행할 수 있습니다.  
   
 - C# `using` 문 또는 Visual Basic `Using` 문 사용  
   
@@ -45,9 +45,9 @@ C#의 `using` 문과 Visual Basic의 `Using` 문은 개체를 만들고 정리�
 
 ## <a name="tryfinally-block"></a>Try/finally 블록
 
-`using` 문에서 `try/finally` 블록을 래핑하는 대신 `try/finally` 블록을 직접 구현하도록 선택할 수 있습니다. 개인적인 코딩 스타일에 따라서 또는 다음 이유 중 하나로 인해 이를 수행할 수 있습니다.  
+`try/finally` 문에서 `using` 블록을 래핑하는 대신 `try/finally` 블록을 직접 구현하도록 선택할 수 있습니다. 개인적인 코딩 스타일에 따라서 또는 다음 이유 중 하나로 인해 이를 수행할 수 있습니다.  
   
-- `catch` 블록에서 throw된 모든 예외를 처리하기 위해 `try` 블록을 포함하려는 경우 그렇지 않으면, `using` 문에서 throw된 예외가 `try/catch` 블록이 없는 경우 `using` 블록 내에 throw되는 예외와 마찬가지로 처리됩니다.  
+- `catch` 블록에서 throw된 모든 예외를 처리하기 위해 `try` 블록을 포함하려는 경우 그렇지 않으면, `using` 문에서 throw된 예외가 `using` 블록이 없는 경우 `try/catch` 블록 내에 throw되는 예외와 마찬가지로 처리됩니다.  
   
 - 범위가 선언된 범위 내의 블록에 대해 로컬이 아닌 <xref:System.IDisposable>을 구현하는 개체를 인스턴스화하려는 경우  
   
@@ -56,9 +56,9 @@ C#의 `using` 문과 Visual Basic의 `Using` 문은 개체를 만들고 정리�
 [!code-csharp[Conceptual.Disposable#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/using5.cs#6)]
 [!code-vb[Conceptual.Disposable#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/using5.vb#6)]  
   
-프로그래밍 언어가 `using` 문을 지원하지 않지만, <xref:System.IDisposable.Dispose%2A> 메서드에 대한 직접 호출을 허용하므로 `try/finally` 블록을 구현하도록 선택하거나 구현해야 하는 경우 이 기본 패턴을 따를 수 있습니다.
+프로그래밍 언어가 `try/finally` 문을 지원하지 않지만, `using` 메서드에 대한 직접 호출을 허용하므로 <xref:System.IDisposable.Dispose%2A> 블록을 구현하도록 선택하거나 구현해야 하는 경우 이 기본 패턴을 따를 수 있습니다.
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [관리되지 않는 리소스 정리](../../../docs/standard/garbage-collection/unmanaged.md)
 - [using 문(C# 참조)](../../csharp/language-reference/keywords/using-statement.md)

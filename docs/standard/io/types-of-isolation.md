@@ -19,10 +19,10 @@ helpviewer_keywords:
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 ms.openlocfilehash: 99e1f3f96465d05c100a0dbb2bc5218810c33754
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159431"
 ---
 # <a name="types-of-isolation"></a>격리 유형
@@ -73,7 +73,7 @@ ms.locfileid: "78159431"
   
 <a name="UserDomainAssembly"></a>
 ## <a name="isolation-by-user-domain-and-assembly"></a>사용자, 도메인 및 어셈블리별 격리  
- 애플리케이션에서 개인 데이터 스토리지가 필요한 타사 어셈블리를 사용하는 경우 격리된 스토리지를 사용하여 개인 데이터를 저장할 수 있습니다. 사용자, 도메인 및 어셈블리별 격리를 사용하면 어셈블리가 저장소를 만들 때 실행 중이던 애플리케이션에서 어셈블리가 사용될 경우 및 저장소를 만든 사용자가 애플리케이션을 실행하는 경우에만 지정된 어셈블리의 코드만 해당 데이터에 액세스할 수 있습니다. 사용자, 도메인 및 어셈블리별 격리를 사용하면 타사 어셈블리에 의해 데이터가 다른 애플리케이션으로 누출되지 않습니다. 격리된 스토리지를 사용하려고 하지만 어떤 격리 유형을 사용할지 확신할 수 없는 경우에는 기본적으로 이 격리 유형을 선택해야 합니다. <xref:System.IO.IsolatedStorage.IsolatedStorageFile>의 정적 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> 메서드를 호출하고 사용자, 도메인 및 어셈블리로 전달하면 <xref:System.IO.IsolatedStorage.IsolatedStorageScope>는 이 유형의 격리를 통해 스토리지를 반환합니다.  
+ 애플리케이션에서 개인 데이터 스토리지가 필요한 타사 어셈블리를 사용하는 경우 격리된 스토리지를 사용하여 개인 데이터를 저장할 수 있습니다. 사용자, 도메인 및 어셈블리별 격리를 사용하면 어셈블리가 저장소를 만들 때 실행 중이던 애플리케이션에서 어셈블리가 사용될 경우 및 저장소를 만든 사용자가 애플리케이션을 실행하는 경우에만 지정된 어셈블리의 코드만 해당 데이터에 액세스할 수 있습니다. 사용자, 도메인 및 어셈블리별 격리를 사용하면 타사 어셈블리에 의해 데이터가 다른 애플리케이션으로 누출되지 않습니다. 격리된 스토리지를 사용하려고 하지만 어떤 격리 유형을 사용할지 확신할 수 없는 경우에는 기본적으로 이 격리 유형을 선택해야 합니다. <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A>의 정적 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 메서드를 호출하고 사용자, 도메인 및 어셈블리로 전달하면 <xref:System.IO.IsolatedStorage.IsolatedStorageScope>는 이 유형의 격리를 통해 스토리지를 반환합니다.  
   
  다음 코드 예제에서는 사용자, 도메인 및 어셈블리별로 격리되는 저장소를 검색합니다. `isoFile` 개체를 통해 저장소에 액세스할 수 있습니다.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "78159431"
  [!code-csharp[Conceptual.IsolatedStorage#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source9.cs#12)]
  [!code-vb[Conceptual.IsolatedStorage#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source9.vb#12)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageScope>
 - [격리된 스토리지](../../../docs/standard/io/isolated-storage.md)

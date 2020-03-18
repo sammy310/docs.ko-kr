@@ -4,12 +4,12 @@ description: dotnet test 및 MSTest를 사용하여 샘플 솔루션을 단계�
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.openlocfilehash: 1b21e961ffceb3fce2697ad3254e79ed258aaa1a
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: bd7891243d84277a7578089f8b4629ff5bada577
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157339"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240911"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>MSTest 및 .NET Core를 사용한 C# 유닛 테스트
 
@@ -90,7 +90,7 @@ GitHub의 [샘플 리포지토리](https://github.com/dotnet/samples/blob/master
         PrimeServiceTests.csproj
 ```
 
-*unit-testing-using-mstest* 디렉터리에서 [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md)를 실행합니다.
+[unit-testing-using-mstest`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj` 디렉터리에서 ](../tools/dotnet-sln.md)  를 실행합니다.
 
 ## <a name="create-the-first-test"></a>첫 번째 테스트 만들기
 
@@ -144,11 +144,11 @@ public bool IsPrime(int candidate)
 
 ## <a name="add-more-features"></a>더 많은 기능 추가
 
-이제 하나의 테스트를 통과했으므로 더 작성할 수 있습니다. 소수에 대한 몇 가지 다른 간단한 사례가 있습니다 (0, -1). 새 테스트를 [TestMethod 특성](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute)과 함께 추가할 수도 있지만, 이렇게 하면 금방 지루해질 수 있습니다. 비슷한 테스트 모음을 작성하는 데 사용할 수 있는 다른 MSTest 특성이 있습니다.  [DataTestMethod 특성](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataTestMethodAttribute)은 같은 코드를 실행하지만 다른 입력 인수가 있는 테스트 도구 모음을 나타냅니다. [DataRow 특성](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataRowAttribute)을 사용하여 그러한 입력의 값을 지정할 수 있습니다.
+이제 하나의 테스트를 통과했으므로 더 작성할 수 있습니다. 소수에 대한 몇 가지 다른 간단한 사례가 있습니다(0, -1). 새 테스트를 [TestMethod 특성](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute)과 함께 추가할 수도 있지만, 이렇게 하면 금방 지루해질 수 있습니다. 비슷한 테스트 모음을 작성하는 데 사용할 수 있는 다른 MSTest 특성이 있습니다.  [DataTestMethod 특성](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataTestMethodAttribute)은 같은 코드를 실행하지만 다른 입력 인수가 있는 테스트 도구 모음을 나타냅니다. [DataRow 특성](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataRowAttribute)을 사용하여 그러한 입력의 값을 지정할 수 있습니다.
 
 새 테스트를 만드는 대신 이러한 두 특성을 적용하여 단일 데이터 기반 테스트를 만듭니다. 이 데이터 기반 테스트는 가장 작은 소수인 2보다 작은 몇 가지 값을 테스트하는 메서드입니다.
 
-[!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
+[!code-csharp[Sample_TestCode](../../../samples/snippets/core/testing/unit-testing-using-mstest/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
 `dotnet test`를 실행합니다. 그러면 이러한 테스트 중 2개가 실패합니다. 모든 테스트가 통과하도록 하려면 메서드의 시작 부분에서 `if` 절을 변경합니다.
 
@@ -160,7 +160,7 @@ if (candidate < 2)
 
 작은 라이브러리 및 이 라이브러리에 대한 단위 테스트 집합을 작성했습니다. 새 패키지 및 테스트 추가가 정상 워크플로에 포함되도록 솔루션을 구조화했습니다. 애플리케이션의 목표를 해결하는 데 대부분의 시간과 노력을 들였습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting>
 - [단위 테스트에서 MSTest 프레임워크 사용](/visualstudio/test/using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests)

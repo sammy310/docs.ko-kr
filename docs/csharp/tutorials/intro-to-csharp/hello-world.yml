@@ -12,10 +12,10 @@ metadata:
   interactive: csharp
   ms.custom: mvc
   ms.openlocfilehash: 365cf0b2ef36dd0be624d022e3dea5e16a9eb58c
-  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/12/2019
+  ms.lasthandoff: 03/14/2020
   ms.locfileid: "73969417"
 items:
 - durationInMinutes: 1
@@ -158,7 +158,7 @@ items:
 
     > [!TIP]
 
-    > 이제 스스로 학습해 보세요. `Console.WriteLine()`으로 화면에 텍스트를 작성하는 방법을 학습했습니다. 변수를 선언하고 문자열을 함께 연결하는 방법을 학습했습니다. 대화형 창에서 연습하세요. 창에는 수행할 수 있는 작업에 대한 제안을 제공하는 **IntelliSense** 기능이 있습니다. `firstFriend`에서 `d` 뒤에 `.`를 입력합니다. 사용할 수 있는 속성 및 메서드에 대한 제안 목록이 표시됩니다.
+    > 이제 스스로 학습해 보세요. `Console.WriteLine()`으로 화면에 텍스트를 작성하는 방법을 학습했습니다. 변수를 선언하고 문자열을 함께 연결하는 방법을 학습했습니다. 대화형 창에서 연습하세요. 창에는 수행할 수 있는 작업에 대한 제안을 제공하는 **IntelliSense** 기능이 있습니다. `.`에서 `d` 뒤에 `firstFriend`를 입력합니다. 사용할 수 있는 속성 및 메서드에 대한 제안 목록이 표시됩니다.
 
 
     > [!NOTE]
@@ -167,7 +167,7 @@ items:
 - title: 더 많은 문자열 작업
   durationInMinutes: 5
   content: >
-    **메서드** <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>을 사용하여 메시지를 출력했습니다. **메서드**는 몇몇 작업을 구현하는 코드 블록입니다. 메서드에는 액세스할 수 있도록 이름이 있습니다.
+    **메서드**<xref:System.Console.WriteLine%2A?displayProperty=nameWithType>을 사용하여 메시지를 출력했습니다. **메서드**는 몇몇 작업을 구현하는 코드 블록입니다. 메서드에는 액세스할 수 있도록 이름이 있습니다.
 
 
     문자열에 표시하지 않으려는 선행 또는 후행 공백이 있다고 가정합니다. 문자열에서 공백을 **잘라내려고** 합니다.
@@ -202,7 +202,7 @@ items:
     이 샘플에서는 문자열 작업에 대한 몇 가지 중요한 개념을 자세히 설명합니다. 문자열을 조작하는 메서드는 수정하기보다는 새 문자열 개체를 반환합니다. `Trim` 메서드에 대한 각 호출은 새 문자열을 반환하지만 원래 메시지는 변경하지 않습니다.
 
 
-    문자열 작업에 사용할 수 있는 다른 메서드가 있습니다. 예를 들어 이전 편집기 또는 워드 프로세서에서 검색 및 바꾸기 명령을 사용했을 수 있습니다. <xref:System.String.Replace%2A> 메서드는 문자열에서와 유사하게 작동합니다. 하위 문자열을 검색하여 다른 텍스트로 바꿉니다. <xref:System.String.Replace%2A> 메서드는 두 **매개 변수**를 사용합니다. 괄호 사이의 문자열입니다. 첫 번째 문자열은 검색할 텍스트입니다. 두 번째 문자열은 바꿀 텍스트입니다. 직접 해보세요. 이 코드를 추가합니다. 코드를 입력하여 `sayHello` 변수 뒤에 `.Re` 입력을 시작할 때 힌트를 확인합니다.
+    문자열 작업에 사용할 수 있는 다른 메서드가 있습니다. 예를 들어 이전 편집기 또는 워드 프로세서에서 검색 및 바꾸기 명령을 사용했을 수 있습니다. <xref:System.String.Replace%2A> 메서드는 문자열에서와 유사하게 작동합니다. 하위 문자열을 검색하여 다른 텍스트로 바꿉니다. <xref:System.String.Replace%2A> 메서드는 두 **매개 변수**를 사용합니다. 괄호 사이의 문자열입니다. 첫 번째 문자열은 검색할 텍스트입니다. 두 번째 문자열은 바꿀 텍스트입니다. 직접 해보세요. 이 코드를 추가합니다. 코드를 입력하여 `.Re` 변수 뒤에 `sayHello` 입력을 시작할 때 힌트를 확인합니다.
 
 
     ```csharp
@@ -256,7 +256,7 @@ items:
     ***과제***
 
 
-    문자열 내 하위 문자열을 검색하는 두 개의 유사한 메서드 <xref:System.String.StartsWith%2A> 및 <xref:System.String.EndsWith%2A>가 있습니다. 이러한 메서드는 문자열의 시작 또는 끝 부분에 있는 하위 문자열을 찾습니다. 이전 샘플을 수정하여 <xref:System.String.Contains%2A> 대신 <xref:System.String.StartsWith%2A> 및 <xref:System.String.EndsWith%2A>를 사용해 보세요. 문자열의 시작 부분에서 “You” 또는 “goodbye”를 검색합니다. 문자열 끝 부분에서 “hello” 또는 “goodbye”를 검색합니다.
+    문자열 내 하위 문자열을 검색하는 두 개의 유사한 메서드 <xref:System.String.StartsWith%2A> 및 <xref:System.String.EndsWith%2A>가 있습니다. 이러한 메서드는 문자열의 시작 또는 끝 부분에 있는 하위 문자열을 찾습니다. 이전 샘플을 수정하여 <xref:System.String.StartsWith%2A> 대신 <xref:System.String.EndsWith%2A> 및 <xref:System.String.Contains%2A>를 사용해 보세요. 문자열의 시작 부분에서 “You” 또는 “goodbye”를 검색합니다. 문자열 끝 부분에서 “hello” 또는 “goodbye”를 검색합니다.
 
 
     > [!NOTE]
@@ -301,6 +301,6 @@ items:
 
     `string` 형식에서 추가 정보:
 
-    - [문자열](../../programming-guide/strings/index.md)에서 [C# 프로그래밍 가이드](../../programming-guide/index.md) 토픽.
+    - [문자열](../../programming-guide/index.md)에서 [C# 프로그래밍 가이드](../../programming-guide/strings/index.md) 토픽.
 
     - [문자열 작업에 대한 방법 팁](../../how-to/index.md#working-with-strings).
