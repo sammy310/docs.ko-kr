@@ -9,15 +9,15 @@ helpviewer_keywords:
 - synchronous client sockets
 - sockets, synchronous client sockets
 ms.assetid: 2c7d5be7-2221-467c-a839-5744ec4d576d
-ms.openlocfilehash: 70c4f26e3b4fc1c3dcb4c34e8858525b7f1660c3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d55d875546ff34bc38b13f792668cd00309c6e34
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047194"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180678"
 ---
-# <a name="synchronous-client-socket-example"></a><span data-ttu-id="c4791-102">동기 클라이언트 소켓 예제</span><span class="sxs-lookup"><span data-stu-id="c4791-102">Synchronous Client Socket Example</span></span>
-<span data-ttu-id="c4791-103">다음 예제 프로그램에서는 서버에 연결하는 클라이언트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="c4791-103">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="c4791-104">이 클라이언트는 동기 소켓으로 빌드되므로 서버에서 응답을 반환할 때까지 클라이언트 애플리케이션의 실행이 일시 중단됩니다.</span><span class="sxs-lookup"><span data-stu-id="c4791-104">The client is built with a synchronous socket, so execution of the client application is suspended until the server returns a response.</span></span> <span data-ttu-id="c4791-105">애플리케이션은 서버에 문자열을 보낸 다음 서버에서 반환된 문자열을 콘솔에 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="c4791-105">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  
+# <a name="synchronous-client-socket-example"></a><span data-ttu-id="bfc1e-102">동기 클라이언트 소켓 예제</span><span class="sxs-lookup"><span data-stu-id="bfc1e-102">Synchronous Client Socket Example</span></span>
+<span data-ttu-id="bfc1e-103">다음 예제 프로그램에서는 서버에 연결하는 클라이언트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="bfc1e-103">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="bfc1e-104">이 클라이언트는 동기 소켓으로 빌드되므로 서버에서 응답을 반환할 때까지 클라이언트 애플리케이션의 실행이 일시 중단됩니다.</span><span class="sxs-lookup"><span data-stu-id="bfc1e-104">The client is built with a synchronous socket, so execution of the client application is suspended until the server returns a response.</span></span> <span data-ttu-id="bfc1e-105">애플리케이션은 서버에 문자열을 보낸 다음 서버에서 반환된 문자열을 콘솔에 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="bfc1e-105">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  
   
 ```vb  
 Imports System  
@@ -90,7 +90,7 @@ public class SynchronousSocketClient {
             IPEndPoint remoteEP = new IPEndPoint(ipAddress,11000);  
   
             // Create a TCP/IP  socket.  
-            Socket sender = new Socket(ipAddress.AddressFamily,   
+            Socket sender = new Socket(ipAddress.AddressFamily,
                 SocketType.Stream, ProtocolType.Tcp );  
   
             // Connect the socket to the remote endpoint. Catch any errors.  
@@ -135,8 +135,8 @@ public class SynchronousSocketClient {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c4791-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c4791-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bfc1e-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="bfc1e-106">See also</span></span>
 
-- [<span data-ttu-id="c4791-107">동기 서버 소켓 예제</span><span class="sxs-lookup"><span data-stu-id="c4791-107">Synchronous Server Socket Example</span></span>](synchronous-server-socket-example.md)
-- [<span data-ttu-id="c4791-108">동기 클라이언트 소켓 사용</span><span class="sxs-lookup"><span data-stu-id="c4791-108">Using a Synchronous Client Socket</span></span>](using-a-synchronous-client-socket.md)
-- [<span data-ttu-id="c4791-109">소켓 코드 예제</span><span class="sxs-lookup"><span data-stu-id="c4791-109">Socket Code Examples</span></span>](socket-code-examples.md)
+- [<span data-ttu-id="bfc1e-107">동기 서버 소켓 예제</span><span class="sxs-lookup"><span data-stu-id="bfc1e-107">Synchronous Server Socket Example</span></span>](synchronous-server-socket-example.md)
+- [<span data-ttu-id="bfc1e-108">동기 클라이언트 소켓 사용</span><span class="sxs-lookup"><span data-stu-id="bfc1e-108">Using a Synchronous Client Socket</span></span>](using-a-synchronous-client-socket.md)
+- [<span data-ttu-id="bfc1e-109">소켓 코드 예제</span><span class="sxs-lookup"><span data-stu-id="bfc1e-109">Socket Code Examples</span></span>](socket-code-examples.md)

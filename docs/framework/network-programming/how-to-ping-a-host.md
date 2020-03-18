@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Ping
 ms.assetid: bbf20f5b-eca1-4661-af04-cb8837f9af05
-ms.openlocfilehash: c4efe358147c10ac31d42b83f6f4a65c274fe8dc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 09ae830bbef078b94bd28e654d93c10cde6108fd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624569"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180795"
 ---
-# <a name="how-to-ping-a-host"></a><span data-ttu-id="6cce1-102">방법: 호스트 Ping</span><span class="sxs-lookup"><span data-stu-id="6cce1-102">How to: Ping a Host</span></span>
-<span data-ttu-id="6cce1-103">이 샘플에서는 원격 호스트를 ping하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6cce1-103">This sample shows how to ping a remote host.</span></span>  
+# <a name="how-to-ping-a-host"></a><span data-ttu-id="04439-102">방법: 호스트 Ping</span><span class="sxs-lookup"><span data-stu-id="04439-102">How to: Ping a Host</span></span>
+<span data-ttu-id="04439-103">이 샘플에서는 원격 호스트를 ping하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="04439-103">This sample shows how to ping a remote host.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6cce1-104">예제</span><span class="sxs-lookup"><span data-stu-id="6cce1-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="04439-104">예제</span><span class="sxs-lookup"><span data-stu-id="04439-104">Example</span></span>  
   
 ```csharp
 using System;  
@@ -77,8 +77,8 @@ namespace Examples.System.Net.NetworkInformation.PingTest
             {  
                 Console.WriteLine ("Ping canceled.");  
   
-                // Let the main thread resume.   
-                // UserToken is the AutoResetEvent object that the main thread   
+                // Let the main thread resume.
+                // UserToken is the AutoResetEvent object that the main thread
                 // is waiting for.  
                 ((AutoResetEvent)e.UserState).Set ();  
             }  
@@ -89,7 +89,7 @@ namespace Examples.System.Net.NetworkInformation.PingTest
                 Console.WriteLine ("Ping failed:");  
                 Console.WriteLine (e.Error.ToString ());  
   
-                // Let the main thread resume.   
+                // Let the main thread resume.
                 ((AutoResetEvent)e.UserState).Set();  
             }  
   
@@ -120,7 +120,7 @@ namespace Examples.System.Net.NetworkInformation.PingTest
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="6cce1-105">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="6cce1-105">Compiling the Code</span></span>  
- <span data-ttu-id="6cce1-106">이 예제에는 다음 사항이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="6cce1-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="04439-105">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="04439-105">Compiling the Code</span></span>  
+ <span data-ttu-id="04439-106">이 예제에는 다음 사항이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="04439-106">This example requires:</span></span>  
   
-- <span data-ttu-id="6cce1-107">**System.Net** 네임스페이스에 대한 참조.</span><span class="sxs-lookup"><span data-stu-id="6cce1-107">References to the **System.Net** namespace.</span></span>
+- <span data-ttu-id="04439-107">**System.Net** 네임스페이스에 대한 참조.</span><span class="sxs-lookup"><span data-stu-id="04439-107">References to the **System.Net** namespace.</span></span>
