@@ -3,12 +3,12 @@ title: 컬렉션 작업 - C# 소개 자습서
 description: 이 자습서에서는 목록 컬렉션을 살펴보면서 C#에 대해 학습합니다.
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: b80225cf1614a7c25ac9011acd39e74032465ca3
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 25d20de2eae8ad1f544fa17553c173a6141ae464
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834144"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156691"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>일반 목록 형식을 사용하여 데이터 컬렉션을 관리하는 방법 알아보기
 
@@ -46,7 +46,7 @@ namespace list_tutorial
 
 문자열 목록을 만들고, 해당 목록에 3개의 이름을 추가하고, 이름을 모두 대문자로 출력했습니다. 이전 자습서에서 학습한 개념을 사용하여 목록을 반복합니다.
 
-이름을 표시하는 코드는 [문자열 보간](../../language-reference/tokens/interpolated.md) 기능을 사용합니다.  `string` 앞에 `$` 문자를 넣으면 문자열 선언에 C# 코드를 포함할 수 있습니다. 실제 문자열은 C# 코드를 생성하는 값으로 바꿉니다. 이 예제에서는 <xref:System.String.ToUpper%2A> 메서드를 호출했기 때문에 `{name.ToUpper()}`를 대문자로 변환된 각 이름으로 바꿉니다.
+이름을 표시하는 코드는 [문자열 보간](../../language-reference/tokens/interpolated.md) 기능을 사용합니다.  `string` 앞에 `$` 문자를 넣으면 문자열 선언에 C# 코드를 포함할 수 있습니다. 실제 문자열은 C# 코드를 생성하는 값으로 바꿉니다. 이 예제에서는 `{name.ToUpper()}` 메서드를 호출했기 때문에 <xref:System.String.ToUpper%2A>를 대문자로 변환된 각 이름으로 바꿉니다.
 
 계속해서 살펴보겠습니다.
 
@@ -54,7 +54,7 @@ namespace list_tutorial
 
 생성한 컬렉션은 <xref:System.Collections.Generic.List%601> 형식을 사용합니다. 이 형식은 요소의 시퀀스를 저장합니다. 꺾쇠 괄호 사이의 요소 형식을 지정합니다.
 
-이 <xref:System.Collections.Generic.List%601> 형식은 늘리거나 줄일 수 있어 요소를 추가하거나 제거할 수 있습니다. `Main` 메서드에서 `}`를 닫기 전에 이 코드를 추가합니다.
+이 <xref:System.Collections.Generic.List%601> 형식은 늘리거나 줄일 수 있어 요소를 추가하거나 제거할 수 있습니다. `}` 메서드에서 `Main`를 닫기 전에 이 코드를 추가합니다.
 
 ```csharp
 Console.WriteLine();
@@ -123,7 +123,7 @@ foreach (var name in names)
 
 파일을 저장하고 `dotnet run`을 입력하여 이 최신 버전을 사용해 보세요.
 
-다음 섹션을 시작하기 전에 현재 코드를 별도의 메서드로 이동합니다. 이렇게 하면 새 예제 작업을 쉽게 시작할 수 있습니다. `Main` 메서드의 이름을 `WorkingWithStrings`로 바꾸고 `WorkingWithStrings`를 호출하는 새 `Main` 메서드를 작성합니다. 작업을 마치면 코드가 다음과 같이 됩니다.
+다음 섹션을 시작하기 전에 현재 코드를 별도의 메서드로 이동합니다. 이렇게 하면 새 예제 작업을 쉽게 시작할 수 있습니다. `Main` 메서드의 이름을 `WorkingWithStrings`로 바꾸고 `Main`를 호출하는 새 `WorkingWithStrings` 메서드를 작성합니다. 작업을 마치면 코드가 다음과 같이 됩니다.
 
 ```csharp
 using System;
@@ -138,7 +138,7 @@ namespace list_tutorial
             WorkingWithStrings();
         }
 
-        public static void WorkingWithStrings()
+        static void WorkingWithStrings()
         {
             var names = new List<string> { "<name>", "Ana", "Felipe" };
             foreach (var name in names)
@@ -161,10 +161,25 @@ namespace list_tutorial
             Console.WriteLine($"The list has {names.Count} people in it");
 
             var index = names.IndexOf("Felipe");
-            Console.WriteLine($"The name {names[index]} is at index {index}");
+            if (index == -1)
+            {
+                Console.WriteLine($"When an item is not found, IndexOf returns {index}");
+            }
+            else
+            {
+                Console.WriteLine($"The name {names[index]} is at index {index}");
+            }
 
-            var notFound = names.IndexOf("Not Found");
-            Console.WriteLine($"When an item is not found, IndexOf returns {notFound}");
+            index = names.IndexOf("Not Found");
+            if (index == -1)
+            {
+                Console.WriteLine($"When an item is not found, IndexOf returns {index}");
+            }
+            else
+            {
+                Console.WriteLine($"The name {names[index]} is at index {index}");
+
+            }
 
             names.Sort();
             foreach (var name in names)
@@ -201,7 +216,7 @@ foreach (var item in fibonacciNumbers)
 파일을 저장하고 `dotnet run`을 입력하여 결과를 확인합니다.
 
 > [!TIP]
-> 이 섹션에만 집중하려면 `WorkingWithStrings();`를 호출하는 코드를 주석으로 처리할 수 있습니다. `// WorkingWithStrings();`처럼 호출 앞에 `/` 문자를 두 개 배치합니다.
+> 이 섹션에만 집중하려면 `WorkingWithStrings();`를 호출하는 코드를 주석으로 처리할 수 있습니다. `/`처럼 호출 앞에 `// WorkingWithStrings();` 문자를 두 개 배치합니다.
 
 ## <a name="challenge"></a>과제
 
@@ -215,4 +230,4 @@ foreach (var item in fibonacciNumbers)
 
 축하합니다. 목록 자습서를 완료했습니다. 자체 개발 환경에서 [클래스 소개](introduction-to-classes.md) 자습서를 계속할 수 있습니다.
 
-[.NET 가이드](../../../standard/index.md)의 [컬렉션](../../../standard/collections/index.md) 항목에서 `List` 형식에 대해 더 자세히 학습할 수 있습니다. 다른 많은 컬렉션 형식에 대해서도 학습합니다.
+`List`.NET 가이드[의 ](../../../standard/index.md)컬렉션[ 항목에서 ](../../../standard/collections/index.md) 형식에 대해 더 자세히 학습할 수 있습니다. 다른 많은 컬렉션 형식에 대해서도 학습합니다.

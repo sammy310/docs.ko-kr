@@ -4,16 +4,16 @@ description: 이 고급 자습서에서는 nullable 참조 형식으로 기존 �
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: 4edeab7b2a4211d50c424f567ad7df6ced0bf4ce
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 9767493059623e770cc100b83b9284e8d0bdf0f8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093307"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156456"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>자습서: nullable 참조 형식이 있는 기존 코드 마이그레이션
 
-C# 8에서는 nullable 값 형식이 값 형식을 보완하는 것과 동일한 방식으로 참조 형식을 보완하는 **nullable 참조 형식**이 도입되었습니다. 형식에 `?`를 추가하여 변수를 **nullable 참조 형식**으로 선언합니다. 예를 들어 `string?`는 nullable `string`을 나타냅니다. 이러한 새 형식을 사용하여 디자인 의도를 보다 명확하게 표현할 수 있습니다. ‘항상 값이 있어야 하는’ 변수도 있고, ‘값이 누락될 수 있는’ 변수도 있습니다.   참조 형식을 갖는 기존 변수는 모두 nullable이 아닌 참조 형식으로 해석됩니다. 
+C# 8에서는 nullable 값 형식이 값 형식을 보완하는 것과 동일한 방식으로 참조 형식을 보완하는 **nullable 참조 형식**이 도입되었습니다. 형식에 `?`를 추가하여 변수를 **nullable 참조 형식**으로 선언합니다. 예를 들어 `string?`는 nullable `string`을 나타냅니다. 이러한 새 형식을 사용하여 디자인 의도를 보다 명확하게 표현할 수 있습니다. ‘항상 값이 있어야 하는’ 변수도 있고, ‘값이 누락될 수 있는’ 변수도 있습니다.   참조 형식을 갖는 기존 변수는 모두 nullable이 아닌 참조 형식으로 해석됩니다.
 
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 알아봅니다.
 
@@ -77,11 +77,11 @@ public class NewsStoryViewModel
 
 `NewsStoryViewModel` 클래스는 DTO(데이터 전송 개체)로, 2개의 속성이 읽기/쓰기 문자열입니다.
 
-[!code-csharp[InitialViewModel](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/ViewModels/NewsStoryViewModel.cs#StarterViewModel)]
+[!code-csharp[InitialViewModel](~/samples/snippets/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/ViewModels/NewsStoryViewModel.cs#StarterViewModel)]
 
 이 2개의 속성 때문에 `CS8618`, “Non-nullable property is uninitialized”(nullable이 아닌 속성이 초기화되지 않았습니다.)가 발생합니다. 2개의 `string` 속성 모두 `NewsStoryViewModel`이 생성될 때 기본값이 `null`이므로 원인을 쉽게 파악할 수 있습니다. 이때 중요한 것은 `NewsStoryViewModel` 개체가 어떻게 생성되는지 알아내는 것입니다. 클래스를 살펴봐도 `null` 값이 설계의 일부인지 아니면 이러한 개체가 생성될 때마다 해당 개체가 null이 아닌 값으로 설정되는 것인지 파악하기가 어렵습니다. 뉴스 기사는 `NewsService` 클래스의 `GetNews` 메서드에서 생성됩니다.
 
-[!code-csharp[StarterCreateNewsItem](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#CreateNewsItem)]
+[!code-csharp[StarterCreateNewsItem](~/samples/snippets/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#CreateNewsItem)]
 
 위 코드 블록에서는 몇 가지 작업이 진행되고 있습니다. 이 애플리케이션은 [AutoMapper](https://automapper.org/) NuGet 패키지를 사용하여 `ISyndicationItem`으로부터 뉴스 항목을 생성합니다. 이 하나의 문에서 뉴스 기사 항목이 생성되고 속성이 설정된다는 사실을 파악했습니다. 따라서 `NewsStoryViewModel`의 설계 의도는 이러한 속성이 `null` 값을 갖지 않도록 하는 것임을 알 수 있습니다. 이러한 속성은 **nullable이 아닌 참조 형식**이 되어야 합니다. 이렇게 해야 원래 설계 의도가 가장 잘 표현됩니다. 실제로 모든 `NewsStoryViewModel`이 null이 아닌 값으로 올바르게 *인스턴스화되었습니다*. 그렇다면 다음과 같은 초기화 코드가 유효한 수정이 될 수 있습니다.
 
@@ -96,27 +96,27 @@ public class NewsStoryViewModel
 
 `Title`과 `Uri`에 `default`(`string` 형식의 경우 `null`)를 할당해도 프로그램의 런타임 동작이 변경되지 않습니다. `NewsStoryViewModel`은 전과 동일하게 null 값으로 생성되지만, 이제 컴파일러가 경고를 보고하지 않습니다. `default` 식 뒤에 **null 허용 연산자**인 `!` 문자가 오기 때문에 컴파일러는 선행 식이 null이 아님을 알 수 있습니다. 이 방법은 다른 변경 사항을 수행하는 경우 코드 베이스에 훨씬 더 많은 변경이 적용될 때는 유용하게 사용할 수 있지만, 이 애플리케이션에서는 보다 빠르고 효과적인 솔루션이 있습니다. 바로 `NewsStoryViewModel`을 모든 속성이 생성자에서 설정되는, 변경이 불가능한 형식으로 만드는 것입니다. `NewsStoryViewModel`에 다음 변경 내용을 적용합니다.
 
-[!code-csharp[FinishedViewModel](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/ViewModels/NewsStoryViewModel.cs#FinishedViewModel)]
+[!code-csharp[FinishedViewModel](~/samples/snippets/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/ViewModels/NewsStoryViewModel.cs#FinishedViewModel)]
 
 그런 다음, AutoMapper를 구성하는 코드가 속성을 설정하는 대신 생성자를 사용하도록 수정해야 합니다. `NewsService.cs`를 열고 파일 하단에서 다음 코드를 찾습니다.
 
-[!code-csharp[StarterAutoMapper](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#ConfigureAutoMapper)]
+[!code-csharp[StarterAutoMapper](~/samples/snippets/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#ConfigureAutoMapper)]
 
 이 코드는 `ISyndicationItem` 개체의 속성을 `NewsStoryViewModel` 속성에 매핑합니다. AutoMapper가 대신 생성자를 사용하여 매핑을 수행하도록 수정해야 합니다. 위 코드를 다음 automapper 구성으로 바꿉니다.
 
-[!code-csharp[FinishedViewModel](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Services/NewsService.cs#ConfigureAutoMapper)]
+[!code-csharp[FinishedViewModel](~/samples/snippets/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Services/NewsService.cs#ConfigureAutoMapper)]
 
 이 클래스는 규모가 작고 신중히 검사했기 때문에 이 클래스 선언 위에서 `#nullable enable` 지시문을 켜야 합니다. 생성자를 변경한 결과 무언가 잘못되었을 수 있으므로 계속 진행하기 전에 먼저 모든 테스트를 실행하여 애플리케이션을 테스트하는 것이 좋습니다.
 
-지금까지의 작업을 통해 원래 설계 의도가 변수를 `null`로 설정하지 않는 것인지 확인하는 방법을 알아보았습니다. 이 방법을 **correct by construction**(생성에 의한 올바름)이라고 부릅니다. 개체와 개체의 속성을 생성할 때 이것이 `null`이 될 수 없다고 선언하는 것입니다. 컴파일러는 해당 속성이 생성 후에 `null`로 설정되지 않도록 흐름 분석을 수행합니다. 이 생성자는 외부 코드에 의해 호출되는 것을 볼 수 있는데, 이 코드는 **nullable 감지 불가**입니다. 새로운 구문에서는 런타임 검사를 제공하지 않습니다. 따라서 외부 코드가 컴파일러의 흐름 분석을 피해갈 수 있습니다. 
+지금까지의 작업을 통해 원래 설계 의도가 변수를 `null`로 설정하지 않는 것인지 확인하는 방법을 알아보았습니다. 이 방법을 **correct by construction**(생성에 의한 올바름)이라고 부릅니다. 개체와 개체의 속성을 생성할 때 이것이 `null`이 될 수 없다고 선언하는 것입니다. 컴파일러는 해당 속성이 생성 후에 `null`로 설정되지 않도록 흐름 분석을 수행합니다. 이 생성자는 외부 코드에 의해 호출되는 것을 볼 수 있는데, 이 코드는 **nullable 감지 불가**입니다. 새로운 구문에서는 런타임 검사를 제공하지 않습니다. 따라서 외부 코드가 컴파일러의 흐름 분석을 피해갈 수 있습니다.
 
 클래스의 구조가 설계 의도에 대한 또 다른 힌트를 주는 경우도 있습니다. *Pages* 폴더에서 *Error.cshtml.cs* 파일을 엽니다. `ErrorViewModel`에 다음 코드가 포함되어 있습니다.
 
-[!code-csharp[StarterErrorModel](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Pages/Error.cshtml.cs#StartErrorModel)]
+[!code-csharp[StarterErrorModel](~/samples/snippets/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Pages/Error.cshtml.cs#StartErrorModel)]
 
 클래스 선언 앞에 `#nullable enable` 지시문을 추가하고, 클래스 선언 뒤에 `#nullable restore` 지시문을 추가합니다. `RequestId`가 초기화되지 않았다는 경고가 표시됩니다. 클래스를 살펴보니 `RequestId` 속성은 경우에 따라 null이 되어야 한다는 사실을 알 수 있습니다. `ShowRequestId` 속성이 존재한다는 사실이 누락된 값이 있을 수 있음을 나타냅니다. `null`이 유효하므로 `string` 형식에 `?`을 추가하여 `RequestId` 속성이 ‘nullable 참조 형식’임을 나타냅니다.  다음은 완성된 클래스입니다.
 
-[!code-csharp[FinishedErrorModel](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Error.cshtml.cs#ErrorModel)]
+[!code-csharp[FinishedErrorModel](~/samples/snippets/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Error.cshtml.cs#ErrorModel)]
 
 속성이 사용되는 방식을 살펴보면 표시에서 속성이 렌더링되기 전에 연결된 페이지에서 속성이 null인지 검사되는 것을 알 수 있습니다. 이처럼 nullable 참조 형식이 안전하게 사용되고 있으므로 이 클래스는 완성되었습니다.
 
@@ -124,27 +124,27 @@ public class NewsStoryViewModel
 
 하나의 경고 세트를 수정하면 관련 코드에서 새로운 경고가 생성되는 경우가 있습니다. `index.cshtml.cs` 클래스를 수정하여 실제로 경고를 살펴보겠습니다. `index.cshtml.cs` 파일을 열고 코드를 살펴봅니다. 이 파일에는 인덱스 페이지를 구동하는 코드가 포함되어 있습니다.
 
-[!code-csharp[StarterIndexModel](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Pages/Index.cshtml.cs#IndexModelStart)]
+[!code-csharp[StarterIndexModel](~/samples/snippets/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Pages/Index.cshtml.cs#IndexModelStart)]
 
 `#nullable enable` 지시문을 추가하면 `ErrorText` 속성과 `NewsItems` 속성이 초기화되지 않았다는 2개의 경고를 볼 수 있습니다. 이 클래스를 살펴보면 두 속성 모두 nullable 참조 형식이 되어야 한다는 사실을 알 수 있습니다. 두 속성 모두 private setter를 갖고 있기 때문입니다. `OnGet` 메서드에서 정확히 1개가 할당되어 있습니다. 변경을 수행하기 전에 두 속성을 사용하는 주체를 찾아보겠습니다. 페이지에서 오류 표시가 생성되기 전에 `ErrorText`가 null에 대해 검사됩니다. `NewsItems` 컬렉션이 `null`에 대해 검사되고, 컬렉션에 항목이 있는지도 검사됩니다. 두 속성을 모두 nullable 참조 형식으로 만들어서 빠르게 수정할 수도 있지만, 이보다 나은 방법은 컬렉션을 nullable이 아닌 참조 형식으로 만들고, 뉴스를 가져올 때 기존 컬렉션에 항목을 추가하는 것입니다. 먼저 `ErrorText`의 `string` 형식에 `?`를 추가합니다.
 
-[!code-csharp[UpdateErrorText](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Index.cshtml.cs#UpdateErrorText)]
+[!code-csharp[UpdateErrorText](~/samples/snippets/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Index.cshtml.cs#UpdateErrorText)]
 
 이 `ErrorText` 속성에 대한 모든 액세스가 이미 null 검사에 의해 보호되었으므로 이 변경 사항은 다른 코드로 전파되지 않습니다. 다음으로 `NewsItems` 목록을 초기화하고 속성 setter를 제거하여 읽기 전용 속성으로 만듭니다.
 
-[!code-csharp[InitializeNewsItems](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Index.cshtml.cs#InitializeNewsItems)]
+[!code-csharp[InitializeNewsItems](~/samples/snippets/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Index.cshtml.cs#InitializeNewsItems)]
 
 이렇게 하면 경고는 해결되지만 오류가 발생합니다. `NewsItems` 목록은 이제 **correct by construction**(생성에 의한 올바름)이지만, `OnGet`에서 목록을 설정하는 코드가 새 API에 대응되도록 변경해야 합니다. 할당을 사용하는 대신 `AddRange`를 호출하여 기존 목록에 뉴스 항목을 추가합니다.
 
-[!code-csharp[AddRange](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Index.cshtml.cs#AddRange)]
+[!code-csharp[AddRange](~/samples/snippets/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Index.cshtml.cs#AddRange)]
 
 할당 대신 `AddRange`를 사용한다는 것은 `GetNews` 메서드가 `List` 대신 `IEnumerable`을 반환할 수 있음을 의미합니다. 이렇게 하면 할당이 하나 절약됩니다. 다음 코드 샘플과 같이 메서드의 시그니처를 변경하고 `ToList` 호출을 제거합니다.
 
-[!code-csharp[GetNews](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Services/NewsService.cs#GetNewsFinished)]
+[!code-csharp[GetNews](~/samples/snippets/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Services/NewsService.cs#GetNewsFinished)]
 
 시그니처를 변경하면 테스트 중 하나도 중단됩니다. `SimpleFeedReader.Tests` 프로젝트의 `Services` 폴더에서 `NewsServiceTests.cs` 파일을 엽니다. `Returns_News_Stories_Given_Valid_Uri` 테스트로 이동하고 `result` 변수의 형식을 `IEnumerable<NewsItem>`으로 변경합니다. 형식을 변경한다는 것은 `Count` 속성을 더 이상 사용할 수 없음을 의미하므로, `Assert`의 `Count` 속성을 `Any()` 호출로 변경합니다.
 
-[!code-csharp[FixTests](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader.Tests/Services/NewsServiceTests.cs#FixTestSignature)]
+[!code-csharp[FixTests](~/samples/snippets/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader.Tests/Services/NewsServiceTests.cs#FixTestSignature)]
 
 파일의 시작 부분에 `using System.Linq` 문도 추가해야 합니다.
 
@@ -159,7 +159,7 @@ public class NewsStoryViewModel
 
 지금까지 `NewsService` 클래스를 변경했습니다. 이번에는 이 클래스에서 `#nullable enable` 주석을 켭니다. 이렇게 해도 새로운 경고가 생성되지 않습니다. 그렇지만 클래스를 주의 깊게 살펴보면 컴파일러의 흐름 분석에 어떤 제한이 있는지 알 수 있습니다. 생성자를 살펴봅니다.
 
-[!code-csharp[ServiceConstructor](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Services/NewsService.cs#ServiceConstructor)]
+[!code-csharp[ServiceConstructor](~/samples/snippets/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Services/NewsService.cs#ServiceConstructor)]
 
 `IMapper` 매개 변수는 nullable이 아닌 참조 형식입니다. ASP.NET Core 인프라 코드에 의해 호출되므로, 컴파일러는 `IMapper`가 null이 될 수 없다는 것을 알지 못합니다. 기본적인 ASP.NET Core DI(종속성 주입) 컨테이너는 필수 서비스를 확인할 수 없는 경우 예외를 throw하므로 이 코드는 올바릅니다. nullable 주석 컨텍스트를 활성화한 상태로 코드를 컴파일하더라도 컴파일러는 모든 공용 API 호출의 유효성을 검사할 수 없습니다. 또한, nullable 참조 형식을 사용하도록 설정되지 않은 프로젝트에 의해 라이브러리가 과도하게 사용될 수 있습니다. nullable이 아닌 형식으로 선언한 경우에도 공용 API의 입력은 유효성을 검사해야 합니다.
 

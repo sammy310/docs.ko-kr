@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 82103d82a6f68c62f3532608718bc71b0ba126bf
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901581"
 ---
 ### <a name="hosting-aspnetcoremodule-v1-removed-from-windows-hosting-bundle"></a>호스팅: Windows Hosting Bundle에서 AspNetCoreModule V1이 제거됨

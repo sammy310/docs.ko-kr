@@ -6,10 +6,10 @@ ms.date: 06/20/2016
 ms.technology: csharp-async
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.openlocfilehash: 38d7c856e9a536db9ef26349175ad440a49f5fe2
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713946"
 ---
 # <a name="asynchronous-programming"></a>비동기 프로그래밍
@@ -22,9 +22,9 @@ C#에는 콜백을 조작하거나 비동기를 지원하는 라이브러리를 
 
 비동기 프로그래밍의 핵심은 비동기 작업을 모델링하는 `Task` 및 `Task<T>` 개체입니다.  이러한 개체는 `async` 및 `await` 키워드를 통해 지원됩니다.  대부분의 경우 모델은 매우 간단합니다.
 
-I/O 바인딩된 코드에서는 `async` 메서드의 내부에 `Task` 또는 `Task<T>`를 `await`합니다.
+I/O 바인딩된 코드에서는 `await` 메서드의 내부에 `Task` 또는 `Task<T>`를 `async`합니다.
 
-CPU 바인딩된 코드에서는 `Task.Run` 메서드와 함께 백그라운드 스레드에서 시작되는 작업을 `await`합니다.
+CPU 바인딩된 코드에서는 `await` 메서드와 함께 백그라운드 스레드에서 시작되는 작업을 `Task.Run`합니다.
 
 `await` 키워드가 마법이 일어나는 곳입니다. `await`를 수행한 메서드의 호출자에게 제어를 넘기고, 궁극적으로 UI가 응답하거나 서비스가 탄력적일 수 있도록 합니다.
 
@@ -74,7 +74,7 @@ calculateButton.Clicked += async (o, e) =>
 };
 ```
 
-됐습니다!  이 코드는 단추 클릭 이벤트의 의도를 표현하고, 백그라운드 스레드를 수동으로 관리할 필요가 없고, 비차단 방식으로 작업을 수행합니다.
+이것으로 끝입니다!  이 코드는 단추 클릭 이벤트의 의도를 표현하고, 백그라운드 스레드를 수동으로 관리할 필요가 없고, 비차단 방식으로 작업을 수행합니다.
 
 ### <a name="what-happens-under-the-covers"></a>백그라운드에서 수행되는 작업
 
@@ -106,9 +106,9 @@ C#에서는 컴파일러가 해당 코드를, `await`에 도달할 때 실행을
 
     대답이 "예"이면 **CPU 바인딩된** 작업입니다.
 
-**I/O 바인딩된** 작업이 있을 경우 `Task.Run` *없이* `async` 및 `await`를 사용합니다.  작업 병렬 라이브러리를 사용*하면 안 됩니다*.  그 이유는 [세부 비동기 문서](../standard/async-in-depth.md)에서 간단히 설명합니다.
+**I/O 바인딩된** 작업이 있을 경우 `async` `await`없이   및 `Task.Run`를 사용합니다.  작업 병렬 라이브러리를 사용*하면 안 됩니다*.  그 이유는 [세부 비동기 문서](../standard/async-in-depth.md)에서 간단히 설명합니다.
 
-**CPU 바인딩된** 작업이 있고 빠른 응답이 필요할 경우 `async` 및 `await`를 사용하지만 `Task.Run`을 *사용*하여 또 다른 스레드에서 작업을 생성합니다.  작업이 동시성 및 병렬 처리에 해당할 경우 [작업 병렬 라이브러리](../standard/parallel-programming/task-parallel-library-tpl.md)를 사용하는 것이 좋습니다.
+**CPU 바인딩된** 작업이 있고 빠른 응답이 필요할 경우 `async` 및 `await`를 사용하지만 *을* 사용`Task.Run`하여 또 다른 스레드에서 작업을 생성합니다.  작업이 동시성 및 병렬 처리에 해당할 경우 [작업 병렬 라이브러리](../standard/parallel-programming/task-parallel-library-tpl.md)를 사용하는 것이 좋습니다.
 
 또한 항상 코드 실행을 측정해야 합니다.  예를 들어 CPU 바인딩된 작업이 다중 스레딩 시 컨텍스트 전환의 오버헤드에 비해 부담이 크지 않은 상황이 될 수 있습니다.  모든 선택에는 절충점이 있습니다. 상황에 맞는 올바른 절충점을 선택해야 합니다.
 
@@ -170,7 +170,7 @@ private async void SeeTheDotNets_Click(object sender, RoutedEventArgs e)
 
 동시에 데이터의 여러 부분을 검색해야 하는 상황이 될 수 있습니다.  `Task` API에는 여러 백그라운드 작업에서 비차단 대기를 수행하는 비동기 코드를 작성할 수 있는 `Task.WhenAll` 및 `Task.WhenAny` 메서드가 포함됩니다.
 
-이 예제에서는 `userId` 집합에 대한 `User` 데이터를 확인하는 방법을 보여 줍니다.
+이 예제에서는 `User` 집합에 대한 `userId` 데이터를 확인하는 방법을 보여 줍니다.
 
 ```csharp
 public async Task<User> GetUserAsync(int userId)
@@ -212,7 +212,7 @@ public static async Task<User[]> GetUsersAsync(IEnumerable<int> userIds)
 }
 ```
 
-코드 양은 더 적지만 LINQ를 비동기 코드와 혼합할 경우 주의하세요.  LINQ는 연기된(지연) 실행을 사용하므로, `.ToList()` 또는 `.ToArray()` 호출을 반복하도록 생성된 시퀀스를 적용해야 비동기 호출이 `foreach()` 루프에서 수행되면 즉시 비동기 호출이 발생합니다.
+코드 양은 더 적지만 LINQ를 비동기 코드와 혼합할 경우 주의하세요.  LINQ는 연기된(지연) 실행을 사용하므로, `foreach()` 또는 `.ToList()` 호출을 반복하도록 생성된 시퀀스를 적용해야 비동기 호출이 `.ToArray()` 루프에서 수행되면 즉시 비동기 호출이 발생합니다.
 
 ## <a name="important-info-and-advice"></a>중요한 정보 및 조언
 
@@ -228,7 +228,7 @@ public static async Task<User[]> GetUsersAsync(IEnumerable<int> userIds)
 
 * `async void`는 **이벤트 처리기에만 사용해야 합니다.**
 
-이벤트에는 반환 형식이 없어서 `Task` 및 `Task<T>`를 사용할 수 없으므로 비동기 이벤트 처리기가 작동하도록 허용하는 유일한 방법은 `async void`입니다. `async void`의 다른 사용은 TAP 모델을 따르지 않고 다음과 같이 사용이 어려울 수 있습니다.
+이벤트에는 반환 형식이 없어서 `async void` 및 `Task`를 사용할 수 없으므로 비동기 이벤트 처리기가 작동하도록 허용하는 유일한 방법은 `Task<T>`입니다. `async void`의 다른 사용은 TAP 모델을 따르지 않고 다음과 같이 사용이 어려울 수 있습니다.
 
 * `async void` 메서드에서 throw된 예외는 해당 메서드 외부에서 catch될 수 없습니다.
 * `async void` 메서드는 테스트하기 매우 어렵습니다.
@@ -262,7 +262,7 @@ LINQ의 람다 식은 연기된 실행을 사용합니다. 즉, 예상치 않은
 
 권장되는 목적은 코드에서 완전하거나 거의 완전한 [참조 투명성](https://en.wikipedia.org/wiki/Referential_transparency_%28computer_science%29)을 달성하는 것입니다. 이렇게 하면 확실히 예측 가능하고, 테스트 가능하고, 유지 관리 가능한 코드베이스가 생성됩니다.
 
-## <a name="other-resources"></a>기타 리소스
+## <a name="other-resources"></a>관련 자료
 
 * [세부 비동기](../standard/async-in-depth.md)에서는 작업이 어떻게 작동하는지 자세히 설명합니다.
 * [async 및 await를 사용한 비동기 프로그래밍(C#)](./programming-guide/concepts/async/index.md)
