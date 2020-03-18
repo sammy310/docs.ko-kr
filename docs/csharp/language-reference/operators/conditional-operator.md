@@ -1,6 +1,6 @@
 ---
 title: '?: 연산자 - C# 참조'
-ms.date: 11/20/2018
+ms.date: 03/06/2020
 f1_keywords:
 - ?:_CSharpKeyword
 - ?_CSharpKeyword
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 60156585dd21d5d2f9c9f3916452bb8574ddd4e4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1a17ba092d4228ba909c8774a2f7e15c2c50cfdc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712730"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398216"
 ---
 # <a name="-operator-c-reference"></a>?: 연산자(C# 참조)
 
-3개로 구성된 조건부 연산자라고도 하는 조건부 연산자 `?:`은 부울 식을 계산하고 부울 식이 `true` 또는 `false`으로 계산되는지에 따라 두 식 중 하나의 계산 결과를 반환합니다. C# 7.2부터 [조건부 ref 식](#conditional-ref-expression)은 두 식 중 하나의 결과에 대한 참조를 반환합니다.
+3개로 구성된 조건부 연산자라고도 하는 조건부 연산자 `?:`은 부울 식을 계산하고 부울 식이 `true` 또는 `false`으로 계산되는지에 따라 두 식 중 하나의 계산 결과를 반환합니다.
 
 조건 연산자의 구문은 다음과 같습니다.
 
@@ -51,11 +51,11 @@ a ? b : (c ? d : e)
 
 다음 예제에서는 조건부 연산자의 사용법을 보여 줍니다.
 
-[!code-csharp-interactive[non ref conditional](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#ConditionalValue)]
+[!code-csharp-interactive[non ref conditional](snippets/ConditionalOperator.cs#ConditionalValue)]
 
 ## <a name="conditional-ref-expression"></a>조건부 ref 식
 
-C# 7.2부터 조건부 ref 식을 사용하여 두 식 중 하나의 결과에 대한 참조를 반환할 수 있습니다. [ref 지역](../keywords/ref.md#ref-locals) 또는 [ref readonly 지역](../keywords/ref.md#ref-readonly-locals) 변수에 해당 참조를 할당하거나, [참조 반환 값](../keywords/ref.md#reference-return-values) 또는 [`ref` 메서드 매개 변수](../keywords/ref.md#passing-an-argument-by-reference)로 사용할 수 있습니다.
+C# 7.2부터 조건부 ref 식으로 [ref 지역](../keywords/ref.md#ref-locals) 또는 [ref readonly 지역](../keywords/ref.md#ref-readonly-locals) 변수를 조건부로 할당할 수 있습니다. 조건부 ref 식을 [참조 반환 값](../keywords/ref.md#reference-return-values) 또는 [`ref` 메서드 인수](../keywords/ref.md#passing-an-argument-by-reference)로 사용할 수도 있습니다.
 
 조건부 ref 식의 구문은 다음과 같습니다.
 
@@ -69,13 +69,13 @@ condition ? ref consequent : ref alternative
 
 다음 예제에서는 조건부 ref 식의 사용법을 보여 줍니다.
 
-[!code-csharp-interactive[conditional ref](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#ConditionalRef)]
+[!code-csharp-interactive[conditional ref](snippets/ConditionalOperator.cs#ConditionalRef)]
 
 ## <a name="conditional-operator-and-an-ifelse-statement"></a>조건부 연산자 및 `if..else` 문
 
 [if-else](../keywords/if-else.md) 문보다 조건부 연산자를 사용하면 조건부로 값을 컴퓨팅해야 하는 경우 코드가 보다 간결해질 수 있습니다. 다음 예제에서는 정수를 음수 또는 음수가 아닌 값으로 분류하는 두 가지 방법을 보여 줍니다.
 
-[!code-csharp[conditional and if-else](~/samples/csharp/language-reference/operators/ConditionalOperator.cs#CompareWithIf)]
+[!code-csharp[conditional and if-else](snippets/ConditionalOperator.cs#CompareWithIf)]
 
 ## <a name="operator-overloadability"></a>연산자 오버로드 가능성
 

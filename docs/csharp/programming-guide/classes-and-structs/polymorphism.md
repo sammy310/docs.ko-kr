@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 169ba2a1307a301c80b3d9ccac45f4ac9f707921
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 58980bd0d70d8a778cdb208f56d31ee8465871a4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77626290"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170171"
 ---
 # <a name="polymorphism-c-programming-guide"></a>다형성(C# 프로그래밍 가이드)
 
@@ -24,7 +24,7 @@ ms.locfileid: "77626290"
 1. 각 특정 도형 클래스가 공통 기본 클래스에서 파생되는 클래스 계층 구조를 만듭니다.
 1. 가상 메서드를 사용하여 기본 클래스 메서드에 대한 단일 호출을 통해 모든 파생 클래스에 대해 적절한 메서드를 호출합니다.
 
-먼저, `Shape`라는 기본 클래스를 만들고 `Rectangle`, `Circle` 및 `Triangle`과 같은 파생 클래스를 만듭니다. `Shape` 클래스에 `Draw`라는 가상 메서드를 제공하고, 각 파생 클래스에서 이를 재정의하여 클래스가 나타내는 특정 도형을 그립니다. `List<Shape>` 개체를 만들고 이 개체에 `Circle`, `Triangle`및 `Rectangle`을 추가합니다. 
+먼저, `Shape`라는 기본 클래스를 만들고 `Rectangle`, `Circle` 및 `Triangle`과 같은 파생 클래스를 만듭니다. `Shape` 클래스에 `Draw`라는 가상 메서드를 제공하고, 각 파생 클래스에서 이를 재정의하여 클래스가 나타내는 특정 도형을 그립니다. `List<Shape>` 개체를 만들고 이 개체에 `Circle`, `Triangle`및 `Rectangle`을 추가합니다.
 
 [!code-csharp[Polymorphism overview](~/samples/snippets/csharp/objectoriented/Inheritance.cs#PolymorphismOverview)]
 

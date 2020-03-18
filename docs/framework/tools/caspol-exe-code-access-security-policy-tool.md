@@ -15,12 +15,12 @@ helpviewer_keywords:
 - security policy [.NET Framework], modifying
 - manually editing security configuration files
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
-ms.openlocfilehash: b5b5e1872af89417fbad6e95b7a8bee5e9b68925
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 792d89351b3759984b085fd8aee9c3ae8e012c09
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129900"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180410"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe(코드 액세스 보안 정책 도구)
 CAS(코드 액세스 보안 정책 도구)(Caspol.exe)를 사용하면 사용자나 관리자가 컴퓨터 정책 수준, 사용자 정책 수준 및 엔터프라이즈 정책 수준의 보안 정책을 수정할 수 있습니다.  
@@ -86,8 +86,8 @@ caspol [options]
 |**-custom**  *xmlfile*|사용자 지정 멤버 자격 조건을 추가합니다. 필수 *xmlfile* 인수는 사용자 지정 멤버 자격 조건의 XML serialization이 포함된 .xml 파일을 지정합니다.|  
 |**-hash** *hashAlg* { **-hex** *hashValue* &#124; **-file** *assembly_file* }|지정된 어셈블리 해시가 포함된 코드를 지정합니다. 해시를 코드 그룹 멤버 자격 조건으로 사용하려면 해시 값 또는 어셈블리 파일 중 하나를 지정해야 합니다. 이 멤버 자격 조건에 대한 자세한 내용은 <xref:System.Security.Policy.HashMembershipCondition?displayProperty=nameWithType>을 참조하세요.|  
 |**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex**  *hex_string* }|인증서 파일, 파일의 서명 또는 X509 인증서의 16진수 표시가 나타내는 것처럼 지정된 소프트웨어 게시자가 포함된 코드를 지정합니다. 이 멤버 자격 조건에 대한 자세한 내용은 <xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType>을 참조하세요.|  
-|**-site** *website*|지정된 원본 사이트가 포함된 코드를 지정합니다. 예:<br /><br /> `-site** www.proseware.com`<br /><br /> 이 멤버 자격 조건에 대한 자세한 내용은 <xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>을 참조하세요.|  
-|**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|파일 이름, 문자열 형식의 어셈블리 이름 및 *major*.*minor*.*build*.*revision* 형식의 어셈블리 버전으로 지정된 강력한 이름의 코드를 지정합니다. 예:<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> 이 멤버 자격 조건에 대한 자세한 내용은 <xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType>을 참조하세요.|  
+|**-site** *website*|지정된 원본 사이트가 포함된 코드를 지정합니다. 예를 들어:<br /><br /> `-site** www.proseware.com`<br /><br /> 이 멤버 자격 조건에 대한 자세한 내용은 <xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>을 참조하세요.|  
+|**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|파일 이름, 문자열 형식의 어셈블리 이름 및 *major*.*minor*.*build*.*revision* 형식의 어셈블리 버전으로 지정된 강력한 이름의 코드를 지정합니다. 예를 들어:<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> 이 멤버 자격 조건에 대한 자세한 내용은 <xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType>을 참조하세요.|  
 |**-url** *URL*|지정된 URL에서 시작되는 코드를 지정합니다. URL은 `http://` 또는 `ftp://`와 같은 프로토콜을 포함해야 합니다. 또한 와일드카드 문자(\*)를 사용하여 특정 URL에서 여러 어셈블리를 지정할 수 있습니다. **참고:**  URL은 여러 이름을 사용하여 식별될 수 있으므로 URL을 멤버 자격 조건으로 사용하는 것은 코드의 ID를 정확하게 식별하기 위한 안전한 방법이 아닙니다. 가능한 경우 강력한 이름 멤버 자격 조건, 게시자 멤버 자격 조건 또는 해시 멤버 자격 조건을 사용합니다. <br /><br /> 이 멤버 자격 조건에 대한 자세한 내용은 <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>을 참조하세요.|  
 |**-zone** *zonename*|지정된 원본 영역이 포함된 코드를 지정합니다. *zonename* 인수는 다음 값 중 하나가 될 수 있습니다. **MyComputer**, **인트라넷**, **트러스트됨**, **인터넷** 또는 **트러스트되지 않음**. 이 멤버 자격 조건에 대한 자세한 내용은 <xref:System.Security.Policy.ZoneMembershipCondition> 클래스를 참조하십시오.|  
   
@@ -119,7 +119,7 @@ caspol [options]
   
  Caspol.exe가 작동하려면 **Everything** 권한 집합과 동일한 권한 집합을 Caspol.exe에 부여해야 합니다. 이 도구에는 Caspol.exe를 실행하는 데 필요한 권한을 부여하지 않는 방식으로 정책이 수정되지 않도록 하는 보호 메커니즘이 있습니다. 즉, 변경을 시도하면 Caspol.exe는 요청한 정책 변경으로 인해 해당 도구가 중단되므로 해당 변경 내용이 거부됨을 알립니다. **–force** 옵션을 사용하여 지정된 명령에 대해 이 보호 메커니즘을 해제할 수 있습니다.  
   
-<a name="cpgrfcodeaccesssecuritypolicyutilitycaspolexeanchor1"></a>   
+<a name="cpgrfcodeaccesssecuritypolicyutilitycaspolexeanchor1"></a>
 ## <a name="manually-editing-the-security-configuration-files"></a>직접 보안 구성 파일 편집  
  세 가지 보안 구성 파일은 각각 Caspol.exe로 지원되는 세 가지 정책 수준(컴퓨터 정책, 특정 사용자 정책 및 엔터프라이즈 정책)에 해당합니다. 이러한 파일은 Caspol.exe를 사용하여 컴퓨터, 사용자 또는 엔터프라이즈 정책이 변경된 경우에만 디스크에 만들어집니다. 필요한 경우 Caspol.exe의 **–reset** 옵션을 사용하여 기본 보안 정책을 디스크에 저장할 수 있습니다.  
   
@@ -244,7 +244,7 @@ caspol -customall "c:\config_test\security.config" -resolvegroup myassembly
 caspol -all -resolveperm testassembly  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [도구](index.md)
 - [명령 프롬프트](developer-command-prompt-for-vs.md)

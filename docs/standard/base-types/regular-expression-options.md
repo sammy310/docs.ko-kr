@@ -13,10 +13,10 @@ helpviewer_keywords:
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 ms.openlocfilehash: a53d7517485d2a0b02b6f11928f478a7da3f9503
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73972109"
 ---
 # <a name="regular-expression-options"></a>정규식 옵션
@@ -29,7 +29,7 @@ ms.locfileid: "73972109"
 |<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>|`i`|대/소문자를 구분하지 않는 일치를 사용합니다. 자세한 내용은 [대/소문자를 구분하지 않는 일치](#case-insensitive-matching)를 참조하세요.|
 |<xref:System.Text.RegularExpressions.RegexOptions.Multiline>|`m`|여러 줄 모드를 사용합니다. 여기서 `^` 및 `$`는 각 줄의 시작 부분 및 끝 부분과 일치합니다(입력 문자열의 시작 부분 및 끝 부분 대신). 자세한 내용은 [여러 줄 모드](#multiline-mode)를 참조하세요.|
 |<xref:System.Text.RegularExpressions.RegexOptions.Singleline>|`s`|한 줄 모드를 사용합니다. 여기서 마침표(.)는 모든 문자와 일치합니다(`\n`을 제외한 모든 문자 대신). 자세한 내용은 [한 줄 모드](#single-line-mode)를 참조하세요.|
-|<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>|`n`|명명되지 않은 그룹을 캡처하지 않습니다. 유효한 캡처는 `(?<`*name*`>` *subexpression*`)` 형식의 명시적으로 명명되거나 번호가 매겨진 그룹 뿐입니다. 자세한 내용은 [명시적 캡처만 해당](#explicit-captures-only)을 참조하세요.|
+|<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>|`n`|명명되지 않은 그룹을 캡처하지 않습니다. 유효한 캡처는 `(?<`*name*`>` *subexpression*`)` 형식의 명시적으로 명명되거나 번호가 매겨진 그룹뿐입니다. 자세한 내용은 [명시적 캡처만 해당](#explicit-captures-only)을 참조하세요.|
 |<xref:System.Text.RegularExpressions.RegexOptions.Compiled>|사용할 수 없음|정규식을 어셈블리로 컴파일합니다. 자세한 내용은 [컴파일된 정규식](#compiled-regular-expressions)을 참조하세요.|
 |<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace>|`x`|이스케이프되지 않은 공백을 패턴에서 제외하고 숫자 기호(`#`) 뒤에 주석을 사용하도록 설정합니다. 자세한 내용은 [공백 무시](#ignore-white-space)를 참조하세요.|
 |<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft>|사용할 수 없음|검색 방향을 변경합니다. 검색이 왼쪽에서 오른쪽으로 대신 오른쪽에서 왼쪽으로 이동합니다. 자세한 내용은 [오른쪽에서 왼쪽 모드](#right-to-left-mode)를 참조하세요.|
@@ -264,7 +264,7 @@ ms.locfileid: "73972109"
 
 - 중괄호로 묶은 수량자 내에는 공백이 허용되지 않습니다(예: `{`*n*`}`, `{`*n*`,}` 및 `{`*n*`,`*m*`}`). 예를 들어, 정규식 패턴 `\d{1, 3}`는 공백 문자를 포함하고 있기 때문에 1자리에서 3자리까지의 숫자로 이루어진 어떠한 숫자 시퀀스와도 일치하지 않습니다.
 
-- 언어 요소를 도입하는 문자 시퀀스 내에는 공백이 허용되지 않습니다. 예:
+- 언어 요소를 도입하는 문자 시퀀스 내에는 공백이 허용되지 않습니다. 예를 들어:
 
   - 언어 요소 `(?:`*subexpression*`)`는 비 캡처링 그룹을 나타내고, 요소의 `(?:` 부분은 공백을 포함할 수 없습니다. `(? :`*subexpression*`)` 패턴은 정규식 엔진이 패턴을 구문 분석할 수 없고 `( ?:`*subexpression*`)` 패턴이 *subexpression*과 일치하지 않으므로 런타임에 <xref:System.ArgumentException>을 throw합니다.
 
@@ -375,6 +375,6 @@ ECMAScript의 동작과 정식 정규식의 동작은 문자 클래스 구문, �
 [!code-csharp[Conceptual.Regex.Language.Options#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/culture1.cs#15)]
 [!code-vb[Conceptual.Regex.Language.Options#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/culture1.vb#15)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [정규식 언어 - 빠른 참조](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

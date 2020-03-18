@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 17ab7317ff1147dc79fae4ef3068cd9bc2143907
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 464514a241cc35fc821049ba0c29bec108d88253
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774200"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180405"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe(라이선스 컴파일러)
 라이선스 컴파일러를 사용하면 라이선스 정보가 들어 있는 텍스트 파일을 읽고, 공용 언어 런타임 실행 파일에 리소스로 포함될 수 있는 바이너리 파일을 생성할 수 있습니다.  
@@ -42,15 +42,15 @@ targetPE /complist:filename [-outdir:path]
 |------------|-----------------|  
 |**/complist:** *filename*|.licenses 파일에 포함할 라이선스가 있는 구성 요소의 목록이 들어 있는 파일 이름을 지정합니다. 각 구성 요소는 한 줄에 하나의 구성 요소로 전체 이름을 사용하여 참조됩니다.<br /><br /> 명령줄 사용자는 프로젝트의 각 형식마다 별도의 파일을 지정할 수 있습니다. Lc.exe로 여러 개의 입력 파일을 사용하여 하나의 .licenses 파일을 생성할 수도 있습니다.|  
 |**/h**[**elp**]|이 도구의 명령 구문 및 옵션을 표시합니다.|  
-|**/i:** *모듈*|**/complist** 파일에 나열된 구성 요소가 들어 있는 모듈을 지정합니다. 모듈을 두 개 이상 지정하려면 여러 개의 **/i** 플래그를 사용합니다.|  
+|**/i:** *module*|**/complist** 파일에 나열된 구성 요소가 들어 있는 모듈을 지정합니다. 모듈을 두 개 이상 지정하려면 여러 개의 **/i** 플래그를 사용합니다.|  
 |**/nologo**|Microsoft 시작 배너를 표시하지 않습니다.|  
 |**/outdir:** *path*|출력된 .licenses 파일을 포함할 디렉터리를 지정합니다.|  
 |**/target:** *targetPE*|.licenses 파일이 생성되는 대상 실행 파일을 지정합니다.|  
 |**/v**|세부 정보 표시 모드를 지정합니다. 즉, 컴파일 진행 정보를 표시합니다.|  
-|**@** *파일*|지시 파일(.rsp)을 지정합니다.|  
+|**@** *file*|지시 파일(.rsp)을 지정합니다.|  
 |**/?**|이 도구의 명령 구문 및 옵션을 표시합니다.|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 1. `HostApp.exe`  라는 애플리케이션의 `Samples.DLL`에 들어 있는 라이선스가 있는 컨트롤 `MyCompany.Samples.LicControl1`을 사용하는 경우 다음 내용이 들어 있는 `HostAppLic.txt`를 만들 수 있습니다.  
   
@@ -81,8 +81,8 @@ lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: h
   
 ```text  
 /target:hostapp.exe  
-/complist:hostapplic.txt   
-/i:WFCPrj.dll   
+/complist:hostapplic.txt
+/i:WFCPrj.dll
 /outdir:"C:\My Folder"  
 ```  
   
@@ -92,7 +92,7 @@ lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: h
 lc @response.rsp  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [도구](index.md)
 - [Al.exe(어셈블리 링커)](al-exe-assembly-linker.md)

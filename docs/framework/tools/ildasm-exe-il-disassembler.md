@@ -10,10 +10,10 @@ helpviewer_keywords:
 - disassembling file for MSIL Assembler input
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 ms.openlocfilehash: f23f8c48a31dffa7d350c872aed7505da7a36861
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73105054"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe(IL 디스어셈블러)
@@ -182,7 +182,7 @@ ildasm /item:"MyClass::MyMethod(class [mscorlib]System.AppDomain(class [mscorlib
 
 중첩 형식은 해당 형식을 포함하는 클래스와 슬래시 다음에 있어야 합니다. 예를 들어, `MyNamespace.MyClass` 클래스에 `NestedClass`라는 중첩 클래스가 들어 있으면 중첩 클래스는 `class MyNamespace.MyClass/NestedClass`로 식별됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [도구](index.md)
 - [Ilasm.exe(IL 어셈블러)](ilasm-exe-il-assembler.md)

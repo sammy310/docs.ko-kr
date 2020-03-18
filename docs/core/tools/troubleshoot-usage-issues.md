@@ -3,12 +3,12 @@ title: .NET Core 도구 사용 문제 해결
 description: .NET Core 도구를 실행할 때 발생하는 일반적인 문제와 가능한 해결 방법을 검색합니다.
 author: kdollard
 ms.date: 02/14/2020
-ms.openlocfilehash: ab5d1be8f201ea283f8537f18886feab46157127
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: ed6243f802c4d3ce56a742916a1a28676e3cd876
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543276"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146452"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>.NET Core 도구 사용 문제 해결
 
@@ -42,16 +42,16 @@ Possible reasons for this include:
 
 * 전역 도구
 
-    전역 도구는 기본 디렉터리 또는 특정 위치에 설치할 수 있습니다. 기본 디렉터리는 다음과 같습니다.
+  전역 도구는 기본 디렉터리 또는 특정 위치에 설치할 수 있습니다. 기본 디렉터리는 다음과 같습니다.
 
-    | OS          | 경로                          |
-    |-------------|-------------------------------|
-    | Linux/macOS | `$HOME/.dotnet/tools`         |
-    | Windows     | `%USERPROFILE%\.dotnet\tools` |
+  | OS          | 경로                          |
+  |-------------|-------------------------------|
+  | Linux/macOS | `$HOME/.dotnet/tools`         |
+  | Windows     | `%USERPROFILE%\.dotnet\tools` |
 
-    전역 도구를 실행하려는 경우, 머신의 `PATH` 환경 변수에 전역 도구를 설치한 경로가 포함되어 있고 실행 파일이 해당 경로에 있는지 확인합니다.
+  전역 도구를 실행하려는 경우, 머신의 `PATH` 환경 변수에 전역 도구를 설치한 경로가 포함되어 있고 실행 파일이 해당 경로에 있는지 확인합니다.
 
-    .NET Core CLI는 처음 사용 시 PATH 환경 변수에 기본 위치를 추가하려고 시도합니다. 그러나 위치가 PATH에 자동으로 추가되지 않는 몇 가지 시나리오가 있으므로, 다음과 같은 경우 PATH를 편집하여 위치를 구성해야 합니다.
+  .NET Core CLI는 처음 사용 시 PATH 환경 변수에 기본 위치를 추가하려고 시도합니다. 그러나 위치가 PATH에 자동으로 추가되지 않는 다음과 같은 시나리오가 있습니다.
 
   * Linux를 사용 중이고, apt-get 또는 rpm이 아닌 *.tar.gz* 파일을 사용하여 .NET Core SDK를 설치한 경우
   * macOS10.15 “Catalina” 이상 버전을 사용하는 경우
@@ -59,7 +59,7 @@ Possible reasons for this include:
   * .NET Core 3.0 SDK를 설치했으며 `DOTNET_ADD_GLOBAL_TOOLS_TO_PATH` 환경 변수를 `false`로 설정한 경우
   * .NET Core 2.2 SDK 또는 이전 버전을 설치했으며 `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` 환경 변수를 `true`로 설정한 경우
 
-  자세한 내용은 [.NET Core 도구](global-tools.md)를 참조하세요.
+  이러한 시나리오이거나 `--tool-path` 옵션을 지정한 경우 컴퓨터의 `PATH` 환경 변수는 전역 도구를 설치한 경로를 자동으로 포함하지 않습니다. 이 경우 셸에서 환경 변수 업데이트용으로 제공하는 모든 메서드를 사용하여 도구 위치(예: `$HOME/.dotnet/tools`)를 `PATH` 환경 변수에 추가합니다. 자세한 내용은 [.NET Core 도구](global-tools.md)를 참조하세요.
 
 * 로컬 도구
 

@@ -6,17 +6,17 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 832095e1d9712c85ad588836e8eba8f523719021
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: aadf555fb47963eab323bbb6105227c5b119e6f4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714971"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170314"
 ---
 # <a name="classes-c-programming-guide"></a>클래스(C# 프로그래밍 가이드)
 
 ## <a name="reference-types"></a>참조 형식  
-[클래스](../../language-reference/keywords/class.md)로 정의된 형식은 *참조 형식*입니다. 런타임에 참조 형식의 변수를 선언하면 [new](../../language-reference/operators/new-operator.md) 연산자를 사용하여 클래스의 인스턴스를 명시적으로 만들거나 다음 예제와 같이 다른 곳에서 만들어진 호환성 있는 형식의 개체를 할당할 때까지 변수에는 [null](../../language-reference/keywords/null.md) 값이 포함됩니다.
+[클래스](../../language-reference/keywords/class.md)로 정의된 형식은 *참조 형식*입니다. 런타임에 참조 형식의 변수를 선언하면 [new](../../language-reference/keywords/null.md) 연산자를 사용하여 클래스의 인스턴스를 명시적으로 만들거나 다음 예제와 같이 다른 곳에서 만들어진 호환성 있는 형식의 개체를 할당할 때까지 변수에는 [null](../../language-reference/operators/new-operator.md) 값이 포함됩니다.
 
 ```csharp
 //Declaring an object of type MyClass.
@@ -53,11 +53,11 @@ MyClass mc2 = mc;
  ```
 
  클래스 인스턴스가 만들어질 때 개체에 대한 참조가 다시 프로그래머에게 전달됩니다. 이전 예제에서 `object1`은 `Customer`에 기반을 둔 개체에 대한 참조입니다. 이 참조는 새 개체를 참조하지만 개체 데이터 자체를 포함하지 않습니다. 실제로 개체를 만들지 않고도 개체 참조를 만들 수 있습니다.  
- 
+
 ```csharp
  Customer object2;
 ```
- 
+
  런타임에는 참조를 통한 개체 액세스 시도에 실패하므로 개체를 참조하지 않는 이와 같은 개체 참조는 만들지 않는 것이 좋습니다. 그러나 새 개체를 만들거나 다음과 같이 기존 개체에 개체를 할당하여 개체를 참조하는 참조를 만들 수 있습니다.  
 
  ```csharp
@@ -87,19 +87,19 @@ C++와 달리 C#의 클래스는 하나의 기본 클래스에서만 직접 상�
   
 클래스는 [abstract](../../language-reference/keywords/abstract.md)로 선언될 수 있습니다. 추상 클래스에는 시그니처 정의가 있지만 구현이 없는 추상 메서드가 포함됩니다. 추상 클래스는 인스턴스화할 수 없습니다. 추상 클래스는 추상 메서드를 구현하는 파생 클래스를 통해서만 사용할 수 있습니다. 이와 달리 [sealed](../../language-reference/keywords/sealed.md) 클래스에서는 다른 클래스가 파생될 수 없습니다. 자세한 내용은 [Abstract 및 Sealed 클래스와 클래스 멤버](abstract-and-sealed-classes-and-class-members.md)를 참조하세요.  
   
-클래스 정의는 여러 소스 파일로 분할될 수 있습니다. 자세한 내용은 참조 [Partial 클래스 및 메서드](partial-classes-and-methods.md)합니다.  
+클래스 정의는 여러 소스 파일로 분할될 수 있습니다. 자세한 내용은 [Partial 클래스 및 메서드](partial-classes-and-methods.md)를 참조하세요.  
   
 ## <a name="example"></a>예제
 
 다음 예제에서는 [자동 구현 속성](auto-implemented-properties.md), 메서드 및 생성자라는 특수 메서드를 포함하는 공용 클래스를 정의합니다. 자세한 내용은 [속성](properties.md), [메서드](methods.md) 및 [생성자](constructors.md) 항목을 참조하세요. 그런 다음, 클래스의 인스턴스는 `new` 키워드를 사용하여 인스턴스화됩니다.  
   
-[!code-csharp[Class Example](~/samples/snippets/csharp/programming-guide/classes-and-structs/class-example.cs)] 
+[!code-csharp[Class Example](~/samples/snippets/csharp/programming-guide/classes-and-structs/class-example.cs)]
   
 ## <a name="c-language-specification"></a>C# 언어 사양
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [개체 지향 프로그래밍](../concepts/object-oriented-programming.md)

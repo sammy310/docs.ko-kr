@@ -2,12 +2,12 @@
 title: 지정된 특성 또는 이름을 갖는 파일을 쿼리하는 방법(C#)
 ms.date: 07/20/2015
 ms.assetid: 560e3879-b0b3-4549-ad02-0a53aff2f83c
-ms.openlocfilehash: 8ecf3263dcee9b54d01dd0b577ba8bec2a199da9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: fc6456f159887b7ad109e8ad48f0f79999d53e09
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346722"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168871"
 ---
 # <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a>지정된 특성 또는 이름을 갖는 파일을 쿼리하는 방법(C#)
 이 예제에서는 지정된 디렉터리 트리에서 지정된 파일 이름 확장명(예: ".txt")을 가진 파일을 모두 찾는 방법을 보여 줍니다. 또한 생성 시간을 기준으로 트리에서 가장 최신 파일이나 가장 오래된 파일을 반환하는 방법을 보여 줍니다.  
@@ -44,8 +44,8 @@ class FindFileByExtension
             Console.WriteLine(fi.FullName);  
         }  
   
-        // Create and execute a new query by using the previous   
-        // query as a starting point. fileQuery is not   
+        // Create and execute a new query by using the previous
+        // query as a starting point. fileQuery is not
         // executed again until the call to Last()  
         var newestFile =  
             (from file in fileQuery  
@@ -66,7 +66,7 @@ class FindFileByExtension
 ## <a name="compiling-the-code"></a>코드 컴파일  
   System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 통해 C# 콘솔 애플리케이션 프로젝트를 만듭니다.
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [LINQ to Objects(C#)](./linq-to-objects.md)
 - [LINQ 및 파일 디렉터리(C#)](./linq-and-file-directories.md)

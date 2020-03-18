@@ -16,10 +16,10 @@ dev_langs:
 - vb
 - cpp
 ms.openlocfilehash: 8a9845e3cd18ff86ec04216ad0e9c5606186b113
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73122527"
 ---
 # <a name="how-to-create-a-public-private-key-pair"></a>방법: 퍼블릭/프라이빗 키 쌍 만들기
@@ -73,6 +73,6 @@ sn -p keypair.snk public.snk
 <Assembly:AssemblyKeyFileAttribute("keyfile.snk")>
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [강력한 이름의 어셈블리 만들기 및 사용](create-use-strong-named.md)

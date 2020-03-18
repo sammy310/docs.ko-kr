@@ -4,12 +4,12 @@ description: 이 고급 자습서에서는 패턴 일치 기술을 사용하여 
 ms.date: 03/13/2019
 ms-technology: csharp-whats-new
 ms.custom: mvc
-ms.openlocfilehash: ca7ae63a038fce0b2569e7a4bd1805765bc23d44
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: df1054d8e0ec2b2539e6a1d00bf353d8ca927397
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039201"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156534"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>자습서: 패턴 일치 기능을 사용하여 데이터 형식 확장
 
@@ -23,7 +23,7 @@ C# 7에서는 기본 패턴 일치 기능을 도입했습니다. 이 기능은 �
 > - 패턴 일치 식을 사용하여 형식 및 속성 값에 따라 동작을 구현합니다.
 > - 패턴 일치를 다른 기술과 결합하여 완전한 알고리즘을 만듭니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 C# 8.0 컴파일러를 포함하여 .NET Core를 실행하도록 머신을 설정해야 합니다. C# 8 컴파일러는 [Visual Studio 2019 버전 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 또는 [.NET CORE 3.0 SDK](https://dotnet.microsoft.com/download)부터 사용할 수 있습니다.
 
@@ -41,7 +41,7 @@ C# 8.0 컴파일러를 포함하여 .NET Core를 실행하도록 머신을 설�
 
 이 간단한 설명을 통해 이 시스템을 모델링하기 위한 개체 계층 구조를 빠르게 설명했을 수 있습니다. 그러나 데이터는 다른 차량 등록 관리 시스템 같은 다양한 출처에서 수집됩니다. 이 시스템은 해당 데이터를 모델링하는 여러 가지 클래스를 제공하지만 사용자가 사용할 수 있는 단일 개체 모델이 없습니다. 이 자습서에서는 다음 코드와 같이 해당 외부 시스템의 차량 데이터를 모델링하는 데 이 간단한 클래스를 사용합니다.
 
-[!code-csharp[ExternalSystems](~/samples/csharp/tutorials/patterns/start/toll-calculator/ExternalSystems.cs)]
+[!code-csharp[ExternalSystems](~/samples/snippets/csharp/tutorials/patterns/start/toll-calculator/ExternalSystems.cs)]
 
 시작 코드는 [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/patterns/start) GitHub 리포지토리에서 다운로드할 수 있습니다. 차량 클래스는 여러 가지 시스템에서 가져오고 서로 다른 네임스페이스에 포함됨을 알 수 있습니다. `System.Object` 이외의 공용 기본 클래스는 활용할 수 없습니다.
 
@@ -241,7 +241,7 @@ vehicle switch
     DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
     DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
     DeliveryTruck t => 10.00m,
-    
+
     { }     => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
     null    => throw new ArgumentNullException(nameof(vehicle))
 };
@@ -337,17 +337,17 @@ private static bool IsWeekDay(DateTime timeOfToll) =>
 
 해당 메서드는 작동하지만 반복적입니다. 다음 코드와 같이 단순화할 수 있습니다.
 
-[!code-csharp[IsWeekDay](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#IsWeekDay)]
+[!code-csharp[IsWeekDay](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#IsWeekDay)]
 
 다음으로, 시간을 블록으로 분류하는 비슷한 함수를 추가합니다.
 
-[!code-csharp[GetTimeBand](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
+[!code-csharp[GetTimeBand](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
 
 이전 메서드는 패턴 일치를 사용하지 않습니다. `if` 문의 친숙한 계단식 배열을 사용하는 것이 더 이해하기 쉽습니다. 개인 `enum`을 추가하여 각 시간 범위를 불연속 값으로 변환합니다.
 
 이 메서드를 만든 후 **튜플 패턴**과 함께 다른 `switch` 식을 사용하여 할증 가격을 계산할 수 있습니다. 모든 16개 암(arm)을 사용하여 `switch` 식을 작성할 수 있습니다.
 
-[!code-csharp[FullTuplePattern](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#TuplePatternOne)]
+[!code-csharp[FullTuplePattern](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#TuplePatternOne)]
 
 위 코드는 작동하지만 단순화할 수 있습니다. 주말에 대한 8개 조합에는 모두 동일한 통행료가 포함됩니다. 8개 모두를 다음 줄로 바꿀 수 있습니다.
 
@@ -380,7 +380,7 @@ public decimal PeakTimePremium(DateTime timeOfToll, bool inbound) =>
 
 마지막으로 정규 가격을 납부하는 두 번의 교통 체증 시간을 제거할 수 있습니다. 해당 암(arm)을 제거하면 마지막 스위치 암(arm)에서 `false`를 삭제(`_`)로 바꿀 수 있습니다. 완료된 메서드는 다음과 같습니다.
 
-[!code-csharp[SimplifiedTuplePattern](../../../samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#FinalTuplePattern)]
+[!code-csharp[SimplifiedTuplePattern](../../../samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#FinalTuplePattern)]
 
 이 예제는 패턴 일치의 장점 중 하나를 강조 표시합니다. 패턴 분기는 순서대로 평가됩니다. 이전 분기가 이후 사례 중 하나를 처리하도록 분기를 재배열하는 경우 컴파일러는 접근할 수 없는 코드에 대해 경고합니다. 이 언어 규칙을 사용하면 코드가 변경되지 않는다는 확신과 함께 앞의 단순화 작업을 더 쉽게 수행할 수 있습니다.
 

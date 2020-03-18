@@ -1,15 +1,15 @@
 ---
-title: '샘플 XSD 파일: Customer 및 Order'
+title: '샘플 XSD 파일: Customers 및 Orders'
 ms.date: 07/20/2015
 ms.assetid: ef9911a3-7ac4-44fd-b36e-a0c0ad0a157d
-ms.openlocfilehash: ff893053e5ed29b95a0ede1f172915df2e83ffa2
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 2e8fdcd9100ea608828371ff5dce6cf0d040292f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346484"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167948"
 ---
-# <a name="sample-xsd-file-customers-and-orders"></a>샘플 XSD 파일: Customer 및 Order
+# <a name="sample-xsd-file-customers-and-orders"></a>샘플 XSD 파일: Customers 및 Orders
 다음 XSD 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다. 이 파일에는 [샘플 XML 파일: Customers 및 Orders(LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)에 대한 스키마 정의가 포함되어 있습니다. 스키마에서는 XSD의 `xs:key` 및 `xs:keyref` 기능을 사용하여 `CustomerID` 요소의 `Customer` 특성을 키로 설정하고 각 `CustomerID` 요소의 `Order` 요소와 각 `CustomerID` 요소의 `Customer` 특성 간 관계를 설정합니다.  
   
  `Join` 절을 사용하여 이 관계를 이용하는 LINQ 쿼리를 작성하는 예제는 [두 컬렉션을 조인하는 방법(LINQ to XML)(C#)](./how-to-join-two-collections-linq-to-xml.md)을 참조하세요.  
@@ -92,4 +92,3 @@ ms.locfileid: "75346484"
   </xs:complexType>  
 </xs:schema>  
 ```  
- 

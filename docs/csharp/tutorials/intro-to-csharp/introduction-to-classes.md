@@ -3,12 +3,12 @@ title: 클래스 및 개체 - C# 소개 자습서
 description: 첫 번째 C# 프로그램을 만들고 개체 지향 개념을 살펴봅니다.
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 06d1a30abc0d031badcba4ec60f7deb3c670a3ae
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: b6ad72997647b80b981f1a1871e384791404bdf7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634952"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156595"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>클래스 및 개체를 사용한 개체 지향 프로그래밍 살펴보기
 
@@ -33,7 +33,7 @@ namespace classes
 }
 ```
 
-이 자습서에서는 은행 계좌를 나타내는 새로운 형식을 만듭니다. 일반적으로 개발자는 여러 텍스트 파일에 각 클래스를 정의합니다. 그러면 프로그램의 크기가 커질 때 쉽게 관리할 수 있습니다. *클래스* 디렉터리에 *BankAccount.cs*라는 새 파일을 만듭니다. 
+이 자습서에서는 은행 계좌를 나타내는 새로운 형식을 만듭니다. 일반적으로 개발자는 여러 텍스트 파일에 각 클래스를 정의합니다. 그러면 프로그램의 크기가 커질 때 쉽게 관리할 수 있습니다. *클래스* 디렉터리에 *BankAccount.cs*라는 새 파일을 만듭니다.
 
 이 파일에는 ***은행 계좌***의 정의가 포함됩니다. 개체 지향 프로그래밍은 ***클래스*** 형태로 형식을 생성하여 코드를 구성합니다. 이러한 클래스에는 특정 엔티티를 나타내는 코드가 포함됩니다. `BankAccount` 클래스는 은행 계좌를 나타냅니다. 코드는 메서드 및 속성을 통해 특정 작업을 구현합니다. 이 자습서에서 은행 계좌는 다음 동작을 지원합니다.
 
@@ -71,13 +71,13 @@ namespace classes
 }
 ```
 
-계속하기 전에 빌드한 내용을 살펴보겠습니다.  `namespace` 선언은 코드를 논리적으로 구성하는 방법을 제공합니다. 이 자습서는 비교적 작으므로 하나의 네임스페이스에 모든 코드를 넣습니다. 
+계속하기 전에 빌드한 내용을 살펴보겠습니다.  `namespace` 선언은 코드를 논리적으로 구성하는 방법을 제공합니다. 이 자습서는 비교적 작으므로 하나의 네임스페이스에 모든 코드를 넣습니다.
 
-`public class BankAccount`는 생성하는 클래스 또는 형식을 정의합니다. 클래스 선언 뒤에 오는 `{` 및 `}`의 모든 항목은 클래스의 상태와 동작을 정의합니다. `BankAccount` 클래스의 ***멤버***가 다섯 개 있습니다. 첫 번째 세 개는 ***속성***입니다. 속성은 데이터 요소이며 유효성 검사 또는 기타 규칙을 적용하는 코드가 있을 수 있습니다. 마지막 두 개는 ***메서드***입니다. 메서드는 단일 함수를 수행하는 코드 블록입니다. 각 멤버의 이름을 읽으면 사용자 또는 다른 개발자가 클래스가 수행하는 작업을 이해하기에 충분한 정보를 제공해야 합니다.
+`public class BankAccount`는 생성하는 클래스 또는 형식을 정의합니다. 클래스 선언 뒤에 오는 `{` 및 `}`의 모든 항목은 클래스의 상태와 동작을 정의합니다. ***클래스의***멤버`BankAccount`가 다섯 개 있습니다. 첫 번째 세 개는 ***속성***입니다. 속성은 데이터 요소이며 유효성 검사 또는 기타 규칙을 적용하는 코드가 있을 수 있습니다. 마지막 두 개는 ***메서드***입니다. 메서드는 단일 함수를 수행하는 코드 블록입니다. 각 멤버의 이름을 읽으면 사용자 또는 다른 개발자가 클래스가 수행하는 작업을 이해하기에 충분한 정보를 제공해야 합니다.
 
 ## <a name="open-a-new-account"></a>새 계좌 개설
 
-구현할 첫 번째 기능은 은행 계좌 개설 기능입니다. 고객이 계좌를 개설할 때 초기 잔액과 해당 계좌 소유자에 대한 정보를 제공해야 합니다. 
+구현할 첫 번째 기능은 은행 계좌 개설 기능입니다. 고객이 계좌를 개설할 때 초기 잔액과 해당 계좌 소유자에 대한 정보를 제공해야 합니다.
 
 `BankAccount` 형식의 새 개체를 생성하는 것은 해당 값을 지정하는 ***생성자***를 정의하는 것입니다. ***생성자***는 클래스와 이름이 같은 멤버입니다. 생성자는 해당 클래스 형식의 개체를 초기화하는 데 사용됩니다. `BankAccount` 형식에 다음 생성자를 추가합니다.
 
@@ -89,7 +89,7 @@ public BankAccount(string name, decimal initialBalance)
 }
 ```
 
-생성자는 [`new`](../../language-reference/operators/new-operator.md)를 사용하여 개체를 만들 때 호출됩니다. *Program.cs*의 `Console.WriteLine("Hello World!");` 줄을 다음 코드로 바꿉니다(`<name>`을 사용자의 이름으로 바꿈).
+생성자는 [`new`](../../language-reference/operators/new-operator.md)를 사용하여 개체를 만들 때 호출됩니다. `Console.WriteLine("Hello World!");`Program.cs*의*  줄을 다음 코드로 바꿉니다(`<name>`을 사용자의 이름으로 바꿈).
 
 ```csharp
 var account = new BankAccount("<name>", 1000);
@@ -106,7 +106,7 @@ Console.WriteLine($"Account {account.Number} was created for {account.Owner} wit
 private static int accountNumberSeed = 1234567890;
 ```
 
-이는 데이터 멤버입니다. 이것은 `private`입니다. 즉 `BankAccount` 클래스 내의 코드로만 액세스할 수 있습니다. 이는 전용 구현(계좌 번호가 생성되는 방법)과 공공 책임(계좌 번호를 가지는 것 등)을 구분하는 방법입니다. 모든 `BankAccount` 개체에서 공유됨을 의미하는 `static`이기도 합니다. 비정적 변수의 값은 `BankAccount` 개체의 각 인스턴스에 고유합니다. 생성자에 다음 두 줄을 추가하여 계좌 번호를 지정합니다.
+이는 데이터 멤버입니다. 이것은 `private`입니다. 즉 `BankAccount` 클래스 내의 코드로만 액세스할 수 있습니다. 이는 전용 구현(계좌 번호가 생성되는 방법)과 공공 책임(계좌 번호를 가지는 것 등)을 구분하는 방법입니다. 모든 `static` 개체에서 공유됨을 의미하는 `BankAccount`이기도 합니다. 비정적 변수의 값은 `BankAccount` 개체의 각 인스턴스에 고유합니다. 생성자에 다음 두 줄을 추가하여 계좌 번호를 지정합니다.
 
 ```csharp
 this.Number = accountNumberSeed.ToString();
@@ -121,11 +121,11 @@ accountNumberSeed++;
 
 트랜잭션을 나타내는 새 형식을 생성해 보겠습니다. 이는 책임이 없는 단순 형식입니다. 몇 가지 속성이 필요합니다. *Transaction.cs*라는 새 파일을 만듭니다. 파일에 다음 코드를 추가합니다.
 
-[!code-csharp[Transaction](~/samples/csharp/classes-quickstart/Transaction.cs)]
+[!code-csharp[Transaction](~/samples/snippets/csharp/classes-quickstart/Transaction.cs)]
 
-이제 `Transaction` 개체의 <xref:System.Collections.Generic.List%601>를 `BankAccount` 클래스에 추가하겠습니다. 다음 선언을 추가합니다.
+이제 <xref:System.Collections.Generic.List%601> 개체의 `Transaction`를 `BankAccount` 클래스에 추가하겠습니다. 다음 선언을 추가합니다.
 
-[!code-csharp[TransactionDecl](~/samples/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration)]
+[!code-csharp[TransactionDecl](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration)]
 
 <xref:System.Collections.Generic.List%601> 클래스를 사용하려면 다른 네임스페이스를 가져와야 합니다. *BankAccount.cs*의 시작 부분에 다음을 추가합니다.
 
@@ -133,23 +133,23 @@ accountNumberSeed++;
 using System.Collections.Generic;
 ```
 
-이제 `Balance`를 보고하는 방법을 변경해 보겠습니다.  모든 트랜잭션의 값을 합하여 찾을 수 있습니다. `BankAccount` 클래스에서 `Balance`의 선언을 다음과 같이 수정합니다.
+이제 `Balance`를 보고하는 방법을 변경해 보겠습니다.  모든 트랜잭션의 값을 합하여 찾을 수 있습니다. `Balance` 클래스에서 `BankAccount`의 선언을 다음과 같이 수정합니다.
 
-[!code-csharp[BalanceComputation](~/samples/csharp/classes-quickstart/BankAccount.cs#BalanceComputation)]
+[!code-csharp[BalanceComputation](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#BalanceComputation)]
 
 이 예제에서는 ***속성***의 중요한 측면을 보여 줍니다. 이제 다른 프로그래머가 값을 요청할 때 잔액을 계산합니다. 계산은 모든 트랜잭션을 열거하고 합계를 현재 잔액으로 제공합니다.
 
-다음으로 `MakeDeposit` 및 `MakeWithdrawal` 메서드를 구현합니다. 이러한 메서드는 최종 두 규칙을 적용합니다. 초기 잔액은 양수여야 하고 인출로 인해 음수의 잔액이 발생되어서는 안 됩니다. 
+다음으로 `MakeDeposit` 및 `MakeWithdrawal` 메서드를 구현합니다. 이러한 메서드는 최종 두 규칙을 적용합니다. 초기 잔액은 양수여야 하고 인출로 인해 음수의 잔액이 발생되어서는 안 됩니다.
 
 이는 ***예외***의 개념을 소개합니다. 메서드가 작업을 성공적으로 완료할 수 없음을 나타내는 일반적인 방법은 예외를 throw하는 것입니다. 예외 형식 및 관련 메시지는 오류를 설명합니다. 여기에서 `MakeDeposit` 메서드는 인출 금액이 음수인 경우 예외를 throw합니다. 인출 금액이 음수이거나 인출 적용 결과로 음수의 잔액이 발생하는 경우 `MakeWithdrawal` 메서드는 예외를 throw합니다.
 
-[!code-csharp[DepositAndWithdrawal](~/samples/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal)]
+[!code-csharp[DepositAndWithdrawal](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal)]
 
 [`throw`](../../language-reference/keywords/throw.md) 문은 예외를 **throw**합니다. 현재 블록의 실행이 종료되고 제어가 호출 스택에 있는 처음 일치하는 `catch` 블록으로 전달됩니다. `catch` 블록을 추가하여 나중에 이 코드를 테스트합니다.
 
 생성자는 잔액을 직접 업데이트하지 않고 초기 트랜잭션을 추가하도록 변경해야 합니다. `MakeDeposit` 메서드를 이미 작성했으므로 생성자에서 호출합니다. 완성된 생성자는 다음과 같아야 합니다.
 
-[!code-csharp[Constructor](~/samples/csharp/classes-quickstart/BankAccount.cs#Constructor)]
+[!code-csharp[Constructor](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#Constructor)]
 
 <xref:System.DateTime.Now?displayProperty=nameWithType>은 현재 날짜 및 시간을 반환하는 속성입니다. `Main` 메서드에 예금 및 인출을 몇 개 추가하여 다음을 테스트합니다.
 
@@ -194,9 +194,9 @@ catch (InvalidOperationException e)
 
 ## <a name="challenge---log-all-transactions"></a>과제 - 모든 트랜잭션 기록
 
-이 자습서를 완료하기 위해 트랜잭션 기록에 대해 `string`을 생성하는 `GetAccountHistory` 메서드를 작성할 수 있습니다. `BankAccount` 형식에 이 메서드를 추가합니다.
+이 자습서를 완료하기 위해 트랜잭션 기록에 대해 `GetAccountHistory`을 생성하는 `string` 메서드를 작성할 수 있습니다. `BankAccount` 형식에 이 메서드를 추가합니다.
 
-[!code-csharp[History](~/samples/csharp/classes-quickstart/BankAccount.cs#History)]
+[!code-csharp[History](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#History)]
 
 <xref:System.Text.StringBuilder> 클래스를 사용하여 각 트랜잭션에 대해 한 줄을 포함하는 문자열의 형식을 지정합니다. 이러한 자습서의 앞부분에서 문자열 형식 지정 코드를 살펴보았습니다. 새 문자는 `\t`입니다. 이 새 문자는 탭을 삽입하여 출력 형식을 지정합니다.
 

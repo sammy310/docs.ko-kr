@@ -11,10 +11,10 @@ helpviewer_keywords:
 - PE files, PEVerify
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 ms.openlocfilehash: 9d5f8c80937c36e975d42d6efb0a83295cb28be9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73104976"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe(PEVerify 도구)
@@ -118,7 +118,7 @@ peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp
 0xABCD1234  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [도구](index.md)
 - [형식 안정성이 확인된 코드 작성](../misc/code-access-security-basics.md#typesafe_code)

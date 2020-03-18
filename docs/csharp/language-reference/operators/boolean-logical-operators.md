@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: e4efb283c835a703ec64b6ec5995b821c995dc60
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 930329b922f585ac4763e6a66d3b192ae839f14f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552487"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398198"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>부울 논리 연산자(C# 참조)
 
@@ -53,7 +53,7 @@ ms.locfileid: "74552487"
 
 단항 접두사 `!` 연산자는 해당 피연산자의 논리 부정을 계산합니다. 즉, 피연산자가 `false`로 평가되는 경우 `true`를 생성하고, 피연산자가 `true`로 평가되는 경우 `false`를 생성합니다.
 
-[!code-csharp-interactive[logical negation](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
+[!code-csharp-interactive[logical negation](snippets/BooleanLogicalOperators.cs#Negation)]
 
 C# 8.0부터 단항 후위 `!` 연산자는 [null 허용 연산자](null-forgiving.md)입니다.
 
@@ -65,7 +65,7 @@ C# 8.0부터 단항 후위 `!` 연산자는 [null 허용 연산자](null-forgivi
 
 다음 예제에서 `&` 연산자의 오른쪽 피연산자는 왼쪽 피연산자의 값과 관계없이 수행되는 메서드 호출입니다.
 
-[!code-csharp-interactive[logical AND](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#And)]
+[!code-csharp-interactive[logical AND](snippets/BooleanLogicalOperators.cs#And)]
 
 [조건부 논리 AND 연산자](#conditional-logical-and-operator-) `&&`도 해당 피연산자의 논리 AND를 계산하지만, 왼쪽 피연산자가 `false`로 평가되는 경우에는 오른쪽 피연산자를 평가하지 않습니다.
 
@@ -73,9 +73,9 @@ C# 8.0부터 단항 후위 `!` 연산자는 [null 허용 연산자](null-forgivi
 
 ## <a name="logical-exclusive-or-operator-"></a>논리 배타적 OR 연산자 ^
 
-`^` 연산자는 해당 피연산자의 논리 XOR이라고도 하는 논리 배타적 OR을 컴퓨팅합니다. `x`가 `true`로 평가되고 `y`가 `false`로 평가되거나, `x`가 `false`로 평가되고 `y`가 `true`로 평가되는 경우 `x ^ y`의 결과는 `true`입니다. 그렇지 않으면 결과는 `false`입니다. 즉, `bool` 피연산자의 경우 `^` 연산자는 [같지 않음 연산자](equality-operators.md#inequality-operator-) `!=`와 같은 결과를 컴퓨팅합니다.
+`^` 연산자는 해당 피연산자의 논리 XOR이라고도 하는 논리 배타적 OR을 컴퓨팅합니다. `x`가 `true`로 평가되고 `y`가 `false`로 평가되거나, `x`가 `false`로 평가되고 `y`가 `true`로 평가되는 경우 `x ^ y`의 결과는 `true`입니다. 그렇지 않으면 결과는 `false`입니다. 즉, `bool` 피연산자의 경우 `^` 연산자는 [같지 않음 연산자](equality-operators.md#inequality-operator-) `!=`과 같은 결과를 컴퓨팅합니다.
 
-[!code-csharp-interactive[logical exclusive OR](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Xor)]
+[!code-csharp-interactive[logical exclusive OR](snippets/BooleanLogicalOperators.cs#Xor)]
 
 [정수 숫자 형식](../builtin-types/integral-numeric-types.md) 피연산자의 경우 `^` 연산자는 해당 피연산자의 [비트 논리 배타적 OR](bitwise-and-shift-operators.md#logical-exclusive-or-operator-)을 컴퓨팅합니다.
 
@@ -87,7 +87,7 @@ C# 8.0부터 단항 후위 `!` 연산자는 [null 허용 연산자](null-forgivi
 
 다음 예제에서 `|` 연산자의 오른쪽 피연산자는 왼쪽 피연산자의 값과 관계없이 수행되는 메서드 호출입니다.
 
-[!code-csharp-interactive[logical OR](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Or)]
+[!code-csharp-interactive[logical OR](snippets/BooleanLogicalOperators.cs#Or)]
 
 [조건부 논리 OR 연산자](#conditional-logical-or-operator-) `||`도 해당 피연산자의 논리 OR을 계산하지만, 왼쪽 피연산자가 `true`로 평가되는 경우에는 오른쪽 피연산자를 평가하지 않습니다.
 
@@ -99,7 +99,7 @@ C# 8.0부터 단항 후위 `!` 연산자는 [null 허용 연산자](null-forgivi
 
 다음 예제에서 `&&` 연산자의 오른쪽 피연산자는 왼쪽 피연산자가 `false`로 평가되는 경우 수행되지 않는 메서드 호출입니다.
 
-[!code-csharp-interactive[conditional logical AND](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#ConditionalAnd)]
+[!code-csharp-interactive[conditional logical AND](snippets/BooleanLogicalOperators.cs#ConditionalAnd)]
 
 [논리 AND 연산자](#logical-and-operator-) `&`도 해당 피연산자의 논리 AND를 컴퓨팅하지만 항상 두 피연산자를 모두 평가합니다.
 
@@ -109,7 +109,7 @@ C# 8.0부터 단항 후위 `!` 연산자는 [null 허용 연산자](null-forgivi
 
 다음 예제에서 `||` 연산자의 오른쪽 피연산자는 왼쪽 피연산자가 `true`로 평가되는 경우 수행되지 않는 메서드 호출입니다.
 
-[!code-csharp-interactive[conditional logical OR](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#ConditionalOr)]
+[!code-csharp-interactive[conditional logical OR](snippets/BooleanLogicalOperators.cs#ConditionalOr)]
 
 [논리 OR 연산자](#logical-or-operator-) `|`도 해당 피연산자의 논리 OR을 컴퓨팅하지만 항상 두 피연산자를 모두 평가합니다.
 
@@ -133,7 +133,7 @@ C# 8.0부터 단항 후위 `!` 연산자는 [null 허용 연산자](null-forgivi
 
 다음 예제와 같이 `!` 및 `^` 연산자를 `bool?` 피연산자와 함께 사용할 수도 있습니다.
 
-[!code-csharp-interactive[lifted negation and xor](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#WithNullableBoolean)]
+[!code-csharp-interactive[lifted negation and xor](snippets/BooleanLogicalOperators.cs#WithNullableBoolean)]
 
 조건부 논리 연산자 `&&` 및 `||`는 `bool?` 피연산자를 지원하지 않습니다.
 
@@ -155,7 +155,7 @@ x = x op y
 
 `&`, `|` 및 `^` 연산자는 다음 예제와 같이 복합 할당을 지원합니다.
 
-[!code-csharp-interactive[compound assignment](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#CompoundAssignment)]
+[!code-csharp-interactive[compound assignment](snippets/BooleanLogicalOperators.cs#CompoundAssignment)]
 
 조건부 논리 연산자 `&&` 및 `||`는 복합 할당을 지원하지 않습니다.
 
@@ -172,7 +172,7 @@ x = x op y
 
 괄호(`()`)를 사용하여 연산자 우선 순위에 따라 주어진 평가 순서를 변경합니다.
 
-[!code-csharp-interactive[operator precedence](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Precedence)]
+[!code-csharp-interactive[operator precedence](snippets/BooleanLogicalOperators.cs#Precedence)]
 
 우선 순위 수준에 따라 정렬된 전체 연산자 목록은 [C# 연산자](index.md#operator-precedence) 문서의 [연산자 우선 순위](index.md) 섹션을 참조하세요.
 
@@ -191,7 +191,7 @@ x = x op y
 - [조건부 논리 연산자](~/_csharplang/spec/expressions.md#conditional-logical-operators)
 - [복합 할당](~/_csharplang/spec/expressions.md#compound-assignment)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 연산자](index.md)

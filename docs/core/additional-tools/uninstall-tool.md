@@ -3,16 +3,16 @@ title: 제거 도구
 description: .NET Core SDK 및 런타임의 제어된 정리를 사용 설정하는 단계별 도구인 .NET Core 제거 도구에 대한 개요입니다.
 author: sfoslund
 ms.date: 01/06/2020
-ms.openlocfilehash: 4944c983cbd02b456c3a09a1b03bc28ba6e458cc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: bd20cba133cbb754dcca48e48b76a391a9efacba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714546"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847072"
 ---
 # <a name="net-core-uninstall-tool"></a>.NET Core 제거 도구
 
-[.NET Core 제거 도구](https://github.com/dotnet/cli-lab/releases)(`dotnet-core-uninstall`)를 사용하면 시스템에서 .NET Core SDK 및 런타임을 제거할 수 있습니다. 제거하고자 하는 버전을 지정할 수 있는 옵션 컬렉션이 제공됩니다.
+[.NET Core 제거 도구](https://aka.ms/dotnet-core-uninstall-tool)(`dotnet-core-uninstall`)를 사용하면 시스템에서 .NET Core SDK 및 런타임을 제거할 수 있습니다. 제거하고자 하는 버전을 지정할 수 있는 옵션 컬렉션이 제공됩니다.
 
 도구는 Windows 및 macOS를 지원합니다. Linux는 현재 지원되지 않습니다.
 
@@ -27,10 +27,10 @@ macOS에서 도구는 */usr/local/share/dotnet* 폴더에 있는 SDK 및 런타�
 
 ## <a name="install-the-tool"></a>도구 설치
 
-[dotnet/cli-lab](https://github.com/dotnet/cli-lab/releases) GitHub 리포지토리에서 .NET Core 제거 도구를 다운로드할 수 있습니다.
+.NET Core 제거 도구를 [여기](https://aka.ms/dotnet-core-uninstall-tool)에서 다운로드할 수 있으며 [dotnet/cli-lab](https://github.com/dotnet/cli-lab) GitHub 리포지토리에서 소스 코드를 찾을 수 있습니다.
 
 > [!NOTE]
-> 이 도구에는 .NET Core SDK 및 런타임 제거를 위한 권한 상승이 필요합니다. 따라서 Windows의 경우 *C:\Program Files*, 또는 macOS의 경우 */usr/local/bin*과 같이 쓰기 보호된 디렉터리에 설치해야 합니다. [dotnet 명령에 대한 상승된 액세스 권한](../tools/elevated-access.md)을 참조하세요. 자세한 설치 지침은 [GitHub 릴리스 페이지](https://github.com/dotnet/cli-lab/releases)에서 확인할 수 있습니다.
+> 이 도구에는 .NET Core SDK 및 런타임 제거를 위한 권한 상승이 필요합니다. 따라서 Windows의 경우 *C:\Program Files*, 또는 macOS의 경우 */usr/local/bin*과 같이 쓰기 보호된 디렉터리에 설치해야 합니다. [dotnet 명령에 대한 상승된 액세스 권한](../tools/elevated-access.md)을 참조하세요. 자세한 내용은 [자세한 설치 지침](https://aka.ms/dotnet-core-uninstall-tool)을 참조하세요.
 
 ## <a name="run-the-tool"></a>도구 실행
 
@@ -55,7 +55,7 @@ dotnet-core-uninstall list [options]
 
 #### <a name="options"></a>옵션
 
-## <a name="windowstabwindows"></a>[Windows](#tab/windows)
+## <a name="windows"></a>[Windows](#tab/windows)
 
 * **`--aspnet-runtime`**
 
@@ -85,7 +85,7 @@ dotnet-core-uninstall list [options]
 
   이 도구를 사용하여 제거할 수 있는 모든 x86 .NET Core SDK 및 런타임을 나열합니다.
 
-## <a name="macostabmacos"></a>[macOS](#tab/macos)
+## <a name="macos"></a>[macOS](#tab/macos)
 
 * **`--runtime`**
 
@@ -148,7 +148,7 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
 #### <a name="options"></a>옵션
 
-## <a name="windowstabwindows"></a>[Windows](#tab/windows)
+## <a name="windows"></a>[Windows](#tab/windows)
 
 * **`--all`**
 
@@ -218,7 +218,7 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 2. `--all`, `--all-below`, `--all-but`, `--all-but-latest`, `--all-lower-patches`, `--all-previews`, `--all-previews-but-latest`, `--major-minor` 및 `[<VERSION>...]`은 배타적입니다.
 3. `--x64` 또는 `--x86`이 지정되지 않은 경우 x64와 x86 모두 제거됩니다.
 
-## <a name="macostabmacos"></a>[macOS](#tab/macos)
+## <a name="macos"></a>[macOS](#tab/macos)
 
 * **`--all`**
 
@@ -328,7 +328,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 #### <a name="options"></a>옵션
 
-## <a name="windowstabwindows"></a>[Windows](#tab/windows)
+## <a name="windows"></a>[Windows](#tab/windows)
 
 * **`--all`**
 
@@ -400,7 +400,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 2. `--all`, `--all-below`, `--all-but`, `--all-but-latest`, `--all-lower-patches`, `--all-previews`, `--all-previews-but-latest`, `--major-minor` 및 `[<VERSION>...]`은 배타적입니다.
 3. `--x64` 또는 `--x86`이 지정되지 않은 경우 x64와 x86 모두 제거됩니다.
 
-## <a name="macostabmacos"></a>[macOS](#tab/macos)
+## <a name="macos"></a>[macOS](#tab/macos)
 
 * **`--all`**
 
@@ -511,13 +511,13 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 ## <a name="uninstall-the-tool"></a>도구 제거
 
-## <a name="windowstabwindows"></a>[Windows](#tab/windows)
+## <a name="windows"></a>[Windows](#tab/windows)
 
 1. **프로그램 추가/제거**를 엽니다.
 2. `Microsoft .NET Core SDK Uninstall Tool`을 검색합니다.
 3. **제거**를 선택합니다.
 
-## <a name="macostabmacos"></a>[macOS](#tab/macos)
+## <a name="macos"></a>[macOS](#tab/macos)
 
 설치된 디렉터리에서 다운로드한 *dotnet-core-uninstall.tar.gz* 파일을 삭제합니다. 이 파일의 압축을 다른 디렉터리에 푼 경우 파일 내용 또한 삭제해야 합니다.
 

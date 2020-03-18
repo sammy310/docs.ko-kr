@@ -2,12 +2,12 @@
 title: async 및 await를 사용하여 병렬로 여러 웹 요청을 만드는 방법(C#)
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: a6eef947e8f657cff574ffdf3afcd8943c665b8d
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 9f7420113d4af83d7d057b772af307bd8d4bcc00
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969955"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169951"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>async 및 await를 사용하여 병렬로 여러 웹 요청을 만드는 방법(C#)
 비동기 메서드에서 작업은 만들어질 때 시작됩니다. 작업이 완료될 때까지 처리를 계속할 수 없는 메서드 지점의 작업에 [await](../../../language-reference/operators/await.md) 연산자가 적용됩니다. 다음 예제와 같이 작업이 생성되는 즉시 대기되는 경우가 많습니다.  
@@ -43,13 +43,13 @@ var result = await myTask;
   
 ### <a name="to-set-up-the-project"></a>프로젝트를 설정하려면  
   
-1. WPF 애플리케이션을 설정하려면 다음 단계를 완료합니다. 이러한 단계에 대한 자세한 지침은 [연습: async 및 await를 사용하여 웹에 액세스(C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)에서 찾을 수 있습니다.  
+1. WPF 애플리케이션을 설정하려면 다음 단계를 완료합니다. 이러한 단계에 대한 자세한 지침은 [연습: async 및 await를 사용하여 웹에 액세스(C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)에서 확인할 수 있습니다.  
   
     - 텍스트 상자와 단추가 포함된 WPF 애플리케이션을 만듭니다. 단추의 이름을 `startButton`, 텍스트 상자의 이름을 `resultsTextBox`로 지정합니다.  
   
     - <xref:System.Net.Http>에 대한 참조를 추가합니다.  
   
-    - MainWindow.xaml.cs 파일에서 `System.Net.Http`에 대한 `using` 지시문을 추가합니다.  
+    - MainWindow.xaml.cs 파일에서 `using`에 대한 `System.Net.Http` 지시문을 추가합니다.  
   
 ### <a name="to-add-the-code"></a>코드를 추가하려면  
   
@@ -83,7 +83,7 @@ var result = await myTask;
   
     private void DisplayResults(string url, byte[] content)  
     {  
-        // Display the length of each website. The string format   
+        // Display the length of each website. The string format
         // is designed to be used with a monospaced font, such as  
         // Lucida Console or Global Monospace.  
         var bytes = content.Length;  
@@ -95,9 +95,9 @@ var result = await myTask;
   
 4. 마지막으로, 다음 단계를 수행하는 `CreateMultipleTasksAsync` 메서드를 정의합니다.  
   
-    - 이 메서드는 `ProcessURLAsync`의 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> 메서드에 액세스하는 데 필요한 `HttpClient` 개체를 선언합니다.  
+    - 이 메서드는 `HttpClient`의 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> 메서드에 액세스하는 데 필요한 `ProcessURLAsync` 개체를 선언합니다.  
   
-    - 메서드는 `TResult`가 정수인 <xref:System.Threading.Tasks.Task%601> 형식의 세 가지 작업을 만들고 시작합니다. 각 작업이 완료되면 `DisplayResults`에 작업의 URL 및 다운로드한 콘텐츠의 길이가 표시됩니다. 작업이 비동기적으로 실행되므로 결과가 표시되는 순서는 선언된 순서와 다를 수 있습니다.  
+    - 메서드는 <xref:System.Threading.Tasks.Task%601>가 정수인 `TResult` 형식의 세 가지 작업을 만들고 시작합니다. 각 작업이 완료되면 `DisplayResults`에 작업의 URL 및 다운로드한 콘텐츠의 길이가 표시됩니다. 작업이 비동기적으로 실행되므로 결과가 표시되는 순서는 선언된 순서와 다를 수 있습니다.  
   
     - 메서드는 각 작업이 완료될 때까지 기다립니다. 각 `await` 연산자는 대기된 작업이 완료될 때까지 `CreateMultipleTasksAsync`의 실행을 중단합니다. 또한 연산자는 완료된 각 작업에서 `ProcessURLAsync` 호출의 반환 값을 검색합니다.  
   
@@ -113,13 +113,13 @@ var result = await myTask;
         HttpClient client =  
             new HttpClient() { MaxResponseContentBufferSize = 1000000 };  
   
-        // Create and start the tasks. As each task finishes, DisplayResults   
+        // Create and start the tasks. As each task finishes, DisplayResults
         // displays its length.  
-        Task<int> download1 =   
+        Task<int> download1 =
             ProcessURLAsync("https://msdn.microsoft.com", client);  
-        Task<int> download2 =   
+        Task<int> download2 =
             ProcessURLAsync("https://msdn.microsoft.com/library/hh156528(VS.110).aspx", client);  
-        Task<int> download3 =   
+        Task<int> download3 =
             ProcessURLAsync("https://msdn.microsoft.com/library/67w7t67f.aspx", client);  
   
         // Await each task.  
@@ -138,7 +138,7 @@ var result = await myTask;
   
      프로그램을 여러 번 실행하여 세 가지 작업이 항상 동일한 순서로 완료되지는 않으며, 완료되는 순서가 생성 및 대기된 순서와 다를 수도 있음을 확인합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드에는 전체 예제가 포함되어 있습니다.  
   
 ```csharp  
@@ -183,13 +183,13 @@ namespace AsyncExample_MultipleTasks
             HttpClient client =  
                 new HttpClient() { MaxResponseContentBufferSize = 1000000 };  
   
-            // Create and start the tasks. As each task finishes, DisplayResults   
+            // Create and start the tasks. As each task finishes, DisplayResults
             // displays its length.  
-            Task<int> download1 =   
+            Task<int> download1 =
                 ProcessURLAsync("https://msdn.microsoft.com", client);  
-            Task<int> download2 =   
+            Task<int> download2 =
                 ProcessURLAsync("https://msdn.microsoft.com/library/hh156528(VS.110).aspx", client);  
-            Task<int> download3 =   
+            Task<int> download3 =
                 ProcessURLAsync("https://msdn.microsoft.com/library/67w7t67f.aspx", client);  
   
             // Await each task.  
@@ -212,7 +212,7 @@ namespace AsyncExample_MultipleTasks
   
         private void DisplayResults(string url, byte[] content)  
         {  
-            // Display the length of each website. The string format   
+            // Display the length of each website. The string format
             // is designed to be used with a monospaced font, such as  
             // Lucida Console or Global Monospace.  
             var bytes = content.Length;  

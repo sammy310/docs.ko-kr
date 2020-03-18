@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: 19f74e6835ae555a3a38aa6ca8679948c7f290dd
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 420b41f586a6980d40cf1171eef00dad37bf5abf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712756"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398060"
 ---
 # <a name="assignment-operators-c-reference"></a>대입 연산자(C# 참조)
 
@@ -31,13 +31,13 @@ a = (b = c)
 
 다음 예제에서는 로컬 변수, 속성 및 인덱서 요소를 왼쪽 피연산자로 포함해서 대입 연산자를 사용하는 방법을 보여 줍니다.
 
-[!code-csharp-interactive[simple assignment](~/samples/csharp/language-reference/operators/AssignmentOperator.cs#Simple)]
+[!code-csharp-interactive[simple assignment](snippets/AssignmentOperator.cs#Simple)]
 
 ## <a name="ref-assignment-operator"></a>ref 대입 연산자
 
 C# 7.3부터 ref 대입 연산자 `= ref`를 사용하여 [ref 지역](../keywords/ref.md#ref-locals) 또는 [ref readonly 지역](../keywords/ref.md#ref-readonly-locals) 변수를 다시 할당할 수 있습니다. 다음 예제에서는 ref 대입 연산자의 사용법을 보여 줍니다.
 
-[!code-csharp[ref assignment operator](~/samples/csharp/language-reference/operators/AssignmentOperator.cs#RefAssignment)]
+[!code-csharp[ref assignment operator](snippets/AssignmentOperator.cs#RefAssignment)]
 
 ref 대입 연산자의 경우 양쪽 피연산자의 형식이 같아야 합니다.
 
@@ -71,11 +71,11 @@ C# 8.0부터 null 병합 할당 연산자 `??=`를 사용하여 왼쪽 피연산
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [대입 연산자](~/_csharplang/spec/expressions.md#assignment-operators) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/expressions.md#assignment-operators)의 [대입 연산자](~/_csharplang/spec/introduction.md) 섹션을 참조하세요.
 
 ref 대입 연산자 `= ref`에 대한 자세한 내용은 [기능 제안 노트](~/_csharplang/proposals/csharp-7.3/ref-local-reassignment.md)를 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 연산자](index.md)

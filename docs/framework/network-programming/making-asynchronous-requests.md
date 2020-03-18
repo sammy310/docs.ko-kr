@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-ms.openlocfilehash: 3668975c31e9086ee15250dae939b75587f5c0c6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a49233596bafebd4f07372e59f29ea77afb21458
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047656"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180729"
 ---
 # <a name="making-asynchronous-requests"></a>비동기 요청 수행
 <xref:System.Net> 클래스에서는 인터넷 리소스에 비동기적으로 액세스하기 위해 .NET Framework의 표준 비동기 프로그래밍 모델을 사용합니다. <xref:System.Net.WebRequest> 클래스의 <xref:System.Net.WebRequest.BeginGetResponse%2A> 및 <xref:System.Net.WebRequest.EndGetResponse%2A> 메서드를 통해 인터넷 리소스의 비동기 요청을 시작하고 완료합니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "71047656"
   
 - `allDone` 속성에는 요청 완료를 알리는 <xref:System.Threading.ManualResetEvent> 클래스의 인스턴스가 있습니다.  
   
-- `Main()` 메서드에서 명령줄을 읽고 지정된 인터넷 리소스의 요청을 시작합니다. **WebRequest**`wreq` 및 **RequestState**`rs`를 만들고 **BeginGetResponse**를 호출하여 요청 처리를 시작한 다음 `allDone.WaitOne()` 메서드를 호출합니다. 그러면 콜백이 완료될 때까지 애플리케이션이 종료되지 않습니다. 인터넷 리소스에서 응답을 읽은 다음 `Main()`에서 콘솔에 응답을 쓰고 애플리케이션이 종료됩니다.  
+- `Main()` 메서드에서 명령줄을 읽고 지정된 인터넷 리소스의 요청을 시작합니다. **WebRequest** `wreq` 및 **RequestState** `rs`를 만들고 **BeginGetResponse**를 호출하여 요청 처리를 시작한 다음 `allDone.WaitOne()`메서드를 호출합니다. 그러면 콜백이 완료될 때까지 애플리케이션이 종료되지 않습니다. 인터넷 리소스에서 응답을 읽은 다음 `Main()`에서 콘솔에 응답을 쓰고 애플리케이션이 종료됩니다.  
   
 - `showusage()` 메서드를 통해 콘솔에 예제 명령줄을 씁니다. 명령줄에 URI가 제공되지 않으면 `Main()`을 통해 호출합니다.  
   
@@ -69,18 +69,18 @@ public class RequestState
       RequestData = new StringBuilder(String.Empty);  
       Request = null;  
       ResponseStream = null;  
-   }       
+   }
 }  
   
 // ClientGetAsync issues the async request.  
-class ClientGetAsync   
+class ClientGetAsync
 {  
    public static ManualResetEvent allDone = new ManualResetEvent(false);  
    const int BUFFER_SIZE = 1024;  
   
-   public static void Main(string[] args)   
+   public static void Main(string[] args)
    {  
-      if (args.Length < 1)   
+      if (args.Length < 1)
       {  
          showusage();  
          return;  
@@ -102,7 +102,7 @@ class ClientGetAsync
       IAsyncResult r = (IAsyncResult) wreq.BeginGetResponse(  
          new AsyncCallback(RespCallback), rs);  
   
-      // Wait until the ManualResetEvent is set so that the application   
+      // Wait until the ManualResetEvent is set so that the application
       // does not exit until after the callback is called.  
       allDone.WaitOne();  
   
@@ -127,18 +127,18 @@ class ClientGetAsync
   
       // Call EndGetResponse, which produces the WebResponse object  
       //  that came from the request issued above.  
-      WebResponse resp = req.EndGetResponse(ar);           
+      WebResponse resp = req.EndGetResponse(ar);
   
       //  Start reading data from the response stream.  
       Stream ResponseStream = resp.GetResponseStream();  
   
-      // Store the response stream in RequestState to read   
+      // Store the response stream in RequestState to read
       // the stream asynchronously.  
       rs.ResponseStream = ResponseStream;  
   
       //  Pass rs.BufferRead to BeginRead. Read data into rs.BufferRead  
-      IAsyncResult iarRead = ResponseStream.BeginRead(rs.BufferRead, 0,   
-         BUFFER_SIZE, new AsyncCallback(ReadCallBack), rs);   
+      IAsyncResult iarRead = ResponseStream.BeginRead(rs.BufferRead, 0,
+         BUFFER_SIZE, new AsyncCallback(ReadCallBack), rs);
    }  
   
    private static void ReadCallBack(IAsyncResult asyncResult)  
@@ -146,10 +146,10 @@ class ClientGetAsync
       // Get the RequestState object from AsyncResult.  
       RequestState rs = (RequestState)asyncResult.AsyncState;  
   
-      // Retrieve the ResponseStream that was set in RespCallback.   
+      // Retrieve the ResponseStream that was set in RespCallback.
       Stream responseStream = rs.ResponseStream;  
   
-      // Read rs.BufferRead to verify that it contains data.   
+      // Read rs.BufferRead to verify that it contains data.
       int read = responseStream.EndRead( asyncResult );  
       if (read > 0)  
       {  
@@ -158,7 +158,7 @@ class ClientGetAsync
   
          // Convert byte stream to Char array and then to String.  
          // len contains the number of characters converted to Unicode.  
-      int len =   
+      int len =
          rs.StreamDecode.GetChars(rs.BufferRead, 0, read, charBuffer, 0);  
   
          String str = new String(charBuffer, 0, len);  
@@ -166,12 +166,12 @@ class ClientGetAsync
          // Append the recently read data to the RequestData stringbuilder  
          // object contained in RequestState.  
          rs.RequestData.Append(  
-            Encoding.ASCII.GetString(rs.BufferRead, 0, read));           
+            Encoding.ASCII.GetString(rs.BufferRead, 0, read));
   
-         // Continue reading data until   
+         // Continue reading data until
          // responseStream.EndRead returns –1.  
-         IAsyncResult ar = responseStream.BeginRead(   
-            rs.BufferRead, 0, BUFFER_SIZE,   
+         IAsyncResult ar = responseStream.BeginRead(
+            rs.BufferRead, 0, BUFFER_SIZE,
             new AsyncCallback(ReadCallBack), rs);  
       }  
       else  
@@ -179,16 +179,16 @@ class ClientGetAsync
          if(rs.RequestData.Length>0)  
          {  
             //  Display data to the console.  
-            string strContent;                    
+            string strContent;
             strContent = rs.RequestData.ToString();  
          }  
          // Close down the response stream.  
-         responseStream.Close();           
+         responseStream.Close();
          // Set the ManualResetEvent so the main thread can exit.  
-         allDone.Set();                             
+         allDone.Set();
       }  
       return;  
-   }      
+   }
 }  
 ```  
   
@@ -302,9 +302,9 @@ Class ClientGetAsync
          ' len contains the number of characters converted to Unicode.  
          Dim len As Integer = _  
            rs.StreamDecode.GetChars(rs.BufferRead, 0, read, charBuffer, 0)  
-         Dim str As String = new String(charBuffer, 0, len)      
+         Dim str As String = new String(charBuffer, 0, len)
   
-         ' Append the recently read data to the RequestData stringbuilder   
+         ' Append the recently read data to the RequestData stringbuilder
          ' object contained in RequestState.  
          rs.RequestData.Append( _  
             Encoding.ASCII.GetString(rs.BufferRead, 0, read))  
@@ -334,6 +334,6 @@ Class ClientGetAsync
 End Class  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [데이터 요청](requesting-data.md)

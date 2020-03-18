@@ -2,12 +2,12 @@
 title: dotnet tool list 명령
 description: dotnet tool list 명령은 컴퓨터에 설치된 .NET Core 도구를 나열합니다.
 ms.date: 02/14/2020
-ms.openlocfilehash: f231dcfe64a925f75f948d508e7a2d83befd9a00
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: def3c345a775e5a65ec3d37718d207c80ca7ceee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156987"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847874"
 ---
 # <a name="dotnet-tool-list"></a>dotnet tool list
 
@@ -21,8 +21,11 @@ ms.locfileid: "78156987"
 
 ```dotnetcli
 dotnet tool list <-g|--global>
+
 dotnet tool list <--tool-path>
+
 dotnet tool list
+
 dotnet tool list <-h|--help>
 ```
 
@@ -71,3 +74,5 @@ dotnet tool list <-h|--help>
 ## <a name="see-also"></a>참조
 
 - [.NET Core 도구](global-tools.md)
+- [자습서: .NET Core CLI를 사용하여 .NET Core 전역 도구 설치 및 사용](global-tools-how-to-use.md)
+- [자습서: .NET Core CLI를 사용하여 .NET Core 로컬 도구 설치 및 사용](local-tools-how-to-use.md)

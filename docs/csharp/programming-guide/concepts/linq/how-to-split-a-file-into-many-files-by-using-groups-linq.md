@@ -2,12 +2,12 @@
 title: 그룹을 사용하여 파일을 여러 파일로 분할하는 방법(LINQ)(C#)
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: 934b6385a8634c23a4e29098367c9aaa7355f11c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 654b444c26f2868c4e2b0e2893a639ebc6cacabf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347313"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168572"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>그룹을 사용하여 파일을 여러 파일로 분할하는 방법(LINQ)(C#)
 이 예제에서는 두 파일의 내용을 병합한 다음 새로운 방식으로 데이터를 구성하는 새 파일 집합을 만드는 한 가지 방법을 보여 줍니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "75347313"
     Garcia, Debra  
     ```  
   
-2. 이러한 이름을 names2.txt 텍스트 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다. 두 파일의 일부 이름에는 공통점이 있습니다.  
+2. 이러한 이름을 names2.txt 텍스트 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다. 두 파일에서 일부 이름은 공통됩니다.  
   
     ```text  
     Liu, Jinghao  
@@ -92,7 +92,7 @@ class SplitWithGroups
         Console.ReadKey();  
     }  
 }  
-/* Output:   
+/* Output:
     A  
        Aw, Kam Foo  
     B  
@@ -128,7 +128,7 @@ class SplitWithGroups
 
 System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 통해 C# 콘솔 애플리케이션 프로젝트를 만듭니다.
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [LINQ 및 문자열(C#)](./linq-and-strings.md)
 - [LINQ 및 파일 디렉터리(C#)](./linq-and-file-directories.md)

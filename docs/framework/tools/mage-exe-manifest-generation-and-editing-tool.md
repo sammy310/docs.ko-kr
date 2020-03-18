@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 3752ac7108a9fcd55b61b32b889a717ef7c0faff
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: b04fda81ae51462d9e686585de1477b4c9af4b26
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714469"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180387"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe(매니페스트 생성 및 편집 도구)
 
@@ -70,7 +70,7 @@ Mage [commands] [commandOptions]
 |**-tr, -TrustLevel** `level`|애플리케이션 URL이 있는 영역을 기반으로 합니다.|애플리케이션 매니페스트|클라이언트 컴퓨터의 애플리케이션에 부여할 신뢰 수준입니다. 유효한 값은 "Internet", "Intranet" 및 "FullTrust" 등입니다.|
 |**-um, -UseManifestForTrust** `willUseForTrust`|False|애플리케이션 매니페스트|클라이언트에서 애플리케이션이 실행될 때 애플리케이션 매니페스트의 디지털 서명을 사용하여 신뢰 관련 결정을 내릴지 여부를 지정합니다. "true" 또는 "t"를 지정하면 애플리케이션 매니페스트를 사용하여 신뢰 관련 결정을 내립니다. "false" 또는 "f"를 지정하면 배포 매니페스트의 서명이 사용됩니다.|
 |**-v, -Version** `versionNumber`|1.0.0.0|애플리케이션 매니페스트<br /><br /> 배포 매니페스트|배포의 버전입니다. 인수는 "*N.N.N.N*" 형식의 유효한 버전의 문자열이어야 하며, 여기서 "*N*"은 부호 없는 32비트 정수입니다.|
-|**-wpf, -WPFBrowserApp**  `isWPFApp`|False|애플리케이션 매니페스트<br /><br /> 배포 매니페스트|애플리케이션이 독립형 실행 파일이 아닌 Internet Explorer 내에 호스팅되는 WPF(Windows Presentation Foundation) 애플리케이션인 경우에만 이 플래그를 사용합니다. 유효한 값은 "true" 또는 "t"와 "false" 또는 "f"입니다.<br /><br /> 애플리케이션 매니페스트의 경우 `hostInBrowser` 요소 아래에 `entryPoint` 특성을 삽입합니다.<br /><br /> 배포 매니페스트의 경우 `install` 요소의 `deployment` 특성을 false로 설정하고 배포 매니페스트를 .xbap 확장명으로 저장합니다. 이 인수를 **-Install** 인수와 함께 지정하면 브라우저에서 호스트되는 애플리케이션을 오프라인 애플리케이션으로 설치할 수 없으므로 오류가 발생합니다.|
+|**-wpf, -WPFBrowserApp**  `isWPFApp`|false|애플리케이션 매니페스트<br /><br /> 배포 매니페스트|애플리케이션이 독립형 실행 파일이 아닌 Internet Explorer 내에 호스팅되는 WPF(Windows Presentation Foundation) 애플리케이션인 경우에만 이 플래그를 사용합니다. 유효한 값은 "true" 또는 "t"와 "false" 또는 "f"입니다.<br /><br /> 애플리케이션 매니페스트의 경우 `hostInBrowser` 요소 아래에 `entryPoint` 특성을 삽입합니다.<br /><br /> 배포 매니페스트의 경우 `install` 요소의 `deployment` 특성을 false로 설정하고 배포 매니페스트를 .xbap 확장명으로 저장합니다. 이 인수를 **-Install** 인수와 함께 지정하면 브라우저에서 호스트되는 애플리케이션을 오프라인 애플리케이션으로 설치할 수 없으므로 오류가 발생합니다.|
 
 ## <a name="sign-command-options"></a>Sign 명령 옵션
 
@@ -115,7 +115,7 @@ Visual Studio 2017에는 *Mage.exe*의 4.6.1 버전이 포함되어 있습니다
 
 다음 표에서는 이러한 기능 및 제한 사항을 보여 줍니다.
 
-|매니페스트 버전|작업|Mage v2.0|Mage v4.0|
+|매니페스트 버전|연산|Mage v2.0|Mage v4.0|
 |----------------------|---------------|---------------|---------------|
 |.NET Framework 버전 2.0 또는 3.x를 대상으로 하는 애플리케이션 매니페스트|열기|확인|확인|
 ||닫기|확인|확인|
@@ -217,7 +217,7 @@ mage -Sign deploy.application -CertFile cert.pfx -Password <passwd>
 mage -Sign deploy.application -CertFile cert.pfx -KeyContainer keyfile.snk -CryptoProvider "Microsoft Enhanced Cryptographic Provider v1.0"
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)
 - [연습: 수동으로 ClickOnce 애플리케이션 배포](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)

@@ -8,17 +8,17 @@ helpviewer_keywords:
 - read/write properties [C#]
 - accessors [C#], declaring properties with
 ms.assetid: a4962fef-af7e-4c4b-a929-4ae4d646ab8a
-ms.openlocfilehash: 5b880cfc3ace197a3bad2f707cf55543dbe7b78e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4b9db5f15746ab9a1f42239150c6783154723371
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714926"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170288"
 ---
 # <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>읽기/쓰기 속성 선언 및 사용 방법(C# 프로그래밍 가이드)
 속성은 개체 데이터에 대한 액세스가 보호, 제어, 확인되지 않을 위험 없이 공용 데이터 멤버의 편리함을 제공합니다. 이를 위해 기본 데이터 멤버의 값을 할당하고 검색하는 특수 메서드인 *접근자*가 사용됩니다. [set](../../language-reference/keywords/set.md) 접근자를 통해 데이터 멤버를 할당할 수 있으며, [get](../../language-reference/keywords/get.md) 접근자는 데이터 멤버 값을 검색합니다.  
   
- 이 샘플에서는 `Name`(string) 및 `Age`(int)의 두 속성이 있는 `Person` 클래스를 보여 줍니다. 두 속성 모두 `get` 및 `set` 접근자를 제공하므로 읽기/쓰기 속성으로 간주됩니다.  
+ 이 샘플에서는 `Person`(string) 및 `Name`(int)의 두 속성이 있는 `Age` 클래스를 보여 줍니다. 두 속성 모두 `get` 및 `set` 접근자를 제공하므로 읽기/쓰기 속성으로 간주됩니다.  
   
 ## <a name="example"></a>예제  
  [!code-csharp[csProgGuideObjects#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#33)]  
@@ -38,14 +38,14 @@ ms.locfileid: "75714926"
   
  [!code-csharp[csProgGuideObjects#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#36)]  
   
- `Person` 개체의 `Age` 속성을 증가하기 위한 정리된 구문은 다음과 같습니다.  
+ `Age` 개체의 `Person` 속성을 증가하기 위한 정리된 구문은 다음과 같습니다.  
   
  [!code-csharp[csProgGuideObjects#37](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#37)]  
   
  개별 `set` 및 `get` 메서드를 사용하여 속성을 모델링한 경우 동등한 코드가 다음과 같이 표시될 수 있습니다.  
   
 ```csharp  
-person.SetAge(person.GetAge() + 1);   
+person.SetAge(person.GetAge() + 1);
 ```  
   
  다음 예제에서는 `ToString` 메서드가 재정의되었습니다.  
@@ -54,7 +54,7 @@ person.SetAge(person.GetAge() + 1);
   
  `ToString`이 프로그램에서 명시적으로 사용되지 않고 기본적으로 `WriteLine` 호출에 의해 호출됩니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [속성](./properties.md)

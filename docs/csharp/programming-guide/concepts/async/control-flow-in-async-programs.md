@@ -3,10 +3,10 @@ title: 비동기 프로그램의 제어 흐름(C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
 ms.openlocfilehash: 99f80a86f14179c5f270064a9f96e35f8611ef13
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70204447"
 ---
 # <a name="control-flow-in-async-programs-c"></a>비동기 프로그램의 제어 흐름(C#)
@@ -274,7 +274,7 @@ Length of the downloaded string: 33946.
 
 처음 두 표시 줄은 `startButton_Click`이 `AccessTheWebAsync`를 호출하고, `AccessTheWebAsync`가 비동기 <xref:System.Net.Http.HttpClient> 메서드 <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>을 호출할 때 경로를 추적합니다. 다음 그림은 메서드 간의 호출을 간단히 보여 줍니다.
 
-![1단계 및 2단계](./media/asynctrace-onetwo.png "AsyncTrace-ONETWO")
+![1, 2단계](./media/asynctrace-onetwo.png "AsyncTrace-ONETWO")
 
 `AccessTheWebAsync` 및 `client.GetStringAsync`의 반환 형식은 둘 다 <xref:System.Threading.Tasks.Task%601>입니다. `AccessTheWebAsync`의 경우 TResult는 정수입니다. `GetStringAsync`의 경우 TResult는 문자열입니다. 비동기 메서드 반환 형식에 대한 자세한 내용은 [비동기 반환 형식(C#)](./async-return-types.md)을 참조하세요.
 
@@ -385,7 +385,7 @@ int contentLength = await getLengthTask;
 
  ![6단계](./media/asynctrace-six.png "AsyncTrace-SIX")
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [async 및 await를 사용한 비동기 프로그래밍(C#)](./index.md)
 - [비동기 반환 형식(C#)](./async-return-types.md)

@@ -3,10 +3,10 @@ title: 도메인 이벤트. 디자인 및 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 집계 간에 통신을 설정하는 주요 개념인 도메인 이벤트의 세부적인 보기를 가져옵니다.
 ms.date: 10/08/2018
 ms.openlocfilehash: 3bba18d4a77b47abee55c16bae8a64ed27ac9aba
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74884230"
 ---
 # <a name="domain-events-design-and-implementation"></a>도메인 이벤트: 디자인 및 구현
@@ -71,7 +71,7 @@ ms.locfileid: "74884230"
 2. 명령 처리기에서 명령 수신하기
    - 단일 집계의 트랜잭션 실행
    - (선택 사항) 파생 작업에 대해 도메인 이벤트 발생시키기(예: OrderStartedDomainEvent)
-3. 여러 집합체나 애플리케이션 동작에서 다수의 파생 작업을 실행하는 도메인 이벤트(현재 프로세스 내) 처리 예:
+3. 여러 집합체나 애플리케이션 동작에서 다수의 파생 작업을 실행하는 도메인 이벤트(현재 프로세스 내) 처리 예를 들어:
    - buyer(구매자) 및 payment(지불) 메서드를 검증 또는 생성합니다.
    - 관련 통합 이벤트를 생성하고 이벤트 버스에 보내서 마이크로 서비스에 상태를 전파하거나 외부 동작(예: 구매자에게 이메일 보내기)을 트리거합니다.
    - 다른 파생 작업을 처리합니다.
@@ -136,7 +136,7 @@ Udi Dahan은 이벤트를 관리하고 발생시키기 위해 정적 클래스�
 
 #### <a name="the-deferred-approach-to-raise-and-dispatch-events"></a>발생 및 디스패치 이벤트에 대한 지연된 접근 방법
 
-도메인 이벤트 처리기에 즉시 디스패치하는 것보다 좋은 방법은 도메인 이벤트를 컬렉션에 추가한 다음, 트랜잭션을 커밋하기 *직전*이나 *바로* *후*에 도메인 이벤트를 디스패치하는 것입니다(EF의 SaveChanges와 같이). (이 방식은 Jimmy Bogard의 게시물인 [A better domain events pattern](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)(더 나은 도메인 이벤트 패턴)에 설명되어 있습니다.)
+도메인 이벤트 처리기에 즉시 디스패치하는 것보다 좋은 방법은 도메인 이벤트를 컬렉션에 추가한 다음, 트랜잭션을 커밋하기 ‘직전’이나 ‘바로 후’에 도메인 이벤트를 디스패치하는 것입니다(EF의 SaveChanges와 같이).    (이 방식은 Jimmy Bogard의 게시물인 [A better domain events pattern](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)(더 나은 도메인 이벤트 패턴)에 설명되어 있습니다.)
 
 도메인 이벤트를 트랜잭션을 커밋하기 직전에 보낼지 또는 직후에 보낼지를 결정하는 것은 중요합니다. 그에 따라 파생 작업을 동일한 이벤트의 일부로 포함시킬 지 또는 다른 트랙잭션에 포함시킬 지가 결정되기 때문입니다. 후자의 경우 여러 집합체 전반에서 최종 일관성을 처리해야 합니다. 이 토픽은 다음 섹션에 설명되어 있습니다.
 

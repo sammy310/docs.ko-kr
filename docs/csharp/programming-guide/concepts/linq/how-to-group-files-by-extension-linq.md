@@ -2,12 +2,12 @@
 title: 확장명에 따라 파일을 그룹화하는 방법(LINQ)(C#)
 ms.date: 07/20/2015
 ms.assetid: 21a98320-a5a1-4981-82d8-6a637e7d9018
-ms.openlocfilehash: d12b40c7dba7bd3e10f30ddfd394b25c36794428
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 2ee1fa1291f5845c818395dfe038ec5894adc863
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345896"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169157"
 ---
 # <a name="how-to-group-files-by-extension-linq-c"></a>확장명에 따라 파일을 그룹화하는 방법(LINQ)(C#)
 이 예제에서는 LINQ를 사용하여 파일 또는 폴더 목록에 대해 고급 그룹화 및 정렬 작업을 수행하는 방법을 보여 줍니다. 또한 <xref:System.Linq.Enumerable.Skip%2A> 및 <xref:System.Linq.Enumerable.Take%2A> 메서드를 사용하여 콘솔 창에서 출력을 페이징하는 방법을 보여 줍니다.  
@@ -42,7 +42,7 @@ class GroupByExtension
             orderby fileGroup.Key  
             select fileGroup;  
   
-        // Display one group at a time. If the number of   
+        // Display one group at a time. If the number of
         // entries is greater than the number of lines  
         // in the console window, then page the output.  
         PageOutput(trimLength, queryGroupByExt);  
@@ -107,7 +107,7 @@ class GroupByExtension
 ## <a name="compiling-the-code"></a>코드 컴파일  
  System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 통해 C# 콘솔 애플리케이션 프로젝트를 만듭니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [LINQ to Objects(C#)](./linq-to-objects.md)
 - [LINQ 및 파일 디렉터리(C#)](./linq-and-file-directories.md)

@@ -3,10 +3,10 @@ title: 피어 이름 및 PNRP ID
 ms.date: 03/30/2017
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
 ms.openlocfilehash: 15b74317507f69d2339a2e5e49b54ae72cda1a7b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047499"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>피어 이름 및 PNRP ID
@@ -30,7 +30,7 @@ ms.locfileid: "71047499"
   
  이렇게 PNRP ID는 P2P ID와 서비스 위치가 조합된 형식이기 때문에 단일 컴퓨터에서 여러 PNRP ID를 등록할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Net.PeerToPeer.PeerName>
 - <xref:System.Net.PeerToPeer>

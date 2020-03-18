@@ -1,13 +1,13 @@
 ---
 title: eShopOnContainers의 DDD 마이크로 서비스에서 CQRS 및 CQS 방법 적용
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | eShopOnContainers의 주문 마이크로 서비스에서 CQRS가 구현되는 방식을 이해합니다.
-ms.date: 10/08/2018
-ms.openlocfilehash: 0380e759595e8a159e89f858a5ced4dacfa4e9b4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.date: 03/03/2020
+ms.openlocfilehash: 16fe46189a5b43591adebbb764d4acef2f7efbfb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674130"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847156"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>eShopOnContainers의 DDD 마이크로 서비스에서 CQRS 및 CQS 방법 적용
 
@@ -23,7 +23,7 @@ EShopOnContainers 참조 애플리케이션의 주문 마이크로 서비스 설
 
 이후의 섹션에서 상세히 다룰 집계가 바로 그러한 패턴입니다. 간략히 말해 집계 패턴에서는 도메인에서의 관계에 따른 결과로 여러 도메인 개체를 단일 단위로 취급합니다. 쿼리에서 이 패턴이 항상 장점만 있는 것은 아닙니다. 쿼리 논리의 복잡성을 높일 수 있습니다. 읽기 전용 쿼리의 경우 여러 개체를 단일 집계로 취급하는 것이 장점이 없습니다. 복잡성만 커집니다.
 
-그림 7-2와 같이 이 가이드는 마이크로 서비스의 트랜잭션/업데이트 영역(즉, 명령에 의해 트리거됨)에서만 DDD 패턴을 사용할 것을 권고합니다. 쿼리는 더 간단한 방식을 따를 수 있고 CQRS 방식에 따라 명령과 구분될 수 있습니다.
+이전 섹션의 그림 7-2와 같이 이 가이드는 마이크로 서비스의 트랜잭션/업데이트 영역(즉, 명령에 의해 트리거됨)에서만 DDD 패턴을 사용할 것을 권고합니다. 쿼리는 더 간단한 방식을 따를 수 있고 CQRS 방식에 따라 명령과 구분될 수 있습니다.
 
 "쿼리 측" 구현을 위해 EF Core, AutoMapper 프로젝션 같은 종합 ORM, 저장 프로시저, 뷰, 구체화된 뷰나 마이크로 ORM 등, 여러 방식 중에서 선택할 수 있습니다.
 

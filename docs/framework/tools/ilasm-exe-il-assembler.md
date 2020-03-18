@@ -12,10 +12,10 @@ helpviewer_keywords:
 - verifying MSIL performance
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 ms.openlocfilehash: cb995e78e534048043886070536ef0dd0a45c057
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73105100"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe(IL 어셈블러)
@@ -225,7 +225,7 @@ public class Hello
 } // end of class Hello
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [도구](index.md)
 - [*Ildasm.exe*(IL 디스어셈블러)](ildasm-exe-il-disassembler.md)

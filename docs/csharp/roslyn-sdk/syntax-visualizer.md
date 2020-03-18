@@ -3,12 +3,12 @@ title: Visual Studio에서 Roslyn 구문 시각화 도우미를 사용하여 코
 description: 구문 시각화 도우미는 .NET Compiler Platform SDK에서 코드용으로 생성하는 모델을 탐색할 수 있는 시각적 도구를 제공합니다.
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: c4b4414dabcb6c9749a23d726e4a69334376d988
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 27e5a1f0b31dd2af2ac779223538b03cdb4db0c5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346970"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156989"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Visual Studio에서 Roslyn 구문 시각화 도우미를 사용하여 코드 탐색
 
@@ -22,7 +22,7 @@ ms.locfileid: "75346970"
 
 **Syntax Visualizer**를 사용하면 Visual Studio IDE 내의 현재 활성 편집기 창에서 C# 또는 Visual Basic 코드 파일에 대한 구문 트리를 검사할 수 있습니다. 시각화 도우미는 **보기** > **다른 창** > **구문 시각화 도우미**를 클릭하여 시작할 수 있습니다.  오른쪽 위 모서리에 있는 **빠른 실행** 도구 모음을 사용할 수도 있습니다. "구문"을 입력하면 **구문 시각화 도우미**를 여는 명령이 나타납니다.
 
-이 명령은 구문 시각화 도우미를 부동 도구 창으로 엽니다. 코드 편집기 창이 열려 있지 않은 경우 다음 그림과 같이 디스플레이가 비어 있습니다. 
+이 명령은 구문 시각화 도우미를 부동 도구 창으로 엽니다. 코드 편집기 창이 열려 있지 않은 경우 다음 그림과 같이 디스플레이가 비어 있습니다.
 
 ![구문 시각화 도우미 도구 창](media/syntax-visualizer/syntax-visualizer.png)
 
@@ -32,10 +32,10 @@ ms.locfileid: "75346970"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 ![C# 구문 트리 시각화](media/syntax-visualizer/visualize-csharp.png)
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 ![Visual Basic 구문 트리 시각화](media/syntax-visualizer/visualize-visual-basic.png)
 
 ---
@@ -49,27 +49,27 @@ ms.locfileid: "75346970"
 트리를 탐색하는 방법은 두 가지가 있습니다.
 
 * 트리에서 항목을 확장하거나 클릭합니다. 시각화 도우미는 코드 편집기에서 이 항목의 범위에 해당하는 텍스트를 자동으로 선택합니다.
-* 코드 편집기에서 텍스트를 클릭하거나 선택합니다. 앞의 Visual Basic 예제에서 코드 편집기에 "모듈 Module1"이 포함된 줄을 선택하면 시각화 도우미가 트리의 해당 ModuleStatement 노드로 자동 이동합니다. 
+* 코드 편집기에서 텍스트를 클릭하거나 선택합니다. 앞의 Visual Basic 예제에서 코드 편집기에 "모듈 Module1"이 포함된 줄을 선택하면 시각화 도우미가 트리의 해당 ModuleStatement 노드로 자동 이동합니다.
 
 시각화 도우미는 트리에서 편집기의 선택된 텍스트 범위와 가장 일치하는 항목을 강조 표시합니다.
 
-시각화 도우미는 활성 코드 파일의 수정 내용과 일치하도록 트리를 새로 고칩니다. `Main()` 내의 `Console.WriteLine()`에 대한 호출을 추가합니다. 입력할 때 시각화 도우미는 트리를 새로 고칩니다.
+시각화 도우미는 활성 코드 파일의 수정 내용과 일치하도록 트리를 새로 고칩니다. `Console.WriteLine()` 내의 `Main()`에 대한 호출을 추가합니다. 입력할 때 시각화 도우미는 트리를 새로 고칩니다.
 
 `Console.`을 입력하면 입력을 일시 중지합니다. 트리에는 분홍색으로 채색된 일부 항목이 있습니다. 이때 입력된 코드에는 오류(‘진단’이라고도 함)가 있습니다. 이러한 오류는 구문 트리의 노드, 토큰 및 퀴즈에 첨부됩니다. 시각화 도우미에서는 분홍색으로 배경을 강조 표시하여 어떤 항목에 오류가 첨부되어 있는지 보여줍니다. 항목을 마우스로 가리키면 분홍색으로 표시된 항목의 오류를 검사할 수 있습니다. 시각화 도우미는 구문 오류(입력된 코드의 구문과 관련된 오류)만 표시하고, 의미 체계 오류는 표시하지 않습니다.
- 
+
 ## <a name="syntax-graphs"></a>구문 그래프
 
-트리에서 원하는 항목을 마우스 오른쪽 단추로 클릭하고 **직접 구문 그래프 보기**를 클릭합니다. 
+트리에서 원하는 항목을 마우스 오른쪽 단추로 클릭하고 **직접 구문 그래프 보기**를 클릭합니다.
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
-시각화 도우미는 선택한 항목을 루트로 하는 하위 트리의 그래픽 표현을 표시합니다. C# 예제에서 `Main()`메서드에 해당하는 **MethodDeclaration** 노드에 대해 이 단계를 시도합니다. 시각화 도우미는 다음과 같이 보이는 구문 그래프를 표시합니다.
+시각화 도우미는 선택한 항목을 루트로 하는 하위 트리의 그래픽 표현을 표시합니다. C# 예제에서 **메서드에 해당하는** MethodDeclaration`Main()` 노드에 대해 이 단계를 시도합니다. 시각화 도우미는 다음과 같이 보이는 구문 그래프를 표시합니다.
 
 ![C# 구문 그래프 보기](media/syntax-visualizer/csharp-syntax-graph.png)
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
-위의 Visual Basic 예제에서 `Main()` 메서드에 해당하는 **SubBlock** 노드에 대해 동일하게 시도합니다. 시각화 도우미는 다음과 같이 보이는 구문 그래프를 표시합니다.
+위의 Visual Basic 예제에서 **메서드에 해당하는**SubBlock`Main()` 노드에 대해 동일하게 시도합니다. 시각화 도우미는 다음과 같이 보이는 구문 그래프를 표시합니다.
 
 ![Visual Basic 구문 그래프 보기](media/syntax-visualizer/visual-basic-syntax-graph.png)
 
@@ -87,9 +87,9 @@ ms.locfileid: "75346970"
 
 ## <a name="inspecting-semantics"></a>의미 체계 검사
 
-구문 시각화 도우미는 기호 및 의미 체계 정보에 대한 기본 검사를 수행합니다. C# 예제에서는 Main() 안에 `double x = 1 + 1;`을 입력합니다. 그런 다음, 코드 편집기 창에서 식 `1 + 1`을 선택합니다. 시각화 도우미는 시각화 도우미에서 **AddExpression** 노드를 강조 표시합니다. 이 **AddExpression**을 마우스 오른쪽 단추로 클릭하고 **기호 보기(있는 경우)** 를 클릭합니다. 대부분의 메뉴 항목에는 "해당되는 경우" 한정자가 있습니다. 구문 시각화 도우미는 모든 노드에 대해 나타나지 않을 수 있는 속성을 포함한 노드의 속성을 검사합니다. 
+구문 시각화 도우미는 기호 및 의미 체계 정보에 대한 기본 검사를 수행합니다. C# 예제에서는 Main() 안에 `double x = 1 + 1;`을 입력합니다. 그런 다음, 코드 편집기 창에서 식 `1 + 1`을 선택합니다. 시각화 도우미는 시각화 도우미에서 **AddExpression** 노드를 강조 표시합니다. 이 **AddExpression**을 마우스 오른쪽 단추로 클릭하고 **기호 보기(있는 경우)** 를 클릭합니다. 대부분의 메뉴 항목에는 "해당되는 경우" 한정자가 있습니다. 구문 시각화 도우미는 모든 노드에 대해 나타나지 않을 수 있는 속성을 포함한 노드의 속성을 검사합니다.
 
-시각화 도우미의 속성 그리드는 다음 그림과 같이 업데이트됩니다. 식의 기호는 **Kind = Method**인 **SynthesizedIntrinsicOperatorSymbol**입니다.
+시각화 도우미의 속성 그리드가 다음 그림과 같이 업데이트됩니다. 식의 기호는 **SynthesizedIntrinsicOperatorSymbol**이고 **Kind = Method**입니다.
 
 ![기호 속성](media/syntax-visualizer/symbol-properties.png)
 
@@ -97,7 +97,7 @@ ms.locfileid: "75346970"
 
 ![TypeSymbol 속성](media/syntax-visualizer/type-symbol-properties.png)
 
-동일한 **AddExpression** 노드에 대해 **변환된 TypeSymbol 보기(있는 경우)** 를 시도합니다. 다음 그림과 같이 식 형식이 `Int32`이지만 변환된 식 형식이 `Double`임을 나타내도록 속성 그리드가 업데이트됩니다. `Int32` 식은 `Double`로 변환되어야 하는 컨텍스트에서 발생하므로 이 노드에는 변환된 형식 기호 정보가 포함됩니다. 이 변환은 대입 연산자의 왼쪽에 있는 변수 `x`에 대해 지정된 `Double` 형식을 충족시킵니다.
+동일한 **AddExpression** 노드에 대해 **변환된 TypeSymbol 보기(있는 경우)** 를 시도합니다. 다음 그림과 같이 식 형식이 `Int32`이지만 변환된 식 형식이 `Double`임을 나타내도록 속성 그리드가 업데이트됩니다. `Int32` 식은 `Double`로 변환되어야 하는 컨텍스트에서 발생하므로 이 노드에는 변환된 형식 기호 정보가 포함됩니다. 이 변환은 대입 연산자의 왼쪽에 있는 변수 `Double`에 대해 지정된 `x` 형식을 충족시킵니다.
 
 ![변환된 TypeSymbol 속성](media/syntax-visualizer/converted-type-symbol-properties.png)
 
@@ -119,11 +119,11 @@ Module Program
 End Module
 ```
 
-이 코드에서는 파일 위에 있는 `System.Console` 형식에 매핑되는 `C`라는 별칭을 소개하고 `Main()` 내부에서 이 별칭을 사용합니다. `Main()` 메서드 내에서 이 별칭(`C.WriteLine()`의 `C`)의 사용을 선택합니다. 시각화 도우미는 시각화 도우미에서 해당 **IdentifierName** 노드를 선택합니다. 이 노드를 마우스 오른쪽 단추로 클릭하고 **기호 보기(있는 경우)** 를 클릭합니다. 속성 그리드는 다음 그림과 같이 이 식별자가 형식 `System.Console`에 바인딩되어 있음을 나타냅니다.
+이 코드에서는 파일 위에 있는 `C` 형식에 매핑되는 `System.Console`라는 별칭을 소개하고 `Main()` 내부에서 이 별칭을 사용합니다. `C` 메서드 내에서 이 별칭(`C.WriteLine()`의 `Main()`)의 사용을 선택합니다. 시각화 도우미는 시각화 도우미에서 해당 **IdentifierName** 노드를 선택합니다. 이 노드를 마우스 오른쪽 단추로 클릭하고 **기호 보기(있는 경우)** 를 클릭합니다. 속성 그리드는 다음 그림과 같이 이 식별자가 형식 `System.Console`에 바인딩되어 있음을 나타냅니다.
 
 ![기호 속성](media/syntax-visualizer/symbol-visual-basic.png)
 
-동일한 **IdentifierName** 노드에 대해 **AliasSymbol 보기(있는 경우)** 를 시도합니다. 속성 그리드는 식별자가 `System.Console` 대상에 바인딩된 이름이 `C`인 별칭임을 나타냅니다. 즉, 속성 그리드는 식별자 `C`에 해당하는 **AliasSymbol**에 대한 정보를 제공합니다.
+동일한 **IdentifierName** 노드에 대해 **AliasSymbol 보기(있는 경우)** 를 시도합니다. 속성 그리드는 식별자가 `C` 대상에 바인딩된 이름이 `System.Console`인 별칭임을 나타냅니다. 즉, 속성 그리드는 식별자 **에 해당하는** AliasSymbol`C`에 대한 정보를 제공합니다.
 
 ![AliasSymbol 속성](media/syntax-visualizer/alias-symbol.png)
 
@@ -131,7 +131,7 @@ End Module
 
 ![메서드 선언의 기호 보기](media/syntax-visualizer/method-symbol.png)
 
-위의 Visual Basic 예제는 C#에서 쉽게 복제할 수 있습니다. 별칭에 대해 `Imports C = System.Console` 대신 `using C = System.Console;`을 입력합니다. C#의 앞 단계는 시각화 도우미 창에서 동일한 결과를 생성합니다.
+위의 Visual Basic 예제는 C#에서 쉽게 복제할 수 있습니다. 별칭에 대해 `using C = System.Console;` 대신 `Imports C = System.Console`을 입력합니다. C#의 앞 단계는 시각화 도우미 창에서 동일한 결과를 생성합니다.
 
 의미 체계 검사 작업은 노드에서만 사용할 수 있습니다. 토큰 또는 퀴즈에는 사용할 수 없습니다. 모든 노드에 검사할 흥미있는 의미 체계 정보가 있는 것은 아닙니다. 노드에 흥미로운 의미 체계 정보가 없을 경우 **\* 기호 보기(있는 경우)** 를 클릭하면 빈 속성 그리드가 표시됩니다.
 
@@ -139,4 +139,4 @@ End Module
 
 ## <a name="closing-the-syntax-visualizer"></a>구문 시각화 도우미 닫기
 
-소스 코드 검사에 사용하고 있지 않을 때 시각화 도우미 창을 닫을 수 있습니다. 구문 시각화 도우미는 코드를 탐색하고 소스를 편집 및 변경하면서 해당 디스플레이를 업데이트합니다. 사용하지 않을 때 혼란을 가져올 수 있습니다. 
+소스 코드 검사에 사용하고 있지 않을 때 시각화 도우미 창을 닫을 수 있습니다. 구문 시각화 도우미는 코드를 탐색하고 소스를 편집 및 변경하면서 해당 디스플레이를 업데이트합니다. 사용하지 않을 때 혼란을 가져올 수 있습니다.

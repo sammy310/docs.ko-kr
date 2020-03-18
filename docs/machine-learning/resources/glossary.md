@@ -4,11 +4,11 @@ description: ML.NET에서 사용자 지정 모델을 빌드할 때 유용한 중
 ms.topic: reference
 ms.date: 07/31/2019
 ms.openlocfilehash: 32ccb6df1cb08db45ebd25a0d1c0ea4396a6c50b
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739879"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397766"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>중요한 용어가 포함된 기계 학습 용어집
 
@@ -24,7 +24,7 @@ ms.locfileid: "75739879"
 
 ## <a name="binary-classification"></a>이진 분류
 
-[레이블](#label)이 두 클래스 중 하나에만 해당하는 [분류](#classification) 사례입니다. 자세한 내용은 [기계 학습 작업](tasks.md) 항목의 [이진 분류](tasks.md#binary-classification) 섹션을 참조하세요.
+[레이블](#classification)이 두 클래스 중 하나에만 해당하는 [분류](#label) 사례입니다. 자세한 내용은 [기계 학습 작업](tasks.md#binary-classification) 항목의 [이진 분류](tasks.md) 섹션을 참조하세요.
 
 ## <a name="calibration"></a>보정
 
@@ -44,7 +44,7 @@ ML.NET에서 카탈로그는 공통 목적에 따라 그룹화된 확장 함수�
 
 [회귀](#regression)에서 데이터가 모델에 얼마나 잘 맞는지를 나타내는 평가 메트릭입니다. 범위는 0에서 1까지입니다. 값 0은 데이터가 무작위이거나 모델에 맞지 않음을 의미합니다. 값 1은 모델이 데이터와 정확히 일치함을 의미합니다. 이를 r<sup>2</sup>, R<sup> 2</sup> 또는 r 제곱이라고 합니다.
 
-## <a name="data"></a>데이터
+## <a name="data"></a>data
 
 데이터는 모든 기계 애플리케이션의 핵심입니다. ML.NET에서 데이터는 <xref:Microsoft.ML.IDataView> 개체로 표현됩니다. 데이터 뷰 개체:
 
@@ -104,7 +104,7 @@ ML.NET에서 카탈로그는 공통 목적에 따라 그룹화된 확장 함수�
 
 ## <a name="multiclass-classification"></a>다중 클래스 분류
 
-[레이블](#label)이 세 개 이상의 클래스 중 하나인 [분류](#classification) 사례입니다. 자세한 내용은 [다중 클래스 작업](tasks.md) 항목의 [이진 분류](tasks.md#multiclass-classification) 섹션을 참조하세요.
+[레이블](#classification)이 세 개 이상의 클래스 중 하나인 [분류](#label) 사례입니다. 자세한 내용은 [다중 클래스 작업](tasks.md#multiclass-classification) 항목의 [이진 분류](tasks.md) 섹션을 참조하세요.
 
 ## <a name="n-gram"></a>N-gram
 
@@ -122,7 +122,7 @@ ML.NET에서 카탈로그는 공통 목적에 따라 그룹화된 확장 함수�
 
 데이터 집합에 모델을 맞추는 데 필요한 모든 작업입니다. 파이프라인은 데이터 가져오기, 변환, 기능화 및 학습 단계로 구성됩니다. 파이프라인은 학습된 후 모델로 바뀝니다.
 
-## <a name="precision"></a>전체 자릿수
+## <a name="precision"></a>자릿수
 
 [분류](#classification)에서 클래스의 정밀도는 해당 클래스에 속하는 것으로 올바르게 예측된 항목 수를 클래스에 속하는 것으로 예측된 총 항목 수로 나눈 값입니다.
 
@@ -139,7 +139,7 @@ ML.NET에서 카탈로그는 공통 목적에 따라 그룹화된 확장 함수�
 
 ## <a name="regression"></a>재발
 
-출력이 실제 값(예: double)인 [감독된 기계 학습](#supervised-machine-learning) 작업입니다. 예로는 재고 가격 예측이 있습니다. 자세한 내용은 [다중 클래스 작업](tasks.md) 항목의 [회귀](tasks.md#regression) 섹션을 참조하세요.
+출력이 실제 값(예: double)인 [감독된 기계 학습](#supervised-machine-learning) 작업입니다. 예로는 재고 가격 예측이 있습니다. 자세한 내용은 [다중 클래스 작업](tasks.md#regression) 항목의 [회귀](tasks.md) 섹션을 참조하세요.
 
 ## <a name="relative-absolute-error"></a>상대 절대 오차
 

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - generics [C#], methods
 ms.assetid: 673eeea2-4b48-4faa-9c4e-2e89449221b9
 ms.openlocfilehash: 5f066ca39c97b70554886e423c37c4ee47d49158
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712197"
 ---
 # <a name="generic-methods-c-programming-guide"></a>제네릭 메서드(C# 프로그래밍 가이드)
@@ -34,7 +34,7 @@ ms.locfileid: "75712197"
   
  [!code-csharp[csProgGuideGenerics#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#26)]  
   
- 메서드에서 형식 매개 변수에 대한 더 구체적인 작업을 수행하려면 제약 조건을 사용합니다. `SwapIfGreater<T>`라는 이 버전의 `Swap<T>`은 <xref:System.IComparable%601>을 구현하는 형식 인수와만 함께 사용할 수 있습니다.  
+ 메서드에서 형식 매개 변수에 대한 더 구체적인 작업을 수행하려면 제약 조건을 사용합니다. `Swap<T>`라는 이 버전의 `SwapIfGreater<T>`은 <xref:System.IComparable%601>을 구현하는 형식 인수와만 함께 사용할 수 있습니다.  
   
  [!code-csharp[csProgGuideGenerics#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#27)]  
   
@@ -45,7 +45,7 @@ ms.locfileid: "75712197"
 ## <a name="c-language-specification"></a>C# 언어 사양  
  자세한 내용은 [C# 언어 사양](~/_csharplang/spec/classes.md#methods)을 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Collections.Generic>
 - [C# 프로그래밍 가이드](../index.md)

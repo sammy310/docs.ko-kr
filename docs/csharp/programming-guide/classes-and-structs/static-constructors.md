@@ -5,18 +5,18 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 7b8171e75bbd27a1079f2c6cc1b7aef6400d7419
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 744bcacbc38299c0ef7d16e814c415ec5caf95dd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115748"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170119"
 ---
 # <a name="static-constructors-c-programming-guide"></a>정적 생성자(C# 프로그래밍 가이드)
 정적 생성자는 [정적](../../language-reference/keywords/static.md) 데이터를 초기화하거나 한 번만 수행해야 하는 특정 작업을 수행하는 데 사용됩니다. 첫 번째 인스턴스가 만들어지거나 정적 멤버가 참조되기 전에 자동으로 호출됩니다.  
   
  [!code-csharp[csProgGuideObjects#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#14)]  
- 
+
 ## <a name="remarks"></a>설명
 정적 생성자에는 다음과 같은 속성이 있습니다.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "76115748"
  이 예제에서 `Bus` 클래스에는 정적 생성자가 있습니다. `Bus`의 첫 번째 인스턴스를 만들 때(`bus1`) 정적 생성자가 호출되어 클래스를 초기화합니다. 샘플 출력은 `Bus`의 두 인스턴스가 생성된 경우에도 정적 생성자가 한 번만 실행되고, 인스턴스 생성자를 실행하기 전에 실행되는지 확인합니다.  
   
  [!code-csharp[csProgGuideObjects#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#15)]
- 
+
 ## <a name="c-language-specification"></a>C# 언어 사양
 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [정적 생성자](~/_csharplang/spec/classes.md#static-constructors) 섹션을 참조하세요.
   

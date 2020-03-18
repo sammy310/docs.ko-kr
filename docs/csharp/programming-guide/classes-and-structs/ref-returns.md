@@ -2,12 +2,12 @@
 title: 참조 반환 값 및 참조 로컬(C# 가이드)
 description: 참조 반환 및 참조 로컬 값을 정의하고 사용하는 방법을 알아봅니다.
 ms.date: 04/04/2018
-ms.openlocfilehash: 7ade422b5b3805ef2e1f487252a98fb85cdfe70c
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 87a9538db60d69062f0fb48ed9683a9d4f972b91
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736824"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170075"
 ---
 # <a name="ref-returns-and-ref-locals"></a>참조 반환 및 참조 로컬
 
@@ -38,7 +38,7 @@ C# 7.0부터 C#에서 참조 반환 값(ref return)을 지원합니다. 참조 �
 - 메서드 시그니처에는 반환 형식 앞에 [ref](../../language-reference/keywords/ref.md) 키워드가 포함됩니다.
 - 메서드 본문의 각 [return](../../language-reference/keywords/return.md) 문에는 반환된 인스턴스의 이름 앞에 [ref](../../language-reference/keywords/ref.md) 키워드가 포함됩니다.
 
-다음 예제에서는 이러한 조건을 충족하면서 `p`라는 이름의 `Person` 개체에 대한 참조를 반환하는 메서드를 보여줍니다.
+다음 예제에서는 이러한 조건을 충족하면서 `Person`라는 이름의 `p` 개체에 대한 참조를 반환하는 메서드를 보여줍니다.
 
 ```csharp
 public ref Person GetContactInformation(string fname, string lname)
@@ -80,9 +80,9 @@ Person p = contacts.GetContactInformation("Brandie", "Best");
 ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 ```
 
-`p`가 해당 변수의 별칭이므로 이후 `p` 사용은 `GetContactInformation`에서 반환된 변수를 사용하는 것과 같습니다. 또한 `p`를 변경하면 `GetContactInformation`에서 반환된 변수도 변경됩니다.
+`p`가 해당 변수의 별칭이므로 이후 `GetContactInformation` 사용은 `p`에서 반환된 변수를 사용하는 것과 같습니다. 또한 `p`를 변경하면 `GetContactInformation`에서 반환된 변수도 변경됩니다.
 
-`ref` 키워드는 지역 변수 선언 앞, ‘그리고’ 메서드 호출 앞에 사용됩니다.  
+`ref` 키워드는 지역 변수 선언 앞, ‘그리고’ 메서드 호출 앞에 사용됩니다. 
 
 동일한 방법으로 참조로 값에 액세스할 수 있습니다. 경우에 따라 참조로 값에 액세스하면 비용이 많이 들 수 있는 복사 작업을 피함으로써 성능이 향상됩니다. 예를 들어, 다음 명령문은 값을 참조하는 데 사용되는 참조 로컬 값을 정의하는 방법을 보여줍니다.
 
@@ -90,7 +90,7 @@ ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
-`ref` 키워드는 지역 변수 선언 앞 ‘그리고’ 두 번째 예의 값 앞에 사용됩니다.  두 예에서 변수 선언과 할당에 `ref` 키워드를 둘 다 포함하지 않으면 컴파일러 오류 CS8172, "값을 사용하여 참조 형식 변수를 초기화할 수 없습니다."가 생성됩니다. 
+`ref` 키워드는 지역 변수 선언 앞 ‘그리고’ 두 번째 예의 값 앞에 사용됩니다.  두 예에서 변수 선언과 할당에 `ref` 키워드를 둘 다 포함하지 않으면 컴파일러 오류 CS8172, "값을 사용하여 참조 형식 변수를 초기화할 수 없습니다."가 생성됩니다.
 
 C# 7.3 이전에 참조 로컬 변수는 초기화되기 전에 다른 스토리지 공간을 참조하도록 다시 할당될 수 없었습니다. 해당 제한 사항이 제거되었습니다. 다음 예제에서는 재할당을 보여줍니다.
 
@@ -103,7 +103,7 @@ refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to differe
 
 ## <a name="ref-returns-and-ref-locals-an-example"></a>참조 반환 및 참조 로컬: 예제
 
-다음 예제에서는 정수 값의 배열을 저장하는 `NumberStore` 클래스를 정의합니다. `FindNumber` 메서드는 인수로 전달된 숫자보다 크거나 같은 첫 번째 숫자를 참조로 반환합니다. 인수보다 크거나 같은 숫자가 없으면 메서드는 인덱스 0의 숫자를 반환합니다. 
+다음 예제에서는 정수 값의 배열을 저장하는 `NumberStore` 클래스를 정의합니다. `FindNumber` 메서드는 인수로 전달된 숫자보다 크거나 같은 첫 번째 숫자를 참조로 반환합니다. 인수보다 크거나 같은 숫자가 없으면 메서드는 인덱스 0의 숫자를 반환합니다.
 
 [!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/NumberStore.cs#1)]
 

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: 2a9b9966a28b62c41ac6091268ae172bae3a40d7
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b06d0c9d447124dec7d8cf3c0cbbfd0daca78fe3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793438"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79157015"
 ---
 # <a name="cref-attribute-c-programming-guide"></a>cref 특성(C# 프로그래밍 가이드)
 
@@ -17,11 +17,11 @@ XML 문서 태그의 `cref` 특성은 "코드 참조"를 의미합니다. 태그
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 [\<see>](./see.md) 태그에 사용된 `cref` 특성을 보여 줍니다.
+다음 예제에서는 `cref`[see>\< 태그에 사용된 ](./see.md) 특성을 보여 줍니다.
 
 [!code-csharp[csProgGuideDocComments#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#3)]
 
-컴파일하면 프로그램이 다음 XML 파일을 생성합니다. 예를 들어 `GetZero` 메서드의 `cref` 특성은 컴파일러에서 `"M:TestNamespace.TestClass.GetZero"`로 변환되었습니다. "M:" 접두사는 "메서드"를 의미하며, DocFX 및 Sandcastle 등의 문서화 도구에서 인식되는 규칙입니다. 접두사의 전체 목록은 [XML 파일 처리](./processing-the-xml-file.md)를 참조하세요.
+컴파일하면 프로그램이 다음 XML 파일을 생성합니다. 예를 들어 `cref` 메서드의 `GetZero` 특성은 컴파일러에서 `"M:TestNamespace.TestClass.GetZero"`로 변환되었습니다. "M:" 접두사는 "메서드"를 의미하며, DocFX 및 Sandcastle 등의 문서화 도구에서 인식되는 규칙입니다. 접두사의 전체 목록은 [XML 파일 처리](./processing-the-xml-file.md)를 참조하세요.
 
 ```xml  
 <?xml version="1.0"?>
@@ -49,12 +49,12 @@ XML 문서 태그의 `cref` 특성은 "코드 참조"를 의미합니다. 태그
             <summary>
             The GetZero method.
             </summary>
-            <example> 
+            <example>
             This sample shows how to call the <see cref="M:TestNamespace.TestClass.GetZero"/> method.
             <code>
-            class TestClass 
+            class TestClass
             {
-                static int Main() 
+                static int Main()
                 {
                     return GetZero();
                 }
@@ -66,7 +66,7 @@ XML 문서 태그의 `cref` 특성은 "코드 참조"를 의미합니다. 태그
             <summary>
             The GetGenericValue method.
             </summary>
-            <remarks> 
+            <remarks>
             This sample shows how to specify the <see cref="M:TestNamespace.TestClass.GetGenericValue``1(``0)"/> method as a cref attribute.
             </remarks>
         </member>
@@ -74,7 +74,7 @@ XML 문서 태그의 `cref` 특성은 "코드 참조"를 의미합니다. 태그
             <summary>
             GenericClass.
             </summary>
-            <remarks> 
+            <remarks>
             This example shows how to specify the <see cref="T:TestNamespace.GenericClass`1"/> type as a cref attribute.
             </remarks>
         </member>
@@ -82,7 +82,7 @@ XML 문서 태그의 `cref` 특성은 "코드 참조"를 의미합니다. 태그
 </doc>
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [XML 문서 주석](./index.md)
 - [문서 주석에 대한 권장 태그](./recommended-tags-for-documentation-comments.md)

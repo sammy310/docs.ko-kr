@@ -2,12 +2,12 @@
 title: 단일 특성을 검색하는 방법(LINQ to XML)(C#)
 ms.date: 07/20/2015
 ms.assetid: 1b6b07b9-933f-47e9-874e-e790cab49dc5
-ms.openlocfilehash: 31b34bddc9e748b473641235402847991d444c39
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 830a7be24702b6037ac62471060fbe49d8ded598
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347500"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168715"
 ---
 # <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>단일 특성을 검색하는 방법(LINQ to XML)(C#)
 이 항목에서는 특성 이름이 제공되는 경우 요소의 단일 특성을 검색하는 방법에 대해 설명합니다. 이 방법은 특정 특성을 가진 요소를 찾으려는 경우 쿼리 식을 작성하는 데 유용합니다.  
@@ -54,7 +54,7 @@ XElement cust = new XElement("PhoneNumbers",
         new XAttribute("type", "work"),  
         "555-555-6666")  
 );  
-IEnumerable<XElement> elList =   
+IEnumerable<XElement> elList =
     from el in cust.Descendants("Phone")  
     select el;  
 foreach (XElement el in elList)  
@@ -97,6 +97,6 @@ home
 work  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [LINQ to XML 축(C#)](./linq-to-xml-axes-overview.md)

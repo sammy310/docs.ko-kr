@@ -5,12 +5,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 692a0f8ad933f3ba4bef50681cb3487fa0a7eea9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d39e4c4dd180ba35b7555d61211a34d696b04f50
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714831"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398432"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>암시적 형식 지역 변수(C# 프로그래밍 가이드)
 
@@ -68,13 +68,13 @@ ms.locfileid: "75714831"
 
 - `var`라는 형식이 범위 내에 있으면 `var` 키워드가 해당 형식 이름으로 확인되고 암시적 형식 지역 변수 선언의 일부로 처리되지 않습니다.
 
-`var` 키워드를 사용한 암시적 형식화는 로컬 메서드 범위의 변수에만 적용할 수 있습니다. C# 컴파일러가 코드를 처리하면서 논리적 패러독스를 만나게 되므로 암시적 형식 지정은 클래스 필드에 사용할 수 없습니다. 컴파일러는 필드 형식을 알아야 하나 할당 식을 분석할 때까지 형식을 결정할 수 없고 형식을 모르면 식을 평가할 수 없습니다. 다음 코드를 살펴보세요.
+`var` 키워드를 사용한 암시적 형식화는 지역 메서드 범위의 변수에만 적용할 수 있습니다. C# 컴파일러가 코드를 처리하면서 논리적 패러독스를 만나게 되므로 암시적 형식 지정은 클래스 필드에 사용할 수 없습니다. 컴파일러는 필드 형식을 알아야 하나 할당 식을 분석할 때까지 형식을 결정할 수 없고 형식을 모르면 식을 평가할 수 없습니다. 다음 코드를 살펴보세요.
 
 ```csharp
 private var bookTitles;
 ```
 
-`bookTitles`는 `var` 형식의 클래스 필드입니다. 이 필드는 평가할 식이 없으므로 어떤 형식의 `bookTitles`가 될지 컴파일러가 추론하는 것이 불가능합니다. 또한 필드에 식을 추가(로컬 변수에서처럼)하는 것으로는 부족합니다.
+`bookTitles`는 `var` 형식의 클래스 필드입니다. 이 필드는 평가할 식이 없으므로 어떤 형식의 `bookTitles`가 될지 컴파일러가 추론하는 것이 불가능합니다. 또한 필드에 식을 추가(지역 변수에서처럼)하는 것으로는 부족합니다.
 
 ```csharp
 private var bookTitles = new List<string>();
@@ -88,7 +88,7 @@ private var bookTitles = new List<string>();
 
 [!code-csharp[cscsrefQueryKeywords#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#13)]
 
-그러나 `var`을 사용하면 최소한 다른 개발자가 코드를 이해하기 더 어려워질 수 있습니다. 이런 이유로, C# 문서에서는 일반적으로 필요한 경우에만 `var`을 사용합니다.
+`var`을 사용하면 코드를 간소화하는 데 도움이 되지만, 필요한 경우나 코드를 더 쉽게 읽도록 만들 때로 사용을 제한해야 합니다. `var`을 제대로 사용해야 하는 경우에 대한 자세한 내용은 C# 코딩 지침 문서의 [암시적 형식 지역 변수](../inside-a-program/coding-conventions.md#implicitly-typed-local-variables) 섹션을 참조하세요.
 
 ## <a name="see-also"></a>참조
 

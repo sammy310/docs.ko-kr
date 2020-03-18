@@ -7,12 +7,12 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: c00f506a682ec5d9805537b80159fd41d2174b67
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 539b2861e975c0c758c43c8a5d4cca86e3d2bb2c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75702950"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79167544"
 ---
 # <a name="indexers-c-programming-guide"></a>인덱서(C# 프로그래밍 가이드)
 
@@ -26,14 +26,14 @@ ms.locfileid: "75702950"
 > 추가 예제는 [관련 섹션](./index.md#BKMK_RelatedSections)을 참조하세요.  
   
 ## <a name="expression-body-definitions"></a>식 본문 정의  
- 
+
 인덱서의 get 또는 set 접근자는 값을 반환하거나 설정하는 단일 문으로 구성되는 것이 일반적입니다. 식 본문이 있는 멤버는 이 시나리오를 지원하기 위해 간단한 구문을 제공합니다. C# 6부터 읽기 전용 인덱서는 다음 예제와 같이 식 본문이 있는 멤버로 구현할 수 있습니다.
 
 [!code-csharp[indexers#2](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-2.cs)]  
 
-`=>`에서 식 본문을 도입하며 `get` 키워드는 사용되지 않습니다. 
+`=>`에서 식 본문을 도입하며 `get` 키워드는 사용되지 않습니다.
 
-C# 7.0부터 get 및 set 접근자 모두를 식 본문 멤버로 구현할 수 있습니다. 이 경우 `get` 및 `set` 키워드를 둘 다 사용해야 합니다. 예:
+C# 7.0부터 get 및 set 접근자 모두를 식 본문 멤버로 구현할 수 있습니다. 이 경우 `get` 및 `set` 키워드를 둘 다 사용해야 합니다. 예들 들어 다음과 같습니다.
 
 [!code-csharp[indexers#3](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-3.cs)]  
   
@@ -65,9 +65,9 @@ C# 7.0부터 get 및 set 접근자 모두를 식 본문 멤버로 구현할 수 
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
 
-자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)의 [인덱서](~/_csharplang/spec/classes.md#indexers)를 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/classes.md#indexers)의 [인덱서](/dotnet/csharp/language-reference/language-specification/introduction)를 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../index.md)
 - [속성](../classes-and-structs/properties.md)

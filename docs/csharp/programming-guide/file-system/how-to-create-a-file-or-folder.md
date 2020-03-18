@@ -7,12 +7,12 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: e0d0a7fbbc7e6a5c9a0bd00dec1188c5cfdcf896
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cdcc0a375aa1eca29c024d1e0c9008f337d0c772
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705251"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167559"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>파일 또는 폴더를 만드는 방법(C# 프로그래밍 가이드)
 프로그래밍 방식으로 컴퓨터에 폴더를 만들고, 하위 폴더를 만들고, 하위 폴더에 파일을 만들고, 파일에 데이터를 쓸 수 있습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "75705251"
 - 다음 코드를 사용하여 `if`-`else` 문을 `using` 문으로 바꿉니다.  
   
     ```csharp  
-    using (System.IO.FileStream fs = new System.IO.FileStream(pathString, FileMode.Append))   
+    using (System.IO.FileStream fs = new System.IO.FileStream(pathString, FileMode.Append))
     {  
         for (byte i = 0; i < 100; i++)  
         {  
@@ -67,7 +67,7 @@ ms.locfileid: "75705251"
   
  폴더를 만들 수 있는 권한이 없는 경우 이 예제에서는 <xref:System.UnauthorizedAccessException> 클래스의 인스턴스가 throw됩니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.IO?displayProperty=nameWithType>
 - [C# 프로그래밍 가이드](../index.md)

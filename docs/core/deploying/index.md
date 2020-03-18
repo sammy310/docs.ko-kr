@@ -3,11 +3,11 @@ title: 애플리케이션 게시
 description: .NET Core 애플리케이션을 게시하는 방법을 알아봅니다. .NET Core에서는 플랫폼별 또는 플랫폼 간 앱을 게시할 수 있습니다. 앱을 자체 포함이나 런타임 종속으로 게시할 수 있습니다. 각 모드는 사용자가 앱을 실행하는 방법에 영향을 줍니다.
 ms.date: 01/31/2020
 ms.openlocfilehash: 3b9c3b7f29af12477874b7a31ef0de4750719de0
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157937"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397589"
 ---
 # <a name="net-core-application-publishing-overview"></a>.NET Core 애플리케이션 게시 개요
 
@@ -67,7 +67,7 @@ ms.locfileid: "78157937"
 
 앱의 플랫폼 간 이진 파일은 `dotnet <filename.dll>` 명령으로 실행하며 모든 플랫폼에서 실행할 수 있습니다. 앱에서 플랫폼별 구현을 포함하는 NuGet 패키지를 사용하는 경우 플랫폼의 모든 종속성이 앱과 함께 게시 폴더에 복사됩니다.
 
-[`dotnet publish`](../tools/dotnet-publish.md) 명령에 `-r <RID> --self-contained false` 매개 변수를 전달하여 특정 플랫폼용 실행 파일을 만들 수 있습니다. `-r` 매개 변수를 생략하면 현재 플랫폼의 실행 파일이 만들어집니다. 대상 플랫폼의 플랫폼별 종속성을 포함하는 모든 NuGet 패키지가 게시 폴더에 복사됩니다.
+`-r <RID> --self-contained false`[`dotnet publish` 명령에 ](../tools/dotnet-publish.md) 매개 변수를 전달하여 특정 플랫폼용 실행 파일을 만들 수 있습니다. `-r` 매개 변수를 생략하면 현재 플랫폼의 실행 파일이 만들어집니다. 대상 플랫폼의 플랫폼별 종속성을 포함하는 모든 NuGet 패키지가 게시 폴더에 복사됩니다.
 
 ### <a name="advantages"></a>장점
 
@@ -111,7 +111,7 @@ dotnet publish -r linux-x64 --self-contained false
 
 앱을 자체 포함으로 게시하면 플랫폼별 실행 파일이 생성됩니다. 출력 게시 폴더에는 .NET Core 라이브러리 및 대상 런타임을 포함하여 앱의 모든 구성 요소가 포함됩니다. 앱은 다른 .NET Core 앱에서 격리되며 로컬로 설치된 공유 런타임을 사용하지 않습니다. 앱 사용자는 .NET Core를 다운로드하여 설치할 필요가 없습니다.
 
-지정된 대상 플랫폼의 이진 실행 파일이 생성됩니다. 예를 들어 앱의 이름이 **word_reader**이고 Windows용 자체 포함 실행 파일을 게시하는 경우 *word_reader.exe* 파일이 생성됩니다. Linux 또는 macOS용으로 게시하면 *word_reader* 파일이 생성됩니다. 대상 플랫폼과 아키텍처는 [`dotnet publish`](../tools/dotnet-publish.md) 명령의 `-r <RID>` 매개 변수로 지정합니다. RID에 대한 자세한 내용은 [.NET Core RID 카탈로그](../rid-catalog.md)를 참조하세요.
+지정된 대상 플랫폼의 이진 실행 파일이 생성됩니다. 예를 들어 앱의 이름이 **word_reader**이고 Windows용 자체 포함 실행 파일을 게시하는 경우 *word_reader.exe* 파일이 생성됩니다. Linux 또는 macOS용으로 게시하면 *word_reader* 파일이 생성됩니다. 대상 플랫폼과 아키텍처는 `-r <RID>`[`dotnet publish` 명령의 ](../tools/dotnet-publish.md) 매개 변수로 지정합니다. RID에 대한 자세한 내용은 [.NET Core RID 카탈로그](../rid-catalog.md)를 참조하세요.
 
 앱에 플랫폼별 종속성이 포함된 NuGet 패키지와 같은 플랫폼별 종속성이 있는 경우 해당 종속성이 앱과 함께 게시 폴더에 복사됩니다.
 
@@ -148,7 +148,7 @@ dotnet publish -r osx-x64
 dotnet publish -r win-x64
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [.NET Core CLI를 사용하여 .NET Core 앱 배포](deploy-with-cli.md)
 - [Visual Studio를 사용하여 .NET Core 앱 배포](deploy-with-vs.md)

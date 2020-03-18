@@ -2,12 +2,12 @@
 title: 노드를 사용한 프로그래밍(C#)
 ms.date: 07/20/2015
 ms.assetid: c38df0f2-c805-431a-93ff-9103a4284c2f
-ms.openlocfilehash: 8c4c858cbc1fad4041c2e5ce62ca8a01dd1cfb2c
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 05c2e95fe97effda7b537a7ac2d8f5780f4e212b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253143"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168316"
 ---
 # <a name="programming-with-nodes-c"></a>노드를 사용한 프로그래밍(C#)
 XML 편집기, 변환 시스템 또는 보고서 작성기와 같은 프로그램을 작성해야 하는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 개발자는 요소와 특성보다 세부적인 단위에서 작업하는 프로그램을 작성해야 하는 경우가 많습니다. LINQ to XML 개발자는 흔히 노드 수준에서 작업하여 텍스트 노드, 처리 명령 및 주석을 조작해야 합니다. 이 항목에서는 노드 수준의 프로그래밍에 대해 자세히 설명합니다.  
@@ -71,7 +71,7 @@ XText textNode = xmlTree.Nodes().OfType<XText>().First();
 textNode.Value = "";  
   
 XText textNode2 = xmlTree.Nodes().OfType<XText>().First();  
-Console.WriteLine(">>{0}<<", textNode2);   
+Console.WriteLine(">>{0}<<", textNode2);
 ```  
   
  이 예제는 다음과 같은 출력을 생성합니다.  
@@ -89,7 +89,7 @@ XElement child1 = new XElement("Child1",
 );  
 XElement child2 = new XElement("Child2");  
 Console.WriteLine(child1);  
-Console.WriteLine(child2);   
+Console.WriteLine(child2);
 ```  
   
  이 예제는 다음과 같은 출력을 생성합니다.  
@@ -123,7 +123,7 @@ AnAttribute="abc"  IsNamespaceDeclaration:False
 ```  
   
 ### <a name="xpath-axis-methods-do-not-return-child-white-space-of-xdocument"></a>XPath 축 메서드에서 XDocument의 자식 공백을 반환하지 않음  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 텍스트 노드에 공백만 포함되어 있는 경우 <xref:System.Xml.Linq.XDocument>의 자식 텍스트 노드를 허용합니다. 그러나 XPath 개체 모델에서는 문서의 자식 노드로 공백을 포함하지 않으므로 <xref:System.Xml.Linq.XContainer.Nodes%2A> 축을 사용하여 <xref:System.Xml.Linq.XDocument>의 자식을 반복할 때 공백 텍스트 노드가 반환됩니다. 그러나 XPath 축 메서드를 사용하여 <xref:System.Xml.Linq.XDocument>의 자식을 반복하는 경우에는 공백 텍스트 노드가 반환되지 않습니다.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 텍스트 노드에 공백만 포함되어 있는 경우 <xref:System.Xml.Linq.XDocument>의 자식 텍스트 노드를 허용합니다. 그러나 XPath 개체 모델에서는 문서의 자식 노드로 공백을 포함하지 않으므로 <xref:System.Xml.Linq.XDocument> 축을 사용하여 <xref:System.Xml.Linq.XContainer.Nodes%2A>의 자식을 반복할 때 공백 텍스트 노드가 반환됩니다. 그러나 XPath 축 메서드를 사용하여 <xref:System.Xml.Linq.XDocument>의 자식을 반복하는 경우에는 공백 텍스트 노드가 반환되지 않습니다.  
   
 ```csharp  
 // Create a document with some white-space child nodes of the document.  
@@ -139,7 +139,7 @@ XDocument root = XDocument.Parse(
 Console.WriteLine(root.Nodes().OfType<XText>().Count());  
   
 // count the white-space child nodes using XPathEvaluate  
-Console.WriteLine(((IEnumerable)root.XPathEvaluate("text()")).OfType<XText>().Count());   
+Console.WriteLine(((IEnumerable)root.XPathEvaluate("text()")).OfType<XText>().Count());
 ```  
   
  이 예제는 다음과 같은 출력을 생성합니다.  

@@ -1,13 +1,13 @@
 ---
 title: 회로 차단기 패턴 구현
 description: HTTP 다시 시도에 대한 보완 시스템으로 회로 차단기 패턴을 구현하는 방법을 알아봅니다.
-ms.date: 10/16/2018
-ms.openlocfilehash: 00ca39b4b6fac37ff60adf128c3f4e22c5fc14e2
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 03/03/2020
+ms.openlocfilehash: a79c6fcca1e29f3c30d697cb369060d59a72c121
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73732832"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847247"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>회로 차단기 패턴 구현
 
@@ -25,11 +25,11 @@ Http 다시 시도를 부주의하게 사용하면 자신의 소프트웨어 내
 
 회로 차단기 패턴은 "다시 시도 패턴"과 다른 용도로 사용됩니다. "다시 시도 패턴"을 사용하면 애플리케이션에서 작업이 결국 성공한다고 예상하여 작업을 다시 시도할 수 있습니다. 회로 차단기 패턴은 애플리케이션이 실패할 가능성이 있는 작업을 수행하지 않도록 합니다. 애플리케이션에서 이 두 패턴을 결합할 수 있습니다. 그러나 다시 시도 논리는 회로 차단기에서 반환하는 모든 예외에 민감해야 하며, 회로 차단기에서 일시적 오류가 아니라고 나타내는 경우 다시 시도를 중단해야 합니다.
 
-## <a name="implement-circuit-breaker-pattern-with-httpclientfactory-and-polly"></a>HttpClientFactory 및 Polly를 사용하여 회로 차단기 패턴 구현
+## <a name="implement-circuit-breaker-pattern-with-ihttpclientfactory-and-polly"></a>`IHttpClientFactory` 및 Polly를 통한 회로 차단기 패턴 구현
 
-다시 시도를 구현할 때 회로 차단기에 권장되는 방법은 Polly와 같이 입증된 .NET 라이브러리와 HttpClientFactory와의 네이티브 통합을 활용하는 것입니다.
+다시 시도를 구현할 때 회로 차단기에 권장되는 방법은 Polly와 같이 입증된 .NET 라이브러리와 `IHttpClientFactory`와의 네이티브 통합을 활용하는 것입니다.
 
-HttpClientFactory 나가는 미들웨어 파이프라인에 회로 차단기 정책을 추가하는 것은 HttpClientFactory를 사용할 때 이미 사용하고 있는 코드에 하나의 증분 코드 부분을 추가하는 것만큼 매우 간단합니다.
+`IHttpClientFactory` 나가는 미들웨어 파이프라인에 회로 차단기 정책을 추가하는 것은 `IHttpClientFactory`를 사용할 때 이미 사용하고 있는 코드에 하나의 증분 코드 부분을 추가하는 것만큼 매우 간단합니다.
 
 여기서 HTTP 호출 다시 시도에 사용된 코드에 추가되는 유일한 부분은 ConfigureServices() 메서드의 일부인 다음 증분 코드와 같이 사용하려는 정책 목록에 회로 차단기 정책을 추가하는 코드입니다.
 
@@ -61,7 +61,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 
 이러한 모든 기능은 사용자를 위해 Azure에서 위치 투명성을 사용하여 자동으로 관리하는 대신, .NET 코드 내에서 장애 조치를 관리하는 경우를 위한 것입니다.
 
-사용 관점에서 HttpClient를 사용하는 경우 이전 섹션과 같이 코드가 HttpClientFactory를 통해 HttpClient를 사용할 때와 동일하므로 여기서는 추가할 새로운 내용이 없습니다.
+사용 관점에서 HttpClient를 사용하는 경우 이전 섹션과 같이 코드가 `IHttpClientFactory`를 통해 `HttpClient`를 사용할 때와 동일하므로 여기서는 추가할 새로운 내용이 없습니다.
 
 ## <a name="test-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>eShopOnContainers에서 HTTP 다시 시도 및 회로 차단기 테스트
 

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
 ms.openlocfilehash: 45b4c6c08d3afb948444a8c97dc32bd41f2615ce
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73104958"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe(어셈블리 등록 도구)
@@ -48,7 +48,7 @@ regasm assemblyFile [options]
 |**/?** 또는 **/help**|이 도구의 명령 구문 및 옵션을 표시합니다.|
 
 > [!NOTE]
-> Regasm.exe의 명령줄 옵션은 대/소문자가 구분되지 않습니다. 따라서 옵션을 고유하게 식별할 수 있을 정도로만 옵션을 지정하면 됩니다. 예를 들어, **/n**은 **/nologo**와 같고, **/t:** *outfile.tlb*는 **/tlb:** *outfile.tlb*와 같습니다.
+> Regasm.exe의 명령줄 옵션은 대/소문자가 구분되지 않습니다. 따라서 옵션을 고유하게 식별할 수 있을 정도로만 옵션을 지정하면 됩니다. 예를 들어 **/n**은 **/nologo**와 같고, **/t:** *outfile.tlb*는 **/tlb:** *outfile.tlb*와 같습니다.
 
 ## <a name="remarks"></a>설명
 
@@ -82,7 +82,7 @@ regasm myTest.dll /regfile:myTest.reg
 regasm myTest.dll /tlb:myTest.tlb
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [도구](index.md)
 - [Tlbexp.exe(형식 라이브러리 내보내기)](tlbexp-exe-type-library-exporter.md)

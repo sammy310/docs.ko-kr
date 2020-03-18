@@ -1,5 +1,6 @@
 ---
 title: COM에 .NET Core 구성 요소 공개
+description: 이 자습서에서는 .NET Core에서 COM에 클래스를 노출하는 방법을 보여 줍니다. 레지스트리 없는 COM을 위한 COM 서버 및 병렬 서버 매니페스트를 생성합니다.
 ms.date: 07/12/2019
 helpviewer_keywords:
 - exposing .NET Core components to COM
@@ -8,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 301177113f67748b62ea2686615cfe5378fdc2fd
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 98d303c99693a8aadb23da509a700772db69c0e0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157546"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146660"
 ---
 # <a name="exposing-net-core-components-to-com"></a>COM에 .NET Core 구성 요소 공개
 
@@ -41,7 +42,21 @@ ms.locfileid: "78157546"
 3. `using System.Runtime.InteropServices;`를 파일의 맨 위에 추가합니다.
 4. `IServer` 인터페이스를 만듭니다. 예를 들어:
 
-   [!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
+   ```csharp
+   using System;
+   using System.Runtime.InteropServices;
+
+   [ComVisible(true)]
+   [Guid(ContractGuids.ServerInterface)]
+   [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
+   public interface IServer
+   {
+       /// <summary>
+       /// Compute the value of the constant Pi.
+       /// </summary>
+       double ComputePi();
+   }
+   ```
 
 5. 구현 중인 COM 인터페이스의 인터페이스 GUID를 사용하여 `[Guid("<IID>")]` 특성을 인터페이스에 추가합니다. 예: `[Guid("fe103d6e-e71b-414c-80bf-982f18f6c1c7")]`. 이 GUID는 이 COM용 인터페이스의 유일한 식별자이므로 고유해야 합니다. Visual Studio에서 [도구] > [GUID 만들기]로 이동하여 GUID 만들기 도구를 열고 GUID를 생성할 수 있습니다.
 6. `[InterfaceType]` 특성을 인터페이스에 추가하고 이 인터페이스에서 구현해야 하는 기본 COM 인터페이스를 지정합니다.

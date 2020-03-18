@@ -2,12 +2,12 @@
 title: dotnet publish 명령
 description: dotnet publish 명령은 .NET Core 프로젝트 또는 솔루션을 디렉터리에 게시합니다.
 ms.date: 02/24/2020
-ms.openlocfilehash: cf41ee09244faad03feb8ccda19135b8c7780106
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: c34618409c9a539043c84c7e03daa8aa249d64f6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157001"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146557"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -20,7 +20,7 @@ ms.locfileid: "78157001"
 ## <a name="synopsis"></a>개요
 
 ```dotnetcli
-dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration] 
+dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration]
     [-f|--framework] [--force] [--interactive] [--manifest]
     [--no-build] [--no-dependencies] [--no-restore] [--nologo]
     [-o|--output] [-r|--runtime] [--self-contained]
@@ -48,7 +48,7 @@ dotnet publish [-h|--help]
   
   * `PROJECT`는 [C#](csproj.md), F# 또는 Visual Basic 프로젝트 파일의 경로 및 파일 이름이거나 C#, F# 또는 Visual Basic 프로젝트 파일을 포함하는 디렉터리의 경로입니다. 디렉터리를 지정하지 않으면 현재 디렉터리로 기본 설정됩니다.
 
-  * `SOLUTION`은 솔루션 파일 ( *.sln* 확장명)의 경로 및 파일 이름이거나 솔루션 파일을 포함하는 디렉터리의 경로입니다. 디렉터리를 지정하지 않으면 현재 디렉터리로 기본 설정됩니다. **.NET Core 3.0 SDK부터 사용 가능합니다.** 
+  * `SOLUTION`은 솔루션 파일 ( *.sln* 확장명)의 경로 및 파일 이름이거나 솔루션 파일을 포함하는 디렉터리의 경로입니다. 디렉터리를 지정하지 않으면 현재 디렉터리로 기본 설정됩니다. .NET Core 3.0 SDK 이후 사용할 수 있습니다.
 
 ## <a name="options"></a>옵션
 
@@ -68,9 +68,9 @@ dotnet publish [-h|--help]
 
   명령에 대한 간단한 도움말을 출력합니다.
 
-- **`--interactive`** **.NET Core 3.0 SDK부터 사용 가능합니다.**
+- **`--interactive`**
 
-  명령이 중지되고 사용자 입력 또는 작업을 대기할 수 있도록 허용합니다. 예를 들어 인증을 완료합니다. 
+  명령이 중지되고 사용자 입력 또는 작업을 대기할 수 있도록 허용합니다. 예를 들어 인증을 완료합니다. .NET Core 3.0 SDK 이후 사용할 수 있습니다.
 
 - **`--manifest <PATH_TO_MANIFEST_FILE>`**
 
@@ -84,9 +84,9 @@ dotnet publish [-h|--help]
 
   프로젝트 간 참조를 무시하고 루트 프로젝트만 복원합니다.
 
-- **`--nologo`** **.NET Core 3.0 SDK부터 사용 가능합니다.**
+- **`--nologo`**
 
-  시작 배너 또는 저작권 메시지를 표시하지 않습니다. 
+  시작 배너 또는 저작권 메시지를 표시하지 않습니다. .NET Core 3.0 SDK 이후 사용할 수 있습니다.
 
 - **`--no-restore`**
 
@@ -100,11 +100,11 @@ dotnet publish [-h|--help]
 
 - **`--self-contained [true|false]`**
 
-  대상 머신에 런타임을 설치할 필요가 없도록 애플리케이션을 통해 .NET Core 런타임을 게시합니다. 런타임 식별자를 지정할 경우 기본값은 `true`입니다. 자세한 내용은 [.NET Core application publishing](../deploying/index.md)(.NET Core 애플리케이션 게시) 및 [Publish .NET Core apps with the .NET Core CLI](../deploying/deploy-with-cli.md)(.NET Core CLI를 사용하여 .NET Core 앱 게시)를 참조하세요.
+  대상 컴퓨터에 런타임을 설치할 필요가 없도록 애플리케이션을 통해 .NET Core 런타임을 게시합니다. 런타임 식별자를 지정할 경우 기본값은 `true`입니다. 자세한 내용은 [.NET Core application publishing](../deploying/index.md)(.NET Core 애플리케이션 게시) 및 [Publish .NET Core apps with the .NET Core CLI](../deploying/deploy-with-cli.md)(.NET Core CLI를 사용하여 .NET Core 앱 게시)를 참조하세요.
 
-- **`--no-self-contained`**  **.NET Core 3.0 SDK부터 사용 가능합니다.**
+- **`--no-self-contained`**
 
-  `--self-contained false`과 동일합니다.
+  `--self-contained false`과 동일합니다. .NET Core 3.0 SDK 이후 사용할 수 있습니다.
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
@@ -112,7 +112,7 @@ dotnet publish [-h|--help]
 
 - **`-v|--verbosity <LEVEL>`**
 
-  명령의 세부 정보 표시 수준을 설정합니다. 허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다.
+  명령의 세부 정보 표시 수준을 설정합니다. 허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다. 기본값은 `minimal`여야 합니다.
 
 - **`--version-suffix <VERSION_SUFFIX>`**
 

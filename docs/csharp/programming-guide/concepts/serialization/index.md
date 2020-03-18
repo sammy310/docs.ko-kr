@@ -1,12 +1,12 @@
 ---
 title: Serialization(C#)
 ms.date: 01/02/2020
-ms.openlocfilehash: 1d2bda9022b7e43744dd8a0286eff88914cf65a3
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: d914298a370b09307e84c88959542b4823cf37ce
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635732"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79167597"
 ---
 # <a name="serialization-c"></a>Serialization(C#)
 
@@ -43,7 +43,7 @@ JSON serialization은 개체의 퍼블릭 속성을 [RFC 8259 JSON 사양](https
 
 <xref:System.Runtime.Serialization> 네임스페이스에는 이진 및 XML serialization 및 deserialization 클래스가 포함되어 있습니다.
 
-이진 serialization은 이진 인코딩을 사용하여 스토리지 또는 스트림 기반 네트워크 스트림과 같은 용도로 사용할 수 있는 압축 serialization을 생성합니다. 이진 Serialization에서 멤버가 읽기 전용이더라도 모든 멤버가 Serialize되고 성능이 향상됩니다. 
+이진 serialization은 이진 인코딩을 사용하여 스토리지 또는 소켓 기반 네트워크 스트림과 같은 용도에서 사용할 수 있는 압축된 serialization을 생성합니다. 이진 Serialization에서 멤버가 읽기 전용이더라도 모든 멤버가 Serialize되고 성능이 향상됩니다.
 
 XML serialization은 개체의 public 필드와 속성 또는 메서드의 매개 변수와 반환 값을 특정 XSD(XML 스키마 정의 언어) 문서와 일치하는 XML 스트림으로 serialize합니다. XML serialization을 사용하면 XML로 변환되는 public 속성 및 필드가 있는 강력한 형식의 클래스가 만들어집니다. <xref:System.Xml.Serialization>에는 XML을 직렬화 및 역직렬화하기 위한 클래스가 포함되어 있습니다. <xref:System.Xml.Serialization.XmlSerializer>가 클래스 인스턴스를 직렬화 또는 역직렬화하는 방법을 제어하기 위해 클래스 및 클래스 멤버에 특성을 적용합니다.
 
@@ -79,7 +79,8 @@ XML serialization은 개체의 public 필드와 속성 또는 메서드의 매�
 
 [System.Text.Json 개요](../../../../standard/serialization/system-text-json-overview.md) `System.Text.Json` 라이브러리를 가져오는 방법을 보여 줍니다.
 
-[.NET에서 JSON을 직렬화 및 역직렬화하는 방법](../../../../standard/serialization/system-text-json-how-to.md) <xref:System.Text.Json.JsonSerializer> 클래스를 사용하여 JSON에서 개체 데이터를 읽고 쓰는 방법을 보여 줍니다.
+[.NET에서 JSON을 직렬화 및 역직렬화하는 방법](../../../../standard/serialization/system-text-json-how-to.md)
+<xref:System.Text.Json.JsonSerializer> 클래스를 사용하여 JSON에서 개체 데이터를 읽고 쓰는 방법을 보여 줍니다.
 
 [연습: Visual Studio에서 개체 유지(C#)](walkthrough-persisting-an-object-in-visual-studio.md)  
 serialization을 사용하여 인스턴스 간에 개체의 데이터를 유지함으로써 다음에 개체를 인스턴스화할 때 값을 저장하고 검색하는 방식을 보여 줍니다.

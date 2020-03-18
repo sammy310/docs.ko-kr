@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type libraries
 - registering assemblies
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
-ms.openlocfilehash: 1af93ae89d027bccdd52b9cd9c49f8e620303677
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: aecd2f6894558b45898c7f22dd333617d9e2e327
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104937"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180356"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe(.NET 서비스 설치 도구)
 .NET 서비스 설치 도구를 사용하면 다음과 같은 작업을 수행할 수 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "73104937"
 ```console  
       regsvcs [/c | /fc | /u] [/tlb:typeLibraryFile] [/extlb]  
 [/reconfig] [/componly] [/appname:applicationName]  
-[/nologo] [/quiet]assemblyFile.dll   
+[/nologo] [/quiet]assemblyFile.dll
 ```  
   
 ## <a name="parameters"></a>매개 변수  
@@ -84,7 +84,7 @@ regsvcs /appname:myTargetApp myTest.dll
 regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [도구](index.md)
 - [방법: 강력한 이름으로 어셈블리 서명](../../standard/assembly/sign-strong-name.md)

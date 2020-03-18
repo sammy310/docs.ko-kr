@@ -16,10 +16,10 @@ helpviewer_keywords:
 - components [.NET Framework], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
 ms.openlocfilehash: a4f4c0e1af379d31c5b478472780d5c7de813bf6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73121941"
 ---
 # <a name="metadata-and-self-describing-components"></a>메타데이터 및 자동 기술 구성 요소
@@ -94,7 +94,7 @@ ms.locfileid: "73121941"
 |----------------|----------------------------|
 |PE 헤더|PE 파일의 주 섹션 인덱스 및 진입점 주소를 저장합니다.<br /><br /> 런타임은 이 정보를 사용하여 파일을 PE 파일로 식별하고 프로그램을 메모리로 로드하는 경우 실행 시작 위치를 결정합니다.|
 |MSIL 명령|코드를 구성하는 MSIL 명령. 대부분의 MSIL 명령은 메타데이터 토큰을 동반합니다.|
-|Metadata|메타데이터 테이블과 힙. 런타임은 이 섹션을 사용하여 코드의 모든 형식과 멤버에 대한 정보를 기록합니다. 또한 사용자 지정 특성과 보안 정보도 포함되어 있습니다.|
+|메타데이터|메타데이터 테이블과 힙. 런타임은 이 섹션을 사용하여 코드의 모든 형식과 멤버에 대한 정보를 기록합니다. 또한 사용자 지정 특성과 보안 정보도 포함되어 있습니다.|
 
 ## <a name="run-time-use-of-metadata"></a>메타데이터 런타임 사용
 
@@ -157,11 +157,11 @@ JIT 컴파일러는 전체 메서드에 대한 MSIL을 읽고 이를 자세히 �
 
 다음 표에서는 `Add` 메서드를 나타내는 메타데이터 토큰에서 참조하는 **MethodDef** 테이블의 부분을 보여 줍니다. 이 어셈블리에는 고유한 값을 가지는 다른 메타데이터 테이블도 있지만 여기서는 이 테이블에 대해서만 설명합니다.
 
-|행|RVA(Relevant Virtual Address)|ImplFlags|플래그|name<br /><br /> (문자열 힙을 가리킴)|Signature(blob 힙을 가리킴)|
+|행|RVA(Relevant Virtual Address)|ImplFlags|플래그|이름<br /><br /> (문자열 힙을 가리킴)|Signature(blob 힙을 가리킴)|
 |---------|--------------------------------------|---------------|-----------|-----------------------------------------|----------------------------------------|
-|1|0x00002050|IL<br /><br /> 관리|공용<br /><br /> ReuseSlot<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> .ctor|.ctor (생성자)||
-|2|0x00002058|IL<br /><br /> 관리|공용<br /><br /> 공용<br /><br /> ReuseSlot|기본|문자열|
-|3|0x0000208c|IL<br /><br /> 관리|공용<br /><br /> 공용<br /><br /> ReuseSlot|추가|int, int, int|
+|1|0x00002050|IL<br /><br /> 관리|Public<br /><br /> ReuseSlot<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> .ctor|.ctor (생성자)||
+|2|0x00002058|IL<br /><br /> 관리|Public<br /><br /> 정적<br /><br /> ReuseSlot|주|String|
+|3|0x0000208c|IL<br /><br /> 관리|Public<br /><br /> 정적<br /><br /> ReuseSlot|추가|int, int, int|
 
 테이블의 각 열에는 코드에 대한 중요한 정보가 있습니다. **RVA**열을 사용하여 런타임은 이 메서드를 정의하는 MSIL의 시작 메모리 주소를 계산할 수 있습니다. **ImplFlags** 및 **Flags** 열은 메서드를 나타내는 비트마스크(예: 해당 메서드가 공용인지 아니면 전용인지를 나타냄)를 포함합니다. **Name** 열은 문자열 힙에서 메서드의 이름을 인덱싱하고 **Signature** 열은 blob 힙에서 메서드의 시그니처 정의를 인덱싱합니다.
 

@@ -2,12 +2,12 @@
 title: C# 둘러보기 - C# 가이드
 description: C#을 처음 사용하시나요? 언어의 기본 사항에 대해 알아봅니다.
 ms.date: 02/26/2020
-ms.openlocfilehash: 69651d6233bfaf217366be3850f6b3d9c550d8e2
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: bf5a200f2ee777698ae8564f348ffc117d9abab0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159145"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79156846"
 ---
 # <a name="a-tour-of-the-c-language"></a>C# 언어 둘러보기
 
@@ -33,12 +33,12 @@ C# 프로그램 및 라이브러리가 호환되는 방식으로 계속 진화�
 
 C# 소스 파일은 일반적으로 파일 확장명이 `.cs`입니다. 이 프로그램을 만들려면 먼저 [.NET Core SDK](https://dotnet.microsoft.com/download)를 다운로드하여 설치합니다. 그런 다음, `dotnet new console -o hello` 명령을 실행하여 새 프로그램을 만들고 스크립트를 빌드합니다. 프로그램과 빌드 스크립트는 각각 `Program.cs`와 `hello.csproj` 파일에 있습니다. `run` 명령을 사용하여 애플리케이션을 빌드하고 실행합니다.
 
-```console
+```dotnetcli
 cd hello
 dotnet run
 ```
 
-프로그램에서는 다음이 출력됩니다. 
+프로그램에서는 다음이 출력됩니다.
 
 ```console
 Hello, World!

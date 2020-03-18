@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 32784f7d4b9e3a93eb7f81b4829b39c1a06ef949
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 54ace52fc6a8f4614c1f762b65453979bcb92c7a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920390"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79397874"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1의 새로운 기능
 
@@ -43,7 +43,7 @@ ms.locfileid: "76920390"
 
 ### <a name="new-cli-commands"></a>새 CLI 명령
 
-[`DotnetCliToolReference`](../tools/extensibility.md)를 사용하여 프로젝트별로 사용할 수 있었던 많은 도구를 이제 .NET Core SDK의 일부로 사용할 수 있습니다. 사용 가능한 도구는 다음과 같습니다.
+`DotnetCliToolReference`를 사용하여 프로젝트별로 사용할 수 있었던 많은 도구를 이제 .NET Core SDK의 일부로 사용할 수 있습니다. 사용 가능한 도구는 다음과 같습니다.
 
 - `dotnet watch`는 지정된 명령 집합을 실행하기 전에 파일이 변경될 때까지 대기하는 파일 시스템 감시자를 제공합니다. 예를 들어 다음 명령은 자동으로 현재 프로젝트를 다시 빌드하고 파일이 변경될 때마다 자세한 정보 출력을 생성합니다.
 
@@ -65,9 +65,9 @@ ms.locfileid: "76920390"
 
 ### <a name="global-tools"></a>전역 도구
 
-.NET Core 2.1은 명령줄에서 전역으로 사용할 수 있는 사용자 지정 도구인 ‘전역 도구’를 지원합니다.  이전 버전 .NET Core의 확장성 모델은 [`DotnetCliToolReference`](../tools/extensibility.md#consuming-per-project-tools)를 사용하여 프로젝트별로만 사용 가능한 사용자 지정 도구를 만들었습니다.
+.NET Core 2.1은 명령줄에서 전역으로 사용할 수 있는 사용자 지정 도구인 ‘전역 도구’를 지원합니다.  이전 버전 .NET Core의 확장성 모델은 `DotnetCliToolReference`를 사용하여 프로젝트별로만 사용 가능한 사용자 지정 도구를 만들었습니다.
 
-전역 도구를 설치하려면 [dotnet tool install](../tools/dotnet-tool-install.md) 명령을 사용합니다. 예:
+전역 도구를 설치하려면 [dotnet tool install](../tools/dotnet-tool-install.md) 명령을 사용합니다. 예를 들어:
 
 ```dotnetcli
 dotnet tool install -g dotnetsay
@@ -177,17 +177,17 @@ JIT 컴파일러가 수행하는 중요한 작업 중 하나는 코드 실행을
 
 다음 예제에서는 <xref:System.Span%601> 및 <xref:System.Memory%601> 인스턴스를 사용하여 배열의 10개 요소에 대한 가상 보기를 제공합니다.
 
-[!code-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
+[!code-csharp[Span\<T>](~/samples/snippets/core/whats-new/whats-new-in-21/csharp/program.cs)]
 
-[!code-vb[Memory\<T>](~/samples/core/whats-new/whats-new-in-21/vb/program.vb)]
+[!code-vb[Memory\<T>](~/samples/snippets/core/whats-new/whats-new-in-21/vb/program.vb)]
 
 ### <a name="brotli-compression"></a>Brotli 압축
 
 .NET Core 2.1은 Brotli 압축 및 압축 풀기에 대한 지원을 추가합니다. Brotli는 [RFC 7932](https://www.ietf.org/rfc/rfc7932.txt)에 정의되어 있고 대부분의 웹 브라우저와 주요 웹 서버에서 지원되는 범용 무손실 압축 알고리즘입니다. 스트림 기반 <xref:System.IO.Compression.BrotliStream?displayProperty=nameWithType> 클래스 또는 고성능 범위 기반 <xref:System.IO.Compression.BrotliEncoder?displayProperty=nameWithType> 및 <xref:System.IO.Compression.BrotliDecoder?displayProperty=nameWithType> 클래스를 사용할 수 있습니다. 다음 예제는 <xref:System.IO.Compression.BrotliStream> 클래스를 사용한 압축을 보여 줍니다.
 
-[!code-csharp[Brotli compression](~/samples/core/whats-new/whats-new-in-21/cs/brotli.cs#1)]
+[!code-csharp[Brotli compression](~/samples/snippets/core/whats-new/whats-new-in-21/csharp/brotli.cs#1)]
 
-[!code-vb[Brotli compression](~/samples/core/whats-new/whats-new-in-21/vb/brotli.vb#1)]
+[!code-vb[Brotli compression](~/samples/snippets/core/whats-new/whats-new-in-21/vb/brotli.vb#1)]
 
 <xref:System.IO.Compression.BrotliStream> 동작은 <xref:System.IO.Compression.DeflateStream> 및 <xref:System.IO.Compression.GZipStream>과 동일하므로, 이러한 API를 호출하는 코드를 <xref:System.IO.Compression.BrotliStream>으로 쉽게 변환할 수 있습니다.
 
@@ -244,6 +244,10 @@ AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", False)
 Windows에서는 네이티브 구현을 사용하는 <xref:System.Net.Http.WinHttpHandler?displayProperty=nameWithType>을 사용하거나 클래스의 인스턴스를 <xref:System.Net.Http.HttpClient> 생성자에 전달하여 <xref:System.Net.Http.SocketsHttpHandler> 클래스를 사용하도록 선택할 수도 있습니다.
 
 Linux 및 macOS에서는 프로세스별로 <xref:System.Net.Http.HttpClient>만 구성할 수 있습니다. Linux에서 이전 <xref:System.Net.Http.HttpClient> 구현을 사용하려면 [libcurl](https://curl.haxx.se/libcurl/)을 배포해야 합니다. (.NET Core 2.0과 함께 설치됩니다.)
+
+### <a name="breaking-changes"></a>호환성이 손상되는 변경
+
+호환성이 손상되는 변경에 대한 자세한 내용은 [버전 2.0에서 2.1로 마이그레이션 시 호환성이 손상되는 변경](../compatibility/2.0-2.1.md)을 참조하세요.
 
 ## <a name="see-also"></a>참조
 

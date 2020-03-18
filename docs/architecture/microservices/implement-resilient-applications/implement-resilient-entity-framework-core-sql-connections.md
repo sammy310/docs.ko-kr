@@ -2,12 +2,12 @@
 title: 복원력 있는 Entity Framework Core SQL 연결 구현
 description: 복원력 있는 Entity Framework Core SQL 연결을 구현하는 방법을 알아봅니다. 이 기술은 클라우드에서 Azure SQL Database를 사용하는 경우에 특히 중요합니다.
 ms.date: 10/16/2018
-ms.openlocfilehash: 0ded30469bb4985fed7b60938756046531c8feea
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 7a047edca21d63a451e90f407b23f3358d461330
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777056"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78241067"
 ---
 # <a name="implement-resilient-entity-framework-core-sql-connections"></a>복원력 있는 Entity Framework Core SQL 연결 구현
 
@@ -154,4 +154,4 @@ public class ResilientTransaction
 
 >[!div class="step-by-step"]
 >[이전](implement-retries-exponential-backoff.md)
->[다음](explore-custom-http-call-retries-exponential-backoff.md)
+>[다음](use-httpclientfactory-to-implement-resilient-http-requests.md)

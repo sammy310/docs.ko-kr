@@ -4,12 +4,12 @@ description: C#의 명명되지 않은 튜플 형식과 명명된 튜플 형식�
 ms.date: 05/15/2018
 ms.technology: csharp-fundamentals
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: f551a1df4a31c3311119a0327e02fbc6096ce0a0
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 9ce9e1d4395d1a75f36004384ec215c615cd9802
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039720"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156911"
 ---
 # <a name="c-tuple-types"></a>C# 튜플 형식
 
@@ -54,7 +54,7 @@ C# 튜플은 간단한 구문을 사용하여 정의하는 형식입니다. 이 
 
 이러한 동의어는 명명된 튜플을 효과적으로 사용할 수 있도록 컴파일러 및 언어에 의해 처리됩니다. IDE 및 편집기는 Roslyn API를 사용하여 이러한 의미 체계 이름을 읽을 수 있습니다. 동일한 어셈블리의 모든 위치에서 해당 의미 체계 이름으로 명명된 튜플의 요소를 참조할 수 있습니다. 컴파일러는 컴파일된 출력을 생성할 때 정의된 이름을 동등한 `Item*` 이름으로 바꿉니다. 컴파일된 MSIL(Microsoft Intermediate Language)에는 이러한 요소에 지정한 이름이 포함되지 않습니다.
 
-C# 7.1부터 튜플에 대한 필드 이름은 튜플을 초기화하는 데 사용되는 변수로부터 제공될 수 있습니다. 이를 **[튜플 프로젝션 이니셜라이저](#tuple-projection-initializers)** 라고 합니다. 다음 코드에서는 `count`(정수) 및 `sum`(double) 요소가 있는 `accumulation`이라는 이름의 튜플을 만듭니다.
+C# 7.1부터 튜플에 대한 필드 이름은 튜플을 초기화하는 데 사용되는 변수로부터 제공될 수 있습니다. 이를 **[튜플 프로젝션 이니셜라이저](#tuple-projection-initializers)** 라고 합니다. 다음 코드에서는 `accumulation`(정수) 및 `count`(double) 요소가 있는 `sum`이라는 이름의 튜플을 만듭니다.
 
 [!code-csharp[ProjectedTuple](../../samples/snippets/csharp/tuples/program.cs#ProjectedTupleNames "Named tuple")]
 
@@ -68,11 +68,11 @@ C# 7.1부터 튜플에 대한 필드 이름은 튜플을 초기화하는 데 사
 ## <a name="tuple-projection-initializers"></a>튜플 프로젝션 이니셜라이저
 
 일반적으로 튜플 프로젝션 이니셜라이저는 튜플 초기화 문의 오른쪽에 있는 변수 또는 필드 이름을 사용하여 작동합니다.
-명시적 이름이 지정되는 경우 해당 이름이 프로젝션된 이름보다 우선됩니다. 예를 들어 다음 이니셜라이저에서 요소는 `localVariableOne` 및 `localVariableTwo`가 아니라 `explicitFieldOne` 및 `explicitFieldTwo`입니다.
+명시적 이름이 지정되는 경우 해당 이름이 프로젝션된 이름보다 우선됩니다. 예를 들어 다음 이니셜라이저에서 요소는 `explicitFieldOne` 및 `explicitFieldTwo`가 아니라 `localVariableOne` 및 `localVariableTwo`입니다.
 
 [!code-csharp[ExplicitNamedTuple](../../samples/snippets/csharp/tuples/program.cs#ProjectionExample_Explicit "Explicitly named tuple")]
 
-명시적 이름이 제공되지 않은 필드의 경우, 적용할 수 있는 암시적 이름이 프로젝션됩니다. 명시적이든 암시적이든 의미 체계 이름을 제공할 필요는 없습니다. 다음 이니셜라이저의 필드 이름은 `Item1` 및 `stringContent`이며 필드의 값은 각각 `42` 및 “모든 것에 대한 답”입니다.
+명시적 이름이 제공되지 않은 필드의 경우, 적용할 수 있는 암시적 이름이 프로젝션됩니다. 명시적이든 암시적이든 의미 체계 이름을 제공할 필요는 없습니다. 다음 이니셜라이저의 필드 이름은 `Item1` 및 `42`이며 필드의 값은 각각 `stringContent` 및 “모든 것에 대한 답”입니다.
 
 [!code-csharp[MixedTuple](../../samples/snippets/csharp/tuples/program.cs#MixedTuple "mixed tuple")]
 
@@ -162,10 +162,10 @@ LINQ 쿼리는 지연 평가되므로 평가와의 차이 계산과 이러한 �
 
 [!code-csharp[TupleVersion](../../samples/snippets/csharp/tuples/statistics.cs#07_TupleVersion "Refactor to use tuples")]
 
-Visual Studio의 리팩터링 지원을 사용하면 핵심 통계 기능을 private 메서드로 쉽게 추출할 수 있습니다. 그러면 세 개의 값 `Sum`, `SumOfSquares` 및 `Count`가 포함된 튜플 형식을 반환하는 `private static` 메서드가 제공됩니다.
+Visual Studio의 리팩터링 지원을 사용하면 핵심 통계 기능을 private 메서드로 쉽게 추출할 수 있습니다. 그러면 세 개의 값 `private static`, `Sum` 및 `SumOfSquares`가 포함된 튜플 형식을 반환하는 `Count` 메서드가 제공됩니다.
 
 [!code-csharp[TupleMethodVersion](../../samples/snippets/csharp/tuples/statistics.cs#08_TupleMethodVersion "After extracting utility method")]
- 
+
 이 언어에서는 직접 몇 가지 빠른 편집을 수행하려는 경우 두 가지 옵션을 더 사용할 수 있습니다. 첫째, `var` 선언을 사용하여 `ComputeSumAndSumOfSquares` 메서드 호출에서 튜플 결과를 초기화할 수 있습니다. `ComputeSumAndSumOfSquares` 메서드 내에서 세 개의 개별 변수를 만들 수도 있습니다. 최종 버전은 다음 코드에 나와 있습니다.
 
 [!code-csharp[CleanedTupleVersion](../../samples/snippets/csharp/tuples/statistics.cs#09_CleanedTupleVersion "After final cleanup")]
@@ -225,7 +225,7 @@ private static (double, double, int) ComputeSumAndSumOfSquares(IEnumerable<doubl
 
 [!code-csharp[DeconstructToVar](../../samples/snippets/csharp/tuples/statistics.cs#11_DeconstructToVar "Deconstruct to Var")]
 
-괄호 안에 일부 또는 모든 변수 선언과 함께 `var` 키워드를 사용할 수도 있습니다. 
+괄호 안에 일부 또는 모든 변수 선언과 함께 `var` 키워드를 사용할 수도 있습니다.
 
 ```csharp
 (double sum, var sumOfSquares, var count) = ComputeSumAndSumOfSquares(sequence);
@@ -252,7 +252,7 @@ public class Point
 
 위와 같이 모든 튜플 형식을 분해할 수 있습니다. 또한 사용자 정의 형식(클래스, 구조체 또는 인터페이스)에서 쉽게 분해를 사용할 수 있습니다.
 
-형식 작성자는 형식을 구성하는 데이터 요소를 나타내는 임의 개수의 `out` 변수에 값을 할당하는 `Deconstruct` 메서드를 하나 이상 정의할 수 있습니다. 예를 들어 다음 `Person` 형식은 이름과 성을 나타내는 요소로 사용자 개체를 분해하는 `Deconstruct` 메서드를 정의합니다.
+형식 작성자는 형식을 구성하는 데이터 요소를 나타내는 임의 개수의 `Deconstruct` 변수에 값을 할당하는 `out` 메서드를 하나 이상 정의할 수 있습니다. 예를 들어 다음 `Person` 형식은 이름과 성을 나타내는 요소로 사용자 개체를 분해하는 `Deconstruct` 메서드를 정의합니다.
 
 [!code-csharp[TypeWithDeconstructMethod](../../samples/snippets/csharp/tuples/person.cs#12_TypeWithDeconstructMethod "Type with a deconstruct method")]
 
@@ -261,7 +261,7 @@ Deconstruct 메서드를 사용하면 `Person`에서 `FirstName` 및 `LastName` 
 [!code-csharp[Deconstruct Type](../../samples/snippets/csharp/tuples/program.cs#12A_DeconstructType "Deconstruct a class type")]
 
 직접 작성하지 않은 형식에 대해서도 분해를 사용할 수 있습니다.
-`Deconstruct` 메서드는 개체의 액세스 가능 데이터 멤버를 패키지 해제하는 확장 메서드일 수 있습니다. 아래 예제에서는 `Person` 형식에서 파생된 `Student` 형식과 `FirstName`, `LastName` 및 `GPA`를 나타내는 세 개의 변수로 `Student`를 분해하는 확장 메서드를 보여줍니다.
+`Deconstruct` 메서드는 개체의 액세스 가능 데이터 멤버를 패키지 해제하는 확장 메서드일 수 있습니다. 아래 예제에서는 `Student` 형식에서 파생된 `Person` 형식과 `Student`, `FirstName` 및 `LastName`를 나타내는 세 개의 변수로 `GPA`를 분해하는 확장 메서드를 보여줍니다.
 
 [!code-csharp[ExtensionDeconstructMethod](../../samples/snippets/csharp/tuples/person.cs#13_ExtensionDeconstructMethod "Type with a deconstruct extension method")]
 
@@ -270,9 +270,9 @@ Deconstruct 메서드를 사용하면 `Person`에서 `FirstName` 및 `LastName` 
 
 [!code-csharp[Deconstruct extension method](../../samples/snippets/csharp/tuples/program.cs#13A_DeconstructExtension "Deconstruct a class type using an extension method")]
 
-클래스 또는 클래스 계층 구조에서 `Deconstruct` 메서드를 여러 개 정의할 때는 주의해야 합니다. `out` 매개 변수 개수가 같은 `Deconstruct` 메서드가 여러 개 있으면 빠르게 모호성이 발생할 수 있습니다. 호출자가 원하는 `Deconstruct` 메서드를 쉽게 호출하지 못할 수 있습니다.
+클래스 또는 클래스 계층 구조에서 `Deconstruct` 메서드를 여러 개 정의할 때는 주의해야 합니다. `Deconstruct` 매개 변수 개수가 같은 `out` 메서드가 여러 개 있으면 빠르게 모호성이 발생할 수 있습니다. 호출자가 원하는 `Deconstruct` 메서드를 쉽게 호출하지 못할 수 있습니다.
 
-이 예제에서는 `Person`에 대한 `Deconstruct` 메서드에 두 개의 출력 매개 변수가 있고 `Student`에 대한 `Deconstruct` 메서드에 세 개가 있으므로 모호한 호출이 발생할 가능성이 최소화됩니다.
+이 예제에서는 `Deconstruct`에 대한 `Person` 메서드에 두 개의 출력 매개 변수가 있고 `Deconstruct`에 대한 `Student` 메서드에 세 개가 있으므로 모호한 호출이 발생할 가능성이 최소화됩니다.
 
 분해 연산자는 같음 테스트에 참여하지 않습니다. 다음 예제는 컴파일러 오류 CS0019를 생성합니다.
 
@@ -298,6 +298,6 @@ dict.TryGetValue(2, out (int, string) pair);
 Console.WriteLine($"{pair.Item1}: {pair.Item2}");
 ```
 
-## <a name="conclusion"></a>결론 
+## <a name="conclusion"></a>결론
 
 명명된 튜플에 대한 새로운 언어 및 라이브러리 지원을 사용하면 여러 요소를 저장하지만 클래스 및 구조체처럼 동작을 정의하지 않는 데이터 구조를 사용하는 디자인 작업이 훨씬 쉬워집니다. 해당 형식에 튜플을 쉽고 간단하게 사용할 수 있습니다. 자세한 `class` 또는 `struct` 구문을 사용하여 형식을 작성하지 않고도 정적 형식 검사의 모든 이점을 얻을 수 있습니다. 그렇지만 `private` 또는 `internal`인 유틸리티 메서드에 가장 유용합니다. public 메서드에서 여러 요소가 있는 값을 반환하는 경우 `class` 또는 `struct` 형식인 사용자 정의 형식을 만듭니다.

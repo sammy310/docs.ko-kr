@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: c3db8f7791e510768608e834339526fb82771979
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 165b6287e1610e013b289601e1535a08fdd3b5c9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451943"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398126"
 ---
 # <a name="readonly-c-reference"></a>readonly(C# 참조)
 
 `readonly` 키워드는 다음 네 가지 컨텍스트에서 사용할 수 있는 한정자입니다.
 
-- [필드 선언](#readonly-field-example)에서 필드에 대한 할당을 나타내는 `readonly`는 선언의 일부로 또는 동일한 클래스의 생성자에서만 발생할 수 있습니다. 필드 선언과 생성자 내에서 읽기 전용 필드를 여러 번 할당 및 재할당할 수 있습니다. 
+- [필드 선언](#readonly-field-example)에서 필드에 대한 할당을 나타내는 `readonly`는 선언의 일부로 또는 동일한 클래스의 생성자에서만 발생할 수 있습니다. 필드 선언과 생성자 내에서 읽기 전용 필드를 여러 번 할당 및 재할당할 수 있습니다.
   
   생성자가 종료된 후에는 `readonly` 필드를 할당할 수 없습니다. 이 규칙의 의미는 값 형식과 참조 형식에서 서로 다릅니다.
   
-  - 값 형식에는 해당 데이터가 직접 포함되므로, `readonly` 값 형식인 필드는 변경할 수 없습니다. 
+  - 값 형식에는 해당 데이터가 직접 포함되므로, `readonly` 값 형식인 필드는 변경할 수 없습니다.
   - 참조 형식에는 해당 데이터에 대한 참조가 포함되므로, `readonly` 참조 형식인 필드는 항상 같은 개체를 참조해야 합니다. 해당 개체는 변경할 수 있습니다. `readonly` 한정자는 필드가 참조 형식의 다른 인스턴스로 바뀌지 않도록 합니다. 그러나 이 한정자는 필드의 인스턴스 데이터가 읽기 전용 필드를 통해 수정되는 것을 방지하지는 않습니다.
 
   > [!WARNING]
@@ -135,7 +135,7 @@ public readonly int Index { get; }
 // Or:
 public int Number { readonly get; }
 public string Message { readonly get; set; }
-``` 
+```
 
 해당 위치에 `readonly` 한정자를 추가할 수도 있지만 아무 의미도 없습니다. 자동 구현 속성 setter 또는 읽기/쓰기 자동 구현 속성에 `readonly` 한정자를 추가할 수 없습니다.
 

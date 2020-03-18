@@ -7,12 +7,12 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: 6f17cb0fb6e5b0457af745ea0d089f3e51d4706c
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 4dbc2024aa2e956b23030ae6eab987e65e006d12
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938141"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398678"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework에서 내게 필요한 옵션의 새로운 기능
 
@@ -20,9 +20,9 @@ ms.locfileid: "75938141"
 
 ## <a name="accessibility-switches"></a>내게 필요한 옵션 스위치
 
-.NET Framework 4.7 이전 버전을 대상으로 하지만 .NET Framework 4.7.1 이상에서 실행되는 경우 내게 필요한 옵션 기능으로 옵트인하도록 앱을 구성할 수 있습니다. .NET Framework 4.7.1 이상을 대상으로 하는 경우 레거시 기능(및 내게 필요한 옵션 기능을 활용하지 못하도록)을 사용하도록 앱을 구성할 수도 있습니다. 내게 필요한 옵션 기능을 포함하는 .NET Framework의 각 버전에는 애플리케이션의 구성 파일의 [`<runtime>`](../configure-apps/file-schema/runtime/index.md) 섹션에서 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 요소에 추가하는 버전별 내게 필요한 옵션 스위치가 있습니다. 다음은 지원되는 스위치입니다.
+.NET Framework 4.7 이전 버전을 대상으로 하지만 .NET Framework 4.7.1 이상에서 실행되는 경우 내게 필요한 옵션 기능으로 옵트인하도록 앱을 구성할 수 있습니다. .NET Framework 4.7.1 이상을 대상으로 하는 경우 레거시 기능(및 내게 필요한 옵션 기능을 활용하지 못하도록)을 사용하도록 앱을 구성할 수도 있습니다. 내게 필요한 옵션 기능을 포함하는 .NET Framework의 각 버전에는 애플리케이션의 구성 파일의 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 섹션에서 [`<runtime>`](../configure-apps/file-schema/runtime/index.md) 요소에 추가하는 버전별 내게 필요한 옵션 스위치가 있습니다. 다음은 지원되는 스위치입니다.
 
-|버전|스위치|
+|Version|전환|
 |---|---|
 |.NET Framework 4.7.1|"Switch.UseLegacyAccessibilityFeatures"|
 |.NET Framework 4.7.2|"Switch.UseLegacyAccessibilityFeatures.2"|
@@ -30,7 +30,7 @@ ms.locfileid: "75938141"
 
 ### <a name="taking-advantage-of-accessibility-enhancements"></a>내게 필요한 옵션 개선 사항 활용
 
-새로운 내게 필요한 옵션 기능은 .NET Framework 4.7.1 이상을 대상으로 하는 애플리케이션에 대해 기본적으로 활성화되어 있습니다. 또한 이전 버전의 .NET Framework를 대상으로 하지만 .NET Framework 4.7.1 이상에서 실행되는 애플리케이션은 애플리케이션의 구성 파일의 [`<runtime>`](../configure-apps/file-schema/runtime/index.md) 섹션에서 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 요소에 스위치를 추가하고 해당 값을 `false`로 설정하여 레거시 내게 필요한 옵션 동작을 옵트아웃할 수 있습니다(따라서 내게 필요한 옵션 개선 사항 활용). 다음은 .NET Framework 4.7.1에 도입된 내게 필요한 옵션 개선 사항으로 옵트인하는 방법을 보여줍니다.
+새로운 내게 필요한 옵션 기능은 .NET Framework 4.7.1 이상을 대상으로 하는 애플리케이션에 대해 기본적으로 활성화되어 있습니다. 또한 이전 버전의 .NET Framework를 대상으로 하지만 .NET Framework 4.7.1 이상에서 실행되는 애플리케이션은 애플리케이션의 구성 파일의 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 섹션에서 [`<runtime>`](../configure-apps/file-schema/runtime/index.md) 요소에 스위치를 추가하고 해당 값을 `false`로 설정하여 레거시 내게 필요한 옵션 동작을 옵트아웃할 수 있습니다(따라서 내게 필요한 옵션 개선 사항 활용). 다음은 .NET Framework 4.7.1에 도입된 내게 필요한 옵션 개선 사항으로 옵트인하는 방법을 보여줍니다.
 
 ```xml
 <runtime>
@@ -59,7 +59,7 @@ ms.locfileid: "75938141"
 
 ### <a name="restoring-legacy-behavior"></a>레거시 동작 복원
 
-4\.7.1부터 시작하는 .NET Framework의 버전을 대상으로 하는 애플리케이션은 애플리케이션의 구성 파일의 [`<runtime>`](../configure-apps/file-schema/runtime/index.md) 섹션에서 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 요소에 스위치를 추가하고 `true`로 해당 값을 설정하여 내게 필요한 옵션 기능을 비활성화할 수 있습니다. 예를 들어 다음 구성은 .NET Framework 4.7.2에 도입된 내게 필요한 옵션 기능을 옵트아웃합니다.
+4\.7.1부터 시작하는 .NET Framework의 버전을 대상으로 하는 애플리케이션은 애플리케이션의 구성 파일의 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 섹션에서 [`<runtime>`](../configure-apps/file-schema/runtime/index.md) 요소에 스위치를 추가하고 `true`로 해당 값을 설정하여 내게 필요한 옵션 기능을 비활성화할 수 있습니다. 예를 들어 다음 구성은 .NET Framework 4.7.2에 도입된 내게 필요한 옵션 기능을 옵트아웃합니다.
 
 ```xml
 <runtime>
@@ -88,7 +88,7 @@ ms.locfileid: "75938141"
 
 UIA LiveRegions를 사용하면 애플리케이션 개발자는 사용자가 작업하는 위치와 별도로 위치한 컨트롤의 텍스트 변경 내용을 화면 readers에 알릴 수 있습니다. 예를 들어 연결 상태를 표시하는 <xref:System.Windows.Forms.StatusStrip> 컨트롤에 유용합니다. 연결이 끊어지고 상태가 변경되면 개발자가 화면 reader에 알리기를 원할 수 있습니다.
 
-.NET Framework 4.8부터 Windows Forms는 <xref:System.Windows.Forms.Label> 및 <xref:System.Windows.Forms.StatusStrip> 컨트롤 모두에 대해 UIA LiveRegions를 구현합니다. 예를 들어 다음 코드에서는 `label1`이라는 <xref:System.Windows.Forms.Label> 컨트롤에서 LiveRegion을 사용합니다.
+.NET Framework 4.8부터 Windows Forms는 <xref:System.Windows.Forms.Label> 및 <xref:System.Windows.Forms.StatusStrip> 컨트롤 모두에 대해 UIA LiveRegions를 구현합니다. 예를 들어 다음 코드에서는 <xref:System.Windows.Forms.Label>이라는 `label1` 컨트롤에서 LiveRegion을 사용합니다.
 
 ```csharp
 public Form1()
@@ -195,7 +195,7 @@ if (raiseMethod != null) {
 
 UIAutomation의 `ControllerFor` 속성은 이 속성을 지원하는 자동화 요소에 의해 조작되는 자동화 요소의 배열을 반환합니다. 이 속성은 자동 제안 접근성에 주로 사용됩니다. `ControllerFor`는 자동화 요소가 애플리케이션 UI 또는 데스크톱의 하나 이상의 세그먼트에 영향을 줄 때 사용됩니다. 그렇지 않으면 제어 작업의 영향을 UI 요소와 연결시키기가 어렵습니다. 이 기능은 컨트롤이 `ControllerFor` 속성 값을 제공하는 기능을 추가합니다.
 
-.NET Framework 4.8에는 새로운 가상 메서드인 <xref:System.Windows.Automation.Peers.AutomationPeer.GetControlledPeersCore?displayProperty=nameWithType?displayProperty=nameWithType>이 추가됩니다. `ControllerFor` 속성에 대한 값을 제공하려면 이 메서드를 재정의하고 이 <xref:System.Windows.Automation.Peers.AutomationPeer>에 의해 조작되는 컨트롤에 대해 `List<AutomationPeer>`를 반환합니다.
+.NET Framework 4.8에는 새로운 가상 메서드인 <xref:System.Windows.Automation.Peers.AutomationPeer.GetControlledPeersCore?displayProperty=nameWithType?displayProperty=nameWithType>이 추가됩니다. `ControllerFor` 속성에 대한 값을 제공하려면 이 메서드를 재정의하고 이 `List<AutomationPeer>`에 의해 조작되는 컨트롤에 대해 <xref:System.Windows.Automation.Peers.AutomationPeer>를 반환합니다.
 
 ```csharp
 public class AutoSuggestTextBox: TextBox
@@ -245,7 +245,7 @@ internal class AutoSuggestTextBoxAutomationPeer : TextBoxAutomationPeer
 활성화되어 컨트롤이 키보드 포커스를 받으면 도구 설명이 포함된 모든 컨트롤이 표시됩니다. 도구 설명은 시간이 경과하거나 키보드 포커스가 변경될 때 해제할 수 있습니다. 사용자가 새로운 바로 가기 키인 Ctrl + Shift + F10을 사용하여 도구 설명을 수동으로 해제할 수도 있습니다. 도구 설명이 해제되면 동일한 바로 가기 키를 사용하여 다시 표시할 수 있습니다.
 
 > [!NOTE]
-> <xref:System.Windows.Controls.Ribbon.Ribbon> 컨트롤의 [리본 도구 설명](xref:System.Windows.Controls.Ribbon.RibbonToolTip)이 키보드 포커스에 표시되지 않습니다. 바로 가기 키를 통해서만 표시됩니다.
+> [ 컨트롤의 ](xref:System.Windows.Controls.Ribbon.RibbonToolTip)리본 도구 설명<xref:System.Windows.Controls.Ribbon.Ribbon>이 키보드 포커스에 표시되지 않습니다. 바로 가기 키를 통해서만 표시됩니다.
 
 **SizeOfSet 및 PositionInSet UIAutomation 속성에 대한 지원 추가**
 
@@ -337,19 +337,19 @@ Windows 10에는 애플리케이션에서 집합의 항목 수를 설명하는 �
 
 - <xref:System.Windows.Forms.ToolStripDropDownButton> 컨트롤의 드롭다운 화살표
 
-- <xref:System.Windows.Forms.ButtonBase.FlatStyle>이 <xref:System.Windows.Forms.FlatStyle.Flat?displayProperty=nameWithType> 또는 <xref:System.Windows.Forms.FlatStyle.Popup?displayProperty=nameWithType>으로 설정된 <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.RadioButton> 및 <xref:System.Windows.Forms.CheckBox> 컨트롤 이전에 선택한 텍스트 및 배경색이 대비되지 않았고 읽기가 어려웠습니다.
+- <xref:System.Windows.Forms.Button>이 <xref:System.Windows.Forms.RadioButton> 또는 <xref:System.Windows.Forms.CheckBox>으로 설정된 <xref:System.Windows.Forms.ButtonBase.FlatStyle>, <xref:System.Windows.Forms.FlatStyle.Flat?displayProperty=nameWithType> 및 <xref:System.Windows.Forms.FlatStyle.Popup?displayProperty=nameWithType> 컨트롤 이전에 선택한 텍스트 및 배경색이 대비되지 않았고 읽기가 어려웠습니다.
 
-- 해당 <xref:System.Windows.Forms.Control.Enabled> 속성이 `false`로 설정된 <xref:System.Windows.Forms.GroupBox> 내부에 포함된 컨트롤
+- 해당 <xref:System.Windows.Forms.GroupBox> 속성이 <xref:System.Windows.Forms.Control.Enabled>로 설정된 `false` 내부에 포함된 컨트롤
 
 - 고대비 모드에서 명도 대비를 증가시킨 <xref:System.Windows.Forms.ToolStripButton>, <xref:System.Windows.Forms.ToolStripComboBox> 및 <xref:System.Windows.Forms.ToolStripDropDownButton> 컨트롤
 
-- <xref:System.Windows.Forms.DataGridViewLinkCell>의 <xref:System.Windows.Forms.DataGridViewLinkCell.LinkColor> 속성입니다.
+- <xref:System.Windows.Forms.DataGridViewLinkCell.LinkColor>의 <xref:System.Windows.Forms.DataGridViewLinkCell> 속성입니다.
 
 **내레이터 개선 사항**
 
 .NET Framework 4.7.2부터 내레이터 지원이 다음과 같이 향상됩니다.
 
-- <xref:System.Windows.Forms.ToolStripMenuItem>의 텍스트를 발표할 경우 <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys?displayProperty=nameWithType> 속성 값도 발표합니다.
+- <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys?displayProperty=nameWithType>의 텍스트를 발표할 경우 <xref:System.Windows.Forms.ToolStripMenuItem> 속성 값도 발표합니다.
 
 - <xref:System.Windows.Forms.ToolStripMenuItem>이 해당 <xref:System.Windows.Forms.Control.Enabled> 속성을 `false`로 설정할 때를 지정합니다.
 
@@ -365,21 +365,21 @@ Windows 10에는 애플리케이션에서 집합의 항목 수를 설명하는 �
 
 - <xref:System.Windows.Forms.DataGridView.SelectionMode?displayProperty=nameWithType>이 <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect?displayProperty=nameWithType>으로 설정된 경우 열 헤더는 색을 변경하여 현재 행의 셀을 통해 현재 열을 사용자 탭으로 나타내게 됩니다.
 
-- <xref:System.Windows.Forms.DataGridViewLinkCell.DataGridViewLinkCellAccessibleObject?displayProperty=nameWithType>의 <xref:System.Windows.Forms.AccessibleObject.Parent?displayProperty=nameWithType> 속성은 이제 올바른 부모 컨트롤을 반환합니다.
+- <xref:System.Windows.Forms.AccessibleObject.Parent?displayProperty=nameWithType>의 <xref:System.Windows.Forms.DataGridViewLinkCell.DataGridViewLinkCellAccessibleObject?displayProperty=nameWithType> 속성은 이제 올바른 부모 컨트롤을 반환합니다.
 
 **개선된 시각적 표시**
 
-- <xref:System.Windows.Forms.ButtonBase.Text> 속성이 빈 <xref:System.Windows.Forms.RadioButton> 및 <xref:System.Windows.Forms.CheckBox> 컨트롤은 포커스를 받을 때 포커스 표시기를 표시합니다.
+- <xref:System.Windows.Forms.RadioButton> 속성이 빈 <xref:System.Windows.Forms.CheckBox> 및 <xref:System.Windows.Forms.ButtonBase.Text> 컨트롤은 포커스를 받을 때 포커스 표시기를 표시합니다.
 
 **개선된 속성 표 지원**
 
-- <xref:System.Windows.Forms.PropertyGrid> 컨트롤 자식 요소는 PropertyGrid 요소를 사용하도록 설정한 경우에만 <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> 속성에 대한 `true`를 반환합니다.
+- <xref:System.Windows.Forms.PropertyGrid> 컨트롤 자식 요소는 PropertyGrid 요소를 사용하도록 설정한 경우에만 `true` 속성에 대한 <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>를 반환합니다.
 
-- <xref:System.Windows.Forms.PropertyGrid> 컨트롤 자식 요소는 PropertyGrid 요소를 사용자가 변경할 수 있는 경우에만 <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> 속성에 대한 `false`를 반환합니다.
+- <xref:System.Windows.Forms.PropertyGrid> 컨트롤 자식 요소는 PropertyGrid 요소를 사용자가 변경할 수 있는 경우에만 `false` 속성에 대한 <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>를 반환합니다.
 
 **바로 가기 탐색 개선**
 
-- <xref:System.Windows.Forms.ToolStripButton> 컨트롤은 <xref:System.Windows.Forms.ToolStripPanel.TabStop> 속성이 `true`로 설정된 <xref:System.Windows.Forms.ToolStripPanel>에 포함된 경우 포커스를 허용합니다.
+- <xref:System.Windows.Forms.ToolStripButton> 컨트롤은 <xref:System.Windows.Forms.ToolStripPanel> 속성이 <xref:System.Windows.Forms.ToolStripPanel.TabStop>로 설정된 `true`에 포함된 경우 포커스를 허용합니다.
 
 <a name="wpf472"></a>
 
@@ -433,17 +433,17 @@ NET Framework 4.7.2에서 이러한 시각적 개체는 이제 테마에서 더�
 
 라이브 영역을 지원하기 위해 다음과 같은 API가 WPF에 추가되었습니다.
 
-- **LiveSetting** 속성 및 **LiveRegionChanged** 이벤트를 식별하는 <xref:System.Windows.Automation.AutomationElementIdentifiers.LiveSettingProperty?displayProperty=nameWithType> 및 <xref:System.Windows.Automation.AutomationElementIdentifiers.LiveRegionChangedEvent?displayProperty=nameWithType> 필드 XAML을 사용하여 설정할 수 있습니다.
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.LiveSettingProperty?displayProperty=nameWithType>LiveSetting<xref:System.Windows.Automation.AutomationElementIdentifiers.LiveRegionChangedEvent?displayProperty=nameWithType> 속성 및 **LiveRegionChanged** 이벤트를 식별하는 **및** 필드 XAML을 사용하여 설정할 수 있습니다.
 
 - **AutomationProperties.LiveSetting** 연결된 속성으로, 화면 판독기에 사용자에 대한 UI 변경 내용의 중요성을 알려줍니다.
 
-- **AutomationProperties.LiveSetting** 연결된 속성을 식별하는 <xref:System.Windows.Automation.AutomationProperties.LiveSettingProperty?displayProperty=nameWithType> 속성
+- <xref:System.Windows.Automation.AutomationProperties.LiveSettingProperty?displayProperty=nameWithType>AutomationProperties.LiveSetting**연결된 속성을 식별하는** 속성
 
-- **LiveSetting** 값을 제공하도록 재정의될 수 있는 <xref:System.Windows.Automation.Peers.AutomationPeer.GetLiveSettingCore%2A?displayProperty=nameWithType> 메서드
+- <xref:System.Windows.Automation.Peers.AutomationPeer.GetLiveSettingCore%2A?displayProperty=nameWithType>LiveSetting**값을 제공하도록 재정의될 수 있는** 메서드
 
-- **LiveSetting** 값을 가져오고 설정하는 <xref:System.Windows.Automation.AutomationProperties.GetLiveSetting%2A?displayProperty=nameWithType> 및 <xref:System.Windows.Automation.AutomationProperties.SetLiveSetting%2A?displayProperty=nameWithType> 메서드
+- <xref:System.Windows.Automation.AutomationProperties.GetLiveSetting%2A?displayProperty=nameWithType>LiveSetting<xref:System.Windows.Automation.AutomationProperties.SetLiveSetting%2A?displayProperty=nameWithType> 값을 가져오고 설정하는 **및** 메서드
 
-- 다음 가능한 **LiveSetting** 값을 정의하는 <xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType> 열거형
+- 다음 가능한 <xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType>LiveSetting**값을 정의하는** 열거형
 
   - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>. 라이브 영역의 콘텐츠가 변경된 경우 요소는 알림을 보내지 않습니다.
   - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>. 라이브 영역의 콘텐츠가 변경된 경우 요소는 비중단 알림을 보냅니다.
@@ -476,37 +476,37 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - <xref:System.Windows.Controls.Expander> 컨트롤
 
-  <xref:System.Windows.Controls.Expander> 컨트롤에 대한 포커스 시각적 개체는 이제 표시됩니다. <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.ListBox> 및 <xref:System.Windows.Controls.RadioButton> 컨트롤에 대한 키보드 시각적 개체도 표시됩니다. 예:
+  <xref:System.Windows.Controls.Expander> 컨트롤에 대한 포커스 시각적 개체는 이제 표시됩니다. <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.ListBox> 및 <xref:System.Windows.Controls.RadioButton> 컨트롤에 대한 키보드 시각적 개체도 표시됩니다. 예들 들어 다음과 같습니다.
 
-  이전: 
+  이전:
 
   ![포커스가 있는 확장기 컨트롤 및 포커스 화면 효과가 없는 확장기 컨트롤의 스크린샷.](./media/whats-new-in-accessibility/expander-control-before.png)
 
-  이후: 
+  이후:
 
   ![포커스가 있는 확장기 컨트롤(컨트롤의 텍스트 주위가 점선으로 표시됨)의 스크린샷](./media/whats-new-in-accessibility/expander-control-after.png)
 
 - <xref:System.Windows.Controls.CheckBox> 및 <xref:System.Windows.Controls.RadioButton> 컨트롤
 
-  <xref:System.Windows.Controls.CheckBox> 및 <xref:System.Windows.Controls.RadioButton> 컨트롤의 텍스트는 이제 고대비 테마에서 선택하면 쉽게 볼 수 있습니다. 예:
+  <xref:System.Windows.Controls.CheckBox> 및 <xref:System.Windows.Controls.RadioButton> 컨트롤의 텍스트는 이제 고대비 테마에서 선택하면 쉽게 볼 수 있습니다. 예들 들어 다음과 같습니다.
 
-  이전: 
+  이전:
 
   ![고대비 테마에서 텍스트 가시성이 낮은 라디오 단추 및 확인 단추의 스크린샷](./media/whats-new-in-accessibility/high-contrast-radio-button-before.png)
 
-  이후: 
+  이후:
 
   ![고대비 테마에서 텍스트 가시성이 높은 라디오 단추 및 확인 단추의 스크린샷](./media/whats-new-in-accessibility/high-contrast-radio-button-after.png)
 
 - <xref:System.Windows.Controls.ComboBox> 컨트롤
 
-  .NET Framework 4.7.1부터 비활성화된 <xref:System.Windows.Controls.ComboBox> 컨트롤의 테두리는 비활성화된 텍스트와 동일한 색입니다. 예:
+  .NET Framework 4.7.1부터 비활성화된 <xref:System.Windows.Controls.ComboBox> 컨트롤의 테두리는 비활성화된 텍스트와 동일한 색입니다. 예들 들어 다음과 같습니다.
 
-  이전: 
+  이전:
 
   ![테두리와 컨트롤 텍스트의 색상이 다른 비활성화된 콤보 상자의 스크린샷](./media/whats-new-in-accessibility/combo-disabled-before.png)
 
-  이후:   
+  이후:
 
   ![테두리와 컨트롤 텍스트의 색상이 동일한 비활성화된 콤보 상자의 스크린샷](./media/whats-new-in-accessibility/combo-disabled-after.png)
 
@@ -514,43 +514,43 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   이전:
 
-  ![회색 텍스트로 나에게 포커스 지정이 표시되는 검은색 단추의 스크린샷](./media/whats-new-in-accessibility/button-theme-colors-before.png) 
+  ![회색 텍스트로 나에게 포커스 지정이 표시되는 검은색 단추의 스크린샷](./media/whats-new-in-accessibility/button-theme-colors-before.png)
 
-  이후: 
+  이후:
 
-  ![검은색 텍스트로 나에게 포커스 지정이 표시되는 파란색 단추의 스크린샷](./media/whats-new-in-accessibility/button-theme-colors-after.png) 
+  ![검은색 텍스트로 나에게 포커스 지정이 표시되는 파란색 단추의 스크린샷](./media/whats-new-in-accessibility/button-theme-colors-after.png)
 
-  마지막으로 .NET Framework 4.7 이전 버전에서 <xref:System.Windows.Controls.ComboBox> 컨트롤의 스타일을 `Toolbar.ComboBoxStyleKey`로 설정하면 드롭다운 화살표가 표시되지 않았습니다. 이 문제는 .NET Framework 4.7.1부터 수정되었습니다. 예:
+  마지막으로 .NET Framework 4.7 이전 버전에서 <xref:System.Windows.Controls.ComboBox> 컨트롤의 스타일을 `Toolbar.ComboBoxStyleKey`로 설정하면 드롭다운 화살표가 표시되지 않았습니다. 이 문제는 .NET Framework 4.7.1부터 수정되었습니다. 예들 들어 다음과 같습니다.
 
-  이전: 
+  이전:
 
-  ![보이지 않는 드롭다운 화살표가 있는 콤보 상자 컨트롤의 스크린샷](./media/whats-new-in-accessibility/combo-box-style-key-before.png) 
+  ![보이지 않는 드롭다운 화살표가 있는 콤보 상자 컨트롤의 스크린샷](./media/whats-new-in-accessibility/combo-box-style-key-before.png)
 
-  이후: 
+  이후:
 
-  ![드롭다운 화살표가 표시된 콤보 상자 컨트롤의 스크린샷](./media/whats-new-in-accessibility/combo-box-style-key-after.png) 
+  ![드롭다운 화살표가 표시된 콤보 상자 컨트롤의 스크린샷](./media/whats-new-in-accessibility/combo-box-style-key-after.png)
 
 - <xref:System.Windows.Controls.DataGrid> 컨트롤
 
-  .NET Framework 4.7.1부터 <xref:System.Windows.Controls.DataGrid> 컨트롤의 정렬 표시기 화살표는 이제 올바른 테마 색을 사용합니다. 예:
+  .NET Framework 4.7.1부터 <xref:System.Windows.Controls.DataGrid> 컨트롤의 정렬 표시기 화살표는 이제 올바른 테마 색을 사용합니다. 예들 들어 다음과 같습니다.
 
-  이전: 
+  이전:
 
-  ![개선 사항 이전의 정렬 표시기 화살표의 스크린샷](./media/whats-new-in-accessibility/sort-indicator-before.png) 
+  ![개선 사항 이전의 정렬 표시기 화살표의 스크린샷](./media/whats-new-in-accessibility/sort-indicator-before.png)
 
-  이후:   
+  이후:
 
-  ![개선 사항 이후의 정렬 표시기 화살표의 스크린샷](./media/whats-new-in-accessibility/sort-indicator-after.png) 
+  ![개선 사항 이후의 정렬 표시기 화살표의 스크린샷](./media/whats-new-in-accessibility/sort-indicator-after.png)
 
   또한 .NET Framework 4.7 이전 버전에서 기본 링크 스타일은 고대비 모드의 마우스에서 잘못된 색으로 변경되었습니다. 이는 .NET Framework 4.7.1부터 해결되었습니다. 마찬가지로 <xref:System.Windows.Controls.DataGrid> 확인란 열은 .NET Framework 4.7.1부터 키보드 포커스 피드백에 대해 예상되는 색을 사용합니다.
 
-  이전: 
+  이전:
 
-  ![빨간색으로 여기를 클릭하세요가 표시되는 링크의 스크린샷.](./media/whats-new-in-accessibility/default-link-style-before.png) 
+  ![빨간색으로 여기를 클릭하세요가 표시되는 링크의 스크린샷.](./media/whats-new-in-accessibility/default-link-style-before.png)
 
-  이후:    
+  이후:
 
-  ![노란색으로 여기를 클릭하세요가 표시되는 링크의 스크린샷.](./media/whats-new-in-accessibility/default-link-style-after.png) 
+  ![빨간색으로 여기를 클릭하세요가 표시되는 링크의 스크린샷.](./media/whats-new-in-accessibility/default-link-style-after.png)
 
 .NET Framework 4.7.1에서 WPF 내게 필요한 옵션 개선 사항에 대한 자세한 내용은 [WPF의 내게 필요한 옵션 개선 사항](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf)을 참조하세요.
 
@@ -577,15 +577,15 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - 선택된 <xref:System.Windows.Forms.Button> 컨트롤의 텍스트는 선택 영역 색과 대비됩니다.
 
-- 비활성화된 텍스트는 읽기가 쉽습니다. 예:
+- 비활성화된 텍스트는 읽기가 쉽습니다. 예들 들어 다음과 같습니다.
 
   이전:
 
-  ![접근성이 개선되기 전에 고대비 모드에서 실행되는 다른 컨트롤을 사용하는 앱의 스크린샷.](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-before.png) 
+  ![접근성이 개선되기 전에 고대비 모드에서 실행되는 다른 컨트롤을 사용하는 앱의 스크린샷.](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-before.png)
 
   이후:
 
-  ![접근성이 개선된 후에 고대비 모드에서 실행되는 다른 컨트롤을 사용하는 앱의 스크린샷.](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-after.png) 
+  ![접근성이 개선된 후에 고대비 모드에서 실행되는 다른 컨트롤을 사용하는 앱의 스크린샷.](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-after.png)
 
 - 스레드 예외 대화 상자의 고대비 개선 사항입니다.
 
@@ -707,6 +707,6 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - 고대비 테마를 선택한 사용자는 워크플로 디자이너의 표시 유형에서 여러 개선 사항 및 포커스 요소에 사용되는 요소와 더욱 분명한 선택 영역 상자 사이의 대조율과 같은 해당 컨트롤을 확인합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [.NET Framework의 새로운 기능](index.md)

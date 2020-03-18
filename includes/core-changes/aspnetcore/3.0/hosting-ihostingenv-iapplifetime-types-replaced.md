@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: be1fad236dd3eed047b010e93285aec8bc607b61
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394336"
 ---
 ### <a name="hosting-ihostingenvironment-and-iapplicationlifetime-types-marked-obsolete-and-replaced"></a>호스팅: IHostingEnvironment 및 IApplicationLifetime 형식이 사용되지 않는 것으로 표시되고 대체됨
@@ -26,7 +26,7 @@ ms.locfileid: "72394336"
 
 ASP.NET Core 2.1에 `Microsoft.Extensions.Hosting`이 도입되었을 때 `IHostingEnvironment` 및 `IApplicationLifetime`과 같은 일부 형식이 `Microsoft.AspNetCore.Hosting`에서 복사되었습니다. 일부 ASP.NET Core 3.0 변경으로 인해 앱에 `Microsoft.Extensions.Hosting` 및 `Microsoft.AspNetCore.Hosting` 네임스페이스가 모두 포함됩니다. 이러한 중복 형식을 사용하면 네임스페이스가 모두 참조될 때 "모호한 참조" 컴파일러 오류가 발생합니다.
 
-#### <a name="recommended-action"></a>권장 작업
+#### <a name="recommended-action"></a>권장 조치
 
 이전 형식의 사용을 다음과 같이 새로 도입된 형식으로 대체했습니다.
 

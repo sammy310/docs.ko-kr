@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: a7e03a833886a1486e0dc081d6ef059791a464b5
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: f3d3269ccf56954f963762503d2bc1c53b9e6b83
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156337"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78238990"
 ---
 # <a name="implementing-a-dispose-method"></a>Dispose 메서드 구현
 
@@ -33,7 +33,7 @@ ms.locfileid: "78156337"
   
 리소스가 항상 적절하게 정리되게 하려면 예외를 throw하지 않고 <xref:System.IDisposable.Dispose%2A> 메서드를 여러 번 호출해야 합니다.  
   
-<xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> 메서드의 코드 예제에서는 적극적인 가비지 수집으로 인해, 회수된 개체의 멤버가 아직 실행되는 동안 종료자가 실행되게 할 수 있는 방법을 보여 줍니다. <xref:System.GC.KeepAlive%2A> 메서드를 오래 실행한 후에는 <xref:System.IDisposable.Dispose%2A> 메서드를 호출하는 것이 좋습니다.  
+<xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> 메서드에 대해 제공된 코드 예에서는 개체 또는 개체의 멤버에 대한 관리되지 않는 참조가 여전히 사용 중인 동안 가비지 수집으로 인해 종료자가 실행되게 할 수 있는 방법을 보여 줍니다. <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType>를 활용하여 현재 루틴의 시작부터 이 메서드가 호출되는 시점까지 개체를 가비지 수집에 부적절하도록 만드는 것이 좋을 수도 있습니다.
   
 <a name="Dispose2"></a>
 ## <a name="dispose-and-disposeboolean"></a>Dispose() 및 Dispose(Boolean)  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 21732acd65eb4522b19ce84600fd8b333fb8a705
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 54a4562a5cc493fc287bdf2f6bcf9723557f2a05
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711872"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79157041"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>문자열을 숫자로 변환하는 방법(C# 프로그래밍 가이드)
 
@@ -24,13 +24,13 @@ ms.locfileid: "75711872"
   
 ## <a name="calling-the-parse-and-tryparse-methods"></a>Parse 및 TryParse 메서드 호출
 
-`Parse` 및 `TryParse` 메서드는 문자열의 시작과 끝에 있는 공백을 무시하지만 다른 모든 문자는 적절한 숫자 형식(`int`, `long`, `ulong`, `float`, `decimal` 등)을 구성하는 문자여야 합니다.  숫자를 구성하는 문자열 내에 공백이 있으면 오류가 발생합니다.  예를 들어 `decimal.TryParse`를 사용하여 “10”, “10.3” 또는 “  10  ”은 구문 분석할 수 있지만 이 메서드를 사용하여 “10X”, “1 0”(공백 포함), “10 .3”(공백 포함), “10e1”(`float.TryParse` 사용) 등에서 10을 구문 분석할 수는 없습니다. 또한 값이 `null` 또는 <xref:System.String.Empty?displayProperty=nameWithType>인 문자열이 구문 분석되지 않습니다. <xref:System.String.IsNullOrEmpty%2A?displayProperty=nameWithType> 메서드를 호출하여 구문 분석하기 전에 Null 또는 빈 문자열을 확인할 수 있습니다. 
+`Parse` 및 `TryParse` 메서드는 문자열의 시작과 끝에 있는 공백을 무시하지만 다른 모든 문자는 적절한 숫자 형식(`int`, `long`, `ulong`, `float`, `decimal` 등)을 구성하는 문자여야 합니다.  숫자를 구성하는 문자열 내에 공백이 있으면 오류가 발생합니다.  예를 들어 `decimal.TryParse`를 사용하여 “10”, “10.3” 또는 “  10  ”은 구문 분석할 수 있지만 이 메서드를 사용하여 “10X”, “1 0”(공백 포함), “10 .3”(공백 포함), “10e1”(`float.TryParse` 사용) 등에서 10을 구문 분석할 수는 없습니다. 또한 값이 `null` 또는 <xref:System.String.Empty?displayProperty=nameWithType>인 문자열이 구문 분석되지 않습니다. <xref:System.String.IsNullOrEmpty%2A?displayProperty=nameWithType> 메서드를 호출하여 구문 분석하기 전에 Null 또는 빈 문자열을 확인할 수 있습니다.
 
 다음 예제에서는 `Parse` 및 `TryParse` 호출이 성공하는 경우와 실패하는 경우를 모두 보여 줍니다.  
   
 [!code-csharp[Parse and TryParse](~/samples/snippets/csharp/programming-guide/string-to-number/parse-tryparse/program.cs)]  
 
-다음 예제에서는 선행 숫자(16진수 문자 포함) 및 숫자가 아닌 후행 문자를 포함해야 하는 문자열을 구문 분석하는 한 가지 방법을 보여 줍니다. <xref:System.Int32.TryParse%2A> 메서드를 호출하기 전에 문자열 시작 부분의 유효한 문자를 새 문자열에 할당합니다. 구문 분석할 문자열에 포함된 문자 수가 적으므로 예제에서는 <xref:System.String.Concat%2A?displayProperty=nameWithType> 메서드를 호출하여 새 문자열에 유효한 문자를 할당합니다. 더 큰 문자열의 경우 <xref:System.Text.StringBuilder> 클래스를 대신 사용할 수 있습니다. 
+다음 예제에서는 선행 숫자(16진수 문자 포함) 및 숫자가 아닌 후행 문자를 포함해야 하는 문자열을 구문 분석하는 한 가지 방법을 보여 줍니다. <xref:System.Int32.TryParse%2A> 메서드를 호출하기 전에 문자열 시작 부분의 유효한 문자를 새 문자열에 할당합니다. 구문 분석할 문자열에 포함된 문자 수가 적으므로 예제에서는 <xref:System.String.Concat%2A?displayProperty=nameWithType> 메서드를 호출하여 새 문자열에 유효한 문자를 할당합니다. 더 큰 문자열의 경우 <xref:System.Text.StringBuilder> 클래스를 대신 사용할 수 있습니다.
   
 [!code-csharp[Removing invalid characters](~/samples/snippets/csharp/programming-guide/string-to-number/parse-tryparse2/program.cs)]  
 

@@ -4,12 +4,12 @@ description: 기존 TensorFlow 모델에서 새로운 ML.NET 이미지 분류 �
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: f5ec31f8bfdc089d275588b228c8ce6f28a44201
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 1e5478f53c82f36ddafe19e3659e2234ff9687b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77092553"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78241028"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>자습서: 미리 학습된 TensorFlow 모델에서 ML.NET 이미지 분류 모델 생성
 
@@ -145,15 +145,15 @@ toaster2.png    appliance
 
 1. *Program.cs* 파일 맨 위에 다음 추가 `using` 문을 추가합니다.
 
-    [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#AddUsings)]
+    [!code-csharp[AddUsings](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#AddUsings)]
 
 1. `Main` 메서드 바로 위의 줄에 다음 코드를 추가하여 해당 자산 경로를 지정합니다.
 
-    [!code-csharp[DeclareGlobalVariables](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DeclareGlobalVariables)]
+    [!code-csharp[DeclareGlobalVariables](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#DeclareGlobalVariables)]
 
 1. 입력 데이터 및 예측에 대한 클래스를 만듭니다.
 
-    [!code-csharp[DeclareImageData](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DeclareImageData)]
+    [!code-csharp[DeclareImageData](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#DeclareImageData)]
 
     `ImageData`는 입력 이미지 데이터 클래스이며 다음 <xref:System.String> 필드를 포함합니다.
 
@@ -162,7 +162,7 @@ toaster2.png    appliance
 
 1. `ImagePrediction`의 새 클래스를 프로젝트에 추가합니다.
 
-    [!code-csharp[DeclareImagePrediction](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DeclareImagePrediction)]
+    [!code-csharp[DeclareImagePrediction](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#DeclareImagePrediction)]
 
     `ImagePrediction`은 이미지 예측 클래스이며 다음 필드를 포함합니다.
 
@@ -175,7 +175,7 @@ toaster2.png    appliance
 
 1. `MLContext`의 새 인스턴스를 사용하여 `mlContext` 변수를 초기화합니다.  `Main` 메서드에서 `Console.WriteLine("Hello World!")` 줄을 다음 코드로 바꿉니다.
 
-    [!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CreateMLContext)]
+    [!code-csharp[CreateMLContext](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#CreateMLContext)]
 
     [MLContext 클래스](xref:Microsoft.ML.MLContext)는 모든 ML.NET 작업의 시작점이며, `mlContext`를 초기화하면 모델 생성 워크플로 개체 간에 공유할 수 있는 새 ML.NET 환경이 생성됩니다. 개념적으로 Entity Framework의 `DBContext`와 유사합니다.
 
@@ -183,7 +183,7 @@ toaster2.png    appliance
 
 1. 개시 모델에는 전달해야 하는 여러 가지 매개 변수가 있습니다. `Main()` 메서드 바로 뒤에서 다음 코드를 사용하여 매개 변수 값을 친숙한 이름에 매핑하는 구조체를 만듭니다.
 
-    [!code-csharp[InceptionSettings](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#InceptionSettings)]
+    [!code-csharp[InceptionSettings](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#InceptionSettings)]
 
 ### <a name="create-a-display-utility-method"></a>표시 유틸리티 메서드 만들기
 
@@ -200,7 +200,7 @@ toaster2.png    appliance
 
 1. 다음과 같이 `DisplayResults` 메서드의 본문을 채웁니다.
 
-    [!code-csharp[DisplayPredictions](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DisplayPredictions)]
+    [!code-csharp[DisplayPredictions](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#DisplayPredictions)]
 
 ### <a name="create-a-tsv-file-utility-method"></a>.tsv 파일 유틸리티 메서드 만들기
 
@@ -215,7 +215,7 @@ toaster2.png    appliance
 
 1. 다음과 같이 `ReadFromTsv` 메서드의 본문을 채웁니다.
 
-    [!code-csharp[ReadFromTsv](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ReadFromTsv)]
+    [!code-csharp[ReadFromTsv](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#ReadFromTsv)]
 
     이 코드는 `tags.tsv` 파일을 구문 분석하여 `ImagePath` 속성의 이미지 파일 이름에 파일 경로를 추가하고 로드한 다음, `Label`을 `ImageData` 개체로 로드합니다.
 
@@ -232,11 +232,11 @@ toaster2.png    appliance
 
 1. 단일 `ImagePath`의 정규화된 경로 및 이미지 파일 이름을 포함하는 `ImageData` 개체를 만듭니다. `ClassifySingleImage()` 메서드의 다음 줄로 아래 코드를 추가합니다.
 
-    [!code-csharp[LoadImageData](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#LoadImageData)]
+    [!code-csharp[LoadImageData](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#LoadImageData)]
 
 1. `ClassifySingleImage` 메서드에서 다음 코드를 그 다음 줄로 추가하여 단일 예측을 수행합니다.
 
-    [!code-csharp[PredictSingle](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#PredictSingle)]
+    [!code-csharp[PredictSingle](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#PredictSingle)]
 
     예측을 가져오려면 [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) 메서드를 사용합니다. [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602)은 데이터의 단일 인스턴스에 대한 예측을 수행할 수 있는 편리한 API입니다. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)은 스레드로부터 안전하지 않습니다. 단일 스레드 또는 프로토타입 환경에서 사용할 수 있습니다. 프로덕션 환경에서 성능 및 스레드 보안을 개선하려면 `PredictionEnginePool` 서비스를 사용합니다. 이 서비스는 애플리케이션 전체에서 사용할 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 개체의 [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)을 만듭니다. [ASP.NET Core Web API에서 `PredictionEnginePool`을 사용하는 방법](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)에 대한 이 가이드를 참조하세요.
 
@@ -245,7 +245,7 @@ toaster2.png    appliance
 
 1. 예측 결과를 `ClassifySingleImage()` 메서드의 다음 코드 줄로 표시합니다.
 
-   [!code-csharp[DisplayPrediction](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DisplayPrediction)]
+   [!code-csharp[DisplayPrediction](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#DisplayPrediction)]
 
 ## <a name="construct-the-mlnet-model-pipeline"></a>ML.NET 모델 파이프라인 생성
 
@@ -266,13 +266,13 @@ ML.NET 모델 파이프라인은 추정기의 체인입니다. 파이프라인 �
 
 1. 추정기를 추가하여 이미지 데이터에서 픽셀을 로드하고, 크기를 조정하고, 추출합니다.
 
-    [!code-csharp[ImageTransforms](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ImageTransforms)]
+    [!code-csharp[ImageTransforms](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#ImageTransforms)]
 
     이미지 데이터를 TensorFlow 모델에 필요한 형식으로 처리해야 합니다. 이 경우, 이미지는 메모리에 로드되고 일관된 크기로 조정되며 픽셀이 숫자 벡터로 추출됩니다.
 
 1. 추정기를 추가하여 TensorFlow 모델을 로드하고 점수를 계산합니다.
 
-    [!code-csharp[ScoreTensorFlowModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ScoreTensorFlowModel)]
+    [!code-csharp[ScoreTensorFlowModel](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#ScoreTensorFlowModel)]
 
     파이프라인의 이 단계는 TensorFlow 모델을 메모리로 로드한 다음, TensorFlow 모델 네트워크를 통해 픽셀 값의 벡터를 처리합니다. 심층 학습 모델에 입력을 적용하고 모델을 사용하여 출력을 생성하는 것을 **점수 매기기**라고 합니다. 모델을 전체적으로 사용하는 경우 점수를 매기기 위해 유추 또는 예측을 수행됩니다.
 
@@ -282,29 +282,29 @@ ML.NET 모델 파이프라인은 추정기의 체인입니다. 파이프라인 �
 
 1. 학습 데이터의 문자열 레이블을 정수 키 값에 매핑하는 추정기를 추가합니다.
 
-    [!code-csharp[MapValueToKey](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#MapValueToKey)]
+    [!code-csharp[MapValueToKey](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#MapValueToKey)]
 
     다음에 추가된 ML.NET 트레이너에서는 해당 레이블이 임의 문자열이 아닌 `key` 형식 이어야 합니다. 키는 문자열 값에 일대일로 매핑되는 숫자입니다.
 
 1. 다음과 같이 ML.NET 학습 알고리즘을 추가합니다.
 
-    [!code-csharp[AddTrainer](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#AddTrainer)]
+    [!code-csharp[AddTrainer](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#AddTrainer)]
 
 1. 예측 키 값을 문자열에 다시 매핑하는 추정기를 추가합니다.
 
-    [!code-csharp[MapKeyToValue](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#MapKeyToValue)]
+    [!code-csharp[MapKeyToValue](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#MapKeyToValue)]
 
 ## <a name="train-the-model"></a>모델 학습
 
 1. [LoadFromTextFile](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile(Microsoft.ML.DataOperationsCatalog,System.String,Microsoft.ML.Data.TextLoader.Options)) 래퍼를 사용하여 학습 데이터를 로드합니다. `GenerateModel()` 메서드에 아래 코드를 다음 줄로 추가합니다.
 
-    [!code-csharp[LoadData](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#LoadData "Load the data")]
+    [!code-csharp[LoadData](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#LoadData "Load the data")]
 
     ML.NET의 데이터는 [IDataView 클래스](xref:Microsoft.ML.IDataView)로 표시됩니다. `IDataView`는 표 형식 데이터(숫자 및 텍스트)를 유연하고 효율적으로 설명하는 방법입니다. 데이터를 텍스트 파일 또는 실시간(예: SQL 데이터베이스 또는 로그 파일)에서 `IDataView` 개체로 로드할 수 있습니다.
 
 1. 위에 로드된 데이터로 모델을 학습시킵니다.
 
-    [!code-csharp[TrainModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#TrainModel)]
+    [!code-csharp[TrainModel](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#TrainModel)]
 
     `Fit()` 메서드는 학습 데이터 세트를 파이프라인에 적용하여 모델을 학습시킵니다.
 
@@ -312,13 +312,13 @@ ML.NET 모델 파이프라인은 추정기의 체인입니다. 파이프라인 �
 
 1. `GenerateModel` 메서드의 다음 줄에 다음 코드를 추가하여 테스트 데이터를 로드하고 변환합니다.
 
-    [!code-csharp[LoadAndTransformTestData](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#LoadAndTransformTestData "Load and transform test data")]
+    [!code-csharp[LoadAndTransformTestData](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#LoadAndTransformTestData "Load and transform test data")]
 
     모델을 평가하는 데 사용할 수 있는 몇 가지 샘플 이미지가 있습니다. 학습 데이터와 마찬가지로, 이러한 이미지도 모델에서 변환할 수 있도록 `IDataView`로 로드해야 합니다.
 
 1. `GenerateModel()` 메서드에 다음 코드를 추가하여 모델을 평가합니다.
 
-    [!code-csharp[Evaluate](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#Evaluate)]
+    [!code-csharp[Evaluate](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#Evaluate)]
 
     예측 세트가 있으면 [Evaluate()](xref:Microsoft.ML.RecommendationCatalog.Evaluate%2A) 메서드가 다음을 수행합니다.
 
@@ -329,7 +329,7 @@ ML.NET 모델 파이프라인은 추정기의 체인입니다. 파이프라인 �
 
     다음 코드를 사용하여 메트릭을 표시하고, 결과를 공유한 다음, 작업을 수행합니다.
 
-    [!code-csharp[DisplayMetrics](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DisplayMetrics)]
+    [!code-csharp[DisplayMetrics](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#DisplayMetrics)]
 
     이미지 분류를 위해 다음 메트릭이 평가됩니다.
 
@@ -338,17 +338,17 @@ ML.NET 모델 파이프라인은 추정기의 체인입니다. 파이프라인 �
 
 1. 다음 코드를 추가하여 학습된 모델을 다음 줄로 반환합니다.
 
-    [!code-csharp[SaveModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ReturnModel)]
+    [!code-csharp[SaveModel](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#ReturnModel)]
 
 ## <a name="run-the-application"></a>애플리케이션을 실행합니다.
 
 1. MLContext 클래스를 만든 후 `Main` 메서드에서 `GenerateModel` 호출을 추가합니다.
 
-    [!code-csharp[CallGenerateModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallGenerateModel)]
+    [!code-csharp[CallGenerateModel](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#CallGenerateModel)]
 
 1. `ClassifySingleImage()` 메서드 호출을 `Main` 메서드의 다음 코드 줄로 추가합니다.
 
-    [!code-csharp[CallClassifySingleImage](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallClassifySingleImage)]
+    [!code-csharp[CallClassifySingleImage](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#CallClassifySingleImage)]
 
 1. 콘솔 앱을 실행합니다(Ctrl+F5). 다음 출력과 같은 결과가 나타나야 합니다.  경고 또는 처리 메시지가 표시될 수 있지만, 이해하기 쉽도록 이러한 메시지는 다음 결과에서 제거되었습니다.
 

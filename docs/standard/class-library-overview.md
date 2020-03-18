@@ -38,11 +38,11 @@ helpviewer_keywords:
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 ms.openlocfilehash: 596c0fd8fec8f59d977f1db445f9000df23ad5ce
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132851"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398768"
 ---
 # <a name="net-class-library-overview"></a>.NET 클래스 라이브러리 개요
 
@@ -84,12 +84,12 @@ ms.locfileid: "73132851"
   
  다음 표에서는 .NET에서 제공하는 기본 형식 목록을 보여 주며 각 형식에 대해 간단히 설명한 다음 Visual Basic, C#, C++ 및 F#의 해당 형식을 나타냅니다.  
   
-|Category|클래스 이름|설명|Visual Basic 데이터 형식|C# 데이터 형식|C++/CLI 데이터 형식|F# 데이터 형식|  
+|범주|클래스 이름|설명|Visual Basic 데이터 형식|C# 데이터 형식|C++/CLI 데이터 형식|F# 데이터 형식|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
-|정수|<xref:System.Byte>|8비트 부호 없는 정수임|**Byte**|**바이트**|**unsigned char**|**바이트**|  
+|정수|<xref:System.Byte>|8비트 부호 없는 정수임|**Byte**|**byte**|**unsigned char**|**byte**|  
 ||<xref:System.SByte>|8비트 부호 있는 정수입니다.<br /><br /> CLS 규격을 따르지 않음|**SByte**|**sbyte**|**char**<br /> 또는<br /> **signed** **char**|**sbyte**|  
 ||<xref:System.Int16>|16비트 부호 있는 정수입니다.|**Short**|**short**|**short**|**int16**|  
-||<xref:System.Int32>|32비트 부호 있는 정수입니다.|**정수**|**int**|**int**<br /><br /> 또는<br /><br /> **long**|**int**|  
+||<xref:System.Int32>|32비트 부호 있는 정수입니다.|**Integer**|**int**|**int**<br /><br /> 또는<br /><br /> **long**|**int**|  
 ||<xref:System.Int64>|64비트 부호 있는 정수입니다.|**Long**|**long**|**__int64**|**int64**|  
 ||<xref:System.UInt16>|16비트 부호 없는 정수입니다.<br /><br /> CLS 규격을 따르지 않음|**UShort**|**ushort**|**unsigned short**|**uint16**|  
 ||<xref:System.UInt32>|32비트 부호 없는 정수입니다.<br /><br /> CLS 규격을 따르지 않음|**UInteger**|**uint**|**unsigned int**<br /> 또는<br /> **unsigned long**|**uint32**|  
@@ -101,14 +101,14 @@ ms.locfileid: "73132851"
 ||<xref:System.Decimal>|10진수(128비트) 값|**Decimal**|**decimal**|**Decimal**|**decimal**|  
 ||<xref:System.IntPtr>|내부 플랫폼에 따라 크기가 결정되는 부호 있는 정수(32비트 플랫폼에서는 32비트 값이고 64비트 플랫폼에서는 64비트 값임)|**IntPtr**<br /><br /> 기본 제공 형식이 아님|**IntPtr**<br /><br /> 기본 제공 형식이 아님|**IntPtr**<br /><br /> 기본 제공 형식이 아님|**unativeint**|  
 ||<xref:System.UIntPtr>|내부 플랫폼에 따라 크기가 결정되는 부호 없는 정수(32비트 플랫폼에서는 32비트 값이고 64비트 플랫폼에서는 64비트 값임)<br /><br /> CLS 규격을 따르지 않음|**UIntPtr**<br /><br /> 기본 제공 형식이 아님|**UIntPtr**<br /><br /> 기본 제공 형식이 아님|**UIntPtr**<br /><br /> 기본 제공 형식이 아님|**unativeint**|  
-||<xref:System.Object>|개체 계층 구조의 루트임|**Object**|**object**|**Object^**|**obj**|  
+||<xref:System.Object>|개체 계층 구조의 루트임|**개체**|**object**|**Object^**|**obj**|  
 ||<xref:System.String>|유니코드 문자로 구성된 변경할 수 없는 고정 길이의 문자열|**String**|**string**|**String^**|**string**|  
   
  기본 데이터 형식 외에도 <xref:System> 네임 스페이스에는 100 개 이상의 클래스를 애플리케이션 도메인 및 가비지 수집기와 같은 핵심 런타임 개념을 다루는 클래스에 대 한 예외를 처리 하는 클래스를 포함 합니다. 또한 <xref:System> 네임스페이스에는 2차 네임스페이스도 많이 들어 있습니다.  
   
  네임스페이스에 대한 자세한 내용은 [.NET API 브라우저](https://docs.microsoft.com/dotnet/api) 를 사용하여 .NET 클래스 라이브러리를 참조하세요. API 참조 설명서는 각 네임스페이스, 해당 유형 및 해당 멤버의 각각에 대한 설명서를 제공합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [공용 형식 시스템](../../docs/standard/base-types/common-type-system.md)
 - [.NET API 브라우저](../../api/index.md)

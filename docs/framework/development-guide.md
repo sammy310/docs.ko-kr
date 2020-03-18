@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-ms.openlocfilehash: abc392116aec8ffd8aa94f46ef97887c48516ca0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0500e11d2897cfa7392cc8280a0b69c5e2fc515f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122476"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79181628"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework 개발 가이드
 이 섹션에서는 .NET Framework 앱을 생성, 구성, 디버그, 배포하고 보안을 적용하는 방법을 설명합니다. 이 섹션에서는 또한 동적 프로그래밍, 상호 운용성, 확장성, 메모리 관리 및 스레딩과 같은 기술 영역에 대한 정보를 제공합니다.  
@@ -30,8 +30,7 @@ ms.locfileid: "73122476"
  [WCF를 사용하여 개발한 서비스 기반 애플리케이션](./wcf/index.md)  
  WCF(Windows Communication Foundation)를 사용하여 안전하고 신뢰할 수 있는 서비스 지향 앱을 빌드하는 방법을 설명합니다.  
   
- [Windows Workflow Foundation으로 워크플로 만들기](windows-workflow-foundation/index.md)     
- Windows WF(Workflow Foundation) 사용을 위한 프로그래밍 모델, 샘플 및 도구에 대한 정보를 제공합니다.  
+ [Windows Workflow Foundation으로 워크플로 만들기](windows-workflow-foundation/index.md) Windows WF(Workflow Foundation)를 사용하는 프로그래밍 모델, 샘플 및 도구에 대한 정보를 제공합니다.  
 
  [Windows 서비스 애플리케이션](./windows-services/index.md)  
  Visual Studio 및 .NET Framework를 사용하여 서비스로서 설치되는 앱을 만들고 서비스 동작을 시작, 중지 및 다른 방식으로 제어하는 방법에 대해 설명합니다.  
@@ -42,8 +41,7 @@ ms.locfileid: "73122476"
  [.NET Framework의 네트워크 프로그래밍](./network-programming/index.md)  
  더 빠르고 쉽게 앱에 통합할 수 있는 계층적이고 확장 가능하며 관리되는 인터넷 서비스 구현에 대해 설명합니다.  
   
- [.NET Framework 앱 구성](configure-apps/index.md)    
- .NET Framework 앱을 다시 컴파일하지 않고도 구성 파일을 사용하여 설정을 변경할 수 있는 방법에 대해 설명합니다.  
+ [.NET Framework 앱 구성](configure-apps/index.md) .NET Framework 앱을 다시 컴파일하지 않고도 구성 파일을 사용하여 설정을 변경할 수 있는 방법에 대해 설명합니다.  
   
  [.NET Native로 앱 컴파일](./net-native/index.md)  
  .NET 네이티브 미리 컴파일 기술을 사용하여 Windows 스토어 앱을 빌드 및 배포하는 방법을 설명합니다. .NET 네이티브에서는 관리 코드(C#)로 작성되며 .NET Framework을 대상으로 지정하는 앱을 네이티브 코드로 컴파일합니다.  
@@ -62,8 +60,8 @@ ms.locfileid: "73122476"
   
  [성능](./performance/index.md)  
  캐싱, 초기화 지연, 안정성 및 ETW 이벤트에 대한 정보를 제공합니다.  
- 
-## <a name="reference"></a>참조  
+
+## <a name="reference"></a>참고  
  [.NET Framework 클래스 라이브러리](/dotnet/api/?view=netframework-4.7)  
  .NET Framework 네임스페이스에 포함된 각 클래스에 대한 구문, 코드 예제 및 사용 정보를 제공합니다.  
   

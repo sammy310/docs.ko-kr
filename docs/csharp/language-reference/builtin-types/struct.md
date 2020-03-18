@@ -8,18 +8,18 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 6113912f176d2d7b68c77ff2e78a361b373ca31a
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: b85d0df086f3ca65ed995594dd374286e1c3ba5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77634640"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847731"
 ---
 # <a name="structure-types-c-reference"></a>구조체 형식(C# 참조)
 
 ‘구조체 형식’은 데이터와 관련 기능을 캡슐화할 수 있는 [값 형식](value-types.md)입니다.   구조체 형식은 `struct` 키워드를 사용하여 정의합니다.
 
-[!code-csharp[struct example](~/samples/csharp/language-reference/builtin-types/StructType.cs#StructExample)]
+[!code-csharp[struct example](snippets/StructType.cs#StructExample)]
 
 구조체 형식은 ‘값 의미 체계’를 갖습니다.  즉, 구조체 형식의 변수는 해당 형식의 인스턴스를 포함합니다. 기본적으로 변수 값은 할당 시에, 인수를 메서드에 전달할 때, 그리고 메서드 결과를 반환할 때 복사됩니다. 구조체 형식 변수의 경우, 해당 형식의 인스턴스가 복사됩니다. 자세한 내용은 [값 형식](value-types.md)을 참조하세요.
 
@@ -47,7 +47,7 @@ C#에서는 선언된 변수를 사용하려면 먼저 초기화해야 합니다
 
 구조체 형식의 모든 인스턴스 필드가 액세스 가능한 경우, `new` 연산자 없이 인스턴스화할 수도 있습니다. 이 경우 인스턴스를 처음 사용하기 전에 모든 인스턴스 필드를 초기화해야 합니다. 다음 예제에서는 해당 작업을 수행하는 방법을 보여줍니다.
 
-[!code-csharp[without new](~/samples/csharp/language-reference/builtin-types/StructType.cs#WithoutNew)]
+[!code-csharp[without new](snippets/StructType.cs#WithoutNew)]
 
 [기본 제공 값 형식](value-types.md#built-in-value-types)의 경우, 해당 리터럴을 사용하여 해당 형식의 값을 지정합니다.
 

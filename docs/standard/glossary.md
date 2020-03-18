@@ -4,11 +4,11 @@ description: .NET 설명서에서 사용되는 선택한 용어의 의미를 알
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
 ms.openlocfilehash: 8da1d858835210590a80a624fb8989fbfe8e0a91
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160094"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398750"
 ---
 # <a name="net-glossary"></a>.NET 용어
 

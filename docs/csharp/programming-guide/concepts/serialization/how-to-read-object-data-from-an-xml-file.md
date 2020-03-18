@@ -2,12 +2,12 @@
 title: XML 파일에서 개체 데이터를 읽는 방법(C#)
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: 2da5919c11ed2d6e43f4f9fc406f43e3ed48060f
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 18428cbe2f2d3b9434a77ee4d063ceabbba6bcb8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346429"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167820"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>XML 파일에서 개체 데이터를 읽는 방법(C#)
 이 예제에서는 <xref:System.Xml.Serialization.XmlSerializer> 클래스를 사용하여 이전에 XML 파일에 기록된 개체 데이터를 읽습니다.  
@@ -18,7 +18,7 @@ ms.locfileid: "75346429"
 public class Book  
 {  
     public String title;  
-}         
+}
   
 public void ReadXML()  
 {  
@@ -30,7 +30,7 @@ public void ReadXML()
     wfile.Close();  
   
     // Now we can read the serialized book ...  
-    System.Xml.Serialization.XmlSerializer reader =   
+    System.Xml.Serialization.XmlSerializer reader =
         new System.Xml.Serialization.XmlSerializer(typeof(Book));  
     System.IO.StreamReader file = new System.IO.StreamReader(  
         @"c:\temp\SerializationOverview.xml");  
@@ -61,7 +61,7 @@ public void ReadXML()
 ## <a name="net-framework-security"></a>.NET Framework 보안  
  항상 입력을 확인하고, 신뢰할 수 없는 소스의 데이터를 역직렬화하지 마세요. 다시 생성된 개체는 역직렬화한 코드의 사용 권한으로 로컬 컴퓨터에서 실행됩니다. 애플리케이션에서 데이터를 사용하기 전에 모든 입력을 확인해야 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.IO.StreamWriter>
 - [XML 파일에 개체 데이터를 쓰는 방법(C#)](./how-to-write-object-data-to-an-xml-file.md)

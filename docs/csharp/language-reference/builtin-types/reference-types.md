@@ -20,26 +20,26 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: 6b65d7e79e4eac30171eb0aad650f7c1e3880e30
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: c2c03f47babd9ccf87eb60d33b9d65d1a9c82e2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77627272"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398312"
 ---
 # <a name="built-in-reference-types-c-reference"></a>기본 제공 참조 형식(C# 참조)
 
-C#에는 여러 가지 기본 제공 참조 형식이 있습니다. .NET 라이브러리의 형식에 대한 동의어인 키워드 또는 연산자를 가지고 있습니다. 
+C#에는 여러 가지 기본 제공 참조 형식이 있습니다. .NET 라이브러리의 형식에 대한 동의어인 키워드 또는 연산자를 가지고 있습니다.
 
 ## <a name="the-object-type"></a>개체 유형
 
-`object` 형식은 .NET에서 <xref:System.Object?displayProperty=nameWithType>의 별칭입니다. C#의 통합 형식 시스템에서 사용자 정의 및 미리 정의된 참조 형식과 값 형식을 비롯한 모든 형식은 직접 또는 간접적으로 <xref:System.Object?displayProperty=nameWithType>에서 상속합니다. `object` 형식의 변수에 모든 형식의 값을 할당할 수 있습니다. 모든 `object` 변수는 리터럴 `null`을 사용하여 기본값으로 할당할 수 있습니다. 값 형식의 변수가 개체로 변환된 경우 *boxed*라고 합니다. 형식 `object`의 변수가 값 형식으로 변환된 경우 *unboxed*라고 합니다. 자세한 내용은 [boxing 및 unboxing](../../programming-guide/types/boxing-and-unboxing.md)을 참조하세요. 
+`object` 형식은 .NET에서 <xref:System.Object?displayProperty=nameWithType>의 별칭입니다. C#의 통합 형식 시스템에서 사용자 정의 및 미리 정의된 참조 형식과 값 형식을 비롯한 모든 형식은 직접 또는 간접적으로 <xref:System.Object?displayProperty=nameWithType>에서 상속합니다. `object` 형식의 변수에 모든 형식의 값을 할당할 수 있습니다. 모든 `object` 변수는 리터럴 `null`을 사용하여 기본값으로 할당할 수 있습니다. 값 형식의 변수가 개체로 변환된 경우 *boxed*라고 합니다. 형식 `object`의 변수가 값 형식으로 변환된 경우 *unboxed*라고 합니다. 자세한 내용은 [boxing 및 unboxing](../../programming-guide/types/boxing-and-unboxing.md)을 참조하세요.
 
 ## <a name="the-string-type"></a>문자열 유형
 
 `string` 형식은 0자 이상의 유니코드 문자 시퀀스를 나타냅니다. `string`는 .NET에서 <xref:System.String?displayProperty=nameWithType>의 별칭입니다.
 
-`string`은 참조 형식이지만 [같음 연산자 `==` 및 `!=`](../operators/equality-operators.md#string-equality)는 참조가 아니라 `string` 개체의 값을 비교하도록 정의됩니다. 이 때문에 좀 더 직관적으로 문자열이 같은지 테스트할 수 있습니다. 예를 들어:
+`string`은 참조 형식이지만 [같음 연산자 `==` 및 `!=`](../operators/equality-operators.md#string-equality)는 참조가 아니라 `string` 개체의 값을 비교하도록 정의됩니다. 이 때문에 좀 더 직관적으로 문자열이 같은지 테스트할 수 있습니다. 예들 들어 다음과 같습니다.
 
 ```csharp-interactive
 string a = "hello";
@@ -84,7 +84,7 @@ for (int i = 0; i < str.Length; i++)
   Console.Write(str[i] + " ");
 }
 // Output: t e s t
-``` 
+```
 
 문자열 리터럴은 `string` 형식이며, quoted 및 `@`-quoted의 두 가지 형식으로 작성될 수 있습니다. 따옴표가 있는 문자열 리터럴은 큰따옴표(")로 묶여 있습니다.
 
@@ -105,7 +105,7 @@ Console.WriteLine(a);
 > [!NOTE]
 > 이스케이프 코드 `\udddd`(여기서 `dddd`는 4자리 숫자)는 유니코드 문자 U+`dddd`를 나타냅니다. 8자리 유니코드 이스케이프 코드 `\Udddddddd`도 인식됩니다.
 
-[축자 문자열 리터럴](../tokens/verbatim.md)은 `@`로 시작하며 큰따옴표로 묶여 있습니다. 예를 들어:
+[축자 문자열 리터럴](../tokens/verbatim.md)은 `@`로 시작하며 큰따옴표로 묶여 있습니다. 예들 들어 다음과 같습니다.
 
 ```csharp
 @"good morning"  // a string literal
@@ -136,15 +136,15 @@ public delegate int AnotherDelegate(MyType m, long num);
 
 `delegate`는 명명된 메서드나 무명 메서드를 캡슐화하는 데 사용할 수 있는 참조 형식입니다. 대리자는 C++의 함수 포인터와 비슷하지만 형식 안전성과 보안성을 제공한다는 점이 다릅니다. 대리자 적용에 대해서는 [대리자](../../programming-guide/delegates/index.md) 및 [제네릭 대리자](../../programming-guide/generics/generic-delegates.md)를 참조하세요. 대리자는 [이벤트](../../programming-guide/events/index.md)의 기반이 됩니다. 대리자는 명명된 메서드나 무명 메서드와 연결하여 인스턴스화할 수 있습니다.
 
-대리자는 호환되는 반환 형식 및 입력 매개 변수가 있는 메서드나 람다 식을 사용하여 인스턴스화해야 합니다. 메서드 시그니처에서 허용되는 가변성 수준에 대한 자세한 내용은 [대리자의 가변성](../../programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)을 참조하세요. 무명 메서드에서 사용하기 위해 메서드에 연결할 대리자와 코드를 함께 선언합니다. 
+대리자는 호환되는 반환 형식 및 입력 매개 변수가 있는 메서드나 람다 식을 사용하여 인스턴스화해야 합니다. 메서드 시그니처에서 허용되는 가변성 수준에 대한 자세한 내용은 [대리자의 가변성](../../programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)을 참조하세요. 무명 메서드에서 사용하기 위해 메서드에 연결할 대리자와 코드를 함께 선언합니다.
 
 ## <a name="the-dynamic-type"></a>동적 형식
 
 `dynamic` 유형은 변수 및 해당 멤버에 대한 참조 사용이 컴파일 파일 형식 검사를 바이패스함을 나타냅니다. 대신, 이러한 작업은 런타임에 확인됩니다. `dynamic` 형식은 Office Automation API와 같은 COM API, IronPython 라이브러리 등의 동적 API 및 HTML DOM(문서 개체 모델)에 대한 액세스를 간소화합니다.
 
-`dynamic` 형식은 대부분의 상황에서 `object` 형식처럼 동작합니다. 특히 null이 아닌 모든 식은 `dynamic` 형식으로 변환될 수 있습니다. `dynamic` 유형의 식을 포함하는 작업은 컴파일러에서 확인되거나 형식이 검사되지 않았다는 점에서 `dynamic` 유형은 `object`와 다릅니다. 컴파일러는 작업에 대한 정보를 패키지하며, 나중에 해당 정보는 런타임에 작업을 평가하는 데 사용됩니다. 이 과정에서 `dynamic` 형식의 변수는 `object` 형식의 변수로 컴파일됩니다. 따라서 `dynamic` 형식은 컴파일 시간에만 존재하고 런타임에는 존재하지 않습니다.
+`dynamic` 형식은 대부분의 상황에서 `object` 형식처럼 동작합니다. 특히 null이 아닌 모든 식은 `dynamic` 형식으로 변환될 수 있습니다. `dynamic` 유형의 식을 포함하는 작업은 컴파일러에서 확인되거나 형식이 검사되지 않았다는 점에서 `object` 유형은 `dynamic`와 다릅니다. 컴파일러는 작업에 대한 정보를 패키지하며, 나중에 해당 정보는 런타임에 작업을 평가하는 데 사용됩니다. 이 과정에서 `dynamic` 형식의 변수는 `object` 형식의 변수로 컴파일됩니다. 따라서 `dynamic` 형식은 컴파일 시간에만 존재하고 런타임에는 존재하지 않습니다.
 
-다음 예제에서는 `dynamic` 형식의 변수와 `object` 형식의 변수를 비교합니다. 컴파일 시간에 각 변수의 형식을 확인하려면 `WriteLine` 문의 `dyn` 또는 `obj` 위에 마우스 포인터를 놓습니다. IntelliSense를 사용할 수 있는 편집기로 다음 코드를 복사합니다. IntelliSense는 `dyn`에 대해 **dynamic**을 표시하고 `obj`에 대해 **object**를 표시합니다.
+다음 예제에서는 `dynamic` 형식의 변수와 `object` 형식의 변수를 비교합니다. 컴파일 시간에 각 변수의 형식을 확인하려면 `dyn` 문의 `obj` 또는 `WriteLine` 위에 마우스 포인터를 놓습니다. IntelliSense를 사용할 수 있는 편집기로 다음 코드를 복사합니다. IntelliSense는 **에 대해** dynamic`dyn`을 표시하고 **에 대해** object`obj`를 표시합니다.
 
 [!code-csharp[csrefKeywordsTypes#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/dynamic1.cs#21)]
 
@@ -162,13 +162,13 @@ dyn = dyn + 3;
 obj = obj + 3;
 ```
 
- `obj + 3` 식에 정수와 개체를 추가하려는 시도와 관련해서 컴파일러 오류가 보고됩니다. 하지만 `dyn + 3`에 대한 오류는 보고되지 않습니다. `dyn`의 형식이 `dynamic`이기 때문에 `dyn`을 포함하는 식은 컴파일 시간에 확인되지 않습니다.
+ `obj + 3` 식에 정수와 개체를 추가하려는 시도와 관련해서 컴파일러 오류가 보고됩니다. 하지만 `dyn + 3`에 대한 오류는 보고되지 않습니다. `dyn`의 형식이 `dyn`이기 때문에 `dynamic`을 포함하는 식은 컴파일 시간에 확인되지 않습니다.
 
 다음 예제에서는 여러 선언에 `dynamic`을 사용합니다. 또한 `Main` 메서드는 컴파일 시간 형식 검사를 런타임 형식 검사와 비교합니다.
 
 [!code-csharp[csrefKeywordsTypes#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/dynamic2.cs#25)]
 
-### <a name="see-also"></a>참조
+### <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 키워드](../keywords/index.md)

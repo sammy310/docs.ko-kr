@@ -4,12 +4,12 @@ description: 이 고급 자습서에서는 비동기 스트림을 생성 및 사
 ms.date: 02/10/2019
 ms.technology: csharp-async
 ms.custom: mvc
-ms.openlocfilehash: 412e5de5d9d73846fe2af36e3def383364389c75
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: de090eb9cc1e8b511956313ab5169ee4d07a492f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039216"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156742"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>자습서: C# 8.0 및 .NET Core 3.0을 사용하여 비동기 스트림 생성 및 사용
 
@@ -23,9 +23,9 @@ C# 8.0은 데이터 스트림의 요소를 비동기적으로 검색하거나 �
 > - 데이터 소스를 비동기적으로 사용합니다.
 > - 새 인터페이스 및 데이터 소스가 이전 동기 데이터 시퀀스로 기본 설정되는 경우를 인식합니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
-C# 8.0 컴파일러를 포함하여 .NET Core를 실행하도록 머신을 설정해야 합니다. C# 8 컴파일러는 [Visual Studio 2019 버전 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 또는 [.NET CORE 3.0 SDK](https://dotnet.microsoft.com/download)부터 사용할 수 있습니다.
+C# 8.0 컴파일러를 포함하여 .NET Core를 실행하도록 컴퓨터를 설정해야 합니다. C# 8 컴파일러는 [Visual Studio 2019 버전 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 또는 [.NET CORE 3.0 SDK](https://dotnet.microsoft.com/download)부터 사용할 수 있습니다.
 
 GitHub GraphQL 엔드포인트에 액세스할 수 있도록 [GitHub 액세스 토큰](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#creating-a-token)을 만들어야 합니다. GitHub 액세스 토큰에 사용할 다음 권한을 선택합니다.
 
@@ -45,7 +45,7 @@ GitHub API 엔드포인트의 액세스 권한을 부여하는 데 사용할 수
 
 시작 애플리케이션은 [GitHub GraphQL](https://developer.github.com/v4/) 인터페이스를 사용하여 [dotnet/docs](https://github.com/dotnet/docs) 리포지토리에 기록된 최근 문제를 검색하는 콘솔 애플리케이션입니다. 먼저 시작 앱 `Main` 메서드의 다음 코드를 살펴봅니다.
 
-[!code-csharp[StarterAppMain](~/samples/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#StarterAppMain)]
+[!code-csharp[StarterAppMain](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#StarterAppMain)]
 
 `GitHubKey` 환경 변수를 개인용 액세스 토큰으로 설정하거나, `GenEnvVariable` 호출의 마지막 인수를 개인용 액세스 토큰으로 바꿀 수 있습니다. 소스를 다른 항목과 함께 저장하거나 공유 소스 리포지토리에 넣을 경우에는 액세스 코드를 소스 코드에 넣지 마세요.
 
@@ -57,7 +57,7 @@ GitHub 클라이언트를 만든 후 `Main`의 코드는 진행 보고 개체 �
 
 구현은 이전 섹션에서 설명한 동작을 관찰한 이유를 드러냅니다. `runPagedQueryAsync`에 대한 코드를 검사합니다.
 
-[!code-csharp[RunPagedQueryStarter](~/samples/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#RunPagedQuery)]
+[!code-csharp[RunPagedQueryStarter](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#RunPagedQuery)]
 
 앞 코드의 페이징 알고리즘 및 비동기 구조를 중점적으로 살펴보겠습니다. (GitHub GraphQL API에 대한 자세한 내용은 [GitHub GraphQL 설명서](https://developer.github.com/v4/guides/)를 참조하세요.) `runPagedQueryAsync` 메서드는 가장 최근에서 가장 오래된 순서로 문제를 열거합니다. 이 메서드는 페이지당 25개 문제를 요청하고 응답의 `pageInfo` 구조체를 검사하여 이전 페이지를 계속 진행합니다. 다중 페이지 응답에 대한 GraphQL의 표준 페이징 지원을 따릅니다. 응답에는 이전 페이지를 요청하는 데 사용되는 `hasPreviousPages` 값과 `startCursor` 값을 포함하는 `pageInfo` 개체가 포함됩니다. 문제는 `nodes` 배열에 있습니다. `runPagedQueryAsync` 메서드는 모든 페이지의 모든 결과를 포함하는 배열에 해당 노드를 추가합니다.
 
@@ -108,29 +108,31 @@ namespace System
 
 그런 다음, `runPagedQueryAsync` 메서드를 변환하여 비동기 스트림을 생성합니다. 먼저 `runPagedQueryAsync`의 시그니처를 변경하여 `IAsyncEnumerable<JToken>`을 반환하고 다음 코드에 표시된 대로 매개 변수 목록에서 취소 토큰 및 진행 개체를 제거합니다.
 
-[!code-csharp[FinishedSignature](~/samples/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#UpdateSignature)]
+[!code-csharp[FinishedSignature](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#UpdateSignature)]
 
 시작 코드는 다음 코드에 표시된 대로 페이지가 검색될 때 각 페이지를 처리합니다.
 
-[!code-csharp[StarterPaging](~/samples/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#ProcessPage)]
+[!code-csharp[StarterPaging](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#ProcessPage)]
 
 해당 세 줄을 다음 코드로 바꿉니다.
 
-[!code-csharp[FinishedPaging](~/samples/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#YieldReturnPage)]
+[!code-csharp[FinishedPaging](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#YieldReturnPage)]
 
 이 메서드의 앞부분에 있는 `finalResults` 선언 및 수정한 루프 뒤에 있는 `return` 문을 제거할 수도 있습니다.
 
 비동기 스트림을 생성하기 위한 변경을 완료했습니다. 완료된 메서드는 아래 코드와 같이 표시되어야 합니다.
 
-[!code-csharp[FinishedGenerate](~/samples/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#GenerateAsyncStream)]
+[!code-csharp[FinishedGenerate](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#GenerateAsyncStream)]
 
 그런 다음, 컬렉션을 사용하는 코드를 변경하여 비동기 스트림을 사용합니다. 문제 컬렉션을 처리하는 `Main`에서 다음 코드를 찾습니다.
 
-[!code-csharp[EnumerateOldStyle](~/samples/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#EnumerateOldStyle)]
+[!code-csharp[EnumerateOldStyle](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#EnumerateOldStyle)]
 
 해당 코드를 다음 `await foreach` 루프로 바꿉니다.
 
-[!code-csharp[FinishedEnumerateAsyncStream](~/samples/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#EnumerateAsyncStream)]
+[!code-csharp[FinishedEnumerateAsyncStream](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#EnumerateAsyncStream)]
+
+기본적으로 스트림 요소는 캡처된 컨텍스트에서 처리됩니다. 컨텍스트 캡처를 사용하지 않도록 설정하려면 <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> 확장 메서드를 사용합니다. 동기화 컨텍스트 및 현재 컨텍스트 캡처에 대한 자세한 내용은 [작업 기반 비동기 패턴 사용](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)에 대한 문서를 참조하세요.
 
 [csharp/tutorials/AsyncStreams](https://github.com/dotnet/samples/tree/master/csharp/tutorials/AsyncStreams/finished) 폴더의 [dotnet/samples](https://github.com/dotnet/samples) 리포지토리에서 완료된 자습서의 코드를 가져올 수 있습니다.
 

@@ -3,16 +3,16 @@ title: .NET Compiler Platform SDK 개념 및 개체 모델
 description: 이 개요는 .NET 컴파일러 SDK와 함께 효과적으로 작동해야 하는 배경 정보를 제공합니다. API 계층, 관련된 주요 형식 및 전체 개체 모델을 학습합니다.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: ee8f902bf1df8b63e229fd518e7a0c592fcd47ca
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e563260e21fb8807017db90ff63e30fec0415a48
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675708"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156963"
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>.NET Compiler Platform SDK 모델 이해
 
-컴파일러는 종종 사람이 코드를 읽고 이해하는 방식과 다른 구조적 규칙을 따라 작성하는 코드를 처리합니다. 컴파일러에서 사용되는 모델에 대한 기본적인 이해는 Roslyn 기반 도구를 빌드할 때 사용하는 API를 이해하는 데 반드시 필요합니다. 
+컴파일러는 종종 사람이 코드를 읽고 이해하는 방식과 다른 구조적 규칙을 따라 작성하는 코드를 처리합니다. 컴파일러에서 사용되는 모델에 대한 기본적인 이해는 Roslyn 기반 도구를 빌드할 때 사용하는 API를 이해하는 데 반드시 필요합니다.
 
 ## <a name="compiler-pipeline-functional-areas"></a>컴파일러 파이프라인 기능 영역
 
@@ -30,7 +30,7 @@ ms.locfileid: "57675708"
 
 각 컴파일러는 단일 엔드투엔드 전체로 이러한 구성 요소를 하나로 결합합니다.
 
-이러한 API는 Visual Studio에서 사용하는 API와 동일합니다. 예를 들어 코드 개요 및 서식 지정 기능은 구문 트리를 사용하고, 개체 브라우저 및 탐색 기능은 기호 테이블을 사용하며, 리팩터링 및 정의로 이동은 의미 체계 모델을 사용하고, 편집하며 계속하기는 내보내기 API를 포함하여 이러한 모든 것을 사용합니다. 
+이러한 API는 Visual Studio에서 사용하는 API와 동일합니다. 예를 들어 코드 개요 및 서식 지정 기능은 구문 트리를 사용하고, 개체 브라우저 및 탐색 기능은 기호 테이블을 사용하며, 리팩터링 및 정의로 이동은 의미 체계 모델을 사용하고, 편집하며 계속하기는 내보내기 API를 포함하여 이러한 모든 것을 사용합니다.
 
 ## <a name="api-layers"></a>API 계층
 
