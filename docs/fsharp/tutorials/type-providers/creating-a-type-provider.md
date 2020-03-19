@@ -1,59 +1,59 @@
 ---
 title: '자습서: 형식 공급자 만들기'
-description: 몇 가지 간단한 형식 공급자를 F# 검사 하 여 F# 기본 개념을 보여 주는 3.0에서 고유한 형식 공급자를 만드는 방법에 대해 알아봅니다.
+description: 기본 개념을 설명하기 위해 몇 가지 간단한 형식 공급자를 검사하여 F# 3.0에서 고유한 F# 형식 공급자를 만드는 방법을 알아봅니다.
 ms.date: 11/04/2019
-ms.openlocfilehash: 8df893669b8ee04bad366dbe42a55c83d1f5a8fe
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3b8145d4c2d8bf96b6dcf66de02e9f2d83927d74
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968367"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186114"
 ---
 # <a name="tutorial-create-a-type-provider"></a>자습서: 형식 공급자 만들기
 
-의 F# 형식 공급자 메커니즘은 정보 기능이 풍부한 프로그래밍에 대 한 지원의 중요 한 부분입니다. 이 자습서에서는 기본 개념을 설명 하기 위해 몇 가지 간단한 형식 공급자를 개발 하는 과정을 통해 사용자 고유의 형식 공급자를 만드는 방법을 설명 합니다. 의 F#형식 공급자 메커니즘에 대 한 자세한 내용은 [형식 공급자](index.md)를 참조 하십시오.
+F#의 형식 공급자 메커니즘은 풍부한 정보 프로그래밍에 대한 지원의 중요한 부분입니다. 이 자습서에서는 기본 개념을 설명하기 위해 몇 가지 간단한 형식 공급자의 개발을 안내하여 고유한 형식 공급자를 만드는 방법을 설명합니다. F#의 형식 공급자 메커니즘에 대한 자세한 내용은 [형식 공급자](index.md)를 참조하십시오.
 
-F# 에코 시스템에는 일반적으로 사용 되는 인터넷 및 엔터프라이즈 데이터 서비스에 대 한 다양 한 형식 공급자가 포함 되어 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+F# 생태계에는 일반적으로 사용되는 인터넷 및 엔터프라이즈 데이터 서비스에 대한 다양한 형식 공급자가 포함되어 있습니다. 다음은 그 예입니다.
 
-- [Fsharp.core](https://fsharp.github.io/FSharp.Data/) 에는 JSON, XML, CSV 및 HTML 문서 형식에 대 한 형식 공급자가 포함 되어 있습니다.
+- [FSharp.Data에는](https://fsharp.github.io/FSharp.Data/) JSON, XML, CSV 및 HTML 문서 형식에 대한 형식 공급자가 포함됩니다.
 
-- [Sqlprovider](https://fsprojects.github.io/SQLProvider/) 는 이러한 데이터 원본에 대 한 개체 매핑과 F# LINQ 쿼리를 통해 SQL database에 대 한 강력한 형식의 액세스를 제공 합니다.
+- [SQLProvider는](https://fsprojects.github.io/SQLProvider/) 개체 매핑 및 이러한 데이터 원본에 대한 F# LINQ 쿼리를 통해 SQL 데이터베이스에 대한 강력한 형식의 액세스를 제공합니다.
 
-- [Fsharp.core](https://fsprojects.github.io/FSharp.Data.SqlClient/) 에는의 F#t-sql을 확인 하는 컴파일 시간에 대 한 형식 공급자 집합이 있습니다.
+- [FSharp.Data.SqlClient는](https://fsprojects.github.io/FSharp.Data.SqlClient/) F#에 T-SQL의 컴파일 타임 확인 포함을 위한 형식 공급자 집합을 가지고 있습니다.
 
-- [Fsharp.core 공급자](https://fsprojects.github.io/FSharp.Data.TypeProviders/) 는 SQL, Entity Framework, ODATA 및 WSDL Data services에 액세스 하기 위한 .NET Framework 프로그래밍에만 사용할 수 있는 이전 형식 공급자 집합입니다.
+- [FSharp.Data.TypeProviders는](https://fsprojects.github.io/FSharp.Data.TypeProviders/) SQL, 엔터티 프레임워크, OData 및 WSDL 데이터 서비스에 액세스하기 위한 .NET 프레임워크 프로그래밍에서만 사용할 수 있는 이전 형식 공급자 집합입니다.
 
-필요한 경우 사용자 지정 형식 공급자를 만들거나 다른 사용자가 만든 형식 공급자를 참조할 수 있습니다. 예를 들어 조직에는 각각 자체의 안정적인 데이터 스키마를 포함 하는 많은 수의 명명 된 데이터 집합을 제공 하는 데이터 서비스가 있을 수 있습니다. 스키마를 읽고 강력한 형식의 방식으로 프로그래머에 게 현재 데이터 집합을 제공 하는 형식 공급자를 만들 수 있습니다.
+필요한 경우 사용자 지정 형식 공급자를 만들거나 다른 사용자가 만든 형식 공급자를 참조할 수 있습니다. 예를 들어 조직에는 각각 고유한 안정적인 데이터 스키마가 있는 명명된 데이터 집합의 수가 늘어나는 데이터 서비스를 사용할 수 있습니다. 스키마를 읽고 현재 데이터 집합을 강력하게 입력한 방식으로 프로그래머에게 제공하는 형식 공급자를 만들 수 있습니다.
 
 ## <a name="before-you-start"></a>시작하기 전에
 
-형식 공급자 메커니즘은 주로 안정적인 데이터 및 서비스 정보 공간을 F# 프로그래밍 환경에 삽입 하도록 디자인 되었습니다.
+형식 공급자 메커니즘은 주로 안정적인 데이터 및 서비스 정보 공간을 F# 프로그래밍 환경으로 주입하도록 설계되었습니다.
 
-이 메커니즘은 프로그램 논리와 관련 된 방식으로 프로그램 실행 중에 스키마가 변경 되는 정보 공간을 삽입 하기 위한 것이 아닙니다. 또한이 메커니즘은 도메인에 일부 유효한 사용이 포함 되어 있는 경우에도 언어 간 메타 프로그래밍을 위해 디자인 되지 않았습니다. 필요한 경우에만이 메커니즘을 사용 하 고 형식 공급자의 개발에서 매우 높은 값을 생성 해야 합니다.
+이 메커니즘은 프로그램 논리와 관련된 방식으로 프로그램 실행 중에 스키마가 변경되는 정보 공간을 삽입하기 위해 설계되지 않았습니다. 또한 해당 도메인에 유효한 용도가 포함되어 있더라도 언어 내 메타 프로그래밍을 위해 메커니즘이 설계되지 않았습니다. 필요한 경우에만 이 메커니즘을 사용해야 하며 형식 공급자의 개발로 매우 높은 가치를 산출하는 경우에만 사용해야 합니다.
 
-스키마를 사용할 수 없는 형식 공급자를 작성 하지 않아야 합니다. 마찬가지로 일반적인 (또는 기존) .NET 라이브러리에서 충분 한 형식 공급자를 작성 하지 않아야 합니다.
+스키마를 사용할 수 없는 형식 공급자를 작성하지 않아야 합니다. 마찬가지로 일반(또는 기존)의 .NET 라이브러리로 충분할 수 있는 형식 공급자를 작성하지 않아야 합니다.
 
-시작 하기 전에 다음 질문을 할 수 있습니다.
+시작하기 전에 다음 질문을 할 수 있다.
 
-- 정보 소스에 대 한 스키마가 있나요? 그렇다면 .NET 형식 시스템에 대 F# 한 매핑은 무엇입니까?
+- 정보 소스에 대한 스키마가 있습니까? 그렇다면 F# 및 .NET 형식 시스템에 매핑하는 것은 무엇입니까?
 
-- 기존 (동적으로 형식화 된) API를 구현에 대 한 시작 지점으로 사용할 수 있나요?
+- 기존(동적으로 입력된) API를 구현의 시작점으로 사용할 수 있습니까?
 
-- 사용자와 조직에서 형식 공급자를 충분히 사용 하 여 it를 효율적으로 작성할 수 있나요? 정상적인 .NET 라이브러리가 사용자의 요구를 충족 하나요?
+- 사용자와 조직에서 형식 공급자를 충분히 사용하여 작성을 가치 있게 만들 수 있습니까? 일반 .NET 라이브러리가 사용자의 요구를 충족합니까?
 
-- 스키마가 얼마나 변경 되나요?
+- 스키마는 얼마만큼 변경될 것인가?
 
-- 코딩 중에 변경 됩니까?
+- 코딩 중에 변경될 까요?
 
-- 코딩 세션 간에 변경 됩니까?
+- 코딩 세션 간에 변경될 까요?
 
-- 프로그램 실행 중에 변경 됩니까?
+- 프로그램 실행 중에 변경합니까?
 
-형식 공급자는 런타임에 그리고 컴파일된 코드의 수명 동안 안정적으로 작동 하는 상황에 가장 적합 합니다.
+형식 공급자는 스키마가 런타임 및 컴파일된 코드의 수명 동안 안정적인 상황에 가장 적합합니다.
 
-## <a name="a-simple-type-provider"></a>단순 형식 공급자
+## <a name="a-simple-type-provider"></a>간단한 형식 공급자
 
-이 샘플은 [ F# 형식 공급자 SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/)의 `examples` 디렉터리에 있는 샘플과 유사한 HelloWorldTypeProvider입니다. 공급자는 다음 코드와 같이 서명 구문을 사용 F# 하 고 `Type1`를 제외한 모든 항목에 대 한 세부 정보를 생략 하 여 표시 되는 100 형식이 포함 된 "형식 공간"을 사용할 수 있도록 합니다. 지워진 형식에 대 한 자세한 내용은이 항목의 뒷부분에 나오는 [지워진 제공 형식에 대 한 세부](#details-about-erased-provided-types) 정보를 참조 하세요.
+이 샘플은 샘플입니다.HelloWorldTypeProvider는 `examples` [F# 형식 공급자 SDK의](https://github.com/fsprojects/FSharp.TypeProviders.SDK/)디렉터리에 있는 샘플과 유사합니다. 공급자는 F# 서명 구문을 사용하고 을 제외한 `Type1`모든 세부 정보를 생략하여 다음 코드에서 보여 주는 것처럼 100개의 지워진 형식을 포함하는 "형식 공간"을 사용할 수 있습니다. 지워진 형식에 대한 자세한 내용은 이 항목의 후반부에서 [지워진 제공된 형식에 대한 세부 정보를 참조하세요.](#details-about-erased-provided-types)
 
 ```fsharp
 namespace Samples.HelloWorldTypeProvider
@@ -89,10 +89,10 @@ type Type100 =
 …
 ```
 
-제공 된 형식 및 멤버 집합은 정적으로 알려져 있습니다. 이 예제에서는 공급자의 기능을 활용 하 여 스키마에 종속 된 형식을 제공 하지 않습니다. 형식 공급자의 구현은 다음 코드에서 간략하게 설명 하 고 세부 정보는이 항목의 이후 섹션에서 설명 합니다.
+제공된 형식 및 멤버 집합은 정적으로 알려져 있습니다. 이 예제는 스키마에 종속된 형식을 제공하는 공급자의 기능을 활용하지 않습니다. 형식 공급자의 구현은 다음 코드에 설명되어 있으며 자세한 내용은 이 항목의 이후 섹션에서 다룹니다.
 
 > [!WARNING]
-> 이 코드와 온라인 샘플 간에는 차이점이 있을 수 있습니다.
+> 이 코드와 온라인 샘플 간에 차이가 있을 수 있습니다.
 
 ```fsharp
 namespace Samples.FSharp.HelloWorldTypeProvider
@@ -128,7 +128,7 @@ type SampleTypeProvider(config: TypeProviderConfig) as this =
 do()
 ```
 
-이 공급자를 사용 하려면 별도의 Visual Studio 인스턴스를 열고, F# 스크립트를 만든 다음, 다음 코드에 표시 된 대로 #r를 사용 하 여 스크립트의 공급자에 대 한 참조를 추가 합니다.
+이 공급자를 사용 하려면 Visual Studio의 별도 인스턴스를 열고 F# 스크립트를 만든 다음 다음 코드와 같이 #r 사용 하 여 스크립트에서 공급자에 대 한 참조를 추가 합니다.
 
 ```fsharp
 #r @".\bin\Debug\Samples.HelloWorldTypeProvider.dll"
@@ -146,85 +146,85 @@ obj2.InstanceProperty
 let data1 = Samples.HelloWorldTypeProvider.Type1.NestedType.StaticProperty35
 ```
 
-그런 다음 형식 공급자가 생성 한 `Samples.HelloWorldTypeProvider` 네임 스페이스 아래에서 형식을 찾습니다.
+그런 다음 형식 공급자가 생성한 `Samples.HelloWorldTypeProvider` 네임스페이스 아래에 있는 형식을 찾습니다.
 
-공급자를 다시 컴파일하기 전에 공급자 DLL을 사용 하는 Visual Studio 및 F# 대화형의 모든 인스턴스를 닫았는지 확인 합니다. 그렇지 않으면 출력 DLL이 잠기므로 빌드 오류가 발생 합니다.
+공급자를 다시 컴파일하기 전에 공급자 DLL을 사용하는 Visual Studio 및 F# 대화형의 모든 인스턴스를 닫았는지 확인합니다. 그렇지 않으면 출력 DLL이 잠겨 있기 때문에 빌드 오류가 발생합니다.
 
-Print 문을 사용 하 여이 공급자를 디버깅 하려면 공급자와 관련 된 문제를 노출 하는 스크립트를 만든 후 다음 코드를 사용 합니다.
+print 문을 사용하여 이 공급자를 디버깅하려면 공급자에 문제를 노출하는 스크립트를 만들고 다음 코드를 사용합니다.
 
 ```console
 fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
-Visual Studio를 사용 하 여이 공급자를 디버깅 하려면 관리자 자격 증명을 사용 하 여 Visual Studio에 대 한 개발자 명령 프롬프트를 열고 다음 명령을 실행 합니다.
+Visual Studio를 사용하여 이 공급자를 디버깅하려면 관리 자격 증명을 사용하여 Visual Studio용 개발자 명령 프롬프트를 열고 다음 명령을 실행합니다.
 
 ```console
 devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
-또는 Visual Studio를 열고, 디버그 메뉴를 열고 `Debug/Attach to process…`를 선택 하 고, 스크립트를 편집 하는 다른 `devenv` 프로세스에 연결 합니다. 이 메서드를 사용 하 여 두 번째 인스턴스 (전체 IntelliSense 및 기타 기능 사용)에 식을 대화형으로 입력 하 여 형식 공급자에서 특정 논리를 보다 쉽게 대상으로 지정할 수 있습니다.
+또는 Visual Studio를 열고 디버그 메뉴를 열고 `Debug/Attach to process…`을 선택하고 `devenv` 스크립트를 편집하는 다른 프로세스에 연결합니다. 이 메서드를 사용 하 여 두 번째 인스턴스에 대화식으로 입력 (전체 IntelliSense 및 기타 기능)를 사용 하 여 형식 공급자에서 특정 논리를 보다 쉽게 대상으로 지정할 수 있습니다.
 
-내 코드만 디버깅을 사용 하지 않도록 설정 하 여 생성 된 코드에서 오류를 더 잘 식별할 수 있습니다. 이 기능을 사용 하거나 사용 하지 않도록 설정 하는 방법에 대 한 자세한 내용은 [디버거를 사용 하 여 코드 탐색](/visualstudio/debugger/navigating-through-code-with-the-debugger)을 참조 하세요. 또한 `Debug` 메뉴를 열고 `Exceptions`를 선택 하거나 Ctrl + Alt + E 키를 선택 하 여 `Exceptions` 대화 상자를 열고 첫 번째 예외 catch를 설정할 수도 있습니다. 이 대화 상자의 `Common Language Runtime Exceptions`에서 `Thrown` 확인란을 선택 합니다.
+내 코드 디버깅을 사용하지 않도록 설정하여 생성된 코드의 오류를 더 잘 식별할 수 있습니다. 이 기능을 사용하거나 사용하지 않도록 설정하는 방법에 대한 자세한 내용은 [디버거를 사용하여 코드 탐색을](/visualstudio/debugger/navigating-through-code-with-the-debugger)참조하십시오. 또한 `Debug` 메뉴를 연 다음 Ctrl+Alt+E 키를 `Exceptions` 선택하거나 선택하여 대화 상자를 열어 첫 `Exceptions` 번째 예외 catch를 설정할 수도 있습니다. 해당 대화 상자에서 `Common Language Runtime Exceptions`에서 확인란을 선택합니다. `Thrown`
 
 ### <a name="implementation-of-the-type-provider"></a>형식 공급자 구현
 
-이 섹션에서는 형식 공급자 구현의 주요 섹션을 안내 합니다. 먼저 사용자 지정 형식 공급자 자체에 대 한 형식을 정의 합니다.
+이 섹션에서는 형식 공급자 구현의 주요 섹션을 안내합니다. 먼저 사용자 지정 형식 공급자 자체에 대 한 형식을 정의 합니다.
 
 ```fsharp
 [<TypeProvider>]
 type SampleTypeProvider(config: TypeProviderConfig) as this =
 ```
 
-이 형식은 public 이어야 하며, 다른 F# 프로젝트에서 해당 형식을 포함 하는 어셈블리를 참조할 때 컴파일러가 형식 공급자를 인식할 수 있도록 [typeprovider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947) 특성으로 표시 해야 합니다. *Config* 매개 변수는 선택 사항이 며, 있는 경우 컴파일러에서 F# 생성 하는 형식 공급자 인스턴스에 대 한 컨텍스트 구성 정보를 포함 합니다.
+이 형식은 공용이어야 하며 별도의 F# 프로젝트가 형식을 포함하는 어셈블리를 참조할 때 컴파일러가 형식 공급자를 인식할 수 있도록 [TypeProvider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947) 특성으로 표시해야 합니다. *구성* 매개 변수는 선택 사항이며, 있는 경우 F# 컴파일러가 만드는 형식 공급자 인스턴스에 대한 컨텍스트 구성 정보가 포함되어 있습니다.
 
-다음으로 [ITypeProvider](https://msdn.microsoft.com/library/2c2b0571-843d-4a7d-95d4-0a7510ed5e2f) 인터페이스를 구현 합니다. 이 경우 `ProvidedTypes` API의 `TypeProviderForNamespaces` 유형을 기본 유형으로 사용 합니다. 이 도우미 형식은 적극적으로 제공 되는 네임 스페이스의 한정 된 컬렉션을 제공할 수 있습니다. 각 네임 스페이스는 고정 된 수의 고정 된 형식을 직접 포함 합니다. 이 컨텍스트에서 공급자는 필요 하거나 사용 하지 않더라도 형식을 *적극적* 으로 생성 합니다.
+다음으로 [ITypeProvider](https://msdn.microsoft.com/library/2c2b0571-843d-4a7d-95d4-0a7510ed5e2f) 인터페이스를 구현합니다. 이 경우 API의 `TypeProviderForNamespaces` `ProvidedTypes` 형식을 기본 유형으로 사용합니다. 이 도우미 유형은 간절히 제공한 이름 영역의 유한 한 컬렉션을 제공할 수 있으며, 각 키드에는 유한한 수의 고정된 형식이 직접 포함되어 있습니다. 이 컨텍스트에서 공급자는 필요 하거나 사용 하지 않는 경우에 *형식을 열심히* 생성 합니다.
 
 ```fsharp
 inherit TypeProviderForNamespaces(config)
 ```
 
-그런 다음 제공 된 형식에 대 한 네임 스페이스를 지정 하는 로컬 전용 값을 정의 하 고 형식 공급자 어셈블리 자체를 찾습니다. 이 어셈블리는 나중에 제공 된 지워진 형식의 논리적 부모 형식으로 사용 됩니다.
+그런 다음 제공된 형식의 네임스페이스를 지정하는 로컬 개인 값을 정의하고 형식 공급자 어셈블리 자체를 찾습니다. 이 어셈블리는 나중에 제공된 지워진 형식의 논리적 부모 유형으로 사용됩니다.
 
 ```fsharp
 let namespaceName = "Samples.HelloWorldTypeProvider"
 let thisAssembly = Assembly.GetExecutingAssembly()
 ```
 
-다음에는 각 형식 Type1을 제공 하는 함수를 만듭니다. Type100. 이 기능에 대해서는이 항목의 뒷부분에서 자세히 설명 합니다.
+다음으로, 각 Type1을 제공하는 함수를 만듭니다... Type100. 이 함수는 이 항목의 후반부에서 자세히 설명합니다.
 
 ```fsharp
 let makeOneProvidedType (n:int) = …
 ```
 
-다음으로 100 제공 유형을 생성 합니다.
+다음으로 제공된 100개의 형식을 생성합니다.
 
 ```fsharp
 let types = [ for i in 1 .. 100 -> makeOneProvidedType i ]
 ```
 
-다음으로 형식을 제공 된 네임 스페이스로 추가 합니다.
+다음으로 형식을 제공된 네임스페이스로 추가합니다.
 
 ```fsharp
 do this.AddNamespace(namespaceName, types)
 ```
 
-마지막으로, 형식 공급자 DLL을 만드는 중임을 나타내는 어셈블리 특성을 추가 합니다.
+마지막으로 형식 공급자 DLL을 만들고 있음을 나타내는 어셈블리 특성을 추가합니다.
 
 ```fsharp
 [<assembly:TypeProviderAssembly>]
 do()
 ```
 
-### <a name="providing-one-type-and-its-members"></a>한 형식 및 해당 멤버 제공
+### <a name="providing-one-type-and-its-members"></a>한 가지 유형과 그 구성원 제공
 
-`makeOneProvidedType` 함수는 형식 중 하나를 제공 하는 실제 작업을 수행 합니다.
+함수는 `makeOneProvidedType` 형식 중 하나를 제공하는 실제 작업을 수행합니다.
 
 ```fsharp
 let makeOneProvidedType (n:int) =
 …
 ```
 
-이 단계에서는이 함수를 구현 하는 방법을 설명 합니다. 먼저 제공 된 형식 (예: Type1, when n = 1, Type57, n = 57 인 경우)을 만듭니다.
+이 단계에서는 이 함수의 구현에 대해 설명합니다. 먼저 제공된 형식(예: Type1, n = 1, Type57, n = 57)을 만듭니다.
 
 ```fsharp
 // This is the provided type. It is an erased provided type and, in compiled code,
@@ -234,19 +234,19 @@ let t = ProvidedTypeDefinition(thisAssembly, namespaceName,
                                baseType = Some typeof<obj>)
 ```
 
-다음 사항에 유의 해야 합니다.
+다음 사항을 기록해야 합니다.
 
-- 제공 된 형식이 지워집니다.  기본 형식이 `obj`임을 나타내므로 인스턴스는 컴파일된 코드에서 [obj](https://msdn.microsoft.com/library/dcf2430f-702b-40e5-a0a1-97518bf137f7) 형식의 값으로 표시 됩니다.
+- 제공된 형식이 지워집니다.  기본 형식이 `obj`있음을 나타내기 때문에 인스턴스는 컴파일된 코드에서 [obj](https://msdn.microsoft.com/library/dcf2430f-702b-40e5-a0a1-97518bf137f7) 형식의 값으로 표시됩니다.
 
-- 중첩 되지 않은 형식을 지정 하는 경우 어셈블리와 네임 스페이스를 지정 해야 합니다. 지워진 형식의 경우 어셈블리는 형식 공급자 어셈블리 자체 여야 합니다.
+- 중첩되지 않은 형식을 지정할 때 어셈블리 및 네임스페이스를 지정해야 합니다. 지워진 형식의 경우 어셈블리는 형식 공급자 어셈블리 자체여야 합니다.
 
-그런 다음 형식에 XML 문서를 추가 합니다. 이 설명서는 지연 됩니다. 즉, 호스트 컴파일러에 필요한 경우에는 요청 시에 계산 됩니다.
+다음으로 형식에 XML 설명서를 추가합니다. 이 문서는 호스트 컴파일러가 필요한 경우 주문형으로 계산되는 지연됩니다.
 
 ```fsharp
 t.AddXmlDocDelayed (fun () -> sprintf "This provided type %s" ("Type" + string n))
 ```
 
-다음에는 제공 된 정적 속성을 형식에 추가 합니다.
+다음으로 형식에 제공된 정적 속성을 추가합니다.
 
 ```fsharp
 let staticProp = ProvidedProperty(propertyName = "StaticProperty",
@@ -255,36 +255,36 @@ let staticProp = ProvidedProperty(propertyName = "StaticProperty",
                                   getterCode = (fun args -> <@@ "Hello!" @@>))
 ```
 
-이 속성을 가져오면 항상 문자열 "Hello!"로 평가 됩니다. 속성에 대 한 `GetterCode`는 호스트 F# 컴파일러가 속성을 가져오기 위해 생성 하는 코드를 나타내는 따옴표를 사용 합니다. 인용구에 대 한 자세한 내용은 [코드 인용 (F#)](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155)을 참조 하세요.
+이 속성을 가져오는 것은 항상 문자열 "Hello!"로 평가됩니다. for `GetterCode` 속성은 호스트 컴파일러가 속성을 얻기 위해 생성하는 코드를 나타내는 F# 따옴표를 사용합니다. 견적에 대한 자세한 내용은 [코드 견적(F#)을](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155)참조하십시오.
 
-속성에 XML 문서를 추가 합니다.
+속성에 XML 설명서를 추가합니다.
 
 ```fsharp
 staticProp.AddXmlDocDelayed(fun () -> "This is a static property")
 ```
 
-이제 제공 된 속성을 제공 된 형식에 연결 합니다. 제공 된 멤버를 한 형식에만 연결 해야 합니다. 그렇지 않은 경우에는 멤버에 액세스할 수 없습니다.
+이제 제공된 속성을 제공된 형식에 연결합니다. 제공된 멤버를 하나의 형식에만 연결해야 합니다. 그렇지 않으면 멤버에 액세스할 수 없습니다.
 
 ```fsharp
 t.AddMember staticProp
 ```
 
-이제 매개 변수를 사용 하지 않는 제공 된 생성자를 만듭니다.
+이제 매개 변수를 수행하지 않는 제공된 생성자만들기가 됩니다.
 
 ```fsharp
 let ctor = ProvidedConstructor(parameters = [ ],
                                invokeCode = (fun args -> <@@ "The object data" :> obj @@>))
 ```
 
-생성자에 대 한 `InvokeCode`는 생성자 F# 가 호출 될 때 호스트 컴파일러가 생성 하는 코드를 나타내는 따옴표를 반환 합니다. 예를 들어 다음 생성자를 사용할 수 있습니다.
+for `InvokeCode` 생성자는 생성자가 호출될 때 호스트 컴파일러가 생성하는 코드를 나타내는 F# 따옴표를 반환합니다. 예를 들어 다음 생성자다음을 사용할 수 있습니다.
 
 ```fsharp
 new Type10()
 ```
 
-제공 된 형식의 인스턴스는 기본 데이터 "the object data"를 사용 하 여 생성 됩니다. 따옴표 붙은 코드는 제공 된 형식을 선언할 때 지정한 대로이 형식이 제공 된 형식을 모두 지우기 때문에 [obj](https://msdn.microsoft.com/library/dcf2430f-702b-40e5-a0a1-97518bf137f7) 로의 변환을 포함 합니다.
+제공된 형식의 인스턴스는 기본 데이터 "개체 데이터"로 만들어집니다. 인용된 코드에는 해당 형식이 제공된 형식을 선언할 때 지정한 대로 이 제공된 형식의 지우기이므로 [obj로의](https://msdn.microsoft.com/library/dcf2430f-702b-40e5-a0a1-97518bf137f7) 변환이 포함됩니다.
 
-생성자에 XML 문서를 추가 하 고 제공 된 형식에 제공 된 생성자를 추가 합니다.
+생성자에 XML 설명서를 추가하고 제공된 생성기를 제공된 형식에 추가합니다.
 
 ```fsharp
 ctor.AddXmlDocDelayed(fun () -> "This is a constructor")
@@ -292,7 +292,7 @@ ctor.AddXmlDocDelayed(fun () -> "This is a constructor")
 t.AddMember ctor
 ```
 
-하나의 매개 변수를 사용 하는 제공 된 두 번째 생성자를 만듭니다.
+하나의 매개 변수를 취하는 두 번째 제공된 생성자 만들기:
 
 ```fsharp
 let ctor2 =
@@ -300,13 +300,13 @@ ProvidedConstructor(parameters = [ ProvidedParameter("data",typeof<string>) ],
                     invokeCode = (fun args -> <@@ (%%(args.[0]) : string) :> obj @@>))
 ```
 
-생성자에 대 한 `InvokeCode`는 메서드를 F# 호출 하기 위해 호스트 컴파일러가 생성 한 코드를 나타내는 따옴표를 다시 반환 합니다. 예를 들어 다음 생성자를 사용할 수 있습니다.
+for `InvokeCode` 생성자는 메서드 호출에 대해 호스트 컴파일러가 생성한 코드를 나타내는 F# 따옴표를 다시 반환합니다. 예를 들어 다음 생성자다음을 사용할 수 있습니다.
 
 ```fsharp
 new Type10("ten")
 ```
 
-제공 된 형식의 인스턴스는 기본 데이터 "10"을 사용 하 여 생성 됩니다. `InvokeCode` 함수가 따옴표를 반환 한다는 것을 이미 알고 있을 수 있습니다. 이 함수에 대 한 입력은 생성자 매개 변수 별로 하나씩 식의 목록입니다. 이 경우 단일 매개 변수 값을 나타내는 식은 `args.[0]`에서 사용할 수 있습니다. 생성자를 호출 하는 코드는 반환 값을 지워진 형식 `obj`로 강제 변환 합니다. 제공 된 두 번째 생성자를 형식에 추가한 후에는 제공 된 인스턴스 속성을 만듭니다.
+제공된 형식의 인스턴스는 기본 데이터 "10"으로 만들어집니다. 함수가 견적을 `InvokeCode` 반환한다는 것을 이미 알아차렸을 수 있습니다. 이 함수에 대한 입력은 생성자 매개 변수당 하나씩 식 목록입니다. 이 경우 단일 매개 변수 값을 나타내는 식을 `args.[0]`에서 사용할 수 있습니다. 생성자 호출코드는 지워진 형식에 `obj`반환 값을 강제 변환합니다. 형식에 두 번째 제공 된 생성기를 추가 한 후 제공 된 인스턴스 속성을 만듭니다.
 
 ```fsharp
 let instanceProp =
@@ -318,7 +318,7 @@ instanceProp.AddXmlDocDelayed(fun () -> "This is an instance property")
 t.AddMember instanceProp
 ```
 
-이 속성을 가져오면 표시 개체인 문자열의 길이가 반환 됩니다. `GetterCode` 속성은 호스트 컴파일러가 F# 속성을 얻기 위해 생성 하는 코드를 지정 하는 따옴표를 반환 합니다. `InvokeCode`와 마찬가지로 `GetterCode` 함수는 따옴표를 반환 합니다. 호스트 컴파일러는 인수 목록을 사용 하 여이 함수를 호출 합니다. 이 경우 인수에는 getter가 호출 되는 인스턴스를 나타내는 단일 식만 포함 되며 `args.[0]`를 사용 하 여 액세스할 수 있습니다. 그런 다음 `GetterCode`의 구현은 지운 형식 `obj`에서 결과 따옴표로 스플라이스, 캐스팅은 개체가 문자열인 형식을 확인 하는 컴파일러의 메커니즘을 충족 하는 데 사용 됩니다. `makeOneProvidedType`의 다음 부분에서는 하나의 매개 변수를 사용 하 여 인스턴스 메서드를 제공 합니다.
+이 속성을 가져오는 것은 표현 객체인 문자열의 길이를 반환합니다. 속성은 `GetterCode` 호스트 컴파일러가 속성을 가져오는 데 생성하는 코드를 지정하는 F# 견적을 반환합니다. 마찬가지로 `InvokeCode`함수는 `GetterCode` 견적을 반환합니다. 호스트 컴파일러는 인수 목록으로 이 함수를 호출합니다. 이 경우 인수에는 getter가 호출되는 인스턴스를 나타내는 단일 표현식만 포함되며, 이 `args.[0]`식을 사용하여 액세스할 수 있습니다. `GetterCode` 그런 다음 지워진 형식에서 `obj`결과 따옴표로 스플라이스를 구현하고 캐스트는 개체가 문자열인 형식을 검사하기 위한 컴파일러 메커니즘을 충족하는 데 사용됩니다. 다음 `makeOneProvidedType` 부분에서는 하나의 매개 변수를 사용하여 인스턴스 메서드를 제공합니다.
 
 ```fsharp
 let instanceMeth =
@@ -333,7 +333,7 @@ instanceMeth.AddXmlDocDelayed(fun () -> "This is an instance method")
 t.AddMember instanceMeth
 ```
 
-마지막으로 100 중첩 된 속성을 포함 하는 중첩 형식을 만듭니다. 이 중첩 된 형식과 해당 속성의 생성은 지연 됩니다. 즉, 요청 시 계산 됩니다.
+마지막으로 100개의 중첩 된 속성을 포함 하는 중첩 된 형식을 만듭니다. 이 중첩 된 형식및 해당 속성의 생성은 요청시 계산되는 지연됩니다.
 
 ```fsharp
 t.AddMembersDelayed(fun () ->
@@ -344,16 +344,16 @@ t.AddMembersDelayed(fun () ->
       [
           for i in 1 .. 100 ->
               let valueOfTheProperty = "I am string "  + string i
-    
+
               let p =
                 ProvidedProperty(propertyName = "StaticProperty" + string i,
                   propertyType = typeof<string>,
                   isStatic = true,
                   getterCode= (fun args -> <@@ valueOfTheProperty @@>))
-    
+
               p.AddXmlDocDelayed(fun () ->
                   sprintf "This is StaticProperty%d on NestedType" i)
-    
+
               p
       ]
 
@@ -362,50 +362,50 @@ t.AddMembersDelayed(fun () ->
   [nestedType])
 ```
 
-### <a name="details-about-erased-provided-types"></a>지워진 제공 유형에 대 한 세부 정보
+### <a name="details-about-erased-provided-types"></a>지워진 제공된 유형에 대한 세부 정보
 
-이 섹션의 예제에서는 다음과 같은 경우에 특히 유용한 *지워진 제공 형식만*제공 합니다.
+이 섹션의 예제에서는 *지워진 제공된 형식만*제공하므로 다음 상황에서 특히 유용합니다.
 
-- 데이터 및 메서드만 포함 하는 정보 공간에 대 한 공급자를 작성 하는 경우
+- 데이터와 메서드만 포함하는 정보 공간에 대한 공급자를 작성할 때
 
-- 정확한 런타임 형식 의미 체계가 중요 하지 않은 공급자를 작성 하는 경우 정보 공간을 실제로 사용 하는 것이 중요 합니다.
+- 정확한 런타임 유형 의미체계가 정보 공간을 실용화하는 데 중요하지 않은 공급자를 작성하는 경우
 
-- 정보 공간에 대 한 공급자를 작성 하는 경우 해당 정보 공간에 대 한 실제 .NET 형식을 생성 하는 것은 기술적으로는 불가능 합니다.
+- 너무 크고 상호 연결된 정보 공간에 대한 공급자를 작성하는 경우 정보 공간에 대한 실제 .NET 형식을 기술적으로 생성할 수 없습니다.
 
-이 예제에서는 제공 된 각 형식이 `obj`형식으로 지워지고 형식의 모든 사용은 컴파일된 코드에서 형식 `obj`으로 표시 됩니다. 실제로 이러한 예제의 기본 개체는 문자열 이지만 형식은 .NET 컴파일된 코드에서 `System.Object`으로 표시 됩니다. 형식 지우기를 사용할 때와 마찬가지로 명시적 boxing, unboxing 및 캐스트를 사용 하 여 방해할 지워진 형식을 사용할 수 있습니다. 이 경우 개체를 사용할 때 유효 하지 않은 캐스트 예외가 발생할 수 있습니다. 공급자 런타임은 고유한 개인 표현 형식을 정의 하 여 가양성을 방지할 수 있습니다. 지워진 형식을 자체적으로 F# 정의할 수는 없습니다. 제공 된 유형만 지울 수 있습니다. 형식 공급자에 대해 지워진 유형을 사용 하거나 지워진 유형을 제공 하는 공급자를 사용 하는 경우의 실제 및 의미 체계를 이해 해야 합니다. 지워진 유형에는 실제 .NET 유형이 없습니다. 따라서 형식에 대해 정확한 리플렉션을 수행할 수 없으며, 런타임 캐스트를 사용 하는 경우와 정확한 런타임 형식 의미 체계를 사용 하는 기타 기술을 사용 하는 경우에는 지워진 형식을 방해할 수 있습니다. 지워진 형식의 Subversion은 런타임에 형식 캐스팅 예외가 발생 합니다.
+이 예제에서는 제공된 각 형식이 `obj`형식에 지워지고 형식의 모든 `obj` 용도가 컴파일된 코드의 유형으로 나타납니다. 실제로 이러한 예제의 기본 개체는 문자열이지만 형식은 .NET `System.Object` 컴파일된 코드와 같이 나타납니다. 형식 지우기의 모든 사용과 마찬가지로 명시적 boxing, 언박싱 및 캐스팅을 사용하여 삭제된 형식을 전복할 수 있습니다. 이 경우 개체를 사용할 때 유효하지 않은 캐스트 예외가 발생할 수 있습니다. 공급자 런타임은 잘못된 표현으로부터 보호하기 위해 자체 개인 표현 유형을 정의할 수 있습니다. F# 자체에서는 지워진 형식을 정의할 수 없습니다. 제공된 형식만 지울 수 있습니다. 형식 공급자 또는 지워진 형식을 제공하는 공급자에 대해 지워진 형식을 사용하는 것이 실용적이고 의미 체계적인 결과를 이해해야 합니다. 지워진 형식에는 실제 .NET 형식이 없습니다. 따라서 형식에 대한 정확한 리플렉션을 수행할 수 없으며 런타임 캐스트 및 정확한 런타임 형식 의미체계를 사용하는 기타 기술을 사용하는 경우 삭제된 형식을 전복할 수 있습니다. 지워진 형식의 전복은 런타임에 형식 캐스트 예외를 초래하는 경우가 많습니다.
 
-### <a name="choosing-representations-for-erased-provided-types"></a>지워진 제공 형식에 대 한 표현 선택
+### <a name="choosing-representations-for-erased-provided-types"></a>지워진 제공된 형식에 대한 표현 선택
 
-지워진 제공 형식의 일부 사용에는 표현이 필요 하지 않습니다. 예를 들어, 지워진 제공 된 형식에는 정적 속성 및 멤버만 포함 되 고 생성자는 포함 되지 않을 수 있으며, 메서드나 속성은 형식의 인스턴스를 반환 하지 않습니다. 지워진 제공 된 유형의 인스턴스에 도달할 수 있는 경우 다음 질문을 고려해 야 합니다.
+지워진 제공된 형식의 일부 사용의 경우 표현이 필요하지 않습니다. 예를 들어 지워진 제공된 형식에는 정적 속성과 멤버만 포함될 수 있으며 생성자는 없으며 메서드나 속성은 형식의 인스턴스를 반환하지 않습니다. 지워진 제공된 유형의 인스턴스에 도달할 수 있는 경우 다음 질문을 고려해야 합니다.
 
-**제공 된 형식의 지우기는 무엇 인가요?**
+**제공된 형식의 삭제는 무엇입니까?**
 
-- 제공 된 형식을 지울 때 형식이 컴파일된 .NET 코드에 표시 되는 방식입니다.
+- 제공된 형식의 삭제는 컴파일된 .NET 코드에 형식이 표시되는 방식입니다.
 
-- 제공 된 지워진 클래스 형식을 삭제 하는 것은 항상 형식의 상속 체인에서 삭제 되지 않은 첫 번째 기본 형식입니다.
+- 제공된 지워진 클래스 형식의 지우기는 항상 형식의 상속 체인에서 지워지지 않은 첫 번째 기본 형식입니다.
 
-- 제공 된 지워진 인터페이스 유형의 지우기는 항상 `System.Object`입니다.
+- 제공된 지워진 인터페이스 형식의 지우기는 항상 `System.Object`.
 
-**제공 된 형식의 표현은 무엇입니까?**
+**제공된 형식의 표현은 무엇입니까?**
 
-- 지워진 제공 된 형식에 대해 가능한 개체 집합을 해당 표현 이라고 합니다. 이 문서의 예제에서 모든 지워진 제공 형식에 대 한 표현은 항상 문자열 개체 `Type1..Type100`입니다.
+- 지워진 제공된 형식에 대해 가능한 개체 집합을 해당 표현이라고 합니다. 이 문서의 예제에서 지워진 제공된 모든 형식의 `Type1..Type100` 표현은 항상 문자열 개체입니다.
 
-제공 된 형식의 모든 표현은 제공 된 형식의 지우기와 호환 되어야 합니다. 그렇지 않으면 컴파일러에서 F# 형식 공급자 사용에 대 한 오류를 제공 하거나, 유효 하지 않은 비안정형 .net 코드가 생성 됩니다. 형식 공급자는 유효하지 않은 표현을 제공하는 코드를 반환하는 경우 사용할 수 없습니다.)
+제공된 형식의 모든 표현은 제공된 형식의 지우기와 호환되어야 합니다. 그렇지 않으면 F# 컴파일러가 형식 공급자사용에 대한 오류를 제공하거나 유효하지 않은 확인할 수 없는 .NET 코드가 생성됩니다. 형식 공급자는 유효하지 않은 표현을 제공하는 코드를 반환하는 경우 사용할 수 없습니다.)
 
-다음 방법 중 하나를 사용 하 여 제공 된 개체에 대 한 표현을 선택할 수 있습니다 .이 두 가지 방법 모두 매우 일반적입니다.
+제공된 개체에 대한 표현을 선택할 수 있습니다.
 
-- 기존 .NET 형식에 대 한 강력한 형식의 래퍼를 제공 하는 경우 형식에서 해당 형식을 지우거 나, 해당 형식의 인스턴스를 표현으로 사용 하거나, 두 가지 방법을 모두 사용 하는 것이 적합 합니다. 이 방법은 강력한 형식의 버전을 사용할 때 해당 형식에 대 한 대부분의 기존 메서드가 여전히 적합 한 경우에 적합 합니다.
+- 기존 .NET 형식에 대해 강력한 형식의 래퍼를 제공하는 경우 형식이 해당 형식으로 지워지거나 해당 형식의 인스턴스를 표현으로 사용하거나 둘 다로 사용하는 것이 좋습니다. 이 방법은 강력한 형식의 버전을 사용할 때 해당 형식의 대부분의 기존 메서드가 여전히 의미가 있는 경우에 적합합니다.
 
-- 기존 .NET API와 크게 다른 API를 만들려는 경우 제공 된 형식에 대 한 형식 지우기 및 표현이 되는 런타임 형식을 만드는 것이 좋습니다.
+- 기존 .NET API와 크게 다른 API를 만들려면 제공된 형식에 대한 형식 지우기 및 표현이 되는 런타임 형식을 만드는 것이 좋습니다.
 
-이 문서의 예제에서는 문자열을 제공 된 개체의 표현으로 사용 합니다. 다른 개체를 사용 하 여 표현 하는 것이 적합할 수도 있습니다. 예를 들어 사전을 속성 모음으로 사용할 수 있습니다.
+이 문서의 예제에서는 제공된 개체의 표현으로 문자열을 사용합니다. 표현에 다른 개체를 사용하는 것이 적절할 수 있습니다. 예를 들어 사전을 속성 백으로 사용할 수 있습니다.
 
 ```fsharp
 ProvidedConstructor(parameters = [],
     invokeCode= (fun args -> <@@ (new Dictionary<string,obj>()) :> obj @@>))
 ```
 
-또는 형식 공급자에서 런타임에 사용 되는 형식을 정의 하 여 하나 이상의 런타임 작업과 함께 표현을 만들 수 있습니다.
+또는 하나 이상의 런타임 작업과 함께 표현을 형성하는 데 런타임에 사용되는 형식 공급자의 형식을 정의할 수 있습니다.
 
 ```fsharp
 type DataObject() =
@@ -413,14 +413,14 @@ type DataObject() =
     member x.RuntimeOperation() = data.Count
 ```
 
-제공 된 멤버는이 개체 형식의 인스턴스를 생성할 수 있습니다.
+제공된 멤버는 다음 개체 형식의 인스턴스를 생성할 수 있습니다.
 
 ```fsharp
 ProvidedConstructor(parameters = [],
     invokeCode= (fun args -> <@@ (new DataObject()) :> obj @@>))
 ```
 
-이 경우에는 `ProvidedTypeDefinition`를 생성할 때이 형식을 `baseType`로 지정 하 여 형식 지우기로이 형식을 사용할 수 있습니다 (옵션).
+이 경우 (선택적으로) 이 형식을 다음을 생성할 `baseType` `ProvidedTypeDefinition`때로 지정하여 이 형식을 형식 지우기로 사용할 수 있습니다.
 
 ```fsharp
 ProvidedTypeDefinition(…, baseType = Some typeof<DataObject> )
@@ -428,23 +428,23 @@ ProvidedTypeDefinition(…, baseType = Some typeof<DataObject> )
 ProvidedConstructor(…, InvokeCode = (fun args -> <@@ new DataObject() @@>), …)
 ```
 
-### <a name="key-lessons"></a>주요 단원
+### <a name="key-lessons"></a>주요 교훈
 
-이전 단원에서는 다양 한 형식, 속성 및 메서드를 제공 하는 간단한 지우기 형식 공급자를 만드는 방법을 설명 했습니다. 또한이 섹션에서는 형식 공급자에서 지워진 형식을 제공 하는 경우의 장점과 단점을 비롯 하 여 형식 지우기의 개념에 대해 설명 하 고, 지워진 형식의 표현에 대해 설명 했습니다.
+이전 섹션에서는 다양한 형식, 속성 및 메서드를 제공하는 간단한 지워지는 형식 공급자를 만드는 방법을 설명했습니다. 이 섹션에서는 형식 공급자에서 지워진 형식을 제공하는 몇 가지 장점과 단점을 포함하여 형식 지우기의 개념을 설명하고 지워진 형식의 표현에 대해설명했습니다.
 
-## <a name="a-type-provider-that-uses-static-parameters"></a>정적 매개 변수를 사용 하는 형식 공급자입니다.
+## <a name="a-type-provider-that-uses-static-parameters"></a>정적 매개 변수를 사용하는 형식 공급자
 
-공급자가 로컬 또는 원격 데이터에 액세스할 필요가 없는 경우에도 정적 데이터를 사용 하 여 형식 공급자를 매개 변수화 하는 기능이 많은 흥미로운 시나리오를 가능 하 게 합니다. 이 섹션에서는 이러한 공급자를 통합 하기 위한 몇 가지 기본 기술에 대해 알아봅니다.
+정적 데이터로 형식 공급자를 매개 변수화하는 기능을 사용하면 공급자가 로컬 또는 원격 데이터에 액세스할 필요가 없는 경우에도 많은 흥미로운 시나리오를 사용할 수 있습니다. 이 섹션에서는 이러한 공급자를 함께 배치하는 몇 가지 기본 기술을 배웁니다.
 
-### <a name="type-checked-regex-provider"></a>선택 된 Regex 공급자 유형
+### <a name="type-checked-regex-provider"></a>확인된 정규표현기 공급자 유형
 
-다음 컴파일 시간을 제공 하는 인터페이스에서 .NET <xref:System.Text.RegularExpressions.Regex> 라이브러리를 래핑하는 정규식에 대 한 형식 공급자를 구현 한다고 가정 합니다.
+다음과 같은 컴파일 타임 보장을 제공하는 인터페이스에서 .NET <xref:System.Text.RegularExpressions.Regex> 라이브러리를 래핑하는 정규식에 대한 형식 공급자를 구현하려고 한다고 가정해 보세요.
 
-- 정규식이 유효한 지 여부를 확인 하는 중입니다.
+- 정규식이 유효한지 여부를 확인합니다.
 
-- 정규식의 그룹 이름을 기반으로 하는 일치 항목에 명명 된 속성을 제공 합니다.
+- 정규식의 모든 그룹 이름을 기반으로 하는 일치 항목에서 명명된 속성을 제공합니다.
 
-이 섹션에서는 형식 공급자를 사용 하 여 이러한 혜택을 제공 하기 위해 정규식 패턴이 매개 변수화 하는 `RegexTyped` 형식을 만드는 방법을 보여 줍니다. 제공 된 패턴이 유효 하지 않을 경우 컴파일러에서 오류를 보고 하 고, 형식 공급자가 패턴에서 그룹을 추출 하 여 일치 하는 명명 된 속성을 사용 하 여 액세스할 수 있습니다. 형식 공급자를 디자인할 때 노출 되는 API가 최종 사용자에 게 표시 되는 방법 및이 디자인을 .NET 코드로 변환 하는 방법을 고려해 야 합니다. 다음 예제에서는 이러한 API를 사용 하 여 지역 코드의 구성 요소를 가져오는 방법을 보여 줍니다.
+이 섹션에서는 형식 공급자를 사용하여 `RegexTyped` 정규식 패턴이 매개 변수화하여 이러한 이점을 제공하는 형식을 만드는 방법을 보여 주며 있습니다. 컴파일러는 제공된 패턴이 유효하지 않은 경우 오류를 보고하고 형식 공급자는 일치 할 때 명명 된 속성을 사용하여 그룹에 액세스 할 수 있도록 패턴에서 그룹을 추출 할 수 있습니다. 형식 공급자를 디자인할 때는 노출된 API가 최종 사용자에게 어떻게 보이는지, 이 디자인이 .NET 코드로 변환되는 방식을 고려해야 합니다. 다음 예제에서는 이러한 API를 사용하여 지역 코드의 구성 요소를 얻는 방법을 보여 주며 있습니다.
 
 ```fsharp
 type T = RegexTyped< @"(?<AreaCode>^\d{3})-(?<PhoneNumber>\d{3}-\d{4}$)">
@@ -453,7 +453,7 @@ let result = T.IsMatch("425-555-2345")
 let r = reg.Match("425-555-2345").Group_AreaCode.Value //r equals "425"
 ```
 
-다음 예제에서는 형식 공급자가 이러한 호출을 변환 하는 방법을 보여 줍니다.
+다음 예제에서는 형식 공급자가 이러한 호출을 변환하는 방법을 보여 주어집니다.
 
 ```fsharp
 let reg = new Regex(@"(?<AreaCode>^\d{3})-(?<PhoneNumber>\d{3}-\d{4}$)")
@@ -461,17 +461,17 @@ let result = reg.IsMatch("425-123-2345")
 let r = reg.Match("425-123-2345").Groups.["AreaCode"].Value //r equals "425"
 ```
 
-다음 사항에 유의 하세요.
+다음 사항에 유의하세요.
 
-- 표준 Regex 형식은 매개 변수가 있는 `RegexTyped` 형식을 나타냅니다.
+- 표준 정규식 유형은 매개 `RegexTyped` 변수화된 형식을 나타냅니다.
 
-- `RegexTyped` 생성자는 Regex 생성자를 호출 하 여 패턴에 대 한 정적 형식 인수를 전달 합니다.
+- `RegexTyped` 생성자는 정규표현기 생성기를 호출하여 패턴에 대한 정적 형식 인수를 전달합니다.
 
-- `Match` 메서드의 결과는 표준 <xref:System.Text.RegularExpressions.Match> 형식으로 표시 됩니다.
+- `Match` 메서드의 결과는 표준 <xref:System.Text.RegularExpressions.Match> 유형으로 표시됩니다.
 
-- 각 명명 된 그룹은 제공 된 속성을 생성 하 고 속성에 액세스 하면 일치 하는 `Groups` 컬렉션에 대해 인덱서가 사용 됩니다.
+- 명명된 각 그룹은 제공된 속성을 생성하고 속성에 액세스하면 일치 의 `Groups` 컬렉션에 인덱서가 사용됩니다.
 
-다음 코드는 이러한 공급자를 구현 하는 논리의 핵심 이며,이 예제에서는 제공 된 형식에 대 한 모든 멤버의 추가를 생략 합니다. 추가 된 각 멤버에 대 한 자세한 내용은이 항목의 뒷부분에 있는 해당 섹션을 참조 하세요. 전체 코드를 보려면 CodePlex 웹 사이트의 [ F# 3.0 샘플 팩](https://archive.codeplex.com/?p=fsharp3sample) 에서 샘플을 다운로드 하세요.
+다음 코드는 이러한 공급자를 구현하는 논리의 핵심이며 이 예제에서는 제공된 형식에 대한 모든 멤버의 추가를 생략합니다. 추가된 각 멤버에 대한 자세한 내용은 이 항목의 후반부에서 해당 섹션을 참조하십시오. 전체 코드의 경우 CodePlex 웹 사이트에서 [F# 3.0 샘플 팩에서](https://archive.codeplex.com/?p=fsharp3sample) 샘플을 다운로드하십시오.
 
 ```fsharp
 namespace Samples.FSharp.RegexTypeProvider
@@ -527,21 +527,21 @@ type public CheckedRegexProvider() as this =
 do ()
 ```
 
-다음 사항에 유의 하세요.
+다음 사항에 유의하세요.
 
-- 형식 공급자는 `pattern`의 두 정적 매개 변수를 사용 합니다 .이 매개 변수는 `options`필수 항목이 며 기본값은 제공 되기 때문에 선택적입니다 (선택 사항).
+- 형식 공급자는 기본값이 제공되므로 `pattern`필수 인 및 `options`선택적 의 .) 라는 두 개의 정적 매개 변수를 사용합니다.
 
-- 정적 인수를 제공한 후 정규식의 인스턴스를 만듭니다. Regex의 형식이 잘못 된 경우이 인스턴스는 예외를 throw 하 고이 오류는 사용자에 게 보고 됩니다.
+- 정적 인수가 제공된 후 정규식의 인스턴스를 만듭니다. 이 인스턴스는 정규기가 잘못된 경우 예외를 발생시키고 이 오류는 사용자에게 보고됩니다.
 
-- `DefineStaticParameters` 콜백 내에서 인수를 제공한 후에 반환 되는 형식을 정의 합니다.
+- `DefineStaticParameters` 콜백 내에서 인수가 제공된 후 반환되는 형식을 정의합니다.
 
-- 이 코드는 `HideObjectMethods`를 true로 설정 하 여 IntelliSense 환경을 효율적으로 유지 합니다. 이 특성은 제공 된 개체에 대 한 IntelliSense 목록에서 `Equals`, `GetHashCode`, `Finalize`및 `GetType` 멤버를 표시 하지 않도록 합니다.
+- 이 코드는 IntelliSense 환경이 간소화된 상태로 유지되도록 true로 설정합니다. `HideObjectMethods` 이 특성으로 `Equals` `GetHashCode`인해 `Finalize`에서 `GetType` 및 멤버가 제공된 개체에 대한 IntelliSense 목록에서 억제됩니다.
 
-- 메서드의 기본 형식으로 `obj`를 사용 하지만 다음 예제에서 볼 수 있듯이 `Regex` 개체를이 형식의 런타임 표현으로 사용 합니다.
+- 메서드의 `obj` 기본 유형으로 사용 하지만 다음 예제에서 `Regex` 볼 수 있듯이 이 형식의 런타임 표현으로 개체를 사용 합니다.
 
-- 정규식이 유효 하지 않은 경우 `Regex` 생성자를 호출 하면 <xref:System.ArgumentException> throw 됩니다. 컴파일러는이 예외를 catch 하 고 컴파일 타임 또는 Visual Studio 편집기에서 사용자에 게 오류 메시지를 보고 합니다. 이 예외를 사용 하면 응용 프로그램을 실행 하지 않고 정규식의 유효성을 검사할 수 있습니다.
+- `Regex` 생성자 호출은 정규식이 <xref:System.ArgumentException> 유효하지 않은 경우 를 throw합니다. 컴파일러는 이 예외를 catch하고 컴파일 타임또는 Visual Studio 편집기에서 사용자에게 오류 메시지를 보고합니다. 이 예외를 사용하면 응용 프로그램을 실행하지 않고도 정규식의 유효성을 검사할 수 있습니다.
 
-위에서 정의한 형식은 의미 있는 메서드나 속성을 포함 하지 않기 때문에 아직 유용 하지 않습니다. 먼저 정적 `IsMatch` 메서드를 추가 합니다.
+위에 정의된 형식은 의미 있는 메서드 나 속성을 포함 하지 않기 때문에 아직 유용 하지 않습니다. 먼저 정적 `IsMatch` 메서드를 추가합니다.
 
 ```fsharp
 let isMatch =
@@ -556,9 +556,9 @@ isMatch.AddXmlDoc "Indicates whether the regular expression finds a match in the
 ty.AddMember isMatch
 ```
 
-이전 코드는 문자열을 입력으로 사용 하 고 `bool`를 반환 하는 메서드 `IsMatch`를 정의 합니다. 까다로운 부분은 `InvokeCode` 정의 내에서 `args` 인수를 사용 하는 것입니다. 이 예제에서 `args`은이 메서드에 대 한 인수를 나타내는 따옴표 목록입니다. 메서드가 인스턴스 메서드인 경우 첫 번째 인수는 `this` 인수를 나타냅니다. 그러나 정적 메서드의 경우 인수는 모두 단순히 메서드에 대 한 명시적 인수입니다. 따옴표로 묶인 값의 형식은 지정 된 반환 형식 (이 경우 `bool`)과 일치 해야 합니다. 또한이 코드는 `AddXmlDoc` 메서드를 사용 하 여 제공 된 메서드에 IntelliSense를 통해 제공할 수 있는 유용한 설명서가 있는지 확인 합니다.
+이전 코드는 문자열을 `IsMatch`입력으로 사용하여 을 반환하는 `bool`메서드를 정의합니다. 유일한 까다로운 부분은 정의 내에서 `args` 인수를 `InvokeCode` 사용하는 것입니다. 이 예제에서는 `args` 이 메서드에 대한 인수를 나타내는 견적 목록입니다. 메서드가 인스턴스 메서드인 경우 첫 번째 `this` 인수는 인수를 나타냅니다. 그러나 정적 메서드의 경우 인수는 모두 메서드에 대한 명시적 인수일 뿐입니다. 인용된 값의 형식은 지정된 반환 형식(이 `bool`경우)과 일치해야 합니다. 또한 이 코드는 `AddXmlDoc` 메서드를 사용하여 제공된 메서드에도 IntelliSense를 통해 제공할 수 있는 유용한 설명서도 있는지 확인합니다.
 
-다음으로, 인스턴스 일치 메서드를 추가 합니다. 그러나이 메서드는 제공 된 `Match` 형식의 값을 반환 해야 합니다. 이렇게 하면 강력한 형식의 방식으로 그룹에 액세스할 수 있습니다. 따라서 `Match` 형식을 먼저 선언 합니다. 이 형식은 정적 인수로 제공 된 패턴에 따라 달라 지므로이 형식은 매개 변수가 있는 형식 정의 내에 중첩 되어야 합니다.
+다음으로 인스턴스 일치 메서드를 추가합니다. 그러나 이 메서드는 그룹에 강력한 `Match` 형식의 방식으로 액세스할 수 있도록 제공 된 형식의 값을 반환 해야 합니다. 따라서 먼저 형식을 `Match` 선언합니다. 이 형식은 정적 인수로 제공된 패턴에 따라 달라지므로 이 형식은 매개 변수화된 형식 정의 내에 중첩되어야 합니다.
 
 ```fsharp
 let matchTy =
@@ -570,7 +570,7 @@ let matchTy =
 ty.AddMember matchTy
 ```
 
-그런 다음 각 그룹의 일치 형식에 하나의 속성을 추가 합니다. 런타임에 일치 항목은 <xref:System.Text.RegularExpressions.Match> 값으로 표시 되므로 속성을 정의 하는 따옴표는 <xref:System.Text.RegularExpressions.Match.Groups> 인덱싱된 속성을 사용 하 여 관련 그룹을 가져와야 합니다.
+그런 다음 각 그룹에 대해 일치 유형에 하나의 속성을 추가합니다. 런타임에서 일치는 <xref:System.Text.RegularExpressions.Match> 값으로 표시되므로 속성을 정의하는 따옴표는 <xref:System.Text.RegularExpressions.Match.Groups> 인덱싱된 속성을 사용하여 관련 그룹을 얻어야 합니다.
 
 ```fsharp
 for group in r.GetGroupNames() do
@@ -585,9 +585,9 @@ for group in r.GetGroupNames() do
     matchTy.AddMember prop
 ```
 
-다시, 제공 된 속성에 XML 문서를 추가 하 고 있음을 확인 합니다. 또한 `GetterCode` 함수를 제공 하는 경우 속성을 읽을 수 있으며, `SetterCode` 함수를 제공 하는 경우에는 속성을 쓸 수 있으므로 결과 속성은 읽기 전용입니다.
+다시 말하지만 제공된 속성에 XML 설명서를 추가합니다. 또한 `GetterCode` 함수가 제공되는 경우 속성을 읽을 수 있으며 `SetterCode` 함수가 제공된 경우 속성을 작성할 수 있으므로 결과 속성만 읽을 수 있습니다.
 
-이제이 `Match` 형식의 값을 반환 하는 인스턴스 메서드를 만들 수 있습니다.
+이제 이 `Match` 유형의 값을 반환하는 인스턴스 메서드를 만들 수 있습니다.
 
 ```fsharp
 let matchMethod =
@@ -602,9 +602,9 @@ matchMeth.AddXmlDoc "Searches the specified input string for the first occurrenc
 ty.AddMember matchMeth
 ```
 
-인스턴스 메서드를 만들기 때문에 `args.[0]`는 메서드가 호출 되는 `RegexTyped` 인스턴스를 나타내고 `args.[1]`는 입력 인수입니다.
+인스턴스 메서드를 만들기 때문에 `args.[0]` 메서드가 `RegexTyped` 호출되는 인스턴스를 나타내며 `args.[1]` 입력 인수입니다.
 
-마지막으로 제공 된 형식의 인스턴스를 만들 수 있도록 생성자를 제공 합니다.
+마지막으로 제공된 형식의 인스턴스를 만들 수 있도록 생성자 제공합니다.
 
 ```fsharp
 let ctor =
@@ -617,7 +617,7 @@ ctor.AddXmlDoc("Initializes a regular expression instance.")
 ty.AddMember ctor
 ```
 
-생성자는 표준 .NET Regex 인스턴스를 만들 때만 삭제 하 고, `obj`는 제공 된 형식을 삭제 하기 때문에 개체에 다시 boxed 됩니다. 이와 같이 변경 하면 항목에서 이전에 지정한 샘플 API 사용이 예상 대로 작동 합니다. 다음 코드는 전체 및 최종입니다.
+생성자는 제공된 형식의 지우기때문에 `obj` 개체에 다시 boxed되는 표준 .NET Regex 인스턴스를 만들기 위해 지웁니까 됩니다. 이 변경 사항으로 항목의 앞에 지정한 샘플 API 사용이 예상대로 작동합니다. 다음 코드는 완전하고 최종입니다.
 
 ```fsharp
 namespace Samples.FSharp.RegexTypeProvider
@@ -728,37 +728,37 @@ type public CheckedRegexProvider() as this =
 do ()
 ```
 
-### <a name="key-lessons"></a>주요 단원
+### <a name="key-lessons"></a>주요 교훈
 
-이 섹션에서는 정적 매개 변수에서 작동 하는 형식 공급자를 만드는 방법에 대해 설명 했습니다. 공급자는 정적 매개 변수를 확인 하 고 해당 값을 기반으로 작업을 제공 합니다.
+이 섹션에서는 정적 매개 변수에서 작동하는 형식 공급자를 만드는 방법을 설명합니다. 공급자는 정적 매개 변수를 검사하고 해당 값에 따라 작업을 제공합니다.
 
-## <a name="a-type-provider-that-is-backed-by-local-data"></a>로컬 데이터로 지원 되는 형식 공급자입니다.
+## <a name="a-type-provider-that-is-backed-by-local-data"></a>로컬 데이터로 백업되는 형식 공급자
 
-정적 매개 변수 뿐만 아니라 로컬 또는 원격 시스템의 정보를 기반으로 Api를 제공 하기 위해 형식 공급자를 사용 하는 경우가 많습니다. 이 섹션에서는 로컬 데이터 파일과 같은 로컬 데이터를 기반으로 하는 형식 공급자에 대해 설명 합니다.
+정적 매개 변수뿐만 아니라 로컬 또는 원격 시스템의 정보도 기반으로 형식 공급자가 API를 표시하는 경우가 많습니다. 이 섹션에서는 로컬 데이터 파일과 같은 로컬 데이터를 기반으로 하는 형식 공급자에 대해 설명합니다.
 
 ### <a name="simple-csv-file-provider"></a>간단한 CSV 파일 공급자
 
-간단한 예로 쉼표로 구분 된 값 (CSV) 형식으로 과학적 데이터에 액세스 하는 형식 공급자를 생각해 보세요. 이 섹션에서는 다음 표와 같이 CSV 파일에 헤더 행과 부동 소수점 데이터가 포함 되어 있다고 가정 합니다.
+간단한 예로, CSV(쉼표 분리값) 형식으로 과학 데이터에 액세스하기 위한 형식 공급자를 고려합니다. 이 섹션에서는 CSV 파일에 다음 표와 같이 헤더 행 다음에 부동 지점 데이터가 포함되어 있다고 가정합니다.
 
-|거리 (미터)|시간 (초)|
+|거리(미터)|시간(두 번째)|
 |----------------|-------------|
 |50.0|3.7|
 |100.0|5.2|
 |150.0|6.4|
 
-이 섹션에서는 `float<meter>` 형식의 `Distance` 속성 및 `float<second>`형식의 `Time` 속성을 사용 하 여 행을 가져오는 데 사용할 수 있는 형식을 제공 하는 방법을 보여 줍니다. 편의상 다음과 같은 가정이 적용 됩니다.
+`Distance` 이 섹션에서는 형식의 `float<meter>` 속성과 형식의 `Time` `float<second>`속성을 사용하여 행을 얻는 데 사용할 수 있는 형식을 제공하는 방법을 보여 주며 있습니다. 간단히 하기 위해 다음과 같은 가정이 만들어집니다.
 
-- 헤더 이름은 단위 이거나 "이름 (단위)" 형식이 며 쉼표를 포함 하지 않습니다.
+- 헤더 이름은 단위가 없거나 "이름(단위)" 양식이 있으며 쉼표를 포함하지 않습니다.
 
-- 단위는 [fsharp.core module (F#)](https://msdn.microsoft.com/library/3cb43485-11f5-4aa7-a779-558f19d4013b) 모듈이 정의 하는 모든 SI (System 다국어) 단위입니다.
+- 단위는 [Microsoft.FSharp.Data.UnitSystems.SI.UnitNames 모듈(F#)](https://msdn.microsoft.com/library/3cb43485-11f5-4aa7-a779-558f19d4013b) 모듈이 정의하는 대로 모든 시스템 국제(SI) 단위입니다.
 
-- 단위는 복합이 아닌 모든 단순 (예: 미터) (예: 미터/초)입니다.
+- 단위는 모두 복합(예: 미터/초)이 아닌 단순(예: 미터)입니다.
 
-- 모든 열은 부동 소수점 데이터를 포함 합니다.
+- 모든 열에는 부동 점 데이터가 포함됩니다.
 
-더 완전 한 공급자는 이러한 제한을 완화 합니다.
+보다 완전한 공급자는 이러한 제한을 완화할 것입니다.
 
-첫 번째 단계는 API가 어떻게 보이는지를 고려 하는 것입니다. 이전 테이블의 콘텐츠(쉼표로 분리된 형식)를 사용하여 `info.csv` 파일을 지정한 경우 공급자의 사용자는 다음 예제와 비슷한 코드를 작성할 수 있어야 합니다.
+다시 첫 번째 단계는 API의 모양을 고려하는 것입니다. 이전 테이블의 콘텐츠(쉼표로 분리된 형식)를 사용하여 `info.csv` 파일을 지정한 경우 공급자의 사용자는 다음 예제와 비슷한 코드를 작성할 수 있어야 합니다.
 
 ```fsharp
 let info = new MiniCsv<"info.csv">()
@@ -767,7 +767,7 @@ let time = row.Time
 printfn "%f" (float time)
 ```
 
-이 경우 컴파일러는 이러한 호출을 다음 예제와 같은 항목으로 변환 해야 합니다.
+이 경우 컴파일러는 이러한 호출을 다음 예제와 같은 것으로 변환해야 합니다.
 
 ```fsharp
 let info = new CsvFile("info.csv")
@@ -776,9 +776,9 @@ let (time:float) = row.[1]
 printfn "%f" (float time)
 ```
 
-최적의 변환에서는 형식 공급자가 형식 공급자의 어셈블리에서 실제 `CsvFile` 형식을 정의 해야 합니다. 형식 공급자는 종종 몇 가지 도우미 형식 및 메서드를 사용 하 여 중요 한 논리를 래핑합니다. 측정값은 런타임에 삭제 되기 때문에 행에 대해 지워진 형식으로 `float[]`를 사용할 수 있습니다. 컴파일러는 서로 다른 측정값 형식이 있는 것으로 다른 열을 처리 합니다. 예를 들어이 예제의 첫 번째 열에는 `float<meter>`형식이 있고, 두 번째 열에는 `float<second>`있습니다. 그러나 지워진 표현은 매우 간단 하 게 유지할 수 있습니다.
+최적의 변환을 위해서는 형식 공급자가 `CsvFile` 형식 공급자의 어셈블리에서 실제 형식을 정의해야 합니다. 형식 공급자는 종종 몇 가지 도우미 형식 및 메서드를 사용하여 중요한 논리를 래핑합니다. 측정값은 런타임에 지워지므로 `float[]` 행에 대해 지워진 유형으로 사용할 수 있습니다. 컴파일러는 다른 열을 다른 측정값 형식을 갖는 것으로 처리합니다. 예를 들어, 이 예제의 첫 `float<meter>`번째 열에는 `float<second>`type 이 있고 두 번째 열에는 . 그러나 지워진 표현은 매우 간단하게 유지될 수 있습니다.
 
-다음 코드는 구현의 핵심을 보여 줍니다.
+다음 코드는 구현의 핵심을 보여 주며, 구현의 핵심을 보여 주시고 있습니다.
 
 ```fsharp
 // Simple type wrapping CSV data
@@ -873,27 +873,27 @@ type public MiniCsvProvider(cfg:TypeProviderConfig) as this =
     do this.AddNamespace(ns, [csvTy])
 ```
 
-구현에 대 한 다음 사항에 유의 하세요.
+구현에 대한 다음 사항을 참고하십시오.
 
-- 오버 로드 된 생성자는 원본 파일 또는 동일한 스키마를 가진 파일을 읽을 수 있습니다. 이 패턴은 로컬 또는 원격 데이터 원본에 대 한 형식 공급자를 작성할 때 일반적으로 사용 되며,이 패턴을 사용 하면 로컬 파일을 원격 데이터의 템플릿으로 사용할 수 있습니다.
+- 오버로드된 생성자는 원본 파일 또는 동일한 스키마가 있는 파일을 읽을 수 있습니다. 이 패턴은 로컬 또는 원격 데이터 원본에 대한 형식 공급자를 작성할 때 일반적이며 이 패턴을 사용하면 로컬 파일을 원격 데이터의 템플릿으로 사용할 수 있습니다.
 
-- 형식 공급자 생성자에 전달 된 [Typeproviderconfig](https://msdn.microsoft.com/library/1cda7b9a-3d07-475d-9315-d65e1c97eb44) 값을 사용 하 여 상대 파일 이름을 확인할 수 있습니다.
+- 형식 공급자 생성자에게 전달되는 [TypeProviderConfig](https://msdn.microsoft.com/library/1cda7b9a-3d07-475d-9315-d65e1c97eb44) 값을 사용하여 상대 파일 이름을 확인할 수 있습니다.
 
-- `AddDefinitionLocation` 메서드를 사용 하 여 제공 된 속성의 위치를 정의할 수 있습니다. 따라서 제공 된 속성에서 `Go To Definition`를 사용 하는 경우 CSV 파일은 Visual Studio에서 열립니다.
+- 메서드를 `AddDefinitionLocation` 사용하여 제공된 속성의 위치를 정의할 수 있습니다. 따라서 제공된 속성에서 사용하는 `Go To Definition` 경우 CSV 파일은 Visual Studio에서 열립니다.
 
-- `ProvidedMeasureBuilder` 유형을 사용 하 여 SI 단위를 조회 하 고 관련 `float<_>` 유형을 생성할 수 있습니다.
+- 이 `ProvidedMeasureBuilder` 형식을 사용하여 SI 단위를 조회하고 관련 `float<_>` 형식을 생성할 수 있습니다.
 
-### <a name="key-lessons"></a>주요 단원
+### <a name="key-lessons"></a>주요 교훈
 
-이 섹션에서는 데이터 원본 자체에 포함 된 간단한 스키마를 사용 하 여 로컬 데이터 원본에 대 한 형식 공급자를 만드는 방법에 대해 설명 했습니다.
+이 섹션에서는 데이터 원본 자체에 포함된 간단한 스키마를 사용하여 로컬 데이터 원본에 대한 형식 공급자를 만드는 방법을 설명했습니다.
 
-## <a name="going-further"></a>자세히 살펴보기
+## <a name="going-further"></a>더 나아가기
 
-다음 섹션에는 추가 연구에 대 한 제안이 포함 되어 있습니다.
+다음 섹션에는 추가 학습을 위한 제안사항이 포함되어 있습니다.
 
-### <a name="a-look-at-the-compiled-code-for-erased-types"></a>컴파일된 형식에 대 한 컴파일된 코드 살펴보기
+### <a name="a-look-at-the-compiled-code-for-erased-types"></a>지워진 형식에 대한 컴파일된 코드 살펴보기
 
-형식 공급자를 사용 하는 방법에 대 한 자세한 내용은이 항목의 앞부분에서 사용 되는 `HelloWorldTypeProvider`를 참조 하세요.
+형식 공급자의 사용이 내보낸 코드에 어떻게 해당하는지 에 대한 몇 가지 아이디어를 제공하려면 이 `HelloWorldTypeProvider` 항목의 앞에서 사용된 함수를 사용하여 다음 함수를 살펴봅니다.
 
 ```fsharp
 let function1 () =
@@ -901,7 +901,7 @@ let function1 () =
     obj1.InstanceProperty
 ```
 
-Ildasm.exe를 사용 하 여 결과 코드 디컴파일된 이미지는 다음과 같습니다.
+다음은 ildasm.exe를 사용하여 디컴파일된 결과 코드의 이미지입니다.
 
 ```il
 .class public abstract auto ansi sealed Module1
@@ -929,30 +929,30 @@ IL_0017:  ret
 } // end of class Module1
 ```
 
-예제에 나와 있는 것 처럼 형식 `Type1` 및 `InstanceProperty` 속성의 모든 멘 션이 삭제 되었으며 관련 된 런타임 형식에 대 한 작업만 남게 됩니다.
+예제에서 볼 수 있듯이 형식 `Type1` 및 `InstanceProperty` 속성에 대한 모든 언급이 지워져 관련 런타임 형식에 대한 작업만 남습니다.
 
-### <a name="design-and-naming-conventions-for-type-providers"></a>형식 공급자의 디자인 및 명명 규칙
+### <a name="design-and-naming-conventions-for-type-providers"></a>유형 공급자를 위한 디자인 및 명명 규칙
 
-형식 공급자를 제작할 때 다음 규칙을 준수 합니다.
+형식 공급자를 작성할 때 다음 규칙을 준수합니다.
 
-**연결 프로토콜에 대 한 공급자** 일반적으로 데이터 및 서비스 연결 프로토콜에 대 한 대부분의 공급자 Dll 이름 (예: OData 또는 SQL 연결)은 `TypeProvider` 또는 `TypeProviders`로 끝나야 합니다. 예를 들어 다음 문자열과 유사한 DLL 이름을 사용 합니다.
+**연결 프로토콜 공급자** 일반적으로 OData 또는 SQL 연결과 같은 데이터 및 서비스 연결 프로토콜에 대한 대부분의 `TypeProvider` 공급자 `TypeProviders`DLL의 이름은 또는 에 끝나야 합니다. 예를 들어 다음 문자열과 유사한 DLL 이름을 사용합니다.
 
 `Fabrikam.Management.BasicTypeProviders.dll`
 
-제공 된 형식이 해당 네임 스페이스의 멤버 인지 확인 하 고 구현 된 연결 프로토콜을 표시 합니다.
+제공된 형식이 해당 네임스페이스의 멤버인지 확인하고 구현한 연결 프로토콜을 나타냅니다.
 
 ```fsharp
   Fabrikam.Management.BasicTypeProviders.WmiConnection<…>
   Fabrikam.Management.BasicTypeProviders.DataProtocolConnection<…>
 ```
 
-**일반적인 코딩을 위한 유틸리티 공급자**입니다.  정규식의 경우와 같은 유틸리티 유형 공급자의 경우 다음 예제와 같이 형식 공급자가 기본 라이브러리의 일부일 수 있습니다.
+**일반 코딩을 위한 유틸리티 공급자**.  정규식과 같은 유틸리티 형식 공급자의 경우 형식 공급자는 다음 예제와 같이 기본 라이브러리의 일부일 수 있습니다.
 
 ```fsharp
 #r "Fabrikam.Core.Text.Utilities.dll"
 ```
 
-이 경우 제공 된 형식이 일반적인 .NET 디자인 규칙에 따라 적절 한 지점에 표시 됩니다.
+이 경우 제공된 형식은 일반 .NET 디자인 규칙에 따라 적절한 지점에 표시됩니다.
 
 ```fsharp
   open Fabrikam.Core.Text.RegexTyped
@@ -960,7 +960,7 @@ IL_0017:  ret
   let regex = new RegexTyped<"a+b+a+b+">()
 ```
 
-**Singleton 데이터 원본**입니다. 일부 형식 공급자는 단일 전용 데이터 원본에 연결 하 고 데이터만 제공 합니다. 이 경우 `TypeProvider` 접미사를 삭제 하 고 .NET 명명에 대 한 일반 규칙을 사용 해야 합니다.
+**싱글톤 데이터 소스**. 일부 형식 공급자는 단일 전용 데이터 원본에 연결하고 데이터만 제공합니다. 이 경우 접미사를 `TypeProvider` 삭제하고 .NET 명명에 대한 일반 규칙을 사용해야 합니다.
 
 ```fsharp
 #r "Fabrikam.Data.Freebase.dll"
@@ -968,15 +968,15 @@ IL_0017:  ret
 let data = Fabrikam.Data.Freebase.Astronomy.Asteroids
 ```
 
-자세한 내용은이 항목의 뒷부분에서 설명 하는 `GetConnection` 디자인 규칙을 참조 하세요.
+자세한 내용은 이 `GetConnection` 항목의 후반부에서 설명하는 디자인 규칙을 참조하십시오.
 
-### <a name="design-patterns-for-type-providers"></a>형식 공급자의 디자인 패턴
+### <a name="design-patterns-for-type-providers"></a>유형 공급자를 위한 디자인 패턴
 
-다음 섹션에서는 형식 공급자를 제작할 때 사용할 수 있는 디자인 패턴에 대해 설명 합니다.
+다음 섹션에서는 형식 공급자를 작성할 때 사용할 수 있는 디자인 패턴에 대해 설명합니다.
 
 #### <a name="the-getconnection-design-pattern"></a>GetConnection 디자인 패턴
 
-다음 예제와 같이 Fsharp.core의 형식 공급자가 사용 하는 `GetConnection` 패턴을 사용 하도록 대부분의 형식 공급자를 작성 해야 합니다.
+다음 예제와 같이 FSharp.Data.TypeProviders.dll의 형식 공급자가 사용하는 `GetConnection` 패턴을 사용하도록 대부분의 형식 공급자를 작성해야 합니다.
 
 ```fsharp
 #r "Fabrikam.Data.WebDataStore.dll"
@@ -988,31 +988,31 @@ let connection = Service.GetConnection(…dynamic connection parameters…)
 let data = connection.Astronomy.Asteroids
 ```
 
-#### <a name="type-providers-backed-by-remote-data-and-services"></a>원격 데이터 및 서비스에서 지원 되는 형식 공급자
+#### <a name="type-providers-backed-by-remote-data-and-services"></a>원격 데이터 및 서비스로 지원되는 유형 공급자
 
-원격 데이터와 서비스에서 지원 되는 형식 공급자를 만들기 전에 연결 된 프로그래밍에 내재 된 다양 한 문제를 고려해 야 합니다. 이러한 문제에는 다음 사항이 포함 됩니다.
+원격 데이터 및 서비스가 지원하는 형식 공급자를 만들기 전에 연결된 프로그래밍에 내재된 다양한 문제를 고려해야 합니다. 이러한 문제에는 다음과 같은 고려 사항이 포함됩니다.
 
 - 스키마 매핑
 
-- 스키마가 변경 된 상태에서 선거의 및 무효화
+- 스키마 변경이 있는 경우 의 생수 및 무효화
 
 - 스키마 캐싱
 
 - 데이터 액세스 작업의 비동기 구현
 
-- LINQ 쿼리를 비롯 한 지원 쿼리
+- LINQ 쿼리를 포함한 지원 쿼리
 
 - 자격 증명 및 인증
 
-이 항목에서는 이러한 문제를 더 자세히 설명 하지 않습니다.
+이 항목에서는 이러한 문제를 더 자세히 살펴보지 않습니다.
 
-### <a name="additional-authoring-techniques"></a>추가 제작 기술
+### <a name="additional-authoring-techniques"></a>추가 작성 기술
 
-사용자 고유의 형식 공급자를 작성 하는 경우 다음과 같은 추가 기술을 사용할 수 있습니다.
+사용자 고유의 형식 공급자를 작성할 때 다음과 같은 추가 기술을 사용할 수 있습니다.
 
-### <a name="creating-types-and-members-on-demand"></a>요청 시 형식 및 멤버 만들기
+### <a name="creating-types-and-members-on-demand"></a>주문형 및 멤버 만들기
 
-프로 비전 된 유형 API는 지연 된 버전의 AddMember를 포함 합니다.
+ProvidedType API에 AddMember 버전이 지연되었습니다.
 
 ```fsharp
   type ProvidedType =
@@ -1020,18 +1020,18 @@ let data = connection.Astronomy.Asteroids
       member AddMembersDelayed : (unit -> MemberInfo list) -> unit
 ```
 
-이러한 버전은 형식의 주문형 공간을 만드는 데 사용 됩니다.
+이러한 버전은 형식의 주문형 공간을 만드는 데 사용됩니다.
 
-### <a name="providing-array-types-and-generic-type-instantiations"></a>배열 형식 및 제네릭 형식 인스턴스화 제공
+### <a name="providing-array-types-and-generic-type-instantiations"></a>배열 형식 및 일반 형식 인스턴스화 제공
 
-`ProvidedTypeDefinitions`를 포함 하 여 <xref:System.Type>의 모든 인스턴스에서 일반적인 `MakeArrayType`, `MakePointerType`및 `MakeGenericType`를 사용 하 여 제공 된 멤버 (시그니처에 배열 형식, byref 형식 및 제네릭 형식의 인스턴스화 포함)를 만듭니다.
+을 포함하여 `MakeArrayType` `MakePointerType` `MakeGenericType` <xref:System.Type> `ProvidedTypeDefinitions`의 모든 인스턴스에서 정상 을 사용하여 제공된 멤버(시그니처에 배열 형식, byref 형식 및 제네릭 형식의 인스턴스화 포함)를 만듭니다.
 
 > [!NOTE]
-> `ProvidedTypeBuilder.MakeGenericType`에서 도우미를 사용 해야 하는 경우도 있습니다.  자세한 내용은 [형식 공급자 SDK 설명서](https://github.com/fsprojects/FSharp.TypeProviders.SDK/blob/master/README.md#explicit-construction-of-code-makegenerictype-makegenericmethod-and-uncheckedquotations) 를 참조 하세요.
+> 경우에 따라 `ProvidedTypeBuilder.MakeGenericType`에서 도우미를 사용해야 할 수도 있습니다.  자세한 내용은 [유형 공급자 SDK 설명서를](https://github.com/fsprojects/FSharp.TypeProviders.SDK/blob/master/README.md#explicit-construction-of-code-makegenerictype-makegenericmethod-and-uncheckedquotations) 참조하십시오.
 
-### <a name="providing-unit-of-measure-annotations"></a>측정 단위 주석 제공
+### <a name="providing-unit-of-measure-annotations"></a>측정 주석 단위 제공
 
-프로 비전 된 형식 API는 측정값 주석을 제공 하는 도우미를 제공 합니다. 예를 들어 `float<kg>`형식을 제공 하려면 다음 코드를 사용 합니다.
+ProvidedType API는 측정 주석을 제공하기 위한 도우미를 제공합니다. 예를 들어 형식을 `float<kg>`제공하려면 다음 코드를 사용합니다.
 
 ```fsharp
   let measures = ProvidedMeasureBuilder.Default
@@ -1040,7 +1040,7 @@ let data = connection.Astronomy.Asteroids
   let float_kg = measures.AnnotateType(typeof<float>,[kg])
 ```
 
-  유형 `Nullable<decimal<kg/m^2>>`을 제공 하려면 다음 코드를 사용 합니다.
+  형식을 `Nullable<decimal<kg/m^2>>`제공하려면 다음 코드를 사용합니다.
 
 ```fsharp
   let kgpm2 = measures.Ratio(kg, measures.Square m)
@@ -1050,33 +1050,33 @@ let data = connection.Astronomy.Asteroids
 
 ### <a name="accessing-project-local-or-script-local-resources"></a>프로젝트 로컬 또는 스크립트 로컬 리소스 액세스
 
-형식 공급자의 각 인스턴스에는 생성 중에 `TypeProviderConfig` 값을 지정할 수 있습니다. 이 값에는 공급자에 대 한 "해결 폴더" (즉, 컴파일에 대 한 프로젝트 폴더 또는 스크립트가 포함 된 디렉터리), 참조 된 어셈블리 목록 및 기타 정보가 포함 됩니다.
+형식 공급자의 각 인스턴스는 `TypeProviderConfig` 구성 하는 동안 값을 지정할 수 있습니다. 이 값에는 공급자에 대한 "확인 폴더"(즉, 컴파일용 프로젝트 폴더 또는 스크립트가 포함된 디렉터리), 참조된 어셈블리 목록 및 기타 정보가 포함됩니다.
 
 ### <a name="invalidation"></a>무효화
 
-공급자는 스키마 가정이 변경 되었을 수 있음을 F# 언어 서비스에 알리기 위해 무효화 신호를 발생 시킬 수 있습니다. 무효화가 발생 하면 Visual Studio에서 공급자가 호스트 되는 경우 typecheck가 다시 실행 됩니다. 공급자가 대화형 또는 F# F# 컴파일러 (fsc.exe)에서 호스트 되는 경우이 신호는 무시 됩니다.
+공급자는 F# 언어 서비스에 스키마 가정이 변경되었을 수 있음을 알리기 위해 무효화 신호를 발생시킬 수 있습니다. 무효화가 발생하면 공급자가 Visual Studio에서 호스팅되는 경우 형식 검사가 다시 수행됩니다. 공급자가 F# 대화형 또는 F# 컴파일러(fsc.exe)에서 호스팅될 때 이 신호는 무시됩니다.
 
-### <a name="caching-schema-information"></a>스키마 정보 캐싱
+### <a name="caching-schema-information"></a>캐싱 스키마 정보
 
-공급자는 종종 스키마 정보에 대 한 액세스를 캐시 해야 합니다. 정적 매개 변수 또는 사용자 데이터로 지정 된 파일 이름을 사용 하 여 캐시 된 데이터를 저장 해야 합니다. 스키마 캐싱의 예는 `FSharp.Data.TypeProviders` 어셈블리의 형식 공급자에 있는 `LocalSchemaFile` 매개 변수입니다. 이러한 공급자의 구현에서이 정적 매개 변수는 네트워크를 통해 데이터 원본에 액세스 하는 대신 지정 된 로컬 파일의 스키마 정보를 사용 하도록 형식 공급자에 게 지시 합니다. 캐시 된 스키마 정보를 사용 하려면 정적 매개 변수 `ForceUpdate` `false`으로 설정 해야 합니다. 유사한 기술을 사용 하 여 온라인 및 오프 라인 데이터 액세스를 사용할 수 있습니다.
+공급자는 종종 스키마 정보에 대한 액세스를 캐시해야 합니다. 캐시된 데이터는 정적 매개 변수 또는 사용자 데이터로 지정된 파일 이름을 사용하여 저장해야 합니다. 스키마 캐싱의 예는 `LocalSchemaFile` 어셈블리의 형식 `FSharp.Data.TypeProviders` 공급자의 매개 변수입니다. 이러한 공급자의 구현에서 이 정적 매개 변수는 형식을 공급자가 네트워크를 통해 데이터 원본에 액세스하는 대신 지정된 로컬 파일에서 스키마 정보를 사용하도록 지시합니다. 캐시된 스키마 정보를 사용하려면 정적 매개 `ForceUpdate` 변수도 `false`로 설정해야 합니다. 유사한 기술을 사용하여 온라인 및 오프라인 데이터 액세스를 활성화할 수 있습니다.
 
-### <a name="backing-assembly"></a>어셈블리 지원
+### <a name="backing-assembly"></a>백업 어셈블리
 
-`.dll` 또는 `.exe` 파일을 컴파일하는 경우 생성 된 형식에 대 한 지원 .dll 파일은 결과 어셈블리에 정적으로 링크 됩니다. 이 링크는 IL (중간 언어) 형식 정의와 지원 어셈블리에서 관리 되는 모든 리소스를 최종 어셈블리에 복사 하 여 만듭니다. Interactive를 사용 F# 하는 경우 지원 .dll 파일은 복사 되지 않고 대신 F# 대화형 프로세스로 직접 로드 됩니다.
+`.dll` 또는 `.exe` 파일을 컴파일할 때 생성된 형식에 대한 백업 .dll 파일이 결과 어셈블리에 정적으로 연결됩니다. 이 링크는 중간 언어(IL) 형식 정의 및 백업 어셈블리에서 최종 어셈블리로 관리되는 리소스를 복사하여 만들어집니다. F# 대화형을 사용하면 백업 .dll 파일이 복사되지 않고 대신 F# 대화형 프로세스에 직접 로드됩니다.
 
 ### <a name="exceptions-and-diagnostics-from-type-providers"></a>형식 공급자의 예외 및 진단
 
-제공 된 형식의 모든 멤버를 사용 하면 예외가 throw 될 수 있습니다. 모든 경우에서 형식 공급자가 예외를 throw 하는 경우 호스트 컴파일러는 오류를 특정 형식 공급자에 게 특성 합니다.
+제공된 형식의 모든 멤버를 모두 사용하여 예외가 발생할 수 있습니다. 모든 경우에 형식 공급자가 예외를 throw하는 경우 호스트 컴파일러는 오류를 특정 형식 공급자에 특성화합니다.
 
-- 형식 공급자 예외는 내부 컴파일러 오류가 발생 해서는 안 됩니다.
+- 형식 공급자 예외는 내부 컴파일러 오류를 발생해서는 안 됩니다.
 
 - 형식 공급자는 경고를 보고할 수 없습니다.
 
-- 형식 공급자가 F# 컴파일러, F# 개발 환경 또는 F# 대화형에서 호스트 되는 경우 해당 공급자의 모든 예외가 catch 됩니다. 메시지 속성은 항상 오류 텍스트 이며 스택 추적이 표시 되지 않습니다. 예외를 throw 하는 경우 다음 예제를 throw 할 수 있습니다. `System.NotSupportedException`, `System.IO.IOException`, `System.Exception`.
+- 형식 공급자가 F# 컴파일러, F# 개발 환경 또는 F# 대화형에서 호스팅되는 경우 해당 공급자의 모든 예외가 catch됩니다. Message 속성은 항상 오류 텍스트이며 스택 추적이 나타나지 않습니다. 예외를 throw하려는 경우 다음과 같은 예제를 throw할 `System.NotSupportedException`수 `System.IO.IOException` `System.Exception`있습니다.
 
-#### <a name="providing-generated-types"></a>생성 된 형식 제공
+#### <a name="providing-generated-types"></a>생성된 유형 제공
 
-지금까지이 문서에서는 지워진 형식을 제공 하는 방법에 대해 설명 했습니다. 에서 F# 형식 공급자 메커니즘을 사용 하 여 생성 된 형식을 제공할 수도 있습니다 .이 형식은 사용자의 프로그램에 실제 .net 형식 정의로 추가 됩니다. 형식 정의를 사용 하 여 생성 된 제공 형식을 참조 해야 합니다.
+지금까지 이 문서에서는 지워진 형식을 제공하는 방법을 설명했습니다. F#의 형식 공급자 메커니즘을 사용하여 생성된 형식을 제공할 수 있으며, 이 형식은 사용자의 프로그램에 실제 .NET 형식 정의로 추가됩니다. 형식 정의를 사용하여 생성된 제공된 형식을 참조해야 합니다.
 
 ```fsharp
 open Microsoft.FSharp.TypeProviders
@@ -1084,59 +1084,59 @@ open Microsoft.FSharp.TypeProviders
 type Service = ODataService<"http://services.odata.org/Northwind/Northwind.svc/">
 ```
 
-F# 3.0 릴리스에 포함 된 프로 비전 된 형식-0.2 도우미 코드는 생성 된 형식을 제공 하는 기능만 제한적으로 지원 됩니다. 다음 문은 생성 된 형식 정의에 대해 true 여야 합니다.
+F# 3.0 릴리스의 일부인 ProvidedType-0.2 도우미 코드는 생성된 형식을 제공하기 위한 제한된 지원만 있습니다. 생성된 형식 정의에 대해 다음 문은 true여야 합니다.
 
 - `isErased`은 `false`로 설정해야 합니다.
 
-- 생성 된 형식은 생성 된 코드 조각에 대 한 컨테이너를 나타내는 새로 생성 된 `ProvidedAssembly()`에 추가 되어야 합니다.
+- 생성된 코드 조각에 대한 컨테이너를 나타내는 새로 생성된 `ProvidedAssembly()`형식에 생성된 형식을 추가해야 합니다.
 
-- 공급자에는 디스크에 일치 하는 .dll 파일과 함께 실제 지원 .NET .dll 파일이 있는 어셈블리가 있어야 합니다.
+- 공급자는 디스크에 일치하는 .dll 파일이 있는 실제 백업 .NET .dll 파일이 있는 어셈블리가 있어야 합니다.
 
 ## <a name="rules-and-limitations"></a>규칙 및 제한 사항
 
-형식 공급자를 작성 하는 경우에는 다음 규칙 및 제한 사항을 염두에 두어야 합니다.
+형식 공급자를 작성할 때는 다음 규칙과 제한 사항에 유의하십시오.
 
-### <a name="provided-types-must-be-reachable"></a>제공 된 형식에 연결할 수 있어야 합니다.
+### <a name="provided-types-must-be-reachable"></a>제공된 유형에 연결할 수 있어야 합니다.
 
-제공 된 모든 형식은 중첩 되지 않은 형식에서 연결할 수 있어야 합니다. 중첩 되지 않은 형식은 `TypeProviderForNamespaces` 생성자에 대 한 호출 또는 `AddNamespace`에 대 한 호출에서 제공 됩니다. 예를 들어 공급자가 `StaticClass.P : T`형식을 제공 하는 경우 T가 중첩 되지 않은 형식 이거나 중첩 된 형식 인지 확인 해야 합니다.
+제공된 모든 형식은 중첩되지 않은 형식에서 연결할 수 있어야 합니다. 중첩되지 않은 형식은 `TypeProviderForNamespaces` 생성자 호출 또는 에 대한 `AddNamespace`호출에서 제공됩니다. 예를 들어 공급자가 형식을 `StaticClass.P : T`제공하는 경우 T가 중첩되지 않은 형식이거나 중첩된 형식인지 확인해야 합니다.
 
-예를 들어, 일부 공급자는 이러한 `T1, T2, T3, ...` 형식을 포함 하는 `DataTypes`와 같은 정적 클래스를 포함 합니다. 그렇지 않으면 어셈블리 A의 T 형식에 대 한 참조를 찾았지만 해당 어셈블리에서 형식을 찾을 수 없다는 오류가 표시 됩니다. 이 오류가 표시 되 면 공급자 형식에서 모든 하위 형식에 연결할 수 있는지 확인 합니다. 참고: 이러한 `T1, T2, T3...` 형식은 *즉석에서* 형식 이라고 합니다. 이러한 항목은 액세스 가능한 네임 스페이스 또는 부모 형식에 저장 해야 합니다.
+예를 들어 일부 공급자에는 이러한 `DataTypes` `T1, T2, T3, ...` 형식을 포함하는 정적 클래스가 있습니다. 그렇지 않으면 어셈블리 A의 T 형식에 대한 참조가 발견되었지만 해당 어셈블리에서 형식을 찾을 수 없다는 오류가 나타납니다. 이 오류가 나타나면 공급자 형식에서 모든 하위 유형에 도달할 수 있는지 확인합니다. 참고: `T1, T2, T3...` 이러한 형식을 *즉석* 에서 유형이라고 합니다. 액세스 가능한 네임스페이스 또는 상위 형식에 넣어야 합니다.
 
-### <a name="limitations-of-the-type-provider-mechanism"></a>유형 공급자 메커니즘의 제한 사항
+### <a name="limitations-of-the-type-provider-mechanism"></a>형식 공급자 메커니즘의 제한 사항
 
-의 F# 형식 공급자 메커니즘에는 다음과 같은 제한 사항이 있습니다.
+F#의 형식 공급자 메커니즘에는 다음과 같은 제한 사항이 있습니다.
 
-- 에서 F# 형식 공급자의 기본 인프라는 제공 된 제네릭 형식 또는 제공 된 제네릭 메서드를 지원 하지 않습니다.
+- F#의 형식 공급자에 대한 기본 인프라는 제공된 제네릭 형식 또는 제공된 제네릭 메서드를 지원하지 않습니다.
 
-- 메커니즘은 정적 매개 변수를 포함 하는 중첩 형식을 지원 하지 않습니다.
+- 메커니즘은 정적 매개 변수를 사용 하 고 중첩 된 형식을 지원 하지 않습니다.
 
 ## <a name="development-tips"></a>개발 팁
 
-개발 프로세스 중에 다음 팁을 유용 하 게 사용할 수 있습니다.
+개발 과정에서 다음과 같은 유용한 팁을 찾을 수 있습니다.
 
-### <a name="run-two-instances-of-visual-studio"></a>Visual Studio의 두 인스턴스를 실행 합니다.
+### <a name="run-two-instances-of-visual-studio"></a>비주얼 스튜디오의 두 인스턴스 실행
 
-테스트 IDE는 형식 공급자가 다시 작성 되지 않도록 방지 하는 .dll 파일에 대 한 잠금을 사용 하기 때문에 한 인스턴스에서 형식 공급자를 개발 하 고 다른 공급자에서 공급자를 테스트할 수 있습니다. 따라서 공급자가 첫 번째 인스턴스에서 빌드되는 동안 Visual Studio의 두 번째 인스턴스를 닫은 다음 공급자가 작성 된 후에 두 번째 인스턴스를 다시 열어야 합니다.
+테스트 IDE가 type 공급자를 다시 빌드하지 못하도록 하는 .dll 파일에 대한 잠금을 수행하므로 한 인스턴스에서 형식 공급자를 개발하고 다른 인스턴스에서 공급자를 테스트할 수 있습니다. 따라서 공급자가 첫 번째 인스턴스에 빌드되는 동안 Visual Studio의 두 번째 인스턴스를 닫은 다음 공급자가 빌드된 후 두 번째 인스턴스를 다시 열어야 합니다.
 
-### <a name="debug-type-providers-by-using-invocations-of-fscexe"></a>Fsc.exe 호출을 사용 하 여 형식 공급자를 디버그 합니다.
+### <a name="debug-type-providers-by-using-invocations-of-fscexe"></a>fsc.exe 호출을 사용하여 유형 공급자를 디버그
 
-다음 도구를 사용 하 여 형식 공급자를 호출할 수 있습니다.
+다음 도구를 사용하여 형식 공급자를 호출할 수 있습니다.
 
-- fsc.exe ( F# 명령줄 컴파일러)
+- fsc.exe(F# 명령줄 컴파일러)
 
-- fsi.exe ( F# 대화형 컴파일러)
+- fsi.exe (F# 인터랙티브 컴파일러)
 
-- devenv.exe (Visual Studio)
+- devenv.exe (비주얼 스튜디오)
 
-테스트 스크립트 파일 (예: .fsx)에서 fsc.exe를 사용 하면 형식 공급자를 가장 쉽게 디버그할 수 있습니다. 명령 프롬프트에서 디버거를 시작할 수 있습니다.
+테스트 스크립트 파일(예: script.fsx)에서 fsc.exe를 사용하여 형식 공급자를 가장 쉽게 디버깅할 수 있습니다. 명령 프롬프트에서 디버거를 시작할 수 있습니다.
 
 ```console
 devenv /debugexe fsc.exe script.fsx
 ```
 
-  인쇄 stdout 로깅을 사용할 수 있습니다.
+  인쇄-stdout 로깅을 사용할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [형식 공급자](index.md)
 - [형식 공급자 SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK)

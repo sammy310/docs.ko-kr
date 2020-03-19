@@ -6,11 +6,11 @@ dev_langs:
 - csharp
 - cpp
 ms.openlocfilehash: 7f8d1ad93633d6feef9c3c6f5d19aad52105968c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741523"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401168"
 ---
 # <a name="customizing-structure-marshaling"></a>구조체 마샬링 사용자 지정
 
@@ -20,17 +20,17 @@ ms.locfileid: "76741523"
 
 .NET에서는 메모리에 필드가 배치되는 방식을 사용자 지정할 수 있도록 <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> 특성과 <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType> 열거형을 제공합니다. 다음 지침은 일반적인 문제를 방지하는 데 도움이 됩니다.
 
-가능 하면 `LayoutKind.Sequential`를 사용 하는 것이 좋습니다 ✔️.
+✔️ 가능한 경우 항상 `LayoutKind.Sequential`을 사용하는 것이 좋습니다.
 
-네이티브 구조체에 공용 구조체와 같은 명시적 레이아웃이 있는 경우에만 마샬링에 `LayoutKind.Explicit`를 사용 ✔️ 합니다.
+✔️ 네이티브 구조체에 공용 구조체 등의 명시적인 레이아웃도 있는 경우에만 마샬링할 때 `LayoutKind.Explicit`를 사용합니다.
 
-❌ .NET Core 3.0 이전 런타임을 대상으로 해야 하는 경우 Windows가 아닌 플랫폼에서 구조체를 마샬링할 때 `LayoutKind.Explicit`를 사용 하지 않도록 합니다. 3\.0 이전의 .NET Core 런타임에서는 Intel 또는 AMD 64 비트 비 Windows 시스템의 네이티브 함수에 대 한 명시적 구조체 전달을 지원 하지 않습니다. 그러나 런타임은 모든 플랫폼에서 명시적 구조체를 참조로 전달하는 기능을 지원합니다.
+❌.NET `LayoutKind.Explicit` Core 3.0 이전에 런타임을 대상으로 해야 하는 경우 Windows가 아닌 플랫폼에서 구조를 마샬링할 때는 사용하지 마십시오. 3.0 이전의 .NET Core 런타임은 인텔 또는 AMD 64비트 비Windows 시스템의 기본 함수에 값으로 명시적 구조를 전달하는 것을 지원하지 않습니다. 그러나 런타임은 모든 플랫폼에서 명시적 구조체를 참조로 전달하는 기능을 지원합니다.
 
 ## <a name="customizing-boolean-field-marshaling"></a>부울 필드 마샬링 사용자 지정
 
 네이티브 코드에는 여러 부울 표현이 있습니다. Windows만 해도 부울 값을 나타내는 세 가지 방법이 있습니다. 런타임은 구조체의 네이티브 정의를 알 수 없으므로, 부울 값을 나타내는 최상의 방법은 부울 값을 마샬링하는 방식을 추측하는 것입니다. .NET 런타임에서 부울 필드를 마샬링하는 방식을 나타내는 방법을 제공합니다. 다음 예제에서는 .NET `bool`을 여러 네이티브 부울 형식으로 마샬링하는 방법을 보여 줍니다.
 
-다음 예제와 같이 부울 값은 기본적으로 네이티브 4바이트 Win32 [`BOOL`](/windows/desktop/winprog/windows-data-types#BOOL) 값으로 마샬링되도록 설정됩니다.
+Boolean 값은 다음 예제와 같이 기본값으로 [`BOOL`](/windows/desktop/winprog/windows-data-types#BOOL) 네이티브 4바이트 Win32 값으로 마샬링됩니다.
 
 ```csharp
 public struct WinBool
@@ -163,7 +163,7 @@ struct InPlaceArray
 
 .NET에서는 문자열 필드를 마샬링하기 위한 다양한 사용자 지정도 제공합니다.
 
-기본적으로 .NET은 문자열을 Null 종료 문자열에 대한 포인터로 마샬링합니다. 인코딩은 <xref:System.Runtime.InteropServices.StructLayoutAttribute.CharSet?displayProperty=nameWithType>의 <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> 필드 값에 따라 다릅니다. 특성을 지정하지 않으면 인코딩은 기본적으로 ANSI 인코딩으로 설정됩니다.
+기본적으로 .NET은 문자열을 Null 종료 문자열에 대한 포인터로 마샬링합니다. 인코딩은 <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType>의 <xref:System.Runtime.InteropServices.StructLayoutAttribute.CharSet?displayProperty=nameWithType> 필드 값에 따라 다릅니다. 특성을 지정하지 않으면 인코딩은 기본적으로 ANSI 인코딩으로 설정됩니다.
 
 ```csharp
 [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
@@ -195,7 +195,7 @@ struct DefaultString
 };
 ```
 
-다른 필드에 다른 인코딩을 사용해야 하거나 구조체 정의를 좀 더 명시적으로 설정하려는 경우 <xref:System.Runtime.InteropServices.UnmanagedType.LPStr?displayProperty=nameWithType> 특성에 <xref:System.Runtime.InteropServices.UnmanagedType.LPWStr?displayProperty=nameWithType> 또는 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 값을 사용할 수 있습니다.
+다른 필드에 다른 인코딩을 사용해야 하거나 구조체 정의를 좀 더 명시적으로 설정하려는 경우 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 특성에 <xref:System.Runtime.InteropServices.UnmanagedType.LPStr?displayProperty=nameWithType> 또는 <xref:System.Runtime.InteropServices.UnmanagedType.LPWStr?displayProperty=nameWithType> 값을 사용할 수 있습니다.
 
 ```csharp
 public struct AnsiString
@@ -227,7 +227,7 @@ struct UnicodeString
 };
 ```
 
-UTF-8 인코딩을 사용하여 문자열을 마샬링하려는 경우 <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType>의 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 값을 사용할 수 있습니다.
+UTF-8 인코딩을 사용하여 문자열을 마샬링하려는 경우 <xref:System.Runtime.InteropServices.MarshalAsAttribute>의 <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> 값을 사용할 수 있습니다.
 
 ```csharp
 public struct UTF8String
@@ -317,7 +317,7 @@ struct DefaultString
 
 ## <a name="customizing-decimal-field-marshaling"></a>10진 필드 마샬링 사용자 지정
 
-Windows에서 작업하는 경우 네이티브 [`CY` 또는 `CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy~r1) 구조체를 사용하는 일부 API를 발견할 수 있습니다. 기본적으로 .NET `decimal` 형식은 네이티브 [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) 구조체로 마샬링됩니다. 그러나 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 값과 함께 <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType>를 사용하여 `decimal` 값을 네이티브 `CY` 값으로 변환하도록 마샬러에 지정할 수 있습니다.
+Windows에서 작업하는 경우 네이티브 [ `CY` 또는 `CURRENCY` ](/windows/win32/api/wtypes/ns-wtypes-cy~r1) 구조를 사용하는 일부 API가 발생할 수 있습니다. 기본적으로 .NET `decimal` 형식은 기본 [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) 구조를 마샬링합니다. 그러나 <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> 값과 함께 <xref:System.Runtime.InteropServices.MarshalAsAttribute>를 사용하여 `decimal` 값을 네이티브 `CY` 값으로 변환하도록 마샬러에 지정할 수 있습니다.
 
 ```csharp
 public struct Currency
@@ -358,7 +358,7 @@ struct ObjectDefault
 };
 ```
 
-개체 필드를 `IDispatch*`로 마샬링하려는 경우 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 값과 함께 <xref:System.Runtime.InteropServices.UnmanagedType.IDispatch?displayProperty=nameWithType>를 추가합니다.
+개체 필드를 `IDispatch*`로 마샬링하려는 경우 <xref:System.Runtime.InteropServices.UnmanagedType.IDispatch?displayProperty=nameWithType> 값과 함께 <xref:System.Runtime.InteropServices.MarshalAsAttribute>를 추가합니다.
 
 ```csharp
 public struct ObjectDispatch
@@ -375,7 +375,7 @@ struct ObjectDispatch
 };
 ```
 
-`VARIANT`로 마샬링하려는 경우 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 값과 함께 <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType>를 추가합니다.
+`VARIANT`로 마샬링하려는 경우 <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> 값과 함께 <xref:System.Runtime.InteropServices.MarshalAsAttribute>를 추가합니다.
 
 ```csharp
 public struct ObjectVariant

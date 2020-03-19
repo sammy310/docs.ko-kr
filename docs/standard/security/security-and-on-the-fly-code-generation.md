@@ -1,5 +1,6 @@
 ---
 title: 보안 및 빠른 코드 생성
+description: 더 높은 신뢰에서 실행되는 신뢰가 낮은 코드를 대신하여 코드를 생성하는 것은 특히 호출인이 코드 생성에 영향을 미칠 수 있는 경우 보안 문제입니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - security [.NET Framework], on-the-fly code generation
 - secure coding, on-the-fly code generation
 ms.assetid: 6d221724-bb21-4d76-90c3-0ee2a2e69be2
-ms.openlocfilehash: 64ddcc6a379e5719eb734eede13e576a707696fe
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 34ebda27a81ca29ebb27a721b77b735a12be882e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705888"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186796"
 ---
 # <a name="security-and-on-the-fly-code-generation"></a>보안 및 빠른 코드 생성
 일부 라이브러리는 코드를 생성하고 실행하여 호출자에 대한 일부 작업을 수행하는 방식으로 작동합니다. 기본적인 문제는 낮은 신뢰 수준의 코드를 대신하여 코드를 생성하고 높은 신뢰 수준에서 실행하는 것입니다. 호출자가 코드 생성에 영향을 줄 수 있는 경우 문제가 더욱 악화되므로 안전하다고 생각하는 코드만 생성되도록 해야 합니다.  
@@ -24,6 +25,6 @@ ms.locfileid: "75705888"
   
  코드를 컴파일하는 경우 악성 프로그램이 코드를 수정할 수 있는 방법이 있는지 여부를 고려합니다. 컴파일러가 소스 코드를 읽기 전이나 코드가 .dll 파일을 로드하기 전에 악성 코드가 디스크의 소스 코드를 변경할 수 있는 짧은 기간이 있나요? 있다면 파일 시스템에서 액세스 제어 목록을 적절하게 사용하여 이러한 파일을 포함하는 디렉터리를 보호해야 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [보안 코딩 지침](../../../docs/standard/security/secure-coding-guidelines.md)

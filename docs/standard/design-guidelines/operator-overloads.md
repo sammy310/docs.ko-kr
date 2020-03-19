@@ -9,42 +9,42 @@ helpviewer_keywords:
 - overloaded operators
 ms.assetid: 37585bf2-4c27-4dee-849a-af70e3338cc1
 ms.openlocfilehash: 0999e94c8d77396b237522e89c51206ce1226718
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743693"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401222"
 ---
 # <a name="operator-overloads"></a>연산자 오버로드
-연산자 오버 로드를 사용 하면 프레임 워크 형식이 기본 제공 언어 기본 형식인 것 처럼 표시 됩니다.
+연산자 오버로드를 사용하면 프레임워크 형식이 기본 제공 언어 기본 요소인 것처럼 표시될 수 있습니다.
 
- 일부 경우에는 허용 되 고 유용 하지만 연산자 오버 로드는 신중 하 게 사용 해야 합니다. 프레임 워크 디자이너에서 간단한 메서드로 사용 해야 하는 작업에 대해 연산자를 사용 하기 시작 하는 경우와 같이 연산자 오버 로드가 악용 되는 경우가 많습니다. 다음 지침은 연산자 오버 로드를 사용 하는 시기 및 방법을 결정 하는 데 도움이 됩니다.
+ 경우에 따라 허용되고 유용하지만 작업자 오버로드를 신중하게 사용해야 합니다. 프레임워크 디자이너가 간단한 메서드여야 하는 작업에 연산자를 사용하기 시작한 경우와 같이 연산자 오버로드가 악용되는 경우가 많습니다. 다음 지침은 연산자 오버로드를 사용할 시기와 방법을 결정하는 데 도움이 됩니다.
 
- 기본 (기본 제공) 형식 처럼 사용 해야 하는 형식을 제외 하 고 연산자 오버 로드를 정의 하지 ❌.
+ ❌기본(기본 제공) 형식처럼 느껴야 하는 형식을 제외하고 연산자 오버로드를 정의하지 마십시오.
 
- 기본 형식 처럼 느낌을 주는 형식으로 연산자 오버 로드를 정의 하는 것이 좋습니다 ✔️.
+ ✔️ 기본 형식처럼 느껴야 하는 형식에서 연산자 오버로드를 정의하는 것을 고려합니다.
 
- 예를 들어 <xref:System.String?displayProperty=nameWithType>에는 `operator==` 및 `operator!=` 정의 되어 있습니다.
+ 예를 <xref:System.String?displayProperty=nameWithType> 들어, `operator==` `operator!=` 있고 정의한다.
 
- 숫자 (예: <xref:System.Decimal?displayProperty=nameWithType>)를 나타내는 구조체에서 연산자 오버 로드를 정의 ✔️ 합니다.
+ do ✔️ 숫자를 나타내는 구조체에서 연산자 오버로드를 정의합니다(예: <xref:System.Decimal?displayProperty=nameWithType>).
 
- 연산자 오버 로드를 정의할 때 ❌ 귀여운 않습니다.
+ ❌연산자 오버로드를 정의할 때 귀여워하지 마십시오.
 
- 연산자 오버 로드는 작업의 결과를 즉시 알 수 있는 경우에 유용 합니다. 예를 들어 다른 `DateTime`에서 한 <xref:System.DateTime>를 빼서 <xref:System.TimeSpan>를 가져올 수 있다는 것이 좋습니다. 그러나 논리 union 연산자를 사용 하 여 두 데이터베이스 쿼리를 통합 하거나 시프트 연산자를 사용 하 여 스트림에 쓰려면 적절 하지 않습니다.
+ 연산자 오버로드는 작업 결과가 무엇인지 즉시 알 수 있는 경우에 유용합니다. 예를 들어, 다른 <xref:System.DateTime> `DateTime` 에서 하나를 빼고 <xref:System.TimeSpan>를 얻을 수 있는 것이 합리적입니다. 그러나 논리 공용 구조자 연산자 두 개의 데이터베이스 쿼리를 통합하거나 shift 연산자에서 스트림에 쓰는 것은 적절하지 않습니다.
 
- 피연산자 중 하나 이상이 오버 로드를 정의 하는 형식인 경우를 제외 하 고 연산자 오버 로드를 제공 하지 ❌.
+ ❌미연산자 중 하나 이상이 오버로드를 정의하는 형식이 아니면 작업자 오버로드를 제공하지 마십시오.
 
- ✔️는 대칭 방식으로 연산자를 오버 로드 합니다.
+ ✔️ 대칭 방식으로 연산자 과부하를 수행합니다.
 
- 예를 들어 `operator==`오버 로드 하는 경우 `operator!=`도 오버 로드 해야 합니다. 마찬가지로 `operator<`오버 로드 하는 경우 `operator>`도 오버 로드 해야 합니다.
+ 예를 들어 , 에 `operator==`과부하가 가하면 `operator!=`을 오버로드해야 합니다. 마찬가지로 에 과부하가 `operator<`두는 경우 `operator>`및 이에 대해서도 오버로드해야 합니다.
 
- 오버 로드 된 각 연산자에 해당 하는 이름을 가진 메서드를 제공 하는 것이 좋습니다 ✔️.
+ ✔️ 각 오버로드 연산자에 해당하는 친숙한 이름을 제공하는 방법을 고려하십시오.
 
- 많은 언어에서 연산자 오버 로드를 지원 하지 않습니다. 따라서 연산자를 오버 로드 하는 형식에는 동등한 기능을 제공 하는 적절 한 도메인별 이름을 가진 보조 메서드가 포함 되는 것이 좋습니다.
+ 대부분의 언어는 연산자 오버로드를 지원하지 않습니다. 따라서 오버로드 연산자가 포함된 형식에는 동등한 기능을 제공하는 적절한 도메인 별 이름이 있는 보조 메서드가 포함되는 것이 좋습니다.
 
- 다음 표에는 연산자 목록과 해당 하는 친숙 한 메서드 이름이 나와 있습니다.
+ 다음 표에는 연산자 목록과 해당 친숙한 메서드 이름이 포함되어 있습니다.
 
-|C#연산자 기호|메타 데이터 이름|친숙한 이름|
+|C# 연산자 기호|메타데이터 이름|친숙한 이름|
 |-------------------------|-------------------|-------------------|
 |`N/A`|`op_Implicit`|`To<TypeName>/From<TypeName>`|
 |`N/A`|`op_Explicit`|`To<TypeName>/From<TypeName>`|
@@ -85,29 +85,29 @@ ms.locfileid: "76743693"
 |`+ (unary)`|`op_UnaryPlus`|`Plus`|
 |`~`|`op_OnesComplement`|`OnesComplement`|
 
-### <a name="overloading-operator-"></a>오버 로드 연산자 = =
- `operator ==` 오버 로드는 매우 복잡 합니다. 연산자의 의미 체계는 <xref:System.Object.Equals%2A?displayProperty=nameWithType>같은 다른 여러 멤버와 호환 되어야 합니다.
+### <a name="overloading-operator-"></a>과부하 연산자 ==
+ 오버로드는 `operator ==` 매우 복잡합니다. 연산자의 의미체계는 와 같은 <xref:System.Object.Equals%2A?displayProperty=nameWithType>여러 다른 멤버와 호환되어야 합니다.
 
 ### <a name="conversion-operators"></a>변환 연산자
- 변환 연산자는 한 형식에서 다른 형식으로의 변환을 허용 하는 단항 연산자입니다. 연산자는 피연산자 또는 반환 형식에서 정적 멤버로 정의 되어야 합니다. 변환 연산자에는 암시적 및 명시적 이라는 두 가지 유형이 있습니다.
+ 변환 연산자는 한 형식에서 다른 유형으로 변환할 수 있는 비형식 연산자입니다. 연산자는 진연또는 반환 형식의 정적 멤버로 정의되어야 합니다. 변환 연산자는 암시적 연산자와 명시적 연산자의 두 가지 유형이 있습니다.
 
- 이러한 변환이 최종 사용자에 게 명확 하 게 예상 되지 않을 경우 변환 연산자를 제공 하지 ❌ 합니다.
+ ❌최종 사용자가 이러한 변환을 명확하게 예상하지 못하는 경우 변환 연산자에게 제공하지 마십시오.
 
- ❌는 형식의 도메인 외부에서 변환 연산자를 정의 하지 않습니다.
+ ❌형식의 도메인 외부의 변환 연산자는 정의하지 마십시오.
 
- 예를 들어 <xref:System.Int32>, <xref:System.Double>및 <xref:System.Decimal>는 모두 숫자 형식이 며 <xref:System.DateTime>는 그렇지 않습니다. 따라서 `Double(long)` `DateTime`으로 변환 하는 변환 연산자는 없어야 합니다. 이 경우 생성자는 기본 설정입니다.
+ 예를 들어 <xref:System.Int32> <xref:System.Double>, <xref:System.Decimal> 은 및 모든 숫자 <xref:System.DateTime> 형식이지만 그렇지 않습니다. 따라서 a를 `Double(long)` `DateTime`로 변환하는 변환 연산자가 없어야 합니다. 이러한 경우 생성자가 선호됩니다.
 
- 변환이 잠재적으로 손실 될 수 있는 경우 암시적 변환 연산자를 제공 하지 ❌ 합니다.
+ ❌변환이 손실될 수 있는 경우 암시적 변환 연산자는 제공하지 마십시오.
 
- 예를 들어 `Double`의 범위가 `Int32`보다 넓기 때문에 `Double`에서 `Int32`로의 암시적 변환이 되어서는 안 됩니다. 변환이 잠재적으로 손실 될 수 있는 경우에도 명시적 변환 연산자를 제공할 수 있습니다.
+ 예를 `Double` 들어 `Int32` `Double` `Int32`보다 넓은 범위를 가지므로 에서 암시적 변환이 없어야 합니다. 변환이 손실될 수 있는 경우에도 명시적 변환 연산자가 제공될 수 있습니다.
 
- ❌ 암시적 캐스팅에서 예외를 throw 하지 않습니다.
+ ❌암시적 캐스트에서 예외를 throw하지 마십시오.
 
- 최종 사용자는 변환이 발생 하는 것을 인식 하지 못할 수 있으므로 최종 사용자가 원인을 이해 하는 것은 매우 어렵습니다.
+ 최종 사용자가 전환이 일어나고 있다는 것을 인식하지 못할 수 있으므로 어떤 일이 일어나고 있는지 이해하기가 매우 어렵습니다.
 
- 캐스트 연산자를 호출 하 여 손실 변환이 발생 하 고 연산자의 계약이 손실 변환을 허용 하지 않는 경우에는 <xref:System.InvalidCastException?displayProperty=nameWithType> throw ✔️.
+ ✔️ <xref:System.InvalidCastException?displayProperty=nameWithType> throw하면 캐스트 연산자에 대한 호출로 인해 손실 변환이 발생하며 운영자의 계약은 손실 변환을 허용하지 않습니다.
 
- *2005, 2009 Microsoft Corporation © 부분입니다. All rights reserved.*
+ *2005년, 2009년 마이크로소프트© 판권.*
 
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 
