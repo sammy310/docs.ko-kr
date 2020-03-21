@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - routing [WCF], message filters
 ms.assetid: cb33ba49-8b1f-4099-8acb-240404a46d9a
-ms.openlocfilehash: b8de58b6935ee59fc8c787dfcf7445afcd0774b9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a953dea9224d75907c593d87f06a0b0888f0af2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912695"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184669"
 ---
 # <a name="message-filters"></a>메시지 필터
 라우팅 서비스는 내용 기반 라우팅을 구현하기 위해 주소, 엔드포인트 이름 또는 특정 XPath 문과 같은 메시지의 특정 섹션을 검사하는 <xref:System.ServiceModel.Dispatcher.MessageFilter> 구현을 사용합니다. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]에 제공되는 메시지 필터 중 요구 사항을 충족하는 필터가 없는 경우 기본 <xref:System.ServiceModel.Dispatcher.MessageFilter> 클래스의 새 구현을 만드는 방법으로 사용자 지정 필터를 만들 수 있습니다.  
   
- 라우팅 서비스를 구성할 때 메시지 내에서 검색할 특정 문자열 값<xref:System.ServiceModel.Routing.Configuration.FilterElement> 과 같이 필터를 만드는 데 필요한 지원 데이터 및 **messagefilter** 의 형식을 설명 하는 필터 요소 (개체)를 정의 해야 합니다. . 필터 요소를 만들 경우 개별 메시지 필터만 정의됩니다. 필터를 사용하여 메시지를 평가 및 라우트하려면 필터 테이블(<xref:System.ServiceModel.Routing.Configuration.FilterTableEntryCollection>)도 만들어야 합니다.  
+ 라우팅 서비스를 구성할 때 메시지<xref:System.ServiceModel.Routing.Configuration.FilterElement> **필터의** 유형과 메시지 내에서 검색할 특정 문자열 값과 같이 필터를 만드는 데 필요한 지원 데이터를 설명하는 필터 요소(개체)를 정의해야 합니다. 필터 요소를 만들 경우 개별 메시지 필터만 정의됩니다. 필터를 사용하여 메시지를 평가 및 라우트하려면 필터 테이블(<xref:System.ServiceModel.Routing.Configuration.FilterTableEntryCollection>)도 만들어야 합니다.  
   
  필터 테이블의 각 항목은 필터 요소를 참조하며 메시지가 필터와 일치할 경우 메시지가 라우트될 클라이언트 엔드포인트를 지정합니다. 또한 필터 테이블 항목을 통해 백업 엔드포인트 컬렉션(<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>)을 지정할 수 있습니다. 여기에는 기본 엔드포인트로 보내는 중 전송 오류가 발생할 경우 메시지를 전송할 엔드포인트 목록이 정의됩니다. 전송이 성공하는 엔드포인트가 나올 때까지 여기에 지정된 엔드포인트에 대해 순서대로 전송이 시도됩니다.  
   
@@ -23,14 +23,14 @@ ms.locfileid: "69912695"
   
  다음 표에서는 라우팅 서비스에 사용되는 <xref:System.ServiceModel.Routing.Configuration.FilterType>, 특정 메시지 필터를 구현하는 클래스 및 필수 <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A> 매개 변수를 보여 줍니다.  
   
-|필터 형식|설명|필터 데이터 의미|예제 필터|  
+|필터 형식|Description|필터 데이터 의미|예제 필터|  
 |------------------|-----------------|-------------------------|--------------------|  
-|동작|<xref:System.ServiceModel.Dispatcher.ActionMessageFilter> 클래스를 사용하여 특정 작업이 포함된 메시지를 일치시킵니다.|필터링할 작업입니다.|\<filter name="action1" filterType="Action" filterData="http://namespace/contract/operation" />|  
-|EndpointAddress|<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> 는 클래스 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A> 를사용하여특정주소를포함하는메시지를일치시킵니다. ==  `true`|To 헤더의 필터링할 주소입니다.|\<filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b"  />|  
-|EndpointAddressPrefix|<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> 는 클래스 <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A> 를사용하여특정주소접두사를포함하는메시지를일치시킵니다. ==  `true`|가장 긴 접두사 일치를 사용하여 필터링을 적용할 주소입니다.|\<filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/" />|  
-|And|반환 전에 항상 두 조건을 모두 평가하는 <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> 클래스를 사용합니다.|filterData는 사용 되지 않습니다. 대신 filter1 및 filter2에는 해당 메시지 필터의 이름 (테이블에도 포함)이 포함 되어 **있고**함께 사용할 수 있습니다.|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
+|작업|<xref:System.ServiceModel.Dispatcher.ActionMessageFilter> 클래스를 사용하여 특정 작업이 포함된 메시지를 일치시킵니다.|필터링할 작업입니다.|\<filter name="action1" filterType="Action" filterData="http://namespace/contract/operation" />|  
+|EndpointAddress|클래스를 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> 사용하여 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` 특정 주소를 포함하는 메시지를 일치시킵니다.|To 헤더의 필터링할 주소입니다.|\<필터 이름="address1" 필터Type="끝점 주소"http://host/vdir/s.svc/b필터Data=" "/>|  
+|EndpointAddressPrefix|`true` 클래스를 <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  사용하여 특정 주소 접두사를 포함하는 메시지를 일치시킵니다.|가장 긴 접두사 일치를 사용하여 필터링을 적용할 주소입니다.|\<필터 이름="접두사1" 필터유형="엔드포인트주소사전" 필터데이터="http://host/"/>|  
+|and|반환 전에 항상 두 조건을 모두 평가하는 <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> 클래스를 사용합니다.|필터데이터가 사용되지 않습니다. 대신 filter1 및 filter2에는 해당 메시지 필터(테이블에서도 해당 메시지 **AND**필터)의 이름이 있습니다.|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
 |사용자 지정|<xref:System.ServiceModel.Dispatcher.MessageFilter> 클래스를 확장하고 문자열을 사용하는 생성자를 포함하는 사용자 정의 형식입니다.|customType 특성은 만들 클래스의 정규화된 형식 이름입니다. filterData는 필터를 만들 때 생성자에 전달할 문자열입니다.|\<filter name="custom1" filterType="Custom" customType="CustomAssembly.CustomMsgFilter, CustomAssembly" filterData="Custom Data" />|  
-|EndpointName|<xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> 클래스를 사용하여 메시지가 도착하는 서비스 엔드포인트의 이름을 기반으로 메시지를 일치시킵니다.|서비스 끝점의 이름 예: "serviceEndpoint1"입니다.  이는 라우팅 서비스에서 노출되는 엔드포인트 중 하나여야 합니다.|\<filter name="stock1" filterType="Endpoint" filterData="SvcEndpoint" />|  
+|EndpointName|ph x="1" /&gt; 클래스를 사용하여 메시지가 도착하는 서비스 엔드포인트의 이름을 기반으로 메시지를 일치시킵니다.|서비스 끝점의 이름 예: "serviceEndpoint1"입니다.  이는 라우팅 서비스에서 노출되는 엔드포인트 중 하나여야 합니다.|\<filter name="stock1" filterType="Endpoint" filterData="SvcEndpoint" />|  
 |MatchAll|<xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> 클래스를 사용합니다. 이 필터는 도착하는 메시지를 모두 일치시킵니다.|filterData는 사용되지 않습니다. 이 필터는 항상 모든 메시지를 일치시킵니다.|\<filter name="matchAll1" filterType="MatchAll" />|  
 |XPath|<xref:System.ServiceModel.Dispatcher.XPathMessageFilter> 클래스를 사용하여 메시지 내의 특정 XPath 쿼리를 일치시킵니다.|메시지를 대조할 때 사용하는 XPath 쿼리입니다.|\<필터 이름 = "XPath1" filterType "XPath" filterData = = "//ns:element" / >|  
   
@@ -38,17 +38,17 @@ ms.locfileid: "69912695"
   
 ```xml  
 <filters>  
-     <filter name="XPathFilter" filterType="XPath"   
+     <filter name="XPathFilter" filterType="XPath"
              filterData="/s12:Envelope/s12:Header/custom:RoundingCalculator = 1"/>  
-     <filter name="EndpointNameFilter" filterType="EndpointName"   
+     <filter name="EndpointNameFilter" filterType="EndpointName"
              filterData="calculatorEndpoint"/>  
-     <filter name="PrefixAddressFilter" filterType="PrefixEndpointAddress"   
+     <filter name="PrefixAddressFilter" filterType="PrefixEndpointAddress"
              filterData="http://localhost/routingservice/router/rounding/"/>  
-     <filter name="RoundRobinFilter1" filterType="Custom"   
-             customType="RoutingServiceFilters.RoundRobinMessageFilter,   
+     <filter name="RoundRobinFilter1" filterType="Custom"
+             customType="RoutingServiceFilters.RoundRobinMessageFilter,
              RoutingService" filterData="group1"/>  
-     <filter name="RoundRobinFilter2" filterType="Custom"   
-             customType="RoutingServiceFilters.RoundRobinMessageFilter,   
+     <filter name="RoundRobinFilter2" filterType="Custom"
+             customType="RoutingServiceFilters.RoundRobinMessageFilter,
              RoutingService" filterData="group1"/>  
 </filters>  
 ```  
@@ -71,7 +71,7 @@ ms.locfileid: "69912695"
 |tempuri|`http://tempuri.org`|  
 |ser|`http://schemas.microsoft.com/2003/10/Serialization`|  
   
- XPath 쿼리에서 특정 네임스페이스를 사용할 예정인 경우 이를 고유한 네임스페이스 접두사와 함께 네임스페이스 테이블에 추가하면 모든 XPath 쿼리에서 전체 네임스페이스 대신 이 접두사를 사용할 수 있습니다. 다음 예에서는 네임 스페이스 `"http://my.custom.namespace"`에 대 한 "custom" 접두사를 정의 합니다 .이 접두사는 filterdata에 포함 된 XPath 쿼리에서 사용 됩니다.  
+ XPath 쿼리에서 특정 네임스페이스를 사용할 예정인 경우 이를 고유한 네임스페이스 접두사와 함께 네임스페이스 테이블에 추가하면 모든 XPath 쿼리에서 전체 네임스페이스 대신 이 접두사를 사용할 수 있습니다. 다음 예제에서는 네임스페이스에 `"http://my.custom.namespace"`대한 "사용자 지정" 접두사를 정의한 다음 filterData에 포함된 XPath 쿼리에 사용됩니다.  
   
 ```xml  
 <namespaceTable>  
@@ -98,7 +98,7 @@ ms.locfileid: "69912695"
            <add filterName="SubtractAction" endpointName="Subtraction" />  
          </filters>  
        </table>  
-     </filterTables>      
+     </filterTables>
 </routing>  
 ```  
   
@@ -115,13 +115,13 @@ ms.locfileid: "69912695"
 ```xml  
 <filterTables>  
      <filterTable name="filterTable1">  
-          <add filterName="XPathFilter" endpointName="roundingCalcEndpoint"   
+          <add filterName="XPathFilter" endpointName="roundingCalcEndpoint"
                priority="2"/>  
-          <add filterName="EndpointNameFilter" endpointName="regularCalcEndpoint"   
+          <add filterName="EndpointNameFilter" endpointName="regularCalcEndpoint"
                priority="1"/>  
-          <add filterName="PrefixAddressFilter" endpointName="roundingCalcEndpoint"   
+          <add filterName="PrefixAddressFilter" endpointName="roundingCalcEndpoint"
                priority="1"/>  
-          <add filterName="MatchAllMessageFilter" endpointName="defaultCalcEndpoint"   
+          <add filterName="MatchAllMessageFilter" endpointName="defaultCalcEndpoint"
                priority="0"/>  
      </filterTable>  
 </filterTables>  
@@ -133,7 +133,7 @@ ms.locfileid: "69912695"
 > 우선 순위 평가로 인해 성능이 저하될 수 있으므로 가능한 경우 우선 순위를 지정하는 대신 단독 필터를 사용하세요.  
   
 ### <a name="backup-lists"></a>백업 목록  
- 필터 테이블의 각 필터는 선택적으로 백업 목록을 지정할 수 있습니다. 백업 목록은 명명된 엔드포인트 컬렉션입니다(<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>). 이 컬렉션에는 <xref:System.ServiceModel.CommunicationException>에 지정된 기본 엔드포인트로 보낼 때 <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.EndpointName%2A>이 발생하는 경우 메시지를 전송할 엔드포인트가 순서대로 나열된 목록이 포함됩니다. 다음 예에서는 두 개의 끝점이 포함 된 "backupServiceEndpoints" 라는 백업 목록을 정의 합니다.  
+ 필터 테이블의 각 필터는 선택적으로 백업 목록을 지정할 수 있습니다. 백업 목록은 명명된 엔드포인트 컬렉션입니다(<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>). 이 컬렉션에는 <xref:System.ServiceModel.CommunicationException>에 지정된 기본 엔드포인트로 보낼 때 <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.EndpointName%2A>이 발생하는 경우 메시지를 전송할 엔드포인트가 순서대로 나열된 목록이 포함됩니다. 다음 예제는 두 개의 끝점을 포함하는 "backupServiceEndpoints"라는 백업 목록을 정의합니다.  
   
 ```xml  
 <filterTables>  
@@ -149,4 +149,4 @@ ms.locfileid: "69912695"
 </backupLists>  
 ```  
   
- 앞의 예제에서 기본 끝점 "대상"에 대 한 송신이 실패 하면 라우팅 서비스는 나열 된 시퀀스에서 각 끝점에 대 한 전송을 시도 하 고, 먼저 backupServiceQueue로 보낸 다음, alternateServiceQueue에 게 보냅니다. backupServiceQueue에 보내기가 실패 합니다. 모든 백업 엔드포인트가 실패할 경우 오류가 반환됩니다.
+ 앞의 예에서 기본 끝점 "대상"으로의 전송이 실패하면 라우팅 서비스는 나열된 순서의 각 끝점으로 보내고, 먼저 backupServiceQueue로 보내고, 이후에 alternateServiceQueue로 전송합니다. 백업서비스큐로 전송이 실패합니다. 모든 백업 엔드포인트가 실패할 경우 오류가 반환됩니다.

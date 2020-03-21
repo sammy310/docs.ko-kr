@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: 6392ea0f17596406a8671a039bd78777d9e11e42
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: d335cd47de68dccdbb6af7f402d1182fcd811a7d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742653"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184311"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Windows 인증을 사용하는 전송 보안
-다음 시나리오에서는 Windows 보안에 의해 보호 되는 WCF (Windows Communication Foundation) 클라이언트 및 서비스를 보여 줍니다. 프로그래밍에 대 한 자세한 내용은 [방법: Windows 자격 증명을 사용 하 여 서비스 보호](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)를 참조 하세요.  
+다음 시나리오에서는 Windows 보안에 의해 보호되는 WCF(Windows 통신 재단) 클라이언트 및 서비스를 보여 주며, 프로그래밍에 대한 자세한 내용은 Windows 자격 증명을 사용하여 서비스 보안 방법을 [참조하세요.](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)  
   
  인트라넷 웹 서비스는 인사 정보를 표시합니다. 클라이언트는 Windows Form 애플리케이션입니다. 애플리케이션은 도메인을 보호하는 Kerberos 컨트롤러와 함께 도메인에 배포됩니다.  
   
@@ -22,10 +22,10 @@ ms.locfileid: "76742653"
 |특성|Description|  
 |--------------------|-----------------|  
 |보안 모드|전송|  
-|상호 운용성|WCF만|  
+|상호 운용성|WCF 전용|  
 |인증(서버)<br /><br /> 인증(클라이언트)|예, Windows 통합 인증을 사용합니다.<br /><br /> 예, Windows 통합 인증을 사용합니다.|  
-|무결성|예|  
-|기밀성|예|  
+|무결성|yes|  
+|기밀성|yes|  
 |전송|NET.TCP|  
 |바인딩|<xref:System.ServiceModel.NetTcpBinding>|  
   
@@ -52,9 +52,9 @@ ms.locfileid: "76742653"
     <behaviors />  
     <services>  
       <service behaviorConfiguration="" name="ServiceModel.Calculator">  
-        <endpoint address="net.tcp://localhost:8008/Calculator"   
+        <endpoint address="net.tcp://localhost:8008/Calculator"
                   binding="netTcpBinding"  
-          bindingConfiguration="WindowsClientOverTcp"   
+          bindingConfiguration="WindowsClientOverTcp"
                   name="WindowsClientOverTcp"  
                   contract="ServiceModel.ICalculator" />  
       </service>  
@@ -78,7 +78,7 @@ ms.locfileid: "76742653"
   
 - 이 코드와 클라이언트 코드를 사용하여 독립 실행형 클라이언트를 만듭니다.  
   
-- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예들 들어 다음과 같습니다.  
+- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 다음은 그 예입니다.  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -106,9 +106,9 @@ ms.locfileid: "76742653"
       </netTcpBinding>  
     </bindings>  
     <client>  
-      <endpoint address="net.tcp://localhost:8008/Calculator"   
-                binding="netTcpBinding"            
-                bindingConfiguration="NetTcpBinding_ICalculator"   
+      <endpoint address="net.tcp://localhost:8008/Calculator"
+                binding="netTcpBinding"
+                bindingConfiguration="NetTcpBinding_ICalculator"
                 contract="ICalculator"  
                 name="NetTcpBinding_ICalculator">  
       </endpoint>  
@@ -121,4 +121,4 @@ ms.locfileid: "76742653"
 
 - [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [방법: Windows 자격 증명을 사용하여 서비스에 보안 설정](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
-- [Windows Server Fabric 용 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

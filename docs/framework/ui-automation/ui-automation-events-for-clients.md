@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: 497c05740fd9e1c05d877cfdb72881168fff6e2e
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d7105e9211c35e7d6125c3017e8b4b829a25b128
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76778759"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179912"
 ---
 # <a name="ui-automation-events-for-clients"></a>클라이언트에 대한 UI 자동화 이벤트
 > [!NOTE]
@@ -23,15 +23,15 @@ ms.locfileid: "76778759"
  정의된 기능 내에서만 이벤트를 수신 대기하는 기능을 통해 효율성도 향상되었습니다. 예를 들어, 클라이언트는 트리의 모든 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요소에서 포커스 변경 이벤트를 수신 대기하거나, 하나의 요소와 해당 하위 항목만 수신 대기할 수 있습니다.  
   
 > [!NOTE]
-> 가능한 모든 이벤트가 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 공급자에서 발생되지는 않습니다. 예를 들어 일부 속성 변경으로 인해 Windows Forms 및 Win32 컨트롤에 대 한 표준 프록시 공급자가 이벤트를 발생 시 키 지 않습니다.  
+> 가능한 모든 이벤트가 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 공급자에서 발생되지는 않습니다. 예를 들어 모든 속성 변경으로 인해 Windows Forms 및 Win32 컨트롤에 대 한 표준 프록시 공급자에 의해 이벤트가 발생 합니다.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트에 대 한 광범위 한 보기는 [UI 자동화 이벤트 개요](ui-automation-events-overview.md)를 참조 하세요.  
+ 이벤트에 대한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 자세한 내용은 [UI 자동화 이벤트 개요를](ui-automation-events-overview.md)참조하십시오.  
   
-<a name="Subscribing_to_Events"></a>   
+<a name="Subscribing_to_Events"></a>
 ## <a name="subscribing-to-events"></a>이벤트 구독  
  클라이언트 애플리케이션은 다음 방법 중 하나로 이벤트 처리기를 등록하여 특정 종류의 이벤트를 구독합니다.  
   
-|메서드|이벤트 형식|이벤트 인수 형식|대리자 형식|  
+|방법|이벤트 유형|이벤트 인수 형식|대리자 형식|  
 |------------|----------------|--------------------------|-------------------|  
 |<xref:System.Windows.Automation.Automation.AddAutomationFocusChangedEventHandler%2A>|포커스 변경|<xref:System.Windows.Automation.AutomationFocusChangedEventArgs>|<xref:System.Windows.Automation.AutomationFocusChangedEventHandler>|  
 |<xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>|속성 변경|<xref:System.Windows.Automation.AutomationPropertyChangedEventArgs>|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|  
@@ -48,18 +48,18 @@ ms.locfileid: "76778759"
   
  종료되거나 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트가 더 이상 애플리케이션에 필요하지 않는 경우에는 UI 자동화 클라이언트가 다음 메서드 중 하나를 호출해야 합니다.  
   
-|메서드|설명|  
+|방법|Description|  
 |------------|-----------------|  
 |<xref:System.Windows.Automation.Automation.RemoveAutomationEventHandler%2A>|<xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>를 사용하여 등록된 이벤트 처리기의 등록을 취소합니다.|  
 |<xref:System.Windows.Automation.Automation.RemoveAutomationFocusChangedEventHandler%2A>|<xref:System.Windows.Automation.Automation.AddAutomationFocusChangedEventHandler%2A>를 사용하여 등록된 이벤트 처리기의 등록을 취소합니다.|  
 |<xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>|<xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>를 사용하여 등록된 이벤트 처리기의 등록을 취소합니다.|  
 |<xref:System.Windows.Automation.Automation.RemoveAllEventHandlers%2A>|등록된 모든 이벤트 처리기를 등록 취소합니다.|  
   
- 예제 코드는 [UI 자동화 이벤트 구독](subscribe-to-ui-automation-events.md)을 참조 하세요.  
+ 예를 들어 코드는 [UI 자동화 이벤트 구독을](subscribe-to-ui-automation-events.md)참조하십시오.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [UI 자동화 이벤트 구독](subscribe-to-ui-automation-events.md)
 - [UI 자동화 이벤트 개요](ui-automation-events-overview.md)
 - [UI 자동화 속성 개요](ui-automation-properties-overview.md)
-- [가는 주요 샘플 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FocusTracker)
+- [TrackFocus 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FocusTracker)

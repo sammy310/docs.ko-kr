@@ -2,12 +2,12 @@
 title: ICorDebugDataTarget2::EnumerateThreadIDs 메서드
 ms.date: 03/30/2017
 ms.assetid: af02460f-2a45-496e-bc4e-a1ac4f80fe11
-ms.openlocfilehash: 74d4905f2b386f8e0345e4300dd2c8c6d0c882ea
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 120a970aac33b1ab06ae47335a959d2791f893ed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76783646"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178987"
 ---
 # <a name="icordebugdatatarget2enumeratethreadids-method"></a>ICorDebugDataTarget2::EnumerateThreadIDs 메서드
 활성 스레드 ID의 목록을 반환합니다.  
@@ -16,8 +16,8 @@ ms.locfileid: "76783646"
   
 ```cpp  
 HRESULT EnumerateThreadIDs(  
-    [in] ULONG32 cThreadIds,   
-    [out] ULONG32 *pcThreadIds,   
+    [in] ULONG32 cThreadIds,
+    [out] ULONG32 *pcThreadIds,
     [out, size_is(cThreadIds), length_is(*pcThreadIds)] ULONG32 pThreadIds[]  
 );  
 ```  
@@ -32,19 +32,19 @@ HRESULT EnumerateThreadIDs(
  pThreadIDs  
  스레드 식별자의 배열입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
   
 > [!NOTE]
 > 이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조 하세요. **헤더:** CorDebug 있습니다.  
+ **플랫폼:** [시스템 요구 사항을](../../../../docs/framework/get-started/system-requirements.md)참조하십시오. **헤더:** 코르데버그.idl, 코르데버그.h  
   
  **라이브러리:** CorGuids.lib  
   
  **.NET Framework 버전:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugDataTarget2 인터페이스](icordebugdatatarget2-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

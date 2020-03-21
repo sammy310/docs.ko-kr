@@ -9,11 +9,11 @@ helpviewer_keywords:
 - marshaling, platform invoke
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
 ms.openlocfilehash: b8c4e9d835db044912d1cbed92a14dd05e7de658
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73113937"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79400946"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>플랫폼 호출을 사용하여 데이터 마샬링
 
@@ -31,7 +31,7 @@ ms.locfileid: "73113937"
 
 다음 표에는 Windows API 및 C 스타일 함수에서 사용되는 데이터 형식이 나와있습니다. 대부분 관리되지 않는 라이브러리에는 이들 데이터 형식을 매개 변수 및 반환 값으로 전달하는 함수가 있습니다. 세 번째 열에는 관리 코드에서 사용하는 것에 해당하는 .NET Framework 기본 제공 값 형식 또는 클래스가 나열됩니다. 경우에 따라 표에 나열된 형식 대신 같은 크기의 형식을 사용할 수 있습니다.
 
-|Windows API의 관리되지 않는 형식|관리되지 않는 C 언어 형식|관리형 형식|설명|
+|Windows API의 관리되지 않는 형식|관리되지 않는 C 언어 형식|관리형 형식|Description|
 |--------------------------------|-------------------------------|------------------------|-----------------|
 |`VOID`|`void`|<xref:System.Void?displayProperty=nameWithType>|값을 반환하지 않는 함수에 적용됩니다.|
 |`HANDLE`|`void *`|<xref:System.IntPtr?displayProperty=nameWithType> 또는 <xref:System.UIntPtr?displayProperty=nameWithType>|32비트 Windows 운영 체제의 32비트, 64비트 운영 체제의 64비트.|

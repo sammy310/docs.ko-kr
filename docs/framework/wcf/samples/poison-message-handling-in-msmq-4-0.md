@@ -2,28 +2,28 @@
 title: Poison Message Handling in MSMQ 4.0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: 0a9d4ec9657bacdbcb1273791dc7a593a9565c25
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 4b662094923c85e825edcc9025a73f1a1b42cb9b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094958"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144242"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Poison Message Handling in MSMQ 4.0
 이 샘플에서는 서비스에서 포이즌 메시지 처리를 수행하는 방법을 보여 줍니다. 이 샘플은 [트랜잭션 된 MSMQ 바인딩](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) 샘플을 기반으로 합니다. 이 샘플에서는 `netMsmqBinding`을 사용합니다. 이 서비스는 자체적으로 호스트되는 콘솔 애플리케이션으로서 이를 사용하여 서비스에서 대기된 메시지를 받는 것을 볼 수 있습니다.
 
  대기 중인 통신에서 클라이언트는 큐를 사용하여 서비스와 통신합니다. 좀더 정확하게 말하면 클라이언트는 큐에 메시지를 보내고, 서비스는 큐에서 보낸 메시지를 받습니다. 따라서 서비스와 클라이언트가 동시에 실행되고 있지 않더라도 큐를 사용하여 통신할 수 있습니다.
 
- 포이즌 메시지는 메시지를 읽는 서비스가 메시지를 처리할 수 없어 메시지를 읽는 트랜잭션을 종료할 때 큐에서 반복적으로 읽는 메시지입니다. 이런 경우 메시지가 다시 시도됩니다. 이론적으로는, 메시지에 문제가 있는 경우 이런 현상이 계속해서 발생할 수 있지만 트랜잭션을 사용 하 여 큐에서 읽고 서비스 작업을 호출 하는 경우에만이 오류가 발생할 수 있습니다.
+ 포이즌 메시지는 메시지를 읽는 서비스가 메시지를 처리할 수 없어 메시지를 읽는 트랜잭션을 종료할 때 큐에서 반복적으로 읽는 메시지입니다. 이런 경우 메시지가 다시 시도됩니다. 이론적으로는, 메시지에 문제가 있는 경우 이런 현상이 계속해서 발생할 수 있지만 이 문제는 트랜잭션을 사용하여 큐에서 읽고 서비스 작업을 호출하는 경우에만 발생할 수 있습니다.
 
  MSMQ의 버전에 따라 NetMsmqBinding에서는 포이즌 메시지의 제한적 검색부터 완전한 검색까지 지원합니다. 포이즌 메시지로 검색된 메시지는 몇 가지 방법으로 처리할 수 있습니다. 또한 MSMQ의 버전에 따라 NetMsmqBinding에서는 포이즌 메시지의 제한된 처리부터 전체 처리까지를 지원합니다.
 
- 이 샘플은 windows Server 2003 및 Windows XP 플랫폼에서 제공 되는 제한 된 포이즌 기능과 Windows Vista에서 제공 하는 완전 한 포이즌 기능을 보여 줍니다. 두 샘플에서 목표는 포이즌 메시지를 큐에서 다른 큐로 이동 하는 것입니다. 그러면 포이즌 메시지 서비스에서 해당 큐에 서비스를 제공할 수 있습니다.
+ 이 샘플에서는 Windows Server 2003 및 Windows XP 플랫폼에서 제공되는 제한된 독 시설과 Windows Vista에서 제공하는 전체 독 응용 시설을 보여 줍니다. 두 샘플 에서 목표는 포이즌 메시지를 큐에서 다른 큐로 이동하는 것입니다. 그런 다음 해당 큐는 포이즌 메시지 서비스에서 서비스할 수 있습니다.
 
 ## <a name="msmq-v40-poison-handling-sample"></a>MSMQ v4.0 Poison Handling 샘플
- Windows Vista에서 MSMQ는 포이즌 메시지를 저장 하는 데 사용할 수 있는 포이즌 하위 큐 기능을 제공 합니다. 이 샘플에서는 Windows Vista를 사용 하는 포이즌 메시지를 처리 하는 최선의 방법을 보여 줍니다.
+ Windows Vista에서 MSMQ는 포이즌 메시지를 저장하는 데 사용할 수 있는 포이즌 서브큐 기능을 제공합니다. 이 샘플에서는 Windows Vista를 사용하여 독 메시지를 처리하는 모범 사례를 보여 줍니다.
 
- Windows Vista의 포이즌 메시지 검색은 정교 합니다. 검색에 도움이 되는 속성은 세 가지입니다. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>는 큐에서 지정된 메시지를 다시 읽고 애플리케이션으로 디스패치하여 처리할 수 있는 횟수입니다. 메시지를 애플리케이션으로 디스패치할 수 없어 큐에 다시 배치하거나 애플리케이션이 서비스 작업에서 트랜잭션을 롤백하는 경우에 큐의 메시지를 다시 읽을 수 있습니다. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>는 메시지를 재시도 큐로 이동하는 횟수입니다. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>에 도달하면 메시지가 재시도 큐로 이동합니다. <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> 속성은 메시지가 재시도 큐에서 다시 기본 큐로 이동한 후의 시간 지연입니다. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>는 0으로 다시 설정되고, 메시지가 다시 시도됩니다. 메시지를 읽으려는 시도가 모두 실패하면 메시지가 포이즌으로 표시됩니다.
+ Windows Vista의 포이즌 메시지 검색은 정교합니다. 검색에 도움이 되는 속성은 세 가지입니다. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>는 큐에서 지정된 메시지를 다시 읽고 애플리케이션으로 디스패치하여 처리할 수 있는 횟수입니다. 메시지를 애플리케이션으로 디스패치할 수 없어 큐에 다시 배치하거나 애플리케이션이 서비스 작업에서 트랜잭션을 롤백하는 경우에 큐의 메시지를 다시 읽을 수 있습니다. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>는 메시지를 재시도 큐로 이동하는 횟수입니다. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>에 도달하면 메시지가 재시도 큐로 이동합니다. <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> 속성은 메시지가 재시도 큐에서 다시 기본 큐로 이동한 후의 시간 지연입니다. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>는 0으로 다시 설정되고, 메시지가 다시 시도됩니다. 메시지를 읽으려는 시도가 모두 실패하면 메시지가 포이즌으로 표시됩니다.
 
  메시지가 포이즌으로 표시되면 메시지는 <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> 열거의 설정에 따라 처리됩니다. 반복하려는 경우 가능한 값은 다음과 같습니다.
 
@@ -31,11 +31,11 @@ ms.locfileid: "77094958"
 
 - Drop: 메시지를 삭제합니다.
 
-- 이동: 메시지를 포이즌 메시지 하위 큐로 이동 합니다. 이 값은 Windows Vista 에서만 사용할 수 있습니다.
+- 이동: 메시지를 포이즌 메시지 하위 큐로 이동합니다. 이 값은 Windows Vista에서만 사용할 수 있습니다.
 
-- Reject: 메시지를 보낸 사람의 배달 못 한 편지 큐로 돌려보내는 방법으로 메시지를 거부합니다. 이 값은 Windows Vista 에서만 사용할 수 있습니다.
+- Reject: 메시지를 보낸 사람의 배달 못 한 편지 큐로 돌려보내는 방법으로 메시지를 거부합니다. 이 값은 Windows Vista에서만 사용할 수 있습니다.
 
- 이 샘플에서는 포이즌 메시지에 `Move` 처리를 사용하는 방법을 보여 줍니다. `Move` 메시지를 포이즌 하위 큐로 이동 시킵니다.
+ 이 샘플에서는 포이즌 메시지에 `Move` 처리를 사용하는 방법을 보여 줍니다. `Move`메시지가 포이즌 하위 큐로 이동하게 합니다.
 
  서비스 계약은 `IOrderProcessor`이며, 이는 큐에 사용하기에 적합한 단방향 서비스를 정의합니다.
 
@@ -48,7 +48,7 @@ public interface IOrderProcessor
 }
 ```
 
- 서비스 작업에는 주문을 처리하고 있다는 메시지가 표시됩니다. 포이즌 메시지 기능을 보여 주기 위해 `SubmitPurchaseOrder` 서비스 작업에서 예외를 throw 하 여 서비스의 임의 호출에서 트랜잭션을 롤백합니다. 그러면 메시지는 큐로 돌아가서, 포이즌 메시지로 표시됩니다. 포이즌 메시지를 포이즌 하위 큐로 이동 하도록 구성이 설정 되었습니다.
+ 서비스 작업에는 주문을 처리하고 있다는 메시지가 표시됩니다. 포이즌 메시지 기능을 `SubmitPurchaseOrder` 보여 주기 위해 서비스 작업은 서비스의 임의 호출에서 트랜잭션을 롤백하는 예외를 throw합니다. 그러면 메시지는 큐로 돌아가서, 포이즌 메시지로 표시됩니다. 구성은 포이즌 메시지를 포이즌 서브큐로 이동하도록 설정되어 있습니다.
 
 ```csharp
 // Service class that implements the service contract.
@@ -157,7 +157,7 @@ public class OrderProcessorService : IOrderProcessor
 ## <a name="processing-messages-from-the-poison-message-queue"></a>포이즌 메시지 큐의 메시지 처리
  포이즌 메시지 서비스에서는 최종 포이즌 메시지 큐로부터 메시지를 읽어 처리합니다.
 
- 포이즌 메시지 큐의 메시지는 메시지를 처리 중인 서비스로 주소가 지정되는 메시지입니다. 이 서비스는 포이즌 메시지 서비스 엔드포인트와 다를 수 있습니다. 따라서 포이즌 메시지 서비스가 큐에서 메시지를 읽으면 WCF 채널 계층은 끝점에서 불일치를 찾아 메시지를 디스패치하지 않습니다. 이 경우 메시지의 주소는 주문 처리 서비스로 지정되지만 포이즌 메시지 서비스에서 메시지를 받게 됩니다. 메시지의 주소가 다른 엔드포인트로 지정되는 경우에도 메시지를 계속 받으려면 `ServiceBehavior`를 추가하여 메시지 주소가 지정된 서비스 엔드포인트와 일치하는 주소를 필터링해야 합니다. 포이즌 메시지 큐에서 읽은 메시지를 성공적으로 처리하려면 이러한 구성이 필요합니다.
+ 포이즌 메시지 큐의 메시지는 메시지를 처리 중인 서비스로 주소가 지정되는 메시지입니다. 이 서비스는 포이즌 메시지 서비스 엔드포인트와 다를 수 있습니다. 따라서 포이즌 메시지 서비스가 큐에서 메시지를 읽을 때 WCF 채널 계층은 끝점에서 불일치를 찾아 메시지를 디스패치하지 않습니다. 이 경우 메시지의 주소는 주문 처리 서비스로 지정되지만 포이즌 메시지 서비스에서 메시지를 받게 됩니다. 메시지의 주소가 다른 엔드포인트로 지정되는 경우에도 메시지를 계속 받으려면 `ServiceBehavior`를 추가하여 메시지 주소가 지정된 서비스 엔드포인트와 일치하는 주소를 필터링해야 합니다. 포이즌 메시지 큐에서 읽은 메시지를 성공적으로 처리하려면 이러한 구성이 필요합니다.
 
  포이즌 메시지 서비스 구현 자체는 서비스 구현과 매우 유사합니다. 이 구현에서는 계약을 구현하고 주문을 처리합니다. 코드 예제는 다음과 같습니다.
 
@@ -206,7 +206,7 @@ public class OrderProcessorService : IOrderProcessor
     }
 ```
 
- 주문 큐에서 메시지를 읽는 주문 처리 서비스와 달리 포이즌 메시지 서비스는 포이즌 하위 큐에서 메시지를 읽습니다. 포이즌 큐는 주 큐의 하위 큐 이며,은 "포이즌"으로 이름이 지정 되 고 MSMQ에서 자동으로 생성 됩니다. 이 파일에 액세스 하려면 다음 샘플 구성에 표시 된 것 처럼 기본 큐 이름 뒤에 ";" 및 하위 큐 이름 (이 경우 "포이즌")을 제공 합니다.
+ 주문 큐에서 메시지를 읽는 주문 처리 서비스와 달리 포이즌 메시지 서비스는 포이즌 하위 큐에서 메시지를 읽습니다. 포이즌 큐는 주 큐의 하위 큐이며 "poison"라고 명명되며 MSMQ에 의해 자동으로 생성됩니다. 액세스하려면 다음 샘플 구성에 표시된 대로 ";"와 하위 큐 이름(이 경우 -"poison")이 뒤에 기본 큐 이름을 제공합니다.
 
 > [!NOTE]
 > MSMQ v3.0 샘플에서 포이즌 큐 이름은 하위 큐가 아닌 메시지를 이동한 큐입니다.
@@ -273,23 +273,23 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면
 
-1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.
+1. Windows 통신 기초 [샘플에 대한 일회성 설치 절차를](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)수행했어야 합니다.
 
 2. 서비스가 처음 실행되는 경우 서비스에서는 큐가 있는지 확인하고 큐가 없으면 큐를 만듭니다. 서비스를 처음 실행하여 큐를 만들거나 MSMQ 큐 관리자를 통해 큐를 만들 수 있습니다. Windows 2008에서 큐를 만들려면 다음 단계를 수행하세요.
 
-    1. Visual Studio 2012에서 서버 관리자를 엽니다.
+    1. 비주얼 스튜디오 2012에서 서버 관리자를 엽니다.
 
-    2. **기능** 탭을 확장 합니다.
+    2. **피처** 탭을 확장합니다.
 
-    3. **개인 메시지 큐**를 마우스 오른쪽 단추로 클릭 하 고 **새로 만들기**, **개인 큐**를 선택 합니다.
+    3. **개인 메시지 큐를**마우스 오른쪽 단추로 클릭하고 **새**' **비공개 큐를**선택합니다.
 
-    4. **트랜잭션** 상자를 확인 합니다.
+    4. 트랜잭션 상자를 **선택합니다.**
 
-    5. 새 큐 이름으로 `ServiceModelSamplesTransacted`을 입력 합니다.
+    5. 새 `ServiceModelSamplesTransacted` 큐의 이름으로 입력합니다.
 
 3. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.
 
-4. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 localhost 대신 실제 호스트 이름을 반영 하도록 큐 이름을 변경 하 고 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.
+4. 단일 또는 컴퓨터 간 구성에서 샘플을 실행하려면 로컬 호스트 대신 실제 호스트 이름을 반영하도록 큐 이름을 변경하고 Windows 통신 기반 샘플 실행의 지침을 [따릅니다.](../../../../docs/framework/wcf/samples/running-the-samples.md)
 
  기본적으로 `netMsmqBinding` 바인딩 전송을 사용하여 보안이 설정됩니다. `MsmqAuthenticationMode` 및 `MsmqProtectionLevel` 속성은 모두 전송 보안의 형식을 결정합니다. 기본적으로 인증 모드는 `Windows`로 설정되고 보호 수준은 `Sign`으로 설정됩니다. MSMQ에서 인증 및 서명 기능을 제공하려면 도메인에 속해 있어야 합니다. 도메인에 속하지 않은 컴퓨터에서 이 샘플을 실행할 경우 "사용자의 내부 메시지 큐 인증서가 없습니다."라는 오류 메시지가 표시됩니다.
 
@@ -309,18 +309,18 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
      엔드포인트의 bindingConfiguration 특성을 설정하여 엔드포인트가 바인딩에 연결되어 있는지 확인합니다.
 
-2. 샘플을 실행 하기 전에 PoisonMessageServer, 서버 및 클라이언트에서 구성을 변경 해야 합니다.
+2. 샘플을 실행하기 전에 PoisonMessageServer, 서버 및 클라이언트의 구성을 변경해야 합니다.
 
     > [!NOTE]
     > `security mode`를 `None`으로 설정하는 것은 `MsmqAuthenticationMode`, `MsmqProtectionLevel` 및 `Message` 보안을 `None`으로 설정하는 것과 같습니다.  
   
-3. 메타데이터 교환을 작동하기 위해 http 바인딩을 사용하여 URL을 등록합니다. 이렇게 하려면 권한이 높은 명령 창에서 서비스를 실행해야 합니다. 그렇지 않으면 `Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/. Your process does not have access rights to this namespace (see https://go.microsoft.com/fwlink/?LinkId=70353 for details). ---> System.Net.HttpListenerException: Access is denied`와 같은 예외가 발생 합니다.  
+3. 메타데이터 교환을 작동하기 위해 http 바인딩을 사용하여 URL을 등록합니다. 이렇게 하려면 권한이 높은 명령 창에서 서비스를 실행해야 합니다. 그렇지 않으면 다음과 `Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/. Your process does not have access rights to this namespace (see https://go.microsoft.com/fwlink/?LinkId=70353 for details). ---> System.Net.HttpListenerException: Access is denied`같은 예외가 있습니다.  
   
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
->   
+>
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대한 WCF(Windows 통신 재단) 및 WF(Windows 워크플로우 재단) 샘플로](https://www.microsoft.com/download/details.aspx?id=21459) 이동하여 모든 WCF(Windows 통신 재단) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Poison\MSMQ4`

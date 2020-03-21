@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4354e5eb-dd45-469d-97fb-1c495705ee59
-ms.openlocfilehash: e357868361e11dc919fa09db9a36185923a6e40e
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: f3177ab98382506770c4655c62573da5c1d96c69
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72847088"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78848758"
 ---
 # <a name="how-to-call-custom-database-functions"></a>방법: 사용자 지정 데이터베이스 함수 호출
 
@@ -24,11 +24,11 @@ LINQ to Entities 쿼리에서 호출된 데이터베이스 함수는 데이터�
 
 1. 데이터베이스에서 사용자 지정 함수를 만듭니다.
 
-     SQL Server에서 사용자 지정 함수를 만드는 방법에 대 한 자세한 내용은 [CREATE FUNCTION (transact-sql)](https://go.microsoft.com/fwlink/?LinkID=139871)을 참조 하세요.
+     SQL Server에서 사용자 지정 함수를 만드는 자세한 내용은 [함수 만들기(Transact-SQL)를](/sql/t-sql/statements/create-function-transact-sql)참조하십시오.
 
 2. .edmx 파일의 SSDL(저장소 스키마 정의 언어)에서 함수를 선언합니다. 함수의 이름은 데이터베이스에 선언된 함수의 이름과 같아야 합니다.
 
-     자세한 내용은 [Function 요소 (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#function-element-ssdl)를 참조 하세요.
+     자세한 내용은 [기능 요소(SSDL)를](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#function-element-ssdl)참조하십시오.
 
 3. 해당되는 메서드를 애플리케이션 코드의 클래스에 추가하고 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>를 메서드에 적용합니다. 특성의 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> 매개 변수는 개념적 모델의 네임스페이스 이름이고, 특성의 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> 매개 변수는 개념적 모델의 함수 이름입니다. LINQ에서 함수 이름을 확인할 때는 대/소문자가 구분됩니다.
 
@@ -36,7 +36,7 @@ LINQ to Entities 쿼리에서 호출된 데이터베이스 함수는 데이터�
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 LINQ to Entities 쿼리 내에서 사용자 지정 데이터베이스 함수를 호출하는 방법에 대해 설명합니다. 이 예제에서는 School 모델을 사용합니다. School 모델에 대 한 자세한 내용은 [School 샘플 데이터베이스 만들기](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)) 및 [School .edmx 파일 생성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100))을 참조 하세요.
+다음 예제에서는 LINQ to Entities 쿼리 내에서 사용자 지정 데이터베이스 함수를 호출하는 방법에 대해 설명합니다. 이 예제에서는 School 모델을 사용합니다. 학교 모델에 대한 자세한 내용은 [학교 샘플 데이터베이스 만들기](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)) 및 학교 [.edmx 파일 생성을](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100))참조하십시오.
 
 다음 코드에서는 `AvgStudentGrade` 함수를 School 샘플 데이터베이스에 추가합니다.
 
@@ -47,13 +47,13 @@ LINQ to Entities 쿼리에서 호출된 데이터베이스 함수는 데이터�
 
 ## <a name="example"></a>예제
 
-그런 다음 *.edmx* 파일의 SSDL (저장소 스키마 정의 언어)에서 함수를 선언 합니다. 다음 코드는 SSDL에서 `AvgStudentGrade` 함수를 선언 합니다.
+다음으로 *.edmx* 파일의 SSDL(저장소 스키마 정의 언어)에서 함수를 선언합니다. 다음 코드는 SSDL의 함수를 `AvgStudentGrade` 선언합니다.
 
 [!code-xml[DP L2E MapToDBFunction#2](~/samples/snippets/csharp/VS_Snippets_Data/dp l2e maptodbfunction/cs/school.edmx#2)]
 
 ## <a name="example"></a>예제
 
-이제 메서드를 만들어 SSDL에 선언 된 함수에 매핑합니다. <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>를 사용하여 다음 클래스의 메서드가 위의 SSDL에서 정의된 함수로 매핑됩니다. 이 메서드가 호출되면 데이터베이스에 있는 해당되는 함수가 실행됩니다.
+이제 메서드를 만들고 SSDL에 선언된 함수에 매핑합니다. <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>를 사용하여 다음 클래스의 메서드가 위의 SSDL에서 정의된 함수로 매핑됩니다. 이 메서드가 호출되면 데이터베이스에 있는 해당되는 함수가 실행됩니다.
 
 [!code-csharp[DP L2E MapToDBFunction#3](~/samples/snippets/csharp/VS_Snippets_Data/dp l2e maptodbfunction/cs/program.cs#3)]
 [!code-vb[DP L2E MapToDBFunction#3](~/samples/snippets/visualbasic/VS_Snippets_Data/dp l2e maptodbfunction/vb/module1.vb#3)]
@@ -65,7 +65,7 @@ LINQ to Entities 쿼리에서 호출된 데이터베이스 함수는 데이터�
 [!code-csharp[DP L2E MapToDBFunction#4](~/samples/snippets/csharp/VS_Snippets_Data/dp l2e maptodbfunction/cs/program.cs#4)]
 [!code-vb[DP L2E MapToDBFunction#4](~/samples/snippets/visualbasic/VS_Snippets_Data/dp l2e maptodbfunction/vb/module1.vb#4)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [.edmx 파일 개요](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [LINQ to Entities에서 쿼리](queries-in-linq-to-entities.md)

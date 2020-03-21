@@ -2,15 +2,15 @@
 title: '방법: 구성에서 서비스 엔드포인트 만들기'
 ms.date: 06/16/2016
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
-ms.openlocfilehash: 63a40576b805952197cec5af2f89a5dc4b5d3545
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9687d9537d6f166a02b79261743050168f677261
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787649"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185008"
 ---
 # <a name="how-to-create-a-service-endpoint-in-configuration"></a>방법: 구성에서 서비스 엔드포인트 만들기
-끝점은 Windows Communication Foundation (WCF) 서비스에서 제공 하는 기능에 대 한 액세스를 사용 하 여 클라이언트를 제공 합니다. 상대 및 절대 엔드포인트 주소 조합을 사용하여 엔드포인트를 하나 이상 정의할 수 있으며, 서비스 엔드포인트를 정의하지 않는 경우에는 런타임이 기본적으로 일부 엔드포인트를 자동으로 제공합니다. 이 항목에서는 상대 주소와 절대 주소를 모두 포함하는 구성 파일을 사용해 엔드포인트를 추가하는 방법을 보여 줍니다.  
+끝점은 클라이언트에게 WCF(Windows 통신 재단) 서비스가 제공하는 기능에 대한 액세스를 제공합니다. 상대 및 절대 엔드포인트 주소 조합을 사용하여 엔드포인트를 하나 이상 정의할 수 있으며, 서비스 엔드포인트를 정의하지 않는 경우에는 런타임이 기본적으로 일부 엔드포인트를 자동으로 제공합니다. 이 항목에서는 상대 주소와 절대 주소를 모두 포함하는 구성 파일을 사용해 엔드포인트를 추가하는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
  다음 서비스 구성에는 기본 주소와 5개의 엔드포인트가 지정됩니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "61787649"
  기본 주소는 다음 샘플에서처럼 service/host/baseAddresses 아래 `add` 요소를 사용하여 지정합니다.  
   
 ```xml  
-<service   
+<service
     name="Microsoft.ServiceModel.Samples.CalculatorService">  
   <host>  
     <baseAddresses>  
@@ -83,16 +83,16 @@ ms.locfileid: "61787649"
 ```  
   
 ## <a name="example"></a>예제  
- 다음 샘플에서처럼 첫 번째 엔드포인트 정의는 엔드포인트 주소가 기본 주소와 URI(Uniform Resource Identifier) 컴퍼지션 다음에 오는 상대 주소의 조합인 상대 주소를 지정합니다. 상대 주소가 비어 있으므로("") 엔드포인트 주소는 기본 주소와 동일합니다. 실제 끝점 주소는 `http://localhost:8000/servicemodelsamples/service`합니다.  
+ 다음 샘플에서처럼 첫 번째 엔드포인트 정의는 엔드포인트 주소가 기본 주소와 URI(Uniform Resource Identifier) 컴퍼지션 다음에 오는 상대 주소의 조합인 상대 주소를 지정합니다. 상대 주소가 비어 있으므로("") 엔드포인트 주소는 기본 주소와 동일합니다. 실제 끝점 주소는 . `http://localhost:8000/servicemodelsamples/service`  
   
 ```xml  
-<endpoint address=""   
+<endpoint address=""
     binding="wsHttpBinding"  
     contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
 ## <a name="example"></a>예제  
- 두 번째 엔드포인트 정의도 다음 샘플 구성에서처럼 상대 주소를 지정합니다. 상대 주소 "test"가 기본 주소에 추가됩니다. 실제 끝점 주소는 `http://localhost:8000/servicemodelsamples/service/test`합니다.  
+ 두 번째 엔드포인트 정의도 다음 샘플 구성에서처럼 상대 주소를 지정합니다. 상대 주소 "test"가 기본 주소에 추가됩니다. 실제 끝점 주소는 . `http://localhost:8000/servicemodelsamples/service/test`  
   
 ```xml  
 <endpoint address="/test"  
@@ -101,7 +101,7 @@ ms.locfileid: "61787649"
 ```  
   
 ## <a name="example"></a>예제  
- 세 번째 엔드포인트 정의는 다음 샘플 구성에서처럼 절대 주소를 지정합니다. 주소에서 기본 주소는 아무런 역할도 하지 않습니다. 실제 끝점 주소는 `http://localhost:8001/hello/servicemodelsamples`합니다.  
+ 세 번째 엔드포인트 정의는 다음 샘플 구성에서처럼 절대 주소를 지정합니다. 주소에서 기본 주소는 아무런 역할도 하지 않습니다. 실제 끝점 주소는 . `http://localhost:8001/hello/servicemodelsamples`  
   
 ```xml  
 <endpoint address="http://localhost:8001/hello/servicemodelsamples"  

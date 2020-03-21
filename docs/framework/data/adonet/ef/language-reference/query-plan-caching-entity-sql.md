@@ -2,17 +2,17 @@
 title: 쿼리 계획 캐싱(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
-ms.openlocfilehash: 020b2b3f08262fc15ace8603c26e2d6c059baafd
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: a0e84f40aed2cff146e4e203cca73a9110de0e2f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319400"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149988"
 ---
 # <a name="query-plan-caching-entity-sql"></a>쿼리 계획 캐싱(Entity SQL)
 쿼리 실행 시도가 있으면 쿼리 파이프라인에서는 항상 해당 쿼리가 이미 컴파일되어 사용 가능한지 알아보기 위해 쿼리 계획 캐시를 확인합니다. 사용 가능한 쿼리가 있으면 새 쿼리를 작성하지 않고 캐시된 계획을 재사용합니다. 쿼리 계획 캐시에 일치 항목이 없을 경우에는 쿼리를 컴파일하고 캐시합니다. 쿼리는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 텍스트 및 매개 변수 컬렉션(이름과 형식)으로 식별됩니다. 모든 텍스트 비교에서는 대/소문자가 구별됩니다.  
   
-## <a name="configuration"></a>Configuration  
+## <a name="configuration"></a>구성  
  쿼리 계획 캐싱은 <xref:System.Data.EntityClient.EntityCommand>를 통해 구성할 수 있습니다.  
   
  <xref:System.Data.EntityClient.EntityCommand.EnablePlanCaching%2A?displayProperty=nameWithType>을 통해 쿼리 계획 캐싱을 사용하려면 이 속성을 `true`로, 사용하지 않으려면 `false`로 설정합니다. 두 번 이상 사용할 가능성이 적은 개별 동적 쿼리에 대해 계획 캐싱을 사용하지 않도록 설정하면 성능이 향상됩니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "72319400"
  ```csharp
  var query = "SELECT sp.SalesYTD FROM AdventureWorksEntities.SalesPerson as sp WHERE sp.EmployeeID = " + employeeTextBox.Text;  
  ```
- 
+
  동적으로 생성된 쿼리를 사용하는 경우 다시 사용할 가능성이 적은 캐시 항목의 불필요한 메모리 사용을 방지하기 위해 쿼리 계획 캐싱을 사용하지 않도록 설정하는 것이 좋습니다.  
   
  정적 쿼리 및 매개 변수화된 쿼리에 대해 쿼리 계획 캐싱을 이용하면 성능이 향상될 수 있습니다. 다음은 정적 쿼리의 예제입니다.  
@@ -50,6 +50,6 @@ var query = "SELECT sp.SalesYTD FROM AdventureWorksEntities.SalesPerson as sp";
   
 - 주석 내부의 텍스트 변경  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Entity SQL 개요](entity-sql-overview.md)

@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - UI Automation
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
-ms.openlocfilehash: 7305258570ad853afa88a231592fd4b6cd2dd74e
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 49d2988cbad33497f2214098bcde68f7d5434b5e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965869"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180027"
 ---
 # <a name="microsoft-ui-automation"></a>Microsoft UI 자동화
 
 > [!NOTE]
-> 이 설명서는 <xref:System.Windows.Automation> 네임 스페이스에 정의 된 관리 되는 UI 자동화 클래스를 사용 하려는 .NET 개발자를 위한 것입니다. UI 자동화에 대 한 최신 정보는 [Windows AUTOMATION API: Ui 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조 하세요.
+> 이 설명서는 네임스페이스에 정의된 관리되는 UI 자동화 클래스를 <xref:System.Windows.Automation> 사용하려는 .NET 개발자를 위한 것입니다. UI 자동화에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하십시오.
 
- Microsoft UI Automation은 Microsoft Windows의 내게 필요한 옵션 프레임 워크입니다. UI (사용자 인터페이스)에 대 한 정보에 대 한 프로그래밍 방식의 액세스를 제공 하 여 보조 기술 제품 및 자동화 된 테스트 프레임 워크의 요구 사항을 해결 합니다. 또한 UI 자동화를 통해 컨트롤 및 응용 프로그램 개발자는 해당 제품에 액세스할 수 있습니다.
+ 마이크로소프트 UI 자동화는 마이크로소프트 윈도에 대 한 접근성 프레임 워크. 사용자 인터페이스(UI)에 대한 정보에 프로그래밍 방식으로 액세스를 제공하여 보조 기술 제품 및 자동화된 테스트 프레임워크의 요구를 해결합니다. 또한 UI 자동화를 사용하면 제어 및 응용 프로그램 개발자가 제품에 액세스할 수 있도록 할 수 있습니다.
 
- 이 설명서에서는 관리 코드에 대 한 UI 자동화 API에 대해 설명 합니다. 에서 C++ui 자동화를 위한 프로그래밍에 대 한 자세한 내용은 [Win32 응용 프로그램에 대 한 ui 자동화](/windows/desktop/winauto/windows-automation-api-portal)를 참조 하세요.
+ 이 설명서에는 관리 코드에 대한 UI 자동화 API에 대해 설명합니다. C++의 UI 자동화 프로그래밍에 대한 자세한 내용은 [Win32 응용 프로그램에 대한 UI 자동화를](/windows/desktop/winauto/windows-automation-api-portal)참조하십시오.
 
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
 - [접근성 모범 사례](accessibility-best-practices.md)
 - [UI 자동화 기본 사항](ui-automation-fundamentals.md)
@@ -34,4 +34,4 @@ ms.locfileid: "76965869"
 
 ## <a name="related-sections"></a>관련 단원
 
-- [접근성 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility) 
+- [접근성 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility)

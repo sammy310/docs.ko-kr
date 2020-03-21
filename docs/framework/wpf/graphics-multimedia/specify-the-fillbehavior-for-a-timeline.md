@@ -1,32 +1,32 @@
 ---
-title: '방법: 활성 기간 끝에 도달한 Timeline에 대한 FillBehavior 지정'
+title: '방법: 활성 기간이 끝난 Timeline의 FillBehavior 지정'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - FillBehavior property for inactive timelines [WPF]
 - Timelines [WPF], FillBehavior property
 ms.assetid: db805f59-d513-4dac-af15-47005dae3199
-ms.openlocfilehash: 9f03c5b8d4585c32e0a9f119649dd15a23523033
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1f54f2c1bb49bb7a0301f112a109194ab1a8658e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973669"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141175"
 ---
-# <a name="how-to-specify-the-fillbehavior-for-a-timeline-that-has-reached-the-end-of-its-active-period"></a>방법: 활성 기간 끝에 도달한 Timeline에 대한 FillBehavior 지정
-지정 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 비활성에 대 한 <xref:System.Windows.Media.Animation.Timeline> 의 애니메이션된 속성입니다.  
+# <a name="how-to-specify-the-fillbehavior-for-a-timeline-that-has-reached-the-end-of-its-active-period"></a>방법: 활성 기간이 끝난 Timeline의 FillBehavior 지정
+이 예제에서는 애니메이션된 <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 속성의 <xref:System.Windows.Media.Animation.Timeline> 비활성을 지정하는 방법을 보여 주며, 이 예제에서는 애니메이션된 속성의 비활성 을 지정하는 방법을 보여 주며 있습니다.  
   
 ## <a name="example"></a>예제  
- <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 의 속성을 <xref:System.Windows.Media.Animation.Timeline> 되 고 있지 않습니다 때 애니메이션된 속성의 값에 수행할 작업을 결정 애니메이션, 즉, 경우를 <xref:System.Windows.Media.Animation.Timeline> 만 부모 활성 상태가 아닙니다 <xref:System.Windows.Media.Animation.Timeline> 는 활성 또는 보관 기간입니다. 예를 들어 애니메이션된 속성 계속 됩니다 끝 후 애니메이션 종료 나 되는 값은 애니메이션이 시작 되기 전의 값 돌아갑니다?  
+ a의 <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> <xref:System.Windows.Media.Animation.Timeline> 속성은 애니메이션되지 않을 때, 즉 비활성 상태이지만 부모가 <xref:System.Windows.Media.Animation.Timeline> <xref:System.Windows.Media.Animation.Timeline> 활성 또는 보류 기간 내에 있을 때 애니메이션된 속성의 값에 어떤 일이 발생하는지 결정합니다. 예를 들어 애니메이션이 종료된 후에도 애니메이션 속성이 끝 값에 유지되거나 애니메이션이 시작되기 전에 있던 값으로 되돌아갑니다.  
   
- 다음 예에서는 <xref:System.Windows.Media.Animation.DoubleAnimation> 애니메이션 효과를 주는 <xref:System.Windows.FrameworkElement.Width%2A> 두 개의 사각형의 합니다. 각 사각형을 사용 하 여 다른 <xref:System.Windows.Media.Animation.Timeline> 개체입니다.  
+ 다음 예제에서는 <xref:System.Windows.Media.Animation.DoubleAnimation> a를 사용하여 <xref:System.Windows.FrameworkElement.Width%2A> 두 사각형의 애니메이션을 애니메이션합니다. 각 사각형은 다른 <xref:System.Windows.Media.Animation.Timeline> 개체를 사용합니다.  
   
- 하나 <xref:System.Windows.Media.Animation.Timeline> 에 <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 로 설정 된 <xref:System.Windows.Media.Animation.FillBehavior.Stop>, 다시 돌아가려면 해당 애니메이션이 적용 되지 않은 사각형의 너비 값는 <xref:System.Windows.Media.Animation.Timeline> 종료 합니다. 다른 <xref:System.Windows.Media.Animation.Timeline> 에 <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 의 <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, 너비의 끝에 유지 되기 때문에 경우이 값을 <xref:System.Windows.Media.Animation.Timeline> 종료 합니다.  
+ 하나는 사각형의 너비가 <xref:System.Windows.Media.Animation.Timeline> 끝날 때 애니메이션되지 않은 값으로 되돌아갑니다. <xref:System.Windows.Media.Animation.Timeline> <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> <xref:System.Windows.Media.Animation.FillBehavior.Stop> 다른 <xref:System.Windows.Media.Animation.Timeline> 하나는 <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 의 <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>를 가지며, 이로 인해 너비가 <xref:System.Windows.Media.Animation.Timeline> 끝날 때 끝 값으로 유지됩니다.  
   
  [!code-xaml[timingbehaviors_snip#FillBehaviorWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/FillBehaviorExample.xaml#fillbehaviorwholepage)]  
   
- 전체 샘플을 참조 하세요 [애니메이션 예제 갤러리](https://go.microsoft.com/fwlink/?LinkID=159969)합니다.  
+ 전체 샘플은 [애니메이션 예제 갤러리](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/AnimationExamples)를 참조하십시오.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Media.Animation.DoubleAnimation>
 - <xref:System.Windows.FrameworkElement.Width%2A>

@@ -2,18 +2,18 @@
 title: 구성 및 메타데이터 지원
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
-ms.openlocfilehash: 3f6d506d719cbb1b2ecc8bae223dfe73e7e2d1a9
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 0ec8c3286037e7adbe6f5efb73e846a30b9d48d3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425139"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185660"
 ---
 # <a name="configuration-and-metadata-support"></a>구성 및 메타데이터 지원
 이 항목에서는 바인딩 및 바인딩 요소에 대한 구성 및 메타데이터 지원을 사용하도록 설정하는 방법에 대해 설명합니다.  
   
 ## <a name="overview-of-configuration-and-metadata"></a>구성 및 메타데이터 개요  
- 이 항목에서는 [채널 개발](developing-channels.md) 작업 목록에서 선택적 항목인 1, 2 및 4 인 다음 작업에 대해 설명 합니다.  
+ 이 항목에서는 [개발 채널](developing-channels.md) 작업 목록에서 선택적 항목 1, 2 및 4인 다음 작업에 대해 설명합니다.  
   
 - 바인딩 요소에 대해 구성 파일 지원을 사용하도록 설정합니다.  
   
@@ -23,15 +23,15 @@ ms.locfileid: "73425139"
   
 - 바인딩 또는 바인딩 요소를 삽입하고 구성하기 위해 WSDL 및 정책 어설션을 식별합니다.  
   
- 사용자 정의 바인딩 및 바인딩 요소를 만드는 방법에 대 한 자세한 내용은 [사용자 정의 바인딩 만들기](creating-user-defined-bindings.md) 및 [BindingElement 만들기](creating-a-bindingelement.md)를 참조 하세요.  
+ 사용자 정의 바인딩 및 바인딩 요소를 만드는 자세한 내용은 [사용자 정의 바인딩 만들기](creating-user-defined-bindings.md) 및 [BindingElement 만들기](creating-a-bindingelement.md)를 각각 참조하세요.  
   
 ## <a name="adding-configuration-support"></a>구성 지원 추가  
  채널에 대해 구성 파일 지원을 사용하도록 설정하려면 두 개의 구성 섹션, 즉, 바인딩 요소에 대해 구성 지원을 사용하도록 설정하는 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType>와 바인딩에 대해 구성 지원을 사용하도록 설정하는 <xref:System.ServiceModel.Configuration.StandardBindingElement?displayProperty=nameWithType> 및 <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602?displayProperty=nameWithType>를 구현해야 합니다.  
   
- 이 작업을 수행 하는 보다 쉬운 방법은 [ConfigurationCodeGenerator](../samples/configurationcodegenerator.md) 샘플 도구를 사용 하 여 바인딩 및 바인딩 요소에 대 한 구성 코드를 생성 하는 것입니다.  
+ 이 작업을 보다 쉽게 수행할 수 있는 방법은 [ConfigurationCodeGenerator](../samples/configurationcodegenerator.md) 샘플 도구를 사용하여 바인딩 및 바인딩 요소에 대한 구성 코드를 생성하는 것입니다.  
   
 ### <a name="extending-bindingelementextensionelement"></a>BindingElementExtensionElement 확장명  
- [전송: UDP](../samples/transport-udp.md) 샘플에서 가져온 예제 코드는 다음과 같습니다. `UdpTransportElement`는 구성 시스템에 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>를 노출하는 `UdpTransportBindingElement`입니다. 샘플에서는 몇 가지 기본 재정의를 통해 구성 섹션 이름, 바인딩 요소의 형식 및 바인딩 요소를 만드는 방법을 정의합니다. 그러면 사용자는 다음과 같이 구성 파일에서 확장명 섹션을 등록할 수 있습니다.  
+ 다음 예제 코드는 [전송: UDP](../samples/transport-udp.md) 샘플에서 가져온 것입니다. `UdpTransportElement`는 구성 시스템에 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>를 노출하는 `UdpTransportBindingElement`입니다. 샘플에서는 몇 가지 기본 재정의를 통해 구성 섹션 이름, 바인딩 요소의 형식 및 바인딩 요소를 만드는 방법을 정의합니다. 그러면 사용자는 다음과 같이 구성 파일에서 확장명 섹션을 등록할 수 있습니다.  
   
 ```xml  
 <configuration>  
@@ -62,9 +62,9 @@ ms.locfileid: "73425139"
 ```  
   
 ### <a name="adding-configuration-for-a-binding"></a>바인딩에 대해 구성 추가  
- `SampleProfileUdpBindingCollectionElement` 섹션은 구성 시스템에 <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602>을 노출하는 `SampleProfileUdpBinding`입니다. 대량의 구현은 `SampleProfileUdpBindingConfigurationElement`로부터 파생되는 <xref:System.ServiceModel.Configuration.StandardBindingElement>에 위임됩니다. `SampleProfileUdpBindingConfigurationElement`에는 `SampleProfileUdpBinding`의 속성과 `ConfigurationElement` 바인딩에서 매핑할 함수에 해당 하는 속성이 있습니다. 마지막으로 `OnApplyConfiguration` 메서드는 다음 샘플 코드에서처럼 `SampleProfileUdpBinding`에서 재정의됩니다.  
+ `SampleProfileUdpBindingCollectionElement` 섹션은 구성 시스템에 <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602>을 노출하는 `SampleProfileUdpBinding`입니다. 대량의 구현은 `SampleProfileUdpBindingConfigurationElement`로부터 파생되는 <xref:System.ServiceModel.Configuration.StandardBindingElement>에 위임됩니다. 의 `SampleProfileUdpBindingConfigurationElement` 속성에 `SampleProfileUdpBinding`해당하는 속성과 바인딩에서 매핑할 함수가 `ConfigurationElement` 있습니다. 마지막으로 `OnApplyConfiguration` 메서드는 다음 샘플 코드에서처럼 `SampleProfileUdpBinding`에서 재정의됩니다.  
   
-```csharp 
+```csharp
 protected override void OnApplyConfiguration(string configurationName)  
 {  
             if (binding == null)  
@@ -100,16 +100,16 @@ protected override void OnApplyConfiguration(string configurationName)
 </configuration>  
 ```  
   
- 그런 다음 [\<system.servicemodel >](../../configure-apps/file-schema/wcf/system-servicemodel.md) 구성 섹션에서 참조할 수 있습니다.  
+ 그런 다음 [ \<system.serviceModel>](../../configure-apps/file-schema/wcf/system-servicemodel.md) 구성 섹션에서 참조할 수 있습니다.  
   
 ```xml  
 <configuration>  
   <system.serviceModel>  
     <client>  
       <endpoint configurationName="calculator"  
-                address="soap.udp://localhost:8001/"   
+                address="soap.udp://localhost:8001/"
                 bindingConfiguration="CalculatorServer"  
-                binding="sampleProfileUdpBinding"   
+                binding="sampleProfileUdpBinding"
                 contract= "Microsoft.ServiceModel.Samples.ICalculatorContract">  
       </endpoint>  
     </client>  
@@ -118,13 +118,13 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="adding-metadata-support-for-a-binding-element"></a>바인딩 요소에 대해 메타데이터 지원 추가  
- 채널을 메타데이터 시스템으로 통합하려면 채널이 정책 가져오기와 내보내기를 모두 지원해야 합니다. 이를 통해 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 와 같은 도구를 사용 하 여 바인딩 요소의 클라이언트를 생성할 수 있습니다.  
+ 채널을 메타데이터 시스템으로 통합하려면 채널이 정책 가져오기와 내보내기를 모두 지원해야 합니다. 이렇게 하면 [ServiceModel 메타데이터 유틸리티 도구(Svcutil.exe)와](../servicemodel-metadata-utility-tool-svcutil-exe.md) 같은 도구가 바인딩 요소의 클라이언트를 생성할 수 있습니다.  
   
 ### <a name="adding-wsdl-support"></a>WSDL 지원 추가  
- 바인딩의 전송 바인딩 요소는 메타데이터에서 주소 지정 정보를 내보내고 가져옵니다. 또한 전송 바인딩 요소는 SOAP 바인딩을 사용할 때 메타데이터에서 올바른 전송 URI을 내보낼 수 있어야 합니다. [전송: UDP](../samples/transport-udp.md) 샘플에서 가져온 예제 코드는 다음과 같습니다.  
+ 바인딩의 전송 바인딩 요소는 메타데이터에서 주소 지정 정보를 내보내고 가져옵니다. 또한 전송 바인딩 요소는 SOAP 바인딩을 사용할 때 메타데이터에서 올바른 전송 URI을 내보낼 수 있어야 합니다. 다음 예제 코드는 [전송: UDP](../samples/transport-udp.md) 샘플에서 가져온 것입니다.  
   
 #### <a name="wsdl-export"></a>WSDL 내보내기  
- 주소 지정 정보를 내보내기 위해 `UdpTransportBindingElement`는 <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> 인터페이스를 구현 합니다. <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A?displayProperty=nameWithType> 메서드는 WSDL 포트에 올바른 주소 지정 정보를 추가합니다.  
+ 주소 지정 정보를 내보내려면 `UdpTransportBindingElement` <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> 인터페이스를 구현합니다. <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A?displayProperty=nameWithType> 메서드는 WSDL 포트에 올바른 주소 지정 정보를 추가합니다.  
   
 ```csharp  
 if (context.WsdlPort != null)  
@@ -162,7 +162,7 @@ if (soapBinding != null)
   
  Svcutil.exe를 실행하는 경우 Svcutil.exe에서 WSDL 가져오기 확장을 로드하는 방법은 두 가지가 있습니다.  
   
-1. /SvcutilConfig:\<파일 >를 사용 하 여 Svcutil.exe를 구성 파일에 지정 합니다.  
+1. /SvcutilConfig를 사용하여 구성 파일에 대한 포인트 Svcutil.exe:\<파일>.  
   
 2. Svcutil.exe와 동일한 디렉터리에 있는 Svcutil.exe.config에 구성 섹션을 추가합니다.  
   
@@ -178,10 +178,10 @@ if (transportBindingElement is UdpTransportBindingElement)
 ```  
   
 ### <a name="adding-policy-support"></a>정책 지원 추가  
- 사용자 지정 바인딩 요소는 서비스 엔드포인트가 해당 바인딩 요소의 기능을 표현하도록 WSDL 바인딩에서 정책 어설션을 내보낼 수 있습니다. [전송: UDP](../samples/transport-udp.md) 샘플에서 가져온 예제 코드는 다음과 같습니다.  
+ 사용자 지정 바인딩 요소는 서비스 엔드포인트가 해당 바인딩 요소의 기능을 표현하도록 WSDL 바인딩에서 정책 어설션을 내보낼 수 있습니다. 다음 예제 코드는 [전송: UDP](../samples/transport-udp.md) 샘플에서 가져온 것입니다.  
   
 #### <a name="policy-export"></a>정책 내보내기  
- `UdpTransportBindingElement` 형식은 <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType>를 구현 하 여 정책 내보내기 지원을 추가 합니다. 그 결과, <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType>는 이를 포함하는 모든 바인딩에 대한 정책 생성에 `UdpTransportBindingElement`를 포함합니다.  
+ 형식은 `UdpTransportBindingElement` <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> 내보내기 정책에 대한 지원을 추가하도록 구현합니다. 그 결과, <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType>는 이를 포함하는 모든 바인딩에 대한 정책 생성에 `UdpTransportBindingElement`를 포함합니다.  
   
  <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A?displayProperty=nameWithType>에서는 채널이 멀티캐스트 모드인 경우 UDP용 어설션 및 다른 어설션을 추가합니다. 이는 멀티캐스트 모드가 통신 스택의 구성 방법에 영향을 주므로 양쪽 모두에서 조정되어야 하기 때문입니다.  
   
@@ -222,14 +222,14 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
   
  그런 다음 등록된 클래스(<xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType>)로부터 `UdpBindingElementImporter`을 구현합니다. <xref:System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy%2A?displayProperty=nameWithType>에서는 적절한 네임스페이스에서 어설션을 검사하고, 어셜션 중 하나를 처리하여 전송을 생성하고 멀티캐스트인지 여부를 확인합니다. 또한 가져오기가 바인딩 어설션 목록으로부터 처리하는 어설션을 제거합니다. 다시 한 번 말하지만 Svcutil.exe를 실행할 때 통합하는 방법은 두 가지가 있습니다.  
   
-1. /SvcutilConfig:\<파일 >를 사용 하 여 Svcutil.exe를 구성 파일에 지정 합니다.  
+1. /SvcutilConfig를 사용하여 구성 파일에 대한 포인트 Svcutil.exe:\<파일>.  
   
 2. Svcutil.exe와 동일한 디렉터리에 있는 Svcutil.exe.config에 구성 섹션을 추가합니다.  
   
 ### <a name="adding-a-custom-standard-binding-importer"></a>사용자 지정 표준 바인딩 가져오기 추가  
  기본적으로 Svcutil.exe 및 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> 형식은 시스템 제공 바인딩을 인식하고 가져옵니다. 그렇지 않을 경우, 해당 바인딩을 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> 인스턴스로 가져옵니다. Svcutil.exe 및 <xref:System.ServiceModel.Description.WsdlImporter>를 사용하도록 설정하여 `SampleProfileUdpBinding`을 가져오기 위해 `UdpBindingElementImporter`가 사용자 지정 표준 바인딩 가져오기도 수행합니다.  
   
- 사용자 지정 표준 바인딩 가져오기는 <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> 인터페이스에 대 한 `ImportEndpoint` 메서드를 구현 하 여 메타 데이터에서 가져온 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> 인스턴스를 검사 하 여 특정 표준 바인딩에서 생성 되었는지 확인 합니다.  
+ 사용자 지정 표준 바인딩 가져오기는 `ImportEndpoint` <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> 인터페이스에서 메서드를 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> 구현하여 메타데이터에서 가져온 인스턴스를 검사하여 특정 표준 바인딩에 의해 생성될 수 있는지 확인합니다.  
   
 ```csharp  
 if (context.Endpoint.Binding is CustomBinding)  

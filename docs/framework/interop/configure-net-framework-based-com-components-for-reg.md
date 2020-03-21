@@ -8,12 +8,12 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-ms.openlocfilehash: 61f5f0f3ec9a4386fa12e7511b4a518f2b56a21c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dedf5ab51ab5cf9befb5bd183968388406df4e5b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123662"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181470"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>방법: 등록이 필요 없는 활성화를 위한 .NET Framework 기반 COM 구성 요소 구성
 .NET Framework 기반 구성 요소에 대한 등록 없는 활성화는 COM 구성 요소보다 약간 더 복잡합니다. 설치 프로그램에 다음 두 개의 매니페스트가 필요합니다.  
@@ -42,10 +42,10 @@ ms.locfileid: "73123662"
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
-      <assemblyIdentity type="win32"   
-                        name="myOrganization.myDivision.myComApp"   
-                        version="1.0.0.0"   
-                        processorArchitecture="msil"   
+      <assemblyIdentity type="win32"
+                        name="myOrganization.myDivision.myComApp"
+                        version="1.0.0.0"
+                        processorArchitecture="msil"
       />  
     ```  
   
@@ -54,18 +54,18 @@ ms.locfileid: "73123662"
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
-      <assemblyIdentity type="win32"   
-                        name="myOrganization.myDivision.myComApp"   
-                        version="1.0.0.0"   
-                        processorArchitecture="x86"   
+      <assemblyIdentity type="win32"
+                        name="myOrganization.myDivision.myComApp"
+                        version="1.0.0.0"
+                        processorArchitecture="x86"
                         publicKeyToken="8275b28176rcbbef"  
       />  
       <dependency>  
         <dependentAssembly>  
-          <assemblyIdentity type="win32"   
-                        name="myOrganization.myDivision.myManagedComp"   
-                        version="6.0.0.0"   
-                        processorArchitecture="X86"   
+          <assemblyIdentity type="win32"
+                        name="myOrganization.myDivision.myManagedComp"
+                        version="6.0.0.0"
+                        processorArchitecture="X86"
                         publicKeyToken="8275b28176rcbbef"  
           />  
         </dependentAssembly>  
@@ -103,15 +103,15 @@ ms.locfileid: "73123662"
   
 4. 어셈블리에 있는 각 클래스를 식별합니다. `<clrClass>` 요소를 사용하여 관리되는 어셈블리에 있는 각 클래스를 고유하게 식별합니다. `<assembly>` 요소의 하위 요소인 요소에는 다음 표에 설명된 특성이 있습니다.  
   
-    |특성|설명|필요한 공간|  
+    |attribute|Description|필수|  
     |---------------|-----------------|--------------|  
-    |`clsid`|활성화할 클래스를 지정하는 식별자입니다.|예|  
-    |`description`|구성 요소에 대해 사용자에게 알려주는 문자열입니다. 기본값은 빈 문자열입니다.|아니요|  
-    |`name`|관리되는 클래스를 나타내는 문자열입니다.|예|  
-    |`progid`|런타임에 바인딩된 활성화에 사용할 식별자입니다.|아니요|  
-    |`threadingModel`|COM 스레딩 모델. "Both"가 기본값입니다.|아니요|  
-    |`runtimeVersion`|사용할 CLR(공용 언어 런타임) 버전을 지정합니다. 이 특성을 지정하지 않고 CLR이 아직 로드되지 않은 경우 CLR 버전 4 이전의 최신 설치된 CLR과 함께 구성 요소가 로드됩니다. v1.0.3705, v1.1.4322 또는 v2.0.50727을 지정하면 버전이 CLR 버전 4 이전의 최신 설치된 CLR 버전(일반적으로 v2.0.50727)으로 자동으로 롤포워드합니다. 다른 버전의 CLR이 이미 로드되었으며 지정된 버전을 In-Process Side-by-Side로 로드할 수 있는 경우 지정된 버전이 로드되고, 그러지 않으면 로드된 CLR이 사용됩니다. 이 경우 로드에 실패할 수 있습니다.|아니요|  
-    |`tlbid`|클래스에 대한 형식 정보를 포함하는 형식 라이브러리의 식별자입니다.|아니요|  
+    |`clsid`|활성화할 클래스를 지정하는 식별자입니다.|yes|  
+    |`description`|구성 요소에 대해 사용자에게 알려주는 문자열입니다. 기본값은 빈 문자열입니다.|예|  
+    |`name`|관리되는 클래스를 나타내는 문자열입니다.|yes|  
+    |`progid`|런타임에 바인딩된 활성화에 사용할 식별자입니다.|예|  
+    |`threadingModel`|COM 스레딩 모델. "Both"가 기본값입니다.|예|  
+    |`runtimeVersion`|사용할 CLR(공용 언어 런타임) 버전을 지정합니다. 이 특성을 지정하지 않고 CLR이 아직 로드되지 않은 경우 CLR 버전 4 이전의 최신 설치된 CLR과 함께 구성 요소가 로드됩니다. v1.0.3705, v1.1.4322 또는 v2.0.50727을 지정하면 버전이 CLR 버전 4 이전의 최신 설치된 CLR 버전(일반적으로 v2.0.50727)으로 자동으로 롤포워드합니다. 다른 버전의 CLR이 이미 로드되었으며 지정된 버전을 In-Process Side-by-Side로 로드할 수 있는 경우 지정된 버전이 로드되고, 그러지 않으면 로드된 CLR이 사용됩니다. 이 경우 로드에 실패할 수 있습니다.|예|  
+    |`tlbid`|클래스에 대한 형식 정보를 포함하는 형식 라이브러리의 식별자입니다.|예|  
   
      모든 특성 태그는 대/소문자를 구분합니다. OLE/COM ObjectViewer(Oleview.exe)를 사용하여 어셈블리에 대해 내보낸 형식 라이브러리를 보면 CLSID, ProgID, 스레딩 모델, 런타임 버전을 확인할 수 있습니다.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "73123662"
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
            <assemblyIdentity  
                         name="myOrganization.myDivision.myManagedComp"  
-                        version="1.2.3.4"   
+                        version="1.2.3.4"
                         publicKeyToken="8275b28176rcbbef"  
            />  
            <clrClass  
@@ -156,7 +156,7 @@ ms.locfileid: "73123662"
   
      이 문에서 `myManagedComp.manifest`는 포함되는 구성 요소 매니페스트의 이름입니다. 이 예제에서 스크립트 파일 이름은 `myresource.rc`입니다.  
   
-2. Microsoft Windows Resource Compiler(Rc.exe)를 사용하여 스크립트를 컴파일합니다. 명령 프롬프트에 다음 명령을 입력합니다.  
+2. Microsoft Windows Resource Compiler(Rc.exe)를 사용하여 스크립트를 컴파일합니다. 명령 프롬프트에서 다음 명령을 입력합니다.  
   
      `rc myresource.rc`  
   
@@ -168,9 +168,9 @@ ms.locfileid: "73123662"
   
      이번에도 `myresource.res`는 포함 리소스를 포함하는 리소스 파일의 이름입니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [등록이 필요 없는 COM interop](registration-free-com-interop.md)
-- [등록이 필요 없는 COM Interop에 대한 요구 사항](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
-- [등록이 필요 없는 활성화를 위한 COM 구성 요소 구성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
+- [등록 없는 COM 인터럽에 대한 요구 사항](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
+- [등록 없는 활성화를 위한 COM 구성 요소 구성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
 - [.NET 기반 구성 요소의 등록이 필요 없는 활성화: 연습](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973915(v=msdn.10))

@@ -10,18 +10,18 @@ helpviewer_keywords:
 - graphics [WPF], grouping Transform objects
 - TransformGroup [WPF]
 ms.assetid: 98cd1921-12bc-4bf5-8193-529228fb7402
-ms.openlocfilehash: 544d0a26f24e5ad4ed7e2e3cfa25f8e15d1be446
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 3ef11104b2a4fc775d29d2a388c9a70a69a3f10f
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452833"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112117"
 ---
 # <a name="how-to-apply-multiple-transforms-to-an-object"></a>방법: 개체에 다중 변환 적용
-이 예제에서는 <xref:System.Windows.Media.TransformGroup>를 사용 하 여 둘 이상의 <xref:System.Windows.Media.Transform> 개체를 단일 복합 <xref:System.Windows.Media.Transform>그룹화 하는 방법을 보여 줍니다.  
+이 예제에서는 두 <xref:System.Windows.Media.TransformGroup> 개 이상의 <xref:System.Windows.Media.Transform> 개체를 단일 복합체로 <xref:System.Windows.Media.Transform>그룹화하는 방법을 보여 주며 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예에서는 <xref:System.Windows.Media.TransformGroup>를 사용 하 여 <xref:System.Windows.Media.ScaleTransform> 및 <xref:System.Windows.Media.RotateTransform>를 <xref:System.Windows.Controls.Button>에 적용 합니다.  
+ 다음 예제에서는 <xref:System.Windows.Media.TransformGroup> <xref:System.Windows.Media.ScaleTransform> a와 a를 <xref:System.Windows.Media.RotateTransform> <xref:System.Windows.Controls.Button>에 적용하기 위해 을 사용합니다.  
   
  [!code-xaml[Transforms_snip#MultipleTransformExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/MultipleTransformExample.xaml#multipletransformexamplewholepage)]  
   
@@ -33,4 +33,4 @@ ms.locfileid: "77452833"
 - <xref:System.Windows.UIElement.RenderTransform%2A>
 - <xref:System.Windows.Media.TransformGroup>
 - [Transform 개요](transforms-overview.md)
-- [2차원 변환 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)
+- [2D 변환 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)

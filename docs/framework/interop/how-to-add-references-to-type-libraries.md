@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
-ms.openlocfilehash: b4b78d377cf3ff2b43f7776567583c71c479054c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1e82a499b77cc6d1d49eaf13e243201bbdc4c5fe
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123948"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181438"
 ---
 # <a name="how-to-add-references-to-type-libraries"></a>방법: 형식 라이브러리에 참조 추가
 Visual Studio에서는 형식 라이브러리에 참조를 추가하면 메타데이터가 포함된 interop 어셈블리를 생성합니다. 주 interop 어셈블리를 사용할 수 있는 경우 Visual Studio는 새 interop 어셈블리를 생성하기 전에 기존 어셈블리를 사용합니다.  
@@ -27,7 +27,7 @@ Visual Studio에서는 형식 라이브러리에 참조를 추가하면 메타�
   
 4. 목록에서 형식 라이브러리를 선택하거나 .tlb 파일을 찾습니다.  
   
-5. **확인**을 선택합니다.  
+5. **확인을**선택합니다.  
   
 6. 솔루션 탐색기에서 방금 추가한 참조에 대한 바로 가기 메뉴를 열고 **속성**을 선택합니다.  
   
@@ -40,12 +40,12 @@ Visual Studio에서는 형식 라이브러리에 참조를 추가하면 메타�
   
 1. [방법: 형식 라이브러리에서 Interop 어셈블리 생성](how-to-generate-interop-assemblies-from-type-libraries.md)의 설명에 따라 interop 어셈블리를 생성합니다.  
   
-2. Interop 어셈블리 이름과 함께 [-C# Link (컴파일러 옵션)](../../csharp/language-reference/compiler-options/link-compiler-option.md) 또는 [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) 컴파일러 옵션을 사용 하 여 COM 형식에 대 한 형식 정보를 실행 파일에 포함 합니다.  
+2. [-link(C# 컴파일러 옵션)](../../csharp/language-reference/compiler-options/link-compiler-option.md) 또는 [-link(Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) 컴파일러 옵션을 interop 어셈블리 이름과 함께 사용하여 실행 파일에서 COM 형식에 대한 형식 정보를 포함합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [형식 라이브러리를 어셈블리로 가져오기](importing-a-type-library-as-an-assembly.md)
 - [.NET Framework에 COM 구성 요소 노출](exposing-com-components.md)
-- [연습: Visual Studio에서 관리되는 어셈블리의 형식 포함](../../standard/assembly/embed-types-visual-studio.md) 
+- [연습: Visual Studio에서 관리되는 어셈블리의 형식 포함](../../standard/assembly/embed-types-visual-studio.md)
 - [-link(C# 컴파일러 옵션)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
-- [-link(Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)
+- [- 링크 (비주얼 베이직)](../../visual-basic/reference/command-line-compiler/link.md)

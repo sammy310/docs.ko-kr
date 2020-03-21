@@ -1,5 +1,5 @@
 ---
-title: ListView 컨트롤의 항목 그룹화
+title: 목록보기 컨트롤의 항목 그룹화
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,42 +12,42 @@ helpviewer_keywords:
 - groups
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 610416a1-8da4-436c-af19-5f19e654769b
-ms.openlocfilehash: 45846751780f433c29b186fe8b9a908f5d295ab3
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a1754d10de2bbb5895ae861cd17f4af1f18810e2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76736631"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141993"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control"></a>방법: Windows Forms ListView 컨트롤에서 항목 그룹화
-<xref:System.Windows.Forms.ListView> 컨트롤의 그룹화 기능을 사용 하면 관련 항목 집합을 그룹으로 표시할 수 있습니다. 이러한 그룹은 그룹 제목이 포함 된 가로 그룹 헤더로 화면에 구분 됩니다. <xref:System.Windows.Forms.ListView> 그룹을 사용 하 여 항목을 사전순으로, 날짜별로 또는 다른 논리적 그룹화로 그룹화 하 여 많은 목록을 보다 쉽게 탐색할 수 있습니다. 다음 그림은 몇 가지 그룹화 된 항목을 보여 줍니다.  
+<xref:System.Windows.Forms.ListView> 컨트롤의 그룹화 기능을 사용하면 관련 항목 집합을 그룹으로 표시할 수 있습니다. 이러한 그룹은 화면에서 그룹 제목이 포함된 가로 그룹 헤더로 구분됩니다. 그룹을 사용하여 <xref:System.Windows.Forms.ListView> 항목을 사전순, 날짜 또는 다른 논리적 그룹화하여 항목을 더 쉽게 탐색할 수 있습니다. 다음 이미지는 일부 그룹화된 항목을 보여 주며 있습니다.  
   
- ![홀수 및 심지어 ListView 그룹의 스크린샷](./media/how-to-group-items-in-a-windows-forms-listview-control-using-the-designer/odd-even-list-view-groups.gif)  
-   
- 그룹화를 사용 하려면 먼저 디자이너에서 또는 프로그래밍 방식으로 하나 이상의 그룹을 만들어야 합니다. 그룹이 정의 된 후에는 <xref:System.Windows.Forms.ListView> 항목을 그룹에 할당할 수 있습니다. 한 그룹에서 다른 그룹으로 항목을 프로그래밍 방식으로 이동할 수도 있습니다.  
+ ![홀수 및 짝수 ListView 그룹의 스크린샷입니다.](./media/how-to-group-items-in-a-windows-forms-listview-control-using-the-designer/odd-even-list-view-groups.gif)  
+
+ 그룹화를 사용하려면 먼저 디자이너 또는 프로그래밍 방식으로 하나 이상의 그룹을 만들어야 합니다. 그룹이 정의된 후 그룹에 항목을 할당할 <xref:System.Windows.Forms.ListView> 수 있습니다. 한 그룹에서 다른 그룹으로 프로그래밍 방식으로 항목을 이동할 수도 있습니다.  
   
-### <a name="to-add-groups"></a>그룹을 추가 하려면  
+### <a name="to-add-groups"></a>그룹을 추가하려면  
   
 1. <xref:System.Windows.Forms.ListViewGroupCollection.Add%2A> 컬렉션의 <xref:System.Windows.Forms.ListView.Groups%2A> 메서드를 사용합니다.  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#21)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#21)]  
   
-### <a name="to-remove-groups"></a>그룹을 제거 하려면  
+### <a name="to-remove-groups"></a>그룹을 제거하려면  
   
-1. <xref:System.Windows.Forms.ListView.Groups%2A> 컬렉션의 <xref:System.Windows.Forms.ListViewGroupCollection.RemoveAt%2A> 또는 <xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A> 메서드를 사용 합니다.  
+1. 컬렉션의 <xref:System.Windows.Forms.ListViewGroupCollection.RemoveAt%2A> <xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A> 또는 메서드를 <xref:System.Windows.Forms.ListView.Groups%2A> 사용합니다.  
   
-     <xref:System.Windows.Forms.ListViewGroupCollection.RemoveAt%2A> 메서드는 단일 그룹을 제거 합니다. <xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A> 메서드는 목록에서 모든 그룹을 제거 합니다.  
+     메서드는 <xref:System.Windows.Forms.ListViewGroupCollection.RemoveAt%2A> 단일 그룹을 제거합니다. 메서드는 <xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A> 목록에서 모든 그룹을 제거합니다.  
   
     > [!NOTE]
-    > 그룹을 제거 해도 해당 그룹 내의 항목은 제거 되지 않습니다.  
+    > 그룹을 제거해도 해당 그룹 내의 항목이 제거되지는 않습니다.  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#22](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#22)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#22](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#22)]  
   
-### <a name="to-assign-items-to-groups-or-move-items-between-groups"></a>그룹에 항목을 할당 하거나 그룹 간에 항목을 이동 하려면  
+### <a name="to-assign-items-to-groups-or-move-items-between-groups"></a>그룹에 항목을 할당하거나 그룹 간에 항목을 이동하려면  
   
-1. 개별 항목의 <xref:System.Windows.Forms.ListViewItem.Group%2A?displayProperty=nameWithType> 속성을 설정 합니다.  
+1. 개별 <xref:System.Windows.Forms.ListViewItem.Group%2A?displayProperty=nameWithType> 항목의 속성을 설정합니다.  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#23](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#23)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#23)]  

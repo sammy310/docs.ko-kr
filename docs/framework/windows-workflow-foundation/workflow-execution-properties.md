@@ -2,12 +2,12 @@
 title: 워크플로 실행 속성
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: 87775ba6efb9ec26ed2445e1f9d0944c379ba04f
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 0f958e7e112bfddc2740c2605d446493f2d49010
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988592"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182656"
 ---
 # <a name="workflow-execution-properties"></a>워크플로 실행 속성
 CLR은 TLS(스레드 로컬 스토리지)를 통해 각 스레드의 실행 컨텍스트를 유지 관리합니다. 이 실행 컨텍스트는 스레드 ID, 앰비언트 트랜잭션 및 현재 권한 집합과 같은 잘 알려진 스레드 속성은 물론 명명된 슬롯과 같은 사용자 정의 스레드 속성을 제어합니다.  
@@ -17,7 +17,7 @@ CLR은 TLS(스레드 로컬 스토리지)를 통해 각 스레드의 실행 컨�
  워크플로 실행 속성은 활동 환경에 컨텍스트별 속성을 추가하는 메커니즘을 제공합니다. 이 실행 속성을 통해 활동에서 해당 하위 트리 범위의 속성을 선언할 수 있을 뿐 아니라 CLR 개체와의 적절한 상호 작용을 위해 TLS를 설정 및 중지하는 후크를 제공할 수 있습니다.  
   
 ## <a name="creating-and-using-workflow-execution-properties"></a>워크플로 실행 속성 만들기 및 사용  
- 워크플로 실행 속성은 보통<xref:System.Activities.IExecutionProperty> 인터페이스를 구현하고, 메시징에 중점을 둔 속성을 통해 대신 <xref:System.ServiceModel.Activities.ISendMessageCallback> 및 <xref:System.ServiceModel.Activities.IReceiveMessageCallback>을 구현합니다. 워크플로 실행 속성을 만들려면 <xref:System.Activities.IExecutionProperty> 인터페이스를 구현하는 클래스를 만들고 멤버 <xref:System.Activities.IExecutionProperty.SetupWorkflowThread%2A> 및 <xref:System.Activities.IExecutionProperty.CleanupWorkflowThread%2A>를 구현합니다. 이 멤버는 자식 활동을 비롯하여 속성이 포함된 활동의 각 작업 펄스 중 스레드 로컬 저장소를 올바르게 설정하고 중지할 기회를 실행 속성에 제공합니다. 이 예제에서는 `ConsoleColorProperty`를 설정하는 `Console.ForegroundColor`를 만듭니다.  
+ 워크플로 실행 속성은 보통<xref:System.Activities.IExecutionProperty> 인터페이스를 구현하고, 메시징에 중점을 둔 속성을 통해 대신 <xref:System.ServiceModel.Activities.ISendMessageCallback> 및 <xref:System.ServiceModel.Activities.IReceiveMessageCallback>을 구현합니다. 워크플로 실행 속성을 만들려면 <xref:System.Activities.IExecutionProperty> 인터페이스를 구현하는 클래스를 만들고 멤버 <xref:System.Activities.IExecutionProperty.SetupWorkflowThread%2A> 및 <xref:System.Activities.IExecutionProperty.CleanupWorkflowThread%2A>를 구현합니다. 이 멤버는 자식 활동을 비롯하여 속성이 포함된 활동의 각 작업 펄스 중 스레드 로컬 스토리지를 올바르게 설정하고 중지할 기회를 실행 속성에 제공합니다. 이 예제에서는 `ConsoleColorProperty`를 설정하는 `Console.ForegroundColor`를 만듭니다.  
   
 ```csharp  
 class ConsoleColorProperty : IExecutionProperty  
@@ -75,14 +75,14 @@ public sealed class ConsoleColorScope : NativeActivity
 ```csharp  
 Activity wf = new Parallel  
 {  
-    Branches =   
+    Branches =
     {  
         new ConsoleColorScope  
         {  
             Color = ConsoleColor.Blue,  
             Body = new Sequence  
             {  
-                Activities =   
+                Activities =
                 {  
                     new WriteLine  
                     {  
@@ -104,7 +104,7 @@ Activity wf = new Parallel
             Color = ConsoleColor.Red,  
             Body = new Sequence  
             {  
-                Activities =   
+                Activities =
                 {  
                     new WriteLine  
                     {  
@@ -123,7 +123,7 @@ Activity wf = new Parallel
         },  
         new Sequence  
         {  
-            Activities =   
+            Activities =
             {  
                 new WriteLine  
                 {  
@@ -161,7 +161,7 @@ End default text.
   
  워크플로 실행 속성은 사용자 지정 활동 작성자가 사용할 수 있으며, <xref:System.ServiceModel.Activities.CorrelationScope> 및 <xref:System.Activities.Statements.TransactionScope> 활동과 같은 활동의 처리 관리 메커니즘도 제공합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Activities.IExecutionProperty>
 - <xref:System.Activities.IPropertyRegistrationCallback>

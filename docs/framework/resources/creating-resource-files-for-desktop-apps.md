@@ -10,22 +10,22 @@ helpviewer_keywords:
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-ms.openlocfilehash: 92e52fb130adecd6acdbeb8eac8d624d3c291094
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b679539be1aeb593124eb35a235bcc578decb4c0
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129972"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111779"
 ---
 # <a name="create-resource-files-for-net-apps"></a>.NET 앱의 리소스 파일 만들기
 
 문자열, 이미지 또는 개체 데이터와 같은 리소스를 리소스 파일에 포함하여 애플리케이션에서 쉽게 사용할 수 있게 설정할 수 있습니다. .NET Framework에서는 리소스 파일을 만드는 다섯 가지 방법을 제공합니다.
 
-- 문자열 리소스가 포함된 텍스트 파일을 만듭니다. [리소스 파일 생성기(Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)를 사용하여 텍스트 파일을 이진 리소스(.resources) 파일로 변환할 수 있습니다. 그다음에 언어 컴파일러를 사용하여 이진 리소스 파일을 애플리케이션 실행 파일 또는 애플리케이션 라이브러리에 포함하거나, [어셈블리 링커(Al.exe)](../tools/al-exe-assembly-linker.md)를 사용하여 위성 어셈블리에 포함할 수 있습니다. 자세한 내용은 [텍스트 파일의 리소스](creating-resource-files-for-desktop-apps.md#TextFiles) 섹션을 참조하세요.
+- 문자열 리소스가 포함된 텍스트 파일을 만듭니다. [리소스 파일 생성기(Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)를 사용하여 텍스트 파일을 이진 리소스(.resources) 파일로 변환할 수 있습니다. 그런 다음 언어 컴파일러를 사용하여 응용 프로그램 실행 파일 또는 응용 프로그램 라이브러리에 이진 리소스 파일을 포함하거나 [어셈블리 링커(Al.exe)를](../tools/al-exe-assembly-linker.md)사용하여 위성 어셈블리에 포함할 수 있습니다. 자세한 내용은 [텍스트 파일의 리소스](creating-resource-files-for-desktop-apps.md#TextFiles) 섹션을 참조하세요.
 
 - 문자열, 이미지 또는 개체 데이터가 포함된 XML 리소스(.resx) 파일을 만듭니다. [리소스 파일 생성기(Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)를 사용하여 .resx 파일을 이진 리소스(.resources) 파일로 변환할 수 있습니다. 그다음에 언어 컴파일러를 사용하여 이진 리소스 파일을 애플리케이션 실행 파일 또는 애플리케이션 라이브러리에 포함하거나, [어셈블리 링커(Al.exe)](../tools/al-exe-assembly-linker.md)를 사용하여 위성 어셈블리에 포함할 수 있습니다. 자세한 내용은 [.resx 파일의 리소스](creating-resource-files-for-desktop-apps.md#ResxFiles) 섹션을 참조하세요.
 
-- <xref:System.Resources> 네임스페이스의 형식을 사용하여 프로그래밍 방식으로 XML 리소스(.resx) 파일을 만듭니다. .resx 파일을 만들고, 해당 리소스를 열거하고, 특정 리소스를 이름으로 검색할 수 있습니다. 자세한 내용은 [프로그래밍 방식으로 .resx 파일 작업](working-with-resx-files-programmatically.md) 항목을 참조하세요.
+- <xref:System.Resources> 네임스페이스의 형식을 사용하여 프로그래밍 방식으로 XML 리소스(.resx) 파일을 만듭니다. .resx 파일을 만들고, 해당 리소스를 열거하고, 특정 리소스를 이름으로 검색할 수 있습니다. 자세한 내용은 [프로그래밍 방식으로 .resx 파일 작업](working-with-resx-files-programmatically.md)을 참조하세요.
 
 - 프로그래밍 방식으로 이진 리소스(.resources) 파일을 만듭니다. 그다음에 언어 컴파일러를 사용하여 파일을 애플리케이션 실행 파일 또는 애플리케이션 라이브러리에 포함하거나, [어셈블리 링커(Al.exe)](../tools/al-exe-assembly-linker.md)를 사용하여 위성 어셈블리에 포함할 수 있습니다. 자세한 내용은 [.resources 파일의 리소스](creating-resource-files-for-desktop-apps.md#ResourcesFiles) 섹션을 참조하세요.
 
@@ -58,7 +58,7 @@ name2=value2
 
  .txt 및 .restext 파일의 리소스 파일 형식은 같습니다. .restext 파일 확장명은 단순히 텍스트 파일을 텍스트 기반 리소스 파일로 즉시 식별할 수 있도록 합니다.
 
- 문자열 리소스는 *name/value* 쌍으로 나타납니다. 여기서 *name*은 리소스를 식별하는 문자열이고, *value*는 *name*을 <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>과 같은 리소스 검색 메서드에 전달할 때 반환되는 리소스 문자열입니다. *name* 및 *value*는 등호(=)로 구분해야 합니다. 예를 들면,
+ 문자열 리소스는 *name/value* 쌍으로 나타납니다. 여기서 *name*은 리소스를 식별하는 문자열이고, *value*는 *name*을 <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>과 같은 리소스 검색 메서드에 전달할 때 반환되는 리소스 문자열입니다. *name* 및 *value*는 등호(=)로 구분해야 합니다. 다음은 그 예입니다.
 
 ```text
 FileMenuName=File
@@ -70,13 +70,13 @@ HelpMenuName=Help
 > [!CAUTION]
 > 암호, 보안이 중요한 정보 또는 개인 데이터를 저장할 때는 리소스 파일을 사용하지 마세요.
 
- 빈 문자열(즉, <xref:System.String.Empty?displayProperty=nameWithType> 값을 가진 리소스)은 텍스트 파일에 사용할 수 있습니다. 예를 들면,
+ 빈 문자열(즉, <xref:System.String.Empty?displayProperty=nameWithType> 값을 가진 리소스)은 텍스트 파일에 사용할 수 있습니다. 다음은 그 예입니다.
 
 ```text
 EmptyString=
 ```
 
- .NET Framework 4.5부터, 그리고 모든 버전의 .NET Core에서, 텍스트 파일에서는 `#ifdef`*symbol*... `#endif` 및 `#if !`*symbol*... `#endif` 구문을 사용한 조건부 컴파일을 지원합니다. 그런 다음 [리소스 파일 생성기(Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)와 함께 `/define` 스위치를 하여 기호를 정의할 수 있습니다. 각 리소스에는 고유한 `#ifdef`*symbol*... `#endif` 또는 `#if !`*symbol*... `#endif` 구문이 필요합니다. `#ifdef` 문을 사용하고 *symbol*을 정의하면 연관된 리소스는 .resources 파일에 포함되고, 그렇지 않을 경우 포함되지 않습니다. `#if !` 문을 사용하고 *symbol*을 정의하지 않으면 연관된 리소스는 .resources 파일에 포함되고, 그렇지 않을 경우 포함되지 않습니다.
+ .NET Framework 4.5부터 .NET Core의 모든 버전에서 텍스트 파일은 `#ifdef` *기호가*있는 조건부 컴파일을 지원합니다. `#endif` 및 `#if !` *기호*... `#endif` 구문입니다. 그런 다음 [리소스 파일 생성기(Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)와 함께 `/define` 스위치를 하여 기호를 정의할 수 있습니다. 각 자원은 `#ifdef`자신의 *기호가*필요합니다 ... `#endif` 또는 `#if !` *기호*... `#endif` 구성할 수 있습니다. `#ifdef` 문을 사용하고 *symbol*을 정의하면 연관된 리소스는 .resources 파일에 포함되고, 그렇지 않을 경우 포함되지 않습니다. `#if !` 문을 사용하고 *symbol*을 정의하지 않으면 연관된 리소스는 .resources 파일에 포함되고, 그렇지 않을 경우 포함되지 않습니다.
 
  텍스트 파일에서 주석은 선택 사항이고 줄 시작 부분에서 세미콜론(;) 또는 파운드 기호(#) 뒤에 옵니다. 주석이 포함된 줄은 파일의 어느 곳에나 배치될 수 있습니다. 주석은 [리소스 파일 생성기(Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)를 사용하여 만든 컴파일된 .resources 파일에 포함되지 않습니다.
 
@@ -92,13 +92,13 @@ CancelButton=Cancel
 
  텍스트 파일에 중복된 *name*이 포함된 경우 [리소스 파일 생성기(Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)는 경고를 표시하고 두 번째 이름을 무시합니다.
 
- *값* 에는 줄 바꿈 문자가 포함 될 수 없지만 `\n`와 같은 C 언어 스타일 이스케이프 문자를 사용 하 여 새 줄을 나타내고 `\t` 탭을 나타낼 수 있습니다. 이스케이프 된 경우 백슬래시 문자를 포함할 수도 있습니다 (예: "\\\\"). 또한 빈 문자열이 허용됩니다.
+ *값은* 새 줄 문자를 포함할 수 없지만 C 언어 `\n` 스타일 이스케이프 `\t` 문자를 사용하여 새 줄을 나타내고 탭을 나타낼 수 있습니다. 이스케이프된 경우 백슬래시 문자를 포함할 수도 있습니다(예: "").\\\\ 또한 빈 문자열이 허용됩니다.
 
- little-endian 또는 big-endian 바이트 순서의 UTF-8 인코딩이나 UTF-16 인코딩을 사용하여 텍스트 파일 형식으로 리소스를 저장해야 합니다. 하지만 .txt 파일을 .resources 파일로 변환하는 [리소스 파일 생성기(Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)는 기본적으로 파일을 UTF-8로 처리합니다. Resgen.exe가 UTF-16을 사용하여 인코딩된 파일을 인식하게 하려면 파일 시작 부분에 유니코드 바이트 순서 표시(U+FEFF)를 포함해야 합니다.
+ UTF-8 인코딩 또는 UTF-16 인코딩을 리틀 엔디안 또는 빅 엔디안 바이트 순서로 사용하여 텍스트 파일 형식으로 리소스를 저장합니다. 하지만 .txt 파일을 .resources 파일로 변환하는 [리소스 파일 생성기(Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)는 기본적으로 파일을 UTF-8로 처리합니다. Resgen.exe가 UTF-16을 사용하여 인코딩된 파일을 인식하게 하려면 파일 시작 부분에 유니코드 바이트 순서 표시(U+FEFF)를 포함해야 합니다.
 
  텍스트 형식의 리소스 파일을 .NET 어셈블리에 포함하려면 [리소스 파일 생성기(Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)를 사용하여 파일을 이진 리소스(.resources) 파일로 변환해야 합니다. 그런 다음, 언어 컴파일러를 사용하여 .resources 파일을 .NET 어셈블리에 포함하거나, [어셈블리 링커(Al.exe)](../tools/al-exe-assembly-linker.md)를 사용하여 위성 어셈블리에 포함할 수 있습니다.
 
- 다음 예제에서는 간단한 "Hello World" 콘솔 애플리케이션에 GreetingResources.txt라는 텍스트 형식의 리소스 파일을 사용합니다. 텍스트 파일은 사용자에게 이름을 입력하도록 메시지를 표시하고 인사말을 표시하는 두 개의 문자열인 `prompt` 및 `greeting`을 정의합니다.
+ 다음 예제에서는 간단한 "Hello World" 콘솔 애플리케이션에 GreetingResources.txt라는 텍스트 형식의 리소스 파일을 사용합니다. 텍스트 파일은 두 개의 `prompt` 문자열을 정의하고 `greeting`, 그 이름은 입력하고 인사말을 표시하라는 메시지가 표시됩니다.
 
 ```text
 # GreetingResources.txt
@@ -186,7 +186,7 @@ csc greeting.cs -resource:GreetingResources.resources
 > [!NOTE]
 > 암호, 보안이 중요한 정보 또는 개인 데이터를 저장할 때는 리소스 파일을 사용하지 마세요.
 
- 다음 예제에서는 문자열 6개, 아이콘 한 개 및 애플리케이션 정의 개체 2개(`Automobile` 개체 2개)를 저장하는 CarResources.resources라는 .resources 파일을 프로그래밍 방식으로 만듭니다. 이 예제에서 정의되고 인스턴스화된 `Automobile` 클래스는 <xref:System.SerializableAttribute> 특성으로 태그가 지정되어 이진 serialization 포맷터를 통해 유지될 수 있습니다.
+ 다음 예제에서는 문자열 6개, 아이콘 한 개 및 애플리케이션 정의 개체 2개(`Automobile` 개체 2개)를 저장하는 CarResources.resources라는 .resources 파일을 프로그래밍 방식으로 만듭니다. 예제에서 정의되고 인스턴스화되는 클래스는 `Automobile` <xref:System.SerializableAttribute> 특성에 태그가 지정되어 이진 직렬화 formatter에 의해 유지될 수 있습니다.
 
  [!code-csharp[Conceptual.Resources.Resources#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resources/cs/resources1.cs#1)]
  [!code-vb[Conceptual.Resources.Resources#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resources/vb/resources1.vb#1)]
@@ -202,8 +202,8 @@ csc greeting.cs -resource:GreetingResources.resources
 
 컴파일 시간에 Visual Studio에서는 먼저 프로젝트의 .resx 파일을 이진 리소스(.resources) 파일로 변환하고 프로젝트 *obj* 디렉터리의 하위 디렉터리에 저장합니다. Visual Studio에서는 지역화된 리소스가 포함되지 않은 모든 리소스 파일을 프로젝트에서 생성된 주 어셈블리에 포함합니다. 리소스 파일에 지역화된 리소스가 포함된 경우 Visual Studio에서는 각 지역화된 문화권에 대한 개별 위성 어셈블리에 리소스 파일을 포함합니다. 그런 다음, 각 위성 어셈블리를 이름이 지역화된 문화권과 일치하는 디렉터리에 저장합니다. 예를 들어 지역화된 영어(미국) 리소스는 en-US 하위 디렉터리의 위성 어셈블리에 저장됩니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Resources>
 - [데스크톱 앱의 리소스](index.md)
-- [리소스 패키징 및 배포](packaging-and-deploying-resources-in-desktop-apps.md)
+- [Packaging and Deploying Resources](packaging-and-deploying-resources-in-desktop-apps.md)

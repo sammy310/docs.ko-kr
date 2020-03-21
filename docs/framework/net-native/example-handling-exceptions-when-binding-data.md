@@ -2,21 +2,21 @@
 title: '예: 데이터를 바인딩하는 경우 예외 처리'
 ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
-ms.openlocfilehash: 7ab5477257bd6d32d901ad01518f7a75081d2a10
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b774d1bce4f4d1c03258ed44b27d3871e7c5275f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128451"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181029"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>예: 데이터를 바인딩하는 경우 예외 처리
 > [!NOTE]
 > 이 항목은 시험판 소프트웨어인 .NET Native Developer Preview를 참조합니다. 이 Preview 버전은 [Microsoft Connect 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=394611)에서 다운로드할 수 있습니다(등록 필요).  
   
- 다음 예제에서는 .NET 네이티브 도구 체인을 사용 하 여 컴파일한 앱이 데이터 바인딩을 시도 하는 경우 throw 되는 [MissingMetadataException](missingmetadataexception-class-net-native.md) 예외를 해결 하는 방법을 보여 줍니다. 예외 정보는 다음과 같습니다.  
+ 다음 예제에서는 .NET 네이티브 도구 체인으로 컴파일된 앱이 데이터를 바인딩하려고 할 때 throw되는 [MissingMetadataException](missingmetadataexception-class-net-native.md) 예외를 해결하는 방법을 보여 주며 있습니다. 예외 정보는 다음과 같습니다.  
   
 ```output
-This operation cannot be carried out as metadata for the following type was removed for performance reasons:   
+This operation cannot be carried out as metadata for the following type was removed for performance reasons:
 App.ViewModels.MainPageVM  
 ```  
   
@@ -31,13 +31,13 @@ System::Reflection::PropertyInfo.GetValue+0x22
 System::Runtime::InteropServices::WindowsRuntime::CustomPropertyImpl.GetValue+0x42  
 App!$66_Interop::McgNative.Func_IInspectable_IInspectable+0x158  
 App!$66_Interop::McgNative::__vtable_Windows_UI_Xaml_Data__ICustomProperty.GetValue__STUB+0x46  
-Windows_UI_Xaml!DirectUI::PropertyProviderPropertyAccess::GetValue+0x3f   
-Windows_UI_Xaml!DirectUI::PropertyAccessPathStep::GetValue+0x31   
+Windows_UI_Xaml!DirectUI::PropertyProviderPropertyAccess::GetValue+0x3f
+Windows_UI_Xaml!DirectUI::PropertyAccessPathStep::GetValue+0x31
 Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113  
 ```  
   
 ## <a name="what-was-the-app-doing"></a>앱이 수행 중이었던 작업  
- 스택의 기본에서 <xref:Windows.UI.Xaml?displayProperty=nameWithType> 네임 스페이스의 프레임은 XAML 렌더링 엔진이 실행 되 고 있음을 표시 합니다.   또한 <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> 메서드가 사용되었으므로 해당 메타데이터가 제거된 형식에 대해 속성 값의 리플렉션 기반 조회를 수행했음을 알 수 있습니다.  
+ 스택의 맨 아래에서 네임스페이스의 <xref:Windows.UI.Xaml?displayProperty=nameWithType> 프레임은 XAML 렌더링 엔진이 실행 중임을 나타냅니다.   또한 <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> 메서드가 사용되었으므로 해당 메타데이터가 제거된 형식에 대해 속성 값의 리플렉션 기반 조회를 수행했음을 알 수 있습니다.  
   
  메타데이터 지시문을 제공하는 첫 단계에서는 모든 속성에 액세스할 수 있도록 형식에 대해 `serialize` 메타데이터를 추가합니다.  
   
@@ -57,7 +57,7 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
   
  그러나 `ViewModel`을 XAML 페이지로 지정하여 도구 체인이 컴파일 타임에 속성 바인딩을 올바른 형식과 연결하고, 런타임 지시문을 사용하지 않고 메타데이터를 유지하도록 할 수는 있습니다.  예를 들어 속성에 <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> 특성을 적용할 수 있습니다. 이렇게 하면 XAML 컴파일러가 필요한 조회 정보를 생성하고 Default.rd.xml 파일에서 런타임 지시문이 필요하도록 설정하지 않습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [시작](getting-started-with-net-native.md)
 - [예: 동적 프로그래밍 문제 해결](example-troubleshooting-dynamic-programming.md)

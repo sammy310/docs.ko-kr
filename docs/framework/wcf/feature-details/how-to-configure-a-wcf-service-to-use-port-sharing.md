@@ -1,19 +1,19 @@
 ---
-title: '방법: 포트 공유를 사용 하도록 Windows Communication Foundation 서비스 구성'
+title: '방법: 포트 공유를 사용하도록 Windows Communication Foundation 서비스 구성'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6400bc71-a858-4ac2-8d5a-caa72d3b5482
-ms.openlocfilehash: e92ce3468bd43456ac3f838cfc44ea7c6624502b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cd8d76137ac195e452a7d66fb6ddbeda405a922f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912211"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185093"
 ---
-# <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>방법: 포트 공유를 사용 하도록 Windows Communication Foundation 서비스 구성
-WCF (Windows Communication Foundation) 응용 프로그램에서 net.tcp://포트 공유를 사용 하는 가장 쉬운 방법은를 <xref:System.ServiceModel.NetTcpBinding>사용 하 여 서비스를 노출 하는 것입니다.  
+# <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>방법: 포트 공유를 사용하도록 Windows Communication Foundation 서비스 구성
+Net.tcp를 사용하는 가장 쉬운 방법은 WCF(Windows 통신 재단) 응용 프로그램에서 net.tcp:// 포트 공유를 사용하는 가장 쉬운 방법은 <xref:System.ServiceModel.NetTcpBinding>을 사용하여 서비스를 노출하는 것입니다.  
   
  이 바인딩에서는 이 바인딩을 사용하여 구성하는 서비스에 대해 net.tcp:// 포트 공유를 사용할지 여부를 제어하는 <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> 속성을 제공합니다.  
   
@@ -21,7 +21,7 @@ WCF (Windows Communication Foundation) 응용 프로그램에서 net.tcp://포�
   
 ### <a name="to-enable-nettcp-port-sharing-on-a-nettcpbinding-in-code"></a>코드로 NetTcpBinding에서 net.tcp:// 포트 공유를 사용하도록 설정하려면  
   
-1. 라는 `IMyService` 계약을 구현 하 고 `MyService`를 호출 하는 서비스를 만듭니다.  
+1. 라는 계약을 구현 `IMyService` 하 고 호출 `MyService`하는 서비스를 만듭니다 .  
   
      [!code-csharp[c_ConfigurePortSharing#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_configureportsharing/cs/source.cs#1)]
      [!code-vb[c_ConfigurePortSharing#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_configureportsharing/vb/source.vb#1)]  
@@ -46,7 +46,7 @@ WCF (Windows Communication Foundation) 응용 프로그램에서 net.tcp://포�
 ```xml  
 <system.serviceModel>  
   <bindings>  
-    <netTcpBinding name="portSharingBinding"   
+    <netTcpBinding name="portSharingBinding"
                    portSharingEnabled="true" />  
   </bindings>  
   <services>  
@@ -60,7 +60,7 @@ WCF (Windows Communication Foundation) 응용 프로그램에서 net.tcp://포�
 </system.serviceModel>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [Net.TCP 포트 공유](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)
-- [방법: Net.tcp 포트 공유 서비스를 사용 하도록 설정](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)
+- [방법: Net.TCP Port Sharing Service 사용](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)

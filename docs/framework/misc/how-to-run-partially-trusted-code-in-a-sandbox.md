@@ -1,5 +1,5 @@
 ---
-title: '방법: 샌드박스에서 부분적으로 신뢰할 수 있는 코드 실행'
+title: '방법: 샌드박스에서 부분 신뢰 코드 실행'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - restricted security environment
 - code security, sandboxing
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
-ms.openlocfilehash: 0191846f5589b0162ba342161fb5919ff20099d4
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: b2f5a72e747f6c71743a7b22fe9f1962ac2f6b53
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215852"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181175"
 ---
-# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>방법: 샌드박스에서 부분적으로 신뢰할 수 있는 코드 실행
+# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>방법: 샌드박스에서 부분 신뢰 코드 실행
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  샌드박싱은 코드에 부여되는 액세스 권한을 제한하는 제한된 보안 환경에서 코드를 실행하는 사례입니다. 예를 들어 완전히 신뢰할 수는 없는 출처의 관리되는 라이브러리가 있으면 완전히 신뢰할 수 있는 것처럼 실행하면 안 됩니다. 대신에 코드에 필요한 항목에 대한 권한을 제한하는 샌드박스에 코드를 배치해야 합니다(예: <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> 권한).  
@@ -42,7 +42,7 @@ AppDomain.CreateDomain( string friendlyName,
   
  `grantSet` 매개 변수에 대해 명시적으로 만든 권한 집합을 지정하거나 <xref:System.Security.SecurityManager.GetStandardSandbox%2A> 메서드에서 만들어진 표준 권한 집합을 지정할 수 있습니다.  
   
- 대부분 <xref:System.AppDomain> 로드와 달리 <xref:System.AppDomain> 매개 변수에서 제공되는 `securityInfo`에 대한 증거는 부분적으로 신뢰할 수 있는 어셈블리에 대한 권한 집합을 결정하는 데 사용되지 않습니다. 대신에 `grantSet` 매개 변수를 통해 독립적으로 지정됩니다. 그러나 격리된 스토리지 범위를 결정하는 것과 같은 다른 용도에는 이 증거를 사용할 수 있습니다.  
+ 대부분 <xref:System.AppDomain> 로드와 달리 `securityInfo` 매개 변수에서 제공되는 <xref:System.AppDomain>에 대한 증거는 부분적으로 신뢰할 수 있는 어셈블리에 대한 권한 집합을 결정하는 데 사용되지 않습니다. 대신에 `grantSet` 매개 변수를 통해 독립적으로 지정됩니다. 그러나 격리된 스토리지 범위를 결정하는 것과 같은 다른 용도에는 이 증거를 사용할 수 있습니다.  
   
 ### <a name="to-run-an-application-in-a-sandbox"></a>샌드박스에서 애플리케이션을 실행하려면 다음을 수행합니다.  
   
@@ -63,7 +63,7 @@ AppDomain.CreateDomain( string friendlyName,
   
      <xref:System.Security.SecurityManager.GetStandardSandbox%2A> 메서드는 증거의 영역에 따라 `Internet` 권한 집합 또는 `LocalIntranet` 권한 집합을 반환합니다. <xref:System.Security.SecurityManager.GetStandardSandbox%2A>는 참조로 전달되는 일부 증거 개체에 대한 ID 권한을 생성합니다.  
   
-2. 신뢰할 수 없는 코드를 호출하는 호스팅 클래스(이 예제에서 이름은 `Sandboxer`)가 포함된 어셈블리에 서명합니다. 어셈블리에 서명하는 데 사용된 <xref:System.Security.Policy.StrongName>을 <xref:System.Security.Policy.StrongName> 호출에 대한 `fullTrustAssemblies` 매개 변수의 <xref:System.AppDomain.CreateDomain%2A> 배열에 추가합니다. 부분 신뢰 코드를 실행할 수 있게 하거나 부분 신뢰 애플리케이션에 서비스를 제공하려면 호스팅 클래스가 완전히 신뢰된 코드로 실행되어야 합니다. 어셈블리의 <xref:System.Security.Policy.StrongName>을 읽는 방법은 다음과 같습니다.  
+2. 신뢰할 수 없는 코드를 호출하는 호스팅 클래스(이 예제에서 이름은 `Sandboxer`)가 포함된 어셈블리에 서명합니다. 어셈블리에 서명하는 데 사용된 <xref:System.Security.Policy.StrongName>을 <xref:System.AppDomain.CreateDomain%2A> 호출에 대한 `fullTrustAssemblies` 매개 변수의 <xref:System.Security.Policy.StrongName> 배열에 추가합니다. 부분 신뢰 코드를 실행할 수 있게 하거나 부분 신뢰 애플리케이션에 서비스를 제공하려면 호스팅 클래스가 완전히 신뢰된 코드로 실행되어야 합니다. 어셈블리의 <xref:System.Security.Policy.StrongName>을 읽는 방법은 다음과 같습니다.  
   
     ```csharp
     StrongName fullTrustAssembly = typeof(Sandboxer).Assembly.Evidence.GetHostEvidence<StrongName>();  
@@ -71,7 +71,7 @@ AppDomain.CreateDomain( string friendlyName,
   
      mscorlib 및 System.dll과 같은 .NET Framework 어셈블리는 전역 어셈블리 캐시에서 완전 신뢰된 코드로 로드되므로 완전 신뢰 목록에 추가하면 안 됩니다.  
   
-3. <xref:System.AppDomainSetup> 메서드의 <xref:System.AppDomain.CreateDomain%2A> 매개 변수를 초기화합니다. 이 매개 변수를 사용하여 새 <xref:System.AppDomain>의 설정을 대부분 제어할 수 있습니다. <xref:System.AppDomainSetup.ApplicationBase%2A> 속성은 중요한 설정이고 호스팅 애플리케이션의 <xref:System.AppDomainSetup.ApplicationBase%2A>에 대한 <xref:System.AppDomain> 속성과 달라야 합니다. <xref:System.AppDomainSetup.ApplicationBase%2A> 설정이 같으면 부분 신뢰 애플리케이션이 호스팅 애플리케이션에 연결되어 부분 신뢰 애플리케이션이 정의한 예외를 완전 신뢰된 코드로 로드하므로 부분 신뢰 애플리케이션이 악용될 수 있습니다. 이는 catch(예외)를 권장하지 않는 또 다른 이유입니다. 호스트의 애플리케이션 기준 위치를 샌드박싱된 애플리케이션의 애플리케이션 기준 위치와 다르게 설정하면 악용의 위험이 완화됩니다.  
+3. <xref:System.AppDomain.CreateDomain%2A> 메서드의 <xref:System.AppDomainSetup> 매개 변수를 초기화합니다. 이 매개 변수를 사용하여 새 <xref:System.AppDomain>의 설정을 대부분 제어할 수 있습니다. <xref:System.AppDomainSetup.ApplicationBase%2A> 속성은 중요한 설정이고 호스팅 애플리케이션의 <xref:System.AppDomain>에 대한 <xref:System.AppDomainSetup.ApplicationBase%2A> 속성과 달라야 합니다. <xref:System.AppDomainSetup.ApplicationBase%2A> 설정이 같으면 부분 신뢰 애플리케이션이 호스팅 애플리케이션에 연결되어 부분 신뢰 애플리케이션이 정의한 예외를 완전 신뢰된 코드로 로드하므로 부분 신뢰 애플리케이션이 악용될 수 있습니다. 이는 catch(예외)를 권장하지 않는 또 다른 이유입니다. 호스트의 애플리케이션 기준 위치를 샌드박싱된 애플리케이션의 애플리케이션 기준 위치와 다르게 설정하면 악용의 위험이 완화됩니다.  
   
     ```csharp
     AppDomainSetup adSetup = new AppDomainSetup();  
@@ -83,20 +83,20 @@ AppDomain.CreateDomain( string friendlyName,
      이 메서드에 대한 서명은 다음과 같습니다.  
   
     ```csharp
-    public static AppDomain CreateDomain(string friendlyName,   
-        Evidence securityInfo, AppDomainSetup info, PermissionSet grantSet,   
+    public static AppDomain CreateDomain(string friendlyName,
+        Evidence securityInfo, AppDomainSetup info, PermissionSet grantSet,
         params StrongName[] fullTrustAssemblies)  
     ```  
   
      추가 정보:  
   
-    - 이는 <xref:System.AppDomain.CreateDomain%2A>을 매개 변수로 사용하는 <xref:System.Security.PermissionSet> 메서드의 유일한 오버로드이므로 부분 신뢰 설정에서 애플리케이션을 로드하도록 하는 유일한 오버로드입니다.  
+    - 이는 <xref:System.Security.PermissionSet>을 매개 변수로 사용하는 <xref:System.AppDomain.CreateDomain%2A> 메서드의 유일한 오버로드이므로 부분 신뢰 설정에서 애플리케이션을 로드하도록 하는 유일한 오버로드입니다.  
   
     - `evidence` 매개 변수는 권한 집합을 계산하는 데 사용되지 않으며, .NET Framework의 기타 기능을 통한 식별에 사용됩니다.  
   
-    - <xref:System.AppDomainSetup.ApplicationBase%2A> 매개 변수의 `info` 속성의 설정은 이 오버로드에 대해 필수입니다.  
+    - `info` 매개 변수의 <xref:System.AppDomainSetup.ApplicationBase%2A> 속성의 설정은 이 오버로드에 대해 필수입니다.  
   
-    - `fullTrustAssemblies` 매개 변수에는 `params` 배열을 만드는 데 필요하지 않음을 의미하는 <xref:System.Security.Policy.StrongName> 키워드가 있습니다. 0, 1 또는 더 강력한 이름을 매개 변수로 전달할 수 있습니다.  
+    - `fullTrustAssemblies` 매개 변수에는 <xref:System.Security.Policy.StrongName> 배열을 만드는 데 필요하지 않음을 의미하는 `params` 키워드가 있습니다. 0, 1 또는 더 강력한 이름을 매개 변수로 전달할 수 있습니다.  
   
     - 애플리케이션 도메인을 만드는 코드는 다음과 같습니다.  
   
@@ -114,7 +114,7 @@ AppDomain.CreateDomain( string friendlyName,
   
     - 어셈블리가 포함되지 않은 위치를 가리키는 코드베이스를 사용할 수 있습니다.  
   
-    - 중요 클래스의 인스턴스를 만들 수 있는 완전 신뢰(<xref:System.Security.CodeAccessPermission.Assert%2A>)의 경우 <xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType> 아래에서 만들기를 수행할 수 있습니다. 이는 어셈블리에 투명도 표시가 없고 완전히 신뢰할 수 있는 상태로 로드 될 때마다 발생 합니다. 따라서이 함수를 사용 하 여 신뢰 하는 코드만 만들어야 하므로 새 응용 프로그램 도메인에서 완전히 신뢰할 수 있는 클래스의 인스턴스만 만드는 것이 좋습니다.  
+    - 중요 클래스의 인스턴스를 만들 수 있는 완전 신뢰(<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>)의 경우 <xref:System.Security.CodeAccessPermission.Assert%2A> 아래에서 만들기를 수행할 수 있습니다. 이 문제는 어셈블리에 투명도 표시가 없고 완전히 신뢰할 수 있는 것으로 로드될 때마다 발생합니다. 따라서 이 함수를 사용하여 신뢰할 수 있는 코드만 만들어야 하며 새 응용 프로그램 도메인에서 완전히 신뢰할 수 있는 클래스의 인스턴스만 만드는 것이 좋습니다.  
   
     ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  
@@ -134,7 +134,7 @@ AppDomain.CreateDomain( string friendlyName,
     Sandboxer newDomainInstance = (Sandboxer) handle.Unwrap();  
     ```  
   
-7. 방금 만든 `ExecuteUntrustedCode` 클래스 인스턴스에서 `Sandboxer` 메서드를 호출합니다.  
+7. 방금 만든 `Sandboxer` 클래스 인스턴스에서 `ExecuteUntrustedCode` 메서드를 호출합니다.  
   
     ```csharp
     newDomainInstance.ExecuteUntrustedCode(untrustedAssembly, untrustedClass, entryPoint, parameters);  
@@ -145,7 +145,7 @@ AppDomain.CreateDomain( string friendlyName,
     ```csharp
     public void ExecuteUntrustedCode(string assemblyName, string typeName, string entryPoint, Object[] parameters)  
     {  
-        //Load the MethodInfo for a method in the new assembly. This might be a method you know, or   
+        //Load the MethodInfo for a method in the new assembly. This might be a method you know, or
         //you can use Assembly.EntryPoint to get to the entry point in an executable.  
         MethodInfo target = Assembly.Load(assemblyName).GetType(typeName).GetMethod(entryPoint);  
         try  
@@ -155,7 +155,7 @@ AppDomain.CreateDomain( string friendlyName,
         }  
         catch (Exception ex)  
         {  
-        //When information is obtained from a SecurityException extra information is provided if it is   
+        //When information is obtained from a SecurityException extra information is provided if it is
         //accessed in full-trust.  
             new PermissionSet(PermissionState.Unrestricted).Assert();  
             Console.WriteLine("SecurityException caught:\n{0}", ex.ToString());  
@@ -167,16 +167,16 @@ AppDomain.CreateDomain( string friendlyName,
   
      <xref:System.Reflection>은 부분적으로 신뢰할 수 있는 어셈블리에서 메서드 핸들을 가져오는 데 사용됩니다. 핸들을 사용하여 최소 권한을 사용하는 안전한 방법으로 코드를 실행할 수 있습니다.  
   
-     이전 코드에서 <xref:System.Security.PermissionSet.Assert%2A>을 인쇄하기 전에 완전 신뢰 권한에 대한 <xref:System.Security.SecurityException>를 기록해 둡니다.  
+     이전 코드에서 <xref:System.Security.SecurityException>을 인쇄하기 전에 완전 신뢰 권한에 대한 <xref:System.Security.PermissionSet.Assert%2A>를 기록해 둡니다.  
   
     ```csharp
     new PermissionSet(PermissionState.Unrestricted).Assert()  
     ```  
   
-     완전 신뢰 어설션은 <xref:System.Security.SecurityException>에서 확장된 정보를 가져오는 데 사용됩니다. <xref:System.Security.PermissionSet.Assert%2A>를 사용하지 않으면 <xref:System.Security.SecurityException.ToString%2A>의 <xref:System.Security.SecurityException> 메서드는 스택에 부분적으로 신뢰할 수 있는 코드가 있는지 검색하고 반환된 정보를 제한합니다. 부분 신뢰 코드가 해당 정보를 읽을 수 없으면 이로 인해 보안 문제가 발생할 수 있지만 <xref:System.Security.Permissions.UIPermission>을 부여하지 않음으로써 위험이 완화됩니다. 완전 신뢰 어설션은 꼭 필요할 때만, 확실히 부분 신뢰 코드를 완전 신뢰로 높일 수 없을 때만 사용해야 합니다. 원칙적으로 같은 함수에서, 그리고 완전 신뢰에 대한 어설션을 호출한 후에는 신뢰할 수 없는 코드를 호출하지 마세요. 어설션 사용을 완료하면 항상 어설션을 되돌리는 것이 좋습니다.  
+     완전 신뢰 어설션은 <xref:System.Security.SecurityException>에서 확장된 정보를 가져오는 데 사용됩니다. <xref:System.Security.PermissionSet.Assert%2A>를 사용하지 않으면 <xref:System.Security.SecurityException>의 <xref:System.Security.SecurityException.ToString%2A> 메서드는 스택에 부분적으로 신뢰할 수 있는 코드가 있는지 검색하고 반환된 정보를 제한합니다. 부분 신뢰 코드가 해당 정보를 읽을 수 없으면 이로 인해 보안 문제가 발생할 수 있지만 <xref:System.Security.Permissions.UIPermission>을 부여하지 않음으로써 위험이 완화됩니다. 완전 신뢰 어설션은 꼭 필요할 때만, 확실히 부분 신뢰 코드를 완전 신뢰로 높일 수 없을 때만 사용해야 합니다. 원칙적으로 같은 함수에서, 그리고 완전 신뢰에 대한 어설션을 호출한 후에는 신뢰할 수 없는 코드를 호출하지 마세요. 어설션 사용을 완료하면 항상 어설션을 되돌리는 것이 좋습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 이전 섹션의 절차를 구현합니다. 예제에서 Visual Studio 솔루션의 `Sandboxer` 프로젝트에는 `UntrustedCode` 클래스를 구현하는 `UntrustedClass` 프로젝트가 들어 있습니다. 이 시나리오에서는 제공한 숫자가 피보나치 수인지를 나타내는 `true` 또는 `false`를 반환해야 하는 메서드가 포함된 라이브러리 어셈블리를 다운로드했다고 가정합니다. 대신에 메서드는 컴퓨터에서 파일을 읽으려고 시도합니다. 다음 예제에서는 신뢰할 수 없는 코드를 보여 줍니다.  
+ 다음 예제에서는 이전 섹션의 절차를 구현합니다. 예제에서 Visual Studio 솔루션의 `Sandboxer` 프로젝트에는 `UntrustedClass` 클래스를 구현하는 `UntrustedCode` 프로젝트가 들어 있습니다. 이 시나리오에서는 제공한 숫자가 피보나치 수인지를 나타내는 `true` 또는 `false`를 반환해야 하는 메서드가 포함된 라이브러리 어셈블리를 다운로드했다고 가정합니다. 대신에 메서드는 컴퓨터에서 파일을 읽으려고 시도합니다. 다음 예제에서는 신뢰할 수 없는 코드를 보여 줍니다.  
   
 ```csharp
 using System;  
@@ -210,7 +210,7 @@ using System.Security.Permissions;
 using System.Reflection;  
 using System.Runtime.Remoting;  
   
-//The Sandboxer class needs to derive from MarshalByRefObject so that we can create it in another   
+//The Sandboxer class needs to derive from MarshalByRefObject so that we can create it in another
 // AppDomain and refer to it from the default AppDomain.  
 class Sandboxer : MarshalByRefObject  
 {  
@@ -221,12 +221,12 @@ class Sandboxer : MarshalByRefObject
     private static Object[] parameters = { 45 };  
     static void Main()  
     {  
-        //Setting the AppDomainSetup. It is very important to set the ApplicationBase to a folder   
+        //Setting the AppDomainSetup. It is very important to set the ApplicationBase to a folder
         //other than the one in which the sandboxer resides.  
         AppDomainSetup adSetup = new AppDomainSetup();  
         adSetup.ApplicationBase = Path.GetFullPath(pathToUntrusted);  
   
-        //Setting the permissions for the AppDomain. We give the permission to execute and to   
+        //Setting the permissions for the AppDomain. We give the permission to execute and to
         //read/discover the location where the untrusted code is loaded.  
         PermissionSet permSet = new PermissionSet(PermissionState.None);  
         permSet.AddPermission(new SecurityPermission(SecurityPermissionFlag.Execution));  
@@ -238,19 +238,19 @@ class Sandboxer : MarshalByRefObject
         AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
   
         //Use CreateInstanceFrom to load an instance of the Sandboxer class into the  
-        //new AppDomain.   
+        //new AppDomain.
         ObjectHandle handle = Activator.CreateInstanceFrom(  
             newDomain, typeof(Sandboxer).Assembly.ManifestModule.FullyQualifiedName,  
             typeof(Sandboxer).FullName  
             );  
-        //Unwrap the new domain instance into a reference in this domain and use it to execute the   
+        //Unwrap the new domain instance into a reference in this domain and use it to execute the
         //untrusted code.  
         Sandboxer newDomainInstance = (Sandboxer) handle.Unwrap();  
         newDomainInstance.ExecuteUntrustedCode(untrustedAssembly, untrustedClass, entryPoint, parameters);  
     }  
     public void ExecuteUntrustedCode(string assemblyName, string typeName, string entryPoint, Object[] parameters)  
     {  
-        //Load the MethodInfo for a method in the new Assembly. This might be a method you know, or   
+        //Load the MethodInfo for a method in the new Assembly. This might be a method you know, or
         //you can use Assembly.EntryPoint to get to the main function in an executable.  
         MethodInfo target = Assembly.Load(assemblyName).GetType(typeName).GetMethod(entryPoint);  
         try  
@@ -260,7 +260,7 @@ class Sandboxer : MarshalByRefObject
         }  
         catch (Exception ex)  
         {  
-            // When we print informations from a SecurityException extra information can be printed if we are   
+            // When we print informations from a SecurityException extra information can be printed if we are
             //calling it with a full-trust stack.  
             new PermissionSet(PermissionState.Unrestricted).Assert();  
             Console.WriteLine("SecurityException caught:\n{0}", ex.ToString());  

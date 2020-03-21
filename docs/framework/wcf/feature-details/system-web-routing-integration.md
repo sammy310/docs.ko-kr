@@ -2,15 +2,15 @@
 title: System.Web.Routing 통합
 ms.date: 03/30/2017
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
-ms.openlocfilehash: fdc355d4560294a16f3e9c488fdaf142d2982c0d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a80b5c3b336b4fd18b347a25ceaf509baf6461b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745333"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184391"
 ---
 # <a name="systemwebrouting-integration"></a>System.Web.Routing 통합
-IIS (인터넷 정보 서비스)에서 WCF (Windows Communication Foundation) 서비스를 호스트 하는 경우 가상 디렉터리에 .svc 파일을 저장 합니다. 이 .svc 파일은 사용할 서비스 호스트 팩터리와 함께 서비스를 구현하는 클래스를 지정합니다. 서비스에 대 한 요청을 만들 때 URI에 .svc 파일을 지정 합니다 (예: `http://contoso.com/EmployeeServce.svc`). REST 서비스를 작성하는 프로그래머에게는 이러한 유형의 URI가 적합하지 않을 수 있습니다. REST 서비스의 URI는 특정 리소스를 지정하며 일반적으로 확장명을 포함하지 않습니다. <xref:System.Web.Routing> 통합 기능을 사용 하면 확장이 없는 Uri에 응답 하는 WCF REST 서비스를 호스팅할 수 있습니다. 라우팅에 대 한 자세한 내용은 [ASP.NET 라우팅](https://docs.microsoft.com/previous-versions/aspnet/cc668201(v=vs.100))을 참조 하세요.  
+IIS(인터넷 정보 서비스)에서 WCF(Windows 통신 재단) 서비스를 호스팅할 때 가상 디렉터리에 .svc 파일을 배치합니다. 이 .svc 파일은 사용할 서비스 호스트 팩터리와 함께 서비스를 구현하는 클래스를 지정합니다. 서비스에 대한 요청을 할 때 URI에서 .svc 파일을 지정합니다( 예: `http://contoso.com/EmployeeServce.svc`. REST 서비스를 작성하는 프로그래머에게는 이러한 유형의 URI가 적합하지 않을 수 있습니다. REST 서비스의 URI는 특정 리소스를 지정하며 일반적으로 확장명을 포함하지 않습니다. <xref:System.Web.Routing> 통합 기능을 사용하면 확장 없이 URI에 응답하는 WCF REST 서비스를 호스팅할 수 있습니다. 라우팅에 대한 자세한 내용은 [ASP.NET 라우팅을](https://docs.microsoft.com/previous-versions/aspnet/cc668201(v=vs.100))참조하십시오.  
   
 ## <a name="using-systemwebrouting-integration"></a>System.Web.Routing 통합 사용  
  <xref:System.Web.Routing> 통합 기능을 사용하려면 <xref:System.ServiceModel.Activation.ServiceRoute> 클래스를 사용하여 하나 이상의 경로를 만들어 Global.asax 파일의 <xref:System.Web.Routing.RouteTable>에 추가합니다. 이러한 경로는 서비스가 응답하는 상대 URI를 지정합니다. 다음 예제에 이 작업을 수행하는 방법이 나와 있습니다.  
@@ -29,7 +29,7 @@ IIS (인터넷 정보 서비스)에서 WCF (Windows Communication Foundation) �
   
     private void RegisterRoutes(RouteCollection routes)  
     {  
-        routes.Add(new ServiceRoute("Customers", new WebServiceHostFactory(), typeof(Service)));   
+        routes.Add(new ServiceRoute("Customers", new WebServiceHostFactory(), typeof(Service)));
    }  
 </script>  
 ```  
@@ -49,7 +49,7 @@ IIS (인터넷 정보 서비스)에서 WCF (Windows Communication Foundation) �
     </system.webServer>  
 ```  
   
- 그러면 라우팅에 필요한 모듈과 처리기가 로드됩니다. 자세한 내용은 [라우팅](../../../../docs/framework/wcf/feature-details/routing.md)을 참고하시기 바랍니다. 또한 다음 예제와 같이 `aspNetCompatibilityEnabled` 요소의 `true` 특성도 `<serviceHostingEnvironment>`로 설정해야 합니다.  
+ 그러면 라우팅에 필요한 모듈과 처리기가 로드됩니다. 자세한 내용은 [라우팅](../../../../docs/framework/wcf/feature-details/routing.md)을 참조하세요. 또한 다음 예제와 같이 `aspNetCompatibilityEnabled` 요소의 `true` 특성도 `<serviceHostingEnvironment>`로 설정해야 합니다.  
   
 ```xml  
 <system.serviceModel>  
@@ -60,7 +60,7 @@ IIS (인터넷 정보 서비스)에서 WCF (Windows Communication Foundation) �
   
  서비스를 구현하는 클래스에서는 다음 예제와 같이 ASP.NET 호환성 요구 사항을 사용하도록 설정해야 합니다.  
   
-```csharp 
+```csharp
 [ServiceContract]  
 [AspNetCompatibilityRequirements(RequirementsMode=AspNetCompatibilityRequirementsMode.Allowed)]  
     public class Service  

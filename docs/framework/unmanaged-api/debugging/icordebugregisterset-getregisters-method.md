@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: fdf91864-48ea-4aa6-b70c-361b7a3184c7
 topic_type:
 - apiref
-ms.openlocfilehash: 737993ac80b26d490915af3e97fd6a9552246aee
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 32e899622b9c649a08e3bca1b6645f70dcbcbb19
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792116"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178538"
 ---
 # <a name="icordebugregistersetgetregisters-method"></a>ICorDebugRegisterSet::GetRegisters 메서드
-비트 마스크로 지정 된 각 레지스터의 값 (현재 코드를 실행 중인 컴퓨터)을 가져옵니다.  
+비트 마스크에 의해 지정된 각 레지스터(현재 실행 중인 컴퓨터에서)의 값을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT GetRegisters (  
-    [in] ULONG64       mask,   
+    [in] ULONG64       mask,
     [in] ULONG32       regCount,  
     [out, size_is(regCount), length_is(regCount)]  
         CORDB_REGISTER regBuffer[]  
@@ -38,21 +38,21 @@ HRESULT GetRegisters (
   
 ## <a name="parameters"></a>매개 변수  
  `mask`  
- 진행 검색할 레지스터 값을 지정 하는 비트 마스크입니다. 각 비트는 레지스터에 해당 합니다. 비트가 1로 설정 된 경우 레지스터의 값이 검색 됩니다. 그렇지 않으면 레지스터의 값이 검색 되지 않습니다.  
+ 【인】 검색할 레지스터 값을 지정하는 비트 마스크입니다. 각 비트는 레지스터에 해당합니다. 비트가 1로 설정되면 레지스터의 값이 검색됩니다. 그렇지 않으면 레지스터의 값이 검색되지 않습니다.  
   
  `regCount`  
- 진행 검색할 레지스터 값의 수입니다.  
+ 【인】 검색할 레지스터 값의 수입니다.  
   
  `regBuffer`  
- 제한이 각각 레지스터의 값을 수신 하는 `CORDB_REGISTER` 개체의 배열입니다.  
+ 【아웃】 레지스터의 `CORDB_REGISTER` 값을 받는 각각의 개체 배열입니다.  
   
-## <a name="remarks"></a>주의  
- 배열의 크기는 비트 마스크에서 1로 설정 된 비트 수와 같아야 합니다. `regCount` 매개 변수는 레지스터 값을 받을 버퍼의 요소 수를 지정 합니다. 마스크가 나타내는 레지스터 수에 대해 `regCount` 값이 너무 작으면 집합에서 더 높은 번호의 레지스터가 잘립니다. `regCount` 값이 너무 크면 사용 하지 않는 `regBuffer` 요소가 수정 되지 않습니다.  
+## <a name="remarks"></a>설명  
+ 배열의 크기는 비트 마스크에서 1로 설정된 비트 수와 같아야 합니다. 매개 `regCount` 변수는 레지스터 값을 수신할 버퍼의 요소 수를 지정합니다. `regCount` 값이 마스크로 표시된 레지스터 수에 너무 작으면 번호가 높은 레지스터가 집합에서 잘립니다. `regCount` 값이 너무 크면 사용되지 `regBuffer` 않는 요소는 수정되지 않습니다.  
   
- 비트 마스크에서 사용할 수 없는 레지스터를 지정 하는 경우 `GetRegisters`은 해당 레지스터에 대해 결정 되지 않은 값을 반환 합니다.  
+ 비트 마스크에서 사용할 수 없는 레지스터를 `GetRegisters` 지정하면 해당 레지스터에 대한 확정되지 않은 값을 반환합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -60,7 +60,7 @@ HRESULT GetRegisters (
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugRegisterSet 인터페이스](icordebugregisterset-interface.md)
 - [ICorDebugRegisterSet2 인터페이스](icordebugregisterset2-interface.md)

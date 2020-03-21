@@ -1,5 +1,5 @@
 ---
-title: StatusBar 컨트롤에서 클릭 한 패널 확인
+title: 상태 표시줄 컨트롤에서 클릭한 패널 확인
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,27 +13,27 @@ helpviewer_keywords:
 - PanelClick event [Windows Forms], determining panel clicked
 - Panel control [Windows Forms], determining click
 ms.assetid: d14c6092-04b2-4a07-8ddf-0dd11277ff5f
-ms.openlocfilehash: 94619f8bd426a42e5dafa0db99880e20d24f9963
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: eb3b10d515ba5b62236594e063ca7f060b34b73e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746018"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182359"
 ---
 # <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a>방법: Windows Forms StatusBar 컨트롤에서 클릭한 패널 확인
 > [!IMPORTANT]
-> <xref:System.Windows.Forms.StatusStrip> 및 <xref:System.Windows.Forms.ToolStripStatusLabel> 컨트롤은 기능을 대체 하 고 <xref:System.Windows.Forms.StatusBar> 및 <xref:System.Windows.Forms.StatusBarPanel> 컨트롤에 추가 합니다. 그러나 <xref:System.Windows.Forms.StatusBar> 및 <xref:System.Windows.Forms.StatusBarPanel> 컨트롤은 이전 버전과의 호환성 및 향후 사용을 위해 유지 됩니다 (선택 하는 경우).  
+> 및 <xref:System.Windows.Forms.StatusStrip> <xref:System.Windows.Forms.ToolStripStatusLabel> 컨트롤을 대체하고 <xref:System.Windows.Forms.StatusBar> 및 <xref:System.Windows.Forms.StatusBarPanel> 컨트롤에 기능을 추가합니다. 그러나 <xref:System.Windows.Forms.StatusBar> 원하는 <xref:System.Windows.Forms.StatusBarPanel> 경우 이전 버전과의 호환성 및 향후 사용모두에 대해 및 컨트롤이 유지됩니다.  
   
- 사용자 클릭에 응답 하도록 [StatusBar 컨트롤](statusbar-control-windows-forms.md) 컨트롤을 프로그래밍 하려면 <xref:System.Windows.Forms.StatusBar.PanelClick> 이벤트 내에서 case 문을 사용 합니다. 이벤트는 클릭 한 <xref:System.Windows.Forms.StatusBarPanel>에 대 한 참조를 포함 하는 인수 (panel 인수)를 포함 합니다. 이 참조를 사용 하 여 클릭 한 패널의 인덱스를 확인 하 고 적절 하 게 프로그래밍할 수 있습니다.  
+ 사용자 클릭에 응답하도록 [StatusBar 컨트롤](statusbar-control-windows-forms.md) 컨트롤을 프로그래밍하려면 <xref:System.Windows.Forms.StatusBar.PanelClick> 이벤트 내에서 사례 문을 사용합니다. 이벤트에는 클릭한 <xref:System.Windows.Forms.StatusBarPanel>에 대한 참조가 포함된 인수(패널 인수)가 포함되어 있습니다. 이 참조를 사용하여 클릭한 패널의 인덱스를 확인하고 그에 따라 프로그래밍할 수 있습니다.  
   
 > [!NOTE]
-> <xref:System.Windows.Forms.StatusBar> 컨트롤의 <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> 속성이 `true`으로 설정 되어 있는지 확인 합니다.  
+> 컨트롤의 <xref:System.Windows.Forms.StatusBar> <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> 속성이 `true`로 설정되어 있는지 확인합니다.  
   
-### <a name="to-determine-which-panel-was-clicked"></a>클릭 한 패널을 확인 하려면  
+### <a name="to-determine-which-panel-was-clicked"></a>클릭한 패널을 확인하려면  
   
-1. <xref:System.Windows.Forms.StatusBar.PanelClick> 이벤트 처리기에서 `Select Case` (Visual Basic) 또는 `switch case` (시각적 개체 C# 또는 시각적 개체 C++) 문을 사용 하 여 이벤트 인수에서 클릭 된 패널의 인덱스를 검사 하 여 클릭 한 패널을 확인 합니다.  
+1. <xref:System.Windows.Forms.StatusBar.PanelClick> 이벤트 처리기에서 `Select Case` (Visual Basic) 또는 `switch case` (Visual C# 또는 Visual C++) 문을 사용하여 이벤트 인수에서 클릭한 패널의 인덱스를 검사하여 클릭한 패널을 확인합니다.  
   
-     다음 코드 예제에서는 폼의 <xref:System.Windows.Forms.StatusBar> 컨트롤, `StatusBar1`및 두 개의 <xref:System.Windows.Forms.StatusBarPanel> 개체 `StatusBarPanel1` 및 `StatusBarPanel2`가 있어야 합니다.  
+     다음 코드 예제에서는 <xref:System.Windows.Forms.StatusBar> 폼, 컨트롤 및 `StatusBar1`두 <xref:System.Windows.Forms.StatusBarPanel> 개체 `StatusBarPanel1` 및 `StatusBarPanel2`의 존재 가 필요합니다.  
   
     ```vb  
     Private Sub StatusBar1_PanelClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.StatusBarPanelClickEventArgs) Handles StatusBar1.PanelClick  
@@ -47,7 +47,7 @@ ms.locfileid: "76746018"
     ```  
   
     ```csharp  
-    private void statusBar1_PanelClick(object sender,   
+    private void statusBar1_PanelClick(object sender,
     System.Windows.Forms.StatusBarPanelClickEventArgs e)  
     {  
        switch (statusBar1.Panels.IndexOf(e.StatusBarPanel))  
@@ -79,11 +79,11 @@ ms.locfileid: "76746018"
        }  
     ```  
   
-     (시각적 C#개체, C++시각적 개체) 폼의 생성자에 다음 코드를 추가 하 여 이벤트 처리기를 등록 합니다.  
+     (비주얼 C #, 비주얼 C++) 양식의 생성자에서 다음 코드를 배치하여 이벤트 처리기를 등록합니다.  
   
     ```csharp  
-    this.statusBar1.PanelClick += new   
-       System.Windows.Forms.StatusBarPanelClickEventHandler   
+    this.statusBar1.PanelClick += new
+       System.Windows.Forms.StatusBarPanelClickEventHandler
        (this.statusBar1_PanelClick);  
     ```  
   

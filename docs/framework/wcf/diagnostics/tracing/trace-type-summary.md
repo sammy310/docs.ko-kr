@@ -2,31 +2,31 @@
 title: 추적 형식 요약
 ms.date: 03/30/2017
 ms.assetid: e639410b-d1d1-479c-b78e-a4701d4e4085
-ms.openlocfilehash: 8f54f71ef63338708a29fac5557c7c7e8f257f58
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 8ed6dceb19caa52f928f285064c60337e3f15a87
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856003"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78674833"
 ---
 # <a name="trace-type-summary"></a>추적 형식 요약
-[원본 수준은](https://go.microsoft.com/fwlink/?LinkID=94943) 다음과 같은 다양 한 추적 수준을 정의 합니다. 중요, 오류, 경고, 정보 및 자세한 정보를 제공 하며 `ActivityTracing` 플래그에 대 한 설명을 제공 합니다 .이 플래그는 추적 경계와 활동 전송 이벤트의 출력을 전환 합니다.  
+[소스 수준은](xref:System.Diagnostics.SourceLevels) 중요, 오류, 경고, 정보 및 세부 정보 등 다양한 추적 수준을 `ActivityTracing` 정의하고 추적 경계 및 활동 전송 이벤트의 출력을 전환하는 플래그에 대한 설명을 제공합니다.  
   
- 에서<xref:System.Diagnostics>내보낼 수 있는 추적 형식에 대 한 [traceeventtype](https://go.microsoft.com/fwlink/?LinkId=95169) 을 검토할 수도 있습니다.  
+ 에서 내보내질 수 있는 추적 유형을 검토할 <xref:System.Diagnostics.TraceEventType> 수도 있습니다. <xref:System.Diagnostics>  
   
  다음 표에서는 가장 중요한 항목을 보여 줍니다.  
   
-|추적 형식|설명|  
+|추적 형식|Description|  
 |----------------|-----------------|  
-|중요|오류 또는 애플리케이션 충돌|  
-|오류|복구할 수 있는 오류|  
-|경고|알림 메시지|  
+|위험|오류 또는 애플리케이션 충돌|  
+|Error|복구할 수 있는 오류|  
+|Warning|정보 메시지.|  
 |정보|중요하지 않은 문제|  
 |자세히|추적 디버깅|  
 |시작|처리의 논리 단위 시작|  
-|일시 중단|처리의 논리 단위 일시 중단|  
+|일시 중지됨|처리의 논리 단위 일시 중단|  
 |다시 시작|처리의 논리 단위 다시 시작|  
-|Stop|처리의 논리 단위 중지|  
+|중지|처리의 논리 단위 중지|  
 |전송|상관 관계 ID의 변경|  
   
  동작은 위의 추적 형식의 조합으로 정의됩니다.  

@@ -2,12 +2,12 @@
 title: WCF Discovery 개체 모델
 ms.date: 03/30/2017
 ms.assetid: 8365a152-eacd-4779-9130-bbc48fa5c5d9
-ms.openlocfilehash: d305528c379bd4ded339854ee1f9fa55c76b40c0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: debcb08802894a34e16d9aa65bbbb1b0282794f6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614791"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184218"
 ---
 # <a name="wcf-discovery-object-model"></a>WCF Discovery 개체 모델
 WCF Discovery는 런타임에 검색 가능한 서비스와 이러한 서비스를 찾아서 사용하는 클라이언트를 작성할 수 있는 통합된 프로그래밍 모델을 제공하는 일련의 형식으로 구성되어 있습니다.  
@@ -61,7 +61,7 @@ WCF Discovery는 런타임에 검색 가능한 서비스와 이러한 서비스�
 - <xref:System.ServiceModel.Discovery.ResolveResponse>  
   
 - <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>  
- 
+
 - <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
   
 - <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  
@@ -100,10 +100,10 @@ WCF Discovery는 런타임에 검색 가능한 서비스와 이러한 서비스�
  <xref:System.ServiceModel.Discovery.DiscoveryVersion> 클래스는 사용할 검색 프로토콜 버전을 나타냅니다.  
   
 ## <a name="endpointdiscoverybehavior"></a>EndpointDiscoveryBehavior  
- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> 클래스는 엔드포인트의 검색 기능을 제어하고 확장명, 추가 계약 형식 이름 및 해당 엔드포인트와 연결된 범위를 지정하는 데 사용됩니다. 이 동작은 <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>를 구성하기 위해 애플리케이션 엔드포인트에 추가됩니다. <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>가 서비스 호스트에 추가되면 서비스 호스트에 의해 기본적으로 호스팅되는 모든 애플리케이션 엔드포인트가 검색 가능하게 됩니다. 개발자는 <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Enabled%2A> 속성을 `false`로 설정하여 특정 엔드포인트에 대한 검색을 해제할 수 있습니다.  
+ ph x="1" /&gt; 클래스는 엔드포인트의 검색 기능을 제어하고 확장명, 추가 계약 형식 이름 및 해당 엔드포인트와 연결된 범위를 지정하는 데 사용됩니다. 이 동작은 <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>를 구성하기 위해 애플리케이션 엔드포인트에 추가됩니다. <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>가 서비스 호스트에 추가되면 서비스 호스트에 의해 기본적으로 호스팅되는 모든 애플리케이션 엔드포인트가 검색 가능하게 됩니다. 개발자는 <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Enabled%2A> 속성을 `false`로 설정하여 특정 엔드포인트에 대한 검색을 해제할 수 있습니다.  
   
 ## <a name="endpointdiscoverymetadata"></a>EndpointDiscoveryMetadata  
- <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> 클래스는 서비스가 게시한 엔드포인트를 버전에 관계없이 나타냅니다. 이 클래스에는 서비스 개발자가 지정한 엔드포인트 주소, 수신 대기 URI, 계약 형식 이름, 범위, 메타데이터 버전 및 확장이 포함되어 있습니다. <xref:System.ServiceModel.Discovery.FindCriteria> 작업 중에 클라이언트가 보낸 `Probe`는 <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>와 일치하는지 비교됩니다. 조건이 일치하면 <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>가 클라이언트에 반환됩니다. <xref:System.ServiceModel.Discovery.ResolveCriteria>의 엔드포인트 주소는 <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>의 엔드포인트 주소와 일치하는지 비교됩니다. 조건이 일치하면 <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>가 클라이언트에 반환됩니다.  
+ ph x="1" /&gt; 클래스는 서비스가 게시한 엔드포인트를 버전에 관계없이 나타냅니다. 이 클래스에는 서비스 개발자가 지정한 엔드포인트 주소, 수신 대기 URI, 계약 형식 이름, 범위, 메타데이터 버전 및 확장이 포함되어 있습니다. <xref:System.ServiceModel.Discovery.FindCriteria> 작업 중에 클라이언트가 보낸 `Probe`는 <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>와 일치하는지 비교됩니다. 조건이 일치하면 <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>가 클라이언트에 반환됩니다. <xref:System.ServiceModel.Discovery.ResolveCriteria>의 엔드포인트 주소는 <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>의 엔드포인트 주소와 일치하는지 비교됩니다. 조건이 일치하면 <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>가 클라이언트에 반환됩니다.  
   
 ## <a name="findcriteria"></a>FindCriteria  
  <xref:System.ServiceModel.Discovery.FindCriteria> 클래스는 서비스를 찾을 때 사용되는 조건을 지정하는 데 사용되는 버전에 관계없는 클래스로, 일치하는 서비스에 대한 WS-Discovery 정의 조건을 완전히 지원하며 개발자가 일치 작업 중에 사용할 수 있는 사용자 지정 값을 지정하기 위해 사용할 수 있는 확장도 포함하고 있습니다. 개발자는 `Find`를 지정하여 <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> 작업에 대한 종료 조건을 제공할 수 있습니다. 이 클래스는 개발자가 검색할 최대 서비스 수를 지정하거나 클라이언트가 응답을 기다리는 기간을 지정하는 값인 <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A>을 지정합니다.  
@@ -124,7 +124,7 @@ WCF Discovery는 런타임에 검색 가능한 서비스와 이러한 서비스�
  <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 클래스는 개발자가 검색 기능을 서비스에 추가하는 데 사용됩니다. 이 동작은 <xref:System.ServiceModel.ServiceHost>에 추가됩니다. ph x=&quot;1&quot; /&amp;gt; 클래스는 서비스 호스트에 추가된 애플리케이션 엔드포인트에 대해 반복되고 검색 가능한 엔드포인트에서 <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>의 컬렉션을 만듭니다. 모든 엔드포인트는 기본적으로 검색 가능합니다. 원하는 엔드포인트에 <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>를 추가하면 해당 엔드포인트의 검색 기능을 제어할 수 있습니다. <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>에 알림 엔드포인트를 추가하면 서비스 호스트가 열리거나 닫힐 때 검색 가능한 모든 엔드포인트의 알림이 각 알림 엔드포인트를 통해 보내집니다.  
   
 ## <a name="udpannouncementendpoint"></a>UdpAnnouncementEndpoint  
- <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> 클래스는 UDP 멀티캐스트 바인딩을 통한 알림에 대해 미리 구성된 표준 알림 엔드포인트입니다. 기본적으로 <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>는 WSApril2005 WS_Discovery 버전을 사용하도록 설정됩니다.  
+ ph x="1" /&gt; 클래스는 UDP 멀티캐스트 바인딩을 통한 알림에 대해 미리 구성된 표준 알림 엔드포인트입니다. 기본적으로 <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>는 WSApril2005 WS_Discovery 버전을 사용하도록 설정됩니다.  
   
 ## <a name="udpdiscoveryendpoint"></a>UdpDiscoveryEndpoint  
- <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 클래스는 UDP 멀티캐스트 바인딩을 통한 검색에 대해 미리 구성된 표준 검색 엔드포인트입니다. 기본적으로 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>는 WSDiscovery11 WS-Discovery 버전과 <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode.Adhoc?displayProperty=nameWithType> 모드를 사용하도록 설정됩니다.
+ ph x="1" /&gt; 클래스는 UDP 멀티캐스트 바인딩을 통한 검색에 대해 미리 구성된 표준 검색 엔드포인트입니다. 기본적으로 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>는 WSDiscovery11 WS-Discovery 버전과 <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode.Adhoc?displayProperty=nameWithType> 모드를 사용하도록 설정됩니다.

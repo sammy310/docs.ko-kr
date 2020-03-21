@@ -1,15 +1,15 @@
 ---
-title: 책갈피-WF
+title: 책갈피 - WF
 ms.date: 03/30/2017
 ms.assetid: 9b51a346-09ae-455c-a70a-e2264ddeb9e2
-ms.openlocfilehash: a15a28cc39a4227765c238a6f2b86c72197f1a39
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: c5bd8130ee623599e80014777baf92986c3b6969
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868926"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183018"
 ---
-# <a name="bookmarks"></a>Bookmarks
+# <a name="bookmarks"></a>책갈피
 책갈피는 활동이 워크플로 스레드에 그대로 유지되지 않고 입력을 수동적으로 기다릴 수 있도록 하는 메커니즘입니다. 활동에서 자극을 기다리고 있음을 알릴 때 책갈피를 만들 수 있습니다. 이는 현재 실행 중인 메서드(<xref:System.Activities.Bookmark>를 만든 메서드)에서 반환되더라도 활동 실행이 완료된 것으로 간주해서는 안 된다는 것을 런타임에 나타냅니다.  
   
 ## <a name="bookmark-basics"></a>책갈피 기본 사항  
@@ -30,12 +30,12 @@ public sealed class ReadLine : NativeActivity<string>
     protected override void Execute(NativeActivityContext context)  
     {  
         // Create a Bookmark and wait for it to be resumed.  
-        context.CreateBookmark(BookmarkName.Get(context),   
+        context.CreateBookmark(BookmarkName.Get(context),
             new BookmarkCallback(OnResumeBookmark));  
     }  
   
-    // NativeActivity derived activities that do asynchronous operations by calling   
-    // one of the CreateBookmark overloads defined on System.Activities.NativeActivityContext   
+    // NativeActivity derived activities that do asynchronous operations by calling
+    // one of the CreateBookmark overloads defined on System.Activities.NativeActivityContext
     // must override the CanInduceIdle property and return true.  
     protected override bool CanInduceIdle  
     {  
@@ -114,4 +114,4 @@ syncEvent.WaitOne();
  `ReadLine` 활동이 실행되면 <xref:System.Activities.Bookmark>이라는 `UserName`를 만든 다음 책갈피가 다시 시작될 때까지 기다립니다. 호스트는 원하는 데이터를 수집한 다음 <xref:System.Activities.Bookmark>를 다시 시작합니다. 워크플로가 다시 시작되고 이름을 표시한 다음 완료됩니다. 책갈피를 다시 시작하는 데는 동기화 코드가 필요 없습니다. 워크플로가 유휴 상태일 때만 <xref:System.Activities.Bookmark>를 다시 시작할 수 있습니다. 워크플로가 유휴 상태가 아닌 경우 워크플로가 유휴 상태가 될 때까지 <xref:System.Activities.WorkflowApplication.ResumeBookmark%2A>에 대한 호출이 차단됩니다.  
   
 ## <a name="bookmark-resumption-result"></a>책갈피 다시 시작 결과  
- <xref:System.Activities.WorkflowApplication.ResumeBookmark%2A>에서 책갈피 다시 시작 요청의 결과를 나타내는 <xref:System.Activities.BookmarkResumptionResult> 열거형 값을 반환합니다. 가능한 반환 값은 <xref:System.Activities.BookmarkResumptionResult.Success>, <xref:System.Activities.BookmarkResumptionResult.NotReady> 및 <xref:System.Activities.BookmarkResumptionResult.NotFound>입니다. 호스트 및 확장 프로그램에서는 이 값을 사용하여 진행 방법을 결정합니다.
+ <xref:System.Activities.WorkflowApplication.ResumeBookmark%2A>에서 책갈피 다시 시작 요청의 결과를 나타내는 <xref:System.Activities.BookmarkResumptionResult> 열거형 값을 반환합니다. 가능한 반환 값은 <xref:System.Activities.BookmarkResumptionResult.Success>, <xref:System.Activities.BookmarkResumptionResult.NotReady> 및 <xref:System.Activities.BookmarkResumptionResult.NotFound>입니다. 호스트 및 확장명 프로그램에서는 이 값을 사용하여 진행 방법을 결정합니다.

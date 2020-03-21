@@ -7,14 +7,14 @@ helpviewer_keywords:
 - application settings [Windows Forms]
 - Windows Forms, application settings
 ms.assetid: 64090a34-8556-4904-8ea0-20efe9f8c886
-ms.openlocfilehash: 8a6a1ab69754d48017059d547a1f9e5e3889a606
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: bd5e03d0277d656be4c6b0e45142279b3e9ec4b1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739726"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142449"
 ---
-# <a name="application-settings-for-windows-forms"></a>Windows Forms에 대한 애플리케이션 설정
+# <a name="application-settings-for-windows-forms"></a>Windows Forms 애플리케이션 설정
 Windows Forms의 애플리케이션 설정 기능을 사용하면 클라이언트에서 사용자 지정 애플리케이션과 사용자 기본 설정을 쉽게 만들고 저장 및 유지 관리할 수 있습니다. 애플리케이션 설정을 통해 데이터베이스 연결 문자열과 같은 애플리케이션 데이터뿐 아니라 도구 모음 위치 및 가장 최근에 사용한 목록과 같은 사용자별 데이터도 저장할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
@@ -38,8 +38,7 @@ Windows Forms의 애플리케이션 설정 기능을 사용하면 클라이언�
   
 ## <a name="related-topics"></a>관련 항목
 
-[구성 섹션 Windows Forms](../../configure-apps/file-schema/winforms/index.md)    
-4\.7 .NET Framework부터 Windows Forms 응용 프로그램에서 높은 DPI 지원을 사용 하도록 설정 하는 방법을 설명 합니다.
+[Windows 양식 구성 섹션](../../configure-apps/file-schema/winforms/index.md) .NET Framework 4.7부터 Windows 양식 응용 프로그램에서 높은 DPI 지원을 사용하도록 설정을 문서화합니다.
 
 ## <a name="see-also"></a>참고 항목
 

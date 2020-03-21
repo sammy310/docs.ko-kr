@@ -10,12 +10,12 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), CER calls
 - generics [.NET Framework], open generic CER calls
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
-ms.openlocfilehash: de1735103314dfedbabe27623f579ce2c1e728af
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 7492a4c0547680a6ace85a5f7c98567770f5575a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217271"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181777"
 ---
 # <a name="opengenericcercall-mda"></a>openGenericCERCall MDA
 
@@ -29,7 +29,7 @@ ms.locfileid: "77217271"
 
 결과적으로 생성되는 코드는 공유되며 각 개체 참조 형식 변수는 임의 개체 참조 형식일 수 있으므로 JIT 컴파일 시 개체 참조 형식을 포함하는 인스턴스는 대표일 뿐입니다. 따라서 런타임 리소스를 미리 준비하지 못할 수 있습니다.
 
-특히 제네릭 형식 변수를 사용하는 메서드는 백그라운드에서 리소스 할당을 지연시킬 수 있습니다. 이러한 항목은 제네릭 사전 항목이라고 합니다. 예를 들어 문 `List<T> list = new List<T>();`의 경우 `T`가 제네릭 형식 변수인 경우 런타임에 조회 하 고 런타임에 정확한 인스턴스화 (예: `List<Object>, List<String>`등)를 만들어야 합니다. 메모리 부족과 같이 개발자가 제어할 수 없는 다양한 이유 때문일 수 있습니다.
+특히 제네릭 형식 변수를 사용하는 메서드는 백그라운드에서 리소스 할당을 지연시킬 수 있습니다. 이러한 항목은 제네릭 사전 항목이라고 합니다. 예를 들어 제네릭 형식 변수인 명령문의 `List<T> list = new List<T>();` `T` 경우 런타임을 조회하여 런타임(예: `List<Object>, List<String>`런타임)에서 정확한 인스턴스화를 만들 수 있습니다. 메모리 부족과 같이 개발자가 제어할 수 없는 다양한 이유 때문일 수 있습니다.
 
 이 MDA는 정확한 인스턴스가 있을 때가 아니라 JIT 컴파일 시에만 활성화되어야 합니다.
 
@@ -45,11 +45,11 @@ CER을 포함할 수 있는 메서드의 개체 참조 형식인 제네릭 형�
 
 ## <a name="output"></a>출력
 
-다음은이 MDA의 출력 샘플입니다.
+다음은 이 MDA의 출력 샘플입니다.
   
  ```output
  Method 'GenericMethodWithCer', which contains at least one constrained execution region, cannot be prepared automatically since it has one or more unbound generic type parameters.
- The caller must ensure this method is prepared explicitly at run time prior to execution. 
+ The caller must ensure this method is prepared explicitly at run time prior to execution.
  method name="GenericMethodWithCer"
  declaringType name="OpenGenericCERCall"
  ```
@@ -86,7 +86,7 @@ class Program
         MyClass.GenericMethodWithCer<int>();
 
         // This call is incorrect. A shared version of the method that
-        // cannot be completely analyzed will be JIT-compiled. The 
+        // cannot be completely analyzed will be JIT-compiled. The
         // MDA will be activated at JIT-compile time, not at run time.
         MyClass.GenericMethodWithCer<String>();
     }

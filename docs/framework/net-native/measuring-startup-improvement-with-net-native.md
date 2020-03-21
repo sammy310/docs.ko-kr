@@ -2,15 +2,15 @@
 title: .NET 네이티브로 시작 속도 개선 측정
 ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
-ms.openlocfilehash: 453159c3fd0590a1ed549bb7e6f8c171aac7d064
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 41a693f18ffea0e5ce0ca742bc251d147e8e3784
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937745"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180993"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>.NET 네이티브로 시작 속도 개선 측정
-.NET 네이티브 앱의 시작 시간을 크게 향상 시킵니다. 이러한 속도 개선은 휴대용 저전력 디바이스와 복잡한 앱에서 특히 두드러지게 나타납니다. 이 항목에서는 이러한 시작 속도 개선을 측정하는 데 필요한 기본적인 계측을 시작하는 방법을 설명합니다.  
+.NET 네이티브는 앱 의 출시 시간을 크게 향상시킵니다. 이러한 속도 개선은 휴대용 저전력 디바이스와 복잡한 앱에서 특히 두드러지게 나타납니다. 이 항목에서는 이러한 시작 속도 개선을 측정하는 데 필요한 기본적인 계측을 시작하는 방법을 설명합니다.  
   
  성능을 쉽게 조사할 수 있도록 .NET Framework 및 Windows에서는 이벤트 발생 시 앱이 도구에 이벤트를 알릴 수 있도록 하는 ETW(Windows용 이벤트 추적)라는 이벤트 프레임워크를 사용합니다. ETW 이벤트 알림을 받으면 PerfView라는 도구를 사용하여 해당 이벤트를 쉽게 확인하고 분석할 수 있습니다. 이 항목에서는 다음 작업을 수행하는 방법을 설명합니다.  
   
@@ -60,10 +60,10 @@ ms.locfileid: "75937745"
  명령줄에서 PerfView를 호출할 수도 있습니다. 공급자의 이벤트만 기록하려면 명령 프롬프트 창을 열고 다음 명령을 입력합니다.  
   
 ```console
-perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFile   
+perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFile
 ```  
   
- 다음은 각 문자에 대한 설명입니다.  
+ 각 항목이 나타내는 의미는 다음과 같습니다.  
   
  `-KernelEvents:Process`  
  프로세스가 시작 및 중지되는 시기를 확인할 것임을 나타냅니다. 이 경우 다른 이벤트 시간에서 앱의 Process/Start 이벤트 시간을 빼야 하므로 해당 이벤트를 확인해야 합니다.  
@@ -93,8 +93,8 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
  Ctrl+A를 눌러 왼쪽 창에 나열된 모든 이벤트를 선택하고 **Enter** 키를 누릅니다. 이제 각 이벤트에서 타임스탬프를 확인할 수 있습니다. 이러한 타임스탬프는 추적 시작 시간을 기준으로 하므로 프로세스 시작 시간에서 각 이벤트의 시간을 빼서 시작 이후 경과된 시간을 확인해야 합니다. Ctrl 키를 누른 상태로 두 타임스탬프를 클릭하여 선택하면 해당 타임스탬프 간의 차이가 페이지 아래쪽 상태 표시줄에 표시됩니다. 따라서 표시된 두 이벤트(프로세스 시작 포함) 간에 경과된 시간을 쉽게 확인할 수 있습니다. 뷰의 바로 가기 메뉴를 열고 CSV 파일로 내보내기, Microsoft Excel을 열어 데이터 저장/처리 등의 여러 유용한 옵션 중에서 원하는 항목을 선택할 수 있습니다.  
   
- 원본 앱과 .NET 네이티브 도구 체인을 사용 하 여 빌드한 버전 모두에 대해이 절차를 반복 하면 성능 차이를 비교할 수 있습니다.   .NET 네이티브 앱은 일반적으로 non-.NET 네이티브 앱 보다 빠르게 시작 됩니다. 관련 정보를 보다 자세하게 파악하려는 경우 PerfView를 통해 시간이 가장 많이 걸리는 코드 부분도 확인할 수 있습니다. 자세한 내용은 [PerfView 자습서](https://channel9.msdn.com/Series/PerfView-Tutorial)를 보거나 [Vance Morrison의 블로그 게시물](https://docs.microsoft.com/archive/blogs/vancem/publication-of-the-perfview-performance-analysis-tool)을 읽으세요.  
+ .NET 네이티브 도구 체인을 사용하여 원래 앱과 빌드한 버전모두에 대한 프로시저를 반복하여 성능 차이를 비교할 수 있습니다.   .NET 네이티브 앱은 일반적으로 네이티브 앱보다 빠르게 non-.NET. 관련 정보를 보다 자세하게 파악하려는 경우 PerfView를 통해 시간이 가장 많이 걸리는 코드 부분도 확인할 수 있습니다. 자세한 내용은 [PerfView 자습서](https://channel9.msdn.com/Series/PerfView-Tutorial)를 보거나 [Vance Morrison의 블로그 게시물](https://docs.microsoft.com/archive/blogs/vancem/publication-of-the-perfview-performance-analysis-tool)을 읽으세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Diagnostics.Tracing.EventSource>

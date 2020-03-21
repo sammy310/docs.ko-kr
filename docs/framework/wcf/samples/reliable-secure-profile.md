@@ -2,24 +2,24 @@
 title: 신뢰할 수 있는 보안 프로필
 ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
-ms.openlocfilehash: ef4680673f37655603a42f6da8aaf7eceaa01f56
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 9ddd0d78396bba6712650620e6b46c62f13337e2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094945"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144216"
 ---
 # <a name="reliable-secure-profile"></a>신뢰할 수 있는 보안 프로필
 
-이 샘플에서는 WCF 및 [RSP (신뢰할 수 있는 보안 프로필)](http://www.ws-i.org/Profiles/ReliableSecureProfile-1.0.html)를 구성 하는 방법을 보여 줍니다. 이 샘플에서는 [연결](http://docs.oasis-open.org/ws-rx/wsmc/200702/wsmc-1.0-spec-cs-01.pdf) 채널을 구현 하는 방법을 보여 줍니다 .이 채널은 신뢰할 수 있는 메시징 및 선택적으로 보안 채널을 사용 하 여 RSP 사양을 기반으로 하는 신뢰할 수 있는 보안 바인딩을 만들 수 있습니다.  
+이 샘플에서는 WCF 및 [신뢰할 수 있는 보안 프로파일(RSP)을](http://www.ws-i.org/Profiles/ReliableSecureProfile-1.0.html)작성하는 방법을 보여 줍니다. 이 샘플에서는 신뢰할 수 있는 메시징 및 선택적으로 보안 채널과 함께 구성하여 RSP 사양에 따라 신뢰할 수 있는 보안 바인딩을 만들 수 있는 [연결 만들기](http://docs.oasis-open.org/ws-rx/wsmc/200702/wsmc-1.0-spec-cs-01.pdf) 채널의 구현을 보여 줍니다.  
   
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
->   
+>
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대한 WCF(Windows 통신 재단) 및 WF(Windows 워크플로우 재단) 샘플로](https://www.microsoft.com/download/details.aspx?id=21459) 이동하여 모든 WCF(Windows 통신 재단) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ReliableSecureProfile`  
   
 ## <a name="discussion"></a>토론  
@@ -27,11 +27,11 @@ ms.locfileid: "77094945"
   
 ## <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1. **ReliableSecureProfile** 솔루션을 엽니다.  
+1. 신뢰할 **수** 있는 보안 프로필 솔루션을 엽니다.  
   
-2. **솔루션 탐색기**에서 **서비스** 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 상황에 맞는 메뉴에서 **디버그**, **새 인스턴스 시작** 을 차례로 선택 합니다. 그러면 서비스 호스트가 시작됩니다.  
+2. **솔루션 탐색기에서** **서비스** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **디버그를**선택하고 컨텍스트 메뉴에서 **새 인스턴스시작을** 선택합니다. 그러면 서비스 호스트가 시작됩니다.  
   
-3. **솔루션 탐색기**에서 **클라이언트** 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 상황에 맞는 메뉴에서 **디버그**, **새 인스턴스 시작** 을 차례로 선택 합니다. 그러면 클라이언트가 시작됩니다.  
+3. **솔루션 탐색기에서** **클라이언트** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **디버그를**선택하고 컨텍스트 메뉴에서 **새 인스턴스시작을** 선택합니다. 그러면 클라이언트가 시작됩니다.  
   
 4. 클라이언트 콘솔 창의 프롬프트에 임의의 문자열을 입력하고 Enter 키를 클릭합니다. 그러면 입력 문자열이 이 문자열의 해시를 계산하는 서비스로 보내집니다.  
   

@@ -15,62 +15,62 @@ helpviewer_keywords:
 ms.assetid: a9f7f824-64a1-408d-8607-91c7f19d21fe
 topic_type:
 - apiref
-ms.openlocfilehash: 76c033b11f3212241827d74f4fe18ee881f20b64
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a04a0c5e6865c3664d2cb5fb341c3625e35d4d7c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127045"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178125"
 ---
 # <a name="getversionfromprocess-function"></a>GetVersionFromProcess 함수
-지정 된 프로세스 핸들과 연결 된 CLR (공용 언어 런타임)의 버전 번호를 가져옵니다.  
+지정된 프로세스 핸들과 연결된 공통 언어 런타임(CLR)의 버전 번호를 가져옵니다.  
   
- 이 함수는 .NET Framework 4에서 더 이상 사용 되지 않습니다.  
+ 이 함수는 .NET 프레임워크 4에서 더 이상 사용되지 않습니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT GetVersionFromProcess (  
-    [in]  HANDLE  hProcess,   
-    [out] LPWSTR  pVersion,   
-    [in]  DWORD   cchBuffer,   
+    [in]  HANDLE  hProcess,
+    [out] LPWSTR  pVersion,
+    [in]  DWORD   cchBuffer,
     [out] DWORD  *dwLength  
 );  
 ```  
   
 ## <a name="parameters"></a>매개 변수  
  `hProcess`  
- 진행 프로세스에 대 한 핸들입니다.  
+ 【인】 프로세스에 대한 핸들입니다.  
   
  `pVersion`  
- 제한이 메서드가 성공적으로 완료 되 면 버전 번호 문자열이 포함 된 버퍼입니다.  
+ 【아웃】 메서드가 성공적으로 완료되면 버전 번호 문자열이 포함된 버퍼입니다.  
   
  `cchBuffer`  
- 진행 버전 버퍼의 길이입니다.  
+ 【인】 버전 버퍼의 길이입니다.  
   
  `pdwLength`  
- 제한이 버전 번호 문자열의 길이에 대 한 포인터입니다.  
+ 【아웃】 버전 번호 문자열의 길이에 대한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
- 이 메서드는 Winerror.h에 정의 된 대로 다음 값 외에 표준 COM (구성 요소 개체 모델) 오류 코드를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ 이 메서드는 다음 값 외에 WinError.h에 정의된 표준 구성 요소 개체 모델(COM) 오류 코드를 반환합니다.  
   
-|반환 코드|설명|  
+|반환 코드|Description|  
 |-----------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_INVALIDARG|`pVersion` null이 고 `cchBuffer`가 null이 아니거나 그 반대의 경우도 마찬가지입니다.<br /><br /> 또는<br /><br /> `hProcess`는 프로세스에 대 한 유효한 핸들이 아닙니다.<br /><br /> 또는<br /><br /> CLR이 로드 되지 않았습니다.|  
-|ERROR_INSUFFICIENT_BUFFER|`cchBuffer`가 null 이거나 버전 문자열의 길이 보다 작은 경우|  
-|E_NOTIMPL|이 방법은 Microsoft windows 95, Microsoft Windows 98 또는 Microsoft Windows Millennium Edition 운영 체제에서 사용할 수 없습니다.|  
+|E_INVALIDARG|`pVersion`null이며 `cchBuffer` null이 아니거나 그 반대의 경우도 마찬가지입니다.<br /><br /> 또는<br /><br /> `hProcess`프로세스에 대한 올바른 핸들이 아닙니다.<br /><br /> 또는<br /><br /> CLR이 로드되지 않았습니다.|  
+|ERROR_INSUFFICIENT_BUFFER|`cchBuffer`은 null 또는 버전 문자열의 길이보다 작습니다.|  
+|E_NOTIMPL|이 방법은 마이크로 소프트 윈도우 95, 마이크로 소프트 윈도우 98, 또는 마이크로 소프트 윈도우 밀레니엄 에디션 운영 체제에서 사용할 수 없습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Mscoree.dll  
+ **헤더:** MSCorE.h  
   
  **라이브러리:** Mscoree.dll  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [GetRequestedRuntimeInfo 함수](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)
 - [GetRequestedRuntimeVersion 함수](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)

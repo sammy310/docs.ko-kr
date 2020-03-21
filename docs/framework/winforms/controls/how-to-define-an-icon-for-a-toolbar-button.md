@@ -1,5 +1,5 @@
 ---
-title: '방법: 도구 모음 단추에 대한 아이콘 정의'
+title: '방법: 도구 모음 단추의 아이콘 정의'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,30 +13,30 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-ms.openlocfilehash: 2b85f734a5f8b31531cfe48f87681d98304db09b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 84c67c7d2584390ba3e48cb83820c65c6bb45d1f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929639"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182204"
 ---
-# <a name="how-to-define-an-icon-for-a-toolbar-button"></a>방법: 도구 모음 단추에 대한 아이콘 정의
+# <a name="how-to-define-an-icon-for-a-toolbar-button"></a>방법: 도구 모음 단추의 아이콘 정의
 > [!NOTE]
 > <xref:System.Windows.Forms.ToolStrip> 컨트롤은 <xref:System.Windows.Forms.ToolBar> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.ToolBar> 컨트롤을 계속 유지하도록 선택할 수 있습니다.  
   
- <xref:System.Windows.Forms.ToolBar>사용자가 쉽게 식별할 수 있도록 단추 내에 아이콘을 표시할 수 있습니다. 이는 [ImageList 구성](imagelist-component-windows-forms.md) 요소에 이미지를 추가 하 고이 <xref:System.Windows.Forms.ImageList> 구성 <xref:System.Windows.Forms.ToolBar> 요소를 컨트롤과 연결 하 여 이루어집니다.  
+ <xref:System.Windows.Forms.ToolBar>버튼은 사용자가 쉽게 식별 할 수 있도록 그들 안에 아이콘을 표시 할 수 있습니다. 이는 [ImageList 구성 요소에](imagelist-component-windows-forms.md) 이미지를 추가한 다음 <xref:System.Windows.Forms.ImageList> <xref:System.Windows.Forms.ToolBar> 구성 요소를 컨트롤과 연결하여 달성합니다.  
   
-### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>프로그래밍 방식으로 도구 모음 단추에 대 한 아이콘을 설정 하려면  
+### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>도구 모음 단추의 아이콘을 프로그래밍 방식으로 설정하려면  
   
-1. 프로시저에서 <xref:System.Windows.Forms.ImageList> 구성 요소 <xref:System.Windows.Forms.ToolBar> 와 컨트롤을 인스턴스화합니다.  
+1. 프로시저에서 <xref:System.Windows.Forms.ImageList> 구성 요소와 컨트롤을 <xref:System.Windows.Forms.ToolBar> 인스턴스화합니다.  
   
-2. 동일한 절차에서 이미지를 <xref:System.Windows.Forms.ImageList> 구성 요소에 할당 합니다.  
+2. 동일한 절차에서 구성 요소에 이미지를 <xref:System.Windows.Forms.ImageList> 할당합니다.  
   
-3. 동일한 절차에서 컨트롤 <xref:System.Windows.Forms.ImageList> <xref:System.Windows.Forms.ToolBar> 을 컨트롤에 할당 하 고 개별 도구 모음 단추의 <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> 속성을 할당 합니다.  
+3. 동일한 절차에서 컨트롤에 <xref:System.Windows.Forms.ImageList> 컨트롤을 <xref:System.Windows.Forms.ToolBar> 할당하고 개별 <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> 도구 모음 단추의 속성을 할당합니다.  
   
-     다음 코드 예제에서 이미지의 위치에 대해 설정 된 경로는 **내 문서** 폴더입니다. Windows 운영 체제를 실행 하는 대부분의 컴퓨터에이 디렉터리가 포함 되어 있다고 가정할 수 있으므로이 작업을 수행 합니다. 또한 최소한의 시스템 액세스 수준을 가진 사용자가 안전하게 애플리케이션을 실행할 수 있습니다. 아래 예제에서는 <xref:System.Windows.Forms.PictureBox> 컨트롤이 이미 추가 된 폼을 가정 합니다.  
+     다음 코드 예제에서 이미지 위치에 대해 설정된 경로는 **내 문서** 폴더입니다. Windows 운영 체제를 실행하는 대부분의 컴퓨터에 이 디렉터리가 포함된다고 가정할 수 있기 때문에 이 작업을 수행합니다. 또한 최소한의 시스템 액세스 수준을 가진 사용자가 안전하게 애플리케이션을 실행할 수 있습니다. 아래 예제는 컨트롤이 이미 <xref:System.Windows.Forms.PictureBox> 추가된 폼을 가정합니다.  
   
-     위의 단계를 수행 하면 아래에 표시 된 것과 유사한 코드를 작성 해야 합니다.  
+     위의 단계에 따라 아래에 표시된 것과 유사한 코드를 작성해야 합니다.  
   
     ```vb  
     Public Sub InitializeMyToolBar()  
@@ -46,7 +46,7 @@ ms.locfileid: "69929639"
     ' Assign an image to the ImageList component.  
     ' You should replace the bold image  
     ' in the sample below with an icon of your own choosing.  
-       Dim myImage As System.Drawing.Image = _   
+       Dim myImage As System.Drawing.Image = _
           Image.FromFile Image.FromFile _  
           (System.Environment.GetFolderPath _  
           (System.Environment.SpecialFolder.Personal) _  
@@ -67,10 +67,10 @@ ms.locfileid: "69929639"
     public void InitializeMyToolBar()  
     {  
        // Instantiate an ImageList component and a ToolBar control.  
-       ToolBar toolBar1 = new  ToolBar();   
+       ToolBar toolBar1 = new  ToolBar();
        ImageList imageList1 = new ImageList();  
        // Assign an image to the ImageList component.  
-       // You should replace the bold image   
+       // You should replace the bold image
        // in the sample below with an icon of your own choosing.  
        // Note the escape character used (@) when specifying the path.  
        Image myImage = Image.FromFile  
@@ -94,10 +94,10 @@ ms.locfileid: "69929639"
        void InitializeMyToolBar()  
        {  
           // Instantiate an ImageList component and a ToolBar control.  
-          ToolBar ^ toolBar1 = gcnew  ToolBar();   
+          ToolBar ^ toolBar1 = gcnew  ToolBar();
           ImageList ^ imageList1 = gcnew ImageList();  
           // Assign an image to the ImageList component.  
-          // You should replace the bold image   
+          // You should replace the bold image
           // in the sample below with an icon of your own choosing.  
           Image ^ myImage = Image::FromFile(String::Concat  
              (System::Environment::GetFolderPath  
@@ -115,9 +115,9 @@ ms.locfileid: "69929639"
        }  
     ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.ToolBar>
-- [방법: 도구 모음 단추에 대 한 트리거 메뉴 이벤트](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [방법: Toolbar 단추의 메뉴 이벤트 트리거](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [ToolBar 컨트롤](toolbar-control-windows-forms.md)
 - [ImageList 구성 요소](imagelist-component-windows-forms.md)

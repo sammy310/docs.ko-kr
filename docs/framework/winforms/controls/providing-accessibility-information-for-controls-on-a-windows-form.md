@@ -10,12 +10,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 887dee6f-5059-4d57-957d-7c6fcd4acb10
-ms.openlocfilehash: 791944bd9e8f5520a571e6fb415d69022aa0bead
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 672104db94826cfbe113a7ae0ea29546b0c3b9da
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991707"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181993"
 ---
 # <a name="providing-accessibility-information-for-controls-on-a-windows-form"></a>Windows Form의 컨트롤에 내게 필요한 옵션 정보 제공
 접근성 보조 기능은 장애가 있는 사용자가 컴퓨터를 보다 효율적으로 사용하도록 돕는 특수 프로그램 및 디바이스입니다. 시력 장애가 있는 사용자를 위한 화면 판독기와 마우스나 키보드를 사용하지 않고 구두 명령을 제공하는 사용자를 위한 음성 입력 유틸리티를 예로 들 수 있습니다. 이러한 접근성 보조 기능은 Windows Forms 컨트롤에서 노출하는 접근성 속성을 조작합니다. 이러한 속성은 다음과 같습니다.  
@@ -39,10 +39,10 @@ ms.locfileid: "70991707"
 ```vb  
 Button1.AccessibleDefaultActionDescription = _  
    "Closes the application."  
-``` 
+```
 
 ```csharp  
-Button1.AccessibleDefaultActionDescription =   
+Button1.AccessibleDefaultActionDescription =
    "Closes the application.";  
 ```
 
@@ -82,9 +82,9 @@ button1->AccessibleName = "Order";
 ```  
   
 ## <a name="accessiblerole-property"></a>AccessibleRole 속성  
- <xref:System.Windows.Forms.AccessibleRole> 열거형을 포함 하는이 속성은 컨트롤의 사용자 인터페이스 역할을 설명 합니다. 새 컨트롤에는 이 값이 `Default`로 설정됩니다. 이것은 기본적으로 **Button** 컨트롤이 **Button**으로 동작함을 의미합니다. 컨트롤이 다른 역할을 수행할 경우에는 이 속성을 다시 설정할 수 있습니다. 예를 들어 **PictureBox** 컨트롤을 **Chart**로 사용할 수 있으며 이때 접근성 보조 기능에서 **PictureBox**가 아닌 **Chart**로 역할을 보고하도록 할 수 있습니다. 또한 직접 개발한 사용자 지정 컨트롤에 이 속성을 지정할 수도 있습니다. 이 속성은 속성 창에서 설정하거나 다음과 같이 코드로 설정할 수 있습니다.  
+ 열거형이 <xref:System.Windows.Forms.AccessibleRole> 포함된 이 속성은 컨트롤의 사용자 인터페이스 역할을 설명합니다. 새 컨트롤의 값은 `Default`로 설정되어 있습니다. 이것은 기본적으로 **Button** 컨트롤이 **Button**으로 동작함을 의미합니다. 컨트롤이 다른 역할을 수행할 경우에는 이 속성을 다시 설정할 수 있습니다. 예를 들어 **PictureBox** 컨트롤을 **Chart**로 사용할 수 있으며 이때 접근성 보조 기능에서 **PictureBox**가 아닌 **Chart**로 역할을 보고하도록 할 수 있습니다. 또한 직접 개발한 사용자 지정 컨트롤에 이 속성을 지정할 수도 있습니다. 이 속성은 속성 창에서 설정하거나 다음과 같이 코드로 설정할 수 있습니다.  
   
-```vb 
+```vb
 PictureBox1.AccessibleRole = AccessibleRole.Chart  
 ```
 
@@ -96,7 +96,7 @@ PictureBox1.AccessibleRole = AccessibleRole.Chart;
 pictureBox1->AccessibleRole = AccessibleRole::Chart;  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Forms.AccessibleObject>
 - <xref:System.Windows.Forms.Control.AccessibilityObject%2A?displayProperty=nameWithType>

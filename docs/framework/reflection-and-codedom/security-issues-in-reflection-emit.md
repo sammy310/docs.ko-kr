@@ -11,12 +11,12 @@ helpviewer_keywords:
 - emitting dynamic assemblies,partial trust scenarios
 - dynamic assemblies, security
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
-ms.openlocfilehash: f04b40edde0755315f3b4fd4284fc7c804a54313
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 11eb4c9bc4ba1b1fe9051a04d12f893e693fb175
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130039"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180470"
 ---
 # <a name="security-issues-in-reflection-emit"></a>리플렉션 내보내기의 보안 문제점
 .NET Framework에서는 MSIL(Microsoft Intermediate Language)을 내보내는 세 가지 방법을 제공하며, 각각 고유한 보안 문제가 있습니다.  
@@ -32,9 +32,9 @@ ms.locfileid: "73130039"
 > [!NOTE]
 > .NET Framework의 이후 릴리스에서는 코드에 반영하고 코드를 내보내는 데 필요한 권한이 변경되었습니다. 이 항목의 뒷부분에 있는 [버전 정보](#Version_Information)를 참조하세요.  
   
-<a name="Dynamic_Assemblies"></a>   
+<a name="Dynamic_Assemblies"></a>
 ## <a name="dynamic-assemblies"></a>동적 어셈블리  
- 동적 어셈블리는 <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> 메서드의 오버로드를 사용하여 만듭니다. 이 메서드의 오버로드는 시스템 수준의 보안 정책이 제거되어 .NET Framework 4에서 대부분 사용되지 않습니다. [보안 변경 내용](../security/security-changes.md)을 참조 하세요. 나머지 오버 로드는 신뢰 수준에 관계 없이 모든 코드에서 실행할 수 있습니다. 이러한 오버로드는 만들 때 동적 어셈블리에 적용할 특성 목록을 지정하는 오버로드와 그러지 않은 오버로드의 두 그룹으로 나뉩니다. 어셈블리를 만들 때 <xref:System.Security.SecurityRulesAttribute> 특성을 적용하여 어셈블리에 대한 투명도 모델을 지정하지 않을 경우 내보내는 어셈블리에서 투명도 모델이 상속됩니다.  
+ 동적 어셈블리는 <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> 메서드의 오버로드를 사용하여 만듭니다. 이 메서드의 오버로드는 시스템 수준의 보안 정책이 제거되어 .NET Framework 4에서 대부분 사용되지 않습니다. (보안 [변경 사항](../security/security-changes.md)참조) 나머지 오버로드는 신뢰 수준에 관계없이 모든 코드에서 실행할 수 있습니다. 이러한 오버로드는 만들 때 동적 어셈블리에 적용할 특성 목록을 지정하는 오버로드와 그러지 않은 오버로드의 두 그룹으로 나뉩니다. 어셈블리를 만들 때 <xref:System.Security.SecurityRulesAttribute> 특성을 적용하여 어셈블리에 대한 투명도 모델을 지정하지 않을 경우 내보내는 어셈블리에서 투명도 모델이 상속됩니다.  
   
 > [!NOTE]
 > 동적 어셈블리를 만든 후에 <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A> 메서드를 사용하여 적용하는 특성은 어셈블리를 디스크에 저장하고 메모리에 다시 로드할 때까지 적용되지 않습니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "73130039"
   
 - 디버그 기호가 생성되지 않습니다. `Internet` 및 `LocalIntranet` 권한 집합에는 필요한 권한이 포함되지 않습니다.  
   
-<a name="Anonymously_Hosted_Dynamic_Methods"></a>   
+<a name="Anonymously_Hosted_Dynamic_Methods"></a>
 ## <a name="anonymously-hosted-dynamic-methods"></a>익명으로 호스트된 동적 메서드  
  익명으로 호스트된 동적 메서드는 연결된 형식이나 모듈을 지정하지 않는 두 개의 <xref:System.Reflection.Emit.DynamicMethod> 생성자인 <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%29> 및 <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%2CSystem.Boolean%29>를 사용하여 만듭니다. 이러한 생성자는 완전히 신뢰할 수 있는 시스템 제공 보안 투명 어셈블리에 동적 메서드를 배치합니다. 이 생성자를 사용하거나 동적 메서드에 대한 코드를 내보내는 데 필요한 권한은 없습니다.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "73130039"
 > [!NOTE]
 > 동적 메서드가 디버그 기호를 지원하지 않습니다.  
   
-<a name="Dynamic_Methods_Associated_with_Existing_Assemblies"></a>   
+<a name="Dynamic_Methods_Associated_with_Existing_Assemblies"></a>
 ## <a name="dynamic-methods-associated-with-existing-assemblies"></a>기존 어셈블리와 연결된 동적 메서드  
  동적 메서드를 기존 어셈블리의 형식이나 모듈에 연결하려면 연결된 형식이나 모듈을 지정하는 <xref:System.Reflection.Emit.DynamicMethod> 생성자 중 하나를 사용합니다. 동적 메서드를 기존 형식이나 모듈에 연결하면 동적 메서드가 public이 아닌 형식과 멤버에 액세스할 수 있으므로 이 생성자를 호출하는 데 필요한 권한은 경우에 따라 다릅니다.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "73130039"
 > [!NOTE]
 > 동적 메서드가 디버그 기호를 지원하지 않습니다.  
   
-<a name="Version_Information"></a>   
+<a name="Version_Information"></a>
 ## <a name="version-information"></a>버전 정보  
  .NET Framework 4부터 시스템 수준의 보안 정책이 제거되었으며 보안 투명도가 기본 적용 메커니즘이 되었습니다. [보안 변경 내용](../security/security-changes.md)을 참조하세요.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "73130039"
 ### <a name="obtaining-information-on-types-and-members"></a>형식 및 멤버에 대한 정보 가져오기  
  .NET Framework 2.0부터 public이 아닌 형식과 멤버에 대한 정보를 가져오는 데 필요한 권한은 없습니다. 리플렉션을 사용하여 동적 메서드를 내보내는 데 필요한 정보를 가져옵니다. 예를 들어 <xref:System.Reflection.MethodInfo> 개체를 사용하여 메서드 호출을 내보냅니다. 이전 버전의 .NET Framework에서는 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 플래그가 있는 <xref:System.Security.Permissions.ReflectionPermission>이 필요합니다. 자세한 내용은 [리플렉션의 보안 고려 사항](security-considerations-for-reflection.md)을 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [리플렉션의 보안 고려 사항](security-considerations-for-reflection.md)
-- [동적 메서드 및 어셈블리 내보내기](emitting-dynamic-methods-and-assemblies.md)
+- [동적 메서드 및 어셈블리 생성](emitting-dynamic-methods-and-assemblies.md)

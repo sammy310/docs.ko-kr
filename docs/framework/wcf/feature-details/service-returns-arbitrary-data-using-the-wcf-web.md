@@ -2,15 +2,15 @@
 title: '방법: WCF 웹 HTTP 프로그래밍 모델을 사용하여 임의의 데이터를 반환하는 서비스 만들기'
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 41d9f0e53401bcd6b57b04a38e76af5ddb9fb4cc
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c85ab6725876a2d523a18c817ce3fd89f0d2285a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976095"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184476"
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>방법: WCF 웹 HTTP 프로그래밍 모델을 사용하여 임의의 데이터를 반환하는 서비스 만들기
-서비스 작업에서 데이터가 반환되는 방법을 개발자가 완전히 제어해야 하는 경우가 있습니다. 서비스 작업이 WCF에서 지원 하지 않는 형식으로 데이터를 반환 해야 하는 경우에 해당 합니다. 이 항목에서는 WCF 웹 HTTP 프로그래밍 모델을 사용 하 여 이러한 서비스를 만드는 방법을 설명 합니다. 이 서비스에는 스트림을 반환하는 하나의 작업이 있습니다.  
+서비스 작업에서 데이터가 반환되는 방법을 개발자가 완전히 제어해야 하는 경우가 있습니다. 서비스 작업이 WCF에서 지원하지 않는 형식으로 데이터를 반환해야 하는 경우입니다. 이 항목에서는 WCF WEB HTTP 프로그래밍 모델을 사용하여 이러한 서비스를 만드는 방법을 설명합니다. 이 서비스에는 스트림을 반환하는 하나의 작업이 있습니다.  
   
 ### <a name="to-implement-the-service-contract"></a>서비스 계약을 구현하려면  
   
@@ -25,7 +25,7 @@ ms.locfileid: "73976095"
         }  
     ```  
   
-     메서드는 <xref:System.IO.Stream>반환 하기 때문에 WCF는 서비스 작업에서 반환 되는 바이트를 작업에 완전히 제어 하 고 반환 되는 데이터에는 형식을 적용 하지 않는다고 가정 합니다.  
+     메서드는 을 <xref:System.IO.Stream>반환하기 때문에 WCF는 작업이 서비스 작업에서 반환되는 바이트에 대한 완전한 제어를 가지며 반환되는 데이터에 서식을 적용하지 않는다고 가정합니다.  
   
 2. 서비스 계약을 구현합니다. 이 계약에는 하나의 작업(`GetImage`)만 있습니다. 이 메서드는 비트맵을 생성하여 <xref:System.IO.MemoryStream>에 .jpg 형식으로 저장합니다. 그런 다음 이 작업은 해당 스트림을 호출자에 반환합니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "73976095"
   
      밑에서 두 번째에 있는 코드 줄 `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`를 보십시오.  
   
-     이렇게 하면 콘텐츠 형식 헤더가 `"image/jpeg"`로 설정 됩니다. 이 샘플에서는 .jpg 파일을 반환하는 방법을 보여 주지만 코드를 수정하여 필요한 모든 종류의 데이터를 원하는 형식으로 반환할 수 있습니다. 이 작업은 데이터를 검색 또는 생성한 다음 스트림에 작성해야 합니다.  
+     그러면 콘텐츠 형식 `"image/jpeg"`헤더가 로 설정됩니다. 이 샘플에서는 .jpg 파일을 반환하는 방법을 보여 주지만 코드를 수정하여 필요한 모든 종류의 데이터를 원하는 형식으로 반환할 수 있습니다. 이 작업은 데이터를 검색 또는 생성한 다음 스트림에 작성해야 합니다.  
   
 ### <a name="to-host-the-service"></a>서비스를 호스트하려면  
   
@@ -64,7 +64,7 @@ ms.locfileid: "73976095"
     {  
         static void Main(string[] args)  
         {  
-        }   
+        }
     }  
     ```  
   
@@ -175,6 +175,6 @@ namespace RawImageService
   
 - 샘플 코드를 컴파일할 때 System.ServiceModel.dll 및 System.ServiceModel.Web.dll을 참조합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [WCF 웹 HTTP 프로그래밍 모델](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

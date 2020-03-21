@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-ms.openlocfilehash: 4510eac2d9c1b3bb64420b0678b3a47a90887188
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ed8aae30875e3b17f65be5857c7d93af98db9b3e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795613"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185564"
 ---
 # <a name="how-to-import-custom-policy-assertions"></a>방법: 사용자 지정 정책 어설션 가져오기
 정책 어설션은 서비스 엔드포인트의 기능 및 요구 사항에 대해 설명합니다.  클라이언트 애플리케이션은 서비스 메타데이터에서 정책 어설션을 사용하여 서비스 엔드포인트에 대해 서비스 계약을 사용자 지정하거나 클라이언트 바인딩을 구성할 수 있습니다.  
   
- <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> 인터페이스를 구현하고 해당 개체를 메타데이터 시스템에 전달하거나 애플리케이션 구성 파일에 구현 형식을 등록하면 사용자 지정 정책 어설션을 가져올 수 있습니다.  <xref:System.ServiceModel.Description.IPolicyImportExtension> 인터페이스 구현에서는 매개 변수가 없는 생성자를 제공 해야 합니다.  
+ <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> 인터페이스를 구현하고 해당 개체를 메타데이터 시스템에 전달하거나 애플리케이션 구성 파일에 구현 형식을 등록하면 사용자 지정 정책 어설션을 가져올 수 있습니다.  <xref:System.ServiceModel.Description.IPolicyImportExtension> 인터페이스의 구현은 매개 변수 없는 생성자 제공 해야 합니다.  
   
 ### <a name="to-import-custom-policy-assertions"></a>사용자 지정 정책 어설션을 가져오려면  
   
@@ -25,7 +25,7 @@ ms.locfileid: "70795613"
   
 3. 구성 파일 사용 다음 절차를 참조하십시오.  
   
-4. [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)를 사용 하 여 구성 파일을 사용 합니다. 다음 절차를 참조하십시오.  
+4. [ServiceModel 메타 데이터 유틸리티 도구 (Svcutil.exe)와](../servicemodel-metadata-utility-tool-svcutil-exe.md)구성 파일을 사용 하 여 . 다음 절차를 참조하십시오.  
   
 5. 정책 가져오기를 프로그래밍 방식으로 삽입 다음 절차를 참조하십시오.  
   
@@ -40,13 +40,13 @@ ms.locfileid: "70795613"
   
 3. 정책 어설션에 의해 지정된 기능 또는 요구 사항을 지원하는 바인딩 또는 계약에 대해 사용자 지정을 수행합니다. 일반적으로 어설션은 바인딩에 특정 구성 또는 특정 바인딩 요소가 필요함을 나타냅니다. <xref:System.ServiceModel.Description.PolicyConversionContext.BindingElements%2A?displayProperty=nameWithType> 속성에 액세스하여 이러한 사항을 수정하십시오. 다른 어설션을 사용하려면 계약을 수정해야 합니다.  <xref:System.ServiceModel.Description.PolicyConversionContext.Contract%2A?displayProperty=nameWithType> 속성을 사용하여 계약에 액세스하고 이를 수정할 수 있습니다.  정책 가져오기는 동일한 바인딩 및 계약에 대해 여러 번 호출될 수 있지만 정책 대안을 가져오는 데 실패하면 다른 정책으로 대체됩니다. 사용자 코드는 이 동작에 대해 유연해야 합니다.  
   
-4. 어설션 컬렉션에서 사용자 지정 정책 어설션을 제거합니다. 어설션 Windows Communication Foundation 제거 하지 않으면 (WCF) 정책 가져오기가 실패 했다고 가정 하 고 연결 된 바인딩을 가져오지 않습니다. <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> 메서드를 사용하여 사용자 지정 정책 어설션을 찾고 컬렉션에서 이를 한 번에 제거했다면 이 단계를 수행할 필요가 없습니다.  
+4. 어설션 컬렉션에서 사용자 지정 정책 어설션을 제거합니다. 어설션을 제거하지 않으면 WCF(Windows Communication Foundation)는 정책 가져오기가 실패하고 관련 바인딩을 가져오지 않는다고 가정합니다. <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> 메서드를 사용하여 사용자 지정 정책 어설션을 찾고 컬렉션에서 이를 한 번에 제거했다면 이 단계를 수행할 필요가 없습니다.  
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-a-configuration-file"></a>구성 파일을 사용하여 사용자 지정 정책 가져오기를 메타데이터 시스템에 삽입하려면  
   
-1. 클라이언트 구성 파일에서 `<extensions>` [ \<policyimporters >](../../configure-apps/file-schema/wcf/policyimporters.md) 요소 내의 요소에 가져오기 형식을 추가 합니다.  
+1. 가져오기 형식을 정책 내의 `<extensions>` 요소에 [추가가져오기>클라이언트 구성 파일의 요소입니다. \<](../../configure-apps/file-schema/wcf/policyimporters.md)  
   
-     [!code-xml[CustomPolicySample#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]   
+     [!code-xml[CustomPolicySample#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]
   
 2. 클라이언트 애플리케이션에서 <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>를 사용하여 메타데이터를 확인하면 해당 가져오기가 자동으로 호출됩니다.  
   
@@ -55,15 +55,15 @@ ms.locfileid: "70795613"
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-svcutilexe"></a>Svcutil.exe를 사용하여 사용자 지정 정책 가져오기를 메타데이터 시스템에 삽입하려면  
   
-1. Svcutil.exe 구성 파일의 `<extensions>` [ \<policyimporters >](../../configure-apps/file-schema/wcf/policyimporters.md) 요소 내에 있는 요소에 가져오기 형식을 추가 합니다. 또한 `/svcutilConfig` 옵션을 사용하여 다른 구성 파일에서 등록된 정책 가져오기 형식을 로드하도록 Svcutil.exe를 지정할 수 있습니다.  
+1. 가져오기 형식을 정책 내의 `<extensions>` 요소에 추가수입>Svcutil.exe.config 구성 파일의 요소입니다. [ \<](../../configure-apps/file-schema/wcf/policyimporters.md) 또한 `/svcutilConfig` 옵션을 사용하여 다른 구성 파일에서 등록된 정책 가져오기 형식을 로드하도록 Svcutil.exe를 지정할 수 있습니다.  
   
-2. [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 를 사용 하 여 메타 데이터를 가져오고, 가져오기가 자동으로 호출 됩니다.  
+2. [ServiceModel 메타데이터 유틸리티 도구(Svcutil.exe)를](../servicemodel-metadata-utility-tool-svcutil-exe.md) 사용하여 메타데이터를 가져오면 가져오기가 자동으로 호출됩니다.  
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-programmatically"></a>프로그래밍 방식으로 사용자 지정 정책 가져오기를 메타데이터 시스템에 삽입하려면  
   
 1. 메타데이터를 가져오기 전에 가져오기를 <xref:System.ServiceModel.Description.MetadataImporter.PolicyImportExtensions%2A?displayProperty=nameWithType> 속성(예를 들어 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>를 사용 중인 경우)에 추가합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>

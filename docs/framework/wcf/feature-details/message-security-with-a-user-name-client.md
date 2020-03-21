@@ -5,33 +5,33 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-ms.openlocfilehash: 547c23509096b66c1fdbd46117a10f4de1692387
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 3dd21268d4ea7dc59c74889ac94dc86678e91865
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212041"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184633"
 ---
 # <a name="message-security-with-a-user-name-client"></a>사용자 이름 클라이언트를 사용하는 메시지 보안
-The following illustration shows an Windows Communication Foundation (WCF) service and client secured using message-level security. 서비스는 X.509 인증서를 사용하여 인증됩니다. 클라이언트는 사용자 이름 및 암호를 사용하여 인증합니다.  
+다음 그림에서는 메시지 수준 보안을 사용하여 보안되는 WCF(Windows 통신 재단) 서비스 및 클라이언트를 보여 주습니다. 서비스는 X.509 인증서를 사용하여 인증됩니다. 클라이언트는 사용자 이름 및 암호를 사용하여 인증합니다.  
   
- For a sample application, see [Message Security User Name](../../../../docs/framework/wcf/samples/message-security-user-name.md).  
+ 샘플 응용 프로그램에 대 한 [메시지 보안 사용자 이름](../../../../docs/framework/wcf/samples/message-security-user-name.md)참조  
   
- ![Message security using username authentication](../../../../docs/framework/wcf/feature-details/media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61-7e1d-42f5-b1af-195bfee5b3c6")  
+ ![사용자 이름 인증을 사용하는 메시지 보안](../../../../docs/framework/wcf/feature-details/media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61-7e1d-42f5-b1af-195bfee5b3c6")  
   
-|특징|설명|  
+|특성|Description|  
 |--------------------|-----------------|  
 |보안 모드|메시지|  
-|상호 운용성|Windows Communication Foundation (WCF) only|  
+|상호 운용성|윈도우 커뮤니케이션 재단(WCF) 전용|  
 |인증(서버)|최초 협상에는 서버 인증이 필요합니다.|  
 |인증(클라이언트)|사용자 이름/암호|  
 |무결성|예, 공유 보안 컨텍스트 사용|  
 |기밀성|예, 공유 보안 컨텍스트 사용|  
-|Transport|HTTP|  
+|전송|HTTP|  
 |바인딩|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>서비스  
- 다음 코드와 구성은 독립적으로 실행되어야 합니다. 다음 작업 중 하나를 수행합니다.  
+ 다음 코드와 구성은 독립적으로 실행되어야 합니다. 다음 중 하나를 수행합니다.  
   
 - 구성 없이 코드를 사용하여 독립 실행형 서비스를 만듭니다.  
   
@@ -54,9 +54,9 @@ The following illustration shows an Windows Communication Foundation (WCF) servi
       <serviceBehaviors>  
         <behavior name="ServiceCredentialsBehavior">  
           <serviceCredentials>  
-            <serviceCertificate findValue="Contoso.com"   
+            <serviceCertificate findValue="Contoso.com"
                                 storeLocation="LocalMachine"  
-                                storeName="My"     
+                                storeName="My"
                                 x509FindType="FindBySubjectName" />  
           </serviceCredentials>  
         </behavior>  
@@ -75,7 +75,7 @@ The following illustration shows an Windows Communication Foundation (WCF) servi
     <bindings>  
       <wsHttpBinding>  
         <binding name="MessageAndUserName">  
-          <security mode="Message">              
+          <security mode="Message">
             <message clientCredentialType="UserName" />  
           </security>  
         </binding>  
@@ -111,9 +111,9 @@ The following illustration shows an Windows Communication Foundation (WCF) servi
       </wsHttpBinding>  
     </bindings>  
     <client>  
-      <endpoint address="http://machineName/Calculator"   
+      <endpoint address="http://machineName/Calculator"
                 binding="wsHttpBinding"  
-                bindingConfiguration="WSHttpBinding_ICalculator"   
+                bindingConfiguration="WSHttpBinding_ICalculator"
                 contract="ICalculator"  
                 name="WSHttpBinding_ICalculator">  
         <identity>  
@@ -125,10 +125,10 @@ The following illustration shows an Windows Communication Foundation (WCF) servi
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [메시지 보안 사용자 이름](../../../../docs/framework/wcf/samples/message-security-user-name.md)
 - [서비스 ID 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [\<identity>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
-- [Security Model for Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [\<ID>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [Windows Server AppFabric 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

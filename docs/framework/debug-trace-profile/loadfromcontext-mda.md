@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LoadFrom context
 - LoadFromContext MDA
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
-ms.openlocfilehash: 28ef6e12c82cf5ca56962756b9ea964d0ae9baaa
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: d0090a0272d1c3b6175b351175689df1e1e4fdbd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216167"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181802"
 ---
 # <a name="loadfromcontext-mda"></a>loadFromContext MDA
 `loadFromContext` MDA(관리 디버깅 도우미)는 어셈블리가 `LoadFrom` 컨텍스트에 로드되면 활성화됩니다. 이 상황은 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>을 호출하거나 비슷한 메서드를 호출한 결과 발생할 수 있습니다.  
@@ -21,14 +21,14 @@ ms.locfileid: "77216167"
  일부 로더 메서드를 사용하면 어셈블리가 `LoadFrom` 컨텍스트에 로드될 수 있습니다. 이 컨텍스트를 사용하면 예기치 않은 serialization, 캐스팅 및 종속성 확인 동작이 발생할 수 있습니다. 일반적으로 이러한 문제점을 방지하기 위해 어셈블리를 `Load` 컨텍스트에 로드하는 것이 좋습니다. 이 MDA 없으면 어셈블리가 로드된 컨텍스트를 판별하기가 어렵습니다.  
   
 ## <a name="cause"></a>원인  
- 일반적으로 `LoadFrom` 컨텍스트 외부의 경로에서 로드된 경우(예: 전역 어셈블리 캐시 또는 `Load` 속성) 어셈블리가 <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=nameWithType> 컨텍스트에 로드됩니다.  
+ 일반적으로 `Load` 컨텍스트 외부의 경로에서 로드된 경우(예: 전역 어셈블리 캐시 또는 <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=nameWithType> 속성) 어셈블리가 `LoadFrom` 컨텍스트에 로드됩니다.  
   
 ## <a name="resolution"></a>해결 방법  
  더 이상 <xref:System.Reflection.Assembly.LoadFrom%2A>을 호출하지 않아도 되도록 애플리케이션을 구성합니다. 이 작업을 수행할 때 다음 기술을 사용할 수 있습니다.  
   
 - 전역 어셈블리 캐시에 어셈블리 설치  
   
-- <xref:System.AppDomainSetup.ApplicationBase%2A>의 <xref:System.AppDomain> 디렉터리에 어셈블리를 둡니다. 기본 도메인의 경우 <xref:System.AppDomainSetup.ApplicationBase%2A> 디렉터리에 프로세스를 시작하는 실행 파일이 포함되어 있습니다. 어셈블리를 쉽게 이동할 수 없는 경우 새로운 <xref:System.AppDomain>을 만들어야 할 수도 있습니다.  
+- <xref:System.AppDomain>의 <xref:System.AppDomainSetup.ApplicationBase%2A> 디렉터리에 어셈블리를 둡니다. 기본 도메인의 경우 <xref:System.AppDomainSetup.ApplicationBase%2A> 디렉터리에 프로세스를 시작하는 실행 파일이 포함되어 있습니다. 어셈블리를 쉽게 이동할 수 없는 경우 새로운 <xref:System.AppDomain>을 만들어야 할 수도 있습니다.  
   
 - 종속 어셈블리가 실행 파일과 관련된 하위 디렉터리에 있는 경우 보조 애플리케이션 도메인 또는 애플리케이션 구성(.config) 파일에 검색 경로를 추가합니다.  
   
@@ -62,8 +62,8 @@ namespace ConsoleApplication1
         static void Main(string[] args)  
         {  
             // The following call caused the LoadFrom context to be used  
-            // because the assembly is loaded using LoadFrom and the path is   
-            // located outside of the Load context probing path.   
+            // because the assembly is loaded using LoadFrom and the path is
+            // located outside of the Load context probing path.
             Assembly.LoadFrom(@"C:\Text\Test.dll");  
         }  
     }  

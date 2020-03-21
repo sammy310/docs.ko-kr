@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Spinner control type
 - control types, Spinner
 ms.assetid: 3a29d185-65d8-42e3-bcc3-7f43e96f40c5
-ms.openlocfilehash: 189773525a448befe670e2a62a1ee4134ff71b0f
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d3cf972afdaaffaf1c0943c9cc11348bee23345d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76785956"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179575"
 ---
 # <a name="ui-automation-support-for-the-spinner-control-type"></a>Spinner 컨트롤 형식에 대한 UI 자동화 지원
 > [!NOTE]
@@ -21,31 +21,31 @@ ms.locfileid: "76785956"
   
  Spinner 컨트롤은 항목의 도메인 또는 숫자 범위에서 선택하는 데 사용됩니다.  
   
- 다음 섹션에서는 Spinner 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 또는 Windows Forms의 모든 회전자 컨트롤에 적용 됩니다.  
+ 다음 섹션에서는 Spinner 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]모든 스피너 컨트롤에 적용됩니다(, Win32 또는 Windows Forms).  
   
-<a name="Required_UI_Automation_Tree_Structure"></a>   
+<a name="Required_UI_Automation_Tree_Structure"></a>
 ## <a name="required-ui-automation-tree-structure"></a>필요한 UI 자동화 트리 구조  
- 다음 표는 회전자 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고(범위 값, 값, 선택 컨트롤 패턴을 지원하는 경우) 각 뷰에 포함될 수 있는 내용에 대해 설명합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에 대 한 자세한 내용은 [UI 자동화 트리 개요](ui-automation-tree-overview.md)를 참조 하세요.  
+ 다음 표는 회전자 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고(범위 값, 값, 선택 컨트롤 패턴을 지원하는 경우) 각 뷰에 포함될 수 있는 내용에 대해 설명합니다. 트리에 대한 자세한 내용은 [UI 자동화 트리 개요를](ui-automation-tree-overview.md)참조하십시오. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]  
   
  **Range Value 또는 Value 컨트롤 패턴**  
   
-|컨트롤 뷰|콘텐츠 보기|  
+|컨트롤 뷰|콘텐츠 뷰|  
 |------------------|------------------|  
-|Spinner<br /><br /> -Edit (0 또는 1 개)<br />-단추 (2)|Spinner|  
+|Spinner<br /><br /> - 편집 (0 또는 1)<br />- 버튼 (2)|Spinner|  
   
  **Selection 컨트롤 패턴**  
   
-|컨트롤 뷰|콘텐츠 보기|  
+|컨트롤 뷰|콘텐츠 뷰|  
 |------------------|------------------|  
-|Spinner<br /><br /> -Edit (0 또는 1 개)<br />-단추 (2)<br />-목록 항목 (0 개 이상)|Spinner<br /><br /> -ListItem (0 개 이상)|  
+|Spinner<br /><br /> - 편집 (0 또는 1)<br />- 버튼 (2)<br />- 목록 항목 (0 이상)|Spinner<br /><br /> - 목록 항목 (0 이상)|  
   
- 컨트롤 뷰 하위 트리에서 두 개의 단추를 자동화 된 테스트 도구로 구별할 수 있도록 하려면 `SmallIncrement` 또는 `SmallDecrement` `AutomationId`를 적절 하 게 할당 합니다. 일부 구현의 경우, 연결된 편집 컨트롤이 회전자 컨트롤의 피어일 수 있습니다.  
+ 컨트롤 뷰 하위 트리에서 두 개의 단추를 자동화된 테스트 도구로 구분하려면 `SmallIncrement` 또는 `SmallDecrement` `AutomationId` 를 할당합니다. 일부 구현의 경우, 연결된 편집 컨트롤이 회전자 컨트롤의 피어일 수 있습니다.  
   
-<a name="Required_UI_Automation_Properties"></a>   
+<a name="Required_UI_Automation_Properties"></a>
 ## <a name="required-ui-automation-properties"></a>필요한 UI 자동화 속성  
- 다음 표에서는 값 또는 정의가 회전자 컨트롤과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여 줍니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성에 대 한 자세한 내용은 [클라이언트에 대 한 UI 자동화 속성](ui-automation-properties-for-clients.md)을 참조 하세요.  
+ 다음 표에서는 값 또는 정의가 회전자 컨트롤과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여 줍니다. 속성에 대한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 자세한 내용은 [클라이언트에 대한 UI 자동화 속성을](ui-automation-properties-for-clients.md)참조하십시오.  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성|값|참고|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성|값|메모|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|메모를 참조하세요.|이 속성의 값은 애플리케이션의 모든 컨트롤에서 고유해야 합니다.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|메모를 참조하세요.|전체 컨트롤이 포함된 가장 바깥쪽 사각형입니다.|  
@@ -58,33 +58,33 @@ ms.locfileid: "76785956"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|회전자 컨트롤이 항상 콘텐츠여야 합니다.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|회전자 컨트롤이 항상 컨트롤이어야 합니다.|  
   
-<a name="Required_UI_Automation_Control_Patterns_and_Properties"></a>   
+<a name="Required_UI_Automation_Control_Patterns_and_Properties"></a>
 ## <a name="required-ui-automation-control-patterns-and-properties"></a>필요한 UI 자동화 컨트롤 패턴 및 속성  
  다음 표에서는 회전자 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 패턴을 나열하여 보여 줍니다. 컨트롤 패턴에 대한 자세한 내용은 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)를 참조하세요.  
   
-|컨트롤 패턴/패턴 속성|지원/값|참고|  
+|컨트롤 패턴/패턴 속성|지원/값|메모|  
 |---------------------------------------|--------------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider>|종속|선택할 항목 목록이 있는 회전자 컨트롤은 이 패턴을 지원해야 합니다.|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider>|개체|선택할 항목 목록이 있는 회전자 컨트롤은 이 패턴을 지원해야 합니다.|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|False|회전자 컨트롤은 항상 단일 선택 컨테이너입니다.|  
-|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|종속|숫자 범위에 걸친 회전자 컨트롤은 이 패턴을 지원할 수 있습니다.|  
-|<xref:System.Windows.Automation.Provider.IValueProvider>|종속|옵션 또는 숫자의 불연속 집합에 걸친 회전자 컨트롤은 이 패턴을 지원할 수 있습니다.|  
+|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|개체|숫자 범위에 걸친 회전자 컨트롤은 이 패턴을 지원할 수 있습니다.|  
+|<xref:System.Windows.Automation.Provider.IValueProvider>|개체|옵션 또는 숫자의 불연속 집합에 걸친 회전자 컨트롤은 이 패턴을 지원할 수 있습니다.|  
   
-<a name="Required_UI_Automation_Events"></a>   
+<a name="Required_UI_Automation_Events"></a>
 ## <a name="required-ui-automation-events"></a>필요한 UI 자동화 이벤트  
  다음 표에서는 모든 회전자 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트를 나열하여 보여 줍니다. 이벤트에 대한 자세한 내용은 [UI Automation Events Overview](ui-automation-events-overview.md)를 참조하세요.  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|지원|참고|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|지원|메모|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|종속|None|  
+|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|개체|None|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 속성 변경 이벤트.|필수|None|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 속성 변경 이벤트.|필수|None|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 속성 변경 이벤트.|필수|None|  
-|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 속성 변경 이벤트.|종속|None|  
-|<xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> 속성 변경 이벤트.|종속|None|  
+|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 속성 변경 이벤트.|개체|None|  
+|<xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> 속성 변경 이벤트.|개체|None|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|필수|None|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|필수|None|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Automation.ControlType.Spinner>
 - [UI 자동화 컨트롤 형식 개요](ui-automation-control-types-overview.md)

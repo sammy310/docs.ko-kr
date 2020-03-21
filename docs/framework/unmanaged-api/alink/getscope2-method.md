@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 49435665-6f5a-4acd-9034-8c9244a04a63
 topic_type:
 - apiref
-ms.openlocfilehash: a5b080443be94d5a298cc67591914d87470e6f48
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 40df78cdf99c2e0f53be9664f3f5c6386b6c6f93
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447190"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179403"
 ---
 # <a name="getscope2-method"></a>GetScope2 메서드
 가져오기 범위를 가져옵니다.  
@@ -32,7 +32,7 @@ HRESULT GetScope2(
     mdToken FileToken,  
     DWORD dwScope,  
     IMetaDataImport2** ppImportScope  
-) PURE;   
+) PURE;
 ```  
   
 ## <a name="parameters"></a>매개 변수  
@@ -43,16 +43,16 @@ HRESULT GetScope2(
  가져올 파일의 ID입니다.  
   
  `dwScope`  
- 가져올 범위 (0부터 시작)입니다.  
+ 가져올 0기반 범위입니다.  
   
  `ppImportScope`  
- 표시 된 범위에 대 한 [IMetaDataImport2 interface](../metadata/imetadataimport2-interface.md) 인터페이스에 대 한 포인터를 받습니다.  
+ 표시된 범위에 대한 [IMetaDataImport2 인터페이스](../metadata/imetadataimport2-interface.md) 인터페이스에 대한 포인터를 받습니다.  
   
-## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 S_OK을 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ 메서드가 성공하면 S_OK 반환합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Alink가 필요 합니다.  
+ alink.h가 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목
 

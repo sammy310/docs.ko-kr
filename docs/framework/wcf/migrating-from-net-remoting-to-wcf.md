@@ -2,12 +2,12 @@
 title: .NET Remoting에서 WCF로 마이그레이션
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: 4b6996b01da6312486649482ffbb812fcb021306
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 8dcc019017195fd55231fbea3493d4c53d500cb3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452554"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183956"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>.NET Remoting에서 WCF로 마이그레이션
 이 문서에서는 WCF(Windows Communication Foundation)를 사용하기 위해 .NET Remoting을 사용하는 애플리케이션을 마이그레이션하는 방법을 설명합니다. 이러한 제품 간의 비슷한 개념을 비교한 다음 WCF의 몇 가지 일반적인 Remoting 시나리오를 수행하는 방법을 설명합니다.  
@@ -15,7 +15,7 @@ ms.locfileid: "77452554"
  .NET Remoting은 이전 버전과의 호환성을 위해서만 지원되는 레거시 제품입니다. 클라이언트와 서버 간에 개별 신뢰 수준을 유지할 수 없으므로 복합 신뢰 환경에서는 안전하지 않습니다. 예를 들어 .NET Remoting 엔드포인트를 인터넷 또는 신뢰할 수 없는 클라이언트에 노출하지 않아야 합니다. 기존 Remoting 애플리케이션을 더욱 안전한 최신 기술로 마이그레이션하는 것이 좋습니다. 애플리케이션의 디자인에서 HTTP만 사용하고 RESTful인 경우 ASP.NET Web API를 사용하는 것이 좋습니다. 자세한 내용은 ASP.NET Web API를 참조하세요. 애플리케이션이 SOAP을 기반으로 하거나 TCP와 같이 Http가 아닌 프로토콜을 필요로 하는 경우 WCF를 사용하는 것이 좋습니다.  
 
 ## <a name="comparing-net-remoting-to-wcf"></a>.NET Remoting과 WCF 비교  
- 이 섹션에서는 .NET Remoting의 기본 빌딩 블록을 해당 WCF의 빌딩 블록과 비교합니다. 나중에 이러한 구성 요소를 사용 하 여 WCF에서 몇 가지 일반적인 클라이언트-서버 시나리오를 만들 것입니다. 다음 차트에는 .NET Remoting과 WCF의 주요 유사성 및 차이점이 요약 되어 있습니다.  
+ 이 섹션에서는 .NET Remoting의 기본 빌딩 블록을 해당 WCF의 빌딩 블록과 비교합니다. 나중에 이러한 구성 요소를 사용하여 WCF에서 몇 가지 일반적인 클라이언트 서버 시나리오를 만듭니다. 다음 차트는 .NET Remoting과 WCF 간의 주요 유사점과 차이점을 요약합니다.  
   
 ||.NET Remoting|WCF|  
 |-|-------------------|---------|  
@@ -23,8 +23,8 @@ ms.locfileid: "77452554"
 |서비스 작업|서버 유형의 공용 메서드|[OperationContract] 특성으로 표시|  
 |직렬화|ISerializable 또는 [Serializable]|DataContractSerializer 또는 XmlSerializer|  
 |전달된 개체|값 방식 또는 참조 방식|값 방식만 해당|  
-|오류/예외|모든 직렬화 가능 예외|FaultContract\<TDetail >|  
-|클라이언트 프록시 개체|강력한 형식의 투명 프록시는 MarshalByRefObjects에서 자동으로 생성됩니다.|강력한 형식의 프록시는 ChannelFactory\<TChannel을 사용 하 여 요청 시 생성 됩니다 >|  
+|오류/예외|모든 직렬화 가능 예외|오류\<계약 t세부 사항>|  
+|클라이언트 프록시 개체|강력한 형식의 투명 프록시는 MarshalByRefObjects에서 자동으로 생성됩니다.|강력하게 입력된 프록시는 ChannelFactory\<TChannel> 사용하여 주문형으로 생성됩니다.|  
 |필요한 플랫폼|클라이언트와 서버 모두 Microsoft OS 및 .NET를 사용해야 합니다.|플랫폼 간|  
 |메시지 형식|프라이빗|산업 표준(SOAP, WS-* 등)|  
   
@@ -48,8 +48,8 @@ public class RemotingServer : MarshalByRefObject
 TcpChannel channel = new TcpChannel(8080);  
 ChannelServices.RegisterChannel(channel, ensureSecurity : true);  
 RemotingConfiguration.RegisterWellKnownServiceType(  
-    typeof(RemotingServer),   
-    "RemotingServer",   
+    typeof(RemotingServer),
+    "RemotingServer",
     WellKnownObjectMode.Singleton);  
 Console.WriteLine("RemotingServer is running.  Press ENTER to terminate...");  
 Console.ReadLine();  
@@ -116,7 +116,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(WCFServer), baseAddress)
 TcpChannel channel = new TcpChannel();  
 ChannelServices.RegisterChannel(channel, ensureSecurity : true);  
 RemotingServer server = (RemotingServer)Activator.GetObject(  
-                            typeof(RemotingServer),   
+                            typeof(RemotingServer),
                             "tcp://localhost:8080/RemotingServer");  
   
 RemotingCustomer customer = server.GetCustomer(42);  
@@ -132,7 +132,7 @@ Console.WriteLine($"Customer {customer.FirstName} {customer.LastName} received."
 NetTcpBinding binding = new NetTcpBinding();  
 String url = "net.tcp://localhost:8000/wcfserver";  
 EndpointAddress address = new EndpointAddress(url);  
-ChannelFactory<IWCFServer> channelFactory =   
+ChannelFactory<IWCFServer> channelFactory =
     new ChannelFactory<IWCFServer>(binding, address);  
 IWCFServer server = channelFactory.CreateChannel();  
   
@@ -140,7 +140,7 @@ Customer customer = server.GetCustomer(42);
 Console.WriteLine($"  Customer {customer.FirstName} {customer.LastName} received.");
 ```  
   
- 이 예제는 Remoting 예제와 가장 비슷하므로 채널 수준의 프로그래밍을 보여 줍니다. 또한 클라이언트 프로그래밍을 간소화 하는 코드를 생성 하는 Visual Studio의 **서비스 참조 추가** 방법도 사용할 수 있습니다. 자세한 내용은 아래 항목을 참조하세요.  
+ 이 예제는 Remoting 예제와 가장 비슷하므로 채널 수준의 프로그래밍을 보여 줍니다. 클라이언트 프로그래밍을 단순화하기 위해 코드를 생성하는 Visual Studio의 **서비스 참조 추가** 접근 방식도 사용할 수 있습니다. 자세한 내용은 아래 항목을 참조하세요.  
   
 - [클라이언트 채널 수준 프로그래밍](./extending/client-channel-level-programming.md)  
   
@@ -158,9 +158,9 @@ Console.WriteLine($"  Customer {customer.FirstName} {customer.LastName} received
 #### <a name="serialization-in-net-remoting"></a>.NET Remoting의 직렬화  
  .NET Remoting에서는 클라이언트와 서버 간에 개체를 직렬화하고 역직렬화하는 다음 두 가지 방법을 지원합니다.  
   
-- *값으로* – 개체의 값이 계층 경계를 넘어 serialize 되 고 해당 개체의 새 인스턴스가 다른 계층에 생성 됩니다. 새 인스턴스의 속성 또는 메소드를 호출하면 로컬에서만 실행되며 원래 개체나 계층에는 영향을 미치지 않습니다.  
+- *값별* – 개체의 값은 계층 경계를 넘어 직렬화되고 해당 개체의 새 인스턴스는 다른 계층에서 만들어집니다. 새 인스턴스의 속성 또는 메소드를 호출하면 로컬에서만 실행되며 원래 개체나 계층에는 영향을 미치지 않습니다.  
   
-- *참조로* – 특별 한 "개체 참조"는 계층 경계를 넘어 serialize 됩니다. 한 계층에서 해당 개체의 메서드나 속성과 상호 작용하는 경우 원래 계층의 원본 개체와 다시 통신합니다. 참조 방식 개체는 양방향, 즉 서버에서 클라이언트 또는 클라이언트에서 서버로 전달될 수 있습니다.  
+- *참조로* – 특수 "개체 참조"는 계층 경계를 넘어 직렬화됩니다. 한 계층에서 해당 개체의 메서드나 속성과 상호 작용하는 경우 원래 계층의 원본 개체와 다시 통신합니다. 참조 방식 개체는 양방향, 즉 서버에서 클라이언트 또는 클라이언트에서 서버로 전달될 수 있습니다.  
   
  Remoting에서 값 방식 유형은 [Serializable] 특성으로 표시되거나 다음 예제와 같이 ISerializable을 구현합니다.  
   
@@ -187,7 +187,7 @@ public class RemotingCustomerReference : MarshalByRefObject
   
  Remoting의 참조 방식 개체의 의미를 이해하는 것이 매우 중요합니다. 두 계층(클라이언트 또는 서버) 중 하나에서 다른 계층에 참조 방식 개체를 전송하는 경우, 개체를 소유하는 계층에서 모든 메서드 호출이 다시 실행됩니다. 예를 들어 서버에서 반환한 참조 방식 개체에서 메서드를 호출하는 클라이언트가 서버에서 코드를 실행합니다. 마찬가지로, 클라이언트에서 제공한 참조 방식 개체에서 메서드를 호출하는 서버는 다시 클라이언트에서 코드를 실행합니다. 따라서 .NET Remoting은 완전히 신뢰할 수 있는 환경에서만 사용하는 것이 좋습니다. 신뢰할 수 없는 클라이언트에 공용 .NET Remoting 엔드포인트를 노출하면 Remoting 서버가 공격에 취약하게 됩니다.  
   
-#### <a name="serialization-in-wcf"></a>WCF 직렬화  
+#### <a name="serialization-in-wcf"></a>WCF의 직렬화  
  WCF에서는 값 방식 직렬화만 지원합니다. 클라이언트와 서버 간에 교환할 형식을 정의하는 가장 일반적인 방법은 다음 예제와 같습니다.  
   
 ```csharp
@@ -247,9 +247,9 @@ public interface IWCFServer
   
 ```csharp
 throw new FaultException<CustomerServiceFault>(  
-    new CustomerServiceFault() {   
-        CustomerId = customerId,   
-        ErrorMessage = "Illegal customer Id"   
+    new CustomerServiceFault() {
+        CustomerId = customerId,
+        ErrorMessage = "Illegal customer Id"
     });  
 ```  
   
@@ -284,11 +284,11 @@ catch (FaultException<CustomerServiceFault> fault)
   
 ### <a name="why-migrate-from-remoting-to-wcf"></a>Remoting에서 WCF로 마이그레이션하는 이유  
   
-- **.NET Remoting은 레거시 제품입니다.** [.Net Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507%28v=vs.100%29)에 설명 된 것 처럼 레거시 제품으로 간주 되며 새로운 개발에는 권장 되지 않습니다. 신규 및 기존 애플리케이션에는 WCF 또는 ASP.NET Web API를 사용하는 것이 좋습니다.  
+- **.NET Remoting은 레거시 제품입니다.** [.NET Remoting에](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507%28v=vs.100%29)설명된 대로 레거시 제품으로 간주되며 새 개발에는 권장되지 않습니다. 신규 및 기존 애플리케이션에는 WCF 또는 ASP.NET Web API를 사용하는 것이 좋습니다.  
   
-- **WCF는 플랫폼 간 표준을 사용 합니다.** WCF는 플랫폼 간 상호 운용성을 염두에 두고 설계되었으며, 많은 업계 표준(SOAP, WS-Security, WS-Trust 등)을 지원합니다. WCF 서비스는 Windows 이외의 운영 체제에서 실행되는 클라이언트와 상호 운용할 수 있습니다. Remoting은 기본적으로 서버 및 클라이언트 응용 프로그램이 Windows 운영 체제에서 .NET Framework를 사용 하 여 실행 되는 환경에 맞게 설계 되었습니다.
+- **WCF에서는 플랫폼 간 표준을 사용합니다.** WCF는 플랫폼 간 상호 운용성을 염두에 두고 설계되었으며, 많은 업계 표준(SOAP, WS-Security, WS-Trust 등)을 지원합니다. WCF 서비스는 Windows 이외의 운영 체제에서 실행되는 클라이언트와 상호 운용할 수 있습니다. 원격은 주로 Windows 운영 체제에서 .NET Framework를 사용하여 서버와 클라이언트 응용 프로그램이 실행되는 환경을 위해 설계되었습니다.
   
-- **WCF에는 기본 제공 보안이 있습니다.** WCF는 보안을 고려 하 여 설계 되었으며 인증, 전송 수준 보안, 메시지 수준 보안 등에 대 한 다양 한 옵션을 제공 합니다. Remoting은 응용 프로그램의 상호 운용성을 용이 하 게 하기 위해 설계 되었지만 트러스트 되지 않은 환경에서는 안전 하도록 설계 되지 않았습니다. WCF는 신뢰할 수 있는 환경과 신뢰할 수 없는 환경 모두에서 작동하도록 설계되었습니다.  
+- **WCF에는 기본 제공 보안 기능이 있습니다.** WCF는 보안을 염두에 두고 설계되었으며 인증, 전송 수준 보안, 메시지 수준 보안 등에 대한 다양한 옵션을 제공합니다. 원격은 응용 프로그램이 쉽게 상호 운용할 수 있도록 설계되었지만 신뢰할 수 없는 환경에서는 안전하도록 설계되지 않았습니다. WCF는 신뢰할 수 있는 환경과 신뢰할 수 없는 환경 모두에서 작동하도록 설계되었습니다.  
   
 ### <a name="migration-recommendations"></a>마이그레이션 권장 사항  
  다음은 .NET Remoting에서 WCF로 마이그레이션하기 위해 권장되는 단계입니다.  
@@ -297,15 +297,15 @@ catch (FaultException<CustomerServiceFault> fault)
   
 - **데이터 계약을 만듭니다.** 서버와 클라이언트 간에 교환할 데이터 형식을 정의한 다음 [DataContract] 특성으로 표시합니다. 클라이언트에서 사용할 수 있는 모든 필드와 속성을 [DataMember]로 표시합니다.  
   
-- **오류 계약을 만듭니다 (선택 사항).** 오류가 발생하면 서버와 클라이언트 간에 교환될 유형을 만듭니다. 이러한 형식을 직렬화할 수 있도록 [DataContract] 및 [DataMember]로 표시합니다. [OperationContract]로 표시한 모든 서비스 작업도 [FaultContract]로 표시하여 해당 작업에서 반환할 수 있는 오류를 표시합니다.  
+- **오류 계약을 만듭니다(선택 사항).** 오류가 발생하면 서버와 클라이언트 간에 교환될 유형을 만듭니다. 이러한 형식을 직렬화할 수 있도록 [DataContract] 및 [DataMember]로 표시합니다. [OperationContract]로 표시한 모든 서비스 작업도 [FaultContract]로 표시하여 해당 작업에서 반환할 수 있는 오류를 표시합니다.  
   
-- **서비스를 구성 하 고 호스팅합니다.** 서비스 계약이 생성되면 다음 단계는 엔드포인트에 서비스를 노출하도록 바인딩을 구성하는 것입니다. 자세한 내용은 [끝점: 주소, 바인딩 및 계약](./feature-details/endpoints-addresses-bindings-and-contracts.md)을 참조 하세요.  
+- **서비스를 구성하고 호스트합니다.** 서비스 계약이 생성되면 다음 단계는 엔드포인트에 서비스를 노출하도록 바인딩을 구성하는 것입니다. 자세한 내용은 [끝점: 주소, 바인딩 및 계약을](./feature-details/endpoints-addresses-bindings-and-contracts.md)참조하십시오.  
   
  Remoting 애플리케이션이 WCF로 마이그레이션된 후에도 .NET Remoting에서 종속성을 제거하는 것이 중요합니다. 그러면 애플리케이션에서 Remoting의 취약성이 제거됩니다. 이 단계에는 다음이 포함됩니다.  
   
-- **MarshalByRefObject 사용을 중단 합니다.** MarshalByRefObject 형식은 Remoting용으로만 제공되며 WCF에서는 사용하지 않습니다. MarshalByRefObject를 하위 클래스로 분류하는 모든 애플리케이션 형식은 제거하거나 변경해야 합니다.  
+- **MarshalByRefObject 사용을 중단합니다.** MarshalByRefObject 형식은 Remoting용으로만 제공되며 WCF에서는 사용하지 않습니다. MarshalByRefObject를 하위 클래스로 분류하는 모든 애플리케이션 형식은 제거하거나 변경해야 합니다.  
   
-- **[Serializable] 및 ISerializable 사용을 중단 합니다.** [Serializable] 특성과 ISerializable 인터페이스는 원래 신뢰할 수 있는 환경에서 형식을 직렬화하도록 설계되었으며 Remoting에서 사용됩니다. WCF 직렬화를 수행하려면 [DataContract]와 [DataMember]가 표시된 형식이 필요합니다. 애플리케이션에서 사용하는 데이터 형식은 [DataContract]를 사용하고 ISerializable이나 [Serializable]은 사용하지 않도록 수정해야 합니다.  
+- **[Serializable] 및 ISerializable 사용을 중단합니다.** [Serializable] 특성과 ISerializable 인터페이스는 원래 신뢰할 수 있는 환경에서 형식을 직렬화하도록 설계되었으며 Remoting에서 사용됩니다. WCF 직렬화를 수행하려면 [DataContract]와 [DataMember]가 표시된 형식이 필요합니다. 애플리케이션에서 사용하는 데이터 형식은 [DataContract]를 사용하고 ISerializable이나 [Serializable]은 사용하지 않도록 수정해야 합니다.  
   
 ### <a name="migration-scenarios"></a>마이그레이션 시나리오  
  이제 WCF에서 다음과 같은 일반적인 Remoting 시나리오를 수행하는 방법을 살펴보겠습니다.  
@@ -370,7 +370,7 @@ public class RemotingServer : MarshalByRefObject
    }  
   
    [DataContract]  
-   public class PremiumCustomer : Customer   
+   public class PremiumCustomer : Customer
    {  
        [DataMember]  
        public int AccountId { get; set; }  
@@ -417,9 +417,9 @@ public class RemotingServer : MarshalByRefObject
        customerServiceHost.Open();  
    ```  
   
-     이 ServiceHost가 시작되고 나면 web.config 파일을 사용하여 적절한 계약, 바인딩 및 엔드포인트를 설정합니다. 구성 파일에 대 한 자세한 내용은 [구성 파일을 사용 하 여 서비스 구성](./configuring-services-using-configuration-files.md)을 참조 하세요. 이와 같은 서버 시작 스타일을 자체 호스트라고 합니다. WCF 서비스 호스팅을 위한 다른 선택 사항에 대 한 자세한 내용은 [호스팅 서비스](./hosting-services.md)를 참조 하세요.  
+     이 ServiceHost가 시작되고 나면 web.config 파일을 사용하여 적절한 계약, 바인딩 및 엔드포인트를 설정합니다. 구성 파일에 대한 자세한 내용은 [구성 파일을 사용하여 서비스 구성](./configuring-services-using-configuration-files.md)을 참조하십시오. 이와 같은 서버 시작 스타일을 자체 호스트라고 합니다. WCF 서비스 호스팅에 대한 다른 선택 사항은 [호스팅 서비스](./hosting-services.md)를 참조하십시오.  
   
-6. 클라이언트 프로젝트의 app.config에서 서비스 엔드포인트에 일치하는 바인딩 정보를 선언해야 합니다. Visual Studio에서이 작업을 수행 하는 가장 쉬운 방법은 **서비스 참조 추가**를 사용 하는 것입니다 .이는 app.config 파일을 자동으로 업데이트 하는 것입니다. 또는 수동으로 동일한 변경 내용을 추가할 수 있습니다.  
+6. 클라이언트 프로젝트의 app.config에서 서비스 엔드포인트에 일치하는 바인딩 정보를 선언해야 합니다. Visual Studio에서 이 작업을 수행하는 가장 쉬운 방법은 app.config 파일을 자동으로 업데이트하는 **서비스 참조 추가를**사용하는 것입니다. 또는 수동으로 동일한 변경 내용을 추가할 수 있습니다.  
   
     ```xml  
     <configuration>  
@@ -434,7 +434,7 @@ public class RemotingServer : MarshalByRefObject
     </configuration>  
     ```  
   
-     **서비스 참조 추가**사용에 대 한 자세한 내용은 [방법: 서비스 참조 추가, 업데이트 또는 제거](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)를 참조 하세요.  
+     **서비스 참조 추가**사용에 대한 자세한 내용은 서비스 [참조 추가, 업데이트 또는 제거 방법을](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)참조하십시오.  
   
 7. 이제 클라이언트에서 WCF 서비스를 호출할 수 있습니다. 해당 서비스의 채널 팩터리를 만들고, 채널을 요청한 다음, 해당 채널에서 원하는 메서드를 직접 호출하여 수행할 수 있습니다. 채널에서 서비스의 인터페이스를 구현하고 기본 요청/응답 논리를 처리하므로 가능합니다. 이 메서드 호출의 반환 값은 역직렬화된 서버 응답 복사본입니다.  
   
@@ -505,9 +505,9 @@ public class RemotingServer : MarshalByRefObject
    ```csharp
    public class SessionBoundFactory : ISessionBoundFactory  
        {  
-           public static ChannelFactory<ISessionBoundObject> _factory =   
+           public static ChannelFactory<ISessionBoundObject> _factory =
                new ChannelFactory<ISessionBoundObject>("sessionbound");  
- 
+
            public SessionBoundFactory()  
            {  
            }  
@@ -524,7 +524,7 @@ public class RemotingServer : MarshalByRefObject
   
 4. 다음 예제와 같이 다음 두 작업을 수행하여 서버의 구성 파일을 수정해야 합니다.  
   
-    1. 세션 개체의 끝점을 설명 하는 \<client > 섹션을 선언 합니다. 이 경우 서버는 클라이언트 역할도 수행하므로 이와 같은 선언이 필요합니다.  
+    1. 세션 \<개체의 끝점을 설명하는 클라이언트> 섹션을 선언합니다. 이 경우 서버는 클라이언트 역할도 수행하므로 이와 같은 선언이 필요합니다.  
   
     2. 팩터리와 세션 개체의 엔드포인트를 선언합니다. 클라이언트에서 서비스 엔드포인트와 통신하여 EndpointAddress10을 획득하고 세션 채널을 만들 수 있어야 하므로 필요합니다.  
   
@@ -602,18 +602,18 @@ public class RemotingServer : MarshalByRefObject
     4. 여러 호출에서 동일한 인스턴스로 남아 있음을 보여주기 위해 세션 개체와 상호 작용합니다.  
   
    ```csharp
-   ChannelFactory<ISessionBoundFactory> channelFactory =   
+   ChannelFactory<ISessionBoundFactory> channelFactory =
        new ChannelFactory<ISessionBoundFactory>("factory");  
    ISessionBoundFactory sessionFactory = channelFactory.CreateChannel();  
   
    EndpointAddress10 address1 = sessionFactory.GetInstanceAddress();  
    EndpointAddress10 address2 = sessionFactory.GetInstanceAddress();  
   
-   ChannelFactory<ISessionBoundObject> sessionObjectFactory1 =   
-       new ChannelFactory<ISessionBoundObject>(new NetTcpBinding(),   
+   ChannelFactory<ISessionBoundObject> sessionObjectFactory1 =
+       new ChannelFactory<ISessionBoundObject>(new NetTcpBinding(),
                                                address1.ToEndpointAddress());  
-   ChannelFactory<ISessionBoundObject> sessionObjectFactory2 =   
-       new ChannelFactory<ISessionBoundObject>(new NetTcpBinding(),   
+   ChannelFactory<ISessionBoundObject> sessionObjectFactory2 =
+       new ChannelFactory<ISessionBoundObject>(new NetTcpBinding(),
                                                address2.ToEndpointAddress());  
   
    ISessionBoundObject sessionInstance1 = sessionObjectFactory1.CreateChannel();  
@@ -642,10 +642,10 @@ public class RemotingServer : MarshalByRefObject
    ChannelFactory<ICustomerService> factory =  
        new ChannelFactory<ICustomerService>("customerservice");  
    ICustomerService service = factory.CreateChannel();  
-   PremiumCustomer customer = new PremiumCustomer {   
-   FirstName = "Bob",   
-   LastName = "Jones",   
-   CustomerId = 43,   
+   PremiumCustomer customer = new PremiumCustomer {
+   FirstName = "Bob",
+   LastName = "Jones",
+   CustomerId = 43,
    AccountId = 99};  
    bool success = service.UpdateCustomer(customer);  
    Console.WriteLine($"  Server returned {success}.");
@@ -656,7 +656,7 @@ public class RemotingServer : MarshalByRefObject
     > [!NOTE]
     > 이 코드는 파생 형식(PremiumCustomer) 전송도 보여 줍니다. 서비스 인터페이스에서는 Customer 개체를 기대하지만, Customer 클래스에 표시된 PremiumCustomer의 [KnownType] 특성도 허용됩니다. WCF에서 이 서비스 인터페이스를 통해 다른 형식을 직렬화하거나 역직렬화하려고 하면 모두 실패합니다.  
   
- 데이터의 표준 WCF 교환은 값 방식입니다. 이 경우 이러한 데이터 개체 중 하나에서 메서드를 호출하면 로컬에서만 실행되며, 다른 계층에서는 코드를 호출하지 않습니다. 서버 *에서* 반환 되는 참조 개체와 같은 작업을 수행할 수 있지만 클라이언트에서 참조 방식 개체를 서버 *에* 전달 하는 것은 불가능 합니다. 클라이언트와 서버 간에 서로 대화하는 데 필요한 시나리오는 WCF에서 이중 서비스를 사용하여 수행할 수 있습니다. 자세한 내용은 [이중 서비스](./feature-details/duplex-services.md)를 참조 하세요.  
+ 데이터의 표준 WCF 교환은 값 방식입니다. 이 경우 이러한 데이터 개체 중 하나에서 메서드를 호출하면 로컬에서만 실행되며, 다른 계층에서는 코드를 호출하지 않습니다. 서버에서 반환된 참조 개체와 같은 *from* 것을 얻을 수는 있지만 클라이언트가 참조 *별* 개체를 서버에 전달할 수는 없습니다. 클라이언트와 서버 간에 서로 대화하는 데 필요한 시나리오는 WCF에서 이중 서비스를 사용하여 수행할 수 있습니다. 자세한 내용은 [양면 서비스를](./feature-details/duplex-services.md)참조하십시오.  
   
 ## <a name="summary"></a>요약  
  .NET Remoting은 완전히 신뢰할 수 있는 환경에서만 사용하도록 고안된 통신 프레임워크입니다. 이는 레거시 제품이며 이전 버전과의 호환성을 위해서만 지원됩니다. 새 애플리케이션을 빌드하는 데 사용할 수 없습니다. 반대로, WCF는 보안을 염두에 두고 설계되었으며, 신규 및 기존 애플리케이션에 사용하는 것이 좋습니다. Microsoft에서는 기존 Remoting 애플리케이션을 마이그레이션하여 WCF나 ASP.NET Web API를 대신 사용하도록 권장합니다.

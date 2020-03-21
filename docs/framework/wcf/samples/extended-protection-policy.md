@@ -2,12 +2,12 @@
 title: 확장된 보호 정책
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
-ms.openlocfilehash: 1cb6d44e8f6ee8f54f776453e5a1783ab0cfa4f0
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 3a5b1c7f296c68d407f0217963dec56f53e9a08a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716419"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144724"
 ---
 # <a name="extended-protection-policy"></a>확장된 보호 정책
 확장된 보호는 MITM(Man-In-The-Middle, 메시지 가로채기) 공격을 방지하기 위한 보안 이니셔티브입니다. MITM 공격은 공격자가 클라이언트의 자격 증명을 가로채 서버로 전달하는 보안 위협입니다.  
@@ -26,27 +26,27 @@ ms.locfileid: "74716419"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1. **제어판**, **프로그램 추가/제거**, **Windows 기능**에서 인터넷 정보 서비스를 설치 합니다.  
+1. **제어판에서**인터넷 정보 서비스 설치, **프로그램 추가/제거,** **Windows 기능**.  
   
-2. Windows **기능**, **인터넷 정보 서비스**, **World Wide Web 서비스**, **보안**및 **windows 인증**에 **windows 인증** 을 설치 합니다.  
+2. **Windows** **기능,** 인터넷 **정보 서비스,** **월드 와이드 웹 서비스,** **보안**및 **Windows 인증에**Windows 인증을 설치합니다.  
   
-3. **Windows 기능**, **Microsoft .NET Framework 3.5.1**및 **Windows Communication Foundation http 활성화** **Windows Communication Foundation http 활성화** 를 설치 합니다.  
+3. **설치 윈도우 통신 재단 HTTP 정품 인증** 윈도우 **기능,** **마이크로 소프트 .NET 프레임 워크 3.5.1**, **윈도우 통신 재단 HTTP 활성화**.  
   
 4. 이 샘플을 사용하려면 클라이언트에서 서버와의 보안 채널을 설정해야 하므로, IIS(인터넷 정보 서비스) 관리자에서 설치할 수 있는 서버 인증서가 있어야 합니다.  
   
-    1. IIS 관리자를 엽니다. 루트 노드 (컴퓨터 이름)를 선택한 경우 **기능 보기** 탭에 표시 되는 **서버 인증서**를 엽니다.  
+    1. IIS 관리자를 엽니다. 루트 노드(컴퓨터 이름)를 선택하면 **기능 보기** 탭에 표시되는 **서버 인증서를**엽니다.  
   
     2. 이 샘플을 테스트하기 위해 자체 서명된 인증서를 만듭니다. Internet Explorer에서 인증서가 안전하지 않다는 메시지가 표시되지 않도록 하려면 인증서를 신뢰할 수 있는 인증서 루트 인증 기관 저장소에 설치합니다.  
   
-5. 기본 웹 사이트에 대 한 **작업** 창을 엽니다. **사이트 편집**, **바인딩**을 클릭 합니다. HTTPS가 아직 없으면 포트 번호 443을 사용하여 HTTPS를 형식으로 추가합니다. 이전 단계에서 만든 SSL 인증서를 할당합니다.  
+5. 기본 웹 사이트에 대한 **작업** 창을 엽니다. 사이트 , 바인딩 **편집을** **클릭합니다.** HTTPS가 아직 없으면 포트 번호 443을 사용하여 HTTPS를 형식으로 추가합니다. 이전 단계에서 만든 SSL 인증서를 할당합니다.  
   
 6. 서비스를 빌드합니다. 그러면 IIS에 가상 디렉터리가 만들어지고 서비스를 웹에서 호스트하는 데 필요한 .dll, .svc 및 .config 파일이 복사됩니다.  
   
-7. IIS 관리자를 엽니다. 이전 단계에서 만든 가상 디렉터리 (**Extendedprotection**)를 마우스 오른쪽 단추로 클릭 합니다. **응용 프로그램으로 변환을**선택 합니다.  
+7. IIS 관리자를 엽니다. 이전 단계에서 만든 가상**디렉터리(ExtendedProtection)를**마우스 오른쪽 단추로 클릭합니다. **응용 프로그램으로 변환을**선택합니다.  
   
-8. IIS 관리자에서이 가상 디렉터리에 대 한 **인증** 모듈을 열고 **Windows 인증**을 사용 하도록 설정 합니다.  
+8. 이 가상 디렉터리에 대한 IIS 관리자의 **인증** 모듈을 열고 **Windows 인증을**사용하도록 설정합니다.  
   
-9. **Windows 인증** 에서이 가상 디렉터리에 대 한 **고급 설정** 을 열고 **필수**로 설정 합니다.  
+9. 이 가상 디렉터리에 대한 **Windows 인증에서** **고급 설정을** 열고 **필수**로 설정합니다.  
   
 10. 브라우저 창에서 정규화된 도메인 이름을 제공하여 HTTPS URL에 액세스하면 서비스를 테스트할 수 있습니다. 원격 컴퓨터에서 이 URL에 액세스하려면 들어오는 모든 HTTP 및 HTTPS 연결에 대해 방화벽이 열려 있는지 확인합니다.  
   
@@ -56,9 +56,9 @@ ms.locfileid: "74716419"
   
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
->   
+>
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대한 WCF(Windows 통신 재단) 및 WF(Windows 워크플로우 재단) 샘플로](https://www.microsoft.com/download/details.aspx?id=21459) 이동하여 모든 WCF(Windows 통신 재단) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Security\ExtendedProtection`

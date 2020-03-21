@@ -2,18 +2,18 @@
 title: Programming Model Item Tree
 ms.date: 03/30/2017
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-ms.openlocfilehash: efda69ac568b0ad9c5fdcf4d42722c5b7dadd3f3
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: f14b140fdac95f3763cc5625841a725793876fa4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715673"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142695"
 ---
 # <a name="programming-model-item-tree"></a>Programming Model Item Tree
-이 샘플에서는 Windows Presentation Foundation (WPF) 트리 뷰에서 선언적 데이터 바인딩을 사용 하 여 <xref:System.Activities.Presentation.Model.ModelItem> 트리를 탐색 하는 방법을 보여 줍니다.
+이 샘플에서는 WPF(Windows 프레젠테이션 재단) 트리 뷰에서 선언적 데이터 바인딩을 사용하여 <xref:System.Activities.Presentation.Model.ModelItem> 트리를 탐색하는 방법을 보여 줍니다.
 
 ## <a name="sample-details"></a>샘플 세부 정보
- <xref:System.Activities.Presentation.Model.ModelItem> 트리는 Windows 워크플로 디자이너 인프라에서 편집 중인 기본 인스턴스에 대 한 데이터를 노출 하는 데 사용 되는 추상화입니다. 다음 그림은 워크플로 디자이너 내에서 인프라의 다양 한 계층을 묘사 하는 것입니다.
+ 트리는 <xref:System.Activities.Presentation.Model.ModelItem> Windows 워크플로 디자이너 인프라에서 편집 중인 기본 인스턴스에 대한 데이터를 노출하는 데 사용되는 추상화입니다. 다음 그림은 워크플로 디자이너 내의 다양한 인프라 계층을 묘사한 것입니다.
 
  ![워크플로 디자이너 아키텍처를 보여 주는 다이어그램입니다.](./media/programming-model-item-tree/workflow-designer-architecture.jpg)
 
@@ -29,25 +29,25 @@ justAdded.Properties["DisplayName"].SetValue("new name");
 
 #### <a name="to-use-this-sample"></a>이 샘플을 사용하려면
 
-1. Visual Studio 2010에서 ProgrammingModelItemTree 솔루션을 엽니다.
+1. 비주얼 스튜디오 2010에서 프로그래밍모델ItemTree.sln 솔루션을 엽니다.
 
-2. **빌드** 메뉴에서 **솔루션 빌드** 를 선택 하 여 솔루션을 빌드합니다.
+2. **빌드** 메뉴에서 **솔루션 빌드를** 선택하여 솔루션을 빌드합니다.
 
-3. F5 키를 눌러 응용 프로그램을 실행합니다. WPF 양식이 표시 됩니다.
+3. F5 키를 눌러 애플리케이션을 실행합니다. 그러면 WPF 양식이 표시됩니다.
 
-4. **WF 로드** 단추를 클릭 하 여 <xref:System.Activities.Presentation.Model.ModelItem>를 로드 하 고 트리 뷰에 바인딩합니다.
+4. **WF 로드** 단추를 클릭하여 <xref:System.Activities.Presentation.Model.ModelItem> 로드하고 트리 뷰에 바인딩합니다.
 
-5. **모델 항목 트리 변경** 단추를 클릭 하면 이전 코드를 실행 하 여 트리에 항목을 추가 하 고 속성을 설정 합니다.
+5. 모델 **항목 트리 변경** 단추를 클릭하면 이전 코드를 실행하여 트리에 항목을 추가하고 속성을 설정합니다.
 
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
->   
+>
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대한 WCF(Windows 통신 재단) 및 WF(Windows 워크플로우 재단) 샘플로](https://www.microsoft.com/download/details.aspx?id=21459) 이동하여 모든 WCF(Windows 통신 재단) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ProgrammingModelItemTree`  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Data.IValueConverter>

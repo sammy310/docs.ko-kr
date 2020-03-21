@@ -2,12 +2,12 @@
 title: Discovery 클라이언트 채널 사용
 ms.date: 03/30/2017
 ms.assetid: 1494242a-1d64-4035-8ecd-eb4f06c8d2ba
-ms.openlocfilehash: 05ca54d62179d024e619bc5c9c70a4e08b9dd62f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2d9dd68d233541f4d8cb3185adc1023cd5a19de1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975948"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184259"
 ---
 # <a name="using-the-discovery-client-channel"></a>Discovery 클라이언트 채널 사용
 WCF 클라이언트 애플리케이션을 작성하는 경우 호출할 서비스의 엔드포인트 주소를 알아야 합니다. 대부분의 경우 서비스의 엔드포인트 주소를 미리 알 수 없거나 시간 경과에 따라 서비스의 주소가 변경됩니다. Discovery 클라이언트 채널을 사용하면 WCF 클라이언트 애플리케이션을 작성하고 호출할 서비스를 설명할 수 있습니다. 그러면 클라이언트 채널이 자동으로 프로브 요청을 보냅니다. 서비스가 응답하면 Discovery 클라이언트 채널은 프로브 응답에서 서비스의 엔드포인트 주소를 검색하고 이를 사용하여 서비스를 호출합니다.  
@@ -22,9 +22,9 @@ WCF 클라이언트 애플리케이션을 작성하는 경우 호출할 서비�
   
 1. 호출할 서비스를 설명하는 데 사용되는 <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.FindCriteria%2A>  
   
-2. 검색 메시지를 보낼 검색 끝점을 지정 하는 <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A>입니다.  
+2. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A>검색 끝점을 지정하여 검색 메시지를 보낼 수 있습니다.  
   
- <xref:System.ServiceModel.Discovery.FindCriteria.%23ctor%2A> 속성을 사용하면 검색할 서비스 계약, 필요한 모든 범위 URI 및 채널 열기를 시도하는 최대 횟수를 지정할 수 있습니다. 계약 형식은 <xref:System.ServiceModel.Discovery.FindCriteria>생성자를 호출 하 여 지정 합니다. 범위 URI는 <xref:System.ServiceModel.Discovery.FindCriteria.Scopes%2A> 속성에 추가할 수 있습니다. <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> 속성을 사용하면 클라이언트가 연결을 시도하는 최대 결과 수를 지정할 수 있습니다. 프로브 응답을 받으면 클라이언트는 프로브 응답의 엔드포인트 주소를 사용하여 채널을 열려고 시도합니다. 예외가 발생하면 클라이언트는 다음 프로브 응답으로 이동하고 필요한 경우 더 많은 응답이 수신될 때까지 기다립니다. 클라이언트는 채널이 성공적으로 열리거나 최대 결과 수에 도달할 때까지 이 작업을 계속 수행합니다. 이러한 설정에 대 한 자세한 내용은 <xref:System.ServiceModel.Discovery.FindCriteria>를 참조 하세요.  
+ <xref:System.ServiceModel.Discovery.FindCriteria.%23ctor%2A> 속성을 사용하면 검색할 서비스 계약, 필요한 모든 범위 URI 및 채널 열기를 시도하는 최대 횟수를 지정할 수 있습니다. 계약 형식은 생성자 <xref:System.ServiceModel.Discovery.FindCriteria>를 호출하여 지정됩니다. 범위 URI는 <xref:System.ServiceModel.Discovery.FindCriteria.Scopes%2A> 속성에 추가할 수 있습니다. <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> 속성을 사용하면 클라이언트가 연결을 시도하는 최대 결과 수를 지정할 수 있습니다. 프로브 응답을 받으면 클라이언트는 프로브 응답의 엔드포인트 주소를 사용하여 채널을 열려고 시도합니다. 예외가 발생하면 클라이언트는 다음 프로브 응답으로 이동하고 필요한 경우 더 많은 응답이 수신될 때까지 기다립니다. 클라이언트는 채널이 성공적으로 열리거나 최대 결과 수에 도달할 때까지 이 작업을 계속 수행합니다. 이러한 설정에 대한 자세한 내용은 <xref:System.ServiceModel.Discovery.FindCriteria>을 참조하십시오.  
   
  ph x="1" /&gt; 속성을 사용하면 사용할 검색 엔드포인트를 지정할 수 있습니다. 일반적으로 이 엔드포인트는 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>이지만 유효한 모든 엔드포인트일 수 있습니다.  
   
@@ -41,7 +41,7 @@ bindingElement.FindCriteria = new FindCriteria(typeof(ICalculator)) { MaxResults
 // Use the UdpDiscoveryEndpoint  
 bindingElement.DiscoveryEndpoint = new UdpDiscoveryEndpoint();  
   
-// The service uses the BasicHttpBinding, so use that and insert the DiscoveryClientBindingElement at the   
+// The service uses the BasicHttpBinding, so use that and insert the DiscoveryClientBindingElement at the
 // top of the stack  
 CustomBinding binding = new CustomBinding(new BasicHttpBinding());  
 binding.Elements.Insert(0,bindingElement);  
@@ -60,4 +60,4 @@ catch (EndpointNotFoundException ex)
 ```  
   
 ## <a name="security-and-the-discovery-client-channel"></a>보안 및 Discovery 클라이언트 채널  
- Discovery 클라이언트 채널을 사용하는 경우 두 개의 엔드포인트가 지정됩니다. 하나는 대개 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>인 검색 메시지에 사용되고, 다른 하나는 애플리케이션 엔드포인트입니다. 보안 서비스를 구현할 때는 이러한 두 엔드포인트에 보안을 설정해야 합니다. 보안에 대 한 자세한 내용은 [서비스 및 클라이언트 보안](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)설정을 참조 하세요.
+ Discovery 클라이언트 채널을 사용하는 경우 두 개의 엔드포인트가 지정됩니다. 하나는 대개 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>인 검색 메시지에 사용되고, 다른 하나는 애플리케이션 엔드포인트입니다. 보안 서비스를 구현할 때는 이러한 두 엔드포인트에 보안을 설정해야 합니다. 보안에 대한 자세한 내용은 [서비스 및 클라이언트 보안](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)을 참조하십시오.

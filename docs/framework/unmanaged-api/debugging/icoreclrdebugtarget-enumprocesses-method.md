@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e00fd477-4f49-43d3-bd0e-3094824b1136
 topic_type:
 - apiref
-ms.openlocfilehash: 11b1072b3467f7d0a3f223fbc2151ec9ccf461ad
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 6484832e8e737b9a0d0b3eaf3ede4078729f7a4a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790798"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178433"
 ---
 # <a name="icoreclrdebugtargetenumprocesses-method"></a>ICoreClrDebugTarget::EnumProcesses 메서드
 원격 컴퓨터에서 실행 중인 프로세스를 열거합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "76790798"
   
 ```cpp  
 HRESULT EnumProcesses (  
-       [out]  DWORD*                  pcProcs,   
+       [out]  DWORD*                  pcProcs,
        [out]  CoreClrDebugProcInfo**  ppProcs  
 );  
 ```  
@@ -41,11 +41,11 @@ HRESULT EnumProcesses (
  [out] `ppProcs`에 반환된 프로세스 수입니다. 이 값은 0일 수 있습니다.  
   
  `ppProcs`  
- 제한이 원격 컴퓨터에서 실행 중인 프로세스를 나타내는 [CoreClrDebugProcInfo](coreclrdebugprocinfo-structure.md) 구조체의 배열입니다.  
+ 【아웃】 원격 컴퓨터에서 실행되는 프로세스를 나타내는 [CoreClrDebugPropro](coreclrdebugprocinfo-structure.md) 정보 구조의 배열입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  S_OK  
- 명령 실행 성공  
+ 성공했습니다.  
   
  E_OUTOFMEMORY  
  `ppProcs`에 대해 충분한 메모리를 할당할 수 없습니다.  
@@ -53,18 +53,18 @@ HRESULT EnumProcesses (
  E_FAIL(또는 다른 E_ 반환 코드)  
  기타 실패  
   
-## <a name="remarks"></a>주의  
- 이 메서드에 의해 할당 된 메모리를 해제 하려면 [ICoreClrDebugTarget:: FreeMemory](icoreclrdebugtarget-freememory-method.md) 메서드를 호출 합니다.  
+## <a name="remarks"></a>설명  
+ 이 메서드에서 할당된 메모리를 해제하려면 [ICoreClrDebugTarget::FreeMemory](icoreclrdebugtarget-freememory-method.md) 메서드를 호출합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** CoreClrRemoteDebuggingInterfaces  
+ **헤더:** 코어클러원격디버깅인터페이스.h  
   
- **라이브러리:** mscordbi_macx86 .dll  
+ **라이브러리:** mscordbi_macx86.dll  
   
- **.NET Framework 버전:** 3.5 SP1  
+ **.NET 프레임워크 버전:** 3.5 SP1  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICoreClrDebugTarget 인터페이스](icoreclrdebugtarget-interface.md)

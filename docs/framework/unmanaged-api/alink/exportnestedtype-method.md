@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: dec7df60-4d30-47c8-99db-72e0419e5f76
 topic_type:
 - apiref
-ms.openlocfilehash: fded6b95144d4088a2abc8dfcc4ef8eda331c34f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9ca2167e66ac3aa5bcc0e92ff357eed18d366c67
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438428"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179409"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType 메서드
-중첩 형식을 내보낼 수 있는 형식으로 지정 합니다. [Exporttype 메서드](exporttype-method.md) 는 중첩 형식을 내보낼 수도 있지만이 메서드는 더 빠릅니다.  
+중첩된 형식을 내보낼 수 있는 것으로 지정합니다. [ExportType 메서드는](exporttype-method.md) 중첩된 형식을 내보낼 수도 있지만 이 방법은 더 빠릅니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,7 +36,7 @@ HRESULT ExportNestedType(
     LPCWSTR         pszTypename,  
     DWORD           dwFlags,  
     mdExportedType* pType  
-) PURE;   
+) PURE;
 ```  
   
 ## <a name="parameters"></a>매개 변수  
@@ -44,28 +44,28 @@ HRESULT ExportNestedType(
  내보낼 어셈블리의 ID입니다.  
   
  `FileToken`  
- 내보낼 수 있는 형식을 정의 하는 파일의 파일 토큰 또는 어셈블리입니다.  
+ 내보낼 수 있도록 할 형식을 정의하는 파일 토큰 또는 파일 어셈블리입니다.  
   
  `TypeToken`  
- 내보낼 수 있는 형식의 형식 토큰입니다.  
+ 내보낼 수 있도록 할 형식의 토큰을 입력합니다.  
   
  `ParentType`  
- 부모 형식의 토큰입니다.  
+ 상위 형식의 토큰입니다.  
   
  `pszTypename`  
- 내보낼 정규화 된 형식 이름입니다.  
+ 내보낼 정규화된 형식 이름입니다.  
   
  `dwFlags`  
- `tdPublic` 또는 `tdNested`와 같은 플래그를 `ComType` 합니다. 이 값은 [DefineExportedType 메서드에](../metadata/imetadataassemblyemit-defineexportedtype-method.md)전달 될 수 있습니다.  
+ `ComType`또는 와 `tdPublic` `tdNested`같은 플래그입니다. 이 값은 [정의ExportedType 메서드에](../metadata/imetadataassemblyemit-defineexportedtype-method.md)전달될 수 있습니다.  
   
  `pType`  
- 내보낸 형식에 대 한 토큰을 받습니다.  
+ 내보낸 형식에 대한 토큰을 받습니다.  
   
-## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 S_OK을 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ 메서드가 성공하면 S_OK 반환합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Alink 필요  
+ alink.h 필요  
   
 ## <a name="see-also"></a>참고 항목
 

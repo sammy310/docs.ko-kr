@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 25c08217-fdeb-44b9-9cd6-1b4955d6e602
-ms.openlocfilehash: 9620eb25837a5cf6dd592f4222e0fa5a13751278
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 8ebc97112d2044efca85520ee942ed0f587529ee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77214930"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79156157"
 ---
 # <a name="connectiongroup-class"></a>ConnectionGroup 클래스
 
-`ConnectionGroup` 클래스는 <xref:System.Net.ServicePoint> 컨텍스트 내에서 연결 목록을 그룹화 하 고 네트워크 리소스 (예: 프록시 및 별도의 클라이언트)의 컨텍스트를 유지 하는 데 사용 됩니다.
+클래스는 `ConnectionGroup` <xref:System.Net.ServicePoint> 컨텍스트 내의 연결 목록을 그룹화하며 네트워크 리소스(예: 프록시 및 별도의 클라이언트)에 대한 컨텍스트를 유지하는 데 사용됩니다.
 
 ## <a name="syntax"></a>구문
   
@@ -28,14 +28,14 @@ internal class ConnectionGroup
 ```
 
 > [!WARNING]
-> `ConnectionGroup` 클래스는 내부 클래스 이며 코드에서 직접 사용할 수 없습니다.
-> 
-> Microsoft는 어떤 경우에도 프로덕션 응용 프로그램에서이 클래스를 사용 하는 것을 지원 하지 않습니다.
+> 클래스는 `ConnectionGroup` 내부이며 코드에서 직접 사용할 수 없습니다.
+>
+> Microsoft는 어떠한 상황에서도 프로덕션 응용 프로그램에서 이 클래스의 사용을 지원하지 않습니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**네임 스페이스:** <xref:System.Net>
+**네임스페이스:**<xref:System.Net>
 
-**어셈블리:** 시스템 (system.string)
+**어셈블리:** 시스템(시스템.dll)
 
-**.NET Framework 버전:** 2.0부터 사용할 수 있습니다.
+**.NET 프레임워크 버전:** 2.0 부터 사용할 수 있습니다.

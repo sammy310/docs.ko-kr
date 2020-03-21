@@ -1,5 +1,5 @@
 ---
-title: 보안 투명 코드, 수준 1
+title: 보안 투명 코드, 레벨 1
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transparent
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - security-transparent code
 - security [.NET Framework], security-transparent code
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
-ms.openlocfilehash: 8f232a7724ad831818627cbfc2845ea808a3fcfd
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 980c684bced685a61ad82ff5713ccff2b974028f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215801"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181123"
 ---
-# <a name="security-transparent-code-level-1"></a>보안 투명 코드, 수준 1
+# <a name="security-transparent-code-level-1"></a>보안 투명 코드, 레벨 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- 투명도를 통해 개발자는 부분적으로 신뢰할 수 있는 코드에 기능을 노출하는 더 안전한 .NET Framework 라이브러리를 작성할 수 있습니다. 수준 1 투명도는 .NET Framework 버전 2.0에서 새로 추가되었고 주로 Microsoft 내에서만 사용됩니다. .NET Framework 4부터 [수준 2 투명도](security-transparent-code-level-2.md)를 사용할 수 있습니다. 그러나 이전 보안 규칙을 사용 하 여 실행 해야 하는 레거시 코드를 식별할 수 있도록 수준 1 투명도는 유지 되었습니다.  
+ 투명도를 통해 개발자는 부분적으로 신뢰할 수 있는 코드에 기능을 노출하는 더 안전한 .NET Framework 라이브러리를 작성할 수 있습니다. 수준 1 투명도는 .NET Framework 버전 2.0에서 새로 추가되었고 주로 Microsoft 내에서만 사용됩니다. .NET 프레임워크 4부터 [수준 2 투명도를](security-transparent-code-level-2.md)사용할 수 있습니다. 그러나 이전 보안 규칙과 함께 실행되어야 하는 레거시 코드를 식별할 수 있도록 수준 1 투명도가 유지되었습니다.  
   
 > [!IMPORTANT]
-> 수준 1 투명도는 호환성 목적으로만 지정해야 합니다. 즉, <xref:System.Security.AllowPartiallyTrustedCallersAttribute>를 사용하거나 투명도 모델을 사용하지 않는 .NET Framework 3.5 이하를 사용하여 개발된 코드에만 수준 1을 지정합니다. 예를 들어 부분적으로 신뢰할 수 있는 호출자(APTCA)의 호출을 허용하는 .NET Framework 2.0 어셈블리에는 수준 1 투명도를 사용합니다. .NET Framework 4 용으로 개발 된 코드의 경우 항상 수준 2 투명도를 사용 합니다.  
+> 수준 1 투명도는 호환성 목적으로만 지정해야 합니다. 즉, <xref:System.Security.AllowPartiallyTrustedCallersAttribute>를 사용하거나 투명도 모델을 사용하지 않는 .NET Framework 3.5 이하를 사용하여 개발된 코드에만 수준 1을 지정합니다. 예를 들어 부분적으로 신뢰할 수 있는 호출자(APTCA)의 호출을 허용하는 .NET Framework 2.0 어셈블리에는 수준 1 투명도를 사용합니다. .NET Framework 4용으로 개발된 코드의 경우 항상 수준 2 투명도를 사용합니다.  
   
  이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   
@@ -30,9 +30,9 @@ ms.locfileid: "77215801"
   
 - [투명도 특성](#transparency_attributes)  
   
-- [보안 투명성 예제](#security_transparency_examples)  
+- [보안 투명도 예제](#security_transparency_examples)  
   
-<a name="the_level_1_transparency_model"></a>   
+<a name="the_level_1_transparency_model"></a>
 ## <a name="the-level-1-transparency-model"></a>수준 1 투명도 모델  
  수준 1 투명도를 사용할 경우 코드를 보안 투명, 보안 안전에 중요 및 보안에 중요 메서드로 구분하는 보안 모델을 사용하는 것입니다.  
   
@@ -55,15 +55,15 @@ ms.locfileid: "77215801"
   
  .NET Framework 이전 버전과의 호환성을 위해 투명도 특성을 사용하여 주석 처리되지 않은 모든 멤버는 보안 안전에 중요로 간주합니다. 주석으로 처리되지 않은 모든 형식은 투명으로 간주합니다. 투명도의 유효성을 검사하는 정적 분석 규칙은 없습니다. 따라서 런타임에 투명도 오류를 디버그해야 할 수 있습니다.  
   
-<a name="transparency_attributes"></a>   
+<a name="transparency_attributes"></a>
 ## <a name="transparency-attributes"></a>투명도 특성  
  다음 표에서는 투명도에 대한 코드를 주석으로 처리하는 데 사용하는 세 가지 특성에 대해 설명합니다.  
   
 |attribute|Description|  
 |---------------|-----------------|  
 |<xref:System.Security.SecurityTransparentAttribute>|어셈블리 수준에서만 허용됩니다. 어셈블리의 모든 형식 및 멤버를 보안 투명으로 식별합니다. 어셈블리는 보안에 중요 코드를 포함할 수 없습니다.|  
-|<xref:System.Security.SecurityCriticalAttribute>|<xref:System.Security.SecurityCriticalAttribute.Scope%2A> 속성 없이 어셈블리 수준에서 사용될 경우 기본적으로 어셈블리의 모든 코드를 보안 투명으로 식별하지만 어셈블리에 보안에 중요 코드를 포함할 수 있음을 나타냅니다.<br /><br /> 클래스 수준에서 사용될 경우 클래스 또는 메서드를 보안에 중요로 식별하지만 클래스 멤버는 비와 같이 식별하지 않습니다. 모든 멤버를 보안에 중요로 설정하려면 <xref:System.Security.SecurityCriticalAttribute.Scope%2A> 속성을 <xref:System.Security.SecurityCriticalScope.Everything>으로 설정합니다.<br /><br /> 멤버 수준에서 사용될 경우 특성은 해당 멤버에만 적용됩니다.<br /><br /> 보안에 중요로 식별된 클래스 또는 멤버는 권한 상승을 수행할 수 있습니다. **중요:**  수준 1 투명도에서 보안에 중요 한 형식 및 멤버는 어셈블리 외부에서 호출 될 때 보안 안전에 중요로 처리 됩니다. 권한이 없는 권한 상승을 방지하려면 완전 신뢰를 위한 링크 요청을 통해 보안에 중요 형식 및 멤버를 보호해야 합니다.|  
-|<xref:System.Security.SecuritySafeCriticalAttribute>|어셈블리의 보안 투명 코드에서 액세스할 수 있는 보안에 중요 코드를 식별합니다. 그러지 않으면 보안 투명 코드가 같은 어셈블리의 private 또는 internal 보안에 중요 멤버에 액세스할 수 없습니다. 이렇게 하면 보안에 중요 코드에 영향을 미치고 예기치 않은 권한 상승이 발생할 수 있습니다. 보안 안전에 중요 코드는 엄격한 보안 감사를 통과해야 합니다. **참고:**  보안 안전에 중요 한 형식 및 멤버는 호출자에 게 보호 된 리소스에 액세스할 수 있는 권한이 있는지 여부를 확인 하기 위해 호출자 권한이 있는지 확인 해야 합니다.|  
+|<xref:System.Security.SecurityCriticalAttribute>|<xref:System.Security.SecurityCriticalAttribute.Scope%2A> 속성 없이 어셈블리 수준에서 사용될 경우 기본적으로 어셈블리의 모든 코드를 보안 투명으로 식별하지만 어셈블리에 보안에 중요 코드를 포함할 수 있음을 나타냅니다.<br /><br /> 클래스 수준에서 사용될 경우 클래스 또는 메서드를 보안에 중요로 식별하지만 클래스 멤버는 비와 같이 식별하지 않습니다. 모든 멤버를 보안에 중요로 설정하려면 <xref:System.Security.SecurityCriticalAttribute.Scope%2A> 속성을 <xref:System.Security.SecurityCriticalScope.Everything>으로 설정합니다.<br /><br /> 멤버 수준에서 사용될 경우 특성은 해당 멤버에만 적용됩니다.<br /><br /> 보안에 중요로 식별된 클래스 또는 멤버는 권한 상승을 수행할 수 있습니다. **중요 사항:**  수준 1 투명도에서 보안에 중요한 형식과 멤버는 어셈블리 외부에서 호출될 때 보안에 중요한 것으로 처리됩니다. 권한이 없는 권한 상승을 방지하려면 완전 신뢰를 위한 링크 요청을 통해 보안에 중요 형식 및 멤버를 보호해야 합니다.|  
+|<xref:System.Security.SecuritySafeCriticalAttribute>|어셈블리의 보안 투명 코드에서 액세스할 수 있는 보안에 중요 코드를 식별합니다. 그러지 않으면 보안 투명 코드가 같은 어셈블리의 private 또는 internal 보안에 중요 멤버에 액세스할 수 없습니다. 이렇게 하면 보안에 중요 코드에 영향을 미치고 예기치 않은 권한 상승이 발생할 수 있습니다. 보안 안전에 중요 코드는 엄격한 보안 감사를 통과해야 합니다. **참고:**  보안에 안전한 중요한 형식및 구성원은 호출자의 사용 권한을 확인하여 호출자에게 보호된 리소스에 액세스할 권한이 있는지 확인해야 합니다.|  
   
  <xref:System.Security.SecuritySafeCriticalAttribute> 특성을 사용하면 보안 투명 코드가 같은 어셈블리의 보안에 중요 멤버에 액세스할 수 있습니다. 어셈블리에서 보안 투명 및 보안에 중요 코드를 두 어셈블리로 구분하는 것이 좋습니다. 보안 투명 코드는 보안에 중요 코드의 private 또는 internal 멤버를 확인할 수 없습니다. 또한 일반적으로 보안에 중요 코드는 public 인터페이스에 대한 액세스 권한이 있는지 감사됩니다. 사용자는 어셈블리 외부에서 private 또는 internal 상태에 액세스할 수 있다고 예상하지 않고 격리된 상태로 유지하려고 합니다. <xref:System.Security.SecuritySafeCriticalAttribute> 특성은 필요할 때 격리를 재정의하는 기능을 제공하면서 보안 투명 및 보안에 중요 코드 간의 상태 격리를 유지합니다. 보안 투명 코드는 해당 멤버를 <xref:System.Security.SecuritySafeCriticalAttribute>로 표시하지 않으면 private 또는 internal 보안에 중요 코드에 액세스할 수 없습니다. <xref:System.Security.SecuritySafeCriticalAttribute>를 적용하기 전에 공개적으로 노출된 것처럼 해당 멤버를 감사합니다.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "77215801"
 |`SecurityCritical(SecurityCriticalScope.Everything)`|모든 형식 및 멤버가 보안에 중요합니다.|  
 |`SecurityCritical`|모든 코드가 기본적으로 투명으로 설정됩니다. 그러나 개별 형식 및 멤버는 다른 특성을 포함할 수 있습니다.|  
   
-<a name="security_transparency_examples"></a>   
+<a name="security_transparency_examples"></a>
 ## <a name="security-transparency-examples"></a>보안 투명도 예제  
  .NET Framework 2.0 투명도 규칙(수준 1 투명도)을 사용하려면 다음 어셈블리 주석을 사용합니다.  
   
@@ -131,4 +131,4 @@ public class B
 ## <a name="see-also"></a>참고 항목
 
 - [보안 투명 코드, 수준 2](security-transparent-code-level-2.md)
-- [보안 변경 내용](../security/security-changes.md)
+- [보안 변경 사항](../security/security-changes.md)

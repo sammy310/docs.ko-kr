@@ -2,15 +2,15 @@
 title: 사용자 지정 메시지 필터
 ms.date: 03/30/2017
 ms.assetid: 98dd0af8-fce6-4255-ac32-42eb547eea67
-ms.openlocfilehash: 79edba14eff5403591cf43592415d923dbd321be
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 896407a218073eba53676baa4bcbd125593c80ca
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716822"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183880"
 ---
 # <a name="custom-message-filter"></a>사용자 지정 메시지 필터
-이 샘플에서는 WCF (Windows Communication Foundation)에서 메시지를 끝점으로 디스패치할 때 사용 하는 메시지 필터를 대체 하는 방법을 보여 줍니다.  
+이 샘플에서는 WCF(Windows 통신 재단)가 종료점에 메시지를 디스패치하는 데 사용하는 메시지 필터를 대체하는 방법을 보여 줍니다.  
   
 > [!NOTE]
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
@@ -19,7 +19,7 @@ ms.locfileid: "74716822"
   
  서비스의 각 엔드포인트에는 단일 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>가 있습니다. <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>에는 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>와 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>가 모두 있습니다. 이러한 두 필터를 결합하면 해당 엔드포인트에 사용된 메시지 필터가 됩니다.  
   
- 기본적으로 엔드포인트에 대한 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>는 서비스 엔드포인트의 <xref:System.ServiceModel.EndpointAddress>와 일치하는 주소로 해당 주소가 지정된 모든 메시지와 일치합니다. 기본적으로 끝점에 대 한 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>는 들어오는 메시지의 동작을 검사 하 고 서비스 끝점 계약 작업의 작업 중 하나에 해당 하는 작업과 모든 메시지를 일치 시킵니다 (`IsInitiating`=`true` 작업만 고려 됨). 따라서 기본적으로 엔드포인트에 대한 필터는 두 메시지의 받는 사람 헤더가 엔드포인트의 <xref:System.ServiceModel.EndpointAddress>인 경우에만 일치하고 메시지의 동작은 엔드포인트 작업의 동작 중 하나와 일치합니다.  
+ 기본적으로 엔드포인트에 대한 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>는 서비스 엔드포인트의 <xref:System.ServiceModel.EndpointAddress>와 일치하는 주소로 해당 주소가 지정된 모든 메시지와 일치합니다. 기본적으로 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> for 는 들어오는 메시지의 작업을 검사하고 서비스 끝점 계약의 작업 중 하나에 해당하는 작업과 모든 메시지를 일치시다(작업만 `IsInitiating` = `true` 고려). 따라서 기본적으로 엔드포인트에 대한 필터는 두 메시지의 받는 사람 헤더가 엔드포인트의 <xref:System.ServiceModel.EndpointAddress>인 경우에만 일치하고 메시지의 동작은 엔드포인트 작업의 동작 중 하나와 일치합니다.  
   
  이러한 필터는 동작을 사용하여 변경할 수 있습니다. 이 샘플에서 서비스는 <xref:System.ServiceModel.Description.IEndpointBehavior>의 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>와 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>를 대체하는 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>를 만듭니다.  
   
@@ -63,7 +63,7 @@ else
     <behaviorExtensions>  
         <add name="filteringEndpointBehavior" type="Microsoft.ServiceModel.Samples.FilteringEndpointBehaviorExtension, service" />  
     </behaviorExtensions>  
-</extensions>      
+</extensions>
 ```  
   
  그런 다음 서비스에서는 각 변형에 대한 `endpointBehavior` 구성을 만듭니다.  
@@ -84,9 +84,9 @@ else
 ```xml  
 <endpoint address=""  
         bindingConfiguration="ws"  
-        listenUri=""   
+        listenUri=""
         binding="wsHttpBinding"  
-        contract="Microsoft.ServiceModel.Samples.IHello"   
+        contract="Microsoft.ServiceModel.Samples.IHello"
         behaviorConfiguration="endpoint2" />  
 ```  
   
@@ -105,28 +105,28 @@ Hello
 ```xml  
 <endpoint address=""  
           bindingConfiguration="ws"  
-          listenUri=""   
+          listenUri=""
           binding="wsHttpBinding"  
-          contract="Microsoft.ServiceModel.Samples.IHello"   
+          contract="Microsoft.ServiceModel.Samples.IHello"
           behaviorConfiguration="endpoint1" />  
 ```  
   
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
->   
+>
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대한 WCF(Windows 통신 재단) 및 WF(Windows 워크플로우 재단) 샘플로](https://www.microsoft.com/download/details.aspx?id=21459) 이동하여 모든 WCF(Windows 통신 재단) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageFilter`  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1. 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따르세요.  
+1. 솔루션을 빌드하려면 Windows 통신 [기초 샘플 빌드의 지침을 따르십시오.](../../../../docs/framework/wcf/samples/building-the-samples.md)  
   
-2. 단일 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.  
+2. 단일 컴퓨터 구성에서 샘플을 실행하려면 Windows 통신 기반 샘플 실행의 지침을 [따릅니다.](../../../../docs/framework/wcf/samples/running-the-samples.md)  
   
-3. 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md) 의 지침을 따르고 Client.cs에서 다음 줄을 변경 합니다.  
+3. 컴퓨터 간 구성에서 샘플을 실행하려면 Windows 통신 기반 샘플 실행의 지침을 따르고 Client.cs 다음 줄을 [변경합니다.](../../../../docs/framework/wcf/samples/running-the-samples.md)  
   
     ```csharp
     Uri serviceVia = new Uri("http://localhost/ServiceModelSamples/service.svc");  

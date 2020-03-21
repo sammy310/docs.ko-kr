@@ -2,19 +2,19 @@
 title: '방법: MEX가 아닌 바인딩을 통해 메타데이터 검색'
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: 3721657eb72663450261b4bc8627b250b1a4a14e
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: a006795c87a2ae845d03db90dce296692c4339fa
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856037"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186441"
 ---
 # <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>방법: MEX가 아닌 바인딩을 통해 메타데이터 검색
-이 항목에서는 MEX가 아닌 바인딩을 통해 MEX 엔드포인트로부터 메타데이터를 검색하는 방법에 대해 설명합니다. 이 샘플의 코드는 [사용자 지정 보안 메타 데이터 끝점](../samples/custom-secure-metadata-endpoint.md) 샘플을 기반으로 합니다.  
+이 항목에서는 MEX가 아닌 바인딩을 통해 MEX 엔드포인트로부터 메타데이터를 검색하는 방법에 대해 설명합니다. 이 샘플의 코드는 [사용자 지정 보안 메타데이터 끝점](../samples/custom-secure-metadata-endpoint.md) 샘플을 기반으로 합니다.  
   
 ### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>MEX가 아닌 바인딩을 통해 메타데이터를 검색하려면  
   
-1. MEX 엔드포인트에서 사용하는 바인딩을 결정합니다. WCF (Windows Communication Foundation) 서비스의 경우 서비스의 구성 파일에 액세스 하 여 MEX 바인딩을 결정할 수 있습니다. 이 경우에는 MEX 바인딩이 다음 서비스 구성에서 정의됩니다.  
+1. MEX 엔드포인트에서 사용하는 바인딩을 결정합니다. WCF(Windows 통신 재단) 서비스의 경우 서비스의 구성 파일에 액세스하여 MEX 바인딩을 확인할 수 있습니다. 이 경우에는 MEX 바인딩이 다음 서비스 구성에서 정의됩니다.  
   
     ```xml  
     <services>  
@@ -79,7 +79,7 @@ ms.locfileid: "70856037"
             </clientCredentials>  
           </behavior>  
         </endpointBehaviors>  
-      </behaviors>    
+      </behaviors>
     </system.serviceModel>  
     ```  
   
@@ -121,8 +121,8 @@ ms.locfileid: "70856037"
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5. 이제 서비스 엔드포인트의 컬렉션을 가지게 됩니다. 메타 데이터를 [가져오는 방법에 대 한 자세한 내용은 방법: 서비스 끝점](../feature-details/how-to-import-metadata-into-service-endpoints.md)으로 메타 데이터를 가져옵니다.  
+5. 이제 서비스 엔드포인트의 컬렉션을 가지게 됩니다. 메타데이터 가져오기에 대한 자세한 내용은 [서비스 끝점으로 메타데이터를 가져오는 방법을](../feature-details/how-to-import-metadata-into-service-endpoints.md)참조하십시오.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [메타데이터](../feature-details/metadata.md)
+- [메타 데이터](../feature-details/metadata.md)

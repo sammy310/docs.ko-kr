@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 93829d15-d942-4e2d-b7a4-dfc9d7fb96be
 topic_type:
 - apiref
-ms.openlocfilehash: ffab2762fd86e95c3272ca456039028e0897bc41
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fb8b8f3e29c141e91587a4d0cdc81cdabccdbc9e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137174"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178644"
 ---
 # <a name="icordebugprocess2setunmanagedbreakpoint-method"></a>ICorDebugProcess2::SetUnmanagedBreakpoint 메서드
-지정 된 네이티브 이미지 오프셋에서 관리 되지 않는 중단점을 설정 합니다.  
+지정된 네이티브 이미지 오프셋에서 관리되지 않는 중단점을 설정합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -31,7 +31,7 @@ ms.locfileid: "73137174"
 HRESULT SetUnmanagedBreakpoint (  
     [in]  CORDB_ADDRESS    address,  
     [in]  ULONG32          bufsize,  
-    [out, size_is(bufsize), length_is(*bufLen)]   
+    [out, size_is(bufsize), length_is(*bufLen)]
         BYTE               buffer[],  
     [out] ULONG32          *bufLen  
 );  
@@ -39,22 +39,22 @@ HRESULT SetUnmanagedBreakpoint (
   
 ## <a name="parameters"></a>매개 변수  
  `address`  
- 진행 네이티브 이미지 오프셋을 지정 하는 `CORDB_ADDRESS` 개체입니다.  
+ 【인】 기본 `CORDB_ADDRESS` 이미지 오프셋을 지정하는 개체입니다.  
   
  `bufsize`  
- 진행 `buffer` 배열의 크기 (바이트)입니다.  
+ 【인】 배열의 크기(바이트)입니다. `buffer`  
   
  `buffer`  
- 제한이 중단점으로 대체 되는 opcode를 포함 하는 배열입니다.  
+ 【아웃】 중단점으로 대체되는 opcode를 포함하는 배열입니다.  
   
  `bufLen`  
- 제한이 `buffer` 배열에서 반환 된 바이트 수에 대 한 포인터입니다.  
+ 【아웃】 배열에서 반환되는 바이트 수에 `buffer` 대한 포인터입니다.  
   
-## <a name="remarks"></a>주의  
- 네이티브 이미지 오프셋이 CLR (공용 언어 런타임) 내에 있는 경우 중단점은 무시 됩니다. 이렇게 하면 디버거에서 중단점이 설정 된 경우 CLR에서 대역 외 중단점 디스패치를 방지할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 네이티브 이미지 오프셋이 공통 언어 런타임(CLR) 내에 있으면 중단점은 무시됩니다. 이렇게 하면 CLR이 디버거에 의해 중단점을 설정한 대역 외 중단점을 디스패치하지 않도록 할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7d1e6cd9-2a15-41c6-9b68-008705a4ed90
 topic_type:
 - apiref
-ms.openlocfilehash: 70d9ee06d64cc80306a1988aa6e28859cadb9ecf
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5ebbbf01bc27974850c7e0bb3591b8f050fd0579
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76778411"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179266"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>CorDebugInterfaceVersion 열거형
 인터페이스, 특정 .NET Framework 버전 또는 인터페이스가 적용된 .NET Framework 버전을 지정합니다.  
@@ -79,9 +79,9 @@ typedef enum CorDebugInterfaceVersion {
     ver_ICorDebugErrorInfoEnum        = CorDebugVersion_1_0,  
     ver_ICorDebugAppDomainEnum        = CorDebugVersion_1_0,  
     ver_ICorDebugAssemblyEnum         = CorDebugVersion_1_0,  
-    ver_ICorDebugEditAndContinueErrorInfo   
+    ver_ICorDebugEditAndContinueErrorInfo
                                       = CorDebugVersion_1_0,  
-    ver_ICorDebugEditAndContinueSnapshot   
+    ver_ICorDebugEditAndContinueSnapshot
                                       = CorDebugVersion_1_0,  
   
     CorDebugVersion_1_1               = CorDebugVersion_1_0 + 1,  
@@ -130,17 +130,17 @@ typedef enum CorDebugInterfaceVersion {
 } CorDebugInterfaceVersion;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>구성원  
  다음 테이블에는 각 열거형 값에서 해당 인터페이스의 링크와 인터페이스가 지원되는 첫 번째.NET Framework 버전이 나와 있습니다.  
   
-|Member|설명|.NET Framework 버전|  
+|멤버|지정 내용|.NET Framework 버전|  
 |------------|---------------|----------------------------|  
 |`CorDebugInvalidVersion`|.NET Framework 버전이 잘못되었습니다.|-|  
 |`CorDebugVersion_1_0`|모든 서비스 팩을 포함한 .NET Framework 버전이 1.0입니다.|1.0|  
 |`CorDebugVersion_1_1`|모든 서비스 팩을 포함한 .NET Framework 버전이 1.1입니다.|1.1|  
 |`CorDebugVersion_2_0`|모든 서비스 팩을 포함한 .NET Framework 버전이 2.0입니다.|2.0|  
 |`CorDebugVersion_4_0`|모든 서비스 팩을 포함한 .NET Framework 버전이 4입니다.|4|  
-|`CorDebugVersion_4_5`|모든 서비스 팩을 포함한 .NET Framework 버전이 4.5입니다.|4.5|  
+|`CorDebugVersion_4_5`|모든 서비스 팩을 포함한 .NET Framework 버전이 4.5입니다.|4.5.|  
 |`ver_ICorDebugManagedCallback`|[ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)|1.0|  
 |`ver_ICorDebugUnmanagedCallback`|[ICorDebugUnmanagedCallback](icordebugunmanagedcallback-interface.md)|1.0|  
 |`ver_ICorDebug`|[ICorDebug](icordebug-interface.md)|1.0|  
@@ -158,20 +158,20 @@ typedef enum CorDebugInterfaceVersion {
 |`ver_ICorDebugChain`|[ICorDebugChain](icordebugchain-interface.md)|1.0|  
 |`ver_ICorDebugFrame`|[ICorDebugFrame](icordebugframe-interface.md)|1.0|  
 |`ver_ICorDebugILFrame`|[ICorDebugILFrame](icordebugilframe-interface.md)|1.0|  
-|`ver_ICorDebugNativeFrame`|[ICorDebugNativeFrame](icordebugnativeframe-interface.md)|1.0|  
+|`ver_ICorDebugNativeFrame`|[아이코르데버그네이티브프레임](icordebugnativeframe-interface.md)|1.0|  
 |`ver_ICorDebugModule`|[ICorDebugModule](icordebugmodule-interface.md)|1.0|  
 |`ver_ICorDebugFunction`|[ICorDebugFunction](icordebugfunction-interface1.md)|1.0|  
 |`ver_ICorDebugCode`|[ICorDebugCode](icordebugcode-interface1.md)|1.0|  
 |`ver_ICorDebugClass`|[ICorDebugClass](icordebugclass-interface.md)|1.0|  
 |`ver_ICorDebugEval`|[ICorDebugEval](icordebugeval-interface.md)|1.0|  
 |`ver_ICorDebugValue`|[ICorDebugValue](icordebugvalue-interface.md)|1.0|  
-|`ver_ICorDebugGenericValue`|[ICorDebugGenericValue](icordebuggenericvalue-interface.md)|1.0|  
+|`ver_ICorDebugGenericValue`|[이코르데버그제네릭밸류](icordebuggenericvalue-interface.md)|1.0|  
 |`ver_ICorDebugReferenceValue`|[ICorDebugReferenceValue](icordebugreferencevalue-interface.md)|1.0|  
 |`ver_ICorDebugHeapValue`|[ICorDebugHeapValue](icordebugheapvalue-interface.md)|1.0|  
 |`ver_ICorDebugObjectValue`|[ICorDebugObjectValue](icordebugobjectvalue-interface.md)|1.0|  
 |`ver_ICorDebugBoxValue`|[ICorDebugBoxValue](icordebugboxvalue-interface.md)|1.0|  
 |`ver_ICorDebugStringValue`|[ICorDebugStringValue](icordebugstringvalue-interface.md)|1.0|  
-|`ver_ICorDebugArrayValue`|[ICorDebugArrayValue](icordebugarrayvalue-interface.md)|1.0|  
+|`ver_ICorDebugArrayValue`|[아이코르데버그어레이값](icordebugarrayvalue-interface.md)|1.0|  
 |`ver_ICorDebugContext`|[ICorDebugContext](icordebugcontext-interface.md)|1.0|  
 |`ver_ICorDebugEnum`|[ICorDebugEnum](icordebugenum-interface1.md)|1.0|  
 |`ver_ICorDebugObjectEnum`|[ICorDebugObjectEnum](icordebugobjectenum-interface.md)|1.0|  
@@ -189,7 +189,7 @@ typedef enum CorDebugInterfaceVersion {
 |`ver_ICorDebugAppDomainEnum`|[ICorDebugAppDomainEnum](icordebugappdomainenum-interface.md)|1.0|  
 |`ver_ICorDebugAssemblyEnum`|[ICorDebugAssemblyEnum](icordebugassemblyenum-interface.md)|1.0|  
 |`ver_ICorDebugEditAndContinueErrorInfo`|[ICorDebugEditAndContinueErrorInfo](icordebugeditandcontinueerrorinfo-interface.md)|1.0|  
-|`ver_ICorDebugEditAndContinueSnapshot`|[ICorDebugEditAndContinueSnapshot](icordebugeditandcontinuesnapshot-interface.md)|1.0|  
+|`ver_ICorDebugEditAndContinueSnapshot`|[ICorDebugEdit및계속스냅샷](icordebugeditandcontinuesnapshot-interface.md)|1.0|  
 |`ver_ICorDebugManagedCallback2`|[ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md)|2.0|  
 |`ver_ICorDebugAppDomain2`|[ICorDebugAppDomain2](icordebugappdomain2-interface.md)|2.0|  
 |`ver_ICorDebugProcess2`|[ICorDebugProcess2](icordebugprocess2-interface1.md)|2.0|  
@@ -200,27 +200,27 @@ typedef enum CorDebugInterfaceVersion {
 |`ver_ICorDebugModule2`|[ICorDebugModule2](icordebugmodule2-interface.md)|2.0|  
 |`ver_ICorDebugFunction2`|[ICorDebugFunction2](icordebugfunction2-interface.md)|2.0|  
 |`ver_ICorDebugCode2`|[ICorDebugCode2](icordebugcode2-interface.md)|2.0|  
-|`ver_ICorDebugClass2`|"ICorDebugClass2"|2.0|  
-|`ver_ICorDebugValue2`|"ICorDebugValue2"|2.0|  
-|`ver_ICorDebugEval2`|The "ICorDebugEval2".|2.0|  
-|`ver_ICorDebugObjectValue2`|"ICorDebugObjectValue2"|2.0|  
-|`ver_ICorDebugThread3`|[ICorDebugThread3](icordebugthread3-interface.md)|4|  
+|`ver_ICorDebugClass2`|"이코르데버그클래스2"|2.0|  
+|`ver_ICorDebugValue2`|"이코르데버그밸류2"|2.0|  
+|`ver_ICorDebugEval2`|"ICorDebugEval2".|2.0|  
+|`ver_ICorDebugObjectValue2`|"ICorDebug개체값2"|2.0|  
+|`ver_ICorDebugThread3`|[아이코르데버그스레드3](icordebugthread3-interface.md)|4|  
 |`ver_ICorDebugThread4`|[ICorDebugThread4](icordebugthread4-interface.md)|4|  
 |`ver_ICorDebugStackWalk`|[ICorDebugStackWalk](icordebugstackwalk-interface.md)|4|  
-|`ver_ICorDebugNativeFrame2`|[ICorDebugNativeFrame2](icordebugnativeframe2-interface.md)|4|  
+|`ver_ICorDebugNativeFrame2`|[이코르데버그네이티브프레임2](icordebugnativeframe2-interface.md)|4|  
 |`ver_ICorDebugInternalFrame2`|[ICorDebugInternalFrame2](icordebuginternalframe2-interface.md)|4|  
 |`ver_ICorDebugRuntimeUnwindableFrame`|[ICorDebugRuntimeUnwindableFrame](icordebugruntimeunwindableframe-interface.md)|4|  
 |`ver_ICorDebugHeapValue3`|[ICorDebugHeapValue3 인터페이스](icordebugheapvalue3-interface.md)|4|  
 |`ver_ICorDebugBlockingObjectEnum`|[ICorDebugBlockingObjectEnum 인터페이스](icordebugblockingobjectenum-interface.md)|4|  
 |`ver_ICorDebugValue3`|[ICorDebugValue3](icordebugvalue3-interface.md)|4|  
-|`ver_ICorDebugComObjectValue`|[ICorDebugComObjectValue](icordebugcomobjectvalue-interface.md)|4.5|  
-|`ver_ICorDebugAppDomain3`|[ICorDebugAppDomain3](icordebugappdomain3-interface.md)|4.5|  
-|`ver_ICorDebugCode3`|[ICorDebugCode3](icordebugcode3-interface.md)|4.5|  
-|`ver_ICorDebugILFrame3`|[ICorDebugILFrame3](icordebugilframe3-interface.md)|4.5|  
+|`ver_ICorDebugComObjectValue`|[ICorDebugComObjectValue](icordebugcomobjectvalue-interface.md)|4.5.|  
+|`ver_ICorDebugAppDomain3`|[ICorDebugAppDomain3](icordebugappdomain3-interface.md)|4.5.|  
+|`ver_ICorDebugCode3`|[ICorDebugCode3](icordebugcode3-interface.md)|4.5.|  
+|`ver_ICorDebugILFrame3`|[ICorDebugILFrame3](icordebugilframe3-interface.md)|4.5.|  
 |`CorDebugLatestVersion`|모든 서비스 팩을 포함한 .NET Framework 버전이 최신 버전입니다.|-|  
   
-## <a name="remarks"></a>주의  
- A debugger can use the `CorDebugInterfaceVersion` enumeration in the [CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md) function to specify the highest version of the .NET Framework that the debugger supports.  
+## <a name="remarks"></a>설명  
+ 디버거는 `CorDebugInterfaceVersion` [CreateDebuggingInterfaceFrom](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md) 함수에서 열거를 사용하여 디버거가 지원하는 .NET 프레임워크의 가장 높은 버전을 지정할 수 있습니다.  
   
 ## <a name="interface-names"></a>인터페이스 이름  
  디버깅 API에서 인터페이스 이름 끝에 표시되는 숫자(예: `ICorDebugThread3`의 경우 "3")는 .NET Framework의 버전이 아닌 인터페이스의 버전을 지정합니다. .NET Framework 버전 1에 처음 도입된 인터페이스를 제외하면 디버깅 API의 모든 인터페이스 이름에는 버전 번호가 포함됩니다. 인터페이스 버전 번호와 .NET Framework 버전 번호가 일치하는 경우 단순히 우연적인 일입니다.  
@@ -233,10 +233,10 @@ typedef enum CorDebugInterfaceVersion {
   
 - .NET Framework 버전 3.0 및 3.5는 기존 .NET Framework 2.0 인터페이스를 사용하며 새로운 인터페이스는 제공하지 않습니다.  
   
-- The .NET Framework 4 introduces a mix of interface versions. 예를 들어 `ICorDebugThread3` 및 `ICorDebugThread4`는 모두 `ICorDebugThread` 인터페이스의 3번째/4번째 버전으로 표시됩니다. The .NET Framework 4 also introduces the first version of the `ICorDebugStackWalk` interface and the second version of the `ICorDebugNativeFrame` interface (`ICorDebugNativeFrame2`).  
+- .NET 프레임워크 4에는 인터페이스 버전이 혼합된 버전이 도입됩니다. 예를 들어 `ICorDebugThread3` 및 `ICorDebugThread4`는 모두 `ICorDebugThread` 인터페이스의 3번째/4번째 버전으로 표시됩니다. .NET Framework 4에서는 `ICorDebugStackWalk` 인터페이스의 첫 번째 버전과 두 `ICorDebugNativeFrame` 번째`ICorDebugNativeFrame2`버전의 인터페이스()도 소개합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -244,6 +244,6 @@ typedef enum CorDebugInterfaceVersion {
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 열거형](debugging-enumerations.md)

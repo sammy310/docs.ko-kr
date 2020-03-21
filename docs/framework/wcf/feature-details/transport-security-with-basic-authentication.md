@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
-ms.openlocfilehash: eace5ce9a84d99cb2526896cca36a9e2a13fd5f2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 1b2b451eb1ea6a1a49ce1ba8cc1edef1fe72d01b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742702"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184350"
 ---
 # <a name="transport-security-with-basic-authentication"></a>기본 인증을 사용하는 전송 보안
-다음 그림은 WCF (Windows Communication Foundation) 서비스 및 클라이언트를 보여 줍니다. 서버에 SSL(Secure Sockets Layer)에 사용할 유효한 X.509 인증서가 있어야 하며 클라이언트에서 서버의 인증서를 신뢰해야 합니다. 또한 웹 서비스에는 이미 사용할 수 있는 SSL 구현이 있습니다. 인터넷 정보 서비스 (IIS)에서 기본 인증을 사용 하도록 설정 하는 방법에 대 한 자세한 내용은 <https://docs.microsoft.com/iis/configuration/system.webserver/security/authentication/basicauthentication>을 참조 하세요.  
+다음 그림에서는 WCF(Windows 통신 재단) 서비스 및 클라이언트를 보여 주습니다. 서버에 SSL(Secure Sockets Layer)에 사용할 유효한 X.509 인증서가 있어야 하며 클라이언트에서 서버의 인증서를 신뢰해야 합니다. 또한 웹 서비스에는 이미 사용할 수 있는 SSL 구현이 있습니다. 인터넷 정보 서비스(IIS)에 대한 기본 인증 <https://docs.microsoft.com/iis/configuration/system.webserver/security/authentication/basicauthentication>을 사용하도록 설정하는 방법에 대한 자세한 내용은 을 참조하십시오.  
   
- ![기본 인증을 사용 하는 전송 보안을 보여 주는 스크린샷](./media/transport-security-with-basic-authentication/transport-security-basic-authentication.gif)  
+ ![기본 인증을 통해 전송 보안을 보여 주는 스크린샷입니다.](./media/transport-security-with-basic-authentication/transport-security-basic-authentication.gif)  
   
 |특성|Description|  
 |--------------------|-----------------|  
 |보안 모드|전송|  
 |상호 운용성|기존 웹 서비스 클라이언트 및 서비스와의 상호 운용성|  
 |인증(서버)<br /><br /> 인증(클라이언트)|예(HTTPS 사용)<br /><br /> 예(사용자 이름/암호 사용)|  
-|무결성|예|  
-|기밀성|예|  
+|무결성|yes|  
+|기밀성|yes|  
 |전송|HTTPS|  
 |바인딩|<xref:System.ServiceModel.WSHttpBinding>|  
   
@@ -35,7 +35,7 @@ ms.locfileid: "76742702"
 - 제공된 구성을 사용하여 서비스를 만들지만 엔드포인트를 정의하지 않습니다.  
   
 ### <a name="code"></a>코드  
- 다음 코드에서는 전송 보안에 Windows 도메인 사용자 이름과 암호를 사용하는 서비스 엔드포인트를 만드는 방법에 대해 설명합니다. 서비스에서 X.509 인증서를 사용하여 클라이언트를 인증하도록 요구할 수 있습니다. 자세한 내용은 [인증서 작업](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) 및 [방법: SSL 인증서로 포트 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)을 참조 하세요.  
+ 다음 코드에서는 전송 보안에 Windows 도메인 사용자 이름과 암호를 사용하는 서비스 엔드포인트를 만드는 방법에 대해 설명합니다. 서비스에서 X.509 인증서를 사용하여 클라이언트를 인증하도록 요구할 수 있습니다. 자세한 내용은 [인증서 작업](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) 및 [방법: SSL 인증서를 사용하여 포트 구성을](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)참조하세요.  
   
  [!code-csharp[C_SecurityScenarios#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#1)]
  [!code-vb[C_SecurityScenarios#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#1)]  
@@ -59,9 +59,9 @@ ms.locfileid: "76742702"
         <services>  
             <service name="BasicAuthentication.Calculator">  
                 <endpoint address="https://localhost/Calculator"  
-                          binding="wsHttpBinding"   
+                          binding="wsHttpBinding"
                           bindingConfiguration="UsernameWithTransport"  
-                          name="BasicEndpoint"   
+                          name="BasicEndpoint"
                           contract="BasicAuthentication.ICalculator" />  
             </service>  
         </services>  
@@ -100,9 +100,9 @@ ms.locfileid: "76742702"
       </wsHttpBinding>  
     </bindings>  
     <client>  
-      <endpoint address="https://machineName/Calculator"   
+      <endpoint address="https://machineName/Calculator"
                 binding="wsHttpBinding"  
-                bindingConfiguration="WSHttpBinding_ICalculator"   
+                bindingConfiguration="WSHttpBinding_ICalculator"
                 contract="ICalculator"  
                 name="WSHttpBinding_ICalculator" />  
     </client>  
@@ -114,8 +114,8 @@ ms.locfileid: "76742702"
 
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>
 - <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>
-- [인증서 작업](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [방법: SSL 인증서로 포트 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
 - [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [\<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
-- [Windows Server Fabric 용 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [\<클라이언트 자격 증명>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
+- [Windows Server AppFabric 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

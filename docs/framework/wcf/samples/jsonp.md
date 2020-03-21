@@ -2,15 +2,15 @@
 title: JSONP
 ms.date: 03/30/2017
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-ms.openlocfilehash: 82fa0bb09ebdf3ca2325872c2b884f4940de17ed
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 6b5b42285539c2334bccaa04e1ba179d2cf0046c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715716"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183567"
 ---
 # <a name="jsonp"></a>JSONP
-이 샘플에서는 WCF REST 서비스에서 JSONP(JSON with Padding)를 지원하는 방법을 보여 줍니다. JSONP는 스크립트 태그를 현재 문서에서 생성함으로써 도메인의 제한 없이 스크립트를 호출하는 데 사용되는 규칙입니다. 결과는 지정된 콜백 함수를 통해 반환됩니다. JSONP는 `<script src="http://..." >`와 같은 태그가 모든 도메인의 스크립트를 평가할 수 있으며 이러한 태그로 검색 된 스크립트는 다른 기능이 이미 정의 되어 있을 수 있는 범위 내에서 평가 된다는 개념을 기반으로 합니다.
+이 샘플에서는 WCF REST 서비스에서 JSONP(JSON with Padding)를 지원하는 방법을 보여 줍니다. JSONP는 스크립트 태그를 현재 문서에서 생성함으로써 도메인의 제한 없이 스크립트를 호출하는 데 사용되는 규칙입니다. 결과는 지정된 콜백 함수를 통해 반환됩니다. JSONP는 모든 도메인에서 스크립트를 `<script src="http://..." >` 평가할 수 있는 태그와 같은 개념을 기반으로 하며 이러한 태그에서 검색된 스크립트는 다른 함수가 이미 정의된 범위 내에서 평가됩니다.
 
 ## <a name="demonstrates"></a>데모
  JSONP를 사용한 도메인 간 스크립팅
@@ -24,7 +24,7 @@ proxy.set_enableJsonp(true);
 proxy.GetCustomer(onSuccess, onFail, null);
 ```
 
- WCF REST 서비스에서는 <xref:System.ServiceModel.Description.WebScriptEndpoint>가 `crossDomainScriptAccessEnabled`로 설정된  `true`를 사용하므로 웹 페이지에서 이 서비스를 호출할 수 있습니다. 이러한 구성은 모두 web.config 파일의 \<System.servicemodel > 요소 아래에 수행 됩니다.
+ WCF REST 서비스에서는 <xref:System.ServiceModel.Description.WebScriptEndpoint>가 `crossDomainScriptAccessEnabled`로 설정된  `true`를 사용하므로 웹 페이지에서 이 서비스를 호출할 수 있습니다. 이러한 구성은 모두 \<system.serviceModel> 요소 아래의 Web.config 파일에서 수행됩니다.
 
 ```xml
 <system.serviceModel>
@@ -37,7 +37,7 @@ proxy.GetCustomer(onSuccess, onFail, null);
 </system.serviceModel>
 ```
 
- ScriptManager는 서비스와의 상호 작용을 관리하며 JSONP 액세스를 수동으로 구현하는 복잡한 과정을 단순하게 해 줍니다. `crossDomainScriptAccessEnabled`을 `true`로 설정 하 고 작업에 대 한 응답 형식을 JSON으로 설정 하면 WCF 인프라에서 콜백 쿼리 문자열 매개 변수에 대 한 요청의 URI를 검사 하 고 콜백 쿼리 문자열 매개 변수의 값을 사용 하 여 JSON 응답을 래핑합니다. 샘플의 웹 페이지에서는 다음 URI를 사용하여 WCF REST 서비스를 호출합니다.
+ ScriptManager는 서비스와의 상호 작용을 관리하며 JSONP 액세스를 수동으로 구현하는 복잡한 과정을 단순하게 해 줍니다. 작업에 `crossDomainScriptAccessEnabled` 대한 `true` 응답 형식이 JSON으로 설정되면 WCF 인프라는 콜백 쿼리 문자열 매개 변수에 대한 요청의 URI를 검사하고 콜백 쿼리 문자열 매개 변수의 값으로 JSON 응답을 래핑합니다. 샘플의 웹 페이지에서는 다음 URI를 사용하여 WCF REST 서비스를 호출합니다.
 
 ```http
 http://localhost:33695/CustomerService/GetCustomer?callback=Sys._json0
@@ -51,21 +51,21 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
 
  이 JSONP 응답에는 JSON으로 형식이 지정되고 웹 페이지에서 요청한 콜백 함수 이름으로 래핑된 고객 데이터가 포함됩니다. ScriptManager는 스크립트 태그를 사용하는 이 콜백을 실행하여 도메인 간 요청을 수행한 다음 ASP.NET AJAX 프록시의 GetCustomer 작업에 전달된 onSuccess 처리기에 결과를 전달합니다.
 
- 이 샘플은 두 개의 ASP.NET 웹 응용 프로그램으로 구성 되어 있습니다. 하나는 WCF 서비스를 포함 하 고 다른 하나는 서비스를 호출 하는 .aspx 웹 페이지를 포함 합니다. 솔루션을 실행 하는 경우 Visual Studio 2012는 서로 다른 도메인에서 서비스와 클라이언트가 살고 있는 환경을 만드는 다른 포트에서 두 웹 사이트를 호스팅합니다.
+ 샘플은 두 개의 ASP.NET 웹 응용 프로그램으로 구성됩니다. 솔루션을 실행할 때 Visual Studio 2012는 서로 다른 포트에서 두 웹 사이트를 호스팅하여 서비스와 클라이언트가 서로 다른 도메인에 있는 환경을 만듭니다.
 
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
->   
+>
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대한 WCF(Windows 통신 재단) 및 WF(Windows 워크플로우 재단) 샘플로](https://www.microsoft.com/download/details.aspx?id=21459) 이동하여 모든 WCF(Windows 통신 재단) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\AJAX\JSONP`  
   
-#### <a name="to-run-the-sample"></a>이 샘플을 실행하려면  
+#### <a name="to-run-the-sample"></a>샘플을 실행하려면  
   
 1. JSONP 샘플의 솔루션을 엽니다.  
   
-2. F5 키를 눌러 브라우저에서 `http://localhost:26648/JSONPClientPage.aspx`를 시작 합니다.  
+2. 브라우저에서 시작하려면 `http://localhost:26648/JSONPClientPage.aspx` F5를 누릅니다.  
   
-3. 페이지가 로드 된 후에는 "Name" 및 "Address"에 대 한 텍스트 입력이 값으로 채워집니다.  이러한 값은 브라우저에서 페이지 렌더링을 마친 후 WCF 서비스 호출에서 제공 되었습니다.
+3. 페이지가 로드된 후 "이름" 및 "주소"에 대한 텍스트 입력이 값으로 채워집니다.  이러한 값은 브라우저가 페이지 렌더링을 완료한 후 WCF 서비스에 대한 호출에서 제공되었습니다.
