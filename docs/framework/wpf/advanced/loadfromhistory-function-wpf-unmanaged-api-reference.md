@@ -1,5 +1,5 @@
 ---
-title: LoadFromHistory 함수-WPF 관리 되지 않는 API 참조
+title: 로드로부터 역사 함수 - WPF 관리되지 않는 API 참조
 titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
@@ -9,45 +9,45 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: d037c062-a911-4949-b251-ccd3e48b1d17
-ms.openlocfilehash: 7807e073d1f09ac6a6213aee6d86d53cc75a3c56
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: be9b8658614e678b4370044a753554859d230fed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76727932"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141577"
 ---
-# <a name="loadfromhistory-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="ef645-102">LoadFromHistory 함수 (WPF 관리 되지 않는 API 참조)</span><span class="sxs-lookup"><span data-stu-id="ef645-102">LoadFromHistory Function (WPF Unmanaged API Reference)</span></span>
-<span data-ttu-id="ef645-103">이 API는 Windows Presentation Foundation (WPF) 인프라를 지원 하며 사용자 코드에서 직접 사용 하기 위한 것이 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="ef645-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="loadfromhistory-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="b4e6f-102">로드로부터 역사 함수 (WPF 관리되지 않는 API 참조)</span><span class="sxs-lookup"><span data-stu-id="b4e6f-102">LoadFromHistory Function (WPF Unmanaged API Reference)</span></span>
+<span data-ttu-id="b4e6f-103">이 API는 WPF(Windows 프레젠테이션 기반) 인프라를 지원하며 코드에서 직접 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b4e6f-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
   
- <span data-ttu-id="ef645-104">Windows 관리를 위한 WPF (Windows Presentation Foundation) 인프라에서 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="ef645-104">Used by the Windows Presentation Foundation (WPF) infrastructure for windows management.</span></span>  
+ <span data-ttu-id="b4e6f-104">Windows 관리를 위한 WPF(Windows 프레젠테이션 재단) 인프라에서 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="b4e6f-104">Used by the Windows Presentation Foundation (WPF) infrastructure for windows management.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ef645-105">구문</span><span class="sxs-lookup"><span data-stu-id="ef645-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b4e6f-105">구문</span><span class="sxs-lookup"><span data-stu-id="b4e6f-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT LoadFromHistory_export(  
-        IStream* pHistoryStream,   
+        IStream* pHistoryStream,
         IBindCtx* pBindCtx  
 )  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ef645-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="ef645-106">Parameters</span></span>  
- <span data-ttu-id="ef645-107">pHistoryStream</span><span class="sxs-lookup"><span data-stu-id="ef645-107">pHistoryStream</span></span>  
- <span data-ttu-id="ef645-108">기록 정보 스트림에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="ef645-108">A pointer to a stream of history information.</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b4e6f-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="b4e6f-106">Parameters</span></span>  
+ <span data-ttu-id="b4e6f-107">p히스토리스트림</span><span class="sxs-lookup"><span data-stu-id="b4e6f-107">pHistoryStream</span></span>  
+ <span data-ttu-id="b4e6f-108">기록 정보 스트림에 대한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="b4e6f-108">A pointer to a stream of history information.</span></span>  
   
- <span data-ttu-id="ef645-109">pBindCtx</span><span class="sxs-lookup"><span data-stu-id="ef645-109">pBindCtx</span></span>  
- <span data-ttu-id="ef645-110">바인드 컨텍스트에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="ef645-110">A pointer to a bind context.</span></span>  
+ <span data-ttu-id="b4e6f-109">pBindCtx</span><span class="sxs-lookup"><span data-stu-id="b4e6f-109">pBindCtx</span></span>  
+ <span data-ttu-id="b4e6f-110">바인딩 컨텍스트에 대한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="b4e6f-110">A pointer to a bind context.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ef645-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ef645-111">Requirements</span></span>  
- <span data-ttu-id="ef645-112">**플랫폼:** [.NET Framework 시스템 요구 사항](../../get-started/system-requirements.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="ef645-112">**Platforms:** See [.NET Framework System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b4e6f-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b4e6f-111">Requirements</span></span>  
+ <span data-ttu-id="b4e6f-112">**플랫폼:** [.NET 프레임워크 시스템 요구 사항을 참조하십시오.](../../get-started/system-requirements.md)</span><span class="sxs-lookup"><span data-stu-id="b4e6f-112">**Platforms:** See [.NET Framework System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ef645-113">**GDIPLUS.DLL**</span><span class="sxs-lookup"><span data-stu-id="ef645-113">**DLL:**</span></span>  
+ <span data-ttu-id="b4e6f-113">**Dll:**</span><span class="sxs-lookup"><span data-stu-id="b4e6f-113">**DLL:**</span></span>  
   
- <span data-ttu-id="ef645-114">.NET Framework 3.0 및 3.5: PresentationHostDLL에서</span><span class="sxs-lookup"><span data-stu-id="ef645-114">In the .NET Framework 3.0 and 3.5: PresentationHostDLL.dll</span></span>  
+ <span data-ttu-id="b4e6f-114">.NET 프레임워크 3.0 및 3.5: 프레젠테이션호스트DLL.dll</span><span class="sxs-lookup"><span data-stu-id="b4e6f-114">In the .NET Framework 3.0 and 3.5: PresentationHostDLL.dll</span></span>  
   
- <span data-ttu-id="ef645-115">.NET Framework 4 이상: PresentationHost_v0400 .dll</span><span class="sxs-lookup"><span data-stu-id="ef645-115">In the .NET Framework 4 and later: PresentationHost_v0400.dll</span></span>  
+ <span data-ttu-id="b4e6f-115">.NET 프레임워크 4 이상에서 PresentationHost_v0400.dll</span><span class="sxs-lookup"><span data-stu-id="b4e6f-115">In the .NET Framework 4 and later: PresentationHost_v0400.dll</span></span>  
   
- <span data-ttu-id="ef645-116">**.NET Framework 버전:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ef645-116">**.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span></span>  
+ <span data-ttu-id="b4e6f-116">**.NET 프레임워크 버전:**[!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b4e6f-116">**.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ef645-117">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ef645-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b4e6f-117">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b4e6f-117">See also</span></span>
 
-- [<span data-ttu-id="ef645-118">F 관리되지 않는 API 참조</span><span class="sxs-lookup"><span data-stu-id="ef645-118">WPF Unmanaged API Reference</span></span>](wpf-unmanaged-api-reference.md)
+- [<span data-ttu-id="b4e6f-118">WPF 비관리형 API 참조</span><span class="sxs-lookup"><span data-stu-id="b4e6f-118">WPF Unmanaged API Reference</span></span>](wpf-unmanaged-api-reference.md)

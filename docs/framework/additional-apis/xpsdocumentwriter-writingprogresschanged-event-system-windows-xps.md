@@ -1,5 +1,5 @@
 ---
-title: _WritingProgressChanged 이벤트 (System.windows.xps.xpsdocumentwriter.writeasync)
+title: XpsDocumentWriter._WritingProgressChanged 이벤트 (시스템.Windows.Xps)
 ms.date: 10/17/2017
 api_location:
 - system.printing.dll
@@ -11,27 +11,27 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: 59df080b4c07e4aa9714a5b00f3ed87be44a9449
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 4d61a11ec6546ed4e1b0011d541f10fec4f86b68
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72525000"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155585"
 ---
-# <a name="xpsdocumentwriter_writingprogresschanged-event"></a><span data-ttu-id="7161d-102">System.windows.xps.xpsdocumentwriter.writeasync. \_WritingProgressChanged 이벤트</span><span class="sxs-lookup"><span data-stu-id="7161d-102">XpsDocumentWriter.\_WritingProgressChanged Event</span></span>
+# <a name="xpsdocumentwriter_writingprogresschanged-event"></a><span data-ttu-id="3baef-102">XpsDocumentWriter. \_쓰기진행 변경된 이벤트</span><span class="sxs-lookup"><span data-stu-id="3baef-102">XpsDocumentWriter.\_WritingProgressChanged Event</span></span>
 
-<span data-ttu-id="7161d-103">@No__t_0에서 진행률을 업데이트할 때 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="7161d-103">Occurs when the <xref:System.Windows.Xps.XpsDocumentWriter> updates its progress.</span></span> 
+<span data-ttu-id="3baef-103"><xref:System.Windows.Xps.XpsDocumentWriter>가 진행률을 업데이트할 때 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="3baef-103">Occurs when the <xref:System.Windows.Xps.XpsDocumentWriter> updates its progress.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="7161d-104">구문</span><span class="sxs-lookup"><span data-stu-id="7161d-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="3baef-104">구문</span><span class="sxs-lookup"><span data-stu-id="3baef-104">Syntax</span></span>
 
 ``` csharp
 internal event WritingProgressChangedEventHandler _WritingProgressChanged
 ```
 
-## <a name="requirements"></a><span data-ttu-id="7161d-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="7161d-105">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="3baef-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="3baef-105">Requirements</span></span>
 
-<span data-ttu-id="7161d-106">**네임스페이스:** <xref:System.Windows.Xps></span><span class="sxs-lookup"><span data-stu-id="7161d-106">**Namespace:** <xref:System.Windows.Xps></span></span>
+<span data-ttu-id="3baef-106">**네임스페이스:**<xref:System.Windows.Xps></span><span class="sxs-lookup"><span data-stu-id="3baef-106">**Namespace:** <xref:System.Windows.Xps></span></span>
 
-<span data-ttu-id="7161d-107">**어셈블리:** 시스템 인쇄 (system.web)</span><span class="sxs-lookup"><span data-stu-id="7161d-107">**Assembly:** System.Printing (in system.printing.dll)</span></span>
+<span data-ttu-id="3baef-107">**어셈블리:** System.인쇄(system.printing.dll)</span><span class="sxs-lookup"><span data-stu-id="3baef-107">**Assembly:** System.Printing (in system.printing.dll)</span></span>
 
-<span data-ttu-id="7161d-108">**.NET Framework 버전:** 3.0부터 사용할 수 있음</span><span class="sxs-lookup"><span data-stu-id="7161d-108">**.NET Framework versions:** Available since 3.0</span></span>
+<span data-ttu-id="3baef-108">**.NET 프레임워크 버전:** 3.0 이후 사용 가능</span><span class="sxs-lookup"><span data-stu-id="3baef-108">**.NET Framework versions:** Available since 3.0</span></span>

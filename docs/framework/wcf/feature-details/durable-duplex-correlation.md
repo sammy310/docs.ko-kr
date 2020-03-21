@@ -2,23 +2,23 @@
 title: 영속 이중 상관 관계
 ms.date: 03/30/2017
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
-ms.openlocfilehash: efc647b8a39f419f2165fe355529ba145663b753
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: bb73cef5190a0b146e713ef1adae24219dc2eed8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291582"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185168"
 ---
-# <a name="durable-duplex-correlation"></a><span data-ttu-id="f31e0-102">영속 이중 상관 관계</span><span class="sxs-lookup"><span data-stu-id="f31e0-102">Durable Duplex Correlation</span></span>
-<span data-ttu-id="f31e0-103">콜백 상관 관계라고도 하는 영속 이중은 워크플로 서비스를 사용하여 초기 호출자에게 콜백을 보내야 하는 경우에 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="f31e0-103">Durable duplex correlation, also known as callback correlation, is useful when a workflow service has a requirement to send a callback to the initial caller.</span></span> <span data-ttu-id="f31e0-104">WCF 이중과 달리 콜백은 나중에 언제든지 발생할 수 있으며 동일한 채널이나 채널 수명과 연결되지 않습니다. 따라서 유일한 요구 사항은 호출자에 콜백 메시지를 수신 대기하는 활성 엔드포인트가 있어야 한다는 점입니다.</span><span class="sxs-lookup"><span data-stu-id="f31e0-104">Unlike WCF duplex, the callback can happen at any time in the future and is not tied to the same channel or the channel lifetime; the only requirement is that the caller have an active endpoint listening for the callback message.</span></span> <span data-ttu-id="f31e0-105">그러면 장기 실행 대화에서 워크플로 서비스를 사용하여 통신할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f31e0-105">This allows two workflow services to communicate in a long-running conversation.</span></span> <span data-ttu-id="f31e0-106">이 항목에서는 영속 이중 상관 관계에 대해 간략하게 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="f31e0-106">This topic provides an overview of durable duplex correlation.</span></span>  
+# <a name="durable-duplex-correlation"></a><span data-ttu-id="cf51c-102">영속 이중 상관 관계</span><span class="sxs-lookup"><span data-stu-id="cf51c-102">Durable Duplex Correlation</span></span>
+<span data-ttu-id="cf51c-103">콜백 상관 관계라고도 하는 영속 이중은 워크플로 서비스를 사용하여 초기 호출자에게 콜백을 보내야 하는 경우에 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="cf51c-103">Durable duplex correlation, also known as callback correlation, is useful when a workflow service has a requirement to send a callback to the initial caller.</span></span> <span data-ttu-id="cf51c-104">WCF 이중과 달리 콜백은 나중에 언제든지 발생할 수 있으며 동일한 채널이나 채널 수명과 연결되지 않습니다. 따라서 유일한 요구 사항은 호출자에 콜백 메시지를 수신 대기하는 활성 엔드포인트가 있어야 한다는 점입니다.</span><span class="sxs-lookup"><span data-stu-id="cf51c-104">Unlike WCF duplex, the callback can happen at any time in the future and is not tied to the same channel or the channel lifetime; the only requirement is that the caller have an active endpoint listening for the callback message.</span></span> <span data-ttu-id="cf51c-105">그러면 장기 실행 대화에서 워크플로 서비스를 사용하여 통신할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cf51c-105">This allows two workflow services to communicate in a long-running conversation.</span></span> <span data-ttu-id="cf51c-106">이 항목에서는 영속 이중 상관 관계에 대해 간략하게 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="cf51c-106">This topic provides an overview of durable duplex correlation.</span></span>  
   
-## <a name="using-durable-duplex-correlation"></a><span data-ttu-id="f31e0-107">영속 이중 상관 관계 사용</span><span class="sxs-lookup"><span data-stu-id="f31e0-107">Using Durable Duplex Correlation</span></span>  
- <span data-ttu-id="f31e0-108">영속 이중 상관 관계를 사용하려면 두 서비스에서 <xref:System.ServiceModel.NetTcpContextBinding> 또는 <xref:System.ServiceModel.WSHttpContextBinding> 같이 양방향 작업을 지원하는 컨텍스트 사용 바인딩을 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f31e0-108">To use durable duplex correlation, the two services must use a context-enabled binding that supports two-way operations, such as <xref:System.ServiceModel.NetTcpContextBinding> or <xref:System.ServiceModel.WSHttpContextBinding>.</span></span> <span data-ttu-id="f31e0-109">호출하는 서비스는 클라이언트 <xref:System.ServiceModel.WSHttpContextBinding.ClientCallbackAddress%2A>에 원하는 바인딩을 사용하여 <xref:System.ServiceModel.Endpoint>를 등록합니다.</span><span class="sxs-lookup"><span data-stu-id="f31e0-109">The calling service registers a <xref:System.ServiceModel.WSHttpContextBinding.ClientCallbackAddress%2A> with the desired binding on their client <xref:System.ServiceModel.Endpoint>.</span></span> <span data-ttu-id="f31e0-110">수신하는 서비스는 초기 호출에서 이 데이터를 받은 다음 호출하는 서비스로 콜백하는 <xref:System.ServiceModel.Endpoint> 작업에서 자신의 <xref:System.ServiceModel.Activities.Send>에 이 데이터를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="f31e0-110">The receiving service receives this data in the initial call and then uses it on its own <xref:System.ServiceModel.Endpoint> in the <xref:System.ServiceModel.Activities.Send> activity that makes the call back to the calling service.</span></span> <span data-ttu-id="f31e0-111">다음 예제에서는 두 개의 서비스가 서로 통신합니다.</span><span class="sxs-lookup"><span data-stu-id="f31e0-111">In this example, two services communicate with each other.</span></span> <span data-ttu-id="f31e0-112">첫 번째 서비스는 두 번째 서비스의 메서드를 호출한 다음 응답을 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="f31e0-112">The first service invokes a method on the second service and then waits for a reply.</span></span> <span data-ttu-id="f31e0-113">두 번째 서비스는 콜백 메서드의 이름을 알고 있지만 디자인 타임에는 이 메서드를 구현하는 서비스의 엔드포인트를 알 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="f31e0-113">The second service knows the name of the callback method, but the endpoint of the service that implements this method is not known at design time.</span></span>  
+## <a name="using-durable-duplex-correlation"></a><span data-ttu-id="cf51c-107">영속 이중 상관 관계 사용</span><span class="sxs-lookup"><span data-stu-id="cf51c-107">Using Durable Duplex Correlation</span></span>  
+ <span data-ttu-id="cf51c-108">영속 이중 상관 관계를 사용하려면 두 서비스에서 <xref:System.ServiceModel.NetTcpContextBinding> 또는 <xref:System.ServiceModel.WSHttpContextBinding> 같이 양방향 작업을 지원하는 컨텍스트 사용 바인딩을 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="cf51c-108">To use durable duplex correlation, the two services must use a context-enabled binding that supports two-way operations, such as <xref:System.ServiceModel.NetTcpContextBinding> or <xref:System.ServiceModel.WSHttpContextBinding>.</span></span> <span data-ttu-id="cf51c-109">호출하는 서비스는 클라이언트 <xref:System.ServiceModel.WSHttpContextBinding.ClientCallbackAddress%2A>에 원하는 바인딩을 사용하여 <xref:System.ServiceModel.Endpoint>를 등록합니다.</span><span class="sxs-lookup"><span data-stu-id="cf51c-109">The calling service registers a <xref:System.ServiceModel.WSHttpContextBinding.ClientCallbackAddress%2A> with the desired binding on their client <xref:System.ServiceModel.Endpoint>.</span></span> <span data-ttu-id="cf51c-110">수신하는 서비스는 초기 호출에서 이 데이터를 받은 다음 호출하는 서비스로 콜백하는 <xref:System.ServiceModel.Endpoint> 작업에서 자신의 <xref:System.ServiceModel.Activities.Send>에 이 데이터를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="cf51c-110">The receiving service receives this data in the initial call and then uses it on its own <xref:System.ServiceModel.Endpoint> in the <xref:System.ServiceModel.Activities.Send> activity that makes the call back to the calling service.</span></span> <span data-ttu-id="cf51c-111">다음 예제에서는 두 개의 서비스가 서로 통신합니다.</span><span class="sxs-lookup"><span data-stu-id="cf51c-111">In this example, two services communicate with each other.</span></span> <span data-ttu-id="cf51c-112">첫 번째 서비스는 두 번째 서비스의 메서드를 호출한 다음 응답을 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="cf51c-112">The first service invokes a method on the second service and then waits for a reply.</span></span> <span data-ttu-id="cf51c-113">두 번째 서비스는 콜백 메서드의 이름을 알고 있지만 디자인 타임에는 이 메서드를 구현하는 서비스의 엔드포인트를 알 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="cf51c-113">The second service knows the name of the callback method, but the endpoint of the service that implements this method is not known at design time.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="f31e0-114">영속 이중은 엔드포인트의 <xref:System.ServiceModel.Channels.AddressingVersion>이 <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>을 사용하여 구성된 경우에만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f31e0-114">Durable duplex can only be used when the <xref:System.ServiceModel.Channels.AddressingVersion> of the endpoint is configured with <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>.</span></span> <span data-ttu-id="f31e0-115">그렇지 않으면 다음 메시지와 함께 <xref:System.InvalidOperationException> 예외가 throw 됩니다. "메시지에 [AddressingVersion](http://schemas.xmlsoap.org/ws/2004/08/addressing)에 대 한 끝점 참조가 있는 콜백 컨텍스트 헤더가 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f31e0-115">If it is not, then an <xref:System.InvalidOperationException> exception is thrown with the following message: "The message contains a callback context header with an endpoint reference for [AddressingVersion](http://schemas.xmlsoap.org/ws/2004/08/addressing).</span></span> <span data-ttu-id="f31e0-116">AddressingVersion가 ' WSAddressing10 '로 구성 된 경우에만 콜백 컨텍스트를 전송할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f31e0-116">Callback context can only be transmitted when the AddressingVersion is configured with 'WSAddressing10'.</span></span>
+> <span data-ttu-id="cf51c-114">영속 이중은 엔드포인트의 <xref:System.ServiceModel.Channels.AddressingVersion>이 <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>을 사용하여 구성된 경우에만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cf51c-114">Durable duplex can only be used when the <xref:System.ServiceModel.Channels.AddressingVersion> of the endpoint is configured with <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>.</span></span> <span data-ttu-id="cf51c-115">그렇지 않은 경우 <xref:System.InvalidOperationException> 다음 메시지와 함께 예외가 throw됩니다: "메시지에는 [AddressingVersion에](http://schemas.xmlsoap.org/ws/2004/08/addressing)대한 끝점 참조가 있는 콜백 컨텍스트 헤더가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cf51c-115">If it is not, then an <xref:System.InvalidOperationException> exception is thrown with the following message: "The message contains a callback context header with an endpoint reference for [AddressingVersion](http://schemas.xmlsoap.org/ws/2004/08/addressing).</span></span> <span data-ttu-id="cf51c-116">콜백 컨텍스트는 주소 지정Version이 'WSAddressing10'으로 구성된 경우에만 전송할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cf51c-116">Callback context can only be transmitted when the AddressingVersion is configured with 'WSAddressing10'.</span></span>
   
- <span data-ttu-id="f31e0-117">다음 예제에서는 <xref:System.ServiceModel.Endpoint>을 사용하여 콜백 <xref:System.ServiceModel.WSHttpContextBinding>를 만드는 워크플로 서비스를 호스팅합니다.</span><span class="sxs-lookup"><span data-stu-id="f31e0-117">In the following example, a workflow service is hosted that creates a callback <xref:System.ServiceModel.Endpoint> using <xref:System.ServiceModel.WSHttpContextBinding>.</span></span>  
+ <span data-ttu-id="cf51c-117">다음 예제에서는 <xref:System.ServiceModel.Endpoint>을 사용하여 콜백 <xref:System.ServiceModel.WSHttpContextBinding>를 만드는 워크플로 서비스를 호스팅합니다.</span><span class="sxs-lookup"><span data-stu-id="cf51c-117">In the following example, a workflow service is hosted that creates a callback <xref:System.ServiceModel.Endpoint> using <xref:System.ServiceModel.WSHttpContextBinding>.</span></span>  
   
 ```csharp  
 // Host WF Service 1.  
@@ -37,7 +37,7 @@ host1.Open();
 Console.WriteLine("Service1 waiting at: {0}", baseAddress1);  
 ```  
   
- <span data-ttu-id="f31e0-118">이 워크플로 서비스를 구현하는 워크플로는 해당 <xref:System.ServiceModel.Activities.Send> 작업을 사용하여 콜백 상관 관계를 초기화하고 <xref:System.ServiceModel.Activities.Receive>와 연결되는 <xref:System.ServiceModel.Activities.Send> 작업의 콜백 엔드포인트를 참조합니다.</span><span class="sxs-lookup"><span data-stu-id="f31e0-118">The workflow that implements this workflow service initializes the callback correlation with its <xref:System.ServiceModel.Activities.Send> activity, and references this callback endpoint from the <xref:System.ServiceModel.Activities.Receive> activity that correlates with the <xref:System.ServiceModel.Activities.Send>.</span></span> <span data-ttu-id="f31e0-119">다음 예제에서는 `GetWF1` 메서드에서 반환되는 워크플로를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="f31e0-119">The following example represents the workflow that is returned from the `GetWF1` method.</span></span>  
+ <span data-ttu-id="cf51c-118">이 워크플로 서비스를 구현하는 워크플로는 해당 <xref:System.ServiceModel.Activities.Send> 작업을 사용하여 콜백 상관 관계를 초기화하고 <xref:System.ServiceModel.Activities.Receive>와 연결되는 <xref:System.ServiceModel.Activities.Send> 작업의 콜백 엔드포인트를 참조합니다.</span><span class="sxs-lookup"><span data-stu-id="cf51c-118">The workflow that implements this workflow service initializes the callback correlation with its <xref:System.ServiceModel.Activities.Send> activity, and references this callback endpoint from the <xref:System.ServiceModel.Activities.Receive> activity that correlates with the <xref:System.ServiceModel.Activities.Send>.</span></span> <span data-ttu-id="cf51c-119">다음 예제에서는 `GetWF1` 메서드에서 반환되는 워크플로를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="cf51c-119">The following example represents the workflow that is returned from the `GetWF1` method.</span></span>  
   
 ```csharp  
 Variable<CorrelationHandle> CallbackHandle = new Variable<CorrelationHandle>();  
@@ -51,7 +51,7 @@ Receive StartOrder = new Receive
   
 Send GetItems = new Send  
 {  
-    CorrelationInitializers =   
+    CorrelationInitializers =
     {  
         new CallbackCorrelationInitializer  
         {  
@@ -65,7 +65,7 @@ Send GetItems = new Send
         AddressUri = new Uri("http://localhost:8081/Service2"),  
         Binding = new WSHttpContextBinding  
         {  
-            ClientCallbackAddress = new Uri("http://localhost:8080/Service1/ItemsReady")                          
+            ClientCallbackAddress = new Uri("http://localhost:8080/Service1/ItemsReady")
         }  
     }  
 };  
@@ -104,7 +104,7 @@ Activity wf = new Sequence
 };  
 ```  
   
- <span data-ttu-id="f31e0-120">두 번째 워크플로 서비스는 시스템 제공 컨텍스트 기반 바인딩을 사용하여 호스팅됩니다.</span><span class="sxs-lookup"><span data-stu-id="f31e0-120">The second workflow service is hosted using a system-provided, context-based binding.</span></span>  
+ <span data-ttu-id="cf51c-120">두 번째 워크플로 서비스는 시스템 제공 컨텍스트 기반 바인딩을 사용하여 호스팅됩니다.</span><span class="sxs-lookup"><span data-stu-id="cf51c-120">The second workflow service is hosted using a system-provided, context-based binding.</span></span>  
   
 ```csharp  
 // Host WF Service 2.  
@@ -120,14 +120,14 @@ host2.Open();
 Console.WriteLine("Service2 waiting at: {0}", baseAddress2);  
 ```  
   
- <span data-ttu-id="f31e0-121">이 워크플로 서비스를 구현하는 워크플로는 <xref:System.ServiceModel.Activities.Receive> 작업으로 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="f31e0-121">The workflow that implements this workflow service begins with a <xref:System.ServiceModel.Activities.Receive> activity.</span></span> <span data-ttu-id="f31e0-122">이 받기 작업은 이 서비스의 콜백 상관 관계를 초기화하고 장기 실행 작업을 시뮬레이션하는 동안 대기한 다음 초기 호출에서 서비스에 전달된 콜백 컨텍스트를 사용하여 첫 번째 서비스로 콜백합니다.</span><span class="sxs-lookup"><span data-stu-id="f31e0-122">This receive activity initializes the callback correlation for this service, delays for a period of time to simulate long-running work, and then calls back into the first service using the callback context that was passed in the first call into the service.</span></span> <span data-ttu-id="f31e0-123">다음 예제에서는 호출에서 `GetWF2`로 반환되는 워크플로를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="f31e0-123">The following example represents the workflow that is returned from a call to `GetWF2`.</span></span> <span data-ttu-id="f31e0-124"><xref:System.ServiceModel.Activities.Send> 작업에는 `http://www.contoso.com`의 자리 표시자 주소가 있으므로 런타임에 사용되는 실제 주소는 제공된 콜백 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="f31e0-124">Note that the <xref:System.ServiceModel.Activities.Send> activity has a placeholder address of `http://www.contoso.com`; the actual address used at runtime is the supplied callback address.</span></span>  
+ <span data-ttu-id="cf51c-121">이 워크플로 서비스를 구현하는 워크플로는 <xref:System.ServiceModel.Activities.Receive> 작업으로 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="cf51c-121">The workflow that implements this workflow service begins with a <xref:System.ServiceModel.Activities.Receive> activity.</span></span> <span data-ttu-id="cf51c-122">이 받기 작업은 이 서비스의 콜백 상관 관계를 초기화하고 장기 실행 작업을 시뮬레이션하는 동안 대기한 다음 초기 호출에서 서비스에 전달된 콜백 컨텍스트를 사용하여 첫 번째 서비스로 콜백합니다.</span><span class="sxs-lookup"><span data-stu-id="cf51c-122">This receive activity initializes the callback correlation for this service, delays for a period of time to simulate long-running work, and then calls back into the first service using the callback context that was passed in the first call into the service.</span></span> <span data-ttu-id="cf51c-123">다음 예제에서는 호출에서 `GetWF2`로 반환되는 워크플로를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="cf51c-123">The following example represents the workflow that is returned from a call to `GetWF2`.</span></span> <span data-ttu-id="cf51c-124"><xref:System.ServiceModel.Activities.Send> 작업에는 `http://www.contoso.com`의 자리 표시자 주소가 있으므로 런타임에 사용되는 실제 주소는 제공된 콜백 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="cf51c-124">Note that the <xref:System.ServiceModel.Activities.Send> activity has a placeholder address of `http://www.contoso.com`; the actual address used at runtime is the supplied callback address.</span></span>  
   
 ```csharp  
 Variable<CorrelationHandle> ItemsCallbackHandle = new Variable<CorrelationHandle>();  
   
 Receive StartItems = new Receive  
 {  
-    CorrelationInitializers =   
+    CorrelationInitializers =
     {  
         new CallbackCorrelationInitializer  
         {  
@@ -184,12 +184,12 @@ Activity wf = new Sequence
 };  
 ```  
   
- <span data-ttu-id="f31e0-125">첫 번째 워크플로에서 `StartOrder` 메서드가 호출되면 두 워크플로를 통해 실행 흐름을 보여 주는 다음 출력이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="f31e0-125">When the `StartOrder` method is invoked on the first workflow, the following output is displayed, which shows the flow of execution through the two workflows.</span></span>  
+ <span data-ttu-id="cf51c-125">첫 번째 워크플로에서 `StartOrder` 메서드가 호출되면 두 워크플로를 통해 실행 흐름을 보여 주는 다음 출력이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="cf51c-125">When the `StartOrder` method is invoked on the first workflow, the following output is displayed, which shows the flow of execution through the two workflows.</span></span>  
   
 ```output  
 Service1 waiting at: http://localhost:8080/Service1  
 Service2 waiting at: http://localhost:8081/Service2  
-Press enter to exit.   
+Press enter to exit.
 WF1 - Started  
 WF2 - Request Received  
 WF1 - Request Submitted  
@@ -198,4 +198,4 @@ WF2 - Items sent
 WF1 - Items Received  
 ```  
   
- <span data-ttu-id="f31e0-126">이 예제에서는 두 워크플로에서 <xref:System.ServiceModel.Activities.CallbackCorrelationInitializer>를 사용하여 상관 관계를 명시적으로 관리합니다.</span><span class="sxs-lookup"><span data-stu-id="f31e0-126">In this example, both workflows explicitly manage correlation using a <xref:System.ServiceModel.Activities.CallbackCorrelationInitializer>.</span></span> <span data-ttu-id="f31e0-127">이러한 샘플 워크플로에는 하나의 상관 관계만 있으므로 기본 <xref:System.ServiceModel.Activities.CorrelationHandle> 관계만으로 충분할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f31e0-127">Because there was only a single correlation in these sample workflows, the default <xref:System.ServiceModel.Activities.CorrelationHandle> management would have been sufficient.</span></span>
+ <span data-ttu-id="cf51c-126">이 예제에서는 두 워크플로에서 <xref:System.ServiceModel.Activities.CallbackCorrelationInitializer>를 사용하여 상관 관계를 명시적으로 관리합니다.</span><span class="sxs-lookup"><span data-stu-id="cf51c-126">In this example, both workflows explicitly manage correlation using a <xref:System.ServiceModel.Activities.CallbackCorrelationInitializer>.</span></span> <span data-ttu-id="cf51c-127">이러한 샘플 워크플로에는 하나의 상관 관계만 있으므로 기본 <xref:System.ServiceModel.Activities.CorrelationHandle> 관계만으로 충분할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cf51c-127">Because there was only a single correlation in these sample workflows, the default <xref:System.ServiceModel.Activities.CorrelationHandle> management would have been sufficient.</span></span>

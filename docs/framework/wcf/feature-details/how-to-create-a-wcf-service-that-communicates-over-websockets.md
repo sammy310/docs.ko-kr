@@ -2,19 +2,19 @@
 title: '방법: WebSocket을 통해 통신하는 WCF 서비스 만들기'
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: 8f8cf715269fd0ed67e2265eee4139a509f70cd1
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: d420ac8fcb98ddec195093be8ae25be37443da4e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977133"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184970"
 ---
-# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a><span data-ttu-id="ba6a3-102">방법: WebSocket을 통해 통신하는 WCF 서비스 만들기</span><span class="sxs-lookup"><span data-stu-id="ba6a3-102">How to: Create a WCF Service that Communicates over WebSockets</span></span>
-<span data-ttu-id="ba6a3-103">WCF 서비스 및 클라이언트는 <xref:System.ServiceModel.NetHttpBinding> 바인딩을 사용하여 WebSocket에서 통신할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ba6a3-103">WCF services and clients can use the <xref:System.ServiceModel.NetHttpBinding> binding to communicate over WebSockets.</span></span>  <span data-ttu-id="ba6a3-104">WebSocket은 <xref:System.ServiceModel.NetHttpBinding>에서 서비스 계약이 콜백 계약을 정의한다고 판단할 때 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="ba6a3-104">WebSockets will be used when the <xref:System.ServiceModel.NetHttpBinding> determines the service contract defines a callback contract.</span></span> <span data-ttu-id="ba6a3-105">이 항목은 WebSocket에서 통신하기 위해 <xref:System.ServiceModel.NetHttpBinding>을 사용하는 WCF 서비스와 클라이언트를 구현하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="ba6a3-105">This topic describes how to implement a WCF service and client that uses the <xref:System.ServiceModel.NetHttpBinding> to communicate over WebSockets.</span></span>  
+# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a><span data-ttu-id="867ef-102">방법: WebSocket을 통해 통신하는 WCF 서비스 만들기</span><span class="sxs-lookup"><span data-stu-id="867ef-102">How to: Create a WCF Service that Communicates over WebSockets</span></span>
+<span data-ttu-id="867ef-103">WCF 서비스 및 클라이언트는 <xref:System.ServiceModel.NetHttpBinding> 바인딩을 사용하여 WebSocket에서 통신할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="867ef-103">WCF services and clients can use the <xref:System.ServiceModel.NetHttpBinding> binding to communicate over WebSockets.</span></span>  <span data-ttu-id="867ef-104">WebSocket은 <xref:System.ServiceModel.NetHttpBinding>에서 서비스 계약이 콜백 계약을 정의한다고 판단할 때 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="867ef-104">WebSockets will be used when the <xref:System.ServiceModel.NetHttpBinding> determines the service contract defines a callback contract.</span></span> <span data-ttu-id="867ef-105">이 항목은 WebSocket에서 통신하기 위해 <xref:System.ServiceModel.NetHttpBinding>을 사용하는 WCF 서비스와 클라이언트를 구현하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="867ef-105">This topic describes how to implement a WCF service and client that uses the <xref:System.ServiceModel.NetHttpBinding> to communicate over WebSockets.</span></span>  
   
-### <a name="define-the-service"></a><span data-ttu-id="ba6a3-106">서비스 정의</span><span class="sxs-lookup"><span data-stu-id="ba6a3-106">Define the Service</span></span>  
+### <a name="define-the-service"></a><span data-ttu-id="867ef-106">서비스 정의</span><span class="sxs-lookup"><span data-stu-id="867ef-106">Define the Service</span></span>  
   
-1. <span data-ttu-id="ba6a3-107">콜백 계약 정의</span><span class="sxs-lookup"><span data-stu-id="ba6a3-107">Define a callback contract</span></span>  
+1. <span data-ttu-id="867ef-107">콜백 계약 정의</span><span class="sxs-lookup"><span data-stu-id="867ef-107">Define a callback contract</span></span>  
   
     ```csharp  
     [ServiceContract]  
@@ -25,9 +25,9 @@ ms.locfileid: "73977133"
         }  
     ```  
   
-     <span data-ttu-id="ba6a3-108">이 계약은 클라이언트 애플리케이션에서 서비스가 메시지를 다시 클라이언트로 보낼 수 있도록 허용하기 위해 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="ba6a3-108">This contract will be implemented by the client application to allow the service to send messages back to the client.</span></span>  
+     <span data-ttu-id="867ef-108">이 계약은 클라이언트 애플리케이션에서 서비스가 메시지를 다시 클라이언트로 보낼 수 있도록 허용하기 위해 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="867ef-108">This contract will be implemented by the client application to allow the service to send messages back to the client.</span></span>  
   
-2. <span data-ttu-id="ba6a3-109">서비스 계약을 정의하고 `IStockQuoteCallback` 인터페이스를 콜백 계약으로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ba6a3-109">Define the service contract and specify the `IStockQuoteCallback` interface as the callback contract.</span></span>  
+2. <span data-ttu-id="867ef-109">서비스 계약을 정의하고 `IStockQuoteCallback` 인터페이스를 콜백 계약으로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="867ef-109">Define the service contract and specify the `IStockQuoteCallback` interface as the callback contract.</span></span>  
   
     ```csharp  
     [ServiceContract(CallbackContract = typeof(IStockQuoteCallback))]  
@@ -38,7 +38,7 @@ ms.locfileid: "73977133"
         }  
     ```  
   
-3. <span data-ttu-id="ba6a3-110">서비스 계약을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="ba6a3-110">Implement the service contract.</span></span>  
+3. <span data-ttu-id="867ef-110">서비스 계약을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="867ef-110">Implement the service contract.</span></span>  
   
     ```csharp
     public class StockQuoteService : IStockQuoteService  
@@ -59,17 +59,17 @@ ms.locfileid: "73977133"
     }  
     ```  
   
-     <span data-ttu-id="ba6a3-111">서비스 작업 `StartSendingQuotes`는 비동기 호출로 구현됩니다.</span><span class="sxs-lookup"><span data-stu-id="ba6a3-111">The service operation `StartSendingQuotes` is implemented as an asynchronous call.</span></span> <span data-ttu-id="ba6a3-112">`OperationContext`를 사용하여 콜백 채널을 검색하고 채널이 열려 있을 경우 콜백 채널에 대해 비동기 호출을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="ba6a3-112">We retrieve the callback channel using the `OperationContext` and if the channel is open, we make an async call on the callback channel.</span></span>  
+     <span data-ttu-id="867ef-111">서비스 작업 `StartSendingQuotes`는 비동기 호출로 구현됩니다.</span><span class="sxs-lookup"><span data-stu-id="867ef-111">The service operation `StartSendingQuotes` is implemented as an asynchronous call.</span></span> <span data-ttu-id="867ef-112">`OperationContext`를 사용하여 콜백 채널을 검색하고 채널이 열려 있을 경우 콜백 채널에 대해 비동기 호출을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="867ef-112">We retrieve the callback channel using the `OperationContext` and if the channel is open, we make an async call on the callback channel.</span></span>  
   
-4. <span data-ttu-id="ba6a3-113">서비스 구성</span><span class="sxs-lookup"><span data-stu-id="ba6a3-113">Configure the service</span></span>  
+4. <span data-ttu-id="867ef-113">서비스 구성</span><span class="sxs-lookup"><span data-stu-id="867ef-113">Configure the service</span></span>  
   
     ```xml  
     <configuration>  
         <appSettings>  
-          <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" />        
+          <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" />
         </appSettings>  
         <system.web>  
-          <compilation debug="true" targetFramework="4.5" />        
+          <compilation debug="true" targetFramework="4.5" />
         </system.web>  
         <system.serviceModel>  
             <protocolMapping>  
@@ -90,11 +90,11 @@ ms.locfileid: "73977133"
     </configuration>  
     ```  
   
-     <span data-ttu-id="ba6a3-114">서비스 구성 파일은 WCF의 기본 엔드포인트에 의존합니다.</span><span class="sxs-lookup"><span data-stu-id="ba6a3-114">The service’s configuration file relies on WCF’s default endpoints.</span></span> <span data-ttu-id="ba6a3-115">ph x="1" /&gt; 섹션은 생성된 기본 엔드포인트에 `NetHttpBinding`을 사용해야 함을 지정하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="ba6a3-115">The `<protocolMapping>` section is used to specify that the `NetHttpBinding` should be used for the default endpoints created.</span></span>  
+     <span data-ttu-id="867ef-114">서비스 구성 파일은 WCF의 기본 엔드포인트에 의존합니다.</span><span class="sxs-lookup"><span data-stu-id="867ef-114">The service’s configuration file relies on WCF’s default endpoints.</span></span> <span data-ttu-id="867ef-115">ph x="1" /&gt; 섹션은 생성된 기본 엔드포인트에 `NetHttpBinding`을 사용해야 함을 지정하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="867ef-115">The `<protocolMapping>` section is used to specify that the `NetHttpBinding` should be used for the default endpoints created.</span></span>  
   
-### <a name="define-the-client"></a><span data-ttu-id="ba6a3-116">클라이언트 정의</span><span class="sxs-lookup"><span data-stu-id="ba6a3-116">Define the Client</span></span>  
+### <a name="define-the-client"></a><span data-ttu-id="867ef-116">클라이언트 정의</span><span class="sxs-lookup"><span data-stu-id="867ef-116">Define the Client</span></span>  
   
-1. <span data-ttu-id="ba6a3-117">콜백 계약을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="ba6a3-117">Implement the callback contract.</span></span>  
+1. <span data-ttu-id="867ef-117">콜백 계약을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="867ef-117">Implement the callback contract.</span></span>  
   
     ```csharp  
     private class CallbackHandler : StockQuoteServiceReference.IStockQuoteServiceCallback  
@@ -106,9 +106,9 @@ ms.locfileid: "73977133"
             }  
     ```  
   
-     <span data-ttu-id="ba6a3-118">콜백 계약 작업은 비동기 메서드로 구현됩니다.</span><span class="sxs-lookup"><span data-stu-id="ba6a3-118">The callback contract operation is implemented as an asynchronous method.</span></span>  
+     <span data-ttu-id="867ef-118">콜백 계약 작업은 비동기 메서드로 구현됩니다.</span><span class="sxs-lookup"><span data-stu-id="867ef-118">The callback contract operation is implemented as an asynchronous method.</span></span>  
   
-    1. <span data-ttu-id="ba6a3-119">클라이언트 코드를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="ba6a3-119">Implement the client code.</span></span>  
+    1. <span data-ttu-id="867ef-119">클라이언트 코드를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="867ef-119">Implement the client code.</span></span>  
   
         ```csharp  
         class Program  
@@ -117,7 +117,7 @@ ms.locfileid: "73977133"
             {  
                 var context = new InstanceContext(new CallbackHandler());  
                 var client = new StockQuoteServiceReference.StockQuoteServiceClient(context);  
-                client.StartSendingQuotes();              
+                client.StartSendingQuotes();
                 Console.ReadLine();  
             }  
   
@@ -131,14 +131,14 @@ ms.locfileid: "73977133"
         }  
         ```  
   
-         <span data-ttu-id="ba6a3-120">여기서 쉽게 구분할 수 있도록 CallbackHandler가 반복되었습니다.</span><span class="sxs-lookup"><span data-stu-id="ba6a3-120">The CallbackHandler is repeated here for clarity.</span></span> <span data-ttu-id="ba6a3-121">클라이언트 애플리케이션은 새 InstanceContext를 만들고 콜백 인스턴스의 구현을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ba6a3-121">The client application creates a new InstanceContext and specifies the implementation of the callback interface.</span></span> <span data-ttu-id="ba6a3-122">그런 다음 새로 만들어진 InstanceContext에 참조를 보내는 프록시 클래스의 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="ba6a3-122">Next it creates an instance of the proxy class sending a reference to the newly created InstanceContext.</span></span> <span data-ttu-id="ba6a3-123">클라이언트가 서비스를 호출하면 서비스는 지정된 콜백 계약을 사용하여 클라이언트를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="ba6a3-123">When the client calls the service, the service will call the client using the callback contract specified.</span></span>  
+         <span data-ttu-id="867ef-120">여기서 쉽게 구분할 수 있도록 CallbackHandler가 반복되었습니다.</span><span class="sxs-lookup"><span data-stu-id="867ef-120">The CallbackHandler is repeated here for clarity.</span></span> <span data-ttu-id="867ef-121">클라이언트 애플리케이션은 새 InstanceContext를 만들고 콜백 인스턴스의 구현을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="867ef-121">The client application creates a new InstanceContext and specifies the implementation of the callback interface.</span></span> <span data-ttu-id="867ef-122">그런 다음 새로 만들어진 InstanceContext에 참조를 보내는 프록시 클래스의 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="867ef-122">Next it creates an instance of the proxy class sending a reference to the newly created InstanceContext.</span></span> <span data-ttu-id="867ef-123">클라이언트가 서비스를 호출하면 서비스는 지정된 콜백 계약을 사용하여 클라이언트를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="867ef-123">When the client calls the service, the service will call the client using the callback contract specified.</span></span>  
   
-    2. <span data-ttu-id="ba6a3-124">클라이언트 구성</span><span class="sxs-lookup"><span data-stu-id="ba6a3-124">Configure the client</span></span>  
+    2. <span data-ttu-id="867ef-124">클라이언트 구성</span><span class="sxs-lookup"><span data-stu-id="867ef-124">Configure the client</span></span>  
   
         ```xml  
         <?xml version="1.0" encoding="utf-8" ?>  
         <configuration>  
-            <startup>   
+            <startup>
                 <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />  
             </startup>  
             <system.serviceModel>  
@@ -158,10 +158,10 @@ ms.locfileid: "73977133"
         </configuration>  
         ```  
   
-         <span data-ttu-id="ba6a3-125">클라이언트 구성에서 특별한 작업이 필요하지 않습니다. `NetHttpBinding`을 사용하여 클라이언트 측 엔드포인트를 지정하기만 하면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="ba6a3-125">There is nothing special you need to do in the client configuration, just specify the client side endpoint using the `NetHttpBinding`.</span></span>  
+         <span data-ttu-id="867ef-125">클라이언트 구성에서 특별한 작업이 필요하지 않습니다. `NetHttpBinding`을 사용하여 클라이언트 측 엔드포인트를 지정하기만 하면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="867ef-125">There is nothing special you need to do in the client configuration, just specify the client side endpoint using the `NetHttpBinding`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ba6a3-126">예제</span><span class="sxs-lookup"><span data-stu-id="ba6a3-126">Example</span></span>  
- <span data-ttu-id="ba6a3-127">다음은 이 항목에서 사용되는 전체 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="ba6a3-127">The following is the complete code used in this topic.</span></span>  
+## <a name="example"></a><span data-ttu-id="867ef-126">예제</span><span class="sxs-lookup"><span data-stu-id="867ef-126">Example</span></span>  
+ <span data-ttu-id="867ef-127">다음은 이 항목에서 사용되는 전체 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="867ef-127">The following is the complete code used in this topic.</span></span>  
   
 ```csharp  
 // IStockQuoteService.cs  
@@ -233,10 +233,10 @@ namespace Server
   
 <configuration>  
     <appSettings>  
-      <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" />        
+      <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" />
     </appSettings>  
     <system.web>  
-      <compilation debug="true" targetFramework="4.5" />        
+      <compilation debug="true" targetFramework="4.5" />
     </system.web>  
     <system.serviceModel>  
         <protocolMapping>  
@@ -279,7 +279,7 @@ namespace Client
         {  
             var context = new InstanceContext(new CallbackHandler());  
             var client = new StockQuoteServiceReference.StockQuoteServiceClient(context);  
-            client.StartSendingQuotes();              
+            client.StartSendingQuotes();
             Console.ReadLine();  
         }  
   
@@ -298,7 +298,7 @@ namespace Client
 <!--App.config -->  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
-    <startup>   
+    <startup>
         <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />  
     </startup>  
     <system.serviceModel>  
@@ -318,7 +318,7 @@ namespace Client
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ba6a3-128">참조</span><span class="sxs-lookup"><span data-stu-id="ba6a3-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="867ef-128">참고 항목</span><span class="sxs-lookup"><span data-stu-id="867ef-128">See also</span></span>
 
-- [<span data-ttu-id="ba6a3-129">동기 및 비동기 작업</span><span class="sxs-lookup"><span data-stu-id="ba6a3-129">Synchronous and Asynchronous Operations</span></span>](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)
-- [<span data-ttu-id="ba6a3-130">NetHttpBinding 사용</span><span class="sxs-lookup"><span data-stu-id="ba6a3-130">Using the NetHttpBinding</span></span>](../../../../docs/framework/wcf/feature-details/using-the-nethttpbinding.md)
+- [<span data-ttu-id="867ef-129">동기 및 비동기 작업</span><span class="sxs-lookup"><span data-stu-id="867ef-129">Synchronous and Asynchronous Operations</span></span>](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)
+- [<span data-ttu-id="867ef-130">NetHttpBinding 사용</span><span class="sxs-lookup"><span data-stu-id="867ef-130">Using the NetHttpBinding</span></span>](../../../../docs/framework/wcf/feature-details/using-the-nethttpbinding.md)

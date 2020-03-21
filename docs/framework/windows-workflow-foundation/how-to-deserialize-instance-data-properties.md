@@ -1,32 +1,32 @@
 ---
-title: '방법: 인스턴스 데이터 속성 Deserialize'
+title: '방법: 인스턴스 데이터 속성 역직렬화'
 ms.date: 03/30/2017
 ms.assetid: b13a3508-1b97-4359-b336-03d85fa23bc4
-ms.openlocfilehash: e037d5f8d0b221aa0eb8fdc6eceabf6efb2dc387
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 8142671fc1bc154337019e025d8443f0570106b3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989630"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143085"
 ---
-# <a name="how-to-deserialize-instance-data-properties"></a><span data-ttu-id="06dcc-102">방법: 인스턴스 데이터 속성 Deserialize</span><span class="sxs-lookup"><span data-stu-id="06dcc-102">How to: Deserialize Instance Data Properties</span></span>
-<span data-ttu-id="06dcc-103">경우에 따라서는 유지되고 있는 워크플로 인스턴스의 상태를 사용자나 워크플로 관리자가 수동으로 조사하고 싶을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="06dcc-103">There may be situations when a user or workflow administrator may want to manually inspect the state of a persisted workflow instance.</span></span> <span data-ttu-id="06dcc-104"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>에서는 다음과 같은 네 개의 열이 포함된 인스턴스 테이블에 대한 뷰를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="06dcc-104"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> provides a view on the Instances table that exposes the following four columns:</span></span>  
+# <a name="how-to-deserialize-instance-data-properties"></a><span data-ttu-id="8825a-102">방법: 인스턴스 데이터 속성 역직렬화</span><span class="sxs-lookup"><span data-stu-id="8825a-102">How to: Deserialize Instance Data Properties</span></span>
+<span data-ttu-id="8825a-103">경우에 따라서는 유지되고 있는 워크플로 인스턴스의 상태를 사용자나 워크플로 관리자가 수동으로 조사하고 싶을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8825a-103">There may be situations when a user or workflow administrator may want to manually inspect the state of a persisted workflow instance.</span></span> <span data-ttu-id="8825a-104"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>에서는 다음과 같은 네 개의 열이 포함된 인스턴스 테이블에 대한 뷰를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="8825a-104"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> provides a view on the Instances table that exposes the following four columns:</span></span>  
   
-- <span data-ttu-id="06dcc-105">ReadWritePrimitiveDataProperties</span><span class="sxs-lookup"><span data-stu-id="06dcc-105">ReadWritePrimitiveDataProperties</span></span>  
+- <span data-ttu-id="8825a-105">ReadWritePrimitiveDataProperties</span><span class="sxs-lookup"><span data-stu-id="8825a-105">ReadWritePrimitiveDataProperties</span></span>  
   
-- <span data-ttu-id="06dcc-106">WriteOnlyPrimitiveDataProperties</span><span class="sxs-lookup"><span data-stu-id="06dcc-106">WriteOnlyPrimitiveDataProperties</span></span>  
+- <span data-ttu-id="8825a-106">WriteOnlyPrimitiveDataProperties</span><span class="sxs-lookup"><span data-stu-id="8825a-106">WriteOnlyPrimitiveDataProperties</span></span>  
   
-- <span data-ttu-id="06dcc-107">ReadWriteComplexDataProperties</span><span class="sxs-lookup"><span data-stu-id="06dcc-107">ReadWriteComplexDataProperties</span></span>  
+- <span data-ttu-id="8825a-107">ReadWriteComplexDataProperties</span><span class="sxs-lookup"><span data-stu-id="8825a-107">ReadWriteComplexDataProperties</span></span>  
   
-- <span data-ttu-id="06dcc-108">WriteOnlyComplexDataProperties</span><span class="sxs-lookup"><span data-stu-id="06dcc-108">WriteOnlyComplexDataProperties</span></span>  
+- <span data-ttu-id="8825a-108">WriteOnlyComplexDataProperties</span><span class="sxs-lookup"><span data-stu-id="8825a-108">WriteOnlyComplexDataProperties</span></span>  
   
- <span data-ttu-id="06dcc-109">기본 데이터 속성은 .NET Framework 형식이 "common" (예: Int32 및 String)로 간주 되는 반면, 복합 데이터 속성은 다른 모든 형식을 참조 하는 속성을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="06dcc-109">Primitive data properties refer to properties whose .NET Framework types are considered to be "common" (for example, Int32 and String), while complex data properties refer to all other types.</span></span> <span data-ttu-id="06dcc-110">기본 형식의 정확한 열거형은 이 코드 샘플의 뒷부분에 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="06dcc-110">An exact enumeration of primitive types is found later in this code example.</span></span>  
+ <span data-ttu-id="8825a-109">기본 데이터 속성은 .NET Framework 형식이 "공통"(예: Int32 및 String)으로 간주되는 속성을 참조하고 복잡한 데이터 속성은 다른 모든 형식을 참조합니다.</span><span class="sxs-lookup"><span data-stu-id="8825a-109">Primitive data properties refer to properties whose .NET Framework types are considered to be "common" (for example, Int32 and String), while complex data properties refer to all other types.</span></span> <span data-ttu-id="8825a-110">기본 형식의 정확한 열거형은 이 코드 샘플의 뒷부분에 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8825a-110">An exact enumeration of primitive types is found later in this code example.</span></span>  
   
- <span data-ttu-id="06dcc-111">읽기/쓰기 속성은 인스턴스를 로드했을 때 워크플로 런타임으로 다시 반환되는 속성을 가리킵니다.</span><span class="sxs-lookup"><span data-stu-id="06dcc-111">Read/write properties refer to properties that are returned back to the Workflow Runtime when an instance is loaded.</span></span> <span data-ttu-id="06dcc-112">WriteOnly 속성은 데이터베이스에 쓴 다음 다시 읽지 않는 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="06dcc-112">WriteOnly properties are written to the database and then never read again.</span></span>  
+ <span data-ttu-id="8825a-111">읽기/쓰기 속성은 인스턴스를 로드했을 때 워크플로 런타임으로 다시 반환되는 속성을 가리킵니다.</span><span class="sxs-lookup"><span data-stu-id="8825a-111">Read/write properties refer to properties that are returned back to the Workflow Runtime when an instance is loaded.</span></span> <span data-ttu-id="8825a-112">WriteOnly 속성은 데이터베이스에 쓴 다음 다시 읽지 않는 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="8825a-112">WriteOnly properties are written to the database and then never read again.</span></span>  
   
- <span data-ttu-id="06dcc-113">이 샘플에서는 기본 데이터 속성을 deserialize하는 데 사용할 수 있는 코드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="06dcc-113">This example provides code that enables a user to deserialize primitive data properties.</span></span> <span data-ttu-id="06dcc-114">ReadWritePrimitiveDataProperties 또는 WriteOnlyPrimitiveDataProperties 열에서 읽은 바이트 배열을 지정 하는 경우이 코드는 BLOB (binary large object) <xref:System.Collections.Generic.Dictionary%602> 를 각 키 값이 있는 > 명령의 xname 형식의 \<로 변환 합니다. pair는 속성 이름 및 해당 값을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="06dcc-114">Given a byte array read from either the ReadWritePrimitiveDataProperties or WriteOnlyPrimitiveDataProperties column, this code will convert the binary large object (BLOB) into a <xref:System.Collections.Generic.Dictionary%602> of type \<XName, object> where each key value pair represents a property name and its corresponding value.</span></span>  
+ <span data-ttu-id="8825a-113">이 샘플에서는 기본 데이터 속성을 역직렬화하는 데 사용할 수 있는 코드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="8825a-113">This example provides code that enables a user to deserialize primitive data properties.</span></span> <span data-ttu-id="8825a-114">ReadWritePrimitiveDataProperties 또는 WriteOnlyPrimitiveDataProperties 열에서 읽은 바이트 배열이 주어지면 이진 큰 개체(BLOB)를 XName <xref:System.Collections.Generic.Dictionary%602> 형식, \<각 키 값 쌍이 속성 이름과 해당 값을 나타내는 개체> 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="8825a-114">Given a byte array read from either the ReadWritePrimitiveDataProperties or WriteOnlyPrimitiveDataProperties column, this code will convert the binary large object (BLOB) into a <xref:System.Collections.Generic.Dictionary%602> of type \<XName, object> where each key value pair represents a property name and its corresponding value.</span></span>  
   
- <span data-ttu-id="06dcc-115">복합 데이터 속성을 deserialize하는 방법은 이 샘플에서 보여 주지 않습니다. 이와 같은 작업은 아직 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="06dcc-115">This example does not demonstrate how to deserialize complex data properties because this is currently not a supported operation.</span></span>  
+ <span data-ttu-id="8825a-115">복합 데이터 속성을 역직렬화하는 방법은 이 샘플에서 보여 주지 않습니다. 이와 같은 작업은 아직 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8825a-115">This example does not demonstrate how to deserialize complex data properties because this is currently not a supported operation.</span></span>  
   
 ```csharp  
 using System;  
@@ -104,7 +104,7 @@ namespace PropertyReader
                     // if the instance state is compressed using GZip algorithm  
                     if (isCompressed)  
                     {  
-                        // decompress the data using the GZip   
+                        // decompress the data using the GZip
                         using (GZipStream stream = new GZipStream(memoryStream, CompressionMode.Decompress))  
                         {  
                             // create an XmlReader object and pass it on to the helper method ReadPrimitiveDataProperties  
@@ -117,7 +117,7 @@ namespace PropertyReader
                     }  
                     else  
                     {  
-                        // if the instance data is not compressed   
+                        // if the instance data is not compressed
                         // create an XmlReader object and pass it on to the helper method ReadPrimitiveDataProperties  
                         using (XmlReader reader = XmlDictionaryReader.CreateBinaryReader(memoryStream, XmlDictionaryReaderQuotas.Max))  
                         {  
