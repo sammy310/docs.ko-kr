@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 70a32bf3-9051-4f96-ae87-11356d06a073
 topic_type:
 - apiref
-ms.openlocfilehash: 5434aa2d12bd9a29a8c2fc784421442469ceb1ce
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6ad6bbb8a4c69f575bbeba3a297c46e049a97325
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440557"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176047"
 ---
 # <a name="imetadataassemblyemitsetassemblyrefprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyRefProps 메서드
 지정된 `AssemblyRef` 메타데이터 구조를 수정합니다.  
@@ -32,8 +32,8 @@ HRESULT SetAssemblyRefProps (
     [in] mdAssemblyRef              ar,  
     [in] const void                 *pbPublicKeyOrToken,  
     [in] ULONG                      cbPublicKeyOrToken,  
-    [in] LPCWSTR                    szName,   
-    [in] const ASSEMBLYMETADATA     *pMetaData,   
+    [in] LPCWSTR                    szName,
+    [in] const ASSEMBLYMETADATA     *pMetaData,
     [in] const void                 *pbHashValue,  
     [in] ULONG                      cbHashValue,  
     [in] DWORD                      dwAssemblyRefFlags  
@@ -42,38 +42,38 @@ HRESULT SetAssemblyRefProps (
   
 ## <a name="parameters"></a>매개 변수  
  `ar`  
- 진행 수정할 `AssemblyRef` 메타 데이터 구조를 지정 하는 메타 데이터 토큰입니다.  
+ 【인】 수정할 `AssemblyRef` 메타데이터 구조를 지정하는 메타데이터 토큰입니다.  
   
  `pbPublicKeyOrToken`  
- 진행 참조 된 어셈블리의 게시자에 대 한 공개 키입니다.  
+ 【인】 참조된 어셈블리의 게시자의 공개 키입니다.  
   
  `cbPublicKeyOrToken`  
- 진행 `pbPublicKeyOrToken`의 크기 (바이트)입니다.  
+ 【인】 의 바이트 크기입니다. `pbPublicKeyOrToken`  
   
  `szName`  
- 진행 사람이 읽을 수 있는 어셈블리의 텍스트 이름입니다.  
+ 【인】 어셈블리의 사람이 읽을 수 있는 텍스트 이름입니다.  
   
  `pMetaData`  
- 진행 어셈블리에 대 한 버전, 플랫폼 및 로캘 정보를 포함 하는 ASSEMBLYMETADATA 인스턴스에 대 한 포인터입니다.  
+ 【인】 어셈블리에 대한 버전, 플랫폼 및 로캘 정보를 포함하는 ASSEMBLYMETADATA 인스턴스에 대한 포인터입니다.  
   
  `pbHashValue`  
- 진행 어셈블리와 연결 된 해시 데이터에 대 한 포인터입니다.  
+ 【인】 어셈블리와 연결된 해시 데이터에 대한 포인터입니다.  
   
  `cbHashValue`  
- 진행 `pbHashValue`의 크기 (바이트)입니다.  
+ 【인】 의 바이트 크기입니다. `pbHashValue`  
   
  `dwAssemblyRefFlags`  
- 진행 참조 된 어셈블리의 특성을 지정 하는 [Assemblyrefflags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) 값의 비트 조합입니다.  
+ 【인】 참조된 어셈블리의 특성을 지정하는 [어셈블리 RefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) 값의 비트 조합입니다.  
   
-## <a name="remarks"></a>주의  
- `AssemblyRef` 메타 데이터 구조를 만들려면 [IMetaDataAssemblyEmit::D efineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) 메서드를 사용 합니다.  
+## <a name="remarks"></a>설명  
+ `AssemblyRef` 메타데이터 구조를 만들려면 [IMetaDataAssemblyEmit::DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) 메서드를 사용합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor  
+ **헤더:** 코르h  
   
- **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
+ **라이브러리:** MsCorEE.dll의 리소스로 사용  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

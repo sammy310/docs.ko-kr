@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataModule::GetMethodDefinitionByToken 메서드
+title: IXCLR데이터 모듈::GetMethod정의토큰 방법
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataModule::GetMethodDefinitionByToken Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 2c0cf56f108396226b7c7399f6da75e5f47d36f3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 294c5340caf2217f9337d654a11a63a43d46febd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744677"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176671"
 ---
-# <a name="ixclrdatamodulegetmethoddefinitionbytoken-method"></a>IXCLRDataModule::GetMethodDefinitionByToken 메서드
+# <a name="ixclrdatamodulegetmethoddefinitionbytoken-method"></a>IXCLR데이터 모듈::GetMethod정의토큰 방법
 
-지정 된 메타 데이터 토큰에 해당 하는 메서드 정을 가져옵니다.
+지정된 메타데이터 토큰에 해당하는 메서드 정의를 가져옵니다.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,23 +40,23 @@ HRESULT GetMethodDefinitionByToken(
 ## <a name="parameters"></a>매개 변수
 
 `token`\
-[in] 메서드 토큰입니다.
+【인】 메서드 토큰입니다.
 
 `methodDefinition`\
-[out] 메서드 정의입니다.
+【아웃】 메서드 정의입니다.
 
 ## <a name="remarks"></a>설명
 
-제공 된 메서드는의 일부는 `IXCLRDataModule` 인터페이스 및 가상 메서드 테이블의 25 슬롯에 해당 합니다.
+제공된 메서드는 `IXCLRDataModule` 인터페이스의 일부이며 가상 메서드 테이블의 25번째 슬롯에 해당합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
+**플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
 **헤더:** 없음  
 **라이브러리:** 없음  
 **.NET Framework 버전:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
- 
-## <a name="see-also"></a>참고자료
+
+## <a name="see-also"></a>참고 항목
 
 - [디버깅](index.md)
 - [IXCLRDataModule 인터페이스](ixclrdatamodule-interface.md)

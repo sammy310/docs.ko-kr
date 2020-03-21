@@ -15,57 +15,57 @@ helpviewer_keywords:
 ms.assetid: 1ccda329-d752-4d89-abe8-511af3c3f4c9
 topic_type:
 - apiref
-ms.openlocfilehash: 59512cc1c1b280d7fe6deb2f9d721ad53547e356
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d8b8bfd0e70e75c702f32555c10f433a1ff4ae10
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437963"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175423"
 ---
 # <a name="imetadataimportfindmemberref-method"></a>IMetaDataImport::FindMemberRef 메서드
-지정 된 <xref:System.Type>로 묶고 지정 된 이름과 메타 데이터 서명을 가진 멤버 참조의 MemberRef 토큰에 대 한 포인터를 가져옵니다.  
+지정된 <xref:System.Type> 이름과 메타데이터 서명이 있는 멤버 참조에 대한 MemberRef 토큰에 대한 포인터를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT FindMemberRef (  
    [in]  mdTypeRef          td,  
-   [in]  LPCWSTR            szName,   
-   [in]  PCCOR_SIGNATURE    pvSigBlob,   
-   [in]  ULONG              cbSigBlob,   
+   [in]  LPCWSTR            szName,
+   [in]  PCCOR_SIGNATURE    pvSigBlob,
+   [in]  ULONG              cbSigBlob,
    [out] mdMemberRef        *pmr  
 );  
 ```  
   
 ## <a name="parameters"></a>매개 변수  
  `td`  
- 진행 검색할 멤버 참조를 포함 하는 클래스 또는 인터페이스의 TypeRef 토큰입니다. 이 값이 `mdTokenNil`되 면 전역 변수나 전역 함수 참조에 대 한 조회가 수행 됩니다.  
+ 【인】 검색할 멤버 참조를 둘러싸는 클래스 또는 인터페이스에 대한 TypeRef 토큰입니다. 이 값이 `mdTokenNil`이경우 전역 변수 또는 전역 함수 참조에 대해 조회가 수행됩니다.  
   
  `szName`  
- 진행 검색할 멤버 참조의 이름입니다.  
+ 【인】 검색할 멤버 참조의 이름입니다.  
   
  `pvSigBlob`  
- 진행 멤버 참조의 이진 메타 데이터 서명에 대 한 포인터입니다.  
+ 【인】 멤버 참조의 이진 메타데이터 시그니처에 대한 포인터입니다.  
   
  `cbSigBlob`  
- 진행 `pvSigBlob`의 크기 (바이트)입니다.  
+ 【인】 의 바이트 크기입니다. `pvSigBlob`  
   
  `pmr`  
- 제한이 일치 하는 MemberRef 토큰에 대 한 포인터입니다.  
+ 【아웃】 일치하는 MemberRef 토큰에 대한 포인터입니다.  
   
-## <a name="remarks"></a>주의  
- 바깥쪽 클래스 또는 인터페이스 (`td`), 이름 (`szName`) 및 선택적으로 시그니처 (`pvSigBlob`)를 사용 하 여 멤버를 지정 합니다.  
+## <a name="remarks"></a>설명  
+ enclosing 클래스 또는 인터페이스 (),`td`해당 이름`szName`() 및 선택적으로`pvSigBlob`해당 서명 ()을 사용 하 여 멤버를 지정 합니다.  
   
- 서명이 특정 범위에 바인딩되므로 현재 범위에서 `FindMemberRef` 전달 된 서명이 생성 되어야 합니다. 시그니처에는 바깥쪽 클래스 또는 값 형식을 식별 하는 토큰이 포함 될 수 있습니다. 토큰은 로컬 TypeDef 테이블의 인덱스입니다. 현재 범위의 컨텍스트 외부에서 런타임 시그니처를 작성 하 고 해당 시그니처를 `FindMemberRef`에 대 한 입력으로 사용할 수 없습니다.  
+ 전달된 서명은 서명이 특정 범위에 바인딩되어 있으므로 현재 범위에서 생성되어야 `FindMemberRef` 합니다. 서명은 둘러싸는 클래스 또는 값 형식을 식별하는 토큰을 포함할 수 있습니다. 토큰은 로컬 TypeDef 테이블에 대한 인덱스입니다. 현재 범위의 컨텍스트 외부에서 런타임 서명을 작성하고 해당 서명을 `FindMemberRef`에 대한 입력으로 사용할 수 없습니다.  
   
- `FindMemberRef`은 클래스 또는 인터페이스에서 직접 정의 된 멤버 참조만 찾습니다. 상속 된 멤버 참조를 찾을 수 없습니다.  
+ `FindMemberRef`클래스 또는 인터페이스에서 직접 정의된 멤버 참조만 찾습니다. 상속된 멤버 참조를 찾을 수 없습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor  
+ **헤더:** 코르h  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MsCorEE.dll의 리소스로 포함  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

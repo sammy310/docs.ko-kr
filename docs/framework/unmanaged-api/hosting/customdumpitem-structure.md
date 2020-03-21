@@ -14,46 +14,46 @@ helpviewer_keywords:
 ms.assetid: fd9085ff-7beb-4c38-97f0-037cd8ba4f65
 topic_type:
 - apiref
-ms.openlocfilehash: ae64edd8a3a628100d4c51d0b78be1bc8d49fc17
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 154beef9398029f31dcb4d081019b9f292238af4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138289"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176476"
 ---
 # <a name="customdumpitem-structure"></a>CustomDumpItem 구조체
-오류 보고에서 사용자 지정 덤프에 추가할 항목을 설명 합니다.  
+오류 보고에서 사용자 지정 덤프에 추가할 항목을 설명합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```cpp  
 struct {  
-    ECustomDumpItemKind itemKind;   
+    ECustomDumpItemKind itemKind;
     union {  
         UINT_PTR pReserved;  
     }  
 } CustomDumpItem;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`itemKind`|추가할 항목의 종류를 나타내는 [ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) 값입니다.|  
-|`pReserved`|현재 사용 되지 않습니다. 공용 구조체에 추가 된 항목은 포인터 크기 보다 크지 않아야 합니다. `struct` 필요한 경우 별도로 할당 하 고이를 가리켜야 합니다.|  
+|`pReserved`|현재 사용되지 않습니다. 공용 구조에 추가된 항목은 포인터 크기보다 커야 합니다. a가 `struct` 필요한 경우 별도로 할당하고 가리가야 합니다.|  
   
-## <a name="remarks"></a>주의  
- [ICLRErrorReportingManager:: BeginCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) 는 `CustomDumpItem`형식의 매개 변수를 사용 합니다.  
+## <a name="remarks"></a>설명  
+ [ICLR오류 보고 관리자::시작 사용자 지정](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) `CustomDumpItem`덤프 형식의 매개 변수를 사용 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Mscoree.dll  
+ **헤더:** MSCorEE.idl  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 포함  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [호스팅 구조체](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

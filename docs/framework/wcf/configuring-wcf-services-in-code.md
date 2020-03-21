@@ -2,15 +2,15 @@
 title: 코드로 WCF 서비스 구성
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-ms.openlocfilehash: 5d05fe5f70f4e2b1490c728cc019430cd94ff925
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 4ff49b4e17ae179426cc033a955ecf2c71f2a3e1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569512"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174812"
 ---
 # <a name="configuring-wcf-services-in-code"></a>코드로 WCF 서비스 구성
-WCF (Windows Communication Foundation)를 사용 하면 개발자가 구성 파일 또는 코드를 사용 하 여 서비스를 구성할 수 있습니다.  구성 파일은 배포 후 서비스를 구성해야 하는 경우에 유용합니다. 구성 파일을 사용할 경우 IT 전문가가 구성 파일을 업데이트하기만 하면 되고 다시 컴파일할 필요가 없습니다. 하지만 구성 파일은 관리하기가 복잡하고 어려울 수 있습니다. 구성 파일 디버깅은 지원되지 않으며 구성 요소는 이름으로 참조되므로 구성 파일을 작성하기가 어렵고 오류가 발생하기 쉽습니다. WCF를 사용 하면 코드에서 서비스를 구성할 수도 있습니다. 이전 버전의 WCF (4.0 및 이전 버전)에서 코드의 서비스 구성은 자체 호스팅 시나리오에서 쉽기 때문에 <xref:System.ServiceModel.ServiceHost> 클래스를 통해 ServiceHost를 호출 하기 전에 끝점과 동작을 구성할 수 있었습니다. 그러나 웹 호스팅 시나리오에서는 <xref:System.ServiceModel.ServiceHost> 클래스에 직접 액세스할 수 없습니다. 웹 호스팅 서비스를 구성하려면 `System.ServiceModel.ServiceHostFactory`를 만들고 필요한 구성을 수행하는 <xref:System.ServiceModel.Activation.ServiceHostFactory>를 만들어야 했습니다. .NET 4.5부터 WCF는 자체 호스팅 서비스와 웹 호스팅 서비스를 코드에서 더 쉽게 구성 하는 방법을 제공 합니다.  
+WCF(Windows 통신 재단)를 사용하면 개발자가 구성 파일이나 코드를 사용하여 서비스를 구성할 수 있습니다.  구성 파일은 배포 후 서비스를 구성해야 하는 경우에 유용합니다. 구성 파일을 사용할 경우 IT 전문가가 구성 파일을 업데이트하기만 하면 되고 다시 컴파일할 필요가 없습니다. 하지만 구성 파일은 관리하기가 복잡하고 어려울 수 있습니다. 구성 파일 디버깅은 지원되지 않으며 구성 요소는 이름으로 참조되므로 구성 파일을 작성하기가 어렵고 오류가 발생하기 쉽습니다. 또한 WCF를 사용하면 코드에서 서비스를 구성할 수 있습니다. 이전 버전의 WCF(4.0 이상) 코드에서 서비스를 구성하는 것은 자체 호스팅 시나리오에서 쉬웠으며, 클래스를 <xref:System.ServiceModel.ServiceHost> 사용하면 ServiceHost.Open을 호출하기 전에 끝점과 동작을 구성할 수 있었습니다. 그러나 웹 호스팅 시나리오에서는 <xref:System.ServiceModel.ServiceHost> 클래스에 직접 액세스할 수 없습니다. 웹 호스팅 서비스를 구성하려면 `System.ServiceModel.ServiceHostFactory`를 만들고 필요한 구성을 수행하는 <xref:System.ServiceModel.Activation.ServiceHostFactory>를 만들어야 했습니다. .NET 4.5부터 시작하여 WCF는 코드에서 자체 호스팅 서비스와 웹 호스팅 서비스를 모두 구성하는 더 쉬운 방법을 제공합니다.  
   
 ## <a name="the-configure-method"></a>Configure 메서드  
  서비스 구현 클래스에서 다음 서명으로 `Configure`라는 공용 정적 메서드를 정의하기만 하면 됩니다.  
@@ -19,7 +19,7 @@ WCF (Windows Communication Foundation)를 사용 하면 개발자가 구성 파�
 public static void Configure(ServiceConfiguration config)  
 ```  
   
- Configure 메서드는 개발자가 엔드포인트 및 동작을 추가할 수 있도록 해 주는 <xref:System.ServiceModel.ServiceConfiguration> 인스턴스를 사용합니다. 이 메서드는 서비스 호스트가 열리기 전에 WCF에서 호출 됩니다. 정의할 때 app.config 또는 web.config 파일에 지정된 서비스 구성 설정이 무시됩니다.  
+ Configure 메서드는 개발자가 엔드포인트 및 동작을 추가할 수 있도록 해 주는 <xref:System.ServiceModel.ServiceConfiguration> 인스턴스를 사용합니다. 이 메서드는 서비스 호스트를 열기 전에 WCF에서 호출합니다. 정의할 때 app.config 또는 web.config 파일에 지정된 서비스 구성 설정이 무시됩니다.  
   
  다음 코드 조각은 `Configure` 메서드를 정의하는 방법과 서비스 엔드포인트, 엔드포인트 동작 및 서비스 동작을 추가하는 방법을 설명합니다.  
   
@@ -59,49 +59,49 @@ public class Service1 : IService1
  서비스에 https와 같은 프로토콜을 사용하려면 프로토콜을 사용하는 엔드포인트를 명시적으로 추가하거나 프로토콜 및 정의된 각 서비스 계약과 호환되는 각 기본 주소에 엔드포인트를 추가하는 ServiceConfiguration.EnableProtocol(Binding)을 호출하여 엔드포인트를 자동으로 추가할 수 있습니다. 다음 코드에서는 ServiceConfiguration.EnableProtocol 메서드를 사용하는 방법을 보여 줍니다.  
   
 ```csharp  
-public class Service1 : IService1   
-{   
-    public string GetData(int value);   
-    public static void Configure(ServiceConfiguration config)   
-    {   
-        // Enable "Add Service Reference" support   
-       config.Description.Behaviors.Add( new ServiceMetadataBehavior { HttpGetEnabled = true });   
-       // set up support for http, https, net.tcp, net.pipe   
-       config.EnableProtocol(new BasicHttpBinding());   
-       config.EnableProtocol(new BasicHttpsBinding());   
-       config.EnableProtocol(new NetTcpBinding());   
-       config.EnableProtocol(new NetNamedPipeBinding());   
-       // add an extra BasicHttpBinding endpoint at http:///basic   
-       config.AddServiceEndpoint(typeof(IService1), new BasicHttpBinding(),"basic");   
-    }   
-}   
+public class Service1 : IService1
+{
+    public string GetData(int value);
+    public static void Configure(ServiceConfiguration config)
+    {
+        // Enable "Add Service Reference" support
+       config.Description.Behaviors.Add( new ServiceMetadataBehavior { HttpGetEnabled = true });
+       // set up support for http, https, net.tcp, net.pipe
+       config.EnableProtocol(new BasicHttpBinding());
+       config.EnableProtocol(new BasicHttpsBinding());
+       config.EnableProtocol(new NetTcpBinding());
+       config.EnableProtocol(new NetNamedPipeBinding());
+       // add an extra BasicHttpBinding endpoint at http:///basic
+       config.AddServiceEndpoint(typeof(IService1), new BasicHttpBinding(),"basic");
+    }
+}
 ```  
   
- `protocolMappings`> 섹션의 설정은 프로그래밍 방식으로 <xref:System.ServiceModel.ServiceConfiguration>에 응용 프로그램 끝점을 추가 하지 않은 경우에만 사용 됩니다. 필요에 따라 <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A>를 호출 하 여 기본 응용 프로그램 구성 파일에서 서비스 구성을 로드 한 다음 설정을 변경할 수 있습니다. <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> 클래스를 사용하면 중앙 집중식 구성에서 구성을 로드할 수도 있습니다. 다음 코드에서는 이를 구현하는 방법을 보여 줍니다.  
+ <`protocolMappings`> 섹션의 설정은 프로그래밍 방식으로 응용 프로그램 끝점이 추가되지 <xref:System.ServiceModel.ServiceConfiguration> 않은 경우에만 사용됩니다. 선택적으로 호출하여 기본 응용 프로그램 구성 파일에서 <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> 서비스 구성을 로드한 다음 설정을 변경할 수 있습니다. <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> 클래스를 사용하면 중앙 집중식 구성에서 구성을 로드할 수도 있습니다. 다음 코드에서는 이를 구현하는 방법을 보여 줍니다.  
   
 ```csharp
-public class Service1 : IService1   
-{   
-    public void DoWork();   
-    public static void Configure(ServiceConfiguration config)   
-    {   
-          config.LoadFromConfiguration(ConfigurationManager.OpenMappedExeConfiguration(new ExeConfigurationFileMap { ExeConfigFilename = @"c:\sharedConfig\MyConfig.config" }, ConfigurationUserLevel.None));   
-    }   
+public class Service1 : IService1
+{
+    public void DoWork();
+    public static void Configure(ServiceConfiguration config)
+    {
+          config.LoadFromConfiguration(ConfigurationManager.OpenMappedExeConfiguration(new ExeConfigurationFileMap { ExeConfigFilename = @"c:\sharedConfig\MyConfig.config" }, ConfigurationUserLevel.None));
+    }
 }  
 ```  
   
 > [!IMPORTANT]
-> <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A>는 <`service`>의 <`system.serviceModel`> 태그 내에서 <`host`> 설정을 무시 합니다. 개념적으로 <`host`>는 서비스 구성이 아니라 호스트 구성에 대 한 것 이며 Configure 메서드가 실행 되기 전에 로드 됩니다.  
+> <<xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> `system.serviceModel`> <`host` `service`> 태그 내의> <설정을 무시합니다. 개념적으로 <`host`> 서비스 구성이 아닌 호스트 구성에 관한 것이며 Configure 메서드가 실행되기 전에 로드됩니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [구성 파일을 사용하여 서비스 구성](configuring-services-using-configuration-files.md)
 - [클라이언트 동작 구성](configuring-client-behaviors.md)
 - [단순화된 구성](simplified-configuration.md)
-- [구성](./samples/configuration-sample.md)
+- [Configuration](./samples/configuration-sample.md)
 - [IIS 및 WAS에서 구성 기반 활성화](./feature-details/configuration-based-activation-in-iis-and-was.md)
 - [구성 및 메타데이터 지원](./extending/configuration-and-metadata-support.md)
-- [구성](./diagnostics/exceptions-reference/configuration.md)
+- [Configuration](./diagnostics/exceptions-reference/configuration.md)
 - [방법: 구성에서 서비스 바인딩 지정](how-to-specify-a-service-binding-in-configuration.md)
 - [방법: 구성에서 서비스 엔드포인트 만들기](./feature-details/how-to-create-a-service-endpoint-in-configuration.md)
 - [방법: 구성 파일을 사용하여 서비스의 메타데이터 게시](./feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)

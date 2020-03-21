@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 7e034e92e1ff2b9bec0eaf8e0f3330f7a832a7e5
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: f2e7e5e8879e89806cfd457a1af80f51b91871cb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77095170"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174214"
 ---
 # <a name="how-to-localize-an-application"></a>방법: 애플리케이션 지역화
 이 자습서에서는 LocBaml 도구를 사용하여 지역화된 애플리케이션을 만드는 방법을 설명합니다.  
@@ -22,37 +22,37 @@ ms.locfileid: "77095170"
 > [!NOTE]
 > LocBaml 도구는 프로덕션용 애플리케이션이 아닙니다. 지역화 API 중 일부를 사용하며 지역화 도구를 작성하는 방법을 설명하는 샘플로 제공됩니다.  
   
-<a name="Introduction"></a>   
+<a name="Introduction"></a>
 ## <a name="overview"></a>개요  
  이 설명에서는 애플리케이션을 지역화하는 단계별 접근 방식을 제공합니다. 먼저 번역할 텍스트를 추출할 수 있도록 애플리케이션을 준비합니다. 텍스트를 번역한 후에 번역된 텍스트를 원래 애플리케이션의 새 복사본으로 병합합니다.  
   
-<a name="Requirements"></a>   
+<a name="Requirements"></a>
 ## <a name="requirements"></a>요구 사항  
- 이 설명에서는 명령줄에서 실행 되는 컴파일러 인 MSBuild (Microsoft build engine)를 사용 합니다.  
+ 이 논의 과정에서 명령줄에서 실행되는 컴파일러인 MSBuild(Microsoft 빌드 엔진)를 사용합니다.  
   
- 또한 프로젝트 파일을 사용하도록 지시됩니다. MSBuild 및 프로젝트 파일을 사용 하는 방법에 대 한 지침은 [빌드 및 배포](../app-development/building-and-deploying-wpf-applications.md)를 참조 하세요.  
+ 또한 프로젝트 파일을 사용하도록 지시됩니다. MSBuild 및 프로젝트 파일을 사용하는 방법에 대한 지침은 [빌드 및 배포](../app-development/building-and-deploying-wpf-applications.md)를 참조하십시오.  
   
  이 설명의 모든 예제에서는 문화권으로 en-US(영어-미국)를 사용합니다. 이렇게 하면 다른 언어를 설치하지 않고 예제의 단계를 수행할 수 있습니다.  
   
-<a name="create_sample_app"></a>   
+<a name="create_sample_app"></a>
 ## <a name="create-a-sample-application"></a>샘플 애플리케이션 만들기  
- 이 단계에서는 지역화를 위해 애플리케이션을 준비합니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 샘플에서는 이 설명의 코드 예제에 사용되는 HelloApp 샘플이 제공됩니다. 이 샘플을 사용 하려면 [LocBaml 도구 샘플](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml)에서 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 파일을 다운로드 하세요.  
+ 이 단계에서는 지역화를 위해 애플리케이션을 준비합니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 샘플에서는 이 설명의 코드 예제에 사용되는 HelloApp 샘플이 제공됩니다. 이 샘플을 사용하려면 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] [LocBaml 도구 샘플에서](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml)파일을 다운로드합니다.  
   
 1. 지역화를 시작하려는 지점까지 애플리케이션을 개발합니다.  
   
-2. MSBuild에서 중립 언어 리소스를 포함 하는 주 어셈블리와 위성 어셈블리 (.dll 확장명이 .resources 인 파일)를 생성 하도록 프로젝트 파일의 개발 언어를 지정 합니다. HelloApp 샘플의 프로젝트 파일은 HelloApp.csproj입니다. 해당 파일에서 다음과 같이 식별된 개발 언어를 찾을 수 있습니다.  
+2. MSBuild가 중립 언어 리소스를 포함하도록 기본 어셈블리와 위성 어셈블리(.resources.dll 확장자 파일)를 생성하도록 프로젝트 파일에서 개발 언어를 지정합니다. HelloApp 샘플의 프로젝트 파일은 HelloApp.csproj입니다. 해당 파일에서 다음과 같이 식별된 개발 언어를 찾을 수 있습니다.  
   
      `<UICulture>en-US</UICulture>`  
   
-3. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일에 Uid를 추가합니다. Uid는 파일의 변경 내용을 추적하고 번역해야 하는 항목을 식별하는 데 사용됩니다. 파일에 Uid를 추가 하려면 프로젝트 파일에서 **updateuid** 를 실행 합니다.  
+3. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일에 Uid를 추가합니다. Uid는 파일의 변경 내용을 추적하고 번역해야 하는 항목을 식별하는 데 사용됩니다. 파일에 Uid를 추가하려면 프로젝트 파일에 **updateuid를** 실행합니다.  
   
-     **msbuild-t:updateuid helloapp.resources.dll**  
+     **msbuild -t:updateuid helloapp.csproj**  
   
-     누락 되었거나 중복 된 Uid가 없는지 확인 하려면 **checkuid**를 실행 합니다.  
+     누락되었거나 중복된 Uid가 없는지 확인하려면 **checkuid를**실행합니다.  
   
-     **msbuild-t:checkuid helloapp.resources.dll**  
+     **msbuild -t:체크로이드 헬로앱.csproj**  
   
-     **Updateuid**를 실행 한 후 파일에는 uid가 포함 되어야 합니다. 예를 들어 HelloApp의 Pane1.xaml 파일에서는 다음을 찾을 수 있습니다.  
+     **updateuid를**실행한 후 파일에 Uid가 포함되어야 합니다. 예를 들어 HelloApp의 Pane1.xaml 파일에서는 다음을 찾을 수 있습니다.  
   
      `<StackPanel x:Uid="StackPanel_1">`  
   
@@ -62,11 +62,11 @@ ms.locfileid: "77095170"
   
      `</StackPanel>`  
   
-<a name="create_dll"></a>   
+<a name="create_dll"></a>
 ## <a name="create-the-neutral-language-resources-satellite-assembly"></a>중립 언어 리소스 위성 어셈블리 만들기  
- 애플리케이션이 중립 언어 리소스 위성 어셈블리를 생성하도록 구성된 후 애플리케이션을 빌드합니다. 그러면 지역화를 위해 LocBaml에 필요한 중립 언어 리소스 위성 어셈블리와 주 애플리케이션 어셈블리가 생성됩니다. 애플리케이션을 빌드하려면  
+ 애플리케이션이 중립 언어 리소스 위성 어셈블리를 생성하도록 구성된 후 애플리케이션을 빌드합니다. 그러면 지역화를 위해 LocBaml에 필요한 중립 언어 리소스 위성 어셈블리와 주 애플리케이션 어셈블리가 생성됩니다. 애플리케이션을 빌드하려면:  
   
-1. Helloapp.resources.dll를 컴파일하여 DLL (동적 연결 라이브러리)을 만듭니다.  
+1. HelloApp을 컴파일하여 동적 링크 라이브러리(DLL)를 만듭니다.  
   
      **msbuild helloapp.csproj**  
   
@@ -78,10 +78,10 @@ ms.locfileid: "77095170"
   
      `C:\HelloApp\Bin\Debug\en-US\`  
   
-<a name="build_locbaml"></a>   
+<a name="build_locbaml"></a>
 ## <a name="build-the-locbaml-tool"></a>LocBaml 도구 빌드  
   
-1. LocBaml을 빌드하는 데 필요한 모든 파일은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 샘플에 있습니다. C# [LocBaml 도구 샘플](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml)에서 파일을 다운로드 합니다.  
+1. LocBaml을 빌드하는 데 필요한 모든 파일은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 샘플에 있습니다. [LocBaml 도구 샘플에서](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml)C# 파일을 다운로드합니다.  
   
 2. 명령줄에서 프로젝트 파일(locbaml.csproj)을 실행하여 도구를 빌드합니다.  
   
@@ -91,26 +91,26 @@ ms.locfileid: "77095170"
   
 4. LocBaml을 실행할 때 지정할 수 있는 옵션은 다음과 같습니다.  
   
-    - **parse** 또는 **-p:** BAML, 리소스 또는 DLL 파일을 구문 분석 하 여 .csv 또는 .txt 파일을 생성 합니다.  
+    - **구문 분석** 또는 **-p:** .csv 또는 .txt 파일을 생성하기 위해 Baml, 리소스 또는 DLL 파일을 구문 분석합니다.  
   
-    - **생성** 또는 **-g:** 번역 된 파일을 사용 하 여 지역화 된 이진 파일을 생성 합니다.  
+    - **생성** 또는 **-g:** 변환된 파일을 사용하여 지역화된 바이너리 파일을 생성합니다.  
   
-    - **out** 또는 **-o** {*filedirectory*] **:** 출력 파일 이름입니다.  
+    - **출력** **파일** *디렉터리*] **:** 출력 파일 이름입니다.  
   
-    - **culture** 또는 **-al** {*culture*] **:** 출력 어셈블리의 로캘입니다.  
+    - **문화또는** **-cul** {*문화체육관광부*] **:** 출력 어셈블리의 로캘입니다.  
   
-    - **번역** 또는 **트랜잭션** {*translation .csv*] **:** 번역 되었거나 지역화 된 파일입니다.  
+    - **번역** 또는 **-trans** {*translation.csv*] **:** 번역 또는 지역화된 파일.  
   
-    - **asmpath** 또는 **-asmpath:** {*filedirectory*] **:** [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 코드에 사용자 지정 컨트롤이 포함 된 경우 사용자 지정 컨트롤 어셈블리에 **asmpath** 를 제공 해야 합니다.  
+    - **asmpath** 또는 **-asmpath:** {*파일 디렉터리*] **:** 코드에 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 사용자 정의 컨트롤이 포함되어 있으면 사용자 지정 컨트롤 어셈블리에 **asmpath를** 제공해야 합니다.  
   
     - **nologo:** 로고 또는 저작권 정보를 표시하지 않습니다.  
   
     - **verbose:** 자세한 정보 표시 모드 정보를 표시합니다.  
   
     > [!NOTE]
-    > 도구를 실행할 때 옵션 목록이 필요한 경우 **LocBaml** 을 입력 하 고 enter 키를 누릅니다.  
+    > 도구를 실행할 때 옵션 목록이 필요한 경우 **LocBaml.exe를** 입력하고 ENTER를 누릅니다.  
   
-<a name="parse_dll"></a>   
+<a name="parse_dll"></a>
 ## <a name="use-locbaml-to-parse-a-file"></a>LocBaml을 사용하여 파일 구문 분석  
  LocBaml 도구를 만들었으므로 이제 이 도구를 통해 HelloApp.resources.dll을 구문 분석하여 지역화할 텍스트 콘텐츠를 추출할 준비가 되었습니다.  
   
@@ -135,37 +135,37 @@ ms.locfileid: "77095170"
   
    1. **BAML 이름**. 소스 언어 위성 어셈블리와 관련된 BAML 리소스의 이름입니다.  
   
-   2. **리소스 키**. 지역화된 리소스 식별자입니다.  
+   2. **리소스 키 .** 지역화된 리소스 식별자입니다.  
   
-   3. **Category** 값 형식입니다. [지역화 특성 및 주석](localization-attributes-and-comments.md)을 참조 하세요.  
+   3. **범주**. 값 형식입니다. [지역화 특성 및 주석을](localization-attributes-and-comments.md)참조하십시오.  
   
-   4. **Readability** 로컬라이저가 값을 읽을 수 있는지 여부입니다. [지역화 특성 및 주석](localization-attributes-and-comments.md)을 참조 하세요.  
+   4. **Readability** 로컬라이저가 값을 읽을 수 있는지 여부입니다. [지역화 특성 및 주석을](localization-attributes-and-comments.md)참조하십시오.  
   
-   5. **Modifiability** 로컬라이저가 값을 수정할 수 있는지 여부입니다. [지역화 특성 및 주석](localization-attributes-and-comments.md)을 참조 하세요.  
+   5. **Modifiability** 로컬라이저가 값을 수정할 수 있는지 여부입니다. [지역화 특성 및 주석을](localization-attributes-and-comments.md)참조하십시오.  
   
-   6. **설명**. 값은 지역화하는 방법을 확인하는 데 도움이 되는 값에 대한 추가 설명입니다. [지역화 특성 및 주석](localization-attributes-and-comments.md)을 참조 하세요.  
+   6. **코멘트**. 값은 지역화하는 방법을 확인하는 데 도움이 되는 값에 대한 추가 설명입니다. [지역화 특성 및 주석을](localization-attributes-and-comments.md)참조하십시오.  
   
    7. **값**. 원하는 문화권으로 번역할 텍스트 값입니다.  
   
    다음 표에서는 이러한 필드가 .csv 파일의 구분된 값에 매핑되는 방법을 보여 줍니다.  
   
-   |BAML 이름|리소스 키|범주|가독성|수정 가능성|설명|값|  
+   |BAML 이름|리소스 키|Category|가독성|수정 가능성|주석|값|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
    |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|무시|FALSE|FALSE||#Text1;#Text2|
-   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|없음|TRUE|TRUE||Hello World|
-   |HelloApp.g.en-US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|없음|TRUE|TRUE||Goodbye World|
+   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|None|TRUE|TRUE||Hello World|
+   |HelloApp.g.en-US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|None|TRUE|TRUE||Goodbye World|
   
-   **설명** 필드의 모든 값에는 값이 포함 되어 있지 않습니다. 필드에 값이 없는 경우 비어 있습니다. 또한 첫 번째 행의 항목은 읽고 수정할 수 없으며 해당 **범주** 값으로 "Ignore"가 있으므로 값을 지역화할 수 없음을 나타냅니다.  
+   **댓글** 필드의 모든 값에는 값이 포함되지 않습니다. 필드에 값이 없는 경우 비어 있습니다. 또한 첫 번째 행의 항목은 읽을 수도 수정할 수도 없으며 **범주** 값으로 "무시"가 있으며 모두 값이 지역화 할 수 없다는 것을 나타냅니다.  
   
-4. 구문 분석 된 파일, 특히 많은 파일에서 지역화 가능한 항목의 검색을 용이 하 게 하기 위해 **범주**, **가독성**및 **수정 가능성**을 기준으로 항목을 정렬 하거나 필터링 할 수 있습니다. 예를 들어 읽을 수 없는 값과 수정할 수 없는 값을 필터링할 수 있습니다.  
+4. 구문 분석 된 파일, 특히 큰 파일에서 지역화 가능한 항목을 쉽게 검색할 수 있도록 **범주,** **가독성**및 **수정성별로**항목을 정렬하거나 필터링 할 수 있습니다. 예를 들어 읽을 수 없는 값과 수정할 수 없는 값을 필터링할 수 있습니다.  
   
-<a name="translate_loc_content"></a>   
+<a name="translate_loc_content"></a>
 ## <a name="translate-the-localizable-content"></a>지역화할 수 있는 콘텐츠 번역  
- 사용 가능한 임의 도구를 사용하여 추출한 콘텐츠를 번역합니다. 이 작업을 수행 하는 좋은 방법은 .csv 파일에 리소스를 기록 하 고 Microsoft Excel에서 확인 하 여 마지막 열 (값)으로 변환 하는 것입니다.  
+ 사용 가능한 임의 도구를 사용하여 추출한 콘텐츠를 번역합니다. 이 작업을 수행하는 좋은 방법은 .csv 파일에 리소스를 작성하고 Microsoft Excel에서 보고 마지막 열(값)으로 번역을 변경하는 것입니다.  
   
-<a name="merge_translations"></a>   
+<a name="merge_translations"></a>
 ## <a name="use-locbaml-to-generate-a-new-resourcesdll-file"></a>LocBaml을 사용하여 새 .resources.dll 파일 생성  
- LocBaml로 HelloApp.resources.dll을 구문 분석하여 식별된 콘텐츠가 번역되었으며 원래 애플리케이션에 다시 병합해야 합니다. **Generate** 또는 **-g** 옵션을 사용 하 여 새 .resources .dll 파일을 생성 합니다.  
+ LocBaml로 HelloApp.resources.dll을 구문 분석하여 식별된 콘텐츠가 번역되었으며 원래 애플리케이션에 다시 병합해야 합니다. **생성** 또는 **-g** 옵션을 사용하여 새 .resources.dll 파일을 생성합니다.  
   
 1. 다음 구문을 사용하여 새 HelloApp.resources.dll 파일을 생성합니다. 문화권을 en-US로 표시합니다(/cul:en-US).  
   
@@ -186,9 +186,9 @@ ms.locfileid: "77095170"
   
 6. 생성된 위성 어셈블리를 새 폴더에 복사합니다.  
   
-7. 새 위성 어셈블리를 테스트하려면 애플리케이션이 실행되는 문화권을 변경해야 합니다. 이 작업은 다음 두 가지 방법 중 하나로 수행할 수 있습니다.  
+7. 새 위성 어셈블리를 테스트하려면 애플리케이션이 실행되는 문화권을 변경해야 합니다. 이 작업은 다음 두 가지 방법 중 한 가지로 수행할 수 있습니다.  
   
-    - 운영 체제의 국가별 설정을 변경 합니다 ( &#124; **제어판** &#124; 의 **국가 및 언어 옵션**시작).  
+    - 운영 체제의 국가별 설정을 변경합니다(제어판**시작** &#124; **지역 및 언어 옵션 &#124;).** **Control Panel**  
   
     - 애플리케이션에서 다음 코드를 App.xaml.cs에 추가합니다.  
   
@@ -196,17 +196,17 @@ ms.locfileid: "77095170"
    [!code-csharp[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml.cs#locbamlchangeculturecodebehind)]
    [!code-vb[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/VisualBasic/Application.xaml.vb#locbamlchangeculturecodebehind)]  
   
-<a name="Some_Tips_for_Using_LocBaml"></a>   
+<a name="Some_Tips_for_Using_LocBaml"></a>
 ## <a name="some-tips-for-using-locbaml"></a>LocBaml 사용과 관련된 몇 가지 팁  
   
-- 사용자 지정 컨트롤을 정의하는 모든 종속 어셈블리를 LocBaml의 로컬 디렉터리에 복사하거나 GAC에 설치해야 합니다. 이는 지역화 API가 BAML (이진 XAML)을 읽을 때 종속 어셈블리에 액세스할 수 있어야 하기 때문에 필요 합니다.  
+- 사용자 지정 컨트롤을 정의하는 모든 종속 어셈블리를 LocBaml의 로컬 디렉터리에 복사하거나 GAC에 설치해야 합니다. 이는 지역화 API가 BAML(이진 XAML)을 읽을 때 종속 어셈블리에 액세스할 수 있어야 하기 때문에 필요합니다.  
   
 - 주 어셈블리가 서명된 경우 생성된 리소스 DLL도 서명되어야 로드됩니다.  
   
 - 지역화된 리소스 DLL 버전을 주 어셈블리와 동기화해야 합니다.  
   
-<a name="Whats_Next"></a>   
-## <a name="whats-next"></a>새로운 기능  
+<a name="Whats_Next"></a>
+## <a name="whats-next"></a>다음 단계  
  지금까지 LocBaml 도구를 사용하는 방법에 대한 기본 사항을 알아보았습니다.  Uid를 포함하는 파일을 만들 수 있어야 합니다. LocBaml 도구를 통해 파일을 구문 분석하여 지역화할 수 있는 콘텐츠를 추출할 수 있어야 하며, 콘텐츠가 번역된 후 번역된 콘텐츠를 병합하는 .resources.dll 파일을 생성할 수 있어야 합니다. 이 항목에 가능한 모든 세부 정보가 포함되어 있지는 않지만 이제 LocBaml를 애플리케이션 지역화에 사용하는 데 필요한 지식을 습득했습니다.  
   
 ## <a name="see-also"></a>참고 항목
