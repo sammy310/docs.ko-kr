@@ -2,12 +2,12 @@
 title: 영속 이중 상관 관계
 ms.date: 03/30/2017
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
-ms.openlocfilehash: efc647b8a39f419f2165fe355529ba145663b753
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: bb73cef5190a0b146e713ef1adae24219dc2eed8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291582"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185168"
 ---
 # <a name="durable-duplex-correlation"></a>영속 이중 상관 관계
 콜백 상관 관계라고도 하는 영속 이중은 워크플로 서비스를 사용하여 초기 호출자에게 콜백을 보내야 하는 경우에 유용합니다. WCF 이중과 달리 콜백은 나중에 언제든지 발생할 수 있으며 동일한 채널이나 채널 수명과 연결되지 않습니다. 따라서 유일한 요구 사항은 호출자에 콜백 메시지를 수신 대기하는 활성 엔드포인트가 있어야 한다는 점입니다. 그러면 장기 실행 대화에서 워크플로 서비스를 사용하여 통신할 수 있습니다. 이 항목에서는 영속 이중 상관 관계에 대해 간략하게 설명합니다.  
@@ -16,7 +16,7 @@ ms.locfileid: "72291582"
  영속 이중 상관 관계를 사용하려면 두 서비스에서 <xref:System.ServiceModel.NetTcpContextBinding> 또는 <xref:System.ServiceModel.WSHttpContextBinding> 같이 양방향 작업을 지원하는 컨텍스트 사용 바인딩을 사용해야 합니다. 호출하는 서비스는 클라이언트 <xref:System.ServiceModel.WSHttpContextBinding.ClientCallbackAddress%2A>에 원하는 바인딩을 사용하여 <xref:System.ServiceModel.Endpoint>를 등록합니다. 수신하는 서비스는 초기 호출에서 이 데이터를 받은 다음 호출하는 서비스로 콜백하는 <xref:System.ServiceModel.Endpoint> 작업에서 자신의 <xref:System.ServiceModel.Activities.Send>에 이 데이터를 사용합니다. 다음 예제에서는 두 개의 서비스가 서로 통신합니다. 첫 번째 서비스는 두 번째 서비스의 메서드를 호출한 다음 응답을 기다립니다. 두 번째 서비스는 콜백 메서드의 이름을 알고 있지만 디자인 타임에는 이 메서드를 구현하는 서비스의 엔드포인트를 알 수 없습니다.  
   
 > [!NOTE]
-> 영속 이중은 엔드포인트의 <xref:System.ServiceModel.Channels.AddressingVersion>이 <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>을 사용하여 구성된 경우에만 사용할 수 있습니다. 그렇지 않으면 다음 메시지와 함께 <xref:System.InvalidOperationException> 예외가 throw 됩니다. "메시지에 [AddressingVersion](http://schemas.xmlsoap.org/ws/2004/08/addressing)에 대 한 끝점 참조가 있는 콜백 컨텍스트 헤더가 포함 되어 있습니다. AddressingVersion가 ' WSAddressing10 '로 구성 된 경우에만 콜백 컨텍스트를 전송할 수 있습니다.
+> 영속 이중은 엔드포인트의 <xref:System.ServiceModel.Channels.AddressingVersion>이 <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>을 사용하여 구성된 경우에만 사용할 수 있습니다. 그렇지 않은 경우 <xref:System.InvalidOperationException> 다음 메시지와 함께 예외가 throw됩니다: "메시지에는 [AddressingVersion에](http://schemas.xmlsoap.org/ws/2004/08/addressing)대한 끝점 참조가 있는 콜백 컨텍스트 헤더가 포함되어 있습니다. 콜백 컨텍스트는 주소 지정Version이 'WSAddressing10'으로 구성된 경우에만 전송할 수 있습니다.
   
  다음 예제에서는 <xref:System.ServiceModel.Endpoint>을 사용하여 콜백 <xref:System.ServiceModel.WSHttpContextBinding>를 만드는 워크플로 서비스를 호스팅합니다.  
   
@@ -51,7 +51,7 @@ Receive StartOrder = new Receive
   
 Send GetItems = new Send  
 {  
-    CorrelationInitializers =   
+    CorrelationInitializers =
     {  
         new CallbackCorrelationInitializer  
         {  
@@ -65,7 +65,7 @@ Send GetItems = new Send
         AddressUri = new Uri("http://localhost:8081/Service2"),  
         Binding = new WSHttpContextBinding  
         {  
-            ClientCallbackAddress = new Uri("http://localhost:8080/Service1/ItemsReady")                          
+            ClientCallbackAddress = new Uri("http://localhost:8080/Service1/ItemsReady")
         }  
     }  
 };  
@@ -127,7 +127,7 @@ Variable<CorrelationHandle> ItemsCallbackHandle = new Variable<CorrelationHandle
   
 Receive StartItems = new Receive  
 {  
-    CorrelationInitializers =   
+    CorrelationInitializers =
     {  
         new CallbackCorrelationInitializer  
         {  
@@ -189,7 +189,7 @@ Activity wf = new Sequence
 ```output  
 Service1 waiting at: http://localhost:8080/Service1  
 Service2 waiting at: http://localhost:8081/Service2  
-Press enter to exit.   
+Press enter to exit.
 WF1 - Started  
 WF2 - Request Received  
 WF1 - Request Submitted  

@@ -2,12 +2,12 @@
 title: 편집 범위 사용
 ms.date: 03/30/2017
 ms.assetid: 79306f9e-318b-4687-9863-8b93d1841716
-ms.openlocfilehash: 3e99610fda78e50f6d6eb72c38ecc82bdc96b5a2
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 13f23289f0b764b80f971d3e514f3b12acfbfffc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715546"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142656"
 ---
 # <a name="using-editing-scope"></a>편집 범위 사용
 이 샘플에서는 단일 원자 단위에서 실행 취소될 수 있도록 일련의 변경 내용을 일괄 처리하는 방법을 보여 줍니다. 기본적으로 활동 디자이너 작성자가 수행하는 동작은 실행 취소/다시 실행 시스템에 자동으로 통합됩니다.  
@@ -26,19 +26,19 @@ ms.locfileid: "74715546"
   
 1. 샘플을 빌드하고 실행한 다음 왼쪽의 단추를 사용하여 워크플로를 수정합니다.  
   
-2. **편집 범위 열기**를 클릭 합니다.  
+2. **편집 범위 열기를 클릭합니다.**  
   
     1. 이 명령은 편집 범위를 만들어 편집 스택에 푸시하는 <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>를 호출합니다.  
   
     2. 그러면 선택한 <xref:System.Activities.Presentation.Model.ModelItem>에 세 개의 활동이 추가됩니다. <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>를 사용하여 편집 범위를 열지 않았다면 디자이너 캔버스에 세 개의 새 활동이 나타납니다. 이 작업은 <xref:System.Activities.Presentation.Model.EditingScope> 내에서 여전히 보류 중이므로 디자이너가 아직 업데이트되지 않았습니다.  
   
-3. 편집 범위 **닫기** 를 눌러 편집 범위를 커밋합니다. 그러면 디자이너에 세 개의 활동이 나타납니다.  
+3. **편집 범위 닫기를** 눌러 편집 범위를 커밋합니다. 그러면 디자이너에 세 개의 활동이 나타납니다.  
   
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
->   
+>
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대한 WCF(Windows 통신 재단) 및 WF(Windows 워크플로우 재단) 샘플로](https://www.microsoft.com/download/details.aspx?id=21459) 이동하여 모든 WCF(Windows 통신 재단) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\UsingEditingScope`

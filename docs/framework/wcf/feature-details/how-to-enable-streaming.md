@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-ms.openlocfilehash: bd1a52f1ce0f656af79928a20e3badc73661e89a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1d1eaa1ebf41ef86478dda795b3b199239cd37b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64635297"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184938"
 ---
 # <a name="how-to-enable-streaming"></a>방법: 스트리밍 사용
-Windows Communication Foundation (WCF) 버퍼링 또는 스트리밍 전송을 사용 하 여 메시지를 보낼 수 있습니다. 기본 설정인 버퍼링된 전송 모드에서는 메시지가 완전히 전달되어야 수신자가 읽을 수 있습니다. 스트리밍 전송 모드에서는 메시지가 완전히 전달되기 전에 수신자가 메시지 처리를 시작할 수 있습니다. 전달되는 정보가 길고 순차적으로 처리 가능한 경우 스트리밍 모드가 유용합니다. 또한 전체를 버퍼링하기에는 메시지가 너무 큰 경우에도 스트리밍 모드가 효과적입니다.  
+WCF(Windows 통신 재단)는 버퍼링된 전송 또는 스트리밍된 전송을 사용하여 메시지를 보낼 수 있습니다. 기본 설정인 버퍼링된 전송 모드에서는 메시지가 완전히 전달되어야 수신자가 읽을 수 있습니다. 스트리밍 전송 모드에서는 메시지가 완전히 전달되기 전에 수신자가 메시지 처리를 시작할 수 있습니다. 전달되는 정보가 길고 순차적으로 처리 가능한 경우 스트리밍 모드가 유용합니다. 또한 전체를 버퍼링하기에는 메시지가 너무 큰 경우에도 스트리밍 모드가 효과적입니다.  
   
  스트리밍을 사용하려면 `OperationContract`를 적절히 정의하고 전송 수준에서 스트리밍을 사용합니다.  
   
@@ -48,7 +48,7 @@ Windows Communication Foundation (WCF) 버퍼링 또는 스트리밍 전송을 �
   
     1. 샘플 중 다음 구성 조각은 `TransferMode` 및 사용자 지정 HTTP 바인딩에서 `basicHttpBinding` 속성을 스트리밍으로 설정하는 방법에 대해 보여 줍니다.  
   
-         [!code-xml[c_HowTo_EnableStreaming#103](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]   
+         [!code-xml[c_HowTo_EnableStreaming#103](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]
   
     2. 다음 코드 조각은 `TransferMode` 및 사용자 지정 HTTP 바인딩에서 `basicHttpBinding` 속성을 스트리밍으로 설정하는 방법에 대해 보여 줍니다.  
   
@@ -74,7 +74,7 @@ Windows Communication Foundation (WCF) 버퍼링 또는 스트리밍 전송을 �
      [!code-csharp[c_HowTo_EnableStreaming#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#2)]
      [!code-vb[c_HowTo_EnableStreaming#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#2)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [큰 데이터 및 스트리밍](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)
-- [Stream](../../../../docs/framework/wcf/samples/stream.md)
+- [스트림](../../../../docs/framework/wcf/samples/stream.md)

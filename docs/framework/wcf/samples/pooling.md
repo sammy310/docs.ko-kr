@@ -2,27 +2,27 @@
 title: Pooling
 ms.date: 03/30/2017
 ms.assetid: 688dfb30-b79a-4cad-a687-8302f8a9ad6a
-ms.openlocfilehash: d2962004376cf6f0752067d4e03828cd894efd01
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 46abc2c9c667ea7614581d7fafaa8e174db7f14f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716511"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183401"
 ---
 # <a name="pooling"></a>Pooling
-이 샘플에서는 개체 풀링을 지원 하도록 WCF (Windows Communication Foundation)를 확장 하는 방법을 보여 줍니다. 엔터프라이즈 서비스의 `ObjectPoolingAttribute` 특성과 구문 및 의미 체계가 비슷한 특성을 만드는 방법을 소개합니다. 개체 풀링을 통해 애플리케이션의 성능을 크게 높일 수 있습니다. 그러나 제대로 사용하지 않으면 역효과가 일어나기도 합니다. 개체 풀링은 광범위한 초기화가 필요하며 자주 사용되는 개체를 다시 만드는 오버헤드를 줄이는 데 도움이 됩니다. 그러나 풀링된 개체에서 메서드 호출이 완료되기까지 상당한 시간이 걸리는 경우 최대 풀 크기에 도달하는 즉시 개체 풀링은 추가 요청을 큐에 보냅니다. 따라서 일부 개체 만들기 요청을 처리하지 않고 시간 초과 예외를 throw할 수 있습니다.  
+이 샘플에서는 개체 풀링을 지원하도록 WCF(Windows 통신 재단)를 확장하는 방법을 보여 줍니다. 엔터프라이즈 서비스의 `ObjectPoolingAttribute` 특성과 구문 및 의미 체계가 비슷한 특성을 만드는 방법을 소개합니다. 개체 풀링을 통해 애플리케이션의 성능을 크게 높일 수 있습니다. 그러나 제대로 사용하지 않으면 역효과가 일어나기도 합니다. 개체 풀링은 광범위한 초기화가 필요하며 자주 사용되는 개체를 다시 만드는 오버헤드를 줄이는 데 도움이 됩니다. 그러나 풀링된 개체에서 메서드 호출이 완료되기까지 상당한 시간이 걸리는 경우 최대 풀 크기에 도달하는 즉시 개체 풀링은 추가 요청을 큐에 보냅니다. 따라서 일부 개체 만들기 요청을 처리하지 않고 시간 초과 예외를 throw할 수 있습니다.  
   
 > [!NOTE]
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
- WCF 확장을 만드는 첫 번째 단계는 사용할 확장성 지점을 결정 하는 것입니다.  
+ WCF 확장을 만드는 첫 번째 단계는 사용할 확장성 지점을 결정하는 것입니다.  
   
- WCF에서 *디스패처* 용어는 들어오는 메시지를 사용자 서비스의 메서드 호출로 변환 하 고 해당 메서드의 반환 값을 나가는 메시지로 변환 하는 런타임 구성 요소를 나타냅니다. WCF 서비스는 각 끝점에 대 한 디스패처를 만듭니다. WCF 클라이언트는 해당 클라이언트와 연결 된 계약이 이중 계약 인 경우 디스패처를 사용 해야 합니다.  
+ WCF에서 *디스패처라는* 용어는 들어오는 메시지를 사용자 서비스의 메서드 호출로 변환하고 해당 메서드에서 나가는 메시지로 반환 값을 변환하는 런타임 구성 요소를 말합니다. WCF 서비스는 각 끝점에 대한 디스패처를 만듭니다. 해당 클라이언트와 연결된 계약이 이중 계약인 경우 WCF 클라이언트는 디스패처를 사용해야 합니다.  
   
  채널 및 엔드포인트 디스패처는 디스패처의 동작을 제어하는 다양한 속성을 노출시켜 채널 및 계약 수준의 확장성을 제공합니다. 또한 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.DispatchRuntime%2A> 속성을 사용하면 디스패치 프로세스를 검사, 수정하거나 사용자 지정할 수 있습니다. 이 샘플에서는 서비스 클래스의 인스턴스를 제공하는 개체를 가리키는 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> 속성을 중점적으로 다룹니다.  
   
 ## <a name="the-iinstanceprovider"></a>IInstanceProvider  
- WCF에서 디스패처는 <xref:System.ServiceModel.Dispatcher.IInstanceProvider> 인터페이스를 구현 하는 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>을 사용 하 여 서비스 클래스의 인스턴스를 만듭니다. 이 인터페이스에는 세 개의 메서드가 있습니다.  
+ WCF에서 디스패처는 인터페이스를 구현하는 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>을 사용하여 서비스 <xref:System.ServiceModel.Dispatcher.IInstanceProvider> 클래스의 인스턴스를 만듭니다. 이 인터페이스에는 세 개의 메서드가 있습니다.  
   
 - <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>: 메시지가 도착하면 디스패처는 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> 메서드를 호출하여 메시지를 처리할 서비스 클래스의 인스턴스를 만듭니다. 이 메서드의 호출 빈도는 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 속성에 의해 결정됩니다. 예를 들어 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 속성이 <xref:System.ServiceModel.InstanceContextMode.PerCall>로 설정되면 도착하는 각 메시지를 처리하기 위해 서비스 클래스의 새 인스턴스가 만들어지며, 따라서 메시지가 도착할 때마다 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>가 호출됩니다.  
   
@@ -55,7 +55,7 @@ object IInstanceProvider.GetInstance(InstanceContext instanceContext, Message me
   
     idleTimer.Stop();  
   
-    return obj;            
+    return obj;
 }  
 ```  
   
@@ -72,15 +72,15 @@ void IInstanceProvider.ReleaseInstance(InstanceContext instanceContext, object i
         WritePoolMessage(  
         ResourceHelper.GetString("MsgObjectPooled"));  
   
-        // When the service goes completely idle (no requests   
+        // When the service goes completely idle (no requests
         // are being processed), the idle timer is started  
         if (activeObjectsCount == 0)  
-            idleTimer.Start();                       
+            idleTimer.Start();
     }  
 }  
 ```  
   
- `ReleaseInstance` 메서드는 "초기화 정리" 기능을 제공 합니다. 일반적으로 풀은 풀의 수명 동안 최소한의 개체 수를 유지합니다. 하지만 사용량이 지나치게 많은 경우에는 구성에 지정된 최대 한도를 사용하기 위해 풀에 추가 개체를 만들어야 할 수도 있습니다. 결국 풀의 사용이 줄어들면 그런 여분의 개체가 추가 오버헤드가 될 수 있습니다. 따라서 `activeObjectsCount`가 0에 도달하면 유휴 타이머가 시작되고 정리 주기를 트리거 및 수행합니다.  
+ 이 `ReleaseInstance` 메서드는 "초기화 정리" 기능을 제공합니다. 일반적으로 풀은 풀의 수명 동안 최소한의 개체 수를 유지합니다. 하지만 사용량이 지나치게 많은 경우에는 구성에 지정된 최대 한도를 사용하기 위해 풀에 추가 개체를 만들어야 할 수도 있습니다. 결국 풀의 사용이 줄어들면 그런 여분의 개체가 추가 오버헤드가 될 수 있습니다. 따라서 `activeObjectsCount`가 0에 도달하면 유휴 타이머가 시작되고 정리 주기를 트리거 및 수행합니다.  
   
 ## <a name="adding-the-behavior"></a>동작 추가  
  디스패처 계층 확장은 다음 동작을 사용하여 후크합니다.  
@@ -101,7 +101,7 @@ void IInstanceProvider.ReleaseInstance(InstanceContext instanceContext, object i
   
  이 샘플에서는 사용자 지정 특성을 사용합니다. <xref:System.ServiceModel.ServiceHost>가 구성되면 서비스의 형식 정의에 사용되는 특성을 확인한 후 서비스 설명의 동작 컬렉션에 사용 가능한 동작을 추가합니다.  
   
- <xref:System.ServiceModel.Description.IServiceBehavior> 인터페이스에는 세 개의 메서드, 즉 <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>, <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> 및 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>가 있습니다. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> 메서드는 동작이 서비스에 적용될 수 있음을 확인할 때 사용합니다. 이 샘플의 구현에서는 서비스에 <xref:System.ServiceModel.InstanceContextMode.Single>이 구현되지 않음을 확인합니다. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> 메서드는 서비스의 바인딩을 구성하는 데 사용되며, 이 시나리오에서는 필요하지 않습니다. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>는 서비스의 디스패처를 구성하는 데 사용됩니다. 이 메서드는 <xref:System.ServiceModel.ServiceHost> 초기화 될 때 WCF에 의해 호출 됩니다. 다음 매개 변수가 이 메서드로 전달됩니다.  
+ <xref:System.ServiceModel.Description.IServiceBehavior> 인터페이스에는 세 개의 메서드, 즉 <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>, <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> 및 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>가 있습니다. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> 메서드는 동작이 서비스에 적용될 수 있음을 확인할 때 사용합니다. 이 샘플의 구현에서는 서비스에 <xref:System.ServiceModel.InstanceContextMode.Single>이 구현되지 않음을 확인합니다. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> 메서드는 서비스의 바인딩을 구성하는 데 사용되며, 이 시나리오에서는 필요하지 않습니다. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>는 서비스의 디스패처를 구성하는 데 사용됩니다. 이 메서드는 초기화 될 <xref:System.ServiceModel.ServiceHost> 때 WCF에 의해 호출 됩니다. 다음 매개 변수가 이 메서드로 전달됩니다.  
   
 - `Description`: 이 인수는 전체 서비스의 서비스 설명을 제공합니다. 서비스의 엔드포인트, 계약, 바인딩 및 기타 데이터에 대한 설명을 검사할 때 사용할 수 있습니다.  
   
@@ -114,7 +114,7 @@ void IServiceBehavior.ApplyDispatchBehavior(ServiceDescription description, Serv
 {  
     // Create an instance of the ObjectPoolInstanceProvider.  
     ObjectPoolingInstanceProvider instanceProvider = new  
-           ObjectPoolingInstanceProvider(description.ServiceType,   
+           ObjectPoolingInstanceProvider(description.ServiceType,
                                                     minPoolSize);  
   
     // Forward the call if we created a ServiceThrottlingBehavior.  
@@ -123,29 +123,29 @@ void IServiceBehavior.ApplyDispatchBehavior(ServiceDescription description, Serv
         ((IServiceBehavior)this.throttlingBehavior).ApplyDispatchBehavior(description, serviceHostBase);  
     }  
   
-    // In case there was already a ServiceThrottlingBehavior   
-    // (this.throttlingBehavior==null), it should have initialized   
-    // a single ServiceThrottle on all ChannelDispatchers.    
-    // As we loop through the ChannelDispatchers, we verify that   
+    // In case there was already a ServiceThrottlingBehavior
+    // (this.throttlingBehavior==null), it should have initialized
+    // a single ServiceThrottle on all ChannelDispatchers.
+    // As we loop through the ChannelDispatchers, we verify that
     // and modify the ServiceThrottle to guard MaxPoolSize.  
     ServiceThrottle throttle = null;  
   
-    foreach (ChannelDispatcherBase cdb in   
+    foreach (ChannelDispatcherBase cdb in
             serviceHostBase.ChannelDispatchers)  
     {  
         ChannelDispatcher cd = cdb as ChannelDispatcher;  
         if (cd != null)  
         {  
-            // Make sure there is exactly one throttle used by all   
-            // endpoints. If there were others, we could not enforce   
+            // Make sure there is exactly one throttle used by all
+            // endpoints. If there were others, we could not enforce
             // MaxPoolSize.  
-            if ((this.throttlingBehavior == null) &&   
+            if ((this.throttlingBehavior == null) &&
                         (this.maxPoolSize != Int32.MaxValue))  
             {  
                 throttle ??= cd.ServiceThrottle;
                 if (cd.ServiceThrottle == null)  
                 {  
-                    throw new   
+                    throw new
 InvalidOperationException(ResourceHelper.GetString("ExNullThrottle"));  
                 }  
                 if (throttle != cd.ServiceThrottle)  
@@ -157,15 +157,15 @@ InvalidOperationException(ResourceHelper.GetString("ExNullThrottle"));
              foreach (EndpointDispatcher ed in cd.Endpoints)  
              {  
                  // Assign it to DispatchBehavior in each endpoint.  
-                 ed.DispatchRuntime.InstanceProvider =   
+                 ed.DispatchRuntime.InstanceProvider =
                                       instanceProvider;  
              }  
          }  
      }  
   
-     // Set the MaxConcurrentInstances to limit the number of items   
+     // Set the MaxConcurrentInstances to limit the number of items
      // that will ever be requested from the pool.  
-     if ((throttle != null) && (throttle.MaxConcurrentInstances >   
+     if ((throttle != null) && (throttle.MaxConcurrentInstances >
                                       this.maxPoolSize))  
      {  
          throttle.MaxConcurrentInstances = this.maxPoolSize;  
@@ -175,10 +175,10 @@ InvalidOperationException(ResourceHelper.GetString("ExNullThrottle"));
   
  <xref:System.ServiceModel.Description.IServiceBehavior> 구현 외에 <xref:System.EnterpriseServices.ObjectPoolingAttribute> 클래스에도 특성 인수를 사용하여 개체 풀을 사용자 지정하는 멤버가 몇 개 있습니다. 이 멤버에는 .NET Enterprise Services에서 제공되는 개체 풀링 기능 집합과 일치하는 <xref:System.EnterpriseServices.ObjectPoolingAttribute.MaxPoolSize%2A>, <xref:System.EnterpriseServices.ObjectPoolingAttribute.MinPoolSize%2A> 및 <xref:System.EnterpriseServices.ObjectPoolingAttribute.CreationTimeout%2A>이 포함됩니다.  
   
- 이제 새로 만든 사용자 지정 `ObjectPooling` 특성을 사용 하 여 서비스 구현에 주석을 추가 하 여 개체 풀링 동작을 WCF 서비스에 추가할 수 있습니다.  
+ 이제 새로 만든 사용자 지정 `ObjectPooling` 특성으로 서비스 구현에 추가하여 개체 풀링 동작을 WCF 서비스에 추가할 수 있습니다.  
   
 ```csharp  
-[ObjectPooling(MaxPoolSize=1024, MinPoolSize=10, CreationTimeout=30000)]      
+[ObjectPooling(MaxPoolSize=1024, MinPoolSize=10, CreationTimeout=30000)]
 public class PoolService : IPoolService  
 {  
   // …  
@@ -203,7 +203,7 @@ public class ObjectPooledWorkService : IDoWork
     public void DoWork()  
     {  
         ColorConsole.WriteLine(ConsoleColor.Blue, "ObjectPooledWorkService.GetData() completed.");  
-    }          
+    }
 }  
 ```  
   
@@ -234,20 +234,20 @@ Press <ENTER> to exit.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.  
+1. Windows 통신 기초 [샘플에 대한 일회성 설치 절차를](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)수행했어야 합니다.  
   
-2. 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따르세요.  
+2. 솔루션을 빌드하려면 Windows 통신 [기초 샘플 빌드의 지침을 따르십시오.](../../../../docs/framework/wcf/samples/building-the-samples.md)  
   
-3. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.  
+3. 단일 또는 교차 컴퓨터 구성에서 샘플을 실행하려면 Windows [통신 기반 샘플 실행의 지침을 따르십시오.](../../../../docs/framework/wcf/samples/running-the-samples.md)  
   
 > [!NOTE]
 > Svcutil.exe를 사용하여 이 샘플에 대한 구성을 다시 생성할 경우 클라이언트 구성에서 엔드포인트 이름을 클라이언트 코드와 일치하도록 수정해야 합니다.  
   
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
->   
+>
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대한 WCF(Windows 통신 재단) 및 WF(Windows 워크플로우 재단) 샘플로](https://www.microsoft.com/download/details.aspx?id=21459) 이동하여 모든 WCF(Windows 통신 재단) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Pooling`  

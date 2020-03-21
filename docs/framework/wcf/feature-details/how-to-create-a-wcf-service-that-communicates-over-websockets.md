@@ -2,12 +2,12 @@
 title: '방법: WebSocket을 통해 통신하는 WCF 서비스 만들기'
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: 8f8cf715269fd0ed67e2265eee4139a509f70cd1
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: d420ac8fcb98ddec195093be8ae25be37443da4e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977133"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184970"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>방법: WebSocket을 통해 통신하는 WCF 서비스 만들기
 WCF 서비스 및 클라이언트는 <xref:System.ServiceModel.NetHttpBinding> 바인딩을 사용하여 WebSocket에서 통신할 수 있습니다.  WebSocket은 <xref:System.ServiceModel.NetHttpBinding>에서 서비스 계약이 콜백 계약을 정의한다고 판단할 때 사용됩니다. 이 항목은 WebSocket에서 통신하기 위해 <xref:System.ServiceModel.NetHttpBinding>을 사용하는 WCF 서비스와 클라이언트를 구현하는 방법을 설명합니다.  
@@ -66,10 +66,10 @@ WCF 서비스 및 클라이언트는 <xref:System.ServiceModel.NetHttpBinding> �
     ```xml  
     <configuration>  
         <appSettings>  
-          <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" />        
+          <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" />
         </appSettings>  
         <system.web>  
-          <compilation debug="true" targetFramework="4.5" />        
+          <compilation debug="true" targetFramework="4.5" />
         </system.web>  
         <system.serviceModel>  
             <protocolMapping>  
@@ -117,7 +117,7 @@ WCF 서비스 및 클라이언트는 <xref:System.ServiceModel.NetHttpBinding> �
             {  
                 var context = new InstanceContext(new CallbackHandler());  
                 var client = new StockQuoteServiceReference.StockQuoteServiceClient(context);  
-                client.StartSendingQuotes();              
+                client.StartSendingQuotes();
                 Console.ReadLine();  
             }  
   
@@ -138,7 +138,7 @@ WCF 서비스 및 클라이언트는 <xref:System.ServiceModel.NetHttpBinding> �
         ```xml  
         <?xml version="1.0" encoding="utf-8" ?>  
         <configuration>  
-            <startup>   
+            <startup>
                 <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />  
             </startup>  
             <system.serviceModel>  
@@ -233,10 +233,10 @@ namespace Server
   
 <configuration>  
     <appSettings>  
-      <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" />        
+      <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true" />
     </appSettings>  
     <system.web>  
-      <compilation debug="true" targetFramework="4.5" />        
+      <compilation debug="true" targetFramework="4.5" />
     </system.web>  
     <system.serviceModel>  
         <protocolMapping>  
@@ -279,7 +279,7 @@ namespace Client
         {  
             var context = new InstanceContext(new CallbackHandler());  
             var client = new StockQuoteServiceReference.StockQuoteServiceClient(context);  
-            client.StartSendingQuotes();              
+            client.StartSendingQuotes();
             Console.ReadLine();  
         }  
   
@@ -298,7 +298,7 @@ namespace Client
 <!--App.config -->  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
-    <startup>   
+    <startup>
         <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />  
     </startup>  
     <system.serviceModel>  
@@ -318,7 +318,7 @@ namespace Client
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [동기 및 비동기 작업](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)
 - [NetHttpBinding 사용](../../../../docs/framework/wcf/feature-details/using-the-nethttpbinding.md)

@@ -2,12 +2,12 @@
 title: ORDER BY(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
-ms.openlocfilehash: 2010ef9d6fe37e65824cac877074453db1b789db
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 1233971b172079aa48227d0ec520068afbdf0952
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319441"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150071"
 ---
 # <a name="order-by-entity-sql"></a>ORDER BY(Entity SQL)
 SELECT 문에서 반환되는 개체에 적용하는 정렬 순서를 지정합니다.  
@@ -15,13 +15,13 @@ SELECT 문에서 반환되는 개체에 적용하는 정렬 순서를 지정합�
 ## <a name="syntax"></a>구문  
   
 ```sql  
-[ ORDER BY   
+[ ORDER BY
    {  
       order_by_expression [SKIP n] [LIMIT n]  
       [ COLLATE collation_name ]  
       [ ASC | DESC ]  
    }  
-   [ ,…n ]   
+   [ ,…n ]
 ]  
 ```  
   
@@ -33,7 +33,7 @@ SELECT 문에서 반환되는 개체에 적용하는 정렬 순서를 지정합�
  `collation_name`에 지정된 데이터 정렬에 따라 ORDER BY 연산을 수행해야 함을 지정합니다. COLLATE는 문자열 식에만 적용됩니다.  
   
  ASC  
- 지정된 속성에서 값이 오름차순으로, 즉 가장 작은 값에서 가장 큰 값으로 정렬되도록 지정합니다. 기본값입니다.  
+ 지정된 속성에서 값이 오름차순으로, 즉 가장 작은 값에서 가장 큰 값으로 정렬되도록 지정합니다. 이것이 기본값입니다.  
   
  DESC  
  지정된 속성에서 값이 내림차순으로, 즉 가장 큰 값에서 가장 작은 값으로 정렬되도록 지정합니다.  
@@ -44,7 +44,7 @@ SELECT 문에서 반환되는 개체에 적용하는 정렬 순서를 지정합�
  SKIP `n`  
  처음 `n` 개 항목을 건너뜁니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  ORDER BY 절은 SELECT 절의 결과에 논리적으로 적용됩니다. ORDER BY 절은 별칭을 사용하여 선택 목록 내 항목을 참조할 수 있습니다. ORDER BY 절은 현재 범위 내에 있는 다른 변수도 참조할 수 있습니다. 하지만, DISTINCT 한정자를 사용하여 SELECT 절이 지정된 경우 ORDER BY 절은 SELECT 절의 별칭만 참조할 수 있습니다.  
   
  `SELECT c AS c1 FROM cs AS c ORDER BY c1.e1, c.e2`  
@@ -53,7 +53,7 @@ SELECT 문에서 반환되는 개체에 적용하는 정렬 순서를 지정합�
   
  최상위 프로젝션에 대해서가 아니라 정렬된 집합에 대해 코드가 반복되는 경우 출력에 순서가 유지되지 않을 수 있습니다.  
 
-다음 샘플에서는 순서가 유지 되도록 보장 됩니다.
+다음 샘플에서는 순서가 유지될 수 있습니다.
 
 ```sql  
 SELECT C1.FirstName, C1.LastName  
@@ -61,7 +61,7 @@ SELECT C1.FirstName, C1.LastName
         ORDER BY C1.LastName  
 ```  
 
-다음 쿼리에서 중첩 쿼리의 순서는 무시 됩니다.  
+다음 쿼리에서는 중첩된 쿼리의 순서가 무시됩니다.  
 
 ```sql  
 SELECT C2.FirstName, C2.LastName  
@@ -97,12 +97,12 @@ ORDER BY ...
   
 - ROW  
   
-- VALUE  
+- 값  
   
 ## <a name="ordering-nested-queries"></a>중첩 쿼리 순서  
  Entity Framework에서 중첩된 식은 쿼리 내 임의의 위치에 올 수 있습니다. 중첩 쿼리의 순서는 유지되지 않습니다.  
 
-다음 쿼리는 성을 기준으로 결과를 정렬 합니다.  
+다음 쿼리는 성으로 결과를 정렬합니다.  
 
 ```sql  
 SELECT C1.FirstName, C1.LastName  
@@ -110,7 +110,7 @@ SELECT C1.FirstName, C1.LastName
         ORDER BY C1.LastName  
 ```  
 
-다음 쿼리에서 중첩 쿼리의 순서는 무시 됩니다.  
+다음 쿼리에서는 중첩된 쿼리의 순서가 무시됩니다.  
 
 ```sql  
 SELECT C2.FirstName, C2.LastName  
@@ -128,10 +128,10 @@ SELECT C2.FirstName, C2.LastName
   
  [!code-sql[DP EntityServices Concepts#ORDERBY](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#orderby)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [쿼리 식](query-expressions-entity-sql.md)
+- [쿼리 표현식](query-expressions-entity-sql.md)
 - [엔터티 SQL 참조](entity-sql-reference.md)
-- [SKIP](skip-entity-sql.md)
-- [LIMIT](limit-entity-sql.md)
-- [TOP](top-entity-sql.md)
+- [건너뛸](skip-entity-sql.md)
+- [제한](limit-entity-sql.md)
+- [맨 위로](top-entity-sql.md)

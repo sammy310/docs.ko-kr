@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 8bdd70a6eaea8aff196e2156d88460a6d24b5d3f
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 0fae3ac1769163101dcdb183f4c5c2135354b1fc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487183"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79145425"
 ---
 # <a name="application-startup-time"></a>애플리케이션 시작 시간
 WPF 애플리케이션을 시작하는 데 필요한 시간은 크게 다를 수 있습니다. 이 항목에서는 WPF(Windows Presentation Foundation) 애플리케이션의 체감 시작 시간과 실제 시작 시간을 줄일 수 있는 다양한 기술에 대해 설명합니다.  
@@ -24,9 +24,9 @@ WPF 애플리케이션을 시작하는 데 필요한 시간은 크게 다를 수
  웜 시작은 주 CLR(공용 언어 런타임) 구성 요소의 페이지 대부분이 메모리에 이미 로드되어 있을 때 발생하며, 이 경우 비용이 많이 드는 디스크 액세스 시간을 줄일 수 있습니다. 이에 따라 관리되는 애플리케이션을 다시 실행할 때 더 빠르게 시작됩니다.  
   
 ## <a name="implement-a-splash-screen"></a>시작 화면 구현  
- 애플리케이션을 시작한 후 첫 번째 UI가 표시될 때까지 어쩔 수 없이 상당히 지연될 경우 *시작 화면*을 사용하여 체감 시작 시간을 최적화합니다. 이 방법을 사용하면 사용자가 애플리케이션을 시작한 직후에 이미지가 표시됩니다. 애플리케이션에서 첫 번째 UI를 표시할 준비가 되면 시작 화면이 사라집니다. .NET Framework 3.5 SP1부터 사용할 수는 <xref:System.Windows.SplashScreen> 시작 화면을 구현 하는 클래스입니다. 자세한 내용은 [WPF 애플리케이션에 시작 화면 추가](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)를 참조하세요.  
+ 애플리케이션을 시작한 후 첫 번째 UI가 표시될 때까지 어쩔 수 없이 상당히 지연될 경우 *시작 화면*을 사용하여 체감 시작 시간을 최적화합니다. 이 방법을 사용하면 사용자가 애플리케이션을 시작한 직후에 이미지가 표시됩니다. 애플리케이션에서 첫 번째 UI를 표시할 준비가 되면 시작 화면이 사라집니다. .NET Framework 3.5 SP1부터 클래스를 <xref:System.Windows.SplashScreen> 사용하여 시작 화면을 구현할 수 있습니다. 자세한 내용은 [WPF 애플리케이션에 시작 화면 추가](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)를 참조하세요.  
   
- 네이티브 Win32 그래픽을 사용하여 사용자 고유의 시작 화면을 구현할 수도 있습니다. 구현 하기 전에 표시 된 <xref:System.Windows.Application.Run%2A> 메서드가 호출 됩니다.  
+ 네이티브 Win32 그래픽을 사용하여 사용자 고유의 시작 화면을 구현할 수도 있습니다. 메서드가 호출되기 <xref:System.Windows.Application.Run%2A> 전에 구현을 표시합니다.  
   
 ## <a name="analyze-the-startup-code"></a>시작 코드 분석  
  콜드 시작이 느린 이유를 확인합니다. 디스크 I/O 때문일 수 있지만 항상 그렇지는 않습니다. 일반적으로 네트워크, 웹 서비스 또는 디스크와 같은 외부 리소스의 사용을 최소화해야 합니다.  
@@ -65,7 +65,7 @@ WPF 애플리케이션을 시작하는 데 필요한 시간은 크게 다를 수
  Ngen과 JIT 모듈을 모두 사용하면 최악의 효과가 발생할 수 있습니다. 이는 mscorjit.dll을 로드해야 하고, JIT 컴파일러가 코드에서 작동하여 어셈블리의 메타데이터를 읽을 때 Ngen 이미지의 많은 페이지에 액세스해야 하기 때문입니다.  
   
 ### <a name="ngen-and-clickonce"></a>Ngen 및 ClickOnce  
- 애플리케이션 배포 계획에 따라서도 로드 시간이 달라질 수 있습니다. ClickOnce 응용 프로그램 배포는 Ngen을 지원 하지 않습니다. 애플리케이션에 Ngen.exe를 사용하려면 Windows Installer와 같은 다른 배포 메커니즘을 사용해야 합니다.  
+ 애플리케이션 배포 계획에 따라서도 로드 시간이 달라질 수 있습니다. ClickOnce 응용 프로그램 배포는 Ngen을 지원하지 않습니다. 애플리케이션에 Ngen.exe를 사용하려면 Windows Installer와 같은 다른 배포 메커니즘을 사용해야 합니다.  
   
  자세한 내용은 [Ngen.exe(네이티브 이미지 생성기)](../../tools/ngen-exe-native-image-generator.md)를 참조하세요.  
   
@@ -81,17 +81,17 @@ WPF 애플리케이션을 시작하는 데 필요한 시간은 크게 다를 수
   
  클라이언트 컴퓨터에 CA 인증서를 설치하거나, 가능한 경우 Authenticode를 사용하지 않는 것이 좋습니다. 애플리케이션에 게시자 증명 정보가 필요하지 않은 경우 서명 확인에 비용을 들일 필요가 없습니다.  
   
- Authenticode 확인을 무시할 수 있도록 구성 옵션은.NET Framework 3.5부터. 이렇게 하려면 app.exe.config 파일에 다음 설정을 추가합니다.  
+ .NET Framework 3.5부터 Authenticode 확인을 우회할 수 있는 구성 옵션이 있습니다. 이렇게 하려면 app.exe.config 파일에 다음 설정을 추가합니다.  
   
 ```xml  
 <configuration>  
     <runtime>  
-        <generatePublisherEvidence enabled="false"/>   
+        <generatePublisherEvidence enabled="false"/>
     </runtime>  
 </configuration>  
 ```  
   
- 자세한 내용은 [\<generatePublisherEvidence> 요소](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)를 참조하세요.  
+ 자세한 내용은 [ \<생성을 참조하십시오.등록증명> 요소](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md).  
   
 ## <a name="compare-performance-on-windows-vista"></a>Windows Vista에서 성능 비교  
  Windows Vista의 메모리 관리자에는 SuperFetch라는 기술이 있습니다. SuperFetch는 시간의 경과에 따른 메모리 사용 패턴을 분석하여 특정 사용자에 맞는 최적의 메모리 콘텐츠를 결정하며, 해당 콘텐츠를 항상 유지하기 위해 지속적으로 작동합니다.  
@@ -104,30 +104,30 @@ WPF 애플리케이션을 시작하는 데 필요한 시간은 크게 다를 수
  최상의 성능을 위해 도메인 간 호출을 줄여 도메인 간 통신의 효율성을 높입니다. 가능한 경우 인수를 사용하지 않거나 기본 형식 인수를 사용하여 호출합니다.  
   
 ## <a name="use-the-neutralresourceslanguage-attribute"></a>NeutralResourcesLanguage 특성 사용  
- 사용 합니다 <xref:System.Resources.NeutralResourcesLanguageAttribute> 에 대 한 중립 문화권을 지정 하는 <xref:System.Resources.ResourceManager>합니다. 이렇게 하면 실패한 어셈블리 조회를 방지합니다.  
+ 을 <xref:System.Resources.NeutralResourcesLanguageAttribute> 사용하여 에 대한 중립 <xref:System.Resources.ResourceManager>문화전당을 지정합니다. 이렇게 하면 실패한 어셈블리 조회를 방지합니다.  
   
 ## <a name="use-the-binaryformatter-class-for-serialization"></a>serialization에 BinaryFormatter 클래스 사용  
- Serialization을 사용 해야 하는 경우 사용 합니다 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 클래스 대신는 <xref:System.Xml.Serialization.XmlSerializer> 클래스입니다. <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 클래스에서 클래스 라이브러리 BCL (기본) mscorlib.dll 어셈블리에서 구현 됩니다. <xref:System.Xml.Serialization.XmlSerializer> 로드할 추가 DLL 일 수 있는 System.Xml.dll 어셈블리에서 구현 됩니다.  
+ 직렬화를 사용해야 하는 경우 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 클래스 대신 <xref:System.Xml.Serialization.XmlSerializer> 클래스를 사용합니다. 클래스는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> mscorlib.dll 어셈블리의 기본 클래스 라이브러리(BCL)에서 구현됩니다. 이 <xref:System.Xml.Serialization.XmlSerializer> 구현은 System.Xml.dll 어셈블리에 구현되며 로드할 추가 DLL일 수 있습니다.  
   
- 사용 해야 하는 경우는 <xref:System.Xml.Serialization.XmlSerializer> 클래스 serialization 어셈블리를 미리 생성 하는 경우 성능의 높일 수 있습니다.  
+ 클래스를 사용해야 <xref:System.Xml.Serialization.XmlSerializer> 하는 경우 직렬화 어셈블리를 미리 생성하는 경우 더 나은 성능을 얻을 수 있습니다.  
   
 ## <a name="configure-clickonce-to-check-for-updates-after-startup"></a>시작 후 업데이트를 확인하도록 ClickOnce 구성  
- 응용 프로그램이 ClickOnce를 사용 하는 경우 응용 프로그램이 시작 된 후 배포 사이트에서 업데이트를 확인 하도록 ClickOnce 구성 하 여 시작에 대 한 네트워크 액세스를 방지 합니다.  
+ 응용 프로그램에서 ClickOnce를 사용하는 경우 ClickOnce를 구성하여 시작 시 네트워크 액세스를 방지하여 응용 프로그램이 시작된 후 배포 사이트에서 업데이트를 확인합니다.  
   
- XAML 브라우저 응용 프로그램 (XBAP) 모델을 사용 하면 XBAP는 ClickOnce 캐시에 이미 있는 경우에 ClickOnce 배포 사이트에서 업데이트를 검사 하도록 염두에서에 둡니다. 자세한 내용은 [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment)을 참조하세요.  
+ XAML 브라우저 응용 프로그램 (XBAP) 모델을 사용하는 경우, 명심 클릭한 은 XBAP가 ClickOnce 캐시에 이미있는 경우에도 업데이트에 대한 배포 사이트를 확인합니다. 자세한 내용은 [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment)을 참조하세요.  
   
 ## <a name="configure-the-presentationfontcache-service-to-start-automatically"></a>자동으로 시작되도록 PresentationFontCache 서비스 구성  
  다시 부팅한 후에 실행할 첫 번째 WPF 애플리케이션은 PresentationFontCache 서비스입니다. 이 서비스는 시스템 글꼴을 캐시하고, 글꼴 액세스를 향상시키며 전반적인 성능을 높입니다. 이 서비스를 시작하는 데 있어 오버헤드가 발생하며, 제어된 일부 환경에서는 시스템을 다시 부팅할 때 이 서비스가 자동으로 시작되도록 구성하는 것이 좋습니다.  
   
 ## <a name="set-data-binding-programmatically"></a>프로그래밍 방식으로 데이터 바인딩 설정  
- XAML을 사용 하 여 설정 하는 대신 합니다 <xref:System.Windows.FrameworkElement.DataContext%2A> 선언적으로 주 창에 대 한 프로그래밍 방식으로 설정 고려해 야는 <xref:System.Windows.Application.OnActivated%2A> 메서드.  
+ XAML을 사용하여 주 <xref:System.Windows.FrameworkElement.DataContext%2A> 창에 대해 선언적으로 설정하는 대신 <xref:System.Windows.Application.OnActivated%2A> 메서드에서 프로그래밍 방식으로 설정하는 것이 좋습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.SplashScreen>
 - <xref:System.AppDomain>
 - <xref:System.Resources.NeutralResourcesLanguageAttribute>
 - <xref:System.Resources.ResourceManager>
-- [WPF 응용 프로그램에 시작 화면 추가](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
+- [WPF 애플리케이션에 시작 화면 추가](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
 - [Ngen.exe(네이티브 이미지 생성기)](../../tools/ngen-exe-native-image-generator.md)
-- [\<generatePublisherEvidence> 요소](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)
+- [\<생성기록> 요소](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

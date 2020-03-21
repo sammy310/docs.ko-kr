@@ -2,12 +2,12 @@
 title: Pick 활동 사용
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
-ms.openlocfilehash: b0997254615ca962fd386dea70c67a8edb36c90a
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 7ca4527cc1d5bc90ed1ec4df3eef6cf2d8b93b4e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715522"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142617"
 ---
 # <a name="using-the-pick-activity"></a>Pick 활동 사용
 이 샘플에서는 <xref:System.Activities.Statements.Pick> 활동을 사용하는 방법을 보여 줍니다.
@@ -30,7 +30,7 @@ ms.locfileid: "74715522"
 
 - Sequence1.xaml: Pick을 사용하는 디자이너를 통해 만들어진 워크플로입니다.
 
- 코딩 된 워크플로 샘플의 코딩 된 버전은 디자이너에서 워크플로를 만드는 방법을 보여 줍니다. 여기에 포함되는 파일은 다음과 같습니다.
+ 코딩된 워크플로 샘플의 코딩된 버전은 디자이너에서 워크플로를 만드는 방법을 보여 줍니다. 여기에 포함되는 파일은 다음과 같습니다.
 
 - Program.cs: 샘플 워크플로를 실행하는 `Main` 함수가 포함됩니다.
 
@@ -38,7 +38,7 @@ ms.locfileid: "74715522"
 
 #### <a name="to-use-this-sample"></a>이 샘플을 사용하려면
 
-1. Visual Studio 2010을 사용 하 여 선택 .sln 솔루션 파일을 엽니다.
+1. Visual Studio 2010을 사용하여 Pick.sln 솔루션 파일을 엽니다.
 
 2. Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.
 
@@ -46,9 +46,9 @@ ms.locfileid: "74715522"
 
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
->   
+>
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대한 WCF(Windows 통신 재단) 및 WF(Windows 워크플로우 재단) 샘플로](https://www.microsoft.com/download/details.aspx?id=21459) 이동하여 모든 WCF(Windows 통신 재단) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Pick`

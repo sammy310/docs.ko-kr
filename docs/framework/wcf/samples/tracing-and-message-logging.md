@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: 448eef6ea147b725600b774026155acc1fca6d36
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 9ffb7a99540b953fc93a22d2296caf86f294d25d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094867"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143826"
 ---
 # <a name="tracing-and-message-logging"></a>추적 및 메시지 로깅
-이 샘플에서는 추적 및 메시지 로깅을 사용하도록 설정하는 방법을 보여 줍니다. 결과 추적 및 메시지 로그는 [서비스 추적 뷰어 도구 (svctraceviewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)를 사용 하 여 볼 수 있습니다. 이 샘플은 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)을 기반으로 합니다.  
+이 샘플에서는 추적 및 메시지 로깅을 사용하도록 설정하는 방법을 보여 줍니다. 결과 추적 및 메시지 로그는 [서비스 추적 뷰어 도구(SvcTraceViewer.exe)를](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)사용하여 볼 수 있습니다. 이 샘플은 [시작하기](../../../../docs/framework/wcf/samples/getting-started-sample.md)를 기반으로 합니다.  
   
 > [!NOTE]
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
 ## <a name="tracing"></a>추적  
- WCF (Windows Communication Foundation)는 <xref:System.Diagnostics> 네임 스페이스에 정의 된 추적 메커니즘을 사용 합니다. 이 추적 모델에서 추적 데이터는 애플리케이션이 구현하는 추적 소스에 의해 생성됩니다. 각 소스는 이름으로 식별됩니다. 추적 소비자는 정보를 검색하려는 추적 소스에 대한 추적 수신기를 만듭니다. 추적 데이터를 수신하려면 추적 소스에 대한 수신기를 만들어야 합니다. WCF에서는 서비스 모델 추적 소스 `switchValue`를 설정 하 여 서비스 또는 클라이언트의 구성 파일에 다음 코드를 추가 하 여이 작업을 수행할 수 있습니다.  
+ WCF(Windows 통신 재단)는 네임스페이스에 <xref:System.Diagnostics> 정의된 추적 메커니즘을 사용합니다. 이 추적 모델에서 추적 데이터는 애플리케이션이 구현하는 추적 소스에 의해 생성됩니다. 각 소스는 이름으로 식별됩니다. 추적 소비자는 정보를 검색하려는 추적 소스에 대한 추적 수신기를 만듭니다. 추적 데이터를 수신하려면 추적 소스에 대한 수신기를 만들어야 합니다. WCF에서 이 작업은 서비스 모델 추적 소스를 `switchValue`설정하여 서비스 또는 클라이언트의 구성 파일에 다음 코드를 추가하여 수행할 수 있습니다.  
   
 ```xml  
 <system.diagnostics>  
@@ -43,12 +43,12 @@ ms.locfileid: "77094867"
 </system.diagnostics>  
 ```  
   
- 추적 소스에 대 한 자세한 내용은 추적 [구성](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md) 항목에서 추적 원본 섹션을 참조 하세요.  
+ 추적 소스에 대한 자세한 내용은 [추적 구성](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md) 항목의 추적 소스 섹션을 참조하십시오.  
   
 ## <a name="activity-tracing-and-propagation"></a>동작 추적 및 전파  
- 클라이언트와 서비스 모두에 대 한 `system.ServiceModel` 추적 원본에서 `ActivityTracing` 사용 하도록 설정 하 고 `propagateActivity`을 `true`로 설정 하면 논리 처리 단위 (작업) 내에서 추적의 상관 관계를 제공 하 고 (작업 전송) 여러 끝점에 걸친 작업 (활동 ID 전파를 통해) 간에 상관 관계를 제공 합니다.  
+ 클라이언트와 `propagateActivity` 서비스 `true` 모두에 `system.ServiceModel` 대해 추적 소스에서 활성화 및 설정하면 `ActivityTracing` 논리적 처리 단위(활동) 내의 추적, 끝점 내의 활동(활동 전송) 및 여러 끝점에 걸친 활동(활동 ID 전파를 통해)의 추적 상관 관계를 제공합니다.  
   
- 이러한 세 가지 메커니즘(동작, 전송 및 전파)은 Service Trace Viewer 도구를 사용하여 오류의 근본 원인을 더 신속하게 찾을 수 있도록 도와줍니다. 자세한 내용은 [서비스 추적 뷰어를 사용 하 여 상호 관련 된 추적 보기 및 문제 해결](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)을 참조 하세요.  
+ 이러한 세 가지 메커니즘(동작, 전송 및 전파)은 Service Trace Viewer 도구를 사용하여 오류의 근본 원인을 더 신속하게 찾을 수 있도록 도와줍니다. 자세한 내용은 [상호 연관된 추적 및 문제 해결을 위해 서비스 추적 뷰어 사용을](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)참조하십시오.  
   
  사용자 정의 동작 추적을 만들어 ServiceModel이 제공되는 추적을 확장할 수 있습니다. 사용자 정의 동작 추적을 통해 사용자는 추적 동작을 만들어 다음을 수행할 수 있습니다.  
   
@@ -56,12 +56,12 @@ ms.locfileid: "77094867"
   
 - 전송과 전파를 통해 동작을 상호 연결합니다.  
   
-- WCF 추적의 성능 비용 (예: 로그 파일의 디스크 공간 비용)을 줄입니다.  
+- WCF 추적의 성능 비용을 줄입니다(예: 로그 파일의 디스크 공간 비용).  
   
- 사용자 정의 작업 추적에 대 한 자세한 내용은 [추적 확장](../../../../docs/framework/wcf/samples/extending-tracing.md) 샘플을 참조 하세요.  
+ 사용자 정의 활동 추적에 대한 자세한 내용은 [추적 확장](../../../../docs/framework/wcf/samples/extending-tracing.md) 샘플을 참조하십시오.  
   
 ## <a name="message-logging"></a>메시지 로깅  
- 메시지 로깅은 WCF 응용 프로그램의 클라이언트 및 서비스 모두에서 사용 하도록 설정할 수 있습니다. 메시지 로깅을 사용하도록 설정하려면 클라이언트나 서비스에 다음 코드를 추가해야 합니다.  
+ 클라이언트와 모든 WCF 응용 프로그램의 서비스에서 메시지 로깅을 모두 사용할 수 있습니다. 메시지 로깅을 사용하도록 설정하려면 클라이언트나 서비스에 다음 코드를 추가해야 합니다.  
   
 ```xml  
 <configuration>  
@@ -111,25 +111,25 @@ ms.locfileid: "77094867"
 > [!NOTE]
 > 처음에 로그 디렉터리를 만들어야 추적 파일이 만들어집니다. C:\logs\ 디렉터리가 있는지 확인하거나 수신기 구성에서 대체 로깅 디렉터리를 지정합니다. 자세한 내용은 이 문서의 끝에 있는 초기 설정 지침을 참조하십시오.  
   
- 메시지 로깅에 대 한 자세한 내용은 [메시지 로깅 구성](../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) 항목을 참조 하세요.  
+ 메시지 로깅에 대한 자세한 내용은 [메시지 로깅 구성](../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) 항목을 참조하세요.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.  
+1. Windows 통신 기초 [샘플에 대한 일회성 설치 절차를](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)수행했어야 합니다.  
   
 2. Tracing and Message Logging 샘플을 실행하기 전에 .svclog 파일을 서비스에서 기록할 수 있도록 C:\logs\ 디렉터리를 만듭니다. 이 디렉터리의 이름은 추적 및 메시지를 기록하기 위한 경로로 구성 파일에 정의되며 변경할 수 있습니다. 로그 디렉터리에 대한 Network Service 쓰기 권한을 사용자에게 제공합니다.  
   
-3. 솔루션의 C#, C++또는 Visual Basic .net 버전을 빌드하려면 [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따르세요.  
+3. 솔루션의 C#, C++또는 Visual Basic .NET 버전을 빌드하려면 [Windows 통신 기반 샘플 빌드의 지침을 따르십시오.](../../../../docs/framework/wcf/samples/building-the-samples.md)  
   
-4. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.  
+4. 단일 또는 컴퓨터 간 구성에서 샘플을 실행하려면 Windows [통신 기반 샘플 실행의 지침을 따르십시오.](../../../../docs/framework/wcf/samples/running-the-samples.md)  
   
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
->   
+>
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대한 WCF(Windows 통신 재단) 및 WF(Windows 워크플로우 재단) 샘플로](https://www.microsoft.com/download/details.aspx?id=21459) 이동하여 모든 WCF(Windows 통신 재단) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\TracingAndLogging`  
   
 ## <a name="see-also"></a>참고 항목

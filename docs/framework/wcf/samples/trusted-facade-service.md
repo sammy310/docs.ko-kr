@@ -2,15 +2,15 @@
 title: 신뢰된 외관 서비스
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: 40264ee018d3c09d86e1bcd0b8cc96c0610219f9
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 17901b7a68d4701287d02bc7ee3174683e777fd1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711884"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143748"
 ---
 # <a name="trusted-facade-service"></a>신뢰된 외관 서비스
-이 시나리오 샘플에서는 WCF (Windows Communication Foundation) 보안 인프라를 사용 하 여 한 서비스에서 다른 서비스로 호출자의 id 정보를 전달 하는 방법을 보여 줍니다.  
+이 시나리오 샘플에서는 WCF(Windows Communication Foundation) 보안 인프라를 사용하여 호출자 ID 정보를 한 서비스에서 다른 서비스로 흐름하는 방법을 보여 줍니다.  
   
  서비스에 의해 제공되는 기능을 외관 서비스를 사용하여 공용 네트워크에 노출하는 것은 일반적인 디자인 패턴입니다. 일반적으로 외관 서비스는 DMZ, 완충 지역 및 스크린된 서브넷이라고도 하는 경계 네트워크에 상주하며 비즈니스 논리를 구현하고 내부 데이터에 액세스할 수 있는 백 엔드 서비스와 통신합니다. 외관 서비스와 백 엔드 서비스 간의 통신 채널은 방화벽을 통과하며 일반적으로 단일 용도로만 제한됩니다.  
   
@@ -22,7 +22,7 @@ ms.locfileid: "74711884"
   
 - 계산기 백 엔드 서비스  
   
- 외관 서비스는 요청의 유효성을 검사하고 호출자를 인증합니다. 인증과 유효성 검사에 성공하고 나면 주변 네트워크에서 내부 네트워크로의 제어된 통신 채널을 사용하여 백 엔드 서비스에 요청을 전달합니다. 외관 서비스는 호출자의 ID에 대한 정보를 전달된 요청의 일부로 포함하므로 백 엔드 서비스는 이 정보를 해당 처리에서 사용할 수 있습니다. 호출자의 ID는 메시지 `Username` 헤더 내의 `Security` 보안 토큰을 사용하여 전송됩니다. 이 샘플에서는 WCF 보안 인프라를 사용 하 여 `Security` 헤더에서이 정보를 전송 및 추출 합니다.  
+ 외관 서비스는 요청의 유효성을 검사하고 호출자를 인증합니다. 인증과 유효성 검사에 성공하고 나면 주변 네트워크에서 내부 네트워크로의 제어된 통신 채널을 사용하여 백 엔드 서비스에 요청을 전달합니다. 외관 서비스는 호출자의 ID에 대한 정보를 전달된 요청의 일부로 포함하므로 백 엔드 서비스는 이 정보를 해당 처리에서 사용할 수 있습니다. 호출자의 ID는 메시지 `Username` 헤더 내의 `Security` 보안 토큰을 사용하여 전송됩니다. 이 샘플은 WCF 보안 인프라를 사용하여 헤더에서 `Security` 이 정보를 전송하고 추출합니다.  
   
 > [!IMPORTANT]
 > 백 엔드 서비스는 호출자를 인증하기 위해 외관 서비스를 신뢰합니다. 따라서 백 엔드 서비스는 호출자를 다시 인증하지 않으며 전달된 요청에서 외관 서비스에 의해 제공된 ID 정보를 사용합니다. 이 신뢰 관계 때문에 백 엔드 서비스는 전달된 메시지가 신뢰할 수 있는 소스(이 경우에는 외관 서비스)에서 제공되는지 확인하기 위해 외관 서비스를 인증해야 합니다.  
@@ -77,10 +77,10 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
       <!--This configuration references the "localhost"  -->  
       <!--certificate installed during the setup instructions. -->  
       <serviceCredentials>  
-        <serviceCertificate   
-               findValue="localhost"   
-               storeLocation="LocalMachine"   
-               storeName="My"   
+        <serviceCertificate
+               findValue="localhost"
+               storeLocation="LocalMachine"
+               storeName="My"
                x509FindType="FindBySubjectName" />  
         <userNameAuthentication userNamePasswordValidationMode="Custom"  
             customUserNamePasswordValidatorType=  
@@ -109,9 +109,9 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 </bindings>  
 ```  
   
- [\<security >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) 바인딩 요소는 초기 호출자의 사용자 이름 전송 및 추출을 처리 합니다. [\<windowsStreamSecurity >](../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md) 및 [\<tcptransport >](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) 는 외관 및 백 엔드 서비스와 메시지 보호를 처리 합니다.  
+ 보안>바인딩 요소는 초기 호출자의 사용자 이름 전송 및 추출을 처리합니다. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) windowsStreamSecurity>및 [ \<tcpTransport 는](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) 외관 및 백 엔드 서비스 및 메시지 보호를 인증하는>. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)  
   
- 요청을 전달 하기 위해 외관 서비스 구현은 초기 호출자의 사용자 이름을 제공 해야 하므로 WCF 보안 인프라가이를 전달 된 메시지에 저장할 수 있습니다. 외관 서비스가 백 엔드 서비스와 통신하기 위해 사용하는 클라이언트 프록시 인스턴스의 `ClientCredentials` 속성에서 초기 호출자의 사용자 이름을 설정함으로써 외관 서비스 구현에서 해당 사용자 이름이 제공됩니다.  
+ 요청을 전달하려면 Façade 서비스 구현은 WCF 보안 인프라가 전달된 메시지에 이 정보를 배치할 수 있도록 초기 호출자의 사용자 이름을 제공해야 합니다. 외관 서비스가 백 엔드 서비스와 통신하기 위해 사용하는 클라이언트 프록시 인스턴스의 `ClientCredentials` 속성에서 초기 호출자의 사용자 이름을 설정함으로써 외관 서비스 구현에서 해당 사용자 이름이 제공됩니다.  
   
  다음 코드에서는 `GetCallerIdentity` 메서드가 외관 서비스에서 구현되는 방법을 보여 줍니다. 다른 메서드에도 동일한 패턴이 사용됩니다.  
   
@@ -126,23 +126,23 @@ public string GetCallerIdentity()
 }  
 ```  
   
- 위 코드에서 볼 수 있듯이 `ClientCredentials` 속성에서는 암호가 설정되지 않고 사용자 이름만 설정됩니다. 이 경우 WCF 보안 인프라는 암호 없이 사용자 이름 보안 토큰을 만듭니다 .이 경우에는이 시나리오에 필요한 것과 같습니다.  
+ 위 코드에서 볼 수 있듯이 `ClientCredentials` 속성에서는 암호가 설정되지 않고 사용자 이름만 설정됩니다. WCF 보안 인프라는 이 경우 암호 없이 사용자 이름 보안 토큰을 만듭니다.이 시나리오에서 필요한 것과 정확히 같습니다.  
   
- 백 엔드 서비스에서는 사용자 이름 보안 토큰에 포함된 정보가 인증되어야 합니다. 기본적으로 WCF 보안은 제공 된 암호를 사용 하 여 Windows 계정에 사용자를 매핑하려고 시도 합니다. 이 경우에는 제공된 암호가 없으며 외관 서비스에 의해 인증이 이미 수행되었으므로 백 엔드 서비스는 사용자 이름을 인증할 필요가 없습니다. WCF에서이 기능을 구현 하기 위해 토큰에 사용자 이름을 지정 하 고 추가 인증을 수행 하지 않는 것만 적용 하는 사용자 지정 `UserNamePasswordValidator` 제공 됩니다.  
+ 백 엔드 서비스에서는 사용자 이름 보안 토큰에 포함된 정보가 인증되어야 합니다. 기본적으로 WCF 보안은 제공된 암호를 사용하여 사용자를 Windows 계정에 매핑하려고 시도합니다. 이 경우에는 제공된 암호가 없으며 외관 서비스에 의해 인증이 이미 수행되었으므로 백 엔드 서비스는 사용자 이름을 인증할 필요가 없습니다. WCF에서 이 기능을 구현하기 `UserNamePasswordValidator` 위해 사용자 이름이 토큰에 지정되고 추가 인증을 수행하지 않도록 적용하는 사용자 지정이 제공됩니다.  
   
 ```csharp  
 public class MyUserNamePasswordValidator : UserNamePasswordValidator  
 {  
     public override void Validate(string userName, string password)  
     {  
-        // Ignore the password because it is empty,   
+        // Ignore the password because it is empty,
         // we trust the facade service to authenticate the client.  
-        // Accept the username information here so that the   
+        // Accept the username information here so that the
         // application gets access to it.  
         if (null == userName)  
         {  
             Console.WriteLine("Invalid username");  
-            throw new   
+            throw new
              SecurityTokenValidationException("Invalid username");  
         }  
     }  
@@ -158,7 +158,7 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
       <serviceCredentials>  
         <userNameAuthentication userNamePasswordValidationMode="Custom"  
            customUserNamePasswordValidatorType=  
-          "Microsoft.ServiceModel.Samples.MyUserNamePasswordValidator,   
+          "Microsoft.ServiceModel.Samples.MyUserNamePasswordValidator,
            BackendService"/>  
       </serviceCredentials>  
     </behavior>  
@@ -174,22 +174,22 @@ public string GetCallerIdentity()
     // Facade service is authenticated using Windows authentication.  
     //Its identity is accessible.  
     // On ServiceSecurityContext.Current.WindowsIdentity.  
-    string facadeServiceIdentityName =   
+    string facadeServiceIdentityName =
           ServiceSecurityContext.Current.WindowsIdentity.Name;  
   
-    // The client name is transmitted using Username authentication on   
+    // The client name is transmitted using Username authentication on
     //the message level without the password  
     // using a supporting encrypted UserNameToken.  
-    // Claims extracted from this supporting token are available in   
-    // ServiceSecurityContext.Current.AuthorizationContext.ClaimSets   
+    // Claims extracted from this supporting token are available in
+    // ServiceSecurityContext.Current.AuthorizationContext.ClaimSets
     // collection.  
     string clientName = null;  
-    foreach (ClaimSet claimSet in   
+    foreach (ClaimSet claimSet in
         ServiceSecurityContext.Current.AuthorizationContext.ClaimSets)  
     {  
         foreach (Claim claim in claimSet)  
         {  
-            if (claim.ClaimType == ClaimTypes.Name &&   
+            if (claim.ClaimType == ClaimTypes.Name &&
                                    claim.Right == Rights.Identity)  
             {  
                 clientName = (string)claim.Resource;  
@@ -200,7 +200,7 @@ public string GetCallerIdentity()
     if (clientName == null)  
     {  
         // In case there was no UserNameToken attached to the request.  
-        // In the real world implementation the service should reject   
+        // In the real world implementation the service should reject
         // this request.  
         return "Anonymous caller via " + facadeServiceIdentityName;  
     }  
@@ -209,7 +209,7 @@ public string GetCallerIdentity()
 }  
 ```  
   
- 외관 서비스 계정 정보는 `ServiceSecurityContext.Current.WindowsIdentity` 속성을 사용하여 추출됩니다. 초기 호출자에 대한 정보에 액세스하기 위해 백 엔드 서비스는 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` 속성을 사용합니다. 이 속성은 `Identity` 형식을 가진 `Name`클레임을 찾습니다. 이 클레임은 `Username` 보안 토큰에 포함 된 정보에서 WCF 보안 인프라에 의해 자동으로 생성 됩니다.  
+ 외관 서비스 계정 정보는 `ServiceSecurityContext.Current.WindowsIdentity` 속성을 사용하여 추출됩니다. 초기 호출자에 대한 정보에 액세스하기 위해 백 엔드 서비스는 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` 속성을 사용합니다. 이 속성은 `Identity` 형식을 가진 `Name`클레임을 찾습니다. 이 클레임은 보안 토큰에 포함된 정보에서 WCF `Username` 보안 인프라에 의해 자동으로 생성됩니다.  
   
 ## <a name="running-the-sample"></a>샘플 실행  
  샘플을 실행하면 작업 요청 및 응답이 클라이언트 콘솔 창에 표시됩니다. 클라이언트를 종료하려면 클라이언트 창에서 Enter 키를 누릅니다. 외관 및 백 엔드 서비스 콘솔 창에서 Enter 키를 눌러 서비스를 종료할 수 있습니다.  
@@ -260,7 +260,7 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.  
+1. Windows 통신 기초 [샘플에 대한 일회성 설치 절차를](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)수행했어야 합니다.  
   
 2. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.  
   
@@ -276,7 +276,7 @@ Press <ENTER> to terminate client.
   
 5. \client\bin에서 Client.exe를 실행합니다. 클라이언트 콘솔 애플리케이션에 클라이언트 동작이 표시됩니다.  
   
-6. 클라이언트와 서비스가 통신할 수 없는 경우 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))을 참조 하세요.  
+6. 클라이언트와 서비스가 통신할 수 없는 경우 [WCF 샘플에 대한 문제 해결 팁을](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))참조하십시오.  
   
 #### <a name="to-clean-up-after-the-sample"></a>샘플 실행 후 정리를 수행하려면  
   
@@ -284,9 +284,9 @@ Press <ENTER> to terminate client.
   
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
->   
+>
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대한 WCF(Windows 통신 재단) 및 WF(Windows 워크플로우 재단) 샘플로](https://www.microsoft.com/download/details.aspx?id=21459) 이동하여 모든 WCF(Windows 통신 재단) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\TrustedFacade`  

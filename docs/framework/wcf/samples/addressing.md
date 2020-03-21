@@ -2,15 +2,15 @@
 title: 주소 지정
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 2a737552ef5ea2a8e4544f9ec2c2f84b4b994a75
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 4403ac2bf8e0e5193006f6ec19b24a9bcb00bf35
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715870"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183973"
 ---
 # <a name="addressing"></a>주소 지정
-Addressing 샘플에서는 엔드포인트 주소의 다양한 측면과 기능을 보여 줍니다. 이 샘플은 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)을 기반으로 합니다. 이 샘플에서 서비스는 자체 호스트됩니다. 서비스와 클라이언트는 모두 콘솔 애플리케이션입니다. 서비스는 상대 및 절대 엔드포인트 주소를 조합하여 여러 엔드포인트를 정의합니다.  
+Addressing 샘플에서는 엔드포인트 주소의 다양한 측면과 기능을 보여 줍니다. 샘플은 [시작하기](../../../../docs/framework/wcf/samples/getting-started-sample.md)를 기반으로 합니다. 이 샘플에서 서비스는 자체 호스트됩니다. 서비스와 클라이언트는 모두 콘솔 애플리케이션입니다. 서비스는 상대 및 절대 엔드포인트 주소를 조합하여 여러 엔드포인트를 정의합니다.  
   
 > [!NOTE]
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
@@ -40,7 +40,7 @@ Addressing 샘플에서는 엔드포인트 주소의 다양한 측면과 기능�
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- 이 경우 상대 주소가 비어 있으므로("") 엔드포인트 주소는 기본 주소와 동일합니다. 실제 끝점 주소가 `http://localhost:8000/servicemodelsamples/service`되었습니다.
+ 이 경우 상대 주소가 비어 있으므로("") 엔드포인트 주소는 기본 주소와 동일합니다. 실제 끝점 주소는 . `http://localhost:8000/servicemodelsamples/service`
   
  두 번째 엔드포인트 정의도 다음 샘플 구성에서처럼 상대 주소를 지정합니다.  
   
@@ -53,7 +53,7 @@ Addressing 샘플에서는 엔드포인트 주소의 다양한 측면과 기능�
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- 상대 주소 "test"가 기본 주소에 추가됩니다. 실제 끝점 주소가 `http://localhost:8000/servicemodelsamples/service/test`되었습니다.
+ 상대 주소 "test"가 기본 주소에 추가됩니다. 실제 끝점 주소는 . `http://localhost:8000/servicemodelsamples/service/test`
   
  세 번째 엔드포인트 정의는 다음 샘플 구성에서처럼 절대 주소를 지정합니다.  
   
@@ -63,9 +63,9 @@ Addressing 샘플에서는 엔드포인트 주소의 다양한 측면과 기능�
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- 주소에서 기본 주소는 아무런 역할도 하지 않습니다. 실제 끝점 주소가 `http://localhost:8001/hello/servicemodelsamples`되었습니다.
+ 주소에서 기본 주소는 아무런 역할도 하지 않습니다. 실제 끝점 주소는 . `http://localhost:8001/hello/servicemodelsamples`
   
- 네 번째 엔드포인트 주소는 절대 주소 및 다른 전송(TCP)을 지정합니다. 주소에서 기본 주소는 아무런 역할도 하지 않습니다. 실제 끝점 주소가 `net.tcp://localhost:9000/servicemodelsamples/service`되었습니다.
+ 네 번째 엔드포인트 주소는 절대 주소 및 다른 전송(TCP)을 지정합니다. 주소에서 기본 주소는 아무런 역할도 하지 않습니다. 실제 끝점 주소는 . `net.tcp://localhost:9000/servicemodelsamples/service`
   
 ```xml  
 <!-- The absolute address specified, different transport: -->  
@@ -118,20 +118,20 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.  
+1. Windows 통신 기초 [샘플에 대한 일회성 설치 절차를](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)수행했어야 합니다.  
   
 2. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.  
   
-3. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.  
+3. 단일 또는 교차 컴퓨터 구성에서 샘플을 실행하려면 Windows [통신 기반 샘플 실행의 지침을 따르십시오.](../../../../docs/framework/wcf/samples/running-the-samples.md)  
   
     > [!NOTE]
     > Svcutil.exe를 사용하여 이 샘플에 대한 구성을 다시 생성할 경우 클라이언트 구성에서 엔드포인트 이름을 클라이언트 코드와 일치하도록 수정해야 합니다.  
   
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
->   
+>
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대한 WCF(Windows 통신 재단) 및 WF(Windows 워크플로우 재단) 샘플로](https://www.microsoft.com/download/details.aspx?id=21459) 이동하여 모든 WCF(Windows 통신 재단) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Addressing`  

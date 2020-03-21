@@ -10,12 +10,12 @@ helpviewer_keywords:
 - alpha blending [Windows Forms], brush
 - brushes [Windows Forms], using semi-transparent
 ms.assetid: a4f6f6b8-3bc8-440a-84af-d62ef0f8ff40
-ms.openlocfilehash: 1be3fd2ce10f6681e531559a6e9594fe3d021f5f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 1e48bbd563f6377380848949325962b568fa432c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582587"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142409"
 ---
 # <a name="how-to-draw-with-opaque-and-semitransparent-brushes"></a>방법: 불투명 및 반투명 브러시를 사용하여 그리기
 셰이프를 채울 때 <xref:System.Drawing.Brush> 개체를 <xref:System.Drawing.Graphics> 클래스의 채우기 메서드 중 하나에 전달해야 합니다. <xref:System.Drawing.SolidBrush.%23ctor%2A> 생성자의 매개 변수 중 하나는 <xref:System.Drawing.Color> 개체입니다. 불투명 셰이프를 채우려면 색의 알파 구성 요소를 255로 설정합니다. 반투명 셰이프를 채우려면 알파 구성 요소를 1에서 254 사이의 임의 값으로 설정합니다.  
@@ -28,16 +28,16 @@ ms.locfileid: "65582587"
  [!code-csharp[System.Drawing.AlphaBlending#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.AlphaBlending#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#31)]  
 
- 다음 그림에서는 다음 코드의 출력을 보여 줍니다. 
+ 다음 그림에서는 다음 코드의 출력을 보여 주며 있습니다.
   
  ![불투명 및 반투명 출력을 보여 주는 그림입니다.](./media/how-to-draw-with-opaque-and-semitransparent-brushes/compositingquality-ellipse-semitransparent.png)  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- 앞의 예제는 Windows Forms에서 사용 하도록 설계 되었으며 필요 <xref:System.Windows.Forms.PaintEventArgs> `e`의 매개 변수인 <xref:System.Windows.Forms.PaintEventHandler>합니다.  
+ 앞의 예제는 Windows Forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.PaintEventArgs> `e`의 매개 변수인 이 <xref:System.Windows.Forms.PaintEventHandler>요구사항입니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [Windows Forms의 그래픽 및 그리기](graphics-and-drawing-in-windows-forms.md)
 - [선 및 채우기 알파 혼합](alpha-blending-lines-and-fills.md)
-- [방법: 컨트롤에 투명 한 배경을 제공합니다](../controls/how-to-give-your-control-a-transparent-background.md)
+- [방법: 컨트롤에 투명한 배경 적용](../controls/how-to-give-your-control-a-transparent-background.md)
 - [방법: 불투명 및 반투명 선 그리기](how-to-draw-opaque-and-semitransparent-lines.md)

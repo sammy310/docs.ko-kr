@@ -2,12 +2,12 @@
 title: 상호 통신
 ms.date: 03/30/2017
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
-ms.openlocfilehash: 9cf8d3746cea5746bee186a8a68a515c8503cb85
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 56f789fe185cb2885c215e9512e82ae2fbb64a36
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715908"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143761"
 ---
 # <a name="two-way-communication"></a>상호 통신
 이 샘플에서는 MSMQ를 통해 트랜잭션된 대기 중인 양방향 통신을 수행하는 방법을 보여 줍니다. 이 샘플에서는 `netMsmqBinding` 바인딩을 사용합니다. 이 경우 서비스는 자체적으로 호스트되는 콘솔 애플리케이션으로서 이를 사용하여 서비스에서 대기 중인 메시지 받는 것을 볼 수 있습니다.  
@@ -15,7 +15,7 @@ ms.locfileid: "74715908"
 > [!NOTE]
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
- 이 샘플은 [트랜잭션 된 MSMQ 바인딩을](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)기반으로 합니다.  
+ 이 샘플은 [트랜잭션 MSMQ 바인딩을](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)기반으로 합니다.  
   
  대기 중인 통신에서 클라이언트는 큐를 사용하여 서비스와 통신합니다. 클라이언트는 큐로 메시지를 보내고 서비스는 큐에서 메시지를 받습니다. 따라서 서비스와 클라이언트가 동시에 실행되고 있지 않더라도 큐를 사용하여 통신할 수 있습니다.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "74715908"
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
-    void SubmitPurchaseOrder(PurchaseOrder po, string   
+    void SubmitPurchaseOrder(PurchaseOrder po, string
                                   reportOrderStatusTo);  
 }
 ```
@@ -73,9 +73,9 @@ public void SubmitPurchaseOrder(PurchaseOrder po, string reportOrderStatusTo)
  MSMQ 큐 이름은 구성 파일의 appSettings 섹션에 지정됩니다. 서비스의 엔드포인트는 구성 파일의 System.ServiceModel 섹션에 정의됩니다.  
   
 > [!NOTE]
-> MSMQ 큐 이름 및 엔드포인트 주소는 약간 다른 주소 지정 규칙을 사용합니다. MSMQ 큐 이름은 로컬 컴퓨터에 점(.)을 사용하고, 그 경로에는 백슬래시 구분 기호를 사용합니다. WCF (Windows Communication Foundation) 끝점 주소는 net.pipe: 체계를 지정 하 고, 로컬 컴퓨터에 "localhost"를 사용 하며, 경로에 슬래시를 사용 합니다. 원격 컴퓨터에서 호스트되는 큐에서 읽으려면 "." 및 "localhost"를 원격 컴퓨터 이름으로 바꿉니다.  
+> MSMQ 큐 이름 및 엔드포인트 주소는 약간 다른 주소 지정 규칙을 사용합니다. MSMQ 큐 이름은 로컬 컴퓨터에 점(.)을 사용하고, 그 경로에는 백슬래시 구분 기호를 사용합니다. WCF(Windows 통신 재단) 끝점 주소는 net.msmq: 구성표를 지정하고 로컬 컴퓨터에 "localhost"를 사용하고 경로에서 전달 슬래시를 사용합니다. 원격 컴퓨터에서 호스트되는 큐에서 읽으려면 "." 및 "localhost"를 원격 컴퓨터 이름으로 바꿉니다.  
   
- 서비스는 자체 호스트됩니다. MSMQ 전송을 사용하는 경우에는 사용되는 큐를 미리 만들어야 합니다. 수동으로 또는 코드를 통해 이 작업을 수행할 수 있습니다. 이 샘플에서 서비스는 큐가 있는지 확인하고 필요한 경우 큐를 만듭니다. 큐 이름은 구성 파일에서 읽습니다. 기본 주소는 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 에서 서비스에 대 한 프록시를 생성 하는 데 사용 됩니다.  
+ 서비스는 자체 호스트됩니다. MSMQ 전송을 사용하는 경우에는 사용되는 큐를 미리 만들어야 합니다. 수동으로 또는 코드를 통해 이 작업을 수행할 수 있습니다. 이 샘플에서 서비스는 큐가 있는지 확인하고 필요한 경우 큐를 만듭니다. 큐 이름은 구성 파일에서 읽습니다. 기본 주소는 [ServiceModel 메타데이터 유틸리티 도구(Svcutil.exe)에서](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 서비스에 대한 프록시를 생성하는 데 사용됩니다.  
 
 ```csharp
 // Host the service within this EXE console application.  
@@ -149,11 +149,11 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))
 [ServiceBehavior]  
 public class OrderStatusService : IOrderStatus  
 {  
-    [OperationBehavior(TransactionAutoComplete = true,   
+    [OperationBehavior(TransactionAutoComplete = true,
                         TransactionScopeRequired = true)]  
     public void OrderStatus(string poNumber, string status)  
     {  
-        Console.WriteLine("Status of order {0}:{1} ", poNumber ,   
+        Console.WriteLine("Status of order {0}:{1} ", poNumber ,
                                                            status);  
     }  
 }  
@@ -170,7 +170,7 @@ public class OrderStatusService : IOrderStatus
 <system.serviceModel>  
   
   <services>  
-    <service   
+    <service
        name="Microsoft.ServiceModel.Samples.OrderStatusService">  
       <!-- Define NetMsmqEndpoint -->  
       <endpoint address="net.msmq://localhost/private/ServiceModelSamplesTwo-way/OrderStatus"  
@@ -182,8 +182,8 @@ public class OrderStatusService : IOrderStatus
   <client>  
     <!-- Define NetMsmqEndpoint -->  
     <endpoint name="OrderProcessorEndpoint"  
-              address="net.msmq://localhost/private/ServiceModelSamplesTwo-way/OrderProcessor"   
-              binding="netMsmqBinding"   
+              address="net.msmq://localhost/private/ServiceModelSamplesTwo-way/OrderProcessor"
+              binding="netMsmqBinding"
               contract="Microsoft.ServiceModel.Samples.IOrderProcessor" />  
   </client>  
   
@@ -218,16 +218,16 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.  
+1. Windows 통신 기초 [샘플에 대한 일회성 설치 절차를](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)수행했어야 합니다.  
   
 2. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.  
   
-3. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.  
+3. 단일 또는 교차 컴퓨터 구성에서 샘플을 실행하려면 Windows [통신 기반 샘플 실행의 지침을 따르십시오.](../../../../docs/framework/wcf/samples/running-the-samples.md)  
   
     > [!NOTE]
     > Svcutil.exe를 사용하여 이 샘플에 대한 구성을 다시 생성할 경우 클라이언트 구성에서 엔드포인트 이름을 클라이언트 코드와 일치하도록 수정해야 합니다.  
   
- 기본적으로 <xref:System.ServiceModel.NetMsmqBinding>을 사용하여 전송 보안이 설정됩니다. MSMQ 전송 보안에 대 한 두 가지 관련 속성, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> 및 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.` 기본적으로 인증 모드가 `Windows`로 설정 되 고 보호 수준이 `Sign`로 설정 됩니다. MSMQ에서 인증 및 서명 기능을 제공하려면 도메인에 속해 있어야 하며 MSMQ의 Active Directory 통합 옵션이 설치되어 있어야 합니다. 이 기준에 맞지 않는 컴퓨터에서 이 샘플을 실행하면 오류가 발생합니다.  
+ 기본적으로 <xref:System.ServiceModel.NetMsmqBinding>을 사용하여 전송 보안이 설정됩니다. MSMQ 전송 보안에 대한 두 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` 가지 관련 속성이 있으며 `Windows` 기본적으로 인증 모드가 `Sign`설정되고 보호 수준이 로 설정됩니다. MSMQ에서 인증 및 서명 기능을 제공하려면 도메인에 속해 있어야 하며 MSMQ의 Active Directory 통합 옵션이 설치되어 있어야 합니다. 이 기준에 맞지 않는 컴퓨터에서 이 샘플을 실행하면 오류가 발생합니다.  
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>작업 그룹에 속해 있거나 Active Directory 통합이 없는 컴퓨터에서 샘플을 실행하려면  
   
@@ -243,12 +243,12 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
   
       <system.serviceModel>  
         <services>  
-          <service   
+          <service
               name="Microsoft.ServiceModel.Samples.OrderProcessorService">  
             <!-- Define NetMsmqEndpoint -->  
             <endpoint address="net.msmq://localhost/private/ServiceModelSamplesTwo-way/OrderProcessor"  
                       binding="netMsmqBinding"  
-                      bindingConfiguration="TransactedBinding"   
+                      bindingConfiguration="TransactedBinding"
                       contract="Microsoft.ServiceModel.Samples.IOrderProcessor" />  
           </service>  
         </services>  
@@ -279,7 +279,7 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
       <system.serviceModel>  
   
         <services>  
-          <service   
+          <service
              name="Microsoft.ServiceModel.Samples.OrderStatusService">  
             <!-- Define NetMsmqEndpoint -->  
             <endpoint address="net.msmq://localhost/private/ServiceModelSamplesTwo-way/OrderStatus"  
@@ -291,8 +291,8 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
         <client>  
           <!-- Define NetMsmqEndpoint -->  
           <endpoint name="OrderProcessorEndpoint"  
-                    address="net.msmq://localhost/private/ServiceModelSamplesTwo-way/OrderProcessor"   
-                    binding="netMsmqBinding"   
+                    address="net.msmq://localhost/private/ServiceModelSamplesTwo-way/OrderProcessor"
+                    binding="netMsmqBinding"
                     bindingConfiguration="TransactedBinding"  
                     contract="Microsoft.ServiceModel.Samples.IOrderProcessor" />  
         </client>  
@@ -324,9 +324,9 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
   
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
->   
+>
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대한 WCF(Windows 통신 재단) 및 WF(Windows 워크플로우 재단) 샘플로](https://www.microsoft.com/download/details.aspx?id=21459) 이동하여 모든 WCF(Windows 통신 재단) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Binding\Net\MSMQ\Two-Way`  

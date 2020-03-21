@@ -9,19 +9,19 @@ helpviewer_keywords:
 - <compilers> element
 - compilers element
 ms.assetid: d40fba59-98f9-4783-ae0c-2ebea27ce77b
-ms.openlocfilehash: b09c2a1f67974a67a3f9d58af7cb8cf66a197026
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 09b1efe321c39402c9280eda0e9def9112462470
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088694"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155416"
 ---
-# <a name="compilers-element"></a>\<컴파일러 > 요소
-컴파일러 구성 요소용 컨테이너입니다. 0개 이상의 [\<compiler>](compiler-element.md) 요소가 포함되어 있습니다.  
+# <a name="compilers-element"></a>\<컴파일러> 요소
+컴파일러 구성 요소에 대한 컨테이너; 에는 0 개 이상의 [ \<컴파일러>](compiler-element.md) 요소가 포함되어 있습니다.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<** ](system-codedom-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<컴파일러 >**
+[**\<구성>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.codedom>**](system-codedom-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<컴파일러>**
 
 ## <a name="syntax"></a>구문  
   
@@ -32,31 +32,31 @@ ms.locfileid: "74088694"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
- 없음.  
+ 없음  
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<compiler> 요소](compiler-element.md)|언어 공급자에 대한 컴파일러 구성 특성을 지정합니다.|  
+|[\<컴파일러> 요소](compiler-element.md)|언어 공급자에 대한 컴파일러 구성 특성을 지정합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<configuration> 요소](../configuration-element.md)|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
-|[\<system.object > 요소](system-codedom-element.md)|사용 가능한 언어 공급자에 대한 컴파일러 구성 설정을 지정합니다.|  
+|[\<구성> 요소](../configuration-element.md)|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
+|[\<system.codedom> 요소](system-codedom-element.md)|사용 가능한 언어 공급자에 대한 컴파일러 구성 설정을 지정합니다.|  
   
-## <a name="remarks"></a>주의  
- [\<컴파일러 >](compilers-element.md) 요소에는 컴퓨터의 언어 공급자에 대 한 컴파일러 구성 설정이 포함 되어 있습니다. 각 [\<컴파일러 >](compiler-element.md) 요소는 특정 언어 공급자에 대 한 컴파일러 구성 특성을 지정 합니다.  
+## <a name="remarks"></a>설명  
+ [ \<컴파일러>](compilers-element.md) 요소에는 컴퓨터의 언어 공급자에 대한 컴파일러 구성 설정이 포함되어 있습니다. 각 [ \<컴파일러>](compiler-element.md) 요소는 특정 언어 공급자에 대한 컴파일러 구성 특성을 지정합니다.  
   
- .NET Framework은 컴퓨터 구성 파일 (machine.config)에서 초기 컴파일러 및 언어 공급자 설정을 정의 합니다. 개발자 및 컴파일러 공급업체는 새로운 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 구현에 대한 구성 설정을 추가할 수 있습니다. <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> 메서드를 사용하여 컴퓨터에서 언어 공급자 및 컴파일러 구성 설정을 프로그래밍 방식으로 열거할 수 있습니다.  
+ .NET Framework는 컴퓨터 구성 파일(Machine.config)의 초기 컴파일러 및 언어 공급자 설정을 정의합니다. 개발자 및 컴파일러 공급업체는 새로운 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 구현에 대한 구성 설정을 추가할 수 있습니다. <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> 메서드를 사용하여 컴퓨터에서 언어 공급자 및 컴파일러 구성 설정을 프로그래밍 방식으로 열거할 수 있습니다.  
   
 ## <a name="configuration-file"></a>구성 파일  
- 이 요소는 컴퓨터 구성 파일 및 응용 프로그램 구성 파일에서 사용할 수 있습니다.  
+ 이 요소는 컴퓨터 구성 파일 및 응용 프로그램 구성 파일에 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
  다음 예제는 일반적인 컴파일러 구성 요소를 보여 줍니다.  
@@ -66,21 +66,21 @@ ms.locfileid: "74088694"
    <system.codedom>  
      <compilers>  
        <!-- zero or more compiler elements -->  
-       <compiler   
-          language="c#;cs;csharp"   
+       <compiler
+          language="c#;cs;csharp"
           extension=".cs"  
           type="Microsoft.CSharp.CSharpCodeProvider, System, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"  
-          compilerOptions=""    
+          compilerOptions=""
           warningLevel="1" />  
      </compilers>  
    </system.codedom>  
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
 - [구성 파일 스키마](../index.md)
 - [컴파일러 및 언어 공급자 설정 스키마](index.md)
-- [\<compiler> 요소](compiler-element.md)
+- [\<컴파일러> 요소](compiler-element.md)

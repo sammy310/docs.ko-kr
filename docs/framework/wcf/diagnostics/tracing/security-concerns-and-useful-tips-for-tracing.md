@@ -2,12 +2,12 @@
 title: 보안 고려 사항 및 추적에 대한 유용한 정보
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
-ms.openlocfilehash: d1b2c13cacc792ecedacfc3ede7c38e072841263
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5ced4f3a3a5e83564703db88b28ee2b3c6eeb1a0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600045"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185716"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>보안 고려 사항 및 추적에 대한 유용한 정보
 이 항목에서는 WebHost를 사용할 때의 유용한 팁뿐만 아니라 중요한 정보가 노출되지 않도록 보호할 수 있는 방법에 대해 설명합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "64600045"
    <system.ServiceModel>  
       <machineSettings enableLoggingKnownPii="Boolean"/>  
    </system.ServiceModel>  
-</configuration>   
+</configuration>
 ```  
   
  그런 다음 애플리케이션 배포자는 App.config 또는 Web.config 파일 중 하나에 있는 `logKnownPii` 특성을 사용하여 다음과 같이 PII 로깅을 사용하도록 설정할 수 있습니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "64600045"
                 initializeData="c:\logs\messages.svclog" />  
           </listeners>  
       </source>  
-      <source name="System.ServiceModel"   
+      <source name="System.ServiceModel"
          logKnownPii="true">  
          <listeners>  
             <add name="xml" />  
@@ -84,12 +84,12 @@ ms.locfileid: "64600045"
   
  변경 내용은 애플리케이션이 시작되거나 다시 시작되어야만 적용됩니다. 두 개의 특성이 모두 `true`로 설정된 경우에 시작 시 이벤트가 기록됩니다. `logKnownPii`가 `true`로 설정되어 있지만 `enableLoggingKnownPii`는 `false`인 경우에도 이벤트가 기록됩니다.  
   
- PII 로깅에 대 한 자세한 내용은 참조 하세요. [PII 보안 잠금](../../../../../docs/framework/wcf/samples/pii-security-lockdown.md) 샘플입니다.  
+ PII 로깅에 대한 자세한 내용은 [PII 보안 잠금](../../../../../docs/framework/wcf/samples/pii-security-lockdown.md) 샘플을 참조하십시오.  
   
- 컴퓨터 관리자와 애플리케이션 배포자는 이러한 두 개의 스위치를 사용할 때 특별히 주의를 기울여야 합니다. PII 로깅을 사용하도록 설정하면 보안 키와 PII가 기록됩니다. PII 로깅을 사용하지 않도록 설정해도 중요한 데이터와 애플리케이션별 데이터는 메시지 헤더 및 본문에 기록됩니다. 개인 정보 및 PII 노출 되지 않도록 보호에 대 한 더 상세히 논의 참조 하세요 [사용자 개인 정보 보호](https://go.microsoft.com/fwlink/?LinkID=94647)합니다.  
+ 컴퓨터 관리자와 애플리케이션 배포자는 이러한 두 개의 스위치를 사용할 때 특별히 주의를 기울여야 합니다. PII 로깅을 사용하도록 설정하면 보안 키와 PII가 기록됩니다. PII 로깅을 사용하지 않도록 설정해도 중요한 데이터와 애플리케이션별 데이터는 메시지 헤더 및 본문에 기록됩니다. 개인 정보 보호 및 PII가 노출되지 않도록 보호하는 방법에 대한 보다 철저한 논의는 [사용자 개인 정보 보호](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480490(v=msdn.10))를 참조하십시오.  
   
  또한, 연결 지향 전송에 대한 연결마다 한 번, 그리고 그렇지 않게 전송된 메시지마다 한 번 메시지 발신자의 IP 주소가 기록됩니다. 이 작업은 발신자의 동의 없이 수행됩니다. 그러나 이 로깅은 Information 또는 Verbose 추적 수준에서만 발생하며 이러한 수준은 라이브 디버깅을 제외하고 프로덕션에서 기본 추적 수준 또는 권장 추적 수준이 아닙니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

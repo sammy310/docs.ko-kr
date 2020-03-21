@@ -2,12 +2,12 @@
 title: ISNULL(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: dc7a0173-3664-4c90-a57b-5cbb0a8ed7ee
-ms.openlocfilehash: 9066f9fb68ce2c50e9523881cfa0dd930cd0b52e
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: b3fc2484e80b637ed5841375985f7bae476bbbf7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319727"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150202"
 ---
 # <a name="isnull-entity-sql"></a>ISNULL(Entity SQL)
 쿼리 식이 null인지 여부를 결정합니다.  
@@ -25,16 +25,16 @@ expression IS [ NOT ] NULL
  NOT  
  IS NULL의 EDM 부울 결과를 부정합니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  `true`이 null을 반환하면 `expression`이고, 그렇지 않으면 `false`입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  외부 조인의 요소가 null인지 여부를 확인하려면 `IS NULL`을 사용합니다.  
   
 ```sql  
-select c   
-      from LOB.Customers as c left outer join LOB.Orders as o   
-                              on c.ID = o.CustomerID    
+select c
+      from LOB.Customers as c left outer join LOB.Orders as o
+                              on c.ID = o.CustomerID
       where o is not null and o.OrderQuantity = @x  
 ```  
   
@@ -46,13 +46,13 @@ select c from LOB.Customer as c where c.DOB is not null
   
  다음 표에서는 일부 패턴에 대한 `IS NULL`의 동작을 보여 줍니다. 공급자 호출 이전에 모든 예외가 클라이언트 측에서 throw됩니다.  
   
-|무늬|동작|  
+|패턴|동작|  
 |-------------|--------------|  
-|null IS NULL|`true`을 반환합니다.|  
-|TREAT (null AS EntityType) IS NULL|`true`을 반환합니다.|  
+|null IS NULL|`true`를 반환합니다.|  
+|TREAT (null AS EntityType) IS NULL|`true`를 반환합니다.|  
 |TREAT (null AS ComplexType) IS NULL|오류를 throw합니다.|  
 |TREAT (null AS RowType) IS NULL|오류를 throw합니다.|  
-|EntityType IS NULL|`true` 또는 `false`을 반환합니다.|  
+|EntityType IS NULL|`true` 또는 `false`를 반환합니다.|  
 |ComplexType IS NULL|오류를 throw합니다.|  
 |RowType IS NULL|오류를 throw합니다.|  
   
@@ -65,6 +65,6 @@ select c from LOB.Customer as c where c.DOB is not null
   
  [!code-sql[DP EntityServices Concepts#ISNULL](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#isnull)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [엔터티 SQL 참조](entity-sql-reference.md)
