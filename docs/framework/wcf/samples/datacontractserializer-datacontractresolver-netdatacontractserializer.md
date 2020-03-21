@@ -2,12 +2,12 @@
 title: NetDataContractSerializer의 기능을 공급하기 위해 DataContractSerializer 및 DataContractResolver를 사용
 ms.date: 03/30/2017
 ms.assetid: 1376658f-f695-45f7-a7e0-94664e9619ff
-ms.openlocfilehash: 3a0f88310caf9865756d9c04011b709dd4c4c2eb
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: e7a4f0d754b444d8558b03e07d98788a2eee5971
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716902"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144984"
 ---
 # <a name="using-datacontractserializer-and-datacontractresolver-to-provide-the-functionality-of-netdatacontractserializer"></a>NetDataContractSerializer의 기능을 공급하기 위해 DataContractSerializer 및 DataContractResolver를 사용
 이 샘플에서는 <xref:System.Runtime.Serialization.DataContractSerializer>와 적절한 <xref:System.Runtime.Serialization.DataContractResolver>를 함께 사용하여 <xref:System.Runtime.Serialization.NetDataContractSerializer>와 동일한 기능을 제공하는 방법을 보여 줍니다. 이를 위해 적절한 <xref:System.Runtime.Serialization.DataContractResolver>를 만드는 방법과 이를 <xref:System.Runtime.Serialization.DataContractSerializer>에 추가하는 방법을 보여 줍니다.
@@ -54,17 +54,17 @@ class MyDataContractResolver : DataContractResolver
 
 #### <a name="to-use-this-sample"></a>이 샘플을 사용하려면
 
-1. Visual Studio 2012을 사용 하 여 DCRSample .sln 솔루션 파일을 엽니다.
+1. Visual Studio 2012를 사용하여 DCRSample.sln 솔루션 파일을 엽니다.
 
-2. 솔루션 파일을 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.
+2. 솔루션 파일을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.
 
-3. **솔루션 속성 페이지** 대화 상자의 **공용 속성**, **시작 프로젝트**에서 **여러 개의 시작 프로젝트**를 선택 합니다.
+3. 솔루션 **속성 페이지** 대화 상자에서 **공통 속성**, **시작 프로젝트**에서 여러 시작 프로젝트를 선택합니다. **Multiple startup projects:**
 
-4. **DCSwithDCR** 프로젝트 옆의 **동작** 드롭다운에서 **시작** 을 선택 합니다.
+4. **DCSwithDCR** 프로젝트 옆에서 **작업** 드롭다운에서 **시작을** 선택합니다.
 
-5. **Netdcs** 프로젝트 옆의 **동작** 드롭다운에서 **시작** 을 선택 합니다.
+5. **NetDCS** 프로젝트 옆에서 **작업** 드롭다운에서 **시작을** 선택합니다.
 
-6. **확인** 을 클릭 하 여 대화 상자를 닫습니다.
+6. **확인**을 클릭하여 대화 상자를 닫습니다.
 
 7. Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.
 
@@ -72,9 +72,9 @@ class MyDataContractResolver : DataContractResolver
 
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
->   
+>
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대한 WCF(Windows 통신 재단) 및 WF(Windows 워크플로우 재단) 샘플로](https://www.microsoft.com/download/details.aspx?id=21459) 이동하여 모든 WCF(Windows 통신 재단) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\NetDcSasDcSwithDCR`  

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e60f542f-6271-495b-a9e4-48553481c2a3
-ms.openlocfilehash: 0291b6684092ec15fc672c39c909caf7781194e3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bedeb4e9c510a3feeedc038e9c4cef6c4721e345
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783250"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149247"
 ---
 # <a name="performing-catalog-operations"></a>카탈로그 작업 수행
-CREATE TABLE 또는 CREATE PROCEDURE 문과 같이 데이터베이스 또는 카탈로그를 수정 하는 명령을 실행 하려면 적절 한 SQL 문과 **연결** 개체를 사용 하 여 **명령** 개체를 만듭니다. **Command** 개체의 **ExecuteNonQuery** 메서드를 사용 하 여 명령을 실행 합니다.  
+테이블 만들기 또는 프로시저 만들기 문과 같은 데이터베이스 또는 카탈로그를 수정하는 명령을 실행하려면 적절한 SQL 문과 **연결** 개체를 사용하여 **Command** 개체를 만듭니다. **Command** 개체의 **ExecuteNonQuery** 메서드를 사용 하 고 명령을 실행 합니다.  
   
  다음 코드 예제에서는 Microsoft SQL Server 데이터베이스에 저장 프로시저를 만듭니다.  
   
@@ -33,11 +33,11 @@ command.ExecuteNonQuery()
   
 ```csharp  
 // Assumes connection is a valid SqlConnection.  
-string queryString = "CREATE PROCEDURE InsertCategory  " +   
+string queryString = "CREATE PROCEDURE InsertCategory  " +
     "@CategoryName nchar(15), " +  
     "@Identity int OUT " +  
-    "AS " +   
-    "INSERT INTO Categories (CategoryName) VALUES(@CategoryName) " +   
+    "AS " +
+    "INSERT INTO Categories (CategoryName) VALUES(@CategoryName) " +
     "SET @Identity = @@Identity " +  
     "RETURN @@ROWCOUNT";  
   
@@ -45,7 +45,7 @@ SqlCommand command = new SqlCommand(queryString, connection);
 command.ExecuteNonQuery();  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [명령을 사용하여 데이터 수정](using-commands-to-modify-data.md)
 - [명령 및 매개 변수](commands-and-parameters.md)

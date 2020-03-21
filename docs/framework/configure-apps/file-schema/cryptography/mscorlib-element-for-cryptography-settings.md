@@ -8,31 +8,31 @@ helpviewer_keywords:
 - mscorlib element
 - <mscorlib> element
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
-ms.openlocfilehash: 4e2159cda5f35b5795804dede09ec17d07d71b23
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: d1d805f7154c18dba2dcd4eb7228cc200d8da811
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699741"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155183"
 ---
-# <a name="mscorlib-element-for-cryptography-settings"></a>암호화 설정에 대 한 mscorlib > 요소 \<
-[\<cryptographySettings > 요소](cryptographysettings-element.md)를 포함 합니다.  
+# <a name="mscorlib-element-for-cryptography-settings"></a>\<암호화 설정에 대한 mscorlib> 요소
+[ \<암호화를 포함설정> 요소입니다.](cryptographysettings-element.md)  
   
-[ **\<configuration>** ](../configuration-element.md)  
-**mscorlib >\<** &nbsp;&nbsp;  
+[**\<구성>**](../configuration-element.md)  
+&nbsp;&nbsp;**\<mscorlib>**  
   
 ## <a name="syntax"></a>구문  
   
 ```xml  
-      <mscorlib>   
+      <mscorlib>
 </mscorlib>  
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
- None.  
+ 없음  
   
 ### <a name="child-elements"></a>자식 요소  
   
@@ -47,7 +47,7 @@ ms.locfileid: "71699741"
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 **\<mscorlib >** 요소를 사용 하 여 암호화 클래스를 참조 하 고 런타임을 구성 하는 방법을 보여 줍니다. 그런 다음 문자열 "RSA"를 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> 메서드에 전달 하 고 <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> 메서드를 사용 하 여 `MyCryptoRSAClass` 개체를 반환할 수 있습니다.  
+ 다음 예제에서는 ** \<mscorlib>** 요소를 사용하여 암호화 클래스를 참조하고 런타임을 구성하는 방법을 보여 주며 있습니다. 그런 다음 문자열 "RSA"를 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> 메서드에 전달하고 <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> 메서드를 `MyCryptoRSAClass` 사용하여 개체를 반환할 수 있습니다.  
   
 ```xml  
 <configuration>  

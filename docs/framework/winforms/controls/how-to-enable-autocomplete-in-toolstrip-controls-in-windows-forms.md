@@ -12,22 +12,22 @@ helpviewer_keywords:
 - ToolStripComboBox class [Windows Forms], examples
 - ToolStrip control [Windows Forms], AutoComplete
 ms.assetid: fd66d085-1af1-45d4-930a-cde944da2e16
-ms.openlocfilehash: db411023ad624e4c3d60b09bdbd588c85f8e22d1
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 18b17aaea9d2354c03bb43f3fdd8d3779697cf58
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745511"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142020"
 ---
 # <a name="how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms"></a>방법: Windows Forms의 ToolStrip 컨트롤에 자동 완성 기능 활성화
-다음 절차에서는 <xref:System.Windows.Forms.ToolStripLabel>를 삭제 하 여 최근에 방문한 웹 사이트와 같은 항목 목록을 표시할 수 있는 <xref:System.Windows.Forms.ToolStripComboBox>와 결합 합니다. 사용자가 목록에 있는 항목 중 하나의 첫 문자와 일치 하는 문자를 입력 하면 항목이 즉시 표시 됩니다.  
+다음 절차는 최근에 <xref:System.Windows.Forms.ToolStripLabel> 방문한 <xref:System.Windows.Forms.ToolStripComboBox> 웹 사이트와 같은 항목 목록을 표시하기 위해 삭제할 수 있는 a와 결합합니다. 사용자가 목록의 항목 중 하나의 첫 번째 문자와 일치하는 문자를 입력하면 항목이 즉시 표시됩니다.  
   
 > [!NOTE]
-> 자동 완성 기능은 <xref:System.Windows.Forms.ComboBox> 및 <xref:System.Windows.Forms.TextBox>와 같은 일반적인 컨트롤에서 작동 하는 것과 동일한 방식으로 `ToolStrip` 컨트롤에서 작동 합니다.  
+> 자동 완성은 `ToolStrip` <xref:System.Windows.Forms.ComboBox> 와 같은 기존 컨트롤과 동일한 방식으로 <xref:System.Windows.Forms.TextBox>컨트롤과 함께 작동합니다.  
   
-### <a name="to-enable-autocomplete-in-a-toolstrip-control"></a>ToolStrip 컨트롤에서 자동 완성 기능을 사용 하도록 설정 하려면  
+### <a name="to-enable-autocomplete-in-a-toolstrip-control"></a>도구 스트립 컨트롤에서 자동 완성을 사용하려면  
   
-1. <xref:System.Windows.Forms.ToolStrip> 컨트롤을 만들고 여기에 항목을 추가 합니다.  
+1. 컨트롤을 <xref:System.Windows.Forms.ToolStrip> 만들고 컨트롤에 항목을 추가합니다.  
   
     ```vb  
     ToolStrip1 = New System.Windows.Forms.ToolStrip  
@@ -37,11 +37,11 @@ ms.locfileid: "76745511"
   
     ```csharp  
     toolStrip1 = new System.Windows.Forms.ToolStrip();  
-    toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[]   
+    toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[]
         {toolStripLabel1, toolStripComboBox1});  
     ```  
   
-2. 레이블의 <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> 속성을 설정 하 고 콤보 상자를 <xref:System.Windows.Forms.ToolStripItemOverflow.Never> 하 여 폼의 크기에 관계 없이 목록을 항상 사용할 수 있도록 합니다.  
+2. 양식의 <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> 크기에 관계없이 목록을 항상 사용할 <xref:System.Windows.Forms.ToolStripItemOverflow.Never> 수 있도록 레이블및 콤보 상자의 속성을 설정합니다.  
   
     ```vb  
     ToolStripLabel1.Overflow = _  
@@ -56,7 +56,7 @@ ms.locfileid: "76745511"
     toolStripComboBox1.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never  
     ```  
   
-3. <xref:System.Windows.Forms.ToolStripComboBox> 컨트롤의 Items 컬렉션에 단어를 추가 합니다.  
+3. 컨트롤의 Items 컬렉션에 <xref:System.Windows.Forms.ToolStripComboBox> 단어를 추가합니다.  
   
     ```vb  
     ToolStripComboBox1.Items.AddRange(New Object() {"First Item", _  
@@ -67,7 +67,7 @@ ms.locfileid: "76745511"
     toolStripComboBox1.Items.AddRange(new object[] {"First item", "Second item", "Third item"});  
     ```  
   
-4. 콤보 상자의 <xref:System.Windows.Forms.ComboBox.AutoCompleteMode%2A> 속성을 <xref:System.Windows.Forms.AutoCompleteMode.Append>로 설정 합니다.  
+4. 콤보 <xref:System.Windows.Forms.ComboBox.AutoCompleteMode%2A> 상자의 속성을 <xref:System.Windows.Forms.AutoCompleteMode.Append>으로 설정합니다.  
   
     ```vb  
     ToolStripComboBox1.AutoCompleteMode = _  
@@ -78,7 +78,7 @@ ms.locfileid: "76745511"
     toolStripComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;  
     ```  
   
-5. 콤보 상자의 <xref:System.Windows.Forms.ComboBox.AutoCompleteSource%2A> 속성을 <xref:System.Windows.Forms.AutoCompleteSource.ListItems>로 설정 합니다.  
+5. 콤보 <xref:System.Windows.Forms.ComboBox.AutoCompleteSource%2A> 상자의 속성을 <xref:System.Windows.Forms.AutoCompleteSource.ListItems>으로 설정합니다.  
   
     ```vb  
     ToolStripComboBox1.AutoCompleteSource = _  

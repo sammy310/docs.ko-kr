@@ -12,15 +12,15 @@ helpviewer_keywords:
 - time formatting
 - UTC formatting
 ms.assetid: c4a942bb-2651-4b65-8718-809f892a0659
-ms.openlocfilehash: 2fdace8a9c7bcc090fd801be3bd717e4a2b34a87
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: b01f030c474e426cb87fb907f99f241eeb76a7fd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217543"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174760"
 ---
 # <a name="datetimeinvalidlocalformat-mda"></a>dateTimeInvalidLocalFormat MDA
-UTC(협정 세계 표준시)로 저장된 `dateTimeInvalidLocalFormat` 인스턴스가 로컬 <xref:System.DateTime> 인스턴스에만 사용해야 하는 형식을 사용하여 형식이 지정되면 <xref:System.DateTime> MDA가 활성화됩니다. 미지정 또는 기본 <xref:System.DateTime> 인스턴스의 경우 이 MDA는 활성화되지 않습니다.  
+UTC(협정 세계 표준시)로 저장된 <xref:System.DateTime> 인스턴스가 로컬 <xref:System.DateTime> 인스턴스에만 사용해야 하는 형식을 사용하여 형식이 지정되면 `dateTimeInvalidLocalFormat` MDA가 활성화됩니다. 미지정 또는 기본 <xref:System.DateTime> 인스턴스의 경우 이 MDA는 활성화되지 않습니다.  
   
 ## <a name="symptom"></a>증상  
  애플리케이션이 로컬 형식을 사용하여 수동으로 UTC <xref:System.DateTime> 인스턴스를 직렬화하고 있습니다.  
@@ -41,7 +41,7 @@ DateTime myDateTime = DateTime.UtcNow;
 Serialize(myDateTime.ToString("yyyy-MM-dd'T'HH:mm:ss.fffffffZ"));  
 ```  
   
- 인스턴스가 로컬, UTC 또는 미지정인지 여부에 관계없이 올바르게 직렬화되는 <xref:System.DateTime> 속성을 사용하여 <xref:System.DateTime.Kind%2A>을 직렬화하는 “o” 형식이 있습니다.  
+ 인스턴스가 로컬, UTC 또는 미지정인지 여부에 관계없이 올바르게 직렬화되는 <xref:System.DateTime.Kind%2A> 속성을 사용하여 <xref:System.DateTime>을 직렬화하는 “o” 형식이 있습니다.  
   
 ```csharp
 DateTime myDateTime = DateTime.UtcNow;  
@@ -65,7 +65,7 @@ Serialize(myDateTime.ToString("o"));
 ```  
   
 ## <a name="example"></a>예제  
- 다음 방식으로 <xref:System.DateTime> 또는 <xref:System.Xml.XmlConvert>을 사용하여 UTC <xref:System.Data.DataSet> 값을 간접적으로 직렬화하고 있는 애플리케이션을 고려해 보세요.  
+ 다음 방식으로 <xref:System.Xml.XmlConvert> 또는 <xref:System.Data.DataSet>을 사용하여 UTC <xref:System.DateTime> 값을 간접적으로 직렬화하고 있는 애플리케이션을 고려해 보세요.  
   
 ```csharp
 DateTime myDateTime = DateTime.UtcNow;  
@@ -74,13 +74,13 @@ String serialized = XMLConvert.ToString(myDateTime);
   
  <xref:System.Xml.XmlConvert> 및 <xref:System.Data.DataSet> serialization은 기본적으로 serialization에 로컬 형식을 사용합니다. UTC와 같은 다른 종류의 <xref:System.DateTime> 값을 직렬화하려면 추가 옵션이 필요합니다.  
   
- 이 특정 예제에서는 `XmlDateTimeSerializationMode.RoundtripKind`를 `ToString`의 `XmlConvert` 호출에 전달합니다. 이렇게 하면 데이터가 UTC 시간으로 직렬화됩니다.  
+ 이 특정 예제에서는 `XmlDateTimeSerializationMode.RoundtripKind`를 `XmlConvert`의 `ToString` 호출에 전달합니다. 이렇게 하면 데이터가 UTC 시간으로 직렬화됩니다.  
   
- <xref:System.Data.DataSet>을 사용할 경우 <xref:System.Data.DataColumn.DateTimeMode%2A>의 <xref:System.Data.DataColumn> 속성을 <xref:System.Data.DataSetDateTime.Utc>로 설정합니다.  
+ <xref:System.Data.DataSet>을 사용할 경우 <xref:System.Data.DataColumn>의 <xref:System.Data.DataColumn.DateTimeMode%2A> 속성을 <xref:System.Data.DataSetDateTime.Utc>로 설정합니다.  
   
 ```csharp
 DateTime myDateTime = DateTime.UtcNow;  
-String serialized = XmlConvert.ToString(myDateTime,   
+String serialized = XmlConvert.ToString(myDateTime,
     XmlDateTimeSerializationMode.RoundtripKind);  
 ```  
   

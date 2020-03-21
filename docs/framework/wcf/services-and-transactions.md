@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - service contracts [WCF], designing services and transactions
 ms.assetid: 864813ff-2709-4376-912d-f5c8d318c460
-ms.openlocfilehash: 9110198fa64e43c20e1e6ba0dcf158dddeac93a6
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 4c59b83448f5a2c448843c12dae99c442441441f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321143"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143280"
 ---
 # <a name="services-and-transactions"></a>서비스 및 트랜잭션
-WCF (Windows Communication Foundation) 응용 프로그램은 클라이언트 내에서 트랜잭션을 시작 하 고 서비스 작업 내에서 트랜잭션을 조정할 수 있습니다. 클라이언트는 트랜잭션을 초기화하고 여러 서비스 작업을 호출하며 서비스 작업이 하나의 단위로 커밋되는지 또는 롤백되는지 확인합니다.  
+WCF(Windows 통신 재단) 응용 프로그램은 클라이언트 내에서 트랜잭션을 시작하고 서비스 작업 내에서 트랜잭션을 조정할 수 있습니다. 클라이언트는 트랜잭션을 초기화하고 여러 서비스 작업을 호출하며 서비스 작업이 하나의 단위로 커밋되는지 또는 롤백되는지 확인합니다.  
   
- 클라이언트 트랜잭션이 필요한 서비스 작업에 대해 <xref:System.ServiceModel.ServiceBehaviorAttribute>를 지정하고 해당 <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> 및 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 속성을 설정하여 서비스 계약에 트랜잭션 동작을 사용하도록 설정할 수 있습니다. <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 매개 변수는 처리되지 않은 예외가 throw되지 않을 경우 메서드가 실행하는 트랜잭션을 자동으로 완료할지 여부를 지정합니다. 이러한 특성에 대 한 자세한 내용은 [ServiceModel 트랜잭션 특성](./feature-details/servicemodel-transaction-attributes.md)을 참조 하세요.  
+ 클라이언트 트랜잭션이 필요한 서비스 작업에 대해 <xref:System.ServiceModel.ServiceBehaviorAttribute>를 지정하고 해당 <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> 및 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 속성을 설정하여 서비스 계약에 트랜잭션 동작을 사용하도록 설정할 수 있습니다. <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> 매개 변수는 처리되지 않은 예외가 throw되지 않을 경우 메서드가 실행하는 트랜잭션을 자동으로 완료할지 여부를 지정합니다. 이러한 특성에 대한 자세한 내용은 [ServiceModel 트랜잭션 특성을](./feature-details/servicemodel-transaction-attributes.md)참조하십시오.  
   
  데이터베이스 업데이트 기록처럼 서비스 작업에서 수행되고 리소스 관리자가 관리하는 작업은 클라이언트의 트랜잭션에 포함됩니다.  
   
@@ -32,7 +32,7 @@ public class CalculatorService: ICalculatorLog
         return n1 + n2;  
     }  
   
-    [OperationBehavior(TransactionScopeRequired = true,   
+    [OperationBehavior(TransactionScopeRequired = true,
                                TransactionAutoComplete = true)]  
     public double Subtract(double n1, double n2)  
     {  
@@ -40,7 +40,7 @@ public class CalculatorService: ICalculatorLog
         return n1 - n2;  
     }  
   
-    [OperationBehavior(TransactionScopeRequired = true,   
+    [OperationBehavior(TransactionScopeRequired = true,
                                        TransactionAutoComplete = true)]  
     public double Multiply(double n1, double n2)  
     {  
@@ -48,7 +48,7 @@ public class CalculatorService: ICalculatorLog
         return n1 * n2;  
     }  
   
-    [OperationBehavior(TransactionScopeRequired = true,   
+    [OperationBehavior(TransactionScopeRequired = true,
                                        TransactionAutoComplete = true)]  
     public double Divide(double n1, double n2)  
     {  
@@ -59,13 +59,13 @@ public class CalculatorService: ICalculatorLog
 }  
 ```  
   
- 다음 샘플과 같이 ws-atomictransaction 프로토콜을 사용 하도록 클라이언트 및 서비스 바인딩을 구성 하 고 [\<transactionFlow >](../configure-apps/file-schema/wcf/transactionflow.md) 요소를 `true`로 설정 하 여 트랜잭션과 트랜잭션 흐름을 사용 하도록 설정할 수 있습니다. 구성.  
+ WS-AtomicTransaction 프로토콜을 사용하도록 클라이언트 및 서비스 바인딩을 구성하고 다음 샘플 구성과 같이 [ \<트랜잭션](../configure-apps/file-schema/wcf/transactionflow.md) 흐름 `true`>요소를 로 설정하여 트랜잭션 및 트랜잭션 흐름을 활성화할 수 있습니다.  
   
 ```xml  
 <client>  
-    <endpoint address="net.tcp://localhost/ServiceModelSamples/service"   
-          binding="netTcpBinding"   
-          bindingConfiguration="netTcpBindingWSAT"   
+    <endpoint address="net.tcp://localhost/ServiceModelSamples/service"
+          binding="netTcpBinding"
+          bindingConfiguration="netTcpBindingWSAT"
           contract="Microsoft.ServiceModel.Samples.ICalculatorLog" />  
 </client>  
   
@@ -88,8 +88,8 @@ using (TransactionScope ts = new TransactionScope(TransactionScopeOption.Require
 }  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [System.ServiceModel의 트랜잭션 지원](./feature-details/transactional-support-in-system-servicemodel.md)
 - [트랜잭션 모델](./feature-details/transaction-models.md)
-- [WS 트랜잭션 흐름](./samples/ws-transaction-flow.md)
+- [WS Transaction Flow](./samples/ws-transaction-flow.md)

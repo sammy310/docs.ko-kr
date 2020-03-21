@@ -2,12 +2,12 @@
 title: TREAT(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b77f156-55de-4cb4-8154-87f707d4c635
-ms.openlocfilehash: 38099fa83ed78b40d46faeb5e617157f7aa7c1a1
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 06c4200434f443446e8981dcefe2baf43b1af4b0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319258"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149897"
 ---
 # <a name="treat-entity-sql"></a>TREAT(Entity SQL)
 특정 기본 형식의 개체를 지정된 파생 형식의 개체로 처리합니다.  
@@ -31,10 +31,10 @@ TREAT ( expression as type)
 > [!NOTE]
 > 지정된 식이 지정된 데이터 형식의 하위 형식이어야 하거나, 데이터 형식이 식의 하위 형식이어야 합니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  지정된 데이터 형식의 값입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  TREAT는 관련 클래스 간에 업캐스팅을 수행하는 데 사용됩니다. 예를 들어, `Employee` 가 `Person` 에서 파생되고 p가 `Person`형식인 경우 `TREAT(p AS NamespaceName.Employee)` 는 일반 `Person` 인스턴스를 `Employee`로 업캐스팅합니다. 다시 말해서, p를 `Employee`로 취급할 수 있게 됩니다.  
   
  TREAT는 다음과 같이 쿼리할 수 있는 상속 시나리오에서 사용됩니다.  
@@ -42,22 +42,22 @@ TREAT ( expression as type)
 ```sql  
 SELECT TREAT(p AS NamespaceName.Employee)  
 FROM ContainerName.Person AS p  
-WHERE p IS OF (NamespaceName.Employee)   
+WHERE p IS OF (NamespaceName.Employee)
 ```  
   
  이 쿼리는 `Person` 엔터티를 `Employee` 형식으로 업캐스팅합니다. p의 값이 실제로 `Employee`형식이 아닌 경우 식의 값은 `null`입니다.  
   
 > [!NOTE]
-> 지정 된 식 `Employee`은 지정 된 데이터 형식 `Person`의 하위 형식 이어야 합니다. 그렇지 않으면 데이터 형식이 식의 하위 형식 이어야 합니다. 그렇지 않으면 식에서 컴파일 시간 오류가 발생합니다.  
+> 지정된 식은 `Employee` 지정된 데이터 형식의 `Person`하위 유형이거나 데이터 형식은 식의 하위 유형이어야 합니다. 그렇지 않으면 식에서 컴파일 시간 오류가 발생합니다.  
   
  다음 표에서는 일반 패턴 및 비교적 특수한 패턴에 대한 TREAT의 동작을 보여 줍니다. 공급자 호출 이전에 모든 예외가 클라이언트 측에서 throw됩니다.  
   
-|무늬|동작|  
+|패턴|동작|  
 |-------------|--------------|  
-|`TREAT (null AS EntityType)`|`DbNull`을 반환합니다.|  
+|`TREAT (null AS EntityType)`|`DbNull`를 반환합니다.|  
 |`TREAT (null AS ComplexType)`|예외를 throw합니다.|  
 |`TREAT (null AS RowType)`|예외를 throw합니다.|  
-|`TREAT (EntityType AS EntityType)`|`EntityType` 또는 `null`을 반환합니다.|  
+|`TREAT (EntityType AS EntityType)`|`EntityType` 또는 `null`를 반환합니다.|  
 |`TREAT (ComplexType AS ComplexType)`|예외를 throw합니다.|  
 |`TREAT (RowType AS RowType)`|예외를 throw합니다.|  
   
@@ -66,7 +66,7 @@ WHERE p IS OF (NamespaceName.Employee)
   
  [!code-sql[DP EntityServices Concepts#TREAT_ISOF](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#treat_isof)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [엔터티 SQL 참조](entity-sql-reference.md)
 - [null 허용 구조적 형식](nullable-structured-types-entity-sql.md)

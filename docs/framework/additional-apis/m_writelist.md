@@ -1,5 +1,5 @@
 ---
-title: 연결. m_WriteList 필드
+title: 연결.m_WriteList 필드
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 235503c1-1d01-4f59-895f-ae2cf15b3345
-ms.openlocfilehash: 22f939d13cceac4d1c0b39e9e8fe20cdc0ab9387
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 6c60831ddf23ce8ac9afcf244383d24732c3ef8b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77214911"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155839"
 ---
-# <a name="connectionm_writelist-field"></a>연결 m\_WriteList 필드
+# <a name="connectionm_writelist-field"></a>연결.m\_쓰기 목록 필드
 
-`Connection.m_WriteList`는 HTTP를 통해 전송 되기 위해 큐에 대기 되는 <xref:System.Net.HttpWebRequest> 개체의 <xref:System.Collections.ArrayList>입니다.
+`Connection.m_WriteList`은 <xref:System.Collections.ArrayList> HTTP를 통해 전송되도록 큐에 대기중인 개체의 <xref:System.Net.HttpWebRequest> 입니다.
 
 ## <a name="syntax"></a>구문
   
@@ -28,14 +28,14 @@ private ArrayList m_WriteList
 ```
 
 > [!WARNING]
-> `Connection.m_WriteList` 필드는 private 이며 코드에서 직접 사용할 수 없습니다.
-> 
-> Microsoft는 어떤 경우에도 프로덕션 응용 프로그램에서이 필드를 사용 하는 것을 지원 하지 않습니다.
+> 필드는 `Connection.m_WriteList` 비공개이며 코드에서 직접 사용할 수 없습니다.
+>
+> Microsoft는 어떠한 상황에서도 프로덕션 응용 프로그램에서 이 필드의 사용을 지원하지 않습니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**네임 스페이스:** <xref:System.Net>
+**네임스페이스:**<xref:System.Net>
 
-**어셈블리:** 시스템 (system.string)
+**어셈블리:** 시스템(시스템.dll)
 
-**.NET Framework 버전:** 2.0부터 사용할 수 있습니다.
+**.NET 프레임워크 버전:** 2.0 부터 사용할 수 있습니다.

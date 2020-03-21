@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-ms.openlocfilehash: 706dbda98d0e1674b76ebc6a25c7a34746720ea2
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 5ab829993b8f8faa6dcb91d3f23e8442b8aa95bd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70247359"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79148415"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>N 계층 애플리케이션에서 데이터 검색 및 CUD 작업(LINQ to SQL)
 Customers 또는 Orders와 같은 엔터티 개체를 네트워크상의 클라이언트로 serialize하면 해당 엔터티가 원래 데이터 컨텍스트에서 분리됩니다. 데이터 컨텍스트에서는 분리된 엔터티 개체에 대해서는 변경 내용이나 다른 개체와의 관계를 더 이상 추적하지 않습니다. 이러한 특징은 클라이언트에서 데이터를 읽기만 하는 경우에는 문제가 되지 않습니다. 또한 클라이언트가 데이터베이스에 새 행을 추가할 수 있게 하는 것도 비교적 간단합니다. 그러나 애플리케이션에서 클라이언트가 데이터를 업데이트하거나 삭제해야 하는 경우에는 <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>를 호출하기 전에 새 데이터 컨텍스트에 엔터티를 연결해야 합니다. 또한 원래 값을 기준으로 낙관적 동시성 검사를 사용하는 경우에는 어떤 방법으로든 데이터베이스에 원래 엔터티와 수정된 엔터티를 모두 제공해야 합니다. `Attach` 메서드는 분리된 엔터티를 새 데이터 컨텍스트에 연결하기 위해 제공됩니다.  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 엔터티 대신 프록시 개체를 serialize하는 경우에도 데이터베이스에 데이터를 전송하려면 DAL(데이터 액세스 계층)에서 엔터티를 만들어 새 <xref:System.Data.Linq.DataContext?displayProperty=nameWithType>에 연결해야 합니다.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 엔터티가 serialize되는 방법은 고려하지 않습니다. 개체 관계형 디자이너 및 SQLMetal 도구를 사용 하 여 WCF (Windows Communication Foundation) [를 사용 하 여 serialize 할 수 있는 클래스를 생성 하는 방법에 대 한 자세한 내용은 방법: 엔터티를 Serialize](how-to-make-entities-serializable.md)가능 하 게 만듭니다.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 엔터티가 serialize되는 방법은 고려하지 않습니다. 개체 관계형 디자이너 및 SQLMetal 도구를 사용하여 WCF(Windows 통신 재단)를 사용하여 직렬화할 수 있는 클래스를 생성하는 방법에 대한 자세한 내용은 [엔터티를 직렬화할 수 있도록 하는 방법을](how-to-make-entities-serializable.md)참조하십시오.  
   
 > [!NOTE]
-> `Attach` 메서드는 새 엔터티 또는 deserialize된 엔터티에 대해서만 호출해야 합니다. 엔터티는 serialization을 통해서만 원래 데이터 컨텍스트로부터 분리될 수 있습니다. 이전 데이터 컨텍스트에서 지연 로더가 있는 분리되지 않은 엔터티를 새 데이터 컨텍스트에 연결하려고 하면 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 예외를 throw합니다. 서로 다른 두 데이터 컨텍스트의 지연 로더가 있는 엔터티에 대해 삽입, 업데이트 및 삭제 작업을 수행하면 예기치 않은 결과가 발생할 수 있습니다. 지연 된 로더는 지연 된 로더에 대 한 자세한 내용은 [지연 된 로드 및 즉시 로드](deferred-versus-immediate-loading.md)를 참조 하세요.  
+> `Attach` 메서드는 새 엔터티 또는 역직렬화된 엔터티에 대해서만 호출해야 합니다. 엔터티는 serialization을 통해서만 원래 데이터 컨텍스트로부터 분리될 수 있습니다. 이전 데이터 컨텍스트에서 지연 로더가 있는 분리되지 않은 엔터티를 새 데이터 컨텍스트에 연결하려고 하면 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 예외를 throw합니다. 서로 다른 두 데이터 컨텍스트의 지연 로더가 있는 엔터티에 대해 삽입, 업데이트 및 삭제 작업을 수행하면 예기치 않은 결과가 발생할 수 있습니다. 지연 된 로더에 대 한 자세한 내용은 [지연 된 대 즉시 로드](deferred-versus-immediate-loading.md)를 참조 하십시오.  
   
 ## <a name="retrieving-data"></a>데이터 검색  
   
@@ -59,15 +59,15 @@ End Function
 private void GetProdsByCat_Click(object sender, EventArgs e)  
 {  
     // Create the WCF client proxy.  
-    NorthwindServiceReference.Service1Client proxy =   
+    NorthwindServiceReference.Service1Client proxy =
     new NorthwindClient.NorthwindServiceReference.Service1Client();  
   
     // Call the method on the service.  
-    NorthwindServiceReference.Product[] products =   
+    NorthwindServiceReference.Product[] products =
     proxy.GetProductsByCategory(1);  
   
-    // If the database uses original values for concurrency checks,   
-    // the client needs to store them and pass them back to the   
+    // If the database uses original values for concurrency checks,
+    // the client needs to store them and pass them back to the
     // middle tier along with the new values when updating data.  
     foreach (var v in products)  
     {  
@@ -107,7 +107,7 @@ End Function
 ```csharp  
 public IEnumerable<Product> GetProductsByCategory(int categoryID)  
 {  
-    NorthwindClasses1DataContext db =   
+    NorthwindClasses1DataContext db =
     new NorthwindClasses1DataContext(connectionString);  
   
     IEnumerable<Product> productQuery =  
@@ -115,13 +115,13 @@ public IEnumerable<Product> GetProductsByCategory(int categoryID)
     where prod.CategoryID == categoryID  
     select prod;  
   
-    return productQuery.AsEnumerable();   
+    return productQuery.AsEnumerable();
 }  
 ```  
   
  데이터 컨텍스트 인스턴스는 하나의 "작업 단위" 동안 유지되어야 합니다. 느슨하게 결합된 환경의 경우 작업 단위는 `SubmitChanges`에 대한 호출 하나가 포함된 낙관적 트랜잭션과 같이 일반적으로 크기가 작습니다. 이 때문에 데이터 컨텍스트는 메서드 범위에서 만들어지고 삭제됩니다. 작업 단위에 비즈니스 규칙 논리에 대한 호출이 포함된 경우에는 해당 작업 전체 동안 `DataContext` 인스턴스를 유지할 수 있습니다. 어떤 경우든 `DataContext` 인스턴스는 임의 개수의 트랜잭션에서 장기간 유지할 수 없습니다.  
   
- 이 메서드는 Product 개체를 반환하고, 각 Product에 연결된 Order_Detail 개체의 컬렉션은 반환하지 않습니다. <xref:System.Data.Linq.DataLoadOptions> 개체를 사용하면 이 기본 동작을 변경할 수 있습니다. 자세한 내용은 [방법: 검색](how-to-control-how-much-related-data-is-retrieved.md)되는 관련 데이터의 양을 제어 합니다.  
+ 이 메서드는 Product 개체를 반환하고, 각 Product에 연결된 Order_Detail 개체의 컬렉션은 반환하지 않습니다. <xref:System.Data.Linq.DataLoadOptions> 개체를 사용하면 이 기본 동작을 변경할 수 있습니다. 자세한 내용은 [검색되는 관련 데이터의 양을 제어하는 방법:](how-to-control-how-much-related-data-is-retrieved.md)을 참조하십시오.  
   
 ## <a name="inserting-data"></a>데이터 삽입  
  새 개체를 삽입할 경우 프레젠테이션 계층에서는 중간 계층 인터페이스에서 관련 메서드를 호출하여 삽입할 새 개체를 전달합니다. 경우에 따라서는 클라이언트가 일부 값만 전달하고 중간 계층에서 개체를 직접 만들도록 하는 것이 더 효율적일 수 있습니다.  
@@ -157,7 +157,7 @@ End Sub
 ## <a name="deleting-data"></a>데이터 삭제  
  데이터베이스에서 기존 개체를 삭제할 경우 프레젠테이션 계층에서는 중간 계층 인터페이스에서 관련 메서드를 호출하고, 삭제할 개체의 원래 값이 포함된 복사본을 전달합니다.  
   
- 삭제 작업에는 낙관적 동시성 검사가 사용되기 때문에 삭제할 개체를 새 데이터 컨텍스트에 먼저 연결해야 합니다. 이 예제에서는 `Boolean` 매개 변수를 `false`로 설정하여 개체에 타임스탬프(RowVersion)가 없음을 나타냅니다. 그러나 데이터베이스 테이블에서 각 레코드에 대해 타임스탬프를 생성하는 경우 클라이언트측에서는 동시성 검사가 훨씬 간단해집니다. 즉, 원래 개체 또는 수정된 개체 중 하나를 전달하고 `Boolean` 매개 변수를 `true`로 설정하기만 하면 됩니다. 그러나 어떤 경우든 중간 계층에서는 일반적으로 <xref:System.Data.Linq.ChangeConflictException>을 catch해야 합니다. 낙관적 동시성 충돌 [을 처리 하는 방법에 대 한 자세한 내용은 낙관적 동시성: 개요](optimistic-concurrency-overview.md).  
+ 삭제 작업에는 낙관적 동시성 검사가 사용되기 때문에 삭제할 개체를 새 데이터 컨텍스트에 먼저 연결해야 합니다. 이 예제에서는 `Boolean` 매개 변수를 `false`로 설정하여 개체에 타임스탬프(RowVersion)가 없음을 나타냅니다. 그러나 데이터베이스 테이블에서 각 레코드에 대해 타임스탬프를 생성하는 경우 클라이언트측에서는 동시성 검사가 훨씬 간단해집니다. 즉, 원래 개체 또는 수정된 개체 중 하나를 전달하고 `Boolean` 매개 변수를 `true`로 설정하기만 하면 됩니다. 그러나 어떤 경우든 중간 계층에서는 일반적으로 <xref:System.Data.Linq.ChangeConflictException>을 catch해야 합니다. 낙관적 동시성 충돌을 처리하는 방법에 대한 자세한 내용은 [낙관적 동시성: 개요를](optimistic-concurrency-overview.md)참조하십시오.  
   
  연결된 테이블에 외래 키 제약 조건이 있는 엔터티를 삭제할 경우에는 해당 <xref:System.Data.Linq.EntitySet%601> 컬렉션에 있는 모든 개체를 먼저 삭제해야 합니다.  
   
@@ -218,7 +218,7 @@ public void DeleteOrder(Order order)
   
  Customer 및 Customer와 연결된 Order 개체의 컬렉션과 같이 엔터티와 해당 관계에 대해 업데이트나 삭제 작업을 수행할 수도 있습니다. 클라이언트에서 엔터티 개체의 그래프와 해당 자식(`EntitySet`) 컬렉션을 수정할 경우 낙관적 동시성 검사에 원래 값이 필요하면 클라이언트에서는 각 엔터티와 <xref:System.Data.Linq.EntitySet%601> 개체의 원래 값을 제공해야 합니다. 클라이언트에서 한 번의 메서드 호출로 관련된 업데이트, 삭제 및 삽입을 수행하려면 각 엔터티에 대해 수행할 작업 유형을 메서드 안에 지정할 수 있어야 합니다. 그런 다음 <xref:System.Data.Linq.ITable.Attach%2A>를 호출하기 전에 중간 계층에서 적절한 <xref:System.Data.Linq.ITable.InsertOnSubmit%2A> 메서드를 호출한 후 각 엔터티에 대해 <xref:System.Data.Linq.ITable.DeleteAllOnSubmit%2A>, <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> 또는 `Attach`(삽입의 경우 <xref:System.Data.Linq.DataContext.SubmitChanges%2A>가 필요하지 않음)을 호출해야 합니다. 업데이트를 시도하기 전에 원래 값을 가져오기 위한 방법으로 데이터베이스에서 데이터를 검색하지 마세요.  
   
- 낙관적 동시성 [에 대 한 자세한 내용은 낙관적 동시성: 개요](optimistic-concurrency-overview.md). 낙관적 동시성 변경 충돌을 [해결 하는 방법에 대 한 자세한 내용은 방법: 변경 충돌](how-to-manage-change-conflicts.md)을 관리 합니다.  
+ 낙관적 동시성에 대한 자세한 내용은 [낙관적 동시성: 개요를](optimistic-concurrency-overview.md)참조하십시오. 낙관적 동시성 변경 충돌 해결에 대한 자세한 내용은 [방법: 변경 충돌 관리](how-to-manage-change-conflicts.md)를 참조하십시오.  
   
  다음 예제에서는 각 시나리오를 보여 줍니다.  
   
@@ -369,7 +369,7 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
             // is appropriate for your application.  
             // For more information, see the MSDN article  
             // How to: Manage Change Conflicts (LINQ to SQL)/  
-        }   
+        }
     }  
 }  
 ```  
@@ -391,7 +391,7 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
   
  이러한 필수 멤버가 하나라도 없으면 <xref:System.Data.Linq.ChangeConflictException>를 호출했을 때 <xref:System.Data.Linq.DataContext.SubmitChanges%2A>("행이 없거나 변경되었습니다.")이 throw됩니다.  
   
-### <a name="state"></a>State  
+### <a name="state"></a>시스템 상태  
  엔터티 개체를 <xref:System.Data.Linq.DataContext> 인스턴스에 연결하면 개체가 `PossiblyModified` 상태가 됩니다. 다음과 같은 세 가지 방법을 사용하여 연결된 개체를 강제로 `Modified` 상태로 만들 수 있습니다.  
   
 1. 개체를 수정되지 않은 상태로 연결한 다음 필드를 직접 수정합니다.  
@@ -400,13 +400,13 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
   
 3. true로 설정된 두 번째 부울 매개 변수를 사용하는 <xref:System.Data.Linq.Table%601.Attach%2A> 오버로드와 연결합니다. 이렇게 하면 원래 값을 제공하지 않고도 수정된 개체를 변경 추적기에서 인식할 수 있습니다. 이 방법을 사용하려면 개체에 버전/타임스탬프 필드가 있어야 합니다.  
   
- 자세한 내용은 [개체 상태 및 변경 내용 추적](object-states-and-change-tracking.md)을 참조 하세요.  
+ 자세한 내용은 [개체 상태 및 변경 사항 추적](object-states-and-change-tracking.md)을 참조하십시오.  
   
  연결하려는 개체와 ID가 동일한 엔터티 개체가 ID 캐시에 이미 있으면 <xref:System.Data.Linq.DuplicateKeyException>이 throw됩니다.  
   
  개체의 `IEnumerable` 집합과 연결하면 기존 키가 있을 경우 <xref:System.Data.Linq.DuplicateKeyException>이 throw되고 나머지 개체는 연결되지 않습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [LINQ to SQL을 사용한 N 계층 및 원격 응용 프로그램](n-tier-and-remote-applications-with-linq-to-sql.md)
+- [LINQ to SQL을 사용한 N 계층 및 원격 애플리케이션](n-tier-and-remote-applications-with-linq-to-sql.md)
 - [배경 정보](background-information.md)

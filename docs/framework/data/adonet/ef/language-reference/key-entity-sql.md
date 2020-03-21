@@ -2,12 +2,12 @@
 title: KEY(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cbaa97a8-c89c-4460-8c74-00474695789f
-ms.openlocfilehash: 14c0b5d273b26c71c9c63e8bbbcef863ac95a5f3
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 894a9d41aa3a14ad66b537433aa315823a299f95
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319706"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150171"
 ---
 # <a name="key-entity-sql"></a>KEY(Entity SQL)
 참조 또는 엔터티 식의 키를 추출합니다.  
@@ -18,13 +18,13 @@ ms.locfileid: "72319706"
 KEY(createref_expression)  
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  엔터티 키에는 지정한 엔터티 또는 엔터티 참조의 올바른 순서대로 키 값이 포함됩니다. 여러 엔터티 집합이 같은 형식을 기반으로 할 수 있으므로 동일한 키가 각 엔터티 집합에 나타날 수 있습니다. 고유한 참조를 만들려면 `REF`를 사용합니다. KEY 연산자의 반환 형식은 엔터티의 각 키에 해당하는 필드가 같은 순서대로 포함된 행 형식입니다.  
   
  다음 예제에서 Key 연산자는 BadOrder 엔터티에 대한 참조를 전달하고 해당 참조의 키 부분을 반환합니다. 이 경우 `Id` 속성에 해당하는 필드 한 개만 포함된 레코드 형식을 반환합니다.  
   
 ```sql  
-select Key( CreateRef(LOB.BadOrders, row(o.Id)) )   
+select Key( CreateRef(LOB.BadOrders, row(o.Id)) )
 from LOB.Orders as o  
 ```  
   
@@ -37,9 +37,9 @@ from LOB.Orders as o
   
  [!code-sql[DP EntityServices Concepts#KEY](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#key)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [엔터티 SQL 참조](entity-sql-reference.md)
 - [CREATEREF](createref-entity-sql.md)
-- [REF](ref-entity-sql.md)
+- [Ref](ref-entity-sql.md)
 - [DEREF](deref-entity-sql.md)

@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 90820e49-9d46-41f6-9a3d-6c0741bbd8eb
-ms.openlocfilehash: 51ea09965c423f04c220260248c3501e061820cb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7c81619bf4ac6ed084ea63349345dbf3b7f139b0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784145"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150690"
 ---
 # <a name="dataview-performance"></a>DataView 성능
 이 항목에서는 <xref:System.Data.DataView.Find%2A> 클래스의 <xref:System.Data.DataView.FindRows%2A> 및 <xref:System.Data.DataView> 메서드를 사용하여 웹 애플리케이션에서 <xref:System.Data.DataView>를 캐시할 때 얻을 수 있는 성능상의 이점에 대해 설명합니다.  
   
 ## <a name="find-and-findrows"></a>Find 및 FindRows  
- <xref:System.Data.DataView>는 인덱스를 구성합니다. 인덱스에는 테이블이나 뷰에 있는 하나 이상의 열로 작성되는 키가 포함됩니다. 이러한 키는 <xref:System.Data.DataView>를 사용하여 키 값과 연결된 행을 빠르고 효과적으로 찾을 수 있는 구조체에 저장됩니다. 필터링 및 정렬과 같이 인덱스를 사용 하는 연산은 상당한 성능 향상을 참조 하세요. <xref:System.Data.DataView>의 인덱스는 <xref:System.Data.DataView>가 만들어지거나 정렬 또는 필터링 정보가 수정될 때 작성됩니다. <xref:System.Data.DataView>를 만든 다음 정렬 또는 필터링 정보를 설정하면 <xref:System.Data.DataView>가 만들어질 때와 정렬 또는 필터 속성이 수정될 때 각각 한 번씩 인덱스가 작성되므로 적어도 두 개의 인덱스가 작성됩니다. 을 사용 <xref:System.Data.DataView>하 여 필터링 하 고 정렬 하는 방법에 대 한 자세한 내용은 [dataview를 사용 하 여 필터링](filtering-with-dataview-linq-to-dataset.md) 및 [dataview로 정렬](sorting-with-dataview-linq-to-dataset.md)  
+ <xref:System.Data.DataView>는 인덱스를 구성합니다. 인덱스에는 테이블이나 뷰에 있는 하나 이상의 열로 작성되는 키가 포함됩니다. 이러한 키는 <xref:System.Data.DataView>를 사용하여 키 값과 연결된 행을 빠르고 효과적으로 찾을 수 있는 구조체에 저장됩니다. 필터링 및 정렬과 같은 인덱스를 사용하는 작업은 성능이 크게 향상됩니다. <xref:System.Data.DataView>의 인덱스는 <xref:System.Data.DataView>가 만들어지거나 정렬 또는 필터링 정보가 수정될 때 작성됩니다. <xref:System.Data.DataView>를 만든 다음 정렬 또는 필터링 정보를 설정하면 <xref:System.Data.DataView>가 만들어질 때와 정렬 또는 필터 속성이 수정될 때 각각 한 번씩 인덱스가 작성되므로 적어도 두 개의 인덱스가 작성됩니다. 을 사용하여 <xref:System.Data.DataView>필터링 및 정렬에 대한 자세한 내용은 [DataView를 사용하여 필터링](filtering-with-dataview-linq-to-dataset.md) 및 [DataView를 사용하여 정렬을](sorting-with-dataview-linq-to-dataset.md)참조하세요.  
   
- 데이터의 하위 집합에 대한 동적 뷰를 제공하는 것과는 반대로 데이터에 대한 특정 쿼리 결과를 반환하려는 경우 <xref:System.Data.DataView.Find%2A> 속성을 설정하는 대신 <xref:System.Data.DataView.FindRows%2A>의 <xref:System.Data.DataView> 또는 <xref:System.Data.DataView.RowFilter%2A> 메서드를 사용할 수 있습니다. <xref:System.Data.DataView.RowFilter%2A> 속성은 바인딩된 컨트롤이 필터링된 결과를 표시하는 데이터 바인딩된 애플리케이션에 가장 적합합니다. <xref:System.Data.DataView.RowFilter%2A> 속성을 설정하면 데이터의 인덱스가 다시 작성되므로 애플리케이션에 오버헤드가 발생하여 성능이 저하됩니다. <xref:System.Data.DataView.Find%2A> 및 <xref:System.Data.DataView.FindRows%2A> 메서드는 인덱스를 다시 작성하지 않고 현재 인덱스를 사용합니다. <xref:System.Data.DataView.Find%2A> 또는 <xref:System.Data.DataView.FindRows%2A>를 한 번만 호출할 경우에는 기존 <xref:System.Data.DataView>를 사용해야 합니다. <xref:System.Data.DataView.Find%2A> 또는 <xref:System.Data.DataView.FindRows%2A>를 여러 번 호출할 경우에는 새 <xref:System.Data.DataView>를 만들어서 검색하려는 열의 인덱스를 다시 작성한 다음 <xref:System.Data.DataView.Find%2A> 또는 <xref:System.Data.DataView.FindRows%2A> 메서드를 호출해야 합니다. <xref:System.Data.DataView.Find%2A> 및<xref:System.Data.DataView.FindRows%2A> 메서드에 대 한 자세한 내용은 [행 찾기](./dataset-datatable-dataview/finding-rows.md)를 참조 하십시오.  
+ 데이터의 하위 집합에 대한 동적 뷰를 제공하는 것과는 반대로 데이터에 대한 특정 쿼리 결과를 반환하려는 경우 <xref:System.Data.DataView.Find%2A> 속성을 설정하는 대신 <xref:System.Data.DataView.FindRows%2A>의 <xref:System.Data.DataView> 또는 <xref:System.Data.DataView.RowFilter%2A> 메서드를 사용할 수 있습니다. <xref:System.Data.DataView.RowFilter%2A> 속성은 바인딩된 컨트롤이 필터링된 결과를 표시하는 데이터 바인딩된 애플리케이션에 가장 적합합니다. <xref:System.Data.DataView.RowFilter%2A> 속성을 설정하면 데이터의 인덱스가 다시 작성되므로 애플리케이션에 오버헤드가 발생하여 성능이 저하됩니다. <xref:System.Data.DataView.Find%2A> 및 <xref:System.Data.DataView.FindRows%2A> 메서드는 인덱스를 다시 작성하지 않고 현재 인덱스를 사용합니다. <xref:System.Data.DataView.Find%2A> 또는 <xref:System.Data.DataView.FindRows%2A>를 한 번만 호출할 경우에는 기존 <xref:System.Data.DataView>를 사용해야 합니다. <xref:System.Data.DataView.Find%2A> 또는 <xref:System.Data.DataView.FindRows%2A>를 여러 번 호출할 경우에는 새 <xref:System.Data.DataView>를 만들어서 검색하려는 열의 인덱스를 다시 작성한 다음 <xref:System.Data.DataView.Find%2A> 또는 <xref:System.Data.DataView.FindRows%2A> 메서드를 호출해야 합니다. 및 <xref:System.Data.DataView.Find%2A> <xref:System.Data.DataView.FindRows%2A> 메서드에 대한 자세한 내용은 [행 찾기](./dataset-datatable-dataview/finding-rows.md)를 참조하십시오.  
   
  다음 예제에서는 <xref:System.Data.DataView.Find%2A> 메서드를 사용하여 성이 "Zhu"인 연락처를 검색합니다.  
   
@@ -65,7 +65,7 @@ GridView1.DataBind()
 ```csharp  
 if (Cache["ordersView"] == null)  
 {  
-   // Fill the DataSet.                  
+   // Fill the DataSet.
    DataSet dataSet = FillDataSet();  
   
    DataTable orders = dataSet.Tables["SalesOrderHeader"];  
@@ -86,6 +86,6 @@ GridView1.DataSource = ordersView;
 GridView1.DataBind();  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [데이터 바인딩 및 LINQ to DataSet](data-binding-and-linq-to-dataset.md)

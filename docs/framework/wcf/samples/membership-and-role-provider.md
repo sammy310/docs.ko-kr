@@ -2,15 +2,15 @@
 title: Membership and Role Provider
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 7fba608d6d0ed3b7caab62ff16926d7b03516ed1
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 117be783c2d4a72ff9d1c4509566274b1043a43d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424664"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144463"
 ---
 # <a name="membership-and-role-provider"></a>Membership and Role Provider
-멤버 자격 및 역할 공급자 샘플에서는 서비스에서 ASP.NET 멤버 자격 및 역할 공급자를 사용 하 여 클라이언트를 인증 하 고 권한을 부여 하는 방법을 보여 줍니다.  
+멤버 자격 및 역할 공급자 샘플은 서비스가 ASP.NET 멤버 자격 및 역할 공급자를 사용하여 클라이언트를 인증하고 인증하는 방법을 보여 줍니다.  
   
  이 샘플에서 클라이언트는 콘솔 애플리케이션(.exe)이고 서비스는 IIS(인터넷 정보 서비스)를 통해 호스트됩니다.  
   
@@ -25,7 +25,7 @@ ms.locfileid: "73424664"
   
 - 서버의 X.509 인증서를 사용하여 서버를 인증하는 방법  
   
-- 서버는 ASP.NET 역할 공급자를 사용 하 여 인증 된 클라이언트를 역할에 매핑할 수 있습니다.  
+- 서버는 ASP.NET 역할 공급자를 사용하여 인증된 클라이언트를 역할에 매핑할 수 있습니다.  
   
 - 서버에서 `PrincipalPermissionAttribute`를 사용하여 서비스에 의해 노출되는 특정 메서드에 대한 액세스를 제어하는 방법  
   
@@ -34,7 +34,7 @@ ms.locfileid: "73424664"
 ```xml  
 <!-- Set the connection string for SQL Server -->  
 <connectionStrings>  
-  <add name="SqlConn"   
+  <add name="SqlConn"
        connectionString="Data Source=localhost;Integrated Security=SSPI;Initial Catalog=aspnetdb;" />  
 </connectionStrings>  
   
@@ -43,9 +43,9 @@ ms.locfileid: "73424664"
   <membership defaultProvider="SqlMembershipProvider" userIsOnlineTimeWindow="15">  
     <providers>  
       <clear />  
-      <add   
-        name="SqlMembershipProvider"   
-        type="System.Web.Security.SqlMembershipProvider"   
+      <add
+        name="SqlMembershipProvider"
+        type="System.Web.Security.SqlMembershipProvider"
         connectionStringName="SqlConn"  
         applicationName="MembershipAndRoleProviderSample"  
         enablePasswordRetrieval="false"  
@@ -57,19 +57,19 @@ ms.locfileid: "73424664"
   </membership>  
   
   <!-- Configure the Sql Role Provider -->  
-  <roleManager enabled ="true"   
+  <roleManager enabled ="true"
                defaultProvider ="SqlRoleProvider" >  
     <providers>  
-      <add name ="SqlRoleProvider"   
-           type="System.Web.Security.SqlRoleProvider"   
-           connectionStringName="SqlConn"   
+      <add name ="SqlRoleProvider"
+           type="System.Web.Security.SqlRoleProvider"
+           connectionStringName="SqlConn"
            applicationName="MembershipAndRoleProviderSample"/>  
     </providers>  
   </roleManager>  
 </system.web>  
 ```  
   
- 서비스에서는 서비스와의 통신에 사용할 수 있는 단일 엔드포인트를 노출하며, 이 엔드포인트는 Web.config 구성 파일을 사용하여 정의합니다. 엔드포인트는 하나의 주소, 바인딩 및 계약으로 구성됩니다. 바인딩은 표준 `wsHttpBinding`을 사용하여 구성하며 기본값으로 Windows 인증이 사용됩니다. 이 샘플에서는 사용자 이름 인증을 사용하도록 표준 `wsHttpBinding`을 설정합니다. 동작에서는 서비스 인증에 서버 인증서를 사용하도록 지정합니다. 서버 인증서는 [\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) 구성 요소의 `findValue` 특성과 동일한 `SubjectName` 값을 포함 해야 합니다. 또한이 동작은 ASP.NET 멤버 자격 공급자에 의해 수행 되는 사용자 이름-암호 쌍의 인증과 두 공급자에 대해 정의 된 이름을 지정 하 여 ASP.NET 역할 공급자가 역할 매핑을 수행 하도록 지정 합니다.  
+ 서비스에서는 서비스와의 통신에 사용할 수 있는 단일 엔드포인트를 노출하며, 이 엔드포인트는 Web.config 구성 파일을 사용하여 정의합니다. 엔드포인트는 하나의 주소, 바인딩 및 계약으로 구성됩니다. 바인딩은 표준 `wsHttpBinding`을 사용하여 구성하며 기본값으로 Windows 인증이 사용됩니다. 이 샘플에서는 사용자 이름 인증을 사용하도록 표준 `wsHttpBinding`을 설정합니다. 동작에서는 서비스 인증에 서버 인증서를 사용하도록 지정합니다. 서버 인증서는 [ \<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) `SubjectName` 구성 `findValue` 요소의 특성과 동일한 값을 포함해야 합니다. 또한 이 동작은 ASP.NET 구성원 자격 공급자에 의해 사용자 이름 암호 쌍의 인증이 수행되고 역할 매핑은 두 공급자에 대해 정의된 이름을 지정하여 ASP.NET 역할 공급자에 의해 수행되도록 지정합니다.  
   
 ```xml  
 <system.serviceModel>  
@@ -97,11 +97,11 @@ ms.locfileid: "73424664"
                               roleProviderName ="SqlRoleProvider" />  
         <serviceCredentials>  
           <!-- Configure user name authentication to use the Membership Provider -->  
-          <userNameAuthentication userNamePasswordValidationMode ="MembershipProvider"   
+          <userNameAuthentication userNamePasswordValidationMode ="MembershipProvider"
                                   membershipProviderName ="SqlMembershipProvider"/>  
           <!-- Configure the service certificate -->  
-          <serviceCertificate storeLocation ="LocalMachine"   
-                              storeName ="My"   
+          <serviceCertificate storeLocation ="LocalMachine"
+                              storeName ="My"
                               x509FindType ="FindBySubjectName"  
                               findValue ="localhost" />  
         </serviceCredentials>  
@@ -118,15 +118,15 @@ ms.locfileid: "73424664"
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1. C# 또는 Visual Basic .net 버전의 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.  
+1. 솔루션의 C# 또는 Visual Basic .NET 버전을 빌드하려면 Windows 통신 기반 샘플 실행의 지침을 [따르십시오.](../../../../docs/framework/wcf/samples/running-the-samples.md)  
   
-2. [ASP.NET 애플리케이션 서비스 데이터베이스](https://go.microsoft.com/fwlink/?LinkId=94997)를 구성 했는지 확인 합니다.  
-  
-    > [!NOTE]
-    > SQL Server Express Edition을 실행하는 경우 서버 이름은 .\SQLEXPRESS입니다. ASP.NET 애플리케이션 서비스 데이터베이스를 구성 하는 경우와 web.config 연결 문자열에이 서버를 사용 해야 합니다.  
+2. [ASP.NET 응용 프로그램 서비스 데이터베이스를](https://go.microsoft.com/fwlink/?LinkId=94997)구성했습니까?  
   
     > [!NOTE]
-    > ASP.NET worker 프로세스 계정에는이 단계에서 만든 데이터베이스에 대 한 권한이 있어야 합니다. 이 작업에는 sqlcmd 유틸리티 또는 SQL Server Management Studio를 사용합니다.  
+    > SQL Server Express Edition을 실행하는 경우 서버 이름은 .\SQLEXPRESS입니다. 이 서버는 web.config 연결 문자열뿐만 아니라 ASP.NET 응용 프로그램 서비스 데이터베이스를 구성할 때 사용해야 합니다.  
+  
+    > [!NOTE]
+    > ASP.NET 작업자 프로세스 계정에는 이 단계에서 만든 데이터베이스에 대한 사용 권한이 있어야 합니다. 이 작업에는 sqlcmd 유틸리티 또는 SQL Server Management Studio를 사용합니다.  
   
 3. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행하려면 다음 지침을 사용합니다.  
   
@@ -134,11 +134,11 @@ ms.locfileid: "73424664"
   
 1. Makecert.exe가 있는 폴더가 경로에 포함되는지 확인합니다.  
   
-2. Visual Studio에 대 한 개발자 명령 프롬프트의 샘플 설치 폴더에서 Setup.exe를 실행 하 여 관리자 권한으로 실행 합니다. 이 작업은 샘플 실행에 필요한 서비스 인증서를 설치합니다.  
+2. Visual Studio에 대한 개발자 명령 프롬프트에서 샘플 설치 폴더에서 Setup.bat를 실행하면 관리자 권한이 실행됩니다. 이 작업은 샘플 실행에 필요한 서비스 인증서를 설치합니다.  
   
 3. \client\bin에서 Client.exe를 실행합니다. 클라이언트 콘솔 애플리케이션에 클라이언트 동작이 표시됩니다.  
   
-4. 클라이언트와 서비스가 통신할 수 없는 경우 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))을 참조 하세요.  
+4. 클라이언트와 서비스가 통신할 수 없는 경우 [WCF 샘플에 대한 문제 해결 팁을](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))참조하십시오.  
   
 ### <a name="to-run-the-sample-across-computers"></a>다중 컴퓨터 구성에서 샘플을 실행하려면  
   
@@ -150,24 +150,24 @@ ms.locfileid: "73424664"
   
 4. 클라이언트 프로그램 파일을 클라이언트 컴퓨터의 클라이언트 디렉터리로 복사합니다. Setup.bat, Cleanup.bat 및 ImportServiceCert.bat 파일도 클라이언트로 복사합니다.  
   
-5. 서버에서 관리자 권한으로 Visual Studio에 대 한 개발자 명령 프롬프트를 열고 `setup.bat service`를 실행 합니다. `service` 인수를 사용 하 여 `setup.bat`를 실행 하면 컴퓨터의 정규화 된 도메인 이름으로 서비스 인증서가 생성 되 고 서비스 인증서가 이름이 .cer 인 파일로 내보내집니다.  
+5. 서버에서 관리 권한이 있는 Visual Studio에 대한 개발자 `setup.bat service`명령 프롬프트를 열고 실행합니다. `service` 인수를 실행하면 `setup.bat` 컴퓨터의 정규화된 도메인 이름으로 서비스 인증서가 생성되고 서비스 인증서를 Service.cer라는 파일로 내보냅니다.  
   
-6. 컴퓨터의 정규화 된 도메인 이름과 같은 새 인증서 이름 ( [\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)의 `findValue` 특성)을 반영 하도록 web.config를 편집 합니다.  
+6. 컴퓨터의 정규화된 도메인 이름과 동일한 새 인증서 `findValue` [ \<이름(serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)특성)을 반영하도록 Web.config를 편집합니다.  
   
 7. 서비스 디렉터리에서 클라이언트 컴퓨터의 클라이언트 디렉터리로 Service.cer 파일을 복사합니다.  
   
 8. 클라이언트 컴퓨터의 Client.exe.config 파일에서 엔드포인트의 주소 값을 서비스의 새 주소와 일치하도록 변경합니다.  
   
-9. 클라이언트에서 관리자 권한으로 Visual Studio에 대 한 개발자 명령 프롬프트를 열고 열고 importservicecert.bat를 실행 합니다. 이 작업은 Service.cer 파일의 서비스 인증서를 CurrentUser - TrustedPeople 저장소로 가져옵니다.  
+9. 클라이언트에서 관리 권한이 있는 Visual Studio에 대한 개발자 명령 프롬프트를 열고 ImportServiceCert.bat를 실행합니다. 이 작업은 Service.cer 파일의 서비스 인증서를 CurrentUser - TrustedPeople 저장소로 가져옵니다.  
   
-10. 클라이언트 컴퓨터의 명령 프롬프트에서 Client.exe를 실행합니다. 클라이언트와 서비스가 통신할 수 없는 경우 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))을 참조 하세요.  
+10. 클라이언트 컴퓨터의 명령 프롬프트에서 Client.exe를 실행합니다. 클라이언트와 서비스가 통신할 수 없는 경우 [WCF 샘플에 대한 문제 해결 팁을](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))참조하십시오.  
   
 ### <a name="to-clean-up-after-the-sample"></a>샘플 실행 후 정리를 수행하려면  
   
 - 샘플 실행을 완료한 후 샘플 폴더에서 Cleanup.bat를 실행합니다.  
   
 > [!NOTE]
-> 다중 컴퓨터 구성에서 이 샘플을 실행할 경우에는 이 스크립트로 클라이언트의 서비스 인증서를 제거할 수 없습니다. 컴퓨터에서 인증서를 사용 하는 WCF (Windows Communication Foundation) 샘플을 실행 한 경우에는 CurrentUser-비트 사용자 저장소에 설치 된 서비스 인증서를 지워야 합니다. 이를 수행하려면 `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 명령을 사용합니다(예: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`).  
+> 다중 컴퓨터 구성에서 이 샘플을 실행할 경우에는 이 스크립트로 클라이언트의 서비스 인증서를 제거할 수 없습니다. 컴퓨터에서 인증서를 사용하는 WCF(Windows 통신 재단) 샘플을 실행한 경우 CurrentUser - TrustedPeople 저장소에 설치된 서비스 인증서를 지워야 합니다. 이를 수행하려면 `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 명령을 사용합니다(예: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`).  
   
 ## <a name="the-setup-batch-file"></a>설치 배치 파일  
  이 샘플에 포함된 Setup.bat 배치 파일을 사용하면 서버 인증서 기반 보안이 필요한 자체 호스팅 애플리케이션을 실행하도록 관련 인증서가 있는 서버를 구성할 수 있습니다. 다중 컴퓨터 구성이나 호스트되지 않는 환경에서 이 배치 파일을 사용하려면 배치 파일을 수정해야 합니다.  

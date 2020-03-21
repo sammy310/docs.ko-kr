@@ -15,38 +15,38 @@ helpviewer_keywords:
 ms.assetid: 02a02ff7-ae0e-4692-a20e-372405f23052
 topic_type:
 - apiref
-ms.openlocfilehash: a73afaebc2943190eeeee50367ecd31f1fb59df1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7389e9233fd946cdb2c810bec01cfbfffc8b707d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432446"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175605"
 ---
 # <a name="imetadataemitsetparent-method"></a>IMetaDataEmit::SetParent 메서드
-[IMetaDataEmit::D efinememberref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md)에 대 한 이전 호출로 정의 된 지정 된 멤버가 [IMetaDataEmit::D Efin def](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)의 이전 호출에 정의 된 대로 지정 된 형식의 멤버 임을 설정 합니다.  
+[IMetaDataEmit::DefineMemberRef에](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md)대한 사전 호출에 의해 정의된 지정된 멤버가 [IMetaDataEmit::DefineTypeDef에](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)대한 사전 호출에 정의된 대로 지정된 형식의 멤버임을 설정합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```cpp  
-HRESULT SetParent (   
-    [in]  mdMemberRef mr,   
-    [in]  mdToken     tk   
+HRESULT SetParent (
+    [in]  mdMemberRef mr,
+    [in]  mdToken     tk
 );  
 ```  
   
 ## <a name="parameters"></a>매개 변수  
  `mr`  
- 진행 새 부모를 받을 `mdMemberRef` 토큰입니다.  
+ 【인】 새 `mdMemberRef` 부모를 받을 토큰입니다.  
   
  `tk`  
- 진행 새 부모에 대 한 `mdToken`입니다.  
+ 【인】 새 `mdToken` 상위에 대한 것입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor  
+ **헤더:** 코르h  
   
- **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 사용  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

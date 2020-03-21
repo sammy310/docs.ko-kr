@@ -9,22 +9,22 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 - windows installer, global assembly cache
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
-ms.openlocfilehash: e670f5dba47393b7df047fb4e6f7d92df8cb187c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 64878a795a7c5b790c8991064e32b82505685c0c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119800"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155565"
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>방법: 전역 어셈블리 캐시에 어셈블리 설치
 
-GAC(글로벌 어셈블리 캐시)는 여러 애플리케이션이 공유하는 어셈블리를 저장합니다. 다음 구성 요소 중 하나를 사용하여 [글로벌 어셈블리 캐시](gac.md)에 어셈블리를 설치합니다. 
+GAC(글로벌 어셈블리 캐시)는 여러 애플리케이션이 공유하는 어셈블리를 저장합니다. 다음 구성 요소 중 하나를 사용하여 [글로벌 어셈블리 캐시](gac.md)에 어셈블리를 설치합니다.
 
-- [Windows Installer](#windows-installer)
+- [윈도우 설치 프로그램](#windows-installer)
 - [전역 어셈블리 캐시 도구](#global-assembly-cache-tool)
 
 > [!IMPORTANT]
-> 강력한 이름의 어셈블리만 전역 어셈블리 캐시에 설치할 수 있습니다. 강력한 이름의 어셈블리를 만드는 방법에 대 한 자세한 내용은 [방법: 강력한 이름으로 어셈블리 서명](../../standard/assembly/sign-strong-name.md)을 참조 하세요.
+> 강력한 이름의 어셈블리만 전역 어셈블리 캐시에 설치할 수 있습니다. 강력한 이름의 어셈블리를 만드는 방법에 대한 자세한 내용은 [참조: 강력한 이름으로 어셈블리에 서명합니다.](../../standard/assembly/sign-strong-name.md)
 
 ## <a name="windows-installer"></a>Windows Installer
 
@@ -43,9 +43,9 @@ GAC에 어셈블리를 설치하기 위해 *gacutil.exe*를 사용하는 구문�
 gacutil -i <assembly name>
 ```
 
-이 명령에서 *\<어셈블리 이름>* 은 글로벌 어셈블리 캐시에 설치할 어셈블리의 이름입니다.
+이 명령에서 * \<어셈블리 이름>* 전역 어셈블리 캐시에 설치할 어셈블리의 이름입니다.
 
-*gacutil.exe*가 시스템 경로에 없는 경우 [Developer Command Prompt for VS *\<version>* ](../tools/developer-command-prompt-for-vs.md)을 사용하세요.
+*gacutil.exe가* 시스템 경로에 없는 경우 [VS * \<버전>* 대한 개발자 명령 프롬프트를 ](../tools/developer-command-prompt-for-vs.md)사용합니다.
 
 다음 예제는 파일 이름이 *hello.dll*인 어셈블리를 글로벌 어셈블리 캐시에 설치합니다.
 
@@ -56,9 +56,9 @@ gacutil -i hello.dll
 > [!NOTE]
 > 이전 버전의 .NET Framework에서는 *Shfusion.dll* Windows 셸 확장을 통해 파일 탐색기로 어셈블리를 끌어와서 설치할 수 있었습니다. .NET Framework 4부터는 *Shfusion.dll*이 사용되지 않습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [어셈블리 및 전역 어셈블리 캐시 사용](working-with-assemblies-and-the-gac.md)
 - [방법: 전역 어셈블리 캐시에서 어셈블리 제거](how-to-remove-an-assembly-from-the-gac.md)
-- [Gacutil.exe(전역 어셈블리 캐시 도구)](../tools/gacutil-exe-gac-tool.md)
-- [방법: 강력한 이름으로 어셈블리 서명](../../standard/assembly/sign-strong-name.md)
+- [Gacutil.exe (글로벌 어셈블리 캐시 도구)](../tools/gacutil-exe-gac-tool.md)
+- [방법: 강력한 이름으로 어셈블리에 서명](../../standard/assembly/sign-strong-name.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dda867b5-1050-49ba-b01c-fcc83b7a5617
 topic_type:
 - apiref
-ms.openlocfilehash: 3f965ab215ff861c6df61de82dcbbea6b389c8da
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3dd82588cf2dbf92fdda66fd7674c17ddc8b7306
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426774"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177185"
 ---
 # <a name="imetadataimportresetenum-method"></a>IMetaDataImport::ResetEnum 메서드
 지정한 열거자를 지정한 위치로 다시 설정합니다.  
@@ -29,24 +29,24 @@ ms.locfileid: "74426774"
   
 ```cpp  
 HRESULT ResetEnum (  
-   [in] HCORENUM    hEnum,   
+   [in] HCORENUM    hEnum,
    [in] ULONG       ulPos  
 );  
 ```  
   
 ## <a name="parameters"></a>매개 변수  
  `hEnum`  
- 진행 다시 설정할 열거자입니다.  
+ 【인】 열거자가 재설정됩니다.  
   
  `ulPos`  
- 진행 열거자를 배치할 새 위치입니다.  
+ 【인】 열거기를 배치할 새 위치입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor  
+ **헤더:** 코르h  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MsCorEE.dll의 리소스로 포함  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -2,12 +2,12 @@
 title: 함수(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 0bb88992-37ed-4991-ace5-55be612a2c4d
-ms.openlocfilehash: bacc773351812a5db60f493f3025c8e4b07dbaa2
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: fd7f484733e7135d2d6c8094b6527d672a988088
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833795"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150300"
 ---
 # <a name="function-entity-sql"></a>함수(Entity SQL)
 Entity SQL 쿼리 명령의 범위에서 함수를 정의합니다.  
@@ -16,16 +16,16 @@ Entity SQL 쿼리 명령의 범위에서 함수를 정의합니다.
   
 ```sql  
 FUNCTION function-name  
-( [ { parameter_name <type_definition>   
+( [ { parameter_name <type_definition>
         [ ,...n ]  
   ]  
-) AS ( function_expression )   
+) AS ( function_expression )
   
 <type_definition>::=  
-    { data_type | COLLECTION ( <type_definition> )   
-                | REF ( data_type )   
-                | ROW ( row_expression )   
-        }   
+    { data_type | COLLECTION ( <type_definition> )
+                | REF ( data_type )
+                | ROW ( row_expression )
+        }
 ```  
   
 ## <a name="arguments"></a>인수  
@@ -41,16 +41,16 @@ FUNCTION function-name
  `data_type`  
  지원되는 형식의 이름입니다.  
   
- 컬렉션 (< type_definition`>`)  
+ 컬렉션 (<`>` type_definition)  
  지원되는 형식, 행 또는 참조 컬렉션을 반환하는 식입니다.  
   
- REF **(** `data_type` **)**  
+ REF **()**`data_type`**)**  
  엔터티 형식에 대한 참조를 반환하는 식입니다.  
   
- ROW **(** `row_expression` **)**  
+ 행 **()**`row_expression`**)**  
  하나 이상의 값에서 구조적으로 형식화된 익명 레코드를 반환하는 식입니다. 자세한 내용은 [ROW](row-entity-sql.md)을 참조하십시오.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  함수 시그니처가 다르면 이름이 같은 여러 함수를 인라인으로 선언할 수 있습니다. 자세한 내용은 [Function Overload Resolution](function-overload-resolution-entity-sql.md)을 참조하세요.  
   
  인라인 함수는 Entity SQL 명령에서 정의된 이후에야 해당 명령에서 호출될 수 있습니다. 그러나 인라인 함수는 호출된 함수가 정의되기 이전 또는 이후에 다른 인라인 함수 내에서 호출될 수 있습니다. 다음 예제에서는 함수 B가 정의되기 전에 함수 A에서 함수 B를 호출합니다.  
@@ -63,7 +63,7 @@ FUNCTION function-name
   
  자세한 내용은 [방법: 사용자 정의 함수 호출](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))을 참조하세요.  
   
- 함수는 모델 자체에서도 선언할 수 있습니다. 모델에서 선언된 함수는 명령에서 인라인으로 선언된 함수와 동일한 방식으로 실행됩니다. 자세한 내용은 [사용자 정의 함수](user-defined-functions-entity-sql.md)를 참조 하세요.  
+ 함수는 모델 자체에서도 선언할 수 있습니다. 모델에서 선언된 함수는 명령에서 인라인으로 선언된 함수와 동일한 방식으로 실행됩니다. 자세한 내용은 [사용자 정의 함수 를](user-defined-functions-entity-sql.md)참조하십시오.  
   
 ## <a name="example"></a>예제  
  다음 Entity SQL 명령에서는 정수 값을 사용하여 반환된 제품을 필터링하는 `Products` 함수를 정의합니다.  

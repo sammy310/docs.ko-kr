@@ -9,24 +9,24 @@ helpviewer_keywords:
 - <startup> element
 - startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
-ms.openlocfilehash: 634d9c5248c33619abec50d441d95c111febdcbf
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: e936c069275bfa9f7ac81ef1c6fc6228828182a8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699409"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153735"
 ---
-# <a name="startup-element"></a>\<startup > 요소
+# <a name="startup-element"></a>\<시작> 요소
 
-공용 언어 런타임 시작 정보를 지정 합니다.
+공통 언어 런타임 시작 정보를 지정합니다.
 
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp; **\<startup>**  
+[**\<구성>**](../configuration-element.md)  
+&nbsp;&nbsp;**\<스타트업>**  
 
 ## <a name="syntax"></a>구문
 
 ```xml
-<startup useLegacyV2RuntimeActivationPolicy="true|false" > 
+<startup useLegacyV2RuntimeActivationPolicy="true|false" >
 </startup>
 ```
 
@@ -36,46 +36,46 @@ ms.locfileid: "71699409"
 
 ### <a name="attributes"></a>특성
 
-|특성|설명|
+|attribute|Description|
 |---------------|-----------------|
-|`useLegacyV2RuntimeActivationPolicy`|선택적 특성입니다.<br /><br /> .NET Framework 2.0 런타임 활성화 정책 사용 여부를 지정 하거나 .NET Framework 4 활성화 정책을 사용할지 여부를 지정 합니다.|
+|`useLegacyV2RuntimeActivationPolicy`|선택적 특성입니다.<br /><br /> .NET Framework 2.0 런타임 활성화 정책을 사용하도록 설정하거나 .NET Framework 4 활성화 정책을 사용할지 여부를 지정합니다.|
 
-## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>useLegacyV2RuntimeActivationPolicy 특성
+## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>use레거시V2Runtime활성화정책 특성
 
-|값|설명|
+|값|Description|
 |-----------|-----------------|
-|`true`|[CorBindToRuntimeEx 함수](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)등의 레거시 런타임 활성화 기법을 CLR에서 50, 하는 대신 구성 파일에서 선택한 런타임에 바인딩하는 .NET Framework 2.0 런타임 활성화 정책을 사용 하도록 설정 합니다. 버전 2.0. 따라서 구성 파일에서 CLR 버전 4 이상을 선택한 경우 이전 버전의 .NET Framework을 사용 하 여 만든 혼합 모드 어셈블리는 선택한 CLR 버전과 함께 로드 됩니다. 이 값을 설정 하면 CLR 버전 1.1 또는 CLR 버전 2.0이 동일한 프로세스로 로드 되지 않으므로 in-process side-by-side 기능을 효과적으로 사용 하지 않습니다.|
-|`false`|.NET Framework 4 이상에 대 한 기본 활성화 정책을 사용 합니다 .이는 레거시 런타임 활성화 기술을 통해 CLR 버전 1.1 또는 2.0을 프로세스에 로드할 수 있습니다. 이 값을 설정 하면 .NET Framework 4 이상에서 빌드된 경우를 제외 하 고 혼합 모드 어셈블리를 .NET Framework 4 이상으로 로드할 수 없습니다. 이 값은 기본값입니다.|
+|`true`|CLR 버전 2.0에서 해당 를 제한하는 대신 구성 파일에서 선택한 런타임에 레거시 런타임 활성화 기술(예: [CorBindToRuntimeEx 함수)을](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)바인딩하는 선택된 런타임에 대해 .NET Framework 2.0 런타임 활성화 정책을 활성화합니다. 따라서 CLR 버전 4 이상이 구성 파일에서 선택된 경우 이전 버전의 .NET Framework로 만든 혼합 모드 어셈블리가 선택한 CLR 버전으로 로드됩니다. 이 값을 설정하면 CLR 버전 1.1 또는 CLR 버전 2.0이 동일한 프로세스로 로드되지 못하게 되어 프로세스 내 기능을 나란히 사용하지 않도록 효과적으로 설정할 수 있습니다.|
+|`false`|.NET Framework 4 이상에 대한 기본 활성화 정책을 사용하여 레거시 런타임 활성화 기술을 사용하여 CLR 버전 1.1 또는 2.0을 프로세스에 로드할 수 있습니다. 이 값을 설정하면 .NET Framework 4 이상으로 빌드되지 않는 한 혼합 모드 어셈블리가 .NET Framework 4 이상에 로드되지 않습니다. 이 값이 기본값입니다.|
 
 ### <a name="child-elements"></a>자식 요소
 
-|요소|설명|
+|요소|Description|
 |-------------|-----------------|
-|[\<requiredRuntime>](requiredruntime-element.md)|애플리케이션에서 1.0 버전의 공용 언어 런타임만 지원하도록 지정합니다. 런타임 버전 1.1 이상을 사용 하 여 빌드된 응용 프로그램은 **\<supportedRuntime >** 요소를 사용 해야 합니다.|
-|[\<supportedRuntime>](supportedruntime-element.md)|애플리케이션이 지원하는 공용 언어 런타임 버전을 지정합니다.|
+|[\<필수런타임>](requiredruntime-element.md)|애플리케이션에서 1.0 버전의 공용 언어 런타임만 지원하도록 지정합니다. 런타임 버전 1.1 이상으로 빌드된 응용 프로그램은 ** \<지원되는 런타임>** 요소를 사용해야 합니다.|
+|[\<지원런타임>](supportedruntime-element.md)|애플리케이션이 지원하는 공용 언어 런타임 버전을 지정합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|설명|
+|요소|Description|
 |-------------|-----------------|
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|
 
 ## <a name="remarks"></a>설명
 
- **@No__t-1supportedRuntime >** 요소는 버전 1.1 이상을 사용 하 여 빌드된 모든 응용 프로그램에서 사용 해야 합니다. 버전 1.0의 런타임을 지원 하도록 빌드된 응용 프로그램은 **\<requiredRuntime >** 요소를 사용 해야 합니다.
+ ** \<지원되는런타임>** 요소는 런타임의 버전 1.1 이상을 사용하여 빌드된 모든 응용 프로그램에서 사용해야 합니다. 런타임의 버전 1.0만 지원하도록 빌드된 응용 프로그램은 ** \<필수런타임>** 요소를 사용해야 합니다.
 
- Microsoft Internet Explorer에서 호스트 되는 응용 프로그램의 시작 코드는 **\<startup >** 요소 및 해당 자식 요소를 무시 합니다.
+ Microsoft Internet Explorer에서 호스팅되는 응용 프로그램의 시작 코드는 ** \<시작>** 요소와 자식 요소를 무시합니다.
 
-## <a name="the-uselegacyv2runtimeactivationpolicy-attribute"></a>UseLegacyV2RuntimeActivationPolicy 특성
+## <a name="the-uselegacyv2runtimeactivationpolicy-attribute"></a>useLegacyV2Runtime활성화정책 특성
 
- 이 특성은 [CorBindToRuntimeEx 함수와](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)같은 레거시 활성화 경로를 사용 하는 응용 프로그램에서 이전 버전이 아닌 CLR 버전 4를 활성화 하거나 응용 프로그램을 .net으로 빌드하는 경우에 유용 합니다. 프레임 워크 4 이지만 이전 버전의 .NET Framework로 빌드된 혼합 모드 어셈블리에 대 한 종속성이 있습니다. 이러한 시나리오에서는 특성을 `true`으로 설정 합니다.
+ 이 특성은 응용 프로그램이 [CorBindToRuntimeEx 함수와](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)같은 레거시 활성화 경로를 사용하고 해당 경로가 이전 버전 대신 CLR의 버전 4를 활성화하도록 하거나 응용 프로그램이 .NET Framework 4로 빌드되었지만 이전 버전의 .NET Framework로 빌드된 혼합 모드 어셈블리에 종속된 경우 유용합니다. 이러한 시나리오에서는 특성을 `true`로 설정합니다.
 
 > [!NOTE]
-> 특성을 `true`으로 설정 하면 CLR 버전 1.1 또는 CLR 버전 2.0이 동일한 프로세스로 로드 되지 않으므로 in-process side-by-side 기능이 효과적으로 사용 되지 않습니다 ( [COM Interop에 대 한 Side-by-side 실행](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))참조).
+> 특성을 설정하여 `true` CLR 버전 1.1 또는 CLR 버전 2.0이 동일한 프로세스로 로드되는 것을 방지하고 프로세스 내 기능을 효과적으로 비활성화합니다(COM [Interop의 경우 나란히 실행](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))참조).
 
 ## <a name="example"></a>예제
 
- 다음 예제에서는 구성 파일의 런타임 버전을 지정 하는 방법을 보여 줍니다.
+ 다음 예제에서는 구성 파일에서 런타임 버전을 지정하는 방법을 보여 주며 있습니다.
 
 ```xml
 <!-- When used with version 1.0 of the .NET Framework runtime -->
@@ -93,10 +93,10 @@ ms.locfileid: "71699409"
 </configuration>
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [시작 설정 스키마](index.md)
 - [구성 파일 스키마](../index.md)
-- [방법: .NET Framework 4 이상 버전을 지원하도록 앱 구성](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
-- [COM Interop에 대 한 side-by-side 실행](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))
+- [방법: .NET Framework 4 이상 버전을 지원하도록 앱을 구성합니다.](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [COM Interop의 Side-By-Side 실행](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))
 - [In-Process Side-by-Side 실행](../../../deployment/in-process-side-by-side-execution.md)

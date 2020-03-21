@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
-ms.openlocfilehash: d208b0796a072cda2873678ba184bc9793a1688a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cf67304f564729172d1b7f3565d52abffeb90049
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786578"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151483"
 ---
 # <a name="childviews-and-relations"></a>ChildView 및 관계
-<xref:System.Data.DataSet>의 테이블 사이에 관계가 존재하는 경우 부모 테이블의 행에 대한 <xref:System.Data.DataView>의 <xref:System.Data.DataRowView.CreateChildView%2A> 메서드를 사용하여 관련 자식 테이블의 행이 포함된 <xref:System.Data.DataRowView>를 만들 수 있습니다. 예를 들어 다음 코드는 **범주** 와 관련 된 **제품** 을 범주 및 **ProductName**을 기준으로 사전순으로 정렬 **하 여 표시** 합니다.  
+<xref:System.Data.DataSet>의 테이블 사이에 관계가 존재하는 경우 부모 테이블의 행에 대한 <xref:System.Data.DataView>의 <xref:System.Data.DataRowView.CreateChildView%2A> 메서드를 사용하여 관련 자식 테이블의 행이 포함된 <xref:System.Data.DataRowView>를 만들 수 있습니다. 예를 들어 다음 코드에는 **범주** 및 관련 **제품이** 범주 **이름** 및 **ProductName으로**정렬된 사전순으로 표시됩니다.  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  
@@ -50,12 +50,12 @@ DataTable catTable = catDS.Tables["Categories"];
 DataTable prodTable = catDS.Tables["Products"];  
   
 // Create a relation between the Categories and Products tables.  
-DataRelation relation = catDS.Relations.Add("CatProdRel",   
+DataRelation relation = catDS.Relations.Add("CatProdRel",
   catTable.Columns["CategoryID"],  
                                                             prodTable.Columns["CategoryID"]);  
   
 // Create DataViews for the Categories and Products tables.  
-DataView catView = new DataView(catTable, "", "CategoryName",   
+DataView catView = new DataView(catTable, "", "CategoryName",
   DataViewRowState.CurrentRows);  
 DataView prodView;  
   
@@ -73,7 +73,7 @@ foreach (DataRowView catDRV in catView)
 }  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataView>
