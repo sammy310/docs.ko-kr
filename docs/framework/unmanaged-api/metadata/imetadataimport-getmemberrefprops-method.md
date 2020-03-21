@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0ea73055-ece0-4151-a094-414c88ef8941
 topic_type:
 - apiref
-ms.openlocfilehash: 1d6d66ea62cbf679f722f830b3638455001aedd6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a61254ba751e47b0089a3f7528aca337a32e2db3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437496"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175371"
 ---
 # <a name="imetadataimportgetmemberrefprops-method"></a>IMetaDataImport::GetMemberRefProps 메서드
 지정한 토큰이 참조하는 멤버와 연결된 메타데이터를 가져옵니다.  
@@ -29,44 +29,44 @@ ms.locfileid: "74437496"
   
 ```cpp  
 HRESULT GetMemberRefProps (  
-   [in]  mdMemberRef       mr,   
-   [out] mdToken           *ptk,   
-   [out] LPWSTR            szMember,   
-   [in]  ULONG             cchMember,   
-   [out] ULONG             *pchMember,   
-   [out] PCCOR_SIGNATURE   *ppvSigBlob,   
-   [out] ULONG             *pbSig   
+   [in]  mdMemberRef       mr,
+   [out] mdToken           *ptk,
+   [out] LPWSTR            szMember,
+   [in]  ULONG             cchMember,
+   [out] ULONG             *pchMember,
+   [out] PCCOR_SIGNATURE   *ppvSigBlob,
+   [out] ULONG             *pbSig
 );  
 ```  
   
 ## <a name="parameters"></a>매개 변수  
  `mr`  
- 진행 연결 된 메타 데이터를 반환할 MemberRef 토큰입니다.  
+ 【인】 멤버 참조 토큰에 대 한 관련 된 메타 데이터를 반환 합니다.  
   
  `ptk`  
- 제한이 TypeDef 또는 TypeRef 또는 멤버를 선언 하는 클래스를 나타내는 TypeSpec 토큰 또는 멤버를 선언 하는 모듈 클래스를 나타내는 ModuleRef 토큰 또는 멤버를 나타내는 MethodDef 토큰입니다.  
+ 【아웃】 멤버를 선언하는 클래스를 나타내는 TypeDef 또는 TypeRef 또는 멤버를 선언하는 모듈 클래스또는 멤버를 나타내는 MethodDef를 나타내는 ModuleRef 토큰입니다.  
   
  `szMember`  
- 제한이 멤버의 이름에 대 한 문자열 버퍼입니다.  
+ 【아웃】 멤버 이름에 대한 문자열 버퍼입니다.  
   
  `cchMember`  
- 진행 `szMember`의 와이드 문자에서 요청 된 크기입니다.  
+ 【인】 의 넓은 문자로 `szMember`요청된 크기입니다.  
   
  `pchMember`  
- 제한이 `szMember`의 와이드 문자에서 반환 되는 크기입니다.  
+ 【아웃】 의 넓은 문자로 `szMember`반환 된 크기입니다.  
   
  `ppvSibBlob`  
- 제한이 멤버의 이진 메타 데이터 서명에 대 한 포인터입니다.  
+ 【아웃】 멤버에 대한 이진 메타데이터 시그니처에 대한 포인터입니다.  
   
  `pbSig`  
- 제한이 `ppvSigBlob`의 크기 (바이트)입니다.  
+ 【아웃】 의 바이트 크기입니다. `ppvSigBlob`  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor  
+ **헤더:** 코르h  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MsCorEE.dll의 리소스로 포함  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

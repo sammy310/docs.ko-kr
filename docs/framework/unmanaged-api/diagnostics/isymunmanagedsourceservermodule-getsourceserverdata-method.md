@@ -15,36 +15,36 @@ helpviewer_keywords:
 ms.assetid: 20bdf8ff-2d15-4c64-8950-6888f642d6c0
 topic_type:
 - apiref
-ms.openlocfilehash: f25150d037a2f6fabb700f2c4bf2191e8e402a8e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6904271ed90cf733b9221178927bc680d76b58a6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446213"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176580"
 ---
 # <a name="isymunmanagedsourceservermodulegetsourceserverdata-method"></a>ISymUnmanagedSourceServerModule::GetSourceServerData 메서드
-모듈에 대 한 원본 서버 데이터를 반환 합니다. 호출자는 `CoTaskMemFree`을 사용 하 여 리소스를 해제 해야 합니다.  
+모듈의 원본 서버 데이터를 반환합니다. 호출자는 을 사용하여 `CoTaskMemFree`리소스를 해제해야 합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT GetSourceServerData(  
-    [out] ULONG* pDataByteCount,   
+    [out] ULONG* pDataByteCount,
     [out, size_is (, *pDataByteCount)] BYTE** ppData);  
 ```  
   
 ## <a name="parameters"></a>매개 변수  
  `pDataByteCount`  
- 제한이 원본 서버 데이터의 크기 (바이트)를 수신 하는 `ULONG32`에 대 한 포인터입니다.  
+ 【아웃】 원본 서버 `ULONG32` 데이터의 크기(바이트)를 받는 에 대한 포인터입니다.  
   
  `ppData`  
- 제한이 반환 된 `pDataByteCount` 값에 대 한 포인터입니다.  
+ 【아웃】 반환된 `pDataByteCount` 값에 대한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
+## <a name="return-value"></a>Return Value  
+ 메서드가 성공하면 S_OK. 그렇지 않으면 E_FAIL 또는 다른 오류 코드가 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym, CorSym  
+ **헤더:** 코르심.idl, 코르심.h  
   
 ## <a name="see-also"></a>참고 항목
 

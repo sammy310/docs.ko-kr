@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Suspend method
 - threading [.NET Framework], managed debugging assistants
 ms.assetid: 3e5efbc5-92e4-4229-b31f-ce368a1adb96
-ms.openlocfilehash: 4e7e858dfb85eeccbadb23da60d081d1407e89d8
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: d3fe7d11657c2f9edd1fea7ff639f878f993d6b1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216680"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174773"
 ---
 # <a name="dangerousthreadingapi-mda"></a>dangerousThreadingAPI MDA
 `dangerousThreadingAPI` MDA(관리 디버깅 도우미)는 <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> 메서드가 현재 스레드 이외의 스레드에서 호출될 때 활성화됩니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "77216680"
 ```  
   
 ## <a name="example"></a>예제  
- 다음 코드 예제에서는 <xref:System.Threading.Thread.Suspend%2A>를 활성화시키는 `dangerousThreadingAPI` 메서드에 대한 호출을 보여 줍니다.  
+ 다음 코드 예제에서는 `dangerousThreadingAPI`를 활성화시키는 <xref:System.Threading.Thread.Suspend%2A> 메서드에 대한 호출을 보여 줍니다.  
   
 ```csharp
 using System.Threading;  
@@ -59,7 +59,7 @@ void FireMda()
 Thread t = new Thread(delegate() { Thread.Sleep(1000); });  
     t.Start();  
     // The following line activates the MDA.  
-    t.Suspend();   
+    t.Suspend();
     t.Resume();  
     t.Join();  
 }  

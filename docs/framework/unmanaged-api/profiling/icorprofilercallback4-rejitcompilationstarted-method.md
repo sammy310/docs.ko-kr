@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 512fdd00-262a-4456-a075-365ef4133c4d
 topic_type:
 - apiref
-ms.openlocfilehash: 81d11c87c9bc970dd5b5c9010023610cea7c0e72
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: be257930ca0fad658afa75d6efa4573d4f888a2b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76865196"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177087"
 ---
 # <a name="icorprofilercallback4rejitcompilationstarted-method"></a>ICorProfilerCallback4::ReJITCompilationStarted 메서드
-JIT (just-in-time) 컴파일러가 함수를 다시 컴파일하기 시작 했음을 프로파일러에 알립니다.  
+JIT(적정 시) 컴파일러가 함수를 다시 컴파일하기 시작했다는 것을 프로파일러에 알린다.  
   
 ## <a name="syntax"></a>구문  
   
 ```cpp  
-HRESULT ReJITCompilationStarted(   
+HRESULT ReJITCompilationStarted(
     [in] FunctionID functionId,  
     [in] ReJITID    rejitId,  
     [in] BOOL       fIsSafeToBlock);  
@@ -36,21 +36,21 @@ HRESULT ReJITCompilationStarted(
   
 ## <a name="parameters"></a>매개 변수  
  `functionId`  
- 진행 JIT 컴파일러에서 다시 컴파일을 시작한 함수의 ID입니다.  
+ 【인】 JIT 컴파일러가 다시 컴파일하기 시작한 함수의 ID입니다.  
   
  `rejitId`  
- 진행 새 버전의 함수에 대 한 재컴파일 ID입니다.  
+ 【인】 함수의 새 버전의 재컴파일 ID입니다.  
   
  `fIsSafeToBlock`  
- [in] `true` 차단으로 인해 런타임에서 호출 스레드가이 콜백에서 반환 될 때까지 대기 하는 것을 나타낼 수 있습니다. 블로킹이 런타임 작업에 영향을 주지 않음을 나타내려면 `false` 합니다. `true` 값은 런타임에 영향을 주지 않지만 프로 파일링 결과에 영향을 줄 수 있습니다.  
+ 【인】 `true` 차단으로 인해 런타임이 호출 스레드가 이 콜백에서 반환될 때까지 기다릴 수 있음을 나타냅니다. `false` 을 사용하여 차단이 런타임 작업에 영향을 미치지 않음을 나타냅니다. 값은 `true` 런타임에 해를 끼치지 않지만 프로파일링 결과에 영향을 줄 수 있습니다.  
   
-## <a name="remarks"></a>주의  
- 런타임이 클래스 생성자를 처리 하는 방식 때문에 각 함수에 대해 둘 이상의 `ReJITCompilationStarted` 및 [ReJITCompilationFinished](icorprofilercallback4-rejitcompilationfinished-method.md) 메서드 호출을 받을 수 있습니다. 예를 들어 런타임은 메서드 A를 다시 컴파일하기 시작 하지만 클래스 B에 대 한 클래스 생성자를 실행 해야 합니다. 따라서 런타임은 클래스 B에 대 한 생성자를 다시 컴파일 하 고 실행 합니다. 생성자는를 실행 하는 동안 메서드 a를 호출 하 여 메서드 A를 다시 컴파일합니다. 이 시나리오에서는 메서드 A의 첫 번째 재컴파일을 중단 합니다. 그러나 메서드 A를 다시 컴파일하는 두 시도는 JIT 다시 컴파일 이벤트로 보고 됩니다.  
+## <a name="remarks"></a>설명  
+ 런타임이 클래스 생성기를 처리하는 `ReJITCompilationStarted` 방식으로 인해 두 쌍 이상의 [ReJITCompilation 완료](icorprofilercallback4-rejitcompilationfinished-method.md) 메서드 호출을 각 함수에 대해 수신할 수 있습니다. 예를 들어 런타임은 메서드 A를 다시 컴파일하기 시작하지만 클래스 B에 대한 클래스 생성자는 실행되어야 합니다. 따라서 런타임클래스 B에 대한 생성자다시 컴파일하고 실행합니다. 생성자가 실행되는 동안 메서드 A를 호출하여 메서드 A를 다시 컴파일합니다. 이 시나리오에서는 메서드 A의 첫 번째 재컴파일이 중지 됩니다. 그러나 메서드 A를 다시 컴파일하려는 두 시도는 JIT 재컴파일 이벤트와 함께 보고됩니다.  
   
- 두 스레드가 동시에 콜백을 수행 하는 경우에는 프로파일러에서 JIT 다시 컴파일 콜백 시퀀스를 지원 해야 합니다. 예를 들어 스레드 A는 `ReJITCompilationStarted`를 호출 합니다. 그러나 스레드 A가 [ReJITCompilationFinished](icorprofilercallback4-rejitcompilationfinished-method.md)를 호출 하기 전에 스레드 B는 스레드 a에 대 한 `ReJITCompilationStarted` 콜백의 함수 ID를 사용 하 여 [ICorProfilerCallback:: ExceptionSearchFunctionEnter](icorprofilercallback-exceptionsearchfunctionenter-method.md) 를 호출 합니다. [ReJITCompilationFinished](icorprofilercallback4-rejitcompilationfinished-method.md) 에 대 한 호출을 프로파일러가 아직 받지 않았기 때문에 함수 ID가 아직 유효 하지 않은 것 처럼 보일 수 있습니다. 그러나이 경우에는 함수 ID가 유효 합니다.  
+ 프로파일러는 두 스레드가 동시에 콜백을 만드는 경우 JIT 재컴파일 콜백 시퀀스를 지원해야 합니다. 예를 들어, 스레드 `ReJITCompilationStarted`A 호출 ; 그러나 스레드 A가 [ReJITCompilation을](icorprofilercallback4-rejitcompilationfinished-method.md)호출하기 전에 완료된 스레드 B는 스레드 A에 대한 `ReJITCompilationStarted` 콜백의 함수 ID를 사용하여 [ICorProfilerCallback을](icorprofilercallback-exceptionsearchfunctionenter-method.md) 호출합니다. [ReJITCompilationFinished에](icorprofilercallback4-rejitcompilationfinished-method.md) 대한 호출이 프로파일러에서 아직 수신되지 않았기 때문에 함수 ID가 아직 유효하지 않은 것처럼 보일 수 있습니다. 그러나 이 경우 함수 ID는 유효합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -58,7 +58,7 @@ HRESULT ReJITCompilationStarted(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
 - [ICorProfilerCallback4 인터페이스](icorprofilercallback4-interface.md)

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: af14ae5f-d226-47dd-ba90-8fc6e6605d4d
 topic_type:
 - apiref
-ms.openlocfilehash: 212a9f46dd33f98abd31e7a78c7a830cb3386cb6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8f838d5c812842e2a637065b25182b6a12609231
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108006"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176554"
 ---
 # <a name="identity_attribute_blob-structure"></a>IDENTITY_ATTRIBUTE_BLOB 구조체
-어셈블리의 단일 특성에 대 한 정보를 포함 하 고 세 개의 `DWORD`s로 구성 됩니다. 각 `DWORD`는 [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md) 인터페이스의 `CurrentIntoBuffer` 메서드에서 생성 되는 문자 버퍼에 대 한 오프셋입니다.  
+어셈블리의 단일 특성에 대한 정보를 `DWORD`포함하며 세 가지 특성으로 구성됩니다. 각각은 `DWORD` `CurrentIntoBuffer` [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md) 인터페이스의 메서드에 의해 생성된 문자 버퍼로 오프셋됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,24 +36,24 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
 }   IDENTITY_ATTRIBUTE_BLOB;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
-|`ofsNamespace`|문자 버퍼에 대 한 첫 번째 오프셋입니다. 이 오프셋 뒤에는 특성의 네임 스페이스가 아니라 일련의 null 문자가 있습니다. 따라서 사용 되지 않습니다.|  
-|`ofsName`|문자 버퍼에 대 한 두 번째 오프셋입니다. 이 위치는 특성 이름 시작을 표시 합니다.|  
-|`ofsValue`|문자 버퍼에 대 한 세 번째 오프셋입니다. 이 위치는 특성 값의 시작을 표시 합니다.|  
+|`ofsNamespace`|문자 버퍼에 대한 첫 번째 오프셋입니다. 이 오프셋뒤에는 특성의 네임스페이스가 따르지 않고 일련의 null 문자가 표시됩니다. 따라서 사용되지 않습니다.|  
+|`ofsName`|문자 버퍼에 대한 두 번째 오프셋입니다. 이 위치는 특성 이름의 시작을 표시합니다.|  
+|`ofsValue`|문자 버퍼에 대한 세 번째 오프셋입니다. 이 위치는 특성 값의 시작을 표시합니다.|  
   
-## <a name="sample"></a>예제  
- 다음 예제에서는 최종적으로 채워진 `IDENTITY_ATTRIBUTE_BLOB` 구조를 생성 하는 몇 가지 기본 단계를 보여 줍니다.  
+## <a name="sample"></a>샘플  
+ 다음 예제에서는 몇 가지 기본 단계를 보여 주며, 결국 채워진 구조가 생성됩니다. `IDENTITY_ATTRIBUTE_BLOB`  
   
-1. 어셈블리에 대 한 [IReferenceIdentity](ireferenceidentity-interface.md) 를 가져옵니다.  
+1. 어셈블리에 대한 [iReferenceId를](ireferenceidentity-interface.md) 가져옵니다.  
   
 2. `IReferenceIdentity::EnumAttributes` 메서드를 호출하고 [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)를 가져옵니다.  
   
-3. 문자 버퍼를 만들고 `IDENTITY_ATTRIBUTE_BLOB` 구조체로 캐스팅 합니다.  
+3. 문자 버퍼를 만들고 구조로 `IDENTITY_ATTRIBUTE_BLOB` 캐스팅합니다.  
   
-4. `IEnumIDENTITY_ATTRIBUTE` 인터페이스의 `CurrentIntoBuffer` 메서드를 호출 합니다. 이 메서드는 `Namespace`, `Name`및 `Value` 특성을 문자 버퍼로 복사 합니다. 이러한 문자열에 대 한 세 개의 오프셋은 `IDENTITY_ATTRIBUTE_BLOB` 구조에서 사용할 수 있게 됩니다.  
+4. 인터페이스의 `CurrentIntoBuffer` 메서드를 `IEnumIDENTITY_ATTRIBUTE` 호출합니다. 이 메서드는 특성 `Namespace`을 `Name`복사 `Value` 합니다 . 이러한 문자열에 대한 세 개의 오프셋은 `IDENTITY_ATTRIBUTE_BLOB` 구조에서 사용할 수 있게 됩니다.  
   
 ```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
@@ -97,7 +97,7 @@ bool Init()
                                 (VOID **)&g_pfnGetIdentityAuthority);  
     }  
   
-    if (!g_pfnGetAssemblyIdentityFromFile ||   
+    if (!g_pfnGetAssemblyIdentityFromFile ||
         !g_pfnGetIdentityAuthority)  
     {  
         printf("Error: Cannot get required APIs from fusion.dll!\n");  
@@ -120,7 +120,7 @@ void Shutdown()
   
 void Usage()  
 {  
-    printf("EnumAssemblyAttributes: A tool to enumerate the identity   
+    printf("EnumAssemblyAttributes: A tool to enumerate the identity
             attributes of a given assembly.\n\n");  
     printf("Usage: EnumAssemblyAttributes AssemblyFilePath\n");  
     printf("\n");  
@@ -131,7 +131,7 @@ int _cdecl wmain(int argc, LPCWSTR argv[])
     int     iResult = 1;  
     IUnknown                    *pUnk  = NULL;  
     IReferenceIdentity          *pRef  = NULL;  
-    HRESULT                     hr     = S_OK;     
+    HRESULT                     hr     = S_OK;
     IEnumIDENTITY_ATTRIBUTE     *pEnum = NULL;  
     BYTE                        abData[1024];  
     DWORD                       cbAvailable;  
@@ -148,16 +148,16 @@ int _cdecl wmain(int argc, LPCWSTR argv[])
         goto Exit;  
     }  
   
-    hr = g_pfnGetAssemblyIdentityFromFile(argv[1],   
+    hr = g_pfnGetAssemblyIdentityFromFile(argv[1],
                             __uuidof(IReferenceIdentity), &pUnk);  
   
     if (FAILED(hr)) {  
-        printf("GetAssemblyIdentityFromFile failed with hr = 0x%x",   
+        printf("GetAssemblyIdentityFromFile failed with hr = 0x%x",
                 hr);  
         goto Exit;  
     }  
   
-    hr = pUnk->QueryInterface(__uuidof(IReferenceIdentity),   
+    hr = pUnk->QueryInterface(__uuidof(IReferenceIdentity),
                               (void**)&pRef);  
     if (FAILED(hr)) {  
         goto Exit;  
@@ -165,7 +165,7 @@ int _cdecl wmain(int argc, LPCWSTR argv[])
   
     hr = pRef->EnumAttributes(&pEnum);  
     if (FAILED(hr)) {  
-        printf("IReferenceIdentity::EnumAttributes failed with hr =   
+        printf("IReferenceIdentity::EnumAttributes failed with hr =
                 0x%x", hr);  
         goto Exit;  
     }  
@@ -175,7 +175,7 @@ int _cdecl wmain(int argc, LPCWSTR argv[])
         cbAvailable = sizeof(abData);  
         hr = pEnum->CurrentIntoBuffer(cbAvailable, abData, &cbUsed);  
         if (FAILED(hr)) {  
-            printf("IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer failed   
+            printf("IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer failed
                     with hr = 0x%x", hr);  
             goto Exit;  
         }  
@@ -191,7 +191,7 @@ int _cdecl wmain(int argc, LPCWSTR argv[])
   
         hr = pEnum->Skip(1);  
         if (FAILED(hr)) {  
-            printf("IEnumIDENTITY_ATTRIBUTE::Skip failed with hr =   
+            printf("IEnumIDENTITY_ATTRIBUTE::Skip failed with hr =
                     0x%x", hr);  
             goto Exit;  
         }  
@@ -219,11 +219,11 @@ Exit:
 }  
 ```  
   
-### <a name="to-run-the-sample"></a>이 샘플을 실행하려면  
- C:\\> EnumAssemblyAttributes .exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll  
+### <a name="to-run-the-sample"></a>샘플을 실행하려면  
+ C:\\> 열거특성.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll  
   
 ### <a name="sample-output"></a>샘플 출력  
- Culture = 중립  
+ 문화부 = 중립  
   
  이름 = 시스템  
   
@@ -234,13 +234,13 @@ Exit:
  Version = 2.0.0.0  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** 격리. h  
+ **헤더:** 격리.h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IReferenceIdentity 인터페이스](ireferenceidentity-interface.md)
 - [IEnumIDENTITY_ATTRIBUTE 인터페이스](ienumidentity-attribute-interface.md)

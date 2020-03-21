@@ -15,46 +15,46 @@ helpviewer_keywords:
 ms.assetid: 27064ca2-4186-4433-90a7-3b297785e891
 topic_type:
 - apiref
-ms.openlocfilehash: b98fab6c6127c3f78151d3b84160d4ca0434b6cd
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fadd1974cd4fa8a51a06700835f46df24e37d7fd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428252"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175774"
 ---
 # <a name="imetadataemitdefinesecurityattributeset-method"></a>IMetaDataEmit::DefineSecurityAttributeSet 메서드
-지정 된 토큰이 참조 하는 개체에 연결할 보안 권한 집합을 만듭니다.  
+지정된 토큰에서 참조하는 개체에 연결할 보안 권한 집합을 만듭니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```cpp  
-HRESULT DefineSecurityAttributeSet (   
-    [in]  mdToken       tkObj,   
-    [in]  COR_SECATTR   rSecAttrs[],   
-    [in]  ULONG         cSecAttrs,   
-    [out] ULONG         *pulErrorAttr   
+HRESULT DefineSecurityAttributeSet (
+    [in]  mdToken       tkObj,
+    [in]  COR_SECATTR   rSecAttrs[],
+    [in]  ULONG         cSecAttrs,
+    [out] ULONG         *pulErrorAttr
 );  
 ```  
   
 ## <a name="parameters"></a>매개 변수  
  `tkObj`  
- 진행 보안 정보가 연결 된 토큰입니다.  
+ 【인】 보안 정보가 첨부되는 토큰입니다.  
   
  `rSecAttrs`  
- 진행 `COR_SECATTR` 구조체의 배열입니다.  
+ 【인】 구조의 `COR_SECATTR` 배열입니다.  
   
  `cSecAttrs`  
- 진행 `rSecAttrs`의 요소 수입니다.  
+ 【인】 의 요소 수입니다. `rSecAttrs`  
   
  `pulErrorAttr`  
- 제한이 메서드가 실패 하는 경우 문제를 일으킨 요소의 `rSecAttrs` 인덱스를 지정 합니다.  
+ 【아웃】 메서드가 실패하면 문제를 일으킨 `rSecAttrs` 요소의 인덱스를 지정합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor  
+ **헤더:** 코르h  
   
- **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 사용  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

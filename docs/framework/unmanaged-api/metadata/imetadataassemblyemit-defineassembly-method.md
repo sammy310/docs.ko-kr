@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a0637d66-74bf-4f2d-8137-9ff838bccece
 topic_type:
 - apiref
-ms.openlocfilehash: 20628e708261076c6e172ff30c366a0d69c2e0f2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 14bd352099890e4ca36321d550b8e982d4373231
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432126"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177897"
 ---
 # <a name="imetadataassemblyemitdefineassembly-method"></a>IMetaDataAssemblyEmit::DefineAssembly 메서드
-지정 된 어셈블리에 대 한 메타 데이터를 포함 하는 `Assembly` 구조체를 만들고 연결 된 메타 데이터 토큰을 반환 합니다.  
+지정된 `Assembly` 어셈블리에 대한 메타데이터가 포함된 구조를 만들고 연결된 메타데이터 토큰을 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -32,7 +32,7 @@ HRESULT DefineAssembly (
     [in]  void                 *pbPublicKey,  
     [in]  ULONG                cbPublicKey,  
     [in]  ULONG                uHashAlgId,  
-    [in]  LPCWSTR              szName,   
+    [in]  LPCWSTR              szName,
     [in]  ASSEMBLYMETADATA     *pMetaData,  
     [in]  DWORD                dwAssemblyFlags,  
     [out] mdAssembly           *pmda  
@@ -41,35 +41,35 @@ HRESULT DefineAssembly (
   
 ## <a name="parameters"></a>매개 변수  
  `pbPublicKey`  
- 진행 어셈블리의 게시자를 식별 하는 공개 키 이거나, 어셈블리에 강력한 이름이 지정 되지 않은 경우 NULL입니다.  
+ 【인】 어셈블리의 게시자를 식별하는 공개 키 또는 어셈블리의 이름이 지정되지 않은 경우 NULL입니다.  
   
  `cbPublicKey`  
- 진행 `pbPublicKey`의 크기 (바이트)입니다.  
+ 【인】 의 바이트 크기입니다. `pbPublicKey`  
   
  `uHashAlgId`  
- 진행 어셈블리의 파일을 암호화 하는 데 사용할 해시 알고리즘의 식별자 이거나, SHA-1 알고리즘을 지정 하려면 NULL입니다.  
+ 【인】 어셈블리의 파일을 암호화하는 데 사용할 해싱 알고리즘또는 NULL을 사용하여 SHA-1 알고리즘을 지정하는 데 사용할 해시 알고리즘의 식별자입니다.  
   
  `szName`  
- 진행 사람이 읽을 수 있는 어셈블리의 텍스트 이름입니다. 이 값은 1024 자를 초과할 수 없습니다.  
+ 【인】 어셈블리의 사람이 읽을 수 있는 텍스트 이름입니다. 이 값은 1024자를 초과해서는 안 됩니다.  
   
  `pMetaData`  
- 진행 어셈블리에 대 한 버전, 플랫폼 및 로캘 정보를 포함 하는 ASSEMBLYMETADATA 인스턴스에 대 한 포인터입니다.  
+ 【인】 어셈블리에 대한 버전, 플랫폼 및 로캘 정보를 포함하는 ASSEMBLYMETADATA 인스턴스에 대한 포인터입니다.  
   
  `dwAssemblyFlags`  
- 진행 어셈블리의 기능을 설명 하는 [Corassemblyflags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) 값의 조합입니다.  
+ 【인】 [어셈블리의](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) 기능을 설명하는 CorAssemblyFlags 값의 조합입니다.  
   
  `pmda`  
- 제한이 메타 데이터 토큰에 대 한 포인터입니다.  
+ 【아웃】 메타데이터 토큰에 대한 포인터입니다.  
   
-## <a name="remarks"></a>주의  
- 매니페스트 내에는 하나의 `Assembly` 메타 데이터 구조만 정의할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 매니페스트 `Assembly` 내에서 하나의 메타데이터 구조만 정의할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor  
+ **헤더:** 코르h  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MsCorEE.dll의 리소스로 포함  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

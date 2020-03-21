@@ -15,51 +15,51 @@ helpviewer_keywords:
 ms.assetid: 05c78aaf-5bbd-497e-9ae2-55f4fae0c5fb
 topic_type:
 - apiref
-ms.openlocfilehash: 0731053fb37c775d25052a5fd99a479a44ff5862
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a494b1aaa762549528e92ab93d18929ef73eb8da
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434874"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176086"
 ---
 # <a name="iceegengetsectionblock-method"></a>ICeeGen::GetSectionBlock 메서드
 코드 베이스의 섹션 블록을 가져옵니다.  
   
- 이 메서드는 사용 되지 않으므로 사용 하면 안 됩니다.  
+ 이 메서드는 더 이상 사용되지 않으며 사용해서는 안 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT GetSectionBlock (  
-    [in]  HCEESECTION    section,     
+    [in]  HCEESECTION    section,
     [in]  ULONG          len,  
     [in]  ULONG          align     = 1,  
     [out] void           **ppBytes = 0  
-);   
+);
 ```  
   
 ## <a name="parameters"></a>매개 변수  
  `section`  
- 진행 코드 베이스 블록을 검색할 섹션입니다.  
+ 【인】 코드 베이스의 블록을 검색할 섹션입니다.  
   
  `len`  
- 진행 검색할 블록의 길이입니다.  
+ 【인】 검색할 블록의 길이입니다.  
   
  `align`  
- 진행 블록의 첫 번째 바이트를 정렬 하는 데 사용 되는 섹션의 시작 부분을 기준으로 하는 바이트입니다. 이는 섹션 내에서 블록의 위치입니다.  
+ 【인】 블록의 첫 번째 바이트를 정렬하는 섹션의 시작 부분을 기준으로 하는 바이트입니다. 섹션 내의 블록 위치입니다.  
   
  `ppBytes`  
- 제한이 검색 된 블록의 주소를 받는 위치에 대 한 포인터입니다.  
+ 【아웃】 검색된 블록의 주소를 수신하는 위치에 대한 포인터입니다.  
   
-## <a name="remarks"></a>주의  
- 다른 메서드에서 처리 하지 않는 특별 한 섹션 요구 사항이 있는 경우에만 `GetSectionBlock`를 호출 합니다.  
+## <a name="remarks"></a>설명  
+ 다른 `GetSectionBlock` 방법으로 처리되지 않는 특별한 섹션 요구 사항이 있는 경우에만 호출합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor  
+ **헤더:** 코르h  
   
- **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
+ **라이브러리:** MsCorEE.dll의 리소스로 사용  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

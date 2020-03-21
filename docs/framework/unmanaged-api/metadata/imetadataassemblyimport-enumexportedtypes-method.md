@@ -15,53 +15,53 @@ helpviewer_keywords:
 ms.assetid: e5912ed8-e4ce-438b-8ea3-d9e4c288d109
 topic_type:
 - apiref
-ms.openlocfilehash: 45e2348b4726447548544d975e60b93e464fb402
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f00fe5bce2f808265add228406dfaa2ccc267545
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450336"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176008"
 ---
 # <a name="imetadataassemblyimportenumexportedtypes-method"></a>IMetaDataAssemblyImport::EnumExportedTypes 메서드
-현재 메타 데이터 범위에서 어셈블리 매니페스트에 참조 된 내보낸 형식을 열거 합니다.  
+어셈블리 매니페스트에서 참조되는 내보낸 형식을 현재 메타데이터 범위에서 탐색합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT EnumExportedTypes (  
-    [in, out] HCORENUM     *phEnum,   
-    [out] mdExportedType   rExportedTypes[],   
-    [in]  ULONG            cMax,   
+    [in, out] HCORENUM     *phEnum,
+    [out] mdExportedType   rExportedTypes[],
+    [in]  ULONG            cMax,
     [out] ULONG            *pcTokens  
 );  
 ```  
   
 ## <a name="parameters"></a>매개 변수  
  `phEnum`  
- [in, out] 열거자에 대 한 포인터입니다. `EnumExportedTypes` 메서드가 처음으로 호출 되는 경우이 값은 null 값 이어야 합니다.  
+ 【인, 아웃】 열거형에 대한 포인터입니다. `EnumExportedTypes` 메서드를 처음 호출할 때 null 값이어야 합니다.  
   
  `rExportedTypes`  
- 제한이 `mdExportedType` 메타 데이터 토큰의 열거형입니다.  
+ 【아웃】 메타데이터 토큰의 `mdExportedType` 열거형입니다.  
   
  `cMax`  
- 진행 `rExportedTypes` 배열에 배치할 수 있는 `mdExportedType` 토큰의 최대 수입니다.  
+ 【인】 배열에 배치할 수 있는 `mdExportedType` 최대 `rExportedTypes` 토큰 수입니다.  
   
  `pcTokens`  
- 제한이 `rExportedTypes`에 실제로 배치 된 `mdExportedType` 토큰 수입니다.  
+ 【아웃】 실제로 에 `mdExportedType` 배치된 토큰 `rExportedTypes`수입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
-|HRESULT|설명|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|`S_OK`|`EnumExportedTypes` 성공적으로 반환 되었습니다.|  
-|`S_FALSE`|열거할 토큰이 없습니다. 이 경우 `pcTokens`은 0으로 설정 됩니다.|  
+|`S_OK`|`EnumExportedTypes`성공적으로 반환됩니다.|  
+|`S_FALSE`|등록할 토큰이 없습니다. 이 경우 `pcTokens` 0으로 설정됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조 하세요.  
+ **플랫폼:** [시스템 요구 사항을](../../../../docs/framework/get-started/system-requirements.md)참조하십시오.  
   
- **헤더:** Cor  
+ **헤더:** 코르h  
   
- **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
+ **라이브러리:** MsCorEE.dll의 리소스로 사용  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
