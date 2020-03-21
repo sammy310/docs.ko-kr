@@ -15,32 +15,32 @@ helpviewer_keywords:
 ms.assetid: cca0f799-09b8-4689-a33c-6d6537943a9b
 topic_type:
 - apiref
-ms.openlocfilehash: 6514606290bf006443d7011c1a428bebb4cca0f6
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 7fb58c0eb2446253bd658434fc9d68bb857fe0e6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76865833"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175124"
 ---
 # <a name="icorprofilercallbackthreadcreated-method"></a>ICorProfilerCallback::ThreadCreated 메서드
-스레드가 생성 되었음을 프로파일러에 알립니다.  
+프로파일러에 스레드가 생성되었음을 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT ThreadCreated(  
-    [in] ThreadID threadId);   
+    [in] ThreadID threadId);
 ```  
   
 ## <a name="parameters"></a>매개 변수  
  `threadId`  
- 진행 만들어진 스레드의 ID입니다.  
+ 【인】 생성된 스레드의 ID입니다.  
   
-## <a name="remarks"></a>주의  
- `threadId` 값이 즉시 유효 합니다.  
+## <a name="remarks"></a>설명  
+ 이 `threadId` 값은 즉시 유효합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -48,7 +48,7 @@ HRESULT ThreadCreated(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
 - [ThreadDestroyed 메서드](icorprofilercallback-threaddestroyed-method.md)

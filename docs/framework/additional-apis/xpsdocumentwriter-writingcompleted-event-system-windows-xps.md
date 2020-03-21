@@ -1,5 +1,5 @@
 ---
-title: System.windows.xps.xpsdocumentwriter.writeasync. _WritingCompleted 이벤트 (System.web)
+title: XpsDocumentWriter._WritingCompleted 이벤트 (시스템.Windows.Xps)
 ms.date: 10/17/2017
 api_location:
 - system.printing.dll
@@ -11,16 +11,16 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: 902e491ce4c4a37f83d68888fc4b5d6a7665ffb6
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 0c233965638217ad5b25b9792fe07fb4d73dbe18
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524994"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155624"
 ---
-# <a name="xpsdocumentwriter_writingcompleted-event"></a>System.windows.xps.xpsdocumentwriter.writeasync. \_WritingCompleted 이벤트
+# <a name="xpsdocumentwriter_writingcompleted-event"></a>XpsDocumentWriter. \_완료된 이벤트 작성
 
-쓰기 작업이 완료 되 면 발생 합니다. 
+쓰기 작업을 마치면 발생합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -30,8 +30,8 @@ internal event WritingCompletedEventHandler _WritingCompleted
 
 ## <a name="requirements"></a>요구 사항
 
-**네임스페이스:** <xref:System.Windows.Xps>
+**네임스페이스:**<xref:System.Windows.Xps>
 
-**어셈블리:** 시스템 인쇄 (system.web)
+**어셈블리:** System.인쇄(system.printing.dll)
 
-**.NET Framework 버전:** 3.0부터 사용할 수 있음
+**.NET 프레임워크 버전:** 3.0 이후 사용 가능

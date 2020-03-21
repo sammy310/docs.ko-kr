@@ -15,78 +15,78 @@ helpviewer_keywords:
 ms.assetid: 5c4c1dc2-d40d-4173-bbe6-7058fb21c98f
 topic_type:
 - apiref
-ms.openlocfilehash: f11b374ed0ecbfc137c43fb641ae691237604691
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: eb3ecbf39376e7126b5ec93a26badcbf5076d1db
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431528"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175787"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty 메서드
-지정 된 `get` 및 `set` 메서드 접근자를 사용 하 여 지정 된 형식에 대 한 속성 정의를 만들고 해당 속성 정의에 대 한 토큰을 가져옵니다.  
+지정된 및 `set` 메서드 접근자와 함께 지정된 `get` 형식에 대한 속성 정의를 만들고 해당 속성 정의에 대한 토큰을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```cpp  
-HRESULT DefineProperty (   
-    [in]  mdTypeDef          td,   
-    [in]  LPCWSTR            szProperty,   
-    [in]  DWORD              dwPropFlags,   
-    [in]  PCCOR_SIGNATURE    pvSig,   
-    [in]  ULONG              cbSig,   
-    [in]  DWORD              dwCPlusTypeFlag,   
-    [in]  void const         *pValue,   
-    [in]  ULONG              cchValue,   
-    [in]  mdMethodDef        mdSetter,   
-    [in]  mdMethodDef        mdGetter,   
-    [in]  mdMethodDef        rmdOtherMethods[],   
-    [out] mdProperty         *pmdProp   
+HRESULT DefineProperty (
+    [in]  mdTypeDef          td,
+    [in]  LPCWSTR            szProperty,
+    [in]  DWORD              dwPropFlags,
+    [in]  PCCOR_SIGNATURE    pvSig,
+    [in]  ULONG              cbSig,
+    [in]  DWORD              dwCPlusTypeFlag,
+    [in]  void const         *pValue,
+    [in]  ULONG              cchValue,
+    [in]  mdMethodDef        mdSetter,
+    [in]  mdMethodDef        mdGetter,
+    [in]  mdMethodDef        rmdOtherMethods[],
+    [out] mdProperty         *pmdProp
 );  
 ```  
   
 ## <a name="parameters"></a>매개 변수  
  `td`  
- 진행 속성이 정의 되는 클래스 또는 인터페이스에 대 한 토큰입니다.  
+ 【인】 속성이 정의되는 클래스 또는 인터페이스에 대한 토큰입니다.  
   
  `szProperty`  
- 진행 속성의 이름입니다.  
+ 【인】 속성의 이름입니다.  
   
  `dwPropFlags`  
- 진행 속성 플래그입니다.  
+ 【인】 속성 플래그입니다.  
   
  `pvSig`  
- 진행 속성 시그니처입니다.  
+ 【인】 속성 서명입니다.  
   
  `cbSig`  
- 진행 `pvSig`바이트 수입니다.  
+ 【인】 의 바이트 `pvSig`수입니다.  
   
  `dwCPlusTypeFlag`  
- 진행 속성의 기본값 형식입니다.  
+ 【인】 속성의 기본값의 형식입니다.  
   
  `pValue`  
- 진행 속성의 기본값입니다.  
+ 【인】 속성의 기본값입니다.  
   
  `cchValue`  
- 진행 `pValue`의 (유니코드) 문자 수입니다.  
+ 【인】 에서 (유니코드) 문자의 `pValue`수입니다.  
   
  `mdSetter`  
- 진행 속성 값을 설정 하는 메서드입니다.  
+ 【인】 속성 값을 설정하는 메서드입니다.  
   
  `mdGetter`  
- 진행 속성 값을 가져오는 메서드입니다.  
+ 【인】 속성 값을 얻는 메서드입니다.  
   
  `rmdOtherMethods[]`  
- 진행 속성과 연결 된 다른 메서드의 배열입니다. `mdTokenNil`를 사용 하 여 배열을 종료 합니다.  
+ 【인】 속성과 연결된 다른 메서드의 배열입니다. `mdTokenNil`을 통해 배열을 종료합니다.  
   
  `pmdProp`  
- 제한이 할당 된 `mdProperty` 토큰입니다.  
+ 【아웃】 할당된 토큰입니다. `mdProperty`  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor  
+ **헤더:** 코르h  
   
- **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 사용  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

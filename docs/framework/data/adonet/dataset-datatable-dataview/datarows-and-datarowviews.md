@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8f5eec26-b809-4aca-8778-7e202356d856
-ms.openlocfilehash: 7c76435b8a0f7a874504813d91d5eda929d08f67
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 14e7e1ccb051410c351e49afee9f2d6809264833
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786427"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151301"
 ---
 # <a name="datarows-and-datarowviews"></a>DataRow 및 DataRowView
-<xref:System.Data.DataView>는 <xref:System.Data.DataRowView> 개체의 열거할 수 있는 컬렉션을 노출시킵니다. **DataRowView** 개체는 기본 테이블에 있는 열의 이름 또는 서 수 참조로 인덱싱되는 개체 배열로 값을 노출 합니다. DataRowView의 속성을 <xref:System.Data.DataRow> <xref:System.Data.DataRowView.Row%2A> 사용 하 여 **DataRowView** 에 의해 노출 되는에 액세스할 수있습니다.  
+<xref:System.Data.DataView>는 <xref:System.Data.DataRowView> 개체의 열거할 수 있는 컬렉션을 노출시킵니다. **DataRowView** 개체는 값을 기본 테이블의 열의 이름 또는 서수 참조로 인덱싱되는 개체 배열로 노출합니다. DataRowView <xref:System.Data.DataRow> 의 <xref:System.Data.DataRowView.Row%2A> 속성을 사용하여 **DataRowView에** 의해 노출되는 액세스 에 액세스할 수 있습니다. **DataRowView**  
   
- **DataRowView**를 사용 하 여 값을 볼 때 <xref:System.Data.DataView.RowStateFilter%2A> **DataView** 의 속성은 기본 **DataRow** 가 노출 되는 행 버전을 결정 합니다. **DataRow**를 사용 하 여 다른 행 버전에 액세스 하는 방법에 대 한 자세한 내용은 [행 상태 및 행 버전](row-states-and-row-versions.md)을 참조 하세요.  
+ **DataRowView를**사용하여 값을 볼 때 <xref:System.Data.DataView.RowStateFilter%2A> **DataView의** 속성은 노출된 기본 **DataRow의** 행 버전을 결정합니다. **DataRow를**사용하여 다른 행 버전에 액세스하는 것에 대한 자세한 내용은 [행 상태 및 행 버전을](row-states-and-row-versions.md)참조하십시오.  
   
  다음 코드 예제에서는 테이블의 현재 값과 원래 값을 모두 표시합니다.  
   
@@ -25,7 +25,7 @@ Console.WriteLine("Current Values:")
 WriteView(catView)  
 Console.WriteLine("Original Values:")  
 catView.RowStateFilter = DataViewRowState.ModifiedOriginal  
-WriteView(catView)      
+WriteView(catView)
   
 Public Shared Sub WriteView(thisDataView As DataView)  
   Dim rowView As DataRowView  
@@ -59,7 +59,7 @@ public static void WriteView(DataView thisDataView)
 }  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Data.DataRowVersion>
 - <xref:System.Data.DataViewRowState>

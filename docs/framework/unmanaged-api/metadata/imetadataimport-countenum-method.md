@@ -15,45 +15,45 @@ helpviewer_keywords:
 ms.assetid: d1de53ad-9435-4b5f-9df7-07f21210e5b5
 topic_type:
 - apiref
-ms.openlocfilehash: 0c78ce8192d6456dd1b1be990d87b9209b028e09
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b780ca513d8a0b4f88e66594e86e9ff8290f6523
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440364"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177358"
 ---
 # <a name="imetadataimportcountenum-method"></a>IMetaDataImport::CountEnum 메서드
-지정 된 열거자에 의해 검색 된 열거형의 요소 수를 가져옵니다.  
+지정된 열거형에서 검색된 열거형의 요소 수를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT CountEnum (  
-   [in]  HCORENUM    hEnum,   
+   [in]  HCORENUM    hEnum,
    [out] ULONG       *pulCount  
 );  
 ```  
   
 ## <a name="parameters"></a>매개 변수  
  `hEnum`  
- 진행 열거자에 대 한 핸들입니다.  
+ 【인】 열거자의 핸들입니다.  
   
  `pulCount`  
- 제한이 열거 된 요소의 수입니다.  
+ 【아웃】 열거된 요소의 수입니다.  
   
 ## <a name="remarks"></a>설명  
- `hEnum`로 지정 된 핸들은 이전 `Enum`*이름* 호출 (예 [: IMetaDataImport:: enumtypedefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md))에서 가져옵니다.  
+ 지정된 `hEnum` 핸들은 이전 `Enum` *이름* 호출(예: [IMetaDataImport::EnumTypeDefs)에서](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)가져옵니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor  
+ **헤더:** 코르h  
   
- **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
+ **라이브러리:** MsCorEE.dll의 리소스로 포함  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

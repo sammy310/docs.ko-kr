@@ -2,21 +2,21 @@
 title: 중첩 Entity SQL 쿼리 작성
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-ms.openlocfilehash: cd41c36853f50597a32d511d455148d649d9eb64
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 6b2fc9a32fc30d205b9c33257bf98781cfa07499
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395552"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150391"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>중첩 Entity SQL 쿼리 작성
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)]은 풍부한 기능 언어입니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]의 빌딩 블록은 식입니다. 기존 SQL과 달리 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]은 테이블 형식 결과 집합으로 제한 되지 않습니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]는 리터럴, 매개 변수 또는 중첩 된 식을 포함할 수 있는 복잡 한 식을 작성 하는 것을 지원 합니다. 식의 값은 매개 변수화 되거나 다른 식으로 구성 될 수 있습니다.  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]은 다양한 기능을 가진 언어입니다. 의 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 구성 요소입니다. 기존 SQL과 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 달리 테이블 형식 결과 집합에 국한되지 않습니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 식의 값은 매개 변수화할 수 있으며 다른 식으로 구성될 수도 있습니다.  
   
 ## <a name="nested-expressions"></a>중첩된 식  
- 중첩된 식은 자신이 반환한 형식의 값이 허용되는 임의의 위치에 놓일 수 있습니다. 예:  
+ 중첩된 식은 자신이 반환한 형식의 값이 허용되는 임의의 위치에 놓일 수 있습니다. 다음은 그 예입니다.  
   
 ```sql  
--- Returns a hierarchical collection of three elements at top-level.   
+-- Returns a hierarchical collection of three elements at top-level.
 -- x must be passed in the parameter collection.  
 ROW(@x, {@x}, {@x, 4, 5}, {@x, 7, 8, 9})  
   
@@ -25,13 +25,13 @@ ROW(@x, {@x}, {@x, 4, 5}, {@x, 7, 8, 9})
 {{{@x}}};  
 ```  
   
- 중첩 쿼리는 프로젝션 절에 위치할 수 있습니다. 예:  
+ 중첩 쿼리는 프로젝션 절에 위치할 수 있습니다. 다음은 그 예입니다.  
   
 ```sql  
 -- Returns a collection of rows where each row contains an Address entity.  
 -- and a collection of references to its corresponding SalesOrderHeader entities.  
-SELECT address, (SELECT DEREF(soh)   
-                    FROM NAVIGATE(address, AdventureWorksModel.FK_SalesOrderHeader_Address_BillToAddressID) AS soh)   
+SELECT address, (SELECT DEREF(soh)
+                    FROM NAVIGATE(address, AdventureWorksModel.FK_SalesOrderHeader_Address_BillToAddressID) AS soh)
                     AS salesOrderHeader FROM AdventureWorksEntities.Address AS address  
 ```  
   
@@ -46,10 +46,10 @@ UNION ALL
 FROM … );  
 ```  
   
- 다음 예제에서는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서 식을 올바르게 중첩 하는 방법을 보여 줍니다. [방법: 두 쿼리를 Union 순서로 정렬](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100))합니다.  
+ 다음 예제에서는 [다음](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100))에서 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]식을 올바르게 중첩 하는 방법을 보여 줍니다.  
   
 ## <a name="nested-queries-in-projection"></a>프로젝션의 중첩 쿼리  
- 프로젝션 절의 중첩 쿼리는 서버의 Cartesian 제품 쿼리로 변환될 수 있습니다. SQL Server를 포함 한 일부 백엔드 서버에서는 TempDB 테이블이 매우 커질 수 있으므로 서버 성능에 부정적인 영향을 줄 수 있습니다.  
+ 프로젝션 절의 중첩 쿼리는 서버의 Cartesian 제품 쿼리로 변환될 수 있습니다. SQL Server를 포함한 일부 백 엔드 서버에서는 TempDB 테이블이 매우 커지므로 서버 성능에 부정적인 영향을 줄 수 있습니다.  
   
  다음은 이러한 쿼리의 예제입니다.  
   

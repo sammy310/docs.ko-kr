@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 90368606-506e-40df-be1f-8d595159203f
 topic_type:
 - apiref
-ms.openlocfilehash: 6914437b9b238c1d82cf4cc8a480a15dd8dda7ad
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8f9761cc8bc881cd694f5d9620e5c4ab5987a2ed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126802"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176398"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen 클래스
-네이티브 PE (이식 가능한 실행) 파일을 만드는 기능을 제공 합니다. 일반적으로이 인터페이스는 컴파일러에서 컴파일된 출력 실행 파일을 생성 하는 데 사용 됩니다.  
+기본 PE(이식 가능한 실행 파일) 파일을 만드는 기능을 제공합니다. 인터페이스는 일반적으로 컴파일된 출력 실행 을 생성 하기 위해 컴파일러에 의해 사용 됩니다.  
   
 > [!NOTE]
-> `ICeeFileGen`는 .NET Framework 인프라를 지원 하며 사용자 코드에서 직접 사용할 수 없습니다.  
+> `ICeeFileGen`.NET Framework 인프라를 지원하며 코드에서 직접 사용할 수 없습니다.  
   
- 이 인터페이스는 더 이상 사용 되지 않으며 이후 릴리스에서 제거 될 예정입니다.  
+ 이 인터페이스는 더 이상 사용되지 않았으며 이후 릴리스에서 제거됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -149,7 +149,7 @@ public:
         HCEESECTION section, ULONG num, ULONG size, ULONG offset = 0);  
   
     virtual HRESULT EmitMetaDataEx (HCEEFILE ceeFile,  
-        IMetaDataEmit *emitter);   
+        IMetaDataEmit *emitter);
   
     virtual HRESULT EmitLibraryNameEx (HCEEFILE ceeFile,  
         IMetaDataEmit *emitter);  
@@ -235,12 +235,12 @@ public:
 ```  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** ICeeFileGen  
+ **헤더:** 이세파일젠  
   
- **.NET Framework 버전:** 1.0  
+ **.NET 프레임워크 버전:** 1.0  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

@@ -14,33 +14,33 @@ helpviewer_keywords:
 ms.assetid: c3f7d307-4047-4f9a-be8c-f152fca42fd0
 topic_type:
 - apiref
-ms.openlocfilehash: 86cac53508665c3c97caaa415d8d3c38660928bb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 21e92d8f2fb80c4c41d516ef281bf4fc8a75f4e1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448555"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176645"
 ---
 # <a name="corsymvarflag-enumeration"></a>CorSymVarFlag 열거형
-변수가 컴파일러에서 생성 되었는지 여부를 나타냅니다.  
+변수가 컴파일러 생성되는지 여부를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```cpp  
-typedef enum CorSymVarFlag   
+typedef enum CorSymVarFlag
 {  
     VAR_IS_COMP_GEN = 1  
 } CorSymVarFlag;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
-|`VAR_IS_COMP_GEN`|지정 된 변수가 컴파일러에서 생성 되었음을 나타냅니다.|  
+|`VAR_IS_COMP_GEN`|지정된 변수가 컴파일러에서 생성되는 것을 나타냅니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** CorSym, CorSym  
+ **헤더:** 코르심.idl, 코르심.h  
   
 ## <a name="see-also"></a>참고 항목
 

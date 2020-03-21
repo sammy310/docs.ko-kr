@@ -2,34 +2,34 @@
 title: Oracle LOB
 ms.date: 03/30/2017
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
-ms.openlocfilehash: a52203ad62e8761897f7b2bef90f1915db9433f8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 62525fed85525e26b7c61208fe44b108de562fb0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783336"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149429"
 ---
 # <a name="oracle-lobs"></a>Oracle LOB
-Oracle의 .NET Framework Data Provider에는 oracle <xref:System.Data.OracleClient.OracleLob> **LOB** 데이터 형식 작업에 사용 되는 클래스가 포함 되어 있습니다.  
+오라클의 .NET 프레임워크 <xref:System.Data.OracleClient.OracleLob> 데이터 공급자에는 Oracle **LOB** 데이터 형식과 함께 작동하는 데 사용되는 클래스가 포함됩니다.  
   
- **OracleLob** 는 다음 <xref:System.Data.OracleClient.OracleType> 데이터 형식 중 하나일 수 있습니다.  
+ **OracleLob는** 다음 <xref:System.Data.OracleClient.OracleType> 데이터 유형 중 하나일 수 있습니다.  
   
 |데이터 형식|Description|  
 |---------------|-----------------|  
-|**Blob**|최대 4gb 크기의 이진 데이터를 포함 하는 Oracle **BLOB** 데이터 형식입니다. 이는 **Byte**형식의 **배열** 에 매핑됩니다.|  
-|**Clob**|서버의 기본 문자 집합을 기반으로 하는 문자 데이터를 포함 하는 Oracle **CLOB** 데이터 형식으로, 최대 크기는 4gb입니다. 이는 **문자열**에 매핑됩니다.|  
-|**NClob**|서버의 국가별 문자 집합을 기반으로 최대 4gb의 문자 데이터를 포함 하는 Oracle **NCLOB** 데이터 형식입니다. 이는 **문자열**에 매핑됩니다.|  
+|**Blob**|최대 크기4기가바이트의 이진 데이터를 포함하는 Oracle **BLOB** 데이터 형식입니다. 이렇게 하면 **바이트**형식의 **배열에** 매핑됩니다.|  
+|**Clob**|서버의 기본 문자 집합에 따라 문자 데이터가 포함된 Oracle **CLOB** 데이터 유형으로 최대 크기는 4기가바이트입니다. 이 **매핑은 문자열에**매핑됩니다.|  
+|**Nclob**|최대 크기 4기가바이트의 서버에서 설정된 국가 문자를 기반으로 문자 데이터를 포함하는 Oracle **NCLOB** 데이터 유형입니다. 이 **매핑은 문자열에**매핑됩니다.|  
   
- **OracleLob** 는 운영 체제의 <xref:System.Data.OracleClient.OracleBFile> 물리적 파일이 아니라 서버에 데이터가 저장 된다는 점에서와는 다릅니다. 항상 읽기 전용인 **OracleBFile**와 달리 읽기/쓰기 개체 일 수도 있습니다.  
+ **OracleLob는** 데이터가 운영 <xref:System.Data.OracleClient.OracleBFile> 체제의 실제 파일대신 서버에 저장된다는 점에서 다릅니다. 또한 항상 읽기 전용인 **OracleBFile과**달리 읽기 쓰기 개체일 수도 있습니다.  
   
 ## <a name="creating-retrieving-and-writing-to-a-lob"></a>LOB 만들기, 검색 및 쓰기  
- 다음 C# 예에서는 Oracle 테이블에 lob을 만든 다음 **OracleLob** 개체의 형태로 검색 하 여이를 쓰는 방법을 보여 줍니다. 이 예제에서는 개체와 <xref:System.Data.OracleClient.OracleDataReader> **OracleLob** **Read** 및 **Write** 메서드를 사용 하는 방법을 보여 줍니다. 이 예에서는 Oracle **BLOB**, **CLOB**및 **NCLOB** 데이터 형식을 사용 합니다.  
+ 다음 C# 예제에서는 Oracle 테이블에서 LOB를 만든 다음 **OracleLob** 개체의 형태로 LOB를 검색하고 작성하는 방법을 보여 줍니다. 이 예제에서는 <xref:System.Data.OracleClient.OracleDataReader> 개체 및 **OracleLob** **읽기** 및 **쓰기** 메서드를 사용하는 방법을 보여 줍니다. 이 예제에서는 Oracle **BLOB,** **CLOB**및 **NCLOB** 데이터 형식을 사용합니다.  
   
 ```csharp  
 using System;  
-using System.IO;              
-using System.Text;             
-using System.Data;              
+using System.IO;
+using System.Text;
+using System.Data;
 using System.Data.OracleClient;  
   
 // LobExample  
@@ -83,31 +83,31 @@ public class LobExample
          //Example - Reading binary data (in chunks).  
          byte[] buffer = new byte[100];  
          while((actual = blob.Read(buffer, 0, buffer.Length)) >0)  
-            Console.WriteLine(blob.LobType + ".Read(" + buffer + ", " +   
+            Console.WriteLine(blob.LobType + ".Read(" + buffer + ", " +
               buffer.Length + ") => " + actual);  
   
          // Example - Reading CLOB/NCLOB data (in chunks).  
-         // Note: You can read character data as raw Unicode bytes   
+         // Note: You can read character data as raw Unicode bytes
          // (using OracleLob.Read as in the above example).  
-         // However, because the OracleLob object inherits directly   
-         // from the .NET stream object,   
-         // all the existing classes that manipluate streams can   
-         // also be used. For example, the   
-         // .NET StreamReader makes it easier to convert the raw bytes   
+         // However, because the OracleLob object inherits directly
+         // from the .NET stream object,
+         // all the existing classes that manipluate streams can
+         // also be used. For example, the
+         // .NET StreamReader makes it easier to convert the raw bytes
          // into actual characters.  
-         StreamReader streamreader =   
+         StreamReader streamreader =
            new StreamReader(clob, Encoding.Unicode);  
          char[] cbuffer = new char[100];  
-         while((actual = streamreader.Read(cbuffer,   
+         while((actual = streamreader.Read(cbuffer,
            0, cbuffer.Length)) >0)  
             Console.WriteLine(clob.LobType + ".Read(  
-              " + new string(cbuffer, 0, actual) + ", " +   
+              " + new string(cbuffer, 0, actual) + ", " +
               cbuffer.Length + ") => " + actual);  
   
          // Example - Reading data (all at once).  
-         // You could use StreamReader.ReadToEnd to obtain   
+         // You could use StreamReader.ReadToEnd to obtain
          // all the string data, or simply  
-         // call OracleLob.Value to obtain a contiguous allocation   
+         // call OracleLob.Value to obtain a contiguous allocation
          // of all the data.  
          Console.WriteLine(nclob.LobType + ".Value => " + nclob.Value);  
       }  
@@ -133,15 +133,15 @@ public class LobExample
          // Obtain a LOB.  
          OracleLob blob = reader.GetOracleLob(1/*0:based ordinal*/);  
   
-         // Perform any desired operations on the LOB   
+         // Perform any desired operations on the LOB
          // (read, position, and so on).  
   
          // Example - Writing binary data (directly to the backend).  
          // To write, you can use any of the stream classes, or write  
-         // raw binary data using   
-         // the OracleLob write method. Writing character vs. binary   
+         // raw binary data using
+         // the OracleLob write method. Writing character vs. binary
          // is the same;  
-         // however note that character is always in terms of   
+         // however note that character is always in terms of
          // Unicode byte counts  
          // (for example, even number of bytes - 2 bytes for every  
          // Unicode character).  
@@ -153,7 +153,7 @@ public class LobExample
          Console.WriteLine(blob.LobType + ".Write(  
            " + buffer + ", 0, 2) => " + blob.Value);  
   
-         // Example - Obtaining a temp LOB and copying data   
+         // Example - Obtaining a temp LOB and copying data
          // into it from another LOB.  
          OracleLob templob = CreateTempLob(cmd, blob.LobType);  
          long actual = blob.CopyTo(templob);  
@@ -161,7 +161,7 @@ public class LobExample
             " + templob.Value + ") => " + actual);  
   
          // Commit the transaction now that everything succeeded.  
-         // Note: On error, Transaction.Dispose is called   
+         // Note: On error, Transaction.Dispose is called
          // (from the using statement)  
          // and will automatically roll back the pending transaction.  
          cmd.Transaction.Commit();  
@@ -205,10 +205,10 @@ public class LobExample
       {  
       }  
   
-      cmd.CommandText =   
+      cmd.CommandText =
         "CREATE TABLE tablewithlobs (a int, b BLOB, c CLOB, d NCLOB)";  
       cmd.ExecuteNonQuery();  
-      cmd.CommandText =   
+      cmd.CommandText =
         "INSERT INTO tablewithlobs VALUES (1, 'AA', 'AAA', N'AAAA')";  
       cmd.ExecuteNonQuery();  
    }  
@@ -227,7 +227,7 @@ OracleTransaction tx = conn.BeginTransaction();
   
 OracleCommand cmd = conn.CreateCommand();  
 cmd.Transaction = tx;  
-cmd.CommandText =   
+cmd.CommandText =
   "declare xx blob; begin dbms_lob.createtemporary(  
   xx, false, 0); :tempblob := xx; end;";  
 cmd.Parameters.Add(new OracleParameter("tempblob",  
@@ -239,7 +239,7 @@ tempLob.Write(tempbuff,0,tempbuff.Length);
 tempLob.EndBatch();  
 cmd.Parameters.Clear();  
 cmd.CommandText = "myTable.myProc";  
-cmd.CommandType = CommandType.StoredProcedure;    
+cmd.CommandType = CommandType.StoredProcedure;
 cmd.Parameters.Add(new OracleParameter(  
   "ImportDoc", OracleType.Blob)).Value = tempLob;  
 cmd.ExecuteNonQuery();  
@@ -247,7 +247,7 @@ cmd.ExecuteNonQuery();
 tx.Commit();  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [Oracle 및 ADO.NET](oracle-and-adonet.md)
 - [ADO.NET 개요](ado-net-overview.md)

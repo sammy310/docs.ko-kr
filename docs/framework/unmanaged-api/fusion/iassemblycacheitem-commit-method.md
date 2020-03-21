@@ -15,39 +15,39 @@ helpviewer_keywords:
 ms.assetid: c2321f17-f46f-4815-ae41-b28678753613
 topic_type:
 - apiref
-ms.openlocfilehash: 5de522c00da76e7c01369c706cb7f9e2bdad4b3b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f840438e175790a2b4c97302963b910f98dffb7d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134511"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176567"
 ---
 # <a name="iassemblycacheitemcommit-method"></a>IAssemblyCacheItem::Commit 메서드
-캐시 된 어셈블리 참조를 메모리에 커밋합니다.  
+캐시된 어셈블리 참조를 메모리에 커밋합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT Commit (  
-    [in] DWORD dwFlags,   
+    [in] DWORD dwFlags,
     [out, optional] ULONG *pulDisposition  
 );  
 ```  
   
 ## <a name="parameters"></a>매개 변수  
  `dwFlags`  
- 진행 Fusion에 정의 된 플래그입니다.  
+ 【인】 Fusion.idl에 정의된 플래그입니다.  
   
  `pulDisposition`  
- [out, 선택 사항] 작업의 결과를 나타내는 값입니다.  
+ [아웃, 선택 사항] 작업 결과를 나타내는 값입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Fusion. h  
+ **헤더:** 퓨전.h  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IAssemblyCacheItem 인터페이스](iassemblycacheitem-interface.md)

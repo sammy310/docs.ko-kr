@@ -15,34 +15,34 @@ helpviewer_keywords:
 ms.assetid: 6330a9ee-8cd5-4299-86f1-b4de2c701a0d
 topic_type:
 - apiref
-ms.openlocfilehash: 715456317b880de89b6abdf1fa82acd040d17ced
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c32407c3fc0bc5a045b80ec48937699826d981af
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442046"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177160"
 ---
 # <a name="imetadatatablesgetblobheapsize-method"></a>IMetaDataTables::GetBlobHeapSize 메서드
-BLOB (binary large object) 힙의 크기 (바이트)를 가져옵니다.  
+이진 큰 개체(BLOB) 힙의 크기를 바이트로 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```cpp  
 HRESULT GetBlobHeapSize (  
     [out] ULONG     *pcbBlobs  
-);   
+);
 ```  
   
 ## <a name="parameters"></a>매개 변수  
  `pcbBlobs`  
- 제한이 BLOB 힙의 크기 (바이트)에 대 한 포인터입니다.  
+ 【아웃】 BLOB 힙의 크기에 대한 포인터(바이트)입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor  
+ **헤더:** 코르h  
   
- **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
+ **라이브러리:** MsCorEE.dll의 리소스로 사용  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

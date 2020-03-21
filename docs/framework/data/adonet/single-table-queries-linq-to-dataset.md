@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-ms.openlocfilehash: 1f4462f617eb81d30f893b52bdc674e1eee8961c
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 7bb8d8e19ac9cf36eabc061ceba9c649b8a4cc00
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634770"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79148974"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>단일 클래스 쿼리(LINQ to DataSet)
-LINQ (언어 통합 쿼리) 쿼리는 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스 또는 <xref:System.Linq.IQueryable%601> 인터페이스를 구현 하는 데이터 소스에서 작동 합니다. <xref:System.Data.DataTable> 클래스는 인터페이스를 구현 하지 않으므로 LINQ 쿼리의 `From` 절에서 <xref:System.Data.DataTable> 소스로 사용 하려면 <xref:System.Data.DataTableExtensions.AsEnumerable%2A> 메서드를 호출 해야 합니다.  
+LINQ(언어 통합 쿼리) 쿼리는 인터페이스 또는 <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Linq.IQueryable%601> 인터페이스를 구현하는 데이터 원본에서 작동합니다. <xref:System.Data.DataTable> 클래스는 두 인터페이스 를 구현 하지 <xref:System.Data.DataTableExtensions.AsEnumerable%2A> 않습니다., LINQ <xref:System.Data.DataTable> 쿼리의 절에서 `From` 소스로 사용 하려는 경우 메서드를 호출 해야 합니다.  
   
  다음 예제에서는 SalesOrderHeader 테이블에서 모든 온라인 주문을 가져와서 주문 ID, 주문 날짜 및 주문 번호를 콘솔에 출력합니다.  
   
  [!code-csharp[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#where1)]  
- [!code-vb[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#where1)] 
+ [!code-vb[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#where1)]
   
- 지역 변수 쿼리는 표준 쿼리 연산자에서 하나 이상의 쿼리 연산자를 적용 하 여 하나 이상의 정보 소스에 대해 작동 하는 쿼리 식으로 초기화 되 고, LINQ to DataSet의 경우 <xref:System.Data.DataSet> 클래스에만 적용 되는 연산자입니다. 이전 예제의 쿼리 식에서는 두 개의 표준 쿼리 연산자인 `Where`와 `Select`를 사용합니다.  
+ 로컬 변수 쿼리는 표준 쿼리 연산자 또는 LINQ에서 DataSet에 하나 이상의 쿼리 연산자, <xref:System.Data.DataSet> 클래스에 특정연산자 중 하나 이상을 적용하여 하나 이상의 정보 소스에서 작동하는 쿼리 식으로 초기화됩니다. 이전 예제의 쿼리 식에서는 두 개의 표준 쿼리 연산자인 `Where`와 `Select`를 사용합니다.  
   
  `Where` 절에서는 조건을 기준으로 시퀀스를 필터링하며, 이 경우에는 `OnlineOrderFlag`가 `true`로 설정됩니다. `Select` 연산자는 연산자로 전달된 인수를 캡처하는 열거 가능한 개체를 할당하고 반환합니다. 위 예제에서는 세 개의 `SalesOrderID`, `OrderDate` 및 `SalesOrderNumber` 속성을 가진 익명 형식이 만들어집니다. 이러한 세 속성의 값은 `SalesOrderID` 테이블에 있는 `OrderDate`, `SalesOrderNumber` 및 `SalesOrderHeader` 열의 값으로 설정됩니다.  
   
@@ -30,7 +30,7 @@ LINQ (언어 통합 쿼리) 쿼리는 <xref:System.Collections.Generic.IEnumerab
   
  `T` 메서드 및 <xref:System.Data.DataRowExtensions.Field%2A> 메서드의 제네릭 매개 변수 <xref:System.Data.DataRowExtensions.SetField%2A>에 지정된 데이터 형식은 내부 값의 형식과 일치해야 하며, 그렇지 않으면 <xref:System.InvalidCastException>이 throw됩니다. 지정된 열 이름도 <xref:System.Data.DataSet>의 열 이름과 일치해야 하며, 그렇지 않으면 <xref:System.ArgumentException>이 throw됩니다. 두 경우 모두 쿼리가 실행되는 런타임에 데이터 열거형에서 예외가 throw됩니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [크로스 테이블 쿼리](cross-table-queries-linq-to-dataset.md)
 - [형식화된 데이터 세트 쿼리](querying-typed-datasets.md)

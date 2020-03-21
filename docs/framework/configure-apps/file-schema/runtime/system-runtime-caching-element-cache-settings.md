@@ -6,19 +6,19 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - system.runtime.caching element
 ms.assetid: 9b44daee-874a-4bd1-954e-83bf53565590
-ms.openlocfilehash: 70573f92f1799a54116bc91f7a39d157a7ae5b36
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: df4887c8801dcf8af06b3826673a03cbc7dbc9b5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73115514"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153856"
 ---
-# <a name="systemruntimecaching-element-cache-settings"></a>\<> 요소 (캐시 설정)
+# <a name="systemruntimecaching-element-cache-settings"></a>\<system.runtime.캐싱> 요소(캐시 설정)
 
 구성 파일의 <xref:System.Runtime.Caching.ObjectCache> 항목을 통해 기본 메모리 내 `memoryCache` 구현을 위한 구성을 제공합니다.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp; **\<**  
+[**\<구성>**](../configuration-element.md)\
+&nbsp;&nbsp;**\<system.runtime.캐싱>**  
   
 ## <a name="syntax"></a>구문  
   
@@ -30,7 +30,7 @@ ms.locfileid: "73115514"
   
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성
 
@@ -38,26 +38,26 @@ ms.locfileid: "73115514"
 
 ### <a name="child-elements"></a>자식 요소
 
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<memoryCache>](memorycache-element-cache-settings.md)|<xref:System.Runtime.Caching.MemoryCache> 클래스를 기반으로 하는 캐시 구성에 사용되는 요소를 정의합니다.|  
+|[\<메모리 캐시>](memorycache-element-cache-settings.md)|<xref:System.Runtime.Caching.MemoryCache> 클래스를 기반으로 하는 캐시 구성에 사용되는 요소를 정의합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<구성>](../configuration-element.md)|공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용 하는 모든 구성 파일의 루트 요소를 지정 합니다.|  
+|[\<구성>](../configuration-element.md)|공통 언어 런타임 및 .NET Framework 응용 프로그램에서 사용하는 모든 구성 파일의 루트 요소를 지정합니다.|  
   
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 이 네임스페이스의 클래스는 ASP.NET에 있는 것 같은 캐싱 기능을 사용하는(그러나 `System.Web` 어셈블리에 의존하지 않음) 방법을 제공합니다. 자세한 내용은 [Caching in .NET Framework Applications](../../../performance/caching-in-net-framework-applications.md)을 참조하십시오.  
   
 > [!NOTE]
-> <xref:System.Runtime.Caching> 네임 스페이스의 출력 캐싱 기능 및 형식은 .NET Framework 4의 새로운 기능입니다.  
+> 네임스페이스의 <xref:System.Runtime.Caching> 출력 캐싱 기능 및 형식은 .NET Framework 4의 새로운 기능입니다.  
   
 ## <a name="example"></a>예제
 
-다음 예제는 <xref:System.Runtime.Caching.MemoryCache> 클래스를 기반으로 캐시를 구성하는 방법을 보여 줍니다. 또한 메모리 캐시를 위한 `namedCaches` 항목의 인스턴스를 구성하는 방법을 보여 줍니다. 캐시 이름은 `name` 특성을 "기본값"으로 설정 하 여 기본 캐시 항목 이름으로 설정 됩니다.  
+다음 예제는 <xref:System.Runtime.Caching.MemoryCache> 클래스를 기반으로 캐시를 구성하는 방법을 보여 줍니다. 또한 메모리 캐시를 위한 `namedCaches` 항목의 인스턴스를 구성하는 방법을 보여 줍니다. 캐시 의 이름은 `name` 특성을 "기본값"으로 설정하여 기본 캐시 항목 이름으로 설정됩니다.  
   
 `cacheMemoryLimitMegabytes` 특성 및 `physicalMemoryPercentage` 특성은 0으로 설정됩니다. 이러한 특성을 0으로 설정하면 기본적으로 <xref:System.Runtime.Caching.MemoryCache> 자동 크기 조정 추론이 사용됩니다. 캐시 구현에서는 현재 메모리 로드가 절대 및 백분율 기반 메모리 제한과 2분마다 비교됩니다.  
   
@@ -66,8 +66,8 @@ ms.locfileid: "73115514"
   <system.runtime.caching>  
     <memoryCache>  
       <namedCaches>  
-          <add name="Default"   
-               cacheMemoryLimitMegabytes="0"   
+          <add name="Default"
+               cacheMemoryLimitMegabytes="0"
                physicalMemoryLimitPercentage="0"  
                pollingInterval="00:02:00" />  
       </namedCaches>  
@@ -76,6 +76,6 @@ ms.locfileid: "73115514"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [\<memoryCache > 요소 (캐시 설정)](memorycache-element-cache-settings.md)
+- [\<메모리캐시> 요소(캐시 설정)](memorycache-element-cache-settings.md)

@@ -15,58 +15,58 @@ helpviewer_keywords:
 ms.assetid: 1e994de6-4628-459c-b967-b34be1e9fe4f
 topic_type:
 - apiref
-ms.openlocfilehash: 5d985e22ba77053127610445374b8c13ca6b97f1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3b8fd9876563bace52a6088747d1ca4ed26ea872
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431710"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175813"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>IMetaDataEmit::DefineNestedType 메서드
-형식 정의의 메타 데이터 서명을 만들고 해당 형식에 대 한 `mdTypeDef` 토큰을 반환 하 고, 정의 된 형식이 `tdEncloser` 매개 변수에서 참조 하는 형식의 멤버 임을 지정 합니다.  
+형식 정의의 메타데이터 서명을 만들고 `mdTypeDef` 해당 형식에 대한 토큰을 반환하며 정의된 형식이 `tdEncloser` 매개 변수에서 참조하는 형식의 멤버임을 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```cpp  
-HRESULT DefineNestedType (   
+HRESULT DefineNestedType (
     [in]  LPCWSTR     szTypeDef,  
-    [in]  DWORD       dwTypeDefFlags,   
-    [in]  mdToken     tkExtends,   
-    [in]  mdToken     rtkImplements[],   
-    [in]  mdTypeDef   tdEncloser,   
+    [in]  DWORD       dwTypeDefFlags,
+    [in]  mdToken     tkExtends,
+    [in]  mdToken     rtkImplements[],
+    [in]  mdTypeDef   tdEncloser,
     [out] mdTypeDef   *ptd  
 );  
 ```  
   
 ## <a name="parameters"></a>매개 변수  
  `szTypeDef`  
- 진행 유니코드 형식의 이름입니다.  
+ 【인】 유니코드의 형식 이름입니다.  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` 특성입니다. `CorTypeAttr` 값의 비트 마스크입니다.  
+ 【인】 `TypeDef` 속성입니다. 이것은 값의 `CorTypeAttr` 비트 마스크입니다.  
   
  `tkExtends`  
- 진행 기본 클래스의 토큰입니다. `mdTypeDef` 또는 `mdTypeRef` 토큰입니다.  
+ 【인】 기본 클래스의 토큰입니다. 이것은 또는 `mdTypeDef` 토큰입니다. `mdTypeRef`  
   
  `rtkImplements`[]  
- 진행 이 클래스 또는 인터페이스가 구현 하는 인터페이스를 지정 하는 토큰의 배열입니다.  
+ 【인】 이 클래스 또는 인터페이스가 구현하는 인터페이스를 지정하는 토큰 배열입니다.  
   
  `tdEncloser`  
- 진행 바깥쪽 형식의 토큰입니다. 배열의 마지막 요소는 `mdTokenNil`이어야 합니다.  
+ 【인】 둘러싸는 형식의 토큰입니다. 배열의 마지막 요소는 . `mdTokenNil`  
   
  `ptd`  
- 제한이 할당 된 `mdTypeDef` 토큰입니다.  
+ 【아웃】 할당된 토큰입니다. `mdTypeDef`  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** Cor  
+ **헤더:** 코르h  
   
- **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
+ **라이브러리:** MSCorEE.dll의 리소스로 사용  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
