@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-ms.openlocfilehash: 0926e3c6513a698ae47b9983d0e6ad195394a4df
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 18bb03e17b19243ee1bc6e3f7ebd70afb4d4c60b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780620"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174448"
 ---
-# <a name="updating-data-in-a-data-source"></a><span data-ttu-id="849be-102">데이터 원본에서 데이터 업데이트</span><span class="sxs-lookup"><span data-stu-id="849be-102">Updating Data in a Data Source</span></span>
-<span data-ttu-id="849be-103">INSERT, UPDATE 또는 DELETE와 같이 데이터를 수정하는 SQL 문은 행을 반환하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="849be-103">SQL statements that modify data (such as INSERT, UPDATE, or DELETE) do not return rows.</span></span> <span data-ttu-id="849be-104">마찬가지로 대부분의 저장 프로시저도 동작을 수행하기는 하지만 행을 반환하지는 않습니다.</span><span class="sxs-lookup"><span data-stu-id="849be-104">Similarly, many stored procedures perform an action but do not return rows.</span></span> <span data-ttu-id="849be-105">행을 반환 하지 않는 명령을 실행 하려면 필요한 **매개 변수**를 포함 하 여 적절 한 SQL 명령 및 **연결**을 사용 하 여 **명령** 개체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="849be-105">To execute commands that do not return rows, create a **Command** object with the appropriate SQL command and a **Connection**, including any required **Parameters**.</span></span> <span data-ttu-id="849be-106">**Command** 개체의 **ExecuteNonQuery** 메서드를 사용 하 여 명령을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="849be-106">Execute the command with the **ExecuteNonQuery** method of the **Command** object.</span></span>  
+# <a name="updating-data-in-a-data-source"></a><span data-ttu-id="26f62-102">데이터 원본에서 데이터 업데이트</span><span class="sxs-lookup"><span data-stu-id="26f62-102">Updating Data in a Data Source</span></span>
+<span data-ttu-id="26f62-103">INSERT, UPDATE 또는 DELETE와 같이 데이터를 수정하는 SQL 문은 행을 반환하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="26f62-103">SQL statements that modify data (such as INSERT, UPDATE, or DELETE) do not return rows.</span></span> <span data-ttu-id="26f62-104">마찬가지로 대부분의 저장 프로시저도 동작을 수행하기는 하지만 행을 반환하지는 않습니다.</span><span class="sxs-lookup"><span data-stu-id="26f62-104">Similarly, many stored procedures perform an action but do not return rows.</span></span> <span data-ttu-id="26f62-105">행을 반환하지 않는 명령을 실행하려면 필요한 **매개 변수를**포함하여 적절한 SQL 명령과 **연결을**사용하여 **Command** 개체를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="26f62-105">To execute commands that do not return rows, create a **Command** object with the appropriate SQL command and a **Connection**, including any required **Parameters**.</span></span> <span data-ttu-id="26f62-106">**Command** 개체의 **ExecuteNonQuery** 메서드를 사용 하 고 명령을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="26f62-106">Execute the command with the **ExecuteNonQuery** method of the **Command** object.</span></span>  
   
- <span data-ttu-id="849be-107">**ExecuteNonQuery** 메서드는 실행 된 문 또는 저장 프로시저의 영향을 받는 행 수를 나타내는 정수를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="849be-107">The **ExecuteNonQuery** method returns an integer that represents the number of rows affected by the statement or stored procedure that was executed.</span></span> <span data-ttu-id="849be-108">여러 문을 실행하는 경우 반환되는 값은 실행된 모든 문에 의해 영향을 받는 레코드의 합계입니다.</span><span class="sxs-lookup"><span data-stu-id="849be-108">If multiple statements are executed, the value returned is the sum of the records affected by all of the statements executed.</span></span>  
+ <span data-ttu-id="26f62-107">**ExecuteNonQuery** 메서드는 실행 된 명령문 또는 저장 프로시저의 영향을 받는 행 수를 나타내는 정수를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="26f62-107">The **ExecuteNonQuery** method returns an integer that represents the number of rows affected by the statement or stored procedure that was executed.</span></span> <span data-ttu-id="26f62-108">여러 문을 실행하는 경우 반환되는 값은 실행된 모든 문에 의해 영향을 받는 레코드의 합계입니다.</span><span class="sxs-lookup"><span data-stu-id="26f62-108">If multiple statements are executed, the value returned is the sum of the records affected by all of the statements executed.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="849be-109">예제</span><span class="sxs-lookup"><span data-stu-id="849be-109">Example</span></span>  
- <span data-ttu-id="849be-110">다음 코드 예에서는 INSERT 문을 실행 하 여 **ExecuteNonQuery**를 사용 하 여 데이터베이스에 레코드를 삽입 합니다.</span><span class="sxs-lookup"><span data-stu-id="849be-110">The following code example executes an INSERT statement to insert a record into a database using **ExecuteNonQuery**.</span></span>  
+## <a name="example"></a><span data-ttu-id="26f62-109">예제</span><span class="sxs-lookup"><span data-stu-id="26f62-109">Example</span></span>  
+ <span data-ttu-id="26f62-110">다음 코드 예제는 INSERT 문을 실행하여 **ExecuteNonQuery**를 사용하여 데이터베이스에 레코드를 삽입합니다.</span><span class="sxs-lookup"><span data-stu-id="26f62-110">The following code example executes an INSERT statement to insert a record into a database using **ExecuteNonQuery**.</span></span>  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -42,9 +42,9 @@ SqlCommand command = new SqlCommand(queryString, connection);
 Int32 recordsAffected = command.ExecuteNonQuery();  
 ```  
   
- <span data-ttu-id="849be-111">다음 코드 예에서는 [카탈로그 작업을 수행 하](performing-catalog-operations.md)는 예제 코드에 의해 생성 된 저장 프로시저를 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="849be-111">The following code example executes the stored procedure created by the sample code in [Performing Catalog Operations](performing-catalog-operations.md).</span></span> <span data-ttu-id="849be-112">저장 프로시저에서 행을 반환 하지 않으므로 **ExecuteNonQuery** 메서드가 사용 되지만 저장 프로시저는 입력 매개 변수를 수신 하 고 출력 매개 변수와 반환 값을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="849be-112">No rows are returned by the stored procedure, so the **ExecuteNonQuery** method is used, but the stored procedure does receive an input parameter and returns an output parameter and a return value.</span></span>  
+ <span data-ttu-id="26f62-111">다음 코드 예제에서는 [카탈로그 작업 수행에서](performing-catalog-operations.md)샘플 코드에서 만든 저장 프로시저를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="26f62-111">The following code example executes the stored procedure created by the sample code in [Performing Catalog Operations](performing-catalog-operations.md).</span></span> <span data-ttu-id="26f62-112">저장 프로시저에서 행이 반환되지 않으므로 **ExecuteNonQuery** 메서드가 사용되지만 저장 프로시저는 입력 매개 변수를 수신하고 출력 매개 변수와 반환 값을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="26f62-112">No rows are returned by the stored procedure, so the **ExecuteNonQuery** method is used, but the stored procedure does receive an input parameter and returns an output parameter and a return value.</span></span>  
   
- <span data-ttu-id="849be-113">개체의 경우 **ReturnValue** 매개 변수를 먼저 Parameters 컬렉션에 추가 해야 합니다. <xref:System.Data.OleDb.OleDbCommand></span><span class="sxs-lookup"><span data-stu-id="849be-113">For the <xref:System.Data.OleDb.OleDbCommand> object, the **ReturnValue** parameter must be added to the **Parameters** collection first.</span></span>  
+ <span data-ttu-id="26f62-113">개체의 <xref:System.Data.OleDb.OleDbCommand> 경우 **ReturnValue** 매개 변수를 **먼저 매개 변수** 컬렉션에 추가해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="26f62-113">For the <xref:System.Data.OleDb.OleDbCommand> object, the **ReturnValue** parameter must be added to the **Parameters** collection first.</span></span>  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -66,7 +66,7 @@ command.Parameters("@CategoryName").Value = "New Category"
 command.ExecuteNonQuery()  
   
 Dim categoryID As Int32 = CInt(command.Parameters("@Identity").Value)  
-Dim rowCount As Int32 = CInt(command.Parameters("@RowCount").Value)   
+Dim rowCount As Int32 = CInt(command.Parameters("@RowCount").Value)
 ```  
   
 ```csharp  
@@ -91,9 +91,9 @@ Int32 categoryID = (Int32) command.Parameters["@Identity"].Value;
 Int32 rowCount = (Int32) command.Parameters["@RowCount"].Value;  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="849be-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="849be-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="26f62-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="26f62-114">See also</span></span>
 
-- [<span data-ttu-id="849be-115">명령을 사용하여 데이터 수정</span><span class="sxs-lookup"><span data-stu-id="849be-115">Using Commands to Modify Data</span></span>](using-commands-to-modify-data.md)
-- [<span data-ttu-id="849be-116">DataAdapter로 데이터 원본 업데이트</span><span class="sxs-lookup"><span data-stu-id="849be-116">Updating Data Sources with DataAdapters</span></span>](updating-data-sources-with-dataadapters.md)
-- [<span data-ttu-id="849be-117">명령 및 매개 변수</span><span class="sxs-lookup"><span data-stu-id="849be-117">Commands and Parameters</span></span>](commands-and-parameters.md)
-- [<span data-ttu-id="849be-118">ADO.NET 개요</span><span class="sxs-lookup"><span data-stu-id="849be-118">ADO.NET Overview</span></span>](ado-net-overview.md)
+- [<span data-ttu-id="26f62-115">명령을 사용하여 데이터 수정</span><span class="sxs-lookup"><span data-stu-id="26f62-115">Using Commands to Modify Data</span></span>](using-commands-to-modify-data.md)
+- [<span data-ttu-id="26f62-116">DataAdapter로 데이터 원본 업데이트</span><span class="sxs-lookup"><span data-stu-id="26f62-116">Updating Data Sources with DataAdapters</span></span>](updating-data-sources-with-dataadapters.md)
+- [<span data-ttu-id="26f62-117">명령 및 매개 변수</span><span class="sxs-lookup"><span data-stu-id="26f62-117">Commands and Parameters</span></span>](commands-and-parameters.md)
+- [<span data-ttu-id="26f62-118">ADO.NET 개요</span><span class="sxs-lookup"><span data-stu-id="26f62-118">ADO.NET Overview</span></span>](ado-net-overview.md)
