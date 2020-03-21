@@ -15,51 +15,51 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: b46a04d67f59c5031b5bd195cef4cc2275e1e5e0
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c24bdce64eb7e208bf3830940d7beab1ebf92e78
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793805"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179197"
 ---
-# <a name="dacpmoduledata-structure"></a><span data-ttu-id="5d86a-102">DacpModuleData 구조체</span><span class="sxs-lookup"><span data-stu-id="5d86a-102">DacpModuleData Structure</span></span>
+# <a name="dacpmoduledata-structure"></a><span data-ttu-id="b3825-102">DacpModuleData 구조체</span><span class="sxs-lookup"><span data-stu-id="b3825-102">DacpModuleData Structure</span></span>
 
-<span data-ttu-id="5d86a-103">모듈의 런타임 정보에 대 한 전송 버퍼를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="5d86a-103">Defines a transport buffer for a module's runtime information.</span></span>
+<span data-ttu-id="b3825-103">모듈의 런타임 정보에 대한 전송 버퍼를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="b3825-103">Defines a transport buffer for a module's runtime information.</span></span>
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a><span data-ttu-id="5d86a-104">구문</span><span class="sxs-lookup"><span data-stu-id="5d86a-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="b3825-104">구문</span><span class="sxs-lookup"><span data-stu-id="b3825-104">Syntax</span></span>
 
 ```cpp
 struct DacpModuleData
 {
     CLRDATA_ADDRESS Address;
-    CLRDATA_ADDRESS File; 
+    CLRDATA_ADDRESS File;
     CLRDATA_ADDRESS  ilBase;
     char payLoad[132];
 };
 ```
 
-## <a name="members"></a><span data-ttu-id="5d86a-105">Members</span><span class="sxs-lookup"><span data-stu-id="5d86a-105">Members</span></span>
+## <a name="members"></a><span data-ttu-id="b3825-105">구성원</span><span class="sxs-lookup"><span data-stu-id="b3825-105">Members</span></span>
 
-| <span data-ttu-id="5d86a-106">Member</span><span class="sxs-lookup"><span data-stu-id="5d86a-106">Member</span></span>    | <span data-ttu-id="5d86a-107">설명</span><span class="sxs-lookup"><span data-stu-id="5d86a-107">Description</span></span>                                                             |
+| <span data-ttu-id="b3825-106">멤버</span><span class="sxs-lookup"><span data-stu-id="b3825-106">Member</span></span>    | <span data-ttu-id="b3825-107">Description</span><span class="sxs-lookup"><span data-stu-id="b3825-107">Description</span></span>                                                             |
 | --------- | ----------------------------------------------------------------------- |
-| `Address` | <span data-ttu-id="5d86a-108">모듈 개체의 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="5d86a-108">Address of the module object.</span></span>                                           |
-| `File`    | <span data-ttu-id="5d86a-109">PE (이식 가능한 실행) 파일에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="5d86a-109">A pointer to the portable executable (PE) file.</span></span>                       |
-| `ilBase`  | <span data-ttu-id="5d86a-110">로드 된 이미지의 기본 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="5d86a-110">The address of the loaded image's base.</span></span>                                 |
-| `payLoad` | <span data-ttu-id="5d86a-111">런타임에서 사용 하는 추가 모듈 정보에 대 한 페이로드 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="5d86a-111">A payload buffer for additional module information used by the runtime.</span></span> |
+| `Address` | <span data-ttu-id="b3825-108">모듈 개체의 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="b3825-108">Address of the module object.</span></span>                                           |
+| `File`    | <span data-ttu-id="b3825-109">휴대용 실행 파일(PE) 파일에 대한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="b3825-109">A pointer to the portable executable (PE) file.</span></span>                       |
+| `ilBase`  | <span data-ttu-id="b3825-110">로드된 이미지의 기본 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="b3825-110">The address of the loaded image's base.</span></span>                                 |
+| `payLoad` | <span data-ttu-id="b3825-111">런타임에서 사용하는 추가 모듈 정보에 대한 페이로드 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="b3825-111">A payload buffer for additional module information used by the runtime.</span></span> |
 
-## <a name="remarks"></a><span data-ttu-id="5d86a-112">주의</span><span class="sxs-lookup"><span data-stu-id="5d86a-112">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="b3825-112">설명</span><span class="sxs-lookup"><span data-stu-id="b3825-112">Remarks</span></span>
 
-<span data-ttu-id="5d86a-113">이 구조체는 런타임 내에 있으며 헤더 또는 라이브러리 파일을 통해 노출 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="5d86a-113">This structure lives inside the runtime and is not exposed through any headers or library files.</span></span> <span data-ttu-id="5d86a-114">이를 사용 하려면 위에 지정 된 대로 구조를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="5d86a-114">To use it, define the structure as specified above.</span></span>
+<span data-ttu-id="b3825-113">이 구조는 런타임 내에 있으며 헤더 나 라이브러리 파일을 통해 노출되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b3825-113">This structure lives inside the runtime and is not exposed through any headers or library files.</span></span> <span data-ttu-id="b3825-114">이를 사용하려면 위에 지정된 대로 구조를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="b3825-114">To use it, define the structure as specified above.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="5d86a-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="5d86a-115">Requirements</span></span>
-<span data-ttu-id="5d86a-116">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="5d86a-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-<span data-ttu-id="5d86a-117">**헤더:** 없음을</span><span class="sxs-lookup"><span data-stu-id="5d86a-117">**Header:** None</span></span>  
-<span data-ttu-id="5d86a-118">**라이브러리:** 없음을</span><span class="sxs-lookup"><span data-stu-id="5d86a-118">**Library:** None</span></span>  
-<span data-ttu-id="5d86a-119">**.NET Framework 버전:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="5d86a-119">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b3825-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b3825-115">Requirements</span></span>
+<span data-ttu-id="b3825-116">**플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="b3825-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+<span data-ttu-id="b3825-117">**헤더:** 없음</span><span class="sxs-lookup"><span data-stu-id="b3825-117">**Header:** None</span></span>  
+<span data-ttu-id="b3825-118">**라이브러리:** 없음</span><span class="sxs-lookup"><span data-stu-id="b3825-118">**Library:** None</span></span>  
+<span data-ttu-id="b3825-119">**.NET Framework 버전:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="b3825-119">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
 
-## <a name="see-also"></a><span data-ttu-id="5d86a-120">참조</span><span class="sxs-lookup"><span data-stu-id="5d86a-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b3825-120">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b3825-120">See also</span></span>
 
-- [<span data-ttu-id="5d86a-121">디버깅</span><span class="sxs-lookup"><span data-stu-id="5d86a-121">Debugging</span></span>](index.md)
-- [<span data-ttu-id="5d86a-122">디버깅 구조체</span><span class="sxs-lookup"><span data-stu-id="5d86a-122">Debugging Structures</span></span>](debugging-structures.md)
+- [<span data-ttu-id="b3825-121">디버깅</span><span class="sxs-lookup"><span data-stu-id="b3825-121">Debugging</span></span>](index.md)
+- [<span data-ttu-id="b3825-122">디버깅 구조체</span><span class="sxs-lookup"><span data-stu-id="b3825-122">Debugging Structures</span></span>](debugging-structures.md)

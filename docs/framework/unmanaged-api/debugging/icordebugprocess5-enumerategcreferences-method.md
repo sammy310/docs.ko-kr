@@ -15,45 +15,45 @@ helpviewer_keywords:
 ms.assetid: 86c397c3-81d8-463e-a248-3cbe06c44d9d
 topic_type:
 - apiref
-ms.openlocfilehash: 81993f108ae9b59300b5d29402d7a423c3657757
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: a97c14d83f99c847bb8569a33e175ab6eb5bccd8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792443"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178614"
 ---
-# <a name="icordebugprocess5enumerategcreferences-method"></a><span data-ttu-id="16378-102">ICorDebugProcess5::EnumerateGCReferences 메서드</span><span class="sxs-lookup"><span data-stu-id="16378-102">ICorDebugProcess5::EnumerateGCReferences Method</span></span>
-<span data-ttu-id="16378-103">프로세스에서 가비지 수집 될 모든 개체에 대 한 열거자를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="16378-103">Gets an enumerator for all objects that are to be garbage-collected in a process.</span></span>  
+# <a name="icordebugprocess5enumerategcreferences-method"></a><span data-ttu-id="d8449-102">ICorDebugProcess5::EnumerateGCReferences 메서드</span><span class="sxs-lookup"><span data-stu-id="d8449-102">ICorDebugProcess5::EnumerateGCReferences Method</span></span>
+<span data-ttu-id="d8449-103">프로세스에서 가비지 수집되는 모든 개체에 대해 열거기를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="d8449-103">Gets an enumerator for all objects that are to be garbage-collected in a process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="16378-104">구문</span><span class="sxs-lookup"><span data-stu-id="16378-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d8449-104">구문</span><span class="sxs-lookup"><span data-stu-id="d8449-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumerateGCReferences(  
-    [in] Bool enumerateWeakReferences,   
+    [in] Bool enumerateWeakReferences,
     [out] ICorDebugGCReferenceEnum **ppEnum  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="16378-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="16378-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d8449-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="d8449-105">Parameters</span></span>  
  `enumerateWeakReferences`  
- <span data-ttu-id="16378-106">진행 약한 참조도 열거 되는지 여부를 나타내는 부울 값입니다.</span><span class="sxs-lookup"><span data-stu-id="16378-106">[in] A Boolean value that indicates whether weak references are also to be enumerated.</span></span> <span data-ttu-id="16378-107">`enumerateWeakReferences` `true`경우 `ppEnum` 열거자에는 강력한 참조와 weak 참조가 모두 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="16378-107">If `enumerateWeakReferences` is `true`, the `ppEnum` enumerator includes both strong references and weak references.</span></span> <span data-ttu-id="16378-108">`enumerateWeakReferences` `false`이면 열거자에는 강력한 참조만 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="16378-108">If `enumerateWeakReferences` is `false`, the enumerator includes only strong references.</span></span>  
+ <span data-ttu-id="d8449-106">【인】 약한 참조도 여과할지 여부를 나타내는 부울 값입니다.</span><span class="sxs-lookup"><span data-stu-id="d8449-106">[in] A Boolean value that indicates whether weak references are also to be enumerated.</span></span> <span data-ttu-id="d8449-107">이 경우 `enumerateWeakReferences` `ppEnum` 열거형에는 강력한 참조와 약한 참조가 모두 포함됩니다. `true`</span><span class="sxs-lookup"><span data-stu-id="d8449-107">If `enumerateWeakReferences` is `true`, the `ppEnum` enumerator includes both strong references and weak references.</span></span> <span data-ttu-id="d8449-108">있는 `enumerateWeakReferences` `false`경우 열거형에는 강력한 참조만 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="d8449-108">If `enumerateWeakReferences` is `false`, the enumerator includes only strong references.</span></span>  
   
  `ppEnum`  
- <span data-ttu-id="16378-109">제한이 가비지 수집 될 개체의 열거자 인 [ICorDebugGCReferenceEnum](icordebuggcreferenceenum-interface.md) 의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="16378-109">[out] A pointer to the address of an [ICorDebugGCReferenceEnum](icordebuggcreferenceenum-interface.md) that is an enumerator for the objects to be garbage-collected.</span></span>  
+ <span data-ttu-id="d8449-109">【아웃】 개체가 가비지 수집되는 열거형인 [ICorDebugGCReferenceEnum의](icordebuggcreferenceenum-interface.md) 주소에 대한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="d8449-109">[out] A pointer to the address of an [ICorDebugGCReferenceEnum](icordebuggcreferenceenum-interface.md) that is an enumerator for the objects to be garbage-collected.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="16378-110">주의</span><span class="sxs-lookup"><span data-stu-id="16378-110">Remarks</span></span>  
- <span data-ttu-id="16378-111">이 메서드는 프로세스에서 관리 되는 개체에 대 한 전체 루 팅 체인을 확인 하는 방법을 제공 하 고 개체의 활성 상태를 확인 하는 데 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="16378-111">This method provides a way to determine the full rooting chain for any managed object in a process and can be used to determine why an object is still alive.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d8449-110">설명</span><span class="sxs-lookup"><span data-stu-id="d8449-110">Remarks</span></span>  
+ <span data-ttu-id="d8449-111">이 메서드는 프로세스에서 관리되는 개체에 대한 전체 루팅 체인을 확인하는 방법을 제공하며 개체가 아직 살아 있는 이유를 확인하는 데 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d8449-111">This method provides a way to determine the full rooting chain for any managed object in a process and can be used to determine why an object is still alive.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="16378-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="16378-112">Requirements</span></span>  
- <span data-ttu-id="16378-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="16378-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d8449-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d8449-112">Requirements</span></span>  
+ <span data-ttu-id="d8449-113">**플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d8449-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="16378-114">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="16378-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d8449-114">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d8449-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="16378-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="16378-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d8449-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d8449-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="16378-116">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="16378-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="d8449-116">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d8449-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="16378-117">참조</span><span class="sxs-lookup"><span data-stu-id="16378-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d8449-117">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d8449-117">See also</span></span>
 
-- [<span data-ttu-id="16378-118">ICorDebugProcess5 인터페이스</span><span class="sxs-lookup"><span data-stu-id="16378-118">ICorDebugProcess5 Interface</span></span>](icordebugprocess5-interface.md)
-- [<span data-ttu-id="16378-119">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="16378-119">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="d8449-118">ICorDebugProcess5 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d8449-118">ICorDebugProcess5 Interface</span></span>](icordebugprocess5-interface.md)
+- [<span data-ttu-id="d8449-119">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d8449-119">Debugging Interfaces</span></span>](debugging-interfaces.md)

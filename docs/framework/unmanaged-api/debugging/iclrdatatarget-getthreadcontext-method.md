@@ -15,55 +15,55 @@ helpviewer_keywords:
 ms.assetid: b9d8c3b5-3a2e-4225-95d4-dd052c4532c3
 topic_type:
 - apiref
-ms.openlocfilehash: b5f6a830cbe601443f03cd91a356c7e49450e7f3
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 3777ad4b12c7d0593c095c470aba81088137a859
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793724"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179175"
 ---
-# <a name="iclrdatatargetgetthreadcontext-method"></a><span data-ttu-id="cddc7-102">ICLRDataTarget::GetThreadContext 메서드</span><span class="sxs-lookup"><span data-stu-id="cddc7-102">ICLRDataTarget::GetThreadContext Method</span></span>
-<span data-ttu-id="cddc7-103">대상 프로세스의 지정 된 스레드에 대 한 현재 실행 컨텍스트를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="cddc7-103">Gets the current execution context for the given thread in the target process.</span></span> <span data-ttu-id="cddc7-104">이 메서드는 공용 언어 런타임 데이터 액세스 서비스에 의해 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="cddc7-104">This method is called by the common language runtime data access services.</span></span>  
+# <a name="iclrdatatargetgetthreadcontext-method"></a><span data-ttu-id="8e027-102">ICLRDataTarget::GetThreadContext 메서드</span><span class="sxs-lookup"><span data-stu-id="8e027-102">ICLRDataTarget::GetThreadContext Method</span></span>
+<span data-ttu-id="8e027-103">대상 프로세스에서 지정된 스레드에 대한 현재 실행 컨텍스트를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="8e027-103">Gets the current execution context for the given thread in the target process.</span></span> <span data-ttu-id="8e027-104">이 메서드는 공통 언어 런타임 데이터 액세스 서비스에서 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="8e027-104">This method is called by the common language runtime data access services.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cddc7-105">구문</span><span class="sxs-lookup"><span data-stu-id="cddc7-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8e027-105">구문</span><span class="sxs-lookup"><span data-stu-id="8e027-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetThreadContext (  
     [in] ULONG32            threadID,  
     [in] ULONG32            contextFlags,  
     [in] ULONG32            contextSize,  
-    [out, size_is(contextSize)]   
+    [out, size_is(contextSize)]
         BYTE                *context  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="cddc7-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="cddc7-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8e027-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="8e027-106">Parameters</span></span>  
  `threadID`  
- <span data-ttu-id="cddc7-107">진행 대상 프로세스의 스레드에 대 한 운영 체제 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="cddc7-107">[in] The operating system identifier of a thread in the target process.</span></span>  
+ <span data-ttu-id="8e027-107">【인】 대상 프로세스에서 스레드의 운영 체제 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="8e027-107">[in] The operating system identifier of a thread in the target process.</span></span>  
   
  `contextFlags`  
- <span data-ttu-id="cddc7-108">진행 반환할 컨텍스트의 부분을 지정 하는 플래그입니다.</span><span class="sxs-lookup"><span data-stu-id="cddc7-108">[in] Flags that specify which parts of the context to return.</span></span> <span data-ttu-id="cddc7-109">구현은 최소한 컨텍스트의 부분을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="cddc7-109">The implementation will return at least these parts of the context.</span></span>  
+ <span data-ttu-id="8e027-108">【인】 반환할 컨텍스트 의 일부를 지정하는 플래그입니다.</span><span class="sxs-lookup"><span data-stu-id="8e027-108">[in] Flags that specify which parts of the context to return.</span></span> <span data-ttu-id="8e027-109">구현은 적어도 이러한 컨텍스트 부분을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="8e027-109">The implementation will return at least these parts of the context.</span></span>  
   
  `contextSize`  
- <span data-ttu-id="cddc7-110">진행 컨텍스트의 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="cddc7-110">[in] The size of the context.</span></span>  
+ <span data-ttu-id="8e027-110">【인】 컨텍스트의 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="8e027-110">[in] The size of the context.</span></span>  
   
  `context`  
- <span data-ttu-id="cddc7-111">제한이 컨텍스트를 저장할 버퍼에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="cddc7-111">[out] Pointer to a buffer in which to place the context.</span></span>  
+ <span data-ttu-id="8e027-111">【아웃】 컨텍스트를 배치할 버퍼에 대한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="8e027-111">[out] Pointer to a buffer in which to place the context.</span></span>  
   
- <span data-ttu-id="cddc7-112">`context` 버퍼의 데이터는 Win32 `CONTEXT` 구조 형식 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="cddc7-112">The data in the `context` buffer must be in the format of the Win32 `CONTEXT` structure.</span></span> <span data-ttu-id="cddc7-113">컨텍스트는 프로세서 관련 레지스터 데이터를 지정 하므로 Win32 `CONTEXT` 구조의 정의는 프로세서의 아키텍처에 따라 달라 집니다.</span><span class="sxs-lookup"><span data-stu-id="cddc7-113">The context specifies processor-specific register data, so the definition of the Win32 `CONTEXT` structure depends on the processor's architecture.</span></span> <span data-ttu-id="cddc7-114">Win32 `CONTEXT` 구조체의 정의는 Winnt.exe 헤더 파일을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="cddc7-114">Refer to the WinNT.h header file for the definition of the Win32 `CONTEXT` structure.</span></span>  
+ <span data-ttu-id="8e027-112">버퍼의 `context` 데이터는 Win32 `CONTEXT` 구조의 형식이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e027-112">The data in the `context` buffer must be in the format of the Win32 `CONTEXT` structure.</span></span> <span data-ttu-id="8e027-113">컨텍스트는 프로세서별 레지스터 데이터를 지정하므로 Win32 `CONTEXT` 구조의 정의는 프로세서의 아키텍처에 따라 달라집니다.</span><span class="sxs-lookup"><span data-stu-id="8e027-113">The context specifies processor-specific register data, so the definition of the Win32 `CONTEXT` structure depends on the processor's architecture.</span></span> <span data-ttu-id="8e027-114">Win32 `CONTEXT` 구조의 정의에 대 한 WinNT.h 헤더 파일을 참조 하십시오.</span><span class="sxs-lookup"><span data-stu-id="8e027-114">Refer to the WinNT.h header file for the definition of the Win32 `CONTEXT` structure.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="cddc7-115">주의</span><span class="sxs-lookup"><span data-stu-id="cddc7-115">Remarks</span></span>  
- <span data-ttu-id="cddc7-116">이 메서드는 디버깅 애플리케이션의 작성자가 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="cddc7-116">This method is implemented by the writer of the debugging application.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8e027-115">설명</span><span class="sxs-lookup"><span data-stu-id="8e027-115">Remarks</span></span>  
+ <span data-ttu-id="8e027-116">이 메서드는 디버깅 애플리케이션의 작성자가 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="8e027-116">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cddc7-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="cddc7-117">Requirements</span></span>  
- <span data-ttu-id="cddc7-118">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="cddc7-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8e027-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="8e027-117">Requirements</span></span>  
+ <span data-ttu-id="8e027-118">**플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="8e027-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cddc7-119">**헤더:** ClrData .idl, ClrData .h</span><span class="sxs-lookup"><span data-stu-id="cddc7-119">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="8e027-119">**헤더:** 클러데이터.아이들, 클러데이터.h</span><span class="sxs-lookup"><span data-stu-id="8e027-119">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="cddc7-120">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cddc7-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8e027-120">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8e027-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="cddc7-121">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cddc7-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8e027-121">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8e027-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cddc7-122">참조</span><span class="sxs-lookup"><span data-stu-id="cddc7-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8e027-122">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8e027-122">See also</span></span>
 
-- [<span data-ttu-id="cddc7-123">ICLRDataTarget 인터페이스</span><span class="sxs-lookup"><span data-stu-id="cddc7-123">ICLRDataTarget Interface</span></span>](iclrdatatarget-interface.md)
+- [<span data-ttu-id="8e027-123">ICLRDataTarget 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8e027-123">ICLRDataTarget Interface</span></span>](iclrdatatarget-interface.md)

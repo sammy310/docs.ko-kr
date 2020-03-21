@@ -2,18 +2,18 @@
 title: 래핑되지 않은 메시지
 ms.date: 03/30/2017
 ms.assetid: 019657bd-1f9b-4315-ad74-eaa4e7551ff6
-ms.openlocfilehash: 4d6525393bb65dd6361b8d195f3a71991102daa1
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 81592910d8530cea2df5ec1fd8a8b1145350ef78
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716730"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143735"
 ---
-# <a name="unwrapped-messages"></a><span data-ttu-id="303b0-102">래핑되지 않은 메시지</span><span class="sxs-lookup"><span data-stu-id="303b0-102">Unwrapped Messages</span></span>
-<span data-ttu-id="303b0-103">이 샘플에서는 래핑되지 않은 메시지를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="303b0-103">This sample demonstrates unwrapped messages.</span></span> <span data-ttu-id="303b0-104">기본적으로 메시지 본문은 서비스 작업 매개 변수가 래핑되도록 서식이 지정됩니다.</span><span class="sxs-lookup"><span data-stu-id="303b0-104">By default, the message body is formatted such that the parameters to a service operation are wrapped.</span></span> <span data-ttu-id="303b0-105">다음 샘플에서는 `Add` 서비스에 `ICalculator` 요청 메시지를 래핑된 모드로 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="303b0-105">The following sample shows an `Add` request message to the `ICalculator` service in wrapped mode.</span></span>  
+# <a name="unwrapped-messages"></a><span data-ttu-id="cdfec-102">래핑되지 않은 메시지</span><span class="sxs-lookup"><span data-stu-id="cdfec-102">Unwrapped Messages</span></span>
+<span data-ttu-id="cdfec-103">이 샘플에서는 래핑되지 않은 메시지를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="cdfec-103">This sample demonstrates unwrapped messages.</span></span> <span data-ttu-id="cdfec-104">기본적으로 메시지 본문은 서비스 작업 매개 변수가 래핑되도록 서식이 지정됩니다.</span><span class="sxs-lookup"><span data-stu-id="cdfec-104">By default, the message body is formatted such that the parameters to a service operation are wrapped.</span></span> <span data-ttu-id="cdfec-105">다음 샘플에서는 `Add` 서비스에 `ICalculator` 요청 메시지를 래핑된 모드로 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="cdfec-105">The following sample shows an `Add` request message to the `ICalculator` service in wrapped mode.</span></span>  
   
 ```xml  
-<s:Envelope   
+<s:Envelope
     xmlns:s="http://www.w3.org/2003/05/soap-envelope"  
     xmlns:a="http://schemas.xmlsoap.org/ws/2005/08/addressing">  
     <s:Header>  
@@ -28,11 +28,11 @@ ms.locfileid: "74716730"
 </s:Envelope>  
 ```  
   
- <span data-ttu-id="303b0-106">메시지 본문에 있는 `<Add>` 요소가 `n1` 및 `n2` 매개 변수를 래핑합니다.</span><span class="sxs-lookup"><span data-stu-id="303b0-106">The `<Add>` element in the message body wraps the `n1` and `n2` parameters.</span></span> <span data-ttu-id="303b0-107">대조적으로, 다음 샘플에서는 같은 메시지를 래핑되지 않은 모드로 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="303b0-107">In contrast, the following sample shows the equivalent message in the unwrapped mode.</span></span>  
+ <span data-ttu-id="cdfec-106">메시지 본문에 있는 `<Add>` 요소가 `n1` 및 `n2` 매개 변수를 래핑합니다.</span><span class="sxs-lookup"><span data-stu-id="cdfec-106">The `<Add>` element in the message body wraps the `n1` and `n2` parameters.</span></span> <span data-ttu-id="cdfec-107">대조적으로, 다음 샘플에서는 같은 메시지를 래핑되지 않은 모드로 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="cdfec-107">In contrast, the following sample shows the equivalent message in the unwrapped mode.</span></span>  
   
 ```xml  
-<s:Envelope   
-    xmlns:s="http://www.w3.org/2003/05/soap-envelope"   
+<s:Envelope
+    xmlns:s="http://www.w3.org/2003/05/soap-envelope"
     xmlns:a="http://schemas.xmlsoap.org/ws/2005/08/addressing">  
     <s:Header>  
         ….  
@@ -45,12 +45,12 @@ ms.locfileid: "74716730"
 </MessageLogTraceRecord>  
 ```  
   
- <span data-ttu-id="303b0-108">래핑되지 않은 메시지는 포함하는 요소에 `n1` 및 `n2` 매개 변수를 래핑하지 않으며 SOAP 본문 요소의 직계 자식입니다.</span><span class="sxs-lookup"><span data-stu-id="303b0-108">The unwrapped message does not wrap the `n1` and `n2` parameters in a containing element, they are direct children of the soap body element.</span></span>  
+ <span data-ttu-id="cdfec-108">래핑되지 않은 메시지는 포함하는 요소에 `n1` 및 `n2` 매개 변수를 래핑하지 않으며 SOAP 본문 요소의 직계 자식입니다.</span><span class="sxs-lookup"><span data-stu-id="cdfec-108">The unwrapped message does not wrap the `n1` and `n2` parameters in a containing element, they are direct children of the soap body element.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="303b0-109">이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="303b0-109">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+> <span data-ttu-id="cdfec-109">이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cdfec-109">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="303b0-110">이 샘플에서는 서비스 작업 매개 변수 형식에 <xref:System.ServiceModel.MessageContractAttribute>를 적용하고 다음 샘플 코드에 표시된 것과 같이 값 형식을 반환하여 래핑되지 않은 메시지를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="303b0-110">In this sample, an unwrapped message is created by applying the <xref:System.ServiceModel.MessageContractAttribute> to the service operation parameter type and return value type as shown in the following sample code.</span></span>  
+ <span data-ttu-id="cdfec-110">이 샘플에서는 서비스 작업 매개 변수 형식에 <xref:System.ServiceModel.MessageContractAttribute>를 적용하고 다음 샘플 코드에 표시된 것과 같이 값 형식을 반환하여 래핑되지 않은 메시지를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="cdfec-110">In this sample, an unwrapped message is created by applying the <xref:System.ServiceModel.MessageContractAttribute> to the service operation parameter type and return value type as shown in the following sample code.</span></span>  
   
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -89,25 +89,25 @@ public class ResponseMessage
 }  
 ```  
   
- <span data-ttu-id="303b0-111">메시지를 보내고 받는 상황을 볼 수 있도록 이 샘플에서는 추적을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="303b0-111">To allow you to see the messages being sent and received, this sample uses tracing.</span></span> <span data-ttu-id="303b0-112">또한 <xref:System.ServiceModel.WSHttpBinding>은 기록하는 메시지의 수를 줄이기 위해 보안 없이 구성되었습니다.</span><span class="sxs-lookup"><span data-stu-id="303b0-112">In addition, the <xref:System.ServiceModel.WSHttpBinding> has been configured without security, to reduce the number of messages it logs.</span></span>  
+ <span data-ttu-id="cdfec-111">메시지를 보내고 받는 상황을 볼 수 있도록 이 샘플에서는 추적을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="cdfec-111">To allow you to see the messages being sent and received, this sample uses tracing.</span></span> <span data-ttu-id="cdfec-112">또한 <xref:System.ServiceModel.WSHttpBinding>은 기록하는 메시지의 수를 줄이기 위해 보안 없이 구성되었습니다.</span><span class="sxs-lookup"><span data-stu-id="cdfec-112">In addition, the <xref:System.ServiceModel.WSHttpBinding> has been configured without security, to reduce the number of messages it logs.</span></span>  
   
- <span data-ttu-id="303b0-113">[서비스 추적 뷰어 도구 (svctraceviewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)를 사용 하 여 결과 추적 로그 (c:\logs\Message.log)를 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="303b0-113">The resulting trace log (c:\logs\Message.log) can be viewed by using the [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).</span></span> <span data-ttu-id="303b0-114">메시지 내용을 보려면 서비스 추적 뷰어 도구의 왼쪽 창과 오른쪽 창 모두에서 **메시지** 를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="303b0-114">To view message contents, select **Messages** in both the left and the right panes of the Service Trace Viewer tool.</span></span> <span data-ttu-id="303b0-115">이 샘플에서 추적 로그는 C:\LOGS 폴더에 생성되도록 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="303b0-115">Trace logs in this sample are configured to be generated into the C:\LOGS folder.</span></span> <span data-ttu-id="303b0-116">샘플을 실행하기 전에 이 폴더를 만들고 사용자에게 이 디렉터리에 대한 네트워크 서비스 쓰기 권한을 부여해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="303b0-116">Create this folder before running the sample and give the user Network Service write permissions for this directory.</span></span>  
+ <span data-ttu-id="cdfec-113">결과 추적 로그(c:\logs\Message.log)는 서비스 [추적 뷰어 도구(SvcTraceViewer.exe)를](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)사용하여 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cdfec-113">The resulting trace log (c:\logs\Message.log) can be viewed by using the [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).</span></span> <span data-ttu-id="cdfec-114">메시지 내용을 보려면 서비스 추적 뷰어 도구의 왼쪽 및 오른쪽 창에서 **메시지를** 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="cdfec-114">To view message contents, select **Messages** in both the left and the right panes of the Service Trace Viewer tool.</span></span> <span data-ttu-id="cdfec-115">이 샘플에서 추적 로그는 C:\LOGS 폴더에 생성되도록 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="cdfec-115">Trace logs in this sample are configured to be generated into the C:\LOGS folder.</span></span> <span data-ttu-id="cdfec-116">샘플을 실행하기 전에 이 폴더를 만들고 사용자에게 이 디렉터리에 대한 네트워크 서비스 쓰기 권한을 부여해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="cdfec-116">Create this folder before running the sample and give the user Network Service write permissions for this directory.</span></span>  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="303b0-117">샘플을 설치, 빌드 및 실행하려면</span><span class="sxs-lookup"><span data-stu-id="303b0-117">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="cdfec-117">샘플을 설치, 빌드 및 실행하려면</span><span class="sxs-lookup"><span data-stu-id="cdfec-117">To set up, build, and run the sample</span></span>  
   
-1. <span data-ttu-id="303b0-118">[Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="303b0-118">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1. <span data-ttu-id="cdfec-118">Windows 통신 기초 [샘플에 대한 일회성 설치 절차를](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)수행했어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="cdfec-118">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2. <span data-ttu-id="303b0-119">메시지를 기록할 C:\LOGS 디렉터리를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="303b0-119">Create a C:\LOGS directory for logging messages.</span></span> <span data-ttu-id="303b0-120">사용자에게 이 디렉터리에 대한 네트워크 서비스 쓰기 권한을 부여합니다.</span><span class="sxs-lookup"><span data-stu-id="303b0-120">Give the user Network Service write permissions for this directory.</span></span>  
+2. <span data-ttu-id="cdfec-119">메시지를 기록할 C:\LOGS 디렉터리를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="cdfec-119">Create a C:\LOGS directory for logging messages.</span></span> <span data-ttu-id="cdfec-120">사용자에게 이 디렉터리에 대한 네트워크 서비스 쓰기 권한을 부여합니다.</span><span class="sxs-lookup"><span data-stu-id="cdfec-120">Give the user Network Service write permissions for this directory.</span></span>  
   
-3. <span data-ttu-id="303b0-121">C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="303b0-121">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+3. <span data-ttu-id="cdfec-121">C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="cdfec-121">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-4. <span data-ttu-id="303b0-122">단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.</span><span class="sxs-lookup"><span data-stu-id="303b0-122">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+4. <span data-ttu-id="cdfec-122">단일 또는 교차 컴퓨터 구성에서 샘플을 실행하려면 Windows [통신 기반 샘플 실행의 지침을 따르십시오.](../../../../docs/framework/wcf/samples/running-the-samples.md)</span><span class="sxs-lookup"><span data-stu-id="cdfec-122">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
-> <span data-ttu-id="303b0-123">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="303b0-123">The samples may already be installed on your machine.</span></span> <span data-ttu-id="303b0-124">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="303b0-124">Check for the following (default) directory before continuing.</span></span>  
->   
+> <span data-ttu-id="cdfec-123">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cdfec-123">The samples may already be installed on your machine.</span></span> <span data-ttu-id="cdfec-124">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="cdfec-124">Check for the following (default) directory before continuing.</span></span>  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> <span data-ttu-id="303b0-125">이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="303b0-125">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="303b0-126">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="303b0-126">This sample is located in the following directory.</span></span>  
->   
+>
+> <span data-ttu-id="cdfec-125">이 디렉터리가 없는 경우 [.NET Framework 4에 대한 WCF(Windows 통신 재단) 및 WF(Windows 워크플로우 재단) 샘플로](https://www.microsoft.com/download/details.aspx?id=21459) 이동하여 모든 WCF(Windows 통신 재단) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드합니다.</span><span class="sxs-lookup"><span data-stu-id="cdfec-125">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="cdfec-126">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cdfec-126">This sample is located in the following directory.</span></span>  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Unwrapped`  

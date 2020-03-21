@@ -1,5 +1,5 @@
 ---
-title: '방법: Toolbar 단추에 대한 메뉴 이벤트 트리거'
+title: '방법: Toolbar 단추의 메뉴 이벤트 트리거'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,26 +11,26 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], coding button click events
 - toolbars [Windows Forms], click event handlers
 ms.assetid: 98374f70-993d-4ca4-89fb-48fea6ce5b45
-ms.openlocfilehash: 381b8ba08db6ff5bb817c9c89008dacb1085ac1b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 99db077b41a59fe9263f7283b58b8c31959c7c79
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956031"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182072"
 ---
-# <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a><span data-ttu-id="029c8-102">방법: Toolbar 단추에 대한 메뉴 이벤트 트리거</span><span class="sxs-lookup"><span data-stu-id="029c8-102">How to: Trigger Menu Events for Toolbar Buttons</span></span>
+# <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a><span data-ttu-id="e776f-102">방법: Toolbar 단추의 메뉴 이벤트 트리거</span><span class="sxs-lookup"><span data-stu-id="e776f-102">How to: Trigger Menu Events for Toolbar Buttons</span></span>
 > [!NOTE]
-> <span data-ttu-id="029c8-103"><xref:System.Windows.Forms.ToolStrip> 컨트롤은 <xref:System.Windows.Forms.ToolBar> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.ToolBar> 컨트롤을 계속 유지하도록 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="029c8-103">The <xref:System.Windows.Forms.ToolStrip> control replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control; however, the <xref:System.Windows.Forms.ToolBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
+> <span data-ttu-id="e776f-103"><xref:System.Windows.Forms.ToolStrip> 컨트롤은 <xref:System.Windows.Forms.ToolBar> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.ToolBar> 컨트롤을 계속 유지하도록 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e776f-103">The <xref:System.Windows.Forms.ToolStrip> control replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control; however, the <xref:System.Windows.Forms.ToolBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
   
- <span data-ttu-id="029c8-104">Windows Form <xref:System.Windows.Forms.ToolBar> 에서 도구 모음 단추가 있는 컨트롤을 사용 하는 경우 사용자가 클릭 하는 단추를 알고 싶을 것입니다.</span><span class="sxs-lookup"><span data-stu-id="029c8-104">If your Windows Form features a <xref:System.Windows.Forms.ToolBar> control with toolbar buttons, you will want to know which button the user clicks.</span></span>  
+ <span data-ttu-id="e776f-104">Windows 양식에 도구 <xref:System.Windows.Forms.ToolBar> 모음 버튼이 있는 컨트롤이 있는 경우 사용자가 클릭하는 단추를 알고 싶을 것입니다.</span><span class="sxs-lookup"><span data-stu-id="e776f-104">If your Windows Form features a <xref:System.Windows.Forms.ToolBar> control with toolbar buttons, you will want to know which button the user clicks.</span></span>  
   
- <span data-ttu-id="029c8-105">컨트롤의 이벤트에서 <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> 클래스의 <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> 속성을 평가할 수 있습니다. <xref:System.Windows.Forms.ToolBar.ButtonClick> <xref:System.Windows.Forms.ToolBar></span><span class="sxs-lookup"><span data-stu-id="029c8-105">On the <xref:System.Windows.Forms.ToolBar.ButtonClick> event of the <xref:System.Windows.Forms.ToolBar> control, you can evaluate the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> property of the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> class.</span></span> <span data-ttu-id="029c8-106">아래 예제에서는 클릭한 단추를 나타내는 메시지 상자를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="029c8-106">In the example below, a message box is shown, indicating which button was clicked.</span></span> <span data-ttu-id="029c8-107">자세한 내용은 <xref:System.Windows.Forms.MessageBox>를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="029c8-107">For details, see <xref:System.Windows.Forms.MessageBox>.</span></span>  
+ <span data-ttu-id="e776f-105">컨트롤의 <xref:System.Windows.Forms.ToolBar.ButtonClick> 경우 <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> 클래스의 속성을 평가할 <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> 수 있습니다. <xref:System.Windows.Forms.ToolBar></span><span class="sxs-lookup"><span data-stu-id="e776f-105">On the <xref:System.Windows.Forms.ToolBar.ButtonClick> event of the <xref:System.Windows.Forms.ToolBar> control, you can evaluate the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> property of the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> class.</span></span> <span data-ttu-id="e776f-106">아래 예제에서는 클릭한 단추를 나타내는 메시지 상자를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="e776f-106">In the example below, a message box is shown, indicating which button was clicked.</span></span> <span data-ttu-id="e776f-107"> 자세한 내용은 <xref:System.Windows.Forms.MessageBox>를 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="e776f-107">For details, see <xref:System.Windows.Forms.MessageBox>.</span></span>  
   
- <span data-ttu-id="029c8-108">아래 예제에서는 Windows Form <xref:System.Windows.Forms.ToolBar> 에 컨트롤이 추가 된 것으로 가정 합니다.</span><span class="sxs-lookup"><span data-stu-id="029c8-108">The example below assumes a <xref:System.Windows.Forms.ToolBar> control has been added to a Windows Form.</span></span>  
+ <span data-ttu-id="e776f-108">아래 예제는 컨트롤이 <xref:System.Windows.Forms.ToolBar> Windows 양식에 추가되었다고 가정합니다.</span><span class="sxs-lookup"><span data-stu-id="e776f-108">The example below assumes a <xref:System.Windows.Forms.ToolBar> control has been added to a Windows Form.</span></span>  
   
-### <a name="to-handle-the-click-event-on-a-toolbar"></a><span data-ttu-id="029c8-109">도구 모음에서 Click 이벤트를 처리하려면</span><span class="sxs-lookup"><span data-stu-id="029c8-109">To handle the Click event on a toolbar</span></span>  
+### <a name="to-handle-the-click-event-on-a-toolbar"></a><span data-ttu-id="e776f-109">도구 모음에서 Click 이벤트를 처리하려면</span><span class="sxs-lookup"><span data-stu-id="e776f-109">To handle the Click event on a toolbar</span></span>  
   
-1. <span data-ttu-id="029c8-110">프로시저에서 <xref:System.Windows.Forms.ToolBar> 컨트롤에 도구 모음 단추를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="029c8-110">In a procedure, add toolbar buttons to the <xref:System.Windows.Forms.ToolBar> control.</span></span>  
+1. <span data-ttu-id="e776f-110">절차에서 도구 모음 단추를 컨트롤에 <xref:System.Windows.Forms.ToolBar> 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e776f-110">In a procedure, add toolbar buttons to the <xref:System.Windows.Forms.ToolBar> control.</span></span>  
   
     ```vb  
     Public Sub ToolBarConfig()  
@@ -45,13 +45,13 @@ ms.locfileid: "69956031"
     ```  
   
     ```csharp  
-    public void ToolBarConfig()   
+    public void ToolBarConfig()
     {  
        toolBar1.Buttons.Add(new ToolBarButton("One"));  
        toolBar1.Buttons.Add(new ToolBarButton("Two"));  
        toolBar1.Buttons.Add(new ToolBarButton("Three"));  
   
-       toolBar1.ButtonClick +=   
+       toolBar1.ButtonClick +=
           new ToolBarButtonClickEventHandler(this.toolBar1_ButtonClick);  
     }  
     ```  
@@ -64,16 +64,16 @@ ms.locfileid: "69956031"
           toolBar1->Buttons->Add(gcnew ToolBarButton("Two"));  
           toolBar1->Buttons->Add(gcnew ToolBarButton("Three"));  
   
-          toolBar1->ButtonClick +=   
+          toolBar1->ButtonClick +=
              gcnew ToolBarButtonClickEventHandler(this,  
              &Form1::toolBar1_ButtonClick);  
        }  
     ```  
   
-2. <span data-ttu-id="029c8-111"><xref:System.Windows.Forms.ToolBar> 컨트롤 의<xref:System.Windows.Forms.ToolBar.ButtonClick> 이벤트에 대 한 이벤트 처리기를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="029c8-111">Add an event handler for the <xref:System.Windows.Forms.ToolBar> control's <xref:System.Windows.Forms.ToolBar.ButtonClick> event.</span></span> <span data-ttu-id="029c8-112">Case 전환 문과 <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> 클래스를 사용 하 여 클릭 한 도구 모음 단추를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="029c8-112">Use a case switching statement and the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> class to determine the toolbar button that was clicked.</span></span> <span data-ttu-id="029c8-113">이에 따라 적절한 메시지 상자를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="029c8-113">Based on this, show an appropriate message box.</span></span>  
+2. <span data-ttu-id="e776f-111"><xref:System.Windows.Forms.ToolBar> 컨트롤의 이벤트에 대한 이벤트 <xref:System.Windows.Forms.ToolBar.ButtonClick> 처리기를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="e776f-111">Add an event handler for the <xref:System.Windows.Forms.ToolBar> control's <xref:System.Windows.Forms.ToolBar.ButtonClick> event.</span></span> <span data-ttu-id="e776f-112">사례 전환 문과 <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> 클래스를 사용하여 클릭한 도구 모음 단추를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="e776f-112">Use a case switching statement and the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> class to determine the toolbar button that was clicked.</span></span> <span data-ttu-id="e776f-113">이에 따라 적절한 메시지 상자를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="e776f-113">Based on this, show an appropriate message box.</span></span>  
   
     > [!NOTE]
-    > <span data-ttu-id="029c8-114">이 예제에서 메시지 상자는 자리 표시자로만 사용되고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="029c8-114">A message box is being used solely as a placeholder in this example.</span></span> <span data-ttu-id="029c8-115">따라서 도구 모음 단추를 클릭할 때 실행할 다른 코드를 자유롭게 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="029c8-115">Feel free to add other code to execute when the toolbar buttons are clicked.</span></span>  
+    > <span data-ttu-id="e776f-114">이 예제에서 메시지 상자는 자리 표시자로만 사용되고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e776f-114">A message box is being used solely as a placeholder in this example.</span></span> <span data-ttu-id="e776f-115">따라서 도구 모음 단추를 클릭할 때 실행할 다른 코드를 자유롭게 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e776f-115">Feel free to add other code to execute when the toolbar buttons are clicked.</span></span>  
   
     ```vb  
     Protected Sub ToolBar1_ButtonClick(ByVal sender As Object, _  
@@ -134,9 +134,9 @@ ms.locfileid: "69956031"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="029c8-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="029c8-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e776f-116">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e776f-116">See also</span></span>
 
 - <xref:System.Windows.Forms.ToolBar>
-- [<span data-ttu-id="029c8-117">방법: ToolBar 컨트롤에 단추 추가</span><span class="sxs-lookup"><span data-stu-id="029c8-117">How to: Add Buttons to a ToolBar Control</span></span>](how-to-add-buttons-to-a-toolbar-control.md)
-- [<span data-ttu-id="029c8-118">방법: 도구 모음 단추의 아이콘 정의</span><span class="sxs-lookup"><span data-stu-id="029c8-118">How to: Define an Icon for a ToolBar Button</span></span>](how-to-define-an-icon-for-a-toolbar-button.md)
-- [<span data-ttu-id="029c8-119">ToolBar 컨트롤</span><span class="sxs-lookup"><span data-stu-id="029c8-119">ToolBar Control</span></span>](toolbar-control-windows-forms.md)
+- [<span data-ttu-id="e776f-117">방법: ToolBar 컨트롤에 단추 추가</span><span class="sxs-lookup"><span data-stu-id="e776f-117">How to: Add Buttons to a ToolBar Control</span></span>](how-to-add-buttons-to-a-toolbar-control.md)
+- [<span data-ttu-id="e776f-118">방법: 도구 모음 단추의 아이콘 정의</span><span class="sxs-lookup"><span data-stu-id="e776f-118">How to: Define an Icon for a ToolBar Button</span></span>](how-to-define-an-icon-for-a-toolbar-button.md)
+- [<span data-ttu-id="e776f-119">ToolBar 컨트롤</span><span class="sxs-lookup"><span data-stu-id="e776f-119">ToolBar Control</span></span>](toolbar-control-windows-forms.md)

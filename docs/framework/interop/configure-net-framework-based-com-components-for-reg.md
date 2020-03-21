@@ -8,64 +8,64 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-ms.openlocfilehash: 61f5f0f3ec9a4386fa12e7511b4a518f2b56a21c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dedf5ab51ab5cf9befb5bd183968388406df4e5b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123662"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181470"
 ---
-# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a><span data-ttu-id="977a4-102">방법: 등록이 필요 없는 활성화를 위한 .NET Framework 기반 COM 구성 요소 구성</span><span class="sxs-lookup"><span data-stu-id="977a4-102">How to: Configure .NET Framework-Based COM Components for Registration-Free Activation</span></span>
-<span data-ttu-id="977a4-103">.NET Framework 기반 구성 요소에 대한 등록 없는 활성화는 COM 구성 요소보다 약간 더 복잡합니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-103">Registration-free activation for .NET Framework-based components is only slightly more complicated than it is for COM components.</span></span> <span data-ttu-id="977a4-104">설치 프로그램에 다음 두 개의 매니페스트가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-104">The setup requires two manifests:</span></span>  
+# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a><span data-ttu-id="276fa-102">방법: 등록이 필요 없는 활성화를 위한 .NET Framework 기반 COM 구성 요소 구성</span><span class="sxs-lookup"><span data-stu-id="276fa-102">How to: Configure .NET Framework-Based COM Components for Registration-Free Activation</span></span>
+<span data-ttu-id="276fa-103">.NET Framework 기반 구성 요소에 대한 등록 없는 활성화는 COM 구성 요소보다 약간 더 복잡합니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-103">Registration-free activation for .NET Framework-based components is only slightly more complicated than it is for COM components.</span></span> <span data-ttu-id="276fa-104">설치 프로그램에 다음 두 개의 매니페스트가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-104">The setup requires two manifests:</span></span>  
   
-- <span data-ttu-id="977a4-105">COM 애플리케이션이 관리되는 구성 요소를 식별하려면 Win32 스타일 애플리케이션 매니페스트가 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-105">COM applications must have a Win32-style application manifest to identify the managed component.</span></span>  
+- <span data-ttu-id="276fa-105">COM 애플리케이션이 관리되는 구성 요소를 식별하려면 Win32 스타일 애플리케이션 매니페스트가 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-105">COM applications must have a Win32-style application manifest to identify the managed component.</span></span>  
   
-- <span data-ttu-id="977a4-106">.NET Framework 기반 구성 요소에는 런타임에 필요한 활성화 정보를 위해 구성 요소 매니페스트가 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-106">.NET Framework-based components must have a component manifest for activation information needed at run time.</span></span>  
+- <span data-ttu-id="276fa-106">.NET Framework 기반 구성 요소에는 런타임에 필요한 활성화 정보를 위해 구성 요소 매니페스트가 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-106">.NET Framework-based components must have a component manifest for activation information needed at run time.</span></span>  
   
- <span data-ttu-id="977a4-107">이 항목에서는 애플리케이션 매니페스트를 애플리케이션에 연결하고, 구성 요소 매니페스트를 구성 요소에 연결하며, 구성 요소 매니페스트를 어셈블리에 포함하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-107">This topic describes how to associate an application manifest with an application; associate a component manifest with a component; and embed a component manifest in an assembly.</span></span>  
+ <span data-ttu-id="276fa-107">이 항목에서는 애플리케이션 매니페스트를 애플리케이션에 연결하고, 구성 요소 매니페스트를 구성 요소에 연결하며, 구성 요소 매니페스트를 어셈블리에 포함하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-107">This topic describes how to associate an application manifest with an application; associate a component manifest with a component; and embed a component manifest in an assembly.</span></span>  
   
-### <a name="to-create-an-application-manifest"></a><span data-ttu-id="977a4-108">애플리케이션 매니페스트를 만들려면</span><span class="sxs-lookup"><span data-stu-id="977a4-108">To create an application manifest</span></span>  
+### <a name="to-create-an-application-manifest"></a><span data-ttu-id="276fa-108">애플리케이션 매니페스트를 만들려면</span><span class="sxs-lookup"><span data-stu-id="276fa-108">To create an application manifest</span></span>  
   
-1. <span data-ttu-id="977a4-109">XML 편집기를 사용하여 하나 이상의 관리되는 구성 요소와 상호 운용되는 COM 애플리케이션이 소유하는 애플리케이션 매니페스트를 만들거나 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-109">Using an XML editor, create (or modify) the application manifest owned by the COM application that is interoperating with one or more managed components.</span></span>  
+1. <span data-ttu-id="276fa-109">XML 편집기를 사용하여 하나 이상의 관리되는 구성 요소와 상호 운용되는 COM 애플리케이션이 소유하는 애플리케이션 매니페스트를 만들거나 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-109">Using an XML editor, create (or modify) the application manifest owned by the COM application that is interoperating with one or more managed components.</span></span>  
   
-2. <span data-ttu-id="977a4-110">파일의 시작 부분에 다음과 같은 표준 헤더를 삽입합니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-110">Insert the following standard header at the beginning of the file:</span></span>  
+2. <span data-ttu-id="276fa-110">파일의 시작 부분에 다음과 같은 표준 헤더를 삽입합니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-110">Insert the following standard header at the beginning of the file:</span></span>  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-     <span data-ttu-id="977a4-111">매니페스트 요소와 해당 특성에 대한 자세한 내용을 보려면 [애플리케이션 매니페스트](/windows/desktop/SbsCs/application-manifests)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="977a4-111">For information about manifest elements and their attributes, see [Application Manifests](/windows/desktop/SbsCs/application-manifests).</span></span>  
+     <span data-ttu-id="276fa-111">매니페스트 요소와 해당 특성에 대한 자세한 내용을 보려면 [애플리케이션 매니페스트](/windows/desktop/SbsCs/application-manifests)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="276fa-111">For information about manifest elements and their attributes, see [Application Manifests](/windows/desktop/SbsCs/application-manifests).</span></span>  
   
-3. <span data-ttu-id="977a4-112">매니페스트의 소유자를 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-112">Identify the owner of the manifest.</span></span> <span data-ttu-id="977a4-113">다음 예제에서는 `myComApp` 버전 1이 매니페스트 파일을 소유합니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-113">In the following example, `myComApp` version 1 owns the manifest file.</span></span>  
+3. <span data-ttu-id="276fa-112">매니페스트의 소유자를 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-112">Identify the owner of the manifest.</span></span> <span data-ttu-id="276fa-113">다음 예제에서는 `myComApp` 버전 1이 매니페스트 파일을 소유합니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-113">In the following example, `myComApp` version 1 owns the manifest file.</span></span>  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
-      <assemblyIdentity type="win32"   
-                        name="myOrganization.myDivision.myComApp"   
-                        version="1.0.0.0"   
-                        processorArchitecture="msil"   
+      <assemblyIdentity type="win32"
+                        name="myOrganization.myDivision.myComApp"
+                        version="1.0.0.0"
+                        processorArchitecture="msil"
       />  
     ```  
   
-4. <span data-ttu-id="977a4-114">종속 어셈블리를 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-114">Identify dependent assemblies.</span></span> <span data-ttu-id="977a4-115">다음 예제에서는 `myComApp`이 `myManagedComp`에 종속됩니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-115">In the following example, `myComApp` depends on `myManagedComp`.</span></span>  
+4. <span data-ttu-id="276fa-114">종속 어셈블리를 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-114">Identify dependent assemblies.</span></span> <span data-ttu-id="276fa-115">다음 예제에서는 `myComApp`이 `myManagedComp`에 종속됩니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-115">In the following example, `myComApp` depends on `myManagedComp`.</span></span>  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
-      <assemblyIdentity type="win32"   
-                        name="myOrganization.myDivision.myComApp"   
-                        version="1.0.0.0"   
-                        processorArchitecture="x86"   
+      <assemblyIdentity type="win32"
+                        name="myOrganization.myDivision.myComApp"
+                        version="1.0.0.0"
+                        processorArchitecture="x86"
                         publicKeyToken="8275b28176rcbbef"  
       />  
       <dependency>  
         <dependentAssembly>  
-          <assemblyIdentity type="win32"   
-                        name="myOrganization.myDivision.myManagedComp"   
-                        version="6.0.0.0"   
-                        processorArchitecture="X86"   
+          <assemblyIdentity type="win32"
+                        name="myOrganization.myDivision.myManagedComp"
+                        version="6.0.0.0"
+                        processorArchitecture="X86"
                         publicKeyToken="8275b28176rcbbef"  
           />  
         </dependentAssembly>  
@@ -73,22 +73,22 @@ ms.locfileid: "73123662"
     </assembly>  
     ```  
   
-5. <span data-ttu-id="977a4-116">매니페스트 파일을 저장하고 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-116">Save and name the manifest file.</span></span> <span data-ttu-id="977a4-117">애플리케이션 매니페스트 이름은 어셈블리 실행 파일의 이름 뒤에 .manifest 확장명이 추가된 것입니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-117">The name of an application manifest is the name of the assembly executable followed by the .manifest extension.</span></span> <span data-ttu-id="977a4-118">예를 들어 myComApp.exe의 애플리케이션 매니페스트 파일 이름은 myComApp.exe.manifest입니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-118">For example, the application manifest file name for myComApp.exe is myComApp.exe.manifest.</span></span>  
+5. <span data-ttu-id="276fa-116">매니페스트 파일을 저장하고 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-116">Save and name the manifest file.</span></span> <span data-ttu-id="276fa-117">애플리케이션 매니페스트 이름은 어셈블리 실행 파일의 이름 뒤에 .manifest 확장명이 추가된 것입니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-117">The name of an application manifest is the name of the assembly executable followed by the .manifest extension.</span></span> <span data-ttu-id="276fa-118">예를 들어 myComApp.exe의 애플리케이션 매니페스트 파일 이름은 myComApp.exe.manifest입니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-118">For example, the application manifest file name for myComApp.exe is myComApp.exe.manifest.</span></span>  
   
- <span data-ttu-id="977a4-119">COM 애플리케이션과 동일한 디렉터리에 애플리케이션 매니페스트를 설치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-119">You can install an application manifest in the same directory as the COM application.</span></span> <span data-ttu-id="977a4-120">또는 애플리케이션의 .exe 파일에 리소스로 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-120">Alternatively, you can add it as a resource to the application's .exe file.</span></span> <span data-ttu-id="977a4-121">자세한 내용은 [About Side-by-Side Assemblies](/windows/desktop/SbsCs/about-side-by-side-assemblies-)(Side-by-Side 어셈블리 정보)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="977a4-121">For additional information, For more information, see [About Side-by-Side Assemblies](/windows/desktop/SbsCs/about-side-by-side-assemblies-).</span></span>  
+ <span data-ttu-id="276fa-119">COM 애플리케이션과 동일한 디렉터리에 애플리케이션 매니페스트를 설치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-119">You can install an application manifest in the same directory as the COM application.</span></span> <span data-ttu-id="276fa-120">또는 애플리케이션의 .exe 파일에 리소스로 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-120">Alternatively, you can add it as a resource to the application's .exe file.</span></span> <span data-ttu-id="276fa-121">자세한 내용은 [About Side-by-Side Assemblies](/windows/desktop/SbsCs/about-side-by-side-assemblies-)(Side-by-Side 어셈블리 정보)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="276fa-121">For additional information, For more information, see [About Side-by-Side Assemblies](/windows/desktop/SbsCs/about-side-by-side-assemblies-).</span></span>  
   
-#### <a name="to-create-a-component-manifest"></a><span data-ttu-id="977a4-122">구성 요소 매니페스트를 만들려면</span><span class="sxs-lookup"><span data-stu-id="977a4-122">To create a component manifest</span></span>  
+#### <a name="to-create-a-component-manifest"></a><span data-ttu-id="276fa-122">구성 요소 매니페스트를 만들려면</span><span class="sxs-lookup"><span data-stu-id="276fa-122">To create a component manifest</span></span>  
   
-1. <span data-ttu-id="977a4-123">XML 편집기를 사용하여 관리되는 어셈블리를 설명하는 구성 요소 매니페스트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-123">Using an XML editor, create a component manifest to describe the managed assembly.</span></span>  
+1. <span data-ttu-id="276fa-123">XML 편집기를 사용하여 관리되는 어셈블리를 설명하는 구성 요소 매니페스트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-123">Using an XML editor, create a component manifest to describe the managed assembly.</span></span>  
   
-2. <span data-ttu-id="977a4-124">파일의 시작 부분에 다음과 같은 표준 헤더를 삽입합니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-124">Insert the following standard header at the beginning of the file:</span></span>  
+2. <span data-ttu-id="276fa-124">파일의 시작 부분에 다음과 같은 표준 헤더를 삽입합니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-124">Insert the following standard header at the beginning of the file:</span></span>  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-3. <span data-ttu-id="977a4-125">파일의 소유자를 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-125">Identify the owner of the file.</span></span> <span data-ttu-id="977a4-126">애플리케이션 매니페스트 파일에 있는 `<dependentAssembly>` 요소의 `<assemblyIdentity>` 요소는 구성 요소 매니페스트에 있는 요소와 일치해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-126">The `<assemblyIdentity>` element of the `<dependentAssembly>` element in application manifest file must match the one in the component manifest.</span></span> <span data-ttu-id="977a4-127">다음 예제에서는 `myManagedComp` 버전 1.2.3.4가 매니페스트 파일을 소유합니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-127">In the following example, `myManagedComp` version 1.2.3.4 owns the manifest file.</span></span>  
+3. <span data-ttu-id="276fa-125">파일의 소유자를 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-125">Identify the owner of the file.</span></span> <span data-ttu-id="276fa-126">애플리케이션 매니페스트 파일에 있는 `<dependentAssembly>` 요소의 `<assemblyIdentity>` 요소는 구성 요소 매니페스트에 있는 요소와 일치해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-126">The `<assemblyIdentity>` element of the `<dependentAssembly>` element in application manifest file must match the one in the component manifest.</span></span> <span data-ttu-id="276fa-127">다음 예제에서는 `myManagedComp` 버전 1.2.3.4가 매니페스트 파일을 소유합니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-127">In the following example, `myManagedComp` version 1.2.3.4 owns the manifest file.</span></span>  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -101,28 +101,28 @@ ms.locfileid: "73123662"
            />  
     ```  
   
-4. <span data-ttu-id="977a4-128">어셈블리에 있는 각 클래스를 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-128">Identify each class in the assembly.</span></span> <span data-ttu-id="977a4-129">`<clrClass>` 요소를 사용하여 관리되는 어셈블리에 있는 각 클래스를 고유하게 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-129">Use the `<clrClass>` element to uniquely identify each class in the managed assembly.</span></span> <span data-ttu-id="977a4-130">`<assembly>` 요소의 하위 요소인 요소에는 다음 표에 설명된 특성이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-130">The element, which is a subelement of the `<assembly>` element, has the attributes described in the following table.</span></span>  
+4. <span data-ttu-id="276fa-128">어셈블리에 있는 각 클래스를 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-128">Identify each class in the assembly.</span></span> <span data-ttu-id="276fa-129">`<clrClass>` 요소를 사용하여 관리되는 어셈블리에 있는 각 클래스를 고유하게 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-129">Use the `<clrClass>` element to uniquely identify each class in the managed assembly.</span></span> <span data-ttu-id="276fa-130">`<assembly>` 요소의 하위 요소인 요소에는 다음 표에 설명된 특성이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-130">The element, which is a subelement of the `<assembly>` element, has the attributes described in the following table.</span></span>  
   
-    |<span data-ttu-id="977a4-131">특성</span><span class="sxs-lookup"><span data-stu-id="977a4-131">Attribute</span></span>|<span data-ttu-id="977a4-132">설명</span><span class="sxs-lookup"><span data-stu-id="977a4-132">Description</span></span>|<span data-ttu-id="977a4-133">필요한 공간</span><span class="sxs-lookup"><span data-stu-id="977a4-133">Required</span></span>|  
+    |<span data-ttu-id="276fa-131">attribute</span><span class="sxs-lookup"><span data-stu-id="276fa-131">Attribute</span></span>|<span data-ttu-id="276fa-132">Description</span><span class="sxs-lookup"><span data-stu-id="276fa-132">Description</span></span>|<span data-ttu-id="276fa-133">필수</span><span class="sxs-lookup"><span data-stu-id="276fa-133">Required</span></span>|  
     |---------------|-----------------|--------------|  
-    |`clsid`|<span data-ttu-id="977a4-134">활성화할 클래스를 지정하는 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-134">The identifier that specifies the class to be activated.</span></span>|<span data-ttu-id="977a4-135">예</span><span class="sxs-lookup"><span data-stu-id="977a4-135">Yes</span></span>|  
-    |`description`|<span data-ttu-id="977a4-136">구성 요소에 대해 사용자에게 알려주는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-136">A string that informs the user about the component.</span></span> <span data-ttu-id="977a4-137">기본값은 빈 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-137">An empty string is the default.</span></span>|<span data-ttu-id="977a4-138">아니요</span><span class="sxs-lookup"><span data-stu-id="977a4-138">No</span></span>|  
-    |`name`|<span data-ttu-id="977a4-139">관리되는 클래스를 나타내는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-139">A string that represents the managed class.</span></span>|<span data-ttu-id="977a4-140">예</span><span class="sxs-lookup"><span data-stu-id="977a4-140">Yes</span></span>|  
-    |`progid`|<span data-ttu-id="977a4-141">런타임에 바인딩된 활성화에 사용할 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-141">The identifier to be used for late-bound activation.</span></span>|<span data-ttu-id="977a4-142">아니요</span><span class="sxs-lookup"><span data-stu-id="977a4-142">No</span></span>|  
-    |`threadingModel`|<span data-ttu-id="977a4-143">COM 스레딩 모델.</span><span class="sxs-lookup"><span data-stu-id="977a4-143">The COM threading model.</span></span> <span data-ttu-id="977a4-144">"Both"가 기본값입니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-144">"Both" is the default value.</span></span>|<span data-ttu-id="977a4-145">아니요</span><span class="sxs-lookup"><span data-stu-id="977a4-145">No</span></span>|  
-    |`runtimeVersion`|<span data-ttu-id="977a4-146">사용할 CLR(공용 언어 런타임) 버전을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-146">Specifies the common language runtime (CLR) version to use.</span></span> <span data-ttu-id="977a4-147">이 특성을 지정하지 않고 CLR이 아직 로드되지 않은 경우 CLR 버전 4 이전의 최신 설치된 CLR과 함께 구성 요소가 로드됩니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-147">If you do not specify this attribute, and the CLR is not already loaded, the component is loaded with the latest installed CLR prior to CLR version 4.</span></span> <span data-ttu-id="977a4-148">v1.0.3705, v1.1.4322 또는 v2.0.50727을 지정하면 버전이 CLR 버전 4 이전의 최신 설치된 CLR 버전(일반적으로 v2.0.50727)으로 자동으로 롤포워드합니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-148">If you specify v1.0.3705, v1.1.4322, or v2.0.50727, the version automatically rolls forward to the latest installed CLR version prior to CLR version 4 (usually v2.0.50727).</span></span> <span data-ttu-id="977a4-149">다른 버전의 CLR이 이미 로드되었으며 지정된 버전을 In-Process Side-by-Side로 로드할 수 있는 경우 지정된 버전이 로드되고, 그러지 않으면 로드된 CLR이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-149">If another version of the CLR is already loaded and the specified version can be loaded side-by-side in-process, the specified version is loaded; otherwise, the loaded CLR is used.</span></span> <span data-ttu-id="977a4-150">이 경우 로드에 실패할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-150">This might cause a load failure.</span></span>|<span data-ttu-id="977a4-151">아니요</span><span class="sxs-lookup"><span data-stu-id="977a4-151">No</span></span>|  
-    |`tlbid`|<span data-ttu-id="977a4-152">클래스에 대한 형식 정보를 포함하는 형식 라이브러리의 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-152">The identifier of the type library that contains type information about the class.</span></span>|<span data-ttu-id="977a4-153">아니요</span><span class="sxs-lookup"><span data-stu-id="977a4-153">No</span></span>|  
+    |`clsid`|<span data-ttu-id="276fa-134">활성화할 클래스를 지정하는 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-134">The identifier that specifies the class to be activated.</span></span>|<span data-ttu-id="276fa-135">yes</span><span class="sxs-lookup"><span data-stu-id="276fa-135">Yes</span></span>|  
+    |`description`|<span data-ttu-id="276fa-136">구성 요소에 대해 사용자에게 알려주는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-136">A string that informs the user about the component.</span></span> <span data-ttu-id="276fa-137">기본값은 빈 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-137">An empty string is the default.</span></span>|<span data-ttu-id="276fa-138">예</span><span class="sxs-lookup"><span data-stu-id="276fa-138">No</span></span>|  
+    |`name`|<span data-ttu-id="276fa-139">관리되는 클래스를 나타내는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-139">A string that represents the managed class.</span></span>|<span data-ttu-id="276fa-140">yes</span><span class="sxs-lookup"><span data-stu-id="276fa-140">Yes</span></span>|  
+    |`progid`|<span data-ttu-id="276fa-141">런타임에 바인딩된 활성화에 사용할 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-141">The identifier to be used for late-bound activation.</span></span>|<span data-ttu-id="276fa-142">예</span><span class="sxs-lookup"><span data-stu-id="276fa-142">No</span></span>|  
+    |`threadingModel`|<span data-ttu-id="276fa-143">COM 스레딩 모델.</span><span class="sxs-lookup"><span data-stu-id="276fa-143">The COM threading model.</span></span> <span data-ttu-id="276fa-144">"Both"가 기본값입니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-144">"Both" is the default value.</span></span>|<span data-ttu-id="276fa-145">예</span><span class="sxs-lookup"><span data-stu-id="276fa-145">No</span></span>|  
+    |`runtimeVersion`|<span data-ttu-id="276fa-146">사용할 CLR(공용 언어 런타임) 버전을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-146">Specifies the common language runtime (CLR) version to use.</span></span> <span data-ttu-id="276fa-147">이 특성을 지정하지 않고 CLR이 아직 로드되지 않은 경우 CLR 버전 4 이전의 최신 설치된 CLR과 함께 구성 요소가 로드됩니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-147">If you do not specify this attribute, and the CLR is not already loaded, the component is loaded with the latest installed CLR prior to CLR version 4.</span></span> <span data-ttu-id="276fa-148">v1.0.3705, v1.1.4322 또는 v2.0.50727을 지정하면 버전이 CLR 버전 4 이전의 최신 설치된 CLR 버전(일반적으로 v2.0.50727)으로 자동으로 롤포워드합니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-148">If you specify v1.0.3705, v1.1.4322, or v2.0.50727, the version automatically rolls forward to the latest installed CLR version prior to CLR version 4 (usually v2.0.50727).</span></span> <span data-ttu-id="276fa-149">다른 버전의 CLR이 이미 로드되었으며 지정된 버전을 In-Process Side-by-Side로 로드할 수 있는 경우 지정된 버전이 로드되고, 그러지 않으면 로드된 CLR이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-149">If another version of the CLR is already loaded and the specified version can be loaded side-by-side in-process, the specified version is loaded; otherwise, the loaded CLR is used.</span></span> <span data-ttu-id="276fa-150">이 경우 로드에 실패할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-150">This might cause a load failure.</span></span>|<span data-ttu-id="276fa-151">예</span><span class="sxs-lookup"><span data-stu-id="276fa-151">No</span></span>|  
+    |`tlbid`|<span data-ttu-id="276fa-152">클래스에 대한 형식 정보를 포함하는 형식 라이브러리의 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-152">The identifier of the type library that contains type information about the class.</span></span>|<span data-ttu-id="276fa-153">예</span><span class="sxs-lookup"><span data-stu-id="276fa-153">No</span></span>|  
   
-     <span data-ttu-id="977a4-154">모든 특성 태그는 대/소문자를 구분합니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-154">All attribute tags are case-sensitive.</span></span> <span data-ttu-id="977a4-155">OLE/COM ObjectViewer(Oleview.exe)를 사용하여 어셈블리에 대해 내보낸 형식 라이브러리를 보면 CLSID, ProgID, 스레딩 모델, 런타임 버전을 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-155">You can obtain CLSIDs, ProgIDs, threading models, and the runtime version by viewing the exported type library for the assembly with the OLE/COM ObjectViewer (Oleview.exe).</span></span>  
+     <span data-ttu-id="276fa-154">모든 특성 태그는 대/소문자를 구분합니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-154">All attribute tags are case-sensitive.</span></span> <span data-ttu-id="276fa-155">OLE/COM ObjectViewer(Oleview.exe)를 사용하여 어셈블리에 대해 내보낸 형식 라이브러리를 보면 CLSID, ProgID, 스레딩 모델, 런타임 버전을 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-155">You can obtain CLSIDs, ProgIDs, threading models, and the runtime version by viewing the exported type library for the assembly with the OLE/COM ObjectViewer (Oleview.exe).</span></span>  
   
-     <span data-ttu-id="977a4-156">다음 구성 요소 매니페스트는 `testClass1` 및 `testClass2`라는 두 개의 클래스를 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-156">The following component manifest identifies two classes, `testClass1` and `testClass2`.</span></span>  
+     <span data-ttu-id="276fa-156">다음 구성 요소 매니페스트는 `testClass1` 및 `testClass2`라는 두 개의 클래스를 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-156">The following component manifest identifies two classes, `testClass1` and `testClass2`.</span></span>  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
            <assemblyIdentity  
                         name="myOrganization.myDivision.myManagedComp"  
-                        version="1.2.3.4"   
+                        version="1.2.3.4"
                         publicKeyToken="8275b28176rcbbef"  
            />  
            <clrClass  
@@ -144,33 +144,33 @@ ms.locfileid: "73123662"
     </assembly>  
     ```  
   
-5. <span data-ttu-id="977a4-157">매니페스트 파일을 저장하고 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-157">Save and name the manifest file.</span></span> <span data-ttu-id="977a4-158">구성 요소 매니페스트 이름은 어셈블리 라이브러리의 이름 뒤에 .manifest 확장명이 추가된 것입니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-158">The name of a component manifest is the name of the assembly library followed by the .manifest extension.</span></span> <span data-ttu-id="977a4-159">예를 들어 myManagedComp.dll은 myManagedComp.manifest입니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-159">For example, the myManagedComp.dll is myManagedComp.manifest.</span></span>  
+5. <span data-ttu-id="276fa-157">매니페스트 파일을 저장하고 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-157">Save and name the manifest file.</span></span> <span data-ttu-id="276fa-158">구성 요소 매니페스트 이름은 어셈블리 라이브러리의 이름 뒤에 .manifest 확장명이 추가된 것입니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-158">The name of a component manifest is the name of the assembly library followed by the .manifest extension.</span></span> <span data-ttu-id="276fa-159">예를 들어 myManagedComp.dll은 myManagedComp.manifest입니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-159">For example, the myManagedComp.dll is myManagedComp.manifest.</span></span>  
   
- <span data-ttu-id="977a4-160">구성 요소 매니페스트를 어셈블리에 리소스로 포함해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-160">You must embed the component manifest as a resource in the assembly.</span></span>  
+ <span data-ttu-id="276fa-160">구성 요소 매니페스트를 어셈블리에 리소스로 포함해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-160">You must embed the component manifest as a resource in the assembly.</span></span>  
   
-#### <a name="to-embed-a-component-manifest-in-a-managed-assembly"></a><span data-ttu-id="977a4-161">관리되는 어셈블리에 구성 요소 매니페스트를 포함하려면</span><span class="sxs-lookup"><span data-stu-id="977a4-161">To embed a component manifest in a managed assembly</span></span>  
+#### <a name="to-embed-a-component-manifest-in-a-managed-assembly"></a><span data-ttu-id="276fa-161">관리되는 어셈블리에 구성 요소 매니페스트를 포함하려면</span><span class="sxs-lookup"><span data-stu-id="276fa-161">To embed a component manifest in a managed assembly</span></span>  
   
-1. <span data-ttu-id="977a4-162">다음 문을 포함하는 리소스 스크립트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-162">Create a resource script that contains the following statement:</span></span>  
+1. <span data-ttu-id="276fa-162">다음 문을 포함하는 리소스 스크립트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-162">Create a resource script that contains the following statement:</span></span>  
   
      `RT_MANIFEST 1 myManagedComp.manifest`  
   
-     <span data-ttu-id="977a4-163">이 문에서 `myManagedComp.manifest`는 포함되는 구성 요소 매니페스트의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-163">In this statement, `myManagedComp.manifest` is the name of the component manifest being embedded.</span></span> <span data-ttu-id="977a4-164">이 예제에서 스크립트 파일 이름은 `myresource.rc`입니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-164">For this example, the script file name is `myresource.rc`.</span></span>  
+     <span data-ttu-id="276fa-163">이 문에서 `myManagedComp.manifest`는 포함되는 구성 요소 매니페스트의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-163">In this statement, `myManagedComp.manifest` is the name of the component manifest being embedded.</span></span> <span data-ttu-id="276fa-164">이 예제에서 스크립트 파일 이름은 `myresource.rc`입니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-164">For this example, the script file name is `myresource.rc`.</span></span>  
   
-2. <span data-ttu-id="977a4-165">Microsoft Windows Resource Compiler(Rc.exe)를 사용하여 스크립트를 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-165">Compile the script using the Microsoft Windows Resource Compiler (Rc.exe).</span></span> <span data-ttu-id="977a4-166">명령 프롬프트에 다음 명령을 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-166">At the command prompt, type the following command:</span></span>  
+2. <span data-ttu-id="276fa-165">Microsoft Windows Resource Compiler(Rc.exe)를 사용하여 스크립트를 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-165">Compile the script using the Microsoft Windows Resource Compiler (Rc.exe).</span></span> <span data-ttu-id="276fa-166">명령 프롬프트에서 다음 명령을 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-166">At the command prompt, type the following command:</span></span>  
   
      `rc myresource.rc`  
   
-     <span data-ttu-id="977a4-167">Rc.exe는 `myresource.res` 리소스 파일을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-167">Rc.exe produces the `myresource.res` resource file.</span></span>  
+     <span data-ttu-id="276fa-167">Rc.exe는 `myresource.res` 리소스 파일을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-167">Rc.exe produces the `myresource.res` resource file.</span></span>  
   
-3. <span data-ttu-id="977a4-168">어셈블리의 소스 파일을 다시 컴파일하고 **/win32res** 옵션을 사용하여 리소스 파일을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-168">Compile the assembly's source file again and specify the resource file by using the **/win32res** option:</span></span>  
+3. <span data-ttu-id="276fa-168">어셈블리의 소스 파일을 다시 컴파일하고 **/win32res** 옵션을 사용하여 리소스 파일을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-168">Compile the assembly's source file again and specify the resource file by using the **/win32res** option:</span></span>  
   
     `/win32res:myresource.res`  
   
-     <span data-ttu-id="977a4-169">이번에도 `myresource.res`는 포함 리소스를 포함하는 리소스 파일의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="977a4-169">Again, `myresource.res` is the name of the resource file containing embedded resources.</span></span>  
+     <span data-ttu-id="276fa-169">이번에도 `myresource.res`는 포함 리소스를 포함하는 리소스 파일의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="276fa-169">Again, `myresource.res` is the name of the resource file containing embedded resources.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="977a4-170">참조</span><span class="sxs-lookup"><span data-stu-id="977a4-170">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="276fa-170">참고 항목</span><span class="sxs-lookup"><span data-stu-id="276fa-170">See also</span></span>
 
-- [<span data-ttu-id="977a4-171">등록이 필요 없는 COM interop</span><span class="sxs-lookup"><span data-stu-id="977a4-171">Registration-Free COM Interop</span></span>](registration-free-com-interop.md)
-- <span data-ttu-id="977a4-172">[등록이 필요 없는 COM Interop에 대한 요구 사항](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="977a4-172">[Requirements for Registration-Free COM Interop](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))</span></span>
-- <span data-ttu-id="977a4-173">[등록이 필요 없는 활성화를 위한 COM 구성 요소 구성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="977a4-173">[Configuring COM Components for Registration-Free Activation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))</span></span>
-- <span data-ttu-id="977a4-174">[.NET 기반 구성 요소의 등록이 필요 없는 활성화: 연습](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973915(v=msdn.10))</span><span class="sxs-lookup"><span data-stu-id="977a4-174">[Registration-Free Activation of .NET-Based Components: A Walkthrough](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973915(v=msdn.10))</span></span>
+- [<span data-ttu-id="276fa-171">등록이 필요 없는 COM interop</span><span class="sxs-lookup"><span data-stu-id="276fa-171">Registration-Free COM Interop</span></span>](registration-free-com-interop.md)
+- <span data-ttu-id="276fa-172">[등록 없는 COM 인터럽에 대한 요구 사항](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="276fa-172">[Requirements for Registration-Free COM Interop](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))</span></span>
+- <span data-ttu-id="276fa-173">[등록 없는 활성화를 위한 COM 구성 요소 구성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="276fa-173">[Configuring COM Components for Registration-Free Activation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))</span></span>
+- <span data-ttu-id="276fa-174">[.NET 기반 구성 요소의 등록이 필요 없는 활성화: 연습](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973915(v=msdn.10))</span><span class="sxs-lookup"><span data-stu-id="276fa-174">[Registration-Free Activation of .NET-Based Components: A Walkthrough](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973915(v=msdn.10))</span></span>
