@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
-ms.openlocfilehash: 4ac0216ce2965d555f7283ba66a085ea9d7cac3c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e18c23e9bbec97a64110aba6eb7241761ecece06
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783843"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149559"
 ---
-# <a name="getschema-and-schema-collections"></a><span data-ttu-id="36683-102">GetSchema 및 Schema 컬렉션</span><span class="sxs-lookup"><span data-stu-id="36683-102">GetSchema and Schema Collections</span></span>
-<span data-ttu-id="36683-103">관리 되는 각 .NET Framework의 **연결** 클래스는 현재 연결 되어 있는 데이터베이스에 대 한 스키마 정보 및에서 **반환 된 스키마 정보를 검색 하는 데 사용 되는 GetSchema 메서드를 구현 합니다. GetSchema** 메서드는 <xref:System.Data.DataTable>의 형식으로 제공 됩니다.</span><span class="sxs-lookup"><span data-stu-id="36683-103">The **Connection** classes in each of the .NET Framework managed providers implement a **GetSchema** method which is used to retrieve schema information about the database that is currently connected, and the schema information returned from the **GetSchema** method comes in the form of a <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="36683-104">**GetSchema** 메서드는 반환할 스키마 컬렉션을 지정 하 고 반환 되는 정보의 양을 제한 하는 선택적 매개 변수를 제공 하는 오버 로드 된 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="36683-104">The **GetSchema** method is an overloaded method that provides optional parameters for specifying the schema collection to return, and restricting the amount of information returned.</span></span>  
+# <a name="getschema-and-schema-collections"></a><span data-ttu-id="f435d-102">GetSchema 및 Schema 컬렉션</span><span class="sxs-lookup"><span data-stu-id="f435d-102">GetSchema and Schema Collections</span></span>
+<span data-ttu-id="f435d-103">각 .NET Framework 관리 공급자의 **연결** 클래스는 현재 연결된 데이터베이스에 대한 스키마 정보를 검색하는 데 사용되는 GetSchema 메서드를 구현하고 **GetSchema** 메서드에서 <xref:System.Data.DataTable>반환되는 스키마 정보는 의 형태로 제공됩니다. **GetSchema**</span><span class="sxs-lookup"><span data-stu-id="f435d-103">The **Connection** classes in each of the .NET Framework managed providers implement a **GetSchema** method which is used to retrieve schema information about the database that is currently connected, and the schema information returned from the **GetSchema** method comes in the form of a <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="f435d-104">**GetSchema** 메서드는 반환할 스키마 컬렉션을 지정하고 반환되는 정보의 양을 제한하기 위한 선택적 매개 변수를 제공하는 오버로드된 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="f435d-104">The **GetSchema** method is an overloaded method that provides optional parameters for specifying the schema collection to return, and restricting the amount of information returned.</span></span>  
   
-## <a name="specifying-the-schema-collections"></a><span data-ttu-id="36683-105">스키마 컬렉션 지정</span><span class="sxs-lookup"><span data-stu-id="36683-105">Specifying the Schema Collections</span></span>  
- <span data-ttu-id="36683-106">**GetSchema** 메서드의 첫 번째 선택적 매개 변수는 문자열로 지정 되는 컬렉션 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="36683-106">The first optional parameter of the **GetSchema** method is the collection name which is specified as a string.</span></span> <span data-ttu-id="36683-107">스키마 컬렉션에는 모든 공급자에 공통되는 공통 스키마 컬렉션과 공급자마다 다른 특정 스키마 컬렉션의 두 가지 유형이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="36683-107">There are two types of schema collections: common schema collections that are common to all providers, and specific schema collections which are specific to each provider.</span></span>  
+## <a name="specifying-the-schema-collections"></a><span data-ttu-id="f435d-105">스키마 컬렉션 지정</span><span class="sxs-lookup"><span data-stu-id="f435d-105">Specifying the Schema Collections</span></span>  
+ <span data-ttu-id="f435d-106">**GetSchema** 메서드의 첫 번째 선택적 매개 변수는 문자열로 지정된 컬렉션 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="f435d-106">The first optional parameter of the **GetSchema** method is the collection name which is specified as a string.</span></span> <span data-ttu-id="f435d-107">스키마 컬렉션에는 모든 공급자에 공통되는 공통 스키마 컬렉션과 공급자마다 다른 특정 스키마 컬렉션의 두 가지 유형이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f435d-107">There are two types of schema collections: common schema collections that are common to all providers, and specific schema collections which are specific to each provider.</span></span>  
   
- <span data-ttu-id="36683-108">인수를 사용 하지 않거나 스키마 컬렉션 이름 "MetaDataCollections"를 사용 하 여 **GetSchema** 메서드를 호출 하 여 지원 되는 스키마 컬렉션 목록을 확인 하려면 .NET Framework 관리 공급자를 쿼리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="36683-108">You can query a .NET Framework managed provider to determine the list of supported schema collections by calling the **GetSchema** method with no arguments, or with the schema collection name "MetaDataCollections".</span></span> <span data-ttu-id="36683-109">그러면 지원되는 스키마 컬렉션의 목록, 각자 지원하는 제약 조건 수 및 사용하는 식별자 부분 수가 포함된 <xref:System.Data.DataTable>이 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="36683-109">This will return a <xref:System.Data.DataTable> with a list of the supported schema collections, the number of restrictions that they each support, and the number of identifier parts that they use.</span></span>  
+ <span data-ttu-id="f435d-108">인수없이 **GetSchema** 메서드를 호출하거나 스키마 컬렉션 이름 "MetaDataCollections"를 사용하여 지원되는 스키마 컬렉션 목록을 결정하기 위해 .NET Framework 관리 공급자를 쿼리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f435d-108">You can query a .NET Framework managed provider to determine the list of supported schema collections by calling the **GetSchema** method with no arguments, or with the schema collection name "MetaDataCollections".</span></span> <span data-ttu-id="f435d-109">그러면 지원되는 스키마 컬렉션의 목록, 각자 지원하는 제약 조건 수 및 사용하는 식별자 부분 수가 포함된 <xref:System.Data.DataTable>이 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="f435d-109">This will return a <xref:System.Data.DataTable> with a list of the supported schema collections, the number of restrictions that they each support, and the number of identifier parts that they use.</span></span>  
   
-### <a name="retrieving-schema-collections-example"></a><span data-ttu-id="36683-110">스키마 컬렉션 검색 예제</span><span class="sxs-lookup"><span data-stu-id="36683-110">Retrieving Schema Collections Example</span></span>  
- <span data-ttu-id="36683-111">다음 예에서는 SQL Server <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> <xref:System.Data.SqlClient.SqlConnection> 클래스에 대해 .NET Framework Data Provider의 메서드를 사용 하 여 **AdventureWorks** 예제 데이터베이스에 포함 된 모든 테이블에 대 한 스키마 정보를 검색 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="36683-111">The following examples demonstrate how to use the <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> method of the .NET Framework Data Provider for the SQL Server <xref:System.Data.SqlClient.SqlConnection> class to retrieve schema information about all of the tables contained in the **AdventureWorks** sample database:</span></span>  
+### <a name="retrieving-schema-collections-example"></a><span data-ttu-id="f435d-110">스키마 컬렉션 검색 예제</span><span class="sxs-lookup"><span data-stu-id="f435d-110">Retrieving Schema Collections Example</span></span>  
+ <span data-ttu-id="f435d-111">다음 예제에서는 SQL Server <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> <xref:System.Data.SqlClient.SqlConnection> 클래스에 .NET Framework 데이터 공급자 메서드를 사용하여 **AdventureWorks** 샘플 데이터베이스에 포함된 모든 테이블에 대한 스키마 정보를 검색하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f435d-111">The following examples demonstrate how to use the <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> method of the .NET Framework Data Provider for the SQL Server <xref:System.Data.SqlClient.SqlConnection> class to retrieve schema information about all of the tables contained in the **AdventureWorks** sample database:</span></span>  
   
 ```vb  
 Imports System.Data.SqlClient  
@@ -42,7 +42,7 @@ Module Module1
    End Sub  
   
    Private Function GetConnectionString() As String  
-      ' To avoid storing the connection string in your code,    
+      ' To avoid storing the connection string in your code,
       ' you can retrieve it from a configuration file.  
       Return "Data Source=(local);Database=AdventureWorks;" _  
          & "Integrated Security=true;"  
@@ -104,7 +104,7 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="36683-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="36683-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f435d-112">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f435d-112">See also</span></span>
 
-- [<span data-ttu-id="36683-113">데이터베이스 스키마 정보 검색</span><span class="sxs-lookup"><span data-stu-id="36683-113">Retrieving Database Schema Information</span></span>](retrieving-database-schema-information.md)
-- [<span data-ttu-id="36683-114">ADO.NET 개요</span><span class="sxs-lookup"><span data-stu-id="36683-114">ADO.NET Overview</span></span>](ado-net-overview.md)
+- [<span data-ttu-id="f435d-113">데이터베이스 스키마 정보 검색</span><span class="sxs-lookup"><span data-stu-id="f435d-113">Retrieving Database Schema Information</span></span>](retrieving-database-schema-information.md)
+- [<span data-ttu-id="f435d-114">ADO.NET 개요</span><span class="sxs-lookup"><span data-stu-id="f435d-114">ADO.NET Overview</span></span>](ado-net-overview.md)
