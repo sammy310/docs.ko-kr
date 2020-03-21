@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
-ms.openlocfilehash: d208b0796a072cda2873678ba184bc9793a1688a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cf67304f564729172d1b7f3565d52abffeb90049
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786578"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151483"
 ---
-# <a name="childviews-and-relations"></a><span data-ttu-id="9d1c9-102">ChildView 및 관계</span><span class="sxs-lookup"><span data-stu-id="9d1c9-102">ChildViews and Relations</span></span>
-<span data-ttu-id="9d1c9-103"><xref:System.Data.DataSet>의 테이블 사이에 관계가 존재하는 경우 부모 테이블의 행에 대한 <xref:System.Data.DataView>의 <xref:System.Data.DataRowView.CreateChildView%2A> 메서드를 사용하여 관련 자식 테이블의 행이 포함된 <xref:System.Data.DataRowView>를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9d1c9-103">If a relationship exists between tables in a <xref:System.Data.DataSet>, you can create a <xref:System.Data.DataView> containing rows from the related child table by using the <xref:System.Data.DataRowView.CreateChildView%2A> method of the <xref:System.Data.DataRowView> for the rows in the parent table.</span></span> <span data-ttu-id="9d1c9-104">예를 들어 다음 코드는 **범주** 와 관련 된 **제품** 을 범주 및 **ProductName**을 기준으로 사전순으로 정렬 **하 여 표시** 합니다.</span><span class="sxs-lookup"><span data-stu-id="9d1c9-104">For example, the following code displays **Categories** and their related **Products** in alphabetical order sorted by **CategoryName** and **ProductName**.</span></span>  
+# <a name="childviews-and-relations"></a><span data-ttu-id="93db5-102">ChildView 및 관계</span><span class="sxs-lookup"><span data-stu-id="93db5-102">ChildViews and Relations</span></span>
+<span data-ttu-id="93db5-103"><xref:System.Data.DataSet>의 테이블 사이에 관계가 존재하는 경우 부모 테이블의 행에 대한 <xref:System.Data.DataView>의 <xref:System.Data.DataRowView.CreateChildView%2A> 메서드를 사용하여 관련 자식 테이블의 행이 포함된 <xref:System.Data.DataRowView>를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="93db5-103">If a relationship exists between tables in a <xref:System.Data.DataSet>, you can create a <xref:System.Data.DataView> containing rows from the related child table by using the <xref:System.Data.DataRowView.CreateChildView%2A> method of the <xref:System.Data.DataRowView> for the rows in the parent table.</span></span> <span data-ttu-id="93db5-104">예를 들어 다음 코드에는 **범주** 및 관련 **제품이** 범주 **이름** 및 **ProductName으로**정렬된 사전순으로 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="93db5-104">For example, the following code displays **Categories** and their related **Products** in alphabetical order sorted by **CategoryName** and **ProductName**.</span></span>  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  
@@ -50,12 +50,12 @@ DataTable catTable = catDS.Tables["Categories"];
 DataTable prodTable = catDS.Tables["Products"];  
   
 // Create a relation between the Categories and Products tables.  
-DataRelation relation = catDS.Relations.Add("CatProdRel",   
+DataRelation relation = catDS.Relations.Add("CatProdRel",
   catTable.Columns["CategoryID"],  
                                                             prodTable.Columns["CategoryID"]);  
   
 // Create DataViews for the Categories and Products tables.  
-DataView catView = new DataView(catTable, "", "CategoryName",   
+DataView catView = new DataView(catTable, "", "CategoryName",
   DataViewRowState.CurrentRows);  
 DataView prodView;  
   
@@ -73,10 +73,10 @@ foreach (DataRowView catDRV in catView)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9d1c9-105">참고자료</span><span class="sxs-lookup"><span data-stu-id="9d1c9-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="93db5-105">참고 항목</span><span class="sxs-lookup"><span data-stu-id="93db5-105">See also</span></span>
 
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>
-- [<span data-ttu-id="9d1c9-106">DataView</span><span class="sxs-lookup"><span data-stu-id="9d1c9-106">DataViews</span></span>](dataviews.md)
-- [<span data-ttu-id="9d1c9-107">ADO.NET 개요</span><span class="sxs-lookup"><span data-stu-id="9d1c9-107">ADO.NET Overview</span></span>](../ado-net-overview.md)
+- [<span data-ttu-id="93db5-106">DataView</span><span class="sxs-lookup"><span data-stu-id="93db5-106">DataViews</span></span>](dataviews.md)
+- [<span data-ttu-id="93db5-107">ADO.NET 개요</span><span class="sxs-lookup"><span data-stu-id="93db5-107">ADO.NET Overview</span></span>](../ado-net-overview.md)

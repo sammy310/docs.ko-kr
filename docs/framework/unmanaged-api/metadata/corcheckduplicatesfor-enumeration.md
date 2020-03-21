@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: d8ec8d3c-70f7-4cc6-9957-68068fd8f49c
 topic_type:
 - apiref
-ms.openlocfilehash: 6b551743227dc1c6069796038782a515e6dbe8c4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 04dc12ab4d7d178ebf1575a3260f9f4981972782
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443779"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176190"
 ---
-# <a name="corcheckduplicatesfor-enumeration"></a><span data-ttu-id="ec929-102">CorCheckDuplicatesFor 열거형</span><span class="sxs-lookup"><span data-stu-id="ec929-102">CorCheckDuplicatesFor Enumeration</span></span>
-<span data-ttu-id="ec929-103">중복을 확인할 메타 데이터 토큰을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec929-103">Specifies the metadata tokens that will be checked for duplicates.</span></span>  
+# <a name="corcheckduplicatesfor-enumeration"></a><span data-ttu-id="306ec-102">CorCheckDuplicatesFor 열거형</span><span class="sxs-lookup"><span data-stu-id="306ec-102">CorCheckDuplicatesFor Enumeration</span></span>
+<span data-ttu-id="306ec-103">중복을 검사할 메타데이터 토큰을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="306ec-103">Specifies the metadata tokens that will be checked for duplicates.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ec929-104">구문</span><span class="sxs-lookup"><span data-stu-id="ec929-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="306ec-104">구문</span><span class="sxs-lookup"><span data-stu-id="306ec-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorCheckDuplicatesFor {  
@@ -57,52 +57,52 @@ typedef enum CorCheckDuplicatesFor {
   
     MDDupAssembly               = 0x10000000,  
   
-    MDDupDefault =   
-        MDNoDupChecks | MDDupTypeRef | MDDupMemberRef |   
+    MDDupDefault =
+        MDNoDupChecks | MDDupTypeRef | MDDupMemberRef |
         MDDupSignature | MDDupTypeSpec | MDDupMethodSpec  
   
 } CorCheckDuplicatesFor;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="ec929-105">멤버</span><span class="sxs-lookup"><span data-stu-id="ec929-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="306ec-105">구성원</span><span class="sxs-lookup"><span data-stu-id="306ec-105">Members</span></span>  
   
-|<span data-ttu-id="ec929-106">멤버</span><span class="sxs-lookup"><span data-stu-id="ec929-106">Member</span></span>|<span data-ttu-id="ec929-107">설명</span><span class="sxs-lookup"><span data-stu-id="ec929-107">Description</span></span>|  
+|<span data-ttu-id="306ec-106">멤버</span><span class="sxs-lookup"><span data-stu-id="306ec-106">Member</span></span>|<span data-ttu-id="306ec-107">Description</span><span class="sxs-lookup"><span data-stu-id="306ec-107">Description</span></span>|  
 |------------|-----------------|  
-|`MDDupAll`|<span data-ttu-id="ec929-108">모든 메타 데이터 토큰에 중복 항목이 있는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec929-108">Check all metadata tokens for duplicates.</span></span>|  
-|`MDDupENC`|<span data-ttu-id="ec929-109">사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ec929-109">Not used.</span></span>|  
-|`MDNoDupChecks`|<span data-ttu-id="ec929-110">메타 데이터 토큰에서 중복 항목을 확인 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ec929-110">Do not check metadata tokens for duplicates.</span></span>|  
-|`MDDupTypeDef`|<span data-ttu-id="ec929-111">`mdTypeDef` 토큰이 중복 되는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec929-111">Check for duplicates of `mdTypeDef` tokens.</span></span>|  
-|`MDDupInterfaceImpl`|<span data-ttu-id="ec929-112">`mdInterfaceImpl` 토큰이 중복 되는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec929-112">Check for duplicates of `mdInterfaceImpl` tokens.</span></span>|  
-|`MDDupMethodDef`|<span data-ttu-id="ec929-113">`mdMethodDef` 토큰이 중복 되는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec929-113">Check for duplicates of `mdMethodDef` tokens.</span></span>|  
-|`MDDupTypeRef`|<span data-ttu-id="ec929-114">`mdTypeRef` 토큰이 중복 되는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec929-114">Check for duplicates of `mdTypeRef` tokens.</span></span>|  
-|`MDDupMemberRef`|<span data-ttu-id="ec929-115">`mdMemberRef` 토큰이 중복 되는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec929-115">Check for duplicates of `mdMemberRef` tokens.</span></span>|  
-|`MDDupCustomAttribute`|<span data-ttu-id="ec929-116">`mdCustomAttribute` 토큰이 중복 되는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec929-116">Check for duplicates of `mdCustomAttribute` tokens.</span></span>|  
-|`MDDupParamDef`|<span data-ttu-id="ec929-117">`mdParamDef` 토큰이 중복 되는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec929-117">Check for duplicates of `mdParamDef` tokens.</span></span>|  
-|`MDDupPermission`|<span data-ttu-id="ec929-118">`mdPermission` 토큰이 중복 되는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec929-118">Check for duplicates of `mdPermission` tokens.</span></span>|  
-|`MDDupProperty`|<span data-ttu-id="ec929-119">`mdProperty` 토큰이 중복 되는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec929-119">Check for duplicates of `mdProperty` tokens.</span></span>|  
-|`MDDupEvent`|<span data-ttu-id="ec929-120">`mdEvent` 토큰이 중복 되는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec929-120">Check for duplicates of `mdEvent` tokens.</span></span>|  
-|`MDDupFieldDef`|<span data-ttu-id="ec929-121">`mdFieldDef` 토큰이 중복 되는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec929-121">Check for duplicates of `mdFieldDef` tokens.</span></span>|  
-|`MDDupSignature`|<span data-ttu-id="ec929-122">`mdSignature` 토큰이 중복 되는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec929-122">Check for duplicates of `mdSignature` tokens.</span></span>|  
-|`MDDupModuleRef`|<span data-ttu-id="ec929-123">`mdModuleRef` 토큰이 중복 되는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec929-123">Check for duplicates of `mdModuleRef` tokens.</span></span>|  
-|`MDDupTypeSpec`|<span data-ttu-id="ec929-124">`mdTypeSpec` 토큰이 중복 되는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec929-124">Check for duplicates of `mdTypeSpec` tokens.</span></span>|  
-|`MDDupImplMap`|<span data-ttu-id="ec929-125">`mdImplMap` 토큰이 중복 되는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec929-125">Check for duplicates of `mdImplMap` tokens.</span></span>|  
-|`MDDupAssemblyRef`|<span data-ttu-id="ec929-126">`mdAssemblyRef` 토큰이 중복 되는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec929-126">Check for duplicates of `mdAssemblyRef` tokens.</span></span>|  
-|`MDDupFile`|<span data-ttu-id="ec929-127">`mdFile` 토큰이 중복 되는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec929-127">Check for duplicates of `mdFile` tokens.</span></span>|  
-|`MDDupExportedType`|<span data-ttu-id="ec929-128">`mdExportedType` 토큰이 중복 되는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec929-128">Check for duplicates of `mdExportedType` tokens.</span></span>|  
-|`MDDupManifestResource`|<span data-ttu-id="ec929-129">`mdManifestResource` 토큰이 중복 되는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec929-129">Check for duplicates of `mdManifestResource` tokens.</span></span>|  
-|`MDDupGenericParam`|<span data-ttu-id="ec929-130">`mdGenericParam` 토큰이 중복 되는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec929-130">Check for duplicates of `mdGenericParam` tokens.</span></span>|  
-|`MDDupMethodSpec`|<span data-ttu-id="ec929-131">`mdMethodSpec` 토큰이 중복 되는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec929-131">Check for duplicates of `mdMethodSpec` tokens.</span></span>|  
-|`MDDupGenericParamConstraint`|<span data-ttu-id="ec929-132">`mdGenericParamConstraint` 토큰이 중복 되는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec929-132">Check for duplicates of `mdGenericParamConstraint` tokens.</span></span>|  
-|`MDDupAssembly`|<span data-ttu-id="ec929-133">`mdAssembly` 토큰이 중복 되는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec929-133">Check for duplicates of `mdAssembly` tokens.</span></span>|  
-|`MDDupDefault`|<span data-ttu-id="ec929-134">`mdMemberRef`, `mdTypeRef`, `mdSignature`, `mdTypeSpec`및 `mdMethodSpec` 토큰이 중복 되는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="ec929-134">Check for duplicates of `mdMemberRef`, `mdTypeRef`, `mdSignature`, `mdTypeSpec`, and `mdMethodSpec` tokens.</span></span>|  
+|`MDDupAll`|<span data-ttu-id="306ec-108">모든 메타데이터 토큰에 중복이 있는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="306ec-108">Check all metadata tokens for duplicates.</span></span>|  
+|`MDDupENC`|<span data-ttu-id="306ec-109">사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="306ec-109">Not used.</span></span>|  
+|`MDNoDupChecks`|<span data-ttu-id="306ec-110">메타데이터 토큰에 중복이 있는지 확인하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="306ec-110">Do not check metadata tokens for duplicates.</span></span>|  
+|`MDDupTypeDef`|<span data-ttu-id="306ec-111">토큰의 `mdTypeDef` 중복을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="306ec-111">Check for duplicates of `mdTypeDef` tokens.</span></span>|  
+|`MDDupInterfaceImpl`|<span data-ttu-id="306ec-112">토큰의 `mdInterfaceImpl` 중복을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="306ec-112">Check for duplicates of `mdInterfaceImpl` tokens.</span></span>|  
+|`MDDupMethodDef`|<span data-ttu-id="306ec-113">토큰의 `mdMethodDef` 중복을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="306ec-113">Check for duplicates of `mdMethodDef` tokens.</span></span>|  
+|`MDDupTypeRef`|<span data-ttu-id="306ec-114">토큰의 `mdTypeRef` 중복을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="306ec-114">Check for duplicates of `mdTypeRef` tokens.</span></span>|  
+|`MDDupMemberRef`|<span data-ttu-id="306ec-115">토큰의 `mdMemberRef` 중복을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="306ec-115">Check for duplicates of `mdMemberRef` tokens.</span></span>|  
+|`MDDupCustomAttribute`|<span data-ttu-id="306ec-116">토큰의 `mdCustomAttribute` 중복을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="306ec-116">Check for duplicates of `mdCustomAttribute` tokens.</span></span>|  
+|`MDDupParamDef`|<span data-ttu-id="306ec-117">토큰의 `mdParamDef` 중복을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="306ec-117">Check for duplicates of `mdParamDef` tokens.</span></span>|  
+|`MDDupPermission`|<span data-ttu-id="306ec-118">토큰의 `mdPermission` 중복을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="306ec-118">Check for duplicates of `mdPermission` tokens.</span></span>|  
+|`MDDupProperty`|<span data-ttu-id="306ec-119">토큰의 `mdProperty` 중복을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="306ec-119">Check for duplicates of `mdProperty` tokens.</span></span>|  
+|`MDDupEvent`|<span data-ttu-id="306ec-120">토큰의 `mdEvent` 중복을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="306ec-120">Check for duplicates of `mdEvent` tokens.</span></span>|  
+|`MDDupFieldDef`|<span data-ttu-id="306ec-121">토큰의 `mdFieldDef` 중복을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="306ec-121">Check for duplicates of `mdFieldDef` tokens.</span></span>|  
+|`MDDupSignature`|<span data-ttu-id="306ec-122">토큰의 `mdSignature` 중복을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="306ec-122">Check for duplicates of `mdSignature` tokens.</span></span>|  
+|`MDDupModuleRef`|<span data-ttu-id="306ec-123">토큰의 `mdModuleRef` 중복을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="306ec-123">Check for duplicates of `mdModuleRef` tokens.</span></span>|  
+|`MDDupTypeSpec`|<span data-ttu-id="306ec-124">토큰의 `mdTypeSpec` 중복을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="306ec-124">Check for duplicates of `mdTypeSpec` tokens.</span></span>|  
+|`MDDupImplMap`|<span data-ttu-id="306ec-125">토큰의 `mdImplMap` 중복을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="306ec-125">Check for duplicates of `mdImplMap` tokens.</span></span>|  
+|`MDDupAssemblyRef`|<span data-ttu-id="306ec-126">토큰의 `mdAssemblyRef` 중복을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="306ec-126">Check for duplicates of `mdAssemblyRef` tokens.</span></span>|  
+|`MDDupFile`|<span data-ttu-id="306ec-127">토큰의 `mdFile` 중복을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="306ec-127">Check for duplicates of `mdFile` tokens.</span></span>|  
+|`MDDupExportedType`|<span data-ttu-id="306ec-128">토큰의 `mdExportedType` 중복을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="306ec-128">Check for duplicates of `mdExportedType` tokens.</span></span>|  
+|`MDDupManifestResource`|<span data-ttu-id="306ec-129">토큰의 `mdManifestResource` 중복을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="306ec-129">Check for duplicates of `mdManifestResource` tokens.</span></span>|  
+|`MDDupGenericParam`|<span data-ttu-id="306ec-130">토큰의 `mdGenericParam` 중복을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="306ec-130">Check for duplicates of `mdGenericParam` tokens.</span></span>|  
+|`MDDupMethodSpec`|<span data-ttu-id="306ec-131">토큰의 `mdMethodSpec` 중복을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="306ec-131">Check for duplicates of `mdMethodSpec` tokens.</span></span>|  
+|`MDDupGenericParamConstraint`|<span data-ttu-id="306ec-132">토큰의 `mdGenericParamConstraint` 중복을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="306ec-132">Check for duplicates of `mdGenericParamConstraint` tokens.</span></span>|  
+|`MDDupAssembly`|<span data-ttu-id="306ec-133">토큰의 `mdAssembly` 중복을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="306ec-133">Check for duplicates of `mdAssembly` tokens.</span></span>|  
+|`MDDupDefault`|<span data-ttu-id="306ec-134">및 `mdMemberRef` `mdTypeRef` `mdMethodSpec` 토큰의 중복을 확인합니다. `mdSignature` `mdTypeSpec`</span><span class="sxs-lookup"><span data-stu-id="306ec-134">Check for duplicates of `mdMemberRef`, `mdTypeRef`, `mdSignature`, `mdTypeSpec`, and `mdMethodSpec` tokens.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="ec929-135">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ec929-135">Requirements</span></span>  
- <span data-ttu-id="ec929-136">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ec929-136">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="306ec-135">요구 사항</span><span class="sxs-lookup"><span data-stu-id="306ec-135">Requirements</span></span>  
+ <span data-ttu-id="306ec-136">**플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="306ec-136">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ec929-137">**헤더:** CorHdr .h</span><span class="sxs-lookup"><span data-stu-id="ec929-137">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="306ec-137">**헤더:** 코르Hdr.h</span><span class="sxs-lookup"><span data-stu-id="306ec-137">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="ec929-138">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ec929-138">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="306ec-138">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="306ec-138">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ec929-139">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ec929-139">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="306ec-139">참고 항목</span><span class="sxs-lookup"><span data-stu-id="306ec-139">See also</span></span>
 
-- [<span data-ttu-id="ec929-140">메타데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="ec929-140">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="306ec-140">메타데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="306ec-140">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

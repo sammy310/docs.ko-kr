@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-ms.openlocfilehash: 6e066bcbe02fa9cf498e11af431b9f6dcd4432ab
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e5135aca49a63aafa3330832c54f2d28d31d60d0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785521"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151353"
 ---
-# <a name="creating-a-datatable-from-a-dataview"></a><span data-ttu-id="cd48c-102">DataView에서 DataTable 만들기</span><span class="sxs-lookup"><span data-stu-id="cd48c-102">Creating a DataTable from a DataView</span></span>
-<span data-ttu-id="cd48c-103">데이터 소스에서 데이터를 검색하여 이 데이터로 <xref:System.Data.DataTable>을 채웠으면 해당 데이터를 다시 검색하지 않고 반환된 데이터를 정렬하고 필터링하거나 제한할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cd48c-103">Once you have retrieved data from a data source, and have filled a <xref:System.Data.DataTable> with the data, you may want to sort, filter, or otherwise limit the returned data without retrieving it again.</span></span> <span data-ttu-id="cd48c-104">이러한 작업은 <xref:System.Data.DataView> 클래스를 사용하여 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cd48c-104">The <xref:System.Data.DataView> class makes this possible.</span></span> <span data-ttu-id="cd48c-105">또한 <xref:System.Data.DataTable> <xref:System.Data.DataView.ToTable%2A> 에서 새을 만들어야 하는 경우 메서드를 사용 하 여 모든 행과 열 또는 데이터의 하위 집합을 새 <xref:System.Data.DataTable>에 복사할 수 있습니다. <xref:System.Data.DataView></span><span class="sxs-lookup"><span data-stu-id="cd48c-105">In addition, if you need to create a new <xref:System.Data.DataTable> from the <xref:System.Data.DataView>, you can use the <xref:System.Data.DataView.ToTable%2A> method to copy all the rows and columns, or a subset of the data into a new <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="cd48c-106"><xref:System.Data.DataView.ToTable%2A> 메서드는 다음 작업을 위한 오버로드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="cd48c-106">The <xref:System.Data.DataView.ToTable%2A> method provides overloads to:</span></span>  
+# <a name="creating-a-datatable-from-a-dataview"></a><span data-ttu-id="baa9f-102">DataView에서 DataTable 만들기</span><span class="sxs-lookup"><span data-stu-id="baa9f-102">Creating a DataTable from a DataView</span></span>
+<span data-ttu-id="baa9f-103">데이터 소스에서 데이터를 검색하여 이 데이터로 <xref:System.Data.DataTable>을 채웠으면 해당 데이터를 다시 검색하지 않고 반환된 데이터를 정렬하고 필터링하거나 제한할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="baa9f-103">Once you have retrieved data from a data source, and have filled a <xref:System.Data.DataTable> with the data, you may want to sort, filter, or otherwise limit the returned data without retrieving it again.</span></span> <span data-ttu-id="baa9f-104">이러한 작업은 <xref:System.Data.DataView> 클래스를 사용하여 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="baa9f-104">The <xref:System.Data.DataView> class makes this possible.</span></span> <span data-ttu-id="baa9f-105"><xref:System.Data.DataTable> 또한 <xref:System.Data.DataView>에서 새 를 만들어야 하는 경우 메서드를 <xref:System.Data.DataView.ToTable%2A> 사용하여 모든 행과 열 또는 데이터의 하위 집합을 새 <xref:System.Data.DataTable>로 복사할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="baa9f-105">In addition, if you need to create a new <xref:System.Data.DataTable> from the <xref:System.Data.DataView>, you can use the <xref:System.Data.DataView.ToTable%2A> method to copy all the rows and columns, or a subset of the data into a new <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="baa9f-106"><xref:System.Data.DataView.ToTable%2A> 메서드는 다음 작업을 위한 오버로드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="baa9f-106">The <xref:System.Data.DataView.ToTable%2A> method provides overloads to:</span></span>  
   
-- <span data-ttu-id="cd48c-107"><xref:System.Data.DataTable>에 있는 열의 하위 집합인 열이 포함된 <xref:System.Data.DataView>을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="cd48c-107">Create a <xref:System.Data.DataTable> containing columns that are a subset of the columns in the <xref:System.Data.DataView>.</span></span>  
+- <span data-ttu-id="baa9f-107"><xref:System.Data.DataTable>에 있는 열의 하위 집합인 열이 포함된 <xref:System.Data.DataView>을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="baa9f-107">Create a <xref:System.Data.DataTable> containing columns that are a subset of the columns in the <xref:System.Data.DataView>.</span></span>  
   
-- <span data-ttu-id="cd48c-108">Transact-sql의 <xref:System.Data.DataTable> distinct 키워드 <xref:System.Data.DataView>와와 유사의 고유 행만 포함 하는을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="cd48c-108">Create a <xref:System.Data.DataTable> that includes only distinct rows from the <xref:System.Data.DataView>, analogously to the DISTINCT keyword in Transact-SQL.</span></span>  
+- <span data-ttu-id="baa9f-108">Transact-SQL의 DISTINCT 키워드와 유사하게 <xref:System.Data.DataTable> <xref:System.Data.DataView>에서 별개의 행만 포함하는 을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="baa9f-108">Create a <xref:System.Data.DataTable> that includes only distinct rows from the <xref:System.Data.DataView>, analogously to the DISTINCT keyword in Transact-SQL.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="cd48c-109">예제</span><span class="sxs-lookup"><span data-stu-id="cd48c-109">Example</span></span>  
- <span data-ttu-id="cd48c-110">다음 콘솔 응용 프로그램 예제에서는 <xref:System.Data.DataTable> **AdventureWorks** 샘플 데이터베이스의 **Contact** 테이블에서 데이터를 포함 하는을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="cd48c-110">The following console application example creates a <xref:System.Data.DataTable> that contains data from the **Person.Contact** table in the **AdventureWorks** sample database.</span></span> <span data-ttu-id="cd48c-111">그런 다음에 따라 <xref:System.Data.DataView> <xref:System.Data.DataTable>정렬 및 필터링 된를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="cd48c-111">Next, the example creates a sorted and filtered <xref:System.Data.DataView> based on the <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="cd48c-112"><xref:System.Data.DataView>이 예제에서는 <xref:System.Data.DataTable> 및의 내용을 표시 한 후 <xref:System.Data.DataView.ToTable%2A> 메서드를 호출 하 고 <xref:System.Data.DataTable> 사용 가능한 <xref:System.Data.DataView> 열의 일부만 선택 하 여에서 새를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="cd48c-112">After displaying the contents of the <xref:System.Data.DataTable> and the <xref:System.Data.DataView>, the example creates a new <xref:System.Data.DataTable> from the <xref:System.Data.DataView> by calling the <xref:System.Data.DataView.ToTable%2A> method, selecting only a subset of the available columns.</span></span> <span data-ttu-id="cd48c-113">마지막으로 이 예제에서는 새 <xref:System.Data.DataTable>의 내용을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="cd48c-113">Finally, the example displays the contents of the new <xref:System.Data.DataTable>.</span></span>  
+## <a name="example"></a><span data-ttu-id="baa9f-109">예제</span><span class="sxs-lookup"><span data-stu-id="baa9f-109">Example</span></span>  
+ <span data-ttu-id="baa9f-110">다음 콘솔 응용 프로그램 <xref:System.Data.DataTable> 예제에서는 **AdventureWorks** 샘플 데이터베이스의 **Person.Contact** 테이블의 데이터가 포함된 a를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="baa9f-110">The following console application example creates a <xref:System.Data.DataTable> that contains data from the **Person.Contact** table in the **AdventureWorks** sample database.</span></span> <span data-ttu-id="baa9f-111">그런 다음 예제에서는 <xref:System.Data.DataView> <xref:System.Data.DataTable>을 기반으로 정렬되고 필터링된 을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="baa9f-111">Next, the example creates a sorted and filtered <xref:System.Data.DataView> based on the <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="baa9f-112"><xref:System.Data.DataTable> 및 <xref:System.Data.DataView>의 내용을 표시 한 후 및 의 <xref:System.Data.DataTable> 예제는 <xref:System.Data.DataView> <xref:System.Data.DataView.ToTable%2A> 메서드를 호출 하 여 새 를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="baa9f-112">After displaying the contents of the <xref:System.Data.DataTable> and the <xref:System.Data.DataView>, the example creates a new <xref:System.Data.DataTable> from the <xref:System.Data.DataView> by calling the <xref:System.Data.DataView.ToTable%2A> method, selecting only a subset of the available columns.</span></span> <span data-ttu-id="baa9f-113">마지막으로 이 예제에서는 새 <xref:System.Data.DataTable>의 내용을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="baa9f-113">Finally, the example displays the contents of the new <xref:System.Data.DataTable>.</span></span>  
   
 ```vb  
 Private Sub DemonstrateDataView()  
@@ -114,7 +114,7 @@ private static void DemonstrateDataView()
 // connectionString is assumed to be a valid connection string.  
 SqlDataAdapter adapter = new SqlDataAdapter(  
     "SELECT FirstName, LastName, EmailAddress " +  
-    "FROM Person.Contact WHERE FirstName LIKE 'Mich%'",   
+    "FROM Person.Contact WHERE FirstName LIKE 'Mich%'",
        GetConnectionString());  
 DataTable table = new DataTable();  
   
@@ -203,10 +203,10 @@ Console.WriteLine();
 }  
 ```  
   
- <span data-ttu-id="cd48c-114">}</span><span class="sxs-lookup"><span data-stu-id="cd48c-114">}</span></span>  
+ <span data-ttu-id="baa9f-114">}</span><span class="sxs-lookup"><span data-stu-id="baa9f-114">}</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cd48c-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="cd48c-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="baa9f-115">참고 항목</span><span class="sxs-lookup"><span data-stu-id="baa9f-115">See also</span></span>
 
 - <xref:System.Data.DataView.ToTable%2A>
-- [<span data-ttu-id="cd48c-116">DataView</span><span class="sxs-lookup"><span data-stu-id="cd48c-116">DataViews</span></span>](dataviews.md)
-- [<span data-ttu-id="cd48c-117">ADO.NET 개요</span><span class="sxs-lookup"><span data-stu-id="cd48c-117">ADO.NET Overview</span></span>](../ado-net-overview.md)
+- [<span data-ttu-id="baa9f-116">DataView</span><span class="sxs-lookup"><span data-stu-id="baa9f-116">DataViews</span></span>](dataviews.md)
+- [<span data-ttu-id="baa9f-117">ADO.NET 개요</span><span class="sxs-lookup"><span data-stu-id="baa9f-117">ADO.NET Overview</span></span>](../ado-net-overview.md)
