@@ -22,19 +22,19 @@ helpviewer_keywords:
 - MyBase keyword [Visual Basic], relationship to similar programming elements
 ms.assetid: f8e241ae-b1ed-4886-9aa0-08c632154029
 ms.openlocfilehash: a21dfeb12e8d99f5f8b8afede084846711c299ab
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347344"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401432"
 ---
 # <a name="me-my-mybase-and-myclass-in-visual-basic"></a>Visual Basic의 Me, My, MyBase 및 MyClass
-`Me`, `My`, `MyBase`및 Visual Basic `MyClass`는 비슷한 이름을 갖지만 다른 용도로 사용 됩니다. 이 항목에서는 이러한 각 엔터티를 구별 하기 위해 설명 합니다.  
+`Me``MyBase`및 `My`Visual `MyClass` Basic의 이름은 비슷하지만 목적은 다릅니다. 이 항목에서는 이러한 엔터티를 구분하기 위해 이러한 각 엔터티에 대해 설명합니다.  
   
-## <a name="me"></a>Me  
- `Me` 키워드는 코드가 현재 실행 중인 클래스 또는 구조체의 특정 인스턴스를 참조 하는 방법을 제공 합니다. `Me`는 현재 인스턴스를 참조 하는 개체 변수 또는 구조체 변수와 같은 동작을 수행 합니다. `Me` 사용은 클래스 또는 구조체의 현재 실행 중인 인스턴스에 대 한 정보를 다른 클래스, 구조체 또는 모듈의 프로시저에 전달 하는 데 특히 유용 합니다.  
+## <a name="me"></a>본인  
+ 키워드는 `Me` 코드가 현재 실행 중인 클래스 또는 구조의 특정 인스턴스를 참조하는 방법을 제공합니다. `Me`현재 인스턴스를 참조하는 개체 변수 또는 구조 변수처럼 행동합니다. 사용 `Me` 은 클래스 또는 구조자의 현재 실행 중인 인스턴스에 대한 정보를 다른 클래스, 구조또는 모듈의 프로시저에 전달하는 데 특히 유용합니다.  
   
- 예를 들어 모듈에 다음 절차가 있는 경우를 가정 합니다.  
+ 예를 들어 모듈에 다음 절차가 있다고 가정합니다.  
   
 ```vb  
 Sub ChangeFormColor(FormName As Form)  
@@ -43,21 +43,21 @@ Sub ChangeFormColor(FormName As Form)
 End Sub  
 ```  
   
- 다음 문을 사용 하 여이 프로시저를 호출 하 고 <xref:System.Windows.Forms.Form> 클래스의 현재 인스턴스를 인수로 전달할 수 있습니다.  
+ 다음 문을 사용 하 여이 프로시저를 호출 하 고 인수로 <xref:System.Windows.Forms.Form> 클래스의 현재 인스턴스를 전달할 수 있습니다.  
   
 ```vb  
 ChangeFormColor(Me)  
 ```  
   
 ## <a name="my"></a>My  
- `My` 기능을 사용 하면 다양 한 .NET Framework 클래스에 쉽고 직관적으로 액세스할 수 있으므로 Visual Basic 사용자가 컴퓨터, 응용 프로그램, 설정, 리소스 등을 조작할 수 있습니다.  
+ 이 `My` 기능을 사용하면 여러 .NET Framework 클래스에 쉽고 직관적으로 액세스할 수 있으므로 Visual Basic 사용자가 컴퓨터, 응용 프로그램, 설정, 리소스 등과 상호 작용할 수 있습니다.  
   
-## <a name="mybase"></a>Mybase.new  
- `MyBase` 키워드는 클래스의 현재 인스턴스에 대 한 기본 클래스를 참조 하는 개체 변수 처럼 동작 합니다. `MyBase`은 파생 클래스에서 재정의 되거나 숨겨진 기본 클래스 멤버에 액세스 하는 데 주로 사용 됩니다. `MyBase.New`는 파생 된 클래스 생성자에서 기본 클래스 생성자를 명시적으로 호출 하는 데 사용 됩니다.  
+## <a name="mybase"></a>MyBase  
+ 키워드는 `MyBase` 클래스의 현재 인스턴스의 기본 클래스를 참조하는 개체 변수처럼 행동합니다. `MyBase`일반적으로 파생 클래스에서 재정의되거나 그림자가 있는 기본 클래스 멤버에 액세스하는 데 사용됩니다. `MyBase.New`파생 된 클래스 생성자에서 base 클래스 생성자 명시적으로 호출 하는 데 사용 됩니다.  
   
 ## <a name="myclass"></a>MyClass  
- `MyClass` 키워드는 원래 구현 된 클래스의 현재 인스턴스를 참조 하는 개체 변수 처럼 동작 합니다. `MyClass`은 `Me`와 유사 하지만 메서드를 `NotOverridable`하는 것 처럼이에 대 한 모든 메서드 호출을 처리 합니다.  
+ 키워드는 `MyClass` 원래 구현된 클래스의 현재 인스턴스를 참조하는 개체 변수처럼 실행됩니다. `MyClass``Me`과 비슷하지만 모든 메서드 호출은 메서드가 `NotOverridable`있는 것처럼 처리됩니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [상속 기본 사항](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

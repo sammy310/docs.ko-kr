@@ -1,25 +1,25 @@
 ---
-title: '방법: 큰 XML 문서의 스트리밍 변환 수행'
+title: '방법: 큰 XML 문서의 스트리밍 변형 수행'
 ms.date: 07/20/2015
 ms.assetid: 3d954cc9-4b3c-4b47-8132-ff7541cff53b
-ms.openlocfilehash: 58bc76e6f2a269b0baac009f1247d5e94d508cbd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f5e6063f0a850c03a605d75b0cbdc0bf9e03b325
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344505"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78267017"
 ---
-# <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a>방법: 대량 XML 문서의 스트리밍 변환 수행 (Visual Basic)
+# <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a>방법: 대형 XML 문서의 스트리밍 변환 수행(시각적 기본)
 큰 XML 파일을 변환하고 애플리케이션의 메모리 사용 공간이 예상 가능하도록 애플리케이션을 작성해야 하는 경우가 있습니다. XML 트리를 매우 큰 XML 파일로 채우려는 경우 메모리 사용은 파일 크기에 비례하므로 지나치게 증가하게 됩니다. 따라서 스트리밍 기법을 대신 사용해야 합니다.  
   
  스트리밍 기법은 소스 문서를 한 번만 처리해야 하고 문서 순서의 요소를 처리할 수 있는 경우에 가장 효과적으로 적용됩니다. <xref:System.Linq.Enumerable.OrderBy%2A>와 같은 특정 표준 쿼리 연산자는 자신의 소스를 반복하고 모든 데이터를 수집하여 정렬한 다음 시퀀스의 첫 번째 항목을 최종적으로 생성합니다. 첫 번째 항목을 반환하기 전에 소스를 유형화하는 쿼리 연산자를 사용하는 경우 애플리케이션에 대한 작은 메모리 사용 공간이 유지되지 않습니다.  
   
- [방법: 헤더 정보에 액세스 하 여 Xml 조각 스트리밍 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)에 설명 된 기법을 사용 하는 경우에도 변환 된 문서를 포함 하는 xml 트리를 조합 하려고 하면 메모리 사용이 너무 좋습니다.  
+ [방법: 헤더 정보에 대한 액세스 권한이 있는 XML 조각 스트림(Visual Basic)에](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)설명된 기술을 사용하는 경우에도 변환된 문서가 포함된 XML 트리를 어셈블하려고 하면 메모리 사용량이 너무 큽니다.  
   
  두 가지 주요 방법이 있습니다. 그 중 하나는 <xref:System.Xml.Linq.XStreamingElement>의 지연된 처리 특성을 사용하는 것이고, 다른 하나는 <xref:System.Xml.XmlWriter>를 만들고 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]의 기능을 사용하여 요소를 <xref:System.Xml.XmlWriter>에 쓰는 것입니다. 이 항목에서는 두 방법을 모두 보여 줍니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제는 [방법: 헤더 정보에 액세스 하 여 XML 조각 스트리밍 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)의 예제를 기반으로 합니다.  
+ 다음 예제는 헤더 정보에 [액세스할 수 있는 XML 조각 스트리밍 방법(Visual Basic)의 예제를](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)기반으로 합니다.  
   
  이 예제에서는 <xref:System.Xml.Linq.XStreamingElement>의 지연된 실행 기능을 사용하여 출력을 스트림합니다. 이 예제에서는 작은 메모리 사용 공간을 유지하면서도 매우 큰 문서를 변환할 수 있습니다.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "74344505"
  다음은 소스 문서인 Source.xml입니다.  
   
 ```xml  
-<?xml version="1.0" encoding="utf-8" ?>   
+<?xml version="1.0" encoding="utf-8" ?>
 <Root>  
   <Customer>  
     <Name>A. Datum Corporation</Name>  
@@ -246,7 +246,7 @@ End Class
 ```  
   
 ## <a name="example"></a>예제  
- 다음 예제는 [방법: 헤더 정보에 액세스 하 여 XML 조각 스트리밍 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)의 예제를 기반으로 합니다.  
+ 다음 예제에서는 [헤더 정보에 액세스할 수 있는 XML 조각 스트리밍 방법(Visual Basic)의](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)예제도 빌드합니다.  
   
  이 예제에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]의 기능을 사용하여 요소를 <xref:System.Xml.XmlWriter>에 씁니다. 이 예제에서는 작은 메모리 사용 공간을 유지하면서도 매우 큰 문서를 변환할 수 있습니다.  
   
@@ -441,4 +441,4 @@ End Class
   
 ## <a name="see-also"></a>참고 항목
 
-- [Visual Basic (Advanced LINQ to XML 프로그래밍)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [고급 LINQ에서 XML 프로그래밍까지(비주얼 베이직)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

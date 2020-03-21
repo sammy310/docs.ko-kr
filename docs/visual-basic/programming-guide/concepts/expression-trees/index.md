@@ -2,12 +2,12 @@
 title: 식 트리
 ms.date: 07/20/2015
 ms.assetid: 8bbbb02d-7ffc-476b-8c25-118d82bf5d46
-ms.openlocfilehash: 4ca3b56f48368e465560fc5edd60c0df8dd4e1c0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b2266cbae0a9a8a07c2a3569efa33d162ffedd1d
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344696"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78266419"
 ---
 # <a name="expression-trees-visual-basic"></a>식 트리(Visual Basic)
 식 트리는 `x < y` 등의 이진 연산이나 메서드 호출과 같이 각 노드가 식인 트리 형식 데이터 구조의 코드를 표시합니다.  
@@ -55,7 +55,7 @@ Dim lambda1 As Expression(Of Func(Of Integer, Boolean)) =
 Dim value As ParameterExpression =  
     Expression.Parameter(GetType(Integer), "value")  
   
-' Creating an expression to hold a local variable.   
+' Creating an expression to hold a local variable.
 Dim result As ParameterExpression =  
     Expression.Parameter(GetType(Integer), "result")  
   
@@ -141,11 +141,11 @@ Console.WriteLine(expr.Compile()(4))
   
  자세한 내용은 [방법: 식 트리 실행(Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Linq.Expressions>
-- [방법: 식 트리 실행 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
-- [방법: 식 트리 수정 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
-- [람다 식](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [방법: 식 트리 실행(Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+- [방법: 식 트리 수정(Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
+- [람다 표현식](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [동적 언어 런타임 개요](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
 - [프로그래밍 개념(Visual Basic)](../../../../visual-basic/programming-guide/concepts/index.md)

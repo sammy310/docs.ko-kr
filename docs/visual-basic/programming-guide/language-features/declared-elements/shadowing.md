@@ -18,46 +18,46 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-ms.openlocfilehash: 034b5c0ecf3be6e77048fb7318e931801575f07a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 20a33478f622fca6d3183772f53dcb3e72f79409
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345323"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78266887"
 ---
-# <a name="shadowing-in-visual-basic"></a>Visual Basic의 숨김 기능
-두 프로그래밍 요소가 동일한 이름을 공유 하는 경우 그 중 하나는 다른 *요소를 숨기 거 나 숨길*수 있습니다. 이러한 경우에는 숨겨진 요소를 참조할 수 없습니다. 대신, 코드에서 요소 이름을 사용 하는 경우 Visual Basic 컴파일러에서 해당 요소 이름을 숨기는 요소로 확인 합니다.  
+# <a name="shadowing-in-visual-basic"></a>시각적 기본의 그림자
+두 프로그래밍 요소가 같은 이름을 공유하면 그 중 하나가 숨기거나 다른 하나는 *그림자로*숨길 수 있습니다. 이러한 경우 그림자 요소를 참조할 수 없습니다. 대신 코드에서 요소 이름을 사용하는 경우 Visual Basic 컴파일러는 이를 섀도잉 요소로 확인합니다.  
   
-## <a name="purpose"></a>용도  
- 숨김의 주요 목적은 클래스 멤버의 정의를 보호 하는 것입니다. 기본 클래스는 이미 정의한 것과 동일한 이름으로 요소를 만드는 변경 될 수 있습니다. 이 경우 `Shadows` 한정자는 클래스를 통해 참조가 새 기본 클래스 요소가 아닌 사용자가 정의한 멤버로 확인 되도록 합니다.  
+## <a name="purpose"></a>목적  
+ 그림자의 주요 목적은 반원의 정의를 보호하는 것이다. 기본 클래스는 이미 정의된 것과 이름이 같은 요소를 만드는 변경작업을 겪을 수 있습니다. 이 경우 `Shadows` 수정자는 클래스를 통해 참조를 사용하여 새 기본 클래스 요소 대신 정의한 멤버로 해결하도록 합니다.  
   
-## <a name="types-of-shadowing"></a>섀도잉 유형  
- 요소는 서로 다른 두 가지 방법으로 다른 요소를 숨길 수 있습니다. 섀도잉 요소는 숨겨진 요소를 포함 하는 영역의 하위 영역 내에서 선언할 수 있으며,이 경우 *범위를 통해*숨김은 수행 됩니다. 또는 파생 클래스에서 기본 클래스의 멤버를 다시 정의할 수 있습니다 .이 경우에는 *상속이 상속을 통해*수행 됩니다.  
+## <a name="types-of-shadowing"></a>그림자의 종류  
+ 요소는 두 가지 방법으로 다른 요소의 그림자를 만들 수 있습니다. 그림자 요소는 그림자 요소가 포함된 영역의 하위 영역 내에서 선언할 수 있으며, 이 경우 그림자는 *범위를 통해*수행됩니다. 또는 파생 클래스는 기본 클래스의 멤버를 재정의할 수 있으며, 이 경우 그림자는 *상속을 통해*수행됩니다.  
   
-### <a name="shadowing-through-scope"></a>범위를 통한 숨김  
- 동일한 모듈, 클래스 또는 구조체의 프로그래밍 요소가 같은 이름을 갖지만 범위를 다르게 지정할 수 있습니다. 두 요소가 이러한 방식으로 선언 되 고 코드가 공유 하는 이름을 참조 하는 경우 범위가 좁은 요소가 다른 요소 (블록 범위는 가장 좁은)를 숨깁니다.  
+### <a name="shadowing-through-scope"></a>범위를 통해 그림자  
+ 동일한 모듈, 클래스 또는 구조의 프로그래밍 요소는 이름이 같지만 범위가 다를 수 있습니다. 이러한 방식으로 두 요소가 선언되고 코드가 공유하는 이름을 참조하면 범위가 좁은 요소가 다른 요소의 그림자를 지정합니다(블록 범위는 가장 좁습니다).  
   
- 예를 들어 모듈은 `temp`이라는 `Public` 변수를 정의할 수 있으며, 모듈 내의 프로시저는 `temp`이라는 지역 변수를 선언할 수 있습니다. 프로시저 내에서 `temp`에 대 한 참조는 지역 변수에 액세스 하는 반면 프로시저 외부의 `temp`에 대 한 참조는 `Public` 변수에 액세스 합니다. 이 경우 프로시저 변수는 모듈 변수 `temp``temp`을 숨깁니다.  
+ 예를 들어 모듈은 명명된 `Public` `temp`변수를 정의할 수 있으며 모듈 내의 `temp`프로시저도 명명된 로컬 변수를 선언할 수 있습니다. 프로시저 내에서 참조는 `temp` 로컬 변수에 `temp` 액세스하는 반면 프로시저 외부에서 참조는 변수에 액세스합니다. `Public` 이 경우 프로시저 `temp` 변수는 모듈 `temp`변수를 숨김시게 합니다.  
   
- 다음 그림에서는 이름이 `temp`두 개의 변수를 보여 줍니다. 지역 변수는 자체 프로시저 `p`에서 액세스할 때 멤버 변수 `temp`를 `temp` 숨깁니다. 그러나 `MyClass` 키워드는 숨김을 무시 하 고 멤버 변수에 액세스 합니다.  
+ 다음 그림에서는 두 변수(모두 `temp`명명된 변수)를 보여 주십니다. 로컬 변수는 `temp` 자체 프로시저 내에서 액세스할 때 멤버 변수를 `temp` 숨바히게 합니다. `p` 그러나 키워드는 `MyClass` 그림자를 우회하고 멤버 변수에 액세스합니다.  
   
- ![범위를 통해 숨김을 보여 주는 그래픽입니다.](./media/shadowing/shadow-scope-diagram.gif)
+ ![범위를 통해 그림자를 표시하는 그래픽입니다.](./media/shadowing/shadow-scope-diagram.gif)
   
- 범위를 통한 섀도잉 예제는 [방법: 변수와 이름이 같은 변수 숨기기](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)를 참조 하세요.  
+ 범위를 통해 그림자의 예는 [참조 방법: 변수와 같은 이름의 변수 숨기기](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md).  
   
-### <a name="shadowing-through-inheritance"></a>상속을 통한 숨김  
- 파생 클래스가 기본 클래스에서 상속 된 프로그래밍 요소를 다시 정의 하는 경우 다시 정의 하는 요소는 원래 요소를 숨깁니다. 모든 형식의 선언 된 요소 또는 오버 로드 된 요소 집합을 다른 형식으로 숨길 수 있습니다. 예를 들어 `Integer` 변수는 `Function` 프로시저를 숨길 수 있습니다. 다른 프로시저를 사용 하 여 프로시저를 숨기는 경우 다른 매개 변수 목록과 다른 반환 형식을 사용할 수 있습니다.  
+### <a name="shadowing-through-inheritance"></a>상속을 통해 그림자  
+ 파생 클래스가 기본 클래스에서 상속된 프로그래밍 요소를 재정의하는 경우 재정의 요소는 원래 요소의 그림자를 지정합니다. 모든 유형의 선언된 요소 또는 오버로드된 요소 집합을 다른 유형과 함께 섀도우할 수 있습니다. 예를 들어 `Integer` 변수는 프로시저를 숨는 다. `Function` 다른 프로시저를 사용하여 프로시저를 섀도우하는 경우 다른 매개 변수 목록과 다른 반환 유형을 사용할 수 있습니다.  
   
- 다음 그림에서는 기본 클래스 `b` 및 `b`에서 상속 되는 파생 클래스 `d`를 보여 줍니다. 기본 클래스는 `proc`이라는 프로시저를 정의 하 고, 파생 클래스는 이름이 같은 다른 프로시저를 사용 하 여 해당 프로시저를 숨깁니다. 첫 번째 `Call` 문은 파생 클래스의 숨김 `proc`에 액세스 합니다. 그러나 `MyBase` 키워드는 숨김을 무시 하 고 기본 클래스의 숨겨진 프로시저에 액세스 합니다.  
+ 다음 그림에서는 기본 `b` 클래스와 `b`에서 `d` 상속하는 파생 클래스를 보여 주며 있습니다. 기본 클래스는 명명된 `proc`프로시저를 정의하고 파생된 클래스는 동일한 이름의 다른 프로시저로 그 를 숨는다. 첫 `Call` 번째 문은 파생 `proc` 클래스의 그림자에 액세스합니다. 그러나 키워드는 `MyBase` 그림자를 우회하고 기본 클래스의 그림자 프로시저에 액세스합니다.  
   
  ![상속을 통한 숨기기 그래픽 다이어그램](./media/shadowing/shadowing-inherit-diagram.gif)  
   
- 상속을 통한 숨김 예제는 [방법: 변수와 이름이 같은 변수 숨기기](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md) 및 [방법: 상속 된 변수 숨기기](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)를 참조 하세요.  
+ 상속을 통해 그림자를 드리는 예제의 경우 [방법: 변수와 동일한 이름의 변수 숨기기](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md) 및 [방법: 상속된 변수 숨기기.](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)  
   
-#### <a name="shadowing-and-access-level"></a>숨김 및 액세스 수준  
- 숨김 요소는 파생 클래스를 사용 하 여 코드에서 항상 액세스할 수 있는 것은 아닙니다. 예를 들어 `Private`선언할 수 있습니다. 이러한 경우에는 숨김은 발생 하지 않으며, 숨김이 없는 경우 컴파일러는 동일한 요소에 대 한 참조를 확인 합니다. 이 요소는 숨기는 클래스에서 뒤로 derivational 가장 적은 수의 액세스 가능한 요소입니다. 숨겨진 요소가 프로시저인 경우 동일한 이름, 매개 변수 목록 및 반환 형식을 사용 하 여 가장 가까운 액세스 가능한 버전으로 확인 됩니다.  
+#### <a name="shadowing-and-access-level"></a>그림자 및 액세스 수준  
+ 파생 된 클래스를 사용 하 여 코드에서 항상 액세스할 수 있는 그림자 요소입니다. 예를 들어 선언될 `Private`수 있습니다. 이러한 경우 그림자가 지정되고 컴파일러가 그림자가 없는 경우 와 동일한 요소에 대한 참조를 해결합니다. 이 요소는 그림자 클래스에서 뒤로 가장 적은 파생 단계로 액세스할 수 있는 요소입니다. 그림자 요소가 프로시저인 경우 해상도는 이름이 나, 매개 변수 목록 및 반환 형식이 있는 가장 가까운 액세스 가능한 버전입니다.  
   
- 다음 예제에서는 세 클래스의 상속 계층 구조를 보여 줍니다. 각 클래스는 `display``Sub` 프로시저를 정의 하며, 각 파생 클래스는 기본 클래스의 `display` 프로시저를 숨깁니다.  
+ 다음 예제에서는 세 클래스의 상속 계층 구조를 보여 주다. 각 클래스는 `Sub` 프로시저를 `display`정의하고 각 파생 `display` 클래스는 해당 기본 클래스의 프로시저를 섀도우합니다.  
   
 ```vb  
 Public Class firstClass  
@@ -92,23 +92,23 @@ Module callDisplay
 End Module  
 ```  
   
- 위의 예제에서 파생 클래스는 `Private` 프로시저를 사용 하 여 그림자 `display` `secondClass` 합니다. 모듈 `callDisplay`이 `secondClass`에서 `display`를 호출 하는 경우 호출 하는 코드는 `secondClass` 외부에 있으므로 private `display` 프로시저에 액세스할 수 없습니다. 숨김은 무효화 되 고 컴파일러는 기본 클래스 `display` 프로시저에 대 한 참조를 확인 합니다.  
+ 앞의 예제에서 파생된 클래스 `secondClass` 그림자는 `display` `Private` 프로시저를 통해 표시됩니다. 모듈에서 `callDisplay` `display` `secondClass`호출할 때 호출 `secondClass` 코드가 외부에 있으므로 `display` 개인 프로시저에 액세스할 수 없습니다. 그림자가 숨김이 무산되고 컴파일러가 기본 `display` 클래스 프로시저에 대한 참조를 해결합니다.  
   
- 그러나 추가 파생 클래스 `thirdClass` `display`를 `Public`선언 하므로 `callDisplay` 코드에서 액세스할 수 있습니다.  
+ 그러나 파생된 클래스는 `thirdClass` `display` `Public`로 선언하므로 의 `callDisplay` 코드에서 액세스할 수 있습니다.  
   
-## <a name="shadowing-and-overriding"></a>숨김 및 재정의  
- 숨김과 재정의를 혼동 하지 마십시오. 파생 클래스가 기본 클래스에서 상속 하는 경우와 선언 된 요소를 다른 요소와 모두 재정의 하는 경우 둘 다 사용 됩니다. 하지만 둘 사이에는 상당한 차이점이 있습니다. 비교는 [숨김과 재정의 간의 차이점](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)을 참조 하세요.  
+## <a name="shadowing-and-overriding"></a>그림자 및 재정의  
+ 그림자를 재정의와 혼동하지 마십시오. 파생 된 클래스가 기본 클래스에서 상속 될 때 사용 되며 둘 다 다른 선언 된 요소를 재정의 합니다. 그러나 둘 사이에는 상당한 차이가 있습니다. 비교를 위해 [그림자와 재정의 간의 차이점을](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)참조하십시오.  
   
-## <a name="shadowing-and-overloading"></a>숨김 및 오버 로드  
- 파생 클래스에서 둘 이상의 요소를 사용 하 여 동일한 기본 클래스 요소를 숨기는 경우에는 숨기는 요소가 해당 요소의 오버 로드 된 버전이 됩니다. 자세한 내용은 [Procedure Overloading](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)을 참조하세요.  
+## <a name="shadowing-and-overloading"></a>그림자 및 오버로드  
+ 파생 클래스에서 두 개 이상의 요소로 동일한 기본 클래스 요소를 섀도우하면 그림자 요소가 해당 요소의 오버로드된 버전이 됩니다. 자세한 내용은 [Procedure Overloading](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)을 참조하세요.  
   
-## <a name="accessing-a-shadowed-element"></a>숨겨진 요소에 액세스  
- 파생 클래스에서 요소에 액세스 하는 경우 일반적으로 해당 요소 이름을 `Me` 키워드로 정규화 하 여 파생 클래스의 현재 인스턴스를 통해이 작업을 수행 합니다. 파생 클래스가 기본 클래스의 요소를 숨기는 경우에는 `MyBase` 키워드를 사용 하 여 기본 클래스 요소를 한정 하 여 해당 요소에 액세스할 수 있습니다.  
+## <a name="accessing-a-shadowed-element"></a>그림자 요소에 액세스  
+ 파생 클래스에서 요소에 액세스하는 경우 일반적으로 `Me` 해당 파생 클래스의 현재 인스턴스를 통해 키워드로 요소 이름을 한정합니다. 파생 클래스가 기본 클래스의 요소를 그림자로 지정하는 경우 `MyBase` 키워드로 한정하여 기본 클래스 요소에 액세스할 수 있습니다.  
   
- 숨겨진 요소에 액세스 하는 예제는 [방법: 파생 클래스에 의해 숨겨진 변수에 액세스](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)를 참조 하세요.  
+ 그림자 요소에 액세스하는 예제는 파생 [클래스에 의해 숨겨진 변수에 액세스하는 방법을](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)참조하십시오.  
   
-### <a name="declaration-of-the-object-variable"></a>개체 변수의 선언입니다.  
- 개체 변수를 만드는 방법은 파생 클래스가 숨기는 요소 또는 숨겨진 요소에 액세스 하는지 여부에도 영향을 줄 수 있습니다. 다음 예제에서는 파생 된 클래스에서 두 개의 개체를 만들지만 한 개체가 기본 클래스로 선언 되 고 다른 개체가 파생 클래스로 선언 됩니다.  
+### <a name="declaration-of-the-object-variable"></a>개체 변수 선언  
+ 개체 변수를 만드는 방법은 파생 된 클래스가 그림자 요소 또는 그림자 요소에 액세스하는지 여부에 영향을 줄 수 있습니다. 다음 예제에서는 파생 된 클래스에서 두 개의 개체를 만듭니다하지만 한 개체는 기본 클래스로 선언 되 고 다른 개체는 파생 된 클래스로 선언 됩니다.  
   
 ```vb  
 Public Class baseCls  
@@ -126,7 +126,7 @@ Public Class useClasses
     ' Note that dervCls widens to its base class baseCls.  
     ' The following statement creates the object declared as the derived class.  
     Dim derObj As dervCls = New dervCls()  
-    Public Sub showZ()   
+    Public Sub showZ()
     ' The following statement outputs 100 (the shadowed element).  
         MsgBox("Accessed through base class: " & basObj.z)  
     ' The following statement outputs "*" (the shadowing element).  
@@ -135,13 +135,13 @@ Public Class useClasses
 End Class  
 ```  
   
- 앞의 예제에서 `basObj` 변수는 기본 클래스로 선언 됩니다. 이 개체에 `dervCls` 개체를 할당 하면 확대 변환을 구성 하므로 유효 합니다. 그러나 기본 클래스는 파생 클래스에서 `z` 된 변수의 섀도잉 버전에 액세스할 수 없으므로 컴파일러가 원래 기본 클래스 값으로 `basObj.z` 확인 합니다.  
+ 앞의 예제에서 변수는 `basObj` 기본 클래스로 선언됩니다. 개체에 `dervCls` 개체를 할당하는 것은 확대 변환을 구성하므로 유효합니다. 그러나 기본 클래스는 파생 된 클래스에서 `z` 변수의 그림자 버전에 액세스할 수 `basObj.z` 없으므로 컴파일러는 원래 기본 클래스 값으로 확인합니다.  
   
 ## <a name="see-also"></a>참고 항목
 
-- [선언된 요소 참조](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Visual Basic 범위](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [확대 변환과 축소 변환](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Visual Basic의 범위](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)
 - [재정의](../../../../visual-basic/language-reference/modifiers/overrides.md)
 - [Me, My, MyBase 및 MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

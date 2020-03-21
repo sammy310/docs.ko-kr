@@ -3,13 +3,13 @@ title: 컬렉션
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
 ms.openlocfilehash: ba16d04e781bcf69356b1f603d92e104816a0860
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347088"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401414"
 ---
-# <a name="collections-visual-basic"></a>컬렉션 (Visual Basic)
+# <a name="collections-visual-basic"></a>컬렉션(Visual Basic)
 
 대부분의 애플리케이션의 경우 관련 개체의 그룹을 만들고 관리하려고 합니다. 개체를 그룹화하는 방법에는 개체 배열을 만들거나 개체 컬렉션을 만드는 두 가지가 있습니다.
 
@@ -22,7 +22,7 @@ ms.locfileid: "74347088"
 컬렉션에 단일 데이터 형식의 요소만 포함된 경우 <xref:System.Collections.Generic?displayProperty=nameWithType> 네임스페이스의 클래스 중 하나를 사용할 수 있습니다. 제네릭 컬렉션은 다른 데이터 형식을 추가할 수 없도록 형식 안전성을 적용합니다. 제네릭 컬렉션에서 요소를 검색하는 경우 해당 데이터 형식을 결정하거나 변환할 필요가 없습니다.
 
 > [!NOTE]
-> 이 항목의 예제에서는 `System.Collections.Generic` 및 `System.Linq` 네임 스페이스에 대 한 [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) 문을 포함 합니다.
+> 이 항목의 예제에서는 `System.Collections.Generic` 및 `System.Linq` 네임스페이스에 대한 [가져오기](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) 문을 포함합니다.
 
 <a name="BKMK_SimpleCollection"></a>
 
@@ -30,7 +30,7 @@ ms.locfileid: "74347088"
 
 이 섹션의 예제에서는 강력한 형식의 개체 목록을 사용할 수 있게 해주는 제네릭 <xref:System.Collections.Generic.List%601> 클래스를 사용합니다.
 
-다음 예제에서는 문자열 목록을 만든 다음 [For Each ...를 사용 하 여 문자열을 반복 합니다. 다음](../../../visual-basic/language-reference/statements/for-each-next-statement.md) 문.
+다음 예제는 문자열 목록을 만들고 [For Each... 다음](../../../visual-basic/language-reference/statements/for-each-next-statement.md) 문입니다.
 
 ```vb
 ' Create a list of strings.
@@ -63,7 +63,7 @@ Next
 'Output: chinook coho pink sockeye
 ```
 
-다음에 대해를 사용할 수 있습니다. 컬렉션을 반복 하는 `For Each` 문 대신 [For…Next](../../../visual-basic/language-reference/statements/for-next-statement.md) 문. 인덱스 위치에 따라 컬렉션 요소에 액세스하여 이 작업을 수행합니다. 요소의 인덱스는 0부터 시작하고 요소 개수-1에서 끝납니다.
+For를 사용할 수 [있습니다. ](../../../visual-basic/language-reference/statements/for-next-statement.md)컬렉션을 반복하는 `For Each` 문 대신 다음 문입니다. 인덱스 위치에 따라 컬렉션 요소에 액세스하여 이 작업을 수행합니다. 요소의 인덱스는 0부터 시작하고 요소 개수-1에서 끝납니다.
 
 다음 예제에서는 `For Each` 대신 `For…Next`를 사용하여 컬렉션의 요소를 반복합니다.
 
@@ -95,7 +95,7 @@ Next
 'Output: chinook pink sockeye
 ```
 
-다음 예제에서는 제네릭 목록에서 요소를 제거합니다. `For Each` 문 대신 [For ... ](../../../visual-basic/language-reference/statements/for-next-statement.md)내림차순으로 반복 되는 다음 문이 사용 됩니다. 이는 <xref:System.Collections.Generic.List%601.RemoveAt%2A> 메서드로 인해 제거된 요소 뒤의 요소가 더 낮은 인덱스 값을 갖기 때문입니다.
+다음 예제에서는 제네릭 목록에서 요소를 제거합니다. `For Each` 대신 문, 에 [대한 ... ](../../../visual-basic/language-reference/statements/for-next-statement.md)내림차순으로 이계산하는 다음 문이 사용됩니다. 이는 <xref:System.Collections.Generic.List%601.RemoveAt%2A> 메서드로 인해 제거된 요소 뒤의 요소가 더 낮은 인덱스 값을 갖기 때문입니다.
 
 ```vb
 Dim numbers As New List(Of Integer) From
@@ -173,7 +173,7 @@ End Class
 
 다음 표에서는 자주 사용되는 <xref:System.Collections.Generic?displayProperty=nameWithType> 네임스페이스 클래스 중 일부를 보여 줍니다.
 
-|클래스|설명|
+|클래스|Description|
 |---|---|
 |<xref:System.Collections.Generic.Dictionary%602>|키에 따라 구성된 키/값 쌍의 컬렉션을 나타냅니다.|
 |<xref:System.Collections.Generic.List%601>|인덱스로 액세스할 수 있는 개체 목록을 나타냅니다. 목록의 검색, 정렬 및 수정에 사용할 수 있는 메서드를 제공합니다.|
@@ -203,7 +203,7 @@ End Class
 
 다음 표에서는 자주 사용되는 `System.Collections` 네임스페이스 클래스 중 일부를 보여 줍니다.
 
-|클래스|설명|
+|클래스|Description|
 |---|---|
 |<xref:System.Collections.ArrayList>|필요에 따라 크기가 동적으로 증가하는 개체 배열을 나타냅니다.|
 |<xref:System.Collections.Hashtable>|키의 해시 코드에 따라 구성된 키/값 쌍의 컬렉션을 나타냅니다.|
@@ -296,7 +296,7 @@ Private Function BuildDictionary2() As Dictionary(Of String, Element)
 End Function
 ```
 
-다음 예제에서는 `Dictionary`의 <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> 메서드 및 <xref:System.Collections.Generic.Dictionary%602.Item%2A> 속성을 사용하여 키를 통해 항목을 신속하게 찾습니다. `Item` 속성을 사용 하면 Visual Basic의 `elements(symbol)` 코드를 사용 하 여 `elements` 컬렉션의 항목에 액세스할 수 있습니다.
+다음 예제에서는 `Dictionary`의 <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> 메서드 및 <xref:System.Collections.Generic.Dictionary%602.Item%2A> 속성을 사용하여 키를 통해 항목을 신속하게 찾습니다. 이 `Item` 속성을 사용하면 Visual Basic의 `elements` 코드를 사용하여 `elements(symbol)` 컬렉션의 항목에 액세스할 수 있습니다.
 
 ```vb
 Private Sub FindInDictionary(ByVal symbol As String)
@@ -330,7 +330,7 @@ End Sub
 
 ## <a name="using-linq-to-access-a-collection"></a>LINQ를 사용하여 컬렉션에 액세스
 
-LINQ(통합 언어 쿼리)를 사용하여 컬렉션에 액세스할 수 있습니다. LINQ 쿼리는 필터링, 정렬 및 그룹화 기능을 제공합니다. 자세한 내용은 [Visual Basic에서 LINQ 시작](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)을 참조 하세요.
+LINQ(통합 언어 쿼리)를 사용하여 컬렉션에 액세스할 수 있습니다. LINQ 쿼리는 필터링, 정렬 및 그룹화 기능을 제공합니다. 자세한 내용은 [시각적 기본에서 LINQ 시작](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)을 참조하십시오.
 
 다음 예제에서는 제네릭 `List`에 대해 LINQ 쿼리를 실행합니다. LINQ 쿼리는 결과를 포함하는 다른 컬렉션을 반환합니다.
 
@@ -458,7 +458,7 @@ End Class
 
 ## <a name="defining-a-custom-collection"></a>사용자 지정 컬렉션 정의
 
-<xref:System.Collections.Generic.IEnumerable%601> 또는 <xref:System.Collections.IEnumerable> 인터페이스를 구현하여 컬렉션을 정의할 수 있습니다. 자세한 내용은 [컬렉션 열거](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hwyysy67(v=vs.100))를 참조 하세요.
+<xref:System.Collections.Generic.IEnumerable%601> 또는 <xref:System.Collections.IEnumerable> 인터페이스를 구현하여 컬렉션을 정의할 수 있습니다. 자세한 내용은 [컬렉션 내포를](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hwyysy67(v=vs.100))참조하십시오.
 
 사용자 지정 컬렉션을 정의할 수도 있지만, 일반적으로 이 항목의 앞부분에 있는 [컬렉션 종류](#kinds-of-collections)에서 설명한 .NET Framework에 포함된 컬렉션을 대신 사용하는 것이 좋습니다.
 
@@ -538,13 +538,13 @@ End Class
 
 ## <a name="iterators"></a>반복기
 
-*반복기*는 컬렉션에 대해 사용자 지정 반복을 수행하는 데 사용됩니다. 반복기는 메서드 또는 `get` 접근자일 수 있습니다. 반복기는 [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) 문을 사용 하 여 컬렉션의 각 요소를 한 번에 하나씩 반환 합니다.
+*반복기*는 컬렉션에 대해 사용자 지정 반복을 수행하는 데 사용됩니다. 반복기는 메서드 또는 `get` 접근자일 수 있습니다. 이터레이터는 [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) 문을 사용하여 컬렉션의 각 요소를 한 번에 하나씩 반환합니다.
 
-For Each ...를 사용 하 여 반복기를 호출 합니다. [ 다음](../../../visual-basic/language-reference/statements/for-each-next-statement.md) 문. 각각의 `For Each` 루프의 반복이 반복기를 호출합니다. `Yield` 문이 반복기 메서드에 도달하면 식이 반환되고 코드에서 현재 위치는 유지됩니다. 다음에 반복기가 호출되면 해당 위치에서 실행이 다시 시작됩니다.
+For Each를 사용하여 이터레이터를 [호출합니다. 다음](../../../visual-basic/language-reference/statements/for-each-next-statement.md) 문입니다. 각각의 `For Each` 루프의 반복이 반복기를 호출합니다. `Yield` 문이 반복기 메서드에 도달하면 식이 반환되고 코드에서 현재 위치는 유지됩니다. 다음에 반복기가 호출되면 해당 위치에서 실행이 다시 시작됩니다.
 
-자세한 내용은 [반복기 (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md)를 참조 하세요.
+자세한 내용은 [이터레이터(Visual Basic)를](../../../visual-basic/programming-guide/concepts/iterators.md)참조하십시오.
 
-다음 예제에서는 반복기 메서드를 사용합니다. 반복기 메서드에 다음 [에 대 한 `Yield` 문이 있습니다 ... Next](../../../visual-basic/language-reference/statements/for-next-statement.md) 루프. `ListEvenNumbers` 메서드에서 `For Each` 문 본문을 반복할 때마다 다음 `Yield` 문으로 진행하는 반복기 메서드에 대한 호출이 생성됩니다.
+다음 예제에서는 반복기 메서드를 사용합니다. 이터레이터 메서드에는 `Yield` [For... 다음](../../../visual-basic/language-reference/statements/for-next-statement.md) 루프. `ListEvenNumbers` 메서드에서 `For Each` 문 본문을 반복할 때마다 다음 `Yield` 문으로 진행하는 반복기 메서드에 대한 호출이 생성됩니다.
 
 ```vb
 Public Sub ListEvenNumbers()
@@ -570,7 +570,7 @@ End Function
 
 ## <a name="see-also"></a>참고 항목
 
-- [컬렉션 이니셜라이저](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
+- [컬렉션 초기화자](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
 - [프로그래밍 개념(Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)
 - [Option Strict 문](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [LINQ to Objects(Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
@@ -578,4 +578,4 @@ End Function
 - [컬렉션 및 데이터 구조](../../../standard/collections/index.md)
 - [Collection 클래스 선택](../../../standard/collections/selecting-a-collection-class.md)
 - [컬렉션 내에서 비교 및 정렬](../../../standard/collections/comparisons-and-sorts-within-collections.md)
-- [제네릭 컬렉션 사용 기준](../../../standard/collections/when-to-use-generic-collections.md)
+- [일반 컬렉션을 사용하는 경우](../../../standard/collections/when-to-use-generic-collections.md)

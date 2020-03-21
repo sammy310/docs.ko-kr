@@ -2,14 +2,14 @@
 title: 노드를 사용한 프로그래밍
 ms.date: 07/20/2015
 ms.assetid: d8422a9b-dd37-44a3-8aac-2237ed9561e0
-ms.openlocfilehash: 447c462f95536cd40291f9b0d54ab85dcde200db
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b2c9022cb57cf122af47bbe6d1a7fe2b4d41327c
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346634"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78266965"
 ---
-# <a name="programming-with-nodes-visual-basic"></a>노드를 사용한 프로그래밍 (Visual Basic)
+# <a name="programming-with-nodes-visual-basic"></a>노드를 사용 하 고 프로그래밍 (비주얼 기본)
 XML 편집기, 변환 시스템 또는 보고서 작성기와 같은 프로그램을 작성해야 하는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 개발자는 요소와 특성보다 세부적인 단위에서 작업하는 프로그램을 작성해야 하는 경우가 많습니다. LINQ to XML 개발자는 흔히 노드 수준에서 작업하여 텍스트 노드, 처리 명령 및 주석을 조작해야 합니다. 이 항목에서는 노드 수준의 프로그래밍에 대해 자세히 설명합니다.  
   
 ## <a name="node-details"></a>노드 정보  
@@ -104,7 +104,7 @@ Console.WriteLine(child2)
  <xref:System.Xml.Linq.XAttribute.IsNamespaceDeclaration%2A> 속성은 특성이 네임스페이스 선언인지 여부를 나타냅니다.  
   
 ```vb  
-Dim root As XElement = _   
+Dim root As XElement = _
 <Root  
     xmlns='http://www.adventure-works.com'  
     xmlns:fc='www.fourthcoffee.com'  
@@ -171,6 +171,6 @@ Console.WriteLine(doc.Nodes().Count())
 1  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [Visual Basic (Advanced LINQ to XML 프로그래밍)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [고급 LINQ에서 XML 프로그래밍까지(비주얼 베이직)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
