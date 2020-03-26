@@ -8,12 +8,12 @@ helpviewer_keywords:
 - events [Windows Forms], defining within Windows Forms custom controls
 - custom controls [Windows Forms], events using code
 ms.assetid: d89f1096-8061-42e2-a855-a1f053f1940a
-ms.openlocfilehash: 6799b229de8e8eb49dd3b8bbaffe0d08a32b7208
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a4738373b10fbcb1d2406406d30f10b795aeb914
+ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79142292"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80228848"
 ---
 # <a name="defining-an-event-in-windows-forms-controls"></a>Windows Forms 컨트롤에서 이벤트 정의
 사용자 지정 이벤트 정의에 대한 자세한 내용은 [이벤트를](../../../standard/events/index.md)참조하십시오. 연결된 데이터가 없는 이벤트를 정의하는 경우에는 이벤트 데이터의 기본 형식인 <xref:System.EventArgs>를 사용하고 이벤트 대리자로 <xref:System.EventHandler>를 사용합니다. 이벤트 멤버와 이벤트를 발생 시키는 보호된 `On` *EventName* 메서드를 정의 하기 만 하면 남아 있습니다.  
@@ -71,12 +71,12 @@ public class FlashTrackBar : Control {
    // changed. Derived controls can override this method.
    protected virtual void OnValueChanged(EventArgs e)
    {  
-       ValueChanged?.Invoke(this, e);  
+       onValueChanged?.Invoke(this, e);  
    }  
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Windows Forms 컨트롤의 이벤트](events-in-windows-forms-controls.md)
-- [Events](../../../standard/events/index.md)
+- [이벤트](../../../standard/events/index.md)

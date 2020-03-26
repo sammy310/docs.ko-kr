@@ -15,19 +15,19 @@ helpviewer_keywords:
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-ms.openlocfilehash: d4e30984a232b17d1f40e300655c519ec1a6e191
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: e11152dc626b1e3619b9ecbc04d8a237ca9f13d3
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159912"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248045"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>특성을 사용하여 XML Serialization 제어
 
 특성을 사용하여 개체의 XML serialization을 제어하거나 동일한 클래스 집합에서 대체 XML 스트림을 만들 수 있습니다. 대체 XML 스트림 만들기에 대한 자세한 내용은 [방법: XML 스트림의 대체 요소 이름 지정](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)을 참조하세요.
 
 > [!NOTE]
-> 생성 된 XML이 [soap (Simple Object Access Protocol) 1.1 이라는 W3C (Simple Object Access Protocol)](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)문서의 World Wide Web 컨소시엄 5 단원을 따라야 하는 경우 [인코딩된 Soap Serialization을 제어 하는 특성](attributes-that-control-encoded-soap-serialization.md)에 나열 된 특성을 사용 합니다.
+> 생성된 XML이 W3C(W3C) 문서의 섹션 5를 준수해야 하는 경우 [간단한 개체 액세스 프로토콜(SOAP) 1.1이라는](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)제목의 문서는 [인코딩된 SOAP 직렬화를 제어하는 특성에](attributes-that-control-encoded-soap-serialization.md)나열된 특성을 사용합니다.
 
 기본적으로 XML 요소 이름은 클래스 또는 멤버 이름으로 결정됩니다. `Book`이라는 간단한 클래스의 경우 이름이 `ISBN`인 필드는 다음 예제처럼 XML 요소 태그 \<ISBN>을 생성합니다.
 
@@ -241,7 +241,7 @@ serialize된 인스턴스는 다음과 같을 수 있습니다.
 </Group>
 ```
 
-두 XML 스트림을 구분하는 다른 방법은 XML 스키마 정의 도구를 사용하여 컴파일된 코드에서 XML 스키마(XSD) 문서를 생성하는 것입니다. 이 도구 사용에 대 한 자세한 내용은 [Xml 스키마 정의 도구 및 Xml Serialization](the-xml-schema-definition-tool-and-xml-serialization.md)을 참조 하세요. 필드에 특성이 적용 되지 않은 경우 스키마는 다음과 같은 방식으로 요소를 설명 합니다.
+두 XML 스트림을 구분하는 다른 방법은 XML 스키마 정의 도구를 사용하여 컴파일된 코드에서 XML 스키마(XSD) 문서를 생성하는 것입니다. 도구 사용에 대한 자세한 내용은 [XML 스키마 정의 도구 및 XML 직렬화를](the-xml-schema-definition-tool-and-xml-serialization.md)참조하십시오. 필드에 특성이 적용되지 않는 경우 스키마는 다음과 같은 방식으로 요소를 설명합니다.
 
 ```xml
 <xs:element minOccurs="0" maxOccurs ="1" name="Employees" type="ArrayOfEmployee" />
@@ -300,7 +300,7 @@ public class Group {
 이 클래스가 컴파일되고 XML 스키마 정의 도구가 스키마 생성에 사용되는 경우 `Group`을 설명하는 다음 XML을 볼 수 있습니다.
 
 ```xml
-<xs:element name="NewGroupName" type="NewTypeName">
+<xs:element name="NewGroupName" type="NewTypeName" />
 ```
 
 이와 반대로 클래스의 인스턴스를 serialize하면 `NewGroupName`이 XML 문서에 나타납니다.
@@ -315,12 +315,12 @@ public class Group {
 
 public 속성이나 필드를 serialize할 필요가 없는 상황이 있을 수 있습니다. 예를 들어 메타데이터를 포함하기 위해 필드나 속성을 사용할 수 있습니다. 이러한 경우에는 <xref:System.Xml.Serialization.XmlIgnoreAttribute>를 필드 또는 속성에 적용하면 <xref:System.Xml.Serialization.XmlSerializer>가 이를 건너뜁니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [XML serialization을 제어하는 특성](attributes-that-control-xml-serialization.md)
-- [인코딩된 SOAP serialization을 제어하는 특성](attributes-that-control-encoded-soap-serialization.md)
-- [XML serialization 소개](introducing-xml-serialization.md)
-- [XML serialization 예제](examples-of-xml-serialization.md)
+- [XML Serialization을 제어하는 특성](attributes-that-control-xml-serialization.md)
+- [인코딩된 SOAP Serialization을 제어하는 특성](attributes-that-control-encoded-soap-serialization.md)
+- [XML Serialization 소개](introducing-xml-serialization.md)
+- [XML Serialization 예제](examples-of-xml-serialization.md)
 - [방법: XML 스트림의 대체 요소 이름 지정](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
 - [방법: 개체 직렬화](how-to-serialize-an-object.md)
 - [방법: 개체 역직렬화](how-to-deserialize-an-object.md)

@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: 4e98dd41606bff559abb981397acf2582a961cef
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: 88efab8adf36989938ba5aa887a28b41eb8820f3
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111857"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291631"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>연습: Windows Forms에서 WPF 복합 컨트롤 호스팅
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 애플리케이션을 만들기 위한 다양한 환경을 제공합니다. 그러나 Windows Forms 코드에 상당한 투자가 있는 경우 처음부터 다시 작성하는 대신 기존 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Windows Forms 응용 프로그램을 확장하는 것이 더 효과적일 수 있습니다. 일반적인 시나리오는 Windows Forms 응용 프로그램 내에서 구현된 하나 이상의 컨트롤을 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 포함하려는 경우입니다. WPF 컨트롤 사용자 지정에 대한 자세한 내용은 [사용자 지정 제어](../controls/control-customization.md)를 참조하십시오.  
@@ -27,7 +27,7 @@ ms.locfileid: "80111857"
   
  이 연습에 설명된 작업의 전체 코드 목록은 [Windows 양식 샘플에서 WPF 복합 제어 호스팅을](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WindowsFormsHostingWpfControl)참조하십시오.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
 
 이 연습을 완료하려면 Visual Studio가 필요합니다.  
   
@@ -181,11 +181,11 @@ namespace MyControls
   
 <a name="winforms_host_section"></a>
 ## <a name="implementing-the-windows-forms-host-application"></a>Windows Forms 호스트 애플리케이션 구현  
- Windows Forms 호스트 응용 <xref:System.Windows.Forms.Integration.ElementHost> 프로그램은 개체를 사용하여 복합 컨트롤을 호스트합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램은 복합 `OnButtonClick` 컨트롤에서 데이터를 수신하는 이벤트를 처리합니다. 또한 애플리케이션은 컨트롤 모양을 수정하는 데 사용할 수 있는 옵션 단추 집합도 포함합니다. 다음 그림에서는 애플리케이션을 보여 줍니다.  
+ Windows Forms 호스트 응용 <xref:System.Windows.Forms.Integration.ElementHost> 프로그램은 개체를 사용하여 복합 컨트롤을 호스트합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램은 복합 `OnButtonClick` 컨트롤에서 데이터를 수신하는 이벤트를 처리합니다. 또한 응용 프로그램에는 컨트롤의 모양을 수정하는 데 사용할 수 있는 옵션 단추 집합이 있습니다. 다음 그림에서는 애플리케이션을 보여 줍니다.  
 
 다음 이미지는 Windows Forms 응용 프로그램에서 호스팅되는 WPF 복합 컨트롤을 보여 주며"  
 
- ![윈도우 양식 호스팅 아발론 컨트롤을 보여줍니다 Scteenshot.](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-form-hosting-avalon-control.png)  
+ ![Avalon 컨트롤을 호스팅 하는 Windows 양식을 보여 주는 스크린샷입니다.](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-form-hosting-avalon-control.png)  
   
 ### <a name="creating-the-project"></a>프로젝트 만들기  
  프로젝트를 시작하려면  
@@ -231,7 +231,7 @@ namespace MyControls
   
 4. 양식에 <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> 다음 컨트롤을 추가합니다.  
   
-    |속성|텍스트|  
+    |이름|텍스트|  
     |----------|----------|  
     |groupBox1|배경색|  
     |groupBox2|전경색|  
@@ -243,7 +243,7 @@ namespace MyControls
   
 5. 컨트롤에 <xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType> 다음 컨트롤을 추가합니다. <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>  
   
-    |GroupBox|속성|텍스트|  
+    |GroupBox|이름|텍스트|  
     |--------------|----------|----------|  
     |groupBox1|radioBackgroundOriginal|Original|  
     |groupBox1|radioBackgroundLightGreen|LightGreen|  
@@ -264,7 +264,7 @@ namespace MyControls
   
 6. 마지막 <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>에 <xref:System.Windows.Forms.Label?displayProperty=nameWithType> 다음 컨트롤을 추가합니다. 이러한 컨트롤은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 복합 컨트롤에서 반환된 데이터를 표시합니다.  
   
-    |GroupBox|속성|텍스트|  
+    |GroupBox|이름|텍스트|  
     |--------------|----------|----------|  
     |groupBox7|lblName|이름:|  
     |groupBox7|lblAddress|구/군/시:|  
@@ -323,7 +323,7 @@ namespace MyControls
   
  애플리케이션을 빌드 및 실행합니다. WPF 복합 컨트롤에 대한 효과를 확인하려면 다른 라디오 단추를 클릭합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

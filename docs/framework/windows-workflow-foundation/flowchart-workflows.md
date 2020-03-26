@@ -2,12 +2,12 @@
 title: 순서도 워크플로
 ms.date: 03/30/2017
 ms.assetid: b0a3475c-d22f-49eb-8912-973c960aebf5
-ms.openlocfilehash: 1840f677929509e4902498c5aa8920f49cb13496
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b84b0de34f8869d9775fe0694e74c340cc16a6b3
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773596"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249066"
 ---
 # <a name="flowchart-workflows"></a>순서도 워크플로
 
@@ -17,7 +17,7 @@ ms.locfileid: "61773596"
 
  Flowchart 활동은 에서 실행되는 활동의 컬렉션을 포함하는 활동입니다.  순서도에는 변수 값에 따라 포함된 활동 사이의 실행을 연결하는 <xref:System.Activities.Statements.FlowDecision> 및 <xref:System.Activities.Statements.FlowSwitch%601> 같은 흐름 제어 요소도 포함되어 있습니다.
 
-## <a name="types-of-flow-nodes"></a>흐름 노드 형식
+## <a name="types-of-flow-nodes"></a>흐름 노드 유형
 
  요소가 실행될 때 필요한 흐름 제어 형식에 따라 다양한 형식의 요소가 사용됩니다. 다음과 같은 순서도 요소 형식이 있습니다.
 
@@ -29,7 +29,7 @@ ms.locfileid: "61773596"
 
 각 링크에는 자식 활동을 실행하는 데 사용할 수 있는 `Action`을 정의하는 <xref:System.Activities.ActivityAction> 속성과 요소 실행이 완료되었을 때 실행할 현재 요소를 정의하는 하나 이상의 `Next` 속성이 있습니다.
 
-### <a name="creating-a-basic-activity-sequence-with-a-flowstep-node"></a>FlowStep 노드로 기본 활동 시퀀스 만들기
+### <a name="creating-a-basic-activity-sequence-with-a-flowstep-node"></a>FlowStep 노드를 사용하여 기본 활동 시퀀스 만들기
 
 두 활동이 차례로 실행되는 기본 시퀀스를 모델링하려면 `FlowStep` 요소를 사용합니다. 다음 예에서는 두 `FlowStep` 요소를 사용하여 두 활동을 순서대로 실행합니다.
 
@@ -46,14 +46,14 @@ ms.locfileid: "61773596"
     </Assign>
     <FlowStep.Next>
       <FlowStep>
-        <WriteLine Text="["Hello, " & result]"/>
+        <WriteLine Text="Hello, " & [result]/>
       </FlowStep>
     </FlowStep.Next>
   </FlowStep>
 </Flowchart>
 ```
 
-### <a name="creating-a-conditional-flowchart-with-a-flowdecision-node"></a>FlowDecision 노드로 조건부 순서도 만들기
+### <a name="creating-a-conditional-flowchart-with-a-flowdecision-node"></a>FlowDecision 노드를 사용 하 여 조건부 순서도 만들기
 
 순서도 워크플로에서 조건부 흐름 노드를 모델링하려면(즉, 기존 순서도의 결정 기호 역할을 하는 링크를 만들려면) <xref:System.Activities.Statements.FlowDecision> 노드를 사용합니다. 노드의 <xref:System.Activities.Statements.FlowDecision.Condition%2A> 속성은 조건을 정의하는 식으로 설정되고, <xref:System.Activities.Statements.FlowDecision.True%2A> 및 <xref:System.Activities.Statements.FlowDecision.False%2A> 속성은 식이 <xref:System.Activities.Statements.FlowNode> 또는 `true`로 평가될 경우 실행할 `false` 인스턴스로 설정됩니다. 다음 예에서는 <xref:System.Activities.Statements.FlowDecision> 노드를 사용하는 순서도를 정의하는 방법을 보여 줍니다.
 
@@ -80,7 +80,7 @@ ms.locfileid: "61773596"
 </Flowchart>
 ```
 
-### <a name="creating-an-exclusive-switch-with-a-flowswitch-node"></a>FlowSwitch 노드로 전용 스위치 만들기
+### <a name="creating-an-exclusive-switch-with-a-flowswitch-node"></a>FlowSwitch 노드를 통해 전용 스위치 만들기
 
 일치하는 값에 따라 전용 경로 하나를 선택하는 순서도를 모델링하려면 <xref:System.Activities.Statements.FlowSwitch%601> 노드를 사용합니다. <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> 속성은 선택 항목과 비교할 값을 정의하는 <xref:System.Activities.Activity%601>의 형식 매개 변수를 사용하여 <xref:System.Object>로 설정됩니다. <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> 속성은 조건식과 비교할 키 및 <xref:System.Activities.Statements.FlowNode> 개체의 사전을 정의하며, 지정된 case가 조건식과 일치하는 경우 실행의 흐름을 정의하는 <xref:System.Activities.Statements.FlowNode> 개체 집합을 정의합니다. <xref:System.Activities.Statements.FlowSwitch%601>도 조건식과 일치하는 case가 없을 때의 실행 흐름을 정의하는 <xref:System.Activities.Statements.FlowSwitch%601.Default%2A> 속성을 정의합니다. 다음 예에서는 <xref:System.Activities.Statements.FlowSwitch%601> 요소를 사용하는 워크플로를 정의하는 방법을 보여 줍니다.
 

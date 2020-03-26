@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-ms.openlocfilehash: 7bb8d8e19ac9cf36eabc061ceba9c649b8a4cc00
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89c90fd217285fac449aba40682aa947fcfb3a07
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148974"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249092"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>단일 클래스 쿼리(LINQ to DataSet)
 LINQ(언어 통합 쿼리) 쿼리는 인터페이스 또는 <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Linq.IQueryable%601> 인터페이스를 구현하는 데이터 원본에서 작동합니다. <xref:System.Data.DataTable> 클래스는 두 인터페이스 를 구현 하지 <xref:System.Data.DataTableExtensions.AsEnumerable%2A> 않습니다., LINQ <xref:System.Data.DataTable> 쿼리의 절에서 `From` 소스로 사용 하려는 경우 메서드를 호출 해야 합니다.  
@@ -26,12 +26,12 @@ LINQ(언어 통합 쿼리) 쿼리는 인터페이스 또는 <xref:System.Collect
   
  그런 다음 `foreach` 루프에서는 `Select`에서 반환된 열거 가능한 개체를 열거하고 쿼리 결과를 생성합니다. 쿼리는 <xref:System.Linq.Enumerable>을 구현하는 <xref:System.Collections.Generic.IEnumerable%601> 형식이므로 `foreach` 루프를 사용하는 동안 쿼리 변수가 반복될 때까지 쿼리에 대한 계산이 지연됩니다. 쿼리 계산이 지연되면 여러 차례 계산할 수 있으면서 계산할 때마다 다른 결과가 나올 수 있는 값으로 쿼리를 유지할 수 있습니다.  
   
- <xref:System.Data.DataRowExtensions.Field%2A> 메서드는 <xref:System.Data.DataRow>의 열 값에 대한 액세스를 제공하며 이전 예제에서 나오지 않은 <xref:System.Data.DataRowExtensions.SetField%2A>는 <xref:System.Data.DataRow>의 열 값을 설정합니다. <xref:System.Data.DataRowExtensions.Field%2A> 메서드와 <xref:System.Data.DataRowExtensions.SetField%2A> 메서드에서는 nullable 형식이 처리되므로 명시적으로 null 값을 검사하지 않아도 됩니다. 또한 두 메서드 모두 제네릭 메서드이므로 반환 형식을 캐스팅하지 않아도 됩니다. <xref:System.Data.DataRow>의 기존 열 접근자(예: `o["OrderDate"]`)를 사용할 수도 있지만 그렇게 하려면 반환 개체를 적절한 형식으로 캐스팅해야 합니다.  열이 nullable인 경우에는 <xref:System.Data.DataRow.IsNull%2A> 메서드를 사용하여 값이 null인지 확인해야 합니다. 자세한 내용은 [제네릭 Field 및 SetField 메서드](generic-field-and-setfield-methods-linq-to-dataset.md)합니다.  
+ <xref:System.Data.DataRowExtensions.Field%2A> 메서드는 <xref:System.Data.DataRow>의 열 값에 대한 액세스를 제공하며 이전 예제에서 나오지 않은 <xref:System.Data.DataRowExtensions.SetField%2A>는 <xref:System.Data.DataRow>의 열 값을 설정합니다. <xref:System.Data.DataRowExtensions.Field%2A> 메서드와 <xref:System.Data.DataRowExtensions.SetField%2A> 메서드모두 nullable 값 형식을 처리하므로 null 값을 명시적으로 확인할 필요가 없습니다. 또한 두 메서드 모두 제네릭 메서드이므로 반환 형식을 캐스팅하지 않아도 됩니다. <xref:System.Data.DataRow>의 기존 열 접근자(예: `o["OrderDate"]`)를 사용할 수도 있지만 그렇게 하려면 반환 개체를 적절한 형식으로 캐스팅해야 합니다.  열이 nullable 값 형식인 경우 <xref:System.Data.DataRow.IsNull%2A> 메서드를 사용하여 값이 null인지 확인해야 합니다. 자세한 내용은 [제네릭 Field 및 SetField 메서드](generic-field-and-setfield-methods-linq-to-dataset.md)합니다.  
   
  `T` 메서드 및 <xref:System.Data.DataRowExtensions.Field%2A> 메서드의 제네릭 매개 변수 <xref:System.Data.DataRowExtensions.SetField%2A>에 지정된 데이터 형식은 내부 값의 형식과 일치해야 하며, 그렇지 않으면 <xref:System.InvalidCastException>이 throw됩니다. 지정된 열 이름도 <xref:System.Data.DataSet>의 열 이름과 일치해야 하며, 그렇지 않으면 <xref:System.ArgumentException>이 throw됩니다. 두 경우 모두 쿼리가 실행되는 런타임에 데이터 열거형에서 예외가 throw됩니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [크로스 테이블 쿼리](cross-table-queries-linq-to-dataset.md)
-- [형식화된 데이터 세트 쿼리](querying-typed-datasets.md)
-- [제네릭 Field 및 SetField 메서드](generic-field-and-setfield-methods-linq-to-dataset.md)
+- [형식화된 DataSets 쿼리](querying-typed-datasets.md)
+- [제네릭 필드 및 SetField 메서드](generic-field-and-setfield-methods-linq-to-dataset.md)

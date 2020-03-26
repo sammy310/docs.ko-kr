@@ -2,12 +2,12 @@
 title: 추적 프로필
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: 9723b8fbb0bb8f24e8c9544d8bac8252b2fc763a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 609c3f0c728e71d1bbf5335aae0b18d6f99a7181
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182723"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249040"
 ---
 # <a name="tracking-profiles"></a>추적 프로필
 
@@ -23,6 +23,7 @@ ms.locfileid: "79182723"
 <system.serviceModel>
     ...
     <tracking>
+     <profiles>
       <trackingProfile name="Sample Tracking Profile">
         <workflow activityDefinitionId="*">
           <workflowInstanceQueries>
@@ -385,7 +386,7 @@ XML 구성 파일로 구성된 프로필은 동작 확장을 사용하여 추적
   </trackingProfile>
   ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [SQL 추적](./samples/sql-tracking.md)
 - [윈도우 서버 앱 패브릭 모니터링](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))

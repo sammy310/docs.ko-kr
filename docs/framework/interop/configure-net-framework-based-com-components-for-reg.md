@@ -8,12 +8,12 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-ms.openlocfilehash: dedf5ab51ab5cf9befb5bd183968388406df4e5b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9e273bd3e4bf2bb6945fe48c850783a54fa9a869
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181470"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291751"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>방법: 등록이 필요 없는 활성화를 위한 .NET Framework 기반 COM 구성 요소 구성
 .NET Framework 기반 구성 요소에 대한 등록 없는 활성화는 COM 구성 요소보다 약간 더 복잡합니다. 설치 프로그램에 다음 두 개의 매니페스트가 필요합니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "79181470"
   
  이 항목에서는 애플리케이션 매니페스트를 애플리케이션에 연결하고, 구성 요소 매니페스트를 구성 요소에 연결하며, 구성 요소 매니페스트를 어셈블리에 포함하는 방법을 설명합니다.  
   
-### <a name="to-create-an-application-manifest"></a>애플리케이션 매니페스트를 만들려면  
+## <a name="create-an-application-manifest"></a>응용 프로그램 매니페스트 만들기  
   
 1. XML 편집기를 사용하여 하나 이상의 관리되는 구성 요소와 상호 운용되는 COM 애플리케이션이 소유하는 애플리케이션 매니페스트를 만들거나 수정합니다.  
   
@@ -32,7 +32,8 @@ ms.locfileid: "79181470"
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
-    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
+    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+    </assembly>
     ```  
   
      매니페스트 요소와 해당 특성에 대한 자세한 내용을 보려면 [애플리케이션 매니페스트](/windows/desktop/SbsCs/application-manifests)를 참조하세요.  
@@ -46,7 +47,8 @@ ms.locfileid: "79181470"
                         name="myOrganization.myDivision.myComApp"
                         version="1.0.0.0"
                         processorArchitecture="msil"
-      />  
+      />
+    </assembly>  
     ```  
   
 4. 종속 어셈블리를 식별합니다. 다음 예제에서는 `myComApp`이 `myManagedComp`에 종속됩니다.  
@@ -75,9 +77,9 @@ ms.locfileid: "79181470"
   
 5. 매니페스트 파일을 저장하고 이름을 지정합니다. 애플리케이션 매니페스트 이름은 어셈블리 실행 파일의 이름 뒤에 .manifest 확장명이 추가된 것입니다. 예를 들어 myComApp.exe의 애플리케이션 매니페스트 파일 이름은 myComApp.exe.manifest입니다.  
   
- COM 애플리케이션과 동일한 디렉터리에 애플리케이션 매니페스트를 설치할 수 있습니다. 또는 애플리케이션의 .exe 파일에 리소스로 추가할 수 있습니다. 자세한 내용은 [About Side-by-Side Assemblies](/windows/desktop/SbsCs/about-side-by-side-assemblies-)(Side-by-Side 어셈블리 정보)를 참조하세요.  
+COM 애플리케이션과 동일한 디렉터리에 애플리케이션 매니페스트를 설치할 수 있습니다. 또는 애플리케이션의 .exe 파일에 리소스로 추가할 수 있습니다. 자세한 내용은 [나란히 어셈블리 정보](/windows/desktop/SbsCs/about-side-by-side-assemblies-)참조  
   
-#### <a name="to-create-a-component-manifest"></a>구성 요소 매니페스트를 만들려면  
+## <a name="create-a-component-manifest"></a>구성 요소 매니페스트 만들기  
   
 1. XML 편집기를 사용하여 관리되는 어셈블리를 설명하는 구성 요소 매니페스트를 만듭니다.  
   
@@ -85,7 +87,8 @@ ms.locfileid: "79181470"
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
-    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
+    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+    </assembly>
     ```  
   
 3. 파일의 소유자를 식별합니다. 애플리케이션 매니페스트 파일에 있는 `<dependentAssembly>` 요소의 `<assemblyIdentity>` 요소는 구성 요소 매니페스트에 있는 요소와 일치해야 합니다. 다음 예제에서는 `myManagedComp` 버전 1.2.3.4가 매니페스트 파일을 소유합니다.  
@@ -98,12 +101,13 @@ ms.locfileid: "79181470"
                         version="1.2.3.4"  
                         publicKeyToken="8275b28176rcbbef"  
                         processorArchitecture="msil"  
-           />  
+           />
+    </assembly>
     ```  
   
 4. 어셈블리에 있는 각 클래스를 식별합니다. `<clrClass>` 요소를 사용하여 관리되는 어셈블리에 있는 각 클래스를 고유하게 식별합니다. `<assembly>` 요소의 하위 요소인 요소에는 다음 표에 설명된 특성이 있습니다.  
   
-    |attribute|Description|필수|  
+    |특성|설명|필수|  
     |---------------|-----------------|--------------|  
     |`clsid`|활성화할 클래스를 지정하는 식별자입니다.|yes|  
     |`description`|구성 요소에 대해 사용자에게 알려주는 문자열입니다. 기본값은 빈 문자열입니다.|예|  
@@ -168,9 +172,9 @@ ms.locfileid: "79181470"
   
      이번에도 `myresource.res`는 포함 리소스를 포함하는 리소스 파일의 이름입니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [등록이 필요 없는 COM interop](registration-free-com-interop.md)
+- [등록이 필요 없는 COM Interop](registration-free-com-interop.md)
 - [등록 없는 COM 인터럽에 대한 요구 사항](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
 - [등록 없는 활성화를 위한 COM 구성 요소 구성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
 - [.NET 기반 구성 요소의 등록이 필요 없는 활성화: 연습](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973915(v=msdn.10))

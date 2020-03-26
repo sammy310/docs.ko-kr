@@ -8,12 +8,12 @@ helpviewer_keywords:
 - vector graphics
 - typography
 ms.assetid: 068c0ef3-f6ee-4d58-a7b6-eb2531ead408
-ms.openlocfilehash: b0f2ad8293daf6ad53899a0f8be82985c24ff50d
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: fa7391ef0f7170ddb9d9d24aa5a1a03635bf46e0
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111207"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291735"
 ---
 # <a name="three-categories-of-graphics-services"></a>세 가지 범주의 그래픽 서비스
 Windows Forms의 그래픽 제품은 다음과 같은 세 가지 광범위한 범주에 속합니다.  
@@ -25,7 +25,7 @@ Windows Forms의 그래픽 제품은 다음과 같은 세 가지 광범위한 �
 - 입력 체계  
   
 ## <a name="2d-vector-graphics"></a>2D 벡터 그래픽  
- 2차원 벡터 그래픽은 기본입니다. 선, 곡선 및 그림과 같은; 좌표계의 점 집합에 의해 지정됩니다. 예를 들어 직선은 두 끝점에 의해 지정되고 사각형은 왼쪽 위 모서리의 위치를 지정하는 점과 너비와 높이를 주는 숫자 쌍으로 지정됩니다. 단순 패스는 직선으로 연결된 점의 배열에 의해 지정됩니다. 베지어 스플래라인은 4개의 컨트롤 포인트로 지정된 정교한 곡선입니다.  
+ 선, 곡선 및 그림과 같은 2차원 벡터 그래픽은 좌표계의 점 집합에 의해 지정된 기본 요소입니다. 예를 들어 직선은 두 끝점에 의해 지정되고 사각형은 왼쪽 위 모서리의 위치를 지정하는 점과 너비와 높이를 주는 숫자 쌍으로 지정됩니다. 단순 패스는 직선으로 연결된 점의 배열에 의해 지정됩니다. 베지어 스플래라인은 4개의 컨트롤 포인트로 지정된 정교한 곡선입니다.  
   
  GDI+는 프리미티브 자체에 대한 정보를 저장하는 클래스및 구조, 기본 요소를 그리는 방법에 대한 정보를 저장하는 클래스 및 실제로 도면을 수행하는 클래스를 제공합니다. 예를 들어, <xref:System.Drawing.Rectangle> 구조는 사각형의 위치와 크기를 저장합니다. 클래스는 <xref:System.Drawing.Pen> 선 색상, 선 너비 및 선 스타일에 대한 정보를 저장합니다. <xref:System.Drawing.Graphics> 클래스에는 선, 사각형, 패스 및 기타 그림을 그리는 메서드가 있습니다. 닫힌 그림과 <xref:System.Drawing.Brush> 패스가 색상이나 패턴으로 채워지는 방법에 대한 정보를 저장하는 여러 클래스도 있습니다.  
   
@@ -39,8 +39,8 @@ Windows Forms의 그래픽 제품은 다음과 같은 세 가지 광범위한 �
   
  또한 Windows Forms는 <xref:System.Windows.Forms.TextRenderer> 동급에서 GDI 기능이 있는 텍스트를 그리는 옵션을 제공합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [그래픽 개요](graphics-overview-windows-forms.md)
 - [GDI+ 관리 코드 정보](about-gdi-managed-code.md)
-- [관리되는 그래픽 클래스 사용](using-managed-graphics-classes.md)
+- [관리형 그래픽 클래스 사용](using-managed-graphics-classes.md)

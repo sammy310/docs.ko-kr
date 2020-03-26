@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: 5e99a8cbf1a3fcac2b6785128c284911949f7997
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: 05847271cf82739a6a0b609771043c02a7ffc0e9
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111844"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291584"
 ---
 # <a name="graphics-rendering-tiers"></a>그래픽 렌더링 계층
 렌더링 계층은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애플리케이션을 실행하는 디바이스의 그래픽 하드웨어 기능과 성능 수준을 정의합니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "80111844"
 ### <a name="rendering-tier-0"></a>렌더링 계층 0  
  렌더링 계층 값이 0이면 디바이스의 애플리케이션에서 사용할 수 있는 그래픽 하드웨어 가속이 없습니다. 이 계층 레벨에서는 하드웨어 가속 없이 소프트웨어를 통해 모든 그래픽이 렌더링된다고 가정해야 합니다. 이 계층의 기능은 9.0 보다 작은 DirectX 버전에 해당 합니다.  
   
-### <a name="rendering-tier-1-and-rendering-tier-2"></a>렌더링 계층 1 및 렌더링 계층 2  
+### <a name="rendering-tier-1-and-rendering-tier-2"></a>렌더링 계층 1 및 렌더링 계층 2
   
 > [!NOTE]
 > .NET Framework 4에서 시작하여 렌더링 계층 1은 DirectX 9.0 이상을 지원하는 그래픽 하드웨어만 포함하도록 재정의되었습니다. DirectX 7 또는 8을 지원하는 그래픽 하드웨어는 이제 렌더링 계층 0으로 정의됩니다.  
@@ -72,7 +72,7 @@ ms.locfileid: "80111844"
 |3D MIP 매핑|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 3D 콘텐츠를 렌더링할 때 MIP 매핑을 사용합니다. MIP 매핑은 텍스처가 에서 더 작은 시야를 차지할 <xref:System.Windows.Controls.Viewport3D>때 텍스처 렌더링 품질을 향상시킵니다.|  
 |방사형 그라데이션|지원되는 동안에는 큰 <xref:System.Windows.Media.RadialGradientBrush> 개체에서 사용하지 마십시오.|  
 |3D 조명 계산|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 꼭짓점별 조명을 수행합니다. 즉, 메시에 적용할 각 재질의 꼭짓점마다 조명 강도를 계산해야 합니다.|  
-|텍스트 렌더링|하위 픽셀 글꼴 렌더링에서는 그래픽 하드웨어에서 사용 가능한 픽셀 셰이더를 사용합니다.|  
+|텍스트 렌더링|하위 픽셀 글꼴 렌더링은 그래픽 하드웨어에서 사용 가능한 픽셀 차체를 사용합니다.|  
   
  다음 특징과 기능은 렌더링 계층 2용으로만 가속화된 하드웨어입니다.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "80111844"
 ### <a name="graphics-rendering-registry-settings"></a>그래픽 렌더링 레지스트리 설정  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 렌더링을 제어하는 다음 네 개의 레지스트리 설정을 제공합니다.  
   
-|설정|Description|  
+|설정|설명|  
 |-------------|-----------------|  
 |**하드웨어 가속 옵션 사용 안 함**|하드웨어 가속을 사용해야 하는지 지정합니다.|  
 |**최대 다중 샘플 값**|3D 콘텐츠 에 대한 다중 샘플링 정도를 지정합니다.|  
@@ -110,7 +110,7 @@ ms.locfileid: "80111844"
 ### <a name="wpf-performance-profiling-tools"></a>WPF 성능 프로파일링 도구  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 애플리케이션의 런타임 동작을 분석할 수 있고 적용할 수 있는 성능 최적화 형식을 판별하는 성능 프로파일링 도구 제품군을 제공합니다. 다음 표에는 Windows SDK 도구인 WPF 성능 제품군에 포함된 성능 프로파일링 도구가 나열되어 있습니다.  
   
-|도구|Description|  
+|도구|설명|  
 |----------|-----------------|  
 |Perforator|렌더링 동작을 분석하는 데 사용합니다.|  
 |Visual Profiler|시각적 트리의 요소별로 레이아웃 및 이벤트 처리 같은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 서비스 사용을 프로파일링하는 데 사용합니다.|  
@@ -124,10 +124,10 @@ ms.locfileid: "80111844"
   
  DirectX 진단 도구를 실행하면 기본 창에는 DirectX 관련 정보를 표시하고 진단할 수 있는 탭 집합이 포함되어 있습니다. 예를 들어 **시스템** 탭은 컴퓨터에 대한 시스템 정보를 제공하고 컴퓨터에 설치된 DirectX 버전을 지정합니다.  
   
- ![스크린 샷: DirectX 진단 도구](./media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
+ ![스크린샷: 다이렉트X 진단 도구](./media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
 DirectX 진단 도구 기본 창  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Media.RenderCapability>
 - <xref:System.Windows.Media.RenderOptions>

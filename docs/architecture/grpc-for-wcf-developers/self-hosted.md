@@ -2,12 +2,12 @@
 title: 자체 호스팅 gRPC 응용 프로그램 - WCF 개발자를 위한 gRPC
 description: ASP.NET 코어 gRPC 애플리케이션을 자체 호스팅 서비스로 배포합니다.
 ms.date: 09/02/2019
-ms.openlocfilehash: 00fb1453e19a02469f80af79672e0c1f72c7280f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 69f70e4077247fd07eba7abeee82f257dd1f4f90
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79147804"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80110908"
 ---
 # <a name="self-hosted-grpc-applications"></a>자체 호스팅 gRPC 응용 프로그램
 
@@ -107,7 +107,7 @@ ExecStart=/usr/sbin/myapp
 WantedBy=multi-user.target
 ```
 
-속성은 `Type=notify` `systemd` 응용 프로그램이 시작 및 종료시 이를 알립니다. 이 `WantedBy=multi-user.target` 설정은 Linux 시스템이 "런레벨 2"에 도달하면 서비스가 시작되며, 이는 그래픽이 아닌 다중 사용자 셸이 활성화되어 있다는 것을 의미합니다.
+속성은 `Type=notify` `systemd` 응용 프로그램이 시작 및 종료시 이를 알립니다. 이 `WantedBy=multi-user.target` 설정은 Linux 시스템이 "런레벨 2"에 도달하면 서비스가 시작되며, 이는 그래픽이 아닌 다중 사용자 셸이 활성 상태임을 의미합니다.
 
 서비스를 `systemd` 인식하기 전에 구성을 다시 로드해야 합니다. 명령을 `systemd` 사용하여 제어합니다. `systemctl` 다시 로드한 후 `status` 하위 명령을 사용하여 응용 프로그램이 성공적으로 등록되었는지 확인합니다.
 
@@ -152,7 +152,7 @@ sudo journalctl -u myapp
 > [!TIP]
 > 호스트에서 사용할 수 있는 GUI 환경이 있는 경우 *QJournalctl* 및 *그놈 로그와*같은 몇 가지 그래픽 로그 뷰어를 Linux에서 사용할 수 있습니다.
 
-명령줄에서 `systemd` 저널을 쿼리하는 `journalctl`방법에 대해 자세히 알아보려면 man [페이지를](https://manpages.debian.org/buster/systemd/journalctl.1)참조하십시오.
+명령줄에서 `systemd` 저널을 쿼리하는 `journalctl`방법에 대해 자세히 알아보려면 [manpages 을](https://manpages.debian.org/buster/systemd/journalctl.1)참조하십시오.
 
 ## <a name="https-certificates-for-self-hosted-applications"></a>자체 호스팅 응용 프로그램에 대한 HTTPS 인증서
 

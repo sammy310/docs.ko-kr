@@ -2,12 +2,12 @@
 title: 데이터 계약Json 직렬화를 사용하여 독립 실행형 JSON 직렬화
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 36945f2d42f22ef3aa4f27bcbe403466f124a279
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 614776a905ec319624f76876762c25bfca15a357
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184417"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249450"
 ---
 # <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>데이터 계약Json 직렬화를 사용하여 독립 실행형 JSON 직렬화
 
@@ -42,7 +42,7 @@ JSON으로 작업할 경우 몇 가지 예외를 제외하고는 <xref:System.Ru
 |컬렉션, 사전 및 배열|Array|이 항목의 컬렉션, 사전 및 배열 단원을 참조하십시오.|
 |복합 형식(<xref:System.Runtime.Serialization.DataContractAttribute> 또는 <xref:System.SerializableAttribute> 적용)|복합 형식|데이터 멤버는 JavaScript 복합 형식의 멤버가 됩니다.|
 |<xref:System.Runtime.Serialization.ISerializable> 인터페이스를 구현하는 복합 형식)|복합 형식|다른 복합 형식과 같지만 일부 <xref:System.Runtime.Serialization.ISerializable> 형식이 지원되지 않습니다. 이 항목의 고급 정보 단원에 있는 ISerializable 지원 부분을 참조하십시오.|
-|모든 형식에 대해 `Null` 값|Null|Nullable 형식은 nullable이 아닌 형식과 같은 방식으로 지원되고 JSON에 매핑됩니다.|
+|모든 형식에 대해 `Null` 값|Null|Nullable 값 형식도 지원되며 nullable 값 형식과 동일한 방식으로 JSON에 매핑됩니다.|
 
 ### <a name="enumerations-and-json"></a>열거 및 JSON
 
@@ -293,6 +293,6 @@ WCF와 ASP.NET AJAX 클라이언트 페이지에서 <xref:System.Runtime.Seriali
 
 serializer는 유효한 XML 이름이 아닌 키 이름을 XML 인코딩합니다. 예를 들어"123"의 이름을 가진 데이터 멤버에는 "x0031\_\_\_x0032\_\_x0033"과\_같은 인코딩된 이름이 있을 수 있습니다. XML 이름에 유효하지 않은 일부 국제 문자 집합이 포함되는 경우에도 비슷한 상황이 발생할 수 있습니다. JSON 처리에 대한 XML의 이 효과에 대한 설명은 [JSON과 XML 간의 매핑을](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [JSON 및 기타 데이터 전송 형식에 대한 지원](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)

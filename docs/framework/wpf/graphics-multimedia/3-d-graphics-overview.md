@@ -8,12 +8,12 @@ helpviewer_keywords:
 - 3D graphics [WPF]
 - graphics [WPF], 3D
 ms.assetid: 67f31ed4-e36b-4b02-9889-dcce245d7afc
-ms.openlocfilehash: b8a3876030c533dd37eca0b00ebd50bccf309e53
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: e4918f7737bbe57a4f29c6c5cff1099f4f21674b
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80112390"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291812"
 ---
 # <a name="3d-graphics-overview"></a>3D 그래픽 개요
 <a name="introduction"></a>개발자는 3D [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 기능을 통해 마크업 코드와 절차 코드 모두에서 3D 그래픽을 그리고 변환하고 애니메이션할 수 있습니다. 개발자는 2D 및 3D 그래픽을 결합하여 풍부한 컨트롤을 만들고, 복잡한 데이터 그림을 제공하거나, 응용 프로그램 인터페이스의 사용자 환경을 향상시킬 수 있습니다. 3D [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 지원은 모든 기능을 갖춘 게임 개발 플랫폼을 제공하도록 설계되지 않았습니다. 이 항목에서는 그래픽 시스템의 3D [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기능에 대한 개요를 제공합니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "80112390"
   
  이 <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A> 속성은 텍스처가 <xref:System.Windows.Point>메시의 정수에 그려지는 방식을 결정하는 좌표를 매핑하는 방법을 그래픽 시스템에 알려주는 s 컬렉션을 지정합니다. <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>을 포함하여 0과 1 사이의 값으로 지정됩니다.  속성과 <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A> 마찬가지로 그래픽 시스템은 기본 텍스처 좌표를 계산할 수 있지만 다른 텍스처 좌표를 설정하여 반복 패턴의 일부를 포함하는 텍스처의 매핑을 제어하도록 선택할 수 있습니다. 질감 좌표에 대한 자세한 내용은 다음 항목 또는 Managed Direct3D SDK를 참조하세요.  
   
- 다음 예제에서는 프로시저 코드로 큐브 모델의 한 면을 만드는 방법을 보여 줍니다. 큐브 전체를 단일 GeometryModel3D로 그릴 수 있지만 이 예제에서는 나중에 각 면에 별도의 질감을 적용하기 위해 큐브 면을 고유한 모델로 그립니다.  
+ 다음 예제에서는 프로시저 코드로 큐브 모델의 한 면을 만드는 방법을 보여 줍니다. 전체 큐브를 단일 지오메트리Model3D로 그릴 수 있습니다. 이 예제에서는 나중에 각 면에 별도의 텍스처를 적용하기 위해 큐브의 면을 별개의 모델로 그립니다.  
   
  [!code-csharp[3doverview#3DOverview3DN6](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn6)]
  [!code-vb[3doverview#3DOverview3DN6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn6)]  
@@ -105,7 +105,7 @@ ms.locfileid: "80112390"
   
 <a name="lights"></a>
 ## <a name="illuminating-the-scene"></a>장면 비추기  
- 3D 그래픽의 라이트는 조명이 실제 환경에서 수행하는 작업을 수행합니다. 보다 정확히 말해 광원은 프로젝션에 포함될 장면의 부분을 결정합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 광원 개체는 다양한 명암 효과를 만들며 여러 실제 광원의 동작을 기반으로 모델링됩니다. 장면에 하나 이상의 광원을 포함하지 않으면 모델이 보이지 않습니다.  
+ 3D 그래픽의 라이트는 조명이 실제 환경에서 수행하는 작업을 수행합니다. 보다 정확히 말해 광원은 프로젝션에 포함될 장면의 부분을 결정합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 광원 개체는 다양한 명암 효과를 만들며 여러 실제 광원의 동작을 기반으로 모델링됩니다. 장면에 라이트를 하나 이상 포함하거나 모델이 표시되지 않습니다.  
   
  다음 라이트는 기본 클래스에서 <xref:System.Windows.Media.Media3D.Light>파생됩니다.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "80112390"
   
 - <xref:System.Windows.Media.Media3D.DirectionalLight>: 원거리 광원처럼 조명합니다.  방향 라이트에는 <xref:System.Windows.Media.Media3D.DirectionalLight.Direction%2A> Vector3D로 지정되었지만 지정된 위치는 없습니다.  
   
-- <xref:System.Windows.Media.Media3D.PointLight>: 근처의 광원처럼 조명을 비춥니다. PointLight는 위치가 있으며 해당 위치에서 빛을 발합니다. 장면의 개체는 광원과 관련된 해당 위치 및 거리에 따라 비춰집니다. <xref:System.Windows.Media.Media3D.PointLightBase><xref:System.Windows.Media.Media3D.PointLightBase.Range%2A> 속성에 노출되며, 이 거리는 라이트에 의해 조명되지 않는 모델 과의 거리를 결정합니다. 또한 PointLight는 거리에 따라 광원의 강도가 감소되는 방식을 결정하는 감쇠 속성도 노출합니다. 광원 감쇠에 대해 상수, 선형 또는 정방형 보간을 지정할 수 있습니다.  
+- <xref:System.Windows.Media.Media3D.PointLight>: 근처의 광원처럼 조명을 비춥니다. PointLight는 위치가 있으며 해당 위치에서 빛을 발합니다. 장면의 개체는 광원과 관련된 해당 위치 및 거리에 따라 비춰집니다. <xref:System.Windows.Media.Media3D.PointLightBase><xref:System.Windows.Media.Media3D.PointLightBase.Range%2A> 속성에 노출되며, 이 거리는 라이트에 의해 조명되지 않는 모델 과의 거리를 결정합니다. 또한 PointLight는 감쇠 특성을 노출하여 라이트의 강도가 거리에 따라 감소하는 방식을 결정합니다. 광원 감쇠에 대해 상수, 선형 또는 정방형 보간을 지정할 수 있습니다.  
   
 - <xref:System.Windows.Media.Media3D.SpotLight>: <xref:System.Windows.Media.Media3D.PointLight>에서 상속합니다. SpotLight는 PointLight와 유사하게 비추며 위치와 방향이 모두 있습니다. 각도로 지정된 원뿔 모양 영역과 <xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A> <xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A> 속성에 라이트를 투영합니다.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "80112390"
 ## <a name="transforming-models"></a>모델 변환  
  모델을 만들 때 모델에는 장면에서의 특정 위치가 지정됩니다. 장면에서 이러한 모델을 이동하거나, 회전하거나, 크기를 변경하기 위해 모델 자체를 정의하는 꼭짓점을 변경하는 것은 비효율적입니다.  대신 2D와 마찬가지로 모델에 변환을 적용합니다.  
   
- 각 모델 개체에는 모델을 이동, 방향 조정 또는 크기를 조정할 수 있는 <xref:System.Windows.Media.Media3D.Model3D.Transform%2A> 속성이 있습니다.  변환을 적용할 때는 변환에 의해 지정된 벡터 또는 값이 무엇이든 실제적으로 모델의 모든 점을 오프셋합니다. 즉, 모델이 정의된 좌표 공간("모델 공간")은 변환하지만 장면 전체("월드 공간")의 좌표계에서 모델의 기하 도형을 구성하는 값은 변경하지 않습니다.  
+ 각 모델 객체에는 모델을 이동, 재방향 조정 또는 크기를 조정할 수 있는 <xref:System.Windows.Media.Media3D.Model3D.Transform%2A> 속성이 있습니다.  변환을 적용할 때는 변환에 의해 지정된 벡터 또는 값이 무엇이든 실제적으로 모델의 모든 점을 오프셋합니다. 즉, 모델이 정의된 좌표 공간("모델 공간")은 변환하지만 장면 전체("월드 공간")의 좌표계에서 모델의 기하 도형을 구성하는 값은 변경하지 않습니다.  
   
  모델 변환에 대한 자세한 내용은 [3D 변환 개요를](3-d-transformations-overview.md)참조하십시오.  
   
@@ -166,7 +166,7 @@ ms.locfileid: "80112390"
   
  [!code-xaml[hostingwpfusercontrolinwf#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/HostingWpfUserControlInWf/ConeControl.xaml#1)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Controls.Viewport3D>
 - <xref:System.Windows.Media.Media3D.PerspectiveCamera>
@@ -174,6 +174,6 @@ ms.locfileid: "80112390"
 - <xref:System.Windows.Media.Media3D.Material>
 - [3D 변환 개요](3-d-transformations-overview.md)
 - [WPF 3D 성능 최대화](maximize-wpf-3d-performance.md)
-- [방법 주제](3-d-graphics-how-to-topics.md)
+- [방법 항목](3-d-graphics-how-to-topics.md)
 - [WPF에서 Shape 및 기본 그리기 개요](shapes-and-basic-drawing-in-wpf-overview.md)
 - [이미지, 그림 및 시각적 표시로 그리기](painting-with-images-drawings-and-visuals.md)

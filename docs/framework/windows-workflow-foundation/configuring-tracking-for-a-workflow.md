@@ -2,18 +2,18 @@
 title: 워크플로 추적 구성
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: 97b25873e9f20d5d390b7a59531b3a5af32296df
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 5ec94d6b8e58012d0c5c8ca8593c3cef81cd9ec3
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802676"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248214"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>워크플로 추적 구성
 
 워크플로는 다음과 같은 세 가지 방식으로 실행할 수 있습니다.
 
-- <xref:System.ServiceModel.Activities.WorkflowServiceHost>에서 호스팅
+- 다음에서 호스트됨 <xref:System.ServiceModel.Activities.WorkflowServiceHost>
 
 - <xref:System.Activities.WorkflowApplication>으로 실행
 
@@ -50,9 +50,9 @@ instance.Extensions.Add(trackingParticipant);
 
 ### <a name="configuring-workflow-service-tracking"></a>워크플로 서비스 추적 구성
 
-워크플로는 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 서비스 호스트에서 호스팅될 때 WCF 서비스로 노출 될 수 있습니다. <xref:System.ServiceModel.Activities.WorkflowServiceHost>는 워크플로 기반 서비스에 대한 특수 .NET ServiceHost 구현입니다. 이 단원에서는 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]에서 실행되는 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 워크플로 서비스에 대해 추적을 구성하는 방법에 대해 설명합니다. 이러한 추적 기능은 Web.config 파일(웹 호스팅 서비스의 경우) 또는 App.config 파일(콘솔 애플리케이션과 같은 독립 실행형 애플리케이션에서 호스트되는 서비스의 경우)을 통해 서비스 동작을 지정하거나, 코드를 통해 서비스 호스트에 대한 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 컬렉션에 추적별 동작을 추가하여 구성됩니다.
+워크플로는 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 서비스 호스트에서 호스팅될 때 WCF 서비스로 노출될 수 있습니다. <xref:System.ServiceModel.Activities.WorkflowServiceHost>는 워크플로 기반 서비스에 대한 특수 .NET ServiceHost 구현입니다. 이 단원에서는 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]에서 실행되는 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 워크플로 서비스에 대해 추적을 구성하는 방법에 대해 설명합니다. 이러한 추적 기능은 Web.config 파일(웹 호스팅 서비스의 경우) 또는 App.config 파일(콘솔 애플리케이션과 같은 독립 실행형 애플리케이션에서 호스트되는 서비스의 경우)을 통해 서비스 동작을 지정하거나, 코드를 통해 서비스 호스트에 대한 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 컬렉션에 추적별 동작을 추가하여 구성됩니다.
 
-<xref:System.ServiceModel.WorkflowServiceHost>에서 호스트 되는 워크플로 서비스의 경우 다음 예제와 같이 구성 파일에서 <`behavior`> 요소를 사용 하 여 <xref:System.Activities.Tracking.EtwTrackingParticipant>를 추가할 수 있습니다.
+에서 <xref:System.ServiceModel.WorkflowServiceHost>호스팅되는 워크플로 서비스의 경우 <xref:System.Activities.Tracking.EtwTrackingParticipant> 다음 `behavior` 예제와 같이 구성 파일에서 <> 요소를 사용하여 추가할 수 있습니다.
 
 ```xml
 <behaviors>
@@ -67,7 +67,7 @@ instance.Extensions.Add(trackingParticipant);
 또는 <xref:System.ServiceModel.WorkflowServiceHost>에서 호스트되는 워크플로 서비스의 경우 코드를 통해 <xref:System.Activities.Tracking.EtwTrackingParticipant> 동작 확장을 추가할 수 있습니다. 사용자 지정 추적 참가자를 추가하려면 다음 예제 코드와 같이 새 동작 확장을 만들어 <xref:System.ServiceModel.ServiceHost>에 추가합니다.
 
 > [!NOTE]
-> 사용자 지정 추적 참가자를 추가 하는 사용자 지정 동작 요소를 만드는 방법을 보여 주는 샘플 코드를 보려면 [추적](./samples/tracking.md) 샘플을 참조 하세요.
+> 사용자 지정 추적 참가자를 추가하는 사용자 지정 동작 요소를 만드는 방법을 보여 주는 샘플 코드를 보려면 [추적](./samples/tracking.md) 샘플을 참조하십시오.
 
 ```csharp
 ServiceHost svcHost = new ServiceHost(typeof(WorkflowService), new
@@ -134,11 +134,11 @@ if (null != workflowServiceHost)
 ```
 
 > [!NOTE]
-> 추적 프로필에 대 한 자세한 내용은 [추적 프로필](tracking-profiles.md)을 참조 하세요.
+> 추적 프로필에 대한 자세한 내용은 [추적 프로필을](tracking-profiles.md)참조하십시오.
 
 ### <a name="configuring-tracking-using-workflowinvoker"></a>WorkflowInvoker를 사용하여 추적 구성
 
-<xref:System.Activities.WorkflowInvoker>를 사용하여 실행되는 워크플로에 대한 추적을 구성하려면 추적 공급자를 <xref:System.Activities.WorkflowInvoker> 인스턴스에 대한 확장으로 추가합니다. 다음 코드 예제는 [사용자 지정 추적](./samples/custom-tracking.md) 샘플에서 가져온 것입니다.
+<xref:System.Activities.WorkflowInvoker>를 사용하여 실행되는 워크플로에 대한 추적을 구성하려면 추적 공급자를 <xref:System.Activities.WorkflowInvoker> 인스턴스에 대한 확장으로 추가합니다. 다음 코드 예제는 [사용자 지정 추적](./samples/custom-tracking.md) 샘플에서 입니다.
 
 ```csharp
 WorkflowInvoker invoker = new WorkflowInvoker(BuildSampleWorkflow());
@@ -148,41 +148,41 @@ invoker.Invoke();
 
 ### <a name="viewing-tracking-records-in-event-viewer"></a>이벤트 뷰어에서 추적 레코드 보기
 
-WF 실행을 추적할 때 특별히 관심을 두고 확인할 이벤트 뷰어 로그 두 가지는 분석 로그와 디버그 로그입니다. 둘 다 Microsoft&#124;Windows&#124;응용 프로그램 서버-응용 프로그램 노드 아래에 있습니다. 이 섹션의 로그에는 전체 시스템에 영향을 미치는 이벤트가 아닌 단일 애플리케이션의 이벤트가 있습니다.
+WF 실행을 추적할 때 특별히 관심을 두고 확인할 이벤트 뷰어 로그 두 가지는 분석 로그와 디버그 로그입니다. 둘 다 Windows&#124;&#124;응용 프로그램 서버-응용 프로그램 노드에서 상주합니다. 이 섹션의 로그에는 전체 시스템에 영향을 미치는 이벤트가 아닌 단일 애플리케이션의 이벤트가 있습니다.
 
 디버그 추적 이벤트는 디버그 로그에 기록됩니다. 이벤트 뷰어에서 WF 디버그 추적 이벤트를 수집하려면 디버그 로그를 사용합니다.
 
-1. 이벤트 뷰어를 열려면 **시작**을 클릭 한 다음 실행을 클릭 **합니다.** 실행 대화 상자에서 `eventvwr`를 입력 합니다.
+1. 이벤트 뷰어를 열려면 **시작을**클릭한 다음 실행을 **클릭합니다.** 실행 대화 상자에서 `eventvwr`을 입력합니다.
 
-2. 이벤트 뷰어 대화 상자에서 **응용 프로그램 및 서비스 로그** 노드를 확장 합니다.
+2. 이벤트 뷰어 대화 상자에서 **응용 프로그램 및 서비스 로그 노드를 확장합니다.**
 
-3. **Microsoft**, **Windows**및 **응용 프로그램 서버-응용** 프로그램 노드를 확장 합니다.
+3. **Microsoft,** **Windows**및 **응용 프로그램 서버 응용 프로그램 노드를 확장합니다.**
 
-4. **응용 프로그램 서버-응용 프로그램** 노드 아래의 **디버그** 노드를 마우스 오른쪽 단추로 클릭 하 고 **로그 사용**을 선택 합니다.
+4. **응용 프로그램 서버-응용 프로그램** 노드 에서 **디버그** 노드를 마우스 오른쪽 단추로 클릭하고 **로그 사용 을**선택합니다.
 
 5. 추적이 설정된 애플리케이션을 실행하여 추적 이벤트를 생성합니다.
 
-6. **디버그** 노드를 마우스 오른쪽 단추로 클릭 하 고 **새로 고침을 선택 합니다.** 가운데 창에 추적 이벤트가 표시됩니다.
+6. **디버그** 노드를 마우스 오른쪽 단추로 클릭하고 **새로 고침을 선택합니다.** 가운데 창에 추적 이벤트가 표시됩니다.
 
 WF 4는 추적 레코드를 ETW(Windows용 이벤트 추적) 세션에 기록하는 추적 참가자를 제공합니다. ETW 추적 참가자는 추적 레코드를 구독하도록 추적 프로필을 사용하여 구성됩니다. 추적을 사용하도록 하면 오류 추적 레코드를 ETW로 내보냅니다. ETW 추적 참가자가 보낸 추적 이벤트에 해당하는 ETW 추적 이벤트(100-113)는 분석 로그에 기록됩니다.
 
 추적 레코드를 보려면 아래 단계를 따릅니다.
 
-1. 이벤트 뷰어를 열려면 **시작**을 클릭 한 다음 실행을 클릭 **합니다.** 실행 대화 상자에서 `eventvwr`를 입력 합니다.
+1. 이벤트 뷰어를 열려면 **시작을**클릭한 다음 실행을 **클릭합니다.** 실행 대화 상자에서 `eventvwr`을 입력합니다.
 
-2. 이벤트 뷰어 대화 상자에서 **응용 프로그램 및 서비스 로그** 노드를 확장 합니다.
+2. 이벤트 뷰어 대화 상자에서 **응용 프로그램 및 서비스 로그 노드를 확장합니다.**
 
-3. **Microsoft**, **Windows**및 **응용 프로그램 서버-응용** 프로그램 노드를 확장 합니다.
+3. **Microsoft,** **Windows**및 **응용 프로그램 서버 응용 프로그램 노드를 확장합니다.**
 
-4. **응용 프로그램 서버-응용 프로그램** 노드 아래의 **분석** 노드를 마우스 오른쪽 단추로 클릭 하 고 **로그 사용**을 선택 합니다.
+4. **응용 프로그램 서버-응용 프로그램** 노드 에서 **분석** 노드를 마우스 오른쪽 단추로 클릭하고 **로그 활성화를**선택합니다.
 
 5. 추적이 설정된 애플리케이션을 실행하여 추적 레코드를 생성합니다.
 
-6. **분석** 노드를 마우스 오른쪽 단추로 클릭 하 고 **새로 고침을 선택 합니다.** 가운데 창에 추적 레코드가 표시됩니다.
+6. **분석** 노드를 마우스 오른쪽 단추로 클릭하고 **새로 고침을 선택합니다.** 가운데 창에 추적 레코드가 표시됩니다.
 
-다음 이미지는 이벤트 뷰어의 추적 이벤트를 보여 줍니다.
+다음 이미지는 이벤트 뷰어의 추적 이벤트를 보여 주며,
 
-![추적 레코드를 보여 주는 이벤트 뷰어의 스크린샷](./media/configuring-tracking-for-a-workflow/tracking-event-viewer.png)
+![추적 레코드를 보여주는 이벤트 뷰어의 스크린샷입니다.](./media/configuring-tracking-for-a-workflow/tracking-event-viewer.png)
 
 ### <a name="registering-an-application-specific-provider-id"></a>애플리케이션별 공급자 ID 등록
 
@@ -196,18 +196,18 @@ WF 4는 추적 레코드를 ETW(Windows용 이벤트 추적) 세션에 기록하
     </system.serviceModel>
     ```
 
-2. %Windir%\Microsoft.NET\Framework\\\<최신 버전 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> Applications_Provider1에서 매니페스트 파일을 임시 위치로 복사한 후 이름을 \Microsoft.Windows.ApplicationServer.Applications.man로 바꿉니다.
+2. 매니페스트 파일을 %windir%\Microsoft.NET\Framework\\\<최신 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 버전의>\Microsoft.Windows.ApplicationServer.Application.man에서 임시 위치로 복사하고 이름을 Microsoft.Windows.ApplicationServer.Applications_Provider1.man으로 바꿉니다.
 
 3. 매니페스트 파일의 GUID를 새 GUID로 변경합니다.
 
     ```xml
-    <provider name="Microsoft-Windows-Application Server-Applications" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}"
+    <provider name="Microsoft-Windows-Application Server-Applications" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}" />
     ```
 
 4. 기본 공급자를 제거하지 않으려는 경우에는 공급자 이름을 변경합니다.
 
     ```xml
-    <provider name="Microsoft-Windows-Application Server-Applications" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}"
+    <provider name="Microsoft-Windows-Application Server-Applications" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}" />
     ```
 
 5. 이전 단계에서 공급자 이름을 변경한 경우 매니페스트 파일의 채널 이름을 새 공급자 이름으로 변경합니다.
@@ -222,7 +222,7 @@ WF 4는 추적 레코드를 ETW(Windows용 이벤트 추적) 세션에 기록하
 
 6. 다음 단계에 따라 리소스 DLL을 생성합니다.
 
-    1. Windows SDK를 설치합니다. Windows SDK에는 메시지 컴파일러 ([mc](/windows/win32/wes/message-compiler--mc-exe-))와 리소스 컴파일러 ([rc](/windows/win32/menurc/using-rc-the-rc-command-line-))가 포함 됩니다.
+    1. Windows SDK를 설치합니다. Windows SDK에는 메시지[컴파일러(mc.exe)](/windows/win32/wes/message-compiler--mc-exe-)및 리소스 컴파일러(rc.exe)가 포함됩니다.[rc.exe](/windows/win32/menurc/using-rc-the-rc-command-line-)
 
     2. Windows SDK 명령 프롬프트에서 새 매니페스트 파일에 대해 mc.exe를 실행합니다.
 
@@ -244,13 +244,13 @@ WF 4는 추적 레코드를 ETW(Windows용 이벤트 추적) 세션에 기록하
         csc /target:library /win32res:Microsoft.Windows.ApplicationServer.Applications_Provider1.res NewProviderReg.cs /out:Microsoft.Windows.ApplicationServer.Applications_Provider1.dll
         ```
 
-    6. 매니페스트 파일의 리소스 및 메시지 dll 이름을 `Microsoft.Windows.ApplicationServer.Applications.Provider1.man`에서 새 dll 이름으로 변경 합니다.
+    6. 매니페스트 파일의 `Microsoft.Windows.ApplicationServer.Applications.Provider1.man` 리소스 및 메시지 dll 이름을 새 dll 이름으로 변경합니다.
 
         ```xml
-        <provider name="Microsoft-Windows-Application Server-Applications_Provider1" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}" symbol="Microsoft_Windows_ApplicationServer_ApplicationEvents" resourceFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll" messageFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll">
+        <provider name="Microsoft-Windows-Application Server-Applications_Provider1" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}" symbol="Microsoft_Windows_ApplicationServer_ApplicationEvents" resourceFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll" messageFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll" />
         ```
 
-    7. [Wevtutil](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732848(v=ws.10)) 을 사용 하 여 매니페스트를 등록 합니다.
+    7. [wevtutil을](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732848(v=ws.10)) 사용하여 매니페스트를 등록합니다.
 
         ```console
         wevtutil im Microsoft.Windows.ApplicationServer.Applications_Provider1.man
@@ -258,5 +258,5 @@ WF 4는 추적 레코드를 ETW(Windows용 이벤트 추적) 세션에 기록하
 
 ## <a name="see-also"></a>참조
 
-- [Windows Server App Fabric 모니터링](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))
-- [App Fabric을 사용 하 여 응용 프로그램 모니터링](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))
+- [윈도우 서버 앱 패브릭 모니터링](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))
+- [앱 패브릭으로 애플리케이션 모니터링](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))

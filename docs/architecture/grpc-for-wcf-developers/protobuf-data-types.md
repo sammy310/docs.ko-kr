@@ -2,12 +2,12 @@
 title: 프로토부프 스칼라 데이터 유형 - WCF 개발자를 위한 gRPC
 description: .NET Core에서 Protobuf 및 gRPC가 지원하는 기본 및 잘 알려진 데이터 형식에 대해 알아봅니다.
 ms.date: 09/09/2019
-ms.openlocfilehash: a40f51fa32ddb97ba417ec01f31e1f0187f0d544
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea3b53426ecf6f50f3bae22a537e227b07248508
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148129"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249437"
 ---
 # <a name="protobuf-scalar-data-types"></a>Protobuf 스칼라 데이터 형식
 
@@ -125,7 +125,7 @@ Protobuf는 생성된 `T?` 메시지 속성에 `int?`대해 단순(예: )을 사
 | `uint?`   | `google.protobuf.UInt32Value` |
 | `ulong?`  | `google.protobuf.UInt64Value` |
 
-잘 알려진 `Timestamp` 형식은 `Duration` .NET에서 클래스로 표시되므로 nullable 버전이 필요하지 않습니다. 그러나 `DateTimeOffset` 변환 할 `TimeSpan`때 해당 형식의 속성에 null을 확인하는 것이 중요합니다.
+잘 알려진 `Timestamp` 형식과 `Duration` .NET에서 클래스로 표시됩니다. C# 8 이상에서는 nullable 참조 형식을 사용할 수 있습니다. 그러나 `DateTimeOffset` 변환 할 `TimeSpan`때 해당 형식의 속성에 null을 확인하는 것이 중요합니다.
 
 ## <a name="decimals"></a>10진수
 

@@ -2,12 +2,12 @@
 title: WCF 웹 HTTP 프로그래밍 모델 개요
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: fb6ef0fdcefbc6ceec75ce30db3abf5896d85c61
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9f2350b58e3cb33613ebc8e2c3cda1e234bcde25
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184180"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291740"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF 웹 HTTP 프로그래밍 모델 개요
 WCF(Windows 통신 재단) WEB HTTP 프로그래밍 모델은 WCF를 사용하여 WEB HTTP 서비스를 빌드하는 데 필요한 기본 요소를 제공합니다. WCF WEB HTTP 서비스는 웹 브라우저를 포함하여 가능한 클라이언트의 가장 넓은 범위에 의해 액세스 할 수 있도록 설계 및 다음과 같은 고유 한 요구 사항이 있습니다 :  
@@ -135,7 +135,7 @@ interface ICustomer
   
  즉, WCF WEB HTTP 프로그래밍 모델은 모든 유형의 데이터를 처리할 <xref:System.IO.Stream>수 있지만 에 대해 프로그래밍할 수 있습니다.  
   
- .NET Framework 3.5는 JSON 데이터(AJAX)와 신디케이션 피드(ATOM 및 RSS 포함)를 지원합니다. 이러한 기능에 대한 자세한 내용은 [WCF 웹 HTTP 서식 지정](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[WCF 신디케이션 개요](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md) 및 [AJAX 통합 및 JSON 지원을](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)참조하십시오.  
+ .NET Framework 3.5는 JSON 데이터(AJAX)와 신디케이션 피드(ATOM 및 RSS 포함)를 지원합니다. 이러한 기능에 대한 자세한 내용은 [WCF 웹 HTTP 서식,](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md) [WCF 신디케이션 개요](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)및 [AJAX 통합 및 JSON 지원을](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)참조하십시오.  
   
 ## <a name="wcf-web-http-programming-model-and-security"></a>WCF WEB HTTP 프로그래밍 모델 및 보안  
 
@@ -144,7 +144,7 @@ WCF WEB HTTP 프로그래밍 모델은 WS-* 프로토콜을 지원하지 않으�
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>WCF WEB HTTP 프로그래밍 모델 문제 해결  
  <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>을 사용하는 WCF WEB HTTP 서비스를 호출해 채널을 만들 때 <xref:System.ServiceModel.Description.WebHttpBehavior>는 다른 <xref:System.ServiceModel.EndpointAddress>가 <xref:System.ServiceModel.EndpointAddress>로 전달되어도 구성 파일에 설정된 <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>를 사용합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [WCF 배포](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
 - [WCF 웹 HTTP 프로그래밍 개체 모델](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

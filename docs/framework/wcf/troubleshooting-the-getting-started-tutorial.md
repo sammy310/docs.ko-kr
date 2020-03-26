@@ -2,12 +2,12 @@
 title: Windows 커뮤니케이션 재단 자습서 시작 문제 해결
 ms.date: 01/25/2019
 ms.assetid: 69a21511-0871-4c41-9a53-93110e84d7fd
-ms.openlocfilehash: 92e986370fe1b6e067d9f8aebc73179c1ac6a20f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 73aa0f5784784cb788a7532f8e22cbe925429c41
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183088"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249619"
 ---
 # <a name="troubleshoot-the-get-started-with-windows-communication-foundation-tutorials"></a>Windows 커뮤니케이션 재단 자습서 시작 문제 해결
 
@@ -93,10 +93,12 @@ Visual Basic 응용 프로그램에 대한 진입점이 올바르지 않습니�
 - 클라이언트의 경우 구성 파일에서 다음과 같이 바인딩 ** \<>** 요소 아래의 ** \<보안>** 요소를 업데이트합니다.  
   
     ```xml
-    <binding name="WSHttpBinding_ICalculator" security mode="None" />
+    <binding name="WSHttpBinding_ICalculator">
+      <security mode="None" />
+    </binding
     ```  
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참조  
  [WCF 응용 프로그램 시작하기](getting-started-tutorial.md)  
  [WCF 문제 해결 빠른 시작](wcf-troubleshooting-quickstart.md)  
  [설정 문제 해결](troubleshooting-setup-issues.md)
