@@ -24,7 +24,7 @@
           items:
             - name: AbortItem 메서드
               href: iassemblycacheitem-abortitem-method.md
-            - name: Commit 메서드
+            - name: 커밋 메서드
               href: iassemblycacheitem-commit-method.md
             - name: CreateStream 메서드
               href: iassemblycacheitem-createstream-method.md

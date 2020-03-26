@@ -6,9 +6,9 @@
     - name: 시작
       href: getting-started-with-net-native.md
       items:
-        - name: '예제: 동적 프로그래밍 문제 해결'
+        - name: '예: 동적 프로그래밍 문제 해결'
           href: example-troubleshooting-dynamic-programming.md
-        - name: '예제: 데이터를 바인딩하는 경우 예외 처리'
+        - name: '예: 데이터를 바인딩하는 경우 예외 처리'
           href: example-handling-exceptions-when-binding-data.md
         - name: .NET 네이티브 앱의 런타임 예외
           href: runtime-exceptions-in-net-native-apps.md

@@ -23,7 +23,7 @@
               href: creating-the-dotnet-client-application-wcf-data-services-quickstart.md
         - name: 애플리케이션 시나리오
           href: application-scenarios-wcf-data-services.md
-        - name: 자료
+        - name: 리소스
           href: wcf-data-services-resources.md
     - name: WCF Data Services 정의
       href: defining-wcf-data-services.md

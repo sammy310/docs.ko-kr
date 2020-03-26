@@ -11,12 +11,12 @@ metadata:
   author: BillWagner
   ms.author: wiwagn
   ms.date: 12/19/2019
-  ms.openlocfilehash: 6b23ab2f0214f23d45499fcf8ab7c3f2771be15c
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: f0660cf23bcbc6520d7b0d853e1b214dee785300
+  ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 03/15/2020
-  ms.locfileid: "77452744"
+  ms.lasthandoff: 03/24/2020
+  ms.locfileid: "80228562"
 highlightedContent:
   items:
   - title: C# 소개 빠른 대화형 시작입니다.
@@ -80,7 +80,7 @@ conceptualContent:
     - url: standard/components.md
       itemType: concept
       text: .NET 아키텍처 구성 요소
-    - url: framework/index.md
+    - url: framework/index.yml
       itemType: overview
       text: .NET Framework(Windows) 앱
   - title: .NET 앱 개발
@@ -147,7 +147,7 @@ additionalContent:
       - url: /aspnet/core/tutorials
         text: ASP.NET Core 자습서
       - url: /aspnet/core
-        text: ASP.NET Core란?
+        text: 'ASP.NET Core란? '
       - url: /aspnet/core/tutorials/first-mvc-app/start-mvc
         text: Visual Studio의 ASP.NET Core
       - url: /aspnet/mvc/overview/deployment/docker-aspnetmvc

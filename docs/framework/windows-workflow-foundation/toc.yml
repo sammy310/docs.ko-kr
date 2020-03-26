@@ -134,7 +134,7 @@
           items:
             - name: 변수 및 인수
               href: variables-and-arguments.md
-            - name: 식
+            - name: 표현식
               href: expressions.md
             - name: 'C# 식'
               href: csharp-expressions.md
@@ -152,7 +152,7 @@
           items:
             - name: 예외
               href: exceptions.md
-            - name: 트랜잭션
+            - name: 의
               href: workflow-transactions.md
             - name: 보정
               href: compensation.md
@@ -215,7 +215,7 @@
                   items:
                     - name: 지속성 데이터베이스 스키마
                       href: persistence-database-schema.md
-                    - name: '방법: 인스턴스 데이터 속성 Deserialize'
+                    - name: '방법: 인스턴스 데이터 속성 역직렬화'
                       href: how-to-deserialize-instance-data-properties.md
                     - name: '방법: 비지속성 인스턴스 쿼리'
                       href: how-to-query-for-non-persisted-instances.md

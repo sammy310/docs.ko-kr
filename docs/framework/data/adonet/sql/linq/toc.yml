@@ -287,7 +287,7 @@
                   href: how-to-use-table-valued-user-defined-functions.md
                 - name: '방법: 사용자 정의 함수 인라인 호출'
                   href: how-to-call-user-defined-functions-inline.md
-    - name: 참조
+    - name: 참고
       href: reference.md
       items:
         - name: 데이터 형식 및 함수

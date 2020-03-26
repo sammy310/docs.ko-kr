@@ -59,8 +59,6 @@
           href: xml-language-handling.md
         - name: 'XAML의 xml:space 처리'
           href: xml-space-handling.md
-    - name: WPF에서 System.Xaml로 마이그레이션된 형식
-      href: types-migrated-from-wpf-to-system.md
     - name: XAML 노드 스트림 구조 및 개념 이해
       href: understanding-xaml-node-stream-structures-and-concepts.md
     - name: XAMLServices 클래스 및 기본 XAML 읽기 또는 쓰기

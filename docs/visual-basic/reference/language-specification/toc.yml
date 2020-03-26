@@ -21,7 +21,7 @@
       href: ../../../../_vblang/spec/type-members.md
     - name: 문
       href: ../../../../_vblang/spec/statements.md
-    - name: 식
+    - name: 표현식
       href: ../../../../_vblang/spec/expressions.md
     - name: 설명서 주석
       href: ../../../../_vblang/spec/documentation-comments.md

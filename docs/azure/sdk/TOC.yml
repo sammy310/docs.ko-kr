@@ -1,0 +1,19 @@
+- name: Azure SDK for .NET
+  href: index.yml
+  items:
+    - name: 개념
+      expanded: true
+      items:
+        - name: 인증
+          href: authentication.md
+        - name: 로깅
+          href: logging.md
+    - name: 다운로드
+      expanded: true
+      items:
+        - name: 패키지
+          href: 'https://www.nuget.org/packages?q=windowsazureofficial'
+        - name: 도구
+          href: tools.md
+    - name: API 참조
+      href: 'https://docs.microsoft.com/dotnet/api/overview/azure/?view=azure-dotnet'

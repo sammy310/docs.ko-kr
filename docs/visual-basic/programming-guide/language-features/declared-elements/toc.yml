@@ -8,7 +8,7 @@
       items:
         - name: 수명
           href: lifetime.md
-        - name: 범위
+        - name: Scope
           href: scope.md
           items:
             - name: '방법: 변수의 범위 제어'
