@@ -5,5 +5,5 @@
       href: wcf/
     - name: ADO.NET
       href: adonet/
-    - name: '트랜잭션 처리 '
+    - name: 트랜잭션 처리
       href: transactions/

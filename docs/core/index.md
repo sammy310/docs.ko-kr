@@ -4,16 +4,16 @@ description: .NET Core는 Windows, Linux, macOS 앱을 만들기 위한 모듈�
 author: richlander
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 3db98d21a7cdc80d8a98b23782a81ffa37520937
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6d2ce5951fa01ca3945ce0e64aa58fbadc8ab5af
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75740752"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546551"
 ---
 # <a name="net-core-guide"></a>.NET Core 가이드
 
-[.NET Core](about.md)는 Microsoft 및 [GitHub](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT)의 .NET 커뮤니티에서 유지 관리하는 [오픈 소스](https://github.com/dotnet/core) 범용 개발 플랫폼입니다. 플랫폼 간으로 Windows, macOS 및 Linux를 지원하며 디바이스, 클라우드 및 IoT 애플리케이션을 빌드하는 데 사용할 수 있습니다.
+[.NET Core](about.md)는 Microsoft 및 [GitHub](https://github.com/dotnet/core)의 .NET 커뮤니티에서 유지 관리하는 [오픈 소스](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT) 범용 개발 플랫폼입니다. 플랫폼 간으로 Windows, macOS 및 Linux를 지원하며 디바이스, 클라우드 및 IoT 애플리케이션을 빌드하는 데 사용할 수 있습니다.
 
 특성, 지원되는 언어 및 프레임워크, 키 API를 비롯한 .NET Core에 대한 자세한 내용은 [.NET Core 정보](about.md)를 참조하세요.
 
@@ -21,7 +21,7 @@ ms.locfileid: "75740752"
 
 ## <a name="download-net-core"></a>.NET Core 다운로드
 
-[.NET Core SDK](https://www.microsoft.com/net/download)를 다운로드하여 Windows, macOS 또는 Linux 머신에서 .NET Core를 사용해 보세요. Docker 컨테이너를 사용하려면 [.NET Core Docker Hub](https://hub.docker.com/_/microsoft-dotnet-core/)를 방문하세요.
+[.NET Core SDK](https://dotnet.microsoft.com/download)를 다운로드하여 Windows, macOS 또는 Linux 머신에서 .NET Core를 사용해 보세요. Docker 컨테이너를 사용하려면 [.NET Core Docker Hub](https://hub.docker.com/_/microsoft-dotnet-core/)를 방문하세요.
 
 다른 .NET Core 버전을 찾는 경우 [.NET Core 다운로드](https://dotnet.microsoft.com/download/dotnet-core)에서 모든 .NET Core 버전을 사용할 수 있습니다.
 
@@ -29,7 +29,7 @@ ms.locfileid: "75740752"
 
 최신 버전은 .NET Core 3.1입니다. 3.1에는 .NET Core 3.0 대비 향상된 주요 기능은 없지만, .NET Core 3.1은 [장기적으로 지원되는 릴리스](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)입니다. .NET Core 3.1 릴리스에 대한 자세한 내용은 [What's new in .NET Core 3.1](./whats-new/dotnet-core-3-1.md)(.NET Core 3.1의 새로운 기능)을 참조 하세요.
 
-## <a name="create-your-first-application"></a>첫 번째 애플리케이션 만들기
+## <a name="create-your-first-application"></a>첫 애플리케이션 만들기
 
 .NET Core SDK를 설치한 후 명령 프롬프트를 엽니다. 다음 `dotnet` 명령을 입력하여 C# 애플리케이션을 만들고 실행합니다.
 
@@ -44,7 +44,7 @@ dotnet run
 Hello World!
 ```
 
-## <a name="support"></a>지원
+## <a name="support"></a>고객 지원팀
 
 .NET Core는 [Microsoft에 의해](https://dotnet.microsoft.com/platform/support/policy) Windows, macOS 및 Linux에서 지원됩니다. 보안 및 품질을 위해 1년에 여러 번, 일반적으로 매월 업데이트됩니다.
 

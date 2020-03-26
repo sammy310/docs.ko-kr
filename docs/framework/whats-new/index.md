@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: fa7138127379b069b646c4b2488d1973a3ddd628
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d5657f4081577b2a27bc3c2f6880784015c56060
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79143319"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249697"
 ---
 # <a name="whats-new-in-net-framework"></a>.NET Framework의 새로운 기능
 
@@ -427,7 +427,7 @@ c.SameSite = SameSiteMode.Lax
       <forms cookieSameSite="Lax">
          <!-- ...   -->
       </forms>
-   <authentication />
+   </authentication>
    <sessionState cookieSameSite="Lax"></sessionState>
 </system.web>
 ```
@@ -500,7 +500,7 @@ enclave 기반 Always Encrypted의 기본 흐름은 다음과 같습니다.
 .NET Framework 4.7.2부터 진단 도우미는 지정된 소스 URI에서 만든  <xref:System.Windows.Xps.Packaging.IXpsFixedPageReader.ResourceDictionaries>를 찾을 수 있습니다. (이는 프로덕션 애플리케이션이 아닌 진단 도우미에서 사용하기 위한 기능입니다.) 사용자는 Visual Studio의 “편집하며 계속하기” 기능과 같은 진단 도우미를 사용하면 변경 사항이 실행 중인 애플리케이션에 적용될 수 있도록 ResourceDictionary를 편집할 수 있습니다. 이를 수행하기 위한 한 단계는 실행 중인 애플리케이션이 편집 중인 사전에서 만든 모든 ResourceDictionaries를 찾는 것입니다. 예를 들어 애플리케이션이 지정된 원본 URI에서 해당 콘텐츠가 복사된 ResourceDictionary를 선언할 수 있습니다.
 
 ```xml
-<ResourceDictionary Source="MyRD.xaml">
+<ResourceDictionary Source="MyRD.xaml" />
 ```
 
 *MyRD.xaml* 에서 원래 태그를 편집하는 진단 도우미는 새로운 기능을 사용하여 사전을 찾을 수 있습니다. 이 기능은 새 정적 메서드인 <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetResourceDictionariesForSource%2A?displayProperty=nameWithType>에서 구현됩니다. 다음 코드에 표시된 것처럼 진단 도우미는 원래 태그를 식별하는 절대 URI를 사용하여 새 메서드를 호출합니다.
@@ -1976,7 +1976,7 @@ ASP.NET 4.5 및 4.5.1은 Web Forms, WebSocket 지원, 비동기 처리기, 성�
 
 - [Visual Studio 2013용 ASP.NET 및 Web Tools 릴리스 정보](/aspnet/visual-studio/overview/2013/release-notes)
 
-### <a name="networking-a-namenetworking-"></a>네트워킹<a name="networking" />
+### <a name="networking"></a>네트워킹<a name="networking" />
 
 .NET Framework 4.5에서는 HTTP 애플리케이션의 새로운 프로그래밍 인터페이스를 제공합니다. 자세한 내용은 새로운 <xref:System.Net.Http?displayProperty=nameWithType> 및 <xref:System.Net.Http.Headers?displayProperty=nameWithType> 네임스페이스를 참조하세요.
 
@@ -2120,7 +2120,7 @@ ASP.NET 4.5 및 4.5.1은 Web Forms, WebSocket 지원, 비동기 처리기, 성�
 
 Windows 8.x 스토어 앱은 특정 폼 팩터용으로 설계되었으며 Windows 운영 체제의 강력한 기능을 활용합니다. .NET Framework 4.5 또는 4.5.1의 하위 집합은 C# 또는 Visual Basic을 사용하여 Windows용 Windows 8.x 스토어 앱을 빌드하는 데 사용할 수 있습니다. 이 하위 집합을 Windows 8.x 스토어 앱용 .NET이라고 하며 [개요](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))에 설명되어 있습니다.
 
-### <a name="portable-class-libraries-a-nameportable-"></a>이식 가능한 클래스 라이브러리<a name="portable" />
+### <a name="portable-class-libraries"></a>이식 가능한 클래스 라이브러리<a name="portable" />
 
 Visual Studio 2012 및 이후 버전의 이식 가능한 클래스 라이브러리 프로젝트를 사용하여 여러 .NET Framework 플랫폼에서 작동하는 관리되는 어셈블리를 작성하고 빌드할 수 있습니다. 이식 가능한 클래스 라이브러리 프로젝트를 사용하여 대상 플랫폼(예: Windows Phone 및 Windows 8.x 스토어 앱용 .NET)을 선택합니다. 프로젝트에서 사용할 수 있는 형식 및 멤버는 이러한 플랫폼에서 공용 형식 및 멤버로 자동으로 제한됩니다. 자세한 내용은 [이식 가능한 클래스 라이브러리](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)를 참조하십시오.
 

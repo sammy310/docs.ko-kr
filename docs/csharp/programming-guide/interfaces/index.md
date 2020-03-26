@@ -5,16 +5,16 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: f4ee269f41e79562c113a7627816f797b083095e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb1b812fdbf1d521ed3fd86e23f430bcd04d00f6
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79157080"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249183"
 ---
 # <a name="interfaces-c-programming-guide"></a>인터페이스(C# 프로그래밍 가이드)
 
-인터페이스에는 비추상 [클래스](../../language-reference/keywords/class.md) 또는 [구조체](../../language-reference/builtin-types/struct.md)에서 구현해야 하는 관련 기능 그룹에 대한 정의가 포함되어 있습니다. 인터페이스에서는 구현이 있어야 하는 `static` 메서드를 정의할 수 있습니다. 인터페이스에서는 선언된 인스턴스 멤버 중 일부 또는 모두의 기본 구현을 제공할 수 있습니다. 인터페이스에서는 필드, 자동 구현 속성, 속성과 유사한 이벤트 등과 같은 인스턴스 데이터를 선언할 수 없습니다.
+인터페이스에는 비추상 [클래스](../../language-reference/keywords/class.md) 또는 [구조체](../../language-reference/builtin-types/struct.md)에서 구현해야 하는 관련 기능 그룹에 대한 정의가 포함되어 있습니다. 인터페이스에서는 구현이 있어야 하는 `static` 메서드를 정의할 수 있습니다. C# 8.0부터 인터페이스는 구성원에 대한 기본 구현을 정의할 수 있습니다. 인터페이스에서는 필드, 자동 구현 속성, 속성과 유사한 이벤트 등과 같은 인스턴스 데이터를 선언할 수 없습니다.
 
 예를 들어 인터페이스를 사용하면 여러 소스의 동작을 클래스에 포함할 수 있습니다. 해당 기능은 언어가 클래스의 여러 상속을 지원하지 않기 때문에 C#에서 중요합니다. 또한 구조체는 다른 구조체나 클래스에서 실제로 상속할 수 없기 때문에 구조체에 대한 상속을 시뮬레이트하려는 경우 인터페이스를 사용해야 합니다.
 
@@ -54,7 +54,7 @@ ms.locfileid: "79157080"
 - 인터페이스는 직접 인스턴스화할 수 없습니다. 해당 멤버는 인터페이스를 구현하는 클래스 또는 구조체에 의해 구현됩니다.
 - 클래스 또는 구조체는 여러 인터페이스를 구현할 수 있습니다. 클래스는 기본 클래스를 상속할 수 있으며 하나 이상의 인터페이스를 제공할 수도 있습니다.
 
-## <a name="BKMK_RelatedSections"></a> 관련 섹션
+## <a name="related-sections"></a><a name="BKMK_RelatedSections"></a> 관련 섹션
 
 - [인터페이스 속성](../classes-and-structs/interface-properties.md)  
 - [인터페이스의 인덱서](../indexers/indexers-in-interfaces.md)  

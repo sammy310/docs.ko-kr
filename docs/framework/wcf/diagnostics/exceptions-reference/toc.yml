@@ -3,7 +3,7 @@
   items:
     - name: COM+ 통합
       href: com-integration.md
-    - name: 구성
+    - name: Configuration
       href: configuration.md
     - name: '핵심 통신: 채널 프레임워크'
       href: core-communications-channel-framework.md

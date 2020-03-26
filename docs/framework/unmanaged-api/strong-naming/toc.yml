@@ -1,4 +1,4 @@
-- name: 강력한 이름 지정
+- name: 강력한 이름
   href: index.md
   items:
     - name: GetHashFromAssemblyFile 함수

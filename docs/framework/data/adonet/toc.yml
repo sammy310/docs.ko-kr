@@ -234,7 +234,7 @@
                       href: query-expression-syntax-examples-partitioning.md
                     - name: 순서 지정
                       href: query-expression-syntax-examples-ordering-linq-to-dataset.md
-                    - name: 요소 연산자
+                    - name: ELEMENT 연산자
                       href: query-expression-syntax-examples-element-operators.md
                     - name: 집계 연산자
                       href: query-expression-syntax-examples-aggregate-operators.md
@@ -253,7 +253,7 @@
                       href: method-based-query-syntax-examples-set-operators.md
                     - name: 변환 연산자
                       href: method-based-query-syntax-examples-conversion-operators.md
-                    - name: 요소 연산자
+                    - name: ELEMENT 연산자
                       href: method-based-query-syntax-examples-element-operators.md
                     - name: 집계 연산자
                       href: method-based-query-syntax-examples-aggregate-operators.md
@@ -302,7 +302,7 @@
       href: model-defined-function.md
     - name: 탐색 속성(navigation property)
       href: navigation-property.md
-    - name: 속성
+    - name: 속성(property)
       href: property.md
     - name: 참조 무결성 제약 조건
       href: referential-integrity-constraint.md

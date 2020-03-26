@@ -21,7 +21,7 @@
               href: method-based-query-syntax-examples-conversion.md
             - name: '메서드 기반 쿼리 구문 예제: 조인 연산자'
               href: method-based-query-syntax-examples-join-operators.md
-            - name: '메서드 기반 쿼리 구문 예제: 요소 연산자'
+            - name: '메서드 기반 쿼리 구문 예제: ELEMENT 연산자'
               href: method-based-query-syntax-examples-element-operators.md
             - name: '메서드 기반 쿼리 구문 예제: 그룹화'
               href: method-based-query-syntax-examples-grouping.md
@@ -173,7 +173,7 @@
               href: less-than-or-equal-to-entity-sql.md
             - name: '!=(같지 않음)'
               href: not-equal-to-entity-sql.md
-            - name: . (멤버 액세스)
+            - name: 을 선택합니다. (멤버 액세스)
               href: member-access-entity-sql.md
             - name: '--(주석)'
               href: comment-entity-sql.md

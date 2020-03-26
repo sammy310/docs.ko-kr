@@ -272,7 +272,7 @@
               href: troubleshooting-queued-messaging.md
             - name: 대기 중인 통신을 위한 최선의 방법
               href: best-practices-for-queued-communication.md
-    - name: 트랜잭션
+    - name: 의
       href: transactions-in-wcf.md
       items:
         - name: Windows Communication Foundation 트랜잭션 개요

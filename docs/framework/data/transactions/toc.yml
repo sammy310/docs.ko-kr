@@ -1,4 +1,4 @@
-- name: 트랜잭션 처리
+- name: '트랜잭션 처리 '
   href: index.md
   items:
     - name: 트랜잭션 기본 사항

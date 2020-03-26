@@ -219,7 +219,7 @@
               href: announcements-sample.md
             - name: Basic
               href: basic-sample.md
-            - name: 구성
+            - name: Configuration
               href: configuration-sample.md
             - name: 범위를 사용한 검색
               href: discovery-with-scopes-sample.md
@@ -262,7 +262,7 @@
           items:
             - name: WCF 보안의 암호화 민첩성
               href: cryptographic-agility-in-wcf-security.md
-        - name: 서비스
+        - name: Services
           href: services.md
           items:
             - name: 호스팅

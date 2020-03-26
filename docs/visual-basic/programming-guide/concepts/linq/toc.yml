@@ -345,7 +345,7 @@
               href: functional-transformation-of-xml.md
             - name: '자습서: 지연된 실행'
               href: tutorial-deferred-execution.md
-            - name: LINQ to XML의 지연 실행 및 지연 계산
+            - name: LINQ to XML에서 지연 실행 및 지연 계산
               href: deferred-execution-and-lazy-evaluation-in-linq-to-xml.md
             - name: 지연 실행 예제
               href: deferred-execution-example.md
