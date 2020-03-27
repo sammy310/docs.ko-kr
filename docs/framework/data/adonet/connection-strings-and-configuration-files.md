@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 30198930a260b7370d061e85efe4935e88ad4d8a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8862aa34c2d2677f5bc3e737c01cc61036c243e1
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151629"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345052"
 ---
 # <a name="connection-strings-and-configuration-files"></a>연결 문자열 및 구성 파일
+
 애플리케이션 코드에 연결 문자열을 포함하면 보안상 취약한 부분이 생기고 유지 관리상의 문제가 발생할 수 있습니다. [Ildasm.exe(IL 디스어셈블러)](../../tools/ildasm-exe-il-disassembler.md) 도구를 사용하면 애플리케이션의 소스 코드로 컴파일된 암호화되지 않은 연결 문자열을 볼 수 있습니다. 뿐만 아니라 연결 문자열이 계속해서 변경되는 경우에는 애플리케이션을 다시 컴파일해야 합니다. 이와 같은 여러 가지 이유로 연결 문자열은 애플리케이션 구성 파일에 저장하는 것이 좋습니다.  
   
 ## <a name="working-with-application-configuration-files"></a>애플리케이션 구성 파일 사용  
@@ -74,7 +75,7 @@ ms.locfileid: "79151629"
   
  <xref:System.Configuration.ConnectionStringSettingsCollection>을 사용하여 애플리케이션 구성 파일에서 연결 문자열을 검색할 수 있습니다. 이 컬렉션에는 <xref:System.Configuration.ConnectionStringSettings> 개체 컬렉션이 포함되어 있으며, 각 개체는 **connectionStrings** 섹션의 단일 항목을 나타냅니다. 개체 속성은 연결 문자열 특성에 매핑되므로 이름 또는 공급자 이름을 지정하여 연결 문자열을 검색할 수 있습니다.  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
 |<xref:System.Configuration.ConnectionStringSettings.Name%2A>|연결 문자열의 이름으로, **name** 특성에 매핑됩니다.|  
 |<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>|정규화된 공급자 이름으로, **providerName** 특성에 매핑됩니다.|  
@@ -125,16 +126,16 @@ ms.locfileid: "79151629"
 <configProtectedData defaultProvider="RsaProtectedConfigurationProvider">  
   <providers>  
     <add name="RsaProtectedConfigurationProvider"
-      type="System.Configuration.RsaProtectedConfigurationProvider, ... />  
+      type="System.Configuration.RsaProtectedConfigurationProvider" />  
     <add name="DataProtectionConfigurationProvider"
-      type="System.Configuration.DpapiProtectedConfigurationProvider, ... />  
+      type="System.Configuration.DpapiProtectedConfigurationProvider" />  
   </providers>  
 </configProtectedData>  
 ```  
   
  보호되는 구성 공급자를 추가로 **machine.config** 파일에 넣어 구성할 수 있습니다. <xref:System.Configuration.ProtectedConfigurationProvider> 추상 기본 클래스에서 상속하여 사용자 고유의 보호되는 구성 공급자를 만들 수도 있습니다. 다음 표에는 .NET Framework와 함께 포함된 두 개의 구성 파일이 설명되어 있습니다.  
   
-|공급자|Description|  
+|공급자|설명|  
 |--------------|-----------------|  
 |<xref:System.Configuration.RsaProtectedConfigurationProvider>|RSA 암호화 알고리즘을 사용하여 데이터를 암호화하고 해독합니다. 공개 키 암호화 및 디지털 서명에도 RSA 알고리즘을 사용할 수 있습니다. 두 개의 서로 다른 키를 사용하므로 "공개 키" 또는 비대칭 암호화라고도 합니다. [ASP.NET IIS 등록 도구(Aspnet_regiis.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90))를 사용하여 Web.config 파일의 섹션을 암호화하고 암호화 키를 관리할 수 있습니다. ASP.NET에서는 파일을 처리할 때 구성 파일의 암호를 해독합니다. ASP.NET 애플리케이션의 ID는 섹션을 암호화하고 해독하는 데 사용되는 암호화 키에 대해 읽기 액세스 권한이 있어야 합니다.|  
 |<xref:System.Configuration.DpapiProtectedConfigurationProvider>|Windows DPAPI(데이터 보호 API)를 사용하여 구성 섹션을 암호화합니다. Windows 기본 제공 암호화 서비스를 사용하며 시스템별 또는 사용자 계정별로 보호되도록 구성할 수 있습니다. 시스템별 보호는 동일한 서버에 정보를 공유해야 하는 여러 애플리케이션이 있을 때 유용합니다. 사용자 계정별 보호는 공유된 호스팅 환경과 같이 특정 사용자 ID와 함께 실행되는 서비스에서 사용할 수 있습니다. 각 애플리케이션은 파일 및 데이터베이스와 같은 리소스에 대한 액세스를 제한하는 개별 ID에 대해 실행됩니다.|  
@@ -169,11 +170,11 @@ ms.locfileid: "79151629"
   
  ASP.NET 응용 프로그램 보안에 대한 자세한 내용은 [웹 사이트 보안을](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))ASP.NET.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [연결 문자열 작성기](connection-string-builders.md)
 - [연결 정보 보호](protecting-connection-information.md)
 - [구성 클래스 사용](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
-- [응용 프로그램 구성](../../configure-apps/index.md)
+- [앱 구성](../../configure-apps/index.md)
 - [ASP.NET 웹 사이트 관리 도구](https://docs.microsoft.com/previous-versions/aspnet/6hy1xzbw(v=vs.100))
 - [ADO.NET 개요](ado-net-overview.md)

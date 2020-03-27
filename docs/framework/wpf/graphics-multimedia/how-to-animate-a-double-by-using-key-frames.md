@@ -9,18 +9,18 @@ helpviewer_keywords:
 - animation [WPF], Doubles with key frames
 - key frames [WPF], animating Doubles with
 ms.assetid: 3a1a7dba-7694-4907-8a2f-3408baebfa82
-ms.openlocfilehash: 73cbeab8aee566313bad8e8a18a5500374287de0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9eab794cc8411230226cddc97beaa13c1bdd9405
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010204"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344927"
 ---
 # <a name="how-to-animate-a-double-by-using-key-frames"></a>방법: 키 프레임을 사용하여 Double에 애니메이션 효과 주기
-이 예제에서는 사용 하는 속성의 값에 애니메이션 효과 <xref:System.Double> 키 프레임을 사용 하 여 합니다.  
+이 예제에서는 키 프레임을 사용하여 사용하는 <xref:System.Double> 속성의 값을 애니메이션하는 방법을 보여 주며, 이 예제에서는  
   
 ## <a name="example"></a>예제  
- 다음 예제는 화면에서 사각형을 이동합니다. 예제에서는 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> 클래스에 애니메이션 효과를 <xref:System.Windows.Media.TranslateTransform.X%2A> 의 속성을 <xref:System.Windows.Media.TranslateTransform> 적용할를 <xref:System.Windows.Shapes.Rectangle>입니다. 무제한 반복되는 이 애니메이션은 다음과 같은 방식으로 세 가지 키 프레임을 사용합니다.  
+ 다음 예제는 화면에서 사각형을 이동합니다. 이 예제에서는 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> 클래스를 사용하여 <xref:System.Windows.Media.TranslateTransform.X%2A> 에 적용된 <xref:System.Windows.Media.TranslateTransform> 의 <xref:System.Windows.Shapes.Rectangle>속성을 애니메이션합니다. 무제한 반복되는 이 애니메이션은 다음과 같은 방식으로 세 가지 키 프레임을 사용합니다.  
   
 1. 처음 3 초 동안의 인스턴스를 사용 하 여는 <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> 500 위치 시작 위치부터 일정 한 속도로 경로 따라 사각형을 이동 하는 클래스입니다. 과 같은 선형 키 프레임 <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> 값 사이 매끄러운 선형 전환을 만듭니다.  
   
@@ -32,11 +32,11 @@ ms.locfileid: "62010204"
  [!code-vb[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/altdoubleanimationusingkeyframesexample.vb#altdoubleanimationusingkeyframeswholepage)]
  [!code-xaml[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/AltDoubleAnimationUsingKeyFramesExample.xaml#altdoubleanimationusingkeyframeswholepage)]  
   
- 전체 샘플을 보려면 [키 프레임 애니메이션 샘플](https://go.microsoft.com/fwlink/?LinkID=160012)을 참조하세요.  
+ 전체 샘플을 보려면 [키 프레임 애니메이션 샘플](https://github.com/microsoft/WPF-Samples/tree/master/Animation/KeyFrameAnimation)을 참조하세요.  
   
- 다른 애니메이션 예제를 사용 하 여 일관성을 위해이 예제의 코드 버전 사용을 <xref:System.Windows.Media.Animation.Storyboard> 적용할 개체는 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>합니다. 또는 코드에서 단일 애니메이션을 적용할 때 간단 하 게 사용 합니다 <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> 사용 하는 대신 메서드를 <xref:System.Windows.Media.Animation.Storyboard>입니다. 예제를 보려면 [Storyboard를 사용하지 않고 속성에 애니메이션 효과 주기](how-to-animate-a-property-without-using-a-storyboard.md)를 참조하세요.  
+ 다른 애니메이션 예제와 일관성을 유지하기 위해 이 예제의 코드 버전은 개체를 <xref:System.Windows.Media.Animation.Storyboard> 사용하여 을 적용합니다. <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> 또는 코드에 단일 애니메이션을 적용할 때 <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> <xref:System.Windows.Media.Animation.Storyboard>을 사용하는 대신 메서드를 사용하는 것이 더 간단합니다. 예를 들어 [스토리보드를 사용하지 않고 속성 애니메이션을](how-to-animate-a-property-without-using-a-storyboard.md)참조하십시오.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>
 - <xref:System.Windows.Shapes.Rectangle>

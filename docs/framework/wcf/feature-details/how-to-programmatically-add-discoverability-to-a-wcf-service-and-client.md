@@ -2,15 +2,15 @@
 title: '방법: 프로그래밍 방식으로 WCF 서비스 및 클라이언트에 검색 기능 추가'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: dd96bc168413eef99260a5251e74971aa1309ff4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf89c793cbd72a0a3980e6ec8e42c688dcedec26
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184881"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344974"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>방법: 프로그래밍 방식으로 WCF 서비스 및 클라이언트에 검색 기능 추가
-이 항목에서는 WCF(Windows 통신 재단) 서비스를 검색 가능한 으로 만드는 방법에 대해 설명합니다. [셀프 호스트](https://go.microsoft.com/fwlink/?LinkId=145523) 샘플을 기반으로 합니다.  
+이 항목에서는 WCF(Windows 통신 재단) 서비스를 검색 가능한 으로 만드는 방법에 대해 설명합니다. [셀프 호스트](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) 샘플을 기반으로 합니다.  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>기존 자체 호스팅 서비스 샘플을 검색용으로 구성하려면  
   
@@ -124,7 +124,7 @@ ms.locfileid: "79184881"
   
      이 메서드는 `FindCalculatorServiceAddress`에서 반환되는 엔드포인트 주소를 사용하여 계산기 서비스를 호출합니다.  
   
-11. `InvokeCalculatorService` 메서드 안에서 `CalculatorServiceClient` 클래스의 인스턴스를 만듭니다. 이 클래스는 [자체 호스트](https://go.microsoft.com/fwlink/?LinkId=145523) 샘플에 의해 정의됩니다. 이 클래스는 Svcutil.exe를 사용하여 생성되었습니다.  
+11. `InvokeCalculatorService` 메서드 안에서 `CalculatorServiceClient` 클래스의 인스턴스를 만듭니다. 이 클래스는 [자체 호스트](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) 샘플에 의해 정의됩니다. 이 클래스는 Svcutil.exe를 사용하여 생성되었습니다.  
   
     ```csharp  
     // Create a client  
@@ -220,7 +220,7 @@ ms.locfileid: "79184881"
     ```  
   
 ## <a name="example"></a>예제  
- 다음은 이 샘플의 코드 목록입니다. 이 코드는 [Self-Host](https://go.microsoft.com/fwlink/?LinkId=145523) 샘플을 기반으로 하므로 변경된 파일만 나열됩니다. 셀프 호스트 샘플에 대한 자세한 내용은 [설정 지침을](https://go.microsoft.com/fwlink/?LinkId=145522)참조하십시오.  
+ 다음은 이 샘플의 코드 목록입니다. 이 코드는 [Self-Host](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) 샘플을 기반으로 하므로 변경된 파일만 나열됩니다. 셀프 호스트 샘플에 대한 자세한 내용은 [설정 지침을](https://docs.microsoft.com/dotnet/framework/wcf/samples/set-up-instructions)참조하십시오.  
   
 ```csharp  
 // Service.cs  
@@ -340,7 +340,7 @@ namespace DiscoveryClientApp
 }  
 ```  
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [WCF 검색 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [WCF 검색 개체 모델](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)
+- [WCF Discovery 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [WCF Discovery 개체 모델](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: 4e0c583eeef4bf068c08b273c833506ce80cbc3a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9676ae4053553b84488602627b28790aae22eff6
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185604"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345275"
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>방법: 사용자 지정 WS-Metadata Exchange 바인딩 구성
 이 항목에서는 사용자 지정 WS-Metadata 교환 바인딩을 구성하는 방법에 대해 설명합니다. WCF(Windows 통신 Foundation)에는 네 개의 시스템 정의 메타데이터 바인딩이 포함되어 있지만 원하는 바인딩을 사용하여 메타데이터를 게시할 수 있습니다. 이 항목에서는 `wsHttpBinding`을 사용하여 메타데이터를 게시하는 방법을 보여 줍니다. 이 바인딩은 메타데이터를 보안 방법으로 노출하는 옵션을 제공합니다. 이 문서의 코드는 [시작하기](../samples/getting-started-sample.md)를 기반으로 합니다.  
@@ -32,8 +32,8 @@ ms.locfileid: "79185604"
 2. 이 새 동작을 참조하는 서비스 태그에 `behaviorConfiguration` 특성을 추가합니다.  
   
     ```xml  
-    <service        name="Microsoft.ServiceModel.Samples.CalculatorService"  
-    behaviorConfiguration="CalculatorServiceBehavior">
+    <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
+    behaviorConfiguration="CalculatorServiceBehavior" />
     ```  
   
 3. mex를 지정하는 메타데이터 엔드포인트를 주소로, `wsHttpBinding`을 바인딩으로, <xref:System.ServiceModel.Description.IMetadataExchange>를 계약으로 추가합니다.  
@@ -113,10 +113,10 @@ ms.locfileid: "79185604"
     Console.WriteLine("Metadata section: " + section.Dialect.ToString());  
     ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [메타데이터 게시 동작](../samples/metadata-publishing-behavior.md)
 - [메타데이터 검색](../samples/retrieve-metadata.md)
-- [메타 데이터](../feature-details/metadata.md)
+- [메타데이터](../feature-details/metadata.md)
 - [메타데이터 게시](../feature-details/publishing-metadata.md)
 - [메타데이터 엔드포인트 게시](../publishing-metadata-endpoints.md)

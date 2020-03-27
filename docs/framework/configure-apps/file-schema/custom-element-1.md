@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
-ms.openlocfilehash: 04360a796b18cf1e414f1f84bff247a1e9d8ef9c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0d765a9789ad566428b1fbda6c0863b10b98c363
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155156"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345071"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>싱글태그섹션핸들러용 사용자 지정 요소
 
@@ -22,7 +22,7 @@ ms.locfileid: "79155156"
 ## <a name="syntax"></a>구문
 
 ```xml
-<sectionName key="value" key2="value2" ... />
+<sectionName key="value" key2="value2" />
 ```
 
 ## <a name="attributes"></a>특성
@@ -31,7 +31,7 @@ ms.locfileid: "79155156"
 
 ## <a name="parent-element"></a>부모 요소
 
-|     | Description |
+|     | 설명 |
 | --- | ----------- |
 | [**\<구성>**](configuration-element.md) | 공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다. |
 
@@ -63,6 +63,6 @@ None
 
 이 요소는 응용 프로그램 구성 파일, 컴퓨터 구성*파일(Machine.config)* 및 응용 프로그램 디렉터리 수준에 없는 *Web.config* 파일에 사용할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET Framework의 구성 파일 스키마](index.md)

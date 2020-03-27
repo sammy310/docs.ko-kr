@@ -2,12 +2,12 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: 1a94acde3d0726808deebcae1437e7318f5392df
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3aacc7c73167771a632bb31164f2c551d60ce8f0
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183554"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345241"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
 이 샘플에서는 <xref:System.Runtime.Serialization.DataContractResolver> 클래스를 사용하여 serialization 및 deserialization 프로세스를 사용자 지정하는 방법을 보여 줍니다. 또한 serialization 및 deserialization 동안 알려진 형식을 동적으로 추가하는 방법을 보여 줍니다.  
@@ -356,11 +356,11 @@ Lists combined:
   
 5. 애플리케이션이 제대로 실행되지 않으면 다음 단계를 따라 사용 환경이 올바르게 설정되었는지 확인하세요.  
   
-6. Windows 통신 기초 [샘플에 대한 일회성 설정 절차를](https://go.microsoft.com/fwlink/?LinkId=150774)수행했어야 합니다.  
+6. Windows 통신 기초 [샘플에 대한 일회성 설정 절차를](https://docs.microsoft.com/dotnet/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples)수행했어야 합니다.  
   
-7. 솔루션을 빌드하려면 Windows 통신 [기반 빌드 샘플의](https://go.microsoft.com/fwlink/?LinkId=150775)지침을 따르십시오.  
+7. 솔루션을 빌드하려면 Windows 통신 [기반 빌드 샘플의](https://docs.microsoft.com/dotnet/framework/wcf/samples/building-the-samples)지침을 따르십시오.  
   
-8. 단일 또는 교차 컴퓨터 구성에서 샘플을 실행하려면 Windows [통신 기반 샘플 실행의 지침을 따르십시오.](https://go.microsoft.com/fwlink/?LinkId=150776)  
+8. 단일 또는 교차 컴퓨터 구성에서 샘플을 실행하려면 Windows [통신 기반 샘플 실행의 지침을 따르십시오.](https://docs.microsoft.com/dotnet/framework/wcf/samples/running-the-samples)  
   
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  

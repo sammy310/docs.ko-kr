@@ -7,20 +7,20 @@ dev_langs:
 helpviewer_keywords:
 - Popup control [WPF], specifying custom position
 ms.assetid: 28c24f39-d3aa-4ee2-b950-384b4a5dab92
-ms.openlocfilehash: dc516f0eb1cfcbac6662497eb4019041eefec2a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ea8d73c51dd018608b95104f00bf341ff434225c
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61911211"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344958"
 ---
 # <a name="how-to-specify-a-custom-popup-position"></a>방법: 사용자 지정 팝업 위치 지정
-이 예제에 대 한 사용자 지정 위치를 지정 하는 방법을 보여 줍니다를 <xref:System.Windows.Controls.Primitives.Popup> 시기를 제어 합니다 <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> 속성이 <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>.  
+이 예제에서는 <xref:System.Windows.Controls.Primitives.Popup> <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> 속성이 로 설정될 때 컨트롤에 <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>대한 사용자 지정 위치를 지정하는 방법을 보여 주며 있습니다.  
   
 ## <a name="example"></a>예제  
- 경우는 <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> 속성이로 설정 되어 <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>, <xref:System.Windows.Controls.Primitives.Popup> 의 정의 된 인스턴스를 호출 합니다 <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> 대리자. 대상 영역의 왼쪽된 위 모퉁이와 왼쪽된 위 모퉁이 있는 가능한 점의 집합을 반환 하는이 대리자는 <xref:System.Windows.Controls.Primitives.Popup>합니다. <xref:System.Windows.Controls.Primitives.Popup> 최상의 가시성을 제공 하는 지점에 배치 됩니다.  
+ 속성이 <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> 설정되면 <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>대리자의 <xref:System.Windows.Controls.Primitives.Popup> 정의된 인스턴스를 <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> 호출합니다. 이 대리자는 대상 영역의 왼쪽 상단 모서리와 의 왼쪽 상단 모서리를 기준으로 <xref:System.Windows.Controls.Primitives.Popup>가능한 점 집합을 반환합니다. 배치는 <xref:System.Windows.Controls.Primitives.Popup> 최상의 가시성을 제공하는 지점에서 발생합니다.  
   
- 다음 예제에서는 위치를 정의 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.Primitives.Popup> 설정 하 여 합니다 <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> 속성을 <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>입니다. 또한 만들고 할당 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> 배치 하기 위해 대리자는 <xref:System.Windows.Controls.Primitives.Popup>합니다.  두 콜백 대리자 반환 <xref:System.Windows.Controls.Primitives.CustomPopupPlacement> 개체입니다.  경우는 <xref:System.Windows.Controls.Primitives.Popup> 화면 가장자리에 첫 번째 위치에 의해 숨겨져는 <xref:System.Windows.Controls.Primitives.Popup> 두 번째 위치에 배치 됩니다.  
+ 다음 예제에서는 속성을 로 설정하여 <xref:System.Windows.Controls.Primitives.Popup> a의 <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> 위치를 <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>정의하는 방법을 보여 주며 있습니다. 또한 를 배치하기 위해 <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> 대리자를 만들고 할당하는 <xref:System.Windows.Controls.Primitives.Popup>방법도 보여 주며.  콜백 대리자는 <xref:System.Windows.Controls.Primitives.CustomPopupPlacement> 두 개의 개체를 반환합니다.  <xref:System.Windows.Controls.Primitives.Popup> 첫 번째 위치에서 화면 가장자리에 의해 숨김이 있으면 두 번째 위치에 <xref:System.Windows.Controls.Primitives.Popup> 배치됩니다.  
   
  [!code-xaml[PopupCustomPlacement#CustomPlacement](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupCustomPlacement/CSharp/Window1.xaml#customplacement)]  
   
@@ -30,10 +30,10 @@ ms.locfileid: "61911211"
  [!code-csharp[PopupCustomPlacement#DelegateDefinition](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupCustomPlacement/CSharp/Window1.xaml.cs#delegatedefinition)]
  [!code-vb[PopupCustomPlacement#DelegateDefinition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PopupCustomPlacement/visualbasic/window1.xaml.vb#delegatedefinition)]  
   
- 전체 샘플을 참조 하세요 [Popup 배치 샘플](https://go.microsoft.com/fwlink/?LinkID=160032)합니다.  
+ 전체 샘플은 [팝업 배치 샘플을](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS)참조하십시오.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Windows.Controls.Primitives.Popup>
-- [팝업 개요](popup-overview.md)
+- [Popup 개요](popup-overview.md)
 - [방법 항목](popup-how-to-topics.md)
