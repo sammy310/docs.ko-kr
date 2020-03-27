@@ -28,7 +28,7 @@ ms.locfileid: "75937516"
   
  [!code-csharp[csProgGuideExtensionMethods#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#4)]  
   
- `WordCount` 지시문을 사용하여 `using` 확장 메서드를 범위로 가져올 수 있습니다.  
+ `using` 지시문을 사용하여 `WordCount` 확장 메서드를 범위로 가져올 수 있습니다.
   
 ```csharp  
 using ExtensionMethods;  
