@@ -2,18 +2,18 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: 1a94acde3d0726808deebcae1437e7318f5392df
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3aacc7c73167771a632bb31164f2c551d60ce8f0
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183554"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345241"
 ---
-# <a name="knownassemblyattribute"></a><span data-ttu-id="260be-102">KnownAssemblyAttribute</span><span class="sxs-lookup"><span data-stu-id="260be-102">KnownAssemblyAttribute</span></span>
-<span data-ttu-id="260be-103">이 샘플에서는 <xref:System.Runtime.Serialization.DataContractResolver> 클래스를 사용하여 serialization 및 deserialization 프로세스를 사용자 지정하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="260be-103">This sample demonstrates how the serialization and deserialization processes can be customized by using the <xref:System.Runtime.Serialization.DataContractResolver> class.</span></span> <span data-ttu-id="260be-104">또한 serialization 및 deserialization 동안 알려진 형식을 동적으로 추가하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="260be-104">This sample shows how to dynamically add known types during serialization and deserialization.</span></span>  
+# <a name="knownassemblyattribute"></a><span data-ttu-id="390d4-102">KnownAssemblyAttribute</span><span class="sxs-lookup"><span data-stu-id="390d4-102">KnownAssemblyAttribute</span></span>
+<span data-ttu-id="390d4-103">이 샘플에서는 <xref:System.Runtime.Serialization.DataContractResolver> 클래스를 사용하여 serialization 및 deserialization 프로세스를 사용자 지정하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="390d4-103">This sample demonstrates how the serialization and deserialization processes can be customized by using the <xref:System.Runtime.Serialization.DataContractResolver> class.</span></span> <span data-ttu-id="390d4-104">또한 serialization 및 deserialization 동안 알려진 형식을 동적으로 추가하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="390d4-104">This sample shows how to dynamically add known types during serialization and deserialization.</span></span>  
   
-## <a name="sample-details"></a><span data-ttu-id="260be-105">샘플 세부 정보</span><span class="sxs-lookup"><span data-stu-id="260be-105">Sample Details</span></span>  
- <span data-ttu-id="260be-106">이 샘플은 네 개의 프로젝트로 구성되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="260be-106">This sample is composed of four projects.</span></span> <span data-ttu-id="260be-107">이 중 하나는 IIS에서 호스트되며 다음 서비스 계약을 정의하는 서비스에 해당합니다.</span><span class="sxs-lookup"><span data-stu-id="260be-107">One of them corresponds to the service, to be hosted by IIS, which defines the following service contract.</span></span>  
+## <a name="sample-details"></a><span data-ttu-id="390d4-105">샘플 세부 정보</span><span class="sxs-lookup"><span data-stu-id="390d4-105">Sample Details</span></span>  
+ <span data-ttu-id="390d4-106">이 샘플은 네 개의 프로젝트로 구성되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="390d4-106">This sample is composed of four projects.</span></span> <span data-ttu-id="390d4-107">이 중 하나는 IIS에서 호스트되며 다음 서비스 계약을 정의하는 서비스에 해당합니다.</span><span class="sxs-lookup"><span data-stu-id="390d4-107">One of them corresponds to the service, to be hosted by IIS, which defines the following service contract.</span></span>  
   
 ```csharp
 // Definition of a service contract.  
@@ -38,7 +38,7 @@ public interface IDataContractCalculator
 }  
 ```  
   
- <span data-ttu-id="260be-108">서비스 계약은 다음 예제와 같이 구현됩니다.</span><span class="sxs-lookup"><span data-stu-id="260be-108">The service contract is implemented as shown in the following example.</span></span>  
+ <span data-ttu-id="390d4-108">서비스 계약은 다음 예제와 같이 구현됩니다.</span><span class="sxs-lookup"><span data-stu-id="390d4-108">The service contract is implemented as shown in the following example.</span></span>  
   
 ```csharp
 // Service class that implements the service contract.  
@@ -84,7 +84,7 @@ public interface IDataContractCalculator
 }  
 ```  
   
- <span data-ttu-id="260be-109">다른 프로젝트는 서버와 통신하면서 서버에서 노출하는 메서드를 호출하는 클라이언트에 해당합니다.</span><span class="sxs-lookup"><span data-stu-id="260be-109">Another project corresponds to the client, which communicates with the server and invokes the methods that it exposes.</span></span> <span data-ttu-id="260be-110">클라이언트는 다음 예제와 같이 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="260be-110">The definition of the client is shown in the following example.</span></span>  
+ <span data-ttu-id="390d4-109">다른 프로젝트는 서버와 통신하면서 서버에서 노출하는 메서드를 호출하는 클라이언트에 해당합니다.</span><span class="sxs-lookup"><span data-stu-id="390d4-109">Another project corresponds to the client, which communicates with the server and invokes the methods that it exposes.</span></span> <span data-ttu-id="390d4-110">클라이언트는 다음 예제와 같이 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="390d4-110">The definition of the client is shown in the following example.</span></span>  
   
 ```csharp  
  // Client implementation code.  
@@ -187,11 +187,11 @@ public interface IDataContractCalculator
 }  
 ```  
   
- <span data-ttu-id="260be-111">서비스 계약의 정의는 `KnownAssembly` 특성으로 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="260be-111">The definition of the service contract is marked with the `KnownAssembly` attribute.</span></span> <span data-ttu-id="260be-112">이 특성에는 서비스와 클라이언트 모두에서 런타임에 알려지는 형식 라이브러리의 이름이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="260be-112">This attribute contains the name of a library of types, which all become known at runtime by both the service and the client.</span></span>  
+ <span data-ttu-id="390d4-111">서비스 계약의 정의는 `KnownAssembly` 특성으로 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="390d4-111">The definition of the service contract is marked with the `KnownAssembly` attribute.</span></span> <span data-ttu-id="390d4-112">이 특성에는 서비스와 클라이언트 모두에서 런타임에 알려지는 형식 라이브러리의 이름이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="390d4-112">This attribute contains the name of a library of types, which all become known at runtime by both the service and the client.</span></span>  
   
- <span data-ttu-id="260be-113">각 작업 동작에 대해 정의된 `KnownAssembly`로 `IContractBehavior`를 정의하기 위해 `DataContractSerializer` 특성은 `DataContractResolver`를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="260be-113">The `KnownAssembly` attribute implements `IContractBehavior` in order to define a `DataContractSerializer` with a `DataContractResolver` defined for each of the operation behaviors.</span></span> <span data-ttu-id="260be-114">`DataContractResolver`는 만들어질 때 어셈블리를 반영하며, 다른 형식을 직렬화 및 역직렬화할 때 사용할 형식과 이름 간의 매핑으로 사전을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="260be-114">The `DataContractResolver` reflects over the assembly when it is created, and creates the dictionary with the mapping between types and names to be used when serializing and deserializing the different types.</span></span> <span data-ttu-id="260be-115">이 방법으로 `ResolveType` 및 `ResolveName` 형식에서는 사전에 필요한 데이터를 조회해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="260be-115">In that way, the `ResolveType` and `ResolveName` types must look up the data required in the dictionary.</span></span>  
+ <span data-ttu-id="390d4-113">각 작업 동작에 대해 정의된 `KnownAssembly`로 `IContractBehavior`를 정의하기 위해 `DataContractSerializer` 특성은 `DataContractResolver`를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="390d4-113">The `KnownAssembly` attribute implements `IContractBehavior` in order to define a `DataContractSerializer` with a `DataContractResolver` defined for each of the operation behaviors.</span></span> <span data-ttu-id="390d4-114">`DataContractResolver`는 만들어질 때 어셈블리를 반영하며, 다른 형식을 직렬화 및 역직렬화할 때 사용할 형식과 이름 간의 매핑으로 사전을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="390d4-114">The `DataContractResolver` reflects over the assembly when it is created, and creates the dictionary with the mapping between types and names to be used when serializing and deserializing the different types.</span></span> <span data-ttu-id="390d4-115">이 방법으로 `ResolveType` 및 `ResolveName` 형식에서는 사전에 필요한 데이터를 조회해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="390d4-115">In that way, the `ResolveType` and `ResolveName` types must look up the data required in the dictionary.</span></span>  
   
- <span data-ttu-id="260be-116">이 샘플에서는 다음 예제와 같이 `DataContractResolver`를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="260be-116">The `DataContractResolver` defined for this sample is shown in the following example.</span></span>  
+ <span data-ttu-id="390d4-116">이 샘플에서는 다음 예제와 같이 `DataContractResolver`를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="390d4-116">The `DataContractResolver` defined for this sample is shown in the following example.</span></span>  
   
 ```csharp
 public class MyDataContractResolver : DataContractResolver  
@@ -275,7 +275,7 @@ public class MyDataContractResolver : DataContractResolver
    }  
 ```  
   
- <span data-ttu-id="260be-117">이 샘플에서 사용되는 형식 라이브러리는 다음 예제와 같습니다.</span><span class="sxs-lookup"><span data-stu-id="260be-117">The library of types used in this sample is shown in the following example.</span></span>  
+ <span data-ttu-id="390d4-117">이 샘플에서 사용되는 형식 라이브러리는 다음 예제와 같습니다.</span><span class="sxs-lookup"><span data-stu-id="390d4-117">The library of types used in this sample is shown in the following example.</span></span>  
   
 ```csharp
  [DataContract]  
@@ -320,9 +320,9 @@ public class ComplexNumberWithMagnitude : ComplexNumber
 }  
 ```  
   
- <span data-ttu-id="260be-118">`ComplexNumber` 형식은 런타임에 알려지므로 `ComplexNumberWithMagnitude`에서 이 형식을 정적으로 인식할 필요는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="260be-118">Note that `ComplexNumber` does not need to statically know the `ComplexNumberWithMagnitude` type, because it becomes known at runtime.</span></span>  
+ <span data-ttu-id="390d4-118">`ComplexNumber` 형식은 런타임에 알려지므로 `ComplexNumberWithMagnitude`에서 이 형식을 정적으로 인식할 필요는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="390d4-118">Note that `ComplexNumber` does not need to statically know the `ComplexNumberWithMagnitude` type, because it becomes known at runtime.</span></span>  
   
- <span data-ttu-id="260be-119">샘플이 빌드되어 실행될 때 클라이언트에서 얻는 예상 출력은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="260be-119">When the sample is built and executed, this is the expected output obtained in the client:</span></span>  
+ <span data-ttu-id="390d4-119">샘플이 빌드되어 실행될 때 클라이언트에서 얻는 예상 출력은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="390d4-119">When the sample is built and executed, this is the expected output obtained in the client:</span></span>  
   
 ```console  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
@@ -344,29 +344,29 @@ Lists combined:
 4 + 4i  
 ```  
   
-#### <a name="to-set-up-run-and-build-the-sample"></a><span data-ttu-id="260be-120">샘플을 설치, 실행 및 빌드하려면</span><span class="sxs-lookup"><span data-stu-id="260be-120">To set up, run, and build the sample</span></span>  
+#### <a name="to-set-up-run-and-build-the-sample"></a><span data-ttu-id="390d4-120">샘플을 설치, 실행 및 빌드하려면</span><span class="sxs-lookup"><span data-stu-id="390d4-120">To set up, run, and build the sample</span></span>  
   
-1. <span data-ttu-id="260be-121">오른쪽 단추로 클릭 합니다 **알려진Assembly속성** 및 **선택 속성**입니다.</span><span class="sxs-lookup"><span data-stu-id="260be-121">Right-click the solution **KnownAssemblyAttribute** and select **Properties**.</span></span>  
+1. <span data-ttu-id="390d4-121">오른쪽 단추로 클릭 합니다 **알려진Assembly속성** 및 **선택 속성**입니다.</span><span class="sxs-lookup"><span data-stu-id="390d4-121">Right-click the solution **KnownAssemblyAttribute** and select **Properties**.</span></span>  
   
-2. <span data-ttu-id="260be-122">**공통 속성에서** **시작 프로젝트를**선택한 다음 여러 시작 **프로젝트를**클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="260be-122">In **Common Properties**, select **Startup Project**, and then click **Multiple startup projects**.</span></span>  
+2. <span data-ttu-id="390d4-122">**공통 속성에서** **시작 프로젝트를**선택한 다음 여러 시작 **프로젝트를**클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="390d4-122">In **Common Properties**, select **Startup Project**, and then click **Multiple startup projects**.</span></span>  
   
-3. <span data-ttu-id="260be-123">**서비스** 및 **클라이언트** 프로젝트에 **시작** 작업을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="260be-123">Add the **Start** action to the **Service** and **Client** projects.</span></span>  
+3. <span data-ttu-id="390d4-123">**서비스** 및 **클라이언트** 프로젝트에 **시작** 작업을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="390d4-123">Add the **Start** action to the **Service** and **Client** projects.</span></span>  
   
-4. <span data-ttu-id="260be-124">**확인을**클릭하고 **F5를** 눌러 샘플을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="260be-124">Click **OK**, and press **F5** to run the sample.</span></span>  
+4. <span data-ttu-id="390d4-124">**확인을**클릭하고 **F5를** 눌러 샘플을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="390d4-124">Click **OK**, and press **F5** to run the sample.</span></span>  
   
-5. <span data-ttu-id="260be-125">애플리케이션이 제대로 실행되지 않으면 다음 단계를 따라 사용 환경이 올바르게 설정되었는지 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="260be-125">If the application does not run properly, follow these steps to make sure your environment has been properly set up:</span></span>  
+5. <span data-ttu-id="390d4-125">애플리케이션이 제대로 실행되지 않으면 다음 단계를 따라 사용 환경이 올바르게 설정되었는지 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="390d4-125">If the application does not run properly, follow these steps to make sure your environment has been properly set up:</span></span>  
   
-6. <span data-ttu-id="260be-126">Windows 통신 기초 [샘플에 대한 일회성 설정 절차를](https://go.microsoft.com/fwlink/?LinkId=150774)수행했어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="260be-126">Ensure that you have performed the [One-Time Set Up Procedure for the Windows Communication Foundation Samples](https://go.microsoft.com/fwlink/?LinkId=150774).</span></span>  
+6. <span data-ttu-id="390d4-126">Windows 통신 기초 [샘플에 대한 일회성 설정 절차를](https://docs.microsoft.com/dotnet/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples)수행했어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="390d4-126">Ensure that you have performed the [One-Time Set Up Procedure for the Windows Communication Foundation Samples](https://docs.microsoft.com/dotnet/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples).</span></span>  
   
-7. <span data-ttu-id="260be-127">솔루션을 빌드하려면 Windows 통신 [기반 빌드 샘플의](https://go.microsoft.com/fwlink/?LinkId=150775)지침을 따르십시오.</span><span class="sxs-lookup"><span data-stu-id="260be-127">To build the solution, follow the instructions in [Building the Windows Communication Foundation Sample](https://go.microsoft.com/fwlink/?LinkId=150775).</span></span>  
+7. <span data-ttu-id="390d4-127">솔루션을 빌드하려면 Windows 통신 [기반 빌드 샘플의](https://docs.microsoft.com/dotnet/framework/wcf/samples/building-the-samples)지침을 따르십시오.</span><span class="sxs-lookup"><span data-stu-id="390d4-127">To build the solution, follow the instructions in [Building the Windows Communication Foundation Sample](https://docs.microsoft.com/dotnet/framework/wcf/samples/building-the-samples).</span></span>  
   
-8. <span data-ttu-id="260be-128">단일 또는 교차 컴퓨터 구성에서 샘플을 실행하려면 Windows [통신 기반 샘플 실행의 지침을 따르십시오.](https://go.microsoft.com/fwlink/?LinkId=150776)</span><span class="sxs-lookup"><span data-stu-id="260be-128">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](https://go.microsoft.com/fwlink/?LinkId=150776).</span></span>  
+8. <span data-ttu-id="390d4-128">단일 또는 교차 컴퓨터 구성에서 샘플을 실행하려면 Windows [통신 기반 샘플 실행의 지침을 따르십시오.](https://docs.microsoft.com/dotnet/framework/wcf/samples/running-the-samples)</span><span class="sxs-lookup"><span data-stu-id="390d4-128">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](https://docs.microsoft.com/dotnet/framework/wcf/samples/running-the-samples).</span></span>  
   
 > [!IMPORTANT]
-> <span data-ttu-id="260be-129">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="260be-129">The samples may already be installed on your machine.</span></span> <span data-ttu-id="260be-130">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="260be-130">Check for the following (default) directory before continuing.</span></span>  
+> <span data-ttu-id="390d4-129">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="390d4-129">The samples may already be installed on your machine.</span></span> <span data-ttu-id="390d4-130">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="390d4-130">Check for the following (default) directory before continuing.</span></span>  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> <span data-ttu-id="260be-131">이 디렉터리가 없는 경우 [.NET Framework 4에 대한 WCF(Windows 통신 재단) 및 WF(Windows 워크플로우 재단) 샘플로](https://www.microsoft.com/download/details.aspx?id=21459) 이동하여 모든 WCF(Windows 통신 재단) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드합니다.</span><span class="sxs-lookup"><span data-stu-id="260be-131">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="260be-132">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="260be-132">This sample is located in the following directory.</span></span>  
+> <span data-ttu-id="390d4-131">이 디렉터리가 없는 경우 [.NET Framework 4에 대한 WCF(Windows 통신 재단) 및 WF(Windows 워크플로우 재단) 샘플로](https://www.microsoft.com/download/details.aspx?id=21459) 이동하여 모든 WCF(Windows 통신 재단) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드합니다.</span><span class="sxs-lookup"><span data-stu-id="390d4-131">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="390d4-132">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="390d4-132">This sample is located in the following directory.</span></span>  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownAssemblyAttribute`  
