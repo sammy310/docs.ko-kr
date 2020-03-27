@@ -35,6 +35,8 @@
       href: how-to-guides/ubuntu-instructions.md
     - name: Windows에서 애플리케이션 빌드
       href: how-to-guides/windows-instructions.md
+    - name: Azure HDInsight에 대화형 Notebook 설치
+      href: how-to-guides/hdinsight-notebook-installation.md
 - name: 참고
   items:
     - name: API 참조

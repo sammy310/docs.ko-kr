@@ -1,44 +1,330 @@
 - name: .NET Framework 가이드
-  href: index.md
-- name: 새로운 기능
-  href: whats-new/
+  href: index.yml
+- name: .NET Framework의 개요
+  href: get-started/overview.md
 - name: 시작
-  href: get-started/
+  items:
+    - name: 개요
+      href: get-started/index.md
+    - name: .NET Framework 및 번외 릴리스
+      href: get-started/the-net-framework-and-out-of-band-releases.md
+    - name: .NET Core 및 오픈 소스
+      href: get-started/net-core-and-open-source.md
+    - name: 시스템 요구 사항
+      href: get-started/system-requirements.md
 - name: 설치 가이드
-  href: install/
+  items:
+    - name: 개요
+      href: install/index.md
+    - name: 개발자용
+      href: install/guide-for-developers.md
+    - name: OS 버전별
+      items:
+        - name: Windows 10 및 Windows Server 2016
+          href: install/on-windows-10.md
+        - name: Windows 8.1 및 Windows Server 2012 R2
+          href: install/on-windows-8-1.md
+        - name: Windows 8 및 Windows Server 2012
+          href: install/on-windows-8.md
+        - name: Windows 7 SP1 및 Windows Server 2008 R2
+          href: install/on-windows-7.md
+        - name: Windows Vista 및 Windows Server 2008
+          href: install/on-windows-vista.md
+        - name: Windows XP 및 Windows Server 2003
+          href: install/on-windows-xp.md
+    - name: .NET Framework 복구
+      href: install/repair.md
+    - name: 문제 해결
+      items:
+        - name: 설치 및 제거 문제 해결
+          href: install/troubleshoot-blocked-installations-and-uninstallations.md
+        - name: ‘이 애플리케이션을 시작할 수 없음’ 문제 해결
+          href: install/application-not-started.md
+    - name: Windows 8~windows 10의 .NET Framework 3.5
+      href: install/dotnet-35-windows-10.md
+    - name: Windows 8~Windows 10의 .NET Framework 1.1
+      href: install/run-net-framework-1-1-apps.md
 - name: 마이그레이션 가이드
-  href: migration-guide/
+  items:
+    - name: 개요
+      href: migration-guide/index.md
+    - name: 호환성
+      items:
+        - name: 애플리케이션 호환성
+          items:
+            - name: 개요
+              displayName: App compatibility
+              href: migration-guide/application-compatibility.md
+            - name: 런타임 변경 내용
+              items:
+                - name: 4.0 ~ 4.5
+                  href: migration-guide/runtime/4.0-4.5.md
+                - name: 4.0 ~ 4.5.1
+                  href: migration-guide/runtime/4.0-4.5.1.md
+                - name: 4.0 ~ 4.5.2
+                  href: migration-guide/runtime/4.0-4.5.2.md
+                - name: 4.0 ~ 4.6
+                  href: migration-guide/runtime/4.0-4.6.md
+                - name: 4.0 ~ 4.6.1
+                  href: migration-guide/runtime/4.0-4.6.1.md
+                - name: 4.0 ~ 4.6.2
+                  href: migration-guide/runtime/4.0-4.6.2.md
+                - name: 4.0 ~ 4.7
+                  href: migration-guide/runtime/4.0-4.7.md
+                - name: 4.0 ~ 4.7.1
+                  href: migration-guide/runtime/4.0-4.7.1.md
+                - name: 4.0 ~ 4.7.2
+                  href: migration-guide/runtime/4.0-4.7.2.md
+                - name: 4.0 ~ 4.8
+                  href: migration-guide/runtime/4.0-4.8.md
+                - name: 4.5 ~ 4.5.1
+                  href: migration-guide/runtime/4.5-4.5.1.md
+                - name: 4.5 ~ 4.5.2
+                  href: migration-guide/runtime/4.5-4.5.2.md
+                - name: 4.5 ~ 4.6
+                  href: migration-guide/runtime/4.5-4.6.md
+                - name: 4.5 ~ 4.6.1
+                  href: migration-guide/runtime/4.5-4.6.1.md
+                - name: 4.5 ~ 4.6.2
+                  href: migration-guide/runtime/4.5-4.6.2.md
+                - name: 4.5 ~ 4.7
+                  href: migration-guide/runtime/4.5-4.7.md
+                - name: 4.5 ~ 4.7.1
+                  href: migration-guide/runtime/4.5-4.7.1.md
+                - name: 4.5 ~ 4.7.2
+                  href: migration-guide/runtime/4.5-4.7.2.md
+                - name: 4.5 ~ 4.8
+                  href: migration-guide/runtime/4.5-4.8.md
+                - name: 4.5.1 ~ 4.5.2
+                  href: migration-guide/runtime/4.5.1-4.5.2.md
+                - name: 4.5.1 ~ 4.6
+                  href: migration-guide/runtime/4.5.1-4.6.md
+                - name: 4.5.1 ~ 4.6.1
+                  href: migration-guide/runtime/4.5.1-4.6.1.md
+                - name: 4.5.1 ~ 4.6.2
+                  href: migration-guide/runtime/4.5.1-4.6.2.md
+                - name: 4.5.1 ~ 4.7
+                  href: migration-guide/runtime/4.5.1-4.7.md
+                - name: 4.5.1 ~ 4.7.1
+                  href: migration-guide/runtime/4.5.1-4.7.1.md
+                - name: 4.5.1 ~ 4.7.2
+                  href: migration-guide/runtime/4.5.1-4.7.2.md
+                - name: 4.5.1 ~ 4.8
+                  href: migration-guide/runtime/4.5.1-4.8.md
+                - name: 4.5.2 ~ 4.6
+                  href: migration-guide/runtime/4.5.2-4.6.md
+                - name: 4.5.2 ~ 4.6.1
+                  href: migration-guide/runtime/4.5.2-4.6.1.md
+                - name: 4.5.2 ~ 4.6.2
+                  href: migration-guide/runtime/4.5.2-4.6.2.md
+                - name: 4.5.2 ~ 4.7
+                  href: migration-guide/runtime/4.5.2-4.7.md
+                - name: 4.5.2 ~ 4.7.1
+                  href: migration-guide/runtime/4.5.2-4.7.1.md
+                - name: 4.5.2 ~ 4.7.2
+                  href: migration-guide/runtime/4.5.2-4.7.2.md
+                - name: 4.5.2 ~ 4.8
+                  href: migration-guide/runtime/4.5.2-4.8.md
+                - name: 4.6 ~ 4.6.1
+                  href: migration-guide/runtime/4.6-4.6.1.md
+                - name: 4.6 ~ 4.6.2
+                  href: migration-guide/runtime/4.6-4.6.2.md
+                - name: 4.6 ~ 4.7
+                  href: migration-guide/runtime/4.6-4.7.md
+                - name: 4.6 ~ 4.7.1
+                  href: migration-guide/runtime/4.6-4.7.1.md
+                - name: 4.6 ~ 4.7.2
+                  href: migration-guide/runtime/4.6-4.7.2.md
+                - name: 4.6 ~ 4.8
+                  href: migration-guide/runtime/4.6-4.8.md
+                - name: 4.6.1 ~ 4.6.2
+                  href: migration-guide/runtime/4.6.1-4.6.2.md
+                - name: 4.6.1 ~ 4.7
+                  href: migration-guide/runtime/4.6.1-4.7.md
+                - name: 4.6.1 ~ 4.7.1
+                  href: migration-guide/runtime/4.6.1-4.7.1.md
+                - name: 4.6.1 ~ 4.7.2
+                  href: migration-guide/runtime/4.6.1-4.7.2.md
+                - name: 4.6.1 ~ 4.8
+                  href: migration-guide/runtime/4.6.1-4.8.md
+                - name: 4.6.2 ~ 4.7
+                  href: migration-guide/runtime/4.6.2-4.7.md
+                - name: 4.6.2 ~ 4.7.1
+                  href: migration-guide/runtime/4.6.2-4.7.1.md
+                - name: 4.6.2 ~ 4.7.2
+                  href: migration-guide/runtime/4.6.2-4.7.2.md
+                - name: 4.6.2 ~ 4.8
+                  href: migration-guide/runtime/4.6.2-4.8.md
+                - name: 4.7 ~ 4.7.1
+                  href: migration-guide/runtime/4.7-4.7.1.md
+                - name: 4.7 ~ 4.7.2
+                  href: migration-guide/runtime/4.7-4.7.2.md
+                - name: 4.7 ~ 4.8
+                  href: migration-guide/runtime/4.7-4.8.md
+                - name: 4.7.1 ~ 4.7.2
+                  href: migration-guide/runtime/4.7.1-4.7.2.md
+                - name: 4.7.1 ~ 4.8
+                  href: migration-guide/runtime/4.7.1-4.8.md
+                - name: 4.7.2 ~ 4.8
+                  href: migration-guide/runtime/4.7.2-4.8.md
+            - name: 대상 다시 지정 변경 내용
+              items:
+                - name: 4.0 ~ 4.5
+                  href: migration-guide/retargeting/4.0-4.5.md
+                - name: 4.0 ~ 4.5.1
+                  href: migration-guide/retargeting/4.0-4.5.1.md
+                - name: 4.0 ~ 4.5.2
+                  href: migration-guide/retargeting/4.0-4.5.2.md
+                - name: 4.0 ~ 4.6
+                  href: migration-guide/retargeting/4.0-4.6.md
+                - name: 4.0 ~ 4.6.1
+                  href: migration-guide/retargeting/4.0-4.6.1.md
+                - name: 4.0 ~ 4.6.2
+                  href: migration-guide/retargeting/4.0-4.6.2.md
+                - name: 4.0 ~ 4.7
+                  href: migration-guide/retargeting/4.0-4.7.md
+                - name: 4.0 ~ 4.7.1
+                  href: migration-guide/retargeting/4.0-4.7.1.md
+                - name: 4.0 ~ 4.7.2
+                  href: migration-guide/retargeting/4.0-4.7.2.md
+                - name: 4.0 ~ 4.8
+                  href: migration-guide/retargeting/4.0-4.8.md
+                - name: 4.5 ~ 4.5.1
+                  href: migration-guide/retargeting/4.5-4.5.1.md
+                - name: 4.5 ~ 4.5.2
+                  href: migration-guide/retargeting/4.5-4.5.2.md
+                - name: 4.5 ~ 4.6
+                  href: migration-guide/retargeting/4.5-4.6.md
+                - name: 4.5 ~ 4.6.1
+                  href: migration-guide/retargeting/4.5-4.6.1.md
+                - name: 4.5 ~ 4.6.2
+                  href: migration-guide/retargeting/4.5-4.6.2.md
+                - name: 4.5 ~ 4.7
+                  href: migration-guide/retargeting/4.5-4.7.md
+                - name: 4.5 ~ 4.7.1
+                  href: migration-guide/retargeting/4.5-4.7.1.md
+                - name: 4.5 ~ 4.7.2
+                  href: migration-guide/retargeting/4.5-4.7.2.md
+                - name: 4.5 ~ 4.8
+                  href: migration-guide/retargeting/4.5-4.8.md
+                - name: 4.5.1 ~ 4.5.2
+                  href: migration-guide/retargeting/4.5.1-4.5.2.md
+                - name: 4.5.1 ~ 4.6
+                  href: migration-guide/retargeting/4.5.1-4.6.md
+                - name: 4.5.1 ~ 4.6.1
+                  href: migration-guide/retargeting/4.5.1-4.6.1.md
+                - name: 4.5.1 ~ 4.6.2
+                  href: migration-guide/retargeting/4.5.1-4.6.2.md
+                - name: 4.5.1 ~ 4.7
+                  href: migration-guide/retargeting/4.5.1-4.7.md
+                - name: 4.5.1 ~ 4.7.1
+                  href: migration-guide/retargeting/4.5.1-4.7.1.md
+                - name: 4.5.1 ~ 4.7.2
+                  href: migration-guide/retargeting/4.5.1-4.7.2.md
+                - name: 4.5.2 ~ 4.6
+                  href: migration-guide/retargeting/4.5.2-4.6.md
+                - name: 4.5.2 ~ 4.6.1
+                  href: migration-guide/retargeting/4.5.2-4.6.1.md
+                - name: 4.5.2 ~ 4.6.2
+                  href: migration-guide/retargeting/4.5.2-4.6.2.md
+                - name: 4.5.2 ~ 4.7
+                  href: migration-guide/retargeting/4.5.2-4.7.md
+                - name: 4.5.2 ~ 4.7.1
+                  href: migration-guide/retargeting/4.5.2-4.7.1.md
+                - name: 4.5.2 ~ 4.7.2
+                  href: migration-guide/retargeting/4.5.2-4.7.2.md
+                - name: 4.5.2 ~ 4.8
+                  href: migration-guide/retargeting/4.5.2-4.8.md
+                - name: 4.6 ~ 4.6.1
+                  href: migration-guide/retargeting/4.6-4.6.1.md
+                - name: 4.6 ~ 4.6.2
+                  href: migration-guide/retargeting/4.6-4.6.2.md
+                - name: 4.6 ~ 4.7
+                  href: migration-guide/retargeting/4.6-4.7.md
+                - name: 4.6 ~ 4.7.1
+                  href: migration-guide/retargeting/4.6-4.7.1.md
+                - name: 4.6 ~ 4.7.2
+                  href: migration-guide/retargeting/4.6-4.7.2.md
+                - name: 4.6 ~ 4.8
+                  href: migration-guide/retargeting/4.6-4.8.md
+                - name: 4.6.1 ~ 4.6.2
+                  href: migration-guide/retargeting/4.6.1-4.6.2.md
+                - name: 4.6.1 ~ 4.7
+                  href: migration-guide/retargeting/4.6.1-4.7.md
+                - name: 4.6.1 ~ 4.7.1
+                  href: migration-guide/retargeting/4.6.1-4.7.1.md
+                - name: 4.6.1 ~ 4.7.2
+                  href: migration-guide/retargeting/4.6.1-4.7.2.md
+                - name: 4.6.1 ~ 4.8
+                  href: migration-guide/retargeting/4.6.1-4.8.md
+                - name: 4.6.2 ~ 4.7
+                  href: migration-guide/retargeting/4.6.2-4.7.md
+                - name: 4.6.2 ~ 4.7.1
+                  href: migration-guide/retargeting/4.6.2-4.7.1.md
+                - name: 4.6.2 ~ 4.7.2
+                  href: migration-guide/retargeting/4.6.2-4.7.2.md
+                - name: 4.6.2 ~ 4.8
+                  href: migration-guide/retargeting/4.6.2-4.8.md
+                - name: 4.7 ~ 4.7.1
+                  href: migration-guide/retargeting/4.7-4.7.1.md
+                - name: 4.7 ~ 4.7.2
+                  href: migration-guide/retargeting/4.7-4.7.2.md
+                - name: 4.7 ~ 4.8
+                  href: migration-guide/retargeting/4.7-4.8.md
+                - name: 4.7.1 ~ 4.7.2
+                  href: migration-guide/retargeting/4.7.1-4.7.2.md
+                - name: 4.7.1 ~ 4.8
+                  href: migration-guide/retargeting/4.7.1-4.8.md
+                - name: 4.7.2 ~ 4.8
+                  href: migration-guide/retargeting/4.7.2-4.8.md
+        - name: 버전 호환성
+          href: migration-guide/version-compatibility.md
+    - name: .NET Framework 버전
+      items:
+        - name: 버전 및 종속성
+          href: migration-guide/versions-and-dependencies.md
+        - name: 설치된 버전 찾기
+          href: migration-guide/how-to-determine-which-versions-are-installed.md
+        - name: 설치된 업데이트 찾기
+          href: migration-guide/how-to-determine-which-net-framework-updates-are-installed.md
+    - name: .NET Framework 4 또는 이상을 지원하도록 앱 구성
+      href: migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md
+    - name: .NET Framework 1.1에서 마이그레이션
+      href: migration-guide/migrating-from-the-net-framework-1-1.md
+    - name: .NET Framework 4 마이그레이션 문제
+      href: migration-guide/net-framework-4-migration-issues.md
 - name: 개발 가이드
   href: development-guide.md
   items:
     - name: 애플리케이션 도메인 및 어셈블리
       href: app-domains/
-    - name: 데스크톱 응용 프로그램의 리소스
+    - name: 데스크톱 앱의 리소스
       href: resources/
     - name: 액세스 가능성
       href: ui-automation/
     - name: 데이터 및 모델링
       href: data/
-    - name: 클라이언트 애플리케이션
-      href: develop-client-apps.md
+    - name: 클라이언트 앱
       items:
+        - name: 개요
+          href: develop-client-apps.md
         - name: Windows Presentation Foundation
           href: wpf/
         - name: Windows Forms
           href: winforms/
-    - name: WCF를 사용하여 개발한 서비스 기반 응용 프로그램
+    - name: WCF를 사용하여 개발한 서비스 지향 앱
       href: wcf/
     - name: Windows Workflow Foundation
       href: windows-workflow-foundation/
-    - name: Windows 서비스 응용 프로그램
+    - name: Windows 서비스 앱
       href: windows-services/
-    - name: 64비트 애플리케이션
+    - name: 64비트 앱
       href: 64-bit-apps.md
-    - name: ASP.NET을 사용하는 웹 애플리케이션
+    - name: ASP.NET을 사용하여 개발한 웹앱
       href: develop-web-apps-with-aspnet.md
-    - name: .NET Framework의 네트워크 프로그래밍
+    - name: 네트워크 프로그래밍
       href: network-programming/
-    - name: 응용 프로그램 구성
+    - name: 앱 구성
       href: configure-apps/
     - name: .NET 네이티브로 앱 컴파일
       href: net-native/
@@ -52,13 +338,253 @@
       href: reflection-and-codedom/
     - name: MEF(Managed Extensibility Framework)
       href: mef/
-    - name: 비관리 코드와의 상호 운용
+    - name: 비관리 코드와 상호 운용
       href: interop/
     - name: 관리되지 않는 API 참조
       href: unmanaged-api/
     - name: XAML 서비스
       href: ../desktop-wpf/xaml-services/
 - name: 도구
-  href: tools/
-- name: 추가 클래스 라이브러리 및 API
-  href: additional-apis/
+  items:
+    - name: 개요
+      href: tools/index.md
+    - name: Al.exe(어셈블리 링커)
+      href: tools/al-exe-assembly-linker.md
+    - name: Aximp.exe(Windows Forms ActiveX 컨트롤 가져오기)
+      href: tools/aximp-exe-windows-forms-activex-control-importer.md
+    - name: Caspol.exe(코드 액세스 보안 정책 도구)
+      href: tools/caspol-exe-code-access-security-policy-tool.md
+    - name: Cert2spc.exe(소프트웨어 게시자 인증서 테스트 도구)
+      href: tools/cert2spc-exe-software-publisher-certificate-test-tool.md
+    - name: Certmgr.exe(인증서 관리자 도구)
+      href: tools/certmgr-exe-certificate-manager-tool.md
+    - name: Clrver.exe(CLR 버전 도구)
+      href: tools/clrver-exe-clr-version-tool.md
+    - name: 명령 프롬프트
+      href: tools/developer-command-prompt-for-vs.md
+    - name: CorFlags.exe(CorFlags 변환 도구)
+      href: tools/corflags-exe-corflags-conversion-tool.md
+    - name: Fuslogvw.exe(어셈블리 바인딩 로그 뷰어)
+      href: tools/fuslogvw-exe-assembly-binding-log-viewer.md
+    - name: Gacutil.exe(전역 어셈블리 캐시 도구)
+      href: tools/gacutil-exe-gac-tool.md
+    - name: Ilasm.exe(IL 어셈블러)
+      href: tools/ilasm-exe-il-assembler.md
+    - name: Ildasm.exe(IL 디스어셈블러)
+      href: tools/ildasm-exe-il-disassembler.md
+    - name: Installutil.exe(설치 관리자 도구)
+      href: tools/installutil-exe-installer-tool.md
+    - name: Lc.exe(라이선스 컴파일러)
+      href: tools/lc-exe-license-compiler.md
+    - name: Mage.exe(매니페스트 생성 및 편집 도구)
+      href: tools/mage-exe-manifest-generation-and-editing-tool.md
+    - name: 'MageUI.exe(매니페스트 생성 및 편집 도구, 그래픽 클라이언트)'
+      href: tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md
+    - name: MDbg.exe(.NET Framework 명령줄 디버거)
+      href: tools/mdbg-exe.md
+    - name: Mgmtclassgen.exe(관리 강력한 형식의 클래스 생성기)
+      href: tools/mgmtclassgen-exe.md
+    - name: Mpgo.exe(관리형 프로필 기반 최적화 도구)
+      href: tools/mpgo-exe-managed-profile-guided-optimization-tool.md
+    - name: Ngen.exe(네이티브 이미지 생성기)
+      href: tools/ngen-exe-native-image-generator.md
+    - name: Peverify.exe(PEVerify 도구)
+      href: tools/peverify-exe-peverify-tool.md
+    - name: Regasm.exe(어셈블리 등록 도구)
+      href: tools/regasm-exe-assembly-registration-tool.md
+    - name: Regsvcs.exe(.NET 서비스 설치 도구)
+      href: tools/regsvcs-exe-net-services-installation-tool.md
+    - name: Resgen.exe(리소스 파일 생성기)
+      href: tools/resgen-exe-resource-file-generator.md
+    - name: SecAnnotate.exe(.NET Security Annotator 도구)
+      href: tools/secannotate-exe-net-security-annotator-tool.md
+    - name: SignTool.exe(서명 도구)
+      href: tools/signtool-exe.md
+    - name: Sn.exe(강력한 이름 도구)
+      href: tools/sn-exe-strong-name-tool.md
+    - name: SOS.dll(SOS 디버깅 확장)
+      href: tools/sos-dll-sos-debugging-extension.md
+    - name: SqlMetal.exe(코드 생성 도구)
+      href: tools/sqlmetal-exe-code-generation-tool.md
+    - name: Storeadm.exe(격리된 스토리지 도구)
+      href: tools/storeadm-exe-isolated-storage-tool.md
+    - name: Tlbexp.exe(형식 라이브러리 내보내기)
+      href: tools/tlbexp-exe-type-library-exporter.md
+    - name: Tlbimp.exe(형식 라이브러리 가져오기)
+      href: tools/tlbimp-exe-type-library-importer.md
+    - name: Winmdexp.exe(Windows 런타임 메타데이터 내보내기 도구)
+      href: tools/winmdexp-exe-windows-runtime-metadata-export-tool.md
+    - name: Winmdexp.exe 오류 메시지
+      href: tools/winmdexp-exe-error-messages.md
+    - name: Winres.exe(Windows Forms 리소스 편집기)
+      href: tools/winres-exe-windows-forms-resource-editor.md
+- name: 추가 API
+  items:
+    - name: 개요
+      href: additional-apis/index.md
+    - name: Microsoft.SqlServer.Server
+      items:
+        - name: SmiOrderProperty.Item
+          href: additional-apis/microsoft.sqlserver.server.smiorderproperty.item.md
+    - name: 시스템
+      items:
+        - name: Exception.PrepForRemoting 메서드
+          href: additional-apis/system.exception.prepforremoting.md
+    - name: System.Data.SqlTypes
+      items:
+        - name: SqlChars.Stream 속성
+          href: additional-apis/system.data.sqltypes.sqlchars.stream.md
+        - name: SqlStreamChars 클래스
+          items:
+            - name: SqlStreamChars 생성자
+              href: additional-apis/system.data.sqltypes.sqlstreamchars.-ctor.md
+            - name: CanSeek 속성
+              href: additional-apis/system.data.sqltypes.sqlstreamchars.canseek.md
+            - name: IsNull 속성
+              href: additional-apis/system.data.sqltypes.sqlstreamchars.isnull.md
+            - name: Length 속성
+              href: additional-apis/system.data.sqltypes.sqlstreamchars.length.md
+            - name: Close 메서드
+              href: additional-apis/system.data.sqltypes.sqlstreamchars.close.md
+            - name: Dispose 메서드
+              href: additional-apis/system.data.sqltypes.sqlstreamchars.dispose.md
+            - name: Flush 메서드
+              href: additional-apis/system.data.sqltypes.sqlstreamchars.flush.md
+            - name: Read 메서드
+              href: additional-apis/system.data.sqltypes.sqlstreamchars.read.md
+            - name: Seek 메서드
+              href: additional-apis/system.data.sqltypes.sqlstreamchars.seek.md
+            - name: SetLength 메서드
+              href: additional-apis/system.data.sqltypes.sqlstreamchars.setlength.md
+            - name: Write 메서드
+              href: additional-apis/system.data.sqltypes.sqlstreamchars.write.md
+    - name: System.IO
+      items:
+        - name: MemoryStream.InternalGetOriginAndLength 메서드
+          href: additional-apis/system.io.memorystream.internalgetoriginandlength.md
+    - name: System.Net
+      items:
+        - name: Connection 클래스
+          href: additional-apis/connection.md
+          items:
+            - name: m_WriteList 필드(_W)
+              href: additional-apis/m_writelist.md
+        - name: ConnectionGroup 클래스
+          href: additional-apis/connectiongroup.md
+          items:
+            - name: m_ConnectionList 필드(_C)
+              href: additional-apis/m_connectionlist.md
+        - name: ConnectStream.Connection 속성
+          href: additional-apis/system.net.connectstream.connection.md
+        - name: CoreResponseData 클래스
+          href: additional-apis/coreresponsedata.md
+          items:
+            - name: m_ResponseHeaders 필드(_R)
+              href: additional-apis/coreresponsedata_m_responseheaders.md
+            - name: m_StatusCode 필드(_S)
+              href: additional-apis/coreresponsedata_m_statuscode.md
+        - name: HttpWebRequest 클래스
+          items:
+            - name: _AutoRedirects 필드(_A)
+              href: additional-apis/_autoredirects.md
+            - name: _CoreResponse 필드(_C)
+              href: additional-apis/httpwebrequest__coreresponse.md
+            - name: _HttpResponse 필드(_H)
+              href: additional-apis/_httpresponse.md
+        - name: PooledStream.NetworkStream 속성
+          href: additional-apis/system.net.pooledstream.networkstream.md
+        - name: RtcState 클래스
+          href: additional-apis/system.net.rtcstate.md
+        - name: ServicePoint 클래스
+          items:
+            - name: m_ConnectionGroupList 필드(_C)
+              href: additional-apis/m_connectiongrouplist.md
+            - name: s_ServicePointTable 필드(_S)
+              href: additional-apis/s_servicepointtable.md
+        - name: TlsStream.m_Worker 필드
+          href: additional-apis/system.net.tlsstream.m_worker.md
+    - name: System.Net.Security
+      items:
+        - name: SslState.SslProtocol 속성
+          href: additional-apis/system.net.security.sslstate.sslprotocol.md
+    - name: System.ServiceModel.Channels
+      items:
+        - name: Message 클래스
+          items:
+            - name: BodyToString 메서드
+              href: additional-apis/system.servicemodel.channels.message.bodytostring.md
+            - name: WriteStartHeaders 메서드
+              href: additional-apis/system.servicemodel.channels.message.writestartheaders.md
+    - name: System.Windows.Diagnostics
+      items:
+        - name: VisualDiagnostics.s_isDebuggerCheckDisabledForTestPurposes
+          href: additional-apis/s-isdebuggercheckdisabledfortestpurposes-field.md
+    - name: System.Windows.Forms.Design
+      items:
+        - name: DataMemberFieldEditor 클래스
+          href: additional-apis/datamemberfieldeditor-class.md
+        - name: DataMemberListEditor 클래스
+          href: additional-apis/datamemberlisteditor-class.md
+    - name: System.Windows.Xps
+      items:
+        - name: XpsDocumentWriter
+          items:
+            - name: raise__WritingCancelled 메서드
+              href: additional-apis/xpsdocumentwriter-raise-writingcancelled-method-system-windows-xps.md
+            - name: raise__WritingCompleted 메서드
+              href: additional-apis/xpsdocumentwriter-raise-writingcompleted-method-system-windows-xps.md
+            - name: raise__WritingPrintTicketRequired 메서드
+              href: additional-apis/xpsdocumentwriter-raise-writingprintticketrequired-method-system-windows-xps.md
+            - name: raise__WritingProgressChanged
+              href: additional-apis/xpsdocumentwriter-raise-writingprogresschanged-method-system-windows-xps.md
+            - name: _WritingCancelled
+              href: additional-apis/xpsdocumentwriter-writingcancelled-event-system-windows-xps.md
+            - name: _WritingCompleted
+              href: additional-apis/xpsdocumentwriter-writingcompleted-event-system-windows-xps.md
+            - name: _WritingProgressChanged
+              href: additional-apis/xpsdocumentwriter-writingprogresschanged-event-system-windows-xps.md
+    - name: System.Xml
+      items:
+        - name: XmlReader.CreateSqlReader 메서드
+          href: additional-apis/system.xml.xmlreader.createsqlreader.md
+    - name: adodb 네임스페이스
+      items:
+        - name: 연결 인터페이스
+          href: additional-apis/adodb.connection.md
+        - name: EventReason 열거형
+          href: additional-apis/adodb.eventreasonenum.md
+        - name: EventStatus 열거형
+          href: additional-apis/adodb.eventstatusenum.md
+    - name: stdole 네임스페이스
+      items:
+        - name: DISPPARAMS 구조체
+          href: additional-apis/stdole.dispparams.md
+        - name: EXCEPINFO 구조체
+          href: additional-apis/stdole.excepinfo.md
+        - name: IFont.Name 속성
+          href: additional-apis/stdole.ifont.name.md
+        - name: IFontDisp 인터페이스
+          href: additional-apis/stdole.ifontdisp.md
+        - name: IPicture.Handle 속성
+          href: additional-apis/stdole.ipicture.handle.md
+        - name: IPictureDisp 인터페이스
+          href: additional-apis/stdole.ipicturedisp.md
+        - name: IPictureDisp.Handle 속성
+          href: additional-apis/stdole.ipicturedisp.handle.md
+        - name: StdFont 인터페이스
+          href: additional-apis/stdole.stdfont.md
+        - name: StdPicture 인터페이스
+          href: additional-apis/stdole.stdpicture.md
+- name: 새로운 기능 및 사용되지 않는 기능
+  items:
+    - name: 새로운 기능
+      href: whats-new/index.md
+    - name: 접근성의 새로운 기능
+      href: whats-new/whats-new-in-accessibility.md
+    - name: API 참조에서 사용되지 않는 기능
+      href: whats-new/whats-obsolete.md
+      items:
+        - name: 사용되지 않는 형식
+          href: whats-new/obsolete-types.md
+        - name: 사용되지 않는 멤버
+          href: whats-new/obsolete-members.md

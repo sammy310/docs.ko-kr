@@ -230,45 +230,45 @@
               href: how-to-improve-rendering-performance-by-caching-an-element.md
             - name: '방법: 캐시된 요소를 브러시로 사용'
               href: how-to-use-a-cached-element-as-a-brush.md
-    - name: 3차원 그래픽 개요
+    - name: 3D 그래픽 개요
       href: 3-d-graphics-overview.md
       items:
-        - name: 3차원 변환 개요
+        - name: 3D 변환 개요
           href: 3-d-transformations-overview.md
         - name: WPF 3D 성능 최대화
           href: maximize-wpf-3d-performance.md
         - name: 방법 항목
           href: 3-d-graphics-how-to-topics.md
           items:
-            - name: 3차원 장면 만들기
+            - name: 3D 장면 만들기
               href: how-to-create-a-3-d-scene.md
-            - name: 3차원 모델에 그리기 적용
+            - name: 3D 모델에 그리기 적용
               href: how-to-apply-a-drawing-to-a-3-d-model.md
-            - name: 3차원 개체의 앞뒤에 재질 적용
+            - name: 3D 개체의 앞과 뒤에 재질 적용
               href: how-to-apply-material-to-the-front-and-back-of-a-3-d-object.md
-            - name: 3차원 개체에 발광 재질 적용
+            - name: 3D 개체에 발광 재질 적용
               href: how-to-apply-emissive-material-to-a-3-d-object.md
-            - name: 3차원 모델의 배율 변환
+            - name: 3D 모델의 배율 변환
               href: how-to-transform-the-scale-of-a-3-d-model.md
-            - name: 3차원 모델에 다중 변환 적용
+            - name: 3D 모델에 다중 변환 적용
               href: how-to-apply-multiple-transformations-to-a-3-d-model.md
-            - name: 3차원 변환에 애니메이션 효과 주기
+            - name: 3D 변환에 애니메이션 효과 주기
               href: how-to-animate-3-d-translations.md
-            - name: 스토리보드를 사용하여 3차원 회전에 애니메이션 효과 주기
+            - name: 스토리보드를 사용하여 3D 회전에 애니메이션 효과 주기
               href: how-to-animate-a-3-d-rotation-using-storyboards.md
-            - name: Rotation3DAnimation을 사용하여 3차원 회전에 애니메이션 효과 주기
+            - name: Rotation3DAnimation을 사용하여 3D 회전에 애니메이션 효과 주기
               href: how-to-animate-a-3-d-rotation-using-rotation3danimation.md
-            - name: 4원수를 사용하여 3차원 회전에 애니메이션 효과 주기
+            - name: 쿼터니언을 사용하여 3D 회전에 애니메이션 효과 주기
               href: how-to-animate-a-3-d-rotation-using-quaternions.md
-            - name: 키 프레임을 사용하여 3차원 회전에 애니메이션 효과 주기(Rotation3DAnimationUsingKeyFrames)
+            - name: 키 프레임을 사용하여 3D 회전에 애니메이션 효과 주기(Rotation3DAnimationUsingKeyFrames)
               href: how-to-animate-a-3-d-rotation-using-key-frames.md
-            - name: 키 프레임을 사용하여 3차원 회전에 애니메이션 효과 주기(QuaternionAnimationUsingKeyFrames)
+            - name: 키 프레임을 사용하여 3D 회전에 애니메이션 효과 주기(QuaternionAnimationUsingKeyFrames)
               href: animate-a-3-d-rotation-quaternionanimationusingkeyframes.md
-            - name: 3차원 장면에서 카메라 위치 및 방향에 애니메이션 효과 주기
+            - name: 3D 장면에서 카메라 위치 및 방향에 애니메이션 효과 주기
               href: how-to-animate-camera-position-and-direction-in-a-3d-scene.md
             - name: 키 프레임을 사용하여 카메라 위치 및 방향에 애니메이션 효과 주기
               href: how-to-animate-camera-position-and-direction-using-key-frames.md
-            - name: 3차원 장면의 Material 속성에 애니메이션 효과 주기
+            - name: 3D 장면의 재질 속성에 애니메이션 효과 주기
               href: how-to-animate-material-properties-in-a-3-d-scene.md
             - name: Viewport3D의 적중 테스트
               href: how-to-hit-test-in-a-viewport3d.md

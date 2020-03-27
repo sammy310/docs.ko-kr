@@ -1,0 +1,16 @@
+- name: .NET 개발자용 Azure
+  href: index.yml
+  items:
+    - name: Azure 및 .NET 소개
+      href: intro.md
+    - name: Azure로 마이그레이션
+      expanded: true
+      items:
+        - name: Azure 호스팅 옵션 선택
+          href: ./migration/choose.md
+        - name: .NET 웹 앱 또는 서비스를 Azure App Service로 마이그레이션
+          href: ./migration/app-service.md
+        - name: Azure VM으로 ASP.NET 앱 마이그레이션
+          href: ./migration/vm.md
+        - name: Azure로 SQL Server 데이터베이스 마이그레이션
+          href: ./migration/sql.md
