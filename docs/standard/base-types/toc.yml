@@ -116,8 +116,10 @@
                   href: how-to-strip-invalid-characters-from-a-string.md
                 - name: '방법: 문자열이 올바른 전자 메일 형식인지 확인'
                   href: how-to-verify-that-strings-are-in-valid-email-format.md
-        - name: .NET의 문자 인코딩
-          href: character-encoding.md
+    - name: .NET의 문자 인코딩
+      href: character-encoding-introduction.md
+    - name: 문자 인코딩 클래스를 사용하는 방법
+      href: character-encoding.md
     - name: 문자열 구문 분석
       href: parsing-strings.md
       items:

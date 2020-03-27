@@ -64,3 +64,5 @@
   href: load-unload.md
 - name: '연습: Visual Studio에 관리되는 어셈블리의 형식 포함'
   href: embed-types-visual-studio.md
+- name: MetadataLoadContext를 사용하여 어셈블리 콘텐츠 검사
+  href: inspect-contents-using-metadataloadcontext.md

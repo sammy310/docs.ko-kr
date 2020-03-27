@@ -1569,7 +1569,7 @@
               href: language-reference/keywords/by.md
             - name: in
               href: language-reference/keywords/in.md
-    - name: 'C# 연산자'
+    - name: 'C# 연산자 및 식'
       items:
         - name: 개요
           href: language-reference/operators/index.md
@@ -1589,7 +1589,7 @@
         - name: 비교 연산자
           href: language-reference/operators/comparison-operators.md
           displayName: '>, <, >=, <=, greater, less'
-        - name: 멤버 액세스 연산자
+        - name: 멤버 액세스 연산자 및 식
           href: language-reference/operators/member-access-operators.md
           displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation, ^, index from end, hat, .., range'
         - name: 형식 테스트 및 캐스트 연산자
@@ -1628,21 +1628,26 @@
         - name: await 연산자
           href: language-reference/operators/await.md
           displayName: async
-        - name: default 연산자
+        - name: 기본값 식
           href: language-reference/operators/default.md
-          displayName: 'default value, default literal, type default'
+          displayName: 'default value, default operator, default literal, type default'
         - name: delegate 연산자
           href: language-reference/operators/delegate-operator.md
           displayName: anonymous
-        - name: nameof 연산자
+        - name: nameof 식
           href: language-reference/operators/nameof.md
+          displayName: nameof operator
         - name: new 연산자
           href: language-reference/operators/new-operator.md
           displayName: constructor
         - name: sizeof 연산자
           href: language-reference/operators/sizeof.md
-        - name: stackalloc 연산자
+        - name: stackalloc 식
           href: language-reference/operators/stackalloc.md
+          displayName: 'stack allocation, span, stackalloc operator'
+        - name: switch 식
+          href: language-reference/operators/switch-expression.md
+          displayName: 'switch, pattern matching, patterns'
         - name: true 및 false 연산자
           href: language-reference/operators/true-false-operators.md
         - name: 연산자 오버로드

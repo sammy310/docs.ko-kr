@@ -12,12 +12,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: f85fef37ac952c91ac73570f26d80d8a46f4eedf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b61d079a86bdd4a809d44ad128f19a7b358c8384
+ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78156507"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80228672"
 ---
 # <a name="assemblies-in-net"></a>.NET 어셈블리
 
@@ -116,3 +116,4 @@ C#에서는 단일 애플리케이션에서 동일한 어셈블리의 두 버전
 - [방법: 어셈블리 로드 및 언로드](load-unload.md)
 - [방법: .NET Core에서 어셈블리 언로드 기능 사용 및 디버그](unloadability.md)
 - [방법: 파일이 어셈블리인지 확인](identify.md)
+- [방법: MetadataLoadContext를 사용하여 어셈블리 콘텐츠 검사](inspect-contents-using-metadataloadcontext.md)

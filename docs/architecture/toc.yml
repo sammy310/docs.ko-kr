@@ -1,4 +1,4 @@
-- name: .NET 애플리케이션 아키텍처 가이드
+- name: .NET 앱 아키텍처 가이드
   href: index.yml
 - name: eBook
   expanded: true
@@ -11,7 +11,7 @@
       href: modernize-with-azure-containers/
     - name: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 애플리케이션 수명 주기
       href: containerized-lifecycle/
-    - name: '.NET 마이크로 서비스: 컨테이너화된 .NET 애플리케이션을 위한 아키텍처'
+    - name: '.NET 마이크로 서비스: 컨테이너화된 .NET 애플리케이션의 아키텍처'
       href: microservices/
     - name: '서버리스 앱: 아키텍처, 패턴 및 Azure 구현'
       href: serverless/

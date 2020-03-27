@@ -6,19 +6,19 @@ helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-ms.openlocfilehash: 0fffbb2f1b58d8ba65d9c5ca8b7c8edc583af2da
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cd27f2fb893def9e186504cc9973bae71473f005
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397625"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248910"
 ---
 # <a name="get-started-with-net-framework"></a>.NET Framework 시작
 
 .NET Framework는 .NET Framework를 대상으로 하는 앱을 관리하는 런타임 실행 환경입니다. .NET Framework는 메모리 관리 및 기타 시스템 서비스를 제공하는 공용 언어 런타임과 프로그래머가 모든 주요 앱 개발 영역에서 강력하고 신뢰할 수 있는 코드를 활용할 수 있게 하는 광범위한 클래스 라이브러리로 구성됩니다.
 
 > [!NOTE]
-> .NET Framework는 Windows 시스템에서만 사용할 수 있습니다. [.NET Core](../../core/index.md)를 사용하여 Windows, MacOS 및 Linux에서 앱을 실행할 수 있습니다.
+> .NET Framework는 Windows 시스템에서만 사용할 수 있습니다. [.NET Core](../../core/index.md)를 사용하여 Windows, MacOS 및 Linux에서 앱을 개발하고 실행할 수 있습니다.
 
 ## <a name="what-is-net-framework"></a>.NET Framework란?
 
@@ -85,7 +85,7 @@ Windows 8 이전 버전에서 .NET Framework를 제거하려는 경우에는 항
 
 ## <a name="see-also"></a>참조
 
-- [.NET Framework 가이드](../index.md)
+- [.NET Framework 가이드](../index.yml)
 - [새로운 기능](../whats-new/index.md)
 - [.NET API 브라우저](../../../api/index.md)
 - [개발 가이드](../development-guide.md)

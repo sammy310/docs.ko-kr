@@ -102,7 +102,7 @@
           items:
             - name: 이름에 따라 요소 찾기
               href: how-to-find-an-element-by-its-name.md
-            - name: 논리적 트리 재정의
+            - name: 논리 트리 재정의
               href: how-to-override-the-logical-tree.md
     - name: WPF 속성 시스템
       href: properties-wpf.md
@@ -286,7 +286,7 @@
               href: how-to-retrieve-data-in-a-particular-data-format.md
             - name: 데이터 개체에 여러 데이터 형식 저장
               href: how-to-store-multiple-data-formats-in-a-data-object.md
-    - name: 자료
+    - name: 리소스
       href: resources-wpf.md
       items:
         - name: XAML 리소스
@@ -481,6 +481,8 @@
     - name: 마이그레이션 및 상호 운용성
       href: migration-and-interoperability.md
       items:
+        - name: WPF 3.X에서 WPF 4.5로 마이그레이션
+          href: types-migrated-from-wpf-to-system.md
         - name: WPF 및 Windows Forms 상호 운용성
           href: wpf-and-windows-forms-interoperation.md
           items:
@@ -508,7 +510,7 @@
               href: walkthrough-arranging-windows-forms-controls-in-wpf.md
             - name: '연습: 하이브리드 애플리케이션에서 데이터에 바인딩'
               href: walkthrough-binding-to-data-in-hybrid-applications.md
-            - name: '연습: Windows Forms에서 3-D WPF 복합 컨트롤 호스팅'
+            - name: '연습: Windows Forms에서 3D WPF 복합 컨트롤 호스팅'
               href: walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md
             - name: '연습: Windows Forms에서 WPF 복합 컨트롤 호스팅'
               href: walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md
