@@ -21,6 +21,8 @@
       href: tutorials/batch-processing.md
     - name: 구조적 스트리밍
       href: tutorials/streaming.md
+    - name: 감정 분석
+      href: tutorials/ml-sentiment-analysis.md
 - name: 방법 가이드
   items:
     - name: 애플리케이션 디버그

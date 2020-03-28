@@ -3,18 +3,28 @@
 - name: 개요
   expanded: true
   items:
-    - name: API
-      items:
-        - name: ML.NET API
-          href: how-does-mldotnet-work.md
     - name: 모델 작성기 및 CLI
       items:
         - name: ML.NET 모델 작성기 도구
           href: automate-training-with-model-builder.md
         - name: ML.NET 명령줄 인터페이스
           href: automate-training-with-cli.md
+    - name: API
+      items:
+        - name: ML.NET API
+          href: how-does-mldotnet-work.md
 - name: 자습서
   items:
+    - name: 모델 작성기 및 CLI
+      items:
+        - name: 가격 예측(모델 작성기 및 회귀)
+          href: tutorials/predict-prices-with-model-builder.md
+        - name: ML.NET CLI를 사용하여 감정 분석
+          href: tutorials/sentiment-analysis-cli.md
+        - name: Razor Pages에서 감정 분석(모델 작성기 및 이진 분류)
+          href: tutorials/sentiment-analysis-model-builder.md
+        - name: 상태 위반 범주화(모델 작성기 및 다중 클래스 분류)
+          href: tutorials/health-violation-classification-model-builder.md
     - name: API
       items:
         - name: 개요
@@ -41,16 +51,6 @@
           href: tutorials/object-detection-onnx.md
         - name: TensorFlow를 사용하여 감정 분류(텍스트 분류)
           href: tutorials/text-classification-tf.md
-    - name: 모델 작성기 및 CLI
-      items:
-        - name: 가격 예측(모델 작성기 및 회귀)
-          href: tutorials/predict-prices-with-model-builder.md
-        - name: ML.NET CLI를 사용하여 감정 분석
-          href: tutorials/sentiment-analysis-cli.md
-        - name: Razor Pages에서 감정 분석(모델 작성기 및 이진 분류)
-          href: tutorials/sentiment-analysis-model-builder.md
-        - name: 상태 위반 범주화(모델 작성기 및 다중 클래스 분류)
-          href: tutorials/health-violation-classification-model-builder.md
     - name: Infer.NET
       items:
         - name: Infer.NET을 사용한 확률 프로그래밍
@@ -69,6 +69,16 @@
       href: resources/improve-machine-learning-model-ml-net.md
 - name: 방법 가이드
   items:
+    - name: 모델 작성기 및 CLI
+      items:
+        - name: 모델 작성기에 데이터 로드
+          href: how-to-guides/load-data-model-builder.md
+        - name: 모델 작성기 설치
+          href: how-to-guides/install-model-builder.md
+        - name: CLI 설치
+          href: how-to-guides/install-ml-net-cli.md
+        - name: 자동화된 ML API 사용
+          href: how-to-guides/how-to-use-the-automl-api.md
     - name: API
       items:
         - name: 데이터 로드
@@ -97,16 +107,6 @@
               href: how-to-guides/serve-model-serverless-azure-functions-ml-net.md
             - name: 웹 API에 모델 배포
               href: how-to-guides/serve-model-web-api-ml-net.md
-    - name: 모델 작성기 및 CLI
-      items:
-        - name: 모델 작성기에 데이터 로드
-          href: how-to-guides/load-data-model-builder.md
-        - name: 모델 작성기 설치
-          href: how-to-guides/install-model-builder.md
-        - name: CLI 설치
-          href: how-to-guides/install-ml-net-cli.md
-        - name: 자동화된 ML API 사용
-          href: how-to-guides/how-to-use-the-automl-api.md
 - name: 참고
   items:
     - name: ML.NET API 참조

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-ms.openlocfilehash: cd27f2fb893def9e186504cc9973bae71473f005
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 8708fbd21967c5acb548e0e77ba5d9e060336c50
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80248910"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345039"
 ---
 # <a name="get-started-with-net-framework"></a>.NET Framework 시작
 
 .NET Framework는 .NET Framework를 대상으로 하는 앱을 관리하는 런타임 실행 환경입니다. .NET Framework는 메모리 관리 및 기타 시스템 서비스를 제공하는 공용 언어 런타임과 프로그래머가 모든 주요 앱 개발 영역에서 강력하고 신뢰할 수 있는 코드를 활용할 수 있게 하는 광범위한 클래스 라이브러리로 구성됩니다.
 
 > [!NOTE]
-> .NET Framework는 Windows 시스템에서만 사용할 수 있습니다. [.NET Core](../../core/index.md)를 사용하여 Windows, MacOS 및 Linux에서 앱을 개발하고 실행할 수 있습니다.
+> .NET Framework는 Windows 시스템에서만 사용할 수 있습니다. [.NET Core](../../core/index.yml)를 사용하여 Windows, MacOS 및 Linux에서 앱을 개발하고 실행할 수 있습니다.
 
 ## <a name="what-is-net-framework"></a>.NET Framework란?
 
@@ -80,7 +80,7 @@ Windows 8 이전 버전에서 .NET Framework를 제거하려는 경우에는 항
 | [.NET Framework 및 번외 릴리스](the-net-framework-and-out-of-band-releases.md) | .NET Framework 번외 릴리스 및 이러한 릴리스를 응용 프로그램에서 사용하는 방법에 대해 설명합니다. |
 | [시스템 요구 사항](system-requirements.md) | .NET Framework 실행을 위한 하드웨어 및 소프트웨어 요구 사항이 나와 있습니다. |
 | [.NET Core 및 오픈 소스](net-core-and-open-source.md) | .NET Framework와 관련된 .NET Core 및 오픈 소스 .NET Core 프로젝트에 액세스하는 방법에 대해 설명합니다. |
-| [.NET Core 설명서](../../core/index.md) | .NET Core에 대한 개념 및 API 참조 설명서를 제공합니다. |
+| [.NET Core 설명서](../../core/index.yml) | .NET Core에 대한 개념 및 API 참조 설명서를 제공합니다. |
 | [.NET Standard](../../standard/net-standard.md) | 여러 플랫폼에서 일관된 API 세트를 사용할 수 있도록 지원하는, 개별 .NET 구현에서 지원하는 버전 사양인 .NET Standard를 설명합니다.
 
 ## <a name="see-also"></a>참조

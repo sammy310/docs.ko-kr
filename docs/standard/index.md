@@ -5,16 +5,16 @@ author: cartermp
 ms.date: 12/27/2019
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: b7856cbb12ac78830ceace6ad44214ca32444a82
-ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+ms.openlocfilehash: f6496ae38827da5d00c8b278011a9c373afe0e76
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80228810"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344081"
 ---
 # <a name="net-guide"></a>.NET 가이드
 
-.Net 가이드에서는 .NET에 대한 정보를 제공합니다. .NET에 대한 지식에 따라 이 가이드의 다양한 섹션과 [.NET Core](../core/index.md) 또는 [.NET Framework](../framework/index.yml)와 같은 기타 가이드를 살펴볼 수 있습니다.
+.Net 가이드에서는 .NET에 대한 정보를 제공합니다. .NET에 대한 지식에 따라 이 가이드의 다양한 섹션과 [.NET Core](../core/index.yml) 또는 [.NET Framework](../framework/index.yml)와 같은 기타 가이드를 살펴볼 수 있습니다.
 
 ## <a name="new-to-net"></a>.NET을 처음 사용하는 경우
 
