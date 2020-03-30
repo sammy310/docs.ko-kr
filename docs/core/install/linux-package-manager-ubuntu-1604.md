@@ -3,19 +3,21 @@ title: Ubuntu 16.04에 .NET Core 설치 - 패키지 관리자 - .NET Core
 description: 패키지 관리자를 사용하여 Ubuntu 16.04에 .NET Core SDK 및 런타임을 설치합니다.
 author: thraka
 ms.author: adegeo
-ms.date: 12/04/2019
-ms.openlocfilehash: 6038e64a2aa50d09923454e346f05c58a6c1e2fb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 03/17/2020
+ms.openlocfilehash: 9e99cd8649e907fbbf8ffac7bfc008610396a31c
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76920706"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134160"
 ---
 # <a name="ubuntu-1604-package-manager---install-net-core"></a>Ubuntu 16.04 패키지 관리자 - .NET Core 설치
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-이 문서에서는 패키지 관리자를 사용하여 Ubuntu 16.04에 .NET Core를 설치하는 방법을 설명합니다. 런타임을 설치하려면 .NET Core 런타임과 ASP.NET Core 런타임이 모두 포함된 [ASP.NET Core 런타임](#install-the-aspnet-core-runtime)을 설치하는 것이 좋습니다.
+이 문서에서는 패키지 관리자를 사용하여 Ubuntu 16.04에 .NET Core를 설치하는 방법을 설명합니다.
+
+[!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
 ## <a name="register-microsoft-key-and-feed"></a>Microsoft 키 및 피드 등록
 
@@ -30,7 +32,7 @@ ms.locfileid: "76920706"
 터미널을 열고 다음 명령을 실행합니다.
 
 ```bash
-wget -q https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+wget https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 ```
 
@@ -98,9 +100,9 @@ sudo apt-get install {the .NET Core package}
 
 ```bash
 sudo apt-get install -y gpg
-wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor -o microsoft.asc.gpg
+wget -O- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor -o microsoft.asc.gpg
 sudo mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/
-wget -q https://packages.microsoft.com/config/ubuntu/16.04/prod.list
+wget https://packages.microsoft.com/config/ubuntu/16.04/prod.list
 sudo mv prod.list /etc/apt/sources.list.d/microsoft-prod.list
 sudo chown root:root /etc/apt/trusted.gpg.d/microsoft.asc.gpg
 sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list

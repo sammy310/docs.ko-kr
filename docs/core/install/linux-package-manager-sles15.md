@@ -3,19 +3,21 @@ title: SLES 15에 .NET Core 설치 - 패키지 관리자 - .NET Core
 description: 패키지 관리자를 사용하여 SLES 15에 .NET Core SDK 및 런타임을 설치합니다.
 author: thraka
 ms.author: adegeo
-ms.date: 12/04/2019
-ms.openlocfilehash: f48c131b4250bd04fffc0d815a3500732caacb7c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 03/17/2020
+ms.openlocfilehash: b86b97bf17165f2f7a70e80ff581750ba39be375
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76921040"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134183"
 ---
 # <a name="sles-15-package-manager---install-net-core"></a>SLES 15 패키지 관리자 - .NET Core 설치
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-이 문서에서는 패키지 관리자를 사용하여 SLES 15에 .NET Core를 설치하는 방법을 설명합니다. 런타임을 설치하려면 .NET Core 런타임과 ASP.NET Core 런타임이 모두 포함된 [ASP.NET Core 런타임](#install-the-aspnet-core-runtime)을 설치하는 것이 좋습니다.
+이 문서에서는 패키지 관리자를 사용하여 SLES 15에 .NET Core를 설치하는 방법을 설명합니다.
+
+[!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
 ## <a name="register-microsoft-key-and-feed"></a>Microsoft 키 및 피드 등록
 

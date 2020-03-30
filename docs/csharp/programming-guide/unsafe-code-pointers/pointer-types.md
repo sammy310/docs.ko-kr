@@ -4,12 +4,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: dc03744559a87a2548c5bee9452c22cd20f337b8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7bbfa6b2238458d3248da830cf9d6ac36551b431
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77627712"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507037"
 ---
 # <a name="pointer-types-c-programming-guide"></a>포인터 형식(C# 프로그래밍 가이드)
 
@@ -24,7 +24,7 @@ void* identifier; //allowed but not recommended
 
 포인터 형식은 [개체](../../language-reference/builtin-types/reference-types.md)에서 상속되지 않으며 포인터 형식과 `object`는 서로 변환되지 않습니다. 또한 boxing과 unboxing은 포인터를 지원하지 않습니다. 그러나 다른 포인터 형식 간의 변환 및 포인터 형식과 정수 형식 사이의 변환은 허용됩니다.
 
-동일한 선언에서 여러 포인터를 선언하는 경우 별표(*)는 기본 형식에만 함께 사용되고 각 포인터 이름의 접두사로는 사용되지 않습니다. 예들 들어 다음과 같습니다.
+동일한 선언에서 여러 포인터를 선언하는 경우 별표(*)는 기본 형식에만 함께 사용되고 각 포인터 이름의 접두사로는 사용되지 않습니다. 다음은 그 예입니다.
 
 ```csharp
 int* p1, p2, p3;   // Ok
@@ -35,7 +35,7 @@ int *p1, *p2, *p3;   // Invalid in C#
 
 `myType*` 형식의 포인터 변수 값은 `myType` 형식의 변수 주소입니다. 다음은 포인터 형식 선언의 예제입니다.
 
-|예제|설명|
+|예제|Description|
 |-------------|-----------------|
 |`int* p`|`p`는 정수에 대한 포인터입니다.|
 |`int** p`|`p`는 정수에 대한 포인터를 가리키는 포인터입니다.|
@@ -72,14 +72,14 @@ int* myVariable;
 |`++` 및 `--`|포인터를 증가 및 감소시킵니다.|
 |`+` 및 `-`|포인터 연산을 수행합니다.|
 |`==`, `!=`, `<`, `>`, `<=` 및 `>=`|포인터를 비교합니다.|
-|[`stackalloc` 연산자](../../language-reference/operators/stackalloc.md)|스택에 메모리를 할당합니다.|
+|[`stackalloc`](../../language-reference/operators/stackalloc.md)|스택에 메모리를 할당합니다.|
 |[`fixed` statement](../../language-reference/keywords/fixed-statement.md)|해당 주소를 찾을 수 있도록 임시로 변수를 고정합니다.|
 
 포인터에 관련 연산자에 대한 자세한 내용은 [포인터 관련 연산자](../../language-reference/operators/pointer-related-operators.md)를 참조하세요.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](~/_csharplang/spec/unsafe-code.md#pointer-types)의 [포인터 형식](~/_csharplang/spec/introduction.md) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [포인터 형식](~/_csharplang/spec/unsafe-code.md#pointer-types) 섹션을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

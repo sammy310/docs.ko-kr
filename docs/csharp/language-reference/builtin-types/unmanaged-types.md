@@ -3,12 +3,12 @@ title: 비관리형 형식 - C# 참조
 ms.date: 09/06/2019
 helpviewer_keywords:
 - unmanaged type [C#]
-ms.openlocfilehash: 8a4599514115aa21f17c32848ce203fea704072e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9dd2ab4e044b8a86bfe72a6fcf2481b8e1e80bf4
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846468"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507232"
 ---
 # <a name="unmanaged-types-c-reference"></a>비관리형 형식(C# 참조)
 
@@ -31,7 +31,7 @@ C# 8.0부터는 다음 예와 같이 관리되지 않는 형식의 필드만 포
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](~/_csharplang/spec/unsafe-code.md#pointer-types)의 [포인터 형식](~/_csharplang/spec/introduction.md) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [포인터 형식](~/_csharplang/spec/unsafe-code.md#pointer-types) 섹션을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 
@@ -39,4 +39,4 @@ C# 8.0부터는 다음 예와 같이 관리되지 않는 형식의 필드만 포
 - [포인터 형식](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [메모리 및 범위 관련 형식](../../../standard/memory-and-spans/index.md)
 - [sizeof 연산자](../operators/sizeof.md)
-- [stackalloc 연산자](../operators/stackalloc.md)
+- [stackalloc](../operators/stackalloc.md)
