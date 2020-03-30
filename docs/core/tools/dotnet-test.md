@@ -2,12 +2,12 @@
 title: dotnet test 명령
 description: dotnet test 명령은 지정된 프로젝트에서 단위 테스트를 실행하는 데 사용됩니다.
 ms.date: 02/27/2020
-ms.openlocfilehash: bac2f0e613c34bc9f657551a5eac4038207a93ed
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a11814f9fdc6326e681a09d7d2654b968014f318
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847900"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507310"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -51,7 +51,7 @@ dotnet test [-h|--help]
 
   테스트 실행에 지정된 경로에서 사용자 지정 테스트 어댑터를 사용합니다.
 
-- **`-blame`**
+- **`--blame`**
 
   테스트를 원인 모드로 실행합니다. 이 옵션은 테스트 호스트의 크래시를 유발하는 문제가 있는 테스트를 격리하는 데 유용합니다. 현재 디렉터리에 크래시 전에 테스트 실행 순서를 캡처하는 *Sequence.xml*이라는 출력 파일을 만듭니다.
 

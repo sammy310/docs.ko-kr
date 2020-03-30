@@ -1,6 +1,8 @@
-- name: .NET Core 가이드
-  href: index.md
-- name: .NET Core 정보
+- name: .NET Core 설명서
+  href: index.yml
+- name: .NET Core 소개
+  href: introduction.md
+- name: .NET Core 개요
   href: about.md
 - name: 설치
   items:
@@ -152,7 +154,7 @@
           href: tools/dotnet-clean.md
         - name: dotnet help
           href: tools/dotnet-help.md
-        - name: dotnet migrate
+        - name: dotnet 마이그레이션
           href: tools/dotnet-migrate.md
         - name: dotnet msbuild
           href: tools/dotnet-msbuild.md
@@ -208,7 +210,7 @@
               href: tools/dotnet-tool-update.md
         - name: dotnet vstest
           href: tools/dotnet-vstest.md
-        - name: dotnet-install scripts
+        - name: dotnet 설치 스크립트
           href: tools/dotnet-install-script.md
         - name: 프로젝트 참조 명령
           items:

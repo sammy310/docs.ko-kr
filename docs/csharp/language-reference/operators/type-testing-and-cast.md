@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 037ddc8eeda418b2e4858ab98be6cd362ca0e1e2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2dc215a91c55be15e8eee488f0030f41e3492af5
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398174"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507089"
 ---
 # <a name="type-testing-and-cast-operators-c-reference"></a>형식 테스트 및 캐스트 연산자(C# 참조)
 
@@ -113,7 +113,7 @@ E is T ? (T)(E) : (T)null
 
 ### <a name="other-usages-of-"></a>다른 () 용도
 
-[메서드 또는 대리자를 호출](member-access-operators.md#invocation-operator-)하는 경우에도 괄호를 사용합니다.
+[메서드 또는 대리자를 호출](member-access-operators.md#invocation-expression-)하는 경우에도 괄호를 사용합니다.
 
 괄호를 사용하여 식에서 연산을 계산하는 순서를 조정하기도 합니다. 자세한 내용은 [C# 연산자](index.md)를 참조하세요.
 

@@ -7,12 +7,12 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: 4dbc2024aa2e956b23030ae6eab987e65e006d12
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4243599f44749e7b38ebe78ca88b8ec2a9390650
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398678"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249723"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework에서 내게 필요한 옵션의 새로운 기능
 
@@ -566,7 +566,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 ```xml
 <!-- Windows 10 -->
-<supportedOS Id=”{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}” />
+<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />
 ```
 
 고대비 변경 내용의 몇 가지 예는 다음과 같습니다.

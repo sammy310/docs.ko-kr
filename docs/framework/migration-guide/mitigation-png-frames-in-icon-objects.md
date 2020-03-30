@@ -2,12 +2,12 @@
 title: '완화: 아이콘 개체의 PNG 프레임'
 ms.date: 03/30/2017
 ms.assetid: ca87fefb-7144-4b4e-8832-5a939adbb4b2
-ms.openlocfilehash: d661e45bfbbe5e1c5ca5b7eb123e71aa32a096ca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 713e6a0fa615ac748134fac501e5142a65e434f1
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181214"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248897"
 ---
 # <a name="mitigation-png-frames-in-icon-objects"></a>완화: 아이콘 개체의 PNG 프레임
 .NET Framework 4.6부터는 <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> 메서드가 PNG 프레임이 있는 아이콘을 <xref:System.Drawing.Bitmap> 개체로 성공적으로 변환합니다.  
@@ -29,8 +29,8 @@ ms.locfileid: "79181214"
   
 ```xml  
 <AppContextSwitchOverrides
-      value="Switch.System.Drawing.DontSupportPngFramesInIcons=true;<previous key>=<previous value>" />  
-```  
+      value="Switch.System.Drawing.DontSupportPngFramesInIcons=true;previous key=previous-value" />
+```
   
 ## <a name="see-also"></a>참고 항목
 

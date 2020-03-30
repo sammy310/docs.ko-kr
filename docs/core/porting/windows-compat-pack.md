@@ -3,12 +3,12 @@ title: Windows 호환성 팩을 사용하여 코드를 .NET Core로 포팅
 description: Windows 호환 기능 팩 및 이를 사용하여 기존 .NET Framework 코드를 .NET Core로 이식하는 방법을 알아봅니다.
 author: terrajobst
 ms.date: 12/07/2018
-ms.openlocfilehash: 91a653b2345d414c18ebdb6e8b7d6d49bbdbb83e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 166259ca37a2005d67f6c545e4843a940f05fb71
+ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76733616"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80228632"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>Windows 호환성 팩을 사용하여 코드를 .NET Core로 포팅
 
@@ -40,7 +40,7 @@ Windows 전용을 포함하는 약 20,000 개의 API와 다음과 같은 기술 
 - Windows 런타임 캐싱
 - Windows 서비스
 
-자세한 내용은 [호환성 팩의 사양](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md)을 참조하세요.
+자세한 내용은 [호환성 팩의 사양](https://github.com/dotnet/designs/blob/master/accepted/2018/compat-pack/compat-pack.md)을 참조하세요.
 
 ## <a name="get-started"></a>시작하기
 

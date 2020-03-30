@@ -2,16 +2,16 @@
 title: .NET Core 및 오픈 소스
 ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
-ms.openlocfilehash: b5aa42d0460d743bffe8f17a2603773c03c09ce0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a8f44eedddc4424b39f7aedceb4bb8f02c6feb42
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181604"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345027"
 ---
 # <a name="net-core-and-open-source"></a>.NET Core 및 오픈 소스
 
-이 문서에서는 .NET Core에 대한 간략한 개요 및 자세한 정보를 찾는 방법을 보여줍니다. .NET Core 설명서에 대한 전체 목록은 [.NET Core 가이드](../../core/index.md)를 참조하세요.
+이 문서에서는 .NET Core에 대한 간략한 개요 및 자세한 정보를 찾는 방법을 보여줍니다. .NET Core 설명서에 대한 전체 목록은 [.NET Core 가이드](../../core/index.yml)를 참조하세요.
 
 ## <a name="what-is-net-core"></a>.NET Core란?  
 
@@ -46,5 +46,5 @@ ms.locfileid: "79181604"
 ## <a name="see-also"></a>참고 항목
 
 - [.NET 자습서 - Hello World 10분 완성](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)
-- [.NET Core 가이드](../../core/index.md)
+- [.NET Core 가이드](../../core/index.yml)
 - [ASP.NET Core 문서](/aspnet/core/)

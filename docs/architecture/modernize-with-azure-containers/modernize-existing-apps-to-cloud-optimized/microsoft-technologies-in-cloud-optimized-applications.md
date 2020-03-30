@@ -2,12 +2,12 @@
 title: 클라우드 최적화 애플리케이션의 Microsoft 기술
 description: Azure 클라우드 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화 | 클라우드 최적화 애플리케이션의 Microsoft 기술
 ms.date: 04/28/2018
-ms.openlocfilehash: 915aa99d2331c5b9c46eabef3335fb809baa9370
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5222ba13258f9c8a40ca3b9ce240aeb9f41da63
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69578226"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546512"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a>클라우드 최적화 애플리케이션의 Microsoft 기술
 
@@ -19,7 +19,7 @@ ms.locfileid: "69578226"
 
 - **관리형 클라우드**: 관리형 클라우드 옵션을 선택하면 기본 인프라, VM, OS 패치, 네트워킹 구성을 관리 및 지원하는 데 따르는 비용과 복잡성의 문제를 피할 수 있습니다. IaaS를 사용한 마이그레이션을 선택하면 그 모든 작업에 대한 책임은 물론 관련 비용 부담까지 지게 됩니다. 관리형 클라우드 옵션에서는 사용자가 개발하는 애플리케이션과 서비스만 관리하면 됩니다. 그 외의 모든 사항은 일반적으로 클라우드 서비스 공급자가 관리합니다. Azure에서 관리되는 클라우드 서비스의 예로는 [Azure SQL Database](https://azure.microsoft.com/services/sql-database), [Azure Redis Cache](https://azure.microsoft.com/services/cache/), [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/), [Azure Storage](https://azure.microsoft.com/services/storage/), [Azure Database for MySQL](https://azure.microsoft.com/services/mysql/), [Azure Database for PostgreSQL](https://azure.microsoft.com/services/postgresql/), [Azure Active Directory](https://azure.microsoft.com/services/active-directory/), 그리고 [VM 확장 집합](https://azure.microsoft.com/services/virtual-machine-scale-sets/), [Azure App Service](https://azure.microsoft.com/services/app-service/), [Azure Kubernetes Service](https://azure.microsoft.com/services/container-service/) 같은 관리형 컴퓨팅 서비스가 포함됩니다.
 
-- **애플리케이션 개발**: 컨테이너에서 실행되는 애플리케이션을 빌드할 때는 여러 언어 중에서 원하는 언어를 선택할 수 있습니다. 이 가이드에서는 [.NET](https://www.microsoft.com/net)에 초점을 맞추고 있지만, 사용자는 Node.js, Python, Spring/Java 또는 Go와 같은 다른 언어를 사용하여 컨테이너 기반 앱을 개발할 수도 있습니다.
+- **애플리케이션 개발**: 컨테이너에서 실행되는 애플리케이션을 빌드할 때는 여러 언어 중에서 원하는 언어를 선택할 수 있습니다. 이 가이드에서는 [.NET](https://dotnet.microsoft.com)에 초점을 맞추고 있지만, 사용자는 Node.js, Python, Spring/Java 또는 Go와 같은 다른 언어를 사용하여 컨테이너 기반 앱을 개발할 수도 있습니다.
 
 - **모니터링, 원격 분석, 로깅 및 감사**: 클라우드에서 실행되는 애플리케이션과 컨테이너를 모니터링하고 감사하는 기능은 클라우드 최적화 애플리케이션에 매우 중요합니다. [Azure Application Insights](https://azure.microsoft.com/services/application-insights/)와 [Microsoft Operations Management Suite](https://www.microsoft.com/cloud-platform/operations-management-suite)는 클라우드 최적화 앱을 위한 모니터링 및 감사 기능을 제공하는 주된 Microsoft 도구입니다.
 

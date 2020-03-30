@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a8146db1fb54d63d4716b879ce793f7d817cef59
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64e854b06895ca54a9ab9870b85868788a731c00
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937271"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79549592"
 ---
 ### <a name="shared-framework-assemblies-removed-from-microsoftaspnetcoreapp"></a>공유 프레임워크: Microsoft.AspNetCore.App에서 제거되는 어셈블리
 
@@ -36,7 +36,7 @@ ASP.NET Core 3.0부터 ASP.NET Core 공유 프레임워크(`Microsoft.AspNetCore
 
 자세한 내용은 [dotnet/aspnetcore#3612](https://github.com/dotnet/aspnetcore/issues/3612)를 참조하세요.
 
-Entity Framework Core는 NuGet 패키지로 제공됩니다. 이 변경은 배송 모델을 .NET의 다른 모든 데이터 액세스 라이브러리와 맞춥니다. 다양한 .NET 플랫폼을 지원하면서 계속 혁신할 수 있는 가장 간단한 경로인 Entity Framework Core를 제공합니다. Entity Framework Core를 공유 프레임워크 밖으로 이동하더라도 Microsoft에서 개발하고, 지원하고, 서비스를 제공하는 라이브러리의 상태에는 영향을 주지 않습니다. [.NET Core 지원 정책](https://www.microsoft.com/net/platform/support-policy)에서는 이를 계속 다루고 있습니다.
+Entity Framework Core는 NuGet 패키지로 제공됩니다. 이 변경은 배송 모델을 .NET의 다른 모든 데이터 액세스 라이브러리와 맞춥니다. 다양한 .NET 플랫폼을 지원하면서 계속 혁신할 수 있는 가장 간단한 경로인 Entity Framework Core를 제공합니다. Entity Framework Core를 공유 프레임워크 밖으로 이동하더라도 Microsoft에서 개발하고, 지원하고, 서비스를 제공하는 라이브러리의 상태에는 영향을 주지 않습니다. [.NET Core 지원 정책](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)에서는 이를 계속 다루고 있습니다.
 
 Json.NET 및 Entity Framework Core는 ASP.NET Core를 계속 사용합니다. 그러나 공유 프레임워크에는 포함되지 않습니다.
 

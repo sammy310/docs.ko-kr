@@ -4,12 +4,12 @@ description: .NET 이식성 분석기 도구를 사용하여 .NET Core, .NET Sta
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: e0a5c791926b36fe5a35c5446471c3dcdb75cd7b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 397d9f08a0dd28f80d653ac5044d6acfa2418727
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "72774385"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344306"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET 이식성 분석기
 
@@ -19,7 +19,7 @@ ms.locfileid: "72774385"
 
 ## <a name="common-targets"></a>공통 대상
 
-- [.NET Core](../../core/index.md): 모듈형 디자인을 포함하고, Side-by-Side를 이용하며, 플랫폼 간 시나리오를 대상으로 합니다. Side-by-Side를 사용하면 다른 앱을 중단하지 않고 새로운 .NET Core 버전을 채택할 수 있습니다. 플랫폼 간을 지원하는 .NET Core에 앱을 이식하는 것이 목표인 경우에 권장되는 대상입니다.
+- [.NET Core](../../core/index.yml): 모듈형 디자인을 포함하고, Side-by-Side를 이용하며, 플랫폼 간 시나리오를 대상으로 합니다. Side-by-Side를 사용하면 다른 앱을 중단하지 않고 새로운 .NET Core 버전을 채택할 수 있습니다. 플랫폼 간을 지원하는 .NET Core에 앱을 이식하는 것이 목표인 경우에 권장되는 대상입니다.
 - .[NET Standard](../../standard/net-standard.md): 모든 .NET 구현에서 사용할 수 있는 .NET Standard API를 포함합니다. 모든 .NET 지원 플랫폼에서 라이브러리를 실행하도록 하는 것이 목표인 경우에 권장되는 대상입니다.
 - [ASP.NET Core](/aspnet/core): 최신 웹 프레임워크는 .NET Core를 기반으로 합니다. 웹앱을 .NET Core에 이식하여 여러 플랫폼을 지원하는 것이 목표인 경우에 권장되는 대상입니다.
 - .NET Core + [플랫폼 확장](../../core/porting/windows-compat-pack.md): 많은 .NET Framework 가용 기술을 제공하는 Windows Compatibility Pack 외에도 .NET Core API가 포함되어 있습니다. 이는 .NET Framework에서 Windows의 .NET Core로 앱을 이식하기 위해 권장되는 대상입니다.

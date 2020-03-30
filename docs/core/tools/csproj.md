@@ -2,12 +2,12 @@
 title: .NET Core용 csproj 형식에 대한 추가 사항
 description: 기존 및 .NET Core csproj 파일 간의 차이점에 대해 알아보기
 ms.date: 04/08/2019
-ms.openlocfilehash: 2fb00e830380c5c4cbf7b6dcd2c8a585e1617b4b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9d9e212c9531828a8c2dd51fdd7488c17be41ba2
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79397946"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134062"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core용 csproj 형식에 대한 추가 사항
 
@@ -140,7 +140,7 @@ ASP.NET Core 메타패키지에 대한 이 참조의 동작은 대부분의 일�
 `<PackageReference>` 항목 요소는 [프로젝트에서 NuGet 종속성](/nuget/consume-packages/package-references-in-project-files)을 지정합니다. `Include` 특성은 패키지 ID를 지정합니다.
 
 ```xml
-<PackageReference Include="<package-id>" Version="" PrivateAssets="" IncludeAssets="" ExcludeAssets="" />
+<PackageReference Include="package-id" Version="" PrivateAssets="" IncludeAssets="" ExcludeAssets="" />
 ```
 
 #### <a name="version"></a>버전
@@ -231,7 +231,7 @@ RID를 통해 자체 포함 배포를 게시할 수 있습니다.
 
 ```xml
 <PropertyGroup>
-    <PreBuildEvent>"$(ProjectDir)PreBuildEvent.bat" "$(ProjectDir)..\" "$(ProjectDir)" "$(TargetDir)" />
+    <PreBuildEvent>"$(ProjectDir)PreBuildEvent.bat" "$(ProjectDir)..\" "$(ProjectDir)" "$(TargetDir)"</PreBuildEvent>
 </PropertyGroup>
 ```
 
