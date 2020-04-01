@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: d8b216bf5497cf2a1faa2fa24ba1d8b3102f6f10
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aca3b5c54bff9c2b4c5380c04dd0da162215b088
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185749"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523309"
 ---
 # <a name="configuring-tracing"></a>추적 구성
 이 항목에서는 추적을 사용하고, 추적을 내보내도록 추적 소스를 구성하고, 추적 수준을 설정하고, 엔드투엔드 추적 상관 관계를 지원하도록 동작 추적 및 전파를 설정하고, 추적에 액세스하도록 추적 수신기를 설정하는 방법에 대해 설명합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "79185749"
 <configuration>  
    <system.diagnostics>  
       <sources>  
-            <source name="System.ServiceModel"
+         <source name="System.ServiceModel"
                     switchValue="Information, ActivityTracing"  
                     propagateActivity="true">  
             <listeners>  
@@ -152,7 +152,7 @@ ms.locfileid: "79185749"
   
 |추적 수준|추적 이벤트의 특성|추적 이벤트의 내용|추적 이벤트|사용자 대상|  
 |-----------------|----------------------------------|-----------------------------------|--------------------|-----------------|  
-|꺼짐|해당 없음|해당 없음|내보낸 추적이 없습니다.|해당 없음|  
+|꺼짐|N/A|N/A|내보낸 추적이 없습니다.|N/A|  
 |위험|"부정적인" 이벤트: 예기치 않은 처리 또는 오류 조건을 나타내는 이벤트입니다.||다음을 포함하여 처리되지 않은 예외를 기록합니다.<br /><br /> - 아웃오브메모리예외<br />- ThreadAbortException (CLR은 모든 스레드AbortExceptionHandlerHandler를 호출합니다)<br />- 스택 오버 플로우 예외 (잡을 수 없습니다)<br />- 구성 오류예외<br />- 세예외<br />- 응용 프로그램 시작 오류<br />- 실패 패스트 이벤트<br />- 시스템 정지<br />- 포이즌 메시지: 응용 프로그램이 실패하는 메시지 추적.|관리자<br /><br /> 애플리케이션 개발자|  
 |Error|"부정적인" 이벤트: 예기치 않은 처리 또는 오류 조건을 나타내는 이벤트입니다.|예기치 않은 처리가 발생했습니다. 애플리케이션이 예상한 대로 작업을 수행하지 못했습니다. 그러나 애플리케이션이 여전히 실행 중입니다.|모든 예외가 기록됩니다.|관리자<br /><br /> 애플리케이션 개발자|  
 |Warning|"부정적인" 이벤트: 예기치 않은 처리 또는 오류 조건을 나타내는 이벤트입니다.|문제가 발생했거나 발생할 수도 있지만 애플리케이션이 여전히 올바르게 작동합니다. 그러나 계속 올바르게 작동하지 않을 수도 있습니다.|- 응용 프로그램이 제한 설정에서 허용하는 것보다 더 많은 요청을 받고 있습니다.<br />- 수신 큐가 최대 구성 용량에 가깝습니다.<br />- 시간 초과가 초과되었습니다.<br />- 자격 증명이 거부됩니다.|관리자<br /><br /> 애플리케이션 개발자|  
@@ -180,7 +180,7 @@ ms.locfileid: "79185749"
   
  `propagateActivity` 특성은 사용자 정의 추적 소스에 사용할 수 없습니다. 사용자 코드 동작 ID 전파를 위해 ServiceModel `ActivityTracing`은 설정하지 않고 ServiceModel `propagateActivity` 특성은 `true`로 설정해야 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [관리 및 진단](../../../../../docs/framework/wcf/diagnostics/index.md)
