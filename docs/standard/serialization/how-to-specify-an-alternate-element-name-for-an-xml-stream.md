@@ -12,12 +12,12 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: 6aaff20e2955fc9f121b3e60b14c0bbcf7515660
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 2dc1110b858f639624e05382a67ddccf3ea1b047
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159860"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588462"
 ---
 # <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>방법: XML 스트림의 대체 요소 이름 지정
   
@@ -44,7 +44,7 @@ ms.locfileid: "78159860"
 ## <a name="example"></a>예제  
   
 ```vb  
-Public Class SerializeOverride()  
+Public Function SerializeOverride()  
     ' Creates an XmlElementAttribute with the alternate name.  
     Dim myElementAttribute As XmlElementAttribute = _  
     New XmlElementAttribute()  
@@ -64,7 +64,7 @@ End Class
 ```  
   
 ```csharp  
-public class SerializeOverride()  
+public void SerializeOverride()  
 {  
     // Creates an XmlElementAttribute with the alternate name.  
     XmlElementAttribute myElementAttribute = new XmlElementAttribute();  
@@ -96,7 +96,7 @@ public class SerializeOverride()
 - <xref:System.Xml.Serialization.XmlElementAttribute>
 - <xref:System.Xml.Serialization.XmlAttributes>
 - <xref:System.Xml.Serialization.XmlAttributeOverrides>
-- [XML 및 SOAP serialization](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [XML 및 SOAP Serialization](../../../docs/standard/serialization/xml-and-soap-serialization.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [방법: 개체 직렬화](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [방법: 개체 역직렬화](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

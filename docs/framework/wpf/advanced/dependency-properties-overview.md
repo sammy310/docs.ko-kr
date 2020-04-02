@@ -14,22 +14,22 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 9bf0b168633bbf9f56694e79cf81f8051f9b8ac0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1df75814c45a6f1c245d43e2390b8a6ce692a779
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186376"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80587803"
 ---
 # <a name="dependency-properties-overview"></a>종속성 속성 개요
 
-WPF(Windows Presentation Foundation)에서는 형식의 [속성](../../../standard/base-types/common-type-system.md#Properties) 기능을 확장하는 데 사용할 수 있는 서비스 집합을 제공합니다. 일반적으로 이러한 서비스를 WPF 속성 시스템이라고 통칭합니다. WPF 속성 시스템에서 지원하는 속성을 종속성 속성이라고 합니다. 이 개요에서는 WPF 속성 시스템 및 종속성 속성의 기능에 대해 설명합니다. XAML 및 코드에서 기존 종속성 속성을 사용하는 방법도 설명합니다. 또한 이 개요에서는 종속성 속성 메타데이터 같은 종속성 속성의 특수한 측면과 사용자 지정 클래스에서 종속성 속성을 직접 만드는 방법을 소개합니다.
+WPF(Windows Presentation Foundation)에서는 형식의 [속성](../../../standard/base-types/common-type-system.md#properties) 기능을 확장하는 데 사용할 수 있는 서비스 집합을 제공합니다. 일반적으로 이러한 서비스를 WPF 속성 시스템이라고 통칭합니다. WPF 속성 시스템에서 지원하는 속성을 종속성 속성이라고 합니다. 이 개요에서는 WPF 속성 시스템 및 종속성 속성의 기능에 대해 설명합니다. XAML 및 코드에서 기존 종속성 속성을 사용하는 방법도 설명합니다. 또한 이 개요에서는 종속성 속성 메타데이터 같은 종속성 속성의 특수한 측면과 사용자 지정 클래스에서 종속성 속성을 직접 만드는 방법을 소개합니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 이 항목에서는 .NET 형식 시스템 및 개체 지향 프로그래밍에 대한 기본 지식이 있다고 가정합니다. 이 항목의 예제를 따르려면 XAML을 이해하고 WPF 애플리케이션을 작성하는 방법도 알아야 합니다. 자세한 내용은 [연습: 내 첫 번째 WPF 데스크톱 응용 프로그램을](../getting-started/walkthrough-my-first-wpf-desktop-application.md)참조하십시오.  
   
 ## <a name="dependency-properties-and-clr-properties"></a>종속성 속성 및 CLR 속성
- WPF에서 속성은 일반적으로 표준 .NET [속성](../../../standard/base-types/common-type-system.md#Properties)으로 노출됩니다. 기본 수준에서는 이러한 속성을 직접 조작할 수 있으며 종속성 속성으로 구현되는지를 알 수 없습니다. 그러나 WPF 속성 시스템 기능의 일부 또는 전체를 잘 알고 있어야 이러한 기능을 활용할 수 있습니다.
+ WPF에서 속성은 일반적으로 표준 .NET [속성](../../../standard/base-types/common-type-system.md#properties)으로 노출됩니다. 기본 수준에서는 이러한 속성을 직접 조작할 수 있으며 종속성 속성으로 구현되는지를 알 수 없습니다. 그러나 WPF 속성 시스템 기능의 일부 또는 전체를 잘 알고 있어야 이러한 기능을 활용할 수 있습니다.
 
 종속성 속성의 용도는 다른 입력 값을 기반으로 속성의 값을 계산하는 방법을 제공하는 것입니다. 이러한 다른 입력에는 테마 및 사용자 기본 설정과 같은 시스템 속성, 데이터 바인딩 및 애니메이션/스토리보드 같은 just-in-time 속성 결정 메커니즘, 리소스 및 스타일 같은 여러 용도의 템플릿, 요소 트리의 다른 요소와 부모-자식 관계를 통해 알려진 값 등이 포함될 수 있습니다. 또한 종속성 속성은 자체 포함 유효성 검사, 기본값, 다른 속성의 변경 내용을 모니터링하는 콜백 및 잠재적으로 런타임 정보에 따라 속성 값을 강제 변환할 수 있는 시스템을 제공하도록 구현할 수 있습니다. 파생 클래스는 기존 속성의 실제 구현을 재정의하거나 새 속성을 만드는 대신 종속성 속성 메타데이터를 재정의하여 기존 속성의 특정 특성을 변경할 수도 있습니다.
 
