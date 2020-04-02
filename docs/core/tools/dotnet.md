@@ -2,18 +2,18 @@
 title: dotnet 명령
 description: dotnet 명령(.NET Core CLI의 일반 드라이버) 및 사용법에 대해 알아봅니다.
 ms.date: 02/13/2020
-ms.openlocfilehash: da37c5cc3b019851e245fa3f65ae9dfb8a3fef54
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8692d419afd528bf49e1dc7dc1a7a5fd698b363b
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79397898"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134071"
 ---
 # <a name="dotnet-command"></a>dotnet 명령
 
 **이 문서의 적용 대상:**  ✔️ .NET Core 2.1 SDK 이상 버전
 
-## <a name="name"></a>이름
+## <a name="name"></a>속성
 
 `dotnet` - .NET Core CLI에 대한 일반 드라이버입니다.
 
@@ -47,7 +47,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps]
 
 `--roll-forward`는 .NET Core 3.x 이후로 사용할 수 있습니다. .NET Core 2.x의 경우 `--roll-forward-on-no-candidate-fx`를 사용합니다.
 
-## <a name="description"></a>설명
+## <a name="description"></a>Description
 
 `dotnet` 명령에는 두 가지 기능이 있습니다.
 
@@ -65,7 +65,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps]
 
 ### <a name="options-for-dotnet-by-itself"></a>dotnet 자체에 대한 옵션
 
-`dotnet` 자체에 대한 옵션은 다음과 같습니다. 예: `dotnet --info`. 환경에 대한 정보를 출력합니다.
+`dotnet` 자체에 대한 옵션은 다음과 같습니다. `dotnet --info`)을 입력합니다. 환경에 대한 정보를 출력합니다.
 
 - **`--info`**
 
@@ -89,7 +89,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps]
 
 ### <a name="sdk-options-for-running-a-command"></a>명령을 실행하기 위한 SDK 옵션
 
-명령과 함께 사용하는 `dotnet`의 옵션은 다음과 같습니다. 예: `dotnet build --help`.
+명령과 함께 사용하는 `dotnet`의 옵션은 다음과 같습니다. `dotnet build --help`)을 입력합니다.
 
 - **`-d|--diagnostics`**
 
@@ -109,7 +109,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps]
 
 ### <a name="runtime-options"></a>런타임 옵션
 
-`dotnet`이 애플리케이션을 실행할 때 사용할 수 있는 옵션은 다음과 같습니다. 예: `dotnet myapp.dll --fx-version 3.1.1`.
+`dotnet`이 애플리케이션을 실행할 때 사용할 수 있는 옵션은 다음과 같습니다. `dotnet myapp.dll --fx-version 3.1.1`)을 입력합니다.
 
 - **`--additionalprobingpath <PATH>`**
 
@@ -129,10 +129,10 @@ dotnet exec [--additionalprobingpath] [--additional-deps]
 
 - **`--roll-forward-on-no-candidate-fx <N>`** **.NET Core 2.x SDK에서 사용할 수 있습니다.**
 
-  필요한 공유 프레임워크를 사용할 수 없을 때 동작을 정의합니다. `N`는 다음이 될 수 있습니다.
+  필요한 공유 프레임워크를 사용할 수 없을 때 동작을 정의합니다. `N`는 다음과 같을 수 있습니다.
 
   - `0` - 부 버전 롤포워드도 사용하지 않도록 설정합니다.
-  - `1` - 부 버전에서는 롤포워드하지만 주 버전에서는 롤포워드하지 않습니다. 이것은 기본적인 동작입니다.
+  - `1` - 부 버전에서는 롤포워드하지만 주 버전에서는 롤포워드하지 않습니다. 기본 동작입니다.
   - `2` - 부 버전과 주 버전에서 롤포워드합니다.
 
    자세한 내용은 [롤포워드](../whats-new/dotnet-core-2-1.md#roll-forward)를 참조하세요.
@@ -156,7 +156,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps]
 
 ### <a name="general"></a>일반
 
-| 명령                                       | 기능                                                            |
+| 명령                                       | 함수                                                            |
 | --------------------------------------------- | ------------------------------------------------------------------- |
 | [dotnet build](dotnet-build.md)               | .NET Core 애플리케이션을 빌드합니다.                                     |
 | [dotnet build-server](dotnet-build-server.md) | 빌드에서 시작된 서버와 상호 작용합니다.                          |
@@ -175,7 +175,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps]
 
 ### <a name="project-references"></a>프로젝트 참조
 
-명령 | 기능
+명령 | 함수
 --- | ---
 [dotnet add reference](dotnet-add-reference.md) | 프로젝트 참조를 추가합니다.
 [dotnet list reference](dotnet-list-reference.md) | 프로젝트 참조를 나열합니다.
@@ -183,24 +183,30 @@ dotnet exec [--additionalprobingpath] [--additional-deps]
 
 ### <a name="nuget-packages"></a>NuGet 패키지
 
-명령 | 기능
+명령 | 함수
 --- | ---
 [dotnet add package](dotnet-add-package.md) | NuGet 패키지를 추가합니다.
 [dotnet remove package](dotnet-remove-package.md) | NuGet 패키지를 제거합니다.
 
 ### <a name="nuget-commands"></a>NuGet 명령
 
-명령 | 기능
+명령 | 함수
 --- | ---
 [dotnet nuget delete](dotnet-nuget-delete.md) | 서버에서 패키지를 삭제하거나 목록에서 제거합니다.
-[dotnet nuget locals](dotnet-nuget-locals.md) | http-request 캐시, 임시 캐시 또는 시스템 전체의 글로벌 패키지 폴더와 같은 로컬 NuGet 리소스를 지우거나 목록에 포함합니다.
 [dotnet nuget push](dotnet-nuget-push.md) | 서버에 패키지를 푸시하고 게시합니다.
+[dotnet nuget locals](dotnet-nuget-locals.md) | http-request 캐시, 임시 캐시 또는 시스템 전체의 글로벌 패키지 폴더와 같은 로컬 NuGet 리소스를 지우거나 목록에 포함합니다.
+[dotnet nuget add source](dotnet-nuget-add-source.md) | NuGet 소스를 추가합니다.
+[dotnet nuget disable source](dotnet-nuget-disable-source.md) | NuGet 소스를 사용하지 않도록 설정합니다.
+[dotnet nuget enable source](dotnet-nuget-enable-source.md) | NuGet 소스를 사용하도록 설정합니다.
+[dotnet nuget list source](dotnet-nuget-list-source.md) | 구성된 NuGet 소스를 모두 나열합니다.
+[dotnet nuget remove source](dotnet-nuget-remove-source.md) | NuGet 소스를 제거합니다.
+[dotnet nuget update source](dotnet-nuget-update-source.md) | NuGet 소스를 업데이트합니다.
 
 ### <a name="global-tool-path-and-local-tools-commands"></a>전역, 도구 경로 및 로컬 도구 명령
 
 도구는 NuGet 패키지에서 설치되고 명령 프롬프트에서 호출되는 콘솔 애플리케이션입니다. 도구를 직접 작성하거나 타사에서 작성한 도구를 설치할 수 있습니다. 도구를 전역 도구, 도구 경로 도구 및 로컬 도구라고도 합니다. 자세한 내용은 [.NET Core 도구 개요](global-tools.md)를 참조하세요. 전역 및 도구 경로 도구는 .NET Core SDK 2.1부터 사용할 수 있습니다. 로컬 도구는 .NET Core SDK 3.0부터 사용할 수 있습니다.
 
-명령 | 기능
+명령 | 함수
 --- | ---
 [dotnet tool install](dotnet-tool-install.md) | 컴퓨터에 도구를 설치합니다.
 [dotnet tool list](dotnet-tool-list.md) | 컴퓨터에 현재 설치되어 있는 모든 전역, 도구 경로 또는 로컬 도구를 나열합니다.
@@ -211,7 +217,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps]
 
 .NET Core SDK 2.1.300부터는 `DotnetCliToolReference`을 사용하여 프로젝트별로만 사용할 수 있었던 여러 도구를 .NET Core SDK의 일부로 사용할 수 있습니다. 이러한 도구는 다음 표에 나열되어 있습니다.
 
-| 도구                                              | 기능                                                     |
+| 도구                                              | 함수                                                     |
 | ------------------------------------------------- | ------------------------------------------------------------ |
 | dev-certs                                         | 개발 인증서를 만들고 관리합니다.                |
 | [ef](/ef/core/miscellaneous/cli/dotnet)           | Entity Framework Core 명령줄 도구입니다.                    |
@@ -254,6 +260,10 @@ dotnet myapp.dll
 - `DOTNET_SERVICING`
 
   런타임을 로드할 때 공유 호스트에서 사용할 서비스 인덱스의 위치를 지정합니다.
+
+- `DOTNET_NOLOGO`
+
+  처음 실행할 때 .NET Core 시작 및 원격 분석 메시지를 표시할지 여부를 지정합니다. 이러한 메시지를 음소거하려면 `true`로 설정하고(`true`, `1` 또는 `yes` 값 사용) 허용하려면 `false`로 설정합니다(`false`, `0` 또는 `no` 값 사용). 설정되지 않은 경우 기본값은 `false`이고 처음 실행될 때 메시지가 표시됩니다. 이 플래그는 원격 분석에는 영향을 주지 않습니다(원격 분석 보내기를 옵트아웃하기 위한 `DOTNET_CLI_TELEMETRY_OPTOUT` 참조).
 
 - `DOTNET_CLI_TELEMETRY_OPTOUT`
 
@@ -299,7 +309,7 @@ dotnet myapp.dll
 
   호스팅 구성 요소(예: `dotnet.exe`, `hostfxr`, `hostpolicy`)에서 진단 추적을 제어합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [런타임 구성 파일](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)
 - [.NET Core 런타임 구성 설정](../run-time-config/index.md)

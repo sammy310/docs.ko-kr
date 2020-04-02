@@ -1,14 +1,14 @@
 ---
 title: 모델 작성기란 무엇이며 어떻게 작동하나요?
 description: ML.NET 모델 작성기를 사용하여 기계 학습 모델을 자동으로 학습하는 방법
-ms.date: 01/07/2020
+ms.date: 03/25/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: cff4601843ec9ca7201ea7dbdbfbcfa18f50e46e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9cf66455109908ebd9fc10e62cf4f067609b57d9
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397808"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344776"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>모델 작성기란 무엇이며 어떻게 작동하나요?
 
@@ -23,7 +23,7 @@ ML.NET 모델 작성기는 사용자 지정 기계 학습 모델을 빌드, 학�
 > [!NOTE]
 > 모델 작성기는 현재 미리 보기로 제공됩니다.
 
-## <a name="scenarios"></a>시나리오
+## <a name="scenario"></a>시나리오
 
 애플리케이션에 대한 기계 학습 모델을 생성하기 위해 모델 작성기에 다양한 시나리오를 가져올 수 있습니다.
 
@@ -38,47 +38,41 @@ ML.NET 모델 작성기는 사용자 지정 기계 학습 모델을 빌드, 학�
 
 모델 작성기에서 시나리오를 선택해야 합니다. 시나리오 형식은 수행하려는 예측의 종류에 따라 다릅니다.
 
-#### <a name="predict-a-category-when-there-are-only-two-categories"></a>범주 예측(두 개의 범주만 있는 경우)
+#### <a name="text-classification"></a>텍스트 분류
 
-이진 분류는 데이터를 두 범주(예/아니요, 통과/실패, 참/거짓, 긍정/부정)로 분류하는 데 사용됩니다.
+분류는 데이터를 범주로 분류하는 데 사용됩니다.
 
 ![사기 탐지, 위험 완화 및 애플리케이션 심사를 포함한 이진 분류의 예를 보여 주는 다이어그램](media/binary-classification-examples.png)
 
-감정 분석은 고객 피드백에 대한 긍정 또는 부정 감정을 예측하는 데 사용될 수 있습니다. 이진 분류 기계 학습 작업의 예입니다.
-
-시나리오에서 두 범주로 분류해야 하는 경우, 이 템플릿을 사용자 고유의 데이터 세트와 함께 사용할 수 있습니다.
-
-#### <a name="predict-a-category-when-there-are-three-or-more-categories"></a>범주 예측(세 개 이상의 범주가 있는 경우)
-
-다중 클래스 분류는 데이터를 세 개 이상의 클래스로 분류하는 데 사용될 수 있습니다.
-
 ![문서 및 제품 분류, 지원 티켓 라우팅 및 고객 이슈 우선 순위 지정을 포함한 다중 클래스 분류의 예](media/multiclass-classification-examples.png)
 
-문제 분류는 문제 제목 및 설명을 사용하여 고객 피드백(예: GitHub) 문제를 분류하는 데 사용될 수 있습니다. 다중 클래스 분류 기계 학습 작업의 예입니다.
-
-데이터를 세 가지 이상의 범주로 분류하려는 경우 시나리오에 대한 문제 분류 템플릿을 사용할 수 있습니다.
-
-#### <a name="predict-a-number"></a>숫자 예측
+#### <a name="value-prediction"></a>값 예측
 
 회귀는 숫자를 예측하는 데 사용됩니다.
 
 ![가격 예측, 매출 예측 및 예측 유지 관리와 같은 회귀 예를 보여 주는 다이어그램](media/regression-examples.png)
 
-가격 예측은 집의 위치, 크기 및 기타 특성을 통해 집 가격을 예측하는 데 사용할 수 있습니다. 회귀 기계 학습 작업의 예입니다.
-
-사용자 고유의 데이터 세트를 사용하여 숫자 값을 예측하려는 경우 시나리오에 가격 예측 템플릿을 사용할 수 있습니다.
-
-#### <a name="classify-images-into-categories"></a>이미지를 범주로 분류
-
-이 시나리오는 범주로 분류되는 입력 데이터가 이미지 집합인 다중 클래스 분류의 특별한 사례입니다.
+#### <a name="image-classification"></a>이미지 분류
 
 이미지 분류는 다른 범주의 이미지를 식별하는 데 사용될 수 있습니다. 예를 들어 다른 종류의 지형이나 동물 또는 제조 결함이 있습니다.
 
-이미지 집합이 있고 이미지를 여러 범주로 분류하려는 경우 시나리오에 이미지 분류 템플릿을 사용할 수 있습니다.
+이미지 집합이 있고 이미지를 여러 범주로 분류하려는 경우 이미지 분류 시나리오를 사용할 수 있습니다.
 
-#### <a name="custom-scenario"></a>사용자 지정 시나리오
+#### <a name="recommendation"></a>권장
 
-사용자 지정 시나리오를 사용하여 시나리오를 수동으로 선택할 수 있습니다.
+추천 시나리오는 특정 사용자의 좋아요 및 싫어요가 다른 사용자와 얼마나 비슷한지에 따라 해당 사용자에 대한 추천 항목 목록을 예측합니다.
+
+사용자 집합과 "제품" 집합(예: 구매할 항목, 영화, 책 또는 TV 프로그램) 그리고 해당 제품에 대한 사용자 "평점"이 있는 경우 추천 시나리오를 사용할 수 있습니다.
+
+## <a name="environment"></a>환경
+
+컴퓨터에서 로컬로 또는 Azure 클라우드에서 기계 학습 모델을 학습시킬 수 있습니다.
+
+로컬로 학습시키는 경우 컴퓨터 리소스(CPU, 메모리 및 디스크)의 제약 조건 내에서 작업합니다. 클라우드에서 학습시키는 경우에는 특히 대규모 데이터 집합의 시나리오 요구 사항에 맞게 리소스를 확장할 수 있습니다.
+
+로컬 학습은 모든 시나리오에서 지원됩니다.
+
+Azure 학습은 이미지 분류에 대해 지원됩니다.
 
 ## <a name="data"></a>데이터
 
@@ -113,14 +107,15 @@ ML.NET 모델 작성기는 사용자 지정 기계 학습 모델을 빌드, 학�
 
 아직 사용자 고유의 데이터가 없는 경우 다음 데이터 세트 중 하나를 사용해 보세요.
 
-|시나리오|ML 작업|데이터|레이블|기능|
+|시나리오|예제|데이터|레이블|기능|
 |-|-|-|-|-|
-|가격 예측|재발|[택시 요금 데이터](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|요금|운행 시간, 거리|
-|변칙 검색|이진 분류|[제품 판매 데이터](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|제품 판매|월|
-|감정 분석|이진 분류|[웹 사이트 주석 데이터](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|레이블(부정적인 감정인 경우 0, 긍정적인 감정인 경우 1)|주석, 연도|
-|부정 행위 감지|이진 분류|[신용 카드 데이터](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|클래스(사기일 경우 1, 그렇지 않으면 0)|수량, V1-V28(익명화된 기능)|
-|텍스트 분류|다중 클래스 분류|[GitHub 문제 데이터](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Area|제목, 설명|
-|이미지 분류|다중 클래스 분류|[꽃 이미지](http://download.tensorflow.org/example_images/flower_photos.tgz)|꽃의 종류: 데이지, 민들레, 장미, 해바라기, 튤립|이미지 데이터 자체|
+|분류|판매 변칙 예측|[제품 판매 데이터](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|제품 판매|월|
+||웹 사이트 댓글의 감정 예측|[웹 사이트 주석 데이터](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|레이블(부정적인 감정인 경우 0, 긍정적인 감정인 경우 1)|주석, 연도|
+||사기성 신용 카드 거래 예측|[신용 카드 데이터](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|클래스(사기일 경우 1, 그렇지 않으면 0)|수량, V1-V28(익명화된 기능)|
+||GitHub 리포지토리에서 문제 유형 예측|[GitHub 문제 데이터](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Area|제목, 설명|
+|값 예측|택시 요금 예측|[택시 요금 데이터](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|요금|운행 시간, 거리|
+|이미지 분류|문제의 범주 예측|[꽃 이미지](http://download.tensorflow.org/example_images/flower_photos.tgz)|꽃의 종류: 데이지, 민들레, 장미, 해바라기, 튤립|이미지 데이터 자체|
+|권장|좋아하는 영화 예측|[영화 평점](http://files.grouplens.org/datasets/movielens/ml-latest-small.zip)|사용자, 영화|등급|
 
 ## <a name="train"></a>학습
 
@@ -165,13 +160,13 @@ ML.NET 모델 작성기는 사용자 지정 기계 학습 모델을 빌드, 학�
 
 시나리오는 기계 학습 작업에 매핑됩니다. 각 ML 작업에는 고유한 평가 메트릭 집합이 있습니다.
 
-#### <a name="regression-for-example-price-prediction"></a>회귀(예: 가격 예측)
+#### <a name="value-prediction"></a>값 예측
 
-회귀 문제에 대한 기본 메트릭은 RSquared이고, RSquared 값의 범위는 0과 1 사이입니다. 가능한 최고의 값은 1입니다. 즉, RSquared의 값이 1에 가까울수록 모델의 성능이 향상됩니다.
+값 예측 문제에 대한 기본 메트릭은 RSquared이고, RSquared 값의 범위는 0과 1 사이입니다. 가능한 최고의 값은 1입니다. 즉, RSquared의 값이 1에 가까울수록 모델의 성능이 향상됩니다.
 
-절대 손실, 제곱 손실 및 RMS 손실과 같이 보고된 다른 메트릭은 추가 메트릭이며 모델의 성능을 이해하고 다른 회귀 모델과 비교하는 데 사용할 수 있습니다.
+절대 손실, 제곱 손실 및 RMS 손실과 같이 보고된 다른 메트릭은 추가 메트릭이며 모델의 성능을 이해하고 다른 값 예측 모델과 비교하는 데 사용할 수 있습니다.
 
-#### <a name="binary-classification-for-example-sentiment-analysis"></a>이진 분류(예: 감정 분석)
+#### <a name="classification-2-categories"></a>분류(2개 범주)
 
 분류 문제에 대한 기본 메트릭은 정확도입니다. 정확도는 모델이 테스트 데이터 세트에 대해 내리는 정확한 예측 비율을 정의합니다. 100% 또는 1.0에 가까울수록 좋습니다.
 
@@ -179,7 +174,7 @@ ML.NET 모델 작성기는 사용자 지정 기계 학습 모델을 빌드, 학�
 
 F1 점수와 같은 추가 메트릭을 사용하여 전체 정밀도와 재현율 간의 균형을 제어할 수 있습니다.
 
-#### <a name="multi-class-classification-for-example-issue-classification-image-classification"></a>다중 클래스 분류(예: 문제 분류, 이미지 분류)
+#### <a name="classification-3-categories"></a>분류(3개 이상 범주)
 
 다중 클래스 분류에 대한 기본 메트릭은 Micro 정확도입니다. Micro 정확도는 100% 또는 1.0에 가까울수록 좋습니다.
 
@@ -196,7 +191,7 @@ F1 점수와 같은 추가 메트릭을 사용하여 전체 정밀도와 재현�
 
 모델 성능 점수가 원하는 만큼 좋지 않은 경우 다음을 수행할 수 있습니다.
 
-- 더 긴 시간 동안 학습합니다. 시간이 지날수록 자동화된 기계 학습 엔진은 더 많은 알고리즘과 설정을 시도합니다.
+- 더 긴 시간 동안 학습합니다. 시간이 지날수록 자동화된 기계 학습 엔진은 더 많은 알고리즘과 설정으로 실험합니다.
 
 - 더 많은 데이터를 추가합니다. 경우에 따라 데이터의 양이 고품질 기계 학습 모델을 학습하기에 충분하지 않을 수도 있습니다.
 

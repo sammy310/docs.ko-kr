@@ -4,12 +4,12 @@ description: 이 자습서에서는 Docker를 사용하여 .NET Core 애플리�
 ms.date: 01/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e1904430a591b0e74a69d50a53869a130fc0a248
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8be12792e4a9e8511dba87e657f700cc4ec97a16
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157832"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546577"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>자습서: .NET Core 앱 컨테이너화
 
@@ -26,8 +26,8 @@ ms.locfileid: "78157832"
 
 .NET Core 애플리케이션용 Docker 컨테이너 빌드 및 배포 작업을 알아봅니다. Docker 플랫폼은 Docker 엔진을 사용하여 Docker 이미지로 앱을 신속하게 빌드하고 패키지합니다.    이 이미지는 계층화된 컨테이너에서 배포되고 실행되도록 *Dockerfile* 형식으로 작성됩니다.
 
-> [!TIP]
-> 기존 ASP.NET Core 애플리케이션으로 작업하는 경우 [ASP.NET Core 애플리케이션을 컨테이너화하는 방법 알아보기](/aspnet/core/host-and-deploy/docker/building-net-docker-images) 자습서를 참조하세요.
+> [!WARNING]
+> **이 자습서는 ASP.NET Core 앱에는 적합하지 않습니다.** ASP.NET Core를 사용하는 경우 [ASP.NET Core 애플리케이션을 컨테이너화하는 방법 알아보기](/aspnet/core/host-and-deploy/docker/building-net-docker-images) 자습서를 참조하세요.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 

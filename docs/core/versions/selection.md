@@ -3,13 +3,13 @@ title: 사용할 .NET Core 버전 선택
 description: .NET Core에서 프로그램에 대한 런타임 버전을 자동으로 찾아 선택하는 방법을 알아봅니다. 또한 이 문서에서는 특정 버전을 강제로 적용하는 방법을 설명합니다.
 author: thraka
 ms.author: adegeo
-ms.date: 06/26/2019
-ms.openlocfilehash: 55f04ce81f63753831fca8fa2e44811c44049733
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 03/24/2020
+ms.openlocfilehash: 26aecdf2bf3ebd033e80eec26159eb9fa3cd54dd
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79397838"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345167"
 ---
 # <a name="select-the-net-core-version-to-use"></a>사용할 .NET Core 버전 선택
 
@@ -45,7 +45,7 @@ SDK 명령에는 `dotnet new` 및 `dotnet run`이 포함됩니다. .NET Core CLI
 ``` json
 {
   "sdk": {
-    "version": "2.0.0"
+    "version": "3.0.0"
   }
 }
 ```
@@ -63,54 +63,59 @@ SDK 버전을 선택하는 프로세스는 다음과 같습니다.
 **TFM**(대상 프레임워크 모니커)에 정의된 API에 대해 프로젝트를 빌드합니다. 프로젝트 파일에서 [대상 프레임워크](../../standard/frameworks.md)를 지정합니다. 다음 예제와 같이 프로젝트 파일에서 `TargetFramework` 요소를 설정합니다.
 
 ``` xml
-<TargetFramework>netcoreapp2.0</TargetFramework>
+<TargetFramework>netcoreapp3.0</TargetFramework>
 ```
 
 여러 개의 TFM에 대해 프로젝트를 구축할 수 있습니다. 여러 대상 프레임워크를 설정하는 것은 라이브러리에서 더 일반적이지만, 애플리케이션에서도 수행할 수 있습니다. `TargetFrameworks` 속성(`TargetFramework`의 복수형)을 지정합니다. 대상 프레임워크는 다음 예제와 같이 세미콜론으로 구분됩니다.
 
 ``` xml
-<TargetFrameworks>netcoreapp2.0;net47</TargetFrameworks>
+<TargetFrameworks>netcoreapp3.0;net47</TargetFrameworks>
 ```
 
-지정된 SDK는 함께 제공되는 런타임의 대상 프레임워크로 제한된 프레임워크의 고정된 집합을 지원합니다. 예를 들어 .NET Core 2.0 SDK에는 `netcoreapp2.0` 대상 프레임워크의 구현인 .NET Core 2.0 런타임이 포함되어 있습니다. .NET Core 2.0 SDK는 `netcoreapp1.0`, `netcoreapp1.1` 및 `netcoreapp2.0`을 지원하지만, `netcoreapp2.1`(또는 그 이상)은 지원하지 않습니다. .NET Core 2.1 SDK를 설치하여 `netcoreapp2.1`을 빌드합니다.
+지정된 SDK는 함께 제공되는 런타임의 대상 프레임워크로 제한된 프레임워크의 고정된 집합을 지원합니다. 예를 들어 .NET Core 3.0 SDK에는 `netcoreapp3.0` 대상 프레임워크의 구현인 .NET Core 3.0 런타임이 포함되어 있습니다. .NET Core 3.0 SDK는 `netcoreapp2.1`, `netcoreapp2.2`, `netcoreapp3.0`을 지원하지만, `netcoreapp3.1`(또는 그 이상)은 지원하지 않습니다. .NET Core 3.1 SDK를 설치하여 `netcoreapp3.1`을 빌드합니다.
 
-또한 .NET Standard 대상 프레임워크도 SDK에서 제공하는 런타임의 대상 프레임워크로 제한됩니다. .NET Core 2.0 SDK는 `netstandard2.0`으로 제한됩니다.
+또한 .NET Standard 대상 프레임워크도 SDK에서 제공하는 런타임의 대상 프레임워크로 제한됩니다. .NET Core 3.1 SDK는 `netstandard2.1`으로 제한됩니다. 자세한 내용은 [.NET 표준](../../standard/net-standard.md)을 참조하세요.
 
 ## <a name="framework-dependent-apps-roll-forward"></a>프레임워크 종속 응용 프로그램 롤포워드
 
 [`dotnet run`](../tools/dotnet-run.md)를 사용하여 소스에서, [`dotnet myapp.dll`](../tools/dotnet.md#description)을 사용하여 [**프레임워크 종속 배포**](../deploying/index.md#publish-runtime-dependent)에서 또는 `myapp.exe`를 사용하여 [**프레임워크 종속 실행 파일**](../deploying/index.md#publish-runtime-dependent)에서 애플리케이션을 실행하는 경우 `dotnet` 실행 파일이 애플리케이션의 **호스트**입니다.
 
-호스트는 머신에 설치된 최신 패치 버전을 선택합니다. 예를 들어 프로젝트 파일에서 `netcoreapp2.0`을 지정하고 `2.0.4`가 설치된 최신 .NET 런타임인 경우 `2.0.4` 런타임이 사용됩니다.
+호스트는 머신에 설치된 최신 패치 버전을 선택합니다. 예를 들어 프로젝트 파일에서 `netcoreapp3.0`을 지정하고 `3.0.4`가 설치된 최신 .NET 런타임인 경우 `3.0.4` 런타임이 사용됩니다.
 
-허용되는 `2.0.*` 버전이 없으면 새 `2.*` 버전이 사용됩니다. 예를 들어 `netcoreapp2.0`을 지정하고 `2.1.0`만 설치된 경우 `2.1.0` 런타임을 사용하여 애플리케이션이 실행됩니다. 이 동작을 "부 버전 롤포워드"라고 합니다. 또한 더 낮은 버전은 고려되지 않습니다. 허용 가능한 런타임이 설치되어 있지 않으면 애플리케이션이 실행되지 않습니다.
+허용되는 `3.0.*` 버전이 없으면 새 `3.*` 버전이 사용됩니다. 예를 들어 `netcoreapp3.0`을 지정하고 `3.1.0`만 설치된 경우 `3.1.0` 런타임을 사용하여 애플리케이션이 실행됩니다. 이 동작을 "부 버전 롤포워드"라고 합니다. 또한 더 낮은 버전은 고려되지 않습니다. 허용 가능한 런타임이 설치되어 있지 않으면 애플리케이션이 실행되지 않습니다.
 
-2\.0을 대상으로 하는 경우 몇 가지 사용 예에서 동작을 시연합니다.
+3\.0을 대상으로 하는 경우 몇 가지 사용 예에서 동작을 시연합니다.
 
-- 2.0이 지정됩니다. 2.0.5는 설치된 가장 높은 패치 버전입니다. 2.0.5가 사용됩니다.
-- 2.0이 지정됩니다. 2\.0.* 버전이 설치되어 있지 않습니다. 1.1.1은 설치된 가장 높은 런타임 버전입니다. 오류 메시지가 표시됩니다.
-- 2.0이 지정됩니다. 2\.0.* 버전이 설치되어 있지 않습니다. 2.2.2는 설치된 가장 높은 2.x 런타임 버전입니다. 2.2.2가 사용됩니다.
-- 2.0이 지정됩니다. 2\.x 버전이 설치되어 있지 않습니다. 3.0.0이 설치됩니다. 오류 메시지가 표시됩니다.
+- ✔️ 3.0이 지정되었습니다. 3.0.5가 설치된 가장 높은 패치 버전입니다. 3.0.5가 사용됩니다.
+- ❌ 3.0이 지정되었습니다. 3\.0.* 버전이 설치되어 있지 않습니다. 2.1.1이 설치된 가장 높은 런타임 버전입니다. 오류 메시지가 표시됩니다.
+- ✔️ 3.0이 지정되었습니다. 3\.0.* 버전이 설치되어 있지 않습니다. 3.1.0이 설치된 가장 높은 런타임 버전입니다. 3.1.0이 사용됩니다.
+- ❌ 2.0이 지정되었습니다. 2\.x 버전이 설치되어 있지 않습니다. 3.0.0이 설치된 가장 높은 런타임 버전입니다. 오류 메시지가 표시됩니다.
 
-부 버전 롤포워드에는 최종 사용자에게 영향을 줄 수 있는 하나의 부작용이 있습니다. 다음 시나리오를 고려하세요.
+부 버전 롤포워드에는 최종 사용자에게 영향을 줄 수 있는 하나의 부작용이 있습니다. 다음과 같은 시나리오를 고려해 보세요.
 
-1. 애플리케이션은 2.0이 필수가 되도록 지정합니다.
-2. 실행 시 버전 2.0.*은 설치되지 않지만 2.2.2는 설치됩니다. 버전 2.2.2가 사용됩니다.
-3. 나중에 사용자가 2.0.5를 설치하고 애플리케이션을 다시 실행하면 이제 2.0.5가 사용됩니다.
+1. 애플리케이션은 3.0이 필수가 되도록 지정합니다.
+2. 실행 시 버전 3.0.*은 설치되어 있지 않지만 3.1.0은 설치되어 있습니다. 버전 3.1.0이 사용됩니다.
+3. 나중에 사용자가 3.0.5를 설치하고 애플리케이션을 다시 실행하면 이제 3.0.5가 사용됩니다.
 
-2\.0.5와 2.2.2는 다르게 동작할 수도 있습니다. 특히 이진 데이터를 직렬화하는 것과 같은 시나리오에서는 다르게 동작합니다.
+3\.0.5와 3.1.0은 다르게 동작할 수도 있습니다. 특히 이진 데이터를 직렬화하는 것과 같은 시나리오에서는 다르게 동작합니다.
 
 ## <a name="self-contained-deployments-include-the-selected-runtime"></a>자체 포함 배포에 선택한 런타임 포함
 
 애플리케이션을 [**자체 포함 배포**](../deploying/index.md#publish-self-contained)로 게시할 수 있습니다. 이 방법은 .NET Core 런타임 및 라이브러리를 애플리케이션과 함께 번들로 제공합니다. 자체 포함 배포에는 런타임 환경에 대한 종속성이 없습니다. 런타임 버전 선택은 런타임이 아니라 게시 시간에 수행됩니다.
 
-게시 프로세스는 지정된 런타임 제품군의 최신 패치 버전을 선택합니다. 예를 들어 .NET Core 2.0.4가 .NET Core 2.0 런타임 제품군의 최신 패치 버전인 경우 `dotnet publish`는 .NET Core 2.0.4를 선택합니다. 대상 프레임워크(설치된 최신 보안 패치 포함)는 애플리케이션과 함께 패키지됩니다.
+게시 프로세스는 지정된 런타임 제품군의 최신 패치 버전을 선택합니다. 예를 들어 .NET Core 3.0.4가 .NET Core 3.0 런타임 제품군의 최신 패치 버전인 경우 `dotnet publish`는 .NET Core 3.0.4를 선택합니다. 대상 프레임워크(설치된 최신 보안 패치 포함)는 애플리케이션과 함께 패키지됩니다.
 
 애플리케이션에 대해 지정된 최소 버전이 충족되지 않으면 오류가 발생합니다. `dotnet publish`는 최신 런타임 패치 버전(지정된 major.minor 버전 제품군 내에서)에 바인딩합니다. `dotnet publish`는 `dotnet run`의 롤포워드 의미 체계를 지원하지 않습니다. 패치 및 자체 포함 배포에 대한 자세한 내용은 .NET Core 애플리케이션 배포의 [런타임 패치 선택](../deploying/runtime-patch-selection.md)에 대한 문서를 참조하세요.
 
 자체 포함 배포에는 특정 패치 버전이 필요할 수 있습니다. 다음 예제와 같이 프로젝트 파일에서 최소 런타임 패치 버전(더 높거나 낮은 버전)을 재정의할 수 있습니다.
 
 ``` xml
-<RuntimeFrameworkVersion>2.0.4</RuntimeFrameworkVersion>
+<RuntimeFrameworkVersion>3.0.4</RuntimeFrameworkVersion>
 ```
 
 `RuntimeFrameworkVersion` 요소는 기본 버전 정책보다 우선합니다. 자체 포함 배포의 경우 `RuntimeFrameworkVersion`은 *정확한* 런타임 프레임워크 버전을 지정합니다. 프레임워크 종속 애플리케이션의 경우 `RuntimeFrameworkVersion`은 필요한 *최소* 런타임 프레임워크 버전을 지정합니다.
+
+## <a name="see-also"></a>참고 항목
+
+- [.NET Core 다운로드 및 설치](../install/index.md)
+- [.NET Core 런타임 및 SDK를 제거하는 방법](remove-runtime-sdk-versions.md)

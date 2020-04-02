@@ -1,29 +1,34 @@
 ---
-title: 기본 연산자 - C# 참조
-description: 기본 연산자를 사용하여 형식의 기본값을 생성합니다.
-ms.date: 08/01/2019
+title: 기본값 식 - C# 참조
+description: 기본값 식을 사용하여 형식의 기본값을 가져옵니다.
+ms.date: 03/13/2020
+f1_keywords:
+- default_CSharpKeyword
+- default
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 0d37fe952e71e74f014872231a2e58663dea9d18
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2adfd8d24066e9dad50c3c18407d3ade71b4b68e
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398186"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507180"
 ---
-# <a name="default-operator-c-reference"></a>기본 연산자(C# 참조)
+# <a name="default-value-expressions-c-reference"></a>기본값 식(C# 참조)
 
-`default` 연산자는 형식의 [기본값](../builtin-types/default-values.md)을 생성합니다. `default` 연산자에 대한 인수는 형식 또는 형식 매개 변수의 이름이어야 합니다.
-
-다음 예제에서는 `default` 연산자의 사용법을 보여 줍니다.
-
-[!code-csharp-interactive[default of T](snippets/DefaultOperator.cs#WithOperand)]
+기본값 식은 형식의 [기본값](../builtin-types/default-values.md)을 생성합니다. 기본값 식에는 두 가지가 있습니다. [기본 연산자](#default-operator) 호출 및 [기본 리터럴](#default-literal).
 
 또한 `default` 키워드를 [`switch` 문](../keywords/switch.md) 내의 기본 사례 레이블로 사용할 수 있습니다.
 
+## <a name="default-operator"></a>default 연산자
+
+`default` 연산자의 인수는 다음 예제와 같이 형식 또는 형식 매개 변수의 이름이어야 합니다.
+
+[!code-csharp-interactive[default of T](snippets/DefaultOperator.cs#WithOperand)]
+
 ## <a name="default-literal"></a>기본 리터럴
 
-C# 7.1부터 `default` 리터럴을 사용하여 컴파일러가 식 형식을 유추할 수 있는 경우 형식의 기본값을 생성할 수 있습니다. `default` 리터럴 식은 `default(T)`가 추론된 형식은 `T` 식과 동일한 값을 생성합니다. 다음과 같은 경우에 `default` 리터럴 사용할 수 있습니다.
+C# 7.1부터 `default` 리터럴을 사용하여 컴파일러가 식 형식을 유추할 수 있는 경우 형식의 기본값을 생성할 수 있습니다. `default` 리터럴 식은 `T`가 추론된 형식은 `default(T)` 식과 동일한 값을 생성합니다. 다음과 같은 경우에 `default` 리터럴 사용할 수 있습니다.
 
 - 변수의 할당 또는 초기화에서
 - [선택적 메서드 매개 변수](../../methods.md#optional-parameters-and-arguments)에 대한 기본값 선언에서
@@ -36,7 +41,7 @@ C# 7.1부터 `default` 리터럴을 사용하여 컴파일러가 식 형식을 �
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](~/_csharplang/spec/expressions.md#default-value-expressions)의 [기본값 식](~/_csharplang/spec/introduction.md) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [기본값 식](~/_csharplang/spec/expressions.md#default-value-expressions) 섹션을 참조하세요.
 
 `default` 리터럴에 대한 자세한 내용은 [기능 제안 노트](~/_csharplang/proposals/csharp-7.1/target-typed-default.md)를 참조하세요.
 

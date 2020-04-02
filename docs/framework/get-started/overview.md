@@ -7,12 +7,12 @@ helpviewer_keywords:
 - common language runtime, about
 - common language runtime, overview
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
-ms.openlocfilehash: de9cbdab5d5786b9d59d23ba675fa3f78f807716
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ace42738118cde4bcda4b78607d7bdb045d3501e
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181600"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248923"
 ---
 # <a name="overview-of-net-framework"></a>.NET Framework의 개요
 
@@ -71,7 +71,7 @@ Internet Explorer는 MIME 형식 확장의 형식으로 런타임을 호스트�
 
 예를 들어, .NET Framework 컬렉션 클래스에서는 사용자 고유의 컬렉션 클래스를 개발하기 위한 인터페이스 집합을 구현합니다. 사용자의 컬렉션 클래스는 .NET Framework의 클래스와 매끄럽게 결합됩니다.
 
-개체 지향 클래스 라이브러리에서와 마찬가지로, .NET Framework 형식을 사용하면 문자열 관리, 데이터 수집, 데이터베이스 연결, 파일 액세스 등의 작업을 비롯한 일반적인 범위의 프로그래밍 작업을 수행할 수 있습니다. 이러한 일반적인 작업 외에도 클래스 라이브러리에는 특수화된 다양한 개발 시나리오를 지원하는 형식이 포함되어 있습니다. .NET Framework를 사용하여 다음과 같은 종류의 앱 및 서비스를 개발할 수 있습니다.
+개체 지향 클래스 라이브러리에서와 마찬가지로, .NET Framework 형식을 사용하면 문자열 관리, 데이터 수집, 데이터베이스 연결, 파일 액세스를 비롯한 일반적인 범위의 프로그래밍 작업을 수행할 수 있습니다. 이러한 일반적인 작업 외에도 클래스 라이브러리에는 특수화된 다양한 개발 시나리오를 지원하는 형식이 포함되어 있습니다. .NET Framework를 사용하여 다음과 같은 앱 및 서비스를 개발할 수 있습니다.
 
 - 콘솔 앱. [콘솔 애플리케이션 만들기](../../standard/building-console-apps.md)를 참조하세요.
 

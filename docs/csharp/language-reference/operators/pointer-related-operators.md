@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 7c95fe07220a78b388a5c6850e4123feb029d951
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fd25cd419f8c3bfe905850e6a252f4a8cf65478c
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398240"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507102"
 ---
 # <a name="pointer-related-operators-c-reference"></a>포인터 관련 연산자(C# 참조)
 
@@ -42,13 +42,13 @@ ms.locfileid: "79398240"
 > [!NOTE]
 > 포인터를 사용한 작업에는 [안전하지 않은](../keywords/unsafe.md) 컨텍스트가 필요합니다. 안전하지 않은 블록을 포함하는 코드는 [`-unsafe`](../compiler-options/unsafe-compiler-option.md) 컴파일러 옵션으로 컴파일해야 합니다.
 
-## <a name="address-of-operator-"></a> Address-of 연산자 &amp;
+## <a name="address-of-operator-amp"></a><a name="address-of-operator-"></a> Address-of 연산자 &amp;
 
 단항 `&` 연산자는 해당 피연산자의 주소를 반환합니다.
 
 [!code-csharp[address of local](snippets/PointerOperators.cs#AddressOf)]
 
-`&` 연산자의 피연산자는 고정 변수여야 합니다. *고정* 변수는 [가비지 수집기](../../../standard/garbage-collection/index.md)의 작동에 영향을 받지 않는 스토리지 위치에 있는 변수입니다. 앞의 예제에서 지역 변수 `number`는 스택에 있으므로 고정 변수입니다. 가비지 수집기에 의해 영향을 받을 수 있는 스토리지 위치에 상주하는 변수(예: 재배치됨)를 *이동 가능한* 변수라고 합니다. 개체 필드 및 배열 요소는 이동 가능한 변수의 예입니다. [`fixed` 문](../keywords/fixed-statement.md)으로 "fix" 또는 "pin"으로 할 경우 이동 가능한 변수의 주소를 가져올 수 있습니다. 가져온 주소는 `fixed` 문 블록 내에서만 유효합니다. 다음 예제에서는 `fixed` 문과 `&` 연산자를 사용하는 방법을 보여줍니다.
+`&` 연산자의 피연산자는 고정 변수여야 합니다. *고정* 변수는 [가비지 수집기](../../../standard/garbage-collection/index.md)의 작동에 영향을 받지 않는 스토리지 위치에 있는 변수입니다. 앞의 예제에서 로컬 변수 `number`는 스택에 있으므로 고정 변수입니다. 가비지 수집기에 의해 영향을 받을 수 있는 스토리지 위치에 상주하는 변수(예: 재배치됨)를 *이동 가능한* 변수라고 합니다. 개체 필드 및 배열 요소는 이동 가능한 변수의 예입니다. [`fixed` 문](../keywords/fixed-statement.md)으로 "fix" 또는 "pin"으로 할 경우 이동 가능한 변수의 주소를 가져올 수 있습니다. 가져온 주소는 `fixed` 문 블록 내에서만 유효합니다. 다음 예제에서는 `fixed` 문과 `&` 연산자를 사용하는 방법을 보여줍니다.
 
 [!code-csharp[address of fixed](snippets/PointerOperators.cs#AddressOfFixed)]
 
@@ -70,13 +70,13 @@ ms.locfileid: "79398240"
 
 ## <a name="pointer-member-access-operator--"></a>포인터 멤버 액세스 연산자 ->
 
-`->` 연산자는 포인터 [간접 참조](#pointer-indirection-operator-)와 [멤버 액세스](member-access-operators.md#member-access-operator-)를 결합합니다. 즉, `x`가 `T*` 형식의 포인터이고 `y`가 `T`의 액세스 가능한 멤버인 경우 양식의 식은
+`->` 연산자는 포인터 [간접 참조](#pointer-indirection-operator-)와 [멤버 액세스](member-access-operators.md#member-access-expression-)를 결합합니다. 즉, `x`가 `T*` 형식의 포인터이고 `y`가 `T`의 액세스 가능한 멤버인 경우 양식의 식은
 
 ```csharp
 x->y
 ```
 
-위의 식은 아래의 식과 동일합니다.
+이는 다음과 동등합니다.
 
 ```csharp
 (*x).y
@@ -96,7 +96,7 @@ x->y
 
 [!code-csharp[pointer element access](snippets/PointerOperators.cs#ElementAccess)]
 
-이 예제에서는 [`stackalloc` 연산자](stackalloc.md)를 사용하여 스택의 메모리 블록을 할당합니다.
+앞의 예제에서 [`stackalloc` 식](stackalloc.md)은 스택에 메모리 블록을 할당합니다.
 
 > [!NOTE]
 > 포인터 요소 액세스 연산자는 범위 이탈 오류를 검사하지 않습니다.
@@ -185,12 +185,12 @@ x->y
 - [포인터 증가 및 감소](~/_csharplang/spec/unsafe-code.md#pointer-increment-and-decrement)
 - [포인터 비교](~/_csharplang/spec/unsafe-code.md#pointer-comparison)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 연산자](index.md)
 - [포인터 형식](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [unsafe 키워드](../keywords/unsafe.md)
 - [fixed 키워드](../keywords/fixed-statement.md)
-- [stackalloc 연산자](stackalloc.md)
+- [stackalloc](stackalloc.md)
 - [sizeof 연산자](sizeof.md)

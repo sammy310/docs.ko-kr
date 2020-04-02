@@ -6,12 +6,12 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: e527e8a54a739391d18b180532372b5b70f34d37
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 53bee82bf24a847b0b21ed2375d09a6303d4fe48
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713515"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507193"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed 문(C# 참조)
 
@@ -62,11 +62,11 @@ fixed (byte* ps = srcarray, pd = dstarray)
 }
 ```
 
-가비지 수집의 대상이 아니므로 고정할 필요가 없는 스택에서 메모리를 할당할 수 있습니다. 이를 위해 [`stackalloc` 연산자](../operators/stackalloc.md)를 사용합니다.
+가비지 수집의 대상이 아니므로 고정할 필요가 없는 스택에서 메모리를 할당할 수 있습니다. 이렇게 하려면 [`stackalloc` 식](../operators/stackalloc.md)을 사용합니다.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](~/_csharplang/spec/unsafe-code.md#the-fixed-statement)의 [fixed 문](~/_csharplang/spec/introduction.md) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [fixed 문](~/_csharplang/spec/unsafe-code.md#the-fixed-statement) 섹션을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

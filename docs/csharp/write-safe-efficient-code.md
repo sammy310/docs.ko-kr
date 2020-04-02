@@ -4,12 +4,12 @@ description: 최근 C# 언어의 향상된 기능을 통해 성능이 이전에�
 ms.date: 10/23/2018
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: d4a7916b80e15c7f00fa0a7da213ed0593e0959d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 365320fef5a2f9cd123086c1baed9a786ede9f05
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78239978"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345089"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>안전하고 효율적인 C# 코드 작성
 
@@ -21,7 +21,7 @@ C#의 새 기능을 사용하면 향상된 성능으로 안정형의 안전 코�
 
 이 문서에서는 다음과 같은 리소스 관리 기술에 중점을 둡니다.
 
-- 형식이 **변경할 수 없음** 상태이며 [`in`](language-reference/keywords/in-parameter-modifier.md) 매개 변수를 사용하는 경우 컴파일러가 복사본을 저장할 수 있음을 나타내도록 [`readonly struct`](language-reference/keywords/readonly.md#readonly-struct-example)를 선언합니다.
+- [`readonly struct`](language-reference/builtin-types/struct.md#readonly-struct)를 선언하여 형식이 **변경 불가능**임을 표현합니다. 이를 통해 컴파일러는 [`in`](language-reference/keywords/in-parameter-modifier.md) 매개 변수를 사용할 때 방어형 복사본을 저장할 수 있습니다.
 - 형식을 변경할 수 없는 경우, `struct` 멤버를 `readonly`로 선언하여 멤버가 상태를 수정하지 않음을 나타냅니다.
 - 반환 값이 <xref:System.IntPtr.Size?displayProperty=nameWithType>보다 큰 `struct`이고 스토리지 수명이 값을 반환하는 메서드보다 클 경우 [`ref readonly`](language-reference/keywords/ref.md#reference-return-values) 반환을 사용합니다.
 - 성능 상의 이유로 `readonly struct`의 크기가 <xref:System.IntPtr.Size?displayProperty=nameWithType>보다 큰 경우 `in` 매개 변수로 전달해야 합니다.
@@ -72,7 +72,7 @@ readonly public struct ReadonlyPoint3D
 
 ## <a name="declare-readonly-members-when-a-struct-cant-be-immutable"></a>구조체를 변경할 수 없는 경우 readonly 멤버 선언
 
-C# 8.0 이상에서는 구조체 형식이 변경 가능한 경우 `readonly`로 변경되지 않는 멤버를 선언해야 합니다. 예를 들어 다음은 3D 요소 구조의 변경 가능한 변형입니다.
+C# 8.0 이상에서는 구조체 형식이 변경 가능한 경우 `readonly`로 변경되지 않는 멤버를 선언해야 합니다. 3D 요소 구조체가 필요하지만 가변성을 지원해야 하는 다른 애플리케이션을 생각해 보겠습니다. 다음 버전의 3D 요소 구조체는 구조체를 수정하지 않는 멤버에만 `readonly` 한정자를 추가합니다. 디자인에서 일부 멤버의 구조체에 대한 수정을 지원해야 하는 경우 이 예제를 따릅니다. 하지만 여전히 일부 멤버에 readonly를 적용하는 이점이 필요할 수 있습니다.
 
 ```csharp
 public struct Point3D
@@ -214,13 +214,13 @@ public struct Point3D
 
 `in` 매개 변수 지정은 참조 형식 또는 숫자 값과 함께 사용될 수도 있습니다. 그러나 두 경우 모두의 이점은 있다고 하더라도 아주 적습니다.
 
-## <a name="never-use-mutable-structs-as-in-in-argument"></a>`in` 인수와 마찬가지로 변경할 수 있는 구조체 사용 안 함
+## <a name="avoid-mutable-structs-as-an-in-argument"></a>변경 가능한 구조체를 `in` 인수로 사용하지 마세요.
 
 앞에서 설명한 기술은 반환 참조에 의한 복사 및 참조로 값 전달을 방지하는 방법을 설명합니다. 이러한 기술은 인수 형식이 `readonly struct` 형식으로 선언되는 경우에 가장 적합합니다. 그렇지 않은 경우, 인수의 읽기 전용 특성을 적용하기 위해 많은 상황에서 컴파일러는 **방어 복사본**을 만들어야 합니다. 원점에서 3D 요소의 거리를 계산하는 다음과 같은 예제를 살펴보세요.
 
 [!code-csharp[InArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
 
-`Point3D` 구조체는 읽기 전용 구조체가 *아닙니다*. 이 메서드의 본문에는 6개의 서로 다른 속성 액세스 호출이 있습니다. 첫 번째 검사에서 이러한 액세스가 안전하다고 생각했을 것입니다. 결국 `get` 접근자는 개체의 상태를 수정하면 안됩니다. 하지만 이를 적용하는 언어 규칙이 없습니다. 일반적인 관습일 뿐입니다. 모든 형식은 내부 상태를 수정한 `get` 접근자를 구현할 수 있습니다. 일부 언어 보장 없이 컴파일러는 모든 멤버를 호출하기 전에 인수의 임시 복사본을 만들어야 합니다. 임시 스토리지가 스택에 만들어지고, 인수 값이 임시 스토리지에 복사되며, 값이 `this` 인수로 각 멤버 액세스에 대한 스택으로 복사됩니다. 다양한 상황에서 이러한 복사는 인수 형식이 `readonly struct`가 아닌 경우 값으로 전달이 읽기 전용 참조로 전달보다 더 빠를 정도로 성능을 저하시킵니다.
+`Point3D` 구조체는 읽기 전용 구조체가 *아닙니다*. 이 메서드의 본문에는 6개의 서로 다른 속성 액세스 호출이 있습니다. 첫 번째 검사에서 이러한 액세스가 안전하다고 생각했을 것입니다. 결국 `get` 접근자는 개체의 상태를 수정하면 안됩니다. 하지만 이를 적용하는 언어 규칙이 없습니다. 일반적인 관습일 뿐입니다. 모든 형식은 내부 상태를 수정한 `get` 접근자를 구현할 수 있습니다. 일부 언어 보장을 사용하지 않는 경우 컴파일러는 `readonly` 한정자를 사용하여 표시되지 않은 모든 멤버를 호출하기 전에 인수의 임시 복사본을 만들어야 합니다. 임시 스토리지가 스택에 만들어지고, 인수 값이 임시 스토리지에 복사되며, 값이 `this` 인수로 각 멤버 액세스에 대한 스택으로 복사됩니다. 다양한 상황에서 이러한 복사는 인수 형식이 `readonly struct`가 아니고 메서드가 `readonly`로 표시되지 않은 멤버를 호출하는 경우 값으로 전달이 읽기 전용 참조로 전달보다 더 빠를 정도로 성능을 저하시킵니다. 구조체 상태를 수정하지 않는 모든 메서드를 `readonly`로 표시할 경우 컴파일러는 구조체 상태가 수정되지 않고 방어형 복사본이 필요하지 않음을 안전하게 확인할 수 있습니다.
 
 대신, 거리 계산에서 변경이 불가능한 구조체인 `ReadonlyPoint3D`를 사용하는 경우에는 임시 개체가 필요하지 않습니다.
 
@@ -262,7 +262,7 @@ GitHub에 있는 [샘플 리포지토리](https://github.com/dotnet/samples/tree
 
 C# 언어에 대한 이러한 향상된 기능은 메모리 할당을 최소화하는 것이 필요한 성능을 달성하는 데 중요한 요인이 되는 성능 중요 알고리즘을 위해 설계되었습니다. 작성하는 코드에서 이러한 기능을 자주 사용하지 않을 수 있습니다. 그러나 이러한 향상된 기능은 .NET 전반에서 채택되었습니다. 점점 더 많은 API에서 이러한 기능을 사용하므로 사용자의 애플리케이션 성능이 개선되는 것을 확인할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ref 키워드](language-reference/keywords/ref.md)
 - [Ref return 및 ref local](programming-guide/classes-and-structs/ref-returns.md)

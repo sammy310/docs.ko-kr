@@ -10,12 +10,12 @@ helpviewer_keywords:
 - namespace [C#]
 - global keyword [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: a18e52ea05d49bf2b3a468923f1433f09fff9a8b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 84c418627462f83630fe5072a0b0e2089f6588f6
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712678"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507128"
 ---
 # <a name="-operator-c-reference"></a>:: 연산자(C# 참조)
 
@@ -36,7 +36,7 @@ ms.locfileid: "75712678"
 - [extern 별칭](../keywords/extern-alias.md)
 - 전역 네임스페이스 별칭인 `global` 별칭. 전역 네임스페이스는 명명된 네임스페이스 내에 선언되지 않은 네임스페이스와 형식을 포함하는 네임스페이스입니다. `::` 한정자와 함께 사용하는 경우 `global` 별칭은 사용자 정의 `global` 네임 스페이스 별칭이 있더라도 항상 전역 네임 스페이스를 참조합니다.
 
-  다음 예제에서는 `global` 별칭을 사용하여 전역 네임스페이스의 구성원인 .NET <xref:System> 네임 스페이스에 액세스합니다. `global` 별칭을 사용하지 않으면 `System` 네임스페이스의 구성원인 사용자 정의 `MyCompany.MyProduct` 네임스페이스에 액세스할 수 있습니다.
+  다음 예제에서는 `global` 별칭을 사용하여 전역 네임스페이스의 구성원인 .NET <xref:System> 네임 스페이스에 액세스합니다. `global` 별칭을 사용하지 않으면 `MyCompany.MyProduct` 네임스페이스의 구성원인 사용자 정의 `System` 네임스페이스에 액세스할 수 있습니다.
 
   ```csharp
   namespace MyCompany.MyProduct.System
@@ -56,11 +56,11 @@ ms.locfileid: "75712678"
   > [!NOTE]
   > `global` 키워드는 `::` 한정자의 왼쪽 식별자인 경우에만 전역 네임 스페이스 별칭입니다.
 
-또한 [구성원 액세스 `.` 연산자](member-access-operators.md#member-access-operator-)를 사용하여 별칭이 지정된 네임스페이스의 구성원에 액세스할 수 있습니다. 그러나 `.` 연산자는 형식의 구성원에 액세스 하는 데도 사용됩니다. `::` 한정자는 이름이 같은 형식 또는 네임 스페이스가 있는 경우에도 해당 왼쪽 식별자가 항상 네임스페이스 별칭을 참조하는지 확인합니다.
+[`.` 토큰](member-access-operators.md#member-access-expression-)을 사용하여 별칭이 지정된 네임스페이스의 멤버에 액세스할 수도 있습니다. 그러나 `.` 토큰은 형식 멤버에 액세스하는 데도 사용됩니다. `::` 한정자는 이름이 같은 형식 또는 네임 스페이스가 있는 경우에도 해당 왼쪽 식별자가 항상 네임스페이스 별칭을 참조하는지 확인합니다.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](~/_csharplang/spec/namespaces.md#namespace-alias-qualifiers)의 [네임스페이스 별칭 한정자](~/_csharplang/spec/introduction.md) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [네임스페이스 별칭 한정자](~/_csharplang/spec/namespaces.md#namespace-alias-qualifiers) 섹션을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

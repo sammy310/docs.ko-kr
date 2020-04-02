@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 5193fc7aaae83cbc0c75e81835244eaaaece69a5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0947e597da93d6db1c5965b3685a509961778586
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75700200"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507050"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>네임스페이스 사용(C# 프로그래밍 가이드)
 
@@ -30,7 +30,7 @@ ms.locfileid: "75700200"
   
  [!code-csharp[csProgGuide#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#31)]  
   
- 위 코드를 아래 코드 대신 사용합니다.  
+ 다음 식을 사용하는 대신  
   
  [!code-csharp[csProgGuide#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#30)]  
   
@@ -42,7 +42,7 @@ ms.locfileid: "75700200"
   
 ## <a name="using-namespaces-to-control-scope"></a>네임스페이스를 사용하여 범위 제어
 
- `namespace` 키워드는 범위를 선언하는 데 사용됩니다. 프로젝트 내에서 범위를 만드는 기능은 코드 구성에 도움이 되며, 전역적으로 고유한 형식을 만들 수 있게 해줍니다. 다음 예제에서 `SampleClass`라는 클래스는 서로 중첩된 두 개의 네임스페이스에 정의되어 있습니다. [멤버 액세스 `.` 연산자](../../language-reference/operators/member-access-operators.md#member-access-operator-)는 호출되는 메서드를 구분하는 데 사용됩니다.  
+ `namespace` 키워드는 범위를 선언하는 데 사용됩니다. 프로젝트 내에서 범위를 만드는 기능은 코드 구성에 도움이 되며, 전역적으로 고유한 형식을 만들 수 있게 해줍니다. 다음 예제에서 `SampleClass`라는 클래스는 서로 중첩된 두 개의 네임스페이스에 정의되어 있습니다. [`.` 토큰](../../language-reference/operators/member-access-operators.md#member-access-expression-)은 호출되는 메서드를 구분하는 데 사용됩니다.  
   
  [!code-csharp[csProgGuideNamespaces#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#8)]  
   
@@ -64,13 +64,13 @@ ms.locfileid: "75700200"
   
 - 이 코드에서는 클래스 이름 `C2`가 두 번 사용되었습니다. 그러나 정규화된 이름은 고유합니다. `C2`의 첫 번째 인스턴스는 `C1` 내에서 선언되었으므로 정규화된 이름이 `N1.C1.C2`입니다. `C2`의 두 번째 인스턴스는 `N2` 네임스페이스 내에서 선언되었으므로 정규화된 이름이 `N1.N2.C2`입니다.  
   
- 앞의 코드 세그먼트를 사용하여 다음과 같이 `C3` 네임스페이스에 새 클래스 멤버 `N1.N2`를 추가할 수 있습니다.  
+ 앞의 코드 세그먼트를 사용하여 다음과 같이 `N1.N2` 네임스페이스에 새 클래스 멤버 `C3`를 추가할 수 있습니다.  
   
  [!code-csharp[csProgGuideNamespaces#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#10)]  
   
  일반적으로 [네임스페이스 별칭 한정자 `::`](../../language-reference/operators/namespace-alias-qualifier.md)을(를) 사용하여 네임스페이스 별칭을 참조하거나, `global::`을(를) 사용하여 전역 네임스페이스를 참조하고 `.`을(를) 사용하여 형식 또는 구성원을 한정합니다.  
   
- 네임스페이스 대신 형식을 참조하는 별칭과 함께 `::`을 사용하면 오류가 발생합니다. 예들 들어 다음과 같습니다.  
+ 네임스페이스 대신 형식을 참조하는 별칭과 함께 `::`을 사용하면 오류가 발생합니다. 다음은 그 예입니다.  
   
  [!code-csharp[csProgGuideNamespaces#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces2.cs#11)]  
   
@@ -94,6 +94,6 @@ ms.locfileid: "75700200"
 
 - [C# 프로그래밍 가이드](../index.md)
 - [네임스페이스](./index.md)
-- [. 연산자](../../language-reference/operators/member-access-operators.md#member-access-operator-)
+- [멤버 액세스 식](../../language-reference/operators/member-access-operators.md#member-access-expression-)
 - [:: 연산자](../../language-reference/operators/namespace-alias-qualifier.md)
 - [extern alias](../../language-reference/keywords/extern-alias.md)

@@ -1,5 +1,5 @@
 ---
-title: 멤버 액세스 연산자 - C# 참조
+title: 멤버 액세스 연산자 및 식 - C# 참조
 description: 형식 멤버에 액세스하는 데 사용하는 C# 연산자에 대해 알아봅니다.
 ms.date: 09/18/2019
 author: pkulikov
@@ -32,25 +32,25 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 4d4bc0c192912b5fa87a8e91bc5ba0e1d4ce3598
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: da2ca4517bd007678d74ae9b76e10cad4c2696b4
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398210"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546642"
 ---
-# <a name="member-access-operators-c-reference"></a>멤버 액세스 연산자(C# 참조)
+# <a name="member-access-operators-and-expressions-c-reference"></a>멤버 액세스 연산자 및 식(C# 참조)
 
-형식 멤버에 액세스할 때 다음과 같은 연산자를 사용할 수 있습니다.
+형식 멤버에 액세스할 때 다음 연산자 및 식을 사용할 수 있습니다.
 
-- [`.` (멤버 액세스)](#member-access-operator-): 네임스페이스 또는 형식의 멤버 액세스
+- [`.` (멤버 액세스)](#member-access-expression-): 네임스페이스 또는 형식의 멤버 액세스
 - [`[]` (배열 요소 또는 인덱서 액세스)](#indexer-operator-): 배열 요소 또는 형식 인덱서 액세스
 - [`?.` 및 `?[]`(null 조건부 연산자)](#null-conditional-operators--and-): 피연산자가 null이 아닌 경우에만 멤버 또는 요소 액세스 작업 수행
-- [`()` (호출)](#invocation-operator-): 액세스된 메서드나 대리자 호출
+- [`()` (호출)](#invocation-expression-): 액세스된 메서드나 대리자 호출
 - [`^`(끝부터 인덱스)](#index-from-end-operator-): 요소 위치가 시퀀스의 끝에서 시작됨을 표시
 - [`..`(범위)](#range-operator-): 시퀀스 요소의 범위를 가져오는 데 사용할 수 있는 인덱스 범위를 지정
 
-## <a name="member-access-operator-"></a>멤버 액세스 연산자
+## <a name="member-access-expression-"></a>멤버 액세스 식 .
 
 다음 예제와 같이 `.` 토큰을 사용하여 네임스페이스 또는 형식의 멤버에 액세스합니다.
 
@@ -109,7 +109,7 @@ void TraceMethod() {}
 
 ## <a name="null-conditional-operators--and-"></a>Null 조건부 연산자 ?. 및 ?[]
 
-C# 6 이상에서 사용할 수 있는 null 조건부 연산자는 피연산자가 null이 아닌 것으로 평가되었을 때만 [멤버 액세스](#member-access-operator-), `?.` 또는 [요소 액세스](#indexer-operator-), `?[]`, 연산을 피연산자에게 적용하며, 그렇지 않으면 `null`을 반환합니다. 즉, 다음과 같습니다.
+C# 6 이상에서 사용할 수 있는 null 조건부 연산자는 피연산자가 null이 아닌 것으로 평가되었을 때만 [멤버 액세스](#member-access-expression-), `?.` 또는 [요소 액세스](#indexer-operator-), `?[]`, 연산을 피연산자에게 적용하며, 그렇지 않으면 `null`을 반환합니다. 즉, 다음과 같습니다.
 
 - `a`가 `null`로 평가되면 `a?.x` 또는 `a?[x]`의 결과는 `null`입니다.
 - `a`가 null이 아닌 것으로 평가되면 `a?.x` 또는 `a?[x]`의 결과는 각각 `a.x` 또는 `a[x]`의 결과와 같습니다.
@@ -150,7 +150,7 @@ if (handler != null)
 }
 ```
 
-## <a name="invocation-operator-"></a>호출 연산자()
+## <a name="invocation-expression-"></a>호출 식 ()
 
 괄호(`()`)를 사용하여 [메서드](../../programming-guide/classes-and-structs/methods.md) 또는 [대리자](../../programming-guide/delegates/index.md)를 호출합니다.
 
@@ -209,7 +209,7 @@ C# 8.0 이상에서 사용 가능한 연산자 `..`은 인덱스 범위의 시�
 
 인덱스 및 범위에 대한 자세한 내용은 [기능 제안 노트](~/_csharplang/proposals/csharp-8.0/ranges.md)를 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 연산자](index.md)

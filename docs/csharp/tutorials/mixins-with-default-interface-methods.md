@@ -3,18 +3,18 @@ title: 기본 인터페이스 메서드를 사용하여 mixin 형식 만들기
 description: 기본 인터페이스 멤버를 사용하여 구현자에 대한 선택적 기본 구현으로 인터페이스를 확장할 수 있습니다.
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: aaf8d34e27c9c56d95560656eb7a7b24b152c053
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ee0536ef51f9bea3e6851be23cc19fa28cc6916b
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240108"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134371"
 ---
 # <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>자습서: 기본 인터페이스 메서드를 사용하는 인터페이스를 통해 클래스를 만드는 경우의 기능 혼합
 
 .NET Core 3.0의 C# 8.0에서부터, 인터페이스 멤버 선언 시 구현을 정의할 수 있습니다. 이 기능은 인터페이스에 선언된 기능에 대한 기본 구현을 정의할 수 있는 새로운 기능을 제공합니다. 클래스는 기능을 재정의할 시기, 기본 기능을 사용할 시기 및 불연속 기능에 대한 지원을 선언하지 않을 시기를 선택할 수 있습니다.
 
-이 자습서에서는 다음과 같은 작업을 수행하는 방법을 알아봅니다.
+이 자습서에서 학습할 방법은 다음과 같습니다.
 
 > [!div class="checklist"]
 >
@@ -117,7 +117,7 @@ public class OverheadLight : ITimerLight { }
 
 [!code-csharp[Enumeration for power status](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetPowerStatus)]
 
-기본 구현에서는 AC 전원이라고 가정합니다.
+기본 구현에서는 전원이 없는 것으로 가정합니다.
 
 [!code-csharp[Report a default power status](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetILightInterface)]
 

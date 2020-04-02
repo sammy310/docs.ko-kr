@@ -1,18 +1,18 @@
 ---
 title: readonly 키워드 - C# 참조
-ms.date: 06/21/2018
+ms.date: 03/26/2020
 f1_keywords:
 - readonly_CSharpKeyword
 - readonly
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 165b6287e1610e013b289601e1535a08fdd3b5c9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 344d5e54fcd500e283c52fa7953c6366823f13f0
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398126"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345145"
 ---
 # <a name="readonly-c-reference"></a>readonly(C# 참조)
 
@@ -28,7 +28,7 @@ ms.locfileid: "79398126"
   > [!WARNING]
   > 변경 가능한 참조 형식인, 외부에서 볼 수 있는 읽기 전용 필드가 포함된 외부에서 볼 수 있는 형식은 보안상 취약할 수 있으며 경고 [CA2104](/visualstudio/code-quality/ca2104) : “변경 가능한 읽기 전용 참조 형식을 선언하지 마세요.”를 실행할 수 있습니다.
 
-- [`readonly struct` 정의](#readonly-struct-example)에서 `readonly`는 `struct`가 불변임을 나타냅니다.
+- `readonly struct` 형식 정의에서 `readonly`는 구조체 형식을 변경할 수 없음을 나타냅니다. 자세한 내용은 [구조체 형식](../builtin-types/struct.md) 문서의 [`readonly` 구조체](../builtin-types/struct.md#readonly-struct) 섹션을 참조하세요.
 - [`readonly` 멤버 정의](#readonly-member-examples)에서 `readonly`는 `struct`의 멤버가 구조체의 내부 상태를 변경하지 않음을 나타냅니다.
 - [`ref readonly` 메서드 반환](#ref-readonly-return-example)에서 `readonly` 한정자는 메서드가 참조를 반환하고 해당 참조에 쓰기가 허용되지 않음을 나타냅니다.
 
@@ -71,28 +71,6 @@ p2.y = 66;        // Error
 컴파일러 오류 메시지가 표시됩니다.
 
 **읽기 전용 필드에는 할당할 수 없습니다. 단 생성자 또는 변수 이니셜라이저에서는 예외입니다.**
-
-## <a name="readonly-struct-example"></a>읽기 전용 구조체 예제
-
-`struct` 정의의 `readonly` 한정자는 구조체가 **불변**임을 선언합니다. 다음 예제와 같이 `struct`의 모든 인스턴스 필드를 `readonly`로 표시해야 합니다.
-
-[!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyStruct)]
-
-앞의 예제는 [읽기 전용 자동 속성](../../properties.md#read-only)을 사용하여 스토리지를 선언합니다. 이는 컴파일러가 해당 속성의 `readonly` 백킹 필드를 만들도록 지시합니다. `readonly` 필드를 직접 선언할 수도 있습니다.
-
-```csharp
-public readonly struct Point
-{
-    public readonly double X;
-    public readonly double Y;
-
-    public Point(double x, double y) => (X, Y) = (x, y);
-
-    public override string ToString() => $"({X}, {Y})";
-}
-```
-
-`readonly`로 표시되지 않은 필드를 추가하면 컴파일러 오류 `CS8340`: "읽기 전용 구조체의 인스턴스 필드는 읽기 전용이어야 합니다."가 발생합니다.
 
 ## <a name="readonly-member-examples"></a>Readonly 멤버 예제
 
@@ -144,6 +122,7 @@ public string Message { readonly get; set; }
 `ref return`의 `readonly` 한정자는 반환된 참조를 수정할 수 없음을 나타냅니다. 다음 예제는 원점에 대한 참조를 반환합니다. 예제에서는 `readonly` 한정자를 사용하여 호출자가 원본을 수정할 수 없음을 나타냅니다.
 
 [!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyReturn)]
+
 반환된 유형은 `readonly struct`일 필요는 없습니다. `ref readonly`를 통해 `ref`에서 반환될 수 있는 모든 형식을 반환할 수 있습니다.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
@@ -155,11 +134,11 @@ public string Message { readonly get; set; }
 - [readonly ref 및 readonly 구조체](~/_csharplang/proposals/csharp-7.2/readonly-ref.md)
 - [readonly 구조체 멤버](~/_csharplang/proposals/csharp-8.0/readonly-instance-members.md)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 키워드](index.md)
 - [한정자](index.md)
 - [const](const.md)
-- [필드](../../programming-guide/classes-and-structs/fields.md)
+- [Fields](../../programming-guide/classes-and-structs/fields.md)

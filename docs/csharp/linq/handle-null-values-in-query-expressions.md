@@ -3,12 +3,12 @@ title: 쿼리 식의 Null 값 처리(C#의 LINQ)
 description: C#에서 LINQ 쿼리 식의 Null 값을 처리하는 방법을 알아봅니다.
 ms.date: 12/01/2016
 ms.assetid: ac63ae8b-724d-4251-9334-528f4e884ae7
-ms.openlocfilehash: c9a3aaec05fa029a8db66826bdcb4a1d106176e3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3da490b72bd518df7be8c14b34655af8c6f84929
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73736863"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249307"
 ---
 # <a name="handle-null-values-in-query-expressions"></a>쿼리 식의 Null 값 처리
 
@@ -20,11 +20,11 @@ ms.locfileid: "73736863"
 
 [!code-csharp[csProgGuideLINQ#82](~/samples/snippets/csharp/concepts/linq/how-to-handle-null-values-in-query-expressions_1.cs)]
 
-이전 예제에서 `where` 절은 범주 시퀀스에서 모든 null 요소를 필터링합니다. 이 방법은 join 절의 null 확인과 관계가 없습니다. `Products.CategoryID`가 `int?`의 축약형인 `Nullable<int>` 형식이므로 이 예제에서는 null이 있는 조건식이 적용됩니다.
+이전 예제에서 `where` 절은 범주 시퀀스에서 모든 null 요소를 필터링합니다. 이 방법은 join 절의 null 확인과 관계가 없습니다. `Products.CategoryID`가 `Nullable<int>`의 축약형인 `int?` 형식이므로 이 예제에서는 null이 있는 조건식이 적용됩니다.
 
 ## <a name="example"></a>예제
 
-join 절에서 비교 키 중 하나만 nullable 값 형식인 경우에는 쿼리 식에서 다른 키를 nullable 형식으로 캐스트할 수 있습니다. 다음 예제에서는 `EmployeeID`가 `int?` 형식의 값이 포함된 열이라고 가정합니다.
+join 절에서 비교 키 중 하나만 null 허용 값 형식인 경우에는 쿼리 식에서 다른 키를 null 허용 형식으로 캐스팅할 수 있습니다. 다음 예제에서는 `EmployeeID`가 `int?` 형식의 값이 포함된 열이라고 가정합니다.
 
 [!code-csharp[csProgGuideLINQ#83](~/samples/snippets/csharp/concepts/linq/how-to-handle-null-values-in-query-expressions_2.cs)]
 

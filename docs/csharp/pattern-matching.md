@@ -4,12 +4,12 @@ description: C#의 패턴 일치 식에 대한 자세한 정보
 ms.date: 04/10/2019
 ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 0c302499543c90bd01427e2791435968d580f644
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb6baf3771024d02b2027f81fd35b8be4872cf6e
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170386"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249235"
 ---
 # <a name="pattern-matching"></a>패턴 일치
 
@@ -106,7 +106,7 @@ C# 7.0 이전에는 일련의 `if` 및 `is` 문에서 각 형식을 테스트해
 
 [!code-csharp[NullCase](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "Add null case")]
 
-`null` 패턴의 특수 동작은 패턴에서 형식이 없는 `null` 상수를 모든 참조 형식 또는 nullable 형식으로 변환할 수 있기 때문에 흥미롭습니다. `null`을 임의 형식으로 변환하는 대신, 언어에서 `null` 값은 변수의 컴파일 시간 형식과 관계없이 어떠한 형식 패턴과도 일치하지 않는다고 정의합니다. 이 동작을 통해 새 `switch` 기반 형식 패턴이 `is` 문과 일치하게 됩니다. `is` 문은 확인되는 값이 `null`일 경우 항상 `false`를 반환합니다. 더 간단하기도 합니다. 형식을 확인한 후에는 추가 null 검사가 필요하지 않습니다. 위 샘플의 case 블록에 null 검사가 없다는 사실에서 이를 확인할 수 있습니다. 형식 패턴 일치를 통해 null이 아닌 값이 보장되므로 null 검사가 필요하지 않습니다.
+`null` 패턴의 특수 동작은 패턴에서 형식이 없는 `null` 상수를 모든 참조 형식 또는 null 허용 값 형식으로 변환할 수 있기 때문에 흥미롭습니다. `null`을 임의 형식으로 변환하는 대신, 언어에서 `null` 값은 변수의 컴파일 시간 형식과 관계없이 어떠한 형식 패턴과도 일치하지 않는다고 정의합니다. 이 동작을 통해 새 `switch` 기반 형식 패턴이 `is` 문과 일치하게 됩니다. `is` 문은 확인되는 값이 `null`일 경우 항상 `false`를 반환합니다. 더 간단하기도 합니다. 형식을 확인한 후에는 추가 null 검사가 필요하지 않습니다. 위 샘플의 case 블록에 null 검사가 없다는 사실에서 이를 확인할 수 있습니다. 형식 패턴 일치를 통해 null이 아닌 값이 보장되므로 null 검사가 필요하지 않습니다.
 
 ## <a name="var-declarations-in-case-expressions"></a>`case` 식의 `var` 선언
 
@@ -137,6 +137,6 @@ match 식 중 하나인 `var`이 소개되면서 패턴 일치에 대한 새 규
 
 추상 `Shape` 및 각각 고유한 가상 메서드 구현으로 면적을 계산하는 특정 파생 셰이프에 대한 클래스 계층 구조를 만들어 수행하는 디자인과 이 샘플의 코드를 비교합니다. 데이터로 작업하고 데이터 스토리지 문제와 동작 문제를 구분하려는 경우 패턴 일치 식은 매우 유용한 도구일 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [자습서: 패턴 일치 기능을 사용하여 데이터 형식 확장](tutorials/pattern-matching.md)

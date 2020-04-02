@@ -8,12 +8,12 @@ helpviewer_keywords:
 - '@ special character [C#]'
 - '@ language element [C#]'
 ms.assetid: 89bc7e53-85f5-478a-866d-1cca003c4e8c
-ms.openlocfilehash: a3446eceb0d3c415e36ea1d2c7d8d6d34f65350d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b37f77273e767a5e5292e7707933892f57811d2a
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712418"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291770"
 ---
 # <a name="-c-reference"></a>@(C# 참조)
 
@@ -23,7 +23,7 @@ ms.locfileid: "75712418"
 
    [!code-csharp[verbatim1](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#1)]
 
-1. 문자열 리터럴이 축자로 해석될 것임을 나타냅니다. 이 인스턴스의 `@` 문자는 *축자 문자 문자열*을 정의합니다. 단순 이스케이프 시퀀스(예: 백슬래시에 `"\\"`), 16진수 이스케이프 시퀀스(예: 대문자 A에 `"\x0041"`), 유니코드 이스케이프 시퀀스(예: 대문자 A에 `"\u0041"`)는 문자 그대로 해석됩니다. 인용 부호 이스케이프 시퀀스(`""`)만 문자 그대로 해석되지 않고, 단일 작은따옴표를 생성합니다. 또한 축자 [보간된 문자열](interpolated.md) 중괄호 이스케이프 시퀀스(`{{` 및 `}}`)는 그대로 해석되지 않습니다. 단일 중괄호 문자를 생성합니다. 다음 예제에서는 각각 일반 문자열 리터럴 및 축자 문자열 리터럴을 사용하여 두 개의 동일한 파일 경로를 정의합니다. 이것은 축자 문자열 리터럴의 일반적인 사용법 중 하나입니다.
+1. 문자열 리터럴이 축자로 해석될 것임을 나타냅니다. 이 인스턴스의 `@` 문자는 *축자 문자 문자열*을 정의합니다. 단순 이스케이프 시퀀스(예: 백슬래시에 `"\\"`), 16진수 이스케이프 시퀀스(예: 대문자 A에 `"\x0041"`), 유니코드 이스케이프 시퀀스(예: 대문자 A에 `"\u0041"`)는 문자 그대로 해석됩니다. 인용 부호 이스케이프 시퀀스(`""`)만 문자 그대로 해석되지 않고 하나의 큰따옴표를 생성합니다. 또한 축자 [보간된 문자열](interpolated.md) 중괄호 이스케이프 시퀀스(`{{` 및 `}}`)는 그대로 해석되지 않습니다. 단일 중괄호 문자를 생성합니다. 다음 예제에서는 각각 일반 문자열 리터럴 및 축자 문자열 리터럴을 사용하여 두 개의 동일한 파일 경로를 정의합니다. 이것은 축자 문자열 리터럴의 일반적인 사용법 중 하나입니다.
 
    [!code-csharp[verbatim2](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#2)]
 

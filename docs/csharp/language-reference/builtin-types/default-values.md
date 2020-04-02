@@ -5,18 +5,18 @@ ms.date: 12/18/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 93b6079b9a3bbf6d537094cab9dfb305ace7f6bf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5e34d291ec15c738f3bc9409df321ede454b6710
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77625867"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507258"
 ---
 # <a name="default-values-of-c-types-c-reference"></a>C# 형식의 기본값(C# 참조)
 
 다음 표는 C# 형식의 기본값을 보여줍니다.
 
-|형식|기본값|
+|Type|기본값|
 |---------|------------------|
 |임의 참조 형식|`null`|
 |임의 [기본 제공 정수 숫자 유형](integral-numeric-types.md)|0(영)|
@@ -27,7 +27,7 @@ ms.locfileid: "77625867"
 |[struct](struct.md)|모든 값 형식 필드를 기본값으로 설정하고 모든 참조 형식 필드를 `null`로 설정하여 생성한 값입니다.|
 |Any [Null 허용 값 형식](nullable-value-types.md)|<xref:System.Nullable%601.HasValue%2A> 속성은 `false`이고 <xref:System.Nullable%601.Value%2A> 속성은 정의되지 않은 인스턴스입니다. 이 기본값은 null 허용 값 형식의 *null* 값으로도 알려져 있습니다.|
 
-[기본 연산자](../operators/default.md)를 사용하여 다음 예제와 같이 형식의 기본값을 생성합니다.
+[`default` 연산자](../operators/default.md#default-operator)를 사용하여 다음 예제와 같이 형식의 기본값을 생성합니다.
 
 ```csharp
 int a = default(int);

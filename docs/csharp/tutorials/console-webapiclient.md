@@ -3,12 +3,12 @@ title: .NET Core를 사용하여 REST 클라이언트 만들기
 description: 이 자습서에서는 .NET Core 및 C# 언어의 다양한 기능에 대해 설명합니다.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 5796df2d2fd8c4d9aaca783d720448c90858c067
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0105db519f7accec6bf8bfbafdc6a67a444b1074
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156859"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249170"
 ---
 # <a name="rest-client"></a>REST 클라이언트
 
@@ -163,7 +163,7 @@ JSON serializer는 사용되는 클래스 형식에 포함되지 않은 정보�
 
 이제 형식을 만들었으므로 역직렬화를 수행해 보겠습니다.
 
-다음으로, serializer를 사용하여 JSON을 C# 개체로 변환합니다. `ProcessRepositories` 메서드의 <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)> 호출을 다음 세 줄로 바꿉니다.
+다음으로, serializer를 사용하여 JSON을 C# 개체로 변환합니다. `ProcessRepositories` 메서드의 <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)> 호출을 다음 줄로 바꿉니다.
 
 ```csharp
 var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos");
@@ -288,23 +288,16 @@ foreach (var repo in repositories)
 2016-02-08T21:27:00Z
 ```
 
-해당 형식은 표준 .NET <xref:System.DateTime> 형식을 따르지 않습니다. 따라서 사용자 지정 변환 메서드를 작성해야 합니다. 또한 `Repository` 클래스 사용자에게 원시 문자열이 노출되는 것을 원하지 않을 것입니다. 특성도 이러한 작업을 제어하는 데 도움이 될 수 있습니다. 먼저 `Repository` 클래스의 날짜 및 시간 문자열 표현을 포함하는 `public` 속성을 정의하고, 반환된 날짜를 나타내는 형식 지정된 문자열을 반환하는 `LastPush` `readonly` 속성을 정의합니다.
+해당 형식은 UTC(협정 세계시)이므로 <xref:System.DateTime.Kind%2A> 속성이 <xref:System.DateTimeKind.Utc>인 <xref:System.DateTime> 값을 얻습니다. 표준 시간대로 표시되는 날짜를 선호하는 경우 사용자 지정 변환 메서드를 작성해야 합니다. 먼저 `Repository` 클래스에서 날짜 및 시간을 UTC로 표현하는 `public` 속성을 정의하고 현지 시간으로 변환된 날짜를 반환하는 `LastPush` `readonly` 속성을 정의합니다.
 
 ```csharp
 [JsonPropertyName("pushed_at")]
-public string JsonDate { get; set; }
+public DateTime LastPushUtc { get; set; }
 
-public DateTime LastPush =>
-    DateTime.ParseExact(JsonDate, "yyyy-MM-ddTHH:mm:ssZ", CultureInfo.InvariantCulture);
+public DateTime LastPush => LastPushUtc.ToLocalTime();
 ```
 
-방금 정의한 새 구문을 살펴보겠습니다. `LastPush` 속성은 `get` 접근자에 대한 *식 본문 멤버*를 사용하여 정의됩니다. `set` 접근자가 없습니다. `set` 접근자를 생략하는 것이 바로 C#에서 *읽기 전용* 속성을 정의하는 방식입니다. (C#에서 *쓰기 전용* 속성을 만들 수 있지만 해당 값은 제한됩니다.) <xref:System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider)> 메서드는 제공된 날짜 형식을 사용하여 문자열을 구문 분석하고 <xref:System.DateTime> 개체를 만들고, `CultureInfo` 개체를 사용하여 `DateTime`에 메타데이터를 더 추가합니다. 구문 분석 작업이 실패하는 경우 속성 접근자가 예외를 throw합니다.
-
-<xref:System.Globalization.CultureInfo.InvariantCulture>를 사용하려면 `repo.cs`의 `using` 지시문에 <xref:System.Globalization> 네임스페이스를 추가해야 합니다.
-
-```csharp
-using System.Globalization;
-```
+방금 정의한 새 구문을 살펴보겠습니다. `LastPush` 속성은 `get` 접근자에 대한 *식 본문 멤버*를 사용하여 정의됩니다. `set` 접근자가 없습니다. `set` 접근자를 생략하는 것이 바로 C#에서 *읽기 전용* 속성을 정의하는 방식입니다. (C#에서 *쓰기 전용* 속성을 만들 수 있지만 해당 값은 제한됩니다.)
 
 마지막으로 콘솔에 output 문을 하나 더 추가하면 이 앱을 빌드하고 다시 실행할 준비가 됩니다.
 

@@ -3,18 +3,18 @@ title: C# 및 Visual Studio Code 시작
 description: Visual Studio Code를 사용하여 C#에서 첫 번째 .NET Core 애플리케이션을 만들고 디버그하는 방법을 알아봅니다.
 author: kendrahavens
 ms.date: 12/05/2018
-ms.openlocfilehash: 8eaf1ba2314dcab96db615a8691afed82c5011a7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 49a1271f2bf74224e189e70bebf0d22c49408e5d
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79397886"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111064"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 및 Visual Studio Code 시작
 
 .NET Core는 Windows, Linux 및 macOS에서 실행되는 애플리케이션을 만들기 위한 빠른 모듈식 플랫폼을 제공합니다. C# 확장이 있는 Visual Studio Code를 사용하면 C# IntelliSense(스마트 코드 완성) 및 디버깅을 완벽하게 지원하는 강력한 편집 환경이 구현됩니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 1. [Visual Studio Code](https://code.visualstudio.com/)를 설치합니다.
 2. [.NET Core SDK](https://dotnet.microsoft.com/download)를 설치합니다.
@@ -56,7 +56,7 @@ ms.locfileid: "79397886"
 
 [Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core), [macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS) 또는 [Linux](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu)에 대한 추가 설치 도움말이 제공되는 짧은 비디오 자습서를 볼 수도 있습니다.
 
-## <a name="debug"></a>Debug
+## <a name="debug"></a>디버그
 
 1. *Program.cs*를 클릭하여 엽니다. Visual Studio Code에서 C# 파일을 처음 열면 [OmniSharp](https://www.omnisharp.net/)에서 편집기가 로드됩니다.
 
@@ -143,7 +143,7 @@ ms.locfileid: "79397886"
 
 ### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>Visual Studio Code에서 C#을 빌드하고 디버그하는 데 필요한 자산이 누락되었습니다. 내 디버거에서 "구성 없음"이라고 표시됩니다.
 
-Visual Studio Code C# 확장에서 빌드 및 디버그할 자산을 생성할 수 있습니다. C# 프로젝트를 처음 열면 Visual Studio Code에 이러한 자산을 생성하라는 메시지가 표시됩니다. 자산을 생성하지 않은 경우 명령 팔레트(**보기 > 명령 팔레트**)를 열고 ">.NET: Generate Assets Build and Debug"을 입력하여 이 명령을 실행할 수 있습니다. 이를 선택하면 필요한 . *.vscode*, *launch.json* 및 *tasks.json* 구성 파일이 생성됩니다.
+Visual Studio Code C# 확장에서 빌드 및 디버그할 자산을 생성할 수 있습니다. C# 프로젝트를 처음 열면 Visual Studio Code에 이러한 자산을 생성하라는 메시지가 표시됩니다. 자산을 생성하지 않은 경우 명령 팔레트(**보기 > 명령 팔레트**)를 열고 ">.NET: Generate Assets Build and Debug"를 입력하여 이 명령을 실행할 수 있습니다. 이를 선택하면 필요한 . *.vscode*, *launch.json* 및 *tasks.json* 구성 파일이 생성됩니다.
 
 ## <a name="see-also"></a>참고 항목
 

@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 12/27/2019
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: f6496ae38827da5d00c8b278011a9c373afe0e76
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 6cca7330c10317129072b94c3973f5dec575363a
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344081"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523891"
 ---
 # <a name="net-guide"></a>.NET 가이드
 
@@ -46,7 +46,6 @@ ms.locfileid: "80344081"
 * [.NET Standard](net-standard.md)
 * [기본 상호 운용성](native-interop/index.md)
 * [가비지 수집](garbage-collection/index.md)
-* [.NET의 기본 형식](base-types/index.md)
 * [컬렉션](collections/index.md)
 * [날짜, 시간 및 표준 시간대](datetime/index.md)
 * [비동기 프로그래밍](async.md)

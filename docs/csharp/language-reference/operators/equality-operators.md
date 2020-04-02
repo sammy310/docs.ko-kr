@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 079522b18afdf86a942d502672174516d45d37fc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7dd3e544dc03fb94577892b42aecd1a15a6621ac
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398258"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80110921"
 ---
 # <a name="equality-operators-c-reference"></a>같음 연산자(C# 참조)
 
@@ -37,13 +37,13 @@ ms.locfileid: "79398258"
 [!code-csharp-interactive[value types equality](snippets/EqualityOperators.cs#ValueTypesEquality)]
 
 > [!NOTE]
-> `==`, [, `<`, `>`, `<=` 및 `>=`](comparison-operators.md) 연산자의 경우 피연산자 중 하나가 숫자(<xref:System.Double.NaN?displayProperty=nameWithType> 또는 <xref:System.Single.NaN?displayProperty=nameWithType>)가 아니면 연산의 결과는 `false`입니다. 즉, `NaN` 값이 `double`를 포함한 다른 `float`(또는 `NaN`) 값보다 크거나, 작거나, 같지 않습니다. 자세한 내용과 예제는 <xref:System.Double.NaN?displayProperty=nameWithType> 또는 <xref:System.Single.NaN?displayProperty=nameWithType> 참조 문서를 참조하세요.
+> `==`, [, `<`, `>`, `<=` 및 `>=`](comparison-operators.md) 연산자의 경우 피연산자 중 하나가 숫자(<xref:System.Double.NaN?displayProperty=nameWithType> 또는 <xref:System.Single.NaN?displayProperty=nameWithType>)가 아니면 연산의 결과는 `false`입니다. 즉, `NaN` 값이 `NaN`를 포함한 다른 `double`(또는 `float`) 값보다 크거나, 작거나, 같지 않습니다. 자세한 내용과 예제는 <xref:System.Double.NaN?displayProperty=nameWithType> 또는 <xref:System.Single.NaN?displayProperty=nameWithType> 참조 문서를 참조하세요.
 
 기본 정수 형식의 해당 값이 같은 경우 동일한 [열거형](../builtin-types/enum.md) 형식의 피연산자가 동일합니다.
 
 사용자 정의 [구조체](../builtin-types/struct.md) 형식은 기본적으로 `==` 연산자를 지원하지 않습니다. `==` 연산자를 지원하려면 사용자 정의 구조체가 해당 연산자를 [오버로드](operator-overloading.md)해야 합니다.
 
-C# 7.3부터는 `==` 및 `!=` 연산자가 C# [튜플](../../tuples.md)에서 지원됩니다. 자세한 내용은 [C# 튜플 형식](../../tuples.md#equality-and-tuples) 문서의 [같음 및 튜플](../../tuples.md) 섹션을 참조하세요.
+C# 7.3부터는 `==` 및 `!=` 연산자가 C# [튜플](../../tuples.md)에서 지원됩니다. 자세한 내용은 [C# 튜플 형식](../../tuples.md) 문서의 [같음 및 튜플](../../tuples.md#equality-and-tuples) 섹션을 참조하세요.
 
 ### <a name="reference-types-equality"></a>참조 형식 같음
 
@@ -67,7 +67,7 @@ C# 7.3부터는 `==` 및 `!=` 연산자가 C# [튜플](../../tuples.md)에서 �
 
 [!code-csharp-interactive[delegate equality](snippets/EqualityOperators.cs#DelegateEquality)]
 
-자세한 내용은 [C# 언어 사양](~/_csharplang/spec/expressions.md#delegate-equality-operators)의 [대리자 같음 연산자](~/_csharplang/spec/introduction.md) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [대리자 같음 연산자](~/_csharplang/spec/expressions.md#delegate-equality-operators) 섹션을 참조하세요.
 
 의미상 동일한 [람다 식](../../programming-guide/statements-expressions-operators/lambda-expressions.md) 평가에서 생성된 대리자는 다음 예제와 같이 동일하지 않습니다.
 
@@ -83,11 +83,11 @@ C# 7.3부터는 `==` 및 `!=` 연산자가 C# [튜플](../../tuples.md)에서 �
 
 ## <a name="operator-overloadability"></a>연산자 오버로드 가능성
 
-사용자 정의 형식은 [ 및 ](operator-overloading.md) 연산자를 `==`오버로드`!=`할 수 있습니다. 형식이 두 연산자 중 하나를 오버로드하는 경우 나머지 연산자도 오버로드해야 합니다.
+사용자 정의 형식은 `==` 및 `!=` 연산자를 [오버로드](operator-overloading.md)할 수 있습니다. 형식이 두 연산자 중 하나를 오버로드하는 경우 나머지 연산자도 오버로드해야 합니다.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators)의 [관계형 및 형식 테스트 연산자](~/_csharplang/spec/introduction.md) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [관계형 및 형식 테스트 연산자](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) 섹션을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

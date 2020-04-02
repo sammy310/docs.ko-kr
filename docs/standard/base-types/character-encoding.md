@@ -1,6 +1,6 @@
 ---
-title: .NET의 문자 인코딩
-description: .NET에서 문자 인코딩 및 디코딩에 대해 알아봅니다.
+title: .NET에서 문자 인코딩 클래스를 사용하는 방법
+description: .NET에서 문자 인코딩 클래스를 사용하는 방법을 알아봅니다.
 ms.date: 12/22/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,74 +11,51 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-ms.openlocfilehash: 3cd461d8c56c3f31bf3ffe04acf239ecd32fe328
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 063cac1de6634125d7dabad9d627bceff877e567
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711443"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546739"
 ---
-# <a name="character-encoding-in-net"></a>.NET의 문자 인코딩
+# <a name="how-to-use-character-encoding-classes-in-net"></a>.NET에서 문자 인코딩 클래스를 사용하는 방법
 
-문자는 다양한 방법으로 표현할 수 있는 추상 엔터티입니다. 문자 인코딩은 지원되는 문자 집합의 각 문자와 해당 문자를 나타내는 일부 값의 쌍을 만드는 시스템입니다. 예를 들어 모르스 부호는 로마 알파벳의 각 문자와 전화선을 통한 전송에 적합한 점과 대시 패턴의 쌍을 만드는 문자 인코딩입니다. 컴퓨터의 문자 인코딩은 지원되는 문자 집합의 각 문자와 해당 문자를 나타내는 숫자 값의 쌍을 만듭니다. 문자 인코딩에는 다음 두 가지 구성 요소가 있습니다.
+이 문서에서는 다양한 인코딩 체계를 사용하여 .NET에서 텍스트 인코딩 및 디코딩을 위해 제공하는 클래스를 사용하는 방법을 설명합니다. 지침은 [.NET의 문자 인코딩 소개](character-encoding-introduction.md)를 읽은 것으로 전제합니다.
 
-- 인코더 - 문자 시퀀스를 숫자 값(바이트) 시퀀스로 변환합니다.
+## <a name="encoders-and-decoders"></a>인코더 및 디코더
 
-- 디코더 - 바이트 시퀀스를 문자 시퀀스로 변환합니다.
+.NET은 다양한 인코딩 시스템을 사용하여 텍스트를 인코딩/디코딩하는 인코딩 클래스를 제공합니다. 예를 들어 <xref:System.Text.UTF8Encoding> 클래스는 UTF-8로 인코딩 및 디코딩하는 규칙을 설명합니다. .NET에서는 `string` 인스턴스에 대해 UTF-16 인코딩(<xref:System.Text.UnicodeEncoding> 클래스로 표시)을 사용합니다. 인코더 및 디코더는 다른 인코딩 체계에 사용할 수 있습니다.
 
-문자 인코딩은 인코더와 디코더가 작동하는 규칙을 설명합니다. 예를 들어 <xref:System.Text.UTF8Encoding> 클래스는 1-4바이트를 사용하여 단일 유니코드 문자를 나타내는 UTF-8(8비트 유니코드 변환 형식)으로 인코딩 및 디코딩하는 규칙을 설명합니다. 인코딩 및 디코딩에 유효성 검사가 포함될 수도 있습니다. 예를 들어 <xref:System.Text.UnicodeEncoding> 클래스는 모든 서로게이트를 검사하여 유효한 서로게이트 쌍을 구성하는지 확인합니다. 서로게이트 쌍은 코드 포인트가 U+D800에서 U+DBFF 사이의 범위인 문자와 코드 포인트가 U+DC00에서 U+DFFF 사이의 범위인 문자가 이 순서로 결합되어 구성됩니다.  대체(fallback) 전략은 인코더에서 잘못된 문자를 처리하는 방법 또는 디코더에서 잘못된 바이트를 처리하는 방법을 결정합니다.
+인코딩 및 디코딩에 유효성 검사가 포함될 수도 있습니다. 예를 들어 <xref:System.Text.UnicodeEncoding> 클래스는 서로게이트 범위의 모든 `char` 인스턴스를 검사하여 올바른 서로게이트 쌍에 있는지 확인합니다. 대체(fallback) 전략은 인코더에서 잘못된 문자를 처리하는 방법 또는 디코더에서 잘못된 바이트를 처리하는 방법을 결정합니다.
 
 > [!WARNING]
 > .NET 인코딩 클래스는 문자 데이터를 저장 및 변환하는 방법을 제공합니다. 이진 데이터를 문자열 형식으로 저장하는 데 사용하면 안 됩니다. 사용되는 인코딩에 따라 인코딩 클래스를 통해 이진 데이터를 문자열로 변환할 때 예기치 못한 동작이 발생하고 부정확하거나 손상된 데이터가 생성될 수 있습니다. 이진 데이터를 문자열 형식으로 변환하려면 <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> 메서드를 사용합니다.
 
-.NET에서는 UTF-16 인코딩(<xref:System.Text.UnicodeEncoding> 클래스로 표시)을 사용하여 문자와 문자열을 나타냅니다. 공용 언어 런타임을 대상으로 하는 애플리케이션은 인코더를 사용하여 공용 언어 런타임에서 지원하는 유니코드 문자 표현을 다른 인코딩 체계에 매핑합니다. 디코더를 사용하여 문자를 비유니코드 인코딩에서 유니코드로 매핑합니다.
-
-이 항목은 다음 섹션으로 구성되어 있습니다.
-
-- [.NET의 인코딩](../../../docs/standard/base-types/character-encoding.md#Encodings)
-
-- [인코딩 클래스 선택](../../../docs/standard/base-types/character-encoding.md#Selecting)
-
-- [인코딩 개체 사용](../../../docs/standard/base-types/character-encoding.md#Using)
-
-- [대체(fallback) 전략 선택](../../../docs/standard/base-types/character-encoding.md#FallbackStrategy)
-
-- [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom)
-
-<a name="Encodings"></a>
-
-## <a name="encodings-in-net"></a>.NET의 인코딩
-
 .NET의 모든 문자 인코딩 클래스는 모든 문자 인코딩에 공통된 기능을 정의하는 추상 클래스인 <xref:System.Text.Encoding?displayProperty=nameWithType> 클래스에서 상속됩니다. .NET에서 구현된 개별 인코딩 개체에 액세스하려면 다음을 수행합니다.
 
-- .NET에서 사용할 수 있는 표준 문자 인코딩(ASCII, UTF-7, UTF-8, UTF-16 및 UTF-32)을 나타내는 개체를 반환하는 <xref:System.Text.Encoding> 클래스의 정적 속성을 사용합니다. 예를 들어 <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> 속성은 <xref:System.Text.UnicodeEncoding> 개체를 반환합니다. 각 개체는 교체 대체(fallback)를 사용하여 인코딩할 수 없는 문자열과 디코딩할 수 없는 바이트를 처리합니다. 자세한 내용은 [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) 섹션을 참조하세요.
+- .NET에서 사용할 수 있는 표준 문자 인코딩(ASCII, UTF-7, UTF-8, UTF-16 및 UTF-32)을 나타내는 개체를 반환하는 <xref:System.Text.Encoding> 클래스의 정적 속성을 사용합니다. 예를 들어 <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> 속성은 <xref:System.Text.UnicodeEncoding> 개체를 반환합니다. 각 개체는 교체 대체(fallback)를 사용하여 인코딩할 수 없는 문자열과 디코딩할 수 없는 바이트를 처리합니다. 자세한 내용은 [교체 대체(fallback)](../../../docs/standard/base-types/character-encoding.md#Replacement)를 참조하세요.
 
-- 인코딩의 클래스 생성자를 호출합니다. 이런 방식으로 ASCII, UTF-7, UTF-8, UTF-16 및 UTF-32 인코딩에 대한 개체를 인스턴스화할 수 있습니다. 기본적으로 각 개체는 교체 대체(fallback)를 사용하여 인코딩할 수 없는 문자열과 디코딩할 수 없는 바이트를 처리하지만 대신 예외가 발생하도록 지정할 수 있습니다. 자세한 내용은 [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) 및 [Exception Fallback](../../../docs/standard/base-types/character-encoding.md#Exception) 섹션을 참조하세요.
+- 인코딩의 클래스 생성자를 호출합니다. 이런 방식으로 ASCII, UTF-7, UTF-8, UTF-16 및 UTF-32 인코딩에 대한 개체를 인스턴스화할 수 있습니다. 기본적으로 각 개체는 교체 대체(fallback)를 사용하여 인코딩할 수 없는 문자열과 디코딩할 수 없는 바이트를 처리하지만 대신 예외가 발생하도록 지정할 수 있습니다. 자세한 내용은 [교체 대체(fallback)](../../../docs/standard/base-types/character-encoding.md#Replacement) 및 [예외 대체(fallback)](../../../docs/standard/base-types/character-encoding.md#Exception)를 참조하세요.
 
-- <xref:System.Text.Encoding.%23ctor%28System.Int32%29?displayProperty=nameWithType> 생성자를 호출하고 인코딩을 나타내는 정수를 전달합니다. 표준 인코딩 개체는 교체 대체(fallback)를 사용하고, 코드 페이지와 DBCS(더블바이트 문자 집합) 인코딩 개체는 최적 맞춤 대체(fallback)를 사용하여 인코딩할 수 없는 문자열과 디코딩할 수 없는 바이트를 처리합니다. 자세한 내용은 [Best-Fit Fallback](../../../docs/standard/base-types/character-encoding.md#BestFit) 섹션을 참조하세요.
+- <xref:System.Text.Encoding.%23ctor%28System.Int32%29?displayProperty=nameWithType> 생성자를 호출하고 인코딩을 나타내는 정수를 전달합니다. 표준 인코딩 개체는 교체 대체(fallback)를 사용하고, 코드 페이지와 DBCS(더블바이트 문자 집합) 인코딩 개체는 최적 맞춤 대체(fallback)를 사용하여 인코딩할 수 없는 문자열과 디코딩할 수 없는 바이트를 처리합니다. 자세한 내용은 [자동 맞춤 대체(fallback)](../../../docs/standard/base-types/character-encoding.md#BestFit)를 참조하세요.
 
 - .NET에서 사용할 수 있는 표준, 코드 페이지 또는 DBCS 인코딩을 반환하는 <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> 메서드를 호출합니다. 오버로드를 통해 인코더와 디코더 둘 다에 대체(fallback) 개체를 지정할 수 있습니다.
 
-> [!NOTE]
-> 유니코드 표준은 지원되는 모든 스크립트의 각 문자에 코드 포인트(숫자)와 이름을 할당합니다. 예를 들어 "A" 문자는 코드 포인트 U+0041 및 이름 "LATIN CAPITAL LETTER A"로 표시됩니다. UTF(유니코드 변환 형식) 인코딩은 코드 포인트를 하나 이상의 바이트 시퀀스로 인코딩하는 방법을 정의합니다. 유니코드 인코딩 체계를 사용하면 모든 문자 집합의 문자를 단일 인코딩으로 나타낼 수 있으므로 국제 애플리케이션 개발이 간소화됩니다. 애플리케이션 개발자가 더 이상 특정 언어나 쓰기 시스템을 위한 문자를 생성하는 데 사용된 인코딩 체계를 추적할 필요가 없으며 손상 없이 전 세계 시스템 간에 데이터를 공유할 수 있습니다.
->
-> .NET에서는 유니코드 표준에서 정의된 세 가지 인코딩을 지원합니다. UTF-8, UTF-16 및 UTF-32. 자세한 내용은 [유니코드 홈페이지](https://www.unicode.org/)에서 유니코드 표준을 참조하세요.
+<xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType> 메서드를 호출하여 .NET에서 사용할 수 있는 모든 인코딩에 대한 정보를 검색할 수 있습니다. .NET에서는 다음 표에 나열된 문자 인코딩 체계를 지원합니다.
 
-<xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType> 메서드를 호출하여 .NET에서 사용할 수 있는 모든 인코딩에 대한 정보를 검색할 수 있습니다. .NET에서는 다음 표에 나열된 문자 인코딩 시스템을 지원합니다.
-
-|인코딩|클래스|설명|장점/단점|
-|--------------|-----------|-----------------|-------------------------------|
-|ASCII|<xref:System.Text.ASCIIEncoding>|바이트의 하위 7비트를 사용하여 제한된 범위의 문자를 인코딩합니다.|이 인코딩은 U+0000에서 U+007F 사이의 문자 값만 지원하므로 대부분의 경우 국제화된 애플리케이션에는 적합하지 않습니다.|
-|UTF-7|<xref:System.Text.UTF7Encoding>|7비트 ASCII 문자 시퀀스로 문자를 나타냅니다. 비 ASCII 유니코드 문자는 ASCII 문자의 이스케이프 시퀀스로 표시됩니다.|UTF-7은 전자 메일 및 뉴스 그룹 프로토콜과 같은 프로토콜을 지원합니다. 그러나 UTF-7은 특별히 안전하거나 강력하지 않습니다. 경우에 따라 1비트를 변경해도 전체 UTF-7 문자열의 해석이 완전히 바뀔 수 있습니다. 다른 UTF-7 문자열이 동일한 텍스트를 인코딩할 수도 있습니다. 비 ASCII 문자를 포함하는 시퀀스의 경우 UTF-7에서 UTF-8보다 많은 공간이 필요하며 인코딩/디코딩 속도가 느려집니다. 따라서 가능하면 UTF-7 대신 UTF-8을 사용해야 합니다.|
-|UTF-8|<xref:System.Text.UTF8Encoding>|각 유니코드 코드 포인트를 1-4바이트의 시퀀스로 나타냅니다.|UTF-8은 8비트 데이터 크기를 지원하며 기존의 많은 운영 체제에서 제대로 작동합니다. ASCII 문자 범위의 경우 UTF-8은 ASCII 인코딩과 동일하며 광범위한 문자 집합을 허용합니다. 그러나 CJK(중국어-일본어-한국어) 스크립트의 경우 UTF-8에서 각 문자에 대해 3바이트를 요구할 수 있으며 데이터 크기가 UTF-16보다 커질 수 있습니다. 때로는 HTML 태그와 같은 ASCII 데이터의 양이 CJK 범위의 크기 증가와 관련이 있습니다.|
-|UTF-16|<xref:System.Text.UnicodeEncoding>|각 유니코드 코드 포인트를 한두 개의 16비트 정수 시퀀스로 나타냅니다. 가장 일반적인 유니코드 문자에는 UTF-16 코드 포인트 한 개만 있으면 됩니다. 단, 유니코드 보조 문자(U+10000 이상)에는 UTF-16 서로게이트 코드 포인트 두 개가 필요합니다. little-endian 및 big-endian 바이트 순서가 둘 다 지원됩니다.|UTF-16 인코딩은 공용 언어 런타임에서 <xref:System.Char> 및 <xref:System.String> 값을 나타내는 데 사용되며 Windows 운영 체제에서 `WCHAR` 값을 나타내는 데 사용됩니다.|
-|UTF-32|<xref:System.Text.UTF32Encoding>|각 유니코드 코드 포인트를 32비트 정수 한 개로 나타냅니다. little-endian 및 big-endian 바이트 순서가 둘 다 지원됩니다.|UTF-32 인코딩은 인코딩된 공간이 너무 중요한 운영 체제에서 애플리케이션이 UTF-16 인코딩의 서로게이트 코드 포인트 동작을 방지하려는 경우에 사용됩니다. 디스플레이에 렌더링되는 단일 문자 모양은 여전히 둘 이상의 UTF-32 문자로 인코딩될 수 있습니다.|
-|ANSI/ISO 인코딩||다양한 코드 페이지에 대해 지원됩니다. Windows 운영 체제에서 코드 페이지는 특정 언어 또는 언어 그룹을 지원하는 데 사용됩니다. .NET에서 지원되는 코드 페이지를 나열하는 표는 <xref:System.Text.Encoding> 클래스를 참조하세요. <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> 메서드를 호출하여 특정 코드 페이지에 대한 인코딩 개체를 검색할 수 있습니다.|코드 페이지에는 256개의 코드 포인트가 포함되며 0부터 시작합니다. 대부분의 코드 페이지에서 코드 포인트 0-127은 ASCII 문자 집합을 나타내고, 코드 포인트 128-255는 코드 페이지마다 상당한 차이가 있습니다. 예를 들어 코드 페이지 1252는 영어, 독일어, 프랑스어 등 라틴 문자 쓰기 시스템에 대한 문자를 제공합니다. 코드 페이지 1252의 마지막 128개 코드 포인트에는 악센트 문자가 포함됩니다. 코드 페이지 1253은 그리스어 문자 체계에 필요한 문자 코드를 제공합니다. 코드 페이지 1253의 마지막 128개 코드 포인트에는 그리스어 문자가 포함됩니다. 따라서, ANSI 코드 페이지를 사용하는 애플리케이션은 참조된 코드 페이지를 나타내는 식별자를 포함하지 않는 한 동일한 텍스트 스트림에 그리스어와 독일어를 저장할 수 없습니다.|
-|DBCS(더블바이트 문자 집합) 인코딩||256자가 넘는 문자를 포함하는 언어(예: 중국어, 일본어 및 한국어)를 지원합니다. DBCS에서는 한 쌍의 코드 포인트(더블바이트)가 각 문자를 나타냅니다. <xref:System.Text.Encoding.IsSingleByte%2A?displayProperty=nameWithType> 속성은 DBCS 인코딩에 대해 `false` 를 반환합니다. <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> 메서드를 호출하여 특정 DBCS에 대한 인코딩 개체를 검색할 수 있습니다.|DBCS에서는 한 쌍의 코드 포인트(더블바이트)가 각 문자를 나타냅니다. 애플리케이션에서 DBCS 데이터를 처리할 때 DBCS 문자의 첫 번째 바이트(선행 바이트)는 바로 뒤에 오는 후행 바이트와 함께 처리됩니다. 한 쌍의 더블바이트 코드 포인트가 코드 페이지에 따라 서로 다른 문자를 나타낼 수 있기 때문에 이 구성표에서는 여전히 동일한 데이터 스트림에 두 언어(예: 일본어 및 중국어)를 함께 사용할 수 없습니다.|
+|인코딩 클래스|설명|
+|--------------|-----------|
+|[ASCII](xref:System.Text.ASCIIEncoding)|바이트의 하위 7비트를 사용하여 제한된 범위의 문자를 인코딩합니다. 이 인코딩은 U+0000에서 U+007F 사이의 문자 값만 지원하므로 대부분의 경우 국제화된 애플리케이션에는 적합하지 않습니다.|
+|[UTF-7](xref:System.Text.UTF7Encoding)|7비트 ASCII 문자 시퀀스로 문자를 나타냅니다. 비 ASCII 유니코드 문자는 ASCII 문자의 이스케이프 시퀀스로 표시됩니다. UTF-7은 이메일 및 뉴스 그룹과 같은 프로토콜을 지원합니다. 그러나 UTF-7은 특별히 안전하거나 강력하지 않습니다. 경우에 따라 1비트를 변경해도 전체 UTF-7 문자열의 해석이 완전히 바뀔 수 있습니다. 다른 UTF-7 문자열이 동일한 텍스트를 인코딩할 수도 있습니다. 비 ASCII 문자를 포함하는 시퀀스의 경우 UTF-7에서 UTF-8보다 많은 공간이 필요하며 인코딩/디코딩 속도가 느려집니다. 따라서 가능하면 UTF-7 대신 UTF-8을 사용해야 합니다.|
+|[UTF-8](xref:System.Text.UTF8Encoding)|각 유니코드 코드 포인트를 1-4바이트의 시퀀스로 나타냅니다. UTF-8은 8비트 데이터 크기를 지원하며 기존의 많은 운영 체제에서 제대로 작동합니다. ASCII 문자 범위의 경우 UTF-8은 ASCII 인코딩과 동일하며 광범위한 문자 집합을 허용합니다. 그러나 CJK(중국어-일본어-한국어) 스크립트의 경우 UTF-8에서 각 문자에 대해 3바이트를 요구할 수 있으며 데이터 크기가 UTF-16보다 커질 수 있습니다. 때로는 HTML 태그와 같은 ASCII 데이터의 양이 CJK 범위의 크기 증가와 관련이 있습니다.|
+|[UTF-16](xref:System.Text.UnicodeEncoding)|각 유니코드 코드 포인트를 한두 개의 16비트 정수 시퀀스로 나타냅니다. 가장 일반적인 유니코드 문자에는 UTF-16 코드 포인트 한 개만 있으면 됩니다. 단, 유니코드 보조 문자(U+10000 이상)에는 UTF-16 서로게이트 코드 포인트 두 개가 필요합니다. little-endian 및 big-endian 바이트 순서가 둘 다 지원됩니다. UTF-16 인코딩은 공용 언어 런타임에서 <xref:System.Char> 및 <xref:System.String> 값을 나타내는 데 사용되며 Windows 운영 체제에서 `WCHAR` 값을 나타내는 데 사용됩니다.|
+|[UTF-32](xref:System.Text.UTF32Encoding)|각 유니코드 코드 포인트를 32비트 정수 한 개로 나타냅니다. little-endian 및 big-endian 바이트 순서가 둘 다 지원됩니다. UTF-32 인코딩은 인코딩된 공간이 너무 중요한 운영 체제에서 애플리케이션이 UTF-16 인코딩의 서로게이트 코드 포인트 동작을 방지하려는 경우에 사용됩니다. 디스플레이에 렌더링되는 단일 문자 모양은 여전히 둘 이상의 UTF-32 문자로 인코딩될 수 있습니다.|
+|ANSI/ISO 인코딩|다양한 코드 페이지에 대해 지원됩니다. Windows 운영 체제에서 코드 페이지는 특정 언어 또는 언어 그룹을 지원하는 데 사용됩니다. .NET에서 지원되는 코드 페이지를 나열하는 표는 <xref:System.Text.Encoding> 클래스를 참조하세요. <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> 메서드를 호출하여 특정 코드 페이지에 대한 인코딩 개체를 검색할 수 있습니다. 코드 페이지에는 256개의 코드 포인트가 포함되며 0부터 시작합니다. 대부분의 코드 페이지에서 코드 포인트 0-127은 ASCII 문자 집합을 나타내고, 코드 포인트 128-255는 코드 페이지마다 상당한 차이가 있습니다. 예를 들어 코드 페이지 1252는 영어, 독일어, 프랑스어 등 라틴 문자 쓰기 시스템에 대한 문자를 제공합니다. 코드 페이지 1252의 마지막 128개 코드 포인트에는 악센트 문자가 포함됩니다. 코드 페이지 1253은 그리스어 문자 체계에 필요한 문자 코드를 제공합니다. 코드 페이지 1253의 마지막 128개 코드 포인트에는 그리스어 문자가 포함됩니다. 따라서, ANSI 코드 페이지를 사용하는 애플리케이션은 참조된 코드 페이지를 나타내는 식별자를 포함하지 않는 한 동일한 텍스트 스트림에 그리스어와 독일어를 저장할 수 없습니다.|
+|DBCS(더블바이트 문자 집합) 인코딩|256자가 넘는 문자를 포함하는 언어(예: 중국어, 일본어 및 한국어)를 지원합니다. DBCS에서는 한 쌍의 코드 포인트(더블바이트)가 각 문자를 나타냅니다. <xref:System.Text.Encoding.IsSingleByte%2A?displayProperty=nameWithType> 속성은 DBCS 인코딩에 대해 `false` 를 반환합니다. <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> 메서드를 호출하여 특정 DBCS에 대한 인코딩 개체를 검색할 수 있습니다. 애플리케이션에서 DBCS 데이터를 처리할 때 DBCS 문자의 첫 번째 바이트(선행 바이트)는 바로 뒤에 오는 후행 바이트와 함께 처리됩니다. 한 쌍의 더블바이트 코드 포인트가 코드 페이지에 따라 서로 다른 문자를 나타낼 수 있기 때문에 이 구성표에서는 여전히 동일한 데이터 스트림에 두 언어(예: 일본어 및 중국어)를 함께 사용할 수 없습니다.|
 
 이러한 인코딩을 통해 유니코드 문자는 물론 레거시 애플리케이션에서 가장 일반적으로 사용되는 인코딩으로 작업할 수 있습니다. 또한 <xref:System.Text.Encoding> 에서 파생되는 클래스를 정의하고 해당 멤버를 재정의하여 사용자 지정 인코딩을 만들 수 있습니다.
 
-### <a name="platform-notes-net-core"></a>플랫폼 참고 사항: .NET Core
+## <a name="net-core-encoding-support"></a>.NET Core 인코딩 지원
 
 기본적으로 .NET Core에서는 코드 페이지 28591 이외의 코드 페이지 인코딩 및 유니코드 인코딩(예: UTF-8 및 UTF-16)을 사용할 수 없습니다. 그러나 .NET을 대상으로 하는 표준 Windows 앱에 있는 코드 페이지 인코딩을 해당 앱에 추가할 수 있습니다. 자세한 내용은 <xref:System.Text.CodePagesEncodingProvider> 항목을 참조하세요.
 
@@ -285,6 +262,7 @@ QUESTION MARK(U+003F) 외에도 일반적으로 유니코드 REPLACEMENT CHARACT
 
 ## <a name="see-also"></a>참조
 
+- [.NET의 문자 인코딩 소개](character-encoding-introduction.md)
 - <xref:System.Text.Encoder>
 - <xref:System.Text.Decoder>
 - <xref:System.Text.DecoderFallback>

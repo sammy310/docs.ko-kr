@@ -1,6 +1,6 @@
 ---
 title: 구조체 형식 - C# 참조
-ms.date: 02/24/2020
+ms.date: 03/26/2020
 f1_keywords:
 - struct_CSharpKeyword
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: b85d0df086f3ca65ed995594dd374286e1c3ba5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6a2c97b93a8f6d1d62bd8a96865a4fe6587f55d3
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847731"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345136"
 ---
 # <a name="structure-types-c-reference"></a>구조체 형식(C# 참조)
 
@@ -24,6 +24,24 @@ ms.locfileid: "78847731"
 구조체 형식은 ‘값 의미 체계’를 갖습니다.  즉, 구조체 형식의 변수는 해당 형식의 인스턴스를 포함합니다. 기본적으로 변수 값은 할당 시에, 인수를 메서드에 전달할 때, 그리고 메서드 결과를 반환할 때 복사됩니다. 구조체 형식 변수의 경우, 해당 형식의 인스턴스가 복사됩니다. 자세한 내용은 [값 형식](value-types.md)을 참조하세요.
 
 구조체 형식은 일반적으로 동작을 거의 제공하지 않거나 전혀 제공하지 않는 작은 데이터 중심 형식을 설계하는 데 사용합니다. 예를 들어, .NET에서는 구조체 형식을 사용하여 숫자([정수](integral-numeric-types.md)와 [실수](floating-point-numeric-types.md)), [부울 값](bool.md), [유니코드 문자](char.md), [시간 인스턴스](xref:System.DateTime)를 표현합니다. 형식의 동작이 중요한 경우에는 [클래스](../keywords/class.md)를 정의하는 것이 좋습니다. 클래스 형식은 ‘참조 의미 체계’를 갖습니다.  즉, 클래스 형식의 변수는 인스턴스 자체가 아닌 해당 형식의 인스턴스에 대한 참조를 포함합니다.
+
+구조체 형식에는 값 의미 체계가 있기 때문에 *변경할 수* 없는 구조체 형식을 정의하는 것이 좋습니다.
+
+## <a name="readonly-struct"></a>`readonly` 구조체
+
+C# 7.2부터 `readonly` 한정자를 사용하여 구조체 형식을 변경할 수 없도록 선언합니다.
+
+[!code-csharp[readonly struct](snippets/StructType.cs#ReadonlyStruct)]
+
+`readonly` 구조체의 모든 데이터 멤버는 다음과 같이 읽기 전용이어야 합니다.
+
+- 모든 필드 선언에는 [`readonly` 한정자](../keywords/readonly.md)가 있어야 합니다.
+- 자동 구현된 속성을 포함하여 모든 속성은 읽기 전용이어야 합니다.
+
+이렇게 하면 `readonly` 구조체의 멤버가 구조체의 상태를 수정하지 않습니다.
+
+> [!NOTE]
+> `readonly` 구조체에서 변경 가능한 참조 형식의 데이터 멤버는 여전히 자체 상태를 변경할 수 있습니다. 예를 들어 <xref:System.Collections.Generic.List%601> 인스턴스를 바꿀 수는 없지만 여기에 새 요소를 추가할 수는 있습니다.
 
 ## <a name="limitations-with-the-design-of-a-structure-type"></a>구조체 형식 설계의 제한 사항
 
@@ -43,7 +61,7 @@ ms.locfileid: "78847731"
 
 C#에서는 선언된 변수를 사용하려면 먼저 초기화해야 합니다. 구조체 형식 변수는 `null`일 수 없으므로([nulla 허용 변수 값 형식](nullable-value-types.md)의 변수인 경우 제외), 해당 형식의 인스턴스를 인스턴스화해야 합니다. 이 작업은 몇 가지 방법으로 수행할 수 있습니다.
 
-일반적으로, 구조체 형식은 [`new`](../operators/new-operator.md) 연산자를 사용하여 적절한 생성자를 호출함으로써 인스턴스화합니다. 모든 구조체 형식은 하나 이상의 생성자를 갖습니다. 이는 해당 형식의 [기본값](default-values.md)을 생성하는 매개 변수 없는 암시적 생성자입니다. [default](../operators/default.md) 연산자 또는 리터럴을 사용하여 해당 형식의 기본값을 생성할 수도 있습니다.
+일반적으로, 구조체 형식은 [`new`](../operators/new-operator.md) 연산자를 사용하여 적절한 생성자를 호출함으로써 인스턴스화합니다. 모든 구조체 형식은 하나 이상의 생성자를 갖습니다. 이는 해당 형식의 [기본값](default-values.md)을 생성하는 매개 변수 없는 암시적 생성자입니다. [기본값 식](../operators/default.md)을 사용하여 형식의 기본값을 생성할 수도 있습니다.
 
 구조체 형식의 모든 인스턴스 필드가 액세스 가능한 경우, `new` 연산자 없이 인스턴스화할 수도 있습니다. 이 경우 인스턴스를 처음 사용하기 전에 모든 인스턴스 필드를 초기화해야 합니다. 다음 예제에서는 해당 작업을 수행하는 방법을 보여줍니다.
 
@@ -63,7 +81,9 @@ C#에서는 선언된 변수를 사용하려면 먼저 초기화해야 합니다
 
 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [구조체](~/_csharplang/spec/structs.md) 섹션을 참조하세요.
 
-## <a name="see-also"></a>참조
+`readonly` 구조체에 대한 자세한 내용은 [기능 제안 노트](~/_csharplang/proposals/csharp-7.2/readonly-ref.md#readonly-structs)를 참조하세요.
+
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [디자인 지침 - 클래스와 구조체 간의 선택](../../../standard/design-guidelines/choosing-between-class-and-struct.md)

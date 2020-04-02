@@ -1,17 +1,18 @@
 ---
 title: 차단된 .NET Framework 설치 및 제거 문제 해결
+description: .NET Framework를 설치하지 못하게 하는 문제를 해결합니다. 문제 해결에 대한 정보는 상태 메시지를 참조하세요.
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
 helpviewer_keywords:
 - .NET Framework, troubleshooting blocked installations
 - blocked .NET Framework installations, troubleshooting
 ms.assetid: c3fdfbc1-ed99-4202-a2b0-8c4f1646385d
-ms.openlocfilehash: edc471ad2c389a37a2ffbf739a74d4d5d0e9696f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 70cefb53d29c7a895a3e242776bae39b7636fd65
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76965986"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79506959"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>차단된 .NET Framework 설치 및 제거 문제 해결
 

@@ -39,8 +39,8 @@
           href: front-end-communication.md
         - name: 서비스 대 서비스 통신
           href: service-to-service-communication.md
-        - name: REST 및 gRPC
-          href: rest-grpc.md
+        - name: gRPC
+          href: grpc.md
         - name: 서비스 메시 통신 인프라
           href: service-mesh-communication-infrastructure.md
     - name: 분산 데이터

@@ -3,12 +3,12 @@ title: .NET 용어
 description: .NET 설명서에서 사용되는 선택한 용어의 의미를 알아봅니다.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 8da1d858835210590a80a624fb8989fbfe8e0a91
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ed4dceed1a3f39c5c4ce7a278efc37bb38ed0d94
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398750"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344200"
 ---
 # <a name="net-glossary"></a>.NET 용어
 
@@ -26,7 +26,7 @@ Ahead-Of-Time 컴파일러입니다.
 
 .NET Framework와 함께 제공되는 원래 ASP.NET 구현체입니다.
 
-경우에 따라 ASP.NET은 ASP.NET Core를 포함한 두가지 ASP.NET 구현체를 나타내는 포괄적인 용어입니다. 지정된 인스턴스에서 이 용어가 전달하는 의미는 컨텍스트에 의해 결정됩니다. 두 구현체을 모두 의미하는 데 ASP.NET을 사용하지 않는 것을 분명히 하려는 경우 ASP.NET 4.x를 참조하세요.
+경우에 따라 ASP.NET은 ASP.NET Core를 포함한 두가지 ASP.NET 구현체를 나타내는 포괄적인 용어입니다. 지정된 인스턴스에서 이 용어가 전달하는 의미는 컨텍스트에 의해 결정됩니다. ASP.NET을 사용하여 두 구현체를 모두 의미하는 것이 아님을 분명히 하려는 경우 ASP.NET 4.x를 참조하세요.
 
 [ASP.NET 설명서](/aspnet/#pivot=aspnet)를 참조하세요.
 
@@ -46,7 +46,7 @@ Ahead-Of-Time 컴파일러입니다.
 
 공용 언어 런타임입니다.
 
-정확한 의미는 컨텍스트에 따라 달라지지만 일반적으로 .NET Framework의 런타임을 나타냅니다. CLR은 메모리 할당 및 관리를 처리합니다. 또한 CLR은 앱을 실행할 뿐만 아니라 [JIT](#jit) 컴파일러를 사용하여 즉시 코드를 생성하고 컴파일하는 가상 머신입니다. 현재 Microsoft CLR 구현체는 Windows 전용입니다.
+정확한 의미는 컨텍스트에 따라 달라지지만 공용 언어 런타임은 일반적으로 .NET Framework의 런타임을 나타냅니다. CLR은 메모리 할당 및 관리를 처리합니다. 또한 CLR은 앱을 실행할 뿐만 아니라 [JIT](#jit) 컴파일러를 사용하여 즉시 코드를 생성하고 컴파일하는 가상 머신입니다. 현재 Microsoft CLR 구현체는 Windows 전용입니다.
 
 ## <a name="coreclr"></a>CoreCLR
 
@@ -64,13 +64,13 @@ System.\*(및 제한된 범위의 Microsoft.\*) 네임스페이스를 구성하�
 
 .NET Core 런타임입니다.
 
-CLR/CoreCLR과 달리 CoreRT는 가상 머신이 아닙니다. 즉, [JIT](#jit)를 포함하지 않으므로 즉시 코드를 생성하고 실행하는 기능을 포함하지 않습니다. 그러나 [GC](#gc)와 RTTI(런타임 형식 식별) 및 리플렉션에 대한 기능은 포함합니다. 그러나 해당 형식 시스템은 리플렉션에 대한 메타데이터가 필요하지 않도록 설계되었습니다. 따라서 불필요한 메타데이터를 분리하고 더 중요하게는 앱이 사용하지 않는 코드를 식별할 수 있는 [AOT](#aot) 도구 체인을 사용할 수 있습니다. CoreRT는 개발 중입니다.
+CLR/CoreCLR과 달리 CoreRT는 가상 머신이 아닙니다. 즉, [JIT](#jit)를 포함하지 않으므로 즉시 코드를 생성하고 실행하는 기능을 포함하지 않습니다. 그러나 [GC](#gc)와 RTTI(런타임 형식 식별) 및 리플렉션에 대한 기능은 포함합니다. 그러나 해당 형식 시스템은 리플렉션에 대한 메타데이터가 필요하지 않도록 설계되었습니다. 메타데이터가 필요하지 않으면 불필요한 메타데이터를 분리하고 더 중요하게는 앱이 사용하지 않는 코드를 식별할 수 있는 [AOT](#aot) 도구 체인을 사용할 수 있습니다. CoreRT는 개발 중입니다.
 
 [.NET 네이티브와 CoreRT 소개](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)를 참조하세요.
 
 ## <a name="cross-platform"></a>크로스 플랫폼
 
-각 운영 체제에 맞게 다시 작성할 필요 없이 Linux와 Windows, iOS와 같은 다양한 운영 체제에서 사용할 수 있는 애플리케이션을 개발하고 실행하는 기능입니다. 이를 통해 다양한 플랫폼에서 애플리케이션 간에 코드를 다시 사용하고 일관성을 유지할 수 있습니다.
+각 운영 체제에 맞게 다시 작성할 필요 없이 Linux, Windows 및 iOS와 같은 다양한 운영 체제에서 사용할 수 있는 애플리케이션을 개발하고 실행하는 기능입니다. 이를 통해 다양한 플랫폼에서 애플리케이션 간에 코드를 다시 사용하고 일관성을 유지할 수 있습니다.
 
 ## <a name="ecosystem"></a>에코시스템
 
@@ -137,11 +137,11 @@ Just-In-Time 컴파일러입니다.
 
 고유한 라이브러리는 없고 종속성 목록만 갖는 NuGet 패키지입니다. 포함된 패키지는 필요에 따라 대상 프레임워크에 대한 API를 설정할 수 있습니다.
 
-[패키지와 메타패키지, 프레임워크](../core/packages.md)를 참조하세요.
+[패키지, 메타패키지 및 프레임워크](../core/packages.md)를 참조하세요.
 
 ## <a name="mono"></a>Mono
 
-Mono는 작은 런타임이 필요할 때 주로 사용되는 오픈 소스 [크로스 플랫폼](#cross-platform) .NET 구현체입니다. 이는 Android와 Mac, iOS, tvOS, watchOS에서 Xamarin 애플리케이션의 성능을 향상시키는 런타임으로, 주로 작은 사용 공간이 필요한 앱에 초점을 맞춥니다.
+Mono는 작은 런타임이 필요할 때 주로 사용되는 오픈 소스 [크로스 플랫폼](#cross-platform) .NET 구현체입니다. 이는 Android, Mac, iOS, tvOS 및 watchOS에서 Xamarin 애플리케이션의 성능을 향상하는 런타임으로, 주로 작은 사용 공간이 필요한 앱에 초점을 맞춥니다.
 
 Mono는 현재 게시된 .NET Standard 버전을 모두 지원합니다.
 
@@ -153,7 +153,7 @@ Mono의 자세한 내용은 [Mono 설명서](https://www.mono-project.com/docs/)
 
 ## <a name="net"></a>.NET
 
-[.NET Standard](#net-standard) 및 모든 [.NET 구현체](#implementation-of-net)와 워크로드에 대한 포괄적인 용어입니다. 항상 대문자로 표기하며, “.Net”이 아닙니다.
+[.NET Standard](#net-standard) 및 모든 [.NET 구현체](#implementation-of-net)와 워크로드에 대한 포괄적인 용어입니다. 항상 전체를 대문자로 표기하며 절대로 ".Net"을 사용하지 않습니다.
 
 [.NET 가이드](index.md)를 참조하세요.
 
@@ -161,7 +161,7 @@ Mono의 자세한 내용은 [Mono 설명서](https://www.mono-project.com/docs/)
 
 다양한 .NET 플랫폼에서 사용할 수 있는 고성능 오픈 소스 구현체입니다. CoreCLR(Core 공용 언어 런타임)과 Core AOT 런타임(CoreRT, 개발 중), Core 기본 클래스 라이브러리, Core SDK를 포함합니다.
 
-[.NET Core](../core/index.md)를 참조하세요.
+[.NET Core](../core/index.yml)를 참조하세요.
 
 ## <a name="net-core-cli"></a>.NET Core CLI
 
@@ -179,7 +179,7 @@ Mono의 자세한 내용은 [Mono 설명서](https://www.mono-project.com/docs/)
 
 Windows에서만 실행되는 .NET의 구현체입니다. CLR(공용 언어 런타임), 기본 클래스 라이브러리 및 ASP.NET, Windows Forms, WPF 등의 애플리케이션 프레임워크 라이브러리를 포함합니다.
 
-[.NET Framework 가이드](../framework/index.md)를 참조하세요.
+[.NET Framework 가이드](../framework/index.yml)를 참조하세요.
 
 ## <a name="net-native"></a>.NET 네이티브
 
@@ -269,12 +269,12 @@ OS는 런타임 환경의 일부이지만 .NET 런타임의 일부는 아닙니�
 
 유니버설 Windows 플랫폼입니다.
 
-IoT(사물 인터넷)에 대한 최신의 터치 가능 Windows 애플리케이션 및 소프트웨어를 작성하는 데 사용되는 .NET의 구현체입니다. PC, 태블릿, 패블릿, 휴대폰, Xbox와 같은 대상으로 지정할 수 있는 다양한 종류의 디바이스를 통합하도록 설계되었습니다. UWP는 중앙 집중식 앱 스토어, 실행 환경(AppContainer), Win32를 대체할 Windows API(WinRT) 등 많은 서비스를 제공합니다. 앱은 C++과 C#, Visual Basic, JavaScript로 작성할 수 있습니다. C#과 Visual Basic을 사용할 경우 .NET API는 .NET Core에서 제공됩니다.
+IoT(사물 인터넷)에 대한 최신의 터치 가능 Windows 애플리케이션 및 소프트웨어를 작성하는 데 사용되는 .NET의 구현체입니다. PC, 태블릿, 휴대폰, Xbox와 같은 대상으로 지정할 수 있는 다양한 종류의 디바이스를 통합하도록 설계되었습니다. UWP는 중앙 집중식 앱 스토어, 실행 환경(AppContainer), Win32를 대체할 Windows API(WinRT) 등 많은 서비스를 제공합니다. 앱은 C++과 C#, Visual Basic, JavaScript로 작성할 수 있습니다. C#과 Visual Basic을 사용할 경우 .NET API는 .NET Core에서 제공됩니다.
 
 ## <a name="see-also"></a>참조
 
 - [.NET 가이드](index.md)
-- [.NET Framework 가이드](../framework/index.md)
-- [.NET Core](../core/index.md)
+- [.NET Framework 가이드](../framework/index.yml)
+- [.NET Core](../core/index.yml)
 - [ASP.NET 개요](/aspnet/index#pivot=aspnet)
 - [ASP.NET Core 개요](/aspnet/index#pivot=core)

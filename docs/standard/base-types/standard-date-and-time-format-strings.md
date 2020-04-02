@@ -14,12 +14,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-ms.openlocfilehash: 883902142a91e275ab64ad5d12c197c665bd9b36
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5a3ba2838458d6e6833035186dfd69b34c780317
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398474"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248136"
 ---
 # <a name="standard-date-and-time-format-strings"></a>표준 날짜 및 시간 서식 문자열
 
@@ -54,7 +54,7 @@ ms.locfileid: "79398474"
 |"T"|자세한 시간 패턴<br /><br /> 추가 정보: [자세한 시간("T") 서식 지정자](#LongTime).|2009-06-15T13:45:30 -> 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45:30 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45:30 م (ar-EG)|
 |"u"|정렬 가능한 유니버설 날짜/시간 패턴<br /><br /> 추가 정보: [정렬 가능한 유니버설("u") 서식 지정자](#UniversalSortable).|<xref:System.DateTime> 값 사용: 2009-06-15T13:45:30 -> 2009-06-15 13:45:30Z<br /><br /> <xref:System.DateTimeOffset> 값 사용: 2009-06-15T13:45:30 -> 2009-06-15 20:45:30Z|
 |"U"|유니버설 전체 날짜/시간 패턴입니다.<br /><br /> 추가 정보: [유니버설 전체("U") 서식 지정자](#UniversalFull).|2009-06-15T13:45:30 -> Monday, June 15, 2009 8:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 20:45:30 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 8:45:30 μμ (el-GR)|
-|"Y", "y"|연도 월 패턴<br /><br /> 추가 정보: [연도 월("Y", "y") 서식 지정자](#YearMonth).|2009-06-15T13:45:30 -> June, 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> juni 2009 (da-DK)<br /><br /> 2009-06-15T13:45:30 -> Juni 2009 (id-ID)|
+|"Y", "y"|연도 월 패턴<br /><br /> 추가 정보: [연도 월("Y", "y") 서식 지정자](#YearMonth).|2009-06-15T13:45:30 -> June 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> juni 2009 (da-DK)<br /><br /> 2009-06-15T13:45:30 -> Juni 2009 (id-ID)|
 |기타 모든 단일 문자|알 수 없는 지정자입니다.|런타임 <xref:System.FormatException>을 throw합니다.|
 
 ## <a name="how-standard-format-strings-work"></a>표준 서식 문자열의 작동 방법

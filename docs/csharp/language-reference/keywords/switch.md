@@ -12,14 +12,16 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: e5580e81b9175cd95491fdba724bacbffa692a5e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 49b3836f17e91ae8de10d68e97fd662aae80d1ff
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345386"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249320"
 ---
 # <a name="switch-c-reference"></a>switch(C# 참조)
+
+이 문서에서는 `switch` 문에 대해 설명합니다. C# 8.0에 도입된 `switch` 식에 대한 자세한 내용은 [식 및 연산자](../operators/index.md) 섹션에서 [`switch` 식](../operators/switch-expression.md) 문서를 참조하세요.
 
 `switch`는 *일치 식*을 사용한 패턴 일치를 기반으로 하여 후보 목록에서 실행할 *switch 섹션* 하나를 선택하는 선택 문입니다.
 
@@ -35,7 +37,7 @@ ms.locfileid: "75345386"
 
 ## <a name="the-match-expression"></a>일치 식
 
-일치 식은 `case` 레이블의 패턴과 일치시킬 값을 제공합니다. 사용되는 구문은 다음과 같습니다.
+일치 식은 `case` 레이블의 패턴과 일치시킬 값을 제공합니다. 구문은 다음과 같습니다.
 
 ```csharp
    switch (expr)
@@ -106,13 +108,13 @@ C# 6에서 상수 패턴만 지원하고 상수 값의 반복을 허용하지 �
 
 `default` case는 `switch` 문에 임의 순서로 표시될 수 있습니다. 소스 코드에서 해당 순서와 관계없이 항상 모든 `case` 레이블이 평가된 후 마지막에 평가됩니다.
 
-## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a>`switch` 문을 사용한 <a name="pattern" /> 패턴 일치
+## <a name="pattern-matching-with-the-switch-statement"></a>`switch` 문을 사용한 <a name="pattern" /> 패턴 일치
 
 각 `case` 문은 일치 식과 일치할 경우 포함하는 switch 섹션이 실행되는 패턴을 정의합니다. 상수 패턴은 모든 버전의 C#에서 지원됩니다. 나머지 패턴은 C# 7.0부터 지원됩니다.
 
 ### <a name="constant-pattern"></a>상수 패턴
 
-상수 패턴은 일치 식이 지정된 상수와 같은지 여부를 테스트합니다. 사용되는 구문은 다음과 같습니다.
+상수 패턴은 일치 식이 지정된 상수와 같은지 여부를 테스트합니다. 구문은 다음과 같습니다.
 
 ```csharp
    case constant:
@@ -143,7 +145,7 @@ C# 6에서 상수 패턴만 지원하고 상수 값의 반복을 허용하지 �
 
 ### <a name="type-pattern"></a>형식 패턴
 
-형식 패턴은 간결한 형식 평가 및 변환을 사용하도록 설정합니다. `switch` 문과 함께 사용하여 패턴 일치를 수행하는 경우 식을 지정된 형식으로 변환할 수 있는지 여부를 테스트하고, 변환할 수 있으면 해당 형식의 변수로 캐스팅합니다. 사용되는 구문은 다음과 같습니다.
+형식 패턴은 간결한 형식 평가 및 변환을 사용하도록 설정합니다. `switch` 문과 함께 사용하여 패턴 일치를 수행하는 경우 식을 지정된 형식으로 변환할 수 있는지 여부를 테스트하고, 변환할 수 있으면 해당 형식의 변수로 캐스팅합니다. 구문은 다음과 같습니다.
 
 ```csharp
    case type varname
@@ -183,7 +185,7 @@ case null:
 
 [!code-csharp[type-pattern2#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
-## <a name="a-namewhen--the-case-statement-and-the-when-clause"></a><a name="when" />`case` 문 및 `when` 절
+## <a name="the-case-statement-and-the-when-clause"></a><a name="when" />`case` 문 및 `when` 절
 
 C# 7.0부터 case 문이 상호 배타적일 필요가 없으므로 `when` 절을 추가하여 case 문이 true로 평가되기 위해 충족해야 하는 추가 조건을 지정할 수 있습니다. `when` 절은 부울 값을 반환하는 모든 식일 수 있습니다.
 
@@ -197,7 +199,7 @@ C# 7.0부터 case 문이 상호 배타적일 필요가 없으므로 `when` 절�
 
 자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)의 [switch 문](~/_csharplang/spec/statements.md#the-switch-statement)을 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

@@ -1,18 +1,18 @@
 ---
 title: out 매개 변수 한정자 - C# 참조
-ms.date: 03/26/2019
+ms.date: 03/19/2020
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: f963188d77685bb81f7dc9fb3794e343114fe3c0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c713aa929673e51e8e9986c536bae782121c7756
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173564"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249346"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>out 매개 변수 한정자(C# 참조)
-`out` 키워드를 사용하면 참조를 통해 인수를 전달할 수 있습니다. 이 키워드는 정식 매개 변수를 위해 해당 인수의 별칭을 만드는데, 이는 반드시 변수여야 합니다. 즉, 매개 변수에 대한 모든 작업이 인수에서 수행됩니다. 이러한 방식은 [ref](ref.md) 키워드와 비슷합니다. 단, `ref`의 경우에는 변수를 전달하기 전에 초기화해야 합니다. [이 호출된 메서드에서 인수 값 수정을 허용하지 않는 것을 제외하고 ](in-parameter-modifier.md)in`in` 키워드와도 같습니다. `out` 매개 변수를 사용하려면 메서드 정의와 호출 메서드가 모두 명시적으로 `out` 키워드를 사용해야 합니다. 예들 들어 다음과 같습니다.  
+`out` 키워드를 사용하면 참조를 통해 인수를 전달할 수 있습니다. 이 키워드는 정식 매개 변수를 위해 해당 인수의 별칭을 만드는데, 이는 반드시 변수여야 합니다. 즉, 매개 변수에 대한 모든 작업이 인수에서 수행됩니다. 이러한 방식은 [ref](ref.md) 키워드와 비슷합니다. 단, `ref`의 경우에는 변수를 전달하기 전에 초기화해야 합니다. `in`이 호출된 메서드에서 인수 값 수정을 허용하지 않는 것을 제외하고 [in](in-parameter-modifier.md) 키워드와도 같습니다. `out` 매개 변수를 사용하려면 메서드 정의와 호출 메서드가 모두 명시적으로 `out` 키워드를 사용해야 합니다. 다음은 그 예입니다.  
   
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#1)]  
 
@@ -47,6 +47,12 @@ class CS0663_Example
   
 - [yield return](./yield.md) 또는 `yield break` 문을 포함하는 반복기 메서드  
 
+또한 [확장 메서드](../../programming-guide/classes-and-structs/extension-methods.md)에는 다음과 같은 제한 사항이 있습니다.
+
+- 확장 메서드의 첫 번째 인수에는 `out` 키워드를 사용할 수 없습니다.
+- 인수가 구조체가 아니거나 구조체로 제한되지 않는 제네릭 형식일 경우에는 확장 메서드의 첫 번째 인수에 `ref` 키워드를 사용할 수 없습니다.
+- 첫 번째 인수가 구조체인 경우 이외에는 `in` 키워드를 사용할 수 없습니다. 구조체로 제한되는 경우에도 `in` 키워드는 제네릭 형식에 사용할 수 없습니다.
+
 ## <a name="declaring-out-parameters"></a>`out` 매개 변수 선언
 
 `out` 인수를 사용하여 메서드를 선언하는 것은 여러 값을 반환하기 위한 일반적인 해결 방법입니다. C# 7.0부터 비슷한 시나리오에 대해 [튜플](../../tuples.md)을 고려하세요. 다음 예제에서는 `out`을 사용하여 단일 메서드 호출로 3개 변수를 반환합니다. 세 번째 인수는 null에 할당됩니다. 따라서 메서드가 값을 선택적으로 반환할 수 있습니다.  
@@ -55,11 +61,11 @@ class CS0663_Example
 
 ## <a name="calling-a-method-with-an-out-argument"></a>`out` 인수를 사용하여 메서드 호출
 
-C# 6 및 이전 버전에서는 `out` 인수로 전달하기 전에 별도 문에서 변수를 선언해야 합니다. 다음 예제에서는 `number`Int32.TryParse[ 메서드에 전달되기 전에 ](xref:System.Int32.TryParse(System.String,System.Int32@))라는 변수를 선언합니다. 이 메서드는 문자열을 숫자로 변환하려고 합니다.
+C# 6 및 이전 버전에서는 `out` 인수로 전달하기 전에 별도 문에서 변수를 선언해야 합니다. 다음 예제에서는 [Int32.TryParse](xref:System.Int32.TryParse(System.String,System.Int32@)) 메서드에 전달되기 전에 `number`라는 변수를 선언합니다. 이 메서드는 문자열을 숫자로 변환하려고 합니다.
 
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#4)]  
 
-C# 7.0부터 별도 변수 선언이 아니라 메서드 호출의 인수 목록에서 `out` 변수를 선언할 수 있습니다. 이렇게 하면 보다 간결하고 읽기 쉬운 코드가 생성되며 메서드 호출 전에 실수로 변수에 값이 할당되는 경우를 방지할 수 있습니다. 다음 예제는 `number`Int32.TryParse[ 메서드 호출에서 ](xref:System.Int32.TryParse(System.String,System.Int32@)) 변수를 정의한다는 점을 제외하고 이전 예제와 비슷합니다.
+C# 7.0부터 별도 변수 선언이 아니라 메서드 호출의 인수 목록에서 `out` 변수를 선언할 수 있습니다. 이렇게 하면 보다 간결하고 읽기 쉬운 코드가 생성되며 메서드 호출 전에 실수로 변수에 값이 할당되는 경우를 방지할 수 있습니다. 다음 예제는 [Int32.TryParse](xref:System.Int32.TryParse(System.String,System.Int32@)) 메서드 호출에서 `number` 변수를 정의한다는 점을 제외하고 이전 예제와 비슷합니다.
 
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#5)]  
 

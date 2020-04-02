@@ -4,12 +4,12 @@ description: .NET Standard, .NET 구현, .NET 런타임 및 도구와 같은 .NE
 author: cartermp
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: eadcf05069edfa32a52c5e73045b4cebd1a9a6ac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 027fdb4cec47550f88f6930a4bbdff4ab5cdfb36
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398762"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344161"
 ---
 # <a name="net-architectural-components"></a>.NET 아키텍처 구성 요소
 
@@ -21,7 +21,7 @@ ms.locfileid: "79398762"
 
 또한 .NET Standard는 [대상 프레임워크](glossary.md#target-framework)입니다. .NET Standard 버전을 대상으로 하는 코드는 해당 .NET Standard 버전을 지원하는 모든 .NET 구현체에서 실행할 수 있습니다.
 
-.NET Standard와 대상 지정 방법의 자세한 내용은 [.NET Standard](net-standard.md) 항목을 참조하세요.
+.NET Standard와 대상 지정 방법의 자세한 내용은 [.NET Standard](net-standard.md)를 참조하세요.
 
 ## <a name="net-implementations"></a>.NET 구현체
 
@@ -38,13 +38,13 @@ Microsoft에서 적극적으로 개발 및 유지 보수하는 네 가지 기본
 
 .NET Core는 다양한 .NET 플랫폼에서 사용할 수 있는 구현체로, 대규모 서버 및 클라우드 워크로드를 처리하도록 설계되었습니다. Windows와 macOS, Linux에서 실행됩니다. .NET Core는 .NET Standard를 구현하므로 .NET Standard를 대상으로 하는 코드는 .NET Core에서 실행할 수 있습니다. [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core), [Windows Forms](../framework/winforms/windows-forms-overview.md) 및 [WPF(Windows Presentation Foundation)](../framework/wpf/index.md)는 모두 .NET Core에서 실행됩니다.
 
-.NET Core의 자세한 내용은 [.NET Core 가이드](../core/index.md)와 [서버 앱에 대해 .NET Core와 .NET Framework 중에 선택](choosing-core-framework-server.md)을 참조하세요.
+.NET Core의 자세한 내용은 [.NET Core 가이드](../core/index.yml)와 [서버 앱에 대해 .NET Core와 .NET Framework 중에 선택](choosing-core-framework-server.md)을 참조하세요.
 
 ### <a name="net-framework"></a>.NET Framework
 
-.NET Framework는 2002년부터 있었던 원래 .NET 구현입니다. 기존 .NET 개발자가 항상 사용해 온 것과 동일한 .NET Framework입니다. 버전 4.5 이상은 .NET Standard를 구현하므로 .NET Standard를 대상으로 하는 코드는 .NET Framework의 해당 버전에서 실행할 수 있습니다. Windows Forms 및 WPF를 사용하는 Windows 데스크톱 개발용 API와 같이 Windows 관련 추가 API가 포함되어 있습니다. .NET Framework는 Windows 데스크톱 애플리케이션을 구축을 위해 최적화되어 있습니다.
+.NET Framework는 2002년부터 있었던 원래 .NET 구현입니다. 버전 4.5 이상은 .NET Standard를 구현하므로 .NET Standard를 대상으로 하는 코드는 .NET Framework의 해당 버전에서 실행할 수 있습니다. Windows Forms 및 WPF를 사용하는 Windows 데스크톱 개발용 API와 같이 Windows 관련 추가 API가 포함되어 있습니다. .NET Framework는 Windows 데스크톱 애플리케이션을 구축을 위해 최적화되어 있습니다.
 
-.NET Framework의 자세한 내용은 [.NET Framework 가이드](../framework/index.md)를 참조하세요.
+.NET Framework에 대한 자세한 내용은 [.NET Framework 가이드](../framework/index.yml)를 참조하세요.
 
 ### <a name="mono"></a>Mono
 
@@ -60,7 +60,7 @@ Mono의 자세한 내용은 [Mono 설명서](https://www.mono-project.com/docs/)
 
 ### <a name="universal-windows-platform-uwp"></a>UWP(유니버설 Windows 플랫폼)
 
-UWP는 IoT(사물 인터넷)에 대한 최신 터치 가능 Windows 애플리케이션 및 소프트웨어를 작성하는 데 사용되는 .NET의 구현입니다. PC와 태블릿, 패블릿, 휴대폰, Xbox 등을 포함하여 대상이 될 수 있는 다양한 종류의 디바이스를 통합하기 위해 설계되었습니다. UWP는 중앙 집중식 앱 스토어, 실행 환경(AppContainer), Win32를 대체할 Windows API(WinRT) 등 많은 서비스를 제공합니다. 앱은 C++과 C#, Visual Basic, JavaScript로 작성할 수 있습니다. C#과 Visual Basic을 사용할 경우 .NET API는 .NET Core에서 제공됩니다.
+UWP는 IoT(사물 인터넷)에 대한 최신 터치 가능 Windows 애플리케이션 및 소프트웨어를 작성하는 데 사용되는 .NET의 구현입니다. PC, 태블릿, 휴대폰, Xbox와 같은 대상으로 지정할 수 있는 다양한 종류의 디바이스를 통합하도록 설계되었습니다. UWP는 중앙 집중식 앱 스토어, 실행 환경(AppContainer), Win32를 대체할 Windows API(WinRT) 등 많은 서비스를 제공합니다. 앱은 C++과 C#, Visual Basic, JavaScript로 작성할 수 있습니다. C#과 Visual Basic을 사용할 경우 .NET API는 .NET Core에서 제공됩니다.
 
 UWP의 자세한 내용은 [유니버설 Windows 플랫폼 소개](/windows/uwp/get-started/universal-application-platform-guide)를 참조하세요.
 
@@ -75,7 +75,7 @@ UWP의 자세한 내용은 [유니버설 Windows 플랫폼 소개](/windows/uwp/
 
 ## <a name="net-tooling-and-common-infrastructure"></a>.NET 도구 및 공통 인프라
 
-모든 .NET 구현체에서 동작하는 다양한 도구와 인프라 구성 요소를 사용할 수 있습니다. 여기에는 다음 항목들이 포함되며 이 항목들이 전부는 아닙니다.
+모든 .NET 구현체에서 동작하는 다양한 도구와 인프라 구성 요소를 사용할 수 있습니다. 이러한 도구 및 구성 요소는 다음과 같습니다.
 
 - .NET 언어 및 해당 컴파일러
 - .NET 프로젝트 시스템( *.csproj*, *.vbproj* 및 *.fsproj* 파일 기반)
@@ -85,7 +85,7 @@ UWP의 자세한 내용은 [유니버설 Windows 플랫폼 소개](/windows/uwp/
 
 ## <a name="applicable-standards"></a>적용 가능한 표준
 
-C# 언어 및 CLI(공용 언어 인프라) 사양은 [Ecma International® ](https://www.ecma-international.org/)을 통해 표준화됩니다. 이러한 표준의 첫 번째 버전은 2001년 12월에 Ecma에서 게시했습니다.
+C# 언어 및 CLI(공용 언어 인프라) 사양은 [Ecma International&reg;](https://www.ecma-international.org/)을 통해 표준화됩니다. 이러한 표준의 첫 번째 버전은 2001년 12월에 Ecma에서 게시했습니다.
 
 표준에 대한 후속 수정 사항은 프로그래밍 언어 기술 위원회([TC49](https://www.ecma-international.org/memento/tc49.htm)) 내에서 TC49-TG2(C#) 및 TC49-TG3(CLI) 작업 그룹을 통해 개발되었고 이후에는 Ecma General Assembly가, 그 이후에는 ISO/IEC JTC 1이 ISO Fast-Track 프로세스를 통해 도입했습니다.
 
@@ -94,8 +94,8 @@ C# 언어 및 CLI(공용 언어 인프라) 사양은 [Ecma International® ](htt
 다음과 같은 공식 Ecma 문서는 [C#](http://www.ecma-international.org/publications/standards/Ecma-334.htm) 및 [CLI](http://www.ecma-international.org/publications/standards/Ecma-335.htm)([TR-84](http://www.ecma-international.org/publications/techreports/E-TR-084.htm))에서 사용할 수 있습니다.
 
 - **C# 언어 표준(버전 5.0)** : [ECMA-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
-- **CLI(공용 언어 인프라)** : [pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf) 양식 및 [zip](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip) 양식으로 제공됩니다.
-- **파티션 IV XML 파일에서 파생된 정보**: [pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) 및 [zip](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip) 양식으로 제공됩니다.
+- **CLI(공용 언어 인프라)** : [pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf) 및 [zip](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip) 형식으로 제공됩니다.
+- **파티션 IV XML 파일에서 파생된 정보**: [pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) 및 [zip](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip) 형식으로 제공됩니다.
 
 공식 ISO/IEC 문서는 ISO/IEC [공개적으로 사용할 수 있는 표준](https://standards.iso.org/ittf/PubliclyAvailableStandards/) 페이지에서 사용할 수 있습니다. 이러한 링크는 해당 페이지에서 직접 제공됩니다.
 
@@ -107,8 +107,8 @@ C# 언어 및 CLI(공용 언어 인프라) 사양은 [Ecma International® ](htt
 
 - [서버 앱에 대해 .NET Core와 .NET Framework 중에 선택](choosing-core-framework-server.md)
 - [.NET Standard](net-standard.md)
-- [.NET Core 가이드](../core/index.md)
-- [.NET Framework 가이드](../framework/index.md)
+- [.NET Core 가이드](../core/index.yml)
+- [.NET Framework 가이드](../framework/index.yml)
 - [C# 가이드](../csharp/index.yml)
 - [F# 가이드](../fsharp/index.yml)
 - [Visual Basic 가이드](../visual-basic/index.yml)
