@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - parallel programming
 ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
-ms.openlocfilehash: ae129ef0cb2b331c1eb0220282f21fec6f6fb77d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 75f5ded48acfb82b0327ead3880ee23e6ef4bc2f
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73134153"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588160"
 ---
 # <a name="parallel-programming-in-net"></a>.NET으로 병렬 프로그래밍
 
@@ -27,7 +27,7 @@ ms.locfileid: "73134153"
 |기술|설명|
 |----------------|-----------------|
 |[TPL(작업 병렬 라이브러리)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|<xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 및 `For` 루프의 병렬 버전을 포함하는 `ForEach` 클래스 및 비동기 작업에 대한 선호되는 표현 방식을 나타내는 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 클래스의 설명서를 제공합니다.|
-|[PLINQ(병렬 LINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)|여러 시나리오에서 성능을 대폭 향상시키는 LINQ to Objects의 병렬 구현입니다.|
+|[PLINQ(병렬 LINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)|여러 시나리오에서 성능을 대폭 향상시키는 LINQ to Objects의 병렬 구현입니다.|
 |[병렬 프로그래밍을 위한 데이터 구조](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)|스레드로부터 안전한 컬렉션 클래스, 간단한 동기화 형식 및 초기화 지연 관련 형식에 대한 설명서의 링크를 제공합니다.|
 |[병렬 진단 도구](../../../docs/standard/parallel-programming/parallel-diagnostic-tools.md)|작업 및 병렬 스택의 Visual Studio 디버거 창에 대한 설명서와 [Concurrency 시각화](/visualstudio/profiling/concurrency-visualizer)에 대한 설명서로 연결되는 링크를 제공합니다.|
 |[PLINQ 및 TPL에 대한 사용자 지정 파티셔너](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)|파티션 작동 방식 및 기본 파티션을 구성하거나 새 파티션을 만드는 방법에 대해 설명합니다.|
@@ -35,7 +35,7 @@ ms.locfileid: "73134153"
 |[PLINQ 및 TPL의 람다 식](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)|C# 및 Visual Basic으로 작성된 람다 식의 간략한 개요를 제공하고, 람다 식이 PLINQ 및 작업 병렬 라이브러리에서 사용되는 방식을 보여 줍니다.|
 |[추가 정보](../../../docs/standard/parallel-programming/for-further-reading-parallel-programming.md)|.NET의 병렬 프로그래밍과 관련된 추가 정보 및 샘플 리소스에 대한 링크를 제공합니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [비동기 개요](../async.md)
 - [관리되는 스레딩](../threading/index.md)

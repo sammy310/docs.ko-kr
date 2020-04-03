@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - collections [.NET Framework]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-ms.openlocfilehash: 3ca340e19d7340d7bea133fa62c6d8bbc3c0512a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ec14cf30159dda1f2c67ef0c0f5f0a3e52000c45
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160393"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588653"
 ---
 # <a name="collections-and-data-structures"></a>컬렉션 및 데이터 구조
 비슷한 데이터는 컬렉션으로 저장 및 조작하면 보다 효율적으로 처리할 수 있는 경우가 많습니다. <xref:System.Array?displayProperty=nameWithType> 클래스 또는 <xref:System.Collections>, <xref:System.Collections.Generic> 및 <xref:System.Collections.Concurrent>, System.Collections.Immutable 네임스페이스의 클래스를 사용하여 컬렉션의 개별 요소 또는 일정 범위의 요소를 추가, 제거 및 수정할 수 있습니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "78160393"
   
 - **컬렉션을 열거하는 기능**  
   
-     .NET Framework 컬렉션은 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 또는 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>을 구현하므로 컬렉션을 반복할 수 있습니다. 열거자는 컬렉션의 모든 요소에 대한 이동 가능 포인터라고 할 수 있습니다. [foreach, in](../../csharp/language-reference/keywords/foreach-in.md) 문과 [For Each...Next 문](../../visual-basic/language-reference/statements/for-each-next-statement.md)은 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 메서드가 노출하는 열거자를 사용하며 해당 열거자를 조작하는 복잡한 작업을 숨깁니다. 또한 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>을 구현하는 모든 컬렉션은 *쿼리 가능 형식*으로 간주할 수 있으며 LINQ를 사용하여 쿼리할 수 있습니다. LINQ 쿼리는 데이터 액세스를 위한 일반 패턴을 제공합니다. 이러한 쿼리는 대개 표준 `foreach` 루프보다 간결하고 읽기 쉬우며 필터링, 순서 지정 및 그룹화 기능을 제공합니다. 또한 LINQ 쿼리를 통해 성능을 향상시킬 수도 있습니다. 자세한 내용은 [LINQ to Objects(C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects(Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md), [PLINQ (병렬 LINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md), [LINQ 쿼리 소개(C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) 및 [기본 쿼리 작업(Visual Basic)](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)을 참조하세요.  
+     .NET Framework 컬렉션은 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 또는 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>을 구현하므로 컬렉션을 반복할 수 있습니다. 열거자는 컬렉션의 모든 요소에 대한 이동 가능 포인터라고 할 수 있습니다. [foreach, in](../../csharp/language-reference/keywords/foreach-in.md) 문과 [For Each...Next 문](../../visual-basic/language-reference/statements/for-each-next-statement.md)은 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 메서드가 노출하는 열거자를 사용하며 해당 열거자를 조작하는 복잡한 작업을 숨깁니다. 또한 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>을 구현하는 모든 컬렉션은 *쿼리 가능 형식*으로 간주할 수 있으며 LINQ를 사용하여 쿼리할 수 있습니다. LINQ 쿼리는 데이터 액세스를 위한 일반 패턴을 제공합니다. 이러한 쿼리는 대개 표준 `foreach` 루프보다 간결하고 읽기 쉬우며 필터링, 순서 지정 및 그룹화 기능을 제공합니다. 또한 LINQ 쿼리를 통해 성능을 향상시킬 수도 있습니다. 자세한 내용은 [LINQ to Objects(C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects(Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md), [PLINQ (병렬 LINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md), [LINQ 쿼리 소개(C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) 및 [기본 쿼리 작업(Visual Basic)](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)을 참조하세요.  
   
 - **컬렉션의 내용을 배열에 복사하는 기능**  
   
@@ -48,7 +48,7 @@ ms.locfileid: "78160393"
   
 - **일관된 하한**  
   
-     컬렉션의 하한은 첫 번째 요소의 인덱스입니다. <xref:System.Collections> 네임스페이스의 모든 인덱싱된 컬렉션은 하한이 0입니다(0부터 인덱싱됨). <xref:System.Array>의 기본 하한은 0이지만 **를 사용하여** Array<xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> 클래스의 인스턴스를 만들 때 다른 하한을 정의할 수 있습니다.  
+     컬렉션의 하한은 첫 번째 요소의 인덱스입니다. <xref:System.Collections> 네임스페이스의 모든 인덱싱된 컬렉션은 하한이 0입니다(0부터 인덱싱됨). <xref:System.Array>의 기본 하한은 0이지만 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType>를 사용하여 **Array** 클래스의 인스턴스를 만들 때 다른 하한을 정의할 수 있습니다.  
   
 - **여러 스레드로부터의 액세스를 위한 동기화**(<xref:System.Collections> 클래스에만 해당됨).  
   
@@ -84,7 +84,7 @@ ms.locfileid: "78160393"
 |System.Collections.Immutable|변경 불가능은 컬렉션을 소개하고 컬렉션 형식에 대한 링크를 제공합니다.|  
   
 <a name="BKMK_Reference"></a>
-## <a name="reference"></a>참조  
+## <a name="reference"></a>참고  
  <xref:System.Array?displayProperty=nameWithType>  
  <xref:System.Collections?displayProperty=nameWithType>  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
