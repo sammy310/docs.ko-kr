@@ -5,15 +5,16 @@ helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: 9676ae4053553b84488602627b28790aae22eff6
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 6459e3f0cf0ab72af8027bd6802a0e7aa574aece
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345275"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635791"
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>방법: 사용자 지정 WS-Metadata Exchange 바인딩 구성
-이 항목에서는 사용자 지정 WS-Metadata 교환 바인딩을 구성하는 방법에 대해 설명합니다. WCF(Windows 통신 Foundation)에는 네 개의 시스템 정의 메타데이터 바인딩이 포함되어 있지만 원하는 바인딩을 사용하여 메타데이터를 게시할 수 있습니다. 이 항목에서는 `wsHttpBinding`을 사용하여 메타데이터를 게시하는 방법을 보여 줍니다. 이 바인딩은 메타데이터를 보안 방법으로 노출하는 옵션을 제공합니다. 이 문서의 코드는 [시작하기](../samples/getting-started-sample.md)를 기반으로 합니다.  
+
+이 문서에서는 사용자 지정 WS-메타데이터 교환 바인딩을 구성하는 방법을 설명합니다. WCF(Windows 통신 Foundation)에는 네 개의 시스템 정의 메타데이터 바인딩이 포함되어 있지만 원하는 바인딩을 사용하여 메타데이터를 게시할 수 있습니다. 이 문서에서는 `wsHttpBinding`을 사용하여 메타데이터를 게시하는 방법을 보여 주며 이 문서에서는 이 바인딩은 메타데이터를 보안 방법으로 노출하는 옵션을 제공합니다. 이 문서의 코드는 [시작하기](../samples/getting-started-sample.md)를 기반으로 합니다.  
   
 ### <a name="using-a-configuration-file"></a>구성 파일 사용  
   
@@ -44,7 +45,7 @@ ms.locfileid: "80345275"
               contract="IMetadataExchange" />  
     ```  
   
-4. 메타데이터 교환 엔드포인트가 올바로 작동하고 있는지 확인하려면 클라이언트 구성 파일에 엔드포인트 태그를 추가합니다.  
+4. 메타데이터 교환 끝점이 제대로 작동하는지 확인하려면 클라이언트 구성 파일에 끝점 태그를 추가합니다.  
   
     ```xml  
     <endpoint name="MyMexEndpoint"               address="http://localhost:8000/servicemodelsamples/service/mex"  
@@ -113,7 +114,7 @@ ms.locfileid: "80345275"
     Console.WriteLine("Metadata section: " + section.Dialect.ToString());  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 게시 동작](../samples/metadata-publishing-behavior.md)
 - [메타데이터 검색](../samples/retrieve-metadata.md)
