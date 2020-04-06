@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 11/21/2019
 ms.topic: tutorial
 ms.custom: mvc,mlnet-tooling
-ms.openlocfilehash: e94313277a025d482105a6d78b6608d4df442c43
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6a36989f9453208e436ef8a4db2d4440aa0a1382
+ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79185831"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438185"
 ---
 # <a name="tutorial-classify-the-severity-of-restaurant-health-violations-with-model-builder"></a>자습서: 모델 작성기를 사용하여 식당 위생 위반의 심각도 분류
 
@@ -150,6 +150,6 @@ ms.locfileid: "79185831"
 
 이 자습서에서 언급한 항목에 대한 자세한 내용은 다음 리소스를 참조하세요.
 
-- [모델 작성기 시나리오](../automate-training-with-model-builder.md#scenarios)
+- [모델 작성기 시나리오](../automate-training-with-model-builder.md#scenario)
 - [다중 클래스 분류](../resources/glossary.md#multiclass-classification)
 - [다중 클래스 분류 모델 메트릭](../resources/metrics.md#evaluation-metrics-for-multi-class-classification)

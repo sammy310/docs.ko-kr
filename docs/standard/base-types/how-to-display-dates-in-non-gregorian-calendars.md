@@ -11,12 +11,12 @@ helpviewer_keywords:
 - calendars [.NET Framework], displaying dates
 - displaying date and time data
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
-ms.openlocfilehash: 455996d091f92367667e7077a4524898cd8face6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8d02b74f63ec5b6260679ae4cea04791681ec238
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73138749"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523923"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>방법: 그레고리오력이 아닌 달력의 날짜 표시
 <xref:System.DateTime> 및 <xref:System.DateTimeOffset> 형식은 양력을 기본 달력으로 사용합니다. 즉, 날짜 및 시간 값의 `ToString` 메서드를 호출하면 해당 날짜 및 시간이 다른 달력을 사용하여 생성된 경우에도 해당 날짜 및 시간의 문자열 표현을 양력 달력으로 표시합니다. 이 내용은 두 가지 방법을 사용하여 페르시아력으로 날짜 및 시간 값을 만들지만 <xref:System.DateTime.ToString%2A> 메서드를 호출할 때 해당 날짜 및 시간 값을 여전히 양력으로 표시하는 다음 예제에 설명되어 있습니다. 이 예제에서는 특정 달력의 날짜를 표시하기 위해 자주 사용되지만 잘못된 두 가지 방법을 보여 줍니다.  
@@ -81,8 +81,4 @@ ms.locfileid: "73138749"
   
 - `DisplayDate` - 두 매개 변수 즉, <xref:System.DateTime> 개체가 나타내는 달력에 표시할 <xref:System.DateTimeOffset> 또는 `CalendarUtility` 값 및 서식 지정 규칙을 사용할 문화권이 전달되는 오버로드된 공용 메서드입니다. 날짜의 문자열 표현을 반환할 때의 해당 동작은 대상 달력이 사용할 형식 지정 규칙의 문화권에서 지원되는지 여부에 따라 달라집니다.  
   
- 이 예제에서 <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 값을 만드는 데 사용된 달력과 관계없이 해당 값은 일반적으로 양력 날짜로 표시됩니다. 이는 <xref:System.DateTime> 및 <xref:System.DateTimeOffset> 형식이 달력 정보를 유지하지 않기 때문입니다. 내부적으로 두 값은 0001년 1월 1일 자정 이후에 경과된 틱 수로 표시됩니다. 해당 숫자의 해석은 달력에 따라 달라집니다. 대부분의 문화권에서 기본 달력은 양력입니다.  
-  
-## <a name="see-also"></a>참고 항목
-
-- [서식 지정 작업 수행](../../../docs/standard/base-types/performing-formatting-operations.md)
+ 이 예제에서 <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 값을 만드는 데 사용된 달력과 관계없이 해당 값은 일반적으로 양력 날짜로 표시됩니다. 이는 <xref:System.DateTime> 및 <xref:System.DateTimeOffset> 형식이 달력 정보를 유지하지 않기 때문입니다. 내부적으로 두 값은 0001년 1월 1일 자정 이후에 경과된 틱 수로 표시됩니다. 해당 숫자의 해석은 달력에 따라 달라집니다. 대부분의 문화권에서 기본 달력은 양력입니다.

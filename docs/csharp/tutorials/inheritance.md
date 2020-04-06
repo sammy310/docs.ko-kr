@@ -4,12 +4,12 @@ description: C# 라이브러리 및 애플리케이션에서 상속 사용 방�
 ms.date: 07/05/2018
 ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: b72badb7833e018dfcbf5d2583b17f17c800c382
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78833110db0e4f0382e5c0c6de7c6c8be9a16c8d
+ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156755"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80391151"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 및 .NET의 상속
 
@@ -28,7 +28,7 @@ ms.locfileid: "79156755"
 1. 예제의 코드를 복사한 후 코드 편집기에 붙여 넣습니다.
 1. 명령줄에서 [dotnet restore](../../core/tools/dotnet-restore.md) 명령을 입력하여 프로젝트의 종속성을 로드하거나 복원합니다.
 
-  [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+   [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 1. [dotnet run](../../core/tools/dotnet-run.md) 명령을 입력하여 예제를 컴파일하고 실행합니다.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET, parallel programming in
 - Parallel Programming
 ms.assetid: b8f99f43-9104-45fd-9bff-385a20488a23
-ms.openlocfilehash: 487fe48462803ac19318f450f2576989f196a9be
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6785041730a048fb08677dbd054f727e351185d4
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139962"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588589"
 ---
 # <a name="task-parallel-library-tpl"></a>TPL(작업 병렬 라이브러리)
 TPL(작업 병렬 라이브러리)은 <xref:System.Threading?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks?displayProperty=nameWithType> 네임스페이스에 포함된 공용 형식 및 API의 집합입니다. TPL의 목적은 애플리케이션에 병렬 처리 및 동시성 기능을 추가하는 과정을 단순화하여 개발자가 더 생산적으로 작업할 수 있도록 하는 것입니다. TPL은 사용할 수 있는 모든 프로세서를 가장 효율적으로 사용하도록 동시성 수준을 동적으로 조정합니다. 또한 TPL은 작업의 분할, <xref:System.Threading.ThreadPool>에 대한 스레드 예약, 취소 지원, 상태 관리 및 기타 하위 수준 세부 정보를 처리합니다. TPL을 사용하면 프로그램의 설계 목적인 작업을 처리하는 데 집중하면서 코드의 성능을 최대화할 수 있습니다.  
@@ -28,7 +28,7 @@ TPL(작업 병렬 라이브러리)은 <xref:System.Threading?displayProperty=nam
 |[데이터 흐름](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)|서로 통신해야 하는 여러 작업을 처리하거나 데이터를 사용할 수 있도록 처리하기 위해 TPL 데이터 흐름 라이브러리에서 데이터 흐름 구성 요소를 사용하는 방법을 설명합니다.|  
 |[TPL과 기타 비동기 패턴 사용](../../../docs/standard/parallel-programming/using-tpl-with-other-asynchronous-patterns.md)|.NET의 기타 비동기 패턴과 함께 TPL을 사용하는 방법을 설명합니다.|  
 |[데이터 및 작업 병렬 처리에서 발생할 수 있는 문제](../../../docs/standard/parallel-programming/potential-pitfalls-in-data-and-task-parallelism.md)|몇 가지 일반적인 실수 및 이를 방지하는 방법을 설명합니다.|  
-|[PLINQ(병렬 LINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)|LINQ 쿼리를 사용하여 데이터 병렬 처리를 구현하는 방법을 설명합니다.|  
+|[PLINQ(병렬 LINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)|LINQ 쿼리를 사용하여 데이터 병렬 처리를 구현하는 방법을 설명합니다.|  
 |[병렬 프로그래밍](../../../docs/standard/parallel-programming/index.md)|.NET 병렬 프로그래밍의 최상위 노드입니다.|  
   
 ## <a name="see-also"></a>참고 항목

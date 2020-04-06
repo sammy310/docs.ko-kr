@@ -2,12 +2,12 @@
 title: docker-compose.yml을 사용하여 다중 컨테이너 애플리케이션 정의
 description: docker-compose.yml을 사용하여 다중 컨테이너 애플리케이션에서 마이크로 서비스 컴퍼지션을 지정하는 방법입니다.
 ms.date: 01/30/2020
-ms.openlocfilehash: 86d6feda343df7f4b72374f93fc45b3246780cdf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9143801fbbffbdc5b795a232b3333edf71f05c7c
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502460"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523646"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml을 사용하여 다중 컨테이너 애플리케이션 정의
 
@@ -156,7 +156,7 @@ Docker Compose를 사용하여 다음 명령과 같이 명령 프롬프트 또�
 ```console
 docker-compose -f docker-compose.yml -f docker-compose-test.override.yml up -d
 ./run_unit_tests
-docker-compose -f docker-compose.yml -f docker-compose.test.override.yml down
+docker-compose -f docker-compose.yml -f docker-compose-test.override.yml down
 ```
 
 #### <a name="production-deployments"></a>프로덕션 배포

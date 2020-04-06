@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to handle exceptions
 ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
-ms.openlocfilehash: 3645f5dc470ef53710aa7f4c78c60431fb27ecfa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5ccddfb01d6b173900dfffc465292c7812626ddc
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73123100"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80587982"
 ---
 # <a name="how-to-handle-exceptions-in-a-plinq-query"></a>방법: PLINQ 쿼리의 예외 처리
 
@@ -53,4 +53,4 @@ PLINQ가 순차적 실행으로 대체되고 예외가 발생하는 일부 경�
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Linq.ParallelEnumerable>
-- [PLINQ(병렬 LINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [PLINQ(병렬 LINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)

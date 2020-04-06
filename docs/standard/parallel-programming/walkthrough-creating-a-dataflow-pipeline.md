@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, creating dataflow pipeline
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
-ms.openlocfilehash: 284be7789b6411055a6421fd07cc1b0605f6ea0c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 339365381b1fa2c777cead3c75bfe783f7af800e
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139865"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588280"
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>연습: 데이터 흐름 파이프라인 만들기
 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> 메서드를 사용하여 소스 블록에서 메시지를 받을 수 있지만 메시지 블록을 연결하여 *데이터 흐름 파이프라인*을 만들 수도 있습니다. 데이터 흐름 파이프라인은 일련의 구성 요소 또는 *데이터 흐름 블록*으로, 각 구성 요소는 보다 큰 목표를 위해 특정 작업을 수행합니다. 데이터 흐름 파이프라인의 모든 데이터 흐름 블록은 다른 데이터 흐름 블록에서 메시지를 받으면 작업을 수행합니다. 이는 자동차 제조 조립 라인에 비유될 수 있습니다. 각 자동차가 조립 라인을 통과할 때 한 작업장에서는 프레임을 조립하고 다음 작업장에서는 엔진을 장착하는 식입니다. 조립 라인에서는 여러 대의 자동차를 동시에 조립할 수 있기 때문에 한 번에 자동차 전체를 조립하는 경우보다 처리량이 향상됩니다.
@@ -104,7 +104,7 @@ ms.locfileid: "73139865"
 ## <a name="next-steps"></a>다음 단계  
  이 예제에서는 처리할 URL을 데이터 흐름 파이프라인을 통해 보냅니다. 파이프라인을 통해 둘 이상의 입력 값을 보내는 경우, 부품들이 자동차 공장에서 이동할 수 있는 방법과 유사한 형태의 병렬 처리를 애플리케이션에 적용할 수 있습니다. 파이프라인의 첫 번째 구성원이 결과를 두 번째 구성원에 보내는 경우, 두 번째 구성원이 첫 번째 결과를 처리할 때 첫 번째 구성원은 다른 항목을 병렬로 처리할 수 있습니다.  
   
- 데이터 흐름 파이프라인을 사용하여 실현되는 병렬 처리는 일반적으로 더 적은 수의 보다 큰 작업으로 구성되어 있기 때문에 *정교하지 않은 병렬 처리*라고 합니다. 데이터 흐름 파이프라인에서 보다 작고 짧게 실행되는 작업의 *세부적인 병렬 처리*를 더 많이 사용할 수도 있습니다. 이 예제에서 파이프라인의 `findReversedWords` 구성원은 [PLINQ](parallel-linq-plinq.md)를 사용하여 작업 목록의 여러 항목을 병렬로 처리합니다. 정교하지 않은 파이프라인에서 세분화된 병렬 처리를 사용하면 전반적인 처리량이 향상될 수 있습니다.  
+ 데이터 흐름 파이프라인을 사용하여 실현되는 병렬 처리는 일반적으로 더 적은 수의 보다 큰 작업으로 구성되어 있기 때문에 *정교하지 않은 병렬 처리*라고 합니다. 데이터 흐름 파이프라인에서 보다 작고 짧게 실행되는 작업의 *세부적인 병렬 처리*를 더 많이 사용할 수도 있습니다. 이 예제에서 파이프라인의 `findReversedWords` 구성원은 [PLINQ](introduction-to-plinq.md)를 사용하여 작업 목록의 여러 항목을 병렬로 처리합니다. 정교하지 않은 파이프라인에서 세분화된 병렬 처리를 사용하면 전반적인 처리량이 향상될 수 있습니다.  
   
  또한 소스 데이터 흐름 블록을 여러 대상 블록에 연결하여 *데이터 흐름 네트워크*를 만들 수도 있습니다. <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> 메서드의 오버로드된 버전은 대상 블록이 값을 기준으로 각 메시지를 수락하는지 여부를 정의하는 <xref:System.Predicate%601> 개체를 사용합니다. 소스 역할을 하는 대부분의 데이터 흐름 블록 형식은 블록 중 하나가 메시지를 수락할 때까지 연결된 모든 대상 블록에 연결순으로 메시지를 제공합니다. 이 필터링 메커니즘을 사용하여 특정 데이터를 한 경로로 보내고 다른 데이터는 또 다른 경로로 보내는 연결된 데이터 흐름 블록의 시스템을 만들 수 있습니다. 필터링을 사용하여 데이터 흐름 네트워크를 만드는 예제는 [연습: Windows Forms 애플리케이션에서 데이터 흐름 사용](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)을 참조하세요.  
   

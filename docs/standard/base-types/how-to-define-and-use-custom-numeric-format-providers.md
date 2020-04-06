@@ -15,12 +15,12 @@ helpviewer_keywords:
 - format providers [.NET Framework]
 - custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
-ms.openlocfilehash: 151bf40cf042517b7441b89688122373259dc7dc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5345c90d966ea9ce0a0bbf6c884b8d8abc8b5fa7
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140069"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523929"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>방법: 사용자 지정 숫자 형식 공급 기업 정의 및 사용
 .NET Framework에서는 숫자 값의 문자열 표현을 광범위하게 제어할 수 있습니다. 숫자 값의 형식을 사용자 지정하기 위한 다음과 같은 기능을 지원합니다.  
@@ -84,8 +84,4 @@ ms.locfileid: "73140069"
  [!code-csharp[System.ICustomFormatter.Format#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.ICustomFormatter.Format/cs/format.cs#1)]
  [!code-vb[System.ICustomFormatter.Format#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ICustomFormatter.Format/vb/Format.vb#1)]  
   
- 이 예제의 경우 <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType>을 구현하는 메서드는 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 메서드에 대한 콜백 메서드 역할을 하기 위한 것입니다. 따라서 이 메서드는 `formatProvider` 매개 변수를 검사하여 현재 `TelephoneFormatter` 개체에 대한 참조가 있는지 여부를 확인합니다. 그러나 코드에서 메서드를 직접 호출할 수도 있습니다. 이 경우 `formatProvider` 매개 변수를 사용하여 문화권별 서식 지정 정보를 제공하는 <xref:System.Globalization.CultureInfo> 또는 <xref:System.Globalization.NumberFormatInfo> 개체를 제공할 수 있습니다.  
-  
-## <a name="see-also"></a>참조
-
-- [서식 지정 작업 수행](../../../docs/standard/base-types/performing-formatting-operations.md)
+ 이 예제의 경우 <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType>을 구현하는 메서드는 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 메서드에 대한 콜백 메서드 역할을 하기 위한 것입니다. 따라서 이 메서드는 `formatProvider` 매개 변수를 검사하여 현재 `TelephoneFormatter` 개체에 대한 참조가 있는지 여부를 확인합니다. 그러나 코드에서 메서드를 직접 호출할 수도 있습니다. 이 경우 `formatProvider` 매개 변수를 사용하여 문화권별 서식 지정 정보를 제공하는 <xref:System.Globalization.CultureInfo> 또는 <xref:System.Globalization.NumberFormatInfo> 개체를 제공할 수 있습니다.

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - threading [.NET]
 - threading [.NET], multiple threads
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
-ms.openlocfilehash: ad36789579b95e0129e402765194b9f5e45a4cc1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e29c131f8459179d0641ac9a0cb8234fbba0e7d0
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73127511"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588439"
 ---
 # <a name="threads-and-threading"></a>스레드 및 스레딩
 
@@ -37,7 +37,7 @@ ms.locfileid: "73127511"
 
 ## <a name="how-to-use-multithreading-in-net"></a>.NET에서 다중 스레드를 사용하는 방법
 
-.NET Framework 4부터 다중 스레딩을 사용하는 권장 방법은 [TPL(작업 병렬 라이브러리)](../parallel-programming/task-parallel-library-tpl.md) 및 [PLINQ(병렬 LINQ)](../parallel-programming/parallel-linq-plinq.md)를 사용하는 것입니다. 자세한 내용은 [병렬 프로그래밍](../parallel-programming/index.md)을 참조하세요.
+.NET Framework 4부터 다중 스레딩을 사용하는 권장 방법은 [TPL(작업 병렬 라이브러리)](../parallel-programming/task-parallel-library-tpl.md) 및 [PLINQ(병렬 LINQ)](../parallel-programming/introduction-to-plinq.md)를 사용하는 것입니다. 자세한 내용은 [병렬 프로그래밍](../parallel-programming/index.md)을 참조하세요.
 
 TPL 및 PLINQ는 <xref:System.Threading.ThreadPool> 스레드를 사용합니다. <xref:System.Threading.ThreadPool?displayProperty=nameWithType> 클래스는 작업자 스레드 풀을 포함한 .NET 애플리케이션을 제공합니다. 스레드 풀 스레드를 사용할 수도 있습니다. 자세한 내용은 [관리 스레드 풀](the-managed-thread-pool.md)을 참조하세요.
 
