@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: ccb987944af29c170b8d960d7112a13078b67dd1
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
+ms.openlocfilehash: 7e879a44bd8056ac8753c1e86464fe14fd6b9e50
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80291545"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523589"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0의 새로운 기능
 
@@ -108,7 +108,7 @@ appHost는 다음과 같이 프로젝트 수준에서 구성하거나 `-p:UseApp
 dotnet publish -r win10-x64 -p:PublishSingleFile=true
 ```
 
-단일 파일 게시에 대한 자세한 내용은 [단일 파일 번들러 설계 문서](https://github.com/dotnet/designs/blob/master/accepted/2020/single-file/design_3_0.md)를 참조하세요.
+단일 파일 게시에 대한 자세한 내용은 [단일 파일 번들러 설계 문서](https://github.com/dotnet/designs/blob/master/accepted/2020/single-file/design.md)를 참조하세요.
 
 ### <a name="assembly-linking"></a>어셈블리 연결
 
