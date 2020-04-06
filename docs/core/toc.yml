@@ -290,6 +290,8 @@
       href: deploying/creating-nuget-packages.md
     - name: 자체 포함된 배포 런타임 롤포워드
       href: deploying/runtime-patch-selection.md
+    - name: 자체 포함 배포 및 실행 파일 트리밍
+      href: deploying/trim-self-contained.md
     - name: 런타임 패키지 저장소
       href: deploying/runtime-store.md
 - name: Docker

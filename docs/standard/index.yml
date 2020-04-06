@@ -1,0 +1,159 @@
+### YamlMime:Landing
+title: .NET 문서
+summary: 다양한 유형의 애플리케이션을 빌드하기 위한 오픈 소스 개발자 플랫폼인 .NET에 대해 알아보세요.
+metadata:
+  title: .NET 문서
+  description: 다양한 유형의 애플리케이션을 빌드하기 위한 오픈 소스 개발자 플랫폼인 .NET에 대해 알아보세요.
+  ms.topic: landing-page
+  ms.date: 03/27/2020
+  ms.openlocfilehash: 5984996b59cfb89e5f165bf966722093c0992eea
+  ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 04/03/2020
+  ms.locfileid: "80636137"
+landingContent:
+- title: .NET에 대해 자세히 알아보기
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: .NET 둘러보기
+      url: tour.md
+    - text: .NET이란?
+      url: https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet
+  - linkListType: concept
+    links:
+    - text: .NET Standard
+      url: net-standard.md
+    - text: .NET Core
+      url: ../core/about.md
+    - text: 대상 프레임워크
+      url: frameworks.md
+    - text: CLR(공용 언어 런타임)
+      url: clr.md
+    - text: 서버 앱에 대해 .NET Core와 .NET Framework 중에 선택
+      url: choosing-core-framework-server.md
+  - linkListType: whats-new
+    links:
+    - text: .NET Standard의 새로운 기능
+      url: whats-new/whats-new-in-dotnet-standard.md
+    - text: .NET Core의 새로운 기능
+      url: ../core/whats-new/dotnet-core-3-1.md
+- title: 데이터 직렬화
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: JSON 직렬화 및 역직렬화
+      url: serialization/system-text-json-overview.md
+  - linkListType: how-to-guide
+    links:
+    - text: C#을 사용하여 JSON 직렬화 및 역직렬화
+      url: serialization/system-text-json-how-to.md
+    - text: Newtonsoft.json에서 System.Text.Json으로 마이그레이션
+      url: serialization/system-text-json-migrate-from-newtonsoft-how-to.md
+    - text: JSON serialization용 사용자 지정 변환기 작성
+      url: serialization/system-text-json-converters-how-to.md
+  - linkListType: sample
+    links:
+    - text: XML serialization 예제
+      url: serialization/examples-of-xml-serialization.md
+- title: 날짜, 숫자 및 문자열 서식 지정 및 변환
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 숫자 형식 문자열
+      url: base-types/standard-numeric-format-strings.md
+    - text: 날짜 및 시간 형식 문자열
+      url: base-types/standard-date-and-time-format-strings.md
+    - text: 복합 형식 지정
+      url: base-types/composite-formatting.md
+    - text: 표준 시간대 간 시간 변환
+      url: datetime/converting-between-time-zones.md
+    - text: 문자 트리밍 및 제거
+      url: base-types/trimming.md
+    - text: .NET에서의 정규식
+      url: base-types/regular-expressions.md
+  - linkListType: how-to-guide
+    links:
+    - text: 문자열을 DateTime으로 변환
+      url: base-types/parsing-datetime.md
+    - text: 숫자 앞에 0으로 채우기
+      url: base-types/how-to-pad-a-number-with-leading-zeros.md
+    - text: 날짜 및 시간 값의 밀리초 표시
+      url: base-types/how-to-display-milliseconds-in-date-and-time-values.md
+  - linkListType: reference
+    links:
+    - text: 정규식 언어
+      url: base-types/regular-expression-language-quick-reference.md
+- title: 클래스 및 라이브러리 디자인
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 디자인 지침
+      url: design-guidelines/index.md
+  - linkListType: concept
+    links:
+    - text: 명명 규칙
+      url: design-guidelines/general-naming-conventions.md
+    - text: 대/소문자 표기법
+      url: design-guidelines/capitalization-conventions.md
+- title: 이벤트 및 예외 사용
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 예외에 대한 모범 사례
+      url: exceptions/best-practices-for-exceptions.md
+    - text: 이벤트 처리 및 발생
+      url: events/index.md
+  - linkListType: how-to-guide
+    links:
+    - text: Try-Catch 블록을 사용하여 예외 catch
+      url: exceptions/how-to-use-the-try-catch-block-to-catch-exceptions.md
+    - text: 이벤트 발생 및 사용
+      url: events/how-to-raise-and-consume-events.md
+- title: 파일 및 스트림 I/O
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 파일 및 스트림 I/O
+      url: io/index.md
+    - text: Windows의 파일 경로 형식
+      url: io/file-path-formats.md
+  - linkListType: how-to-guide
+    links:
+    - text: 파일에 텍스트 쓰기
+      url: io/how-to-write-text-to-a-file.md
+    - text: 파일에서 텍스트 읽기
+      url: io/how-to-read-text-from-a-file.md
+    - text: 파일 압축 및 추출
+      url: io/how-to-compress-and-extract-files.md
+    - text: 열기 및 로그 파일에 추가
+      url: io/how-to-open-and-append-to-a-log-file.md
+- title: 메모리 사용 관리
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 가비지 수집 기본 사항
+      url: garbage-collection/fundamentals.md
+    - text: Dispose 메서드 구현
+      url: garbage-collection/implementing-dispose.md
+- title: 병렬 프로그래밍에 대한 자세한 정보
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: .NET으로 병렬 프로그래밍
+      url: parallel-programming/index.md
+  - linkListType: concept
+    links:
+    - text: TPL(작업 병렬 라이브러리)
+      url: parallel-programming/task-parallel-library-tpl.md
+    - text: 작업 기반 비동기 프로그래밍
+      url: parallel-programming/task-based-asynchronous-programming.md
+    - text: 작업 취소
+      url: parallel-programming/task-cancellation.md
+  - linkListType: how-to-guide
+    links:
+    - text: Parallel.ForEach를 사용하여 단순 병렬 프로그램 작성
+      url: parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md
+    - text: 작업에서 값 반환
+      url: parallel-programming/how-to-return-a-value-from-a-task.md
