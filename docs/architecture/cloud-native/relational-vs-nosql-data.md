@@ -1,16 +1,16 @@
 ---
-title: 관계형 대 NoSQL 데이터
+title: 관계형 마이닝 모델과 NoSQL 데이터 비교
 description: 클라우드 네이티브 애플리케이션에서 관계형 및 NoSQL 데이터에 대해 알아보기
 author: robvet
 ms.date: 01/22/2020
-ms.openlocfilehash: 04693e30ba3848f1e51f1c69a75be5f18ead4cf1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3fb3dcc3a87e278c05f3e15d261245f4d61453d1
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79141421"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805800"
 ---
-# <a name="relational-vs-nosql-data"></a>관계형 대 NoSQL 데이터
+# <a name="relational-vs-nosql-data"></a>관계형 마이닝 모델과 NoSQL 데이터 비교
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -284,5 +284,5 @@ NewSQL 데이터베이스 뒤에 있는 메커니즘에 대한 자세한 내용�
 이 서비스는 작거나 큰 마이그레이션을 실행하는 데 필요한 변경 사항을 안내하는 권장 사항을 제공합니다.
 
 >[!div class="step-by-step"]
->[이전](Database-per-microservice.md)
+>[이전](database-per-microservice.md)
 >[다음](azure-caching.md)

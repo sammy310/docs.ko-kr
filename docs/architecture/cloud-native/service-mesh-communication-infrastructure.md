@@ -3,12 +3,12 @@ title: 서비스 메시 통신 인프라
 description: 서비스 메시 기술이 클라우드 네이티브 마이크로 서비스 통신을 간소화하는 방법에 대해 알아봅니다.
 author: robvet
 ms.date: 03/03/2020
-ms.openlocfilehash: 6b177ef33b804ec35f3acb919539a97683e5a487
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 8bb57e990dbf1baf8c246fe4aacfbb2904a251e6
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523514"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805758"
 ---
 # <a name="service-mesh-communication-infrastructure"></a>서비스 메시 통신 인프라
 
@@ -74,4 +74,4 @@ ms.locfileid: "80523514"
 
 >[!div class="step-by-step"]
 >[이전](grpc.md)
->[다음](Database-per-microservice.md)
+>[다음](database-per-microservice.md)
