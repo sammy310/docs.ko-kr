@@ -44,10 +44,8 @@
         - name: 서비스 메시 통신 인프라
           href: service-mesh-communication-infrastructure.md
     - name: 분산 데이터
-      href: null
+      href: database-per-microservice.md
       items:
-        - name: 마이크로 서비스당 데이터베이스
-          href: database-per-microservice.md
         - name: 관계형 마이닝 모델과 NoSQL 데이터 비교
           href: relational-vs-nosql-data.md
         - name: 클라우드 네이티브 애플리케이션에서 캐싱
