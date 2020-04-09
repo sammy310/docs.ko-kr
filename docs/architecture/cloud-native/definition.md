@@ -3,18 +3,18 @@ title: 클라우드 네이티브 정의
 description: 클라우드 네이티브 시스템의 기반을 제공하는 기본 기둥에 대해 알아보십시오.
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: 27191a67b2964ac2e1636a4d7dc55d5314b78439
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 756a2565bd77fcef19a5f15579987836ff0e75a4
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401738"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989092"
 ---
 # <a name="defining-cloud-native"></a>클라우드 네이티브 정의
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-현재 하고 있는 작업을 중지하고 동료 10명에게 문자를 보입니다. 그들에게 "클라우드 네이티브"라는 용어를 정의하도록 요청합니다. 좋은 기회는 당신은 여덟 가지 답변을 얻을 수 있습니다. 흥미롭게도, 지금부터 6 개월, 클라우드 네이티브 기술과 관행이 진화로, 그래서 그들의 정의 것입니다.
+현재 하고 있는 작업을 중지하고 동료 10명에게 문자를 보입니다. 그들에게 "클라우드 네이티브"라는 용어를 정의하도록 요청합니다. 좋은 기회는 당신은 여덟 가지 답변을 얻을 수 있습니다.
 
 클라우드 네이티브는 중요한 비즈니스 시스템 구축에 대한 사고 방식을 바꾸는 것입니다.
 
@@ -125,7 +125,7 @@ Azure 클라우드 플랫폼은 자동 크기 조정, 자체 복구 및 모니�
 
 분산 데이터는 5장, *클라우드 네이티브 데이터 패턴에*대해 자세히 다룹니다.
 
-*Id*
+*ID*
 
 서비스에서 액세스하는 사람과 권한이 있는 권한을 어떻게 식별합니까?
 
