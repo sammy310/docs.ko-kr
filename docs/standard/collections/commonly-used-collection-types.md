@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Collections classes
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
-ms.openlocfilehash: 1004a2f9a0594d9150d147dec1e16b56205e0d13
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 04ad3c8d8ea076e881e27e295d87572a51cbc128
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711404"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635974"
 ---
 # <a name="commonly-used-collection-types"></a>일반적으로 사용되는 컬렉션 형식
 컬렉션 형식은 해시 테이블, 큐, 스택, 모음, 사전 및 목록과 같은 데이터 컬렉션의 일반적인 변형입니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "75711404"
   
  컬렉션은 요소 저장/정렬 방식과 검색/비교 수행 방식에 따라 달라질 수 있습니다. <xref:System.Collections.Queue> 클래스와 <xref:System.Collections.Generic.Queue%601> 제네릭 클래스는 FIFO(선입 선출) 목록을 제공하는 반면 <xref:System.Collections.Stack> class and the <xref:System.Collections.Generic.Stack%601> 제네릭 클래스는 LIFO(후입 선출) 목록을 제공합니다. <xref:System.Collections.SortedList> 클래스와 <xref:System.Collections.Generic.SortedList%602> 제네릭 클래스는 <xref:System.Collections.Hashtable> 클래스 및 <xref:System.Collections.Generic.Dictionary%602> 제네릭 클래스의 정렬된 버전을 제공합니다. <xref:System.Collections.Hashtable> 또는 <xref:System.Collections.Generic.Dictionary%602>의 요소는 요소의 키를 사용해야 액세스할 수 있지만 <xref:System.Collections.SortedList> 또는 <xref:System.Collections.ObjectModel.KeyedCollection%602>의 요소는 요소의 키나 인덱스를 사용하여 액세스할 수 있습니다. 모든 컬렉션의 인덱스는 <xref:System.Array>(0부터 시작하지 않는 배열을 허용함)를 제외하면 0부터 시작됩니다.  
   
- LINQ to Objects 기능을 사용하면 개체 형식이 <xref:System.Collections.IEnumerable> 또는 <xref:System.Collections.Generic.IEnumerable%601>를 구현하는 경우 LINQ 쿼리를 통해 메모리 내 개체에 액세스할 수 있습니다. LINQ 쿼리는 데이터 액세스를 위한 일반 패턴을 제공하고, 표준 `foreach` 루프에 비해 간결하고 쉽게 읽을 수 있으며, 필터링, 순서 지정 및 그룹화 기능을 제공합니다. 또한 LINQ 쿼리를 통해 성능을 향상시킬 수도 있습니다. 자세한 내용은 [LINQ to Objects(C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects(Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) 및 [병렬 LINQ(PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)를 참조하세요.  
+ LINQ to Objects 기능을 사용하면 개체 형식이 <xref:System.Collections.IEnumerable> 또는 <xref:System.Collections.Generic.IEnumerable%601>를 구현하는 경우 LINQ 쿼리를 통해 메모리 내 개체에 액세스할 수 있습니다. LINQ 쿼리는 데이터 액세스를 위한 일반 패턴을 제공하고, 표준 `foreach` 루프에 비해 간결하고 쉽게 읽을 수 있으며, 필터링, 순서 지정 및 그룹화 기능을 제공합니다. 또한 LINQ 쿼리를 통해 성능을 향상시킬 수도 있습니다. 자세한 내용은 [LINQ to Objects(C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects(Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) 및 [병렬 LINQ(PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)를 참조하세요.  
   
 ## <a name="related-topics"></a>관련 항목  
   
@@ -39,7 +39,7 @@ ms.locfileid: "75711404"
 |[Sorted 컬렉션 형식](../../../docs/standard/collections/sorted-collection-types.md)|목록 및 집합용 정렬 기능을 제공하는 클래스에 대해 설명합니다.|  
 |[제네릭](../../../docs/standard/generics/index.md)|.NET Framework에서 제공하는 제네릭 컬렉션, 대리자 및 인터페이스를 비롯한 제네릭 기능을 설명합니다. C#, Visual Basic 및 Visual C++의 기능 설명서 링크와 지원 기술(예: 리플렉션) 링크를 제공합니다.|  
   
-## <a name="reference"></a>참조  
+## <a name="reference"></a>참고  
  <xref:System.Collections?displayProperty=nameWithType>  
   
  <xref:System.Collections.Generic?displayProperty=nameWithType>  

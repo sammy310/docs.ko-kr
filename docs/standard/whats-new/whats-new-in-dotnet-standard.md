@@ -4,18 +4,18 @@ description: 이 문서에는 .NET Standard의 각 새 버전에 있는 새로�
 ms.custom: updateeachrelease
 ms.date: 04/12/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: a90df0360211c3b02f4f2d8697890180099c5807
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 28d6a3546e08bbc3a7d4a26f08ba9cc5e16a901b
+ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76921065"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438198"
 ---
-# <a name="whats-new-in-the-net-standard"></a>.NET Standard의 새로운 기능
+# <a name="whats-new-in-net-standard"></a>.NET Standard의 새로운 기능
 
-.NET Standard는 해당 버전의 표준에 부합하는 .NET 구현체에서 사용할 수 있어야 하는 버전이 지정된 API 집합을 정의합니다. .NET Standard는 라이브러리 개발자에서 대상으로 지정됩니다. .NET Standard 버전을 대상으로 하는 라이브러리는 Standard의 해당 버전을 지원하는 모든 .NET Framework, .NET Core 또는 Xamarin 구현체에서 사용할 수 있습니다.
+.NET Standard는 해당 버전의 표준에 부합하는 .NET 구현체에서 사용할 수 있어야 하는 버전이 지정된 API 세트를 정의합니다. .NET Standard는 라이브러리 개발자에서 대상으로 지정됩니다. .NET Standard 버전을 대상으로 하는 라이브러리는 Standard의 해당 버전을 지원하는 모든 .NET Framework, .NET Core 또는 Xamarin 구현체에서 사용할 수 있습니다.
 
-.NET Standard의 최신 버전은 2.0입니다. 이 버전은 .NET Core 워크로드가 설치된 Visual Studio 2017 버전 15.3과 .NET Core 2.0 SDK에 포함되어 있습니다.
+.NET Standard는 .NET Core 워크로드를 선택하는 경우 Visual Studio뿐만 아니라 .NET Core SDK에도 포함되어 있습니다.
 
 ## <a name="supported-net-implementations"></a>지원되는 .NET 구현체
 
@@ -29,13 +29,13 @@ ms.locfileid: "76921065"
 - Xamarin.Android 8.0 이상
 - 유니버설 Windows 플랫폼 10.0.16299 이상
 
-## <a name="whats-new-in-the-net-standard-20"></a>.NET Standard 2.0의 새로운 기능
+## <a name="whats-new-in-net-standard-20"></a>.NET Standard 2.0의 새로운 기능
 
 .NET Standard 2.0에는 다음과 같은 새로운 기능이 포함됩니다.
 
 ### <a name="a-vastly-expanded-set-of-apis"></a>매우 폭넓은 API 집합
 
-버전 1.6에는 비교적 적은 .NET Standard API가 포함되었습니다. 여기에는 .NET Framework 또는 Xamarin에서 일반적으로 사용된 많은 API가 제외되었습니다. 이로 인해 개발이 복잡해집니다. 개발자들이 여러 .NET 구현을 대상으로 하는 애플리케이션과 라이브러리를 개발할 때 친숙한 API에 대한 적합한 대체 API를 찾아야 하기 때문입니다. .NET Standard 2.0은 이전 Standard 버전인 .NET Standard 1.6에서 제공된 것보다 20,000개 더 많은 API를 추가하여 이 제약 사항을 해결했습니다. .NET Standard 2.0에 추가된 API의 목록은 [.NET Standard 2.0 및 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md)을 참조하세요.
+버전 1.6에는 비교적 적은 .NET Standard API가 포함되었습니다. 여기에는 .NET Framework 또는 Xamarin에서 일반적으로 사용된 많은 API가 제외되었습니다. 이로 인해 개발이 복잡해집니다. 개발자들이 여러 .NET 구현을 대상으로 하는 애플리케이션과 라이브러리를 개발할 때 친숙한 API에 대한 적합한 대체 API를 찾아야 하기 때문입니다. .NET Standard 2.0은 이전 Standard 버전인 .NET Standard 1.6에서 제공된 것보다 20,000개 더 많은 API를 추가하여 이 제약 사항을 해결합니다. .NET Standard 2.0에 추가된 API의 목록은 [.NET Standard 2.0 및 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md)을 참조하세요.
 
 .NET Standard 2.0에서 <xref:System> 네임스페이스에 대해 추가된 기능의 일부는 다음과 같습니다.
 
@@ -55,11 +55,11 @@ ms.locfileid: "76921065"
 
 압도적으로 많은 라이브러리는 .NET Standard가 아닌 .NET Framework를 대상으로 합니다. 그러나 이러한 라이브러리에서 대부분의 호출은 .NET Standard 2.0에 포함된 API를 대상으로 합니다. .NET Standard 2.0부터는 [호환성 shim](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-2.0/README.md#assembly-unification)을 사용하여 .NET Standard 라이브러리에서 .NET Framework 라이브러리에 액세스할 수 있습니다. 이 호환성 레이어는 개발자에게 투명하며, .NET Framework 라이브러리를 이용하기 위해 아무것도 할 필요가 없습니다.
 
-한 가지 필요한 사항은 .NET Framework 클래스 라이브러리에서 호출하는 API가 .NET Standard 2.0에 포함되어야 한다는 것입니다.
+한 가지 요구 사항은 .NET Framework 클래스 라이브러리에서 호출하는 API가 .NET Standard 2.0에 포함되어야 한다는 것입니다.
 
 ### <a name="support-for-visual-basic"></a>Visual Basic에 대한 지원
 
-이제 Visual Basic에서 .NET Standard 라이브러리를 개발할 수 있습니다. .NET Core 워크로드가 설치된 Visual Studio 2017 버전 15.3 이상을 사용하는 Visual Basic 개발자의 경우 Visual Studio에 .NET Standard 클래스 라이브러리 템플릿이 포함되어 있습니다. 다른 개발 도구와 환경을 사용하는 Visual Basic 개발자의 경우 [dotnet new](../../core/tools/dotnet-new.md) 명령을 사용하여 .NET Standard 라이브러리 프로젝트를 만들 수 있습니다. 자세한 내용은 [.NET Standard 라이브러리에 대한 도구 지원](#tooling-support-for-net-standard-libraries)을 참조하세요.
+이제 Visual Basic에서 .NET Standard 라이브러리를 개발할 수 있습니다. .NET Core 워크로드가 설치된 Visual Studio 2019 및 Visual Studio 2017 버전 15.3 이상에는 .NET Standard 클래스 라이브러리 템플릿이 포함되어 있습니다. 다른 개발 도구와 환경을 사용하는 Visual Basic 개발자의 경우 [dotnet new](../../core/tools/dotnet-new.md) 명령을 사용하여 .NET Standard 라이브러리 프로젝트를 만들 수 있습니다. 자세한 내용은 [.NET Standard 라이브러리에 대한 도구 지원](#tooling-support-for-net-standard-libraries)을 참조하세요.
 
 ### <a name="tooling-support-for-net-standard-libraries"></a>.NET Standard 라이브러리의 도구 지원
 
@@ -91,7 +91,7 @@ dotnet new classlib -lang vb
 
 ---
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET Standard](../net-standard.md)
 - [.NET Standard 소개](https://devblogs.microsoft.com/dotnet/introducing-net-standard/)

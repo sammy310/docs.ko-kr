@@ -1,16 +1,16 @@
 ---
 title: 모델 학습 및 평가
 description: ML.NET을 사용한 기계 학습 모델 빌드, 메트릭 수집 및 성능 측정 방법을 알아봅니다. 기계 학습 모델은 새 데이터를 사용하여 예측을 수행하기 위해 학습 데이터에서 패턴을 식별합니다.
-ms.date: 08/29/2019
+ms.date: 03/31/2020
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 0e0f43225b9bf243c31b3095817bdcbdb3123012
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 51499f2c0ece615a99740bd9b27f99d4b5ed1d01
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73976766"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523852"
 ---
 # <a name="train-and-evaluate-a-model"></a>모델 학습 및 평가
 
@@ -82,7 +82,7 @@ HousingData[] housingData = new HousingData[]
 };
 ```
 
-[`TrainTestSplit`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit*) 메서드를 사용하여 데이터를 학습 및 테스트 집합으로 분할합니다. 그 결과는 학습 집합용 하나와 테스트 집합용 하나 등, 두 [`TrainTestData`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData) 멤버를 갖는 [`IDataView`](xref:Microsoft.ML.IDataView) 개체가 됩니다. 데이터 분할 백분율은 `testFraction` 매개 변수로 결정됩니다. 아래 코드 조각은 원래 데이터의 20%를 테스트 집합용으로 보유합니다.
+[`TrainTestSplit`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit%2A) 메서드를 사용하여 데이터를 학습 및 테스트 집합으로 분할합니다. 그 결과는 학습 집합용 하나와 테스트 집합용 하나 등, 두 [`IDataView`](xref:Microsoft.ML.IDataView) 멤버를 갖는 [`TrainTestData`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData) 개체가 됩니다. 데이터 분할 백분율은 `testFraction` 매개 변수로 결정됩니다. 아래 코드 조각은 원래 데이터의 20%를 테스트 집합용으로 보유합니다.
 
 ```csharp
 DataOperationsCatalog.TrainTestData dataSplit = mlContext.Data.TrainTestSplit(data, testFraction: 0.2);
@@ -100,9 +100,9 @@ ML.NET 알고리즘은 입력 열 형식에 제약 조건이 있습니다. 또�
 
 ML.NET의 기계 학습 알고리즘은 입력으로 알려진 크기의 부동 소수점 벡터를 기대합니다. 모든 데이터가 이미 숫자 형식이고 다 함께 처리될 예정이라면(즉 이미지 픽셀) 데이터 모델에 [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) 특성을 적용합니다.
 
-데이터의 일부가 숫자가 아니며 열마다 각기 다른 데이터 변환을 적용하려는 경우 모든 열이 처리된 뒤에 [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) 메서드를 사용하여 모든 개별 열을 새 열에 출력되는 단일 기능 벡터로 결합합니다.
+데이터의 일부가 숫자가 아니며 열마다 각기 다른 데이터 변환을 적용하려는 경우 모든 열이 처리된 뒤에 [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate%2A) 메서드를 사용하여 모든 개별 열을 새 열에 출력되는 단일 기능 벡터로 결합합니다.
 
-다음 코드 조각은 `Size` 및 `HistoricalPrices` 열을 새 열 `Features`에 출력되는 단일 기능 벡터로 결합합니다. 배율에 차이가 있기 때문에 [`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*)는 데이터 표준화를 위해 `Features` 열에 적용됩니다.
+다음 코드 조각은 `Size` 및 `HistoricalPrices` 열을 새 열 `Features`에 출력되는 단일 기능 벡터로 결합합니다. 배율에 차이가 있기 때문에 [`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax%2A)는 데이터 표준화를 위해 `Features` 열에 적용됩니다.
 
 ```csharp
 // Define Data Prep Estimator
@@ -123,7 +123,7 @@ IDataView transformedTrainingData = dataPrepTransformer.Transform(trainData);
 
 지정하지 않은 경우 ML.NET 알고리즘은 기본 열 이름을 사용합니다. 모든 학습자는 알고리즘 입력을 위해 `featureColumnName` 매개 변수를 가지며 해당하는 경우 예상된 값에 대한 매개 변수 `labelColumnName`도 갖습니다. 이러한 값은 기본적으로 각각 `Features` 및 `Label`입니다.
 
-미리 처리하는 중에 [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) 메서드를 사용하여 `Features`라는 새 열을 만들면 알고리즘의 매개 변수에서 기능 열을 지정할 필요가 없습니다. 미리 처리된 `IDataView`에 이미 존재하기 때문입니다. 레이블 열은 `CurrentPrice`이지만 데이터 모델에서 [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) 특성을 사용하므로 ML.NET이 `CurrentPrice` 열의 이름을 `Label`로 바꿉니다. 이 때문에 `labelColumnName` 매개 변수를 기계 학습 모델 평가자에 제공할 필요가 없습니다.
+미리 처리하는 중에 [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate%2A) 메서드를 사용하여 `Features`라는 새 열을 만들면 알고리즘의 매개 변수에서 기능 열을 지정할 필요가 없습니다. 미리 처리된 `IDataView`에 이미 존재하기 때문입니다. 레이블 열은 `CurrentPrice`이지만 데이터 모델에서 [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) 특성을 사용하므로 ML.NET이 `CurrentPrice` 열의 이름을 `Label`로 바꿉니다. 이 때문에 `labelColumnName` 매개 변수를 기계 학습 모델 평가자에 제공할 필요가 없습니다.
 
 기본 열 이름을 사용하지 않으려면 이후의 코드 조각에서 설명하는 것처럼 기계 학습 알고리즘 평가자를 정의할 때 기능과 레이블 열 이름을 매개 변수로 전달합니다.
 
@@ -131,9 +131,29 @@ IDataView transformedTrainingData = dataPrepTransformer.Transform(trainData);
 var UserDefinedColumnSdcaEstimator = mlContext.Regression.Trainers.Sdca(labelColumnName: "MyLabelColumnName", featureColumnName: "MyFeatureColumnName");
 ```
 
+## <a name="caching-data"></a>데이터 캐싱
+
+기본적으로 데이터를 처리할 때 데이터는 지연 로드되거나 스트리밍됩니다. 즉, 트레이너가 디스크에서 데이터를 로드하고 학습 중에 여러 번 반복할 수 있습니다. 따라서 데이터를 디스크에서 로드하는 횟수를 줄일 수 있도록 메모리에 맞는 데이터 세트를 위해 캐싱을 권장합니다. 캐싱은 [`AppendCacheCheckpoint`](xref:Microsoft.ML.Data.EstimatorChain%601.AppendCacheCheckpoint%2A)를 사용하여 [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601)의 일부로 이루어집니다.
+
+파이프라인의 모든 트레이너 전에 [`AppendCacheCheckpoint`](xref:Microsoft.ML.Data.EstimatorChain%601.AppendCacheCheckpoint%2A)를 사용하는 것이 좋습니다.
+
+다음 [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601)을 사용하여 [`StochasticDualCoordinateAscent`](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer) 트레이너 앞에 [`AppendCacheCheckpoint`](xref:Microsoft.ML.Data.EstimatorChain%601.AppendCacheCheckpoint%2A)를 사용하면 이전 예측 도구의 결과가 나중에 트레이너에서 사용되도록 캐시됩니다.
+
+```csharp
+// 1. Concatenate Size and Historical into a single feature vector output to a new column called Features
+// 2. Normalize Features vector
+// 3. Cache prepared data
+// 4. Use Sdca trainer to train the model
+IEstimator<ITransformer> dataPrepEstimator =
+    mlContext.Transforms.Concatenate("Features", "Size", "HistoricalPrices")
+        .Append(mlContext.Transforms.NormalizeMinMax("Features"))
+        .AppendCacheCheckpoint(mlContext);
+        .Append(mlContext.Regression.Trainers.Sdca());
+```
+
 ## <a name="train-the-machine-learning-model"></a>기계 학습 모델 학습
 
-데이터를 미리 처리한 후에는 [`Fit`](xref:Microsoft.ML.Trainers.TrainerEstimatorBase`2.Fit*) 메서드를 사용하여 [`StochasticDualCoordinateAscent`](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer) 회귀 알고리즘으로 기계 학습 모델을 학습합니다.
+데이터를 미리 처리한 후에는 [`Fit`](xref:Microsoft.ML.Trainers.TrainerEstimatorBase%602.Fit%2A) 메서드를 사용하여 [`StochasticDualCoordinateAscent`](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer) 회귀 알고리즘으로 기계 학습 모델을 학습합니다.
 
 ```csharp
 // Define StochasticDualCoordinateAscent regression algorithm estimator
@@ -156,7 +176,7 @@ var trainedModelParameters = trainedModel.Model as LinearRegressionModelParamete
 
 ## <a name="evaluate-model-quality"></a>모델 품질 평가
 
-최상의 모델을 선택하기 위해 테스트 데이터에서 성능을 반드시 평가해야 합니다. [`Evaluate`](xref:Microsoft.ML.RegressionCatalog.Evaluate*) 메서드를 사용하여 학습된 모델에 대한 여러 메트릭을 측정합니다.
+최상의 모델을 선택하기 위해 테스트 데이터에서 성능을 반드시 평가해야 합니다. [`Evaluate`](xref:Microsoft.ML.RegressionCatalog.Evaluate%2A) 메서드를 사용하여 학습된 모델에 대한 여러 메트릭을 측정합니다.
 
 > [!NOTE]
 > `Evaluate` 메서드는 수행된 기계 학습 작업에 따라 다른 메트릭을 생성합니다. 자세한 정보는 [`Microsoft.ML.Data` API 설명서](xref:Microsoft.ML.Data)에서 이름에 `Metrics`가 포함된 클래스를 찾아보세요.

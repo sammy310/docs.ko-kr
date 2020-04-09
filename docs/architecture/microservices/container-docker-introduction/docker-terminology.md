@@ -2,12 +2,12 @@
 title: Docker 용어
 description: 컨테이너화된 .NET 애플리케이션을 위한 .NET 마이크로 서비스 아키텍처 | Docker 용어
 ms.date: 01/30/2020
-ms.openlocfilehash: 5ffc7e791df8cbc999c6ababf62670bae46e1d5e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fdcc5ec3603579c36d7339bd3ff651713b8eba88
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502832"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523341"
 ---
 # <a name="docker-terminology"></a>Docker 용어
 
@@ -17,7 +17,9 @@ ms.locfileid: "77502832"
 
 **Dockerfile**: Docker 이미지를 빌드하는 방법에 대한 지침을 포함하는 텍스트 파일입니다. 배치 스크립트처럼 첫째 줄에 지정된 기본 이미지에서 시작하여, 필요한 작업 환경이 완성될 때까지 지침에 따라 필요한 프로그램을 설치하고 파일을 복사합니다.
 
-**빌드:** 해당 Dockerfile에서 제공하는 정보 및 컨텍스트에 외에도 이미지를 빌드하는 폴더의 추가 파일에 기반하여 컨테이너 이미지를 빌드하는 작업입니다. Docker **docker build** 명령을 사용하여 이미지를 빌드할 수 있습니다.
+**빌드:** 해당 Dockerfile에서 제공하는 정보 및 컨텍스트에 외에도 이미지를 빌드하는 폴더의 추가 파일에 기반하여 컨테이너 이미지를 빌드하는 작업입니다. Docker 명령을 사용하여 이미지를 빌드할 수 있습니다.
+
+> `docker build`
 
 **컨테이너**: Docker 이미지의 인스턴스입니다. 컨테이너는 단일 애플리케이션, 프로세스 또는 서비스의 실행을 나타냅니다. Docker 이미지의 콘텐츠, 실행 환경 및 명령의 표준 집합으로 구성됩니다. 서비스의 크기를 조정하는 경우 동일한 이미지에서 컨테이너의 여러 인스턴스를 만듭니다. 일괄 작업은 동일한 이미지에서 다중 컨테이너를 만들 수 있고 각 인스턴스에 다른 매개 변수를 전달합니다.
 

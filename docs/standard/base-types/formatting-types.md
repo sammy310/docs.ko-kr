@@ -25,12 +25,12 @@ helpviewer_keywords:
 - custom formatting [.NET Framework]
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-ms.openlocfilehash: a1f4d9107427140bcfa6b49bc8a850432fb204f7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 124c32a09a32dd90b8b96b39aa80352094030b23
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75348247"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523952"
 ---
 # <a name="format-types-in-net"></a>.NET의 형식 유형
 
@@ -40,7 +40,7 @@ ms.locfileid: "75348247"
 
 - 개체를 문자열 표현으로 변환하는 과정이 명확하지 않을 수 있습니다. 예를 들어, Temperature 또는 Person 개체의 문자열 표현이 어떻게 표시될지 명확하지 않습니다. 다양한 방식으로 Temperature 개체의 형식을 지정하는 예제는 [표준 형식 문자열](#standard-format-strings) 단원을 참조하세요.
 
-- 값에 문화권별 형식 지정이 필요할 수 있습니다. 예를 들어, 숫자를 사용하여 통화 값을 나타내는 애플리케이션에서는 숫자 문자열에 현재 문화권의 통화 기호, 그룹 구분 기호(대부분의 경우 1000 단위 구분 기호임) 및 소수점 기호가 포함되어야 합니다. 예제는 [형식 공급자를 사용한 문화권 구분 형식 지정](#culture-sensitive-formatting-with-format-providers) 섹션을 참조하세요.
+- 값에 문화권별 형식 지정이 필요할 수 있습니다. 예를 들어 숫자를 사용하여 통화 값을 나타내는 애플리케이션에서는 숫자 문자열에 현재 문화권의 통화 기호, 그룹 구분 기호(대부분의 경우 1,000 단위 구분 기호임) 및 소수점 기호가 포함되어야 합니다. 예제는 [형식 공급자를 사용한 문화권 구분 형식 지정](#culture-sensitive-formatting-with-format-providers) 섹션을 참조하세요.
 
 - 애플리케이션에서 같은 값을 여러 가지 방법으로 표시해야 하는 경우도 있을 수 있습니다. 예를 들어, 애플리케이션에서 해당 이름의 문자열 표현을 표시하거나 해당 내부 값을 표시하여 열거형 멤버를 나타낼 수 있습니다. 다양한 방식으로 <xref:System.DayOfWeek> 열거형 멤버의 형식을 지정하는 예제는 [표준 형식 문자열](#standard-format-strings) 단원을 참조하세요.
 
@@ -132,14 +132,14 @@ ms.locfileid: "75348247"
 
 .NET에서는 모든 숫자 형식, 날짜/시간 형식 및 열거형 형식에 대한 표준 형식 지정자 집합을 정의합니다. 예를 들어, 이러한 각 범주는 해당 형식 값에 대한 일반적인 문자열 표현을 정의하는 "G" 표준 형식 지정자를 지원합니다.
 
-열거형 형식의 표준 형식 문자열은 값의 문자열 표현을 직접 제어합니다. 열거형 값의 `ToString` 메서드에 전달된 형식 문자열은 값이 문자열 이름("G" 및 "F" 형식 지정자), 내부 정수 값("D" 형식 지정자) 또는 16진수 값("X" 형식 지정자)을 사용하여 표시되는지 여부를 결정합니다. 다음 예제에서는 표준 형식 문자열을 사용하여 <xref:System.DayOfWeek> 열거형 값의 형식을 지정하는 방법을 보여 줍니다.
+열거형 형식의 표준 형식 문자열은 값의 문자열 표현을 직접 제어합니다. 열거형 값의 `ToString` 메서드에 전달된 형식 문자열은 값이 문자열 이름(“G” 및 “F” 형식 지정자), 내부 정수 값(“D” 형식 지정자) 또는 16진수 값(“X” 형식 지정자)을 사용하여 표시되는지 여부를 결정합니다. 다음 예제에서는 표준 형식 문자열을 사용하여 <xref:System.DayOfWeek> 열거형 값의 형식을 지정하는 방법을 보여 줍니다.
 
 [!code-csharp[Conceptual.Formatting.Overview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/standard1.cs#4)]
 [!code-vb[Conceptual.Formatting.Overview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/standard1.vb#4)]
 
 열거형 형식 문자열에 대한 자세한 내용은 [Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)을 참조하세요.
 
-일반적으로 숫자 형식의 표준 형식 문자열은 정확한 모양이 하나 이상의 속성 값에 의해 제어되는 결과 문자열을 정의합니다. 예를 들어, "C" 형식 지정자는 숫자의 형식을 통화 값으로 지정합니다. "C" 형식 지정자를 유일한 매개 변수로 사용하여 `ToString` 메서드를 호출하면 현재 문화권의 <xref:System.Globalization.NumberFormatInfo> 개체에 있는 다음 속성 값이 숫자 값의 문자열 표현을 정의하는 데 사용됩니다.
+일반적으로 숫자 형식의 표준 형식 문자열은 정확한 모양이 하나 이상의 속성 값에 의해 제어되는 결과 문자열을 정의합니다. 예를 들어, "C" 형식 지정자는 숫자의 형식을 통화 값으로 지정합니다. “C” 형식 지정자를 유일한 매개 변수로 사용하여 `ToString` 메서드를 호출하면 현재 문화권의 <xref:System.Globalization.NumberFormatInfo> 개체에 있는 다음 속성 값이 숫자 값의 문자열 표현을 정의하는 데 사용됩니다.
 
 - 현재 문화권의 통화 기호를 지정하는 <xref:System.Globalization.NumberFormatInfo.CurrencySymbol%2A> 속성
 
@@ -168,7 +168,7 @@ ms.locfileid: "75348247"
 
 표준 숫자 서식 지정 문자열에 대한 자세한 내용은 [표준 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/standard-numeric-format-strings.md)을 참조하세요.
 
-날짜 및 시간 값의 표준 형식 문자열은 특정 <xref:System.Globalization.DateTimeFormatInfo> 속성에 저장된 사용자 지정 형식 문자열의 별칭입니다. 예를 들어, "D" 형식 지정자를 사용하여 날짜 및 시간 값의 `ToString` 메서드를 호출하면 현재 문화권의 <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> 속성에 저장된 사용자 지정 형식 문자열을 사용하여 날짜 및 시간이 표시됩니다. (사용자 지정 서식 문자열에 대한 자세한 내용은 [다음 섹션](#custom-format-strings)을 참조하세요.) 다음 예제에서는 이러한 관계를 보여 줍니다.
+날짜 및 시간 값의 표준 형식 문자열은 특정 <xref:System.Globalization.DateTimeFormatInfo> 속성에 저장된 사용자 지정 형식 문자열의 별칭입니다. 예를 들어 “D” 형식 지정자를 사용하여 날짜 및 시간 값의 `ToString` 메서드를 호출하면 현재 문화권의 <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> 속성에 저장된 사용자 지정 형식 문자열을 사용하여 날짜 및 시간이 표시됩니다. (사용자 지정 서식 문자열에 대한 자세한 내용은 [다음 섹션](#custom-format-strings)을 참조하세요.) 다음 예제에서는 이러한 관계를 보여 줍니다.
 
 [!code-csharp[Conceptual.Formatting.Overview#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/alias1.cs#5)]
 [!code-vb[Conceptual.Formatting.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/alias1.vb#5)]
@@ -253,7 +253,7 @@ ms.locfileid: "75348247"
 
 - <xref:System.Globalization.CultureInfo>. 이 클래스에 대해 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 을 구현하면 숫자 형식 지정 정보를 제공하는 <xref:System.Globalization.NumberFormatInfo> 개체 또는 날짜 및 시간 값에 대한 형식 지정 정보를 제공하는 <xref:System.Globalization.DateTimeFormatInfo> 개체가 반환될 수 있습니다.
 
-사용자 고유의 형식 공급자를 구현하여 이러한 클래스 중 하나를 대체할 수도 있습니다. 그러나 <xref:System.IFormatProvider.GetFormat%2A> 메서드에 형식 지정 정보를 제공해야 하는 경우에는 구현된 형식 공급자의 `ToString` 메서드에서 위의 표에 나와 있는 형식의 개체를 반환해야 합니다.
+사용자 고유의 형식 공급자를 구현하여 이러한 클래스 중 하나를 대체할 수도 있습니다. 그러나 `ToString` 메서드에 형식 지정 정보를 제공해야 하는 경우에는 구현된 형식 공급자의 <xref:System.IFormatProvider.GetFormat%2A> 메서드에서 위의 표에 나와 있는 형식의 개체를 반환해야 합니다.
 
 ### <a name="culture-sensitive-formatting-of-numeric-values"></a>숫자 값의 문화권 구분 서식 지정
 
@@ -333,7 +333,7 @@ ms.locfileid: "75348247"
 
 ## <a name="custom-formatting-with-icustomformatter"></a>ICustomFormatter를 사용한 사용자 지정 서식 지정
 
-두 복합 형식 지정 메서드( <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 및 <xref:System.Text.StringBuilder.AppendFormat%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>)에 사용자 지정 형식을 지원하는 형식 공급자 매개 변수가 포함되어 있습니다. 이러한 형식 지정 메서드 중 하나를 호출하면 <xref:System.Type> 인터페이스를 나타내는 <xref:System.ICustomFormatter> 개체가 형식 공급자의 <xref:System.IFormatProvider.GetFormat%2A> 메서드에 전달됩니다. 그러면 <xref:System.IFormatProvider.GetFormat%2A> 메서드가 사용자 지정 형식 지정을 제공하는 <xref:System.ICustomFormatter> 구현을 반환합니다.
+두 복합 형식 지정 메서드( <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 및 <xref:System.Text.StringBuilder.AppendFormat%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>)에 사용자 지정 형식을 지원하는 형식 공급자 매개 변수가 포함되어 있습니다. 이러한 형식 지정 메서드 중 하나를 호출하면 <xref:System.ICustomFormatter> 인터페이스를 나타내는 <xref:System.Type> 개체가 형식 공급자의 <xref:System.IFormatProvider.GetFormat%2A> 메서드에 전달됩니다. 그러면 <xref:System.IFormatProvider.GetFormat%2A> 메서드가 사용자 지정 형식 지정을 제공하는 <xref:System.ICustomFormatter> 구현을 반환합니다.
 
 <xref:System.ICustomFormatter> 인터페이스에는 복합 형식 지정 메서드에 의해 자동으로 복합 형식 문자열의 각 형식 항목에 대해 한 번씩 호출되는 <xref:System.ICustomFormatter.Format%28System.String%2CSystem.Object%2CSystem.IFormatProvider%29>라는 메서드가 하나 있습니다. <xref:System.ICustomFormatter.Format%28System.String%2CSystem.Object%2CSystem.IFormatProvider%29> 메서드에는 세 개의 매개 변수 즉, 형식 항목의 `formatString` 인수를 나타내는 형식 문자열, 형식을 지정할 개체 및 형식 지정 서비스를 제공하는 <xref:System.IFormatProvider> 개체가 포함되어 있습니다. 일반적으로 <xref:System.ICustomFormatter> 를 구현하는 클래스는 <xref:System.IFormatProvider>도 구현하여 이 마지막 매개 변수가 사용자 지정 형식 지정 클래스를 참조하도록 합니다. 이 메서드는 형식을 지정할 개체의 사용자 지정 형식 문자열 표현을 반환합니다. 이 메서드가 개체의 형식을 지정할 수 없는 경우에는 null 참조(Visual Basic의 경우`Nothing` )가 반환되어야 합니다.
 
@@ -359,8 +359,7 @@ ms.locfileid: "75348247"
 |[사용자 지정 TimeSpan 서식 문자열](../../../docs/standard/base-types/custom-timespan-format-strings.md)|시간 간격의 애플리케이션별 형식을 만드는 사용자 지정 형식 문자열에 대해 설명합니다.|
 |[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|열거형 값의 문자열 표현을 만드는 데 사용되는 표준 형식 문자열에 대해 설명합니다.|
 |[복합 형식 지정](../../../docs/standard/base-types/composite-formatting.md)|문자열에 형식이 지정된 하나 이상의 값을 포함시키는 방법에 대해 설명합니다. 그런 후 해당 문자열을 콘솔에 표시하거나 스트림에 쓸 수 있습니다.|
-|[서식 지정 작업 수행](../../../docs/standard/base-types/performing-formatting-operations.md)|특정 형식 지정 작업을 수행하기 위한 단계별 지침을 제공하는 항목을 나열합니다.|
-|[Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)|개체를 해당 개체의 문자열 표현으로 표시되는 값으로 초기화하는 방법에 대해 설명합니다. 구문 분석은 형식 지정의 역순으로 진행됩니다.|
+|[.NET에서 문자열 구문 분석](../../../docs/standard/base-types/parsing-strings.md)|개체를 해당 개체의 문자열 표현으로 표시되는 값으로 초기화하는 방법에 대해 설명합니다. 구문 분석은 형식 지정의 역순으로 진행됩니다.|
 
 ## <a name="reference"></a>참고
 

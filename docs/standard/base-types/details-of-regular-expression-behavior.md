@@ -9,12 +9,12 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-ms.openlocfilehash: 504e315dda4e76f56a88d97149b1515b6743668b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0273d16028315452e35f83086dbc134d6fcb66c6
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77124353"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635984"
 ---
 # <a name="details-of-regular-expression-behavior"></a>정규식 동작 정보
 
@@ -71,7 +71,7 @@ ms.locfileid: "77124353"
 
      긍정 lookahead 어설션에 대한 자세한 내용은 [그룹화 구문](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)을 참조하세요.
 
-- 부정 lookahead: `(?!`*subexpression*`)`. 이 기능은 하위 식이 일치에 실패하는 경우 식을 찾는 기능을 추가합니다. 이 기능은 정리 작업에 특히 유용합니다. 포함해야 하는 사례에 대한 식보다 제거해야 하는 경우에 대한 식을 제공하는 것이 더 간단하기 때문입니다. 예를 들어 "non"으로 시작하지 않는 단어에 대한 식을 작성하기가 어렵습니다. 다음 예제에서는 부정 lookahead를 사용하여 파일을 제외합니다.
+- 부정 lookahead: `(?!`*subexpression*`)`. 이 기능은 하위 식이 일치에 실패하는 경우 식을 찾는 기능을 추가합니다. 이 기능은 검색 항목을 정리하는 데 유용합니다. 포함해야 하는 사례에 대한 식보다 제거해야 하는 경우에 대한 식을 제공하는 것이 더 간단하기 때문입니다. 예를 들어 "non"으로 시작하지 않는 단어에 대한 식을 작성하기가 어렵습니다. 다음 예제에서는 부정 lookahead를 사용하여 파일을 제외합니다.
 
      [!code-csharp[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookahead2.cs#3)]
      [!code-vb[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookahead2.vb#3)]
@@ -151,7 +151,6 @@ ms.locfileid: "77124353"
 |[스레드로부터의 안전성](../../../docs/standard/base-types/thread-safety-in-regular-expressions.md)|정규식 스레드로부터의 안전성에 대한 정보를 제공하고 정규식 개체에 대한 액세스를 동기화해야 하는 경우를 설명합니다.|
 |[.NET Framework 정규식](../../../docs/standard/base-types/regular-expressions.md)|정규식의 프로그래밍 언어 측면에 대한 개요를 제공합니다.|
 |[정규식 개체 모델](../../../docs/standard/base-types/the-regular-expression-object-model.md)|정규식 클래스를 사용하는 방법을 보여 주는 코드 예제 및 정보를 제공합니다.|
-|[정규식 예제](../../../docs/standard/base-types/regular-expression-examples.md)|일반적인 애플리케이션에서 정규식 사용을 보여 주는 코드 예제를 포함합니다.|
 |[정규식 언어 - 빠른 참조](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|정규식을 정의하는 데 사용할 수 있는 문자, 연산자 및 생성자 집합에 대한 정보를 제공합니다.|
 
 ## <a name="reference"></a>참고

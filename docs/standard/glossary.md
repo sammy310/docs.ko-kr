@@ -3,12 +3,12 @@ title: .NET 용어
 description: .NET 설명서에서 사용되는 선택한 용어의 의미를 알아봅니다.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: ed4dceed1a3f39c5c4ce7a278efc37bb38ed0d94
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: d8f16579ea4dcbc9260aac83e16d3fbd30db519c
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344200"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635577"
 ---
 # <a name="net-glossary"></a>.NET 용어
 
@@ -155,7 +155,7 @@ Mono의 자세한 내용은 [Mono 설명서](https://www.mono-project.com/docs/)
 
 [.NET Standard](#net-standard) 및 모든 [.NET 구현체](#implementation-of-net)와 워크로드에 대한 포괄적인 용어입니다. 항상 전체를 대문자로 표기하며 절대로 ".Net"을 사용하지 않습니다.
 
-[.NET 가이드](index.md)를 참조하세요.
+[.NET 가이드](index.yml)를 참조하세요.
 
 ## <a name="net-core"></a>.NET Core
 
@@ -273,7 +273,7 @@ IoT(사물 인터넷)에 대한 최신의 터치 가능 Windows 애플리케이�
 
 ## <a name="see-also"></a>참조
 
-- [.NET 가이드](index.md)
+- [.NET 가이드](index.yml)
 - [.NET Framework 가이드](../framework/index.yml)
 - [.NET Core](../core/index.yml)
 - [ASP.NET 개요](/aspnet/index#pivot=aspnet)

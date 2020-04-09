@@ -9,12 +9,12 @@ helpviewer_keywords:
 - PLINQ queries, how to cancel
 - cancellation, PLINQ
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
-ms.openlocfilehash: 272f25d62cb63c60209be3bc54dc5e76fb30df54
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 312c71b787ac7b4aa092f1517d2ed5af314a22e4
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73134226"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635874"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>방법: PLINQ 쿼리 취소
 다음 예제는 PLINQ 쿼리를 취소하는 두 가지 방법을 보여줍니다. 첫 번째 예제에서는 주로 데이터 트래버스로 구성되는 쿼리를 취소하는 방법을 보여줍니다. 두 번째 예제에서는 계산을 많이 해야 하는 사용자 함수를 포함하는 쿼리를 취소하는 방법을 보여줍니다.
@@ -29,13 +29,13 @@ ms.locfileid: "73134226"
 [!code-csharp[PLINQ#16](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#16)]
 [!code-vb[PLINQ#16](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#16)]
 
-PLINQ 프레임워크는 단일 <xref:System.OperationCanceledException>을 <xref:System.AggregateException?displayProperty=nameWithType>으로 롤링하지 않습니다. <xref:System.OperationCanceledException>은 별도의 catch 블록에서 처리되어야 합니다. 하나 이상의 사용자 대리자가 <xref:System.Threading.CancellationToken?displayProperty=nameWithType>을 사용하여 OperationCanceledException(externalCT)을 throw하지만 다른 예외를 throw하지 않고 쿼리가 `AsParallel().WithCancellation(externalCT)`로 정의된 경우 PLINQ는 <xref:System.OperationCanceledException>이 아닌 단일 <xref:System.AggregateException?displayProperty=nameWithType> (externalCT)을 throw합니다. 그러나 하나의 사용자 대리자가 <xref:System.OperationCanceledException>을 throw하고 다른 대리자가 다른 예외 형식을 throw할 경우에는 두 예외가 모두 <xref:System.AggregateException>으로 롤링됩니다.
+PLINQ 프레임워크는 단일 <xref:System.OperationCanceledException>을 <xref:System.AggregateException?displayProperty=nameWithType>으로 롤링하지 않습니다. <xref:System.OperationCanceledException>은 별도의 catch 블록에서 처리되어야 합니다. 하나 이상의 사용자 대리자가 <xref:System.Threading.CancellationToken?displayProperty=nameWithType>을 사용하여 OperationCanceledException(externalCT)을 throw하지만 다른 예외를 throw하지 않고 쿼리가 `AsParallel().WithCancellation(externalCT)`로 정의된 경우 PLINQ는 <xref:System.AggregateException?displayProperty=nameWithType>이 아닌 단일 <xref:System.OperationCanceledException> (externalCT)을 throw합니다. 그러나 하나의 사용자 대리자가 <xref:System.OperationCanceledException>을 throw하고 다른 대리자가 다른 예외 형식을 throw할 경우에는 두 예외가 모두 <xref:System.AggregateException>으로 롤링됩니다.
 
 취소에 대한 일반 지침은 다음과 같습니다.
 
 1. 사용자 대리자 취소를 수행하는 경우 외부 <xref:System.Threading.CancellationToken>에 대해 PLINQ에 알리고 <xref:System.OperationCanceledException>(externalCT)을 throw해야 합니다.
 
-2. 취소가 발생하고 다른 예외가 throw되지 않으면 <xref:System.OperationCanceledException>이 아닌 <xref:System.AggregateException>을 처리해야 합니다.
+2. 취소가 발생하고 다른 예외가 throw되지 않으면 <xref:System.AggregateException>이 아닌 <xref:System.OperationCanceledException>을 처리해야 합니다.
 
 ## <a name="example"></a>예제
 
@@ -44,14 +44,14 @@ PLINQ 프레임워크는 단일 <xref:System.OperationCanceledException>을 <xre
 [!code-csharp[PLINQ#17](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#17)]
 [!code-vb[PLINQ#17](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#17)]
 
-사용자 코드에서 취소를 처리하면 쿼리 정의에서 <xref:System.Linq.ParallelEnumerable.WithCancellation%2A>을 사용할 필요가 없습니다. 그러나 <xref:System.Linq.ParallelEnumerable.WithCancellation%2A>은 쿼리 성능에 영향을 주지 않고 이를 통해 쿼리 연산자 및 사용자 코드에서 취소를 처리할 수 있습니다.
+사용자 코드에서 취소를 처리하면 쿼리 정의에서 <xref:System.Linq.ParallelEnumerable.WithCancellation%2A>을 사용할 필요가 없습니다. 그러나 <xref:System.Linq.ParallelEnumerable.WithCancellation%2A>은 쿼리 성능에 영향을 주지 않고 쿼리 연산자 및 사용자 코드에서 취소를 처리할 수 있게 하므로 <xref:System.Linq.ParallelEnumerable.WithCancellation%2A>를 사용하는 것이 좋습니다.
 
 시스템 응답성을 보장하기 위해 밀리초마다 한 번 정도 취소를 확인하는 것이 좋지만 최대 10밀리초의 기간이 허용되는 것으로 간주합니다. 이 빈도는 코드 성능에 부정적인 영향을 주면 안 됩니다.
 
 쿼리 결과에 대해 반복 중인 foreach(Visual Basic의 For Each) 루프에서 코드가 중단되는 경우와 같이 열거자가 삭제되는 경우에는 쿼리가 취소되지만 예외가 throw되지 않습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Linq.ParallelEnumerable>
-- [PLINQ(병렬 LINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [PLINQ(병렬 LINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
 - [관리되는 스레드의 취소](../../../docs/standard/threading/cancellation-in-managed-threads.md)

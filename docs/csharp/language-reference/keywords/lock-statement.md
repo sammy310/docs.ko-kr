@@ -1,19 +1,19 @@
 ---
 title: lock 문 - C# 참조
 description: C# lock 문을 사용하여 공유 리소스에 대한 스레드 액세스 동기화
-ms.date: 10/01/2018
+ms.date: 04/02/2020
 f1_keywords:
 - lock_CSharpKeyword
 - lock
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 467881dd36c97b6b18b7f31d4e4af25152b0d012
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f2d42ae02a07a5e1b82cefd004f4d03b2a16dff
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713395"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635389"
 ---
 # <a name="lock-statement-c-reference"></a>lock 문(C# 참조)
 
@@ -46,9 +46,9 @@ finally
 
 코드에서 [try...finally](try-finally.md) 블록을 사용하므로 `lock` 문의 본문 내에서 예외가 throw되더라도 잠금이 해제됩니다.
 
-[ 문의 본문에서 ](../operators/await.md)await 연산자`lock`를 사용할 수 없습니다.
+`lock` 문의 본문에서 [await 연산자](../operators/await.md)를 사용할 수 없습니다.
 
-## <a name="remarks"></a>설명
+## <a name="guidelines"></a>지침
 
 공유 리소스에 대한 스레드 액세스를 동기화하는 경우 전용 개체 인스턴스(예: `private readonly object balanceLock = new object();`) 또는 코드의 관련 없는 파트에서 잠금 개체로 사용되지 않을 가능성이 있는 다른 인스턴스를 잠급니다. 교착 상태 또는 잠금 경합이 발생할 수 있으므로 다른 공유 리소스에 대해 동일한 잠금 개체 인스턴스를 사용하지 마세요. 특히 다음을 잠금 개체로 사용하지 마세요.
 
@@ -56,21 +56,23 @@ finally
 - <xref:System.Type> 인스턴스([typeof](../operators/type-testing-and-cast.md#typeof-operator) 연산자 또는 리플렉션에서 획득할 수 있음).
 - 문자열 인스턴스(문자열 리터럴 포함)([인터닝](/dotnet/api/system.string.intern#remarks)될 수 있음).
 
+잠금 경합을 줄이기 위해 최대한 짧은 시간 동안 잠금을 유지하세요.
+
 ## <a name="example"></a>예제
 
-다음 예제에서는 전용 `Account` 인스턴스에 잠금을 설정하여 해당 개인 `balance` 필드에 대한 액세스를 동기화하는 `balanceLock` 클래스를 정의합니다. 동일한 인스턴스를 잠금에 사용하면 `balance` 또는 `Debit` 메서드를 동시에 호출하려는 두 스레드에 의해 `Credit` 필드가 동시에 업데이트되지 않습니다.
+다음 예제에서는 전용 `balanceLock` 인스턴스에 잠금을 설정하여 해당 개인 `balance` 필드에 대한 액세스를 동기화하는 `Account` 클래스를 정의합니다. 동일한 인스턴스를 잠금에 사용하면 `Debit` 또는 `Credit` 메서드를 동시에 호출하려는 두 스레드에 의해 `balance` 필드가 동시에 업데이트되지 않습니다.
 
 [!code-csharp[lock-statement-example](~/samples/snippets/csharp/keywords/LockStatementExample.cs)]
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](~/_csharplang/spec/statements.md#the-lock-statement)의 [lock 문](~/_csharplang/spec/introduction.md) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [lock 문](~/_csharplang/spec/statements.md#the-lock-statement) 섹션을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
+- [C# 참조](../index.md)
+- [C# 키워드](index.md)
 - <xref:System.Threading.Monitor?displayProperty=nameWithType>
 - <xref:System.Threading.SpinLock?displayProperty=nameWithType>
 - <xref:System.Threading.Interlocked?displayProperty=nameWithType>
-- [C# 참조](../index.md)
-- [C# 키워드](index.md)
 - [동기화 기본 형식 개요](../../../standard/threading/overview-of-synchronization-primitives.md)

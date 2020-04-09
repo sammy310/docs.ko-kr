@@ -16,14 +16,15 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: c574719da9b89b468b92b042e1f2b5b10fbe3c0d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f079613f790121c000a312132e7135121ca721a6
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398522"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635904"
 ---
-# <a name="common-type-system"></a>공용 형식 시스템
+# <a name="common-type-system"></a>CTS(공용 형식 시스템)
+
 공용 형식 시스템은 공용 언어 런타임에 형식을 선언하고 사용 및 관리하는 방법을 정의할 뿐 아니라 언어 간 통합에 대한 런타임 지원의 중요한 부분을 차지합니다. 공용 형식 시스템은 다음과 같은 기능을 수행합니다.  
   
 - 언어 간 통합, 형식 안전성 및 고성능 코드 실행이 가능한 프레임워크를 만듭니다.  
@@ -32,20 +33,10 @@ ms.locfileid: "79398522"
   
 - 다양한 언어로 작성된 개체 간에 상호 작용할 수 있도록 언어에서 따라야 할 규칙을 정의합니다.  
   
-- 애플리케이션 개발에 사용되는 기본 데이터 형식(예: <xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.Int32> 및 <xref:System.UInt64>)이 포함된 라이브러리를 제공합니다.  
+- 애플리케이션 개발에 사용되는 기본 데이터 형식(예: <xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.Int32> 및 <xref:System.UInt64>)이 포함된 라이브러리를 제공합니다.
   
- 이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
-  
-- [.NET의 형식](#types_in_the_net_framework)  
-  
-- [형식 정의](#type_definitions)  
-  
-- [형식 멤버](#type_members)  
-  
-- [형식 멤버의 특성](#characteristics_of_type_members)  
-  
-<a name="types_in_the_net_framework"></a>
-## <a name="types-in-net"></a>.NET의 형식  
+## <a name="types-in-net"></a>.NET의 형식
+
  .NET의 모든 형식은 값 형식 또는 참조 형식입니다.  
   
  값 형식은 해당 형식의 개체가 개체의 실제 값으로 나타나는 데이터 형식입니다. 값 형식의 인스턴스가 변수에 할당되면 해당 변수에는 값의 새 사본이 부여됩니다.  
@@ -54,18 +45,18 @@ ms.locfileid: "79398522"
   
  .NET의 공용 형식 시스템에서는 다음과 같은 다섯 가지 범주의 형식을 지원합니다.  
   
-- [클래스](#Classes)  
+- [클래스](#classes)  
   
-- [구조체](#Structures)  
+- [구조체](#structures)  
   
-- [열거형](#Enumerations)  
+- [열거형](#enumerations)  
   
-- [인터페이스](#Interfaces)  
+- [인터페이스](#interfaces)  
   
-- [대리자](#Delegates)  
+- [대리자](#delegates)  
   
-<a name="Classes"></a>
-### <a name="classes"></a>클래스  
+### <a name="classes"></a>클래스
+
  클래스는 다른 클래스에서 직접 파생될 수 있거나 <xref:System.Object?displayProperty=nameWithType>에서 암시적으로 파생되는 참조 형식입니다. 클래스는 개체(클래스의 인스턴스)가 수행할 수 있는 작업(메서드, 이벤트 또는 속성)과 개체에 포함된 데이터(필드)를 정의합니다. 구현 없이 정의만이 포함된 인터페이스와는 달리, 클래스에는 대개 정의와 구현이 모두 포함되어 있지만 구현이 없는 멤버가 하나 이상 있을 수도 있습니다.  
   
  다음 표에는 클래스가 가질 수 있는 일부 특성에 대한 설명이 나와 있습니다. 런타임을 지원하는 각 언어에는 클래스나 클래스 멤버가 이들 특성 중 하나 이상을 갖고 있음을 표시하는 방식이 있습니다. 그러나 .NET을 대상으로 하는 개별 프로그래밍 언어에서 이 특성들을 모두 사용할 수 있는 것은 아닙니다.  
@@ -79,14 +70,14 @@ ms.locfileid: "79398522"
 |exported 또는 not exported|클래스를 정의한 어셈블리 밖에서 클래스를 볼 수 있는지의 여부를 지정하며 이 특성은 중첩 클래스에는 적용되지 않고 최상위 클래스에만 적용됩니다.|  
   
 > [!NOTE]
-> 클래스는 부모 클래스 또는 구조체 내에 중첩될 수도 있습니다. 중첩된 클래스에도 멤버 특성이 있습니다. 자세한 내용은 [중첩 형식](#NestedTypes)을 참조하세요.  
+> 클래스는 부모 클래스 또는 구조체 내에 중첩될 수도 있습니다. 중첩된 클래스에도 멤버 특성이 있습니다. 자세한 내용은 [중첩 형식](#nested-types)을 참조하세요.  
   
  구현이 없는 클래스 멤버는 추상 멤버입니다. 하나 이상의 멤버가 있는 클래스는 그 자체가 추상적이기 때문에 이 클래스의 새 인스턴스를 만들 수 없습니다. 런타임을 대상으로 하는 일부 언어에서는 추상 멤버가 없는 클래스를 추상으로 표시할 수 있습니다. 파생 클래스에서 상속하거나 재정의할 수 있는 기본 기능의 집합을 캡슐화하려는 경우 상황에 따라 추상 클래스를 사용할 수 있습니다. 추상이 아닌 클래스를 구체적인 클래스라고 합니다.  
   
  클래스는 인터페이스를 여러 개 구현할 수 있지만 모든 클래스가 암시적으로 상속되는 <xref:System.Object?displayProperty=nameWithType>와 함께 단 하나의 기본 클래스에서만 상속될 수 있습니다. 모든 클래스에는 클래스의 새 인스턴스를 초기화하는 생성자가 최소한 하나는 있어야 합니다. 생성자를 명시적으로 정의하지 않으면 대부분의 컴파일러는 자동으로 매개 변수가 없는 생성자를 제공합니다.  
   
-<a name="Structures"></a>
-### <a name="structures"></a>구조체  
+### <a name="structures"></a>구조체
+
  구조체는 <xref:System.ValueType?displayProperty=nameWithType>에서 암시적으로 파생된 뒤 <xref:System.Object?displayProperty=nameWithType>에서 파생되는 값 형식입니다. 구조체는 적은 메모리를 요구하는 값을 나타낼 때 유용할 뿐 아니라 강력한 형식의 매개 변수를 갖는 메서드에 값으로 전달되는 매개 변수로 값을 전달할 때도 유용합니다. .NET에서 모든 기본 데이터 형식(<xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32> 및 <xref:System.UInt64>)은 구조체로 정의됩니다.  
   
  클래스와 마찬가지로 구조체는 데이터(구조체의 필드)와 해당 데이터에 대해 수행할 수 있는 작업(구조체의 메서드)을 정의합니다. 이는 <xref:System.Object?displayProperty=nameWithType> 및 <xref:System.ValueType?displayProperty=nameWithType> 클래스에 정의된 가상 메서드와 값 형식 자체에 정의된 메서드를 비롯하여 구조체에서 메서드를 호출할 수 있음을 의미합니다. 다시 말하면 구조체에는 필드, 속성, 이벤트뿐 아니라 정적 및 비정적 메서드가 포함될 수 있습니다. 구조체의 인스턴스를 만들어 매개 변수로 전달하고 지역 변수로 저장하거나 다른 값 형식 또는 참조 형식의 필드에 저장할 수 있습니다. 구조체는 인터페이스를 구현할 수도 있습니다.  
@@ -95,9 +86,9 @@ ms.locfileid: "79398522"
   
  공용 언어 런타임에서는 각 값 형식에 대해 해당 boxed 형식 클래스를 제공합니다. 이 클래스는 값 형식과 동일한 상태 및 동작을 가집니다. 값 형식의 인스턴스가 <xref:System.Object?displayProperty=nameWithType> 형식의 매개 변수를 허용하는 메서드에 전달될 때는 boxing됩니다. 하지만 참조로 전달되는 매개 변수로 값 형식을 허용하는 메서드 호출에서 컨트롤이 반환될 때는 이 인스턴스가 unboxing됩니다. 즉, 클래스의 인스턴스에서 값 형식의 인스턴스로 다시 변환됩니다. 일부 언어에서는 boxed 형식이 필요할 때 별도의 구문을 사용해야 하지만 그 밖의 언어에서는 필요할 때 자동으로 boxed 형식을 사용합니다. 값 형식을 정의하면 boxed 형식과 unboxed 형식이 모두 정의됩니다.  
   
-<a name="Enumerations"></a>
-### <a name="enumerations"></a>열거형  
- 열거형(enum)은 <xref:System.Enum?displayProperty=nameWithType>에서 직접 상속되고 내부 기본 형식의 값에 대한 대체 이름을 제공하는 값 형식입니다. 열거형 형식은 이름, 내부 형식 및 필드 집합으로 구성됩니다. 내부 형식은 기본으로 제공되는 부호 있는 정수나 부호 없는 정수 형식(예: <xref:System.Byte>, <xref:System.Int32> 또는 <xref:System.UInt64>) 중 하나여야 합니다. 각 필드는 상수를 나타내는 정적 리터럴 필드입니다. 여러 필드에 동일한 값을 할당할 수 있습니다. 이 경우 리플렉션 및 문자열 변환을 위해 값 중 하나를 기본 열거형 값으로 표시해야 합니다.  
+### <a name="enumerations"></a>열거형
+
+ 열거형은 <xref:System.Enum?displayProperty=nameWithType>에서 직접 상속되고 내부 기본 형식의 값에 대한 대체 이름을 제공하는 값 형식입니다. 열거형 형식은 이름, 내부 형식 및 필드 집합으로 구성됩니다. 내부 형식은 기본으로 제공되는 부호 있는 정수나 부호 없는 정수 형식(예: <xref:System.Byte>, <xref:System.Int32> 또는 <xref:System.UInt64>) 중 하나여야 합니다. 각 필드는 상수를 나타내는 정적 리터럴 필드입니다. 여러 필드에 동일한 값을 할당할 수 있습니다. 이 경우 리플렉션 및 문자열 변환을 위해 값 중 하나를 기본 열거형 값으로 표시해야 합니다.  
   
  내부 형식의 값을 열거형에 할당하거나 반대로도 할당할 수 있으며 이때 런타임에서 캐스팅할 필요가 없습니다. 열거형의 인스턴스를 만들고 열거형의 내부 형식에 정의된 메서드뿐 아니라 <xref:System.Enum?displayProperty=nameWithType>의 메서드도 호출할 수 있습니다. 그러나 일부 언어에서는 내부 형식의 인스턴스가 필요한 경우 열거형을 매개 변수로 전달할 수 없고 그 반대로도 전달할 수 없습니다.  
   
@@ -120,9 +111,9 @@ ms.locfileid: "79398522"
   
  [!code-csharp[Conceptual.Types.Enum#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.enum/cs/example.cs#1)]
  [!code-vb[Conceptual.Types.Enum#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.enum/vb/example.vb#1)]  
-  
-<a name="Interfaces"></a>
-### <a name="interfaces"></a>인터페이스  
+
+### <a name="interfaces"></a>인터페이스
+
  인터페이스는 "실행 가능" 관계나 "소유" 관계를 지정하는 계약을 정의합니다. 인터페이스는 비교 및 정렬(<xref:System.IComparable> 및 <xref:System.IComparable%601> 인터페이스), 같음 테스트(<xref:System.IEquatable%601> 인터페이스) 또는 컬렉션의 항목 열거(<xref:System.Collections.IEnumerable> 및 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스)와 같이 기능을 구현하는 데 사용되는 경우가 많습니다. 인터페이스에는 속성, 메서드 및 이벤트가 있을 수 있으며 이러한 멤버는 모두 추상 멤버입니다. 즉, 인터페이스는 멤버와 시그니처를 정의하지만 각 인터페이스 멤버의 기능은 인터페이스를 구현하는 형식에서 정의해야 합니다. 따라서 인터페이스를 구현하는 모든 클래스나 구조체는 인터페이스에 선언된 추상 멤버에 대한 정의를 제공해야 합니다. 인터페이스를 구현하는 클래스나 구조체에서 하나 이상의 다른 인터페이스를 함께 구현해야 할 수도 있습니다.  
   
  인터페이스에는 다음과 같은 제약 조건이 따릅니다.  
@@ -136,9 +127,9 @@ ms.locfileid: "79398522"
 - 인터페이스에서는 인스턴스 멤버만을 정의할 수 있습니다. 정적 멤버는 정의할 수 없습니다.  
   
  둘 이상의 인터페이스에서 동일한 시그니처의 멤버를 선언할 수 있고 이들 멤버가 별도의 구현을 가질 수 있으므로 각 언어에서는 멤버를 요구하는 인터페이스에 구현을 매핑하기 위한 규칙을 제공해야 합니다.  
-  
-<a name="Delegates"></a>
-### <a name="delegates"></a>대리자  
+
+### <a name="delegates"></a>대리자
+
  대리자는 C++의 함수 포인터와 비슷한 목적으로 사용되는 참조 형식입니다. 대리자는 .NET의 이벤트 처리기와 콜백 함수에 사용됩니다. 함수 포인터와 달리 대리자는 안전하고, 확인할 수 있으며, 형식이 안전합니다. 대리자 형식은 호환되는 시그니처가 포함된 정적 메서드 또는 인스턴스 메서드를 나타낼 수 있습니다.  
   
  대리자 매개 변수의 형식이 메서드 매개 변수의 형식보다 제한적인 경우 대리자의 매개 변수는 메서드의 해당 매개 변수와 호환됩니다. 이 경우 대리자로 전달된 인수를 안전하게 메서드로 전달할 수 있습니다.  
@@ -163,8 +154,8 @@ ms.locfileid: "79398522"
 > [!NOTE]
 > C#, C++ 및 Visual Basic에서는 이벤트 처리기 대리자에 대해 이러한 메서드를 사용할 필요가 없습니다. 이들 언어에서는 이벤트 처리기를 추가하고 제거하기 위한 구문을 제공합니다.  
 
-<a name="type_definitions"></a>
-## <a name="type-definitions"></a>형식 정의  
+## <a name="type-definitions"></a>형식 정의입니다.
+
  형식 정의에는 다음과 같은 요소가 포함됩니다.  
   
 - 형식에 정의되어 있는 특성  
@@ -222,24 +213,24 @@ ms.locfileid: "79398522"
   
  형식에서 구현할 수 있는 인터페이스의 수는 제한이 없습니다. 인터페이스를 구현하려면 형식에서 해당 인터페이스의 모든 가상 멤버를 구현해야 합니다. 가상 메서드는 파생된 형식에서 구현할 수 있으며 정적으로 또는 동적으로 호출할 수 있습니다.  
 
-<a name="type_members"></a>
-## <a name="type-members"></a>형식 멤버  
+## <a name="type-members"></a>형식 멤버
+
  런타임을 사용하면 형식의 동작과 상태를 지정하는 형식의 멤버를 정의할 수 있습니다. 다음과 같은 형식 멤버가 있습니다.  
   
-- [필드](#Fields)  
+- [필드](#fields)  
   
-- [속성](#Properties)  
+- [속성](#properties)  
   
-- [메서드](#Methods)  
+- [메서드](#methods)  
   
-- [생성자](#Constructors)  
+- [생성자](#constructors)  
   
-- [이벤트](#Events)  
+- [이벤트](#events)  
   
-- [중첩 형식](#NestedTypes)  
-  
-<a name="Fields"></a>
-### <a name="fields"></a>필드  
+- [중첩 형식](#nested-types)  
+
+### <a name="fields"></a>필드
+
  필드는 형식의 상태를 설명하고 상태의 일부를 포함합니다. 필드는 런타임에서 지원하는 모든 형식일 수 있습니다. 필드는 대개 `private` 또는 `protected`이므로 클래스 내부나 파생 클래스에서만 액세스할 수 있습니다. 필드의 값을 형식 외부에서 수정할 수 있는 경우 일반적으로 속성 집합 접근자가 사용됩니다. 공개적으로 노출된 필드는 대개 읽기 전용이며 다음 두 형식 중 하나일 수 있습니다.  
   
 - 상수. 해당 값은 디자인 타임에 할당됩니다. 상수는 `static`(Visual Basic의 경우 `Shared`) 키워드를 통해 정의되지는 않지만 클래스의 정적 멤버입니다.  
@@ -250,42 +241,42 @@ ms.locfileid: "79398522"
   
  [!code-csharp[Conceptual.Types.Members.Fields#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.members.fields/cs/example.cs#1)]
  [!code-vb[Conceptual.Types.Members.Fields#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.members.fields/vb/example.vb#1)]  
-  
-<a name="Properties"></a>
-### <a name="properties"></a>속성  
+
+### <a name="properties"></a>속성
+
  속성은 형식의 값 또는 상태에 이름을 지정하고 속성의 값을 가져오거나 설정하는 데 사용하는 메서드를 정의합니다. 속성은 기본 형식, 기본 형식의 컬렉션, 사용자 정의 형식 또는 사용자 정의 형식의 컬렉션일 수 있습니다. 속성은 주로 형식의 공용 인터페이스를 형식의 실제 표시와 무관하게 유지하기 위해 사용합니다. 따라서 속성은 클래스에 직접 저장되지 않은 값을 반영하거나(예를 들어 속성이 계산된 값을 반환하는 경우) 값이 전용 필드에 할당되기 전에 유효성 검사를 수행할 수 있습니다. 다음 예제에서는 후자의 패턴을 보여 줍니다.  
   
  [!code-csharp[Conceptual.Types.Members.Properties#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.members.properties/cs/example.cs#1)]
  [!code-vb[Conceptual.Types.Members.Properties#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.members.properties/vb/example.vb#1)]  
   
  읽기 가능한 속성이 포함된 형식의 MSIL(Microsoft Intermediate Language)에는 속성 자체뿐만 아니라 `get_`*propertyname* 메서드도 포함되어 있으며 쓰기 가능한 속성이 포함된 형식의 MSIL에는 `set_`*propertyname* 메서드가 포함되어 있습니다.  
-  
-<a name="Methods"></a>
-### <a name="methods"></a>메서드  
+
+### <a name="methods"></a>메서드
+
  메서드는 형식에 대해 수행할 수 있는 작업을 설명합니다. 메서드의 시그니처에서는 모든 매개 변수 및 반환 값에 허용되는 형식을 지정합니다.  
   
  대부분의 메서드는 메서드 호출에 필요한 매개 변수 개수를 정확하게 정의하지만, 일부 메서드는 일정하지 않은 수의 매개 변수를 지원합니다. 이러한 메서드에 대해 선언된 최종 매개 변수는 <xref:System.ParamArrayAttribute> 특성으로 표시됩니다. 일반적으로 언어 컴파일러는 C#의 `params` 및 Visual Basic의 `ParamArray` 등과 같이 <xref:System.ParamArrayAttribute>를 명시적으로 사용할 필요가 없게 설정하는 키워드를 제공합니다.  
-  
-<a name="Constructors"></a>
-### <a name="constructors"></a>생성자  
+
+### <a name="constructors"></a>생성자
+
  생성자는 클래스 또는 구조체의 새 인스턴스를 만드는 특수한 메서드입니다. 다른 메서드와 마찬가지로 생성자는 매개 변수를 포함할 수 있지만 반환 값은 가지지 않습니다. 즉, `void`를 반환합니다.  
   
  클래스의 소스 코드에서 생성자를 명시적으로 정의하지 않은 경우 컴파일러는 매개 변수가 없는 생성자를 포함합니다. 그러나 클래스의 소스 코드에서 매개 변수가 있는 생성자만 정의하는 경우 Visual Basic 및 C# 컴파일러는 매개 변수가 없는 생성자를 생성하지 않습니다.  
   
  구조의 소스 코드에서 생성자를 정의하는 경우 해당 생성자에는 매개 변수가 있어야 합니다. 구조에서는 생성자(매개 변수가 없는 생성자)를 정의할 수 없으며 컴파일러는 구조 또는 다른 값 형식에 대해 매개 변수가 없는 생성자를 생성하지 않습니다. 모든 값 형식에는 암시적 매개 변수 없는 생성자가 있습니다. 이 생성자는 공용 언어 런타임에서 구현되며 구조의 모든 필드를 기본값으로 초기화합니다.  
-  
-<a name="Events"></a>
-### <a name="events"></a>이벤트  
+
+### <a name="events"></a>이벤트
+
  이벤트는 응답할 수 있는 인시던트를 정의하고 이벤트를 구독, 구독 취소 및 발생시키기 위한 메서드를 정의합니다. 이벤트는 주로 다른 형식에 상태 변경 내용을 알려주는 데 사용합니다. 자세한 내용은 [이벤트](../../../docs/standard/events/index.md)를 참조하세요.  
-  
-<a name="NestedTypes"></a>
-### <a name="nested-types"></a>중첩 형식  
+
+### <a name="nested-types"></a>중첩 형식
+
  중첩 형식은 다른 형식의 멤버인 형식을 나타냅니다. 중첩 형식은 포함하는 형식과 밀접하게 결합되어야 하고 일반 용도의 형식으로 사용하면 안 됩니다. 중첩 형식은 해당 선언 형식에서 중첩 형식의 인스턴스를 만들고 사용하며 중첩 형식의 사용이 공용 멤버에게 노출되지 않는 경우에 유용합니다.  
   
  중첩 형식은 일부 개발자에게 혼란을 줄 수 있으므로 불가피한 경우를 제외하고는 공개적으로 표시하지 않아야 합니다. 잘 디자인된 라이브러리에서 개발자는 개체를 인스턴스화하거나 변수를 선언할 때 중첩 형식을 거의 사용하지 않아야 합니다.  
 
-<a name="characteristics_of_type_members"></a>
-## <a name="characteristics-of-type-members"></a>형식 멤버의 특성  
+## <a name="characteristics-of-type-members"></a>형식 멤버의 특성
+
  공용 형식 시스템에서 형식 멤버는 다양한 특성을 가질 수 있지만 언어에서 이런 특성을 모두 지원할 필요는 없습니다. 다음 표에서는 멤버 특성에 대해 설명합니다.  
   
 |특성|적용 대상|설명|  
@@ -306,7 +297,7 @@ ms.locfileid: "79398522"
 > [!NOTE]
 > 반환 형식은 메서드 시그니처의 일부로 간주되지 않습니다. 즉, 메서드는 반환 형식만 다를 경우에는 오버로드될 수 없습니다.  
   
-### <a name="inheriting-overriding-and-hiding-members"></a>멤버 상속, 재정의 및 숨기기  
+### <a name="inherit-override-and-hide-members"></a>멤버 상속, 재정의 및 숨기기  
  파생된 형식에서는 기본 형식의 멤버를 모두 상속합니다. 즉, 파생된 형식에서 이러한 멤버를 정의하고 사용할 수 있습니다. 상속된 멤버의 동작 또는 품질을 다음과 같은 두 가지 방법으로 수정할 수 있습니다.  
   
 - 파생된 형식에서 동일한 시그니처를 가진 새 멤버를 정의하여 상속 멤버를 숨길 수 있습니다. 이는 이전의 공용 멤버를 전용 멤버로 변경하거나 `final`로 표시된 상속된 메서드에 대해 새로운 동작을 정의하기 위해 수행될 수 있습니다.  

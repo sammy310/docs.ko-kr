@@ -11,12 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-ms.openlocfilehash: e5815058898cac165e7a47d761ee86bb9c4cb940
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3e9c817006930a36ebdce5c5965d78f1721c7056
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73091598"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635149"
 ---
 # <a name="numerics-in-net"></a>.NET의 숫자
 
@@ -42,7 +42,7 @@ ms.locfileid: "73091598"
 <xref:System.BitConverter?displayProperty=nameWithType> 클래스를 사용하여 정수 값의 개별 비트를 사용할 수도 있습니다.  
 
 > [!NOTE]  
-> 부호 없는 정수 형식은 CLS 규격이 아닙니다. 자세한 내용은 [언어 독립성 및 언어 독립적 구성 요소](language-independence-and-language-independent-components.md)를 참조하세요.
+> 부호 없는 정수 형식은 CLS 규격이 아닙니다. 자세한 내용은 [언어 독립성 및 언어 독립적 구성 요소](language-independence-and-language-independent-components.md)을 참조하십시오.
 
 ## <a name="biginteger"></a>BigInteger
 
@@ -52,7 +52,7 @@ ms.locfileid: "73091598"
 
 .NET에는 다음 표에 나열된 세 가지 기본 부동 소수점 형식이 포함되어 있습니다.
   
-|형식|크기(바이트)|근사 범위|자릿수|  
+|형식|크기(바이트)|근사 범위|전체 자릿수|  
 |----------|--------|---------------------|--------------------|  
 |<xref:System.Single?displayProperty=nameWithType>|4|±1.5 x 10<sup>−45</sup> ~ ±3.4 x 10<sup>38</sup>|~6-9개 자릿수|  
 |<xref:System.Double?displayProperty=nameWithType>|8|±5.0 × 10<sup>−324</sup> ~ ±1.7 × 10<sup>308</sup>|~15-17개 자릿수|  
@@ -60,11 +60,11 @@ ms.locfileid: "73091598"
   
 <xref:System.Single> 및 <xref:System.Double> 형식은 숫자가 아니고 무한대임을 나타내는 특수 값을 지원합니다. 예를 들어 <xref:System.Double> 형식은 <xref:System.Double.NaN?displayProperty=nameWithType>, <xref:System.Double.NegativeInfinity?displayProperty=nameWithType> 및 <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>와 같은 값을 제공합니다. <xref:System.Double.IsNaN%2A?displayProperty=nameWithType>, <xref:System.Double.IsInfinity%2A?displayProperty=nameWithType>, <xref:System.Double.IsPositiveInfinity%2A?displayProperty=nameWithType> 및 <xref:System.Double.IsNegativeInfinity%2A?displayProperty=nameWithType> 메서드를 사용하여 이러한 특수 값을 테스트합니다.
 
-각 부동 소수점 형식은 표준 산술 연산자 집합을 지원합니다. <xref:System.Math?displayProperty=nameWithType> 클래스는 광범위한 수학 함수 집합에 대한 메서드를 제공합니다. .NET Core 2.0 이상에는 <xref:System.MathF?displayProperty=nameWithType> 형식의 인수를 허용하는 메서드를 제공하는 <xref:System.Single> 클래스가 포함되어 있습니다.
+각 부동 소수점 형식은 표준 산술 연산자 집합을 지원합니다. <xref:System.Math?displayProperty=nameWithType> 클래스는 광범위한 수학 함수 집합에 대한 메서드를 제공합니다. .NET Core 2.0 이상에는 <xref:System.Single> 형식의 인수를 허용하는 메서드를 제공하는 <xref:System.MathF?displayProperty=nameWithType> 클래스가 포함되어 있습니다.
 
-<xref:System.Double> 클래스를 사용하여 <xref:System.Single> 및 <xref:System.BitConverter?displayProperty=nameWithType> 값의 개별 비트를 사용할 수도 있습니다. <xref:System.Decimal?displayProperty=nameWithType> 구조체에는 10진수 값의 개별 비트를 사용하기 위한 고유한 메서드인 <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> 및 <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=nameWithType>와 몇몇 추가적인 수치 연산을 수행하기 위한 고유한 메서드 집합이 있습니다.
+<xref:System.BitConverter?displayProperty=nameWithType> 클래스를 사용하여 <xref:System.Double> 및 <xref:System.Single> 값의 개별 비트를 사용할 수도 있습니다. <xref:System.Decimal?displayProperty=nameWithType> 구조체에는 10진수 값의 개별 비트를 사용하기 위한 고유한 메서드인 <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> 및 <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=nameWithType>와 몇몇 추가적인 수치 연산을 수행하기 위한 고유한 메서드 집합이 있습니다.
   
-<xref:System.Double> 및 <xref:System.Single> 형식은 기본적으로 정확하지 않은 값(예: 두 별 사이의 거리) 및 정밀도가 높고 반올림 오류가 적을 필요 없는 애플리케이션에 사용해야 합니다. 정밀도가 더 높아야 하고 반올림 오류가 최소화되어야 하는 경우에는 <xref:System.Decimal?displayProperty=nameWithType> 형식을 사용해야 합니다.
+<xref:System.Double> 및 <xref:System.Single> 형식은 기본적으로 정확하지 않은 값(예: 두 별 사이의 거리) 및 정밀도가 높고 반올림 오류가 적을 필요 없는 애플리케이션에 사용해야 합니다. 정밀도가 더 높아야 하고 반올림 오류가 최소화되어야 하는 경우에는 <xref:System.Decimal?displayProperty=nameWithType> 형식을 사용하세요.
 
 > [!NOTE]
 > <xref:System.Decimal> 형식을 사용하면 반올림이 필요하지 않습니다. 오히려 반올림으로 인한 오류를 최소화합니다.
@@ -93,7 +93,6 @@ ms.locfileid: "73091598"
   
 SIMD 사용 형식은 SIMD 미사용 하드웨어 또는 JIT 컴파일러와 함께 사용할 수 있는 방식으로 구현됩니다. SIMD 지침을 활용하려면 .NET Core 및 .NET Framework 4.6 이상 버전에 포함된 RyuJIT 컴파일러를 사용하는 런타임을 통해 64비트 앱을 실행해야 합니다. 64비트 프로세서를 대상으로 지정할 때 SIMD 지원을 추가합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [애플리케이션 주요 사항](application-essentials.md)
 - [표준 숫자 형식 문자열](base-types/standard-numeric-format-strings.md)

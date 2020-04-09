@@ -1,7 +1,7 @@
 ---
 title: 멤버 액세스 연산자 및 식 - C# 참조
 description: 형식 멤버에 액세스하는 데 사용하는 C# 연산자에 대해 알아봅니다.
-ms.date: 09/18/2019
+ms.date: 03/31/2020
 author: pkulikov
 f1_keywords:
 - ._CSharpKeyword
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: da2ca4517bd007678d74ae9b76e10cad4c2696b4
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: a132e527deadcffb4826c1965987fc09da470a09
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546642"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635309"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>멤버 액세스 연산자 및 식(C# 참조)
 
@@ -130,6 +130,12 @@ A?.B?[C];
 
 또한 앞의 예제에서는 [null 병합 연산자 `??`](null-coalescing-operator.md)를 사용하여 null 조건부 연산 결과가 `null`인 경우 평가할 대체 식을 지정합니다.
 
+`a.x` 또는 `a[x]`가 null을 허용하지 않는 값 형식인 경우 `T`, `a?.x` 또는 `a?[x]`는 해당하는 [null 허용 값 형식](../builtin-types/nullable-value-types.md) `T?`입니다. `T` 형식의 식이 필요하면 다음 예제와 같이 null 병합 연산자 `??`를 null 조건식에 적용합니다.
+
+[!code-csharp-interactive[null-conditional with null-coalescing](snippets/MemberAccessOperators.cs#NullConditionalWithNullCoalescing)]
+
+앞의 예제에서 `??` 연산자를 사용하지 않는 경우 `numbers?.Length < 2`는 `numbers`가 `null`일 때 `false`로 평가됩니다.
+
 Null 조건부 멤버 액세스 연산자 `?.`를 Elvis 연산자라고도 합니다.
 
 ### <a name="thread-safe-delegate-invocation"></a>스레드로부터 안전한 대리자 호출
@@ -209,7 +215,7 @@ C# 8.0 이상에서 사용 가능한 연산자 `..`은 인덱스 범위의 시�
 
 인덱스 및 범위에 대한 자세한 내용은 [기능 제안 노트](~/_csharplang/proposals/csharp-8.0/ranges.md)를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 연산자](index.md)
