@@ -81,6 +81,8 @@
           href: how-to-guides/how-to-use-the-automl-api.md
     - name: API
       items:
+        - name: 추가 종속성 설치
+          href: how-to-guides/install-extra-dependencies.md
         - name: 데이터 로드
           href: how-to-guides/load-data-ml-net.md
         - name: 데이터 준비
