@@ -2,12 +2,12 @@
 title: 진단에 Windows Management Instrumentation 사용
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: 0c803e3988f7a63980d991190db87c263c992b80
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b14f9401266bdf7edccd7dca12cb818cdd2cb348
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185684"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121543"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>진단에 Windows Management Instrumentation 사용
 WCF(Windows 통신 재단)는 WMI(WMI) 공급자를 통해 런타임에 서비스의 검사 데이터를 노출합니다.  
@@ -141,7 +141,7 @@ WCF(Windows 통신 재단)는 WMI(WMI) 공급자를 통해 런타임에 서비�
     ```  
   
 ### <a name="granting-access-to-arbitrary-users-or-groups"></a>임의의 사용자 또는 그룹에 권한 부여  
- 이 단원의 예제에서는 모든 로컬 사용자에게 WMI 공급자 등록 권한을 부여합니다. 기본적으로 제공되지 않는 사용자 또는 그룹에게 권한을 부여하려면 해당 사용자 또는 그룹의 SID(보안 식별자)를 가져와야 합니다. 임의 사용자의 SID를 가져오는 간단한 방법은 없지만, 원하는 사용자로 로그온한 후에 다음 셸 명령을 실행하는 방법을 사용할 수 있습니다.  
+ 이 단원의 예제에서는 모든 로컬 사용자에게 WMI 공급자 등록 권한을 부여합니다. 기본 제공되지 않은 사용자 또는 그룹에 대한 액세스 권한을 부여하려면 해당 사용자 또는 그룹의 SID(보안 식별자)를 얻어야 합니다. 임의 사용자의 SID를 가져오는 간단한 방법은 없지만, 원하는 사용자로 로그온한 후에 다음 셸 명령을 실행하는 방법을 사용할 수 있습니다.  
   
 ```console
 Whoami /user  
@@ -152,10 +152,11 @@ Whoami /user
 ## <a name="accessing-remote-wmi-object-instances"></a>원격 WMI 개체 인스턴스 액세스  
  원격 컴퓨터에서 WCF WMI 인스턴스에 액세스해야 하는 경우 액세스에 사용하는 도구에서 패킷 개인 정보를 사용하도록 설정해야 합니다. 다음 단원에서는 WMI CIM Studio, Windows Management Instrumentation Tester 및 .NET SDK 2.0을 사용하여 이러한 작업을 수행하는 방법에 대해 설명합니다.  
   
-### <a name="wmi-cim-studio"></a>WMI CIM Studio  
- [WMI 관리 도구를](https://go.microsoft.com/fwlink/?LinkId=95185)설치한 경우 WMI CIM Studio를 사용하여 WMI 인스턴스에 액세스할 수 있습니다. 도구는 다음 폴더에 있습니다.  
+### <a name="wmi-cim-studio"></a>WMI CIM Studio
+
+WMI 관리 도구를 설치한 경우 WMI CIM Studio를 사용하여 WMI 인스턴스에 액세스할 수 있습니다. 도구는 다음 폴더에 있습니다.
   
- **%윈디어%\프로그램 파일\WMI 도구\\**  
+*%윈디어%\프로그램 파일\WMI 도구\\*
   
 1. **네임스페이스에 연결:** 창에서 **루트\ServiceModel을** 입력하고 **확인을 클릭합니다.**  
   
