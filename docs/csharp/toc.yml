@@ -1595,7 +1595,7 @@
         - name: 멤버 액세스 연산자 및 식
           href: language-reference/operators/member-access-operators.md
           displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation, ^, index from end, hat, .., range'
-        - name: 형식 테스트 및 캐스트 연산자
+        - name: 형식 테스트 연산자 및 캐스트 식
           href: language-reference/operators/type-testing-and-cast.md
           displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), explicit, conversion'
         - name: 사용자 정의 전환 연산자
