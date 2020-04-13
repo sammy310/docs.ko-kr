@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 95b7f266654bbbcdcd0f81e3aa11cfc94af9f0e5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a277215d438b5f6b0bbbef72e5e0121b6ce41990
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77215245"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121476"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>부동 소수점 숫자 형식(C# 참조)
 
@@ -107,7 +107,7 @@ Console.WriteLine(m);  // output: 1500000
 
 ## <a name="conversions"></a>변환
 
-부동 소수점 숫자 형식 간의 암시적 변환은 `float`에서 `double`로의 암시적 변환 하나뿐입니다. 그러나 [명시적 캐스트](../operators/type-testing-and-cast.md#cast-operator-)를 사용하여 부동 소수점 형식을 다른 부동 소수점 형식으로 변환할 수 있습니다. 자세한 내용은 [기본 제공 숫자 변환](numeric-conversions.md)을 참조하세요.
+부동 소수점 숫자 형식 간의 암시적 변환은 `float`에서 `double`로의 암시적 변환 하나뿐입니다. 그러나 [명시적 캐스트](../operators/type-testing-and-cast.md#cast-expression)를 사용하여 부동 소수점 형식을 다른 부동 소수점 형식으로 변환할 수 있습니다. 자세한 내용은 [기본 제공 숫자 변환](numeric-conversions.md)을 참조하세요.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 

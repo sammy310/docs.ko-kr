@@ -11,12 +11,12 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: ab5eb1679f846bf0e25d90a4d0e0a71f0bdb0096
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 15f5e9ccb1396277229ba935381812700f63ece8
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847713"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121152"
 ---
 # <a name="enumeration-types-c-reference"></a>열거형(C# 참조)
 
@@ -66,7 +66,7 @@ C# 7.3부터 기본 클래스 제약 조건(`System.Enum`열거형 제약 조건
 
 ## <a name="conversions"></a>변환
 
-모든 열거형 형식에는 열거형 형식과 기본 정수 형식 간의 명시적 변환이 있습니다. 열거형 값을 기본 형식에 [캐스트](../operators/type-testing-and-cast.md#cast-operator-)하는 경우, 그 결과는 열거형 멤버의 연결된 정수 값입니다.
+모든 열거형 형식에는 열거형 형식과 기본 정수 형식 간의 명시적 변환이 있습니다. 열거형 값을 기본 형식에 [캐스트](../operators/type-testing-and-cast.md#cast-expression)하는 경우, 그 결과는 열거형 멤버의 연결된 정수 값입니다.
 
 [!code-csharp[enum conversions](snippets/EnumType.cs#Conversions)]
 

@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: a132e527deadcffb4826c1965987fc09da470a09
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 90066b1e9c219f66fc0c76423679e81aa3fa6770
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635309"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81120989"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>멤버 액세스 연산자 및 식(C# 참조)
 
@@ -170,7 +170,7 @@ if (handler != null)
 
 또한 괄호를 사용하여 식에서 연산을 계산하는 순서를 조정합니다. 자세한 내용은 [C# 연산자](index.md)를 참조하세요.
 
-명시적 형식 변환을 수행하는 [캐스트 식](type-testing-and-cast.md#cast-operator-)도 괄호를 사용합니다.
+명시적 형식 변환을 수행하는 [캐스트 식](type-testing-and-cast.md#cast-expression)도 괄호를 사용합니다.
 
 ## <a name="index-from-end-operator-"></a>끝부터 인덱스 연산자 ^
 

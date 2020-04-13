@@ -3,12 +3,12 @@ title: Azure용 클라우드 네이티브 .NET 애플리케이션 설계
 description: Azure의 컨테이너, 마이크로 서비스 및 서버리스 기능을 활용하여 클라우드 네이티브 애플리케이션을 빌드하는 방법을 보여 주는 가이드입니다.
 author: ardalis
 ms.date: 03/07/2019
-ms.openlocfilehash: 7f14a690d0153edc43f0ce7f4e91c9e9cd2c6858
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cf3be07f0d37aacf4f0252ef2f4d922b7be93eee
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71696788"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989066"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Azure용 클라우드 네이티브 .NET 애플리케이션 설계
 
@@ -26,15 +26,15 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2019 by Microsoft Corporation
+Copyright &copy; 2019 by Microsoft Corporation
 
 All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 서면 허가 없이는 어떠한 형식이나 방법으로도 복제하거나 전송할 수 없습니다.
 
-이 가이드는 작성자의 견해와 의견을 “있는 그대로” 제공하고 전달합니다. URL 및 기타 인터넷 웹 사이트 참조를 비롯하여 이 가이드에 제공된 견해, 의견 및 정보는 예고 없이 변경될 수 있습니다.
+이 가이드는 작성자의 견해와 의견을 "있는 그대로" 제공하고 전달합니다. URL 및 기타 인터넷 웹 사이트 참조를 비롯하여 이 가이드에 제공된 견해, 의견 및 정보는 예고 없이 변경될 수 있습니다.
 
 여기에 설명된 일부 예제는 예시 용도로만 제공되며 실제 데이터가 아닙니다. 실제로 연관시키거나 관련시키려고 의도하거나 추론해서는 안 됩니다.
 
-“상표” 웹 페이지의 https://www.microsoft.com 에 나열된 Microsoft 및 상표는 Microsoft 그룹 계열사의 상표입니다.
+"상표" 웹 페이지의 https://www.microsoft.com 에 나열된 Microsoft 및 상표는 Microsoft 그룹 계열사의 상표입니다.
 
 Mac 및 macOS는 Apple Inc.의 상표입니다.
 
@@ -46,7 +46,7 @@ Docker 고래 로고는 Docker, Inc.의 등록 상표로, 허가하에 사용됩
 
 > **Steve "ardalis" Smith** - 소프트웨어 설계자이자 강사 - [Ardalis.com](https://ardalis.com)
 >
-> **Rob Vettor** -Microsoft - 수석 클라우드 시스템 설계자/IP 설계자 - [RobVettor.com](https://robvettor.com)
+> **Rob Vettor** - Microsoft - 수석 클라우드 시스템 설계자/IP 설계자 - [thinkingincloudnative.com](http://thinkingincloudnative.com/about/)
 
 참가자 및 검토자:
 

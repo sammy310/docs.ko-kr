@@ -3,12 +3,12 @@ title: 컴파일 구성 설정
 description: .NET Core 앱에 대해 JIT 컴파일러가 작동하는 방식을 구성하는 런타임 설정에 대해 알아봅니다.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: adf1f01dba7387b89ee56784e33653d6a132c0e3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac51aa13254b2f2b1fdd8d1dd9c52559831a1659
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77092891"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989118"
 ---
 # <a name="run-time-configuration-options-for-compilation"></a>컴파일을 위한 런타임 구성 옵션
 
@@ -19,7 +19,7 @@ ms.locfileid: "77092891"
   - 두 번째 계층은 백그라운드에서 최적화된 코드를 생성합니다("JIT 최적화").
 - .NET Core 3.0 이상에서는 기본적으로 계층화된 컴파일이 사용하도록 설정됩니다.
 - .NET Core 2.1 및 2.2에서는 기본적으로 계층화된 컴파일이 사용하지 않도록 설정됩니다.
-- 자세한 내용은 [계층화된 컴파일 가이드](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation-guide.md)를 참조하세요.
+- 자세한 내용은 [계층화된 컴파일 가이드](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation.md)를 참조하세요.
 
 | | 설정 이름 | 값 |
 | - | - | - |

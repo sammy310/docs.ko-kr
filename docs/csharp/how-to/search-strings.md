@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: 15ea77d13a93d88bd996a22b6fe1aaad81df572d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f3e6d95eb4a01d48fac5b5e2c951b9c346206004
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74959704"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121499"
 ---
 # <a name="how-to-search-strings"></a>문자열 검색 방법
 
@@ -72,7 +72,7 @@ ms.locfileid: "74959704"
 
 이 단일 검색 패턴은 많은 유효한 문자열과 일치합니다. 단일 텍스트 문자열이 아닌 패턴을 검색하거나 유효성을 확인하기 위해 정규식을 사용하는 것이 좋습니다.
 
-[GitHub 리포지토리](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)의 코드를 확인하여 이러한 샘플을 시험해 볼 수 있습니다. 또는 샘플을 [zip 파일로](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip) 다운로드할 수 있습니다.
+[GitHub 리포지토리](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings)의 코드를 확인하여 이러한 샘플을 시험해 볼 수 있습니다. 또는 샘플을 [zip 파일로](../../../samples/snippets/csharp/how-to/strings.zip) 다운로드할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 

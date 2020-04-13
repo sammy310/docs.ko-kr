@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: 36bfa46cebd2b35c4985dfc23dbe84f8f5dc9201
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 658043f8d5e149064f6da328657b2ccef9b5da94
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846319"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121437"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! (null-forgiving) 연산자(C# 참조)
 
@@ -19,7 +19,7 @@ C# 8.0 이상에서 사용할 수 있는 단항 후위 `!` 연산자는 null-for
 
 null-forgiving 연산자는 런타임에 영향을 주지 않습니다. 식의 null 상태를 변경하여 컴파일러의 정적 흐름 분석에만 영향을 줍니다. 런타임에서 `x!` 식은 기본 식 `x`의 결과로 계산됩니다.
 
-nullable 참조 형식 기능에 대한 자세한 내용은 [nullable 참조 형식](../../nullable-references.md)을 참조하세요.
+nullable 참조 형식 기능에 대한 자세한 내용은 [nullable 참조 형식](../builtin-types/nullable-reference-types.md)을 참조하세요.
 
 ## <a name="examples"></a>예
 

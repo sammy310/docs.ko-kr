@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e609b8006846cd202a6a7eeec2529cf1fbb09e7c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0be59258df10aa13920551f011d68bc8efe20b93
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937125"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888134"
 ---
 ### <a name="duplicated-apis-removed-from-windows-forms"></a>Windows Forms에서 중복된 API가 제거되었습니다.
 
@@ -12,7 +12,7 @@ ms.locfileid: "75937125"
 
 #### <a name="change-description"></a>변경 내용 설명
 
-.NET Core 3.0 미리 보기 4가 <xref:System.Windows.Forms?displayProperty=fullName> 네임스페이스에 이미 있던 <xref:System.ComponentModel.Design?displayProperty=fullName> 네임스페이스의 여러 형식을 잘못 복제했습니다. .NET Core 3.0 RC1부터 이러한 중복된 형식은 더 이상 사용할 수 없습니다. 다음 표에서는 원래 형식과 중복된 형식을 보여줍니다.
+.NET Core 3.0 미리 보기 4가 <xref:System.ComponentModel.Design?displayProperty=fullName> 네임스페이스에 이미 있던 <xref:System.Windows.Forms?displayProperty=fullName> 네임스페이스의 여러 형식을 잘못 복제했습니다. .NET Core 3.0 RC1부터 이러한 중복된 형식은 더 이상 사용할 수 없습니다. 다음 표에서는 원래 형식과 중복된 형식을 보여줍니다.
 
 > [!div class="mx-tdCol2BreakAll"]
 > |원래 형식|중복된 형식|
@@ -37,7 +37,7 @@ Windows Forms
 
 #### <a name="affected-apis"></a>영향을 받는 API
 
-- API 분석을 통해 검색할 수 없습니다.
+- 없음
 
 <!--
 

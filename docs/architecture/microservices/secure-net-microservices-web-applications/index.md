@@ -3,12 +3,12 @@ title: .NET 마이크로 서비스 및 웹 애플리케이션 보안
 description: .NET 마이크로 서비스 및 웹 애플리케이션 보안 - ASP.NET Core 웹 애플리케이션의 인증 옵션을 살펴봅니다.
 author: mjrousos
 ms.date: 01/30/2020
-ms.openlocfilehash: 0ac2591f8650e9f8cf29560735a9ec803d29ee4f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 56ebd95c8a24c7c8d30d3c6acef6650cb63383c6
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77628334"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988117"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>.NET 마이크로 서비스 및 웹 애플리케이션 보안
 
@@ -83,7 +83,7 @@ ASP.NET Core ID를 통해 다음과 같은 몇 가지 시나리오를 사용할 
 
 - UserManager 형식(userManager.CreateAsync)을 사용하여 새 사용자 정보를 만듭니다.
 
-- SignInManager 형식을 사용하여 사용자를 인증합니다. 직접 로그인하려면 `signInManager.SignInAsync`를 사용하거나, 사용자의 암호가 올바른지 확인한 다음, 로그인하려면 `signInManager.PasswordSignInAsync`를 사용할 수 있습니다.
+- SignInManager 형식을 사용하여 사용자를 인증합니다. 직접 로그인하려면 `signInManager.SignInAsync`를 사용하거나, 사용자의 암호가 올바른지 확인한 다음에 로그인하려면 `signInManager.PasswordSignInAsync`를 사용할 수 있습니다.
 
 - 브라우저의 후속 요청에 로그인한 사용자의 ID와 클레임이 포함되도록 (ASP.NET Core ID 미들웨어에서 읽는) 쿠키에 저장된 정보를 기반으로 사용자를 식별합니다.
 

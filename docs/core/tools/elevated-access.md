@@ -3,12 +3,12 @@ title: dotnet 명령에 대한 관리자 액세스 권한
 description: 관리자 액세스 권한이 필요한 dotnet 명령에 대한 모범 사례를 알아봅니다.
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: 4aff9badfa8ad9b83adc4496d4ebd6df29252e36
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f99e0b257772e0a73d4945f1129997d1d3308ed2
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156766"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805795"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>dotnet 명령에 대한 관리자 액세스 권한
 
@@ -18,6 +18,7 @@ ms.locfileid: "78156766"
 
 - [dotnet 도구 설치](dotnet-tool-install.md)와 같은 `dotnet tool` 명령.
 - `dotnet run --no-build`
+- `dotnet-core-uninstall`
 
 상승된 다른 명령을 실행하지 않은 것이 좋습니다. 특히 [dotnet restore](dotnet-restore.md), [dotnet 빌드](dotnet-build.md) 및 [dotnet 실행](dotnet-run.md)과 같이 MSBuild를 사용하는 명령으로 권한 상승은 권장하지 않습니다. 기본 문제는 사용자가 dotnet 명령을 실행한 후 루트 계정과 제한된 계정 간에 앞뒤로 전환될 때 사용 권한 관리 문제입니다. 제한된 사용자로 루트 사용자가 빌드한 파일에 액세스할 수 없다는 것을 알 수 있습니다. 이 상황을 해결하는 방법이 있지만 처음부터 시작할 필요는 없습니다.
 

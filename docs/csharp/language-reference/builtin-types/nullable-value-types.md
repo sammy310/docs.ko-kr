@@ -4,19 +4,19 @@ description: C# nullable 값 형식 및 사용 방법 알아보기
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: a84b3d60269491846b783e5046a84a1d14e258a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c13ef6a091ec6aebd4608c5ed8d2c03b067c7312
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398276"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888074"
 ---
 # <a name="nullable-value-types-c-reference"></a>Nullalbe 값 형식(C# 참조)
 
 *Null 허용 값 형식* `T?`는 기본 [값 형식](value-types.md) `T`의 모든 값과 추가 [null](../keywords/null.md) 값을 나타냅니다. 예를 들어 `bool?` 변수에는 다음 세 가지 값 중 하나를 할당할 수 있습니다. `true`, `false`, `null`. 기본 값 형식 `T`는 null 허용 값 형식 자체일 수 없습니다.
 
 > [!NOTE]
-> C# 8.0에서는 nullable 참조 형식 기능을 소개합니다. 자세한 내용은 [nullable 참조 형식](../../nullable-references.md)을 참조하세요. Null 허용 값 형식은 C# 2부터 사용할 수 있습니다.
+> C# 8.0에서는 nullable 참조 형식 기능을 소개합니다. 자세한 내용은 [nullable 참조 형식](nullable-reference-types.md)을 참조하세요. Null 허용 값 형식은 C# 2부터 사용할 수 있습니다.
 
 Null 허용 값 형식은 제네릭 <xref:System.Nullable%601?displayProperty=nameWithType> 구조체의 인스턴스입니다. 서로 교환 가능한 형식인 `T` 또는 `Nullable<T>` 중 하나에서 기본 값 형식 `T?`의 null 허용 값 형식을 참조할 수 있습니다.
 
@@ -120,7 +120,7 @@ Null 허용 값 형식 `T?`의 인스턴스는 다음과 같이 [box](../../prog
 [!code-csharp-interactive[whether an instance is of a nullable type](snippets/NullableValueTypes.cs#IsInstanceNullable)]
 
 > [!NOTE]
-> 이 섹션에서 설명하는 방법은 [nullable 참조 형식](../../nullable-references.md)의 경우에는 적용되지 않습니다.
+> 이 섹션에서 설명하는 방법은 [nullable 참조 형식](nullable-reference-types.md)의 경우에는 적용되지 않습니다.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
@@ -139,4 +139,4 @@ Null 허용 값 형식 `T?`의 인스턴스는 다음과 같이 [box](../../prog
 - <xref:System.Nullable%601?displayProperty=nameWithType>
 - <xref:System.Nullable?displayProperty=nameWithType>
 - <xref:System.Nullable.GetUnderlyingType%2A?displayProperty=nameWithType>
-- [nullable 참조 형식](../../nullable-references.md)
+- [nullable 참조 형식](nullable-reference-types.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 34c34865a2feece5fe037daeb035292aafd015b9
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 60e69a8ef55484e3b04f1674c35a1c5dadfa3b7c
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249359"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121003"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>패턴 일치와 is 및 as 연산자를 사용하여 안전하게 캐스트하는 방법
 
@@ -37,4 +37,4 @@ ms.locfileid: "80249359"
 
 이 코드를 패턴 일치 코드와 비교하여 볼 수 있듯이, 패턴 일치 구문은 테스트와 할당을 단일 명령문으로 결합함으로써 더욱 강력한 기능을 제공합니다. 가능할 때마다 패턴 일치 구문을 사용합니다.
 
-[GitHub 리포지토리](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/safelycast)의 코드를 확인하여 이러한 샘플을 시험해 볼 수 있습니다. 또는 샘플을 [zip 파일로](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/safelycast.zip) 다운로드할 수 있습니다.
+[GitHub 리포지토리](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/safelycast)의 코드를 확인하여 이러한 샘플을 시험해 볼 수 있습니다. 또는 샘플을 [zip 파일로](../../../samples/snippets/csharp/how-to/safelycast.zip) 다운로드할 수 있습니다.

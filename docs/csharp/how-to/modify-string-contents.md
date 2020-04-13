@@ -3,12 +3,12 @@ title: 문자열 내용 수정 방법 - C# 가이드
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: ecedd9a9027aa925c753f8e187d611b19d3db991
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 260e4022c514db0cee3c1459b9d746a1c8e2addd
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77543263"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121128"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>C\#에서 문자열 내용을 수정하는 방법
 
@@ -70,7 +70,7 @@ ms.locfileid: "77543263"
 
 안전하지 않은 코드를 사용하여 고정 블록의 문자열을 수정할 수 있지만 문자열을 만든 후에는 문자열 내용을 수정하지 않는 것이 **좋습니다**. 그렇게 하면 예측할 수 없는 방식으로 작업이 중단되기 때문입니다. 예를 들어 다른 사용자가 자신이 소유하는 것과 동일한 내용이 포함된 문자열을 인턴하는 경우에는 복사본을 얻게 되며 해당 문자열을 수정하는 것으로 간주되지 않습니다.
 
-[GitHub 리포지토리](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)의 코드를 확인하여 이러한 샘플을 시험해 볼 수 있습니다. 또는 샘플을 [zip 파일로](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip) 다운로드할 수 있습니다.
+[GitHub 리포지토리](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings)의 코드를 확인하여 이러한 샘플을 시험해 볼 수 있습니다. 또는 샘플을 [zip 파일로](../../../samples/snippets/csharp/how-to/strings.zip) 다운로드할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 
