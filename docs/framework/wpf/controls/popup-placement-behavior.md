@@ -7,12 +7,12 @@ helpviewer_keywords:
 - placing popups [WPF]
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
-ms.openlocfilehash: 063b309ebaf0944787ce40725eed250e59f09dff
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1c377e62ffd334638031baee4d4831ac5a31acf3
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176762"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243260"
 ---
 # <a name="popup-placement-behavior"></a>Popup 배치 동작
 컨트롤은 <xref:System.Windows.Controls.Primitives.Popup> 응용 프로그램 위에 떠 있는 별도의 창에 콘텐츠를 표시합니다. 을 사용하여 컨트롤, <xref:System.Windows.Controls.Primitives.Popup> 마우스 또는 화면상대의 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>위치를 지정할 <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> 수 있습니다.  이러한 속성은 함께 작동하여 <xref:System.Windows.Controls.Primitives.Popup>의 위치를 유연하게 지정할 수 있습니다.  
@@ -205,4 +205,4 @@ ms.locfileid: "79176762"
   
 ## <a name="see-also"></a>참고 항목
 
-- [Popup Placement Sample](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS)(Popup 배치 샘플)
+- [Popup Placement Sample](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS)(Popup 배치 샘플)

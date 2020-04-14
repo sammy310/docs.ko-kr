@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: 7905d540e0f06dd2863cf80381210307e3021918
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c12579062b04cfb46e14d5c3d734a7c155f8d654
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183067"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278888"
 ---
 # <a name="wcf-client-overview"></a>WCF 클라이언트 개요
+
 이 섹션에서는 클라이언트 응용 프로그램이 수행하는 일, WCF(Windows 통신 재단) 클라이언트를 구성, 생성 및 사용하는 방법 및 클라이언트 응용 프로그램을 보호하는 방법에 대해 설명합니다.  
   
 ## <a name="using-wcf-client-objects"></a>WCF 클라이언트 개체 사용  
@@ -28,7 +29,7 @@ ms.locfileid: "79183067"
   
 4. WCF 클라이언트 개체를 닫습니다.  
   
- 다음 단원에서는 이러한 단계에 대해 설명하고 다음과 같은 문제를 간략하게 소개합니다.  
+다음 단원에서는 이러한 단계에 대해 설명하고 다음과 같은 문제를 간략하게 소개합니다.  
   
 - 오류 처리.  
   
@@ -70,7 +71,7 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
   
  생성자 중 하나를 사용하여 이 클래스를 로컬 개체로 만든 다음 구성하여 `ISampleService` 형식 서비스에 연결하는 데 사용할 수 있습니다.  
   
- 먼저 WCF 클라이언트 개체를 만든 다음 사용하고 단일 try/catch 블록 내에서 닫는 것이 좋습니다. 특정 오류 모드에서 `using` 예외를 마스크할 수 있으므로 명령문(Visual`Using` Basic)을 사용해서는 안 됩니다. 자세한 내용은 다음 섹션을 참조하고 [닫기 및 중단을 사용하여 WCF 클라이언트 리소스를 해제합니다.](./samples/use-close-abort-release-wcf-client-resources.md)  
+ 먼저 WCF 클라이언트 개체를 만든 다음 사용하고 단일 try/catch 블록 내에서 닫는 것이 좋습니다. 특정 오류 모드에서 `using` 예외를 마스킹할 수 있으므로 명령문(Visual`Using` Basic)을 사용하지 마십시오. 자세한 내용은 다음 섹션을 참조하고 [닫기 및 중단을 사용하여 WCF 클라이언트 리소스를 해제합니다.](./samples/use-close-abort-release-wcf-client-resources.md)  
   
 ### <a name="contracts-bindings-and-addresses"></a>계약, 바인딩 및 주소  
  WCF 클라이언트 개체를 만들려면 먼저 클라이언트 개체를 구성해야 합니다. 특히 사용할 서비스 *끝점이* 있어야 합니다. 엔드포인트는 서비스 계약, 바인딩 및 주소의 조합입니다. 끝점에 대한 자세한 내용은 [끝점: 주소, 바인딩 및 계약을](./feature-details/endpoints-addresses-bindings-and-contracts.md)참조하십시오. 일반적으로 이 정보는 Svcutil.exe 도구가 생성하는 것과 같이 클라이언트 응용 프로그램 구성 파일의 [ \<끝점>](../configure-apps/file-schema/wcf/endpoint-of-client.md) 요소에 있으며 클라이언트 개체를 만들 때 자동으로 로드됩니다. 두 WCF 클라이언트 형식에는 프로그래밍 방식으로 이 정보를 지정할 수 있는 오버로드도 있습니다.  
@@ -79,7 +80,7 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
   
  [!code-xml[C_GeneratedCodeFiles#19](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/common/client.exe.config#19)]  
   
- 이 구성 파일은 `<client>` 요소에서 대상 엔드포인트를 지정합니다. 여러 대상 끝점 사용에 대한 자세한 <xref:System.ServiceModel.ClientBase%601.%23ctor%2A?displayProperty=nameWithType> 내용은 <xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A?displayProperty=nameWithType> 또는 생성자 참조.  
+ 이 구성 파일은 `<client>` 요소에서 대상 엔드포인트를 지정합니다. 여러 대상 끝점 사용에 대한 자세한 <xref:System.ServiceModel.ClientBase%601.%23ctor%2A> 내용은 <xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A> 또는 생성자 참조.  
   
 ## <a name="calling-operations"></a>작업 호출  
  클라이언트 개체를 만들고 구성한 후에는 try/catch 블록을 만들고 개체가 로컬인 경우와 동일한 방식으로 작업을 호출하고 WCF 클라이언트 개체를 닫습니다. 클라이언트 응용 프로그램이 첫 번째 작업을 호출하면 WCF가 자동으로 기본 채널을 열고 개체가 재활용될 때 기본 채널이 닫힙됩니다. 또는 다른 작업을 호출하기 이전 또는 이후에 채널을 명시적으로 열었다가 닫을 수 있습니다.  
@@ -127,7 +128,7 @@ Namespace Microsoft.ServiceModel.Samples
 End Interface  
 ```  
   
- 다음 코드 예제에서 설명하는 것처럼 WCF 클라이언트 개체를 만들고 해당 메서드를 호출하여 작업을 호출할 수 있습니다. WCF 클라이언트 개체의 열기, 호출 및 닫는 것은 단일 try/catch 블록 내에서 발생합니다. 자세한 내용은 [WCF 클라이언트를 사용하여 서비스에 액세스하고](./feature-details/accessing-services-using-a-client.md) [닫기 및 중단을 사용하여 WCF 클라이언트 리소스를 릴리스하는](./samples/use-close-abort-release-wcf-client-resources.md)것을 참조하세요.  
+ 다음 코드 예제에서 설명하는 것처럼 WCF 클라이언트 개체를 만들고 해당 메서드를 호출하여 작업을 호출할 수 있습니다. WCF 클라이언트 개체의 열기, 호출 및 닫는 단일 try/catch 블록 내에서 발생 합니다. 자세한 내용은 [WCF 클라이언트를 사용하여 서비스에 액세스하고](./feature-details/accessing-services-using-a-client.md) [닫기 및 중단을 사용하여 WCF 클라이언트 리소스를 릴리스하는](./samples/use-close-abort-release-wcf-client-resources.md)것을 참조하세요.  
   
  [!code-csharp[C_GeneratedCodeFiles#20](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#20)]  
   

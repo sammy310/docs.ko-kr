@@ -8,26 +8,27 @@ helpviewer_keywords:
 - resource files, .resx files
 - .resx files
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
-ms.openlocfilehash: 2bbca5712639e14370d090e95b78bb89eba134e4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3b84d77e4ac9b9889d1bc2f08e5ead6b81deecb0
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129918"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243039"
 ---
-# <a name="working-with-resx-files-programmatically"></a>프로그래밍 방식으로 .resx 파일 작업
-XML 리소스 파일(.resx)이 이름/값 쌍의 데이터가 뒤에 오는 특정 스키마를 따라야 하는 헤더를 비롯한 잘 정의된 XML로 구성되어야 하기 때문에 이러한 파일을 수동으로 만드는 경우 오류가 발생하기 쉽습니다. 또는 .NET 클래스 라이브러리의 형식 및 멤버를 사용하여 프로그래밍 방식으로 .resx 파일을 만들 수 있습니다. .NET 클래스 라이브러리를 사용하여 .resx 파일에 저장된 리소스를 가져올 수도 있습니다. 이 항목에서는 <xref:System.Resources> 네임스페이스의 형식 및 멤버를 사용하여 .resx 파일로 작업하는 방법에 대해 설명합니다.
+# <a name="work-with-resx-files-programmatically"></a>프로그래밍 방식으로 .resx 파일 작업
 
- 이 문서에서는 리소스를 포함하는 XML 파일(.resx)로 작업하는 방법을 설명합니다. 어셈블리에 포함된 이진 리소스 파일로 작업하는 방법에 대한 자세한 내용은 <xref:System.Resources.ResourceManager> 항목을 참조하세요.
+XML 리소스 파일(.resx)이 이름/값 쌍의 데이터가 뒤에 오는 특정 스키마를 따라야 하는 헤더를 비롯한 잘 정의된 XML로 구성되어야 하기 때문에 이러한 파일을 수동으로 만드는 경우 오류가 발생하기 쉽습니다. 또는 .NET 클래스 라이브러리의 형식 및 멤버를 사용하여 프로그래밍 방식으로 .resx 파일을 만들 수 있습니다. .NET 클래스 라이브러리를 사용하여 .resx 파일에 저장된 리소스를 가져올 수도 있습니다. 이 문서에서는 <xref:System.Resources> namespace의 형식 및 멤버를 사용하여 .resx 파일로 작업하는 방법을 설명합니다.
+
+이 문서에서는 리소스가 포함된 XML(.resx) 파일작업에 대해 설명합니다. 어셈블리에 포함된 이진 리소스 파일 작업에 대한 <xref:System.Resources.ResourceManager>자세한 내용은 을 참조하십시오.
 
 > [!WARNING]
-> 프로그래밍 방식 이외의 방법을 통해 .resx 파일로 작업할 수도 있습니다. 리소스 파일을 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 프로젝트에 추가하면 Visual Studio에서는 .resx 파일을 만들고 유지 관리하기 위한 인터페이스를 제공하고 컴파일 시간에 자동으로 .resx 파일을 .resources 파일로 변환합니다. 텍스트 편집기를 사용하여 .resx 파일을 직접 조작할 수도 있습니다. 그러나 파일이 손상되지 않도록 파일에 저장된 이진 정보를 수정하지 않아야 합니다.
+> 프로그래밍 방식 이외의 방법을 통해 .resx 파일로 작업할 수도 있습니다. [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 프로젝트에 리소스 파일을 추가하면 Visual Studio는 .resx 파일을 만들고 유지 관리하는 인터페이스를 제공하고 컴파일 타임에 .resx 파일을 .resx 파일로 자동으로 변환합니다. 텍스트 편집기를 사용하여 .resx 파일을 직접 조작할 수도 있습니다. 그러나 파일이 손상되지 않도록 파일에 저장된 이진 정보를 수정하지 않아야 합니다.
 
 ## <a name="create-a-resx-file"></a>.resx 파일 만들기
 
 다음 단계에 따라 <xref:System.Resources.ResXResourceWriter?displayProperty=nameWithType> 클래스를 사용하여 프로그래밍 방식으로 .resx 파일을 만들 수 있습니다.
 
-1. <xref:System.Resources.ResXResourceWriter> 메서드를 호출하고 .resx 파일의 이름을 제공하여 <xref:System.Resources.ResXResourceWriter.%23ctor%28System.String%29?displayProperty=nameWithType> 개체를 인스턴스화합니다. 파일 이름에는 .resx 확장명이 포함되어야 합니다. <xref:System.Resources.ResXResourceWriter> 블록에서 `using` 개체를 인스턴스화하는 경우 3단계에서 <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> 메서드를 명시적으로 호출할 필요가 없습니다.
+1. <xref:System.Resources.ResXResourceWriter> 메서드를 호출하고 .resx 파일의 이름을 제공하여 <xref:System.Resources.ResXResourceWriter.%23ctor%28System.String%29> 개체를 인스턴스화합니다. 파일 이름에는 .resx 확장명이 포함되어야 합니다. <xref:System.Resources.ResXResourceWriter> 블록에서 `using` 개체를 인스턴스화하는 경우 3단계에서 <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> 메서드를 명시적으로 호출할 필요가 없습니다.
 
 2. 파일에 추가할 각 리소스에 대해 <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=nameWithType> 메서드를 호출합니다. 이 메서드의 오버로드를 사용하여 문자열, 개체 및 이진 데이터(바이트 배열)를 추가합니다. 리소스가 개체이면 serialize 가능해야 합니다.
 
@@ -38,13 +39,13 @@ XML 리소스 파일(.resx)이 이름/값 쌍의 데이터가 뒤에 오는 특�
 > [!WARNING]
 > 암호, 보안이 중요한 정보 또는 개인 데이터를 저장할 때는 리소스 파일을 사용하지 마세요.
 
-다음 예제에서는 문자열 6개, 아이콘 한 개 및 애플리케이션 정의 개체 2개( `Automobile` 개체 2개)를 저장하는 CarResources.resx라는 .resx 파일을 만듭니다. 이 예제에서 정의되고 인스턴스화된 `Automobile` 클래스는 <xref:System.SerializableAttribute> 특성으로 태그가 지정됩니다.
+다음 예제에서는 문자열 6개, 아이콘 한 개 및 애플리케이션 정의 개체 2개( `Automobile` 개체 2개)를 저장하는 CarResources.resx라는 .resx 파일을 만듭니다. 예제에서 정의되고 인스턴스화된 클래스는 `Automobile` <xref:System.SerializableAttribute> 특성으로 태그가 지정됩니다.
 
 [!code-csharp[Conceptual.Resources.ResX#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resx/cs/create1.cs#1)]
 [!code-vb[Conceptual.Resources.ResX#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resx/vb/create1.vb#1)]
 
 > [!TIP]
-> [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)를 사용하여 .resx 파일을 만들 수도 있습니다. 컴파일 타임에 Visual Studio에서는 [리소스 파일 생성기 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) 를 사용하여 .resx 파일을 이진 리소스 파일(.resources)로 변환하고 애플리케이션 어셈블리나 위성 어셈블리에도 포함합니다.
+> [Visual Studio를](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 사용하여 .resx 파일을 만들 수도 있습니다. 컴파일 타임에 Visual Studio에서는 [리소스 파일 생성기 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) 를 사용하여 .resx 파일을 이진 리소스 파일(.resources)로 변환하고 애플리케이션 어셈블리나 위성 어셈블리에도 포함합니다.
 
 .resx 파일은 런타임 실행 파일에 포함하거나 위성 어셈블리로 컴파일할 수 없습니다. [리소스 파일 생성기 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)를 사용하여 .resx 파일을 이진 리소스 파일(.resources)로 변환해야 합니다. 생성되는 .resources 파일은 애플리케이션 어셈블리나 위성 어셈블리에 포함될 수 있습니다. 자세한 내용은 [Creating Resource Files](creating-resource-files-for-desktop-apps.md)을 참조하세요.
 
@@ -83,8 +84,8 @@ XML 리소스 파일(.resx)이 이름/값 쌍의 데이터가 뒤에 오는 특�
 
  **al** *resourcesFilename* **-out:** *assemblyFilename*
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [리소스 파일 만들기](creating-resource-files-for-desktop-apps.md)
-- [Resgen.exe(리소스 파일 생성기)](../tools/resgen-exe-resource-file-generator.md)
-- [Al.exe(어셈블리 링커)](../tools/al-exe-assembly-linker.md)
+- [Resgen.exe (리소스 파일 생성기)](../tools/resgen-exe-resource-file-generator.md)
+- [알.exe (어셈블리 링커)](../tools/al-exe-assembly-linker.md)

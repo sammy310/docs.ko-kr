@@ -8,14 +8,14 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: d5dd2d962c554b860fb6f68110945d56c4ee03ab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2326520039085beb5f5294e23db67b67f9d7d7da
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401030"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243273"
 ---
-# <a name="control-authoring-overview"></a>컨트롤 제작 개요
+# <a name="control-authoring-overview"></a>작성 개요 제어
 
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 컨트롤 모델의 확장성 덕분에 새 컨트롤을 만들 필요성이 상당히 줄어들었습니다. 그러나 어떤 경우에는 여전히 사용자 지정 컨트롤을 만들어야 할 수 있습니다. 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 사용자 지정 컨트롤과 다양한 컨트롤 제작 모델을 만들 필요성을 최소화시키는 기능에 대해 설명합니다. 또한 새 컨트롤을 만드는 방법을 설명합니다.
 
@@ -227,7 +227,7 @@ ms.locfileid: "79401030"
 
 #### <a name="defining-resources-at-the-element-level"></a>요소 수준에서 리소스 정의
 
-사용자 지정 리소스 사전을 만들어 컨트롤 리소스 사전과 병합하면 요소 수준에서 공유 리소스를 정의할 수 있습니다.  이 메서드를 사용하면 리소스 파일의 이름을 원하는 대로 지정할 수 있으며 컨트롤과 동일한 폴더에 배치할 수 있습니다. 요소 수준의 리소스는 간단한 문자열을 키로 사용할 수도 있습니다. 다음 예제는 <xref:System.Windows.Media.LinearGradientBrush> Dictionary1.xaml이라는 리소스 파일을 만듭니다.
+사용자 지정 리소스 사전을 만들고 컨트롤의 리소스 사전과 병합하여 요소 수준에서 공유 리소스를 정의할 수 있습니다.  이 메서드를 사용하면 리소스 파일의 이름을 원하는 대로 지정할 수 있으며 컨트롤과 동일한 폴더에 배치할 수 있습니다. 요소 수준의 리소스는 간단한 문자열을 키로 사용할 수도 있습니다. 다음 예제는 <xref:System.Windows.Media.LinearGradientBrush> Dictionary1.xaml이라는 리소스 파일을 만듭니다.
 
 [!code-xaml[SharedResources#1](~/samples/snippets/csharp/VS_Snippets_Wpf/SharedResources/CS/Dictionary1.xaml#1)]
 
@@ -264,7 +264,7 @@ ms.locfileid: "79401030"
 
 모든 테마에 대해 리소스를 정의할 필요는 없습니다. 특정 테마에 대해 리소스가 정의되지 않은 경우 컨트롤이 리소스에 대해 `Classic.xaml`을 확인합니다. 현재 테마에 해당하는 파일 또는 `Classic.xaml`에 리소스가 정의되지 않은 경우 컨트롤이 `generic.xaml`이라는 리소스 사전 파일에 있는 제네릭 리소스를 사용합니다.  `generic.xaml` 파일은 테마별 리소스 사전 파일과 같은 폴더에 있습니다. `generic.xaml`은 특정 Windows 테마에 해당하지 않지만 여전히 테마 수준의 사전입니다.
 
-테마 및 UI 자동화 지원 샘플이 있는 [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp) 또는 [Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic) NumericUpDown `NumericUpDown` 사용자 지정 컨트롤에는 컨트롤에 대한 두 가지 리소스 사전이 포함되어 있습니다.
+테마 및 UI 자동화 지원 샘플이 있는 [C#](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp) 또는 [Visual Basic](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic) NumericUpDown `NumericUpDown` 사용자 지정 컨트롤에는 컨트롤에 대한 두 가지 리소스 사전이 포함되어 있습니다.
 
 테마별 리소스 <xref:System.Windows.Controls.ControlTemplate> 사전 파일에 를 넣을 때 컨트롤에 대한 정적 생성자(정적 생성자)를 만들고 다음 예제와 같이 에 <xref:System.Windows.DependencyProperty.OverrideMetadata%28System.Type%2CSystem.Windows.PropertyMetadata%29> 메서드를 <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>호출해야 합니다.
 

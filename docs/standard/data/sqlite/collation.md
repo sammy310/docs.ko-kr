@@ -2,12 +2,12 @@
 title: 데이터 정렬
 ms.date: 12/13/2019
 description: 사용자 지정 정렬 시퀀스를 만드는 방법에 대해 알아봅니다.
-ms.openlocfilehash: b93c82a4ace154b8293b05effa8f9e9294fa7708
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 9879846cc191a62c4cb47a0fbaa47c59153ba61c
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79506543"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242974"
 ---
 # <a name="collation"></a>데이터 정렬
 
@@ -21,7 +21,7 @@ ms.locfileid: "79506543"
 
 ## <a name="custom-collation"></a>사용자 지정 데이터 정렬
 
-고유한 정렬 시퀀스를 정의하거나 을 사용하여 <xref:Microsoft.Data.Sqlite.SqliteConnection.CreateCollation%2A>기본 제공 시퀀스를 재정의할 수도 있습니다. 다음 예제에서는 유니코드 문자를 지원 하기 위해 NOCASE 데이터 정렬 재정의 를 보여 주다. [전체 샘플 코드는](https://github.com/dotnet/samples/blob/master/snippets/standard/data/sqlite/CollationSample/Program.cs) GitHub에서 사용할 수 있습니다.
+고유한 정렬 시퀀스를 정의하거나 을 사용하여 <xref:Microsoft.Data.Sqlite.SqliteConnection.CreateCollation%2A>기본 제공 시퀀스를 재정의할 수도 있습니다. 다음 예제에서는 유니코드 문자를 지원 하기 위해 NOCASE 데이터 정렬 재정의 를 보여 주다. [전체 샘플 코드는](https://github.com/dotnet/docs/blob/master/samples/snippets/standard/data/sqlite/CollationSample/Program.cs) GitHub에서 사용할 수 있습니다.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/CollationSample/Program.cs?name=snippet_Collation)]
 
@@ -39,5 +39,5 @@ LIKE 연산자의 구현 재정의에 대한 자세한 내용은 [사용자 정�
 
 ## <a name="see-also"></a>참고 항목
 
-* [사용자 정의 기능](user-defined-functions.md)
+* [사용자 정의 함수](user-defined-functions.md)
 * [SQL 구문](https://www.sqlite.org/lang.html)

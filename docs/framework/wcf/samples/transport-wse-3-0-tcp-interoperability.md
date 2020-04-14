@@ -2,12 +2,12 @@
 title: '전송: WSE 3.0 TCP 상호 운용성'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 55c59fe3a677d3aea8de62ae714e1007cfcbb86a
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: f799f3b6968f31472acc7752846bab34351648db
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121291"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278901"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>전송: WSE 3.0 TCP 상호 운용성
 WSE 3.0 TCP 상호 운용성 전송 샘플에서는 사용자 지정 Windows 통신 재단(WCF) 전송으로 TCP 이중 세션을 구현하는 방법을 보여 줍니다. 또한 채널 계층의 확장성을 사용하여 연결을 통해 기존에 배포된 시스템과 상호 작용할 수 있는 방법도 보여 줍니다. 다음 단계에서는 이 사용자 지정 WCF 전송을 빌드하는 방법을 보여 주며 다음과 같은 단계를 수행합니다.  
@@ -39,7 +39,7 @@ WSE 3.0 TCP 상호 운용성 전송 샘플에서는 사용자 지정 Windows 통
   
  <xref:System.ServiceModel.Channels.Message>를 바이트로 인코딩한 다음에는 연결을 통해 전송해야 합니다. 이렇게 하려면 메시지 경계를 정의하기 위한 시스템이 필요합니다. WSE 3.0은 [DIME](https://docs.microsoft.com/archive/msdn-magazine/2002/december/sending-files-attachments-and-soap-messages-via-dime) 버전을 프레임 프로토콜로 사용합니다. `WriteData`는 프레이밍 논리를 캡슐화하여 byte[]를 DIME 레코드의 집합으로 래핑합니다.  
   
- 메시지를 수신하는 논리도 매우 유사합니다. 한 가지 복잡한 문제는 소켓 읽기가 요청된 것보다 적은 수의 바이트를 반환할 수 있다는 사실을 다루는 것입니다. 메시지를 수신하기 위해 `WseTcpDuplexSessionChannel`은 연결이 끊긴 상태에서 바이트를 읽고 DIME 프레이밍을 디코딩한 다음 byte[]를 <xref:System.ServiceModel.Channels.MessageEncoder>로 변환하는 데 <xref:System.ServiceModel.Channels.Message>를 사용합니다.  
+ 메시지 수신 논리는 비슷합니다. 주요 복잡성은 소켓 읽기가 요청된 것보다 적은 바이트를 반환할 수 있다는 사실을 처리하는 것입니다. 메시지를 수신하기 위해 `WseTcpDuplexSessionChannel`은 연결이 끊긴 상태에서 바이트를 읽고 DIME 프레이밍을 디코딩한 다음 byte[]를 <xref:System.ServiceModel.Channels.MessageEncoder>로 변환하는 데 <xref:System.ServiceModel.Channels.Message>를 사용합니다.  
   
  기본 `WseTcpDuplexSessionChannel`은 연결된 소켓을 수신하는 것으로 가정합니다. 기본 클래스는 소켓 종료를 처리합니다. 소켓 닫기를 처리하는 세 위치는 다음과 같습니다.  
   
@@ -47,7 +47,7 @@ WSE 3.0 TCP 상호 운용성 전송 샘플에서는 사용자 지정 Windows 통
   
 - On[Begin]Close -- 소켓을 정상적으로 닫습니다(정상 닫기).  
   
-- session.CloseOutputSession -- 아웃바운드 데이터 스트림을 종료합니다(절반 닫기).  
+- 세션. CloseOutputSession -- 아웃바운드 데이터 스트림을 종료합니다(절반 닫기).  
   
 ## <a name="channel-factory"></a>채널 팩터리  
  TCP 전송을 작성하는 다음 단계는 클라이언트 채널을 위한 <xref:System.ServiceModel.Channels.IChannelFactory>의 구현을 만드는 것입니다.  
@@ -170,7 +170,7 @@ Symbols:
         CONTOSO  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
+## <a name="set-up-build-and-run-the-sample"></a>샘플 설정, 빌드 및 실행  
   
 1. 이 샘플을 실행하려면 Microsoft .NET 및 WSE `TcpSyncStockService` 샘플에 대해 [WSE(웹 서비스 향상) 3.0이](https://www.microsoft.com/download/details.aspx?id=14089) 설치되어 있어야 합니다.
   
@@ -179,7 +179,7 @@ Symbols:
   
 1. `TcpSyncStockService` 샘플을 설치했으면 다음 작업을 수행합니다.  
   
-    1. Visual Studio에서 `TcpSyncStockService`를 엽니다. TcpSyncStockService 샘플은 WSE 3.0과 함께 설치되며 이 샘플 코드에 포함되어 있지 않습니다.  
+    1. `TcpSyncStockService` 비주얼 스튜디오에서 엽니다. (TcpSyncStockService 샘플은 WSE 3.0에 설치됩니다. 이 샘플의 코드에는 포함되지 않습니다.  
   
     2. StockService 프로젝트를 시작 프로젝트로 설정합니다.  
   
