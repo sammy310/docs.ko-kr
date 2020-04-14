@@ -80,8 +80,6 @@
       href: how-to-clear-bindings.md
     - name: DataTemplate에서 생성된 요소 찾기
       href: how-to-find-datatemplate-generated-elements.md
-    - name: 웹 서비스 바인딩
-      href: how-to-bind-to-a-web-service.md
 - name: LINQ to XML로 데이터 바인딩
   items:
     - name: 개요
