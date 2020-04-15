@@ -1,12 +1,12 @@
 ---
 title: 특성(C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 2a07035ea97bb0ff1a8f4793fe8a30d3a42c34a7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 62424163303417746a67707d9ef34185954db316
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397643"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389547"
 ---
 # <a name="attributes-c"></a>특성(C#)
 
@@ -19,7 +19,7 @@ ms.locfileid: "79397643"
 - 메서드 및 속성의 경우와 같은 방식으로 특성은 인수를 수락할 수 있습니다.
 - 프로그램은 리플렉션을 사용하여 자체 메타데이터 또는 다른 프로그램의 메타데이터를 검사할 수 있습니다. 자세한 내용은 [리플렉션을 사용하여 특성 액세스(C#)](accessing-attributes-by-using-reflection.md)를 참조하세요.
 
-## <a name="using-attributes"></a>특성을 사용하여
+## <a name="using-attributes"></a>특성 사용
 
 특정 특성은 유효한 선언 형식이 제한적일 수 있지만 거의 모든 선언에 특성을 사용할 수 있습니다. C#에서는 특성 이름을 대괄호([])로 묶어 적용하고자 하는 엔터티의 선언 위에 배치하여 특성을 지정합니다.
 
@@ -72,14 +72,14 @@ ms.locfileid: "79397643"
 |`assembly`|전체 어셈블리|
 |`module`|현재 어셈블리 모듈|
 |`field`|클래스 또는 구조체의 필드|
-|`event`|이벤트(event)|
+|`event`|이벤트|
 |`method`|메서드 또는 `get` 및 `set` 속성 접근자|
 |`param`|메서드 매개 변수 또는 `set` 속성 접근자 매개 변수|
 |`property`|속성|
 |`return`|메서드, 속성 인덱서 또는 `get` 속성 접근자의 반환 값|
 |`type`|구조체, 클래스, 인터페이스, 열거형 또는 대리자|
 
-`field`자동 구현 속성[에 대해 생성된 지원 필드에 특성을 적용하기 위해 ](../../../properties.md) 대상 값을 지정합니다.
+[자동 구현 속성](../../../properties.md)에 대해 생성된 지원 필드에 특성을 적용하기 위해 `field` 대상 값을 지정합니다.
 
 다음 예제에서는 어셈블리와 모듈에 특성을 적용하는 방법을 보여 줍니다. 자세한 내용은 [공통 특성(C#)](common-attributes.md)을 참조하세요.
 
@@ -95,14 +95,14 @@ using System.Reflection;
 [!code-csharp[Applying attributes to different code elements](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#6)]
 
 > [!NOTE]
-> `ValidatedContract`이 정의되는 대상이 유효한지에 상관없이, 반환 값에만 적용하도록 `return`이 정의된 경우에도 `ValidatedContract` 대상을 지정해야 합니다. 즉, 컴파일러는 모호한 특성 대상을 확인하기 위해 `AttributeUsage` 정보를 사용하지 않습니다. 자세한 내용은 [AttributeUsage(C#)](attributeusage.md)를 참조하세요.
+> `ValidatedContract`이 정의되는 대상이 유효한지에 상관없이, 반환 값에만 적용하도록 `ValidatedContract`이 정의된 경우에도 `return` 대상을 지정해야 합니다. 즉, 컴파일러는 모호한 특성 대상을 확인하기 위해 `AttributeUsage` 정보를 사용하지 않습니다. 자세한 내용은 [AttributeUsage(C#)](../../../language-reference/attributes/general.md)를 참조하세요.
 
 ## <a name="common-uses-for-attributes"></a>특성의 일반적인 용도
 
 다음 목록에는 코드에서 특성이 사용되는 일반적인 경우가 나와 있습니다.
 
-- SOAP 프로토콜을 통해 메서드를 호출할 수 있음을 나타내기 위해 웹 서비스에서 `WebMethod` 특성을 사용하여 메서드에 표시. 자세한 내용은 <xref:System.Web.Services.WebMethodAttribute>을 참조하세요.
-- 네이티브 코드와 상호 운용될 경우 메서드 매개 변수를 마샬링하는 방법 설명. 자세한 내용은 <xref:System.Runtime.InteropServices.MarshalAsAttribute>을 참조하세요.
+- SOAP 프로토콜을 통해 메서드를 호출할 수 있음을 나타내기 위해 웹 서비스에서 `WebMethod` 특성을 사용하여 메서드에 표시. 자세한 내용은 <xref:System.Web.Services.WebMethodAttribute>를 참조하세요.
+- 네이티브 코드와 상호 운용될 경우 메서드 매개 변수를 마샬링하는 방법 설명. 자세한 내용은 <xref:System.Runtime.InteropServices.MarshalAsAttribute>를 참조하세요.
 - 클래스, 메서드 및 인터페이스에 대한 COM 속성 설명
 - <xref:System.Runtime.InteropServices.DllImportAttribute> 클래스를 사용하는 비관리 코드 호출
 - 제목, 버전, 설명 또는 상표를 기준으로 어셈블리 설명
@@ -115,15 +115,15 @@ using System.Reflection;
 
 ## <a name="related-sections"></a>관련 단원
 
-자세한 내용은 다음을 참조하십시오.
+자세한 내용은 다음을 참조하세요.
 
 - [사용자 지정 특성 만들기(C#)](creating-custom-attributes.md)  
 - [리플렉션을 사용하여 특성 액세스(C#)](accessing-attributes-by-using-reflection.md)  
 - [특성(C#)을 사용하여 C/C++ 공용 구조체를 만드는 방법](how-to-create-a-c-cpp-union-by-using-attributes.md)  
 - [공통 특성(C#)](common-attributes.md)  
-- [호출자 정보(C#)](../caller-information.md)  
+- [호출자 정보(C#)](../../../language-reference/attributes/caller-information.md)  
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../../index.md)
 - [리플렉션(C#)](../reflection.md)
