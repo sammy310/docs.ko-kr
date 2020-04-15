@@ -5,21 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-ms.openlocfilehash: 6a06e1983a54581cfb89f008e9f063a671e992c2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 22713aba4f86fe493ba3d16ef09c2a71b6d55fe0
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185350"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389779"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>방법: ASP.NET 웹 서비스 클라이언트와 상호 운용하도록 WCF 서비스 구성
+
 ASP.NET 웹 서비스 클라이언트와 상호 운용할 수 있도록 WCF(Windows 통신 재단) 서비스 끝점을 구성하려면 <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> 이 형식을 서비스 끝점의 바인딩 유형으로 사용합니다.  
   
  바인딩에서 HTTPS 및 전송 수준 클라이언트 인증에 대한 지원을 선택적으로 사용할 수 있습니다. ASP.NET 웹 서비스 클라이언트는 MTOM 메시지 인코딩을 지원하지 않으므로 <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> 속성을 기본값으로 남겨두어야 <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>합니다. ASP.Net 웹 서비스 클라이언트는 WS-Security를 지원하지 않기 때문에 <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType>를 <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>로 설정해야 합니다.  
   
- 웹 서비스 프록시 생성 도구(즉, 웹 서비스 설명 언어 [도구(Wsdl.exe),](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v%3dvs.100))웹 서비스 [검색 도구(Disco.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cy2a3ybs(v=vs.100))및 Visual Studio의 웹 참조 추가 기능)ASP.NET WCF 서비스에 대한 메타데이터를 사용할 수 있도록 하려면 HTTP/GET 메타데이터 끝점을 노출해야 합니다.  
+ 웹 서비스 프록시 생성 도구(즉, 웹 서비스 설명 언어 [도구(Wsdl.exe),](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v%3dvs.100))웹 서비스 [검색 도구(Disco.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cy2a3ybs(v=vs.100))및 Visual Studio의 **웹 참조 추가** 기능)ASP.NET WCF 서비스에 대한 메타데이터를 사용할 수 있도록 하려면 HTTP/GET 메타데이터 끝점을 노출해야 합니다.  
   
-### <a name="to-add-a-wcf-endpoint-that-is-compatible-with-aspnet-web-service-clients-in-code"></a>코드에서 ASP.NET 웹 서비스 클라이언트와 호환되는 WCF 엔드포인트를 추가하려면  
+## <a name="add-an-endpoint-in-code"></a>코드에 끝점 추가  
   
 1. 새 <xref:System.ServiceModel.BasicHttpBinding> 인스턴스를 만듭니다.  
   
@@ -29,7 +30,7 @@ ASP.NET 웹 서비스 클라이언트와 상호 운용할 수 있도록 WCF(Wind
   
 4. 서비스에 대해 HTTP/GET 메타데이터 엔드포인트를 사용합니다. 자세한 내용은 [코드를 사용하는 서비스에 대한 메타데이터 게시 방법 참조.](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)  
   
-### <a name="to-add-a-wcf-endpoint-that-is-compatible-with-aspnet-web-service-clients-in-a-configuration-file"></a>구성 파일에서 ASP.NET 웹 서비스 클라이언트와 호환되는 WCF 엔드포인트를 추가하려면  
+## <a name="add-an-endpoint-in-a-configuration-file"></a>구성 파일에 끝점 추가  
   
 1. 새 <xref:System.ServiceModel.BasicHttpBinding> 바인딩 구성을 만듭니다. 자세한 내용은 [구성에서 서비스 바인딩 지정 방법: 를](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)참조하십시오.  
   
@@ -52,6 +53,6 @@ ASP.NET 웹 서비스 클라이언트와 상호 운용할 수 있도록 WCF(Wind
 - [방법: 코드를 사용하여 서비스에 대한 메타데이터 게시](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
 - [방법: 구성에서 서비스 바인딩 지정](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
 - [방법: 구성에서 서비스 엔드포인트 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
-- [방법: 구성 파일을 사용하여 서비스의 메타데이터 게시](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [방법: 구성 파일을 사용하여 서비스에 대한 메타데이터 게시](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [교통 보안](../../../../docs/framework/wcf/feature-details/transport-security.md)
 - [메타데이터 사용](../../../../docs/framework/wcf/feature-details/using-metadata.md)

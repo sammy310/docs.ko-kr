@@ -2,12 +2,12 @@
 title: Windows 스토어 앱을 .NET 네이티브로 마이그레이션
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: 36f9ac4647b349ff379869f3415a5fb9e55228e3
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 987669fc51eeaf7e3bdef3e91a2f1ce23164a055
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81241947"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389710"
 ---
 # <a name="migrate-your-windows-store-app-to-net-native"></a>Windows 스토어 앱을 .NET 네이티브로 마이그레이션
 
@@ -85,7 +85,7 @@ Windows 스토어용 .NET 앱과 .NET 네이티브 간에는 여러 가지 다�
 
 - <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> 및 <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> 의 기본 클래스는 숨겨진 멤버를 포함하므로 명시적으로 재정의하지 않아도 재정의될 수 있습니다. 이는 다른 [RuntimeReflectionExtensions.GetRuntime*](xref:System.Reflection.RuntimeReflectionExtensions) 메서드에서도 마찬가지입니다.
 
-- byref 배열과 같은 특정 조합을 만들 때<xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> 및 <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> 에서 오류가 발생하지 않습니다.
+- <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType>특정 <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> 조합(예: `byref` 개체 배열)을 만들려고 할 때 실패하지 않습니다.
 
 - 리플렉션을 사용하여 포인터 매개 변수가 있는 멤버를 호출할 수는 없습니다.
 
@@ -117,7 +117,7 @@ Windows 스토어용 .NET 앱과 .NET 네이티브 간에는 여러 가지 다�
 
 - 값 형식에 대해 <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> 및 <xref:System.ValueType.GetHashCode%2A?displayProperty=nameWithType> 메서드를 재정의하는 경우 기본 클래스 구현을 호출하지 마세요. Windows 스토어 앱용 .NET에서 이러한 메서드는 리플렉션을 사용합니다. 컴파일 타임에 .NET Native는 런타임 리플렉션에 의존하지 않는 구현을 생성합니다. 즉, 이러한 두 메서드를 재정의하지 않으면 .NET Native가 컴파일 타임에 구현을 생성하기 때문에 예상대로 작동합니다. 그러나 이러한 메서드를 재정의하고 기본 클래스 구현을 호출하면 예외가 발생합니다.
 
-- 1MB보다 큰 값 형식은 지원되지 않습니다.
+- 1메가바이트를 초과하는 값 형식은 지원되지 않습니다.
 
 - 값 형식은 .NET 네이티브에서 매개 변수 없는 생성자가 있을 수 없습니다. (C# 및 Visual Basic은 값 형식에 대한 매개 변수 없는 생성자 금지입니다. IL에서는 기본 생성자를 만들 수 있습니다.
 
@@ -225,7 +225,7 @@ Windows 스토어 앱용 .NET에서는 <xref:System.Net.Http.HttpClientHandler.U
 - <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>
 - <xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>
 
- <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> 가 지원되기는 하지만 [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) 또는 byref 변형에서 사용하는 경우와 같은 일부 시나리오에서는 예외가 발생됩니다.
+ <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType>지원되지만 [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) 또는 `byref` 변형과 함께 사용되는 경우와 같은 일부 시나리오에서는 예외를 throw합니다.
 
  [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) 지원에 대한 더 이상 사용되지 는 다음과 같습니다.
 
@@ -324,7 +324,7 @@ Windows 스토어 앱용 .NET에서는 <xref:System.Net.Http.HttpClientHandler.U
 
 - 관리되는 형식에서 <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> 인터페이스 구현
 
-- [특성을 통해 관리되는 형식에서](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) IDispatch <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> 인터페이스 구현. 그러나 `IDispatch`를 통해 COM 개체를 호출할 수는 없으며 관리되는 개체는 `IDispatch`를 구현할 수 없습니다.
+- [특성을 통해 관리되는 형식에서](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) IDispatch <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> 인터페이스 구현. 그러나 을 통해 `IDispatch`COM 개체를 호출할 수 없으며 관리되는 개체는 구현할 `IDispatch`수 없습니다.
 
 리플렉션을 사용하여 플랫폼 호출 메서드를 호출할 수는 없습니다. 대신 다른 메서드에서 메서드 호출을 래핑하고 리플렉션을 사용해 래퍼를 호출하여 이 제한을 해결할 수 있습니다.
 
@@ -332,7 +332,7 @@ Windows 스토어 앱용 .NET에서는 <xref:System.Net.Http.HttpClientHandler.U
 
 ### <a name="other-differences-from-net-apis-for-windows-store-apps"></a>Windows 스토어 앱용 .NET API의 기타 차이점
 
-이 섹션에서는 .NET 네이티브에서 지원되지 않는 나머지 API를 나열합니다. 지원되지 않는 API의 대부분은 WCF(Windows Communication Foundation) API입니다.
+이 섹션에서는 .NET 네이티브에서 지원되지 않는 나머지 API를 나열합니다. 지원되지 않는 API의 가장 큰 집합은 WCF(Windows 통신 재단) API입니다.
 
 **DataAnnotations(System.ComponentModel.DataAnnotations)**
 
@@ -396,7 +396,7 @@ Windows 스토어 앱용 .NET에서는 <xref:System.Net.Http.HttpClientHandler.U
 
 **Windows Communication Foundation (WCF) (System.ServiceModel.\*)**
 
-[System.ServiceModel.* 네임스페이스의](xref:System.ServiceModel) 형식은 .NET 네이티브에서 지원되지 않습니다. 여기에는 다음과 같은 형식이 포함됩니다.
+[System.ServiceModel.* 네임스페이스의](xref:System.ServiceModel) 형식은 .NET 네이티브에서 지원되지 않습니다. 여기에는 다음 유형이 포함됩니다.
 
 - <xref:System.ServiceModel.ActionNotSupportedException?displayProperty=nameWithType>
 - <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>

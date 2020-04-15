@@ -2,12 +2,12 @@
 title: Serialization 및 메타데이터
 ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
-ms.openlocfilehash: 7c6fe241fbf92f52abfa0eb66c37bff4d227b4e5
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: cc9adf0e6627ef3190e74fea5d4f0f3afd581811
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81241921"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389224"
 ---
 # <a name="serialization-and-metadata"></a>Serialization 및 메타데이터
 
@@ -15,7 +15,7 @@ ms.locfileid: "81241921"
   
 - 리플렉션 기반 타사 serializer. 이러한 serializer의 경우 런타임 지시문 파일을 수정해야 합니다. 여기에 대해서는 다음 섹션에서 설명합니다.  
   
-- .NET Framework 클래스 라이브러리에 포함된 리플렉션을 기반으로 하지 않는 serializer. 이러한 직렬 변환기의 경우 런타임 지시문 파일을 수정해야 할 수도 있습니다. 아래의 [Microsoft 직렬 변환기](#Microsoft) 섹션에서 여기에 대해 설명합니다.  
+- .NET Framework 클래스 라이브러리에 있는 비반사 기반 serializer입니다. 이러한 직렬 변환기의 경우 런타임 지시문 파일을 수정해야 할 수도 있습니다. 아래의 [Microsoft 직렬 변환기](#Microsoft) 섹션에서 여기에 대해 설명합니다.  
   
 <a name="ThirdParty"></a>
 ## <a name="third-party-serializers"></a>타사 serializer
@@ -59,13 +59,13 @@ ms.locfileid: "81241921"
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   
- 따라서 각 형식에 대한 다음과 같은 항목을 런타임 지시문 파일에 추가해야 합니다.  
+런타임 지시문 파일에 각 형식에 대한 다음과 같은 항목을 추가합니다.  
   
 ```xml  
 <Type Name="t" Browse="Required Public" />  
 ```  
   
- 예제에서 사용된 구문에 대한 자세한 내용은 [ \<요소> 유형](type-element-net-native.md)참조  
+예제에서 사용된 구문에 대한 자세한 내용은 [ \<요소> 유형](type-element-net-native.md)참조  
   
 ## <a name="see-also"></a>참고 항목
 

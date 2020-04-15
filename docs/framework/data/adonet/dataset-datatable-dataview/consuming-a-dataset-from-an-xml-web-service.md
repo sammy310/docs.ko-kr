@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: d835ffe7a10492ee731de8e5301e6d34545f9c32
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d7328949e3eb4822b1a645bb5f0c1866f01ecb0a
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151392"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389746"
 ---
-# <a name="consuming-a-dataset-from-an-xml-web-service"></a>XML Web Service에서 데이터 세트 사용
+# <a name="consume-a-dataset-from-an-xml-web-service"></a>XML 웹 서비스에서 데이터 집합 사용
+
 <xref:System.Data.DataSet>은 인터넷에서 데이터 전송을 쉽게 할 수 있도록 비연결 디자인으로 설계되었습니다. **DataSet은** XML 웹 서비스에서 클라이언트로 **데이터 집합의** 내용을 스트리밍하는 데 필요한 추가 코딩 없이 XML 웹 서비스에 대한 입력 또는 출력으로 지정할 수 있다는 점에서 "serializable"입니다. **DataSet은** DiffGram 형식을 사용하여 XML 스트림으로 암시적으로 변환되고 네트워크를 통해 전송된 다음 XML 스트림에서 수신 측의 **DataSet으로** 재구성됩니다. 이렇게 하여 간단하고 융통성 있는 방법으로 XML Web services를 사용하여 관계형 데이터를 전송하고 반환할 수 있습니다. DiffGram 형식에 대한 자세한 내용은 [DiffGrams](diffgrams.md)를 참조하십시오.  
   
  다음 예제에서는 **DataSet을** 사용하여 관계형 데이터(수정된 데이터 포함)를 전송하고 업데이트를 원래 데이터 원본으로 다시 해결하는 XML 웹 서비스 및 클라이언트를 만드는 방법을 보여 주며 있습니다.  
@@ -20,7 +21,7 @@ ms.locfileid: "79151392"
 > [!NOTE]
 > XML Web services를 만들 때는 항상 보안 측면을 고려하는 것이 좋습니다. XML 웹 서비스 보안에 대한 자세한 내용은 [ASP.NET 사용하여 만든 XML 웹 서비스 보안을](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))참조하십시오.  
   
-### <a name="to-create-an-xml-web-service-that-returns-and-consumes-a-dataset"></a>DataSet을 반환하고 사용하는 XML Web services를 만들려면  
+## <a name="create-an-xml-web-service"></a>XML 웹 서비스 만들기
   
 1. XML Web services를 만듭니다.  
   
@@ -189,9 +190,11 @@ ms.locfileid: "79151392"
   
 3. XML Web services 클라이언트를 만듭니다.  
   
-     Visual Studio에서 웹 서비스 프록시 클래스를 생성하려면 클라이언트 프로젝트를 만들고 솔루션 탐색기 창에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **웹 참조 추가를**클릭하고 사용 가능한 웹 서비스 목록에서 웹 서비스를 선택합니다(현재 솔루션 내에서 웹 서비스를 사용할 수 없는 경우 웹 서비스 끝점의 주소를 제공해야 할 수 있습니다.) 이전 단계에서 설명한 대로 XML 웹 서비스 프록시를 직접 만드는 경우 클라이언트 코드로 가져와 XML 웹 서비스 메서드를 사용할 수 있습니다. 다음 샘플 코드는 프록시 라이브러리를 **가져오고, GetCustomers를** 호출하여 고객 목록을 가져오고, 새 고객을 추가한 다음 **UpdateCustomers**에 대한 업데이트와 함께 **DataSet을** 반환합니다.  
+     Visual Studio에서 웹 서비스 프록시 클래스를 생성하려면 클라이언트 프로젝트를 만들고 솔루션 탐색기 창에서 프로젝트를 마우스 오른쪽 단추로 클릭한 다음**서비스 참조** **추가를** > 선택합니다. 서비스 **참조 추가** 대화 상자에서 **고급**을 선택한 다음 웹 **참조 추가를**선택합니다. 사용 가능한 웹 서비스 목록에서 웹 서비스를 선택합니다(현재 솔루션 내에서 또는 현재 컴퓨터에서 웹 서비스를 사용할 수 없는 경우 웹 서비스 끝점의 주소를 제공해야 할 수 있습니다). 이전 단계의 설명에 따라 XML Web services 프록시를 직접 만드는 경우 프록시를 클라이언트 코드에 가져와 XML Web services 메서드를 사용합니다.
+
+     다음 샘플 코드는 프록시 라이브러리를 **가져오고, GetCustomers를** 호출하여 고객 목록을 가져오고, 새 고객을 추가한 다음 **UpdateCustomers**에 대한 업데이트와 함께 **DataSet을** 반환합니다.  
   
-     이 예제는 업데이트고객 **에**수정된 행만 전달해야 하기 때문에 **DataSet.GetChanges에서** 반환된 **DataSet을** 전달합니다. **UpdateCustomers** **UpdateCustomers는** 해결된 **데이터 집합을**반환한 다음 기존 **DataSet에** **병합하여** 업데이트에서 해결된 변경 내용 및 행 오류 정보를 통합할 수 있습니다. 다음 코드는 Visual Studio를 사용하여 웹 참조를 만들었으며 웹 참조 **추가** 대화 상자에서 DsSample에 대한 웹 참조의 이름을 변경했다고 가정합니다.  
+     이 예제는 수정된 행만 **UpdateCustomers**에 전달해야 하기 때문에 **DataSet.GetChanges에서** 반환된 **DataSet을** 전달합니다. **UpdateCustomers** **UpdateCustomers는** 해결된 **데이터 집합을**반환한 다음 기존 **DataSet에** **병합하여** 업데이트에서 해결된 변경 내용 및 행 오류 정보를 통합할 수 있습니다. 다음 코드는 Visual Studio를 사용하여 웹 참조를 만들었으며 웹 참조 **추가** 대화 상자에서 DsSample에 대한 웹 참조의 이름을 변경했다고 가정합니다.  
   
     ```vb  
     Imports System  
@@ -263,9 +266,9 @@ ms.locfileid: "79151392"
 
 - [ADO.NET](../index.md)
 - [DataSets, DataTables 및 DataViews](index.md)
-- [DataTable](datatables.md)
+- [DataTables](datatables.md)
 - [DataAdapter에서 DataSet 채우기](../populating-a-dataset-from-a-dataadapter.md)
-- [DataAdapter로 데이터 원본 업데이트](../updating-data-sources-with-dataadapters.md)
+- [DataAdapters로 데이터 원본 업데이트](../updating-data-sources-with-dataadapters.md)
 - [DataAdapter 매개 변수](../dataadapter-parameters.md)
 - [웹 서비스 설명 언어 도구(Wsdl.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100))
 - [ADO.NET 개요](../ado-net-overview.md)

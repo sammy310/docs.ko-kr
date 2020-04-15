@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 61527e51ea4d28cfe4589f6bed32b3c505443c22
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 4591175da5078a194bfe69884701e5432a0c38a3
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121165"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389736"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>WCF 데이터 서비스 개발 및 배포
 
@@ -42,7 +42,7 @@ Visual Studio 2015를 사용하여 WCF 데이터 서비스를 ASP.NET 응용 프
 
 1. **로컬 IIS 서버**
 
-     인터넷 정보 서비스(IIS)에서 실행되는 ASP.NET 응용 프로그램 또는 ASP.NET 웹 사이트인 데이터 서비스를 만들 때 로컬 컴퓨터에서 IIS를 사용하여 데이터 서비스를 개발하고 테스트하는 것이 좋습니다. IIS에서 데이터 서비스를 실행하면 디버깅하는 동안 HTTP 요청을 쉽게 추적할 수 있습니다. 또한 IIS에서 데이터 서비스에 필요한 파일, 데이터베이스 및 기타 리소스에 액세스하는 데 필요한 권한을 미리 결정할 수도 있습니다. IIS에서 데이터 서비스를 실행하려면 IIS와 WCF(Windows 통신 재단)가 올바르게 설치 및 구성되었는지 확인하고 파일 시스템 및 데이터베이스의 IIS 계정에 대한 액세스 권한을 부여해야 합니다. 자세한 내용은 [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md)을 참조하십시오.
+     인터넷 정보 서비스(IIS)에서 실행되는 ASP.NET 응용 프로그램 또는 ASP.NET 웹 사이트인 데이터 서비스를 만들 때 로컬 컴퓨터에서 IIS를 사용하여 데이터 서비스를 개발하고 테스트하는 것이 좋습니다. IIS에서 데이터 서비스를 실행하면 디버깅하는 동안 HTTP 요청을 쉽게 추적할 수 있습니다. 또한 IIS에서 데이터 서비스에 필요한 파일, 데이터베이스 및 기타 리소스에 액세스하는 데 필요한 권한을 미리 결정할 수도 있습니다. IIS에서 데이터 서비스를 실행하려면 IIS와 WCF(Windows 통신 재단)를 올바르게 설치하고 구성하고 파일 시스템 및 데이터베이스의 IIS 계정에 대한 액세스 권한을 부여해야 합니다. 자세한 내용은 [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md)을 참조하십시오.
 
     > [!NOTE]
     > 개발 환경이 로컬 IIS 서버를 구성할 수 있도록 하려면 관리자 권한을 가진 Visual Studio를 실행해야 합니다.
@@ -74,11 +74,11 @@ Visual Studio 2015를 사용하여 WCF 데이터 서비스를 ASP.NET 응용 프
 
 ### <a name="development-tips"></a>개발 팁
 
-데이터 서비스를 개발할 때 다음 사항을 고려해야 합니다.
+데이터 서비스를 개발할 때 다음을 고려하십시오.
 
-- 사용자를 인증하거나 특정 사용자의 액세스를 제한하려는 경우 데이터 서비스의 보안 요구 사항을 확인해야 합니다. 자세한 내용은 [Securing WCF Data Services](securing-wcf-data-services.md)을 참조하세요.
+- 사용자를 인증하거나 특정 사용자에 대한 액세스를 제한하려는 경우 데이터 서비스의 보안 요구 사항을 결정합니다. 자세한 내용은 [Securing WCF Data Services](securing-wcf-data-services.md)을 참조하세요.
 
-- HTTP 검사 프로그램은 요청 및 응답 메시지의 내용을 검사할 수 있도록 하여 데이터 서비스를 디버깅할 때 아주 유용할 수 있습니다. 원시 패킷을 표시할 수 있는 네트워크 패킷 분석기를 사용하여 데이터 서비스와 주고받는 HTTP 요청 및 응답을 검사할 수 있습니다.
+- HTTP 검사 프로그램은 요청 및 응답 메시지의 내용을 검사할 수 있도록 하여 데이터 서비스를 디버깅할 때 유용할 수 있습니다. 원시 패킷을 표시할 수 있는 네트워크 패킷 분석기를 사용하여 데이터 서비스와 주고받는 HTTP 요청 및 응답을 검사할 수 있습니다.
 
 - 데이터 서비스를 디버깅할 때 일반 작업 보다 데이터 서비스에서 오류에 대 한 자세한 정보를 얻을 수 있습니다. <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> 에서 <xref:System.Data.Services.DataServiceConfiguration> 속성을 `true` 로 설정하고 데이터 서비스 클래스에서 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 특성의 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 속성을 `true`로 설정하여 데이터 서비스에서 추가 오류 정보를 가져올 수 있습니다. 자세한 내용은 [WCF 데이터 서비스 디버깅](https://docs.microsoft.com/archive/blogs/phaniraj/debugging-wcf-data-services)게시물을 참조하십시오. WCF에서 추적을 활성화하여 HTTP 메시징 계층에서 발생한 예외를 볼 수도 있습니다. 자세한 내용은 [Configuring Tracing](../../wcf/diagnostics/tracing/configuring-tracing.md)을 참조하세요.
 
@@ -119,13 +119,13 @@ WCF Data Services에서는 데이터 서비스를 호스트하는 프로세스�
 
 ### <a name="deployment-considerations"></a>배포 고려 사항
 
-데이터 서비스를 배포할 때 다음 사항을 고려해야 합니다.
+데이터 서비스를 배포할 때 다음을 고려하십시오.
 
 - Entity Framework 공급자를 사용하여 SQL Server 데이터베이스에 액세스하는 데이터 서비스를 배포하는 경우 데이터 서비스 배포를 통해 데이터 구조, 데이터 또는 둘 다를 전파해야 할 수도 있습니다. Visual Studio는 대상 데이터베이스에서 이 작업을 수행하는 스크립트(.sql 파일)를 자동으로 만들 수 있으며 이러한 스크립트는 ASP.NET 응용 프로그램의 웹 배포 패키지에 포함될 수 있습니다. 자세한 내용은 [웹 응용 프로그램 프로젝트를 사용하여 데이터베이스 배포 방법을 참조하세요.](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100)) ASP.NET 웹 사이트의 경우 Visual Studio의 **데이터베이스 게시 마법사를** 사용하여 이 작업을 수행할 수 있습니다. 자세한 내용은 [SQL 데이터베이스 게시](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100))를 참조하십시오.
 
 - WCF 데이터 서비스에는 기본 WCF 구현이 포함되어 있으므로 Windows Server AppFabric을 사용하여 Windows 서버에서 실행되는 IIS에 배포된 데이터 서비스를 모니터링할 수 있습니다. Windows Server AppFabric을 사용하여 데이터 서비스를 모니터링하는 데 대한 자세한 내용은 [Windows Server AppFabric을 사용하여 WCF 데이터 서비스 추적](https://docs.microsoft.com/archive/blogs/rjacobs/tracking-wcf-data-services-with-windows-server-appfabric)게시물을 참조하십시오.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [데이터 서비스 호스팅](hosting-the-data-service-wcf-data-services.md)
 - [WCF Data Services에 보안 설정](securing-wcf-data-services.md)
