@@ -74,6 +74,8 @@
           href: ../../../../_csharplang/proposals/csharp-8.0/ranges.md
         - name: 패턴 기반 using 및 using 선언
           href: ../../../../_csharplang/proposals/csharp-8.0/using.md
+        - name: 정적 로컬 함수
+          href: ../../../../_csharplang/proposals/csharp-8.0/static-local-functions.md
         - name: Null 결합 할당
           href: ../../../../_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md
         - name: 읽기 전용 인스턴스 멤버
