@@ -2,16 +2,16 @@
 title: 청크 채널
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: 3811f7e7229dec1a46585a558b96f94bb202902f
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 7b436e2ce708a122a7eae3b07ad01515fb2dce96
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716036"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463974"
 ---
 # <a name="chunking-channel"></a>청크 채널
 
-WCF (Windows Communication Foundation)를 사용 하 여 대용량 메시지를 보내는 경우 해당 메시지를 버퍼링 하는 데 사용 되는 메모리 양을 제한 하는 것이 좋습니다. 가능한 한 가지 솔루션은 본문에 대량의 데이터가 있다고 가정하고 메시지 본문을 스트리밍하는 것입니다. 그러나 일부 프로토콜에서는 전체 메시지를 버퍼링해야 합니다. 이와 같은 두 가지 예로 신뢰할 수 있는 메시징과 보안을 들 수 있습니다. 가능한 또 다른 솔루션은 큰 메시지를 청크라는 더 작은 메시지로 나누고 이러한 청크를 한 번에 하나씩 보낸 다음 받는 쪽에서 큰 메시지를 다시 구성하는 것입니다. 애플리케이션은 이 청크 및 청크 취소를 직접 수행하거나 사용자 지정 채널을 사용하여 수행할 수 있습니다. 이 Chunking Channel 샘플에서는 사용자 지정 프로토콜이나 계층화된 채널을 사용하여 임의 크기의 메시지를 청크 및 청크 취소하는 방법을 보여 줍니다.
+WCF(Windows 통신 재단)를 사용하여 큰 메시지를 보낼 때 이러한 메시지를 버퍼링하는 데 사용되는 메모리 양을 제한하는 것이 바람직합니다. 가능한 한 가지 솔루션은 본문에 대량의 데이터가 있다고 가정하고 메시지 본문을 스트리밍하는 것입니다. 그러나 일부 프로토콜에서는 전체 메시지를 버퍼링해야 합니다. 이와 같은 두 가지 예로 신뢰할 수 있는 메시징과 보안을 들 수 있습니다. 가능한 또 다른 솔루션은 큰 메시지를 청크라는 더 작은 메시지로 나누고 이러한 청크를 한 번에 하나씩 보낸 다음 받는 쪽에서 큰 메시지를 다시 구성하는 것입니다. 애플리케이션은 이 청크 및 청크 취소를 직접 수행하거나 사용자 지정 채널을 사용하여 수행할 수 있습니다. 이 Chunking Channel 샘플에서는 사용자 지정 프로토콜이나 계층화된 채널을 사용하여 임의 크기의 메시지를 청크 및 청크 취소하는 방법을 보여 줍니다.
 
 청크는 항상 보낼 전체 메시지를 생성한 후에만 사용해야 합니다. 청크 채널은 항상 보안 채널 및 신뢰할 수 있는 세션 채널 아래에 계층화되어야 합니다.
 
@@ -23,7 +23,7 @@ WCF (Windows Communication Foundation)를 사용 하 여 대용량 메시지를 
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대한 WCF(Windows 통신 재단) 및 WF(Windows 워크플로우 재단) 샘플로](https://www.microsoft.com/download/details.aspx?id=21459) 이동하여 모든 WCF(Windows 통신 재단) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ChunkingChannel`
 
@@ -34,7 +34,7 @@ WCF (Windows Communication Foundation)를 사용 하 여 대용량 메시지를 
 청크 채널에서는 청크할 메시지에 대해 다음 메시지 구조를 가정합니다.
 
 ```xml
-<soap:Envelope ...>
+<soap:Envelope>
   <!-- headers -->
   <soap:Body>
     <operationElement>
@@ -209,11 +209,11 @@ as the ChunkingStart message.
 
 다음 하위 수준에서 `ChunkingChannel`은 서버 구성 요소에 의존하여 청크 프로토콜을 구현합니다. 보내는 쪽에서 채널은 실제 청크를 수행하는 <xref:System.Xml.XmlDictionaryWriter>라는 사용자 지정 `ChunkingWriter`를 사용합니다. `ChunkingWriter`는 내부 채널을 직접 사용하여 청크를 보냅니다. 사용자 지정 `XmlDictionaryWriter`를 사용하면 원본 메시지의 큰 본문이 기록될 때 청크를 보낼 수 있습니다. 이는 전체 원본 메시지를 버퍼링하지 않는다는 것을 의미합니다.
 
-![청크 채널 송신 아키텍처를 보여 주는 다이어그램입니다.](./media/chunking-channel/chunking-channel-send.gif)
+![청킹 채널 전송 아키텍처를 보여 주는 다이어그램입니다.](./media/chunking-channel/chunking-channel-send.gif)
 
 받는 쪽 `ChunkingChannel`은 내부 채널의 메시지를 끌어와 <xref:System.Xml.XmlDictionaryReader>라는 사용자 지정 `ChunkingReader`에 전달하여 들어오는 청크로부터 원본 메시지를 다시 구성합니다. `ChunkingChannel`은 `ChunkingReader`라는 사용자 지정 `Message` 구현에서 이 `ChunkingMessage`를 래핑하고 이 메시지를 위 계층에 반환합니다. 이렇게 `ChunkingReader`와 `ChunkingMessage`를 함께 사용하면 전체 원본 메시지 본문을 버퍼링하는 대신 위 계층에서 읽을 때 원본 메시지 본문의 청크를 취소할 수 있습니다. `ChunkingReader`에는 구성 가능한 최대 버퍼링된 청크 수까지 들어오는 청크를 버퍼링하는 큐가 있습니다. 이 최대 한도에 도달하면 판독기는 위 계층에서 원본 메시지 본문을 읽어서 큐의 메시지가 비워지기를 기다리거나 최대 수신 시간 제한에 도달할 때까지 기다립니다.
 
-![청크 채널 수신 아키텍처를 보여 주는 다이어그램입니다.](./media/chunking-channel/chunking-channel-receive.gif)
+![청킹 채널 수신 아키텍처를 보여 주는 다이어그램입니다.](./media/chunking-channel/chunking-channel-receive.gif)
 
 ## <a name="chunking-programming-model"></a>청크 프로그래밍 모델
 
@@ -256,7 +256,7 @@ interface ITestService
 
 - Send에 전달되는 시간 제한은 모든 청크의 보내기를 포함하는 전체 Send 작업의 시간 제한으로 사용됩니다.
 
-- 전체 원본 메시지 본문의 버퍼링을 방지하기 위해 사용자 지정 <xref:System.Xml.XmlDictionaryWriter> 디자인이 선택되었습니다. <xref:System.Xml.XmlDictionaryReader>를 사용하여 본문에서 `message.GetReaderAtBodyContents`를 가져올 경우에는 전체 본문이 버퍼링됩니다. 대신 `message.WriteBodyContents`에 전달 되는 사용자 지정 <xref:System.Xml.XmlDictionaryWriter> 있습니다. 메시지가 작성기에서 WriteBase64를 호출할 경우 작성기는 청크를 메시지에 패키지하고 내부 채널을 사용하여 보냅니다. 청크가 보내질 때까지 WriteBase64는 차단됩니다.
+- 전체 원본 메시지 본문의 버퍼링을 방지하기 위해 사용자 지정 <xref:System.Xml.XmlDictionaryWriter> 디자인이 선택되었습니다. <xref:System.Xml.XmlDictionaryReader>를 사용하여 본문에서 `message.GetReaderAtBodyContents`를 가져올 경우에는 전체 본문이 버퍼링됩니다. 대신 `message.WriteBodyContents`에 전달되는 <xref:System.Xml.XmlDictionaryWriter> 사용자 지정이 있습니다. 메시지가 작성기에서 WriteBase64를 호출할 경우 작성기는 청크를 메시지에 패키지하고 내부 채널을 사용하여 보냅니다. 청크가 보내질 때까지 WriteBase64는 차단됩니다.
 
 ## <a name="implementing-the-receive-operation"></a>Receive 작업 구현
 
@@ -282,7 +282,7 @@ interface ITestService
 
 ### <a name="onclose"></a>OnClose
 
-`OnClose`는 먼저 `stopReceive`를 `true`로 설정하여 보류 중인 `ReceiveChunkLoop`를 중지할 것을 알립니다. 그런 다음 `ReceiveChunkLoop` 중지 될 때 설정 되는 `receiveStopped` <xref:System.Threading.ManualResetEvent>대기 합니다. `ReceiveChunkLoop`가 지정된 시간 제한 내에 중지한다고 가정하고 `OnClose`는 남은 시간 제한을 사용하여 `innerChannel.Close`를 호출합니다.
+`OnClose`는 먼저 `stopReceive`를 `true`로 설정하여 보류 중인 `ReceiveChunkLoop`를 중지할 것을 알립니다. 그런 다음 중지할 `receiveStopped` <xref:System.Threading.ManualResetEvent>때 `ReceiveChunkLoop` 설정된 을 기다립니다. `ReceiveChunkLoop`가 지정된 시간 제한 내에 중지한다고 가정하고 `OnClose`는 남은 시간 제한을 사용하여 `innerChannel.Close`를 호출합니다.
 
 ### <a name="onabort"></a>OnAbort
 
@@ -306,9 +306,9 @@ interface ITestService
 
 ## <a name="implementing-binding-element-and-binding"></a>바인딩 요소 및 바인딩 구현
 
-`ChunkingBindingElement`는 `ChunkingChannelFactory` 및 `ChunkingChannelListener`를 만드는 작업을 담당합니다. `ChunkingBindingElement` `CanBuildChannelFactory`\<T > `CanBuildChannelListener`\<T >가 `IDuplexSessionChannel` 형식 (청크 채널에서 지 원하는 유일한 채널)이 고 바인딩의 다른 바인딩 요소가이 채널 형식을 지원 하는지 여부를 확인 합니다.
+`ChunkingBindingElement`는 `ChunkingChannelFactory` 및 `ChunkingChannelListener`를 만드는 작업을 담당합니다. T `ChunkingBindingElement`> `CanBuildChannelFactory` \<및 `CanBuildChannelListener` \<T> T가 `IDuplexSessionChannel` 형식인지(청크 채널에서 지원하는 유일한 채널) 바인딩의 다른 바인딩 요소가 이 채널 형식을 지원하는지 확인합니다.
 
-`BuildChannelFactory`\<T >는 먼저 요청 된 채널 형식을 생성할 수 있는지 확인 한 다음 청크 할 메시지 동작 목록을 가져옵니다. 자세한 내용은 다음 섹션을 참조하십시오. 그런 다음 새 `ChunkingChannelFactory`를 만들어 내부 채널 팩터리(`context.BuildInnerChannelFactory<IDuplexSessionChannel>`에서 반환), 메시지 동작 목록 및 버퍼링할 최대 청크 수를 전달합니다. 최대 청크 수는 `MaxBufferedChunks`에 의해 노출되는 `ChunkingBindingElement`라는 속성에서 제공됩니다.
+`BuildChannelFactory`\<T> 먼저 요청된 채널 형식을 빌드할 수 있는 지 확인 한 다음 청크 할 메시지 작업 목록을 가져옵니다. 자세한 내용은 다음 섹션을 참조하세요. 그런 다음 새 `ChunkingChannelFactory`를 만들어 내부 채널 팩터리(`context.BuildInnerChannelFactory<IDuplexSessionChannel>`에서 반환), 메시지 동작 목록 및 버퍼링할 최대 청크 수를 전달합니다. 최대 청크 수는 `MaxBufferedChunks`에 의해 노출되는 `ChunkingBindingElement`라는 속성에서 제공됩니다.
 
 `BuildChannelListener<T>`에서도 `ChunkingChannelListener`를 만들어 내부 채널 수신기에 전달하는 구현 방법이 비슷합니다.
 
@@ -320,23 +320,23 @@ interface ITestService
 
 청크 채널은 `ChunkingBehavior` 특성을 통해 식별된 메시지만 청크합니다. `ChunkingBehavior` 클래스는 `IOperationBehavior`를 구현하며 `AddBindingParameter` 메서드 호출에 의해 구현됩니다. 이 메서드에서 `ChunkingBehavior`는 해당 `AppliesTo` 속성의 값(`InMessage`, `OutMessage` 또는 둘 다)을 확인하여 청크해야 하는 메시지를 결정합니다. 그런 다음 `OperationDescription`의 메시지 컬렉션에서 이러한 각 메시지의 동작을 가져와 `ChunkingBindingParameter`의 인스턴스 내에 포함된 문자열 컬렉션에 추가합니다. 그런 다음 이 `ChunkingBindingParameter`를 제공된 `BindingParameterCollection`에 추가합니다.
 
-바인딩의 각 바인딩 요소가 채널 팩터리나 채널 수신기를 빌드할 때 `BindingParameterCollection` 내에서 이 `BindingContext`이 해당 바인딩 요소에 전달됩니다. `ChunkingBindingElement`에서 `BuildChannelFactory<T>`를 구현 하 고 `BindingContext’`s `BindingParameterCollection`에서이 `ChunkingBindingParameter`를 `BuildChannelListener<T>` 합니다. 그런 다음 `ChunkingBindingParameter` 내에 포함된 동작 컬렉션이 `ChunkingChannelFactory` 또는 `ChunkingChannelListener`에 전달된 다음 `ChunkingDuplexSessionChannel`에 전달됩니다.
+바인딩의 각 바인딩 요소가 채널 팩터리나 채널 수신기를 빌드할 때 `BindingParameterCollection` 내에서 이 `BindingContext`이 해당 바인딩 요소에 전달됩니다. `ChunkingBindingElement` `BuildChannelFactory<T>` 의 `BuildChannelListener<T>` 구현과 s에서 `ChunkingBindingParameter` `BindingContext’` `BindingParameterCollection`이것을 당겨 . 그런 다음 `ChunkingBindingParameter` 내에 포함된 동작 컬렉션이 `ChunkingChannelFactory` 또는 `ChunkingChannelListener`에 전달된 다음 `ChunkingDuplexSessionChannel`에 전달됩니다.
 
 ## <a name="running-the-sample"></a>샘플 실행
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면
 
-1. 다음 명령을 사용 하 여 ASP.NET 4.0을 설치 합니다.
+1. 다음 명령을 사용하여 ASP.NET 4.0을 설치합니다.
 
     ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 
-2. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.
+2. Windows 통신 기초 [샘플에 대한 일회성 설치 절차를](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)수행했어야 합니다.
 
-3. 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따르세요.
+3. 솔루션을 빌드하려면 Windows 통신 [기초 샘플 빌드의 지침을 따르십시오.](../../../../docs/framework/wcf/samples/building-the-samples.md)
 
-4. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.
+4. 단일 또는 교차 컴퓨터 구성에서 샘플을 실행하려면 Windows [통신 기반 샘플 실행의 지침을 따르십시오.](../../../../docs/framework/wcf/samples/running-the-samples.md)
 
 5. 먼저 Service.exe를 실행한 다음 Client.exe를 실행하고 두 콘솔 창에서 출력을 살펴봅니다.
 

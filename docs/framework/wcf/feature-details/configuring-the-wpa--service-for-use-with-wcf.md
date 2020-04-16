@@ -2,12 +2,12 @@
 title: Windows Communication Foundation과 함께 사용하도록 Windows Process Activation Service 구성
 ms.date: 03/30/2017
 ms.assetid: 1d50712e-53cd-4773-b8bc-a1e1aad66b78
-ms.openlocfilehash: 2da2653f3d2bd3d998b0ebbe87ea33760315f7df
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 86e50b80d84479ca32b3d4d1fe3f205983640c76
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185300"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464165"
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a>Windows Communication Foundation과 함께 사용하도록 Windows Process Activation Service 구성
 이 항목에서는 HTTP 네트워크 프로토콜을 통해 통신하지 않는 WCF(Windows 통신 Foundation) 서비스를 호스트하기 위해 Windows Vista에서 WINDOWS 프로세스 정품 인증 서비스(WAS라고도 함)를 설정하는 데 필요한 단계를 설명합니다. 다음 단원에서는 이 구성 단계에 대해 간략히 설명합니다.  
@@ -59,11 +59,11 @@ appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp
 ```xml  
 <sites>  
     <site name="Default Web Site" id="1">  
-    <application path="/">  
+      <application path="/">  
         <virtualDirectory path="/" physicalPath="D:\inetpub\wwwroot" />  
-    </application>  
-       <bindings>  
-            //The following two lines are added by the command.  
+      </application>  
+      <bindings>  
+            <!-- The following two lines are added by the command. -->
             <binding protocol="HTTP" bindingInformation="*:80:" />  
             <binding protocol="net.tcp" bindingInformation="808:*" />  
        </bindings>  
@@ -77,7 +77,7 @@ appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp
     </siteDefaults>  
     <applicationDefaults
       applicationPool="DefaultAppPool"
-      //The following line is inserted by the command.  
+      <!-- The following line is inserted by the command. -->
       enabledProtocols="http, net.tcp" />  
     <virtualDirectoryDefaults allowSubDirConfig="true" />  
 </sites>  
@@ -96,7 +96,7 @@ appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp
   
  WAS 활성화 WCF 서비스 구축에 대한 자세한 지침은 [WAS에서 WCF 서비스 호스트](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)방법을 참조하십시오.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [Windows Process Activation Service에서 호스팅](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)
+- [Windows Process Activation Service에서의 호스팅](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)
 - [Windows Server App Fabric 호스팅 기능](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

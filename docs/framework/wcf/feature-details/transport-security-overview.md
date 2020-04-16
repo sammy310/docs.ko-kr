@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: f30b2c587d7f9b21c1f19fa1c3943621fc2607cd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6796ca0b16e65a07735aec075d63b0cdfe38d080
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184335"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464008"
 ---
 # <a name="transport-security-overview"></a>전송 보안 개요
 WCF(Windows 통신 재단)의 전송 보안 메커니즘은 사용 중인 바인딩 및 전송에 따라 다릅니다. 예를 들어 <xref:System.ServiceModel.WSHttpBinding> 클래스를 사용할 경우 전송은 HTTP이며, 전송 보안을 위한 기본 메커니즘은 HTTPS라고 알려진 HTTP를 통한 SSL(Secure Sockets Layer)입니다. 이 항목에서는 WCF 시스템에서 제공하는 바인딩에 사용되는 주요 전송 보안 메커니즘에 대해 설명합니다.  
   
 > [!NOTE]
-> SSL 보안이 .NET Framework 3.5에서 사용되고 나중에 WCF 클라이언트가 인증서 저장소의 중간 인증서와 SSL 협상 중에 받은 중간 인증서를 모두 사용하여 서비스의 인증서 체인 유효성 검사를 수행하는 경우 인증서. .NET Framework 3.0은 로컬 인증서 저장소에 설치된 중간 인증서만 사용합니다.  
+> SSL 보안이 .NET Framework 3.5에서 사용되고 나중에 WCF 클라이언트가 인증서 저장소의 중간 인증서와 SSL 협상 중에 받은 중간 인증서를 모두 사용하여 서비스 인증서에 대한 인증서 체인 유효성 검사를 수행합니다. .NET Framework 3.0은 로컬 인증서 저장소에 설치된 중간 인증서만 사용합니다.  
   
 > [!WARNING]
 > 전송 보안이 사용되는 경우에는 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 속성이 덮어쓰일 수 있습니다. 이 작업을 방지하려면 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType> 을 <xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>설정합니다. <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>는 서비스 설명에 설정할 수 있는 서비스 동작입니다.  
@@ -82,7 +82,7 @@ WCF(Windows 통신 재단)의 전송 보안 메커니즘은 사용 중인 바인
  [!code-csharp[c_ProgrammingSecurity#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#12)]
  [!code-vb[c_ProgrammingSecurity#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#12)]  
   
-#### <a name="client"></a>Client  
+#### <a name="client"></a>클라이언트  
  클라이언트에서는 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> 클래스의 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential> 메서드를 사용하여 인증서를 지정해야 합니다.  
   
 > [!NOTE]
@@ -101,7 +101,7 @@ WCF(Windows 통신 재단)의 전송 보안 메커니즘은 사용 중인 바인
    <clientCredentials>  
      <clientCertificate findValue= "101010101010101010101010101010000000000"
       storeLocation="LocalMachine" storeName="My"
-      X509FindType="FindByThumbPrint"/>  
+      X509FindType="FindByThumbPrint">  
      </clientCertificate>  
    </clientCredentials>  
  </behavior>  
@@ -120,6 +120,6 @@ WCF(Windows 통신 재단)의 전송 보안 메커니즘은 사용 중인 바인
 ## <a name="msmqintegrationbinding-and-netmsmqbinding"></a>MsmqIntegrationBinding 및 NetMsmqBinding  
  메시지 큐잉(이전에MSMQ라고 도함)을 사용하여 전송 [보안에](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)대한 전체 설명은 전송 보안을 사용하여 메시지 보안을 참조하십시오.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [WCF 보안 프로그래밍](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

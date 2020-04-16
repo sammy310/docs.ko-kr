@@ -2,12 +2,12 @@
 title: 구성 파일에서 검색 구성
 ms.date: 03/30/2017
 ms.assetid: b9884c11-8011-4763-bc2c-c526b80175d0
-ms.openlocfilehash: b2e604f6168e4adff36bfb0c22861124743b358d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 934b04b51b9954cf943f57f33250951048e5671b
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185325"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464214"
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a>구성 파일에서 검색 구성
 검색에 사용되는 구성 설정에는 네 가지 기본 그룹이 있습니다. 이 항목에서는 각 그룹에 대해 간략하게 설명하고 이러한 그룹을 구성하는 방법을 보여 줍니다. 아래에 나오는 각 단원은 각 영역에 대해 보다 자세히 설명하는 문서로 연결됩니다.  
@@ -26,6 +26,7 @@ ms.locfileid: "79185325"
           </serviceDiscovery>  
         </behavior>  
       </serviceBehaviors>  
+</behaviors>  
 ```  
   
  동작을 지정하면 다음 샘플과 `service` 같이 <> 요소에서 참조합니다.  
@@ -41,7 +42,8 @@ ms.locfileid: "79185325"
          <!-- Discovery Endpoints -->  
          <endpoint kind="udpDiscoveryEndpoint" />  
         </service>  
-    </service>  
+    </services>  
+</system.serviceModel>  
 ```  
   
  서비스를 검색 가능하게 만들려면 검색 엔드포인트도 추가해야 합니다. 위의 예제에서는 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 표준 엔드포인트를 추가했습니다.  
@@ -62,6 +64,7 @@ ms.locfileid: "79185325"
    <service name="AnnouncementListener">  
       <endpoint kind="udpAnnouncementEndpoint" />  
    </service>  
+</services>
 ```  
   
  ph x="1" /&gt; 동작은 특정 엔드포인트의 검색을 사용하거나 사용하지 않도록 설정하는 데 사용됩니다.  다음 예제에서는 하나는 검색이 가능하고 다른 하나는 검색이 가능하지 않은 두 개의 애플리케이션 엔드포인트가 있는 서비스를 구성합니다. 각 엔드포인트에는 <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> 동작이 추가됩니다.  
@@ -87,7 +90,7 @@ ms.locfileid: "79185325"
         <endpoint kind="udpDiscoveryEndpoint" />  
       </service>  
    </services>  
-    <behaviors>  
+   <behaviors>  
       <serviceBehaviors>  
         <behavior name="helloWorldServiceBehavior">  
           <serviceDiscovery />  
@@ -102,6 +105,7 @@ ms.locfileid: "79185325"
         </behavior>  
      </endpointBehaviors>  
    </behaviors>  
+</system.serviceModel>  
 ```  
   
  ph x="1" /&gt; 동작을 사용하여 서비스에서 반환되는 엔드포인트 메타데이터에 사용자 지정 메타데이터를 추가할 수도 있습니다. 다음 예제에 이 작업을 수행하는 방법이 나와 있습니다.  
@@ -163,7 +167,9 @@ ms.locfileid: "79185325"
           </discoveryClient>  
           <textMessageEncoding messageVersion="Soap11"/>  
           <httpTransport />  
-        </binding>  
+      </binding>
+   </customBinding>
+</bindings>  
 ```  
   
  이 사용자 지정 바인딩 구성은 다음과 같이 클라이언트 엔드포인트에서 참조해야 합니다.  
@@ -174,7 +180,7 @@ ms.locfileid: "79185325"
                 binding="customBinding"  
                 bindingConfiguration="discoBindingConfiguration"  
                 contract="IHelloWorldService" />  
-    </client>  
+</client>  
 ```  
   
  찾기 기준에 대한 자세한 내용은 [검색 찾기 및 FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md)를 참조하십시오. 검색 및 바인딩 요소에 대한 자세한 내용은 [WCF 검색 개요를](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md) 참조하십시오.  
@@ -223,7 +229,8 @@ ms.locfileid: "79185325"
             maxReceivedMessageSize="8192"  
             maxBufferPoolSize="262144"/>  
         </standardEndpoint>  
-      </udpDiscoveryEndpoint>  
+      </udpDiscoveryEndpoint>
+</standardEndpoints>
 ```  
   
  표준 끝점 구성을 추가한 후에는 다음 샘플과 같이 각 끝점에 대한 <`endpoint`> 요소의 구성을 참조합니다.  

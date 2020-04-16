@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
-ms.openlocfilehash: 02e0403f9ae5bb437145fa3a015edc69b884c4d0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4e91580035d4de23ae90cd0d59a08f321ae70a1c
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185012"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464144"
 ---
 # <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>방법: 보안 세션에 대한 보안 컨텍스트 토큰 만들기
 보안 세션에서 상태 저장 SCT(보안 컨텍스트 토큰)을 사용하면 세션에서 서비스 재활용의 영향을 받지 않을 수 있습니다. 예를 들어, 상태 비저장 SCT를 보안 세션에서 사용할 때 IIS(인터넷 정보 서비스)를 다시 설정하면 서비스와 연결된 세션 데이터가 손실됩니다. 이 세션 데이터에는 SCT 토큰 캐시가 포함되어 있습니다. 따라서 클라이언트가 서비스에 상태 비저장 SCT를 다음에 보낼 때 SCT와 연결된 키를 검색할 수 없기 때문에 오류가 반환됩니다. 그러나 상태 저장 SCT를 사용하는 경우에는 SCT와 연결된 키가 SCT에 포함됩니다. 키가 SCT에 포함되어 메시지에 포함되므로 서비스 재활용이 보안 세션에 영향을 주지 않습니다. 기본적으로 WCF(Windows 통신 재단)는 보안 세션에서 상태 비수기 SCD를 사용합니다. 이 항목에서는 보안 세션에서 상태 저장 SCT를 사용하는 방법에 대해 자세히 설명합니다.  
@@ -32,6 +32,7 @@ ms.locfileid: "79185012"
   
         ```xml  
         <customBinding>  
+        </customBinding>
         ```  
   
     2. 바인딩>자식 요소를 customBinding>추가합니다. [ \<](../../configure-apps/file-schema/wcf/bindings.md) [ \< ](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
@@ -40,6 +41,7 @@ ms.locfileid: "79185012"
   
         ```xml  
         <binding name="StatefulSCTSecureSession">  
+        </binding>
         ```  
   
     3. customBinding>[ \<보안>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) 자식 요소를 추가하여 이 서비스와 주고받는 메시지에 대한 인증 모드를 지정합니다. [ \< ](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
@@ -48,7 +50,8 @@ ms.locfileid: "79185012"
   
         ```xml  
         <security authenticationMode="SecureConversation"  
-                  requireSecurityContextCancellation="false">  
+                  requireSecurityContextCancellation="false">
+        </security>
         ```  
   
     4. 보안 [ \<>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) [ \<secureConversationBootstrap>](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) 자식 요소를 추가하여 보안 세션이 설정되는 동안 클라이언트가 인증되는 방법을 지정합니다.  
@@ -103,12 +106,12 @@ ms.locfileid: "79185012"
         <security
             requireSecurityContextCancellation="false">  
               <secureConversationBootstrap />  
-      </security>  
+        </security>  
     <httpTransport />  
   </binding>  
 </customBinding>  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [\<사용자 지정 바인딩>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

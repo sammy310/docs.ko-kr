@@ -2,12 +2,12 @@
 title: 메시징 프로토콜
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-ms.openlocfilehash: d35cd496db32e1a2886f7ca06e7a3d0964f9c9b5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 814347c77b54c4450aabf0a4f3966df223360663
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184591"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463827"
 ---
 # <a name="messaging-protocols"></a>메시징 프로토콜
 
@@ -25,7 +25,7 @@ WCF(Windows 통신 재단) 채널 스택은 인코딩 및 전송 채널을 사�
 
 사양/문서:
 
-- [Xml](https://www.w3.org/TR/REC-xml)
+- [XML](https://www.w3.org/TR/REC-xml)
 - [SOAP 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)
 - [SOAP 1.2 Core](https://www.w3.org/TR/soap12-part1/)
 - [WS-Addressing 2004/08](https://www.w3.org/Submission/2004/SUBM-ws-addressing-20040810/)
@@ -566,7 +566,7 @@ MTOM을 사용하도록 구성된 WCF 끝점은 항상 MTOM 인코딩된 메시�
 WCF는 다음 정책 어설션을 사용하여 끝점별로 MTOM 사용을 나타냅니다.
 
 ```xml
-<wsoma:OptimizedMimeSerialization ... />
+<wsoma:OptimizedMimeSerialization />
 ```
 
 - R4211: 이전 정책 어설션은 엔드포인트 정책 주체를 포함하고 MTOM을 사용하여 엔드포인트에서 보내거나 받은 모든 메시지를 최적화하도록 지정합니다.

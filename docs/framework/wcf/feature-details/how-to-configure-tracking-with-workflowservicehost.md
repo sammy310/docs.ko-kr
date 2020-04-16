@@ -2,12 +2,12 @@
 title: '방법: WorkflowServiceHost를 사용하여 추적 구성'
 ms.date: 03/30/2017
 ms.assetid: ed1485fe-7529-4351-bca3-8bb915260b17
-ms.openlocfilehash: 962dfda9fc5780cc3ac7211464bb3a9be8b7fa90
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3f78b77849d6da7dfff3bdcba90bb4d5200186a7
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185065"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464153"
 ---
 # <a name="how-to-configure-tracking-with-workflowservicehost"></a>방법: WorkflowServiceHost를 사용하여 추적 구성
 이 항목에서는 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]에서 호스트되는 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 워크플로에 대해 추적을 구성하는 방법에 대해 설명합니다. 이러한 추적 기능은 Web.config 파일에서 서비스 동작을 지정하여 구성됩니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "79185065"
            <etwTracking profileName="Sample Tracking Profile" />  
          </behavior>
        </serviceBehaviors>  
-    <behaviors>  
+    </behaviors>  
     ```  
   
     > [!NOTE]
@@ -68,7 +68,7 @@ ms.locfileid: "79185065"
   
      일반적으로 추적에 대한 자세한 내용은 [워크플로 추적 및 추적](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)을 참조하십시오. 프로그래밍 방식으로 추적을 구성하는 예제는 [워크플로에 대한 추적 구성을](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)참조하십시오.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [WCF 서비스를 위한 단순화된 구성](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)
 - [워크플로 서비스](../../../../docs/framework/wcf/feature-details/workflow-services.md)

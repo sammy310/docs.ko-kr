@@ -2,16 +2,16 @@
 title: 권한 부여 정책
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: 9b73eea1f51454dd82ba577c4d4d5fd5a1c0efd4
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 36ec1029c8fed57957eb463808de442e74abdf9c
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990196"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463943"
 ---
 # <a name="authorization-policy"></a>권한 부여 정책
 
-이 샘플에서는 사용자 지정 클레임 권한 부여 정책 및 연관된 사용자 지정 서비스 인증 관리자를 구현하는 방법을 보여 줍니다. 이 방법은 서비스에서 서비스 작업에 대해 클레임 기반 액세스 검사를 수행하는 경우에 유용하며 액세스 검사 전에 호출자에게 특정 권한을 부여합니다. 이 샘플에서는 클레임을 추가하는 프로세스와 종료된 클레임 집합에 대해 액세스 검사를 수행하는 방법을 보여 줍니다. 클라이언트와 서버 간의 모든 응용 프로그램 메시지는 서명 및 암호화됩니다. 기본적으로 `wsHttpBinding` 바인딩에서는 클라이언트에서 제공하는 사용자 이름과 암호를 사용하여 유효한 Windows NT 계정에 로그온합니다. 이 샘플에서는 사용자 지정 <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>를 사용하여 클라이언트를 인증하는 방법을 보여 줍니다. 이 샘플에서는 그 외에도 X.509 인증서를 사용하여 서비스에 대해 클라이언트를 인증하는 방법을 보여 줍니다. 이 샘플에서는 서로의 사이에서 특정 사용자에 대해 서비스의 특정 메서드에 대한 액세스 권한을 부여하는 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 및 <xref:System.ServiceModel.ServiceAuthorizationManager> 구현을 보여 줍니다. 이 샘플은 [메시지 보안 사용자 이름을](../../../../docs/framework/wcf/samples/message-security-user-name.md)기반으로 하지만를 호출 하기 전에 <xref:System.ServiceModel.ServiceAuthorizationManager> 클레임 변환을 수행 하는 방법을 보여 줍니다.
+이 샘플에서는 사용자 지정 클레임 권한 부여 정책 및 연관된 사용자 지정 서비스 인증 관리자를 구현하는 방법을 보여 줍니다. 이 방법은 서비스에서 서비스 작업에 대해 클레임 기반 액세스 검사를 수행하는 경우에 유용하며 액세스 검사 전에 호출자에게 특정 권한을 부여합니다. 이 샘플에서는 클레임을 추가하는 프로세스와 종료된 클레임 집합에 대해 액세스 검사를 수행하는 방법을 보여 줍니다. 클라이언트와 서버 간의 모든 애플리케이션 메시지는 서명 및 암호화됩니다. 기본적으로 `wsHttpBinding` 바인딩에서는 클라이언트에서 제공하는 사용자 이름과 암호를 사용하여 유효한 Windows NT 계정에 로그온합니다. 이 샘플에서는 사용자 지정 <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>를 사용하여 클라이언트를 인증하는 방법을 보여 줍니다. 이 샘플에서는 그 외에도 X.509 인증서를 사용하여 서비스에 대해 클라이언트를 인증하는 방법을 보여 줍니다. 이 샘플에서는 서로의 사이에서 특정 사용자에 대해 서비스의 특정 메서드에 대한 액세스 권한을 부여하는 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 및 <xref:System.ServiceModel.ServiceAuthorizationManager> 구현을 보여 줍니다. 이 샘플은 [메시지 보안 사용자 이름을](../../../../docs/framework/wcf/samples/message-security-user-name.md)기반으로 하지만 호출 하기 <xref:System.ServiceModel.ServiceAuthorizationManager> 전에 클레임 변환을 수행 하는 방법을 보여 줍니다.
 
 > [!NOTE]
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.
@@ -30,7 +30,7 @@ ms.locfileid: "70990196"
 
 - <xref:System.IdentityModel.Policy.IAuthorizationPolicy>를 구현하는 방법.
 
-서비스는 App.config 구성 파일을 사용하여 정의된, 서비스와의 통신에 사용되는 두 개의 엔드포인트를 노출합니다. 각 엔드포인트는 하나의 주소, 바인딩 및 계약으로 구성됩니다. 한 바인딩은 WS-Security 및 클라이언트 사용자 이름 인증을 사용하는 표준 `wsHttpBinding` 바인딩으로 구성됩니다. 다른 바인딩은 WS-Security 및 클라이언트 인증서 인증을 사용하는 표준 `wsHttpBinding` 바인딩으로 구성됩니다. > 동작은 서비스 인증에 사용자 자격 증명을 사용 하도록 지정 합니다. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) 서버 인증서는 `SubjectName` `findValue` serviceCertificate >의 특성과 동일한 속성 값을 포함 해야 합니다. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)
+서비스는 구성 파일 App.config를 사용하여 정의된 서비스와 통신하기 위한 두 개의 끝점을 노출합니다. 각 끝점은 주소, 바인딩 및 계약으로 구성됩니다. 한 바인딩은 WS-Security 및 클라이언트 사용자 이름 인증을 사용하는 표준 `wsHttpBinding` 바인딩으로 구성됩니다. 다른 바인딩은 WS-Security 및 클라이언트 인증서 인증을 사용하는 표준 `wsHttpBinding` 바인딩으로 구성됩니다. [ \<>동작은](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) 사용자 자격 증명을 서비스 인증에 사용할 것을 지정합니다. 서버 인증서는 [ \<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) `SubjectName` `findValue` 속성과 속성에 대한 동일한 값을 포함해야 합니다.
 
 ```xml
 <system.serviceModel>
@@ -117,7 +117,7 @@ ms.locfileid: "70990196"
 </system.serviceModel>
 ```
 
-각 클라이언트 엔드포인트 구성은 구성 이름, 서비스 엔드포인트의 절대 주소, 바인딩 및 계약으로 구성됩니다. 클라이언트 바인딩은 [ \<보안 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) 에 지정 된 대로 적절 한 보안 모드를 사용 하 여 구성 되 고 `clientCredentialType` [ \<메시지 >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md)에 지정 된 대로 구성 됩니다.
+각 클라이언트 엔드포인트 구성은 구성 이름, 서비스 엔드포인트의 절대 주소, 바인딩 및 계약으로 구성됩니다. 클라이언트 바인딩은 [ \<보안>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) 이 경우 지정된 대로 적절한 보안 `clientCredentialType` 모드로 구성되며 [ \<메시지>. ](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md)
 
 ```xml
 <system.serviceModel>
@@ -261,7 +261,7 @@ public class MyCustomUserNamePasswordValidator : UserNamePasswordValidator
 }
 ```
 
-서비스 코드에 유효성 검사기를 구현하고 나면 사용할 유효성 검사기 인스턴스에 대한 정보를 서비스 호스트에 알려야 합니다. 이 작업은 다음 코드를 사용 하 여 수행 됩니다.
+서비스 코드에 유효성 검사기를 구현하고 나면 사용할 유효성 검사기 인스턴스에 대한 정보를 서비스 호스트에 알려야 합니다. 이 작업은 다음 코드를 사용하여 수행됩니다.
 
 ```csharp
 Servicehost.Credentials.UserNameAuthentication.UserNamePasswordValidationMode = UserNamePasswordValidationMode.Custom;
@@ -271,7 +271,7 @@ serviceHost.Credentials.UserNameAuthentication.CustomUserNamePasswordValidator =
 또는 구성에서 동일한 작업을 수행할 수 있습니다.
 
 ```xml
-<behavior ...>
+<behavior>
     <serviceCredentials>
       <!--
       The serviceCredentials behavior allows one to specify a custom validator for username/password combinations.
@@ -282,9 +282,9 @@ serviceHost.Credentials.UserNameAuthentication.CustomUserNamePasswordValidator =
 </behavior>
 ```
 
-WCF (Windows Communication Foundation)는 액세스 검사를 수행 하기 위한 다양 한 클레임 기반 모델을 제공 합니다. <xref:System.ServiceModel.ServiceAuthorizationManager> 개체는 액세스 검사를 수행하는 데 사용되며 클라이언트에 연결된 클레임이 서비스 메서드에 액세스하는 데 필요한 요구 사항을 충족시키는지 여부를 확인합니다.
+WCF(Windows 통신 재단)는 액세스 검사를 수행하기 위한 풍부한 클레임 기반 모델을 제공합니다. <xref:System.ServiceModel.ServiceAuthorizationManager> 개체는 액세스 검사를 수행하는 데 사용되며 클라이언트에 연결된 클레임이 서비스 메서드에 액세스하는 데 필요한 요구 사항을 충족시키는지 여부를 확인합니다.
 
-데모용으로이 샘플에서는 <xref:System.ServiceModel.ServiceAuthorizationManager> <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> 메서드를 구현 하 여 사용자가 해당 값이 인 작업의 작업 URI 인 형식의 `http://example.com/claims/allowedoperation` 클레임을 기반으로 하는 메서드에 대 한 사용자의 액세스를 허용 하는의 구현을 보여 줍니다. 호출 될 수 있습니다.
+데모를 위해 이 샘플에서는 값이 <xref:System.ServiceModel.ServiceAuthorizationManager> 호출될 수 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> 있는 작업의 Action URI인 형식의 `http://example.com/claims/allowedoperation` 클레임을 기반으로 메서드에 대한 사용자의 액세스를 허용하는 메서드를 구현하는 구현을 보여 주며 이 샘플은 호출할 수 있습니다.
 
 ```csharp
 public class MyServiceAuthorizationManager : ServiceAuthorizationManager
@@ -313,7 +313,7 @@ public class MyServiceAuthorizationManager : ServiceAuthorizationManager
 사용자 지정 <xref:System.ServiceModel.ServiceAuthorizationManager>가 구현되면 사용할 <xref:System.ServiceModel.ServiceAuthorizationManager>에 대한 정보를 서비스 호스트에 알려야 합니다. 이 작업은 다음 코드에 표시된 것과 같이 수행됩니다.
 
 ```xml
-<behavior ...>
+<behavior>
     ...
     <serviceAuthorization serviceAuthorizationManagerType="Microsoft.ServiceModel.Samples.MyServiceAuthorizationManager, service">
         ...
@@ -382,7 +382,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 사용자 지정 <xref:System.IdentityModel.Policy.IAuthorizationPolicy>가 구현되면 사용할 권한 부여 정책에 대한 정보를 서비스 호스트에 알려야 합니다.
 
 ```xml
-<serviceAuthorization ...>
+<serviceAuthorization>
        <authorizationPolicies>
             <add policyType='Microsoft.ServiceModel.Samples.CustomAuthorizationPolicy.MyAuthorizationPolicy, PolicyLibrary' />
        </authorizationPolicies>
@@ -393,7 +393,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 ## <a name="setup-batch-file"></a>설치 배치 파일
 
-이 샘플에 포함된 Setup.bat 배치 파일을 사용하면 서버 인증서 기반 보안이 필요한 자체 호스팅 응용 프로그램을 실행하도록 관련 인증서가 있는 서버를 구성할 수 있습니다.
+이 샘플에 포함된 Setup.bat 배치 파일을 사용하면 서버 인증서 기반 보안이 필요한 자체 호스팅 애플리케이션을 실행하도록 관련 인증서가 있는 서버를 구성할 수 있습니다.
 
 다음 부분에는 적절한 구성으로 실행되게 수정할 수 있도록 배치 파일의 다양한 섹션에 대한 간략한 개요가 소개되어 있습니다.
 
@@ -442,7 +442,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 ### <a name="to-set-up-and-build-the-sample"></a>샘플을 설치하고 빌드하려면
 
-1. 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따르세요.
+1. 솔루션을 빌드하려면 Windows 통신 [기초 샘플 빌드의 지침을 따르십시오.](../../../../docs/framework/wcf/samples/building-the-samples.md)
 
 2. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행하려면 다음 지침을 사용합니다.
 
@@ -451,60 +451,60 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>단일 컴퓨터 구성에서 샘플을 실행하려면
 
-1. 관리자 권한으로 Visual Studio에 대 한 개발자 명령 프롬프트를 열고 샘플 설치 폴더에서 *setup.exe* 를 실행 합니다. 이 작업은 샘플 실행에 필요한 모든 인증서를 설치합니다.
+1. 관리자 권한이 있는 Visual Studio용 개발자 명령 프롬프트를 열고 샘플 설치 폴더에서 *Setup.bat를* 실행합니다. 이 작업은 샘플 실행에 필요한 모든 인증서를 설치합니다.
 
     > [!NOTE]
-    > 설치 .bat 배치 파일은 Visual Studio 용 개발자 명령 프롬프트에서 실행 되도록 설계 되었습니다. Visual Studio에 대 한 개발자 명령 프롬프트 내에서 설정 된 PATH 환경 변수는 *설치 .bat* 스크립트에 필요한 실행 파일을 포함 하는 디렉터리를 가리킵니다.
+    > Setup.bat 일괄 처리 파일은 Visual Studio에 대한 개발자 명령 프롬프트에서 실행되도록 설계되었습니다. Visual Studio에 대한 개발자 명령 프롬프트 내에서 설정된 PATH 환경 변수는 *Setup.bat* 스크립트에 필요한 실행 도구를 포함하는 디렉터리를 가리킵니다.
 
-1. *Service\bin*에서 서비스 .exe를 시작 합니다.
+1. *서비스\빈에서*Service.exe를 시작합니다.
 
-1. *\Client\bin*에서 setup.exe를 실행 합니다. 클라이언트 콘솔 애플리케이션에 클라이언트 동작이 표시됩니다.
+1. *\client\bin에서*Client.exe 를 시작합니다. 클라이언트 콘솔 애플리케이션에 클라이언트 동작이 표시됩니다.
 
-클라이언트와 서비스가 통신할 수 없는 경우 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))을 참조 하세요.
+클라이언트와 서비스가 통신할 수 없는 경우 [WCF 샘플에 대한 문제 해결 팁을](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))참조하십시오.
 
 ### <a name="to-run-the-sample-across-computers"></a>다중 컴퓨터 구성에서 샘플을 실행하려면
 
 1. 서비스 컴퓨터에 디렉터리를 만듭니다.
 
-2. *\Service\bin* 에서 서비스 컴퓨터의 디렉터리로 서비스 프로그램 파일을 복사 합니다. Setup.bat, Cleanup.bat, GetComputerName.vbs 및 ImportClientCert.bat 파일도 서비스 컴퓨터에 복사합니다.
+2. *\service\bin에서* 서비스 프로그램 파일을 서비스 컴퓨터의 디렉터리로 복사합니다. Setup.bat, Cleanup.bat, GetComputerName.vbs 및 ImportClientCert.bat 파일도 서비스 컴퓨터에 복사합니다.
 
 3. 클라이언트 컴퓨터에 클라이언트 이진 파일용 디렉터리를 만듭니다.
 
 4. 클라이언트 프로그램 파일을 클라이언트 컴퓨터의 클라이언트 디렉터리로 복사합니다. Setup.bat, Cleanup.bat 및 ImportServiceCert.bat 파일도 클라이언트로 복사합니다.
 
-5. 서버에서 관리자 권한으로 `setup.bat service` 연 Visual Studio 용 개발자 명령 프롬프트에서를 실행 합니다.
+5. 서버에서 Visual `setup.bat service` Studio에 대한 개발자 명령 프롬프트에서 실행하면 관리자 권한이 열립니다.
 
-    인수를`service` 사용 하 여를 실행 하면 컴퓨터의 정규화 된 도메인 이름을 사용 하 여 서비스 인증서가 생성 되 `setup.bat` 고 서비스 인증서가 이름이 *.cer*인 파일로 내보내집니다.
+    인수를 실행하면 `setup.bat` 컴퓨터의 정규화된 도메인 이름으로 서비스 인증서가 생성되고 서비스 인증서를 *Service.cer라는*파일로 내보냅니다. `service`
 
-6. `findValue` ServiceCertificate >의 특성에서 컴퓨터의 정규화 된 도메인 이름과 같은 새 인증서 이름을 반영 하도록 *setup.exe* 를 편집 합니다. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) 또한 \<서비스 >/\<baseaddresses > 요소의 **computername** 을 localhost에서 서비스 컴퓨터의 정규화 된 이름으로 변경 합니다.
+6. 컴퓨터의 정규화된 도메인 이름과 동일한 새 인증서 `findValue` [ \<이름(서비스인증서>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)특성)을 반영하기 위해 *Service.exe.config를* 편집합니다. 또한 \<서비스>/bases의\<컴퓨터 **이름을** 로컬 호스트에서 서비스 컴퓨터의 정규화 된 이름으로> 요소를 변경합니다.
 
-7. 서비스 디렉터리의 *서비스 .cer* 파일을 클라이언트 컴퓨터의 클라이언트 디렉터리로 복사 합니다.
+7. *Service.cer* 파일을 서비스 디렉터리에서 클라이언트 컴퓨터의 클라이언트 디렉터리로 복사합니다.
 
-8. 클라이언트에서 관리자 권한으로 `setup.bat client` 연 Visual Studio 용 개발자 명령 프롬프트에서를 실행 합니다.
+8. 클라이언트에서 Visual `setup.bat client` Studio에 대한 개발자 명령 프롬프트에서 실행하면 관리자 권한이 열립니다.
 
-    인수`client` 를 사용 하 여를 실행 `setup.bat` 하면 **test1** 이라는 클라이언트 인증서가 만들어지고 클라이언트 인증서가 client.msi 이라는 파일로 내보내집니다.
+    `client` 인수를 `setup.bat` 실행하면 **test1이라는** 클라이언트 인증서가 생성되고 Client 인증서를 *Client.cer라는*파일로 내보냅니다.
 
-9. 클라이언트 컴퓨터의 *setup.exe* 파일에서 끝점의 주소 값을 서비스의 새 주소와 일치 하도록 변경 합니다. 이렇게 하려면 **localhost** 를 서버의 정규화 된 도메인 이름으로 바꿉니다.
+9. 클라이언트 컴퓨터의 *Client.exe.config* 파일에서 끝점의 주소 값을 서비스의 새 주소와 일치하도록 변경합니다. **로컬 호스트를** 서버의 정규화된 도메인 이름으로 대체하여 이 작업을 수행합니다.
 
 10. 클라이언트 디렉터리에서 서버의 서비스 디렉터리로 Client.cer 파일을 복사합니다.
 
-11. 클라이언트에서 관리자 권한으로 연 Visual Studio 용 개발자 명령 프롬프트에서 *열고 importservicecert.bat* 를 실행 합니다.
+11. 클라이언트에서 Visual Studio에 대한 개발자 명령 프롬프트에서 *ImportServiceCert.bat를* 관리자 권한으로 열어 실행합니다.
 
-    이는 서비스 인증서를 서비스 .cer 파일에서 **CurrentUser-비트 사용자** 저장소로 가져옵니다.
+    Service.cer 파일에서 현재 사용자 - **신뢰할 수 있는 사람** 저장소로 서비스 인증서를 가져옵니다.
 
-12. 서버에서 관리자 권한으로 연 Visual Studio 용 개발자 명령 프롬프트에서 *importclientcert.bat* 를 실행 합니다.
+12. 서버에서 Visual Studio에 대한 개발자 명령 프롬프트에서 *ImportClientCert.bat를* 관리자 권한으로 열어 실행합니다.
 
-    이렇게 하면 클라이언트 인증서가 클라이언트 .cer 파일에서 **LocalMachine 사용자** 저장소로 가져옵니다.
+    이렇게 하면 Client.cer 파일에서 **LocalMachine - TrustedPeople** 저장소로 클라이언트 인증서가 가져옵니다.
 
 13. 서버 컴퓨터의 명령 프롬프트 창에서 Service.exe를 실행합니다.
 
 14. 클라이언트 컴퓨터의 명령 프롬프트 창에서 Client.exe를 실행합니다.
 
-    클라이언트와 서비스가 통신할 수 없는 경우 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))을 참조 하세요.
+    클라이언트와 서비스가 통신할 수 없는 경우 [WCF 샘플에 대한 문제 해결 팁을](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))참조하십시오.
 
 ### <a name="clean-up-after-the-sample"></a>샘플 후 정리
 
-샘플을 정리 하려면 샘플 실행을 완료 했을 때 samples 폴더에서 *정리가* 나를 실행 합니다. 그러면 인증서 저장소에서 서버 및 클라이언트 인증서가 제거됩니다.
+샘플 을 정리하려면 샘플 실행이 완료되면 샘플 폴더에서 *Cleanup.bat를* 실행합니다. 그러면 인증서 저장소에서 서버 및 클라이언트 인증서가 제거됩니다.
 
 > [!NOTE]
-> 다중 컴퓨터 구성에서 이 샘플을 실행할 경우에는 이 스크립트로 클라이언트의 서비스 인증서를 제거할 수 없습니다. 컴퓨터에서 인증서를 사용 하는 WCF 샘플을 실행 한 경우에는 CurrentUser-비트 사용자 저장소에 설치 된 서비스 인증서를 지워야 합니다. 이렇게 하려면 다음 명령을 사용 합니다. `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`예를 들면 `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`와 같습니다.
+> 다중 컴퓨터 구성에서 이 샘플을 실행할 경우에는 이 스크립트로 클라이언트의 서비스 인증서를 제거할 수 없습니다. 컴퓨터에서 인증서를 사용하는 WCF 샘플을 실행한 경우 CurrentUser - TrustedPeople 저장소에 설치된 서비스 인증서를 지워야 합니다. 이를 수행하려면 `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 명령을 사용합니다(예: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`).

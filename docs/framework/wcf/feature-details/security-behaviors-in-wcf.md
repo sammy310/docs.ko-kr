@@ -2,12 +2,12 @@
 title: WCF의 보안 동작
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-ms.openlocfilehash: f56bbd66aa61b8db9d6e720fb3a67ddbbf5e267e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9f96abac0f5f32279c5579dd01c3dd7f2dc1786c
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184533"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464058"
 ---
 # <a name="security-behaviors-in-wcf"></a>WCF의 보안 동작
 WCF(Windows 통신 Foundation)에서 동작은 서비스 수준 또는 끝점 수준에서 런타임 동작을 수정합니다. 일반적으로 동작에 대한 자세한 내용은 [서비스 런타임 동작 지정을](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)참조하십시오. *보안 동작을* 사용하면 자격 증명, 인증, 권한 부여 및 감사 로그를 제어할 수 있습니다. 프로그래밍 또는 구성을 통해 동작을 사용할 수 있습니다. 이 항목에서는 보안 기능과 관련된 다음 동작의 구성에 대해 중점적으로 설명합니다.  
@@ -82,7 +82,7 @@ WCF(Windows 통신 Foundation)에서 동작은 서비스 수준 또는 끝점 �
   
 - 이 컬렉션에 URI를 추가하여 유효한 URI 집합을 지정합니다. 이렇게 하려면 각 [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md) URI에 대한 추가>삽입합니다.  
   
- 자세한 내용은 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>을 참조하세요.  
+ 자세한 내용은 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>를 참조하세요.  
   
  이 구성 요소 사용에 대한 자세한 내용은 [페더레이션 서비스에서 자격 증명 구성 방법을](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)참조하십시오.  
   
@@ -112,6 +112,7 @@ WCF(Windows 통신 Foundation)에서 동작은 서비스 수준 또는 끝점 �
    </clientCredentials>  
   </behavior>  
  </endpointBehaviors>  
+</behaviors>  
 ```  
   
 #### <a name="clientcertificate-element"></a>\<클라이언트인증서> 요소  
@@ -135,6 +136,9 @@ WCF(Windows 통신 Foundation)에서 동작은 서비스 수준 또는 끝점 �
       <issuerChannelBehaviors>  
          <add issuerAddress="http://www.contoso.com"  
                behaviorConfiguration="clientBehavior1" />
+      </issuerChannelBehaviors>  
+   </issuedToken>  
+</clientCredentials>
 ```  
   
 #### <a name="servicecertificate-element"></a>\<서비스인증서> 요소  
@@ -191,15 +195,15 @@ WCF(Windows 통신 Foundation)에서 동작은 서비스 수준 또는 끝점 �
  serviceSecurityAudit>사용하여 기록된 로그와 로그할 이벤트 유형을 지정합니다. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) 자세한 내용은 [감사](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)합니다.  
   
 ```xml  
-<system.serviceModel>  
-<serviceBehaviors>  
+<behaviors>
+ <serviceBehaviors>  
   <behavior name="NewBehavior">  
     <serviceSecurityAudit auditLogLocation="Application"
              suppressAuditFailure="true"  
              serviceAuthorizationAuditLevel="Success"
              messageAuthenticationAuditLevel="Success" />  
-    </behavior>  
-  </serviceBehaviors>  
+  </behavior>  
+ </serviceBehaviors>  
 </behaviors>  
 ```  
   
@@ -217,7 +221,7 @@ WCF(Windows 통신 Foundation)에서 동작은 서비스 수준 또는 끝점 �
 </behaviors>  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [감사](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
 - [Windows Server AppFabric 보안 모델](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

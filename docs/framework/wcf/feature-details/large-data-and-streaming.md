@@ -2,12 +2,12 @@
 title: 큰 데이터 및 스트리밍
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: 91e53f66fb0f2f94a315c318eb0b203d78427bae
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4b6275a27fb1e09ecac1f8f00f56068a80a214ef
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184675"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464076"
 ---
 # <a name="large-data-and-streaming"></a>큰 데이터 및 스트리밍
 
@@ -66,7 +66,7 @@ WCF(Windows 통신 재단)는 XML 기반 통신 인프라입니다. XML 데이�
   
  각각의 표준 바인딩에는 미리 구성된 인코더가 포함되며, Net* 접두사가 있는 바인딩에서는 이진 인코더를 사용하고(<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> 클래스를 포함하는 방법으로) <xref:System.ServiceModel.BasicHttpBinding> 및 <xref:System.ServiceModel.WSHttpBinding> 클래스에서는 기본적으로 텍스트 메시지 인코더(<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 클래스 사용)를 사용합니다.  
   
-|인코더 바인딩 요소|Description|  
+|인코더 바인딩 요소|설명|  
 |-----------------------------|-----------------|  
 |<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|텍스트 메시지 인코더는 모든 HTTP 기반 바인딩의 기본 인코더이며 상호 운용성이 중요한 모든 사용자 지정 바인딩에 적절합니다. 이 인코더에서는 이진 데이터를 특수 처리하지 않는 표준 SOAP 1.1/SOAP 1.2 텍스트 메시지를 읽고 씁니다. 메시지의 <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> 속성이 <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>설정되면 SOAP 봉투 래퍼가 출력에서 생략되고 메시지 본문 내용만 직렬화됩니다.|  
 |<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>|MTOM 메시지 인코더는 이진 데이터의 특수 처리를 구현하는 텍스트 인코더이며, 엄격한 경우별 최적화 유틸리티이기 때문에 표준 바인딩에서는 전혀 기본으로 사용되지 않습니다. MTOM 인코딩이 장점을 제공하는 임계값을 초과하는 이진 데이터가 메시지에 포함되어 있으면, 데이터가 메시지 봉투 뒤의 MIME 부분에 구체화됩니다. 이 단원의 뒷부분에 있는 MTOM 활성화를 참조하십시오.|  
@@ -88,7 +88,7 @@ WCF(Windows 통신 재단)는 XML 기반 통신 인프라입니다. XML 데이�
       </wsHttpBinding>  
     </bindings>  
      …  
-<system.serviceModel>  
+</system.serviceModel>  
 ```  
   
  앞에서 언급한 것과 같이, MTOM 인코딩의 사용 결정 사항은 보내는 데이터의 볼륨에 따라 달라집니다. 또한 MTOM이 바인딩 수준에서 활성화되기 때문에 MTOM을 활성화하면 지정된 엔드포인트의 모든 작업에 영향을 줍니다.  
@@ -178,7 +178,7 @@ class MyData
       </basicHttpBinding>  
     </bindings>  
      …  
-<system.serviceModel>  
+</system.serviceModel>  
 ```  
   
  바인딩을 코드에 인스턴스화하는 경우에는 바인딩의 해당 `TransferMode` 속성(또는 사용자 지정 바인딩을 작성하는 경우 전송 바인딩 요소)을 앞에서 언급한 값 중 하나로 설정해야 합니다.  
@@ -239,6 +239,6 @@ public class UploadStreamMessage
 > [!NOTE]
 > 버퍼링 또는 스트리밍 전송 중 어느 것을 사용할 것인지를 결정하는 것은 엔드포인트의 로컬 결정입니다. HTTP 전송의 경우 전송 모드는 연결 전체 또는 프록시 서버 및 다른 매개로 전파되지 않습니다. 서비스 인터페이스의 설명에 전송 모드 설정이 반영되지 않았습니다. 서비스에 WCF 클라이언트를 생성한 후 스트리밍 전송과 함께 사용할 서비스에 대한 구성 파일을 편집하여 모드를 설정해야 합니다. TCP 및 명명된 파이프 전송의 경우 전송 모드가 정책 어설션으로 전파됩니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [방법: 스트리밍 사용](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

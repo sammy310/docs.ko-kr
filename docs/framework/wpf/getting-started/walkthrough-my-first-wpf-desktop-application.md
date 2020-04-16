@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 ms.topic: tutorial
 ms.custom: mvc,vs-dotnet
-ms.openlocfilehash: 65b6fe31e86380162e90820c2cf118a9d1b96b4a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: facb9ebebd9ce1904886a946277185ac2c2e4bc4
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186594"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463918"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>자습서: Visual Studio 2019에서 첫 번째 WPF 응용 프로그램 만들기
 
-이 문서에서는 대부분의 WPF 응용 프로그램에 공통적인 요소인 확장 가능한 응용 프로그램 태그 언어(XAML) 태그, 코드 숨김, 응용 프로그램 정의, 컨트롤, 레이아웃, 데이터 바인딩 및 스타일입니다. 응용 프로그램을 개발하려면 Visual Studio를 사용합니다.
+이 문서에서는 대부분의 WPF 응용 프로그램에 공통적인 요소인 확장 가능한 응용 프로그램 태그 언어(XAML) 태그, 코드 숨김, 응용 프로그램 정의, 컨트롤, 레이아웃, 데이터 바인딩 및 스타일과 같은 요소를 포함하는 WPF(Windows 프레젠테이션 Foundation) 데스크톱 응용 프로그램을 개발하는 방법을 보여 주었습니다. 응용 프로그램을 개발하려면 Visual Studio를 사용합니다.
 
-이 자습서에서는 다음 작업 방법을 알아봅니다.
+이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 > [!div class="checklist"]
 >
 > - WPF 프로젝트를 만듭니다.
@@ -40,7 +40,7 @@ ms.locfileid: "79186594"
 >
 > 이 페이지 위에 있는 언어 선택기를 사용하여 샘플 코드의 코드 언어를 C#과 Visual Basic 간에 전환할 수 있습니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 - **.NET 데스크톱 개발** 워크로드가 설치된 [Visual Studio 2019입니다.](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)
 
@@ -293,11 +293,11 @@ ms.locfileid: "79186594"
 
 1. 에서 *`ExpenseItHome.xaml`* 230픽셀로 <xref:System.Windows.Controls.Grid.ColumnDefinitions%2A> 고정된 <xref:System.Windows.Controls.ColumnDefinition.Width%2A> 다른 열을 추가합니다.
 
-    [!code-xaml[ExpenseIt#11](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=52-55)]
+    [!code-xaml[ExpenseIt#11](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=2#NewColumn)]
 
 2. <xref:System.Windows.Controls.Grid.RowDefinitions%2A>에 다른 행을 추가하여 총 4개의 행을 추가합니다.
 
-    [!code-xaml[ExpenseIt#11b](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=57-62)]
+    [!code-xaml[ExpenseIt#11b](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=2#NewRows)]
 
 3. 세 가지 컨트롤(테두리, ListBox 및 단추)에서 <xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType> 속성을 1로 설정하여 컨트롤을 두 번째 열로 이동합니다.
 
@@ -471,7 +471,7 @@ ms.locfileid: "79186594"
 > [!NOTE]
 > 이 샘플에서는 WPF의 특정 기능을 보여 주며 보안, 지역화 및 접근성과 같은 모든 모범 사례를 따르지 않습니다. WPF 및 .NET 앱 개발 모범 사례에 대한 포괄적인 내용은 다음 항목을 참조하십시오.
 >
-> - [접근성](../../ui-automation/accessibility-best-practices.md)
+> - [액세스 가능성](../../ui-automation/accessibility-best-practices.md)
 > - [보안](../security-wpf.md)
 > - [WPF 전역화 및 지역화](../advanced/wpf-globalization-and-localization-overview.md)
 > - [WPF 성능](../advanced/optimizing-wpf-application-performance.md)
@@ -493,7 +493,7 @@ ms.locfileid: "79186594"
 - [그래픽 및 멀티미디어](../graphics-multimedia/index.md)
 - [WPF의 문서](../advanced/documents-in-wpf.md)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [패널 개요](../controls/panels-overview.md)
 - [데이터 템플릿 개요](../data/data-templating-overview.md)

@@ -2,12 +2,12 @@
 title: 클라이언트 구성
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-ms.openlocfilehash: ff82f56639ec451c04624d22fff0bcb03f46d946
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 141b7f7fc04f98f267ce520544fb89451beac7b6
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185369"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463876"
 ---
 # <a name="client-configuration"></a>클라이언트 구성
 WCF(Windows 통신 재단) 클라이언트 구성을 사용하여 클라이언트가 서비스 끝점에 연결하는 데 사용하는 클라이언트 끝점의 "ABC" 속성인 주소, 바인딩, 동작 및 계약을 지정할 수 있습니다. 클라이언트>요소에는 [ \<끝점](../../configure-apps/file-schema/wcf/endpoint-of-client.md)>요소를 가지며, 그 특성은 끝점 ABC를 구성하는 데 사용됩니다. [ \<](../../configure-apps/file-schema/wcf/client.md) 이러한 특성은 [끝점 구성](#configuring-endpoints) 섹션에서 설명합니다.  
@@ -41,7 +41,7 @@ WCF(Windows 통신 재단) 클라이언트 구성을 사용하여 클라이언�
               <servicePrincipalName value="host/localhost" />  
             </identity>  
           </endpoint>  
-// Add another endpoint by adding another <endpoint> element.  
+            <!-- Add another endpoint by adding another <endpoint> element. -->
           <endpoint  
             name="endpoint2">  
            //Configure another endpoint here.  
@@ -62,10 +62,10 @@ WCF(Windows 통신 재단) 클라이언트 구성을 사용하여 클라이언�
           </security>  
         </binding>  
         <binding name="Another Binding"  
-        //Configure this binding here.  
+          <!-- Configure this binding here. -->  
         </binding>  
           </wsHttpBinding>  
-        </bindings>  
+     </bindings>  
   
 //The behavior section references by the behaviorConfiguration endpoint attribute.  
         <behaviors>  
@@ -93,7 +93,7 @@ WCF(Windows 통신 재단) 클라이언트 구성을 사용하여 클라이언�
 ### <a name="configuring-metadata"></a>메타데이터 구성  
  메타데이터>요소는 메타데이터 가져오기 확장을 등록하는 데 사용되는 설정을 지정하는 데 사용됩니다. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) 메타데이터 시스템 확장에 대한 자세한 내용은 [메타데이터 시스템 확장을](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)참조하십시오.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [엔드포인트: 주소, 바인딩 및 계약](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
 - [클라이언트 동작 구성](../../../../docs/framework/wcf/configuring-client-behaviors.md)
