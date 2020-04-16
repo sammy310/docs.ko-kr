@@ -2,42 +2,42 @@
 title: '방법: 서비스 버전 관리'
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: 3cd52e1f52a93e408ebed846894cc5686652cc91
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1178a0bedfe8665d7b3ec463e99183809538c28
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184851"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464122"
 ---
-# <a name="how-to-service-versioning"></a><span data-ttu-id="acf89-102">방법: 서비스 버전 관리</span><span class="sxs-lookup"><span data-stu-id="acf89-102">How To: Service Versioning</span></span>
-<span data-ttu-id="acf89-103">이 항목에서는 메시지를 동일한 서비스의 여러 버전에 라우트하는 라우팅 구성을 만드는 데 필요한 기본 단계에 대해 간략하게 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-103">This topic outlines the basic steps required to create a routing configuration that routes messages to different versions of the same service.</span></span> <span data-ttu-id="acf89-104">이 예제에서 메시지는 계산기 서비스의 서로 다른 두 버전인 `roundingCalc`(v1)와 `regularCalc`(v2)에 라우트됩니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-104">In this example, messages are routed to two different versions of a calculator service, `roundingCalc` (v1) and `regularCalc` (v2).</span></span> <span data-ttu-id="acf89-105">두 구현 모두 같은 연산을 지원하지만 이전 버전인 `roundingCalc` 서비스에서는 반환 전에 가장 가까운 정수 값으로 모든 계산을 반올림합니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-105">Both implementations support the same operations; however the older service, `roundingCalc`, rounds all calculations to the nearest integer value before returning.</span></span> <span data-ttu-id="acf89-106">클라이언트 애플리케이션에서는 새 버전인 `regularCalc` 서비스를 사용할지 여부를 나타낼 수 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-106">A client application must be able to indicate whether to use the newer `regularCalc` service.</span></span>  
+# <a name="how-to-service-versioning"></a><span data-ttu-id="26abc-102">방법: 서비스 버전 관리</span><span class="sxs-lookup"><span data-stu-id="26abc-102">How To: Service Versioning</span></span>
+<span data-ttu-id="26abc-103">이 항목에서는 메시지를 동일한 서비스의 여러 버전에 라우트하는 라우팅 구성을 만드는 데 필요한 기본 단계에 대해 간략하게 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-103">This topic outlines the basic steps required to create a routing configuration that routes messages to different versions of the same service.</span></span> <span data-ttu-id="26abc-104">이 예제에서 메시지는 계산기 서비스의 서로 다른 두 버전인 `roundingCalc`(v1)와 `regularCalc`(v2)에 라우트됩니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-104">In this example, messages are routed to two different versions of a calculator service, `roundingCalc` (v1) and `regularCalc` (v2).</span></span> <span data-ttu-id="26abc-105">두 구현 모두 같은 연산을 지원하지만 이전 버전인 `roundingCalc` 서비스에서는 반환 전에 가장 가까운 정수 값으로 모든 계산을 반올림합니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-105">Both implementations support the same operations; however the older service, `roundingCalc`, rounds all calculations to the nearest integer value before returning.</span></span> <span data-ttu-id="26abc-106">클라이언트 애플리케이션에서는 새 버전인 `regularCalc` 서비스를 사용할지 여부를 나타낼 수 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-106">A client application must be able to indicate whether to use the newer `regularCalc` service.</span></span>  
   
 > [!WARNING]
-> <span data-ttu-id="acf89-107">메시지를 특정 서비스 버전에 라우트하려면 라우팅 서비스에서 메시지 내용을 기반으로 메시지 대상을 확인할 수 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-107">In order to route a message to a specific service version, the Routing Service must be able to determine the message destination based on the message content.</span></span> <span data-ttu-id="acf89-108">아래에서 설명하는 방법에서는 클라이언트가 메시지 헤더에 정보를 삽입하여 버전을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-108">In the method demonstrated below, the client will specify the version by inserting information into a message header.</span></span> <span data-ttu-id="acf89-109">그러나 클라이언트가 추가 데이터를 전달하지 않아도 서비스 버전을 관리할 수 있는 방법이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-109">There are methods of service versioning that do not require clients to pass additional data.</span></span> <span data-ttu-id="acf89-110">예를 들어 최신 또는 가장 호환성이 뛰어난 버전의 서비스에 메시지를 라우트할 수 있거나 라우터에서 표준 SOAP 봉투의 일부를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-110">For example, a message could be routed to the most recent or most compatible version of a service or the router could use a part of the standard SOAP envelope.</span></span>  
+> <span data-ttu-id="26abc-107">메시지를 특정 서비스 버전에 라우트하려면 라우팅 서비스에서 메시지 내용을 기반으로 메시지 대상을 확인할 수 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-107">In order to route a message to a specific service version, the Routing Service must be able to determine the message destination based on the message content.</span></span> <span data-ttu-id="26abc-108">아래에서 설명하는 방법에서는 클라이언트가 메시지 헤더에 정보를 삽입하여 버전을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-108">In the method demonstrated below, the client will specify the version by inserting information into a message header.</span></span> <span data-ttu-id="26abc-109">그러나 클라이언트가 추가 데이터를 전달하지 않아도 서비스 버전을 관리할 수 있는 방법이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-109">There are methods of service versioning that do not require clients to pass additional data.</span></span> <span data-ttu-id="26abc-110">예를 들어 최신 또는 가장 호환성이 뛰어난 버전의 서비스에 메시지를 라우트할 수 있거나 라우터에서 표준 SOAP 봉투의 일부를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-110">For example, a message could be routed to the most recent or most compatible version of a service or the router could use a part of the standard SOAP envelope.</span></span>  
   
- <span data-ttu-id="acf89-111">두 서비스에 의해 노출되는 연산은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-111">The operations exposed by both services are:</span></span>  
+ <span data-ttu-id="26abc-111">두 서비스에 의해 노출되는 연산은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-111">The operations exposed by both services are:</span></span>  
   
-- <span data-ttu-id="acf89-112">추가</span><span class="sxs-lookup"><span data-stu-id="acf89-112">Add</span></span>  
+- <span data-ttu-id="26abc-112">추가</span><span class="sxs-lookup"><span data-stu-id="26abc-112">Add</span></span>  
   
-- <span data-ttu-id="acf89-113">빼기</span><span class="sxs-lookup"><span data-stu-id="acf89-113">Subtract</span></span>  
+- <span data-ttu-id="26abc-113">빼기</span><span class="sxs-lookup"><span data-stu-id="26abc-113">Subtract</span></span>  
   
-- <span data-ttu-id="acf89-114">곱하기</span><span class="sxs-lookup"><span data-stu-id="acf89-114">Multiply</span></span>  
+- <span data-ttu-id="26abc-114">곱하기</span><span class="sxs-lookup"><span data-stu-id="26abc-114">Multiply</span></span>  
   
-- <span data-ttu-id="acf89-115">나누기</span><span class="sxs-lookup"><span data-stu-id="acf89-115">Divide</span></span>  
+- <span data-ttu-id="26abc-115">나누기</span><span class="sxs-lookup"><span data-stu-id="26abc-115">Divide</span></span>  
   
- <span data-ttu-id="acf89-116">두 서비스 구현은 모두 같은 연산을 처리하고 반환하는 데이터를 제외하면 본질적으로 동일하므로 클라이언트 애플리케이션에서 보낸 메시지에 포함된 기본 데이터는 요청을 라우트할 방법을 결정하기에는 고유성이 부족합니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-116">Because both service implementations handle the same operations, and are essentially identical other than the data that they return, the base data contained in messages sent from client applications is not unique enough to allow you to determine how to route the request.</span></span> <span data-ttu-id="acf89-117">예를 들어 두 서비스의 기본 동작이 같기 때문에 동작 필터를 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-117">For example, Action filters cannot be used because the default actions for both services are the same.</span></span>  
+ <span data-ttu-id="26abc-116">두 서비스 구현은 모두 같은 연산을 처리하고 반환하는 데이터를 제외하면 본질적으로 동일하므로 클라이언트 애플리케이션에서 보낸 메시지에 포함된 기본 데이터는 요청을 라우트할 방법을 결정하기에는 고유성이 부족합니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-116">Because both service implementations handle the same operations, and are essentially identical other than the data that they return, the base data contained in messages sent from client applications is not unique enough to allow you to determine how to route the request.</span></span> <span data-ttu-id="26abc-117">예를 들어 두 서비스의 기본 동작이 같기 때문에 동작 필터를 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-117">For example, Action filters cannot be used because the default actions for both services are the same.</span></span>  
   
- <span data-ttu-id="acf89-118">이 문제는 각 서비스 버전의 라우터에 특정 엔드포인트를 노출하거나 서비스 버전을 나타내는 사용자 지정 헤더 요소를 메시지에 추가하는 등의 여러 가지 방법으로 해결할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-118">This can be resolved in several ways, such as exposing a specific endpoint on the router for each version of the service or adding a custom header element to the message to indicate service version.</span></span>  <span data-ttu-id="acf89-119">이러한 각 방법을 사용하면 들어오는 메시지를 특정 버전의 서비스에 고유하게 라우트할 수 있지만 여러 서비스 버전에 대한 요청을 구별하기 위해서는 고유한 메시지 내용을 사용하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-119">Each of these approaches allows you to uniquely route incoming messages to a specific version of the service, but utilizing unique message content is the preferred method of differentiating between requests for different service versions.</span></span>  
+ <span data-ttu-id="26abc-118">이 문제는 각 서비스 버전의 라우터에 특정 엔드포인트를 노출하거나 서비스 버전을 나타내는 사용자 지정 헤더 요소를 메시지에 추가하는 등의 여러 가지 방법으로 해결할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-118">This can be resolved in several ways, such as exposing a specific endpoint on the router for each version of the service or adding a custom header element to the message to indicate service version.</span></span>  <span data-ttu-id="26abc-119">이러한 각 방법을 사용하면 들어오는 메시지를 특정 버전의 서비스에 고유하게 라우트할 수 있지만 여러 서비스 버전에 대한 요청을 구별하기 위해서는 고유한 메시지 내용을 사용하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-119">Each of these approaches allows you to uniquely route incoming messages to a specific version of the service, but utilizing unique message content is the preferred method of differentiating between requests for different service versions.</span></span>  
   
- <span data-ttu-id="acf89-120">이 예제에서는 클라이언트 애플리케이션에서 요청 메시지에 ‘CalcVer’ 사용자 지정 헤더를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-120">In this example, the client application adds the ‘CalcVer’ custom header to the request message.</span></span> <span data-ttu-id="acf89-121">이 헤더에는 메시지를 라우트해야 하는 대상 서비스의 버전을 나타내는 값이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-121">This header will contain a value that indicates the version of the service that the message should be routed to.</span></span> <span data-ttu-id="acf89-122">값 ‘1’은 roundingCalc 서비스로 메시지를 처리해야 함을 나타내고 값 ‘2’는 regularCalc 서비스로 메시지를 처리해야 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-122">A value of ‘1’ indicates that the message must be processed by the roundingCalc service, while a value of ‘2’ indicates the regularCalc service.</span></span> <span data-ttu-id="acf89-123">이러한 값을 사용하면 클라이언트 애플리케이션에서 메시지를 처리할 서비스의 버전을 직접 제어할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-123">This allows the client application to directly control which version of the service will process the message.</span></span>  <span data-ttu-id="acf89-124">사용자 지정 헤더가 메시지 내에 포함된 값이므로 한 엔드포인트를 사용하여 두 서비스 버전의 대상이 되는 메시지를 받을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-124">Since the custom header is a value contained within the message, you can use one endpoint to receive messages destined for both versions of the service.</span></span> <span data-ttu-id="acf89-125">다음 코드를 사용하면 클라이언트 애플리케이션에서 이 사용자 지정 헤더를 메시지에 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-125">The following code can be used in the client application to add this custom header to the message:</span></span>  
+ <span data-ttu-id="26abc-120">이 예제에서는 클라이언트 애플리케이션에서 요청 메시지에 ‘CalcVer’ 사용자 지정 헤더를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-120">In this example, the client application adds the ‘CalcVer’ custom header to the request message.</span></span> <span data-ttu-id="26abc-121">이 헤더에는 메시지를 라우트해야 하는 대상 서비스의 버전을 나타내는 값이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-121">This header will contain a value that indicates the version of the service that the message should be routed to.</span></span> <span data-ttu-id="26abc-122">값 ‘1’은 roundingCalc 서비스로 메시지를 처리해야 함을 나타내고 값 ‘2’는 regularCalc 서비스로 메시지를 처리해야 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-122">A value of ‘1’ indicates that the message must be processed by the roundingCalc service, while a value of ‘2’ indicates the regularCalc service.</span></span> <span data-ttu-id="26abc-123">이러한 값을 사용하면 클라이언트 애플리케이션에서 메시지를 처리할 서비스의 버전을 직접 제어할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-123">This allows the client application to directly control which version of the service will process the message.</span></span>  <span data-ttu-id="26abc-124">사용자 지정 헤더가 메시지 내에 포함된 값이므로 한 엔드포인트를 사용하여 두 서비스 버전의 대상이 되는 메시지를 받을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-124">Since the custom header is a value contained within the message, you can use one endpoint to receive messages destined for both versions of the service.</span></span> <span data-ttu-id="26abc-125">다음 코드를 사용하면 클라이언트 애플리케이션에서 이 사용자 지정 헤더를 메시지에 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-125">The following code can be used in the client application to add this custom header to the message:</span></span>  
   
 ```csharp  
 messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custom.namespace/", "2"));  
 ```  
   
-### <a name="implement-service-versioning"></a><span data-ttu-id="acf89-126">서비스 버전 관리 구현</span><span class="sxs-lookup"><span data-stu-id="acf89-126">Implement Service Versioning</span></span>  
+### <a name="implement-service-versioning"></a><span data-ttu-id="26abc-126">서비스 버전 관리 구현</span><span class="sxs-lookup"><span data-stu-id="26abc-126">Implement Service Versioning</span></span>  
   
-1. <span data-ttu-id="acf89-127">서비스에서 노출하는 서비스 엔드포인트를 지정하여 기본 라우팅 서비스 구성을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-127">Create the basic Routing Service configuration by specifying the service endpoint exposed by the service.</span></span> <span data-ttu-id="acf89-128">다음 예제에서는 메시지를 받는 데 사용할 하나의 서비스 엔드포인트와</span><span class="sxs-lookup"><span data-stu-id="acf89-128">The following example defines a single service endpoint, which will be used to receive messages.</span></span> <span data-ttu-id="acf89-129">`roundingCalc`(v1) 및 `regularCalc`(v2) 서비스에 메시지를 보내는 데 사용할 클라이언트 엔드포인트를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-129">It also defines the client endpoints which will be used to send messages to the `roundingCalc` (v1) and the `regularCalc` (v2) services.</span></span>  
+1. <span data-ttu-id="26abc-127">서비스에서 노출하는 서비스 엔드포인트를 지정하여 기본 라우팅 서비스 구성을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-127">Create the basic Routing Service configuration by specifying the service endpoint exposed by the service.</span></span> <span data-ttu-id="26abc-128">다음 예제에서는 메시지를 받는 데 사용할 하나의 서비스 엔드포인트와</span><span class="sxs-lookup"><span data-stu-id="26abc-128">The following example defines a single service endpoint, which will be used to receive messages.</span></span> <span data-ttu-id="26abc-129">`roundingCalc`(v1) 및 `regularCalc`(v2) 서비스에 메시지를 보내는 데 사용할 클라이언트 엔드포인트를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-129">It also defines the client endpoints which will be used to send messages to the `roundingCalc` (v1) and the `regularCalc` (v2) services.</span></span>  
   
     ```xml  
     <services>  
@@ -69,7 +69,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </client>  
     ```  
   
-2. <span data-ttu-id="acf89-130">대상 엔드포인트에 메시지를 라우트하는 데 사용되는 필터를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-130">Define the filters used to route messages to the destination endpoints.</span></span>  <span data-ttu-id="acf89-131">이 예제에서는 XPath 필터를 사용하여 "CalcVer" 사용자 지정 헤더의 값을 검색하여 메시지를 라우팅할 버전을 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-131">For this example, the XPath filter is used to detect the value of the "CalcVer" custom header to determine which version the message should be routed to.</span></span> <span data-ttu-id="acf89-132">XPath 필터는 "CalcVer" 헤더를 포함하지 않는 메시지를 검색하는 데도 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-132">An XPath filter is also used to detect messages that do not contain the "CalcVer" header.</span></span> <span data-ttu-id="acf89-133">다음 예제에서는 필요한 필터 및 네임스페이스 테이블을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-133">The following example defines the required filters and namespace table.</span></span>  
+2. <span data-ttu-id="26abc-130">대상 엔드포인트에 메시지를 라우트하는 데 사용되는 필터를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-130">Define the filters used to route messages to the destination endpoints.</span></span>  <span data-ttu-id="26abc-131">이 예제에서는 XPath 필터를 사용하여 "CalcVer" 사용자 지정 헤더의 값을 검색하여 메시지를 라우팅할 버전을 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-131">For this example, the XPath filter is used to detect the value of the "CalcVer" custom header to determine which version the message should be routed to.</span></span> <span data-ttu-id="26abc-132">XPath 필터는 "CalcVer" 헤더를 포함하지 않는 메시지를 검색하는 데도 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-132">An XPath filter is also used to detect messages that do not contain the "CalcVer" header.</span></span> <span data-ttu-id="26abc-133">다음 예제에서는 필요한 필터 및 네임스페이스 테이블을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-133">The following example defines the required filters and namespace table.</span></span>  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -90,15 +90,15 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
            messages that do not contain the custom header-->  
        <filter name="XPathFilterNoHeader" filterType="XPath"  
                filterData="count(sm:header()/custom:CalcVer)=0"/>  
-    </filters  
+    </filters>
     ```  
   
     > [!NOTE]
-    > <span data-ttu-id="acf89-134">s12 네임스페이스 접두사는 네임스페이스 테이블에서 기본적으로 정의되며 `http://www.w3.org/2003/05/soap-envelope`네임스페이스를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-134">The s12 namespace prefix is defined by default in the namespace table, and represents the namespace `http://www.w3.org/2003/05/soap-envelope`.</span></span>
+    > <span data-ttu-id="26abc-134">s12 네임스페이스 접두사는 네임스페이스 테이블에서 기본적으로 정의되며 `http://www.w3.org/2003/05/soap-envelope`네임스페이스를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-134">The s12 namespace prefix is defined by default in the namespace table, and represents the namespace `http://www.w3.org/2003/05/soap-envelope`.</span></span>
   
-3. <span data-ttu-id="acf89-135">각 엔드포인트를 클라이언트 엔드포인트와 연결하는 필터 테이블을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-135">Define the filter table, which associates each filter with a client endpoint.</span></span> <span data-ttu-id="acf89-136">메시지에 값이 1인 "CalcVer" 헤더가 포함된 경우 일반Calc 서비스로 전송됩니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-136">If the message contains the "CalcVer" header with a value of 1, it will be sent to the regularCalc service.</span></span> <span data-ttu-id="acf89-137">값이 2이면 메시지가 roundingCalc 서비스에 보내집니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-137">If the header contains a value of 2, it will be sent to the roundingCalc service.</span></span> <span data-ttu-id="acf89-138">헤더가 없으면 메시지가 regularCalc에 라우트됩니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-138">If no header is present, the message will be routed to the regularCalc.</span></span>  
+3. <span data-ttu-id="26abc-135">각 엔드포인트를 클라이언트 엔드포인트와 연결하는 필터 테이블을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-135">Define the filter table, which associates each filter with a client endpoint.</span></span> <span data-ttu-id="26abc-136">메시지에 값이 1인 "CalcVer" 헤더가 포함된 경우 일반Calc 서비스로 전송됩니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-136">If the message contains the "CalcVer" header with a value of 1, it will be sent to the regularCalc service.</span></span> <span data-ttu-id="26abc-137">값이 2이면 메시지가 roundingCalc 서비스에 보내집니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-137">If the header contains a value of 2, it will be sent to the roundingCalc service.</span></span> <span data-ttu-id="26abc-138">헤더가 없으면 메시지가 regularCalc에 라우트됩니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-138">If no header is present, the message will be routed to the regularCalc.</span></span>  
   
-     <span data-ttu-id="acf89-139">다음 예제에서는 필터 테이블을 정의하고 앞에서 정의한 필터를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-139">The following defines the filter table and adds the filters defined earlier.</span></span>  
+     <span data-ttu-id="26abc-139">다음 예제에서는 필터 테이블을 정의하고 앞에서 정의한 필터를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-139">The following defines the filter table and adds the filters defined earlier.</span></span>  
   
     ```xml  
     <filterTables>  
@@ -117,7 +117,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </filterTables>  
     ```  
   
-4. <span data-ttu-id="acf89-140">필터 테이블에 포함된 필터에 대해 들어오는 메시지를 평가하려면 라우팅 동작을 사용하여 필터 테이블을 서비스 엔드포인트와 연결해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-140">To evaluate incoming messages against the filters contained in the filter table, you must associate the filter table with the service endpoints by using the routing behavior.</span></span> <span data-ttu-id="acf89-141">다음 예제에서는 서비스 끝점과 연결하는 것을 `filterTable1` 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-141">The following example demonstrates associating `filterTable1` with the service endpoints:</span></span>  
+4. <span data-ttu-id="26abc-140">필터 테이블에 포함된 필터에 대해 들어오는 메시지를 평가하려면 라우팅 동작을 사용하여 필터 테이블을 서비스 엔드포인트와 연결해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-140">To evaluate incoming messages against the filters contained in the filter table, you must associate the filter table with the service endpoints by using the routing behavior.</span></span> <span data-ttu-id="26abc-141">다음 예제에서는 서비스 끝점과 연결하는 것을 `filterTable1` 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-141">The following example demonstrates associating `filterTable1` with the service endpoints:</span></span>  
   
     ```xml  
     <behaviors>  
@@ -130,8 +130,8 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </behaviors>  
     ```  
   
-## <a name="example"></a><span data-ttu-id="acf89-142">예제</span><span class="sxs-lookup"><span data-stu-id="acf89-142">Example</span></span>  
- <span data-ttu-id="acf89-143">다음은 구성 파일의 전체 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-143">The following is a complete listing of the configuration file.</span></span>  
+## <a name="example"></a><span data-ttu-id="26abc-142">예제</span><span class="sxs-lookup"><span data-stu-id="26abc-142">Example</span></span>  
+ <span data-ttu-id="26abc-143">다음은 구성 파일의 전체 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-143">The following is a complete listing of the configuration file.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -213,8 +213,8 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
 </configuration>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="acf89-144">예제</span><span class="sxs-lookup"><span data-stu-id="acf89-144">Example</span></span>  
- <span data-ttu-id="acf89-145">다음은 클라이언트 애플리케이션의 전체 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="acf89-145">The following is a complete listing of the client application.</span></span>  
+## <a name="example"></a><span data-ttu-id="26abc-144">예제</span><span class="sxs-lookup"><span data-stu-id="26abc-144">Example</span></span>  
+ <span data-ttu-id="26abc-145">다음은 클라이언트 애플리케이션의 전체 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="26abc-145">The following is a complete listing of the client application.</span></span>  
   
 ```csharp  
 using System;  
@@ -324,6 +324,6 @@ namespace Microsoft.Samples.AdvancedFilters
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="acf89-146">참고 항목</span><span class="sxs-lookup"><span data-stu-id="acf89-146">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="26abc-146">참조</span><span class="sxs-lookup"><span data-stu-id="26abc-146">See also</span></span>
 
-- [<span data-ttu-id="acf89-147">라우팅 서비스</span><span class="sxs-lookup"><span data-stu-id="acf89-147">Routing Services</span></span>](../../../../docs/framework/wcf/samples/routing-services.md)
+- [<span data-ttu-id="26abc-147">라우팅 서비스</span><span class="sxs-lookup"><span data-stu-id="26abc-147">Routing Services</span></span>](../../../../docs/framework/wcf/samples/routing-services.md)

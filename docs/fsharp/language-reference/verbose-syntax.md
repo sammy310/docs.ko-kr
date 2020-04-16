@@ -1,37 +1,37 @@
 ---
 title: 자세한 구문
-description: F# 프로그래밍 언어의 자세한 정보 표시와 간단한 구문 간의 차이점을 알아봅니다.
+description: F# 프로그래밍 언어에서 자세한 구문과 간단한 구문의 차이점을 알아봅니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 575585b201acc1366980cfc5cf523c4117259084
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 722807695c56beb0d681b95a78ed8cb8c1df3ddf
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421174"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463913"
 ---
-# <a name="verbose-syntax"></a><span data-ttu-id="c759b-103">자세한 구문</span><span class="sxs-lookup"><span data-stu-id="c759b-103">Verbose Syntax</span></span>
+# <a name="verbose-syntax"></a><span data-ttu-id="4c5dd-103">자세한 구문</span><span class="sxs-lookup"><span data-stu-id="4c5dd-103">Verbose Syntax</span></span>
 
-<span data-ttu-id="c759b-104">F# 언어의 여러 구문에 사용할 수 있는 구문에는 *자세한 구문* 및 *간단한*구문 이라는 두 가지 형식이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c759b-104">There are two forms of syntax available for many constructs in the F# language: *verbose syntax* and *lightweight syntax*.</span></span> <span data-ttu-id="c759b-105">자세한 구문은 일반적으로 사용 되지 않지만 들여쓰기에 대 한 덜 중요 한 이점이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c759b-105">The verbose syntax is not as commonly used, but has the advantage of being less sensitive to indentation.</span></span> <span data-ttu-id="c759b-106">간단한 구문은 더 짧고 들여쓰기를 사용 하 여 `begin`, `end`, `in`등의 추가 키워드가 아닌 구문의 시작과 끝을 신호로 알립니다.</span><span class="sxs-lookup"><span data-stu-id="c759b-106">The lightweight syntax is shorter and uses indentation to signal the beginning and end of constructs, rather than additional keywords like `begin`, `end`, `in`, and so on.</span></span> <span data-ttu-id="c759b-107">기본 구문은 간단한 구문입니다.</span><span class="sxs-lookup"><span data-stu-id="c759b-107">The default syntax is the lightweight syntax.</span></span> <span data-ttu-id="c759b-108">이 항목에서는 간단한 구문을 사용 F# 하지 않는 경우의 구문에 대해 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="c759b-108">This topic describes the syntax for F# constructs when lightweight syntax is not enabled.</span></span> <span data-ttu-id="c759b-109">Verbose 구문은 항상 사용 하도록 설정 되어 있으므로 간단한 구문을 사용 하는 경우에도 일부 구문에 대해 자세한 구문을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c759b-109">Verbose syntax is always enabled, so even if you enable lightweight syntax, you can still use verbose syntax for some constructs.</span></span> <span data-ttu-id="c759b-110">`#light "off"` 지시어를 사용 하 여 간단한 구문을 사용 하지 않도록 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c759b-110">You can disable lightweight syntax by using the `#light "off"` directive.</span></span>
+<span data-ttu-id="4c5dd-104">F# 언어의 많은 구문에사용할 수 있는 구문은 두 가지 형태가 있습니다: *자세한 구문과* *간단한 구문.*</span><span class="sxs-lookup"><span data-stu-id="4c5dd-104">There are two forms of syntax available for many constructs in the F# language: *verbose syntax* and *lightweight syntax*.</span></span> <span data-ttu-id="4c5dd-105">자세한 구문은 일반적으로 사용되지 않지만 들여쓰기에 덜 민감하다는 장점이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4c5dd-105">The verbose syntax is not as commonly used, but has the advantage of being less sensitive to indentation.</span></span> <span data-ttu-id="4c5dd-106">간단한 구문은 짧으며 들여쓰기를 사용하여 구문 및 구문의 시작과 끝을 `begin`알리는 `end` `in`대신 " 및 와 같은 추가 키워드를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="4c5dd-106">The lightweight syntax is shorter and uses indentation to signal the beginning and end of constructs, rather than additional keywords like `begin`, `end`, `in`, and so on.</span></span> <span data-ttu-id="4c5dd-107">기본 구문은 간단한 구문입니다.</span><span class="sxs-lookup"><span data-stu-id="4c5dd-107">The default syntax is the lightweight syntax.</span></span> <span data-ttu-id="4c5dd-108">이 항목에서는 경량 구문을 사용할 수 없는 경우 F# 구문에 대한 구문을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="4c5dd-108">This topic describes the syntax for F# constructs when lightweight syntax is not enabled.</span></span> <span data-ttu-id="4c5dd-109">자세한 구문은 항상 활성화되므로 간단한 구문을 사용하도록 설정하더라도 일부 구문에 대한 자세한 구문을 계속 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4c5dd-109">Verbose syntax is always enabled, so even if you enable lightweight syntax, you can still use verbose syntax for some constructs.</span></span> <span data-ttu-id="4c5dd-110">지시문을 사용하여 간단한 구문을 `#light "off"` 비활성화할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4c5dd-110">You can disable lightweight syntax by using the `#light "off"` directive.</span></span>
 
-## <a name="table-of-constructs"></a><span data-ttu-id="c759b-111">구문 테이블</span><span class="sxs-lookup"><span data-stu-id="c759b-111">Table of Constructs</span></span>
+## <a name="table-of-constructs"></a><span data-ttu-id="4c5dd-111">구문 표</span><span class="sxs-lookup"><span data-stu-id="4c5dd-111">Table of Constructs</span></span>
 
-<span data-ttu-id="c759b-112">다음 표에서는 두 형식 간에 차이가 있는 컨텍스트에서 F# 언어 구문의 간단한 구문 및 자세한 구문을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c759b-112">The following table shows the lightweight and verbose syntax for F# language constructs in contexts where there is a difference between the two forms.</span></span> <span data-ttu-id="c759b-113">이 표에서 꺾쇠 괄호 (&lt;&gt;)는 사용자가 제공 하는 구문 요소를 묶습니다.</span><span class="sxs-lookup"><span data-stu-id="c759b-113">In this table, angle brackets (&lt;&gt;) enclose user-supplied syntax elements.</span></span> <span data-ttu-id="c759b-114">이러한 구문 내에서 사용 되는 구문에 대 한 자세한 내용은 각 언어 구문에 대 한 설명서를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="c759b-114">Refer to the documentation for each language construct for more detailed information about the syntax used within these constructs.</span></span>
+<span data-ttu-id="4c5dd-112">다음 표에서는 두 양식 간에 차이가 있는 컨텍스트에서 F# 언어 구문에 대한 가볍고 자세한 구문을 보여 준다.</span><span class="sxs-lookup"><span data-stu-id="4c5dd-112">The following table shows the lightweight and verbose syntax for F# language constructs in contexts where there is a difference between the two forms.</span></span> <span data-ttu-id="4c5dd-113">이 표에서 각도 대괄호 ()&lt;&gt;사용자가 제공한 구문 요소를 둘러싸고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4c5dd-113">In this table, angle brackets (&lt;&gt;) enclose user-supplied syntax elements.</span></span> <span data-ttu-id="4c5dd-114">이러한 구문 내에서 사용되는 구문에 대한 자세한 내용은 각 언어 구문에 대한 설명서를 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="4c5dd-114">Refer to the documentation for each language construct for more detailed information about the syntax used within these constructs.</span></span>
 
 <table>
 <tr>
-<th><span data-ttu-id="c759b-115">언어 구문</span><span class="sxs-lookup"><span data-stu-id="c759b-115">Language construct</span></span></th>
-<th><span data-ttu-id="c759b-116">간단한 구문</span><span class="sxs-lookup"><span data-stu-id="c759b-116">Lightweight syntax</span></span></th>
-<th><span data-ttu-id="c759b-117">자세한 구문</span><span class="sxs-lookup"><span data-stu-id="c759b-117">Verbose syntax</span></span></th>
+<th><span data-ttu-id="4c5dd-115">언어 구문</span><span class="sxs-lookup"><span data-stu-id="4c5dd-115">Language construct</span></span></th>
+<th><span data-ttu-id="4c5dd-116">경량 구문</span><span class="sxs-lookup"><span data-stu-id="4c5dd-116">Lightweight syntax</span></span></th>
+<th><span data-ttu-id="4c5dd-117">자세한 구문</span><span class="sxs-lookup"><span data-stu-id="4c5dd-117">Verbose syntax</span></span></th>
 </tr>
 <tr>
 <td>
-<span data-ttu-id="c759b-118">복합 식</span><span class="sxs-lookup"><span data-stu-id="c759b-118">compound expressions</span></span>
+<span data-ttu-id="4c5dd-118">복합 식</span><span class="sxs-lookup"><span data-stu-id="4c5dd-118">compound expressions</span></span>
 </td>
 <td>
 
 ```xml
-<expression1>
-<expression2>
+<expression1 />
+<expression2 />
 ```
 
 </td><td>
@@ -44,7 +44,7 @@ ms.locfileid: "73421174"
 </tr>
 <tr><td>
 
-<span data-ttu-id="c759b-119">중첩 된 `let` 바인딩</span><span class="sxs-lookup"><span data-stu-id="c759b-119">nested `let` bindings</span></span>
+<span data-ttu-id="4c5dd-119">중첩 `let` 바인딩</span><span class="sxs-lookup"><span data-stu-id="4c5dd-119">nested `let` bindings</span></span>
 
 </td><td>
 
@@ -67,7 +67,7 @@ let f x =
 </td>
 </tr>
 <tr><td>
-<span data-ttu-id="c759b-120">코드 블록</span><span class="sxs-lookup"><span data-stu-id="c759b-120">code block</span></span>
+<span data-ttu-id="4c5dd-120">코드 블록</span><span class="sxs-lookup"><span data-stu-id="4c5dd-120">code block</span></span>
 </td><td>
 
 ```fsharp
@@ -164,7 +164,7 @@ in
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="c759b-121">기록은</span><span class="sxs-lookup"><span data-stu-id="c759b-121">record</span></span>
+<tr><td><span data-ttu-id="4c5dd-121">레코드(record)</span><span class="sxs-lookup"><span data-stu-id="4c5dd-121">record</span></span>
 </td><td>
 
 ```fsharp
@@ -189,7 +189,7 @@ type <record-name> =
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="c759b-122">클래스</span><span class="sxs-lookup"><span data-stu-id="c759b-122">class</span></span>
+<tr><td><span data-ttu-id="4c5dd-122">class</span><span class="sxs-lookup"><span data-stu-id="4c5dd-122">class</span></span>
 </td><td>
 
 ```fsharp
@@ -208,7 +208,7 @@ type <class-name>(<params>) =
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="c759b-123">구조체(structure)</span><span class="sxs-lookup"><span data-stu-id="c759b-123">structure</span></span></td><td>
+<tr><td><span data-ttu-id="4c5dd-123">structure</span><span class="sxs-lookup"><span data-stu-id="4c5dd-123">structure</span></span></td><td>
 
 ```fsharp
 [<StructAttribute>]
@@ -227,7 +227,7 @@ type <structure-name> =
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="c759b-124">구별 된 공용 구조체</span><span class="sxs-lookup"><span data-stu-id="c759b-124">discriminated union</span></span></td><td>
+<tr><td><span data-ttu-id="4c5dd-124">차별된 노조</span><span class="sxs-lookup"><span data-stu-id="4c5dd-124">discriminated union</span></span></td><td>
 
 ```fsharp
 type <union-name> =
@@ -251,7 +251,7 @@ type <union-name> =
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="c759b-125">interface(인터페이스)</span><span class="sxs-lookup"><span data-stu-id="c759b-125">interface</span></span></td><td>
+<tr><td><span data-ttu-id="4c5dd-125">interface(인터페이스)</span><span class="sxs-lookup"><span data-stu-id="4c5dd-125">interface</span></span></td><td>
 
 ```fsharp
 type <interface-name> =
@@ -269,7 +269,7 @@ type <interface-name> =
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="c759b-126">개체 식</span><span class="sxs-lookup"><span data-stu-id="c759b-126">object expression</span></span></td><td>
+<tr><td><span data-ttu-id="4c5dd-126">개체 표현식</span><span class="sxs-lookup"><span data-stu-id="4c5dd-126">object expression</span></span></td><td>
 
 ```fsharp
 { new <type-name>
@@ -292,7 +292,7 @@ type <interface-name> =
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="c759b-127">인터페이스 구현</span><span class="sxs-lookup"><span data-stu-id="c759b-127">interface implementation</span></span></td><td>
+<tr><td><span data-ttu-id="4c5dd-127">인터페이스 구현</span><span class="sxs-lookup"><span data-stu-id="4c5dd-127">interface implementation</span></span></td><td>
 
 ```fsharp
 interface <interface-name>
@@ -311,7 +311,7 @@ interface <interface-name>
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="c759b-128">형식 확장</span><span class="sxs-lookup"><span data-stu-id="c759b-128">type extension</span></span></td><td>
+<tr><td><span data-ttu-id="4c5dd-128">유형 확장</span><span class="sxs-lookup"><span data-stu-id="4c5dd-128">type extension</span></span></td><td>
 
 ```fsharp
 type <type-name>
@@ -330,7 +330,7 @@ type <type-name>
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="c759b-129">모듈(module)</span><span class="sxs-lookup"><span data-stu-id="c759b-129">module</span></span></td><td>
+<tr><td><span data-ttu-id="4c5dd-129">module</span><span class="sxs-lookup"><span data-stu-id="4c5dd-129">module</span></span></td><td>
 
 ```fsharp
 module <module-name> =
@@ -350,8 +350,8 @@ module <module-name> =
 </tr>
 </table>
 
-## <a name="see-also"></a><span data-ttu-id="c759b-130">참조</span><span class="sxs-lookup"><span data-stu-id="c759b-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4c5dd-130">참조</span><span class="sxs-lookup"><span data-stu-id="4c5dd-130">See also</span></span>
 
-- [<span data-ttu-id="c759b-131">F# 언어 참조</span><span class="sxs-lookup"><span data-stu-id="c759b-131">F# Language Reference</span></span>](index.md)
-- [<span data-ttu-id="c759b-132">컴파일러 지시문</span><span class="sxs-lookup"><span data-stu-id="c759b-132">Compiler Directives</span></span>](compiler-directives.md)
-- [<span data-ttu-id="c759b-133">코드 서식 지정 지침</span><span class="sxs-lookup"><span data-stu-id="c759b-133">Code Formatting Guidelines</span></span>](../style-guide/formatting.md)
+- [<span data-ttu-id="4c5dd-131">F # 언어 참조</span><span class="sxs-lookup"><span data-stu-id="4c5dd-131">F# Language Reference</span></span>](index.md)
+- [<span data-ttu-id="4c5dd-132">컴파일러 지시문</span><span class="sxs-lookup"><span data-stu-id="4c5dd-132">Compiler Directives</span></span>](compiler-directives.md)
+- [<span data-ttu-id="4c5dd-133">코드 서식 지정 지침</span><span class="sxs-lookup"><span data-stu-id="4c5dd-133">Code Formatting Guidelines</span></span>](../style-guide/formatting.md)
