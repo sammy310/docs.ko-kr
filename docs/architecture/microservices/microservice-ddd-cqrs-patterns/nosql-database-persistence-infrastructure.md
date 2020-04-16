@@ -2,12 +2,12 @@
 title: NoSQL 데이터베이스를 지속성 인프라로 사용
 description: 지속성을 구현하기 위한 옵션으로 일반적인 경우 NoSql 데이터베이스, 특정한 경우 Azure Cosmos DB의 사용을 이해합니다.
 ms.date: 01/30/2020
-ms.openlocfilehash: 7da4141d9aadc4aaa265ac97d328bc4b7569a0cb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9c51e48d82aa0cf0234275f09df43f7a654f0ca8
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502390"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988442"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>NoSQL 데이터베이스를 지속성 인프라로 사용
 
@@ -23,7 +23,7 @@ ms.locfileid: "77502390"
 
 NoSQL 데이터베이스를 사용하는 경우 이점은 엔터티가 더욱 비정규화되므로 테이블 매핑을 설정하지 않는다는 것입니다. 도메인 모델은 관계형 데이터베이스를 사용할 때보다 좀 더 유연할 수 있습니다.
 
-집계를 기반으로 도메인 모델을 디자인할 때 NoSQL 및 문서 기반 데이터베이스로 이동하는 것은 디자인하는 집계가 문서 기반 데이터베이스의 직렬화된 문서와 유사하므로 관계형 데이터베이스를 사용하는 것보다 더욱 쉬울 수 있습니다. 그런 다음, 해당 집계에 필요할 수 있는 모든 정보를 해당 "모음"에 포함할 수 있습니다.
+집계를 기반으로 도메인 모델을 디자인할 때 NoSQL 및 문서 기반 데이터베이스로 이동하는 것은 디자인하는 집계가 문서 기반 데이터베이스의 직렬화된 문서와 유사하므로 관계형 데이터베이스를 사용하는 것보다 더욱 쉬울 수 있습니다. 그런 다음, 해당 집계에 필요할 수 있는 모든 정보를 해당 “모음”에 포함할 수 있습니다.
 
 예를 들어 다음 JSON 코드는 문서 기반 데이터베이스를 사용할 때 순서 집계의 샘플 구현입니다. eShopOnContainers 샘플에서 구현한 순서 집계와 비슷하지만 아래 EF Core를 사용하지 않습니다.
 
@@ -64,7 +64,7 @@ C\# 모델을 사용하여 Azure Cosmos DB API에서 사용될 집계를 구현�
 // C# EXAMPLE OF AN ORDER AGGREGATE BEING PERSISTED WITH AZURE COSMOS DB API
 // *** Domain Model Code ***
 // Aggregate: Create an Order object with its child entities and/or value objects.
-// Then, use AggregateRoot’s methods to add the nested objects so invariants and
+// Then, use AggregateRoot's methods to add the nested objects so invariants and
 // logic is consistent across the nested properties (value objects and entities).
 
 Order orderAggregate = new Order
@@ -266,7 +266,7 @@ public async Task<Locations> GetAsync(int locationId)
 
 #### <a name="use-an-env-var-in-the-docker-composeoverrideyml-file-for-the-mongodb-connection-string"></a>MongoDB 연결 문자열에 대해 docker-compose.override.yml 파일에서 env-var를 사용합니다.
 
-MongoClient 개체를 만들 때 올바른 데이터베이스를 가리키는 정확한 `ConnectionString` 매개 변수인 기본 매개 변수가 필요합니다. eShopOnContainers의 경우 연결 문자열은 로컬 MongoDB Docker 컨테이너 또는 "프로덕션" Azure Cosmos DB 데이터베이스를 가리킬 수 있습니다.  해당 연결 문자열은 다음 yml 코드에서처럼 docker-compose 또는 Visual Studio를 사용하여 배포할 때 사용되는 `docker-compose.override.yml` 파일에서 정의된 환경 변수에서 제공됩니다.
+MongoClient 개체를 만들 때 올바른 데이터베이스를 가리키는 정확한 `ConnectionString` 매개 변수인 기본 매개 변수가 필요합니다. eShopOnContainers의 경우 연결 문자열은 로컬 MongoDB Docker 컨테이너 또는 “프로덕션” Azure Cosmos DB 데이터베이스를 가리킬 수 있습니다.  해당 연결 문자열은 다음 yml 코드에서처럼 docker-compose 또는 Visual Studio를 사용하여 배포할 때 사용되는 `docker-compose.override.yml` 파일에서 정의된 환경 변수에서 제공됩니다.
 
 ```yml
 # docker-compose.override.yml

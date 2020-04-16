@@ -2,12 +2,12 @@
 title: Azure Container Instances(ACI)에 Windows 컨테이너를 배포하는 경우
 description: Azure Cloud 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화 | Azure Container Instances(ACI)에 Windows 컨테이너를 배포하는 경우
 ms.date: 04/29/2018
-ms.openlocfilehash: 3b6ae1ced9c4e01f5ab400e2575947a396064ebd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6c889db6f0475f24a196144c7fb62faec4c173ed
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69577936"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989157"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-instances-aci"></a>Azure Container Instances(ACI)에 Windows 컨테이너를 배포하는 경우
 
@@ -23,7 +23,7 @@ ACI를 사용하려는 이유 및 시나리오는 컨테이너에서 Azure VM을
 
 간단한 웹앱 시나리오는 ACI에 타당한 시나리오이지만 ACI에서는 컨테이너 이미지당 하나의 컨테이너 인스턴스만 가능하므로 고가용성이 확보되지 않고 확장성만 제한된다는 것을 고려해야 합니다.
 
-그러나 ACI가 단일 컨테이너 인스턴스만 제공하기 때문에 인프라로 고려되는 경우에도 Windows Server를 사용하는 일반 Azure VM에 비해 큰 이점이 있습니다. ACI를 사용하면 컨테이너를 자체 유지 관리 환경에 배포하고 해당 컨테이너에 대해서만 비용을 지불하게 됩니다. VM을 유지 관리/업데이트/패치하지 않아도 되므로 컨테이너와 함께 VM을 사용할 수 있는 대부분의 시나리오에서 훨씬 더 나은 플랫폼입니다. ACI 사용은 간단합니다. VM 환경은 만들 필요가 없이 컨테이너만 배포하면 됩니다.
+그러나 ACI가 단일 컨테이너 인스턴스만 제공하기 때문에 인프라로 고려되는 경우에도 Windows Server를 사용하는 일반 Azure VM에 비해 큰 이점이 있습니다. ACI를 사용하면 컨테이너를 자체 유지 관리 환경에 배포하고 해당 컨테이너에 대해서만 비용을 지불하게 됩니다. VM을 유지 관리/업데이트/패치하지 않아도 되므로 컨테이너와 함께 VM을 사용할 수 있는 시나리오 대부분에서 훨씬 더 나은 플랫폼입니다. ACI 사용은 간단합니다. VM 환경은 만들 필요가 없이 컨테이너만 배포하면 됩니다.
 
 Azure Container Instances(ACI)의 주요 이점은 다음과 같습니다.
 

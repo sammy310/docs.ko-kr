@@ -9,12 +9,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 252d509617ab5dbc53b282bac52e356396d82fab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ae8f18deff5e96d7e475df8814ad64b38d14d585
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75711898"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121386"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>캐스팅 및 형식 변환(C# 프로그래밍 가이드)
 
@@ -29,7 +29,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 - **암시적 변환**: 변환은 형식이 안전하고 데이터가 손실되지 않으므로 특수 구문이 필요하지 않습니다. 예제에는 작은 정수 형식에서 큰 정수 형식으로의 변환 및 파생 클래스에서 기본 클래스로의 변환이 포함됩니다.  
   
-- **명시적 변환(캐스트)** : 명시적 변환에는 [캐스트 연산자`()`](../../language-reference/operators/type-testing-and-cast.md#cast-operator-)가 필요합니다. 변환 시 정보가 손실되거나 다른 이유로 변환에 실패할 경우 캐스팅이 필요합니다. 일반적인 예제에는 숫자를 정밀도가 낮거나 범위가 더 작은 형식으로 변환하는 작업과 기본 클래스 인스턴스를 파생 클래스로 변환하는 작업이 포함됩니다.  
+- **명시적 변환(캐스트)** : 명시적 변환에는 [캐스트 식](../../language-reference/operators/type-testing-and-cast.md#cast-expression)이 필요합니다. 변환 시 정보가 손실되거나 다른 이유로 변환에 실패할 경우 캐스팅이 필요합니다. 일반적인 예제에는 숫자를 정밀도가 낮거나 범위가 더 작은 형식으로 변환하는 작업과 기본 클래스 인스턴스를 파생 클래스로 변환하는 작업이 포함됩니다.  
   
 - **사용자 정의 변환**: 사용자 정의 변환은 기본 클래스-파생 클래스 관계가 없는 사용자 지정 형식 간의 명시적 및 암시적 변환을 사용하도록 정의할 수 있는 특수 메서드를 통해 수행됩니다. 자세한 내용은 [사용자 정의 변환 연산자](../../language-reference/operators/user-defined-conversion-operators.md)를 참조하세요.  
   
@@ -92,7 +92,7 @@ Giraffe g2 = (Giraffe) a;
 
 - [C# 프로그래밍 가이드](../index.md)
 - [유형](./index.md)
-- [() 캐스트 연산자](../../language-reference/operators/type-testing-and-cast.md#cast-operator-)
+- [캐스트 식](../../language-reference/operators/type-testing-and-cast.md#cast-expression)
 - [사용자 정의 전환 연산자](../../language-reference/operators/user-defined-conversion-operators.md)
 - [일반화된 형식 변환](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/yy580hbd(v=vs.120))
 - [문자열을 숫자로 변환하는 방법](./how-to-convert-a-string-to-a-number.md)

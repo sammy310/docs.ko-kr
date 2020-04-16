@@ -2,12 +2,12 @@
 title: dotnet-dump - .NET Core
 description: dotnet-dump 명령줄 도구를 설치하고 사용합니다.
 ms.date: 10/14/2019
-ms.openlocfilehash: 3c0e28d4efc96ae53ec7dfae243725ab400e6b8f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c78ddb6447021f61f2452c075733b7d33e051ca0
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76737662"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888204"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>덤프 수집 및 분석 유틸리티(`dotnet-dump`)
 
@@ -38,7 +38,7 @@ dotnet-dump [-h|--help] [--version] <command>
 
 - **`--version`**
 
-  dotnet-counters 유틸리티의 버전을 표시합니다.
+  dotnet-dump 유틸리티의 버전을 표시합니다.
 
 - **`-h|--help`**
 

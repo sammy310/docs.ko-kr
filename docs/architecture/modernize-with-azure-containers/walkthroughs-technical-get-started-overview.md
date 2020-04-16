@@ -2,12 +2,12 @@
 title: 연습 및 기술 시작 개요
 description: Azure Cloud 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화 | 연습 및 기술 시작 개요
 ms.date: 04/28/2018
-ms.openlocfilehash: 190b33c4307b09bab0543d481e66ac9328074a0d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cff418d9b6e931a3082d8a2f8b818e7275139578
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69660893"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987871"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>연습 및 기술 시작 개요
 
@@ -62,7 +62,7 @@ ms.locfileid: "69660893"
 
 ![ASP.NET MVC 및 ASP.NET Web Forms 애플리케이션(기존/레거시 기술)](./media/image5-2.png)
 
-ASP.NET 4.x 이전 버전의 종속성(MVC 또는 Web Forms)은 ASP.NET Core MVC를 사용하여 코드를 완전히 다시 작성하지 않는 한 이러한 애플리케이션이 .NET Core에서 실행되지 않음을 의미합니다.
+ASP.NET 4.x 이하 버전의 종속성(MVC 또는 Web Forms)은 ASP.NET Core MVC를 사용하여 코드를 완전히 다시 작성하지 않는 한 해당 애플리케이션이 .NET Core에서 실행되지 않음을 의미합니다.
 
 ### <a name="scenario-2-wcf-service-and-winforms-client-app-3-tier-app"></a>시나리오 2: WCF 서비스 및 WinForms 클라이언트 앱(3 계층 앱)
 
@@ -78,8 +78,8 @@ ASP.NET 4.x 이전 버전의 종속성(MVC 또는 Web Forms)은 ASP.NET Core MVC
 
 다음 GitHub wiki에서 이 콘텐츠를 보다 심층적으로 살펴봅니다.
 
-- [Tour on the baseline ASP.NET MVC and Web Forms "legacy" apps](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-the-ASP.NET-MVC-and-WebForms-apps-implementation-code)
-- [Tour on the baseline WCF service and WinForms (3-Tier) "legacy" app](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
+- [기준 ASP.NET MVC 및 Web Forms “레거시” 앱 둘러보기](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-the-ASP.NET-MVC-and-WebForms-apps-implementation-code)
+- [기준 WCF 서비스 및 WinForms(3계층) “레거시” 앱](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
 
 ## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>연습 2: Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 컨테이너화
 

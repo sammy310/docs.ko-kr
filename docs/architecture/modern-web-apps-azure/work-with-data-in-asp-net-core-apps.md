@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케�
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 5a38ca94b6df676858e7cb058272e450aaf1572e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b706332b28aec669a841f510046aa7b185be1373
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78241041"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987844"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core 앱에서 데이터 작업
 
@@ -130,7 +130,7 @@ var brandsWithItems = await _context.CatalogBrands
 여러 관계를 포함할 수 있으며, ThenInclude를 사용하여 하위 관계를 포함할 수도 있습니다. EF Core는 엔터티의 결과 집합을 검색하는 단일 쿼리를 실행합니다. 또는 다음과 같이 마침표('.')로 구분된 문자열을 `.Include()` 확장 메서드에 전달하여 탐색 속성을 포함할 수 있습니다.
 
 ```csharp
-    .Include(“Items.Products”)
+    .Include("Items.Products")
 ```
 
 사양은 필터링 논리를 캡슐화할 뿐 아니라 채울 속성을 포함하여 반환될 데이터의 모양을 지정할 수 있습니다. eShopOnWeb 샘플에는 사양 내에서 즉시 로드 정보를 캡슐화하는 방법을 보여주는 몇 가지 사양이 포함됩니다. 여기에서 사양을 쿼리의 일부로 사용하는 방법을 확인할 수 있습니다.
@@ -180,7 +180,7 @@ public class Basket : BaseEntity
 }
 ```
 
-이 엔터티 형식은 공용 `List` 또는 `ICollection` 속성을 노출하지 않지만 대신 기본 목록 형식을 래핑하는 `IReadOnlyCollection` 형식을 노출합니다. 이 패턴을 사용하면 다음과 같이 지원 필드를 사용하도록 Entity Framework Core를 지정할 수 있습니다.
+이 엔터티 형식은 퍼블릭 `List` 또는 `ICollection` 속성을 공개하지 않지만 대신 기본 목록 형식을 래핑하는 `IReadOnlyCollection` 형식을 공개합니다. 이 패턴을 사용하면 다음과 같이 지원 필드를 사용하도록 Entity Framework Core를 지정할 수 있습니다.
 
 ```csharp
 private void ConfigureBasket(EntityTypeBuilder<Basket> builder)

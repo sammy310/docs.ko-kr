@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 7e879a44bd8056ac8753c1e86464fe14fd6b9e50
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: be5c26c81480dc2854b849dd7f2b1c46ee3e526a
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523589"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989170"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0의 새로운 기능
 
@@ -140,7 +140,7 @@ IL 링커 도구에 대한 자세한 내용은 [문서](https://aka.ms/dotnet-il
 
 ### <a name="tiered-compilation"></a>계층화된 컴파일
 
-[계층화된 컴파일](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation-guide.md)(TC)은 .NET Core 3.0에서 기본적으로 켜져 있습니다. 런타임 시 JIT(Just-In-Time) 컴파일러를 더욱 유연하게 사용하여 성능을 개선할 수 있도록 하는 기능입니다.
+[계층화된 컴파일](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation.md)(TC)은 .NET Core 3.0에서 기본적으로 켜져 있습니다. 런타임 시 JIT(Just-In-Time) 컴파일러를 더욱 유연하게 사용하여 성능을 개선할 수 있도록 하는 기능입니다.
 
 계층화된 컴파일의 주요 혜택은 품질은 낮지만 빠른 계층의 (재)JIT 메서드 또는 품질은 높지만 느린 계층의 (재)JIT 메서드의 두 가지 방법을 제공하는 것입니다. 품질은 메서드가 얼마나 제대로 최적화되었는지를 나타냅니다. TC는 시작에서 정적인 상태까지 다양한 실행 단계를 거치므로 애플리케이션의 성능을 개선하는 데 도움이 됩니다. 계층화된 컴파일을 사용하지 않도록 설정하는 경우 모든 메서드는 시작 성능보다 정적인 상태 성능에 편향된 단일 방식으로 컴파일됩니다.
 
@@ -506,7 +506,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 적절한 경우 .NET 라이브러리는 성능을 개선하기 위해 이러한 명령을 사용하기 시작했습니다.
 
-자세한 내용은 [.NET 플랫폼 종속 내장 함수](https://github.com/dotnet/designs/blob/master/accepted/platform-intrinsics.md)를 참조하세요.
+자세한 내용은 [.NET 플랫폼 종속 내장 함수](https://github.com/dotnet/designs/blob/master/accepted/2018/platform-intrinsics.md)를 참조하세요.
 
 ### <a name="improved-net-core-version-apis"></a>향상된 .NET Core Version API
 

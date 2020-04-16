@@ -2,12 +2,12 @@
 title: 컨테이너 기반 애플리케이션의 Azure 컴퓨팅 플랫폼 선택
 description: Azure Cloud 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화 | 컨테이너 기반 애플리케이션용 Azure 컴퓨팅 플랫폼 선택
 ms.date: 02/18/2020
-ms.openlocfilehash: 52e7cf1c5dd3a5850564bdb33ac7a4ac4904f432
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4bc72fb5a5be30d47cffe73d53a82b3237a959a6
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503863"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987818"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>컨테이너 기반 애플리케이션의 Azure 컴퓨팅 플랫폼 선택
 
@@ -21,7 +21,7 @@ ms.locfileid: "77503863"
 - **서버리스 함수 및 이벤트 처리기:** Azure Functions를 선택
 - **대규모 일괄 처리:** Azure Batch를 선택
 
-그러나 제품 선택은 특정 애플리케이션의 요구 사항 및 특성에 따라 달라지므로 이러한 권장 사항은 참고만 해야 합니다. 처음에는 비슷한 유형으로 보일 수 있어도 애플리케이션은 다 다릅니다.
+그러나 제품 선택은 특정 애플리케이션의 요구 사항 및 특성에 따라 달라지므로 이 권장 사항은 참고만 해야 합니다. 처음에는 비슷한 유형으로 보일 수 있어도 애플리케이션은 다 다릅니다.
 
 애플리케이션의 요구 사항을 심층적으로 분석한 후에는 제품 선택이 달라질 수 있습니다. 하지만 시작점으로, 특정 우선 순위에 따라 평가 및 테스트를 시작할 수 있는 초기 지침을 마련하는 것이 좋습니다.
 

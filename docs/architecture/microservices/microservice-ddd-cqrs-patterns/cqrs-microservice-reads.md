@@ -2,12 +2,12 @@
 title: CQRS 마이크로 서비스에서 읽기/쿼리 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | Dapper를 사용하여 eShopOnContainers의 주문 마이크로 서비스에서 CQRS 쿼리 측면의 구현을 이해합니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: 235b0e471a17e2a37a883a111cf499b7837f3ea1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 49f42a5035bab38f800f3ec5ea24b01fde0d2964
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73972082"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988754"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>CQRS 마이크로 서비스에서 읽기/쿼리 구현
 
@@ -93,13 +93,13 @@ public class OrderQueries : IOrderQueries
 
 ### <a name="viewmodel-as-predefined-dto-classes"></a>미리 정의된 DTO 클래스인 ViewModel
 
-**장점**: 명시적 DTO 클래스를 기반으로 하는 “계약”과 같이 미리 정의된 정적 ViewModel 클래스를 사용하면, 동일한 애플리케이션에서만 사용되는 경우에도 공용 API뿐만 아니라 장기적인 마이크로 서비스에도 확실히 더 좋습니다.
+**장점**: 명시적 DTO 클래스를 기반으로 하는 “계약”과 같이 미리 정의된 정적 ViewModel 클래스를 사용하면, 동일한 애플리케이션에서만 사용되는 경우에도 퍼블릭 API뿐만 아니라 장기적인 마이크로 서비스에도 확실히 더 좋습니다.
 
 Swagger에 대한 응답 형식을 지정하려면 명시적 DTO 클래스를 반환 형식으로 사용해야 합니다. 따라서 미리 정의된 DTO 클래스를 사용하면 Swagger에서 더 많은 정보를 제공할 수 있습니다. API를 사용할 때 API 문서화 및 호환성이 향상됩니다.
 
 **단점**: 앞에서 언급했듯이 코드를 업데이트할 때 DTO 클래스를 업데이트하는 데 몇 가지 단계가 필요합니다.
 
-경험을 기반으로 한 팁:  eShopOnContainers의 주문 마이크로 서비스에서 구현된 쿼리에서, 초기 개발 단계에서 매우 간단하고 민첩했기 때문에 동적 ViewModels를 사용하여 개발하기 시작했습니다. 그러나 개발이 안정화된 후에는 API를 리팩터링하고 ViewModel에 정적 또는 미리 정의된 DTO를 사용하도록 결정했습니다. 이는 마이크로 서비스 소비자에서 명시적 DTO 형식을 인식하고 "계약"으로 사용하는 것이 더 명확하기 때문입니다.
+경험을 기반으로 한 팁:  eShopOnContainers의 주문 마이크로 서비스에서 구현된 쿼리에서, 초기 개발 단계에서 매우 간단하고 민첩했기 때문에 동적 ViewModels를 사용하여 개발하기 시작했습니다. 그러나 개발이 안정화된 후에는 API를 리팩터링하고 ViewModel에 정적 또는 미리 정의된 DTO를 사용하도록 했습니다. 이는 마이크로 서비스 소비자에서 명시적 DTO 형식을 인식하고 “계약”으로 사용하는 것이 더 명확하기 때문입니다.
 
 다음 예제에서는 명시적 ViewModel DTO 클래스인 OrderSummary 클래스를 사용하여 쿼리에서 데이터를 반환하는 방법을 확인할 수 있습니다.
 

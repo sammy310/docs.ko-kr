@@ -8,22 +8,22 @@ helpviewer_keywords:
 - numeric conversions [C#], explicit
 - conversions [C#], implicit numeric
 - conversions [C#], explicit numeric
-ms.openlocfilehash: 5380e8480c39d1940df13b2ecb50a0f394367388
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b7d53e508e4d585c746a3cc61824cdace7707deb
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398288"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121460"
 ---
 # <a name="built-in-numeric-conversions-c-reference"></a>기본 제공 숫자 변환(C# 참조)
 
-C#에서는 [정수](integral-numeric-types.md) 및 [부동 소수점](floating-point-numeric-types.md) 숫자 형식 집합을 제공합니다. 두 숫자 형식 간에는 암시적 또는 명시적 변환이 있습니다. 명시적 변환을 호출하려면 [cast 연산자 `()`](../operators/type-testing-and-cast.md#cast-operator-)를 사용해야 합니다.
+C#에서는 [정수](integral-numeric-types.md) 및 [부동 소수점](floating-point-numeric-types.md) 숫자 형식 집합을 제공합니다. 두 숫자 형식 간에는 암시적 또는 명시적 변환이 있습니다. 명시적 변환을 수행하려면 [캐스트 식](../operators/type-testing-and-cast.md#cast-expression) 사용해야 합니다.
 
 ## <a name="implicit-numeric-conversions"></a>암시적 숫자 변환
 
 다음 표에서는 기본 제공 숫자 형식 간의 미리 정의된 암시적 숫자 변환을 보여 줍니다.
 
-|보낸 사람|대상|
+|시작|대상|
 |----------|--------|
 |[sbyte](integral-numeric-types.md)|`short`, `int`, `long`, `float`, `double` 또는 `decimal`|
 |[byte](integral-numeric-types.md)|`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` 또는 `decimal`|
@@ -31,8 +31,8 @@ C#에서는 [정수](integral-numeric-types.md) 및 [부동 소수점](floating-
 |[ushort](integral-numeric-types.md)|`int`, `uint`, `long`, `ulong`, `float`, `double` 또는 `decimal`|
 |[int](integral-numeric-types.md)|`long`, `float`, `double` 또는 `decimal`|
 |[uint](integral-numeric-types.md)|`long`, `ulong`, `float`, `double` 또는 `decimal`|
-|[long](integral-numeric-types.md)|`float`, `double` 또는 `decimal`|
-|[ulong](integral-numeric-types.md)|`float`, `double` 또는 `decimal`|
+|[long](integral-numeric-types.md)|`float`, `double`또는 `decimal`|
+|[ulong](integral-numeric-types.md)|`float`, `double`또는 `decimal`|
 |[float](floating-point-numeric-types.md)|`double`|
 
 > [!NOTE]
@@ -59,12 +59,12 @@ C#에서는 [정수](integral-numeric-types.md) 및 [부동 소수점](floating-
 
 다음 표에서는 [암시적 변환](#implicit-numeric-conversions)이 없는 기본 제공 숫자 형식 간의 미리 정의된 명시적 변환을 보여 줍니다.
 
-|보낸 사람|대상|
+|시작|대상|
 |----------|--------|
 |[sbyte](integral-numeric-types.md)|`byte`, `ushort`, `uint` 또는 `ulong`|
 |[byte](integral-numeric-types.md)|`sbyte`|
 |[short](integral-numeric-types.md)|`sbyte`, `byte`, `ushort`, `uint` 또는 `ulong`|
-|[ushort](integral-numeric-types.md)|`sbyte`, `byte` 또는 `short`|
+|[ushort](integral-numeric-types.md)|`sbyte`, `byte`또는 `short`|
 |[int](integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `uint` 또는 `ulong`|
 |[uint](integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort` 또는 `int`|
 |[long](integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint` 또는 `ulong`|
@@ -107,7 +107,7 @@ C#에서는 [정수](integral-numeric-types.md) 및 [부동 소수점](floating-
 - [암시적 숫자 변환](~/_csharplang/spec/conversions.md#implicit-numeric-conversions)
 - [명시적 숫자 변환](~/_csharplang/spec/conversions.md#explicit-numeric-conversions)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [캐스팅 및 형식 변환](../../programming-guide/types/casting-and-type-conversions.md)

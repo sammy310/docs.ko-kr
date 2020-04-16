@@ -2,12 +2,12 @@
 title: 마이크로 서비스(통합 이벤트) 간 이벤트 기반 통신 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET Microservices 아키텍처 | 마이크로 서비스 간의 이벤트 기반 통신을 구현하기 위해 통합 이벤트를 이해합니다.
 ms.date: 10/02/2018
-ms.openlocfilehash: 6d4e324a05def91935a82df41c971a75cb75c3f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8a1d4950247d63e5684c85c029efccf8269e7435
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712405"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988325"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>마이크로 서비스(통합 이벤트) 간 이벤트 기반 통신 구현
 
@@ -29,7 +29,7 @@ ms.locfileid: "75712405"
 
 분산 개발을 더 쉽게 만드는 장기 운영 프로세스를 위한 [Sagas](https://docs.particular.net/nservicebus/sagas/) 같이 고수준의 추상적 개념과 더 풍성한 기능을 요구하는 경우, NServiceBus, MassTransit, Brighter 같은 기타 상업용 및 오픈소스 서비스 버스는 평가할 만한 가치가 있습니다. 이 경우 사용할 추상적 개념과 API는 일반적으로 사용자 자신의 추상적 개념([eShopOnContainers에 제공되는 단순 이벤트 버스 추상적 개념](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/BuildingBlocks/EventBus/EventBus/Abstractions/IEventBus.cs)과 같은)이 아닌 고수준의 서비스 버스에서 제공하는 추상적 개념이 됩니다. 이를 위해 [NServiceBus를 사용하여 포크된 eShopOnContainers](https://go.particular.net/eShopOnContainers)(특정 소프트웨어에 의해 구현된 추가 파생 샘플)를 연구할 수 있습니다.
 
-물론, RabbitMQ 및 Docker 같은 저수준의 기술을 기반으로 한 사용자 고유의 서비스 버스 기능은 항상 빌드할 수 있지만 "항목을 새로 개발하기 위해" 필요한 작업은 사용자 지정 엔터프라이즈 애플리케이션에 지나치게 높은 비용이 들 수 있습니다.
+물론, RabbitMQ 및 Docker 같은 저수준의 기술을 기반으로 한 사용자 고유의 서비스 버스 기능은 항상 빌드할 수 있지만 “항목을 새로 개발하기 위해” 필요한 작업은 사용자 지정 엔터프라이즈 애플리케이션에 지나치게 높은 비용이 들 수 있습니다.
 
 다시 말하면: eShopOnContainers 샘플에 소개된 샘플 이벤트 버스 추상화 및 구현은 개념 증명으로만 사용하기 위한 것입니다. 현재 섹션에 설명된 대로 비동기 및 이벤트 기반 통신을 원하는 경우 프로덕션 요구 사항에 가장 적합한 서비스 버스 제품을 선택해야 합니다.
 

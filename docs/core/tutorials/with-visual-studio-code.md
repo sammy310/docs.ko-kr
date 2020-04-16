@@ -3,12 +3,12 @@ title: C# 및 Visual Studio Code 시작
 description: Visual Studio Code를 사용하여 C#에서 첫 번째 .NET Core 애플리케이션을 만들고 디버그하는 방법을 알아봅니다.
 author: kendrahavens
 ms.date: 12/05/2018
-ms.openlocfilehash: 49a1271f2bf74224e189e70bebf0d22c49408e5d
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: 6722b97cee5ca3672c9dddece6e61f4d13de05a9
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111064"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805817"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 및 Visual Studio Code 시작
 
@@ -34,7 +34,7 @@ ms.locfileid: "80111064"
 
 2. C# 프로젝트 초기화
 
-    - 주 메뉴에서 **보기** > **통합 터미널**을 선택하여 Visual Studio Code에서 통합 터미널을 엽니다.
+    - 주 메뉴에서 **보기** > **터미널**을 선택하여 Visual Studio Code에서 터미널을 엽니다.
     - 터미널 창에서 `dotnet new console`을 입력합니다.
     - 이 명령은 폴더에 이미 작성된 간단한 “헬로 월드” 프로그램이 있는 *Program.cs* 파일을 만들고 *HelloWorld.csproj*라는 C# 프로젝트 파일을 만듭니다.
 
@@ -62,7 +62,7 @@ ms.locfileid: "80111064"
 
     ![Program.cs 파일 열기](media/with-visual-studio-code/open-program-cs.png)
 
-2. Visual Studio Code에 앱을 빌드하고 디버그하기 위해 누락된 자산을 추가하라는 메시지가 표시됩니다. **예**를 선택합니다.
+2. Visual Studio Code에 앱을 빌드하고 디버그하기 위해 누락된 자산을 추가하라는 메시지가 표시됩니다. **Yes**를 선택합니다.
 
     ![누락된 자산에 대한 프롬프트](media/with-visual-studio-code/missing-assets.png)
 
@@ -145,7 +145,7 @@ ms.locfileid: "80111064"
 
 Visual Studio Code C# 확장에서 빌드 및 디버그할 자산을 생성할 수 있습니다. C# 프로젝트를 처음 열면 Visual Studio Code에 이러한 자산을 생성하라는 메시지가 표시됩니다. 자산을 생성하지 않은 경우 명령 팔레트(**보기 > 명령 팔레트**)를 열고 ">.NET: Generate Assets Build and Debug"를 입력하여 이 명령을 실행할 수 있습니다. 이를 선택하면 필요한 . *.vscode*, *launch.json* 및 *tasks.json* 구성 파일이 생성됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Visual Studio Code 설치](https://code.visualstudio.com/docs/setup/setup-overview)
 - [Visual Studio Code의 디버깅](https://code.visualstudio.com/Docs/editor/debugging)

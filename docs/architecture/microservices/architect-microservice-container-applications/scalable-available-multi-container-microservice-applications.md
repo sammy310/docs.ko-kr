@@ -2,12 +2,12 @@
 title: 높은 확장성 및 가용성을 위해 마이크로서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
 description: Kubernetes 애플리케이션 수명 주기를 개발하는 동안 높은 확장성과 가용성 및 Azure Dev Spaces의 가능성을 위해 마이크로 서비스 및 다중 컨테이너 애플리케이션을 오케스트레이션하는 옵션을 검색합니다.
 ms.date: 01/30/2020
-ms.openlocfilehash: ea204941a461794fbeeb2482aa11973b79437027
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8a67235109bed806caa7d9caa2bc26fd4fe9daca
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77628503"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988910"
 ---
 # <a name="orchestrate-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>높은 확장성 및 가용성을 위해 마이크로서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
 
@@ -19,7 +19,7 @@ ms.locfileid: "77628503"
 
 **그림 4-23** 컨테이너의 클러스터
 
-각 서비스 인스턴스에 대해 하나의 컨테이너를 사용합니다. Docker 컨테이너는 "배포 단위"이고 컨테이너는 Docker의 인스턴스입니다. 하나의 호스트가 많은 컨테이너를 처리합니다. 이는 논리적인 방법처럼 보입니다. 그러나 이처럼 구성된 애플리케이션을 부하 분산, 라우팅 및 오케스트레이션하려면 어떻게 할까요?
+각 서비스 인스턴스에 대해 하나의 컨테이너를 사용합니다. Docker 컨테이너는 “배포 단위”이고 컨테이너는 Docker의 인스턴스입니다. 하나의 호스트가 많은 컨테이너를 처리합니다. 이는 논리적인 방법처럼 보입니다. 그러나 이처럼 구성된 애플리케이션을 부하 분산, 라우팅 및 오케스트레이션하려면 어떻게 할까요?
 
 단일 Docker 호스트의 일반 Docker 엔진은 하나의 호스트에서 단일 이미지 인스턴스를 관리해야 하는 필요성을 충족하지만, 더 복잡한 분산 애플리케이션을 위해 여러 호스트에 배포된 여러 컨테이너를 관리하는 경우에는 부족합니다. 대부분의 경우 컨테이너를 자동으로 시작하고 이미지당 여러 인스턴스로 컨테이너를 확장하고 일시 중지하거나 필요한 경우 종료하는 관리 플랫폼이 필요하며, 네트워크 및 데이터 스토리지와 같은 리소스에 액세스하는 방법을 제어하는 것도 좋습니다.
 
@@ -60,7 +60,7 @@ Azure Kubernetes Service는 Azure용으로 특별히 인기 있는 Docker 클러
 
 ## <a name="development-environment-for-kubernetes"></a>Kubernetes를 위한 개발 환경
 
-개발 환경에서 Kubernetes가 [Docker Desktop](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/)을 설치하기만 하면 단일 개발 머신(Windows 10 또는 macOS)에서도 실행할 수 있는 [Docker를 2018년 7월에 발표](https://docs.docker.com/install/)했습니다. 그림 4-25와 같이 나중에 통합 테스트를 위해 클라우드(AKS)에 배포할 수 있습니다.
+개발 환경에서 Kubernetes가 [Docker Desktop](https://docs.docker.com/install/)을 설치하기만 하면 단일 개발 머신(Windows 10 또는 macOS)에서도 실행할 수 있는 [Docker를 2018년 7월에 발표](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/)했습니다. 그림 4-25와 같이 나중에 통합 테스트를 위해 클라우드(AKS)에 배포할 수 있습니다.
 
 ![AKS에 배포되는 개발 머신의 Kubernetes를 보여 주는 다이어그램입니다.](./media/scalable-available-multi-container-microservice-applications/kubernetes-development-environment.png)
 

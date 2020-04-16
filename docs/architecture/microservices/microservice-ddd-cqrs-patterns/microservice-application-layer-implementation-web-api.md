@@ -2,12 +2,12 @@
 title: Web API를 사용하여 마이크로 서비스 애플리케이션 계층 구현
 description: Web API 애플리케이션 계층에서 종속성 주입 및 중재자 패턴과 해당 구현 세부 정보를 이해합니다.
 ms.date: 01/30/2020
-ms.openlocfilehash: a88f3bfd11ea06df085ca82ed7265cb37006fc31
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 76562d87b09a18e4a4ecb7625a2e823bc1ccff78
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502440"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988468"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Web API를 사용하여 마이크로 서비스 에플리케이션 계층 구현
 
@@ -183,7 +183,7 @@ Autofac에는 [이름 규칙에 따라 어셈블리 및 등록 형식 검사](ht
 
 ![클라이언트에서 데이터베이스로 데이터 흐름을 개략적으로 보여 주는 다이어그램](./media/microservice-application-layer-implementation-web-api/high-level-writes-side.png)
 
-**그림 7-24**. CQRS 패턴의 명령 또는 "트랜잭션 쪽"에 대한 개괄적인 보기
+**그림 7-24**. CQRS 패턴의 명령 또는 “트랜잭션 쪽”에 대한 개괄적인 보기
 
 그림 7-24에서는 UI 앱이 도메인 모델 및 데이터베이스를 업데이트할 인프라에 따라 달라지는 `CommandHandler`를 가져오는 API를 통해 명령을 보냅니다.
 
@@ -291,7 +291,7 @@ public class CreateOrderCommand
 
 예를 들어 주문 생성을 위한 명령 클래스가 데이터 측면에서는 생성하려는 주문과 유사할 수 있지만 동일한 특성이 필요하지 않을 수도 있습니다. 예를 들어 `CreateOrderCommand`에는 주문 ID가 없는데, 이것은 주문이 아직 생성되지 않았기 때문입니다.
 
-많은 명령 클래스는 간단하며, 변경이 필요한 상태에 대해 몇 개의 필드만 필요할 수 있습니다. 이런 경우는 다음과 유사한 명령을 사용하여 주문의 상태를 "처리 중"에서 "지불됨" 또는 "배송됨"으로 변경하는 경우가 될 수 있습니다.
+많은 명령 클래스는 간단하며, 변경이 필요한 상태에 대해 몇 개의 필드만 필요할 수 있습니다. 이런 경우는 다음과 유사한 명령을 사용하여 주문의 상태를 “처리 중”에서 “지불됨” 또는 “배송됨”으로 변경하는 경우가 될 수 있습니다.
 
 ```csharp
 [DataContract]
@@ -449,21 +449,21 @@ public class CreateOrderCommandHandler
 
 명령의 파이프라인은 고가용성 메시지 큐에 의해 처리되어 명령을 해당 처리기로 전달할 수도 있습니다. 메시지 큐를 사용하여 명령을 수락하면 명령의 파이프라인이 복잡해질 수 있습니다. 파이프라인을 외부 메시지 큐를 통해 연결된 두 개의 프로세스로 분할하는 것이 필요할 수 있기 때문입니다. 하지만 비동기 메시지를 기반으로 확장성과 성능을 향상시키려면 사용해야 합니다. 그림 7-26의 경우 컨트롤러는 명령 메시지를 큐에 게시만 하고 반환합니다. 그런 다음, 명령 처리기는 원하는 속도로 메시지를 처리합니다. 이것이 큐의 커다란 장점입니다. 주식 또는 송신 데이터가 대규모인 그 밖의 시나리오와 같이 엄청난 확장성이 필요한 경우에, 메시지 큐는 버퍼로 작동할 수 있습니다.
 
-하지만 메시지 큐의 비동기적인 특성으로 인해, 명령 프로세스의 성공 또는 실패에 대해 클라이언트 애플리케이션과 통신할 방법을 알아내야 합니다. 원칙적으로 “fire and forget”명령은 절대 사용하지 말아야 합니다. 모든 비즈니스 애플리케이션은 명령이 성공적으로 처리되었는지 아니면 최소한 유효성이 검사되고 수락되었는지를 알아야 합니다.
+하지만 메시지 큐의 비동기적인 특성으로 인해, 명령 프로세스의 성공 또는 실패에 대해 클라이언트 애플리케이션과 통신할 방법을 알아내야 합니다. 원칙적으로 “시작 후 망각형(Fire and Forget)” 명령은 절대 사용하지 말아야 합니다. 모든 비즈니스 애플리케이션은 명령이 성공적으로 처리되었는지 아니면 최소한 유효성이 검사되고 수락되었는지를 알아야 합니다.
 
-따라서 비동기 큐에 제출된 명령 메시지의 유효성을 검사한 후 클라이언트에 응답할 수 있으려면 트랜잭션을 실행 한 후 작업 결과를 반환하는 in-process 명령 프로세스에 비해 시스템이 더 복잡해집니다. 큐를 사용하면 명령 프로세스의 결과를 다른 작업 결과 메시지를 통해 반환해야 할 수 있으며 이렇게 하려면 시스템에 추가 구성 요소 및 사용자 지정 통신이 필요합니다.
+따라서 비동기 큐에 제출된 명령 메시지의 유효성을 검사한 후 클라이언트에 응답할 수 있으려면 트랜잭션을 실행한 후 작업 결과를 반환하는 In Process 명령 프로세스와 비교해 시스템이 더 복잡해집니다. 큐를 사용하면 명령 프로세스의 결과를 다른 작업 결과 메시지를 통해 반환해야 할 수 있으며 이렇게 하려면 시스템에 추가 구성 요소 및 사용자 지정 통신이 필요합니다.
 
 또한 비동기 명령은 단방향 명령이기 때문에 많은 경우에 필요하지 않으며, 이 내용은 [온라인 대화](https://groups.google.com/forum/#!msg/dddcqrs/xhJHVxDx2pM/WP9qP8ifYCwJ)에 있는 Burtsev Alexey와 Greg Young 사이의 다음과 같은 흥미로운 대화에 설명되어 있습니다.
 
 > \[Burtsev Alexey\] 많은 코드에서 아무 이유 없이 비동기 코드 처리 또는 단방향 명령 메시지를 사용하는 경우를 봤습니다. (긴 작업을 수행하는 경우도, 외부 비동기 코드를 실행하는 경우도, 심지어 메시지 버스를 사용하기 위해 애플리케이션 경계를 넘는 경우도 아닙니다.) 이런 불필요한 복잡성을 적용하는 이유가 무엇인가요? 그리고 실제로 명령 처리기를 차단하는 CQRS 코드를 여태까지 본 적이 없습니다. 대부분의 경우 제대로 작동할 텐데도 말입니다.
 >
-> \[Greg Young\] \[...\] 비동기 명령은 존재하지 않으며 실제로는 또 다른 이벤트입니다. 상대방이 내게 보낸 것을 받아들이고 동의하지 않는 경우 이벤트를 발생시켜야 한다면, 더 이상 내게 무언가를 수행하라고 알려주는 것이 아닙니다. \[ 즉, 명령이 아닙니다\]. 수행이 완료되었다는 것을 알려 주는 것입니다. 처음엔 약간의 차이처럼 보이지만 여기에는 많은 내용이 함축되어 있습니다.
+> \[Greg Young\] \[...\] 비동기 명령은 존재하지 않으며 실제로는 또 다른 이벤트입니다. 상대방이 내게 보낸 것을 받아들이고 동의하지 않는 경우 이벤트를 발생시켜야 한다면, 더는 내게 무언가를 수행하라고 알려주는 것이 아닙니다. \[즉, 명령이 아닙니다\]. 수행이 완료되었다는 것을 알려 주는 것입니다. 처음엔 약간의 차이처럼 보이지만 여기에는 많은 내용이 함축되어 있습니다.
 
 비동기 명령은 실패를 나타낼 간단한 방법이 없기 때문에 시스템의 복잡성을 크게 증가시킵니다. 따라서 크기 조정 요구 사항이 필요하거나 메시지를 통해 내부 마이크로 서비스를 통신하는 특수한 경우가 아니라면 비동기 명령은 사용하지 않는 것이 좋습니다. 이런 경우 장애에 대한 별도의 보고 및 복구 시스템을 설계해야 합니다.
 
 eShopOnContainers의 초기 버전에서, HTTP 요청으로 시작하여 중재자(Mediator) 패턴에 의해 구동되는 동기 명령 처리를 사용하기로 결정했습니다. 이를 통해 프로세스의 성공 또는 실패를 [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs) 구현에서처럼 쉽게 반환할 수 있습니다.
 
-어떤 경우에서든, 이러한 결정은 애플리케이션 또는 마이크로 서비스의 비즈니스 요구 사항에 기반하여 내려져야 합니다.
+어떤 경우에서든 이 결정은 애플리케이션 또는 마이크로 서비스의 비즈니스 요구 사항을 기반으로 내려야 합니다.
 
 ## <a name="implement-the-command-process-pipeline-with-a-mediator-pattern-mediatr"></a>중재자 패턴(MediatR)으로 명령 프로세스 파이프라인 구현
 
@@ -475,7 +475,7 @@ Mediator 패턴을 사용하면 작업을 수행하는 처리기(이 경우 명�
 
 Mediator 패턴을 사용하는 또 다른 좋은 이유는 이 가이드를 검토하면서 Jimmy Bogard가 다음과 같이 설명했습니다.
 
-> 시스템 동작에 일관된 창을 제공하기 때문에 테스트를 언급하는 것이 유용하다고 생각합니다. 요청이 들어가고(Request-in), 응답이 나오는(response-out) 이러한 측면은 일관되게 동작하는 테스트를 구축하는 데 매우 유용했습니다.
+> 시스템 동작에 일관된 창을 제공하기 때문에 테스트를 언급하는 것이 유용하다고 생각합니다. 요청이 들어가고(Request-in), 응답이 나오는(response-out) 이 측면은 일관되게 동작하는 테스트를 구축하는 데 매우 유용했습니다.
 
 먼저, 중재자(mediator) 개체를 실제로 사용할 샘플 WebAPI 컨트롤러를 살펴보겠습니다. 중재자(mediator) 개체를 사용하지 않는 경우에는 해당 컨트롤러에 대한 모든 종속성(예: 로거 개체 등)을 주입해야 합니다. 따라서 생성자가 매우 복잡합니다. 반면에 중재자(mediator) 개체를 사용하면, 교차 편집 작업당 종속성이 하나일 경우 다수의 종속성이 있지만 다음 예제와 같이 적은 수의 종속성만 있기 때문에 컨트롤러의 생성자는 훨씬 더 간단해 질 수 있습니다.
 
@@ -526,7 +526,7 @@ var requestCreateOrder = new IdentifiedCommand<CreateOrderCommand,bool>(createOr
 result = await _mediator.Send(requestCreateOrder);
 ```
 
-하지만 이 경우는 idempotent 명령도 구현하기 때문에 조금 더 고급입니다. CreateOrderCommand 프로세스는 idempotent여야 하기 때문에 동일한 메시지가 네트워크를 통해 중복되어 들어오면(재시도 등과 같은 이유로 인해) 동일한 비즈니스 명령은 한 번만 처리됩니다.
+하지만 이 경우는 idempotent 명령도 구현하므로 조금 더 고급입니다. CreateOrderCommand 프로세스는 idempotent여야 하기 때문에 동일한 메시지가 네트워크를 통해 중복되어 들어오면(재시도 등과 같은 이유로 인해) 동일한 비즈니스 명령은 한 번만 처리됩니다.
 
 이러한 내용은 비즈니스 명령(이 경우 CreateOrderCommand)을 래핑하고, idempotent여야 하는 네트워크를 통해 들어오는 모든 메시지의 ID로 추적되는 제네릭 IdentifiedCommand에 포함하여 구현됩니다.
 
@@ -546,7 +546,7 @@ public class IdentifiedCommand<T, R> : IRequest<R>
 }
 ```
 
-[IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs)라는 IdentifiedCommand에 대한 CommandHandler는 메시지의 일부로 들어오는 ID가 이미 테이블에 있는지 기본적으로 확인합니다. 이미 존재하는 경우 해당 명령이 다시 처리되지 않기 때문에 idempotent 명령으로 작동합니다. 해당 인프라 코드는 아래 `_requestManager.ExistAsync` 메서드 호출에 의해 수행됩니다.
+[IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs)라는 IdentifiedCommand에 대한 CommandHandler는 메시지의 일부로 들어오는 ID가 이미 테이블에 있는지 기본적으로 확인합니다. 이미 존재하는 경우 해당 명령이 다시 처리되지 않으므로 idempotent 명령으로 작동합니다. 해당 인프라 코드는 아래 `_requestManager.ExistAsync` 메서드 호출에 의해 수행됩니다.
 
 ```csharp
 // IdentifiedCommandHandler.cs
@@ -590,7 +590,7 @@ public class IdentifiedCommandHandler<T, R> :
 }
 ```
 
-IdentifiedCommand는 비즈니스 명령의 봉투(Envelope)처럼 작동하기 때문에 반복된 ID가 아니라서 비즈니스 명령을 처리해야 하는 경우에는, [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs)에서 `_mediator.Send(message.Command)`를 실행할 때 위에 표시된 코드의 마지막 부분처럼 내부 비즈니스 명령을 가져다가 중재자(Mediator)에 다시 제출합니다.
+IdentifiedCommand는 비즈니스 명령의 봉투(Envelope)처럼 작동하기 때문에 반복된 ID가 아니라서 비즈니스 명령을 처리해야 하는 경우에는, [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs)에서 `_mediator.Send(message.Command)`를 실행할 때 위에 표시된 코드의 마지막 부분처럼 내부 비즈니스 명령을 가져와 중재자(Mediator)에 다시 제출합니다.
 
 그렇게 하면 이 경우 다음 코드와 같이 Ordering 데이터베이스에 대해 트랜잭션을 실행하는 [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs) 비즈니스 명령 처리기를 연결하고 실행합니다.
 
@@ -643,7 +643,7 @@ public class CreateOrderCommandHandler
 
 MediatR에서 명령 처리기 클래스를 인식하려면 IoC 컨테이너에 중재자(mediator) 클래스와 명령 처리기 클래스를 등록해야 합니다. 기본적으로 MediatR은 Autofac을 IoC 컨테이너로 사용하지만 내장 ASP.NET Core IoC 컨테이너 또는 MediatR에서 지원하는 다른 컨테이너를 사용할 수도 있습니다.
 
-다음 코드는 Autofac 모듈을 사용할 때 중재자(Mediator) 형식 및 명령을 등록하는 방법을 보여줍니다.
+다음 코드는 Autofac 모듈을 사용할 때 중재자(Mediator) 형식 및 명령을 등록하는 방법을 보여 줍니다.
 
 ```csharp
 public class MediatorModule : Autofac.Module
@@ -664,7 +664,7 @@ public class MediatorModule : Autofac.Module
 }
 ```
 
-여기가 MediatR로 "마술이 일어나는 곳"입니다.
+여기가 MediatR로 “마술이 일어나는 곳”입니다.
 
 각 명령 처리기는 제네릭 `IAsyncRequestHandler<T>` 인터페이스를 구현하기 때문에 어셈블리를 등록할 때 코드는 다음 예제와 같이 `CommandHandler` 클래스에 명시된 관계 덕분에 `CommandHandlers`를 해당 `Commands`와 연결하는 동안 `IAsyncRequestHandler`으로 표시된 모든 유형을 `RegisteredAssemblyTypes`에 등록합니다.
 
@@ -758,7 +758,7 @@ public class ValidatorBehavior<TRequest, TResponse>
 }
 ```
 
-여기서 동작은 유효성 검사가 실패할 경우 예외를 발생시키지만, 성공한 경우에는 명령 결과를, 그렇지 않으면 유효성 검사 메시지가 포함된 결과 개체를 반환할 수도 있습니다. 이렇게 하면 사용자에게 유효성 검사 결과를 더 쉽게 표시할 수 있습니다.
+여기서 동작은 유효성 검사가 실패할 경우 예외를 발생시키지만, 성공한 경우에는 명령 결과를, 그러지 않으면 유효성 검사 메시지가 포함된 결과 개체를 반환할 수도 있습니다. 이렇게 하면 사용자에게 유효성 검사 결과를 더 쉽게 표시할 수 있습니다.
 
 그런 다음, [FluentValidation](https://github.com/JeremySkinner/FluentValidation) 라이브러리를 기반으로 다음 코드와 같이 CreateOrderCommand와 함께 전달된 데이터에 대한 유효성 검사를 생성했습니다.
 

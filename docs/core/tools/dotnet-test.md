@@ -2,12 +2,12 @@
 title: dotnet test 명령
 description: dotnet test 명령은 지정된 프로젝트에서 단위 테스트를 실행하는 데 사용됩니다.
 ms.date: 02/27/2020
-ms.openlocfilehash: a11814f9fdc6326e681a09d7d2654b968014f318
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 359e4522b26e2b59092d55eea3fca575d2afaf1f
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507310"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121034"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -85,7 +85,7 @@ dotnet test [-h|--help]
 
 - **`l|--logger <LoggerUri/FriendlyName>`**
 
-  테스트 결과에 대해 로거를 지정합니다.
+  테스트 결과에 대해 로거를 지정합니다. MSBuild와 달리 dotnet 테스트에서는 약어를 사용하지 않습니다. `-l "console;v=d"` 대신 `-l "console;verbosity=detailed"`를 사용합니다.
 
 - **`--no-build`**
 
@@ -121,7 +121,7 @@ dotnet test [-h|--help]
 
 - **`-v|--verbosity <LEVEL>`**
 
-  명령의 세부 정보 표시 수준을 설정합니다. 허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다.
+  명령의 세부 정보 표시 수준을 설정합니다. 허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다. 기본값은 `minimal`입니다. 자세한 내용은 <xref:Microsoft.Build.Framework.LoggerVerbosity>를 참조하세요.
 
 - `RunSettings` 인수
 
@@ -149,6 +149,12 @@ dotnet test [-h|--help]
 
   ```dotnetcli
   dotnet test --logger trx
+  ```
+
+- 현재 디렉터리의 프로젝트에서 테스트를 실행하고 콘솔에 세부 정보를 기록합니다.
+
+  ```dotnetcli
+  dotnet test --logger "console;verbosity=detailed"
   ```
 
 ## <a name="filter-option-details"></a>필터 옵션 세부 정보
@@ -192,3 +198,4 @@ dotnet test [-h|--help]
 
 - [프레임워크 및 대상](../../standard/frameworks.md)
 - [.NET Core RID(런타임 식별자) 카탈로그](../rid-catalog.md)
+- [명령줄을 통해 runsettings 인수 전달](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)

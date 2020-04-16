@@ -2,12 +2,12 @@
 title: 회로 차단기 패턴 구현
 description: HTTP 다시 시도에 대한 보완 시스템으로 회로 차단기 패턴을 구현하는 방법을 알아봅니다.
 ms.date: 03/03/2020
-ms.openlocfilehash: a79c6fcca1e29f3c30d697cb369060d59a72c121
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bebe0b4a622db928175f78f8d3e303d3d7adf170
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847247"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988887"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>회로 차단기 패턴 구현
 
@@ -96,7 +96,7 @@ eShopOnContainers를 사용하여 회로를 차단하거나 열고, 테스트할
 
 ![실패한 미들웨어 시뮬레이션 상태 확인의 스크린샷](./media/implement-circuit-breaker-pattern/failing-middleware-simulation.png)
 
-**그림 8-5**. "실패" ASP.NET 미들웨어의 상태 확인. 이 경우 사용하지 않습니다.
+**그림 8-5**. “실패” ASP.NET 미들웨어의 상태 확인 - 이 경우 사용하지 않습니다.
 
 이 시점에서 Basket 마이크로 서비스는 호출될 때마다 상태 코드 500으로 응답합니다.
 
@@ -132,7 +132,7 @@ public class CartController : Controller
 }
 ```
 
-요약하면 다음과 같습니다. 재시도 정책이 HTTP 요청을 수행하기 위해 몇 차례 시도했고 HTTP 오류를 받았습니다. 회로 차단기 정책에 설정된 최대 다시 시도 횟수(이 경우 5)에 도달하면 애플리케이션에서 BrokenCircuitException을 throw합니다. 그 결과 그림 8-6처럼 사용자에게 친숙한 메시지가 표시됩니다.
+다음은 요약입니다. 재시도 정책이 HTTP 요청을 수행하기 위해 몇 차례 시도했고 HTTP 오류를 받았습니다. 회로 차단기 정책에 설정된 최대 다시 시도 횟수(이 경우 5)에 도달하면 애플리케이션에서 BrokenCircuitException을 throw합니다. 그 결과 그림 8-6처럼 사용자에게 친숙한 메시지가 표시됩니다.
 
 ![장바구니 서비스가 작동하지 않음 오류가 발생한 MVC 웹앱의 스크린샷](./media/implement-circuit-breaker-pattern/basket-service-inoperative.png)
 

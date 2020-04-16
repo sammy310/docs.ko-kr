@@ -2,12 +2,12 @@
 title: 클라이언트 쪽 유효성 검사(프레젠테이션 레이어의 유효성 검사)
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 클라이언트 쪽 유효성 검사의 주요 개념을 살펴봅니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: 4e72dcafafc3144a75afe1fd23a4a779f5667459
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 44c1e9fa280b19fcee87d4d1cdfcaa2ab9462f27
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68674360"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988703"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>클라이언트 쪽 유효성 검사(프레젠테이션 레이어의 유효성 검사)
 
@@ -51,7 +51,7 @@ ms.locfileid: "68674360"
 
 요약하면 유효성 검사에 관해 가장 중요한 개념은 다음과 같습니다.
 
-- 엔터티 및 집계는 고유한 일관성을 적용하고 "항상 유효"해야 합니다. 집계 루트는 동일한 집계 내에서 다중 엔터티 일관성을 담당합니다.
+- 엔터티 및 집계는 고유한 일관성을 적용하고 “항상 유효”해야 합니다. 집계 루트는 동일한 집계 내에서 다중 엔터티 일관성을 담당합니다.
 
 - 엔터티가 잘못된 상태를 입력해야 하는 경우 다양한 개체 모델을 사용하는 것이 좋습니다. 예를 들어 최종 도메인 엔터티를 만들 때까지 임시 DTO를 사용합니다.
 

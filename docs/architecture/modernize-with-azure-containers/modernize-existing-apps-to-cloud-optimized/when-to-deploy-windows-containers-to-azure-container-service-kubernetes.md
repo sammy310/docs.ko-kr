@@ -2,12 +2,12 @@
 title: Azure Container Service에 Windows 컨테이너를 배포해야 하는 경우(즉 ACS-Kubernetes)
 description: Azure 클라우드 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화 | Azure Container Service에 Windows 컨테이너를 배포해야 하는 경우(즉 ACS-Kubernetes)
 ms.date: 04/30/2018
-ms.openlocfilehash: 903082deba635dd0dfc22d0186fbc589f8d05b92
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3ff51a70d4e158b831155ab4992ec32f5d98cedb
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69577946"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987766"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-service-that-is-kubernetes"></a>Azure Container Service에 Windows 컨테이너를 배포해야 하는 경우(즉 ACS-Kubernetes)
 

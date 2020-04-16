@@ -2,12 +2,12 @@
 title: IHostedService 및 BackgroundService 클래스를 사용하여 마이크로 서비스에서 백그라운드 작업 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | IHostedService 및 BackgroundService를 사용하여 마이크로 서비스 .NET Core에서 백그라운드 작업을 구현하는 새 옵션을 이해합니다.
 ms.date: 01/30/2020
-ms.openlocfilehash: fab67c816e90c69a4d593422b4974cb9b8819807
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fd26d0444312d3525ad95b2273f28a6ceaa27911
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502298"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988338"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>IHostedService 및 BackgroundService 클래스를 사용하여 마이크로 서비스에서 백그라운드 작업 구현
 
@@ -27,13 +27,13 @@ ASP.NET Core 2.0의 `WebHost`(`IWebHost`를 구현하는 기본 클래스)는 MV
 
 `Host`(`IHost`를 구현하는 기본 클래스)는 .NET Core 2.1에서 도입되었습니다. 기본적으로 `Host`를 통해 `WebHost`(종속성 주입, 호스팅 서비스 등)를 사용하여 가진 것보다 유사한 인프라를 가질 수 있지만 이 경우 MVC, Web API 또는 HTTP 서버 기능과 관련이 없는 호스트로 간단하고 쉬운 프로세스를 갖길 원합니다.
 
-따라서 `IHost`를 호스트하기 위해 만들어진 마이크로 서비스와 같은 호스팅 서비스 및 그 밖의 것을 처리하도록 `IHostedServices`로 특수화된 호스트 프로세스를 선택하고 만들 수 있거나 기존 ASP.NET Core Web API 또는 MVC 앱과 같이 기존 ASP.NET Core `WebHost`를 대안으로 확장할 수 있습니다.
+따라서 `IHostedServices`를 호스트하기 위해 만들어진 마이크로 서비스와 같은 호스팅 서비스 및 그 밖의 것을 처리하도록 `IHost`로 특수화된 호스트 프로세스를 선택하고 만들 수 있거나 기존 ASP.NET Core Web API 또는 MVC 앱과 같이 기존 ASP.NET Core `WebHost`를 대안으로 확장할 수 있습니다.
 
 각 방식은 비즈니스 및 확장성 요구에 따라 장점과 단점을 갖습니다. 요점은 기본적으로 백그라운드 작업에 HTTP(`IWebHost`)와 아무 관련이 없다면 `IHost`를 사용해야 합니다.
 
 ## <a name="registering-hosted-services-in-your-webhost-or-host"></a>WebHost 또는 Host에서 호스팅 서비스 등록
 
-사용 방법은 `IHostedService` 또는 `WebHost`에서 매우 유사하므로 `Host` 인터페이스에서 자세히 살펴보도록 하겠습니다.
+사용 방법은 `WebHost` 또는 `Host`에서 매우 유사하므로 `IHostedService` 인터페이스에서 자세히 살펴보도록 하겠습니다.
 
 SignalR은 호스팅 서비스를 사용하는 아티팩트의 한 가지 예이지만 다음과 같이 훨씬 간단한 작업에 사용할 수도 있습니다.
 
@@ -45,7 +45,7 @@ SignalR은 호스팅 서비스를 사용하는 아티팩트의 한 가지 예이
 
 기본적으로 `IHostedService`를 구현하는 백그라운드 작업에 이러한 작업을 오프로드할 수 있습니다.
 
-하나 또는 여러 `IHostedServices`를 `WebHost` 또는 `Host`에 추가하는 방법은 ASP.NET Core <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions.AddHostedService%2A>(또는 .NET Core 2.1 이상의  )에서 `WebHost``Host`확장 메서드를 통해 등록하는 것입니다. 기본적으로 ASP.NET WebHost의 다음 코드에서처럼 `ConfigureServices()` 클래스의 친숙한 `Startup` 메서드 내에서 호스팅 서비스를 등록해야 합니다.
+하나 또는 여러 `IHostedServices`를 `WebHost` 또는 `Host`에 추가하는 방법은 ASP.NET Core `WebHost`(또는 .NET Core 2.1 이상의 `Host`)에서 <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions.AddHostedService%2A> 확장 메서드를 통해 등록하는 것입니다. 기본적으로 ASP.NET WebHost의 다음 코드에서처럼 `Startup` 클래스의 친숙한 `ConfigureServices()` 메서드 내에서 호스팅 서비스를 등록해야 합니다.
 
 ```csharp
 public IServiceProvider ConfigureServices(IServiceCollection services)
@@ -68,7 +68,7 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
 
 ## <a name="the-ihostedservice-interface"></a>IHostedService 인터페이스
 
-`IHostedService`를 등록할 때 .NET Core는 애플리케이션 시작 및 중지 중에 각각 `StartAsync()` 유형의 `StopAsync()` 및 `IHostedService` 메서드를 호출합니다. 특히 서버가 시작되고 `IApplicationLifetime.ApplicationStarted`가 트리거된 후 시작이 호출됩니다.
+`IHostedService`를 등록할 때 .NET Core는 애플리케이션 시작 및 중지 중에 각각 `IHostedService` 유형의 `StartAsync()` 및 `StopAsync()` 메서드를 호출합니다. 특히 서버가 시작되고 `IApplicationLifetime.ApplicationStarted`가 트리거된 후 시작이 호출됩니다.
 
 .NET Core에 정의된 대로 `IHostedService`는 다음과 같습니다.
 
@@ -178,7 +178,7 @@ public class GracePeriodManagerService : BackgroundService
                                      IEventBus eventBus,
                                      ILogger<GracePeriodManagerService> logger)
     {
-        //Constructor’s parameters validations...
+        // Constructor's parameters validations...
     }
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -210,7 +210,7 @@ eShopOnContainers에 대한 이 특정 경우에 특정 상태로 주문을 조�
 
 물론 다른 비즈니스 백그라운드 작업을 대신 실행할 수 있습니다.
 
-`WebHost`의 `UseShutdownTimeout` 확장을 사용하여 `IWebHostBuilder`를 빌드할 때 해당 값을 변경할 수 있지만 기본적으로 취소 토큰은 5초 시간 제한으로 설정됩니다. 즉, 서비스는 5초 내에 취소될 것으로 예상되며 그렇지 않은 경우 갑자기 종료됩니다.
+`IWebHostBuilder`의 `UseShutdownTimeout` 확장을 사용하여 `WebHost`를 빌드할 때 해당 값을 변경할 수 있지만 기본적으로 취소 토큰은 5초 시간 제한으로 설정됩니다. 즉, 서비스는 5초 내에 취소될 것으로 예상되며 그렇지 않은 경우 갑자기 종료됩니다.
 
 다음 코드는 해당 시간을 10초로 변경합니다.
 
@@ -228,7 +228,7 @@ WebHost.CreateDefaultBuilder(args)
 
 **그림 6-27**. IHostedService와 관련된 다중 클래스 및 인터페이스를 보여 주는 클래스 다이어그램
 
-클래스 다이어그램: IWebHost와 IHost는 IHostedService를 구현하는 BackgroundService에서 상속되는 많은 서비스를 호스팅할 수 있습니다.
+클래스 다이어그램: IWebHost와 IHost는 IHostedService를 구현하는 BackgroundService에서 상속되는 많은 서비스를 호스트할 수 있습니다.
 
 ### <a name="deployment-considerations-and-takeaways"></a>배포 고려 사항 및 요점
 
@@ -249,6 +249,6 @@ ASP.NET Core `WebHost` 또는 .NET Core `Host`를 배포하는 방법은 최종 
 - **ASP.NET Core 2.1을 사용한 GenericHost 샘플** \
   <https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
 
->[!div class="step-by-step"]
->[이전](test-aspnet-core-services-web-apps.md)
->[다음](implement-api-gateways-with-ocelot.md)
+> [!div class="step-by-step"]
+> [이전](test-aspnet-core-services-web-apps.md)
+> [다음](implement-api-gateways-with-ocelot.md)

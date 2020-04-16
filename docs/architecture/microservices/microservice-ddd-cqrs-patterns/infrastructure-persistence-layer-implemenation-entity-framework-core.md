@@ -2,12 +2,12 @@
 title: Entity Framework Core를 사용하여 인프라 지속성 레이어 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | Entity Framework Core를 사용하여 인프라 지속성 계층에 대한 구현 세부 정보를 탐색합니다.
 ms.date: 01/30/2020
-ms.openlocfilehash: 2d28d9246be3e102625ed5bb67ee1ccede03c942
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 7ab3be0d6a5affda478f7ec8f6c356571e304759
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523320"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805484"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Entity Framework Core를 사용하여 인프라 지속성 레이어 구현
 
@@ -88,7 +88,7 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
    // ...
    modelBuilder.ApplyConfiguration(new OrderEntityTypeConfiguration());
-   // Other entities’ configuration ...
+   // Other entities' configuration ...
 }
 
 // At OrderEntityTypeConfiguration.cs from eShopOnContainers
@@ -154,7 +154,7 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
 }
 ```
 
-IBuyerRepository 인터페이스는 도메인 모델 레이어에서 계약으로 가져옵니다. 그러나 리포지토리 구현은 지속성 및 인프라 레이어에서 수행됩니다.
+`IBuyerRepository` 인터페이스는 도메인 모델 레이어에서 계약으로 가져옵니다. 그러나 리포지토리 구현은 지속성 및 인프라 레이어에서 수행됩니다.
 
 EF DbContext는 종속성 주입을 통해 생성자를 거쳐 가져옵니다. IoC 컨테이너(`services.AddDbContext<>`를 사용하여 명시적으로 설정할 수도 있음)의 기본 수명 주기(`ServiceLifetime.Scoped`) 덕분에 동일한 HTTP 요청 범위 내의 여러 리포지토리 간에 공유됩니다.
 
@@ -168,7 +168,7 @@ eShopOnContainers에서 마이크로 서비스를 주문하는 방식도 CQS/CQR
 
 ### <a name="using-a-custom-repository-versus-using-ef-dbcontext-directly"></a>사용자 지정 리포지토리를 사용하는 방법과 EF DbContext를 직접 사용하는 방법 비교
 
-Entity Framework DbContext 클래스는 작업 단위 및 리포지토리 패턴을 기반으로 하며, ASP.NET Core MVC 컨트롤러처럼 코드에서 직접 사용할 수 있습니다. eShopOnContainers의 CRUD 카탈로그 마이크로 서비스에서 하듯이, 이 방법으로 가장 간단한 코드를 만들 수 있습니다. 최대한 간단한 코드를 원하는 경우 여러 개발자들이 하는 것처럼 DbContext 클래스를 직접 사용할 수 있습니다.
+Entity Framework DbContext 클래스는 작업 단위 및 리포지토리 패턴을 기반으로 하며, ASP.NET Core MVC 컨트롤러처럼 코드에서 직접 사용할 수 있습니다. eShopOnContainers의 CRUD 카탈로그 마이크로 서비스에서 하듯이, 작업 단위 및 리포지토리 패턴은 가장 간단한 코드를 생성합니다. 최대한 간단한 코드를 원하는 경우 여러 개발자들이 하는 것처럼 DbContext 클래스를 직접 사용할 수 있습니다.
 
 그러나 사용자 지정 리포지토리를 구현하면 보다 복잡한 마이크로 서비스 또는 애플리케이션을 구현할 때 여러 가지 이점이 있습니다. 작업 단위 및 리포지토리 패턴은 애플리케이션 및 도메인 모델 레이어에서 분리되는 인프라 지속성 레이어를 캡슐화하는 데 사용됩니다. 이러한 패턴을 구현하면 모의 리포지토리를 사용하여 데이터베이스에 대한 액세스를 시뮬레이션할 수 있습니다.
 
@@ -243,7 +243,7 @@ builder.RegisterType<OrderRepository>()
 
 ## <a name="table-mapping"></a>테이블 매핑
 
-테이블 매핑은 데이터베이스에서 쿼리하고 저장할 테이블 데이터를 식별합니다. 앞에서 도메인 엔터티(예: 제품 또는 주문 도메인)를 사용하여 관련 데이터베이스 스키마를 생성하는 방법을 살펴보았습니다. EF는 *규칙* 개념을 중심으로 강력하게 설계됩니다. 규칙은 "테이블의 이름은 무엇이 될까요?" 또는 “기본 키는 무슨 속성입니까?”와 같은 질문을 해결합니다. 규칙은 일반적으로 관습적 이름을 기반으로 합니다. 예를 들어 일반적으로 기본 키는 Id로 끝나는 속성이 됩니다.
+테이블 매핑은 데이터베이스에서 쿼리하고 저장할 테이블 데이터를 식별합니다. 앞에서 도메인 엔터티(예: 제품 또는 주문 도메인)를 사용하여 관련 데이터베이스 스키마를 생성하는 방법을 살펴보았습니다. EF는 *규칙* 개념을 중심으로 강력하게 설계됩니다. 규칙은 “테이블의 이름은 무엇인가요?” 또는 “기본 키는 무슨 속성인가요?”와 같은 질문을 해결합니다. 규칙은 일반적으로 관습적 이름을 기반으로 합니다. 예를 들어 일반적으로 기본 키는 `Id`로 끝나는 속성이 됩니다.
 
 규칙에 따라 각 엔터티는 파생 컨텍스트에 엔터티를 노출하는 `DbSet<TEntity>` 속성과 이름이 같은 테이블에 매핑되도록 설정됩니다. 지정된 엔터티에 `DbSet<TEntity>` 값이 제공되지 않으면 클래스 이름이 사용됩니다.
 
@@ -265,7 +265,7 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
    // ...
    modelBuilder.ApplyConfiguration(new OrderEntityTypeConfiguration());
-   // Other entities’ configuration ...
+   // Other entities' configuration ...
 }
 
 // At OrderEntityTypeConfiguration.cs from eShopOnContainers
@@ -422,7 +422,7 @@ public abstract class BaseSpecification<T> : ISpecification<T>
 }
 ```
 
-다음 사양은 장바구니의 ID 또는 장바구니가 속한 구매자의 ID가 지정된 단일 장바구니 엔터티를 로드합니다. 장바구니의 항목 컬렉션을 [즉시 로드](https://docs.microsoft.com/ef/core/querying/related-data)합니다.
+다음 사양은 장바구니의 ID 또는 장바구니가 속한 구매자의 ID가 지정된 단일 장바구니 엔터티를 로드합니다. 장바구니의 `Items` 컬렉션을 [즉시 로드](/ef/core/querying/related-data)합니다.
 
 ```csharp
 // SAMPLE QUERY SPECIFICATION IMPLEMENTATION
@@ -470,7 +470,7 @@ public IEnumerable<T> List(ISpecification<T> spec)
 
 사양은 필터링 논리를 캡슐화할 뿐 아니라 채울 속성을 포함하여 반환될 데이터의 모양을 지정할 수 있습니다.
 
-리포지토리에서 `IQueryable`을 반환하는 것을 권장하지는 않지만, 리포지토리 내에서 사용하여 결과 집합을 빌드하는 데 사용하는 것은 아무 문제 없습니다. 위의 List 메서드에 이 접근 방식이 사용된 것을 볼 수 있습니다. 중간 `IQueryable` 식을 사용하여 쿼리의 포함 목록을 빌드한 후 마지막 줄에서 사양의 기준을 사용하여 쿼리가 실행됩니다.
+리포지토리에서 `IQueryable`을 반환하는 것을 권장하지는 않지만, 리포지토리 내에서 사용하여 결과 세트를 빌드하는 데 사용하는 것은 아무 문제 없습니다. 위의 List 메서드에 이 접근 방식이 사용된 것을 볼 수 있습니다. 중간 `IQueryable` 식을 사용하여 쿼리의 포함 목록을 빌드한 후 마지막 줄에서 사양의 기준을 사용하여 쿼리가 실행됩니다.
 
 ### <a name="additional-resources"></a>추가 자료
 

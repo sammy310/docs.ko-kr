@@ -32,12 +32,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 394a809a9a2f45f4aee652d0eca892f62f0f2e54
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4b2506f48c3e72ff838a07087c8c5d9ea63bb46c
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093203"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121462"
 ---
 # <a name="integral-numeric-types--c-reference"></a>정수 숫자 형식(C# 참조)
 
@@ -85,7 +85,7 @@ var hexLiteral = 0x2A;
 var binaryLiteral = 0b_0010_1010;
 ```
 
-앞의 예제에서는 C# 7.0부터 지원되는 `_`숫자 구분 기호*인* 를 사용하는 방법도 보여 줍니다. 모든 종류의 숫자 리터럴에서 숫자 구분 기호를 사용할 수 있습니다.
+앞의 예제에서는 C# 7.0부터 지원되는 *숫자 구분 기호*인 `_`를 사용하는 방법도 보여 줍니다. 모든 종류의 숫자 리터럴에서 숫자 구분 기호를 사용할 수 있습니다.
 
 정수 리터럴의 형식은 접미사로 다음과 같이 결정됩니다.
 
@@ -118,7 +118,7 @@ var longVariable = (long)42;
 
 ## <a name="conversions"></a>변환
 
-모든 정수 숫자 형식을 다른 정수 숫자 형식으로 변환할 수 있습니다. 대상 형식이 소스 형식의 모든 값을 저장할 수 있는 경우 변환은 암시적입니다. 그렇지 않으면 [cast 연산자 `()`](../operators/type-testing-and-cast.md#cast-operator-)를 사용하여 명시적 변환을 호출해야 합니다. 자세한 내용은 [기본 제공 숫자 변환](numeric-conversions.md)을 참조하세요.
+모든 정수 숫자 형식을 다른 정수 숫자 형식으로 변환할 수 있습니다. 대상 형식이 소스 형식의 모든 값을 저장할 수 있는 경우 변환은 암시적입니다. 저장할 수 없는 경우에는 [캐스트 식](../operators/type-testing-and-cast.md#cast-expression)를 사용하여 명시적 변환을 수행해야 합니다. 자세한 내용은 [기본 제공 숫자 변환](numeric-conversions.md)을 참조하세요.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
@@ -127,10 +127,10 @@ var longVariable = (long)42;
 - [정수 형식](~/_csharplang/spec/types.md#integral-types)
 - [정수 리터럴](~/_csharplang/spec/lexical-structure.md#integer-literals)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [값 형식](value-types.md)
 - [부동 소수점 형식](floating-point-numeric-types.md)
-- [표준 숫자 서식 문자열](../../../standard/base-types/standard-numeric-format-strings.md)
+- [표준 숫자 형식 문자열](../../../standard/base-types/standard-numeric-format-strings.md)
 - [.NET의 숫자](../../../standard/numerics.md)

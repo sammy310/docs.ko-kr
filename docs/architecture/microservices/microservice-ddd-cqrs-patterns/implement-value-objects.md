@@ -2,12 +2,12 @@
 title: 값 개체 구현
 description: 컨테이너화된 .NET 애플리케이션의 .NET 마이크로 서비스 아키텍처 | 새로운 Entity Framework 기능을 사용하여 값 개체를 구현하는 세부 정보 및 옵션을 가져옵니다.
 ms.date: 01/30/2020
-ms.openlocfilehash: 919b23f7c1a0cd0aec8c4417f3af98469a0743dd
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 4a8a92a8dabcf09654ecd0e5dea2a7df25d7abf7
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249424"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805741"
 ---
 # <a name="implement-value-objects"></a>값 개체 구현
 
@@ -133,7 +133,7 @@ public class Address : ValueObject
 
 ID가 없는 값 개체를 구현하는 데 크게 데 도움이 되는 EF Core 2.0까지는 클래스에 EF(Entity Framework)에서 사용할 ID 필드가 있습니다. 정확한 다음 섹션의 설명입니다.
 
-변경할 수 없는 개체 값이 읽기 전용(즉, 가져오기 전용 속성을 가짐)이라고 주장할 수 있고 실제로 그렇습니다. 그러나 값 개체는 일반적으로 직렬화되고 역직렬화되어 메시지 큐를 거치고, 읽기 전용이므로 역직렬 변환기가 값을 할당하지 않도록 중지합니다. 따라서 값 개체를 읽기 전용이 충분히 실용적인 비공개 세트로 둡니다.
+변경할 수 없는 개체 값이 읽기 전용(즉, 가져오기 전용 속성을 가짐)이라고 주장할 수 있고 실제로 그렇습니다. 그러나 값 개체는 일반적으로 직렬화되고 역직렬화되어 메시지 큐를 거치고 읽기 전용이므로 역직렬 변환기가 값을 할당하지 않도록 중지합니다. 따라서 읽기 전용이 충분히 실용적인 `private set`로 둡니다.
 
 ## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20-and-later"></a>EF Core 2.0 이상을 사용하여 데이터베이스에서 개체 값을 유지하는 방법
 
@@ -186,7 +186,7 @@ DDD의 정식 값 개체 패턴과 EF Core의 소유된 엔터티 형식 사이�
 
 소유된 형식은 규칙에 따라 EF Core에서 절대로 검색되지 않으므로 명시적으로 선언해야 한다는 점을 기억해야 합니다.
 
-EShopOnContainers에서, OrderingContext.cs의 OnModelCreating() 메서드 내부에는 여러 인프라 구성이 적용됩니다. 그 중 하나는 주문 엔터티와 관련이 있습니다.
+eShopOnContainers에서 OrderingContext.cs 파일의 `OnModelCreating()` 메서드 내에는 여러 인프라 구성이 적용됩니다. 그 중 하나는 주문 엔터티와 관련이 있습니다.
 
 ```csharp
 // Part of the OrderingContext.cs class at the Ordering.Infrastructure project

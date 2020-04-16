@@ -2,12 +2,12 @@
 title: ASP.NET Core 서비스 및 웹앱 테스트
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 컨테이너에서 ASP.NET Core 서비스 및 웹앱을 테스트하기 위한 아키텍처를 탐색합니다.
 ms.date: 01/30/2020
-ms.openlocfilehash: ab3ae6276ea4e4c741731f050913d956046271ca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f66d6184d913405c9372904f8072dda1dbfbe6ac
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77501981"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988234"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core 서비스 및 웹앱 테스트
 
@@ -19,7 +19,7 @@ ms.locfileid: "77501981"
 
 - 통합 테스트. 통합 테스트는 구성 요소 간 상호 작용이 데이터베이스와 같은 외부 아티팩트에 대해 예상 대로 작동하는지 확인 합니다. 어설션은 구성 요소 API, UI 또는 데이터베이스 I/O, 로깅 등의 작업 부작용을 테스트할 수 있습니다.
 
-- 각 마이크로 서비스에 대한 기능 테스트. 이 테스트는 해당 애플리케이션이 사용자의 관점에서 예상 대로 작동하는지 확인합니다.
+- 각 마이크로 서비스에 대한 기능 테스트. 이 테스트는 해당 애플리케이션이 사용자의 관점에서 예상대로 작동하는지 확인합니다.
 
 - 서비스 테스트. 이 테스트는 다중 서비스 동시 테스트를 포함하여 엔드투엔드 서비스 사용 사례를 테스트했는지 확인합니다. 이러한 종류의 테스트를 위해서는 먼저 환경을 준비 해야 합니다. 이 경우 준비는 곧 서비스 시작을 의미합니다(예를 들어, docker-compose를 사용하여).
 

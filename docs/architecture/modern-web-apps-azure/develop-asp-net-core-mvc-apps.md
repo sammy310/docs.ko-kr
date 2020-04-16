@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 최신 웹 애플리케이�
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: a18b4dfc60c7d3971136f73f333b7225735710b3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3de70af23206b0ae0525541b3d2cb480dc5bb882
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503950"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987909"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC 앱 개발
 
@@ -32,7 +32,7 @@ Razor Page의 페이지 모델은 MVC 컨트롤러 및 보기 모델의 책임�
 
 ### <a name="when-to-use-mvc"></a>MVC를 사용하는 경우
 
-웹 API를 빌드하는 경우 Razor Pages를 사용하는 것보다 MVC 패턴을 사용하는 것이 좋습니다. 프로젝트가 웹 API 엔드포인트만 노출하는 경우 웹 API 프로젝트 템플릿에서 시작하는 것이 좋습니다. 그런 경우가 아니라면 컨트롤러 및 연결된 API 엔드포인트를 모든 ASP.NET Core 앱에 쉽게 추가할 수 있습니다. 수월하게 ASP.NET MVC 5 이전 버전에서 ASP.NET Core MVC로 기존 애플리케이션을 마이그레이션하려는 경우 보기 기반 MVC 방법을 사용합니다. 초기 마이그레이션을 수행하면 Razor Pages를 새로운 기능에서 채택하는 것이 맞는지 아니면 도매 마이그레이션으로 채택하는 것이 맞는지 여부를 평가할 수 있습니다.
+Web API를 빌드하는 경우 Razor Pages를 사용하는 것보다 MVC 패턴을 사용하는 것이 좋습니다. 프로젝트가 웹 API 엔드포인트만 노출하는 경우 웹 API 프로젝트 템플릿에서 시작하는 것이 좋습니다. 그런 경우가 아니라면 컨트롤러 및 연결된 API 엔드포인트를 모든 ASP.NET Core 앱에 쉽게 추가할 수 있습니다. 수월하게 ASP.NET MVC 5 이전 버전에서 ASP.NET Core MVC로 기존 애플리케이션을 마이그레이션하려는 경우 보기 기반 MVC 방법을 사용합니다. 초기 마이그레이션을 수행하면 Razor Pages를 새로운 기능에서 채택하는 것이 맞는지 아니면 도매 마이그레이션으로 채택하는 것이 맞는지 아닌지를 평가할 수 있습니다.
 
 Razor Pages를 사용하여 웹앱을 빌드하는지 아니면 MVC 보기를 사용하여 웹앱을 빌드하는지와 관계없이 앱은 유사한 성능을 보여주고, 종속성 주입, 필터, 모델 바인딩 및 유효성 검사 등에 대한 지원도 포함합니다.
 

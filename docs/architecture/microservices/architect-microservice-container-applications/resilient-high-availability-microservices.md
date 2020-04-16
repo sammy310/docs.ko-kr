@@ -2,12 +2,12 @@
 title: 마이크로 서비스의 복원력 및 고가용성
 description: 마이크로 서비스는 고가용성을 달성하기 위해 복원력이 있어야 하므로 일시적인 네트워크 및 종속성 오류를 견디도록 설계되어야 합니다.
 ms.date: 09/20/2018
-ms.openlocfilehash: 1c0f75a8c68d1f84ba24c550e854edc5372cf7f6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 28f8b124cd59b2c3d621267cb437872af42c9ea8
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73094223"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988923"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>마이크로 서비스의 복원력 및 고가용성
 

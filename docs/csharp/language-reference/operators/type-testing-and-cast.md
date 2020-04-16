@@ -1,5 +1,5 @@
 ---
-title: 형식 테스트 및 캐스트 연산자 - C# 참조
+title: 형식 테스트 연산자 및 캐스트 식 - C# 참조
 description: 식 결과의 형식을 검사하고, 필요한 경우 다른 형식으로 변환하는 데 사용할 수 있는 C# 연산자에 대해 알아봅니다.
 ms.date: 06/21/2019
 author: pkulikov
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 2dc215a91c55be15e8eee488f0030f41e3492af5
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 5a4f1d4c0c2ddd0d3967e15090d8f8c1ac42f83e
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507089"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121411"
 ---
-# <a name="type-testing-and-cast-operators-c-reference"></a>형식 테스트 및 캐스트 연산자(C# 참조)
+# <a name="type-testing-operators-and-cast-expression-c-reference"></a>형식 테스트 연산자 및 캐스트 식(C# 참조)
 
-다음 연산자를 사용하여 형식 검사 또는 형식 변환을 수행할 수 있습니다.
+다음 연산자 및 식을 사용하여 형식 검사 또는 형식 변환을 수행할 수 있습니다.
 
 - [is 연산자](#is-operator): 식의 런타임 형식이 지정된 형식과 호환되는지 확인합니다.
 - [as 연산자](#as-operator): 런타임 형식이 지정된 형식과 호환되는 경우 식을 해당 형식으로 명시적으로 변환합니다.
-- [캐스트 연산자 ()](#cast-operator-): 명시적 변환을 수행합니다.
+- [캐스트 식](#cast-expression): 명시적 변환을 수행합니다.
 - [typeof 연산자](#typeof-operator): 형식의 <xref:System.Type?displayProperty=nameWithType> 인스턴스를 가져옵니다.
 
 ## <a name="is-operator"></a>is 연산자
@@ -46,7 +46,7 @@ E is T
 
 여기서 `E`는 값을 반환하는 식이고, `T`는 형식 또는 형식 매개 변수의 이름입니다. `E`은 무명 메서드 또는 람다 식일 수 없습니다.
 
-`E is T` 식은 `true`의 결과가 null이 아니고 참조 변환, boxing 변환 또는 unboxing 변환을 통해 `E` 형식으로 변환될 수 있는 경우 `T`를 반환하고, 변환될 수 없으면 `false`를 반환합니다. `is` 연산자는 사용자 정의 변환을 고려하지 않습니다.
+`E is T` 식은 `E`의 결과가 null이 아니고 참조 변환, boxing 변환 또는 unboxing 변환을 통해 `T` 형식으로 변환될 수 있는 경우 `true`를 반환하고, 변환될 수 없으면 `false`를 반환합니다. `is` 연산자는 사용자 정의 변환을 고려하지 않습니다.
 
 다음 예제에서는 식 결과의 런타임 형식이 지정된 형식에서 파생되는 경우, 즉 형식 간에 참조 변환이 있는 경우 `is` 연산자가 `true`를 반환하는 것을 보여 줍니다.
 
@@ -56,7 +56,7 @@ E is T
 
 [!code-csharp-interactive[is with int](snippets/TypeTestingAndConversionOperators.cs#IsWithInt)]
 
-C# 변환에 대한 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/conversions.md)의 [변환](~/_csharplang/spec/introduction.md) 장을 참조하세요.
+C# 변환에 대한 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [변환](~/_csharplang/spec/conversions.md) 장을 참조하세요.
 
 ### <a name="type-testing-with-pattern-matching"></a>패턴 일치를 사용한 형식 테스트
 
@@ -76,7 +76,7 @@ E is T v
 
 ## <a name="as-operator"></a>as 연산자
 
-`as` 연산자는 식의 결과를 지정된 참조 또는 nullable 값 형식으로 명시적으로 변환합니다. 변환할 수 없는 경우 `as` 연산자가 `null`을 반환합니다. [캐스트 연산자 ()](#cast-operator-)와 달리, `as` 연산자는 예외를 throw하지 않습니다.
+`as` 연산자는 식의 결과를 지정된 참조 또는 nullable 값 형식으로 명시적으로 변환합니다. 변환할 수 없는 경우 `as` 연산자가 `null`을 반환합니다. [캐스트 식](#cast-expression)과 달리 `as` 연산자는 예외를 throw하지 않습니다.
 
 다음 형태의 식이 있다고 가정합니다.
 
@@ -92,7 +92,7 @@ E is T ? (T)(E) : (T)null
 
 단, `E`가 한 번만 계산됩니다.
 
-`as` 연산자는 참조, nullable, boxing 및 unboxing 변환만 고려합니다. `as` 연산자를 사용하여 사용자 정의 변환을 수행할 수는 없습니다. 사용자 정의 변환을 수행하려면 [캐스트 연산자 ()](#cast-operator-)를 사용합니다.
+`as` 연산자는 참조, nullable, boxing 및 unboxing 변환만 고려합니다. `as` 연산자를 사용하여 사용자 정의 변환을 수행할 수는 없습니다. 이렇게 하려면 [캐스트 식](#cast-expression)을 사용합니다.
 
 다음 예제에서는 `as` 연산자의 사용법을 보여 줍니다.
 
@@ -101,7 +101,7 @@ E is T ? (T)(E) : (T)null
 > [!NOTE]
 > 앞의 예제와 같이, `as` 식의 결과를 `null`과 비교하여 변환에 성공했는지 확인해야 합니다. C# 7.0부터, [is 연산자](#type-testing-with-pattern-matching)를 사용하여 변환에 성공하는지 테스트하고, 성공한 경우 해당 결과를 새 변수에 할당할 수 있습니다.
 
-## <a name="cast-operator-"></a>캐스트 연산자()
+## <a name="cast-expression"></a>캐스트 식
 
 `(T)E` 형태의 캐스트 식은 `E` 식의 결과를 `T` 형식으로 명시적으로 변환합니다. `E` 형식에서 `T` 형식으로의 명시적 변환이 없는 경우 컴파일 시간 오류가 발생합니다. 런타임에 명시적 변환이 실패하고 캐스트 식이 예외를 throw할 수도 있습니다.
 
@@ -109,7 +109,7 @@ E is T ? (T)(E) : (T)null
 
 [!code-csharp-interactive[cast expression](snippets/TypeTestingAndConversionOperators.cs#Cast)]
 
-지원되는 명시적 변환에 대한 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/conversions.md#explicit-conversions)의 [명시적 변환](~/_csharplang/spec/introduction.md) 섹션을 참조하세요. 사용자 지정 명시적 또는 암시적 형식 변환을 정의하는 방법에 대한 자세한 내용은 [사용자 정의 변환 연산자](user-defined-conversion-operators.md)를 참조하세요.
+지원되는 명시적 변환에 대한 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [명시적 변환](~/_csharplang/spec/conversions.md#explicit-conversions) 섹션을 참조하세요. 사용자 지정 명시적 또는 암시적 형식 변환을 정의하는 방법에 대한 자세한 내용은 [사용자 정의 변환 연산자](user-defined-conversion-operators.md)를 참조하세요.
 
 ### <a name="other-usages-of-"></a>다른 () 용도
 
@@ -150,7 +150,7 @@ E is T ? (T)(E) : (T)null
 - [캐스트 식](~/_csharplang/spec/expressions.md#cast-expressions)
 - [typeof 연산자](~/_csharplang/spec/expressions.md#the-typeof-operator)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 연산자](index.md)

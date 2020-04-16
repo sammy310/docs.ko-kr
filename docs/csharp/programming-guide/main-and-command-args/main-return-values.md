@@ -4,12 +4,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 3d97ab2b3f53179cb184f2ad3944ea29ff5566a2
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 7061b6c1988da9f6dfac115ee555a914531df863
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345123"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805931"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() 반환 값(C# 프로그래밍 가이드)
 
@@ -25,9 +25,9 @@ ms.locfileid: "80345123"
 
 ## <a name="example"></a>예제
 
-이 예제에서는 [.NET Core](../../../core/index.yml) 명령줄 도구를 사용합니다. .NET Core 명령줄 도구에 대해 잘 모르는 경우 이 [시작 항목](../../../core/tutorials/cli-create-console-app.md)에서 알아볼 수 있습니다.
+이 예제에서는 [.NET Core](../../../core/index.yml) 명령줄 도구를 사용합니다. .NET Core 명령줄 도구에 대해 잘 모르는 경우 이 [시작 문서](../../../core/tutorials/cli-create-console-app.md)에서 알아볼 수 있습니다.
 
-`Main`program.cs*에서* 메서드를 다음과 같이 수정합니다.
+*program.cs* 에서 `Main` 메서드를 다음과 같이 수정합니다.
 
  [!code-csharp[csProgGuideMain#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#14)]
 
@@ -83,7 +83,7 @@ private static async Task<int> AsyncConsoleWork()
 
 새 구문의 장점은 컴파일러에서 항상 올바른 코드를 생성한다는 것입니다.
 
-## <a name="compiler-generated-code"></a>컴파일러 생성 코드
+## <a name="compiler-generated-code"></a>컴파일러 생성 복사
 
 애플리케이션 진입점에서 `Task` 또는 `Task<int>`를 반환하는 경우 컴파일러는 애플리케이션 코드에서 선언된 진입점 메서드를 호출하는 새 진입점을 생성합니다. 이 진입점이 `$GeneratedMain`이라고 가정하면 컴파일러는 이러한 진입점에 대해 다음 코드를 생성합니다.
 
@@ -93,9 +93,9 @@ private static async Task<int> AsyncConsoleWork()
 - `static Task<int> Main(string[])` - 컴파일러에서 `private static int $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();`에 해당하는 코드를 내보냅니다.
 
 > [!NOTE]
->예제에서 `async` 메서드에 `Main` 한정자를 사용하더라도 컴파일러는 동일한 코드를 생성합니다.
+>예제에서 `Main` 메서드에 `async` 한정자를 사용하더라도 컴파일러는 동일한 코드를 생성합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
 - [C# 참조](../index.md)

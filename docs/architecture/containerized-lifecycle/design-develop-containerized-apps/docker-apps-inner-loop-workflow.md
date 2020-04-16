@@ -2,12 +2,12 @@
 title: Docker 앱을 위한 내부 루프 개발 워크플로
 description: Docker 애플리케이션 개발을 위한 "내부 루프" 워크플로에 대해 알아봅니다.
 ms.date: 02/15/2019
-ms.openlocfilehash: 3d2fc889d22dbf02acccfbf9231ad98fca224cff
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 615cfd08f46609c4e100ea3e72b541fe2c1ae62a
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75936807"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989014"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 앱을 위한 내부 루프 개발 워크플로
 
@@ -100,7 +100,7 @@ Docker 확장을 설치하려면 Ctrl+Shift+P를 누르고 `ext install`을 입�
 
 **그림 4-24** **작업 영역에 Docker 파일 추가 명령**을 사용하여 추가한 Docker 파일
 
-DockerFile을 추가하는 경우 사용 중인 기본 Docker 이미지가 무엇인지 지정합니다(예: `FROM mcr.microsoft.com/dotnet/core/aspnet`을 사용하여). 일반적으로 [Docker Hub 레지스트리](https://hub.docker.com/)의 공식 리포지토리에서 가져오는 기본 이미지(예: [.NET Core용 이미지](https://hub.docker.com/_/microsoft-dotnet-core/) 또는 [Node.js](https://hub.docker.com/_/node/)용 이미지) 위에 사용자 지정 이미지를 빌드합니다.
+DockerFile을 추가하는 경우 사용하는 기본 Docker 이미지가 무엇인지 지정합니다(예: `FROM mcr.microsoft.com/dotnet/core/aspnet`을 사용). 일반적으로 [Docker Hub 레지스트리](https://hub.docker.com/)의 공식 리포지토리에서 가져오는 기본 이미지(예: [.NET Core용 이미지](https://hub.docker.com/_/microsoft-dotnet-core/) 또는 [Node.js](https://hub.docker.com/_/node/)용 이미지) 위에 사용자 지정 이미지를 빌드합니다.
 
 ***기존의 공식 Docker 이미지 사용***
 

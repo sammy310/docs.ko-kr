@@ -2,18 +2,18 @@
 title: 기존 .NET 앱을 Windows 컨테이너로 배포
 description: Azure Cloud 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화 | 기존 .NET 앱을 Windows 컨테이너로 배포
 ms.date: 04/29/2018
-ms.openlocfilehash: 28568ca363bfc8100f78b100f8a7f0242c4f04c9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c99c2e756320fc886203efcbf98a81e571d907e5
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73089554"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987974"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>기존 .NET 앱을 Windows 컨테이너로 배포
 
 Windows 컨테이너를 기반으로 하는 배포는 클라우드 최적화 애플리케이션 및 클라우드 네이티브 애플리케이션에 적용됩니다.
 
-그러나 이 가이드, 특히 다음 섹션에서는 애플리케이션을 다시 설계하지 않아도 되는 *클라우드 최적화* 애플리케이션에서 Windows 컨테이너 사용을 중점적으로 다룹니다.
+그러나 이 가이드, 특히 다음 섹션에서는 애플리케이션을 다시 설계하지 않아도 되는 ‘클라우드 최적화’ 애플리케이션에서 Windows 컨테이너 사용을 중점적으로 다룹니다. 
 
 ## <a name="what-are-containers-linux-or-windows"></a>컨테이너란? (Linux 또는 Windows)
 

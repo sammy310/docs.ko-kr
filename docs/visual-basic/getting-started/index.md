@@ -1,16 +1,16 @@
 ---
-title: 시작하기
+title: 시작
 ms.date: 09/10/2018
 helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-ms.openlocfilehash: 0221889f6d736b41546b564273ebb41d49dfb039
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f52432bde84ab7c1ec30ff4033ce95c80606636e
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75559887"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243195"
 ---
 # <a name="get-started-with-visual-basic"></a>Visual Basic 시작
 
@@ -28,13 +28,13 @@ ms.locfileid: "75559887"
 
 - [Visual Basic 프로그래머를 위한 추가 리소스](additional-resources.md) 일반적인 문제의 답변을 찾을 수 있는 웹 사이트 및 뉴스 그룹 목록을 제공합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [Visual Basic 다운로드](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 체험 버전을 포함하여 Visual Basic 지원이 포함된 Visual Studio 버전에 대한 다운로드 링크를 제공합니다.
+- [Visual Basic 다운로드](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 체험 버전을 포함하여 Visual Basic 지원이 함께 제공되는 Visual Studio 버전의 다운로드 링크를 제공합니다.
 
 - [개체 지향 프로그래밍](../programming-guide/concepts/object-oriented-programming.md) 개체 지향 프로그래밍을 소개하고 개체를 직접 만드는 방법과 개체를 사용하여 코딩을 단순화하는 방법을 설명하는 페이지에 대한 링크를 제공합니다.
 
-- [샘플](https://github.com/dotnet/samples/tree/master/snippets/visualbasic) Visual Basic의 샘플 코드에 대한 링크를 제공합니다.
+- [샘플](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic) Visual Basic의 샘플 코드에 대한 링크를 제공합니다.
 
 - [연습](../walkthroughs.md) Visual Basic 언어의 여러 측면을 보여 주는 도움말 페이지 목록을 제공합니다.
 

@@ -2,12 +2,12 @@
 title: docker-compose.yml을 사용하여 다중 컨테이너 애플리케이션 정의
 description: docker-compose.yml을 사용하여 다중 컨테이너 애플리케이션에서 마이크로 서비스 컴퍼지션을 지정하는 방법입니다.
 ms.date: 01/30/2020
-ms.openlocfilehash: 9143801fbbffbdc5b795a232b3333edf71f05c7c
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 029fad8bb912457872dd5817a2f76aed57dc53c6
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523646"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888230"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml을 사용하여 다중 컨테이너 애플리케이션 정의
 
@@ -149,7 +149,7 @@ docker-compose.yml 파일은 Docker 엔진으로 해석되는 구성 파일이�
 
 #### <a name="testing-environments"></a>테스트 환경
 
-모든 CD(지속적인 배포) 또는 CI(지속적인 통합) 프로세스의 중요한 부분은 단위 테스트 및 통합 테스트입니다. 이러한 자동화된 테스트는 격리된 환경이 필요하므로 사용자 또는 애플리케이션 데이터의 다른 변경 내용에 의해 영향을 받지 않습니다.
+모든 CD(지속적인 배포) 또는 CI(지속적인 통합) 프로세스의 중요한 부분은 단위 테스트 및 통합 테스트입니다. 이 자동화된 테스트는 격리된 환경이 필요하므로 사용자 또는 애플리케이션 데이터의 다른 변경 내용에 의해 영향을 받지 않습니다.
 
 Docker Compose를 사용하여 다음 명령과 같이 명령 프롬프트 또는 스크립트의 몇 가지 명령에서 매우 쉽게 격리된 해당 환경을 만들고 제거할 수 있습니다.
 
@@ -177,7 +177,7 @@ Compose를 사용하여 원격 Docker 엔진에 배포할 수도 있습니다. �
 
 기본적으로 Compose는 두 개의 파일, docker-compose.yml 및 선택적 docker-compose.override.yml 파일을 읽습니다. 그림 6-11과 같이 Visual Studio를 사용하고 Docker 지원을 활성화 하도록 설정하여, Visual Studio도 애플리케이션의 디버깅을 위한 추가 docker-compose.vs.debug.g.yml 파일을 만듭니다. 기본 솔루션 폴더에서 obj\\Docker\\ 폴더에서 이 파일을 볼 수 있습니다.
 
-![Docker Compose 프로젝트 파일의 스크린샷](./media/multi-container-applications-docker-compose/docker-compose-file-visual-studio.png)
+![Docker Compose 프로젝트의 파일.](./media/multi-container-applications-docker-compose/docker-compose-file-visual-studio.png)
 
 **그림 6-11**. Visual Studio 2019의 docker-compose 파일
 
@@ -201,7 +201,7 @@ Visual Studio Code 또는 Sublime과 같은 편집기를 사용하여 docker-com
 
 **그림 6-12**. 기본 docker-compose.yml 파일에서 값을 재정의하는 다중 docker-compose 파일
 
-여러 docker-compose*.yml 파일을 결합하여 다른 환경을 처리할 수 있습니다. 기본 docker-compose.yml 파일로 시작합니다. 이 기본 파일은 환경에 따라 변경되지 않는 기본 또는 정적 구성 설정을 포함해야 합니다. 예를 들어 eShopOnContainers에는 기본 파일로 다음과 같은 docker-compose.yml(더 적은 서비스로 단순화된) 파일이 있습니다.
+여러 docker-compose*.yml 파일을 결합하여 다른 환경을 처리할 수 있습니다. 기본 docker-compose.yml 파일로 시작합니다. 이 기본 파일은 환경에 따라 변경되지 않는 기본 또는 정적 구성 설정을 포함합니다. 예를 들어 eShopOnContainers 앱에는 기본 파일로 다음과 같은 docker-compose.yml(더 적은 서비스로 단순화된) 파일이 있습니다.
 
 ```yml
 #docker-compose.yml (Base)
@@ -448,17 +448,17 @@ ENTRYPOINT ["dotnet", "run"]
 
 이와 같은 Dockerfile은 작동합니다. 그러나 실질적으로 이미지, 특히 프로덕션 이미지를 최적화할 수 있습니다.
 
-컨테이너 및 마이크로 서비스 모델에서 컨테이너를 지속적으로 시작하고 있습니다. 컨테이너를 사용하는 일반적인 방법은 컨테이너가 삭제 가능하므로 중지 중인 컨테이너를 다시 시작하지 않습니다. 오케스트레이터(예: Kubernetes 및 Azure Service Fabric)는 단순히 이미지의 새 인스턴스를 만듭니다. 즉, 인스턴스화 프로세스의 속도가 더 빨라지도록 빌드될 때 애플리케이션을 미리 컴파일하여 최적화해야 합니다. 컨테이너가 시작될 때 실행할 준비가 되어야 합니다. .NET Core 및 Docker에 대한 다양한 블로그 게시물에 나와 있는 것처럼 dotnet CLI에서 `dotnet restore` and `dotnet build` 명령을 사용하여 런타임 시 복원 및 컴파일해서는 안 됩니다.
+컨테이너 및 마이크로 서비스 모델에서 컨테이너를 지속적으로 시작하고 있습니다. 컨테이너를 사용하는 일반적인 방법은 컨테이너가 삭제 가능하므로 중지 중인 컨테이너를 다시 시작하지 않습니다. 오케스트레이터(예: Kubernetes 및 Azure Service Fabric)는 단순히 이미지의 새 인스턴스를 만듭니다. 즉, 인스턴스화 프로세스의 속도가 더 빨라지도록 빌드될 때 애플리케이션을 미리 컴파일하여 최적화해야 합니다. 컨테이너가 시작될 때 실행할 준비가 되어야 합니다. .NET Core 및 Docker에 대한 블로그 게시물에서 볼 수 있는 것처럼 `dotnet restore` 및 `dotnet build` CLI 명령을 사용하여 런타임에 복원 및 컴파일하지 마세요.
 
 .NET 팀은 .NET Core 및 ASP.NET Core를 컨테이너 최적화된 프레임워크로 만들도록 중요한 작업을 수행하고 있습니다. .NET Core는 작은 메모리 공간을 가진 경량 프레임워크일 뿐만 아니라, 팀은 세 가지 주요 시나리오에 최적화된 Docker 이미지를 중점적으로 사용해 *dotnet/core*에서 버전 2.1부터 Docker 허브 레지스트리에 게시했습니다.
 
-1. **개발**: 여기서 우선 순위는 변경 사항을 신속하게 반복하고 디버그할 수 있는 기능이며, 크기는 부차적 문제입니다.
+1. **개발**: 우선 순위는 변경 내용을 신속하게 반복하고 디버그할 수 있는 기능이며, 크기는 부차적 문제입니다.
 
-2. **빌드:** 우선 순위는 애플리케이션을 컴파일하고 이진 파일 및 다른 종속성을 포함하여 이진 파일을 최적화하는 것입니다.
+2. **빌드:** 우선 순위는 애플리케이션을 컴파일하는 것이며 이미지는 이진 파일을 최적화하기 위해 이진 파일 및 다른 종속성을 포함합니다.
 
-3. **프로덕션**: 컨테이너의 빠른 배포 및 시작에 중점을 두는 경우 이러한 이미지는 애플리케이션을 실행하는 데 필요한 이진 파일 및 콘텐츠로 제한됩니다.
+3. **프로덕션**: 컨테이너의 빠른 배포 및 시작이 포커스인 경우, 이 이미지는 이진 파일 및 애플리케이션을 실행할 콘텐츠로 제한합니다.
 
-이를 위해 .NET 팀은 [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/)(Docker 허브)에서 네 가지 기본 변형을 제공합니다.
+.NET 팀은 [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/)(Docker Hub)에서 네 가지 기본 변형을 제공합니다.
 
 1. **sdk**: 개발 및 빌드 시나리오용
 1. **aspnet**: ASP.NET 프로덕션 시나리오용

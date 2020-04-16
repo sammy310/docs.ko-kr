@@ -3,18 +3,18 @@ title: .NET 마이크로 서비스 및 웹 애플리케이션의 권한 부여 �
 description: .NET 마이크로 서비스 및 웹 애플리케이션의 보안 - ASP.NET Core 애플리케이션의 기본 권한 부여 옵션인 역할 기반 및 정책 기반의 개요를 살펴볼 수 있습니다.
 author: mjrousos
 ms.date: 01/30/2020
-ms.openlocfilehash: f6b69faceac9a9b4819212cc04f89080f3ddad56
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 27936a33ea2bb46cedb9d10ee47a2117e1843e14
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77501772"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988208"
 ---
 # <a name="about-authorization-in-net-microservices-and-web-applications"></a>.NET 마이크로 서비스 및 웹 애플리케이션의 권한 부여 정보
 
 인증 후에는 ASP.NET Core Web API에서 액세스 권한을 부여해야 합니다. 이 프로세스를 사용하면 서비스에서 일부 인증된 사용자는 API를 사용할 수 있지만, 모든 사용자가 사용할 수는 없습니다. [권한 부여](/aspnet/core/security/authorization/introduction)는 사용자의 역할 또는 사용자 지정 정책에 따라 수행될 수 있습니다. 이 경우 클레임 또는 다른 추론 검사가 포함될 수 있습니다.
 
-ASP.NET Core MVC 경로에 대한 액세스를 제한하는 것은 다음 예제와 같이 작업 메서드(또는 컨트롤러의 모든 작업에 권한 부여가 필요한 경우 컨트롤러의 클래스)에 Authorize 특성을 적용하는 것만큼 쉽습니다.
+ASP.NET Core MVC 경로에 대한 액세스를 제한하는 것은 다음 예제와 같이 작업 메서드(또는 컨트롤러의 모든 작업에 권한 부여가 필요한 경우 컨트롤러의 클래스)에 Authorize 특성을 적용하기 쉽습니다.
 
 ```csharp
 public class AccountController : Controller
@@ -110,7 +110,7 @@ services.AddAuthorization(options =>
 
 `AddPolicy` 호출에 사용자 지정 정책 요구 사항을 등록하는 것 외에도, 종속성 삽입(`services.AddTransient<IAuthorizationHandler, MinimumAgeHandler>()`)을 통해 사용자 지정 요구 사항 처리기를 등록해야 합니다.
 
-`DateOfBirth` 클레임에 따라 사용자의 연령을 확인하기 위한 사용자 지정 권한 부여 요구 사항 및 처리기의 예제는 ASP.NET Core [권한 부여 문서](https://docs.asp.net/en/latest/security/authorization/policies.html)에서 확인할 수 있습니다.
+`DateOfBirth` 클레임에 따라 사용자의 나이를 확인하기 위한 사용자 지정 권한 부여 요구 사항 및 처리기의 예제는 ASP.NET Core [권한 부여 문서](https://docs.asp.net/en/latest/security/authorization/policies.html)에서 확인할 수 있습니다.
 
 ## <a name="additional-resources"></a>추가 자료
 
