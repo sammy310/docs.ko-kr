@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 4591175da5078a194bfe69884701e5432a0c38a3
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 5c473f818ea874392011065dc3d07101d2ef3bf5
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389736"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607960"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>WCF 데이터 서비스 개발 및 배포
 
@@ -42,7 +42,7 @@ Visual Studio 2015를 사용하여 WCF 데이터 서비스를 ASP.NET 응용 프
 
 1. **로컬 IIS 서버**
 
-     인터넷 정보 서비스(IIS)에서 실행되는 ASP.NET 응용 프로그램 또는 ASP.NET 웹 사이트인 데이터 서비스를 만들 때 로컬 컴퓨터에서 IIS를 사용하여 데이터 서비스를 개발하고 테스트하는 것이 좋습니다. IIS에서 데이터 서비스를 실행하면 디버깅하는 동안 HTTP 요청을 쉽게 추적할 수 있습니다. 또한 IIS에서 데이터 서비스에 필요한 파일, 데이터베이스 및 기타 리소스에 액세스하는 데 필요한 권한을 미리 결정할 수도 있습니다. IIS에서 데이터 서비스를 실행하려면 IIS와 WCF(Windows 통신 재단)를 올바르게 설치하고 구성하고 파일 시스템 및 데이터베이스의 IIS 계정에 대한 액세스 권한을 부여해야 합니다. 자세한 내용은 [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md)을 참조하십시오.
+     인터넷 정보 서비스(IIS)에서 실행되는 ASP.NET 응용 프로그램 또는 ASP.NET 웹 사이트인 데이터 서비스를 만들 때 로컬 컴퓨터에서 IIS를 사용하여 데이터 서비스를 개발하고 테스트하는 것이 좋습니다. IIS에서 데이터 서비스를 실행하면 디버깅하는 동안 HTTP 요청을 쉽게 추적할 수 있습니다. 또한 IIS가 데이터 서비스에 필요한 파일, 데이터베이스 및 기타 리소스에 액세스하는 데 필요한 권한을 미리 결정할 수 있습니다. IIS에서 데이터 서비스를 실행하려면 IIS와 WCF(Windows 통신 재단)를 올바르게 설치하고 구성하고 파일 시스템 및 데이터베이스의 IIS 계정에 대한 액세스 권한을 부여해야 합니다. 자세한 내용은 [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md)을 참조하십시오.
 
     > [!NOTE]
     > 개발 환경이 로컬 IIS 서버를 구성할 수 있도록 하려면 관리자 권한을 가진 Visual Studio를 실행해야 합니다.
@@ -51,7 +51,7 @@ Visual Studio 2015를 사용하여 WCF 데이터 서비스를 ASP.NET 응용 프
 
      Visual Studio에는 ASP.NET 프로젝트의 기본 웹 서버인 기본 제공 웹 서버인 Visual Studio 개발 서버가 포함되어 있습니다. 이 웹 서버는 개발 중에 로컬 컴퓨터에서 ASP.NET 프로젝트를 실행하도록 설계되었습니다. [WCF 데이터 서비스 퀵스타트는](quickstart-wcf-data-services.md) Visual Studio 개발 서버에서 실행되는 데이터 서비스를 만드는 방법을 보여 주며, 이 에 대해 설명합니다.
 
-     데이터 서비스를 개발하기 위해 Visual Studio 개발 서버를 사용할 때 다음 제한 사항에 유의해야 합니다.
+     데이터 서비스를 개발하기 위해 Visual Studio 개발 서버를 사용할 때 의 한가지 제한 사항에 유의하십시오.
 
     - 이 서버는 로컬 컴퓨터에서만 액세스할 수 있습니다.
 
@@ -68,9 +68,9 @@ Visual Studio 2015를 사용하여 WCF 데이터 서비스를 ASP.NET 응용 프
     > [!TIP]
     > 개발 중에 Visual Studio 개발 서버를 사용하여 데이터 서비스를 테스트할 수 있지만 IIS를 실행하는 웹 서버에 배포한 후 다시 테스트해야 합니다.
 
-3. **Microsoft Azure 개발 환경**
+3. **Azure 개발 환경**
 
-     Visual Studio용 Windows Azure 도구에는 Visual Studio에서 Windows Azure 서비스를 개발하기 위한 통합 도구 집합이 포함되어 있습니다. 이 도구를 사용하면 Microsoft Azure에 배포할 수 있는 데이터 서비스를 개발하고, 배포하기 전에 로컬 컴퓨터에서 데이터 서비스를 테스트할 수 있습니다. Visual Studio를 사용하여 Windows Azure 플랫폼에서 실행되는 데이터 서비스를 개발할 때 이러한 도구를 사용합니다. 도구 설치에 대한 자세한 내용은 [Visual Studio 2015용 Azure 도구를](../../../azure/sdk/vs2015-install.md)참조하십시오. Windows Azure에서 실행되는 데이터 서비스 개발에 대한 자세한 내용은 [Windows Azure에서 OData 서비스 배포](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)게시물을 참조하십시오.
+     Visual Studio용 Windows Azure 도구에는 Visual Studio에서 Azure 서비스를 개발하기 위한 통합 도구 집합이 포함되어 있습니다. 이러한 도구를 사용하여 Azure에 배포할 수 있는 데이터 서비스를 개발할 수 있으며 배포 하기 전에 로컬 컴퓨터에서 데이터 서비스를 테스트할 수 있습니다. Visual Studio를 사용하여 Azure 플랫폼에서 실행되는 데이터 서비스를 개발할 때 이러한 도구를 사용합니다. 도구 설치에 대한 자세한 내용은 [Visual Studio 2015용 Azure 도구를](../../../azure/sdk/vs2015-install.md)참조하십시오. Azure에서 실행되는 데이터 서비스 개발에 대한 자세한 내용은 [Azure에서 OData 서비스 배포](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)게시물을 참조하십시오.
 
 ### <a name="development-tips"></a>개발 팁
 
@@ -92,7 +92,7 @@ WCF Data Services에서는 데이터 서비스를 호스트하는 프로세스�
 
 - **IIS에서 호스트되는 웹 서버**
 
-    데이터 서비스가 ASP.NET 프로젝트로 개발되면 표준 ASP.NET 배포 프로세스를 사용하여 IIS 웹 서버에 배포할 수 있습니다.  Visual Studio는 배포하는 데이터 서비스를 호스팅하는 ASP.NET 프로젝트 의 종류에 따라 ASP.NET 대해 다음과 같은 배포 기술을 제공합니다.
+    데이터 서비스가 ASP.NET 프로젝트로 개발되면 표준 ASP.NET 배포 프로세스를 사용하여 IIS 웹 서버에 배포할 수 있습니다. Visual Studio는 배포하는 데이터 서비스를 호스팅하는 ASP.NET 프로젝트 의 종류에 따라 ASP.NET 대해 다음과 같은 배포 기술을 제공합니다.
 
   - **ASP.NET 웹 애플리케이션을 위한 배포 기술**
 
@@ -113,9 +113,9 @@ WCF Data Services에서는 데이터 서비스를 호스트하는 프로세스�
     > [!TIP]
     > 데이터 서비스를 IIS에 배포하기 전에 IIS가 실행 중인 웹 서버로의 배포를 테스트했는지 확인해야 합니다. 자세한 내용은 [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md)을 참조하십시오.
 
-- **Windows Azure**
+- **Azure**
 
-     Visual Studio용 Windows Azure 도구를 사용하여 데이터 서비스를 Windows Azure에 배포할 수 있습니다. [Microsoft 다운로드 센터에서](https://go.microsoft.com/fwlink/?LinkID=201848)Visual Studio용 Windows Azure 도구를 다운로드할 수 있습니다. Windows Azure에 데이터 서비스를 배포하는 것에 대한 자세한 내용은 [Windows Azure에서 OData 서비스 배포](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)게시물을 참조하십시오.
+     [Visual Studio에 대한 Azure 도구를](../../../azure/sdk/vs2015-install.md)사용하여 Azure에 데이터 서비스를 배포할 수 있습니다. Azure에 데이터 서비스를 배포하는 것에 대한 자세한 내용은 [Azure에서 OData 서비스 배포를](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)참조하십시오.
 
 ### <a name="deployment-considerations"></a>배포 고려 사항
 

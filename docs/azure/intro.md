@@ -2,12 +2,12 @@
 title: Azure 및 .NET 시작
 description: Azure 및.NET에 대해 알아야 할 기본 사항을 알아봅니다.
 ms.date: 03/15/2020
-ms.openlocfilehash: 69c005ff1cfbd7ecddb4666bc23c8bc5cb813519
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: 64defed4433647c2a0dcce91493d9ec77d21b541
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "81433207"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607884"
 ---
 # <a name="introduction-to-azure-and-net"></a>Azure 및 .NET 소개
 
@@ -47,9 +47,9 @@ Azure 내 호스팅은 세 가지 범주로 나눌 수 있습니다.
 * [Azure Virtual Machines](https://docs.microsoft.com/azure/virtual-machines/): App Service가 특정 종속성으로 인해 기존 애플리케이션을 호스팅해야하는 필요성을 충족시키지 못하는 경우, 가상 머신이 가장 쉽게 시작할 수 있는 곳입니다. 가상 머신과 ASP.NET 또는 WCF를 시작하려면 [Azure 가상 머신에 ASP.NET 앱 배포](https://tutorials.visualstudio.com/aspnet-vm/intro)를 참조하십시오.
 
 > [!TIP]
-> Azure 서비스의 자세한 목록은 [Azure 컴퓨팅 옵션 개요](https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-overview#azure-compute-options)를 참조합니다. 서비스 선택에 대한 자세한 내용은 [Azure 컴퓨팅 서비스에 대한 의사 결정 트리](https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree)를 참조합니다.
+> 서비스 선택에 대한 자세한 내용은 [응용 프로그램에 대한 Azure 계산 서비스 선택을](https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree)참조하십시오.
 
-## <a name="choosing-a-data-storage-service"></a>데이터 스토리지 서비스 선택
+## <a name="choose-a-data-storage-service"></a>데이터 스토리지 서비스 선택
 
 Azure는 필요에 따라 데이터를 저장하기 위한 몇 가지 서비스를 제공합니다. .NET 개발자를 위한 가장 일반적인 데이터 서비스는 다음과 같습니다.
 
@@ -62,7 +62,7 @@ Azure는 필요에 따라 데이터를 저장하기 위한 몇 가지 서비스�
 > [!TIP]
 > 자세한 내용은 [올바른 데이터 저장소 선택](https://docs.microsoft.com/azure/architecture/guide/technology-choices/data-store-overview)을 참조하세요.
 
-## <a name="connecting-to-azure-services"></a>Azure 서비스에 연결
+## <a name="connect-to-azure-services"></a>Azure 서비스에 연결
 
 Visual Studio를 사용한다면 프로젝트에 특정 Azure 서비스에 대한 지원을 추가할 수 있습니다. Visual Studio의 **연결된 서비스** 대화에서 프로젝트에 필요한 참조, 연결 코드 및 구성 설정을 쉽게 추가하는 방법을 제공합니다. 다음과 같은 일부 자주 사용되는 Azure 서비스는 기본적으로 지원됩니다. [Storage](/azure/vs-azure-tools-connected-services-storage), [Azure Active Directory](/azure/active-directory/develop/vs-active-directory-add-connected-service) 인증, [Azure Key Vault](/azure/key-vault/vs-key-vault-add-connected-service) 및 [Computer Vision](/azure/cognitive-services/computer-vision/vs-computer-vision-connected-service)과 같은 [Cognitive Services](/azure/cognitive-services/) 타사 서비스를 비롯한 더 많은 서비스는 [Visual Studio Marketplace](https://marketplace.visualstudio.com/search?term=connected%20service&target=VS&category=Tools&vsVersion=&subCategory=All&sortBy=Relevance)에서 확장으로 이용할 수 있습니다.
 

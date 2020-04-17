@@ -3,12 +3,12 @@ title: ADO.NET 코드 샘플에 대한 샘플 SQL Server 데이터베이스 받�
 description: ADO.NET 설명서의 코드 샘플에 사용된 SQL Server 데이터베이스와 SQL Server 및 관리 도구 다운로드
 ms.date: 01/11/2019
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-ms.openlocfilehash: 19d659cbe8f39d27b71dc59c738355f12fce92a0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3449f502834f449f5023bd52457d45ffaf9b0fa1
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148389"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607986"
 ---
 # <a name="get-the-sample-databases-for-adonet-code-samples"></a>ADO.NET 코드 샘플에 대한 샘플 데이터베이스 받기
 
@@ -54,7 +54,7 @@ Microsoft 액세스에 대한 노스윈드 샘플 데이터베이스는 Microsof
 
 [SSMS(SQL Server Management Studio) 다운로드](/sql/ssms/download-sql-server-management-studio-ssms)
 
-IDE(Visual Studio 통합 개발 환경)에서 데이터베이스를 보고 관리할 수도 있습니다. [Visual Studio에서](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)SQL Server **개체 탐색기에서**데이터베이스에 연결하거나 **서버 탐색기**의 데이터베이스에 대한 데이터 연결을 만듭니다. **보기** 메뉴에서 이러한 탐색기 창을 엽니다.
+IDE(Visual Studio 통합 개발 환경)에서 데이터베이스를 보고 관리할 수도 있습니다. [Visual Studio에서](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)SQL Server **개체 탐색기에서**데이터베이스에 연결하거나 **서버 탐색기**의 데이터베이스에 대한 데이터 연결을 만듭니다. **보기** 메뉴에서 이러한 탐색기 창을 엽니다.
 
 ## <a name="get-sql-server-express"></a><a name="get_sql"></a>SQL 서버 익스프레스 받기
 
@@ -62,7 +62,7 @@ SQL Server Express는 응용 프로그램과 함께 재배포할 수 있는 무�
   
 [SQL Server Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express)
 
-[비주얼 스튜디오를](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)사용하는 경우 SQL Server Express LocalDB는 비주얼 스튜디오의 무료 커뮤니티 버전뿐만 아니라 전문 및 상위 버전에도 포함되어 있습니다.  
+[비주얼 스튜디오를](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)사용하는 경우 SQL Server Express LocalDB는 비주얼 스튜디오의 무료 커뮤니티 버전뿐만 아니라 전문 및 상위 버전에도 포함되어 있습니다.  
 
 ## <a name="see-also"></a>참고 항목
 

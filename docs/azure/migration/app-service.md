@@ -3,16 +3,16 @@ title: .NET 웹 앱 또는 서비스를 Azure App Service로 마이그레이션
 description: 온-프레미스에서 Azure 앱 서비스로 .NET 웹 앱 또는 서비스를 마이그레이션하는 방법에 대해 알아봅니다.
 ms.topic: conceptual
 ms.date: 08/11/2018
-ms.openlocfilehash: c9ef679743ce00add422110b11f2bfbdd8343530
-ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+ms.openlocfilehash: 57f3b981a1d94c2193160f55f9c8242da694c169
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "81433237"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607878"
 ---
 # <a name="migrate-your-net-web-app-or-service-to-azure-app-service"></a>.NET 웹 앱 또는 서비스를 Azure App Service로 마이그레이션
 
-[App Service는](https://docs.microsoft.com/azure/app-service/app-service-web-overview#why-use-web-apps) 확장 가능한 웹 사이트 및 웹 응용 프로그램을 호스팅하는 데 최적화된 완전히 관리되는 컴퓨팅 플랫폼 서비스입니다. 이 문서에서는 기존 응용 프로그램을 Azure 앱 서비스로 리프트 앤 시프트하는 방법, 고려해야 할 수정 사항 및 [클라우드로 이동하기](https://azure.microsoft.com/migration/web-applications/)위한 추가 리소스에 대한 정보를 제공합니다. 대부분의 ASP.NET 웹 사이트(Webforms, MVC) 및 서비스(Web API, WCF)는 변경 없이 Azure App Service로 바로 이동할 수 있습니다. 일부는 사소한 변경이 필요할 수 있으며 약간의 리팩터링이 필요할 수도 있습니다.
+[App Service는](https://docs.microsoft.com/azure/app-service/overview) 확장 가능한 웹 사이트 및 웹 응용 프로그램을 호스팅하는 데 최적화된 완전히 관리되는 컴퓨팅 플랫폼 서비스입니다. 이 문서에서는 기존 응용 프로그램을 Azure 앱 서비스로 리프트 앤 시프트하는 방법, 고려해야 할 수정 사항 및 [클라우드로 이동하기](https://azure.microsoft.com/migration/web-applications/)위한 추가 리소스에 대한 정보를 제공합니다. 대부분의 ASP.NET 웹 사이트(Webforms, MVC) 및 서비스(Web API, WCF)는 변경 없이 Azure App Service로 바로 이동할 수 있습니다. 일부는 사소한 변경이 필요할 수 있으며 약간의 리팩터링이 필요할 수도 있습니다.
 
 시작할 준비가 되셨습니까? [Azure App Service에 ASP.NET + SQL 애플리케이션 게시](https://tutorials.visualstudio.com/azure-webapp-migrate/intro)
 
@@ -100,7 +100,7 @@ AAD는 무료 앱으로 작동하지 않습니다. AAD를 사용하려면 앱 SK
 ## <a name="azure-app-service-with-windows-containers"></a>Windows 컨테이너를 사용하는 Azure App Service
 앱을 App Service로 직접 마이그레이션할 수 없는 경우 GAC, COM 구성 요소, MSI, .NET FX API, DirectX 등의 사용을 활성화하는 Windows 컨테이너를 사용하는 App Service를 사용하는 것이 좋습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 * [앱이 App Service에 적합한지 판단하는 방법](https://appmigration.microsoft.com/)
 * [클라우드로 데이터베이스 이동](https://go.microsoft.com/fwlink/?linkid=863217)

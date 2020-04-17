@@ -3,12 +3,12 @@ title: .NET용 Azure 라이브러리를 사용하여 인증
 description: .NET용 Azure 라이브러리에 대한 인증
 ms.date: 08/22/2018
 ms.custom: azure-sdk-dotnet
-ms.openlocfilehash: e562b60da0a2d34f716e80d3d5d0d0b5e55b0cdb
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: f6af813cd1423be8784b769b272756b2c8258392
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "81433147"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607872"
 ---
 # <a name="authenticate-with-the-azure-libraries-for-net"></a>.NET용 Azure 라이브러리를 사용하여 인증
 
@@ -45,7 +45,7 @@ var account = CloudStorageAccount.Parse(storageConnectionString);
 // Do things with the account here...
 ```
 
-서비스 연결 문자열은 [CosmosDB,](/azure/documentdb/documentdb-dotnet-application#a-nametoc395637769astep-5-wiring-up-azure-cosmos-db) [Redis용 Azure 캐시](/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache)및 [서비스 버스와](/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues) 같은 다른 Azure 서비스에서 사용되며 Azure 포털, CLI 또는 PowerShell을 사용하여 해당 문자열을 얻을 수 있습니다. 또한 .NET용 Azure 관리 라이브러리를 사용하여 코드에서 연결 문자열을 작성하는 리소스를 쿼리할 수도 있습니다.
+서비스 연결 문자열은 [CosmosDB,](https://docs.microsoft.com/azure/cosmos-db/) [Redis용 Azure 캐시](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache)및 [서비스 버스와](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues)같은 다른 Azure 서비스에서 사용됩니다. Azure 포털, CLI 또는 PowerShell을 사용하여 해당 문자열을 얻을 수 있습니다. 또한 .NET용 Azure 관리 라이브러리를 사용하여 코드에서 연결 문자열을 작성하는 리소스를 쿼리할 수도 있습니다.
 
 이 코드 조각에서는 관리 라이브러리를 사용하여 스토리지 계정 연결 문자열을 만듭니다.
 
