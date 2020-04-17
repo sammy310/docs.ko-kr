@@ -119,7 +119,7 @@
       href: programming-guide/types/index.md
     - name: nullable 참조 형식
       href: nullable-references.md
-    - name: 특성과 제약 조건을 사용하여 Null을 허용하는 API를 설명하세요.
+    - name: nullable 참조로 API 시그니처 업데이트
       href: nullable-attributes.md
     - name: 네임스페이스
       href: programming-guide/namespaces/index.md
@@ -355,16 +355,10 @@
               href: programming-guide/concepts/attributes/index.md
             - name: 사용자 지정 특성 만들기
               href: programming-guide/concepts/attributes/creating-custom-attributes.md
-            - name: AttributeUsage
-              href: programming-guide/concepts/attributes/attributeusage.md
             - name: 리플렉션을 사용하여 특성 액세스
               href: programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md
             - name: 특성을 사용하여 C/C++ 공용 구조체를 만드는 방법
               href: programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md
-            - name: 공통 특성
-              href: programming-guide/concepts/attributes/common-attributes.md
-        - name: 호출자 정보
-          href: programming-guide/concepts/caller-information.md
         - name: 컬렉션
           href: programming-guide/concepts/collections.md
         - name: 공변성(Covariance) 및 반공변성(Contravariance)
@@ -1664,6 +1658,19 @@
           href: language-reference/tokens/interpolated.md
         - name: '@ -- 약어 식별자'
           href: language-reference/tokens/verbatim.md
+    - name: 컴파일러에서 읽은 특성
+      items:
+        - name: 전역 특성
+          displayName: 'AssemblyName, AssemblyVersion, AssemblyCulture, AssemblyFlags, AssemblyProduct, AssemblyTrademark, AssemblyInformationalVersion, AssemblyCompany, AssemblyCopyright, AssemblyFileVersion, CLSCompliant, AssemblyTitle, AssemblyDescription, AssemblyConfiguration, AssemblyDefaultAlias'
+        - name: 일반
+          displayName: 'Conditional, Obsolete, AttributeUsage'
+          href: language-reference/attributes/general.md
+        - name: 호출자 정보
+          displayName: 'CallerFilePath, CallerLineNumber, CallerMemberName'
+          href: language-reference/attributes/caller-information.md
+        - name: null 허용 정적 분석
+          displayName: 'AllowNull, DisallowNull, MaybeNull, NotNull, MaybeNullWhen, NotNullWhen, NotNullIfNotNull, DoesNotReturn, DoesNotReturnIf'
+          href: language-reference/attributes/nullable-analysis.md
     - name: 'C# 전처리기 지시문'
       items:
         - name: 개요
