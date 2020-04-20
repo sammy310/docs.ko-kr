@@ -2,12 +2,12 @@
 title: 사용자 지정 특성 만들기(C#)
 ms.date: 07/20/2015
 ms.assetid: 500e1977-c6de-462d-abce-78a0eb1eda22
-ms.openlocfilehash: c0f25adf0d562b659edaa8f36e72332fd0c1ee7e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ec959723c339a13a40fd62388421ceacb736dfca
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69595410"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389552"
 ---
 # <a name="creating-custom-attributes-c"></a>사용자 지정 특성 만들기(C#)
 메타데이터를 통해 특성의 정의를 빠르고 쉽게 식별할 수 있도록 해주는 <xref:System.Attribute>로부터 직접적으로 또는 간접적으로 상속한 특성 클래스를 정의하여 사용자 지정 특성을 만들 수 있습니다. 형식을 작성한 프로그래머의 이름을 형식에 태그로 지정한다고 가정해봅시다. 사용자 지정 `Author` 특성 클래스를 아래와 같이 정의할 수 있습니다.  
@@ -71,4 +71,4 @@ class SampleClass
 - [리플렉션(C#)](../reflection.md)
 - [특성(C#)](./index.md)
 - [리플렉션을 사용하여 특성 액세스(C#)](./accessing-attributes-by-using-reflection.md)
-- [AttributeUsage(C#)](./attributeusage.md)
+- [AttributeUsage(C#)](../../../language-reference/attributes/general.md)

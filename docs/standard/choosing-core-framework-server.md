@@ -3,14 +3,14 @@ title: 서버 앱에 대해 .NET Core와 .NET Framework 중에 선택
 description: .NET에서 서버 앱을 구축할 때 고려해야 할 .NET 구현에 대한 가이드입니다.
 author: cartermp
 ms.date: 06/19/2018
-ms.openlocfilehash: 393d6d89fb299e87edf55cf50991537e8afe9753
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 885a7fb3419eafa5d88ef621cf6ad04a8d48bb59
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344143"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607495"
 ---
-# <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>서버 앱에 대해 .NET Core와 .NET Framework 중에 선택
+# <a name="choose-between-net-core-and-net-framework-for-server-apps"></a>서버 앱에 대해 .NET Core와 .NET Framework 중에 선택
 
 .NET에서 서버 쪽 애플리케이션을 구축하는 데 지원되는 두 가지 구현은 .NET Framework 및 .NET Core입니다. 두 구현은 여러 가지 동일한 구성 요소를 공유하므로 둘 간에 코드를 공유할 수 있습니다. 그러나 두 구현 간에는 기본적인 차이가 있으며 수행할 항목에 따라 선택이 달라집니다.  이 문서에서는 각각 사용하는 경우에 대한 지침을 제공합니다.
 
@@ -103,7 +103,7 @@ Docker 컨테이너는 고유한 Linux 또는 Windows 인프라나 [Azure Kubern
 ## <a name="see-also"></a>참조
 
 - [ASP.NET 및 ASP.NET Core 중에서 선택](/aspnet/core/choose-aspnet-framework)
-- [.NET Framework를 대상으로 하는 ASP.NET Core](/aspnet/core#aspnet-core-targeting-net-framework)
+- [.NET Framework를 대상으로 하는 ASP.NET Core](/aspnet/core/introduction-to-aspnet-core#aspnet-core-targeting-net-framework)
 - [대상 프레임워크](frameworks.md)
 - [.NET Core 가이드](../core/index.yml)
 - [.NET Framework에서 .NET Core로 이식](../core/porting/index.md)

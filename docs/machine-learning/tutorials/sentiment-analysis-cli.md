@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 12/23/2019
 ms.custom: mvc,mlnet-tooling
 ms.topic: tutorial
-ms.openlocfilehash: 2243aad0e787a3a594bde3dfa9884f104eab74e8
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: 832124e6d027b240c4d06692ee87c84f57b982d3
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546694"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243338"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>ML.NET CLI를 사용하여 감정 분석
 
@@ -45,7 +45,7 @@ Visual Studio 또는 `dotnet run`(.NET Core CLI)으로 생성된 C# 코드를 �
 
 이진 분류 기계 학습 작업인 ‘감정 분석’ 시나리오에 사용한 기존 데이터 세트를 사용하려고 합니다. 유사한 방식으로 자체 데이터 세트를 사용할 수 있으며 사용자를 위한 모델과 코드가 생성됩니다.
 
-1. [The UCI Sentiment Labeled Sentences dataset zip 파일(다음 참고에서 인용 내용 참조)](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)을 다운로드하고 사용자가 선택한 폴더에 압축을 풉니다.
+1. [The UCI Sentiment Labeled Sentences dataset zip 파일(다음 참고에서 인용 내용 참조)](http://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)을 다운로드하고 사용자가 선택한 폴더에 압축을 풉니다.
 
     > [!NOTE]
     > 이 자습서의 데이터 세트에서는 다음 데이터 세트를 사용합니다. 'From Group to Individual Labels using Deep Features', Kotzias et al,. KDD 2015)에서 제공되고 UCI Machine Learning Repository(Dua, D. 및 Karra Taniskidou, E. (2017))에서 호스트됩니다. UCI Machine Learning Repository[http://archive.ics.uci.edu/ml ]. Irvine, CA: University of California, School of Information and Computer Science.

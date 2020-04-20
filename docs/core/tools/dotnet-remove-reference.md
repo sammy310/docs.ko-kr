@@ -2,12 +2,12 @@
 title: dotnet remove reference 명령
 description: dotnet remove reference 명령은 프로젝트 간 참조를 제거하는 편리한 옵션을 제공합니다.
 ms.date: 02/14/2020
-ms.openlocfilehash: fcadf677faaf9281fb019c3c4bb16efc906b1aa1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 92d36bbbde64d806abc8f223c5f08e3f3d79ce9d
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503627"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463436"
 ---
 # <a name="dotnet-remove-reference"></a>dotnet remove reference
 
@@ -20,7 +20,9 @@ ms.locfileid: "77503627"
 ## <a name="synopsis"></a>개요
 
 ```dotnetcli
-dotnet remove [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help]
+dotnet remove [<PROJECT>] reference [-f|--framework <FRAMEWORK>] <PROJECT_REFERENCES>
+
+dotnet remove reference -h|--help
 ```
 
 ## <a name="description"></a>설명

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 51eb0e758f1ae8fb41c842ef9b32a9f8928af9ac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c592039b3b12eedcfceda45c2f54403a8e04b5d5
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73120735"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242675"
 ---
 # <a name="handling-io-errors-in-net"></a>.NET에서 I/O 오류 처리
 
@@ -39,7 +39,7 @@ ms.locfileid: "73120735"
 
 예를 들어 Windows 운영 체제에서 `ERROR_FILE_NOT_FOUND`의 오류 코드(또는 0x02)를 반환하는 메서드 호출은 <xref:System.IO.FileNotFoundException>에 매핑되고, `ERROR_PATH_NOT_FOUND`의 오류 코드(또는 0x03)를 반환하는 메서드 호출은 <xref:System.IO.DirectoryNotFoundException>에 매핑됩니다.
 
-그러나 운영 체제가 특정 오류 코드를 반환하는 정확한 조건은 문서화되지 않거나 잘못 문서화된 경우가 많습니다. 따라서 예기치 않은 예외가 발생할 수 있습니다. 예를 들어 파일이 아닌 디렉터리로 작업하고 있기 때문에 <xref:System.IO.DirectoryInfo.%23ctor%2A?displayProperty=nameWithType> 생성자에 잘못된 디렉터리 경로를 제공하면 <xref:System.IO.DirectoryNotFoundException>이 throw됩니다. 그러나 <xref:System.IO.FileNotFoundException>이 throw될 수도 있습니다.
+그러나 운영 체제가 특정 오류 코드를 반환하는 정확한 조건은 문서화되지 않거나 잘못 문서화된 경우가 많습니다. 따라서 예기치 않은 예외가 발생할 수 있습니다. 예를 들어 파일이 아닌 디렉터리로 작업하고 있기 때문에 <xref:System.IO.DirectoryInfo.%23ctor%2A> 생성자에 잘못된 디렉터리 경로를 제공하면 <xref:System.IO.DirectoryNotFoundException>이 throw됩니다. 그러나 <xref:System.IO.FileNotFoundException>이 throw될 수도 있습니다.
 
 ## <a name="exception-handling-in-io-operations"></a>I/O 작업의 예외 처리
 

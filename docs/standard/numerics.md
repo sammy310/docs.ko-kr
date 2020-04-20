@@ -11,12 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-ms.openlocfilehash: 3e9c817006930a36ebdce5c5965d78f1721c7056
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: ec5d4c088d3a954a4670891e3bb115c73e6cfdcf
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635149"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242766"
 ---
 # <a name="numerics-in-net"></a>.NET의 숫자
 
@@ -62,7 +62,7 @@ ms.locfileid: "80635149"
 
 각 부동 소수점 형식은 표준 산술 연산자 집합을 지원합니다. <xref:System.Math?displayProperty=nameWithType> 클래스는 광범위한 수학 함수 집합에 대한 메서드를 제공합니다. .NET Core 2.0 이상에는 <xref:System.Single> 형식의 인수를 허용하는 메서드를 제공하는 <xref:System.MathF?displayProperty=nameWithType> 클래스가 포함되어 있습니다.
 
-<xref:System.BitConverter?displayProperty=nameWithType> 클래스를 사용하여 <xref:System.Double> 및 <xref:System.Single> 값의 개별 비트를 사용할 수도 있습니다. <xref:System.Decimal?displayProperty=nameWithType> 구조체에는 10진수 값의 개별 비트를 사용하기 위한 고유한 메서드인 <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> 및 <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=nameWithType>와 몇몇 추가적인 수치 연산을 수행하기 위한 고유한 메서드 집합이 있습니다.
+<xref:System.BitConverter?displayProperty=nameWithType> 클래스를 사용하여 <xref:System.Double> 및 <xref:System.Single> 값의 개별 비트를 사용할 수도 있습니다. <xref:System.Decimal?displayProperty=nameWithType> 구조체에는 10진수 값의 개별 비트를 사용하기 위한 고유한 메서드인 <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> 및 <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29>와 몇몇 추가적인 수치 연산을 수행하기 위한 고유한 메서드 집합이 있습니다.
   
 <xref:System.Double> 및 <xref:System.Single> 형식은 기본적으로 정확하지 않은 값(예: 두 별 사이의 거리) 및 정밀도가 높고 반올림 오류가 적을 필요 없는 애플리케이션에 사용해야 합니다. 정밀도가 더 높아야 하고 반올림 오류가 최소화되어야 하는 경우에는 <xref:System.Decimal?displayProperty=nameWithType> 형식을 사용하세요.
 

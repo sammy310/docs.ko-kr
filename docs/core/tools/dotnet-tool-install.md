@@ -2,12 +2,12 @@
 title: dotnet tool install 명령
 description: dotnet tool install 명령은 컴퓨터에 지정된 .NET Core 도구를 설치합니다.
 ms.date: 02/14/2020
-ms.openlocfilehash: 1e142773d1f981a8dc3b552d5a23d2864cdd82c0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 723d25caa6009288dbb55d55f173b04d7b983450
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146465"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463367"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
@@ -20,19 +20,22 @@ ms.locfileid: "79146465"
 ## <a name="synopsis"></a>개요
 
 ```dotnetcli
-dotnet tool install <PACKAGE_NAME> <-g|--global>
-    [--add-source] [--configfile] [--framework]
-    [-v|--verbosity] [--version]
+dotnet tool install <PACKAGE_NAME> -g|--global
+    [--add-source <SOURCE>] [--configfile <FILE>]
+    [--framework <FRAMEWORK>] [-v|--verbosity <LEVEL>]
+    [--version <VERSION_NUMBER>]
 
-dotnet tool install <PACKAGE_NAME> <--tool-path>
-    [--add-source] [--configfile] [--framework]
-    [-v|--verbosity] [--version]
+dotnet tool install <PACKAGE_NAME> --tool-path <PATH>
+    [--add-source <SOURCE>] [--configfile <FILE>]
+    [--framework <FRAMEWORK>] [-v|--verbosity <LEVEL>]
+    [--version <VERSION_NUMBER>]
 
 dotnet tool install <PACKAGE_NAME>
-    [--add-source] [--configfile] [--framework]
-    [-v|--verbosity] [--version]
+    [--add-source <SOURCE>] [--configfile <FILE>]
+    [--framework <FRAMEWORK>] [-v|--verbosity <LEVEL>]
+    [--version <VERSION_NUMBER>]
 
-dotnet tool install <-h|--help>
+dotnet tool install -h|--help
 ```
 
 ## <a name="description"></a>설명

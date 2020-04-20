@@ -2,13 +2,13 @@
 title: C#의 역사 - C# 가이드
 description: 이 언어의 초창기 버전은 어떤 모습이었으며 이후 어떻게 변했는가?
 author: erikdietrich
-ms.date: 09/20/2017
-ms.openlocfilehash: 9114395a5c6cfd8df5da18024921c35828947e0b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/08/2020
+ms.openlocfilehash: f321b9c742fed6fb1efaf8fbb1914c203dd6391b
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398336"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389104"
 ---
 # <a name="the-history-of-c"></a>C\#의 역사
 
@@ -120,7 +120,7 @@ Visual Studio 2010과 함께 릴리스된 C# 버전 4.0은 버전 3.0의 혁신�
 Visual Studio 2012과 함께 릴리스된 C# 버전 5.0은 언어에 중점을 둔 버전이었습니다. 해당 버전에 대한 거의 모든 노력은 다른 획기적인 언어 개념인 비동기 프로그래밍을 위한 `async` 및 `await` 모델로 옮겨 갔습니다.  다음은 주요 기능 목록입니다.
 
 - [비동기 멤버](../async.md)
-- [호출자 정보 특성](../programming-guide/concepts/caller-information.md)
+- [호출자 정보 특성](../language-reference/attributes/caller-information.md)
 
 ### <a name="see-also"></a>관련 항목
 
@@ -154,7 +154,7 @@ Visual Studio 2012과 함께 릴리스된 C# 버전 5.0은 언어에 중점을 �
 
 ## <a name="c-version-70"></a>C# 버전 7.0
 
-최신 주 버전은 Visual Studio 2017과 함께 릴리스된 C# 버전 7.0입니다. 이 버전에는 C# 6.0 방식의 혁신적이고 유용한 기능이 있지만 서비스형 컴파일러는 없습니다. 다음은 새 기능 중 일부입니다.
+C# 버전 7.0은 Visual Studio 2017과 함께 릴리스되었습니다. 이 버전에는 C# 6.0 방식의 혁신적이고 유용한 기능이 있지만 서비스형 컴파일러는 없습니다. 다음은 새 기능 중 일부입니다.
 
 - [외부 변수](./csharp-7.md#out-variables)
 - [튜플 및 분해](./csharp-7.md#tuples)
@@ -172,5 +172,86 @@ Visual Studio 2012과 함께 릴리스된 C# 버전 5.0은 언어에 중점을 �
 이러한 모든 기능은 개발자에게 멋진 새 기능과 이전보다 훨씬 깔끔한 코드를 작성할 수 있는 기회를 제공합니다. 하이라이트는 `out` 키워드와 함께 사용할 변수의 선언을 압축하고 튜플을 통해 여러 개의 반환 값을 허용하는 것입니다.
 
 그러나 C#은 더욱 광범위하게 사용되고 있습니다. .NET Core는 이제 모든 운영 체제를 대상으로 하며 클라우드와 휴대성에 확실히 집중하고 있습니다.  이는 새로운 기능을 제공하는 것 외에도 언어 디자이너가 많이 생각하고 시간을 투자하게 만듭니다.
+
+## <a name="c-version-71"></a>C# 버전 7.1
+
+C#은 C# 7.1과 함께 ‘포인트 릴리스’를 제공하기 시작했습니다.  이 버전은 [언어 버전 선택](../language-reference/configure-language-version.md) 구성 요소, 세 개의 새로운 언어 기능 및 새로운 컴파일러 동작을 추가했습니다.
+
+이 릴리스의 새로운 언어 기능은 다음과 같습니다.
+
+- [`async` `Main` 메서드](./csharp-7-1.md#async-main)
+  - 애플리케이션에 대한 진입점은 `async` 한정자를 가질 수 있습니다.
+- [`default` 리터럴 식](./csharp-7-1.md#default-literal-expressions)
+  - 대상 형식을 유추할 수 있는 경우 기본 값 식에서 기본 리터럴 식을 사용할 수 있습니다.
+- [유추된 튜플 요소 이름](./csharp-7-1.md#inferred-tuple-element-names)
+  - 튜플 요소의 이름은 대부분의 경우에 튜플 초기화에서 유추할 수 있습니다.
+- [제네릭 형식 매개 변수의 패턴 일치](./csharp-7-1.md#pattern-matching-on-generic-type-parameters)
+  - 형식이 제네릭 형식 매개 변수인 변수에서 패턴 일치 식을 사용할 수 있습니다.
+
+마지막으로 컴파일러에는 [참조 어셈블리 생성](./csharp-7-1.md#reference-assembly-generation)을 제어하는 두 가지 옵션 `-refout` 및 `-refonly`가 있습니다.
+
+## <a name="c-version-72"></a>C# 버전 7.2
+
+C# 7.2는 몇 가지 작은 언어 기능을 추가했습니다.
+
+- [안전하고 효율적인 코드를 작성하는 방법](./csharp-7-2.md#safe-efficient-code-enhancements)
+  - 참조 의미 체계를 사용하는 값 유형으로 작동할 수 있는 구문 개선의 조합입니다.
+- [뒤에 오지 않는 명명된 인수](./csharp-7-2.md#non-trailing-named-arguments)
+  - 명명된 인수 뒤에는 위치 인수가 올 수 있습니다.
+- [숫자 리터럴의 선행 밑줄](./csharp-7-2.md#leading-underscores-in-numeric-literals)
+  - 숫자 리터럴은 이제 인쇄된 숫자 앞에 선행 밑줄이 있을 수 있습니다.
+- [`private protected` 액세스 한정자](./csharp-7-2.md#private-protected-access-modifier)
+  - `private protected` 액세스 한정자는 동일한 어셈블리의 파생된 클래스에 대해 액세스를 사용합니다.
+- [조건부 `ref` 식](./csharp-7-2.md#conditional-ref-expressions)
+  - 이제 조건식(`?:`)의 결과가 참조일 수 있습니다.
+
+## <a name="c-version-73"></a>C# 버전 7.3
+
+C# 7.3 릴리스에는 두 개의 기본 테마가 있습니다. 하나의 테마는 안전한 코드의 성능을 안전하지 않은 코드만큼 향상할 수 있는 기능을 제공합니다. 두 번째 테마는 기존 기능에 대한 점진적인 개선을 제공합니다. 또한 새 컴파일러 옵션이 이 릴리스에 추가되었습니다.
+
+다음 새로운 기능은 안전한 코드에 대해 향상된 성능의 테마를 지원합니다.
+
+- [고정하지 않고 고정 필드에 액세스할 수 있습니다.](csharp-7-3.md#indexing-fixed-fields-does-not-require-pinning)
+- [`ref` 지역 변수를 다시 할당할 수 있습니다.](csharp-7-3.md#ref-local-variables-may-be-reassigned)
+- [`stackalloc` 배열에서 이니셜라이저를 사용할 수 있습니다.](csharp-7-3.md#stackalloc-arrays-support-initializers)
+- [패턴을 지원하는 모든 형식과 함께 `fixed` 문을 사용할 수 있습니다.](csharp-7-3.md#more-types-support-the-fixed-statement)
+- [추가적인 제네릭 제약 조건을 사용할 수 있습니다.](csharp-7-3.md#enhanced-generic-constraints)
+
+기존 기능이 다음과 같이 개선되었습니다.
+
+- [튜플 형식으로 `==` 및 `!=`를 테스트할 수 있습니다.](csharp-7-3.md#tuples-support--and-)
+- [더 많은 위치에서 식 변수를 사용할 수 있습니다.](csharp-7-3.md#extend-expression-variables-in-initializers)
+- [자동 구현 속성의 지원 필드에 특성을 연결할 수 있습니다.](csharp-7-3.md#attach-attributes-to-the-backing-fields-for-auto-implemented-properties)
+- [인수에서 `in`만 다른 경우 메서드 해결이 향상되었습니다.](csharp-7-3.md#in-method-overload-resolution-tiebreaker)
+- [이제 오버로드 해결에 모호한 사례가 감소했습니다.](csharp-7-3.md#improved-overload-candidates)
+
+새 컴파일러 옵션은 다음과 같습니다.
+
+- [`-publicsign` - OSS(오픈 소스 소프트웨어) 시그니처를 사용하도록 설정합니다.](csharp-7-3.md#public-or-open-source-signing)
+- [`-pathmap` - 소스 디렉터리에 대한 매핑을 제공합니다.](csharp-7-3.md#pathmap)
+
+## <a name="c-version-80"></a>C# 버전 8.0
+
+C# 8.0은 특히 .NET Core C#을 대상으로 하는 첫 번째 주 릴리스입니다. 일부 기능은 새 CLR 기능을 사용하며, 다른 기능은 .NET Core에만 추가된 라이브러리 형식을 사용합니다. C#8.0은 다음 기능 및 향상된 기능을 C# 언어에 추가합니다.
+
+- [읽기 전용 멤버](./csharp-8.md#readonly-members)
+- [기본 인터페이스 메서드](./csharp-8.md#default-interface-methods)
+- [패턴 일치 개선 사항](./csharp-8.md#more-patterns-in-more-places):
+  - [Switch 식](./csharp-8.md#switch-expressions)
+  - [속성 패턴](./csharp-8.md#property-patterns)
+  - [튜플 패턴](./csharp-8.md#tuple-patterns)
+  - [위치 패턴](./csharp-8.md#positional-patterns)
+- [using 선언](./csharp-8.md#using-declarations)
+- [정적 로컬 함수](./csharp-8.md#static-local-functions)
+- [삭제 가능한 ref struct](./csharp-8.md#disposable-ref-structs)
+- [nullable 참조 형식](../language-reference/builtin-types/nullable-reference-types.md)
+- [비동기 스트림](./csharp-8.md#asynchronous-streams)
+- [인덱스 및 범위](./csharp-8.md#indices-and-ranges)
+- [null 병합 할당](./csharp-8.md#null-coalescing-assignment)
+- [관리되지 않는 생성 형식](./csharp-8.md#unmanaged-constructed-types)
+- [중첩 식의 stackalloc](./csharp-8.md#stackalloc-in-nested-expressions)
+- [보간된 약어 문자열의 향상된 기능](./csharp-8.md#enhancement-of-interpolated-verbatim-strings)
+
+기본 인터페이스 멤버에는 CLR의 향상된 기능이 필요합니다. 해당 기능은 .NET Core 3.0용 CLR에 추가되었습니다. 범위 및 인덱스와 비동기 스트림에는 .NET Core 3.0 라이브러리의 새 형식이 필요합니다. 인수 및 반환 값의 null 상태에 관한 의미 체계 정보를 제공하도록 라이브러리에 주석이 달린 경우 nullable 참조 형식은 컴파일러에서 구현되는 동안 훨씬 더 유용합니다. 해당 주석은 .NET Core 라이브러리에 추가됩니다.
 
 ‘이 문서는 [NDepend 블로그에 최초로 게시되었습니다.](https://blog.ndepend.com/c-versions-look-language-history/) Erik Dietrich 및 Patrick Smacchia 제공.’   

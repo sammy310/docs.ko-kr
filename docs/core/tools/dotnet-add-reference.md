@@ -2,28 +2,29 @@
 title: dotnet add reference 명령
 description: dotnet add reference 명령은 프로젝트 간 참조를 추가하는 편리한 옵션을 제공합니다.
 ms.date: 02/14/2020
-ms.openlocfilehash: 84ea25e94efc8d84aebfeccf62c30a64551c5019
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f2bd67d181784c4858b8971d05053d196df7818e
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503792"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463742"
 ---
 # <a name="dotnet-add-reference"></a>dotnet add reference
 
 **이 문서의 적용 대상:** ✔️ .NET Core 2.x SDK 이상 버전
 
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
-
-## <a name="name"></a>name
+## <a name="name"></a>이름
 
 `dotnet add reference` - 프로젝트 간(P2P) 참조를 추가합니다.
 
 ## <a name="synopsis"></a>개요
 
-`dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help] [--interactive]`
+```dotnetcli
+dotnet add [<PROJECT>] reference [-f|--framework <FRAMEWORK>]
+     [--interactive] <PROJECT_REFERENCES>
+
+dotnet add reference -h|--help
+```
 
 ## <a name="description"></a>설명
 
@@ -49,13 +50,13 @@ ms.locfileid: "77503792"
 
 ## <a name="options"></a>옵션
 
-- **`-h|--help`**
-
-  명령에 대한 간단한 도움말을 출력합니다.
-
 - **`-f|--framework <FRAMEWORK>`**
 
   특정 [프레임워크](../../standard/frameworks.md)를 대상으로 하는 경우에만 프로젝트 참조를 추가합니다.
+
+- **`-h|--help`**
+
+  명령에 대한 간단한 도움말을 출력합니다.
 
 - **`--interactive`**
 

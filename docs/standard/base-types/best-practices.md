@@ -10,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: 9b09f5a2505888c6154a58a3512c94c51f89295b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ff04b4950f48f2ba06f60b65cc3a46f1295711f3
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77124424"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243156"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET의 정규식 모범 사례
 
@@ -219,7 +219,7 @@ ms.locfileid: "77124424"
 
 정규식 시간 제한 간격은 정규식 엔진이 시간 초과되기 전에 하나의 일치 항목을 찾는 기간을 정의합니다. 기본 시간 제한 간격은 정규식이 시간 초과되지 않아야 하는 <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType>입니다. 다음과 같이 이 값을 재정의하고 시간 제한 간격을 정의할 수 있습니다.
 
-- <xref:System.Text.RegularExpressions.Regex> 생성자를 호출하여 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> 개체를 인스턴스화할 때 시간 제한 값을 제공합니다.
+- <xref:System.Text.RegularExpressions.Regex> 생성자를 호출하여 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29> 개체를 인스턴스화할 때 시간 제한 값을 제공합니다.
 
 - <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> 또는 <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType>와 같은 정적 패턴 일치 메서드를 호출하여 `matchTimeout` 매개 변수를 포함할 수 있습니다.
 

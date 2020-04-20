@@ -3,12 +3,12 @@ title: dotnet nuget locals 명령
 description: dotnet nuget locals 명령은 http-request 캐시, 임시 캐시 또는 컴퓨터 전체의 글로벌 패키지 폴더와 같은 로컬 NuGet 리소스를 지우거나 목록에 포함합니다.
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 3fdd7d946b08b4c18cfaeb65013de259b927a7fa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5b421b5058528a93c7be58eef2932937cc9cc12d
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503688"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463529"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
@@ -22,7 +22,8 @@ ms.locfileid: "77503688"
 
 ```dotnetcli
 dotnet nuget locals <CACHE_LOCATION> [(-c|--clear)|(-l|--list)] [--force-english-output]
-dotnet nuget locals [-h|--help]
+
+dotnet nuget locals -h|--help
 ```
 
 ## <a name="description"></a>설명

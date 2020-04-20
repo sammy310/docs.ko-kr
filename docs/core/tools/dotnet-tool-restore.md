@@ -2,12 +2,12 @@
 title: dotnet tool restore 명령
 description: dotnet tool restore 명령은 현재 디렉터리에 대한 범위에 있는 .NET Core 로컬 도구를 컴퓨터에 설치합니다.
 ms.date: 02/14/2020
-ms.openlocfilehash: cb46f70afb58e482b6aedfddfbf5f3a0c40674f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a518c2d45bbe9522bddfed4bbef61b30f1ad634b
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146439"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463337"
 ---
 # <a name="dotnet-tool-restore"></a>dotnet tool restore
 
@@ -21,11 +21,12 @@ ms.locfileid: "79146439"
 
 ```dotnetcli
 dotnet tool restore <PACKAGE_NAME>
-    [--configfile] [--add-source] [tool-manifest]
-    [--disable-parallel] [--ignore-failed-sources]
-    [--no-cache] [-interactive] [-v|--verbosity]
+    [--configfile <FILE>] [--add-source <SOURCE>]
+    [tool-manifest <PATH_TO_MANIFEST_FILE>] [--disable-parallel]
+    [--ignore-failed-sources] [--no-cache] [--interactive]
+    [-v|--verbosity <LEVEL>]
 
-dotnet tool restore <-h|--help>
+dotnet tool restore -h|--help
 ```
 
 ## <a name="description"></a>설명

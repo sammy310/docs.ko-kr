@@ -2,12 +2,12 @@
 title: dotnet nuget list source 명령
 description: dotnet nuget list source 명령은 NuGet 구성 파일의 기존 소스를 모두 나열합니다.
 ms.date: 03/20/2020
-ms.openlocfilehash: 4d7bc3dbd3ab5eb14c1ebf592044b685d28355cd
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 8b14413949bd60ddeed977d19eec9bb99982da70
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80148497"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463549"
 ---
 # <a name="dotnet-nuget-list-source"></a>dotnet nuget list source
 
@@ -20,8 +20,9 @@ ms.locfileid: "80148497"
 ## <a name="synopsis"></a>개요
 
 ```dotnetcli
-dotnet nuget list source [--format] [--configfile]
-dotnet nuget list source [-h|--help]
+dotnet nuget list source [--format [Detailed|Short]] [--configfile <FILE>]
+
+dotnet nuget list source -h|--help
 ```
 
 ## <a name="description"></a>Description
@@ -30,11 +31,11 @@ dotnet nuget list source [-h|--help]
 
 ## <a name="options"></a>옵션
 
-- **`--configfile`**
+- **`--configfile <FILE>`**
 
   NuGet 구성 파일입니다. 지정된 경우 이 파일의 설정만 사용됩니다. 지정되지 않으면 현재 디렉터리의 구성 파일의 계층 구조가 사용됩니다. 자세한 내용은 [일반적인 NuGet 구성](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior)을 참조하세요.
 
-- **`--format`**
+- **`--format [Detailed|Short]`**
 
   list 명령 출력의 형식은 `Detailed`(기본값) 및 `Short`입니다.
 

@@ -2,12 +2,12 @@
 title: dotnet nuget disable source 명령
 description: dotnet nuget disable source 명령은 NuGet 구성 파일의 기존 소스를 사용하지 않도록 설정합니다.
 ms.date: 03/20/2020
-ms.openlocfilehash: 5aa16c842bcddeead180fdeec3d9dcdda33f7ed9
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 54acb40b1944eaff347107e8f3439578ec8e0f3c
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80148479"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463576"
 ---
 # <a name="dotnet-nuget-disable-source"></a>dotnet nuget disable source
 
@@ -20,8 +20,9 @@ ms.locfileid: "80148479"
 ## <a name="synopsis"></a>개요
 
 ```dotnetcli
-dotnet nuget disable source <NAME> [--configfile]
-dotnet nuget disable source [-h|--help]
+dotnet nuget disable source <NAME> [--configfile <FILE>]
+
+dotnet nuget disable source -h|--help
 ```
 
 ## <a name="description"></a>Description
@@ -36,7 +37,7 @@ dotnet nuget disable source [-h|--help]
 
 ## <a name="options"></a>옵션
 
-- **`--configfile`**
+- **`--configfile <FILE>`**
 
   NuGet 구성 파일입니다. 지정된 경우 이 파일의 설정만 사용됩니다. 지정되지 않으면 현재 디렉터리의 구성 파일의 계층 구조가 사용됩니다. 자세한 내용은 [일반적인 NuGet 구성](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior)을 참조하세요.
 

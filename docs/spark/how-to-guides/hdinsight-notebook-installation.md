@@ -4,12 +4,12 @@ description: Azure HDInsight의 Jupyter Notebook에 .NET for Apache Spark를 설
 ms.date: 03/13/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 32047efcde093a3752bdd59baa88896d1547b93e
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: 953bffe5f6ec56cd0adf4224afd2eedfe0001aa9
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546752"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607417"
 ---
 # <a name="install-net-for-apache-spark-on-jupyter-notebooks-on-azure-hdinsight-spark-clusters"></a>Azure HDInsight Spark 클러스터의 Jupyter Notebook에 .NET for Apache Spark 설치
 
@@ -24,7 +24,7 @@ Jupyter Notebook 환경을 통해 .NET for Apache Spark를 사용하도록 설�
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-아직 없는 경우 [Azure HDInsight Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-jupyter-spark-sql-use-portal#create-an-hdinsight-spark-cluster) 클러스터를 만듭니다.
+아직 없는 경우 [Azure HDInsight Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-jupyter-spark-sql-use-portal#create-an-apache-spark-cluster-in-hdinsight) 클러스터를 만듭니다.
 
 1. [Azure Portal](https://portal.azure.com)에서 **+ 리소스 만들기**를 선택합니다.
 

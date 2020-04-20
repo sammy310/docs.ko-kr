@@ -12,12 +12,12 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-ms.openlocfilehash: a53d7517485d2a0b02b6f11928f478a7da3f9503
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf352d6494a823d4f7b24eb2876d9bffa5877b2b
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73972109"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242779"
 ---
 # <a name="regular-expression-options"></a>정규식 옵션
 
@@ -40,7 +40,7 @@ ms.locfileid: "73972109"
 
 정규식에 대한 옵션은 다음과 같은 세 가지 방법 중 하나로 지정할 수 있습니다.
 
-- `options` 클래스 생성자 또는 정적(Visual Basic의 경우 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>) 패턴 일치 메서드(예: `Shared` 또는 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>)의 <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 매개 변수에 지정합니다. `options` 매개 변수는 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 열거형 값의 비트 OR 조합입니다.
+- `options` 클래스 생성자 또는 정적(Visual Basic의 경우 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>) 패턴 일치 메서드(예: `Shared` 또는 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29>)의 <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 매개 변수에 지정합니다. `options` 매개 변수는 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 열거형 값의 비트 OR 조합입니다.
 
   클래스 생성자의 `options` 매개 변수를 사용하여 <xref:System.Text.RegularExpressions.Regex> 인스턴스에 옵션을 제공하면 해당 옵션이 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 속성에 할당됩니다. 그러나 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 속성은 정규식 패턴 자체에 인라인 옵션을 반영하지는 않습니다.
 
