@@ -1,12 +1,12 @@
 ---
 title: 특성(C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 62424163303417746a67707d9ef34185954db316
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 0379bb76cf18ff836bd14aafb9cb97c30aee8ec7
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389547"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645478"
 ---
 # <a name="attributes-c"></a>특성(C#)
 
@@ -81,7 +81,7 @@ ms.locfileid: "81389547"
 
 [자동 구현 속성](../../../properties.md)에 대해 생성된 지원 필드에 특성을 적용하기 위해 `field` 대상 값을 지정합니다.
 
-다음 예제에서는 어셈블리와 모듈에 특성을 적용하는 방법을 보여 줍니다. 자세한 내용은 [공통 특성(C#)](common-attributes.md)을 참조하세요.
+다음 예제에서는 어셈블리와 모듈에 특성을 적용하는 방법을 보여 줍니다. 자세한 내용은 [공통 특성(C#)](../../../language-reference/attributes/global.md)을 참조하세요.
 
 ```csharp
 using System;
@@ -120,7 +120,7 @@ using System.Reflection;
 - [사용자 지정 특성 만들기(C#)](creating-custom-attributes.md)  
 - [리플렉션을 사용하여 특성 액세스(C#)](accessing-attributes-by-using-reflection.md)  
 - [특성(C#)을 사용하여 C/C++ 공용 구조체를 만드는 방법](how-to-create-a-c-cpp-union-by-using-attributes.md)  
-- [공통 특성(C#)](common-attributes.md)  
+- [공통 특성(C#)](../../../language-reference/attributes/global.md)  
 - [호출자 정보(C#)](../../../language-reference/attributes/caller-information.md)  
 
 ## <a name="see-also"></a>참조

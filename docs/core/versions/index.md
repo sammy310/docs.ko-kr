@@ -2,12 +2,12 @@
 title: .NET Core 런타임 및 SDK의 버전 관리 방법
 description: 이 문서에서는 .NET Core SDK 및 런타임의 버전 관리 방법을 설명합니다(유의적 버전과 유사함).
 ms.date: 07/26/2018
-ms.openlocfilehash: c85a2112b439768068663688947960ac814de824
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f166a6dfc1c9127eb629365efd628855489a60cb
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75777324"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644391"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core의 버전 관리 방법 개요
 
@@ -39,7 +39,7 @@ SDK 버전 번호의 세 번째 위치는 보조 및 패치 번호를 모두 전
 
 [dotnet/designs](https://github.com/dotnet/designs/pull/29) 리포지토리에서 초기 제안서에 자세한 내용을 확인할 수 있습니다.
 
-## <a name="semantic-versioning"></a>유의적 버전 사용
+## <a name="semantic-versioning"></a>유의적 버전
 
 .NET Core *런타임*은 [유의적 버전(SemVer)](https://semver.org/)을 대략적으로 준수하며, `MAJOR.MINOR.PATCH` 버전 관리를 사용하고, 버전 번호의 다양한 부분으로 변경의 수준 및 종류를 설명합니다.
 
@@ -80,11 +80,11 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 ### <a name="preview-versions"></a>미리 보기 버전
 
-미리 보기 버전에는 `-preview[number]-([build]|"final")`이 추가됩니다. `2.0.0-preview1-final`)을 입력합니다.
+미리 보기 버전에는 `-preview[number]-([build]|"final")`이 추가됩니다. 예: `2.0.0-preview1-final`.
 
 ### <a name="servicing-versions"></a>서비스 버전
 
-릴리스가 출시된 후에 릴리스 분기는 일반적으로 매일 빌드 만들기를 중지하고 대신 서비스 빌드를 만들기 시작합니다. 서비스 버전에는 `-servicing-[number]`이 추가됩니다. `2.0.1-servicing-006924`)을 입력합니다.
+릴리스가 출시된 후에 릴리스 분기는 일반적으로 매일 빌드 만들기를 중지하고 대신 서비스 빌드를 만들기 시작합니다. 서비스 버전에는 `-servicing-[number]`이 추가됩니다. 예: `2.0.1-servicing-006924`.
 
 ## <a name="relationship-to-net-standard-versions"></a>.NET Standard 버전과의 관계
 
@@ -96,7 +96,7 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 .NET Core의 각 버전은 .NET Standard의 버전을 구현합니다. .NET Standard의 버전을 구현하면 이전 버전의 .NET Standard를 구현합니다. .NET standard 및 .NET Core 버전을 독립적으로 유지합니다. .NET Core 2.0이 .NET Standard 2.0을 구현한 것은 우연의 일치입니다. .NET Core 2.1은 또한 .NET Standard 2.0을 구현합니다. .NET Core는 .NET Standard의 향후 버전을 지원합니다.
 
-| .NET Core | .NET 표준 |
+| .NET Core | .NET Standard |
 |-----------|---------------|
 | 1.0       | 최대 1.6     |
 | 2.0       | 최대 2.0     |
@@ -104,10 +104,10 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 | 2.2       | 최대 2.0     |
 | 3.0       | 최대 2.1     |
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [대상 프레임워크](../../standard/frameworks.md)
-- [.NET Core 배포 패키징](../build/distribution-packaging.md)
+- [.NET Core 배포 패키징](../distribution-packaging.md)
 - [.NET Core Support Lifecycle Fact Sheet](https://dotnet.microsoft.com/platform/support/policy)(.NET Core 지원 수명 주기 팩트 시트)
 - [.NET Core 2+ 버전 바인딩](https://github.com/dotnet/designs/issues/3)
 - [.NET Core용 Docker 이미지](https://hub.docker.com/_/microsoft-dotnet-core/)
