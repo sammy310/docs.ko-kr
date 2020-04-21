@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-ms.openlocfilehash: 22713aba4f86fe493ba3d16ef09c2a71b6d55fe0
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: ddd7e8c95701532010b54e5136a33d37d139f6a4
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389779"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739224"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>방법: ASP.NET 웹 서비스 클라이언트와 상호 운용하도록 WCF 서비스 구성
 
 ASP.NET 웹 서비스 클라이언트와 상호 운용할 수 있도록 WCF(Windows 통신 재단) 서비스 끝점을 구성하려면 <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> 이 형식을 서비스 끝점의 바인딩 유형으로 사용합니다.  
   
- 바인딩에서 HTTPS 및 전송 수준 클라이언트 인증에 대한 지원을 선택적으로 사용할 수 있습니다. ASP.NET 웹 서비스 클라이언트는 MTOM 메시지 인코딩을 지원하지 않으므로 <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> 속성을 기본값으로 남겨두어야 <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>합니다. ASP.Net 웹 서비스 클라이언트는 WS-Security를 지원하지 않기 때문에 <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType>를 <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>로 설정해야 합니다.  
+ 바인딩에서 HTTPS 및 전송 수준 클라이언트 인증에 대한 지원을 선택적으로 사용할 수 있습니다. ASP.NET 웹 서비스 클라이언트는 MTOM 메시지 인코딩을 지원하지 않으므로 <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> 속성을 기본값으로 남겨두어야 <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>합니다. ASP.NET 웹 서비스 클라이언트는 WS-Security를 <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>지원하지 않으므로 을 로 설정해야 합니다.  
   
  웹 서비스 프록시 생성 도구(즉, 웹 서비스 설명 언어 [도구(Wsdl.exe),](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v%3dvs.100))웹 서비스 [검색 도구(Disco.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cy2a3ybs(v=vs.100))및 Visual Studio의 **웹 참조 추가** 기능)ASP.NET WCF 서비스에 대한 메타데이터를 사용할 수 있도록 하려면 HTTP/GET 메타데이터 끝점을 노출해야 합니다.  
   
@@ -24,7 +24,7 @@ ASP.NET 웹 서비스 클라이언트와 상호 운용할 수 있도록 WCF(Wind
   
 1. 새 <xref:System.ServiceModel.BasicHttpBinding> 인스턴스를 만듭니다.  
   
-2. 바인딩의 보안 모드를 <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>로 설정하여 이 서비스 엔드포인트 바인딩에 대한 전송 보안을 선택적으로 사용할 수 있습니다. 자세한 내용은 [교통 보안을](../../../../docs/framework/wcf/feature-details/transport-security.md)참조하십시오.  
+2. 바인딩의 보안 모드를 <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>로 설정하여 이 서비스 엔드포인트 바인딩에 대한 전송 보안을 선택적으로 사용할 수 있습니다. 자세한 내용은 [교통 보안](../../../../docs/framework/wcf/feature-details/transport-security.md)을 참조하십시오.  
   
 3. 방금 만든 바인딩 인스턴스를 사용하여 새 애플리케이션 엔드포인트를 서비스 호스트에 추가합니다. 코드에서 서비스 끝점을 추가하는 방법에 대한 자세한 내용은 [코드에서 서비스 끝점 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)방법을 참조하십시오.  
   

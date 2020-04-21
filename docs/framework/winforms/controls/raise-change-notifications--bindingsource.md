@@ -13,15 +13,15 @@ helpviewer_keywords:
 - INotifyPropertyChanged interface [Windows Forms], using with BindingSource
 - BindingSource component [Windows Forms], examples
 ms.assetid: 7fa2cf51-c09f-4375-adf0-e36c5617f099
-ms.openlocfilehash: 07248ec0b8ac4f2356d9c9915b6a904dfad30cb2
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 2fe4458aa43144a9c29ed67fd7bee99a37fe1434
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81388974"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739689"
 ---
 # <a name="how-to-raise-change-notifications-using-a-bindingsource-and-the-inotifypropertychanged-interface"></a>방법: BindingSource 및 INotifyPropertyChanged 인터페이스를 사용하여 변경 알림 발생
-데이터 소스에 포함된 형식이 <xref:System.ComponentModel.INotifyPropertyChanged> 인터페이스를 구현하고 속성 값이 변경될 때 <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> 이벤트를 발생시키는 경우 <xref:System.Windows.Forms.BindingSource> 구성 요소가 데이터 소스의 변경 내용을 자동으로 검색합니다. 이 기능은 데이터 소스 값이 변경될 때 <xref:System.Windows.Forms.BindingSource>에 바인딩된 컨트롤이 자동으로 업데이트되므로 유용합니다.  
+구성 <xref:System.Windows.Forms.BindingSource> 요소는 데이터 원본에 포함된 형식이 <xref:System.ComponentModel.INotifyPropertyChanged> 구현될 때 데이터 원본의 <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> 변경 내용을 자동으로 감지하고 속성 값이 변경될 때 이벤트를 발생시 합니다. 이 변경 검색은 데이터 원본 <xref:System.Windows.Forms.BindingSource> 값이 변경될 때 컨트롤이 자동으로 업데이트에 바인딩되기 때문에 유용합니다.  
   
 > [!NOTE]
 > 데이터 소스가 <xref:System.ComponentModel.INotifyPropertyChanged>를 구현하고 비동기 작업을 수행하는 경우 백그라운드 스레드에서 데이터 소스를 변경하면 안 됩니다. 대신, 백그라운드 스레드에서 데이터를 읽은 다음 UI 스레드의 목록에 데이터를 병합해야 합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "81388974"
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
-- System, System.Data, System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조  
+- 시스템, System.Data, System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조입니다.  
   
 ## <a name="see-also"></a>참고 항목
 

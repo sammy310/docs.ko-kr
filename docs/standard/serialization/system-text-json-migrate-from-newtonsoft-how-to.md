@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 957bafcdf69d5792702962db6598458a0c8ec974
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
+ms.openlocfilehash: 0828a5654171df39230055215903d3a49690155d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80291578"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739249"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Newtonsoft.json에서 System.Text.Json으로 마이그레이션하는 방법
 
@@ -73,15 +73,15 @@ ms.locfileid: "80291578"
 | `JsonConvert.PopulateObject` 메서드                   | ⚠️[지원되지 않음, 해결 해결](#populate-existing-objects) |
 | `ObjectCreationHandling`전역 설정               | ⚠️[지원되지 않음, 해결 해결](#reuse-rather-than-replace-properties) |
 | 세터 없이 컬렉션에 추가                    | ⚠️[지원되지 않음, 해결 해결](#add-to-collections-without-setters) |
-| `PreserveReferencesHandling`전역 설정           | ❌[지원되지 않음](#preserve-object-references-and-handle-loops) |
-| `ReferenceLoopHandling`전역 설정                | ❌[지원되지 않음](#preserve-object-references-and-handle-loops) |
-| 특성 `System.Runtime.Serialization` 지원 | ❌[지원되지 않음](#systemruntimeserialization-attributes) |
-| `MissingMemberHandling`전역 설정                | ❌[지원되지 않음](#missingmemberhandling) |
-| 따옴표 없이 속성 이름 허용                   | ❌[지원되지 않음](#json-strings-property-names-and-string-values) |
-| 문자열 값 주위에 단일 따옴표 허용              | ❌[지원되지 않음](#json-strings-property-names-and-string-values) |
-| 문자열 속성에 대해 비문자열 JSON 값 허용    | ❌[지원되지 않음](#non-string-values-for-string-properties) |
+| `PreserveReferencesHandling`전역 설정           | ❌ [지원 안 함](#preserve-object-references-and-handle-loops) |
+| `ReferenceLoopHandling`전역 설정                | ❌ [지원 안 함](#preserve-object-references-and-handle-loops) |
+| 특성 `System.Runtime.Serialization` 지원 | ❌ [지원 안 함](#systemruntimeserialization-attributes) |
+| `MissingMemberHandling`전역 설정                | ❌ [지원 안 함](#missingmemberhandling) |
+| 따옴표 없이 속성 이름 허용                   | ❌ [지원 안 함](#json-strings-property-names-and-string-values) |
+| 문자열 값 주위에 단일 따옴표 허용              | ❌ [지원 안 함](#json-strings-property-names-and-string-values) |
+| 문자열 속성에 대해 비문자열 JSON 값 허용    | ❌ [지원 안 함](#non-string-values-for-string-properties) |
 
-이 기능은 전체 `Newtonsoft.Json` 기능 목록이 아닙니다. 목록에는 [GitHub 문제](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json) 또는 [StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json) 게시물에서 요청된 많은 시나리오가 포함됩니다. 현재 샘플 코드가 없는 시나리오 중 하나에 대한 해결 방법을 구현하고 솔루션을 공유하려면 이 페이지의 [피드백 섹션에서](/dotnet/standard/serialization/system-text-json-migrate-from-newtonsoft-how-to#feedback) **이 페이지를** 선택합니다. 그러면 GitHub 문제가 생성되고 이 페이지 하단에 나열됩니다.
+이 기능은 전체 `Newtonsoft.Json` 기능 목록이 아닙니다. 목록에는 [GitHub 문제](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json) 또는 [StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json) 게시물에서 요청된 많은 시나리오가 포함됩니다. 현재 샘플 코드가 없는 시나리오 중 하나에 대한 해결 방법을 구현하고 솔루션을 공유하려면 이 페이지 하단의 **피드백** 섹션에서 **이 페이지를** 선택합니다. 이 문서의 GitHub 리포지토리에 문제가 생성되고 이 페이지의 **피드백** 섹션에도 나열됩니다.
 
 ## <a name="differences-in-default-jsonserializer-behavior-compared-to-newtonsoftjson"></a>뉴턴소프트.Json에 비해 기본 Json Serializer 동작의 차이
 
@@ -472,7 +472,7 @@ public JsonElement LookAndLoad(JsonElement source)
 
 앞의 코드는 속성을 `JsonElement` 포함하는 `fileName` a를 기대합니다. JSON 파일을 열고 `JsonDocument`을 만듭니다. 메서드는 호출자는 전체 문서로 작업하려고 한다고 가정하므로 `Clone` 을 `RootElement`반환합니다.
 
-하위 요소를 `JsonElement` 받고 하위 요소를 반환하는 경우 하위 요소 중 `Clone` a를 반환할 필요가 없습니다. 호출자는 전달된 사람이 `JsonDocument` `JsonElement` 속한 것을 계속 유지할 책임이 있습니다. 예를 들어:
+하위 요소를 `JsonElement` 받고 하위 요소를 반환하는 경우 하위 요소 중 `Clone` a를 반환할 필요가 없습니다. 호출자는 전달된 사람이 `JsonDocument` `JsonElement` 속한 것을 계속 유지할 책임이 있습니다. 다음은 그 예입니다.
 
 ```csharp
 public JsonElement ReturnFileName(JsonElement source)
@@ -510,7 +510,7 @@ DOM은 <xref:System.Text.Json> JSON 요소를 추가, 제거 또는 수정할 �
 
 ### <a name="utf8jsonreader-is-a-ref-struct"></a>Utf8JsonReader는 심판 구조체입니다.
 
-형식은 `Utf8JsonReader` 참조 *구조체이므로*특정 제한 [사항이 있습니다.](../../csharp/language-reference/keywords/ref.md#ref-struct-types) 예를 들어 ref 구조체 이외의 클래스 또는 구조체에 필드로 저장할 수 없습니다. 높은 성능을 얻으려면 이 형식은 `ref struct` [readOnlySpan\<바이트>](xref:System.ReadOnlySpan%601)입력을 캐시해야 하므로 이 유형이 어야 합니다. 또한 이 형식은 상태를 유지하므로 변경할 수 있습니다. 따라서 **값보다는 참조로 전달합니다.** 값으로 전달하면 구조복사본이 생성되고 상태 변경 내용이 호출자에게 표시되지 않습니다. 이는 클래스이기 `Newtonsoft.Json` 때문에 `Newtonsoft.Json` `JsonTextReader` 다릅니다. 참조 구조체를 사용하는 방법에 대한 자세한 내용은 [안전하고 효율적인 C# 코드 작성을](../../csharp/write-safe-efficient-code.md)참조하십시오.
+형식은 `Utf8JsonReader` 참조 *구조체이므로*특정 제한 [사항이 있습니다.](../../csharp/language-reference/builtin-types/struct.md#ref-struct) 예를 들어 ref 구조체 이외의 클래스 또는 구조체에 필드로 저장할 수 없습니다. 높은 성능을 얻으려면 이 형식은 `ref struct` [readOnlySpan\<바이트>](xref:System.ReadOnlySpan%601)입력을 캐시해야 하므로 이 유형이 어야 합니다. 또한 이 형식은 상태를 유지하므로 변경할 수 있습니다. 따라서 **값보다는 참조로 전달합니다.** 값으로 전달하면 구조복사본이 생성되고 상태 변경 내용이 호출자에게 표시되지 않습니다. 이는 클래스이기 `Newtonsoft.Json` 때문에 `Newtonsoft.Json` `JsonTextReader` 다릅니다. 참조 구조체를 사용하는 방법에 대한 자세한 내용은 [안전하고 효율적인 C# 코드 작성을](../../csharp/write-safe-efficient-code.md)참조하십시오.
 
 ### <a name="read-utf-8-text"></a>UTF-8 텍스트 읽기
 
@@ -651,7 +651,7 @@ string 속성의 경우 문자열이 <xref:System.Text.Json.Utf8JsonWriter.Write
 * [UnifiedJsonWriter.JsonTextWriter.cs](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/installer/managed/Microsoft.Extensions.DependencyModel/UnifiedJsonWriter.JsonTextWriter.cs)
 * [UnifiedJsonWriter.Utf8JsonWriter.cs](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/installer/managed/Microsoft.Extensions.DependencyModel/UnifiedJsonWriter.Utf8JsonWriter.cs)
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 <!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)[Restore this when the roadmap is updated.]-->
 * [System.Text.Json개요](system-text-json-overview.md)

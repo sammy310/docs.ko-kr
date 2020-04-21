@@ -2,12 +2,12 @@
 title: 익명 레코드
 description: 데이터 조작에 도움이 되는 언어 기능인 익명 레코드를 생성하고 사용하는 방법을 알아봅니다.
 ms.date: 06/12/2019
-ms.openlocfilehash: ef3aa8fccdb6ff406542932816e4138040845a59
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 121f0f638dff2ae529b2488d8e3b1ad9c064cf90
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187487"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738507"
 ---
 # <a name="anonymous-records"></a>익명 레코드
 
@@ -126,7 +126,7 @@ printCircleStats r {| Area = 4.0; Circumference = 12.6; Diameter = 12.6 |}
 ```fsharp
 type FullName = { FirstName: string; LastName: string }
 
-// Note that using a named for Manager and Executive would require mutually recursive definitions.
+// Note that using a named record for Manager and Executive would require mutually recursive definitions.
 type Employee =
     | Engineer of FullName
     | Manager of {| Name: FullName; Reports: Employee list |}

@@ -3,12 +3,12 @@ title: F#을 사용하여 Azure File 스토리지 시작
 description: Azure File Storage를 사용하여 클라우드에 파일 데이터를 저장하고 Azure 가상 머신(VM) 또는 Windows를 실행하는 온-프레미스 애플리케이션에서 클라우드 파일 공유를 탑재합니다.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 2088442e05ba36b388a3324942ebbf8c7eb263dd
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 1b38ee53f2f73f7b7f4ee12f712f487cb726d41e
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607469"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739598"
 ---
 # <a name="get-started-with-azure-file-storage-using-f"></a>F를 사용하여 Azure 파일 저장소 시작\#
 
@@ -41,7 +41,7 @@ Azure File Storage는 표준 [SMB(서버 메시지 블록) 프로토콜](https:/
 
 [!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L11-L11)]
 
-그러나 실제 프로젝트에는 **권장되지 않습니다.** 스토리지 계정 키는 스토리지 계정의 루트 암호와 비슷합니다. 항상 스토리지 계정 키를 보호해야 합니다. 다른 사용자에게 배포하거나 하드 코딩하거나 다른 사람이 액세스할 수 있는 일반 텍스트 파일에 저장하지 마십시오. 손상되었다고 생각되는 경우 Azure Portal을 사용하여 키를 다시 생성할 수 있습니다.
+그러나 실제 프로젝트에는 **권장되지 않습니다.** 스토리지 계정 키는 스토리지 계정의 루트 암호와 비슷합니다. 항상 스토리지 계정 키를 보호해야 합니다. 다른 사용자에게 배포하거나 하드 코딩하거나 다른 사람이 액세스할 수 있는 일반 텍스트 파일에 저장하지 마십시오. 손상되었다고 생각되는 경우 Azure 포털을 사용하여 키를 다시 생성할 수 있습니다.
 
 실제 응용 프로그램의 경우 저장소 연결 문자열을 유지하는 가장 좋은 방법은 구성 파일에 있습니다. 구성 파일에서 연결 문자열을 가져오려면 다음을 수행할 수 있습니다.
 
@@ -127,13 +127,13 @@ Azure 구성 관리자 사용은 선택 사항입니다. .NET Framework의 `Conf
 
 Azure 저장소 분석은 파일 저장소에 대한 메트릭을 지원합니다. 메트릭 데이터를 사용하여 요청을 추적하고 문제를 진단할 수 있습니다.
 
-[Azure Portal에서](https://portal.azure.com)파일 저장소에 대한 메트릭을 사용하도록 설정하거나 다음과 같이 F#에서 수행할 수 있습니다.
+[Azure 포털에서](https://portal.azure.com)파일 저장소에 대한 메트릭을 사용하도록 설정하거나 다음과 같이 F#에서 수행할 수 있습니다.
 
 [!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L126-L140)]
 
 ## <a name="next-steps"></a>다음 단계
 
-Azure File Storage에 대한 자세한 내용은 다음 링크를 참조합니다.
+Azure File 저장소에 대한 자세한 내용은 다음 링크를 참조하세요.
 
 ### <a name="conceptual-articles-and-videos"></a>개념 문서 및 비디오
 

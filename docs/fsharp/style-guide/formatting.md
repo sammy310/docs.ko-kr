@@ -2,19 +2,19 @@
 title: F# 코드 서식 지정 지침
 description: F# 코드 서식 지정에 대한 지침을 알아봅니다.
 ms.date: 11/04/2019
-ms.openlocfilehash: 2086b515b8ec9b69a44e2e65ca06fb320670dff2
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: b8be70dd29a04e71614308164e541b99a1724305
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278940"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739561"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# 코드 서식 지정 지침
 
 이 문서에서는 F# 코드가 다음과 같은지 코드를 포맷하는 방법에 대한 지침을 제공합니다.
 
-* 일반적으로 더 읽기 쉬운 것으로 간주
-* Visual Studio 및 기타 편집기의 서식 지정 도구에 의해 적용되는 규칙에 따라
+* 더 읽기 쉬운
+* Visual Studio 및 기타 편집기에서 도구를 포맷하여 적용하는 규칙에 따라
 * 온라인의 다른 코드와 유사
 
 이 지침은 [안둥 판에](https://github.com/dungpa)의해 F # 서식 규칙에 대한 [포괄적 인 가이드를 기반으로합니다.](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md)
@@ -25,7 +25,7 @@ F#은 기본적으로 상당한 공백을 사용합니다. 다음 지침은 이�
 
 ### <a name="using-spaces"></a>공백 사용
 
-들여쓰기가 필요한 경우 탭이 아닌 공백을 사용해야 합니다. 하나 이상의 공간이 필요합니다. 조직에서 는 코딩 표준을 만들어 들여쓰기에 사용할 공백 수를 지정할 수 있습니다. 들여쓰기가 발생하는 각 수준에서 2, 3 개 또는 4 개의 들여 쓰기 공간이 일반적입니다.
+들여쓰기가 필요한 경우 탭이 아닌 공백을 사용해야 합니다. 하나 이상의 공간이 필요합니다. 조직에서 는 코딩 표준을 만들어 들여쓰기에 사용할 공백 수를 지정할 수 있습니다. 들여쓰기가 발생하는 각 수준에서 2, 3 또는 4개의 들여쓰기 공백이 일반적입니다.
 
 **들여쓰기당 4개의 공백을 권장합니다.**
 
@@ -43,7 +43,7 @@ F#은 공백에 민감합니다. 공백의 대부분의 의미 체계는 적절�
 let subtractThenAdd x = x - 1 + 3
 ```
 
-Unary `-` 연산자는 항상 부정하는 값이 즉시 따라야 합니다.
+Unary `-` 연산자는 항상 부정하는 값 다음에 따라야 합니다.
 
 ```fsharp
 // OK
@@ -100,7 +100,7 @@ let myFun (a: decimal) b c = a + b + c
 let myFunBad (a:decimal)(b)c = a + b + c
 ```
 
-### <a name="place-parameters-on-a-new-line-for-very-long-member-definitions"></a>매우 긴 멤버 정의를 위해 새 줄에 매개변수 배치
+### <a name="place-parameters-on-a-new-line-for-long-member-definitions"></a>긴 멤버 정의를 위해 새 줄에 매개변수 배치
 
 멤버 정의가 매우 긴 경우 새 줄에 매개 변수를 배치하고 하나의 범위를 들여쓰기합니다.
 
@@ -180,7 +180,7 @@ let f x = x + 1 // Increment by one.
 
 ## <a name="naming-conventions"></a>명명 규칙
 
-### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>클래스 바인딩, 식 바인딩 및 패턴 바인딩 된 값 및 함수에 대 한 camelCase 사용
+### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>클래스 바인딩, 식 바인딩 및 패턴 바인딩된 값 및 함수에 camelCase 사용
 
 로컬 변수로 바인딩된 모든 이름또는 패턴 일치 및 함수 정의에 대해 camelCase를 사용하는 것이 일반적이고 허용되는 F# 스타일입니다.
 
@@ -287,7 +287,7 @@ type SchoolPerson =
 
 역사적으로 일부 F# 라이브러리는 이름에 밑줄을 사용했습니다. 그러나 .NET 명명 규칙과 충돌하기 때문에 더 이상 널리 받아들여지지 않습니다. 즉, 일부 F# 프로그래머는 역사적 이유로 부분적으로 강조를 사용하며 관용과 존중이 중요합니다. 그러나 스타일은 종종 그것을 사용할지 여부에 대한 선택의 여지가 다른 사람에 의해 싫어한다는 것을 유의하십시오.
 
-일부 예외에는 밑줄이 매우 일반적인 네이티브 구성 요소와의 상호 운용이 포함됩니다.
+한 가지 예외로는 밑줄이 일반적인 네이티브 구성 요소와의 상호 운용이 포함됩니다.
 
 ### <a name="use-standard-f-operators"></a>표준 F# 연산자 사용
 
@@ -325,7 +325,7 @@ F#은 제네릭 형식(예: `int list`)의 이름 지정후부 ML 스타일과 �
 
 ## <a name="formatting-tuples"></a>tuples 서식 지정
 
-튜플 인스턴스화는 괄호로 만들어야 하며, 내의 구분 쉼표 뒤에는 단일 공간(예: `(1, 2)`. `(x, y, z)`
+튜플 인스턴스화는 괄호로 만들어야 하며 그 안에 있는 구분 쉼표 뒤에는 단일 공간(예: `(1, 2)`. `(x, y, z)`
 
 일반적으로 tuples의 패턴 일치에서 괄호를 생략하는 것이 허용됩니다.
 
@@ -354,7 +354,7 @@ let update model msg =
 
 ## <a name="formatting-discriminated-union-declarations"></a>구별된 공용 구조체 선언 서식 지정
 
-4 `|` 개의 공백에 의한 형식 정의의 들여쓰기:
+네 `|` 개의 공백에 의한 형식 정의의 들여쓰기:
 
 ```fsharp
 // OK
@@ -393,7 +393,7 @@ let tree1 =
 
 ## <a name="formatting-record-declarations"></a>레코드 선언 서식 지정
 
-4 `{` 개의 공백으로 형식 정의를 들여쓰기하고 동일한 줄에서 필드 목록을 시작합니다.
+형식 `{` 정의를 네 개의 공백으로 들여쓰기하고 동일한 줄에서 필드 목록을 시작합니다.
 
 ```fsharp
 // OK
@@ -508,7 +508,7 @@ let rainbow2 =
         Lackeys = ["Zippy"; "George"; "Bungle"] }
 ```
 
-또한 레코드 지침과 마찬가지로 중괄호에 대해 별도의 줄을 전용으로 지정하고 식을 사용하여 오른쪽에 하나의 범위를 들여쓰기할 수 있습니다. 괄호 없이 선택적 값으로 값을 래핑하는 것과 같은 특별한 경우에는 한 줄에 중괄호를 유지해야 할 수 있습니다.
+또한 레코드 지침과 마찬가지로 중괄호에 대해 별도의 줄을 전용으로 지정하고 식을 사용하여 오른쪽에 하나의 범위를 들여쓰기할 수 있습니다. 괄호 없이 선택적 값으로 값을 래핑하는 것과 같은 특수한 경우에는 한 줄에 중괄호를 유지해야 할 수 있습니다.
 
 ```fsharp
 type S = { F1: int; F2: string }
@@ -691,7 +691,7 @@ lambdaList
     | Var v -> 1)
 ```
 
-키워드를 사용하는 경우에도 `let` `function` `let rec` `let`를 시작한 후 4개의 공백으로 정의되거나 들여쓰기해야 하는 함수에서 패턴 일치:
+`let` 키워드를 사용하더라도 `let rec` `let` `function` 을 시작한 후 4개의 공백을 들여쓰기하거나 정의한 함수에서 패턴 일치를 합니다.
 
 ```fsharp
 let rec sizeLambda acc = function
@@ -824,7 +824,7 @@ module A2 =
 
 ### <a name="formatting-object-expressions-and-interfaces"></a>개체 표현식 및 인터페이스 서식 지정
 
-개체 표현식과 인터페이스는 4개의 공백 이후에 `member` 들여쓰기되는 것과 동일한 방식으로 정렬되어야 합니다.
+개체 표현식과 인터페이스는 네 개의 공백 `member` 후에 들여쓰기되는 것과 동일한 방식으로 정렬되어야 합니다.
 
 ```fsharp
 let comparer =

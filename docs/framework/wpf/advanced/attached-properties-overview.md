@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: 5086401f4616074d364c1d387b751116120d5969
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: b207db459776c9f8fa7ea247d01071eeb8c995cf
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389007"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739289"
 ---
 # <a name="attached-properties-overview"></a>연결된 속성 개요
 
@@ -20,11 +20,11 @@ ms.locfileid: "81389007"
 
 ## <a name="prerequisites"></a>필수 구성 요소<a name="prerequisites"></a>
 
-이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 클래스에서 기존 종속성 속성의 이용자 관점에서 종속성 속성을 이해하고 [종속성 속성 개요](dependency-properties-overview.md)를 읽었다고 가정합니다. 이 항목의 예제를 따르려면 XAML을 이해하고 WPF 응용 프로그램을 작성하는 방법을 알고 있어야 합니다.
+이 문서에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 클래스에 있는 기존 종속성 속성의 소비자 의 관점에서 종속성 속성을 이해 하 고 [종속성 속성 개요를](dependency-properties-overview.md)읽었습니다. 이 문서의 예제를 따르려면 XAML을 이해하고 WPF 응용 프로그램을 작성하는 방법을 알고 있어야 합니다.
 
 ## <a name="why-use-attached-properties"></a>연결된 속성을 사용하는 이유<a name="attached_properties_usage"></a>
 
-연결된 속성의 한 가지 목적은 다른 자식 요소가 부모 요소에서 실제로 정의되는 속성의 고유 값을 저장하도록 하는 것입니다. 이 시나리오의 특정 애플리케이션에서 자식 요소는 부모 요소에 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]에서 표시되는 방법을 알립니다. 한 가지 <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> 예는 속성입니다. 속성은 <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> <xref:System.Windows.Controls.DockPanel> <xref:System.Windows.Controls.DockPanel> 자체가 아니라 에 포함된 요소에 설정되도록 설계되었기 때문에 연결된 속성으로 만들어집니다. <xref:System.Windows.Controls.DockPanel> 클래스는 명명된 <xref:System.Windows.DependencyProperty> <xref:System.Windows.Controls.DockPanel.DockProperty>정적 필드를 정의한 <xref:System.Windows.Controls.DockPanel.GetDock%2A> 다음 <xref:System.Windows.Controls.DockPanel.SetDock%2A> 및 메서드를 연결된 속성에 대한 공용 접근자로 제공합니다.
+연결된 속성의 한 가지 목적은 다른 자식 요소가 상위 요소에 정의된 속성에 대해 고유한 값을 지정하도록 허용하는 것입니다. 이 시나리오의 특정 애플리케이션에서 자식 요소는 부모 요소에 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]에서 표시되는 방법을 알립니다. 한 가지 <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> 예는 속성입니다. 속성은 <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> <xref:System.Windows.Controls.DockPanel> <xref:System.Windows.Controls.DockPanel> 자체가 아닌 내에 포함된 요소에 설정되도록 설계되었기 때문에 연결된 속성으로 만들어집니다. <xref:System.Windows.Controls.DockPanel> 클래스는 명명된 <xref:System.Windows.DependencyProperty> <xref:System.Windows.Controls.DockPanel.DockProperty>정적 필드를 정의한 <xref:System.Windows.Controls.DockPanel.GetDock%2A> 다음 <xref:System.Windows.Controls.DockPanel.SetDock%2A> 및 메서드를 연결된 속성에 대한 공용 접근자로 제공합니다.
 
 ## <a name="attached-properties-in-xaml"></a>XAML의 연결된 속성<a name="attached_properties_xaml"></a>
 
@@ -36,11 +36,11 @@ XAML에서 구문 *AttachedPropertyProvider*.* PropertyName*을 사용하여 연
 
 사용량은 정적 속성과 다소 유사합니다. 이름으로 지정된 인스턴스를 참조하는 대신 항상 연결된 속성을 소유하고 등록하는 형식을 <xref:System.Windows.Controls.DockPanel> 참조합니다.
 
-또한 XAML에서 연결된 속성은 표시로 설정한 특성이므로 집합 작업만 관련됩니다. 스타일의 트리거와 같은 값을 비교하기 위한 일부 간접 메커니즘이 있더라도 XAML에서 속성을 직접 가져올 수 없습니다(자세한 내용은 [스타일 및 템플릿](../controls/styling-and-templating.md) 참조).
+또한 XAML에서 연결된 속성은 표시로 설정한 특성이므로 집합 작업만 관련됩니다. 스타일의 트리거와 같은 값을 비교하기 위한 일부 간접 메커니즘이 있더라도 XAML에서 속성을 직접 가져올 수 없습니다(자세한 내용은 [스타일 및 템플릿](../../../desktop-wpf/fundamentals/styles-templates-overview.md) 참조).
 
 ### <a name="attached-property-implementation-in-wpf"></a>WPF에서 연결된 속성 구현
 
-에서 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]UI 프레젠테이션과 관련된 WPF 형식에 있는 대부분의 연결된 속성은 종속성 속성으로 구현됩니다. 연결된 속성은 XAML 개념이지만 종속성 속성은 WPF 개념입니다. WPF 연결 속성은 종속성 속성이므로 속성 메타데이터와 같은 종속성 속성 개념 및 해당 속성 메타데이터의 기본값을 지원합니다.
+에서 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]WPF 형식에 대 한 UI 관련 연결 된 속성의 대부분은 종속성 속성으로 구현 됩니다. 연결된 속성은 XAML 개념이지만 종속성 속성은 WPF 개념입니다. WPF 연결 속성은 종속성 속성이므로 속성 메타데이터와 같은 종속성 속성 개념 및 해당 속성 메타데이터의 기본값을 지원합니다.
 
 ## <a name="how-attached-properties-are-used-by-the-owning-type"></a>소유 형식에서 연결된 속성을 사용하는 방법<a name="howused"></a>
 
@@ -91,7 +91,7 @@ XAML 사례와 마찬가지로 `myCheckBox` 네 번째 코드 줄에 `myDockPane
 
 클래스가 다른 형식에서 사용하도록 연결된 속성을 엄격하게 정의하는 경우 클래스는 에서 <xref:System.Windows.DependencyObject>파생될 필요가 없습니다. 그러나 연결된 속성도 <xref:System.Windows.DependencyObject> 종속성 속성이 되는 전체 WPF 모델을 따르는 경우 파생해야 합니다.
 
-형식 <xref:System.Windows.DependencyProperty>필드를 선언하여 연결된 속성을 종속성 `public static readonly` 속성으로 정의합니다. 메서드의 반환 값을 사용 하 <xref:System.Windows.DependencyProperty.RegisterAttached%2A> 여이 필드를 정의 합니다. 필드 이름은 문자열과 `Property`함께 추가된 연결된 속성 이름과 일치해야 식별 필드의 이름을 지정하는 기존 WPF 패턴을 따르고 해당 필드의 이름을 지정합니다. 연결된 속성 공급자는 연결된 속성에 대한 접근자로 정적 **Get_PropertyName_** 및 **Set_PropertyName_** 메서드도 제공해야 합니다. 이렇게 하지 않으면 속성 시스템이 연결된 속성을 사용할 수 없게 됩니다.
+형식 <xref:System.Windows.DependencyProperty>필드를 선언하여 연결된 속성을 종속성 `public static readonly` 속성으로 정의합니다. 메서드의 반환 값을 사용 하 <xref:System.Windows.DependencyProperty.RegisterAttached%2A> 여이 필드를 정의 합니다. 필드 이름은 문자열과 `Property`함께 추가된 연결된 속성 이름과 일치해야 식별 필드의 이름을 지정하는 기존 WPF 패턴을 따르고 해당 필드의 이름을 지정합니다. 연결된 속성 공급자는 연결된 속성에 대한 접근자로 정적 **Get_PropertyName_** 및 **Set_PropertyName_** 메서드도 제공해야 합니다. 이렇게 하지 않으면 속성 시스템이 연결된 속성을 사용할 수 없습니다.
 
 > [!NOTE]
 > 연결된 속성의 get 접근자를 생략하면 Visual Studio 및 Visual Studio용 Blend와 같은 디자인 도구에서 속성의 데이터 바인딩이 작동하지 않습니다.
