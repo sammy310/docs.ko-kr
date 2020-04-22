@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: d5657f4081577b2a27bc3c2f6880784015c56060
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: f56ba7d68be107e697d3f732767f0a5f11c1a622
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249697"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644225"
 ---
 # <a name="whats-new-in-net-framework"></a>.NET Framework의 새로운 기능
 
@@ -695,7 +695,7 @@ GitHub에서 [.NET Framework 4.7 암호화 개선 예제](https://gist.github.co
 
 **DataContractJsonSerializer를 통한 보다 나은 제어 문자 지원**
 
-.NET Framework 4.7에서 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>는 ECMAScript 6 표준에 따라 제어 문자를 serialize합니다. 이 동작은 .NET Framework 4.7을 대상으로 하는 애플리케이션에 대해 기본적으로 사용되도록 설정되며, .NET Framework 4.7에서 실행되지만 이전 버전의 .NET Framework를 대상으로 하는 애플리케이션에 대한 옵트인 기능입니다. 자세한 내용은 [.NET Framework 4.7의 대상 다시 지정 변경 내용](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md)을 참조하세요.
+.NET Framework 4.7에서 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>는 ECMAScript 6 표준에 따라 제어 문자를 serialize합니다. 이 동작은 .NET Framework 4.7을 대상으로 하는 애플리케이션에 대해 기본적으로 사용되도록 설정되며, .NET Framework 4.7에서 실행되지만 이전 버전의 .NET Framework를 대상으로 하는 애플리케이션에 대한 옵트인 기능입니다. 자세한 내용은 [애플리케이션 호환성](../migration-guide/application-compatibility.md) 섹션을 참조하세요.
 
 <a name="net47" />
 
@@ -768,11 +768,11 @@ WCF에는 경합 상태를 제거하는 다양한 코드 변경 내용이 포함
 
 **Windows WM_POINTER 메시지 기반의 터치/스타일러스 스택 지원**
 
-WISP(Windows 잉크 서비스 플랫폼) 대신 [WM_POINTER 메시지](https://docs.microsoft.com/previous-versions/windows/desktop/InputMsg/messages) 기반의 터치/스타일러스 스택 사용 옵션이 제공됩니다. 이것은 .NET Framework의 옵트인 기능입니다. 자세한 내용은 [.NET Framework 4.7의 대상 다시 지정 변경 내용](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md)을 참조하세요.
+WISP(Windows 잉크 서비스 플랫폼) 대신 [WM_POINTER 메시지](https://docs.microsoft.com/previous-versions/windows/desktop/InputMsg/messages) 기반의 터치/스타일러스 스택 사용 옵션이 제공됩니다. 이것은 .NET Framework의 옵트인 기능입니다. 자세한 내용은 [애플리케이션 호환성](../migration-guide/application-compatibility.md) 섹션을 참조하세요.
 
 **WPF 인쇄 API에 대한 새로운 구현**
 
-<xref:System.Printing.PrintQueue?displayProperty=nameWithType> 클래스의 WPF 인쇄 API는 사용되지 않는 [XPS 인쇄 API](/windows/desktop/printdocs/xps-printing) 대신, Windows [인쇄 문서 패키지 API](/windows/desktop/printdocs/tailored-app-printing-api)를 호출합니다. 이러한 변경 내용이 애플리케이션 호환성에 미치는 영향에 대해서는 [.NET Framework 4.7의 대상 다시 지정 변경 내용](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md)을 참조하세요.
+<xref:System.Printing.PrintQueue?displayProperty=nameWithType> 클래스의 WPF 인쇄 API는 사용되지 않는 [XPS 인쇄 API](/windows/desktop/printdocs/xps-printing) 대신, Windows [인쇄 문서 패키지 API](/windows/desktop/printdocs/tailored-app-printing-api)를 호출합니다. 이러한 변경 사항이 애플리케이션 호환성에 미치는 영향에 대한 자세한 내용은 [애플리케이션 호환성](../migration-guide/application-compatibility.md) 섹션을 참조하세요.
 
 <a name="v462" />
 

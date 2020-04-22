@@ -3,12 +3,12 @@ title: .NET 시작
 description: .NET 기술 제품군을 시작합니다.
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: ecdbdf13aa64de0f07b09eb73953e64d66755bb0
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 64b9b0402631d34adc7ebd3bf8f7bc13416026b0
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635958"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646289"
 ---
 # <a name="welcome-to-net"></a>.NET 시작
 
@@ -33,7 +33,7 @@ ms.locfileid: "80635958"
 
 .NET 구현 및 지원되는 언어에 추가된 최신 기능에 대한 자세한 내용은 다음 문서를 참조하세요.
 
-- [.NET Core의 새로운 기능](core/whats-new/index.md)
+- [.NET Core 3.1의 새로운 기능](core/whats-new/dotnet-core-3-1.md)
 - [.NET Framework의 새로운 기능](framework/whats-new/index.md)
 - [C#의 새로운 기능](csharp/whats-new/index.md)
 - [Visual Basic의 새로운 기능](visual-basic/getting-started/whats-new.md)
