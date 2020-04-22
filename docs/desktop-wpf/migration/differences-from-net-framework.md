@@ -4,12 +4,12 @@ description: WPF(Windows 프레젠테이션 파운데이션)의 .NET 프레임�
 author: thraka
 ms.date: 09/21/2019
 ms.author: adegeo
-ms.openlocfilehash: 4386654aad205e3c9f2cbd986d7b812e261e737f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 341e576f17c522fbcbb9c417176e9d4a13ab1b18
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "81433135"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021838"
 ---
 # <a name="differences-in-wpf"></a>WPF의 차이
 
@@ -40,7 +40,7 @@ ms.locfileid: "81433135"
 
 CAS(코드 액세스 보안)는 .NET 코어 또는 .NET 코어에 대한 WPF에서 지원되지 않습니다. 모든 CAS 관련 기능은 완전 신뢰의 가정하에 처리됩니다. .NET 코어용 WPF는 CAS 관련 코드를 제거합니다. 이러한 형식에 대한 호출이 성공할 수 있도록 이러한 형식의 공용 API 표시면이 여전히 존재합니다.
 
-공개적으로 정의된 CAS 관련 형식은 WPF 어셈블리에서 CoreFX 어셈블리로 이동되었습니다. WPF 어셈블리에는 이동된 형식의 새 위치로 형식 전달 설정이 있습니다.
+공개적으로 정의된 CAS 관련 형식은 WPF 어셈블리에서 Core .NET 라이브러리 어셈블리로 이동되었습니다. WPF 어셈블리에는 이동된 형식의 새 위치로 형식 전달 설정이 있습니다.
 
 | 소스 어셈블리 | 대상 어셈블리 | Type                |
 | --------------- | --------------- | ------------------- |

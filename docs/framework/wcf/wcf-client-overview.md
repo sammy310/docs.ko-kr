@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: c12579062b04cfb46e14d5c3d734a7c155f8d654
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: b314b61584e45ac5e80a248e639bdac427ba4a57
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278888"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "82021729"
 ---
 # <a name="wcf-client-overview"></a>WCF 클라이언트 개요
 
@@ -42,7 +42,7 @@ ms.locfileid: "81278888"
 - 클라이언트 채널을 사용하여 서비스 호출  
   
 ## <a name="obtain-the-service-contract-bindings-and-addresses"></a>서비스 계약, 바인딩 및 주소 가져오기  
- WCF에서 서비스 및 클라이언트는 관리되는 특성, 인터페이스 및 메서드를 사용하여 계약을 모델링합니다. 클라이언트 애플리케이션에서 서비스에 연결하려면 서비스 계약에 대한 형식 정보를 가져와야 합니다. 일반적으로 서비스에서 메타데이터를 다운로드하고 원하는 언어로 관리되는 소스 코드 파일로 변환하고 WCF 클라이언트 개체를 구성하는 데 사용할 수 있는 클라이언트 응용 프로그램 구성 파일을 만드는 [ServiceModel 메타데이터 유틸리티 도구(Svcutil.exe)를](servicemodel-metadata-utility-tool-svcutil-exe.md)사용하여 이 작업을 수행합니다. 예를 들어 `MyCalculatorService`를 호출하는 WCF 클라이언트 개체를 만들고 해당 서비스의 메타데이터가 에 `http://computerName/MyCalculatorService/Service.svc?wsdl`게시된 것을 알고 있는 경우 다음 코드 예제에서는 Svcutil.exe를 사용하여 관리 코드에 서비스 계약을 포함하는 `ClientCode.vb` 파일을 가져오는 방법을 보여 주며 있습니다.  
+ WCF에서 서비스 및 클라이언트는 관리되는 특성, 인터페이스 및 메서드를 사용하여 계약을 모델링합니다. 클라이언트 애플리케이션에서 서비스에 연결하려면 서비스 계약에 대한 형식 정보를 가져와야 합니다. 일반적으로 [ServiceModel 메타데이터 유틸리티 도구(Svcutil.exe)를](servicemodel-metadata-utility-tool-svcutil-exe.md)사용하여 서비스 계약에 대한 형식 정보를 얻을 수 있습니다. 이 유틸리티는 서비스에서 메타데이터를 다운로드하고 원하는 언어로 관리되는 소스 코드 파일로 변환하고 WCF 클라이언트 개체를 구성하는 데 사용할 수 있는 클라이언트 응용 프로그램 구성 파일을 만듭니다. 예를 들어 `MyCalculatorService`를 호출하는 WCF 클라이언트 개체를 만들고 해당 서비스의 메타데이터가 에 `http://computerName/MyCalculatorService/Service.svc?wsdl`게시된 것을 알고 있는 경우 다음 코드 예제에서는 Svcutil.exe를 사용하여 관리 코드에 서비스 계약을 포함하는 `ClientCode.vb` 파일을 가져오는 방법을 보여 주며 있습니다.  
   
 ```console  
 svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/MyCalculatorService/Service.svc?wsdl  
@@ -172,7 +172,7 @@ End Interface
 ## <a name="calling-services-using-wcf-client-channels"></a>WCF 클라이언트 채널을 사용하여 서비스 호출  
  WCF 클라이언트 <xref:System.ServiceModel.ClientBase%601>형식은 기본 채널 <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> 시스템을 노출하기 위해 인터페이스에서 파생되는 확장합니다. <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 클래스와의 대상 서비스 계약을 사용하여 서비스를 호출할 수 있습니다. 자세한 내용은 [WCF 클라이언트 아키텍처](./feature-details/client-architecture.md)를 참조하십시오.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
 - <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>

@@ -2,12 +2,12 @@
 title: 비동기 프로그래밍
 description: F#이 핵심 기능적 프로그래밍 개념에서 파생된 언어 수준 프로그래밍 모델을 기반으로 비동기에 대한 깨끗한 지원을 제공하는 방법을 알아봅니다.
 ms.date: 12/17/2018
-ms.openlocfilehash: 9b2e3057c126d84474c21fde653da5bbee32938a
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 0a7d400c9778e30d6b25798239f12b7b2b0e3d82
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81608038"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021525"
 ---
 # <a name="async-programming-in-f"></a>F의 비동기 프로그래밍\#
 
@@ -16,7 +16,7 @@ ms.locfileid: "81608038"
 - 요청 처리가 해당 프로세스 외부의 시스템 또는 서비스의 입력을 기다리는 동안 점유된 시스템 리소스를 최소화하면서 상당수의 동시 수신 요청을 처리할 수 있는 서버 프로세스를 제공합니다.
 - 백그라운드 작업을 동시에 진행하는 동안 반응형 UI 또는 기본 스레드 유지 관리
 
-백그라운드 작업에는 여러 스레드의 사용이 포함되는 경우가 많지만 비동기 및 다중 스레딩의 개념을 별도로 고려하는 것이 중요합니다. 사실, 그들은 별개의 관심사이며, 하나는 다른 것을 의미하지 는 않습니다. 이 문서의 다음 내용은 이에 대해 자세히 설명합니다.
+백그라운드 작업에는 여러 스레드의 사용이 포함되는 경우가 많지만 비동기 및 다중 스레딩의 개념을 별도로 고려하는 것이 중요합니다. 사실, 그들은 별개의 관심사이며, 하나는 다른 것을 의미하지 는 않습니다. 이 문서에서는 별도의 개념을 자세히 설명합니다.
 
 ## <a name="asynchrony-defined"></a>정의된 비동기
 
@@ -26,7 +26,7 @@ ms.locfileid: "81608038"
 - 병렬 처리; 여러 계산 또는 단일 계산의 여러 부분이 정확히 동시에 실행되는 경우
 - 비동기; 하나 이상의 계산이 주 프로그램 흐름과 별도로 실행될 수 있는 경우
 
-세 가지 모두 직교 개념이지만, 특히 함께 사용할 때 쉽게 수축 할 수 있습니다. 예를 들어 여러 비동기 계산을 병렬로 실행해야 할 수 있습니다. 그렇다고 해서 병렬 처리나 비동기가 서로를 암시하는 것은 아닙니다.
+세 가지 모두 직교 개념이지만, 특히 함께 사용할 때 쉽게 수축 할 수 있습니다. 예를 들어 여러 비동기 계산을 병렬로 실행해야 할 수 있습니다. 이 관계는 병렬 처리 또는 비동기가 서로를 의미하는 것은 아닙니다.
 
 "비동기"라는 단어의 어장을 고려하면 다음과 같은 두 가지 조각이 있습니다.
 
@@ -35,7 +35,7 @@ ms.locfileid: "81608038"
 
 이 두 용어를 함께 사용하면 "비동기"가 "동시에 아님"을 의미합니다. 정말 간단하죠. 이 정의에는 동시성 또는 병렬 처리의 의미가 없습니다. 이것은 실제로도 마찬가지입니다.
 
-실질적으로 F#의 비동기 계산은 주 프로그램 흐름과 독립적으로 실행되도록 예약됩니다. 이는 동시성 또는 병렬성을 의미하지 않으며 백그라운드에서 항상 계산이 발생한다는 의미도 아닙니다. 실제로 비동기 계산은 계산의 특성과 계산이 실행되는 환경에 따라 동기적으로 실행될 수도 있습니다.
+실질적으로 F#의 비동기 계산은 주 프로그램 흐름과 독립적으로 실행되도록 예약됩니다. 이 독립적인 실행은 동시성 또는 병렬성을 의미하지 않으며 백그라운드에서 항상 계산이 발생한다는 의미도 아닙니다. 실제로 비동기 계산은 계산의 특성과 계산이 실행되는 환경에 따라 동기적으로 실행될 수도 있습니다.
 
 비동기 계산은 주 프로그램 흐름과 독립적이라는 것이 주요 테이크 아웃입니다. 비동기 계산이 실행되는 시기 또는 방법에 대한 보장은 거의 없지만 이를 오케스트레이션하고 예약하는 몇 가지 방법이 있습니다. 이 문서의 나머지 부분에서는 F# 비동기에 대한 핵심 개념과 F#에 기본 제공된 형식, 함수 및 식을 사용하는 방법을 살펴봅습니다.
 
@@ -167,7 +167,7 @@ computation: Async<'T> * timeout: ?int -> Async<Async<'T>>
 서명:
 
 ```fsharp
-computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
+computation: Async<unit> * cancellationToken: ?CancellationToken -> unit
 ```
 
 사용 시기:
@@ -185,7 +185,7 @@ computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
 서명:
 
 ```fsharp
-computation: Async<'T> - taskCreationOptions: ?TaskCreationOptions - cancellationToken: ?CancellationToken -> Task<'T>
+computation: Async<'T> * taskCreationOptions: ?TaskCreationOptions * cancellationToken: ?CancellationToken -> Task<'T>
 ```
 
 사용 시기:
@@ -203,7 +203,7 @@ computation: Async<'T> - taskCreationOptions: ?TaskCreationOptions - cancellatio
 서명:
 
 ```fsharp
-computations: seq<Async<'T>> - ?maxDegreesOfParallelism: int -> Async<'T[]>
+computations: seq<Async<'T>> * ?maxDegreesOfParallelism: int -> Async<'T[]>
 ```
 
 사용하는 시기:
@@ -214,7 +214,7 @@ computations: seq<Async<'T>> - ?maxDegreesOfParallelism: int -> Async<'T[]>
 주의해야 할 사항:
 
 - 모든 계산이 완료된 후에만 결과 값 배열에 액세스할 수 있습니다.
-- 계산은 실행되지만 결국 예약됩니다. 즉, 실행 순서에 의존할 수 없습니다.
+- 계산은 예약이 끝날 때마다 실행됩니다. 이 동작은 실행 순서에 의존할 수 없음을 의미합니다.
 
 ### <a name="asyncsequential"></a>비동기.순차적
 
@@ -242,7 +242,7 @@ computations: seq<Async<'T>> -> Async<'T[]>
 서명:
 
 ```fsharp
-task: Task<'T>  -> Async<'T>
+task: Task<'T> -> Async<'T>
 ```
 
 사용 시기:
@@ -251,7 +251,7 @@ task: Task<'T>  -> Async<'T>
 
 주의해야 할 사항:
 
-- 예외는 작업 <xref:System.AggregateException> 병렬 라이브러리의 규칙에 따라 래핑되며 F# 비동기가 일반적으로 예외를 표시하는 방법과 다릅니다.
+- 예외는 작업 <xref:System.AggregateException> 병렬 라이브러리의 규칙에 따라 래핑되며 이 동작은 F# 비동기가 일반적으로 예외를 표시하는 방법과 다릅니다.
 
 ### <a name="asynccatch"></a>비동기.Catch
 
@@ -287,7 +287,7 @@ computation: Async<'T> -> Async<unit>
 
 주의해야 할 사항:
 
-- 사용하려는 경우 또는 필요한 `Async.Start` `Async<unit>`다른 함수를 사용하려면 결과를 삭제해도 되는지 고려하십시오. 형식 시그니처에 맞게 결과를 삭제하는 것은 일반적으로 수행되지 않아야 합니다.
+- 사용하려는 경우 `Async.Ignore` 또는 필요한 `Async<unit>` `Async.Start` 다른 함수를 사용하려면 결과를 삭제해도 됩니다. 형식 시그니처에 맞추기 위해 결과를 삭제하지 마십시오.
 
 ### <a name="asyncrunsynchronously"></a>비동기.실행 동기
 
@@ -296,7 +296,7 @@ computation: Async<'T> -> Async<unit>
 서명:
 
 ```fsharp
-computation: Async<'T> - timeout: ?int - cancellationToken: ?CancellationToken -> 'T
+computation: Async<'T> * timeout: ?int * cancellationToken: ?CancellationToken -> 'T
 ```
 
 사용하는 시기:
@@ -310,12 +310,12 @@ computation: Async<'T> - timeout: ?int - cancellationToken: ?CancellationToken -
 
 ### <a name="asyncstart"></a>비동기.시작
 
-을 반환하는 `unit`스레드 풀에서 비동기 계산을 시작합니다. 그 결과를 기다리지 않습니다. 중첩 된 계산은 `Async.Start` 해당 계산이라고 하는 상위 계산과 는 완전히 독립적으로 시작됩니다. 수명은 상위 계산에 연결되지 않습니다. 상위 계산이 취소되면 하위 계산이 취소되지 않습니다.
+을 반환하는 `unit`스레드 풀에서 비동기 계산을 시작합니다. 그 결과를 기다리지 않습니다. 중첩 된 계산은 `Async.Start` 그들을 호출 하는 부모 계산 독립적으로 시작 됩니다. 수명은 상위 계산에 연결되지 않습니다. 상위 계산이 취소되면 하위 계산이 취소되지 않습니다.
 
 서명:
 
 ```fsharp
-computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
+computation: Async<unit> * cancellationToken: ?CancellationToken -> unit
 ```
 
 다음과 같은 경우에만 사용하십시오.
@@ -328,7 +328,7 @@ computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
 주의해야 할 사항:
 
 - 시작된 계산으로 인해 발생하는 `Async.Start` 예외는 호출자에게 전파되지 않습니다. 호출 스택이 완전히 해제됩니다.
-- 호출로 `Async.Start` 시작된 효과있는 `printfn`작업(예: 호출)은 프로그램 실행의 주 스레드에 영향을 주지 않습니다.
+- 호출로 `Async.Start` 시작된 모든 `printfn`작업(예: 호출)은 프로그램 실행의 주 스레드에 영향을 주지 않습니다.
 
 ## <a name="interoperate-with-net"></a>.NET과 상호 운용
 
@@ -382,7 +382,7 @@ module Async =
 
 F#은 현재 스레드에서 비동기 계산을 시작하는 몇 가지 기능을 제공하지만(또는 현재 스레드에 명시적으로 적용되지 않음) 일반적으로 비동기는 특정 스레딩 전략과 연결되지 않습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [F# 비동기 프로그래밍 모델](https://www.microsoft.com/research/publication/the-f-asynchronous-programming-model)
 - [Jet.com의 F# 비동기 가이드](https://medium.com/jettech/f-async-guide-eb3c8a2d180a)
