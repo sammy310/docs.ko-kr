@@ -489,7 +489,7 @@
                     - name: CSV 텍스트 파일의 열 값을 계산하는 방법(LINQ)
                       href: programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md
                 - name: LINQ 및 리플렉션
-                  href: programming-guide/concepts/linq/linq-and-reflection.md
+                  href: programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md
                 - name: 리플렉션을 사용하여 어셈블리의 메타데이터를 쿼리하는 방법(LINQ)
                   href: programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md
                 - name: LINQ 및 파일 디렉터리
@@ -1322,7 +1322,7 @@
                   displayName: 'enum, bit flags, bit field'
                 - name: 구조체 형식
                   href: language-reference/builtin-types/struct.md
-                  displayName: 'struct type, readonly'
+                  displayName: 'struct type, readonly struct, ref struct, readonly ref struct'
                 - name: Nullable 값 형식
                   href: language-reference/builtin-types/nullable-value-types.md
                   displayName: '? token, ? symbol'
