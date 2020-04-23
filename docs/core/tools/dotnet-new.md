@@ -1,29 +1,33 @@
 ---
 title: dotnet new 명령
 description: dotnet new 명령은 지정된 템플릿을 기반으로 새 .NET Core 프로젝트를 만듭니다.
-ms.date: 02/13/2020
-ms.openlocfilehash: d3c609419596b123f5bfb3ca85cf292a61154a70
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/10/2020
+ms.openlocfilehash: 4ad0d7e54f93582237ed9457b562957018916d36
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398030"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463607"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
 **이 문서의 적용 대상:**  ✔️ .NET Core 2.0 SDK 이상 버전
 
-## <a name="name"></a>name
+## <a name="name"></a>이름
 
 `dotnet new` - 지정된 템플릿을 기반으로 새 프로젝트, 구성 파일 또는 솔루션을 만듭니다.
 
 ## <a name="synopsis"></a>개요
 
 ```dotnetcli
-dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name]
-    [--nuget-source] [-o|--output] [-u|--uninstall] [--update-apply] [--update-check] [Template options]
-dotnet new <TEMPLATE> [-l|--list] [--type]
-dotnet new [-h|--help]
+dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install {PATH|NUGET_ID}]
+    [-lang|--language {C#|F#|VB}] [-n|--name <OUTPUT_NAME>]
+    [--nuget-source <SOURCE>] [-o|--output <OUTPUT_DIRECTORY>]
+    [-u|--uninstall] [--update-apply] [--update-check] [Template options]
+
+dotnet new <TEMPLATE> [-l|--list] [--type <TYPE>]
+
+dotnet new -h|--help
 ```
 
 ## <a name="description"></a>설명
@@ -47,7 +51,7 @@ dotnet new [-h|--help]
 
   명령에는 템플릿의 기본 목록이 포함되어 있습니다. `dotnet new -l`을 사용하여 사용 가능한 템플릿 목록을 가져옵니다. 다음 표에는 .NET Core SDK와 함께 사전 설치된 템플릿이 나와 있습니다. 템플릿의 기본 언어는 대괄호 안에 표시됩니다. 특정 템플릿 옵션을 보려면 약식 이름 링크를 클릭합니다.
 
-| 템플릿                                    | 짧은 이름                      | 언어     | 태그들                                  | 도입 |
+| 템플릿                                    | 짧은 이름                      | 언어     | Tags                                  | 도입 |
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
 | 콘솔 애플리케이션                          | [콘솔](#console)             | [C#], F#, VB | 일반/콘솔                        | 1.0        |
 | 클래스 라이브러리                                | [classlib](#classlib)           | [C#], F#, VB | 일반/라이브러리                        | 1.0        |
@@ -74,7 +78,7 @@ dotnet new [-h|--help]
 | ASP.NET Core(React.js 사용)                   | [react](#spa)                   | [C#]         | Web/MVC/SPA                           | 2.0        |
 | ASP.NET Core(React.js 및 Redux 사용)         | [reactredux](#reactredux)       | [C#]         | Web/MVC/SPA                           | 2.0        |
 | Razor 클래스 라이브러리                          | [razorclasslib](#razorclasslib) | [C#]         | Web/Razor/Library/Razor 클래스 라이브러리 | 2.1        |
-| ASP.NET Core Web API                         | [webapi](#webapi)               | [C#], F#     | Web/WebAPI                            | 1.0        |
+| ASP.NET Core 웹 API                         | [webapi](#webapi)               | [C#], F#     | Web/WebAPI                            | 1.0        |
 | ASP.NET Core gRPC 서비스                    | [grpc](#web-others)             | [C#]         | Web/gRPC                              | 3.0        |
 | 프로토콜 버퍼 파일                         | [proto](#namespace)             |              | Web/gRPC                              | 3.0        |
 | dotnet gitignore 파일                        | `gitignore`                     |              | Config                                | 3.0        |
@@ -96,7 +100,7 @@ dotnet new [-h|--help]
 
 - **`-h|--help`**
 
-  명령에 대한 도움말을 출력합니다. `dotnet new` 명령 자체 또는 템플릿에 대해 호출될 수 있습니다. `dotnet new mvc --help`)을 입력합니다.
+  명령에 대한 도움말을 출력합니다. `dotnet new` 명령 자체 또는 템플릿에 대해 호출될 수 있습니다. 예: `dotnet new mvc --help`.
 
 - **`-i|--install <PATH|NUGET_ID>`**
 
@@ -115,13 +119,13 @@ dotnet new [-h|--help]
   만들 템플릿의 언어입니다. 허용되는 언어는 템플릿에 따라 다릅니다([인수](#arguments) 섹션에서 기본값 참조). 일부 템플릿의 경우 유효하지 않습니다.
 
   > [!NOTE]
-  > 일부 셸은 `#`을 특수 문자로 해석합니다. 이러한 경우 언어 매개 변수 값을 따옴표로 묶습니다. `dotnet new console -lang "F#"`)을 입력합니다.
+  > 일부 셸은 `#`을 특수 문자로 해석합니다. 이러한 경우 언어 매개 변수 값을 따옴표로 묶습니다. 예: `dotnet new console -lang "F#"`.
 
 - **`-n|--name <OUTPUT_NAME>`**
 
   생성된 출력에 대한 이름입니다. 이름을 지정하지 않으면 현재 디렉터리의 이름이 사용됩니다.
 
-- **`--nuget-source`**
+- **`--nuget-source <SOURCE>`**
 
   설치 중 사용할 NuGet 소스를 지정합니다. .NET Core 2.1 SDK부터 사용할 수 있습니다.
 
@@ -129,9 +133,9 @@ dotnet new [-h|--help]
 
   생성된 출력을 배치할 위치입니다. 기본값은 현재 디렉터리입니다.
 
-- **`--type`**
+- **`--type <TYPE>`**
 
-  사용 가능한 형식에 따라 템플릿을 필터링합니다. 미리 정의된 값은 "project", "item" 또는 "other"입니다.
+  사용 가능한 형식에 따라 템플릿을 필터링합니다. 미리 정의된 값은 `project`, `item` 또는 `other`입니다.
 
 - **`-u|--uninstall [PATH|NUGET_ID]`**
 
@@ -198,7 +202,7 @@ dotnet new [-h|--help]
 
 ***
 
-### <a name="wpf"></a> wpf, wpflib, wpfcustomcontrollib, wpfusercontrollib
+### <a name="wpf-wpflib-wpfcustomcontrollib-wpfusercontrollib"></a><a name="wpf"></a> wpf, wpflib, wpfcustomcontrollib, wpfusercontrollib
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -216,7 +220,7 @@ dotnet new [-h|--help]
 
 ***
 
-### <a name="winforms"></a> winforms, winformslib
+### <a name="winforms-winformslib"></a><a name="winforms"></a> winforms, winformslib
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -230,7 +234,7 @@ dotnet new [-h|--help]
 
 ***
 
-### <a name="web-others"></a> worker, grpc
+### <a name="worker-grpc"></a><a name="web-others"></a> worker, grpc
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -246,7 +250,7 @@ dotnet new [-h|--help]
 
 ***
 
-### <a name="test"></a> mstest, xunit
+### <a name="mstest-xunit"></a><a name="test"></a> mstest, xunit
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -306,7 +310,7 @@ dotnet new [-h|--help]
 
 ***
 
-### <a name="namespace"></a> viewimports, proto
+### <a name="viewimports-proto"></a><a name="namespace"></a> viewimports, proto
 
 - **`-na|--namespace <NAMESPACE_NAME>`**
 
@@ -318,7 +322,7 @@ dotnet new [-h|--help]
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
-  사용할 인증 형식입니다. 사용 가능한 값은
+  사용할 인증 형식입니다. 가능한 값은 다음과 같습니다.
 
   - `None` - 인증하지 않습니다(기본값).
   - `Individual` - 개별 인증입니다.
@@ -373,7 +377,7 @@ dotnet new [-h|--help]
 
 - **`--no-https`**
 
-  HTTPS를 해제합니다. 이 옵션은 `Individual`에 `IndividualB2C`, `SingleOrg`, `MultiOrg` 또는 `--auth`를 사용하지 않는 경우에만 적용됩니다.
+  HTTPS를 해제합니다. 이 옵션은 `--auth`에 `Individual`, `IndividualB2C`, `SingleOrg` 또는 `MultiOrg`를 사용하지 않는 경우에만 적용됩니다.
 
 - **`-uld|--use-local-db`**
 
@@ -413,11 +417,11 @@ dotnet new [-h|--help]
 
 ***
 
-### <a name="web-options"></a> mvc, webapp
+### <a name="mvc-webapp"></a><a name="web-options"></a> mvc, webapp
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
-  사용할 인증 형식입니다. 사용 가능한 값은
+  사용할 인증 형식입니다. 가능한 값은 다음과 같습니다.
 
   - `None` - 인증하지 않습니다(기본값).
   - `Individual` - 개별 인증입니다.
@@ -497,15 +501,19 @@ dotnet new [-h|--help]
 
   프로젝트에 BrowserLink를 포함합니다. .NET Core 2.2 및 3.1 SDK에서 사용할 수 없는 옵션입니다.
 
+- **`-rrc|--razor-runtime-compilation`**
+
+  프로젝트가 디버그 빌드에서 [Razor 런타임 컴파일](/aspnet/core/mvc/views/view-compilation#runtime-compilation)을 사용하도록 구성되어 있는지 확인합니다. .NET Core 3.1 SDK 이후 사용할 수 있는 옵션입니다.
+
 ***
 
-### <a name="spa"></a> angular, react
+### <a name="angular-react"></a><a name="spa"></a> angular, react
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
   사용할 인증 형식입니다. .NET Core 3.0 SDK 이후 사용할 수 있습니다.
   
-  사용 가능한 값은
+  가능한 값은 다음과 같습니다.
 
   - `None` - 인증하지 않습니다(기본값).
   - `Individual` - 개별 인증입니다.
@@ -584,7 +592,7 @@ dotnet new [-h|--help]
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
-  사용할 인증 형식입니다. 사용 가능한 값은
+  사용할 인증 형식입니다. 가능한 값은 다음과 같습니다.
 
   - `None` - 인증하지 않습니다(기본값).
   - `IndividualB2C` - Azure AD B2C를 사용한 개별 인증입니다.
@@ -725,7 +733,7 @@ dotnet new [-h|--help]
   dotnet new globaljson --sdk-version 3.1.101
   ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [dotnet new에 대한 사용자 지정 템플릿](custom-templates.md)
 - [dotnet용 사용자 지정 템플릿 새로 만들기](../tutorials/cli-templates-create-item-template.md)

@@ -3,12 +3,12 @@ title: 가비지 수집기 구성 설정
 description: 가비지 수집기가 .NET Core 앱의 메모리를 관리하는 방식을 구성하는 런타임 설정에 대해 알아봅니다.
 ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: 044083d69601f5092724a46d358b2ee5673d428d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dfb641eeda03d1acaa4771bd6253fcb33c4082a6
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76733524"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607812"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>가비지 수집을 위한 런타임 구성 옵션
 
@@ -117,8 +117,8 @@ ms.locfileid: "76733524"
 
 - 가비지 수집기가 생성하는 힙의 개수를 제한합니다.
 - 서버 가비지 수집에만 적용됩니다.
-- GC 프로세서 선호도가 사용하도록 설정된 경우(기본값), 힙 개수 설정은 `n` GC 힙/스레드의 선호도를 처음 `n`개의 프로세서로 지정합니다. (정확히 어떤 프로세서의 선호도를 지정하려는지 지정하려면 선호도 지정 마스크 또는 선호도 지정 범위 설정을 사용하세요.)
-- GC 프로세서 선호도를 사용하지 않도록 설정하는 경우, 이 설정으로 GC 힙 개수가 제한됩니다.
+- [GC 프로세서 선호도](#systemgcnoaffinitizecomplus_gcnoaffinitize)가 사용하도록 설정된 경우(기본값), 힙 개수 설정은 `n` GC 힙/스레드의 선호도를 처음 `n`개의 프로세서로 지정합니다. (정확히 어떤 프로세서의 선호도를 지정하려는지 지정하려면 [선호도 지정 마스크](#systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask) 또는 [선호도 지정 범위](#systemgcgcheapaffinitizerangescomplus_gcheapaffinitizeranges) 설정을 사용하세요.)
+- [GC 프로세서 선호도](#systemgcnoaffinitizecomplus_gcnoaffinitize)를 사용하지 않도록 설정하는 경우, 이 설정으로 GC 힙 개수가 제한됩니다.
 - 자세한 내용은 [GCHeapCount 설명](../../framework/configure-apps/file-schema/runtime/gcheapcount-element.md#remarks)을 참조하세요.
 
 | | 설정 이름 | 값 | 도입된 버전 |
@@ -145,7 +145,7 @@ ms.locfileid: "76733524"
 ### <a name="systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask"></a>System.GC.HeapAffinitizeMask/COMPlus_GCHeapAffinitizeMask
 
 - 가비지 수집기 스레드가 사용할 정확한 프로세서를 지정합니다.
-- `System.GC.NoAffinitize`를 `true`로 설정하여 프로세서 선호도를 사용하지 않도록 설정한 경우, 이 설정은 무시됩니다.
+- [GC 프로세서 선호도](#systemgcnoaffinitizecomplus_gcnoaffinitize)를 사용하지 않도록 설정하면 설정이 무시됩니다.
 - 서버 가비지 수집에만 적용됩니다.
 - 값은 프로세스에서 사용할 수 있는 프로세서를 정의하는 비트 마스크입니다. 예를 들어, 10진수 값 1023(환경 변수를 사용하는 경우에는 16진수 값 0x3FF 또는 3FF)은 이진 표기법으로 0011 1111 1111입니다. 이는 처음 10개의 프로세서를 사용하도록 지정합니다. 다음 10개의 프로세서, 즉 프로세서 10~19를 지정하려면 10진수 값 1047552(또는 16진수 값 0xFFC00 또는 FFC00)을 지정합니다. 이는 이진수 값 1111 1111 1100 0000 0000과 같습니다.
 
@@ -170,9 +170,9 @@ ms.locfileid: "76733524"
 ### <a name="systemgcgcheapaffinitizerangescomplus_gcheapaffinitizeranges"></a>System.GC.GCHeapAffinitizeRanges/COMPlus_GCHeapAffinitizeRanges
 
 - 가비지 수집기 스레드가 사용할 프로세서 목록을 지정합니다.
-- 이 설정은 64개가 넘는 프로세서를 지정할 수 있다는 점을 제외하면 `System.GC.HeapAffinitizeMask`와 비슷합니다.
+- 이 설정은 64개가 넘는 프로세서를 지정할 수 있다는 점을 제외하면 [System.GC.HeapAffinitizeMask](#systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask)와 비슷합니다.
 - Windows 운영 체제에서는 번호 또는 범위 앞에 해당하는 [CPU 그룹](/windows/win32/procthread/processor-groups)(예: “0:1-10,0:12,1:50-52,1:70”)을 붙입니다.
-- `System.GC.NoAffinitize`를 `true`로 설정하여 프로세서 선호도를 사용하지 않도록 설정한 경우, 이 설정은 무시됩니다.
+- [GC 프로세서 선호도](#systemgcnoaffinitizecomplus_gcnoaffinitize)를 사용하지 않도록 설정하면 설정이 무시됩니다.
 - 서버 가비지 수집에만 적용됩니다.
 - 자세한 내용은 Maoni Stephens의 블로그에서 [Making CPU configuration better for GC on machines with > 64 CPUs](https://devblogs.microsoft.com/dotnet/making-cpu-configuration-better-for-gc-on-machines-with-64-cpus/)(CPU가 64개가 넘는 머신에서 GC를 위한 CPU 구성 개선하기) 게시물을 참조하세요.
 
@@ -239,6 +239,11 @@ ms.locfileid: "76733524"
 ### <a name="systemgcheaphardlimitcomplus_gcheaphardlimit"></a>System.GC.HeapHardLimit/COMPlus_GCHeapHardLimit
 
 - GC 힙 및 GC 기록의 최대 커밋 크기를 바이트 단위로 지정합니다.
+- 이 설정은 64비트 컴퓨터에만 적용됩니다.
+- 특정 경우에만 적용되는 기본값은 컨테이너에 대한 메모리 제한의 20MB 또는 75% 중 더 작은 값입니다. 기본값은 다음 경우에 적용됩니다.
+
+  - 프로세스가 지정된 메모리 제한이 있는 컨테이너 내에서 실행되는 경우.
+  - [System.GC.HeapHardLimitPercent](#systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent)가 설정되지 않은 경우.
 
 | | 설정 이름 | 값 | 도입된 버전 |
 | - | - | - | - |
@@ -262,7 +267,14 @@ ms.locfileid: "76733524"
 
 ### <a name="systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent"></a>System.GC.HeapHardLimitPercent/COMPlus_GCHeapHardLimitPercent
 
-- GC 힙의 사용량을 총 메모리의 백분율로 지정합니다.
+- 허용되는 GC 힙 사용량을 총 실제 메모리의 백분율로 지정합니다.
+- [System.GC.HeapHardLimit](#systemgcheaphardlimitcomplus_gcheaphardlimit)이 설정되는 경우에도 이 설정이 무시됩니다.
+- 이 설정은 64비트 컴퓨터에만 적용됩니다.
+- 프로세스가 지정된 메모리 제한이 있는 컨테이너 내에서 실행되는 경우 백분율은 해당 메모리 제한의 백분율로 계산됩니다.
+- 특정 경우에만 적용되는 기본값은 컨테이너에 대한 메모리 제한의 20MB 또는 75% 중 더 작은 값입니다. 기본값은 다음 경우에 적용됩니다.
+
+  - 프로세스가 지정된 메모리 제한이 있는 컨테이너 내에서 실행되는 경우.
+  - [System.GC.HeapHardLimit](#systemgcheaphardlimitcomplus_gcheaphardlimit)가 설정되지 않은 경우.
 
 | | 설정 이름 | 값 | 도입된 버전 |
 | - | - | - | - |

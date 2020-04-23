@@ -5,12 +5,12 @@ ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: e6e573056132c25b912ff1eb76b9b055f6e47cfe
-ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
+ms.openlocfilehash: 34074b420547cff802f1835656540be7b8eb58b4
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438211"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607482"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -112,7 +112,7 @@ NuGet 패키지는 하나 이상의 [프레임워크](frameworks.md)를 대상�
 
 ## <a name="net-standard-libraries-and-visual-studio"></a>.NET Standard 라이브러리 및 Visual Studio
 
-Visual Studio에서 .NET Standard 라이브러리를 빌드하기 위해 Windows에 [Visual Studio 2017 버전 15.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) 이상이 설치되어 있거나 macOS에 [Mac용 Visual Studio 버전 7.1](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 이상이 설치되어 있는지 확인합니다.
+Visual Studio에서 .NET Standard 라이브러리를 빌드하기 위해 Windows에 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 또는 Visual Studio 2017 버전 15.3 이상이 설치되어 있거나 macOS에 [Mac용 Visual Studio 버전 7.1](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 이상이 설치되어 있는지 확인합니다.
 
 프로젝트에서 .NET Standard 2.0 라이브러리를 사용해야 하는 경우 Visual Studio 2015에서 수행할 수도 있습니다. 그러나 NuGet 클라이언트 3.6 이상을 설치해야 합니다. [NuGet 다운로드](https://www.nuget.org/downloads) 페이지에서 Visual Studio 2015에 대한 NuGet 클라이언트를 다운로드할 수 있습니다.
 

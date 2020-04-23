@@ -9,14 +9,14 @@ helpviewer_keywords:
 - parse strings
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
-ms.openlocfilehash: fb11ff59705188f9425beedfbbbf3c244d21f587
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: cf8307517213b54041b272843232eb595660b2e9
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121504"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389499"
 ---
-# <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>String.Split(C# 가이드)를 사용하여 문자열을 구문 분석하는 방법
+# <a name="how-to-parse-strings-using-stringsplit-in-c"></a>C\#에서 String.Split을 사용하여 문자열을 구문 분석하는 방법
 
 <xref:System.String.Split%2A?displayProperty=nameWithType> 메서드는 하나 이상의 구분 기호를 기준으로 입력 문자열을 분할하여 부분 문자열 배열을 만듭니다. 종종 단어 경계에서 문자열을 분리하는 가장 쉬운 방법입니다. 다른 특정 문자 또는 문자열에서 문자열을 분할하는 데도 사용됩니다.
 
@@ -26,7 +26,7 @@ ms.locfileid: "81121504"
 
 [!code-csharp-interactive[split strings on word boundaries](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#1)]
 
-구분 문자의 모든 인스턴스는 반환된 배열에 값을 생성합니다. 연속된 구분 문자는 반환된 배열의 값으로 빈 문자열을 생성합니다.  다음 예제에서 공백을 구분 기호로 사용하여 내용을 확인할 수 있습니다.
+구분 문자의 모든 인스턴스는 반환된 배열에 값을 생성합니다. 연속된 구분 문자는 반환된 배열의 값으로 빈 문자열을 생성합니다. 공백 문자를 구분 기호로 사용하는 다음 예제에서 빈 문자열을 만드는 방법을 확인할 수 있습니다.
 
 [!code-csharp-interactive[split strings with repeated separators](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#2)]
 
@@ -50,7 +50,7 @@ ms.locfileid: "81121504"
 
 [GitHub 리포지토리](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings)의 코드를 확인하여 이러한 샘플을 시험해 볼 수 있습니다. 또는 샘플을 [zip 파일로](../../../samples/snippets/csharp/how-to/strings.zip) 다운로드할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../programming-guide/index.md)
 - [문자열](../programming-guide/strings/index.md)

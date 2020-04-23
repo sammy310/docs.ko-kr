@@ -4,12 +4,12 @@ description: 이 자습서에서는 웹 사이트 주석에서 감정을 분류�
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 47b9a9fe37cbcacab3797ed7fb1398b0c524d746
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c6e13cfca93c54648b1a0423c5983013d3e2a1a0
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78241132"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243299"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>자습서: ML.NET에서 이진 분류를 사용하여 웹 사이트 주석의 감정 분석
 
@@ -32,7 +32,7 @@ ms.locfileid: "78241132"
 
 - “.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2017 버전 15.6 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)
 
-- [UCI Sentiment Labeled Sentences 데이터 세트](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)(zip 파일)
+- [UCI Sentiment Labeled Sentences 데이터 세트](http://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)(zip 파일)
 
 ## <a name="create-a-console-application"></a>콘솔 애플리케이션 만들기
 
@@ -49,7 +49,7 @@ ms.locfileid: "78241132"
 > [!NOTE]
 > 이 자습서의 데이터 세트는 ‘From Group to Individual Labels using Deep Features’(Kotzias 외, KDD 2015)에서 제공되고 UCI Machine Learning Repository(Dua, D. 및 Karra Taniskidou, E. (2017))에서 호스트됩니다. UCI Machine Learning Repository[http://archive.ics.uci.edu/ml ]. Irvine, CA: University of California, School of Information and Computer Science.
 
-1. [UCI Sentiment Labeled Sentences 데이터 세트 ZIP 파일](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)을 다운로드하여 압축을 풉니다.
+1. [UCI Sentiment Labeled Sentences 데이터 세트 ZIP 파일](http://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)을 다운로드하여 압축을 풉니다.
 
 2. 만든 *Data* 디렉터리에 `yelp_labelled.txt` 파일을 복사합니다.
 
@@ -131,7 +131,7 @@ ML.NET의 데이터는 [IDataView 클래스](xref:Microsoft.ML.IDataView)로 표
 
     [!code-csharp[LoadData](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#LoadData "loading dataset")]
 
-    [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29)은 데이터 스키마를 정의하고 파일에서 읽습니다. 데이터 경로 변수를 가져와서 `IDataView`를 반환합니다.
+    [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) 메서드는 데이터 스키마를 정의하고 파일에서 읽습니다. 데이터 경로 변수를 가져와서 `IDataView`를 반환합니다.
 
 ### <a name="split-the-dataset-for-model-training-and-testing"></a>데이터 세트를 모델 학습 및 테스트용으로 분할
 
@@ -141,7 +141,7 @@ ML.NET의 데이터는 [IDataView 클래스](xref:Microsoft.ML.IDataView)로 표
 
     [!code-csharp[SplitData](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#SplitData "Split the Data")]
 
-    앞의 코드는 [TrainTestSplit()](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit%2A) 메서드를 사용하여 로드된 데이터 세트를 학습으로 분할하고 데이터 세트를 테스트하며 [TrainTestData](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData) 클래스에 반환합니다. `testFraction` 매개 변수로 데이터의 테스트 집합 백분율을 지정합니다. 기본값은 10%이며, 여기서는 20%를 사용하여 데이터를 더 평가합니다.
+    이전 코드는 [TrainTestSplit()](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit%2A) 메서드를 사용하여 로드된 데이터 세트를 학습으로 분할하고 데이터 세트를 테스트하며 <xref:Microsoft.ML.DataOperationsCatalog.TrainTestData> 클래스에 반환합니다. `testFraction` 매개 변수로 데이터의 테스트 집합 백분율을 지정합니다. 기본값은 10%이며, 여기서는 20%를 사용하여 데이터를 더 평가합니다.
 
 2. `splitDataView` 메서드의 끝에 `LoadData()`를 반환합니다.
 

@@ -4,12 +4,12 @@ description: ML.NET은 온라인 또는 오프라인 시나리오에서 .NET 애
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: 169250adf81992ad0025e78eb9c8f151107bcf40
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0929005e02ad9b43636213735f8c7232aa6d4f42
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79185866"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607773"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>ML.NET은 무엇이며 어떻게 작동하나요?
 
@@ -25,10 +25,10 @@ ML.NET을 사용하여 수행할 수 있는 예측 유형은 다음과 같습니
 
 |||
 |-|-|
-|분류/범주화|사용자 의견을 긍정 및 부정 범주로 자동으로 구분|
+|분류/범주화|고객 피드백을 긍정과 부정 범주로 자동 구분|
 |재발/연속 값 예측|크기 및 위치에 따라 주택 가격 예측|
 |변칙 검색|사기성 은행 거래 검색 |
-|권장 사항|이전 구매에 따라 온라인 쇼핑객이 구매하려고 할 수 있는 제품 제안|
+|권장 사항|이전 구매 내역에 기반하여 온라인 구매자가 구매하려는 제품 제안|
 |시계열/순차 데이터|날씨/제품 판매 예측|
 |이미지 분류|의료 이미지에서 병리학 분류|
 
@@ -177,7 +177,7 @@ ML.NET 애플리케이션은 <xref:Microsoft.ML.MLContext> 개체로 시작합�
 |학습 알고리즘|이진 분류|<xref:Microsoft.ML.BinaryClassificationCatalog>||
 ||다중 클래스 분류|<xref:Microsoft.ML.MulticlassClassificationCatalog>||
 ||변칙 검색|<xref:Microsoft.ML.AnomalyDetectionCatalog>||
-||Clustering|<xref:Microsoft.ML.ClusteringCatalog>||
+||클러스터링|<xref:Microsoft.ML.ClusteringCatalog>||
 ||예측|<xref:Microsoft.ML.ForecastingCatalog>||
 ||순위 지정|<xref:Microsoft.ML.RankingCatalog>||
 ||재발|<xref:Microsoft.ML.RegressionCatalog>||
@@ -230,7 +230,7 @@ ML.NET 애플리케이션은 <xref:Microsoft.ML.MLContext> 개체로 시작합�
     var price = predEngine.Predict(size);
 ```
 
-`CreatePredictionEngine()` 메서드는 입력 클래스 및 출력 클래스를 사용합니다. 필드 이름 및/또는 코드 특성은 모델 학습 및 예측 중 사용된 데이터 열의 이름을 결정합니다. 방법 섹션에서 [단일 예측하는 방법](./how-to-guides/single-predict-model-ml-net.md)에 대해 읽을 수 있습니다.
+`CreatePredictionEngine()` 메서드는 입력 클래스 및 출력 클래스를 사용합니다. 필드 이름 및/또는 코드 특성은 모델 학습 및 예측 중 사용된 데이터 열의 이름을 결정합니다. 자세한 내용은 [학습된 모델로 예측](how-to-guides/machine-learning-model-predictions-ml-net.md)을 참조하세요.
 
 ### <a name="data-models-and-schema"></a>데이터 모델 및 스키마
 

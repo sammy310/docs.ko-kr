@@ -5,27 +5,29 @@ helpviewer_keywords:
 - .NET Framework 4, migration
 - application compatibility
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
-ms.openlocfilehash: c1c3298d87ad0f481fa30182e40cd5edcd535d6a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 200acea81b9f00c659ddceae011430983e2b5f5b
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73975614"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389719"
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 마이그레이션 문제
 
-이 항목에서는 수정, 표준 준수 및 보안에 대한 변경 내용, 고객 피드백 기반의 변경 내용을 포함하여 .NET Framework 버전 3.5 서비스 팩 1과 .NET Framework 버전 4 간의 마이그레이션 문제에 대해 설명합니다. 이러한 변경 내용은 대부분 애플리케이션에서 프로그래밍을 수정할 필요가 없습니다. 수정이 필요한 경우 표의 권장 변경 내용 열을 참조하세요. 중요한 변경 내용은 ASP.NET 및 WPF(Windows Presentation Foundation)와 같이 영역별로 세분화되어 있습니다.
+이 문서에서는 수정, 표준 준수 및 보안에 대한 변경 내용, 고객 피드백 기반의 변경 내용을 포함하여 .NET Framework 버전 3.5 서비스 팩 1과 .NET Framework 버전 4 간의 마이그레이션 문제에 대해 설명합니다. 이러한 변경 내용은 대부분 애플리케이션에서 프로그래밍을 수정할 필요가 없습니다. 수정이 필요한 경우 표의 **권장 변경 내용** 열을 참조하세요. 중요한 변경 내용은 ASP.NET 및 WPF(Windows Presentation Foundation)와 같이 영역별로 세분화되어 있습니다.
 
-이 항목의 문제에 대한 좀 더 간략한 개요는 [.NET Framework 4 마이그레이션 가이드](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29)를 참조하세요.
+이 문서의 문제에 대한 더 간략한 개요는 [.NET Framework 4 마이그레이션 가이드](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29)를 참조하세요.
 
 새로운 기능에 대한 자세한 내용은 [.NET Framework 4의 새로운 기능](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms171868%28v=vs.100%29)을 참조하세요.
 
 ## <a name="aspnet-and-web"></a>ASP.NET 및 웹
 
-네임스페이스: <xref:System.Web>, <xref:System.Web.Mobile>, <xref:System.Web.Security>, <xref:System.Web.UI.WebControls>; 어셈블리: System.Web(System.Web.dll의)
+네임스페이스: <xref:System.Web>, <xref:System.Web.Mobile>, <xref:System.Web.Security>, <xref:System.Web.UI.WebControls>
 
-| 기능 | 3\.5 SP1과의 차이점 | 권장 변경 내용 |
-| ------- | ------------------------ | ------------------- |
+어셈블리: System.Web(System.Web.dll의)
+
+| 기능  | 3\.5 SP1과의 차이점 | 권장 변경 내용 |
+| -------- | ------------------------ | ------------------- |
 | **브라우저 정의 파일** | 브라우저 정의 파일은 새롭고 업데이트된 브라우저 및 디바이스에 대한 정보를 포함하도록 업데이트되었습니다. Netscape Navigator와 같은 오래된 브라우저와 디바이스는 제거되었으며 Google Chrome 및 Apple iPhone과 같은 최신 브라우저와 디바이스가 추가되었습니다.<br><br>애플리케이션에 제거된 브라우저 정의 중 하나를 상속하는 사용자 지정 브라우저 정의가 포함되어 있으면 오류가 표시됩니다.<br><br><xref:System.Web.HttpBrowserCapabilities> 개체(페이지의 `Request.Browse` 속성에 의해 노출됨)는 브라우저 정의 파일에 의해 구동됩니다. 따라서 ASP.NET 4에서 이 개체의 속성에 액세스하여 반환되는 정보는 이전 버전의 ASP.NET에서 반환된 정보와 다를 수 있습니다. | 애플리케이션에서 이전 브라우저 정의 파일을 사용하는 경우 다음 폴더에서 해당 파일을 복사할 수 있습니다.<br><br>*Windows\\Microsoft.NET\\Framework\\v2.0.50727\\CONFIG\\Browsers*<br><br>ASP.NET 4의 해당 *\\CONFIG\\Browsers* 폴더에 파일을 복사합니다. 파일을 복사한 후 [Aspnet_regbrowsers.exe](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms229858(v=vs.90)) 명령줄 도구를 실행합니다. 자세한 내용은 [https://www.asp.net/mobile](/aspnet/mobile/overview) 웹 사이트를 참조하세요. |
 | **혼합된 버전의 ASP.NET에서 실행 중인 자식 애플리케이션** | 이전 버전의 ASP.NET을 실행하는 애플리케이션의 자식으로서 구성된 ASP.NET 4 애플리케이션은 구성 또는 컴파일 오류로 인해 시작하지 못할 수 있습니다. 발생하는 특정 오류는 애플리케이션이 IIS 6.0에서 실행되는지 아니면 IIS 7 또는 IIS 7.5에서 실행되는지에 따라 다릅니다. | 구성 시스템이 ASP.NET 4 애플리케이션을 올바르게 인식할 수 있도록 영향을 받는 애플리케이션의 구성 파일을 변경할 수 있습니다. 반드시 수행해야 할 변경 내용에 대한 자세한 내용은 ASP.NET 웹 사이트에 있는 [ASP.NET 4 Breaking Changes](/aspnet/whitepapers/aspnet4/breaking-changes)(ASP.NET 4 주요 변경 내용) 문서의 “ASP.NET 4 Child Applications Fail to Start When Under ASP.NET 2.0 or ASP.NET 3.5 Applications”(ASP.NET 4 자식 애플리케이션이 ASP.NET 2.0 또는 ASP.NET 3.5 애플리케이션에서 시작되지 않음) 섹션을 참조하세요. |
 | **ClientID 변경 내용** | ASP.NET 4의 새로운 `clientIDMode` 설정을 통해 ASP.NET이 HTML 요소에 대해 `id` 특성을 생성하는 방법을 지정할 수 있습니다. ASP.NET의 이전 버전에서는 기본 동작이 `clientIDMode`의 `AutoID` 설정과 동일합니다. 이제 기본 설정은 `Predictable`입니다. 자세한 내용은 [ASP.NET 웹 서버 컨트롤 식별](https://docs.microsoft.com/previous-versions/aspnet/1d04y8ss%28v=vs.100%29)을 참조하세요. | Visual Studio를 사용하여 ASP.NET 2.0 또는 ASP.NET 3.5에서 애플리케이션을 업그레이드하는 경우, .NET Framework 이전 버전의 동작을 유지하는 Web.config 파일에 설정이 자동으로 추가됩니다. 그러나 .NET Framework 4를 대상으로 하도록 IIS에서 애플리케이션 풀을 변경하여 애플리케이션을 업그레이드하는 경우 ASP.NET은 기본적으로 새 모드를 사용합니다. 새 클라이언트 ID 모드를 사용하지 않으려면 Web.config 파일에 다음 설정을 추가하세요.<br><br>`<pages clientIDMode="AutoID" />` |
@@ -34,13 +36,13 @@ ms.locfileid: "73975614"
 | **컨트롤 렌더링** | 이전 버전의 ASP.NET에서는 일부 컨트롤에서 비활성화할 수 없는 태그를 내보냈습니다. 기본적으로 이 형식의 태그는 ASP.NET 4에서 더 이상 생성되지 않습니다. 이러한 렌더링 변경은 다음 컨트롤에 영향을 줍니다.<br><br>* `Image` 및 `ImageButton` 컨트롤은 더 이상 `border="0"` 특성을 렌더링하지 않습니다.<br>* `BaseValidator` 클래스와 그로부터 파생된 유효성 검사 컨트롤은 더 이상 기본적으로 빨간색 텍스트를 렌더링하지 않습니다.<br>* `HtmlForm` 컨트롤은 `name` 특성을 렌더링하지 않습니다.<br>* `Table` 컨트롤이 더 이상 `border="0"` 특성을 렌더링하지 않습니다.<br><br>사용자 입력용으로 디자인되지 않은 컨트롤(예: `Label` 컨트롤)은 `Enabled` 속성이 `false`로 설정된 경우(또는 컨테이너 컨트롤에서 이 설정을 상속하는 경우) 더 이상 `disabled="disabled"` 특성을 렌더링하지 않습니다. | Visual Studio를 사용하여 ASP.NET 2.0 또는 ASP.NET 3.5에서 애플리케이션을 업그레이드하는 경우, 레거시 렌더링을 유지하는 Web.config 파일에 설정이 자동으로 추가됩니다. 그러나 .NET Framework 4를 대상으로 하도록 IIS에서 애플리케이션 풀을 변경하여 애플리케이션을 업그레이드하는 경우 ASP.NET은 기본적으로 새 렌더링 모드를 사용합니다. 새 렌더링 모드를 사용하지 않으려면 Web.config 파일에 다음 설정을 추가하세요.<br><br>`<pages controlRenderingCompatibilityVersion="3.5" />` |
 | **기본 문서의 이벤트 처리기** | ASP.NET 4는 기본 문서가 매핑된 확장명 없는 URL에 대한 요청이 있을 때 HTML `form` 요소의 `action` 특성 값을 빈 문자열로 렌더링합니다. 이전 버전의 ASP.NET에서는 `http://contoso.com`에 대한 요청이 결국 Default.aspx에 대한 요청이 되었습니다. 이 문서에서 여는 `form` 태그는 다음 예제와 같이 렌더링됩니다.<br><br>`<form action="Default.aspx" />`<br><br>ASP.NET 4에서는 `http://contoso.com`에 대한 요청이 결국 Default.aspx에 대한 요청이 되지만, ASP.NET에서는 이제 다음 예제와 같이 HTML 열기 `form` 태그를 렌더링합니다.<br><br>`<form action="" />`<br><br>`action` 특성이 빈 문자열이면 IIS `DefaultDocumentModule` 개체가 Default.aspx에 대한 자식 요청을 만듭니다. 대부분의 상황에서 이 자식 요청은 애플리케이션 코드에 대해 투명하며, Default.aspx 페이지는 정상적으로 실행됩니다. 그러나 관리 코드와 IIS 7 또는 IIS 7.5 통합 모드 간의 잠재적 상호 작용으로 인해 관리되는 .aspx 페이지가 자식 요청 중에 제대로 작동하지 않을 수 있습니다. 다음 상황이 발생하면 기본 .aspx 문서에 대한 자식 요청으로 인해 오류가 발생하거나 예기치 않은 동작이 발생합니다.<br><br>* `form` 요소의 `action` 특성이 ""로 설정된 상태로 .aspx 페이지가 브라우저로 전송됩니다.<br>* 양식이 ASP.NET에 다시 게시됩니다.<br>* 관리되는 HTTP 모듈은 `Request.Form` 또는 `Request.Params` 등 엔터티 본문의 일부를 읽습니다. 이렇게 하면 POST 요청의 엔터티 본문이 관리되는 메모리로 읽힙니다. 결과적으로 IIS 7 또는 IIS 7.5 통합 모드에서 실행 중인 모든 네이티브 코드 모듈에서 더 이상 엔터티 본문을 사용할 수 없습니다.<br>* IIS `DefaultDocumentModule` 개체가 결국 실행되어 Default.aspx 문서에 대한 자식 요청을 만듭니다. 그러나 엔터티 본문은 이미 관리 코드에 의해 읽혔기 때문에 자식 요청에 보낼 수 있는 엔터티 본문이 없습니다.<br>* HTTP 파이프라인이 자식 요청에 대해 실행되면 .aspx 파일의 처리기가 처리기 실행 단계 중에 실행됩니다.<br><br>엔터티 본문이 없기 때문에 양식 변수 및 보기 상태가 없습니다. 따라서 .aspx 페이지 처리기가 발생해야 하는 이벤트(있는 경우)를 결정하는 데 사용할 수 있는 정보가 없습니다. 그 결과, 영향을 받는 .aspx 페이지의 포스트백 이벤트 처리기는 실행되지 않습니다. | 이 변경의 결과 발생할 수 있는 문제를 해결하는 방법에 대한 자세한 내용은 ASP.NET 웹 사이트에 있는 [ASP.NET 4 Breaking Changes](/aspnet/whitepapers/aspnet4/breaking-changes)(ASP.NET 4 주요 변경 내용) 문서의 “Event Handlers Might Not Be Not Raised in a Default Document in IIS 7 or IIS 7.5 Integrated Mode”(IIS 7 또는 IIS 7.5 통합 모드의 기본 문서에서 이벤트 처리기가 작동하지 않을 수 있음) 섹션을 참조하세요. |
 | **해시 알고리즘** | ASP.NET은 암호화 및 해시 알고리즘을 모두 사용하여 양식 인증 쿠키 및 보기 상태와 같은 데이터를 보호합니다. 기본적으로 ASP.NET 4는 쿠키 및 보기 상태의 해시 작업에 <xref:System.Security.Cryptography.HMACSHA256> 알고리즘을 사용합니다. 이전 버전의 ASP.NET에서는 이전 <xref:System.Security.Cryptography.HMACSHA1> 알고리즘을 사용했습니다. | 양식 인증 쿠키와 같은 데이터가 .NET Framework 버전 전체에서 작동해야 하는, ASP.NET 2.0 및 ASP.NET 4가 혼합된 애플리케이션을 실행하는 경우, Web.config 파일에서 다음 설정을 추가하여 ASP.NET 4 웹 애플리케이션이 이전 <xref:System.Security.Cryptography.HMACSHA1> 알고리즘을 사용하도록 구성하세요.<br><br>`<machineKey validation="SHA1" />` |
-| **Internet Explorer의 컨트롤 호스팅** | 웹에 컨트롤을 호스트하는 더 나은 솔루션이 있기 때문에 더 이상 Internet Explorer에서 Windows Forms 컨트롤을 호스트할 수 없습니다. 따라서 IEHost.dll 및 IEExec.exe 어셈블리는 .NET Framework에서 제거되었습니다. | 웹 애플리케이션에서 사용자 지정 컨트롤 개발을 위해 다음 기술을 사용할 수 있습니다.<br><br>* Silverlight 애플리케이션을 만들고 브라우저 외부에서 실행되도록 구성할 수 있습니다. 자세한 내용은 [브라우저 외부에서 실행 지원](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/dd550721%28v=vs.95%29)을 참조하세요.<br>* XBAP(XAML 브라우저 애플리케이션)를 빌드하여 WPF 기능을 활용할 수 있습니다(클라이언트 컴퓨터에 .NET Framework 필요). 자세한 내용은 [WPF XAML 브라우저 애플리케이션 개요](../wpf/app-development/wpf-xaml-browser-applications-overview.md)를 참조하세요. |
+| **Internet Explorer의 컨트롤 호스팅** | 웹에 컨트롤을 호스트하는 더 나은 솔루션이 있기 때문에 더 이상 Internet Explorer에서 Windows Forms 컨트롤을 호스트할 수 없습니다. 따라서 IEHost.dll 및 IEExec.exe 어셈블리는 .NET Framework에서 제거되었습니다. | 웹 애플리케이션에서 사용자 지정 컨트롤 개발을 위해 다음 기술을 사용할 수 있습니다.<br><br>* Silverlight 애플리케이션을 만들고 브라우저 외부에서 실행되도록 구성할 수 있습니다. 자세한 내용은 [브라우저 외부에서 실행 지원](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/dd550721%28v=vs.95%29)을 참조하세요.<br>* XBAP(XAML 브라우저 애플리케이션)를 빌드하여 WPF 기능을 활용할 수 있습니다(클라이언트 머신에 .NET Framework 필요). 자세한 내용은 [WPF XAML 브라우저 애플리케이션 개요](../wpf/app-development/wpf-xaml-browser-applications-overview.md)를 참조하세요. |
 | **HtmlEncode 및 UrlEncode 메서드** | <xref:System.Web.HttpUtility> 및 <xref:System.Web.HttpServerUtility> 클래스의 `HtmlEncode` 및 `UrlEncode` 메서드가 다음과 같이 작은따옴표 문자(')를 인코딩하도록 업데이트되었습니다.<br><br>* `HtmlEncode` 메서드는 작은따옴표의 인스턴스를 `&#39;`으로 인코딩합니다.<br>* `UrlEncode` 메서드는 작은따옴표의 인스턴스를 `%27`로 인코딩합니다. | `HtmlEncode` 및 `UrlEncode` 메서드를 사용하는 장소에 대한 코드를 검사하고 인코딩의 변경으로 인해 애플리케이션에 영향을 주는 변경이 발생하지 않는지 확인하세요. |
 | **ASP.NET 2.0 애플리케이션의 HttpException 오류** | IIS 6에서 ASP.NET 4를 사용하도록 설정한 경우 IIS 6(Windows Server 2003 또는 Windows Server 2003 R2)에서 실행되는 ASP.NET 2.0 애플리케이션에서 다음과 같은 오류가 발생할 수 있습니다. `System.Web.HttpException: Path '/[yourApplicationRoot]/eurl.axd/[Value]' was not found.` | * 웹 사이트를 실행하기 위해 ASP.NET 4가 필요하지 않은 경우 대신 ASP.NET 2.0을 사용하도록 사이트를 다시 매핑합니다.<br><br>또는<br><br>* 웹 사이트를 실행하기 위해 ASP.NET 4가 필요한 경우 자식 ASP.NET 2.0 가상 디렉터리를 ASP.NET 2.0에 매핑된 다른 웹 사이트로 이동합니다.<br><br>또는<br><br>* 확장명 없는 URL을 사용하지 않도록 설정하세요. 자세한 내용은 ASP.NET 웹 사이트에 있는 [ASP.NET 4 Breaking Changes](/aspnet/whitepapers/aspnet4/breaking-changes)(ASP.NET 4 주요 변경 내용) 문서의 “ASP.NET 2.0 Applications Might Generate HttpException Errors That Reference eurl.axd”(ASP.NET 2.0 애플리케이션이 eurl.axd를 참조하는 HttpException 오류를 생성할 수 있음)를 참조하세요. |
 | **멤버 자격 유형** | ASP.NET 멤버 자격에서 사용되는 일부 형식(예: <xref:System.Web.Security.MembershipProvider>)이 System.Web.dll에서 System.Web.ApplicationServices.dll 어셈블리로 이동했습니다. 클라이언트 형식 및 확장된 .NET Framework SKU 형식 간 아키텍처 계층화 종속성을 해결하기 위해 형식을 이동했습니다. | ASP.NET의 이전 버전에서 업그레이드되었고 이동된 멤버 자격 유형을 사용하는 클래스 라이브러리는 ASP.NET 4 프로젝트에서 사용될 때 컴파일되지 않을 수 있습니다. 이 경우 클래스 라이브러리 프로젝트의 참조를 System.Web.ApplicationServices.dll에 추가하세요. |
 | **메뉴 컨트롤 변경** | <xref:System.Web.UI.WebControls.Menu> 컨트롤을 변경하면 다음과 같은 동작이 발생합니다.<br><br>* <xref:System.Web.UI.WebControls.MenuRenderingMode>가 `List`로 설정되거나 <xref:System.Web.UI.WebControls.MenuRenderingMode>가 `Default`로 설정되고 <xref:System.Web.Configuration.PagesSection.ControlRenderingCompatibilityVersion>이 `4.0` 이상으로 설정된 경우 <xref:System.Web.UI.WebControls.MenuItem.PopOutImageUrl> 속성은 아무런 효과도 없습니다.<br>* <xref:System.Web.UI.WebControls.Menu.StaticPopOutImageUrl%2A> 및 <xref:System.Web.UI.WebControls.Menu.DynamicPopOutImageUrl> 속성에 설정된 경로에 백슬래시(\\)가 포함되어 있으면 이미지가 렌더링되지 않습니다. (ASP.NET의 이전 버전에서는 경로에 백슬래시를 포함할 수 있었습니다.) | * 개별 메뉴 항목의 <xref:System.Web.UI.WebControls.MenuItem.PopOutImageUrl> 속성을 설정하는 대신 부모 <xref:System.Web.UI.WebControls.Menu> 컨트롤의 <xref:System.Web.UI.WebControls.Menu.StaticPopOutImageUrl%2A> 또는 <xref:System.Web.UI.WebControls.Menu.DynamicPopOutImageUrl>을 설정하세요.<br><br>또는<br><br><xref:System.Web.UI.WebControls.MenuRenderingMode>를 `Table`, <xref:System.Web.UI.WebControls.MenuRenderingMode>를 `Default`, <xref:System.Web.Configuration.PagesSection.ControlRenderingCompatibilityVersion>을 `3.5`로 설정하세요. 이렇게 설정하면 <xref:System.Web.UI.WebControls.Menu> 컨트롤이 이전 버전의 ASP.NET에서 사용한 HTML 테이블 기반 레이아웃을 사용하게 합니다.<br>* <xref:System.Web.UI.WebControls.Menu.StaticPopOutImageUrl%2A> 또는 <xref:System.Web.UI.WebControls.Menu.DynamicPopOutImageUrl> 속성의 경로에 백슬래시(\\)가 포함되어 있으면 슬래시 문자(/)를 대체하세요. |
 | **Web.config 파일의 모바일 어셈블리** | ASP.NET의 이전 버전에서는 System.Web.Mobile.dll 어셈블리에 대한 참조가 `system.web`/`compilation`의 `assemblies` 섹션에 있는 루트 Web.config 파일에 포함되었습니다. 성능 향상을 위해 이 어셈블리에 대한 참조가 제거되었습니다.<br><br>참고: System.Web.Mobile.dll 어셈블리 및 ASP.NET 모바일 컨트롤은 ASP.NET 4에 포함되지만 사용되지는 않습니다. | 이 어셈블리의 형식을 사용하려면 루트 Web.config 파일 또는 애플리케이션 Web.config 파일의 어셈블리에 대한 참조를 추가하세요. |
-| **출력 캐싱** | ASP.NET 1.0에서는 `Location="ServerAndClient"`를 출력 캐시 설정으로 지정한 캐시된 페이지가 응답에서 `Vary:*` HTTP 헤더를 내보내는 버그가 있었습니다. 이로 인해 클라이언트 브라우저가 페이지를 로컬에 캐시하지 못했습니다. ASP.NET 1.1에서는 `Vary:*` 헤더를 억제하기 위해 호출할 수 있는 <xref:System.Web.HttpCachePolicy.SetOmitVaryStar%2A> 메서드가 추가되었습니다. 그러나 버그 보고서에 따르면 개발자는 기존의 `SetOmitVaryStar` 동작을 인식하지 못합니다.<br><br>ASP.NET 4에서는 다음 지시문을 지정하는 응답에서 더 이상 `Vary:*` HTTP 헤더를 내보내지 않습니다.<br><br>`<%@ OutputCache Location="ServerAndClient" %>`<br><br>결과적으로 `Vary:*` 헤더를 억제하기 위해 <xref:System.Web.HttpCachePolicy.SetOmitVaryStar%2A> 메서드가 더 이상 필요하지 않습니다. `Location` 특성에 대해 “ServerAndClient”를 지정하는 애플리케이션에서는 <xref:System.Web.HttpCachePolicy.SetOmitVaryStar%2A>를 호출할 필요 없이 브라우저에서 페이지를 캐시할 수 있습니다. | 애플리케이션의 페이지가 `Vary:*`을 내보내야 하는 경우 다음 예제와 같이 <xref:System.Web.HttpResponse.AppendHeader%2A> 메서드를 호출합니다.<br><br>`System.Web.HttpResponse.AppendHeader("Vary","*");`<br><br>또는 출력 캐싱 `Location` 특성의 값을 “Server”로 변경할 수 있습니다. |
+| **출력 캐싱** | ASP.NET 1.0에서는 `Location="ServerAndClient"`를 출력&euro;” 캐시 설정으로 지정한 캐시된 페이지가 응답에서 `Vary:*` HTTP 헤더를 내보내는 버그가 있었습니다. 이로 인해 클라이언트 브라우저가 페이지를 로컬에 캐시하지 못했습니다. ASP.NET 1.1에서는 `Vary:*` 헤더를 억제하기 위해 호출할 수 있는 <xref:System.Web.HttpCachePolicy.SetOmitVaryStar%2A> 메서드가 추가되었습니다. 그러나 버그 보고서에 따르면 개발자는 기존의 `SetOmitVaryStar` 동작을 인식하지 못합니다.<br><br>ASP.NET 4에서는 다음 지시문을 지정하는 응답에서 더 이상 `Vary:*` HTTP 헤더를 내보내지 않습니다.<br><br>`<%@ OutputCache Location="ServerAndClient" %>`<br><br>결과적으로 `Vary:*` 헤더를 억제하기 위해 <xref:System.Web.HttpCachePolicy.SetOmitVaryStar%2A> 메서드가 더 이상 필요하지 않습니다. `Location` 특성에 대해 “ServerAndClient”를 지정하는 애플리케이션에서는 <xref:System.Web.HttpCachePolicy.SetOmitVaryStar%2A>를 호출할 필요 없이 브라우저에서 페이지를 캐시할 수 있습니다. | 애플리케이션의 페이지가 `Vary:*`을 내보내야 하는 경우 다음 예제와 같이 <xref:System.Web.HttpResponse.AppendHeader%2A> 메서드를 호출합니다.<br><br>`System.Web.HttpResponse.AppendHeader("Vary","*");`<br><br>또는 출력 캐싱 `Location` 특성의 값을 “Server”로 변경할 수 있습니다. |
 | **페이지 구문 분석** | ASP.NET 웹 페이지(.aspx 파일) 및 사용자 컨트롤(.ascx 파일)의 페이지 파서는 이전 버전의 ASP.NET보다 ASP.NET 4에서 더 엄격하며, 이전 버전보다 더 많은 태그를 잘못된 것으로 표시합니다. | 페이지가 실행될 때 생성되는 오류 메시지를 검사하고 잘못된 태그에서 발생하는 오류를 수정하세요. |
 | **Passport 형식** | ASP.NET 2.0에 내장된 Passport 지원은 사용되지 않으며 Passport(이제 Live ID SDK)의 변경으로 인해 지원되지 않습니다. 그 결과 <xref:System.Web.Security>의 Passport와 관련된 형식이 이제 `ObsoleteAttribute` 특성으로 표시됩니다. | <xref:System.Web.Security> 네임스페이스(예: <xref:System.Web.Security.PassportIdentity>)에서 Passport 형식을 사용하는 코드를 Windows Live ID SDK를 사용하도록 변경하세요. |
 | **FilePath 속성의 PathInfo 정보** | ASP.NET 4는 <xref:System.Web.HttpRequest.FilePath>, <xref:System.Web.HttpRequest.AppRelativeCurrentExecutionFilePath>, <xref:System.Web.HttpRequest.CurrentExecutionFilePath>와 같은 속성의 반환 값에 더 이상 `PathInfo` 값을 포함하지 않습니다. 대신, `PathInfo` 정보를 <xref:System.Web.HttpRequest.PathInfo>에서 사용할 수 있습니다. 예를 들어 다음과 같은 URL 조각을 가정해 보겠습니다.<br><br>`/testapp/Action.mvc/SomeAction`<br><br>이전 버전의 ASP.NET에서 <xref:System.Web.HttpRequest> 속성은 다음과 같은 값을 갖습니다.<br><br>* <xref:System.Web.HttpRequest.FilePath>: `/testapp/Action.mvc/SomeAction`<br>* <xref:System.Web.HttpRequest.PathInfo>: (empty)<br><br>ASP.NET 4에서 <xref:System.Web.HttpRequest> 속성은 대신 다음과 같은 값을 갖습니다.<br><br>* <xref:System.Web.HttpRequest.FilePath>: `/testapp/Action.mvc`<br>* <xref:System.Web.HttpRequest.PathInfo>: `SomeAction` | 경로 정보를 반환하기 위해 <xref:System.Web.HttpRequest> 클래스의 속성에 의존하는 위치에 대한 코드를 검사하세요. 경로 정보가 반환되는 방식의 변화를 반영하도록 코드를 변경하세요. |
@@ -58,12 +60,14 @@ ms.locfileid: "73975614"
 | **CardSpace** | Windows CardSpace는 이제 .NET Framework에 포함되지 않으며 별도로 제공됩니다. | [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkId=199868)에서 Windows CardSpace를 다운로드하세요. |
 | **구성 파일** | .NET Framework가 애플리케이션 구성 파일에 액세스하는 방법이 수정되었습니다. | 애플리케이션 구성 파일의 이름이 *application-name.config*인 경우 이름을 *application-name.exe.config*로 바꾸세요. 예를 들어 *MyApp.config*를 *MyApp.exe.config*로 바꿉니다. |
 | **C# 코드 컴파일러** | <xref:Microsoft.CSharp> 네임스페이스에 있던 `Compiler`, `CompilerError` 및 `ErrorLevel` 클래스는 더 이상 사용할 수 없으며 해당 어셈블리(cscompmgd.dll)는 .NET Framework에 더 이상 포함되지 않습니다. | <xref:System.CodeDom.Compiler.CodeDomProvider> 클래스 및 <xref:System.CodeDom.Compiler> 네임스페이스의 기타 클래스를 사용하세요. 자세한 내용은 [CodeDOM 사용](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y2k85ax6%28v=vs.100%29)을 참조하세요. |
-| **호스팅**(관리되지 않는 API) | 호스팅 기능의 향상을 위해 일부 호스팅 활성화 API가 사용되지 않습니다. In-Process Side-by-Side 실행 기능을 통해 애플리케이션은 동일한 프로세스에서 여러 버전의 .NET Framework를 로드하고 시작할 수 있습니다. 예를 들어 .NET Framework 2.0 SP1을 기반으로 하는 추가 기능(또는 구성 요소) 및 동일한 프로세스에서 .NET Framework 4를 기반으로 하는 추가 기능을 로드하는 애플리케이션을 실행할 수 있습니다. 이전 구성 요소는 이전 .NET Framework 버전을 계속 사용하고 새 구성 요소는 새 .NET Framework 버전을 사용합니다. | [In-Process Side-by-Side 실행](../deployment/in-process-side-by-side-execution.md)에 설명된 구성을 사용하세요. |
+| **호스팅**(관리되지 않는 API) | 호스팅 기능의 향상을 위해 일부 호스팅 활성화 API가 사용되지 않습니다. In Process Side-by-Side 실행 기능을 통해 애플리케이션은 동일한 프로세스에서 여러 버전의 .NET Framework를 로드하고 시작할 수 있습니다. 예를 들어 .NET Framework 2.0 SP1을 기반으로 하는 추가 기능(또는 구성 요소) 및 동일한 프로세스에서 .NET Framework 4를 기반으로 하는 추가 기능을 로드하는 애플리케이션을 실행할 수 있습니다. 이전 구성 요소는 이전 .NET Framework 버전을 계속 사용하고 새 구성 요소는 새 .NET Framework 버전을 사용합니다. | [In-Process Side-by-Side 실행](../deployment/in-process-side-by-side-execution.md)에 설명된 구성을 사용하세요. |
 | **새 보안 모델** | [.NET Framework 4의 보안 변경 내용](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd233103%28v=vs.100%29)에 설명된 대로 CAS(코드 액세스 보안) 정책이 해제되어 단순화된 모델로 대체되었습니다. | 애플리케이션에서 CAS를 사용하는 경우 수정이 필요할 수 있습니다. 자세한 내용은 [코드 액세스 보안 정책 호환성 및 마이그레이션](../misc/code-access-security-policy-compatibility-and-migration.md)을 참조하세요. |
 
 ### <a name="date-and-time"></a>날짜 및 시간
 
-네임스페이스: <xref:System>; 어셈블리: mscorlib(mscorlib.dll)
+네임스페이스: <xref:System>
+
+어셈블리: mscorlib(mscorlib.dll)
 
 | 기능 | 3\.5 SP1과의 차이점 | 권장 변경 내용 |
 | ------- | ------------------------ | ------------------- |
@@ -74,7 +78,9 @@ ms.locfileid: "73975614"
 
 중립적인 새로운 특정 문화권 목록은 [세계화 및 지역화의 새로운 기능](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd997383%28v=vs.100%29)을 참조하세요.
 
-네임스페이스: <xref:System.Globalization>; 어셈블리: mscorlib(mscorlib.dll)
+네임스페이스: <xref:System.Globalization>
+
+어셈블리: mscorlib(mscorlib.dll)
 
 | 기능 | 3\.5 SP1과의 차이점 | 권장 변경 내용 |
 | ------- | ------------------------ | ------------------- |
@@ -86,7 +92,9 @@ ms.locfileid: "73975614"
 
 ### <a name="exceptions"></a>예외
 
-네임스페이스: <xref:System>, <xref:System.Runtime.ExceptionServices>; 어셈블리: mscorlib(mscorlib.dll)
+네임스페이스: <xref:System>, <xref:System.Runtime.ExceptionServices>
+
+어셈블리: mscorlib(mscorlib.dll)
 
 | 기능 | 3\.5 SP1과의 차이점 | 권장 변경 내용 |
 | ------- | ------------------------ | ------------------- |
@@ -95,7 +103,9 @@ ms.locfileid: "73975614"
 
 ### <a name="reflection"></a>반사
 
-네임스페이스: <xref:System.Reflection>; 어셈블리: mscorlib(mscorlib.dll)
+네임스페이스: <xref:System.Reflection>
+
+어셈블리: mscorlib(mscorlib.dll)
 
 | 기능 | 3\.5 SP1과의 차이점 | 권장 변경 내용 |
 | ------- | ------------------------ | ------------------- |
@@ -108,7 +118,9 @@ ms.locfileid: "73975614"
 
 ### <a name="interoperability"></a>상호 운용성
 
-네임스페이스: <xref:System.Runtime.InteropServices>; 어셈블리: mscorlib(mscorlib.dll)
+네임스페이스: <xref:System.Runtime.InteropServices>
+
+어셈블리: mscorlib(mscorlib.dll)
 
 | 기능 | 3\.5 SP1과의 차이점 | 권장 변경 내용 |
 | ------- | ------------------------ | ------------------- |
@@ -125,7 +137,9 @@ ms.locfileid: "73975614"
 
 다음 표에서는 이전에 제한 사항이었거나 기타 문제가 있던 기능의 개선 내용을 설명합니다.
 
-네임스페이스: <xref:System.Data>, <xref:System.Data.Objects.DataClasses>, <xref:System.Data.SqlClient>; 어셈블리: System.Data(System.Data.dll의), System.Data.Entity(System.Data.Entity.dll의)
+네임스페이스: <xref:System.Data>, <xref:System.Data.Objects.DataClasses>, <xref:System.Data.SqlClient>
+
+어셈블리: System.Data(System.Data.dll의), System.Data.Entity(System.Data.Entity.dll의)
 
 | 기능 | 3\.5 SP1과의 차이점 |
 | ------- | ------------------------ |
@@ -140,7 +154,9 @@ ms.locfileid: "73975614"
 
 다음 표에서는 이전에 제한 사항이었거나 기타 문제가 있던 기능의 개선 내용을 설명합니다.
 
-네임스페이스: <xref:System.Data>, <xref:System.Data.Objects>, <xref:System.Data.Objects.DataClasses>; 어셈블리: System.Data.Entity(System.Data.Entity.dll의)
+네임스페이스: <xref:System.Data>, <xref:System.Data.Objects>, <xref:System.Data.Objects.DataClasses>
+
+어셈블리: System.Data.Entity(System.Data.Entity.dll의)
 
 | 기능 | 3\.5 SP1과의 차이점 |
 | ------- | ------------------------ |
@@ -153,18 +169,22 @@ ms.locfileid: "73975614"
 
 다음 표에서는 이전에 제한 사항이었거나 기타 문제가 있던 기능의 개선 내용을 설명합니다.
 
-네임스페이스: <xref:System.Data.Linq>; 어셈블리: System.Data.Linq(System.Data.Linq.dll의)
+네임스페이스: <xref:System.Data.Linq>
+
+어셈블리: System.Data.Linq(System.Data.Linq.dll의)
 
 | 기능 | 3\.5 SP1과의 차이점 |
 | ------- | ------------------------ |
 | **이벤트** | 컬렉션이 로드될 때 이벤트를 일으키는 것 외에도, <xref:System.Data.Linq.EntitySet%601>가 언로드될 때 <xref:System.Data.Linq.EntitySet%601> 컬렉션은 이제 추가 및 제거 작업에 대해 <xref:System.Data.Linq.EntitySet%601.ListChanged> 이벤트를 발생시킵니다. |
-| **쿼리** | `Skip(0)`은 LINQ to SQL 쿼리에서 더 이상 무시되지 않습니다. 따라서 이 메서드가 있는 쿼리가 다르게 동작할 수 있습니다. 예를 들면 경우에 따라 `Skip(0)`에 `OrderBy` 절이 필요하며, `OrderBy` 절이 포함되지 않은 경우 이제 쿼리에서 <xref:System.NotSupportedException> 예외를 throw합니다. |
+| **쿼리** | `Skip(0)`은 LINQ to SQL 쿼리에서 더 이상 무시되지 않습니다. 따라서 이 메서드가 있는 쿼리가 다르게 동작할 수 있습니다. 예를 들면 경우에 따라 `Skip(0)`에 `OrderBy` 절이 필요하며 `OrderBy` 절이 포함되지 않은 경우 이제 쿼리에서 <xref:System.NotSupportedException> 예외를 throw합니다. |
 
 ### <a name="wcf-data-services"></a>WCF Data Services
 
 다음 표에서는 이전에 제한 사항이었거나 기타 문제가 있던 기능의 개선 내용을 설명합니다.
 
-네임스페이스: <xref:System.Data.Services>, <xref:System.Data.Services.Client>, <xref:System.Data.Services.Common>, <xref:System.Data.Services.Providers>; 어셈블리: System.Data.Services(System.Data.Services.dll의), System.Data.Services.Client(System.Data.Services.Client.dll의)
+네임스페이스: <xref:System.Data.Services>, <xref:System.Data.Services.Client>, <xref:System.Data.Services.Common>, <xref:System.Data.Services.Providers>
+
+어셈블리: System.Data.Services(System.Data.Services.dll의), System.Data.Services.Client(System.Data.Services.Client.dll의)
 
 | 기능 | 3\.5 SP1과의 차이점 |
 | ------- | ------------------------ |
@@ -191,7 +211,9 @@ ms.locfileid: "73975614"
 
 ### <a name="applications"></a>애플리케이션
 
-네임스페이스: <xref:System.Windows>, <xref:System.Windows.Controls>; 어셈블리: PresentationFramework(PresentationFramework.dll의)
+네임스페이스: <xref:System.Windows>, <xref:System.Windows.Controls>
+
+어셈블리: PresentationFramework(PresentationFramework.dll의)
 
 | 기능 | 3\.5 SP1과의 차이점 | 권장 변경 내용 |
 | ------- | ------------------------ | ------------------- |
@@ -201,11 +223,13 @@ ms.locfileid: "73975614"
 | **리소스 사전** | 테마 수준 리소스 사전을 개선하고, 변경하지 못하도록 리소스 사전에 정의되어 있고 테마 수준 사전에 병합된 고정 가능한 리소스는 항상 고정된 것으로 표시되며 변경되지 않습니다. 이것이 고정 가능한 리소스에 대해 예상되는 동작입니다. | 테마 수준에서 병합된 사전에 정의된 리소스를 수정하는 애플리케이션은 리소스를 복제하고 복제된 복사본을 수정해야 합니다. 또는 리소스를 쿼리할 때마다 <xref:System.Windows.ResourceDictionary>에서 새 복사본을 만들도록 리소스를 `x:Shared="false"`로 표시할 수 있습니다. |
 | **Windows 7** | WPF 애플리케이션이 Windows 7에서 더 잘 작동할 수 있도록 다음과 같이 창 동작이 수정되었습니다.<br><br>* 도킹 및 제스처 상태가 이제 사용자 상호 작용을 기반으로 예상대로 작동합니다.<br>* 작업 표시줄 명령 **Cascade windows, Show windows stacked** 및 **Show windows side-by-side**가 이제 올바르게 작동하고 적절한 속성을 업데이트합니다.<br>* 이제 최대화 또는 최소화된 창의 `Top`, `Left`, `Width` 및 `Height` 속성에 모니터에 따라 다른 값 대신 창의 올바른 복원 위치가 포함됩니다. | 없음 |
 | **창 스타일 및 투명도** | <xref:System.Windows.Window.AllowsTransparency>가 `true`이고 <xref:System.Windows.WindowState>가 <xref:System.Windows.WindowState>일 때 <xref:System.Windows.Window.WindowStyle>을 <xref:System.Windows.WindowStyle> 이외의 값으로 설정하려고 하면 <xref:System.InvalidOperationException>이 throw됩니다. | <xref:System.Windows.Window.AllowsTransparency>가 `true`일 때 <xref:System.Windows.Window.WindowStyle>을 변경해야 하는 경우 Win32 `SetWindowLongPtr` 기능을 호출할 수 있습니다. |
-| **XPS 뷰어** | WPF에는 Microsoft XPSEP(XML Paper Specification Essentials Pack)가 포함되어 있지 않습니다. XPSEP는 Windows 7 및 Windows Vista에 포함되어 있습니다.<br><br>.NET Framework 3.5 SP1을 설치하지 않고 Windows XP를 실행하는 컴퓨터에서는 <xref:System.Windows.Controls.PrintDialog>에 있는 것 이외의 WPF API를 사용하여 인쇄할 때 WINSPOOL에 의존하게 됩니다. 일부 프린터 기능은 보고되지 않으며 일부 프린터 설정은 인쇄 중에 적용되지 않습니다. | 필요한 경우 [Microsoft XML Paper Specification Essentials Pack](https://go.microsoft.com/fwlink/?LinkId=178895)을 설치하세요. |
+| **XPS 뷰어** | WPF에는 Microsoft XPSEP(XML Paper Specification Essentials Pack)가 포함되어 있지 않습니다. XPSEP는 Windows 7 및 Windows Vista에 포함되어 있습니다.<br><br>.NET Framework 3.5 SP1을 설치하지 않고 Windows XP를 실행하는 컴퓨터에서는 <xref:System.Windows.Controls.PrintDialog>에 있는 것 이외의 WPF API를 사용하여 인쇄할 때 WINSPOOL에 의존하게 됩니다. 일부 프린터 기능은 보고되지 않으며 일부 프린터 설정은 인쇄 중에 적용되지 않습니다. | 필요한 경우 [Microsoft XML Paper Specification Essentials Pack](https://www.microsoft.com/en-us/download/details.aspx?id=11816)을 설치하세요. |
 
 ### <a name="controls"></a>컨트롤
 
-네임스페이스: <xref:System.Windows>, <xref:System.Windows.Controls>, <xref:System.Windows.Data>, <xref:System.Windows.Input>; 어셈블리: PresentationFramework(PresentationFramework.dll의), PresentationCore(PresentationCore.dll의), WindowsBase(WindowsBase.dll의)
+네임스페이스: <xref:System.Windows>, <xref:System.Windows.Controls>, <xref:System.Windows.Data>, <xref:System.Windows.Input>
+
+어셈블리: PresentationFramework(PresentationFramework.dll의), PresentationCore(PresentationCore.dll의), WindowsBase(WindowsBase.dll의)
 
 | 기능 | 3\.5 SP1과의 차이점 | 권장 변경 내용 |
 | ------- | ------------------------ | ------------------- |
@@ -221,7 +245,9 @@ ms.locfileid: "73975614"
 
 ### <a name="graphics"></a>그래픽
 
-네임스페이스: <xref:System.Windows>, <xref:System.Windows.Controls>, <xref:System.Windows.Data>, <xref:System.Windows.Input>, <xref:System.Windows.Media.Effects>; 어셈블리: PresentationFramework(PresentationFramework.dll의), PresentationCore(PresentationCore.dll의), WindowsBase(WindowsBase.dll의)
+네임스페이스: <xref:System.Windows>, <xref:System.Windows.Controls>, <xref:System.Windows.Data>, <xref:System.Windows.Input>, <xref:System.Windows.Media.Effects>
+
+어셈블리: PresentationFramework(PresentationFramework.dll의), PresentationCore(PresentationCore.dll의), WindowsBase(WindowsBase.dll의)
 
 | 기능 | 3\.5 SP1과의 차이점 | 권장 변경 내용 |
 | ------- | ------------------------ | ------------------- |
@@ -231,7 +257,9 @@ ms.locfileid: "73975614"
 
 ### <a name="input"></a>입력
 
-네임스페이스: <xref:System.Windows>, <xref:System.Windows.Controls>, <xref:System.Windows.Data>, <xref:System.Windows.Input>; 어셈블리: PresentationFramework(PresentationFramework.dll의), PresentationCore(PresentationCore.dll의), WindowsBase(WindowsBase.dll의)
+네임스페이스: <xref:System.Windows>, <xref:System.Windows.Controls>, <xref:System.Windows.Data>, <xref:System.Windows.Input>
+
+어셈블리: PresentationFramework(PresentationFramework.dll의), PresentationCore(PresentationCore.dll의), WindowsBase(WindowsBase.dll의)
 
 | 기능 | 3\.5 SP1과의 차이점 | 권장 변경 내용 |
 | ------- | ------------------------ | ------------------- |
@@ -242,7 +270,9 @@ ms.locfileid: "73975614"
 
 ### <a name="ui-automation"></a>UI 자동화
 
-네임스페이스: <xref:System.Windows>, <xref:System.Windows.Automation.Peers>, <xref:System.Windows.Automation.Provider>, <xref:System.Windows.Controls>, <xref:System.Windows.Data>, <xref:System.Windows.Input>; 어셈블리: PresentationFramework(PresentationFramework.dll의), PresentationCore(PresentationCore.dll의), UIAutomationProvider(UIAutomationProvider.dll의), WindowsBase(WindowsBase.dll의)
+네임스페이스: <xref:System.Windows>, <xref:System.Windows.Automation.Peers>, <xref:System.Windows.Automation.Provider>, <xref:System.Windows.Controls>, <xref:System.Windows.Data>, <xref:System.Windows.Input>
+
+어셈블리: PresentationFramework(PresentationFramework.dll의), PresentationCore(PresentationCore.dll의), UIAutomationProvider(UIAutomationProvider.dll의), WindowsBase(WindowsBase.dll의)
 
 | 기능 | 3\.5 SP1과의 차이점 | 권장 변경 내용 |
 | ------- | ------------------------ | ------------------- |
@@ -255,7 +285,9 @@ ms.locfileid: "73975614"
 
 ### <a name="xaml"></a>XAML
 
-네임스페이스: <xref:System.Windows>, <xref:System.Windows.Controls>, <xref:System.Windows.Data>, <xref:System.Windows.Input>, <xref:System.Windows.Markup>; 어셈블리: PresentationFramework(PresentationFramework.dll의), PresentationCore(PresentationCore.dll의), WindowsBase(WindowsBase.dll의)
+네임스페이스: <xref:System.Windows>, <xref:System.Windows.Controls>, <xref:System.Windows.Data>, <xref:System.Windows.Input>, <xref:System.Windows.Markup>
+
+어셈블리: PresentationFramework(PresentationFramework.dll의), PresentationCore(PresentationCore.dll의), WindowsBase(WindowsBase.dll의)
 
 | 기능 | 3\.5 SP1과의 차이점 | 권장 변경 내용 |
 | ------- | ------------------------ | ------------------- |
@@ -268,7 +300,9 @@ ms.locfileid: "73975614"
 
 ### <a name="schema-and-transforms"></a>스키마 및 변환
 
-네임스페이스: <xref:System.Xml.Linq>, <xref:System.Xml.Schema>, <xref:System.Xml.XPath>; 어셈블리: System.Xml(System.Xml.dll의), System.Xml.Linq(System.Xml.Linq.dll의)
+네임스페이스: <xref:System.Xml.Linq>; <xref:System.Xml.Schema>, <xref:System.Xml.XPath>
+
+어셈블리: System.Xml(System.Xml.dll의), System.Xml.Linq(System.Xml.Linq.dll의)
 
 | 기능 | 3\.5 SP1과의 차이점 |
 | ------- | ------------------------ |
@@ -282,7 +316,9 @@ ms.locfileid: "73975614"
 
 ### <a name="validation"></a>유효성 검사
 
-네임스페이스: <xref:System.Xml.Linq>, <xref:System.Xml.Schema>, <xref:System.Xml.XPath>; 어셈블리: System.Xml(System.Xml.dll의), System.Xml.Linq(System.Xml.Linq.dll의)
+네임스페이스: <xref:System.Xml.Linq>; <xref:System.Xml.Schema>, <xref:System.Xml.XPath>
+
+어셈블리: System.Xml(System.Xml.dll의), System.Xml.Linq(System.Xml.Linq.dll의)
 
 | 기능 | 3\.5 SP1과의 차이점 |
 | ------- | ------------------------ |
@@ -291,7 +327,9 @@ ms.locfileid: "73975614"
 
 ### <a name="writing"></a>쓰기
 
-네임스페이스: <xref:System.Xml.Linq>, <xref:System.Xml.Schema>, <xref:System.Xml.XPath>; 어셈블리: System.Xml(System.Xml.dll의), System.Xml.Linq(System.Xml.Linq.dll의)
+네임스페이스: <xref:System.Xml.Linq>; <xref:System.Xml.Schema>, <xref:System.Xml.XPath>
+
+어셈블리: System.Xml(System.Xml.dll의), System.Xml.Linq(System.Xml.Linq.dll의)
 
 | 기능 | 3\.5 SP1과의 차이점 |
 | ------- | ------------------------ |

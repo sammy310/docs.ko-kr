@@ -6,18 +6,18 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 323a2390f079c17b81db01e4e3787916251943bf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b52615a3fb288a6ca0622deb83f4db3c8e3587fb
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156558"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607908"
 ---
 # <a name="whats-new-in-net-core-31"></a>.NET Core 3.1의 새로운 기능
 
 이 문서에서는 .NET Core 3.1의 새로운 기능을 설명합니다. 이 릴리스에는 작지만 중요한 수정 내용에 중점을 둔 .NET Core 3.0의 소소한 개선 사항이 포함되어 있습니다. .NET Core 3.1의 가장 중요한 기능은 [LTS(장기 지원)](#long-term-support) 릴리스라는 것입니다.
 
-Visual Studio 2019을 사용하는 경우 .NET Core 3.1 프로젝트와 함께 작동하려면 [Visual Studio 2019 버전 16.4](https://visualstudio.microsoft.com/downloads/)를 업데이트해야 합니다. Visual Studio의 새로운 기능에 대한 자세한 내용은 [Visual Studio 2019 버전 16.4의 새로운 기능](/visualstudio/releases/2019/release-notes#whats-new-in-visual-studio-2019-version-164)을 참조하세요.
+Visual Studio 2019를 사용하는 경우 .NET Core 3.1 프로젝트와 함께 작동하려면 [Visual Studio 2019 버전 16.4 이상](https://visualstudio.microsoft.com/downloads/)으로 업데이트해야 합니다. Visual Studio 버전 16.4의 새로운 기능에 대한 내용은 [Visual Studio 2019 버전 16.4의 새로운 기능](/visualstudio/releases/2019/release-notes-v16.4#whats-new-in-visual-studio-2019-version-164)을 참조하세요.
 
 또한 Mac용 Visual Studio는 Mac용 Visual Studio 8.4에서 .NET Core 3.1을 지원 및 포함합니다.
 

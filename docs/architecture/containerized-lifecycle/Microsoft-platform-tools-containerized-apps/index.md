@@ -2,12 +2,12 @@
 title: 컨테이너화된 앱을 위한 Microsoft 플랫폼 및 도구 소개
 description: Docker 애플리케이션 수명 주기를 지원하는 Microsoft의 제품에 대해 알아봅니다.
 ms.date: 02/15/2019
-ms.openlocfilehash: 9c8c0f5688bf226351abfc7bf52d4ace05f8c6d8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8cb7870035003e956ee57684a2a2528732849379
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73738098"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738456"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>컨테이너화된 앱을 위한 Microsoft 플랫폼 및 도구 소개
 

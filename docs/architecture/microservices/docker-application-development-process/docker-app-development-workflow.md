@@ -2,12 +2,12 @@
 title: Docker 앱에 대한 개발 워크플로
 description: Docker 기반 애플리케이션 개발 워크플로의 세부 정보를 확인하세요. 먼저 단계별로 살펴보고 Dockerfile 최적화에 대한 세부 정보를 알아본 후 Visual Studio 사용 시 사용 가능한 간소화된 워크플로를 마지막으로 확인하세요.
 ms.date: 01/30/2020
-ms.openlocfilehash: c58ea2436027968143777a19286a1a0a72107717
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f380c840e186c345f9222aa6b0cf1097a74874e
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401510"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389195"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 앱에 대한 개발 워크플로
 
@@ -286,7 +286,7 @@ RUN dotnet restore
  7  COPY . .
  8  RUN dotnet restore /ignoreprojectextensions:.dcproj
  9  WORKDIR /src/src/Services/Catalog/Catalog.API
-10  RUN dotnet publish Catalog.API.csproj -c Release -0 /app
+10  RUN dotnet publish Catalog.API.csproj -c Release -o /app
 11
 12  FROM base AS final
 13  WORKDIR /app
@@ -479,7 +479,7 @@ docker-compose up 명령을 실행하면 그림 5-10에 나와 있는 것처럼 
 
 #### <a name="using-visual-studio"></a>Visual Studio 사용
 
-Visual Studio 2019를 사용하여 다중 컨테이너 애플리케이션을 실행하는 방법이 더 이상 간단할 수 없습니다. 평상시처럼 **Ctrl-F5**를 눌러 실행하거나 **F5** 키를 눌러 디버깅하여 **docker-compose** 프로젝트를 시작 프로젝트로 설정하기만 하면 됩니다.  Visual Studio가 필요한 모든 설정을 처리하므로 평상시처럼 중단점을 만들고 최종적으로 "원격 서버"에서 실행되는 독립 프로세스를 마찬가지로 디버거가 이미 연결된 상태에서 디버깅할 수 있습니다.
+Visual Studio 2019를 사용하여 다중 컨테이너 애플리케이션을 실행하는 방법이 더 이상 간단할 수 없습니다. 평상시처럼 **Ctrl-F5**를 눌러 실행하거나 **F5** 키를 눌러 디버깅하여 **docker-compose** 프로젝트를 시작 프로젝트로 설정하기만 하면 됩니다.  Visual Studio가 필요한 모든 설정을 처리하므로 평상시처럼 중단점을 만들고 최종적으로 “원격 서버”에서 실행되는 독립 프로세스를 마찬가지로 디버거가 이미 연결된 상태에서 디버그할 수 있습니다.
 
 앞서 언급했듯이, 솔루션 내의 프로젝트에 Docker 솔루션 지원을 추가할 때마다 해당 프로젝트가 전역(솔루션 수준) docker-compose.yml 파일에서 구성되며, 따라서 전체 솔루션을 한꺼번에 실행 또는 디버그할 수 있습니다. Visual Studio는 Docker 솔루션 지원이 사용되는 각 프로젝트에 대해 하나의 컨테이너를 시작하고, 모든 내부 단계(dotnet 게시, dotnet 빌드 등)를 자동으로 수행합니다.
 

@@ -3,12 +3,12 @@ title: 문자열 내용 수정 방법 - C# 가이드
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 260e4022c514db0cee3c1459b9d746a1c8e2addd
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 8e9bbe76c689d3c3f9f238ca9dd95cc7fcf98b18
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121128"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389522"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>C\#에서 문자열 내용을 수정하는 방법
 
@@ -16,7 +16,7 @@ ms.locfileid: "81121128"
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-이 문서에서 설명되는 여러 가지 기술이 있습니다. 기존 텍스트를 바꿀 수 있습니다. 패턴을 검색하고 다른 텍스트와 일치하는 텍스트를 바꿀 수 있습니다. 일련의 문자로 문자열을 처리할 수 있습니다. 공백을 제거하는 편리한 메서드를 사용할 수도 있습니다. 시나리오에 가장 일치하는 기술을 선택해야 합니다.
+이 문서에서 설명되는 여러 가지 기술이 있습니다. 기존 텍스트를 바꿀 수 있습니다. 패턴을 검색하고 다른 텍스트와 일치하는 텍스트를 바꿀 수 있습니다. 일련의 문자로 문자열을 처리할 수 있습니다. 공백을 제거하는 편리한 메서드를 사용할 수도 있습니다. 시나리오에 가장 일치하는 기술을 선택합니다.
 
 ## <a name="replace-text"></a>텍스트 바꾸기
 
@@ -40,7 +40,7 @@ ms.locfileid: "81121128"
 
 ## <a name="remove-text"></a>텍스트 제거
 
-<xref:System.String.Remove%2A?displayProperty=nameWithType> 메서드를 사용하여 문자열에서 텍스트를 제거할 수 있습니다. 이 메서드는 특정 인덱스에서 시작하는 문자 수를 제거합니다. 다음 예제에서는 <xref:System.String.IndexOf%2A?displayProperty=nameWithType>가 뒤에 오는 <xref:System.String.Remove%2A>을 사용하여 문자열에서 텍스트를 제거하는 방법을 보여 줍니다.
+<xref:System.String.Remove%2A?displayProperty=nameWithType> 메서드를 사용하여 문자열에서 텍스트를 제거할 수 있습니다. 이 메서드는 특정 인덱스에서 시작하는 문자 수를 제거합니다. 다음 예제에서는 <xref:System.String.Remove%2A>가 뒤에 오는 <xref:System.String.IndexOf%2A?displayProperty=nameWithType>을 사용하여 문자열에서 텍스트를 제거하는 방법을 보여 줍니다.
 
 [!code-csharp-interactive[remove text](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#4)]
 
@@ -58,13 +58,13 @@ ms.locfileid: "81121128"
 
 문자열에서 문자 배열을 생성하고, 배열의 내용을 수정한 다음, 수정된 배열의 내용에서 새 문자열을 만들 수 있습니다.
 
-다음 예제에서는 문자열에서 문자 집합을 대체하는 방법을 보여 줍니다. 먼저 <xref:System.String.ToCharArray?displayProperty=nameWithName> 메서드를 사용하여 문자의 배열을 만듭니다. <xref:System.String.IndexOf%2A> 메서드를 사용하여 단어 "fox"의 시작 인덱스를 찾습니다. 다음 세 개의 문자는 서로 다른 단어로 바뀝니다. 마지막으로 새 문자열은 업데이트된 문자 배열에서 생성됩니다.
+다음 예제에서는 문자열에서 문자 집합을 대체하는 방법을 보여 줍니다. 먼저 <xref:System.String.ToCharArray?displayProperty=nameWithType> 메서드를 사용하여 문자의 배열을 만듭니다. <xref:System.String.IndexOf%2A> 메서드를 사용하여 단어 "fox"의 시작 인덱스를 찾습니다. 다음 세 개의 문자는 서로 다른 단어로 바뀝니다. 마지막으로 새 문자열은 업데이트된 문자 배열에서 생성됩니다.
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#6)]
 
 ## <a name="programmatically-build-up-string-content"></a>프로그래밍 방식으로 문자열 콘텐츠 작성
 
-문자열은 변경할 수 없으므로 이전 예제에서는 모두 임시 문자열 또는 문자 배열을 만듭니다. 고성능 시나리오에서는 이러한 힙 할당을 방지하는 것이 좋습니다. .NET Core는 중간 임시 문자열 할당을 방지하면서 콜백을 통해 문자열의 문자 콘텐츠를 프로그래밍 방식으로 채울 수 있는 <xref:System.String.Create%2A?displayProperty=nameWithType> 메서드를 제공합니다.
+문자열은 변경할 수 없으므로 이전 예제에서는 모두 임시 문자열 또는 문자 배열을 만듭니다. 고성능 시나리오에서는 이 힙 할당을 방지하는 것이 좋습니다. .NET Core는 중간 임시 문자열 할당을 방지하면서 콜백을 통해 문자열의 문자 콘텐츠를 프로그래밍 방식으로 채울 수 있는 <xref:System.String.Create%2A?displayProperty=nameWithType> 메서드를 제공합니다.
 
 [!code-csharp[using string.Create to programmatically build the string content for a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
 
@@ -72,7 +72,7 @@ ms.locfileid: "81121128"
 
 [GitHub 리포지토리](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings)의 코드를 확인하여 이러한 샘플을 시험해 볼 수 있습니다. 또는 샘플을 [zip 파일로](../../../samples/snippets/csharp/how-to/strings.zip) 다운로드할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET Framework 정규식](../../standard/base-types/regular-expressions.md)
 - [정규식 언어 - 빠른 참조](../../standard/base-types/regular-expression-language-quick-reference.md)

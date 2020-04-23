@@ -6,12 +6,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc,mlnet-tooling
-ms.openlocfilehash: 98c9f28ca4ce6365ed4cf4ff1566a33dbe8f35ca
-ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
+ms.openlocfilehash: 7761240055c90ae9c713b1c460e9e83316d256f9
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438223"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278953"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>자습서: ML.NET 모델 작성기를 사용하여 웹 애플리케이션에서 웹 사이트 댓글 감정 분석
 
@@ -103,7 +103,7 @@ ms.locfileid: "80438223"
 
 ## <a name="evaluate-the-model"></a>모델 평가
 
-학습 단계의 결과는 최상의 성능을 가진 하나의 모델이 됩니다. 모델 작성기 도구의 평가 단계에서 출력 섹션에는 **최상의 모델** 항목의 가장 성능이 좋은 모델에서 사용되는 알고리즘과 더불어 **최상의 모델 정확도**의 메트릭이 포함됩니다. 또한 상위 5개 모델 및 해당 메트릭을 포함하는 요약 테이블입니다.
+학습 단계의 결과는 최상의 성능을 가진 하나의 모델이 됩니다. 모델 작성기 도구의 평가 단계에서 출력 섹션에는 **최상의 모델** 항목의 가장 성능이 좋은 모델에서 사용되는 알고리즘과 더불어 **최상의 모델 정확도**의 메트릭이 포함됩니다. 또한 상위 5개 모델 및 해당 메트릭을 포함하는 요약 테이블이 표시됩니다.
 
 정확도 메트릭에 만족하지 않는 경우 모델 정확도를 개선하기 위한 몇 가지 쉬운 방법은 모델을 학습하거나 더 많은 데이터를 사용하기 위한 시간을 늘리는 것입니다. 그렇지 않으면 **코드** 링크를 선택하여 모델 작성기 도구의 최종 단계로 이동합니다.
 
@@ -124,7 +124,7 @@ ms.locfileid: "80438223"
 
 ### <a name="configure-the-predictionengine-pool"></a>PredictionEngine 풀 구성
 
-단일 예측을 수행하려면 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)을 만들어야 합니다. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)은 스레드로부터 안전하지 않습니다. 또한 애플리케이션 내에서 필요한 모든 위치에서 인스턴스를 만들어야 합니다. 애플리케이션이 커지면 이 프로세스를 관리할 수 없게 됩니다. 성능 및 스레드 보안을 개선하려면 종속성 주입과 `PredictionEnginePool` 서비스를 함께 사용합니다. 이 서비스는 애플리케이션 전체에서 사용할 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 개체의 [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)을 만듭니다.
+단일 예측을 수행하려면 <xref:Microsoft.ML.PredictionEngine%602>을 만들어야 합니다. <xref:Microsoft.ML.PredictionEngine%602>는 스레드로부터 안전하지 않습니다. 또한 애플리케이션 내에서 필요한 모든 위치에서 인스턴스를 만들어야 합니다. 애플리케이션이 커지면 이 프로세스를 관리할 수 없게 됩니다. 성능 및 스레드 보안을 개선하려면 종속성 주입과 `PredictionEnginePool` 서비스를 함께 사용합니다. 이 서비스는 애플리케이션 전체에서 사용할 <xref:Microsoft.ML.PredictionEngine%602> 개체의 <xref:Microsoft.Extensions.ObjectPool.ObjectPool%601>을 만듭니다.
 
 1. *Microsoft.Extensions.ML* NuGet 패키지를 설치합니다.
 

@@ -3,12 +3,12 @@ title: 일반화된 추가 모델을 사용하여 ML.NET 모델 해석
 description: ML.NET에서 모델 해석을 위해 일반화된 추가 모델 및 형상 함수 사용
 ms.date: 01/30/2020
 ms.custom: mvc,how-to
-ms.openlocfilehash: 6df19eff4fec98c5815a9f8f4d8e4e9a80cba6ed
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 29eac7a609ada57283a7c5b55b935e30709930dd
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77092475"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243130"
 ---
 # <a name="use-generalized-additive-models-and-shape-functions-for-model-interpretability-in-mlnet"></a>ML.NET에서 모델 해석을 위해 일반화된 추가 모델 및 형상 함수 사용
 
@@ -50,4 +50,4 @@ for (int i = 0; i < myFeatureBins.Length; i++)
 
 ![일반화된 추가 모델 형상 함수 그래프](./media/use-gams-for-model-explainability/gam-shape-function-graph.png)
 
-GAM 모델을 학습시키고 결과를 검사 및 해석하는 방법에 대한 샘플은 [dotnet/machinelearning GitHub 리포지토리](https://github.com/dotnet/machinelearning/blob/master/docs/samples/Microsoft.ML.Samples/Dynamic/GeneralizedAdditiveModels.cs)를 참조하세요.
+GAM 모델을 학습시키고 결과를 검사 및 해석하는 방법에 대한 예제는 [이진 분류 강사 샘플](https://github.com/dotnet/machinelearning/blob/master/docs/samples/Microsoft.ML.Samples/Dynamic/Trainers/BinaryClassification/Gam.cs)을 참조하세요.

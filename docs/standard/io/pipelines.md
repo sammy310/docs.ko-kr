@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: b18b2bf31787fa58e614cd4f057fba9037fe8ad8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8822e731ae805e83d4072c5bd78dff3fcf9a31a1
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77627554"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81462517"
 ---
 # <a name="systemiopipelines-in-net"></a>.NET의 System.IO.Pipelines
 
@@ -172,7 +172,7 @@ I/O를 수행하는 경우 I/O가 수행되는 위치를 세부적으로 제어�
 * 첫 번째 인수는 사용된 메모리의 양을 결정합니다.
 * 두 번째 인수는 관찰된 버퍼의 양을 결정합니다.
 
-데이터를 사용됨으로 표시하면 파이프가 메모리를 기본 버퍼 풀로 반환할 수 있다는 의미입니다. 데이터를 관찰됨으로 표시하면 `PipeReader.ReadAsync`에 대한 다음 호출의 수행 내용을 제어합니다. 모든 항목을 관찰됨으로 표시하면 파이프에 더 많은 데이터를 쓸 때까지 `PipeReader.ReadAsync`에 대한 다음 호출이 반환되지 않는다는 의미입니다. 다른 모든 값을 사용하면 `PipeReader.ReadAsync`에 대한 다음 호출이 관찰된 데이터 *및* 관찰되지 않은 데이터이지만 이미 사용된 데이터를 사용하여 즉시 반환합니다.
+데이터를 사용됨으로 표시하면 파이프가 메모리를 기본 버퍼 풀로 반환할 수 있다는 의미입니다. 데이터를 관찰됨으로 표시하면 `PipeReader.ReadAsync`에 대한 다음 호출의 수행 내용을 제어합니다. 모든 항목을 관찰됨으로 표시하면 파이프에 더 많은 데이터를 쓸 때까지 `PipeReader.ReadAsync`에 대한 다음 호출이 반환되지 않는다는 의미입니다. 다른 모든 값을 사용하면 `PipeReader.ReadAsync`에 대한 다음 호출이 관찰된 데이터 ‘및’ 관찰되지 않은 데이터로 즉시 반환되지만 이미 사용된 데이터는 반환되지 않습니다. 
 
 ### <a name="read-streaming-data-scenarios"></a>스트리밍 데이터 읽기 시나리오
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-ms.openlocfilehash: 9a0640a7ce73fa8454442cd301157bf5c265f9de
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bbdeba4ee3526140de29ac0d7c97e9a593729d47
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713893"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389530"
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>여러 문자열 연결 방법(C# 가이드)
 
@@ -37,13 +37,13 @@ ms.locfileid: "75713893"
 
 문자열을 연결하는 다른 메서드는 <xref:System.String.Format%2A?displayProperty=nameWithType>입니다. 이 메서드는 작은 수의 구성 요소 문자열에서 문자열을 빌드할 때 잘 작동합니다.
 
-다른 경우는 결합하는 문자열의 개수를 모르는 루프에서 문자열을 결합할 수 있으며, 소스 문자열의 실제 개수는 매우 클 수 있습니다. <xref:System.Text.StringBuilder> 클래스는 이러한 시나리오를 위해 설계되었습니다. 다음 코드는 <xref:System.Text.StringBuilder.Append%2A> 클래스의 <xref:System.Text.StringBuilder> 메서드를 사용하여 문자열을 연결합니다.  
+다른 경우는 결합하는 소스 문자열의 개수를 모르는 루프에서 문자열을 결합할 수 있으며 소스 문자열의 실제 개수는 클 수 있습니다. <xref:System.Text.StringBuilder> 클래스는 이러한 시나리오를 위해 설계되었습니다. 다음 코드는 <xref:System.Text.StringBuilder> 클래스의 <xref:System.Text.StringBuilder.Append%2A> 메서드를 사용하여 문자열을 연결합니다.  
   
 [!code-csharp-interactive[string concatenation using string builder](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#4)]  
 
 [문자열 연결 또는 `StringBuilder` 클래스를 선택하는 이유](xref:System.Text.StringBuilder#StringAndSB)에 대해 자세히 읽을 수 있습니다.
 
-컬렉션의 문자열을 조인하는 또 다른 옵션은 <xref:System.String.Concat%2A?displayProperty=nameWithType> 메서드를 사용하는 것입니다. 원본 문자열을 구분 기호로 구분해야 하는 경우 <xref:System.String.Join%2A?displayProperty=nameWithType> 메서드를 사용합니다. 다음 코드는 두 메서드 모두를 사용하여 단어 배열을 결합합니다.
+컬렉션의 문자열을 조인하는 또 다른 옵션은 <xref:System.String.Concat%2A?displayProperty=nameWithType> 메서드를 사용하는 것입니다. 소스 문자열을 구분 기호로 구분해야 하는 경우 <xref:System.String.Join%2A?displayProperty=nameWithType> 메서드를 사용합니다. 다음 코드는 두 메서드 모두를 사용하여 단어 배열을 결합합니다.
 
 [!code-csharp-interactive[concatenation of string collection](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#5)]
 
@@ -51,9 +51,9 @@ ms.locfileid: "75713893"
 
 [!code-csharp-interactive[string concatenation using LINQ expressions](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#6)]  
 
-[GitHub 리포지토리](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)의 코드를 확인하여 이러한 샘플을 시험해 볼 수 있습니다. 또는 샘플을 [zip 파일로](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip) 다운로드할 수 있습니다.
+[샘플 코드](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings)를 확인하여 관련 샘플을 사용해 볼 수 있습니다. 또는 샘플을 [zip 파일로](../../../samples/snippets/csharp/how-to/strings.zip) 다운로드할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.String>
 - <xref:System.Text.StringBuilder>

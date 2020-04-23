@@ -2,28 +2,32 @@
 title: dotnet pack 명령
 description: dotnet pack 명령은 .NET Core 프로젝트에 대한 NuGet 패키지를 만듭니다.
 ms.date: 02/14/2020
-ms.openlocfilehash: 865262f1eb314f9b7e8ee713c573a965e89ded93
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b9c46ecd5d67519728896b0018e27fb41ebd861
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503650"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463507"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
 **이 문서의 적용 대상:** ✔️ .NET Core 2.x SDK 이상 버전
 
-## <a name="name"></a>name
+## <a name="name"></a>이름
 
 `dotnet pack` - 코드를 NuGet 패키지로 압축합니다.
 
 ## <a name="synopsis"></a>개요
 
 ```dotnetcli
-dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--interactive]
-    [--no-build] [--no-dependencies] [--no-restore] [--nologo] [-o|--output] [--runtime] [-s|--serviceable]
-    [-v|--verbosity] [--version-suffix]
-dotnet pack [-h|--help]
+dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
+    [--force] [--include-source] [--include-symbols] [--interactive]
+    [--no-build] [--no-dependencies] [--no-restore] [--nologo]
+    [-o|--output <OUTPUT_DIRECTORY>] [--runtime <RUNTIME_IDENTIFIER>]
+    [-s|--serviceable] [-v|--verbosity <LEVEL>]
+    [--version-suffix <VERSION_SUFFIX>]
+
+dotnet pack -h|--help
 ```
 
 ## <a name="description"></a>설명
@@ -38,6 +42,9 @@ dotnet pack [-h|--help]
 압축된 프로젝트의 NuGet 종속성은 *.nuspec* 파일에 추가되므로 패키지를 설치할 때 적절히 확인됩니다. 프로젝트 간 참조는 프로젝트 내에서 패키지되지 않습니다. 현재 프로젝트 간 종속성이 있는 경우 프로젝트당 패키지가 있어야 합니다.
 
 `dotnet pack`은 기본적으로 프로젝트를 먼저 빌드합니다. 이렇게 하지 않으려면 `--no-build` 옵션을 전달합니다. 이 옵션은 코드가 이미 빌드된 CI(연속 통합) 빌드 시나리오에서 유용합니다.
+
+> [!NOTE]
+> 경우에 따라 암시적 빌드를 수행할 수 없습니다. 이는 빌드 대상과 압축 대상 간에 순환 종속성을 방지하기 위해 `GeneratePackageOnBuild`가 설정된 경우에 발생할 수 있습니다. 잠긴 파일 또는 기타 문제가 있는 경우에도 빌드가 실패할 수 있습니다.
 
 압축 프로세스에 대한 `dotnet pack` 명령에 MSBuild 속성을 제공할 수 있습니다. 자세한 내용은 [NuGet 메타데이터 속성](csproj.md#nuget-metadata-properties) 및 [MSBuild 명령줄 참조](/visualstudio/msbuild/msbuild-command-line-reference)를 참조하세요. [예제](#examples) 섹션에서는 몇 가지 시나리오에 MSBuild -p 스위치를 사용하는 방법을 보여 줍니다.
 
@@ -85,7 +92,7 @@ dotnet pack [-h|--help]
 
 - **`--no-build`**
 
-  압축하기 전에 프로젝트를 빌드하지 않습니다. 또한 `--no-restore` 플래그를 암시적으로 설정합니다.
+  압축하기 전에 프로젝트를 빌드하지 않습니다. 또한 암시적으로 `--no-restore` 플래그를 설정합니다.
 
 - **`--no-dependencies`**
 
@@ -145,13 +152,13 @@ dotnet pack [-h|--help]
   dotnet pack --no-build --output nupkgs
   ```
 
-- `<VersionSuffix>$(VersionSuffix)</VersionSuffix>`.csproj*파일에서 프로젝트의 버전 접미사를*로 구성한 상태로 현재 프로젝트를 압축하고 결과 패키지 버전을 지정된 접미사로 업데이트합니다.
+- *.csproj* 파일에서 프로젝트의 버전 접미사를 `<VersionSuffix>$(VersionSuffix)</VersionSuffix>`로 구성한 상태로 현재 프로젝트를 압축하고 결과 패키지 버전을 지정된 접미사로 업데이트합니다.
 
   ```dotnetcli
   dotnet pack --version-suffix "ci-1234"
   ```
 
-- `2.1.0` MSBuild 속성을 사용하여 패키지 버전을 `PackageVersion`으로 설정합니다.
+- `PackageVersion` MSBuild 속성을 사용하여 패키지 버전을 `2.1.0`으로 설정합니다.
 
   ```dotnetcli
   dotnet pack -p:PackageVersion=2.1.0

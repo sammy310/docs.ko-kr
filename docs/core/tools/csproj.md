@@ -2,12 +2,12 @@
 title: .NET Core용 csproj 형식에 대한 추가 사항
 description: 기존 및 .NET Core csproj 파일 간의 차이점에 대해 알아보기
 ms.date: 04/08/2019
-ms.openlocfilehash: 9d9e212c9531828a8c2dd51fdd7488c17be41ba2
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: fadc6de43f522129970e48bc72914cf187fe3f82
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134062"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607708"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core용 csproj 형식에 대한 추가 사항
 
@@ -145,7 +145,7 @@ ASP.NET Core 메타패키지에 대한 이 참조의 동작은 대부분의 일�
 
 #### <a name="version"></a>버전
 
-필수 `Version` 특성은 복원할 패키지의 버전을 지정합니다. 이 특성은 [NuGet 버전 지정](/nuget/reference/package-versioning#version-ranges-and-wildcards) 체계의 규칙을 따릅니다. 기본 동작은 최소 버전의 포함 일치입니다. 예를 들어 `Version="1.2.3"` 지정은 NuGet 표기법 `[1.2.3, )`에 해당하며, 이는 확인된 패키지의 버전이 사용 가능한 경우에는 1.2.3이고 그렇지 않으면 더 크다는 것을 의미합니다.
+필수 `Version` 특성은 복원할 패키지의 버전을 지정합니다. 이 특성은 [NuGet 버전 범위](/nuget/concepts/package-versioning#version-ranges) 체계의 규칙을 따릅니다. 기본 동작은 최소 버전의 포함 일치입니다. 예를 들어 `Version="1.2.3"` 지정은 NuGet 표기법 `[1.2.3, )`에 해당하며, 이는 확인된 패키지의 버전이 사용 가능한 경우에는 1.2.3이고 그렇지 않으면 더 크다는 것을 의미합니다.
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets, ExcludeAssets 및 PrivateAssets
 

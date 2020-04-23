@@ -5,12 +5,12 @@ author: pkulikov
 ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 174907adac5741d5cc7d02cb134921debc586061
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fe9c3eb1313fbacf512710f6872c543dca281b17
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78241093"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607430"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>자습서: ML.NET와 함께 k-means 클러스터링을 사용하여 아이리스 꽃 분류
 
@@ -29,7 +29,7 @@ ms.locfileid: "78241093"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- “.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2017 버전 15.6 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)
+- “.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 이상 또는 Visual Studio 2017 버전 15.6 이상.
 
 ## <a name="understand-the-problem"></a>문제 이해
 
@@ -53,7 +53,7 @@ ms.locfileid: "78241093"
 
 ## <a name="prepare-the-data"></a>데이터 준비
 
-1. [iris.data](https://github.com/dotnet/machinelearning/blob/master/test/data/iris.data) 데이터 집합을 다운로드하고 이전 단계에서 만든 *Data* 폴더에 저장합니다. 아이리스 데이터 집합에 대한 자세한 내용은 [아이리스 꽃 데이터 집합](https://en.wikipedia.org/wiki/Iris_flower_data_set) Wikipedia 페이지와 데이터 집합의 출처인 [아이리스 데이터 집합](https://archive.ics.uci.edu/ml/datasets/Iris) 페이지를 참조하세요.
+1. [iris.data](https://github.com/dotnet/machinelearning/blob/master/test/data/iris.data) 데이터 집합을 다운로드하고 이전 단계에서 만든 *Data* 폴더에 저장합니다. 아이리스 데이터 집합에 대한 자세한 내용은 [아이리스 꽃 데이터 집합](https://en.wikipedia.org/wiki/Iris_flower_data_set) Wikipedia 페이지와 데이터 집합의 출처인 [아이리스 데이터 집합](http://archive.ics.uci.edu/ml/datasets/Iris) 페이지를 참조하세요.
 
 1. **솔루션 탐색기**에서 *iris.data* 파일을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **고급** 아래에서 **출력 디렉터리에 복사** 값을 **변경된 내용만 복사**로 변경합니다.
 

@@ -1,38 +1,42 @@
 ---
 title: where(제네릭 형식 제약 조건) - C# 참조
-ms.date: 04/12/2018
+ms.date: 04/15/2020
 f1_keywords:
 - whereconstraint
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: d236420c5019f7529b729155b13df50807dc1dab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5a56b8058735d3ca786520a82424c79d1975bfc4
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77626713"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463007"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where(제네릭 형식 제약 조건)(C# 참조)
 
-제네릭 정의의 `where` 절은 제네릭 형식, 메서드, 대리자 또는 로컬 함수의 형식 매개 변수에 대한 인수로 사용되는 형식에 대한 제약 조건을 지정합니다. 제약 조건은 인터페이스, 기본 클래스를 지정하거나 제네릭 형식을 참조, 값 또는 관리되지 않는 형식으로 요구할 수 있습니다. 형식 인수에서 갖추고 있어야 하는 기능을 선언합니다.
+제네릭 정의의 `where` 절은 제네릭 형식, 메서드, 대리자 또는 로컬 함수의 형식 매개 변수에 대한 인수로 사용되는 형식에 대한 제약 조건을 지정합니다. 제약 조건은 인터페이스, 기본 클래스를 지정하거나 제네릭 형식을 참조, 값 또는 관리되지 않는 형식으로 요구할 수 있습니다. 형식 인수에 포함해야 하는 기능을 선언합니다.
 
-예를 들어 형식 매개 변수 `MyGenericClass`가 `T` 인터페이스를 구현하도록 제네릭 클래스 <xref:System.IComparable%601>를 선언할 수 있습니다.
+예를 들어 형식 매개 변수 `T`가 <xref:System.IComparable%601> 인터페이스를 구현하도록 제네릭 클래스 `MyGenericClass`를 선언할 수 있습니다.
 
 [!code-csharp[using an interface constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#1)]
 
 > [!NOTE]
 > 쿼리 식의 where 절에 대한 자세한 내용은 [where 절](where-clause.md)을 참조하세요.
 
-`where` 절에는 기본 클래스 제약 조건이 포함될 수도 있습니다. 기본 클래스 제약 조건에서는 해당 제네릭 형식에 대한 형식 인수로 사용할 기본 클래스(또는 해당 기본 클래스)로 지정된 클래스가 해당 제네릭 형식에 대한 형식 인수로 사용할 형식에 있다고 명시합니다. 기본 클래스 제약 조건이 사용되는 경우 해당 형식 매개 변수에 대한 다른 제약 조건 앞에 나타나야 합니다. 일부 형식은 <xref:System.Object>, <xref:System.Array> 및 <xref:System.ValueType> 기본 클래스 제약 조건으로 허용되지 않습니다. C# 7.3 이전에는 기본 클래스 제약 조건으로 <xref:System.Enum>, <xref:System.Delegate> 및 <xref:System.MulticastDelegate>도 허용되지 않았습니다. 다음 예제에서는 이제 기본 클래스로 지정할 수 있는 형식을 보여 줍니다.
+`where` 절에는 기본 클래스 제약 조건이 포함될 수도 있습니다. 기본 클래스 제약 조건에서는 해당 제네릭 형식에 대한 형식 인수로 사용할 형식이 지정된 클래스를 기본 클래스로 포함하거나 해당 기본 클래스임을 명시합니다. 기본 클래스 제약 조건이 사용되는 경우 해당 형식 매개 변수에 대한 다른 제약 조건 앞에 나타나야 합니다. 일부 형식은 <xref:System.Object>, <xref:System.Array> 및 <xref:System.ValueType> 기본 클래스 제약 조건으로 허용되지 않습니다. C# 7.3 이전에는 기본 클래스 제약 조건으로 <xref:System.Enum>, <xref:System.Delegate> 및 <xref:System.MulticastDelegate>도 허용되지 않았습니다. 다음 예제에서는 이제 기본 클래스로 지정할 수 있는 형식을 보여 줍니다.
 
 [!code-csharp[using an interface constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#2)]
+
+C# 8.0 이상의 null 허용 컨텍스트에서는 기본 클래스 형식의 null 허용 여부가 적용됩니다. 기본 클래스가 null을 허용하지 않는 경우(예: `Base`) 형식 인수는 null을 허용하지 않아야 합니다. 기본 클래스가 null을 허용하는 경우(예: `Base?`) 형식 인수는 null을 허용하거나 null을 허용하지 않는 참조 형식일 수 있습니다. 기본 클래스가 null을 허용하지 않는 경우 형식 인수가 null 허용 참조 형식이면 컴파일러가 경고를 발생시킵니다.
 
 `where` 절은 형식이 `class` 또는 `struct`임을 지정할 수 있습니다. `struct` 제약 조건은 `System.ValueType`의 기본 클래스 제약 조건을 지정할 필요가 없습니다. `System.ValueType` 형식은 기본 클래스 제약 조건으로 사용할 수 없습니다. 다음 예제에서는 `class` 및 `struct` 제약 조건을 모두 보여 줍니다.
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#3)]
 
-`where` 절은 `notnull` 제약 조건을 포함할 수 있습니다. `notnull` 제약 조건은 형식 매개 변수를 Null을 허용하지 않는 형식으로 제한합니다. 해당 형식은 [값 형식](../builtin-types/value-types.md)이거나 nullable이 아닌 참조 형식일 수 있습니다. `notnull`[ 컨텍스트`nullable enable`에서 컴파일된 코드에 대해 C# 8.0부터 ](../../nullable-references.md#nullable-contexts) 제약 조건을 사용할 수 있습니다. 다른 제약 조건과 달리 형식 인수가 `notnull` 제약 조건을 위반하면 컴파일러는 오류 대신 경고를 생성합니다. 경고는 `nullable enable` 컨텍스트에서만 생성됩니다.
+C# 8.0 이상의 null 허용 컨텍스트에서 `class` 제약 조건을 사용하려면 형식이 null을 허용하지 않는 참조 형식이어야 합니다. null 허용 참조 형식을 허용하려면 null 허용 참조 형식 및 null을 허용하지 않는 참조 형식을 둘 다 허용하는 `class?` 제약 조건을 사용합니다.
+
+`where` 절은 `notnull` 제약 조건을 포함할 수 있습니다. `notnull` 제약 조건은 형식 매개 변수를 Null을 허용하지 않는 형식으로 제한합니다. 해당 형식은 [값 형식](../builtin-types/value-types.md)이거나 nullable이 아닌 참조 형식일 수 있습니다. [`nullable enable` 컨텍스트](../../nullable-references.md#nullable-contexts)에서 컴파일된 코드에 대해 C# 8.0부터 `notnull` 제약 조건을 사용할 수 있습니다. 다른 제약 조건과 달리 형식 인수가 `notnull` 제약 조건을 위반하면 컴파일러는 오류 대신 경고를 생성합니다. 경고는 `nullable enable` 컨텍스트에서만 생성됩니다.
 
 > [!IMPORTANT]
 > `notnull` 제약 조건을 포함하는 제네릭 선언은 nullable 형식을 감지하지 않는 컨텍스트에서 사용될 수 있지만 컴파일러는 제약 조건을 적용하지 않습니다.
@@ -43,7 +47,7 @@ ms.locfileid: "77626713"
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#4)]
 
-`where` 절에 `new()` 생성자 제약 조건이 포함될 수도 있습니다. 이 제약 조건을 사용하면 `new` 연산자를 사용하여 형식 매개 변수의 인스턴스를 만들 수 있습니다. [new () 제약 조건](new-constraint.md)을 사용하면 컴파일러에서 제공된 형식 인수에 액세스 가능하고 매개 변수가 없는 생성자가 있어야 한다는 것을 알게 됩니다. 예들 들어 다음과 같습니다.
+`where` 절에 `new()` 생성자 제약 조건이 포함될 수도 있습니다. 이 제약 조건을 사용하면 `new` 연산자를 사용하여 형식 매개 변수의 인스턴스를 만들 수 있습니다. [new () 제약 조건](new-constraint.md)을 사용하면 컴파일러에서 제공된 형식 인수에 액세스 가능하고 매개 변수가 없는 생성자가 있어야 한다는 것을 알게 됩니다. 예를 들어:
 
 [!code-csharp[using the new constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#5)]
 
@@ -69,7 +73,7 @@ ms.locfileid: "77626713"
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

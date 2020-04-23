@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 026421d7b1b2a0e39118ae712780ca7fc8f6e444
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bceb32f4ea22ade6d3b49b3a99d7ec48a7ba168d
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76921249"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607404"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>자습서: 시계열 분석 및 ML.NET를 사용하여 자전거 대여 서비스 수요 예측
 
@@ -29,7 +29,7 @@ ML.NET를 통해 SQL Server 데이터베이스에 저장된 데이터에 대한 
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- “.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2017 버전 15.6 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)
+- “.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 이상 또는 Visual Studio 2017 버전 15.6 이상.
 
 ## <a name="time-series-forecasting-sample-overview"></a>시계열 예측 샘플 개요
 
@@ -60,7 +60,7 @@ ML.NET를 통해 SQL Server 데이터베이스에 저장된 데이터에 대한 
 1. [*DailyDemand.mdf* 데이터베이스 파일](https://github.com/dotnet/machinelearning-samples/raw/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Data/DailyDemand.mdf)을 다운로드하여 *데이터* 디렉터리에 저장합니다.
 
 > [!NOTE]
-> 이 자습서에서 사용되는 데이터는 [UCI 자전거 공유 데이터 세트](https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset)에서 제공됩니다. Fanaee-T, Hadi, Gama, Joao, 'Event labeling combining ensemble detectors and background knowledge', Progress in Artificial Intelligence (2013): pp. 1-15, Springer Berlin Heidelberg, [웹 링크](https://link.springer.com/article/10.1007%2Fs13748-013-0040-3).
+> 이 자습서에서 사용되는 데이터는 [UCI 자전거 공유 데이터 세트](http://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset)에서 제공됩니다. Fanaee-T, Hadi, Gama, Joao, 'Event labeling combining ensemble detectors and background knowledge', Progress in Artificial Intelligence (2013): pp. 1-15, Springer Berlin Heidelberg, [웹 링크](https://link.springer.com/article/10.1007%2Fs13748-013-0040-3).
 
 원본 데이터 세트에는 계절성 및 날씨에 해당하는 여러 열이 포함되어 있습니다. 간단히 하기 위해 이 자습서에서 사용되는 알고리즘에는 단일 숫자 열의 값만 필요하므로 원본 데이터 세트는 다음 열만 포함하도록 압축되었습니다.
 

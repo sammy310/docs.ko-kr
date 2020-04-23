@@ -6,12 +6,12 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 4f748373350ed0596a5f1d595c273243ae3227c3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf8823c6674b1ff3f0028a50df8ce8d0f803cfc1
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77095296"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389488"
 ---
 # <a name="built-in-types-c-reference"></a>기본 제공 형식(C# 참조)
 
@@ -47,7 +47,9 @@ int a = 123;
 System.Int32 b = 123;
 ```
 
-## <a name="see-also"></a>참고 항목
+[`void`](void.md) 키워드는 형식이 없음을 나타냅니다. 이 키워드는 값을 반환하지 않는 메서드의 반환 형식으로 사용합니다.
+
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 형식의 기본값](default-values.md)

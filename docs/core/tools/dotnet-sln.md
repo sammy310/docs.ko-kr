@@ -2,25 +2,27 @@
 title: dotnet sln 명령
 description: dotnet-sln 명령은 솔루션 파일의 프로젝트를 추가, 제거 및 나열하는 간편한 옵션을 제공합니다.
 ms.date: 02/14/2020
-ms.openlocfilehash: b2455c04a46b2a10b8142d8ddc2d8129f2154b27
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 231287477d986f9ec4a5404cc5278e76c297faa4
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77543484"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463408"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
 **이 문서의 적용 대상:** ✔️ .NET Core 2.x SDK 이상 버전
 
-## <a name="name"></a>name
+## <a name="name"></a>이름
 
 `dotnet sln` - .NET Core 솔루션 파일의 프로젝트를 나열하거나 수정합니다.
 
 ## <a name="synopsis"></a>개요
 
 ```dotnetcli
-dotnet sln [<SOLUTION_FILE>] [command] [-h|--help]
+dotnet sln [<SOLUTION_FILE>] [command]
+
+dotnet sln [command] -h|--help
 ```
 
 ## <a name="description"></a>설명
@@ -76,7 +78,7 @@ dotnet sln list [-h|--help]
 #### <a name="synopsis"></a>개요
 
 ```dotnetcli
-dotnet sln [<SOLUTION_FILE>] add [--in-root] [-s|--solution-folder] <PROJECT_PATH> [<PROJECT_PATH>...]
+dotnet sln [<SOLUTION_FILE>] add [--in-root] [-s|--solution-folder <PATH>] <PROJECT_PATH> [<PROJECT_PATH>...]
 dotnet sln add [-h|--help]
 ```
 
@@ -100,7 +102,7 @@ dotnet sln add [-h|--help]
 
   솔루션 폴더를 만드는 대신, 솔루션의 루트에 프로젝트를 배치합니다. .NET Core 3.0 SDK 이후 사용할 수 있습니다.
 
-- **`-s|--solution-folder`**
+- **`-s|--solution-folder <PATH>`**
 
   프로젝트를 추가하려는 대상 솔루션 폴더 경로입니다. .NET Core 3.0 SDK 이후 사용할 수 있습니다.
 
@@ -175,8 +177,20 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
   dotnet sln todo.sln add **/*.csproj
   ```
 
+- 와일드카드 사용 패턴을 사용하여 솔루션에 여러 C# 프로젝트를 추가합니다(Windows PowerShell만 해당).
+
+  ```dotnetcli
+  dotnet sln todo.sln add (ls **/*.csproj)
+  ```
+
 - 와일드카드 사용 패턴을 사용하여 솔루션에서 여러 C# 프로젝트를 제거합니다(Unix/Linux만 해당).
 
   ```dotnetcli
   dotnet sln todo.sln remove **/*.csproj
+  ```
+
+- 와일드카드 사용 패턴을 사용하여 솔루션에서 여러 C# 프로젝트를 제거합니다(Windows PowerShell만 해당).
+
+  ```dotnetcli
+  dotnet sln todo.sln remove (ls **/*.csproj)
   ```

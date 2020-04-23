@@ -5,12 +5,12 @@ ms.date: 02/21/2020
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 33afd568bb12b855a3888bec31f2e9bbc3c720da
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f340805200a14e0e145ffe1bf20f8059df63555
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77628672"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81608051"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>Azure Functions에 모델 배포
 
@@ -21,7 +21,7 @@ Azure Functions 서버리스 환경을 통해 HTTP에서의 예측을 위해 미
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- “.NET Core 플랫폼 간 개발” 워크로드 및 “Azure 개발”이 설치된 [Visual Studio 2017 버전 15.6 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)
+- “.NET Core 플랫폼 간 개발” 및 “Azure 개발” 워크로드가 설치된 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 이상 또는 Visual Studio 2017 버전 15.6 이상.
 - [Azure Functions 도구](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
 - PowerShell
 - 미리 학습된 모델입니다. [ML.NET 감정 분석 자습서](../tutorials/sentiment-analysis.md)를 사용하여 자체 모델을 빌드하거나 이 [미리 학습된 감정 분석 기계 학습 모델](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip) 다운로드
