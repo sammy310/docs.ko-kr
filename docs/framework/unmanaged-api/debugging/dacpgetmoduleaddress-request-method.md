@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 6850dc256a70e0c0343104b3904e9eda62d11e7e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4dbe6a2c295e5afae1b6761f0c7b695fdb906428
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179209"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102909"
 ---
 # <a name="dacpgetmoduleaddressrequest-method"></a>DacpGetModuleAddress::요청 방법
 
@@ -49,11 +49,12 @@ HRESULT Request(
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
-**헤더:** 라이브러리 **없음:** 없음  
-**.NET Framework 버전:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md) 보기\
+**헤더:** 없음\
+**라이브러리:** 없음\
+**.NET 프레임워크 버전:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
 ## <a name="see-also"></a>참고 항목
 
 - [디버깅](index.md)
-- [DacpGet모듈주소 인터페이스](dacpgetmoduleaddress-structure.md)
+- [DacpGet모듈주소 구조](dacpgetmoduleaddress-structure.md)

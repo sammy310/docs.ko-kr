@@ -9,12 +9,12 @@ helpviewer_keywords:
 - gcConcurrent element
 - <gcConcurrent> element
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
-ms.openlocfilehash: 5957337aa960a0d5f445249b410dbfaddb7b08e9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 249518ae7477d284d50f9010757db83b7752c657
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400982"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102920"
 ---
 # <a name="gcconcurrent-element"></a>\<gc동시> 요소
 
@@ -82,7 +82,7 @@ ms.locfileid: "79400982"
 
 컴퓨터 구성 파일에 **gcConcurrentSetting** 설정이 있는 경우 모든 .NET Framework 응용 프로그램에 대한 기본값을 정의합니다. 컴퓨터 구성 파일 설정은 애플리케이션 구성 파일 설정을 재정의합니다.
 
-동시 및 백그라운드 가비지 수집에 대한 자세한 내용은 가비지 수집기본 [문서에서](../../../../standard/garbage-collection/fundamentals.md) [동시 가비지 수집,](../../../../standard/garbage-collection/fundamentals.md#concurrent-garbage-collection) [백그라운드 워크스테이션 가비지 수집](../../../../standard/garbage-collection/fundamentals.md#background-workstation-garbage-collection)및 [백그라운드 서버 가비지 수집](../../../../standard/garbage-collection/fundamentals.md#background-server-garbage-collection) 섹션을 참조하십시오.
+동시 및 백그라운드 가비지 수집에 대한 자세한 내용은 [Background 가비지 수집을](../../../../standard/garbage-collection/background-gc.md)참조하십시오.
 
 ## <a name="example"></a>예제
 
@@ -100,4 +100,4 @@ ms.locfileid: "79400982"
 
 - [런타임 설정 스키마](index.md)
 - [구성 파일 스키마](../index.md)
-- [가비지 수집 기본 사항](../../../../standard/garbage-collection/fundamentals.md)
+- [가비지 컬렉션 기본 사항](../../../../standard/garbage-collection/fundamentals.md)

@@ -2,12 +2,12 @@
 title: F# 코드 서식 지정 지침
 description: F# 코드 서식 지정에 대한 지침을 알아봅니다.
 ms.date: 11/04/2019
-ms.openlocfilehash: b8be70dd29a04e71614308164e541b99a1724305
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: dd48380a90ee92b2c1edaaabc116fa1cd8010390
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739561"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102491"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# 코드 서식 지정 지침
 
@@ -579,10 +579,10 @@ let pascalsTriangle =
 
 ```fsharp
 // Preferred
-let squares = [ for x in 1..10 -> x*x ]
+let squares = [ for x in 1..10 -> x * x ]
 
 // Not preferred
-let squares' = [ for x in 1..10 do yield x*x ]
+let squares' = [ for x in 1..10 do yield x * x ]
 ```
 
 이전 버전의 F# 언어는 `yield` 데이터를 조건부로 생성할 수 있거나 평가할 연속식이 있을 수 있는 상황에서 지정해야 합니다. 이전 F# `yield` 언어 버전으로 컴파일해야 하지 않는 한 이러한 키워드를 생략하는 것이 좋습니다.
@@ -816,10 +816,10 @@ let function1 a b = a - b * b
 ```fsharp
 // A1 and A2 are local modules.
 module A1 =
-    let function1 a b = a*a + b*b
+    let function1 a b = a * a + b * b
 
 module A2 =
-    let function2 a b = a*a - b*b
+    let function2 a b = a * a - b * b
 ```
 
 ### <a name="formatting-object-expressions-and-interfaces"></a>개체 표현식 및 인터페이스 서식 지정
@@ -878,7 +878,7 @@ type MyRecord =
 
 ### <a name="formatting-attributes-on-parameters"></a>매개 변수에 특성 서식 지정
 
-특성은 매개 변수에 배치될 수도 있습니다. 이 경우 매개 변수와 같은 줄에 이름을 배치합니다.
+특성은 매개 변수에 배치할 수도 있습니다. 이 경우 매개 변수와 같은 줄에 이름을 배치합니다.
 
 ```fsharp
 // Defines a class that takes an optional value as input defaulting to false.

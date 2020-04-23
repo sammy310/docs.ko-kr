@@ -8,12 +8,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: 95ae438e9fb52cc584d18a981bffb66147eb4a77
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 8d5cd73bb9393533cb669581420e24297cb5ff71
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242818"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102933"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<앱컨텍스트스위치> 요소
 
@@ -40,7 +40,7 @@ ms.locfileid: "81242818"
 
 ### <a name="value-attribute"></a>값 속성
 
-|값|설명|
+|값|Description|
 |-----------|-----------------|
 |"이름=값"|값 (또는)과`true` `false`함께 미리 정의된 스위치 이름입니다. 여러 스위치 이름/값 쌍은 세미콜론(";")으로 구분됩니다. .NET Framework에서 지원하는 미리 정의된 스위치 이름 목록은 설명 섹션을 참조하십시오.|
 
@@ -55,11 +55,11 @@ ms.locfileid: "81242818"
 |`runtime`|런타임 초기화 옵션에 대한 정보를 포함합니다.|
 
 ## <a name="remarks"></a>설명
- .NET Framework 4.6부터 구성 `<AppContextSwitchOverrides>` 파일의 요소를 통해 API 호출자는 앱이 새 기능을 활용할 수 있는지 또는 이전 버전의 라이브러리와의 호환성을 유지할 수 있는지 여부를 결정할 수 있습니다. 예를 들어 API의 동작이 두 버전의 라이브러리 간에 변경된 경우 `<AppContextSwitchOverrides>` 요소는 해당 API의 호출자가 새 기능을 지원하는 라이브러리 버전의 새 동작을 옵트아웃할 수 있도록 합니다. .NET Framework에서 API를 호출하는 앱의 경우 `<AppContextSwitchOverrides>` 이 요소는 앱이 해당 기능을 포함하는 .NET Framework 버전에서 실행되는 경우 이전 버전의 .NET Framework를 대상으로 하는 호출자가 새 기능을 옵트인하도록 허용할 수도 있습니다.
+ .NET Framework 4.6부터 `<AppContextSwitchOverrides>` 구성 파일의 요소를 통해 API 호출자는 앱이 새로운 기능을 활용할 수 있는지 또는 이전 버전의 라이브러리와의 호환성을 유지할 수 있는지 여부를 결정할 수 있습니다. 예를 들어 API의 동작이 두 버전의 라이브러리 간에 변경된 경우 `<AppContextSwitchOverrides>` 요소는 해당 API의 호출자가 새 기능을 지원하는 라이브러리 버전의 새 동작을 옵트아웃할 수 있도록 합니다. .NET Framework에서 API를 호출하는 앱의 경우 `<AppContextSwitchOverrides>` 이 요소는 앱이 해당 기능을 포함하는 .NET Framework 버전에서 실행되는 경우 이전 버전의 .NET Framework를 대상으로 하는 호출자가 새 기능을 옵트인하도록 허용할 수도 있습니다.
 
  `<AppContextSwitchOverrides>` 요소의 특성은 `value` 하나 이상의 세미콜론으로 구분된 이름/값 쌍으로 구성된 단일 문자열로 구성됩니다.  각 이름은 호환성 스위치를 식별하고 해당 값은 스위치가 `false`설정되어 있는지 여부를 나타내는 부울(또는)입니다.`true` 기본적으로 스위치는 `false`은 이며 라이브러리는 새 기능을 제공 합니다. 스위치가 설정된 경우에만 이전 기능을 제공합니다(즉, 해당 `true`값은). 이렇게 하면 라이브러리가 기존 API에 대한 새 동작을 제공하는 동시에 이전 동작에 의존하는 호출자가 새 기능을 옵트아웃할 수 있습니다.
 
- .NET 프레임워크는 다음 스위치를 지원합니다.
+.NET 프레임워크는 다음 스위치를 지원합니다.
 
 |이름 전환|Description|도입|
 |-----------------|-----------------|----------------|
@@ -141,7 +141,7 @@ ms.locfileid: "81242818"
 
  라이브러리 개발자는 사용자 지정 스위치를 정의하여 호출자가 라이브러리의 이후 버전에 도입된 변경된 기능을 옵트아웃할 수 있도록 할 수도 있습니다. 자세한 내용은 <xref:System.AppContext> 클래스를 참조하세요.
 
-## <a name="switches-in-aspnet-applications"></a>ASP.NET 애플리케이션의 스위치
+## <a name="switches-in-aspnet-apps"></a>ASP.NET 앱의 스위치
 
 web.config 파일의 [ \<appSettings>](../appsettings/index.md) 섹션에 [ \<추가>](../appsettings/add-element-for-appsettings.md) 요소를 추가하여 호환성 설정을 사용하도록 ASP.NET 응용 프로그램을 구성할 수 있습니다.
 
@@ -179,6 +179,7 @@ web.config 파일의 [ \<appSettings>](../appsettings/index.md) 섹션에 [ \<�
 
 ## <a name="see-also"></a>참고 항목
 
+- [.NET Framework 4.6 이상에서 새 동작 완화](../../../migration-guide/mitigations.md)
 - <xref:System.AppContext?displayProperty=nameWithType>
 - [\<런타임> 요소](runtime-element.md)
 - [\<구성> 요소](../configuration-element.md)
