@@ -130,6 +130,8 @@
           href: additional-security-considerations-in-windows-forms.md
     - name: Windows Forms에 대한 ClickOnce 배포
       href: clickonce-deployment-for-windows-forms.md
+    - name: .NET Core 3.0을 통한 접근성 개선 사항
+      href: windows-forms-accessibility-improvements.md
     - name: '방법: Windows Forms에서 키 컬렉션에 액세스'
       href: how-to-access-keyed-collections-in-windows-forms.md
     - name: Windows Forms 애플리케이션 강화
