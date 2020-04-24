@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: 2326520039085beb5f5294e23db67b67f9d7d7da
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: a6ab5463cc28aa590454ae1304714d3d12ee7c6b
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243273"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646131"
 ---
 # <a name="control-authoring-overview"></a>작성 개요 제어
 
@@ -38,7 +38,7 @@ ms.locfileid: "81243273"
 
 - **트리거.** A를 <xref:System.Windows.Trigger> 사용하면 새 컨트롤을 만들지 않고도 컨트롤의 모양과 동작을 동적으로 변경할 수 있습니다. 예를 들어 응용 프로그램에 <xref:System.Windows.Controls.ListBox> 여러 컨트롤이 있고 각 <xref:System.Windows.Controls.ListBox> 항목이 선택될 때 굵게 및 빨간색으로 표시하려고 한다고 가정합니다. 첫 번째 본능은 선택한 항목의 모양을 <xref:System.Windows.Controls.ListBox> 변경하는 <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> 메서드를 상속하고 재정의하는 클래스를 만드는 것이지만 더 나은 방법은 선택한 <xref:System.Windows.Controls.ListBoxItem> 항목의 모양을 변경하는 a의 스타일에 트리거를 추가하는 것입니다. 트리거를 사용하면 속성 값을 변경하거나 속성 값을 기반으로 작업을 수행할 수 있습니다. A를 <xref:System.Windows.EventTrigger> 사용하면 이벤트가 발생할 때 작업을 수행할 수 있습니다.
 
-스타일, 템플릿 및 트리거에 대한 자세한 내용은 [스타일 지정 및 템플릿](styling-and-templating.md)을 참조하세요.
+스타일, 템플릿 및 트리거에 대한 자세한 내용은 [스타일 지정 및 템플릿](../../../desktop-wpf/fundamentals/styles-templates-overview.md)을 참조하세요.
 
 일반적으로 컨트롤이 기존 컨트롤의 기능을 반영하지만 컨트롤이 다르게 보이게 하려면 이 섹션에서 설명하는 메서드 중 하나를 사용하여 기존 컨트롤의 모양을 변경할 수 있는지 여부를 먼저 고려해야 합니다.
 

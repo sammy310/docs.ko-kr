@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
-ms.openlocfilehash: 7d52d951d4fa4df83bbcca6b4cb479e18e532d2a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f6519675ebf3624152e1077e7582f04e38b1dce9
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79141630"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644047"
 ---
 # <a name="base-elements-overview"></a>기본 요소 개요
 에 있는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 클래스의 높은 백분율은 일반적으로 기본 요소 클래스로 SDK 설명서에서 참조 되는 4 개의 클래스에서 파생 됩니다. 이러한 <xref:System.Windows.UIElement>클래스는 <xref:System.Windows.FrameworkElement> <xref:System.Windows.ContentElement>" <xref:System.Windows.FrameworkContentElement>및 . 클래스는 <xref:System.Windows.DependencyObject> 둘 다의 <xref:System.Windows.UIElement> 공통 기본 클래스이기 때문에<xref:System.Windows.ContentElement>  
@@ -47,7 +47,7 @@ ms.locfileid: "79141630"
   
 - 스타일 지정 및 스토리보드 지원 - 자세한 내용은 및 <xref:System.Windows.Style> [스토리보드 개요를](../graphics-multimedia/storyboards-overview.md)참조하십시오.  
   
-- 데이터 바인딩 지원 - 자세한 내용은 [데이터 바인딩 개요를](../data/data-binding-overview.md)참조하십시오.  
+- 데이터 바인딩 지원 - 자세한 내용은 [데이터 바인딩 개요를](../../../desktop-wpf/data/data-binding-overview.md)참조하십시오.  
   
 - 동적 리소스 참조 지원 - 자세한 내용은 [XAML 리소스](../../../desktop-wpf/fundamentals/xaml-resources-define.md)를 참조하세요.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "79141630"
   
 - 스타일 지정 및 스토리보드 지원 - 자세한 내용은 및 <xref:System.Windows.Style> [애니메이션 개요를](../graphics-multimedia/animation-overview.md)참조하십시오.  
   
-- 데이터 바인딩 지원 - 자세한 내용은 [데이터 바인딩 개요를](../data/data-binding-overview.md)참조하십시오.  
+- 데이터 바인딩 지원 - 자세한 내용은 [데이터 바인딩 개요를](../../../desktop-wpf/data/data-binding-overview.md)참조하십시오.  
   
 - 동적 리소스 참조 지원 - 자세한 내용은 [XAML 리소스](../../../desktop-wpf/fundamentals/xaml-resources-define.md)를 참조하세요.  
   

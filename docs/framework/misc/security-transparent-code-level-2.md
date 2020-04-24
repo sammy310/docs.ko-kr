@@ -7,18 +7,18 @@ helpviewer_keywords:
 - security-transparent code
 - security-critical code
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
-ms.openlocfilehash: 7ac5660c2c431505f4992f5e687974c2b9d06672
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 12e991e4977b0866343158c05681ddf4bd0c869b
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217003"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645727"
 ---
 # <a name="security-transparent-code-level-2"></a>보안 투명 코드, 수준 2
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-수준 2 투명도는 .NET Framework 4에서 도입 되었습니다. 이 모델의 세 가지 개념은 투명 코드, 보안 안전에 중요 코드 및 보안에 중요 코드입니다.
+수준 2 투명성은 .NET 프레임워크 4에 도입되었습니다. 이 모델의 세 가지 개념은 투명 코드, 보안 안전에 중요 코드 및 보안에 중요 코드입니다.
 
 - 완전 신뢰로 실행되는 코드를 포함하는 투명 코드는 다른 투명 코드나 보안 안전에 중요 코드만 호출할 수 있습니다. 도메인의 부분 신뢰 권한 집합(있는 경우)에서 허용하는 작업만 수행할 수 있습니다. 투명 코드는 다음을 수행할 수 없습니다.
 
@@ -42,7 +42,7 @@ ms.locfileid: "77217003"
 
 ## <a name="usage-examples-and-behaviors"></a>사용 예제 및 동작
 
-.NET Framework 4 개 규칙 (수준 2 투명도)을 지정 하려면 어셈블리에 대해 다음 주석을 사용 합니다.
+.NET Framework 4 규칙(수준 2 투명도)을 지정하려면 어셈블리에 다음 지정을 사용합니다.
 
 ```csharp
 [assembly: SecurityRules(SecurityRuleSet.Level2)]
@@ -54,7 +54,7 @@ ms.locfileid: "77217003"
 [assembly: SecurityRules(SecurityRuleSet.Level1)]
 ```
 
-어셈블리에 주석을 추가 하지 않으면 기본적으로 .NET Framework 4 규칙이 사용 됩니다. 그러나 권장 되는 모범 사례는 기본값에 따라 대신 <xref:System.Security.SecurityRulesAttribute> 특성을 사용 하는 것입니다.
+어셈블리에 추가하지 않으면 .NET Framework 4 규칙이 기본적으로 사용됩니다. 그러나 기본값에 따라 달라지는 <xref:System.Security.SecurityRulesAttribute> 대신 특성을 사용하는 것이 좋습니다.
 
 ### <a name="assembly-wide-annotation"></a>어셈블리 수준 주석
 
@@ -68,7 +68,7 @@ ms.locfileid: "77217003"
 
 - `AllowPartiallyTrustedCallers`(수준 2만 해당): 모든 코드가 기본적으로 투명으로 설정됩니다. 그러나 개별 형식 및 멤버는 다른 특성을 포함할 수 있습니다.
 
-다음 표에서는 수준 2에 대 한 어셈블리 수준 동작과 수준 1을 비교 합니다.
+다음 표는 수준 2의 어셈블리 수준 동작과 수준 1을 비교합니다.
 
 |어셈블리 특성|수준 2|수준 1|
 |------------------------|-------------|-------------|
@@ -158,26 +158,26 @@ ms.locfileid: "77217003"
 
 수준 2 투명도 모델은 <xref:System.Security.Permissions.SecurityAction.LinkDemand>를 <xref:System.Security.SecurityCriticalAttribute> 특성으로 바꿉니다. 레거시(수준 1) 코드에서 <xref:System.Security.Permissions.SecurityAction.LinkDemand>는 자동으로 <xref:System.Security.Permissions.SecurityAction.Demand>로 처리됩니다.
 
-### <a name="reflection"></a>리플렉션
+### <a name="reflection"></a>반사
 
 중요한 메서드를 호출하거나 중요한 필드를 읽으면 private 메서드나 필드를 호출한 것처럼 완전 신뢰에 대한 요청이 트리거됩니다. 따라서 완전 신뢰 코드는 중요한 메서드를 호출할 수 있지만 부분 신뢰 코드는 호출할 수 없습니다.
 
-형식, 메서드 또는 필드가 <xref:System.Reflection>, `SecurityCritical` 또는 `SecuritySafeCritical`인지 확인하려고 `SecurityTransparent` 네임스페이스에 <xref:System.Type.IsSecurityCritical%2A>, <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A> 및 <xref:System.Reflection.MethodBase.IsSecurityTransparent%2A> 속성이 추가되었습니다. 이들 속성을 사용하여 특성이 있는지 확인하는 것이 아니라 리플렉션을 통해 투명도를 확인합니다. 투명도 규칙은 복잡하고 특성이 있는지 확인하는 것으로는 충분하지 않을 수 있습니다.
+형식, 메서드 또는 필드가 `SecurityCritical`, `SecuritySafeCritical` 또는 `SecurityTransparent`인지 확인하려고 <xref:System.Reflection> 네임스페이스에 <xref:System.Type.IsSecurityCritical%2A>, <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A> 및 <xref:System.Reflection.MethodBase.IsSecurityTransparent%2A> 속성이 추가되었습니다. 이들 속성을 사용하여 특성이 있는지 확인하는 것이 아니라 리플렉션을 통해 투명도를 확인합니다. 투명도 규칙은 복잡하고 특성이 있는지 확인하는 것으로는 충분하지 않을 수 있습니다.
 
 > [!NOTE]
-> `SafeCritical` 메서드는 <xref:System.Type.IsSecurityCritical%2A> 및 <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>에 대 한 `true`를 반환 합니다 .이는 중요 한 코드와 동일한 기능을 포함 하지만 투명 코드에서 호출할 수 있기 `SafeCritical` 때문입니다.
+> 메서드는 `SafeCritical` `true` 매우 <xref:System.Type.IsSecurityCritical%2A> 중요하기 `SafeCritical` 때문에 및 <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>에 대해 반환합니다(중요한 코드와 동일한 기능을 가지고 있지만 투명 코드에서 호출할 수 있음).
 
 동적 메서드는 연결된 모듈의 투명도를 상속합니다. 형식의 투명도를 상속하지 않습니다(형식에 연결된 경우).
 
 ### <a name="skip-verification-in-full-trust"></a>완전 신뢰에서 확인 건너뛰기
 
-<xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> 특성에서 `true` 속성을 <xref:System.Security.SecurityRulesAttribute>로 설정하여 완전히 신뢰할 수 있는 어셈블리에 대한 확인을 건너뛸 수 있습니다.
+<xref:System.Security.SecurityRulesAttribute> 특성에서 <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> 속성을 `true`로 설정하여 완전히 신뢰할 수 있는 어셈블리에 대한 확인을 건너뛸 수 있습니다.
 
 `[assembly: SecurityRules(SecurityRuleSet.Level2, SkipVerificationInFullTrust = true)]`
 
-<xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> 속성은 기본적으로 `false`이므로 확인을 건너뛰려면 속성을 `true`로 설정해야 합니다. 이 작업은 최적화 목적으로만 수행해야 합니다. [PEVerify 도구의](../tools/peverify-exe-peverify-tool.md)`transparent` 옵션을 사용 하 여 어셈블리의 투명 코드를 확인할 수 있는지 확인 해야 합니다.
+<xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> 속성은 기본적으로 `false`이므로 확인을 건너뛰려면 속성을 `true`로 설정해야 합니다. 이 작업은 최적화 목적으로만 수행해야 합니다. `transparent` [PEVerify 도구에서](../tools/peverify-exe-peverify-tool.md)옵션을 사용하여 어셈블리의 투명 코드를 확인할 수 있는지 확인해야 합니다.
 
 ## <a name="see-also"></a>참고 항목
 
-- [보안 투명 코드, 수준 1](security-transparent-code-level-1.md)
-- [보안 변경 내용](../security/security-changes.md)
+- [보안 투명 코드, 레벨 1](security-transparent-code-level-1.md)
+- [보안 변경 사항](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)

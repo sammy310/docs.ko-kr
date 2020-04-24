@@ -7,24 +7,24 @@ helpviewer_keywords:
 - XAML [WPF]
 - Extensible Application Markup Language [WPF]
 ms.assetid: 5d858575-a83b-42df-ad3f-047ed2d6e3c8
-ms.openlocfilehash: 7b4811290d58b946bd9f115cb15d5eb0fda03b1d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 00525e8bd085126e15de9c80bdd5fc0106d565d6
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741885"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646157"
 ---
 # <a name="xaml-in-wpf"></a>WPF의 XAML
 
-[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]은 선언적 응용 프로그램 프로그래밍을 위한 태그 언어입니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 XAML 프로세서 구현을 구현 하 고 XAML 언어 지원을 제공 합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 형식은 XAML 표현에 필요한 형식 지원을 제공할 수 있도록 구현 됩니다. 일반적으로 XAML 태그에서 대부분의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 UI를 만들 수 있습니다.  
+[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]는 선언적 응용 프로그램 프로그래밍을 위한 태그 언어입니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]XAML 프로세서 구현을 구현하고 XAML 언어 지원을 제공합니다. 형식은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML 표현에 필요한 형식 백업을 제공할 수 있도록 구현됩니다. 일반적으로 XAML 태그에서 대부분의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 UI를 만들 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
 
-[XAML 개요(WPF)](xaml-overview-wpf.md)  
+[XAML 개요(WPF)](../../../desktop-wpf/fundamentals/xaml.md)  
 [XAML 구문 정보](xaml-syntax-in-detail.md)  
 [WPF의 코드 숨김 및 XAML](code-behind-and-xaml-in-wpf.md)  
 [WPF에 대한 XAML 및 사용자 지정 클래스](xaml-and-custom-classes-for-wpf.md)  
-[태그 확장 및 WPF XAML](markup-extensions-and-wpf-xaml.md)  
+[태그 확장명 및 WPF XAML](markup-extensions-and-wpf-xaml.md)  
 [WPF XAML을 위한 XAML 네임스페이스 및 네임스페이스 매핑](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
 [WPF XAML 이름 범위](wpf-xaml-namescopes.md)  
 [인라인 스타일 및 템플릿](inline-styles-and-templates.md)  
@@ -35,11 +35,11 @@ ms.locfileid: "76741885"
 [WPF XAML 확장](wpf-xaml-extensions.md)  
 [태그 호환성(mc:) 언어 기능](markup-compatibility-mc-language-features.md)  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
 
 [WPF 아키텍처](wpf-architecture.md)  
 [기본 요소](base-elements.md)  
-[요소 트리 및 Serialization](element-tree-and-serialization.md)  
+[요소 트리 및 serialization](element-tree-and-serialization.md)  
 [속성](properties-wpf.md)  
 [이벤트](events-wpf.md)  
 [입력](input-wpf.md)  

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [.NET Framework], code access security
 ms.assetid: 4eaa6535-d9fe-41a1-91d8-b437cfc16921
-ms.openlocfilehash: 08d708e8f98bd2fe06757df3033a512e2fe1f3c2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 352fa41cb9d3136f853b068d0101a6dcab5dfd7c
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400994"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645770"
 ---
 # <a name="code-access-security-basics"></a>코드 액세스 보안 기본 사항
 
@@ -53,7 +53,7 @@ JIT(Just-In-Time) 컴파일은 코드를 검사하고 코드의 형식이 안전
 선언적 보안 구문은 [특성을](../../standard/attributes/index.md) 사용하여 보안 정보를 코드의 [메타데이터에](../../standard/metadata-and-self-describing-components.md) 배치합니다. 어셈블리, 클래스 또는 멤버 수준에 특성을 배치하여 사용할 요청, 요구 또는 재정의 형식을 나타낼 수 있습니다. 요청은 애플리케이션이 요구하거나 원하지 않는 권한에 대해 런타임 보안 시스템에 알리기 위해 공용 언어 런타임을 대상으로 하는 애플리케이션에서 사용됩니다. 요구와 재정의는 호출자로부터 리소스를 보호하거나 기본 보안 동작을 재정의하기 위해 라이브러리에서 사용됩니다.
 
 > [!NOTE]
-> .NET Framework 4에서는 .NET Framework 보안 모델 및 용어에 중요한 변경 사항이 있었습니다. 이러한 변경 사항에 대한 자세한 내용은 [보안 변경 을](../security/security-changes.md)참조하십시오.
+> .NET Framework 4에서는 .NET Framework 보안 모델 및 용어에 중요한 변경 사항이 있었습니다. 이러한 변경 사항에 대한 자세한 내용은 [보안 변경 을](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)참조하십시오.
 
 선언적 보안 호출을 사용하려면 필요한 특정 형식의 권한을 나타내도록 권한 개체의 상태 데이터를 초기화해야 합니다. 모든 기본 제공 권한에는 수행할 보안 작업 형식을 설명하는 <xref:System.Security.Permissions.SecurityAction> 열거형이 전달되는 특성이 있습니다. 그러나 권한은 고유한 전용 매개 변수도 수락합니다.
 
@@ -166,4 +166,4 @@ public class MyClass {
 - [코드 액세스 보안](code-access-security.md)
 - [코드 액세스 보안 기본 사항](code-access-security-basics.md)
 - [특성](../../standard/attributes/index.md)
-- [메타데이터 및 자동 기술 구성 요소](../../standard/metadata-and-self-describing-components.md)
+- [메타데이터 및 자체 설명 구성 요소](../../standard/metadata-and-self-describing-components.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: 696772da1ebee405493f2ff0e1481daf93d08ec7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aed4350f1a7084b7894a70ac9d6d00cf25b39e34
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187028"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646194"
 ---
 # <a name="trees-in-wpf"></a>WPF의 트리
 대부분의 기술에서 요소와 구성 요소는 트리 구조로 구성됩니다. 이 트리 구조에서 개발자는 트리의 개체 노드를 직접 조작하여 애플리케이션의 동작이나 렌더링에 영향을 줍니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서도 여러 가지 트리 구조 메타포를 사용하여 프로그램 요소 간의 관계를 정의합니다. 대부분 경우 WPF 개발자는 개념적으로 개체 트리 메타포를 고려하면서 코드로 애플리케이션을 만들거나 XAML로 애플리케이션의 일부를 정의할 수 있지만 XML DOM에서 사용할 수 있는 몇 가지 일반적인 개체 트리 조작 API 대신 특정 API를 호출하거나 특정 태그를 사용하여 이 작업을 수행합니다. WPF는 트리 비유 보기를 제공하는 두 개의 <xref:System.Windows.LogicalTreeHelper> <xref:System.Windows.Media.VisualTreeHelper>도우미 클래스를 노출하고 . 또한 WPF 설명서에서는 시각적 트리와 논리 트리라는 용어를 사용하는데 이러한 동일한 트리는 특정 주요 WPF 기능의 동작을 이해하는 데 유용하기 때문입니다. 이 항목에서는 시각적 트리와 논리 트리가 나타내는 내용을 정의하고 이러한 트리가 전체 <xref:System.Windows.LogicalTreeHelper> 개체 <xref:System.Windows.Media.VisualTreeHelper>트리 개념과 어떻게 관련되는지 설명하고 소개하고 소개합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "79187028"
   
  그러나 논리 트리는 XAML 암시적 구문 항목이 고려된 경우에도 런타임에 응용 프로그램 UI에 대해 존재하는 전체 개체 그래프가 아닙니다. 주된 이유는 시각적 개체와 템플릿입니다. 예를 들어 을 <xref:System.Windows.Controls.Button>고려합니다. 논리 트리는 <xref:System.Windows.Controls.Button> 개체와 해당 `Content`문자열을 보고합니다. 하지만 런타임 개체 트리의 이 단추에는 더 많은 정보가 있습니다. 특히 특정 <xref:System.Windows.Controls.Button> 컨트롤 템플릿이 적용되었기 때문에 단추는 화면에만 나타납니다. 적용된 템플릿에서 얻은 시각적 개체(예: 시각적 <xref:System.Windows.Controls.Border> 단추 주위에 어두운 회색으로 정의된 템플릿)는 런타임 동안 논리 트리를 보고 있는 경우에도 논리 트리에 보고되지 않습니다(예: 보이는 UI에서 입력 이벤트를 처리한 다음 논리 트리를 읽는 경우). 템플릿 시각 효과를 찾으려면 시각적 트리를 대신 검사해야 합니다.  
   
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 구문이 생성된 개체 그래프에 매핑되는 방법 및 XAML의 암시적 구문에 대한 자세한 내용은 [XAML 구문 정보](xaml-syntax-in-detail.md) 또는 [XAML 개요(WPF)](xaml-overview-wpf.md)를 참조하세요.  
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 구문이 생성된 개체 그래프에 매핑되는 방법 및 XAML의 암시적 구문에 대한 자세한 내용은 [XAML 구문 정보](xaml-syntax-in-detail.md) 또는 [XAML 개요(WPF)](../../../desktop-wpf/fundamentals/xaml.md)를 참조하세요.  
   
 <a name="tree_property_inheritance_event_routing"></a>
 ### <a name="the-purpose-of-the-logical-tree"></a>논리 트리의 용도  

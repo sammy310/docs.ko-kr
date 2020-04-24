@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 ms.topic: tutorial
 ms.custom: mvc,vs-dotnet
-ms.openlocfilehash: facb9ebebd9ce1904886a946277185ac2c2e4bc4
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 9381873faa8cca1accf95d823f5183a218d28813
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463918"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646425"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>자습서: Visual Studio 2019에서 첫 번째 WPF 응용 프로그램 만들기
 
 이 문서에서는 대부분의 WPF 응용 프로그램에 공통적인 요소인 확장 가능한 응용 프로그램 태그 언어(XAML) 태그, 코드 숨김, 응용 프로그램 정의, 컨트롤, 레이아웃, 데이터 바인딩 및 스타일과 같은 요소를 포함하는 WPF(Windows 프레젠테이션 Foundation) 데스크톱 응용 프로그램을 개발하는 방법을 보여 주었습니다. 응용 프로그램을 개발하려면 Visual Studio를 사용합니다.
 
-이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
+이 자습서에서는 다음 작업 방법을 알아봅니다.
 > [!div class="checklist"]
 >
 > - WPF 프로젝트를 만듭니다.
@@ -358,7 +358,7 @@ ms.locfileid: "81463918"
 
 ## <a name="style-controls"></a>스타일 컨트롤
 
-다양한 요소의 모양은 UI에서 동일한 형식의 모든 요소에 대해 동일합니다. UI는 [스타일을](../controls/styling-and-templating.md) 사용하여 여러 요소에서 모양을 재사용할 수 있도록 합니다. 스타일 재사용성은 XAML 생성 및 관리를 단순화하는 데 도움이 됩니다. 이 섹션에서는 이전 단계에서 정의된 요소별 특성을 스타일로 바꿉니다.
+다양한 요소의 모양은 UI에서 동일한 형식의 모든 요소에 대해 동일합니다. UI는 [스타일을](../../../desktop-wpf/fundamentals/styles-templates-overview.md) 사용하여 여러 요소에서 모양을 재사용할 수 있도록 합니다. 스타일 재사용성은 XAML 생성 및 관리를 단순화하는 데 도움이 됩니다. 이 섹션에서는 이전 단계에서 정의된 요소별 특성을 스타일로 바꿉니다.
 
 1. *응용 프로그램.xaml* 또는 *App.xaml을*엽니 다.
 
@@ -481,7 +481,7 @@ ms.locfileid: "81463918"
 이 연습에서는 WPF(Windows 프레젠테이션 파운데이션)를 사용하여 UI를 만드는 여러 가지 기술을 배웠습니다. 이제 데이터 바인딩 .NET 앱의 구성 요소를 기본적으로 이해해야 합니다. WPF 아키텍처 및 프로그래밍 모델에 대한 자세한 내용은 다음 항목을 참조하세요.
 
 - [WPF 아키텍처](../advanced/wpf-architecture.md)
-- [XAML 개요(WPF)](../advanced/xaml-overview-wpf.md)
+- [XAML 개요(WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [종속성 속성 개요](../advanced/dependency-properties-overview.md)
 - [레이아웃](../advanced/layout.md)
 
@@ -493,7 +493,7 @@ ms.locfileid: "81463918"
 - [그래픽 및 멀티미디어](../graphics-multimedia/index.md)
 - [WPF의 문서](../advanced/documents-in-wpf.md)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [패널 개요](../controls/panels-overview.md)
 - [데이터 템플릿 개요](../data/data-templating-overview.md)

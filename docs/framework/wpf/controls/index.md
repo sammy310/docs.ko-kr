@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-ms.openlocfilehash: 2ec8c0a99f4e2431aed0d8c24168b7329de669f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2aab0fc8adaf17a8e9820a6269a740ef09540cda
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187530"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646483"
 ---
 # <a name="controls"></a>컨트롤
 <a name="introduction"></a>
@@ -54,7 +54,7 @@ ms.locfileid: "79187530"
   
  [!code-xaml[ControlsOverview#5](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml#5)]  
   
- 스타일에 키를 할당하고 컨트롤 속성에 해당 키를 지정하여 특정 형식의 특정 컨트롤에만 `Style` 스타일을 적용할 수도 있습니다.  스타일에 대한 자세한 내용은 [스타일 지정 및 템플릿을](styling-and-templating.md)참조하십시오.  
+ 스타일에 키를 할당하고 컨트롤 속성에 해당 키를 지정하여 특정 형식의 특정 컨트롤에만 `Style` 스타일을 적용할 수도 있습니다.  스타일에 대한 자세한 내용은 [스타일 지정 및 템플릿을](../../../desktop-wpf/fundamentals/styles-templates-overview.md)참조하십시오.  
   
 ### <a name="creating-a-controltemplate"></a>ControlTemplate 만들기  
  A를 <xref:System.Windows.Style> 사용하면 한 번에 여러 컨트롤에 속성을 설정할 수 있지만 <xref:System.Windows.Controls.Control> <xref:System.Windows.Style>때로는 을 만들어 수행할 수 있는 것 이상으로 모양을 사용자 지정할 수 있습니다. <xref:System.Windows.Controls.Control> 클래스에서 상속하는 클래스에는 <xref:System.Windows.Controls.ControlTemplate> <xref:System.Windows.Controls.Control>의 구조와 모양을 정의하는 .가 있습니다. a의 <xref:System.Windows.Controls.Control.Template%2A> <xref:System.Windows.Controls.Control> 속성은 공용이므로 기본값과 <xref:System.Windows.Controls.Control> <xref:System.Windows.Controls.ControlTemplate> 다른 a를 제공할 수 있습니다. 컨트롤에서 상속하는 <xref:System.Windows.Controls.ControlTemplate> <xref:System.Windows.Controls.Control> 대신 에 대한 새 를 지정하여 <xref:System.Windows.Controls.Control>의 모양을 사용자 지정할 수 있습니다.  
@@ -99,12 +99,12 @@ ms.locfileid: "79187530"
   
 ## <a name="see-also"></a>참고 항목
 
-- [스타일 지정 및 템플릿](styling-and-templating.md)
-- [범주별 컨트롤](controls-by-category.md)
+- [스타일 지정 및 템플릿](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
+- [컨트롤 범주](controls-by-category.md)
 - [컨트롤 라이브러리](control-library.md)
 - [데이터 템플릿 개요](../data/data-templating-overview.md)
 - [데이터 바인딩 개요](../../../desktop-wpf/data/data-binding-overview.md)
 - [입력](../advanced/input-wpf.md)
 - [명령 사용](../advanced/how-to-enable-a-command.md)
-- [연습: 사용자 지정 애니메이션 단추 만들기](walkthroughs-create-a-custom-animated-button.md)
+- [연습: 사용자 지정 애니메이션 효과가 있는 단추 만들기](walkthroughs-create-a-custom-animated-button.md)
 - [컨트롤 사용자 지정](control-customization.md)

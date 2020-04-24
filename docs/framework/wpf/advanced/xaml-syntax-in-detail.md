@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: dbff4bed59c8d1e861555676578b52528e2aebbe
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5f8bb862ce443fd7397036b10f69cda65a6960bc
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186181"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646153"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 구문 정보
 이 항목에서는 XAML 구문의 요소를 설명하는 데 사용되는 용어를 정의합니다. 이러한 용어는 WPF 설명서와 XAML을 사용하는 다른 프레임워크 또는 System.Xaml 수준에서 XAML 언어 지원에서 사용할 수 있는 기본 XAML 개념모두에 대해 이 설명서의 나머지 부분에서 자주 사용됩니다. 이 항목에서는 [XAML 개요(WPF)](../../../desktop-wpf/fundamentals/xaml.md)항목에 소개된 기본 용어에 대해 확장합니다.  
@@ -130,7 +130,7 @@ ms.locfileid: "79186181"
   
  *typeName*을 사용하여 기본 네임스페이스를 통해 액세스할 수 있는 모든 개체의 이벤트 이름을 지정할 수도 있습니다. *이벤트* 부분적으로 정규화된 이름; 이 구문은 처리기가 자식 요소에서 이벤트 라우팅을 처리하기 위한 라우트된 이벤트에 대한 처리기를 첨부하는 것을 지원하지만 부모 요소는 해당 멤버 테이블에 해당 이벤트가 없습니다. 이 구문은 연결된 이벤트 구문과 유사하지만 여기서 이벤트는 실제 연결된 이벤트가 아닙니다. 대신 정규화된 이름으로 이벤트를 참조합니다. 자세한 내용은 [라우트된 이벤트 개요](routed-events-overview.md)합니다.  
   
- 일부 시나리오에서는 속성 이름이 특성 이름이 아니라 특성 값으로 제공되는 경우도 있습니다. 해당 속성 이름에는 양식 *ownerType에*지정된 속성과 같은 한정자도 포함될 수 있습니다. *종속성속성 Name*. 이 시나리오는 XAML에서 스타일이나 템플릿을 작성할 때 일반적입니다. 속성 값으로 제공되는 속성 이름에 대한 처리 규칙은 서로 다르며 설정되는 속성의 형식 또는 특정 WPF 하위 시스템의 동작에 의해 제어됩니다. 자세한 내용은 [스타일 지정 및 템플릿을](../controls/styling-and-templating.md)참조하십시오.  
+ 일부 시나리오에서는 속성 이름이 특성 이름이 아니라 특성 값으로 제공되는 경우도 있습니다. 해당 속성 이름에는 양식 *ownerType에*지정된 속성과 같은 한정자도 포함될 수 있습니다. *종속성속성 Name*. 이 시나리오는 XAML에서 스타일이나 템플릿을 작성할 때 일반적입니다. 속성 값으로 제공되는 속성 이름에 대한 처리 규칙은 서로 다르며 설정되는 속성의 형식 또는 특정 WPF 하위 시스템의 동작에 의해 제어됩니다. 자세한 내용은 [스타일 지정 및 템플릿을](../../../desktop-wpf/fundamentals/styles-templates-overview.md)참조하십시오.  
   
  속성 이름에 대한 또 다른 용도는 특성 값이 속성-속성 관계를 설명하는 경우입니다. 이 기능은 데이터 바인딩 및 스토리보드 대상에 사용되며 <xref:System.Windows.PropertyPath> 클래스 및 해당 형식 변환기에서 사용할 수 있습니다. 조회 의미체계에 대한 자세한 설명은 [PropertyPath XAML 구문을](propertypath-xaml-syntax.md)참조하십시오.  
   
@@ -173,7 +173,7 @@ ms.locfileid: "79186181"
   
  컬렉션 형식에 대 한 .NET 참조 페이지에서 컬렉션에 대 한 개체 요소를 의도적으로 생략 하는이 구문은 경우에 따라 XAML 구문 섹션에 암시적 컬렉션 구문으로 기록 됩니다.  
   
- 루트 요소를 제외하고 다른 요소의 자식 요소로 중첩되는 XAML 파일의 모든 개체 요소는 실제로 다음 사례 중 하나 또는 둘 다인 요소입니다. 또는 상위 요소에 대한 XAML 콘텐츠 속성값을 지정하는 요소입니다(XAML 콘텐츠 속성은 다음 섹션에서 설명합니다). 즉, 태그 페이지의 부모 요소와 자식 요소의 관계는 실제로 루트의 단일 개체이며 루트 아래의 모든 개체 요소는 부모의 속성 값을 제공하는 단일 인스턴스 또는 컬렉션은 부모의 컬렉션 형식 속성 값입니다. 이 단일 루트 개념은 XML에서 일반적이며 와 같은 <xref:System.Windows.Markup.XamlReader.Load%2A>XAML을 로드하는 API 동작에서 자주 강화됩니다.  
+ 루트 요소를 제외하고 다른 요소의 자식 요소로 중첩된 XAML 파일의 모든 개체 요소는 실제로 부모 요소의 암시적 컬렉션 속성의 멤버 또는 상위 요소에 대한 XAML 콘텐츠 속성의 값을 지정하는 요소(XAML 콘텐츠 속성은 다음 섹션에서 설명)와 같은 경우 중 하나 또는 둘 모두에 해당하는 요소입니다. 즉, 태그 페이지의 부모 요소와 자식 요소의 관계는 실제로 루트의 단일 개체이며 루트 아래의 모든 개체 요소는 부모의 속성 값을 제공하는 단일 인스턴스이거나 컬렉션 내의 항목 중 하나이며 부모의 컬렉션 형식 속성 값입니다. 이 단일 루트 개념은 XML에서 일반적이며 와 같은 <xref:System.Windows.Markup.XamlReader.Load%2A>XAML을 로드하는 API 동작에서 자주 강화됩니다.  
   
  다음 예제는 컬렉션 ()<xref:System.Windows.Media.GradientStopCollection>명시적으로 지정 된 개체 요소와 구문입니다.  
   
@@ -227,7 +227,7 @@ ms.locfileid: "79186181"
   
 <a name="content_properties_and_collection_syntax_combined"></a>
 ## <a name="content-properties-and-collection-syntax-combined"></a>콘텐츠 속성 및 컬렉션 구문 조합  
- 두 개 이상의 개체 요소를 콘텐츠로 허용하려면 콘텐츠 속성의 형식이 컬렉션 형식이어야 합니다. 컬렉션 형식에 대 한 속성 요소 구문과 마찬가지로 XAML 프로세서는 컬렉션 형식인 형식을 식별 해야 합니다. 요소에 XAML 콘텐츠 속성이 있고 XAML 콘텐츠 속성의 형식이 컬렉션인 경우 암시된 컬렉션 형식을 태그에 개체 요소로 지정할 필요가 없으며 XAML 콘텐츠 속성을 속성으로 지정할 필요가 없습니다. 요소. 따라서 태그의 명백한 콘텐츠 모델에는 콘텐츠로 할당된 두 개 이상의 자식 요소가 있을 수 있습니다. 다음은 파생 클래스의 콘텐츠 <xref:System.Windows.Controls.Panel> 구문입니다. 파생된 모든 <xref:System.Windows.Controls.Panel> 클래스는 XAML <xref:System.Windows.Controls.Panel.Children%2A> <xref:System.Windows.Controls.UIElementCollection>콘텐츠 속성을 type 값이어야 하는 것으로 설정합니다.  
+ 두 개 이상의 개체 요소를 콘텐츠로 허용하려면 콘텐츠 속성의 형식이 컬렉션 형식이어야 합니다. 컬렉션 형식에 대 한 속성 요소 구문과 마찬가지로 XAML 프로세서는 컬렉션 형식인 형식을 식별 해야 합니다. 요소에 XAML 콘텐츠 속성이 있고 XAML 콘텐츠 속성의 형식이 컬렉션인 경우 암시된 컬렉션 형식을 태그에 개체 요소로 지정할 필요가 없으며 XAML 콘텐츠 속성을 속성 요소로 지정할 필요가 없습니다. 따라서 태그의 명백한 콘텐츠 모델에는 콘텐츠로 할당된 두 개 이상의 자식 요소가 있을 수 있습니다. 다음은 파생 클래스의 콘텐츠 <xref:System.Windows.Controls.Panel> 구문입니다. 파생된 모든 <xref:System.Windows.Controls.Panel> 클래스는 XAML <xref:System.Windows.Controls.Panel.Children%2A> <xref:System.Windows.Controls.UIElementCollection>콘텐츠 속성을 type 값이어야 하는 것으로 설정합니다.  
   
  [!code-xaml[XAMLOvwSupport#SyntaxContent](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page5.xaml#syntaxcontent)]  
   

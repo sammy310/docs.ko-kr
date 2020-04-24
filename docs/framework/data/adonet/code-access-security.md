@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 6fc54bb9e38768e390201ea77243d3df4cd67f10
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7b0f269bd4dce8ddaaaa72c3760a4d7a0e3eb8b9
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151743"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646021"
 ---
 # <a name="code-access-security-and-adonet"></a>코드 액세스 보안 및 ADO.NET
 .NET Framework는 역할 기반 보안과 CAS(코드 액세스 보안)를 제공합니다. 두 보안 기능 모두 CLR(공용 언어 런타임)이 제공하는 공용 인프라를 사용하여 구현되었습니다. 비관리 코드의 경우 대부분의 애플리케이션은 사용자 또는 보안 주체 권한으로 실행됩니다. 결과적으로 높은 권한을 가진 사용자가 악의적이거나 오류가 많은 소프트웨어를 실행하면 컴퓨터 시스템과 개인 데이터가 손상될 수 있습니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "79151743"
  빌드하려는 애플리케이션 종류에 따라 데이터베이스에 역할 기반 권한을 구현하는 것을 고려해야 합니다. SQL Server의 역할 기반 보안에 대한 자세한 내용은 [SQL Server 보안](./sql/sql-server-security.md)을 참조하십시오.  
   
 ## <a name="assemblies"></a>어셈블리  
- 어셈블리는 .NET Framework 애플리케이션에 대한 배포, 버전 제어, 재사용, 활성화 범위 및 보안 권한의 기본 단위를 형성합니다. 어셈블리는 함께 작동하도록 빌드되고 논리적 기능 단위를 형성하는 리소스 및 형식 컬렉션을 제공합니다. CLR의 경우 어셈블리 컨텍스트 외부에는 형식이 존재하지 않습니다. 어셈블리 만들기 및 배포에 대한 자세한 내용은 [어셈블리를 사용 하](../../../standard/assembly/program.md)여 프로그래밍을 참조 합니다.  
+ 어셈블리는 .NET Framework 애플리케이션에 대한 배포, 버전 제어, 재사용, 활성화 범위 및 보안 권한의 기본 단위를 형성합니다. 어셈블리는 함께 작동하도록 빌드되고 논리적 기능 단위를 형성하는 리소스 및 형식 컬렉션을 제공합니다. CLR의 경우 어셈블리 컨텍스트 외부에는 형식이 존재하지 않습니다. 어셈블리 만들기 및 배포에 대한 자세한 내용은 [어셈블리를 사용 하](../../../standard/assembly/index.md)여 프로그래밍을 참조 합니다.  
   
 ### <a name="strong-naming-assemblies"></a>어셈블리에 강력한 이름 지정  
  강력한 이름 또는 디지털 서명은 단순한 텍스트 이름, 버전 번호 및 문화권 정보(제공된 경우)를 포함하는 어셈블리의 ID에 공개 키와 디지털 서명이 추가되어 구성됩니다. 디지털 서명은 해당 프라이빗 키를 사용하여 어셈블리 파일에서 생성됩니다. 어셈블리 파일은 어셈블리를 구성하는 모든 파일의 이름과 해시가 들어 있는 어셈블리 매니페스트를 포함합니다.  

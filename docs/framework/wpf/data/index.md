@@ -8,21 +8,21 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], data
 - data [WPF]
 ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
-ms.openlocfilehash: aa8f872e807eccb81d0f1ca2c838485bb254c7c0
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: a1ea8e10225eb9a4dcd4f20a23820c3757445fbf
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460291"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646444"
 ---
 # <a name="data"></a>데이터
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 데이터 바인딩은 애플리케이션이 데이터를 제공하고 상호 작용할 수 있는 간단하고 일관된 방법을 제공합니다. 요소는 CLR (공용 언어 런타임) 개체 및 XML 형식으로 다양 한 데이터 소스의 데이터에 바인딩될 수 있습니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 또한 끌어서 놓기 작업을 통해 데이터 전송을 위한 메커니즘을 제공합니다.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 데이터 바인딩은 애플리케이션이 데이터를 제공하고 상호 작용할 수 있는 간단하고 일관된 방법을 제공합니다. 요소는 공통 언어 런타임(CLR) 개체 및 XML 의 형태로 다양한 데이터 원본의 데이터에 바인딩될 수 있습니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 또한 끌어서 놓기 작업을 통해 데이터 전송을 위한 메커니즘을 제공합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
- [데이터 바인딩](data-binding-wpf.md)  
+## <a name="in-this-section"></a>섹션 내용  
+ [데이터 바인딩](../../../desktop-wpf/data/data-binding-overview.md)  
  [끌어서 놓기](../advanced/drag-and-drop.md)  
   
-## <a name="reference"></a>참고  
+## <a name="reference"></a>참조  
  <xref:System.Windows.Data>  
   
  <xref:System.Windows.Data.Binding>  
@@ -38,7 +38,7 @@ ms.locfileid: "73460291"
   
  [데이터 바인딩](../advanced/optimizing-performance-data-binding.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [연습: 내 첫 WPF 데스크톱 애플리케이션](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
 - [연습: WPF 애플리케이션에서 애플리케이션 데이터 캐싱](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

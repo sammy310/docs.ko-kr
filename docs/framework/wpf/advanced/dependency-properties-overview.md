@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 542e0a84e4c5cfc3750c33fe29cb40d3643e91e3
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: c73a61b8c251b12d5b3dac67535632322779a6af
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80636020"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644059"
 ---
 # <a name="dependency-properties-overview"></a>종속성 속성 개요
 
@@ -123,7 +123,7 @@ XAML은 속성을 설정하는 다양한 구문 형식 지원 특정 속성에 �
 > [!NOTE]
 > 바인딩은 로컬 값으로 처리되며, 다른 로컬 값을 설정하면 바인딩이 제거됩니다. 자세한 내용은 [종속성 속성 값 우선 순위](dependency-property-value-precedence.md)를 참조하세요.
 
-종속성 속성, 즉 <xref:System.Windows.DependencyObject> 클래스는 데이터 바인딩 작업에 대한 <xref:System.Windows.DependencyObject> 소스 속성 값의 변경 내용에 대해 알림을 생성하는 용도로 <xref:System.ComponentModel.INotifyPropertyChanged>를 기본적으로 지원하지 않습니다. 데이터 바인딩 대상의 변경 내용을 보고할 수 있도록 데이터 바인딩에서 사용할 속성을 만드는 방법에 대한 자세한 내용은 [데이터 바인딩 개요](../data/data-binding-overview.md)를 참조하세요.
+종속성 속성, 즉 <xref:System.Windows.DependencyObject> 클래스는 데이터 바인딩 작업에 대한 <xref:System.Windows.DependencyObject> 소스 속성 값의 변경 내용에 대해 알림을 생성하는 용도로 <xref:System.ComponentModel.INotifyPropertyChanged>를 기본적으로 지원하지 않습니다. 데이터 바인딩 대상의 변경 내용을 보고할 수 있도록 데이터 바인딩에서 사용할 속성을 만드는 방법에 대한 자세한 내용은 [데이터 바인딩 개요](../../../desktop-wpf/data/data-binding-overview.md)를 참조하세요.
 
 ### <a name="styles"></a>스타일
 스타일과 템플릿은 종속성 속성 사용에 대한 주요 시나리오 중 두 가지입니다. 스타일은 애플리케이션 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]를 정의하는 속성을 설정하는 데 특히 유용합니다. 스타일은 일반적으로 XAML의 리소스로 정의됩니다. 일반적으로 스타일은 또 다른 속성에 대한 실시간 값에 따라 속성 값을 변경하는 "트리거"뿐만 아니라 특정 속성에 대한 "setter"를 포함하기 때문에 속성 시스템과 상호 작용합니다.
@@ -134,7 +134,7 @@ XAML은 속성을 설정하는 다양한 구문 형식 지원 특정 속성에 �
 
 [!code-xaml[PropertiesOvwSupport#SimpleStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#simplestyle)]
 
-자세한 내용은 [스타일 지정 및 템플릿을](../controls/styling-and-templating.md)참조하십시오.
+자세한 내용은 [스타일 지정 및 템플릿을](../../../desktop-wpf/fundamentals/styles-templates-overview.md)참조하십시오.
 
 ### <a name="animations"></a>애니메이션
 종속성 속성에 애니메이션을 적용할 수 있습니다. 애니메이션을 적용하고 실행하면 애니메이션된 값이 속성의 다른 모든 값(예: 로컬 값)보다 높은 우선 순위로 작동합니다.

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - security-transparent code
 - security [.NET Framework], security-transparent code
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
-ms.openlocfilehash: 980c684bced685a61ad82ff5713ccff2b974028f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6f6c6ecd9ecab8c531be971a0e7896994127beb8
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181123"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645742"
 ---
 # <a name="security-transparent-code-level-1"></a>보안 투명 코드, 레벨 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -131,4 +131,4 @@ public class B
 ## <a name="see-also"></a>참고 항목
 
 - [보안 투명 코드, 수준 2](security-transparent-code-level-2.md)
-- [보안 변경 사항](../security/security-changes.md)
+- [보안 변경 사항](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)
