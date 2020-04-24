@@ -24,7 +24,7 @@ ms.locfileid: "75706337"
 > [!NOTE]
 > 이 섹션의 예제는 대부분 .NET Core에 지원되는 세 가지 모두 플랫폼(Windows, Linux 및 macOS)에 대해 제공됩니다. 그러나 간략하고 명확한 일부 예제의 경우 Windows 파일 이름과 확장명(즉, 라이브러리의 경우 “dll”)을 사용하는 한 가지 샘플만 표시됩니다. Linux 또는 macOS에서 해당 기능을 사용할 수 없다는 의미는 아니며, 단지 편의를 위한 것입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [P/Invoke(플랫폼 호출)](pinvoke.md)
 - [형식 마샬링](type-marshaling.md)

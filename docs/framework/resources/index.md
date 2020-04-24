@@ -11,12 +11,12 @@ helpviewer_keywords:
 - packaging application resources
 - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
-ms.openlocfilehash: f7db871c6643973ab18a5bb6bbfac7ab85a11a76
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0620cb16c3233f8ba2a665c9c4cb5f44bc5d5e84
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75346750"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645676"
 ---
 # <a name="resources-in-net-apps"></a>.NET 앱의 리소스
 
@@ -66,7 +66,6 @@ ASP.NET의 리소스에 대한 자세한 내용은 [ASP.NET 페이지 리소스 
 
 - <xref:System.Globalization.CultureInfo>
 - <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>
-- [애플리케이션 주요 사항](../../standard/application-essentials.md)
 - [리소스 파일 만들기](creating-resource-files-for-desktop-apps.md)
 - [리소스 패키징 및 배포](packaging-and-deploying-resources-in-desktop-apps.md)
 - [위성 어셈블리 만들기](creating-satellite-assemblies-for-desktop-apps.md)

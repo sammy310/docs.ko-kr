@@ -33,7 +33,7 @@ ms.locfileid: "74353239"
 |업데이트된 사용자 설정 값 저장|[방법: Visual Basic에서 사용자 설정 유지](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
 |사용자 설정 값 결정|[방법: Visual Basic에서 애플리케이션 설정 읽기](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [애플리케이션 설정 관리(.NET)](/visualstudio/ide/managing-application-settings-dotnet)
 - [My.Settings 개체](../../../../visual-basic/language-reference/objects/my-settings-object.md)

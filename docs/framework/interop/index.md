@@ -23,7 +23,7 @@ ms.locfileid: "73457962"
 
 런타임 제어를 기반으로 실행되는 코드를 관리 코드라고 합니다. 이와 달리 런타임 외부에서 실행되는 코드를 비관리 코드라고 합니다. 비관리 코드로는 COM 구성 요소, ActiveX 인터페이스, Windows API 함수 등이 있습니다.
 
-## <a name="in-this-section"></a>섹션 내용
+## <a name="in-this-section"></a>단원 내용
 
 [.NET Framework에 COM 구성 요소 노출](exposing-com-components.md)  
 .NET Framework 애플리케이션에서 COM 구성 요소를 사용하는 방법을 설명합니다.

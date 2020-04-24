@@ -28,7 +28,7 @@ ms.locfileid: "74345530"
 - <xref:Microsoft.VisualBasic.Devices.Ports>
 - 레지스트리(<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>)
 
-## <a name="in-this-section"></a>섹션 내용
+## <a name="in-this-section"></a>단원 내용
 
 [소리 재생](../../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md)  
 백그라운드에서 소리를 재생하는 것과 같이 `My.Computer.Audio`와 연결된 작업을 나열합니다.

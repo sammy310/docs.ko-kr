@@ -7,12 +7,12 @@ helpviewer_keywords:
 - application domains, programming
 - programming application domains
 ms.assetid: 96d3b8e3-bef8-4da0-9a81-9841e23a94e9
-ms.openlocfilehash: 2c849d27c70971d17bf4359ee7ae1081ee976a5f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3f66eacaf30f8001cdbf3a486e5ce1c878712e2f
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73119813"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644282"
 ---
 # <a name="programming-with-application-domains-and-assemblies"></a>애플리케이션 도메인 및 어셈블리를 사용한 프로그래밍
 
@@ -28,7 +28,7 @@ Microsoft Internet Explorer, ASP.NET 및 Windows 셸과 같은 호스트는 프�
 [애플리케이션 도메인 사용](use.md)  
 애플리케이션 도메인 만들기, 구성 및 사용에 대한 예제를 제공합니다.  
   
-[어셈블리를 사용한 프로그래밍](../../standard/assembly/program.md)  
+[어셈블리를 사용한 프로그래밍](../../standard/assembly/index.md)  
 어셈블리를 만들고, 서명하고, 특성을 설정하는 방법에 대해 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  

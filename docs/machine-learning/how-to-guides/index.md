@@ -2,12 +2,12 @@
 title: ML.NET 방법 가이드
 description: 사용자 지정 AI 솔루션 생성 및 .NET 애플리케이션에 Machine Learning 통합을 지원하는 특정 작업을 수행하는 방법에 대해 알아보세요.
 ms.date: 03/01/2019
-ms.openlocfilehash: 25c5cb6247c202e3ef51d0ed25b3b213fdca7a56
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: e83db6f1f754357b7e204485ea545feef9ad4a95
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607534"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102452"
 ---
 # <a name="net-machine-learning-how-to-guides"></a>.NET 기계 학습 방법 가이드
 
@@ -27,15 +27,9 @@ ML.NET 가이드의 방법 섹션에서 일반적인 질문에 대한 빠른 답
 
 * [ML.NET을 사용해서 회귀 모델을 학습하여 값을 예측합니다.](train-machine-learning-model-ml-net.md)
 
-### <a name="evaluate-the-model-quality"></a>모델 품질 평가
-
-* [메트릭을 계산하여 모델 품질을 평가합니다.](verify-model-quality-ml-net.md)
-
 ### <a name="model-explainability"></a>모델 설명 가능성
 
 * [순열 기능 중요도를 사용하여 모델의 기능 중요도를 판별합니다.](explain-machine-learning-model-permutation-feature-importance-ml-net.md)
-
-* [모델 설명을 위해 일반화된 추가 모델 및 도형 함수를 사용합니다.](use-gams-for-model-explainability.md)
 
 ## <a name="run"></a>Run
 
