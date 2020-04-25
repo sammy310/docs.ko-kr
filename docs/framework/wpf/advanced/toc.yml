@@ -7,7 +7,7 @@
       href: xaml-in-wpf.md
       items:
         - name: XAML 개요(WPF)
-          href: xaml-overview-wpf.md
+          href: ../../../desktop-wpf/fundamentals/xaml.md
         - name: XAML 구문 정보
           href: xaml-syntax-in-detail.md
         - name: WPF의 코드 숨김 및 XAML
@@ -290,7 +290,7 @@
       href: resources-wpf.md
       items:
         - name: XAML 리소스
-          href: xaml-resources.md
+          href: ../../../desktop-wpf/fundamentals/xaml-resources-define.md
           items:
             - name: 리소스 및 코드
               href: resources-and-code.md

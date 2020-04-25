@@ -393,7 +393,7 @@
       href: styles-and-templates.md
       items:
         - name: 스타일 지정 및 템플릿
-          href: styling-and-templating.md
+          href: ../../../desktop-wpf/fundamentals/styles-templates-overview.md
         - name: ControlTemplate을 사용하여 기존 컨트롤 사용자 지정
           href: ../../../desktop-wpf/themes/how-to-create-apply-template.md
         - name: '방법: ControlTemplate에서 생성된 요소 찾기'
