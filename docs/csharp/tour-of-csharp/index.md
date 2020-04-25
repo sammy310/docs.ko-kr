@@ -2,12 +2,12 @@
 title: C# 둘러보기 - C# 가이드
 description: C#을 처음 사용하시나요? 언어의 기본 사항에 대해 알아봅니다.
 ms.date: 02/26/2020
-ms.openlocfilehash: bf5a200f2ee777698ae8564f348ffc117d9abab0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7476356ceab39d5cccb6ccbeb991653f08a324ea
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79156846"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82141043"
 ---
 # <a name="a-tour-of-the-c-language"></a>C# 언어 둘러보기
 
@@ -40,7 +40,7 @@ dotnet run
 
 프로그램에서는 다음이 출력됩니다.
 
-```console
+```dotnetcli
 Hello, World!
 ```
 

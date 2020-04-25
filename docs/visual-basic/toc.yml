@@ -29,7 +29,7 @@
         - name: Accessing Application Settings
           href: developing-apps/programming/app-settings/index.md
         - name: '드라이브, 디렉터리 및 파일 처리'
-          href: developing-apps/programming/drives-directories-files/processing.md
+          href: developing-apps/programming/drives-directories-files/index.md
     - name: My를 사용한 개발
       href: developing-apps/development-with-my/index.md
       items:
@@ -1414,6 +1414,6 @@
     - name: 언어 사양
       href: reference/language-specification/
 - name: 샘플 애플리케이션
-  href: sample-applications.md
+  href: 'https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic'
 - name: 연습
   href: walkthroughs.md
