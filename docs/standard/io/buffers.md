@@ -7,12 +7,12 @@ helpviewer_keywords:
 - I/O [.NET], buffers
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: f939164cd56b2fb2feeeb171236b0e1171327e19
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d113def0182dc6a5bcea6c18b2d0e4b475946e31
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160120"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739617"
 ---
 # <a name="work-with-buffers-in-net"></a>.NET에서 버퍼 작업
 
@@ -191,5 +191,5 @@ SequencePosition? FindIndexOf(in ReadOnlySequence<byte> buffer, byte data) => bu
 ### <a name="sequencereadert-common-problems"></a>SequenceReader\<T\>의 일반적인 문제
 
 - `SequenceReader<T>`는 변경 가능한 구조체이므로 항상 [reference](../../csharp/language-reference/keywords/ref.md)로 전달되어야 합니다.
-- `SequenceReader<T>`는 [ref struct](../../csharp/language-reference/keywords/ref.md#ref-struct-types)이므로 동기 메서드에만 사용할 수 있고 필드에 저장할 수 없습니다. 자세한 내용은 [안전하고 효율적인 C# 코드 작성](../../csharp/write-safe-efficient-code.md)을 참조하세요.
+- `SequenceReader<T>`는 [ref struct](../../csharp/language-reference/builtin-types/struct.md#ref-struct)이므로 동기 메서드에만 사용할 수 있고 필드에 저장할 수 없습니다. 자세한 내용은 [안전하고 효율적인 C# 코드 작성](../../csharp/write-safe-efficient-code.md)을 참조하세요.
 - `SequenceReader<T>`는 정방향 전용 판독기로 사용하도록 최적화되어 있습니다. `Rewind`는 다른 `Read`, `Peek`및 `IsNext` API를 활용하여 해결할 수 없는 작은 백업에 사용됩니다.

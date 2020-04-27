@@ -4,12 +4,12 @@ description: 검사 목적으로 .NET 어셈블리를 로드할 수 있는 API�
 author: MSDN-WhiteKnight
 ms.date: 03/10/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: d2589d51a6e0611504c0133d293d3fdfae32553c
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 90c84147c52199afc42a2efc297bc7fe40658ec7
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242662"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82141194"
 ---
 # <a name="how-to-inspect-assembly-contents-using-metadataloadcontext"></a>방법: MetadataLoadContext를 사용하여 어셈블리 콘텐츠 검사
 
@@ -41,4 +41,4 @@ ms.locfileid: "81242662"
 
 ## <a name="example"></a>예제
 
-전체 코드 예제를 보려면 [MetadataLoadContext 샘플을 사용하여 어셈블리 콘텐츠 검사](https://github.com/dotnet/samples/tree/master/core/assembly/MetadataLoadContext)를 참조하세요.
+전체 코드 예제를 보려면 [MetadataLoadContext 샘플을 사용하여 어셈블리 콘텐츠 검사](https://docs.microsoft.com/samples/dotnet/samples/inspect-assembly-contents-using-metadataloadcontext/)를 참조하세요.

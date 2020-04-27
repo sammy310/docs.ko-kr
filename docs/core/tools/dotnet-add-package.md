@@ -2,18 +2,18 @@
 title: dotnet add package 명령
 description: ‘dotnet add package’ 명령은 NuGet 패키지 참조를 프로젝트에 추가하는 편리한 옵션을 제공합니다.
 ms.date: 02/14/2020
-ms.openlocfilehash: 24a25cdab2aab30d52f8407adfda437f47437290
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 1d57aed59ccd45417c88f9b6a2f9dd768fda9b58
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463751"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102855"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
 **이 문서의 적용 대상:** ✔️ .NET Core 2.x SDK 이상 버전
 
-## <a name="name"></a>name
+## <a name="name"></a>이름
 
 `dotnet add package` - 패키지 참조를 프로젝트 파일에 추가합니다.
 
@@ -31,8 +31,6 @@ dotnet add package -h|--help
 ## <a name="description"></a>설명
 
 `dotnet add package` 명령은 패키지 참조를 프로젝트 파일에 추가하는 편리한 옵션을 제공합니다. 명령을 실행한 후 패키지가 프로젝트의 프레임워크와 호환되는지 확인하는 호환성 검사가 있습니다. 검사를 통과하면 `<PackageReference>` 요소가 프로젝트 파일에 추가되고 [dotnet restore](dotnet-restore.md)가 실행됩니다.
-
-[!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
 예를 들어 `Newtonsoft.Json`를 *ToDo.csproj*에 추가하면 다음 예제와 유사한 출력이 생성됩니다.
 
@@ -54,6 +52,10 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 ```xml
 <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
 ```
+
+### <a name="implicit-restore"></a>암시적 복원
+
+[!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
 ## <a name="arguments"></a>인수
 
@@ -115,7 +117,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
   dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json
   ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [NuGet에서 글로벌 패키지, 캐시 및 임시 폴더 관리](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)
 - [NuGet 패키지 버전 관리](https://docs.microsoft.com/nuget/reference/package-versioning)

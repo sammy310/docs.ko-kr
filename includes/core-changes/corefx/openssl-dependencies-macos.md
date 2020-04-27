@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 6a5cd260a2820e2a81142f6d55e32e91173ca503
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8790637c31d503455eb8ba722cca827c2a24b7c9
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79147453"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021461"
 ---
 ### <a name="openssl-versions-on-macos"></a>macOS의 OpenSSL 버전
 
@@ -42,7 +42,7 @@ macOS에서 .NET Core 3.0 이상 런타임은 이제 <xref:System.Security.Crypt
 
 #### <a name="category"></a>범주
 
-CoreFx
+핵심 .NET 라이브러리
 
 #### <a name="affected-apis"></a>영향을 받는 API
 

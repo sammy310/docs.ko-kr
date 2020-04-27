@@ -2,12 +2,12 @@
 title: 컨테이너화된 앱을 위한 Microsoft 플랫폼 및 도구 소개
 description: Docker 애플리케이션 수명 주기를 지원하는 Microsoft의 제품에 대해 알아봅니다.
 ms.date: 02/15/2019
-ms.openlocfilehash: 8cb7870035003e956ee57684a2a2528732849379
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 84f4136c6b6c284dd5ecb3fc174ac825857a567e
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738456"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158504"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>컨테이너화된 앱을 위한 Microsoft 플랫폼 및 도구 소개
 
@@ -16,7 +16,7 @@ ms.locfileid: "81738456"
 그림 3-1 (응용 프로그램 개발, DevOps 인프라 프로세스 및 IT 관리 및 작업) 여러 팀에서 제공 하는 작업의 유형에 따라 분류 Docker 앱의 수명 주기에서 주요 사항 보여 줍니다. 일반적으로 기업에서 각 영역을 담당하는 "가상 사용자"의 프로필은 다릅니다. 기술도 마찬가지입니다.
 
 :::image type="complex" source="./media/index/microsoft-tools-contanerized-docker-app.png" alt-text="Docker 앱을 유지 관리하는 데 필요한 Microsoft 도구를 보여 주는 다이어그램입니다.":::
-Microsoft 도구입니다. 개발/설계 작업의 경우: Windows, VS 및 VS 코드, .NET Core, Azure Kubernetes Service용 Docker 엔진입니다. 빌드/테스트/배송 작업의 경우: Azure DevOps, Team Foundation Server, Docker CLI, Azure Kubernetes Service. 실행/모니터링/관리 작업의 경우: Azure Monitor, Azure Portal Azure Kubernetes Services, Service Fabric, 기타 오케스트레이터.
+Microsoft 도구입니다. 개발/설계 작업의 경우: Windows, Visual Studio 및 Visual Studio Code, .NET Core, Azure Kubernetes 서비스용 Docker 엔진입니다. 빌드/테스트/배송 작업의 경우: Azure DevOps, Team Foundation Server, Docker CLI, Azure Kubernetes Service. 실행/모니터링/관리 작업의 경우: Azure Monitor, Azure Portal Azure Kubernetes Services, Service Fabric, 기타 오케스트레이터.
 :::image-end:::
 
 **그림 3-1.** Microsoft 플랫폼 및 도구를 사용하는 컨테이너화된 Docker 애플리케이션의 수명 주기 주요 사항

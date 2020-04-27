@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e6e10b2ec451c07bf397cbdcac51ef57c29dab47
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cc3251e3b31143bd95793b407e50cf76e0e30142
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74568188"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021565"
 ---
 ### <a name="json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception"></a>Json 직렬 변환기 예외 형식을 `JsonException`에서 `NotSupportedException`으로 변경
 
@@ -33,7 +33,7 @@ ms.locfileid: "74568188"
 
 #### <a name="category"></a>범주
 
-CoreFx
+핵심 .NET 라이브러리
 
 #### <a name="affected-apis"></a>영향을 받는 API
 

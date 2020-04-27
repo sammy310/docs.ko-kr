@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 helpviewer_keywords:
 - encoding, understanding
-ms.openlocfilehash: 34b1577f8bcea80c1f41b6f9605bf47d132fdb4f
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 086430a720e6dc7f39d459a4b99d5bbdb1cfcac3
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134429"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82141301"
 ---
 # <a name="character-encoding-in-net"></a>.NET의 문자 인코딩
 
@@ -246,7 +246,7 @@ string를 올바르게 대문자로 변환하는 두 가지 옵션은 다음과 
 
 * string "á"는 하나의 스칼라 값으로 표현되고 하나의 `char` 인스턴스를 포함합니다.
 
-  * `U+00E1 LATIN SMALL LETTER E WITH ACUTE`
+  * `U+00E1 LATIN SMALL LETTER A WITH ACUTE`
 
 * string "á"는 "Á"와 같아 보이지만 두 개의 스칼라 값으로 표현되고 두 개의 `char` 인스턴스를 포함합니다.
 

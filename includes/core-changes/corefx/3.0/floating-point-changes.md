@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ce4f09908b1025e8e5a0380c9bf035c6b0db479a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 22dbb1e982f83687a9e0eb288ed72c78c676db77
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74568111"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021630"
 ---
 ### <a name="floating-point-formatting-and-parsing-behavior-changed"></a>부동 소수점 서식 및 구문 분석 동작 변경됨
 
@@ -26,7 +26,7 @@ ms.locfileid: "74568111"
 
 #### <a name="category"></a>범주
 
-CoreFx
+핵심 .NET 라이브러리
 
 #### <a name="affected-apis"></a>영향을 받는 API
 
