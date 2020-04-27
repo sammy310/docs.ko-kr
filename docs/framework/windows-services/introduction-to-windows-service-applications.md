@@ -24,7 +24,7 @@ ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
 author: ghogen
 ms.openlocfilehash: 8ff1adaa025dc11417c3dcfdaf42ea203828be57
 ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053515"
@@ -72,7 +72,7 @@ ms.locfileid: "71053515"
 ## <a name="services-and-the-servicecontroller-component"></a>서비스 및 ServiceController 구성 요소  
  <xref:System.ServiceProcess.ServiceController> 구성 요소는 설치된 서비스에 연결하고 서비스 상태를 조작하는 데 사용됩니다. <xref:System.ServiceProcess.ServiceController> 구성 요소를 사용하면 서비스를 시작 및 중지하고, 서비스 작동을 일시 중지하거나 계속하고, 서비스에 사용자 지정 명령을 전송할 수 있습니다. 하지만 서비스 애플리케이션을 만들 때는 <xref:System.ServiceProcess.ServiceController> 구성 요소를 사용할 필요가 없습니다. 실제로 대부분의 경우 <xref:System.ServiceProcess.ServiceController> 구성 요소는 서비스를 정의하는 Windows 서비스 애플리케이션과 별도의 애플리케이션에 있어야 합니다.  
   
- 자세한 내용은 <xref:System.ServiceProcess.ServiceController>을 참조하세요.  
+ 자세한 내용은 <xref:System.ServiceProcess.ServiceController>를 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -80,7 +80,7 @@ ms.locfileid: "71053515"
   
 - Windows 서비스를 포함하는 프로젝트에는 프로젝트 및 해당 서비스에 대한 설치 구성 요소가 있어야 합니다. 이 작업은 **속성** 창에서 간단히 수행할 수 있습니다. 자세한 내용은 [방법: 서비스 애플리케이션에 설치 관리자 추가](how-to-add-installers-to-your-service-application.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Windows 서비스 애플리케이션](index.md)
 - [서비스 애플리케이션 프로그래밍 아키텍처](service-application-programming-architecture.md)

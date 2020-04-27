@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reflection,partial trust
 - link demands
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
-ms.openlocfilehash: 1d5289ce15c213024af576c99fe039f5d6c1a247
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.openlocfilehash: 1bdaf3abd39797274236ace4cb2967d2e7d199b2
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130072"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644180"
 ---
 # <a name="security-considerations-for-reflection"></a>리플렉션의 보안 고려 사항
 
@@ -57,9 +57,9 @@ ms.locfileid: "73130072"
 
 이러한 규칙은 보안에 중요한 멤버를 컴파일된 코드에서 직접 액세스하는지 또는 리플렉션을 사용하여 액세스하는지에 관계없이 동일합니다.
 
-명령줄에서 실행 되는 애플리케이션 코드는 완전 신뢰로 실행됩니다. 투명으로 표시되지 않은 한 리플렉션을 사용하여 보안에 중요한 멤버에 액세스할 수 있습니다. 동일한 코드가 부분 신뢰로 실행되는 경우(예: 샌드박스 애플리케이션 도메인에서) 어셈블리의 신뢰 수준에 따라 보안에 중요한 코드를 액세스할 수 있는지 여부가 결정됩니다. 어셈블리에 강력한 이름이 있고 전역 어셈블리 캐시에 설치된 경우 신뢰할 수 있는 어셈블리이며 보안에 중요한 멤버를 호출할 수 있습니다. 신뢰할 수 없는 경우 투명으로 표시되지 않았어도 투명하게 되며 보안에 중요한 멤버를 액세스할 수 없습니다.
+명령줄에서 실행 되는 애플리케이션 코드는 완전 신뢰로 실행됩니다. 투명으로 표시되지 않은 한 리플렉션을 사용하여 보안에 중요한 멤버에 액세스할 수 있습니다. 동일한 코드가 부분 신뢰(예: 샌드박스 애플리케이션 도메인에서)로 실행될 때 어셈블리의 신뢰 수준은 보안 중요 코드에 액세스할 수 있는지 여부를 결정합니다. 어셈블리에 강력한 이름이 있고 글로벌 어셈블리 캐시에 설치된 경우, 신뢰할 수 있는 어셈블리이며 보안에 중요한 멤버를 호출할 수 있습니다. 신뢰할 수 없는 경우 투명으로 표시되지 않았어도 투명하게 되며 보안에 중요한 멤버를 액세스할 수 없습니다.
 
-.NET Framework 4의 보안 모델에 대한 자세한 내용은 [보안 변경 내용](../security/security-changes.md)을 참조하세요.
+.NET Framework 4의 보안 모델에 대한 자세한 내용은 [보안 변경 내용](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)을 참조하세요.
 
 ## <a name="reflection-and-transparency"></a>리플렉션 및 투명도
 
@@ -67,7 +67,7 @@ ms.locfileid: "73130072"
 
 |보안 수준|IsSecurityCritical|IsSecuritySafeCritical|IsSecurityTransparent|
 |--------------------|------------------------|----------------------------|---------------------------|
-|Critical|`true`|`false`|`false`|
+|중요|`true`|`false`|`false`|
 |안전에 중요|`true`|`true`|`false`|
 |투명|`false`|`false`|`true`|
 
@@ -86,7 +86,7 @@ ms.locfileid: "73130072"
   > [!NOTE]
   > 기본적으로 보안 정책은 인터넷에서 시작된 코드에 대해 이 권한을 거부합니다. 인터넷에서 시작된 코드에는 이 권한을 부여하면 안 됩니다.
 
-- 호출된 멤버를 포함하는 어셈블리의 권한 부여 집합이 호출 코드를 포함하는 어셈블리의 권한 부여 집합과 같거나 하위 집합인 경우 코드에서 public이 아닌 멤버를 호출할 수 있게 하려면 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 플래그를 통해 코드에 <xref:System.Security.Permissions.ReflectionPermission>을 부여해야 합니다.
+- 호출된 멤버를 포함하는 어셈블리의 권한 부여 집합이 호출 코드를 포함하는 어셈블리의 권한 부여 집합과 같거나 하위 집합인 경우 코드가 public이 아닌 멤버를 호출할 수 있도록 허용하려면 다음을 수행합니다. 코드는 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 플래그가 있는 <xref:System.Security.Permissions.ReflectionPermission>에 부여되어야 합니다.
 
 예를 들어 애플리케이션 도메인 인터넷 권한 및 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 플래그를 통한 <xref:System.Security.Permissions.ReflectionPermission>을 부여한 다음 두 어셈블리 A와 B를 사용하여 인터넷 애플리케이션을 실행한다고 가정합니다.
 
@@ -115,7 +115,7 @@ ms.locfileid: "73130072"
 - <xref:System.Security.Permissions.ReflectionPermissionFlag>
 - <xref:System.Security.Permissions.ReflectionPermission>
 - <xref:System.Security.Permissions.SecurityPermission>
-- [보안 변경 내용](../security/security-changes.md)
+- [보안 변경 내용](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)
 - [코드 액세스 보안](../misc/code-access-security.md)
 - [리플렉션 내보내기의 보안 문제점](security-issues-in-reflection-emit.md)
 - [형식 정보 보기](viewing-type-information.md)

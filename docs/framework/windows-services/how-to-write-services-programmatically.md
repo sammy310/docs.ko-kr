@@ -11,7 +11,7 @@ ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
 author: ghogen
 ms.openlocfilehash: 5637d569ad5261bff6865af4ab2ed8b7631d2d38
 ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053554"
@@ -70,7 +70,7 @@ Windows 서비스 프로젝트 템플릿을 사용하지 않으려는 경우 상
   
 10. 서비스를 설치합니다. 자세한 내용은 [방법: 서비스 설치 및 제거](how-to-install-and-uninstall-services.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Windows 서비스 애플리케이션 소개](introduction-to-windows-service-applications.md)
 - [방법: Windows 서비스 만들기](how-to-create-windows-services.md)

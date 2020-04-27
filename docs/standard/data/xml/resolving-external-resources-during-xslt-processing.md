@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 3a59d31c-0ec5-4de6-a2a9-558531c8116e
 ms.openlocfilehash: 58407d5f0c6e602af15f5b19b9a19cc6379b9af7
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710286"
@@ -21,8 +21,8 @@ ms.locfileid: "75710286"
   
 |XSLT 작업|XmlResolver를 사용하여 수행하는 작업|  
 |---------------|--------------------------------------|  
-|스타일시트를 컴파일합니다.|스타일시트의 URI를 확인합니다.<br /><br /> -및-<br /><br /> `xsl:import` 또는 `xsl:include` 요소에서 URI 참조를 확인합니다.|  
-|스타일시트를 실행합니다.|컨텍스트 문서의 URI를 확인합니다.<br /><br /> -및-<br /><br /> XSLT `document()` 함수에서 URI 참조를 확인합니다.|  
+|스타일시트를 컴파일합니다.|스타일시트의 URI를 확인합니다.<br /><br /> 및<br /><br /> `xsl:import` 또는 `xsl:include` 요소에서 URI 참조를 확인합니다.|  
+|스타일시트를 실행합니다.|컨텍스트 문서의 URI를 확인합니다.<br /><br /> 및<br /><br /> XSLT `document()` 함수에서 URI 참조를 확인합니다.|  
   
  <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 및 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 메서드는 <xref:System.Xml.XmlResolver> 개체를 해당 인수의 하나로 사용하는 오버로드를 포함합니다. <xref:System.Xml.XmlResolver>가 지정되지 않을 경우 기본 <xref:System.Xml.XmlUrlResolver>가 자격 증명 없이 사용됩니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "75710286"
   
 - 외부 리소스에 액세스하지 않도록 하려면 `null` 인수에 대해 <xref:System.Xml.XmlResolver>을 지정할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 네트워크 리소스에 저장된 스타일시트를 컴파일합니다. <xref:System.Xml.XmlUrlResolver> 개체는 스타일시트에 액세스하는 데 필요한 자격 증명을 지정합니다.  
   
  [!code-csharp[XslCompiledTransform.Load#11](../../../../samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Load/CS/Xslt_Load_v2.cs#11)]

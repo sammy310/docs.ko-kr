@@ -11,7 +11,7 @@ ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
 ms.openlocfilehash: e5ff40d8413acf64e7a8a129a7b268f58780d591
 ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053479"
@@ -162,7 +162,7 @@ ms.locfileid: "71053479"
    Private eventId As Integer = 1
    ```
 
-주 스레드에서 모든 작업을 실행하는 대신 백그라운드 작업자 스레드를 사용하여 작업을 실행할 수도 있습니다. 자세한 내용은 <xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName>을 참조하세요.
+주 스레드에서 모든 작업을 실행하는 대신 백그라운드 작업자 스레드를 사용하여 작업을 실행할 수도 있습니다. 자세한 내용은 <xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName>를 참조하세요.
 
 ### <a name="define-what-occurs-when-the-service-is-stopped"></a>서비스가 중지될 때 수행되는 동작 정의
 
@@ -296,7 +296,7 @@ ms.locfileid: "71053479"
 
 6. (선택 사항) <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 메서드가 장기 실행 메서드인 경우 `OnStop` 메서드에서 이 절차를 반복합니다. SERVICE_STOP_PENDING 상태를 구현하고 `OnStop` 메서드가 끝나기 전에 SERVICE_STOPPED 상태를 반환합니다.
 
-   예:
+   예를 들어:
 
     ```csharp
     // Update the service state to Stop Pending.
@@ -542,9 +542,9 @@ Windows 서비스 앱이 더 이상 필요 없는 경우 제거할 수 있습니
 
 - 설치한 서비스에 명령을 보낼 수 있는 <xref:System.ServiceProcess.ServiceController> 구성 요소를 살펴보세요.
 
-- 애플리케이션이 실행될 때 이벤트 로그를 만드는 것보다는 애플리케이션이 설치될 때 설치 관리자를 사용하여 이벤트 로그를 만듭니다. 애플리케이션을 제거하면 설치 관리자가 이벤트 로그를 삭제합니다. 자세한 내용은 <xref:System.Diagnostics.EventLogInstaller>을 참조하세요.
+- 애플리케이션이 실행될 때 이벤트 로그를 만드는 것보다는 애플리케이션이 설치될 때 설치 관리자를 사용하여 이벤트 로그를 만듭니다. 애플리케이션을 제거하면 설치 관리자가 이벤트 로그를 삭제합니다. 자세한 내용은 <xref:System.Diagnostics.EventLogInstaller>를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Windows 서비스 애플리케이션](index.md)
 - [Windows 서비스 애플리케이션 소개](introduction-to-windows-service-applications.md)

@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
 ms.openlocfilehash: 8383d8cb3e5819c46a0716c59323e492bb9add8e
 ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/14/2020
 ms.locfileid: "75937984"
@@ -21,12 +21,12 @@ XSLT 아키텍처는 Visual Studio 2005 릴리스에서 다시 디자인되었�
 
 ## <a name="performance"></a>성능
 
-<xref:System.Xml.Xsl.XslCompiledTransform> 클래스는 여러 가지로 성능이 향상되었습니다. CLR(공용 언어 런타임)이 다른 프로그래밍 언어에 대해 수행하는 것과 비슷하게 새 XSLT 프로세서는 XSLT 스타일시트를 공용 중간 형식으로 컴파일합니다. 스타일시트가 컴파일되면 캐시하여 다시 사용할 수 있습니다.
+<xref:System.Xml.Xsl.XslCompiledTransform> 클래스는 여러 가지로 성능이 향상되었습니다. CLR(공용 언어 런타임)이 다른 프로그래밍 언어에 대해 수행하는 것과 비슷하게 새 XSLT 프로세서는 XSLT 스타일시트를 공용 중간 형식으로 컴파일합니다. 스타일시트를 컴파일한 후 캐시하고 다시 사용할 수 있습니다.
 
 또한 <xref:System.Xml.Xsl.XslCompiledTransform> 클래스는 <xref:System.Xml.Xsl.XslTransform> 클래스보다 훨씬 빠르게 작동하도록 최적화되었습니다.
 
 > [!NOTE]
-> <xref:System.Xml.Xsl.XslCompiledTransform> 클래스의 전체적인 성능이 <xref:System.Xml.Xsl.XslTransform> 클래스보다 좋지만 <xref:System.Xml.Xsl.XslCompiledTransform> 클래스의 <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 메서드는 변환에 대해 처음 호출될 때 <xref:System.Xml.Xsl.XslTransform> 클래스의 <xref:System.Xml.Xsl.XslTransform.Load%2A> 메서드보다 느리게 수행될 수 있습니다. 이는 XSLT 파일이 로드되기 전에 컴파일되어야 하기 때문입니다. 자세한 내용은 [XslCompiledTransform Slower than XslTransform?](https://docs.microsoft.com/archive/blogs/antosha/xslcompiledtransform-slower-than-xsltransform)(XslCompiledTransform이 XslTransform보다 느린가?)라는 블로그 게시물을 참조하세요.
+> <xref:System.Xml.Xsl.XslCompiledTransform> 클래스의 전체적인 성능이 <xref:System.Xml.Xsl.XslTransform> 클래스보다 좋지만 <xref:System.Xml.Xsl.XslCompiledTransform> 클래스의 <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 메서드는 변환에 대해 처음 호출될 때 <xref:System.Xml.Xsl.XslTransform> 클래스의 <xref:System.Xml.Xsl.XslTransform.Load%2A> 메서드보다 느리게 수행될 수 있습니다. 이는 XSLT 파일이 로드되기 전에 컴파일되어야 하기 때문입니다. 자세한 내용은 다음 블로그 게시물을 참조하세요. [XslCompiledTransform이 XslTransform보다 느리나요?](https://docs.microsoft.com/archive/blogs/antosha/xslcompiledtransform-slower-than-xsltransform)
 
 ## <a name="security"></a>보안
 

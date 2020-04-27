@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 ms.openlocfilehash: d16f6728b01583fe3ffb8d892522f3892444c537
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73130171"
@@ -117,7 +117,7 @@ ms.locfileid: "73130171"
 
 6. 루프에 대한 코드를 내보냅니다. 첫 번째 단계는 `loopAgain` 레이블로 <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A>을 호출하여 루프 맨 위를 표시하는 것입니다. 이제 레이블을 사용하는 분기 문이 코드의 이 지점으로 분기됩니다. 다음 단계는 `ICollection(Of TInput)`으로 캐스팅된 `TOutput` 개체를 스택에 푸시하는 것입니다. 즉시 필요하지는 않지만 `Add` 메서드를 호출하려면 제자리에 있어야 합니다. 그다음 입력 배열이 스택에 푸시되고 현재 인덱스를 포함하는 `index` 변수가 배열에 푸시됩니다. <xref:System.Reflection.Emit.OpCodes.Ldelem> opcode는 스택에서 인덱스 및 배열을 팝하고 인덱싱된 배열 요소를 스택에 푸시합니다. 이제 스택이 <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=nameWithType> 메서드를 호출할 준비가 되었습니다. 컬렉션과 새 요소가 스택에서 팝되고 컬렉션에 요소가 추가됩니다.
 
-    루프의 나머지 코드는 인덱스를 증가하고 테스트하여 루프가 완료되었는지 여부를 확인합니다. 인덱스 및 32비트 정수 1이 스택에 푸시되고 더해져서 스택에 합계가 남고 `index`에 저장됩니다. <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A>이 호출되어 이 지점을 루프에 대한 진입점으로 설정합니다. 인덱스가 다시 로드됩니다. 입력 배열이 스택에 푸시되고 해당 길이를 가져오기 위해 <xref:System.Reflection.Emit.OpCodes.Ldlen>이 내보내집니다. 이제 인덱스 및 길이가 스택에 있으며 비교를 위해 <xref:System.Reflection.Emit.OpCodes.Clt>가 내보내집니다. 인덱스가 길이보다 작으면 <xref:System.Reflection.Emit.OpCodes.Brtrue_S>가 루프의 시작 부분으로 다시 분기됩니다.
+    루프의 나머지 코드는 인덱스 및 테스트를 증가시켜 루프가 완료되었는지 여부를 확인합니다. 인덱스와 32비트 정수 1이 스택에 푸시되고 추가되어 스택에 합계가 남습니다. 합계는 `index`에 저장됩니다. <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A>이 호출되어 이 지점을 루프에 대한 진입점으로 설정합니다. 인덱스가 다시 로드됩니다. 입력 배열이 스택에 푸시되고 해당 길이를 가져오기 위해 <xref:System.Reflection.Emit.OpCodes.Ldlen>이 내보내집니다. 이제 인덱스 및 길이가 스택에 있으며 비교를 위해 <xref:System.Reflection.Emit.OpCodes.Clt>가 내보내집니다. 인덱스가 길이보다 작으면 <xref:System.Reflection.Emit.OpCodes.Brtrue_S>가 루프의 시작 부분으로 다시 분기됩니다.
 
     [!code-csharp[GenericMethodHowTo#13](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#13)]
     [!code-vb[GenericMethodHowTo#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#13)]

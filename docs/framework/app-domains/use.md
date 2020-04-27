@@ -6,12 +6,12 @@ helpviewer_keywords:
 - common language runtime, application domains
 - runtime, application domains
 ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
-ms.openlocfilehash: d6bbc2648608e9542158e0f281984174447633a4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6ee02a3f27a645f19fd6a327052939586fac4aa9
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119731"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645434"
 ---
 # <a name="using-application-domains"></a>애플리케이션 도메인 사용
 
@@ -48,7 +48,7 @@ ms.locfileid: "73119731"
 [어셈블리 로드 해결](../../standard/assembly/resolve-loads.md)  
 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 이벤트를 사용하여 어셈블리 로드 실패를 해결하는 방법에 대한 지침을 제공합니다.  
   
-## <a name="reference"></a>참조  
+## <a name="reference"></a>참고  
 
 <xref:System.AppDomain>  
 애플리케이션 도메인을 나타냅니다. 애플리케이션 도메인을 만들고 제어하기 위한 메서드를 제공합니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "73119731"
 [.NET 어셈블리](../../standard/assembly/index.md)  
 어셈블리가 실행하는 함수의 개요를 제공합니다.  
   
-[어셈블리를 사용한 프로그래밍](../../standard/assembly/program.md)  
+[어셈블리를 사용한 프로그래밍](../../standard/assembly/index.md)  
 어셈블리를 만들고, 서명하고, 특성을 설정하는 방법에 대해 설명합니다.  
   
 [동적 메서드 및 어셈블리 내보내기](../reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  

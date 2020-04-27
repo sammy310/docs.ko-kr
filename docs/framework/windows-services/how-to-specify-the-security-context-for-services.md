@@ -13,7 +13,7 @@ ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
 author: ghogen
 ms.openlocfilehash: dd2a9c4485e151d4cb1c9d5ae3a95a69fcc416d4
 ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053587"
@@ -44,7 +44,7 @@ ms.locfileid: "71053587"
   
 3. **속성** 창에서 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A>를 적절한 값으로 설정합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Windows 서비스 애플리케이션 소개](introduction-to-windows-service-applications.md)
 - [방법: 서비스 애플리케이션에 설치 관리자 추가](how-to-add-installers-to-your-service-application.md)

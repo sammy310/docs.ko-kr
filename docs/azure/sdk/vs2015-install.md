@@ -5,7 +5,7 @@ ms.date: 10/19/2017
 ms.custom: azure-sdk-dotnet
 ms.openlocfilehash: a29709d56f2debe04d49ee4eafdc27acd4ca480f
 ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/19/2020
 ms.locfileid: "81433153"
@@ -18,13 +18,13 @@ ms.locfileid: "81433153"
 
 1. 이 [웹 플랫폼 설치 관리자 부트스트래퍼](https://www.microsoft.com/web/handlers/webpi.ashx?command=getinstallerredirect&appid=VWDOrVs2015AzurePack;MicrosoftAzure-ServiceFabric-VS2015)를 다운로드하여 실행합니다.
 
-2. 부트스트래퍼는 웹 플랫폼 설치 관리자를 설치하고(필요한 경우), *설치할 항목* 목록에 최신 버전의 **Azure SDK for Visual Studio 2015** 및 **Service Fabric SDK and Tools for Visual Studio 2015**를 자동으로 배치합니다. **Install**을 클릭합니다.
+2. 부트스트래퍼는 웹 플랫폼 설치 관리자를 설치하고(필요한 경우), *설치할 항목* 목록에 최신 버전의 **Azure SDK for Visual Studio 2015** 및 **Service Fabric SDK and Tools for Visual Studio 2015**를 자동으로 배치합니다. **설치**를 클릭합니다.
 
     ![웹 플랫폼 설치 관리자](../media/sdk/vs2015-install/webpi.png)
 
 3. 다음 화면에서 **동의**를 클릭합니다. Web API에서 선택한 구성 요소의 다운로드 및 설치를 시작합니다.
 
-4. 설치가 완료되면 확인 화면이 표시됩니다. **Finish**를 클릭합니다. 이제 웹 플랫폼 설치 관리자를 닫을 수 있습니다.
+4. 설치가 완료되면 확인 화면이 표시됩니다. **마침**을 클릭합니다. 이제 웹 플랫폼 설치 관리자를 닫을 수 있습니다.
 
 ## <a name="verifying-the-installation"></a>설치 확인
 

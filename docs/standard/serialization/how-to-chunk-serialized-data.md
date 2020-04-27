@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 22f1b818-7e0d-428a-8680-f17d6ebdd185
 ms.openlocfilehash: 6a39997d8854d525146c044ed4bbf939de615d3f
 ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64602425"
@@ -58,6 +58,6 @@ ms.locfileid: "64602425"
   
 - 코드에서는 <xref:System>, <xref:System.Runtime.Serialization>, <xref:System.Web.Services>, <xref:System.Web.Services.Protocols>, <xref:System.Xml>, <xref:System.Xml.Serialization> 및 <xref:System.Xml.Schema> 네임스페이스를 사용합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [사용자 지정 serialization](custom-serialization.md)

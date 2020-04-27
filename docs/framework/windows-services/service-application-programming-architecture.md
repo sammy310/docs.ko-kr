@@ -17,7 +17,7 @@ ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
 ms.openlocfilehash: 1c197b487f1cb7596f507f663fe3f1fb83857cbd
 ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053495"
@@ -66,7 +66,7 @@ Windows 서비스 애플리케이션은 <xref:System.ServiceProcess.ServiceBase?
   
  <xref:System.ServiceProcess.ServiceController>라는 구성 요소를 사용하여 기존 서비스와 통신하고 서비스의 동작을 제어할 수도 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Windows 서비스 애플리케이션 소개](introduction-to-windows-service-applications.md)
 - [방법: Windows 서비스 만들기](how-to-create-windows-services.md)

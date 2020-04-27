@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
 ms.openlocfilehash: 30b788c77a2352d0d02ee772ab3f428381facd9f
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78155622"
@@ -45,6 +45,6 @@ ms.locfileid: "78155622"
   
  필요한 **XmlDataDocument** 주소에서 **DataSet**을 로드하는 경우 [데이터 세트를 XML 문서와 동기화](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [데이터 세트에서 XML 사용](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)

@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 97115892-410a-4657-ab47-1e14dfba73f8
 ms.openlocfilehash: c7819c3cb6b1430dcdb8a78c43f7138f64e691a8
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709844"
@@ -23,7 +23,7 @@ ms.locfileid: "75709844"
   
  <xref:System.Xml.XmlDocument>의 편집 기능 때문에 <xref:System.Xml.XmlDocument> 클래스를 변환의 입력으로 사용하면 XSLT(Extensible Stylesheet Language for Transformations) 변환에 <xref:System.Xml.XPath.XPathDocument>를 사용하는 것보다 성능이 떨어집니다. 이것은 <xref:System.Xml.XPath.XPathDocument>가 내부 스토리지로 인해 XPath(XML Path Language) 쿼리에 최적화되었기 때문입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제에서는 <xref:System.Xml.XmlDocument>를 <xref:System.Xml.Xsl.XslTransform>에 보내고 출력을 <xref:System.Xml.XmlReader>로 보내는 방법을 보여 줍니다.  
   
 ```vb  

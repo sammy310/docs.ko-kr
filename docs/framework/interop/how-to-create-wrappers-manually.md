@@ -6,7 +6,7 @@ helpviewer_keywords:
 ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
 ms.openlocfilehash: a7818a1c08d8538acfacb22dc270d7ef23a7a582
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181425"
@@ -60,7 +60,7 @@ coclass SATest
  };  
 ```  
   
- **관리형 소스 코드의 래퍼**  
+ **관리 소스 코드의 래퍼**  
   
 ```csharp  
 using System;  
@@ -97,7 +97,7 @@ namespace SAServer
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [런타임 호출 가능 래퍼 사용자 지정](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))
 - [COM 데이터 형식](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))

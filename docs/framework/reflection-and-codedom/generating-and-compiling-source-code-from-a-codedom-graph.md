@@ -28,7 +28,7 @@ helpviewer_keywords:
 ms.assetid: 6c864c8e-6dd3-4a65-ace0-36879d9a9c42
 ms.openlocfilehash: a8d3bf7363cb887834a1c251aead05c75e2e3fe8
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73130228"
@@ -89,7 +89,7 @@ ms.locfileid: "73130228"
  [!code-vb[CodeDomExample#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#23)]  
   
 ## <a name="languages-with-initial-support"></a>초기 지원 상태의 언어  
- .NET Framework에서는 C#, Visual Basic, C++, JScript 언어에 대한 코드 컴파일러 및 코드 생성기를 제공합니다. 언어별 코드 생성기 및 코드 컴파일러를 구현하면 CodeDOM 지원을 다른 언어로 확장할 수 있습니다.  
+ .NET Framework는 다음 언어에 대한 코드 컴파일러 및 코드 생성기를 제공합니다. C#, Visual Basic, C++ 및 JScript. 언어별 코드 생성기 및 코드 컴파일러를 구현하면 CodeDOM 지원을 다른 언어로 확장할 수 있습니다.  
   
 ## <a name="see-also"></a>참조
 

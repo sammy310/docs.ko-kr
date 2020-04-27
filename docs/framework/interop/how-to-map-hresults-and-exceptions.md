@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
 ms.openlocfilehash: e186228d1dc9a42ddfe92428f7dfad29a5789095
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181402"
@@ -66,14 +66,14 @@ CMyClass::MethodThatThrows
 |**COR_E_BADIMAGEFORMAT 또는 ERROR_BAD_FORMAT**|**BadImageFormatException**|  
 |**COR_E_COMEMULATE_ERROR**|**COMEmulateException**|  
 |**COR_E_CONTEXTMARSHAL**|**ContextMarshalException**|  
-|**COR_E_CORE**|**코어예외**|  
+|**COR_E_CORE**|**CoreException**|  
 |**NTE_FAIL**|**CryptographicException**|  
 |**COR_E_DIRECTORYNOTFOUND 또는 ERROR_PATH_NOT_FOUND**|**DirectoryNotFoundException**|  
 |**COR_E_DIVIDEBYZERO**|**DivideByZeroException**|  
 |**COR_E_DUPLICATEWAITOBJECT**|**DuplicateWaitObjectException**|  
 |**COR_E_ENDOFSTREAM**|**EndOfStreamException**|  
 |**COR_E_TYPELOAD**|**EntryPointNotFoundException**|  
-|**COR_E_EXCEPTION**|**예외**|  
+|**COR_E_EXCEPTION**|**Exception**|  
 |**COR_E_EXECUTIONENGINE**|**ExecutionEngineException**|  
 |**COR_E_FIELDACCESS**|**FieldAccessException**|  
 |**COR_E_FILENOTFOUND 또는 ERROR_FILE_NOT_FOUND**|**FileNotFoundException**|  
@@ -93,7 +93,7 @@ CMyClass::MethodThatThrows
 |**COR_E_MISSINGMETHOD**|**MissingMethodException**|  
 |**COR_E_MULTICASTNOTSUPPORTED**|**MulticastNotSupportedException**|  
 |**COR_E_NOTFINITENUMBER**|**NotFiniteNumberException**|  
-|**E_notimpl**|**NotImplementedException**|  
+|**E_NOTIMPL**|**NotImplementedException**|  
 |**COR_E_NOTSUPPORTED**|**NotSupportedException**|  
 |**COR_E_NULLREFERENCE 또는 E_POINTER**|**NullReferenceException**|  
 |**COR_E_OUTOFMEMORY 또는**<br /><br /> **E_OUTOFMEMORY**|**OutOfMemoryException**|  
@@ -107,7 +107,7 @@ CMyClass::MethodThatThrows
 |**COR_E_SERIALIZATION**|**SerializationException**|  
 |**COR_E_STACKOVERFLOW 또는 ERROR_STACK_OVERFLOW**|**StackOverflowException**|  
 |**COR_E_SYNCHRONIZATIONLOCK**|**SynchronizationLockException**|  
-|**COR_E_SYSTEM**|**시스템 예외**|  
+|**COR_E_SYSTEM**|**SystemException**|  
 |**COR_E_TARGET**|**TargetException**|  
 |**COR_E_TARGETINVOCATION**|**TargetInvocationException**|  
 |**COR_E_TARGETPARAMCOUNT**|**TargetParameterCountException**|  
@@ -130,17 +130,17 @@ CMyClass::MethodThatThrows
   
 |예외 필드|COM의 정보 소스|  
 |---------------------|------------------------------------|  
-|**Errorcode**|호출에서 반환된 HRESULT.|  
+|**ErrorCode**|호출에서 반환된 HRESULT.|  
 |**HelpLink**|**IErrorInfo->HelpContext**가 0이 아니면 **IErrorInfo->GetHelpFile**와 “#” 및 **IErrorInfo->GetHelpContext**를 연결하여 문자열을 구성합니다. 이외의 경우에는 **IErrorInfo->GetHelpFile**에서 문자열이 반환됩니다.|  
-|**InnerException**|항상 null 참조 (시각적 기본에서**아무것도).**|  
+|**InnerException**|항상 null 참조(Visual Basic의 경우 **Nothing**).|  
 |**메시지**|**IErrorInfo->GetDescription**에서 반환된 문자열.|  
-|**원본**|**IErrorInfo->GetSource**에서 반환된 문자열.|  
-|**Stacktrace**|스택 추적입니다.|  
+|**소스**|**IErrorInfo->GetSource**에서 반환된 문자열.|  
+|**StackTrace**|스택 추적입니다.|  
 |**TargetSite**|실패한 HRESULT를 반환한 메서드의 이름.|  
   
  **Message**, **Source** 및 **StackTrace**와 같은 예외 필드는 **StackOverflowException**에 사용할 수 없습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [고급 COM 상호 운용성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
 - [예외](../../standard/exceptions/index.md)

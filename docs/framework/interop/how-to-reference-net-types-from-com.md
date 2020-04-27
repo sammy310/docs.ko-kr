@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
 ms.openlocfilehash: 0223cb25b933cc84af49aa86d90259fdf1fd3efc
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73124169"
@@ -26,7 +26,7 @@ ms.locfileid: "73124169"
   
 ### <a name="to-import-a-library"></a>라이브러리를 가져오려면  
   
-- **#import** 지시문에서 **raw_interfaces_only** 옵션을 지정합니다. 예를 들면,  
+- **#import** 지시문에서 **raw_interfaces_only** 옵션을 지정합니다. 예를 들어:  
   
     ```cpp  
     #import "..\LoanLib\LoanLib.tlb" raw_interfaces_only  
@@ -34,7 +34,7 @@ ms.locfileid: "73124169"
   
      또는  
   
-- Mscorlib.tlb에 대한 #import 지시문을 포함합니다. 예를 들면,  
+- Mscorlib.tlb에 대한 #import 지시문을 포함합니다. 예를 들어:  
   
     ```cpp  
     #import "mscorlib.tlb"  

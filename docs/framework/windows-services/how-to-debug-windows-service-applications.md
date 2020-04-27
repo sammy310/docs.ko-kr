@@ -11,7 +11,7 @@ ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
 ms.openlocfilehash: 860f2ae22eb6510dc1f1a454ae3e51ccb366078b
 ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053621"
@@ -113,7 +113,7 @@ ms.locfileid: "71053621"
   
  시스템 시작 시에만 발생하는 문제를 디버그하려는 등의 일부 경우에는 Windows 디버거를 사용해야 합니다. [WDK(Windows 드라이버 키트)를 다운로드](/windows-hardware/drivers/download-the-wdk)하고 [How to debug Windows Services](https://support.microsoft.com/kb/824344)(Windows 서비스를 디버그하는 방법)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Windows 서비스 애플리케이션 소개](introduction-to-windows-service-applications.md)
 - [방법: 서비스 설치 및 제거](how-to-install-and-uninstall-services.md)

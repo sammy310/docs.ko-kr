@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 76f28770-7126-428f-9ed5-7b5ae8bad5ee
 ms.openlocfilehash: af6df3729f1bd926e9a47cc5b9d9bf460c8e1225
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78159288"
@@ -55,7 +55,7 @@ xsc.Add("urn:bookstore-schema", "Books.xsd");
 vr.Schemas.Add(xsc);  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [XmlSchemaCollection을 사용하여 XDR 유효성 검사](../../../../docs/standard/data/xml/xdr-validation-with-xmlschemacollection.md)
 - [XmlSchemaCollection을 사용하여 XSD(XML 스키마) 유효성 검사](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemacollection.md)

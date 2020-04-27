@@ -13,7 +13,7 @@ ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
 author: ghogen
 ms.openlocfilehash: 99e2376c50f0b47cc21002b2926818707188805e
 ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053646"
@@ -60,7 +60,7 @@ Visual Studio에서는 서비스 애플리케이션과 관련된 리소스를 �
     > [!NOTE]
     > 프로젝트의 각 추가 서비스에 대해 프로젝트의 `ProjectInstaller` 클래스에 <xref:System.ServiceProcess.ServiceInstaller> 구성 요소를 추가해야 합니다. 3단계에서 추가된 <xref:System.ServiceProcess.ServiceProcessInstaller> 구성 요소는 프로젝트의 모든 개별 서비스 설치 관리자에서 작동합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Windows 서비스 애플리케이션 소개](introduction-to-windows-service-applications.md)
 - [방법: 서비스 설치 및 제거](how-to-install-and-uninstall-services.md)

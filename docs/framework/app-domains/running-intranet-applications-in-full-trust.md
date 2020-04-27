@@ -6,12 +6,12 @@ helpviewer_keywords:
 - intranet applications, running in full trust
 - running intranet applications in full trust
 ms.assetid: ee13c0a8-ab02-49f7-b8fb-9eab16c6c4f0
-ms.openlocfilehash: c93f84dc53abbb86cbfc4ae36e9cdcbe0bd50273
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.openlocfilehash: 33b025fa62343277fc96fc7771587e95f556e7a6
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119752"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645443"
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>완전 신뢰 모드에서 인트라넷 애플리케이션 실행
 
@@ -37,4 +37,4 @@ ms.locfileid: "73119752"
   
 ## <a name="see-also"></a>참조
 
-- [어셈블리를 사용한 프로그래밍](../../standard/assembly/program.md)
+- [어셈블리를 사용한 프로그래밍](../../standard/assembly/index.md)

@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 ms.openlocfilehash: 34ffb9923337bbad90b2170a16d610d26c7f6f23
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78160198"
@@ -38,11 +38,11 @@ ms.locfileid: "78160198"
   
 |W3C 형식|해당 .NET Framework 클래스(형식)|XPath 형식 또는 XSLT 형식|  
 |--------------|----------------------------------------------|-----------------------------|  
-|문자열|System.String|XPath입니다.|  
-|Boolean|System.Boolean|XPath입니다.|  
-|번호|System.Double|XPath입니다.|  
+|String|System.String|XPath|  
+|부울|System.Boolean|XPath|  
+|수|System.Double|XPath|  
 |결과 트리 조각|System.Xml.XPath.XPathNavigator|XSLT|  
-|노드 집합|System.Xml.XPath.XPathNodeIterator|XPath입니다.|  
+|노드 집합|System.Xml.XPath.XPathNodeIterator|XPath|  
   
  매개 변수 개체가 위 클래스에 해당하지 않으면 Double 또는 String 형식이 적절히 적용됩니다. Int16, UInt16, Int32, UInt32, Int64, UInt64, Single 및 Decimal 형식은 Double 형식이 되며 기타 모든 형식은 `ToString` 메서드를 사용하여 String 형식이 됩니다.  
   
@@ -362,6 +362,6 @@ public class Sample
   
  `</circles>`  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [XslTransform 클래스의 XSLT 프로세서 구현](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

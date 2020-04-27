@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
 ms.openlocfilehash: a0ccb469a43c3a21a76eaf24fa7ce7b490dd5c4a
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79180517"
@@ -77,7 +77,7 @@ CodeDOM을 사용하여 XML 문서를 생성하는 코드를 만들 수 있습�
   
 - 이 코드 예제를 성공적으로 실행하려면 `FullTrust` 권한이 설정되어 있어야 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [코드를 XML로 문서화](../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
 - [XML 문서 주석](../../csharp/programming-guide/xmldoc/index.md)

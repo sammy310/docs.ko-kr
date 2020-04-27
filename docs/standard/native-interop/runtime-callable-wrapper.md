@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
 ms.openlocfilehash: 0b448379fba965060fdf3bf067e65374f40d1fc2
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78156012"
@@ -56,7 +56,7 @@ ms.locfileid: "78156012"
 |**IDispatchEx**(.NET Framework만 해당) |클래스가 **IDispatchEx**를 구현하는 경우 RCW는 **IExpando**를 구현합니다. **IDispatchEx** 인터페이스는 **IDispatch**와 달리 멤버의 대/소문자 구분 호출, 열거형, 추가, 삭제를 가능하게 하는 **IDispatch** 인터페이스의 확장입니다.|  
 |**IEnumVARIANT**|열거형을 지원하는 COM 형식이 컬렉션으로 처리될 수 있게 합니다.|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [COM 래퍼](com-wrappers.md)
 - [COM 호출 가능 래퍼](com-callable-wrapper.md)

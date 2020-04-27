@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 ms.openlocfilehash: 6866da283cc7cdd180aada252007d67bd72cd862
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73124090"
@@ -59,7 +59,7 @@ COM 개발자는 애플리케이션에 통합하려는 관리 형식에 대한 �
 
   선택하는 메커니즘에 관계없이 사용자가 제공하는 어셈블리에 정의된 공용 형식만 생성된 형식 라이브러리에 포함됩니다.
 
-자세한 내용은 [방법: .NET 애플리케이션에 Win32 리소스로 형식 라이브러리 포함](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))을 참조하세요.
+자세한 내용은 [방법: .NET 기반 애플리케이션에 Win32 리소스로 형식 라이브러리 포함](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))을 참조하세요.
 
 <a name="cpconpackagingassemblyforcomanchor1"></a>
 

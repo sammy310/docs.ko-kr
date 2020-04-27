@@ -12,7 +12,7 @@ ms.assetid: e5d13760-4c83-4b0d-abef-39852677cd7a
 author: ghogen
 ms.openlocfilehash: a10e05b0460608a9e67ee4527adf80be3d47438e
 ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053634"
@@ -49,7 +49,7 @@ ms.locfileid: "71053634"
   
  <xref:System.Security.Permissions.PermissionState> 열거형을 사용하여 <xref:System.Security.Permissions.SecurityPermission> 클래스에서 권한을 설정하면 서비스 정보에 대한 액세스가 제한될 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.ServiceProcess.ServiceController>
 - <xref:System.ServiceProcess.ServiceControllerStatus>

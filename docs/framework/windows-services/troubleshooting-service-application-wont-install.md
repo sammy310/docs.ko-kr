@@ -12,7 +12,7 @@ ms.assetid: 45c48e2e-b97d-44bc-8896-14f328e0ce33
 author: ghogen
 ms.openlocfilehash: c45ab03ec4577d88953b0e43531082a46c29e8fd
 ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053529"
@@ -25,6 +25,6 @@ ms.locfileid: "71053529"
   
  같은 이름의 다른 서비스가 이미 설치되어 있는지도 확인해야 합니다. 서비스 이름이 고유해야만 설치될 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Windows 서비스 애플리케이션 소개](introduction-to-windows-service-applications.md)

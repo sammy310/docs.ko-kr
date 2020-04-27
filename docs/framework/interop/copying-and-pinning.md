@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
 ms.openlocfilehash: f6db7d37293015911c1285d39e19bf7542a7ac59
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73123637"
@@ -31,7 +31,7 @@ ms.locfileid: "73123637"
 서식 있는 [blittable](blittable-and-non-blittable-types.md) 클래스의 경우 수정된 레이아웃(서식 있음)을 포함하고 관리되는 메모리와 관리되지 않는 메모리에서 모두 공통적인 데이터 표현을 사용합니다. 이러한 형식에 마샬링이 필요하면 힙의 개체 포인터가 호출 수신자에게 직접 전달됩니다. 호출 수신자는 포인터로 참조되는 메모리 위치의 콘텐츠를 변경할 수 있습니다.
 
 > [!NOTE]
-> 매개 변수가 Out 또는 In/Out으로 표시 되는 경우 호출 수신자는 메모리 내용을 변경할 수 있습니다. 이와 대조적으로, 매개 변수가 형식이 지정 된 blittable 형식의 기본값인에서로 마샬링하는 것으로 설정 된 경우에는 호출 수신자가 콘텐츠를 변경 하지 않아야 합니다. In 개체를 수정하면 같은 클래스를 형식 라이브러리로 내보내고 아파트 간 호출을 수행하는 데 사용할 경우 문제가 발생합니다.
+> 매개 변수가 Out 또는 In/Out으로 표시된 경우 호출 수신자는 메모리 콘텐츠를 변경할 수 있습니다. 반면 호출 수신자는 매개 변수가 In(서식 있는 blittable 형식의 기본값)으로 마샬링되도록 설정된 경우 콘텐츠 변경을 피해야 합니다. In 개체를 수정하면 같은 클래스를 형식 라이브러리로 내보내고 아파트 간 호출을 수행하는 데 사용할 경우 문제가 발생합니다.
 
 ## <a name="formatted-non-blittable-classes"></a>서식 있는 비 Blittable 클래스
 

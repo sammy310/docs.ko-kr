@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 71d03b78-6898-4ce7-b0fc-1282573f31f7
 ms.openlocfilehash: 83b8c09323e73a9b3ba7dea8d272d7d41d03add1
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710091"
@@ -22,7 +22,7 @@ XML 문서를 노드 트리로 메모리에 읽어올 경우 노드의 형식은
 |요소|<xref:System.Xml.XmlElement>|요소 노드를 나타냅니다.|  
 |Attr|<xref:System.Xml.XmlAttribute>|요소의 특성입니다.|  
 |ProcessingInstruction|<xref:System.Xml.XmlProcessingInstruction>|처리 명령 노드입니다.|  
-|설명|<xref:System.Xml.XmlComment>|comment 노드입니다.|  
+|주석|<xref:System.Xml.XmlComment>|comment 노드입니다.|  
 |텍스트|<xref:System.Xml.XmlText>|요소 또는 특성에 속한 텍스트입니다.|  
 |CDATASection|<xref:System.Xml.XmlCDataSection>|CDATA를 나타냅니다.|  
 |엔터티|<xref:System.Xml.XmlEntity>|XML 문서에서 내부 DTD(문서 종류 정의) 하위 집합 또는 외부 DTD 및 매개 변수 엔터티의 `<!ENTITY…>` 선언을 나타냅니다.|  

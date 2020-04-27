@@ -1,5 +1,5 @@
 ---
-title: '방법: 전역 어셈블리 캐시의 내용 보기'
+title: '방법: 글로벌 어셈블리 캐시의 내용 보기'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c5f786a0-969b-4f14-9f02-e77c3384d9af
 ms.openlocfilehash: b5d8b31e7eb23789878da620f3a4517056a1ee3e
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73119826"
 ---
-# <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a>방법: 전역 어셈블리 캐시의 내용 보기
+# <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a>방법: 글로벌 어셈블리 캐시의 내용 보기
 
 [전역 어셈블리 캐시 도구(Gacutil.exe)](../tools/gacutil-exe-gac-tool.md)를 사용하면 GAC(전역 어셈블리 캐시)의 콘텐츠를 볼 수 있습니다.
 

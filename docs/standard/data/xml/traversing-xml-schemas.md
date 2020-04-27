@@ -9,7 +9,7 @@ dev_langs:
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 ms.openlocfilehash: dbe02242f9bb8654e3f12d87b6ff6c2aea1f76b1
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710117"
@@ -31,7 +31,7 @@ SOM(스키마 개체 모델) API를 사용하여 XML 스키마를 통과하면 S
 |<xref:System.Xml.Schema.XmlSchema.Includes%2A>|<xref:System.Xml.Schema.XmlSchemaExternal>, <xref:System.Xml.Schema.XmlSchemaInclude>, <xref:System.Xml.Schema.XmlSchemaImport> 또는 <xref:System.Xml.Schema.XmlSchemaRedefine>|
 |<xref:System.Xml.Schema.XmlSchema.Items%2A>|<xref:System.Xml.Schema.XmlSchemaObject>(모든 전역 수준 요소, 특성 및 형식에 대한 액세스 제공)|
 |<xref:System.Xml.Schema.XmlSchema.Notations%2A>|<xref:System.Xml.Schema.XmlSchemaNotation>|
-|<xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A>|<xref:System.Xml.Schema.XmlSchemaType>에서 <xref:System.Xml.Schema.XmlSchemaSimpleType>에서 <xref:System.Xml.Schema.XmlSchemaComplexType>|
+|<xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A>|<xref:System.Xml.Schema.XmlSchemaType>, <xref:System.Xml.Schema.XmlSchemaSimpleType>, <xref:System.Xml.Schema.XmlSchemaComplexType>|
 |<xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A>|<xref:System.Xml.XmlAttribute>(스키마 네임스페이스에 속하지 않은 특성에 대한 액세스 제공)|
 
 > [!NOTE]

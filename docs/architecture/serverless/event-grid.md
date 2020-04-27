@@ -3,13 +3,13 @@ title: Azure Event Grid - 서버리스 앱
 description: Azure Event Grid는 안정적으로 이벤트를 전달하고 이벤트별 요금 모델을 통해 대규모로 라우팅할 수 있는 서버리스 솔루션입니다.
 author: JEREMYLIKNESS
 ms.author: jeliknes
-ms.date: 06/26/2018
-ms.openlocfilehash: 3c577139c12567e762aabd58c9dc29457fa37aa1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/06/2020
+ms.openlocfilehash: 408e1b9cd1b1e5316c7c6a17bb1b0c76a38f9e11
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72522721"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135713"
 ---
 # <a name="event-grid"></a>Event Grid
 
@@ -132,14 +132,12 @@ Event Grid를 사용하는 주요 이점은 Azure에서 생성되는 자동 메�
 - [Azure Logic Apps](https://docs.microsoft.com/azure/logic-apps)
 - [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging)
 - [Azure Table Storage](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
-- [Functions 1.x 및 2.x 비교](https://docs.microsoft.com/azure/azure-functions/functions-versions)
 - [Azure 온-프레미스 데이터 게이트웨이를 사용하여 온-프레미스 데이터 원본에 연결](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway)
 - [Azure Portal에서 첫 번째 함수 만들기](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)
 - [Azure CLI를 사용하여 첫 번째 함수 만들기](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function-azure-cli)
 - [Visual Studio를 사용하여 첫 번째 함수 만들기](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio)
 - [Functions 지원 언어](https://docs.microsoft.com/azure/azure-functions/supported-languages)
 - [Azure Functions 모니터링](https://docs.microsoft.com/azure/azure-functions/functions-monitoring)
-- [Azure Functions 프록시 사용](https://docs.microsoft.com/azure/azure-functions/functions-proxies)
 
 >[!div class="step-by-step"]
 >[이전](logic-apps.md)

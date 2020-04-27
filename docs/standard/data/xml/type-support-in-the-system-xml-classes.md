@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 63570538-06e3-4401-ad4d-ac50be90c7bf
 ms.openlocfilehash: cec47d40a0353639bc17b880265f7c15f2f53ac4
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710104"
@@ -36,5 +36,5 @@ ms.locfileid: "75710104"
  [XML 데이터 형식 변환](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)  
  <xref:System.Xml.XmlConvert> 클래스를 사용하여 XML 스키마와 CLR 형식 간에 변환하는 방법을 설명합니다.  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
  [XPathNavigator를 사용하여 강력한 형식의 XML 데이터 액세스](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)

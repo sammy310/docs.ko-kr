@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: d5c87cbe-4d69-429f-aad5-3103c2ca2770
 ms.openlocfilehash: b1df520d00d3a98b2e518092d4eff51b5d0b7741
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78158027"
@@ -62,8 +62,8 @@ Console.WriteLine(doc.InnerXml);
 <a:test xmlns="123" xmlns:a="123" />  
 ```  
   
- **doc.InnerXml**을 호출한 결과로 트리가 문자열에 유지된 경우에는 `xmlns:a='123'` 요소의 네임스페이스를 유지하기 위해 `test` 특성이 추가되었습니다. 원래 `'123'`이었으며 `'123'`을 유지했습니다.  
+ **doc.InnerXml**을 호출한 결과로 트리가 문자열에 유지된 경우에는 `test` 요소의 네임스페이스를 유지하기 위해 `xmlns:a='123'` 특성이 추가되었습니다. 원래 `'123'`이었으며 `'123'`을 유지했습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [XML DOM(문서 개체 모델)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

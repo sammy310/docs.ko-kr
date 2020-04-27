@@ -7,7 +7,7 @@ helpviewer_keywords:
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
 ms.openlocfilehash: bcb2ae00b02571b97dfc23100a1e5a7d3e7d8f12
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73119985"
@@ -31,7 +31,7 @@ ms.locfileid: "73119985"
   
 - [방법: 어셈블리의 정규화된 이름 식별](../../standard/assembly/find-fully-qualified-name.md)  
   
-- [방법: 단일 파일 어셈블리 만들기](build-single-file-assembly.md)  
+- [방법: 단일 파일 어셈블리 빌드](build-single-file-assembly.md)  
   
 - [방법: 다중 파일 어셈블리 빌드](build-multifile-assembly.md)  
   
@@ -43,13 +43,13 @@ ms.locfileid: "73119985"
   
 - [방법: 강력한 이름 건너뛰기 기능 비활성화](../../standard/assembly/disable-strong-name-bypass-feature.md)  
   
-- [방법: 전역 어셈블리 캐시에 어셈블리 설치](install-assembly-into-gac.md)  
+- [방법: 글로벌 어셈블리 캐시에 어셈블리 설치](install-assembly-into-gac.md)  
   
-- [방법: 전역 어셈블리 캐시의 내용 보기](how-to-view-the-contents-of-the-gac.md)  
+- [방법: 글로벌 어셈블리 캐시의 내용 보기](how-to-view-the-contents-of-the-gac.md)  
   
-- [방법: 전역 어셈블리 캐시에서 어셈블리 제거](how-to-remove-an-assembly-from-the-gac.md)  
+- [방법: 글로벌 어셈블리 캐시에서 어셈블리 제거](how-to-remove-an-assembly-from-the-gac.md)  
   
-- [방법: 어셈블리 내용 보기](../../standard/assembly/view-contents.md)  
+- [방법: 어셈블리 콘텐츠 보기](../../standard/assembly/view-contents.md)  
   
 ## <a name="see-also"></a>참조
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), benefits
 - access control lists [.NET Framework]
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
-ms.openlocfilehash: 330555f907a5ee2ef9cfc11b0b5659a392c0dec7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.openlocfilehash: 7834fbc4d74b44c4bc5204ac451e92cac22e1ef5
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119714"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645415"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>어셈블리 및 전역 어셈블리 캐시 사용
 
@@ -44,14 +44,14 @@ ms.locfileid: "73119714"
   
  어셈블리를 전역 어셈블리 캐시에 명시적으로 설치하지 않으려고 하는 시나리오가 있습니다. 애플리케이션을 구성하는 어셈블리 중 하나를 전역 어셈블리 캐시에 배치하면 XCOPY를 사용하여 애플리케이션 디렉터리를 복사하는 방식으로 애플리케이션을 더 이상 복제하거나 설치할 수 없습니다. 이 경우 어셈블리를 전역 어셈블리 캐시로 이동해야 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
-[방법: 전역 어셈블리 캐시에 어셈블리 설치](install-assembly-into-gac.md)  
+## <a name="in-this-section"></a>섹션 내용  
+[방법: 글로벌 어셈블리 캐시에 어셈블리 설치](install-assembly-into-gac.md)  
 어셈블리를 전역 어셈블리 캐시에 설치하는 방법을 설명합니다.  
   
-[방법: 전역 어셈블리 캐시의 내용 보기](how-to-view-the-contents-of-the-gac.md)  
+[방법: 글로벌 어셈블리 캐시의 내용 보기](how-to-view-the-contents-of-the-gac.md)  
 [Gacutil.exe(전역 어셈블리 캐시 도구)](../tools/gacutil-exe-gac-tool.md)를 사용하여 전역 어셈블리 캐시의 콘텐츠를 보는 방법을 설명합니다.  
   
-[방법: 전역 어셈블리 캐시에서 어셈블리 제거](how-to-remove-an-assembly-from-the-gac.md)  
+[방법: 글로벌 어셈블리 캐시에서 어셈블리 제거](how-to-remove-an-assembly-from-the-gac.md)  
 [Gacutil.exe(전역 어셈블리 캐시 도구)](../tools/gacutil-exe-gac-tool.md)를 사용하여 전역 어셈블리 캐시에서 어셈블리를 제거하는 방법을 설명합니다.  
   
 [전역 어셈블리 캐시에서 서비스되는 구성 요소 사용](use-serviced-components-with-the-gac.md)  
@@ -65,11 +65,11 @@ ms.locfileid: "73119714"
 [전역 어셈블리 캐시](gac.md)  
 전역 어셈블리 캐시를 설명합니다.  
   
-[방법: 어셈블리 내용 보기](../../standard/assembly/view-contents.md)  
+[방법: 어셈블리 콘텐츠 보기](../../standard/assembly/view-contents.md)  
 [Ildasm.exe(IL 디스어셈블러)](../tools/ildasm-exe-il-disassembler.md)를 사용하여 어셈블리의 MSIL(Microsoft Intermediate Language) 정보를 보는 방법을 설명합니다.  
   
 [런타임에서 어셈블리를 찾는 방법](../deployment/how-the-runtime-locates-assemblies.md)  
 공용 언어 런타임이 애플리케이션을 구성하는 어셈블리를 찾고 로드하는 방법을 설명합니다.  
   
-[어셈블리를 사용한 프로그래밍](../../standard/assembly/program.md)  
+[어셈블리를 사용한 프로그래밍](../../standard/assembly/index.md)  
 관리되는 애플리케이션의 빌드 블록인 어셈블리를 설명합니다.

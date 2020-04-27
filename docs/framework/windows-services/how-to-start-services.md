@@ -8,7 +8,7 @@ ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
 ms.openlocfilehash: 75fd3aba88bdffbe536ad5dab14996913d0a9d22
 ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053565"
@@ -78,7 +78,7 @@ ms.locfileid: "71053565"
 
 2. <xref:System.ServiceProcess.ServiceController.Start%2A> 메서드를 호출하여 서비스를 시작합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Windows 서비스 애플리케이션 소개](introduction-to-windows-service-applications.md)
 - [방법: Windows 서비스 만들기](how-to-create-windows-services.md)

@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 ms.openlocfilehash: 66c7ba5989952edb55f21aab960ad7395a92ae0d
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181356"
@@ -20,7 +20,7 @@ ms.locfileid: "79181356"
   
  다음 표에서는 배열에 대한 마샬링 옵션을 나열하고 사용법을 설명합니다.  
   
-|Array|Description|  
+|배열|설명|  
 |-----------|-----------------|  
 |값 형식 정수.|정수 배열을 In 매개 변수로 전달합니다.|  
 |참조 형식 정수.|정수 배열을 In/Out 매개 변수로 전달합니다.|  
@@ -84,7 +84,7 @@ ms.locfileid: "79181356"
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  
     ```  
   
- [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll)은 앞에 나열된 함수 및 2개의 구조체 변수 **MYPOINT** 및 **MYPERSON**에 대한 구현을 포함하는 관리되지 않는 사용자 지정 라이브러리입니다. 구조체에는 다음과 같은 요소가 포함됩니다.  
+ [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) 은 앞에 나열된 함수 및 2개의 구조체 변수 **MYPOINT** 및 **MYPERSON**에 대한 구현을 포함하는 관리되지 않는 사용자 지정 라이브러리입니다. 구조체에는 다음과 같은 요소가 포함됩니다.  
   
 ```cpp
 typedef struct _MYPOINT  
@@ -112,7 +112,7 @@ typedef struct _MYPERSON
  [!code-csharp[Conceptual.Interop.Marshaling#32](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#32)]
  [!code-vb[Conceptual.Interop.Marshaling#32](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#32)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [플랫폼은 데이터 유형을 호출합니다.](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
+- [플랫폼 호출 데이터 형식](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
 - [관리 코드에서 프로토타입 만들기](creating-prototypes-in-managed-code.md)

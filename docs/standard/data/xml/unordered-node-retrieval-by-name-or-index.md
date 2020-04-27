@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
 ms.openlocfilehash: 55ea0e31bb8a2863dc0e0eb30f6ca5700c3110b8
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78155739"
@@ -117,6 +117,6 @@ class test {
   
  **AttributeCollection**에서 특성을 제거하는 추가 코드 예제를 보려면 [XmlNamedNodeMap.RemoveNamedItem 메서드](xref:System.Xml.XmlNamedNodeMap.RemoveNamedItem%2A)를 참조하세요. 메서드 및 속성에 대한 자세한 내용은 [XmlNamedNodeMap 멤버](xref:System.Xml.XmlNamedNodeMap)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [XML DOM(문서 개체 모델)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

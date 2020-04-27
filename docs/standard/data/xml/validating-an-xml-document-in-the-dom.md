@@ -9,7 +9,7 @@ dev_langs:
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 ms.openlocfilehash: 93686ddf1afff76926e77acdbf5aa58e93d6cb77
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710039"
@@ -40,7 +40,7 @@ XML 스키마의 유효성을 검사하는 <xref:System.Xml.XmlReader>를 만들
 
 5. 마지막으로 XML 문서와 함께 <xref:System.Xml.XmlReaderSettings> 개체를 <xref:System.Xml.XmlReader.Create%2A> 클래스의 <xref:System.Xml.XmlReader> 메서드에 전달하여 스키마의 유효성을 검사하는 <xref:System.Xml.XmlReader>를 만듭니다.
 
-### <a name="example"></a>예
+### <a name="example"></a>예제
 
 다음 코드 예제에서는 스키마의 유효성을 검사하는 <xref:System.Xml.XmlReader>가 DOM에 로드된 XML 데이터의 유효성을 검사합니다. 또한 XML 문서를 잘못 수정하고 이 문서의 유효성을 다시 검사하므로 스키마 유효성 검사 오류가 발생합니다. 마지막으로 오류 중 하나를 수정한 다음 XML 문서의 일부에 대한 유효성을 부분적으로 검사합니다.
 

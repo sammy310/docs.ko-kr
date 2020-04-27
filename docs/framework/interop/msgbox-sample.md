@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: 9e0edff6-cc0d-4d5c-a445-aecf283d9c3a
 ms.openlocfilehash: b970a5a193f82ca141c030491febce5ef352eb70
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181355"
@@ -42,7 +42,7 @@ ms.locfileid: "79181355"
  [!code-csharp[Conceptual.Interop.Marshaling#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/msgbox.cs#6)]
  [!code-vb[Conceptual.Interop.Marshaling#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/msgbox.vb#6)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [문자열 마샬링](marshaling-strings.md)
 - [문자열에 대한 기본 마샬링](default-marshaling-for-strings.md)

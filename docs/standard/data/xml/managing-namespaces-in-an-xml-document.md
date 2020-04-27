@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
 ms.openlocfilehash: 7b219788895ab2f89fa285c2e1b7de62639bfcf9
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78160042"
@@ -65,7 +65,7 @@ XML 네임스페이스는 XML 문서의 요소 및 특성 이름을 사용자 �
   
  다음은 <xref:System.Xml.XmlNamespaceManager> 클래스로 수행할 수 있는 관리 및 조회 작업입니다. 자세한 내용 및 예제는 각 메서드 또는 속성의 참조 페이지에 대한 링크를 참조하세요.  
   
-|대상|관리 그룹을 연결하거나 연결된 관리 그룹의 속성을 편집하려면 관리 작업 영역의|  
+|대상|기능|  
 |--------|---------|  
 |네임스페이스 추가|<xref:System.Xml.XmlNamespaceManager.AddNamespace%2A> 메서드|  
 |네임스페이스 제거|<xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A> 메서드|  
@@ -77,7 +77,7 @@ XML 네임스페이스는 XML 문서의 요소 및 특성 이름을 사용자 �
 |접두사가 현재 범위에서 정의되어 있는지 확인|<xref:System.Xml.XmlNamespaceManager.HasNamespace%2A> 메서드|  
 |접두사와 URI를 찾는 데 사용된 이름 테이블 가져오기|<xref:System.Xml.XmlNamespaceManager.NameTable%2A> 속성|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Xml.XmlNamespaceManager>
 - [XML 문서 및 데이터](../../../../docs/standard/data/xml/index.md)

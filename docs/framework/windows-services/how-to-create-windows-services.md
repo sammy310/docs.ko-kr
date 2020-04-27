@@ -8,7 +8,7 @@ ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
 author: ghogen
 ms.openlocfilehash: 514675b3c3ce1f6701dff571361df672fb520c6a
 ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053664"
@@ -67,7 +67,7 @@ ms.locfileid: "71053664"
   
 8. 서비스를 설치합니다. 자세한 내용은 [방법: 서비스 설치 및 제거](how-to-install-and-uninstall-services.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Windows 서비스 애플리케이션 소개](introduction-to-windows-service-applications.md)
 - [방법: 프로그래밍 방식으로 서비스 작성](how-to-write-services-programmatically.md)

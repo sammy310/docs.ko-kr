@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 ms.openlocfilehash: a5c9f4248e060d231941269f39cadbc7147ce27f
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "79400910"
@@ -46,7 +46,7 @@ ms.locfileid: "79400910"
     > [!NOTE]
     > 개별 어셈블리 또는 형식은 언로드할 수 없습니다. 전체 도메인만 언로드할 수 있습니다.  
   
-- 한 애플리케이션에서 실행 중인 코드가 다른 애플리케이션의 코드 또는 리소스에 직접 액세스할 수 없습니다. 공용 언어 런타임은 다른 애플리케이션 도메인의 개체를 서로 직접 호출할 수 없도록 하여 이러한 격리를 적용합니다. 도메인 사이를 통과하는 개체는 복사되거나 프록시에 의해 액세스됩니다. 개체가 복사되는 경우 해당 개체에 대한 호출은 로컬입니다. 즉, 참조되는 개체와 호출자 둘 다 같은 애플리케이션 도메인에 있습니다. 프록시를 통해 개체가 액세스되는 경우 해당 개체에 대한 호출은 원격입니다. 이 경우 참조되는 개체와 호출자는 서로 다른 애플리케이션 도메인에 있습니다. 크로스 도메인 호출은 두 프로세스 또는 두 컴퓨터 사이의 호출과 동일한 원격 호출 인프라를 사용합니다. 따라서 메서드 호출을 올바르게 JIT로 컴파일할 수 있도록 하기 위해 참조되는 개체의 메타데이터를 두 애플리케이션 도메인에서 모두 사용할 수 있어야 합니다. 호출하는 도메인이 호출되는 개체의 메타데이터에 액세스할 수 없는 경우 <xref:System.IO.FileNotFoundException> 형식의 예외가 발생하여 컴파일할 수 없습니다. 자세한 내용은 [Remote Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))을 참조하세요. 도메인 사이에서 개체에 액세스할 수 있는 방법을 결정하는 메커니즘은 개체에 의해 결정됩니다. 자세한 내용은 <xref:System.MarshalByRefObject?displayProperty=nameWithType>을 참조하세요.  
+- 한 애플리케이션에서 실행 중인 코드가 다른 애플리케이션의 코드 또는 리소스에 직접 액세스할 수 없습니다. 공용 언어 런타임은 다른 애플리케이션 도메인의 개체를 서로 직접 호출할 수 없도록 하여 이러한 격리를 적용합니다. 도메인 사이를 통과하는 개체는 복사되거나 프록시에 의해 액세스됩니다. 개체가 복사되는 경우 해당 개체에 대한 호출은 로컬입니다. 즉, 참조되는 개체와 호출자 둘 다 같은 애플리케이션 도메인에 있습니다. 프록시를 통해 개체가 액세스되는 경우 해당 개체에 대한 호출은 원격입니다. 이 경우 참조되는 개체와 호출자는 서로 다른 애플리케이션 도메인에 있습니다. 크로스 도메인 호출은 두 프로세스 또는 두 컴퓨터 사이의 호출과 동일한 원격 호출 인프라를 사용합니다. 따라서 메서드 호출을 올바르게 JIT로 컴파일할 수 있도록 하기 위해 참조되는 개체의 메타데이터를 두 애플리케이션 도메인에서 모두 사용할 수 있어야 합니다. 호출하는 도메인이 호출되는 개체의 메타데이터에 액세스할 수 없는 경우 <xref:System.IO.FileNotFoundException> 형식의 예외가 발생하여 컴파일할 수 없습니다. 자세한 내용은 [Remote Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))을 참조하세요. 도메인 사이에서 개체에 액세스할 수 있는 방법을 결정하는 메커니즘은 개체에 의해 결정됩니다. 자세한 내용은 <xref:System.MarshalByRefObject?displayProperty=nameWithType>를 참조하세요.  
   
 - 코드의 동작 범위는 해당 코드가 실행되는 애플리케이션에 의해 지정됩니다. 즉, 애플리케이션 도메인은 애플리케이션 버전 정책, 액세스하는 원격 어셈블리의 위치, 도메인으로 로드하는 어셈블리를 찾을 위치 관련 정보 등의 구성 설정을 제공합니다.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "79400910"
   
  <xref:System.AppDomain>은 애플리케이션 도메인에 대한 프로그래밍 인터페이스입니다. 이 클래스는 도메인을 만들고 언로드하며 도메인에서 형식 인스턴스를 만들고 애플리케이션 도메인 언로드와 같이 다양한 알림을 등록할 수 있는 메서드를 포함합니다. 다음 표에는 자주 사용되는 <xref:System.AppDomain> 메서드가 나열되어 있습니다.  
   
-|AppDomain 메서드|Description|  
+|AppDomain 메서드|설명|  
 |----------------------|-----------------|  
 |<xref:System.AppDomain.CreateDomain%2A>|새 애플리케이션 도메인을 만듭니다. <xref:System.AppDomainSetup> 개체를 지정하는 이 메서드의 오버로드를 사용하는 것이 좋습니다. 이 메서드는 애플리케이션 기본 디렉터리 또는 애플리케이션의 루트 디렉터리, 도메인의 구성 파일 위치 및 어셈블리를 도메인에 로드하기 위해 공용 언어 런타임에서 사용할 검색 경로 등 새 도메인의 속성을 설정하는 기본적인 방법입니다.|  
 |<xref:System.AppDomain.ExecuteAssembly%2A> 및 <xref:System.AppDomain.ExecuteAssemblyByName%2A>|애플리케이션 도메인에서 어셈블리를 실행합니다. 이 메서드는 인스턴스 메서드이므로 참조할 다른 애플리케이션 도메인에서 코드를 실행하는 데 사용할 수 있습니다.|  
@@ -156,7 +156,7 @@ Type = REG_MULTI_SZ
 Value (to append) = COMPLUS_LoaderOptimization=1  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.AppDomain?displayProperty=nameWithType>
 - <xref:System.MarshalByRefObject?displayProperty=nameWithType>

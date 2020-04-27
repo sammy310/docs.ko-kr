@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
 ms.openlocfilehash: e6ec30e3c7c2318b199122cd63c7f56584707a98
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78158053"
@@ -21,7 +21,7 @@ XPath 2.0 데이터 모델의 인스턴스로서 <xref:System.Xml.XPath.XPathNav
   
 - 단순 CLR 형식: XML 스키마 언어는 CLR(공용 언어 런타임) 형식을 직접 지원하지 않습니다. 가장 적합한 CLR 형식으로 단순 요소 및 특성 내용을 볼 수 있으므로 스키마 정보가 없을 경우 이 내용을 보다 적합한 형식으로 구체화할 수 있는 추가된 스키마 정보를 사용하여 모든 단순 내용에 <xref:System.String> 형식을 지정할 수 있습니다. <xref:System.Xml.XPath.XPathNavigator.ValueType%2A> 속성을 사용하여 단순 요소 및 특성 내용의 가장 일치하는 CLR 형식을 찾을 수 있습니다. 스키마 기본 제공 형식에서 CLR 형식으로 매핑하는 방법에 대한 자세한 내용은 [System.Xml 클래스의 형식 지원](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)을 참조하세요.  
   
-- 단순 (CLR) 형식 목록: 단순 내용이 있는 요소나 특성에 공백으로 구분된 값 목록이 포함될 수 있습니다. 값은 XML 스키마에 의해 "목록 형식"으로 지정됩니다. XML 스키마가 없을 경우 이러한 단순 내용은 단일 텍스트 노드로 간주됩니다. XML 스키마를 사용할 수 있는 경우 이 단순 내용을 일련의 atomic 값으로 노출할 수 있습니다. 각 atomic 값은 CLR 개체 컬렉션으로 매핑되는 단순 형식입니다. 스키마 기본 제공 형식에서 CLR 형식으로 매핑하는 방법에 대한 자세한 내용은 [System.Xml 클래스의 형식 지원](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)을 참조하세요.  
+- 단순 (CLR) 형식 목록: 단순 콘텐츠가 있는 요소나 특성에 공백으로 구분된 값 목록이 포함될 수 있습니다. 값은 XML 스키마에 의해 "목록 형식"으로 지정됩니다. XML 스키마가 없을 경우 이러한 단순 내용은 단일 텍스트 노드로 간주됩니다. XML 스키마를 사용할 수 있는 경우 이 단순 내용을 일련의 atomic 값으로 노출할 수 있습니다. 각 atomic 값은 CLR 개체 컬렉션으로 매핑되는 단순 형식입니다. 스키마 기본 제공 형식에서 CLR 형식으로 매핑하는 방법에 대한 자세한 내용은 [System.Xml 클래스의 형식 지원](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)을 참조하세요.  
   
 - 형식화된 값: 스키마에 의해 유효성이 검사되는 단순 형식의 특성 또는 요소에는 형식화된 값이 있습니다. 이 값은 numeric, string, date 형식 등의 기본 형식입니다. XSD의 모든 기본 제공 단순 형식을 CLR 형식으로 매핑할 수 있습니다. 이 CLR 형식을 사용하면 단순히 <xref:System.String>으로 노드 값에 액세스하는 대신 더욱 적합한 형식으로 노드 값에 액세스할 수 있습니다. 특성이나 요소 자식이 있는 요소는 복합 형식으로 간주됩니다. 단순 내용(자식으로 텍스트 노드만 포함)이 있는 복합 형식의 형식화된 값은 단순 내용의 단순 형식의 형식화된 값과 같습니다. 복합 내용(하나 이상의 자식 요소 포함)이 있는 복합 형식의 형식화된 값은 <xref:System.String>으로 반환된 모든 자식 텍스트 노드를 연결한 문자열 값입니다. 스키마 기본 제공 형식에서 CLR 형식으로 매핑하는 방법에 대한 자세한 내용은 [System.Xml 클래스의 형식 지원](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)을 참조하세요.  
   
@@ -183,7 +183,7 @@ Console.WriteLine("The price of the book has been dropped 20% from {0:C} to {1:C
   
  스키마 기본 제공 형식에서 CLR 형식으로 매핑하는 방법에 대한 자세한 내용은 [System.Xml 클래스의 형식 지원](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

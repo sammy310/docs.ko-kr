@@ -7,7 +7,7 @@ helpviewer_keywords:
 ms.assetid: c0aa8533-3b3b-42e8-9f60-84919793098c
 ms.openlocfilehash: 8b8bb4dff4f73247282060c0b4fd778ae0169b1f
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181513"
@@ -25,7 +25,7 @@ ms.locfileid: "79181513"
   
  콜백 함수는 작업이 반복적으로 수행되는 경우 사용하기에 적합합니다. 또한 일반적으로 Windows API에서 **EnumFontFamilies**, **EnumPrinters**, **EnumWindows** 등의 열거형 함수에 사용됩니다. **EnumWindows** 함수는 컴퓨터의 모든 기존 창을 열거하고 콜백 함수를 호출하여 각 창에서 작업을 수행합니다. 자세한 내용과 예제는 [방법: 콜백 함수 구현](how-to-implement-callback-functions.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [방법: 콜백 함수 구현](how-to-implement-callback-functions.md)
 - [DLL 함수 호출](calling-a-dll-function.md)

@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
 ms.openlocfilehash: a63452df16e452a90eff3977ac8726cc0a5ac439
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710195"
@@ -66,7 +66,7 @@ ms.locfileid: "75710195"
 ### <a name="importing-namespaces-and-assemblies"></a>네임스페이스 및 어셈블리 가져오기  
  <xref:System.Xml.Xsl.XslCompiledTransform> 클래스는 `msxsl:script` 요소에서 기본적으로 지원하는 어셈블리 및 네임스페이스 집합을 미리 정의합니다. 그러나 `msxsl:script` 블록에 어셈블리 및 네임스페이스를 가져오면 미리 정의된 목록에 없는 네임스페이스에 속한 클래스 및 멤버를 사용할 수 있습니다.  
   
-#### <a name="assemblies"></a>Assemblies  
+#### <a name="assemblies"></a>어셈블리  
  기본적으로 다음 두 어셈블리가 참조됩니다.  
   
 - System.dll  
@@ -92,7 +92,7 @@ ms.locfileid: "75710195"
 #### <a name="namespaces"></a>네임스페이스  
  기본적으로 다음 네임스페이스가 포함됩니다.  
   
-- System  
+- 시스템  
   
 - System.Collection  
   
@@ -119,7 +119,7 @@ ms.locfileid: "75710195"
 </msxsl:script>  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 포함 스크립트를 사용하여 주어진 반지름으로 원의 원주를 계산합니다.  
   
  [!code-csharp[XSLT_Script#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XSLT_Script/CS/xslt_script.cs#1)]
@@ -131,7 +131,7 @@ ms.locfileid: "75710195"
 #### <a name="calcxsl"></a>calc.xsl  
  [!code-xml[XSLT_Script#3](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Script/XML/calc.xsl#3)]  
   
-### <a name="output"></a>Output  
+### <a name="output"></a>출력  
   
 ```xml  
 <circles xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:user="urn:my-scripts">  
