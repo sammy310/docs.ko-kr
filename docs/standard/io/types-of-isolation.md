@@ -18,12 +18,12 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-ms.openlocfilehash: 9bbd2c3cdca9b2eaee268738bf99189b0be78eba
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 0e8be9b1d12d40f8135d21abe9dd6cb0b63bb2d8
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635741"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646388"
 ---
 # <a name="types-of-isolation"></a>격리 유형
 격리된 스토리지에 대한 액세스는 항상 스토리지를 만든 사용자로 제한됩니다. 이 유형의 격리를 구현하기 위해 공용 언어 런타임은 운영 체제에서 인식하고 저장소가 열릴 때 코드가 실행 중인 프로세스에 연결된 ID인 사용자 ID의 동일한 표기법을 사용합니다. 이 ID는 인증된 사용자 ID이지만 가장으로 인해 현재 사용자의 ID가 동적으로 변경될 수 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "80635741"
   
 - 도메인 ID는 애플리케이션의 증거를 나타내며 웹 애플리케이션의 경우 전체 URL일 수 있습니다. 셸에 호스트된 코드의 경우 도메인 ID는 애플리케이션 디렉터리 경로를 기반으로 할 수 있습니다. 예를 들어 실행 파일이 C:\Office\MyApp.exe 경로에서 실행되는 경우 도메인 ID는 C:\Office\MyApp.exe입니다.  
   
-- 어셈블리 ID는 어셈블리의 증거입니다. 이 ID는 암호화 디지털 서명에서 가져올 수 있고 어셈블리의 [강력한 이름](../assembly/strong-named.md), 어셈블리의 소프트웨어 게시자 또는 해당 URL ID가 사용될 수 있습니다. 어셈블리에 강력한 이름과 소프트웨어 게시자 ID가 모두 있는 경우 소프트웨어 게시자 ID가 사용됩니다. 어셈블리를 인터넷에서 가져오고 서명이 없는 경우 URL ID가 사용됩니다. 어셈블리 및 강력한 이름에 대한 자세한 내용은 [어셈블리를 사용한 프로그래밍](/dotnet/standard/assembly/index)을 참조하세요.  
+- 어셈블리 ID는 어셈블리의 증거입니다. 이 ID는 암호화 디지털 서명에서 가져올 수 있고 어셈블리의 [강력한 이름](../assembly/strong-named.md), 어셈블리의 소프트웨어 게시자 또는 해당 URL ID가 사용될 수 있습니다. 어셈블리에 강력한 이름과 소프트웨어 게시자 ID가 모두 있는 경우 소프트웨어 게시자 ID가 사용됩니다. 어셈블리를 인터넷에서 가져오고 서명이 없는 경우 URL ID가 사용됩니다. 어셈블리 및 강력한 이름에 대한 자세한 내용은 [어셈블리를 사용한 프로그래밍](../assembly/index.md)을 참조하세요.  
   
 - 로밍 저장소는 로밍 사용자 프로필이 있는 사용자와 함께 이동됩니다. 파일은 네트워크 디렉터리에 기록되고 사용자가 로그인한 컴퓨터로 다운로드됩니다. 로밍 사용자 프로필에 대한 자세한 내용은 <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>을 참조하세요.  
   
