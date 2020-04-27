@@ -6,12 +6,12 @@ metadata:
   description: 프로그래밍 C# 알아보기 - 초보 개발자, C#을 처음 사용하는 개발자, 숙련된 C# / .NET 개발자용
   ms.topic: landing-page
   ms.date: 11/19/2019
-  ms.openlocfilehash: 2bec49d0832a7d00d0fea247166a9ec073f37e11
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: a0de519e518cac70bac831cf689042e104cd1389
+  ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 03/15/2020
-  ms.locfileid: "75339167"
+  ms.lasthandoff: 04/23/2020
+  ms.locfileid: "82102725"
 landingContent:
 - title: C#의 프로그램에 대해 알아보기
   linkLists:
@@ -77,8 +77,8 @@ landingContent:
       url: nullable-references.md
   - linkListType: concept
     links:
-    - text: Null 허용 여부에 대한 API 주석
-      url: nullable-attributes.md
+    - text: nullable 마이그레이션 전략 선택
+      url: nullable-migration-strategies.md
   - linkListType: tutorial
     links:
     - text: 비동기 스트림 사용 및 생성

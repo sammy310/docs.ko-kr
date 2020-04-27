@@ -20,6 +20,8 @@
       href: install/how-to-detect-installed-versions.md
     - name: Linux 패키지 관리자
       items:
+        - name: Ubuntu 20.04
+          href: install/linux-package-manager-ubuntu-2004.md
         - name: Ubuntu 19.10
           href: install/linux-package-manager-ubuntu-1910.md
         - name: Ubuntu 19.04
@@ -351,7 +353,7 @@
     - name: Windows Forms 프로젝트 포팅
       href: porting/winforms.md
     - name: WPF 프로젝트 포팅
-      href: porting/wpf.md
+      href: ../desktop-wpf/migration/convert-project-from-net-framework.md
     - name: 포트 C++/CLI 프로젝트
       href: porting/cpp-cli.md
 - name: 단위 테스트
@@ -418,7 +420,7 @@
         - name: 플러그 인을 사용하여 .NET Core 애플리케이션 만들기
           href: tutorials/creating-app-with-plugin-support.md
         - name: .NET Core에서 어셈블리 언로드 기능을 사용하고 디버그하는 방법
-          href: ../standard/assembly/unloadability-howto.md
+          href: ../standard/assembly/unloadability.md
 - name: .NET Core 배포 패키징
   href: distribution-packaging.md
 - name: COM에 .NET Core 구성 요소 공개

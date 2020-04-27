@@ -232,6 +232,10 @@
           displayName: garbage collection
         - name: 기본 사항
           href: garbage-collection/fundamentals.md
+        - name: 워크스테이션 및 서버 GC
+          href: garbage-collection/workstation-server-gc.md
+        - name: 백그라운드 GC
+          href: garbage-collection/background-gc.md
         - name: LOB(Large Object) 힙
           href: garbage-collection/large-object-heap.md
         - name: 가비지 수집 및 성능
@@ -748,8 +752,8 @@
           href: serialization/how-to-chunk-serialized-data.md
         - name: '방법: .NET 표준 개체가 직렬화 가능한지 확인'
           href: serialization/how-to-determine-if-netstandard-object-is-serializable.md
-        - name: 샘플
-          href: serialization/samples-binary.md
+        - name: 예제
+          href: serialization/basic-serialization-technology-sample.md
     - name: XML 및 SOAP serialization
       items:
         - name: 개요
@@ -804,8 +808,6 @@
               href: serialization/xml-serializer-generator-tool-sgen-exe.md
             - name: XML 스키마 정의 도구(Xsd.exe)
               href: serialization/xml-schema-definition-tool-xsd-exe.md
-        - name: 샘플
-          href: serialization/samples-xml.md
 - name: 여러 플랫폼용으로 개발
   items:
     - name: 개요
