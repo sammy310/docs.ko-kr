@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: 711b51c590be149545fda3130148e2bcaef8be4f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b55de00188d92623c493dfc5f9aca915890ae5df
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78261985"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021474"
 ---
-### <a name="private-fields-added-to-built-in-struct-types"></a><span data-ttu-id="5ec54-101">기본 제공 구조체 형식에 추가된 프라이빗 필드</span><span class="sxs-lookup"><span data-stu-id="5ec54-101">Private fields added to built-in struct types</span></span>
+### <a name="private-fields-added-to-built-in-struct-types"></a><span data-ttu-id="8e69d-101">기본 제공 구조체 형식에 추가된 프라이빗 필드</span><span class="sxs-lookup"><span data-stu-id="8e69d-101">Private fields added to built-in struct types</span></span>
 
-<span data-ttu-id="5ec54-102">프라이빗 필드가 [참조 어셈블리](../../../../docs/standard/assembly/reference-assemblies.md)의 [특정 구조체 형식](#affected-apis)에 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="5ec54-102">Private fields were added to [certain struct types](#affected-apis) in [reference assemblies](../../../../docs/standard/assembly/reference-assemblies.md).</span></span> <span data-ttu-id="5ec54-103">그 결과 C#에서 이러한 구조체 형식은 항상 [new 연산자](../../../../docs/csharp/language-reference/operators/new-operator.md) 또는 [기본 리터럴](../../../../docs/csharp/language-reference/operators/default.md#default-literal)을 사용하여 인스턴스화해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="5ec54-103">As a result, in C#, those struct types must always be instantiated by using the [new operator](../../../../docs/csharp/language-reference/operators/new-operator.md) or [default literal](../../../../docs/csharp/language-reference/operators/default.md#default-literal).</span></span>
+<span data-ttu-id="8e69d-102">프라이빗 필드가 [참조 어셈블리](../../../../docs/standard/assembly/reference-assemblies.md)의 [특정 구조체 형식](#affected-apis)에 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="8e69d-102">Private fields were added to [certain struct types](#affected-apis) in [reference assemblies](../../../../docs/standard/assembly/reference-assemblies.md).</span></span> <span data-ttu-id="8e69d-103">그 결과 C#에서 이러한 구조체 형식은 항상 [new 연산자](../../../../docs/csharp/language-reference/operators/new-operator.md) 또는 [기본 리터럴](../../../../docs/csharp/language-reference/operators/default.md#default-literal)을 사용하여 인스턴스화해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e69d-103">As a result, in C#, those struct types must always be instantiated by using the [new operator](../../../../docs/csharp/language-reference/operators/new-operator.md) or [default literal](../../../../docs/csharp/language-reference/operators/default.md#default-literal).</span></span>
 
-#### <a name="change-description"></a><span data-ttu-id="5ec54-104">변경 내용 설명</span><span class="sxs-lookup"><span data-stu-id="5ec54-104">Change description</span></span>
+#### <a name="change-description"></a><span data-ttu-id="8e69d-104">변경 내용 설명</span><span class="sxs-lookup"><span data-stu-id="8e69d-104">Change description</span></span>
 
-<span data-ttu-id="5ec54-105">.NET Core 2.0 및 이전 버전에서 제공되는 일부 구조체 형식(예: <xref:System.ConsoleKeyInfo>)은 C#에서 `new` 연산자 또는 [기본 리터럴](../../../../docs/csharp/language-reference/operators/default.md#default-literal)을 사용하지 않고도 인스턴스화할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5ec54-105">In .NET Core 2.0 and previous versions, some provided struct types, for example, <xref:System.ConsoleKeyInfo>, could be instantiated without using the `new` operator or [default literal](../../../../docs/csharp/language-reference/operators/default.md#default-literal) in C#.</span></span> <span data-ttu-id="5ec54-106">이는 C# 컴파일러에서 사용하는 [참조 어셈블리](../../../../docs/standard/assembly/reference-assemblies.md)에 구조체에 대한 프라이빗 필드가 포함되지 않았기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="5ec54-106">This was because the [reference assemblies](../../../../docs/standard/assembly/reference-assemblies.md) used by the C# compiler didn't contain the private fields for the structs.</span></span> <span data-ttu-id="5ec54-107">.NET 구조체 형식에 대한 모든 프라이빗 필드는 .NET Core 2.1에서 시작하는 참조 어셈블리에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="5ec54-107">All private fields for .NET struct types are added to the reference assemblies starting in .NET Core 2.1.</span></span>
+<span data-ttu-id="8e69d-105">.NET Core 2.0 및 이전 버전에서 제공되는 일부 구조체 형식(예: <xref:System.ConsoleKeyInfo>)은 C#에서 `new` 연산자 또는 [기본 리터럴](../../../../docs/csharp/language-reference/operators/default.md#default-literal)을 사용하지 않고도 인스턴스화할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8e69d-105">In .NET Core 2.0 and previous versions, some provided struct types, for example, <xref:System.ConsoleKeyInfo>, could be instantiated without using the `new` operator or [default literal](../../../../docs/csharp/language-reference/operators/default.md#default-literal) in C#.</span></span> <span data-ttu-id="8e69d-106">이는 C# 컴파일러에서 사용하는 [참조 어셈블리](../../../../docs/standard/assembly/reference-assemblies.md)에 구조체에 대한 프라이빗 필드가 포함되지 않았기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="8e69d-106">This was because the [reference assemblies](../../../../docs/standard/assembly/reference-assemblies.md) used by the C# compiler didn't contain the private fields for the structs.</span></span> <span data-ttu-id="8e69d-107">.NET 구조체 형식에 대한 모든 프라이빗 필드는 .NET Core 2.1에서 시작하는 참조 어셈블리에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="8e69d-107">All private fields for .NET struct types are added to the reference assemblies starting in .NET Core 2.1.</span></span>
 
-<span data-ttu-id="5ec54-108">예를 들어 다음 C# 코드는 .NET Core 2.0에서 컴파일되지만 .NET Core 2.1에서는 컴파일되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="5ec54-108">For example, the following C# code compiles in .NET Core 2.0, but not in .NET Core 2.1:</span></span>
+<span data-ttu-id="8e69d-108">예를 들어 다음 C# 코드는 .NET Core 2.0에서 컴파일되지만 .NET Core 2.1에서는 컴파일되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8e69d-108">For example, the following C# code compiles in .NET Core 2.0, but not in .NET Core 2.1:</span></span>
 
 ```csharp
 ConsoleKeyInfo key;    // Struct type
@@ -25,17 +25,17 @@ if (key.ToString() == "y")
 }
 ```
 
-<span data-ttu-id="5ec54-109">.NET Core 2.1의 이전 코드에서는 다음과 같은 컴파일러 오류가 발생합니다. **CS0165 - 할당되지 않은 지역 변수 ‘key’를 사용했습니다.**</span><span class="sxs-lookup"><span data-stu-id="5ec54-109">In .NET Core 2.1, the previous code results in the following compiler error: **CS0165 - Use of unassigned local variable 'key'**</span></span>
+<span data-ttu-id="8e69d-109">.NET Core 2.1의 이전 코드에서는 다음과 같은 컴파일러 오류가 발생합니다. **CS0165 - 할당되지 않은 지역 변수 ‘key’를 사용했습니다.**</span><span class="sxs-lookup"><span data-stu-id="8e69d-109">In .NET Core 2.1, the previous code results in the following compiler error: **CS0165 - Use of unassigned local variable 'key'**</span></span>
 
-#### <a name="version-introduced"></a><span data-ttu-id="5ec54-110">도입된 버전</span><span class="sxs-lookup"><span data-stu-id="5ec54-110">Version introduced</span></span>
+#### <a name="version-introduced"></a><span data-ttu-id="8e69d-110">도입된 버전</span><span class="sxs-lookup"><span data-stu-id="8e69d-110">Version introduced</span></span>
 
-<span data-ttu-id="5ec54-111">2.1</span><span class="sxs-lookup"><span data-stu-id="5ec54-111">2.1</span></span>
+<span data-ttu-id="8e69d-111">2.1</span><span class="sxs-lookup"><span data-stu-id="8e69d-111">2.1</span></span>
 
-#### <a name="recommended-action"></a><span data-ttu-id="5ec54-112">권장 조치</span><span class="sxs-lookup"><span data-stu-id="5ec54-112">Recommended action</span></span>
+#### <a name="recommended-action"></a><span data-ttu-id="8e69d-112">권장 조치</span><span class="sxs-lookup"><span data-stu-id="8e69d-112">Recommended action</span></span>
 
-<span data-ttu-id="5ec54-113">`new` 연산자 또는 [기본 리터럴](../../../../docs/csharp/language-reference/operators/default.md#default-literal)을 사용하여 구조체 형식을 인스턴스화합니다.</span><span class="sxs-lookup"><span data-stu-id="5ec54-113">Instantiate struct types by using the `new` operator or [default literal](../../../../docs/csharp/language-reference/operators/default.md#default-literal).</span></span>
+<span data-ttu-id="8e69d-113">`new` 연산자 또는 [기본 리터럴](../../../../docs/csharp/language-reference/operators/default.md#default-literal)을 사용하여 구조체 형식을 인스턴스화합니다.</span><span class="sxs-lookup"><span data-stu-id="8e69d-113">Instantiate struct types by using the `new` operator or [default literal](../../../../docs/csharp/language-reference/operators/default.md#default-literal).</span></span>
 
-<span data-ttu-id="5ec54-114">예를 들어:</span><span class="sxs-lookup"><span data-stu-id="5ec54-114">For example:</span></span>
+<span data-ttu-id="8e69d-114">예를 들어:</span><span class="sxs-lookup"><span data-stu-id="8e69d-114">For example:</span></span>
 
 ```csharp
 ConsoleKeyInfo key = new ConsoleKeyInfo();    // Struct type.
@@ -51,11 +51,11 @@ if (key.ToString() == "y")
     Console.WriteLine("Yes!");
 ```
 
-#### <a name="category"></a><span data-ttu-id="5ec54-115">범주</span><span class="sxs-lookup"><span data-stu-id="5ec54-115">Category</span></span>
+#### <a name="category"></a><span data-ttu-id="8e69d-115">범주</span><span class="sxs-lookup"><span data-stu-id="8e69d-115">Category</span></span>
 
-<span data-ttu-id="5ec54-116">CoreFx</span><span class="sxs-lookup"><span data-stu-id="5ec54-116">CoreFx</span></span>
+<span data-ttu-id="8e69d-116">핵심 .NET 라이브러리</span><span class="sxs-lookup"><span data-stu-id="8e69d-116">Core .NET libraries</span></span>
 
-#### <a name="affected-apis"></a><span data-ttu-id="5ec54-117">영향을 받는 API</span><span class="sxs-lookup"><span data-stu-id="5ec54-117">Affected APIs</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="8e69d-117">영향을 받는 API</span><span class="sxs-lookup"><span data-stu-id="8e69d-117">Affected APIs</span></span>
 
 - <xref:System.ArraySegment%601.Enumerator?displayProperty=fullName>
 - <xref:System.ArraySegment%601?displayProperty=fullName>
