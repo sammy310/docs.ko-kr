@@ -3,12 +3,12 @@ title: C# 프로그램 구조 - C# 언어 둘러보기
 description: C# 프로그램의 기본 구성 요소에 대해 알아보기
 ms.date: 02/25/2020
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: c09c11a4dd957b29b2adb7aaa8d68a50f30620b6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c0a4dcaed7b53a7da7008d6000b3bec2ffe3ee7b
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156833"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82141021"
 ---
 # <a name="program-structure"></a>프로그램 구조
 
@@ -16,7 +16,7 @@ C#의 핵심적인 조직 개념은 ***프로그램***, ***네임스페이스***
 
 `dotnet new` 명령을 사용하여 이름이 *acme*인 라이브러리 프로젝트를 만들 수 있습니다.
 
-```console
+```dotnetcli
 dotnet new classlib -o acme
 ```
 
@@ -26,7 +26,7 @@ dotnet new classlib -o acme
 
 이 클래스의 정규화된 이름은 `Acme.Collections.Stack`입니다. 클래스에는 필드 `top`, 2개의 메서드 `Push` 및 `Pop`, 중첩된 클래스 `Entry` 등의 여러 멤버가 포함됩니다. `Entry` 클래스는 필드 `next` 및 필드 `data`, 생성자의 세 멤버가 포함됩니다. 다음 명령은
 
-```console
+```dotnetcli
 dotnet build
 ```
 
@@ -48,7 +48,7 @@ dotnet build
 
 위와 같이 추가한 후에, `dotnet build`는 이름이 `example.exe`인 실행 가능한 어셈블리를 만들고, 이 어셈블리가 실행되면 다음과 같은 출력이 생성됩니다.
 
-```console
+```dotnetcli
 100
 10
 1

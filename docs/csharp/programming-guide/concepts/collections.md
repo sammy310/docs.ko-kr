@@ -2,12 +2,12 @@
 title: 컬렉션(C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: a560155b936aef7a4a346d39eaed75e0a85c1a73
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d2996648690fc03b5f1d6a90e0be96155c5a24ed
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169885"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645474"
 ---
 # <a name="collections-c"></a>컬렉션(C#)
 
@@ -602,7 +602,7 @@ private static IEnumerable<int> EvenSequence(
 - [프로그래밍 개념(C#)](./index.md)
 - [Option Strict 문](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [LINQ to Objects(C#)](./linq/linq-to-objects.md)
-- [PLINQ(병렬 LINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
+- [PLINQ(병렬 LINQ)](../../../standard/parallel-programming/introduction-to-plinq.md)
 - [컬렉션 및 데이터 구조](../../../standard/collections/index.md)
 - [Collection 클래스 선택](../../../standard/collections/selecting-a-collection-class.md)
 - [컬렉션 내에서 비교 및 정렬](../../../standard/collections/comparisons-and-sorts-within-collections.md)

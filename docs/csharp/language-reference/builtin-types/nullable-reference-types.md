@@ -2,12 +2,12 @@
 title: nullable 참조 형식 - C# 참조
 description: C# nullable 참조 형식 및 사용 방법 알아보기
 ms.date: 04/06/2020
-ms.openlocfilehash: cbc7397ac76b43b79a4168f4c61fe2c631b4a46b
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: cb61b162b06faa51faabbcdd91e55618cdeaca73
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888289"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102699"
 ---
 # <a name="nullable-reference-types-c-reference"></a>nullable 참조 형식(C# 참조)
 
@@ -61,11 +61,11 @@ nullable 참조 형식은 `null`에 초기화되거나 할당될 수 있습니�
 
 :::code language="csharp" source="snippets/NullableReferenceTypes.cs" id="SnippetLocalWarnings":::
 
-앞의 예제에서는 참조 변수의 null 상태를 확인하는 컴파일러의 정적 분석을 보여 줍니다. 컴파일러는 null 검사 및 할당에 대한 언어 규칙을 적용하여 분석에 대해 알립니다.  컴파일러는 메서드 또는 속성의 의미 체계를 가정할 수 없습니다. Null 검사를 수행하는 메서드를 호출하는 경우 컴파일러는 해당 메서드가 변수의 null 상태에 영향을 준다는 것을 알 수 없습니다. 컴파일러에 인수 및 반환 값의 의미 체계를 알리는 여러 가지 특성을 API에 추가할 수 있습니다. 해당 특성은 .NET Core 라이브러리의 여러 일반적인 API에 적용되었습니다. 예를 들어 <xref:System.String.IsNullOrEmpty%2A>가 업데이트되었으며 컴파일러는 해당 메서드를 null 검사로 올바르게 해석합니다. Null 상태 정적 분석에 적용되는 특성에 대한 자세한 내용은 [nullable 특성](../../nullable-attributes.md) 문서를 참조하세요.
+앞의 예제에서는 참조 변수의 null 상태를 확인하는 컴파일러의 정적 분석을 보여 줍니다. 컴파일러는 null 검사 및 할당에 대한 언어 규칙을 적용하여 분석에 대해 알립니다.  컴파일러는 메서드 또는 속성의 의미 체계를 가정할 수 없습니다. Null 검사를 수행하는 메서드를 호출하는 경우 컴파일러는 해당 메서드가 변수의 null 상태에 영향을 준다는 것을 알 수 없습니다. 컴파일러에 인수 및 반환 값의 의미 체계를 알리는 여러 가지 특성을 API에 추가할 수 있습니다. 해당 특성은 .NET Core 라이브러리의 여러 일반적인 API에 적용되었습니다. 예를 들어 <xref:System.String.IsNullOrEmpty%2A>가 업데이트되었으며 컴파일러는 해당 메서드를 null 검사로 올바르게 해석합니다. Null 상태 정적 분석에 적용되는 특성에 대한 자세한 내용은 [nullable 특성](../attributes/nullable-analysis.md) 문서를 참조하세요.
 
 ## <a name="setting-the-nullable-context"></a>nullable 컨텍스트 설정
 
-두 가지 방법으로 nullable 컨텍스트를 제어할 수 있습니다. 프로젝트 수준에서 `<Nullable>enable</Nullable>` 프로젝트 설정을 추가할 수 있습니다. 단일 C# 소스 파일에서 `#nullable enable` pragma를 추가하여 nullable 컨텍스트를 사용하도록 설정할 수 있습니다. [nullable 전략 설정](../../nullable-attributes.md) 문서를 참조하세요.
+두 가지 방법으로 nullable 컨텍스트를 제어할 수 있습니다. 프로젝트 수준에서 `<Nullable>enable</Nullable>` 프로젝트 설정을 추가할 수 있습니다. 단일 C# 소스 파일에서 `#nullable enable` pragma를 추가하여 nullable 컨텍스트를 사용하도록 설정할 수 있습니다. [nullable 전략 설정](../../nullable-migration-strategies.md) 문서를 참조하세요.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 

@@ -2,12 +2,12 @@
 title: 'C# 예약된 특성: null 허용 정적 분석'
 ms.date: 04/14/2020
 description: null 허용 참조 형식 및 null을 허용하지 않는 참조 형식에 대한 더 나은 정적 분석을 제공하기 위해 컴파일러가 이 특성을 해석합니다.
-ms.openlocfilehash: 0315d78db7517541efe578d8675c0f2fe45f5aea
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 33521133a6a01196e6e1ab9c3cdc191a24f1ecf3
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389813"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102712"
 ---
 # <a name="reserved-attributes-contribute-to-the-compilers-null-state-static-analysis"></a>예약된 특성은 컴파일러의 null 상태 정적 분석에 사용됩니다.
 
@@ -129,7 +129,7 @@ public Customer FindCustomer(string lastName, string firstName)
 
 검색한 이름을 찾을 수 없는 경우 `null`을 반환하도록 이 메서드를 작성했을 수 있습니다. `null`은 분명히 레코드를 찾을 수 없음을 나타냅니다. 이 예제에서는 반환 형식을 `Customer`에서 `Customer?`로 변경할 수 있습니다. 반환 값을 null 허용 참조 형식으로 선언하면 이 API의 의도가 분명하게 지정됩니다.
 
-[제네릭 정의 및 null 허용 여부](../../nullable-attributes.md#generic-definitions-and-nullability)에서 설명되는 이유로 해당 기술은 제네릭 메서드에서 작동하지 않습니다. 비슷한 패턴을 따르는 제네릭 메서드가 있을 수 있습니다.
+[제네릭 정의 및 null 허용 여부](../../nullable-migration-strategies.md#generic-definitions-and-nullability)에서 설명되는 이유로 해당 기술은 제네릭 메서드에서 작동하지 않습니다. 비슷한 패턴을 따르는 제네릭 메서드가 있을 수 있습니다.
 
 ```csharp
 public T Find<T>(IEnumerable<T> sequence, Func<T, bool> match)
