@@ -4,7 +4,7 @@ description: .NET에서 형식을 네이티브 표현으로 마샬링하는 방�
 ms.date: 01/18/2019
 ms.openlocfilehash: 91b8f3d6cb53fd7a0adea7ea9669e7459e81445f
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75706268"
@@ -13,7 +13,7 @@ ms.locfileid: "75706268"
 
 **마샬링**은 관리 코드와 네이티브 코드 간에 변환해야 하는 경우 형식을 변환하는 프로세스입니다.
 
-관리 코드와 비관리 코드의 형식이 서로 다르기 때문에 마샬링이 필요합니다. 예를 들어 관리 코드에서는 `String`있지만 관리 되지 않는 세계 문자열은 유니코드 ("와이드"), 비유니코드, null 종료, ASCII 등 일 수 있습니다. 기본적으로 P/Invoke 하위 시스템은이 문서에 설명 된 기본 동작에 따라 올바른 작업을 수행 하려고 합니다. 그러나 추가 제어가 필요한 경우 [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) 특성을 사용하여 관리되지 않는 쪽에서 필요한 형식을 지정할 수 있습니다. 예를 들어 문자열을 null 종료 ANSI 문자열로 보내려는 경우 다음과 같이 할 수 있습니다.
+관리 코드와 비관리 코드의 형식이 서로 다르기 때문에 마샬링이 필요합니다. 예를 들어 관리 코드에서는 `String`을 사용하지만 관리되지 않는 환경에서는 문자열이 유니코드(“와이드”), 비유니코드, null 종료, ASCII 등일 수 있습니다. 기본적으로 P/Invoke 하위 시스템은 이 문서에 설명된 기본 동작에 따라 올바른 작업을 수행하려고 합니다. 그러나 추가 제어가 필요한 경우 [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) 특성을 사용하여 관리되지 않는 쪽에서 필요한 형식을 지정할 수 있습니다. 예를 들어 문자열을 null 종료 ANSI 문자열로 보내려는 경우 다음과 같이 할 수 있습니다.
 
 ```csharp
 [DllImport("somenativelibrary.dll")]

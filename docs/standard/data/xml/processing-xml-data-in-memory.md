@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 1bbb4d05-ead7-4bda-8ece-f86d35c57ad4
 ms.openlocfilehash: 038bcfcb9d40ee6087efa3487b6f27f252393f2c
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710429"
@@ -29,5 +29,5 @@ Microsoft .NET Framework에는 <xref:System.Xml.XmlDocument> 클래스, <xref:Sy
  [LINQ to XML을 사용하여 XML 데이터 처리](../../../../docs/standard/data/xml/process-xml-data-using-linq-to-xml.md)  
  LINQ to XML의 간단한 개요 및 LINQ to XML 문서에 대한 링크를 제공합니다.  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
  [XML 문서 및 데이터](../../../../docs/standard/data/xml/index.md)

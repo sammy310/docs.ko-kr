@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
 ms.openlocfilehash: b37cb0f4bf9a85053d70d549ae005c7d50a50bc0
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710806"
@@ -54,7 +54,7 @@ ms.locfileid: "75710806"
 
 ## <a name="xslsort"></a>xsl:sort
 
-변환을 사용하여 정렬할 경우 W3C XSLT 1.0 권장 사항에서는 다음과 같은 몇 가지 준수 사항을 가정합니다.
+변환을 사용하여 정렬할 경우 W3C XSLT 1.0 권장 사항에서는 다음과 같은 몇 가지 준수 사항을 다음 창이 여기에 포함됩니다.
 
 - 규칙을 준수하는 두 XSLT 프로세서가 서로 다르게 정렬할 수 있습니다.
 
@@ -66,8 +66,8 @@ ms.locfileid: "75710806"
 
 |데이터 형식|정렬 동작|
 |---------------|----------------------|
-|텍스트|CLR(공용 언어 런타임) String.Compare 메서드와 culture 로캘을 사용하여 데이터를 정렬합니다. 데이터 형식이 "텍스트"에 해당하면 <xref:System.Xml.Xsl.XslTransform> 클래스에서 정렬은 CLR의 문자열 비교 동작과 동일하게 작동합니다.|
-|Number|숫자 값은 XPath(XML Path Language) 번호로 간주되며 W3C [XPath(XML Path Language) Version 1.0 권장 사항, 섹션 3.5](https://www.w3.org/TR/1999/REC-xpath-19991116/#numbers)에 설명된 세부 정보에 따라 정렬됩니다.|
+|Text|CLR(공용 언어 런타임) String.Compare 메서드와 culture 로캘을 사용하여 데이터를 정렬합니다. 데이터 형식이 "텍스트"에 해당하면 <xref:System.Xml.Xsl.XslTransform> 클래스에서 정렬은 CLR의 문자열 비교 동작과 동일하게 작동합니다.|
+|번호|숫자 값은 XPath(XML Path Language) 번호로 간주되며 W3C [XPath(XML Path Language) Version 1.0 권장 사항, 섹션 3.5](https://www.w3.org/TR/1999/REC-xpath-19991116/#numbers)에 설명된 세부 정보에 따라 정렬됩니다.|
 
 ## <a name="optional-features-supported"></a>지원되는 선택적 기능
 

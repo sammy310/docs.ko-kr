@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 ms.openlocfilehash: 940f334ec6a42c4d8da461d634051ff979b8f98d
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73130261"
@@ -64,11 +64,11 @@ End Module
   
  **BindToMethod**는 호출할 <xref:System.Reflection.MethodBase>를 반환하거나 해당 호출이 가능하지 않은 경우 null 참조(Visual Basic의 경우 **Nothing**)를 반환합니다. **MethodBase** 반환 값은 일반적인 사례인 경우에도 *match* 매개 변수에 포함된 값 중 하나일 필요가 없습니다.  
   
- ByRef 인수가 있으면 호출자가 해당 인수를 되찾으려고 할 수 있습니다. 따라서 **BindToMethod**가 인수 배열을 조작한 경우 **Binder**를 사용하여 클라이언트가 인수 배열을 다시 원래 폼에 매핑할 수 있습니다. 이 작업을 위해 호출자는 인수 순서가 변경되지 않도록 보장해야 합니다. 인수가 이름으로 저장되면 **Binder**는 인수 배열을 다시 정렬하고 호출자는 이 순서를 인식합니다. 자세한 내용은 <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>을 참조하십시오.  
+ ByRef 인수가 있으면 호출자가 해당 인수를 되찾으려고 할 수 있습니다. 따라서 **BindToMethod**가 인수 배열을 조작한 경우 **Binder**를 사용하여 클라이언트가 인수 배열을 다시 원래 폼에 매핑할 수 있습니다. 이 작업을 위해 호출자는 인수 순서가 변경되지 않도록 보장해야 합니다. 인수가 이름으로 저장되면 **Binder**는 인수 배열을 다시 정렬하고 호출자는 이 순서를 인식합니다. 자세한 내용은 <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>를 참조하세요.  
   
  사용 가능한 멤버 집합은 형식 또는 기본 형식에 정의된 멤버입니다. <xref:System.Reflection.BindingFlags>가 지정되면 접근성이 있는 멤버가 집합에 반환됩니다. **BindingFlags.NonPublic**이 지정되지 않으면 바인더가 접근성 규칙을 적용해야 합니다. **Public** 또는 **NonPublic** 바인딩 플래그를 지정할 경우에는 **Instance** 또는 **Static** 바인딩 플래그도 지정해야 합니다. 그렇지 않으면 멤버가 반환되지 않습니다.  
   
- 지정된 이름의 멤버가 하나만 있는 경우에는 콜백이 필요하지 않고 바인딩이 해당 메서드에서 수행됩니다. 코드 예제의 사례 1이 이 내용을 보여 줍니다. 하나의 **PrintBob** 메서드만 사용할 수 있으므로 콜백이 필요하지 않습니다.  
+ 지정된 이름의 멤버가 하나만 있는 경우에는 콜백이 필요하지 않고 바인딩이 해당 메서드에서 수행됩니다. 코드 예제의 사례 1은 이러한 점을 보여줍니다. 하나의 **PrintBob** 메서드만 사용할 수 있으므로 콜백이 필요하지 않습니다.  
   
  사용 가능한 집합에 두 개 이상의 멤버가 있으면 이러한 메서드가 모두 적절한 메서드를 선택하고 반환하는 **BindToMethod**에 전달됩니다. 코드 예제의 사례 2에는 **PrintValue**라는 두 개의 메서드가 있습니다. **BindToMethod**를 호출하여 적절한 메서드를 선택합니다.  
   

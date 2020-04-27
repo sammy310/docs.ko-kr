@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
 ms.openlocfilehash: f9ca5575e2a042d68fc490494f2e86991d58b80c
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351703"
@@ -26,13 +26,13 @@ ms.locfileid: "74351703"
   
 |용어|정의|  
 |---|---|  
-|+ &#124; -|(선택 사항) 기본적으로 `-warnaserror-`가 적용됩니다. 경고가 발생해도 컴파일러가 출력 파일을 생성하지 못하도록 하지 않습니다. `-warnaserror`와 동일한 `-warnaserror+` 옵션은 경고가 오류로 처리되도록 합니다.|  
-|`numberList`|(선택 사항) `-warnaserror` 옵션이 적용되는 경고 ID 번호의 쉼표로 구분된 목록입니다. 경고 ID를 지정하지 않으면 `-warnaserror` 옵션이 모든 경고에 적용됩니다.|  
+|+ &#124; -|선택 사항입니다. 기본적으로 `-warnaserror-`가 적용됩니다. 경고가 발생해도 컴파일러가 출력 파일을 생성하지 못하도록 하지 않습니다. `-warnaserror+`와 동일한 `-warnaserror` 옵션은 경고가 오류로 처리되도록 합니다.|  
+|`numberList`|선택 사항입니다. `-warnaserror` 옵션이 적용되는 경고 ID 번호의 쉼표로 구분된 목록입니다. 경고 ID를 지정하지 않으면 `-warnaserror` 옵션이 모든 경고에 적용됩니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  `-warnaserror` 옵션은 모든 경고를 오류로 처리합니다. 일반적으로 경고로 보고되는 모든 메시지가 대신 오류로 보고됩니다. 컴파일러는 이후 발생하는 같은 경고를 경고로 보고합니다.  
   
- 기본적으로 `-warnaserror-`이 적용되며 경고가 정보 제공용으로만 사용되게 합니다. `-warnaserror`와 동일한 `-warnaserror+` 옵션은 경고가 오류로 처리되도록 합니다.  
+ 기본적으로 `-warnaserror-`이 적용되며 경고가 정보 제공용으로만 사용되게 합니다. `-warnaserror+`와 동일한 `-warnaserror` 옵션은 경고가 오류로 처리되도록 합니다.  
   
  몇 개의 특정 경고만 오류로 처리하려는 경우 오류로 처리할 경고 번호의 쉼표로 구분된 목록을 지정할 수 있습니다.  
   
@@ -41,11 +41,11 @@ ms.locfileid: "74351703"
   
 |Visual Studio IDE에서 모든 경고를 오류로 처리하도록 -warnaserror을 설정하려면|  
 |---|  
-|1. **솔루션 탐색기**에서 프로젝트를 선택 합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. <br />2. **컴파일** 탭을 클릭 합니다.<br />3. **모든 경고 사용 안 함** 확인란이 선택 취소 되어 있는지 확인 합니다.<br />4. **모든 경고를 오류로 처리** 확인란을 선택 합니다.|  
+|1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. <br />2.  **컴파일** 탭을 클릭합니다.<br />3.  **모든 경고 사용 안 함** 확인란이 선택 취소되어 있는지 확인합니다.<br />4.  **모든 경고를 오류로 처리** 확인란을 선택합니다.|  
   
 |Visual Studio IDE에서 특정 경고를 오류로 처리하도록 -warnaserror을 설정하려면|  
 |---|  
-|1. **솔루션 탐색기**에서 프로젝트를 선택 합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.<br />2. **컴파일** 탭을 클릭 합니다.<br />3. **모든 경고 사용 안 함** 확인란이 선택 취소 되어 있는지 확인 합니다.<br />4. **모든 경고를 오류로 처리** 확인란이 선택 취소 되어 있는지 확인 합니다.<br />5. 오류로 처리 해야 하는 경고 옆의 **알림** 열에서 **오류** 를 선택 합니다.|  
+|1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.<br />2.  **컴파일** 탭을 클릭합니다.<br />3.  **모든 경고 사용 안 함** 확인란이 선택 취소되어 있는지 확인합니다.<br />4.  **모든 경고를 오류로 처리** 확인란이 선택 취소되어 있는지 확인합니다.<br />5.  오류로 처리할 경고 옆의 **알림** 열에서 **오류**를 선택합니다.|  
   
 ## <a name="example"></a>예제  
  다음 코드에서는 `In.vb`를 컴파일하고 컴파일러가 찾는 모든 경고의 첫 번째 발생을 오류로 표시하도록 합니다.  
@@ -61,8 +61,8 @@ vbc -warnaserror in.vb
 vbc -warnaserror:42024 t2.vb  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
 - [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Visual Basic에서 경고 구성](/visualstudio/ide/configuring-warnings-in-visual-basic)
+- [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)

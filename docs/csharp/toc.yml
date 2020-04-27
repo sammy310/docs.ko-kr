@@ -119,8 +119,8 @@
       href: programming-guide/types/index.md
     - name: nullable 참조 형식
       href: nullable-references.md
-    - name: nullable 참조로 API 시그니처 업데이트
-      href: nullable-attributes.md
+    - name: nullable 참조 형식을 사용하기 위한 전략 선택
+      href: nullable-migration-strategies.md
     - name: 네임스페이스
       href: programming-guide/namespaces/index.md
     - name: 기본 형식
@@ -1200,6 +1200,8 @@
               href: programming-guide/xmldoc/exception.md
             - name: <include>
               href: programming-guide/xmldoc/include.md
+            - name: <inheritdoc>
+              href: programming-guide/xmldoc/inheritdoc.md
             - name: <list>
               href: programming-guide/xmldoc/list.md
             - name: <para>

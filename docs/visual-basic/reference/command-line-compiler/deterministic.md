@@ -7,7 +7,7 @@ helpviewer_keywords:
 - -deterministic compiler option [Visual Basic]
 ms.openlocfilehash: 9b611a72656bdd570eccec8a0585bf5ce6fa55f6
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75716785"
@@ -22,7 +22,7 @@ ms.locfileid: "75716785"
 -deterministic
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 기본적으로 컴파일러에서 타임스탬프 및 난수에서 생성된 GUID를 추가하기 때문에 지정된 입력 집합의 컴파일러 출력은 고유합니다. `-deterministic` 옵션을 사용하여 *결정적 어셈블리*를 생성하고, 입력이 동일하게 유지되는 한 해당 이진 콘텐츠가 컴파일 간에 동일합니다.
 
@@ -36,7 +36,7 @@ ms.locfileid: "75716785"
   - 소스 파일
   - 참조된 어셈블리
   - 참조된 모듈
-  - 자료
+  - 리소스
   - 강력한 이름 키 파일
   - @ 지시 파일
   - 분석기

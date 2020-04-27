@@ -4,7 +4,7 @@ description: .NET에서 매개 변수를 네이티브 표현으로 마샬링하�
 ms.date: 01/18/2019
 ms.openlocfilehash: ff646ad942cf051ce90cd75b24c8562e536182d9
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "79401162"
@@ -21,7 +21,7 @@ ms.locfileid: "79401162"
 
 이러한 형식은 각각 Null 종료 문자열을 네이티브 코드에 전달하며, 네이티브 문자열의 인코딩에 따라 다릅니다.
 
-| `System.Runtime.InteropServices.UnmanagedType` 값 | Encoding |
+| `System.Runtime.InteropServices.UnmanagedType` 값 | 인코딩 |
 |------------------------------------------------------|----------|
 | LPStr | ANSI |
 | LPUTF8Str | UTF-8 |

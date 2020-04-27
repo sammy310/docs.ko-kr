@@ -9,7 +9,7 @@ dev_langs:
 ms.assetid: 03a7c5a1-b296-4af4-b209-043c958dc0a5
 ms.openlocfilehash: 906de1ded4961b7c67d48a010555d139df97cded
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710637"
@@ -30,10 +30,10 @@ ms.locfileid: "75710637"
 |---------------------------------------------------------------------------------------------------------------------------------------------|------------------|  
 |<xref:System.Xml.XPath.XPathNodeType.Root>|지원되지 않습니다.|  
 |<xref:System.Xml.XPath.XPathNodeType.Element>|요소 내용입니다.|  
-|<xref:System.Xml.XPath.XPathNodeType.Attribute>|특성 값입니다.|  
-|<xref:System.Xml.XPath.XPathNodeType.Text>|텍스트 콘텐츠입니다.|  
+|<xref:System.Xml.XPath.XPathNodeType.Attribute>|특성 값|  
+|<xref:System.Xml.XPath.XPathNodeType.Text>|텍스트 내용입니다.|  
 |<xref:System.Xml.XPath.XPathNodeType.ProcessingInstruction>|대상을 제외한 내용|  
-|<xref:System.Xml.XPath.XPathNodeType.Comment>|주석의 콘텐츠입니다.|  
+|<xref:System.Xml.XPath.XPathNodeType.Comment>|주석의 내용입니다.|  
 |<xref:System.Xml.XPath.XPathNodeType.Namespace>|지원되지 않음|  
   
 > [!NOTE]

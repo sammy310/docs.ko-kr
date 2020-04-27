@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 6c2b9789-b61a-49f9-b33f-db01a945edf2
 ms.openlocfilehash: f48990286405baee347becef87d0511cd42e9e77
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75711001"
@@ -44,7 +44,7 @@ ms.locfileid: "75711001"
 |메서드|노드 배치|  
 |------------|--------------------|  
 |<xref:System.Xml.XmlNode.InsertBefore%2A>|참조 노드 앞에 삽입됩니다. 예를 들어, 위치 5에 새 노드를 삽입하려면 다음과 같이 입력합니다.<br /><br /> `Dim refChild As XmlNode = node.ChildNodes(4) 'The reference is zero-based.node.InsertBefore(newChild, refChild);`<br /><br /> `XmlNode refChild = node.ChildNodes[4]; //The reference is zero-based. node.InsertBefore(newChild, refChild);`<br /><br /> 자세한 내용은 <xref:System.Xml.XmlNode.InsertBefore%2A> 메서드를 참조하세요.|  
-|<xref:System.Xml.XmlNode.InsertAfter%2A>|참조 노드 다음에 삽입됩니다. 예를 들면 다음과 같습니다.:<br /><br /> `node.InsertAfter(newChild, refChild)`<br /><br /> `node.InsertAfter(newChild, refChild);`<br /><br /> 자세한 내용은 <xref:System.Xml.XmlNode.InsertAfter%2A> 메서드를 참조하세요.|  
+|<xref:System.Xml.XmlNode.InsertAfter%2A>|참조 노드 다음에 삽입됩니다. 예를 들어:<br /><br /> `node.InsertAfter(newChild, refChild)`<br /><br /> `node.InsertAfter(newChild, refChild);`<br /><br /> 자세한 내용은 <xref:System.Xml.XmlNode.InsertAfter%2A> 메서드를 참조하세요.|  
 |<xref:System.Xml.XmlNode.AppendChild%2A>|노드를 지정된 노드의 자식 노드 목록 끝에 추가합니다. 추가되는 노드가 <xref:System.Xml.XmlDocumentFragment>이면 문서 조각의 전체 내용이 이 노드의 자식 목록으로 이동합니다. 자세한 내용은 <xref:System.Xml.XmlNode.AppendChild%2A> 메서드를 참조하세요.|  
 |<xref:System.Xml.XmlNode.PrependChild%2A>|노드를 지정된 노드의 자식 노드 목록 시작 부분에 추가합니다. 추가되는 노드가 <xref:System.Xml.XmlDocumentFragment>이면 문서 조각의 전체 내용이 이 노드의 자식 목록으로 이동합니다. 자세한 내용은 <xref:System.Xml.XmlNode.PrependChild%2A> 메서드를 참조하세요.|  
 |<xref:System.Xml.XmlAttributeCollection.Append%2A>|<xref:System.Xml.XmlAttribute> 노드를 요소와 연관된 특성 컬렉션의 끝에 추가합니다. 자세한 내용은 <xref:System.Xml.XmlAttributeCollection.Append%2A> 메서드를 참조하세요.|  

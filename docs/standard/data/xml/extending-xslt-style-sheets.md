@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: df4ba2bf-a99e-4d22-bbf3-04fc67669dbc
 ms.openlocfilehash: 04f9788fe34ba74d0cf12fdd37adf46e85777192
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710871"
@@ -23,5 +23,5 @@ ms.locfileid: "75710871"
  [msxsl:script를 사용하는 스크립트 블록](../../../../docs/standard/data/xml/script-blocks-using-msxsl-script.md)  
  `msxsl:script` 요소를 사용하는 방법을 설명합니다.  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
  [XSLT 변환](../../../../docs/standard/data/xml/xslt-transformations.md)

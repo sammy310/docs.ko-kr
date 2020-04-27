@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 202f8820-224c-494f-b61e-cd127eac6e03
 ms.openlocfilehash: 4bbecfbf1b163a9d7bfe6957806095b5b17fbab7
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709636"
@@ -31,10 +31,10 @@ XSLT(Extensible Stylesheet Language Transformation)를 사용하면 소스 XML �
  [XslTransform 클래스를 사용하여 XSLT 변형](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
  <xref:System.Xml.Xsl.XslTransform> 클래스 사용 방법에 대한 정보를 제공합니다.  
   
-## <a name="reference"></a>참조  
+## <a name="reference"></a>참고  
  <xref:System.Xml.Xsl.XslCompiledTransform>  
  <xref:System.Xml.Xsl.XsltArgumentList>  
  <xref:System.Xml.Xsl.XsltSettings>  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
  [XML 문서 및 데이터](../../../../docs/standard/data/xml/index.md)

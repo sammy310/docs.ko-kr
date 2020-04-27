@@ -4,7 +4,7 @@ description: .NET에서 P/Invoke를 통해 네이티브 함수를 호출하는 �
 ms.date: 01/18/2019
 ms.openlocfilehash: fa8b43edfba50fbc620f257c4e7caf1673f83235
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75706307"

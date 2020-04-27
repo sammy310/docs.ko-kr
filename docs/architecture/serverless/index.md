@@ -3,19 +3,21 @@ title: '서버리스 앱: 아키텍처, 패턴 및 Azure 구현'
 description: 서버를 사용하지 않는 아키텍처에 대한 가이드입니다. 엔터프라이즈 애플리케이션에 대해 서버를 사용하지 않는 아키텍처([IaaS] (Infrastructure as a Service) 또는 [PaaS] (Platform as a Service) 대신)를 구현하는 시기, 이유 및 방법을 알아봅니다.
 author: JEREMYLIKNESS
 ms.author: jeliknes
-ms.date: 06/26/2018
-ms.openlocfilehash: 9dea7dbccb5c9e125f792e6a7287a7dd2fad26f1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/22/2020
+ms.openlocfilehash: 16e658a99feda6537189a45b53da514e67766999
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73093542"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135695"
 ---
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>서버리스 앱: 아키텍처, 패턴 및 Azure 구현
 
-![서버리스 앱 eBook 표지를 보여주는 스크린샷.](./media/index/serverless-apps-cover.jpg)
+![서버리스 앱 eBook 표지를 보여주는 스크린샷.](./media/index/serverless-apps-cover-v3.png)
 
-> 다운로드 위치: <https://aka.ms/serverless-ebook>
+**버전 v3.0** - Azure Functions v3으로 업데이트됨
+
+> 다운로드 위치: <https://aka.ms/serverlessbookpdf>
 
 게시자:
 
@@ -27,7 +29,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2018 by Microsoft Corporation
+Copyright &copy; 2018-2020 by Microsoft Corporation
 
 All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 서면 허가 없이는 어떠한 형식이나 방법으로도 복제하거나 전송할 수 없습니다.
 
@@ -43,7 +45,7 @@ Mac 및 macOS는 Apple Inc.의 상표입니다.
 
 만든 이:
 
-> **[Jeremy Likness](https://twitter.com/jeremylikness)** , 선임 CA(Cloud Advocate), Microsoft Corp.
+> **[Jeremy Likness](https://twitter.com/jeremylikness)** , 선임 .NET 데이터 프로그램 관리자, Microsoft Corp.
 
 기여자:
 
@@ -97,7 +99,7 @@ Mac 및 macOS는 Apple Inc.의 상표입니다.
 - 운영 체제를 최신 상태로 유지
 - 애플리케이션 모니터링
 
-다음 진화는 PaaS(Platform as a Service)를 제공하여 오버헤드를 감소시킵니다. PaaS에서 클라우드 공급자는 운영 체제, 보안 패치 및 특정 플랫폼을 지원하는 데 필요한 패키지도 처리합니다. VM을 빌드한 다음, .NET Framework를 구성하고 IIS(인터넷 정보 서비스) 서버를 준비하는 대신 개발자는 단순히 "웹 애플리케이션" 또는 "API 엔드포인트"와 같은 "플랫폼 대상"을 선택하고 코드를 직접 배포합니다. 인프라 질문은 다음으로 감소됩니다.
+다음 진화는 PaaS(Platform as a Service)를 제공하여 오버헤드를 감소시킵니다. PaaS에서 클라우드 공급자는 운영 체제, 보안 패치 및 특정 플랫폼을 지원하는 데 필요한 패키지도 처리합니다. VM을 빌드한 다음, .NET을 구성하고 IIS(인터넷 정보 서비스) 서버를 준비하는 대신 개발자는 단순히 “웹 애플리케이션” 또는 “API 엔드포인트”와 같은 “플랫폼 대상”을 선택하고 코드를 직접 배포합니다. 인프라 질문은 다음으로 감소됩니다.
 
 - 어떤 크기 서비스가 필요한가요?
 - 서비스 규모를 확장하려면 어떻게 하나요(서버 또는 노드 추가)?

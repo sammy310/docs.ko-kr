@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 56b6e9c7-ed82-4a65-a647-7be32c83bcc8
 ms.openlocfilehash: 01ef4bef57b8a2e3e13f28a98adb21b111f3f4ed
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710455"
@@ -55,6 +55,6 @@ XML DOM(문서 개체 모델)은 XML 데이터를 표준 개체 집합으로 간
   
 - [DOM 확장](../../../../docs/standard/data/xml/extending-the-dom.md)  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
  [XPath 데이터 모델을 사용하여 XML 데이터 처리](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
  <xref:System.Xml.XPath.XPathNavigator> 클래스를 사용하여 XML 데이터를 처리하는 방법을 설명합니다.

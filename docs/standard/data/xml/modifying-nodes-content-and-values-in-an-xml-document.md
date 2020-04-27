@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
 ms.openlocfilehash: 4a53ba4fe16a3653b1be380da49e6b75cb347a28
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710676"
@@ -27,11 +27,11 @@ ms.locfileid: "75710676"
   
 |노드 형식|변경되는 데이터|  
 |---------------|------------------|  
-|특성|특성 값입니다.|  
+|특성|특성 값|  
 |CDATASection|CDATASection 내용|  
-|설명|주석의 콘텐츠입니다.|  
+|주석|주석의 내용입니다.|  
 |ProcessingInstruction|대상을 제외한 내용|  
-|텍스트|텍스트 콘텐츠입니다.|  
+|텍스트|텍스트 내용|  
 |XmlDeclaration|`<?xml` 및 `?>` 태그를 제외한 선언 내용|  
 |Whitespace|공백 값. 인식된 XML 공백 문자인 공백, 탭, CR 또는 LF 중 하나로 값을 설정할 수 있습니다.|  
 |SignificantWhitespace|유효 공백 값. 인식된 XML 공백 문자인 공백, 탭, CR 또는 LF 중 하나로 값을 설정할 수 있습니다.|  

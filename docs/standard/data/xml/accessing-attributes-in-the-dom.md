@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: ce2df341-a1a4-4e97-8e1b-cd45b8e3e71e
 ms.openlocfilehash: dd3292620cafc4e5d2494b3b5e18e04691910dc4
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75711196"
@@ -115,7 +115,7 @@ public class Sample
 
 이 예제의 결과는 다음과 같습니다.
 
-**Output**
+**출력**
 
 컬렉션의 모든 특성을 표시합니다.
 

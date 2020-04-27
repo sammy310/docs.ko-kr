@@ -9,7 +9,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: ce86f7897c5c117c4fd6f1eabc4c8b802103261c
 ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/25/2020
 ms.locfileid: "80248032"
@@ -94,5 +94,5 @@ public class MyStuff : MyObject
   
 ## <a name="see-also"></a>참조
 
-- [이진 Serialization](binary-serialization.md)
-- [XML 및 SOAP Serialization](xml-and-soap-serialization.md)
+- [이진 serialization](binary-serialization.md)
+- [XML 및 SOAP serialization](xml-and-soap-serialization.md)

@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
 ms.openlocfilehash: e3ff86cc80887d14fdffe50f256409cb70ff2d88
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710377"
@@ -39,7 +39,7 @@ W3C XSLT(XSL Transformations) 버전 1.0 권장 사항에는 구현 공급자가
 |`xsl:processing-instruction`의 내용을 인스턴스화한 결과에 "--" 문자열이 있거나 결과가 "-"로 끝납니다.|7.4|복구|  
 |`xsl:comment`의 내용을 인스턴스화한 결과에 텍스트 노드가 아닌 노드가 만들어집니다.|7.4|오류*|  
 |가변 바인딩 요소 내의 템플릿에서 특성 노드나 네임스페이스 노드를 반환합니다.|11.2|오류*|  
-|문서 함수에 전달된 URI의 리소스를 검색하는 중에 오류가 발생합니다.|12.1|오류|  
+|문서 함수에 전달된 URI의 리소스를 검색하는 중에 오류가 발생합니다.|12.1|Error|  
 |문서 함수의 URI 참조에 조각 식별자가 있으며 해당 조각 식별자를 처리하는 중에 오류가 발생합니다.|12.1|복구*|  
 |가져오기 우선 순위가 같은 `xsl:output`에는 이름이 같지만 값이 다르며 명명된 cdata-section 요소가 아닌 여러 특성이 있습니다.|16|복구|  
 |프로세서는 `xsl:output` 인코딩 특성에서 인코딩을 지원하지 않습니다.|16.1|복구|  
