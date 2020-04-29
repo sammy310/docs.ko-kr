@@ -3,12 +3,12 @@ title: 관계형 마이닝 모델과 NoSQL 데이터 비교
 description: 클라우드 네이티브 응용 프로그램의 관계형 및 NoSQL 데이터에 대 한 자세한 정보
 author: robvet
 ms.date: 01/22/2020
-ms.openlocfilehash: c074be0c973156c1757b97ffc727711d5dd072af
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: a2561b0abfc1975badfafeeb4fa2f2c6429814be
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199987"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507366"
 ---
 # <a name="relational-vs-nosql-data"></a>관계형 마이닝 모델과 NoSQL 데이터 비교
 
@@ -226,7 +226,7 @@ Azure Cosmos DB는 그림 5-15에 표시 된 잘 정의 된 5 가지 [일관성 
 
 **그림 5-16**: Cosmos DB 일관성 수준 설명
 
-[9 계층 Cosmos DB 설명](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/)하는 문서에서 설명 Microsoft 클라우드 하는 일관성 수준에 대 한 자세한 내용은 개발자 대표 Jeremy Likeness에서 5 가지 모델에 대 한 뛰어난 설명을 제공 합니다.
+[9-구슬 Cosmos DB 일관성 수준](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/)에 대해 설명 하는 문서에서 Microsoft Program Manager Jeremy Likness는 5 가지 모델에 대 한 뛰어난 설명을 제공 합니다.
 
 ### <a name="partitioning"></a>분할
 
