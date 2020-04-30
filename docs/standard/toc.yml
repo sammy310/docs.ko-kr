@@ -488,7 +488,11 @@
     - name: 스레드로부터 안전한 컬렉션
       href: collections/thread-safe/
 - name: .NET의 숫자
-  href: numerics.md
+  items:
+    - name: 개요
+      href: numerics.md
+    - name: SIMD 사용 형식
+      href: simd.md
 - name: '날짜, 시간 및 표준 시간대'
   href: datetime/
 - name: 이벤트

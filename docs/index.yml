@@ -11,12 +11,12 @@ metadata:
   author: BillWagner
   ms.author: wiwagn
   ms.date: 04/21/2020
-  ms.openlocfilehash: 31d7e3e916971e605e814f36f412b46210c533b6
-  ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+  ms.openlocfilehash: 7680641385e013711e62a8585149ea204e327c95
+  ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 04/24/2020
-  ms.locfileid: "82135570"
+  ms.lasthandoff: 04/29/2020
+  ms.locfileid: "82507496"
 highlightedContent:
   items:
   - title: .NET 다운로드
@@ -156,7 +156,7 @@ additionalContent:
       - url: /aspnet/core/tutorials
         text: ASP.NET Core 자습서
       - url: /aspnet/core
-        text: ASP.NET Core란?
+        text: 'ASP.NET Core란? '
       - url: /aspnet/core/tutorials/first-mvc-app/start-mvc
         text: Visual Studio의 ASP.NET Core
       - url: /aspnet/mvc/overview/deployment/docker-aspnetmvc
@@ -252,4 +252,4 @@ additionalContent:
     - title: Visual Basic 언어 참조
       summary: Visual Basic 언어 참조 및 사양
       url: visual-basic/language-reference/index.md
-  footer: .NET 문서에 참여합니다. [기여자 가이드](https://github.com/dotnet/Docs/blob/master/CONTRIBUTING.md)를 참조하세요.
+  footer: .NET 문서에 참여합니다. [기여자 가이드](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute)를 참조하세요.
