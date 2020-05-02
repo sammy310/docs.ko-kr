@@ -2,12 +2,12 @@
 title: Discovery Security 샘플
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 94de324469d0d649a184dec5847e1a5c4cbba2cc
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 44022ee756f189347aaec606427ecb3c4c5ffa95
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141163"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728414"
 ---
 # <a name="discovery-security-sample"></a>Discovery Security 샘플
 
@@ -16,7 +16,7 @@ ms.locfileid: "82141163"
  사용자 지정 채널은 검색 및 알림 엔드포인트의 기존 채널 스택 맨 위에서 적용됩니다. 이렇게 하면 서명 헤더가 보내는 모든 메시지에 적용됩니다. 서명은 받은 메시지에서 확인되며 서명이 일치하지 않거나 서명이 없는 메시지는 삭제됩니다. 메시지 서명 및 확인을 위해 이 샘플에서는 인증서를 사용합니다.  
   
 ## <a name="discussion"></a>토론  
- WCF는 확장성이 우수하므로 사용자가 채널을 원하는 대로 사용자 지정할 수 있습니다. 이 샘플에서는 보안 채널을 빌드하는 검색 보안 바인딩 요소를 구현합니다. 보안 채널에서는 메시지 서명을 적용 및 확인하며 현재 스택의 맨 위에서 적용됩니다.  
+ WCF는 확장 가능 하며 사용자가 원하는 대로 채널을 사용자 지정할 수 있습니다. 이 샘플에서는 보안 채널을 빌드하는 검색 보안 바인딩 요소를 구현합니다. 보안 채널에서는 메시지 서명을 적용 및 확인하며 현재 스택의 맨 위에서 적용됩니다.  
   
  보안 바인딩 요소는 보안 채널 팩터리 및 채널 수신기를 빌드합니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "82141163"
   
  서명을 컴퓨팅하기 위해 이 샘플에서는 확장된 서명 항목을 확인합니다. XML 서명(`SignedInfo`)은 WS-Discovery 사양에서 요구하는 대로 `ds` 네임스페이스 접두사를 사용하여 만듭니다. 검색 및 주소 지정 네임스페이스의 본문과 모든 헤더는 서명에서 참조되므로 변경할 수 없습니다. 참조 되는 각 요소는 배타적 정식화 (http://www.w3.org/2001/10/xml-exc-c14n# )를 사용 하 여 변환 된 다음 sha-1 다이제스트 값 (http://www.w3.org/2000/09/xmldsig#sha1 )이 계산 됩니다. 참조 되는 모든 요소 및 해당 다이제스트 값에 따라 서명 값은 RSA 알고리즘 (http://www.w3.org/2000/09/xmldsig#rsa-sha1 )을 사용 하 여 계산 됩니다.  
   
- 메시지는 클라이언트에서 지정한 인증서를 사용하여 서명됩니다. 저장소 위치, 이름 및 인증서 주체 이름은 바인딩 요소를 만들 때 지정해야 합니다. 압축 서명의 `KeyId`는 서명 토큰의 키 식별자를 나타내며 서명 토큰의 SKI(주체 키 식별자)나 서명 토큰의 공개 키에 대한 SHA-1 해시(SKI가 없는 경우)입니다.  
+ 메시지는 클라이언트에서 지정한 인증서를 사용하여 서명됩니다. 바인딩 요소를 만들 때 저장소 위치, 이름 및 인증서 주체 이름을 지정 해야 합니다. 압축 서명의 `KeyId`는 서명 토큰의 키 식별자를 나타내며 서명 토큰의 SKI(주체 키 식별자)나 서명 토큰의 공개 키에 대한 SHA-1 해시(SKI가 없는 경우)입니다.  
   
 ## <a name="secure-channel-listener"></a>보안 채널 수신기  
  보안 채널 수신기에서는 받은 메시지의 압축 서명을 확인하는 이중 채널 또는 입력을 만듭니다. 서명을 확인하려면 메시지에 첨부된 압축 서명에 지정된 `KeyId`를 사용하여 지정된 저장소에서 인증서를 선택합니다. 서명이 없거나 서명 확인에 실패한 메시지는 삭제됩니다. 보안 바인딩을 사용하기 위해 이 샘플에서는 추가된 검색 보안 바인딩 요소를 사용하여 사용자 지정 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 및 <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>를 만드는 팩터리를 정의합니다. 이 보안 엔드포인트는 검색 알림 수신기와 검색 가능한 서비스에서 사용할 수 있습니다.  

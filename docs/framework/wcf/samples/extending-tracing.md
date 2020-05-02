@@ -2,15 +2,16 @@
 title: 추적 확장
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
-ms.openlocfilehash: ad46f09c69e94146f9e1569eb506cb350a2a9307
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: e61265210640d2b801ad55b9dc5a357cc4f161a7
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141231"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728387"
 ---
-# <a name="extending-tracing"></a>추적 확장
-이 샘플에서는 클라이언트 및 서비스 코드에 사용자 정의 동작 추적을 작성 하 여 WCF (Windows Communication Foundation) 추적 기능을 확장 하는 방법을 보여 줍니다. 이렇게 하면 사용자가 작업의 논리 단위에 대한 추적 동작 및 그룹 추적을 만들 수 있습니다. 전송(같은 엔드포인트 내)과 전파(엔드포인트 사이)를 통해 동작을 상호 연결시킬 수도 있습니다. 이 샘플에서는 클라이언트와 서버 모두에 대해 추적이 사용됩니다. 클라이언트 및 서비스 구성 파일에서 추적을 사용 하도록 설정 하는 방법에 대 한 자세한 내용은 [추적 및 메시지 로깅](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)을 참조 하세요.  
+# <a name="extend-tracing"></a>추적 확장
+
+이 샘플에서는 클라이언트 및 서비스 코드에 사용자 정의 동작 추적을 작성 하 여 WCF (Windows Communication Foundation) 추적 기능을 확장 하는 방법을 보여 줍니다. 사용자 정의 동작 추적을 작성 하면 사용자가 논리적 작업 단위로 추적 작업 및 그룹 추적을 만들 수 있습니다. 전송(같은 엔드포인트 내)과 전파(엔드포인트 사이)를 통해 동작을 상호 연결시킬 수도 있습니다. 이 샘플에서는 클라이언트와 서버 모두에 대해 추적이 사용됩니다. 클라이언트 및 서비스 구성 파일에서 추적을 사용 하도록 설정 하는 방법에 대 한 자세한 내용은 [추적 및 메시지 로깅](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)을 참조 하세요.  
   
  이 샘플은 [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)을 기반으로 합니다.  
   
@@ -29,7 +30,7 @@ ms.locfileid: "82141231"
 ## <a name="tracing-and-activity-propagation"></a>추적 및 동작 전파  
  사용자 정의 동작 추적을 사용 하면 사용자가 추적 작업을 만들어 논리적 작업 단위로 추적을 그룹화 하 고, 전송 및 전파를 통해 동작을 상호 연결 하 고, WCF 추적의 성능 비용을 줄일 수 있습니다 (예: 로그 파일의 디스크 공간 비용).  
   
-### <a name="adding-custom-sources"></a>사용자 지정 소스 추가  
+### <a name="add-custom-sources"></a>사용자 지정 원본 추가  
  사용자 정의 추적은 클라이언트와 서비스 코드 모두에 추가할 수 있습니다. 클라이언트 또는 서비스 구성 파일에 추적 소스를 추가 하면 이러한 사용자 지정 추적을 기록 하 고 [Service Trace Viewer 도구 (svctraceviewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)에 표시할 수 있습니다. 다음 코드에서는 `ServerCalculatorTraceSource`라는 사용자 정의 추적 소스를 구성 파일에 추가하는 방법을 보여 줍니다.  
   
 ```xml  
@@ -67,7 +68,7 @@ ms.locfileid: "82141231"
 ....
 ```  
   
-### <a name="correlating-activities"></a>동작 상호 연결  
+### <a name="correlate-activities"></a>활동 상관 관계  
  엔드포인트 사이에서 직접 동작을 상호 연결하려면 `propagateActivity` 추적 소스에서 `true` 특성을 `System.ServiceModel`로 설정해야 합니다. 또한 WCF 작업을 거치지 않고 추적을 전파 하려면 ServiceModel 동작 추적을 해제 해야 합니다. 다음 코드 예제에서 이를 확인할 수 있습니다.  
   
 > [!NOTE]
@@ -85,10 +86,10 @@ ms.locfileid: "82141231"
 </system.diagnostics>  
 ```  
   
-### <a name="lessening-performance-cost"></a>수행 비용 절감  
- `ActivityTracing` 추적 소스에서 `System.ServiceModel`을 off로 설정하면 ServiceModel 동작 추적이 포함되지 않고 사용자 정의 동작 추적만 포함된 추적 파일이 생성됩니다. 그러면 로그 파일의 크기가 훨씬 작아집니다. 그러나 WCF 처리 추적과의 상관 관계를 설정할 기회가 손실 됩니다.  
+### <a name="lessen-performance-cost"></a>성능 비용 줄이기  
+ `ActivityTracing` 추적 소스에서 `System.ServiceModel`을 off로 설정하면 ServiceModel 동작 추적이 포함되지 않고 사용자 정의 동작 추적만 포함된 추적 파일이 생성됩니다. ServiceModel 활동 추적을 제외 하면 훨씬 더 작은 로그 파일이 생성 됩니다. 그러나 WCF 처리 추적과의 상관 관계를 설정할 기회가 손실 됩니다.  
   
-##### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
+## <a name="set-up-build-and-run-the-sample"></a>샘플 설정, 빌드 및 실행  
   
 1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.  
   

@@ -2,12 +2,12 @@
 title: 런타임 구성 옵션
 description: 런타임 구성 설정을 사용하여 .NET Core 애플리케이션을 구성하는 방법을 알아봅니다.
 ms.date: 01/21/2020
-ms.openlocfilehash: ddf68c30e620a06856f65e71bd050e1b77618f20
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d49707b93e272f0e527ff536a80140ec98e5c1a8
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397613"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506786"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>.NET Core 런타임 구성 설정
 
@@ -18,7 +18,7 @@ ms.locfileid: "79397613"
 - 애플리케이션의 여러 인스턴스가 단일 시스템에서 동시에 실행되며 최적의 성능을 위해 각 인스턴스를 구성하려고 합니다.
 
 > [!NOTE]
-> 이 설명서는 진행 중인 작업입니다. 여기에 제공된 정보가 불완전하거나 부정확한 경우에는 [이슈를 열어](https://github.com/dotnet/docs/issues) 그에 대해 알려주시거나 [끌어오기 요청을 제출](https://github.com/dotnet/docs/pulls)하여 이슈를 해결하세요. dotnet/docs 리포지토리의 끌어오기 요청 제출에 대한 자세한 내용은 [기여자 가이드](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md)를 참조하세요.
+> 이 설명서는 진행 중인 작업입니다. 여기에 제공된 정보가 불완전하거나 부정확한 경우에는 [이슈를 열어](https://github.com/dotnet/docs/issues) 그에 대해 알려주시거나 [끌어오기 요청을 제출](https://github.com/dotnet/docs/pulls)하여 이슈를 해결하세요. dotnet/docs 리포지토리의 끌어오기 요청 제출에 대한 자세한 내용은 [기여자 가이드](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute)를 참조하세요.
 
 .NET Core는 런타임 애플리케이션 동작을 구성하기 위해 다음과 같은 메커니즘을 제공합니다.
 
@@ -39,7 +39,7 @@ ms.locfileid: "79397613"
 > [!NOTE]
 > 그러면 *[앱 이름].runtimeconfig.json* 파일이 다음 번 빌드에서 덮어쓰입니다.
 
-**runtimeconfig.json** 파일의 *configProperties* 섹션에 런타임 구성 옵션을 지정합니다. 이 섹션은 형식은 다음과 같습니다.
+*runtimeconfig.json* 파일의 **configProperties** 섹션에 런타임 구성 옵션을 지정합니다. 이 섹션은 형식은 다음과 같습니다.
 
 ```json
 "configProperties": {

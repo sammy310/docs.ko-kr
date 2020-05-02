@@ -2,12 +2,12 @@
 title: 영속 인스턴스 컨텍스트
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 604a617dc03bf06b71fe3019b58b2161216ee3e0
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: d70617fef7ebe0a94e22e858ee403d5d4f1840e3
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141179"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728402"
 ---
 # <a name="durable-instance-context"></a>영속 인스턴스 컨텍스트
 
@@ -18,9 +18,9 @@ ms.locfileid: "82141179"
 
 이 샘플은 WCF의 채널 계층과 서비스 모델 계층을 모두 확장 하는 과정을 포함 합니다. 따라서 구현 세부 정보를 검토하려면 먼저 기본 개념을 이해해야 합니다.
 
-영속 인스턴스 컨텍스트는 실제 시나리오에서 매우 자주 발견됩니다. 예를 들어, 장바구니 애플리케이션에는 중간에 쇼핑을 일시 중지하고 다른 날 계속 진행할 수 있는 기능이 있습니다. 따라서 다음날 장바구니를 방문하면 원래 컨텍스트가 복원됩니다. 서버의 장바구니 애플리케이션에서는 연결이 끊어진 동안 장바구니 인스턴스를 유지 관리하지 않습니다. 대신 해당 상태를 영속 스토리지 매체에 유지하여 복원된 컨텍스트에 새 인스턴스를 생성할 때 사용합니다. 따라서 동일한 컨텍스트에 대해 제공되는 서비스 인스턴스는 이전 인스턴스와 동일하지 않습니다. 즉, 메모리 주소가 동일하지 않습니다.
+영속 인스턴스 컨텍스트는 실제 시나리오에서 매우 자주 발견됩니다. 예를 들어 쇼핑 카트 응용 프로그램에는를 통해 쇼핑을 일시 중지 하 고 다른 날에 계속 진행할 수 있는 기능이 있습니다. 따라서 다음날 장바구니를 방문하면 원래 컨텍스트가 복원됩니다. 서버의 장바구니 애플리케이션에서는 연결이 끊어진 동안 장바구니 인스턴스를 유지 관리하지 않습니다. 대신 해당 상태를 영속 스토리지 매체에 유지하여 복원된 컨텍스트에 새 인스턴스를 생성할 때 사용합니다. 따라서 동일한 컨텍스트에 대해 제공되는 서비스 인스턴스는 이전 인스턴스와 동일하지 않습니다. 즉, 메모리 주소가 동일하지 않습니다.
 
-영속 인스턴스 컨텍스트는 클라이언트와 서비스 간에 컨텍스트 ID를 교환하는 작은 프로토콜로 만들 수 있습니다. 이 컨텍스트 ID는 클라이언트에서 만들어 서비스로 전송됩니다. 서비스 인스턴스가 만들어지면 서비스 런타임에서는 이 컨텍스트 ID에 해당하는 지속적인 상태를 영구 스토리지(기본적으로 SQL Server 2005 데이터베이스)에서 로드하려고 합니다. 사용 가능한 상태가 없으면 새 인스턴스에 기본 상태가 지정됩니다. 서비스 구현에서는 사용자 지정 특성으로 서비스 구현 상태를 변경하는 작업을 표시하여 런타임에서 작업을 호출한 후 서비스 인스턴스를 저장할 수 있도록 합니다.
+영속 인스턴스 컨텍스트는 클라이언트와 서비스 간에 컨텍스트 ID를 교환하는 작은 프로토콜로 만들 수 있습니다. 이 컨텍스트 ID는 클라이언트에서 만들어 서비스로 전송됩니다. 서비스 인스턴스가 만들어지면 서비스 런타임에서는 이 컨텍스트 ID에 해당하는 지속적인 상태를 영구 스토리지(기본적으로 SQL Server 2005 데이터베이스)에서 로드하려고 합니다. 상태를 사용할 수 없는 경우 새 인스턴스의 기본 상태는입니다. 서비스 구현에서는 사용자 지정 특성으로 서비스 구현 상태를 변경하는 작업을 표시하여 런타임에서 작업을 호출한 후 서비스 인스턴스를 저장할 수 있도록 합니다.
 
 앞에서 설명한 대로 다음과 같이 간단하게 두 단계를 구분하여 목표를 달성할 수 있습니다.
 
@@ -28,11 +28,11 @@ ms.locfileid: "82141179"
 
 2. 서비스 로컬 동작을 변경하여 사용자 지정 인스턴스 논리를 구현합니다.
 
-전자는 네트워크의 메시지에 영향을 주므로 사용자 지정 채널로 구현하여 채널 계층에 연결해야 합니다. 후자는 서비스 로컬 동작에만 영향을 주므로 여러 서비스 확장 지점을 확장하여 구현할 수 있습니다. 다음 단원에서는 각 확장에 대해 설명합니다.
+목록의 첫 번째 항목은 통신 중인 메시지에 영향을 주므로 사용자 지정 채널로 구현 하 고 채널 계층에 후크 되어야 합니다. 후자는 서비스 로컬 동작에만 영향을 주므로 여러 서비스 확장 지점을 확장하여 구현할 수 있습니다. 다음 단원에서는 각 확장에 대해 설명합니다.
 
 ## <a name="durable-instancecontext-channel"></a>영속 InstanceContext 채널
 
-먼저 채널 계층 확장을 검토합니다. 사용자 지정 채널을 기록하는 첫 단계는 채널의 통신 구조를 결정하는 것입니다. 새로운 유선 프로토콜을 사용할 경우 채널은 채널 스택의 다른 모든 채널과 함께 사용할 수 있어야 합니다. 따라서 모든 메시지 교환 패턴을 지원해야 합니다. 그러나 채널의 핵심 기능은 통신 구조와 관계없이 동일합니다. 즉, 클라이언트에서는 메시지에 컨텍스트 ID를 쓰고 서버에서는 메시지로부터 이 컨텍스트 ID를 읽어 상위 수준으로 전달해야 합니다. 따라서 모든 영속 인스턴스 컨텍스트 채널 구현에서 추상 기본 클래스 역할을 하는 `DurableInstanceContextChannelBase` 클래스가 만들어집니다. 이 클래스에는 메시지에서 컨텍스트 정보를 적용하고 읽는 일반적인 상태 컴퓨터 관리 기능과 보호된 멤버 두 개가 포함됩니다.
+먼저 채널 계층 확장을 검토합니다. 사용자 지정 채널을 기록하는 첫 단계는 채널의 통신 구조를 결정하는 것입니다. 새 유선 프로토콜이 도입 될 때 채널은 채널 스택의 거의 모든 채널에서 작동 해야 합니다. 따라서 모든 메시지 교환 패턴을 지원해야 합니다. 그러나 채널의 핵심 기능은 통신 구조와 관계없이 동일합니다. 즉, 클라이언트에서는 메시지에 컨텍스트 ID를 쓰고 서버에서는 메시지로부터 이 컨텍스트 ID를 읽어 상위 수준으로 전달해야 합니다. 따라서 모든 영속 인스턴스 컨텍스트 채널 구현에서 추상 기본 클래스 역할을 하는 `DurableInstanceContextChannelBase` 클래스가 만들어집니다. 이 클래스에는 메시지에서 컨텍스트 정보를 적용하고 읽는 일반적인 상태 컴퓨터 관리 기능과 보호된 멤버 두 개가 포함됩니다.
 
 ```csharp
 class DurableInstanceContextChannelBase
@@ -51,7 +51,7 @@ class DurableInstanceContextChannelBase
 
 이러한 두 메서드는 `IContextManager` 구현을 사용하여 메시지에서 컨텍스트 ID를 쓰고 읽습니다. `IContextManager` 는 모든 컨텍스트 관리자에 대 한 계약을 정의 하는 데 사용 되는 사용자 지정 인터페이스입니다. 채널은 사용자 지정 SOAP 헤더에 컨텍스트 ID를 포함 하거나 HTTP 쿠키 헤더에 포함할 수 있습니다. 각 컨텍스트 관리자 구현은 모든 컨텍스트 관리자의 공통 기능이 포함된 `ContextManagerBase` 클래스에서 상속됩니다. 이 클래스의 `GetContextId` 메서드는 클라이언트에서 컨텍스트 ID를 가져오는 데 사용됩니다. 컨텍스트 ID를 처음으로 가져오면 이 메서드는 원격 엔드포인트 주소로 이름이 생성되는 텍스트 파일에 컨텍스트 ID를 저장합니다. 일반적인 URI에서 잘못된 파일 이름 문자는 @ 문자로 바뀝니다.
 
-나중에 동일한 원격 엔드포인트에 컨텍스트 ID가 필요하면 적합한 파일이 있는지 확인합니다. 파일이 있으면 컨텍스트 ID를 읽어 반환하고, 그렇지 않으면 새로 생성한 컨텍스트 ID를 반환하여 파일에 저장합니다. 기본 구성을 사용할 경우 이러한 파일은 현재 사용자의 temp 디렉터리의 ContextStore라는 디렉터리에 저장됩니다. 그러나 이 위치는 바인딩 요소를 사용하여 구성할 수 있습니다.
+나중에 동일한 원격 엔드포인트에 컨텍스트 ID가 필요하면 적합한 파일이 있는지 확인합니다. 파일이 있으면 컨텍스트 ID를 읽어 반환하고, 그렇지 않으면 새로 생성한 컨텍스트 ID를 반환하여 파일에 저장합니다. 기본 구성을 사용 하 여 이러한 파일은 현재 사용자의 임시 디렉터리에 있는 ContextStore 라는 디렉터리에 배치 됩니다. 그러나 이 위치는 바인딩 요소를 사용하여 구성할 수 있습니다.
 
 컨텍스트 ID를 전송하는 데 사용되는 메커니즘은 구성 가능합니다. 이 메커니즘은 HTTP 쿠키 헤더 또는 사용자 지정 SOAP 헤더에 기록할 수 있습니다. 사용자 지정 SOAP 헤더 접근 방식에서는 HTTP가 아닌 프로토콜(예: TCP 또는 명명된 파이프)과 함께 이 프로토콜을 사용할 수 있습니다. `MessageHeaderContextManager`와 `HttpCookieContextManager`라는 클래스에서 이 두 옵션을 구현합니다.
 
@@ -87,9 +87,9 @@ IContextManager contextManager =
 message.Properties.Add(DurableInstanceContextUtility.ContextIdProperty, contextId);
 ```
 
-계속하려면 `Properties` 클래스에서 `Message` 컬렉션을 사용하는 방법을 이해해야 합니다. 일반적으로 이 `Properties` 컬렉션은 채널 계층의 하위 수준에서 상위 수준으로 데이터를 전달할 때 사용됩니다. 이렇게 하면 프로토콜 정보에 관계없이 일관된 방식으로 상위 수준에 원하는 데이터를 제공할 수 있습니다. 즉, 채널 계층에서 SOAP 헤더나 HTTP 쿠키 헤더로 컨텍스트 ID를 보내고 받을 수 있습니다. 그러나 채널 계층을 통해 `Properties` 컬렉션에서 이 정보를 사용할 수 있으므로 상위 수준에서는 해당 정보에 대해 알 필요가 없습니다.
+계속하려면 `Properties` 클래스에서 `Message` 컬렉션을 사용하는 방법을 이해해야 합니다. 일반적으로 이 `Properties` 컬렉션은 채널 계층의 하위 수준에서 상위 수준으로 데이터를 전달할 때 사용됩니다. 이렇게 하면 프로토콜 정보에 관계없이 일관된 방식으로 상위 수준에 원하는 데이터를 제공할 수 있습니다. 즉, 채널 계층은 SOAP 헤더 또는 HTTP 쿠키 헤더로 컨텍스트 ID를 보내고 받을 수 있습니다. 그러나 채널 계층을 통해 `Properties` 컬렉션에서 이 정보를 사용할 수 있으므로 상위 수준에서는 해당 정보에 대해 알 필요가 없습니다.
 
-이제 `DurableInstanceContextChannelBase` 클래스를 사용하여 필요한 인터페이스 10개(IOutputChannel, IInputChannel, IOutputSessionChannel, IInputSessionChannel, IRequestChannel, IReplyChannel, IRequestSessionChannel, IReplySessionChannel, IDuplexChannel, IDuplexSessionChannel)를 모두 구현해야 합니다. 이러한 인터페이스는 사용 가능한 모든 메시지 교환 패턴(데이터그램, 단방향, 이중 및 세션 변형)과 유사합니다. 이러한 구현은 각각 앞에서 설명한 기본 클래스를 상속하고 `ApplyContext`와 `ReadContextId`를 적절하게 호출합니다. 예를 들어, IOutputChannel 인터페이스를 구현하는 `DurableInstanceContextOutputChannel`은 메시지를 보내는 각 메서드에서 `ApplyContext` 메서드를 호출합니다.
+이제 `DurableInstanceContextChannelBase` 클래스를 사용하여 필요한 인터페이스 10개(IOutputChannel, IInputChannel, IOutputSessionChannel, IInputSessionChannel, IRequestChannel, IReplyChannel, IRequestSessionChannel, IReplySessionChannel, IDuplexChannel, IDuplexSessionChannel)를 모두 구현해야 합니다. 사용 가능한 모든 메시지 교환 패턴 (데이터 그램, 단면, 이중 및 해당 세션 변형)과 비슷합니다. 이러한 각 구현은 앞에서 설명한 기본 클래스를 상속 하 고 `ApplyContext` 를 `ReadContextId` 적절 하 게 호출 합니다. 예를 들어, IOutputChannel 인터페이스를 구현하는 `DurableInstanceContextOutputChannel`은 메시지를 보내는 각 메서드에서 `ApplyContext` 메서드를 호출합니다.
 
 ```csharp
 public void Send(Message message, TimeSpan timeout)
@@ -100,7 +100,7 @@ public void Send(Message message, TimeSpan timeout)
 }
 ```
 
-반면, `DurableInstanceContextInputChannel` 인터페이스를 구현하는 `IInputChannel`은 메시지를 받는 각 메서드에서 `ReadContextId` 메서드를 호출합니다.
+반면, `DurableInstanceContextInputChannel` `IInputChannel` 인터페이스를 구현 하는는 각 메서드에서 `ReadContextId` 메서드를 호출 하 여 메시지를 수신 합니다.
 
 ```csharp
 public Message Receive(TimeSpan timeout)
@@ -136,7 +136,7 @@ public interface IStorageManager
 }
 ```
 
-`SqlServerStorageManager` 클래스에는 기본 `IStorageManager` 구현이 포함되어 있습니다. 해당 `SaveInstance` 메서드에서 지정된 개체는 XmlSerializer를 사용하여 serialize되고 SQL Server 데이터베이스에 저장됩니다.
+`SqlServerStorageManager` 클래스에는 기본 `IStorageManager` 구현이 포함되어 있습니다. 해당 `SaveInstance` 메서드에서 지정 된 개체는 XmlSerializer를 사용 하 여 serialize 되 고 SQL Server 데이터베이스에 저장 됩니다.
 
 ```csharp
 XmlSerializer serializer = new XmlSerializer(state.GetType());
@@ -171,7 +171,7 @@ using (SqlConnection connection = new SqlConnection(GetConnectionString()))
 }
 ```
 
-`GetInstance` 메서드에서는 지정된 컨텍스트 ID에 대해 serialize된 데이터를 읽고 해당 데이터로 생성된 개체를 호출자에게 반환합니다.
+`GetInstance` 메서드에서는 지정 된 컨텍스트 ID에 대해 serialize 된 데이터를 읽고이를 통해 생성 된 개체를 호출자에 게 반환 합니다.
 
 ```csharp
 object data;
@@ -282,7 +282,7 @@ public void Initialize(InstanceContext instanceContext, Message message)
 
 앞에서 설명한 대로 `Properties` 클래스의 `Message` 컬렉션에서 컨텍스트 ID를 읽고 확장 클래스의 생성자에게 전달합니다. 이 샘플에서는 계층 간에 일관된 방식으로 정보를 교환할 수 있는 방법을 보여 줍니다.
 
-다음으로 중요한 단계는 서비스 인스턴스 생성 프로세스를 재정의하는 단계입니다. WCF를 사용 하면 사용자 지정 인스턴스화 동작을 구현 하 고 IInstanceProvider 인터페이스를 사용 하 여 런타임에 연결할 수 있습니다. 이 작업을 수행하기 위해 새 `InstanceProvider` 클래스가 구현됩니다. 생성자에는 인스턴스 공급자에 필요한 서비스 유형이 허용되며, 이 서비스 유형은 나중에 새 인스턴스를 만드는 데 사용됩니다. `GetInstance` 구현에서는 지속적인 인스턴스를 찾는 스토리지 관리자 인스턴스를 만듭니다. 이 구현에서 `null`을 반환하면 서비스 유형의 새 인스턴스가 인스턴스화되어 호출자에게 반환됩니다.
+다음으로 중요한 단계는 서비스 인스턴스 생성 프로세스를 재정의하는 단계입니다. WCF를 사용 하면 사용자 지정 인스턴스화 동작을 구현 하 고 IInstanceProvider 인터페이스를 사용 하 여 런타임에 연결할 수 있습니다. 이 작업을 수행하기 위해 새 `InstanceProvider` 클래스가 구현됩니다. 인스턴스 공급자에서 예상한 서비스 형식이 생성자에서 허용 됩니다. 이 서비스 유형은 나중에 새 인스턴스를 만드는 데 사용됩니다. `GetInstance` 구현에서 지속형 인스턴스를 찾기 위해 저장소 관리자의 인스턴스를 만듭니다. 가 반환 `null`되는 경우 서비스 형식의 새 인스턴스가 인스턴스화되고 호출자에 게 반환 됩니다.
 
 ```csharp
 public object GetInstance(InstanceContext instanceContext, Message message)
@@ -302,11 +302,11 @@ public object GetInstance(InstanceContext instanceContext, Message message)
 }
 ```
 
-다음으로 중요한 단계는 `InstanceContextExtension`, `InstanceContextInitializer` 및 `InstanceProvider` 클래스를 서비스 모델 런타임에 설치하는 것입니다. 사용자 지정 특성을 사용하면 서비스 구현 클래스를 표시하여 동작을 설치할 수 있습니다. `DurableInstanceContextAttribute`에는 이 특성의 구현이 포함되어 있으며 `IServiceBehavior` 인터페이스를 구현하여 전체 서비스 런타임을 확장합니다.
+그 다음으로 중요 한 단계는 서비스 `InstanceContextExtension`모델 `InstanceContextInitializer`런타임에, `InstanceProvider` 및 클래스를 설치 하는 것입니다. 사용자 지정 특성을 사용하면 서비스 구현 클래스를 표시하여 동작을 설치할 수 있습니다. `DurableInstanceContextAttribute`에는 이 특성의 구현이 포함되어 있으며 `IServiceBehavior` 인터페이스를 구현하여 전체 서비스 런타임을 확장합니다.
 
-이 클래스에는 사용할 스토리지 관리자의 형식을 허용하는 속성이 있습니다. 이렇게 하면 구현을 통해 사용자가 고유한 `IStorageManager` 구현을 이 특성의 매개 변수로 지정할 수 있습니다.
+이 클래스에는 사용할 스토리지 관리자의 형식을 허용하는 속성이 있습니다. 이러한 방식으로 구현을 통해 사용자는 고유한 `IStorageManager` 구현을이 특성의 매개 변수로 지정할 수 있습니다.
 
-`ApplyDispatchBehavior` 구현에서는 현재 `InstanceContextMode` 특성의 `ServiceBehavior`를 확인합니다. 이 속성을 Singleton으로 설정하면 영속 인스턴스를 사용할 수 없으며 `InvalidOperationException`이 throw되어 호스트에 알립니다.
+`ApplyDispatchBehavior` 구현에서 현재 `InstanceContextMode` `ServiceBehavior` 특성의를 확인 하는 중입니다. 이 속성을 Singleton으로 설정하면 영속 인스턴스를 사용할 수 없으며 `InvalidOperationException`이 throw되어 호스트에 알립니다.
 
 ```csharp
 ServiceBehaviorAttribute serviceBehavior =
@@ -351,13 +351,13 @@ foreach (ChannelDispatcherBase cdb in serviceHostBase.ChannelDispatchers)
 
 이제 서비스 인스턴스를 영구 스토리지에 저장하는 방법만 남아 있습니다. 앞에서 설명한 대로 상태를 저장하는 데 필요한 기능은 `IStorageManager`에 이미 구현되어 있습니다. 이제이를 WCF 런타임과 통합 해야 합니다. 서비스 구현 클래스의 메서드에 적용할 수 있는 또 다른 특성이 필요합니다. 이 특성은 서비스 인스턴스의 상태를 변경하는 메서드에 적용됩니다.
 
-`SaveStateAttribute` 클래스가 이 기능을 구현합니다. 또한 각 작업 `IOperationBehavior` 에 대해 WCF 런타임을 수정 하는 클래스를 구현 합니다. 메서드가이 특성으로 표시 된 경우 WCF 런타임은 적절 한 `ApplyBehavior` `DispatchOperation` 가 생성 되는 동안 메서드를 호출 합니다. 이 메서드 구현에는 다음과 같은 코드가 한 줄 있습니다.
+`SaveStateAttribute` 클래스가 이 기능을 구현합니다. 또한 각 작업 `IOperationBehavior` 에 대해 WCF 런타임을 수정 하는 클래스를 구현 합니다. 메서드가이 특성으로 표시 된 경우 WCF 런타임은 적절 한 `ApplyBehavior` `DispatchOperation` 가 생성 되는 동안 메서드를 호출 합니다. 이 메서드 구현에는 한 줄의 코드가 있습니다.
 
 ```csharp
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);
 ```
 
-이 명령은 `OperationInvoker` 형식의 인스턴스를 만들어 생성할 `Invoker`의 `DispatchOperation` 속성에 할당합니다. `OperationInvoker` 클래스는 `DispatchOperation`에 대해 생성된 기본 작업 호출자의 래퍼입니다. 이 클래스는 `IOperationInvoker` 인터페이스를 구현합니다. `Invoke` 메서드 구현에서 실제 메서드 호출은 내부 작업 호출자에게 위임됩니다. 그러나 결과를 반환하기 전에 `InstanceContext`의 스토리지 관리자를 사용하여 서비스 인스턴스를 저장합니다.
+이 명령은 `OperationInvoker` 형식의 인스턴스를 만들어 생성할 `Invoker`의 `DispatchOperation` 속성에 할당합니다. `OperationInvoker` 클래스는 `DispatchOperation`에 대해 생성된 기본 작업 호출자의 래퍼입니다. 이 클래스는 `IOperationInvoker` 인터페이스를 구현합니다. `Invoke` 메서드 구현에서 실제 메서드 호출은 내부 작업 호출자에 게 위임 됩니다. 그러나 결과를 반환하기 전에 `InstanceContext`의 스토리지 관리자를 사용하여 서비스 인스턴스를 저장합니다.
 
 ```csharp
 object result = innerOperationInvoker.Invoke(instance,
@@ -374,7 +374,7 @@ return result;
 
 ## <a name="using-the-extension"></a>확장 사용
 
-채널 계층과 서비스 모델 계층 확장이 모두 수행 되며 이제 WCF 응용 프로그램에서 사용할 수 있습니다. 서비스는 사용자 지정 바인딩을 사용하여 채널 스택에 채널을 추가한 다음 적절한 특성으로 서비스 구현 클래스를 표시해야 합니다.
+채널 계층과 서비스 모델 계층 확장이 모두 수행 되며 이제 WCF 응용 프로그램에서 사용할 수 있습니다. 서비스는 사용자 지정 바인딩을 사용 하 여 채널 스택에 채널을 추가한 다음 서비스 구현 클래스를 적절 한 특성으로 표시 해야 합니다.
 
 ```csharp
 [DurableInstanceContext]
