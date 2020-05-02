@@ -6,7 +6,7 @@ helpviewer_keywords:
 - marshaling data, COM interop
 ms.openlocfilehash: ae41713d5349321725599c0c38d7c6fc515c374b
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181380"
@@ -23,12 +23,12 @@ COM interop는 관리 코드에서 COM 개체를 사용하고 관리되는 개�
  다음 섹셕은 마샬러에 추가 형식 정보를 제공할 수 있는(제공해야 하는) 경우 interop 래퍼를 사용자 지정하는 프로세스를 설명하는 항목으로 연결됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
-[방법: 수동으로 래퍼 만들기](how-to-create-wrappers-manually.md) 관리되는 소스 코드에서 COM 래퍼를 수동으로 만드는 방법을 설명합니다.
+[방법: 수동으로 래퍼 만들기](how-to-create-wrappers-manually.md) - 관리형 소스 코드에서 COM 래퍼를 수동으로 만드는 방법을 설명합니다.
 
  [방법: 관리 코드 DCOM을 WCF로 마이그레이션](how-to-migrate-managed-code-dcom-to-wcf.md)  
  보다 안전한 솔루션을 위해 관리되는 DCOM 코드를 WCF로 마이그레이션하는 방법을 설명합니다.  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
  [COM 데이터 형식](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))  
  해당 관리되는 데이터 형식과 관리되지 않는 데이터 형식을 제공합니다.  
   

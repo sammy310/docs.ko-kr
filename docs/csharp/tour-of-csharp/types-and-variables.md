@@ -1,22 +1,22 @@
 ---
 title: C# 형식 및 변수 - C# 언어 둘러보기
 description: C#에서 형식 정의 및 변수 선언에 대한 자세한 정보
-ms.date: 02/25/2020
+ms.date: 04/24/2020
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: b2a5255a243c12543a1cd59b5724b6c826306e04
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6a3bd3dc802f0d080fd96036067f709e62faf426
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78159093"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82141003"
 ---
 # <a name="types-and-variables"></a>형식 및 변수
 
 C#에는 두 가지 종류의 형식, 즉 *값 형식*과 *참조 형식*이 있습니다. 값 형식의 변수에는 해당 데이터가 직접 포함되지만 참조 형식의 변수에는 데이터(개체라고도 함)에 대한 참조가 저장됩니다. 참조 형식에서는 두 개의 변수가 같은 개체를 참조할 수 있으므로 한 변수에 대한 작업이 다른 변수에서 참조하는 개체에 영향을 미칠 수 있습니다. 값 형식에서는 변수가 자체적으로 데이터 사본을 갖고 있으며 한 변수에 대한 작업이 다른 변수에 영향을 미칠 수 없습니다(`ref` 및 `out` 매개 변수 변수 제외).
 
-C#의 값 형식은 *단순 형식*, *열거형 형식*, *구조체 형식* 및 *null 허용 값 형식*으로 세분화됩니다. C#의 참조 형식은 *클래스 형식*, *인터페이스 형식*, *배열 형식*, 및 *대리자 형식*으로 세분화됩니다.
+C#의 값 형식은 *단순 형식*, *열거형 형식*, *구조체 형식* 및 *null 허용 값 형식*으로 세분화됩니다. C#의 참조 형식은 *클래스 형식*, *인터페이스 형식*, *배열 형식* 및 *대리자 형식*으로 세분화됩니다.
 
-아래에서는 C#의 형식 시스템을 보여 줍니다.
+다음 개요는 C#의 형식 시스템에 대한 개요를 제공합니다.
 
 - [값 형식][ValueTypes]
   - [단순 형식][SimpleTypes]
@@ -32,6 +32,8 @@ C#의 값 형식은 *단순 형식*, *열거형 형식*, *구조체 형식* 및 
     - `struct S {...}` 양식의 사용자 정의 형식
   - [Nullable 값 형식][NullableTypes]
     - `null` 값을 갖는 다른 모든 값 형식의 확장
+  - [튜플 값 형식][TupleTypes]
+    - `(T1, T2, ...)` 양식의 사용자 정의 형식
 - [참조 형식][ReferenceTypes]
   - [클래스 형식][ClassTypes]
     - 다른 모든 형식의 기본 클래스: `object`
@@ -49,6 +51,7 @@ C#의 값 형식은 *단순 형식*, *열거형 형식*, *구조체 형식* 및 
 [EnumTypes]: ../language-reference/builtin-types/enum.md
 [StructTypes]: ../language-reference/builtin-types/struct.md
 [NullableTypes]: ../language-reference/builtin-types/nullable-value-types.md
+[TupleTypes]: ../tuples.md
 [ReferenceTypes]: ../language-reference/keywords/reference-types.md
 [ClassTypes]: ../language-reference/keywords/class.md
 [InterfaceTypes]: ../language-reference/keywords/interface.md
@@ -83,9 +86,9 @@ C#의 형식 시스템은 모든 형식의 값이 `object`로 취급될 수 있�
 
 [!code-csharp[Boxing](../../../samples/snippets/csharp/tour/types-and-variables/Program.cs#L1-L10)]
 
-값 형식의 값이 `object` 형식으로 변환되면 "box"라고도 하는 `object` 인스턴스가 값을 보유하기 위해 할당되고 값이 해당 box에 복사됩니다. 반대로 `object` 참조가 값 형식으로 캐스트될 때 참조된 `object`가 올바른 값 형식의 box인지 확인한 후 확인 결과가 성공이면 box의 값이 복사됩니다.
+값 형식의 값이 `object` 참조에 할당되면 값을 보유하기 위해 "box"가 할당됩니다. 이 상자는 참조 형식의 인스턴스이며 해당 상자에 값이 복사됩니다. 반대로 `object` 참조가 값 형식으로 캐스트될 때 참조된 `object`가 올바른 값 형식의 상자인지 확인합니다. 확인에 성공하면 상자의 값이 값 형식에 복사됩니다.
 
-C# 통합 형식 시스템은 결과적으로 값 형식이 "요청 시" 개체가 될 수 있음을 의미합니다. 통합 때문에 `object` 형식을 사용하는 범용 라이브러리는 참조 형식 및 값 형식 둘 다에 사용될 수 있습니다.
+C# 통합 형식 시스템은 결과적으로 값 형식이 "요청 시" `object` 참조로 처리됨을 의미합니다. 통합 때문에 `object` 형식을 사용하는 범용 라이브러리는 참조 형식과 값 형식을 모두 포함하여 `object`에서 파생되는 모든 유형에 사용할 수 있습니다.
 
 C#에는 필드, 배열 요소, 지역 변수 및 매개 변수를 포함하는 여러 종류의 *변수*가 있습니다. 변수는 스토리지 위치를 나타내고, 모든 변수는 아래와 같이 변수에 저장될 수 있는 값을 결정하는 형식을 갖습니다.
 
