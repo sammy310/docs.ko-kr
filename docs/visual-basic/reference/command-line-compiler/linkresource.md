@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cf4dcad8-17b7-404c-9184-29358aa05b15
 ms.openlocfilehash: 0315645eccdc899ac9cf4d0be105297e1fa2a4c4
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74335490"
 ---
-# <a name="-linkresource-visual-basic"></a>-linkresource (Visual Basic)
+# <a name="-linkresource-visual-basic"></a>-linkresource(Visual Basic)
 관리되는 리소스에 대한 링크를 만듭니다.  
   
 ## <a name="syntax"></a>구문  
@@ -25,7 +25,7 @@ ms.locfileid: "74335490"
 -linkresource:filename[,identifier[,public|private]]  
 ```
 
-or  
+또는  
 
 ```console
 -linkres:filename[,identifier[,public|private]]  
@@ -33,35 +33,35 @@ or
   
 ## <a name="arguments"></a>인수  
  `filename`  
- 필수입니다. 어셈블리에 연결할 리소스 파일입니다. 파일 이름에 공백이 포함 된 경우 이름을 큰따옴표 ("")로 묶습니다.  
+ 필수 요소. 어셈블리에 연결할 리소스 파일입니다. 파일 이름에 공백이 있으면 이름을 따옴표(" ")로 묶습니다.  
   
  `identifier`  
- (선택 사항) 리소스의 논리적 이름입니다. 리소스를 로드 하는 데 사용 되는 이름입니다. 기본값은 파일 이름입니다. 필요에 따라 어셈블리 매니페스트에서 파일이 공개 인지 아니면 개인 파일 인지를 지정할 수 있습니다 (예: `-linkres:filename.res,myname.res,public`). 기본적으로 `filename`는 어셈블리에서 public입니다.  
+ 선택 사항입니다. 리소스의 논리적 이름입니다. 리소스를 로드하는 데 사용되는 이름입니다. 기본값은 파일 이름입니다. 필요에 따라 셈블리 매니페스트에서 파일을 퍼블릭 또는 프라이빗으로 지정할 수 있습니다(예: `-linkres:filename.res,myname.res,public`). 기본적으로 `filename`은 어셈블리에서 퍼블릭입니다.  
   
-## <a name="remarks"></a>주의  
- `-linkresource` 옵션은 출력 파일에 리소스 파일을 포함 하지 않습니다. 이 작업을 수행 하려면 `-resource` 옵션을 사용 합니다.  
+## <a name="remarks"></a>설명  
+ `-linkresource` 옵션은 출력 파일에 리소스 파일을 포함하지 않습니다. 이 작업을 수행하려면 `-resource` 옵션을 사용합니다.  
   
- `-linkresource` 옵션에는 `-target:module`이외의 `-target` 옵션 중 하나가 필요 합니다.  
+ `-linkresource` 옵션에는 `-target:module` 이외의 `-target` 옵션 중 하나가 필요합니다.  
   
- 예를 들어, [resgen.exe (리소스 파일 생성기)](../../../framework/tools/resgen-exe-resource-file-generator.md) 나 개발 환경에서 만든 .NET Framework 리소스 파일인 경우에는 <xref:System.Resources> 네임 스페이스의 멤버를 사용 하 여 해당 파일에 액세스할 수 `filename`. 자세한 내용은 <xref:System.Resources.ResourceManager>를 참조 하세요. 런타임에 다른 모든 리소스에 액세스 하려면 <xref:System.Reflection.Assembly> 클래스에서 `GetManifestResource`로 시작 하는 메서드를 사용 합니다.  
+ 예를 들어, `filename`이 [Resgen.exe(리소스 파일 생성기)](../../../framework/tools/resgen-exe-resource-file-generator.md) 또는 개발 환경에서 만들어진 .NET Framework 리소스 파일인 경우 <xref:System.Resources> 네임스페이스의 멤버를 사용하여 액세스할 수 있습니다. (자세한 내용은 <xref:System.Resources.ResourceManager>를 참조하세요.) 런타임 시 다른 모든 리소스에 액세스하려면 <xref:System.Reflection.Assembly> 클래스에서 `GetManifestResource`로 시작하는 메서드를 사용합니다.  
   
- 파일 이름은 임의의 파일 형식일 수 있습니다. 예를 들어 네이티브 DLL을 어셈블리의 일부로 설정하면 전역 어셈블리 캐시에 설치하고 어셈블리의 관리 코드에서 액세스할 수 있습니다.  
+ 파일 이름은 모든 파일 형식이 될 수 있습니다. 예를 들어 네이티브 DLL을 어셈블리의 일부로 설정하면 전역 어셈블리 캐시에 설치하고 어셈블리의 관리 코드에서 액세스할 수 있습니다.  
   
  `-linkresource`의 약식은 `-linkres`입니다.  
   
 > [!NOTE]
-> `-linkresource` 옵션은 Visual Studio 개발 환경에서 사용할 수 없습니다. 명령줄에서 컴파일하는 경우에만 사용할 수 있습니다.  
+> Visual Studio 개발 환경에서는 `-linkresource` 옵션을 사용할 수 없습니다. 명령줄에서 컴파일하는 경우에만 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 코드는 `in.vb`를 컴파일하고 리소스 파일 `rf.resource`에 대 한 링크를 제공 합니다.  
+ 다음 코드에서는 `in.vb`를 컴파일하고 리소스 파일 `rf.resource`에 연결합니다.  
   
 ```console  
 vbc -linkresource:rf.resource in.vb  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [-리소스 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)
+- [-target(Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [-resource(Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)
 - [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

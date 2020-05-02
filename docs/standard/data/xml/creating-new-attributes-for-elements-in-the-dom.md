@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: dd6dc920-b011-418a-b3db-f1580a7d9251
 ms.openlocfilehash: 79a3390933256ed862d35c90db0aab2177cdfc41
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75711014"
@@ -21,7 +21,7 @@ ms.locfileid: "75711014"
 
 - **CreateAttribute** 메서드를 사용하여 **XmlAttribute** 노드를 만들고, 요소 노드를 가져온 다음, **SetAttributeNode**를 사용하여 해당 요소의 특성 컬렉션에 노드를 추가합니다.
 
-다음 예제에서는 **SetAttribute** 메서드를 사용 하 여 요소에 특성을 추가 하는 방법을 보여 줍니다.
+다음 예제에서는 **SetAttribute** 메서드를 사용하여 요소에 특성을 추가하는 방법을 보여줍니다.
 
 ```vb
 Imports System.IO
@@ -102,7 +102,7 @@ doc.DocumentElement.SetAttributeNode(attr)
 doc.DocumentElement.SetAttributeNode(attr);
 ```
 
-**Output**
+**출력**
 
 ```xml
 <book genre="novel" ISBN="1-861001-57-5" publisher="WorldWide Publishing">
@@ -114,7 +114,7 @@ doc.DocumentElement.SetAttributeNode(attr);
 
 또한 **XmlAttribute** 노드를 만들고 **InsertBefore** 또는 **InsertAfter** 메서드를 사용하여 해당 노드를 컬렉션의 적절한 위치에 배치할 수 있습니다. 동일한 이름의 특성이 이미 특성 컬렉션에 있는 경우 기존 **XmlAttribute** 노드가 컬렉션에서 제거되고 새 **XmlAttribute** 노드가 삽입됩니다. 이는 **SetAttribute** 메서드와 동일한 방식으로 작동합니다. 이러한 메서드는 **InsertBefore** 및 **InsertAfter**를 수행하는 참조 위치로 기존 노드를 사용합니다(매개 변수로). 새 노드의 삽입 위치를 나타내는 참조 노드를 제공하지 않으면 **InsertAfter** 메서드는 기본적으로 컬렉션의 처음에 새 노드를 삽입합니다. 참조 노드가 제공되지 않을 경우 **InsertBefore**의 기본 위치는 컬렉션의 끝입니다.
 
-특성의 **Xmlnamednodemap** 을 만든 경우 <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A> 메서드를 사용 하 여 이름을 기준으로 특성을 추가할 수 있습니다. 자세한 내용은 [NamedNodeMaps 및 NodeLists의 노드 컬렉션](node-collections-in-namednodemaps-and-nodelists.md)을 참조하세요.
+특성의 **XmlNamedNodeMap**을 만든 경우 <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A> 메서드를 사용하여 이름에 따라 특성을 추가할 수 있습니다. 자세한 내용은 [NamedNodeMaps 및 NodeLists의 노드 컬렉션](node-collections-in-namednodemaps-and-nodelists.md)을 참조하세요.
 
 ## <a name="default-attributes"></a>기본 특성
 
@@ -122,7 +122,7 @@ doc.DocumentElement.SetAttributeNode(attr);
 
 ## <a name="attribute-child-nodes"></a>특성 자식 노드
 
-특성 노드 값은 자신의 자식 노드가 됩니다. 유효한 자식 노드에는 **XmlText** 노드와 **xmlentityreference** 노드의 두 가지 유형만 있습니다. **FirstChild** 및 **LastChild**와 같은 메서드에서 이러한 형식의 노드를 자식 노드로 처리한다는 점에서 이러한 형식의 노드는 자식 노드입니다. 자식 노드가 있는 특성의 이와 같은 차이점은 특성이나 특성 자식 노드를 제거하려는 경우에 중요합니다. 자세한 내용은 [DOM의 요소 노드에서 특성 제거](removing-attributes-from-an-element-node-in-the-dom.md)를 참조하세요.
+특성 노드 값은 자신의 자식 노드가 됩니다. 유효한 자식 노드에는 다음과 같은 두 가지 유형만 있습니다. **XmlText** 노드 및 **XmlEntityReference** 노드. **FirstChild** 및 **LastChild**와 같은 메서드에서 이러한 형식의 노드를 자식 노드로 처리한다는 점에서 이러한 형식의 노드는 자식 노드입니다. 자식 노드가 있는 특성의 이와 같은 차이점은 특성이나 특성 자식 노드를 제거하려는 경우에 중요합니다. 자세한 내용은 [DOM의 요소 노드에서 특성 제거](removing-attributes-from-an-element-node-in-the-dom.md)를 참조하세요.
 
 ## <a name="see-also"></a>참조
 

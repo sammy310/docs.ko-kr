@@ -2,12 +2,12 @@
 title: Windows Forms 관련 호환성이 손상되는 변경
 description: .NET Core용 Windows Forms 관련 호환성이 손상되는 변경 목록입니다.
 ms.date: 01/08/2020
-ms.openlocfilehash: 25c568a8a0092a9c4874419c64c7dcebea4dce9e
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: 75d369c7fb999da81a50fe46716e125c3840eb7a
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888136"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158439"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Windows Forms 관련 호환성이 손상되는 변경
 
@@ -17,7 +17,9 @@ Windows Forms 지원이 버전 3.0의 .NET Core에 추가되었습니다. 이 �
 
 | 주요 변경 내용 | 도입된 버전 |
 | - | :-: |
-| [WinForms API가 이제 ArgumentNullException을 throw함](#winforms-apis-now-throw-argumentnullexception) | 5.0 |
+| [상태 표시줄 컨트롤 제거](#removed-status-bar-controls) | 5.0 |
+| [WinForms 메서드는 이제 ArgumentException을 throw함](#winforms-methods-now-throw-argumentexception) | 5.0 |
+| [WinForms 메서드는 이제 ArgumentNullException을 throw함](#winforms-methods-now-throw-argumentnullexception) | 5.0 |
 | [제거된 컨트롤](#removed-controls) | 3.1 |
 | [도구 설명이 표시되면 CellFormatting 이벤트가 발생하지 않음](#cellformatting-event-not-raised-if-tooltip-is-shown) | 3.1 |
 | [Control.DefaultFont가 맑은 고딕 9pt로 변경됨](#default-control-font-changed-to-segoe-ui-9-pt) | 3.0 |
@@ -35,6 +37,14 @@ Windows Forms 지원이 버전 3.0의 .NET Core에 추가되었습니다. 이 �
 | [Windows Forms에서 중복된 API가 제거되었습니다.](#duplicated-apis-removed-from-windows-forms) | 3.0 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [winforms-deprecated-controls](../../../includes/core-changes/windowsforms/5.0/winforms-deprecated-controls.md)]
+
+***
+
+[!INCLUDE [invalid-args-cause-argumentexception](../../../includes/core-changes/windowsforms/5.0/invalid-args-cause-argumentexception.md)]
+
+***
 
 [!INCLUDE [null-args-cause-argumentnullexception](../../../includes/core-changes/windowsforms/5.0/null-args-cause-argumentnullexception.md)]
 

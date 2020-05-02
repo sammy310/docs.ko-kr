@@ -1,11 +1,11 @@
 ---
-title: ASP.NET 웹 앱을 Azure VM으로 마이그레이션
+title: ASP.NET 웹앱을 Azure VM으로 마이그레이션
 description: ASP.NET 웹 애플리케이션을 온-프레미스에서 Azure Virtual Machine으로 마이그레이션하는 방법에 대해 알아봅니다.
 ms.topic: how-to
 ms.date: 11/15/2017
 ms.openlocfilehash: cc9477de92e6105762636ed3a2241949e69ac8ea
 ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/15/2020
 ms.locfileid: "81433363"
@@ -16,16 +16,16 @@ ms.locfileid: "81433363"
 
 ## <a name="quickstart"></a>빠른 시작
 
-가상 머신을 만들고 여기에 앱을 게시하는 방법에 대해 알아봅니다. [Azure VM에 게시](https://tutorials.visualstudio.com/aspnet-vm/intro)
+가상 머신을 만들고 앱을 게시하는 방법에 대해 알아봅니다. [Azure VM에 게시](https://tutorials.visualstudio.com/aspnet-vm/intro)
 
 ## <a name="get-started"></a>시작
 
 이 자습서에서는 가상 머신을 생성(또는 마이그레이션)하고 웹 애플리케이션을 게시하고 Azure에서 애플리케이션을 지원하는 데 필요한 기타 작업을 수행하는 단계를 보여줍니다.
 
-- 다음 옵션 중 하나를 사용하여 Azure에서 ASP.NET 응용 프로그램에 대한 가상 컴퓨터를 만듭니다.
+- 다음 옵션 중 하나를 사용하여 Azure에서 ASP.NET 애플리케이션용 가상 머신을 만듭니다.
   - [ASP.NET 애플리케이션용 새 가상 머신 만들기](https://go.microsoft.com/fwlink/?linkid=863237)
-  - [기존 온-프레미스 VMWare 가상 시스템 마이그레이션](https://docs.microsoft.com/azure/migrate/tutorial-migrate-vmware)
-  - [기존 온-프레미스 하이퍼-V 가상 시스템 마이그레이션](https://docs.microsoft.com/azure/migrate/tutorial-migrate-hyper-v)
+  - [기존 온-프레미스 VMWare 가상 머신 마이그레이션](https://docs.microsoft.com/azure/migrate/tutorial-migrate-vmware)
+  - [기존 온-프레미스 Hyper-V 가상 머신 마이그레이션](https://docs.microsoft.com/azure/migrate/tutorial-migrate-hyper-v)
 - [Visual Studio를 사용하여 앱 게시](https://go.microsoft.com/fwlink/?linkid=863240)
 - [VM용 보안 가상 네트워크 만들기](https://docs.microsoft.com/azure/virtual-network/virtual-network-get-started-vnet-subnet)
 - [애플리케이션용 CI/CD 파이프라인 만들기](https://docs.microsoft.com/vsts/build-release/apps/cd/deploy-webdeploy-iis-deploygroups)
@@ -39,7 +39,7 @@ ms.locfileid: "81433363"
 
 ### <a name="virtual-machine-size"></a>Virtual Machine 크기
 
-워크로드에 가장 최적화된 가상 머신 크기 및 유형을 선택합니다. 자세한 내용은 [Azure의 Windows 가상 컴퓨터용 크기를](https://docs.microsoft.com/azure/virtual-machines/windows/sizes)참조하십시오.
+워크로드에 가장 최적화된 가상 머신 크기 및 유형을 선택합니다. 자세한 내용은 [Azure에서 Windows 가상 머신에 대한 크기](https://docs.microsoft.com/azure/virtual-machines/windows/sizes)를 참조하세요.
 
 ### <a name="maintenance"></a>유지 관리
 
@@ -47,13 +47,13 @@ ms.locfileid: "81433363"
 
 *<sup>&#42;</sup>[가상 머신 확장 집합을 위한 자동 OS 업그레이드](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade)는 현재 미리 보기 서비스로서 사용할 수 있습니다.*
 
-### <a name="virtual-networks"></a>Virtual Network
+### <a name="virtual-networks"></a>가상 네트워크
 
 Azure Virtual Network를 사용하여 다음을 수행할 수 있습니다.
 
 - 제어하는 하이브리드 인프라 구축
 - 자체 IP 주소 및 DNS 서버 가져오기
-- 애플리케이션을 위한 격리되고 매우 안전한 환경 만들기
+- 애플리케이션에 대해 격리되고 매우 안전한 환경 만들기
 - 몇 가지 [연결 옵션](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways#s2smulti) 방법 중 하나를 사용하여 온-프레미스 네트워크에 VM 연결
 - [ExpressRoute](https://azure.microsoft.com/services/expressroute/)를 사용하여 온-프레미스 네트워크에 가상 머신 통합
 
@@ -70,12 +70,12 @@ Azure Virtual Network를 사용하여 다음을 수행할 수 있습니다.
 애플리케이션이 온-프레미스 데이터베이스를 사용하는 경우 앱은 기본적으로 이 데이터베이스와 통신할 수 없습니다. 다음 작업 중 하나를 수행할 수 있습니다.
 
 - 애플리케이션에서 온-프레미스를 실행하는 데이터베이스에 액세스할 수 있도록 해주는 하이브리드 네트워크를 구성합니다.
-- Azure로 데이터베이스를 마이그레이션합니다. 자세한 내용은 [SQL Server 데이터베이스를 Azure 로 마이그레이션을](sql.md)참조하십시오.
+- Azure로 데이터베이스를 마이그레이션합니다. 자세한 내용은 [Azure로 SQL Server 데이터베이스 마이그레이션](sql.md)을 참조하세요.
 
-### <a name="high-availability-and-scalability"></a>고가용성 및 확장성
+### <a name="high-availability-and-scalability"></a>고가용성 및 확장성 
 
 #### <a name="virtual-machine-scale-sets"></a>Virtual Machine Scale Sets
-애플리케이션의 가용성이 높은지 그리고 확장할 수 있는지 확인하고 VM 이미지를 Azure Virtual Machine Scale Set로 마이그레이션하여 애플리케이션의 가용성과 확장성을 높일 수 있습니다. VM 배율 집합은 이미 구성한 기존 VM을 사용하거나 빌드 파이프라인을 설정하여 응용 프로그램과 함께 이미지를 빌드하는 기능을 제공합니다.
+애플리케이션의 가용성이 높은지 그리고 확장할 수 있는지 확인하고 VM 이미지를 Azure Virtual Machine Scale Set로 마이그레이션하여 애플리케이션의 가용성과 확장성을 높일 수 있습니다. VM Scale Sets는 이미 구성한 기존 VM을 사용하거나 애플리케이션으로 이미지를 빌드하기 위해 빌드 파이프라인을 설정하는 기능을 제공합니다.
 
 시작하려면 [가상 머신 확장 집합에 애플리케이션 배포](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-deploy-app)를 참조하세요.
 

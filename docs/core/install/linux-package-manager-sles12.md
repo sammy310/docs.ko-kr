@@ -4,12 +4,12 @@ description: 패키지 관리자를 사용하여 SLES 12에 .NET Core SDK 및 �
 author: thraka
 ms.author: adegeo
 ms.date: 03/17/2020
-ms.openlocfilehash: 8358107c682274fc2b75bf72689eaa4b168a86c5
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 314688d60fb77e1b569dd037fb1d78c3f1f94dbc
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134213"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645652"
 ---
 # <a name="sles-12-package-manager---install-net-core"></a>SLES 12 패키지 관리자 - .NET Core 설치
 
@@ -19,12 +19,12 @@ ms.locfileid: "80134213"
 
 [!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
-## <a name="register-microsoft-key-and-feed"></a>Microsoft 키 및 피드 등록
+## <a name="add-microsoft-repository-key-and-feed"></a>Microsoft 리포지토리 키 및 피드 추가
 
 .NET을 설치하기 전에 먼저 다음을 수행해야 합니다.
 
-- Microsoft 키를 등록합니다.
-- 제품 리포지토리를 등록합니다.
+- Microsoft 패키지 서명 키를 신뢰할 수 있는 키 목록에 추가합니다.
+- 패키지 관리자에 리포지토리를 추가합니다.
 - 필수 종속성을 설치합니다.
 
 이 작업은 머신당 한 번만 수행하면 됩니다.

@@ -4,12 +4,12 @@ description: 다중 클래스 분류 시나리오에서 ML.NET을 사용하여 G
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 50980cd933054825bf21f955b0341dd8e66f3e62
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f158b8dce81e00f652496cad4ec9217c516b3e9d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78239939"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739714"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-mlnet"></a>자습서: ML .NET에서 다중 클래스 분류를 사용하여 지원 문제 분류
 
@@ -29,10 +29,9 @@ ms.locfileid: "78239939"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-* “.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2017 버전 15.6 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)
-
-* [Github에서 탭 분리 파일(issues_train.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv)을 발행합니다.
-* [Github에서 테스트 탭 분리 파일(issues_test.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv)을 발행합니다.
+* “.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 이상 또는 Visual Studio 2017 버전 15.6 이상.
+* [GitHub에서 탭 분리 파일(issues_train.tsv)을 발행](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv)합니다.
+* [GitHub에서 테스트 탭 분리 파일(issues_test.tsv)을 발행](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv)합니다.
 
 ## <a name="create-a-console-application"></a>콘솔 애플리케이션 만들기
 

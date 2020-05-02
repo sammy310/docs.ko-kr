@@ -3,12 +3,12 @@ title: 가비지 수집기 구성 설정
 description: 가비지 수집기가 .NET Core 앱의 메모리를 관리하는 방식을 구성하는 런타임 설정에 대해 알아봅니다.
 ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: dfb641eeda03d1acaa4771bd6253fcb33c4082a6
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: ec575bdd17c8a7c290673b7085074bbba94cedef
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607812"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102868"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>가비지 수집을 위한 런타임 구성 옵션
 
@@ -24,7 +24,7 @@ ms.locfileid: "81607812"
 
 ## <a name="flavors-of-garbage-collection"></a>가비지 수집 버전
 
-가비지 수집의 2가지 주요 버전은 워크스테이션 GC와 서버 GC입니다. 둘 사이의 차이점에 대한 자세한 내용은 [가비지 수집 기본 사항](../../standard/garbage-collection/fundamentals.md#workstation-and-server-garbage-collection)을 참조하세요.
+가비지 수집의 2가지 주요 버전은 워크스테이션 GC와 서버 GC입니다. 둘 사이의 차이점에 대한 자세한 내용은 [워크스테이션 및 가비지 수집](../../standard/garbage-collection/workstation-server-gc.md)을 참조하세요.
 
 가비지 수집의 하위 버전은 백그라운드와 비동시입니다.
 
@@ -72,7 +72,7 @@ ms.locfileid: "81607812"
 
 - 백그라운드(동시) 가비지 수집이 사용하도록 설정되었는지 여부를 구성합니다.
 - 기본값: 사용(`true`).
-- 자세한 내용은 [백그라운드 가비지 수집](../../standard/garbage-collection/fundamentals.md#background-workstation-garbage-collection) 및 [백그라운드 서버 가비지 수집](../../standard/garbage-collection/fundamentals.md#background-server-garbage-collection)을 참조하세요.
+- 자세한 내용은 [백그라운드 가비지 수집](../../standard/garbage-collection/background-gc.md)을 참조하세요.
 
 | | 설정 이름 | 값 | 도입된 버전 |
 | - | - | - | - |
@@ -240,7 +240,7 @@ ms.locfileid: "81607812"
 
 - GC 힙 및 GC 기록의 최대 커밋 크기를 바이트 단위로 지정합니다.
 - 이 설정은 64비트 컴퓨터에만 적용됩니다.
-- 특정 경우에만 적용되는 기본값은 컨테이너에 대한 메모리 제한의 20MB 또는 75% 중 더 작은 값입니다. 기본값은 다음 경우에 적용됩니다.
+- 특정 경우에만 적용되는 기본값은 컨테이너에 대한 메모리 제한의 20MB 또는 75% 중 더 큰 값입니다. 기본값은 다음 경우에 적용됩니다.
 
   - 프로세스가 지정된 메모리 제한이 있는 컨테이너 내에서 실행되는 경우.
   - [System.GC.HeapHardLimitPercent](#systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent)가 설정되지 않은 경우.

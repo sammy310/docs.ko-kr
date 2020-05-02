@@ -8,12 +8,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: c549b9fcc91401aed846afd39e656b60e16afb74
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6fd2dab09fe97aa4af87d82e2d23664c4347c8b3
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937594"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82101997"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>람다 식(C# 프로그래밍 가이드)
 
@@ -37,11 +37,11 @@ ms.locfileid: "75937594"
 
 [!code-csharp-interactive[lambda is delegate](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Delegate)]
 
-다음 예제에 표시된 대로 식 람다는 [식 트리](../concepts/expression-trees/index.md) 형식으로도 변환할 수 있습니다.
+다음 예제에 표시된 대로 식 람다는 [식 트리](../concepts/expression-trees/index.md) 형식으로 변환할 수도 있습니다.
 
 [!code-csharp-interactive[lambda is expression tree](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#ExpressionTree)]
 
-대리자 형식이나 식 트리의 인스턴스가 필요한 코드에서 람다 식을 백그라운드에서 실행해야 하는 코드를 전달하는 <xref:System.Threading.Tasks.Task.Run(System.Action)?displayProperty=nameWithType> 메서드의 인수 등으로 사용할 수 있습니다. 다음 예제에 표시된 대로 [C#에 LINQ](../../linq/index.md)를 쓸 때도 람다 식을 사용할 수 있습니다.
+대리자 형식이나 식 트리의 인스턴스가 필요한 코드에서 람다 식을 백그라운드에서 실행해야 하는 코드를 전달하는 <xref:System.Threading.Tasks.Task.Run(System.Action)?displayProperty=nameWithType> 메서드의 인수 등으로 사용할 수 있습니다. 다음 예제에 표시된 대로 [C#에 LINQ](../../linq/index.md)를 작성할 때 람다 식을 사용할 수도 있습니다.
 
 [!code-csharp-interactive[lambda is argument in LINQ](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Argument)]
 
@@ -230,7 +230,7 @@ customers.Where(c => c.City == "London");
 - [C# 프로그래밍 가이드](../index.md)
 - [LINQ(Language-Integrated Query)](../concepts/linq/index.md)
 - [식 트리](../concepts/expression-trees/index.md)
-- [로컬 함수 및 람다 식 비교](../../local-functions-vs-lambdas.md)
+- [로컬 함수 및 람다 식](../classes-and-structs/local-functions.md#local-functions-vs-lambda-expressions)
 - [암시적으로 형식화된 람다 식](../../implicitly-typed-lambda-expressions.md)
 - [Visual Studio 2008 C# 샘플(LINQ 샘플 쿼리 파일 및 XQuery 프로그램 참조)](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)
 - [재귀 람다 식](https://docs.microsoft.com/archive/blogs/madst/recursive-lambda-expressions)

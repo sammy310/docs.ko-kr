@@ -6,16 +6,16 @@ helpviewer_keywords:
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
 ms.openlocfilehash: 2fefdff9dc27915066e3d92efd8439adffed9fc5
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74330291"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Visual Basic에서 구성 요소 만들기 및 사용
 
-*구성 요소*는 <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> 인터페이스를 구현하는 클래스이거나 <xref:System.ComponentModel.IComponent>를 구현하는 클래스에서 직접 또는 간접적으로 파생되는 클래스입니다. .NET Framework 구성 요소는 재사용 가능 하 고 다른 개체와 상호 작용할 수 있는 개체 이며 외부 리소스 및 디자인 타임 지원에 대 한 제어를 제공 합니다.  
+*구성 요소*는 <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> 인터페이스를 구현하는 클래스이거나 <xref:System.ComponentModel.IComponent>를 구현하는 클래스에서 직접 또는 간접적으로 파생되는 클래스입니다. .NET Framework 구성 요소는 재사용 가능한 개체이고, 다른 개체와 상호 작용할 수 있으며, 외부 리소스 및 디자인 타임 지원에 대한 제어를 제공합니다.  
   
- 구성 요소의 중요한 기능은 디자인할 수 있다는 것입니다. 즉, Visual Studio 통합 개발 환경에서 구성 요소인 클래스를 사용할 수 있습니다. 구성 요소는 도구 상자에 추가하고, 양식에 끌어서 놓고, 디자인 화면에서 조작할 수 있습니다. 구성 요소에 대 한 기본 디자인 타임 지원은 .NET Framework에 기본 제공 됩니다. 구성 요소 개발자는 기본 디자인 타임 기능을 활용 하기 위해 추가 작업을 수행할 필요가 없습니다.  
+ 구성 요소의 중요한 기능은 디자인할 수 있다는 것입니다. 즉, Visual Studio 통합 개발 환경에서 구성 요소인 클래스를 사용할 수 있습니다. 구성 요소는 도구 상자에 추가하고, 양식에 끌어서 놓고, 디자인 화면에서 조작할 수 있습니다. 구성 요소에 대한 기본 디자인 타임 지원은 .NET Framework에 기본 제공됩니다. 구성 요소 개발자는 기본 디자인 타임 기능을 이용하기 위해 추가 작업을 할 필요가 없습니다.  
   
  *컨트롤*과 구성 요소는 둘 다 디자인 가능하다는 점에서 비슷합니다. 그러나 컨트롤은 사용자 인터페이스를 제공하지만 구성 요소는 제공하지 않습니다. 컨트롤은 기본 컨트롤 클래스인 <xref:System.Windows.Forms.Control> 또는 <xref:System.Web.UI.Control> 중 하나에서 파생되어야 합니다.  
   
@@ -61,11 +61,11 @@ ms.locfileid: "74330291"
   
 - <xref:System.ComponentModel.PropertyDescriptor>. 속성에 대한 정보를 제공합니다.  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
 
  [컨트롤 및 구성 요소 제작 문제 해결](../../framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
  일반적인 문제 해결 방법을 설명합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [방법: Windows Forms에서 디자인 타임 지원 액세스](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)

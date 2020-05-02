@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET],synchronizing threads
 - managed threading
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
-ms.openlocfilehash: 43f78c914b7cb01f9b0de4c258d5882548e52790
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7347c9b40f150febc6a163ae3aa3267123ea0e9d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73106587"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739377"
 ---
 # <a name="overview-of-synchronization-primitives"></a>동기화 기본 형식 개요
 
@@ -59,11 +59,11 @@ ms.locfileid: "73106587"
 자세한 내용은 <xref:System.Threading.Monitor> API 참조를 참조하세요.
 
 > [!NOTE]
-> [ 클래스를 직접 사용하는 대신 C#의 ](../../csharp/language-reference/keywords/lock-statement.md)lock[ 문 및 Visual Basic의 ](../../visual-basic/language-reference/statements/synclock-statement.md)SyncLock<xref:System.Threading.Monitor> 문을 사용하여 공유 리소스에 대한 액세스를 동기화합니다. 이러한 문은 획득한 잠금이 항상 해제되도록 <xref:System.Threading.Monitor.Enter%2A> 및 <xref:System.Threading.Monitor.Exit%2A> 메서드와 `try…finally` 블록을 사용하여 구현됩니다.
+> <xref:System.Threading.Monitor> 클래스를 직접 사용하는 대신 C#의 [lock](../../csharp/language-reference/keywords/lock-statement.md) 문 및 Visual Basic의 [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) 문을 사용하여 공유 리소스에 대한 액세스를 동기화합니다. 이러한 문은 획득한 잠금이 항상 해제되도록 <xref:System.Threading.Monitor.Enter%2A> 및 <xref:System.Threading.Monitor.Exit%2A> 메서드와 `try…finally` 블록을 사용하여 구현됩니다.
 
 ### <a name="mutex-class"></a>Mutex 클래스
 
-<xref:System.Threading.Mutex?displayProperty=nameWithType>와 같은 <xref:System.Threading.Monitor> 클래스는 공유 리소스에 대한 배타적 액세스 권한을 부여합니다. [Mutex.WaitOne](<xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>) 메서드 오버로드 중 하나를 사용하여 뮤텍스의 소유권을 요청합니다. <xref:System.Threading.Monitor>와 마찬가지로 <xref:System.Threading.Mutex>에는 스레드 선호도가 있고 뮤텍스를 획득한 스레드는 <xref:System.Threading.Mutex.ReleaseMutex%2A?displayProperty=nameWithType> 메서드를 호출하여 뮤텍스를 해제해야 합니다.
+<xref:System.Threading.Monitor>와 같은 <xref:System.Threading.Mutex?displayProperty=nameWithType> 클래스는 공유 리소스에 대한 배타적 액세스 권한을 부여합니다. [Mutex.WaitOne](<xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>) 메서드 오버로드 중 하나를 사용하여 뮤텍스의 소유권을 요청합니다. <xref:System.Threading.Monitor>와 마찬가지로 <xref:System.Threading.Mutex>에는 스레드 선호도가 있고 뮤텍스를 획득한 스레드는 <xref:System.Threading.Mutex.ReleaseMutex%2A?displayProperty=nameWithType> 메서드를 호출하여 뮤텍스를 해제해야 합니다.
 
 <xref:System.Threading.Monitor>와 달리 <xref:System.Threading.Mutex> 클래스는 프로세스 간 동기화에 사용할 수 있습니다. 이를 수행하려면 운영 체제 전체에 표시되는 명명된 뮤텍스를 사용합니다. 명명된 뮤텍스 인스턴스를 만들려면 이름을 지정하는 [뮤텍스 생성자](<xref:System.Threading.Mutex.%23ctor%2A>)를 사용합니다. <xref:System.Threading.Mutex.OpenExisting%2A?displayProperty=nameWithType> 메서드를 호출하여 기존 명명된 시스템 뮤텍스를 열 수도 있습니다.
   
@@ -71,7 +71,7 @@ ms.locfileid: "73106587"
 
 ### <a name="spinlock-structure"></a>SpinLock 구조체
 
-<xref:System.Threading.SpinLock?displayProperty=nameWithType>와 같은 <xref:System.Threading.Monitor> 구조체는 잠금의 가용성에 따라 공유 리소스에 대한 배타적 액세스 권한을 부여합니다. <xref:System.Threading.SpinLock>이 사용할 수 없는 잠금을 획득하려고 하면 잠금을 사용할 수 있을 때까지 루프에서 반복적으로 확인하면서 대기합니다.
+<xref:System.Threading.Monitor>와 같은 <xref:System.Threading.SpinLock?displayProperty=nameWithType> 구조체는 잠금의 가용성에 따라 공유 리소스에 대한 배타적 액세스 권한을 부여합니다. <xref:System.Threading.SpinLock>이 사용할 수 없는 잠금을 획득하려고 하면 잠금을 사용할 수 있을 때까지 루프에서 반복적으로 확인하면서 대기합니다.
 
 회전 잠금을 사용하는 이점 및 결점에 대한 자세한 내용은 [SpinLock](spinlock.md) 문서 및 <xref:System.Threading.SpinLock> API 참조를 참조하세요.
 
@@ -105,8 +105,8 @@ Windows에서는 프로세스 간 동기화에 <xref:System.Threading.Semaphore>
 
 신호 알림을 받은 <xref:System.Threading.EventWaitHandle>의 동작은 재설정 모드에 따라 다릅니다.
 
-- <xref:System.Threading.EventWaitHandle> 플래그를 사용하여 만들어진 <xref:System.Threading.EventResetMode.AutoReset?displayProperty=nameWithType>은 단일 대기 스레드를 해제한 후 자동으로 다시 설정됩니다. 신호 알림을 받을 때마다 스레드를 하나만 허용하는 턴스타일과 같습니다. <xref:System.Threading.AutoResetEvent?displayProperty=nameWithType>에서 파생되는 <xref:System.Threading.EventWaitHandle> 클래스는 해당 동작을 나타냅니다.
-- <xref:System.Threading.EventWaitHandle> 플래그를 사용하여 만들어진 <xref:System.Threading.EventResetMode.ManualReset?displayProperty=nameWithType>은 <xref:System.Threading.EventWaitHandle.Reset%2A> 메서드가 호출될 때까지 신호 알림 상태를 유지합니다. 신호 알림을 받을 때까지 닫혀 있고 이후 누군가 닫을 때까지 열려 있는 게이트와 같습니다. <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>에서 파생되는 <xref:System.Threading.EventWaitHandle> 클래스는 해당 동작을 나타냅니다. <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> 클래스는 <xref:System.Threading.ManualResetEvent>의 간단한 대체 항목입니다.
+- <xref:System.Threading.EventResetMode.AutoReset?displayProperty=nameWithType> 플래그를 사용하여 만들어진 <xref:System.Threading.EventWaitHandle>은 단일 대기 스레드를 해제한 후 자동으로 다시 설정됩니다. 신호 알림을 받을 때마다 스레드를 하나만 허용하는 턴스타일과 같습니다. <xref:System.Threading.EventWaitHandle>에서 파생되는 <xref:System.Threading.AutoResetEvent?displayProperty=nameWithType> 클래스는 해당 동작을 나타냅니다.
+- <xref:System.Threading.EventResetMode.ManualReset?displayProperty=nameWithType> 플래그를 사용하여 만들어진 <xref:System.Threading.EventWaitHandle>은 <xref:System.Threading.EventWaitHandle.Reset%2A> 메서드가 호출될 때까지 신호 알림 상태를 유지합니다. 신호 알림을 받을 때까지 닫혀 있고 이후 누군가 닫을 때까지 열려 있는 게이트와 같습니다. <xref:System.Threading.EventWaitHandle>에서 파생되는 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 클래스는 해당 동작을 나타냅니다. <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> 클래스는 <xref:System.Threading.ManualResetEvent>의 간단한 대체 항목입니다.
 
 Windows에서는 프로세스 간 동기화에 <xref:System.Threading.EventWaitHandle>를 사용할 수 있습니다. 이 작업을 수행하려면 이름을 지정하는 <xref:System.Threading.EventWaitHandle>EventWaitHandle 생성자[ 중 하나 또는 ](<xref:System.Threading.EventWaitHandle.%23ctor%2A>) 메서드를 사용하여 명명된 시스템 동기화 이벤트를 나타내는 <xref:System.Threading.EventWaitHandle.OpenExisting%2A?displayProperty=nameWithType> 인스턴스를 만듭니다.
 
@@ -140,7 +140,7 @@ Windows에서는 프로세스 간 동기화에 <xref:System.Threading.EventWaitH
 
 자세한 내용은 [SpinWait](spinwait.md) 문서 및 <xref:System.Threading.SpinWait> API 참조를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [스레드로부터 안전한 컬렉션](../collections/thread-safe/index.md)

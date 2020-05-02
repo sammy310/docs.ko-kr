@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 ms.openlocfilehash: 9bf57e0f74a353fb6512a24214e9479c1d813aab
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78160211"
@@ -29,7 +29,7 @@ ms.locfileid: "78160211"
   
  여기서 `msxsl`은 네임스페이스 `urn:schemas-microsoft-com:xslt`에 바인딩되는 접두사입니다.  
   
- `language` 특성은 필수는 아니지만 지정 된 경우 해당 값은 `C#`, `VB`, `JScript`, `JavaScript`, `VisualBasic`또는 `CSharp`중 하나 여야 합니다. 지정하지 않을 경우 언어 기본값은 JScript입니다. `language-name`은 대/소문자를 구분하지 않으므로 'JavaScript'와 'javascript'는 같습니다.  
+ `language` 특성은 필수 항목은 아니지만, 지정할 경우 값은 `C#`, `VB`, `JScript`, `JavaScript`, `VisualBasic` 또는 `CSharp` 중 하나여야 합니다. 지정하지 않을 경우 언어 기본값은 JScript입니다. `language-name`은 대/소문자를 구분하지 않으므로 'JavaScript'와 'javascript'는 같습니다.  
   
  `implements-prefix` 특성은 필수 항목입니다. 이 특성은 네임스페이스를 선언하고 스크립트 블록에 연결하는 데 사용됩니다. 이 특성 값은 네임스페이스를 나타내는 접두사입니다. 이 네임스페이스는 스타일시트에서 정의할 수 있습니다.  
   
@@ -64,13 +64,13 @@ ms.locfileid: "78160211"
   
 |형식|해당 .NET Framework 클래스(형식)|XPath 형식 또는 XSLT 형식|  
 |----------|----------------------------------------------|-----------------------------|  
-|문자열|System.String|XPath입니다.|  
-|Boolean|System.Boolean|XPath입니다.|  
-|번호|System.Double|XPath입니다.|  
+|String|System.String|XPath|  
+|부울|System.Boolean|XPath|  
+|수|System.Double|XPath|  
 |결과 트리 조각|System.Xml.XPath.XPathNavigator|XSLT|  
-|노드 집합|System.Xml.XPath.XPathNodeIterator|XPath입니다.|  
+|노드 집합|System.Xml.XPath.XPathNodeIterator|XPath|  
   
- 스크립트 함수에서 Int16, UInt16, Int32, UInt32, Int64, UInt64, Single 또는 Decimal과 같은 숫자 형식을 사용한다면 W3C XPath 형식의 숫자에 매핑되는 Double이 됩니다. 기타 모든 형식은 `ToString` 메서드 호출을 통해 문자열 형식이 됩니다.  
+ 스크립트 함수가 다음 숫자 유형 중 하나를 사용하는 경우: Int16, UInt16, Int32, UInt32, Int64, UInt64, Single 또는 Decimal의 경우 W3C XPath 형식 숫자에 매핑되는 Double이 되어야 합니다. 기타 모든 형식은 `ToString` 메서드 호출을 통해 문자열 형식이 됩니다.  
   
  스크립트 함수에서 위에 설명되어 있지 않은 형식을 사용하거나 스타일시트를 <xref:System.Xml.Xsl.XslTransform> 개체에 로드할 때 함수가 컴파일되지 않으면 예외가 throw됩니다.  
   
@@ -229,6 +229,6 @@ public class Sample
 </circles>
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [XslTransform 클래스의 XSLT 프로세서 구현](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

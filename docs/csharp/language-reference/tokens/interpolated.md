@@ -10,12 +10,12 @@ helpviewer_keywords:
 - string interpolation [C#]
 - interpolated string [C#]
 author: pkulikov
-ms.openlocfilehash: 97bc606569b83bd14cd3b32495deb8e529747e9c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2b95fa5fe5cecd4825e8c17a33f7795c6c9480c6
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76980121"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738369"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - 문자열 보간(C# 참조)
 
@@ -57,7 +57,7 @@ ms.locfileid: "76980121"
 
 [!code-csharp-interactive[example with ternary conditional operator](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
-보간된 약어 문자열은 `$` 문자가 뒤에 오는 `@` 문자로 시작합니다. 약어 문자열에 대한 자세한 내용은 [문자열](../builtin-types/reference-types.md) 및 [약어 식별자](verbatim.md) 항목을 참조하세요.
+보간된 약어 문자열은 `@` 문자가 뒤에 오는 `$` 문자로 시작합니다. 약어 문자열에 대한 자세한 내용은 [문자열](../builtin-types/reference-types.md) 및 [약어 식별자](verbatim.md) 항목을 참조하세요.
 
 > [!NOTE]
 > C# 8.0부터는 `$` 및 `@` 토큰을 순서에 관계없이 사용할 수 있습니다. `$@"..."` 및 `@$"..."`는 모두 유효한 보간된 약어 문자열입니다. 이전 C# 버전에서는 `$` 토큰이 `@` 토큰 앞에 나타나야 했습니다.
@@ -70,11 +70,11 @@ ms.locfileid: "76980121"
 
 1. 보간된 문자열을 서식을 지정할 식 결과와 함께 복합 서식 문자열을 나타내는 <xref:System.FormattableString> 인스턴스로 변환. 이 변수를 사용하면 단일 <xref:System.FormattableString> 인스턴스에서 문화권별 콘텐츠가 포함된 여러 결과 문자열을 만들 수 있습니다. 이렇게 하려면 다음 메서드 중 하나를 호출합니다.
 
-      - <xref:System.FormattableString.ToString>에 대한 결과 문자열을 생성하는 <xref:System.Globalization.CultureInfo.CurrentCulture> 오버로드.
-      - <xref:System.FormattableString.Invariant%2A>에 대한 결과 문자열을 생성하는 <xref:System.Globalization.CultureInfo.InvariantCulture> 메서드.
+      - <xref:System.Globalization.CultureInfo.CurrentCulture>에 대한 결과 문자열을 생성하는 <xref:System.FormattableString.ToString> 오버로드.
+      - <xref:System.Globalization.CultureInfo.InvariantCulture>에 대한 결과 문자열을 생성하는 <xref:System.FormattableString.Invariant%2A> 메서드.
       - 지정된 문화에 대한 결과 문자열을 생성하는 <xref:System.FormattableString.ToString(System.IFormatProvider)> 메서드.
 
-    <xref:System.FormattableString.ToString(System.IFormatProvider)> 메서드를 사용하여 사용자 지정 형식을 지원하는 <xref:System.IFormatProvider> 인터페이스의 사용자 정의 구현을 제공할 수도 있습니다. 자세한 내용은 [.NET의 형식 서식 지정](../../../standard/base-types/formatting-types.md#custom-formatting-with-icustomformatter) 문서의 [ICustomFormatter를 사용하여 사용자 지정 형식 지정](../../../standard/base-types/formatting-types.md) 섹션을 참조하세요.
+    <xref:System.FormattableString.ToString(System.IFormatProvider)> 메서드를 사용하여 사용자 지정 형식을 지원하는 <xref:System.IFormatProvider> 인터페이스의 사용자 정의 구현을 제공할 수도 있습니다. 자세한 내용은 [.NET의 형식 서식 지정](../../../standard/base-types/formatting-types.md) 문서의 [ICustomFormatter를 사용하여 사용자 지정 형식 지정](../../../standard/base-types/formatting-types.md#custom-formatting-with-icustomformatter) 섹션을 참조하세요.
 
 1. 보간된 문자열을 <xref:System.IFormattable> 인스턴스로 변환. 또한 이 인스턴스를 사용하면 단일 <xref:System.IFormattable> 인스턴스의 문화권별 콘텐츠로 여러 결과 문자열을 만들 수 있습니다.
 
@@ -84,7 +84,7 @@ ms.locfileid: "76980121"
 
 ## <a name="additional-resources"></a>추가 자료
 
-문자열 보간을 처음 접하는 경우 [C#의 문자열 보간](../../tutorials/exploration/interpolated-strings.yml) 대화형 자습서를 참조하세요. 보간된 문자열을 사용하여 서식화된 문자열을 생성하는 방법을 보여 주는 다른 [C#의 문자열 보간](../../tutorials/string-interpolation.md) 자습서도 확인할 수 있습니다.
+문자열 보간을 처음 접하는 경우 [C#의 문자열 보간](../../tutorials/exploration/interpolated-strings.yml) 대화형 자습서를 참조하세요. 보간된 문자열을 사용하여 서식화된 문자열을 생성하는 방법을 보여 주는 다른 [C#의 문자열 보간](../../tutorials/string-interpolation.md) 자습서를 확인할 수도 있습니다.
 
 ## <a name="compilation-of-interpolated-strings"></a>보간된 문자열의 컴파일
 
@@ -94,13 +94,13 @@ ms.locfileid: "76980121"
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](~/_csharplang/spec/expressions.md#interpolated-strings)의 [보간된 문자열](~/_csharplang/spec/introduction.md) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [보간된 문자열](~/_csharplang/spec/expressions.md#interpolated-strings) 섹션을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 특수 문자](index.md)
 - [문자열](../../programming-guide/strings/index.md)
-- [표준 숫자 서식 문자열](../../../standard/base-types/standard-numeric-format-strings.md)
+- [표준 숫자 형식 문자열](../../../standard/base-types/standard-numeric-format-strings.md)
 - [복합 형식 지정](../../../standard/base-types/composite-formatting.md)
 - <xref:System.String.Format%2A?displayProperty=nameWithType>

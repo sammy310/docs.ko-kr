@@ -20,14 +20,14 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 ms.openlocfilehash: 17795db2cdec419a31fe862793c88506f9535ff9
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79180458"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>데스크톱 응용 프로그램의 리소스 검색
 
-.NET Framework 데스크톱 앱의 지역화된 리소스로 작업할 경우에는 기본 또는 중립 문화권의 리소스를 주 어셈블리와 패키지하여 앱이 지원하는 각 언어 또는 문화권에 대해 별도의 위성 어셈블리를 만드는 것이 가장 바람직합니다. 그런 다음 <xref:System.Resources.ResourceManager> 클래스를 다음 섹션에 설명한 대로 사용하여 명명된 리소스에 액세스할 수 있습니다. 주 어셈블리와 위성 어셈블리에 리소스를 포함하지 않으려는 경우 이 문서의 뒷부분에 나오는 [.resources 파일에서 리소스 검색](#from_file) 섹션에서 설명한 것처럼, 이진 .resources 파일에 직접 액세스할 수도 있습니다.  Windows 8.x 스토어 앱에서 리소스를 검색하려면 [Windows 스토어 앱에서 리소스 만들기 및 검색을](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140))참조하세요.  
+.NET Framework 데스크톱 앱의 지역화된 리소스로 작업할 경우에는 기본 또는 중립 문화권의 리소스를 주 어셈블리와 패키지하여 앱이 지원하는 각 언어 또는 문화권에 대해 별도의 위성 어셈블리를 만드는 것이 가장 바람직합니다. 그런 다음 <xref:System.Resources.ResourceManager> 클래스를 다음 섹션에 설명한 대로 사용하여 명명된 리소스에 액세스할 수 있습니다. 주 어셈블리와 위성 어셈블리에 리소스를 포함하지 않으려는 경우 이 문서의 뒷부분에 나오는 [.resources 파일에서 리소스 검색](#from_file) 섹션에서 설명한 것처럼, 이진 .resources 파일에 직접 액세스할 수도 있습니다.  Windows 8.x 스토어 앱에서 리소스를 검색하려면 [Windows 스토어 앱에서 리소스 만들기 및 검색](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140)) 을 참조하세요.  
   
 <a name="from_assembly"></a>
 ## <a name="retrieving-resources-from-assemblies"></a>어셈블리에서 리소스 검색  
@@ -37,7 +37,7 @@ ms.locfileid: "79180458"
   
 - 리소스 이름을 포함하는 문자열, 리소스가 검색될 문화권을 나타내는 <xref:System.Globalization.CultureInfo> 개체와 같은 두 개의 매개 변수가 있는 오버로드입니다. 해당 문화권에 대해 설정된 리소스를 찾을 수 없는 경우 리소스 관리자는 적절한 리소스를 검색하기 위해 대체(fallback) 규칙을 사용합니다. 자세한 내용은 <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>및 <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> 메서드를 참조하세요.  
   
- 리소스 관리자는 앱이 문화권 관련 리소스를 검색하는 방법을 제어하기 위해 리소스 대체 프로세스를 사용합니다. 자세한 내용은 [리소스 패키징 및 배포](packaging-and-deploying-resources-in-desktop-apps.md)의 "리소스 대체 프로세스" 섹션을 참조하세요. <xref:System.Resources.ResourceManager> 개체를 인스턴스화하는 방법에 대한 자세한 내용은 <xref:System.Resources.ResourceManager> 클래스 항목의 "ResourceManager 개체 인스턴스화" 섹션을 참조하세요.  
+ 리소스 관리자는 앱이 문화권 관련 리소스를 검색하는 방법을 제어하기 위해 리소스 대체 프로세스를 사용합니다. 자세한 내용은 [Packaging and Deploying Resources](packaging-and-deploying-resources-in-desktop-apps.md)의 "리소스 대체 프로세스" 섹션을 참조하세요. <xref:System.Resources.ResourceManager> 개체를 인스턴스화하는 방법에 대한 자세한 내용은 <xref:System.Resources.ResourceManager> 클래스 항목의 "ResourceManager 개체 인스턴스화" 섹션을 참조하세요.  
   
 ### <a name="retrieving-string-data-an-example"></a>문자열 데이터 검색: 예제  
  다음 예제는 현재 UI 문화권의 문자열 리소스를 검색하기 위해 <xref:System.Resources.ResourceManager.GetString%28System.String%29> 메서드를 호출합니다. 영어(미국) 문화권에 대해서는 중립 문자열 리소스를, 프랑스어(프랑스) 및 러시아어(러시아) 문화권에 대해서는 지역화된 리소스를 포함합니다. 다음 영어(미국) 리소스는 Strings.txt라는 파일에 있습니다.  
@@ -80,7 +80,7 @@ al -embed:strings.ru-RU.resources -culture:ru-RU -out:ru-RU\GetString.resources.
   
  현재 UI 문화권이 스페인어(스페인)인 경우 예제에서는 영어 리소스를 표시합니다. 스페인어 리소스를 사용할 수 없거나 영어가 예제의 기본 문화권이기 때문입니다.  
   
-### <a name="retrieving-object-data-two-examples"></a>개체 데이터 검색: 두 예제  
+### <a name="retrieving-object-data-two-examples"></a>개체 데이터 검색: 두 가지 예제  
  개체 데이터를 검색하려면 <xref:System.Resources.ResourceManager.GetObject%2A> 및 <xref:System.Resources.ResourceManager.GetStream%2A> 메서드를 사용할 수 있습니다. 여기에는 기본 데이터 형식, 직렬화 가능 개체, 이진 형식으로 저장된 개체(예: 이미지)가 포함됩니다.  
   
  다음 예제에서는 <xref:System.Resources.ResourceManager.GetStream%28System.String%29> 메서드를 사용하여 앱의 열기 시작 창에 사용되는 비트맵을 검색합니다. CreateResources.cs(C#) 또는 CreateResources.vb(Visual Basic)라는 이름의 파일에 있는 다음 소스 코드는 serialize된 이미지를 포함하는 .resx 파일을 생성합니다. 이 경우 이미지는 SplashScreen.jpg라는 파일에서 로드됩니다. 이 파일 이름을 수정하여 자신의 고유한 이미지로 대체할 수 있습니다.  
@@ -158,7 +158,7 @@ GetObject.exe
  리소스를 만들어서 적절한 디렉터리에 배치했으면, <xref:System.Resources.ResourceManager> 메서드를 호출하여 리소스를 사용할 수 있도록 <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%28System.String%2CSystem.String%2CSystem.Type%29> 개체를 만듭니다. 첫 번째 매개 변수는 앱의 기본 .resources 파일의 루트 이름을 지정합니다(이전 섹션의 예제에서는 "strings"). 두 번째 매개 변수는 리소스의 위치를 지정합니다(이전 예제에서는 "Resources"). 세 번째 매개 변수는 사용할 <xref:System.Resources.ResourceSet> 구현을 지정합니다. 세 번째 매개 변수가 `null`인 경우 기본 런타임 <xref:System.Resources.ResourceSet> 가 사용됩니다.  
   
 > [!NOTE]
-> 독립 실행형 .resources 파일을 사용하여 ASP.NET 앱을 배포해서는 안 됩니다. 그렇게 할 경우 잠금 문제가 발생할 수 있으며 XCOPY 배포가 중단됩니다. ASP.NET 리소스를 위성 어셈블리에 배포하는 것이 좋습니다. 자세한 내용은 [ASP.NEET 웹 페이지 리소스 개요](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100))를 참조하세요.  
+> 독립 실행형 .resources 파일을 사용하여 ASP.NET 앱을 배포해서는 안 됩니다. 그렇게 할 경우 잠금 문제가 발생할 수 있으며 XCOPY 배포가 중단됩니다. ASP.NET 리소스를 위성 어셈블리에 배포하는 것이 좋습니다. 자세한 내용은 [ASP.NET Web Page Resources Overview](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100))을 참조하세요.  
   
  <xref:System.Resources.ResourceManager> 개체를 인스턴스화한 후에는 앞서 설명한 대로 <xref:System.Resources.ResourceManager.GetString%2A>, <xref:System.Resources.ResourceManager.GetObject%2A>및 <xref:System.Resources.ResourceManager.GetStream%2A> 메서드를 사용하여 리소스를 검색합니다. 그러나 .resources 파일에서 직접 리소스를 검색하는 것은 어셈블리에서 포함된 리소스를 검색하는 것과 다릅니다. .resources 파일에서 리소스를 검색할 경우 <xref:System.Resources.ResourceManager.GetString%28System.String%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%29>및 <xref:System.Resources.ResourceManager.GetStream%28System.String%29> 메서드는 항상 현재 문화권과 관계없이 기본 문화권의 리소스를 검색합니다. 앱의 현재 문화권 또는 특정 문화권의 리소스를 검색하려면 <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>또는 <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> 메서드를 호출하고 리소스를 검색할 문화권을 지정해야 합니다. 현재 문화권의 리소스를 검색하려면 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 속성의 값을 `culture` 인수로서 지정합니다. 리소스 관리자는 `culture`의 리소스를 검색할 수 없는 경우 표준 리소스 대체 규칙을 사용하여 적절한 리소스를 검색할 수 있습니다.  
   
@@ -200,10 +200,10 @@ Resgen Strings.ru-RU.txt Resources\Strings.ru-RU.resources
 csc Example.cs  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Resources.ResourceManager>
 - [데스크톱 앱의 리소스](index.md)
-- [Packaging and Deploying Resources](packaging-and-deploying-resources-in-desktop-apps.md)
+- [리소스 패키징 및 배포](packaging-and-deploying-resources-in-desktop-apps.md)
 - [런타임에서 어셈블리를 찾는 방법](../deployment/how-the-runtime-locates-assemblies.md)
 - [Windows 스토어 앱에서 리소스 만들기 및 검색](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140))

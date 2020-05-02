@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: d0791df8-04e3-46b4-a6be-fe0ed09267e8
 ms.openlocfilehash: 1bc9b228e61ccb0852ae489d44c5b692c54b642d
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61922592"
 ---
 # <a name="how-to-override-encoded-soap-xml-serialization"></a>방법: 인코딩된 SOAP XML Serialization 재정의
 
-개체의 XML serialization을 SOAP 메시지로 재정의하는 프로세스는 표준 XML serialization을 재정의하는 프로세스와 비슷합니다. 표준 XML serialization 재정의 대 한 자세한 내용은 [방법: XML Stream에 대 한 대체 요소 이름 지정](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)합니다.
+개체의 XML serialization을 SOAP 메시지로 재정의하는 프로세스는 표준 XML serialization을 재정의하는 프로세스와 비슷합니다. 표준 XML serialization 재정의에 대한 자세한 내용은 [방법: XML 스트림의 대체 요소 이름 지정](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)을 참조하세요.
 
 ## <a name="to-override-serialization-of-objects-as-soap-messages"></a>개체의 serialization을 SOAP 메시지로 재정의하려면
 
@@ -32,7 +32,7 @@ ms.locfileid: "61922592"
 
 7. `XmlSerializer`을 사용하여 `XmlTypeMapping`를 만듭니다.
 
-8. 개체를 serialize하거나 deserialize합니다.
+8. 개체를 직렬화하거나 역직렬화합니다.
 
 ## <a name="example"></a>예제
 
@@ -278,11 +278,11 @@ public class Run
 }
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [XML 및 SOAP serialization](../../../docs/standard/serialization/xml-and-soap-serialization.md)
 - [인코딩된 SOAP serialization을 제어하는 특성](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)
 - [XML Web Services의 XML serialization](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)
-- [방법: 개체 serialize](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [방법: 개체 deserialize](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-- [방법: SOAP 인코딩된 XML Stream으로 개체를 serialize 합니다.](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
+- [방법: 개체 직렬화](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [방법: 개체 역직렬화](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [방법: 개체를 SOAP 인코딩된 XML 스트림으로 직렬화](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)

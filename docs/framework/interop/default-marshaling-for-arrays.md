@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 ms.openlocfilehash: f0094ac572834b2cf0d74fb53c94877da55669e2
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181459"
@@ -29,11 +29,11 @@ ms.locfileid: "79181459"
   
  다음 표와 같이 관리되는 배열의 인스턴스에는 특수 요소 형식, 순위 및 하한이 있어야 합니다.  
   
-|관리되는 배열 형식|요소 형식|Rank|하한|시그니처 표기법|  
+|관리되는 배열 형식|요소 형식|순위|하한|시그니처 표기법|  
 |------------------------|------------------|----------|-----------------|------------------------|  
-|**ELEMENT_TYPE_ARRAY**|형식으로 지정됩니다.|순위로 지정됩니다.|필요한 경우 경계로 지정됩니다.|*유형* **[** *n*,*m* **]**|  
+|**ELEMENT_TYPE_ARRAY**|형식으로 지정됩니다.|순위로 지정됩니다.|필요한 경우 경계로 지정됩니다.|*형식* **[** *n*,*m* **]**|  
 |**ELEMENT_TYPE_CLASS**|알 수 없음|알 수 없음|알 수 없음|**System.Array**|  
-|**ELEMENT_TYPE_SZARRAY**|형식으로 지정됩니다.|1|0|*유형* **[** *n]* **]**|  
+|**ELEMENT_TYPE_SZARRAY**|형식으로 지정됩니다.|1|0|*형식* **[** *n* **]**|  
   
 ## <a name="unmanaged-arrays"></a>관리되지 않는 배열  
  관리되지 않는 배열은 고정 또는 가변 길이가 포함된 COM 스타일 안전 배열 또는 C 스타일 배열입니다. 안전 배열은 연결된 배열 데이터의 형식, 순위 및 경계를 제공하는 자체 설명 배열입니다. C 스타일 배열은 고정 하한이 0인 1차원 형식 배열입니다. 마샬링 서비스는 두 가지 배열 형식에 대한 지원을 모두 제한했습니다.  
@@ -43,15 +43,15 @@ ms.locfileid: "79181459"
   
 |관리되지 않는 형식|가져온 형식|  
 |--------------------|-------------------|  
-|**세이프어레이(타입)** *Type* **)**|**ELEMENT_TYPE_SZARRAY** **\<** *변환된 유형***>**<br /><br /> 순위 = 1, 하한 = 0. 관리되는 시그니처에서 제공된 경우에만 크기가 알려집니다. 순위 = 1 또는 하한 = 0이 아닌 안전 배열은 **SZARRAY**로 마샬링될 수 없습니다.|  
-|*유형*  **[]**|**ELEMENT_TYPE_SZARRAY** **\<** *변환된 유형***>**<br /><br /> 순위 = 1, 하한 = 0. 관리되는 시그니처에서 제공된 경우에만 크기가 알려집니다.|  
+|**SafeArray(** *형식* **)**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**<br /><br /> 순위 = 1, 하한 = 0. 관리되는 시그니처에서 제공된 경우에만 크기가 알려집니다. 순위 = 1 또는 하한 = 0이 아닌 안전 배열은 **SZARRAY**로 마샬링될 수 없습니다.|  
+|*형식* **[]**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**<br /><br /> 순위 = 1, 하한 = 0. 관리되는 시그니처에서 제공된 경우에만 크기가 알려집니다.|  
   
 ### <a name="safe-arrays"></a>안전 배열  
  안전 배열을 형식 라이브러리에서 .NET 어셈블리로 가져온 경우 배열은 알려진 형식(예: **int**)의 1차원 배열로 변환됩니다. 매개 변수에 적용되는 같은 형식 변환 규칙이 배열 요소에도 적용됩니다. 예를 들어 **BSTR** 형식의 안전 배열은 문자열의 관리되는 배열이 되고 변형의 안전 배열은 개체의 관리되는 배열이 됩니다. **SAFEARRAY** 요소 형식은 형식 라이브러리에서 캡처되고 <xref:System.Runtime.InteropServices.UnmanagedType> 열거형의 **SAFEARRAY** 값에 저장됩니다.  
   
  형식 라이브러리에서 안전 배열의 순위와 범위를 확인할 수 없으므로 순위는 1로, 하한은 0으로 가정됩니다. [형식 라이브러리 가져오기(Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md)에서 생성하는 관리되는 시그니처에 순위와 범위를 정의해야 합니다. 런타임에 메서드에 전달되는 순위가 다른 경우 <xref:System.Runtime.InteropServices.SafeArrayRankMismatchException>이 throw됩니다. 런타임에 전달되는 배열 형식이 다른 경우 <xref:System.Runtime.InteropServices.SafeArrayTypeMismatchException>이 throw됩니다. 다음 예제에서는 관리 및 비관리 코드의 안전 배열을 보여 줍니다.  
   
- **관리되지 않는 서명**  
+ **관리되지 않는 시그니처**  
   
 ```cpp
 HRESULT New1([in] SAFEARRAY( int ) ar);  
@@ -91,7 +91,7 @@ void New3([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_BSTR)]
   
  다음 예제와 같이 가변 길이 배열이 포함된 형식 라이브러리를 수동으로 정의해야 합니다.  
   
- **관리되지 않는 서명**  
+ **관리되지 않는 시그니처**  
   
 ```cpp
 HRESULT New1(int ar[10]);  
@@ -118,9 +118,9 @@ void New2([MarshalAs(UnmanagedType.LPArray,
    ArraySubType=UnmanagedType.LPWStr, SizeConst=10)] String[] ar);  
 ```  
   
- IDL(Interface Definition Language) 소스의 배열에 **size_is** 또는 **length_is** 특성을 적용하여 클라이언트에 크기를 전달할 수 있지만 MIDL(Microsoft 인터페이스 정의 언어) 컴파일러는 해당 정보를 형식 라이브러리에 전파하지 않습니다. 크기를 모르면 interop 마샬링 서비스가 배열 요소를 마샬링할 수 없습니다. 따라서 가변 길이 배열은 참조 인수로 가져옵니다. 다음은 그 예입니다.  
+ IDL(Interface Definition Language) 소스의 배열에 **size_is** 또는 **length_is** 특성을 적용하여 클라이언트에 크기를 전달할 수 있지만 MIDL(Microsoft 인터페이스 정의 언어) 컴파일러는 해당 정보를 형식 라이브러리에 전파하지 않습니다. 크기를 모르면 interop 마샬링 서비스가 배열 요소를 마샬링할 수 없습니다. 따라서 가변 길이 배열은 참조 인수로 가져옵니다. 예를 들어:  
   
- **관리되지 않는 서명**  
+ **관리되지 않는 시그니처**  
   
 ```cpp
 HRESULT New1(int ar[]);  
@@ -158,7 +158,7 @@ void New3(ref String ar);
        [MarshalAs(UnmanagedType.LPArray, SizeParamIndex=0)] int[] ar );  
     ```  
   
-- 배열 크기를 상수로 정의합니다. 다음은 그 예입니다.  
+- 배열 크기를 상수로 정의합니다. 예를 들어:  
   
     ```vb  
     Sub [New](\<MarshalAs(UnmanagedType.LPArray, SizeConst:=128)> _  
@@ -182,14 +182,14 @@ void New3(ref String ar);
   
 |관리되는 배열 형식|내보내기 형식|  
 |------------------------|-----------------|  
-|**ELEMENT_TYPE_SZARRAY** **\<** *타입***>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> 형식은 시그니처로 제공됩니다. 순위는 항상 1이고 하한은 항상 0입니다. 크기는 항상 런타임에 알려집니다.|  
-|**ELEMENT_TYPE_ARRAY** **\<** *type* **>** **\<** 타입**\<** *랭크* **>** *[경계]* **>**|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> 형식, 순위, 경계는 시그니처로 제공됩니다. 크기는 항상 런타임에 알려집니다.|  
-|**ELEMENT_TYPE_CLASS****\<**<xref:System.Array?displayProperty=nameWithType>**>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> 형식, 순위, 경계 및 크기는 항상 런타임에 알려집니다.|  
+|**ELEMENT_TYPE_SZARRAY** **\<** *형식* **>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *형식* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> 형식은 시그니처로 제공됩니다. 순위는 항상 1이고 하한은 항상 0입니다. 크기는 항상 런타임에 알려집니다.|  
+|**ELEMENT_TYPE_ARRAY** **\<** *형식* **>** **\<** *우선 순위* **>** [ **\<** *범위* **>** ]|**UnmanagedType.SafeArray(** *형식* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> 형식, 순위, 경계는 시그니처로 제공됩니다. 크기는 항상 런타임에 알려집니다.|  
+|**ELEMENT_TYPE_CLASS** **\<** <xref:System.Array?displayProperty=nameWithType> **>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *형식* **)**<br /><br /> 형식, 순위, 경계 및 크기는 항상 런타임에 알려집니다.|  
   
  LPSTR 또는 LPWSTR이 포함된 구조체 배열에 관련된 OLE 자동화에는 제한이 있습니다.  따라서 **String** 필드는 **UnmanagedType.BSTR**로 마샬링되어야 합니다. 그렇지 않으면 예외가 throw됩니다.  
   
 ### <a name="element_type_szarray"></a>ELEMENT_TYPE_SZARRAY  
- **ELEMENT_TYPE_SZARRAY** 매개 변수(1차원 배열)가 포함된 메서드를 .NET 어셈블리에서 형식 라이브러리로 내보내면 배열 매개 변수가 지정된 형식의 **SAFEARRAY**로 변환됩니다. 같은 변환 규칙이 배열 요소 형식에 적용됩니다. 관리되는 배열의 콘텐츠는 관리되는 메모리에서 **SAFEARRAY**로 자동으로 복사됩니다. 다음은 그 예입니다.  
+ **ELEMENT_TYPE_SZARRAY** 매개 변수(1차원 배열)가 포함된 메서드를 .NET 어셈블리에서 형식 라이브러리로 내보내면 배열 매개 변수가 지정된 형식의 **SAFEARRAY**로 변환됩니다. 같은 변환 규칙이 배열 요소 형식에 적용됩니다. 관리되는 배열의 콘텐츠는 관리되는 메모리에서 **SAFEARRAY**로 자동으로 복사됩니다. 예를 들어:  
   
 #### <a name="managed-signature"></a>관리되는 시그니처  
   
@@ -212,7 +212,7 @@ HRESULT New([in] SAFEARRAY( BSTR ) ar);
   
  안전 배열의 순위는 항상 1이고 하한은 항상 0입니다. 크기는 런타임에 전달 중인 관리되는 배열 크기에 따라 결정됩니다.  
   
- <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성을 사용하여 배열을 C 스타일 배열로 마샬링할 수도 있습니다. 다음은 그 예입니다.  
+ <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성을 사용하여 배열을 C 스타일 배열로 마샬링할 수도 있습니다. 예를 들어:  
   
 #### <a name="managed-signature"></a>관리되는 시그니처  
   
@@ -247,7 +247,7 @@ HRESULT New(LPStr ar[]);
  마샬러에는 배열을 마샬링하는 데 필요한 길이 정보가 있지만 배열 길이는 대개 호출 수신자에게 길이를 전달하기 위한 개별 인수로 전달됩니다.  
   
 ### <a name="element_type_array"></a>ELEMENT_TYPE_ARRAY  
- **ELEMENT_TYPE_ARRAY** 매개 변수가 포함된 메서드를 .NET 어셈블리에서 형식 라이브러리로 내보내면 배열 매개 변수가 지정된 형식의 **SAFEARRAY**로 변환됩니다. 관리되는 배열의 콘텐츠는 관리되는 메모리에서 **SAFEARRAY**로 자동으로 복사됩니다. 다음은 그 예입니다.  
+ **ELEMENT_TYPE_ARRAY** 매개 변수가 포함된 메서드를 .NET 어셈블리에서 형식 라이브러리로 내보내면 배열 매개 변수가 지정된 형식의 **SAFEARRAY**로 변환됩니다. 관리되는 배열의 콘텐츠는 관리되는 메모리에서 **SAFEARRAY**로 자동으로 복사됩니다. 예를 들어:  
   
 #### <a name="managed-signature"></a>관리되는 시그니처  
   
@@ -270,7 +270,7 @@ HRESULT New([in] SAFEARRAY( BSTR ) ar);
   
  안전 배열의 순위, 크기 및 경계는 런타임에 관리되는 배열의 특징에 따라 결정됩니다.  
   
- <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성을 적용하여 배열을 C 스타일 배열로 마샬링할 수도 있습니다. 다음은 그 예입니다.  
+ <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성을 적용하여 배열을 C 스타일 배열로 마샬링할 수도 있습니다. 예를 들어:  
   
 #### <a name="managed-signature"></a>관리되는 시그니처  
   
@@ -310,7 +310,7 @@ void New(long [][][] ar );
 ```  
   
 ### <a name="element_type_class-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
- <xref:System.Array?displayProperty=nameWithType> 매개 변수가 포함된 메서드를 .NET 어셈블리에서 형식 라이브러리로 내보내면 배열 매개 변수가 **_Array** 인터페이스로 변환됩니다. 관리되는 배열의 콘텐츠는 **_Array** 인터페이스의 메서드 및 속성을 통해서만 액세스할 수 있습니다. <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성을 사용하여 **System.Array**를 **SAFEARRAY**로 마샬링할 수도 있습니다. 안전 배열로 마샬링될 경우 배열 요소는 변형으로 마샬링됩니다. 다음은 그 예입니다.  
+ <xref:System.Array?displayProperty=nameWithType> 매개 변수가 포함된 메서드를 .NET 어셈블리에서 형식 라이브러리로 내보내면 배열 매개 변수가 **_Array** 인터페이스로 변환됩니다. 관리되는 배열의 콘텐츠는 **_Array** 인터페이스의 메서드 및 속성을 통해서만 액세스할 수 있습니다. <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성을 사용하여 **System.Array**를 **SAFEARRAY**로 마샬링할 수도 있습니다. 안전 배열로 마샬링될 경우 배열 요소는 변형으로 마샬링됩니다. 예를 들어:  
   
 #### <a name="managed-signature"></a>관리되는 시그니처  
   
@@ -358,7 +358,7 @@ public struct MyStruct {
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [기본 마샬링 동작](default-marshaling-behavior.md)
 - [Blittable 형식 및 비 Blittable 형식](blittable-and-non-blittable-types.md)

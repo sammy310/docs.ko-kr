@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: d077a3e8-bd81-4bdf-b6a3-323857ea30fb
 ms.openlocfilehash: 7379bac07de9b78369d3742fa3288f6fea6a573f
 ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/29/2019
 ms.locfileid: "75544992"
@@ -47,7 +47,7 @@ ms.locfileid: "75544992"
 
   CodeDOM을 사용하여 필드, 속성, 메서드, 생성자, 진입점이 포함된 클래스를 생성하는 방법을 설명합니다.  
   
-## <a name="reference"></a>참조  
+## <a name="reference"></a>참고  
 
 - <xref:System.CodeDom>  
 
@@ -59,4 +59,4 @@ ms.locfileid: "75544992"
   
 ## <a name="related-sections"></a>관련 단원  
 
-- [Codedom 빠른 참조](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100)) 는 개발자가 소스 코드 요소를 나타내는 codedom 요소를 찾는 빠른 방법을 제공 합니다.
+- [CodeDOM 빠른 참조](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))는 개발자가 소스 코드 요소를 나타내는 CodeDOM 요소를 빠르게 찾을 수 있는 방법을 제공합니다.

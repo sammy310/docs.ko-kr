@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 ms.openlocfilehash: 9fc8a4aeeeca40f71ed9114a9db40b9a56e5fe6b
 ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204565"
@@ -18,7 +18,7 @@ ms.locfileid: "74204565"
 섀도 복사를 사용하면 애플리케이션 도메인을 언로드하지 않고 애플리케이션 도메인에서 사용되는 어셈블리를 업데이트할 수 있습니다. 특히 이 기능은 ASP.NET 사이트와 같이 지속적으로 제공되어야 하는 애플리케이션에 유용합니다.
 
 > [!IMPORTANT]
-> 섀도 복사는 Windows 8.x 스토어 앱에서 지원 되지 않습니다.
+> 섀도 복사는 Windows 8.x 스토어 앱에서 지원되지 않습니다.
 
 어셈블리가 로드될 때 공용 언어 런타임은 어셈블리 파일을 잠그므로 어셈블리가 언로드될 때까지 파일을 업데이트할 수 없습니다. 애플리케이션 도메인에서 어셈블리를 언로드하는 유일한 방법은 애플리케이션 도메인을 언로드하는 것이므로 일반적인 환경에서는 어셈블리를 사용 중인 모든 애플리케이션 도메인이 언로드될 때까지 디스크에서 어셈블리를 업데이트할 수 없습니다.
 
@@ -74,7 +74,7 @@ ms.locfileid: "74204565"
 
 .NET Framework 4부터 기본 시작 동작은 애플리케이션 디렉터리에 있는 각 어셈블리의 파일 날짜 및 시간을 섀도 복사 디렉터리에 있는 복사본의 파일 날짜 및 시간과 직접 비교하는 것입니다. 어셈블리가 업데이트되었으면 .NET Framework의 이전 버전에서와 같은 절차를 사용하여 복사되고, 그러지 않으면 섀도 복사 디렉터리의 복사본이 로드됩니다.
 
-어셈블리가 자주 변경되지 않고 대개 어셈블리의 작은 하위 집합에서 변경이 발생하는 애플리케이션에 대한 결과 성능 향상이 가장 큽니다. 애플리케이션의 대부분 어셈블리가 자주 변경되면 새로운 기본 동작 때문에 성능이 저하될 수 있습니다. 이 경우 [로 \<](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)shadowCopyVerifyByTimestamp> 요소`enabled="false"`를 구성 파일에 추가하여 이전 버전 .NET Framework의 시작 동작을 되돌릴 수 있습니다.
+어셈블리가 자주 변경되지 않고 대개 어셈블리의 작은 하위 집합에서 변경이 발생하는 애플리케이션에 대한 결과 성능 향상이 가장 큽니다. 애플리케이션의 대부분 어셈블리가 자주 변경되면 새로운 기본 동작 때문에 성능이 저하될 수 있습니다. 이 경우 `enabled="false"`로 [\<shadowCopyVerifyByTimestamp> 요소](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)를 구성 파일에 추가하여 이전 버전 .NET Framework의 시작 동작을 되돌릴 수 있습니다.
 
 <a name="ObsoleteMethods"></a>
 
@@ -82,7 +82,7 @@ ms.locfileid: "74204565"
 
 <xref:System.AppDomain> 클래스에는 애플리케이션 도메인에서 섀도 복사를 제어하는 데 사용될 수 있는 <xref:System.AppDomain.SetShadowCopyFiles%2A> 및 <xref:System.AppDomain.ClearShadowCopyPath%2A>와 같은 여러 가지 메서드가 있지만 이들 메서드는 .NET Framework 버전 2.0에서 사용되지 않는 것으로 표시되었습니다. 섀도 복사를 사용하도록 애플리케이션 도메인을 구성할 경우 <xref:System.AppDomainSetup> 클래스의 속성을 사용하는 것이 좋습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.AppDomainSetup.ShadowCopyFiles%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
 ms.openlocfilehash: d644e80cbf5ac17fca4df039d915c847a1936217
 ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/02/2020
 ms.locfileid: "80588450"
@@ -28,7 +28,7 @@ serialization은 개체를 전송할 수 있는 형태로 변환하는 프로세
 > [!NOTE]
 > XML serialization은 메서드, 인덱서, 전용 필드 또는 읽기 전용 속성을 변환하지 않습니다. 단, 읽기 전용 컬렉션은 예외입니다. 공용 및 전용을 모두 포함하여 개체의 필드 및 속성을 모두 serialize하려면 XML serialization 대신 <xref:System.Runtime.Serialization.DataContractSerializer>를 사용하십시오.
 
- XML serialization의 핵심 클래스는 <xref:System.Xml.Serialization.XmlSerializer> 클래스이며 이 클래스에서 가장 중요한 메서드는 **Serialize** 및 **Deserialize** 메서드입니다. <xref:System.Xml.Serialization.XmlSerializer>는 C# 파일을 만들고 이를 .dll 파일로 컴파일하여 이 serialization을 수행합니다. .NET Framework 2.0에서 [XML 직렬 변환기 생성기 도구(Sgen.exe)](xml-serializer-generator-tool-sgen-exe.md)는 애플리케이션과 함께 배포하기 전에 이러한 serialization 어셈블리를 생성하고 시작 성능을 향상시키도록 디자인되었습니다. **Xml Serializer에서** 생성된 XML 스트림은 W3C(월드 와이드 웹 컨소시엄) [XML 스키마 정의 언어(XSD) 1.0 권장 사항을 준수합니다.](https://www.w3.org/TR/xslt) 또한 생성된 데이터 형식은 문서 "XML Schema Part 2: Datatypes"을 준수합니다.
+ XML serialization의 핵심 클래스는 <xref:System.Xml.Serialization.XmlSerializer> 클래스이며 이 클래스에서 가장 중요한 메서드는 **Serialize** 및 **Deserialize** 메서드입니다. <xref:System.Xml.Serialization.XmlSerializer>는 C# 파일을 만들고 이를 .dll 파일로 컴파일하여 이 serialization을 수행합니다. .NET Framework 2.0에서 [XML 직렬 변환기 생성기 도구(Sgen.exe)](xml-serializer-generator-tool-sgen-exe.md)는 애플리케이션과 함께 배포하기 전에 이러한 serialization 어셈블리를 생성하고 시작 성능을 향상시키도록 디자인되었습니다. **XmlSerializer**로 생성된 XML 스트림은 World Wide Web 컨소시엄(W3C) [XSD(XML 스키마 정의 언어) 1.0 권장 사항](https://www.w3.org/TR/xslt)을 준수합니다. 또한 생성된 데이터 형식은 문서 "XML Schema Part 2: Datatypes"를 준수합니다.
 
  개체 내의 데이터는 클래스, 필드, 속성, 기본 형식, 배열 및 **XmlElement** 또는 **XmlAttribute** 개체 형태로 포함된 XML과 같은 프로그래밍 언어 구조를 통하여 설명됩니다. 특성으로 주석이 첨부된 클래스를 직접 만들거나, XML 스키마 정의 도구를 사용하여 기존 XML 스키마를 기반으로 클래스를 생성할 수도 있습니다.
 
@@ -38,11 +38,11 @@ serialization은 개체를 전송할 수 있는 형태로 변환하는 프로세
 
  **XmlSerializer** 클래스는 개체를 추가적으로 직렬화하여 인코딩된 SOAP XML 스트림을 생성할 수 있습니다. 생성된 XML은 World Wide Web 컨소시엄 문서 "SOAP(Simple Object Access Protocol) 1.1"의 5단원을 따릅니다. 이 프로세스에 대한 자세한 내용은 [방법: 개체를 SOAP 인코딩된 XML 스트림으로 직렬화](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)를 참조하세요. 생성된 XML을 제어하는 특성의 표를 보려면 [인코딩된 SOAP Serialization을 제어하는 특성](attributes-that-control-encoded-soap-serialization.md)을 참조하세요.
 
- **XmlSerializer** 클래스는 XML Web services에 의해 생성되고 XML Web services로 전달되는 SOAP 메시지를 생성합니다. SOAP 메시지를 제어하려면 XML Web services 파일(.asmx)의 클래스, 반환 값, 매개 변수 및 필드에 특성을 적용할 수 있습니다. XML Web services는 리터럴 또는 인코딩된 SOAP 스타일을 사용할 수 있으므로 "XML serialization을 제어하는 특성" 및 "인코딩된 SOAP serialization을 제어하는 특성"에 나열된 두 특성을 모두 사용할 수 있습니다. 특성을 사용하여 XML Web services에서 생성된 XML을 제어하는 방법에 대한 자세한 내용은 [XML Web Services의 XML Serialization](xml-serialization-with-xml-web-services.md)을 참조하세요. SOAP 및 XML 웹 서비스에 대한 자세한 내용은 [SOAP 메시지 서식 지정 을](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100))참조하십시오.
+ **XmlSerializer** 클래스는 XML Web services에 의해 생성되고 XML Web services로 전달되는 SOAP 메시지를 생성합니다. SOAP 메시지를 제어하려면 XML Web services 파일(.asmx)의 클래스, 반환 값, 매개 변수 및 필드에 특성을 적용할 수 있습니다. XML Web services는 리터럴 또는 인코딩된 SOAP 스타일을 사용할 수 있으므로 "XML serialization을 제어하는 특성" 및 "인코딩된 SOAP serialization을 제어하는 특성"에 나열된 두 특성을 모두 사용할 수 있습니다. 특성을 사용하여 XML Web services에서 생성된 XML을 제어하는 방법에 대한 자세한 내용은 [XML Web Services의 XML Serialization](xml-serialization-with-xml-web-services.md)을 참조하세요. SOAP 및 XML Web Services에 대한 자세한 내용은 [SOAP 메시지 형식 사용자 지정](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100))을 참조하세요.
 
 ## <a name="security-considerations-for-xmlserializer-applications"></a>XmlSerializer 애플리케이션에 대한 보안 고려 사항
 
-**Xml Serializer를**사용하는 응용 프로그램을 만들 때 다음 항목과 그 의미를 알고 있어야 합니다.
+**XmlSerializer**를 사용하는 애플리케이션을 만들 때 다음과 같은 항목과 해당 영향에 유의하세요.
 
 - **XmlSerializer**는 C# 파일(.cs)을 만들어서 TEMP 환경 변수에 의해 이름 지정된 디렉터리의 .dll 파일로 컴파일합니다. 이 DLL을 사용하여 serialization이 수행됩니다.
 
@@ -61,7 +61,7 @@ serialization은 개체를 전송할 수 있는 형태로 변환하는 프로세
 
 - serialize된 중요한 데이터가 취약할 수 있습니다.
 
-  **Xml Serializer가** 직렬화된 데이터를 사용하면 XML 파일 또는 다른 데이터 저장소로 저장할 수 있습니다. 데이터 저장소를 다른 프로세스가 사용할 수 있거나 인트라넷 또는 인터넷에서 볼 수 있는 경우에는 데이터가 도난당하여 해로운 목적으로 사용될 수 있습니다. 예를 들어 신용카드 번호가 포함된 주문을 serialize하는 애플리케이션을 만드는 경우에는 데이터가 매우 중요합니다. 이런 문제를 방지하기 위해 항상 데이터 저장소를 보호하고 공개되지 않도록 조치를 취해야 합니다.
+  **XmlSerializer**에서 데이터를 직렬화한 후 XML 파일이나 다른 데이터 저장소에 이를 저장할 수 있습니다. 데이터 저장소를 다른 프로세스가 사용할 수 있거나 인트라넷 또는 인터넷에서 볼 수 있는 경우에는 데이터가 도난당하여 해로운 목적으로 사용될 수 있습니다. 예를 들어 신용카드 번호가 포함된 주문을 serialize하는 애플리케이션을 만드는 경우에는 데이터가 매우 중요합니다. 이런 문제를 방지하기 위해 항상 데이터 저장소를 보호하고 공개되지 않도록 조치를 취해야 합니다.
 
 ## <a name="serialization-of-a-simple-class"></a>간단한 클래스의 serialization
 
@@ -111,7 +111,7 @@ Serialization에 대한 다른 예제를 보려면 [XML Serialization 예제](ex
 
 ## <a name="advantages-of-using-xml-serialization"></a>XML serialization 사용의 장점
 
-**Xml Serializer** 클래스는 개체를 XML로 직렬화할 때 완전하고 유연한 제어를 제공합니다. XML Web services를 만드는 경우 XML 출력이 특정 스키마를 따르도록 serialization을 제어하는 특성을 클래스와 멤버에 적용할 수 있습니다.
+**XmlSerializer** 클래스를 사용하면 개체를 XML로 직렬화할 때 완전하고 유연하게 제어할 수 있습니다. XML Web services를 만드는 경우 XML 출력이 특정 스키마를 따르도록 serialization을 제어하는 특성을 클래스와 멤버에 적용할 수 있습니다.
 
 예를 들어 **XmlSerializer**를 사용하여 다음을 수행할 수 있습니다.
 
@@ -133,7 +133,7 @@ XML serialization의 다른 장점은 생성되는 XML 스트림이 지정된 �
 
 - public 속성 및 필드만 serialize될 수 있습니다. 속성에는 public 접근자(get 및 set 메서드)가 있어야 합니다. 공용이 아닌 데이터를 serialize해야 하는 경우에는 XML serialization이 아닌 <xref:System.Runtime.Serialization.DataContractSerializer> 클래스를 사용하십시오.
 
-- 클래스에는 **Xml Serializer에서**직렬화할 매개 변수 없는 생성자가 있어야 합니다.
+- 클래스에는 **XmlSerializer**에 의해 직렬화될 매개 변수가 없는 생성자가 있어야 합니다.
 
 - 메서드는 serialize될 수 없습니다.
 
@@ -147,7 +147,7 @@ XML serialization의 다른 장점은 생성되는 XML 스트림이 지정된 �
 
 ## <a name="xsd-data-type-mapping"></a>XSD 데이터 형식 매핑
 
-[XML 스키마 파트 2: 데이터 형식이라는](https://www.w3.org/TR/xmlschema-2/) 제목의 W3C 문서에서는 XML 스키마 정의 언어(XSD) 스키마에서 허용되는 간단한 데이터 형식을 지정합니다. 이러한 형식(예: **int** 및 **decimal**)은 대부분 .NET Framework에 해당 데이터 형식이 있습니다. 하지만 일부 XML 데이터 형식에는 .NET Framework에 해당 데이터 형식이 없습니다(예: **NMTOKEN** 데이터 형식). 이러한 경우 [XML 스키마 정의 도구(Xsd.exe)](xml-schema-definition-tool-xsd-exe.md)를 사용하여 스키마에서 클래스를 생성하면 문자열 형식의 멤버에 적절한 특성이 적용되며 해당 **DataType** 속성이 XML 데이터 형식 이름으로 설정됩니다. 예를 들어 스키마에 XML 데이터 형식 **NMTOKEN**의 “MyToken” 요소가 포함된 경우, 다음 예제처럼 생성되는 클래스에 멤버가 포함될 수 있습니다.
+W3C 문서 [XML Schema Part 2: 데이터 형식](https://www.w3.org/TR/xmlschema-2/)은 XSD(XML 스키마 정의 언어) 스키마에서 허용되는 간단한 데이터 형식을 지정합니다. 이러한 형식(예: **int** 및 **decimal**)은 대부분 .NET Framework에 해당 데이터 형식이 있습니다. 하지만 일부 XML 데이터 형식에는 .NET Framework에 해당 데이터 형식이 없습니다(예: **NMTOKEN** 데이터 형식). 이러한 경우 [XML 스키마 정의 도구(Xsd.exe)](xml-schema-definition-tool-xsd-exe.md)를 사용하여 스키마에서 클래스를 생성하면 문자열 형식의 멤버에 적절한 특성이 적용되며 해당 **DataType** 속성이 XML 데이터 형식 이름으로 설정됩니다. 예를 들어 스키마에 XML 데이터 형식 **NMTOKEN**의 “MyToken” 요소가 포함된 경우, 다음 예제처럼 생성되는 클래스에 멤버가 포함될 수 있습니다.
 
 ```vb
 <XmlElement(DataType:="NMTOKEN")> _
@@ -175,15 +175,15 @@ public string MyToken;
 
 - <xref:System.Xml.Serialization.XmlRootAttribute>
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Xml.Serialization.XmlSerializer>
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.IO.FileStream>
-- [XML 및 SOAP Serialization](xml-and-soap-serialization.md)
-- [이진 Serialization](binary-serialization.md)
-- [Serialization](index.md)
+- [XML 및 SOAP serialization](xml-and-soap-serialization.md)
+- [이진 serialization](binary-serialization.md)
+- [serialization](index.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [XML Serialization 예제](examples-of-xml-serialization.md)
+- [XML serialization 예제](examples-of-xml-serialization.md)
 - [방법: 개체 직렬화](how-to-serialize-an-object.md)
 - [방법: 개체 역직렬화](how-to-deserialize-an-object.md)

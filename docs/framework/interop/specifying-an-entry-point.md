@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 ms.openlocfilehash: c5f8f735dd3e8c359f88044a532c29303237acc8
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181307"
@@ -17,7 +17,7 @@ ms.locfileid: "79181307"
 
 진입점은 DLL에서 함수의 위치를 식별합니다. 관리되는 프로젝트 내에서 대상 함수의 원래 이름이나 서수 진입점은 상호 운용 경계 간에 해당 함수를 식별합니다. 또한 진입점을 다른 이름에 매핑하여 효과적으로 함수 이름을 바꿀 수 있습니다.  
   
- 다음은 DLL 함수의 이름을 바꿀 수 있는 이유 목록입니다.  
+ 다음은 DLL 함수 이름을 바꿀 수 있는 이유 목록입니다.  
   
 - 대/소문자를 구분하는 API 함수 이름을 사용하지 않도록 하기 위해  
   
@@ -90,7 +90,7 @@ extern "C" int MsgBox(
     HWND hWnd, String* lpText, String* lpCaption, unsigned int uType);
 ```
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - [관리 코드에서 프로토타입 만들기](creating-prototypes-in-managed-code.md)

@@ -5,12 +5,12 @@ author: leecow
 ms.author: leecow
 ms.date: 12/04/2019
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 023b8fdf029dd6b17fe2186296d87dd7507c60b5
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: 42765d4402dfa17d4e962b2ecaf7a83e91853c76
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546564"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82140988"
 ---
 # <a name="net-core-dependencies-and-requirements"></a>.NET Core 종속성 및 요구 사항
 
@@ -95,7 +95,7 @@ ms.locfileid: "79546564"
 
 <!-- markdownlint-disable MD001 -->
 
-### <a name="windows-7--vista--81--server-2008-r2"></a>Windows 7 / Vista / 8.1 / Server 2008 R2
+### <a name="windows-7--vista--81--server-2008-r2--server-2012-r2"></a><a name="additional-deps"></a> Windows 7 / Vista / 8.1 / Server 2008 R2 / Server 2012 R2
 
 다음과 같은 Windows 버전에 .NET SDK 또는 런타임을 설치할 경우 추가 종속성이 필요합니다.
 
@@ -114,7 +114,11 @@ ms.locfileid: "79546564"
 
 > 컴퓨터에 *api-ms-win-crt-runtime-l1-1-0.dll*이(가) 없어 프로그램을 시작할 수 없습니다. 프로그램을 다시 설치하여 이 문제를 해결하세요.
 >
-> \- 또는-
+> \- 또는 -
+>
+> 컴퓨터에 *api-ms-win-cor-timezone-l1-1-0.dll*이 없어 프로그램을 시작할 수 없습니다. 프로그램을 다시 설치하여 이 문제를 해결하세요.
+>
+> \- 또는 -
 >
 > 라이브러리 *hostfxr.dll*을 찾았으나 *C:\\\<path_to_app>\\hostfxr.dll*에서 로드하지 못했습니다.
 
@@ -133,15 +137,15 @@ ms.locfileid: "79546564"
 
 | OS                             | 버전               | 아키텍처    |
 | ------------------------------ | --------------------- | ---------------- |
-| Red Hat Enterprise Linux       | 6, 7, 8               | x64 |
-| CentOS                         | 7+                    | x64 |
-| Oracle Linux                   | 7+                    | x64 |
-| Fedora                         | 30+                   | x64 |
+| Red Hat Enterprise Linux       | 6, 7, 8               | X64 |
+| CentOS                         | 7+                    | X64 |
+| Oracle Linux                   | 7+                    | X64 |
+| Fedora                         | 30+                   | X64 |
 | Debian                         | 9+                    | x64, ARM32, ARM64 |
 | Ubuntu                         | 16.04+                | x64, ARM32, ARM64 |
-| Linux Mint                     | 18+                   | x64 |
-| openSUSE                       | 15+                   | x64 |
-| SLES(SUSE Enterprise Linux)   | 12 SP2+               | x64 |
+| Linux Mint                     | 18+                   | X64 |
+| openSUSE                       | 15+                   | X64 |
+| SLES(SUSE Enterprise Linux)   | 12 SP2+               | X64 |
 | Alpine Linux                   | 3.10+                 | x64, ARM64 |
 
 .NET Core 3.1이 지원되는 운영 체제, 배포 및 수명 주기 정책에 대한 자세한 내용은 [.NET Core 3.1 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md)(.NET Core 3.1이 지원되는 OS 버전)를 참조하세요.
@@ -164,15 +168,15 @@ ARM64(커널 4.14+)에 .NET Core 3.1을 설치하는 방법에 대한 자세한 
 
 | OS                             | 버전               | 아키텍처    |
 | ------------------------------ | --------------------- | ---------------- |
-| Red Hat Enterprise Linux       | 6, 7, 8               | x64 |
-| CentOS                         | 7+                    | x64 |
-| Oracle Linux                   | 7+                    | x64 |
-| Fedora                         | 29+                   | x64 |
+| Red Hat Enterprise Linux       | 6, 7, 8               | X64 |
+| CentOS                         | 7+                    | X64 |
+| Oracle Linux                   | 7+                    | X64 |
+| Fedora                         | 29+                   | X64 |
 | Debian                         | 9+                    | x64, ARM32, ARM64 |
 | Ubuntu                         | 16.04+                | x64, ARM32, ARM64 |
-| Linux Mint                     | 18+                   | x64 |
-| openSUSE                       | 15+                   | x64 |
-| SLES(SUSE Enterprise Linux)   | 12 SP2+               | x64 |
+| Linux Mint                     | 18+                   | X64 |
+| openSUSE                       | 15+                   | X64 |
+| SLES(SUSE Enterprise Linux)   | 12 SP2+               | X64 |
 | Alpine Linux                   | 3.8+                  | x64, ARM64 |
 
 .NET Core 3.0이 지원되는 운영 체제, 배포 및 수명 주기 정책에 대한 자세한 내용은 [.NET Core 3.0 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)(.NET Core 3.0이 지원되는 OS 버전)를 참조하세요.
@@ -192,16 +196,16 @@ ARM64에 .NET Core 3.0을 설치하는 방법에 대한 자세한 내용은 [Lin
 
 | OS                             |  버전                |  아키텍처   |
 | ------------------------------ | ----------------------- | ---------------- |
-| Red Hat Enterprise Linux       |  6, 7                   | x64 |
-| CentOS                         |  7                      | x64 |
-| Oracle Linux                   |  7                      | x64 |
-| Fedora                         |  29, 30                 | x64 |
+| Red Hat Enterprise Linux       |  6, 7                   | X64 |
+| CentOS                         |  7                      | X64 |
+| Oracle Linux                   |  7                      | X64 |
+| Fedora                         |  29, 30                 | X64 |
 | Debian                         |  9                      | x64, ARM32 |
 | Ubuntu                         |  16.04, 18.04, 18.10    | x64, ARM32 |
-| Linux Mint                     |  17, 18                 | x64 |
-| openSUSE                       |  15+                    | x64 |
-| SLES(SUSE Enterprise Linux)   |  12 SP2+                | x64 |
-| Alpine Linux                   |  3.8+                   | x64 |
+| Linux Mint                     |  17, 18                 | X64 |
+| openSUSE                       |  15+                    | X64 |
+| SLES(SUSE Enterprise Linux)   |  12 SP2+                | X64 |
+| Alpine Linux                   |  3.8+                   | X64 |
 
 .NET Core 2.2가 지원되는 운영 체제, 배포 및 수명 주기 정책에 대한 자세한 내용은 [.NET Core 2.2 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)(.NET Core 2.2가 지원되는 OS 버전)를 참조하세요.
 
@@ -216,16 +220,16 @@ ARM64에 .NET Core 3.0을 설치하는 방법에 대한 자세한 내용은 [Lin
 
 | OS                             |  버전                |  아키텍처   |
 | ------------------------------ | ----------------------- | ---------------- |
-| Red Hat Enterprise Linux       |  6, 7, 8                | x64 |
-| CentOS                         |  7+                     | x64 |
-| Oracle Linux                   |  7+                     | x64 |
-| Fedora                         |  30+                    | x64 |
+| Red Hat Enterprise Linux       |  6, 7, 8                | X64 |
+| CentOS                         |  7+                     | X64 |
+| Oracle Linux                   |  7+                     | X64 |
+| Fedora                         |  30+                    | X64 |
 | Debian                         |  9                      | x64, ARM32 |
 | Ubuntu                         |  16.04, 18.04, 19.04, 19.10    | x64, ARM32 |
-| Linux Mint                     |  17+                    | x64 |
-| openSUSE                       |  15+                    | x64 |
-| SLES(SUSE Enterprise Linux)   |  12 SP2+                | x64 |
-| Alpine Linux                   |  3.8+                   | x64 |
+| Linux Mint                     |  17+                    | X64 |
+| openSUSE                       |  15+                    | X64 |
+| SLES(SUSE Enterprise Linux)   |  12 SP2+                | X64 |
+| Alpine Linux                   |  3.8+                   | X64 |
 
 .NET Core 2.1이 지원되는 운영 체제, 배포 및 수명 주기 정책에 대한 자세한 내용은 [.NET Core 2.1 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)(.NET Core 2.1이 지원되는 OS 버전)를 참조하세요.
 
@@ -258,7 +262,7 @@ Ubuntu 배포의 경우 다음과 같은 라이브러리를 설치해야 합니�
 - libgdiplus(버전 6.0.1 이상)
 
 > [!WARNING]
-> 대부분의 Ubuntu 버전은 libgdiplus의 이전 버전을 포함합니다. 시스템에 Mono 리포지토리를 추가하여 최신 버전의 libgdiplus를 설치할 수 있습니다. 자세한 내용은 <https://www.mono-project.com/download/stable/>을 참조하세요.
+> 대부분의 Ubuntu 버전은 libgdiplus의 이전 버전을 포함합니다. 시스템에 Mono 리포지토리를 추가하여 최신 버전의 libgdiplus를 설치할 수 있습니다. 자세한 내용은 <https://www.mono-project.com/download/stable/>를 참조하세요.
 
 ### <a name="centos-and-fedora"></a>CentOS 및 Fedora
 
@@ -285,7 +289,7 @@ Fedora 사용자: OpenSSL의 버전이 1.1보다 크거나 같은 경우 **compa
 - libgdiplus(버전 6.0.1 이상)
 
 > [!WARNING]
-> CentOS와 Fedora의 대부분의 버전은 libgdiplus의 이전 버전을 포함합니다. 시스템에 Mono 리포지토리를 추가하여 최신 버전의 libgdiplus를 설치할 수 있습니다. 자세한 내용은 <https://www.mono-project.com/download/stable/>을 참조하세요.
+> CentOS와 Fedora의 대부분의 버전은 libgdiplus의 이전 버전을 포함합니다. 시스템에 Mono 리포지토리를 추가하여 최신 버전의 libgdiplus를 설치할 수 있습니다. 자세한 내용은 <https://www.mono-project.com/download/stable/>를 참조하세요.
 
 ::: zone-end
 
@@ -298,10 +302,10 @@ Fedora 사용자: OpenSSL의 버전이 1.1보다 크거나 같은 경우 **compa
 
 | .NET Core 버전 | macOS                 | 아키텍처 |     |
 | ----------------- | --------------------- | --------------| --- |
-| 3.1               | High Sierra(10.13+)  | x64 | [자세한 정보](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md) |
-| 3.0               | High Sierra(10.13+)  | x64 | [자세한 정보](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) |
-| 2.2               | Sierra(10.12+)       | x64 | [자세한 정보](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) |
-| 2.1               | Sierra(10.12+)       | x64 | [자세한 정보](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) |
+| 3.1               | High Sierra(10.13+)  | X64 | [추가 정보](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md) |
+| 3.0               | High Sierra(10.13+)  | X64 | [추가 정보](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) |
+| 2.2               | Sierra(10.12+)       | X64 | [추가 정보](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) |
+| 2.1               | Sierra(10.12+)       | X64 | [추가 정보](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) |
 
 macOS Catalina(버전10.15)부터, 2019년 6월 1일 이후에 빌드되어 개발자 ID로 배포되는 모든 소프트웨어는 공증을 받아야 합니다. 이 요구 사항은 .NET Core 런타임, .NET Core SDK, 그리고 .NET Core로 만든 소프트웨어에 적용됩니다.
 

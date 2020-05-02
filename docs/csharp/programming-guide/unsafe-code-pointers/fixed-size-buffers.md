@@ -1,16 +1,16 @@
 ---
 title: 고정 크기 버퍼 - C# 프로그래밍 가이드
-ms.date: 04/20/2018
+ms.date: 04/23/2020
 helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 6770497b23212f1786b4f4a620ed2b650079c44b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5920dd125ded34969d60feb299568b56402056ab
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157028"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82140549"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>고정 크기 버퍼(C# 프로그래밍 가이드)
 
@@ -38,15 +38,39 @@ private fixed char name[30];
 
 또 다른 일반적인 고정 크기 배열은 [bool](../../language-reference/builtin-types/bool.md) 배열입니다. `bool` 배열의 요소 크기는 항상 1바이트입니다. `bool` 배열은 비트 배열이나 버퍼를 만드는 데 적합하지 않습니다.
 
-> [!NOTE]
-> [stackalloc](../../language-reference/operators/stackalloc.md)를 사용하여 만든 메모리를 제외하고 C# 컴파일러와 CLR(공용 언어 런타임)에서 보안 버퍼 오버런 검사를 수행하지 않습니다. 모든 안전하지 않은 코드와 마찬가지로 주의해야 합니다.
+고정 크기 버퍼는 잠재적으로 오버플로될 수 있는 관리되지 않는 배열을 형식에 포함하는 CLR(공용 언어 런타임)에 지시하는 <xref:System.Runtime.CompilerServices.UnsafeValueTypeAttribute?displayProperty=nameWithType>으로 컴파일됩니다. 이는 CLR에서 버퍼 오버런 검색 기능을 자동으로 사용하도록 설정하는 [stackalloc](../../language-reference/operators/stackalloc.md)를 사용하여 만든 메모리와 비슷합니다. 이전 예제에서는 `unsafe struct`에 고정 크기 버퍼가 존재할 수 있는 방법을 보여줍니다.
 
-안전하지 않은 버퍼는 다음과 같은 측면에서 일반 배열과 다릅니다.
+```csharp
+internal unsafe struct Buffer
+{
+    public fixed char fixedBuffer[128];
+}
+```
 
-- 안전하지 않은 버퍼는 안전하지 않은 컨텍스트에서만 사용할 수 있습니다.
-- 안전하지 않은 버퍼는 항상 벡터 또는 1차원 배열입니다.
-- 배열의 선언에는 `char id[8]`와 같이 개수가 포함되어야 합니다. `char id[]`을 사용할 수 없습니다.
-- 안전하지 않은 버퍼는 안전하지 않은 컨텍스트에서 구조체의 인스턴스 필드만 될 수 있습니다.
+`Buffer`에 대해 컴파일에서 생성된 C#은 다음과 같은 특성이 있습니다.
+
+```csharp
+internal struct Buffer
+{
+    [StructLayout(LayoutKind.Sequential, Size = 256)]
+    [CompilerGenerated]
+    [UnsafeValueType]
+    public struct <fixedBuffer>e__FixedBuffer
+    {
+        public char FixedElementField;
+    }
+
+    [FixedBuffer(typeof(char), 128)]
+    public <fixedBuffer>e__FixedBuffer fixedBuffer;
+}
+```
+
+고정 크기 버퍼는 다음과 같은 측면에서 일반 배열과 다릅니다.
+
+- [안전하지 않은](../../language-reference/keywords/unsafe.md) 컨텍스트에서만 사용할 수 있습니다.
+- 단지 구조체의 인스턴스 필드일 수 있습니다.
+- 항상 벡터 또는 1차원 배열입니다.
+- 선언에는 `fixed char id[8]`와 같은 길이가 포함되어야 합니다. `fixed char id[]`을 사용할 수 없습니다.
 
 ## <a name="see-also"></a>참조
 

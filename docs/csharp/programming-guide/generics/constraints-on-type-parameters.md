@@ -6,31 +6,34 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 76cd00b9c84f128d2a181115293df910d8deb6cb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0035f7d8aa862b4bd1b09a6f122a89786a6e295b
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398408"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738260"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>형식 매개 변수에 대한 제약 조건(C# 프로그래밍 가이드)
 
-제약 조건은 형식 인수에서 갖추고 있어야 하는 기능을 컴파일러에 알립니다. 제약 조건이 없으면 형식 인수가 어떤 형식이든 될 수 있습니다. 컴파일러는 모든 .NET 형식의 궁극적인 기본 클래스인 <xref:System.Object?displayProperty=nameWithType>의 멤버만 가정할 수 있습니다. 자세한 내용은 [제약 조건을 사용하는 이유](#why-use-constraints)를 참조하세요. 클라이언트 코드에서 제약 조건에 의해 허용되지 않는 형식을 사용하여 클래스를 인스턴스화하려고 하면 컴파일 시간 오류가 발생합니다. 제약 조건은 `where` 상황별 키워드를 사용하여 지정됩니다. 다음 표에는 7가지 형식의 제약 조건이 나와 있습니다.
+제약 조건은 형식 인수에서 갖추고 있어야 하는 기능을 컴파일러에 알립니다. 제약 조건이 없으면 형식 인수가 어떤 형식이든 될 수 있습니다. 컴파일러는 모든 .NET 형식의 궁극적인 기본 클래스인 <xref:System.Object?displayProperty=nameWithType>의 멤버만 가정할 수 있습니다. 자세한 내용은 [제약 조건을 사용하는 이유](#why-use-constraints)를 참조하세요. 클라이언트 코드가 제약 조건을 충족하지 않는 형식을 사용하는 경우 컴파일러는 오류를 발생시킵니다. 제약 조건은 `where` 상황별 키워드를 사용하여 지정됩니다. 다음 표에는 7가지 형식의 제약 조건이 나와 있습니다.
 
 |제약 조건|설명|
 |----------------|-----------------|
-|`where T : struct`|형식 인수는 null을 허용하지 않는 값 형식이어야 합니다. Null 허용 값 형식에 대한 자세한 내용은 [Null 허용 값 형식](../../language-reference/builtin-types/nullable-value-types.md)을 참조하세요. 모든 값 형식에 액세스할 수 있는 매개 변수가 없는 생성자가 있으므로, `struct` 제약 조건은 `new()` 제약 조건을 나타내고 `new()` 제약 조건과 결합할 수 없습니다. 또한 `struct` 제약 조건을 `unmanaged` 제약 조건과 결합할 수 없습니다.|
-|`where T : class`|형식 인수는 참조 형식이어야 합니다. 이 제약 조건은 모든 클래스, 인터페이스, 대리자 또는 배열 형식에도 적용됩니다.|
-|`where T : notnull`|형식 인수는 nullable이 아닌 형식이어야 합니다. 인수는 C# 8.0 이상의 nullable이 아닌 참조 형식이거나 nullable이 아닌 값 형식일 수 있습니다. 이 제약 조건은 모든 클래스, 인터페이스, 대리자 또는 배열 형식에도 적용됩니다.|
+|`where T : struct`|형식 인수는 null을 허용하지 않는 값 형식이어야 합니다. Null 허용 값 형식에 대한 자세한 내용은 [Null 허용 값 형식](../../language-reference/builtin-types/nullable-value-types.md)을 참조하세요. 모든 값 형식에 액세스할 수 있는 매개 변수가 없는 생성자가 있으므로, `struct` 제약 조건은 `new()` 제약 조건을 나타내고 `new()` 제약 조건과 결합할 수 없습니다. `struct` 제약 조건을 `unmanaged` 제약 조건과 결합할 수 없습니다.|
+|`where T : class`|형식 인수는 참조 형식이어야 합니다. 이 제약 조건은 모든 클래스, 인터페이스, 대리자 또는 배열 형식에도 적용됩니다. C# 8.0 이상의 null 허용 컨텍스트에서 `T`는 null을 허용하지 않는 참조 형식이어야 합니다. |
+|`where T : class?`|형식 인수는 null을 허용하거나 null을 허용하지 않는 참조 형식이어야 합니다. 이 제약 조건은 모든 클래스, 인터페이스, 대리자 또는 배열 형식에도 적용됩니다.|
+|`where T : notnull`|형식 인수는 nullable이 아닌 형식이어야 합니다. 인수는 C# 8.0 이상의 null을 허용하지 않는 참조 형식이거나 null을 허용하지 않는 값 형식일 수 있습니다. |
 |`where T : unmanaged`|형식 인수는 nullable이 아닌 [비관리형 형식](../../language-reference/builtin-types/unmanaged-types.md)이어야 합니다. `unmanaged` 제약 조건은 `struct` 제약 조건을 나타내며 `struct` 또는 `new()` 제약 조건과 결합할 수 없습니다.|
 |`where T : new()`|형식 인수에 매개 변수가 없는 public 생성자가 있어야 합니다. 다른 제약 조건과 함께 사용할 경우 `new()` 제약 조건을 마지막에 지정해야 합니다. `new()` 제약 조건은 `struct` 또는 `unmanaged` 제약 조건과 결합할 수 없습니다.|
-|`where T :` *\<기본 클래스 이름>*|형식 인수가 지정된 기본 클래스이거나 지정된 기본 클래스에서 파생되어야 합니다.|
-|`where T :` *\<인터페이스 이름>*|형식 인수가 지정된 인터페이스이거나 지정된 인터페이스를 구현해야 합니다. 여러 인터페이스 제약 조건을 지정할 수 있습니다. 제약 인터페이스가 제네릭일 수도 있습니다.|
-|`where T : U`|T에 대해 제공되는 형식 인수는 U에 대해 제공되는 인수이거나 이 인수에서 파생되어야 합니다.|
+|`where T :` *\<기본 클래스 이름>*|형식 인수가 지정된 기본 클래스이거나 지정된 기본 클래스에서 파생되어야 합니다. C# 8.0 이상의 null 허용 컨텍스트에서 `T`는 지정된 기본 클래스에서 파생된 null을 허용하지 않는 참조 형식이어야 합니다. |
+|`where T :` ‘\<기본 클래스 이름>?’ |형식 인수가 지정된 기본 클래스이거나 지정된 기본 클래스에서 파생되어야 합니다. C# 8.0 이상의 null 허용 컨텍스트에서 `T`는 지정된 기본 클래스에서 파생된 null을 허용하거나 null을 허용하지 않는 형식일 수 있습니다. |
+|`where T :` *\<인터페이스 이름>*|형식 인수가 지정된 인터페이스이거나 지정된 인터페이스를 구현해야 합니다. 여러 인터페이스 제약 조건을 지정할 수 있습니다. 제약 인터페이스가 제네릭일 수도 있습니다. C# 8.0 이상의 null 허용 컨텍스트에서 `T`는 지정된 인터페이스를 구현하는 null을 허용하지 않는 형식이어야 합니다.|
+|`where T :` ‘\<인터페이스 이름>?’ |형식 인수가 지정된 인터페이스이거나 지정된 인터페이스를 구현해야 합니다. 여러 인터페이스 제약 조건을 지정할 수 있습니다. 제약 인터페이스가 제네릭일 수도 있습니다. C# 8.0 이상의 null 허용 컨텍스트에서 `T`는 null 허용 참조 형식, null을 허용하지 않는 참조 형식 또는 값 형식이어야 합니다. `T`는 null 허용 값 형식이 아닐 수 있습니다.|
+|`where T : U`|`T`에 대해 제공되는 형식 인수는 `U`에 대해 제공되는 인수이거나 이 인수에서 파생되어야 합니다. null 허용 컨텍스트에서 `U`가 null을 허용하지 않는 참조 형식인 경우 `T`는 null을 허용하지 않는 참조 형식이어야 합니다. `U`가 null 허용 참조 형식인 경우 `T`는 null을 허용하거나 null을 허용하지 않는 참조 형식일 수 있습니다. |
 
 ## <a name="why-use-constraints"></a>제약 조건을 사용하는 이유
 
-형식 매개 변수 제약을 통해 허용되는 작업 및 메서드 호출 수를 제약 형식 및 해당 상속 계층 구조의 모든 형식에서 지원하는 작업 및 메서드 호출로 늘립니다. 제네릭 클래스 또는 메서드를 디자인할 때 제네릭 멤버에서 단순 할당 이외의 작업을 대해 수행하거나 <xref:System.Object?displayProperty=nameWithType>에서 지원하지 않는 메서드를 호출하는 경우 형식 매개 변수에 제약 조건을 적용해야 합니다. 예를 들어 기본 클래스 제약 조건은 이 형식의 개체나 이 형식에서 파생된 개체만 형식 인수로 사용된다고 컴파일러에 알립니다. 컴파일러에 이 보장이 있으면 해당 형식의 메서드가 제네릭 클래스에서 호출되도록 허용할 수 있습니다. 다음 코드 예제에서는 기본 클래스 제약 조건을 적용하여 `GenericList<T>` 클래스([제네릭 소개](../../../standard/generics/index.md)에 있음)에 추가할 수 있는 기능을 보여 줍니다.
+제약 조건은 형식 매개 변수의 기능 및 기대치를 지정합니다. 해당 제약 조건을 선언하면 제약 형식의 작업 및 메서드 호출을 사용할 수 있습니다. 제네릭 클래스 또는 메서드가 단순 할당 또는 <xref:System.Object?displayProperty=nameWithType>에서 지원하지 않는 메서드 호출 이외의 작업을 제네릭 멤버에서 사용하는 경우 형식 매개 변수에 제약 조건을 적용해야 합니다. 예를 들어 기본 클래스 제약 조건은 이 형식의 개체나 이 형식에서 파생된 개체만 형식 인수로 사용된다고 컴파일러에 알립니다. 컴파일러에 이 보장이 있으면 해당 형식의 메서드가 제네릭 클래스에서 호출되도록 허용할 수 있습니다. 다음 코드 예제에서는 기본 클래스 제약 조건을 적용하여 `GenericList<T>` 클래스([제네릭 소개](../../../standard/generics/index.md)에 있음)에 추가할 수 있는 기능을 보여 줍니다.
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#9)]
 
@@ -76,9 +79,11 @@ ms.locfileid: "79398408"
 
 ## <a name="notnull-constraint"></a>NotNull 제약 조건
 
-C# 8.0부터는 `notnull` 제약 조건을 사용하여 형식 인수가 nullable이 아닌 값 형식 또는 nullable이 아닌 참조 형식이어야 함을 지정할 수 있습니다. `notnull` 제약 조건은 `nullable enable` 컨텍스트에서만 사용할 수 있습니다. nullable 형식을 감지하지 않는 컨텍스트에서 `notnull` 제약 조건을 추가하는 경우 컴파일러가 경고를 생성합니다.
+C# 8.0부터 null 허용 컨텍스트에서 `notnull` 제약 조건을 사용하여 형식 인수가 null을 허용하지 않는 값 형식 또는 null을 허용하지 않는 참조 형식이어야 하도록 지정할 수 있습니다. `notnull` 제약 조건은 `nullable enable` 컨텍스트에서만 사용할 수 있습니다. nullable 형식을 감지하지 않는 컨텍스트에서 `notnull` 제약 조건을 추가하는 경우 컴파일러가 경고를 생성합니다.
 
 다른 제약 조건과 달리 형식 인수가 `notnull` 제약 조건을 위반하면 컴파일러는 해당 코드가 `nullable enable` 컨텍스트에서 컴파일될 때 경고를 생성합니다. 코드가 nullable 형식을 감지하지 않는 컨텍스트에서 컴파일된 경우에는 컴파일러가 경고나 오류를 생성하지 않습니다.
+
+C# 8.0부터 null 허용 컨텍스트에서 `class` 제약 조건은 형식 인수가 null을 허용하지 않는 참조 형식이어야 하도록 지정합니다. null 허용 컨텍스트에서 형식 매개 변수가 null 허용 참조 형식이면 컴파일러가 경고를 생성합니다.
 
 ## <a name="unmanaged-constraint"></a>관리되지 않는 제약 조건
 
@@ -86,7 +91,7 @@ C# 7.3부터 `unmanaged` 제약 조건을 사용하여 형식 매개 변수가 n
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#15)]
 
-앞의 메서드는 기본 제공 형식으로 알려지지 않은 형식에서 `unsafe` 연산자를 사용하므로 `sizeof` 컨텍스트에서 컴파일해야 합니다. `unmanaged` 제약 조건이 없으면 `sizeof` 연산자를 사용할 수 없습니다.
+앞의 메서드는 기본 제공 형식으로 알려지지 않은 형식에서 `sizeof` 연산자를 사용하므로 `unsafe` 컨텍스트에서 컴파일해야 합니다. `unmanaged` 제약 조건이 없으면 `sizeof` 연산자를 사용할 수 없습니다.
 
 `unmanaged` 제약 조건은 `struct` 제약 조건을 나타내며 함께 사용할 수 없습니다. `struct` 제약 조건은 `new()` 제약 조건을 나타내며 `unmanaged` 제약 조건은 `new()` 제약 조건과 결합할 수 없습니다.
 
@@ -116,7 +121,7 @@ C# 7.3부터 <xref:System.Enum?displayProperty=nameWithType> 형식을 기본 �
 
 [!code-csharp[using the enum constrained method](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#20)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Collections.Generic>
 - [C# 프로그래밍 가이드](../index.md)

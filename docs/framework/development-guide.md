@@ -4,19 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-ms.openlocfilehash: 0500e11d2897cfa7392cc8280a0b69c5e2fc515f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 665c7843fc4a46348619bde46a8d527dfed321e4
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79181628"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645992"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework 개발 가이드
+
 이 섹션에서는 .NET Framework 앱을 생성, 구성, 디버그, 배포하고 보안을 적용하는 방법을 설명합니다. 이 섹션에서는 또한 동적 프로그래밍, 상호 운용성, 확장성, 메모리 관리 및 스레딩과 같은 기술 영역에 대한 정보를 제공합니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
- [애플리케이션 주요 사항](../standard/application-essentials.md)  
- 앱 도메인 및 어셈블리 프로그래밍, 특성, 컬렉션, 파일 및 데이터 스트림, 제네릭의 사용, 기본 형식의 구문 분석 및 지정, 이벤트와 예외의 처리 등 기본적인 앱 개발 작업에 대한 정보를 제공합니다.  
+## <a name="in-this-section"></a>섹션 내용
   
  [데이터 및 모델링](./data/index.md)  
  ADO.NET, LINQ(Language Integrated Query), WCF Data Services 및 XML을 사용하여 데이터에 액세스하는 방법에 대한 정보를 제공합니다.  

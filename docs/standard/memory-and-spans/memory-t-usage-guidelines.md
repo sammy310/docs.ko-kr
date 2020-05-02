@@ -4,12 +4,12 @@ ms.date: 10/01/2018
 helpviewer_keywords:
 - Memory&lt;T&gt; and Span&lt;T&gt; best practices
 - using Memory&lt;T&gt; and Span&lt;T&gt;
-ms.openlocfilehash: 0a614f628faa98be778c627573e4dddc462c9107
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b89969f212da6ac90d0fb0d1bf388626e136b92e
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73121969"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158595"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Memory\<T> 및 Span\<T> 사용 지침
 
@@ -86,7 +86,7 @@ class Program
 
 - `WriteInt32ToBuffer` 및 `DisplayBufferToConsole` 메서드는 공용 API로 <xref:System.Memory%601>를 수락합니다. 따라서 버퍼의 소비자가 됩니다. 또한 한 번에 하나씩 버퍼를 사용합니다.
 
-`WriteInt32ToBuffer` 메서드는 버퍼에 값을 쓰기 위한 것이지만 `DisplayBufferToConsole` 메서드는 그렇지 않습니다. 이를 반영하기 위해 <xref:System.ReadOnlyMemory%601> 형식의 인수를 허용했을 수 있습니다. <xref:System.ReadOnlyMemory%601>에 대한 자세한 내용은 [규칙 #2: 버퍼가 읽기 전용이어야 하는 경우 ReadOnlySpan\<T> 또는 ReadOnlyMemory\<T> 사용](#rule-2)을 참조하세요.
+`WriteInt32ToBuffer` 메서드는 버퍼에 값을 쓰기 위한 것이지만 `DisplayBufferToConsole` 메서드는 그렇지 않습니다. 이를 반영하기 위해 <xref:System.ReadOnlyMemory%601> 형식의 인수를 허용했을 수 있습니다. <xref:System.ReadOnlyMemory%601>에 대한 자세한 내용은 [Rule #2: 버퍼가 읽기 전용이어야 하는 경우 ReadOnlySpan\<T> 또는 ReadOnlyMemory\<T> 사용](#rule-2)을 참조하세요.
 
 ### <a name="ownerless-memoryt-instances"></a>“소유자가 없는” Memory\<T> 인스턴스
 
@@ -336,7 +336,7 @@ public unsafe Task<int> ManagedWrapperAsync(Memory<byte> data)
 private static void MyCompletedCallbackImplementation(IntPtr state, int result)
 {
     GCHandle handle = (GCHandle)state;
-    var actualState = (MyCompletedCallbackState)state;
+    var actualState = (MyCompletedCallbackState)(handle.Target);
     handle.Free();
     actualState.MemoryHandle.Dispose();
 

@@ -7,7 +7,7 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 ms.openlocfilehash: 035d6439ec90426d7b68e05043ea8b6722f81d28
 ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/11/2020
 ms.locfileid: "81121591"
@@ -39,7 +39,7 @@ Visual Studio 2005에서 프로젝트에 COM 래퍼를 참조로 추가할 수 �
 이제 COM 개체에 액세스하기 위한 코드를 작성할 수 있습니다. Visual Basic의 경우 `Imports` 문 또는 C#의 경우 `Using` 문과 같이 개체를 선언하는 것으로 시작할 수 있습니다.
 
 > [!NOTE]
-> 마이크로 소프트 오피스 구성 요소를 프로그래밍하려는 경우, 먼저 [마이크로 소프트 오피스 기본 Interop 어셈블리 재배포를 설치합니다.](https://www.microsoft.com/Download/details.aspx?id=3508)
+> Microsoft Office 구성 요소를 프로그래밍하려면 먼저 [Microsoft Office Primary Interop 어셈블리 재배포 가능 패키지](https://www.microsoft.com/Download/details.aspx?id=3508)를 설치합니다.
   
 ### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>.NET Framework 도구를 사용하여 런타임 호출 가능 래퍼를 만들려면  
   
@@ -73,5 +73,5 @@ Visual Studio 2005에서 프로젝트에 COM 래퍼를 참조로 추가할 수 �
   
 ## <a name="see-also"></a>참조
 
-- [RCW](../../standard/native-interop/runtime-callable-wrapper.md)
-- [CCW](../../standard/native-interop/com-callable-wrapper.md)
+- [런타임 호출 가능 래퍼](../../standard/native-interop/runtime-callable-wrapper.md)
+- [COM 호출 가능 래퍼](../../standard/native-interop/com-callable-wrapper.md)

@@ -1,5 +1,5 @@
 ---
-title: params 키워드 - C# 참조
+title: 매개 변수 배열의 params 키워드 - C# 참조
 ms.date: 07/20/2015
 f1_keywords:
 - params_CSharpKeyword
@@ -7,23 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], params
 - params keyword [C#]
+- parameter array
 ms.assetid: 1690815e-b52b-4967-8380-5780aff08012
-ms.openlocfilehash: f462ccc2421fef3ea111d263ec035a701cf04775
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 77d7fd19ff57f80f401191027e2fae95026e1966
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173551"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738839"
 ---
 # <a name="params-c-reference"></a>params(C# 참조)
 
-`params` 키워드를 사용하면 가변 개수의 인수를 사용하는 [메서드 매개 변수](method-parameters.md)를 지정할 수 있습니다.
-
-매개 변수 선언이나 지정된 형식의 인수 배열에 지정된 형식의 쉼표로 구분된 인수 목록을 보낼 수 있습니다. 인수를 보내지 않을 수도 있습니다. 인수를 보내지 않는 경우 `params` 목록의 길이는 0입니다.
+`params` 키워드를 사용하면 가변 개수의 인수를 사용하는 [메서드 매개 변수](method-parameters.md)를 지정할 수 있습니다. 매개 변수 배열은 1차원 배열이어야 합니다.
 
 메서드 선언에서 `params` 키워드 뒤에는 추가 매개 변수가 허용되지 않으며, `params` 키워드 하나만 메서드 선언에 사용할 수 있습니다.
 
-`params` 매개 변수의 선언된 형식은 다음 예제와 같이 1차원 배열이어야 합니다. 그렇지 않으면 컴파일러 오류 [CS0225](../../misc/cs0225.md)가 발생합니다.
+`params` 매개 변수의 선언된 형식이 1차원 배열이 아닌 경우 컴파일러 오류 [CS0225](../../misc/cs0225.md)가 발생합니다.
+
+`params` 매개 변수를 사용하여 메서드를 호출하면 다음을 전달할 수 있습니다.
+
+- 배열 요소 형식의 쉼표로 구분된 인수 목록입니다.
+- 지정된 형식의 인수 배열입니다.
+- 인수가 없습니다. 인수를 보내지 않는 경우 `params` 목록의 길이는 0입니다.
 
 ## <a name="example"></a>예제
 
@@ -35,7 +40,7 @@ ms.locfileid: "79173551"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

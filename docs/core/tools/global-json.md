@@ -1,14 +1,14 @@
 ---
 title: global.json 개요
 description: .NET Core CLI 명령을 실행할 때 global.json 파일을 사용하여 .NET Core SDK 버전을 설정하는 방법에 대해 알아보세요.
-ms.date: 01/14/2020
+ms.date: 04/21/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 70257566e1ff30f5c97212a5e0e3c308c27738b7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5384b59cccb629a5409d26a8df7c81b3999fc95f
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77625997"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021344"
 ---
 # <a name="globaljson-overview"></a>global.json 개요
 
@@ -115,6 +115,17 @@ SDK 버전을 선택할 때, 특정 SDK 버전이 누락된 경우 대체하거�
   "sdk": {
     "version": "3.1.100",
     "rollForward": "disable"
+  }
+}
+```
+
+다음 예제에서는 설치된 특정 주 버전과 부 버전의 최신 기능 밴드 및 패치 버전을 사용하는 방법을 보여줍니다.
+
+```json
+{
+  "sdk": {
+    "version": "3.1.000",
+    "rollForward": "latestFeature"
   }
 }
 ```

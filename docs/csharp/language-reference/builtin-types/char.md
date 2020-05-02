@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 8727e47e13082e8550fb174c92139dfd5c17ec36
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: a07cae6e607bb6cda965240c669c655207632298
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134335"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739062"
 ---
 # <a name="char-c-reference"></a>char(C# 참조)
 
 `char` 형식 키워드는 유니코드 UTF-16 문자를 나타내는 .NET <xref:System.Char?displayProperty=nameWithType> 구조체 형식의 별칭입니다.
 
-|Type|범위|크기|.NET 형식|
+|형식|범위|Size|.NET 형식|
 |----------|-----------|----------|-------------------------|
 |`char`|U+0000~U+FFFF|16비트|<xref:System.Char?displayProperty=nameWithType>|
 
@@ -53,7 +53,7 @@ ms.locfileid: "80134335"
 
 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [정수 형식](~/_csharplang/spec/types.md#integral-types) 섹션을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [값 형식](value-types.md)

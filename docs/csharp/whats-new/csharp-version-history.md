@@ -3,12 +3,12 @@ title: C#의 역사 - C# 가이드
 description: 이 언어의 초창기 버전은 어떤 모습이었으며 이후 어떻게 변했는가?
 author: erikdietrich
 ms.date: 04/08/2020
-ms.openlocfilehash: f321b9c742fed6fb1efaf8fbb1914c203dd6391b
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: ed9555bcef1c71964937c2bc18fedbc7da94f0db
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389104"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738148"
 ---
 # <a name="the-history-of-c"></a>C\#의 역사
 

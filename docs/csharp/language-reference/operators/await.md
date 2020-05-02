@@ -7,16 +7,16 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 9f541ae9c26eb12acdcf9a8c59bab98c4772c3b0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 83ee51fcbcc5911c688e30542cefb1c56578a578
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173447"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82141035"
 ---
 # <a name="await-operator-c-reference"></a>await 연산자(C# 참조)
 
-`await` 연산자는 피연산자가 나타내는 비동기 작업이 완료될 때까지 바깥쪽 [비동기](../keywords/async.md) 메서드의 평가를 일시 중단합니다. 비동기 작업이 완료되면 `await` 연산자는 작업 결과를 반환합니다(있는 경우). 이미 완료된 작업을 나타내는 피연산자에 `await` 연산자가 적용되면 바깥쪽 메서드를 일시 중단하지 않고 작업 결과를 반환합니다. `await` 연산자는 비동기 메서드를 평가하는 스레드를 차단하지 않습니다. `await` 연산자가 바깥쪽 비동기 메서드를 일시 중단하면 제어가 메서드 호출자에게 반환됩니다.
+`await` 연산자는 피연산자가 나타내는 비동기 작업이 완료될 때까지 바깥쪽 [비동기](../keywords/async.md) 메서드의 평가를 일시 중단합니다. 비동기 작업이 완료되면 `await` 연산자는 작업 결과를 반환합니다(있는 경우). 이미 완료된 작업을 나타내는 피연산자에 `await` 연산자가 적용되면 바깥쪽 메서드를 일시 중단하지 않고 작업 결과를 즉시 반환합니다. `await` 연산자는 비동기 메서드를 평가하는 스레드를 차단하지 않습니다. `await` 연산자가 바깥쪽 비동기 메서드를 일시 중단하면 제어가 메서드 호출자에게 반환됩니다.
 
 다음 예제에서 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> 메서드는 완료 시 바이트 배열을 생성하는 비동기 작업을 나타내는 `Task<byte[]>` 인스턴스를 반환합니다. 작업이 완료될 때까지 `await` 연산자는 `DownloadDocsMainPageAsync` 메서드를 일시 중단합니다. `DownloadDocsMainPageAsync`가 일시 중단되면 제어는 `DownloadDocsMainPageAsync`의 호출자인 `Main` 메서드에 반환됩니다. `Main` 메서드는 `DownloadDocsMainPageAsync` 메서드가 수행한 비동기 작업의 결과가 필요할 때까지 실행됩니다. <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A>가 모든 바이트를 가져오면 나머지 `DownloadDocsMainPageAsync` 메서드가 평가됩니다. 그 후에는 나머지 `Main` 메서드가 평가됩니다.
 

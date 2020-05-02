@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 3efc54cea7e10bc21a472a7fa9d4026e305be79a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3a78acee6cf427085e98f14353fc2c0ac65d3d80
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79397982"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645343"
 ---
 # <a name="how-to-check-that-net-core-is-already-installed"></a>.NET Core가 설치되어 있는지 확인하는 방법
 
@@ -163,6 +163,51 @@ Microsoft.NETCore.App 2.2.7 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 Microsoft.NETCore.App 3.0.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
 Microsoft.NETCore.App 3.1.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
 ```
+
+::: zone-end
+
+## <a name="check-for-install-folders"></a>설치 폴더 확인
+
+.NET Core가 설치되어 있지만 운영 체제 또는 사용자 프로필의 `PATH` 변수에 추가되지 않았을 수 있습니다. 이전 섹션에서 명령을 실행하면 작동하지 않을 수 있습니다. 대안으로 .NET Core 설치 폴더가 있는지 확인할 수 있습니다.
+
+설치 관리자 또는 스크립트에서 .NET Core를 설치하면 표준 폴더에 설치됩니다. 대부분의 경우 .NET Core를 설치하는 데 사용하는 설치 관리자 또는 스크립트는 다른 폴더에 설치할 수 있는 옵션을 제공합니다. 다른 폴더에 설치하도록 선택한 경우 폴더 경로의 시작을 조정합니다.
+
+::: zone pivot="os-windows"
+
+- **dotnet 실행 파일**\
+_C:\\program files\\dotnet\\dotnet.exe_
+
+- **.NET SDK**\
+_C:\\program files\\dotnet\\sdk\\{version}\\_
+
+- **.NET 런타임**\
+_C:\\program files\\dotnet\\shared\\{runtime-type}\\{version}\\_
+
+::: zone-end
+
+::: zone pivot="os-linux"
+
+- **dotnet 실행 파일**\
+_/home/user/share/dotnet/dotnet_
+
+- **.NET SDK**\
+_/home/user/share/dotnet/sdk/{version}/_
+
+- **.NET 런타임**\
+_/home/user/share/dotnet/shared/{runtime-type}/{version}/_
+
+::: zone-end
+
+::: zone pivot="os-macos"
+
+- **dotnet 실행 파일**\
+_/usr/local/share/dotnet/dotnet_
+
+- **.NET SDK**\
+_/usr/local/share/dotnet/sdk/{version}/_
+
+- **.NET 런타임**\
+_/usr/local/share/dotnet/shared/{runtime-type}/{version}/_
 
 ::: zone-end
 

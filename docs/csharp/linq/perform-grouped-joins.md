@@ -1,14 +1,14 @@
 ---
 title: 그룹화된 조인 수행(C#의 LINQ)
 description: C#의 LINQ를 사용하여 그룹화된 조인을 수행하는 방법을 알아봅니다.
-ms.date: 12/01/2016
+ms.date: 04/22/2020
 ms.assetid: 9667daf9-a5fd-4b43-a5c4-a9c2b744000e
-ms.openlocfilehash: dfb75b55336d8ca486d5f10b187e955d20cd06fd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 740a861da7dfb9653a874d5baf67eeb2030555b4
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "61689140"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135752"
 ---
 # <a name="perform-grouped-joins"></a>그룹화 조인 수행
 
@@ -19,11 +19,14 @@ ms.locfileid: "61689140"
 > [!NOTE]
 > 첫 번째 컬렉션의 각 요소는 상관 관계가 지정된 요소가 두 번째 컬렉션에 있는지 여부에 관계없이 그룹 조인의 결과 집합에 표시됩니다. 상관 관계가 지정된 요소가 없는 경우 해당 요소에 대해 상관 관계가 지정된 요소의 시퀀스가 비어 있습니다. 따라서 결과 선택기에서 첫 번째 컬렉션의 모든 요소에 액세스할 수 있습니다. 이는 두 번째 컬렉션에 일치 항목이 없는 첫 번째 컬렉션의 요소에 액세스할 수 없는 비그룹 조인의 결과 선택기와 다릅니다.
 
+> [!WARNING]
+> <xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType>에는 기존 관계형 데이터베이스 용어에 직접적으로 해당하는 항목이 없습니다. 그러나 이 메서드는 내부 조인 및 왼쪽 우선 외부 조인의 상위 집합을 구현합니다. 이러한 작업은 모두 그룹화된 조인과 관련하여 작성할 수 있습니다. 자세한 내용은 [조인 작업](../programming-guide/concepts/linq/join-operations.md) 및 [Entity Framework Core, GroupJoin](https://docs.microsoft.com/ef/core/querying/complex-query-operators#groupjoin)을 참조하세요.
+
 이 문서의 첫 번째 예제에서는 그룹 조인을 수행하는 방법을 보여 줍니다. 두 번째 예제에서는 그룹 조인을 사용하여 XML 요소를 만드는 방법을 보여 줍니다.
 
 ## <a name="example---group-join"></a>예제 - 그룹 조인
 
-다음 예제에서는 `Person` 속성과 일치하는 `Pet`에 따라 `Person` 및 `Pet.Owner` 형식 개체의 그룹 조인을 수행합니다. 각 일치 항목에 대한 요소 쌍을 생성하는 비그룹 조인과 달리 그룹 조인은 첫 번째 컬렉션의 각 요소에 대해 하나의 결과 개체(이 예제에서는 `Person` 개체)를 생성합니다. 두 번째 컬렉션의 해당 요소(이 예제에서는 `Pet` 개체)는 컬렉션으로 그룹화됩니다. 마지막으로, 결과 선택기 함수는 `Person.FirstName` 및 `Pet` 개체 컬렉션으로 구성된 각 일치 항목에 대해 무명 형식을 만듭니다.
+다음 예제에서는 `Pet.Owner` 속성과 일치하는 `Person`에 따라 `Person` 및 `Pet` 형식 개체의 그룹 조인을 수행합니다. 각 일치 항목에 대한 요소 쌍을 생성하는 비그룹 조인과 달리 그룹 조인은 첫 번째 컬렉션의 각 요소에 대해 하나의 결과 개체(이 예제에서는 `Person` 개체)를 생성합니다. 두 번째 컬렉션의 해당 요소(이 예제에서는 `Pet` 개체)는 컬렉션으로 그룹화됩니다. 마지막으로, 결과 선택기 함수는 `Person.FirstName` 및 `Pet` 개체 컬렉션으로 구성된 각 일치 항목에 대해 무명 형식을 만듭니다.
 
 [!code-csharp[CsLINQProgJoining#5](~/samples/snippets/csharp/concepts/linq/how-to-perform-grouped-joins_1.cs)]
 
@@ -33,7 +36,7 @@ ms.locfileid: "61689140"
 
 [!code-csharp[CsLINQProgJoining#6](~/samples/snippets/csharp/concepts/linq/how-to-perform-grouped-joins_2.cs)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Linq.Enumerable.Join%2A>
 - <xref:System.Linq.Enumerable.GroupJoin%2A>

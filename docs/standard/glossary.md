@@ -3,12 +3,12 @@ title: .NET 용어
 description: .NET 설명서에서 사용되는 선택한 용어의 의미를 알아봅니다.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: d8f16579ea4dcbc9260aac83e16d3fbd30db519c
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: e7608ee7e68300d691df51aed923db0e8b518165
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635577"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102478"
 ---
 # <a name="net-glossary"></a>.NET 용어
 
@@ -54,9 +54,12 @@ Ahead-Of-Time 컴파일러입니다.
 
 이 CLR은 CLR과 동일한 코드베이스에서 작성됩니다. 원래 CoreCLR은 Silverlight의 런타임이었으며 여러 플랫폼, 특히 Windows 및 OS X에서 실행되도록 설계되었습니다. 이제 CoreCLR은 .NET Core의 일부이며 CLR의 단순화된 버전을 나타냅니다. 이제 많은 Linux 배포에 대한 지원을 포함하는 [플랫폼 간](#cross-platform) 런타임이기도 합니다. CoreCLR은 JIT 및 코드 실행 기능이 있는 가상 머신이기도 합니다.
 
-## <a name="corefx"></a>CoreFX
+## <a name="corefx"></a>CoreFx
 
 .NET Core BCL(기본 클래스 라이브러리)
+
+> [!TIP]
+> *Fx*는 *프레임워크*를 나타냅니다.
 
 System.\*(및 제한된 범위의 Microsoft.\*) 네임스페이스를 구성하는 라이브러리 집합입니다. BCL은 ASP.NET Core 같은 상위 수준 애플리케이션 프레임워크의 기반이 되는 하위 수준의 범용 프레임워크입니다. .NET Core BCL의 소스 코드는 [.NET Core 런타임 리포지토리](https://github.com/dotnet/runtime)에 포함되어 있습니다. 그러나 대부분의 .NET Core API는 .NET Framework에서 사용할 수도 있으므로 CoreFX를 .NET Framework BCL의 포크로 생각할 수 있습니다.
 

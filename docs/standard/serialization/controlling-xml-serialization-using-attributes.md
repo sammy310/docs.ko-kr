@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
 ms.openlocfilehash: e11152dc626b1e3619b9ecbc04d8a237ca9f13d3
 ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/25/2020
 ms.locfileid: "80248045"
@@ -27,7 +27,7 @@ ms.locfileid: "80248045"
 특성을 사용하여 개체의 XML serialization을 제어하거나 동일한 클래스 집합에서 대체 XML 스트림을 만들 수 있습니다. 대체 XML 스트림 만들기에 대한 자세한 내용은 [방법: XML 스트림의 대체 요소 이름 지정](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)을 참조하세요.
 
 > [!NOTE]
-> 생성된 XML이 W3C(W3C) 문서의 섹션 5를 준수해야 하는 경우 [간단한 개체 액세스 프로토콜(SOAP) 1.1이라는](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)제목의 문서는 [인코딩된 SOAP 직렬화를 제어하는 특성에](attributes-that-control-encoded-soap-serialization.md)나열된 특성을 사용합니다.
+> 생성된 XML이 World Wide Web 컨소시엄(W3C) 문서 [SOAP(Simple Object Access Protocol) 1.1](attributes-that-control-encoded-soap-serialization.md)의 5단원을 따르도록 하려면 [인코딩된 SOAP Serialization을 제어하는 특성](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)에 나열된 특성을 사용합니다.
 
 기본적으로 XML 요소 이름은 클래스 또는 멤버 이름으로 결정됩니다. `Book`이라는 간단한 클래스의 경우 이름이 `ISBN`인 필드는 다음 예제처럼 XML 요소 태그 \<ISBN>을 생성합니다.
 
@@ -70,7 +70,7 @@ public class TaxRates {
 
 ## <a name="controlling-array-serialization"></a>배열 serialization 제어
 
-<xref:System.Xml.Serialization.XmlArrayAttribute> 및 <xref:System.Xml.Serialization.XmlArrayItemAttribute> 특성은 배열의 serialization을 제어하도록 디자인되었습니다. 이러한 특성을 사용하면 World Wide Web 컨소시엄[www.w3.org] 문서 "XML Schema Part 2: Datatypes"에 정의된 대로 요소 이름, 네임스페이스 및 XML 스키마(XSD) 데이터 형식을 제어할 수 있습니다. 또한 배열에 포함될 수 있는 형식을 지정할 수도 있습니다.
+<xref:System.Xml.Serialization.XmlArrayAttribute> 및 <xref:System.Xml.Serialization.XmlArrayItemAttribute> 특성은 배열의 serialization을 제어하도록 디자인되었습니다. 이러한 특성을 사용하여 요소 이름, 네임스페이스 및 XML 스키마(XSD) 데이터 유형을 제어할 수 있습니다(World Wide Web 컨소시엄[www.w3.org] 문서 "XML Schema Part 2: Datatypes"에 정의된 대로). 또한 배열에 포함될 수 있는 형식을 지정할 수도 있습니다.
 
 <xref:System.Xml.Serialization.XmlArrayAttribute>는 배열이 serialize될 때 발생하는 바깥쪽 XML 요소의 속성을 결정합니다. 예를 들어 기본적으로 아래 배열을 serialize하면 `Employees`라는 이름의 XML 요소가 생성됩니다. `Employees` 요소에는 배열 형식 `Employee`를 따라 이름이 지정된 일련의 요소가 포함됩니다.
 
@@ -241,7 +241,7 @@ serialize된 인스턴스는 다음과 같을 수 있습니다.
 </Group>
 ```
 
-두 XML 스트림을 구분하는 다른 방법은 XML 스키마 정의 도구를 사용하여 컴파일된 코드에서 XML 스키마(XSD) 문서를 생성하는 것입니다. 도구 사용에 대한 자세한 내용은 [XML 스키마 정의 도구 및 XML 직렬화를](the-xml-schema-definition-tool-and-xml-serialization.md)참조하십시오. 필드에 특성이 적용되지 않는 경우 스키마는 다음과 같은 방식으로 요소를 설명합니다.
+두 XML 스트림을 구분하는 다른 방법은 XML 스키마 정의 도구를 사용하여 컴파일된 코드에서 XML 스키마(XSD) 문서를 생성하는 것입니다. 도구 사용에 대한 자세한 내용은 [XML 스키마 정의 도구 및 XML serialization](the-xml-schema-definition-tool-and-xml-serialization.md)을 참조하세요. 필드에 특성이 적용되지 않은 경우 스키마는 다음 방식으로 요소를 설명합니다.
 
 ```xml
 <xs:element minOccurs="0" maxOccurs ="1" name="Employees" type="ArrayOfEmployee" />
@@ -317,10 +317,10 @@ public 속성이나 필드를 serialize할 필요가 없는 상황이 있을 수
 
 ## <a name="see-also"></a>참조
 
-- [XML Serialization을 제어하는 특성](attributes-that-control-xml-serialization.md)
-- [인코딩된 SOAP Serialization을 제어하는 특성](attributes-that-control-encoded-soap-serialization.md)
-- [XML Serialization 소개](introducing-xml-serialization.md)
-- [XML Serialization 예제](examples-of-xml-serialization.md)
+- [XML serialization을 제어하는 특성](attributes-that-control-xml-serialization.md)
+- [인코딩된 SOAP serialization을 제어하는 특성](attributes-that-control-encoded-soap-serialization.md)
+- [XML serialization 소개](introducing-xml-serialization.md)
+- [XML serialization 예제](examples-of-xml-serialization.md)
 - [방법: XML 스트림의 대체 요소 이름 지정](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
 - [방법: 개체 직렬화](how-to-serialize-an-object.md)
 - [방법: 개체 역직렬화](how-to-deserialize-an-object.md)

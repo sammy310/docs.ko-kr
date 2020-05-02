@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 9d187d4f-c76e-4223-a670-cc290783ce47
 ms.openlocfilehash: 1193d7631816fe9fbf7aa1984d79ef8e61d5da80
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709974"
@@ -13,7 +13,7 @@ ms.locfileid: "75709974"
 # <a name="xml-document-object-model-dom-hierarchy"></a>XML DOM(문서 개체 모델) 계층 구조
 다음 그림은 관련 위치에 클래스 이름과 함께 괄호 안에 W3C(World Wide Web 컨소시엄) 이름을 표시하여 XML DOM(문서 개체 모델)에 대한 클래스 계층 구조를 보여 줍니다.  
   
- ![XML 문서 개체 모델 &#40;DOM&#41; 계층 구조](../../../../docs/standard/data/xml/media/dom-class-hierarchy.gif "Dom_class_hierarchy")  
+ ![XML DOM(문서 개체 모델) 계층 구조](../../../../docs/standard/data/xml/media/dom-class-hierarchy.gif "Dom_class_hierarchy")  
 XML DOM(문서 개체 모델) 계층 구조  
   
  다음 클래스는 **XmlNode**에서 상속하지 않습니다.  

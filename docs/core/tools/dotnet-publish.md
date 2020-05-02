@@ -2,12 +2,12 @@
 title: dotnet publish 명령
 description: dotnet publish 명령은 .NET Core 프로젝트 또는 솔루션을 디렉터리에 게시합니다.
 ms.date: 02/24/2020
-ms.openlocfilehash: 0e18220443f3713c86c257fcf401b98ddd716ebc
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 78ed8098be1b6887fc6a2a647fd169e2bf7f7fd1
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588276"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102803"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -20,13 +20,16 @@ ms.locfileid: "80588276"
 ## <a name="synopsis"></a>개요
 
 ```dotnetcli
-dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration]
-    [-f|--framework] [--force] [--interactive] [--manifest]
-    [--no-build] [--no-dependencies] [--no-restore] [--nologo]
-    [-o|--output] [-r|--runtime] [--self-contained]
-    [--no-self-contained] [-v|--verbosity] [--version-suffix]
+dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
+    [-f|--framework <FRAMEWORK>] [--force] [--interactive]
+    [--manifest <PATH_TO_MANIFEST_FILE>] [--no-build] [--no-dependencies]
+    [--no-restore] [--nologo] [-o|--output <OUTPUT_DIRECTORY>]
+    [-p:PublishReadyToRun=true] [-p:PublishSingleFile=true] [-p:PublishTrimmed=true]
+    [-r|--runtime <RUNTIME_IDENTIFIER>] [--self-contained [true|false]]
+    [--no-self-contained] [-v|--verbosity <LEVEL>]
+    [--version-suffix <VERSION_SUFFIX>]
 
-dotnet publish [-h|--help]
+dotnet publish -h|--help
 ```
 
 ## <a name="description"></a>설명
@@ -39,6 +42,10 @@ dotnet publish [-h|--help]
 - 애플리케이션의 종속성은 NuGet 캐시에서 출력 폴더로 복사됩니다.
 
 `dotnet publish` 명령의 출력이 실행을 위해 호스팅 시스템(예: 서버, PC, Mac, 랩톱)에 배포할 준비가 되었습니다. 이는 배포를 위해 애플리케이션을 준비하는 데 공식적으로 지원되는 유일한 방법입니다. 프로젝트에서 지정하는 배포 유형에 따라 호스팅 시스템에 .NET Core 공유 런타임이 설치되어 있을 수도 있고 그렇지 않을 수도 있습니다. 자세한 내용은 [.NET Core CLI를 사용하여 .NET Core 앱 게시](../deploying/deploy-with-cli.md)를 참조하세요.
+
+### <a name="implicit-restore"></a>암시적 복원
+
+[!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
 
 ### <a name="msbuild"></a>MSBuild
 
@@ -114,17 +121,43 @@ dotnet publish -p:PublishProfile=Properties\PublishProfiles\FolderProfile.pubxml
   
   지정하지 않으면 런타임 종속 실행 파일과 플랫폼 간 이진 파일에 대해 *[project_file_folder]./bin/[configuration]/[framework]/publish/* 로 기본 설정되고 자체 포함 실행 파일에 대해 *[project_file_folder]/bin/[configuration]/[framework]/[runtime]/publish/* 로 기본 설정됩니다.
 
+  웹 프로젝트에서 출력 폴더가 프로젝트 폴더에 있는 경우 연속 `dotnet publish` 명령에서는 중첩된 출력 폴더가 생성됩니다. 예를 들어 프로젝트 폴더가 *myproject*이고 게시 출력 폴더가 *myproject/publish*일 때 `dotnet publish`를 두 번 실행하면 두 번째 실행에서는 *.config* 및 *.json* 파일과 같은 콘텐츠 파일이 *myproject/publish/publish*에 삽입됩니다. 게시 폴더가 중첩되지 않게 하려면 프로젝트 폴더 바로 아래에 없는 게시 폴더를 지정하거나 프로젝트에서 게시 폴더를 제외합니다. *publishoutput*이라는 게시 폴더를 제외하려면 *.csproj* 파일의 `PropertyGroup` 요소에 다음 요소를 추가합니다.
+
+  ```xml
+  <DefaultItemExcludes>$(DefaultItemExcludes);publishoutput**</DefaultItemExcludes>
+  ```
+
   - .NET Core 3.x SDK 이상
   
     프로젝트를 게시할 때 상대 경로를 지정하는 경우 생성되는 출력 디렉터리는 프로젝트 파일 위치가 아니라 현재 작업 디렉터리에 대해 상대적입니다.
 
-    솔루션을 게시할 때 상대 경로를 지정하는 경우 모든 프로젝트에 대한 모든 출력은 현재 작업 디렉터리에 대해 상대적인 지정 폴더로 이동합니다. 게시 출력을 각 프로젝트의 별도 폴더로 이동하려면 `--output` 옵션 대신 msbuild `PublishDir` 속성을 사용하여 상대 경로를 지정합니다. 예를 들어 `dotnet publish -p:PublishDir=.\publish`는 각 프로젝트의 게시 출력을 프로젝트 파일이 포함된 폴더 아래에 있는 `publish` 폴더로 보냅니다.
+    솔루션을 게시할 때 상대 경로가 지정된 경우 모든 프로젝트에 대한 모든 출력은 현재 작업 디렉터리에 대해 상대적인 지정 폴더로 이동합니다. 게시 출력을 각 프로젝트의 별도 폴더로 이동하려면 `--output` 옵션 대신 msbuild `PublishDir` 속성을 사용하여 상대 경로를 지정합니다. 예를 들어 `dotnet publish -p:PublishDir=.\publish`는 각 프로젝트의 게시 출력을 프로젝트 파일이 포함된 폴더 아래에 있는 `publish` 폴더로 보냅니다.
 
   - .NET Core 2.x SDK
   
     프로젝트를 게시할 때 상대 경로를 지정하는 경우 생성되는 출력 디렉터리는 현재 작업 디렉터리가 아니라 프로젝트 파일 위치에 대해 상대적입니다.
 
     솔루션을 게시할 때 상대 경로를 지정하는 경우 각 프로젝트의 출력은 프로젝트 파일 위치에 대해 상대적인 별도의 폴더로 이동합니다. 솔루션을 게시할 때 절대 경로를 지정하는 경우 모든 프로젝트에 대한 모든 게시 출력은 지정된 폴더로 이동합니다.
+
+- **`-p:PublishReadyToRun=true`**
+
+  애플리케이션 어셈블리를 R2R(ReadyToRun) 형식으로 컴파일합니다. R2R은 AOT(Ahead-Of-Time) 컴파일 양식입니다. 자세한 내용은 [ReadyToRun 이미지](../whats-new/dotnet-core-3-0.md#readytorun-images)를 참조하세요. .NET Core 3.0 SDK 이후 사용할 수 있습니다.
+
+  이 옵션은 명령줄이 아닌 게시 프로필에서 지정하는 것이 좋습니다. 자세한 내용은 [MSBuild](#msbuild)를 참조하세요.
+
+- **`-p:PublishSingleFile=true`**
+
+  앱을 플랫폼별 단일 파일 실행 파일로 패키지합니다. 실행 파일은 자동 압축 풀기 파일이며 앱을 실행하는 데 필요한 모든 종속 항목(네이티브 포함)을 포함하고 있습니다. 앱을 처음 실행하면 애플리케이션은 앱 이름과 빌드 식별자에 기반하여 디렉터리로 압축이 풀립니다. 해당 애플리케이션을 다시 실행하면 시작이 빨라집니다. 새 버전을 사용한 경우가 아니라면 두 번째에는 애플리케이션의 압축을 풀 필요가 없습니다. .NET Core 3.0 SDK 이후 사용할 수 있습니다.
+
+  단일 파일 게시에 대한 자세한 내용은 [단일 파일 번들러 설계 문서](https://github.com/dotnet/designs/blob/master/accepted/2020/single-file/design.md)를 참조하세요.
+
+  이 옵션은 명령줄이 아닌 게시 프로필에서 지정하는 것이 좋습니다. 자세한 내용은 [MSBuild](#msbuild)를 참조하세요.
+
+- **`-p:PublishTrimmed=true`**
+
+  자체 포함 실행 파일을 게시할 때 앱의 배포 크기를 줄이기 위해 사용되지 않는 라이브러리를 트리밍합니다. 자세한 내용은 [자체 포함 배포 및 실행 파일 트리밍](../deploying/trim-self-contained.md)을 참조하세요. .NET Core 3.0 SDK 이후 사용할 수 있습니다.
+
+  이 옵션은 명령줄이 아닌 게시 프로필에서 지정하는 것이 좋습니다. 자세한 내용은 [MSBuild](#msbuild)를 참조하세요.
 
 - **`--self-contained [true|false]`**
 
@@ -203,3 +236,4 @@ dotnet publish -p:PublishProfile=Properties\PublishProfiles\FolderProfile.pubxml
 - [MSBuild 명령줄 참조](/visualstudio/msbuild/msbuild-command-line-reference)
 - [ASP.NET Core 앱 배포용 Visual Studio 게시 프로필(.pubxml)](/aspnet/core/host-and-deploy/visual-studio-publish-profiles)
 - [dotnet msbuild](dotnet-msbuild.md)
+- [ILLInk.Tasks](https://aka.ms/dotnet-illink)

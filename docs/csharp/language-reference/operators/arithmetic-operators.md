@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: f03084fa611c35c5504190b28fab79563d560d03
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea9bf9e065b2953fd20e0503a19d1dc143064c5d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398066"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738742"
 ---
 # <a name="arithmetic-operators-c-reference"></a>산술 연산자(C# 참조)
 
@@ -51,13 +51,13 @@ ms.locfileid: "79398066"
 
 ### <a name="postfix-increment-operator"></a>후위 증가 연산자
 
-`x++`의 결과는 다음 예제와 같이 연산 `x`전  의 값입니다.
+`x++`의 결과는 다음 예제와 같이 연산 *전* `x`의 값입니다.
 
 [!code-csharp-interactive[postfix increment](snippets/ArithmeticOperators.cs#PostfixIncrement)]
 
 ### <a name="prefix-increment-operator"></a>후위 증가 연산자
 
-`++x`의 결과는 다음 예제와 같이 연산 `x`후  의 값입니다.
+`++x`의 결과는 다음 예제와 같이 연산 *후* `x`의 값입니다.
 
 [!code-csharp-interactive[prefix increment](snippets/ArithmeticOperators.cs#PrefixIncrement)]
 
@@ -69,13 +69,13 @@ ms.locfileid: "79398066"
 
 ### <a name="postfix-decrement-operator"></a>후위 감소 연산자
 
-`x--`의 결과는 다음 예제와 같이 연산 `x`전  의 값입니다.
+`x--`의 결과는 다음 예제와 같이 연산 *전* `x`의 값입니다.
 
 [!code-csharp-interactive[postfix decrement](snippets/ArithmeticOperators.cs#PostfixDecrement)]
 
 ### <a name="prefix-decrement-operator"></a>후위 감소 연산자
 
-`--x`의 결과는 다음 예제와 같이 연산 `x`후  의 값입니다.
+`--x`의 결과는 다음 예제와 같이 연산 *후* `x`의 값입니다.
 
 [!code-csharp-interactive[prefix decrement](snippets/ArithmeticOperators.cs#PrefixDecrement)]
 
@@ -85,7 +85,7 @@ ms.locfileid: "79398066"
 
 [!code-csharp-interactive[unary plus and minus](snippets/ArithmeticOperators.cs#UnaryPlusAndMinus)]
 
-단항 [ 연산자는 ](../builtin-types/integral-numeric-types.md)ulong`-` 형식을 지원하지 않습니다.
+단항 `-` 연산자는 [ulong](../builtin-types/integral-numeric-types.md) 형식을 지원하지 않습니다.
 
 ## <a name="multiplication-operator-"></a>곱하기 연산자 *
 
@@ -115,7 +115,7 @@ ms.locfileid: "79398066"
 
 [!code-csharp-interactive[floating-point division](snippets/ArithmeticOperators.cs#FloatingPointDivision)]
 
-피연산자 중 하나가 `decimal`이면 `float` 또는 `double` 모두 `float`로 암시적으로 변환할 수 없기 때문에 나머지 피연산자는 `double` 또는 `decimal`일 수 없습니다. `float` 또는 `double` 피연산자를 `decimal` 형식으로 암시적으로 변환해야 합니다. 숫자 형식 간의 변환에 대한 자세한 내용은 [기본 제공 숫자 변환](../builtin-types/numeric-conversions.md)을 참조하세요.
+피연산자 중 하나가 `decimal`이면 `float` 또는 `double` 모두 `decimal`로 암시적으로 변환할 수 없기 때문에 나머지 피연산자는 `float` 또는 `double`일 수 없습니다. `float` 또는 `double` 피연산자를 `decimal` 형식으로 암시적으로 변환해야 합니다. 숫자 형식 간의 변환에 대한 자세한 내용은 [기본 제공 숫자 변환](../builtin-types/numeric-conversions.md)을 참조하세요.
 
 ## <a name="remainder-operator-"></a>나머지 연산자 %
 
@@ -131,7 +131,7 @@ ms.locfileid: "79398066"
 
 ### <a name="floating-point-remainder"></a>부동 소수점 나머지
 
-`float` 및 `double` 피연산자의 경우 유한 `x % y` 및 `x`에 대한 `y`의 결과는 다음과 같은 `z` 값입니다.
+`float` 및 `double` 피연산자의 경우 유한 `x` 및 `y`에 대한 `x % y`의 결과는 다음과 같은 `z` 값입니다.
 
 - 0이 아닌 경우 `z`의 부호는 `x`의 부호와 동일합니다.
 - `z`의 절대 값은 `|x| - n * |y|`에서 생성된 값입니다. 여기서 `n`은 `|x| / |y|`보다 작거나 같은 가능한 최대 정수이고 `|x|` 및 `|y|`는 각각 `x` 및 `y`의 절대 값입니다.
@@ -139,9 +139,9 @@ ms.locfileid: "79398066"
 > [!NOTE]
 > 나머지 계산 방법은 정수 피연산자에 사용되는 것과 유사하지만 IEEE 754 사양과는 다릅니다. IEEE 754 사양을 준수하는 나머지 작업이 필요한 경우 <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> 메서드를 사용합니다.
 
-무한 피연산자가 있는 `%` 연산자의 동작에 대한 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/expressions.md#remainder-operator)의 [나머지 연산자](~/_csharplang/spec/introduction.md) 섹션을 참조하세요.
+무한 피연산자가 있는 `%` 연산자의 동작에 대한 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [나머지 연산자](~/_csharplang/spec/expressions.md#remainder-operator) 섹션을 참조하세요.
 
-`decimal` 피연산자의 경우 나머지 연산자 `%`는 [ 형식의 ](<xref:System.Decimal.op_Modulus(System.Decimal,System.Decimal)>)나머지 연산자<xref:System.Decimal?displayProperty=nameWithType>와 동일합니다.
+`decimal` 피연산자의 경우 나머지 연산자 `%`는 <xref:System.Decimal?displayProperty=nameWithType> 형식의 [나머지 연산자](<xref:System.Decimal.op_Modulus(System.Decimal,System.Decimal)>)와 동일합니다.
 
 다음 예제에서는 부동 소수점 피연산자를 포함한 나머지 연산자의 동작을 보여줍니다.
 
@@ -161,7 +161,7 @@ ms.locfileid: "79398066"
 
 [!code-csharp-interactive[subtraction operator](snippets/ArithmeticOperators.cs#Subtraction)]
 
-대리자 제거의 경우 `-` 연산자를 사용할 수도 있습니다. 자세한 내용은 참조는 [`-` 및 `-=`연산자](subtraction-operator.md) 문서를 참조하세요.
+대리자 제거를 위해 `-` 연산자를 사용할 수도 있습니다. 자세한 내용은 참조는 [`-` 및 `-=`연산자](subtraction-operator.md) 문서를 참조하세요.
 
 ## <a name="compound-assignment"></a>복합 할당
 
@@ -183,7 +183,7 @@ x = x op y
 
 [!code-csharp-interactive[compound assignment](snippets/ArithmeticOperators.cs#CompoundAssignment)]
 
-[숫자 승격](~/_csharplang/spec/expressions.md#numeric-promotions)으로 인해 `op` 연산의 결과가 암시적으로 `T`의 `x` 형식으로 변환되지 못할 수 있습니다. 이 경우 `op`가 미리 정의된 연산자이고 연산의 결과가 명시적으로 `T`의 `x` 형식으로 변환 가능하다면 `x op= y` 양식의 복합 할당 식이 `x = (T)(x op y)`에 해당합니다. 단 `x`는 한 번만 평가됩니다. 다음 예제에서는 해당 동작을 보여줍니다.
+[숫자 승격](~/_csharplang/spec/expressions.md#numeric-promotions)으로 인해 `op` 연산의 결과가 암시적으로 `x`의 `T` 형식으로 변환되지 못할 수 있습니다. 이 경우 `op`가 미리 정의된 연산자이고 연산의 결과가 명시적으로 `x`의 `T` 형식으로 변환 가능하다면 `x op= y` 양식의 복합 할당 식이 `x = (T)(x op y)`에 해당합니다. 단 `x`는 한 번만 평가됩니다. 다음 예제에서는 해당 동작을 보여줍니다.
 
 [!code-csharp-interactive[compound assignment with cast](snippets/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
 
@@ -243,7 +243,7 @@ x = x op y
 
 ## <a name="operator-overloadability"></a>연산자 오버로드 가능성
 
-사용자 정의 형식은 단항([, ](operator-overloading.md), `++` 및 `--`) 및 이진(`+`, `-`, `*`, `/` 및 `%`) 산술 연산자를 `+`오버로드`-`할 수 있습니다. 이항 연산자가 오버로드되면 해당하는 복합 대입 연산자도 암시적으로 오버로드됩니다. 사용자 정의 형식은 복합 대입 연산자를 명시적으로 오버로드할 수 없습니다.
+사용자 정의 형식은 단항(`++`, `--`, `+` 및 `-`) 및 이진(`*`, `/`, `%`, `+` 및 `-`) 산술 연산자를 [오버로드](operator-overloading.md)할 수 있습니다. 이항 연산자가 오버로드되면 해당하는 복합 대입 연산자도 암시적으로 오버로드됩니다. 사용자 정의 형식은 복합 대입 연산자를 명시적으로 오버로드할 수 없습니다.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
@@ -262,7 +262,7 @@ x = x op y
 - [Checked 및 Unchecked 연산자](~/_csharplang/spec/expressions.md#the-checked-and-unchecked-operators)
 - [숫자 승격](~/_csharplang/spec/expressions.md#numeric-promotions)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 연산자](index.md)

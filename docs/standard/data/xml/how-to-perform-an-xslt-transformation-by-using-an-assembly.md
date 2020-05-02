@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
 ms.openlocfilehash: 447cf18c7a9d24addf9d0a4ad523f46a45a5d27a
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78155977"
@@ -171,15 +171,15 @@ XSLT 컴파일러(xsltc.exe)에서는 XSLT 스타일시트를 컴파일하여 �
 xslt.Load(typeof(Transform));  
 ```  
   
-을(를) 다음으로 바꾸면 됩니다.  
+다음 문자열로 바꾸세요.  
   
 ```csharp
 xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"));  
 ```
   
-으로 대체합니다. 어셈블리에 대 한 자세한 내용은 Load 메서드에 대 한 자세한 내용은 <xref:System.Reflection.Assembly.Load%2A>를 참조 하세요.  
+으로 대체합니다. Assembly.Load 메서드에 대한 자세한 내용은 <xref:System.Reflection.Assembly.Load%2A>를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Xml.Xsl.XslCompiledTransform>
 - [XSLT 컴파일러(xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)

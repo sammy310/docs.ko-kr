@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
 ms.openlocfilehash: 4faa481a6331863112b7dba65bdbccb69cd12b7d
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709961"
@@ -42,7 +42,7 @@ XML 문서 구조에서 이 그림의 각 원은 **XmlNode** 개체라고 하는
 - 전체 노드 검색과 요소 노드의 텍스트와 같이 노드가 포함하는 정보 검색
 
   > [!NOTE]
-  > 애플리케이션에 DOM이 제공하는 구조나 편집 기능이 필요하지 않은 경우 **XmlReader** 및 **XmlWriter** 클래스에서는 XML에 대한 캐시되지 않은 정방향 전용 스트림 액세스를 제공합니다. 자세한 내용은 <xref:System.Xml.XmlReader> 및 <xref:System.Xml.XmlWriter>을 참조하세요.
+  > 애플리케이션에 DOM이 제공하는 구조나 편집 기능이 필요하지 않은 경우 **XmlReader** 및 **XmlWriter** 클래스에서는 XML에 대한 캐시되지 않은 정방향 전용 스트림 액세스를 제공합니다. 자세한 내용은 <xref:System.Xml.XmlReader> 및 <xref:System.Xml.XmlWriter>를 참조하세요.
 
 **Node** 개체에는 일련의 메서드 및 속성뿐만 아니라 잘 정의된 기본적인 특성도 들어 있습니다. 특성에는 다음이 포함됩니다.
 

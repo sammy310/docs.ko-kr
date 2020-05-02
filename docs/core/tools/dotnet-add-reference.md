@@ -2,12 +2,12 @@
 title: dotnet add reference 명령
 description: dotnet add reference 명령은 프로젝트 간 참조를 추가하는 편리한 옵션을 제공합니다.
 ms.date: 02/14/2020
-ms.openlocfilehash: f2bd67d181784c4858b8971d05053d196df7818e
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: b261e24ed6a9d5bd489d317d2663b1420b5c34ff
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463742"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158322"
 ---
 # <a name="dotnet-add-reference"></a>dotnet add reference
 
@@ -52,7 +52,7 @@ dotnet add reference -h|--help
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  특정 [프레임워크](../../standard/frameworks.md)를 대상으로 하는 경우에만 프로젝트 참조를 추가합니다.
+  TFM 형식을 사용하여 특정 [프레임워크](../../standard/frameworks.md)를 대상으로 하는 경우에만 프로젝트 참조를 추가합니다.
 
 - **`-h|--help`**
 
@@ -60,7 +60,7 @@ dotnet add reference -h|--help
 
 - **`--interactive`**
 
-  명령이 중지되고 사용자 입력 또는 작업을 대기할 수 있도록 허용합니다(예: 인증 완료). .NET Core 3.0 SDK 이후 사용할 수 있습니다.
+  명령이 중지되고 사용자 입력 또는 작업을 대기할 수 있도록 허용합니다(일반적으로 인증을 완료하는 데 사용됨). .NET Core 3.0 SDK 이후 사용할 수 있습니다.
 
 ## <a name="examples"></a>예
 

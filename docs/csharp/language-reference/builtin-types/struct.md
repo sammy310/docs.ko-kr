@@ -1,6 +1,6 @@
 ---
 title: 구조체 형식 - C# 참조
-ms.date: 03/26/2020
+ms.date: 04/21/2020
 f1_keywords:
 - struct_CSharpKeyword
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 6a2c97b93a8f6d1d62bd8a96865a4fe6587f55d3
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: dbe9b47625589de834b7a8021640885ca0920b96
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345136"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "82021265"
 ---
 # <a name="structure-types-c-reference"></a>구조체 형식(C# 참조)
 
@@ -41,7 +41,36 @@ C# 7.2부터 `readonly` 한정자를 사용하여 구조체 형식을 변경할 
 이렇게 하면 `readonly` 구조체의 멤버가 구조체의 상태를 수정하지 않습니다.
 
 > [!NOTE]
-> `readonly` 구조체에서 변경 가능한 참조 형식의 데이터 멤버는 여전히 자체 상태를 변경할 수 있습니다. 예를 들어 <xref:System.Collections.Generic.List%601> 인스턴스를 바꿀 수는 없지만 여기에 새 요소를 추가할 수는 있습니다.
+> `readonly` 구조체에서 변경 가능한 참조 형식의 데이터 멤버는 여전히 자체 상태를 변경할 수 있습니다. 예를 들어 <xref:System.Collections.Generic.List%601> 인스턴스를 바꿀 수는 없지만 새 요소를 추가할 수는 있습니다.
+
+## <a name="readonly-instance-members"></a>`readonly` 인스턴스 멤버
+
+C# 8.0부터 `readonly` 한정자를 사용하여 인스턴스 멤버가 구조체의 상태를 수정하지 않도록 선언할 수도 있습니다. 전체 구조체 형식을 `readonly`로 선언할 수 없는 경우 `readonly` 한정자를 사용하여 구조체의 상태를 수정하지 않는 인스턴스 멤버를 표시합니다. `readonly` 구조체에서 모든 인스턴스 멤버는 암시적으로 `readonly`입니다.
+
+`readonly` 인스턴스 멤버 내에서 구조체의 인스턴스 필드에 할당할 수 없습니다. 그러나 `readonly` 멤버는`readonly`가 아닌 멤버를 호출할 수 있습니다. 이 경우 컴파일러는 구조체 인스턴스의 복사본을 만들고 해당 복사본에서 `readonly`가 아닌 멤버를 호출합니다. 따라서 원래 구조체 인스턴스는 수정되지 않습니다.
+
+일반적으로 다음 종류의 인스턴스 멤버에 `readonly` 한정자를 적용합니다.
+
+- 메서드:
+
+  [!code-csharp[readonly method](snippets/StructType.cs#ReadonlyMethod)]
+
+  <xref:System.Object?displayProperty=nameWithType>에 선언된 메서드를 재정의하는 메서드에 `readonly` 한정자를 적용할 수도 있습니다.
+
+  [!code-csharp[readonly override](snippets/StructType.cs#ReadonlyOverride)]
+
+- 속성 및 인덱서:
+
+  [!code-csharp[readonly property get](snippets/StructType.cs#ReadonlyProperty)]
+
+  속성 또는 인덱서의 두 접근자에 모두 `readonly` 한정자를 적용해야 하는 경우 속성 또는 인덱서의 선언에 해당 한정자를 적용합니다.
+
+  > [!NOTE]
+  > 컴파일러는 속성 선언에 `readonly` 한정자가 있는지 여부와 관계없이 [자동 구현 속성](../../programming-guide/classes-and-structs/auto-implemented-properties.md)의 `get` 접근자를 `readonly`로 선언합니다.
+
+구조체 형식의 정적 멤버에는 `readonly` 한정자를 적용할 수 없습니다.
+
+컴파일러는 성능 최적화를 위해 `readonly` 한정자를 사용할 수 있습니다. 자세한 내용은 [안전하고 효율적인 C# 코드 작성](../../write-safe-efficient-code.md)을 참조하세요.
 
 ## <a name="limitations-with-the-design-of-a-structure-type"></a>구조체 형식 설계의 제한 사항
 
@@ -59,7 +88,7 @@ C# 7.2부터 `readonly` 한정자를 사용하여 구조체 형식을 변경할 
 
 ## <a name="instantiation-of-a-structure-type"></a>구조체 형식의 인스턴스화
 
-C#에서는 선언된 변수를 사용하려면 먼저 초기화해야 합니다. 구조체 형식 변수는 `null`일 수 없으므로([nulla 허용 변수 값 형식](nullable-value-types.md)의 변수인 경우 제외), 해당 형식의 인스턴스를 인스턴스화해야 합니다. 이 작업은 몇 가지 방법으로 수행할 수 있습니다.
+C#에서는 선언된 변수를 사용하려면 먼저 초기화해야 합니다. 구조체 형식 변수는 `null`일 수 없으므로([null 허용 값 형식](nullable-value-types.md)의 변수인 경우 제외), 해당 형식의 인스턴스를 인스턴스화해야 합니다. 이 작업은 몇 가지 방법으로 수행할 수 있습니다.
 
 일반적으로, 구조체 형식은 [`new`](../operators/new-operator.md) 연산자를 사용하여 적절한 생성자를 호출함으로써 인스턴스화합니다. 모든 구조체 형식은 하나 이상의 생성자를 갖습니다. 이는 해당 형식의 [기본값](default-values.md)을 생성하는 매개 변수 없는 암시적 생성자입니다. [기본값 식](../operators/default.md)을 사용하여 형식의 기본값을 생성할 수도 있습니다.
 
@@ -73,17 +102,44 @@ C#에서는 선언된 변수를 사용하려면 먼저 초기화해야 합니다
 
 구조체 형식 변수를 메서드에 인수로 전달하거나 메서드에서 구조체 형식 값을 반환할 경우, 구조체 형식의 인스턴스 전체가 복사됩니다. 이로 인해 구조체 형식이 많이 사용되는 고성능 시나리오에서 코드의 성능이 저하될 수 있습니다. 구조체 형식 변수를 참조를 통해 전달하면 값이 복사되지 않도록 할 수 있습니다. 참조를 통해 인수를 전달해야 한다는 사실을 나타내려면 [`ref`](../keywords/ref.md#passing-an-argument-by-reference), [`out`](../keywords/out-parameter-modifier.md) 또는 [`in`](../keywords/in-parameter-modifier.md) 메서드 매개 변수 한정자를 사용합니다. 참조를 통해 메서드 결과를 반환하려면 [ref returns](../../programming-guide/classes-and-structs/ref-returns.md)를 사용합니다. 자세한 내용은 [안전하고 효율적인 C# 코드 작성](../../write-safe-efficient-code.md)을 참조하세요.
 
+## <a name="ref-struct"></a>`ref` 구조체
+
+C# 7.2부터 구조체 형식 선언에 `ref` 한정자를 사용할 수 있습니다. `ref` 구조체 형식의 인스턴스는 스택에 할당되며 관리되는 힙으로 이스케이프할 수 없습니다. 이를 위해 컴파일러는 다음과 같이 `ref` 구조체 형식의 사용을 제한합니다.
+
+- `ref` 구조체는 배열의 요소 형식일 수 없습니다.
+- `ref` 구조체는 클래스의 필드 또는 비 `ref` 구조체의 선언된 형식일 수 없습니다.
+- `ref` 구조체는 인터페이스를 구현할 수 없습니다.
+- `ref` 구조체는 <xref:System.ValueType?displayProperty=nameWithType> 또는 <xref:System.Object?displayProperty=nameWithType>에 boxing할 수 없습니다.
+- `ref` 구조체는 형식 인수일 수 없습니다.
+- [람다 식](../../programming-guide/statements-expressions-operators/lambda-expressions.md) 또는 [로컬 함수](../../programming-guide/classes-and-structs/local-functions.md)에서 `ref` 구조체 변수를 캡처할 수 없습니다.
+- [`async`](../keywords/async.md) 메서드에서는 `ref` 구조체 변수를 사용할 수 없습니다. 그러나 동기 메서드에서는 `ref` 구조체 변수(예: <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601>를 반환하는 변수)를 사용할 수 있습니다.
+- [반복기](../../iterators.md)에서는 `ref` 구조체 변수를 사용할 수 없습니다.
+
+일반적으로 `ref` 구조체 형식의 데이터 멤버도 포함하는 형식이 필요한 경우 `ref` 구조체 형식을 정의합니다.
+
+[!code-csharp[ref struct](snippets/StructType.cs#RefStruct)]
+
+`ref` 구조체를 [`readonly`](#readonly-struct)로 선언하려면 형식 선언에서 `readonly` 및 `ref` 한정자를 결합합니다(`readonly` 한정자는 `ref` 한정자 앞에 와야함).
+
+[!code-csharp[readonly ref struct](snippets/StructType.cs#ReadonlyRef)]
+
+.NET에서 `ref` 구조체의 예는 <xref:System.Span%601?displayProperty=nameWithType> 및 <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>입니다.
+
 ## <a name="conversions"></a>변환
 
-모든 구조체 형식에는 <xref:System.ValueType?displayProperty=nameWithType> 및 <xref:System.Object?displayProperty=nameWithType> 형식의 [boxing 및 unboxing](../../programming-guide/types/boxing-and-unboxing.md) 변환이 있습니다. 구조체 형식과 구조체 형식이 구현하는 인터페이스 간에도 boxing 및 unboxing 변환이 있습니다.
+모든 구조체 형식([`ref` 구조체](#ref-struct) 형식 제외)에는 <xref:System.ValueType?displayProperty=nameWithType> 및 <xref:System.Object?displayProperty=nameWithType> 형식의 [boxing 및 unboxing](../../programming-guide/types/boxing-and-unboxing.md) 변환이 있습니다. 구조체 형식과 구조체 형식이 구현하는 인터페이스 간에도 boxing 및 unboxing 변환이 있습니다.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [구조체](~/_csharplang/spec/structs.md) 섹션을 참조하세요.
 
-`readonly` 구조체에 대한 자세한 내용은 [기능 제안 노트](~/_csharplang/proposals/csharp-7.2/readonly-ref.md#readonly-structs)를 참조하세요.
+C# 7.2 이상에 도입된 기능에 대한 자세한 내용은 다음 기능 제안 노트를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+- [읽기 전용 구조체](~/_csharplang/proposals/csharp-7.2/readonly-ref.md#readonly-structs)
+- [읽기 전용 인스턴스 멤버](~/_csharplang/proposals/csharp-8.0/readonly-instance-members.md)
+- [ref 유사 형식에 대한 컴파일 시간 안전성](~/_csharplang/proposals/csharp-7.2/span-safety.md)
+
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [디자인 지침 - 클래스와 구조체 간의 선택](../../../standard/design-guidelines/choosing-between-class-and-struct.md)

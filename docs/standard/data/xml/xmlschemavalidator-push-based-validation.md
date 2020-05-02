@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
 ms.openlocfilehash: 6a0cc110c2b8bcd97b9f5c16a344db5a63046353
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709805"
@@ -345,7 +345,7 @@ validator.ValidateEndElement(null);
 validator.ValidateEndElement(null);
 ```
 
- 이 예제에서는 다음 XML을 입력으로 사용 합니다.
+ 이 예제에서는 다음 XML을 입력으로 사용합니다.
 
 ```xml
 <xs:schema xmlns:xs="http://www.w3c.org/2001/XMLSchema">
@@ -359,7 +359,7 @@ validator.ValidateEndElement(null);
 </xs:schema>
 ```
 
-이 예제에서는 다음 XSD 스키마를 입력으로 사용 합니다.
+이 예제에서는 다음 XSD 스키마를 입력으로 사용합니다.
 
 ```xml
 <book>
@@ -438,11 +438,11 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
 
 다음 표에서는 <xref:System.Xml.Schema.XmlSchemaValidator> 클래스의 상태 전환 및 각 상태에서 수행할 수 있는 메서드 호출의 시퀀스와 발생에 대해 설명합니다.
 
-|State|전환|
+|시스템 상태|전환|
 |-----------|----------------|
 |Validate|<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> &#124; TopLevel*) <xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|
 |TopLevel|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; 요소|
-|요소|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>* (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> 콘텐츠\*)? <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>&#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> 콘텐츠\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>&#124;|
+|요소|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>* (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> Content\*)? <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> Content\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;|
 |콘텐츠|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; 요소|
 
 > [!NOTE]
@@ -452,7 +452,7 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
 
 다음 표에서는 위의 상태 전환 표에 나타난 문장 부호가 <xref:System.Xml.Schema.XmlSchemaValidator> 클래스 상태 전환의 각 상태에 대해 호출할 수 있는 메서드와 기타 상태에 미치는 영향을 설명합니다.
 
-|기호|설명|
+|Symbol|설명|
 |------------|-----------------|
 |&#124;|세로 막대 앞이나 뒤의 메서드 또는 상태를 호출할 수 있습니다.|
 |?|물음표 앞의 메서드나 상태는 선택 항목이지만 이 메서드나 상태를 호출할 경우에는 한 번만 호출할 수 있습니다.|

@@ -2,12 +2,12 @@
 title: 모니터링 및 원격 분석을 사용하여 앱 현대화
 description: Azure Cloud 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화 | 모니터링 및 원격 분석을 사용하여 앱 현대화
 ms.date: 04/30/2018
-ms.openlocfilehash: 3d629e89a73c870d4b6396c6b1d0ecbe95b79ead
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a5101f150d6548406db8638904fb4ab6375edf9c
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72393847"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739175"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>모니터링 및 원격 분석을 사용하여 앱 현대화
 
@@ -27,11 +27,11 @@ Application Insights는 여러 플랫폼에서 작업하는 웹 개발자를 위
 
 [Azure Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-overview)는 [Microsoft Azure 전체 모니터링 솔루션](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview)의 일부입니다. 또한 [OMS(Operations Management Suite)](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview)의 서비스입니다. Log Analytics는 클라우드 및 온-프레미스 환경(온-프레미스용 OMS)을 모니터링하여 가용성과 성능을 유지합니다. 이 서비스는 클라우드 및 온-프레미스 환경에서 리소스에 의해 생성되고 여러 원본에 대한 분석을 제공하는 다른 모니터링 도구에서 생성된 데이터를 수집합니다.
 
-Azure 인프라 로그와 관련하여, Log Analytics는 Azure 서비스로서 다른 Azure 서비스([Azure Monitor](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)를 통해), Azure VM, Docker 컨테이너 및 온-프레미스 또는 기타 클라우드 인프라에서 로그 및 메트릭 데이터를 수집합니다. Log Analytics는 이 데이터를 기반으로 하는 유연한 로그 검색과 기본 분석을 제공합니다. 소스에서 데이터를 분석하는 데 사용할 수 있는 다양한 도구를 제공하고, 모든 로그에서 복잡한 쿼리를 허용하며, 지정된 조건을 기반으로 사전에 경고할 수 있습니다. 중앙 Log Analytics 리포지토리에서 사용자 지정 데이터를 수집하여 쿼리하고 시각화할 수도 있습니다. 또한 Log Analytics의 기본 제공 솔루션을 활용하여 인프라의 보안 및 기능을 즉시 파악할 수 있습니다.
+Azure 인프라 로그와 관련하여, Log Analytics는 Azure 서비스로서 다른 Azure 서비스([Azure Monitor](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)를 통해), Azure VM, Docker 컨테이너 및 온-프레미스 또는 기타 클라우드 인프라에서 로그 및 메트릭 데이터를 수집합니다. Log Analytics는 이 데이터를 기반으로 하는 유연한 로그 검색과 기본 분석을 제공합니다. 소스에서 데이터를 분석하는 데 사용할 수 있는 다양한 도구를 제공하고, 모든 로그에서 복잡한 쿼리를 허용하며, 지정된 조건을 기반으로 사전에 경고할 수 있습니다. 중앙 Log Analytics 리포지토리에서 사용자 지정 데이터를 수집하여 쿼리하고 시각화할 수도 있습니다. Log Analytics의 기본 제공 솔루션을 활용하여 인프라의 보안 및 기능을 즉시 파악할 수도 있습니다.
 
 수집된 데이터를 분석 및 조작하기 위해 모든 브라우저에서 실행되고 구성 설정 및 여러 도구에 대한 액세스를 제공하는 OMS 포털 또는 Azure Portal을 통해 Log Analytics에 액세스할 수 있습니다.
 
-Log Analytics의 [컨테이너 모니터링 솔루션](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers)을 사용하여 단일 위치에서 Docker 및 Windows 컨테이너 호스트를 보고 관리할 수 있습니다. 솔루션은 어떤 컨테이너가 실행 중인지, 실행 중인 컨테이너 이미지 및 컨테이너가 실행 중인 위치를 표시합니다. 컨테이너에 사용되는 명령을 포함하여 자세한 감사 정보를 볼 수 있습니다. 또한 중앙화된 로그를 보고 검색하면 원격으로 Docker 또는 Windows 호스트를 보지 않고도 컨테이너의 문제를 해결할 수 있습니다. 호스트에서 방해가 되고 과도한 리소스를 사용하는 컨테이너를 검색할 수 있습니다. 또한 컨테이너에 대해 중앙화된 CPU 메모리, 스토리지, 네트워크 사용 및 성능 정보를 확인할 수 있습니다. Windows를 실행하는 컴퓨터에서 Windows Server, Hyper-V, Docker 컨테이너에서 로그를 중앙 집중화 및 비교할 수 있습니다. 솔루션은 다음과 같은 컨테이너 오케스트레이터를 지원합니다.
+Log Analytics의 [컨테이너 모니터링 솔루션](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers)을 사용하여 단일 위치에서 Docker 및 Windows 컨테이너 호스트를 보고 관리할 수 있습니다. 솔루션은 어떤 컨테이너가 실행 중인지, 실행 중인 컨테이너 이미지 및 컨테이너가 실행 중인 위치를 표시합니다. 컨테이너에 사용되는 명령을 포함하여 자세한 감사 정보를 볼 수 있습니다. 중앙화된 로그를 보고 검색하면 원격으로 Docker 또는 Windows 호스트를 보지 않고도 컨테이너의 문제를 해결할 수도 있습니다. 호스트에서 방해가 되고 과도한 리소스를 사용하는 컨테이너를 검색할 수 있습니다. 또한 컨테이너에 대해 중앙화된 CPU 메모리, 스토리지, 네트워크 사용 및 성능 정보를 확인할 수 있습니다. Windows를 실행하는 컴퓨터에서 Windows Server, Hyper-V, Docker 컨테이너에서 로그를 중앙 집중화 및 비교할 수 있습니다. 솔루션은 다음과 같은 컨테이너 오케스트레이터를 지원합니다.
 
 - Docker Swarm
 

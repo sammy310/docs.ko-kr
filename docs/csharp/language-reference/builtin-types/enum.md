@@ -11,16 +11,16 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 15f5e9ccb1396277229ba935381812700f63ece8
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 617c5ec037ad7a47b43cca2c13da4a77aa682997
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121152"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739085"
 ---
 # <a name="enumeration-types-c-reference"></a>열거형(C# 참조)
 
-*열거형*(또는 *열거형 형식*)은 기본 [정수 숫자](value-types.md) 형식의 명명된 상수 집합에 의해 정의되는 [값 형식](integral-numeric-types.md)입니다. 열거형을 정의하려면 `enum` 키워드를 정의하고 *열거형 멤버*의 이름을 지정합니다.
+*열거형*(또는 *열거형 형식*)은 기본 [정수 숫자](integral-numeric-types.md) 형식의 명명된 상수 집합에 의해 정의되는 [값 형식](value-types.md)입니다. 열거형을 정의하려면 `enum` 키워드를 정의하고 *열거형 멤버*의 이름을 지정합니다.
 
 ```csharp
 enum Season
@@ -32,7 +32,7 @@ enum Season
 }
 ```
 
-기본적으로 열거형 멤버의 연결된 상수 값은 `int` 형식입니다. 즉, 0으로 시작하고 정의 텍스트 순서에 따라 1씩 증가합니다. 다른 [정수 숫자](integral-numeric-types.md) 형식을 열거형 형식의 기본 형식으로 명시적으로 지정할 수 있습니다. 또한 다음 예제와 같이 연결된 상수 값을 명시적으로 지정할 수 있습니다.
+기본적으로 열거형 멤버의 연결된 상수 값은 `int` 형식입니다. 즉, 0으로 시작하고 정의 텍스트 순서에 따라 1씩 증가합니다. 다른 [정수 숫자](integral-numeric-types.md) 형식을 열거형 형식의 기본 형식으로 명시적으로 지정할 수 있습니다. 다음 예제와 같이 연결된 상수 값을 명시적으로 지정할 수도 있습니다.
 
 ```csharp
 enum ErrorCode : ushort
@@ -52,17 +52,17 @@ enum ErrorCode : ushort
 
 ## <a name="enumeration-types-as-bit-flags"></a>비트 플래그로서 열거형 형식
 
-열거형 형식으로 선택의 조합을 나타내려면 개별 선택이 비트 필드가 되도록 해당 선택의 열거형 멤버를 정의합니다. 즉, 이러한 멤버의 연결된 값은 제곱이어야 합니다. 그런 다음 [비트 논리 연산자 `|` 또는 `&`](../operators/bitwise-and-shift-operators.md#enumeration-logical-operators)를 사용하여 각각 선택을 조합하거나 선택의 조합을 교차할 수 있습니다. 열거형 형식이 비트 필드를 선언한다고 표시하려면 [Flags](xref:System.FlagsAttribute) 특성을 적용합니다. 다음 예제에 나온 것처럼 열거형 형식의 정의에 몇 가지 일반적인 조합을 포함할 수도 있습니다.
+열거형 형식으로 선택의 조합을 나타내려면 개별 선택이 비트 필드가 되도록 해당 선택의 열거형 멤버를 정의합니다. 즉, 이러한 멤버의 연결된 값은 제곱이어야 합니다. 그런 다음 [비트 논리 연산자 `|` 또는 `&`](../operators/bitwise-and-shift-operators.md#enumeration-logical-operators)를 사용하여 각각 선택을 조합하거나 선택의 조합을 교차할 수 있습니다. 열거형 형식이 비트 필드를 선언한다고 표시하려면 [Flags](xref:System.FlagsAttribute) 특성을 적용합니다. 다음 예제와 같이 열거형 형식의 정의에 몇 가지 일반적인 조합을 포함할 수도 있습니다.
 
 [!code-csharp[enum flags](snippets/EnumType.cs#Flags)]
 
-자세한 내용과 예제는 <xref:System.FlagsAttribute?displayProperty=nameWithType> API 참조 페이지 및 [ API 참조 페이지의 ](/dotnet/api/system.enum#non-exclusive-members-and-the-flags-attribute)비독점적 멤버 및 Flags 특성<xref:System.Enum?displayProperty=nameWithType> 섹션을 참조하세요.
+자세한 내용과 예제는 <xref:System.FlagsAttribute?displayProperty=nameWithType> API 참조 페이지 및 <xref:System.Enum?displayProperty=nameWithType> API 참조 페이지의 [비독점적 멤버 및 Flags 특성](/dotnet/api/system.enum#non-exclusive-members-and-the-flags-attribute) 섹션을 참조하세요.
 
 ## <a name="the-systemenum-type-and-enum-constraint"></a>System.Enum 형식 및 열거형 제약 조건
 
 <xref:System.Enum?displayProperty=nameWithType> 형식은 모든 열거형 형식의 추상적 기본 클래스입니다. 이 형식은 열거형 형식 및 그 값에 대한 정보를 가져오는 여러 메서드를 제공합니다. 자세한 내용과 예제는 <xref:System.Enum?displayProperty=nameWithType> API 참조 페이지를 참조하세요.
 
-C# 7.3부터 기본 클래스 제약 조건(`System.Enum`열거형 제약 조건[이라고 함)에서 ](../../programming-guide/generics/constraints-on-type-parameters.md#enum-constraints)을 사용하여 형식 매개 변수가 열거형 형식이라고 지정할 수 있습니다.
+C# 7.3부터 기본 클래스 제약 조건([열거형 제약 조건](../../programming-guide/generics/constraints-on-type-parameters.md#enum-constraints)이라고 함)에서 `System.Enum`을 사용하여 형식 매개 변수가 열거형 형식이라고 지정할 수 있습니다.
 
 ## <a name="conversions"></a>변환
 
@@ -72,7 +72,7 @@ C# 7.3부터 기본 클래스 제약 조건(`System.Enum`열거형 제약 조건
 
 열거형 형식에 연결된 특정 값이 포함되어 있는지 확인하려면 <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> 메서드를 사용합니다.
 
-모든 열거형 형식에는 [ 형식의 ](../../programming-guide/types/boxing-and-unboxing.md)boxing 및 unboxing<xref:System.Enum?displayProperty=nameWithType> 변환이 있습니다.
+모든 열거형 형식에는 <xref:System.Enum?displayProperty=nameWithType> 형식의 [boxing 및 unboxing](../../programming-guide/types/boxing-and-unboxing.md) 변환이 있습니다.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
@@ -85,7 +85,7 @@ C# 7.3부터 기본 클래스 제약 조건(`System.Enum`열거형 제약 조건
 - [명시적 열거형 변환](~/_csharplang/spec/conversions.md#explicit-enumeration-conversions)
 - [암시적 열거형 변환](~/_csharplang/spec/conversions.md#implicit-enumeration-conversions)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [열거형 형식 문자열](../../../standard/base-types/enumeration-format-strings.md)

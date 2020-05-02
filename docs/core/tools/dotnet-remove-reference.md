@@ -2,25 +2,26 @@
 title: dotnet remove reference 명령
 description: dotnet remove reference 명령은 프로젝트 간 참조를 제거하는 편리한 옵션을 제공합니다.
 ms.date: 02/14/2020
-ms.openlocfilehash: 92d36bbbde64d806abc8f223c5f08e3f3d79ce9d
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: a45153376d7d6eb764c1d2c6b473d04a273a2de1
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463436"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158335"
 ---
 # <a name="dotnet-remove-reference"></a>dotnet remove reference
 
 **이 문서의 적용 대상:** ✔️ .NET Core 2.x SDK 이상 버전
 
-## <a name="name"></a>name
+## <a name="name"></a>이름
 
-`dotnet remove reference` - 프로젝트 간 참조를 제거합니다.
+`dotnet remove reference` - 프로젝트 간(P2P) 참조를 제거합니다.
 
 ## <a name="synopsis"></a>개요
 
 ```dotnetcli
-dotnet remove [<PROJECT>] reference [-f|--framework <FRAMEWORK>] <PROJECT_REFERENCES>
+dotnet remove [<PROJECT>] reference [-f|--framework <FRAMEWORK>]
+     <PROJECT_REFERENCES>
 
 dotnet remove reference -h|--help
 ```
@@ -47,7 +48,7 @@ dotnet remove reference -h|--help
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  특정 [프레임워크](../../standard/frameworks.md)를 대상으로 하는 경우에만 참조를 제거합니다.
+  TFM 형식을 사용하여 특정 [프레임워크](../../standard/frameworks.md)를 대상으로 하는 경우에만 참조를 제거합니다.
 
 ## <a name="examples"></a>예
 

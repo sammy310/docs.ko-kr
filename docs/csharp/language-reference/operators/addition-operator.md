@@ -1,6 +1,6 @@
 ---
 title: + 및 += 연산자 - C# 참조
-ms.date: 05/24/2019
+ms.date: 04/23/2020
 f1_keywords:
 - +_CSharpKeyword
 - +=_CSharpKeyword
@@ -13,22 +13,22 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: cafd07f4b4aefdcc4b43750d61c155fe3d65aa46
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 18364d80b8117fd4074c2c4231eac07c76829bb3
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398102"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135739"
 ---
 # <a name="-and--operators-c-reference"></a>+ 및 += 연산자(C# 참조)
 
 `+` 및 `+=` 연산자에는 기본 제공 [정수](../builtin-types/integral-numeric-types.md) 및 [부동 소수점](../builtin-types/floating-point-numeric-types.md) 숫자 형식, [문자열](../builtin-types/reference-types.md#the-string-type) 형식 및 [대리자](../builtin-types/reference-types.md#the-delegate-type) 형식이 지원됩니다.
 
-산술 `+` 연산자에 대한 자세한 내용은 [산술 연산자](arithmetic-operators.md#unary-plus-and-minus-operators) 문서의 [단항 더하기 및 빼기 연산자](arithmetic-operators.md#addition-operator-) 및 [더하기 연산자 +](arithmetic-operators.md) 섹션을 참조하세요.
+산술 `+` 연산자에 대한 자세한 내용은 [산술 연산자](arithmetic-operators.md) 문서의 [단항 더하기 및 빼기 연산자](arithmetic-operators.md#unary-plus-and-minus-operators) 및 [더하기 연산자 +](arithmetic-operators.md#addition-operator-) 섹션을 참조하세요.
 
 ## <a name="string-concatenation"></a>문자열 연결
 
-피연산자 중 하나 또는 둘 다가 [문자열](../builtin-types/reference-types.md#the-string-type) 형식이면 `+` 연산자는 피연산자의 문자열 표현을 연결합니다.
+피연산자 중 하나 또는 둘 다가 [문자열](../builtin-types/reference-types.md#the-string-type) 형식이면 `+` 연산자는 피연산자의 문자열 표현을 연결합니다(`null`의 문자열 표현은 빈 문자열임).
 
 [!code-csharp-interactive[string concatenation](snippets/AdditionOperator.cs#AddStrings)]
 
@@ -66,17 +66,17 @@ x = x + y
 
 [!code-csharp-interactive[+= examples](snippets/AdditionOperator.cs#AddAndAssign)]
 
-또한 `+=`이벤트[를 구독할 때 ](../keywords/event.md) 연산자를 사용하여 이벤트 처리기 메서드를 지정합니다. 자세한 내용은 [방법: 이벤트 구독 및 구독 취소](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)를 참조하세요.
+또한 [이벤트](../keywords/event.md)를 구독할 때 `+=` 연산자를 사용하여 이벤트 처리기 메서드를 지정합니다. 자세한 내용은 [방법: 이벤트 구독 및 구독 취소](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)를 참조하세요.
 
 ## <a name="operator-overloadability"></a>연산자 오버로드 가능성
 
-사용자 정의 형식은 [ 연산자를 ](operator-overloading.md)오버로드`+`할 수 있습니다. 이진 `+` 연산자가 오버로드되면 `+=` 연산자도 암시적으로 오버로드됩니다. 사용자 정의 형식에는 `+=` 연산자를 명시적으로 오버로드할 수 없습니다.
+사용자 정의 형식은 `+` 연산자를 [오버로드](operator-overloading.md)할 수 있습니다. 이진 `+` 연산자가 오버로드되면 `+=` 연산자도 암시적으로 오버로드됩니다. 사용자 정의 형식에는 `+=` 연산자를 명시적으로 오버로드할 수 없습니다.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](~/_csharplang/spec/expressions.md#unary-plus-operator)의 [단항 더하기 연산자](~/_csharplang/spec/expressions.md#addition-operator) 및 [더하기 연산자](~/_csharplang/spec/introduction.md) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [단항 더하기 연산자](~/_csharplang/spec/expressions.md#unary-plus-operator) 및 [더하기 연산자](~/_csharplang/spec/expressions.md#addition-operator) 섹션을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 연산자](index.md)

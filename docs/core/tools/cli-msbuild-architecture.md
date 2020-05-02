@@ -2,12 +2,12 @@
 title: .NET Core 명령줄 도구 아키텍처
 description: .NET Core 도구 레이어 및 최신 버전의 변경 내용에 대해 알아봅니다.
 ms.date: 03/06/2017
-ms.openlocfilehash: fde1a0acb6af9dd65aa3466b4ea37473b2eab6fb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e1a9fe59225c17d54f6e7213d2b3c3fa70ee58e0
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77092917"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102881"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>.NET Core 도구의 변경 내용에 대한 대략적인 개요
 
@@ -30,7 +30,7 @@ ms.locfileid: "77092917"
 
 ![Preview 2 도구에 대한 상위 수준 아키텍처](media/cli-msbuild-architecture/p2-arch.png)
 
-미리 보기 2의 도구 레이어는 간단합니다. 맨 아래에 .NET Core CLI가 기초가 됩니다. Visual Studio 또는 Visual Studio Code와 같은 높은 수준의 다른 도구는 모두 프로젝트 빌드와 종속성 복원을 위해 CLI를 사용합니다. 예를 들어 Visual Studio에서 복원 작업을 수행하려면 CLI에서 `dotnet restore`([참고 참조](#dotnet-restore-note)) 명령을 호출합니다.
+미리 보기 2의 도구 레이어는 간단합니다. 맨 아래에 .NET Core CLI가 기초가 됩니다. Visual Studio 또는 Visual Studio Code와 같은 높은 수준의 다른 도구는 모두 프로젝트 빌드와 종속성 복원을 위해 CLI를 사용합니다. 예를 들어 Visual Studio에서 복원 작업을 수행하려면 CLI에서 `dotnet restore` 명령을 호출합니다.
 
 새 프로젝트 시스템으로의 이전으로 이전 다이어그램이 다음과 같이 변경됩니다.
 
@@ -41,7 +41,7 @@ ms.locfileid: "77092917"
 > [!NOTE]
 > “대상”은 MSBuild에서 호출할 수 있는 명명된 작업을 나타내는 MSBuild 용어입니다. 일반적으로 대상에서 구현되는 로직을 실행하는 하나 이상의 작업과 함께 사용됩니다. MSBuild는 `Copy` 또는 `Execute`와 같이 바로 사용할 수 있는 많은 대상을 지원합니다. 또한 이를 통해 사용자는 관리되는 코드를 사용하여 고유한 작업을 기록하고 대상을 정의하여 이러한 작업을 실행할 수 있습니다. 자세한 내용은 [MSBuild 작업](/visualstudio/msbuild/msbuild-tasks)을 참조하세요.
 
-이제 모든 도구 집합은 CLI를 비롯하여 공유된 SDK 구성 요소와 대상을 사용합니다. 예를 들어 Visual Studio 2019는 .NET Core 프로젝트에 대한 종속성을 복원하는 `dotnet restore`([참고 참조](#dotnet-restore-note)) 명령을 호출하지 않습니다. 대신 “복원” 대상을 직접 사용합니다. 이는 MSBuild 대상이므로, 원시 MSBuild를 사용하여 [dotnet msbuild](dotnet-msbuild.md) 명령을 통해 실행할 수도 있습니다.
+이제 모든 도구 집합은 CLI를 비롯하여 공유된 SDK 구성 요소와 대상을 사용합니다. 예를 들어 Visual Studio 2019는 .NET Core 프로젝트에 대한 종속성을 복원하는 `dotnet restore` 명령을 호출하지 않습니다. 대신 “복원” 대상을 직접 사용합니다. 이는 MSBuild 대상이므로, 원시 MSBuild를 사용하여 [dotnet msbuild](dotnet-msbuild.md) 명령을 통해 실행할 수도 있습니다.
 
 ### <a name="cli-commands"></a>CLI 명령
 
@@ -73,5 +73,6 @@ ms.locfileid: "77092917"
 
 이 규칙에 대한 주목할 만한 예외는 `new` 및 `run` 명령입니다. 이것은 MSBuild 대상으로 구현된 적이 없습니다.
 
-<a name="dotnet-restore-note"></a>
+### <a name="implicit-restore"></a>암시적 복원
+
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

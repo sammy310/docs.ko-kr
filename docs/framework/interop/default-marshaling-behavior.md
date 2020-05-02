@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 ms.openlocfilehash: f7df323dacfbee3361fe75d831f1e87df328b194
 ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/09/2020
 ms.locfileid: "80989222"
@@ -172,7 +172,7 @@ internal class DelegateTest {
   
  형식이 지정된 형식은 메모리에서 해당 멤버의 레이아웃을 명시적으로 제어하는 정보가 포함된 복합 형식입니다. 멤버 레이아웃 정보는 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 특성을 사용하여 제공됩니다. 레이아웃은 다음 <xref:System.Runtime.InteropServices.LayoutKind> 열거형 값 중 하나일 수 있습니다.  
   
-- **레이아웃Kind.Auto**  
+- **LayoutKind.Auto**  
   
      공용 언어 런타임이 효율성을 위해 형식의 멤버 순서를 자유롭게 조정할 수 있음을 나타냅니다. 그러나 값 형식이 비관리 코드에 전달될 때는 멤버의 레이아웃을 예측할 수 있습니다. 이러한 구조체를 자동으로 마샬링하려고 하면 예외가 발생합니다.  
   
@@ -376,9 +376,9 @@ interface _Graphics {
   
 |시스템 값 형식|IDL 형식|  
 |-----------------------|--------------|  
-|<xref:System.DateTime?displayProperty=nameWithType>|**날짜**|  
-|<xref:System.Decimal?displayProperty=nameWithType>|**10 진수**|  
-|<xref:System.Guid?displayProperty=nameWithType>|**Guid**|  
+|<xref:System.DateTime?displayProperty=nameWithType>|**DATE**|  
+|<xref:System.Decimal?displayProperty=nameWithType>|**DECIMAL**|  
+|<xref:System.Guid?displayProperty=nameWithType>|**GUID**|  
 |<xref:System.Drawing.Color?displayProperty=nameWithType>|**OLE_COLOR**|  
   
  다음 코드에서는 Stdole2 형식 라이브러리에 있는 관리되지 않는 형식 **DATE**, **GUID**, **DECIMAL** 및 **OLE_COLOR**의 정의를 보여 줍니다.  

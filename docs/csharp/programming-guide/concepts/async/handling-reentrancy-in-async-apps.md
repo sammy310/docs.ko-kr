@@ -2,12 +2,12 @@
 title: 비동기 앱에서 재진입 처리(C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: 67fbbd294ffe6219b58065f974543b2dd483a92c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d46a87ed2200dc92b8e3d23be80306a31a01e501
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77451865"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738313"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>비동기 앱에서 재진입 처리(C#)
 
@@ -33,7 +33,7 @@ ms.locfileid: "77451865"
 > [!NOTE]
 > 현재 앱 개발에 사용할 최소 버전은 TLS(전송 계층 보안) 버전 1.2입니다. 앱이 .NET Framework 4.7 이전 버전을 대상으로 하는 경우, 다음 문서에서 [.NET Framework를 사용한 TLS(전송 계층 보안) 모범 사례](../../../../framework/network-programming/tls.md)를 참조하세요.
 
-## <a name="BKMK_RecognizingReentrancy"></a> 재진입 인식
+## <a name="recognizing-reentrancy"></a><a name="BKMK_RecognizingReentrancy"></a> 재진입 인식
 
 이 항목의 예제에서는 사용자가 **시작** 버튼를 선택하여 일련의 웹 사이트를 다운로드하고 다운로드되는 총 바이트 수를 계산하는 비동기 앱을 시작합니다. 예제의 동기 버전은 처음 실행 후 앱 실행이 완료될 때까지 UI 스레드에서 해당 이벤트를 무시하므로 사용자가 버튼를 선택하는 횟수에 관계없이 동일한 방식으로 응답합니다. 그러나 비동기 앱에서 UI 스레드는 계속 응답하므로 완료되기 전에 비동기 작업을 다시 실행할 수 있습니다.
 
@@ -89,9 +89,9 @@ TOTAL bytes returned:  890591
 TOTAL bytes returned:  890591
 ```
 
-이 항목의 끝으로 스크롤하면 이 출력을 생성하는 코드를 검토할 수 있습니다. 로컬 컴퓨터에 솔루션을 다운로드한 다음, WebsiteDownload 프로젝트를 실행하거나 이 항목의 끝에 있는 코드를 사용하여 고유한 프로젝트를 만들면 코드를 테스트할 수 있습니다. 자세한 내용 및 지침은 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)을 참조하세요.
+이 항목의 끝으로 스크롤하면 이 출력을 생성하는 코드를 검토할 수 있습니다. 로컬 컴퓨터에 솔루션을 다운로드한 다음, WebsiteDownload 프로젝트를 실행하거나 이 항목의 끝에 있는 코드를 사용하여 고유한 프로젝트를 만들어 코드를 테스트할 수 있습니다. 자세한 내용 및 지침은 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)을 참조하세요.
 
-## <a name="BKMK_HandlingReentrancy"></a> 재입력 처리
+## <a name="handling-reentrancy"></a><a name="BKMK_HandlingReentrancy"></a> 재진입 처리
 
 앱에서 수행하려는 작업에 따라 다양한 방법으로 재진입을 처리할 수 있습니다. 이 항목에서는 다음 예제를 제공합니다.
 
@@ -107,11 +107,11 @@ TOTAL bytes returned:  890591
 
   요청한 모든 작업이 비동기적으로 실행되도록 허용하지만 각 작업의 결과가 함께 순서대로 나타나도록 출력의 표시를 조정합니다.
 
-### <a name="BKMK_DisableTheStartButton"></a> 시작 버튼 사용 안 함
+### <a name="disable-the-start-button"></a><a name="BKMK_DisableTheStartButton"></a> 시작 버튼 사용 안 함
 
-**이벤트 처리기의 위쪽에 있는 버튼를 사용하지 않도록 설정하여 작업이 실행되는 동안**시작`StartButton_Click` 버튼를 차단할 수 있습니다. 그런 다음 작업이 완료되면 `finally` 블록 내에서 단추를 다시 사용하도록 설정하여 사용자가 앱을 다시 실행하도록 할 수 있습니다.
+`StartButton_Click` 이벤트 처리기의 위쪽에 있는 버튼를 사용하지 않도록 설정하여 작업이 실행되는 동안 **시작** 버튼를 차단할 수 있습니다. 그런 다음 작업이 완료되면 `finally` 블록 내에서 버튼를 다시 사용하도록 설정하여 사용자가 앱을 다시 실행하도록 할 수 있습니다.
 
-이 시나리오를 설정하려면 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)에서 제공하는 기본 코드를 다음과 같이 변경합니다. [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)(비동기 샘플: .NET 데스크톱 앱의 재입력)에서 완성된 앱을 다운로드할 수도 있습니다. 프로젝트 이름은 DisableStartButton입니다.
+이 시나리오를 설정하려면 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)에서 제공하는 기본 코드를 다음과 같이 변경합니다. [비동기 샘플: .NET 데스크톱 앱의 재진입](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)에서 완성된 앱을 다운로드할 수도 있습니다. 프로젝트 이름은 DisableStartButton입니다.
 
 ```csharp
 private async void StartButton_Click(object sender, RoutedEventArgs e)
@@ -138,15 +138,15 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-변경의 결과로 `AccessTheWebAsync`에서 웹 사이트를 다운로드하는 동안 단추가 응답하지 않으므로 프로세스를 다시 입력할 수 없습니다.
+변경의 결과로 `AccessTheWebAsync`에서 웹 사이트를 다운로드하는 동안 버튼이 응답하지 않으므로 프로세스를 다시 입력할 수 없습니다.
 
-### <a name="BKMK_CancelAndRestart"></a> 작업 취소 및 다시 시작
+### <a name="cancel-and-restart-the-operation"></a><a name="BKMK_CancelAndRestart"></a> 작업 취소 및 다시 시작
 
 **시작** 버튼을 사용하지 않도록 설정하는 대신 버튼을 활성 상태로 유지하지만 사용자가 버튼을 다시 클릭하는 경우 이미 실행되고 있는 작업을 취소하고 가장 최근에 시작한 작업이 계속되도록 합니다.
 
 취소에 대한 자세한 내용은 [비동기 애플리케이션 미세 조정(C#)](./fine-tuning-your-async-application.md)을 참조하세요.
 
-이 시나리오를 설정하려면 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)에서 제공하는 기본 코드를 다음과 같이 변경합니다. [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)(비동기 샘플: .NET 데스크톱 앱의 재입력)에서 완성된 앱을 다운로드할 수도 있습니다. 프로젝트의 이름은 CancelAndRestart입니다.
+이 시나리오를 설정하려면 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)에서 제공하는 기본 코드를 다음과 같이 변경합니다. [비동기 샘플: .NET 데스크톱 앱의 재진입](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)에서 완성된 앱을 다운로드할 수도 있습니다. 프로젝트의 이름은 CancelAndRestart입니다.
 
 1. 모든 메서드에 대한 범위 내에 있는 <xref:System.Threading.CancellationTokenSource> 변수 `cts`를 선언합니다.
 
@@ -227,7 +227,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
 
 - `StartButton_Click`에서 취소 토큰을 허용하도록 매개 변수를 추가합니다.
 
-- <xref:System.Net.Http.HttpClient.GetAsync%2A>가 `GetAsync` 인수를 허용하므로 <xref:System.Threading.CancellationToken> 메서드를 사용하여 웹 사이트를 다운로드합니다.
+- `GetAsync`가 <xref:System.Threading.CancellationToken> 인수를 허용하므로 <xref:System.Net.Http.HttpClient.GetAsync%2A> 메서드를 사용하여 웹 사이트를 다운로드합니다.
 
 - `DisplayResults`를 호출하여 다운로드한 각 웹 사이트에 대한 결과를 표시하려면 먼저 `ct`를 확인하여 현재 작업이 취소되었는지 확인합니다.
 
@@ -301,15 +301,15 @@ TOTAL bytes returned:  890591
 
 부분 목록을 제거하려면 `StartButton_Click`에서 코드 첫 줄의 주석 처리를 제거하여 사용자가 작업을 다시 시작할 때마다 텍스트 상자의 내용을 지웁니다.
 
-### <a name="BKMK_RunMultipleOperations"></a> 여러 작업을 실행하고 출력을 큐 대기
+### <a name="run-multiple-operations-and-queue-the-output"></a><a name="BKMK_RunMultipleOperations"></a> 여러 작업을 실행하고 출력을 큐 대기
 
-이 세 번째 예제는 사용자가 **시작** 버튼을 선택할 때마다 앱이 다른 비동기 작업을 시작하고 모든 작업이 실행되어 완료된다는 점에서 가장 복잡합니다. 요청한 모든 작업은 목록에서 비동기적으로 웹 사이트를 다운로드하지만 작업의 출력은 순차적으로 제공됩니다. 즉, 실제 다운로드 작업은 [재입력 인식](#BKMK_RecognizingReentrancy)의 출력에 표시된 대로 인터리브되지만 각 그룹에 대한 결과 목록은 별도로 제공됩니다.
+이 세 번째 예제는 사용자가 **시작** 버튼을 선택할 때마다 앱이 다른 비동기 작업을 시작하고 모든 작업이 실행되어 완료된다는 점에서 가장 복잡합니다. 요청한 모든 작업은 목록에서 비동기적으로 웹 사이트를 다운로드하지만 작업의 출력은 순차적으로 제공됩니다. 즉, 실제 다운로드 작업은 [재진입 인식](#BKMK_RecognizingReentrancy)의 출력에 표시된 대로 인터리브되지만 각 그룹에 대한 결과 목록은 별도로 제공됩니다.
 
 작업은 표시 프로세스의 게이트키퍼 역할을 하는 전역 <xref:System.Threading.Tasks.Task>, `pendingWork`를 공유합니다.
 
-이 시나리오를 설정하려면 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)에서 제공하는 기본 코드를 다음과 같이 변경합니다. [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)(비동기 샘플: .NET 데스크톱 앱의 재입력)에서 완성된 앱을 다운로드할 수도 있습니다. 프로젝트의 이름은 QueueResults입니다.
+이 시나리오를 설정하려면 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)에서 제공하는 기본 코드를 다음과 같이 변경합니다. [비동기 샘플: .NET 데스크톱 앱의 재진입](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)에서 완성된 앱을 다운로드할 수도 있습니다. 프로젝트의 이름은 QueueResults입니다.
 
-다음 출력은 사용자가 **시작** 단추를 한 번만 선택하는 경우의 결과를 보여 줍니다. 문제 레이블 A는 처음으로 **시작** 버튼을 선택한 경우의 결과임을 나타냅니다. 숫자는 다운로드 대상 목록에서 URL의 순서를 보여 줍니다.
+다음 출력은 사용자가 **시작** 버튼을 한 번만 선택하는 경우의 결과를 보여 줍니다. 문제 레이블 A는 처음으로 **시작** 버튼을 선택한 경우의 결과임을 나타냅니다. 숫자는 다운로드 대상 목록에서 URL의 순서를 보여 줍니다.
 
 ```output
 #Starting group A.
@@ -437,7 +437,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
 
 그런 다음 `AccessTheWebAsync`는 `FinishOneGroupAsync`를 호출하여 각 다운로드가 완료될 때까지 대기하고 해당 길이를 표시합니다.
 
-`FinishOneGroupAsync`는 `pendingWork`의 `AccessTheWebAsync`에 할당되는 작업을 반환합니다. 해당 값은 작업이 완료되기 전에 다른 작업에 의한 중단을 방지합니다.
+`FinishOneGroupAsync`는 `AccessTheWebAsync`의 `pendingWork`에 할당되는 작업을 반환합니다. 해당 값은 작업이 완료되기 전에 다른 작업에 의한 중단을 방지합니다.
 
 ```csharp
 private async Task<char> AccessTheWebAsync(char grp)
@@ -547,16 +547,16 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 
     그룹이 `StartButton_Click`을 입력한 후 작업은 `FinishOneGroupAsync`를 입력한 다음에야 await 식을 완료합니다. 따라서 코드의 해당 세그먼트 중에는 다른 작업에서 제어할 수 없습니다.
 
-## <a name="BKMD_SettingUpTheExample"></a> 예제 앱 검토 및 실행
+## <a name="reviewing-and-running-the-example-app"></a><a name="BKMD_SettingUpTheExample"></a> 예제 앱 검토 및 실행
 
 예제 앱을 더 잘 이해하려면 다운로드하거나, 직접 빌드하거나, 앱을 구현하지 않고 이 항목의 끝에 있는 코드를 검토할 수 있습니다.
 
 > [!NOTE]
 > 예제를 WPF(Windows Presentation Foundation) 데스크톱 앱으로 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.
 
-### <a name="BKMK_DownloadingTheApp"></a> 앱 다운로드
+### <a name="downloading-the-app"></a><a name="BKMK_DownloadingTheApp"></a> 앱 다운로드
 
-1. [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)(비동기 샘플: .NET 데스크톱 앱의 재입력)에서 압축 파일을 다운로드합니다.
+1. [Async Samples: .NET 데스크톱 앱의 재진입](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)에서 완성된 앱을 다운로드할 수도 있습니다.
 
 2. 다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.
 
@@ -568,7 +568,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 
 6. CTRL+F5를 선택하여 프로젝트를 빌드하고 실행합니다.
 
-### <a name="BKMK_BuildingTheApp"></a> 앱 빌드
+### <a name="building-the-app"></a><a name="BKMK_BuildingTheApp"></a> 앱 빌드
 
 다음 섹션에서는 예제를 WPF 앱으로 빌드하는 코드를 제공합니다.
 
@@ -576,7 +576,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 
 1. Visual Studio를 시작합니다.
 
-2. 주 메뉴에서 **파일**, **새로 만들기**, **프로젝트**를 선택합니다.
+2. 메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 차례로 선택합니다.
 
      **새 프로젝트** 대화 상자가 열립니다.
 
@@ -610,7 +610,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
     </Window>
     ```
 
-     텍스트 상자와 단추가 포함된 간단한 창이 MainWindow.xaml의 **디자인** 보기에 나타납니다.
+     텍스트 상자와 버튼이 포함된 간단한 창이 MainWindow.xaml의 **디자인** 보기에 나타납니다.
 
 8. **솔루션 탐색기**에서 **참조**를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 선택합니다.
 
@@ -728,7 +728,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 
 12. [시작 버튼 사용 안 함](#BKMK_DisableTheStartButton), [작업 취소 및 다시 시작](#BKMK_CancelAndRestart) 또는 [여러 작업을 실행하고 출력을 큐 대기](#BKMK_RunMultipleOperations)의 내용을 변경하여 재진입을 처리합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [연습: async 및 await를 사용하여 웹에 액세스(C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [async 및 await를 사용한 비동기 프로그래밍(C#)](./index.md)

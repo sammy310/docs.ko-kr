@@ -2,12 +2,12 @@
 title: switch 식 - C# 참조
 description: 패턴 일치 및 기타 데이터 검사에 C# switch 식을 사용하는 방법을 알아봅니다.
 ms.date: 03/19/2020
-ms.openlocfilehash: 9e609bcea0f92f492b5f9b07840e47f75c1b71e4
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: f53cbe873c841271f64496e4e5ff1f11750c7b8a
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249761"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82140661"
 ---
 # <a name="switch-expression-c-reference"></a>switch 식(C# 참조)
 
@@ -50,7 +50,7 @@ switch 식 암(arm)에서는 많은 패턴이 지원됩니다. 앞의 예제에�
 
 [재귀 패턴](~/_csharplang/proposals/csharp-8.0/patterns.md#switch-expression)에 대한 C# 언어 사양 제안에서 자세한 내용을 알아볼 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 연산자](index.md)

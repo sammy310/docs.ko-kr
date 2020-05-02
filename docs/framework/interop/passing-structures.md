@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
 ms.openlocfilehash: 11e329fa8f0c059b6c2f1c8ccb1d6bd0d0f0030a
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181333"
@@ -23,7 +23,7 @@ ms.locfileid: "79181333"
 |-------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|  
 |`DoWork(MyType x);`<br /><br /> 0 수준의 간접 참조를 요구합니다.|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> 0 수준의 간접 참조를 추가합니다.|이미 한 수준의 간접 참조가 있으므로 가능하지 않습니다.|  
 |`DoWork(MyType* x);`<br /><br /> 한 수준의 간접 참조를 요구합니다.|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> 한 수준의 간접 참조를 추가합니다.|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> 0 수준의 간접 참조를 추가합니다.|  
-|`DoWork(MyType** x);`<br /><br /> 두 수준의 간접 참조를 요구합니다.|**ByRef** **ByRef** 또는 `ref` `ref`는 사용할 수 없기 때문에 불가능합니다.|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> 한 수준의 간접 참조를 추가합니다.|  
+|`DoWork(MyType** x);`<br /><br /> 두 수준의 간접 참조를 요구합니다.|**ByRef** **ByRef** 또는 `ref` `ref`는 사용할 수 없기 때문에 불가능합니다.|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> 한 수준의 간접 참조를 추가합니다.|  
   
  이 표에서는 플랫폼 호출 선언에 대한 다음과 같은 지침을 설명합니다.  
   
@@ -173,7 +173,7 @@ public class TestPlatformInvoke
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [DLL 함수 호출](calling-a-dll-function.md)
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>

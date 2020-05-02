@@ -3,12 +3,12 @@ title: 분기 및 루프 - C# 소개 자습서
 description: 분기 및 루프에 관한 이 자습서에서는 C# 코드를 작성하여 문을 반복적으로 실행하기 위한 조건부 분기 및 루프를 지원하는 언어 구문을 살펴봅니다.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 44b634e3c2120116ee7fd66770398a6b66c8ed8c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d8c10a7462b7c27c5353aee6d957732a8d161015
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73739133"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135947"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>분기 및 루프 문이 포함된 조건부 논리 알아보기
 
@@ -106,7 +106,7 @@ else
 }
 ```
 
-`==` 기호는 *같음*을 테스트합니다.{4}{5} `==`을 사용하면 같음 테스트가 `a = 5`에서 확인한 할당과 구분됩니다.
+`==` 기호는 같음을 테스트합니다.  `==`을 사용하면 같음 테스트가 `a = 5`에서 확인한 할당과 구분됩니다.
 
 `&&`는 “and”를 나타냅니다. true 분기에서 문을 실행하려면 두 조건이 모두 true여야 합니다.  이러한 예제에서는 `{` 및 `}`로 문을 묶으면 각 조건부 분기에 여러 문을 가질 수 있음도 보여 줍니다.
 
@@ -127,7 +127,7 @@ else
 
 `a`, `b` 및 `c`의 값을 수정하고 `&&` 및 `||` 간에 전환하여 살펴봅니다. `&&` 및 `||` 연산자가 어떻게 작동하는지 더 잘 이해할 수 있습니다.
 
-첫 번째 단계를 완료했습니다. 다음 섹션을 시작하기 전에 현재 코드를 별도의 메서드로 이동합니다. 이렇게 하면 새 예제 작업을 쉽게 시작할 수 있습니다. `Main` 메서드의 이름을 `ExploreIf`로 바꾸고 `Main`를 호출하는 새 `ExploreIf` 메서드를 작성합니다. 작업을 마치면 코드가 다음과 같이 됩니다.
+첫 번째 단계를 완료했습니다. 다음 섹션을 시작하기 전에 현재 코드를 별도의 메서드로 이동합니다. 이렇게 하면 새 예제 작업을 쉽게 시작할 수 있습니다. `Main` 메서드의 이름을 `ExploreIf`로 바꾸고 `ExploreIf`를 호출하는 새 `Main` 메서드를 작성합니다. 작업을 마치면 코드가 다음과 같이 됩니다.
 
 ```csharp
 using System;
@@ -204,7 +204,7 @@ while (counter < 10)
 
 `while` 문은 조건을 검사하고 `while` 뒤에 있는 문 또는 문 블록을 실행합니다. 조건이 false가 될 때까지 반복적으로 조건을 확인하고 해당 문을 실행합니다.
 
-이 예제에서는 다른 새 연산자가 하나 있습니다. `++` 변수 뒤의 `counter`는 **증가** 연산자입니다. 이 연산자는 `counter`의 값에 1을 더하고 해당 값을 `counter` 변수에 저장합니다.
+이 예제에서는 다른 새 연산자가 하나 있습니다. `counter` 변수 뒤의 `++`는 **증가** 연산자입니다. 이 연산자는 `counter`의 값에 1을 더하고 해당 값을 `counter` 변수에 저장합니다.
 
 > [!IMPORTANT]
 > 코드를 실행할 때 `while` 루프 조건이 false로 바뀌는지 확인합니다. 그러하지 않으면 프로그램이 종료되지 않는 **무한 루프**를 생성합니다. 이러한 내용이 이 샘플에 설명되어 있지는 않은데, **CTRL-C** 또는 다른 방법을 사용하여 프로그램을 강제 종료해야 하기 때문입니다.
@@ -247,6 +247,42 @@ for (int index = 0; index < 10; index++)
 - 다른 값에서 중지하도록 조건을 변경합니다.
 
 완료하면, 학습한 내용을 토대로 직접 코드를 작성해 보겠습니다.
+
+## <a name="created-nested-loops"></a>중첩 루프 만들기
+
+`while`, `do` 또는 `for` 루프를 다른 루프 내에 중첩하여 내부 루프에 있는 각 항목과 외부 루프에 있는 각 항목의 조합을 사용하여 행렬을 만들 수 있습니다. 행과 열을 나타내는 영숫자 쌍 세트를 작성하겠습니다.
+
+하나의 `for` 루프가 행을 생성할 수 있습니다.
+
+```csharp
+for (int row = 1; row < 11; row++)
+{
+    Console.WriteLine($"The row is {row}");
+}
+```
+
+다른 루프는 열을 생성할 수 있습니다.
+
+```csharp
+for (char column = 'a'; column < 'k'; column++)
+{
+    Console.WriteLine($"The column is {column}");
+}
+```
+
+한 루프를 다른 루프 안에 중첩하여 쌍을 구성할 수 있습니다.
+
+```csharp
+for (int row = 1; row < 11; row++)
+{
+    for (char column = 'a'; column < 'k'; column++)
+    {
+        Console.WriteLine($"The cell is ({row}, {column})");
+    }
+}
+```
+
+내부 루프의 전체 실행마다 외부 루프가 한 번씩 증가하는 것을 볼 수 있습니다. 행과 열 중첩을 반대로 바꾸고 변경 내용을 직접 확인하세요.
 
 ## <a name="combine-branches-and-loops"></a>분기 및 루프 결합
 

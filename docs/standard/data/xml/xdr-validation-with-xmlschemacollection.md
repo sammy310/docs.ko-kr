@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 00833027-1428-4586-83c1-42f5de3323d1
 ms.openlocfilehash: c1383dbb5419eadbfb7c07f288ee46b1ca11cf5c
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710000"
@@ -20,7 +20,7 @@ ms.locfileid: "75710000"
 > [!IMPORTANT]
 > 이제 <xref:System.Xml.Schema.XmlSchemaCollection> 클래스는 사용되지 않으며 <xref:System.Xml.Schema.XmlSchemaSet> 클래스로 대체되었습니다. <xref:System.Xml.Schema.XmlSchemaSet> 클래스에 대한 자세한 내용은 [스키마 컴파일을 위한 XmlSchemaSet](xmlschemaset-for-schema-compilation.md)을 참조하세요.
 
-예를 들어, XML 문서의 루트 요소가 `<bookstore>`일 경우 스키마를 **XmlSchemaCollection**에 추가하면 다음과 같이 동일한 네임스페이스를 참조합니다.
+예를 들어, XML 문서의 루트 요소가 `<bookstore xmlns="urn:newbooks-schema">`일 경우 스키마를 **XmlSchemaCollection**에 추가하면 다음과 같이 동일한 네임스페이스를 참조합니다.
 
 ```vb
 xsc.Add("urn:newbooks-schema", "newbooks.xdr")
@@ -30,7 +30,7 @@ xsc.Add("urn:newbooks-schema", "newbooks.xdr")
 xsc.Add("urn:newbooks-schema", "newbooks.xdr");
 ```
 
-다음 코드 예제에서는 **XmlTextReader** 를 사용 하는 **XMLVALIDATINGREADER** 를 만들고 xdr 스키마를 **XmlSchemaCollection**에 추가 합니다.
+다음 코드 예제에서는 **XmlTextReader**를 사용하는 **XmlValidatingReader**를 만들고 XDR 스키마인 HeadCount.xdr을 **XmlSchemaCollection**에 추가합니다.
 
 ```vb
 Imports System.IO

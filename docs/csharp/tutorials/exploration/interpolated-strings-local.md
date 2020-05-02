@@ -2,18 +2,18 @@
 title: 문자열 보간 - C# 자습서
 description: 이 자습서에서는 C# 문자열 보간 기능을 사용하여 더 큰 문자열에 형식이 지정된 식을 포함하는 방법을 보여 줍니다.
 ms.date: 10/23/2018
-ms.openlocfilehash: 593f3a77370da73dfd5f090be98112327b86b1f7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 22637895f241585bac4909479f225bf3cb581614
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75346789"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738279"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>문자열 보간을 사용하여 형식이 지정된 문자열 생성
 
 이 자습서에서는 C# [문자열 보간](../../language-reference/tokens/interpolated.md)을 사용하여 단일 결과 문자열에 값을 삽입하는 방법을 설명합니다. C# 코드를 작성하고 컴파일 및 실행 결과를 확인합니다. 이 자습서는 문자열에 값을 삽입하고, 이러한 값을 다양한 방식으로 형식화하는 방법을 보여 주는 일련의 단원으로 구성됩니다.
 
-이 자습서에서는 개발에 사용할 수 있는 머신이 있다고 예상합니다. .NET 자습서 [Hello World 10분 완성](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)에는 Windows, Linux 또는 macOS의 로컬 개발 환경 설정에 대한 지침이 포함되어 있습니다. 브라우저에서 자습서의 [대화형 버전](interpolated-strings.yml)을 완료할 수도 있습니다.
+이 자습서에서는 개발에 사용할 수 있는 머신이 있다고 예상합니다. .NET 자습서 [Hello World 10분 완성](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)에는 Windows, Linux 또는 macOS의 로컬 개발 환경 설정에 대한 지침이 포함되어 있습니다. 브라우저에서 이 자습서의 [대화형 버전](interpolated-strings.yml)을 완료할 수도 있습니다.
 
 ## <a name="create-an-interpolated-string"></a>보간된 문자열 만들기
 

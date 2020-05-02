@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: ffd97806-ab43-4538-8de2-5828bfbbde57
 ms.openlocfilehash: ae3db77d7659b7e1d36a9bccf7143f52c536dbbf
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710936"
@@ -13,7 +13,7 @@ ms.locfileid: "75710936"
 # <a name="entity-references-are-expanded-and-not-preserved"></a>유지되지 않고 확장되는 엔터티 참조
 엔터티 참조가 확장되어 해당 참조가 나타내는 텍스트로 바뀌면 **XmlEntityReference** 노드가 생성되지 않습니다. 대신 엔터티 선언이 구문 분석되고 선언의 내용에서 생성된 노드가 **XmlEntityReference**를 대신하여 복사됩니다. 따라서 `&publisher;` 예제에서 `&publisher;`가 저장되는 대신 **XmlText** 노드가 생성됩니다.  
   
- ![확장 된 트리 구조](../../../../docs/standard/data/xml/media/xmlentityref-expanded-nodes.gif "xmlentityref_expanded_nodes")  
+ ![확장된 트리 구조](../../../../docs/standard/data/xml/media/xmlentityref-expanded-nodes.gif "xmlentityref_expanded_nodes")  
 확장되는 엔터티 참조의 트리 구조  
   
  `B` 또는 `<` 같은 문자 엔터티는 유지되지 않습니다. 대신 항상 확장되어 텍스트 노드로 표현됩니다.  

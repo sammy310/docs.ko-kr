@@ -2,18 +2,18 @@
 title: dotnet build 명령
 description: dotnet build 명령은 프로젝트와 모든 종속성을 빌드합니다.
 ms.date: 02/14/2020
-ms.openlocfilehash: 27deca4ab1c12314db5214c73660862a8a57a398
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 1022df059493c7e045f81d4be93dff2fdab77eb1
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463720"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102842"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
 **이 문서의 적용 대상:** ✔️ .NET Core 2.x SDK 이상 버전
 
-## <a name="name"></a>name
+## <a name="name"></a>이름
 
 `dotnet build` - 프로젝트 및 모든 종속성을 빌드합니다.
 
@@ -43,9 +43,13 @@ dotnet build -h|--help
 
 .NET Core 3.0 이상을 대상으로 하는 실행 가능 프로젝트의 경우 라이브러리 종속성이 출력 폴더에 복사됩니다. 따라서 웹 프로젝트 등에 다른 게시 특정 논리가 없는 경우 빌드 출력을 배포할 수 있습니다.
 
-빌드하려면 애플리케이션의 종속성을 나열하는 *project.assets.json* 파일이 필요합니다. [`dotnet restore`](dotnet-restore.md)가 실행되면 파일이 만들어집니다. 자산 파일이 없으면 도구로 참조 어셈블리를 확인할 수 없으므로 오류가 발생합니다. .NET Core 1.x SDK를 사용할 경우 `dotnet restore`를 실행하기 전에 `dotnet build`를 명시적으로 실행해야 합니다. .NET Core 2.0 SDK부터 `dotnet restore`는 `dotnet build`를 실행할 때 암시적으로 실행됩니다. 빌드 명령을 실행할 때 암시적 복원을 사용하지 않으려면 `--no-restore` 옵션을 전달하면 됩니다.
+### <a name="implicit-restore"></a>암시적 복원
+
+빌드하려면 애플리케이션의 종속성을 나열하는 *project.assets.json* 파일이 필요합니다. [`dotnet restore`](dotnet-restore.md)가 실행되면 파일이 만들어집니다. 자산 파일이 없으면 도구로 참조 어셈블리를 확인할 수 없으므로 오류가 발생합니다.
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
+
+### <a name="executable-or-library-output"></a>실행 파일 또는 라이브러리 출력
 
 프로젝트가 실행 가능한지 아닌지 여부는 프로젝트 파일의 `<OutputType>` 속성으로 확인할 수 있습니다. 다음 예제에서는 실행 코드를 생성하는 프로젝트를 보여 줍니다.
 
@@ -123,7 +127,7 @@ dotnet build -h|--help
 
 - **`--version-suffix <VERSION_SUFFIX>`**
 
-  프로젝트를 빌드할 때 사용할 `$(VersionSuffix)` 속성의 값을 설정합니다. `$(Version)` 속성이 설정되지 않은 경우에만 작동합니다. 그런 다음, `$(Version)`이 대시로 구분하여 `$(VersionPrefix)`와 결합된 `$(VersionSuffix)`로 설정됩니다.
+  프로젝트를 빌드할 때 사용할 `$(VersionSuffix)` 속성의 값을 설정합니다. `$(Version)` 속성이 설정되지 않은 경우에만 작동합니다. 그런 다음, `$(Version)`이 대시로 구분하여 `$(VersionSuffix)`와 결합된 `$(VersionPrefix)`로 설정됩니다.
 
 ## <a name="examples"></a>예
 
