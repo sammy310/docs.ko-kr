@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
 ms.openlocfilehash: ca104c512641774217de5e270dc50b7393fc5725
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78159249"
@@ -39,7 +39,7 @@ ms.locfileid: "78159249"
 |<xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute>|프로세스 중 사용자가 작성한 코드를 실행할 수 있도록, COM에서 어셈블리 등록을 취소할 때 메서드를 호출해야 함을 나타냅니다.|  
 |<xref:System.Runtime.InteropServices.ComVisibleAttribute>|특성 값이 **false**와 같을 때 COM에 보이지 않는 형식을 렌더링합니다. 이 특성을 개별 형식 또는 전체 어셈블리에 적용하여 COM 표시 유형을 제어할 수 있습니다. 기본적으로 관리되는 모든 공용 형식이 표시됩니다. 표시하려는 경우에는 특성이 필요하지 않습니다.|  
 |<xref:System.Runtime.InteropServices.DispIdAttribute>|메서드 또는 필드의 COM DISPID(디스패치 식별자)를 지정합니다. 이 특성에는 설명하는 메서드, 필드 또는 속성에 대한 DISPID가 포함됩니다.<br /><br /> COM interop 도구는 이 특성을 적용할 수 있습니다.|
-|<xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute>|.NET에서 구현 된 COM 클래스의 기본 인터페이스를 나타냅니다.<br /><br /> COM interop 도구는 이 특성을 적용할 수 있습니다.|
+|<xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute>|.NET에서 구현된 COM 클래스의 기본 인터페이스를 나타냅니다.<br /><br /> COM interop 도구는 이 특성을 적용할 수 있습니다.|
 |<xref:System.Runtime.InteropServices.FieldOffsetAttribute>|**StructLayoutAttribute**와 함께 사용하고 **LayoutKind**가 명시적으로 설정된 경우 클래스 내 각 필드의 실제 위치를 나타냅니다.|  
 |<xref:System.Runtime.InteropServices.GuidAttribute>|클래스, 인터페이스 또는 전체 형식 라이브러리의 GUID(Globally Unique Identifier)를 지정합니다. 특성에 전달된 문자열은 **System.Guid** 형식에 허용되는 생성자 인수인 형식이어야 합니다.<br /><br /> COM interop 도구는 이 특성을 적용할 수 있습니다.|  
 |<xref:System.Runtime.InteropServices.IDispatchImplAttribute>|이중 인터페이스와 dispinterface를 COM에 노출할 때 공용 언어 런타임에서 사용하는 **IDispatch** 인터페이스 구현을 나타냅니다.|  
@@ -66,7 +66,7 @@ ms.locfileid: "78159249"
 |<xref:System.Runtime.InteropServices.TypeLibTypeAttribute>|원래 COM 형식 라이브러리에서 이 형식에 대해 가져온 **TYPEFLAGS**를 포함합니다.|  
 |<xref:System.Runtime.InteropServices.TypeLibVarAttribute>|원래 COM 형식 라이브러리에서 이 변수에 대해 가져온 **VARFLAGS**를 포함합니다.|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Runtime.InteropServices>
 - [.NET Framework 구성 요소를 COM에 노출](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)

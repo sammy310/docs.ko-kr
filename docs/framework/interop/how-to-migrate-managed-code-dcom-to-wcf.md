@@ -4,7 +4,7 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 ms.openlocfilehash: 2576e88c25ae381e90ec7d613efb648048145b3b
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181386"
@@ -301,7 +301,7 @@ public interface ISessionBoundObject
     }  
 ```  
   
- 다음은 이 서비스의 구현입니다. 이 구현에서는 세션 개체를 만들기 위해 단일 채널 팩터리를 유지 관리합니다.  `GetInstanceAddress`를 호출하면 채널을 만들고 이 채널과 연결된 원격 주소를 가리키는 <xref:System.ServiceModel.EndpointAddress10> 개체를 만듭니다.   <xref:System.ServiceModel.EndpointAddress10>은 값 방식으로 클라이언트에 반환될 수 있는 데이터 형식입니다.
+ 이 서비스의 구현은 다음과 같습니다. 이 구현에서는 세션 개체를 만들기 위해 단일 채널 팩터리를 유지 관리합니다.  `GetInstanceAddress`를 호출하면 채널을 만들고 이 채널과 연결된 원격 주소를 가리키는 <xref:System.ServiceModel.EndpointAddress10> 개체를 만듭니다.   <xref:System.ServiceModel.EndpointAddress10>은 값 방식으로 클라이언트에 반환될 수 있는 데이터 형식입니다.
   
 ```csharp  
 public class SessionBoundFactory : ISessionBoundFactory  
@@ -326,9 +326,9 @@ public class SessionBoundFactory : ISessionBoundFactory
   
 1. 세션 개체의 엔드포인트를 설명하는 `<client>` 섹션을 추가합니다.  이 시나리오에서는 서버가 클라이언트 역할도 하며 이 기능을 사용할 수 있도록 구성해야 합니다.  
   
-2. ph x="1" /&gt; 섹션에서 팩터리와 세션 개체의 서비스 엔드포인트를 선언합니다.  그러면 클라이언트가 서비스 엔드포인트와 통신하고 <xref:System.ServiceModel.EndpointAddress10>을 확보한 다음 세션 채널을 만들 수 있습니다.  
+2. `<services>` 섹션에서 팩터리와 세션 개체의 서비스 엔드포인트를 선언합니다.  그러면 클라이언트가 서비스 엔드포인트와 통신하고 <xref:System.ServiceModel.EndpointAddress10>을 확보한 다음 세션 채널을 만들 수 있습니다.  
   
- 다음은 이러한 설정이 있는 예제 구성 파일입니다.  
+ 다음은 이러한 설정을 포함하는 예제 구성 파일입니다.  
   
 ```xml  
 <configuration>  
@@ -420,7 +420,7 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [기본 WCF 프로그래밍](../wcf/basic-wcf-programming.md)
 - [서비스 디자인 및 구현](../wcf/designing-and-implementing-services.md)

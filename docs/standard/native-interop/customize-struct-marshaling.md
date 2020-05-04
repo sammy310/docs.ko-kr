@@ -7,7 +7,7 @@ dev_langs:
 - cpp
 ms.openlocfilehash: 7f8d1ad93633d6feef9c3c6f5d19aad52105968c
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "79401168"
@@ -22,15 +22,15 @@ ms.locfileid: "79401168"
 
 ✔️ 가능한 경우 항상 `LayoutKind.Sequential`을 사용하는 것이 좋습니다.
 
-✔️ 네이티브 구조체에 공용 구조체 등의 명시적인 레이아웃도 있는 경우에만 마샬링할 때 `LayoutKind.Explicit`를 사용합니다.
+✔️ 네이티브 구조체에 공용 구조체 등의 명시적인 레이아웃도 있는 경우에만 마샬링할 때 `LayoutKind.Explicit`를 사용하세요.
 
-❌.NET `LayoutKind.Explicit` Core 3.0 이전에 런타임을 대상으로 해야 하는 경우 Windows가 아닌 플랫폼에서 구조를 마샬링할 때는 사용하지 마십시오. 3.0 이전의 .NET Core 런타임은 인텔 또는 AMD 64비트 비Windows 시스템의 기본 함수에 값으로 명시적 구조를 전달하는 것을 지원하지 않습니다. 그러나 런타임은 모든 플랫폼에서 명시적 구조체를 참조로 전달하는 기능을 지원합니다.
+❌ .NET Core 3.0보다 이전의 런타임을 대상으로 해야 하는 경우 비 Windows 플랫폼에서 구조체를 마샬링할 때 `LayoutKind.Explicit`를 사용하지 마세요. .NET Core 3.0보다 이전의 런타임을 통해 Intel 또는 AMD 64비트 비 Windows 시스템에서 명시적 구조체를 네이티브 함수에 값으로 전달할 수 없습니다. 그러나 런타임은 모든 플랫폼에서 명시적 구조체를 참조로 전달하는 기능을 지원합니다.
 
 ## <a name="customizing-boolean-field-marshaling"></a>부울 필드 마샬링 사용자 지정
 
 네이티브 코드에는 여러 부울 표현이 있습니다. Windows만 해도 부울 값을 나타내는 세 가지 방법이 있습니다. 런타임은 구조체의 네이티브 정의를 알 수 없으므로, 부울 값을 나타내는 최상의 방법은 부울 값을 마샬링하는 방식을 추측하는 것입니다. .NET 런타임에서 부울 필드를 마샬링하는 방식을 나타내는 방법을 제공합니다. 다음 예제에서는 .NET `bool`을 여러 네이티브 부울 형식으로 마샬링하는 방법을 보여 줍니다.
 
-Boolean 값은 다음 예제와 같이 기본값으로 [`BOOL`](/windows/desktop/winprog/windows-data-types#BOOL) 네이티브 4바이트 Win32 값으로 마샬링됩니다.
+다음 예제와 같이 부울 값은 기본적으로 네이티브 4바이트 Win32 [`BOOL`](/windows/desktop/winprog/windows-data-types#BOOL) 값으로 마샬링되도록 설정됩니다.
 
 ```csharp
 public struct WinBool
@@ -317,7 +317,7 @@ struct DefaultString
 
 ## <a name="customizing-decimal-field-marshaling"></a>10진 필드 마샬링 사용자 지정
 
-Windows에서 작업하는 경우 네이티브 [ `CY` 또는 `CURRENCY` ](/windows/win32/api/wtypes/ns-wtypes-cy~r1) 구조를 사용하는 일부 API가 발생할 수 있습니다. 기본적으로 .NET `decimal` 형식은 기본 [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) 구조를 마샬링합니다. 그러나 <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> 값과 함께 <xref:System.Runtime.InteropServices.MarshalAsAttribute>를 사용하여 `decimal` 값을 네이티브 `CY` 값으로 변환하도록 마샬러에 지정할 수 있습니다.
+Windows에서 작업하는 경우 네이티브 [`CY` 또는 `CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy~r1) 구조체를 사용하는 일부 API를 발견할 수 있습니다. 기본적으로 .NET `decimal` 형식은 네이티브 [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) 구조체로 마샬링됩니다. 그러나 <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> 값과 함께 <xref:System.Runtime.InteropServices.MarshalAsAttribute>를 사용하여 `decimal` 값을 네이티브 `CY` 값으로 변환하도록 마샬러에 지정할 수 있습니다.
 
 ```csharp
 public struct Currency

@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 86dba977-5cc4-4567-964f-027ffabc47b2
 ms.openlocfilehash: fa650e75d7661eeafea74146f5cbb61878978575
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710403"
@@ -33,7 +33,7 @@ ms.locfileid: "75710403"
   
  엔터티 참조를 확장하고 `&publisher;`를 Microsoft Press라는 내용으로 바꿔 다음과 같은 확장된 XML을 얻을 수 있습니다.  
   
- **Output**  
+ **출력**  
   
 ```xml  
 <author>Fred</author>  
@@ -42,7 +42,7 @@ ms.locfileid: "75710403"
   
  엔터티에는 여러 종류가 있습니다. 다음 다이어그램은 엔터티 형식과 용어의 분류를 보여 줍니다.  
   
- ![엔터티 형식 계층 구조 순서도](../../../../docs/standard/data/xml/media/entity-hierarchy.gif "Entity_hierarchy")  
+ ![엔터티 형식 계층 구조의 순서도](../../../../docs/standard/data/xml/media/entity-hierarchy.gif "Entity_hierarchy")  
   
  기본적으로 이 XML DOM(문서 개체 모델)의 Microsoft .NET Framework 구현은 XML이 로드될 때 엔터티 참조를 유지하고 엔터티를 확장하지 않습니다. 즉, 문서를 DOM에 로드할 때 참조 변수 `&publisher;`를 포함하는 **XmlEntityReference** 노드가 생성되며 자식 노드는 DTD에 선언된 엔터티의 내용을 나타냅니다.  
   

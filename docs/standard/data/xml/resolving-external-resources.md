@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
 ms.openlocfilehash: 05cc41cef7da07581d4f0ec8e584858b913d1a80
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710273"
@@ -41,7 +41,7 @@ ms.locfileid: "75710273"
   
 |XmlResolver 속성|기능|참고|  
 |--------------------------|--------------|-----------|  
-|**XmlDocument**에서 사용하는 **XmlResolver** 클래스는 **XmlReader**에서 사용하는 것과 동일한 클래스입니다.|**XmlDocument**는 **XmlReader**에 할당된 **XmlResolver**를 사용합니다.<br /><br /> **XmlDocument.Resolver** 속성은 **XmlReader**에서 **XmlResolver**를 가져오므로 **XmlDocument** 신뢰 수준에 상관없이 설정할 수 없습니다. **XmlDocument**의 **XmlResolver** 속성을 설정 하 여 **xmlreaders** **XmlResolver** 의 설정을 재정의할 수 없습니다.|**XmlReader**는 **XmlTextReader**, 유효성을 검사하는 <xref:System.Xml.XmlReader> 또는 사용자가 작성한 판독기일 수 있습니다. 사용되는 판독기가 엔터티 확인을 지원하면 외부 엔터티가 확인됩니다. 전달된 판독기가 엔터티 참조를 지원하지 않으면 엔터티 참조는 확인되지 않습니다.|  
+|**XmlDocument**에서 사용하는 **XmlResolver** 클래스는 **XmlReader**에서 사용하는 것과 동일한 클래스입니다.|**XmlDocument**는 **XmlReader**에 할당된 **XmlResolver**를 사용합니다.<br /><br /> **XmlDocument.Resolver** 속성은 **XmlReader**에서 **XmlResolver**를 가져오므로 **XmlDocument** 신뢰 수준에 상관없이 설정할 수 없습니다. **XmlDocument**의 **XmlResolver** 속성을 설정하여 **XmlReader** **XmlResolver**의 설정을 재정의할 수 없습니다.|**XmlReader**는 **XmlTextReader**, 유효성을 검사하는 <xref:System.Xml.XmlReader> 또는 사용자가 작성한 판독기일 수 있습니다. 사용되는 판독기가 엔터티 확인을 지원하면 외부 엔터티가 확인됩니다. 전달된 판독기가 엔터티 참조를 지원하지 않으면 엔터티 참조는 확인되지 않습니다.|  
   
  XmlResolver가 정확한 자격 증명을 갖도록 설정하면 외부 리소스에 액세스할 수 있습니다.  
   

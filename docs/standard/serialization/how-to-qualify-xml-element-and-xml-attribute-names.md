@@ -1,5 +1,5 @@
 ---
-title: XML 요소 및 XML 특성 이름을 한정 하는 방법
+title: XML 요소 및 XML 특성 이름을 한정하는 방법
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
 ms.openlocfilehash: db0795dd83cc96aba49dd435c875e98a9a6c18cb
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78159873"
 ---
-# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>XML 요소 및 XML 특성 이름을 한정 하는 방법
+# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>XML 요소 및 XML 특성 이름을 한정하는 방법
 
-<xref:System.Xml.Serialization.XmlSerializerNamespaces> 클래스의 인스턴스에 포함 된 XML 네임 스페이스는 [xml에서 네임 스페이스](https://www.w3.org/TR/REC-xml-names/)라는 W3C (World Wide Web 컨소시엄) 사양을 따라야 합니다.
+클래스의 인스턴스에 의해 포함된 XML 네임스페이스는 <xref:System.Xml.Serialization.XmlSerializerNamespaces>[Namespaces in XML](https://www.w3.org/TR/REC-xml-names/)이라는 W3C(World Wide Web 컨소시엄) 사양을 따라야 합니다.
 
-XML 네임스페이스는 XML 문서에서 XML 요소 및 XML 특성의 이름을 정규화하는 메서드를 제공합니다. 정규화된 이름은 콜론으로 구분된 접두사와 로컬 이름으로 이루어집니다. 접두사는 자리 표시자로만 사용되며 네임스페이스를 지정하는 URI에 매핑됩니다. 보편적으로 관리되는 URI 네임스페이스와 로컬 이름을 조합하면 보편적으로 고유한 이름이 만들어집니다.
+XML 네임스페이스는 XML 문서에서 XML 요소 및 XML 특성의 이름을 정규화하는 메서드를 제공합니다. 정규화된 이름은 콜론으로 구분된 접두사와 로컬 이름으로 구성됩니다. 접두사는 자리 표시자로만 기능하여 네임스페이스를 지정하는 URI에 매핑됩니다. 보편적으로 관리되는 URI 네임스페이스와 로컬 이름을 조합하면 보편적으로 고유한 이름이 만들어집니다.
 
 `XmlSerializerNamespaces`의 인스턴스를 만들고 네임스페이스 쌍을 개체에 추가하면 XML 문서에 사용되는 접두사를 지정할 수 있습니다.
 
@@ -36,7 +36,7 @@ XML 네임스페이스는 XML 문서에서 XML 요소 및 XML 특성의 이름�
 
 4. 각 특성의 `Namespace` 속성을 `XmlSerializerNamespaces`의 네임스페이스 값 중 하나로 설정합니다.
 
-5. `XmlSerializer`의 `Serialize` 메서드에 `XmlSerializerNamespaces`를 전달 합니다.
+5. `XmlSerializerNamespaces`를 `XmlSerializer`의 `Serialize` 메서드에 전달합니다.
 
 ## <a name="example"></a>예제
 
@@ -162,7 +162,7 @@ public class Price
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [XML 스키마 정의 도구 및 XML serialization](the-xml-schema-definition-tool-and-xml-serialization.md)

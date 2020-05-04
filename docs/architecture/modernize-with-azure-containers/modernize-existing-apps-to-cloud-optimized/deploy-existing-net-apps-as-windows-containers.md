@@ -2,12 +2,12 @@
 title: 기존 .NET 앱을 Windows 컨테이너로 배포
 description: Azure Cloud 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화 | 기존 .NET 앱을 Windows 컨테이너로 배포
 ms.date: 04/29/2018
-ms.openlocfilehash: c99c2e756320fc886203efcbf98a81e571d907e5
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 15e99e2ec0edd072a3d47d5c212ebbbf6705ecef
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80987974"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738420"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>기존 .NET 앱을 Windows 컨테이너로 배포
 
@@ -57,7 +57,7 @@ Windows 컨테이너에서는 애플리케이션 패키징 프로세스가 완�
 
 가상 머신에 익숙한 사람이라면 컨테이너가 매우 비슷하게 보일 수 있습니다. 컨테이너는 운영 체제를 실행하며, 파일 시스템을 보유하고, 물리적 또는 가상 컴퓨터 시스템과 마찬가지로 네트워크에서 액세스할 수 있습니다. 하지만 컨테이너의 바탕이 되는 기술 및 개념은 가상 머신과는 상당한 차이가 있습니다. 개발자 관점에서 볼 때 컨테이너는 단일 프로세스처럼 취급해야 합니다. 실제로 컨테이너마다 한 프로세스에 대한 단일 진입점이 있습니다.
 
-Docker 컨테이너(간단히 *컨테이너*)는 Linux 및 Windows에서 기본적으로 실행할 수 있습니다. 일반 컨테이너를 실행하는 경우 Windows 컨테이너는 Windows 호스트(호스트 서버 또는 VM)에서만 실행할 수 있고 Linux 컨테이너는 Linux 호스트에서만 실행할 수 있습니다. 그러나 최신 버전의 Windows Server 및 Hyper-V 컨테이너에서는 Linux 컨테이너가 현재 Windows Server 컨테이너에서만 제공되는 Hyper-V 격리 기술을 사용하여 Windows Server에서도 기본적으로실행될 수 있습니다.
+Docker 컨테이너(간단히 *컨테이너*)는 Linux 및 Windows에서 기본적으로 실행할 수 있습니다. 일반 컨테이너를 실행하는 경우 Windows 컨테이너는 Windows 호스트(호스트 서버 또는 VM)에서만 실행할 수 있고 Linux 컨테이너는 Linux 호스트에서만 실행할 수 있습니다. 그러나 최신 버전의 Windows Server 및 Hyper-V 컨테이너에서는 Linux 컨테이너가 현재 Windows Server 컨테이너에서만 제공되는 Hyper-V 격리 기술을 사용하여 Windows Server에서도 기본적으로 실행될 수 있습니다.
 
 가까운 장래에 Linux 및 Windows 컨테이너를 모두 포함하는 혼합 환경도 가능하고 보다 일반화될 것입니다.
 

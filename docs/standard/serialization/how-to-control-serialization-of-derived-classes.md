@@ -7,7 +7,7 @@ dev_langs:
 ms.assetid: caa92596-9e15-4d91-acbe-56911ef47a84
 ms.openlocfilehash: af19981fd7cfeda3e8e985fa991fd7fdf2476b42
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78159925"
@@ -232,7 +232,7 @@ public class Run
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Xml.Serialization.XmlSerializer>
 - <xref:System.Xml.Serialization.XmlElementAttribute>

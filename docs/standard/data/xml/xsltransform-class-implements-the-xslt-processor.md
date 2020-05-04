@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
 ms.openlocfilehash: 73a432db9a3fcb6587184e27e6dfe9ba49010e92
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709610"
@@ -80,7 +80,7 @@ URI나 증명 정보가 모두 제공되지 않으면 스타일시트의 증명 
 
 보안 수준 및 증명 정보와 증명 정보가 `document()` 함수에 미치는 영향에 대한 자세한 내용은 [외부 XSLT 스타일시트 및 문서 확인](../../../../docs/standard/data/xml/resolving-external-xslt-style-sheets-and-documents.md)을 참조하세요.
 
-스타일시트에 많은 입력 매개 변수가 제공될 수 있습니다. 또한 스타일시트는 확장 개체에 대해 함수를 호출할 수도 있습니다. 이러한 매개 변수와 확장명 개체는 모두 <xref:System.Xml.Xsl.XsltArgumentList> 클래스를 사용하여 스타일시트에 제공됩니다. <xref:System.Xml.Xsl.XsltArgumentList>에 대한 자세한 내용은 <xref:System.Xml.Xsl.XsltArgumentList>을 참조하세요.
+스타일시트에 많은 입력 매개 변수가 제공될 수 있습니다. 또한 스타일시트는 확장 개체에 대해 함수를 호출할 수도 있습니다. 이러한 매개 변수와 확장명 개체는 모두 <xref:System.Xml.Xsl.XsltArgumentList> 클래스를 사용하여 스타일시트에 제공됩니다. <xref:System.Xml.Xsl.XsltArgumentList>에 대한 자세한 내용은 <xref:System.Xml.Xsl.XsltArgumentList>를 참조하십시오.
 
 ## <a name="recommended-secure-use-of-xsltransform-class"></a>XslTransform 클래스의 권장되는 보안 사용
 
@@ -178,7 +178,7 @@ Console.WriteLine("Passing " + tmpDoc.OuterXml + " to print_root.xsl");
 xslt.Transform(tmpDoc, null, Console.Out, null);
 ```
 
-이 예제에서는 라이브러리 .xml 및 print_root .xsl 파일을 입력으로 사용 하 고 다음을 콘솔에 출력 합니다.
+이 예제에서는 library.xml 및 print_root.xsl 파일을 입력으로 사용하고 콘솔에 다음을 출력합니다.
 
 ```console
 Passing <book genre="novel" ISBN="1-861001-57-5"><title>Pride And Prejudice</title></book> to print_root.xsl

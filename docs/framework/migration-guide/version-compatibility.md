@@ -7,18 +7,18 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: e0de18b5a40875d1fec2633c16688111d8f4b9ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2e268753bf5941e9d28ee2bdd82ce77016ddf01a
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73974951"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102985"
 ---
-# <a name="version-compatibility-in-the-net-framework"></a>.NET Framework의 버전 호환성
+# <a name="version-compatibility"></a>버전 호환성
 
-이전 버전과의 호환성은 특정 버전의 플랫폼용으로 개발된 앱이 해당 플랫폼의 다음 버전에서도 실행되는 것을 의미합니다. .NET Framework에서는 이전 버전과의 호환성을 최대한 지원하려고 합니다. 한 버전의 .NET Framework용으로 작성된 소스 코드는 다음 버전의 .NET Framework에서 컴파일되어야 하며 한 버전의 .NET Framework에서 실행되는 이진 파일은 다음 버전의 .NET Framework에서 동일하게 작동해야 합니다.
+이전 버전과의 호환성은 특정 버전의 플랫폼용으로 개발된 앱이 해당 플랫폼의 다음 버전에서도 실행되는 것을 의미합니다. .NET Framework는 이전 버전과의 호환성을 최대한 지원하려고 합니다. 한 버전의 .NET Framework용으로 작성된 소스 코드는 다음 버전의 .NET Framework에서 컴파일되어야 하며, 한 버전의 .NET Framework에서 실행되는 이진 파일은 다음 버전의 .NET Framework에서 동일하게 작동해야 합니다.
 
-## <a name="Apps"></a> 앱의 버전 호환성
+## <a name="version-compatibility-for-apps"></a><a name="Apps"></a> 앱의 버전 호환성
 
 기본적으로 앱은 빌드에 사용된 .NET Framework 버전에서 실행됩니다. 해당 버전이 없고 앱 구성 파일에 지원되는 버전이 정의되지 않은 경우 .NET Framework 초기화 오류가 발생할 수 있습니다. 이 경우 앱을 실행하지 못합니다.
 
@@ -33,7 +33,7 @@ ms.locfileid: "73974951"
 </configuration>
 ```
 
-자세한 내용은 [방법: .NET Framework 4 또는 4.x를 지원하도록 앱 구성](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)을 참조하십시오.
+자세한 내용은 [방법: NET Framework 4 또는 4.x를 지원하도록 앱 구성](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)을 참조하세요.
 
 ## <a name="version-compatibility-for-components"></a>구성 요소의 버전 호환성
 
@@ -41,7 +41,7 @@ ms.locfileid: "73974951"
 
 이러한 제한 사항 때문에 구성 요소에서 호환성 보장은 특히 중요합니다. .NET Framework 4부터 <xref:System.Runtime.Versioning.ComponentGuaranteesAttribute?displayProperty=nameWithType> 특성을 해당 구성 요소에 적용하여 구성 요소가 여러 버전 간 호환성을 유지해야 하는 수준을 지정할 수 있습니다. 여러 도구에서는 이 특성을 사용하여 이후 버전의 구성 요소에서 호환성 보장을 잠재적으로 위반할 수 있는 가능성을 검색할 수 있습니다.
 
-## <a name="backward-compatibility-and-the-net-framework"></a>이전 버전과의 호환성과 .NET Framework
+## <a name="backward-compatibility"></a>이전 버전과의 호환성
 
 .NET Framework 4.5 이상 버전은 이전 버전의 .NET Framework로 빌드된 앱과 호환됩니다. 즉, 이전 버전으로 빌드된 앱과 구성 요소는 수정하지 않아도 .NET Framework 4.5 이상 버전에서 작동합니다. 그러나 앱은 기본적으로 해당 앱을 위해 개발된 공용 언어 런타임 버전에서 실행되기 때문에 .NET Framework 4.5 이상 버전에서 앱을 실행하려면 구성 파일을 제공해야 할 수 있습니다. 자세한 내용은 이 문서 앞부분의 [앱의 버전 호환성](#Apps) 섹션을 참조하십시오.
 
@@ -63,11 +63,11 @@ ms.locfileid: "73974951"
 
 - 문서화되지 않은 문제가 발생하는 경우 [.NET용 개발자 커뮤니티 사이트](https://developercommunity.visualstudio.com/spaces/61/index.html)에서 문제를 열거나 [Microsoft/dotnet GitHub 리포지토리](https://github.com/microsoft/dotnet/issues)에서 문제를 엽니다.
 
-## <a name="compatibility-and-side-by-side-execution"></a>호환성 및 Side-By-Side 실행
+## <a name="side-by-side-execution"></a>Side-by-Side 실행
 
-문제에 대한 적합한 해결 방법을 찾지 못한 경우 .NET Framework 4.5(또는 해당 포인트 릴리스 중 하나)가 버전 1.1, 2.0 및 3.5와 side-by-side 실행된다는 것과 버전 4.5는 버전 4를 대체하는 내부 업데이트임을 기억하십시오. 버전 1.1, 2.0 및 3.5를 대상으로 하는 앱의 경우 대상 컴퓨터에 적절한 .NET Framework 버전을 설치하여 앱을 가장 적합한 환경에서 실행할 수 있습니다. Side-by-Side 실행에 대한 자세한 내용은 [Side-by-Side 실행](../deployment/side-by-side-execution.md)을 참조하십시오.
+문제에 대한 적합한 해결 방법을 찾지 못한 경우 .NET Framework 4.5(또는 해당 포인트 릴리스 중 하나)가 버전 1.1, 2.0 및 3.5와 side-by-side 실행된다는 것과 버전 4를 대체하는 내부 업데이트임을 기억하세요. 버전 1.1, 2.0 및 3.5를 대상으로 하는 앱의 경우 대상 컴퓨터에 적절한 .NET Framework 버전을 설치하여 앱을 가장 적합한 환경에서 실행할 수 있습니다. Side-by-Side 실행에 대한 자세한 내용은 [Side-by-Side 실행](../deployment/side-by-side-execution.md)을 참조하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [새로운 기능](../whats-new/index.md)
 - [클래스 라이브러리의 사용되지 않는 기능](../whats-new/whats-obsolete.md)

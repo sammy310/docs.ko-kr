@@ -5,7 +5,7 @@ ms.date: 08/22/2018
 ms.custom: azure-sdk-dotnet
 ms.openlocfilehash: f6af813cd1423be8784b769b272756b2c8258392
 ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/17/2020
 ms.locfileid: "81607872"
@@ -45,7 +45,7 @@ var account = CloudStorageAccount.Parse(storageConnectionString);
 // Do things with the account here...
 ```
 
-서비스 연결 문자열은 [CosmosDB,](https://docs.microsoft.com/azure/cosmos-db/) [Redis용 Azure 캐시](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache)및 [서비스 버스와](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues)같은 다른 Azure 서비스에서 사용됩니다. Azure 포털, CLI 또는 PowerShell을 사용하여 해당 문자열을 얻을 수 있습니다. 또한 .NET용 Azure 관리 라이브러리를 사용하여 코드에서 연결 문자열을 작성하는 리소스를 쿼리할 수도 있습니다.
+서비스 연결 문자열은 [CosmosDB](https://docs.microsoft.com/azure/cosmos-db/), [Azure Cache for Redis](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache), [Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues)와 같은 다른 Azure 서비스에서 사용됩니다. Azure Portal, CLI 또는 PowerShell을 사용하여 이러한 문자열을 가져올 수 있습니다. 또한 .NET용 Azure 관리 라이브러리를 사용하여 코드에서 연결 문자열을 작성하는 리소스를 쿼리할 수도 있습니다.
 
 이 코드 조각에서는 관리 라이브러리를 사용하여 스토리지 계정 연결 문자열을 만듭니다.
 
@@ -76,7 +76,7 @@ var account = CloudStorageAccount.Parse(storageConnectionString);
 
 이제 서비스 사용자를 만들었으므로 두 가지 옵션을 사용하여 리소스를 만들고 관리할 서비스 사용자를 인증할 수 있습니다.
 
-두 옵션 모두 프로젝트에 다음 NuGet 패키지를 추가해야 합니다.
+두 옵션에서는 모두 다음과 같은 NuGet 패키지를 프로젝트에 추가해야 합니다.
 
 ```powershell
 Install-Package Microsoft.Azure.Management.Fluent

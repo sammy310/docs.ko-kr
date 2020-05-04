@@ -3,13 +3,13 @@ title: Azure Functions - 서버리스 앱
 description: Azure Functions는 여러 언어(C#, JavaScript, Java) 및 플랫폼에서 서버리스 기능을 제공하여 이벤트 기반 즉시 크기 조정 코드를 제공합니다.
 author: JEREMYLIKNESS
 ms.author: jeliknes
-ms.date: 06/26/2018
-ms.openlocfilehash: 8764e6a33f3fdd53e60fa767d0fb584a9c07de7e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/06/2020
+ms.openlocfilehash: 2dee60e3635be94a55ee26a7f04942bc59cb8dec
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401486"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135726"
 ---
 # <a name="azure-functions"></a>Azure Functions
 
@@ -17,42 +17,31 @@ Azure 함수는 서버리스 컴퓨팅 환경을 제공합니다. 함수는 *트
 
 ![Azure Functions 로고](./media/azure-functions-logo.png)
 
-Azure Functions 프레임워크에는 두 가지 버전이 있습니다. 레거시 버전은 전체 .NET Framework를 지원하고 새 런타임은 플랫폼 간 .NET Core 애플리케이션을 지원합니다. C# 이외에 JavaScript, F#, Java 같은 언어를 추가로 사용할 수 있습니다. 포털에서 만든 함수는 풍부한 스크립팅 구문을 제공합니다. 독립 실행형 프로젝트로 만들어진 함수는 전체 플랫폼 지원 및 기능을 사용하여 배포할 수 있습니다.
+현재 런타임 버전 3.0은 플랫폼 간 .NET Core 3.1 애플리케이션을 지원합니다. C# 이외에 JavaScript, F#, Java 같은 언어를 추가로 사용할 수 있습니다. 포털에서 만든 함수는 풍부한 스크립팅 구문을 제공합니다. 독립 실행형 프로젝트로 만들어진 함수는 전체 플랫폼 지원 및 기능을 사용하여 배포할 수 있습니다.
 
 자세한 내용은 [Azure Functions 팩](https://docs.microsoft.com/azure/azure-functions)을 참조하세요.
 
-## <a name="functions-v1-vs-v2"></a>Functions v1 및 v2
-
-Azure Functions 런타임에는 두 가지 버전이 있습니다. 1.x 및 2.x. 버전 1.x는 GA(일반 공급)입니다. 포털 또는 Windows 컴퓨터에서 .NET 개발을 지원하고 .NET Framework를 사용합니다. 1.x는 C#, JavaScript 및 F#를 지원하며 Python, PHP, TypeScript, Batch, Bash 및 PowerShell에 대한 실험적 지원을 제공합니다.
-
-[버전 2.x도 이제 일반 공급으로 제공됩니다](https://azure.microsoft.com/blog/introducing-azure-functions-2-0/). .NET Core를 활용하고 Windows, macOS 및 Linux 컴퓨터에서 플랫폼 간 개발을 지원합니다. 2.x는 Java에 대한 최고 수준의 지원을 추가했지만 실험적 언어는 아직 직접 지원하지 않습니다. 버전 2.x는 플랫폼에 대한 타사 확장, 독립적인 바인딩 버전 관리, 보다 간소화된 실행 환경을 가능하게 하는 새로운 바인딩 확장성 모델을 사용합니다.
-
-> **1.x는 [바인딩 리디렉션 지원](https://github.com/Azure/azure-functions-host/issues/992)에서 알려진 문제가 있습니다.** 이 문제는 .NET 개발과 관련된 것입니다. 런타임에 포함된 라이브러리와 다른 버전의 라이브러리에 대한 종속성이 있는 프로젝트가 영향을 받습니다. 함수 팀은 이 문제를 해결하기 위해 최선을 다하고 있습니다. 팀은 일반 공급으로 전환하기 전에 2.x의 바인딩 리디렉션을 처리할 예정입니다. 다음은 팀에서 공식적으로 제안한 수정 및 해결 방법입니다. [Azure Functions의 어셈블리 분해능](https://github.com/Azure/azure-functions-host/wiki/Assembly-Resolution-in-Azure-Functions).
-
-자세한 내용은 [1. x 및 2.x 비교](https://docs.microsoft.com/azure/azure-functions/functions-versions)를 참조하세요.
-
 ## <a name="programming-language-support"></a>프로그래밍 언어 지원
 
-GA(일반 공급), 미리 보기 또는 실험적으로 지원되는 언어는 다음과 같습니다.
+다음 언어는 모두 GA(일반 공급)로 지원됩니다.
 
-|언어      |1.x         |2.x      |
-|--------------|------------|---------|
-|**C#**        |GA          |미리 보기  |
-|**JavaScript**|GA          |미리 보기  |
-|**F#**        |GA          |         |
-|**Java**      |            |미리 보기  |
-|**Python**    |실험적|         |
-|**PHP**       |실험적|         |
-|**TypeScript**|실험적|         |
-|**Batch**     |실험적|         |
-|**Bash**      |실험적|         |
-|**PowerShell**|실험적|         |
+|언어      |지원되는 런타임|
+|--------------|------------------|
+|**C#**        |.NET Core 3.1     |
+|**JavaScript**|Node 10 및 12      |
+|**F#**        |.NET Core 3.1     |
+|**Java**      |Java 8            |
+|**Python**    |Python 3.6, 3.7 및 3.8|
+|**TypeScript**|Node 10 및 12(JavaScript를 통해)|
+|**PowerShell**|PowerShell Core 6|
 
 자세한 내용은 [지원되는 언어](https://docs.microsoft.com/azure/azure-functions/supported-languages)를 참조하세요.
 
 ## <a name="app-service-plans"></a>App Service 계획
 
 함수는 *App Service 계획*으로 지원됩니다. 계획은 함수 앱에서 사용하는 리소스를 정의합니다. 지역에 계획을 할당하고, 사용되는 가상 머신의 크기 및 수를 결정하고, 가격 책정 계층을 선택할 수 있습니다. 진정한 서버리스 접근 방식을 위해 함수 앱에서 **사용** 계획을 사용할 수 있습니다. 사용 계획은 부하에 따라 자동으로 백 엔드 크기를 조정합니다.
+
+함수 앱에 대한 또 하나의 호스팅 옵션은 [프리미엄 플랜](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan)입니다. 이 플랜은 콜드 부팅을 방지하고 VNet 연결과 같은 고급 기능을 지원하며 프리미엄 하드웨어에서 실행되는 "always on" 인스턴스를 제공합니다.
 
 자세한 내용은 [App Service 계획](https://docs.microsoft.com/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)을 참조하세요.
 
@@ -126,58 +115,6 @@ public static string Run(Stream myBlob, string name, TraceWriter log)
 예제는 수정되었거나 Blob 스토리지에 업로드된 파일의 이름을 사용하고 나중에 처리할 수 있도록 큐에 배치하는 간단한 함수입니다.
 
 트리거 및 바인딩의 전체 목록은 [Azure Functions 트리거 및 바인딩 개념](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings)을 참조하세요.
-
-## <a name="proxies"></a>Proxy
-
-프록시는 애플리케이션에 리디렉션 기능을 제공합니다. 프록시는 엔드포인트를 노출하고 해당 엔드포인트를 다른 리소스에 매핑합니다. 프록시를 사용하여 다음을 수행할 수 있습니다.
-
-- 들어오는 요청을 다른 엔드포인트로 다시 라우팅합니다.
-- 들어오는 요청을 수정한 후 전달합니다.
-- 응답을 수정하거나 제공합니다.
-
-프록시는 다음과 같은 시나리오에 사용됩니다.
-
-- URL을 단순화, 단축 또는 변경
-- 여러 백 엔드 서비스에 일관된 API 접두사를 제공
-- 개발 중인 엔드포인트에 대한 응답을 모의
-- 잘 알려진 엔드포인트에 정적 응답을 제공
-- 백 엔드를 이동하거나 마이그레이션하는 동안 API 엔드포인트를 일관되게 유지
-
-프록시는 JSON 정의로 저장됩니다. 예를 들면 다음과 같습니다.
-
-```json
-{
-  "$schema": "http://json.schemastore.org/proxies",
-  "proxies": {
-    "Domain Redirect": {
-      "matchCondition": {
-        "route": "/{shortUrl}"
-      },
-      "backendUri": "http://%WEBSITE_HOSTNAME%/api/UrlRedirect/{shortUrl}"
-    },
-    "Root": {
-      "matchCondition": {
-        "route": "/"
-      },
-      "responseOverrides": {
-        "response.statusCode": "301",
-        "response.statusReason": "Moved Permanently",
-        "response.headers.location": "https://docs.microsoft.com/"
-      }
-    }
-  }
-}
-```
-
-`Domain Redirect` 프록시는 약식 경로를 사용하여 더 긴 함수 리소스에 매핑합니다. 변환은 다음과 같습니다.
-
-`https://--shorturl--/123` -> `https://--longurl--.azurewebsites.net/api/UrlRedirect/123`
-
-`Root` 프록시는 루트 URL(`https://--shorturl--/`)로 전송된 모든 항목을 가져와서 설명서 사이트로 리디렉션합니다.
-
-프록시를 사용하는 예제는 다음 동영상에 나와 있습니다. [Azure: Bring your app to the cloud with serverless Azure Functions](https://channel9.msdn.com/events/Connect/2017/E102). 실시간으로 로컬 SQL Server에서 실행되는 ASP.NET Core 애플리케이션이 Azure Cloud로 마이그레이션됩니다. 프록시는 함수를 사용하기 위해 기존Web API 프로젝트를 리팩터링하는 데 도움이 됩니다.
-
-프록시에 대 한 자세한 내용은 [Azure Functions 프록시 사용](https://docs.microsoft.com/azure/azure-functions/functions-proxies)을 참조하세요.
 
 >[!div class="step-by-step"]
 >[이전](azure-serverless-platform.md)

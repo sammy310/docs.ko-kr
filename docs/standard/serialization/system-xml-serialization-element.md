@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 3ce45919-388a-418c-8968-6df0372c73ec
 ms.openlocfilehash: 02027a238bc9a2f82963ea841584d2bb3c6446c6
 ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 06/27/2019
 ms.locfileid: "67410542"
 ---
-# <a name="systemxmlserialization-element"></a>\<system.xml.serialization > 요소
+# <a name="systemxmlserialization-element"></a>\<system.xml.serialization> 요소
 
 XML serialization을 제어하기 위한 최상위 요소입니다. 구성 파일에 대한 자세한 내용은 [구성 파일 스키마](../../../docs/framework/configure-apps/file-schema/index.md)를 참조하세요.
 
@@ -66,11 +66,11 @@ XML serialization을 제어하기 위한 최상위 요소입니다. 구성 파�
 </system.xml.serialization>
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
 - [구성 파일 스키마](../../../docs/framework/configure-apps/file-schema/index.md)
 - [\<dateTimeSerialization> 요소](../../../docs/standard/serialization/datetimeserialization-element.md)
 - [\<schemaImporterExtensions> 요소](../../../docs/standard/serialization/schemaimporterextensions-element.md)
-- [\<추가 > 요소에 대 한 \<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
+- [\<schemaImporterExtensions>에 대한 \<add> 요소](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)

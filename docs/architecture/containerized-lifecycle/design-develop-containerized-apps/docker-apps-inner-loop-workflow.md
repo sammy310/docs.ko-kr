@@ -2,12 +2,12 @@
 title: Docker 앱을 위한 내부 루프 개발 워크플로
 description: Docker 애플리케이션 개발을 위한 "내부 루프" 워크플로에 대해 알아봅니다.
 ms.date: 02/15/2019
-ms.openlocfilehash: 615cfd08f46609c4e100ea3e72b541fe2c1ae62a
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: bce047bd5ba75f9ef652a294ff6a15656fc5ac34
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989014"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738413"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 앱을 위한 내부 루프 개발 워크플로
 
@@ -54,7 +54,7 @@ Docker를 프로세스로 이용하는 내부 루프 개발 워크플로를 설�
 
 또한 Docker CLI를 사용하는 동안 실제로 애플리케이션을 개발할 수 있도록 코드 편집기가 필요합니다.
 
-Microsoft는 Windows, Linux 및 macOS에서 지원되는 경량 코드 편집기인 Visual Studio Code를 제공하고, IntelliSense에서 [다양한 언어에 대한 지원](https://code.visualstudio.com/docs/languages/overview)(JavaScript, .NET, Go, Java, Ruby, Python 및 가장 최신 언어), [디버깅](https://code.visualstudio.com/Docs/editor/debugging), [Git와의 통합](https://code.visualstudio.com/Docs/editor/versioncontrol), [확장명 지원](https://code.visualstudio.com/docs/extensions/overview) 등을 제공합니다. 이 편집기는 macOS 및 Linux 개발자에게 적합합니다. Windows에서는 Visual Studio를 사용할 수도 있습니다.
+Microsoft는 Windows, Linux 및 macOS에서 지원되는 경량 코드 편집기인 Visual Studio Code를 제공하고, IntelliSense에서 [다양한 언어에 대한 지원](https://code.visualstudio.com/docs/languages/overview)(JavaScript, .NET, Go, Java, Ruby, Python 및 가장 최신 언어), [디버깅](https://code.visualstudio.com/Docs/editor/debugging), [Git와의 통합](https://code.visualstudio.com/Docs/editor/versioncontrol), [확장명 지원](https://code.visualstudio.com/docs/extensions/overview) 등을 제공합니다. 이 편집기는 macOS 및 Linux 개발자에게 적합합니다. Windows에서 Visual Studio를 사용할 수도 있습니다.
 
 > [!TIP]
 > Windows, Linux 또는 macOS에서의 Visual Studio Code 설치 지침은 <https://code.visualstudio.com/docs/setup/setup-overview/>으로 이동합니다.

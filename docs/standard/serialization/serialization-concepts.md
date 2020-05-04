@@ -4,7 +4,7 @@ ms.date: 08/07/2017
 ms.assetid: e1ff4740-20a1-4c76-a8ad-d857db307054
 ms.openlocfilehash: 1a7fa7c3e5561fc9e48cf627a703abc747a72ba0
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78159834"
@@ -17,7 +17,7 @@ serialization을 사용하는 이유는 무엇입니까? 가장 중요한 두 �
 ## <a name="persistent-storage"></a>영구 스토리지
 개체의 필드 값을 디스크에 저장하고 나중에 이 디스크를 검색하는 것이 필요할 경우가 있습니다. serialization을 사용하지 않고 쉽게 구현할 수 있는 기능이지만 이 방식은 불편하고 오류가 발생하기 쉬우며 개체의 계층 구조를 추적해야 할 때는 점점 더 복잡해 집니다. 수천 개의 개체가 있으며 각 개체마다 필드와 속성을 디스크에 저장하고 복원하는 코드를 작성해야 하는 대규모 비즈니스 애플리케이션을 가정해 보십시오. serialization을 사용하면 이러한 목표를 편리하게 달성할 수 있습니다.
 
-공용 언어 런타임은 개체가 메모리에 저장되는 방식을 관리하며 [리플렉션](../../../docs/framework/reflection-and-codedom/reflection.md)을 사용하여 자동화된 serialization 메커니즘을 제공합니다. 개체가 serialize될 때 클래스의 이름, 어셈블리 및 클래스 인스턴스의 모든 데이터 멤버가 스토리지에 기록됩니다. 개체는 다른 인스턴스에 대한 참조를 멤버 변수에 저장할 경우가 있습니다. 클래스가 serialize될 때 serialization 엔진은 이미 serialize된 참조되는 개체를 추적하여 동일한 개체가 두 번 이상 serialize되는 것을 방지합니다. .NET Framework와 함께 제공 되는 serialization 아키텍처는 개체 그래프 및 순환 참조를 올바르게 처리 합니다. 개체 그래프에 대한 유일한 요구 사항은 직렬화된 개체가 참조하는 모든 개체도 `Serializable`로 표시되어야 한다는 점입니다. 자세한 내용은 [기본 Serialization](basic-serialization.md)을 참조하세요. 이렇게 되지 않으면 serializer가 표시되지 않은 개체를 serialize하려고 시도할 때 예외가 throw됩니다.
+공용 언어 런타임은 개체가 메모리에 저장되는 방식을 관리하며 [리플렉션](../../../docs/framework/reflection-and-codedom/reflection.md)을 사용하여 자동화된 serialization 메커니즘을 제공합니다. 개체가 serialize될 때 클래스의 이름, 어셈블리 및 클래스 인스턴스의 모든 데이터 멤버가 스토리지에 기록됩니다. 개체는 다른 인스턴스에 대한 참조를 멤버 변수에 저장할 경우가 있습니다. 클래스가 serialize될 때 serialization 엔진은 이미 serialize된 참조되는 개체를 추적하여 동일한 개체가 두 번 이상 serialize되는 것을 방지합니다. .NET Framework에서 제공되는 serialization 아키텍처는 개체 그래프와 순환 참조를 자동으로 적절하게 처리합니다. 개체 그래프에 대한 유일한 요구 사항은 직렬화된 개체가 참조하는 모든 개체도 `Serializable`로 표시되어야 한다는 점입니다. 자세한 내용은 [기본 Serialization](basic-serialization.md)을 참조하세요. 이렇게 되지 않으면 serializer가 표시되지 않은 개체를 serialize하려고 시도할 때 예외가 throw됩니다.
 
 직렬화된 클래스가 역직렬화될 때는 클래스가 다시 만들어지고 모든 데이터 멤버의 값이 자동으로 복원됩니다.
 
@@ -30,7 +30,7 @@ serialization을 사용하는 이유는 무엇입니까? 가장 중요한 두 �
  [이진 serialization](../../../docs/standard/serialization/binary-serialization.md)  
  공용 언어 런타임에 포함된 이진 serialization 메커니즘을 설명합니다.  
   
- [.Net Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
+ [.NET Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
  .NET Framework에서 원격 통신에 사용할 수 있는 다양한 통신 방법에 대해 설명합니다.  
   
  [XML 및 SOAP serialization](../../../docs/standard/serialization/xml-and-soap-serialization.md)  

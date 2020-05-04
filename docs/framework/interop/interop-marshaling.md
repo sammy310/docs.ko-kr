@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 ms.openlocfilehash: 70514811a9d236dc485f64fc34297cdb057a1512
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73124282"
@@ -42,7 +42,7 @@ COM에는 COM 아파트 간이나 서로 다른 COM 프로세스 간에 데이�
 
 ### <a name="com-clients-and-managed-servers"></a>COM 클라이언트 및 관리되는 서버
 
-[Regasm.exe(어셈블리 등록 도구)](../tools/regasm-exe-assembly-registration-tool.md)로 등록된 형식 라이브러리를 사용하여 내보낸 관리되는 서버는 `ThreadingModel` 레지스트리 항목이 `Both`로 설정되어 있습니다. 이 값은 STA(단일 스레드 아파트) 또는 MTA(다중 스레드 아파트)로 서버를 활성화할 수 있음을 나타냅니다. 서버 개체는 다음 표에 나와 있는 것 처럼 호출자와 동일한 아파트에 생성 됩니다.
+[Regasm.exe(어셈블리 등록 도구)](../tools/regasm-exe-assembly-registration-tool.md)로 등록된 형식 라이브러리를 사용하여 내보낸 관리되는 서버는 `ThreadingModel` 레지스트리 항목이 `Both`로 설정되어 있습니다. 이 값은 STA(단일 스레드 아파트) 또는 MTA(다중 스레드 아파트)로 서버를 활성화할 수 있음을 나타냅니다. 서버 개체는 다음 표와 같이 해당 호출자와 동일한 아파트에 만들어집니다.
 
 |COM 클라이언트|.NET 서버|마샬링 요구 사항|
 |----------------|-----------------|-----------------------------|
@@ -51,7 +51,7 @@ COM에는 COM 아파트 간이나 서로 다른 COM 프로세스 간에 데이�
 
 클라이언트와 서버가 동일한 아파트에 있으므로 interop 마샬링 서비스에서 모든 데이터 마샬링을 자동으로 처리합니다. 다음 그림에서는 동일한 COM 스타일 아파트 내의 관리되는 힙과 관리되지 않는 힙 간에 작동하는 interop 마샬링 서비스를 보여 줍니다.
 
-![관리 되는 힙과 관리 되지 않는 힙 간의 Interop 마샬링](./media/interop-marshaling/interop-heaps-managed-and-unmanaged.gif "동일한 아파트 마샬링 프로세스")
+![관리되는 힙과 관리되지 않는 힙 간의 Interop 마샬링](./media/interop-marshaling/interop-heaps-managed-and-unmanaged.gif "동일한 아파트 마샬링 프로세스")
 
 관리되는 서버를 내보내려는 경우 COM 클라이언트가 서버의 아파트를 결정하는 것에 주의합니다. MTA로 초기화된 COM 클라이언트에서 호출하는 관리되는 서버는 스레드로부터 안전해야 합니다.
 
@@ -82,12 +82,12 @@ COM에는 COM 아파트 간이나 서로 다른 COM 프로세스 간에 데이�
 
 ## <a name="marshaling-remote-calls"></a>원격 호출 마샬링
 
-아파트 간 마샬링과 마찬가지로 COM 마샬링은 개체가 개별 프로세스에 상주할 때마다 관리 및 비관리 코드 간의 각 호출에 사용됩니다. 예를 들면,
+아파트 간 마샬링과 마찬가지로 COM 마샬링은 개체가 개별 프로세스에 상주할 때마다 관리 및 비관리 코드 간의 각 호출에 사용됩니다. 예를 들어:
 
 - 원격 호스트의 관리되는 서버를 호출하는 COM 클라이언트는 DCOM(분산된 COM)을 사용합니다.
 - 원격 호스트의 COM 서버를 호출하는 관리되는 클라이언트는 DCOM을 사용합니다.
 
-다음 그림에서는 interop 마샬링 및 COM 마샬링이 프로세스 및 호스트 경계 간에 통신 채널을 제공 하는 방법을 보여 줍니다.
+다음 그림에서는 interop 마샬링과 COM 마샬링이 프로세스 및 호스트 경계 간에 통신 채널을 제공하는 방법을 보여 줍니다.
 
 ![COM 마샬링](./media/interop-marshaling/interop-and-com-marshaling.gif "크로스 프로세스 마샬링")
 
@@ -109,9 +109,9 @@ COM에는 COM 아파트 간이나 서로 다른 COM 프로세스 간에 데이�
 
 ### <a name="managed-remoting"></a>관리되는 원격
 
-런타임에서는 프로세스 및 호스트 경계를 넘은 관리되는 개체 간에 통신 채널을 설정하는 데 사용할 수 있는 관리되는 원격 기능도 제공합니다. 다음 그림에 나와 있는 것 처럼 관리 되는 원격은 통신 구성 요소 사이에 방화벽을 수용할 수 있습니다.
+런타임에서는 프로세스 및 호스트 경계를 넘은 관리되는 개체 간에 통신 채널을 설정하는 데 사용할 수 있는 관리되는 원격 기능도 제공합니다. 관리되는 원격 기능은 다음 그림과 같이 통신 구성 요소 간의 방화벽을 수용할 수 있습니다.
 
-![SOAP 또는 TcpChannel](./media/interop-marshaling/interop-remote-soap-or-tcp.gif "SOAP 또는 TcpChannel 클래스를 사용하는 방화벽을 통한 원격 호출") SOAP 또는 TcpChannel 클래스를 사용 하 여 방화벽을 통한 원격 호출
+![SOAP 또는 TcpChannel](./media/interop-marshaling/interop-remote-soap-or-tcp.gif "SOAP 또는 TcpChannel 클래스를 사용하는 방화벽을 통한 원격 호출") SOAP 또는 TcpChannel 클래스를 사용하는 방화벽을 통한 원격 호출
 
 서비스 구성 요소와 COM 간의 호출과 같은 관리되지 않는 일부 호출은 SOAP를 채널로 사용할 수 있습니다.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
 ms.openlocfilehash: e8607f8254783b5486b02ccc4c7e4081da506fae
 ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/04/2019
 ms.locfileid: "74802155"
 ---
-# <a name="-subsystemversion-visual-basic"></a>-subsystemversion (Visual Basic)
+# <a name="-subsystemversion-visual-basic"></a>-subsystemversion(Visual Basic)
 
 생성된 실행 파일을 실행할 수 있는 하위 시스템의 최소 버전을 지정하여 실행 파일을 실행할 수 있는 Windows 버전을 결정합니다. 가장 일반적으로, 이 옵션은 실행 파일이 이전 버전의 Windows에서 사용할 수 없는 특정 보안 기능을 활용할 수 있도록 합니다.
 
@@ -34,7 +34,7 @@ ms.locfileid: "74802155"
 
 `minor` 버전에서 선행 0은 버전을 변경하지 않지만 후행 0은 버전을 변경합니다. 예를 들어 6.1과 6.01은 동일한 버전을 가리키지만 6.10은 다른 버전을 가리킵니다. 혼동을 피하기 위해 부 버전을 두 자리로 표현하는 것이 좋습니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 다음 표에는 Windows의 일반적인 하위 시스템 버전이 나와 있습니다.
 
@@ -66,7 +66,7 @@ ms.locfileid: "74802155"
 
 ## <a name="setting-this-option"></a>이 옵션 설정
 
-Visual Studio에서 **-subsystemversion** 컴파일러 옵션을 설정 하려면 .vbproj 파일을 열고 MSBuild XML에서 `SubsystemVersion` 속성의 값을 지정 해야 합니다. Visual Studio IDE에서는 이 옵션을 설정할 수 없습니다. 자세한 내용은 이 항목의 앞부분에 나오는 "기본값"이나 [일반적인 MSBuild 프로젝트 속성](/visualstudio/msbuild/common-msbuild-project-properties)을 참조하세요.
+Visual Studio에서 **-subsystemversion** 컴파일러 옵션을 설정하려면 .vbproj 파일을 열고 MSBuild XML에서 `SubsystemVersion` 속성의 값을 지정해야 합니다. Visual Studio IDE에서는 이 옵션을 설정할 수 없습니다. 자세한 내용은 이 항목의 앞부분에 나오는 "기본값"이나 [일반적인 MSBuild 프로젝트 속성](/visualstudio/msbuild/common-msbuild-project-properties)을 참조하세요.
 
 ## <a name="see-also"></a>참조
 

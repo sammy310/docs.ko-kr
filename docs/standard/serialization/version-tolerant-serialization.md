@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
 ms.openlocfilehash: 9886e2f20ef7954b01ea1f46a9eabdb9ea2cc12d
 ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75348429"
@@ -43,7 +43,7 @@ VTS 기능은 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatt
 
 또한 새 선택적 필드가 추가되었을 때 선언하기 위한 기능이 있습니다. 이것은 <xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A> 특성의 <xref:System.Runtime.Serialization.OptionalFieldAttribute> 속성
 
-다음 섹션에서는 이러한 기능에 대해 더 자세히 설명 합니다.
+다음 섹션에서는 이러한 기능에 대해 자세히 설명합니다.
 
 ### <a name="tolerance-of-extraneous-or-unexpected-data"></a>잘못 사용된 또는 예기치 않은 데이터의 허용치
 
@@ -123,7 +123,7 @@ End Class
 
 |특성|연결된 메서드가 호출된 경우|일반적인 용도|
 |---------------|------------------------------------------|-----------------|
-|<xref:System.Runtime.Serialization.OnDeserializingAttribute>|Deserialization 전.\*|선택적 필드에 대한 기본 값을 초기화합니다.|
+|<xref:System.Runtime.Serialization.OnDeserializingAttribute>|deserialization 이전.\*|선택적 필드에 대한 기본 값을 초기화합니다.|
 |<xref:System.Runtime.Serialization.OnDeserializedAttribute>|deserialization 후|선택된 필드 값을 다른 필드의 내용에 따라 수정합니다.|
 |<xref:System.Runtime.Serialization.OnSerializingAttribute>|serialization 이전|serialization을 준비합니다. 예를 들어 선택적 데이터 구조를 만듭니다.|
 |<xref:System.Runtime.Serialization.OnSerializedAttribute>|serialization 이후|serialization 이벤트를 로그합니다.|
@@ -132,7 +132,7 @@ End Class
 
 #### <a name="using-callbacks"></a>콜백 사용
 
-콜백을 사용하려면 <xref:System.Runtime.Serialization.StreamingContext> 매개 변수를 받는 메서드에 적절한 특성을 적용해야 합니다. 클래스당 하나의 메서드만 이들 각 속성으로 표시될 수 있습니다. 예를 들면 다음과 같습니다.:
+콜백을 사용하려면 <xref:System.Runtime.Serialization.StreamingContext> 매개 변수를 받는 메서드에 적절한 특성을 적용해야 합니다. 클래스당 하나의 메서드만 이들 각 속성으로 표시될 수 있습니다. 예를 들어:
 
 ```csharp
 [OnDeserializing]
@@ -151,7 +151,7 @@ End Sub
 
 이 메서드의 용도 중에는 버전 관리 기능이 포함됩니다. deserialization 도중 필드에 대한 데이터가 없으면 선택적 필드가 올바르게 초기화되지 않을 수 있습니다. 이 문제는 올바른 값을 할당하는 메서드를 만들고 **OnDeserializingAttribute** 또는 **OnDeserializedAttribute** 특성을 메서드에 적용하여 수정할 수 있습니다.
 
-다음 예제에서는 형식의 컨텍스트에서 메서드를 보여 줍니다. 애플리케이션의 이전 버전이 `Address` 클래스의 인스턴스를 애플리케이션의 새 버전으로 전송하면 `CountryField` 필드 데이터가 누락됩니다. 그러나 deserialization 후 필드는 기본값인 "일본"로 설정 됩니다.
+다음 예제에서는 형식의 컨텍스트에서 메서드를 보여 줍니다. 애플리케이션의 이전 버전이 `Address` 클래스의 인스턴스를 애플리케이션의 새 버전으로 전송하면 `CountryField` 필드 데이터가 누락됩니다. 하지만 deserialization 이후에는 필드가 기본값인 "Japan"으로 설정됩니다.
 
 ```csharp
 [Serializable]
@@ -262,7 +262,7 @@ End Class
 
 ## <a name="serializationbinder"></a>SerializationBinder
 
-서버와 클라이언트에서 서로 다른 버전의 클래스를 필요로 하므로 일부 사용자는 직렬화 및 역직렬화할 클래스를 제어해야 할 수 있습니다. <xref:System.Runtime.Serialization.SerializationBinder>는 serialization 및 deserialization 중에 사용되는 실제 형식을 제어하는 데 사용되는 추상 클래스입니다. 이 클래스를 사용하려면 <xref:System.Runtime.Serialization.SerializationBinder>에서 클래스를 파생시키고 <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> 및 <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> 메서드를 재정의합니다. 자세한 내용은 [SerializationBinder를 사용 하 여 Serialization 및 Deserialization 제어](../../framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md)를 참조 하세요.
+서버와 클라이언트에서 서로 다른 버전의 클래스를 필요로 하므로 일부 사용자는 직렬화 및 역직렬화할 클래스를 제어해야 할 수 있습니다. <xref:System.Runtime.Serialization.SerializationBinder>는 serialization 및 deserialization 중에 사용되는 실제 형식을 제어하는 데 사용되는 추상 클래스입니다. 이 클래스를 사용하려면 <xref:System.Runtime.Serialization.SerializationBinder>에서 클래스를 파생시키고 <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> 및 <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> 메서드를 재정의합니다. 자세한 내용은 [SerializationBinder를 사용하여 serialization 및 deserialization 제어](../../framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md)를 참조하세요.
 
 ## <a name="best-practices"></a>최선의 구현 방법
 

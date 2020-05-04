@@ -23,14 +23,14 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 ms.openlocfilehash: 90d9cf4c473d73d1eeeb5f2a1098f8626c20359f
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79180484"
 ---
 # <a name="reflection-in-net"></a>.NET에서의 리플렉션
 
-네임스페이스의 <xref:System.Reflection> 클래스를 함께 <xref:System.Type?displayProperty=nameWithType>통해 로드된 어셈블리 및 [클래스,](../../standard/base-types/common-type-system.md#classes) [인터페이스](../../standard/base-types/common-type-system.md#interfaces)및 값 형식(즉, [구조체](../../standard/base-types/common-type-system.md#structures) 및 [열거체)과](../../standard/base-types/common-type-system.md#enumerations)같이 로드된 [어셈블리](../../standard/assembly/index.md) 및 그 안에 정의된 형식에 대한 정보를 얻을 수 있습니다. 리플렉션을 사용하여 런타임에 형식 인스턴스를 만들고 이 인스턴스를 호출 및 액세스할 수도 있습니다. 리플렉션의 특정 측면에 대한 항목은 이 개요의 끝부분에서 [관련 항목](#related_topics)을 참조하세요.
+<xref:System.Reflection> 네임스페이스의 클래스와 <xref:System.Type?displayProperty=nameWithType>을 함께 사용하여 로드된 [어셈블리](../../standard/assembly/index.md) 및 해당 어셈블리 내에 정의된 형식(예: [클래스](../../standard/base-types/common-type-system.md#classes), [인터페이스](../../standard/base-types/common-type-system.md#interfaces), 값 형식(즉, [구조체](../../standard/base-types/common-type-system.md#structures) 및 [열거형](../../standard/base-types/common-type-system.md#enumerations)))에 대한 정보를 가져올 수 있습니다. 리플렉션을 사용하여 런타임에 형식 인스턴스를 만들고 이 인스턴스를 호출 및 액세스할 수도 있습니다. 리플렉션의 특정 측면에 대한 항목은 이 개요의 끝부분에서 [관련 항목](#related_topics)을 참조하세요.
   
 [공용 언어 런타임](../../standard/clr.md) 로더는 같은 애플리케이션 범위가 포함된 개체 주위의 경계를 구성하는 [애플리케이션 도메인](../app-domains/application-domains.md)을 관리합니다. 이 관리에는 각 어셈블리를 적절한 애플리케이션 도메인으로 로드하는 작업과 각 어셈블리 내에서 형식 계층 구조의 메모리 레이아웃을 제어하는 작업이 포함됩니다.  
   
@@ -71,19 +71,19 @@ ms.locfileid: "79180484"
 
 ## <a name="related-topics"></a>관련 항목  
   
-|제목|Description|  
+|제목|설명|  
 |-----------|-----------------|  
 |[형식 정보 보기](viewing-type-information.md)|<xref:System.Type> 클래스를 설명하고 <xref:System.Type>과 여러 리플렉션 클래스를 함께 사용하여 생성자, 메서드, 필드, 속성, 이벤트에 대한 정보를 가져오는 방법을 보여 주는 코드 예제를 제공합니다.|  
 |[리플렉션 및 제네릭 형식](reflection-and-generic-types.md)|리플렉션이 제네릭 형식과 제네릭 메서드의 형식 매개 변수 및 형식 인수를 처리하는 방법을 설명합니다.|  
 |[리플렉션의 보안 고려 사항](security-considerations-for-reflection.md)|리플렉션이 형식 정보 및 액세스 형식을 검색하는 데 사용될 수 있는 정도를 결정하는 규칙을 설명합니다.|  
-|[동적으로 형식 로드 및 사용](dynamically-loading-and-using-types.md)|런타임 바인딩을 지원하는 리플렉션 사용자 지정 바인딩 인터페이스를 설명합니다.|  
+|[형식 동적 로드 및 사용](dynamically-loading-and-using-types.md)|런타임 바인딩을 지원하는 리플렉션 사용자 지정 바인딩 인터페이스를 설명합니다.|  
 |[방법: 리플렉션 전용 컨텍스트에 어셈블리 로드](how-to-load-assemblies-into-the-reflection-only-context.md)|리플렉션 전용 로드 컨텍스트를 설명합니다. 어셈블리를 로드하는 방법, 컨텍스트를 테스트하는 방법, 리플렉션 전용 컨텍스트에서 어셈블리에 적용된 특성을 검사하는 방법을 보여 줍니다.|  
 |[사용자 지정 특성 액세스](accessing-custom-attributes.md)|리플렉션을 사용하여 특성 존재 및 값을 쿼리하는 방법을 보여 줍니다.|  
 |[정규화된 형식 이름 지정](specifying-fully-qualified-type-names.md)|BNF(Backus-Naur 형식) 측면에서 정규화된 형식 이름의 형식에 대해 설명하고 특수 문자, 어셈블리 이름, 포인터, 참조, 배열을 지정하는 데 필요한 구문을 설명합니다.|  
 |[방법: 리플렉션을 사용하여 대리자 후크](how-to-hook-up-a-delegate-using-reflection.md)|메서드의 대리자를 만들고 대리자를 이벤트에 후크하는 방법을 설명합니다. 런타임에 <xref:System.Reflection.Emit.DynamicMethod>를 사용하여 이벤트 처리 메서드를 만드는 방법을 설명합니다.|  
-|[동적 메서드 및 어셈블리 생성](emitting-dynamic-methods-and-assemblies.md)|동적 어셈블리 및 동적 메서드를 생성하는 방법을 설명합니다.|  
+|[동적 메서드 및 어셈블리 내보내기](emitting-dynamic-methods-and-assemblies.md)|동적 어셈블리 및 동적 메서드를 생성하는 방법을 설명합니다.|  
   
-## <a name="reference"></a>참조  
+## <a name="reference"></a>참고  
 
 <xref:System.Type?displayProperty=nameWithType>  
   
