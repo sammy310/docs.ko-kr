@@ -3,12 +3,12 @@ title: .NET Core SDK 개요
 description: .NET Core 프로젝트를 만드는 데 사용되는 라이브러리 및 도구 집합인 .NET Core SDK에 관해 알아보세요.
 ms.date: 07/31/2019
 ms.technology: dotnet-cli
-ms.openlocfilehash: c2723e0e28c889f91f79ea3c0b26aa38f69fb41c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7eb06e4fd94ed2a73af2741e98e21e02728c27e4
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157468"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595743"
 ---
 # <a name="net-core-sdk-overview"></a>.NET Core SDK 개요
 
@@ -31,9 +31,9 @@ ms.locfileid: "78157468"
 
 기본적으로 SDK는 "side-by-side"(SxS) 방식으로 설치되므로 여러 버전이 단일 머신에서 동시에 공존할 수 있습니다. CLI 명령을 실행할 때 버전이 선택되는 방법은 [사용할 .NET Core 버전 선택](versions/selection.md) 문서에 매우 자세히 설명되어 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET Core CLI 개요](tools/index.md)
 - [.NET Core 버전 관리 개요](versions/index.md)
-- [.NET Core 런타임 및 SDK를 제거하는 방법](versions/remove-runtime-sdk-versions.md)
+- [.NET Core 런타임 및 SDK를 제거하는 방법](install/remove-runtime-sdk-versions.md)
 - [사용할 .NET Core 버전 선택](versions/selection.md)

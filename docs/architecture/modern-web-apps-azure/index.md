@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 모놀리식 웹 애플리�
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/4/2019
-ms.openlocfilehash: 18449ea02b7f9e89744a0f3088f80b7a51a807da
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 936a068507116033ad178f26e77945f30f70387e
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80987896"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507195"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케이션 설계
 
@@ -51,6 +51,12 @@ Docker 고래 로고는 Docker, Inc.의 등록 상표로, 허가하에 사용됩
 
 > **Maira Wenzel**
 
+## <a name="action-links"></a>작업 링크
+
+- 이 eBook은 PDF 형식으로도 제공됩니다(영어 버전에만 해당). [다운로드](https://aka.ms/webappebook)
+
+- GitHub에서 참조 애플리케이션안 [eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb) 복제/포크
+
 ## <a name="introduction"></a>소개
 
 .NET core와 ASP.NET Core는 기존의.NET 개발 방식에 비해 여러 가지 이점을 제공합니다. 다음 중 일부 또는 전부가 애플리케이션의 성공에 중요한 경우 서버 애플리케이션에 .NET Core를 사용해야 합니다.
@@ -85,7 +91,7 @@ Azure에서 호스팅되는 ASP.NET Core를 사용하여 웹 애플리케이션�
 
 이 가이드에서는 ASP.NET Core와 Azure를 사용하는 *모놀리식* 웹 애플리케이션을 만드는 방법에 대한 포괄적인 지침을 제공합니다. 여기서 "모놀리식"은 이러한 애플리케이션이 상호 작용하는 서비스와 애플리케이션의 컬렉션이 아니라 하나의 단위로 배포된다는 사실을 가리킵니다.
 
-이 가이드는 엔터프라이즈 애플리케이션을 호스팅하는 Docker, 마이크로 서비스 및 컨테이너의 배포에 중점을 둔 [" _.NET 마이크로 서비스. 컨테이너화된  컨테이너화된 .NET 애플리케이션_"](../microservices/index.md)의 아키텍처는 엔터프라이즈 애플리케이션을 호스팅하는 Docker, 마이크로 서비스 및 컨테이너의 배포에 중점을 둡니다.
+이 가이드는 엔터프라이즈 애플리케이션을 호스팅하는 Docker, 마이크로서비스 및 컨테이너의 배포에 중점을 둔 [" _.NET 마이크로서비스. 컨테이너화된 .NET 애플리케이션용 아키텍처_"](../microservices/index.md)를 보충 설명합니다.
 
 ### <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET 마이크로 서비스. 컨테이너화된 .NET 애플리케이션을 위한 아키텍처
 
@@ -102,7 +108,7 @@ Azure에서 호스팅되는 ASP.NET Core를 사용하여 웹 애플리케이션�
 
 ## <a name="how-you-can-use-this-guide"></a>이 가이드를 사용하는 방법
 
-이 가이드는 현대식 .NET 기술 및 Windows Azure로 웹 애플리케이션을 구축하는 방법에 중점을 둔, 비교적 작은 문서로 압축되었습니다. 따라서 전제적으로 읽어보면 이러한 애플리케이션 및 해당 기술 고려 사항의 이해를 위한 기반을 마련할 수 있습니다. 이 가이드와 애플리케이션 예제는 출발점이나 참고 자료 역할도 할 수 있습니다. 관련 애플리케이션 예제를 자신의 애플리케이션을 위한 템플릿으로 사용하거나 애플리케이션의 구성 요소 부분을 구성하는 방법을 알아보는 용도로 사용하세요. 자신의 애플리케이션을 위한 옵션을 저울질할 때는 가이드의 원칙과 아키텍처 및 기술 옵션, 의사 결정 고려 사항에 대한 내용을 참조하세요.
+이 가이드는 현대식 .NET 기술 및 Azure로 웹 애플리케이션을 구축하는 방법에 중점을 둔, 비교적 작은 문서로 압축되었습니다. 따라서 전제적으로 읽어보면 이러한 애플리케이션 및 해당 기술 고려 사항의 이해를 위한 기반을 마련할 수 있습니다. 이 가이드와 애플리케이션 예제는 출발점이나 참고 자료 역할도 할 수 있습니다. 관련 애플리케이션 예제를 자신의 애플리케이션을 위한 템플릿으로 사용하거나 애플리케이션의 구성 요소 부분을 구성하는 방법을 알아보는 용도로 사용하세요. 자신의 애플리케이션을 위한 옵션을 저울질할 때는 가이드의 원칙과 아키텍처 및 기술 옵션, 의사 결정 고려 사항에 대한 내용을 참조하세요.
 
 이 가이드를 팀에서 자유롭게 공유하고 이러한 여러가지 고려 사항과 기회에 대한 이해를 도모하세요. 모든 사람이 공통적인 용어와 기본 원칙으로 작업하도록 하면 아키텍처 패턴및 사례를 일관성 있게 적용하는 데 도움이 됩니다.
 

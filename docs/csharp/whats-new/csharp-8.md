@@ -1,13 +1,13 @@
 ---
 title: C# 8.0의 새로운 기능 - C# 가이드
 description: C# 8.0의 새로운 기능을 살펴봅니다.
-ms.date: 09/20/2019
-ms.openlocfilehash: 0013f621268e2a4f1b916b226d83d18c68445ed1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/07/2020
+ms.openlocfilehash: c29041972bf7ff608b73ddc9ea3cfcd253905a49
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398330"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82200082"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0의 새로운 기능
 
@@ -25,6 +25,7 @@ C#8.0은 다음 기능 및 향상된 기능을 C# 언어에 추가합니다.
 - [삭제 가능한 ref struct](#disposable-ref-structs)
 - [nullable 참조 형식](#nullable-reference-types)
 - [비동기 스트림](#asynchronous-streams)
+- [비동기 삭제 가능](#asynchronous-disposable)
 - [인덱스 및 범위](#indices-and-ranges)
 - [null 병합 할당](#null-coalescing-assignment)
 - [관리되지 않는 생성 형식](#unmanaged-constructed-types)
@@ -75,7 +76,7 @@ warning CS8656: Call to non-readonly member 'Point.Distance.get' from a 'readonl
 public readonly double Distance => Math.Sqrt(X * X + Y * Y);
 ```
 
-읽기 전용 속성에는 `readonly` 한정자가 필요합니다. 컴파일러는 `get` 접근자가 상태를 수정하지 않는다고 가정하지 않습니다. 명시적으로 `readonly`를 선언해야 합니다. 단, 자동 구현 속성은 예외입니다. 컴파일러에서 모든 자동 구현 getter를 readonly로 처리하므로 예제의 `X` 및 `Y` 속성에는 `readonly` 한정자를 추가할 필요가 없습니다.
+읽기 전용 속성에는 `readonly` 한정자가 필요합니다. 컴파일러는 `get` 접근자가 상태를 수정하지 않는다고 가정하지 않습니다. 명시적으로 `readonly`를 선언해야 합니다. 단, 자동 구현 속성은 예외입니다. 컴파일러에서 모든 자동 구현 getter를 `readonly`로 처리하므로 예제의 `X` 및 `Y` 속성에는 `readonly` 한정자를 추가할 필요가 없습니다.
 
 컴파일러는 `readonly` 멤버가 상태를 수정하지 않는다는 규칙을 적용합니다. `readonly` 한정자를 제거하지 않을 경우 다음 메서드는 컴파일되지 않습니다.
 
@@ -87,7 +88,9 @@ public readonly void Translate(int xOffset, int yOffset)
 }
 ```
 
-이 기능을 사용하여 디자인 의도를 지정할 수 있으므로 컴파일러는 이를 적용하고 디자인 의도에 따라 최적화를 수행할 수 있습니다. [`readonly`](../language-reference/keywords/readonly.md#readonly-member-examples)에 대한 언어 참조 문서에서 읽기 전용 멤버를 자세히 알아볼 수 있습니다.
+이 기능을 사용하여 디자인 의도를 지정할 수 있으므로 컴파일러는 이를 적용하고 디자인 의도에 따라 최적화를 수행할 수 있습니다.
+
+자세한 내용은 [구조체 형식](../language-reference/builtin-types/struct.md) 문서의 [`readonly` 인스턴스 멤버](../language-reference/builtin-types/struct.md#readonly-instance-members) 섹션을 참조하세요.
 
 ## <a name="default-interface-methods"></a>기본 인터페이스 메서드
 
@@ -355,7 +358,7 @@ int M()
 
 nullable 주석 컨텍스트에서 참조 형식의 변수는 모두 **nullable이 아닌 참조 형식**으로 간주됩니다. 변수가 null이 될 수 있음을 나타내려면 형식 이름 뒤에 `?`를 추가하여 해당 변수를 **nullable 참조 형식**으로 선언해야 합니다.
 
-nullable이 아닌 참조 형식의 경우, 지역 변수가 선언될 때 null이 아닌 값으로 초기화되도록 컴파일러가 흐름 분석을 사용합니다. 필드는 생성 시점에 초기화되어야 합니다. 사용 가능한 생성자 호출이나 이니셜라이저를 통해 변수가 설정되지 않으면 컴파일러에서 경고를 생성합니다. 또한, nullable이 아닌 참조 형식은 null이 될 수 있는 값에 할당할 수 없습니다.
+nullable이 아닌 참조 형식의 경우, 로컬 변수가 선언될 때 null이 아닌 값으로 초기화되도록 컴파일러가 흐름 분석을 사용합니다. 필드는 생성 시점에 초기화되어야 합니다. 사용 가능한 생성자 호출이나 이니셜라이저를 통해 변수가 설정되지 않으면 컴파일러에서 경고를 생성합니다. 또한, nullable이 아닌 참조 형식은 null이 될 수 있는 값에 할당할 수 없습니다.
 
 nullable 참조 형식은 할당되지 않았는지 또는 null로 초기화되었는지 검사되지 않습니다. 단, nullable 참조 형식의 변수가 액세스되거나 nullable이 아닌 참조 형식에 할당되기 전에 null에 대해 검사되도록 컴파일러가 흐름 분석을 사용합니다.
 
@@ -392,6 +395,10 @@ await foreach (var number in GenerateSequence())
 ```
 
 [비동기 스트림 생성 및 사용](../tutorials/generate-consume-asynchronous-stream.md) 자습서에서 직접 비동기 스트림을 사용해 볼 수 있습니다. 기본적으로 스트림 요소는 캡처된 컨텍스트에서 처리됩니다. 컨텍스트 캡처를 사용하지 않도록 설정하려면 <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> 확장 메서드를 사용합니다. 동기화 컨텍스트 및 현재 컨텍스트 캡처에 대한 자세한 내용은 [작업 기반 비동기 패턴 사용](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)에 대한 문서를 참조하세요.
+
+## <a name="asynchronous-disposable"></a>비동기 삭제 가능
+
+C# 8.0부터 언어는 <xref:System.IAsyncDisposable?displayProperty=nameWithType> 인터페이스를 구현하는 비동기 삭제 가능 형식을 지원합니다. `using` 식의 피연산자는 <xref:System.IDisposable> 또는 <xref:System.IAsyncDisposable>을 구현할 수 있습니다. `IAsyncDisposable`의 경우 컴파일러는 <xref:System.IAsyncDisposable.DisposeAsync%2A?displayProperty=nameWithType>에서 반환된 <xref:System.Threading.Tasks.Task>를 `await`하는 코드를 생성합니다. 자세한 내용은 [`using` 문](../language-reference/keywords/using-statement.md)을 참조하세요.
 
 ## <a name="indices-and-ranges"></a>인덱스 및 범위
 
@@ -465,7 +472,7 @@ Range phrase = 1..4;
 var text = words[phrase];
 ```
 
-배열만 인덱스와 범위를 지원합니다. [문자열](../language-reference/builtin-types/reference-types.md#the-string-type), <xref:System.Span%601> 또는 <xref:System.ReadOnlySpan%601>에도 인덱스 및 범위를 사용할 수 있습니다. 자세한 내용은 [인덱스 및 범위에 대한 형식 지원](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges)을 참조하세요.
+배열만 인덱스와 범위를 지원합니다. [문자열](../language-reference/builtin-types/reference-types.md#the-string-type), <xref:System.Span%601> 또는 <xref:System.ReadOnlySpan%601>에서 인덱스 및 범위를 사용할 수도 있습니다. 자세한 내용은 [인덱스 및 범위에 대한 형식 지원](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges)을 참조하세요.
 
 인덱스와 범위에 대한 자세한 내용은 [인덱스 및 범위](../tutorials/ranges-indexes.md)에 대한 자습서에서 확인할 수 있습니다.
 
@@ -520,7 +527,7 @@ C# 8.0부터 [stackalloc](../language-reference/operators/stackalloc.md) 식의 
 
 ```csharp
 Span<int> numbers = stackalloc[] { 1, 2, 3, 4, 5, 6 };
-var ind = numbers.IndexOfAny(stackalloc[] { 2, 4, 6 ,8 });
+var ind = numbers.IndexOfAny(stackalloc[] { 2, 4, 6, 8 });
 Console.WriteLine(ind);  // output: 1
 ```
 

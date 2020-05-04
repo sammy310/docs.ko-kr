@@ -4,24 +4,24 @@ titleSuffix: ''
 description: .NET Core에서 사용할 수 없는 .NET Framework 기술에 대해 알아보기
 author: cartermp
 ms.date: 04/30/2019
-ms.openlocfilehash: 7dfec63870950f12ec933ebf09041b3c8ce2cbb5
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: f95205330837551085b8f58dfbdfcd702356c98f
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607799"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506833"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Core에서 사용할 수 없는 .NET Framework 기술
 
 .NET Framework 라이브러리에서 사용할 수 있는 AppDomain, 원격, CAS(코드 액세스 보안), 보안 투명도, System.EnterpriseServices 같은 몇몇 기술은 .NET Core에서 사용할 수 없습니다. 라이브러리가 이러한 기술 중 하나 이상에 의존하는 경우 아래에 설명된 대체 방법을 고려하세요. API 호환성에 대한 자세한 내용은 [.NET Core 호환성이 손상되는 변경 사항](../compatibility/breaking-changes.md)을 참조하세요.
 
-API 또는 기술이 현재 구현되지 않았기 때문에 이들을 고의로 지원하지 않는 것은 아닙니다. 특정 문제가 의도적으로 발생하는 것인지 확인하려면 .NET Core용 GitHub 리포지토리를 검색합니다. 이를 찾지 못한 경우 [dotnet/runtime 리포지토리](https://github.com/dotnet/runtime/issues)에 이슈를 보고하고 특정 API 및 기술을 요청하세요. 요청을 이식하는 문제는 [port-to-core](https://github.com/dotnet/runtime/labels/port-to-core) 레이블로 표시됩니다.
+API 또는 기술이 현재 구현되지 않았기 때문에 이들을 고의로 지원하지 않는 것은 아닙니다. 특정 문제가 의도적으로 발생하는 것인지 확인하려면 .NET Core용 GitHub 리포지토리를 검색합니다. 이를 찾지 못한 경우 [dotnet/runtime 리포지토리](https://github.com/dotnet/runtime/issues)에 이슈를 보고하고 특정 API 및 기술을 요청하세요.
 
 ## <a name="appdomains"></a>AppDomain
 
-애플리케이션 도메인(AppDomains)은 앱을 서로 분리합니다. AppDomain에는 런타임 지원이 필요하고, 일반적으로 상당히 비싸므로 추가 앱 도메인을 만드는 것은 지원되지 않으며 향후 이 기능을 추가할 계획은 없습니다. 코드 격리의 경우 별도의 프로세스 또는 컨테이너를 대신 사용하세요. 어셈블리를 동적으로 로드하려면 <xref:System.Runtime.Loader.AssemblyLoadContext> 클래스를 사용합니다.
+애플리케이션 도메인(AppDomains)은 앱을 서로 분리합니다. AppDomain에는 런타임 지원이 필요하며 일반적으로 비용이 많이 듭니다. 추가 앱 도메인을 만드는 것은 지원되지 않으며 향후 이 기능을 추가할 계획은 없습니다. 코드 격리의 경우 별도의 프로세스 또는 컨테이너를 대신 사용하세요. 어셈블리를 동적으로 로드하려면 <xref:System.Runtime.Loader.AssemblyLoadContext> 클래스를 사용합니다.
 
-.NET Framework에서 코드를 쉽게 마이그레이션할 수 있도록 .NET Core에서는 <xref:System.AppDomain> API 표면의 일부를 공개했습니다. API 중 일부는 정상적으로 작동하고(예: <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>), 일부 멤버는 아무것도 수행하지 않고(예: <xref:System.AppDomain.SetCachePath%2A>), 일부는 <xref:System.PlatformNotSupportedException>을 throw합니다(예: <xref:System.AppDomain.CreateDomain%2A>). [dotnet/runtime GitHub 리포지토리`System.AppDomain`의 ](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Private.CoreLib/src/System/AppDomain.cs)[ 참조 소스](https://github.com/dotnet/runtime)에 대해 사용하는 유형을 확인합니다. 구현된 버전과 일치하는 분기를 선택해야 합니다.
+.NET Framework에서 코드를 쉽게 마이그레이션할 수 있도록 .NET Core에서는 <xref:System.AppDomain> API 표면의 일부를 공개했습니다. API 중 일부는 정상적으로 작동하고(예: <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>), 일부 멤버는 아무것도 수행하지 않고(예: <xref:System.AppDomain.SetCachePath%2A>), 일부는 <xref:System.PlatformNotSupportedException>을 throw합니다(예: <xref:System.AppDomain.CreateDomain%2A>). [dotnet/runtime GitHub 리포지토리](https://github.com/dotnet/runtime)의 [`System.AppDomain` 참조 소스](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Private.CoreLib/src/System/AppDomain.cs)에 대해 사용하는 유형을 확인합니다. 구현된 버전과 일치하는 분기를 선택해야 합니다.
 
 ## <a name="remoting"></a>원격 통신
 
@@ -47,6 +47,6 @@ CAS와 마찬가지로 보안 투명도는 샌드박스 코드를 보안상 중�
 
 System.EnterpriseServices(COM+)는 .NET Core에서 지원되지 않습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET Framework에서 .NET Core로의 이식 개요](../porting/index.md)

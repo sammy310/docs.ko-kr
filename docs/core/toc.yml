@@ -14,6 +14,8 @@
       href: install/runtime.md
     - name: 지원되는 OS 및 종속성
       href: install/dependencies.md
+    - name: 오래된 런타임 및 SDK 제거
+      href: install/remove-runtime-sdk-versions.md
     - name: .NET 템플릿 관리
       href: install/templates.md
     - name: macOS 공증 문제
@@ -36,6 +38,8 @@
           href: install/linux-package-manager-debian10.md
         - name: Debian 9
           href: install/linux-package-manager-debian9.md
+        - name: Fedora 32
+          href: install/linux-package-manager-fedora32.md
         - name: Fedora 31
           href: install/linux-package-manager-fedora31.md
         - name: Fedora 30
@@ -393,8 +397,6 @@
       href: versions/index.md
     - name: .NET Core 버전 선택
       href: versions/selection.md
-    - name: 오래된 런타임 및 SDK 제거
-      href: versions/remove-runtime-sdk-versions.md
 - name: RID(런타임 식별자) 카탈로그
   href: rid-catalog.md
 - name: 종속성 관리 및 로딩

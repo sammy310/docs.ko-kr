@@ -11,12 +11,12 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-ms.openlocfilehash: 1a294a577d10b3e621871b168344f2b0610693dd
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 8e0cf961f4d6b481c354bdc854806f971458ce21
+ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242740"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82624945"
 ---
 # <a name="how-to-use-character-encoding-classes-in-net"></a>.NET에서 문자 인코딩 클래스를 사용하는 방법
 
@@ -103,7 +103,7 @@ ASCII 인코딩(<xref:System.Text.ASCIIEncoding>)을 사용하려는 경우 <xre
 
 특정 인코딩에 대한 <xref:System.Text.Encoder> 개체는 해당 인코딩의 <xref:System.Text.Encoding.GetEncoder%2A?displayProperty=nameWithType> 속성에서 확인할 수 있습니다. 특정 인코딩에 대한 <xref:System.Text.Decoder> 개체는 해당 인코딩의 <xref:System.Text.Encoding.GetDecoder%2A?displayProperty=nameWithType> 속성에서 확인할 수 있습니다. 디코딩 작업의 경우 <xref:System.Text.Decoder> 에서 파생된 클래스에 <xref:System.Text.Decoder.GetChars%2A?displayProperty=nameWithType> 메서드가 포함되지만 <xref:System.Text.Encoding.GetString%2A?displayProperty=nameWithType>에 해당하는 메서드가 없습니다.
 
-다음 예제에서는 유니코드 바이트 배열 디코딩에 <xref:System.Text.Encoding.GetChars%2A?displayProperty=nameWithType> 및 <xref:System.Text.Decoder.GetChars%2A?displayProperty=nameWithType> 메서드를 사용하는 경우의 차이점을 보여 줍니다. 이 예제에서는 일부 유니코드 문자를 포함하는 문자열을 파일로 인코딩한 다음 두 개의 디코딩 메서드를 사용하여 한 번에 10바이트씩 디코딩합니다. 10번째 및 11번째 바이트에서 서로게이트 쌍이 발생하기 때문에 별도 메서드 호출에서 디코딩됩니다. 출력에서 볼 수 있듯이 <xref:System.Text.Encoding.GetChars%2A?displayProperty=nameWithType> 메서드는 바이트를 올바르게 디코딩할 수 없으며, 대신 U+FFFD(REPLACEMENT CHARACTER)로 바꿉니다. 반면, <xref:System.Text.Decoder.GetChars%2A?displayProperty=nameWithType> 메서드는 바이트 배열을 성공적으로 디코딩하여 원래 문자열을 가져올 수 있습니다.
+다음 예제에서는 유니코드 바이트 배열 디코딩에 <xref:System.Text.Encoding.GetString%2A?displayProperty=nameWithType> 및 <xref:System.Text.Decoder.GetChars%2A?displayProperty=nameWithType> 메서드를 사용하는 경우의 차이점을 보여 줍니다. 이 예제에서는 일부 유니코드 문자를 포함하는 문자열을 파일로 인코딩한 다음 두 개의 디코딩 메서드를 사용하여 한 번에 10바이트씩 디코딩합니다. 10번째 및 11번째 바이트에서 서로게이트 쌍이 발생하기 때문에 별도 메서드 호출에서 디코딩됩니다. 출력에서 볼 수 있듯이 <xref:System.Text.Encoding.GetString%2A?displayProperty=nameWithType> 메서드는 바이트를 올바르게 디코딩할 수 없으며, 대신 U+FFFD(REPLACEMENT CHARACTER)로 바꿉니다. 반면, <xref:System.Text.Decoder.GetChars%2A?displayProperty=nameWithType> 메서드는 바이트 배열을 성공적으로 디코딩하여 원래 문자열을 가져올 수 있습니다.
 
 [!code-csharp[Conceptual.Encoding#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.encoding/cs/stream1.cs#10)]
 [!code-vb[Conceptual.Encoding#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/stream1.vb#10)]

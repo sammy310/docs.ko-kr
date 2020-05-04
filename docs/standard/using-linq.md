@@ -9,12 +9,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: eafd8f78c3d8de1ba064021111f869571d5a570f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 76872f3ba3ed5106a4cb5bfdd918ae607acc092d
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160328"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507522"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ(Language-Integrated Query)
 
@@ -161,7 +161,7 @@ API 구문이 쿼리 구문보다 더 간결한 방법이 아닌가요?
 
 ## <a name="essential-samples"></a>필수 샘플
 
-LINQ 샘플의 포괄적인 목록은 [101 LINQ 샘플](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)을 참조하세요.
+LINQ 샘플의 포괄적인 목록은 [101 LINQ 샘플](https://docs.microsoft.com/samples/dotnet/try-samples/101-linq-samples/)을 참조하세요.
 
 다음은 일부 LINQ 핵심 부분의 간단한 데모입니다. LINQ는 여기에 설명된 것보다 훨씬 더 많은 기능을 제공하기 때문에 포괄적인 목록은 아닙니다.
 
@@ -394,6 +394,6 @@ LINQ를 통해 쉽게 표현될 수 있는 병렬화 가능한 CPU 바인딩된 
 
 ## <a name="further-resources"></a>추가 리소스:
 
-* [101 LINQ 샘플](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
+* [101 LINQ 샘플](https://docs.microsoft.com/samples/dotnet/try-samples/101-linq-samples/)
 * [Linqpad](https://www.linqpad.net/), 실습 환경 및 C#/F#/Visual Basic에 대한 데이터베이스 쿼리 엔진
 * [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), LINQ-to-objects 구현 방법 학습을 위한 eBook

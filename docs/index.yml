@@ -11,12 +11,12 @@ metadata:
   author: BillWagner
   ms.author: wiwagn
   ms.date: 04/21/2020
-  ms.openlocfilehash: 7680641385e013711e62a8585149ea204e327c95
-  ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+  ms.openlocfilehash: e1f4da6baefc39281a6dd4a5558d9f961a8f98a5
+  ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 04/29/2020
-  ms.locfileid: "82507496"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82624932"
 highlightedContent:
   items:
   - title: .NET 다운로드
@@ -98,7 +98,7 @@ conceptualContent:
     - url: core/sdk.md
       itemType: download
       text: .NET Core SDK 다운로드
-    - url: https://dotnet.microsoft.com/download
+    - url: core/tools/index.md
       itemType: overview
       text: .NET Core CLI 개요
     - url: core/porting/index.md
@@ -225,8 +225,8 @@ additionalContent:
         text: .NET Core IoT 라이브러리
       - url: https://www.nuget.org/packages/System.Device.Gpio
         text: System.Device.Gpio NuGet 패키지
-  - title: API 참조 섹션
-    summary: 원하는 범위를 지정하여 .NET API 참조 문서를 검색합니다.
+  - title: API 및 언어 참조
+    summary: .NET API 및 언어 참조 문서를 검색합니다.
     items:
     - title: .NET Core API 참조
       summary: .NET Core의 API 참조 문서
