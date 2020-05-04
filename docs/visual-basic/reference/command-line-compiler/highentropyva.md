@@ -7,30 +7,30 @@ helpviewer_keywords:
 ms.assetid: ff25f20a-6ca2-467b-9e52-5cf439f5028e
 ms.openlocfilehash: 7934dcaada4675bf687624bef5ed1ea25e842832
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344248"
 ---
-# <a name="-highentropyva-visual-basic"></a><span data-ttu-id="bc1c1-102">-highentropyva (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bc1c1-102">-highentropyva (Visual Basic)</span></span>
-<span data-ttu-id="bc1c1-103">[-Platform: anycpu](../../../visual-basic/reference/command-line-compiler/platform.md) 컴파일러 옵션으로 표시 된 실행 파일이 나 64 비트 실행 파일이 높은 엔트로피의 ASLR (주소 공간 레이아웃 임의 지정)을 지원 하는지 여부를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="bc1c1-103">Indicates whether a 64-bit executable or an executable that's marked by the [-platform:anycpu](../../../visual-basic/reference/command-line-compiler/platform.md) compiler option supports high entropy Address Space Layout Randomization (ASLR).</span></span>  
+# <a name="-highentropyva-visual-basic"></a><span data-ttu-id="3be72-102">-highentropyva(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3be72-102">-highentropyva (Visual Basic)</span></span>
+<span data-ttu-id="3be72-103">[-platform:anycpu](../../../visual-basic/reference/command-line-compiler/platform.md) 컴파일러 옵션으로 표시된 실행 파일 또는 64비트 실행 파일이 높은 엔트로피의 ASLR(주소 공간 레이아웃 불규칙화)을 지원하는지 여부를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="3be72-103">Indicates whether a 64-bit executable or an executable that's marked by the [-platform:anycpu](../../../visual-basic/reference/command-line-compiler/platform.md) compiler option supports high entropy Address Space Layout Randomization (ASLR).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bc1c1-104">구문</span><span class="sxs-lookup"><span data-stu-id="bc1c1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3be72-104">구문</span><span class="sxs-lookup"><span data-stu-id="3be72-104">Syntax</span></span>  
   
 ```console  
 -highentropyva[+ | -]  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="bc1c1-105">인수</span><span class="sxs-lookup"><span data-stu-id="bc1c1-105">Arguments</span></span>  
- <span data-ttu-id="bc1c1-106">`+` &#124; `-`</span><span class="sxs-lookup"><span data-stu-id="bc1c1-106">`+` &#124; `-`</span></span>  
- <span data-ttu-id="bc1c1-107">(선택 사항)</span><span class="sxs-lookup"><span data-stu-id="bc1c1-107">Optional.</span></span> <span data-ttu-id="bc1c1-108">옵션은 기본적으로 off 이거나 `-highentropyva-`지정 하는 경우입니다.</span><span class="sxs-lookup"><span data-stu-id="bc1c1-108">The option is off by default or if you specify `-highentropyva-`.</span></span> <span data-ttu-id="bc1c1-109">`-highentropyva` 또는 `-highentropyva+`를 지정 하는 경우 옵션은 on입니다.</span><span class="sxs-lookup"><span data-stu-id="bc1c1-109">The option is on if you specify `-highentropyva` or `-highentropyva+`.</span></span>  
+## <a name="arguments"></a><span data-ttu-id="3be72-105">인수</span><span class="sxs-lookup"><span data-stu-id="3be72-105">Arguments</span></span>  
+ <span data-ttu-id="3be72-106">`+` &#124; `-`</span><span class="sxs-lookup"><span data-stu-id="3be72-106">`+` &#124; `-`</span></span>  
+ <span data-ttu-id="3be72-107">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="3be72-107">Optional.</span></span> <span data-ttu-id="3be72-108">이 옵션은 기본적으로 또는 `-highentropyva-`를 지정하는 경우 off입니다.</span><span class="sxs-lookup"><span data-stu-id="3be72-108">The option is off by default or if you specify `-highentropyva-`.</span></span> <span data-ttu-id="3be72-109">`-highentropyva` 또는 `-highentropyva+`를 지정하는 경우에는 이 옵션이 on입니다.</span><span class="sxs-lookup"><span data-stu-id="3be72-109">The option is on if you specify `-highentropyva` or `-highentropyva+`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="bc1c1-110">주의</span><span class="sxs-lookup"><span data-stu-id="bc1c1-110">Remarks</span></span>  
- <span data-ttu-id="bc1c1-111">이 옵션을 지정 하는 경우 커널에서 ASLR의 일부로 프로세스의 주소 공간 레이아웃을 임의화 하는 경우 호환 되는 버전의 Windows 커널에서 더 높은 수준의 엔트로피를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bc1c1-111">If you specify this option, compatible versions of the Windows kernel can use higher degrees of entropy when the kernel randomizes the address space layout of a process as part of ASLR.</span></span> <span data-ttu-id="bc1c1-112">커널이 높은 수준의 엔트로피를 사용 하는 경우 스택 및 힙과 같은 메모리 영역에 더 많은 주소를 할당할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bc1c1-112">If the kernel uses higher degrees of entropy, a larger number of addresses can be allocated to memory regions such as stacks and heaps.</span></span> <span data-ttu-id="bc1c1-113">따라서 특정 메모리 영역의 위치를 추측하기 어려워집니다.</span><span class="sxs-lookup"><span data-stu-id="bc1c1-113">As a result, it is more difficult to guess the location of a particular memory region.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3be72-110">설명</span><span class="sxs-lookup"><span data-stu-id="3be72-110">Remarks</span></span>  
+ <span data-ttu-id="3be72-111">이 옵션을 지정할 경우 Windows 커널의 호환되는 버전이 ASLR의 일부로 프로세스의 주소 공간 레이아웃을 임의로 선택할 때 보다 높은 수준의 엔트로피를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3be72-111">If you specify this option, compatible versions of the Windows kernel can use higher degrees of entropy when the kernel randomizes the address space layout of a process as part of ASLR.</span></span> <span data-ttu-id="3be72-112">커널이 더 높은 수준의 엔트로피를 사용하면 스택 및 힙과 같은 메모리 영역에 더 많은 주소를 할당할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3be72-112">If the kernel uses higher degrees of entropy, a larger number of addresses can be allocated to memory regions such as stacks and heaps.</span></span> <span data-ttu-id="3be72-113">따라서 특정 메모리 영역의 위치를 추측하기 어려워집니다.</span><span class="sxs-lookup"><span data-stu-id="3be72-113">As a result, it is more difficult to guess the location of a particular memory region.</span></span>  
   
- <span data-ttu-id="bc1c1-114">옵션을 on으로 설정 하면 대상 실행 파일과이 실행 파일이 종속 된 모든 모듈이 64 비트 프로세스로 실행 될 때 4gb 보다 큰 포인터 값을 처리할 수 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="bc1c1-114">When the option is on, the target executable and any modules on which it depends must be able to handle pointer values that are larger than 4 gigabytes (GB) when those modules are running as 64-bit processes.</span></span>  
+ <span data-ttu-id="3be72-114">이 옵션이 on이면 대상 실행 파일과 이 실행 파일이 종속된 모든 모듈이 64비트 프로세스로 실행될 때 4GB보다 큰 포인터 값을 처리할 수 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3be72-114">When the option is on, the target executable and any modules on which it depends must be able to handle pointer values that are larger than 4 gigabytes (GB) when those modules are running as 64-bit processes.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bc1c1-115">참고 항목</span><span class="sxs-lookup"><span data-stu-id="bc1c1-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3be72-115">참조</span><span class="sxs-lookup"><span data-stu-id="3be72-115">See also</span></span>
 
-- [<span data-ttu-id="bc1c1-116">Visual Basic 명령줄 컴파일러</span><span class="sxs-lookup"><span data-stu-id="bc1c1-116">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="bc1c1-117">샘플 컴파일 명령줄</span><span class="sxs-lookup"><span data-stu-id="bc1c1-117">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [<span data-ttu-id="3be72-116">Visual Basic 명령줄 컴파일러</span><span class="sxs-lookup"><span data-stu-id="3be72-116">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="3be72-117">샘플 컴파일 명령줄</span><span class="sxs-lookup"><span data-stu-id="3be72-117">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
