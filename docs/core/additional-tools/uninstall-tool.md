@@ -3,12 +3,12 @@ title: 제거 도구
 description: .NET Core SDK 및 런타임의 제어된 정리를 사용 설정하는 단계별 도구인 .NET Core 제거 도구에 대한 개요입니다.
 author: sfoslund
 ms.date: 01/06/2020
-ms.openlocfilehash: 816aef6ab8bc0e51bb8befb14fde60513d4fadfc
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 45cf0841391d02636770e98666e2897d2598fab4
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507323"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595717"
 ---
 # <a name="net-core-uninstall-tool"></a>.NET Core 제거 도구
 
@@ -297,7 +297,7 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
 `dotnet-core-uninstall remove`는 옵션 컬렉션에서 지정한 .NET Core SDK 및 런타임을 제거합니다. 이 도구는 버전 5.0 이상의 SDK 및 런타임 제거에 사용할 수 없습니다.
 
-이 도구는 파괴적인 동작을 포함하므로 제거 명령을 실행하기 전에 시험 실행을 실시하는 것을 **적극** 권장합니다. 시험 실행에서 `remove` 명령을 사용하면 어떤 .NET Core SDK 및 런타임이 제거되는지 표시됩니다. 어떤 SDK 및 런타임을 안전하게 제거할 수 있는지 알아보려면 [버전을 제거해야 하나요?](../versions/remove-runtime-sdk-versions.md#should-i-remove-a-version)를 참조하세요.
+이 도구는 파괴적인 동작을 포함하므로 제거 명령을 실행하기 전에 시험 실행을 실시하는 것을 **적극** 권장합니다. 시험 실행에서 `remove` 명령을 사용하면 어떤 .NET Core SDK 및 런타임이 제거되는지 표시됩니다. 어떤 SDK 및 런타임을 안전하게 제거할 수 있는지 알아보려면 [버전을 제거해야 하나요?](../install/remove-runtime-sdk-versions.md#should-i-remove-a-version)를 참조하세요.
 
 > [!CAUTION]
 > 다음 사항에 주의하세요.
@@ -510,7 +510,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 ### <a name="step-4---delete-the-nuget-fallback-folder-optional"></a>4단계 - NuGet 대체 폴더 삭제(선택 사항)
 
-경우에 따라 더 이상 `NuGetFallbackFolder`가 필요하지 않아 이를 삭제하고자 할 수 있습니다. 이 폴더를 삭제하는 방법에 대한 자세한 내용은 [NuGetFallbackFolder 제거](../versions/remove-runtime-sdk-versions.md#remove-the-nuget-fallback-folder)를 참조하세요.
+경우에 따라 더 이상 `NuGetFallbackFolder`가 필요하지 않아 이를 삭제하고자 할 수 있습니다. 이 폴더를 삭제하는 방법에 대한 자세한 내용은 [NuGetFallbackFolder 제거](../install/remove-runtime-sdk-versions.md#remove-the-nuget-fallback-folder)를 참조하세요.
 
 ## <a name="uninstall-the-tool"></a>도구 제거
 

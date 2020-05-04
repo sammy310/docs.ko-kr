@@ -4,12 +4,12 @@ description: .NET Core에서 프로그램에 대한 런타임 버전을 자동�
 author: thraka
 ms.author: adegeo
 ms.date: 03/24/2020
-ms.openlocfilehash: 26aecdf2bf3ebd033e80eec26159eb9fa3cd54dd
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 3c3d9b4ec5a68c88bdd0a45acfb49191f22abda4
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345167"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595730"
 ---
 # <a name="select-the-net-core-version-to-use"></a>사용할 .NET Core 버전 선택
 
@@ -118,4 +118,4 @@ SDK 버전을 선택하는 프로세스는 다음과 같습니다.
 ## <a name="see-also"></a>참고 항목
 
 - [.NET Core 다운로드 및 설치](../install/index.md)
-- [.NET Core 런타임 및 SDK를 제거하는 방법](remove-runtime-sdk-versions.md)
+- [.NET Core 런타임 및 SDK를 제거하는 방법](../install/remove-runtime-sdk-versions.md)

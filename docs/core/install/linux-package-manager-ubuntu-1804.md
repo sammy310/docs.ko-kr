@@ -4,12 +4,12 @@ description: 패키지 관리자를 사용하여 Ubuntu 18.04에 .NET Core SDK �
 author: thraka
 ms.author: adegeo
 ms.date: 03/17/2020
-ms.openlocfilehash: 6265e9b3299af9b4178dbb5d5da057f98d75a63b
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: f590430ea10dc7188c32814641aca739b04ffa50
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134159"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595647"
 ---
 # <a name="ubuntu-1804-package-manager---install-net-core"></a>Ubuntu 18.04 패키지 관리자 - .NET Core 설치
 
@@ -19,12 +19,12 @@ ms.locfileid: "80134159"
 
 [!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
-## <a name="register-microsoft-key-and-feed"></a>Microsoft 키 및 피드 등록
+## <a name="add-microsoft-repository-key-and-feed"></a>Microsoft 리포지토리 키 및 피드 추가
 
 .NET을 설치하기 전에 먼저 다음을 수행해야 합니다.
 
-- Microsoft 키를 등록합니다.
-- 제품 리포지토리를 등록합니다.
+- Microsoft 패키지 서명 키를 신뢰할 수 있는 키 목록에 추가합니다.
+- 패키지 관리자에 리포지토리를 추가합니다.
 - 필수 종속성을 설치합니다.
 
 이 작업은 머신당 한 번만 수행하면 됩니다.
@@ -103,7 +103,7 @@ sudo apt-get install {the .NET Core package}
 
 ```bash
 sudo apt-get install -y gpg
-wget -O- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor -o microsoft.asc.gpg
+wget -O - https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor -o microsoft.asc.gpg
 sudo mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/
 wget https://packages.microsoft.com/config/ubuntu/18.04/prod.list
 sudo mv prod.list /etc/apt/sources.list.d/microsoft-prod.list
