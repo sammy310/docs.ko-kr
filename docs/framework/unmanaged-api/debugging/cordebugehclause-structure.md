@@ -1,5 +1,5 @@
 ---
-title: CorDebugEHClause 구조체
+title: CorDebugEHClause 구조
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -12,14 +12,14 @@ api_type:
 ms.assetid: 0e350a1b-6997-46d0-bfc5-962a5011ef43
 topic_type:
 - apiref
-ms.openlocfilehash: 197c33511a474eb8291e4361ebb3c21fb3720cae
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: a889d6ba00c4a0eb96a9923a7dbe52f3b93aaba5
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789422"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795963"
 ---
-# <a name="cordebugehclause-structure"></a>CorDebugEHClause 구조체
+# <a name="cordebugehclause-structure"></a>CorDebugEHClause 구조
 [.NET Framework 4.5.2 이상 버전에서 지원됨]  
   
  지정된 IL(중간 언어) 코드 부분에 대한 EH(예외 처리) 절을 나타냅니다.  
@@ -38,11 +38,11 @@ typedef struct _CorDebugEHClause {
 } CorDebugEHClause;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>구성원  
   
-|Member|설명|  
+|멤버|설명|  
 |------------|-----------------|  
-|`Flags`|EH 절의 예외 정보를 설명하는 비트 필드입니다. 자세한 내용은 설명 섹션을 참조하세요.|  
+|`Flags`|EH 절의 예외 정보를 설명하는 비트 필드입니다. 자세한 내용은 주의 섹션을 참조하세요.|  
 |`TryOffset`|메서드 본문 시작 지점부터 `try` 블록의 오프셋(바이트)입니다.|  
 |`TryLength`|`try` 블록의 길이(바이트)입니다.|  
 |`HandlerOffset`|이 `try` 블록의 처리기 위치입니다.|  
@@ -50,8 +50,8 @@ typedef struct _CorDebugEHClause {
 |`ClassToken`|형식 기반 예외 처리기의 메타데이터 토큰입니다.|  
 |`FilterOffset`|필터 기반 예외 처리기에 대한 메서드 본문 시작 지점부터의 오프셋(바이트)입니다.|  
   
-## <a name="remarks"></a>주의  
- [GetEHClauses](icordebugilcode-getehclauses-method.md) 메서드는 `CoreDebugEHClause` 값의 배열을 반환 합니다.  
+## <a name="remarks"></a>설명  
+ GetEHClauses 메서드에서 값 `CoreDebugEHClause` 의 배열을 반환 합니다. [GetEHClauses](icordebugilcode-getehclauses-method.md)  
   
  EH 절 정보는 CLI 사양을 통해 정의됩니다. 자세한 내용은 [표준 ECMA-355: Common Language Infrastructure (CLI), 6 번째 버전](https://www.ecma-international.org/publications/standards/Ecma-335.htm)을 참조 하세요.  
   
@@ -65,15 +65,15 @@ typedef struct _CorDebugEHClause {
 |`COR_ILEXCEPTION_CLAUSE_FAULT`|0x00000004|fault 절, 즉 예외가 throw될 때만 호출되는 `finally` 절입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [GetEHClauses 메서드](icordebugilcode-getehclauses-method.md)
 - [디버깅 구조체](debugging-structures.md)
