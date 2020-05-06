@@ -14,31 +14,31 @@ helpviewer_keywords:
 ms.assetid: a453f75a-c37b-4013-8f0e-35771fa5d792
 topic_type:
 - apiref
-ms.openlocfilehash: cea5439dc5ad50a2d833fcda103488d5a0f8b517
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 82162a461fa1dd05e543deb0e23339abb65ce00a
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789095"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860690"
 ---
 # <a name="iclrdataenummemoryregions-interface"></a>ICLRDataEnumMemoryRegions 인터페이스
 호출자가 지정하는 메모리 영역을 열거하는 메서드를 제공합니다.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|설명|  
+|메서드|Description|  
 |------------|-----------------|  
 |[EnumMemoryRegions 메서드](iclrdataenummemoryregions-enummemoryregions-method.md)|지정 된 메모리 영역을 열거 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** ClrData .idl, ClrData .h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 인터페이스](debugging-interfaces.md)

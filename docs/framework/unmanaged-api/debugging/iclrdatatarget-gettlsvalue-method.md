@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0d8a7730-edc9-4728-898f-41b219cf5a28
 topic_type:
 - apiref
-ms.openlocfilehash: d4e7c055480ea611357d5d3e18ac4306acf4d0b0
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 141dc8632812ab4a2ce82864cde56337025baa28
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76785414"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860577"
 ---
 # <a name="iclrdatatargetgettlsvalue-method"></a>ICLRDataTarget::GetTLSValue 메서드
 대상 프로세스에서 지정 된 스레드의 TLS (스레드 로컬 저장소)에서 값을 가져옵니다. 이 메서드는 CLR (공용 언어 런타임) 데이터 액세스 서비스에 의해 호출 됩니다.  
@@ -43,20 +43,20 @@ HRESULT GetTLSValue (
  진행 위치의 인덱스입니다. 이 값은 지정 된 스레드의 로컬 저장소에 있는 유효한 인덱스 여야 합니다.  
   
  `value`  
- 제한이 지정 된 TLS 위치에서 반환 된 값을 지정 하는 `CLRDATA_ADDRESS` 값에 대 한 포인터입니다.  
+ 제한이 지정 된 TLS 위치 `CLRDATA_ADDRESS` 에서 반환 된 값을 지정 하는 값에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  이 메서드는 디버깅 애플리케이션의 작성자가 구현합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** ClrData .idl, ClrData .h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRDataTarget 인터페이스](iclrdatatarget-interface.md)

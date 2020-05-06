@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: e2f05155-9bef-4e11-b703-7f05890665ca
 topic_type:
 - apiref
-ms.openlocfilehash: 2b5c99e40aabdbc654bdc612729b2756e3ef5bb4
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 30806394a8895084068acaec6f7d03c6b67bb14b
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793708"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860570"
 ---
 # <a name="iclrdatatarget-interface"></a>ICLRDataTarget 인터페이스
 CLR (공용 언어 런타임)의 대상 항목과 상호 작용 하기 위한 메서드를 제공 합니다.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|설명|  
+|메서드|Description|  
 |------------|-----------------|  
 |[GetCurrentThreadID 메서드](iclrdatatarget-getcurrentthreadid-method.md)|현재 스레드에 대 한 운영 체제 식별자를 가져옵니다.|  
 |[GetImageBase 메서드](iclrdatatarget-getimagebase-method.md)|지정 된 이미지에 대 한 기본 메모리 주소를 가져옵니다.|  
@@ -40,19 +40,19 @@ CLR (공용 언어 런타임)의 대상 항목과 상호 작용 하기 위한 �
 |[SetTLSValue 메서드](iclrdatatarget-settlsvalue-method.md)|대상 프로세스에서 지정 된 스레드의 TLS (스레드 로컬 저장소)에 값을 설정 합니다.|  
 |[WriteVirtual 메서드](iclrdatatarget-writevirtual-method.md)|지정 된 버퍼의 데이터를 지정 된 가상 메모리 주소에 씁니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  API 클라이언트 (즉, 디버거)는 특정 대상 항목에 대해 적절 하 게이 인터페이스를 구현 해야 합니다. 예를 들어 활성 프로세스의 구현은 메모리 덤프의 구현과는 다릅니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** ClrData .idl, ClrData .h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRDataTarget2 인터페이스](iclrdatatarget2-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

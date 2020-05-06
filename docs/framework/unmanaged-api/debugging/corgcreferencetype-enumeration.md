@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d9f16439-5a36-4474-8ffd-4f0b2c2bb686
 topic_type:
 - apiref
-ms.openlocfilehash: 17d47b6242bb12ff5ca3cfbde3e4ec183b9c19fc
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d156f103c3812c91da380e722a1c6c95d621df4c
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793872"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860923"
 ---
 # <a name="corgcreferencetype-enumeration"></a>CorGCReferenceType 열거형
 가비지가 수집될 개체의 소스를 식별합니다.  
@@ -46,9 +46,9 @@ typedef enum {
 } CorGCReferenceType  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>구성원  
   
-|멤버 이름|설명|  
+|멤버 이름|Description|  
 |-----------------|-----------------|  
 |`CorHandleStrong`|개체 참조 테이블의 강력한 참조에 대한 핸들입니다.|  
 |`CorHandleStrongPinning`|개체 핸들 테이블에서 고정 된 강한 참조에 대 한 핸들입니다.|  
@@ -64,22 +64,22 @@ typedef enum {
 |`CorHandleWeakOnly`|핸들 테이블에서 약한 참조만 반환 합니다. 이 값은 [ICorDebugProcess5:: EnumerateHandles](icordebugprocess5-enumeratehandles-method.md) 메서드에만 사용 됩니다.|  
 |`CorHandleAll`|핸들 테이블의 모든 참조를 반환 합니다. 이 값은 [ICorDebugProcess5:: EnumerateHandles](icordebugprocess5-enumeratehandles-method.md) 메서드에만 사용 됩니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  `CorGCReferenceType` 열거형은 다음과 같이 사용 됩니다.  
   
-- [COR_GC_REFERENCE](cor-gc-reference-structure.md) 구조체의 `type` 필드 값으로 참조 또는 핸들의 원본을 나타냅니다.  
+- `type` [COR_GC_REFERENCE](cor-gc-reference-structure.md) 구조체의 필드 값으로 참조 또는 핸들의 원본을 나타냅니다.  
   
-- [ICorDebugProcess5:: EnumerateHandles](icordebugprocess5-enumeratehandles-method.md) 메서드에 대 한 `types` 인수로, 열거형에 포함할 핸들의 형식을 지정 합니다.  
+- `types` [ICorDebugProcess5:: enumeratehandles](icordebugprocess5-enumeratehandles-method.md) 메서드에 대 한 인수로, 열거형에 포함할 핸들의 형식을 지정 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 열거형](debugging-enumerations.md)

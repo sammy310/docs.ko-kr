@@ -8,12 +8,12 @@ helpviewer_keywords:
 - debugging API [Silverlight]
 - Silverlight, debugging
 ms.assetid: 35c7a18f-133a-4584-bd25-bb338568b0c6
-ms.openlocfilehash: 85b5a5a630f399d0e036de434365e2e4f8f02dea
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c83bdcca4fab75b4ae94500ceb785b6000cd802a
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793831"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860870"
 ---
 # <a name="createdebugginginterfacefromversion-function-for-silverlight"></a>Silverlight용 CreateDebuggingInterfaceFromVersion 함수
 [Createversionstringfrommodule 함수](createversionstringfrommodule-function.md)에서 반환 되는 CLR (공용 언어 런타임) 버전 문자열을 수락 하 고 해당 디버거 인터페이스 (일반적으로 [ICorDebug](icordebug-interface.md))를 반환 합니다.  
@@ -34,9 +34,9 @@ HRESULT CreateDebuggingInterfaceFromVersion (
  `ppCordb`  
  [out] COM 개체(`IUnknown`)에 대한 포인터의 포인터입니다. 이 개체는 반환 되기 전에 [ICorDebug](icordebug-interface.md) 개체로 캐스팅 됩니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  S_OK  
- `ppCordb` [ICorDebug interface](icordebug-interface.md) 인터페이스를 구현 하는 유효한 개체를 참조 합니다.  
+ `ppCordb`[ICorDebug interface](icordebug-interface.md) 인터페이스를 구현 하는 유효한 개체를 참조 합니다.  
   
  E_INVALIDARG  
  `szDebuggeeVersion` 또는 `ppCordb`가 null입니다.  
@@ -50,11 +50,11 @@ HRESULT CreateDebuggingInterfaceFromVersion (
  E_FAIL(또는 다른 E_ 반환 코드)  
  [ICorDebug 인터페이스](icordebug-interface.md)를 반환할 수 없습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  반환된 인터페이스는 대상 프로세스의 CLR에 연결하고 CLR에서 실행 중인 관리 코드를 디버그하기 위한 기능을 제공합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** dbgshim.dll  
   

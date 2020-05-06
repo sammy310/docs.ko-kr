@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3d2fe9bd-75ef-4364-84a6-da1e1994ac1a
 topic_type:
 - apiref
-ms.openlocfilehash: 609d6e47c951aa104cb23084b65e98827a6851f1
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 60b7d77542a5065fb1e09a98e659cac17fb093e9
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789173"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860860"
 ---
 # <a name="createversionstringfrommodule-function"></a>CreateVersionStringFromModule 함수
 대상 프로세스의 CLR(공용 언어 런타임) 경로에서 버전 문자열을 만듭니다.  
@@ -55,7 +55,7 @@ HRESULT CreateVersionStringFromModule (
  `pdwLength`  
  [out] `pBuffer`에서 반환된 버전 문자열의 길이입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  S_OK  
  `pBuffer`에 반환된 대상 CLR에 대한 버전 문자열입니다.  
   
@@ -71,13 +71,13 @@ HRESULT CreateVersionStringFromModule (
  E_FAIL(또는 다른 E_ 반환 코드)  
  `pidDebuggee`가 유효한 프로세스 또는 다른 실패를 참조하지 않습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  이 함수는 `pidDebuggee`로 식별된 CLR 프로세스 및 `szModuleName`으로 지정된 문자열 경로를 수락합니다. `pBuffer`가 가리키는 버퍼에 버전 문자열이 반환됩니다. 이 문자열은 함수 사용자에게 불투명합니다. 즉, 버전 문자열 자체에는 내포된 의미가 없습니다. 이 함수의 컨텍스트와 [CreateDebuggingInterfaceFromVersion 함수](createdebugginginterfacefromversion-function-for-silverlight.md)에서만 사용 됩니다.  
   
  이 함수는 두 번 호출해야 합니다. 처음 호출할 때는 `pBuffer` 및 `cchBuffer` 둘 다에 대해 null을 전달합니다. 이렇게 하면 `pBuffer`에 필요한 버퍼의 크기가 `pdwLength`에 반환됩니다. 그런 다음 두 번째로 함수를 호출하고 버퍼에 `pBuffer`에, 해당 크기를 `cchBuffer`에 전달할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** dbgshim.dll  
   
