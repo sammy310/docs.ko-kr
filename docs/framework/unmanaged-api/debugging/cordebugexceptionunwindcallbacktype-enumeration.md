@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 783dce92-8a98-43db-8f78-888d943dd5b2
 topic_type:
 - apiref
-ms.openlocfilehash: e714c41812c8aaccd713115712df05744cc015e3
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4d2be9960f8935b754791a8badd4ea98b5d54912
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789381"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795913"
 ---
 # <a name="cordebugexceptionunwindcallbacktype-enumeration"></a>CorDebugExceptionUnwindCallbackType 열거형
 해제 단계 중에 콜백에서 신호를 보내는 이벤트를 나타냅니다.  
@@ -33,22 +33,22 @@ typedef enum CorDebugExceptionUnwindCallbackType {
 } CorDebugExceptionUnwindCallbackType;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>구성원  
   
-|Member|설명|  
+|멤버|설명|  
 |------------|-----------------|  
 |`DEBUG_EXCEPTION_UNWIND_BEGIN`|해제 프로세스의 시작입니다.|  
 |`DEBUG_EXCEPTION_INTERCEPTED`|예외가 가로채기 되었습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 열거형](debugging-enumerations.md)

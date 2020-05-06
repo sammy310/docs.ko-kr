@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe248069-b33c-48e1-a777-06ac9b239c54
 topic_type:
 - apiref
-ms.openlocfilehash: 92aee981aca3bac32c0ef264799e486315ca5103
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 288d7bfdf18be5cef032227c537032966fa68df4
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789250"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795705"
 ---
 # <a name="cordebugstepreason-enumeration"></a>CorDebugStepReason 열거형
 개별 단계의 결과를 나타냅니다.  
@@ -38,9 +38,9 @@ typedef enum CorDebugStepReason {
 } CorDebugStepReason;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>구성원  
   
-|Member|설명|  
+|멤버|설명|  
 |------------|-----------------|  
 |`STEP_NORMAL`|단계별 실행은 동일한 함수 내에서 정상적으로 완료 됩니다.|  
 |`STEP_RETURN`|함수가 반환 된 후에도 정상적으로 계속 실행 됩니다.|  
@@ -51,15 +51,15 @@ typedef enum CorDebugStepReason {
 |`STEP_EXIT`|단계가 완료 되기 전에 스레드가 종료 되었습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [StepComplete 메서드](icordebugmanagedcallback-stepcomplete-method.md)
 - [디버깅 열거형](debugging-enumerations.md)

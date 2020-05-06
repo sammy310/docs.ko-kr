@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5f6c2bcd-8102-4e3b-abc5-86ab0bd62def
 topic_type:
 - apiref
-ms.openlocfilehash: c142b9656af2031b10de239645da76835c435655
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d502b4098016fb14793bccd6feb641e92e3c2611
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789232"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795640"
 ---
 # <a name="cordebuguserstate-enumeration"></a>CorDebugUserState 열거형
 스레드의 사용자 상태를 나타냅니다.  
@@ -40,7 +40,7 @@ typedef enum CorDebugUserState {
 } CorDebugUserState;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>구성원  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -50,24 +50,24 @@ typedef enum CorDebugUserState {
 |`USER_UNSTARTED`|스레드가 실행을 시작 하지 않았습니다.|  
 |`USER_STOPPED`|스레드가 종료 되었습니다.|  
 |`USER_WAIT_SLEEP_JOIN`|스레드가 다른 스레드가 작업을 완료할 때까지 기다리고 있습니다.|  
-|`USER_SUSPENDED`|스레드가 일시 중단 되었습니다.|  
+|`USER_SUSPENDED`|스레드가 일시 중단되었습니다.|  
 |`USER_UNSAFE_POINT`|스레드가 안전 하지 않은 지점에 있습니다. 즉, 스레드는 가비지 수집을 차단할 수 있는 실행 위치에 있습니다.<br /><br /> 안전 하지 않은 지점에서 디버그 이벤트를 디스패치할 수도 있지만 안전 하지 않은 지점에서 스레드를 일시 중단 하면 스레드가 다시 시작 될 때까지 교착 상태가 발생할 가능성이 높습니다. 안전 하 고 안전 하지 않은 지점은 JIT (just-in-time) 및 가비지 수집 구현에 따라 결정 됩니다.|  
 |`USER_THREADPOOL`|스레드가 스레드 풀에서 가져온 경우|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  스레드의 사용자 상태는 디버거에서 해당 스레드를 검사할 때 스레드에 포함 된 상태입니다. 스레드에는 사용자 상태의 조합이 있을 수 있습니다.  
   
  [ICorDebugThread:: GetUserState](icordebugthread-getuserstate-method.md) 메서드를 사용 하 여 스레드의 사용자 상태를 검색 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 열거형](debugging-enumerations.md)

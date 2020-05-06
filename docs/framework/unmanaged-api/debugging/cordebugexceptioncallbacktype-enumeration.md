@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d946ad4-3c19-42cb-bec9-8633325ba769
 topic_type:
 - apiref
-ms.openlocfilehash: 977b1608539a302c6a27a1b54cfb2ad687025fe6
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d5cdb8c6740970f6a7469be8c763961bf76d6ecc
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789416"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795941"
 ---
 # <a name="cordebugexceptioncallbacktype-enumeration"></a>CorDebugExceptionCallbackType 열거형
 [ICorDebugManagedCallback2:: Exception](icordebugmanagedcallback2-exception-method.md) 이벤트에서 생성 된 콜백의 형식을 나타냅니다.  
@@ -35,9 +35,9 @@ typedef enum CorDebugExceptionCallbackType {
 } CorDebugExceptionCallbackType;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>구성원  
   
-|Member|설명|  
+|멤버|설명|  
 |------------|-----------------|  
 |`DEBUG_EXCEPTION_FIRST_CHANCE`|예외가 throw 되었습니다.|  
 |`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|예외 windup 프로세스에서 사용자 코드를 입력 했습니다.|  
@@ -45,14 +45,14 @@ typedef enum CorDebugExceptionCallbackType {
 |`DEBUG_EXCEPTION_UNHANDLED`|예외가 처리 되지 않은 경우|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 열거형](debugging-enumerations.md)

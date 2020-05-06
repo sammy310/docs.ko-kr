@@ -2,12 +2,12 @@
 title: 이름-값 쌍 유지 관리
 ms.date: 07/20/2015
 ms.assetid: 57ac2072-d9f5-432b-84f0-a889c62fd813
-ms.openlocfilehash: ed9c7f0aae2fe646cd723321f45455f89dd7c370
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b8c9487330239e7e6365055d5f08a02f2dbb0e37
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74331660"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796160"
 ---
 # <a name="maintaining-namevalue-pairs-visual-basic"></a>이름/값 쌍 유지 관리 (Visual Basic)
 대부분의 애플리케이션은 이름/값 쌍으로 가장 잘 유지되는 정보를 유지 관리해야 합니다. 이 정보는 구성 정보이거나 전역 설정일 수 있습니다. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에는 이름/값 쌍의 집합을 쉽게 유지하는 데 사용할 수 있는 몇몇 메서드가 포함되어 있습니다. 정보를 특성이나 자식 요소의 집합으로 유지할 수 있습니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "74331660"
   
 - 기존 특성의 이름을 사용하여 <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>를 호출하고 내용에 null을 지정하면 특성이 부모에서 제거됩니다.  
   
- 요소의 자식 요소를 추가, 수정 또는 제거할 수 <xref:System.Xml.Linq.XElement.SetElementValue%2A>.  
+ <xref:System.Xml.Linq.XElement.SetElementValue%2A>는 요소의 자식 요소를 추가, 수정 또는 제거할 수 있습니다.  
   
 - 존재하지 않는 자식 요소의 이름을 사용하여 <xref:System.Xml.Linq.XElement.SetElementValue%2A>를 호출하면 이 메서드는 새 요소를 만들어 지정된 요소에 추가합니다.  
   
@@ -100,7 +100,7 @@ Console.WriteLine(root)
   <Bottom>122</Bottom>  
   <Right>300</Right>  
   <DefaultColor>Color.Red</DefaultColor>  
-</Root>  
+</Root>
 ----  
 <Root>  
   <Top>10</Top>  
@@ -108,14 +108,14 @@ Console.WriteLine(root)
   <Bottom>122</Bottom>  
   <Right>300</Right>  
   <DefaultColor>Color.Red</DefaultColor>  
-</Root>  
-----  
+</Root>
+----
 <Root>  
   <Top>10</Top>  
   <Left>20</Left>  
   <Bottom>122</Bottom>  
   <Right>300</Right>  
-</Root>  
+</Root>
 ```  
   
 ## <a name="see-also"></a>참고 항목

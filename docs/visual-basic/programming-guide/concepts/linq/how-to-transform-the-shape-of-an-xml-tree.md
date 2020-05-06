@@ -1,13 +1,13 @@
 ---
-title: '방법: XML 트리의 모양 변형'
+title: '방법: XML 트리의 모양 변환'
 ms.date: 07/20/2015
 ms.assetid: 84b60854-48b2-452c-87f2-77d53e1d653a
-ms.openlocfilehash: 67ffd5f50572c0deba75c664ffd0e12ecfabf730
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 24cf02d84b498fc4b41238b1adaf7316cb139a10
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74332417"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796108"
 ---
 # <a name="how-to-transform-the-shape-of-an-xml-tree-visual-basic"></a>방법: XML 트리의 모양 변환 (Visual Basic)
 XML 문서의 *모양*은 요소 이름, 특성 이름 및 계층 구조의 특징을 나타냅니다.  
@@ -56,7 +56,7 @@ Console.WriteLine(newCustOrd)
  이 코드의 결과는 다음과 같습니다.  
   
 ```xml  
-        <Root>  
+<Root>  
 <Customer CustomerID="GREAL">  
   <CompanyName>Great Lakes Food Market</CompanyName>  
   <ContactName>Howard Snyder</ContactName>  
@@ -86,7 +86,8 @@ Console.WriteLine(newCustOrd)
   </FullAddress>  
   <Orders />  
 </Customer>  
-. . .  
+...
+</Root>
 ```  
   
 ## <a name="example"></a>예제  

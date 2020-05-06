@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e4412dc2-c338-4cfb-94d8-f682095dd2b1
 topic_type:
 - apiref
-ms.openlocfilehash: 2be827e12db765485ee889d6a4a19a982dad5d54
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4a65a98ee04c3870dae2f49b3da2a8e72b1ffae4
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76778363"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795835"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>CorDebugInternalFrameType 열거형
 스택 프레임 형식을 식별합니다. 이 열거형은 [ICorDebugInternalFrame:: GetFrameType](icordebuginternalframe-getframetype-method.md) 메서드에서 사용 됩니다.  
@@ -43,11 +43,11 @@ typedef enum CorDebugInternalFrameType {
 } CorDebugInternalFrameType;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>구성원  
   
-|Member|설명|  
+|멤버|설명|  
 |------------|-----------------|  
-|`STUBFRAME_NONE`|null 값입니다. `ICorDebugInternalFrame::GetFrameType` 메서드는이 값을 반환 하지 않습니다.|  
+|`STUBFRAME_NONE`|null 값입니다. 메서드 `ICorDebugInternalFrame::GetFrameType` 는이 값을 반환 하지 않습니다.|  
 |`STUBFRAME_M2U`|관리 되는 관리 되지 않는 스텁 프레임입니다.|  
 |`STUBFRAME_U2M`|관리 되지 않는 스텁 프레임입니다.|  
 |`STUBFRAME_APPDOMAIN_TRANSITION`|응용 프로그램 도메인 간 전환|  
@@ -60,14 +60,14 @@ typedef enum CorDebugInternalFrameType {
 |`STUBFRAME_JIT_COMPILATION`|런타임은 메서드를 JIT 컴파일하는 것입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 열거형](debugging-enumerations.md)
