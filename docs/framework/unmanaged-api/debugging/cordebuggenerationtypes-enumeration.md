@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 9f25b64f-eedd-4ae5-8b0e-cfdfb9b6c5d8
 topic_type:
 - apiref
-ms.openlocfilehash: 6133b34a60fd06c1b75d69783760741b8de62071
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0443f58b79e60111756308cc4843daf86d1fc823
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789351"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795870"
 ---
-# <a name="cordebuggenerationtypes-enumeration"></a><span data-ttu-id="ec5d7-102">CorDebugGenerationTypes 열거형</span><span class="sxs-lookup"><span data-stu-id="ec5d7-102">CorDebugGenerationTypes Enumeration</span></span>
-<span data-ttu-id="ec5d7-103">관리되는 힙에 대한 메모리 영역 생성을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ec5d7-103">Specifies the generation of a region of memory on the managed heap.</span></span>  
+# <a name="cordebuggenerationtypes-enumeration"></a><span data-ttu-id="382e3-102">CorDebugGenerationTypes 열거형</span><span class="sxs-lookup"><span data-stu-id="382e3-102">CorDebugGenerationTypes Enumeration</span></span>
+<span data-ttu-id="382e3-103">관리되는 힙에 대한 메모리 영역 생성을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="382e3-103">Specifies the generation of a region of memory on the managed heap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ec5d7-104">구문</span><span class="sxs-lookup"><span data-stu-id="ec5d7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="382e3-104">구문</span><span class="sxs-lookup"><span data-stu-id="382e3-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorDebugGenerationTypes {  
@@ -35,26 +35,26 @@ typedef enum CorDebugGenerationTypes {
 } CorDebugRegionTypes;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="ec5d7-105">Members</span><span class="sxs-lookup"><span data-stu-id="ec5d7-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="382e3-105">구성원</span><span class="sxs-lookup"><span data-stu-id="382e3-105">Members</span></span>  
   
-|<span data-ttu-id="ec5d7-106">멤버 이름</span><span class="sxs-lookup"><span data-stu-id="ec5d7-106">Member name</span></span>|<span data-ttu-id="ec5d7-107">설명</span><span class="sxs-lookup"><span data-stu-id="ec5d7-107">Description</span></span>|  
+|<span data-ttu-id="382e3-106">멤버 이름</span><span class="sxs-lookup"><span data-stu-id="382e3-106">Member name</span></span>|<span data-ttu-id="382e3-107">설명</span><span class="sxs-lookup"><span data-stu-id="382e3-107">Description</span></span>|  
 |-----------------|-----------------|  
-|`CorDebug_Gen0`|<span data-ttu-id="ec5d7-108">0세대.</span><span class="sxs-lookup"><span data-stu-id="ec5d7-108">Generation 0.</span></span>|  
-|`CorDebug_Gen1`|<span data-ttu-id="ec5d7-109">1세대.</span><span class="sxs-lookup"><span data-stu-id="ec5d7-109">Generation 1.</span></span>|  
-|`CorDebug_Gen2`|<span data-ttu-id="ec5d7-110">2세대.</span><span class="sxs-lookup"><span data-stu-id="ec5d7-110">Generation 2.</span></span>|  
-|`CorDebug_LOH`|<span data-ttu-id="ec5d7-111">Large object heap입니다.</span><span class="sxs-lookup"><span data-stu-id="ec5d7-111">The large object heap.</span></span>|  
+|`CorDebug_Gen0`|<span data-ttu-id="382e3-108">0세대.</span><span class="sxs-lookup"><span data-stu-id="382e3-108">Generation 0.</span></span>|  
+|`CorDebug_Gen1`|<span data-ttu-id="382e3-109">1세대</span><span class="sxs-lookup"><span data-stu-id="382e3-109">Generation 1.</span></span>|  
+|`CorDebug_Gen2`|<span data-ttu-id="382e3-110">2세대.</span><span class="sxs-lookup"><span data-stu-id="382e3-110">Generation 2.</span></span>|  
+|`CorDebug_LOH`|<span data-ttu-id="382e3-111">Large object heap입니다.</span><span class="sxs-lookup"><span data-stu-id="382e3-111">The large object heap.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ec5d7-112">주의</span><span class="sxs-lookup"><span data-stu-id="ec5d7-112">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="382e3-112">설명</span><span class="sxs-lookup"><span data-stu-id="382e3-112">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ec5d7-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ec5d7-113">Requirements</span></span>  
- <span data-ttu-id="ec5d7-114">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ec5d7-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="382e3-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="382e3-113">Requirements</span></span>  
+ <span data-ttu-id="382e3-114">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="382e3-114">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ec5d7-115">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ec5d7-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="382e3-115">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="382e3-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ec5d7-116">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ec5d7-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="382e3-116">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="382e3-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ec5d7-117">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ec5d7-117">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="382e3-117">**.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="382e3-117">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ec5d7-118">참조</span><span class="sxs-lookup"><span data-stu-id="ec5d7-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="382e3-118">참고 항목</span><span class="sxs-lookup"><span data-stu-id="382e3-118">See also</span></span>
 
-- [<span data-ttu-id="ec5d7-119">디버깅 열거형</span><span class="sxs-lookup"><span data-stu-id="ec5d7-119">Debugging Enumerations</span></span>](debugging-enumerations.md)
+- [<span data-ttu-id="382e3-119">디버깅 열거형</span><span class="sxs-lookup"><span data-stu-id="382e3-119">Debugging Enumerations</span></span>](debugging-enumerations.md)

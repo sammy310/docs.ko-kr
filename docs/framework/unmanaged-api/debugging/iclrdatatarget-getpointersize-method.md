@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 51d9f4a4-81a7-4527-8537-5212bdb05c70
 topic_type:
 - apiref
-ms.openlocfilehash: 7a274aaec4919b86f32f98e4d8278dc12748fb2b
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e6c4d5f8cc911198add176cab9c4b9b89128068e
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76785475"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860619"
 ---
-# <a name="iclrdatatargetgetpointersize-method"></a><span data-ttu-id="6c5af-102">ICLRDataTarget::GetPointerSize 메서드</span><span class="sxs-lookup"><span data-stu-id="6c5af-102">ICLRDataTarget::GetPointerSize Method</span></span>
-<span data-ttu-id="6c5af-103">대상 프로세스에서 사용 하는 포인터 형식의 크기 (바이트)를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="6c5af-103">Gets the size, in bytes, of the pointer type that the target process uses.</span></span> <span data-ttu-id="6c5af-104">이 메서드는 공용 언어 런타임 데이터 액세스 서비스에 의해 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="6c5af-104">This method is called by the common language runtime data access services.</span></span>  
+# <a name="iclrdatatargetgetpointersize-method"></a><span data-ttu-id="84383-102">ICLRDataTarget::GetPointerSize 메서드</span><span class="sxs-lookup"><span data-stu-id="84383-102">ICLRDataTarget::GetPointerSize Method</span></span>
+<span data-ttu-id="84383-103">대상 프로세스에서 사용 하는 포인터 형식의 크기 (바이트)를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="84383-103">Gets the size, in bytes, of the pointer type that the target process uses.</span></span> <span data-ttu-id="84383-104">이 메서드는 공용 언어 런타임 데이터 액세스 서비스에 의해 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="84383-104">This method is called by the common language runtime data access services.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6c5af-105">구문</span><span class="sxs-lookup"><span data-stu-id="6c5af-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="84383-105">구문</span><span class="sxs-lookup"><span data-stu-id="84383-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetPointerSize (  
@@ -33,22 +33,22 @@ HRESULT GetPointerSize (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6c5af-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="6c5af-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="84383-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="84383-106">Parameters</span></span>  
  `pointerSize`  
- <span data-ttu-id="6c5af-107">제한이 대상 프로세스에 대 한 포인터의 크기 (바이트)를 지정 하는 정수 값에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="6c5af-107">[out] A pointer to an integer value that specifies the size, in bytes, of a pointer on the target process.</span></span>  
+ <span data-ttu-id="84383-107">제한이 대상 프로세스에 대 한 포인터의 크기 (바이트)를 지정 하는 정수 값에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="84383-107">[out] A pointer to an integer value that specifies the size, in bytes, of a pointer on the target process.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6c5af-108">주의</span><span class="sxs-lookup"><span data-stu-id="6c5af-108">Remarks</span></span>  
- <span data-ttu-id="6c5af-109">이 메서드는 디버깅 애플리케이션의 작성자가 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="6c5af-109">This method is implemented by the writer of the debugging application.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="84383-108">설명</span><span class="sxs-lookup"><span data-stu-id="84383-108">Remarks</span></span>  
+ <span data-ttu-id="84383-109">이 메서드는 디버깅 애플리케이션의 작성자가 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="84383-109">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6c5af-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="6c5af-110">Requirements</span></span>  
- <span data-ttu-id="6c5af-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="6c5af-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="84383-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="84383-110">Requirements</span></span>  
+ <span data-ttu-id="84383-111">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="84383-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6c5af-112">**헤더:** ClrData .idl, ClrData .h</span><span class="sxs-lookup"><span data-stu-id="6c5af-112">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="84383-112">**헤더:** ClrData .idl, ClrData .h</span><span class="sxs-lookup"><span data-stu-id="84383-112">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="6c5af-113">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6c5af-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="84383-113">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="84383-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6c5af-114">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6c5af-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="84383-114">**.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="84383-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6c5af-115">참조</span><span class="sxs-lookup"><span data-stu-id="6c5af-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="84383-115">참고 항목</span><span class="sxs-lookup"><span data-stu-id="84383-115">See also</span></span>
 
-- [<span data-ttu-id="6c5af-116">ICLRDataTarget 인터페이스</span><span class="sxs-lookup"><span data-stu-id="6c5af-116">ICLRDataTarget Interface</span></span>](iclrdatatarget-interface.md)
+- [<span data-ttu-id="84383-116">ICLRDataTarget 인터페이스</span><span class="sxs-lookup"><span data-stu-id="84383-116">ICLRDataTarget Interface</span></span>](iclrdatatarget-interface.md)
