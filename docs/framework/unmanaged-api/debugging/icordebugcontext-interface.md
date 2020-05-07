@@ -14,31 +14,31 @@ helpviewer_keywords:
 ms.assetid: b9907b98-4253-4cb6-a296-37ae9977c81a
 topic_type:
 - apiref
-ms.openlocfilehash: 514a94cf2be03ea767752acbd986cb598467dff0
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4fa66e10b3920da415a9fc53eee240875b44d9db
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76783931"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82892849"
 ---
-# <a name="icordebugcontext-interface"></a><span data-ttu-id="74084-102">ICorDebugContext 인터페이스</span><span class="sxs-lookup"><span data-stu-id="74084-102">ICorDebugContext Interface</span></span>
+# <a name="icordebugcontext-interface"></a><span data-ttu-id="89b5f-102">ICorDebugContext 인터페이스</span><span class="sxs-lookup"><span data-stu-id="89b5f-102">ICorDebugContext Interface</span></span>
 
-<span data-ttu-id="74084-103">컨텍스트 개체를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="74084-103">Represents a context object.</span></span> <span data-ttu-id="74084-104">이 인터페이스는 아직 구현되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="74084-104">This interface has not been implemented yet.</span></span>  
+<span data-ttu-id="89b5f-103">컨텍스트 개체를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="89b5f-103">Represents a context object.</span></span> <span data-ttu-id="89b5f-104">이 인터페이스는 아직 구현되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="89b5f-104">This interface has not been implemented yet.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="74084-105">주의</span><span class="sxs-lookup"><span data-stu-id="74084-105">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="89b5f-105">설명</span><span class="sxs-lookup"><span data-stu-id="89b5f-105">Remarks</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="74084-106">이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="74084-106">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="89b5f-106">이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="89b5f-106">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="74084-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="74084-107">Requirements</span></span>  
- <span data-ttu-id="74084-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="74084-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="89b5f-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="89b5f-107">Requirements</span></span>  
+ <span data-ttu-id="89b5f-108">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="89b5f-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="74084-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="74084-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="89b5f-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="89b5f-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="74084-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="74084-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="89b5f-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="89b5f-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="74084-111">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="74084-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="89b5f-111">**.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="89b5f-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="74084-112">참조</span><span class="sxs-lookup"><span data-stu-id="74084-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="89b5f-112">참조</span><span class="sxs-lookup"><span data-stu-id="89b5f-112">See also</span></span>
 
-- [<span data-ttu-id="74084-113">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="74084-113">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="89b5f-113">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="89b5f-113">Debugging Interfaces</span></span>](debugging-interfaces.md)

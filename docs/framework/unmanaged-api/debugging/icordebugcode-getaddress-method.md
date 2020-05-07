@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: cc507cb0-df2e-49c2-b32e-0c3271a8df9a
 topic_type:
 - apiref
-ms.openlocfilehash: df73663f714b0c1c3d3ae5dfb53e8e84196a8f37
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f9b00d5e34300f1ed16eaddff3bf8e877219f910
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125677"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82893794"
 ---
-# <a name="icordebugcodegetaddress-method"></a><span data-ttu-id="d04e6-102">ICorDebugCode::GetAddress 메서드</span><span class="sxs-lookup"><span data-stu-id="d04e6-102">ICorDebugCode::GetAddress Method</span></span>
-<span data-ttu-id="d04e6-103">이 "ICorDebugCode" 인터페이스가 나타내는 코드 세그먼트의 RVA (상대 가상 주소)를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="d04e6-103">Gets the relative virtual address (RVA) of the code segment that this "ICorDebugCode" interface represents.</span></span>  
+# <a name="icordebugcodegetaddress-method"></a><span data-ttu-id="7d04a-102">ICorDebugCode::GetAddress 메서드</span><span class="sxs-lookup"><span data-stu-id="7d04a-102">ICorDebugCode::GetAddress Method</span></span>
+<span data-ttu-id="7d04a-103">이 "ICorDebugCode" 인터페이스가 나타내는 코드 세그먼트의 RVA (상대 가상 주소)를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="7d04a-103">Gets the relative virtual address (RVA) of the code segment that this "ICorDebugCode" interface represents.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d04e6-104">구문</span><span class="sxs-lookup"><span data-stu-id="d04e6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7d04a-104">구문</span><span class="sxs-lookup"><span data-stu-id="7d04a-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetAddress (  
@@ -33,15 +33,15 @@ HRESULT GetAddress (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d04e6-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="d04e6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7d04a-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="7d04a-105">Parameters</span></span>  
  `pStart`  
- <span data-ttu-id="d04e6-106">제한이 코드 세그먼트의 RVA에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="d04e6-106">[out] A pointer to the RVA of the code segment.</span></span>  
+ <span data-ttu-id="7d04a-106">제한이 코드 세그먼트의 RVA에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="7d04a-106">[out] A pointer to the RVA of the code segment.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d04e6-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d04e6-107">Requirements</span></span>  
- <span data-ttu-id="d04e6-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d04e6-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7d04a-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="7d04a-107">Requirements</span></span>  
+ <span data-ttu-id="7d04a-108">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="7d04a-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d04e6-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d04e6-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="7d04a-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7d04a-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d04e6-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d04e6-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7d04a-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7d04a-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d04e6-111">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d04e6-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="7d04a-111">**.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7d04a-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
