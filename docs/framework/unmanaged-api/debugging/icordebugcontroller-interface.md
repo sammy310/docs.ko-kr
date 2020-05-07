@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dbb1c4dc-269a-459b-ab1d-6c70788782ce
 topic_type:
 - apiref
-ms.openlocfilehash: d6c923f03309da3ad8092ea6119e7d850120ee2c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e494bbb24e8f2245593e7945625e72e70ae1dde5
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76783799"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82892763"
 ---
 # <a name="icordebugcontroller-interface"></a>ICorDebugController 인터페이스
 
@@ -40,20 +40,20 @@ ms.locfileid: "76783799"
 |[Stop 메서드](icordebugcontroller-stop-method.md)|프로세스에서 관리 코드를 실행 하는 모든 스레드에서 협조적 중지를 수행 합니다.|  
 |[Terminate 메서드](icordebugcontroller-terminate-method.md)|지정 된 종료 코드를 사용 하 여 프로세스를 종료 합니다.|  
   
-## <a name="remarks"></a>주의  
- `ICorDebugController` 프로세스를 제어 하는 경우 프로세스의 모든 스레드가 범위에 포함 됩니다. `ICorDebugController` 응용 프로그램 도메인을 제어 하는 경우 해당 특정 응용 프로그램 도메인의 스레드만 범위에 포함 됩니다.  
+## <a name="remarks"></a>설명  
+ 에서 `ICorDebugController` 프로세스를 제어 하는 경우 범위에 프로세스의 모든 스레드가 포함 됩니다. 가 `ICorDebugController` 응용 프로그램 도메인을 제어 하는 경우 해당 특정 응용 프로그램 도메인의 스레드만 범위에 포함 됩니다.  
   
 > [!NOTE]
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참조
 

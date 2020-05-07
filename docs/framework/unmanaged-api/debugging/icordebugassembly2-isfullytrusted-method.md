@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 26cbd27d-12bf-444a-8197-ccd14d37dda3
 topic_type:
 - apiref
-ms.openlocfilehash: bef51fe9df0f85659603c637f11ed4e856c8e01a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dd82709064fe7f7d912d93f4b3f0248769f02b9e
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133960"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894893"
 ---
 # <a name="icordebugassembly2isfullytrusted-method"></a>ICorDebugAssembly2::IsFullyTrusted 메서드
 어셈블리에 런타임 보안 시스템에서 완전 신뢰를 부여 했는지 여부를 나타내는 값을 가져옵니다.  
@@ -35,16 +35,16 @@ HRESULT IsFullyTrusted(
   
 ## <a name="parameters"></a>매개 변수  
  `pbFullyTrusted`  
- [out] 런타임 보안 시스템에서 어셈블리에 완전 신뢰가 부여 된 경우 `true` 합니다. 그렇지 않으면 `false`합니다.  
+ 제한이 `true` 어셈블리에 런타임 보안 시스템에서 완전 신뢰가 부여 되었으면이 고, 그렇지 않으면입니다. 그렇지 않으면 `false`입니다.  
   
-## <a name="remarks"></a>주의  
- 어셈블리에 대 한 보안 정책이 아직 확인 되지 않은 경우이 메서드는 CORDBG_E_NOTREADY의 HRESULT를 반환 합니다. 즉, 어셈블리의 코드가 아직 실행 되지 않은 경우에는입니다.  
+## <a name="remarks"></a>설명  
+ 이 메서드는 어셈블리에 대 한 보안 정책이 아직 확인 되지 않은 경우 (즉, 어셈블리의 코드가 아직 실행 되지 않은 경우) CORDBG_E_NOTREADY HRESULT를 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

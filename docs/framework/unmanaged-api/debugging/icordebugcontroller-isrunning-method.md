@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b33ff059-40c4-4dfe-9cb2-21bfed2de0b0
 topic_type:
 - apiref
-ms.openlocfilehash: f24c07a654dc2345cb65226463573576a6fb3658
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 89ea9f221ad55063e4186cc27cc8038334d800d4
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125348"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82892871"
 ---
 # <a name="icordebugcontrollerisrunning-method"></a>ICorDebugController::IsRunning 메서드
 프로세스의 스레드가 현재 자유롭게 실행 중인지 여부를 나타내는 값을 가져옵니다.  
@@ -35,15 +35,15 @@ HRESULT IsRunning (
   
 ## <a name="parameters"></a>매개 변수  
  `pbRunning`  
- 제한이 프로세스의 스레드가 자유롭게 실행 되는 경우 `true` 되는 값에 대 한 포인터입니다. 그렇지 않으면 `false`합니다.  
+ 제한이 프로세스의 스레드가 자유롭게 실행 되는 `true` 경우 값에 대 한 포인터입니다. 그렇지 않으면 `false`입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참조

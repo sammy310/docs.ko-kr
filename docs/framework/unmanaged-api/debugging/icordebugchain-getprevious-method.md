@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 58eed4c8-d80c-4c6a-a875-967a90dd926c
 topic_type:
 - apiref
-ms.openlocfilehash: c7598a9d93631ca93187886fd8929ba10726dad7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a57e73495ac22a25a5f13c06d4c75dee7dde41e0
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124732"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894625"
 ---
 # <a name="icordebugchaingetprevious-method"></a>ICorDebugChain::GetPrevious 메서드
 스레드에 대 한 이전 프레임 체인을 가져옵니다.  
@@ -35,13 +35,13 @@ HRESULT GetPrevious (
   
 ## <a name="parameters"></a>매개 변수  
  `ppChain`  
- 제한이 이 스레드에 대 한 이전 프레임 체인을 나타내는 ICorDebugChain 개체의 주소에 대 한 포인터입니다. 이 체인이 첫 번째 체인이 면 `ppChain`은 null입니다.  
+ 제한이 이 스레드에 대 한 이전 프레임 체인을 나타내는 ICorDebugChain 개체의 주소에 대 한 포인터입니다. 이 체인이 첫 번째 체인이 면 `ppChain` 가 null입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
