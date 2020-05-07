@@ -2,21 +2,28 @@
 title: 선택적 단위 테스트 실행
 description: 필터 식을 사용하여 .NET Core의 dotnet 테스트 명령을 통해 선택적 단위 테스트를 실행하는 방법입니다.
 author: smadala
-ms.date: 03/22/2017
-ms.openlocfilehash: b9156300587215e68c01c609e298dbc1a2c53d11
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/29/2020
+ms.openlocfilehash: 50642126f3b470180ddd303ed4a2d2d90bfa5b8f
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77543510"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728189"
 ---
-# <a name="running-selective-unit-tests"></a>선택적 단위 테스트 실행
+# <a name="run-selective-unit-tests"></a>선택적 단위 테스트 실행
 
 .NET Core에서 `dotnet test` 명령과 함께 필터 식을 사용하여 선택적 테스트를 실행할 수 있습니다. 이 문서에서는 실행되는 테스트를 필터링하는 방법을 보여 줍니다. 다음 예제에서는 `dotnet test`를 사용합니다. `vstest.console.exe`를 사용하는 경우 `--filter`를 `--testcasefilter:`로 바꾸세요.
 
-> [!NOTE]
-> `*nix`에서 느낌표(!)를 포함하는 필터를 사용하려면 이스케이프해야 합니다. `!`가 예약되어 있기 때문입니다. 예를 들어 이 필터는 네임스페이스에 IntegrationTests: `dotnet test --filter FullyQualifiedName\!~IntegrationTests`가 포함되어 있으면 모든 테스트를 건너뜁니다.
-> 느낌표 앞에 백슬래시가 온다는 것을 유의하세요.
+## <a name="character-escaping"></a>문자 이스케이프
+
+`*nix`에서 느낌표(!)를 포함하는 필터를 사용하려면 이스케이프해야 합니다. `!`가 예약되어 있기 때문입니다. 예를 들어 이 필터는 네임스페이스에 IntegrationTests: `dotnet test --filter FullyQualifiedName\!~IntegrationTests`가 포함되어 있으면 모든 테스트를 건너뜁니다.
+느낌표 앞에 백슬래시가 온다는 것을 유의하세요.
+
+제네릭 형식 매개 변수의 쉼표를 포함하는 `FullyQualifiedName` 값의 경우 `%2C`를 사용하여 쉼표를 이스케이프합니다. 예를 들어:
+
+```dotnetcli
+dotnet test --filter "FullyQualifiedName=MyNamespace.MyTestsClass<ParameterType1%2CParameterType2>.MyTestMethod"
+```
 
 ## <a name="mstest"></a>MSTest
 
@@ -48,18 +55,18 @@ namespace MSTestNamespace
 | ---------- | ------ |
 | `dotnet test --filter Method` | `FullyQualifiedName`에 `Method`가 포함된 테스트를 실행합니다. `vstest 15.1+`에서 사용 가능합니다. |
 | `dotnet test --filter Name~TestMethod1` | 이름에 `TestMethod1`이 포함된 테스트를 실행합니다. |
-| `dotnet test --filter ClassName=MSTestNamespace.UnitTest1` | 클래스 `MSTestNamespace.UnitTest1`에 속하는 테스트를 실행합니다.<br>**참고:** `ClassName` 값에는 네임스페이스가 있어야 하므로, `ClassName=UnitTest1`이 작동하지 않습니다. |
+| `dotnet test --filter ClassName=MSTestNamespace.UnitTest1` | `MSTestNamespace.UnitTest1` 클래스에 있는 테스트를 실행합니다.<br>**참고:** `ClassName` 값에는 네임스페이스가 있어야 하므로, `ClassName=UnitTest1`이 작동하지 않습니다. |
 | `dotnet test --filter FullyQualifiedName!=MSTestNamespace.UnitTest1.TestMethod1` | `MSTestNamespace.UnitTest1.TestMethod1`을 제외한 모든 테스트를 실행합니다. |
-| `dotnet test --filter TestCategory=CategoryA` | `[TestCategory("CategoryA")]`로 주석이 추가된 테스트를 실행합니다. |
-| `dotnet test --filter Priority=2` | `[Priority(2)]`로 주석이 추가된 테스트를 실행합니다.<br>
+| `dotnet test --filter TestCategory=CategoryA` | `[TestCategory("CategoryA")]`로 주석이 달린 테스트를 실행합니다. |
+| `dotnet test --filter Priority=2` | `[Priority(2)]`로 주석이 달린 테스트를 실행합니다.<br>
 
 **조건 연산자 | 및 &amp; 사용**
 
 | 식 | 결과 |
 | ---------- | ------ |
-| <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | `UnitTest1`에 `FullyQualifiedName`이 **있거나**`TestCategory`가 `CategoryA`인 테스트를 실행합니다. |
-| `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | `UnitTest1`에 `FullyQualifiedName`**이 있고**`TestCategory`가 `CategoryA`인 테스트를 실행합니다. |
-| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | `FullyQualifiedName`을 포함하는 `UnitTest1` **이 있고** `TestCategory`가 `CategoryA` **이거나** `Priority`가 1인 테스트를 실행합니다. |
+| <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | `FullyQualifiedName`에 `UnitTest1`이 **있거나** `TestCategory`가 `CategoryA`인 테스트를 실행합니다. |
+| `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | `FullyQualifiedName`에 `UnitTest1`이 **있고** `TestCategory`가 `CategoryA`인 테스트를 실행합니다. |
+| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | `UnitTest1`을 포함하는 `FullyQualifiedName`이 **있고** `TestCategory`가 `CategoryA`**이거나**, `Priority`가 1인 테스트를 실행합니다. |
 
 ## <a name="xunit"></a>xUnit
 
@@ -103,9 +110,9 @@ namespace XUnitNamespace
 
 | 식 | 결과 |
 | ---------- | ------ |
-| <code>dotnet test --filter "FullyQualifiedName~TestClass1&#124;Category=CategoryA"</code> | `TestClass1`에 `FullyQualifiedName`이 **있거나**`Category`가 `CategoryA`인 테스트를 실행합니다. |
-| `dotnet test --filter "FullyQualifiedName~TestClass1&Category=CategoryA"` | `TestClass1`에 `FullyQualifiedName` **이 있고** `Category`가 `CategoryA`인 테스트를 실행합니다. |
-| <code>dotnet test --filter "(FullyQualifiedName~TestClass1&Category=CategoryA)&#124;Priority=1"</code> | `FullyQualifiedName`을 포함하는 `TestClass1` **이 있고** `Category`가 `CategoryA` **이거나** `Priority`가 1인 테스트를 실행합니다. |
+| <code>dotnet test --filter "FullyQualifiedName~TestClass1&#124;Category=CategoryA"</code> | `FullyQualifiedName`에 `TestClass1`이 **있거나** `Category`가 `CategoryA`인 테스트를 실행합니다. |
+| `dotnet test --filter "FullyQualifiedName~TestClass1&Category=CategoryA"` | `FullyQualifiedName`에 `TestClass1`이 **있고** `Category`가 `CategoryA`인 테스트를 실행합니다. |
+| <code>dotnet test --filter "(FullyQualifiedName~TestClass1&Category=CategoryA)&#124;Priority=1"</code> | `TestClass1`을 포함하는 `FullyQualifiedName`이 **있고** `Category`가 `CategoryA`**이거나**, `Priority`가 1인 테스트를 실행합니다. |
 
 ## <a name="nunit"></a>NUnit
 
@@ -136,15 +143,17 @@ namespace NUnitNamespace
 | ---------- | ------ |
 | `dotnet test --filter Method` | `FullyQualifiedName`에 `Method`가 포함된 테스트를 실행합니다. `vstest 15.1+`에서 사용 가능합니다. |
 | `dotnet test --filter Name~TestMethod1` | 이름에 `TestMethod1`이 포함된 테스트를 실행합니다. |
-| `dotnet test --filter FullyQualifiedName~NUnitNamespace.UnitTest1` | 클래스 `NUnitNamespace.UnitTest1`에 속하는 테스트를 실행합니다.<br>
+| `dotnet test --filter FullyQualifiedName~NUnitNamespace.UnitTest1` | `NUnitNamespace.UnitTest1` 클래스에 있는 테스트를 실행합니다.<br>
 | `dotnet test --filter FullyQualifiedName!=NUnitNamespace.UnitTest1.TestMethod1` | `NUnitNamespace.UnitTest1.TestMethod1`을 제외한 모든 테스트를 실행합니다. |
-| `dotnet test --filter TestCategory=CategoryA` | `[Category("CategoryA")]`로 주석이 추가된 테스트를 실행합니다. |
-| `dotnet test --filter Priority=2` | `[Priority(2)]`로 주석이 추가된 테스트를 실행합니다.<br>
+| `dotnet test --filter TestCategory=CategoryA` | `[Category("CategoryA")]`로 주석이 달린 테스트를 실행합니다. |
+| `dotnet test --filter Priority=2` | `[Priority(2)]`로 주석이 달린 테스트를 실행합니다.<br>
 
 **조건 연산자 | 및 &amp; 사용**
 
 | 식 | 결과 |
 | ---------- | ------ |
-| <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | `UnitTest1`에 `FullyQualifiedName`이 **있거나**`TestCategory`가 `CategoryA`인 테스트를 실행합니다. |
-| `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | `UnitTest1`에 `FullyQualifiedName`**이 있고**`TestCategory`가 `CategoryA`인 테스트를 실행합니다. |
-| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | `FullyQualifiedName`을 포함하는 `UnitTest1` **이 있고** `TestCategory`가 `CategoryA` **이거나** `Priority`가 1인 테스트를 실행합니다. |
+| <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | `FullyQualifiedName`에 `UnitTest1`이 **있거나** `TestCategory`가 `CategoryA`인 테스트를 실행합니다. |
+| `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | `FullyQualifiedName`에 `UnitTest1`이 **있고** `TestCategory`가 `CategoryA`인 테스트를 실행합니다. |
+| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | `UnitTest1`을 포함하는 `FullyQualifiedName`이 **있고** `TestCategory`가 `CategoryA`**이거나**, `Priority`가 1인 테스트를 실행합니다. |
+
+자세한 내용은 [TestCase 필터](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md)를 참조하세요.

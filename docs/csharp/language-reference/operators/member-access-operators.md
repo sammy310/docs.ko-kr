@@ -1,7 +1,7 @@
 ---
 title: 멤버 액세스 연산자 및 식 - C# 참조
 description: 형식 멤버에 액세스하는 데 사용하는 C# 연산자에 대해 알아봅니다.
-ms.date: 03/31/2020
+ms.date: 04/17/2020
 author: pkulikov
 f1_keywords:
 - ._CSharpKeyword
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 90066b1e9c219f66fc0c76423679e81aa3fa6770
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 37a6cb7cd32a9d60607aec51b1994e4717c5349a
+ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81120989"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82624867"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>멤버 액세스 연산자 및 식(C# 참조)
 
@@ -138,6 +138,9 @@ A?.B?[C];
 
 Null 조건부 멤버 액세스 연산자 `?.`를 Elvis 연산자라고도 합니다.
 
+> [!NOTE]
+> C# 8에서 [null 허용 연산자](null-forgiving.md)는 이전 null 조건부 연산 목록을 종료합니다. 예를 들어 `x?.y!.z` 식은 `(x?.y)!.z`로 구문 분석됩니다. 이 해석으로 인해 `z`는 `x`가 `null`인 경우에도 평가되므로 <xref:System.NullReferenceException>이 발생할 수 있습니다.
+
 ### <a name="thread-safe-delegate-invocation"></a>스레드로부터 안전한 대리자 호출
 
 다음 코드에서처럼 `?.` 연산자를 사용하여 대리자가 null이 아닌지 확인하고 스레드로부터 안전한 방식으로 호출합니다(예: [이벤트 발생 시](../../../standard/events/how-to-raise-and-consume-events.md)).
@@ -155,6 +158,8 @@ if (handler != null)
     handler(…);
 }
 ```
+
+이는 null이 아닌 `handler`만 호출되도록 하는 스레드로부터 안전한 방법입니다. 대리자 인스턴스는 변경할 수 없으므로 스레드는 `handler` 지역 변수가 참조하는 값을 변경할 수 없습니다. 특히 다른 스레드가 실행한 코드가 `PropertyChanged` 이벤트에서 구독을 취소하고 `handler`를 호출하기 전에 `PropertyChanged`가 `null`이 되면 `handler`에서 참조하는 값은 영향을 받지 않습니다. `?.` 연산자는 왼쪽 피연산자를 한 번만 계산하여 null이 아닌 것으로 확인된 후에는 `null`로 변경할 수 없도록 보장합니다.
 
 ## <a name="invocation-expression-"></a>호출 식 ()
 
@@ -180,7 +185,7 @@ C# 8.0 이상에서 사용할 수 있는 연산자 `^`는 요소 위치가 시�
 
 위 예제에서와 같이 식 `^e`는 <xref:System.Index?displayProperty=nameWithType> 형식입니다. 식 `^e`에서 `e`의 결과는 암시적으로 `int`으로 변환할 수 있어야 합니다.
 
-또한 `^` 연산자를 [범위 연산자](#range-operator-)와 함께 사용하여 인덱스 범위를 만들 수 있습니다. 자세한 내용은 [인덱스와 범위](../../tutorials/ranges-indexes.md)를 참조하세요.
+`^` 연산자를 [범위 연산자](#range-operator-)와 함께 사용하여 인덱스 범위를 만들 수도 있습니다. 자세한 내용은 [인덱스와 범위](../../tutorials/ranges-indexes.md)를 참조하세요.
 
 ## <a name="range-operator-"></a>범위 연산자 .
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-ms.openlocfilehash: ec5d4c088d3a954a4670891e3bb115c73e6cfdcf
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 3b95a322377e82249a0375af589df74c658fcbf4
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242766"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507418"
 ---
 # <a name="numerics-in-net"></a>.NET의 숫자
 
@@ -92,6 +92,8 @@ ms.locfileid: "81242766"
   > <xref:System.Numerics.Vector%601> 형식은 .NET Framework에 포함되지 않습니다. 이 형식에 액세스하려면 [System.Numerics.Vectors](https://www.nuget.org/packages/System.Numerics.Vectors) NuGet 패키지를 설치해야 합니다.
   
 SIMD 사용 형식은 SIMD 미사용 하드웨어 또는 JIT 컴파일러와 함께 사용할 수 있는 방식으로 구현됩니다. SIMD 지침을 활용하려면 .NET Core 및 .NET Framework 4.6 이상 버전에 포함된 RyuJIT 컴파일러를 사용하는 런타임을 통해 64비트 앱을 실행해야 합니다. 64비트 프로세서를 대상으로 지정할 때 SIMD 지원을 추가합니다.
+
+자세한 내용은 [SIMD 가속 숫자 형식 사용](simd.md)을 참조하세요.
 
 ## <a name="see-also"></a>참조
 

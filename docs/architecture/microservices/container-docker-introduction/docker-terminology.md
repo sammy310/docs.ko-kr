@@ -2,12 +2,12 @@
 title: Docker 용어
 description: 컨테이너화된 .NET 애플리케이션을 위한 .NET 마이크로 서비스 아키텍처 | Docker 용어
 ms.date: 01/30/2020
-ms.openlocfilehash: fdcc5ec3603579c36d7339bd3ff651713b8eba88
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 16aaaa2df0f68434b766d4d1cc96974e83449953
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523341"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82199900"
 ---
 # <a name="docker-terminology"></a>Docker 용어
 
@@ -15,11 +15,13 @@ ms.locfileid: "80523341"
 
 **컨테이너 이미지**: 컨테이너를 만드는 데 필요한 모든 종속성 및 정보를 포함한 패키지입니다. 이미지에는 모든 종속성(예: 프레임워크) 및 컨테이너 런타임에서 사용할 배포 및 실행 구성이 포함됩니다. 일반적으로 이미지는 컨테이너의 파일 시스템을 구성하기 위해 계층으로 서로 포개진 여러 개의 기본 이미지에서 파생됩니다. 이미지를 만들면 변경할 수 없습니다.
 
-**Dockerfile**: Docker 이미지를 빌드하는 방법에 대한 지침을 포함하는 텍스트 파일입니다. 배치 스크립트처럼 첫째 줄에 지정된 기본 이미지에서 시작하여, 필요한 작업 환경이 완성될 때까지 지침에 따라 필요한 프로그램을 설치하고 파일을 복사합니다.
+**Dockerfile**: Docker 이미지를 빌드하기 위한 지침을 포함하는 텍스트 파일입니다. 배치 스크립트처럼 첫 번째 줄에 지정된 기본 이미지에서 시작한 다음, 필요한 작업 환경이 완성될 때까지 지침에 따라 필요한 프로그램을 설치하고 파일을 복사하는 등의 작업을 수행합니다.
 
-**빌드:** 해당 Dockerfile에서 제공하는 정보 및 컨텍스트에 외에도 이미지를 빌드하는 폴더의 추가 파일에 기반하여 컨테이너 이미지를 빌드하는 작업입니다. Docker 명령을 사용하여 이미지를 빌드할 수 있습니다.
+**빌드:** 해당 Dockerfile에서 제공하는 정보 및 컨텍스트에 외에도 이미지를 빌드하는 폴더의 추가 파일에 기반하여 컨테이너 이미지를 빌드하는 작업입니다. 다음의 Docker 명령을 사용하여 이미지를 빌드할 수 있습니다.
 
-> `docker build`
+```bash
+docker build
+```
 
 **컨테이너**: Docker 이미지의 인스턴스입니다. 컨테이너는 단일 애플리케이션, 프로세스 또는 서비스의 실행을 나타냅니다. Docker 이미지의 콘텐츠, 실행 환경 및 명령의 표준 집합으로 구성됩니다. 서비스의 크기를 조정하는 경우 동일한 이미지에서 컨테이너의 여러 인스턴스를 만듭니다. 일괄 작업은 동일한 이미지에서 다중 컨테이너를 만들 수 있고 각 인스턴스에 다른 매개 변수를 전달합니다.
 
@@ -39,7 +41,7 @@ ms.locfileid: "80523341"
 
 **Azure Container Registry**: Docker 이미지로 작업하는 공용 리소스 및 Azure의 해당 구성 요소입니다. 여기서는 Azure에서 배포에 가깝고, 액세스에 대한 제어를 제공하는 레지스트리를 제공하여 Azure Active Directory 그룹 및 권한을 사용할 수 있도록 합니다.
 
-**DTR(Docker Trusted Registry)** : 조직의 데이터 센터 및 네트워크 내에서 유지되도록 온-프레미스에 설치될 수 있는 Docker의 Docker 레지스트리 서비스입니다. 엔터프라이즈 내에서 관리되어야 하는 개인 이미지에 유용합니다. Docker Trusted Registry는 Docker 데이터 센터 제품의 일부로 포함됩니다. 자세한 내용은 [DTR(Docker Trusted Registry)](https://docs.docker.com/docker-trusted-registry/overview/)를 참조하세요.
+**DTR(Docker Trusted Registry)** : 조직의 데이터 센터 및 네트워크 내에서 유지되도록 온-프레미스에 설치될 수 있는 Docker의 Docker 레지스트리 서비스입니다. 엔터프라이즈 내에서 관리되어야 하는 프라이빗 이미지에 유용합니다. Docker Trusted Registry는 Docker 데이터 센터 제품의 일부로 포함됩니다. 자세한 내용은 [DTR(Docker Trusted Registry)](https://docs.docker.com/docker-trusted-registry/overview/)를 참조하세요.
 
 **Docker CE(Community Edition)** : 로컬로 컨테이너를 빌드하고, 실행하고, 테스트하는 Windows 및 macOS용 개발 도구입니다. Windows용 Docker CE는 Linux 및 Windows 컨테이너에 개발 환경을 제공합니다. Windows의 Linux Docker 호스트는 [Hyper-V](https://www.microsoft.com/cloud-platform/server-virtualization) 가상 머신을 기반으로 합니다. Windows 컨테이너에 대한 호스트는 Windows를 직접 기반으로 합니다. Mac용 Docker CE는 Apple 하이퍼바이저 및 [xhyve 하이퍼바이저](https://github.com/mist64/xhyve) 프레임워크를 기반으로 합니다. 여기서는 Mac OS X에서 Linux Docker 가상 머신을 제공합니다. Windows 및 Mac용 Docker CE는 Oracle VirtualBox를 기반으로 하는 Docker 도구 상자를 대체합니다.
 
@@ -49,7 +51,7 @@ ms.locfileid: "80523341"
 
 **클러스터**: 애플리케이션이 클러스터 내의 여러 호스트에 걸쳐 분산된 서비스의 여러 인스턴스 크기를 조정할 수 있도록 단일 가상 Docker 호스트인 것처럼 노출된 Docker 호스트 컬렉션입니다. Docker 클러스터는 Kubernetes, Azure Service Fabric, Docker Swarm 및 Mesosphere DC/OS를 사용하여 만들 수 있습니다.
 
-**오케스트레이터**: 클러스터 및 Docker 호스트의 관리를 간소화하는 도구입니다. 오케스트레이터를 사용하면 CLI 또는 그래픽 UI를 통해 해당 이미지, 컨테이너 및 호스트를 관리할 수 있습니다. 컨테이너 네트워킹, 구성, 부하 분산, 서비스 검색, 고가용성, Docker 호스트 구성 등을 관리할 수 있습니다. 오케스트레이터는 노드 컬렉션 간에 워크로드를 실행하고, 배포하고, 크기를 조정하고. 복구하는 작업을 담당합니다. 일반적으로 오케스트레이터 제품은 출시된 다른 제품 중에서 Kubernetes 및 Azure Service Fabric과 같은 클러스터 인프라를 제공하는 동일한 제품입니다.
+**오케스트레이터**: 클러스터 및 Docker 호스트의 관리를 간소화하는 도구입니다. 오케스트레이터를 사용하면 CLI(명령줄 인터페이스)또는 그래픽 UI를 통해 해당 이미지, 컨테이너 및 호스트를 관리할 수 있습니다. 컨테이너 네트워킹, 구성, 부하 분산, 서비스 검색, 고가용성, Docker 호스트 구성 등을 관리할 수 있습니다. 오케스트레이터는 노드 컬렉션 간에 워크로드를 실행하고, 배포하고, 크기를 조정하고. 복구하는 작업을 담당합니다. 일반적으로 오케스트레이터 제품은 출시된 다른 제품 중에서 Kubernetes 및 Azure Service Fabric과 같은 클러스터 인프라를 제공하는 동일한 제품입니다.
 
 >[!div class="step-by-step"]
 >[이전](docker-defined.md)

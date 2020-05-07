@@ -1,21 +1,21 @@
 ---
-title: Iterators
+title: 반복기
 description: 기본 제공 C# 반복기를 사용하는 방법 및 사용자 지정 반복기 메서드를 만드는 방법을 알아봅니다.
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: 1933ecf83e9fa234f9b88c815d8ab527997c97f2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: efa755c2243c18fb51b653abccb2bfc702bbc055
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398726"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507379"
 ---
-# <a name="iterators"></a>Iterators
+# <a name="iterators"></a>반복기
 
 작성하는 거의 모든 프로그램에서 컬렉션을 반복해야 하는 경우가 있습니다. 컬렉션에 있는 모든 항목을 조사하는 코드를 작성합니다.
 
-또한 해당 클래스의 요소에 대해 반복기를 생성하는 메서드인 반복기 메서드를 만듭니다. 이러한 메서드는 다음과 같은 경우에 사용할 수 있습니다.
+또한 해당 클래스의 요소에 대해 반복기(컨테이너, 특히 목록을 트래버스하는 개체)를 생성하는 메서드인 반복기 메서드를 만듭니다. 이러한 메서드는 다음과 같은 경우에 사용할 수 있습니다.
 
 + 컬렉션의 각 항목에 대한 작업 수행.
 + 사용자 지정 컬렉션 열거.

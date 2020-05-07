@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1cf4ca8e-d9bb-4633-9adf-5e24315bf87a
 topic_type:
 - apiref
-ms.openlocfilehash: 0b210f105495fa3f5595adbcb0805e1d1fb62310
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2271611b5cbbfe487e5798be0429ed94c227a67f
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179215"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860880"
 ---
 # <a name="createcoreclrdebugtarget-function"></a>CreateCoreClrDebugTarget 함수
-원격 컴퓨터에서 실행 중인 디버거 프록시에 대한 연결을 만들고 원격 컴퓨터에서 실행 중인 프로세스 및 로드된 런타임을 쿼리하는 데 사용할 수 있는 [ICoreClrDebugTarget](icoreclrdebugtarget-interface.md) 개체를 반환합니다.  
+원격 컴퓨터에서 실행 되는 디버거 프록시에 대 한 연결을 만들고, 원격 컴퓨터에서 실행 중인 프로세스 및 로드 된 런타임을 쿼리 하는 데 사용할 수 있는 [ICoreClrDebugTarget](icoreclrdebugtarget-interface.md) 개체를 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,7 +40,7 @@ HRESULT CreateCoreClrDebugTarget (
  [in] 원격 대상 컴퓨터의 IPv4 주소입니다.  
   
  `ppTarget`  
- 【아웃】 생성될 [ICoreClrdebugTarget](icoreclrdebugtarget-interface.md) 개체에 대한 포인터를 포인터로 지정합니다.  
+ 제한이 생성 될 [ICoreClrDebugTarget](icoreclrdebugtarget-interface.md) 개체에 대 한 포인터에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>Return Value  
  S_OK  
@@ -53,10 +53,10 @@ HRESULT CreateCoreClrDebugTarget (
  기타 실패  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** 코어클러원격디버깅인터페이스.h  
+ **헤더:** CoreClrRemoteDebuggingInterfaces  
   
- **라이브러리:** mscordbi_macx86.dll  
+ **라이브러리:** mscordbi_macx86 .dll  
   
- **.NET 프레임워크 버전:** 3.5 SP1
+ **.NET Framework 버전:** 3.5 SP1

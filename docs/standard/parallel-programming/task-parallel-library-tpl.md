@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET, parallel programming in
 - Parallel Programming
 ms.assetid: b8f99f43-9104-45fd-9bff-385a20488a23
-ms.openlocfilehash: 6785041730a048fb08677dbd054f727e351185d4
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 74a6fc20e95e11bfdbec617742f304a940f3e769
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588589"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507561"
 ---
 # <a name="task-parallel-library-tpl"></a>TPL(작업 병렬 라이브러리)
 TPL(작업 병렬 라이브러리)은 <xref:System.Threading?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks?displayProperty=nameWithType> 네임스페이스에 포함된 공용 형식 및 API의 집합입니다. TPL의 목적은 애플리케이션에 병렬 처리 및 동시성 기능을 추가하는 과정을 단순화하여 개발자가 더 생산적으로 작업할 수 있도록 하는 것입니다. TPL은 사용할 수 있는 모든 프로세서를 가장 효율적으로 사용하도록 동시성 수준을 동적으로 조정합니다. 또한 TPL은 작업의 분할, <xref:System.Threading.ThreadPool>에 대한 스레드 예약, 취소 지원, 상태 관리 및 기타 하위 수준 세부 정보를 처리합니다. TPL을 사용하면 프로그램의 설계 목적인 작업을 처리하는 데 집중하면서 코드의 성능을 최대화할 수 있습니다.  
@@ -31,6 +31,6 @@ TPL(작업 병렬 라이브러리)은 <xref:System.Threading?displayProperty=nam
 |[PLINQ(병렬 LINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)|LINQ 쿼리를 사용하여 데이터 병렬 처리를 구현하는 방법을 설명합니다.|  
 |[병렬 프로그래밍](../../../docs/standard/parallel-programming/index.md)|.NET 병렬 프로그래밍의 최상위 노드입니다.|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [NET Framework를 사용한 병렬 프로그래밍 샘플](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
+- [.NET Core 및 .NET Standard를 사용한 병렬 프로그래밍 샘플](/samples/browse/?products=dotnet-core%2Cdotnet-standard&term=parallel)

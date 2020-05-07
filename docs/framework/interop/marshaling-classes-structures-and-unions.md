@@ -18,12 +18,12 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
-ms.openlocfilehash: d761d8ed7488e99f29d4844d061867915a624b96
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
-ms.translationtype: MT
+ms.openlocfilehash: 708ed6a232950cb69796f105f6f198749ed53a24
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960009"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82200017"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>클래스, 구조체 및 공용 구조체 마샬링
 
@@ -34,14 +34,15 @@ ms.locfileid: "74960009"
 |형식|설명|예제|
 |----------|-----------------|------------|
 |값 방식 클래스.|관리되는 사례와 같이 정수 멤버를 In/Out 매개 변수로 사용하여 클래스를 전달합니다.|[SysTime 샘플](#systime-sample)|
-|값 방식 구조체.|구조체를 In 매개 변수로 전달합니다.|[구조 샘플](#structures-sample)|
+|값 방식 구조체.|구조체를 In 매개 변수로 전달합니다.|[구조체 샘플](#structures-sample)|
 |참조 방식 구조체.|구조체를 In/Out 매개 변수로 전달합니다.|[OSInfo 샘플](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|
 |중첩 구조체를 포함하는 구조체(결합).|관리되지 않는 함수에서 중첩 구조체를 포함하는 구조체를 나타내는 클래스를 전달합니다. 관리되는 프로토타입에서는 구조체가 하나의 큰 구조체로 결합됩니다.|[FindFile 샘플](#findfile-sample)|
-|다른 구조체에 대한 포인터를 포함하는 구조체.|두 번째 구조체에 대한 포인터를 멤버로 포함하는 구조체를 전달합니다.|[구조 샘플](#structures-sample)|
+|다른 구조체에 대한 포인터를 포함하는 구조체.|두 번째 구조체에 대한 포인터를 멤버로 포함하는 구조체를 전달합니다.|[구조체 샘플](#structures-sample)|
 |값 형식 정수를 포함하는 구조체 배열.|정수만 포함하는 구조체 배열을 In/Out 매개 변수로 전달합니다. 배열의 멤버를 변경할 수 있습니다.|[배열 샘플](marshaling-different-types-of-arrays.md)|
 |참조 형식 정수 및 문자열을 포함하는 구조체 배열.|정수 및 문자열을 포함하는 구조체 배열을 Out 매개 변수로 전달합니다. 호출된 함수가 배열에 대한 메모리를 할당합니다.|[OutArrayOfStructs 샘플](#outarrayofstructs-sample)|
-|값 형식을 포함하는 공용 구조체.|값 형식(정수 및 double)을 포함하는 공용 구조체를 전달합니다.|[공용 구조체 샘플](#unions-sample)|
-|혼합된 형식을 포함하는 공용 구조체.|혼합된 형식(정수 및 문자열)을 포함하는 공용 구조체를 전달합니다.|[공용 구조체 샘플](#unions-sample)|
+|값 형식을 포함하는 공용 구조체.|값 형식(정수 및 double)을 포함하는 공용 구조체를 전달합니다.|[Unions 샘플](#unions-sample)|
+|혼합된 형식을 포함하는 공용 구조체.|혼합된 형식(정수 및 문자열)을 포함하는 공용 구조체를 전달합니다.|[Unions 샘플](#unions-sample)|
+|플랫폼별 레이아웃을 사용하는 구조체입니다.|네이티브 압축 정의를 사용하여 형식을 전달합니다.|[플랫폼 샘플](#platform-sample)|
 |구조체의 null 값.|값 형식에 대한 참조 대신 null 참조(Visual Basic에서는 **Nothing**)를 전달합니다.|[HandleRef 샘플](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/hc662t8k(v=vs.85))|
 
 ## <a name="structures-sample"></a>Structures 샘플
@@ -68,7 +69,7 @@ Structs 샘플에서는 원래 함수 선언과 함께 표시되는 다음과 �
     void TestArrayInStruct(MYARRAYSTRUCT* pStruct);
     ```
 
-[PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll)은 앞에 나열된 함수 및 4개의 구조체(**MYPERSON**, **MYPERSON2**, **MYPERSON3** 및 **MYARRAYSTRUCT**)에 대한 구현을 포함하는 관리되지 않는 사용자 지정 라이브러리입니다. 이러한 구조체에는 다음과 같은 요소가 포함됩니다.
+[PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll)은 앞에 나열된 함수와 네 가지 구조에 대한 구현을 포함하는 관리되지 않는 사용자 지정 라이브러리입니다. **MYPERSON**, **MYPERSON2**, **MYPERSON3** 및 **MYARRAYSTRUCT**. 이러한 구조체에는 다음과 같은 요소가 포함됩니다.
 
 ```cpp
 typedef struct _MYPERSON
@@ -221,6 +222,85 @@ union MYUNION2
 [!code-cpp[Conceptual.Interop.Marshaling#29](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/unions.cpp#29)]
 [!code-csharp[Conceptual.Interop.Marshaling#29](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/unions.cs#29)]
 [!code-vb[Conceptual.Interop.Marshaling#29](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/unions.vb#29)]
+
+## <a name="platform-sample"></a>플랫폼 샘플
+
+일부 시나리오에서는 `struct` 및 `union` 레이아웃이 대상 플랫폼에 따라 달라질 수 있습니다. 예를 들어 COM 시나리오에서 정의된 경우 [`STRRET`](/windows/win32/api/shtypes/ns-shtypes-strret) 형식을 고려합니다.
+
+```c++
+#include <pshpack8.h> /* Defines the packing of the struct */
+typedef struct _STRRET
+    {
+    UINT uType;
+    /* [switch_is][switch_type] */ union
+        {
+        /* [case()][string] */ LPWSTR pOleStr;
+        /* [case()] */ UINT uOffset;
+        /* [case()] */ char cStr[ 260 ];
+        }  DUMMYUNIONNAME;
+    }  STRRET;
+#include <poppack.h>
+```
+
+위의 `struct`는 형식의 메모리 레이아웃에 영향을 주는 Windows 헤더를 사용하여 선언됩니다. 관리형 환경에서 정의된 경우 네이티브 코드와 제대로 상호 운용하려면 해당 레이아웃 정보가 필요합니다.
+
+32비트 프로세스에서 이 형식의 올바른 관리형 정의는 다음과 같습니다.
+
+``` CSharp
+[StructLayout(LayoutKind.Explicit, Size = 264)]
+public struct STRRET_32
+{
+    [FieldOffset(0)]
+    public uint uType;
+
+    [FieldOffset(4)]
+    public IntPtr pOleStr;
+
+    [FieldOffset(4)]
+    public uint uOffset;
+
+    [FieldOffset(4)]
+    public IntPtr cStr;
+}
+```
+
+64비트 프로세스에서 크기 및 필드 오프셋은 다릅니다.  올바른 레이아웃은 다음과 같습니다.
+
+``` CSharp
+[StructLayout(LayoutKind.Explicit, Size = 272)]
+public struct STRRET_64
+{
+    [FieldOffset(0)]
+    public uint uType;
+
+    [FieldOffset(8)]
+    public IntPtr pOleStr;
+
+    [FieldOffset(8)]
+    public uint uOffset;
+
+    [FieldOffset(8)]
+    public IntPtr cStr;
+}
+```
+
+Interop 시나리오에서 네이티브 레이아웃을 적절히 고려하지 못하면 임의 충돌이나 더 심한 경우 잘못된 계산이 발생할 수 있습니다.
+
+기본적으로 .NET 어셈블리는 32비트 및 64비트 버전의 .NET 런타임에서 실행할 수 있습니다. 앱은 런타임에 사용할 이전 정의를 결정할 때까지 기다려야 합니다.
+
+다음 코드 조각에서는 런타임에 32비트와 64비트 정의 중에서 선택하는 방법의 예를 보여 줍니다.
+
+```CSharp
+if (IntPtr.Size == 8)
+{
+    // Use the STRRET_64 definition
+}
+else
+{
+    Debug.Assert(IntPtr.Size == 4);
+    // Use the STRRET_32 definition
+}
+```
 
 ## <a name="systime-sample"></a>SysTime 샘플
 

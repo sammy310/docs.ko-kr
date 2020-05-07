@@ -2,12 +2,12 @@
 title: IHttpClientFactory를 사용하여 복원력 있는 HTTP 요청 구현
 description: 애플리케이션에서 사용하기 쉽도록 .NET Core 2.1부터 제공되는 IHttpClientFactory를 사용하여 `HttpClient` 인스턴스를 만드는 방법을 알아봅니다.
 ms.date: 03/03/2020
-ms.openlocfilehash: 088fb6c7e10ad656247ee4065da5c13d383b2cf7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ade26208a931faa456c8e267def2caef7a3f32de
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847221"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507301"
 ---
 # <a name="use-ihttpclientfactory-to-implement-resilient-http-requests"></a>IHttpClientFactory를 사용하여 복원력 있는 HTTP 요청 구현
 
@@ -19,9 +19,9 @@ ms.locfileid: "78847221"
 
 이 클래스는 `IDisposable`을 구현하지만, `using` 문 내에서 이 클래스를 선언하고 인스턴스화하는 것은 선호되지 않습니다. `HttpClient` 개체가 삭제될 때 기본 소켓이 즉시 해제되지 않아 ‘소켓 소모’ 문제가 발생할 수 있기 때문입니다.  이 문제에 대한 자세한 내용은 블로그 게시물 [You're using HttpClient wrong and it's destabilizing your software](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/)(잘못 사용하고 있는 HttpClient로 인해 불안정해지고 있는 소프트웨어)를 참조하세요.
 
-따라서 `HttpClient`는 한 번 인스턴스화되어 애플리케이션의 수명 동안 다시 사용됩니다. 모든 요청에 대해 `HttpClient` 클래스를 인스턴스화하면 과도한 부하에서 사용할 수 있는 소켓 수가 소진됩니다. 이 문제로 인해 `SocketException` 오류가 발생합니다. 이 문제를 해결하는 데 가능한 방법은 [HttpClient 사용에 관한 Microsoft 문서](../../../csharp/tutorials/console-webapiclient.md)에서 설명한 대로 `HttpClient` 개체를 싱글톤 또는 정적으로 만드는 것을 기반으로 합니다. 이 방법은 단기 콘솔 앱 또는 하루에 몇 번 실행되는 유사한 앱에 좋은 해결책일 수 있습니다.
+따라서 `HttpClient`는 한 번 인스턴스화되어 애플리케이션의 수명 동안 다시 사용됩니다. 모든 요청에 대해 `HttpClient` 클래스를 인스턴스화하면 과도한 부하에서 사용할 수 있는 소켓 수가 소진됩니다. 이 문제로 인해 `SocketException` 오류가 발생합니다. 이 문제를 해결하는 데 가능한 방법은 [HttpClient 사용에 관한 Microsoft 문서](../../../csharp/tutorials/console-webapiclient.md)에서 설명한 대로 `HttpClient` 개체를 singleton 또는 정적으로 만드는 것을 기반으로 합니다. 이 방법은 단기 콘솔 앱 또는 하루에 몇 번 실행되는 유사한 앱에 좋은 해결책일 수 있습니다.
 
-개발자가 겪는 또 다른 문제는 장기 실행 프로세스에서 `HttpClient`의 공유 인스턴스를 사용하는 경우에 발생합니다. HttpClient가 싱글톤 또는 정적 개체로 인스턴스화되는 상황에서 이 [문제](https://github.com/dotnet/corefx/issues/11224)에서 dotnet/corefx GitHub 리포지토리에 대해 설명된 대로 DNS 변경 사항을 처리하지 못합니다.
+개발자가 겪는 또 다른 문제는 장기 실행 프로세스에서 `HttpClient`의 공유 인스턴스를 사용하는 경우에 발생합니다. HttpClient가 singleton 또는 정적 개체로 인스턴스화되는 상황에서 이 [문제](https://github.com/dotnet/runtime/issues/18348)에서 dotnet/런타임 GitHub 리포지토리에 대해 설명된 대로 DNS 변경 사항을 처리하지 못합니다.
 
 그러나 문제는 `HttpClient` 자체가 아니라 [HttpClient의 기본 생성자](https://docs.microsoft.com/dotnet/api/system.net.http.httpclient.-ctor?view=netcore-3.1#System_Net_Http_HttpClient__ctor)에 있습니다. 이 생성자는 위에서 언급한 ‘소켓 소모’ 및 DNS 변경 문제가 있는 새로운 구체적인 <xref:System.Net.Http.HttpMessageHandler> 인스턴스를 만들기 때문입니다. 
 
@@ -67,7 +67,7 @@ ms.locfileid: "78847221"
 
 위 이미지의 `ClientService`(컨트롤러 또는 클라이언트 코드에서 사용됨)는 등록된 `IHttpClientFactory`에서 만든 `HttpClient`를 사용합니다. 이 팩터리는 풀의 `HttpMessageHandler`를 `HttpClient`에 할당합니다. 확장 메서드 <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient*>를 사용하여 DI 컨테이너에 `IHttpClientFactory`를 등록할 때 Polly의 정책을 사용하여 `HttpClient`를 구성할 수 있습니다.
 
-위의 구조를 구성하려면 <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection>용 <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient*> 확장 메서드를 포함하는 `Microsoft.Extensions.Http` NuGet 패키지를 설치하여 애플리케이션에서 <xref:System.Net.Http.IHttpClientFactory>를 추가합니다. 이 확장 메서드는 인터페이스 `IHttpClientFactory`에 대한 싱글톤으로 사용할 내부 `DefaultHttpClientFactory` 클래스를 등록하고 <xref:Microsoft.Extensions.Http.HttpMessageHandlerBuilder>에 대한 일시적인 구성을 정의합니다. 풀에서 가져온 이 메시지 처리기(<xref:System.Net.Http.HttpMessageHandler> 개체)는 팩터리에서 반환된 `HttpClient`에서 사용합니다.
+위의 구조를 구성하려면 <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection>용 <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient*> 확장 메서드를 포함하는 `Microsoft.Extensions.Http` NuGet 패키지를 설치하여 애플리케이션에서 <xref:System.Net.Http.IHttpClientFactory>를 추가합니다. 이 확장 메서드는 인터페이스 `IHttpClientFactory`에 대한 singleton으로 사용할 내부 `DefaultHttpClientFactory` 클래스를 등록하고 <xref:Microsoft.Extensions.Http.HttpMessageHandlerBuilder>에 대한 일시적인 구성을 정의합니다. 풀에서 가져온 이 메시지 처리기(<xref:System.Net.Http.HttpMessageHandler> 개체)는 팩터리에서 반환된 `HttpClient`에서 사용합니다.
 
 다음 코드에서는 `AddHttpClient()`를 사용하여 `HttpClient`를 사용해야 하는 형식화된 클라이언트(서비스 에이전트)를 등록하는 방법을 확인할 수 있습니다.
 
@@ -157,7 +157,7 @@ public class CatalogService : ICatalogService
 
 ### <a name="use-your-typed-client-classes"></a>형식화된 클라이언트 클래스 사용
 
-마지막으로, 형식화된 클래스를 구현하고 `AddHttpClient()`에 등록하고 구성한 후에는 DI를 사용하여 서비스를 삽입할 수 있는 위치에서 해당 클래스를 사용할 수 있습니다. 예를 들어 eShopOnContainers의 다음 코드와 같이 MVC 웹앱 컨트롤러 또는 Razor 페이지 코드에서 사용할 수 있습니다.
+마지막으로, 형식화된 클래스를 구현하고 `AddHttpClient()`에 등록하고 구성한 후에는 DI를 사용하여 서비스를 삽입할 수 있는 위치에서 해당 클래스를 사용할 수 있습니다. 예를 들어 eShopOnContainers의 다음 코드와 같이 MVC 웹 앱 컨트롤러 또는 Razor 페이지 코드에서 사용할 수 있습니다.
 
 ```csharp
 namespace Microsoft.eShopOnContainers.WebMVC.Controllers

@@ -2,12 +2,12 @@
 title: dotnet new 명령
 description: dotnet new 명령은 지정된 템플릿을 기반으로 새 .NET Core 프로젝트를 만듭니다.
 ms.date: 04/10/2020
-ms.openlocfilehash: 1979f98a6005a414acc64c5eaa086a88aca9f033
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 9a68baafa7ac3e6ad2fdc8f1c6e8621d6e15f1ff
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102829"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506859"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -46,14 +46,14 @@ dotnet new -h|--help
 
   명령이 호출될 때 인스턴스화할 템플릿입니다. 각 템플릿에는 전달할 수 있는 특정 옵션이 있을 수 있습니다. 자세한 내용은 [템플릿 옵션](#template-options)을 참조하세요.
 
-  `dotnet new --list`를 실행하여 설치된 모든 템플릿의 목록을 볼 수 있습니다. `TEMPLATE` 값이 반환된 테이블의 **템플릿** 또는 **약식 이름** 열의 텍스트와 정확히 일치하지 않는 경우 해당 두 열에 대해 부분 문자열 일치가 수행됩니다.
+  `dotnet new --list` 또는 `dotnet new -l`을 실행하여 설치된 모든 템플릿의 목록을 볼 수 있습니다. `TEMPLATE` 값이 반환된 테이블의 **템플릿** 또는 **약식 이름** 열의 텍스트와 정확히 일치하지 않는 경우 해당 두 열에 대해 부분 문자열 일치가 수행됩니다.
 
   .NET Core 3.0 SDK부터 CLI는 다음 조건에서 `dotnet new` 명령을 호출할 때 NuGet.org에서 템플릿을 검색합니다.
 
   - `dotnet new`를 호출할 때 CLI가 템플릿 일치 또는 부분 일치조차 찾을 수 없는 경우.
   - 최신 버전의 템플릿을 사용할 수 있는 경우. 이 경우 프로젝트 또는 아티팩트가 만들어지지만 CLI는 업데이트된 템플릿 버전에 대해 경고합니다.
 
-  명령에는 템플릿의 기본 목록이 포함되어 있습니다. `dotnet new -l`을 사용하여 사용 가능한 템플릿 목록을 가져옵니다. 다음 표에는 .NET Core SDK와 함께 사전 설치된 템플릿이 나와 있습니다. 템플릿의 기본 언어는 대괄호 안에 표시됩니다. 특정 템플릿 옵션을 보려면 약식 이름 링크를 클릭합니다.
+  다음 표에는 .NET Core SDK와 함께 사전 설치된 템플릿이 나와 있습니다. 템플릿의 기본 언어는 대괄호 안에 표시됩니다. 특정 템플릿 옵션을 보려면 약식 이름 링크를 클릭합니다.
 
 | 템플릿                                    | 짧은 이름                      | 언어     | Tags                                  | 도입 |
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
@@ -84,19 +84,19 @@ dotnet new -h|--help
 | Razor 클래스 라이브러리                          | [razorclasslib](#razorclasslib) | [C#]         | Web/Razor/Library/Razor 클래스 라이브러리 | 2.1        |
 | ASP.NET Core 웹 API                         | [webapi](#webapi)               | [C#], F#     | Web/WebAPI                            | 1.0        |
 | ASP.NET Core gRPC 서비스                    | [grpc](#web-others)             | [C#]         | Web/gRPC                              | 3.0        |
-| 프로토콜 버퍼 파일                         | [proto](#namespace)             |              | Web/gRPC                              | 3.0        |
 | dotnet gitignore 파일                        | `gitignore`                     |              | Config                                | 3.0        |
 | global.json 파일                             | [globaljson](#globaljson)       |              | Config                                | 2.0        |
 | NuGet 구성                                 | `nugetconfig`                   |              | Config                                | 1.0        |
-| dotnet local tool 매니페스트 파일              | `tool-manifest`                 |              | Config                                | 3.0        |
+| Dotnet 로컬 도구 매니페스트 파일              | `tool-manifest`                 |              | Config                                | 3.0        |
 | 웹 구성                                   | `webconfig`                     |              | Config                                | 1.0        |
 | 솔루션 파일                                | `sln`                           |              | 솔루션                              | 1.0        |
+| 프로토콜 버퍼 파일                         | [proto](#namespace)             |              | Web/gRPC                              | 3.0        |
 
 ## <a name="options"></a>옵션
 
 - **`--dry-run`**
 
-  지정된 명령이 실행될 경우 발생하는 동작에 대한 요약 정보를 표시합니다. .NET Core 2.2 SDK부터 사용할 수 있습니다.
+  지정된 명령이 실행되어 템플릿 만들기로 이어질 경우 발생하는 작업에 대한 요약을 표시합니다. .NET Core 2.2 SDK부터 사용할 수 있습니다.
 
 - **`--force`**
 
@@ -139,7 +139,7 @@ dotnet new -h|--help
 
 - **`--type <TYPE>`**
 
-  사용 가능한 형식에 따라 템플릿을 필터링합니다. 미리 정의된 값은 `project`, `item` 또는 `other`입니다.
+  사용 가능한 형식에 따라 템플릿을 필터링합니다. 미리 정의된 값은 `project`, `item` 및 `other`입니다.
 
 - **`-u|--uninstall [PATH|NUGET_ID]`**
 
@@ -507,7 +507,7 @@ dotnet new -h|--help
 
 - **`-rrc|--razor-runtime-compilation`**
 
-  프로젝트가 디버그 빌드에서 [Razor 런타임 컴파일](/aspnet/core/mvc/views/view-compilation#runtime-compilation)을 사용하도록 구성되어 있는지 확인합니다. .NET Core 3.1 SDK 이후 사용할 수 있는 옵션입니다.
+  프로젝트가 디버그 빌드에서 [Razor 런타임 컴파일](/aspnet/core/mvc/views/view-compilation#runtime-compilation)을 사용하도록 구성되어 있는지 확인합니다. .NET Core 3.1.201 SDK 이후 사용할 수 있는 옵션입니다.
 
 ***
 

@@ -3,18 +3,18 @@ title: dotnet nuget push 명령
 description: dotnet nuget push 명령은 서버에 패키지를 푸시하고 게시합니다.
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 96f8d008c8306a0782d5149360a24bb4097a1ec4
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 8b0437d7f4ada2b56af50e30717d131668c21f7e
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463513"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728350"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
 **이 문서의 적용 대상:** ✔️ .NET Core 2.x SDK 이상 버전
 
-## <a name="name"></a>name
+## <a name="name"></a>이름
 
 `dotnet nuget push` - 서버에 패키지를 푸시하고 게시합니다.
 
@@ -33,6 +33,8 @@ dotnet nuget push -h|--help
 ## <a name="description"></a>설명
 
 `dotnet nuget push` 명령은 서버에 패키지를 푸시하고 게시합니다. push 명령은 시스템의 NuGet 구성 파일에 있는 서버 및 자격 증명 정보 또는 구성 파일 체인을 사용합니다. 구성 파일에 대한 자세한 내용은 [NuGet 동작 구성](/nuget/consume-packages/configuring-nuget-behavior)을 참조하세요. NuGet의 기본 구성은 *%AppData%\NuGet\NuGet.config*(Windows) 또는 *$HOME/.local/share*(Linux/macOS)를 로드한 다음 드라이브의 루트에서 시작되고 현재 디렉터리에서 끝나는 *nuget.config* 또는 *.nuget\nuget.config*를 로드하여 가져올 수 있습니다.
+
+이 명령은 기존 패키지를 푸시합니다. 패키지를 만들지 않습니다. 패키지를 만들려면 [`dotnet pack`](dotnet-pack.md)을 사용합니다.
 
 ## <a name="arguments"></a>인수
 
@@ -104,13 +106,13 @@ dotnet nuget push -h|--help
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://api.nuget.org/v3/index.json
   ```
   
-  * 사용자 지정 푸시 소스 *에* foo.nupkg`https://customsource`를 푸시하여 API 키를 지정합니다.
+  * 사용자 지정 푸시 소스 `https://customsource`에 *foo.nupkg*를 푸시하여 API 키를 지정합니다.
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/
   ```
 
-- 기본 푸시 소스 *foo.nupkg*를 푸시합니다.
+- 기본 푸시 소스에 *foo.nupkg*를 푸시합니다.
 
   ```dotnetcli
   dotnet nuget push foo.nupkg
@@ -122,7 +124,7 @@ dotnet nuget push -h|--help
   dotnet nuget push foo.symbols.nupkg
   ```
 
-- 360초 시간 제한을 지정하여 기본 푸시 소스에 *foo.nupkg*를 푸시합니다.
+- 기본 푸시 소스에 *foo.nupkg*를 푸시하여 360초 시간 제한을 지정합니다.
 
   ```dotnetcli
   dotnet nuget push foo.nupkg --timeout 360
@@ -143,3 +145,12 @@ dotnet nuget push -h|--help
   ```dotnetcli
   dotnet nuget push *.nupkg --skip-duplicate
   ```
+
+- 로컬 피드 디렉터리에 현재 디렉터리에 있는 모든 *.nupkg* 파일을 푸시합니다.
+
+  ```dotnetcli
+  dotnet nuget push *.nupkg -s c:\mydir
+  ```
+
+  이 명령은 성능 최적화를 위해 권장되는 계층 구조 폴더 구조로 패키지를 저장하지 않습니다. 자세한 내용은 [로컬 피드](//nuget/hosting-packages/local-feeds)를 참조하세요.
+  

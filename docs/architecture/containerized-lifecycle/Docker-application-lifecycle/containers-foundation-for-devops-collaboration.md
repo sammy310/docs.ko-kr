@@ -1,13 +1,13 @@
 ---
 title: DevOps 협업의 기반으로 사용되는 컨테이너
 description: DevOps를 간소화하기 위한 컨테이너의 주요 역할을 이해합니다.
-ms.date: 02/15/2019
-ms.openlocfilehash: 8258f4331212d92376d64fef318adcdff492f61f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/16/2020
+ms.openlocfilehash: 83bebc92a242a5ac2906d9997b7b278f87f0db96
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73094495"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507348"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>DevOps 협업의 기반으로 사용되는 컨테이너
 
@@ -23,7 +23,7 @@ Docker 컨테이너를 사용하여 개발자는 컨테이너에 포함된 내�
 
 DevOps 핵심 요소는 코드 리포지토리에 제공된 Dockerfile을 사용하여 빌드-CI(지속적인 통합) 파이프라인을 정의합니다. CI 시스템은 선택한 Docker 레지스트리에서 기본 컨테이너 이미지를 풀하고 애플리케이션에 대한 사용자 지정 Docker 이미지를 빌드합니다. 그런 다음, 이미지의 유효성을 검사하고 여러 환경에 배포하는 데 사용되는 Docker 레지스트리에 이미지를 푸시합니다.
 
-오른쪽의 핵심 요소에서 운영 팀은 환경 및 애플리케이션을 모니터링하면서 프로덕션에 배포된 애플리케이션과 인프라를 관리하여 애플리케이션 개선 방법에 관하여 개발 팀에 피드백과 인사이트를 제공할 수 있습니다. 컨테이너 앱은 일반적으로 컨테이너 오케스트레이터를 사용하여 프로덕션에서 실행됩니다.
+오른쪽의 핵심 요소에서 운영 팀은 환경 및 애플리케이션을 모니터링하면서 프로덕션에 배포된 애플리케이션과 인프라를 관리하여 애플리케이션 개선 방법에 관하여 개발 팀에 피드백과 인사이트를 제공할 수 있습니다. 일반적으로 컨테이너 앱은 [Kubernetes](https://kubernetes.io/)와 같은 컨테이너 오케스트레이터를 사용하여 프로덕션 환경에서 실행됩니다. 여기서 일반적으로 [Helm 차트](https://helm.sh/)는 docker 작성 파일 대신 배포 단위를 구성하는 데 사용됩니다.
 
 두 팀은 기초 플랫폼(Docker 컨테이너)을 통해 협업하여 계약한 대로 우려를 불식시키는 동시에 애플리케이션 수명 주기에서 두 팀의 협업을 크게 개선합니다. 개발자는 컨테이너 콘텐츠, 해당 운영 환경 및 컨테이너 상호 의존성을 주도적으로 관리하며, 한편 운영 팀은 빌드된 이미지를 매니페스트와 함께 가져와서 자신의 오케스트레이션 시스템에서 실행합니다.
 

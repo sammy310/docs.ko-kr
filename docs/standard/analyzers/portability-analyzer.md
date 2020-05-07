@@ -4,12 +4,12 @@ description: .NET 이식성 분석기 도구를 사용하여 .NET Core, .NET Sta
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 397d9f08a0dd28f80d653ac5044d6acfa2418727
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 8d019bef5fddac9f7c3d93e416cea061905c82ff
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344306"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728438"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET 이식성 분석기
 
@@ -27,7 +27,7 @@ ms.locfileid: "80344306"
 
 ## <a name="how-to-use-the-net-portability-analyzer"></a>.NET 이식성 분석기를 사용하는 방법
 
-Visual Studio에서 .NET 이식성 분석기 사용을 시작하려면 먼저 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)에서 확장을 다운로드하고 설치해야 합니다. Visual Studio 2017 이상에서 작동합니다. **분석** > **이식성 분석기 설정**을 통해 Visual Studio에서 구성하고 대상 플랫폼을 선택할 수 있습니다. 이 플랫폼은 현재 어셈블리가 빌드된 플랫폼/버전과 비교하여 이식성 간격을 평가하려는 .NET 플랫폼/버전입니다.
+Visual Studio에서 .NET 이식성 분석기 사용을 시작하려면 먼저 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)에서 확장을 다운로드하고 설치해야 합니다. Visual Studio 2017 이상에서 작동합니다. **분석** > **이식성 분석기 설정**을 통해 Visual Studio에서 구성하고 대상 플랫폼을 선택합니다. 이 플랫폼은 현재 어셈블리가 빌드된 플랫폼/버전과 비교하여 이식성 간격을 평가하려는 .NET 플랫폼/버전입니다.
 
 ![이식성 분석기의 스크린샷](./media/portability-analyzer/portability-screenshot.png)
 
@@ -67,12 +67,12 @@ Visual Studio에서 분석을 실행한 후 .NET 이식성 보고서 파일 링�
 - 대상 멤버: 메서드가 대상 플랫폼에서 누락되었습니다.
 - 어셈블리 이름: 누락된 API가 거주하는 .NET Framework 어셈블리입니다.
 - 선택한 각 대상 플랫폼은 ".NET Core"와 같은 하나의 열입니다. "지원되지 않음" 값은 API가 이 대상 플랫폼에서 지원되지 않음을 의미합니다.
-- 권장 변경 내용: 변경할 권장 API 또는 기술입니다. 현재 이 필드는 많은 API에 대해 비어 있거나 만료되었습니다. 많은 수의 API 때문에 유지하는 데 큰 어려움을 겪고 있습니다. 고객에게 유용한 정보를 제공하기 위해 대체 솔루션을 찾고 있습니다.
+- 권장 변경 내용: 변경할 권장 API 또는 기술입니다. 현재 이 필드는 많은 API에 대해 비어 있거나 만료되었습니다. 많은 수의 API 때문에 최신으로 유지하는 데 큰 어려움을 겪고 있습니다. 고객에게 유용한 정보를 제공하기 위해 대체 솔루션을 찾고 있습니다.
 
 #### <a name="missing-assemblies"></a>어셈블리 누락
 
 ![누락된 어셈블리의 스크린샷](./media/portability-analyzer/api-catalog-missing-assemblies.png)
 
-보고서에서 누락된 어셈블리 섹션을 찾을 수 있습니다. 이 어셈블리 목록은 분석된 어셈블리에서 참조되고 분석되지 않았음을 알려줍니다. 사용자가 소유한 어셈블리인 경우 API 수준의 세부 이식성 보고서를 가져올 수 있도록 API 이식성 분석기 실행에 포함합니다. 타사 라이브러리인 경우 대상 플랫폼을 지원하는 최신 버전이 있는지 확인합니다. 그렇다면 최신 버전으로 이동하는 것이 좋습니다. 결국, 이 목록에는 앱이 사용하는 모든 타사 어셈블리가 포함되어 있으며 대상 플래폼을 지원하는 버전이 있음을 확인할 수 있습니다.
+보고서에서 누락된 어셈블리 섹션을 찾을 수 있습니다. 이 섹션에는 분석된 어셈블리에 의해 참조되고 분석되지 않았던 어셈블리 목록이 포함되어 있습니다. 사용자가 소유한 어셈블리인 경우 상세한 API 수준의 이식성 보고서를 가져올 수 있도록 API 이식성 분석기 실행에 포함합니다. 타사 라이브러리인 경우 대상 플랫폼을 지원하는 최신 버전이 있는지 확인하고 최신 버전으로 이동하는 것이 좋습니다. 결국, 이 목록에는 앱이 사용하며 대상 플래폼을 지원하는 버전이 있는 모든 타사 어셈블리가 포함됩니다.
 
 .NET 이식성 분석기에 대한 자세한 내용은 [GitHub 문서](https://github.com/Microsoft/dotnet-apiport#documentation) 및 [A Brief Look at the .NET Portability Analyzer](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer)(.NET 이식성 분석기 간단하게 살펴보기) Channel 9 비디오를 참조하세요.

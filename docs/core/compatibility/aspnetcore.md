@@ -2,15 +2,15 @@
 title: ASP.NET Core 호환성이 손상되는 변경
 titleSuffix: ''
 description: ASP.NET Core의 호환성이 손상되는 변경을 나열합니다.
-ms.date: 03/27/2020
+ms.date: 04/29/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 95057425614d7c717154ecfb687db2b9a6ca4a18
-ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
+ms.openlocfilehash: 63d39b1aa6e46b6bcbeb5a409efacac01dea4262
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80391249"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728332"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core 호환성이 손상되는 변경
 
@@ -31,14 +31,17 @@ ASP.NET Core는 .NET Core에서 사용되는 웹앱 개발 기능을 제공합�
 - [캐싱: Microsoft.Extensions.Caching.SqlServer는 새 SqlClient 패키지를 사용합니다.](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
 - [캐싱: ResponseCaching “pubternal” 유형이 내부로 변경됨](#caching-responsecaching-pubternal-types-changed-to-internal)
 - [데이터 보호: DataProtection.AzureStorage는 새로운 Azure Storage API를 사용합니다.](#data-protection-dataprotectionazurestorage-uses-new-azure-storage-apis)
+- [확장: 일부 NuGet 패키지에 영향을 주는 패키지 참조 변경 내용](#extensions-package-reference-changes-affecting-some-nuget-packages)
 - [호스팅: Windows Hosting Bundle에서 AspNetCoreModule V1이 제거됨](#hosting-aspnetcoremodule-v1-removed-from-windows-hosting-bundle)
 - [호스팅: 제네릭 호스트는 시작 생성자 주입을 제한합니다.](#hosting-generic-host-restricts-startup-constructor-injection)
 - [호스팅: IIS Out of Process 앱에 대해 HTTPS 리디렉션 사용](#hosting-https-redirection-enabled-for-iis-out-of-process-apps)
 - [호스팅: IHostingEnvironment 및 IApplicationLifetime 형식이 바뀜](#hosting-ihostingenvironment-and-iapplicationlifetime-types-marked-obsolete-and-replaced)
 - [호스팅: WebHostBuilder 종속성에서 제거되는 ObjectPoolProvider](#hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies)
+- [HTTP: Kestrel 및 IIS BadHttpRequestException 형식이 사용되지 않는 것으로 표시되고 대체됨](#http-kestrel-and-iis-badhttprequestexception-types-marked-obsolete-and-replaced)
 - [HTTP: 브라우저 SameSite 변경 내용이 인증에 영향](#http-browser-samesite-changes-impact-authentication)
 - [HTTP: DefaultHttpContext 확장성이 제거됨](#http-defaulthttpcontext-extensibility-removed)
 - [HTTP: HeaderNames 필드가 정적 읽기 전용으로 변경됨](#http-headernames-constants-changed-to-static-readonly)
+- [HTTP: IHttpClientFactory 로그 정수 상태 코드에서 생성된 HttpClient 인스턴스](#http-httpclient-instances-created-by-ihttpclientfactory-log-integer-status-codes)
 - [HTTP: 응답 본문 인프라 변경](#http-response-body-infrastructure-changes)
 - [HTTP: 일부 쿠키 SameSite 기본값이 변경됨](#http-some-cookie-samesite-defaults-changed-to-none)
 - [HTTP: 기본적으로 사용하지 않도록 설정된 동기 IO](#http-synchronous-io-disabled-in-all-servers)
@@ -52,6 +55,7 @@ ASP.NET Core는 .NET Core에서 사용되는 웹앱 개발 기능을 제공합�
 - [Kestrel: 요청 후행부 헤더가 새 컬렉션으로 이동됨](#kestrel-request-trailer-headers-moved-to-new-collection)
 - [Kestrel: 전송 추상화 계층 변경](#kestrel-transport-abstractions-removed-and-made-public)
 - [지역화: 사용되지 않음으로 표시된 API](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
+- [지역화: ResourceManagerWithCultureStringLocalizer 클래스 및 WithCulture 인터페이스 멤버가 제거됨](#localization-resourcemanagerwithculturestringlocalizer-class-and-withculture-interface-member-removed)
 - [로깅: DebugLogger 클래스를 내부적으로 만들었습니다.](#logging-debuglogger-class-made-internal)
 - [MVC: 컨트롤러 작업 비동기 접미사가 제거됨](#mvc-async-suffix-trimmed-from-controller-action-names)
 - [MVC: JsonResult를 Microsoft.AspNetCore.Mvc.Core로 이동](#mvc-jsonresult-moved-to-microsoftaspnetcoremvccore)
@@ -67,6 +71,7 @@ ASP.NET Core는 .NET Core에서 사용되는 웹앱 개발 기능을 제공합�
 - [SignalR: HubConnectionContext 생성자가 변경됨](#signalr-hubconnectioncontext-constructors-changed)
 - [SignalR: JavaScript 클라이언트 패키지 이름 변경](#signalr-javascript-client-package-name-changed)
 - [SignalR: MessagePack 허브 프로토콜이 MessagePack 2.x 패키지로 이동됨](#signalr-messagepack-hub-protocol-moved-to-messagepack-2x-package)
+- [SignalR: MessagePack 허브 프로토콜 옵션 형식이 변경됨](#signalr-messagepack-hub-protocol-options-type-changed)
 - [SignalR: 사용되지 않는 API](#signalr-usesignalr-and-useconnections-methods-marked-obsolete)
 - [SignalR: UseSignalR 및 UseConnections 메서드가 제거됨](#signalr-usesignalr-and-useconnections-methods-removed)
 - [SPA: SpaServices 및 NodeServices 콘솔 로거 대체 기본 변경](#spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger)
@@ -80,7 +85,27 @@ ASP.NET Core는 .NET Core에서 사용되는 웹앱 개발 기능을 제공합�
 
 ***
 
+[!INCLUDE[Extensions: Package reference changes](~/includes/core-changes/aspnetcore/5.0/extensions-package-reference-changes.md)]
+
+***
+
+[!INCLUDE[HTTP: HttpClient instances created by IHttpClientFactory log integer status codes](~/includes/core-changes/aspnetcore/5.0/http-httpclient-instances-log-integer-status-codes.md)]
+
+***
+
+[!INCLUDE[HTTP: Kestrel and IIS BadHttpRequestException types marked obsolete and replaced](~/includes/core-changes/aspnetcore/5.0/http-badhttprequestexception-obsolete.md)]
+
+***
+
+[!INCLUDE[Localization: ResourceManagerWithCultureStringLocalizer class and WithCulture interface member removed](~/includes/core-changes/aspnetcore/5.0/localization-members-removed.md)]
+
+***
+
 [!INCLUDE[SignalR: MessagePack Hub Protocol moved to MessagePack 2.x package](~/includes/core-changes/aspnetcore/5.0/signalr-messagepack-package.md)]
+
+***
+
+[!INCLUDE[SignalR: MessagePack Hub Protocol options type changed](~/includes/core-changes/aspnetcore/5.0/signalr-messagepack-hub-protocol-options-changed.md)]
 
 ***
 

@@ -2,12 +2,12 @@
 title: Docker 컨테이너에 대해 .NET Core를 선택할 경우
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | Docker 컨테이너에 대해 .NET Core를 선택할 경우
 ms.date: 01/30/2020
-ms.openlocfilehash: f784512af3f520f96d499ab002eda58071b3c284
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8d25cf58c48aac137ba91300515bdb72a7eb648d
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79147377"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507275"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Docker 컨테이너에 대해 .NET Core를 선택할 경우
 
@@ -27,7 +27,7 @@ ms.locfileid: "79147377"
 
 [Mac용 Visual Studio](https://www.visualstudio.com/vs/visual-studio-mac/)는 Xamarin Studio에서 진화한 IDE로, macOS에서 실행되고 Docker 기반 애플리케이션 개발을 지원합니다. 이는 Mac 컴퓨터에서 작업 중인 개발자로, 강력한 IDE도 사용하고자 하는 경우에 권장되는 옵션입니다.
 
-또한 macOS, Linux 및 Windows에서 [Visual Studio Code](https://code.visualstudio.com/)를 사용할 수 있습니다. Visual Studio Code는 IntelliSense 및 디버깅을 포함하여 .NET Core를 완벽하게 지원합니다. VS Code는 가벼운 편집기이므로 Mac에서 컨테이너화된 앱을 개발할 때 Docker CLI 및 [.NET Core CLI](../../../core/tools/index.md)와 함께 사용할 수 있습니다. Sublime, Emacs, vi 같은 대부분의 타사 편집기와 IntelliSense 지원을 제공하는 오픈 소스 OmniSharp 프로젝트에서도 .NET Core를 대상으로 지정할 수 있습니다.
+또한 macOS, Linux 및 Windows에서 [Visual Studio Code](https://code.visualstudio.com/)를 사용할 수 있습니다. Visual Studio Code는 IntelliSense 및 디버깅을 포함하여 .NET Core를 완벽하게 지원합니다. VS Code는 가벼운 편집기이므로 컴퓨터에서 컨테이너화된 앱을 개발할 때 Docker CLI 및 [.NET Core CLI](../../../core/tools/index.md)와 함께 사용할 수 있습니다. Sublime, Emacs, vi 같은 대부분의 타사 편집기와 IntelliSense 지원을 제공하는 오픈 소스 OmniSharp 프로젝트에서도 .NET Core를 대상으로 지정할 수 있습니다.
 
 IDE 및 편집기 외에도 지원되는 모든 플랫폼에 [.NET Core CLI](../../../core/tools/index.md)를 사용할 수 있습니다.
 
@@ -41,7 +41,7 @@ IDE 및 편집기 외에도 지원되는 모든 플랫폼에 [.NET Core CLI](../
 
 반면 컨테이너 기반의 마이크로 서비스 중심 시스템을 포괄하려면 .NET Core가 가장 적합합니다. .NET Core는 가볍기 때문입니다. 또한 Linux나 Windows Nano Server의 경우 관련 컨테이너 이미지가 간결하고 작아 컨테이너를 가볍고 빠르게 시작할 수 있습니다.
 
-마이크로 서비스는 가능한 작아야 합니다. 즉 신속하게 가공되고 작은 공간을 사용해야 하며 경계가 지정된 컨텍스트가 적어야 하고(DDD([도메인 기반 디자인](https://en.wikipedia.org/wiki/Domain-driven_design)) 확인) 우려되는 부분이 적어야 하며 신속하게 시작 및 중지할 수 있어야 합니다. 이러한 요구 사항을 위해 .NET Core 컨테이너 이미지 같이 신속하게 인스턴스화할 수 있는 작은 이미지를 사용하고자 할 수 있습니다.
+마이크로 서비스는 가능한 작아야 합니다. 즉 신속하게 가공되고 작은 공간을 사용해야 하며 경계가 지정된 컨텍스트가 적어야 하고(DDD([도메인 기반 디자인](https://en.wikipedia.org/wiki/Domain-driven_design)) 확인) 우려되는 부분이 적어야 하며 신속하게 시작 및 중지할 수 있어야 합니다. 이러한 요구 사항을 위해 .NET Core 컨테이너 이미지 같이 신속하게 인스턴스화할 수 있는 작은 이미지를 사용하고자 할 수 있습니다. 
 
 마이크로 서비스 아키텍처를 사용하면 서비스 경계를 벗어나 여러 기술을 융합할 수 있습니다. 이렇게 하면 ode.js, Python, Java, GoLang 또는 그 밖의 기술로 개발된 다른 마이크로 서비스나 서비스와 연계 작동하는 새 마이크로 서비스를 위해 .NET Core로의 점진적 마이그레이션이 가능합니다.
 

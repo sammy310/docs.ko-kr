@@ -3,18 +3,18 @@ title: 세계화 구성 설정
 description: '.NET Core 앱의 세계화 측면(예: 일본 날짜를 구문 분석하는 방식)을 구성하는 런타임 설정에 대해 알아봅니다.'
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 3764d0eb714c094b44ae843a1e626073ff8d82e4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7668c345181d7c08cfca9c5cb76b8addd76223ec
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76733459"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506807"
 ---
 # <a name="run-time-configuration-options-for-globalization"></a>세계화를 위한 런타임 구성 옵션
 
 ## <a name="invariant-mode"></a>고정 모드
 
-- .NET Core 앱이 문화별 데이터와 행동에 액세스하지 않고 세계화 고정 모드에서 실행되는지 아니면 문화권 데이터에 액세스할 수 있는지를 결정합니다.
+- .NET Core 앱이 문화권별 데이터와 동작에 액세스하지 않고 세계화 고정 모드에서 실행되는지 여부를 결정합니다.
 - 기본값: 문화권 데이터에 액세스하여 앱을 실행합니다(`false`).
 - 자세한 내용은 [.NET Core globalization invariant mode](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)(.NET Core 세계화 고정 모드)를 참조하세요.
 

@@ -4,12 +4,12 @@ description: 패키지 관리자를 사용하여 SLES 15에 .NET Core SDK 및 �
 author: thraka
 ms.author: adegeo
 ms.date: 03/17/2020
-ms.openlocfilehash: b86b97bf17165f2f7a70e80ff581750ba39be375
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: be5a21db8c3942bfe8827dfbce41bcf88aec342a
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134183"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595619"
 ---
 # <a name="sles-15-package-manager---install-net-core"></a>SLES 15 패키지 관리자 - .NET Core 설치
 
@@ -19,12 +19,12 @@ ms.locfileid: "80134183"
 
 [!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
-## <a name="register-microsoft-key-and-feed"></a>Microsoft 키 및 피드 등록
+## <a name="add-microsoft-repository-key-and-feed"></a>Microsoft 리포지토리 키 및 피드 추가
 
 .NET을 설치하기 전에 먼저 다음을 수행해야 합니다.
 
-- Microsoft 키를 등록합니다.
-- 제품 리포지토리를 등록합니다.
+- Microsoft 패키지 서명 키를 신뢰할 수 있는 키 목록에 추가합니다.
+- 패키지 관리자에 리포지토리를 추가합니다.
 - 필수 종속성을 설치합니다.
 
 이 작업은 머신당 한 번만 수행하면 됩니다.
@@ -33,6 +33,12 @@ ms.locfileid: "80134183"
 
 ```bash
 sudo rpm -Uvh https://packages.microsoft.com/config/sles/15/packages-microsoft-prod.rpm
+```
+
+현재 SLES 15 Microsoft 리포지토리 설치 패키지는 *microsoft-prod.repo* 파일을 잘못된 디렉터리에 설치하므로 zypper가 .NET Core 패키지를 찾을 수 없습니다. 이 문제를 해결하려면 올바른 디렉터리에 symlink를 만듭니다.
+
+```bash
+sudo ln -s /etc/yum.repos.d/microsoft-prod.repo /etc/zypp/repos.d/microsoft-prod.repo
 ```
 
 ## <a name="install-the-net-core-sdk"></a>.NET Core SDK 설치

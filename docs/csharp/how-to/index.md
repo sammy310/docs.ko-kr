@@ -2,12 +2,12 @@
 title: 방법 문서(C# 가이드)
 description: 유용한 팁 및 간단하고 집중된 코드 샘플의 컬렉션
 ms.date: 12/20/2017
-ms.openlocfilehash: e6cb657726b82a1710bbcd596fe48037b5c26352
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 81ef8106add757cf3c83aa7dc130f5474b936461
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397547"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794704"
 ---
 # <a name="how-to-c"></a>방법(C#)
 
@@ -63,7 +63,7 @@ C# 가이드의 방법 섹션에서 일반적인 질문에 대한 빠른 답변�
 - [문자열을 `DateTime`로 변환합니다](../../standard/base-types/parsing-datetime.md).
 - [바이트 배열을 정수로 변환합니다](../programming-guide/types/how-to-convert-a-byte-array-to-an-int.md).
 - [문자열을 숫자로 변환합니다](../programming-guide/types/how-to-convert-a-string-to-a-number.md).
-- [패턴 일치, `as` 및 `is` 연산자를 사용하여 안전하게 다른 형식으로 캐스팅합니다](../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).
+- [패턴 일치, `as` 및 `is` 연산자를 사용하여 안전하게 다른 형식으로 캐스팅합니다](safely-cast-using-pattern-matching-is-and-as-operators.md).
 - [사용자 지정 형식 변환을 정의합니다](../language-reference/operators/user-defined-conversion-operators.md).
 - [형식이 nullable 값 형식인지 여부를 확인합니다](../language-reference/builtin-types/nullable-value-types.md#how-to-identify-a-nullable-value-type).
 - [nullable과 비 nullable 값 형식 사이를 변환합니다](../language-reference/builtin-types/nullable-value-types.md#conversion-from-a-nullable-value-type-to-an-underlying-type).

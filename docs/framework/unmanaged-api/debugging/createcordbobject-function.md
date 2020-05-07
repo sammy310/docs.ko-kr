@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b259821d-4fa7-464d-85cf-304dfffc8089
 topic_type:
 - apiref
-ms.openlocfilehash: 2716adcc8c79c8003202561ea2011c2469a6bc5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 340d2de09562ea9b767203a7fa839cdc6b729b3b
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179225"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860895"
 ---
 # <a name="createcordbobject-function"></a>CreateCordbObject 함수
-원격 프로세스에서 관리되는 디버깅 세션을 인스턴스화하는 기능을 제공하는 디버거[인터페이스(ICorDebug)를](icordebug-interface.md)만듭니다.  
+원격 프로세스에서 관리 되는 디버깅 세션을 인스턴스화하기 위한 기능을 제공 하는 디버거 인터페이스 ([ICorDebug](icordebug-interface.md))를 만듭니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,7 +40,7 @@ HRESULT CordbCreateObject (
  [in] 대상 프로세스의 디버거 버전입니다. 원격 디버깅의 경우 이 매개 변수는 CorDebugVersion_2_0이어야 합니다.  
   
  `ppCordb`  
- 【아웃】 [ICorDebug](icordebug-interface.md) 인터페이스에 캐스팅되고 반환되는 개체에 대한 포인터를 포인터로 합니다.  
+ 제한이 [ICorDebug](icordebug-interface.md) 인터페이스로 캐스팅 되 고 반환 되는 개체에 대 한 포인터에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>Return Value  
  S_OK  
@@ -56,13 +56,13 @@ HRESULT CordbCreateObject (
  기타 실패  
   
 ## <a name="remarks"></a>설명  
- 반환되는 [ICorDebug](icordebug-interface.md) `ppCordb` 인터페이스는 관리되는 모든 디버깅 서비스에 대한 최상위 디버깅 인터페이스입니다.  
+ 에서 [ICorDebug](icordebug-interface.md) `ppCordb` 반환 되는 ICorDebug 인터페이스는 모든 관리 되는 디버깅 서비스에 대 한 최상위 수준 디버깅 인터페이스입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** 코어클러원격디버깅인터페이스.h  
+ **헤더:** CoreClrRemoteDebuggingInterfaces  
   
- **라이브러리:** mscordbi_macx86.dll  
+ **라이브러리:** mscordbi_macx86 .dll  
   
- **.NET 프레임워크 버전:** 3.5 SP1
+ **.NET Framework 버전:** 3.5 SP1
