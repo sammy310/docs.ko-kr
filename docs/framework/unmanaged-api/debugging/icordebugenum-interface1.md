@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80be7efe-2c32-4b9f-8c52-40c6f6268219
 topic_type:
 - apiref
-ms.openlocfilehash: cc5598f9cbec4b97bb75f83fb18ccf8742904272
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 7575be3f5074243b251c80b8dd5bdbb12e5d50fd
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76783015"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976332"
 ---
 # <a name="icordebugenum-interface"></a>ICorDebugEnum 인터페이스
 
@@ -27,33 +27,33 @@ ms.locfileid: "76783015"
   
 ## <a name="methods"></a>메서드  
   
-|메서드|설명|  
+|메서드|Description|  
 |------------|-----------------|  
-|[Clone 메서드](icordebugenum-clone-method.md)|이 복사본을 만들고 `ICorDebugEnum` 개체입니다.|  
+|[Clone 메서드](icordebugenum-clone-method.md)|이 `ICorDebugEnum` 개체의 복사본을 만듭니다.|  
 |[GetCount 메서드](icordebugenum-getcount-method.md)|열거형의 항목 수를 가져옵니다.|  
 |[Reset 메서드](icordebugenum-reset-method.md)|커서를 열거형의 시작 부분으로 이동 합니다.|  
 |[Skip 메서드](icordebugenum-skip-method.md)|지정 된 항목 수 만큼 열거에서 커서를 앞으로 이동 합니다.|  
   
-## <a name="remarks"></a>주의  
- 다음 열거자는 `ICorDebugEnum`에서 파생 됩니다.  
+## <a name="remarks"></a>설명  
+ 다음 열거자는에서 `ICorDebugEnum`파생 됩니다.  
   
-- "ICorDebugAppDomainEnum"  
+- ICorDebugAppDomainEnum  
   
-- "ICorDebugAssemblyEnum"  
+- ICorDebugAssemblyEnum  
   
 - [ICorDebugBlockingObjectEnum](icordebugblockingobjectenum-interface.md)  
   
-- "ICorDebugBreakpointEnum"  
+- ICorDebugBreakpointEnum  
   
-- "ICorDebugChainEnum"  
+- ICorDebugChainEnum  
   
-- "ICorDebugCodeEnum"  
+- ICorDebugCodeEnum  
   
 - ICorDebugErrorInfoEnum  
   
 - [ICorDebugExceptionObjectCallStackEnum](icordebugexceptionobjectcallstackenum-interface.md)  
   
-- "ICorDebugFrameEnum"  
+- ICorDebugFrameEnum  
   
 - [ICorDebugGCReferenceEnum](icordebuggcreferenceenum-interface.md)  
   
@@ -63,19 +63,19 @@ ms.locfileid: "76783015"
   
 - [ICorDebugHeapSegmentEnum](icordebugheapsegmentenum-interface.md)  
   
-- "ICorDebugModuleEnum"  
+- ICorDebugModuleEnum  
   
-- "ICorDebugObjectEnum"  
+- ICorDebugObjectEnum  
   
-- "ICorDebugProcessEnum"  
+- ICorDebugProcessEnum  
   
-- "ICorDebugStepperEnum"  
+- ICorDebugStepperEnum  
   
-- "ICorDebugThreadEnum"  
+- ICorDebugThreadEnum  
   
-- "ICorDebugTypeEnum"  
+- ICorDebugTypeEnum  
   
-- "ICorDebugValueEnum"  
+- ICorDebugValueEnum  
   
 - [ICorDebugVariableHomeEnum](icordebugvariablehomeenum-interface.md)  
   
@@ -83,14 +83,14 @@ ms.locfileid: "76783015"
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 인터페이스](debugging-interfaces.md)

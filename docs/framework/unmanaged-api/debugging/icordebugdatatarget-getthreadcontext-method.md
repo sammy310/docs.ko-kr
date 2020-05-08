@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c8954268-1821-4b23-b665-dbb55f2af31b
 topic_type:
 - apiref
-ms.openlocfilehash: 3eace2d91b3bb6e637a659b8b49a31450ebc2c42
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 79708aa5a2abcb8d7465f82a8beb918484c193b9
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76783723"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976553"
 ---
 # <a name="icordebugdatatargetgetthreadcontext-method"></a>ICorDebugDataTarget::GetThreadContext 메서드
 지정 된 스레드에 대 한 현재 스레드 컨텍스트를 반환 합니다.  
@@ -48,19 +48,19 @@ HRESULT GetThreadContext(
  `pContext`  
  제한이 스레드 컨텍스트가 저장 될 버퍼입니다.  
   
-## <a name="remarks"></a>주의  
- Windows 플랫폼에서 `pContext`은 [ICorDebugDataTarget:: GetPlatform](icordebugdatatarget-getplatform-method.md) 메서드로 지정 된 컴퓨터 유형에 적절 한 `CONTEXT` 구조 (winnt.exe에 정의 되어 있어야 함) 여야 합니다. `contextFlags`은 `CONTEXT` 구조체의 `ContextFlags` 필드와 값이 같아야 합니다. `CONTEXT` 구조는 프로세서 전용입니다. 자세한 내용은 Winnt.sif 파일을 참조 하세요.  
+## <a name="remarks"></a>설명  
+ Windows 플랫폼에서은 `pContext` `CONTEXT` [ICorDebugDataTarget:: getplatform](icordebugdatatarget-getplatform-method.md) 메서드로 지정 된 컴퓨터 유형에 적절 한 구조 (winnt.exe에 정의 됨) 여야 합니다. `contextFlags``CONTEXT` 구조체의 `ContextFlags` 필드와 값이 같아야 합니다. 구조 `CONTEXT` 는 프로세서에만 해당 됩니다. 자세한 내용은 Winnt.sif 파일을 참조 하세요.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugDataTarget 인터페이스](icordebugdatatarget-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

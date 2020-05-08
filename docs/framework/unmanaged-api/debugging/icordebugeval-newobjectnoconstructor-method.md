@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 80d509ca-b5e3-4c46-9c14-800db73d9bf7
 topic_type:
 - apiref
-ms.openlocfilehash: 45efa1939813a319e996a72fef62ada167b877c2
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d41216eb7da57d29d67ce17372f746328204649e
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788692"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976176"
 ---
 # <a name="icordebugevalnewobjectnoconstructor-method"></a>ICorDebugEval::NewObjectNoConstructor 메서드
 생성자 메서드 호출을 시도 하지 않고 지정 된 형식의 새 개체 인스턴스를 할당 합니다.  
@@ -40,7 +40,7 @@ HRESULT NewObjectNoConstructor (
  진행 인스턴스화할 개체의 형식을 나타내는 ICorDebugClass 개체에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -48,6 +48,6 @@ HRESULT NewObjectNoConstructor (
   
  **.NET Framework 버전:** 1.1, 1.0  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [NewParameterizedObjectNoConstructor 메서드](icordebugeval2-newparameterizedobjectnoconstructor-method.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea38ae20-7e0a-427a-be77-d78fae719d82
 topic_type:
 - apiref
-ms.openlocfilehash: 8632799b68ae8f92835d1774472bc1432d886f3b
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: fd7acaa8bcb4d53893855bcd25ff68cf26e30354
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793480"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976163"
 ---
 # <a name="icordebugeval2createvaluefortype-method"></a>ICorDebugEval2::CreateValueForType 메서드
 초기 값이 0 또는 null 인 지정 된 형식의 새 ICorDebugValue에 대 한 포인터를 가져옵니다.  
@@ -41,16 +41,16 @@ HRESULT CreateValueForType (
  `ppValue`  
  제한이 값을 나타내는 `ICorDebugValue` 개체의 주소에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>주의  
- 일반화 [ICorDebugEval:: CreateValue](icordebugeval-createvalue-method.md) `CreateValueForType` `List<int>`와 같은 생성 된 형식을 포함 하 여 임의의 개체 형식을 지정할 수 있습니다. 이 메서드의 유일한 용도는 함수 실행으로 전달 될 수 있는 값을 생성 하는 것입니다.  
+## <a name="remarks"></a>설명  
+ `CreateValueForType`일반화 [ICorDebugEval:: CreateValue](icordebugeval-createvalue-method.md) :와 `List<int>`같은 생성 된 형식을 포함 하 여 임의의 개체 형식을 지정할 수 있습니다. 이 메서드의 유일한 용도는 함수 실행으로 전달 될 수 있는 값을 생성 하는 것입니다.  
   
  형식은 클래스 또는 값 형식 이어야 합니다. 이 메서드를 사용 하 여 배열 값 이나 문자열 값을 만들 수는 없습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

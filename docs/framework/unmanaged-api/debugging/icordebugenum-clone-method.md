@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 57eefaf3-75cf-4496-bc94-88c0706861b7
 topic_type:
 - apiref
-ms.openlocfilehash: 2ec769c343ad055132c6d84e64600fc459357a85
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9f0fda803ba3a1ce35017d85e84b3bf6f567eda0
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124702"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976371"
 ---
 # <a name="icordebugenumclone-method"></a>ICorDebugEnum::Clone 메서드
 이 ICorDebugEnum 개체의 복사본을 만듭니다.  
@@ -35,13 +35,13 @@ HRESULT Clone (
   
 ## <a name="parameters"></a>매개 변수  
  `ppEnum`  
- 제한이 이 `ICorDebugEnum` 개체의 복사본 인 `ICorDebugEnum` 개체의 주소에 대 한 포인터입니다.  
+ 제한이 이 `ICorDebugEnum` `ICorDebugEnum` 개체의 복사본 인 개체의 주소에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

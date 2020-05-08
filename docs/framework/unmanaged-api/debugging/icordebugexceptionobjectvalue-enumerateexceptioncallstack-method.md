@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00c64533-15dd-47f4-bb97-fe80a1ebadef
 topic_type:
 - apiref
-ms.openlocfilehash: 57eb284bfe39ce92b2d6c03a2aeb4ae84d6aba91
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e45b180ac6d943d89740ad7ae10500ea4ad1aa9c
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788671"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975968"
 ---
 # <a name="icordebugexceptionobjectvalueenumerateexceptioncallstack-method"></a>ICorDebugExceptionObjectValue::EnumerateExceptionCallStack 메서드
 예외 개체에 포함 된 호출 스택에 대 한 열거자를 가져옵니다.  
@@ -37,21 +37,21 @@ HRESULT EnumerateExceptionCallStack(
  ppCallStackEnum  
  제한이 관리 되는 예외 개체에 대 한 스택 추적 열거자 인 [ICorDebugExceptionObjectCallStackEnum](icordebugexceptionobjectcallstackenum-interface.md) interface 개체의 주소에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>주의  
- 호출 스택 정보를 사용할 수 없는 경우 메서드는 `S_OK`을 반환 하 고 [ICorDebugExceptionObjectCallStackEnum](icordebugexceptionobjectcallstackenum-interface.md) 는 길이가 0 인 유효한 열거자입니다. 메서드가 스택 추적 정보를 검색할 수 없는 경우 반환 값은 `E_FAIL` 되며 열거자는 반환 되지 않습니다.  
+## <a name="remarks"></a>설명  
+ 호출 스택 정보를 사용할 수 없는 경우 메서드는을 `S_OK`반환 하 고 [ICorDebugExceptionObjectCallStackEnum](icordebugexceptionobjectcallstackenum-interface.md) 는 길이가 0 인 유효한 열거자입니다. 메서드가 스택 추적 정보를 검색할 수 없는 경우 반환 값은이 `E_FAIL` 고 열거자가 반환 되지 않습니다.  
   
- [ICorDebugExceptionObjectCallStackEnum](icordebugexceptionobjectcallstackenum-interface.md) 개체는 예외 개체의 `_stackTrace` 필드에서 스택 추적 데이터를 디코딩하는 역할을 합니다.  
+ [ICorDebugExceptionObjectCallStackEnum](icordebugexceptionobjectcallstackenum-interface.md) 개체는 exception 개체의 `_stackTrace` 필드에서 스택 추적 데이터를 디코딩하는 역할을 담당 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugExceptionObjectValue 인터페이스](icordebugexceptionobjectvalue-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

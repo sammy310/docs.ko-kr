@@ -2,12 +2,12 @@
 title: ICorDebugDataTarget2::EnumerateThreadIDs 메서드
 ms.date: 03/30/2017
 ms.assetid: af02460f-2a45-496e-bc4e-a1ac4f80fe11
-ms.openlocfilehash: 120a970aac33b1ab06ae47335a959d2791f893ed
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4a65b76f384cdad68cba75af524dbe672c309624
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178987"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976488"
 ---
 # <a name="icordebugdatatarget2enumeratethreadids-method"></a>ICorDebugDataTarget2::EnumerateThreadIDs 메서드
 활성 스레드 ID의 목록을 반환합니다.  
@@ -38,11 +38,11 @@ HRESULT EnumerateThreadIDs(
 > 이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항을](../../../../docs/framework/get-started/system-requirements.md)참조하십시오. **헤더:** 코르데버그.idl, 코르데버그.h  
+ **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조 하세요. **헤더:** CorDebug 있습니다.  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
