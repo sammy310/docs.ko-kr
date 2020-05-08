@@ -2,17 +2,17 @@
 title: ICorDebugAssembly3::EnumerateContainedAssemblies 메서드
 ms.date: 03/30/2017
 ms.assetid: 98f15b05-afad-4616-9e2a-1a9af31948b6
-ms.openlocfilehash: 616675f839e562227558ece440bdfdf497747572
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: aebf499d7d25caef80782cc5661a57048dc5f6a9
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76784567"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894859"
 ---
-# <a name="icordebugassembly3enumeratecontainedassemblies-method"></a><span data-ttu-id="e9720-102">ICorDebugAssembly3::EnumerateContainedAssemblies 메서드</span><span class="sxs-lookup"><span data-stu-id="e9720-102">ICorDebugAssembly3::EnumerateContainedAssemblies Method</span></span>
-<span data-ttu-id="e9720-103">이 어셈블리에 포함된 어셈블리에 대한 열거자를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="e9720-103">Gets an enumerator for the assemblies contained in this assembly.</span></span>  
+# <a name="icordebugassembly3enumeratecontainedassemblies-method"></a><span data-ttu-id="0b6da-102">ICorDebugAssembly3::EnumerateContainedAssemblies 메서드</span><span class="sxs-lookup"><span data-stu-id="0b6da-102">ICorDebugAssembly3::EnumerateContainedAssemblies Method</span></span>
+<span data-ttu-id="0b6da-103">이 어셈블리에 포함된 어셈블리에 대한 열거자를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="0b6da-103">Gets an enumerator for the assemblies contained in this assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e9720-104">구문</span><span class="sxs-lookup"><span data-stu-id="e9720-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0b6da-104">구문</span><span class="sxs-lookup"><span data-stu-id="0b6da-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumerateContainedAssemblies(  
@@ -20,29 +20,29 @@ HRESULT EnumerateContainedAssemblies(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e9720-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="e9720-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0b6da-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="0b6da-105">Parameters</span></span>  
  `ppAssemblies`  
- <span data-ttu-id="e9720-106">[out] 열거자인 ICorDebugAssemblyEnum 인터페이스 개체의 주소에 대한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="e9720-106">[out] A pointer to the address of an ICorDebugAssemblyEnum interface object that is the enumerator.</span></span>  
+ <span data-ttu-id="0b6da-106">[out] 열거자인 ICorDebugAssemblyEnum 인터페이스 개체의 주소에 대한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="0b6da-106">[out] A pointer to the address of an ICorDebugAssemblyEnum interface object that is the enumerator.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e9720-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="e9720-107">Return Value</span></span>  
- <span data-ttu-id="e9720-108">이 `S_OK` 개체가 컨테이너이면 `ICorDebugAssembly3`이고, 그러지 않으면 `S_FALSE`이며 열거형은 비어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e9720-108">`S_OK` if this `ICorDebugAssembly3` object is a container; otherwise, `S_FALSE`, and the enumeration is empty.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0b6da-107">Return Value</span><span class="sxs-lookup"><span data-stu-id="0b6da-107">Return Value</span></span>  
+ <span data-ttu-id="0b6da-108">이 `S_OK` 개체가 컨테이너이면 `ICorDebugAssembly3`이고, 그러지 않으면 `S_FALSE`이며 열거형은 비어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0b6da-108">`S_OK` if this `ICorDebugAssembly3` object is a container; otherwise, `S_FALSE`, and the enumeration is empty.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e9720-109">주의</span><span class="sxs-lookup"><span data-stu-id="e9720-109">Remarks</span></span>  
- <span data-ttu-id="e9720-110">포함된 어셈블리를 열거하려면 기호가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="e9720-110">Symbols are needed to enumerate the contained assemblies.</span></span> <span data-ttu-id="e9720-111">기호가 없으면 메서드는 `S_FALSE`를 반환하며 올바른 열거자가 제공되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e9720-111">If they aren't present, the method returns `S_FALSE`, and no valid enumerator is provided.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0b6da-109">설명</span><span class="sxs-lookup"><span data-stu-id="0b6da-109">Remarks</span></span>  
+ <span data-ttu-id="0b6da-110">포함된 어셈블리를 열거하려면 기호가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="0b6da-110">Symbols are needed to enumerate the contained assemblies.</span></span> <span data-ttu-id="0b6da-111">기호가 없으면 메서드는 `S_FALSE`를 반환하며 올바른 열거자가 제공되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="0b6da-111">If they aren't present, the method returns `S_FALSE`, and no valid enumerator is provided.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="e9720-112">이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e9720-112">This method is available with .NET Native only.</span></span>  
+> <span data-ttu-id="0b6da-112">이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0b6da-112">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e9720-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="e9720-113">Requirements</span></span>  
- <span data-ttu-id="e9720-114">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e9720-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0b6da-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="0b6da-113">Requirements</span></span>  
+ <span data-ttu-id="0b6da-114">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="0b6da-114">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e9720-115">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e9720-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="0b6da-115">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0b6da-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e9720-116">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e9720-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0b6da-116">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0b6da-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e9720-117">**.NET Framework 버전:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e9720-117">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="0b6da-117">**.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0b6da-117">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e9720-118">참조</span><span class="sxs-lookup"><span data-stu-id="e9720-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0b6da-118">참조</span><span class="sxs-lookup"><span data-stu-id="0b6da-118">See also</span></span>
 
-- [<span data-ttu-id="e9720-119">ICorDebugAssembly3 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e9720-119">ICorDebugAssembly3 Interface</span></span>](icordebugassembly3-interface.md)
-- [<span data-ttu-id="e9720-120">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e9720-120">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="0b6da-119">ICorDebugAssembly3 인터페이스</span><span class="sxs-lookup"><span data-stu-id="0b6da-119">ICorDebugAssembly3 Interface</span></span>](icordebugassembly3-interface.md)
+- [<span data-ttu-id="0b6da-120">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="0b6da-120">Debugging Interfaces</span></span>](debugging-interfaces.md)
