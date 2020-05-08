@@ -2,12 +2,12 @@
 title: 컨테이너 및 오케스트레이터 활용
 description: Azure에서 Docker 컨테이너 및 Kubernetes Orchestrator 활용
 ms.date: 04/13/2020
-ms.openlocfilehash: 3d94433250f02a8df2c27ebc89a101e1e8d15030
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 64c6c0666398d9ccbc87efad18017bf278568fc4
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199835"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895547"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>컨테이너 및 오케스트레이터 활용
 
@@ -55,10 +55,29 @@ Docker는 가장 인기 있는 컨테이너 관리 플랫폼입니다. Linux 또
 
 컨테이너는 변경할 수 없습니다. 컨테이너를 정의한 후에는 정확히 동일한 방식으로 다시 만들고 실행할 수 있습니다. 이 불변성은 구성 요소 기반 디자인에 적합 합니다. 응용 프로그램의 일부가 다른 부분과 다르게 발전 하는 경우 가장 자주 변경 되는 파트를 배포할 수 있는 경우 전체 앱을 다시 배포 해야 하는 이유는 무엇 인가요? 앱의 다양 한 기능 및 교차를 분리 하는 작업은 별도의 단위로 나눌 수 있습니다. 그림 3-2에서는 특정 기능이 나 기능을 위임 하 여 모놀리식 앱이 컨테이너 및 마이크로 서비스를 활용 하는 방법을 보여 줍니다. 앱 자체의 나머지 기능도 컨테이너 화 된 되었습니다.
 
+컨테이너는 변경할 수 없습니다. 컨테이너를 정의한 후에는 정확히 동일한 방식으로 다시 만들고 실행할 수 있습니다. 이 불변성은 구성 요소 기반 디자인에 적합 합니다. 응용 프로그램의 일부가 다른 부분과 다르게 발전 하는 경우 가장 자주 변경 되는 파트를 배포할 수 있는 경우 전체 앱을 다시 배포 해야 하는 이유는 무엇 인가요? 앱의 다양 한 기능 및 교차를 분리 하는 작업은 별도의 단위로 나눌 수 있습니다. 그림 3-2에서는 특정 기능이 나 기능을 위임 하 여 모놀리식 앱이 컨테이너 및 마이크로 서비스를 활용 하는 방법을 보여 줍니다. 앱 자체의 나머지 기능도 컨테이너 화 된 되었습니다.
+
 ![백 엔드에서 마이크로 서비스를 사용 하도록 모놀리식 앱을 분리 합니다. ](./media/breaking-up-monolith-with-backend-microservices.png)
  **그림 3-2**. 백 엔드에서 마이크로 서비스를 사용 하도록 모놀리식 앱을 분리 합니다.
 
 각 클라우드 네이티브 서비스는 별도의 컨테이너에 빌드 및 배포 됩니다. 각는 필요에 따라 업데이트할 수 있습니다. 각 서비스에 해당 하는 리소스가 있는 노드에서 개별 서비스를 호스트할 수 있습니다. 각 서비스를 실행 하는 환경은 개발, 테스트 및 프로덕션 환경에서 공유 되 고 쉽게 버전이 관리 되는 변경 불가능 합니다. 응용 프로그램의 서로 다른 영역 간 결합은 서비스 간 호출 또는 메시지로 명시적으로 발생 하며,이는 monolith 내에서 컴파일 타임 종속성이 아닙니다. 응용 프로그램의 나머지 부분을 변경할 필요 없이 지정 된 기능에 가장 적합 한 기술을 선택할 수도 있습니다.
+
+컨테이너 화 된 services에는 자동화 된 관리가 필요 합니다. 독립적으로 배포 된 컨테이너의 많은 집합을 수동으로 관리 하는 것은 불가능 합니다. 예를 들어 다음 작업을 고려 하십시오.
+
+- 여러 컴퓨터의 클러스터에서 컨테이너 인스턴스를 프로 비전 하는 방법
+- 배포 된 후 컨테이너는 어떻게 서로를 검색 하 고 통신할 수 있나요?
+- 컨테이너는 주문형으로 규모를 확장 하거나 축소할 수 있나요?
+- 각 컨테이너의 상태를 모니터링 하려면 어떻게 해야 하나요?
+- 하드웨어 및 소프트웨어 오류에 대해 컨테이너를 어떻게 보호 하나요?
+- 가동 중지 시간이 없는 라이브 응용 프로그램에 대해 컨테이너를 업그레이드 하려면 어떻게 해야 하나요?
+
+Container orchestrator는 이러한 문제를 해결 하 고 이러한 문제를 자동화 합니다.
+
+클라우드 네이티브 에코 시스템에서 Kubernetes는 사실상 컨테이너 orchestrator가 되었습니다. 이 플랫폼은 CNCF (Cloud Native 컴퓨팅 Foundation)에서 관리 하는 오픈 소스 플랫폼입니다. Kubernetes는 컴퓨터 클러스터에서 컨테이너 화 된 워크 로드의 배포, 크기 조정 및 운영 문제를 자동화 합니다. 그러나 Kubernetes을 설치 하 고 관리 하는 것은 어렵습니다 복잡 합니다.
+
+Kubernetes를 클라우드 공급 업체에서 관리 되는 서비스로 활용 하는 것이 훨씬 더 나은 방법입니다. Azure 클라우드는 완전히 관리 되는 Kubernetes platform [Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/)를 제공 합니다. AKS는 Kubernetes 관리의 복잡성 및 운영 오버 헤드를 요약 합니다. Kubernetes를 클라우드 서비스로 사용 합니다. Microsoft는이를 관리 하 고 지 원하는 작업을 담당 합니다. 또한 AKS는 다른 Azure 서비스 및 개발 도구와 긴밀 하 게 통합 됩니다.
+
+AKS는 클러스터 기반 기술입니다. 페더레이션된 가상 머신 또는 노드의 풀이 Azure 클라우드에 배포 됩니다. 이들은 모두 항상 사용 가능한 환경 또는 클러스터를 형성 합니다. 클러스터는 클라우드 네이티브 응용 프로그램에 원활한 단일 엔터티로 표시 됩니다. 내부적으로 AKS는 부하를 균등 하 게 분산 하는 미리 정의 된 전략에 따라 이러한 노드에서 컨테이너 화 된 서비스를 배포 합니다.
 
 컨테이너 화 된 services에는 자동화 된 관리가 필요 합니다. 독립적으로 배포 된 컨테이너의 많은 집합을 수동으로 관리 하는 것은 불가능 합니다. 예를 들어 다음 작업을 고려 하십시오.
 
@@ -144,7 +163,7 @@ status:
 
 ## <a name="development-resources"></a>개발 리소스
 
-이 섹션에서는 다음 응용 프로그램에 컨테이너 및 orchestrator 사용을 시작 하는 데 도움이 될 수 있는 간단한 개발 리소스 목록을 보여 줍니다. 클라우드 네이티브 마이크로 서비스 아키텍처 앱을 설계 하는 방법에 대 한 지침은이 설명서의 [.Net 마이크로 서비스: 컨테이너 화 된 .Net 응용 프로그램용 아키텍처](https://aka.ms/microservicesebook)를 참조 하세요.
+이 섹션에서는 다음 응용 프로그램에 컨테이너 및 orchestrator 사용을 시작 하는 데 도움이 될 수 있는 간단한 개발 리소스 목록을 보여 줍니다. 클라우드 네이티브 마이크로 서비스 아키텍처 앱을 설계 하는 방법에 대 한 지침은이 설명서의 [.Net 마이크로 서비스: 컨테이너 화 된 .Net 응용 프로그램용 아키텍처](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)를 참조 하세요.
 
 ### <a name="local-kubernetes-development"></a>로컬 Kubernetes 개발
 
@@ -219,15 +238,19 @@ ENTRYPOINT ["dotnet", "WebApplication3.dll"]
 
 또한 언제 든 지 기존 ASP.NET Core 응용 프로그램에 Docker 지원을 추가할 수 있습니다. 그림 3-8에 표시 된 것 처럼 Visual Studio 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고**Docker 지원을** **추가** > 합니다.
 
-![Visual Studio Docker 지원 추가](./media/visual-studio-add-docker-support.png)
-
-**그림 3-8**. Visual Studio Docker 지원 추가
+**그림 3-8**. Visual Studio에 Docker 지원 추가
 
 그림 3-8에 표시 된 컨테이너 오케스트레이션 지원도 추가할 수 있습니다. 기본적으로 orchestrator는 Kubernetes 및 투구를 사용 합니다. Orchestrator를 선택 하면 `azds.yaml` 파일이 프로젝트 루트에 추가 되 고 Kubernetes에 응용 프로그램을 구성 `charts` 하 고 배포 하는 데 사용 되는 투구 차트가 포함 된 폴더가 추가 됩니다. 그림 3-9에서는 새 프로젝트의 결과 파일을 보여 줍니다.
 
-![Visual Studio Orchestrator 지원 추가](./media/visual-studio-add-orchestrator-support.png)
+그림 3-8에 표시 된 컨테이너 오케스트레이션 지원도 추가할 수 있습니다. 기본적으로 orchestrator는 Kubernetes 및 투구를 사용 합니다. Orchestrator를 선택 하면 `azds.yaml` 파일이 프로젝트 루트에 추가 되 고 Kubernetes에 응용 프로그램을 구성 `charts` 하 고 배포 하는 데 사용 되는 투구 차트가 포함 된 폴더가 추가 됩니다. 그림 3-9에서는 새 프로젝트의 결과 파일을 보여 줍니다.
 
-**그림 3-9**. Visual Studio Orchestrator 지원 추가
+**그림 3-9**. Visual Studio에 오케스트레이션 지원 추가
+
+### <a name="visual-studio-code-docker-tooling"></a>Visual Studio Code Docker 도구
+
+Docker 개발을 지 원하는 Visual Studio Code에 사용할 수 있는 다양 한 확장이 있습니다.
+
+Microsoft는 [Visual Studio Code 확장을 위한 Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)를 제공 합니다. 이 확장은 응용 프로그램에 컨테이너 지원을 추가 하는 프로세스를 간소화 합니다. 필수 파일을 스 캐 폴드 하 고, Docker 이미지를 빌드하고, 컨테이너 내에서 앱을 디버그할 수 있습니다. 확장에는 시작, 중지, 검사, 제거 등의 컨테이너 및 이미지에 대 한 작업을 쉽게 수행할 수 있도록 하는 visual explorer 기능이 있습니다. 또한 확장은 실행 중인 여러 컨테이너를 단일 단위로 관리할 수 있는 Docker Compose 지원 합니다.
 
 >[!div class="step-by-step"]
 >[이전](scale-applications.md)

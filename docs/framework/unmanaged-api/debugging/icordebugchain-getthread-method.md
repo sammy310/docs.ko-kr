@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b3390319-6366-418c-ba80-b552ac4dfc1e
 topic_type:
 - apiref
-ms.openlocfilehash: b964d58bddb174da38fc8988ec807fd3129b5fcf
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 28b54026c8743f31a420e164944f60709e2e271b
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123821"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894367"
 ---
 # <a name="icordebugchaingetthread-method"></a>ICorDebugChain::GetThread 메서드
 이 호출 체인이 속한 실제 스레드를 가져옵니다.  
@@ -38,10 +38,10 @@ HRESULT GetThread (
  제한이 이 호출 체인이 속한 실제 스레드를 나타내는 ICorDebugThread 개체에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

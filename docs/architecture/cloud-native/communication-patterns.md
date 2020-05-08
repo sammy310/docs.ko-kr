@@ -3,12 +3,12 @@ title: 클라우드 네이티브 통신 패턴
 description: 클라우드 네이티브 응용 프로그램의 주요 서비스 통신 문제에 대 한 자세한 정보
 author: robvet
 ms.date: 08/31/2019
-ms.openlocfilehash: 3bda9baa516b7bd8f893e0f58bbe5e2bfde2b61d
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: b3edc0817fb76ad99a1344b17d600eb747187f86
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "73841146"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895625"
 ---
 # <a name="cloud-native-communication-patterns"></a>클라우드 네이티브 통신 패턴
 
@@ -26,7 +26,7 @@ ms.locfileid: "73841146"
 
 ![Azure의 Kubernetes 클러스터](./media/kubernetes-cluster-in-azure.png)
 
-**그림 4-1** Azure의 Kubernetes 클러스터
+**그림 4-1**. Azure의 Kubernetes 클러스터
 
 클러스터 전체에서 마이크로 서비스는 Api 및 메시징 기술을 통해 서로 통신 합니다.
 
@@ -44,7 +44,7 @@ ms.locfileid: "73841146"
 
 - 메시지 암호화/해독은 중요 합니다.
 
-Microsoft에서 무료로 제공 되는 [.Net 마이크로 서비스: 컨테이너 화 된 .Net 응용 프로그램에 대 한 아키텍처](https://docs.microsoft.com/dotnet/standard/microservices-architecture/)는 마이크로 서비스 응용 프로그램에 대 한 통신 패턴의 심층 적용을 제공 합니다. 이 장에서는 Azure 클라우드에서 제공 되는 구현 옵션과 함께 이러한 패턴에 대 한 개략적인 개요를 제공 합니다.
+Microsoft에서 무료로 제공 되는 [.Net 마이크로 서비스: 컨테이너 화 된 .Net 응용 프로그램에 대 한 아키텍처](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)는 마이크로 서비스 응용 프로그램에 대 한 통신 패턴의 심층 적용을 제공 합니다. 이 장에서는 Azure 클라우드에서 제공 되는 구현 옵션과 함께 이러한 패턴에 대 한 개략적인 개요를 제공 합니다.
 
 이 장에서는 먼저 프런트 엔드 응용 프로그램과 백 엔드 마이크로 서비스 간의 통신을 처리 합니다. 그런 다음 백 엔드 마이크로 서비스가 서로 통신 하는 것을 살펴보겠습니다. Up 및 gRPC 통신 기술을 살펴보겠습니다. 마지막으로, 서비스 메시 기술을 사용 하 여 새로운 혁신적인 통신 패턴을 살펴보겠습니다. 또한 Azure 클라우드에서 클라우드 네이티브 통신을 지원 하기 위해 다양 한 종류의 *지원 서비스* 를 제공 하는 방법도 확인할 수 있습니다.
 

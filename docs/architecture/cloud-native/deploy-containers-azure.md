@@ -2,12 +2,12 @@
 title: Azure에서 컨테이너 배포
 description: Azure Container Registry, Azure Kubernetes Service 및 Azure Dev Spaces를 사용 하 여 Azure에 컨테이너를 배포 합니다.
 ms.date: 04/13/2020
-ms.openlocfilehash: 6238460c6129583c34e6b328c38ed9042f32f3d6
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 57a4739d39b8ad022d699d54255f56f16d305440
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199562"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895598"
 ---
 # <a name="deploying-containers-in-azure"></a>Azure에서 컨테이너 배포
 
@@ -96,7 +96,7 @@ Azure의 대부분 리소스와 마찬가지로 포털, 명령줄 또는 투구 
 - 인증
 - 네트워킹
 - 모니터링
-- 태그들
+- Tags
 
 이 [빠른 시작은 Azure Portal를 사용 하 여 AKS 클러스터를 배포 하는 과정](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)을 안내 합니다.
 
@@ -108,8 +108,8 @@ Azure의 대부분 리소스와 마찬가지로 포털, 명령줄 또는 투구 
 
 Azure Dev Spaces의 가치를 이해 하기 위해 Microsoft Azure에서 컨테이너의 오후 Gabe Monroy, PM에서이 따옴표를 공유 하겠습니다.
 
-> 수십 개의 구성 요소로 구성 된 복잡 한 마이크로 서비스 응용 프로그램에서 버그를 수정 하려고 하는 새로운 직원이 있는데, 각각 자체 구성 및 지원 서비스가 있습니다. 시작 하려면 IDE 설정, 도구 체인 빌드, 컨테이너 화 된 서비스 종속성, 로컬 Kubernetes 환경, 지원 서비스에 대 한 mock 등의 작업을 비롯 하 여 프로덕션을 모방 하도록 로컬 개발 환경을 구성 해야 합니다. 개발 환경을 설정 하는 데 소요 되는 모든 시간을 사용 하 여 첫 번째 버그를 수정 하는 데 며칠이 걸릴 수 있습니다.
-> 또는 Dev Spaces 및 AKS를 사용할 수 있습니다.
+> "수십 개의 구성 요소로 구성 된 복잡 한 마이크로 서비스 응용 프로그램에서 버그를 수정 하려는 새 직원이 있으며 각각 자체 구성 및 지원 서비스가 있다고 가정 합니다. 시작 하려면 IDE 설정, 도구 체인 빌드, 컨테이너 화 된 서비스 종속성, 로컬 Kubernetes 환경, 지원 서비스에 대 한 mock 등의 작업을 비롯 하 여 프로덕션을 모방 하도록 로컬 개발 환경을 구성 해야 합니다. 개발 환경을 설정 하는 데 소요 되는 모든 시간을 사용 하 여 첫 번째 버그를 수정 하는 데 며칠이 걸릴 수 있습니다.
+> 또는 Dev Spaces 및 AKS를 사용할 수 있습니다. "
 
 Azure Dev Spaces 사용 하는 프로세스에는 다음 단계가 포함 됩니다.
 

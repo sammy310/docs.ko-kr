@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f671f519-1cb3-4ae5-b9f1-abc5e783459f
 topic_type:
 - apiref
-ms.openlocfilehash: f4bacfe94178ea78b1c3afd15a2e100076c38a84
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 6ae0fec0f8de2bbe3862f9f70ed9cf3d32af34c4
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777990"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894208"
 ---
 # <a name="icordebugchain-interface"></a>ICorDebugChain 인터페이스
 
@@ -42,20 +42,20 @@ ms.locfileid: "76777990"
 |[GetThread 메서드](icordebugchain-getthread-method.md)|이 호출 체인이 속한 실제 스레드를 가져옵니다.|  
 |[IsManaged 메서드](icordebugchain-ismanaged-method.md)|이 체인이 관리 코드를 실행 하 고 있는지 여부를 나타내는 값을 가져옵니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  체인의 스택 프레임은 연속 된 스택 공간을 차지 하 고 동일한 스레드와 컨텍스트를 공유 합니다. 체인은 관리 코드 체인 또는 비관리 코드 체인을 나타낼 수 있습니다. 빈 `ICorDebugChain` 인스턴스는 관리 되지 않는 코드 체인을 나타냅니다.  
   
 > [!NOTE]
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참조
 

@@ -2,12 +2,12 @@
 title: EShopOnContainers 참조 앱 소개
 description: ASP.NET Core 및 Azure에 대 한 eShopOnContainers Cloud 기본 마이크로 서비스 참조 앱 소개
 ms.date: 06/30/2019
-ms.openlocfilehash: 0d55f248acbc34bcc76d38987d7e1d537cf6065a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8d4ad982716a07613ebbef6668afab69d5a8b4f6
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841776"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895534"
 ---
 # <a name="introducing-eshoponcontainers-reference-app"></a>EShopOnContainers 참조 앱 소개
 
@@ -30,7 +30,7 @@ Microsoft는 업계 최고의 커뮤니티 전문가와 협력 하 여 완전 �
 - 브랜드 별 항목 필터링
 - 시장 바구니에 항목 추가
 - 바구니에서 항목 편집 또는 제거
-- 인해
+- 체크 아웃
 - 계정 등록
 - 로그인
 - 로그아웃
@@ -68,9 +68,9 @@ EShopOnContainers 응용 프로그램은 ASP.NET Core MVC 서버 응용 프로�
 
 코드는 다양 한 마이크로 서비스를 지원 하도록 구성 되 고, 각 마이크로 서비스 내에서 코드는 도메인 논리, 인프라 문제, 사용자 인터페이스 또는 서비스 끝점으로 구분 됩니다. 대부분의 경우 각 서비스의 종속성은 프로덕션의 Azure 서비스 및 로컬 개발을 위한 대체 옵션으로 충족 될 수 있습니다. 응용 프로그램의 요구 사항이 Azure 서비스에 매핑되는 방식을 살펴보겠습니다.
 
-## <a name="understanding-microservices"></a>마이크로 서비스 이해
+## <a name="understanding-microservices"></a>마이크로서비스 이해
 
-이 책에서는 Azure 기술을 사용 하 여 구축 된 클라우드 네이티브 응용 프로그램에 중점을 둘 것입니다. 마이크로 서비스 모범 사례 및 마이크로 서비스 기반 응용 프로그램을 설계 하는 방법에 대 한 자세한 내용은 부록 설명서 [.Net 마이크로 서비스: 컨테이너 화 된 .Net 응용 프로그램 아키텍처](https://dotnet.microsoft.com/learn/aspnet/microservices-architecture)를 참조 하세요. 이 책은 온라인, PDF 또는 eReader 형식으로 사용할 수 있습니다.
+이 책에서는 Azure 기술을 사용 하 여 구축 된 클라우드 네이티브 응용 프로그램에 중점을 둘 것입니다. 마이크로 서비스 모범 사례 및 마이크로 서비스 기반 응용 프로그램을 설계 하는 방법에 대 한 자세한 내용은 부록 설명서 [.Net 마이크로 서비스: 컨테이너 화 된 .Net 응용 프로그램 아키텍처](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)를 참조 하세요.
 
 >[!div class="step-by-step"]
 >[이전](candidate-apps.md)

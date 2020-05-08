@@ -3,12 +3,12 @@ title: 클라우드 네이티브 정의
 description: 클라우드 기본 시스템용 bedrock을 제공 하는 기본 핵심 요소에 대해 알아봅니다.
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: ba11cb1cf0d9d7ef9734ad49aee1df22f285fc4c
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 33977ff736fc5cbfcf86ed6479e8d0b927b87a63
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199783"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895612"
 ---
 # <a name="defining-cloud-native"></a>클라우드 네이티브 정의
 
@@ -34,9 +34,9 @@ Cloud native는 *속도* 와 *민첩성*에 대 한 것입니다. 비즈니스 �
 
 | 회사 | 환경 |
 | :-------- | :-------- |
-| [Netflix](https://www.infoq.com/news/2013/06/netflix/) | 에는 프로덕션에서 600 개 이상의 서비스가 있습니다. 하루에 100 회를 배포 합니다. |
-| [Uber](https://eng.uber.com/micro-deploy/) | 에는 1,000 개 이상의 서비스가 프로덕션 환경에 저장 되어 있습니다. 매주 몇 천 개의 빌드를 배포 합니다. |
-| [WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | 에는 프로덕션 환경에서 300 개 이상의 서비스가 있습니다. 매일 거의 1000의 변경을 수행 합니다. |
+| [Netflix](https://www.infoq.com/news/2013/06/netflix/) | 에는 프로덕션에서 600 개 이상의 서비스가 있습니다. 하루에 100 회 배포 합니다. |
+| [Uber](https://eng.uber.com/micro-deploy/) | 에는 프로덕션 환경에서 1000 개 이상의 서비스가 있습니다. 매주 몇 천 번 배포 합니다. |
+| [WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | 에는 프로덕션 환경에서 300 개 이상의 서비스가 있습니다. 하루에 1000 번 배포 합니다. |
 
 여기에서 볼 수 있듯이 Netflix, Uber 및 WeChat는 수많은 독립 마이크로 서비스로 구성 된 시스템을 노출 합니다. 이 아키텍처 스타일을 통해 시장 상황에 신속 하 게 대응할 수 있습니다. 이러한 사용자는 라이브, 복잡 한 응용 프로그램의 작은 영역을 즉시 업데이트 하 고 필요에 따라 이러한 영역을 개별적으로 확장할 수 있습니다.
 
@@ -95,7 +95,7 @@ Azure 클라우드 플랫폼은 자동 크기 조정, 자동 복구 및 모니�
 
 |    |  새 요소 | 설명  |
 | :-------- | :-------- | :-------- |
-| 13 | API First | 모든 것을 서비스로 설정 합니다. 프런트 엔드 클라이언트, 게이트웨이 또는 다른 서비스에서 코드를 사용 한다고 가정 합니다. |
+| 13 | API 우선 | 모든 것을 서비스로 설정 합니다. 프런트 엔드 클라이언트, 게이트웨이 또는 다른 서비스에서 코드를 사용 한다고 가정 합니다. |
 | 14 | 원격 분석 | 워크스테이션에서는 응용 프로그램 및 해당 동작을 자세히 확인할 수 있습니다. 클라우드에서는 그렇지 않습니다. 디자인에 모니터링, 도메인별 및 상태/시스템 데이터 컬렉션이 포함 되어 있는지 확인 합니다. |
 | 15 | 인증/권한 부여  | 시작에서 id를 구현 합니다. 공용 클라우드에서 사용할 수 있는 [RBAC (역할 기반 액세스 제어)](https://docs.microsoft.com/azure/role-based-access-control/overview) 기능을 고려 합니다.  |
 
@@ -167,7 +167,7 @@ Id는 세부 정보 Chapter 8, *id*에 설명 되어 있습니다.
 
 - 각 마이크로 서비스은 독립적으로 확장 될 수 있습니다. 전체 응용 프로그램을 단일 단위로 확장 하는 대신 더 많은 처리 능력 또는 네트워크 대역폭이 필요한 서비스만 확장할 수 있습니다. 크기 조정에 대 한이 세분화 된 접근 방식을 사용 하면 시스템을 보다 효과적으로 제어할 수 있으며, 모든 것이 아니라 시스템의 일부를 확장할 때 전체 비용을 줄일 수 있습니다.
 
-마이크로 서비스를 이해 하기 위한 뛰어난 참조 가이드는 [.Net 마이크로 서비스: 컨테이너 화 된 .Net 응용 프로그램용 아키텍처](https://docs.microsoft.com/dotnet/standard/microservices-architecture/)입니다. 책은 마이크로 서비스 디자인 및 아키텍처로 다이브. Microsoft에서 제공 하는 무료 다운로드로 제공 되는 [전체 스택 마이크로 서비스 참조 아키텍처](https://github.com/dotnet-architecture/eShopOnContainers) 에 대 한 부록입니다.
+마이크로 서비스를 이해 하기 위한 뛰어난 참조 가이드는 [.Net 마이크로 서비스: 컨테이너 화 된 .Net 응용 프로그램용 아키텍처](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)입니다. 책은 마이크로 서비스 디자인 및 아키텍처로 다이브. Microsoft에서 제공 하는 무료 다운로드로 제공 되는 [전체 스택 마이크로 서비스 참조 아키텍처](https://github.com/dotnet-architecture/eShopOnContainers) 에 대 한 부록입니다.
 
 ### <a name="developing-microservices"></a>마이크로 서비스 개발
 
@@ -228,7 +228,7 @@ Docker와 같은 도구는 이미지를 만들고 컨테이너를 실행 하는 
 | 일정 계획 | 컨테이너 인스턴스를 자동으로 프로 비전 합니다.|
 | 선호도/선호도 방지 | 컨테이너를 서로 가까운 곳 이나 멀리 프로 비전 하 여 가용성과 성능을 지원 합니다. |
 | 상태 모니터링 | 자동으로 오류를 검색 하 고 수정 합니다.|
-| 장애 조치(Failover) | 실패 한 인스턴스를 정상 컴퓨터에 자동으로 다시 구축.|
+| 장애 조치  | 실패 한 인스턴스를 정상 컴퓨터에 자동으로 다시 구축.|
 | 확장 | 필요에 맞게 컨테이너 인스턴스를 자동으로 추가 또는 제거 합니다.|
 | 네트워킹 | 컨테이너 통신을 위한 네트워킹 오버레이를 관리 합니다.|
 | 서비스 검색 | 컨테이너를 사용 하 여 서로를 찾습니다.|
