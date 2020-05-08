@@ -1,15 +1,15 @@
 ---
-title: ICorDebugDataTarget2::CreateVirtualUnwinder 메서드
+title: ICorDebugDataTarget2::CreateVirtualUnwinder Method
 ms.date: 03/30/2017
 ms.assetid: 354c8b4c-7d23-45c6-a7d7-3be4c2a5b772
-ms.openlocfilehash: 9fc4facda6253d0c68dcf89b2a1b06e639734efe
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 7a479fba9bbcf28c60474fffc6219af23e62c251
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788846"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976501"
 ---
-# <a name="icordebugdatatarget2createvirtualunwinder-method"></a>ICorDebugDataTarget2::CreateVirtualUnwinder 메서드
+# <a name="icordebugdatatarget2createvirtualunwinder-method"></a>ICorDebugDataTarget2::CreateVirtualUnwinder Method
 초기 컨텍스트(반드시 스레드의 리프일 필요는 없음)에서 해제를 시작하는 새 스택 해제기를 만듭니다.  
   
 ## <a name="syntax"></a>구문  
@@ -40,24 +40,24 @@ HRESULT CreateVirtualUnwinder(
  ppUnwinder  
  [out] ICorDebugVirtualUnwinder 인터페이스 개체의 주소에 대한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
- 성공하는 경우 `S_OK`입니다. 기타 `HRESULT`는 오류를 나타냅니다. Mscordbi.dll에서 수신 하는 실패 한 `HRESULT`는 치명적인 것으로 간주 되며 [ICorDebug](icordebug-interface.md) 메서드에서 `CORDBG_E_DATA_TARGET_ERROR`를 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ 성공하는 경우 `S_OK`입니다. 기타 `HRESULT`는 오류를 나타냅니다. Mscordbi.dll에서 `HRESULT` 수신 하는 모든 오류는 치명적인 것으로 간주 되 고 `CORDBG_E_DATA_TARGET_ERROR` [ICorDebug](icordebug-interface.md) 메서드는를 반환 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
   
 > [!NOTE]
 > 이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugDataTarget2 인터페이스](icordebugdatatarget2-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)
