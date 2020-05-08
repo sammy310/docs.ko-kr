@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 314d29f3-feb0-4a92-9530-b569c280cc31
 topic_type:
 - apiref
-ms.openlocfilehash: 6f9bcec66ff613d19c1198ac9849ca28c978f537
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 1643d91f373ff233540026440ee21aa4c146f3e3
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788937"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895131"
 ---
 # <a name="icordebugappdomain2-interface"></a>ICorDebugAppDomain2 인터페이스
 
@@ -32,19 +32,19 @@ ms.locfileid: "76788937"
 |[GetArrayOrPointerType 메서드](icordebugappdomain2-getarrayorpointertype-method.md)|지정 된 형식의 배열 또는 지정 된 형식에 대 한 포인터 또는 참조를 가져옵니다.|  
 |[GetFunctionPointerType](icordebugappdomain2-getfunctionpointertype-method.md)|지정 된 서명이 있는 함수에 대 한 포인터를 가져옵니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
   
 > [!NOTE]
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참조
 

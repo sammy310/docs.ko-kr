@@ -1,13 +1,13 @@
 ---
 title: Azure 서비스에 eShopOnContainers 매핑
 description: EShopOnContainers를 azure Kubernetes Service, API 게이트웨이 및 Azure Service Bus와 같은 Azure 서비스에 매핑합니다.
-ms.date: 06/30/2019
-ms.openlocfilehash: eb37be94461a5373afe328572a94892dec50432d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 04/20/2020
+ms.openlocfilehash: 26fce71ba71f7da643b669396ab59affe592649a
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76781210"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895510"
 ---
 # <a name="mapping-eshoponcontainers-to-azure-services"></a>Azure 서비스에 eShopOnContainers 매핑
 
@@ -28,7 +28,7 @@ ms.locfileid: "76781210"
 
 AKS는 컨테이너의 개별 클러스터에 대 한 관리 서비스를 제공 합니다. 응용 프로그램은 위의 아키텍처 다이어그램에 표시 된 각 마이크로 서비스에 대해 별도의 AKS 클러스터를 배포 합니다. 이 접근 방식을 사용 하면 각 개별 서비스를 리소스 요구에 따라 독립적으로 확장할 수 있습니다. 각 마이크로 서비스를 독립적으로 배포할 수 있으며, 이러한 배포에는 시스템 가동 중지 시간이 0이 발생 해야 합니다.
 
-## <a name="api-gateway"></a>API 게이트웨이
+## <a name="api-gateway"></a>API Gateway
 
 EShopOnContainers 응용 프로그램에는 여러 개의 프런트 엔드 클라이언트와 여러 개의 서로 다른 백 엔드 서비스가 있습니다. 클라이언트 응용 프로그램과이를 지 원하는 마이크로 서비스 간에는 일대일 대응이 없습니다. 이러한 시나리오에서는 여러 백 엔드 서비스를 안전 하 게 사용 하 여 인터페이스에 클라이언트 소프트웨어를 작성할 때 상당한 복잡성이 있을 수 있습니다. 각 클라이언트는 이러한 복잡성을 해결 해야 하며,이로 인해 중복이 발생 하 고 서비스 변경 또는 새로운 정책이 구현 될 때 업데이트를 수행할 수 있는 많은 위치가 중복 될 수 있습니다.
 
@@ -54,7 +54,7 @@ EShopOnContainers 응용 프로그램은 요청 사이에 사용자의 현재 �
 
 위치 마이크로 서비스는 지 속성에 MongoDB NoSQL 데이터베이스를 사용 합니다. 개발 중에는 데이터베이스를 자체 컨테이너에 배포할 수 있지만 프로덕션 환경에서는 서비스에서 [MongoDB에 대 한 Azure Cosmos DB의 API](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)를 활용할 수 있습니다. Azure Cosmos DB의 이점 중 하나는 MongoDB, Cassandra, Gremlin 및 Azure Table Storage를 포함 하 여 SQL API 및 일반적인 NoSQL Api를 비롯 한 여러 통신 프로토콜을 활용 하는 기능입니다. Azure Cosmos DB는이를 사용 하는 서비스의 요구를 충족 하도록 확장할 수 있는 완전히 관리 되 고 전 세계적으로 분산 된 Database as a Service를 제공 합니다.
 
-클라우드 네이티브 응용 프로그램의 분산 데이터에 대해서는 [5 장에서](database-per-microservice.md)자세히 설명 합니다.
+클라우드 네이티브 응용 프로그램의 분산 데이터에 대해서는 [5 장에서](distributed-data.md)자세히 설명 합니다.
 
 ## <a name="event-bus"></a>이벤트 버스
 
@@ -63,17 +63,6 @@ EShopOnContainers 응용 프로그램은 요청 사이에 사용자의 현재 �
 ## <a name="resiliency"></a>복원력
 
 EShopOnContainers 응용 프로그램은 프로덕션에 배포 된 후에는 여러 Azure 서비스를 활용 하 여 복원 력을 향상 시킬 수 있습니다. 응용 프로그램은 Application Insights와 통합 되어 앱의 가용성을 기반으로 보고 및 경고를 제공할 수 있는 상태 검사를 게시 합니다. 또한 Azure 리소스는 버그 및 성능 문제를 식별 하 고 수정 하는 데 사용할 수 있는 진단 로그를 제공 합니다. 리소스 로그는 응용 프로그램에서 다양 한 Azure 리소스를 사용 하는 시기 및 방법에 대 한 자세한 정보를 제공 합니다. [6 장](resiliency.md)에서 클라우드 기본 복원 기능에 대해 자세히 알아보세요.
-
-## <a name="references"></a>참조
-
-- [EShopOnContainers 아키텍처](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Architecture)
-- [높은 확장성 및 가용성을 위해 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션](https://docs.microsoft.com/dotnet/architecture/microservices/architect-microservice-container-applications/scalable-available-multi-container-microservice-applications)
-- [Azure API Management](https://docs.microsoft.com/azure/api-management/api-management-key-concepts)
-- [Azure SQL Database 개요](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)
-- [Redis 용 Azure 캐시](https://azure.microsoft.com/services/cache/)
-- [MongoDB 용 Azure Cosmos DB API](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)
-- [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview)
-- [Azure Monitor 개요](https://docs.microsoft.com/azure/azure-monitor/overview)
 
 >[!div class="step-by-step"]
 >[이전](introduce-eshoponcontainers-reference-app.md)
