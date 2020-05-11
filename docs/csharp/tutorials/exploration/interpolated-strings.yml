@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 1b54ea8b3bbb63bdadb8386b0f6311f1f5458b42
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: 7736a2a26b37d8fbfac98328f94ce3c9a25be181
+  ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 03/14/2020
-  ms.locfileid: "76737540"
+  ms.lasthandoff: 05/06/2020
+  ms.locfileid: "82861000"
 items:
 - durationInMinutes: 2
   content: >
@@ -47,18 +47,13 @@ items:
 
 
     몇 가지 다른 데이터 형식을 포함하는 문자열 보간 예제를 더 살펴보겠습니다.
-
-
-    > [!NOTE]
-
-    > 이 온라인 코딩 환경은 미리 보기 모드로 제공됩니다. 문제가 발생하면 [dotnet/try 리포지토리](https://github.com/dotnet/try/issues)에 보고하세요.
 - title: 다양한 데이터 형식 포함
   durationInMinutes: 5
   content: >
     이전 단계에서는 한 문자열을 다른 문자열 내에 삽입하는 데 문자열 보간을 사용했습니다. 보간된 문자열 식의 일부인 각 보간 식은 어떤 데이터 형식이든 될 수 있습니다. 보간된 문자열에 다양한 데이터 형식의 식 값을 포함시켜 보겠습니다.
 
 
-    다음 예제에서는 먼저 [, ](../../tuples.md) 및 `Name` 멤버를 포함한 `Price`튜플`perPackage`을 정의합니다. 대화형 창에서 다음 코드를 실행합니다.
+    다음 예제에서는 먼저 `Name`, `Price` 및 `perPackage` 멤버를 포함한 [튜플](../../tuples.md)을 정의합니다. 대화형 창에서 다음 코드를 실행합니다.
 
 
     ```csharp
@@ -82,11 +77,6 @@ items:
 
 
     이 예제의 출력에서 날짜는 매우 정확하며(eggplant 가격은 초마다 변경되지 않음), 가격 값은 통화 단위를 나타내지 않습니다. 다음 단계에서는 식 결과에 대한 문자열 표현의 형식을 제어하여 해당 문제를 해결하는 방법을 알아봅니다.
-
-
-    > [!NOTE]
-
-    > 이 온라인 코딩 환경은 미리 보기 모드로 제공됩니다. 문제가 발생하면 [dotnet/try 리포지토리](https://github.com/dotnet/try/issues)에 보고하세요.
 - title: 보간 식의 서식 제어
   durationInMinutes: 5
   content: >
@@ -103,18 +93,13 @@ items:
     콜론(“:”)과 형식 문자열을 사용하여 보간 식에 따라 형식 문자열을 지정합니다. "d"는 간단한 날짜 형식을 나타내는 [표준 날짜 및 시간 형식 문자열](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier)입니다. "C2"는 소수점 뒤 두 자릿수를 포함하는 통화 값으로 숫자를 나타내는 [표준 숫자 형식 문자열](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier)입니다.
 
 
-    .NET 라이브러리의 많은 형식은 미리 정의된 형식 문자열 집합을 지원합니다. 여기에는 모든 숫자 형식과 날짜 및 시간 형식이 포함됩니다. 형식 문자열을 지원하는 형식의 전체 목록을 보려면 [.NET의 서식 지정 형식](../../../standard/base-types/formatting-types.md#format-strings-and-net-types) 문서의 [형식 문자열 및 .NET 클래스 라이브러리 형식](../../../standard/base-types/formatting-types.md)을 참조하세요.
+    .NET 라이브러리의 많은 형식은 미리 정의된 형식 문자열 집합을 지원합니다. 여기에는 모든 숫자 형식과 날짜 및 시간 형식이 포함됩니다. 형식 문자열을 지원하는 형식의 전체 목록을 보려면 [.NET의 서식 지정 형식](../../../standard/base-types/formatting-types.md) 문서의 [형식 문자열 및 .NET 클래스 라이브러리 형식](../../../standard/base-types/formatting-types.md#format-strings-and-net-types)을 참조하세요.
 
 
     예제에서 형식 문자열을 수정하여 날짜 및 시간의 서식과 숫자 값에 미치는 영향을 확인해 보세요. `{date:d}`의 "d"를 "t"(짧은 시간 형식 표시), "y"(연도 및 월 표시) 및 "yyyy"(연도를 4자리 숫자로 표시)로 변경합니다. `{price:C2}`의 "C2"를 "e"(지수 표기) 및 "F3"(소수점 뒤 세 자릿수의 숫자 값)으로 변경합니다.
 
 
     형식을 제어하는 것 외에도, 결과 문자열에 포함된 형식이 지정된 문자열의 필드 너비와 맞춤을 제어할 수 있습니다. 다음 단계에서 이 작업을 수행하는 방법을 알아봅니다.
-
-
-    > [!NOTE]
-
-    > 이 온라인 코딩 환경은 미리 보기 모드로 제공됩니다. 문제가 발생하면 [dotnet/try 리포지토리](https://github.com/dotnet/try/issues)에 보고하세요.
 - title: 필드 너비와 보간 식의 맞춤을 제어합니다.
   durationInMinutes: 6
   content: >
@@ -151,11 +136,6 @@ items:
     Console.WriteLine($"[{DateTime.Now,-20:d}] Hour [{DateTime.Now,-10:HH}] [{1063.342,15:N2}] feet");
 
     ```
-
-
-    > [!NOTE]
-
-    > 이 온라인 코딩 환경은 미리 보기 모드로 제공됩니다. 문제가 발생하면 [dotnet/try 리포지토리](https://github.com/dotnet/try/issues)에 보고하세요.
 - content: >-
     문자열 보간 대화형 자습서를 완료했습니다. [.NET 사이트](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)를 방문하여 .NET Core SDK를 다운로드하고, 머신에 프로젝트를 만들고, 계속해서 코딩할 수 있습니다.
 
