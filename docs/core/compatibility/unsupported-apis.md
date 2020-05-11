@@ -3,12 +3,12 @@ title: .NET Core에서 지원되지 않는 API
 titleSuffix: ''
 description: .NET Core에서 항상 예외를 throw하는 .NET Framework의 API를 알아봅니다.
 ms.date: 12/23/2019
-ms.openlocfilehash: bd3516d9480ef42b6ea89825ba64867a3ca104e3
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 941e9149c7679afe4a888149108d0a9a28e5e7ab
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242948"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794600"
 ---
 # <a name="apis-that-always-throw-exceptions-on-net-core"></a>.NET Core에서 항상 예외를 throw하는 API
 
@@ -324,6 +324,6 @@ ms.locfileid: "81242948"
 
 ## <a name="see-also"></a>참고 항목
 
-- [.NET Framework에서 .NET Core로 마이그레이션 시 호환성이 손상되는 주요 변경](../compatibility/fx-core.md)
+- [.NET Framework에서 .NET Core로 마이그레이션 시 호환성이 손상되는 주요 변경](fx-core.md)
 - [.NET Core의 이진 Serialization](../../standard/serialization/binary-serialization.md#net-core)
 - [.NET 이식성 분석기](../../standard/analyzers/portability-analyzer.md):

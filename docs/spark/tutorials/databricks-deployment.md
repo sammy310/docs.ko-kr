@@ -4,12 +4,12 @@ description: Databricks에 .NET for Apache Spark 애플리케이션을 배포하
 ms.date: 01/23/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c5308530831fa288bf637849c1342f51769c3ad4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b00823034cbcb271cb7e169df40122f1144462a
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77503966"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895723"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>자습서: Databricks에 .NET for Apache Spark 애플리케이션 배포
 
@@ -28,7 +28,7 @@ ms.locfileid: "77503966"
 
 시작하기 전에 다음 작업을 수행합니다.
 
-* Azure 계정이 없으면 [체험 계정](https://azure.microsoft.com/free/)을 만듭니다.
+* Azure 계정이 없으면 [체험 계정](https://azure.microsoft.com/free/dotnet/)을 만듭니다.
 * [Azure Portal](https://portal.azure.com/)에 로그인합니다.
 * [.NET for Apache Spark - Get Started in 10-Minutes](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro)(.NET for Apache Spark - 10분 이내에 시작하기) 자습서를 완료합니다.
 
@@ -36,7 +36,7 @@ ms.locfileid: "77503966"
 
 > [!Note]
 > 이 자습서는 **Azure 평가판 구독**을 사용하여 수행할 수 없습니다.
-> 무료 계정이 있는 경우 프로필로 이동하고 구독을 **종량제**로 변경합니다. 자세한 내용은 [Azure 체험 계정](https://azure.microsoft.com/free/)을 참조하세요. 그런 다음 [지출 한도를 제거](https://docs.microsoft.com/azure/billing/billing-spending-limit#why-you-might-want-to-remove-the-spending-limit)하고 해당 지역의 vCPU에 대한 [할당량 증가를 요청](https://docs.microsoft.com/azure/azure-supportability/resource-manager-core-quotas-request)합니다. Azure Databricks 작업 영역을 만드는 경우 **평가판(프리미엄-14일 무료 DBU)** 가격 책정 계층을 선택하여 14일간 무료 프리미엄 Azure Databricks DBU를 위한 작업 영역 액세스 권한을 부여할 수 있습니다.
+> 무료 계정이 있는 경우 프로필로 이동하고 구독을 **종량제**로 변경합니다. 자세한 내용은 [Azure 체험 계정](https://azure.microsoft.com/free/dotnet/)을 참조하세요. 그런 다음 [지출 한도를 제거](https://docs.microsoft.com/azure/billing/billing-spending-limit#why-you-might-want-to-remove-the-spending-limit)하고 해당 지역의 vCPU에 대한 [할당량 증가를 요청](https://docs.microsoft.com/azure/azure-supportability/resource-manager-core-quotas-request)합니다. Azure Databricks 작업 영역을 만드는 경우 **평가판(프리미엄-14일 무료 DBU)** 가격 책정 계층을 선택하여 14일간 무료 프리미엄 Azure Databricks DBU를 위한 작업 영역 액세스 권한을 부여할 수 있습니다.
 
 이 섹션에서는 Azure Portal을 사용하여 Azure Databricks 작업 영역을 만듭니다.
 

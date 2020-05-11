@@ -3,12 +3,12 @@ title: dotnet nuget push 명령
 description: dotnet nuget push 명령은 서버에 패키지를 푸시하고 게시합니다.
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 8b0437d7f4ada2b56af50e30717d131668c21f7e
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 1e7831de4c041591b3602e405418f89f1d1d27d1
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728350"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895464"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -152,5 +152,4 @@ dotnet nuget push -h|--help
   dotnet nuget push *.nupkg -s c:\mydir
   ```
 
-  이 명령은 성능 최적화를 위해 권장되는 계층 구조 폴더 구조로 패키지를 저장하지 않습니다. 자세한 내용은 [로컬 피드](//nuget/hosting-packages/local-feeds)를 참조하세요.
-  
+  이 명령은 성능 최적화를 위해 권장되는 계층 구조 폴더 구조로 패키지를 저장하지 않습니다. 자세한 내용은 [로컬 피드](/nuget/hosting-packages/local-feeds)를 참조하세요.  

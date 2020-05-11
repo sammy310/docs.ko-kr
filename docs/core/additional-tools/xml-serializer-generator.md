@@ -5,12 +5,12 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 094dd1227033e167050ad73121b3005a592a0ae4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c3f1fcda8a8a6abc58d35bf37e51485bb3590fa3
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714522"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794639"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>.NET Core에서 Microsoft XML Serializer Generator 사용
 
@@ -50,7 +50,7 @@ dotnet new console
 
 ### <a name="add-a-reference-to-the-microsoftxmlserializergenerator-package-in-the-myapp-project"></a>MyApp 프로젝트에서 Microsoft.XmlSerializer.Generator 패키지에 대한 참조 추가
 
-[`dotnet add package`](../tools//dotnet-add-package.md) 명령을 사용하여 프로젝트에 참조를 추가합니다.
+[`dotnet add package`](../tools/dotnet-add-package.md) 명령을 사용하여 프로젝트에 참조를 추가합니다.
 
 형식:
 
@@ -64,7 +64,7 @@ dotnet add package Microsoft.XmlSerializer.Generator -v 1.0.0
 
 텍스트 편집기에서 *MyApp.csproj*를 엽니다.
 
-[`dotnet add package`](../tools//dotnet-add-package.md) 명령을 실행하면 다음 줄이 *MyApp.csproj* 프로젝트 파일에 추가됩니다.
+[`dotnet add package`](../tools/dotnet-add-package.md) 명령을 실행하면 다음 줄이 *MyApp.csproj* 프로젝트 파일에 추가됩니다.
 
  ```xml
  <ItemGroup>

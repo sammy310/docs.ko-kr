@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: e3c9e37e7b543eaddae837a85604c4ba91fbc744
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d3fe4cf92ca17457bd541f092f5d146ba6c1c095
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712782"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794418"
 ---
 # <a name="yield-c-reference"></a>yield(C# 참조)
 
@@ -97,7 +97,7 @@ foreach (string element in elements)
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 참조](../../language-reference/index.md)
+- [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [foreach, in](foreach-in.md)
 - [반복기](../../iterators.md)

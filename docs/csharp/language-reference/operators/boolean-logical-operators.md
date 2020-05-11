@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 930329b922f585ac4763e6a66d3b192ae839f14f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5f85b88236c2e643f97453c64173a3f4f7159a35
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398198"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795003"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>부울 논리 연산자(C# 참조)
 
@@ -57,7 +57,7 @@ ms.locfileid: "79398198"
 
 C# 8.0부터 단항 후위 `!` 연산자는 [null 허용 연산자](null-forgiving.md)입니다.
 
-## <a name="logical-and-operator-"></a> 논리 AND 연산자 &amp;
+## <a name="logical-and-operator-amp"></a><a name="logical-and-operator-"></a> 논리 AND 연산자 &amp;
 
 `&` 연산자는 해당 피연산자의 논리 AND를 컴퓨팅합니다. `x` 및 `y`가 모두 `true`로 평가되면 `x & y`의 결과는 `true`입니다. 그렇지 않으면 결과는 `false`입니다.
 
@@ -93,7 +93,7 @@ C# 8.0부터 단항 후위 `!` 연산자는 [null 허용 연산자](null-forgivi
 
 [정수 숫자 형식](../builtin-types/integral-numeric-types.md) 피연산자의 경우 `|` 연산자는 해당 피연산자의 [비트 논리 OR](bitwise-and-shift-operators.md#logical-or-operator-)을 컴퓨팅합니다.
 
-## <a name="conditional-logical-and-operator-"></a> 조건부 논리 AND 연산자 &amp;&amp;
+## <a name="conditional-logical-and-operator-ampamp"></a><a name="conditional-logical-and-operator-"></a> 조건부 논리 AND 연산자 &amp;&amp;
 
 “단락(short-circuiting)” 논리 AND 연산자로도 알려진 조건부 논리 AND 연산자 `&&`는 해당 피연산자의 논리 AND를 컴퓨팅합니다. `x` 및 `y`가 모두 `true`로 평가되면 `x && y`의 결과는 `true`입니다. 그렇지 않으면 결과는 `false`입니다. `x`가 `false`이면 `y`는 계산되지 않습니다.
 
@@ -157,7 +157,8 @@ x = x op y
 
 [!code-csharp-interactive[compound assignment](snippets/BooleanLogicalOperators.cs#CompoundAssignment)]
 
-조건부 논리 연산자 `&&` 및 `||`는 복합 할당을 지원하지 않습니다.
+> [!NOTE]
+> 조건부 논리 연산자 `&&` 및 `||`는 복합 할당을 지원하지 않습니다.
 
 ## <a name="operator-precedence"></a>연산자 우선 순위
 

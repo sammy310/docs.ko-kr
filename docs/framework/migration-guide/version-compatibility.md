@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: 2e268753bf5941e9d28ee2bdd82ce77016ddf01a
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: c3bc92b89a46fc947b4d7e67644930374eeab2e4
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102985"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796004"
 ---
 # <a name="version-compatibility"></a>버전 호환성
 
@@ -33,7 +33,7 @@ ms.locfileid: "82102985"
 </configuration>
 ```
 
-자세한 내용은 [방법: NET Framework 4 또는 4.x를 지원하도록 앱 구성](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)을 참조하세요.
+자세한 내용은 [방법: NET Framework 4 또는 4.x를 지원하도록 앱 구성](how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)을 참조하세요.
 
 ## <a name="version-compatibility-for-components"></a>구성 요소의 버전 호환성
 
@@ -51,7 +51,7 @@ ms.locfileid: "82102985"
 
 - 앱이 .NET Framework 4.0으로 시작하는 .NET Framework의 모든 버전에서 실행되도록 개발된 경우 대상 NET Framework 버전과 앱이 실행되는 버전 간 변경 내용의 목록을 생성하려면 [애플리케이션 호환성](application-compatibility.md)을 참조하세요.
 
-- .NET Framework 3.5 앱이 있는 경우 [.NET Framework 4 마이그레이션 문제](../migration-guide/net-framework-4-migration-issues.md)도 참조하세요.
+- .NET Framework 3.5 앱이 있는 경우 [.NET Framework 4 마이그레이션 문제](net-framework-4-migration-issues.md)도 참조하세요.
 
 - .NET Framework 2.0 앱이 있는 경우 [.NET Framework 3.5 SP1의 변경 내용](https://docs.microsoft.com/previous-versions/dotnet/articles/dd310284(v=msdn.10))도 참조하세요.
 
@@ -71,6 +71,6 @@ ms.locfileid: "82102985"
 
 - [새로운 기능](../whats-new/index.md)
 - [클래스 라이브러리의 사용되지 않는 기능](../whats-new/whats-obsolete.md)
-- [애플리케이션 호환성](../migration-guide/application-compatibility.md)
+- [애플리케이션 호환성](application-compatibility.md)
 - [.NET Framework 공식 지원 정책](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)
-- [.NET Framework 4 마이그레이션 문제](../migration-guide/net-framework-4-migration-issues.md)
+- [.NET Framework 4 마이그레이션 문제](net-framework-4-migration-issues.md)

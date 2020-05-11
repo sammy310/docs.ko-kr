@@ -6,12 +6,12 @@ no-loc:
 - dotnet remove package
 - dotnet list package
 ms.date: 02/25/2020
-ms.openlocfilehash: 367be7eb04d58bffc0846de1d035a5801e8d9376
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3e1d807ea69e66e31b277a92cd6a1dc0e76531b5
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398042"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795549"
 ---
 # <a name="manage-dependencies-in-net-core-applications"></a>.NET Core 애플리케이션에서 종속성 관리
 
@@ -78,5 +78,5 @@ dotnet remove package Microsoft.EntityFrameworkCore
 
 ## <a name="see-also"></a>참조
 
-* [프로젝트 파일의 NuGet 패키지](../project-sdk/msbuild-props.md#nuget-packages)
+* [프로젝트 파일의 패키지 참조](../project-sdk/msbuild-props.md#reference-properties)
 * [dotnet list package 명령](dotnet-remove-package.md)

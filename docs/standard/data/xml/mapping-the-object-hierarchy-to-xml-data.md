@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
-ms.openlocfilehash: 642a7e5321d0150865f74a66a811914bc9f5d21d
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 4ad505749625e22a09406549329179990b81c140
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160029"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794392"
 ---
 # <a name="mapping-the-object-hierarchy-to-xml-data"></a>XML 데이터에 개체 계층 구조 매핑
 메모리에 있는 XML 문서를 개념적으로 표현한 것이 트리입니다. 프로그래밍의 경우에는 트리 노드에 액세스하는 개체 계층 구조가 있습니다. 다음 예제에서는 XML 내용이 노드가 되는 방법을 보여 줍니다.  
@@ -179,7 +179,7 @@ public class Sample
  **출력**  
   
 ```xml  
-<?xml version='1.0'?><!--This is a sample XML document --><!DOCTYPE Items [<!ENTITY number "123">]<Items><Item>Test with an entity: 123</Item><Item>test with a child element <more> stuff</Item><Item>test with a CDATA section <![CDATA[<456>]]> def</Item><Item>Test with a char entity: A</Item><--Fourteen chars in this element.--><Item>1234567890ABCD</Item></Items>  
+<?xml version='1.0'?><!--This is a sample XML document --><!DOCTYPE Items [<!ENTITY number "123">]<Items><Item>Test with an entity: 123</Item><Item>test with a child element <more> stuff</Item><Item>test with a CDATA section <![CDATA[<456>]]> def</Item><Item>Test with a char entity: A</Item><--Fourteen chars in this element.--><Item>1234567890ABCD</Item></Items>
 ```  
   
  한 번에 한 줄씩 입력하고 코드에서 생성된 출력을 사용하면 다음 표를 사용하여 출력 줄을 생성한 노드 테스트를 분석할 수 있어 어떤 XML 데이터가 어떤 노드 형식이 되는지 이해할 수 있습니다.  

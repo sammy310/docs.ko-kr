@@ -3,12 +3,12 @@ title: project.json 및 csproj 비교
 description: project.json 및 csproj e요소 간 매핑을 참조하세요.
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: abe515007b47b415ac33e3350a29edced1784d68
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: feaa7e9cde7e1aa4dfe94d699b14a018fc728f27
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77451107"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794626"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json 및 csproj 속성 간 매핑
 
@@ -675,4 +675,4 @@ MSBuild에서는 [항목](/visualstudio/msbuild/common-msbuild-project-items)을
 
 ## <a name="see-also"></a>참고 항목
 
-- [CLI의 변경 내용에 대한 대략적인 개요](../tools/cli-msbuild-architecture.md)
+- [CLI의 변경 내용에 대한 대략적인 개요](cli-msbuild-architecture.md)

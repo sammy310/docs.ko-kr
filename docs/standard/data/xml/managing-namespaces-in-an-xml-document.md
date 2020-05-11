@@ -3,12 +3,12 @@ title: XML 문서의 네임스페이스 관리
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-ms.openlocfilehash: 7b219788895ab2f89fa285c2e1b7de62639bfcf9
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 1b3e57c0a8a37574a92d23cf1d623301cc54b984
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160042"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796154"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>XML 문서의 네임스페이스 관리
 XML 네임스페이스는 XML 문서의 요소 및 특성 이름을 사용자 지정 및 미리 정의된 URI와 연결합니다. 이러한 연결을 만들려면 네임스페이스 URI의 접두사를 정의하고 해당 접두사를 사용하여 XML 데이터의 요소 및 특성 이름을 한정합니다. 네임스페이스는 요소 및 특성 이름이 충돌하는 것을 막고 동일한 이름의 요소 및 특성이 처리 및 확인되도록 하는 역할을 합니다.  
@@ -25,7 +25,8 @@ XML 네임스페이스는 XML 문서의 요소 및 특성 이름을 사용자 �
   
 ```xml  
 <mybook:BOOK xmlns:mybook="http://www.contoso.com/books.dtd">  
-<bb:BOOK xmlns:bb="urn:blueyonderairlines">  
+<bb:BOOK xmlns:bb="urn:blueyonderairlines" />
+</mybook>
 ```  
   
  요소가 특정 네임스페이스의 일부임을 나타내기 위해 네임스페이스 접두사를 추가합니다. 예를 들어 `Author` 요소가 `mybook` 네임스페이스에 속하는 경우에는 `<mybook:Author>`로 선언됩니다.  
@@ -53,6 +54,8 @@ XML 네임스페이스는 XML 문서의 요소 및 특성 이름을 사용자 �
   
 ```xml  
 <BOOK xmlns="http://www.contoso.com/books.dtd">  
+...
+</BOOK>
 ```  
   
 ## <a name="managing-namespaces"></a>네임스페이스 관리  

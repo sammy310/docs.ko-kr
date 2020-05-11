@@ -2,12 +2,12 @@
 title: 문자열 보간 - C# 자습서
 description: 이 자습서에서는 C# 문자열 보간 기능을 사용하여 더 큰 문자열에 형식이 지정된 식을 포함하는 방법을 보여 줍니다.
 ms.date: 10/23/2018
-ms.openlocfilehash: 22637895f241585bac4909479f225bf3cb581614
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: d1b78670361e8b333499d12b68c0364ad9e40a85
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738279"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796056"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>문자열 보간을 사용하여 형식이 지정된 문자열 생성
 
@@ -165,4 +165,4 @@ Console.WriteLine($"[{DateTime.Now,-20:d}] Hour [{DateTime.Now,-10:HH}] [{1063.3
 
 문자열 보간 자습서를 완료했습니다.
 
-자세한 내용은 [문자열 보간](../../language-reference/tokens/interpolated.md) 항목 및 [C#에서 문자열 보간](../../tutorials/string-interpolation.md) 자습서를 참조하세요.
+자세한 내용은 [문자열 보간](../../language-reference/tokens/interpolated.md) 항목 및 [C#에서 문자열 보간](../string-interpolation.md) 자습서를 참조하세요.

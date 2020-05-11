@@ -4,12 +4,12 @@ titleSuffix: ''
 description: .NET Core에서 사용할 수 없는 .NET Framework 기술에 대해 알아보기
 author: cartermp
 ms.date: 04/30/2019
-ms.openlocfilehash: f95205330837551085b8f58dfbdfcd702356c98f
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: b75d946b9436b1075a068494b941fbdea5970e42
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506833"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795601"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Core에서 사용할 수 없는 .NET Framework 기술
 
@@ -49,4 +49,4 @@ System.EnterpriseServices(COM+)는 .NET Core에서 지원되지 않습니다.
 
 ## <a name="see-also"></a>참조
 
-- [.NET Framework에서 .NET Core로의 이식 개요](../porting/index.md)
+- [.NET Framework에서 .NET Core로의 이식 개요](index.md)

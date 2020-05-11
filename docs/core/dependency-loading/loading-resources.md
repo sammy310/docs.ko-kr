@@ -4,12 +4,12 @@ description: .NET Core에서 위성 어셈블리 로드 알고리즘의 세부 �
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: bfdc1d8179d46a13b3d137a87397fa3e573da33c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17f29a9aca79019daa91736e586bf1b6b753a9ec
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72303625"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82859522"
 ---
 # <a name="satellite-assembly-loading-algorithm"></a>위성 어셈블리 로드 알고리즘
 
@@ -31,7 +31,7 @@ ms.locfileid: "72303625"
 
 1. `active` <xref:System.Runtime.Loader.AssemblyLoadContext> 인스턴스를 확인합니다. 모든 경우에 `active` 인스턴스는 실행 중인 어셈블리의 <xref:System.Runtime.Loader.AssemblyLoadContext>입니다.
 
-2. `active` 인스턴스는 요청된 문화권에 대한 위성 어셈블리를 우선 순위에 따라 다음과 같이 로드하려고 시도합니다.
+2. `active` 인스턴스는 요청된 문화권에 대한 위성 어셈블리를 우선순위에 따라 다음과 같이 로드하려고 시도합니다.
     - 해당 캐시를 확인하는 중입니다.
     - 요청된 <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType>(예:`es-MX`)과 일치하는 하위 디렉터리에 대해 현재 실행 중인 어셈블리의 디렉터리를 확인합니다.
 
@@ -40,6 +40,7 @@ ms.locfileid: "72303625"
         >
         > [!NOTE]
         > Linux 및 macOS에서 하위 디렉터리는 대/소문자를 구분하며 다음 중 하나를 수행해야 합니다.
+        >
         > - 대/소문자 구분이 정확히 일치합니다.
         > - 소문자여야 합니다.
 

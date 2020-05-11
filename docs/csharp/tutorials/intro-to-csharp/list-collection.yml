@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: f7fd68120defbfcda6ac11e14bc749bf4d69c109
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: 03f12cbdd8f9c088a5f279efcadef64c2848fa13
+  ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 03/14/2020
-  ms.locfileid: "73969385"
+  ms.lasthandoff: 05/06/2020
+  ms.locfileid: "82860962"
 items:
 - durationInMinutes: 1
   content: >
@@ -44,15 +44,10 @@ items:
     문자열 목록을 만들고, 해당 목록에 세 개의 이름을 추가하고, 모든 CAPS에 이름을 인쇄했습니다. 이전 자습서에서 학습한 개념을 사용하여 목록을 반복합니다.
 
 
-    이름을 표시하는 코드는 [문자열 보간](../../language-reference/tokens/interpolated.md) 기능을 사용합니다. `string` 앞에 `$` 문자를 넣으면 문자열 선언에 C# 코드를 포함할 수 있습니다. 실제 문자열은 C# 코드를 생성하는 값으로 바꿉니다. 이 예제에서는 `{name.ToUpper()}` 메서드를 호출했기 때문에 <xref:System.String.ToUpper%2A?displayProperty=nameWithType>를 대문자로 변환된 각 이름으로 바꿉니다.
+    이름을 표시하는 코드는 [문자열 보간](../../language-reference/tokens/interpolated.md) 기능을 사용합니다. `string` 앞에 `$` 문자를 넣으면 문자열 선언에 C# 코드를 포함할 수 있습니다. 실제 문자열은 C# 코드를 생성하는 값으로 바꿉니다. 이 예제에서는 <xref:System.String.ToUpper%2A?displayProperty=nameWithType> 메서드를 호출했기 때문에 `{name.ToUpper()}`를 대문자로 변환된 각 이름으로 바꿉니다.
 
 
     계속해서 살펴보겠습니다.
-
-
-    > [!NOTE]
-
-    > 이 온라인 코딩 환경은 미리 보기 모드로 제공됩니다. 문제가 발생하면 [dotnet/try 리포지토리](https://github.com/dotnet/try/issues)에 보고하세요.
 - title: 목록 콘텐츠 수정
   durationInMinutes: 3
   content: >
@@ -107,11 +102,6 @@ items:
 
 
     **실행**을 다시 선택하여 결과를 확인합니다. C#에서 인덱스는 0부터 시작하므로, 가장 큰 유효 인덱스는 목록의 항목 수보다 하나 작습니다.
-
-
-    > [!NOTE]
-
-    > 이 온라인 코딩 환경은 미리 보기 모드로 제공됩니다. 문제가 발생하면 [dotnet/try 리포지토리](https://github.com/dotnet/try/issues)에 보고하세요.
 - title: 목록 검색 및 정렬
   durationInMinutes: 5
   content: >
@@ -147,11 +137,6 @@ items:
     }
 
     ```
-
-
-    > [!NOTE]
-
-    > 이 온라인 코딩 환경은 미리 보기 모드로 제공됩니다. 문제가 발생하면 [dotnet/try 리포지토리](https://github.com/dotnet/try/issues)에 보고하세요.
 - title: 다른 형식 목록
   durationInMinutes: 5
   content: >
@@ -184,20 +169,10 @@ items:
 
 
     **실행**을 눌러 결과를 확인합니다.
-
-
-    > [!NOTE]
-
-    > 이 온라인 코딩 환경은 미리 보기 모드로 제공됩니다. 문제가 발생하면 [dotnet/try 리포지토리](https://github.com/dotnet/try/issues)에 보고하세요.
 - title: 과제
   durationInMinutes: 10
   content: >
     이 단원과 이전 단원에서 학습한 개념을 함께 적용할 수 있는지 확인하세요. 피보나치 수를 사용하여 지금까지 빌드한 내용을 확장합니다. 코드를 작성하여 시퀀스에서 처음 20개 수를 생성합니다. (힌트: 20번째 피보나치 수는 6765입니다.)
-
-
-    > [!NOTE]
-
-    > 이 온라인 코딩 환경은 미리 보기 모드로 제공됩니다. 문제가 발생하면 [dotnet/try 리포지토리](https://github.com/dotnet/try/issues)에 보고하세요.
 - title: 과제 완료
   durationInMinutes: 3
   content: >
@@ -224,11 +199,6 @@ items:
 
 
     루프의 각 반복을 통해 목록의 마지막 두 정수를 사용하고, 더하고, 해당 값을 목록에 추가합니다. 목록에 20개의 항목이 추가될 때까지 루프가 반복됩니다.
-
-
-    > [!NOTE]
-
-    > 이 온라인 코딩 환경은 미리 보기 모드로 제공됩니다. 문제가 발생하면 [dotnet/try 리포지토리](https://github.com/dotnet/try/issues)에 보고하세요.
 - content: >-
     목록 대화형 자습서를 완료했습니다. 이는 C# 대화형 자습서의 최종 소개입니다. [.NET 사이트](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)를 방문하여 .NET Core SDK를 다운로드하고, 머신에 프로젝트를 만들고, 계속해서 코딩할 수 있습니다. “다음 단계” 섹션은 이 자습서로 돌아옵니다.
 

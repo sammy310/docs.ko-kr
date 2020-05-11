@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - new constraint keyword [C#]
 ms.assetid: 58850b64-cb97-4136-be50-1f3bc7fc1da9
-ms.openlocfilehash: cd67aeb82d736b8941b0637494089723e7815505
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6f6d1b663d03dc9b3adf0e7055dcffacc79d83dc
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713350"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795341"
 ---
 # <a name="new-constraint-c-reference"></a>new 제약 조건(C# 참조)
 
@@ -33,7 +33,7 @@ ms.locfileid: "75713350"
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 참조](../../language-reference/index.md)
+- [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 키워드](index.md)
 - [제네릭](../../programming-guide/generics/index.md)

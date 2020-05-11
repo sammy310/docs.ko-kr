@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -win32res compiler option [C#]
 - win32res compiler option [C#]
 ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
-ms.openlocfilehash: 39f02c4c2e060c4be40002a2f48b0da31004a9ae
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3bb1614fcf28c62a9000c9b96af2f046f329fb1e
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69606203"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794379"
 ---
 # <a name="-win32res-c-compiler-options"></a>-win32res(C# 컴파일러 옵션)
 **-win32res** 옵션은 출력 파일에 Win32 리소스를 삽입합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "69606203"
  출력 파일에 추가하려는 리소스 파일입니다.  
   
 ## <a name="remarks"></a>설명  
- Win32 리소스 파일은 [리소스 컴파일러](../../language-reference/compiler-options/resource-compiler-option.md)로 만들 수 있습니다. 리소스 컴파일러는 Visual C++ 프로그램을 컴파일할 때 실행되며 .rc 파일에서 .res 파일이 만들어집니다.  
+ Win32 리소스 파일은 [리소스 컴파일러](resource-compiler-option.md)로 만들 수 있습니다. 리소스 컴파일러는 Visual C++ 프로그램을 컴파일할 때 실행되며 .rc 파일에서 .res 파일이 만들어집니다.  
   
  Win32 리소스는 파일 탐색기에서 애플리케이션을 식별하는 데 도움이 되는 버전 정보나 비트맵 (아이콘) 정보를 포함할 수 있습니다. **-win32res**를 지정하지 않으면 컴파일러에서 어셈블리 버전을 기반으로 하여 버전 정보를 생성합니다.  
   

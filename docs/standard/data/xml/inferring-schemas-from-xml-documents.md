@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
-ms.openlocfilehash: 5c2d997d9006a3f1eb971eac20982b9dd5677ebf
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 2d991a7835d22af2c780b020d6884f626908665e
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710754"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796173"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>XML 문서에서 스키마 유추
 이 항목에서는 <xref:System.Xml.Schema.XmlSchemaInference> 클래스를 사용하여 XML 문서 구조에서 XSD(XML 스키마 정의 언어) 스키마를 유추하는 방법을 설명합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "75710754"
     <child>One</child>  
     <child>Two</child>  
 </parent>  
-<parent attribute1="A">  
+<parent attribute1="A" />
 ```  
   
  위의 예제에서 `attribute1` 특성이 `6` 프로세스에 의해 값 <xref:System.Xml.Schema.XmlSchemaInference>을 발견하면 `xs:unsignedByte` 형식으로 간주됩니다. `parent` 프로세스가 두 번째 <xref:System.Xml.Schema.XmlSchemaInference> 요소를 발견하면 해당 `xs:string` 특성 값이 `attribute1`이므로 `A` 형식으로 수정하여 제약 조건을 완화합니다. 마찬가지로 스키마에서 유추되는 모든 `minOccurs` 요소의 `child` 특성은 두 번째 부모 요소에 자식 요소가 없기 때문에 `minOccurs="0"`으로 완화됩니다.  
