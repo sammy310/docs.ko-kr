@@ -1,14 +1,14 @@
 ---
 title: C#의 숫자 - C# 소개 자습서
-description: 숫자 형식, 해당 속성 및 메서드를 살펴보면서 C#을 학습합니다.
+description: 숫자 형식, 해당 사용, 속성 및 메서드를 살펴보면서 C#을 학습합니다.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 7e9af4b3b859f74d7e92ff10b3964ddd59d2473b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3dc2a5afc6321da45351525a632f586cb84bf7fe
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156547"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794613"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>C\#에서 정수 및 부동 소수점 수 조작
 
@@ -24,7 +24,7 @@ ms.locfileid: "79156547"
 dotnet new console -n NumbersInCSharp -o .
 ```
 
-원하는 편집기에서 *Program.cs*를 열고 `Console.WriteLine("Hello World!");` 줄을 다음으로 바꿉니다.
+원하는 편집기에서 *Program.cs*를 열고 `Console.WriteLine("Hello World!");` 줄을 다음 코드로 바꿉니다.
 
 ```csharp
 int a = 18;
@@ -35,7 +35,7 @@ Console.WriteLine(c);
 
 명령 창에 `dotnet run`을 입력하여 이 코드를 실행합니다.
 
-정수를 사용하는 기본 수학 연산 중 하나를 방금 살펴봤습니다. `int` 형식은 **정수**(0, 양의 정수 또는 음의 정수)를 나타냅니다. 더하기의 경우 `+` 기호를 사용합니다. 정수에 대해 다른 일반적인 수학 연산은 다음과 같습니다.
+정수를 사용하는 기본 수학 연산 중 하나를 살펴봤습니다. `int` 형식은 **정수**(0, 양의 정수 또는 음의 정수)를 나타냅니다. 더하기의 경우 `+` 기호를 사용합니다. 정수에 대해 다른 일반적인 수학 연산은 다음과 같습니다.
 
 - 빼기의 경우 `-`
 - 곱하기의 경우 `*`
@@ -60,13 +60,13 @@ Console.WriteLine(c);
 
 명령 창에 `dotnet run`을 입력하여 이 코드를 실행합니다.
 
-원하는 경우 동일한 줄에서 여러 수학 연산을 수행하여 실험할 수도 있습니다. 예를 들어 `c = a + b - 12 * 17;`을 사용해 보세요. 변수와 상수를 혼합해서 사용할 수 있습니다.
+원하는 경우 동일한 줄에서 여러 수학 연산을 작성하여 실험할 수도 있습니다. 예를 들어 `c = a + b - 12 * 17;`을 사용해 보세요. 변수와 상수를 혼합해서 사용할 수 있습니다.
 
 > [!TIP]
 > C# (또는 다른 프로그래밍 언어)를 살펴보면서 코드를 작성할 때 실수를 하게 될 것입니다. **컴파일러**는 그러한 오류를 찾아 사용자에게 보고합니다. 출력에 오류 메시지가 포함되어 있으면 예제 코드와 창의 코드를 자세히 살펴보고 수정 사항을 확인하세요.
 > 이 연습은 C# 코드의 구조를 학습하는 데 도움이 됩니다.
 
-첫 번째 단계를 완료했습니다. 다음 섹션을 시작하기 전에 현재 코드를 별도의 메서드로 이동합니다. 이렇게 하면 새 예제 작업을 쉽게 시작할 수 있습니다. `Main` 메서드의 이름을 `WorkingWithIntegers`로 바꾸고 `Main`를 호출하는 새 `WorkingWithIntegers` 메서드를 작성합니다. 작업을 마치면 코드가 다음과 같이 됩니다.
+첫 번째 단계를 완료했습니다. 다음 섹션을 시작하기 전에 현재 코드를 별도의 메서드로 이동합니다. 이렇게 하면 새 예제 작업을 쉽게 시작할 수 있습니다. `Main` 메서드의 이름을 `WorkingWithIntegers`로 바꾸고 `WorkingWithIntegers`를 호출하는 새 `Main` 메서드를 작성합니다. 작업을 마치면 코드가 다음과 같이 됩니다.
 
 ```csharp
 using System;
@@ -158,7 +158,7 @@ Console.WriteLine(h);
 `dotnet run`을 다시 입력하여 결과를 확인합니다.
 
 넘어가기 전에 이 섹션에서 작성한 모든 코드를 새 메서드에 배치해 보겠습니다. 이러한 새 메서드의 이름을 `OrderPrecedence`라고 하겠습니다.
-다음과 같은 코드가 만들어질 것입니다.
+다음과 같이 작성해야 합니다.
 
 ```csharp
 using System;
@@ -224,7 +224,7 @@ namespace NumbersInCSharp
 ## <a name="explore-integer-precision-and-limits"></a>정수 전체 자릿수 및 한도 살펴보기
 
 마지막 샘플에서는 정수 나누기가 결과를 자르는 것을 보여 줍니다.
-**modulo** 연산자(**문자)를 사용하여**나머지`%`를 얻을 수 있습니다. `Main` 메서드에 다음 코드를 사용해 봅니다.
+**modulo** 연산자(`%` 문자)를 사용하여 **나머지**를 얻을 수 있습니다. `Main` 메서드에 다음 코드를 사용해 봅니다.
 
 ```csharp
 int a = 7;
@@ -255,13 +255,13 @@ Console.WriteLine($"An example of overflow: {what}");
 더하기 연산은 정수에 대해 허용된 값을 **오버플로했습니다**.
 오버플로가 가능한 가장 큰 정수에서 가장 작은 정수로 “래핑”하기 때문에 답은 아주 큰 음수입니다.
 
-`int` 형식이 요구 사항을 충족하지 않을 때 사용하는 여러 한도와 전체 자릿수가 있는 다른 숫자 형식이 있습니다. 이에 대해 다음에 살펴보겠습니다.
+`int` 형식이 요구 사항을 충족하지 않을 때 사용하는 여러 한도와 전체 자릿수가 있는 다른 숫자 형식이 있습니다. 다음으로 다른 형식을 살펴보겠습니다.
 
 다시 한번, 이 섹션에서 작성한 코드를 별도의 메서드로 이동해 보겠습니다. 이 EventHandler의 이름을 `TestLimits`로 지정합니다.
 
 ## <a name="work-with-the-double-type"></a>double 형식 작업
 
-`double` 숫자 형식은 배정밀도 부동 소수점 수를 나타냅니다. 이러한 용어는 생소할 수 있습니다. **부동 소수점** 수는 아주 크거나 작은 정수가 아닌 수를 나타낼 때 유용합니다. **배정밀도**란 이러한 숫자가 **단정밀도**보다 큰 전체 자릿수를 사용하여 저장됨을 의미합니다. 최신 컴퓨터에서는 단정밀도 숫자보다 배정밀도를 더 많이 사용합니다.
+`double` 숫자 형식은 배정밀도 부동 소수점 수를 나타냅니다. 이러한 용어는 생소할 수 있습니다. **부동 소수점** 수는 아주 크거나 작은 정수가 아닌 수를 나타낼 때 유용합니다. **배정밀도**는 값을 저장하는 데 사용되는 이진 자릿수를 설명하는 상대 용어입니다. **배정밀도** 숫자의 이진 자릿수는 **단정밀도**의 두 배입니다. 최신 컴퓨터에서는 단정밀도 숫자보다 배정밀도를 더 많이 사용합니다. **단정밀도** 숫자는 `float` 키워드를 사용하여 선언됩니다.
 지금 살펴보세요. 다음 코드를 추가하고 결과를 확인합니다.
 
 ```csharp
@@ -307,9 +307,9 @@ Console.WriteLine(third);
 
 과제를 하느라 약간의 시간을 보낸 후 작성한 코드를 새 메서드에 배치합니다. 이러한 새 메서드의 이름을 `WorkWithDoubles`로 지정합니다.
 
-## <a name="work-with-fixed-point-types"></a>고정 소수점 형식 작업
+## <a name="work-with-decimal-types"></a>10진 형식으로 작업
 
-C#의 기본적인 숫자 형식인 정수 형식과 double 형식을 살펴봤습니다.  학습할 또 다른 형식이 있습니다. 바로 `decimal` 형식입니다. `decimal` 형식은 범위가 작지만 `double`보다 전체 자릿수가 큽니다. **고정 소수점**이라는 용어는 소수점(또는 이진 소수점)이 이동하지 않음을 의미합니다. 이 형식에 대해 살펴보겠습니다.
+C#의 기본적인 숫자 형식인 정수 형식과 double 형식을 살펴봤습니다.  학습할 또 다른 형식이 있습니다. 바로 `decimal` 형식입니다. `decimal` 형식은 범위가 작지만 `double`보다 전체 자릿수가 큽니다. 이 형식에 대해 살펴보겠습니다.
 
 ```csharp
 decimal min = decimal.MinValue;
@@ -329,13 +329,16 @@ decimal d = 3.0M;
 Console.WriteLine(c / d);
 ```
 
-숫자의 `M` 접미사는 상수가 `decimal` 형식을 사용해야 함을 나타내는 방법입니다.
+숫자의 `M` 접미사는 상수가 `decimal` 형식을 사용해야 함을 나타내는 방법입니다. 형식을 지정하지 않으면 컴파일러는 `double` 형식으로 간주합니다.
+
+> [!NOTE]
+> 문자 `M`은 `double` 키워드와 `decimal` 키워드 사이에서 가장 시각적으로 고유한 문자로 선택되었습니다.
 
 소수점 형식을 사용하는 수학에는 소수점 오른쪽에 더 많은 숫자가 있습니다.
 
 ***과제***
 
-이제 여러 가지 숫자 형식을 살펴봤으므로 반지름이 2.50센티미터인 원의 면적을 계산하는 코드를 작성하세요. 원의 면적은 반지름 제곱 곱하기 PI입니다. 힌트: .NET에는 PI의 상수가 포함되어 있습니다. 즉 해당 값에 사용할 수 있는 <xref:System.Math.PI?displayProperty=nameWithType>입니다.
+이제 여러 가지 숫자 형식을 살펴봤으므로 반지름이 2.50센티미터인 원의 면적을 계산하는 코드를 작성하세요. 원의 면적은 반지름 제곱 곱하기 PI입니다. 힌트: .NET에는 PI의 상수가 포함되어 있습니다. 즉 해당 값에 사용할 수 있는 <xref:System.Math.PI?displayProperty=nameWithType>입니다. `System.Math` 네임스페이스에 선언된 모든 상수와 마찬가지로 <xref:System.Math.PI?displayProperty=nameWithType>는 `double` 값입니다. 이러한 이유로 이 과제에는 `decimal` 값 대신 `double`을 사용해야 합니다.
 
 19에서 20 사이의 답을 받아야 합니다.
 [GitHub에서 완성된 샘플 코드를 보고](https://github.com/dotnet/samples/tree/master/csharp/numbers-quickstart/Program.cs#L104-L106) 답을 확인할 수 있습니다.
@@ -344,7 +347,7 @@ Console.WriteLine(c / d);
 
 “C#의 숫자” 빠른 시작을 완료했습니다. 자체 개발 환경에서 [분기 및 루프](branches-and-loops-local.md) 빠른 시작을 계속할 수 있습니다.
 
-다음 항목에서는 C#의 숫자에 대해 더 자세히 알아볼 수 있습니다.
+다음 문서에서는 C#의 숫자에 대해 더 자세히 알아볼 수 있습니다.
 
 - [정수 숫자 형식](../../language-reference/builtin-types/integral-numeric-types.md)
 - [부동 소수점 숫자 형식](../../language-reference/builtin-types/floating-point-numeric-types.md)

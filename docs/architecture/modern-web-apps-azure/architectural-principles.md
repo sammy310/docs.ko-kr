@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케�
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: ffc890bf8cd6b07bd70d8fc7b2b8cfeaf474ae35
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e291888bee25a9c87259560ca4b12635ee73c3c7
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77450273"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975409"
 ---
 # <a name="architectural-principles"></a>아키텍처 원칙
 
@@ -66,7 +66,7 @@ ms.locfileid: "77450273"
 
 ### <a name="dont-repeat-yourself-dry"></a>DRY(반복 금지)
 
-애플리케이션이 여러 위치에서 특정 개념과 관련된 동작을 지정하면 안 됩니다. 이는 종종 오류의 원인이 됩니다. 어느 시점부터 요구 사항이 변경되면 이 동작도 변경되어야 하며 하나 이상의 동작 인스턴스가 업데이트에 실패하면 시스템 동작이 일관적이지 않을 가능성이 있습니다.
+애플리케이션이 여러 위치에서 특정 개념과 관련된 동작을 지정하면 안 됩니다. 이는 종종 오류의 원인이 됩니다. 어느 시점에서 요구 사항이 바뀌면 이 동작을 변경해야 합니다. 동작의 인스턴스를 하나 이상 업데이트하지 못할 수 있으며, 이로 인해 시스템의 동작이 일관되지 않을 수 있습니다.
 
 논리를 복제하는 대신 프로그래밍 구문에 캡슐화해야 합니다. 이 동작을 통해 단일 기관을 생성하고, 이 동작이 필요한 애플리케이션의 다른 부분에서는 새 구문을 사용하게 합니다.
 

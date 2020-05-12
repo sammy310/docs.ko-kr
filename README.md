@@ -1,12 +1,14 @@
 ---
-ms.openlocfilehash: 1e84a0c3636f36794ca7795ac54d192d3cb44217
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c6dcca8384cbd97a968b77e4bc834afa1f683298
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79141096"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895669"
 ---
 # <a name="net-docs"></a>.NET 문서
+
+![Markdownlint](https://github.com/dotnet/docs/workflows/Markdownlint/badge.svg)
 
 이 리포지토리는 .NET에 대한 개념 설명서를 포함합니다. [.NET 설명서 사이트](https://docs.microsoft.com/dotnet)는 이것 외에도 여러 리포지토리로부터 빌드됩니다.
 

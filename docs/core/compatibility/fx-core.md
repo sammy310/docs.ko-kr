@@ -2,13 +2,13 @@
 title: 호환성이 손상되는 변경 사항 - .NET Framework에서 .NET Core로 변경
 titleSuffix: ''
 description: .NET Framework에서 .NET Core로의 호환성이 손상되는 변경 사항을 나열합니다.
-ms.date: 12/18/2019
-ms.openlocfilehash: f712be14d7debc4b3008f8459e6ee925754b25f0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 05/05/2020
+ms.openlocfilehash: bb18e38fecc0805dfafe6a16c853ae04fd2a2913
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77449406"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82859945"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>.NET Framework에서 .NET Core로 마이그레이션 시 호환성이 손상되는 변경 사항
 
@@ -17,10 +17,12 @@ ms.locfileid: "77449406"
 > [!NOTE]
 > 이 문서는 .NET Framework와 .NET Core 간 호환성이 손상되는 변경 사항의 전체 목록이 아닙니다. 가장 중요한 호환성이 손상되는 변경 사항은 이를 인식하는 대로 여기에 추가됩니다.
 
-## <a name="corefx"></a>CoreFx
+## <a name="core-net-libraries"></a>핵심 .NET 라이브러리
 
 - [UseShellExecute의 기본값 변경](#change-in-default-value-of-useshellexecute)
 - [FileSystemInfo.Attributes가 throw하는 UnauthorizedAccessException](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes)
+- [손상된 프로세스 상태 예외 처리는 지원되지 않음](#handling-corrupted-state-exceptions-is-not-supported)
+- [UriBuilder 속성은 더 이상 앞에 선행 문자를 추가하지 않음](#uribuilder-properties-no-longer-prepend-leading-characters)
 
 ### <a name="net-core-21"></a>.NET Core 2.1
 
@@ -34,6 +36,14 @@ ms.locfileid: "77449406"
 
 ***
 
+[!INCLUDE [corrupted-state-exceptions](~/includes/core-changes/corefx/1.0/corrupted-state-exceptions.md)]
+
+***
+
+[!INCLUDE [uribuilder-behavior-changes](../../../includes/core-changes/corefx/1.0/uribuilder-behavior-changes.md)]
+
+***
+
 ## <a name="cryptography"></a>암호화
 
 - [SignedCms.ComputeSignature의 부울 매개 변수를 적용](#boolean-parameter-of-signedcmscomputesignature-is-respected)
@@ -41,6 +51,16 @@ ms.locfileid: "77449406"
 ### <a name="net-core-21"></a>.NET Core 2.1
 
 [!INCLUDE [Boolean parameter of SignedCms.ComputeSignature is respected](~/includes/core-changes/cryptography/2.1/compute-signature-silent-parameter.md)]
+
+***
+
+## <a name="networking"></a>네트워킹
+
+- [WebClient.CancelAsync가 항상 즉시 취소되지는 않음](#webclientcancelasync-doesnt-always-cancel-immediately)
+
+### <a name="net-core-20"></a>.NET Core 2.0
+
+[!INCLUDE [behavior-change-webclient-cancelasync](../../../includes/core-changes/networking/2.0/behavior-change-webclient-cancelasync.md)]
 
 ***
 
@@ -128,7 +148,7 @@ Windows Forms 지원이 버전 3.0의 .NET Core에 추가되었습니다. .NET F
 
 ***
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET Core에서 항상 예외를 throw하는 API](unsupported-apis.md)
 - [.NET Core에서 사용할 수 없는 .NET Framework 기술](../porting/net-framework-tech-unavailable.md)

@@ -3,12 +3,12 @@ title: 구문 변환 시작(Roslyn API)
 description: 구문 트리를 트래버스하고, 탐색하고, 쿼리하는 방법을 소개합니다.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 5045dca839daba1070b34720e72cc9c4f7b94828
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 232fe5fcba35f152dbc3f00b2f2c092b5df0dd35
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240612"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794795"
 ---
 # <a name="get-started-with-syntax-transformation"></a>구문 변환 시작
 
@@ -174,7 +174,7 @@ Type variable;
 
 `File.WriteAllText` 코드 아래에 물결선이 표시됩니다. 전구를 선택하고 필요한 `using System.IO;` 문을 추가합니다.
 
-거의 완료되었습니다. 한 단계가 남았습니다. 테스트 <xref:Microsoft.CodeAnalysis.Compilation> 만들기. 이 빠른 시작 중에 형식 유추를 사용하지 않았으므로 완벽한 테스트 사례를 만들었습니다. 그러나 C# 프로젝트 파일에서 컴파일을 만드는 작업은 이 연습의 범위를 벗어납니다. 그래도 지침을 신중하게 수행했다면 희망적입니다. `CreateTestCompilation` 메서드의 내용을 다음 코드로 대체합니다. 이 코드는 이 빠른 시작에 설명된 프로젝트와 조건부로 일치하는 테스트 컴파일을 만듭니다.
+거의 완료되었습니다. 한 단계가 남았습니다. 테스트 <xref:Microsoft.CodeAnalysis.Compilation> 만들기입니다. 이 빠른 시작 중에 형식 유추를 사용하지 않았으므로 완벽한 테스트 사례를 만들었습니다. 그러나 C# 프로젝트 파일에서 컴파일을 만드는 작업은 이 연습의 범위를 벗어납니다. 그래도 지침을 신중하게 수행했다면 희망적입니다. `CreateTestCompilation` 메서드의 내용을 다음 코드로 대체합니다. 이 코드는 이 빠른 시작에 설명된 프로젝트와 조건부로 일치하는 테스트 컴파일을 만듭니다.
 
 [!code-csharp[CreateTestCompilation](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/Program.cs#CreateTestCompilation "Create a test compilation using the code written for this quickstart.")]
 

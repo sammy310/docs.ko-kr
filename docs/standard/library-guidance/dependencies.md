@@ -2,12 +2,12 @@
 title: 종속성 및 .NET 라이브러리
 description: .NET 라이브러리에서 NuGet 종속성을 관리하는 모범 사례 권장 사항입니다.
 ms.date: 10/02/2018
-ms.openlocfilehash: 6a260b54c45a0cd231059ab3bc6f2707ef7fb20e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 265e92e86d22c778f65476e7f1383d32e4964655
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76731483"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895703"
 ---
 # <a name="dependencies"></a>종속성
 
@@ -40,7 +40,7 @@ ms.locfileid: "76731483"
 <PackageReference Include="ExamplePackage" Version="1.0" />
 ```
 
-NuGet에서 종속성을 확인할 때 사용하는 규칙은 [복잡](/nuget/consume-packages/dependency-resolution)하지만 NuGet은 항상 적용 가능한 가장 낮은 버전을 찾습니다. 가장 낮은 버전에서 호환성 문제가 가장 적기 때문에 NuGet은 사용 가능한 가장 높은 버전보다 적용 가능한 가장 낮은 버전을 선호합니다.
+NuGet에서 종속성을 확인할 때 사용하는 규칙은 [복잡](/nuget/consume-packages/dependency-resolution)하지만 NuGet은 [기본적으로](/nuget/consume-packages/install-use-packages-visual-studio#install-and-update-options) 적용 가능한 가장 낮은 버전을 찾습니다. 가장 낮은 버전에서 호환성 문제가 가장 적기 때문에 NuGet은 사용 가능한 가장 높은 버전보다 적용 가능한 가장 낮은 버전을 선호합니다.
 
 NuGet의 적용 가능한 가장 낮은 버전 규칙 때문에 최신 버전을 가져오지 않도록 패키지 참조에 상위 버전이나 정확한 범위를 배치할 필요가 없습니다. NuGet이 이미 가장 낮고, 가장 호환되는 버전을 찾으려고 시도합니다.
 
@@ -58,7 +58,7 @@ NuGet의 적용 가능한 가장 낮은 버전 규칙 때문에 최신 버전을
 
 ❌ 최소 버전이 없는 NuGet 패키지 참조를 사용하지 마세요.
 
-❌ 회피 정확한 버전을 요구하는 NuGet 패키지 참조는 사용하지 않습니다.
+❌ 정확한 버전을 요구하는 NuGet 패키지 참조는 사용하지 않습니다.
 
 ❌ 버전 상한이 있는 NuGet 패키지 참조를 사용하지 않습니다.
 

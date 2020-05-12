@@ -3,14 +3,14 @@ title: .NET Core SDK 및 런타임 종속성 - .NET Core
 description: Windows, Linux 및 macOS에 .NET Core SDK 및 런타임을 설치하기 위한 운영 체제 및 CPU 아키텍처 사전 요구 사항에 대해 설명합니다.
 author: leecow
 ms.author: leecow
-ms.date: 12/04/2019
+ms.date: 04/30/2020
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 42765d4402dfa17d4e962b2ecaf7a83e91853c76
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 280aa1431686ff99257580bb024a84b1e57f85c0
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82140988"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895484"
 ---
 # <a name="net-core-dependencies-and-requirements"></a>.NET Core 종속성 및 요구 사항
 
@@ -290,6 +290,24 @@ Fedora 사용자: OpenSSL의 버전이 1.1보다 크거나 같은 경우 **compa
 
 > [!WARNING]
 > CentOS와 Fedora의 대부분의 버전은 libgdiplus의 이전 버전을 포함합니다. 시스템에 Mono 리포지토리를 추가하여 최신 버전의 libgdiplus를 설치할 수 있습니다. 자세한 내용은 <https://www.mono-project.com/download/stable/>를 참조하세요.
+
+### <a name="alpine"></a>Alpine
+
+Alpine 배포의 경우 다음과 같은 라이브러리를 설치해야 합니다.
+
+- icu-libs(세계화를 사용하지 않도록 설정한 경우에는 필요하지 않음)
+- krb5-libs
+- libcurl
+- libintl
+- libssl1.1(Alpine 3.9 이상) 또는 libssl1.0(이전 버전)
+- libstdc++
+- lttng-ust
+- numactl(선택 사항. NUMA를 사용하는 디바이스에만 유용함)
+- zlib
+
+*System.Drawing.Common* 어셈블리를 사용하는 .NET Core 앱의 경우 다음과 같은 종속성도 필요합니다.
+
+- libgdiplus(에지/테스트 리포지토리에서만 사용 가능)
 
 ::: zone-end
 

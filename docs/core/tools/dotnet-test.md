@@ -2,12 +2,12 @@
 title: dotnet test 명령
 description: dotnet test 명령은 지정된 프로젝트에서 단위 테스트를 실행하는 데 사용됩니다.
 ms.date: 04/29/2020
-ms.openlocfilehash: a8218b6596601069b89a60ad018adf89a1f47cf6
-ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
+ms.openlocfilehash: ef71e48daa7c4a6f33961d05a2f3def122087b0e
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82624893"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975435"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -20,7 +20,7 @@ ms.locfileid: "82624893"
 ## <a name="synopsis"></a>개요
 
 ```dotnetcli
-dotnet test [<PROJECT> | <SOLUTION>]
+dotnet test [<PROJECT> | <SOLUTION> | <DIRECTORY> | <DLL>]
     [-a|--test-adapter-path <PATH_TO_ADAPTER>] [--blame]
     [-c|--configuration <CONFIGURATION>]
     [--collect <DATA_COLLECTOR_FRIENDLY_NAME>]
@@ -37,11 +37,15 @@ dotnet test -h|--help
 
 ## <a name="description"></a>설명
 
-`dotnet test` 명령은 지정된 프로젝트에서 단위 테스트를 실행하는 데 사용됩니다. `dotnet test` 명령은 프로젝트에 대해 지정된 테스트 러너 콘솔 애플리케이션을 시작합니다. 테스트 러너는 단위 테스트 프레임워크(예: MSTest, NUnit 또는 xUnit)에 대해 정의된 테스트를 실행하고 각 테스트의 성공 여부를 보고합니다. 모든 테스트에 성공하면 Test Runner가 종료 코드로 0을 반환합니다. 테스트가 하나라도 실패하면 1을 반환합니다. 멀티 타기팅 프로젝트의 경우 각 대상 프레임워크에 대해 테스트가 실행됩니다. 테스트 러너와 단위 테스트 라이브러리는 NuGet 패키지로 패키지되고 프로젝트에 대한 일반적인 종속성으로 복원됩니다.
+`dotnet test` 명령은 지정된 솔루션에서 단위 테스트를 실행하는 데 사용됩니다. `dotnet test` 명령은 솔루션을 빌드하고 솔루션의 각 테스트 프로젝트에 대해 테스트 호스트 애플리케이션을 실행합니다. 테스트 호스트는 테스트 프레임워크를 사용하여 지정된 프로젝트에서 MSTest, NUnit 또는 xUnit 등의 테스트를 실행하고 각 테스트의 성공이나 실패를 보고합니다. 모든 테스트에 성공하면 Test Runner가 종료 코드로 0을 반환합니다. 테스트가 하나라도 실패하면 1을 반환합니다.
+
+멀티 타기팅 프로젝트의 경우 각 대상 프레임워크에 대해 테스트가 실행됩니다. 테스트 호스트와 단위 테스트 프레임워크는 NuGet 패키지로 패키징되고 프로젝트에 대한 일반적인 종속성으로 복원됩니다.
 
 테스트 프로젝트는 다음 샘플 프로젝트 파일에서 볼 수 있듯이 일반적인 `<PackageReference>` 요소를 사용하여 테스트 러너를 지정합니다.
 
 [!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
+
+여기서 `Microsoft.NET.Test.Sdk`는 테스트 호스트이고 `xunit`은 테스트 프레임워크입니다. `xunit.runner.visualstudio`는 xUnit 프레임워크가 테스트 호스트와 함께 작동할 수 있도록 하는 테스트 어댑터입니다.
 
 ### <a name="implicit-restore"></a>암시적 복원
 
@@ -49,19 +53,24 @@ dotnet test -h|--help
 
 ## <a name="arguments"></a>인수
 
-- **`PROJECT | SOLUTION`**
+- **`PROJECT | SOLUTION | DIRECTORY | DLL`**
 
-  테스트 프로젝트 또는 솔루션의 경로입니다. 지정하지 않으면 현재 디렉터리로 기본 설정됩니다.
+  - 테스트 프로젝트의 경로입니다.
+  - 솔루션의 경로입니다.
+  - 프로젝트 또는 솔루션이 포함된 디렉터리의 경로입니다.
+  - 테스트 프로젝트 *.dll* 파일의 경로입니다.
+
+  지정하지 않으면 이 명령은 현재 디렉터리에서 프로젝트 또는 솔루션을 검색합니다.
 
 ## <a name="options"></a>옵션
 
 - **`-a|--test-adapter-path <PATH_TO_ADAPTER>`**
 
-  테스트 실행에 지정된 경로에서 사용자 지정 테스트 어댑터를 사용합니다.
+  추가 테스트 어댑터를 검색할 디렉터리의 경로입니다. 접미사가 `.TestAdapter.dll`인 *.dll* 파일만 검사됩니다. 지정하지 않으면 테스트 *.dll*의 디렉터리가 검색됩니다.
 
 - **`--blame`**
 
-  테스트를 원인 모드로 실행합니다. 이 옵션은 테스트 호스트의 크래시를 유발하는 문제가 있는 테스트를 격리하는 데 유용합니다. 현재 디렉터리에 크래시 전에 테스트 실행 순서를 캡처하는 *Sequence.xml*이라는 출력 파일을 만듭니다.
+  테스트를 원인 모드로 실행합니다. 이 옵션은 테스트 호스트의 크래시를 유발하는 문제가 있는 테스트를 격리하는 데 유용합니다. 크래시가 감지되면 크래시 전에 실행된 테스트의 순서를 캡처하는 시퀀스 파일이 `TestResults/<Guid>/<Guid>_Sequence.xml`에 만들어집니다.
 
 - **`-c|--configuration <CONFIGURATION>`**
 
@@ -73,11 +82,11 @@ dotnet test -h|--help
 
 - **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
-  테스트 플랫폼에 대한 진단 모드를 사용하도록 설정하고 지정된 파일에 진단 메시지를 기록합니다.
+  테스트 플랫폼에 대한 진단 모드를 사용하도록 설정하고 지정된 파일에, 그리고 옆의 파일에 진단 메시지를 기록합니다. 메시지를 기록하는 프로세스에 따라 생성되는 파일이 결정됩니다(예를 들어 테스트 호스트 로그의 경우 `*.host_<date>.txt`, 데이터 수집기 로그의 경우 `*.datacollector_<date>.txt`).
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  특정 [프레임워크](../../standard/frameworks.md)에 대한 테스트 이진 파일을 찾습니다.
+  테스트 이진 파일에 `dotnet` 또는 .NET Framework 테스트 호스트를 사용하도록 합니다. 이 옵션은 사용할 호스트 유형만 결정합니다. 사용할 실제 프레임워크 버전은 테스트 프로젝트의 *runtimeconfig.json*에 의해 결정됩니다. 지정하지 않으면 [TargetFramework 어셈블리 특성](/dotnet/api/system.runtime.versioning.targetframeworkattribute)이 사용되어 호스트 유형이 결정됩니다. 해당 특성이 *.dll*에서 제거되면 .NET Framework 호스트가 사용됩니다.
 
 - **`--filter <EXPRESSION>`**
 
@@ -121,7 +130,7 @@ dotnet test -h|--help
 
 - **`-s|--settings <SETTINGS_FILE>`**
 
-  테스트 실행에 사용할 `.runsettings` 파일입니다. `TargetPlatform` 요소(x86|x64)는 `dotnet test`에 영향을 주지 않습니다. X86을 대상으로 하는 테스트를 실행하려면 x86 버전의 .NET Core를 설치합니다. 경로에 있는 *dotnet.exe*의 비트 수는 테스트를 실행하는 데 사용됩니다. 자세한 내용은 다음 리소스를 참조하세요.
+  테스트 실행에 사용할 `.runsettings` 파일입니다. `TargetPlatform` 요소(x86|x64)는 `dotnet test`에 영향을 주지 않습니다. X86을 대상으로 하는 테스트를 실행하려면 x86 버전의 .NET Core를 설치합니다. 경로에 있는 *dotnet.exe*의 비트 수는 테스트를 실행하는 데 사용됩니다. 자세한 내용은 다음 자료를 참조하세요.
 
   - [`.runsettings` 파일을 사용하여 단위 테스트를 구성합니다.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
   - [테스트 실행 구성](https://github.com/Microsoft/vstest-docs/blob/master/docs/configure.md)
@@ -136,7 +145,7 @@ dotnet test -h|--help
 
 - **`RunSettings`** 인수
 
-  인수는 테스트의 `RunSettings` 구성으로서 전달됩니다. 인수는 “-- ” 뒤에 `[name]=[value]` 쌍으로 지정됩니다(-- 뒤 공백 주의). 공백은 여러 `[name]=[value]` 쌍을 구분하는 데 사용됩니다.
+ 인라인 `RunSettings`는 명령줄에서 “-- ” 뒤에 마지막 인수로 전달됩니다(-- 다음에 공백 있음). 인라인 `RunSettings`는 `[name]=[value]` 쌍으로 지정됩니다. 공백은 여러 `[name]=[value]` 쌍을 구분하는 데 사용됩니다.
 
   예: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
@@ -166,6 +175,12 @@ dotnet test -h|--help
 
   ```dotnetcli
   dotnet test --logger "console;verbosity=detailed"
+  ```
+  
+  - 현재 디렉터리의 프로젝트에서 테스트를 실행하고 테스트 호스트에서 크래시 발생 시 진행 중이던 테스트를 보고합니다.
+
+  ```dotnetcli
+  dotnet test --blame
   ```
 
 ## <a name="filter-option-details"></a>필터 옵션 세부 정보

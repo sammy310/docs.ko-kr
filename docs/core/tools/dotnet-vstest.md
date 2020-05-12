@@ -2,20 +2,23 @@
 title: dotnet vstest 명령
 description: dotnet vtest 명령은 프로젝트와 모든 종속성을 빌드합니다.
 ms.date: 02/27/2020
-ms.openlocfilehash: e8fa94cf12ca2fe5fb99c6e3c1dcdb52185798c0
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: f7db58f4aab59354b8c69ce0371324c23482dafe
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463282"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975396"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
 **이 문서의 적용 대상:**  ✔️ .NET Core 2.1 SDK 이상 버전
 
+> [!IMPORTANT]
+> `dotnet vstest` 명령은 이제 어셈블리를 실행하는 데 사용할 수 있는 `dotnet test`로 대체됩니다. [`dotnet test`](dotnet-test.md)을 참조하세요.
+
 ## <a name="name"></a>이름
 
-`dotnet-vstest` - 지정한 파일에서 테스트를 실행합니다.
+`dotnet-vstest` - 지정한 어셈블리에서 테스트를 실행합니다.
 
 ## <a name="synopsis"></a>개요
 

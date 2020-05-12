@@ -3,16 +3,16 @@ title: Microsoft.NET.Sdk의 MSBuild 속성
 description: .NET Core SDK가 이해하는 MSBuild 속성에 대한 참조입니다.
 ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: d4a204a1e0216313418d278ec3bd333f72db8751
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 800ff59310d8437d7f770bf20a5bdf37714f8515
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "81386659"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795575"
 ---
 # <a name="msbuild-properties-for-net-core-sdk-projects"></a>.NET Core SDK 프로젝트의 MSBuild 속성
 
-이 페이지에서는 .NET Core 프로젝트를 구성하기 위한 MSBuild 속성을 설명합니다.
+이 페이지에서는 .NET Core 프로젝트를 구성하기 위한 MSBuild 속성을 설명합니다. 각 속성에 대해 ‘메타데이터’를 속성의 자식 요소로 지정할 수 있습니다. 
 
 > [!NOTE]
 > 이 페이지는 진행 중인 작업이며 .NET Core SDK의 일부 유용한 MSBuild 속성을 나열하지 않습니다. 일반적인 MSBuild 속성의 목록을 보려면 [일반 MSBuild 속성](/visualstudio/msbuild/common-msbuild-project-properties)을 참조하세요.
@@ -28,11 +28,9 @@ ms.locfileid: "81386659"
 `TargetFramework` 속성은 [메타패키지](../packages.md#metapackages)를 암시적으로 참조하는 앱의 대상 프레임워크 버전을 지정합니다. 유효한 대상 프레임워크 모니커의 목록을 보려면 [SDK 스타일 프로젝트의 대상 프레임워크](../../standard/frameworks.md#supported-target-framework-versions)를 참조하세요.
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <TargetFramework>netcoreapp3.1</TargetFramework>
+</PropertyGroup>
 ```
 
 자세한 내용은 [SDK 스타일 프로젝트의 대상 프레임워크](../../standard/frameworks.md)를 참조하세요.
@@ -45,11 +43,9 @@ ms.locfileid: "81386659"
 > `TargetFramework`(단수형)이 지정되면 이 속성은 무시됩니다.
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFrameworks>netcoreapp3.1;net462</TargetFrameworks>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <TargetFrameworks>netcoreapp3.1;net462</TargetFrameworks>
+</PropertyGroup>
 ```
 
 자세한 내용은 [SDK 스타일 프로젝트의 대상 프레임워크](../../standard/frameworks.md)를 참조하세요.
@@ -62,18 +58,31 @@ ms.locfileid: "81386659"
 [메타패키지](../packages.md#metapackages) 버전보다 낮은 프레임워크 버전을 지정하려면 `NetStandardImplicitPackageVersion` 속성을 사용합니다. 다음 예제의 프로젝트 파일은 `netstandard1.3`을 대상으로 하지만 `NETStandard.Library`의 1.6.0 버전을 사용합니다.
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>netstandard1.3</TargetFramework>
-    <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <TargetFramework>netstandard1.3</TargetFramework>
+  <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
+</PropertyGroup>
+```
+
+## <a name="package-properties"></a>패키지 속성
+
+`PackageId`, `PackageVersion`, `PackageIcon`, `Title`, `Description`과 같은 속성을 지정하여 프로젝트에서 생성되는 패키지를 설명할 수 있습니다. 이러한 속성 및 다른 속성에 대한 자세한 내용은 [팩 대상](/nuget/reference/msbuild-targets#pack-target)을 참조하세요.
+
+```xml
+<PropertyGroup>
+  ...
+  <PackageId>ClassLibDotNetStandard</PackageId>
+  <Version>1.0.0</Version>
+  <Authors>John Doe</Authors>
+  <Company>Contoso</Company>
+</PropertyGroup>
 ```
 
 ## <a name="publish-properties"></a>속성 게시
 
 - [RuntimeIdentifier](#runtimeidentifier)
 - [RuntimeIdentifiers](#runtimeidentifiers)
+- [TrimmerRootAssembly](#trimmerrootassembly)
 - [UseAppHost](#useapphost)
 
 ### <a name="runtimeidentifier"></a>RuntimeIdentifier
@@ -81,11 +90,9 @@ ms.locfileid: "81386659"
 `RuntimeIdentifier` 속성을 사용하여 프로젝트의 단일 [RID(런타임 식별자)](../rid-catalog.md)를 지정할 수 있습니다. RID를 통해 자체 포함 배포를 게시할 수 있습니다.
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <RuntimeIdentifier>ubuntu.16.04-x64</RuntimeIdentifier>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <RuntimeIdentifier>ubuntu.16.04-x64</RuntimeIdentifier>
+</PropertyGroup>
 ```
 
 ### <a name="runtimeidentifiers"></a>RuntimeIdentifiers
@@ -96,11 +103,21 @@ ms.locfileid: "81386659"
 > 단일 런타임만 필요한 경우에는 `RuntimeIdentifier`(단수형)를 사용하면 빌드 속도가 더 빨라집니다.
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <RuntimeIdentifiers>win10-x64;osx.10.11-x64;ubuntu.16.04-x64</RuntimeIdentifiers>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <RuntimeIdentifiers>win10-x64;osx.10.11-x64;ubuntu.16.04-x64</RuntimeIdentifiers>
+</PropertyGroup>
+```
+
+### <a name="trimmerrootassembly"></a>TrimmerRootAssembly
+
+`TrimmerRootAssembly` 항목을 사용하면 [‘트리밍’](../deploying/trim-self-contained.md)에서 어셈블리를 제외할 수 있습니다.  트리밍은 패키지된 애플리케이션에서 런타임의 사용되지 않은 부분을 제거하는 프로세스입니다. 일부 경우에는 트리밍이 필요한 참조를 잘못 제거할 수 있습니다.
+
+다음 XML은 트리밍에서 `System.Security` 어셈블리를 제외합니다.
+
+```xml
+<ItemGroup>
+  <TrimmerRootAssembly Include="System.Security" />
+</ItemGroup>
 ```
 
 ### <a name="useapphost"></a>UseAppHost
@@ -110,69 +127,206 @@ ms.locfileid: "81386659"
 .NET Core 3.0 이상 버전에서는 프레임워크 종속 실행 파일이 기본적으로 생성됩니다. `UseAppHost` 속성을 `false`로 설정하여 실행 파일 생성을 사용하지 않도록 설정합니다.
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <UseAppHost>false</UseAppHost>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <UseAppHost>false</UseAppHost>
+</PropertyGroup>
 ```
 
 배포에 대한 자세한 내용은 [.NET Core 애플리케이션 배포](../deploying/index.md)를 참조하세요.
 
 ## <a name="compile-properties"></a>컴파일 속성
 
+- [LangVersion](#langversion)
+
 ### <a name="langversion"></a>LangVersion
 
 `LangVersion` 속성을 사용하여 특정 프로그래밍 언어 버전을 지정할 수 있습니다. 예를 들어 C# 미리 보기 기능에 액세스하려면 `LangVersion`을 `preview`로 설정합니다.
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <LangVersion>preview</LangVersion>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <LangVersion>preview</LangVersion>
+</PropertyGroup>
 ```
 
 자세한 내용은 [C# 언어 버전 관리](../../csharp/language-reference/configure-language-version.md#override-a-default)를 참조하세요.
 
-## <a name="nuget-packages"></a>NuGet 패키지
+## <a name="run-time-configuration-properties"></a>런타임 구성 속성
 
-- [PackageReference](#packagereference)
-- [AssetTargetFallback](#assettargetfallback)
+앱의 프로젝트 파일에서 MSBuild 속성을 지정하여 몇 가지 런타임 동작을 구성할 수 있습니다. 런타임 동작을 구성하는 다른 방법에 관한 내용은 [.NET Core 런타임 구성 설정](../run-time-config/index.md)을 참조하세요.
 
-### <a name="packagereference"></a>PackageReference
+- [ConcurrentGarbageCollection](#concurrentgarbagecollection)
+- [InvariantGlobalization](#invariantglobalization)
+- [RetainVMGarbageCollection](#retainvmgarbagecollection)
+- [ServerGarbageCollection](#servergarbagecollection)
+- [ThreadPoolMaxThreads](#threadpoolmaxthreads)
+- [ThreadPoolMinThreads](#threadpoolminthreads)
+- [TieredCompilation](#tieredcompilation)
+- [TieredCompilationQuickJit](#tieredcompilationquickjit)
+- [TieredCompilationQuickJitForLoops](#tieredcompilationquickjitforloops)
 
-`PackageReference` 항목을 사용하여 NuGet 종속성을 지정할 수 있습니다. 예를 들어 [메타패키지](../packages.md#metapackages) 대신 단일 패키지를 참조하려고 할 수 있습니다. `Include` 특성은 패키지 ID를 지정합니다. 다음 예제의 프로젝트 파일 코드 조각은 [System.Runtime](https://www.nuget.org/packages/System.Runtime/) 패키지를 참조합니다.
+### <a name="concurrentgarbagecollection"></a>ConcurrentGarbageCollection
+
+`ConcurrentGarbageCollection` 속성은 [백그라운드(동시) 가비지 수집](../../standard/garbage-collection/background-gc.md)이 사용하도록 설정되었는지 여부를 구성합니다. 백그라운드 가비지 수집을 사용하지 않으려면 값을 `false`로 설정합니다. 자세한 내용은 [System.GC.Concurrent/COMPlus_gcConcurrent](../run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent)를 참조하세요.
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  ...
-  <ItemGroup>
-    <PackageReference Include="System.Runtime" Version="4.3.0" />
-  </ItemGroup>
-</Project>
+<PropertyGroup>
+  <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+</PropertyGroup>
 ```
 
-자세한 내용은 [프로젝트 파일의 패키지 참조](/nuget/consume-packages/package-references-in-project-files)를 참조하세요.
+### <a name="invariantglobalization"></a>InvariantGlobalization
+
+`InvariantGlobalization` 속성은 앱이 문화권별 데이터에 액세스할 수 없는 ‘세계화 고정’ 모드에서 실행되는지 여부를 구성합니다.  세계화 고정 모드에서 실행하려면 값을 `true`로 설정합니다. 자세한 내용은 [고정 모드](../run-time-config/globalization.md#invariant-mode)를 참조하세요.
+
+```xml
+<PropertyGroup>
+  <InvariantGlobalization>true</InvariantGlobalization>
+</PropertyGroup>
+```
+
+### <a name="retainvmgarbagecollection"></a>RetainVMGarbageCollection
+
+`RetainVMGarbageCollection` 속성은 삭제된 메모리 세그먼트를 나중에 사용하기 위해 대기 목록에 넣거나 릴리스하도록 가비지 수집기를 구성합니다. 값을 `true`로 설정하여 가비지 수집기가 대기 목록에 세그먼트를 넣도록 지시합니다. 자세한 내용은 [System.GC.RetainVM/COMPlus_GCRetainVM](../run-time-config/garbage-collector.md#systemgcretainvmcomplus_gcretainvm)을 참조하세요.
+
+```xml
+<PropertyGroup>
+  <RetainVMGarbageCollection>true</RetainVMGarbageCollection>
+</PropertyGroup>
+```
+
+### <a name="servergarbagecollection"></a>ServerGarbageCollection
+
+`ServerGarbageCollection` 속성은 애플리케이션이 [워크스테이션 가비지 수집 또는 서버 가비지 수집](../../standard/garbage-collection/workstation-server-gc.md)을 사용할지 여부를 구성합니다. 서버 가비지 수집을 사용하려면 값을 `true`로 설정합니다. 자세한 내용은 [System.GC.Server/COMPlus_gcServer](../run-time-config/garbage-collector.md#systemgcservercomplus_gcserver)를 참조하세요.
+
+```xml
+<PropertyGroup>
+  <ServerGarbageCollection>true</ServerGarbageCollection>
+</PropertyGroup>
+```
+
+### <a name="threadpoolmaxthreads"></a>ThreadPoolMaxThreads
+
+`ThreadPoolMaxThreads` 속성은 작업자 스레드 풀의 최대 스레드 수를 구성합니다. 자세한 내용은 [최대 스레드](../run-time-config/threading.md#maximum-threads)를 참조하세요.
+
+```xml
+<PropertyGroup>
+  <ThreadPoolMaxThreads>20</ThreadPoolMaxThreads>
+</PropertyGroup>
+```
+
+### <a name="threadpoolminthreads"></a>ThreadPoolMinThreads
+
+`ThreadPoolMinThreads` 속성은 작업자 스레드 풀의 최소 스레드 수를 구성합니다. 자세한 내용은 [최소 스레드](../run-time-config/threading.md#minimum-threads)를 참조하세요.
+
+```xml
+<PropertyGroup>
+  <ThreadPoolMinThreads>4</ThreadPoolMinThreads>
+</PropertyGroup>
+```
+
+### <a name="tieredcompilation"></a>TieredCompilation
+
+`TieredCompilation` 속성은 JIT(Just-In-Time) 컴파일러가 [계층화된 컴파일](../whats-new/dotnet-core-3-0.md#tiered-compilation)을 사용하는지 여부를 구성합니다. 계층화된 컴파일을 사용하지 않으려면 값을 `false`로 설정합니다. 자세한 내용은 [계층화된 컴파일](../run-time-config/compilation.md#tiered-compilation)을 참조하세요.
+
+```xml
+<PropertyGroup>
+  <TieredCompilation>false</TieredCompilation>
+</PropertyGroup>
+```
+
+### <a name="tieredcompilationquickjit"></a>TieredCompilationQuickJit
+
+`TieredCompilationQuickJit` 속성은 JIT 컴파일러가 빠른 JIT를 사용하는지 여부를 구성합니다. 빠른 JIT를 사용하지 않으려면 값을 `false`로 설정합니다. 자세한 내용은 [빠른 JIT](../run-time-config/compilation.md#quick-jit)를 참조하세요.
+
+```xml
+<PropertyGroup>
+  <TieredCompilationQuickJit>false</TieredCompilationQuickJit>
+</PropertyGroup>
+```
+
+### <a name="tieredcompilationquickjitforloops"></a>TieredCompilationQuickJitForLoops
+
+`TieredCompilationQuickJitForLoops` 속성은 JIT 컴파일러가 루프를 포함하는 메서드에서 빠른 JIT를 사용할지 여부를 구성합니다. 루프를 포함하는 메서드에서 빠른 JIT를 사용하려면 값을 `true`로 설정합니다. 자세한 내용은 [루프에 대한 빠른 JIT](../run-time-config/compilation.md#quick-jit-for-loops)를 참조하세요.
+
+```xml
+<PropertyGroup>
+  <TieredCompilationQuickJitForLoops>true</TieredCompilationQuickJitForLoops>
+</PropertyGroup>
+```
+
+## <a name="reference-properties"></a>참조 속성
+
+- [AssetTargetFallback](#assettargetfallback)
+- [PackageReference](#packagereference)
+- [ProjectReference](#projectreference)
+- [참조](#reference)
+- [restore 속성](#restore-properties)
 
 ### <a name="assettargetfallback"></a>AssetTargetFallback
 
-`AssetTargetFallback` 속성을 사용하여 프로젝트에서 참조하는 프로젝트 및 프로젝트에서 사용하는 NuGet 패키지에 대해 호환되는 추가 프레임워크 버전을 지정할 수 있습니다. 예를 들어 `PackageReference`를 사용하여 패키지 종속성을 지정하지만 해당 패키지에 프로젝트의 `TargetFramework`와 호환되는 자산이 포함되지 않은 경우 `AssetTargetFallback` 속성이 작동합니다. 참조된 패키지의 호환성은 `AssetTargetFallback`에 지정된 각 대상 프레임워크를 사용하여 다시 확인됩니다.
+`AssetTargetFallback` 속성을 사용하여 프로젝트 참조 및 NuGet 패키지에 대해 호환되는 추가 프레임워크 버전을 지정할 수 있습니다. 예를 들어 `PackageReference`를 사용하여 패키지 종속성을 지정하지만 해당 패키지에 프로젝트의 `TargetFramework`와 호환되는 자산이 포함되지 않은 경우 `AssetTargetFallback` 속성이 작동합니다. 참조된 패키지의 호환성은 `AssetTargetFallback`에 지정된 각 대상 프레임워크를 사용하여 다시 확인됩니다.
 
 `AssetTargetFallback` 속성을 하나 이상의 [대상 프레임워크 버전](../../standard/frameworks.md#supported-target-framework-versions)으로 설정할 수 있습니다.
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  ...
-  <PropertyGroup>
-    <AssetTargetFallback>net461</AssetTargetFallback>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <AssetTargetFallback>net461</AssetTargetFallback>
+</PropertyGroup>
 ```
 
-### <a name="pack-and-restore-targets"></a>압축 및 복원 대상
+### <a name="packagereference"></a>PackageReference
 
-MSBuild 15.1에는 빌드의 일부로 NuGet 패키지를 만들고 복원하기 위한 `pack` 및 `restore` 대상이 도입되었습니다. `PackageTargetFallback`을 포함하여 해당 대상의 MSBuild 속성에 대한 내용은 [MSBuild 대상으로서의 NuGet 압축 및 복원](/nuget/reference/msbuild-targets)을 참조하세요.
+`PackageReference`는 NuGet 패키지에 대한 참조를 정의합니다. 예를 들어 [메타패키지](../packages.md#metapackages) 대신 단일 패키지를 참조하려고 할 수 있습니다.
+
+`Include` 특성은 패키지 ID를 지정합니다. `Version` 특성은 버전 또는 버전 범위를 지정합니다. 최소 버전, 최대 버전, 범위 또는 정확한 일치를 지정하는 방법에 대한 자세한 내용은 [버전 범위](/nuget/concepts/package-versioning#version-ranges)를 참조하세요. 또한 메타데이터 `IncludeAssets`, `ExcludeAssets`, `PrivateAssets`를 프로젝트 참조에 추가할 수도 있습니다.
+
+다음 예제의 프로젝트 파일 코드 조각은 [System.Runtime](https://www.nuget.org/packages/System.Runtime/) 패키지를 참조합니다.
+
+```xml
+<ItemGroup>
+  <PackageReference Include="System.Runtime" Version="4.3.0" />
+</ItemGroup>
+```
+
+자세한 내용은 [프로젝트 파일의 패키지 참조](/nuget/consume-packages/package-references-in-project-files)를 참조하세요.
+
+### <a name="projectreference"></a>ProjectReference
+
+`ProjectReference` 항목은 다른 프로젝트에 대한 참조를 정의합니다. 참조된 프로젝트는 NuGet 패키지 종속성으로 추가됩니다. 즉, `PackageReference`와 동일하게 처리됩니다.
+
+`Include` 특성은 프로젝트의 경로를 지정합니다. 또한 메타데이터 `IncludeAssets`, `ExcludeAssets`, `PrivateAssets`를 프로젝트 참조에 추가할 수도 있습니다.
+
+다음 예제의 프로젝트 파일 코드 조각은 `Project2`라는 프로젝트를 참조합니다.
+
+```xml
+<ItemGroup>
+  <ProjectReference Include="..\Project2.csproj" />
+</ItemGroup>
+```
+
+### <a name="reference"></a>참고
+
+`Reference` 항목은 어셈블리 파일에 대한 참조를 정의합니다.
+
+`Include` 특성은 파일의 이름을 지정하고, `HintPath` 자식 요소는 어셈블리의 경로를 지정합니다.
+
+```xml
+<ItemGroup>
+  <Reference Include="MyAssembly">
+    <HintPath>..\..\Assemblies\MyAssembly.dll</HintPath>
+  </Reference>
+</ItemGroup>
+```
+
+### <a name="restore-properties"></a>restore 속성
+
+참조된 패키지를 복원하면 패키지의 직접 종속성과 해당 종속성의 종속성이 모두 설치됩니다. `RestorePackagesPath` 및 `RestoreIgnoreFailedSources`와 같은 속성을 지정하여 패키지 복원을 사용자 지정할 수 있습니다. 이러한 속성 및 다른 속성에 대한 자세한 내용은 [복원 대상](/nuget/reference/msbuild-targets#restore-target)을 참조하세요.
+
+```xml
+<PropertyGroup>
+  <RestoreIgnoreFailedSource>true</RestoreIgnoreFailedSource>
+</PropertyGroup>
+```
 
 ## <a name="see-also"></a>참조
 
