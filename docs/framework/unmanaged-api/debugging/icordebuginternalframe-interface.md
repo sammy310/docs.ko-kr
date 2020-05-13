@@ -14,37 +14,37 @@ helpviewer_keywords:
 ms.assetid: bb4772ca-0d54-4185-b738-7a6ffe9ea85a
 topic_type:
 - apiref
-ms.openlocfilehash: 6bc24450cdda2e3ed324256b53b2d137d1eb90e4
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 332bc99795c0a4c896b60c61941a5a24b3f4accc
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788492"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209944"
 ---
-# <a name="icordebuginternalframe-interface"></a><span data-ttu-id="02b66-102">ICorDebugInternalFrame 인터페이스</span><span class="sxs-lookup"><span data-stu-id="02b66-102">ICorDebugInternalFrame Interface</span></span>
+# <a name="icordebuginternalframe-interface"></a><span data-ttu-id="dd990-102">ICorDebugInternalFrame 인터페이스</span><span class="sxs-lookup"><span data-stu-id="dd990-102">ICorDebugInternalFrame Interface</span></span>
 
-<span data-ttu-id="02b66-103">스택의 런타임 내부 프레임을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="02b66-103">Represents a runtime-internal frame on the stack.</span></span> <span data-ttu-id="02b66-104">이 인터페이스는 ICorDebugFrame 인터페이스의 하위 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="02b66-104">This interface is a subclass of the ICorDebugFrame interface.</span></span>  
+<span data-ttu-id="dd990-103">스택의 런타임 내부 프레임을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="dd990-103">Represents a runtime-internal frame on the stack.</span></span> <span data-ttu-id="dd990-104">이 인터페이스는 ICorDebugFrame 인터페이스의 하위 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="dd990-104">This interface is a subclass of the ICorDebugFrame interface.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="02b66-105">메서드</span><span class="sxs-lookup"><span data-stu-id="02b66-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="dd990-105">메서드</span><span class="sxs-lookup"><span data-stu-id="dd990-105">Methods</span></span>  
   
-|<span data-ttu-id="02b66-106">메서드</span><span class="sxs-lookup"><span data-stu-id="02b66-106">Method</span></span>|<span data-ttu-id="02b66-107">설명</span><span class="sxs-lookup"><span data-stu-id="02b66-107">Description</span></span>|  
+|<span data-ttu-id="dd990-106">메서드</span><span class="sxs-lookup"><span data-stu-id="dd990-106">Method</span></span>|<span data-ttu-id="dd990-107">설명</span><span class="sxs-lookup"><span data-stu-id="dd990-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="02b66-108">GetFrameType 메서드</span><span class="sxs-lookup"><span data-stu-id="02b66-108">GetFrameType Method</span></span>](icordebuginternalframe-getframetype-method.md)|<span data-ttu-id="02b66-109">이 내부 프레임의 형식을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="02b66-109">Gets the type of this internal frame.</span></span>|  
+|[<span data-ttu-id="dd990-108">GetFrameType 메서드</span><span class="sxs-lookup"><span data-stu-id="dd990-108">GetFrameType Method</span></span>](icordebuginternalframe-getframetype-method.md)|<span data-ttu-id="dd990-109">이 내부 프레임의 형식을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="dd990-109">Gets the type of this internal frame.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="02b66-110">주의</span><span class="sxs-lookup"><span data-stu-id="02b66-110">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="dd990-110">설명</span><span class="sxs-lookup"><span data-stu-id="dd990-110">Remarks</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="02b66-111">이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="02b66-111">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="dd990-111">이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="dd990-111">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="02b66-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="02b66-112">Requirements</span></span>  
- <span data-ttu-id="02b66-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="02b66-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dd990-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="dd990-112">Requirements</span></span>  
+ <span data-ttu-id="dd990-113">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="dd990-113">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="02b66-114">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="02b66-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="dd990-114">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="dd990-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="02b66-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="02b66-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="dd990-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dd990-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="02b66-116">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="02b66-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="dd990-116">**.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dd990-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="02b66-117">참조</span><span class="sxs-lookup"><span data-stu-id="02b66-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dd990-117">참고 항목</span><span class="sxs-lookup"><span data-stu-id="dd990-117">See also</span></span>
 
-- [<span data-ttu-id="02b66-118">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="02b66-118">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="dd990-118">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="dd990-118">Debugging Interfaces</span></span>](debugging-interfaces.md)
