@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 7d78a301-82b3-43b2-9d65-3cda3285ae97
 topic_type:
 - apiref
-ms.openlocfilehash: efc9de050e34867c14f8e85e091e2b959c30f213
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f70a88df00d15729a6bde06b49417b6439f7c0ec
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122592"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212466"
 ---
 # <a name="icordebugmanagedcallbackbreak-method"></a>ICorDebugManagedCallback::Break 메서드
 
-코드 스트림의 <xref:System.Reflection.Emit.OpCodes.Break> 명령이 실행 될 때 디버거에 알립니다.
+<xref:System.Reflection.Emit.OpCodes.Break>코드 스트림의 명령이 실행 될 때 디버거에 알립니다.
 
 ## <a name="syntax"></a>구문
 
@@ -45,14 +45,14 @@ HRESULT Break (
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.
+**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.
 
 **헤더:** CorDebug.idl, CorDebug.h
 
 **라이브러리:** CorGuids.lib
 
-**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugManagedCallback 인터페이스](icordebugmanagedcallback-interface.md)

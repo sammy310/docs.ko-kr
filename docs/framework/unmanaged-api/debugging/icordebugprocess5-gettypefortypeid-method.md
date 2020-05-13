@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e0eed5a8-fa6d-4818-bd00-7babcea30325
 topic_type:
 - apiref
-ms.openlocfilehash: bb25c9235e4fcded5c230d2d417b9d41bbdd9b19
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ea7f7a9d4589e4f08b1b1e20b4d073bb5f822714
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792331"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212765"
 ---
 # <a name="icordebugprocess5gettypefortypeid-method"></a>ICorDebugProcess5::GetTypeForTypeID 메서드
 형식 식별자를 ICorDebugType 값으로 변환 합니다.  
@@ -41,19 +41,19 @@ HRESULT GetTypeForTypeID(
  `ppType`  
  제한이 ICorDebugType 개체의 주소에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>주의  
- 경우에 따라 형식 식별자를 반환 하는 메서드가 null `COR_TYPEID` 값을 반환할 수 있습니다. 이 값이 `id` 인수로 전달 되 면 `GetTypeForTypeID` 메서드가 실패 하 고 `E_FAIL`반환 됩니다.  
+## <a name="remarks"></a>설명  
+ 경우에 따라 형식 식별자를 반환 하는 메서드는 null 값을 반환할 수 있습니다 `COR_TYPEID` . 이 값이 인수로 전달 되 면 `id` `GetTypeForTypeID` 메서드가 실패 하 고이 반환 됩니다 `E_FAIL` .  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugProcess5 인터페이스](icordebugprocess5-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

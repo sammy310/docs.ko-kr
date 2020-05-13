@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0863f644-58e8-45a0-b0c3-a28e99b20938
 topic_type:
 - apiref
-ms.openlocfilehash: 2b64122489481c6b0fde605015720d0a56ba8fe2
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 9ee6f43c94b8ff2e765d2a0dde0697c4c895a94f
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788317"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212375"
 ---
 # <a name="icordebugmanagedcallbackupdatemodulesymbols-method"></a>ICorDebugManagedCallback::UpdateModuleSymbols 메서드
 공용 언어 런타임 모듈의 기호가 변경 되었음을 디버거에 알립니다.  
@@ -43,24 +43,24 @@ HRESULT UpdateModuleSymbols (
  진행 기호가 변경 된 모듈을 나타내는 ICorDebugModule 개체에 대 한 포인터입니다.  
   
  `pSymbolStream`  
- 진행 수정 된 기호를 포함 하는 Win32 COM `IStream` 개체에 대 한 포인터입니다.  
+ 진행 `IStream`수정 된 기호를 포함 하는 WIN32 COM 개체에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>주의  
- 이 메서드는 [ISymUnmanagedReader:: UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) 또는 [ISymUnmanagedReader:: ReplaceSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-replacesymbolstore-method.md)를 호출 하 여 모듈 기호의 디버거 뷰를 업데이트할 수 있는 기회를 제공 합니다.  
+## <a name="remarks"></a>설명  
+ 이 메서드는 [ISymUnmanagedReader:: UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) 또는 [ISymUnmanagedReader:: ReplaceSymbolStore](../diagnostics/isymunmanagedreader-replacesymbolstore-method.md)를 호출 하 여 모듈 기호의 디버거 뷰를 업데이트할 수 있는 기회를 제공 합니다.  
   
  이 콜백은 동일한 모듈에 대해 여러 번 발생할 수 있습니다.  
   
  디버거는 바인딩되지 않은 소스 수준 중단점을 바인딩해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugManagedCallback 인터페이스](icordebugmanagedcallback-interface.md)

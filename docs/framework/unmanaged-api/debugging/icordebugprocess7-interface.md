@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 71aee5f3-5e10-44fa-be69-6d8a475f2c14
 topic_type:
 - apiref
-ms.openlocfilehash: 76aaeef93028b2ff9526601450d7e11f918e063d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: a819ca33df962774e69dac0609df1fff2fbdecd3
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792192"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213662"
 ---
 # <a name="icordebugprocess7-interface"></a>ICorDebugProcess7 인터페이스
 [.NET Framework 4.5.2 이상 버전에서 지원됨]  
@@ -28,18 +28,18 @@ ms.locfileid: "76792192"
 |------------|-----------------|  
 |[SetWriteableMetadataUpdateMode 메서드](icordebugprocess7-setwriteablemetadataupdatemode-method.md)|대상 프로세스 내에서 디버거가 메타데이터에 대한 메모리 내 업데이트 처리 방법을 결정하는 값을 설정합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 인터페이스](debugging-interfaces.md)
 - [디버깅](index.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2ca20db-df22-4528-a0dd-a09ea62c8998
 topic_type:
 - apiref
-ms.openlocfilehash: aeaa706ef35413a728f8b254cd325f0bcc83acd1
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5bcced647af6436bd8f5b1f3779d9368b6173d11
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792708"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213038"
 ---
 # <a name="icordebugnativeframe2ismatchingparentframe-method"></a>ICorDebugNativeFrame2::IsMatchingParentFrame 메서드
 지정 된 프레임이 현재 프레임의 부모 인지 여부를 확인 합니다.  
@@ -38,32 +38,32 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
  진행 부모 상태를 평가 하려는 프레임 개체에 대 한 포인터입니다.  
   
  `pIsParent`  
- [out] 현재 프레임의 부모 `pPotentialParentFrame` 이면를 `true` 합니다. 그렇지 않으면 `false`합니다.  
+ [out] `true` `pPotentialParentFrame`가 현재 프레임의 부모 이면이 고, 그렇지 않으면 `false` 입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|부모 상태가 성공적으로 반환 되었습니다.|  
 |E_FAIL|부모 상태를 반환할 수 없습니다.|  
-|E_INVALIDARG|`pPotentialParentFrame` 또는 `pIsParent`이 null입니다.|  
+|E_INVALIDARG|`pPotentialParentFrame` 또는 `pIsParent` 이 null입니다.|  
   
 ## <a name="exceptions"></a>예외  
   
-## <a name="remarks"></a>주의  
- 메서드에 전달 하는 프레임 개체가 메서드가 호출 된 프레임 개체의 부모인 경우 `IsMatchingParentFrame` `true`를 반환 합니다. 지정 된 프레임의 자식이 아닌 프레임에서 메서드를 호출 하는 경우 오류를 반환 합니다.  
+## <a name="remarks"></a>설명  
+ `IsMatchingParentFrame``true`메서드에 전달 하는 프레임 개체가 메서드가 호출 된 프레임 개체의 부모 이면를 반환 합니다. 지정 된 프레임의 자식이 아닌 프레임에서 메서드를 호출 하는 경우 오류를 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugNativeFrame2 인터페이스](icordebugnativeframe2-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

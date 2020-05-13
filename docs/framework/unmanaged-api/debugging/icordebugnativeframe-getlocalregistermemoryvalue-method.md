@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d350f69d-9aff-4f5a-8301-daea22dee2da
 topic_type:
 - apiref
-ms.openlocfilehash: d44d7c23f88f5ea93f608d06b69f69b2c3637b5e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f16150ad7d9ecec4b4aceee5c9266e9a7859f1cb
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73096840"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213298"
 ---
 # <a name="icordebugnativeframegetlocalregistermemoryvalue-method"></a>ICorDebugNativeFrame::GetLocalRegisterMemoryValue 메서드
 이 네이티브 프레임에 대해 하위 단어와 상위 단어가 각각 메모리 위치 및 지정 된 레지스터에 저장 되는 인수 또는 지역 변수의 값을 가져옵니다.  
@@ -42,24 +42,24 @@ HRESULT GetLocalRegisterMemoryValue (
  진행 값의 상위 단어가 포함 된 레지스터를 지정 하는 "CorDebugRegister" 열거형의 값입니다.  
   
  `lowWordAddress`  
- 진행 값의 하위 단어를 포함 하는 메모리 위치를 지정 하는 `CORDB_ADDRESS` 값입니다.  
+ 진행 `CORDB_ADDRESS`값의 하위 단어를 포함 하는 메모리 위치를 지정 하는 값입니다.  
   
  `cbSigBlob`  
- 진행 `pvSigBlob` 매개 변수에서 참조 하는 이진 메타 데이터 서명의 크기를 지정 하는 정수입니다.  
+ 진행 매개 변수에서 참조 하는 이진 메타 데이터 시그니처의 크기를 지정 하는 정수입니다 `pvSigBlob` .  
   
  `pvSigBlob`  
- 진행 값 형식의 이진 메타 데이터 서명을 가리키는 `PCCOR_SIGNATURE` 값입니다.  
+ 진행 `PCCOR_SIGNATURE`값 형식의 이진 메타 데이터 서명을 가리키는 값입니다.  
   
  `ppValue`  
  제한이 지정 된 레지스터 및 메모리 위치에 저장 된 검색 된 값을 나타내는 "ICorDebugValue" 개체의 주소에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0b69f945-263a-4e11-8512-89d27f6ea296
 topic_type:
 - apiref
-ms.openlocfilehash: 33acc4d9a0819c43d17c362fcbea2e7636521fd3
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 69fd3e2df4a4eafe91cc025f28e1387cc443ea04
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792930"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212310"
 ---
 # <a name="icordebugmodule3-interface"></a>ICorDebugModule3 인터페이스
 동적 모듈에 대한 기호 판독기를 만듭니다.  
@@ -41,16 +41,16 @@ interface ICorDebugModule3 : IUnknown
   
 |메서드|설명|  
 |------------|-----------------|  
-|[ICorDebugModule3::CreateReaderForInMemorySymbols 메서드](icordebugmodule3-createreaderforinmemorysymbols-method.md)|동적 모듈에 대 한 기호 판독기 (일반적으로 [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md))를 만듭니다.|  
+|[ICorDebugModule3::CreateReaderForInMemorySymbols 메서드](icordebugmodule3-createreaderforinmemorysymbols-method.md)|동적 모듈에 대 한 기호 판독기 (일반적으로 [ISymUnmanagedReader 인터페이스](../diagnostics/isymunmanagedreader-interface.md))를 만듭니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  이 인터페이스는 "ICorDebugModule" 및 "ICorDebugModule2" 인터페이스를 논리적으로 확장 합니다.  
   
 > [!NOTE]
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -58,7 +58,7 @@ interface ICorDebugModule3 : IUnknown
   
  **.NET Framework 버전:** 4.5, 4, 3.5 SP1
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugRemoteTarget 인터페이스](icordebugremotetarget-interface.md)
 - [ICorDebug 인터페이스](icordebug-interface.md)
