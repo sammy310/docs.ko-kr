@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 41af93c7-e448-4251-8d4d-413d38c635f2
 topic_type:
 - apiref
-ms.openlocfilehash: cfec84483d387630623f77c176c668171303dd0f
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4b2689f04228c9ecbbbb18531a0aefd3c40e3072
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791983"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83377985"
 ---
-# <a name="icordebugremotecreateprocessex-method"></a><span data-ttu-id="af787-102">ICorDebugRemote::CreateProcessEx 메서드</span><span class="sxs-lookup"><span data-stu-id="af787-102">ICorDebugRemote::CreateProcessEx Method</span></span>
-<span data-ttu-id="af787-103">디버거의 원격 컴퓨터에서 프로세스를 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="af787-103">Launches a process on a remote machine under the debugger.</span></span>  
+# <a name="icordebugremotecreateprocessex-method"></a><span data-ttu-id="2c814-102">ICorDebugRemote::CreateProcessEx 메서드</span><span class="sxs-lookup"><span data-stu-id="2c814-102">ICorDebugRemote::CreateProcessEx Method</span></span>
+<span data-ttu-id="2c814-103">디버거의 원격 컴퓨터에서 프로세스를 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c814-103">Launches a process on a remote machine under the debugger.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="af787-104">구문</span><span class="sxs-lookup"><span data-stu-id="af787-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2c814-104">구문</span><span class="sxs-lookup"><span data-stu-id="2c814-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CreateProcessEx (  
@@ -45,68 +45,68 @@ HRESULT CreateProcessEx (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="af787-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="af787-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2c814-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="2c814-105">Parameters</span></span>  
  `pRemoteTarget`  
- <span data-ttu-id="af787-106">진행 [ICorDebugRemoteTarget 인터페이스](icordebugremotetarget-interface.md)에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="af787-106">[in] Pointer to an [ICorDebugRemoteTarget Interface](icordebugremotetarget-interface.md).</span></span> <span data-ttu-id="af787-107">프로세스가 시작 되는 원격 컴퓨터를 확인 하는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="af787-107">Used to determine the remote machine on which the process will be launched.</span></span>  
+ <span data-ttu-id="2c814-106">진행 [ICorDebugRemoteTarget 인터페이스](icordebugremotetarget-interface.md)에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="2c814-106">[in] Pointer to an [ICorDebugRemoteTarget Interface](icordebugremotetarget-interface.md).</span></span> <span data-ttu-id="2c814-107">프로세스가 시작 되는 원격 컴퓨터를 확인 하는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2c814-107">Used to determine the remote machine on which the process will be launched.</span></span>  
   
  `lpApplicationName`  
- <span data-ttu-id="af787-108">진행 시작 된 프로세스에서 실행할 모듈을 지정 하는 null로 끝나는 문자열에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="af787-108">[in] Pointer to a null-terminated string that specifies the module to be executed by the launched process.</span></span> <span data-ttu-id="af787-109">모듈은 호출 프로세스의 보안 컨텍스트에서 실행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="af787-109">The module is executed in the security context of the calling process.</span></span>  
+ <span data-ttu-id="2c814-108">진행 시작 된 프로세스에서 실행할 모듈을 지정 하는 null로 끝나는 문자열에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="2c814-108">[in] Pointer to a null-terminated string that specifies the module to be executed by the launched process.</span></span> <span data-ttu-id="2c814-109">모듈은 호출 프로세스의 보안 컨텍스트에서 실행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2c814-109">The module is executed in the security context of the calling process.</span></span>  
   
  `lpCommandLine`  
- <span data-ttu-id="af787-110">진행 시작 된 프로세스에서 실행할 명령줄을 지정 하는 null로 끝나는 문자열에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="af787-110">[in] Pointer to a null-terminated string that specifies the command line to be executed by the launched process.</span></span>  
+ <span data-ttu-id="2c814-110">진행 시작 된 프로세스에서 실행할 명령줄을 지정 하는 null로 끝나는 문자열에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="2c814-110">[in] Pointer to a null-terminated string that specifies the command line to be executed by the launched process.</span></span>  
   
  `lpProcessAttributes`  
- <span data-ttu-id="af787-111">진행 원격 디버깅에 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="af787-111">[in] Unused for remote debugging.</span></span>  
+ <span data-ttu-id="2c814-111">진행 원격 디버깅에 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="2c814-111">[in] Unused for remote debugging.</span></span>  
   
  `lpThreadAttributes`  
- <span data-ttu-id="af787-112">진행 원격 디버깅에 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="af787-112">[in] Unused for remote debugging.</span></span>  
+ <span data-ttu-id="2c814-112">진행 원격 디버깅에 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="2c814-112">[in] Unused for remote debugging.</span></span>  
   
  `bInheritHandles`  
- <span data-ttu-id="af787-113">진행 원격 디버깅에 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="af787-113">[in] Unused for remote debugging.</span></span>  
+ <span data-ttu-id="2c814-113">진행 원격 디버깅에 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="2c814-113">[in] Unused for remote debugging.</span></span>  
   
  `dwCreationFlags`  
- <span data-ttu-id="af787-114">진행 원격 디버깅에 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="af787-114">[in] Unused for remote debugging.</span></span>  
+ <span data-ttu-id="2c814-114">진행 원격 디버깅에 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="2c814-114">[in] Unused for remote debugging.</span></span>  
   
  `lpEnvironment`  
- <span data-ttu-id="af787-115">진행 새 프로세스에 대 한 환경 블록에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="af787-115">[in] Pointer to an environment block for the new process.</span></span>  
+ <span data-ttu-id="2c814-115">진행 새 프로세스에 대 한 환경 블록에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="2c814-115">[in] Pointer to an environment block for the new process.</span></span>  
   
  `lpCurrentDirectory`  
- <span data-ttu-id="af787-116">진행 프로세스의 현재 디렉터리에 대 한 전체 경로를 지정 하는 null로 끝나는 문자열에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="af787-116">[in] Pointer to a null-terminated string that specifies the full path to the current directory for the process.</span></span> <span data-ttu-id="af787-117">이 매개 변수가 null 이면 새 프로세스는 호출 프로세스와 동일한 현재 드라이브 및 디렉터리를 갖게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="af787-117">If this parameter is null, the new process will have the same current drive and directory as the calling process.</span></span>  
+ <span data-ttu-id="2c814-116">진행 프로세스의 현재 디렉터리에 대 한 전체 경로를 지정 하는 null로 끝나는 문자열에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="2c814-116">[in] Pointer to a null-terminated string that specifies the full path to the current directory for the process.</span></span> <span data-ttu-id="2c814-117">이 매개 변수가 null 이면 새 프로세스는 호출 프로세스와 동일한 현재 드라이브 및 디렉터리를 갖게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2c814-117">If this parameter is null, the new process will have the same current drive and directory as the calling process.</span></span>  
   
  `lpStartupInfo`  
- <span data-ttu-id="af787-118">진행 원격 디버깅에 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="af787-118">[in] Unused for remote debugging.</span></span>  
+ <span data-ttu-id="2c814-118">진행 원격 디버깅에 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="2c814-118">[in] Unused for remote debugging.</span></span>  
   
  `lpProcessInformation`  
- <span data-ttu-id="af787-119">진행 원격 디버깅에 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="af787-119">[in] Unused for remote debugging.</span></span>  
+ <span data-ttu-id="2c814-119">진행 원격 디버깅에 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="2c814-119">[in] Unused for remote debugging.</span></span>  
   
  `debuggingFlags`  
- <span data-ttu-id="af787-120">진행 원격 디버깅에 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="af787-120">[in] Unused for remote debugging.</span></span>  
+ <span data-ttu-id="2c814-120">진행 원격 디버깅에 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="2c814-120">[in] Unused for remote debugging.</span></span>  
   
  `ppProcess`  
- <span data-ttu-id="af787-121">제한이 프로세스를 나타내는 "ICorDebugProcess Interface" 개체의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="af787-121">[out] A pointer to the address of a"ICorDebugProcess Interface" object that represents the process.</span></span>  
+ <span data-ttu-id="2c814-121">제한이 프로세스를 나타내는 "ICorDebugProcess Interface" 개체의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="2c814-121">[out] A pointer to the address of a"ICorDebugProcess Interface" object that represents the process.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="af787-122">반환 값</span><span class="sxs-lookup"><span data-stu-id="af787-122">Return Value</span></span>  
- <span data-ttu-id="af787-123">S_OK</span><span class="sxs-lookup"><span data-stu-id="af787-123">S_OK</span></span>  
- <span data-ttu-id="af787-124">원격 컴퓨터에서 프로세스를 시작 하 고 디버깅을 위해 "ICorDebugProcess Interface"를 반환 했습니다.</span><span class="sxs-lookup"><span data-stu-id="af787-124">Successfully launched the process on the remote machine and returned an "ICorDebugProcess Interface" for debugging.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2c814-122">Return Value</span><span class="sxs-lookup"><span data-stu-id="2c814-122">Return Value</span></span>  
+ <span data-ttu-id="2c814-123">S_OK</span><span class="sxs-lookup"><span data-stu-id="2c814-123">S_OK</span></span>  
+ <span data-ttu-id="2c814-124">원격 컴퓨터에서 프로세스를 시작 하 고 디버깅을 위해 "ICorDebugProcess Interface"를 반환 했습니다.</span><span class="sxs-lookup"><span data-stu-id="2c814-124">Successfully launched the process on the remote machine and returned an "ICorDebugProcess Interface" for debugging.</span></span>  
   
- <span data-ttu-id="af787-125">E_FAIL(또는 다른 E_ 반환 코드)</span><span class="sxs-lookup"><span data-stu-id="af787-125">E_FAIL (or other E_ return codes)</span></span>  
- <span data-ttu-id="af787-126">원격 컴퓨터에서 프로세스를 시작 하 고 디버깅을 위해 "ICorDebugProcess Interface"를 반환할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="af787-126">Unable to launch the process on the remote machine and return an "ICorDebugProcess Interface" for debugging.</span></span>  
+ <span data-ttu-id="2c814-125">E_FAIL(또는 다른 E_ 반환 코드)</span><span class="sxs-lookup"><span data-stu-id="2c814-125">E_FAIL (or other E_ return codes)</span></span>  
+ <span data-ttu-id="2c814-126">원격 컴퓨터에서 프로세스를 시작 하 고 디버깅을 위해 "ICorDebugProcess Interface"를 반환할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="2c814-126">Unable to launch the process on the remote machine and return an "ICorDebugProcess Interface" for debugging.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="af787-127">주의</span><span class="sxs-lookup"><span data-stu-id="af787-127">Remarks</span></span>  
- <span data-ttu-id="af787-128">Silverlight에서는 혼합 모드 디버깅이 지원 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="af787-128">Mixed-mode debugging is not supported in Silverlight.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2c814-127">설명</span><span class="sxs-lookup"><span data-stu-id="2c814-127">Remarks</span></span>  
+ <span data-ttu-id="2c814-128">Silverlight에서는 혼합 모드 디버깅이 지원 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="2c814-128">Mixed-mode debugging is not supported in Silverlight.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="af787-129">요구 사항</span><span class="sxs-lookup"><span data-stu-id="af787-129">Requirements</span></span>  
- <span data-ttu-id="af787-130">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="af787-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2c814-129">요구 사항</span><span class="sxs-lookup"><span data-stu-id="2c814-129">Requirements</span></span>  
+ <span data-ttu-id="2c814-130">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="2c814-130">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="af787-131">**헤더:** CorDebug .idl</span><span class="sxs-lookup"><span data-stu-id="af787-131">**Header:** CorDebug.idl</span></span>  
+ <span data-ttu-id="2c814-131">**헤더:** CorDebug .idl</span><span class="sxs-lookup"><span data-stu-id="2c814-131">**Header:** CorDebug.idl</span></span>  
   
- <span data-ttu-id="af787-132">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="af787-132">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2c814-132">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2c814-132">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="af787-133">**.NET Framework 버전:** 4.5, 4, 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="af787-133">**.NET Framework Versions:** 4.5, 4, 3.5 SP1</span></span>  
+ <span data-ttu-id="2c814-133">**.NET Framework 버전:** 4.5, 4, 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="2c814-133">**.NET Framework Versions:** 4.5, 4, 3.5 SP1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="af787-134">참조</span><span class="sxs-lookup"><span data-stu-id="af787-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2c814-134">참고 항목</span><span class="sxs-lookup"><span data-stu-id="2c814-134">See also</span></span>
 
-- [<span data-ttu-id="af787-135">ICorDebugRemote 인터페이스</span><span class="sxs-lookup"><span data-stu-id="af787-135">ICorDebugRemote Interface</span></span>](icordebugremote-interface.md)
-- [<span data-ttu-id="af787-136">ICorDebug 인터페이스</span><span class="sxs-lookup"><span data-stu-id="af787-136">ICorDebug Interface</span></span>](icordebug-interface.md)
+- [<span data-ttu-id="2c814-135">ICorDebugRemote 인터페이스</span><span class="sxs-lookup"><span data-stu-id="2c814-135">ICorDebugRemote Interface</span></span>](icordebugremote-interface.md)
+- [<span data-ttu-id="2c814-136">ICorDebug 인터페이스</span><span class="sxs-lookup"><span data-stu-id="2c814-136">ICorDebug Interface</span></span>](icordebug-interface.md)
 
-- [<span data-ttu-id="af787-137">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="af787-137">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="2c814-137">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="2c814-137">Debugging Interfaces</span></span>](debugging-interfaces.md)
