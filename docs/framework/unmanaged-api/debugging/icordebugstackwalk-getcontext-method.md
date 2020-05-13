@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 081d1c95-152b-4797-8552-18453eb7b14b
 topic_type:
 - apiref
-ms.openlocfilehash: 9953d0f3e1a4d4cd935918f0e5721e474453ca7d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 743b0c8016ca5c0401046166a770d857215429a3
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791905"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379215"
 ---
 # <a name="icordebugstackwalkgetcontext-method"></a>ICorDebugStackWalk::GetContext 메서드
 [ICorDebugStackWalk](icordebugstackwalk-interface.md) 개체의 현재 프레임에 대 한 컨텍스트를 반환 합니다.  
@@ -47,7 +47,7 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
  `contextBuf`  
  제한이 컨텍스트 버퍼입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
 |HRESULT|설명|  
@@ -59,19 +59,19 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
   
 ## <a name="exceptions"></a>예외  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  해제 하면 비휘발성 레지스터와 같이 레지스터의 하위 집합만 복원 되므로 컨텍스트는 호출 시 등록 상태와 정확 하 게 일치 하지 않을 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 인터페이스](debugging-interfaces.md)
 - [디버깅](index.md)

@@ -2,12 +2,12 @@
 title: ICorDebugSymbolProvider2::GetGenericDictionaryInfo 메서드
 ms.date: 03/30/2017
 ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
-ms.openlocfilehash: 02ecaf56e845680472f42c04f3978e54e7a69272
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: a6c32b72c5924399aeb13d56ddf9242fe7990f35
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791503"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379315"
 ---
 # <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>ICorDebugSymbolProvider2::GetGenericDictionaryInfo 메서드
 
@@ -24,9 +24,9 @@ HRESULT GetGenericDictionaryInfo(
 ## <a name="parameters"></a>매개 변수
 
 `ppMemoryBuffer`\
-제한이 제네릭 사전 맵을 포함 하는 [ICorDebugMemoryBuffer](icordebugmemorybuffer-interface.md) 개체의 주소에 대 한 포인터입니다. 자세한 내용은 설명 섹션을 참조하십시오.
+제한이 제네릭 사전 맵을 포함 하는 [ICorDebugMemoryBuffer](icordebugmemorybuffer-interface.md) 개체의 주소에 대 한 포인터입니다. 자세한 내용은 주의 섹션을 참조하십시오.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 > [!NOTE]
 > 이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.
@@ -77,15 +77,15 @@ Heap Size = Stream.Length – (Directory Size + 4)
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.
+**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.
 
 **헤더:** CorDebug.idl, CorDebug.h
 
 **라이브러리:** CorGuids.lib
 
-**.NET Framework 버전:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]
+**.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugSymbolProvider2 인터페이스](icordebugsymbolprovider2-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

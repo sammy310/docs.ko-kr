@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7fbccbf-3b6b-4db8-a96d-768e1cb6b1a6
 topic_type:
 - apiref
-ms.openlocfilehash: 161358fab9a4601e7b718321273d493bd84a3228
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: f989f1c1f29c63af54ff125f4ad1aaa2bcee6757
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792007"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378209"
 ---
 # <a name="icordebugregisterset2-interface"></a>ICorDebugRegisterSet2 인터페이스
 64 개 이상의 레지스터가 있는 하드웨어 플랫폼에 대 한 [ICorDebugRegisterSet](icordebugregisterset-interface.md) 인터페이스의 기능을 확장 합니다.  
@@ -32,21 +32,21 @@ ms.locfileid: "76792007"
 |[GetRegistersAvailable 메서드](icordebugregisterset2-getregistersavailable-method.md)|사용 가능한 레지스터의 비트맵을 제공 하는 바이트 배열을 가져옵니다.|  
 |[SetRegisters 메서드](icordebugregisterset2-setregisters-method.md)|.NET Framework 버전 2.0에서 구현 되지 않았습니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
   
 > [!NOTE]
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 인터페이스](debugging-interfaces.md)
 - [ICorDebugRegisterSet 인터페이스](icordebugregisterset-interface.md)

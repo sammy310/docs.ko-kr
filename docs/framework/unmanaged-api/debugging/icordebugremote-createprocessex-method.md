@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41af93c7-e448-4251-8d4d-413d38c635f2
 topic_type:
 - apiref
-ms.openlocfilehash: cfec84483d387630623f77c176c668171303dd0f
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4b2689f04228c9ecbbbb18531a0aefd3c40e3072
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791983"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83377985"
 ---
 # <a name="icordebugremotecreateprocessex-method"></a>ICorDebugRemote::CreateProcessEx 메서드
 디버거의 원격 컴퓨터에서 프로세스를 시작 합니다.  
@@ -85,18 +85,18 @@ HRESULT CreateProcessEx (
  `ppProcess`  
  제한이 프로세스를 나타내는 "ICorDebugProcess Interface" 개체의 주소에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  S_OK  
  원격 컴퓨터에서 프로세스를 시작 하 고 디버깅을 위해 "ICorDebugProcess Interface"를 반환 했습니다.  
   
  E_FAIL(또는 다른 E_ 반환 코드)  
  원격 컴퓨터에서 프로세스를 시작 하 고 디버깅을 위해 "ICorDebugProcess Interface"를 반환할 수 없습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  Silverlight에서는 혼합 모드 디버깅이 지원 되지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug .idl  
   
@@ -104,7 +104,7 @@ HRESULT CreateProcessEx (
   
  **.NET Framework 버전:** 4.5, 4, 3.5 SP1  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugRemote 인터페이스](icordebugremote-interface.md)
 - [ICorDebug 인터페이스](icordebug-interface.md)

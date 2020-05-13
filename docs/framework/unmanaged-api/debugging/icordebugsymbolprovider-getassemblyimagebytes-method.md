@@ -2,12 +2,12 @@
 title: ICorDebugSymbolProvider::GetAssemblyImageBytes 메서드
 ms.date: 03/30/2017
 ms.assetid: 3db215aa-e180-4f70-8d23-6d5a0ffbc8e5
-ms.openlocfilehash: 6361b12802876ef480acbe1cc13f32b77ba0be49
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a555acb9e23098b0a0f70924032771b1ae18e88e
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178484"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83376114"
 ---
 # <a name="icordebugsymbolprovidergetassemblyimagebytes-method"></a>ICorDebugSymbolProvider::GetAssemblyImageBytes 메서드
 병합된 어셈블리의 RVA(상대 가상 주소)가 지정된 경우 병합된 어셈블리에서 데이터를 읽습니다.  
@@ -30,7 +30,7 @@ HRESULT GetAssemblyImageBytes(
  병합된 어셈블리에서 읽을 바이트 수입니다.  
   
  `ppMemoryBuffer`  
- 병합된 어셈블리 메타데이터가 있는 메모리 버퍼에 대한 정보를 포함하는 [ICorDebugMemoryBuffer](icordebugmemorybuffer-interface.md) 개체의 주소에 대한 포인터입니다.  
+ 병합 된 어셈블리 메타 데이터가 있는 메모리 버퍼에 대 한 정보를 포함 하는 [ICorDebugMemoryBuffer](icordebugmemorybuffer-interface.md) 개체의 주소에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
   
@@ -38,13 +38,13 @@ HRESULT GetAssemblyImageBytes(
 > 이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 

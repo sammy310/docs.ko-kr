@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ec00bc21-117e-4acd-9301-2cfafd5be8d3
 topic_type:
 - apiref
-ms.openlocfilehash: 38fe50f5a6608bb27d7a7818dee4784a7f8113ef
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 711fccd65379bc3e5e178869e7220dd84fd07fbe
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133602"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379697"
 ---
 # <a name="icordebugthreadenumeratechains-method"></a>ICorDebugThread::EnumerateChains 메서드
 이 ICorDebugThread 개체의 모든 스택 체인을 포함 하는 ICorDebugChainEnum 열거자에 대 한 인터페이스 포인터를 가져옵니다.  
@@ -35,9 +35,9 @@ HRESULT EnumerateChains (
   
 ## <a name="parameters"></a>매개 변수  
  `ppChains`  
- 제한이 활성 (가장 최근) 체인에서 시작 하 여이 스레드에서 모든 스택 체인을 열거할 수 있도록 하는 `ICorDebugChainEnum` 개체의 주소에 대 한 포인터입니다.  
+ 제한이 `ICorDebugChainEnum`활성 (가장 최근) 체인에서 시작 하 여이 스레드에서 모든 스택 체인을 열거할 수 있도록 하는 개체의 주소에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  스택 체인은 스레드의 물리적 호출 스택을 나타냅니다. 다음 상황에서는 스택 체인 경계를 만듭니다.  
   
 - 관리 되는 관리 또는 관리 되지 않는 전환입니다.  
@@ -51,10 +51,10 @@ HRESULT EnumerateChains (
  디버거는 모든 스레드의 실제 호출 스택을 논리적 호출 스택으로 다시 정렬 하려고 할 수 있습니다. 여기에는 호출자/호출 수신자 관계로 모든 스레드 체인을 정렬 하 고 regrouping 하는 작업이 포함 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

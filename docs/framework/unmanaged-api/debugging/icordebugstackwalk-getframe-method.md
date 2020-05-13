@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4083b505-5b59-44fb-8c5d-129db6a96c10
 topic_type:
 - apiref
-ms.openlocfilehash: 89576e2b3d5fb4df0cccfdd28c80a5cb67331597
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5f80125a67e634dda05b9427b5f46db8f21b29f8
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791894"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379208"
 ---
 # <a name="icordebugstackwalkgetframe-method"></a>ICorDebugStackWalk::GetFrame 메서드
 [ICorDebugStackWalk](icordebugstackwalk-interface.md) 개체의 현재 프레임을 가져옵니다.  
@@ -35,7 +35,7 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
  `pFrame`  
  진행 스택의 현재 프레임을 나타내는 만들어진 프레임 개체의 주소에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
 |HRESULT|설명|  
@@ -48,19 +48,19 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
   
 ## <a name="exceptions"></a>예외  
   
-## <a name="remarks"></a>주의  
- `ICorDebugStackWalk`는 실제 스택 프레임만 반환 합니다. [ICorDebugThread3:: GetActiveInternalFrames](icordebugthread3-getactiveinternalframes-method.md) 메서드를 사용 하 여 내부 프레임을 반환 합니다. 내부 프레임은 런타임에서 임시 데이터를 저장 하기 위해 스택에 푸시되는 데이터 구조입니다.  
+## <a name="remarks"></a>설명  
+ `ICorDebugStackWalk`실제 스택 프레임만 반환 합니다. [ICorDebugThread3:: GetActiveInternalFrames](icordebugthread3-getactiveinternalframes-method.md) 메서드를 사용 하 여 내부 프레임을 반환 합니다. 내부 프레임은 런타임에서 임시 데이터를 저장 하기 위해 스택에 푸시되는 데이터 구조입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugStackWalk 인터페이스](icordebugstackwalk-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

@@ -4,12 +4,12 @@ description: Blazor를 사용 하 여 재사용 가능한 UI 구성 요소를 �
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: 79fb2338a981389c3750e884ce6606351c84738a
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 1a5f6b63143c4fd7a276219b9c4877e9e355c996
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506768"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378316"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>Blazor를 사용 하 여 재사용 가능한 UI 구성 요소 빌드
 
@@ -26,9 +26,9 @@ Blazor는 *구성 요소*를 통한 UI 캡슐화도 지원 합니다. 구성 요
 
 ## <a name="an-introduction-to-razor"></a>Razor 소개
 
-Razor는 HTML 및 c #을 기반으로 하는 간단한 태그 템플릿 언어입니다. Razor를 사용 하면 태그와 c # 코드 간을 원활 하 게 전환 하 여 구성 요소 렌더링 논리를 정의할 수 있습니다. *Razor* 파일이 컴파일되면 렌더링 논리가 .net 클래스에서 구조화 된 방식으로 캡처됩니다. 컴파일된 클래스의 이름은 *razor* 파일 이름에서 가져옵니다. 네임 스페이스는 프로젝트 및 폴더 경로에 대 한 기본 네임 스페이스에서 가져온 것입니다. 또는 `@namespace` 지시문을 사용 하 여 네임 스페이스를 명시적으로 지정할 수 있습니다 (아래 Razor 지시문에 추가).
+Razor는 HTML 및 c #을 기반으로 하는 간단한 태그 템플릿 언어입니다. Razor를 사용 하면 태그와 c # 코드 간을 원활 하 게 전환 하 여 구성 요소 렌더링 논리를 정의할 수 있습니다. *Razor* 파일이 컴파일되면 렌더링 논리가 .net 클래스에서 구조화 된 방식으로 캡처됩니다. 컴파일된 클래스의 이름은 *razor* 파일 이름에서 가져옵니다. 네임 스페이스는 프로젝트 및 폴더 경로에 대 한 기본 네임 스페이스에서 가져온 것입니다. 또는 지시문을 사용 하 여 네임 스페이스를 명시적으로 지정할 수 있습니다 `@namespace` (아래 Razor 지시문에 추가).
 
-구성 요소의 렌더링 논리는 c #을 사용 하 여 동적 논리가 추가 된 일반 HTML 태그를 사용 하 여 작성 됩니다. `@` 문자는 c #으로 전환 하는 데 사용 됩니다. Razor는 일반적으로 HTML로 다시 전환 하는 경우를 파악 하는 데 유용 합니다. 예를 들어 다음 구성 요소는 현재 `<p>` 시간을 사용 하 여 태그를 렌더링 합니다.
+구성 요소의 렌더링 논리는 c #을 사용 하 여 동적 논리가 추가 된 일반 HTML 태그를 사용 하 여 작성 됩니다. `@`문자는 c #으로 전환 하는 데 사용 됩니다. Razor는 일반적으로 HTML로 다시 전환 하는 경우를 파악 하는 데 유용 합니다. 예를 들어 다음 구성 요소는 `<p>` 현재 시간을 사용 하 여 태그를 렌더링 합니다.
 
 ```razor
 <p>@DateTime.Now</p>
@@ -49,7 +49,7 @@ Razor를 사용 하면 렌더링 논리에서 c # 제어 흐름을 쉽게 사용
 }
 ```
 
-또는 다음과 같은 일반적인 c # `foreach` 루프를 사용 하 여 항목 목록을 생성할 수 있습니다.
+또는 다음과 같은 일반적인 c # 루프를 사용 하 여 항목 목록을 생성할 수 있습니다 `foreach` .
 
 ```razor
 <ul>
@@ -69,7 +69,7 @@ ASP.NET Web Forms 지시문과 같은 razor 지시문은 Razor 구성 요소가 
 - 가져온 네임스페이스
 - 경로
 
-Razor 지시문은 `@` 문자로 시작 하 고 일반적으로 파일의 시작 부분에서 새 줄의 시작 부분에 사용 됩니다. 예를 들어 지시문 `@namespace` 은 구성 요소의 네임 스페이스를 정의 합니다.
+Razor 지시문은 문자로 시작 `@` 하 고 일반적으로 파일의 시작 부분에서 새 줄의 시작 부분에 사용 됩니다. 예를 들어 `@namespace` 지시문은 구성 요소의 네임 스페이스를 정의 합니다.
 
 ```razor
 @namespace MyComponentNamespace
@@ -106,7 +106,7 @@ Razor 지시문은 `@` 문자로 시작 하 고 일반적으로 파일의 시작
 |`@key`       |컬렉션의 요소를 유지 하기 위해 diff 알고리즘에서 사용할 키를 지정 합니다.|`<DetailsEditor @key="person" Details="person.Details" />`|
 |`@ref`       |구성 요소 또는 HTML 요소에 대 한 참조를 캡처합니다.|`<MyDialog @ref="myDialog" />`|
 
-Blazor (`@onclick`, `@bind`, `@ref`등)에서 사용 하는 다양 한 지시문 특성은 아래 단원 및 이후 단원에서 설명 합니다.
+Blazor (,, 등)에서 사용 하는 다양 한 지시문 특성은 `@onclick` `@bind` `@ref` 아래 단원 및 이후 단원에서 설명 합니다.
 
 *.Aspx* 및 *.ascx* 파일에 사용 되는 대부분의 구문에는 Razor의 병렬 구문이 있습니다. 다음은 ASP.NET Web Forms 및 Razor의 구문에 대 한 간단한 비교입니다.
 
@@ -118,7 +118,7 @@ Blazor (`@onclick`, `@bind`, `@ref`등)에서 사용 하는 다양 한 지시문
 |주석                     |`<%-- --%>`         |`<%-- Commented --%>`|`@* *@`       |`@* Commented *@`|
 |데이터 바인딩                 |`<%# %>`            |`<%# Bind("Name") %>`|`@bind`       |`<input @bind="username" />`|
 
-Razor 구성 요소 클래스에 멤버를 추가 하려면 `@code` 지시문을 사용 합니다. 이 기법은 ASP.NET Web Forms 사용자 정의 컨트롤 `<script runat="server">...</script>` 또는 페이지에서 블록을 사용 하는 것과 비슷합니다.
+Razor 구성 요소 클래스에 멤버를 추가 하려면 지시문을 사용 `@code` 합니다. 이 기법은 `<script runat="server">...</script>` ASP.NET Web Forms 사용자 정의 컨트롤 또는 페이지에서 블록을 사용 하는 것과 비슷합니다.
 
 ```razor
 @code {
@@ -137,7 +137,7 @@ Razor는 c #을 기반으로 하기 때문에 c # 프로젝트 (*.csproj*) 내�
 
 ## <a name="use-components"></a>구성 요소 사용
 
-일반 HTML 외에도 구성 요소는 렌더링 논리의 일부로 다른 구성 요소를 사용할 수 있습니다. Razor에서 구성 요소를 사용 하는 구문은 ASP.NET Web Forms 앱에서 사용자 정의 컨트롤을 사용 하는 것과 비슷합니다. 구성 요소는 구성 요소의 형식 이름과 일치 하는 요소 태그를 사용 하 여 지정 됩니다. 예를 들어 다음과 같은 구성 요소 `Counter` 를 추가할 수 있습니다.
+일반 HTML 외에도 구성 요소는 렌더링 논리의 일부로 다른 구성 요소를 사용할 수 있습니다. Razor에서 구성 요소를 사용 하는 구문은 ASP.NET Web Forms 앱에서 사용자 정의 컨트롤을 사용 하는 것과 비슷합니다. 구성 요소는 구성 요소의 형식 이름과 일치 하는 요소 태그를 사용 하 여 지정 됩니다. 예를 들어 `Counter` 다음과 같은 구성 요소를 추가할 수 있습니다.
 
 ```razor
 <Counter />
@@ -145,7 +145,7 @@ Razor는 c #을 기반으로 하기 때문에 c # 프로젝트 (*.csproj*) 내�
 
 ASP.NET Web Forms와 달리 Blazor의 구성 요소는 다음과 같습니다.
 
-- 요소 접두사를 사용 하지 않습니다 (예: `asp:`).
+- 요소 접두사를 사용 하지 않습니다 (예: `asp:` ).
 - 페이지 또는 *web.config*에서 등록이 필요 하지 않습니다.
 
 .NET 형식 처럼 Razor 구성 요소는 정확히 일치 해야 합니다. 구성 요소가 포함 된 어셈블리를 참조 하는 경우에는 구성 요소를 사용할 수 있습니다. 구성 요소의 네임 스페이스를 범위로 가져오려면 지시문을 적용 합니다 `@using` .
@@ -156,7 +156,7 @@ ASP.NET Web Forms와 달리 Blazor의 구성 요소는 다음과 같습니다.
 <Counter />
 ```
 
-기본 Blazor 프로젝트에서 볼 수 있듯이 지시문을 *_Imports razor* 파일에 `@using` 배치 하 여 동일한 디렉터리와 하위 디렉터리에 있는 모든 *razor* 파일로 가져올 수 있습니다.
+기본 Blazor 프로젝트에서 볼 수 있듯이 `@using` 지시문을 *_Imports razor* 파일에 배치 하 여 동일한 디렉터리와 하위 디렉터리에 있는 모든 *razor* 파일로 가져올 수 있습니다.
 
 구성 요소에 대 한 네임 스페이스가 범위에 없는 경우 c #에서 가능 하므로 전체 형식 이름을 사용 하 여 구성 요소를 지정할 수 있습니다.
 
@@ -166,9 +166,9 @@ ASP.NET Web Forms와 달리 Blazor의 구성 요소는 다음과 같습니다.
 
 ## <a name="component-parameters"></a>구성 요소 매개 변수
 
-ASP.NET Web Forms에서 공용 속성을 사용 하 여 매개 변수 및 데이터를 컨트롤에 전달할 수 있습니다. 이러한 속성은 특성을 사용 하 여 태그에서 설정 하거나 코드에서 직접 설정할 수 있습니다. 구성 요소 속성은 구성 요소 매개 변수로 간주할 `[Parameter]` 특성으로도 표시 되어야 하지만 Blazor 구성 요소는 비슷한 방식으로 작동 합니다.
+ASP.NET Web Forms에서 공용 속성을 사용 하 여 매개 변수 및 데이터를 컨트롤에 전달할 수 있습니다. 이러한 속성은 특성을 사용 하 여 태그에서 설정 하거나 코드에서 직접 설정할 수 있습니다. 구성 요소 속성은 `[Parameter]` 구성 요소 매개 변수로 간주할 특성으로도 표시 되어야 하지만 Blazor 구성 요소는 비슷한 방식으로 작동 합니다.
 
-다음 `Counter` 구성 요소는 단추를 클릭할 때마다 `IncrementAmount` 가 `Counter` 증가 해야 하는 양을 지정 하는 데 사용할 수 있는 이라는 구성 요소 매개 변수를 정의 합니다.
+다음 `Counter` 구성 요소는 단추를 클릭할 때마다 `IncrementAmount` 가 증가 해야 하는 양을 지정 하는 데 사용할 수 있는 이라는 구성 요소 매개 변수를 정의 합니다 `Counter` .
 
 ```razor
 <h1>Counter</h1>
@@ -218,7 +218,7 @@ public partial class Counter : System.Web.UI.UserControl
 }
 ```
 
-Blazor에서는 폼 `@on{event}`의 지시문 특성을 사용 하 여 DOM UI 이벤트에 대 한 처리기를 직접 등록할 수 있습니다. 자리 `{event}` 표시자는 이벤트의 이름을 나타냅니다. 예를 들어 다음과 같이 단추 클릭을 수신할 수 있습니다.
+Blazor에서는 폼의 지시문 특성을 사용 하 여 DOM UI 이벤트에 대 한 처리기를 직접 등록할 수 있습니다 `@on{event}` . `{event}`자리 표시자는 이벤트의 이름을 나타냅니다. 예를 들어 다음과 같이 단추 클릭을 수신할 수 있습니다.
 
 ```razor
 <button @onclick="OnClick">Click me!</button>
@@ -231,7 +231,7 @@ Blazor에서는 폼 `@on{event}`의 지시문 특성을 사용 하 여 DOM UI �
 }
 ```
 
-이벤트 처리기는 선택적 이벤트 관련 인수를 수락 하 여 이벤트에 대 한 자세한 정보를 제공할 수 있습니다. 예를 들어 마우스 이벤트는 `MouseEventArgs` 인수를 사용할 수 있지만 반드시 필요한 것은 아닙니다.
+이벤트 처리기는 선택적 이벤트 관련 인수를 수락 하 여 이벤트에 대 한 자세한 정보를 제공할 수 있습니다. 예를 들어 마우스 이벤트는 인수를 사용할 수 `MouseEventArgs` 있지만 반드시 필요한 것은 아닙니다.
 
 ```razor
 <button @onclick="OnClick">Click me!</button>
@@ -266,7 +266,7 @@ Blazor에서는 폼 `@on{event}`의 지시문 특성을 사용 하 여 DOM UI �
 }
 ```
 
-이벤트가 처리 된 후 구성 요소 상태 변경을 고려 하 여 구성 요소가 렌더링 됩니다. 비동기 이벤트 처리기를 사용 하면 처리기 실행이 완료 된 직후에 구성 요소가 렌더링 됩니다. 비동기 `Task` 작업이 완료 되 면 구성 요소가 *다시* 렌더링 됩니다. 비동기 실행 모드는 비동기 `Task` 작업이 진행 되는 동안 적절 한 UI를 렌더링할 수 있는 기회를 제공 합니다.
+이벤트가 처리 된 후 구성 요소 상태 변경을 고려 하 여 구성 요소가 렌더링 됩니다. 비동기 이벤트 처리기를 사용 하면 처리기 실행이 완료 된 직후에 구성 요소가 렌더링 됩니다. 비동기 작업이 완료 되 면 구성 요소가 *다시* 렌더링 됩니다 `Task` . 비동기 실행 모드는 비동기 작업이 진행 되는 동안 적절 한 UI를 렌더링할 수 있는 기회를 제공 `Task` 합니다.
 
 ```razor
 <button @onclick="ShowMessage">Get message</button>
@@ -296,7 +296,7 @@ Blazor에서는 폼 `@on{event}`의 지시문 특성을 사용 하 여 DOM UI �
 }
 ```
 
-구성 요소는 형식의 `EventCallback<TValue>`구성 요소 매개 변수를 정의 하 여 자체 이벤트를 정의할 수도 있습니다. 이벤트 콜백은 선택적 인수, 동기 또는 비동기, 메서드 그룹 또는 람다 식 등 DOM UI 이벤트 처리기의 모든 변형을 지원 합니다.
+구성 요소는 형식의 구성 요소 매개 변수를 정의 하 여 자체 이벤트를 정의할 수도 있습니다 `EventCallback<TValue>` . 이벤트 콜백은 선택적 인수, 동기 또는 비동기, 메서드 그룹 또는 람다 식 등 DOM UI 이벤트 처리기의 모든 변형을 지원 합니다.
 
 ```razor
 <button class="btn btn-primary" @onclick="OnClick">Click me!</button>
@@ -311,7 +311,7 @@ Blazor에서는 폼 `@on{event}`의 지시문 특성을 사용 하 여 DOM UI �
 
 Blazor는 UI 구성 요소에서 구성 요소의 상태에 데이터를 바인딩하는 간단한 메커니즘을 제공 합니다. 이 방식은 데이터 소스에서 UI 컨트롤로 데이터를 바인딩하는 ASP.NET Web Forms의 기능과 다릅니다. 데이터 처리 섹션에서 다양 한 데이터 원본의 데이터를 처리 [하](data.md) 는 방법을 다룹니다.
 
-UI 구성 요소에서 구성 요소의 상태로 양방향 데이터 바인딩을 만들려면 `@bind` 지시문 특성을 사용 합니다. 다음 예제에서 확인란의 값은 `isChecked` 필드에 바인딩됩니다.
+UI 구성 요소에서 구성 요소의 상태로 양방향 데이터 바인딩을 만들려면 `@bind` 지시문 특성을 사용 합니다. 다음 예제에서 확인란의 값은 필드에 바인딩됩니다 `isChecked` .
 
 ```razor
 <input type="checkbox" @bind="isChecked" />
@@ -321,13 +321,13 @@ UI 구성 요소에서 구성 요소의 상태로 양방향 데이터 바인딩�
 }
 ```
 
-구성 요소가 렌더링 되 면 확인란의 값은 `isChecked` 필드의 값으로 설정 됩니다. 사용자가 확인란을 설정/해제 하면 `onchange` 이벤트가 발생 하 고 `isChecked` 필드가 새 값으로 설정 됩니다. 이 `@bind` 경우 구문은 다음 태그와 동일 합니다.
+구성 요소가 렌더링 되 면 확인란의 값은 필드의 값으로 설정 됩니다 `isChecked` . 사용자가 확인란을 설정/해제 하면 `onchange` 이벤트가 발생 하 고 `isChecked` 필드가 새 값으로 설정 됩니다. `@bind`이 경우 구문은 다음 태그와 동일 합니다.
 
 ```razor
 <input value="@isChecked" @onchange="(UIChangeEventArgs e) => isChecked = e.Value" />
 ```
 
-바인딩에 사용 되는 이벤트를 변경 하려면 `@bind:event` 특성을 사용 합니다.
+바인딩에 사용 되는 이벤트를 변경 하려면 특성을 사용 `@bind:event` 합니다.
 
 ```razor
 <input @bind="text" @bind:event="oninput" />
@@ -367,9 +367,9 @@ Password: <input
 }
 ```
 
-데이터 바인딩을 기본 UI 요소에 연결 하려면 `@bind` 특성을 사용 하는 대신 값을 설정 하 고 UI 요소에서 직접 이벤트를 처리 합니다.
+데이터 바인딩을 기본 UI 요소에 연결 하려면 특성을 사용 하는 대신 값을 설정 하 고 UI 요소에서 직접 이벤트를 처리 합니다 `@bind` .
 
-구성 요소 매개 변수에 바인딩하려면 `@bind-{Parameter}` 특성을 사용 하 여 바인딩할 매개 변수를 지정 합니다.
+구성 요소 매개 변수에 바인딩하려면 특성을 사용 하 여 `@bind-{Parameter}` 바인딩할 매개 변수를 지정 합니다.
 
 ```razor
 <PasswordBox @bind-Password="password" />
@@ -381,9 +381,9 @@ Password: <input
 
 ## <a name="state-changes"></a>상태 변경
 
-구성 요소의 상태가 일반적인 UI 이벤트 또는 이벤트 콜백 외부에서 변경 된 경우 구성 요소는 다시 렌더링 해야 한다는 것을 수동으로 신호로 보내야 합니다. 구성 요소의 상태가 변경 되었음을 알리려면 구성 요소에서 메서드를 `StateHasChanged` 호출 합니다.
+구성 요소의 상태가 일반적인 UI 이벤트 또는 이벤트 콜백 외부에서 변경 된 경우 구성 요소는 다시 렌더링 해야 한다는 것을 수동으로 신호로 보내야 합니다. 구성 요소의 상태가 변경 되었음을 알리려면 `StateHasChanged` 구성 요소에서 메서드를 호출 합니다.
 
-아래 예제에서 구성 요소는 응용 프로그램의 다른 부분에서 `AppState` 업데이트할 수 있는 서비스의 메시지를 표시 합니다. 구성 요소는 메시지 `StateHasChanged` 를 업데이트할 때마다 `AppState.OnChange` 구성 요소가 렌더링 되도록 해당 메서드를 이벤트에 등록 합니다.
+아래 예제에서 구성 요소는 `AppState` 응용 프로그램의 다른 부분에서 업데이트할 수 있는 서비스의 메시지를 표시 합니다. 구성 요소는 `StateHasChanged` `AppState.OnChange` 메시지를 업데이트할 때마다 구성 요소가 렌더링 되도록 해당 메서드를 이벤트에 등록 합니다.
 
 ```csharp
 public class AppState
@@ -395,7 +395,7 @@ public class AppState
 
     public void UpdateMessage(string message)
     {
-        shortlist.Add(itinerary);
+        Message = message;
         NotifyStateChanged();
     }
 
@@ -418,7 +418,7 @@ public class AppState
 
 ## <a name="component-lifecycle"></a>구성 요소 수명 주기
 
-ASP.NET Web Forms 프레임 워크에는 모듈, 페이지 및 컨트롤에 대 한 잘 정의 된 수명 주기 방법이 있습니다. 예를 들어 다음 컨트롤은 `Init`, `Load`및 `UnLoad` 수명 주기 이벤트에 대 한 이벤트 처리기를 구현 합니다.
+ASP.NET Web Forms 프레임 워크에는 모듈, 페이지 및 컨트롤에 대 한 잘 정의 된 수명 주기 방법이 있습니다. 예를 들어 다음 컨트롤은 `Init` , `Load` 및 `UnLoad` 수명 주기 이벤트에 대 한 이벤트 처리기를 구현 합니다.
 
 *Counter.ascx.cs*
 
@@ -433,11 +433,11 @@ public partial class Counter : System.Web.UI.UserControl
 
 Blazor 구성 요소에는 잘 정의 된 수명 주기도 있습니다. 구성 요소의 수명 주기를 사용 하 여 구성 요소 상태를 초기화 하 고 고급 구성 요소 동작을 구현할 수 있습니다.
 
-모든 Blazor의 구성 요소 수명 주기 메서드에는 동기 버전과 비동기 버전이 모두 있습니다. 구성 요소 렌더링이 동기식입니다. 비동기 논리는 구성 요소 렌더링의 일부로 실행할 수 없습니다. 모든 비동기 논리는 `async` 수명 주기 메서드의 일부로 실행 되어야 합니다.
+모든 Blazor의 구성 요소 수명 주기 메서드에는 동기 버전과 비동기 버전이 모두 있습니다. 구성 요소 렌더링이 동기식입니다. 비동기 논리는 구성 요소 렌더링의 일부로 실행할 수 없습니다. 모든 비동기 논리는 수명 주기 메서드의 일부로 실행 되어야 합니다 `async` .
 
 ### <a name="oninitialized"></a>OnInitialized 됨
 
-`OnInitialized` 및 `OnInitializedAsync` 메서드는 구성 요소를 초기화 하는 데 사용 됩니다. 구성 요소는 일반적으로 처음 렌더링 된 후에 초기화 됩니다. 구성 요소가 초기화 된 후에는 최종적으로 삭제 되기 전에 여러 번 렌더링 될 수 있습니다. 메서드 `OnInitialized` 는 ASP.NET Web Forms 페이지 및 `Page_Load` 컨트롤의 이벤트와 비슷합니다.
+`OnInitialized`및 `OnInitializedAsync` 메서드는 구성 요소를 초기화 하는 데 사용 됩니다. 구성 요소는 일반적으로 처음 렌더링 된 후에 초기화 됩니다. 구성 요소가 초기화 된 후에는 최종적으로 삭제 되기 전에 여러 번 렌더링 될 수 있습니다. `OnInitialized`메서드는 `Page_Load` ASP.NET Web Forms 페이지 및 컨트롤의 이벤트와 비슷합니다.
 
 ```csharp
 protected override void OnInitialized() { ... }
@@ -446,7 +446,7 @@ protected override async Task OnInitializedAsync() { await ... }
 
 ### <a name="onparametersset"></a>OnParametersSet
 
-`OnParametersSet` 및 `OnParametersSetAsync` 메서드는 구성 요소가 부모 로부터 매개 변수를 수신 하 고 값이 속성에 할당 될 때 호출 됩니다. 이러한 메서드는 구성 요소 초기화 후와 *구성 요소가 렌더링 될*때마다 실행 됩니다.
+`OnParametersSet`및 `OnParametersSetAsync` 메서드는 구성 요소가 부모 로부터 매개 변수를 수신 하 고 값이 속성에 할당 될 때 호출 됩니다. 이러한 메서드는 구성 요소 초기화 후와 *구성 요소가 렌더링 될*때마다 실행 됩니다.
 
 ```csharp
 protected override void OnParametersSet() { ... }
@@ -455,7 +455,7 @@ protected override async Task OnParametersSetAsync() { await ... }
 
 ### <a name="onafterrender"></a>OnAfterRender
 
-`OnAfterRender` 및 `OnAfterRenderAsync` 메서드는 구성 요소가 렌더링을 완료 한 후에 호출 됩니다. 요소 및 구성 요소 참조가이 시점에 채워집니다 (아래 개념에 대 한 자세한 정보). 이 시점에서 브라우저와의 상호 작용을 사용 하도록 설정 합니다. DOM 및 JavaScript 실행과의 상호 작용은 안전 하 게 수행할 수 있습니다.
+`OnAfterRender`및 `OnAfterRenderAsync` 메서드는 구성 요소가 렌더링을 완료 한 후에 호출 됩니다. 요소 및 구성 요소 참조가이 시점에 채워집니다 (아래 개념에 대 한 자세한 정보). 이 시점에서 브라우저와의 상호 작용을 사용 하도록 설정 합니다. DOM 및 JavaScript 실행과의 상호 작용은 안전 하 게 수행할 수 있습니다.
 
 ```csharp
 protected override void OnAfterRender(bool firstRender)
@@ -476,11 +476,11 @@ protected override async Task OnAfterRenderAsync(bool firstRender)
 
 `OnAfterRender``OnAfterRenderAsync` *서버에서 사전 렌더링 하는 경우 및는 호출 되지 않습니다*.
 
-매개 `firstRender` 변수는 `true` 구성 요소가 처음 렌더링 될 때입니다. 그렇지 않으면 해당 값은 `false`입니다.
+`firstRender`구성 요소가 처음으로 렌더링 될 때 매개 변수가이 `true` 고, 그렇지 않으면 해당 값은 `false` 입니다.
 
 ### <a name="idisposable"></a>IDisposable
 
-Blazor 구성 요소는 `IDisposable` UI에서 구성 요소가 제거 될 때 리소스를 삭제 하도록 구현할 수 있습니다. Razor 구성 요소는 `IDispose` `@implements` 지시문을 사용 하 여를 구현할 수 있습니다.
+Blazor 구성 요소 `IDisposable` 는 UI에서 구성 요소가 제거 될 때 리소스를 삭제 하도록 구현할 수 있습니다. Razor 구성 요소는 `IDispose` 지시문을 사용 하 여를 구현할 수 있습니다 `@implements` .
 
 ```razor
 @using System
@@ -525,13 +525,13 @@ Blazor 구성 요소는 요소에 대 한 참조를 캡처할 수 있습니다. 
 
 ## <a name="templated-components"></a>템플릿 기반 구성 요소
 
-ASP.NET Web Forms에서 *템플릿 기반 컨트롤*을 만들 수 있습니다. 개발자는 템플릿 기반 컨트롤을 사용 하 여 컨테이너 컨트롤을 렌더링 하는 데 사용 되는 HTML 부분을 지정할 수 있습니다. 템플릿 기반 서버 컨트롤을 작성 하는 메커니즘은 복잡 하지만 사용자 지정 가능한 방식으로 데이터를 렌더링 하는 강력한 시나리오를 가능 하 게 합니다. 템플릿 기반 컨트롤의 예로 `Repeater` 는 `DataList`및가 있습니다.
+ASP.NET Web Forms에서 *템플릿 기반 컨트롤*을 만들 수 있습니다. 개발자는 템플릿 기반 컨트롤을 사용 하 여 컨테이너 컨트롤을 렌더링 하는 데 사용 되는 HTML 부분을 지정할 수 있습니다. 템플릿 기반 서버 컨트롤을 작성 하는 메커니즘은 복잡 하지만 사용자 지정 가능한 방식으로 데이터를 렌더링 하는 강력한 시나리오를 가능 하 게 합니다. 템플릿 기반 컨트롤의 예로는 `Repeater` 및가 `DataList` 있습니다.
 
-Blazor 구성 요소는 또는 `RenderFragment` `RenderFragment<T>`형식의 구성 요소 매개 변수를 정의 하 여 템플릿을 만들 수도 있습니다. 는 `RenderFragment` 구성 요소에서 렌더링할 수 있는 Razor 태그의 청크를 나타냅니다. 는 `RenderFragment<T>` 렌더링 조각이 렌더링 될 때 지정할 수 있는 매개 변수를 사용 하는 Razor 태그의 청크입니다.
+Blazor 구성 요소는 또는 형식의 구성 요소 매개 변수를 정의 하 여 템플릿을 만들 수도 있습니다 `RenderFragment` `RenderFragment<T>` . 는 `RenderFragment` 구성 요소에서 렌더링할 수 있는 Razor 태그의 청크를 나타냅니다. 는 `RenderFragment<T>` 렌더링 조각이 렌더링 될 때 지정할 수 있는 매개 변수를 사용 하는 Razor 태그의 청크입니다.
 
 ### <a name="child-content"></a>자식 콘텐츠
 
-Blazor 구성 요소는 자식 콘텐츠를 `RenderFragment` 로 캡처하고 구성 요소 렌더링의 일부로 해당 콘텐츠를 렌더링할 수 있습니다. 자식 콘텐츠를 캡처하려면 형식의 `RenderFragment` 구성 요소 매개 변수를 정의 하 고 이름을 `ChildContent`로 지정 합니다.
+Blazor 구성 요소는 자식 콘텐츠를로 캡처하고 `RenderFragment` 구성 요소 렌더링의 일부로 해당 콘텐츠를 렌더링할 수 있습니다. 자식 콘텐츠를 캡처하려면 형식의 구성 요소 매개 변수를 정의 하 `RenderFragment` 고 이름을로 지정 `ChildContent` 합니다.
 
 *ChildContentComponent. razor*
 
@@ -556,7 +556,7 @@ Blazor 구성 요소는 자식 콘텐츠를 `RenderFragment` 로 캡처하고 �
 
 ### <a name="template-parameters"></a>템플릿 매개 변수
 
-또한 템플릿 기반 Blazor 구성 요소는 또는 `RenderFragment` `RenderFragment<T>`형식의 여러 구성 요소 매개 변수를 정의할 수 있습니다. 의 매개 변수는 `RenderFragment<T>` 호출 될 때 지정할 수 있습니다. 구성 요소에 대 한 제네릭 형식 매개 변수를 지정 하려면 `@typeparam` Razor 지시문을 사용 합니다.
+또한 템플릿 기반 Blazor 구성 요소는 또는 형식의 여러 구성 요소 매개 변수를 정의할 수 있습니다 `RenderFragment` `RenderFragment<T>` . 의 매개 변수는 `RenderFragment<T>` 호출 될 때 지정할 수 있습니다. 구성 요소에 대 한 제네릭 형식 매개 변수를 지정 하려면 `@typeparam` Razor 지시문을 사용 합니다.
 
 *SimpleListView*
 
@@ -584,7 +584,7 @@ Blazor 구성 요소는 자식 콘텐츠를 `RenderFragment` 로 캡처하고 �
 }
 ```
 
-템플릿 기반 구성 요소를 사용 하는 경우 매개 변수의 이름과 일치 하는 자식 요소를 사용 하 여 템플릿 매개 변수를 지정할 수 있습니다. 요소로 전달 되는 `RenderFragment<T>` 형식의 구성 요소 인수에는 라는 `context`암시적 매개 변수가 있습니다. 자식 요소의 특성을 `Context` 사용 하 여이 구현 매개 변수의 이름을 변경할 수 있습니다. 형식 매개 변수의 이름과 일치 하는 특성을 사용 하 여 제네릭 형식 매개 변수를 지정할 수 있습니다. 가능 하면 형식 매개 변수가 유추 됩니다.
+템플릿 기반 구성 요소를 사용 하는 경우 매개 변수의 이름과 일치 하는 자식 요소를 사용 하 여 템플릿 매개 변수를 지정할 수 있습니다. 요소로 전달 되는 형식의 구성 요소 인수에는 `RenderFragment<T>` 라는 암시적 매개 변수가 `context` 있습니다. 자식 요소의 특성을 사용 하 여이 구현 매개 변수의 이름을 변경할 수 있습니다 `Context` . 형식 매개 변수의 이름과 일치 하는 특성을 사용 하 여 제네릭 형식 매개 변수를 지정할 수 있습니다. 가능 하면 형식 매개 변수가 유추 됩니다.
 
 ```razor
 <SimpleListView Items="messages" TItem="string">
@@ -609,7 +609,7 @@ Blazor 구성 요소는 자식 콘텐츠를 `RenderFragment` 로 캡처하고 �
 
 ## <a name="code-behind"></a>코드 숨김
 
-Blazor 구성 요소는 일반적으로 단일 *razor* 파일로 작성 됩니다. 그러나 코드를 사용 하 여 코드와 태그를 분리 하는 것도 가능 합니다. 구성 요소 파일을 사용 하려면 구성 요소 파일의 파일 이름과 일치 하지만 *.cs* 확장명이 추가 된 c # 파일 (*Counter.razor.cs*)을 추가 합니다. C # 파일을 사용 하 여 구성 요소에 대 한 기본 클래스를 정의 합니다. 기본 클래스의 이름을 원하는 대로 지정할 수 있지만 클래스 이름을 component 클래스와 동일 하 게 하는 것이 일반적 이지만 `Base` 확장 (`CounterBase`)이 추가 됩니다. 구성 요소 기반 클래스도에서 `ComponentBase`파생 되어야 합니다. 그런 다음 Razor 구성 요소 파일에서 `@inherits` 지시문을 추가 하 여 구성 요소 (`@inherits CounterBase`)에 대 한 기본 클래스를 지정 합니다.
+Blazor 구성 요소는 일반적으로 단일 *razor* 파일로 작성 됩니다. 그러나 코드를 사용 하 여 코드와 태그를 분리 하는 것도 가능 합니다. 구성 요소 파일을 사용 하려면 구성 요소 파일의 파일 이름과 일치 하지만 *.cs* 확장명이 추가 된 c # 파일 (*Counter.razor.cs*)을 추가 합니다. C # 파일을 사용 하 여 구성 요소에 대 한 기본 클래스를 정의 합니다. 기본 클래스의 이름을 원하는 대로 지정할 수 있지만 클래스 이름을 component 클래스와 동일 하 게 하는 것이 일반적 이지만 `Base` 확장 ()이 추가 `CounterBase` 됩니다. 구성 요소 기반 클래스도에서 파생 되어야 합니다 `ComponentBase` . 그런 다음 Razor 구성 요소 파일에서 지시문을 추가 `@inherits` 하 여 구성 요소 ()에 대 한 기본 클래스를 지정 `@inherits CounterBase` 합니다.
 
 *카운터. razor*
 
@@ -637,9 +637,9 @@ public class CounterBase : ComponentBase
 }
 ```
 
-기본 클래스 `protected` `public` 에서 구성 요소의 멤버에 대 한 표시 여부는 구성 요소 클래스에 표시 되어야 합니다.
+기본 클래스에서 구성 요소의 멤버에 대 한 표시 여부는 `protected` `public` 구성 요소 클래스에 표시 되어야 합니다.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 위의 Blazor 구성 요소에 대 한 모든 측면을 철저 하 게 처리 하지는 않습니다. [Razor 구성 요소 ASP.NET Core 만들고 사용](/aspnet/core/blazor/components)하는 방법에 대 한 자세한 내용은 Blazor 설명서를 참조 하세요.
 

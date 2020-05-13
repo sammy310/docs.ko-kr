@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c7276f7-7e54-470c-808c-e13745ac07a1
 topic_type:
 - apiref
-ms.openlocfilehash: f177d441da3bd967750781e487d9fed42bc132f5
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 020724c422af7cba0165e6f37d0eacb7742153ec
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791942"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379267"
 ---
 # <a name="icordebugremotetargetgethostname-method"></a>ICorDebugRemoteTarget::GetHostName 메서드
 정규화된 도메인 이름 또는 원격 디버깅 대상 컴퓨터의 IPv4 주소를 반환합니다. IPV6은 이번에 지원되지 않습니다.  
@@ -37,7 +37,7 @@ HRESULT GetHostName (
   
 ## <a name="parameters"></a>매개 변수  
  `cchHostName`  
- 진행 `szHostName` 버퍼의 크기 (문자)입니다. 이 매개 변수가 0일 경우 `szHostName`은 null이어야 합니다.  
+ 진행 버퍼의 크기 (문자) `szHostName` 입니다. 이 매개 변수가 0일 경우 `szHostName`은 null이어야 합니다.  
   
  `pcchHostName`  
  [out] 호스트 이름 또는 IP 주소의 null 종결자를 포함한 문자의 수입니다. 이 매개 변수는 null일 수 있습니다.  
@@ -45,18 +45,18 @@ HRESULT GetHostName (
  `szHostName`  
  [out] 호스트 이름 또는 IP 주소를 포함하는 버퍼입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  S_OK  
  호스트 이름 또는 IP 주소가 성공적으로 반환 되었습니다.  
   
  E_FAIL(또는 다른 E_ 반환 코드)  
  호스트 이름 또는 IP 주소를 반환할 수 없습니다.  
   
-## <a name="remarks"></a>주의  
- 이 메서드는 디버거 작성기에서 구현합니다. 다중 호출 패러다임을 따라야 합니다. 첫 번째 호출에서 호출자는 `cchHostName` 및 `szHostName`둘 다에 null을 전달 하 고 `pcchHostName`는 필요한 버퍼의 크기를 반환 합니다. 두 번째 호출에서 이전에 반환된 크기는 `cchHostName`에서 전달되고 적절한 크기의 버퍼는 `szHostName`에서 전달됩니다.  
+## <a name="remarks"></a>설명  
+ 이 메서드는 디버거 작성기에서 구현합니다. 다중 호출 패러다임을 따라야 합니다. 첫 번째 호출에서 호출자는 및 둘 다에 null을 `cchHostName` 전달 `szHostName` 하 고 `pcchHostName` 필요한 버퍼의 크기를 반환 합니다. 두 번째 호출에서 이전에 반환된 크기는 `cchHostName`에서 전달되고 적절한 크기의 버퍼는 `szHostName`에서 전달됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug .idl  
   
@@ -64,7 +64,7 @@ HRESULT GetHostName (
   
  **.NET Framework 버전:** 3.5 SP1  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugRemoteTarget 인터페이스](icordebugremotetarget-interface.md)
 - [ICorDebug 인터페이스](icordebug-interface.md)

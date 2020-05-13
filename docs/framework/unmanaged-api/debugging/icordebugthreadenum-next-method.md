@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f967c93d-9a7f-4aaf-99a1-a1317899ff3f
 topic_type:
 - apiref
-ms.openlocfilehash: 0c455706b0d644d2444e9fbdf49c5a5d4f5295a9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c025afac1b53b23636a6160a475704011999d434
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122398"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379051"
 ---
 # <a name="icordebugthreadenumnext-method"></a>ICorDebugThreadEnum::Next 메서드
 현재 위치에서 시작 하 여 열거형에서 지정 된 ICorDebugThread 인스턴스의 수를 가져옵니다.  
@@ -38,19 +38,19 @@ HRESULT Next (
   
 ## <a name="parameters"></a>매개 변수  
  `celt`  
- 진행 검색할 `ICorDebugThread` 인스턴스 수입니다.  
+ 진행 `ICorDebugThread`검색할 인스턴스 수입니다.  
   
  `threads`  
- 제한이 각각 스레드를 나타내는 `ICorDebugThread` 개체를 가리키는 포인터의 배열입니다.  
+ 제한이 각각 스레드를 나타내는 개체를 가리키는 포인터의 배열입니다 `ICorDebugThread` .  
   
  `pceltFetched`  
- 제한이 실제로 반환 된 `ICorDebugThread` 인스턴스 수에 대 한 포인터입니다. `celt` 일 경우이 값은 null 일 수 있습니다.  
+ 제한이 실제로 반환 된 인스턴스 수에 대 한 포인터 `ICorDebugThread` 입니다. 이 일 경우이 값은 null 일 수 있습니다 `celt` .  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
