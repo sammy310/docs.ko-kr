@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: fad94e1e-78be-440f-aa43-e0c66e0b102e
 topic_type:
 - apiref
-ms.openlocfilehash: 7f9b3e32467a99371f54449128994d990030dbfb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5bb8ec0110aec5ffd442dd8e8d8ee3f96fe4b6db
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73109616"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212622"
 ---
-# <a name="icordebugmodulegeteditandcontinuesnapshot-method"></a><span data-ttu-id="6fd7c-102">ICorDebugModule::GetEditAndContinueSnapshot 메서드</span><span class="sxs-lookup"><span data-stu-id="6fd7c-102">ICorDebugModule::GetEditAndContinueSnapshot Method</span></span>
-<span data-ttu-id="6fd7c-103">더 이상 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6fd7c-103">Deprecated.</span></span>  
+# <a name="icordebugmodulegeteditandcontinuesnapshot-method"></a><span data-ttu-id="dc3f2-102">ICorDebugModule::GetEditAndContinueSnapshot 메서드</span><span class="sxs-lookup"><span data-stu-id="dc3f2-102">ICorDebugModule::GetEditAndContinueSnapshot Method</span></span>
+<span data-ttu-id="dc3f2-103">사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="dc3f2-103">Deprecated.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6fd7c-104">구문</span><span class="sxs-lookup"><span data-stu-id="6fd7c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dc3f2-104">구문</span><span class="sxs-lookup"><span data-stu-id="dc3f2-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetEditAndContinueSnapshot(  
@@ -33,11 +33,11 @@ HRESULT GetEditAndContinueSnapshot(
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="6fd7c-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="6fd7c-105">Requirements</span></span>  
- <span data-ttu-id="6fd7c-106">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="6fd7c-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dc3f2-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="dc3f2-105">Requirements</span></span>  
+ <span data-ttu-id="dc3f2-106">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="dc3f2-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6fd7c-107">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6fd7c-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="dc3f2-107">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="dc3f2-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6fd7c-108">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6fd7c-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="dc3f2-108">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dc3f2-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6fd7c-109">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6fd7c-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="dc3f2-109">**.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dc3f2-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
