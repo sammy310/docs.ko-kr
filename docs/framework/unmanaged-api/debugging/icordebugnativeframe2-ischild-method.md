@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e2aae09-49cb-4fbd-81e5-e29cd864a88b
 topic_type:
 - apiref
-ms.openlocfilehash: 22722e4d602bdb9df9877b2199b4d4271a4d3105
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 759ba7bd46f8231143e743aa5ffcabffeb99c3b6
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792724"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205105"
 ---
 # <a name="icordebugnativeframe2ischild-method"></a>ICorDebugNativeFrame2::IsChild 메서드
 현재 프레임이 자식 프레임 인지 여부를 확인 합니다.  
@@ -35,7 +35,7 @@ HRESULT IsChild([out] BOOL * pIsChild);
  `pIsChild`  
  제한이 현재 프레임이 자식 프레임 인지 여부를 지정 하는 부울 값입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
 |HRESULT|설명|  
@@ -46,19 +46,19 @@ HRESULT IsChild([out] BOOL * pIsChild);
   
 ## <a name="exceptions"></a>예외  
   
-## <a name="remarks"></a>주의  
- `IsChild` 메서드는 메서드를 호출 하는 프레임 개체가 다른 프레임의 자식인 경우 `true`을 반환 합니다. 이 경우 [IsMatchingParentFrame](icordebugnativeframe2-ismatchingparentframe-method.md) 메서드를 사용 하 여 프레임이 부모 인지 여부를 확인 합니다.  
+## <a name="remarks"></a>설명  
+ 메서드는 `IsChild` `true` 메서드를 호출 하는 프레임 개체가 다른 프레임의 자식인 경우를 반환 합니다. 이 경우 [IsMatchingParentFrame](icordebugnativeframe2-ismatchingparentframe-method.md) 메서드를 사용 하 여 프레임이 부모 인지 여부를 확인 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugNativeFrame2 인터페이스](icordebugnativeframe2-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0bc96acb-6179-4328-a447-cda562ce9e98
 topic_type:
 - apiref
-ms.openlocfilehash: ff74a9849b74b8a8e6b8c03f1fc4e7c7eee1ec14
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4652e4b34d614ad3b7b852925fcc63309bdd1498
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124051"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209463"
 ---
 # <a name="icordebugframeenumnext-method"></a>ICorDebugFrameEnum::Next 메서드
 현재 위치에서 시작 하 여 지정 된 수의 ICorDebugFrame 인스턴스를 가져옵니다.  
@@ -38,19 +38,19 @@ HRESULT Next (
   
 ## <a name="parameters"></a>매개 변수  
  `celt`  
- 진행 검색할 `ICorDebugFrame` 인스턴스 수입니다.  
+ 진행 `ICorDebugFrame`검색할 인스턴스 수입니다.  
   
  `frames`  
- 제한이 각각 `ICorDebugFrame` 개체를 가리키는 포인터의 배열입니다.  
+ 제한이 각각 개체를 가리키는 포인터의 배열입니다 `ICorDebugFrame` .  
   
  `pceltFetched`  
- 제한이 실제로 반환 된 `ICorDebugFrame` 인스턴스 수에 대 한 포인터입니다. `celt` 일 경우이 값은 null 일 수 있습니다.  
+ 제한이 실제로 반환 된 인스턴스 수에 대 한 포인터 `ICorDebugFrame` 입니다. 이 일 경우이 값은 null 일 수 있습니다 `celt` .  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

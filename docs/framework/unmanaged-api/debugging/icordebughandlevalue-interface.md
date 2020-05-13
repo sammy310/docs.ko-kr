@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 66fcd2b8-ac66-414b-83a8-75a925e17772
 topic_type:
 - apiref
-ms.openlocfilehash: 406468fc6e2b68e8c8e1dfbd0f0f18cce3f013ab
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c901e21521e941c51939958175a5316808890e9f
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794453"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83208631"
 ---
 # <a name="icordebughandlevalue-interface"></a>ICorDebugHandleValue 인터페이스
 
@@ -29,24 +29,24 @@ ms.locfileid: "76794453"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[Dispose 메서드](icordebughandlevalue-dispose-method.md)|인터페이스 포인터를 명시적으로 해제 하지 않고이 `ICorDebugHandleValue` 개체에서 참조 하는 핸들을 해제 합니다.|  
-|[GetHandleType 메서드](icordebughandlevalue-gethandletype-method.md)|이 `ICorDebugHandleValue`에서 참조 하는 핸들의 종류를 설명 하는 CorDebugHandleType 값을 가져옵니다.|  
+|[Dispose 메서드](icordebughandlevalue-dispose-method.md)|`ICorDebugHandleValue`인터페이스 포인터를 명시적으로 해제 하지 않고이 개체에서 참조 하는 핸들을 해제 합니다.|  
+|[GetHandleType 메서드](icordebughandlevalue-gethandletype-method.md)|이에서 참조 하는 핸들의 종류를 설명 하는 CorDebugHandleType 값을 가져옵니다 `ICorDebugHandleValue` .|  
   
-## <a name="remarks"></a>주의  
- 디버깅 된 코드의 실행이 중단 되 면 `ICorDebugReferenceValue` 개체가 무효화 됩니다. `ICorDebugHandleValue`은 명시적으로 해제 될 때까지 중단 및 연속을 통해 참조를 유지 관리 합니다.  
+## <a name="remarks"></a>설명  
+ `ICorDebugReferenceValue`디버깅 된 코드의 실행이 중단 되 면 개체가 무효화 됩니다. 는 `ICorDebugHandleValue` 명시적으로 해제 될 때까지 중단 및 연속을 통해 참조를 유지 관리 합니다.  
   
 > [!NOTE]
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 인터페이스](debugging-interfaces.md)

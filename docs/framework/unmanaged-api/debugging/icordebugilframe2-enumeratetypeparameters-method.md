@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 722d0d74-e0df-491f-98c4-62d501dfaf6f
 topic_type:
 - apiref
-ms.openlocfilehash: 715ff5d4a06b53361d550f04e5154023d0b641bb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9020fed83b1c57cae3cc492872a279afb0195983
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73095116"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205168"
 ---
 # <a name="icordebugilframe2enumeratetypeparameters-method"></a>ICorDebugILFrame2::EnumerateTypeParameters 메서드
-이 프레임의 <xref:System.Type> 매개 변수를 포함 하는 ICorDebugTypeEnum 개체를 가져옵니다.  
+이 프레임의 매개 변수를 포함 하는 ICorDebugTypeEnum 개체를 가져옵니다 <xref:System.Type> .  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,16 +39,16 @@ HRESULT EnumerateTypeParameters (
   
  형식 매개 변수 목록에는 클래스 형식 매개 변수 (있는 경우)와 메서드 형식 매개 변수 (있는 경우)가 포함 됩니다.  
   
-## <a name="remarks"></a>주의  
- [IMetaDataImport2:: EnumGenericParams](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-enumgenericparams-method.md) 메서드를 사용 하 여이 목록에 포함 된 클래스 형식 매개 변수 및 메서드 형식 매개 변수의 수를 확인 합니다.  
+## <a name="remarks"></a>설명  
+ [IMetaDataImport2:: EnumGenericParams](../metadata/imetadataimport2-enumgenericparams-method.md) 메서드를 사용 하 여이 목록에 포함 된 클래스 형식 매개 변수 및 메서드 형식 매개 변수의 수를 확인 합니다.  
   
  형식 매개 변수는 항상 사용할 수 있는 것은 아닙니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

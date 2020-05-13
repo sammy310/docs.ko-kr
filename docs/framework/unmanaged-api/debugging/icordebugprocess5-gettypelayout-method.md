@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bd62f5d1-e874-41f1-81e5-a29a7572c15d
 topic_type:
 - apiref
-ms.openlocfilehash: 306d881c05c2fcdb15a53a439bfce6eff3afffa8
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 861af4ba9c6f4d4bdb16abb9d4e1fd79debac59b
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792306"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205572"
 ---
 # <a name="icordebugprocess5gettypelayout-method"></a>ICorDebugProcess5::GetTypeLayout 메서드
 형식 식별자를 기반으로 메모리에 있는 개체의 레이아웃에 대 한 정보를 가져옵니다.  
@@ -38,19 +38,19 @@ HRESULT GetTypeLayout(    [in] COR_TYPEID id,     [out] COR_TYPE_LAYOUT *pLayout
  `pLayout`  
  제한이 메모리에 있는 개체의 레이아웃에 대 한 정보를 포함 하는 [COR_TYPE_LAYOUT](cor-type-layout-structure.md) 구조체에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>주의  
- `ICorDebugProcess5::GetTypeLayout` 메서드는 여러 다른 [ICorDebugProcess5](icordebugprocess5-interface.md) 메서드에서 반환 되는 [COR_TYPEID](cor-typeid-structure.md)를 기반으로 하는 개체에 대 한 정보를 제공 합니다. 이 정보는 메서드에 의해 채워지는 [COR_TYPE_LAYOUT](cor-type-layout-structure.md) 구조에 의해 제공 됩니다.  
+## <a name="remarks"></a>설명  
+ `ICorDebugProcess5::GetTypeLayout`메서드는 다양 한 [ICorDebugProcess5](icordebugprocess5-interface.md) 메서드에서 반환 하는 [COR_TYPEID](cor-typeid-structure.md)에 따라 개체에 대 한 정보를 제공 합니다. 이 정보는 메서드에 의해 채워지는 [COR_TYPE_LAYOUT](cor-type-layout-structure.md) 구조에 의해 제공 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [COR_TYPE_LAYOUT 구조체](cor-type-layout-structure.md)
 - [ICorDebugProcess5 인터페이스](icordebugprocess5-interface.md)

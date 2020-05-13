@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 27967230-144f-40d3-9e23-961d0241abd9
 topic_type:
 - apiref
-ms.openlocfilehash: 887d207aea3de9296107c041816606b2f5947406
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7a089831c39c36b0f8a0c7746e95a96e4ddfc5d9
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124024"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209398"
 ---
 # <a name="icordebugfunctiongetclass-method"></a>ICorDebugFunction::GetClass 메서드
 이 함수가 멤버인 클래스를 나타내는 ICorDebugClass 개체를 가져옵니다.  
@@ -35,13 +35,13 @@ HRESULT GetClass (
   
 ## <a name="parameters"></a>매개 변수  
  `ppClass`  
- 제한이 클래스를 나타내는 `ICorDebugClass` 개체의 주소에 대 한 포인터 이거나,이 함수가 클래스의 멤버가 아닌 경우 null입니다.  
+ 제한이 클래스를 나타내는 개체의 주소에 대 한 포인터 `ICorDebugClass` 이거나,이 함수가 클래스의 멤버가 아닌 경우 null입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 78b0f14f-2fae-4e63-8412-4df119ee8468
 topic_type:
 - apiref
-ms.openlocfilehash: e7125d923fb1d3757bb4ca53f5a7db806b241dd9
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 612b63ba9aa3504cab5196932293946d486955ce
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76781521"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210204"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>ICorDebugManagedCallback2::Exception 메서드
 예외 처리기에 대 한 검색이 시작 되었음을 디버거에 알립니다.  
@@ -46,10 +46,10 @@ HRESULT Exception (
  진행 예외가 throw 된 스레드를 나타내는 ICorDebugThread 개체에 대 한 포인터입니다.  
   
  `pFrame`  
- 진행 `dwEventType` 매개 변수에 의해 결정 되는 프레임을 나타내는 ICorDebugFrame 개체에 대 한 포인터입니다. 자세한 내용은 주의 섹션의 표를 참조 하십시오.  
+ 진행 매개 변수에 의해 결정 되는 프레임을 나타내는 ICorDebugFrame 개체에 대 한 포인터입니다 `dwEventType` . 자세한 내용은 주의 섹션의 표를 참조 하십시오.  
   
  `nOffset`  
- 진행 `dwEventType` 매개 변수에 의해 결정 되는 오프셋을 지정 하는 정수입니다. 자세한 내용은 주의 섹션의 표를 참조 하십시오.  
+ 진행 매개 변수에 의해 결정 되는 오프셋을 지정 하는 정수입니다 `dwEventType` . 자세한 내용은 주의 섹션의 표를 참조 하십시오.  
   
  `dwEventType`  
  진행 이 예외 콜백의 형식을 지정 하는 CorDebugExceptionCallbackType 열거형의 값입니다.  
@@ -57,12 +57,12 @@ HRESULT Exception (
  `dwFlags`  
  진행 예외에 대 한 추가 정보를 지정 하는 [Cordebugexceptionflags](cordebugexceptionflags-enumeration.md) 열거형의 값입니다.  
   
-## <a name="remarks"></a>주의  
- `Exception` 콜백은 예외 처리 프로세스의 검색 단계 중에 다양 한 지점에서 호출 됩니다. 즉, 예외를 해제 하는 동안 두 번 이상 호출할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ `Exception`콜백은 예외 처리 프로세스의 검색 단계 중에 다양 한 지점에서 호출 됩니다. 즉, 예외를 해제 하는 동안 두 번 이상 호출할 수 있습니다.  
   
- 처리 되는 예외는 `pThread` 매개 변수에서 참조 하는 ICorDebugThread 개체에서 검색할 수 있습니다.  
+ 처리 되는 예외는 매개 변수에서 참조 하는 ICorDebugThread 개체에서 검색할 수 있습니다 `pThread` .  
   
- 특정 프레임과 오프셋은 다음과 같이 `dwEventType` 매개 변수에 의해 결정 됩니다.  
+ 특정 프레임과 오프셋은 매개 변수에 의해 다음과 같이 결정 됩니다 `dwEventType` .  
   
 |`dwEventType`의 값|`pFrame`의 값|`nOffset`의 값|  
 |----------------------------|-----------------------|------------------------|  
@@ -72,15 +72,15 @@ HRESULT Exception (
 |DEBUG_EXCEPTION_UNHANDLED|NULL|정의되지 않았습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugManagedCallback2 인터페이스](icordebugmanagedcallback2-interface.md)
 - [ICorDebugManagedCallback 인터페이스](icordebugmanagedcallback-interface.md)

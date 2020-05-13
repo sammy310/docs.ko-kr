@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 93f79627-bd31-4f4f-b95d-46a032a52fe4
 topic_type:
 - apiref
-ms.openlocfilehash: bf9ea40cc81be37499e6729006e7177a8000c000
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: f850b3cd35fda8bd554b99e14553100008cb4eca
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793294"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83208527"
 ---
 # <a name="icordebugmanagedcallback2mdanotification-method"></a>ICorDebugManagedCallback2::MDANotification 메서드
 코드 실행이 디버깅 중인 응용 프로그램에서 MDA (관리 디버깅 도우미)를 발견 한 알림을 제공 합니다.  
@@ -44,33 +44,33 @@ HRESULT MDANotification(
  `pThread`  
  진행 디버그 이벤트가 발생 한 관리 되는 스레드를 노출 하는 ICorDebugThread 인터페이스에 대 한 포인터입니다.  
   
- MDA가 관리 되지 않는 스레드에서 발생 한 경우 `pThread` 값은 null이 됩니다.  
+ MDA가 관리 되지 않는 스레드에서 발생 한 경우의 값은 `pThread` null입니다.  
   
  MDA 개체 자체에서 OS (운영 체제) 스레드 ID를 가져와야 합니다.  
   
  `pMDA`  
  진행 MDA 정보를 노출 하는 [ICorDebugMDA](icordebugmda-interface.md) 인터페이스에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  MDA는 추론 경고 이며, 디버깅 중인 응용 프로그램의 실행을 계속 하기 위해 [ICorDebugController::](icordebugcontroller-continue-method.md) 를 호출 하는 경우를 제외 하 고 명시적 디버거 작업이 필요 하지 않습니다.  
   
  CLR (공용 언어 런타임)은 언제 든 지 어떤 mda가 발생 하는지, 어느 시점에서 어떤 데이터가 지정 된 MDA에 있는지를 확인할 수 있습니다. 따라서 디버거는 특정 MDA 패턴이 필요한 기능을 빌드하지 않아야 합니다.  
   
  Mda가 발생 한 후 mda가 큐에 대기 되 고 즉시 실행 될 수 있습니다. 런타임에서 mda를 발생 시킬 때 mda를 실행 하는 대신 MDA를 실행 하는 안전한 지점에 도달할 때까지 대기 해야 하는 경우이 문제가 발생할 수 있습니다. 또한 런타임은 대기 중인 콜백 집합 하나에서 많은 Mda를 실행할 수 있습니다 ("연결" 이벤트 작업과 유사).  
   
- 디버거는 CLR이 MDA에서 사용 하는 메모리를 재활용할 수 있도록 `MDANotification` 콜백에서 반환한 후 즉시 `ICorDebugMDA` 인스턴스에 대 한 참조를 해제 해야 합니다. 인스턴스를 해제 하면 많은 Mda가 발생 하는 경우 성능이 향상 될 수 있습니다.  
+ 디버거는 콜백에서 반환 된 직후 인스턴스에 대 한 참조를 해제 `ICorDebugMDA` 하 여 `MDANotification` CLR이 MDA에서 사용 하는 메모리를 재활용할 수 있도록 해야 합니다. 인스턴스를 해제 하면 많은 Mda가 발생 하는 경우 성능이 향상 될 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [관리 디버깅 도우미를 사용하여 오류 진단](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [관리 디버깅 도우미를 사용하여 오류 진단](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [ICorDebugManagedCallback2 인터페이스](icordebugmanagedcallback2-interface.md)
 - [ICorDebugManagedCallback 인터페이스](icordebugmanagedcallback-interface.md)

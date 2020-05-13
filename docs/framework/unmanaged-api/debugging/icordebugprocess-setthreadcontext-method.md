@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a7b50175-2bf1-40be-8f65-64aec7aa1247
 topic_type:
 - apiref
-ms.openlocfilehash: 66d544bbc0511ea76565376c8f10294f1758026b
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c9e403dc8cbb75a1e93c426a9e0b3a2083f1f10e
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792566"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210464"
 ---
 # <a name="icordebugprocesssetthreadcontext-method"></a>ICorDebugProcess::SetThreadContext 메서드
 이 프로세스의 지정 된 스레드에 대 한 컨텍스트를 설정 합니다.  
@@ -47,18 +47,18 @@ HRESULT SetThreadContext(
   
  컨텍스트는 스레드가 실행 되는 프로세서의 아키텍처를 지정 합니다.  
   
-## <a name="remarks"></a>주의  
- 스레드가 실제로 해당 컨텍스트가 일시적으로 변경 된 "하이재킹" 상태가 될 수 있으므로 디버거가 Win32 `SetThreadContext` 함수 대신이 메서드를 호출 해야 합니다. 이 메서드는 스레드가 네이티브 코드에 있는 경우에만 사용 해야 합니다. 관리 코드에서 스레드에 대해 [ICorDebugRegisterSet](icordebugregisterset-interface.md) 를 사용 합니다. OOB (대역 외) 디버그 이벤트 중에는 스레드의 컨텍스트를 수정할 필요가 없습니다.  
+## <a name="remarks"></a>설명  
+ `SetThreadContext`스레드가 실제로 해당 컨텍스트가 일시적으로 변경 된 "하이재킹" 상태가 될 수 있으므로 디버거가 Win32 함수 대신이 메서드를 호출 해야 합니다. 이 메서드는 스레드가 네이티브 코드에 있는 경우에만 사용 해야 합니다. 관리 코드에서 스레드에 대해 [ICorDebugRegisterSet](icordebugregisterset-interface.md) 를 사용 합니다. OOB (대역 외) 디버그 이벤트 중에는 스레드의 컨텍스트를 수정할 필요가 없습니다.  
   
  전달 된 데이터는 현재 플랫폼에 대 한 컨텍스트 구조 여야 합니다.  
   
  이 메서드는 부적절 하 게 사용 되는 경우 런타임을 손상 시킬 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

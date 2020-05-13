@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 13d89a4a-5d9d-4a79-9600-5e2a98c3d166
 topic_type:
 - apiref
-ms.openlocfilehash: 0682c0786182422587adb976ff6bc2455b9e5cdc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 13b100012215a7c2cee51ad5af39ec1447ab4e5b
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128942"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207508"
 ---
 # <a name="icordebugobjectvalueisvalueclass-method"></a>ICorDebugObjectValue::IsValueClass 메서드
 이 개체 값이 값 형식 인지 여부를 나타내는 값을 가져옵니다.  
@@ -35,15 +35,15 @@ HRESULT IsValueClass (
   
 ## <a name="parameters"></a>매개 변수  
  `pbIsValueClass`  
- 제한이 이 "ICorDebugObjectValue"로 표현 되는 개체 값이 참조 형식이 아닌 값 형식인 경우 `true` 되는 부울 값에 대 한 포인터입니다. 그렇지 않으면 `pbIsValueClass` `false`됩니다.  
+ 제한이 `true`이 "ICorDebugObjectValue"로 표시 되는 개체 값이 참조 형식이 아닌 값 형식이 면이 고, 그렇지 않으면 인 부울 값에 대 한 포인터입니다 `pbIsValueClass` . `false`  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목

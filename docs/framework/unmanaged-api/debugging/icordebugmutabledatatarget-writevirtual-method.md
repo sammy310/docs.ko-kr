@@ -2,12 +2,12 @@
 title: ICorDebugMutableDataTarget::WriteVirtual 메서드
 ms.date: 03/30/2017
 ms.assetid: 80833648-58a7-491a-8dc8-9a48e9bb3adc
-ms.openlocfilehash: 2b4bd1dc97f37f5a514ab54f9e4d778fe3b91736
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 6325dba99fba0ab5e2f752a0635fdd428d3065eb
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792829"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83206748"
 ---
 # <a name="icordebugmutabledatatargetwritevirtual-method"></a>ICorDebugMutableDataTarget::WriteVirtual 메서드
 대상 프로세스 주소 공간에 메모리를 씁니다.  
@@ -31,22 +31,22 @@ HRESULT WriteVirtual(
  `address`  
  [in] `pBuffer`의 바이트 수입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  성공하면 `S_OK`이고 실패하면 다른 `HRESULT`입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  바이트를 쓸 수 없는 경우 대상 주소 공간의 바이트를 변경하지 않고 메서드 호출이 실패합니다. 그러지 않으면 대상이 일관성 없는 상태가 되어 이후 디버깅을 신뢰할 수 없습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugMutableDataTarget 인터페이스](icordebugmutabledatatarget-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

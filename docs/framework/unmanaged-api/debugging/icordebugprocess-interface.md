@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: be86f4b5-418a-4c5c-a67c-97148c65ed8c
 topic_type:
 - apiref
-ms.openlocfilehash: b2429052173a187297b67c756213e5d27a79298b
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ab48efccc88787f099a182627777db95304cdc3e
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792599"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212076"
 ---
 # <a name="icordebugprocess-interface"></a>ICorDebugProcess 인터페이스
 관리 코드를 실행하는 프로세스를 나타냅니다. 이 인터페이스는 ICorDebugController의 서브 클래스입니다.  
@@ -43,24 +43,24 @@ ms.locfileid: "76792599"
 |[ModifyLogSwitch 메서드](icordebugprocess-modifylogswitch-method.md)|지정 된 로그 스위치의 심각도 수준을 설정 합니다.|  
 |[ReadMemory 메서드](icordebugprocess-readmemory-method.md)|프로세스에서 메모리를 읽습니다.|  
 |[SetThreadContext 메서드](icordebugprocess-setthreadcontext-method.md)|지정 된 스레드에 대 한 컨텍스트를 설정 합니다.|  
-|[ThreadForFiberCookie 메서드](icordebugprocess-threadforfibercookie-method.md)|사용되지 않음.|  
+|[ThreadForFiberCookie 메서드](icordebugprocess-threadforfibercookie-method.md)|사용되지 않습니다.|  
 |[WriteMemory 메서드](icordebugprocess-writememory-method.md)|프로세스의 메모리 영역에 데이터를 씁니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
   
 > [!NOTE]
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebug 인터페이스](icordebug-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

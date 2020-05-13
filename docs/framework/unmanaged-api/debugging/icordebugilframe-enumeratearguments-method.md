@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00ac81e2-a774-422a-bd88-54a4b3c99f73
 topic_type:
 - apiref
-ms.openlocfilehash: d74c5a6f966201c8ca9d2854de2e9986e7f1d0fa
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3945b1dea62dc0616d669356faf60f0d09cfb084
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131036"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210308"
 ---
 # <a name="icordebugilframeenumeratearguments-method"></a>ICorDebugILFrame::EnumerateArguments 메서드
 이 프레임의 인수에 대 한 열거자를 가져옵니다.  
@@ -37,14 +37,14 @@ HRESULT EnumerateArguments (
  `ppValueEnum`  
  제한이 이 프레임의 인수에 대 한 열거자 인 ICorDebugValueEnum 개체의 주소에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>주의  
- `EnumerateArguments`이 ICorDebugILFrame 개체가 나타내는 호출 프레임에서 사용할 수 있는 인수를 나열할 수 있는 열거자를 가져옵니다. 이 목록에는 `vararg`되지 않은 인수 뿐만 아니라 [vararg](/cpp/windows/vararg) (인수 개수) 인 인수가 포함 됩니다.  
+## <a name="remarks"></a>설명  
+ `EnumerateArguments`이 ICorDebugILFrame 개체가 나타내는 호출 프레임에서 사용할 수 있는 인수를 나열할 수 있는 열거자를 가져옵니다. 이 목록에는 [vararg](/cpp/windows/vararg) (즉, 인수의 가변 수) 및이 아닌 인수에 해당 하는 인수가 포함 됩니다 `vararg` .  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
