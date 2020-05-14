@@ -401,6 +401,8 @@
       href: versions/selection.md
 - name: RID(런타임 식별자) 카탈로그
   href: rid-catalog.md
+- name: 리소스 매니페스트 이름
+  href: resources/manifest-file-names.md
 - name: 종속성 관리 및 로딩
   items:
     - name: 종속성 관리

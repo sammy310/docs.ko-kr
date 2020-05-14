@@ -463,18 +463,17 @@
           href: localization-attributes-and-comments.md
         - name: WPF의 양방향 기능 개요
           href: bidirectional-features-in-wpf-overview.md
-        - name: 방법 항목
-          href: globalization-and-localization-how-to-topics.md
+        - name: 방법
           items:
-            - name: 애플리케이션 지역화
+            - name: 앱 지역화
               href: how-to-localize-an-application.md
             - name: 자동 레이아웃을 사용하여 단추 만들기
               href: how-to-use-automatic-layout-to-create-a-button.md
-            - name: 자동 레이아웃에 눈금 사용
+            - name: 자동 레이아웃에 그리드 사용
               href: how-to-use-a-grid-for-automatic-layout.md
-            - name: ResourceDictionary를 사용하여 지역화 가능한 문자열 리소스 관리
+            - name: ResourceDictionary를 사용하여 리소스 관리
               href: how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md
-            - name: 지역화 가능한 애플리케이션에서 리소스 사용
+            - name: 지역화할 수 있는 애플리케이션에서 리소스 사용
               href: how-to-use-resources-in-localizable-applications.md
     - name: 레이아웃
       href: layout.md
