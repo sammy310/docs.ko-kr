@@ -2,12 +2,12 @@
 title: ICorDebugVariableSymbol::SetValue 메서드
 ms.date: 03/30/2017
 ms.assetid: 4609418d-71fa-44bc-9618-4d529d25cabb
-ms.openlocfilehash: fe6b63e4c0706dd69478753b3512f606e73bee7c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 38afd355938ec1beb1dbfd33de36116d25b07b4e
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790850"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83397071"
 ---
 # <a name="icordebugvariablesymbolsetvalue-method"></a>ICorDebugVariableSymbol::SetValue 메서드
 바이트 배열의 값을 변수에 할당합니다.  
@@ -44,19 +44,19 @@ HRESULT SetValue(
  `pValue`  
  [in] 설정할 값이 들어 있는 버퍼입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
   
 > [!NOTE]
 > 이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>참조
 

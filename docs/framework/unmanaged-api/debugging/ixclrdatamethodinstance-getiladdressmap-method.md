@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataMethodInstance::GetILAddressMap 메서드
+title: 'IXCLRDataMethodInstance:: GetILAddressMap 메서드'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataMethodInstance::GetILAddressMap Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 66e4768acff7ab735c6ac9e8f8f51a9511f7e371
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7c4dcf59ce159434d5012120043f5bb548d49731
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744690"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396810"
 ---
-# <a name="ixclrdatamethodinstancegetiladdressmap-method"></a>IXCLRDataMethodInstance::GetILAddressMap 메서드
+# <a name="ixclrdatamethodinstancegetiladdressmap-method"></a>IXCLRDataMethodInstance:: GetILAddressMap 메서드
 
-IL을 주소 매핑 정보를 가져옵니다.
+매핑 정보를 처리 하는 IL을 가져옵니다.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -41,26 +41,26 @@ HRESULT GetILAddressMap(
 ## <a name="parameters"></a>매개 변수
 
 `mapLen`\
-[in] 제공 된 맵 배열의 길이입니다.
+진행 제공 된 맵 배열의 길이입니다.
 
 `mapNeeded`\
-[out] 메서드는 맵 항목의 수입니다.
+제한이 메서드에 필요한 맵 항목 수입니다.
 
 `maps`\
-[out, size_is(mapLen)] 맵 항목을 저장 하기 위한 배열입니다.
+[out, size_is (mapLen)] 맵 항목을 저장 하는 배열입니다.
 
 ## <a name="remarks"></a>설명
 
-제공 된 메서드는의 일부는 `IXCLRDataMethodInstance` 인터페이스 및 가상 메서드 테이블의 14 슬롯에 해당 합니다.
+제공 된 메서드는 인터페이스의 일부 이며 `IXCLRDataMethodInstance` 가상 메서드 테이블의 15 번째 슬롯에 해당 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
-**헤더:** 없음  
-**라이브러리:** 없음  
-**.NET Framework 버전:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+**헤더:** 없음을  
+**라이브러리:** 없음을  
+**.NET Framework 버전:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [디버깅](index.md)
 - [IXCLRDataMethodInstance 인터페이스](ixclrdatamethodinstance-interface.md)

@@ -2,12 +2,12 @@
 title: EShopOnContainers 참조 앱 소개
 description: ASP.NET Core 및 Azure에 대 한 eShopOnContainers Cloud 기본 마이크로 서비스 참조 앱 소개
 ms.date: 06/30/2019
-ms.openlocfilehash: 8d4ad982716a07613ebbef6668afab69d5a8b4f6
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: b97b62268db1d9990f762d9769233ad72551c226
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895534"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395395"
 ---
 # <a name="introducing-eshoponcontainers-reference-app"></a>EShopOnContainers 참조 앱 소개
 

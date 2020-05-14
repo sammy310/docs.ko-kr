@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataMethodInstance::GetRepresentativeEntryAddress 메서드
+title: 'IXCLRDataMethodInstance:: GetRepresentativeEntryAddress 메서드'
 ms.date: 02/01/2019
 api.name:
 - IXCLRDataMethodInstance::GetRepresentativeEntryAddress
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 5c79e916a06e796fc87b57eb949cccda77b8a9bd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d9f9e16d243c0f3b45ac24776caea5bb9c32dcc1
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744655"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395744"
 ---
-# <a name="ixclrdatamethodinstancegetrepresentativeentryaddress-method"></a>IXCLRDataMethodInstance::GetRepresentativeEntryAddress 메서드
+# <a name="ixclrdatamethodinstancegetrepresentativeentryaddress-method"></a>IXCLRDataMethodInstance:: GetRepresentativeEntryAddress 메서드
 
-모든 가능한 진입점 메서드에 대 한 네이티브 컴파일에 대 한 가장 대표적인 진입점 주소를 가져옵니다.
+메서드에 대 한 모든 가능한 진입점의 네이티브 컴파일에 대 한 가장 대표적인 진입점 주소를 가져옵니다.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -39,20 +39,20 @@ HRESULT GetRepresentativeEntryAddress(
 ## <a name="parameters"></a>매개 변수
 
 `addr`\
-[out] 가장 대표적인 네이티브 진입점의 메서드에 대 한 주소입니다.
+제한이 메서드에 대 한 가장 대표적인 기본 진입점의 주소입니다.
 
 ## <a name="remarks"></a>설명
 
-제공 된 메서드는의 일부를 [ `IXCLRDataMethodInstance` 인터페이스](ixclrdatamethodinstance-interface.md) 가상 메서드 테이블의 19 슬롯에 해당 합니다.
+제공 된 메서드는 [ `IXCLRDataMethodInstance` 인터페이스](ixclrdatamethodinstance-interface.md) 의 일부 이며 가상 메서드 테이블의 20 슬롯에 해당 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
-**헤더:** 없음  
-**라이브러리:** 없음  
-**.NET Framework 버전:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+**헤더:** 없음을  
+**라이브러리:** 없음을  
+**.NET Framework 버전:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [디버깅](index.md)
 - [IXCLRDataMethodInstance 인터페이스](ixclrdatamethodinstance-interface.md)

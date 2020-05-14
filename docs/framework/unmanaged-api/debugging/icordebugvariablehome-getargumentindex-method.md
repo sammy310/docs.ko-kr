@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e86fcc72-388d-4009-ab21-8f9c3323e9a3
 topic_type:
 - apiref
-ms.openlocfilehash: 12d4e63480f03bfad613f30362ddaeaf12b57a88
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 27a676fd1d2d7903943e44f8a7201b88af4fba89
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791043"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83397000"
 ---
 # <a name="icordebugvariablehomegetargumentindex-method"></a>ICorDebugVariableHome:: GetArgumentIndex 메서드
 
@@ -43,24 +43,24 @@ HRESULT GetArgumentIndex(
 
 메서드는 다음 값을 반환 합니다.
 
-|값|설명|
+|값|Description|
 |-----------|-----------------|
 |`S_OK`|메서드 호출에서 유효한 인수 인덱스를 반환 했습니다.|
 |`E_FAIL`|현재 [ICorDebugVariableHome](icordebugvariablehome-interface.md) 인스턴스는 지역 변수를 나타냅니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 인수 인덱스는이 인수에 대 한 메타 데이터를 검색 하는 데 사용할 수 있습니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.
+**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.
 
 **헤더:** CorDebug.idl, CorDebug.h
 
 **라이브러리:** CorGuids.lib
 
-**.NET Framework 버전:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]
+**.NET Framework 버전:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]
 
 ## <a name="see-also"></a>참조
 

@@ -2,12 +2,12 @@
 title: ICorDebugVariableSymbol::GetValue 메서드
 ms.date: 03/30/2017
 ms.assetid: 90abece1-392e-4ade-94a1-30c75b0f7074
-ms.openlocfilehash: 2dc074384d209d0740a1fb0a9a16d96ff355f02b
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: f217f7226d53a27363f66eb90a340fd3604a0217
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790875"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396512"
 ---
 # <a name="icordebugvariablesymbolgetvalue-method"></a>ICorDebugVariableSymbol::GetValue 메서드
 변수의 값을 바이트 배열로 가져옵니다.  
@@ -44,19 +44,19 @@ HRESULT GetValue(
  `pValue`  
  [out] 변수의 값을 포함하는 바이트 배열입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
   
 > [!NOTE]
 > 이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>참조
 

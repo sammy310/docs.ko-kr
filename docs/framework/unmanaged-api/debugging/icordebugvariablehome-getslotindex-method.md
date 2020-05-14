@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 966da50d-5665-4fff-bf7b-1c72bbadd9a4
 topic_type:
 - apiref
-ms.openlocfilehash: 542bfa05c55ef224d1b9111f9af6c069e9e23542
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0bffd2db0a4a061a8629ff50a03a319feec6d836
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790965"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396560"
 ---
 # <a name="icordebugvariablehomegetslotindex-method"></a>ICorDebugVariableHome:: GetSlotIndex 메서드
 지역 변수의 관리 되는 슬롯 인덱스를 가져옵니다.  
@@ -40,22 +40,22 @@ HRESULT GetSlotIndex(
 ## <a name="return-value"></a>반환 값  
  메서드는 다음 값을 반환 합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
-|`S_OK`|메서드 호출이 `pSlotIndex`슬롯 인덱스 값을 반환 했습니다.|  
+|`S_OK`|메서드 호출이에서 슬롯 인덱스 값을 반환 했습니다 `pSlotIndex` .|  
 |`E_FAIL`|현재 [ICorDebugVariableHome](icordebugvariablehome-interface.md) 인스턴스는 함수 인수를 나타냅니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  슬롯 인덱스를 사용 하 여이 지역 변수에 대 한 메타 데이터를 검색할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>참조
 

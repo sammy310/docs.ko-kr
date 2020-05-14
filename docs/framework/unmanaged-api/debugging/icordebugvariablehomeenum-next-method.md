@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eb9ea96c-5b58-4655-8104-094fc8b393b8
 topic_type:
 - apiref
-ms.openlocfilehash: 2bb6fee00bb99555bc19f35e1250880cc3985f7f
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 980f563d3b11fbfcce48b6d7c05275af520e14f1
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790935"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396498"
 ---
 # <a name="icordebugvariablehomeenumnext-method"></a>ICorDebugVariableHomeEnum:: Next 메서드
 함수의 지역 변수 및 인수에 대 한 정보를 포함 하는 지정 된 수의 [ICorDebugVariableHome](icordebugvariablehome-interface.md) 인스턴스를 가져옵니다.  
@@ -48,22 +48,22 @@ HRESULT Next(
 ## <a name="return-value"></a>반환 값  
  메서드는 다음 값을 반환 합니다.  
   
-|HRESULT|설명|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|`S_OK`|메서드가 성공적으로 완료되었습니다.|  
-|`S_FALSE`|`pceltFetched`에 반영 되어 검색 된 인스턴스의 실제 수가 요청 된 인스턴스 수보다 짧습니다.|  
+|`S_OK`|메서드가 완료되었습니다.|  
+|`S_FALSE`|에 반영 된 대로 검색 된 인스턴스의 실제 수가 `pceltFetched` 요청 된 인스턴스 수보다 작은 경우|  
   
-## <a name="remarks"></a>주의  
- [ICorDebugVariableHomeEnum:: Next](icordebugvariablehomeenum-next-method.md) 메서드는 열거자의 현재 위치에서 시작 하 여 최대 `celt` 개체를 검색 합니다. 메서드가 반환 될 때 검색 된 개체의 실제 수를 포함 하 `pceltFetched`입니다.  
+## <a name="remarks"></a>설명  
+ [ICorDebugVariableHomeEnum:: Next](icordebugvariablehomeenum-next-method.md) 메서드는 `celt` 열거자의 현재 위치에서 시작 하 여 개체의 최대값을 검색 합니다. 메서드가 반환 될 때 `pceltFetched` 검색 된 개체의 실제 수를 포함 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>참조
 

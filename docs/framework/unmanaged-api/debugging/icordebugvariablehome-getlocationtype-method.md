@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 88027c55-8ec6-4f1e-a55b-7eefdbbc3515
 topic_type:
 - apiref
-ms.openlocfilehash: 5d33c917ab814083ec2f3a3f3de6bdc264d90b77
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 8874deede8b46b93df0e298fb3970fa153b51415
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791014"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396568"
 ---
 # <a name="icordebugvariablehomegetlocationtype-method"></a>ICorDebugVariableHome:: GetLocationType 메서드
 변수의 네이티브 위치 유형을 가져옵니다.  
@@ -38,13 +38,13 @@ HRESULT GetLocationType(
  제한이 변수의 네이티브 위치 형식에 대 한 포인터입니다.  자세한 내용은 [VariableLocationType](variablelocationtype-enumeration.md) 열거형을 참조 하세요.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>참조
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 376fb03f-f1ef-4107-baa4-4d9d55884862
 topic_type:
 - apiref
-ms.openlocfilehash: e90952a92c408762a98a2bfcb91b6aeb72052df1
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0e480db953131d7771e493a8f367154a7d17dada
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791212"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396635"
 ---
 # <a name="icordebugtype2-interface"></a>ICorDebugType2 인터페이스
 ICorDebugType 인터페이스를 확장 하 여 기본 형식 또는 복합 (사용자 정의) 형식의 형식 식별자를 검색 합니다.  
@@ -30,13 +30,13 @@ ICorDebugType 인터페이스를 확장 하 여 기본 형식 또는 복합 (사
 |------------|-|  
 |[GetTypeID 메서드](icordebugtype2-gettypeid-method.md)|이 형식에 대 한 [COR_TYPEID](cor-typeid-structure.md) 를 가져옵니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  이 인터페이스는 ICorDebugType 인터페이스의 논리적 확장입니다.  
   
 > [!NOTE]
 > 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 조각에서는 [ICorDebugType2:: GetTypeID](icordebugtype2-gettypeid-method.md) 메서드를 사용 하는 방법을 보여 줍니다.  
   
 ```cpp  
@@ -53,13 +53,13 @@ pType2->GetTypeID(&id);
 ```  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>참조
 

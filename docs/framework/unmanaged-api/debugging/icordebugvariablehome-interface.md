@@ -16,30 +16,30 @@ helpviewer_keywords:
 ms.assetid: 76f2bf3b-759f-4eed-bce7-119415b25915
 topic_type:
 - apiref
-ms.openlocfilehash: c347346c9157fea843527c662e26ffcfba22ace4
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: caf6a24207be98be9afb10be2bd027b51405fa3b
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790964"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396546"
 ---
 # <a name="icordebugvariablehome-interface"></a>ICorDebugVariableHome 인터페이스
 함수의 지역 변수 또는 인수를 나타냅니다.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|설명|  
+|메서드|Description|  
 |------------|-----------------|  
 |[GetArgumentIndex 메서드](icordebugvariablehome-getargumentindex-method.md)|함수 인수의 인덱스를 가져옵니다.|  
-|[GetCode 메서드](icordebugvariablehome-getcode-method.md)|이 `ICorDebugVariableHome` 개체를 포함 하는 "ICorDebugCode" 인스턴스를 가져옵니다.|  
+|[GetCode 메서드](icordebugvariablehome-getcode-method.md)|이 개체를 포함 하는 "ICorDebugCode" 인스턴스를 가져옵니다 `ICorDebugVariableHome` .|  
 |[GetLiveRange 메서드](icordebugvariablehome-getliverange-method.md)|이 변수가 활성 상태인 기본 범위를 가져옵니다.|  
 |[GetLocationType 메서드](icordebugvariablehome-getlocationtype-method.md)|변수의 네이티브 위치 유형을 가져옵니다.|  
 |[GetOffset 메서드](icordebugvariablehome-getoffset-method.md)|변수에 대 한 기본 레지스터에서 오프셋을 가져옵니다.|  
-|[GetRegister 메서드](icordebugvariablehome-getregister-method.md)|`VLT_REGISTER`위치 형식의 변수와 `VLT_REGISTER_RELATIVE`위치 형식의 변수에 대 한 기본 레지스터를 포함 하는 레지스터를 가져옵니다.|  
+|[GetRegister 메서드](icordebugvariablehome-getregister-method.md)|위치 형식이 인 변수가 포함 된 레지스터 `VLT_REGISTER` 와 위치 형식이 인 변수에 대 한 기본 레지스터를 가져옵니다 `VLT_REGISTER_RELATIVE` .|  
 |[GetSlotIndex 메서드](icordebugvariablehome-getslotindex-method.md)|지역 변수의 관리 되는 슬롯 인덱스를 가져옵니다.|  
   
-## <a name="example"></a>예  
- 다음 코드 조각에서는 `pCode4`라는 [ICorDebugCode4](icordebugcode4-interface.md) 개체를 사용 합니다.  
+## <a name="example"></a>예제  
+ 다음 코드 조각에서는 라는 [ICorDebugCode4](icordebugcode4-interface.md) 개체를 사용 합니다 `pCode4` .  
   
 ```cpp  
 ICorDebugCode4 *pCode4 = NULL;  
@@ -81,13 +81,13 @@ for (int i = 0; i < celtFetched; i++)
 ```  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>참조
 

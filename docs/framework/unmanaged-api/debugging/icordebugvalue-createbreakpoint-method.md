@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 87af9661-b59d-4077-aabf-d59fb8673602
 topic_type:
 - apiref
-ms.openlocfilehash: c6285c244f3949b3814b875a01336532d0d7e49c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cae8ae374186e4bb9a022c11f7edab3c07ff3fa7
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137108"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395862"
 ---
 # <a name="icordebugvaluecreatebreakpoint-method"></a>ICorDebugValue::CreateBreakpoint 메서드
-`CreateBreakpoint` 메서드가 현재 구현 되어 있지 않습니다.  
+`CreateBreakpoint`메서드가 현재 구현 되어 있지 않습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,12 +34,12 @@ HRESULT CreateBreakpoint (
 ```  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참조

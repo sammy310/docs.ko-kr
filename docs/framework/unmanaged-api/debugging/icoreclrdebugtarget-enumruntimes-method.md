@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 316df866-442d-40cc-b049-45e8adcb65d1
 topic_type:
 - apiref
-ms.openlocfilehash: 4b55ac1d895bfecbe74be447bd06f4aa22b9d04f
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: fc8269d4cc22ab53569edaa48c27b4a01970dcc7
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790788"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83397181"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>ICoreClrDebugTarget::EnumRuntimes 메서드
 원격 컴퓨터에서 실행 중인 지정된 프로세스의 CLR(공용 언어 런타임)을 열거합니다.  
@@ -39,7 +39,7 @@ HRESULT EnumRuntimes (
   
 ## <a name="parameters"></a>매개 변수  
  `dwInternalProcessID`  
- [in] 런타임을 열거하려는 프로세스의 내부 프로세스 ID입니다. 이는 해당 [CoreClrDebugProcInfo](coreclrdebugprocinfo-structure.md)에서 `m_dwInternalID` 됩니다.  
+ [in] 런타임을 열거하려는 프로세스의 내부 프로세스 ID입니다. 이는 `m_dwInternalID` 해당 [CoreClrDebugProcInfo](coreclrdebugprocinfo-structure.md)에서 가져온 것입니다.  
   
  `pcRuntimes`  
  [out] `ppRuntimes`에 반환된 런타임 수입니다. 이 값은 0일 수 있습니다.  
@@ -49,7 +49,7 @@ HRESULT EnumRuntimes (
   
 ## <a name="return-value"></a>반환 값  
  S_OK  
- 명령 실행 성공  
+ 성공.  
   
  S_FALSE  
  `dwInternalProcessID`가 컴퓨터에서 실행 중인 프로세스와 일치하지 않습니다. 프로세스가 종료된 것 같습니다. `pcRuntimes` 및 `ppRuntimes`가 null이 됩니다.  
@@ -60,11 +60,11 @@ HRESULT EnumRuntimes (
  E_FAIL(또는 다른 E_ 반환 코드)  
  기타 실패  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  이 메서드에 의해 할당 된 메모리를 해제 하려면 [ICoreClrDebugTarget:: FreeMemory](icoreclrdebugtarget-freememory-method.md) 메서드를 호출 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CoreClrRemoteDebuggingInterfaces  
   
