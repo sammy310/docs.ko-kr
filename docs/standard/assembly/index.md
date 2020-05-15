@@ -1,5 +1,6 @@
 ---
 title: .NET 어셈블리
+description: 어셈블리는 .NET 기반 애플리케이션에 대한 배포, 버전 제어, 재사용, 활성화 범위 및 보안 권한의 기본 단위입니다.
 ms.date: 08/15/2019
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: b61d079a86bdd4a809d44ad128f19a7b358c8384
-ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+ms.openlocfilehash: 87030bf9770c464709559b2fb8f4c0004009e48d
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80228672"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379905"
 ---
 # <a name="assemblies-in-net"></a>.NET 어셈블리
 
