@@ -53,7 +53,7 @@ C# 7.0부터 get 및 set 접근자 모두를 식 본문 멤버로 구현할 수 
   
 - 예를 들어 인덱서는 2차원 배열에 액세스하는 경우 둘 이상의 정식 매개 변수를 사용할 수 있습니다.  
   
-## <a name="BKMK_RelatedSections"></a> 관련 섹션  
+## <a name="related-sections"></a><a name="BKMK_RelatedSections"></a> 관련 섹션  
   
 - [인덱서 사용](./using-indexers.md)  
   

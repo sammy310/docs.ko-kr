@@ -92,7 +92,7 @@ ms.locfileid: "79398072"
 
 `>>` 연산자의 오른쪽 피연산자가 시프트 수를 정의하는 방법에 대한 자세한 내용은 [시프트 연산자의 시프트 수](#shift-count-of-the-shift-operators) 섹션을 참조하세요.
 
-## <a name="logical-and-operator-"></a> 논리 AND 연산자 &amp;
+## <a name="logical-and-operator-amp"></a><a name="logical-and-operator-"></a> 논리 AND 연산자 &amp;
 
 `&` 연산자는 해당 피연산자의 비트 논리 AND를 컴퓨팅합니다.
 

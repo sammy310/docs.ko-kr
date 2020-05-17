@@ -142,7 +142,7 @@ ms.locfileid: "79398378"
   
 ### <a name="-and-124124-operators"></a>&& 및 &#124;&#124; 연산자  
   
-예외를 방지하고 불필요한 비교를 건너뛰어 성능을 개선하려면 비교를 수행할 때 다음 예제에 나와 있는 것처럼 [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) 대신 [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-)를 사용하고 [&#124;](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) 대신 [&#124;&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-)를 사용합니다.  
+예외를 방지하고 불필요한 비교를 건너뛰어 성능을 개선하려면 비교를 수행할 때 다음 예제에 나와 있는 것처럼 [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) 대신 [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-)를 사용하고 [&#124;](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) 대신 [&#124;&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-)를 사용합니다.  
   
 [!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
   
