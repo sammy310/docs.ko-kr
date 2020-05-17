@@ -92,7 +92,7 @@ ms.locfileid: "79398072"
 
 <span data-ttu-id="9b601-132">`>>` 연산자의 오른쪽 피연산자가 시프트 수를 정의하는 방법에 대한 자세한 내용은 [시프트 연산자의 시프트 수](#shift-count-of-the-shift-operators) 섹션을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9b601-132">For information about how the right-hand operand of the `>>` operator defines the shift count, see the [Shift count of the shift operators](#shift-count-of-the-shift-operators) section.</span></span>
 
-## <a name="logical-and-operator-"></a> <span data-ttu-id="9b601-133">논리 AND 연산자 &amp;</span><span class="sxs-lookup"><span data-stu-id="9b601-133">Logical AND operator &amp;</span></span>
+## <a name="logical-and-operator-amp"></a><a name="logical-and-operator-"></a> <span data-ttu-id="9b601-133">논리 AND 연산자 &amp;</span><span class="sxs-lookup"><span data-stu-id="9b601-133">Logical AND operator &amp;</span></span>
 
 <span data-ttu-id="9b601-134">`&` 연산자는 해당 피연산자의 비트 논리 AND를 컴퓨팅합니다.</span><span class="sxs-lookup"><span data-stu-id="9b601-134">The `&` operator computes the bitwise logical AND of its operands:</span></span>
 

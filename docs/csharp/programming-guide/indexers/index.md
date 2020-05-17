@@ -53,7 +53,7 @@ ms.locfileid: "79167544"
   
 - <span data-ttu-id="d1aaa-125">예를 들어 인덱서는 2차원 배열에 액세스하는 경우 둘 이상의 정식 매개 변수를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d1aaa-125">Indexers can have more than one formal parameter, for example, when accessing a two-dimensional array.</span></span>  
   
-## <a name="BKMK_RelatedSections"></a> <span data-ttu-id="d1aaa-126">관련 섹션</span><span class="sxs-lookup"><span data-stu-id="d1aaa-126">Related Sections</span></span>  
+## <a name="related-sections"></a><a name="BKMK_RelatedSections"></a> <span data-ttu-id="d1aaa-126">관련 섹션</span><span class="sxs-lookup"><span data-stu-id="d1aaa-126">Related Sections</span></span>  
   
 - [<span data-ttu-id="d1aaa-127">인덱서 사용</span><span class="sxs-lookup"><span data-stu-id="d1aaa-127">Using Indexers</span></span>](./using-indexers.md)  
   
