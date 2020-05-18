@@ -86,9 +86,11 @@
       items:
         - name: 클라우드 네이티브 앱을 위한 Azure 보안
           href: azure-security.md
-    - name: 클라우드 네이티브 DevOps
+    - name: DevOps
       href: devops.md
       items:
+        - name: 기능 플래그
+          href: feature-flags.md
         - name: 코드 제공 인프라(Infrastructure as Code)
           href: infrastructure-as-code.md
         - name: 클라우드 네이티브 애플리케이션 번들
