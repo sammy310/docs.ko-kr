@@ -1,0 +1,15 @@
+- name: .NET Core 3.1을 사용하여 Windows 10의 데스크톱 앱 현대화
+  href: index.md
+  items:
+    - name: 최신 데스크톱 애플리케이션을 사용하는 이유
+      href: why-modern-applications.md
+    - name: 데스크톱용 .NET Core의 새로운 기능
+      href: whats-new-dotnet-core.md
+    - name: 최신 데스크톱 애플리케이션 마이그레이션
+      href: migrate-modern-applications.md
+    - name: Windows 10 마이그레이션
+      href: windows-migration.md
+    - name: .NET Core 3.1로의 마이그레이션 예제
+      href: example-migration-core.md
+    - name: 최신 데스크톱 애플리케이션 배포
+      href: deploy-modern-applications.md
