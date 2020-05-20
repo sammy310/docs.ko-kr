@@ -10,7 +10,7 @@ ms.locfileid: "67804521"
 
 |   |   |
 |---|---|
-|세부 정보|Null authorizationPolicies를 사용하는 <xref:System.IdentityModel.Policy.AuthorizationContext?displayProperty=name>에 대한 호출로 반환된 <xref:System.IdentityModel.Policy.AuthorizationContext.CreateDefaultAuthorizationContext(System.Collections.Generic.IList{System.IdentityModel.Policy.IAuthorizationPolicy})?displayProperty=name>의 구현이 .NET Framework 4.6에서 변경되었습니다.|
+|세부 정보|Null authorizationPolicies를 사용하는 <xref:System.IdentityModel.Policy.AuthorizationContext.CreateDefaultAuthorizationContext(System.Collections.Generic.IList{System.IdentityModel.Policy.IAuthorizationPolicy})?displayProperty=name>에 대한 호출로 반환된 <xref:System.IdentityModel.Policy.AuthorizationContext?displayProperty=name>의 구현이 .NET Framework 4.6에서 변경되었습니다.|
 |제안 해결 방법|드문 경우이지만 사용자 지정 인증을 사용하는 WCF 앱은 다르게 동작할 수 있습니다. 이러한 경우 두 가지 방법 중 하나로 이전 동작을 복원할 수 있습니다.<ol><li>4\.6 이전 버전의 .NET Framework를 대상으로 사용하도록 앱을 다시 컴파일합니다. IIS 호스트 서비스의 경우 .NET Framework의 이전 버전을 대상으로 하려면 &lt;httpRuntime targetFramework =&quot;x.x&quot; /&gt; 요소를 사용합니다.</li><li>다음 줄을 app.config 파일의 <code>&lt;appSettings&gt;</code> 섹션에 추가합니다. <code>&lt;add key=&quot;appContext.SetSwitch:Switch.System.IdentityModel.EnableCachedEmptyDefaultAuthorizationContext&quot; value=&quot;true&quot; /&gt;</code></li></ol>|
 |범위|사소함|
 |Version|4.6|

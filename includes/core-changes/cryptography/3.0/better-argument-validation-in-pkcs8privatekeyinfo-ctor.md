@@ -12,7 +12,7 @@ ms.locfileid: "77449224"
 
 #### <a name="change-description"></a>변경 내용 설명
 
-.Net Core 3.0 미리 보기 9 이전에는 [`Pkcs8PrivateKeyInfo` 생성자](xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.%23ctor(System.Security.Cryptography.Oid,System.Nullable%7BSystem.ReadOnlyMemory%7BSystem.Byte%7D%7D,System.ReadOnlyMemory%7BSystem.Byte%7D,System.Boolean))가 `algorithmParameters`인수의 유효성을 검사하지 않았습니다.  이 인수가 잘못된 값을 나타내는 경우 생성자는 성공하지만 <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.Encode>, <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.TryEncode%2A>, <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.Encrypt%2A> 또는 <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.TryEncrypt%2A> 메서드를 호출할 경우 허용되지 않은 인수(<xref:System.ArgumentException>)에 대한 `preEncodedValue` 또는 <xref:System.Security.Cryptography.CryptographicException>이 throw됩니다.
+.Net Core 3.0 미리 보기 9 이전에는 [`Pkcs8PrivateKeyInfo` 생성자](xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.%23ctor(System.Security.Cryptography.Oid,System.Nullable%7BSystem.ReadOnlyMemory%7BSystem.Byte%7D%7D,System.ReadOnlyMemory%7BSystem.Byte%7D,System.Boolean))가 `algorithmParameters`인수의 유효성을 검사하지 않았습니다.  이 인수가 잘못된 값을 나타내는 경우 생성자는 성공하지만 <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.Encode>, <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.TryEncode%2A>, <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.Encrypt%2A> 또는 <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.TryEncrypt%2A> 메서드를 호출할 경우 허용되지 않은 인수(`preEncodedValue`)에 대한 <xref:System.ArgumentException> 또는 <xref:System.Security.Cryptography.CryptographicException>이 throw됩니다.
 
 미리 보기 9 이전의 .NET Core 3.0을 사용하여 실행하는 경우 <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.Encode> 메서드를 호출하는 경우에만 다음 코드에서 예외를 throw합니다.
 
@@ -39,7 +39,7 @@ var info = new Pkcs8PrivateKeyInfo(algorithmId, algorithmParameters, privateKey)
 
 #### <a name="recommended-action"></a>권장 조치
 
-유효한 `algorithmParameters` 값만 제공하고 예외 처리가 필요한 경우 `Pkcs8PrivateKeyInfo` 및 <xref:System.ArgumentException> 모두에 대해 <xref:System.Security.Cryptography.CryptographicException> 생성자 테스트가 호출되도록 합니다.
+유효한 `algorithmParameters` 값만 제공하고 예외 처리가 필요한 경우 <xref:System.ArgumentException> 및 <xref:System.Security.Cryptography.CryptographicException> 모두에 대해 `Pkcs8PrivateKeyInfo` 생성자 테스트가 호출되도록 합니다.
 
 ### <a name="category"></a>범주
 

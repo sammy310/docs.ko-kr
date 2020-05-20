@@ -10,7 +10,7 @@ ms.locfileid: "67802489"
 
 |   |   |
 |---|---|
-|세부 정보|.NET Framework 4.6.2 및 이전 버전에서 워크플로 작업의 Execute 메서드가 <code>null</code> 속성에 대한 <xref:System.Exception.Message> 값을 가진 예외를 throw하면 System.Activities 워크플로 런타임은 <xref:System.NullReferenceException?displayProperty=name>을 throw하여 원래 예외를 마스킹합니다. .NET Framework 4.7에서는 이전에 마스크된 예외가 throw됩니다.|
+|세부 정보|.NET Framework 4.6.2 및 이전 버전에서 워크플로 작업의 Execute 메서드가 <xref:System.Exception.Message> 속성에 대한 <code>null</code> 값을 가진 예외를 throw하면 System.Activities 워크플로 런타임은 <xref:System.NullReferenceException?displayProperty=name>을 throw하여 원래 예외를 마스킹합니다. .NET Framework 4.7에서는 이전에 마스크된 예외가 throw됩니다.|
 |제안 해결 방법|코드가 <xref:System.NullReferenceException?displayProperty=name> 처리에 의존하는 경우 사용자 지정 작업에서 throw될 수 있는 예외를 catch하도록 변경합니다.|
 |범위|사소함|
 |Version|4.7|

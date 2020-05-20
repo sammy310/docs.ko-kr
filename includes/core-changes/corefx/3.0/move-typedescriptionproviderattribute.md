@@ -22,7 +22,7 @@ ms.locfileid: "79147538"
 
 #### <a name="recommended-action"></a>권장 조치
 
-이 변경은 <xref:System.ComponentModel.TypeDescriptionProviderAttribute>등의 메서드나 형식이 특정 어셈블리에 있다고 가정하는 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> 오버로드를 호출하여 리플렉션을 통해 <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> 형식을 로드하는 애플리케이션에만 영향을 줍니다. 이 경우에는 메서드 호출에서 참조된 어셈블리를 형식의 새 어셈블리 위치에 맞게 업데이트해야 합니다.
+이 변경은 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>등의 메서드나 형식이 특정 어셈블리에 있다고 가정하는 <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> 오버로드를 호출하여 리플렉션을 통해 <xref:System.ComponentModel.TypeDescriptionProviderAttribute> 형식을 로드하는 애플리케이션에만 영향을 줍니다. 이 경우에는 메서드 호출에서 참조된 어셈블리를 형식의 새 어셈블리 위치에 맞게 업데이트해야 합니다.
 
 #### <a name="category"></a>범주
 

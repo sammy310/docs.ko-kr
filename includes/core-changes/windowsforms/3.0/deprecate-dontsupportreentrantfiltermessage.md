@@ -12,7 +12,7 @@ ms.locfileid: "75937006"
 
 #### <a name="change-description"></a>변경 내용 설명
 
-.NET Framework 4.6.1부터는 사용자 지정 `Switch.System.Windows.Forms.DontSupportReentrantFilterMessage` 구현으로 <xref:System.IndexOutOfRangeException> 메시지를 호출할 때 <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> 호환성 스위치가 가능한 <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> 예외를 해결합니다. 자세한 내용은 [완화: 사용자 지정 IMessageFilter.PreFilterMessage 구현](~/docs/framework/migration-guide/mitigation-custom-imessagefilter-prefiltermessage-implementations.md)을 참조하십시오.
+.NET Framework 4.6.1부터는 사용자 지정 <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> 구현으로 <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> 메시지를 호출할 때 `Switch.System.Windows.Forms.DontSupportReentrantFilterMessage` 호환성 스위치가 가능한 <xref:System.IndexOutOfRangeException> 예외를 해결합니다. 자세한 내용은 [완화: 사용자 지정 IMessageFilter.PreFilterMessage 구현](~/docs/framework/migration-guide/mitigation-custom-imessagefilter-prefiltermessage-implementations.md)을 참조하십시오.
 
 .NET Core에서는 `Switch.System.Windows.Forms.DontSupportReentrantFilterMessage` 스위치가 지원되지 않습니다.
 

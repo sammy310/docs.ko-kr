@@ -10,7 +10,7 @@ ms.locfileid: "67858836"
 
 |   |   |
 |---|---|
-|세부 정보|.NET Framework 4.5의 버그로 인해 행 제거와 관련된 <xref:System.Windows.Controls.DataGrid> 이벤트의 이벤트 처리기는 <xref:System.NullReferenceException?displayProperty=name>의 <xref:System.Windows.Controls.DataGrid> 또는 <xref:System.Windows.Controls.Primitives.Selector.SelectedItem?displayProperty=name> 속성에 액세스하는 경우 <xref:System.Windows.Controls.Primitives.MultiSelector.SelectedItems?displayProperty=name>이 throw될 수 있습니다.|
+|세부 정보|.NET Framework 4.5의 버그로 인해 행 제거와 관련된 <xref:System.Windows.Controls.DataGrid> 이벤트의 이벤트 처리기는 <xref:System.Windows.Controls.DataGrid>의 <xref:System.Windows.Controls.Primitives.Selector.SelectedItem?displayProperty=name> 또는 <xref:System.Windows.Controls.Primitives.MultiSelector.SelectedItems?displayProperty=name> 속성에 액세스하는 경우 <xref:System.NullReferenceException?displayProperty=name>이 throw될 수 있습니다.|
 |제안 해결 방법|이 문제는 .NET Framework 4.6에서 해결되었으며, 해당 버전의 .NET Framework로 업그레이드하여 해결할 수 있습니다.|
 |범위|사소함|
 |Version|4.5|
