@@ -1,13 +1,14 @@
 ---
 title: '방법: 워크플로 및 워크플로 서비스에 지속성 사용'
+description: 구성 파일을 사용 하 여 프로그래밍 방식으로 워크플로 및 워크플로 서비스에 지 속성을 사용 하도록 SQL 워크플로 인스턴스 저장소를 구성 하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: 2b1c8bf3-9866-45a4-b06d-ee562393e503
-ms.openlocfilehash: 5d0eeb8ad40f2f4f3349ab48487316014a561a1b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 31fe6e3f06989e9a42254747565342cf97e4b9f1
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460884"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421516"
 ---
 # <a name="how-to-enable-persistence-for-workflows-and-workflow-services"></a>방법: 워크플로 및 워크플로 서비스에 지속성 사용
 
@@ -15,7 +16,7 @@ ms.locfileid: "73460884"
 
 ## <a name="enable-persistence-for-workflows"></a>워크플로에 대해 지속성 사용
 
-<xref:System.Activities.WorkflowApplication> 클래스의 <xref:System.Activities.WorkflowApplication.InstanceStore%2A> 속성을 사용 하 여 인스턴스 저장소를 **WorkflowApplication** 과 연결할 수 있습니다. <xref:System.Activities.WorkflowApplication.Persist%2A> 메서드는 애플리케이션에 연결된 인스턴스 스토리지에 워크플로를 저장하거나 유지합니다. <xref:System.Activities.WorkflowApplication.Unload%2A> 메서드는 인스턴스 저장소에 워크플로를 유지한 다음 메모리에서 인스턴스를 언로드합니다. **Load** 메서드는 인스턴스 지 속성 저장소에 저장 된 워크플로 데이터를 사용 하 여 워크플로를 메모리로 로드 합니다.
+클래스의 속성을 사용 하 여 인스턴스 저장소를 **WorkflowApplication** 과 연결할 수 있습니다 <xref:System.Activities.WorkflowApplication.InstanceStore%2A> <xref:System.Activities.WorkflowApplication> . <xref:System.Activities.WorkflowApplication.Persist%2A> 메서드는 애플리케이션에 연결된 인스턴스 스토리지에 워크플로를 저장하거나 유지합니다. <xref:System.Activities.WorkflowApplication.Unload%2A> 메서드는 인스턴스 저장소에 워크플로를 유지한 다음 메모리에서 인스턴스를 언로드합니다. **Load** 메서드는 인스턴스 지 속성 저장소에 저장 된 워크플로 데이터를 사용 하 여 워크플로를 메모리로 로드 합니다.
 
 **Persist** 메서드는 다음 단계를 수행 합니다.
 
@@ -37,7 +38,7 @@ ms.locfileid: "73460884"
 
 ## <a name="enable-persistence-for-workflow-services-in-code"></a>코드에서 워크플로 서비스에 대해 지속성 사용
 
-<xref:System.ServiceModel.WorkflowServiceHost> 클래스의 **DurableInstancingOptions** 멤버에는 인스턴스 저장소를 **WorkflowServiceHost**와 연결 하는 데 사용할 수 있는 이름이 **InstanceStore** 인 속성이 있습니다.
+클래스의 **DurableInstancingOptions** 멤버에는 <xref:System.ServiceModel.WorkflowServiceHost> 인스턴스 저장소를 **WorkflowServiceHost**와 연결 하는 데 사용할 수 있는 이름이 **InstanceStore** 인 속성이 있습니다.
 
 ```csharp
 // wsh is an instance of WorkflowServiceHost class

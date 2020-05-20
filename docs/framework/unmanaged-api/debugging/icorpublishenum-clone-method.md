@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c9a26ea3-b8eb-4b8e-854f-9a2ca26b3b39
 topic_type:
 - apiref
-ms.openlocfilehash: afd16f1f31be9148422dd6d0be748036a8e5d99a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 38f49e8fe632e9b38ede8815de6d8865278351f9
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790655"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421204"
 ---
 # <a name="icorpublishenumclone-method"></a>ICorPublishEnum::Clone 메서드
 이 [ICorPublishEnum](icorpublishenum-interface.md) 개체의 복사본을 만듭니다.  
@@ -35,17 +35,17 @@ HRESULT Clone (
   
 ## <a name="parameters"></a>매개 변수  
  `ppEnum`  
- 제한이 이 `ICorPublishEnum` 개체의 복사본 인 `ICorPublishEnum` 개체의 주소에 대 한 포인터입니다.  
+ 제한이 `ICorPublishEnum`이 개체의 복사본 인 개체의 주소에 대 한 포인터입니다 `ICorPublishEnum` .  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorPub .idl, CorPub. h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorPublishEnum 인터페이스](icorpublishenum-interface.md)

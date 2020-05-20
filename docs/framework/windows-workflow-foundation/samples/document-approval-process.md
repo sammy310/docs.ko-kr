@@ -1,13 +1,14 @@
 ---
 title: 문서 승인 프로세스
+description: 이 샘플은 문서 승인 프로세스 시나리오에서 많은 Windows Workflow Foundation 및 Windows Communication Foundation 기능을 보여 줍니다.
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: cee43aff991f9482de7b3172174eb0e786ec1fe6
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 18b4f978e9234daf22395f0d2f6f0889d0edf966
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710842"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421412"
 ---
 # <a name="document-approval-process"></a>문서 승인 프로세스
 
@@ -18,7 +19,7 @@ ms.locfileid: "74710842"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Application\DocumentApprovalProcess`
 
@@ -78,7 +79,7 @@ ms.locfileid: "74710842"
 
 9. 승인 프로세스 워크플로의 결과가 클라이언트로 보내집니다.
 
-## <a name="using-the-sample"></a>예제 사용
+## <a name="using-the-sample"></a>샘플 사용
 
 ##### <a name="to-set-up-the-database"></a>데이터베이스를 설정하려면
 
@@ -90,7 +91,7 @@ ms.locfileid: "74710842"
 
 2. Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.
 
-3. 솔루션을 실행 하려면 **솔루션 탐색기** 에서 ApprovalManager 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 오른쪽 클릭 메뉴에서 **디버그**->새 인스턴스 **시작** 을 클릭 하 여 승인 관리자 응용 프로그램을 시작 합니다.
+3. 솔루션을 실행 하려면 **솔루션 탐색기** 에서 approvalmanager 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **Debug** -> 오른쪽 클릭 메뉴에서 디버그 새 인스턴스**시작** 을 클릭 하 여 승인 관리자 응용 프로그램을 시작 합니다.
 
     실행 준비가 되었다는 관리자의 메시지가 표시될 때까지 기다립니다.
 
@@ -140,7 +141,7 @@ ms.locfileid: "74710842"
 
 6. `UserType1` 클라이언트의 드롭다운 메뉴에서 단일 승인 유형을 선택하고 문서 이름과 콘텐츠를 입력합니다. **승인 요청**을 클릭 합니다.
 
-7. 승인을 기다리는 문서가 두 `UserType2` 클라이언트에 표시됩니다. 이를 선택 하 고 **승인**을 누르면 문서가 `UserType3` 클라이언트에 전달 됩니다.
+7. 승인을 기다리는 문서가 두 `UserType2` 클라이언트에 표시됩니다. 이를 선택 하 고 **승인**을 누르면 문서가 클라이언트에 전달 됩니다 `UserType3` .
 
     첫째 `UserType2` 정족수에서 문서를 승인하면 문서가 `UserType3` 클라이언트로 전달됩니다.
 

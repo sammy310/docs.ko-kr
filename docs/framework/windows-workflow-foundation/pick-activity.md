@@ -1,18 +1,19 @@
 ---
 title: 선택 활동
+description: Workflow Foundation에서 Pick 활동은 이벤트 트리거 집합의 모델링을 간소화 하 고 그 다음에 해당 하는 처리기를 만듭니다.
 ms.date: 03/30/2017
 ms.assetid: b3e49b7f-0285-4720-8c09-11ae18f0d53e
-ms.openlocfilehash: 672de5fd3df5e8dde6c54118503bf2a11353b116
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eb59dc20919ed2d30a48f920ad154d4b0d99c41f
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182902"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421464"
 ---
 # <a name="pick-activity"></a>선택 활동
-<xref:System.Activities.Statements.Pick> 활동은 해당 처리기 앞에 있는 이벤트 트리거 집합의 모델링을 단순화합니다.  <xref:System.Activities.Statements.Pick> 활동은 <xref:System.Activities.Statements.PickBranch> 활동 컬렉션을 포함합니다. 여기서 각 <xref:System.Activities.Statements.PickBranch>는 <xref:System.Activities.Statements.PickBranch.Trigger%2A> 활동과 <xref:System.Activities.Statements.PickBranch.Action%2A> 활동의 쌍입니다.  실행 시간에 모든 분기에 대한 트리거가 병렬로 실행됩니다.  트리거 하나가 완료되면 그에 상응하는 작업이 실행되고 다른 모든 트리거가 취소됩니다.  활동의 동작은 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] .NET Framework 3.5 <xref:System.Workflow.Activities.ListenActivity> 활동과 유사합니다. <xref:System.Activities.Statements.Pick>  
+<xref:System.Activities.Statements.Pick> 활동은 해당 처리기 앞에 있는 이벤트 트리거 집합의 모델링을 단순화합니다.  <xref:System.Activities.Statements.Pick> 활동은 <xref:System.Activities.Statements.PickBranch> 활동 컬렉션을 포함합니다. 여기서 각 <xref:System.Activities.Statements.PickBranch>는 <xref:System.Activities.Statements.PickBranch.Trigger%2A> 활동과 <xref:System.Activities.Statements.PickBranch.Action%2A> 활동의 쌍입니다.  실행 시간에 모든 분기에 대한 트리거가 병렬로 실행됩니다.  트리거 하나가 완료되면 그에 상응하는 작업이 실행되고 다른 모든 트리거가 취소됩니다.  활동의 동작은 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] <xref:System.Activities.Statements.Pick> .NET Framework 3.5 <xref:System.Workflow.Activities.ListenActivity> 활동과 비슷합니다.  
   
- 다음 [Pick 활동 사용](./samples/using-the-pick-activity.md) SDK 샘플 스크린샷에서는 분기가 두 개 있는 Pick 활동을 보여 줍니다.  한 분기에는 명령줄에서 입력을 읽는 사용자 지정 활동인 **Read input**이라는 트리거가 있습니다. 두 번째 분기에는 <xref:System.Activities.Statements.Delay> 활동 트리거가 있습니다. 읽기 **입력** 활동이 <xref:System.Activities.Statements.Delay> 활동이 완료되기 전에 <xref:System.Activities.Statements.Delay> 데이터를 수신하면 지연이 취소되고 콘솔에 인사말이 기록됩니다.  할당된 시간 안에 **Read input** 활동에 데이터가 수신되지 않으면 활동이 취소되고 시간 제한 메시지가 콘솔에 기록됩니다.  이것은 모든 작업에 제한 시간을 추가하는 데 사용되는 일반적인 패턴입니다.  
+ 다음 [Pick 활동 사용](./samples/using-the-pick-activity.md) SDK 샘플 스크린샷에서는 분기가 두 개 있는 Pick 활동을 보여 줍니다.  한 분기에는 명령줄에서 입력을 읽는 사용자 지정 활동인 **Read input**이라는 트리거가 있습니다. 두 번째 분기에는 <xref:System.Activities.Statements.Delay> 활동 트리거가 있습니다. 작업이 완료 되기 전에 **읽기 입력** 작업에서 데이터를 수신 하는 경우 <xref:System.Activities.Statements.Delay> <xref:System.Activities.Statements.Delay> 지연이 취소 되 고 인사말이 콘솔에 기록 됩니다.  할당된 시간 안에 **Read input** 활동에 데이터가 수신되지 않으면 활동이 취소되고 시간 제한 메시지가 콘솔에 기록됩니다.  이것은 모든 작업에 제한 시간을 추가하는 데 사용되는 일반적인 패턴입니다.  
   
  ![선택 활동](./media/pick-activity/pick-activity-two-branches.jpg)  
   

@@ -12,12 +12,12 @@ api_type:
 ms.assetid: b91765e4-82db-46f9-a6dc-6b80610276af
 topic_type:
 - apiref
-ms.openlocfilehash: 20e2e3f177b12221832786f4fab86635098d1989
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0586b9e184a0958b978837601db002e035881cbc
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790485"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421035"
 ---
 # <a name="ilcodekind-enumeration"></a>ILCodeKind 열거형
 [.NET Framework 4.5.2 이상 버전에서 지원됨]  
@@ -33,26 +33,26 @@ typedef enum ILCodeKind {
 } ILCodeKind;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>멤버  
   
 |멤버 이름|설명|  
 |-----------------|-----------------|  
 |`ILCODE_ORIGINAL_IL`|디버거가 ReJIT 계측의 정보에 액세스할 수 없습니다.|  
 |`ILCODE_REJIT_IL`|디버거가 ReJIT 계측의 정보에 액세스할 수 있습니다.|  
   
-## <a name="remarks"></a>주의  
- [EnumerateLocalVariablesEx](icordebugilframe4-enumeratelocalvariablesex-method.md) 및 [GetLocalVariableEx](icordebugilframe4-getlocalvariableex-method.md) 메서드에 `ILCodeKind` 열거형의 멤버를 전달하여 디버거가 프로파일러 ReJIT 계측에 추가된 변수에 액세스할 수 있는지 여부를 확인하고 디버거가 계측된 IL에 액세스할 수 있는지 여부를 확인하는 [GetCodeEx](icordebugilframe4-getcodeex-method.md) 메서드  
+## <a name="remarks"></a>설명  
+ `ILCodeKind` [EnumerateLocalVariablesEx](icordebugilframe4-enumeratelocalvariablesex-method.md) 및 [GetLocalVariableEx](icordebugilframe4-getlocalvariableex-method.md) 메서드에 열거형의 멤버를 전달 하 여 디버거가 프로파일러 ReJIT 계측에 추가 된 변수에 액세스할 수 있는지 여부와 [getcodeex](icordebugilframe4-getcodeex-method.md) 메서드에 전달 하 여 디버거가 계측 된 IL에 액세스할 수 있는지 여부를 확인할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 열거형](debugging-enumerations.md)
 - [ICorDebugILFrame4 인터페이스](icordebugilframe4-interface.md)

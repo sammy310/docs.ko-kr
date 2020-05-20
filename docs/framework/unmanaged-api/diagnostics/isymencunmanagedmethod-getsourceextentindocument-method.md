@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9c5566ab-4ec7-4b61-9753-839bb90ae78c
 topic_type:
 - apiref
-ms.openlocfilehash: b8e72745eff09c6707afe5a5f20a1ddf38b239ae
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3ac8bb3a20ce82b734a572832a9cbb75fa2568c4
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448623"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441905"
 ---
 # <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a>ISymENCUnmanagedMethod::GetSourceExtentInDocument 메서드
 특정 문서에서 메서드의 가장 작은 시작 줄과 가장 큰 끝 줄을 가져옵니다.  
@@ -39,12 +39,12 @@ HRESULT GetSourceExtentInDocument(
  진행 문서에 대 한 포인터입니다.  
   
  `pstartLine`  
- 제한이 시작 줄을 수신 하는 `ULONG32`에 대 한 포인터입니다.  
+ 제한이 시작 줄을 수신 하는에 대 한 포인터 `ULONG32` 입니다.  
   
  `pendLine`  
- 제한이 끝 줄을 수신 하는 `ULONG32`에 대 한 포인터입니다.  
+ 제한이 `ULONG32`끝 줄을 수신 하는에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
@@ -52,4 +52,4 @@ HRESULT GetSourceExtentInDocument(
   
 ## <a name="see-also"></a>참고 항목
 
-- [ISymENCUnmanagedMethod 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+- [ISymENCUnmanagedMethod 인터페이스](isymencunmanagedmethod-interface.md)

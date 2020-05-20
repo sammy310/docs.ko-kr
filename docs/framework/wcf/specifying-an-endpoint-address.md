@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: 47a7bb42ea2441ffef2fd27f26a20beceb871173
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 5ec6432d2f9cc7bf8619f59bad470c6b2cb190e0
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321128"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441021"
 ---
 # <a name="specifying-an-endpoint-address"></a>엔드포인트 주소 지정
 
@@ -20,19 +20,19 @@ WCF (Windows Communication Foundation) 서비스와의 모든 통신은 해당 �
 
 ## <a name="definition-of-an-endpoint-address"></a>엔드포인트 주소 정의
 
-WCF에서 <xref:System.ServiceModel.EndpointAddress>은 WS-ADDRESSING 표준에 정의 된 대로 끝점 참조 (EPR)를 모델링 합니다.
+WCF에서는 <xref:System.ServiceModel.EndpointAddress> ws-addressing 표준에 정의 된 대로 끝점 참조 (EPR)를 모델링 합니다.
 
-대부분 전송 주소 URI에는 네 가지 부분이 있습니다. 예를 들어이 URI `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint`는 다음과 같은 네 부분으로 구성 됩니다.
+대부분 전송 주소 URI에는 네 가지 부분이 있습니다. 예를 들어이 URI는 `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` 다음과 같은 네 부분으로 구성 됩니다.
 
 - 스키마: http:
 
-- 컴퓨터: `www.fabrikam.com`
+- 컴퓨터`www.fabrikam.com`
 
 - (선택적) 포트: 322
 
 - 경로: /mathservice.svc/secureEndpoint
 
-EPR 모델 일부에서는 각 엔드포인트 참조에 추가 식별 정보를 추가하는 일부 참조 매개 변수를 포함할 수 있습니다. WCF에서 이러한 참조 매개 변수는 <xref:System.ServiceModel.Channels.AddressHeader> 클래스의 인스턴스로 모델링 됩니다.
+EPR 모델 일부에서는 각 엔드포인트 참조에 추가 식별 정보를 추가하는 일부 참조 매개 변수를 포함할 수 있습니다. WCF에서 이러한 참조 매개 변수는 클래스의 인스턴스로 모델링 됩니다 <xref:System.ServiceModel.Channels.AddressHeader> .
 
 서비스의 엔드포인트 주소는 코드를 사용하여 명령적으로 지정하거나 구성을 통해 선언적으로 지정할 수 있습니다. 일반적으로 배포 된 서비스에 대 한 바인딩 및 주소가 서비스를 개발 하는 동안 사용 된 것과 다르기 때문에 일반적으로 코드에서 끝점을 정의 하는 것은 실용적이 지 않습니다. 일반적으로 코드 대신 구성을 사용하여 서비스 엔드포인트를 정의하는 것이 좋습니다. 바인딩 및 주소 지정 정보를 코드와 구분하면 애플리케이션을 다시 컴파일하여 재배포할 필요 없이 해당 정보를 변경할 수 있습니다. 코드 또는 구성에서 엔드포인트를 지정하지 않으면 런타임이 서비스에서 구현되는 각 계약의 각 기본 주소에 대해 기본 엔드포인트를 하나씩 추가합니다.
 
@@ -42,15 +42,15 @@ IIS를 사용하여 호스팅하는 경우 사용자는 <xref:System.ServiceMode
 
 ## <a name="defining-endpoint-addresses-in-configuration"></a>구성에서 엔드포인트 주소 정의
 
-구성 파일에서 끝점을 정의 하려면 [\<endpoint >](../configure-apps/file-schema/wcf/endpoint-element.md) 요소를 사용 합니다.
+구성 파일에서 끝점을 정의 하려면 [ \< 끝점>](../configure-apps/file-schema/wcf/endpoint-element.md) 요소를 사용 합니다.
 
-[!code-xml[S_UEHelloWorld#5](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp2.config#5)]
+[!code-xml[S_UEHelloWorld#5](./snippets/specifying-an-endpoint-address/serviceapp2.config#5)]
 
-호스팅 응용 프로그램이 서비스를 시작 하려고 시도 하는 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 메서드가 호출 되 면 시스템은 "UE를 지정 하는 이름 특성을 사용 하 여 [\<service >](../configure-apps/file-schema/wcf/service.md) 요소를 찾습니다. HelloService ". [@No__t_1service >](../configure-apps/file-schema/wcf/service.md) 요소가 발견 되 면 시스템은 지정 된 클래스를 로드 하 고 구성 파일에 제공 된 끝점 정의를 사용 하 여 끝점을 만듭니다. 이 메커니즘을 통해 두 개의 코드 줄에서 서비스를 로드하고 시작하는 동시에 해당 코드의 바인딩 및 주소 지정 정보를 유지할 수 있습니다. 이 접근 방식의 이점은 애플리케이션을 다시 컴파일하거나 다시 배포할 필요 없이 이러한 변경 작업을 수행할 수 있다는 점입니다.
+<xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>메서드가 호출 될 때 (즉, 호스팅 응용 프로그램이 서비스를 시작 하려고 할 때) 시스템은 "UE를 지정 하는 이름 특성을 사용 하 여 [ \< 서비스>](../configure-apps/file-schema/wcf/service.md) 요소를 찾습니다. HelloService ". [ \< 서비스>](../configure-apps/file-schema/wcf/service.md) 요소가 발견 되 면 시스템은 지정 된 클래스를 로드 하 고 구성 파일에 제공 된 끝점 정의를 사용 하 여 끝점을 만듭니다. 이 메커니즘을 통해 두 개의 코드 줄에서 서비스를 로드하고 시작하는 동시에 해당 코드의 바인딩 및 주소 지정 정보를 유지할 수 있습니다. 이 접근 방식의 이점은 애플리케이션을 다시 컴파일하거나 다시 배포할 필요 없이 이러한 변경 작업을 수행할 수 있다는 점입니다.
 
-선택적 헤더는 [\<headers >](../configure-apps/file-schema/wcf/headers-element.md)선언 됩니다. 다음은 두 헤더를 구별 하는 구성 파일에서 서비스에 대 한 끝점을 지정 하는 데 사용 되는 요소의 예제입니다. "골드" 클라이언트는 `http://tempuri1.org/`와 "표준" 클라이언트를 `http://tempuri2.org/` 합니다. 이 서비스를 호출 하는 클라이언트의 구성 파일에 적절 한 [\<headers >](../configure-apps/file-schema/wcf/headers-element.md) 있어야 합니다.
+선택적 헤더는 [ \<>헤더 ](../configure-apps/file-schema/wcf/headers-element.md)에 선언 됩니다. 다음은 두 헤더를 구별 하는 구성 파일에서 서비스에 대 한 끝점을 지정 하는 데 사용 되는 요소의 예제입니다. `http://tempuri1.org/` `http://tempuri2.org/` 이 서비스를 호출 하는 클라이언트의 구성 파일에>적절 한 [ \< 헤더가](../configure-apps/file-schema/wcf/headers-element.md) 있어야 합니다.
 
-[!code-xml[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]
+[!code-xml[S_UEHelloWorld#1](./snippets/specifying-an-endpoint-address/serviceapp.config#1)]
 
 또한 헤더는 이전에 설명한 것처럼 엔드포인트의 모든 메시지 대신 개별 메시지에서 설정될 수 있습니다. 이 작업은 다음 예제에서처럼 보내는 메시지에 사용자 지정 헤더를 추가하기 위해 <xref:System.ServiceModel.OperationContextScope>를 사용하여 클라이언트 애플리케이션에서 새 컨텍스트를 만들어 수행합니다.
 
@@ -86,7 +86,7 @@ IIS를 사용하여 호스팅하는 경우 사용자는 <xref:System.ServiceMode
 
 엔드포인트를 명시적으로 제공하는 경우에도 <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A>을 호출하기 전에 <xref:System.ServiceModel.ServiceHost>에서 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>를 호출하여 기본 엔드포인트를 추가할 수 있습니다. 기본 엔드포인트, 바인딩 및 동작에 대한 자세한 내용은 [단순화된 구성](simplified-configuration.md) 및 [WCF 서비스를 위한 단순화된 구성](./samples/simplified-configuration-for-wcf-services.md)을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.EndpointAddress>
 - [서비스 ID 및 인증](./feature-details/service-identity-and-authentication.md)

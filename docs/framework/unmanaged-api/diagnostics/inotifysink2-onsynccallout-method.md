@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 97f15656-8677-4079-8553-a1d8603355d6
 topic_type:
 - apiref
-ms.openlocfilehash: e7b3d5bd53bb9e4d6b897bfbf109c1f7307224cd
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ce0e192a9d7d5abf56a55f844cf886c386f1c563
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442513"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441996"
 ---
 # <a name="inotifysink2onsynccallout-method"></a>INotifySink2::OnSyncCallOut 메서드
 호출이 호출 될 때 호출 됩니다.  
@@ -38,7 +38,7 @@ HRESULT OnSyncCallOut
   
 ## <a name="parameters"></a>매개 변수  
  `in_CallID`  
- 진행 Out 호출의 ID입니다. [CALL_ID 구조체](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md)를 참조 하세요.  
+ 진행 Out 호출의 ID입니다. [CALL_ID 구조체](call-id-structure.md)를 참조 하세요.  
   
  `out_ppBuffer`  
  제한이 버퍼를 호출 합니다.  
@@ -46,14 +46,14 @@ HRESULT OnSyncCallOut
  `out_pBufferSize`  
  제한이 호출 버퍼의 크기 (바이트)입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드가 성공 하면 S_OK 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** ProtocolNotify2  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [INotifySink2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [INotifySource2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [INotifyConnection2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [INotifySink2 인터페이스](inotifysink2-interface.md)
+- [INotifySource2 인터페이스](inotifysource2-interface.md)
+- [INotifyConnection2 인터페이스](inotifyconnection2-interface.md)

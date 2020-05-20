@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: faebf594-67d5-4abf-b9c1-547fd3a1ff87
 topic_type:
 - apiref
-ms.openlocfilehash: 47477bb473df8b568844d07bea704df681c9b95d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 54c8c7f5c3ba6b4afd4ff352a8afb947a92e2d61
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448599"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441879"
 ---
 # <a name="isymencunmanagedmethod-interface"></a>ISymENCUnmanagedMethod 인터페이스
 편집 하며 계속 하기 기능에 대 한 정보를 제공 합니다.  
@@ -28,15 +28,15 @@ ms.locfileid: "74448599"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[GetDocumentsForMethod 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getdocumentsformethod-method.md)|이 메서드에 줄이 있는 문서를 가져옵니다.|  
-|[GetDocumentsForMethodCount 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getdocumentsformethodcount-method.md)|이 메서드에 줄이 있는 문서 수를 가져옵니다.|  
-|[GetFileNameFromOffset 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getfilenamefromoffset-method.md)|오프셋과 연결 된 줄의 파일 이름을 가져옵니다.|  
-|[GetLineFromOffset 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getlinefromoffset-method.md)|오프셋과 연결 된 줄 정보를 가져옵니다.|  
-|[GetSourceExtentInDocument 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getsourceextentindocument-method.md)|특정 문서에서 메서드의 가장 작은 시작 줄과 가장 큰 끝 줄을 가져옵니다.|  
+|[GetDocumentsForMethod 메서드](isymencunmanagedmethod-getdocumentsformethod-method.md)|이 메서드에 줄이 있는 문서를 가져옵니다.|  
+|[GetDocumentsForMethodCount 메서드](isymencunmanagedmethod-getdocumentsformethodcount-method.md)|이 메서드에 줄이 있는 문서 수를 가져옵니다.|  
+|[GetFileNameFromOffset 메서드](isymencunmanagedmethod-getfilenamefromoffset-method.md)|오프셋과 연결 된 줄의 파일 이름을 가져옵니다.|  
+|[GetLineFromOffset 메서드](isymencunmanagedmethod-getlinefromoffset-method.md)|오프셋과 연결 된 줄 정보를 가져옵니다.|  
+|[GetSourceExtentInDocument 메서드](isymencunmanagedmethod-getsourceextentindocument-method.md)|특정 문서에서 메서드의 가장 작은 시작 줄과 가장 큰 끝 줄을 가져옵니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** CorSym, CorSym  
   
 ## <a name="see-also"></a>참고 항목
 
-- [진단 기호 저장소 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [진단 기호 저장소 인터페이스](diagnostics-symbol-store-interfaces.md)

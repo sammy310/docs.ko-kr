@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b22fbe19-b30f-4696-8175-e6b91da9edab
 topic_type:
 - apiref
-ms.openlocfilehash: f23df98abc5355f0b25d7253b5f2ae808b3446a1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f4f925282d65cd9cbc8eb1c8825f358602de68ed
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449378"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441697"
 ---
 # <a name="isymunmanagedbinder-interface"></a>ISymUnmanagedBinder 인터페이스
 비관리 코드에 대 한 기호 바인더를 나타냅니다.  
@@ -31,14 +31,14 @@ ms.locfileid: "74449378"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[GetReaderForFile 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)|메타 데이터 인터페이스와 파일 이름이 지정 된 경우 모듈에 연결 된 디버깅 기호를 읽을 올바른 [ISymUnmanagedReader](isymunmanagedreader-interface.md) 구조체를 반환 합니다.|  
-|[GetReaderFromStream 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderfromstream-method.md)|메타 데이터 인터페이스 및 기호 저장소를 포함 하는 스트림이 지정 된 경우 지정 된 기호 저장소에서 디버깅 기호를 읽을 올바른 [ISymUnmanagedReader](isymunmanagedreader-interface.md) 구조체를 반환 합니다.|  
+|[GetReaderForFile 메서드](isymunmanagedbinder-getreaderforfile-method.md)|메타 데이터 인터페이스와 파일 이름이 지정 된 경우 모듈에 연결 된 디버깅 기호를 읽을 올바른 [ISymUnmanagedReader](isymunmanagedreader-interface.md) 구조체를 반환 합니다.|  
+|[GetReaderFromStream 메서드](isymunmanagedbinder-getreaderfromstream-method.md)|메타 데이터 인터페이스 및 기호 저장소를 포함 하는 스트림이 지정 된 경우 지정 된 기호 저장소에서 디버깅 기호를 읽을 올바른 [ISymUnmanagedReader](isymunmanagedreader-interface.md) 구조체를 반환 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** CorSym, CorSym  
   
 ## <a name="see-also"></a>참고 항목
 
-- [진단 기호 저장소 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
-- [ISymUnmanagedBinder2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)
-- [ISymUnmanagedBinder3 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)
+- [진단 기호 저장소 인터페이스](diagnostics-symbol-store-interfaces.md)
+- [ISymUnmanagedBinder2 인터페이스](isymunmanagedbinder2-interface.md)
+- [ISymUnmanagedBinder3 인터페이스](isymunmanagedbinder3-interface.md)

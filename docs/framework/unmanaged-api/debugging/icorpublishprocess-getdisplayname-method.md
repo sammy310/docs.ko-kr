@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7c0af9e9-a73f-41aa-a685-b21c439e059d
 topic_type:
 - apiref
-ms.openlocfilehash: 77e801b048709949c384f642fc0d0ecb5d7eb512
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dc76274d3b0acbbe0b03eb141d2b3e6ff9063afb
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178389"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421126"
 ---
 # <a name="icorpublishprocessgetdisplayname-method"></a>ICorPublishProcess::GetDisplayName 메서드
-이 [ICorPublishProcess](icorpublishprocess-interface.md)에서 참조하는 프로세스에 대한 실행 의 전체 경로를 가져옵니다.  
+이 [ICorPublishProcess](icorpublishprocess-interface.md)에서 참조 하는 프로세스에 대 한 실행 파일의 전체 경로를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,19 +41,19 @@ HRESULT GetDisplayName (
  [in] `szName` 배열의 크기입니다.  
   
  `pcchName`  
- 【아웃】 배열에서 반환되는 와이드 `szName` 문자 수입니다.  
+ 제한이 배열에 반환 된 와이드 문자의 수입니다 `szName` .  
   
  `szName`  
- 【아웃】 실행 의 전체 경로를 포함하여 이름을 저장하는 배열입니다. 이름은 null-종료됩니다.  
+ 제한이 실행 파일의 전체 경로를 포함 하 여 이름을 저장 하는 배열입니다. 이름이 null로 종료 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** 코르펍.idl, 코르펍.h  
+ **헤더:** CorPub .idl, CorPub. h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 

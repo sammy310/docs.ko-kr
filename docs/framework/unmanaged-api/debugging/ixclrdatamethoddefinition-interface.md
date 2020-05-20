@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 708c681a98113a406249a360c2fc81087e5b97f8
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ebb689eee4a89a70e81d8f9d958e7826c3b3421b
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790420"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420957"
 ---
 # <a name="ixclrdatamethoddefinition-interface"></a>IXCLRDataMethodDefinition 인터페이스
 
@@ -34,22 +34,22 @@ ms.locfileid: "76790420"
 
 | 메서드                                                                                                                          | 설명                                                                                 |
 | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| [StartEnumInstances](ixclrdatamethoddefinition-startenuminstances-method.md) | 지정 된 `IXCLRDataAppDomain`에 대 한 메서드 인스턴스의 열거형 핸들을 제공 합니다. |
+| [StartEnumInstances](ixclrdatamethoddefinition-startenuminstances-method.md) | 지정 된에 대 한 메서드 인스턴스의 열거형 핸들을 제공 `IXCLRDataAppDomain` 합니다. |
 | [EnumInstance](ixclrdatamethoddefinition-enuminstance-method.md)             | 이 메서드 정의의 인스턴스를 열거 합니다.                                         |
 | [EndEnumInstances](ixclrdatamethoddefinition-endenuminstances-method.md)     | 인스턴스 열거 중 사용 되는 내부 반복기에서 사용 하는 리소스를 해제 합니다.         |
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-이 인터페이스는 런타임 내부에 있고 헤더 또는 라이브러리 파일을 통해 노출 되지 않습니다. 그러나 일반적인 COM 메커니즘을 통해 가져올 수 있는 GUID `AAF60008-FB2C-420b-8FB1-42D244A54A97`를 사용 하 여 `IUnknown`에서 파생 되는 COM 인터페이스입니다.
+이 인터페이스는 런타임 내부에 있고 헤더 또는 라이브러리 파일을 통해 노출 되지 않습니다. 그러나 `IUnknown` `AAF60008-FB2C-420b-8FB1-42D244A54A97` 일반적인 com 메커니즘을 통해 가져올 수 있는 GUID를 사용 하 여에서 파생 되는 COM 인터페이스입니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
 **헤더:** 없음을  
 **라이브러리:** 없음을  
-**.NET Framework 버전:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**.NET Framework 버전:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅](index.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

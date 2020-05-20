@@ -1,16 +1,17 @@
 ---
 title: 변수 및 인수
+description: 이 문서에서는 데이터 저장소를 나타내는 변수와 Workflow Foundation의 작업 간 데이터 흐름을 나타내는 인수를 설명 합니다.
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-ms.openlocfilehash: f975f46a1858d204d12588f7570b7ea5a365e650
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 47b8a7bddc8c3a9a8427bcb3e93760a63e5fa976
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182688"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421308"
 ---
 # <a name="variables-and-arguments"></a>변수 및 인수
-WF(Windows 워크플로우 Foundation)에서 변수는 데이터 저장소를 나타내며 인수는 활동의 데이터 흐름을 나타냅니다. 활동에는 인수 집합이 있으며 인수는 활동의 시그니처를 구성합니다. 또한 활동은 개발자가 워크플로 디자인 중에 변수를 추가하거나 제거할 수 있는 변수 목록을 유지할 수 있습니다. 인수는 값을 반환하는 식을 사용하여 바인딩됩니다.  
+WF (Windows Workflow Foundation)에서 변수는 데이터의 저장소를 나타내고 인수는 활동에 대 한 데이터의 흐름을 나타냅니다. 활동에는 인수 집합이 있으며 인수는 활동의 시그니처를 구성합니다. 또한 활동은 개발자가 워크플로 디자인 중에 변수를 추가하거나 제거할 수 있는 변수 목록을 유지할 수 있습니다. 인수는 값을 반환하는 식을 사용하여 바인딩됩니다.  
   
 ## <a name="variables"></a>variables  
  변수는 데이터의 스토리지 위치입니다. 변수는 워크플로 정의의 일부로 선언됩니다. 변수는 런타임에 값을 가져오고 이 값은 워크플로 인스턴스 상태의 일부로 저장됩니다. 변수 정의는 변수의 형식과 선택적으로 이름을 지정합니다. 다음 코드에서는 변수를 선언하고 <xref:System.Activities.Statements.Assign%601> 활동을 사용하여 변수에 값을 할당한 다음 <xref:System.Activities.Statements.WriteLine> 활동을 사용하여 콘솔에 값을 표시하는 방법을 보여 줍니다.  
@@ -141,4 +142,4 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- 코드에서 인수, 변수 및 식 작업에 대한 자세한 내용은 명령적 코드 및 필수 인수 및 [오버로드 그룹을](required-arguments-and-overload-groups.md)사용하여 [워크플로, 활동 및 식 작성을](authoring-workflows-activities-and-expressions-using-imperative-code.md) 참조하십시오.
+ 코드에서 인수, 변수 및 식을 사용 하는 방법에 대 한 자세한 내용은 명령적 코드 및 [필수 인수 및 오버 로드 그룹](required-arguments-and-overload-groups.md)을 [사용 하 여 워크플로, 활동 및 식 작성](authoring-workflows-activities-and-expressions-using-imperative-code.md) 을 참조 하세요.

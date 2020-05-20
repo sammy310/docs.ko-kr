@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 94349a3f7b18c8ce29bb3a71cb9d10ee4eac8036
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c9b4e6e5b36fe38b6c0ea78f6d1848d155008bcc
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790475"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420970"
 ---
 # <a name="isosdacinterface-interface"></a>ISOSDacInterface 인터페이스
 
-`SOS`의 데이터에 액세스 하는 도우미 메서드를 제공 합니다.
+에서 데이터에 액세스 하는 도우미 메서드를 제공 `SOS` 합니다.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -36,18 +36,18 @@ ms.locfileid: "76790475"
 | [GetMethodDescPtrFromIP](isosdacinterface-getmethoddescptrfromip-method.md) | 지정 된 기본 명령 주소를 포함 하는 메서드에 해당 하는 MethodDesc의 포인터를 검색 합니다. |
 | [GetModuleData](isosdacinterface-getmoduledata-method.md)| 지정 된 주소에서 로드 된 모듈에 해당 하는 데이터를 인출 합니다. |
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-이 인터페이스는 런타임 내부에 있고 헤더 또는 라이브러리 파일을 통해 노출 되지 않습니다. 그러나 일반적인 COM 메커니즘을 통해 가져올 수 있는 GUID `436f00f2-b42a-4b9f-870c-e73db66ae930`를 사용 하 여 `IUnknown`에서 파생 되는 COM 인터페이스입니다.
+이 인터페이스는 런타임 내부에 있고 헤더 또는 라이브러리 파일을 통해 노출 되지 않습니다. 그러나 `IUnknown` `436f00f2-b42a-4b9f-870c-e73db66ae930` 일반적인 com 메커니즘을 통해 가져올 수 있는 GUID를 사용 하 여에서 파생 되는 COM 인터페이스입니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
 **헤더:** 없음을  
 **라이브러리:** 없음을  
-**.NET Framework 버전:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
+**.NET Framework 버전:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅](index.md)
 - [디버깅 인터페이스](debugging-interfaces.md)
