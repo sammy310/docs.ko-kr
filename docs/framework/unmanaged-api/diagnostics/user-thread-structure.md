@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a57c7d71-c4b0-41f9-a964-0c5ee84a3124
 topic_type:
 - apiref
-ms.openlocfilehash: 51db7a2b6464b562e09ce061991898a8d604ead1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5144feab742bc5dac36563d701d81a699d0bb2f3
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437975"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83609445"
 ---
 # <a name="user_thread-structure"></a>USER_THREAD 구조체
-스레드에 대 한 정보를 디버거에 제공 합니다. 자세한 내용은 [INotifySource2:: SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) 메서드를 참조 하세요.  
+스레드에 대 한 정보를 디버거에 제공 합니다. 자세한 내용은 [INotifySource2:: SetNotifyFilter](inotifysource2-setnotifyfilter-method.md) 메서드를 참조 하세요.  
   
 ## <a name="syntax"></a>구문  
   
@@ -48,5 +48,5 @@ typedef struct tagUSER_THREAD
   
 ## <a name="see-also"></a>참고 항목
 
-- [SetNotifyFilter 메서드](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)
-- [진단 기호 저장소 구조체](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
+- [SetNotifyFilter 메서드](inotifysource2-setnotifyfilter-method.md)
+- [진단 기호 저장소 구조체](diagnostics-symbol-store-structures.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2632da80-6e4b-4429-8dee-b382745a5f81
 topic_type:
 - apiref
-ms.openlocfilehash: 76514cfbd2e533f04c5139dbaef4429c12463106
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b7fa777466e2c7edd7b3110dd91e776785c63c58
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445467"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442074"
 ---
 # <a name="inotifyconnection2registernotifysource-method"></a>INotifyConnection2::RegisterNotifySource 메서드
 지정 된 알림 소스를 설치 합니다.  
@@ -42,15 +42,15 @@ HRESULT RegisterNotifySource
  `out_ppNotifySink`  
  제한이 알림 싱크로 사용할 개체를 받습니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드가 성공 하면 S_OK 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** ProtocolNotify2  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [INotifyConnection2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
-- [INotifySource2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [INotifySink2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [UnregisterNotifySource 메서드](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)
+- [INotifyConnection2 인터페이스](inotifyconnection2-interface.md)
+- [INotifySource2 인터페이스](inotifysource2-interface.md)
+- [INotifySink2 인터페이스](inotifysink2-interface.md)
+- [UnregisterNotifySource 메서드](inotifyconnection2-unregisternotifysource-method.md)

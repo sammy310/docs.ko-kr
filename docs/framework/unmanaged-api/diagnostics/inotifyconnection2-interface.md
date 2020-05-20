@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9868cfb3-dd51-4812-bca9-171d7829afe9
 topic_type:
 - apiref
-ms.openlocfilehash: 9d116d2ce986dd163ee7abbdd14002da690893ea
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 08daa26f60ca5935fed73494660426d58f398154
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445486"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442087"
 ---
 # <a name="inotifyconnection2-interface"></a>INotifyConnection2 인터페이스
 연결 알림 소스를 등록 및 등록 취소 하는 메서드를 선언 합니다.  
@@ -28,14 +28,14 @@ ms.locfileid: "74445486"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[RegisterNotifySource 메서드](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)|지정 된 알림 소스 개체를 설치 합니다.|  
-|[UnregisterNotifySource 메서드](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)|지정 된 알림 소스 개체를 연결에서 제거 합니다.|  
+|[RegisterNotifySource 메서드](inotifyconnection2-registernotifysource-method.md)|지정 된 알림 소스 개체를 설치 합니다.|  
+|[UnregisterNotifySource 메서드](inotifyconnection2-unregisternotifysource-method.md)|지정 된 알림 소스 개체를 연결에서 제거 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** ProtocolNotify2  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [INotifySink2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [INotifySource2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [진단 기호 저장소 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [INotifySink2 인터페이스](inotifysink2-interface.md)
+- [INotifySource2 인터페이스](inotifysource2-interface.md)
+- [진단 기호 저장소 인터페이스](diagnostics-symbol-store-interfaces.md)
