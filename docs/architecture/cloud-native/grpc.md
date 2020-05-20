@@ -2,17 +2,15 @@
 title: gRPC
 description: GRPC, 클라우드 네이티브 응용 프로그램에서의 역할 및 HTTP RESTful 통신과 어떻게 다른 지에 대해 알아봅니다.
 author: robvet
-ms.date: 03/31/2020
-ms.openlocfilehash: 01dd4c934f0b39041ea377691067edf4dbe20378
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: f34b267d7f5c6b4e593841c80df44d1ccbde95ae
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895560"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614047"
 ---
 # <a name="grpc"></a>gRPC
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 지금까지이 책에서는 [REST 기반](https://docs.microsoft.com/azure/architecture/best-practices/api-design) 통신에 초점을 두었습니다. REST는 엔터티 리소스에 대해 CRUD 기반 작업을 정의 하는 유연한 아키텍처 스타일입니다. 클라이언트는 요청/응답 통신 모델을 사용 하 여 HTTP에서 리소스와 상호 작용 합니다. REST는 널리 구현 되는 반면, 최신 통신 기술인 gRPC는 클라우드 네이티브 커뮤니티에서 엄청난 모멘텀를 얻었습니다.
 
@@ -39,9 +37,9 @@ gRPC는 간단 하 고 성능이 높습니다. 메시지 60-80% 더 작게 JSON 
 
 ## <a name="protocol-buffers"></a>프로토콜 버퍼
 
-gRPC는 [프로토콜 버퍼](https://developers.google.com/protocol-buffers/docs/overview)라는 오픈 소스 기술을 채택 합니다. 서비스에서 서로 전송 하는 구조화 된 메시지를 serialize 하기 위한 매우 효율적이 고 플랫폼 중립적인 serialization 형식을 제공 합니다. 개발자는 크로스 플랫폼 IDL (인터페이스 정의 언어)을 사용 하 여 각 마이크로 서비스에 대 한 서비스 계약을 정의 합니다. 텍스트 기반 `.proto` 파일로 구현 되는 계약은 각 서비스의 메서드, 입력 및 출력을 설명 합니다. 동일한 계약 파일은 다양 한 개발 플랫폼에서 빌드된 gRPC 클라이언트 및 서비스에 사용할 수 있습니다.
+gRPC는 [프로토콜 버퍼](https://developers.google.com/protocol-buffers/docs/overview)라는 오픈 소스 기술을 채택 합니다. 서비스에서 서로 전송 하는 구조화 된 메시지를 serialize 하기 위한 매우 효율적이 고 플랫폼 중립적인 serialization 형식을 제공 합니다. 개발자는 크로스 플랫폼 IDL (인터페이스 정의 언어)을 사용 하 여 각 마이크로 서비스에 대 한 서비스 계약을 정의 합니다. 텍스트 기반 파일로 구현 되는 계약은 `.proto` 각 서비스의 메서드, 입력 및 출력을 설명 합니다. 동일한 계약 파일은 다양 한 개발 플랫폼에서 빌드된 gRPC 클라이언트 및 서비스에 사용할 수 있습니다.
 
-Protobuf 컴파일러 `protoc`인 프로토콜 파일을 사용 하 여 대상 플랫폼에 대 한 클라이언트와 서비스 코드를 모두 생성 합니다. 코드에는 다음 구성 요소가 포함 됩니다.
+Protobuf 컴파일러 인 프로토콜 파일을 사용 하 여 `protoc` 대상 플랫폼에 대 한 클라이언트와 서비스 코드를 모두 생성 합니다. 코드에는 다음 구성 요소가 포함 됩니다.
 
 - 클라이언트 및 서비스에서 공유 하는 강력한 형식의 개체로, 메시지의 서비스 작업 및 데이터 요소를 나타냅니다.
 - 원격 gRPC 서비스가 상속 하 고 확장할 수 있는 필수 네트워크를 사용 하는 강력한 형식의 기본 클래스입니다.

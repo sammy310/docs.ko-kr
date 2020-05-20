@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5c8840be-ffea-447f-9c8d-178f1eaf8d06
 topic_type:
 - apiref
-ms.openlocfilehash: b5fc8b6807a4c8eb700ab3fa181a216e48a732ff
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5e5bf097a4b1e366fff807595b22c4696a91cf43
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449039"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614554"
 ---
 # <a name="isymunmanagedencupdategetlocalvariables-method"></a>ISymUnmanagedENCUpdate::GetLocalVariables 메서드
 지역 변수를 가져옵니다.  
@@ -41,15 +41,15 @@ HRESULT GetLocalVariables(
  진행 메서드의 메타 데이터 토큰입니다.  
   
  `cLocals`  
- 진행 `rgLocals` 매개 변수의 크기를 나타내는 `ULONG`입니다.  
+ 진행 `ULONG`매개 변수의 크기를 나타내는입니다 `rgLocals` .  
   
  `rgLocals`  
  제한이 반환 된 [ISymUnmanagedVariable](isymunmanagedvariable-interface.md) 인스턴스의 배열입니다.  
   
  `pceltFetched`  
- 제한이 로컬을 포함 하는 데 필요한 `rgLocals` 버퍼의 크기를 수신 하는 `ULONG`에 대 한 포인터입니다.  
+ 제한이 `ULONG`로컬을 포함 하는 데 필요한 버퍼의 크기를 수신 하는에 대 한 포인터입니다 `rgLocals` .  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
@@ -57,4 +57,4 @@ HRESULT GetLocalVariables(
   
 ## <a name="see-also"></a>참고 항목
 
-- [ISymUnmanagedENCUpdate 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+- [ISymUnmanagedENCUpdate 인터페이스](isymunmanagedencupdate-interface.md)

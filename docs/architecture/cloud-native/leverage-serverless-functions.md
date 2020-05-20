@@ -1,17 +1,15 @@
 ---
 title: 서버리스 기능 활용
 description: 클라우드 네이티브 응용 프로그램에서 서버 리스 및 Azure Functions 활용
-ms.date: 04/13/2020
-ms.openlocfilehash: 176499e3cd0349cd689b9d13d1c237a6343d13f3
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: 53a0fdd29630b2a4368f3aa37ddfc5f93df10a24
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199744"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613865"
 ---
 # <a name="leveraging-serverless-functions"></a>서버리스 기능 활용
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 클라우드 기능을 활용 하기 위해 물리적 컴퓨터를 관리 하는 스펙트럼에서 서버를 사용 하지 않는 것은 매우 끝에 있습니다. 사용자의 유일한 책임은 코드를 실행 하는 경우에만 요금을 지불 하면 됩니다. Azure Functions는 클라우드 네이티브 응용 프로그램에 서버 리스 기능을 빌드하는 방법을 제공 합니다.
 
@@ -54,8 +52,8 @@ ms.locfileid: "82199744"
 
 그림 3-10에서는 콜드 시작 패턴을 보여 줍니다. 앱이 콜드 인 경우 추가 단계를 수행 해야 합니다.
 
-![콜드 및 웜 시작](./media/cold-start-warm-start.png)
-**그림 3-10**. 콜드 시작과 웜 시작 비교
+![콜드 및 웜 시작 ](./media/cold-start-warm-start.png)
+ **그림 3-10**. 콜드 시작과 웜 시작 비교
 
 콜드 시작을 완전히 방지 하려면 [소비 계획에서 전용 요금제로](https://azure.microsoft.com/blog/understanding-serverless-cold-start/)전환할 수 있습니다. 프리미엄 계획 업그레이드를 사용 하 여 하나 이상의 [사전 준비 인스턴스](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan#pre-warmed-instances) 를 구성할 수도 있습니다. 이러한 경우 다른 인스턴스를 추가 해야 하는 경우 이미 실행 되 고 있습니다. 이러한 옵션은 서버를 사용 하지 않는 컴퓨팅과 관련 된 콜드 시작 문제를 완화 하는 데 도움이 됩니다.
 

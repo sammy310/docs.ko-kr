@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 04d569d6-a151-4957-9872-f3f694c3e4a9
 topic_type:
 - apiref
-ms.openlocfilehash: 12475b1ac8a1a81e565aa689eac2ae1a9b55e73a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ed3c841c34b71b30f740117899353aa289e478d5
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438280"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614710"
 ---
 # <a name="isymunmanagedwriter2defineglobalvariable2-method"></a>ISymUnmanagedWriter2::DefineGlobalVariable2 메서드
 단일 전역 변수를 정의합니다.  
@@ -60,13 +60,13 @@ HRESULT DefineGlobalVariable2(
  `addr3`  
  진행 매개 변수 사양의 세 번째 주소입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** CorSym  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [ISymUnmanagedWriter2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
-- [DefineGlobalVariable 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)
+- [ISymUnmanagedWriter2 인터페이스](isymunmanagedwriter2-interface.md)
+- [DefineGlobalVariable 메서드](isymunmanagedwriter-defineglobalvariable-method.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6fab8a58-3883-490f-8b27-64042c90f104
 topic_type:
 - apiref
-ms.openlocfilehash: f6a741df3ea57b5e9b4fa8bc5d304bfedd1d6c15
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5730cdd910257d762230f5e54576d5e0a7ac1adb
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428013"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614827"
 ---
 # <a name="isymunmanagedwriterdefinelocalvariable-method"></a>ISymUnmanagedWriter::DefineLocalVariable 메서드
 현재 어휘 범위에 단일 변수를 정의합니다. 이 메서드는 범위 전체의 여러 홈이 있는 동일한 이름의 변수에 대해 여러 번 호출할 수 있습니다. 그러나이 경우 `startOffset` 및 `endOffset` 매개 변수의 값이 겹치지 않아야 합니다.  
@@ -43,13 +43,13 @@ HRESULT DefineLocalVariable(
   
 ## <a name="parameters"></a>매개 변수  
  `name`  
- 진행 지역 변수 이름을 정의 하는 `WCHAR`에 대 한 포인터입니다.  
+ 진행 지역 변수 이름을 정의 하는에 대 한 포인터입니다 `WCHAR` .  
   
  `attributes`  
  진행 지역 변수 특성입니다.  
   
  `cSig`  
- 진행 `signature` 버퍼의 크기 (바이트)를 나타내는 `ULONG32`입니다.  
+ 진행 `ULONG32`버퍼의 크기 (바이트)를 나타내는입니다 `signature` .  
   
  `signature`  
  진행 지역 변수 서명입니다.  
@@ -72,14 +72,14 @@ HRESULT DefineLocalVariable(
  `endOffset`  
  진행 변수의 끝 오프셋입니다. 이 매개 변수는 선택 사항입니다. 0 인 경우이 매개 변수는 무시 되 고 변수는 전체 범위에서 정의 됩니다. 0이 아닌 값인 경우 변수는 현재 범위의 오프셋 내에 속합니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [ISymUnmanagedWriter 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [DefineGlobalVariable 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)
-- [DefineLocalVariable2 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-definelocalvariable2-method.md)
+- [ISymUnmanagedWriter 인터페이스](isymunmanagedwriter-interface.md)
+- [DefineGlobalVariable 메서드](isymunmanagedwriter-defineglobalvariable-method.md)
+- [DefineLocalVariable2 메서드](isymunmanagedwriter2-definelocalvariable2-method.md)

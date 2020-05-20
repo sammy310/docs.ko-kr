@@ -1,24 +1,22 @@
 ---
 title: Azure 서비스에 eShopOnContainers 매핑
 description: EShopOnContainers를 azure Kubernetes Service, API 게이트웨이 및 Azure Service Bus와 같은 Azure 서비스에 매핑합니다.
-ms.date: 04/20/2020
-ms.openlocfilehash: 26fce71ba71f7da643b669396ab59affe592649a
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 271707404f7fb51aec59c6f682ddaefd0bac82cc
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895510"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613839"
 ---
 # <a name="mapping-eshoponcontainers-to-azure-services"></a>Azure 서비스에 eShopOnContainers 매핑
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 필수는 아니지만, 프로젝트가 클라우드 네이티브 응용 프로그램으로 빌드 되었으므로 Azure는 eShopOnContainers을 지 원하는 데 적합 합니다. 응용 프로그램은 .NET Core를 사용 하 여 빌드되므로 Docker 호스트에 따라 Linux 또는 Windows 컨테이너에서 실행할 수 있습니다. 응용 프로그램은 각각 고유한 데이터를 포함 하는 여러 자치 마이크로 서비스로 구성 됩니다. 다양 한 마이크로 서비스는 간단한 CRUD 작업에서 보다 복잡 한 DDD 및 CQRS 패턴에 이르는 다양 한 접근 방식을 소개 합니다. 마이크로 서비스는 HTTP를 통해 클라이언트와 메시지 기반 통신을 통해 서로 통신 합니다. 응용 프로그램은 HTTP를 표준 통신 프로토콜로 채택 하 고 Android, iOS 및 Windows 플랫폼에서 실행 되는 ASP.NET Core 및 Xamarin mobile 앱을 포함 하므로 클라이언트에 대해서도 여러 플랫폼을 지원 합니다.
 
 이 응용 프로그램의 아키텍처는 그림 2-5에 나와 있습니다. 왼쪽에는 모바일, 기존 웹 및 웹 SPA (단일 페이지 응용 프로그램) 버전으로 분할 된 클라이언트 앱이 있습니다. 오른쪽에는 시스템을 구성 하는 서버 쪽 구성 요소가 있습니다. 각 구성 요소는 Docker 컨테이너 및 Kubernetes 클러스터에서 호스팅될 수 있습니다. 기존 웹 앱은 노란색으로 표시 된 ASP.NET Core MVC 응용 프로그램에 의해 구동 됩니다. 이 앱과 모바일 및 웹 SPA 응용 프로그램은 하나 이상의 API 게이트웨이를 통해 개별 마이크로 서비스와 통신 합니다. API 게이트웨이는 "프런트 엔드에 대 한 백 엔드" (BFF) 패턴을 따릅니다. 즉, 각 게이트웨이는 지정 된 프런트 엔드 클라이언트를 지원 하도록 설계 되었습니다. 개별 마이크로 서비스는 API 게이트웨이의 오른쪽에 나열 되며 비즈니스 논리와 일종의 지 속성 저장소를 포함 합니다. 여러 서비스는 SQL Server 데이터베이스, Redis cache 인스턴스 및 MongoDB/CosmosDB stores를 사용 합니다. 맨 오른쪽에는 마이크로 서비스 간의 통신에 사용 되는 시스템의 이벤트 버스가 있습니다.
 
-![eShopOnContainers 아키텍처](./media/eshoponcontainers-architecture.png)
-**그림 2-5**. EShopOnContainers 아키텍처입니다.
+![eShopOnContainers 아키텍처 ](./media/eshoponcontainers-architecture.png)
+ **그림 2-5**. EShopOnContainers 아키텍처입니다.
 
 이 아키텍처의 서버 쪽 구성 요소는 모두 Azure 서비스에 쉽게 매핑됩니다.
 

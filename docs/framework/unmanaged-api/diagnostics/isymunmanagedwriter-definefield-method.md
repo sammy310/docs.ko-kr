@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c6a1f797-dbf4-40f5-ab99-d9b4bfb26148
 topic_type:
 - apiref
-ms.openlocfilehash: 7eea63cae27c08260177dfc7746046b975434611
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: aba551a1973a41a909869316cda07e8d655e9882
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428041"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614840"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>ISymUnmanagedWriter::DefineField 메서드
 메서드 내에 없는 단일 변수를 정의 합니다. 이 메서드는 클래스, 비트 필드 등의 특정 필드에 사용 됩니다.  
@@ -51,7 +51,7 @@ HRESULT DefineField(
  진행 필드 특성입니다.  
   
  `cSig`  
- 진행 필드 시그니처를 포함 하는 데 필요한 버퍼의 크기 (문자) 인 `ULONG32`입니다.  
+ 진행 `ULONG32`필드 시그니처를 포함 하는 데 필요한 버퍼의 크기 (문자 수)입니다.  
   
  `signature`  
  진행 필드 시그니처의 배열입니다.  
@@ -68,7 +68,7 @@ HRESULT DefineField(
  `addr3`  
  진행 필드 사양의 세 번째 주소입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
@@ -76,4 +76,4 @@ HRESULT DefineField(
   
 ## <a name="see-also"></a>참고 항목
 
-- [ISymUnmanagedWriter 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [ISymUnmanagedWriter 인터페이스](isymunmanagedwriter-interface.md)

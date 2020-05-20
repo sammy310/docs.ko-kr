@@ -1,17 +1,15 @@
 ---
 title: 클라우드 네이티브 앱에 대 한 IdentityServer
 description: Azure 용 클라우드 네이티브 .NET 앱 설계 | IdentityServer
-ms.date: 06/30/2019
-ms.openlocfilehash: 536a4cbdbdaee47f3a5a0d9f93b2736270d9ea7a
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: 81cce30568becacda29f65f9506398790af321e0
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394876"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614034"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>클라우드 네이티브 응용 프로그램에 대 한 IdentityServer
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 IdentityServer는 ASP.NET Core에 대 한 OIDC (Openid connect Connect) 및 OAuth 2.0 표준을 구현 하는 오픈 소스 인증 서버입니다. 웹, 네이티브, 모바일 또는 API 끝점 인지 여부에 관계 없이 모든 응용 프로그램에 대 한 요청을 인증 하는 일반적인 방법을 제공 하도록 설계 되었습니다. IdentityServer를 사용 하 여 여러 응용 프로그램 및 응용 프로그램 유형에 SSO (Single Sign-on)를 구현할 수 있습니다. 로그인 양식 및 비슷한 사용자 인터페이스를 통해 실제 사용자를 인증 하는 데 사용할 수 있으며, 일반적으로 토큰 발급, 확인 및 사용자 인터페이스 없이 갱신을 포함 하는 서비스 기반 인증에도 사용할 수 있습니다. IdentityServer은 사용자 지정이 가능한 솔루션으로 설계 되었습니다. 각 인스턴스는 일반적으로 개별 조직 및/또는 응용 프로그램의 요구 사항 집합에 맞게 사용자 지정 됩니다.
 
@@ -46,7 +44,7 @@ IdentityServer는 ASP.NET Core 응용 프로그램 내에서 실행 되 고 Open
 
 IdentityServer4은 오픈 소스 이며 무료로 사용할 수 있습니다. NuGet 패키지를 사용 하 여 응용 프로그램에 추가할 수 있습니다. 주 패키지는 400만 번 이상 다운로드 된 [IdentityServer4](https://www.nuget.org/packages/IdentityServer4/) 입니다. 기본 패키지는 사용자 인터페이스 코드를 포함 하지 않고 메모리 구성 에서만 지원 합니다. 데이터베이스와 함께 사용 하려면 Entity Framework Core을 사용 하 여 IdentityServer에 대 한 구성 및 운영 데이터를 저장 하는 [IdentityServer4](https://www.nuget.org/packages/IdentityServer4.EntityFramework) 와 같은 데이터 공급자를 사용 하려고 합니다. 사용자 인터페이스의 경우 IdentityServer 미들웨어를 사용 하 여 로그인 및 로그 아웃에 대 한 지원을 추가 하기 위해 [빠른 시작 UI 리포지토리에서](https://github.com/IdentityServer/IdentityServer4.Quickstart.UI) 파일을 ASP.NET Core MVC 응용 프로그램으로 복사할 수 있습니다.
 
-## <a name="configuration"></a>Configuration
+## <a name="configuration"></a>구성
 
 IdentityServer는 각 사용자 지정 설치의 일부로 구성할 수 있는 다양 한 종류의 프로토콜과 소셜 인증 공급자를 지원 합니다. 이는 일반적으로 메서드의 ASP.NET Core 응용 프로그램 클래스에서 수행 됩니다 `Startup` `ConfigureServices` . 구성에는 지원 되는 프로토콜과 사용할 서버 및 끝점의 경로를 지정 하는 작업이 포함 됩니다. 그림 8-2에서는 IdentityServer4 빠른 시작 UI 프로젝트에서 가져온 구성 예제를 보여 줍니다.
 

@@ -1,17 +1,15 @@
 ---
 title: 모니터링 및 상태
 description: 모니터링 및 상태
-ms.date: 09/23/2019
-ms.openlocfilehash: 6274040318b5442478e9cc291c4f223bdf533110
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.date: 05/13/2020
+ms.openlocfilehash: 28e98bbdb39a68d8961d4f3ab48cde5a07a4762b
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73842022"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613800"
 ---
 # <a name="monitoring-and-health"></a>모니터링 및 상태
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 마이크로 서비스와 클라우드 네이티브 응용 프로그램은 좋은 DevOps 방법으로 직접 이동 합니다. DevOps는 많은 사람들에 게 많은 것이 있지만 더 나은 정의 중 하나는 클라우드 대표 및 DevOps 전도사 Donovan 갈색에서 제공 됩니다.
 

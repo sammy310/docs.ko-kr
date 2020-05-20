@@ -1,17 +1,15 @@
 ---
 title: ID
 description: Azure 용 클라우드 네이티브 .NET 앱 설계 | 신분을
-ms.date: 09/23/2019
-ms.openlocfilehash: 4cc7c04bf323d2589777df466321f6801f511b6f
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.date: 05/13/2020
+ms.openlocfilehash: 9fa48977e58e2ca5a5f3e231372a4791640a85fd
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "73840348"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614021"
 ---
 # <a name="identity"></a>ID
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 대부분의 소프트웨어 응용 프로그램에는 해당 응용 프로그램을 호출 하는 사용자 또는 프로세스에 대 한 지식이 있어야 합니다. 응용 프로그램과 상호 작용 하는 사용자 또는 프로세스를 보안 주체 라고 하며 이러한 보안 주체를 인증 하 고 권한을 부여 하는 프로세스를 id 관리 또는 간단히 *id*라고 합니다. 간단한 응용 프로그램은 응용 프로그램 내에서 모든 id 관리를 포함할 수 있지만이 접근 방식은 많은 응용 프로그램 및 다양 한 종류의 보안 주체를 사용 하 여 제대로 확장 되지 않습니다. Windows에서는 Active Directory를 사용 하 여 중앙 집중식 인증 및 권한 부여를 제공 합니다.
 
@@ -29,7 +27,7 @@ ms.locfileid: "73840348"
 
 ## <a name="references"></a>참조
 
-- [Microsoft id 플랫폼](https://docs.microsoft.com/azure/active-directory/develop/)
+- [Microsoft ID 플랫폼](https://docs.microsoft.com/azure/active-directory/develop/)
 
 >[!div class="step-by-step"]
 >[이전](azure-monitor.md)

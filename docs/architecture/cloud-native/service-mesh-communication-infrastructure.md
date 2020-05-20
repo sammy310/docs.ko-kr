@@ -2,17 +2,15 @@
 title: 서비스 메시 통신 인프라
 description: Service 메시 기술이 클라우드 네이티브 마이크로 서비스 통신을 간소화 하는 방법에 대해 알아봅니다.
 author: robvet
-ms.date: 03/03/2020
-ms.openlocfilehash: 89bc4d307d725e7e31e020ef156c4c5967dd2a1c
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: 1b11024cd029433c756812850e2665b7836a13d3
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199952"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613691"
 ---
 # <a name="service-mesh-communication-infrastructure"></a>서비스 메시 통신 인프라
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 이 장에서는 마이크로 서비스 통신의 과제를 살펴보았습니다. 개발 팀이 백 엔드 서비스와 통신 하는 방법에 대 한 중요 한 사항이 있습니다. 이상적으로 서비스 간 통신은 더 효율적입니다. 그러나 백 엔드 서비스에서 작업을 완료 하기 위해 서로 의존 하는 경우가 종종 있기 때문에 방지는 항상 가능 하지 않습니다.
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7580d546-a709-40c5-ad02-aa70d774fd0b
 topic_type:
 - apiref
-ms.openlocfilehash: 4009f8988c90ed090c0cc3d86164af347055722f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e6248aba1c41b2815f2806942d419da869ed94b4
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446426"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614918"
 ---
 # <a name="isymunmanagedreader2getsymattributepreremap-method"></a>ISymUnmanagedReader2::GetSymAttributePreRemap 메서드
 이름에 따라 사용자 지정 특성을 가져옵니다. 메타 데이터 사용자 지정 특성과 달리 이러한 특성은 기호 저장소에 저장 됩니다.  
@@ -42,18 +42,18 @@ HRESULT GetSymAttributePreRemap(
  진행 부모의 메타 데이터 토큰입니다.  
   
  `name`  
- 진행 이름을 포함 하는 `WCHAR`에 대 한 포인터입니다.  
+ 진행 이름을 포함 하는에 대 한 포인터입니다 `WCHAR` .  
   
  `cBuffer`  
- 진행 `buffer` 배열의 크기를 나타내는 `ULONG32`입니다.  
+ 진행 `ULONG32`배열의 크기를 나타내는입니다 `buffer` .  
   
  `pcBuffer`  
- 제한이 특성 바이트를 포함 하는 데 필요한 버퍼 크기를 수신 하는 `ULONG32`에 대 한 포인터입니다.  
+ 제한이 `ULONG32`특성 바이트를 포함 하는 데 필요한 버퍼의 크기를 수신 하는에 대 한 포인터입니다.  
   
  `buffer`  
  제한이 특성 바이트를 받는 버퍼에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
@@ -61,4 +61,4 @@ HRESULT GetSymAttributePreRemap(
   
 ## <a name="see-also"></a>참고 항목
 
-- [ISymUnmanagedReader2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)
+- [ISymUnmanagedReader2 인터페이스](isymunmanagedreader2-interface.md)

@@ -1,17 +1,15 @@
 ---
 title: 기타 컨테이너 배포 옵션
 description: Azure를 사용 하는 다른 컨테이너 배포 옵션
-ms.date: 04/13/2020
-ms.openlocfilehash: 3cae771b3877215a7fc91afd4f406fdfc9ff2771
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: acb022e3d4fd4862c592fa571894e1b8ce17f465
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200004"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613761"
 ---
 # <a name="other-container-deployment-options"></a>기타 컨테이너 배포 옵션
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Azure Kubernetes 서비스 (AKS) 외에도 컨테이너 및 Azure Container Instances에 대 한 Azure App Service 컨테이너를 배포할 수 있습니다.
 

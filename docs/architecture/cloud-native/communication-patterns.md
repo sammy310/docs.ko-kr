@@ -2,17 +2,15 @@
 title: 클라우드 네이티브 통신 패턴
 description: 클라우드 네이티브 응용 프로그램의 주요 서비스 통신 문제에 대 한 자세한 정보
 author: robvet
-ms.date: 08/31/2019
-ms.openlocfilehash: b3edc0817fb76ad99a1344b17d600eb747187f86
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 3d678df44b5fef68427846e59f446b7408795625
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895625"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614216"
 ---
 # <a name="cloud-native-communication-patterns"></a>클라우드 네이티브 통신 패턴
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 클라우드 네이티브 시스템을 구성 하는 경우 통신은 디자인을 결정 하는 것이 중요 합니다. 프런트 엔드 클라이언트 응용 프로그램은 백 엔드 마이크로 서비스와 어떻게 통신 하나요? 백 엔드 마이크로 서비스는 어떻게 서로 통신 하나요? 클라우드 네이티브 응용 프로그램에서 통신을 구현할 때 고려할 원리, 패턴 및 모범 사례는 무엇 인가요?
 

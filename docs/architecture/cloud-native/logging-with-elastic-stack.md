@@ -1,17 +1,15 @@
 ---
 title: 탄력적 스택으로 로깅
 description: 탄력적 스택, Logstash 태 시 및 Kibana를 사용 하 여 로깅
-ms.date: 02/05/2020
-ms.openlocfilehash: 6863c66b63854fe3ecaabe2919beded2926ea64c
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 05/13/2020
+ms.openlocfilehash: e886141fa691b75b882b5d67eae4ceb242e8089f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448923"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613852"
 ---
 # <a name="logging-with-elastic-stack"></a>탄력적 스택으로 로깅
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 다양 한 중앙 집중식 로깅 도구를 사용할 수 있으며, 무료 오픈 소스 도구에서 비용이 많이 드는 옵션에 이르기까지 다양 합니다. 대부분의 경우 무료 도구는 유료 제품 보다 우수 하거나 더 효율적입니다. 이러한 도구 중 하나는 탄력적 검색, Logstash 및 Kibana의 세 가지 오픈 소스 구성 요소를 조합한 것입니다.
 
@@ -30,8 +28,8 @@ KUBE_ENABLE_NODE_LOGGING=true
 
 그러면 클러스터에 Elasticsearch가 설치 되 고 모든 클러스터 로그를 대상으로 전송 됩니다.
 
-Kubernetes의 수집 로그에 대 한 쿼리 결과를 보여 주는 Kibana 대시보드의 예](./media/kibana-dashboard.png)
-**그림 7-6**을 ![합니다. Kubernetes의 수집 로그에 대 한 쿼리 결과를 보여 주는 Kibana 대시보드의 예
+![Kubernetes 그림 7-6의 수집 로그에 대 한 쿼리 결과를 보여 주는 Kibana 대시보드의 예 ](./media/kibana-dashboard.png)
+ **Figure 7-6**입니다. Kubernetes의 수집 로그에 대 한 쿼리 결과를 보여 주는 Kibana 대시보드의 예
 
 ## <a name="what-are-the-advantages-of-elastic-stack"></a>탄력적 스택의 장점은 무엇 인가요?
 
@@ -81,7 +79,7 @@ Logstash 태에서 로그를 수집한 후에는 해당 로그를 저장 해야 
 
 매개 변수를 포함 하기 위해 또는 Logstash 태 시 처리를 통해 분할 된 매개 변수를 포함 하도록 만들어진 로그 메시지는 Elasticsearch에서이 정보를 유지 하기 때문에 직접 쿼리할 수 있습니다.
 
-`jill@example.com`에서 방문한 상위 10 개 페이지를 검색 하는 쿼리는 그림 7-9에 나와 있습니다.
+에서 방문한 상위 10 페이지를 검색 하는 쿼리는 `jill@example.com` 그림 7-9에 나와 있습니다.
 
 ```
 "query": {

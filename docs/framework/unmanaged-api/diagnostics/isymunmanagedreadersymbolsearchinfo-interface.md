@@ -14,26 +14,26 @@ helpviewer_keywords:
 ms.assetid: fde7e21d-1169-4bed-a34d-792e69652bf9
 topic_type:
 - apiref
-ms.openlocfilehash: e97dc1d06eb4f5eb110923db20896d7d12c41710
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3f6cea68a4379f8769ccbdbc6911cc5c425d3369
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446385"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614879"
 ---
 # <a name="isymunmanagedreadersymbolsearchinfo-interface"></a>ISymUnmanagedReaderSymbolSearchInfo 인터페이스
-기호 검색 정보를 가져오는 메서드를 제공 합니다. [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) 인터페이스를 구현 하는 개체에서 `QueryInterface`를 호출 하 여이 인터페이스를 가져옵니다.  
+기호 검색 정보를 가져오는 메서드를 제공 합니다. `QueryInterface` [ISymUnmanagedReader](isymunmanagedreader-interface.md) 인터페이스를 구현 하는 개체에서를 호출 하 여이 인터페이스를 가져옵니다.  
   
 ## <a name="methods"></a>메서드  
   
 |메서드|설명|  
 |------------|-----------------|  
-|[GetSymbolSearchInfo 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfo-method.md)|기호 검색 정보를 가져옵니다.|  
-|[GetSymbolSearchInfoCount 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfocount-method.md)|기호 검색 정보의 수를 가져옵니다.|  
+|[GetSymbolSearchInfo 메서드](isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfo-method.md)|기호 검색 정보를 가져옵니다.|  
+|[GetSymbolSearchInfoCount 메서드](isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfocount-method.md)|기호 검색 정보의 수를 가져옵니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [진단 기호 저장소 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [진단 기호 저장소 인터페이스](diagnostics-symbol-store-interfaces.md)

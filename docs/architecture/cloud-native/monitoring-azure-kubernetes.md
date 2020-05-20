@@ -1,17 +1,15 @@
 ---
 title: Azure Kubernetes Service의 모니터링
 description: Azure Kubernetes Service의 모니터링
-ms.date: 02/05/2020
-ms.openlocfilehash: 5c46b9e8599f70d430ad26cf1364343454d30a16
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 05/13/2020
+ms.openlocfilehash: 138acf9d27fb4a676ec422c848097a6bea98fa42
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450065"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613826"
 ---
 # <a name="monitoring-in-azure-kubernetes-services"></a>Azure Kubernetes Service의 모니터링
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Kubernetes의 기본 제공 로깅은 기본 형식입니다. 그러나 로그를 Kubernetes 하 고 적절 하 게 분석할 수 있는 위치에 저장할 수 있는 몇 가지 유용한 옵션이 있습니다. AKS 클러스터를 모니터링 해야 하는 경우 Kubernetes에 대 한 탄력적 스택 구성은 훌륭한 솔루션입니다.
 
@@ -19,8 +17,8 @@ Kubernetes의 기본 제공 로깅은 기본 형식입니다. 그러나 로그�
 
 [컨테이너에 대 한 Azure Monitor는](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-overview) 뿐만 아니라 DC/OS, Docker Swarm 및 Red Hat openshift와 같은 다른 오케스트레이션 엔진에서 뿐만 아니라 Kubernetes의 로그 사용을 지원 합니다.
 
-다양 한 컨테이너의 로그를 사용 하 ![](./media/containers-diagram.png)
-**그림 7-10**. 다양 한 컨테이너의 로그 사용
+![다양 한 컨테이너의 로그 사용 ](./media/containers-diagram.png)
+ **그림 7-10**. 다양 한 컨테이너의 로그 사용
 
 [프로메테우스](https://prometheus.io/) 는 인기 있는 오픈 소스 메트릭 모니터링 솔루션입니다. 클라우드 기본 계산 파운데이션의 일부입니다. 일반적으로, 프로메테우스를 사용 하려면 고유한 저장소로 프로메테우스 서버를 관리 해야 합니다. 그러나 [컨테이너에 대 한 Azure Monitor는 프로메테우스 메트릭 끝점과의 직접 통합을 제공](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-prometheus-integration)하므로 별도의 서버가 필요 하지 않습니다.
 
@@ -30,8 +28,8 @@ Kubernetes의 기본 제공 로깅은 기본 형식입니다. 그러나 로그�
 
 Orchestrator 또는 운영 체제에서 Azure Monitor 디먼을 실행 하는 것과 관계 없이 로그 정보는 사용자가 익숙한 동일한 Azure Monitor 도구에 전달 됩니다. 이를 통해 하이브리드 Kubernetes/Azure Functions 환경과 같은 여러 로그 원본을 혼합 하는 환경에서 병렬 환경이 보장 됩니다.
 
-실행 중인 많은 컨테이너의 로깅 및 메트릭 정보를 보여 주는 샘플 대시보드를 ![합니다. **그림 7-11**을](./media/containers-dashboard.png)
-합니다. 실행 중인 많은 컨테이너의 로깅 및 메트릭 정보를 보여 주는 샘플 대시보드
+![실행 중인 많은 컨테이너 ](./media/containers-dashboard.png)
+ 의 로깅 및 메트릭 정보를 보여 주는 샘플 대시보드 **그림 7-11**. 실행 중인 많은 컨테이너의 로깅 및 메트릭 정보를 보여 주는 샘플 대시보드
 
 ## <a name="logfinalize"></a>.Log. Finalize ()
 

@@ -2,17 +2,15 @@
 title: 분선 데이터
 description: 모놀리식 및 클라우드 네이티브 응용 프로그램의 데이터 저장소를 대조 합니다.
 author: robvet
-ms.date: 04/24/2020
-ms.openlocfilehash: 8a9f1478f1a46b2367df9372d4adaa3b4c711782
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: 2eff37dcc57ae39daac0ba10d10322be5eb4e321
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82204709"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614138"
 ---
 # <a name="distributed-data"></a>분선 데이터
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 이 책 전반에서 살펴본 것 처럼 클라우드 기본 접근 방식은 응용 프로그램을 디자인, 배포 및 관리 하는 방식을 변경 합니다. 또한 데이터를 관리 하 고 저장 하는 방식을 변경 합니다.
 

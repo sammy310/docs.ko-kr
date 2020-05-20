@@ -2,16 +2,14 @@
 title: Azure Active Directory
 description: Azure 용 클라우드 네이티브 .NET 앱 설계 | Azure Active Directory
 ms.date: 06/30/2019
-ms.openlocfilehash: 207043507a9052c47683383a98cef6417a1a2740
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 03f5ea8e84bc3c4a2a88a63d4b109aabf0c64f36
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "73840732"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614281"
 ---
 # <a name="azure-active-directory"></a>Azure Active Directory
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Azure AD (Microsoft Azure Active Directory)는 id 및 액세스 관리를 서비스로 제공 합니다. 고객은 사용자를 구성 하 고 유지 관리 하는 데 사용할 수 있는 사용자, 해당 정보에 액세스할 수 있는 사람, 해당 정보에 액세스할 수 있는 사용자, 앱에 액세스할 수 있는 사람을 구성 하 고 유지 관리 합니다. AAD는이를 사용 하도록 구성 된 응용 프로그램에 대 한 사용자를 인증 하 여 SSO (Single Sign-On) 환경을 제공 합니다. 자체에서 사용 하거나 온-프레미스에서 실행 되는 Windows AD와 통합할 수 있습니다.
 
@@ -21,7 +19,7 @@ Azure AD는 온-프레미스에서 호스트 되는 응용 프로그램에 대 �
 
 ## <a name="references"></a>참조
 
-- [Microsoft id 플랫폼](https://docs.microsoft.com/azure/active-directory/develop/)
+- [Microsoft ID 플랫폼](https://docs.microsoft.com/azure/active-directory/develop/)
 
 >[!div class="step-by-step"]
 >[이전](authentication-authorization.md)

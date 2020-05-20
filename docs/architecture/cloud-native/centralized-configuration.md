@@ -1,17 +1,15 @@
 ---
 title: 중앙 집중식 구성
 description: Azure 앱 구성 및 AzureKey Vault를 사용 하 여 클라우드 네이티브 응용 프로그램에 대 한 구성을 중앙 집중화 합니다.
-ms.date: 04/19/2020
-ms.openlocfilehash: 53bdc03370b04af4d830fe7abbd8aebad81e9650
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: d389d29dcdb1db5162d95370d181ab5a85d72dc8
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895650"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614229"
 ---
 # <a name="centralized-configuration"></a>중앙 집중식 구성
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 모든 항목이 단일 인스턴스 내에서 실행 되는 모놀리식 앱과 달리 클라우드 네이티브 응용 프로그램은 가상 컴퓨터, 컨테이너 및 지리적 지역에 걸쳐 분산 된 독립적인 서비스로 구성 됩니다. 수십 개의 상호 의존적인 서비스에 대 한 구성 설정을 관리 하는 것은 어려울 수 있습니다. 서로 다른 위치에 있는 구성 설정의 중복 복사본은 오류가 발생 하기 쉬우며 관리가 어렵습니다. 중앙 집중식 구성은 분산 클라우드 네이티브 응용 프로그램에 대 한 중요 한 요구 사항입니다.
 

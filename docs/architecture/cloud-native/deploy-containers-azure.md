@@ -2,16 +2,14 @@
 title: Azure에서 컨테이너 배포
 description: Azure Container Registry, Azure Kubernetes Service 및 Azure Dev Spaces를 사용 하 여 Azure에 컨테이너를 배포 합니다.
 ms.date: 04/13/2020
-ms.openlocfilehash: 57a4739d39b8ad022d699d54255f56f16d305440
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: ba2854323ee0f1394a3cff0dd3756cb3c7c32d5b
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895598"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614151"
 ---
 # <a name="deploying-containers-in-azure"></a>Azure에서 컨테이너 배포
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 이 장과 1 장에서는 컨테이너에 대해 설명 했습니다. 컨테이너는 이식성을 비롯 한 클라우드 네이티브 응용 프로그램에 많은 이점을 제공 합니다. Azure 클라우드에서는 스테이징 및 프로덕션 환경에서 동일한 컨테이너 화 된 서비스를 배포할 수 있습니다. Azure는 이러한 컨테이너 화 된 워크 로드를 호스트 하기 위한 몇 가지 옵션을 제공 합니다.
 
@@ -21,11 +19,11 @@ ms.locfileid: "82895598"
 
 ## <a name="azure-container-registry"></a>Azure Container Registry
 
-마이크로 서비스을 컨테이너 화 때 먼저 빌드 컨테이너 "이미지"를 만듭니다. 이미지는 서비스 코드, 종속성 및 런타임의 이진 표현입니다. Docker API의 `Docker Build` 명령을 사용 하 여 이미지를 수동으로 만들 수 있지만, 자동화 된 빌드 프로세스의 일부로 생성 하는 것이 더 나은 방법입니다.
+마이크로 서비스을 컨테이너 화 때 먼저 빌드 컨테이너 "이미지"를 만듭니다. 이미지는 서비스 코드, 종속성 및 런타임의 이진 표현입니다. Docker API의 명령을 사용 하 여 이미지를 수동으로 만들 수 있지만 `Docker Build` , 자동화 된 빌드 프로세스의 일부로 생성 하는 것이 더 나은 방법입니다.
 
 컨테이너 이미지를 만든 후에는 컨테이너 레지스트리에 저장 됩니다. 컨테이너 이미지를 작성, 저장 및 관리할 수 있습니다. 공개 및 개인의 여러 레지스트리를 사용할 수 있습니다. ACR (Azure Container Registry)은 Azure 클라우드의 완전히 관리 되는 컨테이너 레지스트리 서비스입니다. Azure 네트워크 내에 이미지를 유지 하므로 Azure 컨테이너 호스트에 배포 하는 시간을 줄일 수 있습니다. 다른 Azure 리소스에 사용 하는 것과 동일한 보안 및 id 절차를 사용 하 여 보안을 유지할 수도 있습니다.
 
-[Azure Portal](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-portal), [Azure CLI](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli)또는 [PowerShell 도구](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-powershell)를 사용 하 여 Azure Container Registry를 만듭니다. Azure에서 레지스트리를 만드는 방법은 간단 합니다. Azure 구독, 리소스 그룹 및 고유한 이름이 필요 합니다. 그림 3-11에서는에서 `registryname.azurecr.io`호스트 되는 레지스트리를 만들기 위한 기본 옵션을 보여 줍니다.
+[Azure Portal](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-portal), [Azure CLI](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli)또는 [PowerShell 도구](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-powershell)를 사용 하 여 Azure Container Registry를 만듭니다. Azure에서 레지스트리를 만드는 방법은 간단 합니다. Azure 구독, 리소스 그룹 및 고유한 이름이 필요 합니다. 그림 3-11에서는에서 호스트 되는 레지스트리를 만들기 위한 기본 옵션을 보여 줍니다 `registryname.azurecr.io` .
 
 ![컨테이너 레지스트리 만들기](./media/create-container-registry.png)
 
@@ -43,7 +41,7 @@ az acr login --name *registryname*
 docker tag mycontainer myregistry.azurecr.io/mycontainer:v1
 ```
 
-이미지에 태그를 지정한 후 `docker push` 명령을 사용 하 여 ACR 인스턴스로 이미지를 푸시합니다.
+이미지에 태그를 지정한 후 명령을 사용 하 여 `docker push` ACR 인스턴스로 이미지를 푸시합니다.
 
 ```console
 docker push myregistry.azurecr.io/mycontainer:v1
@@ -59,7 +57,7 @@ docker rmi myregistry.azurecr.io/mycontainer:v1
 
 ## <a name="acr-tasks"></a>ACR 작업
 
-[ACR 작업](https://docs.microsoft.com/azure/container-registry/container-registry-tasks-overview) 은 Azure Container Registry에서 사용할 수 있는 기능 집합입니다. Azure 클라우드에서 컨테이너 이미지를 작성 하 고 관리 하 여 [내부 루프 개발 주기](https://docs.microsoft.com/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow) 를 확장 합니다. 개발 컴퓨터에서 및 `docker build` `docker push` 를 로컬로 호출 하는 대신 클라우드의 ACR 작업에 의해 자동으로 처리 됩니다.
+[ACR 작업](https://docs.microsoft.com/azure/container-registry/container-registry-tasks-overview) 은 Azure Container Registry에서 사용할 수 있는 기능 집합입니다. Azure 클라우드에서 컨테이너 이미지를 작성 하 고 관리 하 여 [내부 루프 개발 주기](https://docs.microsoft.com/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow) 를 확장 합니다. `docker build`개발 컴퓨터에서 및를 로컬로 호출 하는 대신 `docker push` 클라우드의 ACR 작업에 의해 자동으로 처리 됩니다.
 
 다음 AZ CLI 명령은 컨테이너 이미지를 빌드하고 ACR로 푸시합니다.
 
@@ -96,7 +94,7 @@ Azure의 대부분 리소스와 마찬가지로 포털, 명령줄 또는 투구 
 - 인증
 - 네트워킹
 - 모니터링
-- Tags
+- 태그
 
 이 [빠른 시작은 Azure Portal를 사용 하 여 AKS 클러스터를 배포 하는 과정](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)을 안내 합니다.
 
@@ -118,16 +116,16 @@ Azure Dev Spaces 사용 하는 프로세스에는 다음 단계가 포함 됩니
 3. 사용자 고유의 시스템 버전에 대 한 자식 개발 공간을 구성 합니다.
 4. Dev 공간에 연결 합니다.
 
-이러한 모든 단계는 Azure CLI 및 새로운 `azds` 명령줄 도구를 사용 하 여 수행할 수 있습니다. 예를 들어, 지정 된 Kubernetes 클러스터에 대 한 새 Azure Dev 공간을 만들려면 다음과 같은 명령을 사용 합니다.
+이러한 모든 단계는 Azure CLI 및 새로운 명령줄 도구를 사용 하 여 수행할 수 있습니다 `azds` . 예를 들어, 지정 된 Kubernetes 클러스터에 대 한 새 Azure Dev 공간을 만들려면 다음과 같은 명령을 사용 합니다.
 
 ```azurecli
 az aks use-dev-spaces -g my-aks-resource-group -n MyAKSCluster
 ```
 
-그런 다음 `azds prep` 명령을 사용 하 여 응용 프로그램을 실행 하는 데 필요한 Docker 및 투구 차트 자산을 생성할 수 있습니다. 그런 다음를 사용 하 여 `azds up`AKS에서 코드를 실행 합니다. 이 명령을 처음 실행 하면 투구 차트가 설치 됩니다. 컨테이너는 사용자의 지침에 따라 빌드되고 배포 됩니다. 이 작업은 처음 실행 될 때까지 몇 분 정도 걸릴 수 있습니다. 그러나를 변경한 후에는를 사용 하 여 `azds space select` 사용자 고유의 자식 개발 공간에 연결한 다음 격리 된 자식 개발 공간에서 업데이트를 배포 하 고 디버그할 수 있습니다. 개발 공간이 준비 되 고 실행 되 면 `azds up` 명령을 다시 실행 하 여 업데이트를 보내거나 Visual Studio 또는 Visual Studio Code에서 기본 제공 되는 도구를 사용할 수 있습니다. VS Code를 사용 하 여 명령 팔레트를 사용 하 여 개발 공간에 연결 합니다. 그림 3-12에서는 Visual Studio에서 Azure Dev Spaces를 사용 하 여 웹 응용 프로그램을 시작 하는 방법을 보여 줍니다.
+그런 다음 명령을 사용 하 여 `azds prep` 응용 프로그램을 실행 하는 데 필요한 Docker 및 투구 차트 자산을 생성할 수 있습니다. 그런 다음를 사용 하 여 AKS에서 코드를 실행 `azds up` 합니다. 이 명령을 처음 실행 하면 투구 차트가 설치 됩니다. 컨테이너는 사용자의 지침에 따라 빌드되고 배포 됩니다. 이 작업은 처음 실행 될 때까지 몇 분 정도 걸릴 수 있습니다. 그러나를 변경한 후에는를 사용 하 여 사용자 고유의 자식 개발 공간에 연결한 `azds space select` 다음 격리 된 자식 개발 공간에서 업데이트를 배포 하 고 디버그할 수 있습니다. 개발 공간이 준비 되 고 실행 되 면 명령을 다시 실행 하 여 업데이트를 보내거나 `azds up` Visual Studio 또는 Visual Studio Code에서 기본 제공 되는 도구를 사용할 수 있습니다. VS Code를 사용 하 여 명령 팔레트를 사용 하 여 개발 공간에 연결 합니다. 그림 3-12에서는 Visual Studio에서 Azure Dev Spaces를 사용 하 여 웹 응용 프로그램을 시작 하는 방법을 보여 줍니다.
 
-![Visual Studio](./media/azure-dev-spaces-visual-studio-launchsettings.png)
-**그림 3-12**에서 Azure Dev Spaces에 연결 합니다. Visual Studio에서 Azure Dev Spaces에 연결
+![Visual Studio ](./media/azure-dev-spaces-visual-studio-launchsettings.png)
+ **그림 3-12**에서 Azure Dev Spaces에 연결 합니다. Visual Studio에서 Azure Dev Spaces에 연결
 
 >[!div class="step-by-step"]
 >[이전](combine-containers-serverless-approaches.md)

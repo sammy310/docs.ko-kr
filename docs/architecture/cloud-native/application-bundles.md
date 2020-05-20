@@ -1,17 +1,15 @@
 ---
 title: 클라우드 네이티브 애플리케이션 번들
 description: Azure 용 클라우드 네이티브 .NET 앱 설계 | 클라우드 네이티브 응용 프로그램 번들
-ms.date: 05/12/2020
-ms.openlocfilehash: c16a9cba1fe31e025532ba98d644114a319bb9de
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: fc6ee96078650dccd2ebeb3e65a0a00c4e05ecdb
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395486"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614346"
 ---
 # <a name="cloud-native-application-bundles"></a>클라우드 네이티브 애플리케이션 번들
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 클라우드 네이티브 응용 프로그램의 핵심 속성은 클라우드의 기능을 활용 하 여 개발 속도를 높이는 것입니다. 이 디자인은 전체 응용 프로그램에서 다양 한 종류의 기술을 사용 하는 경우가 많습니다. 응용 프로그램은 Docker 컨테이너에 제공 될 수 있으며, 일부 서비스는 Azure Functions 사용할 수 있는 반면, 다른 부분은 하드웨어 GPU 가속을 사용 하 여 대량 금속 서버에 할당 된 가상 컴퓨터에서 직접 실행 될 수 있습니다. 두 클라우드 네이티브 응용 프로그램이 동일 하지 않으므로 제공 하는 단일 메커니즘을 제공 하기가 어렵습니다.
 
@@ -83,7 +81,7 @@ CNAB 형식만 유연 하 여 모든 클라우드에 사용할 수 있습니다.
 ## <a name="references"></a>참조
 
 - [Azure DevOps](https://azure.microsoft.com/services/devops/)
-- [Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/)
+- [Azure 리소스 관리자](https://azure.microsoft.com/documentation/articles/resource-group-overview/)
 - [Terraform](https://www.terraform.io/)
 - [Azure CLI](https://docs.microsoft.com/cli/azure/)
 

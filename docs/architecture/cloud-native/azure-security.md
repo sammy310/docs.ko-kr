@@ -1,17 +1,15 @@
 ---
 title: 클라우드 전용 앱에 대 한 Azure 보안
 description: Azure 용 클라우드 네이티브 .NET 앱 설계 | 클라우드 네이티브 앱에 대 한 Azure 보안
-ms.date: 06/30/2019
-ms.openlocfilehash: 27ef6c8313f1573ca686e8489a84f64a56116fa4
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: a39b64477eb9e896c6603e5609ede653bfee1e07
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394765"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614255"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>클라우드 전용 앱에 대 한 Azure 보안
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 클라우드 네이티브 응용 프로그램은 기존의 응용 프로그램 보다 쉽고 안전 하 게 보호할 수 있습니다. 단점은 더 작은 응용 프로그램의 보안을 유지 하 고 보안 인프라를 빌드하기 위한 추가 에너지를 추가 해야 합니다. 대부분의 서비스 배포에서 사용 되는 프로그래밍 언어 및 스타일의 다른 특성은 다양 한 공급자의 보안 게시판에 더 주의 해야 한다는 의미 이기도 합니다.
 
@@ -229,7 +227,7 @@ Azure SQL 데이터베이스와 같은 서비스도 TLS 암호화를 사용 하 
 
 모든 응용 프로그램에는 데이터를 디스크에 저장 하는 여러 위치가 있습니다. 응용 프로그램 코드 자체는 일부 저장소 메커니즘에서 로드 됩니다. 또한 대부분의 응용 프로그램은 SQL Server, Cosmos DB 또는 놀라울 만큼 가격 효율적인 Table Storage 같은 일종의 데이터베이스를 사용 합니다. 이러한 데이터베이스는 모두 고도로 암호화 된 저장소를 사용 하 여 적절 한 권한을 가진 응용 프로그램이 아닌 다른 사용자가 데이터를 읽을 수 있도록 합니다. 시스템 연산자도 암호화 된 데이터를 읽을 수 없습니다. 따라서 고객은 비밀 정보를 비밀로 유지할 수 있습니다.
 
-### <a name="storage"></a>Storage
+### <a name="storage"></a>스토리지
 
 Azure의 토대 인는 Azure Storage 엔진입니다. 가상 컴퓨터 디스크는 Azure Storage 위에 탑재 됩니다. Azure Kubernetes 서비스는 자체가 Azure Storage에 호스트 되는 가상 머신에서 실행 됩니다. Azure Functions Apps 및 Azure Container Instances와 같은 서버 리스 기술은 Azure Storage의 일부인 디스크를 모두 사용 합니다.
 

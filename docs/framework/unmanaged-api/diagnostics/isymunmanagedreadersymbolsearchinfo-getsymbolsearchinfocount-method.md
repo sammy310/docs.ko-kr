@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4068b6ec-525f-4446-8818-0296178cbd19
 topic_type:
 - apiref
-ms.openlocfilehash: a193c4e9e87616217efc90286032944d05d766c0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a81a5afeec8f97864e1772347c6575b9d09cb176
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446391"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614892"
 ---
 # <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfocount-method"></a>ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount 메서드
 기호 검색 정보의 수를 가져옵니다.  
@@ -34,9 +34,9 @@ HRESULT GetSymbolSearchInfoCount(
   
 ## <a name="parameters"></a>매개 변수  
  `pcSearchInfo`  
- ] out] 검색 정보를 포함 하는 데 필요한 버퍼의 크기를 수신 하는 `ULONG32`에 대 한 포인터입니다.  
+ ] out] `ULONG32` 검색 정보를 포함 하는 데 필요한 버퍼의 크기를 수신 하는에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
@@ -44,4 +44,4 @@ HRESULT GetSymbolSearchInfoCount(
   
 ## <a name="see-also"></a>참고 항목
 
-- [ISymUnmanagedReaderSymbolSearchInfo 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)
+- [ISymUnmanagedReaderSymbolSearchInfo 인터페이스](isymunmanagedreadersymbolsearchinfo-interface.md)

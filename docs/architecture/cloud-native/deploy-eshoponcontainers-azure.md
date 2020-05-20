@@ -1,17 +1,15 @@
 ---
 title: Azure에 eShopOnContainers 배포
 description: Azure Kubernetes Service, 투구 및 DevSpaces를 사용 하 여 eShopOnContainers 응용 프로그램을 배포 합니다.
-ms.date: 04/20/2020
-ms.openlocfilehash: a3eacedac946cb25cf3cced305d7921e29f0d204
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 93a2848f095d7593e1e169f4a6c6c1818a76217d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895590"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614099"
 ---
 # <a name="deploying-eshoponcontainers-to-azure"></a>Azure에 eShopOnContainers 배포
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 EShopOnContainers 응용 프로그램은 다양 한 Azure 플랫폼에 배포할 수 있습니다. Azure Kubernetes Services (AKS)에 응용 프로그램을 배포 하는 것이 좋습니다. Kubernetes 배포 도구인 투구를 사용 하 여 배포 복잡성을 줄일 수 있습니다. 개발자는 필요에 따라 Kubernetes에 대 한 Azure Dev Spaces를 구현 하 여 개발 프로세스를 간소화할 수 있습니다.
 
@@ -57,10 +55,10 @@ spec:
 
 /K8s/helm 폴더에서 eShopOnContainers 투구 차트를 찾을 수 있습니다. 그림 2-6에서는 응용 프로그램의 다양 한 구성 요소가 투구에서 사용 되는 폴더 구조로 구성 되 고, 관리 되는 배포를 정의 하는 방법을 보여 줍니다.
 
-![eShopOnContainers 아키텍처](./media/eshoponcontainers-helm-folder.png)
-**그림 2-6**. EShopOnContainers 투구 폴더입니다.
+![eShopOnContainers 아키텍처 ](./media/eshoponcontainers-helm-folder.png)
+ **그림 2-6**. EShopOnContainers 투구 폴더입니다.
 
-각 개별 구성 요소는 `helm install` 명령을 사용 하 여 설치 됩니다. eShop에는 각 투구 차트를 사용 하 여 구성 요소를 반복 하 고 설치 하는 "모두 배포" 스크립트가 포함 되어 있습니다. 그 결과, 팀의 모든 사용자가 한 줄 스크립트 명령을 사용 하 여 AKS 클러스터에 배포할 수 있는 반복 가능한 프로세스가 소스 제어에서 응용 프로그램과 함께 사용 됩니다.
+각 개별 구성 요소는 명령을 사용 하 여 설치 됩니다 `helm install` . eShop에는 각 투구 차트를 사용 하 여 구성 요소를 반복 하 고 설치 하는 "모두 배포" 스크립트가 포함 되어 있습니다. 그 결과, 팀의 모든 사용자가 한 줄 스크립트 명령을 사용 하 여 AKS 클러스터에 배포할 수 있는 반복 가능한 프로세스가 소스 제어에서 응용 프로그램과 함께 사용 됩니다.
 
 > 투구 버전 3은 공식적으로 Tiller 서버 구성 요소에 대 한 필요성을 제거 합니다. 이 개선 사항에 대 한 자세한 내용은 [여기](https://medium.com/better-programming/why-is-tiller-missing-in-helm-3-2347c446714)를 참조 하세요.
 
@@ -72,13 +70,13 @@ spec:
 
 그림 2-7에서 개발자 Susie가 개발 공간에 업데이트 된 버전의 Bikes 마이크로 서비스를 배포한 것을 볼 수 있습니다. 그런 다음 사용자의 스페이스 이름으로 시작 하는 사용자 지정 URL을 사용 하 여 변경 내용을 테스트할 수 있습니다 (susie.s.dev.myapp.eus.azds.io).
 
-![eShopOnContainers 아키텍처](./media/azure-devspaces-one.png)
-**그림 2-7**. 개발자 Susie 자신의 자전거 마이크로 서비스 버전을 배포 하 고 테스트 합니다.
+![eShopOnContainers 아키텍처 ](./media/azure-devspaces-one.png)
+ **그림 2-7**. 개발자 Susie 자신의 자전거 마이크로 서비스 버전을 배포 하 고 테스트 합니다.
 
 동시에 개발자 John은 예약 마이크로 서비스 사용자 지정 하 고 변경 내용을 테스트 해야 합니다. 그림 2-8에 표시 된 것 처럼 Susie의 변경 내용과 충돌 하지 않고 자신의 개발자 공간에 변경 내용을 배포 합니다. 그런 다음 John은 자신의 URL (john.s.dev.myapp.eus.azds.io) 이름 앞에 접두사를 사용 하 여 변경 내용을 테스트 합니다.
 
-![eShopOnContainers 아키텍처](./media/azure-devspaces-two.png)
-**그림 2-8**. 개발자는 자신의 예약 마이크로 서비스 버전을 배포 하 고 다른 개발자와 충돌 하지 않고 테스트 합니다.
+![eShopOnContainers 아키텍처 ](./media/azure-devspaces-two.png)
+ **그림 2-8**. 개발자는 자신의 예약 마이크로 서비스 버전을 배포 하 고 다른 개발자와 충돌 하지 않고 테스트 합니다.
 
 Azure Dev Spaces를 사용 하 여 팀은 변경 내용을 독립적으로 변경, 배포 및 테스트 하는 동시에 AKS를 사용 하 여 직접 작업할 수 있습니다. 이 방법은 모든 개발자가 자신의 AKS 환경을 효과적으로 사용 하기 때문에 별도의 전용 호스팅 환경에 대 한 필요성을 줄입니다. 개발자는 CLI를 사용 하 여 Azure Dev Spaces 작업 하거나 응용 프로그램을 시작 하 여 Visual Studio에서 직접 Azure Dev Spaces 수 있습니다. [Azure Dev Spaces 작동 하 고 구성 되는 방법에 대해 자세히 알아보세요.](https://docs.microsoft.com/azure/dev-spaces/how-dev-spaces-works)
 

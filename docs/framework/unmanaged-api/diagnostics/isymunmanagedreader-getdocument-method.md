@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bb203853-6a6d-4027-b9e9-603a7f28b9d3
 topic_type:
 - apiref
-ms.openlocfilehash: 1fcb885b6e19457065c2ca9971f068b42f97147d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 950fb3b9c51ae2c9470b5aadd31c877d7aa6b6f6
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448351"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615061"
 ---
 # <a name="isymunmanagedreadergetdocument-method"></a>ISymUnmanagedReader::GetDocument 메서드
 문서를 찾습니다. 문서 언어, 공급 업체 및 형식은 선택 사항입니다.  
@@ -52,7 +52,7 @@ HRESULT GetDocument (
  `pRetVal`  
  제한이 반환 된 인터페이스에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
@@ -60,4 +60,4 @@ HRESULT GetDocument (
   
 ## <a name="see-also"></a>참고 항목
 
-- [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader 인터페이스](isymunmanagedreader-interface.md)

@@ -1,17 +1,15 @@
 ---
 title: DevOps
 description: 클라우드 네이티브 응용 프로그램에 대 한 DevOps 고려 사항
-ms.date: 05/12/2020
-ms.openlocfilehash: 498ce64c3a387433862142826059b4f7e513ec7b
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: ce814595245d49e409e780cb0f63c436299c2e4e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395807"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614121"
 ---
 # <a name="devops"></a>DevOps
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 소프트웨어 컨설턴트의 모토은 발생 하는 모든 질문에 "It의 영향을 받습니다". 소프트웨어 컨설턴트는 위치를 글꼴 하지 않기 때문입니다. 소프트웨어의 질문에 대 한 하나의 진정한 답변이 없기 때문입니다. 절대 오른쪽 및 잘못 된 것은 아니지만 opposites 간에 균형을 유지 합니다.
 

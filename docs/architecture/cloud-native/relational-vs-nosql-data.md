@@ -2,17 +2,15 @@
 title: 관계형 마이닝 모델과 NoSQL 데이터 비교
 description: 클라우드 네이티브 응용 프로그램의 관계형 및 NoSQL 데이터에 대 한 자세한 정보
 author: robvet
-ms.date: 01/22/2020
-ms.openlocfilehash: a2561b0abfc1975badfafeeb4fa2f2c6429814be
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.date: 05/17/2020
+ms.openlocfilehash: cc47faa4fcd4468de9ddc468e488297db4289ff5
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507366"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613787"
 ---
 # <a name="relational-vs-nosql-data"></a>관계형 마이닝 모델과 NoSQL 데이터 비교
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 관계형 및 NoSQL은 클라우드 네이티브 앱에서 일반적으로 구현 되는 두 가지 유형의 데이터베이스 시스템입니다. 서로 다른 방식으로 빌드되고, 데이터를 다른 방식으로 저장 하 고, 다른 방식으로 액세스 합니다. 이 섹션에서는 두 가지 방법에 대해 살펴보겠습니다. 이 챕터의 뒷부분에서는 *Newsql*이라는 새로운 데이터베이스 기술을 살펴보겠습니다.
 
@@ -83,7 +81,6 @@ NoSQL 데이터베이스는 일반적으로 고가용성 및 파티션 허용 �
 | 데이터 검색은 간단 하 고 평평한 경향이 있습니다. | 복잡 한 쿼리 및 보고서를 사용 하 여 작업|
 | 데이터에는 지리적으로 분산 되어 있어야 합니다. | 사용자의 중앙 집중화 |
 | 응용 프로그램은 공용 클라우드와 같은 상용 하드웨어에 배포 됩니다. | 응용 프로그램이 대규모의 첨단 하드웨어에 배포 됩니다. |
-|||
 
 다음 섹션에서는 클라우드 네이티브 데이터를 저장 하 고 관리 하기 위해 Azure 클라우드에서 사용할 수 있는 옵션을 살펴보겠습니다.
 
@@ -134,7 +131,7 @@ Microsoft SQL Server에 대 한 전문 지식이 있는 개발 팀은 [Azure SQL
 
 ### <a name="azure-database-for-mysql"></a>Azure Database for MySQL
 
-[MySQL](https://en.wikipedia.org/wiki/MySQL) 은 오픈 소스 관계형 데이터베이스 이며 [램프 소프트웨어 스택에](https://en.wikipedia.org/wiki/LAMP_(software_bundle))빌드된 응용 프로그램에 대 한 기둥입니다. *읽기* 작업이 많은 워크 로드에 대해 널리 선택 되어 있으며, Facebook, Twitter, YouTube 등 많은 대규모 조직에서 사용 됩니다. Community edition은 무료로 제공 되지만 enterprise edition에는 라이선스 구매가 필요 합니다. 원래 1995에 생성 된 제품은 2008의 Sun Microsystems에서 구매 했습니다. Oracle에서 Sun 및 MySQL 2010을 얻었습니다.
+[MySQL](https://en.wikipedia.org/wiki/MySQL)   는 오픈 소스 관계형 데이터베이스 이며 [램프 소프트웨어 스택에](https://en.wikipedia.org/wiki/LAMP_(software_bundle))빌드된 응용 프로그램에 대 한 기둥입니다. *읽기* 작업이 많은 워크 로드에 대해 널리 선택 되어 있으며, Facebook, Twitter, YouTube 등 많은 대규모 조직에서 사용 됩니다. Community edition은 무료로 제공 되지만 enterprise edition에는 라이선스 구매가 필요 합니다. 원래 1995에 생성 된 제품은 2008의 Sun Microsystems에서 구매 했습니다. Oracle에서 Sun 및 MySQL 2010을 얻었습니다.
 
 [Azure Database for MySQL](https://azure.microsoft.com/services/mysql/) 는 오픈 소스 MySQL 서버 엔진을 기반으로 하는 관리 되는 관계형 데이터베이스 서비스입니다. MySQL Community edition을 사용 합니다. Azure MySQL 서버는 서비스에 대 한 관리 지점입니다. 이는 온-프레미스 배포에 사용 되는 것과 동일한 MySQL 서버 엔진입니다. 엔진은 서버당 단일 데이터베이스 또는 리소스를 공유 하는 서버당 여러 데이터베이스를 만들 수 있습니다. 새 기술에 대해 알아보거나 가상 머신을 관리할 필요 없이 동일한 오픈 소스 도구를 사용 하 여 데이터를 계속 관리할 수 있습니다.
 
@@ -150,7 +147,7 @@ MariaDB는 강력한 커뮤니티 이며 많은 대기업에서 사용 됩니다
 
 [PostgreSQL](https://www.postgresql.org/) 는 30 년 이상 활성 개발이 포함 된 오픈 소스 관계형 데이터베이스입니다. PostgresSQL는 안정성 및 데이터 무결성에 대 한 강력한 평판을 갖습니다. 기능이 풍부 하 고 SQL에서 호환 되며, 특히 복잡 한 쿼리와 많은 쓰기 작업의 경우에는 MySQL 보다 성능이 더 우수 합니다. Apple, Red Hat 및 Fujitsu를 비롯 한 많은 대기업은 PostgreSQL를 사용 하 여 제품을 구축 했습니다.
 
-[Azure Database for PostgreSQL](https://azure.microsoft.com/services/postgresql/) 은 오픈 소스 Postgres 데이터베이스 엔진을 기반으로 하는 완전히 관리 되는 관계형 데이터베이스 서비스입니다. 이 서비스는 c + +, Java, Python, Node, C\#및 PHP를 비롯 한 다양 한 개발 플랫폼을 지원 합니다. [명령줄 인터페이스](https://datamigration.microsoft.com/scenario/postgresql-to-azurepostgresql?step=1) 도구나 Azure 데이터 마이그레이션 서비스를 사용 하 여 PostgreSQL 데이터베이스를이 데이터베이스로 마이그레이션할 수 있습니다.
+[Azure Database for PostgreSQL](https://azure.microsoft.com/services/postgresql/) 은 오픈 소스 Postgres 데이터베이스 엔진을 기반으로 하는 완전히 관리 되는 관계형 데이터베이스 서비스입니다. 이 서비스는 c + +, Java, Python, Node, C 및 PHP를 비롯 한 다양 한 개발 플랫폼을 지원 합니다 \# . [명령줄 인터페이스](https://datamigration.microsoft.com/scenario/postgresql-to-azurepostgresql?step=1) 도구나 Azure 데이터 마이그레이션 서비스를 사용 하 여 PostgreSQL 데이터베이스를이 데이터베이스로 마이그레이션할 수 있습니다.
 
 Azure Database for PostgreSQL는 다음과 같은 두 가지 배포 옵션을 사용할 수 있습니다.
 
@@ -190,21 +187,30 @@ Cosmos DB [멀티 호 밍 api](https://docs.microsoft.com/azure/cosmos-db/distri
 
 ### <a name="multi-model-support"></a>다중 모델 지원
 
-응용 프로그램을 클라우드 기본 아키텍처로 모놀리식 하는 경우 개발 팀은 경우에 따라 오픈 소스 NoSQL 데이터 저장소를 마이그레이션해야 합니다. Cosmos DB를 통해 이러한 NoSQL 데이터 저장소에 *대 한 투자를 다중 모델* 데이터 플랫폼과 함께 유지할 수 있습니다. 그림 5-13에서는 지원 되는 NoSQL [호환성 api](https://www.wikiwand.com/en/Cosmos_DB)를 보여 줍니다.
+응용 프로그램을 클라우드 기본 아키텍처로 모놀리식 하는 경우 개발 팀은 경우에 따라 오픈 소스 NoSQL 데이터 저장소를 마이그레이션해야 합니다. Cosmos DB를 통해 이러한 NoSQL 데이터 저장소에 *대 한 투자를 다중 모델* 데이터 플랫폼과 함께 유지할 수 있습니다. 다음 표에서는 지원 되는 NoSQL [호환성 api](https://www.wikiwand.com/en/Cosmos_DB)를 보여 줍니다.
 
-![Cosmos DB 공급자](./media/cosmos-db-providers.png)
-
-**그림 5-13**: Cosmos DB 공급자
+| 공급자 | 설명  |
+| :-------- | :-------- |
+| SQL API | JSON 문서 및 SQL 기반 쿼리를 지 원하는 소유 API |
+| Mongo DB API | Mongo DB Api 및 JSON 문서 지원|
+| Gremlin API | 그래프 기반 노드와에 지 데이터 표현을 사용 하 여 Gremlin API 지원 |
+| Cassandra API | 와이드 열 데이터 표현에 대 한 Casandra API 지원 |  
+| 테이블 API  | 프리미엄 기능을 갖춘 Azure Table Storage 지원 |  
+| etcd API | Azure Kubernetes 서비스 클러스터에 대 한 백업 저장소로 Cosmos DB을 사용 하도록 설정 합니다. |
 
 개발 팀은 데이터 나 코드를 최소한으로 변경 하 여 기존 Mongo, Gremlin 또는 Cassandra 데이터베이스를 Cosmos DB로 마이그레이션할 수 있습니다. 새 앱의 경우 개발 팀은 오픈 소스 옵션 또는 기본 제공 SQL API 모델 중에서 선택할 수 있습니다.
 
 > 내부적으로 Cosmos는 데이터를 기본 데이터 형식으로 구성 된 간단한 구조체 형식으로 저장 합니다. 각 요청에 대해 데이터베이스 엔진은 기본 데이터를 선택한 모델 표현으로 변환 합니다.
 
-위의 그림에서 5-13는 [Table API](https://docs.microsoft.com/azure/cosmos-db/table-introduction) 옵션을 확인 합니다. 이 API는 Azure Table Storage의 진화입니다. 둘 다 동일한 기본 테이블 모델을 공유 하지만 Cosmos DB Table API는 Azure Storage API에서 사용할 수 없는 프리미엄 향상 기능을 추가 합니다. 이러한 기능은 그림 5-4에서 대조 됩니다.
+위의 표에서 [Table API](https://docs.microsoft.com/azure/cosmos-db/table-introduction) 옵션을 확인 합니다. 이 API는 Azure Table Storage의 진화입니다. 둘 다 동일한 기본 테이블 모델을 공유 하지만 Cosmos DB Table API는 Azure Storage API에서 사용할 수 없는 프리미엄 향상 기능을 추가 합니다. 다음 표에서는 이러한 기능을 대조 합니다.
 
-![Azure Table API](media/azure-table-api.png)
-
-**그림 5-14**: Azure Table API 공급자
+|  | Azure Table Storage  | Azure Cosmos DB  |
+| :-------- | :-------- |:-------- |
+| 대기 시간 | Fast | 전 세계 어디에서 든 읽기 및 쓰기에 대 한 1 자리 밀리초 대기 시간 |
+| 처리량 | 테이블당 2만 작업 제한 | 테이블당 1000만 작업 |
+| 글로벌 배포 | 단일 보조 읽기 지역 (선택 사항)이 있는 단일 지역 | 자동 장애 조치 (failover)를 사용 하 여 모든 지역에 턴키 배포 |
+| 인덱싱 | 파티션 및 행 키 속성만 사용할 수 있습니다. | 모든 속성의 자동 인덱싱 |
+| 가격 책정 | 저장소 기반 | 처리량 기반 |
 
 Azure 테이블 저장소를 사용 하는 마이크로 서비스는 Cosmos DB Table API 쉽게 마이그레이션할 수 있습니다. 코드 변경은 필요하지 않습니다.
 
@@ -214,17 +220,21 @@ Azure 테이블 저장소를 사용 하는 마이크로 서비스는 Cosmos DB T
 
 대부분의 분산 데이터베이스를 통해 개발자는 두 가지 일관성 모델 (강력한 일관성과 최종 일관성) 중에서 선택할 수 있습니다. *강력한 일관성* 은 데이터 프로그래밍의 골드 표준입니다. 모든 데이터베이스 복사본에서 업데이트가 복제 될 때까지 대기 시간이 발생 해야 하는 경우에도 쿼리가 항상 최신 데이터를 반환 하도록 보장 합니다. *최종 일관성* 을 위해 구성 된 데이터베이스는 해당 데이터가 최신 복사본이 아니더라도 데이터를 즉시 반환 합니다. 후자 옵션을 사용 하면 더 높은 가용성, 더 큰 규모 및 향상 된 성능을 제공 합니다.
 
-Azure Cosmos DB는 그림 5-15에 표시 된 잘 정의 된 5 가지 [일관성 모델](https://docs.microsoft.com/azure/cosmos-db/consistency-levels) 을 제공 합니다.
+Azure Cosmos DB는 그림 5-13에 표시 된 잘 정의 된 5 가지 [일관성 모델](https://docs.microsoft.com/azure/cosmos-db/consistency-levels) 을 제공 합니다.
 
 ![Cosmos DB 일관성 그래프](./media/cosmos-consistency-level-graph.png)
 
-**그림 5-15**: Cosmos DB 일관성 수준
+**그림 5-13**: Cosmos DB 일관성 수준
 
- 이러한 옵션을 사용 하면 일관성, 가용성 및 데이터에 대 한 성능을 세밀 하 게 선택 하 고 세분화 된 균형을 유지할 수 있습니다. 그림 5-16에서는 각 수준에 대해 설명 합니다.
+ 이러한 옵션을 사용 하면 일관성, 가용성 및 데이터에 대 한 성능을 세밀 하 게 선택 하 고 세분화 된 균형을 유지할 수 있습니다. 다음 표에는이 수준이 나와 있습니다.
 
-![Cosmos DB 일관성 수준](./media/cosmos-db-consistency-levels.png)
-
-**그림 5-16**: Cosmos DB 일관성 수준 설명
+| 일관성 수준 | 설명  |
+| :-------- | :-------- |
+| 최종 | 읽기를 위한 순서가 보장 되지 않습니다. 복제본이 결과적으로 수렴 됩니다. |
+| 상수 접두사 | 읽기는 여전히 최종 이지만 데이터가 기록 되는 순서 대로 반환 됩니다. |
+| 세션 | 현재 세션 중에 작성 된 데이터를 읽을 수 있도록 보장 합니다. 이는 기본 일관성 수준입니다. |
+| 제한된 부실 | 지정한 간격으로 추적 쓰기를 읽습니다. |  
+| 강력  | 읽기는 항목의 최근 커밋된 버전을 반환 하도록 보장 됩니다. 클라이언트는 커밋되지 않았거나 부분적으로 읽은 내용을 표시 하지 않습니다. |  
 
 [9-구슬 Cosmos DB 일관성 수준](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/)에 대해 설명 하는 문서에서 Microsoft Program Manager Jeremy Likness는 5 가지 모델에 대 한 뛰어난 설명을 제공 합니다.
 
@@ -236,11 +246,11 @@ Azure Cosmos DB는 그림 5-15에 표시 된 잘 정의 된 5 가지 [일관성 
 
 컨테이너는 Cosmos DB 데이터베이스에 있으며 스키마를 구분 하지 않는 항목 그룹을 나타냅니다. 항목은 컨테이너에 추가 하는 데이터입니다. 문서, 행, 노드 또는 가장자리로 표시 됩니다. 컨테이너에 추가 된 모든 항목은 자동으로 인덱싱됩니다.
 
-컨테이너를 분할 하기 위해 항목은 논리적 파티션 이라는 별개의 하위 집합으로 나뉩니다. 논리적 파티션은 컨테이너의 각 항목과 연결 된 파티션 키의 값에 따라 채워집니다. 그림 5-18에는 파티션 키 값을 기반으로 하는 논리적 파티션이 있는 두 개의 컨테이너가 나와 있습니다.
+컨테이너를 분할 하기 위해 항목은 논리적 파티션 이라는 별개의 하위 집합으로 나뉩니다. 논리적 파티션은 컨테이너의 각 항목과 연결 된 파티션 키의 값에 따라 채워집니다. 그림 5-14에는 파티션 키 값을 기반으로 하는 논리적 파티션이 있는 두 개의 컨테이너가 나와 있습니다.
 
 ![Cosmos DB 분할 메커니즘](./media/cosmos-db-partitioning.png)
 
-**그림 5-18**: Cosmos DB 분할 메커니즘
+**그림 5-14**: Cosmos DB 분할 메커니즘
 
 위의 그림에서 각 항목에는 ' city ' 또는 ' 공항 '의 파티션 키가 포함 되어 있습니다. 키는 항목의 논리적 파티션을 결정 합니다. 도시 코드가 있는 항목은 왼쪽의 컨테이너에 할당 되 고, 공항 코드를 포함 하는 항목은 오른쪽의 컨테이너에 할당 됩니다. 파티션 키 값을 ID 값과 결합 하면 항목을 고유 하 게 식별 하는 항목의 인덱스가 생성 됩니다.
 
@@ -248,16 +258,16 @@ Azure Cosmos DB는 그림 5-15에 표시 된 잘 정의 된 5 가지 [일관성 
 
 ## <a name="newsql-databases"></a>NewSQL 데이터베이스
 
-*Newsql* 은 nosql의 분산 확장성과 관계형 데이터베이스의 ACID 보증을 결합 하는 새로운 데이터베이스 기술입니다. NewSQL 데이터베이스는 전체 트랜잭션 지원 및 ACID 규정에 따라 분산 된 환경에서 대용량 데이터를 처리 해야 하는 비즈니스 시스템에 중요 합니다. NoSQL 데이터베이스는 대규모 확장성을 제공할 수 있지만 데이터 일관성을 보장 하지는 않습니다. 일관 되지 않은 데이터의 일시적인 문제는 개발 팀에 부담을 수 있습니다. 개발자는 일관성 없는 데이터로 인해 발생 하는 문제를 관리 하기 위해 마이크로 서비스 코드로 보호를 구성 해야 합니다.
+*Newsql*   는 NoSQL의 분산 확장성과 관계형 데이터베이스의 ACID 보증을 결합 하는 새로운 데이터베이스 기술입니다. NewSQL 데이터베이스는 전체 트랜잭션 지원 및 ACID 규정에 따라 분산 된 환경에서 대용량 데이터를 처리 해야 하는 비즈니스 시스템에 중요 합니다. NoSQL 데이터베이스는 대규모 확장성을 제공할 수 있지만 데이터 일관성을 보장 하지는 않습니다. 일관 되지 않은 데이터의 일시적인 문제는 개발 팀에 부담을 수 있습니다. 개발자는 일관성 없는 데이터로 인해 발생 하는 문제를 관리 하기 위해 마이크로 서비스 코드로 보호를 구성 해야 합니다.
 
 CNCF (Cloud Native 컴퓨팅 Foundation)는 여러 NewSQL 데이터베이스 프로젝트를 제공 합니다.
 
-| 프로젝트 | 특징 |
+| Project | 특징 |
 | :-------- | :-------- |
 | Cockroach DB |전체적으로 크기를 조정 하는 ACID 규격 관계형 데이터베이스입니다. 클러스터에 새 노드를 추가 하 고 CockroachDB는 인스턴스 및 지역 간에 데이터를 분산 합니다. 안정성을 보장 하기 위해 복제본을 만들고, 관리 하 고, 배포 합니다. 오픈 소스 이며 자유롭게 사용할 수 있습니다.  |
 | TiDB | HTAP (하이브리드 트랜잭션 및 분석 처리) 워크 로드를 지 원하는 오픈 소스 데이터베이스입니다. 이 기능은 MySQL과 호환 되며 가로 확장성, 강력한 일관성 및 고가용성을 제공 합니다.  TiDB는 MySQL 서버 처럼 작동 합니다. 응용 프로그램에 대 한 광범위 한 코드 변경을 요구 하지 않고 기존 MySQL 클라이언트 라이브러리를 계속 사용할 수 있습니다. |
 | YugabyteDB | 오픈 소스, 고성능 분산 SQL database 낮은 쿼리 대기 시간, 오류에 대 한 복원 력 및 글로벌 데이터 배포를 지원 합니다. YugabyteDB는 PostgressSQL 호환 되며 확장 RDBMS 및 인터넷 규모 OLTP 워크 로드를 처리 합니다. 이 제품은 NoSQL도 지원 하며 Cassandra와 호환 됩니다. |
-|Vitess | Vitess는 MySQL 인스턴스의 규모가 많은 클러스터를 배포, 확장 및 관리 하기 위한 데이터베이스 솔루션입니다. 공용 또는 사설 클라우드 아키텍처에서 실행할 수 있습니다. 수직 및 수평 분할 지원에 대 한 여러 중요 한 MySQL 기능과 기능을 결합 하 고 확장 합니다. YouTube에서 발생 한 Vitess는 2011부터 모든 YouTube 데이터베이스 트래픽을 처리 했습니다. |
+|Vitess | Vitess는 MySQL 인스턴스의 규모가 많은 클러스터를 배포, 확장 및 관리 하기 위한 데이터베이스 솔루션입니다. 공용 또는 사설 클라우드 아키텍처에서 실행할 수 있습니다. Vitess는 수직 및 수평 분할 지원에 대 한 여러 중요 한 MySQL 기능과 기능을 결합 하 고 확장 합니다. YouTube에서 발생 한 Vitess는 2011부터 모든 YouTube 데이터베이스 트래픽을 처리 했습니다. |
 
 이전 그림의 오픈 소스 프로젝트는 Cloud Native 컴퓨팅 Foundation에서 사용할 수 있습니다. 이러한 제품 중 세 가지는 .NET Core 지원을 포함 하는 전체 데이터베이스 제품입니다. 다른 Vitess는 MySQL 인스턴스의 규모가 많은 클러스터를 수평으로 확장 하는 데이터베이스 클러스터링 시스템입니다.
 

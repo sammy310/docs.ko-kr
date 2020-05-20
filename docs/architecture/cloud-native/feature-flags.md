@@ -1,17 +1,16 @@
 ---
 title: 기능 플래그
 description: Azure 앱 구성을 활용 하는 클라우드 네이티브 응용 프로그램에서 기능 플래그 구현
-ms.date: 05/03/2020
-ms.openlocfilehash: 72e1bfe777854a74fcac926811caf97e59986146
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+author: robvet
+ms.date: 05/13/2020
+ms.openlocfilehash: 607bd14a415a25b382f550e697542cf749a21772
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83398322"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614073"
 ---
 # <a name="feature-flags"></a>기능 플래그
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 1 장에서는 cloud native가 속도와 민첩성에 affirmed. 사용자는 신속한 응답성, 혁신적인 기능 및 가동 중지 시간을 예측할 수 있습니다. `Feature flags`는 클라우드 네이티브 응용 프로그램의 민첩성을 향상 시키는 데 도움이 되는 최신 배포 기술입니다. 이를 통해 프로덕션 환경에 새 기능을 배포할 수 있지만 가용성을 제한할 수 있습니다. 스위치 긋기를 사용 하면 앱을 다시 시작 하거나 새 코드를 배포 하지 않고도 특정 사용자에 대 한 새 기능을 활성화할 수 있습니다. 코드 배포에서 새 기능의 릴리스를 분리 합니다.
 

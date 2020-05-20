@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f909ac48-3d8f-49fb-a369-e3d9959151cd
 topic_type:
 - apiref
-ms.openlocfilehash: 75d477af7395a9b7d3328b2a5787f810733f3749
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 451cfecde7e14fad9d3fed3367112e1fb59796e5
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448882"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615146"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>ISymUnmanagedMethod::GetSequencePoints 메서드
 이 메서드 내의 모든 시퀀스 위치를 가져옵니다.  
@@ -41,10 +41,10 @@ HRESULT GetSequencePoints(
   
 ## <a name="parameters"></a>매개 변수  
  `cPoints`  
- 진행 `offsets`, `documents`, `lines`, `columns`, `endLines`및 `endColumns` 배열의 크기를 수신 하는 `ULONG32`입니다.  
+ 진행 `ULONG32` `offsets` ,,,, `documents` `lines` `columns` `endLines` 및 `endColumns` 배열의 크기를 받는입니다.  
   
  `pcPoints`  
- 제한이 시퀀스 위치를 포함 하는 데 필요한 버퍼의 길이를 수신 하는 `ULONG32`에 대 한 포인터입니다.  
+ 제한이 `ULONG32`시퀀스 위치를 포함 하는 데 필요한 버퍼의 길이를 수신 하는에 대 한 포인터입니다.  
   
  `offsets`  
  진행 시퀀스 위치에 대 한 메서드의 시작 부분에서 MSIL (Microsoft 중간 언어) 오프셋을 저장할 배열입니다.  
@@ -64,7 +64,7 @@ HRESULT GetSequencePoints(
  `endColumns`  
  진행 시퀀스 위치가 끝나는 문서의 열 배열입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
@@ -72,4 +72,4 @@ HRESULT GetSequencePoints(
   
 ## <a name="see-also"></a>참고 항목
 
-- [ISymUnmanagedMethod 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod 인터페이스](isymunmanagedmethod-interface.md)

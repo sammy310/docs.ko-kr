@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a51f1f64-e084-44c5-830c-2222da5a6bbf
 topic_type:
 - apiref
-ms.openlocfilehash: 3bc578be680951a1d41c92fb2169c860882b2e31
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c2cc541b2a78f16d5ca6b19405794faa825a9d72
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448302"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615035"
 ---
 # <a name="isymunmanagedreadergetdocumentversion-method"></a>ISymUnmanagedReader::GetDocumentVersion 메서드
-지정 된 문서의 지정 된 버전을 가져옵니다. 문서 버전은 1부터 시작 하 고 [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) 메서드를 사용 하 여 문서가 업데이트 될 때마다 증가 합니다. `pbCurrent` 매개 변수가 `true`되는 경우 최신 버전의 문서입니다.  
+지정 된 문서의 지정 된 버전을 가져옵니다. 문서 버전은 1부터 시작 하 고 [UpdateSymbolStore](isymunmanagedreader-updatesymbolstore-method.md) 메서드를 사용 하 여 문서가 업데이트 될 때마다 증가 합니다. `pbCurrent`매개 변수가 이면 `true` 문서의 최신 버전입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,9 +42,9 @@ HRESULT GetDocumentVersion (
  제한이 지정 된 문서의 버전을 받는 변수에 대 한 포인터입니다.  
   
  `pbCurrent`  
- 제한이 문서의 최신 버전이 면 `true`를 받는 변수에 대 한 포인터이 고, 최신 버전이 아닌 경우 `false`입니다.  
+ 제한이 `true`최신 버전의 문서 이거나 최신 버전이 아닌 경우를 받는 변수에 대 한 포인터입니다 `false` .  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
@@ -52,4 +52,4 @@ HRESULT GetDocumentVersion (
   
 ## <a name="see-also"></a>참고 항목
 
-- [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader 인터페이스](isymunmanagedreader-interface.md)

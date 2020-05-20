@@ -1,17 +1,15 @@
 ---
 title: EShopOnContainers 참조 앱 소개
 description: ASP.NET Core 및 Azure에 대 한 eShopOnContainers Cloud 기본 마이크로 서비스 참조 앱 소개
-ms.date: 06/30/2019
-ms.openlocfilehash: b97b62268db1d9990f762d9769233ad72551c226
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: a6f3defabec809eaf1cb143e2b521904248b74f2
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395395"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613969"
 ---
 # <a name="introducing-eshoponcontainers-reference-app"></a>EShopOnContainers 참조 앱 소개
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Microsoft는 업계 최고의 커뮤니티 전문가와 협력 하 여 완전 한 기능을 갖춘 클라우드 기본 마이크로 서비스 참조 응용 프로그램 eShopOnContainers를 만들었습니다. 이 응용 프로그램은 .NET Core 및 Docker를 사용 하 고 필요에 따라 Azure, Kubernetes 및 Visual Studio를 사용 하 여 온라인 storefront를 빌드하기 위한 것입니다.
 

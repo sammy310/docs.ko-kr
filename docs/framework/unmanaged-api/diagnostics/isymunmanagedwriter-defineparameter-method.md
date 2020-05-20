@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8e3dd32-6a44-4371-9a74-f417b11998c8
 topic_type:
 - apiref
-ms.openlocfilehash: bc1b65de026a674a3dff183050a5a205fd7052c9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c695aa80ea3bf90a29ce7c5d11eda7fae5fe7b2d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428001"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614814"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a>ISymUnmanagedWriter::DefineParameter 메서드
 현재 메서드의 단일 매개 변수를 정의합니다. 매개 변수 형식은 메서드의 시그니처 내에서 매개 변수의 위치 (시퀀스)에서 가져옵니다.  
@@ -62,7 +62,7 @@ HRESULT DefineParameter(
  `addr3`  
  진행 매개 변수 사양의 세 번째 주소입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
@@ -70,4 +70,4 @@ HRESULT DefineParameter(
   
 ## <a name="see-also"></a>참고 항목
 
-- [ISymUnmanagedWriter 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [ISymUnmanagedWriter 인터페이스](isymunmanagedwriter-interface.md)

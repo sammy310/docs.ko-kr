@@ -1,17 +1,15 @@
 ---
 title: 코드 제공 인프라(Infrastructure as code)
 description: 클라우드 네이티브 응용 프로그램을 사용 하 여 IaC (Infrastructure as Code) 수용
-ms.date: 05/12/2020
-ms.openlocfilehash: 309dd8610ab3b72a6c6da5297f109f822520c5ff
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: cfc9e1f0b2733048d5921de5a0400998c282b1fa
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395341"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613956"
 ---
 # <a name="infrastructure-as-code"></a>코드 제공 인프라(Infrastructure as code)
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 클라우드 네이티브 시스템은 마이크로 서비스, 컨테이너 및 최신 시스템 디자인을 도입 하 여 속도와 민첩성을 구현 합니다. 일관 되 고 품질 코드를 보장 하는 자동화 된 빌드 및 릴리스 단계를 제공 합니다. 그러나이는 스토리의 일부일 뿐입니다. 이러한 시스템이 실행 되는 클라우드 환경을 프로 비전 하려면 어떻게 해야 하나요?
 

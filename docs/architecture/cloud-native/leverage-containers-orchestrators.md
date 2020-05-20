@@ -1,17 +1,15 @@
 ---
 title: 컨테이너 및 오케스트레이터 활용
 description: Azure에서 Docker 컨테이너 및 Kubernetes Orchestrator 활용
-ms.date: 04/13/2020
-ms.openlocfilehash: 64c6c0666398d9ccbc87efad18017bf278568fc4
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 5d0b7f41caecb3422a4416514de2fdd54e94539a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895547"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613913"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>컨테이너 및 오케스트레이터 활용
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 컨테이너 및 orchestrator는 모놀리식 배포 방법에 일반적으로 발생 하는 문제를 해결 하도록 설계 되었습니다.
 
@@ -19,7 +17,7 @@ ms.locfileid: "82895547"
 
 일반적으로 대부분의 응용 프로그램은 단일 단위로 배포 됩니다. 이러한 응용 프로그램을 monolith 라고 합니다. 그림 3-1에 표시 된 것 처럼 여러 모듈 또는 어셈블리로 구성 된 경우에도 응용 프로그램을 단일 단위로 배포 하는 일반적인 방법은 모놀리식 architecture 이라고 합니다.
 
-![모놀리식 아키텍처.](./media/monolithic-architecture.png)
+![모놀리식 아키텍처.](./media/monolithic-design.png)
 
 **그림 3-1**. 모놀리식 아키텍처.
 
@@ -33,7 +31,7 @@ ms.locfileid: "82895547"
 
 모놀리식 응용 프로그램은 전적으로 많은 기능을 필요로 하는 단일 컴퓨터 인스턴스에서 호스팅됩니다. 모놀리식의 어느 부분에서 확장이 필요한 경우에는 다른 컴퓨터에 전체 응용 프로그램의 다른 복사본을 배포 해야 합니다. Monolith를 사용 하면 응용 프로그램 구성 요소를 개별적으로 규모를 조정할 수 없습니다. 크기를 조정 하지 않아도 되는 구성 요소는 비효율적 이며 비용이 많이 드는 리소스 사용량을 초래 합니다.
 
-### <a name="environment"></a>환경
+### <a name="environment"></a>Environment
 
 모놀리식 응용 프로그램은 일반적으로 미리 설치 된 운영 체제, 런타임 및 라이브러리 종속성이 있는 호스팅 환경에 배포 됩니다. 이 환경은 응용 프로그램을 개발 하거나 테스트할 때와 일치 하지 않을 수 있습니다. 응용 프로그램 환경에서의 불일치는 모놀리식 배포에 대 한 문제의 일반적인 원인입니다.
 
@@ -57,8 +55,9 @@ Docker는 가장 인기 있는 컨테이너 관리 플랫폼입니다. Linux 또
 
 컨테이너는 변경할 수 없습니다. 컨테이너를 정의한 후에는 정확히 동일한 방식으로 다시 만들고 실행할 수 있습니다. 이 불변성은 구성 요소 기반 디자인에 적합 합니다. 응용 프로그램의 일부가 다른 부분과 다르게 발전 하는 경우 가장 자주 변경 되는 파트를 배포할 수 있는 경우 전체 앱을 다시 배포 해야 하는 이유는 무엇 인가요? 앱의 다양 한 기능 및 교차를 분리 하는 작업은 별도의 단위로 나눌 수 있습니다. 그림 3-2에서는 특정 기능이 나 기능을 위임 하 여 모놀리식 앱이 컨테이너 및 마이크로 서비스를 활용 하는 방법을 보여 줍니다. 앱 자체의 나머지 기능도 컨테이너 화 된 되었습니다.
 
-![백 엔드에서 마이크로 서비스를 사용 하도록 모놀리식 앱을 분리 합니다. ](./media/breaking-up-monolith-with-backend-microservices.png)
- **그림 3-2**. 백 엔드에서 마이크로 서비스를 사용 하도록 모놀리식 앱을 분리 합니다.
+![백 엔드에서 마이크로 서비스를 사용 하도록 모놀리식 앱을 분리 합니다.](./media/cloud-native-design.png)
+
+**그림 3-2**. 마이크로 서비스를 수용 하는 모놀리식 앱을 분해 합니다.
 
 각 클라우드 네이티브 서비스는 별도의 컨테이너에 빌드 및 배포 됩니다. 각는 필요에 따라 업데이트할 수 있습니다. 각 서비스에 해당 하는 리소스가 있는 노드에서 개별 서비스를 호스트할 수 있습니다. 각 서비스를 실행 하는 환경은 개발, 테스트 및 프로덕션 환경에서 공유 되 고 쉽게 버전이 관리 되는 변경 불가능 합니다. 응용 프로그램의 서로 다른 영역 간 결합은 서비스 간 호출 또는 메시지로 명시적으로 발생 하며,이는 monolith 내에서 컴파일 타임 종속성이 아닙니다. 응용 프로그램의 나머지 부분을 변경할 필요 없이 지정 된 기능에 가장 적합 한 기술을 선택할 수도 있습니다.
 
@@ -111,7 +110,7 @@ Kubernetes는 선언적 및 명령적 구성을 모두 지원 합니다. 명령�
 
 명령적 명령은 학습 및 대화형 실험에 유용 합니다. 그러나 Kubernetes 매니페스트 파일을 선언적으로 만들어 인프라를 코드 방법으로 사용 하 여 안정적이 고 반복 가능한 배포를 제공 하려고 합니다. 매니페스트 파일은 프로젝트 아티팩트가 되며 CI/CD 파이프라인에서 Kubernetes 배포를 자동화 하는 데 사용 됩니다.
 
-명령적 명령을 사용 하 여 클러스터를 이미 구성한 경우를 사용 `kubectl get svc SERVICENAME -o yaml > service.yaml`하 여 선언적 매니페스트를 내보낼 수 있습니다. 이 명령은 아래와 비슷한 매니페스트를 생성 합니다.
+명령적 명령을 사용 하 여 클러스터를 이미 구성한 경우를 사용 하 여 선언적 매니페스트를 내보낼 수 있습니다 `kubectl get svc SERVICENAME -o yaml > service.yaml` . 이 명령은 아래와 비슷한 매니페스트를 생성 합니다.
 
 ```yaml
 apiVersion: v1
@@ -139,7 +138,7 @@ status:
   loadBalancer: {}
 ```
 
-선언적 구성을 사용 하는 경우 구성 파일이 있는 폴더에 대해를 사용 `kubectl diff -f FOLDERNAME` 하 여 커밋하기 전에 적용 되는 변경 내용을 미리 볼 수 있습니다. 변경 내용을 적용 하려면를 실행 `kubectl apply -f FOLDERNAME`합니다. 를 `-R` 추가 하 여 폴더 계층 구조를 재귀적으로 처리 합니다.
+선언적 구성을 사용 하는 경우 `kubectl diff -f FOLDERNAME` 구성 파일이 있는 폴더에 대해를 사용 하 여 커밋하기 전에 적용 되는 변경 내용을 미리 볼 수 있습니다. 변경 내용을 적용 하려면를 실행 `kubectl apply -f FOLDERNAME` 합니다. `-R`를 추가 하 여 폴더 계층 구조를 재귀적으로 처리 합니다.
 
 또한 배포 중인 다른 Kubernetes 기능과 함께 선언적 구성을 사용할 수 있습니다. 선언적 배포는 릴리스, 업데이트 및 크기 조정을 관리 하는 데 도움이 됩니다. Kubernetes 배포 컨트롤러에 새 변경 내용을 배포 하거나, 부하를 확장 하거나, 이전 수정 버전으로 롤백하는 방법을 지시 합니다. 클러스터가 불안정 한 경우 선언적 배포에서 클러스터를 자동으로 원하는 상태로 되돌립니다. 예를 들어 노드가 충돌 하는 경우 배포 메커니즘은 대체를 다시 배포 하 여 원하는 상태를 유지 합니다.
 
@@ -181,7 +180,7 @@ Minikube 란? Minikube 프로젝트에서는 "Minikube가 macOS, Linux 및 Windo
 - CNI (컨테이너 네트워크 인터페이스)를 사용 하도록 설정
 - 수신
 
-Minikube를 설치한 후 이미지를 다운로드 하 고 로컬 Kubernetes 클러스터를 `minikube start` 시작 하는 명령을 실행 하 여 사용을 빠르게 시작할 수 있습니다. 클러스터가 시작 되 면 표준 Kubernetes `kubectl` 명령을 사용 하 여 상호 작용 합니다.
+Minikube를 설치한 후 `minikube start` 이미지를 다운로드 하 고 로컬 Kubernetes 클러스터를 시작 하는 명령을 실행 하 여 사용을 빠르게 시작할 수 있습니다. 클러스터가 시작 되 면 표준 Kubernetes 명령을 사용 하 여 상호 작용 `kubectl` 합니다.
 
 ### <a name="docker-desktop"></a>Docker Desktop
 
@@ -201,29 +200,29 @@ Visual Studio는 웹 기반 응용 프로그램에 대 한 Docker 개발을 지�
 
 **그림 3-5**. Visual Studio에서 Docker 지원 사용
 
-이 옵션을 선택 하면 프로젝트는 해당 루트 `Dockerfile` 에를 사용 하 여 생성 됩니다 .이 프로젝트는 Docker 컨테이너에서 앱을 빌드하고 호스트 하는 데 사용할 수 있습니다. 예제 Dockerfile은 그림 3 -6에 나와 있습니다.
+이 옵션을 선택 하면 프로젝트는 해당 루트에를 사용 하 여 생성 됩니다 .이 프로젝트는 `Dockerfile` Docker 컨테이너에서 앱을 빌드하고 호스트 하는 데 사용할 수 있습니다. 예제 Dockerfile은 그림 3 -6에 나와 있습니다.
 
 ```docker
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.0-stretch-slim AS base
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.0-stretch AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["WebApplication3/WebApplication3.csproj", "WebApplication3/"]
-RUN dotnet restore "WebApplication3/WebApplication3.csproj"
+COPY ["eShopWeb/eShopWeb.csproj", "eShopWeb/"]
+RUN dotnet restore "eShopWeb/eShopWeb.csproj"
 COPY . .
-WORKDIR "/src/WebApplication3"
-RUN dotnet build "WebApplication3.csproj" -c Release -o /app
+WORKDIR "/src/eShopWeb"
+RUN dotnet build "eShopWeb.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "WebApplication3.csproj" -c Release -o /app
+RUN dotnet publish "eShopWeb.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "WebApplication3.dll"]
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "eShopWeb.dll"]
 ```
 
 **그림 3-6**. Visual Studio에서 Dockerfile을 생성 했습니다.
@@ -236,13 +235,17 @@ ENTRYPOINT ["dotnet", "WebApplication3.dll"]
 
 로컬 개발 외에도 [Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/) 는 여러 개발자가 Azure 내에서 고유한 Kubernetes 구성으로 작업할 수 있는 편리한 방법을 제공 합니다. 그림 3-7에서 볼 수 있듯이, Azure Dev Spaces에서 응용 프로그램을 실행할 수도 있습니다.
 
-또한 언제 든 지 기존 ASP.NET Core 응용 프로그램에 Docker 지원을 추가할 수 있습니다. 그림 3-8에 표시 된 것 처럼 Visual Studio 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고**Docker 지원을** **추가** > 합니다.
+또한 언제 든 지 기존 ASP.NET Core 응용 프로그램에 Docker 지원을 추가할 수 있습니다. 그림 3-8에 표시 된 것 처럼 Visual Studio 솔루션 탐색기에서 프로젝트 **Add**를 마우스 오른쪽 단추로 클릭 하 고  >  **Docker 지원을**추가 합니다.
+
+![Visual Studio Docker 지원 추가](./media/visual-studio-add-docker-support.png)
 
 **그림 3-8**. Visual Studio에 Docker 지원 추가
 
-그림 3-8에 표시 된 컨테이너 오케스트레이션 지원도 추가할 수 있습니다. 기본적으로 orchestrator는 Kubernetes 및 투구를 사용 합니다. Orchestrator를 선택 하면 `azds.yaml` 파일이 프로젝트 루트에 추가 되 고 Kubernetes에 응용 프로그램을 구성 `charts` 하 고 배포 하는 데 사용 되는 투구 차트가 포함 된 폴더가 추가 됩니다. 그림 3-9에서는 새 프로젝트의 결과 파일을 보여 줍니다.
+그림 3-8에 표시 된 컨테이너 오케스트레이션 지원도 추가할 수 있습니다. 기본적으로 orchestrator는 Kubernetes 및 투구를 사용 합니다. Orchestrator를 선택 하면 `azds.yaml` 파일이 프로젝트 루트에 추가 되 고 `charts` Kubernetes에 응용 프로그램을 구성 하 고 배포 하는 데 사용 되는 투구 차트가 포함 된 폴더가 추가 됩니다. 그림 3-9에서는 새 프로젝트의 결과 파일을 보여 줍니다.
 
-그림 3-8에 표시 된 컨테이너 오케스트레이션 지원도 추가할 수 있습니다. 기본적으로 orchestrator는 Kubernetes 및 투구를 사용 합니다. Orchestrator를 선택 하면 `azds.yaml` 파일이 프로젝트 루트에 추가 되 고 Kubernetes에 응용 프로그램을 구성 `charts` 하 고 배포 하는 데 사용 되는 투구 차트가 포함 된 폴더가 추가 됩니다. 그림 3-9에서는 새 프로젝트의 결과 파일을 보여 줍니다.
+그림 3-8에 표시 된 컨테이너 오케스트레이션 지원도 추가할 수 있습니다. 기본적으로 orchestrator는 Kubernetes 및 투구를 사용 합니다. Orchestrator를 선택 하면 `azds.yaml` 파일이 프로젝트 루트에 추가 되 고 `charts` Kubernetes에 응용 프로그램을 구성 하 고 배포 하는 데 사용 되는 투구 차트가 포함 된 폴더가 추가 됩니다. 그림 3-9에서는 새 프로젝트의 결과 파일을 보여 줍니다.
+
+![Visual Studio Orchestrator 지원 추가](./media/visual-studio-add-orchestrator-support.png)
 
 **그림 3-9**. Visual Studio에 오케스트레이션 지원 추가
 

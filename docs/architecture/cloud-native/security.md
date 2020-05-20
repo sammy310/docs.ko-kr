@@ -1,17 +1,15 @@
 ---
 title: 보안
 description: Azure 용 클라우드 네이티브 .NET 앱 설계 | 보안
-ms.date: 06/30/2019
-ms.openlocfilehash: 848255de70038798417a558543d0b1ea8cff1e37
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.date: 05/13/2020
+ms.openlocfilehash: 9afbc2c960fdd16721e1d3aa7fd01d5c0c1fe2f9
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "73840996"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613670"
 ---
 # <a name="security"></a>보안
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 하루에는 문제가 발생 하는 회사에 대 한 일부 스토리가 포함 되지 않으며 고객의 데이터가 손실 됩니다. 국가는 보안을 사실은로 처리 하 여 생성 된 문제에 면역 되지 않습니다. 연도는 회사에서 고객 데이터의 보안을 처리 하 고 실제로는 "좋은" 것으로 전체 네트워크를 처리 했습니다. Windows server는 패치가 적용 되지 않은 상태로 유지 되 고 PHP 버전의 PHP를 실행 하 고 MongoDB 데이터베이스를 전 세계에 열어 두어야 합니다.
 
