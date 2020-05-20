@@ -1,24 +1,25 @@
 ---
-title: 워크플로 지속성
+title: 워크플로 유지
+description: .NET Framework 4.6.1에는 SQL Server 데이터베이스에 대 한 워크플로 데이터 및 메타 데이터의 지 속성을 허용 하는 SqlWorkflowInstanceStore 클래스가 포함 됩니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
-ms.openlocfilehash: c49e287c6132103d4bb85a8ae892a76f9b582274
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 1178bd3800fce95be96e601a17bfeff2c05cfceb
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837534"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419306"
 ---
-# <a name="workflow-persistence"></a>워크플로 지속성
+# <a name="workflow-persistence"></a>워크플로 유지
 워크플로 지속성은 프로세스 또는 컴퓨터 정보에 독립적인 영구 워크플로 인스턴스 상태 캡처입니다. 이 작업은 시스템 오류가 발생한 경우에 워크플로 인스턴스에 대한 잘 알려진 복구 지점을 제공하거나, 현재 작업 중이 아닌 워크플로 인스턴스를 언로드하여 메모리를 보존하거나, 워크플로 인스턴스의 상태를 서버 팜의 한 노드에서 다른 노드로 이동하기 위해 수행합니다.  
   
  지속성은 프로세스의 신속성, 확장성, 오류 복구, 효율적인 메모리 관리를 가능하게 해줍니다. 지속성 프로세스는 유지 지점을 식별하고, 저장할 데이터를 수집하며, 마지막으로 지속성 공급자에게 실제 데이터 스토리지를 위임하는 과정으로 구성됩니다.  
   
  워크플로에 지 속성을 사용 하도록 설정 하려면 [방법: 워크플로 및 워크플로 서비스에 지 속성 사용](how-to-enable-persistence-for-workflows-and-workflow-services.md)에서 설명한 대로 인스턴스 저장소를 **WorkflowApplication** 또는 **WorkflowServiceHost** 와 연결 해야 합니다. **WorkflowApplication** 및 **WorkflowServiceHost** 는 연결 된 인스턴스 저장소를 사용 하 여 워크플로 인스턴스를 지 속성 저장소에 유지 하 고 지 속성 저장소에 저장 된 워크플로 인스턴스 데이터를 기반으로 워크플로 인스턴스를 메모리에 로드할 수 있습니다.  
   
- [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]는 **SqlWorkflowInstanceStore** 클래스와 함께 제공 되어 워크플로 인스턴스에 대 한 데이터 및 메타 데이터를 SQL Server 2005 또는 SQL Server 2008 데이터베이스에 지 속성을 허용 합니다. 자세한 내용은 [SQL 워크플로 인스턴스 저장소](sql-workflow-instance-store.md) 를 참조 하세요.  
+ 에는 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] SQL Server 2005 또는 SQL Server 2008 데이터베이스로 워크플로 인스턴스에 대 한 데이터 및 메타 데이터의 지 속성을 허용 하는 **SqlWorkflowInstanceStore** 클래스가 함께 제공 됩니다. 자세한 내용은 [SQL 워크플로 인스턴스 저장소](sql-workflow-instance-store.md) 를 참조 하세요.  
   
  워크플로 인스턴스 관련 정보와 함께 애플리케이션별 데이터를 저장하고 로드하려면 <xref:System.Activities.Persistence.PersistenceParticipant> 클래스를 확장하는 지속성 참석자를 만들 수 있습니다. 지속성 참석자는 지속성 프로세스에 참여하여 serialize 가능한 사용자 지정 데이터를 지속성 저장소에 저장하고, 인스턴스 저장소의 데이터를 메모리로 로드하며, 지속성 트랜잭션에서 추가 논리를 수행합니다. 자세한 내용은 [지 속성 참가자](persistence-participants.md)를 참조 하세요.  
   
@@ -49,7 +50,7 @@ ms.locfileid: "74837534"
   
 - [지속성 참석자](persistence-participants.md)  
   
-- [지속성 모범 사례](persistence-best-practices.md)  
+- [지속성 최선의 구현 방법](persistence-best-practices.md)  
   
 - [비지속형 워크플로 인스턴스](non-persisted-workflow-instances.md)  
   

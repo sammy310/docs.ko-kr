@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 09daac08-005a-46b2-beab-408d0820c5e5
 topic_type:
 - apiref
-ms.openlocfilehash: 1677798abdb8994d34c82a71e97a2c858209c18e
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 62ea982f30a6a73648d9bf36722c0b5a49a68896
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790384"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420749"
 ---
 # <a name="logginglevelenum-enumeration"></a>LoggingLevelEnum 열거형
 관리되는 스레드가 이벤트를 기록할 때 이벤트 로그에 기록되는 설명 메시지의 보안 수준을 나타냅니다.  
@@ -44,9 +44,9 @@ typedef enum LoggingLevelEnum {
 } LoggingLevelEnum;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>멤버  
   
-|Member|설명|  
+|멤버|설명|  
 |------------|-----------------|  
 |`LTraceLevel0`|메시지는 추적 수준 0입니다.|  
 |`LTraceLevel1`|메시지는 추적 수준 1입니다.|  
@@ -62,19 +62,19 @@ typedef enum LoggingLevelEnum {
 |`LErrorLevel`|메시지는 오류 수준입니다.|  
 |`LPanicLevel`|메시지는 비상 수준입니다.|  
   
-## <a name="remarks"></a>주의  
- CLR (공용 언어 런타임)은 [ICorDebugManagedCallback:: LogMessage](icordebugmanagedcallback-logmessage-method.md) 메서드를 호출 하 여 관리 되는 스레드가 이벤트를 기록 했음을 디버거에 알립니다. CLR은 `LoggingLevelEnum` 열거형 값을 전달 하 여 관리 되는 스레드가 이벤트 로그에 기록 하는 메시지의 심각도 수준을 표시 합니다.  
+## <a name="remarks"></a>설명  
+ CLR (공용 언어 런타임)은 [ICorDebugManagedCallback:: LogMessage](icordebugmanagedcallback-logmessage-method.md) 메서드를 호출 하 여 관리 되는 스레드가 이벤트를 기록 했음을 디버거에 알립니다. CLR은 열거형 값을 전달 `LoggingLevelEnum` 하 여 관리 되는 스레드가 이벤트 로그에 기록 하는 메시지의 심각도 수준을 표시 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Diagnostics.EventLog>
 - [디버깅 열거형](debugging-enumerations.md)

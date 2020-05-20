@@ -1,13 +1,14 @@
 ---
 title: Fundamental Windows Workflow 개념
+description: 이 문서에서는 일부 개발자에 게 익숙하지 않을 수 있는 .NET Framework 4.6.1의 워크플로 개발에 대 한 몇 가지 개념을 설명 합니다.
 ms.date: 03/30/2017
 ms.assetid: 0e930e80-5060-45d2-8a7a-95c0690105d4
-ms.openlocfilehash: 730679c892d96ff6de2d02ee1e1afdd52e452439
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 07498241280191fb62a35a559a3391f7148c05b9
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650943"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419891"
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Fundamental Windows Workflow 개념
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]의 워크플로 개발에는 일부 개발자들에게 생소한 개념이 사용됩니다. 이 항목에서는 이러한 몇 가지 개념과 그 구현 방법에 대해 설명합니다.  
@@ -52,7 +53,7 @@ ms.locfileid: "64650943"
  활동에서는 <xref:System.Activities.ActivityContext> 또는 <xref:System.Activities.NativeActivityContext> 등 적절한 <xref:System.Activities.CodeActivityContext> 파생 클래스를 사용하여 워크플로 런타임 환경에 액세스합니다. 또한 인수 및 변수 확인, 자식 활동 예약 등과 같은 용도로 이 클래스를 사용합니다.  
   
 ## <a name="services"></a>서비스  
- 워크플로는 메시징 활동을 통해 서비스를 구현하고 액세스하는 자연스러운 방법을 제공합니다. 메시징 활동 WCF에서 빌드되고 및 워크플로 외부로 데이터를 가져오는 데 기본 메커니즘입니다. 원하는 메시지 교환 패턴의 종류를 모델링하여 메시징 활동을 함께 구성할 수 있습니다. 자세한 내용은 [메시징 활동](../wcf/feature-details/messaging-activities.md)합니다. <xref:System.ServiceModel.Activities.WorkflowServiceHost> 클래스는 워크플로 서비스를 호스트하는 데 사용됩니다. 자세한 내용은 [호스팅 워크플로 서비스 개요](../wcf/feature-details/hosting-workflow-services-overview.md)합니다. 워크플로 서비스에 대 한 자세한 내용은 참조 하세요. [워크플로 서비스](../wcf/feature-details/workflow-services.md)  
+ 워크플로는 메시징 활동을 통해 서비스를 구현하고 액세스하는 자연스러운 방법을 제공합니다. 메시징 작업은 WCF를 기반으로 작성 되며 워크플로를 시작 하거나 외부로 데이터를 가져오는 데 사용 되는 기본 메커니즘입니다. 원하는 메시지 교환 패턴의 종류를 모델링하여 메시징 활동을 함께 구성할 수 있습니다. 자세한 내용은 [메시징 활동](../wcf/feature-details/messaging-activities.md)을 참조 하세요. <xref:System.ServiceModel.Activities.WorkflowServiceHost> 클래스는 워크플로 서비스를 호스트하는 데 사용됩니다. 자세한 내용은 [Workflow Services 개요 호스팅](../wcf/feature-details/hosting-workflow-services-overview.md)을 참조 하세요. 워크플로 서비스에 대 한 자세한 내용은 [워크플로 서비스](../wcf/feature-details/workflow-services.md) 를 참조 하세요.  
   
 ## <a name="persistence-unloading-and-long-running-workflows"></a>워크플로 유지, 언로드 및 장기 실행  
  Windows Workflow는 다음을 제공하여 장기 실행 대응 프로그램을 쉽게 작성할 수 있도록 해줍니다.  

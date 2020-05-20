@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: c70920205b27376d453bdd0a13223c6a5569075b
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 074949145be588fc34266a9f2ee501caeeffb9d3
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395291"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420879"
 ---
 # <a name="ixclrdatamodulegetmethoddefinitionbytoken-method"></a>IXCLRDataModule:: GetMethodDefinitionByToken 메서드
 
@@ -51,12 +51,12 @@ HRESULT GetMethodDefinitionByToken(
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
 **헤더:** 없음을  
 **라이브러리:** 없음을  
 **.NET Framework 버전:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅](index.md)
 - [IXCLRDataModule 인터페이스](ixclrdatamodule-interface.md)

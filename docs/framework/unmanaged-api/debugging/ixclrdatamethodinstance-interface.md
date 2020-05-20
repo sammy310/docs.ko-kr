@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: c51825433bbc86c897c097475d5c15c855f6ec8b
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0b1c982b25af9edea76a038b4314b4bd608f07df
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790417"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420892"
 ---
 # <a name="ixclrdatamethodinstance-interface"></a>IXCLRDataMethodInstance 인터페이스
 
@@ -35,18 +35,18 @@ ms.locfileid: "76790417"
 | [GetILAddressMap](ixclrdatamethodinstance-getiladdressmap-method.md) | 매핑 정보를 처리 하는 IL을 가져옵니다. |
 | [GetRepresentativeEntryAddress](ixclrdatamethodinstance-getrepresentativeentryaddress-method.md) | 메서드에 대 한 모든 가능한 진입점의 네이티브 컴파일에 대 한 가장 대표적인 진입점 주소를 가져옵니다. |
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-이 인터페이스는 런타임 내부에 있고 헤더 또는 라이브러리 파일을 통해 노출 되지 않습니다. 그러나 일반적인 COM 메커니즘을 통해 가져올 수 있는 GUID `ECD73800-22CA-4b0d-AB55-E9BA7E6318A5`를 사용 하 여 `IUnknown`에서 파생 되는 COM 인터페이스입니다.
+이 인터페이스는 런타임 내부에 있고 헤더 또는 라이브러리 파일을 통해 노출 되지 않습니다. 그러나 `IUnknown` `ECD73800-22CA-4b0d-AB55-E9BA7E6318A5` 일반적인 com 메커니즘을 통해 가져올 수 있는 GUID를 사용 하 여에서 파생 되는 COM 인터페이스입니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
 **헤더:** 없음을  
 **라이브러리:** 없음을  
-**.NET Framework 버전:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**.NET Framework 버전:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅](index.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

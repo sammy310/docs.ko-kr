@@ -1,13 +1,14 @@
 ---
 title: '방법: 사용자 지정 작업 디자이너 만들기'
+description: 이 문서에서는 임의의 활동을 배치할 수 있는 드롭 영역이 있는 Workflow Foundation 사용자 지정 활동 디자이너를 만드는 방법을 설명 합니다.
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-ms.openlocfilehash: 3c326508744f2aa2b34f5ee574cc9ec1e2863cf6
-ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
+ms.openlocfilehash: 015efd1e482e2b531d28b9caec411c76116c9653
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71306353"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419787"
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>방법: 사용자 지정 작업 디자이너 만들기
 
@@ -15,7 +16,7 @@ ms.locfileid: "71306353"
 
 사용자 지정 활동 디자이너는 일반적으로 특정 디자이너가 없는 활동의 기본 활동 디자이너 형식인 <xref:System.Activities.Presentation.ActivityDesigner>에서 상속합니다. 이 형식은 속성 표와 상호 작용하고, 색, 아이콘 등과 같은 기본 기능을 구성하는 디자인 타임 환경을 제공합니다.
 
-<xref:System.Activities.Presentation.ActivityDesigner>는 <xref:System.Activities.Presentation.WorkflowItemPresenter> 및 <xref:System.Activities.Presentation.WorkflowItemsPresenter>라는 두 도우미 컨트롤을 사용하여 사용자 지정 활동 디자이너를 쉽게 개발할 수 있습니다. 또한 자식 요소 끌어서 놓기, 삭제, 선택, 추가 등과 같은 일반적인 기능을 처리합니다. 는 내부에서 단일 자식 UI 요소를 <xref:System.Activities.Presentation.WorkflowItemsPresenter> 허용하고,"끌어놓기영역"을제공하는반면,는자식요소순서지정,이동,삭제및추가와같은추가기능을포함하여여러UI요소를지원할수있습니다.<xref:System.Activities.Presentation.WorkflowItemPresenter>
+<xref:System.Activities.Presentation.ActivityDesigner>는 <xref:System.Activities.Presentation.WorkflowItemPresenter> 및 <xref:System.Activities.Presentation.WorkflowItemsPresenter>라는 두 도우미 컨트롤을 사용하여 사용자 지정 활동 디자이너를 쉽게 개발할 수 있습니다. 또한 자식 요소 끌어서 놓기, 삭제, 선택, 추가 등과 같은 일반적인 기능을 처리합니다. 는 <xref:System.Activities.Presentation.WorkflowItemPresenter> 내부에서 단일 자식 UI 요소를 허용 하 고, "끌어 놓기 영역"을 제공 하는 반면,는 <xref:System.Activities.Presentation.WorkflowItemsPresenter> 자식 요소 순서 지정, 이동, 삭제 및 추가와 같은 추가 기능을 포함 하 여 여러 UI 요소를 지원할 수 있습니다.
 
 사용자 지정 활동 디자이너의 구현에서 강조 표시 해야 하는 스토리의 다른 주요 부분은 디자이너에서 편집 중인 항목의 메모리에 저장 된 인스턴스에 대 한 WPF 데이터 바인딩을 사용 하 여 시각적 편집을 바인딩하는 방법과 관련이 있습니다. 이 방법은 변경 내용 알림을 활성화하고 해당 상태의 변경 내용과 비슷한 이벤트를 추적하는 모델 항목 트리에 의해 수행됩니다.
 
@@ -37,7 +38,7 @@ ms.locfileid: "71306353"
 
 4. **템플릿** 창에서 **WPF 응용 프로그램**을 선택 합니다.
 
-5. **이름** 상자에을 입력 `UsingWorkflowItemPresenter`합니다.
+5. **이름** 상자에을 입력 `UsingWorkflowItemPresenter` 합니다.
 
 6. **위치** 상자에 프로젝트를 저장할 디렉터리를 입력 하거나 **찾아보기** 를 클릭 하 여 이동 합니다.
 
@@ -49,7 +50,7 @@ ms.locfileid: "71306353"
 
 10. **솔루션 탐색기**에서 UsingWorkflowItemPresenter 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가**, **새 항목** ...을 차례로 선택 합니다. **새 항목 추가** 대화 상자를 표시 하 고 왼쪽의 **설치 된 템플릿** 섹션에서 **WPF** 범주를 선택 합니다.
 
-11. **창 (WPF)** 템플릿을 선택 하 고 이름을 `RehostingWFDesigner`로 선택한 다음 **추가**를 클릭 합니다.
+11. **창 (WPF)** 템플릿을 선택 하 `RehostingWFDesigner` 고 이름을로 선택한 다음 **추가**를 클릭 합니다.
 
 12. *Rehostingwfdesigner.xaml* 파일을 열고 다음 코드를 붙여 넣어 응용 프로그램의 UI를 정의 합니다.
 
@@ -170,7 +171,7 @@ ms.locfileid: "71306353"
 
 18. **솔루션 탐색기**에서 UsingWorkflowItemPresenter 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가**, **새 항목** ...을 차례로 선택 합니다. **새 항목 추가** 대화 상자를 표시 하 고 왼쪽의 **설치 된 템플릿** 섹션에서 **워크플로** 범주를 선택 합니다.
 
-19. **Activity Designer** 템플릿을 선택 하 고 이름을 `SimpleNativeDesigner`로 선택한 다음 **추가**를 클릭 합니다.
+19. **Activity Designer** 템플릿을 선택 하 `SimpleNativeDesigner` 고 이름을로 선택한 다음 **추가**를 클릭 합니다.
 
 20. *SimpleNativeDesigner* 파일을 열고 다음 코드를 붙여 넣습니다. 이 코드에서는 <xref:System.Activities.Presentation.ActivityDesigner>를 루트 요소로 사용하고 복합 활동 디자이너에서 자식 형식을 표시할 수 있도록 바인딩을 사용하여 <xref:System.Activities.Presentation.WorkflowItemPresenter>를 디자이너에 통합하는 방법을 보여 줍니다.
 
@@ -213,9 +214,9 @@ ms.locfileid: "71306353"
 
 21. **솔루션 탐색기**에서 UsingWorkflowItemPresenter 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가**, **새 항목** ...을 차례로 선택 합니다. **새 항목 추가** 대화 상자를 표시 하 고 왼쪽의 **설치 된 템플릿** 섹션에서 **워크플로** 범주를 선택 합니다.
 
-22. **코드 활동** 템플릿을 선택 하 고 이름을 `SimpleNativeActivity`로 선택한 다음 **추가**를 클릭 합니다.
+22. **코드 활동** 템플릿을 선택 하 `SimpleNativeActivity` 고 이름을로 선택한 다음 **추가**를 클릭 합니다.
 
-23. SimpleNativeActivity.cs 파일 `SimpleNativeActivity` 에 다음 코드를 입력 하 여 클래스 를 구현 합니다.
+23. `SimpleNativeActivity` *SimpleNativeActivity.cs* 파일에 다음 코드를 입력 하 여 클래스를 구현 합니다.
 
     ```csharp
     using System.Activities;
@@ -250,7 +251,7 @@ ms.locfileid: "71306353"
 
 ### <a name="to-create-a-custom-activity-designer-using-workflowitemspresenter"></a>WorkflowItemsPresenter를 사용하여 사용자 지정 활동 디자이너를 만들려면
 
-1. 두 번째 사용자 지정 활동 디자이너에 대 한 프로시저는 첫 번째를 수정 하 고 첫 번째는 두 번째 응용 프로그램 `UsingWorkflowItemsPresenter`의 이름을 지정 하는 것과 유사 합니다. 또한 이 애플리케이션은 새 사용자 지정 활동을 정의하지 않습니다.
+1. 두 번째 사용자 지정 활동 디자이너에 대 한 프로시저는 첫 번째를 수정 하 고 첫 번째는 두 번째 응용 프로그램의 이름을 지정 하는 것과 유사 합니다 `UsingWorkflowItemsPresenter` . 또한 이 애플리케이션은 새 사용자 지정 활동을 정의하지 않습니다.
 
 2. 주요 차이점은 *CustomParallelDesigner* 및 *RehostingWFDesigner.xaml.cs* 파일에 포함 되어 있습니다. 다음은 UI를 정의 하는 *CustomParallelDesigner* 파일의 코드입니다.
 
@@ -343,7 +344,7 @@ ms.locfileid: "71306353"
     }
     ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Activities.Presentation.ActivityDesigner>
 - <xref:System.Activities.Presentation.WorkflowItemPresenter>

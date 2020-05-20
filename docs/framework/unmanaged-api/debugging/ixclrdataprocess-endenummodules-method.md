@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataProcess::EndEnumModules 메서드
+title: 'IXCLRDataProcess:: EndEnumModules 메서드'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess::EndEnumModules Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: de30384b4c12c4fcac3eafe580484685f8a43fa4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9a7a23e53f5c2bc7d643046830cf335fec780f11
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775429"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420840"
 ---
-# <a name="ixclrdataprocessendenummodules-method"></a>IXCLRDataProcess::EndEnumModules 메서드
+# <a name="ixclrdataprocessendenummodules-method"></a>IXCLRDataProcess:: EndEnumModules 메서드
 
-모듈 열거 하는 동안 사용 되는 내부 반복기 사용 하는 리소스를 해제 합니다.
+모듈 열거 중 사용 되는 내부 반복기에서 사용 하는 리소스를 해제 합니다.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -39,18 +39,18 @@ HRESULT EndEnumModules(
 ## <a name="parameters"></a>매개 변수
 
 `handle`\
-[out] 모듈을 열거 하는 것에 대 한 핸들입니다.
+제한이 모듈을 열거 하는 핸들입니다.
 
 ## <a name="remarks"></a>설명
 
-제공 된 메서드는의 일부는 `IXCLRDataProcess` 인터페이스 및 가상 메서드 테이블의 26 슬롯에 해당 합니다.
+제공 된 메서드는 인터페이스의 일부 이며 `IXCLRDataProcess` 가상 메서드 테이블의 26 일 슬롯에 해당 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.
-**헤더:** None **라이브러리:** None **.NET Framework 버전:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
+**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.
+**헤더:** None **라이브러리:** 없음 **.NET Framework 버전:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [디버깅](index.md)
 - [IXCLRDataProcess 인터페이스](ixclrdataprocess-interface.md)

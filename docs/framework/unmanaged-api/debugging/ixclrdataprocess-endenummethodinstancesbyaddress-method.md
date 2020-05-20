@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 04ce8f44b0c9f532951666de7bfb9de475c14746
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 5960d08ccfc09010a20d28a22c2e2f3f5b339c7d
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395254"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420828"
 ---
 # <a name="ixclrdataprocessendenummethodinstancesbyaddress-method"></a>IXCLRDataProcess:: EndEnumMethodInstancesByAddress 메서드
 
@@ -47,12 +47,12 @@ HRESULT EndEnumMethodInstancesByAddress(
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
 **헤더:** 없음을  
 **라이브러리:** 없음을  
 **.NET Framework 버전:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [CLRDataSourceType 열거형](clrdatasourcetype-enumeration.md)
 - [디버깅](index.md)

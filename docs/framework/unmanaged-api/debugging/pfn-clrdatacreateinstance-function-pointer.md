@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5c66ac57-d751-4de5-af9f-26ceb949af8b
 topic_type:
 - apiref
-ms.openlocfilehash: 433f34447d3bd1a57ca1e289cb0eab3facac2c69
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 34aae3cd913465bc3167d6c5eee9873d212fa4ac
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790363"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420693"
 ---
 # <a name="pfn_clrdatacreateinstance-function-pointer"></a>PFN_CLRDataCreateInstance 함수 포인터
 지정 된 대상 항목에 대 한 인터페이스 개체를 만드는 함수를 가리킵니다.  
@@ -44,18 +44,18 @@ typedef HRESULT (STDAPICALLTYPE* PFN_CLRDataCreateInstance) (
  `iface`  
  제한이 반환 된 인터페이스 개체의 주소에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>주의  
- `ICLRDataTarget` 개체는 디버깅 응용 프로그램의 작성기에 의해 구현 됩니다. 구현은 표시 되는 대상 항목의 형식에 따라 달라 집니다. 대상 항목은 프로세스, 메모리 덤프, 원격 컴퓨터 등 일 수 있습니다.  
+## <a name="remarks"></a>설명  
+ `ICLRDataTarget`개체는 디버깅 응용 프로그램의 작성기에 의해 구현 됩니다. 구현은 표시 되는 대상 항목의 형식에 따라 달라 집니다. 대상 항목은 프로세스, 메모리 덤프, 원격 컴퓨터 등 일 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** ClrData .idl  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 전역 정적 함수](debugging-global-static-functions.md)

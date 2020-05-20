@@ -1,16 +1,17 @@
 ---
 title: 장기 실행 워크플로를 만들고 실행 하는 방법
+description: 이 문서에서는 여러 워크플로 인스턴스 및 워크플로 유지를 시작 하 고 다시 시작 하는 것을 지 원하는 Windows Forms 호스트 응용 프로그램을 만드는 방법을 보여 줍니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
-ms.openlocfilehash: 10eb4e2947bed9cea89f1cda05272aa3fa0fadaa
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 557b3512e534198d47c0c6f6b0a7c5f92bb71739
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204889"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419553"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>장기 실행 워크플로를 만들고 실행 하는 방법
 
@@ -33,9 +34,9 @@ WF (Windows Workflow Foundation)의 중앙 기능 중 하나는 유휴 워크플
 
     다음 두 파일을 선택 하 고 **열기**를 클릭 합니다.
 
-    - *Sqlworkflowinstancestorelogic.sql*
+    - *SqlWorkflowInstanceStoreLogic.sql*
 
-    - *Sqlworkflowinstancestoreschema.sql*
+    - *SqlWorkflowInstanceStoreSchema.sql*
 
 3. **창** 메뉴에서 **sqlworkflowinstancestoreschema.sql** 을 선택 합니다. **사용 가능한 데이터베이스** 드롭다운에서 **WF45GettingStartedTutorial** 이 선택 되어 있는지 확인 하 고 **쿼리** 메뉴에서 **실행** 을 선택 합니다.
 
@@ -48,18 +49,18 @@ WF (Windows Workflow Foundation)의 중앙 기능 중 하나는 유휴 워크플
 
 1. **솔루션 탐색기** 에서 **NumberGuessWorkflowHost** 을 마우스 오른쪽 단추로 클릭 하 고 **참조 추가**를 선택 합니다.
 
-2. **참조 추가** 목록에서 **어셈블리** 를 선택 하 고 **어셈블리 검색** 상자에 `DurableInstancing`을 입력 합니다. 그러면 어셈블리가 필터링되므로 원하는 참조를 손쉽게 선택할 수 있습니다.
+2. **참조 추가** 목록에서 **어셈블리** 를 선택 하 고 `DurableInstancing` **어셈블리 검색** 상자에를 입력 합니다. 그러면 어셈블리가 필터링되므로 원하는 참조를 손쉽게 선택할 수 있습니다.
 
 3. **검색 결과** 목록에서 **DurableInstancing** 및 **DurableInstancing** 옆의 확인란을 선택 하 고 **확인**을 클릭 합니다.
 
 ## <a name="to-create-the-workflow-host-form"></a>워크플로 호스트 폼을 만들려면
 
 > [!NOTE]
-> 이 절차에서는 폼을 수동으로 추가 및 구성하는 방법을 단계별로 설명합니다. 필요한 경우 자습서용 솔루션 파일을 다운로드하고 프로젝트에 전체 폼을 추가할 수 있습니다. 자습서 파일을 다운로드 하려면 [Windows Workflow Foundation (WF45)-초보자](https://go.microsoft.com/fwlink/?LinkID=248976)를 위한 자습서를 참조 하세요. 파일이 다운로드 되 면 **NumberGuessWorkflowHost** 를 마우스 오른쪽 단추로 클릭 하 고 **참조 추가**를 선택 합니다. **System.object** 와 **Drawing**에 대 한 참조를 추가 합니다. 이러한 참조는 **추가**, **새 항목** 메뉴에서 새 양식을 추가 하는 경우 자동으로 추가 되지만 양식을 가져올 때 수동으로 추가 해야 합니다. 참조가 추가 되 면 **솔루션 탐색기** 에서 **NumberGuessWorkflowHost** 을 마우스 오른쪽 단추로 클릭 하 고 **추가**, **기존 항목**을 선택 합니다. 프로젝트 파일에서 `Form` 폴더로 이동 하 여 **WorkflowHostForm.cs** (또는 **WorkflowHostForm**)를 선택 하 고 **추가**를 클릭 합니다. 양식을 가져오도록 선택 하는 경우 다음 섹션으로 건너뛰어 [폼의 속성 및 도우미 메서드를 추가할](#to-add-the-properties-and-helper-methods-of-the-form)수 있습니다.
+> 이 절차에서는 폼을 수동으로 추가 및 구성하는 방법을 단계별로 설명합니다. 필요한 경우 자습서용 솔루션 파일을 다운로드하고 프로젝트에 전체 폼을 추가할 수 있습니다. 자습서 파일을 다운로드 하려면 [Windows Workflow Foundation (WF45)-초보자](https://go.microsoft.com/fwlink/?LinkID=248976)를 위한 자습서를 참조 하세요. 파일이 다운로드 되 면 **NumberGuessWorkflowHost** 를 마우스 오른쪽 단추로 클릭 하 고 **참조 추가**를 선택 합니다. **System.object** 와 **Drawing**에 대 한 참조를 추가 합니다. 이러한 참조는 **추가**, **새 항목** 메뉴에서 새 양식을 추가 하는 경우 자동으로 추가 되지만 양식을 가져올 때 수동으로 추가 해야 합니다. 참조가 추가 되 면 **솔루션 탐색기** 에서 **NumberGuessWorkflowHost** 을 마우스 오른쪽 단추로 클릭 하 고 **추가**, **기존 항목**을 선택 합니다. `Form`프로젝트 파일에서 폴더를 찾아 **WorkflowHostForm.cs** (또는 **WorkflowHostForm**)를 선택 하 고 **추가**를 클릭 합니다. 양식을 가져오도록 선택 하는 경우 다음 섹션으로 건너뛰어 [폼의 속성 및 도우미 메서드를 추가할](#to-add-the-properties-and-helper-methods-of-the-form)수 있습니다.
 
 1. **솔루션 탐색기** 에서 **NumberGuessWorkflowHost** 을 마우스 오른쪽 단추로 클릭 하 고 **추가**, **새 항목**을 차례로 선택 합니다.
 
-2. **설치 된** 템플릿 목록에서 **Windows Form**을 선택 하 고 **이름** 상자에 `WorkflowHostForm`를 입력 한 다음 **추가**를 클릭 합니다.
+2. **설치 된** 템플릿 목록에서 **Windows Form**을 선택 하 `WorkflowHostForm` 고 **이름** 상자에를 입력 한 다음 **추가**를 클릭 합니다.
 
 3. 폼에 다음 속성을 구성합니다.
 
@@ -71,7 +72,7 @@ WF (Windows Workflow Foundation)의 중앙 기능 중 하나는 유휴 워크플
 
 4. 폼에 다음 컨트롤을 지정된 순서대로 추가하고 지시된 대로 속성을 구성합니다.
 
-    |Control|속성: 값|
+    |컨트롤|속성: 값|
     |-------------|---------------------|
     |**Button**|이름: NewGame<br /><br /> 위치: 13, 13<br /><br /> 크기: 75, 23<br /><br /> 텍스트: 새 게임|
     |**레이블**|위치: 94, 18<br /><br /> Text: 1에서 사이의 숫자를 추측 합니다.|
@@ -84,7 +85,7 @@ WF (Windows Workflow Foundation)의 중앙 기능 중 하나는 유휴 워크플
     > [!NOTE]
     > 다음 컨트롤을 추가 하는 경우 해당 컨트롤을 GroupBox에 배치 합니다.
 
-    |Control|속성: 값|
+    |컨트롤|속성: 값|
     |-------------|---------------------|
     |**레이블**|위치: 7, 20<br /><br /> 텍스트: 워크플로 인스턴스 Id|
     |**ComboBox**|이름: InstanceId<br /><br /> DropDownStyle: DropDownList<br /><br /> 위치: 121, 17<br /><br /> 크기: 227, 21|
@@ -165,7 +166,7 @@ WF (Windows Workflow Foundation)의 중앙 기능 중 하나는 유휴 워크플
     }
     ```
 
-    `InstanceId` 콤보 상자에는 지속형 워크플로 인스턴스 id의 목록이 표시 되 고 `WorkflowInstanceId` 속성은 현재 선택한 워크플로를 반환 합니다.
+    `InstanceId`콤보 상자는 지속형 워크플로 인스턴스 id의 목록을 표시 하 고 속성은 `WorkflowInstanceId` 현재 선택한 워크플로를 반환 합니다.
 
 5. 폼의 `Load` 이벤트에 대한 처리기를 추가합니다. 처리기를 추가 하려면 폼의 **디자인 뷰로** 전환 하 고 **속성** 창 맨 위에 있는 **이벤트** 아이콘을 클릭 한 다음 **로드**를 두 번 클릭 합니다.
 
@@ -212,7 +213,7 @@ WF (Windows Workflow Foundation)의 중앙 기능 중 하나는 유휴 워크플
 
     폼이 로드되면 `SqlWorkflowInstanceStore`가 구성되고 범위 및 워크플로 유형 콤보 상자가 기본값으로 설정되며 지속형 워크플로 인스턴스가 `InstanceId` 콤보 상자에 추가됩니다.
 
-7. `SelectedIndexChanged`에 대한 `InstanceId` 처리기를 추가합니다. 처리기를 추가 하려면 폼의 **디자인 뷰로** 전환 하 고 `InstanceId` 콤보 상자를 선택한 다음 **속성** 창 맨 위에 있는 **이벤트** 아이콘을 클릭 하 고 **SelectedIndexChanged**를 두 번 클릭 합니다.
+7. `SelectedIndexChanged`에 대한 `InstanceId` 처리기를 추가합니다. 처리기를 추가 하려면 폼의 **디자인 뷰로** 전환 하 고, `InstanceId` 콤보 상자를 선택 하 고, **속성** 창 맨 위에 있는 **이벤트** 아이콘을 클릭 한 다음 **SelectedIndexChanged**을 두 번 클릭 합니다.
 
     ```vb
     Private Sub InstanceId_SelectedIndexChanged(sender As Object, e As EventArgs) Handles InstanceId.SelectedIndexChanged
@@ -321,7 +322,7 @@ WF (Windows Workflow Foundation)의 중앙 기능 중 하나는 유휴 워크플
     }
     ```
 
-    `ListPersistedWorkflows` 인스턴스 저장소에서 지속형 워크플로 인스턴스를 쿼리하고 `cboInstanceId` 콤보 상자에 인스턴스 id를 추가 합니다.
+    `ListPersistedWorkflows`는 인스턴스 저장소에서 지속형 워크플로 인스턴스를 쿼리하고 해당 인스턴스 ID를 `cboInstanceId` 콤보 상자에 추가합니다.
 
 10. 폼 클래스에 다음 `UpdateStatus` 메서드와 해당 대리자를 추가합니다. 이 메서드는 현재 실행 중인 워크플로의 상태로 폼의 상태 창을 업데이트합니다.
 
@@ -432,7 +433,7 @@ WF (Windows Workflow Foundation)의 중앙 기능 중 하나는 유휴 워크플
     wfApp.InstanceStore = store;
     ```
 
-3. 그런 다음 `StringWriter` 인스턴스를 만들어 `Extensions`의 `WorkflowApplication` 컬렉션에 추가합니다. `StringWriter` 확장에 추가 되 면 모든 `WriteLine` 활동 출력을 캡처합니다. 워크플로가 유휴 상태가 되면 `WriteLine` 출력이 `StringWriter`에서 추출되어 폼에 표시될 수 있습니다.
+3. 그런 다음 `StringWriter` 인스턴스를 만들어 `Extensions`의 `WorkflowApplication` 컬렉션에 추가합니다. `StringWriter`가 확장에 추가 되 면 모든 `WriteLine` 활동 출력을 캡처합니다. 워크플로가 유휴 상태가 되면 `WriteLine` 출력이 `StringWriter`에서 추출되어 폼에 표시될 수 있습니다.
 
     ```vb
     ' Add a StringWriter to the extensions. This captures the output
@@ -542,7 +543,7 @@ WF (Windows Workflow Foundation)의 중앙 기능 중 하나는 유휴 워크플
     };
     ```
 
-    <xref:System.Activities.PersistableIdleAction> 열거형에는 세 개의 값(<xref:System.Activities.PersistableIdleAction.None>, <xref:System.Activities.PersistableIdleAction.Persist> 및 <xref:System.Activities.PersistableIdleAction.Unload>)이 있습니다. <xref:System.Activities.PersistableIdleAction.Persist> 하면 워크플로가 유지 되지만 워크플로를 언로드하지는 않습니다. <xref:System.Activities.PersistableIdleAction.Unload> 하면 워크플로가 유지 되 고 언로드됩니다.
+    <xref:System.Activities.PersistableIdleAction> 열거형에는 세 개의 값(<xref:System.Activities.PersistableIdleAction.None>, <xref:System.Activities.PersistableIdleAction.Persist> 및 <xref:System.Activities.PersistableIdleAction.Unload>)이 있습니다. <xref:System.Activities.PersistableIdleAction.Persist>는 워크플로가 유지되도록 하지만 워크플로가 언로드되도록 하지는 않습니다. <xref:System.Activities.PersistableIdleAction.Unload>는 워크플로가 유지되고 언로드되도록 합니다.
 
     다음 예제는 전체 `ConfigureWorkflowApplication` 메서드입니다.
 
@@ -649,9 +650,9 @@ WF (Windows Workflow Foundation)의 중앙 기능 중 하나는 유휴 워크플
 
 ## <a name="to-enable-starting-and-resuming-multiple-workflow-types"></a>여러 워크플로 유형을 시작 및 다시 시작할 수 있도록 설정하려면
 
-워크플로 인스턴스를 다시 시작하려면 호스트에서 워크플로 정의를 제공해야 합니다. 이 자습서에는 세 가지 워크플로 유형이 있으며 이후 자습서 단계에서는 이러한 유형의 여러 버전을 소개합니다. `WorkflowIdentity`는 호스트 응용 프로그램에서 식별 정보를 지속형 워크플로 인스턴스와 연결 하는 방법을 제공 합니다. 이 단원의 단계에서는 유틸리티 클래스를 만들어 지속형 워크플로 인스턴스의 워크플로 ID를 해당 워크플로 정의에 쉽게 매핑할 수 있도록 하는 방법을 보여 줍니다. `WorkflowIdentity` 및 버전 관리에 대 한 자세한 내용은 [WorkflowIdentity 및 버전 관리 사용](using-workflowidentity-and-versioning.md)을 참조 하세요.
+워크플로 인스턴스를 다시 시작하려면 호스트에서 워크플로 정의를 제공해야 합니다. 이 자습서에는 세 가지 워크플로 유형이 있으며 이후 자습서 단계에서는 이러한 유형의 여러 버전을 소개합니다. 호스트 애플리케이션에서는 `WorkflowIdentity`를 통해 식별 정보를 지속형 워크플로 인스턴스에 연결할 수 있습니다. 이 단원의 단계에서는 유틸리티 클래스를 만들어 지속형 워크플로 인스턴스의 워크플로 ID를 해당 워크플로 정의에 쉽게 매핑할 수 있도록 하는 방법을 보여 줍니다. 및 버전 관리에 대 한 자세한 내용은 `WorkflowIdentity` [WorkflowIdentity 및 버전 관리 사용](using-workflowidentity-and-versioning.md)을 참조 하세요.
 
-1. **솔루션 탐색기** 에서 **NumberGuessWorkflowHost** 을 마우스 오른쪽 단추로 클릭 하 고 **추가**, **클래스**를 차례로 선택 합니다. **이름** 상자에 `WorkflowVersionMap`을 입력 하 고 **추가**를 클릭 합니다.
+1. **솔루션 탐색기** 에서 **NumberGuessWorkflowHost** 을 마우스 오른쪽 단추로 클릭 하 고 **추가**, **클래스**를 차례로 선택 합니다. `WorkflowVersionMap` **이름** 상자에를 입력 하 고 **추가**를 클릭 합니다.
 
 2. 다음 `using` 또는 `Imports` 문을 파일의 맨 위에 다른 `using` 또는 `Imports` 문과 함께 추가합니다.
 
@@ -763,11 +764,11 @@ WF (Windows Workflow Foundation)의 중앙 기능 중 하나는 유휴 워크플
     }
     ```
 
-    `WorkflowVersionMap`에는이 자습서의 세 가지 워크플로 정의에 매핑되는 세 개의 워크플로 id가 포함 되어 있으며 워크플로가 시작 되 고 다시 시작 될 때 다음 섹션에서 사용 됩니다.
+    `WorkflowVersionMap`에는 이 자습서에서 사용하는 세 개의 워크플로 정의에 매핑되며 다음 단원에서 워크플로가 시작 및 다시 시작될 때 사용되는 세 개의 워크플로 ID가 포함되어 있습니다.
 
 ## <a name="to-start-a-new-workflow"></a>새 워크플로를 시작하려면
 
-1. `Click`에 대한 `NewGame` 처리기를 추가합니다. 처리기를 추가 하려면 폼의 **디자인 뷰로** 전환 하 고 `NewGame`를 두 번 클릭 합니다. `NewGame_Click` 처리기가 추가되고 폼의 뷰가 코드 뷰로 전환됩니다. 이 단추를 클릭할 때마다 새 워크플로가 시작됩니다.
+1. `Click`에 대한 `NewGame` 처리기를 추가합니다. 처리기를 추가 하려면 폼의 **디자인 뷰로** 전환 하 고를 두 번 클릭 `NewGame` 합니다. `NewGame_Click` 처리기가 추가되고 폼의 뷰가 코드 뷰로 전환됩니다. 이 단추를 클릭할 때마다 새 워크플로가 시작됩니다.
 
     ```vb
     Private Sub NewGame_Click(sender As Object, e As EventArgs) Handles NewGame.Click
@@ -962,7 +963,7 @@ WF (Windows Workflow Foundation)의 중앙 기능 중 하나는 유휴 워크플
 
 ## <a name="to-resume-a-workflow"></a>워크플로를 다시 시작하려면
 
-1. `Click`에 대한 `EnterGuess` 처리기를 추가합니다. 처리기를 추가 하려면 폼의 **디자인 뷰로** 전환 하 고 `EnterGuess`를 두 번 클릭 합니다. 이 단추를 클릭할 때마다 워크플로가 다시 시작됩니다.
+1. `Click`에 대한 `EnterGuess` 처리기를 추가합니다. 처리기를 추가 하려면 폼의 **디자인 뷰로** 전환 하 고를 두 번 클릭 `EnterGuess` 합니다. 이 단추를 클릭할 때마다 워크플로가 다시 시작됩니다.
 
     ```vb
     Private Sub EnterGuess_Click(sender As Object, e As EventArgs) Handles EnterGuess.Click
@@ -1174,7 +1175,7 @@ WF (Windows Workflow Foundation)의 중앙 기능 중 하나는 유휴 워크플
 
 ## <a name="to-terminate-a-workflow"></a>워크플로를 종료하려면
 
-1. `Click`에 대한 `QuitGame` 처리기를 추가합니다. 처리기를 추가 하려면 폼의 **디자인 뷰로** 전환 하 고 `QuitGame`를 두 번 클릭 합니다. 이 단추를 클릭할 때마다 현재 선택된 워크플로가 종료됩니다.
+1. `Click`에 대한 `QuitGame` 처리기를 추가합니다. 처리기를 추가 하려면 폼의 **디자인 뷰로** 전환 하 고를 두 번 클릭 `QuitGame` 합니다. 이 단추를 클릭할 때마다 현재 선택된 워크플로가 종료됩니다.
 
     ```vb
     Private Sub QuitGame_Click(sender As Object, e As EventArgs) Handles QuitGame.Click

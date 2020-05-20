@@ -1,23 +1,24 @@
 ---
 title: '방법: 순차 워크플로 만들기'
+description: 이 문서에서는 시퀀스 작업 및 사용자 지정 작업과 같은 기본 제공 활동을 모두 사용 하는 워크플로를 만듭니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: 61e3f01b1259536ff15d71526e91aef42069722e
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: f80ac471fdcc425504b11b5fb17effa888aa9590
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989697"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419696"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>방법: 순차 워크플로 만들기
 
-기본 제공 활동뿐 아니라 사용자 지정 활동에서도 워크플로를 구성할 수 있습니다. 이 항목에서는 <xref:System.Activities.Statements.Sequence> 활동과 같은 기본 제공 활동과 이전 [의 사용자 지정 활동을 모두 사용 하는 워크플로를 만드는 방법을 단계별로 설명 합니다. 활동](how-to-create-an-activity.md) 항목을 만듭니다. 이 워크플로는 숫자 추측 게임을 모델링합니다.
+기본 제공 활동뿐 아니라 사용자 지정 활동에서도 워크플로를 구성할 수 있습니다. 이 항목에서는 활동과 같은 기본 제공 활동과 <xref:System.Activities.Statements.Sequence> 이전 [방법: 활동 만들기](how-to-create-an-activity.md) 항목의 사용자 지정 활동을 모두 사용 하는 워크플로를 만드는 과정을 단계별로 설명 합니다. 이 워크플로는 숫자 추측 게임을 모델링합니다.
 
 > [!NOTE]
-> 초보자를 위한 자습서의 각 항목은 이전 항목을 바탕으로 합니다. 이 항목을 완료 하려면 먼저 다음 작업을 수행 [합니다. 활동](how-to-create-an-activity.md)를 만듭니다.
+> 초보자를 위한 자습서의 각 항목은 이전 항목을 바탕으로 합니다. 이 항목을 완료 하려면 먼저 [방법: 작업 만들기](how-to-create-an-activity.md)를 완료 해야 합니다.
 
 > [!NOTE]
 > 자습서의 전체 버전을 다운로드하려면 [Windows Workflow Foundation(WF45) - 초보자를 위한 자습서](https://go.microsoft.com/fwlink/?LinkID=248976)를 참조하세요.
@@ -26,9 +27,9 @@ ms.locfileid: "70989697"
 
 1. **솔루션 탐색기** 에서 **NumberGuessWorkflowActivities** 을 마우스 오른쪽 단추로 클릭 하 고 **추가**, **새 항목**을 차례로 선택 합니다.
 
-2. **설치 됨**, **공통 항목** 노드에서 **워크플로**를 선택 합니다. **워크플로** 목록에서 **작업** 을 선택 합니다.
+2. **설치 됨**, **공통 항목** 노드에서 **워크플로**를 선택 합니다. **워크플로** 목록에서 **작업**을 선택합니다.
 
-3. **이름** 상자에 `SequentialNumberGuessWorkflow`을 입력 하 고 **추가**를 클릭 합니다.
+3. `SequentialNumberGuessWorkflow` **이름** 상자에를 입력 하 고 **추가**를 클릭 합니다.
 
 4. **도구 상자** 의 **제어 흐름** 섹션에서 **Sequence** 활동을 끌어 워크플로 디자인 화면의 **여기에 작업 놓기** 레이블에 놓습니다.
 
@@ -38,34 +39,34 @@ ms.locfileid: "70989697"
 
 2. 워크플로 디자이너 왼쪽 아래에 있는 **인수** 를 클릭 하 여 **인수** 창을 표시 합니다.
 
-3. **인수 만들기**를 클릭 합니다.
+3. **인수 만들기**를 클릭합니다.
 
-4. **이름** 상자에 `MaxNumber`를 입력 하 고 **방향** 드롭다운 목록 **에서 시작을 선택한 다음** **인수 형식** 드롭다운 목록에서 **Int32** 를 선택 하 고 enter 키를 눌러 인수를 저장 합니다.
+4. `MaxNumber` **이름** 상자에를 입력 하 고 **방향** 드롭다운 목록 **에서 시작을** 선택한 다음 **인수 형식** 드롭다운 목록에서 **Int32** 를 선택 하 고 enter 키를 눌러 인수를 저장 합니다.
 
-5. **인수 만들기**를 클릭 합니다.
+5. **인수 만들기**를 클릭합니다.
 
-6. 새로 추가 된 `MaxNumber` 인수 아래에 있는 **이름** 상자에 `Turns`을 입력 하 고 **방향** 드롭다운 목록에서 **바깥쪽** 을 선택한 다음 **인수 형식** 드롭다운 목록에서 **Int32** 를 선택 하 고 enter 키를 누릅니다.
+6. `Turns`새로 추가 된 인수 아래에 있는 **이름** 상자에를 입력 `MaxNumber` 하 고 **방향** 드롭다운 목록에서 **바깥쪽** 을 선택한 다음 **인수 형식** 드롭다운 목록에서 **Int32** 를 선택 하 고 enter 키를 누릅니다.
 
-7. 활동 디자이너 왼쪽 아래에 있는 **인수** 를 클릭 하 여 **인수** 창을 닫습니다.
+7. 활동 디자이너의 왼쪽 아래에 있는 **인수**를 클릭하여 **인수** 창을 닫습니다.
 
 8. 워크플로 디자이너 왼쪽 아래에 있는 **변수** 를 클릭 하 여 **변수** 창을 표시 합니다.
 
-9. **변수 만들기**를 클릭 합니다.
+9. **변수 만들기**를 클릭합니다.
 
     > [!TIP]
     > **변수 만들기** 상자가 표시 되지 않으면 workflow designer 화면에서 **Sequence** 활동을 클릭 하 여 선택 합니다.
 
-10. **이름** 상자에 `Guess`를 입력 하 고 **변수 형식** 드롭다운 목록에서 **Int32** 를 선택한 다음 enter 키를 눌러 변수를 저장 합니다.
+10. `Guess` **이름** 상자에를 입력 하 고 **변수 형식** 드롭다운 목록에서 **Int32** 를 선택한 다음 enter 키를 눌러 변수를 저장 합니다.
 
-11. **변수 만들기**를 클릭 합니다.
+11. **변수 만들기**를 클릭합니다.
 
-12. **이름** 상자에 `Target`를 입력 하 고 **변수 형식** 드롭다운 목록에서 **Int32** 를 선택한 다음 enter 키를 눌러 변수를 저장 합니다.
+12. `Target` **이름** 상자에를 입력 하 고 **변수 형식** 드롭다운 목록에서 **Int32** 를 선택한 다음 enter 키를 눌러 변수를 저장 합니다.
 
-13. 활동 디자이너의 왼쪽 아래에 있는 **변수** 를 클릭 하 여 **변수** 창을 닫습니다.
+13. 활동 디자이너의 왼쪽 아래에 있는 **변수**를 클릭하여 **변수** 창을 닫습니다.
 
 ## <a name="to-add-the-workflow-activities"></a>워크플로 활동을 추가하려면
 
-1. **도구 상자** 의 **기본 형식** 섹션에서 **Assign** 활동을 끌어 **시퀀스** 활동에 놓습니다. **To** 상자에 `Target`를 입력 하 고 ** C# 식 입력** 또는 **VB 식 입력** 상자에 다음 식을 입력 합니다.
+1. **도구 상자** 의 **기본 형식** 섹션에서 **Assign** 활동을 끌어 **시퀀스** 활동에 놓습니다. `Target`To 상자에 **를** 입력 하 고 **c # 식 입력** 또는 **VB 식 입력** 상자에 다음 식을 입력 합니다.
 
     ```vb
     New System.Random().Next(1, MaxNumber + 1)
@@ -76,7 +77,7 @@ ms.locfileid: "70989697"
     ```
 
     > [!TIP]
-    > **도구 상자** 창이 표시 되지 않으면 **보기** 메뉴에서 **도구 상자** 를 선택 합니다.
+    > **도구 상자** 창이 표시되지 않으면 **보기** 메뉴에서 **도구 상자**를 선택합니다.
 
 2. **도구 상자** 의 **제어 흐름** 섹션에서 **DoWhile** 활동을 끌어 워크플로에서 **Assign** 활동 아래에 놓습니다.
 
@@ -94,7 +95,7 @@ ms.locfileid: "70989697"
 
 4. **도구 상자** 의 **NumberGuessWorkflowActivities** 섹션에서 **Prompt** 활동을 끌어 이전 단계의 **DoWhile** 활동에 놓습니다.
 
-5. **속성 창**에서 **프롬프트** 활동의 **BookmarkName** 속성 값 상자에 따옴표를 포함 하 `"EnterGuess"`을 입력 합니다. **결과** 속성 값 상자에 `Guess`를 입력 하 고 **텍스트** 속성 상자에 다음 식을 입력 합니다.
+5. **속성 창**에서 `"EnterGuess"` **프롬프트** 활동의 **BookmarkName** 속성 값 상자에 따옴표를 포함 하 여을 입력 합니다. `Guess` **결과** 속성 값 상자에를 입력 하 고 **텍스트** 속성 상자에 다음 식을 입력 합니다.
 
     ```vb
     "Please enter a number between 1 and " & MaxNumber
@@ -112,7 +113,7 @@ ms.locfileid: "70989697"
     > [!NOTE]
     > **Assign** 활동을 삭제 하는 경우 workflow Designer가 **Prompt** 활동과 새로 추가 된 **Assign** 활동을 모두 포함 하도록 **Sequence** 활동을 자동으로 추가 하는 방법을 확인 합니다.
 
-7. To 상자에 `Turns` **을** 입력 하 고 **C# 식 입력** 또는 **VB 식 입력** 상자에 `Turns + 1` 합니다.
+7. `Turns`To box에 **를** 입력 하 고 `Turns + 1` **c # 식 입력** 또는 **VB 식 입력** 상자에 입력 합니다.
 
 8. **도구 상자** 의 **제어 흐름** 섹션에서 **If** 활동을 끌어 새로 추가 된 **Assign** 활동 뒤에 오도록 **시퀀스** 활동에 놓습니다.
 
@@ -156,7 +157,7 @@ ms.locfileid: "70989697"
 
 1. Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.
 
-     워크플로를 실행 하는 방법에 대 한 지침은 다음 항목을 참조 하십시오. [방법:  워크플로를 실행 합니다](how-to-run-a-workflow.md). 를 이미 완료 한 경우 [방법: 워크플로의 다른 스타일을 사용 하 여 워크플로](how-to-run-a-workflow.md) 단계를 실행 하 고이 단계에서 순차 워크플로를 사용 하 여 실행 하려는 경우 [응용 프로그램을 빌드하고 실행 하려면](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) 섹션으로 건너뜁니다. [방법: 워크플로를 실행 합니다](how-to-run-a-workflow.md).
+     워크플로를 실행 하는 방법에 대 한 지침은 다음 항목인 [방법: 워크플로 실행](how-to-run-a-workflow.md)을 참조 하세요. [방법:](how-to-run-a-workflow.md) 워크플로의 다른 스타일을 사용 하 여 워크플로 단계 실행을 이미 완료 했 고이 단계에서 순차 워크플로를 사용 하 여 실행 하려는 경우 [방법: 워크플로 실행](how-to-run-a-workflow.md)의 [응용 프로그램 섹션을 빌드하고 실행](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) 하려면로 건너뜁니다.
 
 ## <a name="see-also"></a>참고 항목
 
@@ -165,5 +166,5 @@ ms.locfileid: "70989697"
 - [Windows Workflow Foundation 프로그래밍](programming.md)
 - [워크플로 디자인](designing-workflows.md)
 - [초보자를 위한 자습서](getting-started-tutorial.md)
-- [방법: 활동](how-to-create-an-activity.md) 만들기
-- [방법: 워크플로](how-to-run-a-workflow.md)를 실행 합니다.
+- [방법: 작업 만들기](how-to-create-an-activity.md)
+- [방법: 워크플로 실행](how-to-run-a-workflow.md)

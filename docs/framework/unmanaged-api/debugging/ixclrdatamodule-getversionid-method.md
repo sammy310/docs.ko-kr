@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: ff8ccf42d1131fb15d7473ae12ecefde9d55177f
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 9d5ef137a5d76c3d7545ab16921352123e978fb1
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395285"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420866"
 ---
 # <a name="ixclrdatamodulegetversionid-method"></a>IXCLRDataModule:: GetVersionId 메서드
 
@@ -47,12 +47,12 @@ HRESULT GetVersionId(
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
 **헤더:** 없음을  
 **라이브러리:** 없음을  
 **.NET Framework 버전:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅](index.md)
 - [IXCLRDataModule 인터페이스](ixclrdatamodule-interface.md)

@@ -1,20 +1,20 @@
 ---
 title: 쿼리 식
-description: F# 프로그래밍 언어에서 LINQ에 대 한 쿼리 식 지원에 대해 알아봅니다.
+description: 'F # 프로그래밍 언어에서 LINQ에 대 한 쿼리 식 지원에 대해 알아봅니다.'
 ms.date: 05/16/2016
-ms.openlocfilehash: f0c7245a930a06576487a61d73a1e5b94190ee59
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: bbd15352aa89bd1891b409177921a675784a0227
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424894"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419189"
 ---
 # <a name="query-expressions"></a>쿼리 식
 
 > [!NOTE]
 > 이 문서의 API 참조 링크를 통해 MSDN으로 이동됩니다.  docs.microsoft.com API 참조가 완전하지 않습니다.
 
-쿼리 식을 사용 하면 데이터 원본을 쿼리하고 원하는 형식으로 데이터를 저장할 수 있습니다. 쿼리 식은에서 F#LINQ에 대 한 지원을 제공 합니다.
+쿼리 식을 사용 하면 데이터 원본을 쿼리하고 원하는 형식으로 데이터를 저장할 수 있습니다. 쿼리 식은 F #의 LINQ에 대 한 지원을 제공 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -22,9 +22,9 @@ ms.locfileid: "73424894"
 query { expression }
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-쿼리 식은 시퀀스 식과 비슷한 계산 식의 형식입니다. 시퀀스 식에 코드를 제공 하 여 시퀀스를 지정 하는 것 처럼 쿼리 식에 코드를 제공 하 여 데이터 집합을 지정 합니다. 시퀀스 식에서 `yield` 키워드는 결과 시퀀스의 일부로 반환 될 데이터를 식별 합니다. 쿼리 식에서 `select` 키워드는 동일한 기능을 수행 합니다. 는 `select` 키워드 외에 F# 도 SQL SELECT 문의 부분과 매우 비슷한 많은 쿼리 연산자를 지원 합니다. Northwind OData 원본에 연결 하는 코드와 함께 간단한 쿼리 식의 예는 다음과 같습니다.
+쿼리 식은 시퀀스 식과 비슷한 계산 식의 형식입니다. 시퀀스 식에 코드를 제공 하 여 시퀀스를 지정 하는 것 처럼 쿼리 식에 코드를 제공 하 여 데이터 집합을 지정 합니다. 시퀀스 식에서 `yield` 키워드는 결과 시퀀스의 일부로 반환 될 데이터를 식별 합니다. 쿼리 식에서 키워드는 `select` 동일한 기능을 수행 합니다. `select`F #은 키워드 외에도 SQL SELECT 문의 부분과 매우 비슷한 많은 쿼리 연산자를 지원 합니다. Northwind OData 원본에 연결 하는 코드와 함께 간단한 쿼리 식의 예는 다음과 같습니다.
 
 ```fsharp
 // Use the OData type provider to create types that can be used to access the Northwind database.
@@ -46,17 +46,17 @@ query1
 |> Seq.iter (fun customer -> printfn "Company: %s Contact: %s" customer.CompanyName customer.ContactName)
 ```
 
-위의 코드 예제에서 쿼리 식은 중괄호 안에 있습니다. 식에서 코드의 의미는 쿼리 결과에서 데이터베이스의 Customers 테이블에 있는 모든 고객을 반환 하는 것입니다. 쿼리 식은 <xref:System.Linq.IQueryable%601> 및 <xref:System.Collections.Generic.IEnumerable%601>를 구현 하는 형식을 반환 하므로 예제에서 보여 주는 것 처럼 [Seq 모듈](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) 을 사용 하 여 반복할 수 있습니다.
+위의 코드 예제에서 쿼리 식은 중괄호 안에 있습니다. 식에서 코드의 의미는 쿼리 결과에서 데이터베이스의 Customers 테이블에 있는 모든 고객을 반환 하는 것입니다. 쿼리 식은 및를 구현 하는 형식을 반환 <xref:System.Linq.IQueryable%601> <xref:System.Collections.Generic.IEnumerable%601> 하므로 예제에서 보여 주는 것 처럼 [Seq 모듈](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) 을 사용 하 여 반복할 수 있습니다.
 
-모든 계산 식 형식은 작성기 클래스에서 빌드됩니다. 쿼리 계산 식에 대 한 작성기 클래스가 `QueryBuilder`되었습니다. 자세한 내용은 [계산 식](computation-expressions.md) 및 [쿼리만 클래스](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)를 참조 하세요.
+모든 계산 식 형식은 작성기 클래스에서 빌드됩니다. 쿼리 계산 식에 대 한 작성기 클래스는 `QueryBuilder` 입니다. 자세한 내용은 [계산 식](computation-expressions.md) 및 [쿼리만 클래스](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)를 참조 하세요.
 
 ## <a name="query-operators"></a>쿼리 연산자
 
-쿼리 연산자를 사용 하면 반환 되는 레코드에 대 한 조건을 추가 하거나 결과 정렬 순서를 지정 하는 등의 쿼리 세부 정보를 지정할 수 있습니다. 쿼리 원본은 쿼리 연산자를 지원 해야 합니다. 지원 되지 않는 쿼리 연산자를 사용 하려고 하면 `System.NotSupportedException`이 throw 됩니다.
+쿼리 연산자를 사용 하면 반환 되는 레코드에 대 한 조건을 추가 하거나 결과 정렬 순서를 지정 하는 등의 쿼리 세부 정보를 지정할 수 있습니다. 쿼리 원본은 쿼리 연산자를 지원 해야 합니다. 지원 되지 않는 쿼리 연산자를 사용 하려고 하면이 `System.NotSupportedException` throw 됩니다.
 
-SQL로 변환할 수 있는 식만 쿼리 식에 사용할 수 있습니다. 예를 들어 `where` 쿼리 연산자를 사용 하는 경우 식에는 함수 호출이 허용 되지 않습니다.
+SQL로 변환할 수 있는 식만 쿼리 식에 사용할 수 있습니다. 예를 들어 쿼리 연산자를 사용 하는 경우 식에는 함수 호출이 허용 되지 않습니다 `where` .
 
-표 1에는 사용 가능한 쿼리 연산자가 표시 됩니다. 또한이 항목의 뒷부분에 나오는 SQL 쿼리와 이와 동등한 F# 쿼리 식을 비교 하는 Table2을 참조 하십시오. 일부 쿼리 연산자는 일부 형식 공급자에서 지원 되지 않습니다. 특히 odata 유형 공급자는 OData의 제한으로 인해 지원 되는 쿼리 연산자에서 제한 됩니다. 자세한 내용은 [Odataservice 형식 공급자F#()](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e)를 참조 하세요.
+표 1에는 사용 가능한 쿼리 연산자가 표시 됩니다. 또한이 항목의 뒷부분에 나오는 SQL 쿼리와 이와 동등한 F # 쿼리 식을 비교 하는 Table2을 참조 하십시오. 일부 쿼리 연산자는 일부 형식 공급자에서 지원 되지 않습니다. 특히 odata 유형 공급자는 OData의 제한으로 인해 지원 되는 쿼리 연산자에서 제한 됩니다. 자세한 내용은 [Odataservice 형식 공급자 (F #)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e)를 참조 하세요.
 
 이 표에는 다음과 같은 형식의 데이터베이스가 있다고 가정 합니다.
 
@@ -231,7 +231,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenBy</code></td><td>지정 된 정렬 키의 오름차순으로 지금까지 선택한 요소의 후속 정렬을 수행 합니다. 이 연산자는 <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>또는 <code>thenByDescending</code>한 후에만 사용할 수 있습니다.<br/><br/>
+<td><code>thenBy</code></td><td>지정 된 정렬 키의 오름차순으로 지금까지 선택한 요소의 후속 정렬을 수행 합니다. 이 연산자는,, 또는 후에만 사용할 수 있습니다 <code>sortBy</code> <code>sortByDescending</code> <code>thenBy</code> <code>thenByDescending</code> .<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -243,7 +243,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByDescending</code></td><td>지정 된 정렬 키의 내림차순으로 지금까지 선택한 요소의 후속 정렬을 수행 합니다. 이 연산자는 <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>또는 <code>thenByDescending</code>한 후에만 사용할 수 있습니다.<br/><br/>
+<td><code>thenByDescending</code></td><td>지정 된 정렬 키의 내림차순으로 지금까지 선택한 요소의 후속 정렬을 수행 합니다. 이 연산자는,, 또는 후에만 사용할 수 있습니다 <code>sortBy</code> <code>sortByDescending</code> <code>thenBy</code> <code>thenByDescending</code> .<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -265,7 +265,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>join</code></td><td>일치 하는 키를 기반으로 선택한 두 값 집합의 상관 관계를 설정 합니다. 조인 식에서 = 기호 주위에 있는 키의 순서는 중요 합니다. 모든 조인에서 줄이 <code>-&gt;</code> 기호 다음에 분할 되는 경우에는 적어도 키워드 <code>for</code>만큼 들여쓰기를 들여쓰기 해야 합니다.<br/><br/>
+<td><code>join</code></td><td>일치 하는 키를 기반으로 선택한 두 값 집합의 상관 관계를 설정 합니다. 조인 식에서 = 기호 주위에 있는 키의 순서는 중요 합니다. 모든 조인에서 줄이 기호 뒤에 분할 되 면 <code>-&gt;</code> 들여쓰기는 적어도 키워드 만큼 들여쓰기 되어야 합니다 <code>for</code> .<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -474,7 +474,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByNullable</code></td><td>지정 된 null을 허용 하는 정렬 키의 오름차순으로 지금까지 선택한 요소의 후속 정렬을 수행 합니다. 이 연산자는 <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>또는 <code>thenByDescending</code>또는 해당 하는 nullable variant 바로 다음에만 사용할 수 있습니다.<br/><br/>
+<td><code>thenByNullable</code></td><td>지정 된 null을 허용 하는 정렬 키의 오름차순으로 지금까지 선택한 요소의 후속 정렬을 수행 합니다. 이 연산자는 <code>sortBy</code> ,, <code>sortByDescending</code> <code>thenBy</code> 또는 또는 <code>thenByDescending</code> 해당 nullable variant 바로 다음에만 사용할 수 있습니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -485,7 +485,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByNullableDescending</code></td><td>지정 된 null을 허용 하는 정렬 키에 따라 내림차순으로 지금까지 선택한 요소의 후속 정렬을 수행 합니다. 이 연산자는 <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>또는 <code>thenByDescending</code>또는 해당 하는 nullable variant 바로 다음에만 사용할 수 있습니다.<br/><br/>
+<td><code>thenByNullableDescending</code></td><td>지정 된 null을 허용 하는 정렬 키에 따라 내림차순으로 지금까지 선택한 요소의 후속 정렬을 수행 합니다. 이 연산자는 <code>sortBy</code> ,, <code>sortByDescending</code> <code>thenBy</code> 또는 또는 <code>thenByDescending</code> 해당 nullable variant 바로 다음에만 사용할 수 있습니다.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -500,14 +500,14 @@ let data = [ 1; 5; 7; 11; 18; 21]
 
 ## <a name="comparison-of-transact-sql-and-f-query-expressions"></a>Transact-SQL과 F# 쿼리 식 비교
 
-다음 표에서는 몇 가지 일반적인 Transact-sql 쿼리 및 해당 쿼리를 보여 줍니다 F#. 또한이 테이블의 코드는 이전 테이블과 동일한 데이터베이스를 가정 하 고 형식 공급자를 설정 하는 동일한 초기 코드를 가정 합니다.
+다음 표에서는 몇 가지 일반적인 Transact-sql 쿼리 및 F #에서의 해당 쿼리를 보여 줍니다. 또한이 테이블의 코드는 이전 테이블과 동일한 데이터베이스를 가정 하 고 형식 공급자를 설정 하는 동일한 초기 코드를 가정 합니다.
 
-### <a name="table-2-transact-sql-and-f-query-expressions"></a>표 2. Transact-SQL 및 F# 쿼리 식
+### <a name="table-2-transact-sql-and-f-query-expressions"></a>테이블 2. Transact-SQL 및 F# 쿼리 식
 
 <table style="width:100%">
   <tr>
     <th>Transact-sql (대/소문자 구분 안 함)</th>
-    <th>F#쿼리 식 (대/소문자 구분)</th>
+    <th>F # 쿼리 식 (대/소문자 구분)</th>
   </tr>
 <tr><td>
 테이블에서 모든 필드를 선택 합니다.<br>
@@ -543,11 +543,14 @@ query {
 <td><code>EXISTS</code>
 <br />
 
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable no-space-in-emphasis -->
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE EXISTS
   (SELECT * FROM CourseSelection
    WHERE CourseSelection.StudentID = Student.StudentID)
 </code></pre>
+<!-- markdownlint-restore -->
 </td>
 
 <td>
@@ -608,11 +611,14 @@ query {
 </td></tr><tr><td>
 개수 조건이 있는 그룹화입니다.<br/>
 
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable no-space-in-emphasis -->
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * )
 FROM Student
 GROUP BY Student.Age
 HAVING COUNT( * ) > 1
 </code></pre>
+<!-- markdownlint-restore -->
 
 </td><td>
 
@@ -652,12 +658,15 @@ query {
 </td></tr><tr><td>
 개수를 기준으로 그룹화, 계산 및 정렬<br/>
 
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable no-space-in-emphasis -->
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * ) as myCount
 FROM Student
 GROUP BY Student.Age
 HAVING COUNT( * ) > 1
 ORDER BY COUNT( * ) DESC
 </code></pre>
+<!-- markdownlint-restore -->
 
 </td><td>
 
@@ -673,8 +682,8 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>지정 된 값 집합을 
-<code>IN</code> 합니다.<br/>
+</td></tr><tr><td>
+<code>IN</code>지정 된 값의 집합입니다.<br/>
 
 <pre><code class="lang-sql">SELECT *
 FROM Student
@@ -697,7 +706,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>와 <code>TOP</code>을 참조하세요.<br/>
+<code>LIKE</code> 및 <code>TOP</code><br/>
 
 <pre><code class="lang-sql">-- '_e%' matches strings where the second character is 'e'
 SELECT TOP 2 * FROM Student
@@ -714,8 +723,8 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>패턴 일치 집합을 사용 하 여 
-<code>LIKE</code> 합니다.<br/>
+</td></tr><tr><td>
+<code>LIKE</code>패턴 일치 집합을 사용 합니다.<br/>
 
 <pre><code class="lang-sql">-- '[abc]%' matches strings where the first character is
 -- 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -731,8 +740,8 @@ WHERE Student.Name LIKE '[abc]%'
 }
 </code></pre>
 
-</td></tr><tr><td>set 제외 패턴이 있는 
-<code>LIKE</code>입니다.<br/>
+</td></tr><tr><td>
+<code>LIKE</code>set 제외 패턴이 포함 된입니다.<br/>
 
 <pre><code class="lang-sql">-- '[^abc]%' matches strings where the first character is
 -- not 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -750,8 +759,8 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>한 필드에 
-<code>LIKE</code> 다른 필드를 선택 합니다.<br/>
+</td></tr><tr><td>
+<code>LIKE</code>한 필드에서 다른 필드를 선택 합니다.<br/>
 
 <pre><code class="lang-sql">SELECT StudentID AS ID FROM Student
 WHERE Student.Name LIKE '[^abc]%'
@@ -766,7 +775,7 @@ WHERE Student.Name LIKE '[^abc]%'
 }
 </code></pre>
 
-</td></tr><tr><td>부분 문자열 검색을 사용 하 여 <code>LIKE</code>합니다.<br/>
+</td></tr><tr><td><code>LIKE</code>, 부분 문자열 검색을 사용 합니다.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Name like '%A%'
@@ -783,7 +792,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-두 테이블을 사용 하는 간단한 <code>JOIN</code>.<br/>
+<code>JOIN</code>두 테이블을 사용 하는 단순 합니다.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 JOIN CourseSelection
@@ -801,7 +810,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>두 테이블을 사용 하 여 <code>LEFT JOIN</code> 합니다.<br/>
+</td></tr><tr><td><code>LEFT JOIN</code>두 개의 테이블이 있습니다.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 LEFT JOIN CourseSelection
@@ -820,7 +829,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>COUNT</code> <code>JOIN</code><br/>
+</td></tr><tr><td><code>JOIN</code>(<code>COUNT</code> 사용)<br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 JOIN CourseSelection
@@ -903,7 +912,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>순서가 지정 된 <code>OR</code><br/>
+</td></tr><tr><td><code>OR</code>순서 지정<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age = 12 OR Student.Age = 13
@@ -921,7 +930,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>TOP</code>, <code>OR</code>및 순서 지정.<br/>
+</td></tr><tr><td><code>TOP</code>, <code>OR</code> 및 순서 지정.<br/>
 
 <pre><code class="lang-sql">SELECT TOP 2 student.Name FROM Student
 WHERE Student.Age = 11 OR Student.Age = 12
@@ -943,12 +952,15 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>두 쿼리의 <code>UNION</code>입니다.<br/>
+</td></tr><tr><td><code>UNION</code>두 개의 쿼리<br/>
 
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable no-space-in-emphasis -->
 <pre><code class="lang-sql">SELECT * FROM Student
 UNION
 SELECT * FROM lastStudent
 </code></pre>
+<!-- markdownlint-restore -->
 
 </td><td>
 
@@ -970,10 +982,13 @@ query2.Union (query1)
 
 </td></tr><tr><td>두 쿼리의 교집합<br/>
 
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable no-space-in-emphasis -->
 <pre><code class="lang-sql">SELECT * FROM Student
 INTERSECT
 SELECT * FROM LastStudent
 </code></pre>
+<!-- markdownlint-restore -->
 </td><td>
 
 <pre><code class="lang-fsharp">
@@ -992,7 +1007,7 @@ let query2 =
 query1.Intersect(query2)
 </code></pre>
 
-</td></tr><tr><td><code>CASE</code> 조건입니다.<br/>
+</td></tr><tr><td><code>CASE</code>조건.<br/>
 
 <pre><code class="lang-sql">SELECT student.StudentID,
 CASE Student.Age
@@ -1861,7 +1876,7 @@ query {
 |> Seq.iter (fun (studentName, courseName) -> printfn "%s %s" studentName courseName)
 ```
 
-이 코드가 대화형으로 F# 실행 되는 경우 다음은 전체 출력입니다.
+F# 대화형에서이 코드가 실행 될 때의 전체 출력은 다음과 같습니다.
 
 ```console
 --> Referenced 'C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\3.0\Runtime\v4.0\Type Providers\FSharp.Data.TypeProviders.dll'
@@ -2422,8 +2437,8 @@ module Queries2 = begin
 end
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [F# 언어 참조](index.md)
+- [F # 언어 참조](index.md)
 - [쿼리만 클래스](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)
 - [계산 식](Computation-Expressions.md)

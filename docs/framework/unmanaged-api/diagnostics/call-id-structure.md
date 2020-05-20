@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: bfd46324-afec-4782-9c18-586d81fb4740
 topic_type:
 - apiref
-ms.openlocfilehash: 8c606f67766334800444f39b115d90f65ecca13d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 1c795ee536483a7def9c0339efae66a013898a77
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448589"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420632"
 ---
 # <a name="call_id-structure"></a>CALL_ID 구조체
-호출 되는 함수에 대 한 정보를 디버거에 제공 합니다. 자세한 내용은 [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) 인터페이스를 참조 하세요.  
+호출 되는 함수에 대 한 정보를 디버거에 제공 합니다. 자세한 내용은 [INotifySink2](inotifysink2-interface.md) 인터페이스를 참조 하세요.  
   
 ## <a name="syntax"></a>구문  
   
@@ -54,5 +54,5 @@ typedef struct tagCALL_ID
   
 ## <a name="see-also"></a>참고 항목
 
-- [INotifySink2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [진단 기호 저장소 구조체](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
+- [INotifySink2 인터페이스](inotifysink2-interface.md)
+- [진단 기호 저장소 구조체](diagnostics-symbol-store-structures.md)

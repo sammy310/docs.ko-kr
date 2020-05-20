@@ -1,23 +1,24 @@
 ---
 title: Windows Workflow Foundation의 새로운 기능
+description: .NET Framework 4의 Windows Workflow Foundation 변경 내용에 대해 알아봅니다. 워크플로를 만들고 실행 하 고 유지 관리 하기가 더 쉽습니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Workflow Foundation [WF], what's new
 - WF [WF], what's new
 ms.assetid: 11f96014-001e-41a0-bcc2-d0684a52fa43
-ms.openlocfilehash: 8f79c6d2a564571f8b753f322a79e91a01b1cf2f
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: b25b71a61f8a96d59c79e780d9fe5cd03abfa299
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74142009"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419345"
 ---
 # <a name="whats-new-in-windows-workflow-foundation"></a>Windows Workflow Foundation의 새로운 기능
 
 .NET Framework 4의 WF (Windows Workflow Foundation)는 이전 버전에서 몇 가지 개발 패러다임을 변경 합니다. 이제 워크플로에서 많은 새로운 기능을 보다 쉽게 작성, 실행, 유지 관리 및 구현할 수 있습니다. 최신 버전을 사용 하도록 .NET 3.0 및 .NET 3.5 워크플로 응용 프로그램을 마이그레이션하는 방법에 대 한 자세한 내용은 [마이그레이션 지침](migration-guidance.md)을 참조 하세요.  
   
 ## <a name="workflow-activity-model"></a>워크플로 활동 모델  
- 이제 <xref:System.Workflow.Activities.SequentialWorkflowActivity> 또는 <xref:System.Workflow.Activities.StateMachineWorkflowActivity> 클래스를 사용하는 대신 활동이 워크플로를 만드는 기본 단위로 사용됩니다. <xref:System.Activities.Activity> 클래스는 워크플로 동작에 대한 기본 추상화를 제공합니다. 활동 작성자는 기본 사용자 지정 활동 기능에 대해 <xref:System.Activities.CodeActivity>를 구현하거나 다양한 런타임을 사용하는 사용자 지정 활동 기능에 대해 <xref:System.Activities.NativeActivity>를 구현할 수 있습니다. <xref:System.Activities.Activity>는 활동 작성자가 다른 <xref:System.Activities.NativeActivity>, <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>또는 <xref:System.Activities.DynamicActivity> 개체를 기준으로 새 동작을 선언적으로 표현 하는 데 사용 하는 클래스로, 사용자 지정 개발 되거나 [기본 제공 활동 라이브러리](net-framework-4-5-built-in-activity-library.md)에 포함 되어 있는지 여부에 관계 없이 사용 됩니다.  
+ 이제 <xref:System.Workflow.Activities.SequentialWorkflowActivity> 또는 <xref:System.Workflow.Activities.StateMachineWorkflowActivity> 클래스를 사용하는 대신 활동이 워크플로를 만드는 기본 단위로 사용됩니다. <xref:System.Activities.Activity> 클래스는 워크플로 동작에 대한 기본 추상화를 제공합니다. 활동 작성자는 기본 사용자 지정 활동 기능에 대해 <xref:System.Activities.CodeActivity>를 구현하거나 다양한 런타임을 사용하는 사용자 지정 활동 기능에 대해 <xref:System.Activities.NativeActivity>를 구현할 수 있습니다. <xref:System.Activities.Activity>는 활동 작성자가 <xref:System.Activities.NativeActivity> <xref:System.Activities.CodeActivity> <xref:System.Activities.AsyncCodeActivity> <xref:System.Activities.DynamicActivity> 사용자 지정 개발 되었거나 [기본 제공 활동 라이브러리](net-framework-4-5-built-in-activity-library.md)에 포함 되어 있는지 여부에 관계 없이 다른,, 또는 개체와 관련 하 여 새 동작을 선언적으로 표현 하는 데 사용 되는 클래스입니다.  
   
 ## <a name="rich-composite-activity-options"></a>풍부한 복합 활동 옵션  
  <xref:System.Activities.Statements.Flowchart>는 작성자가 임의 루프 및 조건 분기를 모델링할 수 있도록 하는 강력한 새 제어 흐름 활동입니다. <xref:System.Activities.Statements.Flowchart>는 이전에는 <xref:System.Workflow.Activities.StateMachineWorkflowActivity>를 사용해서만 구현 가능했던 이벤트 구동 프로그래밍 모델을 제공합니다. 절차적 워크플로에서는 <xref:System.Activities.Statements.TryCatch> 및 <xref:System.Activities.Statements.Switch%601>과 같은 기존 흐름 제어 구조를 모델링하는 새로운 흐름 제어 활동을 활용합니다.  

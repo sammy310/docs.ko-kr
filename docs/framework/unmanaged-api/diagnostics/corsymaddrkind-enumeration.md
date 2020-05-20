@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3ef841c2-cade-42ee-ba34-2ef91d6d0879
 topic_type:
 - apiref
-ms.openlocfilehash: 12f31d0bf224e38418818122dad3586ec687b2ad
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5991b0abaedabe2337cd754c7bd19f96c5e9b685
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448582"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420619"
 ---
 # <a name="corsymaddrkind-enumeration"></a>CorSymAddrKind 열거형
 메모리 주소의 유형을 나타냅니다.  
@@ -62,4 +62,4 @@ typedef enum CorSymAddrKind
   
 ## <a name="see-also"></a>참고 항목
 
-- [진단 기호 저장소 열거형](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+- [진단 기호 저장소 열거형](diagnostics-symbol-store-enumerations.md)
