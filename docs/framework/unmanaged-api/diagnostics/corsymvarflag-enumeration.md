@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: c3f7d307-4047-4f9a-be8c-f152fca42fd0
 topic_type:
 - apiref
-ms.openlocfilehash: 21e92d8f2fb80c4c41d516ef281bf4fc8a75f4e1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d41e048b67d4bc7159f6dd5266457651f1658290
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176645"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420593"
 ---
-# <a name="corsymvarflag-enumeration"></a><span data-ttu-id="a54e9-102">CorSymVarFlag 열거형</span><span class="sxs-lookup"><span data-stu-id="a54e9-102">CorSymVarFlag Enumeration</span></span>
-<span data-ttu-id="a54e9-103">변수가 컴파일러 생성되는지 여부를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="a54e9-103">Indicates whether a variable is compiler-generated.</span></span>  
+# <a name="corsymvarflag-enumeration"></a><span data-ttu-id="1e052-102">CorSymVarFlag 열거형</span><span class="sxs-lookup"><span data-stu-id="1e052-102">CorSymVarFlag Enumeration</span></span>
+<span data-ttu-id="1e052-103">변수가 컴파일러에서 생성 되었는지 여부를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="1e052-103">Indicates whether a variable is compiler-generated.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a54e9-104">구문</span><span class="sxs-lookup"><span data-stu-id="a54e9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1e052-104">구문</span><span class="sxs-lookup"><span data-stu-id="1e052-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorSymVarFlag
@@ -33,15 +33,15 @@ typedef enum CorSymVarFlag
 } CorSymVarFlag;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="a54e9-105">구성원</span><span class="sxs-lookup"><span data-stu-id="a54e9-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="1e052-105">멤버</span><span class="sxs-lookup"><span data-stu-id="1e052-105">Members</span></span>  
   
-|<span data-ttu-id="a54e9-106">멤버</span><span class="sxs-lookup"><span data-stu-id="a54e9-106">Member</span></span>|<span data-ttu-id="a54e9-107">Description</span><span class="sxs-lookup"><span data-stu-id="a54e9-107">Description</span></span>|  
+|<span data-ttu-id="1e052-106">멤버</span><span class="sxs-lookup"><span data-stu-id="1e052-106">Member</span></span>|<span data-ttu-id="1e052-107">설명</span><span class="sxs-lookup"><span data-stu-id="1e052-107">Description</span></span>|  
 |------------|-----------------|  
-|`VAR_IS_COMP_GEN`|<span data-ttu-id="a54e9-108">지정된 변수가 컴파일러에서 생성되는 것을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="a54e9-108">Indicates that the given variable is compiler-generated.</span></span>|  
+|`VAR_IS_COMP_GEN`|<span data-ttu-id="1e052-108">지정 된 변수가 컴파일러에서 생성 되었음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="1e052-108">Indicates that the given variable is compiler-generated.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="a54e9-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="a54e9-109">Requirements</span></span>  
- <span data-ttu-id="a54e9-110">**헤더:** 코르심.idl, 코르심.h</span><span class="sxs-lookup"><span data-stu-id="a54e9-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1e052-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="1e052-109">Requirements</span></span>  
+ <span data-ttu-id="1e052-110">**헤더:** CorSym, CorSym</span><span class="sxs-lookup"><span data-stu-id="1e052-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a54e9-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="a54e9-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1e052-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="1e052-111">See also</span></span>
 
-- [<span data-ttu-id="a54e9-112">진단 기호 저장소 열거형</span><span class="sxs-lookup"><span data-stu-id="a54e9-112">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+- [<span data-ttu-id="1e052-112">진단 기호 저장소 열거형</span><span class="sxs-lookup"><span data-stu-id="1e052-112">Diagnostics Symbol Store Enumerations</span></span>](diagnostics-symbol-store-enumerations.md)
