@@ -9,11 +9,11 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "79168962"
 ---
-# <a name="how-to-project-an-object-graph-c"></a><span data-ttu-id="a4e87-102">개체 그래프를 프로젝션하는 방법(C#)</span><span class="sxs-lookup"><span data-stu-id="a4e87-102">How to project an object graph (C#)</span></span>
-<span data-ttu-id="a4e87-103">이 항목에서는 XML에서 개체 그래프를 프로젝션하거나 채우는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a4e87-103">This topic illustrates how to project, or populate, an object graph from XML.</span></span>  
+# <a name="how-to-project-an-object-graph-c"></a><span data-ttu-id="f13ff-102">개체 그래프를 프로젝션하는 방법(C#)</span><span class="sxs-lookup"><span data-stu-id="f13ff-102">How to project an object graph (C#)</span></span>
+<span data-ttu-id="f13ff-103">이 항목에서는 XML에서 개체 그래프를 프로젝션하거나 채우는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f13ff-103">This topic illustrates how to project, or populate, an object graph from XML.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a4e87-104">예제</span><span class="sxs-lookup"><span data-stu-id="a4e87-104">Example</span></span>  
- <span data-ttu-id="a4e87-105">다음 코드에서는 `Address`샘플 XML 파일: 일반적인 구매 주문(LINQ to XML)`PurchaseOrder` XML 문서의 `PurchaseOrderItem`, [ 및 ](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) 클래스를 사용하여 개체 그래프를 채웁니다.</span><span class="sxs-lookup"><span data-stu-id="a4e87-105">The following code populates an object graph with the `Address`, `PurchaseOrder`, and `PurchaseOrderItem` classes from the [Sample XML File: Typical Purchase Order (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML document.</span></span>  
+## <a name="example"></a><span data-ttu-id="f13ff-104">예제</span><span class="sxs-lookup"><span data-stu-id="f13ff-104">Example</span></span>  
+ <span data-ttu-id="f13ff-105">다음 코드에서는 [샘플 XML 파일: 일반적인 구매 주문(LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML 문서의 `Address`, `PurchaseOrder` 및 `PurchaseOrderItem` 클래스를 사용하여 개체 그래프를 채웁니다.</span><span class="sxs-lookup"><span data-stu-id="f13ff-105">The following code populates an object graph with the `Address`, `PurchaseOrder`, and `PurchaseOrderItem` classes from the [Sample XML File: Typical Purchase Order (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML document.</span></span>  
   
 ```csharp  
 class Address  
@@ -214,9 +214,9 @@ class Program {
 }  
 ```  
   
- <span data-ttu-id="a4e87-106">이 예제에서는 LINQ 쿼리의 결과가 <xref:System.Collections.Generic.IEnumerable%601>의 `PurchaseOrderItem`로 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="a4e87-106">In this example, the result of the LINQ query is returned as an <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="a4e87-107">`PurchaseOrder` 클래스의 항목은 <xref:System.Collections.Generic.IEnumerable%601>의 `PurchaseOrderItem` 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="a4e87-107">The items in the `PurchaseOrder` class are of type <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="a4e87-108">이 코드에서는 <xref:System.Linq.Enumerable.ToList%2A> 확장 메서드를 사용하여 쿼리 결과에서 <xref:System.Collections.Generic.List%601> 컬렉션을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="a4e87-108">The code uses the <xref:System.Linq.Enumerable.ToList%2A> extension method to create a <xref:System.Collections.Generic.List%601> collection from the results of the query.</span></span>  
+ <span data-ttu-id="f13ff-106">이 예제에서는 LINQ 쿼리의 결과가 `PurchaseOrderItem`의 <xref:System.Collections.Generic.IEnumerable%601>로 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="f13ff-106">In this example, the result of the LINQ query is returned as an <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="f13ff-107">`PurchaseOrder` 클래스의 항목은 <xref:System.Collections.Generic.IEnumerable%601>의 `PurchaseOrderItem` 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="f13ff-107">The items in the `PurchaseOrder` class are of type <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="f13ff-108">이 코드에서는 <xref:System.Linq.Enumerable.ToList%2A> 확장 메서드를 사용하여 쿼리 결과에서 <xref:System.Collections.Generic.List%601> 컬렉션을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="f13ff-108">The code uses the <xref:System.Linq.Enumerable.ToList%2A> extension method to create a <xref:System.Collections.Generic.List%601> collection from the results of the query.</span></span>  
   
- <span data-ttu-id="a4e87-109">예제의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="a4e87-109">The example produces the following output:</span></span>  
+ <span data-ttu-id="f13ff-109">예제의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="f13ff-109">The example produces the following output:</span></span>  
   
 ```output  
 PurchaseOrderNumber: 99503  
@@ -255,7 +255,7 @@ USPrice: 39.98
 ShipDate: 5/21/1999  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a4e87-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="a4e87-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f13ff-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f13ff-110">See also</span></span>
 
 - <xref:System.Linq.Enumerable.Select%2A>
 - <xref:System.Linq.Enumerable.ToList%2A>

@@ -12,11 +12,11 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 03/15/2020
 ms.locfileid: "73039546"
 ---
-# <a name="how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet"></a><span data-ttu-id="32f96-102">방법: 프록시를 사용하여 인터넷과 통신하도록 WebRequest 설정</span><span class="sxs-lookup"><span data-stu-id="32f96-102">How to: Enable a WebRequest to Use a Proxy to Communicate With the Internet</span></span>
+# <a name="how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet"></a><span data-ttu-id="04bb0-102">방법: 프록시를 사용하여 인터넷과 통신하도록 WebRequest 설정</span><span class="sxs-lookup"><span data-stu-id="04bb0-102">How to: Enable a WebRequest to Use a Proxy to Communicate With the Internet</span></span>
 
-<span data-ttu-id="32f96-103">이 예제에서는 인터넷과 통신하는 데 프록시를 사용하기 위해 <xref:System.Net.WebRequest>를 사용하도록 설정할 전역 프록시 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="32f96-103">This example creates a global proxy instance that will enable any <xref:System.Net.WebRequest> to use a proxy to communicate with the Internet.</span></span> <span data-ttu-id="32f96-104">예제에서는 프록시 서버의 이름이 `webproxy`이고 표준 HTTP 포트인 포트 80에서 통신한다고 가정합니다.</span><span class="sxs-lookup"><span data-stu-id="32f96-104">The example assumes that the proxy server is named `webproxy` and that it communicates on port 80, the standard HTTP port.</span></span>
+<span data-ttu-id="04bb0-103">이 예제에서는 인터넷과 통신하는 데 프록시를 사용하기 위해 <xref:System.Net.WebRequest>를 사용하도록 설정할 전역 프록시 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="04bb0-103">This example creates a global proxy instance that will enable any <xref:System.Net.WebRequest> to use a proxy to communicate with the Internet.</span></span> <span data-ttu-id="04bb0-104">예제에서는 프록시 서버의 이름이 `webproxy`이고 표준 HTTP 포트인 포트 80에서 통신한다고 가정합니다.</span><span class="sxs-lookup"><span data-stu-id="04bb0-104">The example assumes that the proxy server is named `webproxy` and that it communicates on port 80, the standard HTTP port.</span></span>
 
-## <a name="example"></a><span data-ttu-id="32f96-105">예제</span><span class="sxs-lookup"><span data-stu-id="32f96-105">Example</span></span>
+## <a name="example"></a><span data-ttu-id="04bb0-105">예제</span><span class="sxs-lookup"><span data-stu-id="04bb0-105">Example</span></span>
 
 ```csharp
 var proxyObject = new WebProxy("http://webproxy:80/");
@@ -28,14 +28,14 @@ Dim proxyObject As New WebProxy("http://webproxy:80/")
 GlobalProxySelection.Select = proxyObject
 ```
 
-## <a name="compiling-the-code"></a><span data-ttu-id="32f96-106">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="32f96-106">Compiling the Code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="04bb0-106">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="04bb0-106">Compiling the Code</span></span>
 
-<span data-ttu-id="32f96-107">이 예제에는 다음 사항이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="32f96-107">This example requires:</span></span>
+<span data-ttu-id="04bb0-107">이 예제에는 다음 사항이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="04bb0-107">This example requires:</span></span>
 
-- <span data-ttu-id="32f96-108">[System.Net`using` 네임스페이스에 대한 C# ](../../csharp/language-reference/keywords/using-directive.md) **지시문**</span><span class="sxs-lookup"><span data-stu-id="32f96-108">A C# [`using` directive](../../csharp/language-reference/keywords/using-directive.md) for the **System.Net** namespace.</span></span>
-- <span data-ttu-id="32f96-109">[System.Net`Imports` 네임스페이스에 대한 Visual Basic ](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) **문**</span><span class="sxs-lookup"><span data-stu-id="32f96-109">A Visual Basic [`Imports` statement](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) for the **System.Net** namespace.</span></span>
+- <span data-ttu-id="04bb0-108">**System.Net** 네임스페이스에 대한 C# [`using` 지시문](../../csharp/language-reference/keywords/using-directive.md)</span><span class="sxs-lookup"><span data-stu-id="04bb0-108">A C# [`using` directive](../../csharp/language-reference/keywords/using-directive.md) for the **System.Net** namespace.</span></span>
+- <span data-ttu-id="04bb0-109">**System.Net** 네임스페이스에 대한 Visual Basic [`Imports` 문](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)</span><span class="sxs-lookup"><span data-stu-id="04bb0-109">A Visual Basic [`Imports` statement](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) for the **System.Net** namespace.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="32f96-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="32f96-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="04bb0-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="04bb0-110">See also</span></span>
 
-- [<span data-ttu-id="32f96-111">애플리케이션 프로토콜 사용</span><span class="sxs-lookup"><span data-stu-id="32f96-111">Using Application Protocols</span></span>](using-application-protocols.md)
-- [<span data-ttu-id="32f96-112">프록시를 통해 인터넷 액세스</span><span class="sxs-lookup"><span data-stu-id="32f96-112">Accessing the Internet Through a Proxy</span></span>](accessing-the-internet-through-a-proxy.md)
+- [<span data-ttu-id="04bb0-111">애플리케이션 프로토콜 사용</span><span class="sxs-lookup"><span data-stu-id="04bb0-111">Using Application Protocols</span></span>](using-application-protocols.md)
+- [<span data-ttu-id="04bb0-112">프록시를 통해 인터넷 액세스</span><span class="sxs-lookup"><span data-stu-id="04bb0-112">Accessing the Internet Through a Proxy</span></span>](accessing-the-internet-through-a-proxy.md)
