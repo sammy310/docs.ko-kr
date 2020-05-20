@@ -23,7 +23,7 @@ NET Framework 버전 2.0부터 공용 언어 런타임을 통해 스레드에 �
   
  공용 언어 런타임은 프로그램 흐름을 제어하는 데 사용되는 처리되지 않은 예외에 백업을 제공합니다.  
   
-- <xref:System.Threading.ThreadAbortException>가 호출되었으므로 스레드에서 <xref:System.Threading.Thread.Abort%2A>이 throw됩니다.  
+- <xref:System.Threading.Thread.Abort%2A>가 호출되었으므로 스레드에서 <xref:System.Threading.ThreadAbortException>이 throw됩니다.  
   
 - 스레드가 실행 중인 애플리케이션 도메인이 언로드되는 중이므로 스레드에서 <xref:System.AppDomainUnloadedException>이 throw됩니다.  
   
@@ -47,7 +47,7 @@ NET Framework 버전 2.0부터 공용 언어 런타임을 통해 스레드에 �
   
 - 스레드 풀 스레드에 처리되지 않은 예외가 없습니다. 작업이 처리하지 않는 예외를 throw하는 경우 런타임은 해당 예외의 스택 추적을 콘솔에 출력한 다음 해당 스레드를 스레드 풀에 반환합니다.  
   
-- <xref:System.Threading.Thread.Start%2A> 클래스의 <xref:System.Threading.Thread> 메서드를 사용하여 만들어진 스레드에는 처리되지 않은 예외가 없습니다. 해당 스레드에서 실행되는 코드가 처리하지 않는 예외를 throw하는 경우 런타임은 해당 예외의 스택 추적을 콘솔에 출력한 다음 해당 스레드를 종료합니다.  
+- <xref:System.Threading.Thread> 클래스의 <xref:System.Threading.Thread.Start%2A> 메서드를 사용하여 만들어진 스레드에는 처리되지 않은 예외가 없습니다. 해당 스레드에서 실행되는 코드가 처리하지 않는 예외를 throw하는 경우 런타임은 해당 예외의 스택 추적을 콘솔에 출력한 다음 해당 스레드를 종료합니다.  
   
 - 종료자 스레드에 처리되지 않은 예외가 없습니다. 종료자가 처리하지 않는 예외를 throw하는 경우 런타임은 해당 예외의 스택 추적을 콘솔에 출력한 다음 해당 종료자 스레드가 종료자 실행을 다시 시작하도록 합니다.  
   

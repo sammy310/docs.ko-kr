@@ -33,7 +33,7 @@ C# 4에서는 새로운 `dynamic` 형식이 도입되었습니다. 이 형식은
 * `dynamic`에서 다른 형식으로의 전환.
 * `dynamic` 형식의 인수를 포함하는 생성자 호출.
 
-예를 들어 다음 선언에서 `testInstance`의 형식은 `ExampleClass`이 아니라 `dynamic`입니다.
+예를 들어 다음 선언에서 `testInstance`의 형식은 `dynamic`이 아니라 `ExampleClass`입니다.
 
 [!code-csharp[CsProgGuideTypes#52](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/usingdynamic.cs#52)]
 

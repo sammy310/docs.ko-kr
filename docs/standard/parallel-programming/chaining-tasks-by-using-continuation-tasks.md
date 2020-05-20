@@ -45,7 +45,7 @@ ms.locfileid: "78159366"
  <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> 메서드를 호출하여 선행 작업이 완료되었을 때 실행되는 연속 작업을 만듭니다. 다음 예제에서는 기본 패턴을 보여줍니다(이해하기 쉽도록 예외 처리는 생략됨). 현재 요일의 이름을 나타내는 `taskA`개체를 반환하는 선행 작업 <xref:System.DayOfWeek> 를 실행합니다. 선행 작업이 완료되면 연속 작업 `continuation`에 선행 작업이 전달되고 해당 결과를 포함하는 문자열을 표시합니다.
 
 > [!NOTE]
-> 이 문서의 C# 샘플은 `async` 메서드에서 `Main` 한정자를 사용합니다. 해당 기능은 C# 7.1 이상에서 사용할 수 있습니다. 이전 버전은 이 샘플 코드를 컴파일하는 경우 [`CS5001`](../../csharp/misc/cs5001.md)을 생성합니다. 언어 버전을 C# 7.1 이상으로 설정해야 합니다. [언어 버전 구성](../../csharp/language-reference/configure-language-version.md)에 관한 문서에서 언어 버전을 구성하는 방법을 알아볼 수 있습니다.
+> 이 문서의 C# 샘플은 `Main` 메서드에서 `async` 한정자를 사용합니다. 해당 기능은 C# 7.1 이상에서 사용할 수 있습니다. 이전 버전은 이 샘플 코드를 컴파일하는 경우 [`CS5001`](../../csharp/misc/cs5001.md)을 생성합니다. 언어 버전을 C# 7.1 이상으로 설정해야 합니다. [언어 버전 구성](../../csharp/language-reference/configure-language-version.md)에 관한 문서에서 언어 버전을 구성하는 방법을 알아볼 수 있습니다.
   
  [!code-csharp[TPL_Continuations#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/simple1.cs#1)]
  [!code-vb[TPL_Continuations#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/simple1.vb#1)]  
@@ -89,7 +89,7 @@ ms.locfileid: "78159366"
   
 - <xref:System.Threading.Tasks.TaskContinuationOptions> 인수로 설정된 조건이 충족되지 않았으므로 연속 작업이 실행되지 않습니다. 예를 들어 선행 작업이 <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> 상태로 전환되는 경우 <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnFaulted?displayProperty=nameWithType> 옵션이 전달된 연속 작업이 실행되지 않고 <xref:System.Threading.Tasks.TaskStatus.Canceled> 상태로 전환됩니다.  
   
- 작업과 해당 연속 작업이 동일한 논리 작업의 두 부분을 나타내는 경우 다음 예제와 같이 두 작업에 모두 동일한 취소 토큰을 전달할 수 있습니다. 취소 토큰은 33으로 나눌 수 있는 정수 목록을 생성하는 선행 작업으로 구성되며 연속 작업에 전달됩니다. 그런 다음 연속 작업이 목록을 표시합니다. 선행 작업과 연속 작업은 모두 임의 간격 동안 정기적으로 일시 중지됩니다. 또한 <xref:System.Threading.Timer?displayProperty=nameWithType> 개체는 5초 시간 제한 간격 후에 `Elapsed` 메서드를 실행하는 데 사용됩니다. 이 예제에서는 현재 실행 중인 작업이 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 메서드를 호출하게 하는 <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A?displayProperty=nameWithType> 메서드를 호출합니다. 선행 작업이나 해당 연속 작업이 실행 중일 때 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 메서드를 호출할지 여부는 임의로 생성된 일시 중지 기간에 따라 달라집니다. 선행 작업이 취소되면 연속 작업은 시작되지 않습니다. 선행 작업이 취소되지 않은 경우에도 토큰을 사용하여 연속 작업을 취소할 수 있습니다.  
+ 작업과 해당 연속 작업이 동일한 논리 작업의 두 부분을 나타내는 경우 다음 예제와 같이 두 작업에 모두 동일한 취소 토큰을 전달할 수 있습니다. 취소 토큰은 33으로 나눌 수 있는 정수 목록을 생성하는 선행 작업으로 구성되며 연속 작업에 전달됩니다. 그런 다음 연속 작업이 목록을 표시합니다. 선행 작업과 연속 작업은 모두 임의 간격 동안 정기적으로 일시 중지됩니다. 또한 <xref:System.Threading.Timer?displayProperty=nameWithType> 개체는 5초 시간 제한 간격 후에 `Elapsed` 메서드를 실행하는 데 사용됩니다. 이 예제에서는 현재 실행 중인 작업이 <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A?displayProperty=nameWithType> 메서드를 호출하게 하는 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 메서드를 호출합니다. 선행 작업이나 해당 연속 작업이 실행 중일 때 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 메서드를 호출할지 여부는 임의로 생성된 일시 중지 기간에 따라 달라집니다. 선행 작업이 취소되면 연속 작업은 시작되지 않습니다. 선행 작업이 취소되지 않은 경우에도 토큰을 사용하여 연속 작업을 취소할 수 있습니다.  
   
  [!code-csharp[TPL_Continuations#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/cancellation1.cs#3)]
  [!code-vb[TPL_Continuations#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/cancellation1.vb#3)]  
@@ -104,7 +104,7 @@ ms.locfileid: "78159366"
  삭제된 연속 작업은 시작되지 않습니다.  
   
 ## <a name="continuations-and-child-tasks"></a>연속 작업 및 자식 작업  
- 연속 작업은 선행 작업 및 연결된 모든 자식 작업이 완료될 때까지 실행되지 않습니다. 연속 작업은 분리된 자식 작업이 완료되기를 기다리지 않습니다. 다음 두 예제에서는 연속 작업을 만드는 선행 작업에 연결된 자식 작업과 분리된 자식 작업을 보여 줍니다. 다음 예제에서는 모든 자식 작업이 완료된 후에만 연속 작업이 실행되며 예제를 여러 번 실행해도 매번 동일한 출력이 생성됩니다. 기본적으로 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 메서드는 기본 작업 생성 옵션이 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType>인 부모 작업을 만들기 때문에 예제에서는 <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> 메서드를 호출하여 선행 작업을 시작합니다.  
+ 연속 작업은 선행 작업 및 연결된 모든 자식 작업이 완료될 때까지 실행되지 않습니다. 연속 작업은 분리된 자식 작업이 완료되기를 기다리지 않습니다. 다음 두 예제에서는 연속 작업을 만드는 선행 작업에 연결된 자식 작업과 분리된 자식 작업을 보여 줍니다. 다음 예제에서는 모든 자식 작업이 완료된 후에만 연속 작업이 실행되며 예제를 여러 번 실행해도 매번 동일한 출력이 생성됩니다. 기본적으로 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 메서드는 기본 작업 생성 옵션이 <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType>인 부모 작업을 만들기 때문에 예제에서는 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 메서드를 호출하여 선행 작업을 시작합니다.  
   
  [!code-csharp[TPL_Continuations#9](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/attached1.cs#9)]
  [!code-vb[TPL_Continuations#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/attached1.vb#9)]  

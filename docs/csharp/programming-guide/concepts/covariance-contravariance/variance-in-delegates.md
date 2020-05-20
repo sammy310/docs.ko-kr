@@ -87,7 +87,7 @@ public static void Test()
   
  메서드 시그니처를 대리자 형식과 일치시키는 용도로만 가변성 지원을 사용하고 `in` 및 `out` 키워드를 사용하지 않는 경우, 대리자를 동일한 람다 식 또는 메서드로 인스턴스화할 수는 있지만 한 대리자를 다른 대리자에 할당할 수는 없는 경우가 더러 있습니다.  
   
- 다음 코드 예제에서, `SampleGenericDelegate<String>`은 `SampleGenericDelegate<Object>`를 상속하지만 `String`을 `Object`로 명시적으로 변환할 수 없습니다. `T` 제네릭 매개 변수를 `out` 키워드로 표시하면 이 문제를 수정할 수 있습니다.  
+ 다음 코드 예제에서, `String`은 `Object`를 상속하지만 `SampleGenericDelegate<String>`을 `SampleGenericDelegate<Object>`로 명시적으로 변환할 수 없습니다. `T` 제네릭 매개 변수를 `out` 키워드로 표시하면 이 문제를 수정할 수 있습니다.  
   
 ```csharp  
 public delegate T SampleGenericDelegate<T>();  
@@ -112,9 +112,9 @@ public static void Test()
 ### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a>.NET Framework에 Variant 형식 매개 변수를 가지고 있는 제네릭 대리자  
  .NET Framework 4에는 기존의 몇몇 제네릭 대리자에서 제네릭 형식 매개 변수에 대한 가변성 지원이 추가되었습니다.  
   
-- `Action` 네임스페이스의 <xref:System> 대리자(예: <xref:System.Action%601> 및 <xref:System.Action%602>)  
+- <xref:System> 네임스페이스의 `Action` 대리자(예: <xref:System.Action%601> 및 <xref:System.Action%602>)  
   
-- `Func` 네임스페이스의 <xref:System> 대리자(예: <xref:System.Func%601> 및 <xref:System.Func%602>)  
+- <xref:System> 네임스페이스의 `Func` 대리자(예: <xref:System.Func%601> 및 <xref:System.Func%602>)  
   
 - <xref:System.Predicate%601> 대리자  
   

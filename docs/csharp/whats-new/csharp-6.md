@@ -91,13 +91,13 @@ public class Student
 
 [!code-csharp[NullConditional](../../../samples/snippets/csharp/new-in-6/program.cs#NullConditional)]
 
-이전 예제에서 person 개체가 `first`인 경우 `null` 변수에 `null`이 할당됩니다. 그렇지 않은 경우 `FirstName` 속성의 값이 할당됩니다. 가장 중요한 점은 `?.`는 `NullReferenceException` 변수가 `person`일 경우 이 코드 줄이 `null`을 생성하지 않음을 의미한다는 것입니다. 대신 이 코드 줄은 단락되고 `null`을 반환합니다. 또한 배열 또는 인덱서 액세스에 null 조건 연산자를 사용할 수도 있습니다. 인덱스 식에서 `[]`를 `?[]`로 바꾸세요.
+이전 예제에서 person 개체가 `null`인 경우 `first` 변수에 `null`이 할당됩니다. 그렇지 않은 경우 `FirstName` 속성의 값이 할당됩니다. 가장 중요한 점은 `?.`는 `person` 변수가 `null`일 경우 이 코드 줄이 `NullReferenceException`을 생성하지 않음을 의미한다는 것입니다. 대신 이 코드 줄은 단락되고 `null`을 반환합니다. 또한 배열 또는 인덱서 액세스에 null 조건 연산자를 사용할 수도 있습니다. 인덱스 식에서 `[]`를 `?[]`로 바꾸세요.
 
-다음 식은 `string` 값에 관계없이 `person`을 반환합니다. 이 구문을 *null 결합* 연산자와 함께 사용하여 속성 중 하나가 `null`일 경우 기본값을 할당합니다. 식이 단락되면 반환된 `null` 값은 전체 식과 일치하도록 형식화됩니다.
+다음 식은 `person` 값에 관계없이 `string`을 반환합니다. 이 구문을 *null 결합* 연산자와 함께 사용하여 속성 중 하나가 `null`일 경우 기본값을 할당합니다. 식이 단락되면 반환된 `null` 값은 전체 식과 일치하도록 형식화됩니다.
 
 [!code-csharp[NullCoalescing](../../../samples/snippets/csharp/new-in-6/program.cs#NullCoalescing)]
 
-또한 `?.`를 사용하여 메서드를 조건부로 호출할 수도 있습니다. null 조건 연산자와 함께 멤버 함수를 사용하는 가장 일반적인 경우는 `null`일 수 있는 대리자(또는 이벤트 처리기)를 안전하게 호출하는 것입니다.  `Invoke` 연산자를 통해 대리자의 `?.` 메서드를 호출하여 멤버에 액세스합니다. [대리자 패턴](../delegates-patterns.md#handling-null-delegates) 문서에서 예제를 볼 수 있습니다.
+또한 `?.`를 사용하여 메서드를 조건부로 호출할 수도 있습니다. null 조건 연산자와 함께 멤버 함수를 사용하는 가장 일반적인 경우는 `null`일 수 있는 대리자(또는 이벤트 처리기)를 안전하게 호출하는 것입니다.  `?.` 연산자를 통해 대리자의 `Invoke` 메서드를 호출하여 멤버에 액세스합니다. [대리자 패턴](../delegates-patterns.md#handling-null-delegates) 문서에서 예제를 볼 수 있습니다.
 
 `?.` 연산자 규칙을 적용하면 연산자의 왼쪽이 한 번만 계산됩니다. 이렇게 하면 이벤트 처리기 사용 예제를 비롯한 많은 관용구를 구현할 수 있습니다.
 
@@ -147,18 +147,18 @@ var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 
 ## <a name="await-in-catch-and-finally-blocks"></a>Catch 및 Finally 블록의 Await
 
-C# 5에는 `await` 식을 배치할 수 있는 위치에 대한 여러 제한 사항이 있었습니다. 이제 C# 6에서는 `await` 또는 `catch` 식에서 `finally`를 사용할 수 있습니다. 이 방법이 로깅 시나리오에서 가장 일반적을 사용됩니다.
+C# 5에는 `await` 식을 배치할 수 있는 위치에 대한 여러 제한 사항이 있었습니다. 이제 C# 6에서는 `catch` 또는 `finally` 식에서 `await`를 사용할 수 있습니다. 이 방법이 로깅 시나리오에서 가장 일반적을 사용됩니다.
 
 [!code-csharp[AwaitFinally](../../../samples/snippets/csharp/new-in-6/NetworkClient.cs#AwaitFinally)]
 
-`await` 및 `catch` 절 내부에 `finally` 지원을 추가하기 위한 구현 세부 정보에 따라 동작이 동기 코드에 대한 동작과 일치합니다. `catch` 또는 `finally` 절에서 실행되는 코드가 throw되면 실행은 다음 바깥쪽 블록에서 적합한 `catch` 절을 검색합니다. 현재 예외가 있는 경우 해당 예외가 손실됩니다. `catch` 및 `finally` 절에서 대기된 식에서도 같은 작업이 수행됩니다. 적합한 `catch`가 검색되고 현재 예외(있는 경우)가 손실됩니다.  
+`catch` 및 `finally` 절 내부에 `await` 지원을 추가하기 위한 구현 세부 정보에 따라 동작이 동기 코드에 대한 동작과 일치합니다. `catch` 또는 `finally` 절에서 실행되는 코드가 throw되면 실행은 다음 바깥쪽 블록에서 적합한 `catch` 절을 검색합니다. 현재 예외가 있는 경우 해당 예외가 손실됩니다. `catch` 및 `finally` 절에서 대기된 식에서도 같은 작업이 수행됩니다. 적합한 `catch`가 검색되고 현재 예외(있는 경우)가 손실됩니다.  
 
 > [!NOTE]
 > 이 동작 때문에 새 예외가 추가되지 않도록 `catch` 및 `finally` 절을 신중하게 작성하는 것이 좋습니다.
 
 ## <a name="initialize-associative-collections-using-indexers"></a>인덱서를 사용하여 연결 컬렉션 초기화
 
-*인덱스 이니셜라이저*는 컬렉션 이니셜라이저를 인덱스 사용과 더 일관되도록 하는 두 가지 기능 중 하나입니다. C#의 이전 릴리스에서는 키 및 값 쌍을 중괄호로 묶어 *를 포함하여 시퀀스 스타일 컬렉션에서* 컬렉션 이니셜라이저<xref:System.Collections.Generic.Dictionary%602>를 사용할 수 있습니다.
+*인덱스 이니셜라이저*는 컬렉션 이니셜라이저를 인덱스 사용과 더 일관되도록 하는 두 가지 기능 중 하나입니다. C#의 이전 릴리스에서는 키 및 값 쌍을 중괄호로 묶어 <xref:System.Collections.Generic.Dictionary%602>를 포함하여 시퀀스 스타일 컬렉션에서 *컬렉션 이니셜라이저*를 사용할 수 있습니다.
 
 [!code-csharp[ListInitializer](../../../samples/snippets/csharp/new-in-6/initializers.cs#CollectionInitializer)]
 
@@ -170,7 +170,7 @@ C# 5에는 `await` 식을 배치할 수 있는 위치에 대한 여러 제한 �
 
 ## <a name="extension-add-methods-in-collection-initializers"></a>컬렉션 이니셜라이저의 확장 `Add` 메서드
 
-컬렉션을 더 쉽게 초기화하도록 하는 또 다른 기능은 *메서드에*확장 메서드`Add`를 사용하는 기능입니다. 이 기능은 Visual Basic의 패리티를 위해 추가되었습니다. 이 기능은 의미상으로 새 항목을 추가하기 위해 다른 이름을 가진 메서드가 포함된 사용자 지정 컬렉션 클래스가 있는 경우 가장 유용합니다.
+컬렉션을 더 쉽게 초기화하도록 하는 또 다른 기능은 `Add` 메서드에 *확장 메서드*를 사용하는 기능입니다. 이 기능은 Visual Basic의 패리티를 위해 추가되었습니다. 이 기능은 의미상으로 새 항목을 추가하기 위해 다른 이름을 가진 메서드가 포함된 사용자 지정 컬렉션 클래스가 있는 경우 가장 유용합니다.
 
 ## <a name="improved-overload-resolution"></a>향상된 오버로드 확인
 

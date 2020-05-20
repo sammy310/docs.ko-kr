@@ -37,7 +37,7 @@ ms.locfileid: "75635940"
 > SQL 또는 XQuery와 같은 쿼리 언어를 이미 잘 알고 있으면 이 항목의 대부분을 건너뛸 수 있습니다. LINQ 쿼리 식에서 절의 순서를 알아보려면 "`from` 절"을 확인하세요.  
   
 ## <a name="obtaining-a-data-source"></a>데이터 소스 가져오기  
- LINQ 쿼리에서 첫 번째 단계는 데이터 소스를 지정하는 것입니다. 대부분의 프로그래밍 언어에서처럼 C#에서 변수는 선언된 후 사용되어야 합니다. LINQ 쿼리에서는 데이터 소스(`from`) 및 `customers`범위 변수 *(* )를 소개하기 위해 `cust` 절이 먼저 나옵니다.  
+ LINQ 쿼리에서 첫 번째 단계는 데이터 소스를 지정하는 것입니다. 대부분의 프로그래밍 언어에서처럼 C#에서 변수는 선언된 후 사용되어야 합니다. LINQ 쿼리에서는 데이터 소스(`customers`) 및 *범위 변수*(`cust`)를 소개하기 위해 `from` 절이 먼저 나옵니다.  
   
  [!code-csharp[csLINQGettingStarted#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#23)]  
   

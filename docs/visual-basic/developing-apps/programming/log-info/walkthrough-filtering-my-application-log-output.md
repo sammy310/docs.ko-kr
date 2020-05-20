@@ -52,7 +52,7 @@ ms.locfileid: "74353596"
 
 ## <a name="filtering-for-all-myapplicationlog-listeners"></a>모든 My.Application.Log 수신기에 대한 필터링
 
-`My.Application.Log` 개체는 <xref:System.Diagnostics.SourceSwitch>라고 명명된 `DefaultSwitch`를 사용하여 `WriteEntry` 및 `WriteException` 메서드에서 로그 수신기로 전달할 메시지를 제어합니다. 해당 값을 `DefaultSwitch` 열거형 값 중 하나로 설정하여 애플리케이션의 구성 파일에서 <xref:System.Diagnostics.SourceLevels>를 구성할 수 있습니다. 기본적으로 값은 "정보"입니다.
+`My.Application.Log` 개체는 `DefaultSwitch`라고 명명된 <xref:System.Diagnostics.SourceSwitch>를 사용하여 `WriteEntry` 및 `WriteException` 메서드에서 로그 수신기로 전달할 메시지를 제어합니다. 해당 값을 <xref:System.Diagnostics.SourceLevels> 열거형 값 중 하나로 설정하여 애플리케이션의 구성 파일에서 `DefaultSwitch`를 구성할 수 있습니다. 기본적으로 값은 "정보"입니다.
 
 다음 표는 특정 `DefaultSwitch` 설정이 지정된 경우 로그가 메시지를 수신기에 기록하는 데 필요한 심각도 수준을 보여 줍니다.
 
@@ -86,7 +86,7 @@ ms.locfileid: "74353596"
 
     3. **추가**를 클릭합니다.
 
-2. 최상위 `<switches>` 섹션의 `<system.diagnostics>` 섹션에 있는 `<configuration>` 섹션으로 이동합니다.
+2. 최상위 `<configuration>` 섹션의 `<system.diagnostics>` 섹션에 있는 `<switches>` 섹션으로 이동합니다.
 
 3. 스위치 컬렉션에 `DefaultSwitch`를 추가하는 요소를 찾습니다. 이 요소는 다음과 유사합니다.
 
@@ -164,7 +164,7 @@ ms.locfileid: "74353596"
 
 2. **솔루션 탐색기**에서 app.config를 마우스 오른쪽 단추로 클릭합니다. **열기**를 선택합니다.
 
-3. `<listeners>` 섹션 아래에서 `<source>` 특성이 "DefaultSource"인 `name` 섹션에서 `<sources>` 섹션을 찾습니다. `<sources>` 섹션은 최상위 `<system.diagnostics>` 섹션의 `<configuration>` 섹션에 있습니다.
+3. `<sources>` 섹션 아래에서 `name` 특성이 "DefaultSource"인 `<source>` 섹션에서 `<listeners>` 섹션을 찾습니다. `<sources>` 섹션은 최상위 `<configuration>` 섹션의 `<system.diagnostics>` 섹션에 있습니다.
 
 4. 이 요소를 `<listeners>` 섹션에 추가합니다.
 

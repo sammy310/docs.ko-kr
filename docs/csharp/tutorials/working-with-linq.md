@@ -41,7 +41,7 @@ ms.locfileid: "78240017"
 
 ## <a name="create-the-data-set"></a>데이터 세트 만들기
 
-시작하기 전에 `Program.cs`에서 생성된 `dotnet new console` 파일의 맨 위에 다음 줄이 있는지 확인합니다.
+시작하기 전에 `dotnet new console`에서 생성된 `Program.cs` 파일의 맨 위에 다음 줄이 있는지 확인합니다.
 
 ```csharp
 // Program.cs
@@ -52,7 +52,7 @@ using System.Linq;
 
 이러한 세 줄(`using` 문)이 파일 맨 위에 없으면 프로그램이 컴파일되지 않습니다.
 
-이제 필요한 참조가 모두 있으므로 카드 데크의 구성 요소를 고려합니다. 일반적으로 플레잉 카드 데크에는 네 개의 짝패가 있으며, 각 짝패에 13개의 값이 있습니다. 일반적으로 즉시 `Card` 클래스를 만들고 `Card` 개체 컬렉션을 수동으로 채우는 것을 고려할 수 있습니다. LINQ를 사용하면 일반적인 방법보다 더 간결하게 카드 데크 생성을 처리할 수 있습니다. `Card` 클래스를 만드는 대신, 각각 짝패와 순위를 나타내는 두 개의 시퀀스를 만들 수 있습니다. 순위와 짝패를 [ 문자열로 생성하는 간단한  반복기 메서드](../iterators.md#enumeration-sources-with-iterator-methods)<xref:System.Collections.Generic.IEnumerable%601> 쌍을 만듭니다.
+이제 필요한 참조가 모두 있으므로 카드 데크의 구성 요소를 고려합니다. 일반적으로 플레잉 카드 데크에는 네 개의 짝패가 있으며, 각 짝패에 13개의 값이 있습니다. 일반적으로 즉시 `Card` 클래스를 만들고 `Card` 개체 컬렉션을 수동으로 채우는 것을 고려할 수 있습니다. LINQ를 사용하면 일반적인 방법보다 더 간결하게 카드 데크 생성을 처리할 수 있습니다. `Card` 클래스를 만드는 대신, 각각 짝패와 순위를 나타내는 두 개의 시퀀스를 만들 수 있습니다. 순위와 짝패를 <xref:System.Collections.Generic.IEnumerable%601> 문자열로 생성하는 간단한 [*반복기 메서드*](../iterators.md#enumeration-sources-with-iterator-methods) 쌍을 만듭니다.
 
 ```csharp
 // Program.cs
@@ -84,7 +84,7 @@ static IEnumerable<string> Ranks()
 }
 ```
 
-이 코드를 `Main` 파일의 `Program.cs` 메서드 아래에 배치합니다. 이러한 두 메서드는 `yield return` 구문을 활용하여 실행 시 시퀀스를 생성합니다. 컴파일러는 <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 개체를 빌드하고 요청 시 문자열 시퀀스를 생성합니다.
+이 코드를 `Program.cs` 파일의 `Main` 메서드 아래에 배치합니다. 이러한 두 메서드는 `yield return` 구문을 활용하여 실행 시 시퀀스를 생성합니다. 컴파일러는 <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 개체를 빌드하고 요청 시 문자열 시퀀스를 생성합니다.
 
 이제 이러한 반복기 메서드를 사용하여 카드 데크를 만듭니다. LINQ 쿼리를 `Main` 메서드에 배치합니다. 다음과 같이 표시됩니다.
 
@@ -145,7 +145,7 @@ public static void Main(string[] args)
 
 LINQ 쿼리에서 반환되는 <xref:System.Collections.Generic.IEnumerable%601>을 조작하는 방법에 몇 가지 기능을 추가하려면 [확장 메서드](../programming-guide/classes-and-structs/extension-methods.md)라는 특수한 종류의 메서드를 작성해야 합니다. 간단히 말해, 확장 메서드는 기능을 추가하려는 원래 형식을 수정하지 않고 기존 형식에 새로운 기능을 추가하는 특별한 용도의 *정적 메서드*입니다.
 
-*라는 프로그램에 새 ‘정적’ 클래스 파일을 추가하여 확장 메서드에 새로운 홈을 제공한 다음, 첫 번째 확장 메서드 빌드를 시작합니다.* `Extensions.cs`
+`Extensions.cs`라는 프로그램에 새 ‘정적’ 클래스 파일을 추가하여 확장 메서드에 새로운 홈을 제공한 다음, 첫 번째 확장 메서드 빌드를 시작합니다.
 
 ```csharp
 // Extensions.cs
@@ -259,7 +259,7 @@ shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
 
 프로그램을 다시 실행합니다. 그러면 데크가 자체적으로 순서를 변경하는 데 52회 반복된다는 것을 알 수 있습니다. 또한 프로그램이 계속 실행될 때 몇 가지 심각한 성능 저하를 알 수 있습니다.
 
-그 이유로는 여러 가지가 있습니다. 이 성능 저하의 주요 원인 중 하나인 비효율적인 [‘지연 계산’ *사용을 해결할 수 있습니다.* ](../programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+그 이유로는 여러 가지가 있습니다. 이 성능 저하의 주요 원인 중 하나인 비효율적인 [‘지연 계산’](../programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md) 사용을 해결할 수 있습니다.
 
 간단히 말해, 지연 계산은 해당 값이 필요할 때까지 문이 계산되지 않음을 나타냅니다. LINQ 쿼리는 지연 계산되는 문입니다. 요소가 요청될 때만 시퀀스가 생성됩니다. 일반적으로 이것이 LINQ의 큰 장점입니다. 그러나 이러한 프로그램에서 사용하면 실행 시간이 기하급수적으로 늘어납니다.
 

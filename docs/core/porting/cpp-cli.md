@@ -67,7 +67,7 @@ MSBuild를 사용하지 않고 C++/CLI 프로젝트를 빌드할 수도 있습�
 
 1. 컴파일하는 경우 `-clr:netcore`를 *cl.exe*에 전달하세요.
 2. 필요한 .NET Core 참조 어셈블리를 참조하세요.
-3. 연결할 때 `LibPath`ijwhost*를 찾을 수 있도록 .NET Core 앱 호스트 디렉터리를* 로 제공하세요.
+3. 연결할 때 *ijwhost*를 찾을 수 있도록 .NET Core 앱 호스트 디렉터리를 `LibPath`로 제공하세요.
 4. .NET Core 앱 호스트 디렉터리에서 *ijwhost.dll*을 프로젝트의 출력 디렉터리로 복사하세요.
 5. 관리 코드를 실행할 애플리케이션의 첫 번째 구성 요소에 대한 [runtimeconfig.template.json](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) 파일이 있는지 확인하세요. 애플리케이션에 관리형 진입점이 있으면 `runtime.config` 파일이 자동으로 만들어지고 복사됩니다. 그러나 애플리케이션에 네이티브 진입점이 있으면 .NET Core 런타임을 사용하기 위해 첫 번째 C++/CLI 라이브러리의 `runtimeconfig.json` 파일을 만들어야 합니다.
 

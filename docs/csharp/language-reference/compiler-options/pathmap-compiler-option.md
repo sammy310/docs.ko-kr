@@ -44,7 +44,7 @@ ms.locfileid: "69606633"
 
 ## <a name="example"></a>예제
 
-`t.cs`C:**work\\tests\\ 디렉터리에** 를 컴파일하고 출력에서 디렉터리를 **\publish**에 매핑합니다.
+**C:\\work\\tests** 디렉터리에 `t.cs`를 컴파일하고 출력에서 디렉터리를 **\publish**에 매핑합니다.
 
 ```console
 csc -pathmap:C:\work\tests=\publish t.cs

@@ -32,8 +32,8 @@ GlobalProxySelection.Select = proxyObject
 
 이 예제에는 다음 사항이 필요합니다.
 
-- [System.Net`using` 네임스페이스에 대한 C# ](../../csharp/language-reference/keywords/using-directive.md) **지시문**
-- [System.Net`Imports` 네임스페이스에 대한 Visual Basic ](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) **문**
+- **System.Net** 네임스페이스에 대한 C# [`using` 지시문](../../csharp/language-reference/keywords/using-directive.md)
+- **System.Net** 네임스페이스에 대한 Visual Basic [`Imports` 문](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
 
 ## <a name="see-also"></a>참고 항목
 

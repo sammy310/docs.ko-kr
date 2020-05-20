@@ -26,7 +26,7 @@ TPL(작업 병렬 라이브러리)에는 대리자의 <xref:System.Func%601?disp
 
 ## <a name="func-delegate"></a>Func 대리자
 
-`Func` 대리자는 값을 반환하는 메서드를 캡슐화합니다. `Func` 서명에서 마지막 또는 가장 오른쪽에 있는 형식 매개 변수는 항상 반환 형식을 지정합니다. 컴파일러 오류의 일반적인 원인 중 하나는 두 개의 입력 매개 변수를 <xref:System.Func%602?displayProperty=nameWithType>에 전달하려고 하기 때문입니다. 실제로 이 형식은 하나의 입력 매개 변수만 사용합니다. .NET은 `Func`, <xref:System.Func%601?displayProperty=nameWithType>, <xref:System.Func%602?displayProperty=nameWithType> 등에서 <xref:System.Func%603?displayProperty=nameWithType>까지 17개 버전의 <xref:System.Func%6017?displayProperty=nameWithType>를 정의합니다.
+`Func` 대리자는 값을 반환하는 메서드를 캡슐화합니다. `Func` 서명에서 마지막 또는 가장 오른쪽에 있는 형식 매개 변수는 항상 반환 형식을 지정합니다. 컴파일러 오류의 일반적인 원인 중 하나는 두 개의 입력 매개 변수를 <xref:System.Func%602?displayProperty=nameWithType>에 전달하려고 하기 때문입니다. 실제로 이 형식은 하나의 입력 매개 변수만 사용합니다. .NET은 <xref:System.Func%601?displayProperty=nameWithType>, <xref:System.Func%602?displayProperty=nameWithType>, <xref:System.Func%603?displayProperty=nameWithType> 등에서 <xref:System.Func%6017?displayProperty=nameWithType>까지 17개 버전의 `Func`를 정의합니다.
 
 ## <a name="action-delegate"></a>Action 대리자
 

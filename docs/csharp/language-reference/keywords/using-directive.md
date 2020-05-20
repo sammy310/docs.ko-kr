@@ -35,7 +35,7 @@ ms.locfileid: "77093151"
     using Project = PC.MyCompany.Project;
     ```
 
-`using` 키워드는 파일 및 글꼴과 같은 *개체가 제대로 처리될 수 있게 도와주는*using 문<xref:System.IDisposable>을 만드는 데도 사용됩니다. 자세한 내용은 [using 문](using-statement.md)을 참조하세요.
+`using` 키워드는 파일 및 글꼴과 같은 <xref:System.IDisposable> 개체가 제대로 처리될 수 있게 도와주는 *using 문*을 만드는 데도 사용됩니다. 자세한 내용은 [using 문](using-statement.md)을 참조하세요.
 
 ## <a name="using-static-type"></a>정적 형식 사용
 
@@ -91,7 +91,7 @@ using alias 지시문의 오른쪽에는 공개 제네릭 형식이 포함될 �
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](~/_csharplang/spec/namespaces.md#using-directives)의 [Using 지시문](/dotnet/csharp/language-reference/language-specification/introduction)을 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
+자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)의 [Using 지시문](~/_csharplang/spec/namespaces.md#using-directives)을 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
 
 ## <a name="see-also"></a>참고 항목
 

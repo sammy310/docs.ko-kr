@@ -37,13 +37,13 @@ ms.locfileid: "75715002"
  `virtual` 메서드는 `abstract`로 선언되어도 추상 클래스에서 상속된 모든 클래스에 대해 여전히 가상입니다. 추상 메서드를 상속하는 클래스에서는 메서드의 원본 구현에 액세스할 수 없습니다. 앞의 예제에서 F 클래스의 `DoWork`에서는 D 클래스의 `DoWork`를 호출할 수 없습니다. 따라서 추상 클래스는 파생 클래스에서 가상 메서드에 대한 새 메서드 구현을 반드시 제공하도록 제한할 수 있습니다.  
   
 ## <a name="sealed-classes-and-class-members"></a>봉인 클래스 및 클래스 멤버  
- 클래스 정의 앞에 [ 키워드를 배치하여 클래스를 ](../../language-reference/keywords/sealed.md)sealed`sealed`로 선언할 수 있습니다. 예들 들어 다음과 같습니다.  
+ 클래스 정의 앞에 `sealed` 키워드를 배치하여 클래스를 [sealed](../../language-reference/keywords/sealed.md)로 선언할 수 있습니다. 예들 들어 다음과 같습니다.  
   
  [!code-csharp[csProgGuideInheritance#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#16)]  
   
  봉인 클래스는 기본 클래스로 사용할 수 없습니다. 그러므로 추상 클래스가 될 수도 없습니다. 봉인 클래스는 상속할 수 없습니다. 봉인 클래스는 기본 클래스로 사용될 수 없으므로 일부 런타임 최적화에서는 봉인 클래스 멤버 호출이 약간 더 빨라집니다.  
   
- 기본 클래스의 가상 멤버를 재정의하는 파생 클래스의 메서드, 인덱서, 속성 또는 이벤트는 해당 멤버를 봉인으로 선언할 수 있습니다. 이렇게 하면 이후에 파생되는 클래스에서는 해당 멤버가 가상이 아니게 됩니다. 클래스 멤버 선언에서 `sealed`override[ 키워드 앞에 ](../../language-reference/keywords/override.md) 키워드를 배치하면 됩니다. 예들 들어 다음과 같습니다.  
+ 기본 클래스의 가상 멤버를 재정의하는 파생 클래스의 메서드, 인덱서, 속성 또는 이벤트는 해당 멤버를 봉인으로 선언할 수 있습니다. 이렇게 하면 이후에 파생되는 클래스에서는 해당 멤버가 가상이 아니게 됩니다. 클래스 멤버 선언에서 [override](../../language-reference/keywords/override.md) 키워드 앞에 `sealed` 키워드를 배치하면 됩니다. 예들 들어 다음과 같습니다.  
   
  [!code-csharp[csProgGuideInheritance#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#17)]  
   

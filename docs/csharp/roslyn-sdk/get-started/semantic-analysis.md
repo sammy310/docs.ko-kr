@@ -60,19 +60,19 @@ Hello World 프로그램의 텍스트를 `Program` 클래스의 상수로 추가
 
 ## <a name="querying-the-semantic-model"></a>의미 체계 모델 쿼리
 
-<xref:Microsoft.CodeAnalysis.Compilation>이 있다면 <xref:Microsoft.CodeAnalysis.SemanticModel>에 대해 해당 <xref:Microsoft.CodeAnalysis.SyntaxTree>에 포함된 <xref:Microsoft.CodeAnalysis.Compilation>를 요청할 수 있습니다. 일반적으로 모든 정보의 원본을 IntelliSense에서 가져오는 경우 의미 체계 모델을 고려할 수 있습니다. <xref:Microsoft.CodeAnalysis.SemanticModel>은 "이 위치에서 범위에 있는 이름은 무엇입니까?", "이 메서드에서 어떤 멤버에 액세스할 수 있습니까?", "이 텍스트의 블록에서 사용되는 변수는 무엇입니까?" 및 "이 이름/식은 무엇을 참조합니까?"와 같은 질문에 대답할 수 있습니다. 의미 체계 모델을 만드는 이 문을 추가합니다.
+<xref:Microsoft.CodeAnalysis.Compilation>이 있다면 <xref:Microsoft.CodeAnalysis.SemanticModel>에 대해 해당 <xref:Microsoft.CodeAnalysis.Compilation>에 포함된 <xref:Microsoft.CodeAnalysis.SyntaxTree>를 요청할 수 있습니다. 일반적으로 모든 정보의 원본을 IntelliSense에서 가져오는 경우 의미 체계 모델을 고려할 수 있습니다. <xref:Microsoft.CodeAnalysis.SemanticModel>은 "이 위치에서 범위에 있는 이름은 무엇입니까?", "이 메서드에서 어떤 멤버에 액세스할 수 있습니까?", "이 텍스트의 블록에서 사용되는 변수는 무엇입니까?" 및 "이 이름/식은 무엇을 참조합니까?"와 같은 질문에 대답할 수 있습니다. 의미 체계 모델을 만드는 이 문을 추가합니다.
 
 [!code-csharp[Create the semantic model](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#4 "Create the semantic model")]
 
 ## <a name="binding-a-name"></a>이름 바인딩
 
-<xref:Microsoft.CodeAnalysis.Compilation>은 <xref:Microsoft.CodeAnalysis.SemanticModel>에서 <xref:Microsoft.CodeAnalysis.SyntaxTree>을 만듭니다. 모델을 만든 후에 쿼리하여 첫 번째 `using` 지시문을 찾고 `System` 네임스페이스에 대한 기호 정보를 검색할 수 있습니다. `Main` 메서드에 두 줄을 추가하여 의미 체계 모델을 만들고 첫 번째 using 문에 대한 기호를 검색합니다.
+<xref:Microsoft.CodeAnalysis.Compilation>은 <xref:Microsoft.CodeAnalysis.SyntaxTree>에서 <xref:Microsoft.CodeAnalysis.SemanticModel>을 만듭니다. 모델을 만든 후에 쿼리하여 첫 번째 `using` 지시문을 찾고 `System` 네임스페이스에 대한 기호 정보를 검색할 수 있습니다. `Main` 메서드에 두 줄을 추가하여 의미 체계 모델을 만들고 첫 번째 using 문에 대한 기호를 검색합니다.
 
 [!code-csharp[Find the namespace symbol for the first using](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#5 "Find the namespace symbol for the first using")]
 
-위의 코드는 첫 번째 `using` 지시문의 이름을 바인딩하여 <xref:Microsoft.CodeAnalysis.SymbolInfo?displayProperty=nameWithType> 네임스페이스에서 `System`을 검색하는 방법을 보여 줍니다. 또한 위의 코드에서는 **구문 모델**을 사용하여 코드의 구조를 찾는 것을 설명합니다. **의미 체계 모델**을 사용하여 해당 의미를 이해합니다. **구문 모델**은 using 문에서 `System` 문자열을 찾습니다. **의미 체계 모델**에는 `System` 네임스페이스에서 정의된 형식에 대한 모든 정보가 있습니다.
+위의 코드는 첫 번째 `using` 지시문의 이름을 바인딩하여 `System` 네임스페이스에서 <xref:Microsoft.CodeAnalysis.SymbolInfo?displayProperty=nameWithType>을 검색하는 방법을 보여 줍니다. 또한 위의 코드에서는 **구문 모델**을 사용하여 코드의 구조를 찾는 것을 설명합니다. **의미 체계 모델**을 사용하여 해당 의미를 이해합니다. **구문 모델**은 using 문에서 `System` 문자열을 찾습니다. **의미 체계 모델**에는 `System` 네임스페이스에서 정의된 형식에 대한 모든 정보가 있습니다.
 
-<xref:Microsoft.CodeAnalysis.SymbolInfo> 개체에서 <xref:Microsoft.CodeAnalysis.ISymbol?displayProperty=nameWithType> 속성을 사용하여 <xref:Microsoft.CodeAnalysis.SymbolInfo.Symbol?displayProperty=nameWithType>를 가져올 수 있습니다. 이 속성은 이 식에서 참조하는 기호를 반환합니다. 아무것도 참조하지 않은 식(예: 숫자 리터럴)의 경우 이 속성은 `null`입니다. <xref:Microsoft.CodeAnalysis.SymbolInfo.Symbol?displayProperty=nameWithType>이 null이 아니면 <xref:Microsoft.CodeAnalysis.ISymbol.Kind?displayProperty=nameWithType>은 기호의 형식을 나타냅니다. 다음 예제에서 <xref:Microsoft.CodeAnalysis.ISymbol.Kind?displayProperty=nameWithType> 속성은 <xref:Microsoft.CodeAnalysis.SymbolKind.Namespace?displayProperty=nameWithType>입니다. `Main` 메서드에 다음 코드를 추가합니다. `System` 네임스페이스에 대한 기호를 검색한 다음, `System` 네임스페이스에 선언된 모든 자식 네임스페이스를 표시합니다.
+<xref:Microsoft.CodeAnalysis.SymbolInfo> 개체에서 <xref:Microsoft.CodeAnalysis.SymbolInfo.Symbol?displayProperty=nameWithType> 속성을 사용하여 <xref:Microsoft.CodeAnalysis.ISymbol?displayProperty=nameWithType>를 가져올 수 있습니다. 이 속성은 이 식에서 참조하는 기호를 반환합니다. 아무것도 참조하지 않은 식(예: 숫자 리터럴)의 경우 이 속성은 `null`입니다. <xref:Microsoft.CodeAnalysis.SymbolInfo.Symbol?displayProperty=nameWithType>이 null이 아니면 <xref:Microsoft.CodeAnalysis.ISymbol.Kind?displayProperty=nameWithType>은 기호의 형식을 나타냅니다. 다음 예제에서 <xref:Microsoft.CodeAnalysis.ISymbol.Kind?displayProperty=nameWithType> 속성은 <xref:Microsoft.CodeAnalysis.SymbolKind.Namespace?displayProperty=nameWithType>입니다. `Main` 메서드에 다음 코드를 추가합니다. `System` 네임스페이스에 대한 기호를 검색한 다음, `System` 네임스페이스에 선언된 모든 자식 네임스페이스를 표시합니다.
 
 [!code-csharp[Display all the child namespaces](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#6 "Display all the child namespaces from this compilation")]
 
@@ -117,7 +117,7 @@ Press any key to continue . . .
 
 [!code-csharp[Access the sequence of members on the string type](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#9 "Access the sequence of members on the string type.")]
 
-해당 소스 시퀀스에는 속성 및 필드를 비롯한 모든 멤버가 포함됩니다. 따라서 <xref:System.Collections.Immutable.ImmutableArray%601.OfType%2A?displayProperty=nameWithType> 개체인 요소를 찾기 위해 <xref:Microsoft.CodeAnalysis.IMethodSymbol?displayProperty=nameWithType> 메서드를 사용하여 필터링합니다.
+해당 소스 시퀀스에는 속성 및 필드를 비롯한 모든 멤버가 포함됩니다. 따라서 <xref:Microsoft.CodeAnalysis.IMethodSymbol?displayProperty=nameWithType> 개체인 요소를 찾기 위해 <xref:System.Collections.Immutable.ImmutableArray%601.OfType%2A?displayProperty=nameWithType> 메서드를 사용하여 필터링합니다.
 
 [!code-csharp[Filter the sequence to only methods](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#10 "Find the subset of the collection that is the methods.")]
 

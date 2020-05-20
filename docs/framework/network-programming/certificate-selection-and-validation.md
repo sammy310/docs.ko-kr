@@ -16,7 +16,7 @@ ms.locfileid: "71048744"
  인증서는 인증 기관의 디지털 시그니처, 공개 키, 특성(예: 버전 번호, 일련 번호, 만료 날짜)을 포함하는 ASCII 바이트 스트림입니다. 인증서는 암호화된 연결을 설정하거나 서버에 클라이언트를 인증하는 데 사용됩니다.  
   
 ## <a name="client-certificate-selection-and-validation"></a>클라이언트 인증서 선택 및 유효성 검사  
- 클라이언트는 특정 SSL 연결에 대해 하나 이상의 인증서를 선택할 수 있습니다. SSL 연결을 사용하여 클라이언트 인증서를 웹 서버 또는 SMTP 메일 서버에 연결할 수 있습니다. 클라이언트는 <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 또는 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 클래스 개체 컬렉션에 인증서를 추가합니다. 전자 메일을 예로 사용할 경우, 인증서 컬렉션은 <xref:System.Security.Cryptography.X509Certificates.X509CertificateCollection> 클래스의 <xref:System.Net.Mail.SmtpClient.ClientCertificates%2A> 속성과 연결된 <xref:System.Net.Mail.SmtpClient> 인스턴스입니다. <xref:System.Net.HttpWebRequest> 클래스에는 비슷한 <xref:System.Net.HttpWebRequest.ClientCertificates%2A> 속성이 있습니다.  
+ 클라이언트는 특정 SSL 연결에 대해 하나 이상의 인증서를 선택할 수 있습니다. SSL 연결을 사용하여 클라이언트 인증서를 웹 서버 또는 SMTP 메일 서버에 연결할 수 있습니다. 클라이언트는 <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 또는 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 클래스 개체 컬렉션에 인증서를 추가합니다. 전자 메일을 예로 사용할 경우, 인증서 컬렉션은 <xref:System.Net.Mail.SmtpClient> 클래스의 <xref:System.Net.Mail.SmtpClient.ClientCertificates%2A> 속성과 연결된 <xref:System.Security.Cryptography.X509Certificates.X509CertificateCollection> 인스턴스입니다. <xref:System.Net.HttpWebRequest> 클래스에는 비슷한 <xref:System.Net.HttpWebRequest.ClientCertificates%2A> 속성이 있습니다.  
   
  <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 및 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 클래스 간의 주요 차이점은 <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 클래스의 경우 프라이빗 키가 인증서 저장소에 상주해야 한다는 것입니다.  
   

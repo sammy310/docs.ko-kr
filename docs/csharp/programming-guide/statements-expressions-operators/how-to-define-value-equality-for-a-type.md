@@ -29,15 +29,15 @@ ms.locfileid: "79157093"
   
 4. `x.Equals(y)`의 연속 호출은 x 및 y에서 참조하는 개체가 수정되지 않는 한 동일한 값이 반환됩니다.  
   
-5. Null이 아닌 값은 Null과 같지 않습니다. 그러나 CLR은 모든 메서드 호출에서 Null을 확인하고 `NullReferenceException` 참조가 Null인 경우 `this`을 throw합니다. 따라서 `x.Equals(y)` Null인 경우 `x`는 예외를 throw합니다. `Equals`에 대한 인수에 따라 규칙 1 또는 2가 위반됩니다.
+5. Null이 아닌 값은 Null과 같지 않습니다. 그러나 CLR은 모든 메서드 호출에서 Null을 확인하고 `this` 참조가 Null인 경우 `NullReferenceException`을 throw합니다. 따라서 `x` Null인 경우 `x.Equals(y)`는 예외를 throw합니다. `Equals`에 대한 인수에 따라 규칙 1 또는 2가 위반됩니다.
 
- 정의하는 모든 구조체에는 <xref:System.ValueType?displayProperty=nameWithType> 메서드의 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 재정의에서 상속하는 값 같음의 기본 구현이 이미 있습니다. 이 구현은 리플렉션을 사용하여 형식의 모든 필드와 속성을 검사합니다. 이 구현은 올바른 결과를 생성하지만 해당 형식에 맞게 작성한 사용자 지정 구현에 비해 비교적 속도가 느립니다.  
+ 정의하는 모든 구조체에는 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 메서드의 <xref:System.ValueType?displayProperty=nameWithType> 재정의에서 상속하는 값 같음의 기본 구현이 이미 있습니다. 이 구현은 리플렉션을 사용하여 형식의 모든 필드와 속성을 검사합니다. 이 구현은 올바른 결과를 생성하지만 해당 형식에 맞게 작성한 사용자 지정 구현에 비해 비교적 속도가 느립니다.  
   
  값 같음에 대한 구현 세부 정보는 클래스 및 구조체에서 서로 다릅니다. 그러나 클래스와 구조체는 둘 다 같음 구현을 위해 동일한 기본 단계가 필요합니다.  
   
-1. [virtual](../../language-reference/keywords/virtual.md) <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 메서드를 재정의합니다. 대부분의 경우 `bool Equals( object obj )` 구현에서 `Equals` 인터페이스 구현인 형식별 <xref:System.IEquatable%601?displayProperty=nameWithType> 메서드만 호출하면 됩니다. 2단계를 참조하세요.  
+1. [virtual](../../language-reference/keywords/virtual.md) <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 메서드를 재정의합니다. 대부분의 경우 `bool Equals( object obj )` 구현에서 <xref:System.IEquatable%601?displayProperty=nameWithType> 인터페이스 구현인 형식별 `Equals` 메서드만 호출하면 됩니다. 2단계를 참조하세요.  
   
-2. 형식별 <xref:System.IEquatable%601?displayProperty=nameWithType> 메서드를 제공하여 `Equals` 인터페이스를 구현합니다. 여기서 실제 동등 비교가 수행됩니다. 예를 들어 형식에서 한 개나 두 개의 필드만 비교하여 같음 정의를 결정할 수도 있습니다. `Equals`에서 예외를 throw하지 않습니다. 클래스만 해당: 이 메서드는 클래스에 선언되어 있는 필드만 검사해야 합니다. `base.Equals`를 호출하여 기본 클래스에 있는 필드를 검사해야 합니다. 형식이 <xref:System.Object>에서 직접 상속하는 경우에는 이 작업을 수행하지 마세요. <xref:System.Object>의 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 구현에서 참조 같음 검사를 수행합니다.  
+2. 형식별 `Equals` 메서드를 제공하여 <xref:System.IEquatable%601?displayProperty=nameWithType> 인터페이스를 구현합니다. 여기서 실제 동등 비교가 수행됩니다. 예를 들어 형식에서 한 개나 두 개의 필드만 비교하여 같음 정의를 결정할 수도 있습니다. `Equals`에서 예외를 throw하지 않습니다. 클래스만 해당: 이 메서드는 클래스에 선언되어 있는 필드만 검사해야 합니다. `base.Equals`를 호출하여 기본 클래스에 있는 필드를 검사해야 합니다. 형식이 <xref:System.Object>에서 직접 상속하는 경우에는 이 작업을 수행하지 마세요. <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>의 <xref:System.Object> 구현에서 참조 같음 검사를 수행합니다.  
   
 3. 선택 사항이지만 권장됨: [==](../../language-reference/operators/equality-operators.md#equality-operator-) 및 [!=](../../language-reference/operators/equality-operators.md#inequality-operator-) 연산자를 오버로드합니다.  
   

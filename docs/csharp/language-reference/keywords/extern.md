@@ -51,7 +51,7 @@ extern 키워드는 C++보다 C#에서 사용이 제한적입니다. C# 키워�
     }
     ```
 
-2. Visual Studio 설치 디렉터리에서 Visual Studio x64(또는 x32) 네이티브 도구 명령 프롬프트 창을 열고 명령 프롬프트에서 `cmdll.c`cl -LD cmdll.c**를 입력하여**  파일을 컴파일합니다.
+2. Visual Studio 설치 디렉터리에서 Visual Studio x64(또는 x32) 네이티브 도구 명령 프롬프트 창을 열고 명령 프롬프트에서 **cl -LD cmdll.c**를 입력하여 `cmdll.c` 파일을 컴파일합니다.
 
 3. 같은 디렉터리에서 다음 C# 파일을 만들고 이름을 `cm.cs`로 지정합니다.
 

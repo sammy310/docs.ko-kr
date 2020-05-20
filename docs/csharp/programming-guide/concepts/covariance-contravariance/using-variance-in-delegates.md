@@ -54,13 +54,13 @@ class Program
 
 이 예제에서는 대리자를 대리자 시그니처 매개 변수 형식의 기본 형식을 사용하는 매개 변수를 가지고 있는 메서드와 함께 사용하는 방법을 보여 줍니다. 반공변성(contravariance)에서는 별도의 여러 처리기 대신 하나의 이벤트 처리기를 사용할 수 있습니다. 다음 예제는 두 개의 대리자를 사용합니다.
 
-- <xref:System.Windows.Forms.KeyEventHandler>Button.KeyDown[ 이벤트의 시그니처를 정의하는 ](xref:System.Windows.Forms.Control.KeyDown) 대리자. 해당 시그니처는 다음과 같습니다.
+- [Button.KeyDown](xref:System.Windows.Forms.Control.KeyDown) 이벤트의 시그니처를 정의하는 <xref:System.Windows.Forms.KeyEventHandler> 대리자. 해당 시그니처는 다음과 같습니다.
 
    ```csharp
    public delegate void KeyEventHandler(object sender, KeyEventArgs e)
    ```
 
-- <xref:System.Windows.Forms.MouseEventHandler>Button.MouseClick[ 이벤트의 시그니처를 정의하는 ](xref:System.Windows.Forms.Control.MouseDown) 대리자. 해당 시그니처는 다음과 같습니다.
+- [Button.MouseClick](xref:System.Windows.Forms.Control.MouseDown) 이벤트의 시그니처를 정의하는 <xref:System.Windows.Forms.MouseEventHandler> 대리자. 해당 시그니처는 다음과 같습니다.
 
    ```csharp
    public delegate void MouseEventHandler(object sender, MouseEventArgs e)

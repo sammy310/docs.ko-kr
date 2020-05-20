@@ -17,7 +17,7 @@ ms.locfileid: "75741362"
 
 ## <a name="example"></a>예제
 
-다음 코드 예제에서 <xref:System.Collections.Generic.Dictionary%602>는 `StudentName` 유형의 인스턴스를 사용하여 초기화됩니다.  첫 번째 초기화에서는 `Add` 메서드와 두 인수를 사용합니다. 컴파일러는 각 `Add` 키 및 `int` 값 쌍에 `StudentName`에 대한 호출을 생성합니다. 두 번째 초기화에서는 `Dictionary` 클래스의 공용 읽기/쓰기 인덱서 메서드를 사용합니다.
+다음 코드 예제에서 <xref:System.Collections.Generic.Dictionary%602>는 `StudentName` 유형의 인스턴스를 사용하여 초기화됩니다.  첫 번째 초기화에서는 `Add` 메서드와 두 인수를 사용합니다. 컴파일러는 각 `int` 키 및 `StudentName` 값 쌍에 `Add`에 대한 호출을 생성합니다. 두 번째 초기화에서는 `Dictionary` 클래스의 공용 읽기/쓰기 인덱서 메서드를 사용합니다.
 
 [!code-csharp[InitializerExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/HowToDictionaryInitializer.cs#HowToDictionaryInitializer)]  
 

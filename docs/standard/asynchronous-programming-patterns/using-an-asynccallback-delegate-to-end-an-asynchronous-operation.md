@@ -23,10 +23,10 @@ ms.locfileid: "73130932"
   
 - <xref:System.AsyncCallback> 대리자를 사용하여 비동기 작업 결과를 별도의 스레드에서 처리합니다. 이 항목에서 이 방법을 설명합니다.  
   
-- 비동기 작업의 <xref:System.IAsyncResult.IsCompleted%2A>Begin<xref:System.IAsyncResult>**OperationName** 메서드에서 반환된 _의_  속성을 사용하여 작업이 완료되었는지 확인합니다. 이 방법을 설명하는 예제는 [비동기 작업의 상태에 대한 폴링](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md)을 참조하세요.  
+- 비동기 작업의 **Begin**_OperationName_ 메서드에서 반환된 <xref:System.IAsyncResult>의 <xref:System.IAsyncResult.IsCompleted%2A> 속성을 사용하여 작업이 완료되었는지 확인합니다. 이 방법을 설명하는 예제는 [비동기 작업의 상태에 대한 폴링](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
- 다음 코드 예제는 <xref:System.Net.Dns> 클래스에서 비동기 메서드를 사용하여 사용자가 지정한 컴퓨터의 DNS(Domain Name System) 정보를 검색하는 방법을 보여줍니다. 이 예제에서는 <xref:System.AsyncCallback> 메서드를 참조하는 `ProcessDnsInformation` 대리자를 만듭니다. 이 메서드는 DNS 정보에 대한 각 비동기 요청에 대해 한 번 호출됩니다.  
+ 다음 코드 예제는 <xref:System.Net.Dns> 클래스에서 비동기 메서드를 사용하여 사용자가 지정한 컴퓨터의 DNS(Domain Name System) 정보를 검색하는 방법을 보여줍니다. 이 예제에서는 `ProcessDnsInformation` 메서드를 참조하는 <xref:System.AsyncCallback> 대리자를 만듭니다. 이 메서드는 DNS 정보에 대한 각 비동기 요청에 대해 한 번 호출됩니다.  
   
  사용자 지정 호스트는 <xref:System.Net.Dns.BeginGetHostByName%2A><xref:System.Object> 매개 변수에 전달됩니다. 보다 복잡한 상태 개체를 정의하고 사용하는 방법을 보여주는 예제는 [AsyncCallback 대리자 및 상태 개체 사용](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-and-state-object.md)을 참조하세요.  
   

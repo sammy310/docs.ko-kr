@@ -58,7 +58,7 @@ listener.BeginAccept(new AsyncCallback(SocketListener.AcceptCallback), listener)
   
  비동기 소켓은 시스템 스레드 풀의 스레드를 사용하여 들어오는 연결을 처리합니다. 한 스레드는 연결을 허용하고, 다른 스레드는 들어오는 각 연결을 처리하는 데 사용되고, 마지막 스레드는 연결에서 데이터를 받습니다. 스레드 풀에서 할당된 스레드에 따라 세 스레드는 동일한 스레드일 수 있습니다. 다음 예제에서 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 클래스는 주 스레드의 실행을 일시 중단하고 실행을 계속할 수 있으면 알려줍니다.  
   
- 다음 예제에서는 로컬 컴퓨터에 비동기 TCP/IP 소켓을 만들고 연결 허용을 시작하는 비동기 메서드를 보여 줍니다. **이라는 전역** ManualResetEvent`allDone`가 있고, 메서드는 `SocketListener`라는 클래스의 멤버이고, `AcceptCallback`이라는 콜백 메서드가 정의되어 있다고 가정합니다.  
+ 다음 예제에서는 로컬 컴퓨터에 비동기 TCP/IP 소켓을 만들고 연결 허용을 시작하는 비동기 메서드를 보여 줍니다. `allDone`이라는 전역 **ManualResetEvent**가 있고, 메서드는 `SocketListener`라는 클래스의 멤버이고, `AcceptCallback`이라는 콜백 메서드가 정의되어 있다고 가정합니다.  
   
 ```vb  
 Public Sub StartListening()  
@@ -125,7 +125,7 @@ public void StartListening()
 }  
 ```  
   
- 허용 콜백 메서드(앞의 예제에서 `AcceptCallback`)는 주 애플리케이션 스레드에 처리를 계속하도록 알리고, 클라이언트에 연결하고, 클라이언트에서 비동기 데이터 읽기를 시작합니다. 다음 예제에서는 `AcceptCallback` 메서드 구현의 첫 번째 부분을 보여 줍니다. 이 메서드 섹션은 주 애플리케이션 스레드에 처리를 계속하도록 알리고 클라이언트에 연결합니다. **이라는 전역** ManualResetEvent`allDone`를 가정합니다.  
+ 허용 콜백 메서드(앞의 예제에서 `AcceptCallback`)는 주 애플리케이션 스레드에 처리를 계속하도록 알리고, 클라이언트에 연결하고, 클라이언트에서 비동기 데이터 읽기를 시작합니다. 다음 예제에서는 `AcceptCallback` 메서드 구현의 첫 번째 부분을 보여 줍니다. 이 메서드 섹션은 주 애플리케이션 스레드에 처리를 계속하도록 알리고 클라이언트에 연결합니다. `allDone`이라는 전역 **ManualResetEvent**를 가정합니다.  
   
 ```vb  
 Public Sub AcceptCallback(ar As IAsyncResult)  
@@ -173,7 +173,7 @@ public class StateObject
   
  클라이언트 소켓에서 데이터 수신을 시작하는 `AcceptCallback` 메서드 섹션은 먼저 `StateObject` 클래스의 인스턴스를 초기화한 다음 <xref:System.Net.Sockets.Socket.BeginReceive%2A> 메서드를 호출하여 클라이언트 소켓에서 비동기적으로 데이터 읽기를 시작합니다.  
   
- 다음 예제에서는 전체 `AcceptCallback` 메서드를 보여 줍니다. **이라는 전역** ManualResetEvent`allDone,`가 있고, `StateObject`가 정의되어 있고, `ReadCallback` 메서드가 `SocketListener`라는 클래스에 정의되어 있다고 가정합니다.  
+ 다음 예제에서는 전체 `AcceptCallback` 메서드를 보여 줍니다. `allDone,`이라는 전역 **ManualResetEvent**가 있고, `StateObject`가 정의되어 있고, `ReadCallback` 메서드가 `SocketListener`라는 클래스에 정의되어 있다고 가정합니다.  
   
 ```vb  
 Public Shared Sub AcceptCallback(ar As IAsyncResult)  

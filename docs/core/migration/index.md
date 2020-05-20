@@ -51,7 +51,7 @@ Visual Studio에서 선택한 프로젝트가 자동으로 마이그레이션됩
 > Visual Studio Code를 사용 중인 경우 `dotnet migrate` 명령은 *tasks.json* 같은 Visual Studio Code 관련 파일을 수정하지 않습니다. 이러한 파일은 수동으로 변경해야 합니다.
 > 편집기 또는 Visual Studio 이외의 IDE(통합 개발 환경)를 사용 중인 경우에도 마찬가지입니다.
 
-[project.json](../tools/project-json-to-csproj.md) 형식과 *.csproj* 형식을 비교하려면 *project.json 및 csproj 속성 간 매핑*을 참조하세요.
+*project.json* 형식과 *.csproj* 형식을 비교하려면 [project.json 및 csproj 속성 간 매핑](../tools/project-json-to-csproj.md)을 참조하세요.
 
 “No executable found matching command dotnet-migrate”(dotnet-migrate
 
@@ -75,12 +75,12 @@ Visual Studio에서 선택한 프로젝트가 자동으로 마이그레이션됩
 .NET Core csproj 형식은 새 시험판 버전의 도구가 나올 때마다 변경되고 개선되었습니다. csproj의 이전 버전에서 최신 버전으로 프로젝트 파일을 마이그레이션하는 도구는 없으므로 프로젝트 파일을 수동으로 편집해야 합니다. 실제 단계는 마이그레이션하는 프로젝트 파일의 버전에 따라 달라집니다. 다음은 버전 간에 수행된 변경 사항에 따라 고려할 몇 가지 지침입니다.
 
 - `<Project>` 요소에 도구 버전 속성이 있는 경우 제거합니다.
-- `xmlns` 요소에서 XML 네임스페이스(`<Project>`)를 제거합니다.
+- `<Project>` 요소에서 XML 네임스페이스(`xmlns`)를 제거합니다.
 - `Sdk` 특성이 없는 경우 `<Project>` 요소에 추가하고 `Microsoft.NET.Sdk` 또는 `Microsoft.NET.Sdk.Web`으로 설정합니다. 이 특성은 프로젝트에서 사용할 SDK를 사용하도록 지정합니다. 웹앱에는 `Microsoft.NET.Sdk.Web`이 사용됩니다.
 - 프로젝트의 맨 위와 맨 아래에서 `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` 및 `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` 문을 제거합니다. 이러한 import 문은 SDK에 포함되므로, 프로젝트에 있을 필요가 없습니다.
 - 프로젝트에 `Microsoft.NETCore.App` 또는 `NETStandard.Library` `<PackageReference>` 항목이 있으면 제거해야 합니다. 이러한 패키지 참조는 [SDK에 포함](https://aka.ms/sdkimplicitrefs)되어 있습니다.
-- `Microsoft.NET.Sdk` `<PackageReference>` 요소가 있는 경우 제거합니다. SDK 참조는 `Sdk` 요소의 `<Project>` 특성을 통해 가져옵니다.
-- [SDK에 포함](https://en.wikipedia.org/wiki/Glob_(programming))된 [glob](../project-sdk/overview.md#default-compilation-includes)을 제거합니다. 프로젝트에 이러한 GLOB를 남겨 두면 컴파일 항목이 중복되므로 빌드 시 오류가 발생합니다.
+- `Microsoft.NET.Sdk` `<PackageReference>` 요소가 있는 경우 제거합니다. SDK 참조는 `<Project>` 요소의 `Sdk` 특성을 통해 가져옵니다.
+- [SDK에 포함](../project-sdk/overview.md#default-compilation-includes)된 [glob](https://en.wikipedia.org/wiki/Glob_(programming))을 제거합니다. 프로젝트에 이러한 GLOB를 남겨 두면 컴파일 항목이 중복되므로 빌드 시 오류가 발생합니다.
 
 이러한 단계를 수행하면 프로젝트가 RTM .NET Core csproj 형식과 완벽히 호환됩니다.
 

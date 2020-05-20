@@ -24,7 +24,7 @@ ms.locfileid: "73137946"
  [!code-csharp[CDS_SpinWait#03](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_spinwait/cs/spinwait03.cs#03)]
  [!code-vb[CDS_SpinWait#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_spinwait/vb/spinwait2.vb#03)]  
   
- <xref:System.Threading.SpinWait>에 대한 다음 호출로 인해 `SpinOnce`에서 스레드의 시간 조각을 생성할 때까지만 래치는 <xref:System.Threading.SpinWait> 개체를 사용하여 적절히 회전합니다. 이 지점에서 래치는 <xref:System.Threading.WaitHandle.WaitOne%2A>에서 <xref:System.Threading.ManualResetEvent>을 호출하고 나머지 시간 제한 값을 전달하여 자체 컨텍스트 전환을 발생시킵니다.  
+ `SpinOnce`에 대한 다음 호출로 인해 <xref:System.Threading.SpinWait>에서 스레드의 시간 조각을 생성할 때까지만 래치는 <xref:System.Threading.SpinWait> 개체를 사용하여 적절히 회전합니다. 이 지점에서 래치는 <xref:System.Threading.ManualResetEvent>에서 <xref:System.Threading.WaitHandle.WaitOne%2A>을 호출하고 나머지 시간 제한 값을 전달하여 자체 컨텍스트 전환을 발생시킵니다.  
   
  로깅 출력은 <xref:System.Threading.ManualResetEvent>를 사용하지 않고 잠금을 획득하여 래치가 성능을 향상시킬 수 있었던 빈도를 표시합니다.  
   

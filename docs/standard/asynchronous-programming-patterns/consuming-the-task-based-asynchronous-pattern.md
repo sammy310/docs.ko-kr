@@ -128,7 +128,7 @@ private async void btnDownload_Click(object sender, RoutedEventArgs e)
  <xref:System.Threading.Tasks> 네임스페이스에는 작업을 구성하고 사용하기 위한 몇 가지 메서드가 포함되어 있습니다.
 
 ### <a name="taskrun"></a>Task.Run
- <xref:System.Threading.Tasks.Task> 클래스에는 <xref:System.Threading.Tasks.Task.Run%2A> 또는 <xref:System.Threading.Tasks.Task> 개체로 스레드 풀에 작업을 쉽게 오프로드할 수 있게 하는 몇 가지 <xref:System.Threading.Tasks.Task%601> 메서드가 포함되어 있습니다. 예를 들면 다음과 같습니다.
+ <xref:System.Threading.Tasks.Task> 클래스에는 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601> 개체로 스레드 풀에 작업을 쉽게 오프로드할 수 있게 하는 몇 가지 <xref:System.Threading.Tasks.Task.Run%2A> 메서드가 포함되어 있습니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 public async void button1_Click(object sender, EventArgs e)
@@ -141,7 +141,7 @@ public async void button1_Click(object sender, EventArgs e)
 }
 ```
 
- <xref:System.Threading.Tasks.Task.Run%2A> 오버로드와 같은 이러한 <xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> 메서드 중 일부는 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 메서드의 축약형으로 존재합니다.  <xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType>과 같은 다른 오버로드를 사용하면 오프로드된 작업 내에서 await를 사용할 수 있습니다. 예를 들면 다음과 같습니다.
+ <xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> 오버로드와 같은 이러한 <xref:System.Threading.Tasks.Task.Run%2A> 메서드 중 일부는 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 메서드의 축약형으로 존재합니다.  <xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType>과 같은 다른 오버로드를 사용하면 오프로드된 작업 내에서 await를 사용할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 public async void button1_Click(object sender, EventArgs e)
@@ -158,7 +158,7 @@ public async void button1_Click(object sender, EventArgs e)
  이러한 오버로드는 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 메서드를 작업 병렬 라이브러리의 <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> 확장 메서드와 함께 사용하는 것과 논리적으로 동일합니다.
 
 ### <a name="taskfromresult"></a>Task.FromResult
- 데이터를 이미 사용할 수 있거나 <xref:System.Threading.Tasks.Task.FromResult%2A>에 리프트된 작업 반환 메서드에서 데이터를 반환하기만 하면 되는 시나리오에서는 <xref:System.Threading.Tasks.Task%601> 메서드를 사용합니다.
+ 데이터를 이미 사용할 수 있거나 <xref:System.Threading.Tasks.Task%601>에 리프트된 작업 반환 메서드에서 데이터를 반환하기만 하면 되는 시나리오에서는 <xref:System.Threading.Tasks.Task.FromResult%2A> 메서드를 사용합니다.
 
 ```csharp
 public Task<int> GetValueAsync(string key)
@@ -185,7 +185,7 @@ IEnumerable<Task> asyncOps = from addr in addrs select SendMailAsync(addr);
 await Task.WhenAll(asyncOps);
 ```
 
- 이 코드는 발생할 수 있는 예외를 명시적으로 처리하지 않지만 `await`의 결과 작업에 대한 <xref:System.Threading.Tasks.Task.WhenAll%2A>에서 예외가 전파되도록 합니다.  예외를 처리하려면 다음과 같은 코드를 사용할 수 있습니다.
+ 이 코드는 발생할 수 있는 예외를 명시적으로 처리하지 않지만 <xref:System.Threading.Tasks.Task.WhenAll%2A>의 결과 작업에 대한 `await`에서 예외가 전파되도록 합니다.  예외를 처리하려면 다음과 같은 코드를 사용할 수 있습니다.
 
 ```csharp
 IEnumerable<Task> asyncOps = from addr in addrs select SendMailAsync(addr);
@@ -199,7 +199,7 @@ catch(Exception exc)
 }
 ```
 
- 이 경우 비동기 작업이 실패하면 모든 예외가 <xref:System.AggregateException> 예외에서 통합되어 <xref:System.Threading.Tasks.Task> 메서드에서 반환되는 <xref:System.Threading.Tasks.Task.WhenAll%2A>에 저장됩니다.  그러나 이러한 예외 중 하나만 `await` 키워드에 의해 전파됩니다.  모든 예외를 검사하려는 경우 앞의 코드를 다음과 같이 다시 작성할 수 있습니다.
+ 이 경우 비동기 작업이 실패하면 모든 예외가 <xref:System.AggregateException> 예외에서 통합되어 <xref:System.Threading.Tasks.Task.WhenAll%2A> 메서드에서 반환되는 <xref:System.Threading.Tasks.Task>에 저장됩니다.  그러나 이러한 예외 중 하나만 `await` 키워드에 의해 전파됩니다.  모든 예외를 검사하려는 경우 앞의 코드를 다음과 같이 다시 작성할 수 있습니다.
 
 ```csharp
 Task [] asyncOps = (from addr in addrs select SendMailAsync(addr)).ToArray();

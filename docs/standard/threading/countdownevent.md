@@ -29,10 +29,10 @@ ms.locfileid: "73138119"
   
 - <xref:System.Threading.CountdownEvent.Wait%2A>가 <xref:System.Threading.CountdownEvent.Reset%2A> 메서드를 호출하여 반환한 후 인스턴스를 재사용할 수 있습니다.  
   
-- 인스턴스는 <xref:System.Threading.WaitHandle>와 같은 다른 .NET Framework 동기화 API와의 통합을 위해 <xref:System.Threading.WaitHandle.WaitAll%2A>을 표시합니다.  
+- 인스턴스는 <xref:System.Threading.WaitHandle.WaitAll%2A>와 같은 다른 .NET Framework 동기화 API와의 통합을 위해 <xref:System.Threading.WaitHandle>을 표시합니다.  
   
 ## <a name="basic-usage"></a>기본 사용  
- 다음 예제는 <xref:System.Threading.CountdownEvent> 작업 항목에 <xref:System.Threading.ThreadPool>를 사용하는 방법을 보여줍니다.  
+ 다음 예제는 <xref:System.Threading.ThreadPool> 작업 항목에 <xref:System.Threading.CountdownEvent>를 사용하는 방법을 보여줍니다.  
   
  [!code-csharp[CDS_CountdownEvent#01](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_countdownevent/cs/countdownevent.cs#01)]
  [!code-vb[CDS_CountdownEvent#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_countdownevent/vb/module1.vb#01)]  

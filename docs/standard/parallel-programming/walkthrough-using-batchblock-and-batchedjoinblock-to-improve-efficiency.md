@@ -74,7 +74,7 @@ TPL 데이터 흐름 라이브러리는 하나 이상의 소스에서 데이터�
 [!code-csharp[TPLDataflow_BatchDatabase#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#3)]
 [!code-vb[TPLDataflow_BatchDatabase#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#3)]
 
-`Employee` 클래스에는 세 가지 속성 `EmployeeID` , `LastName` 및 `FirstName`이 포함되어 있습니다. 이러한 속성은 Northwind 데이터베이스의 `Employee ID` 테이블에 있는 `Last Name`, `First Name` 및 `Employees` 열에 해당합니다. 이 데모에서 `Employee` 클래스는 해당 속성에 대한 임의 값을 가지는 `Random` 개체를 만드는 `Employee` 메서드도 정의합니다.
+`Employee` 클래스에는 세 가지 속성 `EmployeeID` , `LastName` 및 `FirstName`이 포함되어 있습니다. 이러한 속성은 Northwind 데이터베이스의 `Employees` 테이블에 있는 `Employee ID`, `Last Name` 및 `First Name` 열에 해당합니다. 이 데모에서 `Employee` 클래스는 해당 속성에 대한 임의 값을 가지는 `Employee` 개체를 만드는 `Random` 메서드도 정의합니다.
 
 <a name="operations"></a>
 
@@ -96,7 +96,7 @@ TPL 데이터 흐름 라이브러리는 하나 이상의 소스에서 데이터�
 [!code-csharp[TPLDataflow_BatchDatabase#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#5)]
 [!code-vb[TPLDataflow_BatchDatabase#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#5)]
 
-`AddEmployees` 메서드는 데이터 흐름을 사용하여 데이터베이스에 임의 직원 데이터를 추가합니다. 데이터베이스에 직원 항목을 추가하기 위해 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 메서드를 호출하는 `InsertEmployees` 개체를 만듭니다. 그런 다음, `AddEmployees` 메서드는 `PostRandomEmployees` 메서드를 호출하여 `Employee` 개체에 여러 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 개체를 게시합니다. 그런 다음, `AddEmployees` 메서드는 모든 삽입 작업이 완료될 때까지 대기합니다.
+`AddEmployees` 메서드는 데이터 흐름을 사용하여 데이터베이스에 임의 직원 데이터를 추가합니다. 데이터베이스에 직원 항목을 추가하기 위해 `InsertEmployees` 메서드를 호출하는 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 개체를 만듭니다. 그런 다음, `AddEmployees` 메서드는 `PostRandomEmployees` 메서드를 호출하여 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 개체에 여러 `Employee` 개체를 게시합니다. 그런 다음, `AddEmployees` 메서드는 모든 삽입 작업이 완료될 때까지 대기합니다.
 
 <a name="buffering"></a>
 
@@ -107,7 +107,7 @@ TPL 데이터 흐름 라이브러리는 하나 이상의 소스에서 데이터�
 [!code-csharp[TPLDataflow_BatchDatabase#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#6)]
 [!code-vb[TPLDataflow_BatchDatabase#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#6)]
 
-이 메서드는 `AddEmployees`와 유사합니다. 단, 이 메서드는 해당 개체를 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 개체에 보내기 전에 `Employee` 클래스를 사용하여 여러 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 개체를 버퍼링합니다. <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 클래스는 여러 요소를 컬렉션으로 전파하므로 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 개체는 `Employee` 개체 배열에서 작동하도록 수정됩니다. `AddEmployees` 메서드처럼 `AddEmployeesBatched`는 `PostRandomEmployees` 메서드를 호출하여 여러 `Employee` 개체를 게시합니다. 그러나 `AddEmployeesBatched`는 이러한 개체를 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 개체에 게시합니다. 또한 `AddEmployeesBatched` 메서드는 모든 삽입 작업이 완료될 때까지 대기합니다.
+이 메서드는 `AddEmployees`와 유사합니다. 단, 이 메서드는 해당 개체를 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 개체에 보내기 전에 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 클래스를 사용하여 여러 `Employee` 개체를 버퍼링합니다. <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 클래스는 여러 요소를 컬렉션으로 전파하므로 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 개체는 `Employee` 개체 배열에서 작동하도록 수정됩니다. `AddEmployees` 메서드처럼 `AddEmployeesBatched`는 `PostRandomEmployees` 메서드를 호출하여 여러 `Employee` 개체를 게시합니다. 그러나 `AddEmployeesBatched`는 이러한 개체를 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 개체에 게시합니다. 또한 `AddEmployeesBatched` 메서드는 모든 삽입 작업이 완료될 때까지 대기합니다.
 
 <a name="bufferedJoin"></a>
 
@@ -118,7 +118,7 @@ TPL 데이터 흐름 라이브러리는 하나 이상의 소스에서 데이터�
 [!code-csharp[TPLDataflow_BatchDatabase#7](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#7)]
 [!code-vb[TPLDataflow_BatchDatabase#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#7)]
 
-이 메서드는 임의 직원에 대한 정보를 콘솔에 인쇄합니다. 여러 개의 임의 `Employee` 개체를 만들고 `GetEmployeeID` 메서드를 호출하여 각 개체의 고유 식별자를 검색합니다. 지정된 이름 및 성이 일치하는 직원이 없는 경우 `GetEmployeeID` 메서드가 예외를 throw하므로 `GetRandomEmployees` 메서드는 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> 클래스를 사용하여 `Employee` 호출 성공 시 `GetEmployeeID` 개체를 저장하고 호출 실패 시 <xref:System.Exception?displayProperty=nameWithType> 개체를 저장합니다. 이 예제의 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 개체는 <xref:System.Tuple%602> 개체 목록과 `Employee` 개체 목록을 포함하는 <xref:System.Exception> 개체에서 작동합니다. 수신된 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> 및 `Employee` 개체의 합계가 일괄 처리 크기와 같을 경우 <xref:System.Exception> 개체는 이 데이터를 전파합니다.
+이 메서드는 임의 직원에 대한 정보를 콘솔에 인쇄합니다. 여러 개의 임의 `Employee` 개체를 만들고 `GetEmployeeID` 메서드를 호출하여 각 개체의 고유 식별자를 검색합니다. 지정된 이름 및 성이 일치하는 직원이 없는 경우 `GetEmployeeID` 메서드가 예외를 throw하므로 `GetRandomEmployees` 메서드는 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> 클래스를 사용하여 `GetEmployeeID` 호출 성공 시 `Employee` 개체를 저장하고 호출 실패 시 <xref:System.Exception?displayProperty=nameWithType> 개체를 저장합니다. 이 예제의 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 개체는 `Employee` 개체 목록과 <xref:System.Exception> 개체 목록을 포함하는 <xref:System.Tuple%602> 개체에서 작동합니다. 수신된 `Employee` 및 <xref:System.Exception> 개체의 합계가 일괄 처리 크기와 같을 경우 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> 개체는 이 데이터를 전파합니다.
 
 <a name="complete"></a>
 

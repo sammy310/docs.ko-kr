@@ -35,9 +35,9 @@ ms.locfileid: "76731455"
 
 > .NET Standard 1.x는 세분화된 NuGet 패키지 집합으로 배포되어 큰 패키지 종속성 그래프를 만들기 때문에 개발자가 빌드 시 많은 패키지를 다운로드해야 합니다. .NET Framework 4.6.1, UWP 및 Xamarin을 포함한 최신 .NET 플랫폼은 모두 .NET Standard 2.0을 지원합니다. 특별히 이전 플랫폼을 대상으로 지정해야 하는 경우에만 .NET Standard 1.x를 대상으로 지정해야 합니다.
 
-✔️ `netstandard2.0` 대상이 필요한 경우 `netstandard1.x` 대상을 포함합니다.
+✔️ `netstandard1.x` 대상이 필요한 경우 `netstandard2.0` 대상을 포함합니다.
 
-> 이전 플랫폼도 계속 작동하고 `netstandard2.0` 대상을 사용하도록 대체되는 동시에, .NET Standard 2.0을 지원하는 모든 플랫폼은 `netstandard1.x` 대상을 사용하고 더 작은 패키지 그래프의 혜택을 얻게 됩니다.
+> 이전 플랫폼도 계속 작동하고 `netstandard1.x` 대상을 사용하도록 대체되는 동시에, .NET Standard 2.0을 지원하는 모든 플랫폼은 `netstandard2.0` 대상을 사용하고 더 작은 패키지 그래프의 혜택을 얻게 됩니다.
 
 ❌ 라이브러리가 플랫폼 특정 앱 모델을 사용하는 경우 .NET Standard 대상을 포함하지 마세요.
 
@@ -92,7 +92,7 @@ public static class GpsLocation
 
 > NuGet에서 자동으로 .NET Standard 어셈블리를 사용합니다. 개별 .NET 구현을 대상으로 지정하면 아무 혜택 없이 `*.nupkg` 크기만 증가합니다.
 
-✔️ `net461` 대상을 제공할 때 `netstandard2.0`의 대상을 추가하는 것을 고려하세요.
+✔️ `netstandard2.0` 대상을 제공할 때 `net461`의 대상을 추가하는 것을 고려하세요.
 
 > .NET Framework의 .NET Standard 2.0을 사용하는 경우 .NET Framework 4.7.2에서 해결된 몇 가지 문제가 발생합니다. .NET Framework 4.6.1용으로 빌드된 이진을 제공하면 여전히 .NET Framework 4.6.1 - 4.7.1을 사용 중인 개발자의 경험을 개선할 수 있습니다.
 

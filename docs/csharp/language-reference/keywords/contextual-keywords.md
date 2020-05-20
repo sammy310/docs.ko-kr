@@ -28,7 +28,7 @@ ms.locfileid: "75713650"
 |[set](./set.md)|속성 또는 인덱서에 대한 접근자 메서드를 정의합니다.|  
 |[값](./value.md)|접근자를 설정하고 이벤트 처리기를 추가하거나 제거하는 데 사용됩니다.|  
 |[var](./var.md)|컴파일러가 메서드 범위에 선언된 변수의 형식을 확인하는 데 사용됩니다.|  
-|[when](when.md)|`catch` 문의 `case` 블록 또는 `switch` 레이블에 대한 필터 조건을 지정합니다.|
+|[when](when.md)|`switch` 문의 `catch` 블록 또는 `case` 레이블에 대한 필터 조건을 지정합니다.|
 |[where](./where-generic-type-constraint.md)|제네릭 선언에 제약 조건을 추가합니다. [where](./where-clause.md)를 참조하세요.|  
 |[yield](./yield.md)|반복기 블록에서 값을 열거형 개체에 반환하거나 반복의 끝을 알리는 데 사용됩니다.|  
   

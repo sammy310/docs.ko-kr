@@ -25,7 +25,7 @@ ms.locfileid: "75712548"
 ```  
   
 ## <a name="remarks"></a>설명  
- `#if` 지시문으로 시작되는 조건부 지시문은 `#endif` 지시문을 사용하여 명시적으로 종료해야 합니다. [를 사용하는 방법에 대한 예제는 ](./preprocessor-if.md)#if`#endif`를 참조하세요.  
+ `#if` 지시문으로 시작되는 조건부 지시문은 `#endif` 지시문을 사용하여 명시적으로 종료해야 합니다. `#endif`를 사용하는 방법에 대한 예제는 [#if](./preprocessor-if.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 

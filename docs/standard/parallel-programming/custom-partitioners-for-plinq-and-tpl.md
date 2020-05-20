@@ -54,7 +54,7 @@ ms.locfileid: "73141559"
 
 ### <a name="configuring-static-range-partitioners-for-parallelforeach"></a>Parallel.ForEach에 대한 정적 범위 파티셔너 구성
 
-<xref:System.Threading.Tasks.Parallel.For%2A> 루프에서 루프 본문은 메서드에 대리자로 제공됩니다. 해당 대리자를 호출하는 비용은 가상 메서드 호출과 거의 같습니다. 일부 시나리오에서 병렬 루프의 본문은 각 루프 반복에 대한 대리자 호출 비용이 매우 커질 만큼 충분히 작을 수 있습니다. 이 경우 <xref:System.Collections.Concurrent.Partitioner.Create%2A> 오버로드 중 하나를 사용하여 소스 요소에 대해 범위 분할의 <xref:System.Collections.Generic.IEnumerable%601>을 만들 수 있습니다. 그런 다음, 본문이 일반 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 루프로 구성된 `for` 메서드에 이 범위 컬렉션을 전달할 수 있습니다. 이 방법의 장점은 대리자 호출 비용이 요소당 한 번이 아니라 범위당 한 번만 발생한다는 점입니다. 다음 예제에서는 기본 패턴을 보여줍니다.
+<xref:System.Threading.Tasks.Parallel.For%2A> 루프에서 루프 본문은 메서드에 대리자로 제공됩니다. 해당 대리자를 호출하는 비용은 가상 메서드 호출과 거의 같습니다. 일부 시나리오에서 병렬 루프의 본문은 각 루프 반복에 대한 대리자 호출 비용이 매우 커질 만큼 충분히 작을 수 있습니다. 이 경우 <xref:System.Collections.Concurrent.Partitioner.Create%2A> 오버로드 중 하나를 사용하여 소스 요소에 대해 범위 분할의 <xref:System.Collections.Generic.IEnumerable%601>을 만들 수 있습니다. 그런 다음, 본문이 일반 `for` 루프로 구성된 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 메서드에 이 범위 컬렉션을 전달할 수 있습니다. 이 방법의 장점은 대리자 호출 비용이 요소당 한 번이 아니라 범위당 한 번만 발생한다는 점입니다. 다음 예제에서는 기본 패턴을 보여줍니다.
 
 [!code-csharp[TPL_Partitioners#01](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_partitioners/cs/partitioner01.cs#01)]
 [!code-vb[TPL_Partitioners#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_partitioners/vb/partitionercreate01.vb#01)]
@@ -72,7 +72,7 @@ ms.locfileid: "73141559"
 |||
 |-|-|
 |<xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>|이 메서드는 기본 스레드에 의해 한 번 호출되고 IList(IEnumerator(TSource))를 반환합니다. 루프 또는 쿼리의 각 작업자 스레드는 목록에서 `GetEnumerator`를 호출하여 별도의 파티션에서 <xref:System.Collections.Generic.IEnumerator%601>를 검색할 수 있습니다.|
-|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>|`true`를 구현하는 경우 <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A>를 반환하고, 그렇지 않으면 `false`를 반환합니다.|
+|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>|<xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A>를 구현하는 경우 `true`를 반환하고, 그렇지 않으면 `false`를 반환합니다.|
 |<xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A>|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>가 `true`이면 선택적으로 <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> 대신 이 메서드가 호출될 수 있습니다.|
 
 결과가 정렬 가능해야 하거나 요소에 대한 인덱싱된 액세스가 필요한 경우 <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType>에서 파생시키고 다음 표에 설명된 대로 해당 가상 메서드를 재정의합니다.
@@ -80,7 +80,7 @@ ms.locfileid: "73141559"
 |||
 |-|-|
 |<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetPartitions%2A>|이 메서드는 기본 스레드에 의해 한 번 호출되고 `IList(IEnumerator(TSource))`를 반환합니다. 루프 또는 쿼리의 각 작업자 스레드는 목록에서 `GetEnumerator`를 호출하여 별도의 파티션에서 <xref:System.Collections.Generic.IEnumerator%601>를 검색할 수 있습니다.|
-|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>|`true`를 구현하는 경우 <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetDynamicPartitions%2A>를 반환하고, 그렇지 않으면 false를 반환합니다.|
+|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetDynamicPartitions%2A>를 구현하는 경우 `true`를 반환하고, 그렇지 않으면 false를 반환합니다.|
 |<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetDynamicPartitions%2A>|일반적으로 <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A>만 호출합니다.|
 |<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A>|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>가 `true`이면 선택적으로 <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> 대신 이 메서드가 호출될 수 있습니다.|
 

@@ -42,7 +42,7 @@ ms.locfileid: "74329592"
  컴퓨터에 있는 직렬 포트의 이름 컬렉션을 가져오는 `SerialPortNames` 속성을 설명합니다.  
   
  <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>  
- `OpenSerialPort` 개체를 만들고 여는 <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> 메서드를 설명합니다.  
+ <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> 개체를 만들고 여는 `OpenSerialPort` 메서드를 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
 

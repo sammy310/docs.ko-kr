@@ -47,7 +47,7 @@ using static <fully-qualified-type-name>;
 
 [!code-csharp[using-static#3](~/samples/snippets/csharp/language-reference/keywords/using/using-static3.cs)]
 
-이 예제에서는 `using static` 지시문을 <xref:System.Double> 형식에 적용했을 수도 있습니다. 이 경우 형식 이름을 지정하지 않고도 <xref:System.Double.TryParse(System.String,System.Double@)> 메서드를 호출할 수 있습니다. 그러나 이렇게 하면 코드 가독성이 떨어집니다. 어떤 숫자 형식의 `using static` 메서드가 호출되었는지 알아보기 위해 `TryParse` 문을 확인해야 하기 때문입니다.
+이 예제에서는 `using static` 지시문을 <xref:System.Double> 형식에 적용했을 수도 있습니다. 이 경우 형식 이름을 지정하지 않고도 <xref:System.Double.TryParse(System.String,System.Double@)> 메서드를 호출할 수 있습니다. 그러나 이렇게 하면 코드 가독성이 떨어집니다. 어떤 숫자 형식의 `TryParse` 메서드가 호출되었는지 알아보기 위해 `using static` 문을 확인해야 하기 때문입니다.
 
 ## <a name="see-also"></a>참고 항목
 

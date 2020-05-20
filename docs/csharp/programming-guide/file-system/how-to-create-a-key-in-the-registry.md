@@ -49,7 +49,7 @@ key.Close();
 - 레지스트리 키가 읽기 전용인 경우  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
- 로컬 컴퓨터(`Microsoft.Win32.Registry.CurrentUser`)보다 사용자 폴더(`Microsoft.Win32.Registry.LocalMachine`)에 데이터를 쓰는 것이 더 안전합니다.  
+ 로컬 컴퓨터(`Microsoft.Win32.Registry.LocalMachine`)보다 사용자 폴더(`Microsoft.Win32.Registry.CurrentUser`)에 데이터를 쓰는 것이 더 안전합니다.  
   
  레지스트리 값을 만들 때 해당 값이 이미 있는 경우 수행할 작업을 결정해야 합니다. 다른 악성 프로세스에서 값을 이미 만들고 액세스했을 수도 있습니다. 레지스트리 값에 데이터를 넣으면 다른 프로세스에서 해당 데이터를 사용할 수 있습니다. 이를 방지하려면 `Overload:Microsoft.Win32.RegistryKey.GetValue` 메서드를 재정의합니다. 키가 아직 없는 경우 null이 반환됩니다.  
   

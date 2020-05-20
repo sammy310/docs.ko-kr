@@ -82,7 +82,7 @@ GitHub의 [샘플 리포지토리](https://github.com/dotnet/samples/blob/master
         MathServiceTests.fsproj
 ```
 
-`dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`unit-testing-with-fsharp*디렉터리에서*를 실행합니다.
+*unit-testing-with-fsharp* 디렉터리에서 `dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`를 실행합니다.
 
 ## <a name="creating-the-first-test"></a>첫 번째 테스트 만들기
 

@@ -621,8 +621,8 @@ IEHost.dll 및 IEExec.exe 어셈블리는 .NET Framework에서 제거되었습�
 
 |형식|메시지|
 |----------|-------------|
-|<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|이 클래스는 사용되지 않습니다. 대신 <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType>Microsoft.Build*어셈블리의*을 사용하세요.|
-|<xref:Microsoft.Build.BuildEngine.Project?displayProperty=nameWithType>|이 클래스는 사용되지 않습니다. 대신 <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType>Microsoft.Build*어셈블리의*을 사용하세요.|
+|<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|이 클래스는 사용되지 않습니다. 대신 *Microsoft.Build* 어셈블리의 <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType>을 사용하세요.|
+|<xref:Microsoft.Build.BuildEngine.Project?displayProperty=nameWithType>|이 클래스는 사용되지 않습니다. 대신 *Microsoft.Build* 어셈블리의 <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType>을 사용하세요.|
 
 [맨 위로 이동](#introduction)
 

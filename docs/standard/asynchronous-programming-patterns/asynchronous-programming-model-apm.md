@@ -19,7 +19,7 @@ ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140147"
 ---
 # <a name="asynchronous-programming-model-apm"></a>APM(비동기 프로그래밍 모델)
-<xref:System.IAsyncResult> 디자인 패턴을 사용하는 비동기 작업은 각각 비동기 작업 `BeginOperationName`OperationName`EndOperationName`을 시작하고 종료하는 *및*이라는 두 개의 메서드로 구현됩니다. 예를 들어 <xref:System.IO.FileStream> 클래스는 파일에서 바이트를 비동기적으로 읽는 <xref:System.IO.FileStream.BeginRead%2A> 및 <xref:System.IO.FileStream.EndRead%2A> 메서드를 제공합니다. 이러한 메서드는 비동기 버전의 <xref:System.IO.FileStream.Read%2A> 메서드를 구현합니다.  
+<xref:System.IAsyncResult> 디자인 패턴을 사용하는 비동기 작업은 각각 비동기 작업 *OperationName*을 시작하고 종료하는 `BeginOperationName` 및 `EndOperationName`이라는 두 개의 메서드로 구현됩니다. 예를 들어 <xref:System.IO.FileStream> 클래스는 파일에서 바이트를 비동기적으로 읽는 <xref:System.IO.FileStream.BeginRead%2A> 및 <xref:System.IO.FileStream.EndRead%2A> 메서드를 제공합니다. 이러한 메서드는 비동기 버전의 <xref:System.IO.FileStream.Read%2A> 메서드를 구현합니다.  
   
 > [!NOTE]
 > .NET Framework 4부터는 작업 병렬 라이브러리에서 비동기 및 병렬 프로그래밍을 위한 새로운 모델을 제공합니다. 자세한 내용은 [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md) 및 [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)을 참조하세요.  
@@ -33,7 +33,7 @@ ms.locfileid: "73140147"
 |------------|-----------------|  
 |<xref:System.IAsyncResult.AsyncState%2A>|비동기 작업에 대한 정보를 포함하는 애플리케이션별 선택적 개체입니다.|  
 |<xref:System.IAsyncResult.AsyncWaitHandle%2A>|비동기 작업이 완료될 때까지 애플리케이션 실행을 차단하기 위해 사용할 수 있는 <xref:System.Threading.WaitHandle> 입니다.|  
-|<xref:System.IAsyncResult.CompletedSynchronously%2A>|비동기 작업이 별도의 `BeginOperationName` 스레드에서 완료되는 대신 <xref:System.Threading.ThreadPool>을 호출하는 데 사용된 스레드에서 완료되었는지 여부를 나타내는 값입니다.|  
+|<xref:System.IAsyncResult.CompletedSynchronously%2A>|비동기 작업이 별도의 <xref:System.Threading.ThreadPool> 스레드에서 완료되는 대신 `BeginOperationName`을 호출하는 데 사용된 스레드에서 완료되었는지 여부를 나타내는 값입니다.|  
 |<xref:System.IAsyncResult.IsCompleted%2A>|비동기 작업이 완료되었는지 여부를 나타내는 값입니다.|  
   
  `BeginOperationName` 메서드에는 값 또는 참조로 전달되는 동기 버전의 메서드 시그니처에 선언된 매개 변수가 사용됩니다. out 매개 변수는 `BeginOperationName` 메서드 시그니처의 일부가 아닙니다. `BeginOperationName` 메서드 시그니처에는 두 개의 추가 매개 변수도 포함되어 있습니다. 그중 첫 번째 매개 변수는 비동기 작업이 완료될 때 호출되는 메서드를 참조하는 <xref:System.AsyncCallback> 대리자를 정의합니다. 호출자는 작업이 완료될 때 호출되는 메서드를 원하지 않는 경우 `null` (Visual Basic에서는`Nothing` )을 지정할 수 있습니다. 두 번째 추가 매개 변수는 사용자 정의 개체입니다. 이 개체를 사용하여 비동기 작업이 완료될 때 호출되는 메서드로 애플리케이션별 상태 정보를 전달할 수 있습니다. 파일에서 읽은 바이트를 저장하는 바이트 배열과 같이 `BeginOperationName` 메서드에서 작업 관련 추가 매개 변수를 사용하는 경우 <xref:System.AsyncCallback> 및 애플리케이션 상태 개체는 `BeginOperationName` 메서드 시그니처의 마지막 매개 변수가 됩니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "73140147"
 ## <a name="ending-an-asynchronous-operation"></a>비동기 작업 끝내기  
  `EndOperationName` 메서드는 비동기 작업 *OperationName*을 종료합니다. `EndOperationName` 메서드의 반환 값은 이에 상응하는 동기 항목의 반환 값과 같은 유형으로서 비동기 작업에 대해서만 사용됩니다. 예를 들어 <xref:System.IO.FileStream.EndRead%2A> 메서드는 <xref:System.IO.FileStream> 에서 읽은 바이트 수를 반환하고 <xref:System.Net.Dns.EndGetHostByName%2A> 메서드는 호스트 컴퓨터에 대한 정보를 포함하는 <xref:System.Net.IPHostEntry> 개체를 반환합니다. `EndOperationName` 메서드는 동기 버전의 메서드 시그니처에 선언된 out 또는 ref 매개 변수를 사용합니다. `EndOperationName` 메서드에는 동기 메서드의 매개 변수와 함께 <xref:System.IAsyncResult> 매개 변수도 포함되어 있습니다. 호출자는 `BeginOperationName`에 대한 해당 호출로 반환된 인스턴스를 전달해야 합니다.  
   
- <xref:System.IAsyncResult>이 호출되었을 때 `EndOperationName` 개체에 표시되는 비동기 작업이 완료되지 않은 경우에는 `EndOperationName`에서 비동기 작업이 완료될 때까지 해당 호출 스레드를 차단합니다. 비동기 작업이 throw한 예외는 `EndOperationName` 메서드에서 throw됩니다. 같은 `EndOperationName`로 <xref:System.IAsyncResult> 메서드를 여러 번 호출한 데 따른 효과는 정의되어 있지 않습니다. 마찬가지로 관련된 Begin 메서드에서 반환하지 않은 `EndOperationName`로 <xref:System.IAsyncResult> 메서드를 호출하는 경우도 정의되어 있지 않습니다.  
+ `EndOperationName`이 호출되었을 때 <xref:System.IAsyncResult> 개체에 표시되는 비동기 작업이 완료되지 않은 경우에는 `EndOperationName`에서 비동기 작업이 완료될 때까지 해당 호출 스레드를 차단합니다. 비동기 작업이 throw한 예외는 `EndOperationName` 메서드에서 throw됩니다. 같은 <xref:System.IAsyncResult>로 `EndOperationName` 메서드를 여러 번 호출한 데 따른 효과는 정의되어 있지 않습니다. 마찬가지로 관련된 Begin 메서드에서 반환하지 않은 <xref:System.IAsyncResult>로 `EndOperationName` 메서드를 호출하는 경우도 정의되어 있지 않습니다.  
   
 > [!NOTE]
 > 정의되지 않은 두 시나리오 중 하나의 경우 구현자는 <xref:System.InvalidOperationException>을 throw하는 것을 고려해야 합니다.  

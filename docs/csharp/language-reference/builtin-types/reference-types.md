@@ -142,9 +142,9 @@ public delegate int AnotherDelegate(MyType m, long num);
 
 `dynamic` 유형은 변수 및 해당 멤버에 대한 참조 사용이 컴파일 파일 형식 검사를 바이패스함을 나타냅니다. 대신, 이러한 작업은 런타임에 확인됩니다. `dynamic` 형식은 Office Automation API와 같은 COM API, IronPython 라이브러리 등의 동적 API 및 HTML DOM(문서 개체 모델)에 대한 액세스를 간소화합니다.
 
-`dynamic` 형식은 대부분의 상황에서 `object` 형식처럼 동작합니다. 특히 null이 아닌 모든 식은 `dynamic` 형식으로 변환될 수 있습니다. `dynamic` 유형의 식을 포함하는 작업은 컴파일러에서 확인되거나 형식이 검사되지 않았다는 점에서 `object` 유형은 `dynamic`와 다릅니다. 컴파일러는 작업에 대한 정보를 패키지하며, 나중에 해당 정보는 런타임에 작업을 평가하는 데 사용됩니다. 이 과정에서 `dynamic` 형식의 변수는 `object` 형식의 변수로 컴파일됩니다. 따라서 `dynamic` 형식은 컴파일 시간에만 존재하고 런타임에는 존재하지 않습니다.
+`dynamic` 형식은 대부분의 상황에서 `object` 형식처럼 동작합니다. 특히 null이 아닌 모든 식은 `dynamic` 형식으로 변환될 수 있습니다. `dynamic` 유형의 식을 포함하는 작업은 컴파일러에서 확인되거나 형식이 검사되지 않았다는 점에서 `dynamic` 유형은 `object`와 다릅니다. 컴파일러는 작업에 대한 정보를 패키지하며, 나중에 해당 정보는 런타임에 작업을 평가하는 데 사용됩니다. 이 과정에서 `dynamic` 형식의 변수는 `object` 형식의 변수로 컴파일됩니다. 따라서 `dynamic` 형식은 컴파일 시간에만 존재하고 런타임에는 존재하지 않습니다.
 
-다음 예제에서는 `dynamic` 형식의 변수와 `object` 형식의 변수를 비교합니다. 컴파일 시간에 각 변수의 형식을 확인하려면 `dyn` 문의 `obj` 또는 `WriteLine` 위에 마우스 포인터를 놓습니다. IntelliSense를 사용할 수 있는 편집기로 다음 코드를 복사합니다. IntelliSense는 **에 대해** dynamic`dyn`을 표시하고 **에 대해** object`obj`를 표시합니다.
+다음 예제에서는 `dynamic` 형식의 변수와 `object` 형식의 변수를 비교합니다. 컴파일 시간에 각 변수의 형식을 확인하려면 `WriteLine` 문의 `dyn` 또는 `obj` 위에 마우스 포인터를 놓습니다. IntelliSense를 사용할 수 있는 편집기로 다음 코드를 복사합니다. IntelliSense는 `dyn`에 대해 **dynamic**을 표시하고 `obj`에 대해 **object**를 표시합니다.
 
 [!code-csharp[csrefKeywordsTypes#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/dynamic1.cs#21)]
 
@@ -162,7 +162,7 @@ dyn = dyn + 3;
 obj = obj + 3;
 ```
 
- `obj + 3` 식에 정수와 개체를 추가하려는 시도와 관련해서 컴파일러 오류가 보고됩니다. 하지만 `dyn + 3`에 대한 오류는 보고되지 않습니다. `dyn`의 형식이 `dyn`이기 때문에 `dynamic`을 포함하는 식은 컴파일 시간에 확인되지 않습니다.
+ `obj + 3` 식에 정수와 개체를 추가하려는 시도와 관련해서 컴파일러 오류가 보고됩니다. 하지만 `dyn + 3`에 대한 오류는 보고되지 않습니다. `dyn`의 형식이 `dynamic`이기 때문에 `dyn`을 포함하는 식은 컴파일 시간에 확인되지 않습니다.
 
 다음 예제에서는 여러 선언에 `dynamic`을 사용합니다. 또한 `Main` 메서드는 컴파일 시간 형식 검사를 런타임 형식 검사와 비교합니다.
 

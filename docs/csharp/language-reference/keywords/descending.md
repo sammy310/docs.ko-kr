@@ -20,7 +20,7 @@ ms.locfileid: "75713587"
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 `descending`orderby 절[에 ](./orderby-clause.md)을 사용하는 방법을 보여 줍니다.
+다음 예제에서는 [orderby 절](./orderby-clause.md)에 `descending`을 사용하는 방법을 보여 줍니다.
 
 [!code-csharp[csrefKeywordsContextual#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#11)]
 

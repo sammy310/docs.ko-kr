@@ -26,7 +26,7 @@ C# 프로그램의 형식, 멤버 및 기타 엔터티는 동작의 특정 측�
 
 특성에 의해 정의된 메타데이터는 리플렉션을 사용하여 런타임 시 읽고 조작할 수 있습니다. 이 기술을 사용하여 특정 특성이 요청되면 특성 클래스에 대한 생성자가 프로그램 소스에 제공된 정보와 함께 호출되고 결과 특성 인스턴스가 반환됩니다. 속성을 통해 추가 정보를 제공한 경우 해당 속성은 특성 인스턴스가 반환되기 전에 지정된 값으로 설정됩니다.
 
-다음 코드 샘플에서는 `HelpAttribute` 클래스와 해당 `Widget` 메서드에 연결된 `Display` 인스턴스를 가져오는 방법을 보여줍니다.
+다음 코드 샘플에서는 `Widget` 클래스와 해당 `Display` 메서드에 연결된 `HelpAttribute` 인스턴스를 가져오는 방법을 보여줍니다.
 
 [!code-csharp[AttributeRead](../../../samples/snippets/csharp/tour/attributes/Program.cs#ReadAttributes)]
 

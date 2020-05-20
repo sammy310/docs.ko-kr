@@ -76,13 +76,13 @@ hero.FirstName = "";
 ### <a name="read-only"></a>읽기 전용
 
 이 시점까지 살펴본 모든 속성 정의는 공용 접근자를 사용한 읽기/쓰기 속성입니다. 속성에 유효한 유일한 액세스 가능성은 아닙니다.
-읽기 전용 속성을 만들거나 set 및 get 접근자에 대해 다른 액세스 가능성을 제공할 수 있습니다. `Person` 클래스가 해당 클래스의 다른 메서드에서만 `FirstName` 속성의 값을 변경할 수 있도록 한다고 가정합니다. set 접근자에 `private` 대신 `public` 액세스 가능성을 제공할 수 있습니다.
+읽기 전용 속성을 만들거나 set 및 get 접근자에 대해 다른 액세스 가능성을 제공할 수 있습니다. `Person` 클래스가 해당 클래스의 다른 메서드에서만 `FirstName` 속성의 값을 변경할 수 있도록 한다고 가정합니다. set 접근자에 `public` 대신 `private` 액세스 가능성을 제공할 수 있습니다.
 
 [!code-csharp[Using a private setter for a publicly readonly property](../../samples/snippets/csharp/properties/Person.cs#8)]
 
 이제 `FirstName` 속성을 모든 코드에서 액세스할 수 있지만 `Person` 클래스의 다른 코드에서만 할당할 수 있습니다.
 
-set 또는 get 접근자에 제한적인 액세스 한정자를 추가할 수 있습니다. 개별 접근자에 설정하는 액세스 한정자는 속성 정의의 액세스 한정자보다 더 제한적이어야 합니다. 위 내용은 `FirstName` 속성이 `public`이지만 set 접근자가 `private`이므로 유효합니다. `private` 접근자를 사용하여 `public` 속성을 선언할 수 없습니다. 속성 선언을 `protected`, `internal`, `protected internal` 또는 `private`로 선언할 수도 있습니다.
+set 또는 get 접근자에 제한적인 액세스 한정자를 추가할 수 있습니다. 개별 접근자에 설정하는 액세스 한정자는 속성 정의의 액세스 한정자보다 더 제한적이어야 합니다. 위 내용은 `FirstName` 속성이 `public`이지만 set 접근자가 `private`이므로 유효합니다. `public` 접근자를 사용하여 `private` 속성을 선언할 수 없습니다. 속성 선언을 `protected`, `internal`, `protected internal` 또는 `private`로 선언할 수도 있습니다.
 
 `get` 접근자에 더 제한적인 한정자를 설정하는 것도 가능합니다. 예를 들어 `public` 속성이 있지만 `get` 접근자를 `private`로 제한할 수 있습니다. 이 시나리오는 실제로 거의 수행되지 않습니다.
 
@@ -107,7 +107,7 @@ public class Measurements
 
 위 예에서는 [문자열 보간](./language-reference/tokens/interpolated.md) 기능을 사용하여 전체 이름에 대한 서식이 지정된 문자열을 만듭니다.
 
-계산된 *속성을 만드는 보다 간결한 방법을 제공하는*식 본문 멤버`FullName`를 사용할 수도 있습니다.
+계산된 `FullName` 속성을 만드는 보다 간결한 방법을 제공하는 *식 본문 멤버*를 사용할 수도 있습니다.
 
 [!code-csharp[A computed property using an expression bodied member](../../samples/snippets/csharp/properties/Person.cs#11)]
 
@@ -119,7 +119,7 @@ public class Measurements
 
 [!code-csharp[Caching the value of a computed property](../../samples/snippets/csharp/properties/Person.cs#12)]
 
-하지만 위의 코드에는 버그가 포함되어 있습니다. 코드가 `FirstName` 또는 `LastName` 속성의 값을 업데이트하는 경우 이전에 평가한 `fullName` 필드는 유효하지 않습니다. `set` 필드가 다시 평가되도록 `FirstName` 및 `LastName` 속성의 `fullName` 접근자를 수정합니다.
+하지만 위의 코드에는 버그가 포함되어 있습니다. 코드가 `FirstName` 또는 `LastName` 속성의 값을 업데이트하는 경우 이전에 평가한 `fullName` 필드는 유효하지 않습니다. `fullName` 필드가 다시 평가되도록 `FirstName` 및 `LastName` 속성의 `set` 접근자를 수정합니다.
 
 [!code-csharp[Invalidating the cache correctly](../../samples/snippets/csharp/properties/Person.cs#13)]
 
@@ -128,8 +128,8 @@ public class Measurements
 
 ### <a name="attaching-attributes-to-auto-implemented-properties"></a>자동 구현 속성에 특성 연결
 
-C# 7.3부터 필드 특성은 자동 구현된 속성의 컴파일러에서 생성된 지원 필드에 연결될 수 있습니다. 예를 들어 고유한 정수 `Person` 속성을 추가하는 `Id` 클래스에 대한 수정 버전을 사용합니다.
-자동 구현 속성을 사용하여 `Id` 속성을 작성하지만 디자인은 `Id` 속성을 유지하기 위해 호출하지 않습니다. <xref:System.NonSerializedAttribute>는 속성이 아니라 필드에만 연결할 수 있습니다. 다음 예제와 같이 특성에 <xref:System.NonSerializedAttribute> 지정자를 사용하여 `Id` 속성의 지원 필드에 `field:`를 연결할 수 있습니다.
+C# 7.3부터 필드 특성은 자동 구현된 속성의 컴파일러에서 생성된 지원 필드에 연결될 수 있습니다. 예를 들어 고유한 정수 `Id` 속성을 추가하는 `Person` 클래스에 대한 수정 버전을 사용합니다.
+자동 구현 속성을 사용하여 `Id` 속성을 작성하지만 디자인은 `Id` 속성을 유지하기 위해 호출하지 않습니다. <xref:System.NonSerializedAttribute>는 속성이 아니라 필드에만 연결할 수 있습니다. 다음 예제와 같이 특성에 `field:` 지정자를 사용하여 `Id` 속성의 지원 필드에 <xref:System.NonSerializedAttribute>를 연결할 수 있습니다.
 
 [!code-csharp[Attaching attributes to a backing field](../../samples/snippets/csharp/properties/Person.cs#14)]
 
@@ -137,7 +137,7 @@ C# 7.3부터 필드 특성은 자동 구현된 속성의 컴파일러에서 생�
 
 ### <a name="implementing-inotifypropertychanged"></a>INotifyPropertyChanged 구현
 
-속성 접근자에서 코드를 작성해야 하는 최종 시나리오는 값이 변경되었다고 데이터 바인딩 클라이언트에 알리는 데 사용되는 <xref:System.ComponentModel.INotifyPropertyChanged> 인터페이스를 지원하는 것입니다. 속성의 값이 변경되면 개체가 <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged?displayProperty=nameWithType> 이벤트를 발생시켜 변경되었음을 나타냅니다. 데이터 바인딩 라이브러리가 해당 변경 내용에 따라 차례로 표시 요소를 업데이트합니다. 아래 코드는 이 person 클래스의 `INotifyPropertyChanged` 속성에 대해 `FirstName`를 구현하는 방법을 보여 줍니다.
+속성 접근자에서 코드를 작성해야 하는 최종 시나리오는 값이 변경되었다고 데이터 바인딩 클라이언트에 알리는 데 사용되는 <xref:System.ComponentModel.INotifyPropertyChanged> 인터페이스를 지원하는 것입니다. 속성의 값이 변경되면 개체가 <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged?displayProperty=nameWithType> 이벤트를 발생시켜 변경되었음을 나타냅니다. 데이터 바인딩 라이브러리가 해당 변경 내용에 따라 차례로 표시 요소를 업데이트합니다. 아래 코드는 이 person 클래스의 `FirstName` 속성에 대해 `INotifyPropertyChanged`를 구현하는 방법을 보여 줍니다.
 
 [!code-csharp[invalidating the cache correctly](../../samples/snippets/csharp/properties/Person.cs#15)]
 

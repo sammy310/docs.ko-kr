@@ -22,13 +22,13 @@ ms.locfileid: "73127594"
 모든 숫자 형식에는 두 개의 정적 구문 분석 메서드인 `Parse` 및 `TryParse`가 있습니다. 이를 사용하여 숫자의 문자열 표현을 숫자 형식으로 변환할 수 있습니다. 이러한 메서드를 사용하면 [표준 숫자 서식 문자열](../../../docs/standard/base-types/standard-numeric-format-strings.md) 및 [사용자 지정 숫자 서식 문자열](../../../docs/standard/base-types/custom-numeric-format-strings.md)에서 설명하는 서식 문자열을 사용하여 생성된 문자열을 구문 분석할 수 있습니다. 기본적으로 `Parse` 및 `TryParse` 메서드는 정수 소수 자릿수를 포함하는 문자열을 정수 값으로 변환할 수 있습니다. 정수 및 소수 10진수 숫자, 그룹 구분 기호 및 소수 구분 기호를 포함하는 문자열을 부동 소수점 값으로 성공적으로 변환할 수 있습니다. 작업에 실패하면 `Parse` 메서드는 예외를 throw하지만 `TryParse` 메서드는 `false`를 반환합니다.  
   
 ## <a name="parsing-and-format-providers"></a>구문 분석 및 서식 공급자  
- 일반적으로 숫자 값의 문자열 표현은 문화권마다 다릅니다. 통화 기호, 그룹(또는 천 단위 자리) 구분 기호 및 소수 구분 기호와 같은 숫자 문자열의 요소는 모두 문화권마다 다릅니다. 구문 분석 메서드는 이러한 문화권별 차이를 인식하는 서식 공급자를 암시적 또는 명시적으로 사용합니다. 형식 공급자가 `Parse` 또는 `TryParse` 메서드에 대한 호출에서 지정되지 않은 경우 현재 스레드 문화권과 연결된 형식 공급자(<xref:System.Globalization.NumberFormatInfo> 속성에서 반환한 <xref:System.Globalization.NumberFormatInfo.CurrentInfo%2A?displayProperty=nameWithType> 개체)가 사용됩니다.  
+ 일반적으로 숫자 값의 문자열 표현은 문화권마다 다릅니다. 통화 기호, 그룹(또는 천 단위 자리) 구분 기호 및 소수 구분 기호와 같은 숫자 문자열의 요소는 모두 문화권마다 다릅니다. 구문 분석 메서드는 이러한 문화권별 차이를 인식하는 서식 공급자를 암시적 또는 명시적으로 사용합니다. 형식 공급자가 `Parse` 또는 `TryParse` 메서드에 대한 호출에서 지정되지 않은 경우 현재 스레드 문화권과 연결된 형식 공급자(<xref:System.Globalization.NumberFormatInfo.CurrentInfo%2A?displayProperty=nameWithType> 속성에서 반환한 <xref:System.Globalization.NumberFormatInfo> 개체)가 사용됩니다.  
   
  형식 공급자는 <xref:System.IFormatProvider> 구현으로 나타납니다. 이 인터페이스에는 단일 멤버인 <xref:System.IFormatProvider.GetFormat%2A> 메서드가 있으며, 이 메서드의 단일 매개 변수는 서식을 지정할 형식을 나타내는 <xref:System.Type> 개체입니다. 이 메서드는 서식 지정 정보를 제공하는 개체를 반환합니다. .NET에서는 숫자 문자열을 구문 분석하기 위해 다음과 같은 두 가지 <xref:System.IFormatProvider> 구현을 지원합니다.  
   
-- <xref:System.Globalization.CultureInfo> 메서드가 문화권별 서식 지정 정보를 제공하는 <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> 개체를 반환하는 <xref:System.Globalization.NumberFormatInfo> 개체.  
+- <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> 메서드가 문화권별 서식 지정 정보를 제공하는 <xref:System.Globalization.NumberFormatInfo> 개체를 반환하는 <xref:System.Globalization.CultureInfo> 개체.  
   
-- <xref:System.Globalization.NumberFormatInfo> 메서드가 그 자체를 반환하는 <xref:System.Globalization.NumberFormatInfo.GetFormat%2A?displayProperty=nameWithType> 개체.  
+- <xref:System.Globalization.NumberFormatInfo.GetFormat%2A?displayProperty=nameWithType> 메서드가 그 자체를 반환하는 <xref:System.Globalization.NumberFormatInfo> 개체.  
   
  다음 예제에서는 배열의 각 문자열을 <xref:System.Double> 값으로 변환하려고 합니다. 먼저 영어(미국) 문화권의 규칙을 반영하는 서식 공급자를 사용하여 문자열을 구문 분석하려고 합니다. 이 작업에서 <xref:System.FormatException>을 throw하는 경우 프랑스어(프랑스) 문화권의 규칙을 반영하는 형식 공급자를 사용하여 문자열을 구문 분석하려고 합니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "73127594"
  [!code-vb[Parsing.Numbers#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/parsing.numbers/vb/formatproviders1.vb#1)]  
   
 ## <a name="parsing-and-numberstyles-values"></a>구문 분석 및 NumberStyles 값  
- 구문 분석 작업이 처리할 수 있는 스타일 요소(예: 공백, 그룹 구분 기호 및 소수 구분 기호)는 <xref:System.Globalization.NumberStyles> 열거형 값으로 정의됩니다. 기본적으로 정수 값을 나타내는 문자열은 숫자, 선행 및 후행 공백 및 선행 기호만을 허용하는 <xref:System.Globalization.NumberStyles.Integer?displayProperty=nameWithType> 값을 사용하여 구문 분석됩니다. 부동 소수점 값을 나타내는 문자열은 <xref:System.Globalization.NumberStyles.Float?displayProperty=nameWithType> 및 <xref:System.Globalization.NumberStyles.AllowThousands?displayProperty=nameWithType> 값의 조합을 사용하여 구문 분석됩니다. 이 복합 스타일은 선행 및 후행 공백, 선행 기호, 소수 구분 기호, 그룹 구분 기호 및 지수와 함께 10진수 숫자를 허용합니다. 구문 분석 작업에 성공하기 위해 `Parse` 형식의 매개 변수를 포함하는 `TryParse` 또는 <xref:System.Globalization.NumberStyles> 메서드의 오버로드를 호출하고 <xref:System.Globalization.NumberStyles> 플래그를 하나 이상 설정하여 문자열에 나타낼 수 있는 스타일 요소를 제어할 수 있습니다.  
+ 구문 분석 작업이 처리할 수 있는 스타일 요소(예: 공백, 그룹 구분 기호 및 소수 구분 기호)는 <xref:System.Globalization.NumberStyles> 열거형 값으로 정의됩니다. 기본적으로 정수 값을 나타내는 문자열은 숫자, 선행 및 후행 공백 및 선행 기호만을 허용하는 <xref:System.Globalization.NumberStyles.Integer?displayProperty=nameWithType> 값을 사용하여 구문 분석됩니다. 부동 소수점 값을 나타내는 문자열은 <xref:System.Globalization.NumberStyles.Float?displayProperty=nameWithType> 및 <xref:System.Globalization.NumberStyles.AllowThousands?displayProperty=nameWithType> 값의 조합을 사용하여 구문 분석됩니다. 이 복합 스타일은 선행 및 후행 공백, 선행 기호, 소수 구분 기호, 그룹 구분 기호 및 지수와 함께 10진수 숫자를 허용합니다. 구문 분석 작업에 성공하기 위해 <xref:System.Globalization.NumberStyles> 형식의 매개 변수를 포함하는 `Parse` 또는 `TryParse` 메서드의 오버로드를 호출하고 <xref:System.Globalization.NumberStyles> 플래그를 하나 이상 설정하여 문자열에 나타낼 수 있는 스타일 요소를 제어할 수 있습니다.  
   
  예를 들어 그룹 구분 기호를 포함하는 문자열은 <xref:System.Int32> 메서드를 사용하여 <xref:System.Int32.Parse%28System.String%29?displayProperty=nameWithType> 값으로 변환할 수 없지만, 다음 예제에서 설명하는 것처럼 <xref:System.Globalization.NumberStyles.AllowThousands?displayProperty=nameWithType> 플래그를 사용할 경우 변환이 성공합니다.  
   

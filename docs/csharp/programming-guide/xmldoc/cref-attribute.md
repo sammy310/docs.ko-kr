@@ -17,11 +17,11 @@ XML 문서 태그의 `cref` 특성은 "코드 참조"를 의미합니다. 태그
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 `cref`[see>\< 태그에 사용된 ](./see.md) 특성을 보여 줍니다.
+다음 예제에서는 [\<see>](./see.md) 태그에 사용된 `cref` 특성을 보여 줍니다.
 
 [!code-csharp[csProgGuideDocComments#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#3)]
 
-컴파일하면 프로그램이 다음 XML 파일을 생성합니다. 예를 들어 `cref` 메서드의 `GetZero` 특성은 컴파일러에서 `"M:TestNamespace.TestClass.GetZero"`로 변환되었습니다. "M:" 접두사는 "메서드"를 의미하며, DocFX 및 Sandcastle 등의 문서화 도구에서 인식되는 규칙입니다. 접두사의 전체 목록은 [XML 파일 처리](./processing-the-xml-file.md)를 참조하세요.
+컴파일하면 프로그램이 다음 XML 파일을 생성합니다. 예를 들어 `GetZero` 메서드의 `cref` 특성은 컴파일러에서 `"M:TestNamespace.TestClass.GetZero"`로 변환되었습니다. "M:" 접두사는 "메서드"를 의미하며, DocFX 및 Sandcastle 등의 문서화 도구에서 인식되는 규칙입니다. 접두사의 전체 목록은 [XML 파일 처리](./processing-the-xml-file.md)를 참조하세요.
 
 ```xml  
 <?xml version="1.0"?>

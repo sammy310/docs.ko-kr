@@ -157,7 +157,7 @@ End Function
 
 [!code-vb[Sample_TestCode](../../../samples/snippets/core/testing/unit-testing-vb-nunit/vb/PrimeService.Tests/PrimeService_IsPrimeShould.vb?name=Sample_TestCode)]
 
-`dotnet test`를 실행합니다. 그러면 이러한 테스트 중 2개가 실패합니다. 모든 테스트를 통과하려면 `if`PrimeServices.cs`Main` 파일에서 *메서드의 시작 부분에 있는* 절을 변경합니다.
+`dotnet test`를 실행합니다. 그러면 이러한 테스트 중 2개가 실패합니다. 모든 테스트를 통과하려면 *PrimeServices.cs* 파일에서 `Main` 메서드의 시작 부분에 있는 `if` 절을 변경합니다.
 
 ```vb
 if candidate < 2

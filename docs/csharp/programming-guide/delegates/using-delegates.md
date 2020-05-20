@@ -13,7 +13,7 @@ ms.locfileid: "77448441"
 ---
 # <a name="using-delegates-c-programming-guide"></a>대리자 사용(C# 프로그래밍 가이드)
 
-[대리자](../../language-reference/builtin-types/reference-types.md)는 C 및 C++의 함수 포인터처럼 메서드를 안전하게 캡슐화하는 형식입니다. 함수 포인터와는 달리 대리자는 개체 지향적이고 형식이 안전하며 보안이 유지됩니다. 대리자의 형식은 대리자의 이름으로 정의됩니다. 다음 예제에서는 `Del`string[을 인수로 사용하고 ](../../language-reference/builtin-types/reference-types.md)void[를 반환하는 메서드를 캡슐화할 수 있는 ](../../language-reference/builtin-types/void.md) 대리자를 선언합니다.
+[대리자](../../language-reference/builtin-types/reference-types.md)는 C 및 C++의 함수 포인터처럼 메서드를 안전하게 캡슐화하는 형식입니다. 함수 포인터와는 달리 대리자는 개체 지향적이고 형식이 안전하며 보안이 유지됩니다. 대리자의 형식은 대리자의 이름으로 정의됩니다. 다음 예제에서는 [string](../../language-reference/builtin-types/reference-types.md)을 인수로 사용하고 [void](../../language-reference/builtin-types/void.md)를 반환하는 메서드를 캡슐화할 수 있는 `Del` 대리자를 선언합니다.
 
 [!code-csharp[csProgGuideDelegates#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#21)]
 

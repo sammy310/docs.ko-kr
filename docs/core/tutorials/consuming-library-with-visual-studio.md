@@ -30,7 +30,7 @@ ms.locfileid: "76920452"
 
 [Visual Studio에서 .NET Standard 라이브러리 테스트](testing-library-with-visual-studio.md)의 클래스 라이브러리와 동일한 솔루션에 단위 테스트를 포함한 것처럼 애플리케이션을 해당 솔루션의 일부로 포함할 수 있습니다. 예를 들어 사용자가 문자열을 입력하도록 요구하고 첫 번째 문자가 대문자인지 여부를 보고하는 콘솔 애플리케이션에서 이 클래스 라이브러리를 사용할 수 있습니다.
 
-1. `ClassLibraryProjects`Visual Studio에서 .NET Standard 라이브러리 빌드[ 문서에서 만든 ](library-with-visual-studio.md) 솔루션을 엽니다.
+1. [Visual Studio에서 .NET Standard 라이브러리 빌드](library-with-visual-studio.md) 문서에서 만든 `ClassLibraryProjects` 솔루션을 엽니다.
 
 1. "ShowCase"라는 새 .NET Core 콘솔 애플리케이션을 솔루션에 추가합니다.
 
@@ -61,7 +61,7 @@ ms.locfileid: "76920452"
 
    프로그램에서 문자열을 입력하라는 메시지를 사용자에게 표시합니다. 문자열이 대문자로 시작하는지 여부를 나타냅니다. 사용자가 문자열을 입력하지 않고 Enter 키를 누르면 애플리케이션이 종료되고 콘솔 창이 닫힙니다.
 
-1. 필요한 경우 도구 모음을 변경하여 컴파일하는 **프로젝트의**디버그`ShowCase` 릴리스를 컴파일합니다. **ShowCase** 단추에서 녹색 화살표를 선택하여 프로그램을 컴파일하고 실행합니다.
+1. 필요한 경우 도구 모음을 변경하여 컴파일하는 `ShowCase` 프로젝트의 **디버그** 릴리스를 컴파일합니다. **ShowCase** 단추에서 녹색 화살표를 선택하여 프로그램을 컴파일하고 실행합니다.
 
    ![Visual Studio 프로젝트 도구 모음 디버그 단추 표시](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
 

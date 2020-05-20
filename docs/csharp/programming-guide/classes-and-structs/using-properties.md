@@ -31,7 +31,7 @@ ms.locfileid: "77452021"
 
 ## <a name="the-get-accessor"></a>get 접근자
 
-`get` 접근자 본문은 메서드 본문과 유사합니다. 속성 형식의 값을 반환해야 합니다. `get` 접근자의 실행은 필드 값을 읽는 것과 같습니다. 예를 들어 `get` 접근자에서 private 변수를 반환하고 최적화가 사용되는 경우 `get` 접근자 메서드 호출이 컴파일러에서 인라인되므로 메서드 호출 오버헤드가 없습니다. 그러나 가상 `get` 접근자 메서드는 컴파일러에서 런타임 시 실제로 호출될 수 있는 메서드를 컴파일 시간에 알 수 없기 때문에 인라인할 수 없습니다. 다음은 전용 필드 `get`의 값을 반환하는 `_name` 접근자입니다.
+`get` 접근자 본문은 메서드 본문과 유사합니다. 속성 형식의 값을 반환해야 합니다. `get` 접근자의 실행은 필드 값을 읽는 것과 같습니다. 예를 들어 `get` 접근자에서 private 변수를 반환하고 최적화가 사용되는 경우 `get` 접근자 메서드 호출이 컴파일러에서 인라인되므로 메서드 호출 오버헤드가 없습니다. 그러나 가상 `get` 접근자 메서드는 컴파일러에서 런타임 시 실제로 호출될 수 있는 메서드를 컴파일 시간에 알 수 없기 때문에 인라인할 수 없습니다. 다음은 전용 필드 `_name`의 값을 반환하는 `get` 접근자입니다.
 
 [!code-csharp[csProgGuideProperties#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#8)]
 
@@ -61,7 +61,7 @@ ms.locfileid: "77452021"
 
 [!code-csharp[csProgGuideProperties#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#13)]
 
-`value` 접근자의 지역 변수 선언에 대해 암시적 매개 변수 이름 `set`를 사용하면 오류가 발생합니다.
+`set` 접근자의 지역 변수 선언에 대해 암시적 매개 변수 이름 `value`를 사용하면 오류가 발생합니다.
 
 ## <a name="remarks"></a>설명
 
@@ -74,7 +74,7 @@ ms.locfileid: "77452021"
 가상 속성을 재정의하는 속성이 [sealed](../../language-reference/keywords/sealed.md)일 수도 있으며, 파생 클래스에 대해 더 이상 가상이 아니도록 지정합니다. 마지막으로, 속성을 [abstract](../../language-reference/keywords/abstract.md)로 선언할 수 있습니다. 즉, 클래스에 구현이 없으며 파생 클래스가 자체 구현을 작성해야 합니다. 이러한 옵션에 대한 자세한 내용은 [추상 및 봉인 클래스와 클래스 멤버](abstract-and-sealed-classes-and-class-members.md)를 참조하세요.
   
 > [!NOTE]
-> [static](../../language-reference/keywords/virtual.md) 속성의 접근자에 [virtual](../../language-reference/keywords/abstract.md), [abstract](../../language-reference/keywords/override.md) 또는 [override](../../language-reference/keywords/static.md) 한정자를 사용하면 오류가 발생합니다.
+> [static](../../language-reference/keywords/static.md) 속성의 접근자에 [virtual](../../language-reference/keywords/virtual.md), [abstract](../../language-reference/keywords/abstract.md) 또는 [override](../../language-reference/keywords/override.md) 한정자를 사용하면 오류가 발생합니다.
 
 ## <a name="example"></a>예제
 

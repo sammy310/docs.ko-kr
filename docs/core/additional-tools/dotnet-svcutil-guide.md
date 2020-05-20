@@ -83,7 +83,7 @@ Windows, macOS 또는 Linux 명령 창에서 다음 단계를 수행합니다.
     </ItemGroup>
     ```
 
-    그리고 다음과 같이  [ 명령을 사용하여 `dotnet restore`dotnet-svcutil](../tools/dotnet-restore.md) 패키지를 복원합니다.
+    그리고 다음과 같이 [`dotnet restore`](../tools/dotnet-restore.md) 명령을 사용하여 _dotnet-svcutil_ 패키지를 복원합니다.
 
     ```dotnetcli
     dotnet restore

@@ -133,7 +133,7 @@ Logger.WriteMessage -= LoggingMethods.LogToConsole;
 
 ## <a name="handling-null-delegates"></a>Null 대리자 처리
 
-마지막으로 출력 메커니즘을 선택하지 않은 경우에 보다 강력하도록 LogMessage 메서드를 업데이트해 보겠습니다. `NullReferenceException` 대리자에 연결된 호출 목록이 없는 경우 현재 구현에서는 `WriteMessage`을 throw합니다.
+마지막으로 출력 메커니즘을 선택하지 않은 경우에 보다 강력하도록 LogMessage 메서드를 업데이트해 보겠습니다. `WriteMessage` 대리자에 연결된 호출 목록이 없는 경우 현재 구현에서는 `NullReferenceException`을 throw합니다.
 메서드가 연결되지 않은 경우에도 자동으로 계속되는 디자인을 원할 수 있습니다. `Delegate.Invoke()` 메서드와 결합된 null 조건부 연산자를 사용하면 간단합니다.
 
 ```csharp
@@ -143,9 +143,9 @@ public static void LogMessage(string msg)
 }
 ```
 
-왼쪽 피연산자(이 경우 `?.`)가 null이면 null 조건부 연산자(`WriteMessage`)가 단락됩니다. 즉, 메시지를 기록하려고 시도하지 않는다는 의미입니다.
+왼쪽 피연산자(이 경우 `WriteMessage`)가 null이면 null 조건부 연산자(`?.`)가 단락됩니다. 즉, 메시지를 기록하려고 시도하지 않는다는 의미입니다.
 
-`Invoke()` 또는 `System.Delegate`에 대한 설명서에 나열된 `System.MulticastDelegate` 메서드를 찾을 수 없습니다. 컴파일러는 선언된 모든 대리자 형식에 대해 형식이 안전한 `Invoke` 메서드를 생성합니다. 따라서 이 예제에서 `Invoke`는 단일 `string` 인수를 사용하고 void 반환 형식을 갖습니다.
+`System.Delegate` 또는 `System.MulticastDelegate`에 대한 설명서에 나열된 `Invoke()` 메서드를 찾을 수 없습니다. 컴파일러는 선언된 모든 대리자 형식에 대해 형식이 안전한 `Invoke` 메서드를 생성합니다. 따라서 이 예제에서 `Invoke`는 단일 `string` 인수를 사용하고 void 반환 형식을 갖습니다.
 
 ## <a name="summary-of-practices"></a>사례의 요약
 

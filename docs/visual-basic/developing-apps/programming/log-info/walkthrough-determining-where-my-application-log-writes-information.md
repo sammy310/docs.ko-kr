@@ -45,7 +45,7 @@ ms.locfileid: "74353602"
 
         이들 섹션이 없으면 `My.Application.Log` 에 기본 로그 수신기만 있는 경우입니다.
 
-3. <`add>` 섹션에서 <`listeners>` 요소를 찾습니다.
+3. <`listeners>` 섹션에서 <`add>` 요소를 찾습니다.
 
      이들 요소는 명명된 로그 수신기를 `My.Application.Log` 소스에 추가합니다.
 

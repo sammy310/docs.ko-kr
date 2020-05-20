@@ -34,7 +34,7 @@ public delegate void Action<in T1, in T2>(T1 arg1, T2 arg2);
 
 제네릭 형식 인수에 대한 `in` 한정자는 공변성(Covariance)에 대한 문서에서 설명합니다.
 
-`Action` 같이 최대 16개의 인수가 포함된 <xref:System.Action%6016> 대리자의 변형이 있습니다.
+<xref:System.Action%6016> 같이 최대 16개의 인수가 포함된 `Action` 대리자의 변형이 있습니다.
 이러한 정의에서는 각 대리자 인수에 대해 서로 다른 제네릭 인수를 사용하여 최대한의 유연성을 제공합니다. 메서드 인수는 같은 형식일 필요가 없지만 같은 형식일 수 있습니다.
 
 void 반환 형식을 갖는 대리자 형식에 대해 `Action` 형식 중 하나를 사용합니다.
@@ -50,7 +50,7 @@ public delegate TResult Func<in T1, in T2, out TResult>(T1 arg1, T2 arg2);
 
 결과 제네릭 형식 인수에 대한 `out` 한정자는 공변성(Covariance)에 대한 문서에서 설명합니다.
 
-`Func` 같이 최대 16개의 입력 인수가 포함된 <xref:System.Func%6017> 대리자의 변형이 있습니다.
+<xref:System.Func%6017> 같이 최대 16개의 입력 인수가 포함된 `Func` 대리자의 변형이 있습니다.
 규칙에 따라 결과의 형식은 모든 `Func` 선언에서 항상 마지막 형식 매개 변수입니다.
 
 값을 반환하는 모든 대리자 형식에 대해 `Func` 형식 중 하나를 사용합니다.

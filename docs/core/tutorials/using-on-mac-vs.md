@@ -47,7 +47,7 @@ Visual Studio for Mac은 .NET Core 애플리케이션 개발을 위해 필요한
 
    ![새 콘솔 애플리케이션 대화 상자 구성](./media/using-on-mac-vs/visual-studio-mac-new-options.png)
 
-1. 프로젝트의 종속성이 복원되는 동안 기다립니다. 프로젝트에는 *메서드가 있는* 클래스를 포함하는 C# 파일 `Program`Program.cs`Main`가 있습니다. 앱이 실행되면 `Console.WriteLine` 문은 "Hello World!"를 콘솔에 출력합니다.
+1. 프로젝트의 종속성이 복원되는 동안 기다립니다. 프로젝트에는 `Main` 메서드가 있는 `Program` 클래스를 포함하는 C# 파일 *Program.cs*가 있습니다. 앱이 실행되면 `Console.WriteLine` 문은 "Hello World!"를 콘솔에 출력합니다.
 
    ![Program.cs 파일이 열려 있는 주 창](./media/using-on-mac-vs/visual-studio-mac-editor.png)
 

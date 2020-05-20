@@ -26,7 +26,7 @@ ms.locfileid: "73137962"
   
  이 예제에서는 다중 스레드 액세스를 위해 사용자 동기화가 필요한 <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> 클래스를 사용합니다. .NET Framework 버전 4를 대상으로 하는 애플리케이션에서 다른 옵션은 사용자 잠금이 필요하지 않은 <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType>를 사용하는 것입니다.  
   
- `false`에 대한 호출에서 `False`(Visual Basic의 경우 <xref:System.Threading.SpinLock.Exit%2A?displayProperty=nameWithType>)를 사용합니다. 그러면 최상의 성능을 제공합니다. IA64 아키텍처에서 `true`(Visual Basic에서 `True`)를 지정하여 메모리 담장을 사용합니다. 그러면 쓰기 버퍼를 플러시하여 종료할 다른 스레드에서 잠금을 사용할 수 있는지 확인합니다.  
+ <xref:System.Threading.SpinLock.Exit%2A?displayProperty=nameWithType>에 대한 호출에서 `false`(Visual Basic의 경우 `False`)를 사용합니다. 그러면 최상의 성능을 제공합니다. IA64 아키텍처에서 `true`(Visual Basic에서 `True`)를 지정하여 메모리 담장을 사용합니다. 그러면 쓰기 버퍼를 플러시하여 종료할 다른 스레드에서 잠금을 사용할 수 있는지 확인합니다.  
   
 ## <a name="see-also"></a>참고 항목
 

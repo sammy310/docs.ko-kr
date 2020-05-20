@@ -20,7 +20,7 @@ ms.locfileid: "74349194"
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>방법: Visual Basic에서 레지스트리 키 만들기 및 값 설정
 
-`CreateSubKey` 개체의 `My.Computer.Registry` 메서드를 사용하여 레지스트리 키를 만들 수 있습니다.
+`My.Computer.Registry` 개체의 `CreateSubKey` 메서드를 사용하여 레지스트리 키를 만들 수 있습니다.
 
 ## <a name="procedure"></a>절차
 
@@ -52,7 +52,7 @@ ms.locfileid: "74349194"
 
 웹 애플리케이션에서 레지스트리를 읽는 경우 현재 사용자는 웹 애플리케이션에 구현된 인증 및 가장에 따라 결정됩니다.
 
-로컬 컴퓨터(<xref:Microsoft.Win32.Registry.CurrentUser>)보다 사용자 폴더(<xref:Microsoft.Win32.Registry.LocalMachine>)에 데이터를 쓰는 것이 더 안전합니다.
+로컬 컴퓨터(<xref:Microsoft.Win32.Registry.LocalMachine>)보다 사용자 폴더(<xref:Microsoft.Win32.Registry.CurrentUser>)에 데이터를 쓰는 것이 더 안전합니다.
 
 레지스트리 값을 만들 때 해당 값이 이미 있는 경우 수행할 작업을 결정해야 합니다. 다른 악성 프로세스에서 값을 이미 만들고 액세스했을 수도 있습니다. 레지스트리 값에 데이터를 넣으면 다른 프로세스에서 해당 데이터를 사용할 수 있습니다. 이를 방지하려면 <xref:Microsoft.Win32.RegistryKey.GetValue%2A> 메서드를 사용합니다. 키가 아직 없는 경우 `Nothing`이 반환됩니다.
 

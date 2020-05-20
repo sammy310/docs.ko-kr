@@ -87,7 +87,7 @@ GitHub의 [샘플 리포지토리](https://github.com/dotnet/samples/blob/master
         PrimeServiceTests.vbproj
 ```
 
-[unit-testing-vb-mstest`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj` 디렉터리에서 ](../tools/dotnet-sln.md)  를 실행합니다.
+*unit-testing-vb-mstest* 디렉터리에서 [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj`](../tools/dotnet-sln.md)를 실행합니다.
 
 ## <a name="creating-the-first-test"></a>첫 번째 테스트 만들기
 

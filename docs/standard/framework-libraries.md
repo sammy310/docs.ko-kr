@@ -34,7 +34,7 @@ BCL은 가장 기본적인 형식과 유틸리티 기능을 제공하며 다른 
 * <xref:System.Byte?displayProperty=nameWithType>([byte](../csharp/language-reference/builtin-types/integral-numeric-types.md)) - 1바이트의 메모리를 나타내는 부호 없는 8비트 정수입니다.
 * <xref:System.Boolean?displayProperty=nameWithType>([bool](../csharp/language-reference/builtin-types/bool.md)) - `true` 또는 `false`를 나타내는 부울 형식입니다.
 * <xref:System.Char?displayProperty=nameWithType>([char](../csharp/language-reference/builtin-types/char.md)) - 유니코드 문자를 나타내는 16비트 숫자 형식입니다.
-* <xref:System.String?displayProperty=nameWithType>([string](../csharp/language-reference/builtin-types/reference-types.md#the-string-type)) - 일련의 문자를 나타냅니다. `char[]`와 다르지만 `char`의 각 개별 `string`를 인덱싱할 수 있습니다.
+* <xref:System.String?displayProperty=nameWithType>([string](../csharp/language-reference/builtin-types/reference-types.md#the-string-type)) - 일련의 문자를 나타냅니다. `char[]`와 다르지만 `string`의 각 개별 `char`를 인덱싱할 수 있습니다.
 
 ## <a name="data-structures"></a>데이터 구조
 

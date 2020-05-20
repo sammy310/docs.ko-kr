@@ -47,7 +47,7 @@ C# 7.0에서 무시 항목은 다음 컨텍스트의 할당에서 지원됩니�
 
 *무시 패턴*은 [is](language-reference/keywords/is.md) 및 [switch](language-reference/keywords/switch.md) 키워드를 사용한 패턴 일치에서 사용할 수 있습니다. 모든 식은 무시 패턴과 항상 일치됩니다.
 
-다음 예제에서는 `ProvidesFormatInfo`is[ 문을 사용하여 개체가 ](language-reference/keywords/is.md) 구현을 제공하고 개체가 <xref:System.IFormatProvider>인지 테스트하는지를 결정하는 `null` 메서드를 정의합니다. 또한 무시 패턴을 사용하여 다른 형식의 null이 아닌 개체도 처리합니다.
+다음 예제에서는 [is](language-reference/keywords/is.md) 문을 사용하여 개체가 <xref:System.IFormatProvider> 구현을 제공하고 개체가 `null`인지 테스트하는지를 결정하는 `ProvidesFormatInfo` 메서드를 정의합니다. 또한 무시 패턴을 사용하여 다른 형식의 null이 아닌 개체도 처리합니다.
 
 [!code-csharp[discard-pattern](../../samples/snippets/csharp/programming-guide/discards/discard-pattern2.cs)]
 

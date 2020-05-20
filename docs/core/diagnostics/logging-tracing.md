@@ -42,7 +42,7 @@ ms.locfileid: "75714419"
 - <xref:System.Diagnostics.Debug?displayProperty=nameWithType>
   - `DEBUG`가 정의된 경우에만 사용하도록 설정됩니다.
   - 연결된 디버거에 씁니다.
-  - `*nix`가 설정된 경우 `COMPlus_DebugWriteToStdErr`에서 stderr에 씁니다.
+  - `COMPlus_DebugWriteToStdErr`가 설정된 경우 `*nix`에서 stderr에 씁니다.
   - 디버그 빌드에서만 사용하도록 설정될 로그를 만드는 경우 이 API를 사용합니다.
 
 ### <a name="logging-events"></a>이벤트 로깅

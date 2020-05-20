@@ -27,7 +27,7 @@ sealed class B : A {}
 
 ## <a name="example"></a>예제
 
-다음 예제에서 `Z`는 `Y`에서 상속하지만 `Z`는 `F`에서 선언되고 `X`에서 봉인된 가상 함수 `Y`를 재정의할 수 없습니다.
+다음 예제에서 `Z`는 `Y`에서 상속하지만 `Z`는 `X`에서 선언되고 `Y`에서 봉인된 가상 함수 `F`를 재정의할 수 없습니다.
 
 [!code-csharp[csrefKeywordsModifiers#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#16)]
 

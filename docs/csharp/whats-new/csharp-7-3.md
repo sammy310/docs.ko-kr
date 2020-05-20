@@ -56,7 +56,7 @@ unsafe struct S
 }
 ```
 
-이전 버전의 C#에서는 `myFixedField`의 일부인 정수 중 하나에 액세스하려면 변수를 고정해야 했습니다. 이제 다음 코드는 별도의 `p` 문 안에 `fixed` 변수를 고정하지 않고 컴파일됩니다.
+이전 버전의 C#에서는 `myFixedField`의 일부인 정수 중 하나에 액세스하려면 변수를 고정해야 했습니다. 이제 다음 코드는 별도의 `fixed` 문 안에 `p` 변수를 고정하지 않고 컴파일됩니다.
 
 ```csharp
 class C
@@ -121,7 +121,7 @@ Span<int> arr = stackalloc [] {1, 2, 3};
 
 ### <a name="more-types-support-the-fixed-statement"></a>더 많은 형식이 `fixed` 문을 지원함
 
-`fixed` 문은 제한된 형식 집합을 지원했습니다. C# 7.3부터 `GetPinnableReference()` 또는 `ref T`를 반환하는 `ref readonly T` 메서드를 포함하는 모든 형식이 `fixed`일 수 있습니다. 이 기능을 추가하면 `fixed`를 <xref:System.Span%601?displayProperty=nameWithType> 및 관련 형식과 함께 사용할 수 있습니다.
+`fixed` 문은 제한된 형식 집합을 지원했습니다. C# 7.3부터 `ref T` 또는 `ref readonly T`를 반환하는 `GetPinnableReference()` 메서드를 포함하는 모든 형식이 `fixed`일 수 있습니다. 이 기능을 추가하면 `fixed`를 <xref:System.Span%601?displayProperty=nameWithType> 및 관련 형식과 함께 사용할 수 있습니다.
 
 자세한 내용은 언어 참조에서 [`fixed` 문](../language-reference/keywords/fixed-statement.md) 문서를 참조하세요.
 
@@ -141,7 +141,7 @@ Span<int> arr = stackalloc [] {1, 2, 3};
 
 ### <a name="tuples-support--and-"></a>튜플은 `==` 및 `!=`를 지원합니다.
 
-C# 튜플 형식은 이제 `==` 및 `!=`를 지원합니다. 자세한 내용은 [튜플](../tuples.md#equality-and-tuples)에 대한 문서에서 [같음](../tuples.md)을 다루는 섹션을 참조하세요.
+C# 튜플 형식은 이제 `==` 및 `!=`를 지원합니다. 자세한 내용은 [튜플](../tuples.md)에 대한 문서에서 [같음](../tuples.md#equality-and-tuples)을 다루는 섹션을 참조하세요.
 
 ### <a name="attach-attributes-to-the-backing-fields-for-auto-implemented-properties"></a>자동 구현 속성의 지원 필드에 특성 연결
 

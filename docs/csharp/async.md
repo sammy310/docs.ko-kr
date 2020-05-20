@@ -22,9 +22,9 @@ C#에는 콜백을 조작하거나 비동기를 지원하는 라이브러리를 
 
 비동기 프로그래밍의 핵심은 비동기 작업을 모델링하는 `Task` 및 `Task<T>` 개체입니다.  이러한 개체는 `async` 및 `await` 키워드를 통해 지원됩니다.  대부분의 경우 모델은 매우 간단합니다.
 
-I/O 바인딩된 코드에서는 `await` 메서드의 내부에 `Task` 또는 `Task<T>`를 `async`합니다.
+I/O 바인딩된 코드에서는 `async` 메서드의 내부에 `Task` 또는 `Task<T>`를 `await`합니다.
 
-CPU 바인딩된 코드에서는 `await` 메서드와 함께 백그라운드 스레드에서 시작되는 작업을 `Task.Run`합니다.
+CPU 바인딩된 코드에서는 `Task.Run` 메서드와 함께 백그라운드 스레드에서 시작되는 작업을 `await`합니다.
 
 `await` 키워드가 마법이 일어나는 곳입니다. `await`를 수행한 메서드의 호출자에게 제어를 넘기고, 궁극적으로 UI가 응답하거나 서비스가 탄력적일 수 있도록 합니다.
 
@@ -170,7 +170,7 @@ private async void SeeTheDotNets_Click(object sender, RoutedEventArgs e)
 
 동시에 데이터의 여러 부분을 검색해야 하는 상황이 될 수 있습니다.  `Task` API에는 여러 백그라운드 작업에서 비차단 대기를 수행하는 비동기 코드를 작성할 수 있는 `Task.WhenAll` 및 `Task.WhenAny` 메서드가 포함됩니다.
 
-이 예제에서는 `User` 집합에 대한 `userId` 데이터를 확인하는 방법을 보여 줍니다.
+이 예제에서는 `userId` 집합에 대한 `User` 데이터를 확인하는 방법을 보여 줍니다.
 
 ```csharp
 public async Task<User> GetUserAsync(int userId)
@@ -212,7 +212,7 @@ public static async Task<User[]> GetUsersAsync(IEnumerable<int> userIds)
 }
 ```
 
-코드 양은 더 적지만 LINQ를 비동기 코드와 혼합할 경우 주의하세요.  LINQ는 연기된(지연) 실행을 사용하므로, `foreach()` 또는 `.ToList()` 호출을 반복하도록 생성된 시퀀스를 적용해야 비동기 호출이 `.ToArray()` 루프에서 수행되면 즉시 비동기 호출이 발생합니다.
+코드 양은 더 적지만 LINQ를 비동기 코드와 혼합할 경우 주의하세요.  LINQ는 연기된(지연) 실행을 사용하므로, `.ToList()` 또는 `.ToArray()` 호출을 반복하도록 생성된 시퀀스를 적용해야 비동기 호출이 `foreach()` 루프에서 수행되면 즉시 비동기 호출이 발생합니다.
 
 ## <a name="important-info-and-advice"></a>중요한 정보 및 조언
 
@@ -228,7 +228,7 @@ public static async Task<User[]> GetUsersAsync(IEnumerable<int> userIds)
 
 * `async void`는 **이벤트 처리기에만 사용해야 합니다.**
 
-이벤트에는 반환 형식이 없어서 `async void` 및 `Task`를 사용할 수 없으므로 비동기 이벤트 처리기가 작동하도록 허용하는 유일한 방법은 `Task<T>`입니다. `async void`의 다른 사용은 TAP 모델을 따르지 않고 다음과 같이 사용이 어려울 수 있습니다.
+이벤트에는 반환 형식이 없어서 `Task` 및 `Task<T>`를 사용할 수 없으므로 비동기 이벤트 처리기가 작동하도록 허용하는 유일한 방법은 `async void`입니다. `async void`의 다른 사용은 TAP 모델을 따르지 않고 다음과 같이 사용이 어려울 수 있습니다.
 
 * `async void` 메서드에서 throw된 예외는 해당 메서드 외부에서 catch될 수 없습니다.
 * `async void` 메서드는 테스트하기 매우 어렵습니다.

@@ -23,7 +23,7 @@ ms.locfileid: "75712847"
 - 참조 형식.
 - 포인터 형식(안전하지 않은 컨텍스트에서). 포인터 자체는 volatile이 될 수 있지만, 포인터가 가리키는 개체는 volatile이 될 수 없습니다. 즉, "pointer to volatile"을 선언할 수 없습니다.
 - `sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `char`, `float` 및 `bool`와 같은 단순 형식.
-- 기본 형식 `enum`, `byte`, `sbyte`, `short`, `ushort` 또는 `int` 중 하나가 있는 `uint` 형식.
+- 기본 형식 `byte`, `sbyte`, `short`, `ushort`, `int` 또는 `uint` 중 하나가 있는 `enum` 형식.
 - 참조 형식으로 알려진 제네릭 형식 매개 변수.
 - <xref:System.IntPtr>와 <xref:System.UIntPtr>을 참조하세요.
 
@@ -41,7 +41,7 @@ ms.locfileid: "75712847"
 
 [!code-csharp[declareVolatile](~/samples/snippets/csharp/language-reference/keywords/volatile/Program.cs#Volatile)]
 
-`volatile`의 선언에 `_shouldStop` 한정자를 추가하면 항상 동일한 결과가 표시됩니다(앞의 코드에 표시된 것과 유사함). 그러나 `_shouldStop` 멤버의 해당 한정자가 없으면 동작을 예측할 수 없습니다. `DoWork` 메서드가 멤버 액세스를 최적화할 수 있으므로 부실 데이터를 읽게 됩니다. 다중 스레드 프로그래밍의 특성으로 인해 부실 읽기 수는 예측할 수 없습니다. 프로그램의 실행에 따라 약간 다른 결과가 생성됩니다.
+`_shouldStop`의 선언에 `volatile` 한정자를 추가하면 항상 동일한 결과가 표시됩니다(앞의 코드에 표시된 것과 유사함). 그러나 `_shouldStop` 멤버의 해당 한정자가 없으면 동작을 예측할 수 없습니다. `DoWork` 메서드가 멤버 액세스를 최적화할 수 있으므로 부실 데이터를 읽게 됩니다. 다중 스레드 프로그래밍의 특성으로 인해 부실 읽기 수는 예측할 수 없습니다. 프로그램의 실행에 따라 약간 다른 결과가 생성됩니다.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 

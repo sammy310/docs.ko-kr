@@ -37,7 +37,7 @@ ms.locfileid: "75713399"
 
 ## <a name="group-join"></a>그룹 조인
 
-`join` 식을 포함한 `into` 절을 그룹 조인이라고 합니다.
+`into` 식을 포함한 `join` 절을 그룹 조인이라고 합니다.
 
 [!code-csharp[cscsrefQueryKeywords#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Join.cs#25)]
 
@@ -63,7 +63,7 @@ ms.locfileid: "75713399"
 
 ## <a name="the-equals-operator"></a>같음 연산자
 
-`join` 절은 동등 조인을 수행합니다. 즉, 일치 항목만을 기준으로 두 키가 같은지 비교할 수 있습니다. "보다 큼"이나 "같지 않음"과 같은 다른 유형의 비교는 지원되지 않습니다. 모든 조인이 동등 조인인지 확인하기 위해 `join` 절은 `equals` 연산자 대신 `==` 키워드를 사용합니다. `equals` 키워드는 `join` 절에서만 사용할 수 있으며 한 가지 중요한 측면에서 `==` 연산자와 다릅니다. `equals`를 사용할 경우 왼쪽 키는 외부 소스 시퀀스를 사용하고 오른쪽 키는 내부 소스를 사용합니다. 외부 소스는 `equals`의 왼쪽 범위에만 있고 내부 소스 시퀀스는 오른쪽 범위에만 있습니다.
+`join` 절은 동등 조인을 수행합니다. 즉, 일치 항목만을 기준으로 두 키가 같은지 비교할 수 있습니다. "보다 큼"이나 "같지 않음"과 같은 다른 유형의 비교는 지원되지 않습니다. 모든 조인이 동등 조인인지 확인하기 위해 `join` 절은 `==` 연산자 대신 `equals` 키워드를 사용합니다. `equals` 키워드는 `join` 절에서만 사용할 수 있으며 한 가지 중요한 측면에서 `==` 연산자와 다릅니다. `equals`를 사용할 경우 왼쪽 키는 외부 소스 시퀀스를 사용하고 오른쪽 키는 내부 소스를 사용합니다. 외부 소스는 `equals`의 왼쪽 범위에만 있고 내부 소스 시퀀스는 오른쪽 범위에만 있습니다.
 
 ## <a name="non-equijoins"></a>비동등 조인
 
@@ -87,7 +87,7 @@ LINQ 쿼리 식에서 조인 작업은 개체 컬렉션에서 수행됩니다. �
 
 ## <a name="remarks"></a>설명
 
-뒤에 `join`가 오지 않는 `into` 절은 <xref:System.Linq.Enumerable.Join%2A> 메서드 호출로 변환됩니다. 뒤에 `join`가 오는 `into` 절은 <xref:System.Linq.Enumerable.GroupJoin%2A> 메서드 호출로 변환됩니다.
+뒤에 `into`가 오지 않는 `join` 절은 <xref:System.Linq.Enumerable.Join%2A> 메서드 호출로 변환됩니다. 뒤에 `into`가 오는 `join` 절은 <xref:System.Linq.Enumerable.GroupJoin%2A> 메서드 호출로 변환됩니다.
 
 ## <a name="see-also"></a>참고 항목
 

@@ -23,7 +23,7 @@ ms.locfileid: "74334630"
   
 ### <a name="to-parse-a-fixed-width-text-file"></a>고정 너비 텍스트 파일을 구문 분석하려면  
   
-1. 새 `TextFieldParser`를 만듭니다. 다음 코드는 `TextFieldParser`라는 `Reader`를 만들고 `test.log` 파일을 엽니다.  
+1. 새 `TextFieldParser`를 만듭니다. 다음 코드는 `Reader`라는 `TextFieldParser`를 만들고 `test.log` 파일을 엽니다.  
   
      [!code-vb[VbFileIORead#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#9)]  
   
@@ -35,7 +35,7 @@ ms.locfileid: "74334630"
   
      [!code-vb[VbFileIORead#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#11)]  
   
-4. `While` 및 `Using`을 사용하여 `End While` 및 `End Using` 블록을 닫습니다.  
+4. `End While` 및 `End Using`을 사용하여 `While` 및 `Using` 블록을 닫습니다.  
   
      [!code-vb[VbFileIORead#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#12)]  
   

@@ -27,7 +27,7 @@ ms.locfileid: "73128966"
 |[뮤텍스](mutexes.md)|공유 리소스에 대한 배타적 액세스 권한을 부여하는 <xref:System.Threading.Mutex?displayProperty=nameWithType> 클래스를 설명합니다.|
 |[세마포 및 SemaphoreSlim](semaphore-and-semaphoreslim.md)|공유 리소스 또는 리소스 풀에 동시에 액세스할 수 있는 스레드 수를 제한하는 <xref:System.Threading.Semaphore?displayProperty=nameWithType> 클래스를 설명합니다.|
 |[장벽](barrier.md)|단계별 작업에서 스레드를 조정하기 위해 장벽 패턴을 구현하는 <xref:System.Threading.Barrier?displayProperty=nameWithType> 클래스를 설명합니다.|
-|[SpinLock](spinlock.md)|특정 하위 수준 잠금 시나리오의 <xref:System.Threading.SpinLock?displayProperty=nameWithType> 클래스에 대한 간단한 대체 항목인 <xref:System.Threading.Monitor?displayProperty=nameWithType> 구조체를 설명합니다.|
+|[SpinLock](spinlock.md)|특정 하위 수준 잠금 시나리오의 <xref:System.Threading.Monitor?displayProperty=nameWithType> 클래스에 대한 간단한 대체 항목인 <xref:System.Threading.SpinLock?displayProperty=nameWithType> 구조체를 설명합니다.|
 |[SpinWait](spinwait.md)|회전 기반 대기를 지원하는 <xref:System.Threading.SpinWait?displayProperty=nameWithType> 구조체를 설명합니다.|
 
 ## <a name="see-also"></a>참고 항목

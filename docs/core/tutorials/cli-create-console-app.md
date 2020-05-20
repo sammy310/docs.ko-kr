@@ -56,7 +56,7 @@ dotnet run
 
     프로그램은 `using System`으로 시작됩니다. 즉, "`System` 네임스페이스의 모든 항목을 이 파일 범위로 가져옵니다". `System` 네임스페이스는 `Console` 클래스를 포함합니다.
 
-    그런 다음 `Hello`라는 네임스페이스를 정의합니다. 이 이름은 원하는 값으로 변경할 수 있습니다. `Program`이라는 클래스는 해당 네임스페이스 내에서 `Main`라는 문자열 배열을 사용하는 `args` 메서드로 정의됩니다. 이 배열에는 프로그램이 실행될 때 전달되는 인수 목록이 포함되어 있습니다. 이 상태 그대로 배열은 사용되지 않으며 프로그램은 단순히 "Hello World!"라는 텍스트를 작성합니다. 보여 줍니다. 나중에 이 인수를 사용하는 코드를 변경할 예정입니다.
+    그런 다음 `Hello`라는 네임스페이스를 정의합니다. 이 이름은 원하는 값으로 변경할 수 있습니다. `Program`이라는 클래스는 해당 네임스페이스 내에서 `args`라는 문자열 배열을 사용하는 `Main` 메서드로 정의됩니다. 이 배열에는 프로그램이 실행될 때 전달되는 인수 목록이 포함되어 있습니다. 이 상태 그대로 배열은 사용되지 않으며 프로그램은 단순히 "Hello World!"라는 텍스트를 작성합니다. 보여 줍니다. 나중에 이 인수를 사용하는 코드를 변경할 예정입니다.
 
     `dotnet new`는 [dotnet restore](../tools/dotnet-restore.md)를 암시적으로 호출합니다. `dotnet restore`는 [NuGet](https://www.nuget.org/)(.NET 패키지 관리자)을 호출하여 종속성 트리를 복원합니다. NuGet은 *Hello.csproj* 파일을 분석하고, 파일에 정의된 종속성을 다운로드하고(또는 머신의 캐시에서 종속성을 가져오고), 샘플을 컴파일 및 실행하는 데 필요한 *obj/project.assets.json* 파일을 작성합니다.
 
@@ -142,7 +142,7 @@ dotnet run
 
     [!code-csharp[Fibonacci Generator](~/samples/snippets/core/tutorials/cli-create-console-app/FibonacciBetterMsBuild/csharp/FibonacciGenerator.cs)]
 
-02. 다음 예제에서처럼 `Main`Program.cs*파일의* 메서드를 변경하여 새 클래스를 인스턴스화하고 메서드를 호출합니다.
+02. 다음 예제에서처럼 *Program.cs* 파일의 `Main` 메서드를 변경하여 새 클래스를 인스턴스화하고 메서드를 호출합니다.
 
     [!code-csharp[New Program.cs](~/samples/snippets/core/tutorials/cli-create-console-app/FibonacciBetterMsBuild/csharp/Program.cs)]
 
@@ -176,7 +176,7 @@ dotnet run
 
 ## <a name="publish-your-app"></a>앱 게시
 
-앱을 배포할 준비가 되면 [dotnet publish](../tools/dotnet-publish.md) 명령을 사용하여 _bin_debug_netcoreapp3.1\\publish\\\\에서 \\publish_ 폴더를 생성합니다(비 Windows 시스템의 경우 `/` 사용). 이미 dotnet 런타임을 설치한 경우에 _publish_ 폴더의 콘텐츠를 다른 플랫폼에 배포할 수 있습니다.
+앱을 배포할 준비가 되면 [dotnet publish](../tools/dotnet-publish.md) 명령을 사용하여 _bin\\debug\\netcoreapp3.1\\publish\\_에서 _publish_ 폴더를 생성합니다(비 Windows 시스템의 경우 `/` 사용). 이미 dotnet 런타임을 설치한 경우에 _publish_ 폴더의 콘텐츠를 다른 플랫폼에 배포할 수 있습니다.
 
 ```dotnetcli
 dotnet publish

@@ -20,7 +20,7 @@ ms.locfileid: "75713250"
 
 ## <a name="example"></a>예제
 
-이 예에서 `Square` 클래스는 `GetArea`가 추상 `GetArea` 클래스에서 상속되기 때문에 `Shape`의 재정의된 구현을 제공해야 합니다.
+이 예에서 `Square` 클래스는 `GetArea`가 추상 `Shape` 클래스에서 상속되기 때문에 `GetArea`의 재정의된 구현을 제공해야 합니다.
 
 [!code-csharp[csrefKeywordsModifiers#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#1)]
 

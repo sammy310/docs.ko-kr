@@ -29,7 +29,7 @@ ms.locfileid: "71048908"
 # <a name="basic-and-digest-authentication"></a>기본 인증 및 다이제스트 인증
 기본 및 다이제스트 인증의 <xref:System.Net> 구현은 RFC2617 – HTTP 인증: 기본 및 다이제스트([World Wide Web 컨소시엄](https://www.w3.org) 웹 사이트에서 사용 가능)를 준수합니다.  
   
- 기본 및 다이제스트 인증을 사용하려면 다음 예제와 같이 애플리케이션이 인터넷에서 데이터를 요청하는 데 사용하는 <xref:System.Net.WebRequest.Credentials%2A> 개체의 <xref:System.Net.WebRequest> 속성에 사용자 이름 및 암호를 제공해야 합니다.  
+ 기본 및 다이제스트 인증을 사용하려면 다음 예제와 같이 애플리케이션이 인터넷에서 데이터를 요청하는 데 사용하는 <xref:System.Net.WebRequest> 개체의 <xref:System.Net.WebRequest.Credentials%2A> 속성에 사용자 이름 및 암호를 제공해야 합니다.  
   
 ```vb  
 Dim MyURI As String = "http://www.contoso.com/"  

@@ -123,7 +123,7 @@ AnAttribute="abc"  IsNamespaceDeclaration:False
 ```  
   
 ### <a name="xpath-axis-methods-do-not-return-child-white-space-of-xdocument"></a>XPath 축 메서드에서 XDocument의 자식 공백을 반환하지 않음  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 텍스트 노드에 공백만 포함되어 있는 경우 <xref:System.Xml.Linq.XDocument>의 자식 텍스트 노드를 허용합니다. 그러나 XPath 개체 모델에서는 문서의 자식 노드로 공백을 포함하지 않으므로 <xref:System.Xml.Linq.XDocument> 축을 사용하여 <xref:System.Xml.Linq.XContainer.Nodes%2A>의 자식을 반복할 때 공백 텍스트 노드가 반환됩니다. 그러나 XPath 축 메서드를 사용하여 <xref:System.Xml.Linq.XDocument>의 자식을 반복하는 경우에는 공백 텍스트 노드가 반환되지 않습니다.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 텍스트 노드에 공백만 포함되어 있는 경우 <xref:System.Xml.Linq.XDocument>의 자식 텍스트 노드를 허용합니다. 그러나 XPath 개체 모델에서는 문서의 자식 노드로 공백을 포함하지 않으므로 <xref:System.Xml.Linq.XContainer.Nodes%2A> 축을 사용하여 <xref:System.Xml.Linq.XDocument>의 자식을 반복할 때 공백 텍스트 노드가 반환됩니다. 그러나 XPath 축 메서드를 사용하여 <xref:System.Xml.Linq.XDocument>의 자식을 반복하는 경우에는 공백 텍스트 노드가 반환되지 않습니다.  
   
 ```csharp  
 // Create a document with some white-space child nodes of the document.  

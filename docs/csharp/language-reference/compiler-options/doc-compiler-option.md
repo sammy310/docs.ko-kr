@@ -43,7 +43,7 @@ ms.locfileid: "73422968"
   
  [IntelliSense](/visualstudio/ide/using-intellisense) 기능에서 사용하기 위해 생성된 .xml 파일을 사용하려면 .xml 파일의 이름을 지원하려는 어셈블리와 동일하게 지정한 다음 .xml 파일이 어셈블리와 동일한 디렉터리에 있도록 해야 합니다. 따라서 어셈블리가 Visual Studio 프로젝트에서 참조되면 .xml 파일도 검색됩니다. 자세한 내용은 [코드 주석 제공](/visualstudio/ide/reference/generate-xml-documentation-comments)을 참조하세요.  
   
- [-target:module](./target-module-compiler-option.md)을 사용하여 컴파일하지 않으면 컴파일의 출력 파일에 대한 어셈블리 매니페스트를 포함하는 파일의 이름을 지정하는 `file`assembly>\</assembly> 태그가 \<에 포함됩니다.  
+ [-target:module](./target-module-compiler-option.md)을 사용하여 컴파일하지 않으면 컴파일의 출력 파일에 대한 어셈블리 매니페스트를 포함하는 파일의 이름을 지정하는 \<assembly>\</assembly> 태그가 `file`에 포함됩니다.  
   
 > [!NOTE]
 > -doc 옵션은 모든 입력 파일에 적용됩니다. 또는 Progect Settings에서 설정한 경우 프로젝트의 모든 파일에 적용됩니다. 특정 파일 또는 코드 섹션에 대한 문서 주석 관련 경고를 사용하지 않으려면 [#pragma warning](../preprocessor-directives/preprocessor-pragma-warning.md)을 사용하세요.  

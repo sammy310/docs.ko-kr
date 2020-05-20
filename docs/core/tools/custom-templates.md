@@ -22,7 +22,7 @@ NuGet *.nupkg* 파일을 직접 참조하거나 템플릿이 포함된 파일 �
 
 ### <a name="net-default-templates"></a>.NET 기본 템플릿
 
-[.NET Core SDK](https://dotnet.microsoft.com/download)를 설치할 때 콘솔 앱, 클래스 라이브러리, 단위 테스트 프로젝트, ASP.NET Core 앱([Angular](https://angular.io/) 및 [React](https://facebook.github.io/react/) 프로젝트 포함) 및 구성 파일을 비롯한 프로젝트 및 파일을 만들 수 있는 12개 이상의 기본 제공 템플릿이 제공됩니다. 기본 제공 템플릿을 나열하려면 `dotnet new` 옵션과 함께 `-l|--list` 명령을 실행합니다.
+[.NET Core SDK](https://dotnet.microsoft.com/download)를 설치할 때 콘솔 앱, 클래스 라이브러리, 단위 테스트 프로젝트, ASP.NET Core 앱([Angular](https://angular.io/) 및 [React](https://facebook.github.io/react/) 프로젝트 포함) 및 구성 파일을 비롯한 프로젝트 및 파일을 만들 수 있는 12개 이상의 기본 제공 템플릿이 제공됩니다. 기본 제공 템플릿을 나열하려면 `-l|--list` 옵션과 함께 `dotnet new` 명령을 실행합니다.
 
 ```dotnetcli
 dotnet new --list
@@ -56,7 +56,7 @@ dotnet new --list
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | *template.json* 파일에 대한 JSON 스키마. 스키마 지정 시 JSON 스키마가 JSON 편집 기능을 구현하도록 지원하는 편집기. 예를 들어 [Visual Studio Code](https://code.visualstudio.com/)에서는 이 멤버가 IntelliSense를 구현해야 합니다. `http://json.schemastore.org/template` 값을 사용하세요. |
 | `author`          | string        | 템플릿 작성자. |
-| `classifications` | array(string) | 사용자가 템플릿 검색 시 템플릿을 찾는 데 사용할 수 있는 0개 이상의 템플릿 특성. *명령을 사용하여 생성된 템플릿 목록에 템플릿이 나타날 때*태그`dotnet new -l|--list` 열에 분류도 표시됩니다. |
+| `classifications` | array(string) | 사용자가 템플릿 검색 시 템플릿을 찾는 데 사용할 수 있는 0개 이상의 템플릿 특성. `dotnet new -l|--list` 명령을 사용하여 생성된 템플릿 목록에 템플릿이 나타날 때 *태그* 열에 분류도 표시됩니다. |
 | `identity`        | string        | 이 템플릿의 공유한 이름. |
 | `name`            | string        | 사용자에게 표시되어야 하는 템플릿의 이름. |
 | `shortName`       | string        | GUI를 통해 선택하는 것이 아니라 사용자가 템플릿 이름을 지정하는 환경에 적용되는, 템플릿 선택에 사용되는 기본 약식 이름. 예를 들어 명령 프롬프트에서 템플릿과 CLI 명령을 함께 사용할 경우 짧은 이름이 유용합니다. |
@@ -89,11 +89,11 @@ dotnet new --list
 }
 ```
 
-*mytemplate* 폴더는 설치 가능한 템플릿 팩입니다. 팩이 설치되고 나면, `shortName` 명령에 `dotnet new`을 사용할 수 있습니다. 예를 들어 `dotnet new adatumconsole`은 `console.cs` 및 `readme.txt` 파일을 현재 폴더에 출력합니다.
+*mytemplate* 폴더는 설치 가능한 템플릿 팩입니다. 팩이 설치되고 나면, `dotnet new` 명령에 `shortName`을 사용할 수 있습니다. 예를 들어 `dotnet new adatumconsole`은 `console.cs` 및 `readme.txt` 파일을 현재 폴더에 출력합니다.
 
 ## <a name="packing-a-template-into-a-nuget-package-nupkg-file"></a>템플릿을 NuGet 패키지(nupkg 파일)로 압축
 
-사용자 지정 템플릿은 [dotnet pack](dotnet-pack.md) 명령과 *.csproj* 파일을 사용하여 압축됩니다. 또는 [nuget pack](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference) 명령 및 [.nuspec](https://docs.microsoft.com/nuget/tools/cli-ref-pack) 파일과 함께 *NuGet*을 사용할 수 있습니다. 그러나 NuGet을 사용하려면 Windows에서는 .NET Framework가 필요하고, Linux 및 MacOS에서는 [Mono](https://www.mono-project.com/)가 필요합니다.
+사용자 지정 템플릿은 [dotnet pack](dotnet-pack.md) 명령과 *.csproj* 파일을 사용하여 압축됩니다. 또는 [nuget pack](https://docs.microsoft.com/nuget/tools/cli-ref-pack) 명령 및 *.nuspec* 파일과 함께 [NuGet](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference)을 사용할 수 있습니다. 그러나 NuGet을 사용하려면 Windows에서는 .NET Framework가 필요하고, Linux 및 MacOS에서는 [Mono](https://www.mono-project.com/)가 필요합니다.
 
 *.csproj* 파일은 기존의 코드 프로젝트 *.csproj* 파일과 약간 다릅니다. 다음 설정에 유의하세요.
 
@@ -105,11 +105,11 @@ dotnet new --list
 
 *.nupkg* NuGet 패키지 양식의 템플릿 팩은 모든 템플릿이 패키지 내의 *content* 폴더에 저장되어 있어야 합니다. 생성된 *.nupkg*을 템플릿 팩으로 설치할 수 있도록 *.csproj* 파일에 추가해야 하는 몇 가지 설정이 더 있습니다.
 
-01. 프로젝트에서 NuGet 패키지의 `<IncludeContentInPack>`content`true`로 설정하는 모든 파일이 포함되도록 **설정을**로 지정합니다.
+01. 프로젝트에서 NuGet 패키지의 **content**로 설정하는 모든 파일이 포함되도록 `<IncludeContentInPack>` 설정을 `true`로 지정합니다.
 01. 컴파일러가 NuGet 패키지에서 생성하는 모든 이진 파일이 제외되도록 `<IncludeBuildOutput>` 설정을 `false`로 지정합니다.
 01. `<ContentTargetFolders>` 설정을 `content`로 지정합니다. 이렇게 하면 **content**로 설정된 파일이 NuGet 패키지의 *content* 폴더에 저장됩니다. NuGet 패키지의 이 폴더는 dotnet 템플릿 시스템에서 구문 분석됩니다.
 
-템플릿 프로젝트에서 코드 파일이 컴파일되지 않도록 모두 제외하는 간편한 방법은 프로젝트 파일의 `<Compile Remove="**\*" />` 요소에 `<ItemGroup>` 항목을 사용하는 것입니다.
+템플릿 프로젝트에서 코드 파일이 컴파일되지 않도록 모두 제외하는 간편한 방법은 프로젝트 파일의 `<ItemGroup>` 요소에 `<Compile Remove="**\*" />` 항목을 사용하는 것입니다.
 
 템플릿 팩을 구성하는 간편한 방법은 모든 템플릿을 개별 폴더에 넣은 다음, *.csproj* 파일과 동일한 디렉터리에 있는 *templates* 폴더에 각 템플릿 폴더를 넣는 것입니다. 이렇게 하면 단일 프로젝트 항목을 사용하여 *templates*에 있는 모든 파일과 폴더를 **content**로 포함할 수 있습니다. `<ItemGroup>` 요소 내부에 `<Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />` 항목을 만듭니다.
 
@@ -242,7 +242,7 @@ dotnet new -u <ABSOLUTE_FILE_SYSTEM_DIRECTORY>
 
 ## <a name="create-a-project-using-a-custom-template"></a>사용자 지정 템플릿을 사용하여 프로젝트 만들기
 
-템플릿이 설치된 후 다른 미리 설치된 템플릿을 사용하는 것처럼 `dotnet new <TEMPLATE>` 명령을 실행하여 템플릿을 사용합니다. 템플릿 설정에서 구성한 템플릿 관련 옵션을 포함하여 [ 명령에 대한 ](dotnet-new.md#options)옵션`dotnet new`을 지정할 수도 있습니다. 템플릿의 짧은 이름을 직접 명령에 제공합니다.
+템플릿이 설치된 후 다른 미리 설치된 템플릿을 사용하는 것처럼 `dotnet new <TEMPLATE>` 명령을 실행하여 템플릿을 사용합니다. 템플릿 설정에서 구성한 템플릿 관련 옵션을 포함하여 `dotnet new` 명령에 대한 [옵션](dotnet-new.md#options)을 지정할 수도 있습니다. 템플릿의 짧은 이름을 직접 명령에 제공합니다.
 
 ```dotnetcli
 dotnet new <TEMPLATE>

@@ -24,7 +24,7 @@ ms.locfileid: "75715281"
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 `goto`switch[ 문에서 ](switch.md)의 사용 방법을 보여 줍니다.
+다음 예제에서는 [switch](switch.md) 문에서 `goto`의 사용 방법을 보여 줍니다.
 
 [!code-csharp[csrefKeywordsJump#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#4)]
 

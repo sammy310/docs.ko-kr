@@ -68,11 +68,11 @@ C# 언어는 서로 다른 라이브러리의 [기본](../../language-reference/
   
  [!code-csharp[csProgGuideInheritance#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#32)]  
   
- `DoWork`의 인스턴스에서 `Derived`가 호출되면 C# 컴파일러는 호출이 원래 `DoWork`에 선언된 `Derived` 버전과 호환되도록 만들려고 시도합니다. 재정의 메서드는 클래스에서 선언된 것으로 간주되지 않습니다. 재정의 메서드는 기본 클래스에서 선언된 메서드의 새로운 구현입니다. C# 컴파일러는 메서드 호출을 `Derived`의 원래 메서드와 일치시킬 수 없는 경우에만, 재정의된 메서드에 대한 호출을 동일한 이름 및 호환되는 매개 변수와 일치시키려고 시도합니다. 예들 들어 다음과 같습니다.  
+ `Derived`의 인스턴스에서 `DoWork`가 호출되면 C# 컴파일러는 호출이 원래 `Derived`에 선언된 `DoWork` 버전과 호환되도록 만들려고 시도합니다. 재정의 메서드는 클래스에서 선언된 것으로 간주되지 않습니다. 재정의 메서드는 기본 클래스에서 선언된 메서드의 새로운 구현입니다. C# 컴파일러는 메서드 호출을 `Derived`의 원래 메서드와 일치시킬 수 없는 경우에만, 재정의된 메서드에 대한 호출을 동일한 이름 및 호환되는 매개 변수와 일치시키려고 시도합니다. 예들 들어 다음과 같습니다.  
   
  [!code-csharp[csProgGuideInheritance#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#33)]  
   
- `val` 변수를 double로 암시적으로 변환할 수 있으므로 C# 컴파일러는 `DoWork(double)` 대신 `DoWork(int)`을 호출합니다. 이것을 방지할 수 있는 두 가지 방법이 있습니다. 첫째, 가상 메서드와 동일한 이름을 가진 새 메서드를 선언하지 않습니다. 둘째, `Derived`의 인스턴스를 `Base`에 캐스팅하여 기본 클래스 메서드 목록을 검색하게 함으로써 가상 메서드를 호출하도록 C# 컴파일러에 지시할 수 있습니다. 메서드는 가상이므로 `DoWork(int)`에서 `Derived`의 구현이 호출됩니다. 예들 들어 다음과 같습니다.  
+ `val` 변수를 double로 암시적으로 변환할 수 있으므로 C# 컴파일러는 `DoWork(int)` 대신 `DoWork(double)`을 호출합니다. 이것을 방지할 수 있는 두 가지 방법이 있습니다. 첫째, 가상 메서드와 동일한 이름을 가진 새 메서드를 선언하지 않습니다. 둘째, `Derived`의 인스턴스를 `Base`에 캐스팅하여 기본 클래스 메서드 목록을 검색하게 함으로써 가상 메서드를 호출하도록 C# 컴파일러에 지시할 수 있습니다. 메서드는 가상이므로 `Derived`에서 `DoWork(int)`의 구현이 호출됩니다. 예들 들어 다음과 같습니다.  
   
  [!code-csharp[csProgGuideInheritance#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#34)]  
   

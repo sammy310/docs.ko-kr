@@ -59,7 +59,7 @@ C# 4에서 도입된 명명된 인수와 선택적 인수는 C# 프로그래밍�
 
 ## <a name="to-display-text-in-a-word-document"></a>Word 문서에 텍스트를 표시하려면
 
-1. `Program`Program.cs*의*  클래스에서 다음 메서드를 추가하여 Word 애플리케이션과 Word 문서를 만듭니다. [Add](<xref:Microsoft.Office.Interop.Word.Documents.Add%2A>) 메서드에는 선택적 매개 변수 4개가 있습니다. 이 예제에서는 해당 기본값을 사용합니다. 따라서 호출하는 문에 인수가 필요하지 않습니다.
+1. *Program.cs*의 `Program` 클래스에서 다음 메서드를 추가하여 Word 애플리케이션과 Word 문서를 만듭니다. [Add](<xref:Microsoft.Office.Interop.Word.Documents.Add%2A>) 메서드에는 선택적 매개 변수 4개가 있습니다. 이 예제에서는 해당 기본값을 사용합니다. 따라서 호출하는 문에 인수가 필요하지 않습니다.
 
      [!code-csharp[csProgGuideNamedAndOptional#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#6)]
 

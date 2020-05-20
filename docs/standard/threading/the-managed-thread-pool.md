@@ -32,7 +32,7 @@ ms.locfileid: "79398558"
 
 스레드 풀 스레드에 처리되지 않은 예외가 있으면 프로세스가 종료됩니다. 이 규칙에는 다음 세 가지 예외 사항이 있습니다.  
   
-- <xref:System.Threading.ThreadAbortException?displayProperty=nameWithType>가 호출되었으므로 스레드 풀 스레드에서 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>이 throw됩니다.  
+- <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>가 호출되었으므로 스레드 풀 스레드에서 <xref:System.Threading.ThreadAbortException?displayProperty=nameWithType>이 throw됩니다.  
 - 애플리케이션 도메인이 언로드되고 있으므로 스레드 풀 스레드에서 <xref:System.AppDomainUnloadedException?displayProperty=nameWithType>이 throw됩니다.  
 - 공용 언어 런타임 또는 호스트 프로세스에서 스레드를 종료합니다.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "79398558"
 
 관리 코드에서 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType>(또는 비관리 코드에서 [`ICorThreadpool::CorQueueUserWorkItem`](../../framework/unmanaged-api/hosting/icorthreadpool-corqueueuserworkitem-method.md))을 호출하고 작업을 수행하는 메서드를 나타내는 <xref:System.Threading.WaitCallback?displayProperty=nameWithType> 대리자를 전달하여 스레드 풀을 사용할 수도 있습니다.
 
-스레드 풀을 사용하는 또 다른 방법은 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> 메서드를 사용하고 신호를 받거나 시간 초과된 경우 <xref:System.Threading.WaitHandle?displayProperty=nameWithType> 대리자가 나타내는 메서드를 호출하는 <xref:System.Threading.WaitOrTimerCallback?displayProperty=nameWithType>을 전달하여 대기 작업과 관련된 작업 항목을 큐에 대기합니다. 스레드 풀 스레드는 콜백 메서드를 호출하는 데 사용됩니다.  
+스레드 풀을 사용하는 또 다른 방법은 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> 메서드를 사용하고 신호를 받거나 시간 초과된 경우 <xref:System.Threading.WaitOrTimerCallback?displayProperty=nameWithType> 대리자가 나타내는 메서드를 호출하는 <xref:System.Threading.WaitHandle?displayProperty=nameWithType>을 전달하여 대기 작업과 관련된 작업 항목을 큐에 대기합니다. 스레드 풀 스레드는 콜백 메서드를 호출하는 데 사용됩니다.  
 
 예제에서 참조된 API 페이지를 확인합니다.
   

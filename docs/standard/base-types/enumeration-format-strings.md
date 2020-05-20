@@ -53,7 +53,7 @@ ms.locfileid: "78155960"
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 세 개의 항목 `Colors`, `Red` 및 `Blue`으로 구성된 `Green`라는 열거형을 정의합니다.
+다음 예제에서는 세 개의 항목 `Red`, `Blue` 및 `Green`으로 구성된 `Colors`라는 열거형을 정의합니다.
 
 [!code-csharp[Formatting.Enum#5](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#5)]
 [!code-vb[Formatting.Enum#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#5)]

@@ -500,7 +500,7 @@ ms.locfileid: "78159275"
 
 "yy" 사용자 지정 형식 지정자는 연도를 두 자리 숫자로 나타냅니다. 연도가 두 자리를 넘으면 마지막 두 자리 숫자만 결과에 나타납니다. 두 자리 연도의 유효 자릿수가 두 자리 미만인 경우 두 자리가 되도록 앞에 0이 채워집니다.
 
-구문 분석 작업에서 "yy" 사용자 지정 형식 지정자를 사용하여 구문 분석되는 2자리 년도는 형식 공급자의 현재 달력의 <xref:System.Globalization.Calendar.TwoDigitYearMax%2A?displayProperty=nameWithType> 속성을 기준으로 해석됩니다. 다음 예제에서는 en-US 문화권(이 경우 현재 문화권)의 기본 양력을 사용하여 두 자리 년도를 갖는 날짜의 문자열 표현을 구문 분석합니다. 그런 다음 수정된 <xref:System.Globalization.CultureInfo>를 쓰는 <xref:System.Globalization.GregorianCalendar>를 사용하도록 현재문화권의 <xref:System.Globalization.GregorianCalendar.TwoDigitYearMax%2A> 개체를 변경 합니다.
+구문 분석 작업에서 "yy" 사용자 지정 형식 지정자를 사용하여 구문 분석되는 2자리 년도는 형식 공급자의 현재 달력의 <xref:System.Globalization.Calendar.TwoDigitYearMax%2A?displayProperty=nameWithType> 속성을 기준으로 해석됩니다. 다음 예제에서는 en-US 문화권(이 경우 현재 문화권)의 기본 양력을 사용하여 두 자리 년도를 갖는 날짜의 문자열 표현을 구문 분석합니다. 그런 다음 수정된 <xref:System.Globalization.GregorianCalendar.TwoDigitYearMax%2A>를 쓰는 <xref:System.Globalization.GregorianCalendar>를 사용하도록 현재문화권의 <xref:System.Globalization.CultureInfo> 개체를 변경 합니다.
 
 [!code-csharp-interactive[Formatting.DateAndTime.Custom#19](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/parseexact2digityear1.cs#19)]
 [!code-vb[Formatting.DateAndTime.Custom#19](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/parseexact2digityear1.vb#19)]

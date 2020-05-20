@@ -19,9 +19,9 @@ ms.locfileid: "74348878"
   
 ### <a name="to-append-to-a-text-file"></a>텍스트 파일에 추가하려면  
   
-- 대상 파일 및 추가할 문자열을 지정하고 `WriteAllText` 매개 변수를 `append`로 설정하여 `True` 메서드를 사용합니다.  
+- 대상 파일 및 추가할 문자열을 지정하고 `append` 매개 변수를 `True`로 설정하여 `WriteAllText` 메서드를 사용합니다.  
   
-     이 예제에서는 `"This is a test string."`라는 파일에 `Testfile.txt` 문자열을 씁니다.  
+     이 예제에서는 `Testfile.txt`라는 파일에 `"This is a test string."` 문자열을 씁니다.  
   
      [!code-vb[VbFileIOWrite#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#6)]  
   

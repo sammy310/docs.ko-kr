@@ -22,7 +22,7 @@ ms.locfileid: "73127619"
 ---
 # <a name="padding-strings-in-net"></a>.NET에서 문자열 채우기
 
-다음 <xref:System.String> 메서드 중 하나를 사용하여 원래 문자열에 선행 또는 후행 문자를 지정된 총 길이까지 추가해 새로 구성된 문자열을 만듭니다. 안쪽 여백 문자는 공백이나 지정된 문자일 수 있습니다. 결과 문자열은 오른쪽 맞춤 또는 왼쪽 맞춤으로 표시됩니다. 원래 문자열의 길이가 원하는 총 길이보다 크거나 같은 경우 안쪽 여백 메서드는 변경되지 않은 원래 문자열을 반환합니다. 자세한 내용은 **및** 메서드의 두 오버로드의 <xref:System.String.PadLeft%2A?displayProperty=nameWithType>반환<xref:System.String.PadRight%2A?displayProperty=nameWithType> 섹션을 참조하세요.
+다음 <xref:System.String> 메서드 중 하나를 사용하여 원래 문자열에 선행 또는 후행 문자를 지정된 총 길이까지 추가해 새로 구성된 문자열을 만듭니다. 안쪽 여백 문자는 공백이나 지정된 문자일 수 있습니다. 결과 문자열은 오른쪽 맞춤 또는 왼쪽 맞춤으로 표시됩니다. 원래 문자열의 길이가 원하는 총 길이보다 크거나 같은 경우 안쪽 여백 메서드는 변경되지 않은 원래 문자열을 반환합니다. 자세한 내용은 <xref:System.String.PadLeft%2A?displayProperty=nameWithType> 및 <xref:System.String.PadRight%2A?displayProperty=nameWithType> 메서드의 두 오버로드의 **반환** 섹션을 참조하세요.
   
 |메서드 이름|사용|  
 |-----------------|---------|  

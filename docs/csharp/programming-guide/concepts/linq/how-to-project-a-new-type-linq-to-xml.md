@@ -49,7 +49,7 @@ class Program {
 }
 ```
 
-이 예제에서는 <xref:System.Xml.Linq.XContainer.Element%2A>단일 자식 요소를 검색하는 방법(LINQ to XML)(C#)[ 항목에 도입된 ](how-to-retrieve-a-single-child-element-linq-to-xml.md) 메서드를 사용합니다. 또한, 캐스트를 사용하여 <xref:System.Xml.Linq.XContainer.Element%2A> 메서드에서 반환하는 요소의 값을 검색합니다.  
+이 예제에서는 [단일 자식 요소를 검색하는 방법(LINQ to XML)(C#)](how-to-retrieve-a-single-child-element-linq-to-xml.md) 항목에 도입된 <xref:System.Xml.Linq.XContainer.Element%2A> 메서드를 사용합니다. 또한, 캐스트를 사용하여 <xref:System.Xml.Linq.XContainer.Element%2A> 메서드에서 반환하는 요소의 값을 검색합니다.  
 
 이 예제는 다음과 같은 출력을 생성합니다.
 

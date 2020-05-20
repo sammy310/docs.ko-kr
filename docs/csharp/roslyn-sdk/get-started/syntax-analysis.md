@@ -86,7 +86,7 @@ Hello World 프로그램의 텍스트를 `Program` 클래스의 상수로 추가
 
 [!code-csharp[Declare the program text](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#1 "Declare a constant string for the program text to analyze")]
 
-다음으로 **상수에서 코드 텍스트의**구문 트리`programText`를 빌드하는 다음 코드를 추가합니다.  `Main` 메서드에 다음 줄을 추가합니다.
+다음으로 `programText` 상수에서 코드 텍스트의 **구문 트리**를 빌드하는 다음 코드를 추가합니다.  `Main` 메서드에 다음 줄을 추가합니다.
 
 [!code-csharp[Create the tree](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#2 "Create the syntax tree")]
 
@@ -156,7 +156,7 @@ The body text of the Main method follows:
 
 구문 트리에서 특정 종류의 모든 노드를 찾을 수도 있습니다(예: 파일의 모든 속성 선언). <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker?displayProperty=nameWithType> 클래스를 확장하고 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitPropertyDeclaration(Microsoft.CodeAnalysis.CSharp.Syntax.PropertyDeclarationSyntax)> 메서드를 재정의하여 해당 구조를 미리 알지 못해도 구문 트리에서 모든 속성 선언을 처리할 수 있습니다. <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>는 노드와 해당 자식 항목을 재귀적으로 방문하는 특정 종류의 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor>입니다.
 
-이 예제에서는 구문 트리를 검사하는 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>를 구현합니다. `using` 네임스페이스를 가져오지 않는 `System` 지시문을 찾아 수집합니다.
+이 예제에서는 구문 트리를 검사하는 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>를 구현합니다. `System` 네임스페이스를 가져오지 않는 `using` 지시문을 찾아 수집합니다.
 
 새 C# **독립 실행형 코드 분석 도구** 프로젝트를 만들고 이름을 "**SyntaxWalker**"로 지정합니다.
 
@@ -166,7 +166,7 @@ The body text of the Main method follows:
 
 [!code-csharp[Define the code text to analyzer](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#1 "Define the program text to analyze")]
 
-이 원본 텍스트에는 파일 수준, 최상위 네임스페이스 및 두 개의 중첩된 네임스페이스와 같은 네 가지 위치에 분산된 `using` 지시문이 포함됩니다. 이 예제에서는 코드를 쿼리하는 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> 클래스를 사용하는 핵심 시나리오를 강조 표시합니다. using 선언을 찾기 위해 루트 구문 트리에서 모든 노드를 방문하기는 번거롭습니다. 대신, 파생된 클래스를 만들고 트리의 현재 노드가 using 지시문인 경우에만 호출되는 메서드를 재정의합니다. 방문자는 다른 노드 형식에서 작업을 수행하지 않습니다. 이 단일 메서드는 각 `using` 문을 검사하고 `System` 네임스페이스에 위치하지 않는 네임스페이스의 컬렉션을 빌드합니다. 모든 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> 문이 아닌 `using` 문을 검사하는 `using`를 빌드합니다.
+이 원본 텍스트에는 파일 수준, 최상위 네임스페이스 및 두 개의 중첩된 네임스페이스와 같은 네 가지 위치에 분산된 `using` 지시문이 포함됩니다. 이 예제에서는 코드를 쿼리하는 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> 클래스를 사용하는 핵심 시나리오를 강조 표시합니다. using 선언을 찾기 위해 루트 구문 트리에서 모든 노드를 방문하기는 번거롭습니다. 대신, 파생된 클래스를 만들고 트리의 현재 노드가 using 지시문인 경우에만 호출되는 메서드를 재정의합니다. 방문자는 다른 노드 형식에서 작업을 수행하지 않습니다. 이 단일 메서드는 각 `using` 문을 검사하고 `System` 네임스페이스에 위치하지 않는 네임스페이스의 컬렉션을 빌드합니다. 모든 `using` 문이 아닌 `using` 문을 검사하는 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>를 빌드합니다.
 
 이제 프로그램 텍스트를 정의했으므로 `SyntaxTree`를 만들고 해당 트리의 루트를 가져와야 합니다.
 
@@ -174,7 +174,7 @@ The body text of the Main method follows:
 
 다음으로 새 클래스를 만듭니다. Visual Studio에서 **프로젝트** > **새 항목 추가**를 선택합니다. **새 항목 추가** 대화 상자에서 파일 이름으로 *UsingCollector.cs*를 입력합니다.
 
-`using` 클래스에서 `UsingCollector` 방문자 기능을 구현합니다. `UsingCollector`에서 파생된 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> 클래스를 만들기 시작합니다.
+`UsingCollector` 클래스에서 `using` 방문자 기능을 구현합니다. <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>에서 파생된 `UsingCollector` 클래스를 만들기 시작합니다.
 
 [!code-csharp[Declare the base class for the using collector](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#3 "Declare the base class for the UsingCollector")]
 

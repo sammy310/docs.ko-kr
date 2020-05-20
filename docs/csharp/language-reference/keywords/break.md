@@ -26,7 +26,7 @@ ms.locfileid: "75713759"
 
 ## <a name="example"></a>예제
 
-이 예제에서는 `break`switch[ 문에서 ](./switch.md)의 사용을 보여 줍니다.
+이 예제에서는 [switch](./switch.md) 문에서 `break`의 사용을 보여 줍니다.
 
 [!code-csharp[csrefKeywordsJump#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#2)]
 
@@ -45,7 +45,7 @@ Sorry, invalid selection.
 
 ## <a name="example"></a>예제
 
-이 예제에서 `break` 문은 루프의 각 반복 중에 현재 분기를 중단하는 데만 사용됩니다. 루프 자체는 중첩된 `break`switch[ 문에 속하는 ](./switch.md)의 인스턴스에 영향을 받지 않습니다.
+이 예제에서 `break` 문은 루프의 각 반복 중에 현재 분기를 중단하는 데만 사용됩니다. 루프 자체는 중첩된 [switch](./switch.md) 문에 속하는 `break`의 인스턴스에 영향을 받지 않습니다.
 
 [!code-csharp[csrefKeywordsJump#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#8)]
 

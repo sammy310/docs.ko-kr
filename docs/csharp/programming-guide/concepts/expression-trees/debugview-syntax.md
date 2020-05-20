@@ -43,7 +43,7 @@ ParameterExpression numParam =  Expression.Parameter(typeof(int));
 
 ## <a name="constantexpression"></a>ConstantExpression
 
-정수 값, 문자열 및 <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType>을 나타내는 `null` 개체의 경우 상수 값이 표시됩니다.
+정수 값, 문자열 및 `null`을 나타내는 <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> 개체의 경우 상수 값이 표시됩니다.
 
 표준 접미사인 C# 리터럴이 있는 숫자 형식의 경우 접미사가 값에 추가됩니다. 다음 표에서는 다양한 숫자 형식과 연결된 접미사를 보여 줍니다.
 

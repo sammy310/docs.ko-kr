@@ -32,7 +32,7 @@ ms.locfileid: "73131983"
 
     - 정수를 16진수 값으로 표시하려면 해당 `ToString(String)` 메서드를 호출하고 문자열 "X*n*"을 서식 매개 변수의 값으로 전달합니다. 여기서 *n*은 문자열의 최소 길이를 나타냅니다.
 
-[C#](../../csharp/language-reference/tokens/interpolated.md) 및 [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) 모두의 보간된 문자열에서 형식 문자열을 사용할 수도 있습니다. 또는 <xref:System.String.Format%2A?displayProperty=nameWithType>복합 서식 지정<xref:System.Console.WriteLine%2A?displayProperty=nameWithType>을 사용하는 [ 또는 ](../../../docs/standard/base-types/composite-formatting.md)과 같은 메서드를 호출할 수 있습니다.
+[C#](../../csharp/language-reference/tokens/interpolated.md) 및 [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) 모두의 보간된 문자열에서 형식 문자열을 사용할 수도 있습니다. 또는 [복합 서식 지정](../../../docs/standard/base-types/composite-formatting.md)을 사용하는 <xref:System.String.Format%2A?displayProperty=nameWithType> 또는 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>과 같은 메서드를 호출할 수 있습니다.
 
 다음 예제에서는 서식이 지정된 숫자의 전체 길이가 8자 이상이 되도록 앞에 오는 0으로 여러 정수 값의 서식을 지정합니다.
 

@@ -21,7 +21,7 @@ ms.locfileid: "78160055"
 
 - 비동기 동작을 제공하기 위한 이벤트 기반 레거시 모델인 **EAP(이벤트 기반 비동기 패턴)** . 이 패턴에서는 `Async` 접미사가 있는 메서드가 필요하며 하나 이상의 이벤트, 이벤트 처리기 대리자 형식 및 `EventArg`에서 파생된 형식도 필요합니다. EAP는 .NET Framework 2.0에 도입되었습니다. 이 패턴 역시 신규 개발에서는 사용하지 않는 것이 좋습니다. 자세한 내용은 [EAP(이벤트 기반 비동기 패턴)](event-based-asynchronous-pattern-eap.md)를 참조하세요.  
 
-- **인터페이스를 사용하여 비동기 동작을 제공하는 레거시 모델인**APM(비동기 프로그래밍 모델)<xref:System.IAsyncResult> 패턴(<xref:System.IAsyncResult> 패턴이라고도 함). 이 패턴에서는 동기 작업에 `Begin` 및 `End` 메소드(예를 들어 비동기 쓰기 작업을 구현하는 `BeginWrite` 및 `EndWrite`)가 필요합니다. 신규 개발에서는 이 패턴을 더 이상 사용하지 않는 것이 좋습니다. 자세한 내용은 [APM(비동기 프로그래밍 모델)](asynchronous-programming-model-apm.md)을 참조하세요.  
+- <xref:System.IAsyncResult> 인터페이스를 사용하여 비동기 동작을 제공하는 레거시 모델인 **APM(비동기 프로그래밍 모델)** 패턴(<xref:System.IAsyncResult> 패턴이라고도 함). 이 패턴에서는 동기 작업에 `Begin` 및 `End` 메소드(예를 들어 비동기 쓰기 작업을 구현하는 `BeginWrite` 및 `EndWrite`)가 필요합니다. 신규 개발에서는 이 패턴을 더 이상 사용하지 않는 것이 좋습니다. 자세한 내용은 [APM(비동기 프로그래밍 모델)](asynchronous-programming-model-apm.md)을 참조하세요.  
   
 ## <a name="comparison-of-patterns"></a>패턴 비교
 

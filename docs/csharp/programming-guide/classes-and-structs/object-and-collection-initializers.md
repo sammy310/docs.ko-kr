@@ -94,7 +94,7 @@ List<int> digits2 = new List<int> { 0 + 1, 12 % 3, MakeInt() };
   
 [!code-csharp[ListInitializer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#ListInitializer)]  
   
-컬렉션의 [ 메서드에서 허용하는 경우 ](../../language-reference/keywords/null.md)null`Add`을 컬렉션 이니셜라이저의 요소로 지정할 수 있습니다.  
+컬렉션의 `Add` 메서드에서 허용하는 경우 [null](../../language-reference/keywords/null.md)을 컬렉션 이니셜라이저의 요소로 지정할 수 있습니다.  
   
 [!code-csharp[ListInitializerNull](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#ListInitialerWithNull)]  
   

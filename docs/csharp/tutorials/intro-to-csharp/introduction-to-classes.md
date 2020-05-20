@@ -73,7 +73,7 @@ namespace classes
 
 계속하기 전에 빌드한 내용을 살펴보겠습니다.  `namespace` 선언은 코드를 논리적으로 구성하는 방법을 제공합니다. 이 자습서는 비교적 작으므로 하나의 네임스페이스에 모든 코드를 넣습니다.
 
-`public class BankAccount`는 생성하는 클래스 또는 형식을 정의합니다. 클래스 선언 뒤에 오는 `{` 및 `}`의 모든 항목은 클래스의 상태와 동작을 정의합니다. ***클래스의***멤버`BankAccount`가 다섯 개 있습니다. 첫 번째 세 개는 ***속성***입니다. 속성은 데이터 요소이며 유효성 검사 또는 기타 규칙을 적용하는 코드가 있을 수 있습니다. 마지막 두 개는 ***메서드***입니다. 메서드는 단일 함수를 수행하는 코드 블록입니다. 각 멤버의 이름을 읽으면 사용자 또는 다른 개발자가 클래스가 수행하는 작업을 이해하기에 충분한 정보를 제공해야 합니다.
+`public class BankAccount`는 생성하는 클래스 또는 형식을 정의합니다. 클래스 선언 뒤에 오는 `{` 및 `}`의 모든 항목은 클래스의 상태와 동작을 정의합니다. `BankAccount` 클래스의 ***멤버***가 다섯 개 있습니다. 첫 번째 세 개는 ***속성***입니다. 속성은 데이터 요소이며 유효성 검사 또는 기타 규칙을 적용하는 코드가 있을 수 있습니다. 마지막 두 개는 ***메서드***입니다. 메서드는 단일 함수를 수행하는 코드 블록입니다. 각 멤버의 이름을 읽으면 사용자 또는 다른 개발자가 클래스가 수행하는 작업을 이해하기에 충분한 정보를 제공해야 합니다.
 
 ## <a name="open-a-new-account"></a>새 계좌 개설
 
@@ -89,7 +89,7 @@ public BankAccount(string name, decimal initialBalance)
 }
 ```
 
-생성자는 [`new`](../../language-reference/operators/new-operator.md)를 사용하여 개체를 만들 때 호출됩니다. `Console.WriteLine("Hello World!");`Program.cs*의*  줄을 다음 코드로 바꿉니다(`<name>`을 사용자의 이름으로 바꿈).
+생성자는 [`new`](../../language-reference/operators/new-operator.md)를 사용하여 개체를 만들 때 호출됩니다. *Program.cs*의 `Console.WriteLine("Hello World!");` 줄을 다음 코드로 바꿉니다(`<name>`을 사용자의 이름으로 바꿈).
 
 ```csharp
 var account = new BankAccount("<name>", 1000);
@@ -106,7 +106,7 @@ Console.WriteLine($"Account {account.Number} was created for {account.Owner} wit
 private static int accountNumberSeed = 1234567890;
 ```
 
-이는 데이터 멤버입니다. 이것은 `private`입니다. 즉 `BankAccount` 클래스 내의 코드로만 액세스할 수 있습니다. 이는 전용 구현(계좌 번호가 생성되는 방법)과 공공 책임(계좌 번호를 가지는 것 등)을 구분하는 방법입니다. 모든 `static` 개체에서 공유됨을 의미하는 `BankAccount`이기도 합니다. 비정적 변수의 값은 `BankAccount` 개체의 각 인스턴스에 고유합니다. 생성자에 다음 두 줄을 추가하여 계좌 번호를 지정합니다.
+이는 데이터 멤버입니다. 이것은 `private`입니다. 즉 `BankAccount` 클래스 내의 코드로만 액세스할 수 있습니다. 이는 전용 구현(계좌 번호가 생성되는 방법)과 공공 책임(계좌 번호를 가지는 것 등)을 구분하는 방법입니다. 모든 `BankAccount` 개체에서 공유됨을 의미하는 `static`이기도 합니다. 비정적 변수의 값은 `BankAccount` 개체의 각 인스턴스에 고유합니다. 생성자에 다음 두 줄을 추가하여 계좌 번호를 지정합니다.
 
 ```csharp
 this.Number = accountNumberSeed.ToString();
@@ -123,7 +123,7 @@ accountNumberSeed++;
 
 [!code-csharp[Transaction](~/samples/snippets/csharp/classes-quickstart/Transaction.cs)]
 
-이제 <xref:System.Collections.Generic.List%601> 개체의 `Transaction`를 `BankAccount` 클래스에 추가하겠습니다. 다음 선언을 추가합니다.
+이제 `Transaction` 개체의 <xref:System.Collections.Generic.List%601>를 `BankAccount` 클래스에 추가하겠습니다. 다음 선언을 추가합니다.
 
 [!code-csharp[TransactionDecl](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration)]
 
@@ -133,7 +133,7 @@ accountNumberSeed++;
 using System.Collections.Generic;
 ```
 
-이제 `Balance`를 보고하는 방법을 변경해 보겠습니다.  모든 트랜잭션의 값을 합하여 찾을 수 있습니다. `Balance` 클래스에서 `BankAccount`의 선언을 다음과 같이 수정합니다.
+이제 `Balance`를 보고하는 방법을 변경해 보겠습니다.  모든 트랜잭션의 값을 합하여 찾을 수 있습니다. `BankAccount` 클래스에서 `Balance`의 선언을 다음과 같이 수정합니다.
 
 [!code-csharp[BalanceComputation](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#BalanceComputation)]
 
@@ -194,7 +194,7 @@ catch (InvalidOperationException e)
 
 ## <a name="challenge---log-all-transactions"></a>과제 - 모든 트랜잭션 기록
 
-이 자습서를 완료하기 위해 트랜잭션 기록에 대해 `GetAccountHistory`을 생성하는 `string` 메서드를 작성할 수 있습니다. `BankAccount` 형식에 이 메서드를 추가합니다.
+이 자습서를 완료하기 위해 트랜잭션 기록에 대해 `string`을 생성하는 `GetAccountHistory` 메서드를 작성할 수 있습니다. `BankAccount` 형식에 이 메서드를 추가합니다.
 
 [!code-csharp[History](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#History)]
 

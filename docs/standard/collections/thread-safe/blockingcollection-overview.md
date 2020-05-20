@@ -52,7 +52,7 @@ ms.locfileid: "75711326"
  한계 지정된 컬렉션의 시간 지정된 <xref:System.Collections.Concurrent.BlockingCollection%601.TryAdd%2A> 및 <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A> 차단 작업에서 메서드는 항목을 추가하거나 가져오려고 합니다. 사용 가능한 항목이 있으면 이 항목은 참조로 전달된 변수에 저장되고 메서드에서 true를 반환합니다. 지정된 제한 시간이 경과한 후에 검색되는 항목이 없으면 메서드에서 false를 반환합니다. 그러면 스레드에서 유용한 다른 작업을 수행한 후에 컬렉션에 대한 액세스를 다시 시도할 수 있습니다. 시간 지정된 차단 액세스에 대한 예제는 [방법: BlockingCollection에서 개별적으로 항목 추가 및 가져오기](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md)에 있는 두 번째 예제를 참조하십시오.  
   
 ## <a name="cancelling-add-and-take-operations"></a>추가 및 가져오기 작업 취소  
- 추가 및 가져오기 작업은 일반적으로 루프에서 수행됩니다. <xref:System.Threading.CancellationToken> 또는 <xref:System.Collections.Concurrent.BlockingCollection%601.TryAdd%2A> 메서드에 <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A>을 전달한 다음, 각 반복마다 이 토큰의 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 속성 값을 확인하여 루프를 취소할 수 있습니다. 이 속성 값이 true이면 사용자가 모든 리소스를 정리하고 루프를 종료하여 취소 요청에 응답해야 합니다. 다음 예제에서는 취소 토큰을 사용하는 <xref:System.Collections.Concurrent.BlockingCollection%601.TryAdd%2A>의 오버로드 및 이 오버로드를 사용하는 코드를 보여 줍니다.  
+ 추가 및 가져오기 작업은 일반적으로 루프에서 수행됩니다. <xref:System.Collections.Concurrent.BlockingCollection%601.TryAdd%2A> 또는 <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A> 메서드에 <xref:System.Threading.CancellationToken>을 전달한 다음, 각 반복마다 이 토큰의 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 속성 값을 확인하여 루프를 취소할 수 있습니다. 이 속성 값이 true이면 사용자가 모든 리소스를 정리하고 루프를 종료하여 취소 요청에 응답해야 합니다. 다음 예제에서는 취소 토큰을 사용하는 <xref:System.Collections.Concurrent.BlockingCollection%601.TryAdd%2A>의 오버로드 및 이 오버로드를 사용하는 코드를 보여 줍니다.  
   
  [!code-csharp[CDS_BlockingCollection#05](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/blockingcollection.cs#05)]
  [!code-vb[CDS_BlockingCollection#05](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/introsnippetsbc.vb#05)]  
@@ -73,10 +73,10 @@ BlockingCollection<string> bc = new BlockingCollection<string>(new ConcurrentBag
  자세한 내용은 [방법: 컬렉션에 경계 및 차단 기능 추가](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md)를 참조하세요.  
   
 ## <a name="ienumerable-support"></a>IEnumerable 지원  
- <xref:System.Collections.Concurrent.BlockingCollection%601>에서는 컬렉션이 완료될 때까지, 즉 컬렉션이 비어 있고 항목이 더 이상 추가되지 않을 때까지 소비자가 <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A>(Visual Basic의 `foreach`)를 사용하여 항목을 제거할 수 있도록 하는 `For Each` 메서드를 제공합니다. 자세한 내용은 [방법: ForEach를 사용하여 BlockingCollection 항목 제거](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md)를 참조하십시오.  
+ <xref:System.Collections.Concurrent.BlockingCollection%601>에서는 컬렉션이 완료될 때까지, 즉 컬렉션이 비어 있고 항목이 더 이상 추가되지 않을 때까지 소비자가 `foreach`(Visual Basic의 `For Each`)를 사용하여 항목을 제거할 수 있도록 하는 <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A> 메서드를 제공합니다. 자세한 내용은 [방법: ForEach를 사용하여 BlockingCollection 항목 제거](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md)를 참조하십시오.  
   
 ## <a name="using-many-blockingcollections-as-one"></a>여러 BlockingCollection을 하나로 사용  
- 소비자에서 여러 컬렉션의 항목을 동시에 가져와야 하는 시나리오의 경우 <xref:System.Collections.Concurrent.BlockingCollection%601> 배열을 만들고, 배열 내의 컬렉션에 항목을 추가하거나 이 컬렉션으로부터 항목을 가져올 <xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny%2A> 및 <xref:System.Collections.Concurrent.BlockingCollection%601.AddToAny%2A>와 같은 정적 메서드를 사용할 수 있습니다. 특정 컬렉션이 차단되는 즉시 메서드에서 작업을 수행할 수 있는 컬렉션을 찾을 때까지 다른 컬렉션에 대한 액세스를 시도합니다. 자세한 내용은 [방법: 파이프라인에서 차단 컬렉션 배열 사용](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md)을 참조하십시오.  
+ 소비자에서 여러 컬렉션의 항목을 동시에 가져와야 하는 시나리오의 경우 <xref:System.Collections.Concurrent.BlockingCollection%601> 배열을 만들고, 배열 내의 컬렉션에 항목을 추가하거나 이 컬렉션으로부터 항목을 가져올 <xref:System.Collections.Concurrent.BlockingCollection%601.AddToAny%2A> 및 <xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny%2A>와 같은 정적 메서드를 사용할 수 있습니다. 특정 컬렉션이 차단되는 즉시 메서드에서 작업을 수행할 수 있는 컬렉션을 찾을 때까지 다른 컬렉션에 대한 액세스를 시도합니다. 자세한 내용은 [방법: 파이프라인에서 차단 컬렉션 배열 사용](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md)을 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목
 

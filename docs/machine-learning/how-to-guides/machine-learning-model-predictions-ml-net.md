@@ -40,7 +40,7 @@ public class HousingData
 
 `Features` 및 `Label` 열 이름처럼 ML.NET에는 모델에서 생성한 예측된 값 열에 대한 기본 이름이 있습니다. 작업에 따라 이 이름을 달라질 수 있습니다.
 
-이 샘플에서 사용하는 알고리즘은 선형 회귀 알고리즘이므로 출력 열의 기본 이름은 `Score`이며 [ 속성에 대한 `ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute)`PredictedPrice` 특성으로 정의됩니다.
+이 샘플에서 사용하는 알고리즘은 선형 회귀 알고리즘이므로 출력 열의 기본 이름은 `Score`이며 `PredictedPrice` 속성에 대한 [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) 특성으로 정의됩니다.
 
 ```csharp
 class HousingPrediction
@@ -86,7 +86,7 @@ HousingData inputData = new HousingData
 HousingPrediction prediction = predictionEngine.Predict(inputData);
 ```
 
-`Score` 개체의 `prediction` 속성에 액세스할 경우 `150079`와 유사한 값을 가져와야 합니다.
+`prediction` 개체의 `Score` 속성에 액세스할 경우 `150079`와 유사한 값을 가져와야 합니다.
 
 ## <a name="multiple-predictions"></a>다중 예측
 

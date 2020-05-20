@@ -16,7 +16,7 @@ ms.lasthandoff: 03/15/2020
 ms.locfileid: "73137994"
 ---
 # <a name="how-to-register-callbacks-for-cancellation-requests"></a>방법: 취소 요청에 대한 콜백 등록
-다음 예제에서는 토큰을 만든 개체에 대한 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 호출로 인해 <xref:System.Threading.CancellationTokenSource.Cancel%2A> 속성이 true가 될 때 호출되는 대리자를 등록하는 방법을 보여줍니다. 이 기술은 통합된 취소 프레임워크를 기본적으로 지원하지 않는 비동기 작업을 취소하고 비동기 작업이 완료되기를 기다릴 수 있는 메서드의 차단을 해제하는 데 사용합니다.  
+다음 예제에서는 토큰을 만든 개체에 대한 <xref:System.Threading.CancellationTokenSource.Cancel%2A> 호출로 인해 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 속성이 true가 될 때 호출되는 대리자를 등록하는 방법을 보여줍니다. 이 기술은 통합된 취소 프레임워크를 기본적으로 지원하지 않는 비동기 작업을 취소하고 비동기 작업이 완료되기를 기다릴 수 있는 메서드의 차단을 해제하는 데 사용합니다.  
   
 > [!NOTE]
 > “내 코드만”이 사용하도록 설정된 경우 Visual Studio가 예외를 발생시키는 줄에서 중단하고 "예외가 사용자 코드에서 처리되지 않았다"는 오류 메시지를 표시합니다. 이 오류는 심각하지는 않습니다. F5 키를 눌러 계속하고 아래 예제에 설명된 예외 처리 동작을 확인할 수 있습니다. 첫 번째 오류 지점에서 Visual Studio가 실행을 중단하지 않도록 하려면 **도구, 옵션, 디버깅, 일반**을 차례로 선택하고 “내 코드만” 확인란의 선택을 취소하기만 하면 됩니다.  

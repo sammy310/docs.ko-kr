@@ -23,7 +23,7 @@ ms.locfileid: "78847653"
 
 `-` 및 `-=` 연산자에는 기본 제공 [정수](../builtin-types/integral-numeric-types.md) 및 [부동 소수점](../builtin-types/floating-point-numeric-types.md) 숫자 형식, [대리자](../builtin-types/reference-types.md#the-delegate-type) 형식이 지원됩니다.
 
-산술 `-` 연산자에 대한 자세한 내용은 [산술 연산자](arithmetic-operators.md#unary-plus-and-minus-operators) 문서의 [단항 더하기 및 빼기 연산자](arithmetic-operators.md#subtraction-operator--) 및 [빼기 연산자 -](arithmetic-operators.md) 섹션을 참조하세요.
+산술 `-` 연산자에 대한 자세한 내용은 [산술 연산자](arithmetic-operators.md) 문서의 [단항 더하기 및 빼기 연산자](arithmetic-operators.md#unary-plus-and-minus-operators) 및 [빼기 연산자 -](arithmetic-operators.md#subtraction-operator--) 섹션을 참조하세요.
 
 ## <a name="delegate-removal"></a>대리자 제거
 
@@ -37,7 +37,7 @@ ms.locfileid: "78847653"
 
   [!code-csharp-interactive[delegate removal with no effect](snippets/SubtractionOperator.cs#DelegateRemovalNoChange)]
 
-  또한 앞의 예제에서는 대리자 제거 중 대리자 인스턴스를 비교하는 것을 보여줍니다. 예를 들어 동일한 [람다 식](../../programming-guide/statements-expressions-operators/lambda-expressions.md)의 평가에서 생성된 대리자는 동일하지 않습니다. 대리자 같음에 대한 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/expressions.md#delegate-equality-operators)의 [대리자 같음 연산자](~/_csharplang/spec/introduction.md) 섹션을 참조하세요.
+  또한 앞의 예제에서는 대리자 제거 중 대리자 인스턴스를 비교하는 것을 보여줍니다. 예를 들어 동일한 [람다 식](../../programming-guide/statements-expressions-operators/lambda-expressions.md)의 평가에서 생성된 대리자는 동일하지 않습니다. 대리자 같음에 대한 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [대리자 같음 연산자](~/_csharplang/spec/expressions.md#delegate-equality-operators) 섹션을 참조하세요.
 
 - 왼쪽 피연산자가 `null`이면, 연산 결과는 `null`입니다. 오른쪽 피연산자가 `null`이면, 연산 결과는 왼쪽 피연산자입니다.
 
@@ -67,15 +67,15 @@ x = x - y
 
 [!code-csharp-interactive[-= examples](snippets/SubtractionOperator.cs#SubtractAndAssign)]
 
-또한 `-=`이벤트[에서 구독 취소할 때 ](../keywords/event.md) 연산자를 사용하여 제거할 이벤트 처리기 메서드를 지정합니다. 자세한 내용은 [이벤트를 구독 및 구독 취소하는 방법](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)을 참조하세요.
+또한 [이벤트](../keywords/event.md)에서 구독 취소할 때 `-=` 연산자를 사용하여 제거할 이벤트 처리기 메서드를 지정합니다. 자세한 내용은 [이벤트를 구독 및 구독 취소하는 방법](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)을 참조하세요.
 
 ## <a name="operator-overloadability"></a>연산자 오버로드 가능성
 
-사용자 정의 형식은 [ 연산자를 ](operator-overloading.md)오버로드`-`할 수 있습니다. 이진 `-` 연산자가 오버로드되면 `-=` 연산자도 암시적으로 오버로드됩니다. 사용자 정의 형식에는 `-=` 연산자를 명시적으로 오버로드할 수 없습니다.
+사용자 정의 형식은 `-` 연산자를 [오버로드](operator-overloading.md)할 수 있습니다. 이진 `-` 연산자가 오버로드되면 `-=` 연산자도 암시적으로 오버로드됩니다. 사용자 정의 형식에는 `-=` 연산자를 명시적으로 오버로드할 수 없습니다.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](~/_csharplang/spec/expressions.md#unary-minus-operator)의 [단항 빼기 연산자](~/_csharplang/spec/expressions.md#subtraction-operator) 및 [빼기 연산자](~/_csharplang/spec/introduction.md) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [단항 빼기 연산자](~/_csharplang/spec/expressions.md#unary-minus-operator) 및 [빼기 연산자](~/_csharplang/spec/expressions.md#subtraction-operator) 섹션을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

@@ -43,7 +43,7 @@ ms.locfileid: "74345594"
   
      [!code-vb[VbVbalrMyComputer#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#42)]  
   
-7. `Else` 문에 `If` 블록을 추가하여 문자열을 실제로 읽는 경우를 처리합니다. 이 블록은 직렬 포트의 문자열을 반환 문자열에 추가합니다.  
+7. `If` 문에 `Else` 블록을 추가하여 문자열을 실제로 읽는 경우를 처리합니다. 이 블록은 직렬 포트의 문자열을 반환 문자열에 추가합니다.  
   
      [!code-vb[VbVbalrMyComputer#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#43)]  
   

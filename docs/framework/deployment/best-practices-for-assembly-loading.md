@@ -119,11 +119,11 @@ ms.locfileid: "79181697"
 ## <a name="avoid-loading-an-assembly-into-multiple-contexts"></a>여러 컨텍스트에 어셈블리 로드 방지  
  어셈블리를 여러 컨텍스트에 로드하면 형식 ID 문제가 발생할 수 있습니다. 같은 형식이 같은 어셈블리에서 두 개의 다른 컨텍스트로 로드되는 경우는 같은 이름을 가진 두 개의 다른 형식이 로드된 것과 같습니다. 한 형식을 다른 형식으로 캐스팅하려고 하면 <xref:System.InvalidCastException>이 throw되고 `MyType` 형식을 `MyType` 형식으로 캐스팅할 수 없다는 혼동되는 메시지가 표시됩니다.  
   
- 예를 들어 프로그램에서 참조되거나 프로그램이 로드하는 다른 어셈블리에서 참조되는 `ICommunicate` 어셈블리에 `Utility` 인터페이스가 선언된 경우를 살펴봅니다. 이러한 다른 어셈블리에는 프로그램에서 사용할 수 있도록 `ICommunicate` 인터페이스를 구현하는 형식이 포함됩니다.  
+ 예를 들어 프로그램에서 참조되거나 프로그램이 로드하는 다른 어셈블리에서 참조되는 `Utility` 어셈블리에 `ICommunicate` 인터페이스가 선언된 경우를 살펴봅니다. 이러한 다른 어셈블리에는 프로그램에서 사용할 수 있도록 `ICommunicate` 인터페이스를 구현하는 형식이 포함됩니다.  
   
  이제 프로그램이 실행될 경우 어떤 일이 발생하는지 살펴봅니다. 프로그램에서 참조하는 어셈블리는 기본 로드 컨텍스트로 로드됩니다. <xref:System.Reflection.Assembly.Load%2A> 메서드를 사용하여 ID로 대상 어셈블리를 로드하면 어셈블리 및 종속성이 기본 로드 컨텍스트에 포함됩니다. 프로그램 및 대상 어셈블리는 둘 다 같은 `Utility` 어셈블리를 사용하게 됩니다.  
   
- 하지만 <xref:System.Reflection.Assembly.LoadFile%2A> 메서드를 사용하여 파일 경로로 대상 어셈블리를 로드하는 경우를 살펴봅니다. 어셈블리는 컨텍스트 없이 로드되므로 종속성이 자동으로 로드되지 않습니다. 종속성을 제공하기 위한 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 이벤트 처리기가 있을 수 있고 이 처리기가 `Utility` 메서드를 사용하여 <xref:System.Reflection.Assembly.LoadFile%2A> 어셈블리를 컨텍스트 없이 로드할 수 있습니다. 이제 대상 어셈블리에 포함된 형식의 인스턴스를 만들고 인스턴스에 `ICommunicate` 형식의 변수를 지정하려고 하면 <xref:System.InvalidCastException>이 throw됩니다. 그 이유는 런타임은 `ICommunicate` 어셈블리의 두 가지 복사본에 있는 `Utility` 인터페이스를 서로 다른 형식으로 간주하기 때문입니다.  
+ 하지만 <xref:System.Reflection.Assembly.LoadFile%2A> 메서드를 사용하여 파일 경로로 대상 어셈블리를 로드하는 경우를 살펴봅니다. 어셈블리는 컨텍스트 없이 로드되므로 종속성이 자동으로 로드되지 않습니다. 종속성을 제공하기 위한 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 이벤트 처리기가 있을 수 있고 이 처리기가 <xref:System.Reflection.Assembly.LoadFile%2A> 메서드를 사용하여 `Utility` 어셈블리를 컨텍스트 없이 로드할 수 있습니다. 이제 대상 어셈블리에 포함된 형식의 인스턴스를 만들고 인스턴스에 `ICommunicate` 형식의 변수를 지정하려고 하면 <xref:System.InvalidCastException>이 throw됩니다. 그 이유는 런타임은 `Utility` 어셈블리의 두 가지 복사본에 있는 `ICommunicate` 인터페이스를 서로 다른 형식으로 간주하기 때문입니다.  
   
  어셈블리를 여러 컨텍스트에 로드할 수 있는 다양한 다른 시나리오가 있습니다. 가장 좋은 방법은 대상 어셈블리를 애플리케이션 경로에 재배치하고 <xref:System.Reflection.Assembly.Load%2A> 메서드를 전체 표시 이름과 함께 사용하여 충돌을 피하는 것입니다. 어셈블리는 기본 로드 컨텍스트에 로드되고 두 어셈블리는 모두 같은 `Utility` 어셈블리를 사용합니다.  
   

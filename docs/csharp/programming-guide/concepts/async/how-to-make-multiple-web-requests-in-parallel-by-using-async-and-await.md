@@ -49,7 +49,7 @@ var result = await myTask;
   
     - <xref:System.Net.Http>에 대한 참조를 추가합니다.  
   
-    - MainWindow.xaml.cs 파일에서 `using`에 대한 `System.Net.Http` 지시문을 추가합니다.  
+    - MainWindow.xaml.cs 파일에서 `System.Net.Http`에 대한 `using` 지시문을 추가합니다.  
   
 ### <a name="to-add-the-code"></a>코드를 추가하려면  
   
@@ -95,9 +95,9 @@ var result = await myTask;
   
 4. 마지막으로, 다음 단계를 수행하는 `CreateMultipleTasksAsync` 메서드를 정의합니다.  
   
-    - 이 메서드는 `HttpClient`의 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> 메서드에 액세스하는 데 필요한 `ProcessURLAsync` 개체를 선언합니다.  
+    - 이 메서드는 `ProcessURLAsync`의 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> 메서드에 액세스하는 데 필요한 `HttpClient` 개체를 선언합니다.  
   
-    - 메서드는 <xref:System.Threading.Tasks.Task%601>가 정수인 `TResult` 형식의 세 가지 작업을 만들고 시작합니다. 각 작업이 완료되면 `DisplayResults`에 작업의 URL 및 다운로드한 콘텐츠의 길이가 표시됩니다. 작업이 비동기적으로 실행되므로 결과가 표시되는 순서는 선언된 순서와 다를 수 있습니다.  
+    - 메서드는 `TResult`가 정수인 <xref:System.Threading.Tasks.Task%601> 형식의 세 가지 작업을 만들고 시작합니다. 각 작업이 완료되면 `DisplayResults`에 작업의 URL 및 다운로드한 콘텐츠의 길이가 표시됩니다. 작업이 비동기적으로 실행되므로 결과가 표시되는 순서는 선언된 순서와 다를 수 있습니다.  
   
     - 메서드는 각 작업이 완료될 때까지 기다립니다. 각 `await` 연산자는 대기된 작업이 완료될 때까지 `CreateMultipleTasksAsync`의 실행을 중단합니다. 또한 연산자는 완료된 각 작업에서 `ProcessURLAsync` 호출의 반환 값을 검색합니다.  
   

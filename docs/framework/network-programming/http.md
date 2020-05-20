@@ -27,9 +27,9 @@ ms.locfileid: "71048007"
   
  **HttpWebRequest**는 **WebRequest**에서 사용되는 기본 클래스이며 URI를 **WebRequest.Create** 메서드에 전달하기 전에 등록되어 있으면 안 됩니다.  
   
- <xref:System.Net.HttpWebRequest.AllowAutoRedirect%2A> 속성을 **true**(기본값)로 설정하여 애플리케이션이 HTTP 리디렉션을 자동으로 따르도록 구성할 수 있습니다. 애플리케이션이 요청을 리디렉션하고 <xref:System.Net.HttpWebResponse.ResponseUri%2A>HttpWebResponse**의**  속성에는 요청에 응답하는 실제 웹 리소스가 포함됩니다. **AllowAutoRedirect**를 **false**로 설정할 경우 애플리케이션이 리디렉션을 HTTP 프로토콜 오류로 처리할 수 있어야 합니다.  
+ <xref:System.Net.HttpWebRequest.AllowAutoRedirect%2A> 속성을 **true**(기본값)로 설정하여 애플리케이션이 HTTP 리디렉션을 자동으로 따르도록 구성할 수 있습니다. 애플리케이션이 요청을 리디렉션하고 **HttpWebResponse**의 <xref:System.Net.HttpWebResponse.ResponseUri%2A> 속성에는 요청에 응답하는 실제 웹 리소스가 포함됩니다. **AllowAutoRedirect**를 **false**로 설정할 경우 애플리케이션이 리디렉션을 HTTP 프로토콜 오류로 처리할 수 있어야 합니다.  
   
- 애플리케이션은 <xref:System.Net.WebException>가 <xref:System.Net.WebException.Status%2A>로 설정된 <xref:System.Net.WebExceptionStatus>을 catch하여 HTTP 프로토콜 오류를 수신합니다. <xref:System.Net.WebException.Response%2A> 속성은 서버에서 보낸 **WebResponse**를 포함하고 발생한 실제 HTTP 오류를 나타냅니다.  
+ 애플리케이션은 <xref:System.Net.WebException.Status%2A>가 <xref:System.Net.WebExceptionStatus>로 설정된 <xref:System.Net.WebException>을 catch하여 HTTP 프로토콜 오류를 수신합니다. <xref:System.Net.WebException.Response%2A> 속성은 서버에서 보낸 **WebResponse**를 포함하고 발생한 실제 HTTP 오류를 나타냅니다.  
   
 ## <a name="see-also"></a>참고 항목
 

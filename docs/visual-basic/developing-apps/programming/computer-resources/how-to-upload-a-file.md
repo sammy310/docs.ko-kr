@@ -33,7 +33,7 @@ ms.locfileid: "74345554"
   
 ### <a name="to-upload-a-file-supplying-a-user-name-and-password"></a>사용자 이름 및 암호를 제공하여 파일을 업로드하려면  
   
-- 소스 파일 위치와 대상 디렉터리 위치를 문자열 또는 URI로 지정하고 사용자 이름 및 암호를 지정하여 `UploadFile` 메서드를 통해 파일을 업로드합니다. 이 예제에서는 사용자 이름 `Order.txt` 및 빈 암호를 제공하여 `http://www.cohowinery.com/uploads.aspx` 파일을 `anonymous`에 업로드합니다.  
+- 소스 파일 위치와 대상 디렉터리 위치를 문자열 또는 URI로 지정하고 사용자 이름 및 암호를 지정하여 `UploadFile` 메서드를 통해 파일을 업로드합니다. 이 예제에서는 사용자 이름 `anonymous` 및 빈 암호를 제공하여 `Order.txt` 파일을 `http://www.cohowinery.com/uploads.aspx`에 업로드합니다.  
   
      [!code-vb[VbResourceTasks#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#8)]  
   

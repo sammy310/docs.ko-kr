@@ -77,7 +77,7 @@ ms.locfileid: "69595727"
         cts = new CancellationTokenSource();
         ```
 
-    - 지정된 웹 사이트의 콘텐츠를 다운로드하는 `AccessTheWebAsync` 호출에서 <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType>의 `cts` 속성을 인수로 전송합니다. 취소가 요청되면 `Token` 속성은 메시지를 전파합니다. 사용자가 다운로드 작업을 취소하도록 선택할 경우 메시지를 표시하는 catch 블록을 추가합니다. 다음 코드는 변경 내용을 보여 줍니다.
+    - 지정된 웹 사이트의 콘텐츠를 다운로드하는 `AccessTheWebAsync` 호출에서 `cts`의 <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> 속성을 인수로 전송합니다. 취소가 요청되면 `Token` 속성은 메시지를 전파합니다. 사용자가 다운로드 작업을 취소하도록 선택할 경우 메시지를 표시하는 catch 블록을 추가합니다. 다음 코드는 변경 내용을 보여 줍니다.
 
         ```csharp
         try
@@ -97,7 +97,7 @@ ms.locfileid: "69595727"
         }
         ```
 
-4. `AccessTheWebAsync`에서 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> 형식에 있는 `GetAsync` 메서드의 <xref:System.Net.Http.HttpClient> 오버로드를 사용하여 웹 사이트의 콘텐츠를 다운로드합니다. `ct`의 <xref:System.Threading.CancellationToken> 매개 변수인 `AccessTheWebAsync`를 두 번째 인수로 전달합니다. 사용자가 **취소** 단추를 선택하면 토큰이 메시지를 전달합니다.
+4. `AccessTheWebAsync`에서 <xref:System.Net.Http.HttpClient> 형식에 있는 `GetAsync` 메서드의 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> 오버로드를 사용하여 웹 사이트의 콘텐츠를 다운로드합니다. `AccessTheWebAsync`의 <xref:System.Threading.CancellationToken> 매개 변수인 `ct`를 두 번째 인수로 전달합니다. 사용자가 **취소** 단추를 선택하면 토큰이 메시지를 전달합니다.
 
      다음 코드는 `AccessTheWebAsync`의 변경 내용을 보여 줍니다.
 
@@ -210,7 +210,7 @@ ms.locfileid: "69595727"
     }
     ```
 
-4. `AccessTheWebAsync`는 길이를 표시하므로 메서드가 아무것도 반환할 필요가 없습니다. return 문을 제거하고 메서드의 반환 형식을 <xref:System.Threading.Tasks.Task> 대신 <xref:System.Threading.Tasks.Task%601>로 변경합니다.
+4. `AccessTheWebAsync`는 길이를 표시하므로 메서드가 아무것도 반환할 필요가 없습니다. return 문을 제거하고 메서드의 반환 형식을 <xref:System.Threading.Tasks.Task%601> 대신 <xref:System.Threading.Tasks.Task>로 변경합니다.
 
     ```csharp
     async Task AccessTheWebAsync(CancellationToken ct)

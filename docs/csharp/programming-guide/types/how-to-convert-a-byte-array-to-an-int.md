@@ -40,7 +40,7 @@ ms.locfileid: "75698757"
 
 ## <a name="example"></a>예제
 
-이 예제에서는 <xref:System.BitConverter.GetBytes%28System.Int32%29> 클래스의 <xref:System.BitConverter> 메서드를 호출하여 `int`를 바이트 배열로 변환합니다.
+이 예제에서는 <xref:System.BitConverter> 클래스의 <xref:System.BitConverter.GetBytes%28System.Int32%29> 메서드를 호출하여 `int`를 바이트 배열로 변환합니다.
 
 > [!NOTE]
 > 출력은 컴퓨터 아키텍처의 endianness에 따라 달라질 수 있습니다.

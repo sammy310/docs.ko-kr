@@ -42,7 +42,7 @@ ms.locfileid: "79398462"
 
 - 모든 숫자 형식의 `ToString` 메서드 중 일부 오버로드. 예를 들어 <xref:System.Int32.ToString%28System.String%29?displayProperty=nameWithType> 및 <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 메서드에 숫자 형식 문자열을 제공할 수 있습니다.
 
-- [ 및 ](../../../docs/standard/base-types/composite-formatting.md) 클래스의 일부 `Write` 및 `WriteLine` 메서드, <xref:System.Console> 메서드, <xref:System.IO.StreamWriter> 메서드에 사용되는 .NET <xref:System.String.Format%2A?displayProperty=nameWithType>복합 서식 지정 기능<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. 합성 서식 기능을 사용하여 단일 문자열에 여러 데이터 항목의 문자열 표현을 포함하고, 필드 너비를 지정하며, 필드에서 숫자를 맞출 수 있습니다. 자세한 내용은 [복합 서식 지정](../../../docs/standard/base-types/composite-formatting.md)을 참조하세요.
+- <xref:System.Console> 및 <xref:System.IO.StreamWriter> 클래스의 일부 `Write` 및 `WriteLine` 메서드, <xref:System.String.Format%2A?displayProperty=nameWithType> 메서드, <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 메서드에 사용되는 .NET [복합 서식 지정 기능](../../../docs/standard/base-types/composite-formatting.md). 합성 서식 기능을 사용하여 단일 문자열에 여러 데이터 항목의 문자열 표현을 포함하고, 필드 너비를 지정하며, 필드에서 숫자를 맞출 수 있습니다. 자세한 내용은 [복합 서식 지정](../../../docs/standard/base-types/composite-formatting.md)을 참조하세요.
 
 - 복합 형식 문자열과 비교했을 때 간소화된 구문을 제공하는 C# 및 Visual Basic의 [보간된 문자열](../../csharp/language-reference/tokens/interpolated.md).
 
@@ -78,7 +78,7 @@ ms.locfileid: "79398462"
   [!code-csharp-interactive[Formatting.Numeric.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#10)]
   [!code-vb[Formatting.Numeric.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#10)]
 
-- 이 형식 문자열은 `formatString`, <xref:System.String.Format%2A?displayProperty=nameWithType> 및 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 같은 메서드와 함께 사용되는 서식 항목의 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 인수로 제공될 수 있습니다. 자세한 내용은 [복합 서식 지정](../../../docs/standard/base-types/composite-formatting.md)을 참조하세요. 다음 예제에서는 서식 항목을 사용하여 문자열에 통화 값을 삽입합니다.
+- 이 형식 문자열은 <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 및 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 같은 메서드와 함께 사용되는 서식 항목의 `formatString` 인수로 제공될 수 있습니다. 자세한 내용은 [복합 서식 지정](../../../docs/standard/base-types/composite-formatting.md)을 참조하세요. 다음 예제에서는 서식 항목을 사용하여 문자열에 통화 값을 삽입합니다.
 
   [!code-cpp[Formatting.Numeric.Standard#11](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#11)]
   [!code-csharp-interactive[Formatting.Numeric.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#11)]
@@ -300,7 +300,7 @@ ms.locfileid: "79398462"
 
 라운드트립(“R”) 형식 지정자는 문자열로 변환된 숫자 값이 같은 숫자 값으로 다시 구문 분석되도록 시도합니다. 이 서식은 <xref:System.Single>, <xref:System.Double> 및 <xref:System.Numerics.BigInteger> 형식에만 사용할 수 있습니다.
 
-<xref:System.Double> 값의 경우 "R" 형식 지정자가 원래 값을 성공적으로 라운드트립하지 못하는 경우가 있습니다. 또한 <xref:System.Double> 및 <xref:System.Single> 값 모두에 상대적으로 낮은 성능을 제공합니다. 대신 [ 값에는 ](#GFormatString)“G17”<xref:System.Double> 형식 지정자, [ 값에는 ](#GFormatString)“G9”<xref:System.Single> 형식 지정자를 사용하여 원래 값을 라운드트립하는 것이 좋습니다.
+<xref:System.Double> 값의 경우 "R" 형식 지정자가 원래 값을 성공적으로 라운드트립하지 못하는 경우가 있습니다. 또한 <xref:System.Double> 및 <xref:System.Single> 값 모두에 상대적으로 낮은 성능을 제공합니다. 대신 <xref:System.Double> 값에는 [“G17”](#GFormatString) 형식 지정자, <xref:System.Single> 값에는 [“G9”](#GFormatString) 형식 지정자를 사용하여 원래 값을 라운드트립하는 것이 좋습니다.
 
 이 지정자를 사용하여 <xref:System.Numerics.BigInteger> 값의 서식을 지정하면 해당 문자열 표현에 <xref:System.Numerics.BigInteger> 값의 모든 유효 자릿수가 포함됩니다.
 
@@ -320,9 +320,9 @@ ms.locfileid: "79398462"
 [!code-vb[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.vb)]
 
 > [!IMPORTANT]
-> <xref:System.Double> 또는 `/platform:x64` 스위치를 사용하여 컴파일되고 64비트 시스템에서 실행되는 경우 "R" 표준 숫자 형식 문자열로 형식이 지정된 `/platform:anycpu` 값이 성공적으로 라운드트립되지 않는 경우가 있습니다. 자세한 내용은 다음 단락을 참조하세요.
+> `/platform:x64` 또는 `/platform:anycpu` 스위치를 사용하여 컴파일되고 64비트 시스템에서 실행되는 경우 "R" 표준 숫자 형식 문자열로 형식이 지정된 <xref:System.Double> 값이 성공적으로 라운드트립되지 않는 경우가 있습니다. 자세한 내용은 다음 단락을 참조하세요.
 
-<xref:System.Double> 또는 `/platform:x64` 스위치를 사용하여 컴파일되고 64비트 시스템에서 실행되는 경우 "R" 표준 숫자 형식 문자열로 형식이 지정된 `/platform:anycpu` 값이 성공적으로 라운드트립되지 않는 문제를 해결하려면 "G17" 표준 숫자 서식 문자열을 사용하여 <xref:System.Double> 값에 서식을 지정하면 됩니다. 다음 예제에서는 성공적으로 라운드트립되지 않는 <xref:System.Double> 값에 "R" 형식 문자열을 사용하고 "G17" 형식 문자열도 사용하여 원래 값을 성공적으로 라운드트립합니다.
+`/platform:x64` 또는 `/platform:anycpu` 스위치를 사용하여 컴파일되고 64비트 시스템에서 실행되는 경우 "R" 표준 숫자 형식 문자열로 형식이 지정된 <xref:System.Double> 값이 성공적으로 라운드트립되지 않는 문제를 해결하려면 "G17" 표준 숫자 서식 문자열을 사용하여 <xref:System.Double> 값에 서식을 지정하면 됩니다. 다음 예제에서는 성공적으로 라운드트립되지 않는 <xref:System.Double> 값에 "R" 형식 문자열을 사용하고 "G17" 형식 문자열도 사용하여 원래 값을 성공적으로 라운드트립합니다.
 
 [!code-csharp[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#RoundTrip)]
 [!code-vb[System.Double.ToString#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Double.ToString/vb/roundtripex1.vb#5)]
@@ -355,7 +355,7 @@ ms.locfileid: "79398462"
 
 제어판에 있는 **국가 및 언어 옵션** 항목의 설정은 서식 지정 작업으로 생성되는 결과 문자열에 영향을 줍니다. 이러한 설정은 서식을 제어하는 데 사용되는 값을 제공하는 현재 스레드 문화권과 연결된 <xref:System.Globalization.NumberFormatInfo> 개체를 초기화하는 데 사용됩니다. 다른 설정을 사용하는 컴퓨터는 다른 결과 문자열을 생성합니다.
 
-또한 현재 시스템 문화권과 같은 문화권을 나타내는 새 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> 개체를 인스턴스화하는 데 <xref:System.Globalization.CultureInfo> 생성자가 사용된 경우 제어판의 **국가 및 언어 옵션** 항목을 통해 설정된 사용자 지정 내용이 새 <xref:System.Globalization.CultureInfo> 개체에도 적용됩니다. <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 생성자를 사용하면 시스템의 사용자 지정 내용이 반영되지 않는 <xref:System.Globalization.CultureInfo> 개체를 만들 수 있습니다.
+또한 현재 시스템 문화권과 같은 문화권을 나타내는 새 <xref:System.Globalization.CultureInfo> 개체를 인스턴스화하는 데 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> 생성자가 사용된 경우 제어판의 **국가 및 언어 옵션** 항목을 통해 설정된 사용자 지정 내용이 새 <xref:System.Globalization.CultureInfo> 개체에도 적용됩니다. <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 생성자를 사용하면 시스템의 사용자 지정 내용이 반영되지 않는 <xref:System.Globalization.CultureInfo> 개체를 만들 수 있습니다.
 
 ### <a name="numberformatinfo-properties"></a>NumberFormatInfo 속성
 

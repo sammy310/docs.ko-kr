@@ -20,7 +20,7 @@ ms.locfileid: "73418063"
 ## <a name="create-a-c-project"></a>C# 프로젝트 만들기  
   
 > [!NOTE]
-> 다음 지침은 Visual Studio용입니다. 다른 개발 환경을 사용하는 경우 System.Core.dll에 대한 참조와 `using` 네임스페이스에 대한 <xref:System.Linq?displayProperty=nameWithType> 지시문을 사용하여 콘솔 프로젝트를 만듭니다.  
+> 다음 지침은 Visual Studio용입니다. 다른 개발 환경을 사용하는 경우 System.Core.dll에 대한 참조와 <xref:System.Linq?displayProperty=nameWithType> 네임스페이스에 대한 `using` 지시문을 사용하여 콘솔 프로젝트를 만듭니다.  
   
 #### <a name="to-create-a-project-in-visual-studio"></a>Visual Studio에서 프로젝트를 만들려면  
   
@@ -36,7 +36,7 @@ ms.locfileid: "73418063"
   
      **솔루션 탐색기**에 새 프로젝트가 표시됩니다.  
   
-5. 프로젝트에 System.Core.dll에 대한 참조 및 `using` 네임스페이스에 대한 <xref:System.Linq?displayProperty=nameWithType> 지시문이 있습니다.  
+5. 프로젝트에 System.Core.dll에 대한 참조 및 <xref:System.Linq?displayProperty=nameWithType> 네임스페이스에 대한 `using` 지시문이 있습니다.  
   
 ## <a name="create-an-in-memory-data-source"></a>메모리 내 데이터 소스 만들기  
  쿼리의 데이터 소스는 간단한 `Student` 개체 목록입니다. 각 `Student` 레코드에는 이름, 성 및 클래스의 테스트 점수를 나타내는 정수 배열이 있습니다. 프로젝트에 이 코드를 복사합니다. 다음 특성에 주의합니다.  
@@ -97,7 +97,7 @@ ms.locfileid: "73418063"
   
 #### <a name="to-order-the-results"></a>결과를 정렬하려면  
   
-1. 특정 순서로 되어 있는 경우 결과를 더 쉽게 검색할 수 있습니다. 반환된 시퀀스를 소스 요소에서 액세스 가능한 필드 기준으로 정렬할 수 있습니다. 예를 들어, 다음 `orderby` 절은 각 학생의 성에 따라 결과를 사전순으로 정렬합니다. `orderby` 문 바로 다음과 `where` 문 앞에서 다음 `select` 절을 쿼리에 추가합니다.  
+1. 특정 순서로 되어 있는 경우 결과를 더 쉽게 검색할 수 있습니다. 반환된 시퀀스를 소스 요소에서 액세스 가능한 필드 기준으로 정렬할 수 있습니다. 예를 들어, 다음 `orderby` 절은 각 학생의 성에 따라 결과를 사전순으로 정렬합니다. `where` 문 바로 다음과 `select` 문 앞에서 다음 `orderby` 절을 쿼리에 추가합니다.  
   
     ```csharp
     orderby student.Last ascending  
@@ -133,7 +133,7 @@ ms.locfileid: "73418063"
   
 #### <a name="to-make-the-variables-implicitly-typed"></a>변수를 암시적으로 형식화하려면  
   
-1. `IEnumerables`의 `IGroupings`를 명시적으로 코딩하는 작업은 지루할 수 있습니다. `foreach`을 사용하여 동일한 쿼리 및 `var` 루프를 훨씬 더 편리하게 작성할 수 있습니다. `var` 키워드는 개체 형식을 변경하지 않고, 형식을 추론하도록 컴파일러에 지시합니다. `studentQuery`의 형식 및 `group` 반복 변수를 `var`로 변경하고 쿼리를 다시 실행합니다. 내부 `foreach` 루프에서 반복 변수의 형식은 여전히 `Student`로 지정되며 쿼리는 이전과 마찬가지로 작동합니다. `s` 반복 변수를 `var`로 변경하고 쿼리를 다시 실행합니다. 정확히 동일한 결과가 표시됩니다.  
+1. `IGroupings`의 `IEnumerables`를 명시적으로 코딩하는 작업은 지루할 수 있습니다. `var`을 사용하여 동일한 쿼리 및 `foreach` 루프를 훨씬 더 편리하게 작성할 수 있습니다. `var` 키워드는 개체 형식을 변경하지 않고, 형식을 추론하도록 컴파일러에 지시합니다. `studentQuery`의 형식 및 `group` 반복 변수를 `var`로 변경하고 쿼리를 다시 실행합니다. 내부 `foreach` 루프에서 반복 변수의 형식은 여전히 `Student`로 지정되며 쿼리는 이전과 마찬가지로 작동합니다. `s` 반복 변수를 `var`로 변경하고 쿼리를 다시 실행합니다. 정확히 동일한 결과가 표시됩니다.  
   
      [!code-csharp[CsLINQGettingStarted#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#16)]  
   
@@ -141,7 +141,7 @@ ms.locfileid: "73418063"
   
 #### <a name="to-order-the-groups-by-their-key-value"></a>키 값을 기준으로 그룹을 정렬하려면  
   
-1. 이전 쿼리를 실행하면 그룹이 사전순으로 표시되지 않습니다. 이를 변경하려면 `orderby` 절 뒤에 `group` 절을 제공해야 합니다. 그러나 `orderby` 절을 사용하려면 우선 `group` 절로 만든 그룹에 대한 참조 역할을 하는 식별자가 필요합니다. 다음과 같이 `into` 키워드를 사용하여 식별자를 제공합니다.  
+1. 이전 쿼리를 실행하면 그룹이 사전순으로 표시되지 않습니다. 이를 변경하려면 `group` 절 뒤에 `orderby` 절을 제공해야 합니다. 그러나 `orderby` 절을 사용하려면 우선 `group` 절로 만든 그룹에 대한 참조 역할을 하는 식별자가 필요합니다. 다음과 같이 `into` 키워드를 사용하여 식별자를 제공합니다.  
   
      [!code-csharp[csLINQGettingStarted#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#17)]  
   

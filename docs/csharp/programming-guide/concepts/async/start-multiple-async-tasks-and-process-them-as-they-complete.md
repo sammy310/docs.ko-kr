@@ -29,7 +29,7 @@ ms.locfileid: "71736724"
 
 2. 메뉴 모음에서 **파일** > **열기** > **프로젝트/솔루션**을 선택합니다.
 
-3. **프로젝트 열기** 대화 상자에서 다운로드한 샘플 코드가 포함된 폴더를 열고 *AsyncFineTuningCS*  AsyncFineTuningVB/에 대한 솔루션( *.sln*) 파일을 엽니다.
+3. **프로젝트 열기** 대화 상자에서 다운로드한 샘플 코드가 포함된 폴더를 열고 *AsyncFineTuningCS*/*AsyncFineTuningVB*에 대한 솔루션(*.sln*) 파일을 엽니다.
 
 4. **솔루션 탐색기**에서 **ProcessTasksAsTheyFinish** 프로젝트에 대한 바로 가기 메뉴를 열고 **시작 프로젝트로 설정**을 선택합니다.
 
@@ -51,7 +51,7 @@ IEnumerable<Task<int>> downloadTasksQuery = from url in urlList select ProcessUR
 
 프로젝트의 *MainWindow.xaml.cs* 파일에서 `AccessTheWebAsync` 메서드를 다음과 같이 변경합니다.
 
-- <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> 대신 <xref:System.Linq.Enumerable.ToArray%2A>를 적용하여 쿼리를 실행합니다.
+- <xref:System.Linq.Enumerable.ToArray%2A> 대신 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>를 적용하여 쿼리를 실행합니다.
 
     ```csharp
     List<Task<int>> downloadTasks = downloadTasksQuery.ToList();
@@ -71,7 +71,7 @@ IEnumerable<Task<int>> downloadTasksQuery = from url in urlList select ProcessUR
         downloadTasks.Remove(firstFinishedTask);
         ```
 
-    3. `firstFinishedTask` 호출에서 반환된 `ProcessURLAsync`를 대기합니다. `firstFinishedTask` 변수는 <xref:System.Threading.Tasks.Task%601>입니다. 여기서 `TReturn`은 정수입니다. 작업은 이미 완료되었지만, 다음 예제와 같이 다운로드한 웹 사이트의 길이를 검색하도록 기다립니다. 작업에 오류가 발생하는 경우, `await`은 `AggregateException`를 throw하는 `Result` 속성을 읽는 것과 달리 `AggregateException`에 저장된 첫 번째 자식 요소 예외를 throw합니다.
+    3. `ProcessURLAsync` 호출에서 반환된 `firstFinishedTask`를 대기합니다. `firstFinishedTask` 변수는 <xref:System.Threading.Tasks.Task%601>입니다. 여기서 `TReturn`은 정수입니다. 작업은 이미 완료되었지만, 다음 예제와 같이 다운로드한 웹 사이트의 길이를 검색하도록 기다립니다. 작업에 오류가 발생하는 경우, `await`은 `AggregateException`를 throw하는 `Result` 속성을 읽는 것과 달리 `AggregateException`에 저장된 첫 번째 자식 요소 예외를 throw합니다.
 
         ```csharp
         int length = await firstFinishedTask;

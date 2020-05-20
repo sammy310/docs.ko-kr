@@ -52,7 +52,7 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
 
 1. **솔루션 탐색기**에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 클릭합니다. **참조 추가** 대화 상자가 나타납니다.
 
-2. **어셈블리** 탭의 **구성 요소 이름** 목록에서 `<version>.0.0.0`Microsoft.Office.Interop.Excel[, 버전 ](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)(Office 제품 버전 번호에 대한 자세한 내용은 **Microsoft 버전** 참조)을 선택하고 Ctrl 키를 누른 상태로 **Microsoft.Office.Interop.Word**, `version <version>.0.0.0`을 선택합니다. 이러한 어셈블리가 보이지 않으면 어셈블리가 설치되어 있으며 표시되는지를 확인해야 할 수 있습니다([방법: Office 주 Interop 어셈블리 설치](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies) 참조).
+2. **어셈블리** 탭의 **구성 요소 이름** 목록에서 **Microsoft.Office.Interop.Excel**, 버전 `<version>.0.0.0`(Office 제품 버전 번호에 대한 자세한 내용은 [Microsoft 버전](https://en.wikipedia.org/wiki/Microsoft_Office#Versions) 참조)을 선택하고 Ctrl 키를 누른 상태로 **Microsoft.Office.Interop.Word**, `version <version>.0.0.0`을 선택합니다. 이러한 어셈블리가 보이지 않으면 어셈블리가 설치되어 있으며 표시되는지를 확인해야 할 수 있습니다([방법: Office 주 Interop 어셈블리 설치](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies) 참조).
 
 3. **확인**을 클릭합니다.
 
@@ -76,7 +76,7 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
 
      [!code-vb[csOfficeWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/account.vb#2)]
 
-3. 계좌 2개가 포함된 `bankAccounts` 목록을 만들려면 `ThisAddIn_Startup`ThisAddIn.vb*또는*ThisAddIn.cs*의*  메서드에 다음 코드를 추가합니다. 목록 선언은 *컬렉션 이니셜라이저*를 사용합니다. 자세한 내용은 [컬렉션 이니셜라이저](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)를 참조하세요.
+3. 계좌 2개가 포함된 `bankAccounts` 목록을 만들려면 *ThisAddIn.vb* 또는 *ThisAddIn.cs*의 `ThisAddIn_Startup` 메서드에 다음 코드를 추가합니다. 목록 선언은 *컬렉션 이니셜라이저*를 사용합니다. 자세한 내용은 [컬렉션 이니셜라이저](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)를 참조하세요.
 
      [!code-csharp[csOfficeWalkthrough#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#3)]
 
@@ -96,7 +96,7 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
 
          자세한 내용은 [명명된 인수 및 선택적 인수](../classes-and-structs/named-and-optional-arguments.md)를 참조하세요.
 
-    - `Range`범위`Offset` 개체의 [ 및 ](<xref:Microsoft.Office.Interop.Excel.Range>) 속성은 *인덱싱된 속성* 기능을 사용합니다. 이 기능을 사용하면 다음과 같은 일반적인 C# 구문을 통해 COM 형식에서 이러한 속성을 사용할 수 있습니다. 또한 인덱싱된 속성에서는 `Value` 개체의 `Range` 속성을 사용할 수 있으므로 `Value2` 속성을 사용할 필요가 없습니다. `Value` 속성은 인덱싱된 속성이지만 인덱스는 선택 사항입니다. 다음 예제에서는 선택적 인수와 인덱싱된 속성이 함께 사용됩니다.
+    - [범위](<xref:Microsoft.Office.Interop.Excel.Range>) 개체의 `Range` 및 `Offset` 속성은 *인덱싱된 속성* 기능을 사용합니다. 이 기능을 사용하면 다음과 같은 일반적인 C# 구문을 통해 COM 형식에서 이러한 속성을 사용할 수 있습니다. 또한 인덱싱된 속성에서는 `Value` 개체의 `Range` 속성을 사용할 수 있으므로 `Value2` 속성을 사용할 필요가 없습니다. `Value` 속성은 인덱싱된 속성이지만 인덱스는 선택 사항입니다. 다음 예제에서는 선택적 인수와 인덱싱된 속성이 함께 사용됩니다.
 
          [!code-csharp[csOfficeWalkthrough#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#5)]
 
@@ -114,7 +114,7 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
 
      [!code-vb[csOfficeWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#7)]
 
-     여기서 추가하는 코드는 C#의 또 다른 기능, 즉 Office 등의 COM 호스트에서 반환되는 `Object` 값을 [dynamic](../../language-reference/builtin-types/reference-types.md) 형식인 것처럼 처리하는 기능을 보여 줍니다. **-link** 컴파일러 옵션을 통해 어셈블리를 참조할 때 `True`Interop 형식 포함[을 기본값인 ](../../language-reference/compiler-options/link-compiler-option.md) 또는 그와 동일한 값으로 설정하면 이 작업이 자동으로 수행됩니다. `dynamic` 형식을 사용하면 Visual Basic의 기존 기능인 런타임에 바인딩을 사용할 수 있으며, C# 3.0 이하 버전 언어에서 필요했던 명시적 캐스팅을 사용할 필요가 없습니다.
+     여기서 추가하는 코드는 C#의 또 다른 기능, 즉 Office 등의 COM 호스트에서 반환되는 `Object` 값을 [dynamic](../../language-reference/builtin-types/reference-types.md) 형식인 것처럼 처리하는 기능을 보여 줍니다. [-link](../../language-reference/compiler-options/link-compiler-option.md) 컴파일러 옵션을 통해 어셈블리를 참조할 때 **Interop 형식 포함**을 기본값인 `True` 또는 그와 동일한 값으로 설정하면 이 작업이 자동으로 수행됩니다. `dynamic` 형식을 사용하면 Visual Basic의 기존 기능인 런타임에 바인딩을 사용할 수 있으며, C# 3.0 이하 버전 언어에서 필요했던 명시적 캐스팅을 사용할 필요가 없습니다.
 
      예를 들어 `excelApp.Columns[1]`는 `Object`를 반환하고, `AutoFit`는 Excel [범위](<xref:Microsoft.Office.Interop.Excel.Range>) 메서드입니다. `dynamic`을 사용하지 않는 경우에는 `excelApp.Columns[1]` 메서드를 호출하기 전에 `Range`에서 반환하는 개체를 `AutoFit` 인스턴스로 캐스팅해야 합니다.
 

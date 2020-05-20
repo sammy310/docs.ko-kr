@@ -37,7 +37,7 @@ ms.locfileid: "76789845"
 
 ## <a name="example"></a>예제
 
-[code> 태그를 사용하는 방법의 예는 \<](./example.md)example>\< 항목을 참조하세요.
+\<code> 태그를 사용하는 방법의 예는 [\<example>](./example.md) 항목을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

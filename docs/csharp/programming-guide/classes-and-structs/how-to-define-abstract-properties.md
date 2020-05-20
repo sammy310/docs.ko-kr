@@ -17,7 +17,7 @@ ms.locfileid: "75705615"
   
  이 샘플은 개별적으로 컴파일된 파일 3개로 구성되었으며, 결과로 생성된 어셈블리는 다음 컴파일 시 참조됩니다.  
   
-- abstractshape.cs: 추상 `Shape` 속성이 포함된 `Area` 클래스입니다.  
+- abstractshape.cs: 추상 `Area` 속성이 포함된 `Shape` 클래스입니다.  
   
 - shapes.cs: `Shape` 클래스의 서브클래스입니다.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "75705615"
  그러면 shapetest.exe 실행 파일이 생성됩니다.  
   
 ## <a name="example"></a>예제  
- 이 파일에서는 `Shape` 형식의 `Area` 속성을 포함하는 `double` 클래스를 선언합니다.  
+ 이 파일에서는 `double` 형식의 `Area` 속성을 포함하는 `Shape` 클래스를 선언합니다.  
   
  [!code-csharp[csProgGuideInheritance#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#1)]  
   

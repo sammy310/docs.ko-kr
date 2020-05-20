@@ -60,7 +60,7 @@ ms.locfileid: "79187567"
       source ~/.bashrc
       ```
 
-       이러한 환경 변수는 터미널을 닫을 때 손실됩니다. 변경 내용을 영구적으로 적용하려면 `export` 파일에 `~/.bashrc` 줄을 추가합니다.
+       이러한 환경 변수는 터미널을 닫을 때 손실됩니다. 변경 내용을 영구적으로 적용하려면 `~/.bashrc` 파일에 `export` 줄을 추가합니다.
 
    * 명령줄에서 `mvn`을 실행할 수 있는지 확인합니다.
 
@@ -89,7 +89,7 @@ ms.locfileid: "79187567"
       source ~/.bashrc
       ```
 
-      이러한 환경 변수는 터미널을 닫을 때 손실됩니다. 변경 내용을 영구적으로 적용하려면 `export` 파일에 `~/.bashrc` 줄을 추가합니다.
+      이러한 환경 변수는 터미널을 닫을 때 손실됩니다. 변경 내용을 영구적으로 적용하려면 `~/.bashrc` 파일에 `export` 줄을 추가합니다.
 
    * 명령줄에서 `spark-shell`을 실행할 수 있는지 확인합니다.
 
@@ -187,7 +187,7 @@ mvn clean package
 
 샘플을 빌드한 후 `spark-submit`을 사용하여 .NET Core 앱을 제출할 수 있습니다. [사전 요구 사항](#prerequisites) 섹션에 따라 Apache Spark를 설치했는지 확인합니다.
 
-1. `DOTNET_WORKER_DIR` 이진 파일이 생성된 경로(예: `PATH`)가 포함되도록 `Microsoft.Spark.Worker` 또는 `~/dotnet.spark/artifacts/bin/Microsoft.Spark.Worker/Debug/netcoreapp2.1/ubuntu.18.04-x64/publish` 환경 변수를 설정합니다.
+1. `Microsoft.Spark.Worker` 이진 파일이 생성된 경로(예: `~/dotnet.spark/artifacts/bin/Microsoft.Spark.Worker/Debug/netcoreapp2.1/ubuntu.18.04-x64/publish`)가 포함되도록 `DOTNET_WORKER_DIR` 또는 `PATH` 환경 변수를 설정합니다.
 
    ```bash
    export DOTNET_WORKER_DIR=~/dotnet.spark/artifacts/bin/Microsoft.Spark.Worker/Debug/netcoreapp2.1/ubuntu.18.04-x64/publish

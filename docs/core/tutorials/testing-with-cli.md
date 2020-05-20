@@ -110,7 +110,7 @@ Meow!
 dotnet add reference ../../src/NewTypes/NewTypes.csproj
 ```
 
-또는 `<ItemGroup>`NewTypesTests.csproj*파일에* 노드를 추가하여 수동으로 프로젝트 참조를 추가할 수도 있습니다.
+또는 *NewTypesTests.csproj* 파일에 `<ItemGroup>` 노드를 추가하여 수동으로 프로젝트 참조를 추가할 수도 있습니다.
 
 ```xml
 <ItemGroup>
@@ -158,7 +158,7 @@ public class PetTests
 }
 ```
 
-연습(옵션): 소유자에 대한 `Bird`을 생성하는 `Tweet!` 유형을 이전에 추가한 경우 *PetTests.cs* 파일에 테스트 메서드 `BirdTalkToOwnerReturnsTweet`을 추가하여 `TalkToOwner` 메서드가 `Bird` 유형에 대해 제대로 작동하는지 확인합니다.
+연습(옵션): 소유자에 대한 `Tweet!`을 생성하는 `Bird` 유형을 이전에 추가한 경우 *PetTests.cs* 파일에 테스트 메서드 `BirdTalkToOwnerReturnsTweet`을 추가하여 `TalkToOwner` 메서드가 `Bird` 유형에 대해 제대로 작동하는지 확인합니다.
 
 > [!NOTE]
 > `expected` 및 `actual` 값이 같다고 예상하는 경우에도 `Assert.NotEqual` 검사를 사용한 초기 어설션에서는 이러한 값이 *같지 않다*고 지정합니다. 테스트 논리를 검사하기 위해 항상 먼저 실패할 테스트를 만듭니다. 테스트가 실패했음을 확인한 후 테스트를 통과할 수 있도록 어설션을 조정합니다.

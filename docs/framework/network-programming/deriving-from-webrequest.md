@@ -22,7 +22,7 @@ ms.locfileid: "71048607"
   
  프로토콜별 클래스를 플러그형 프로토콜로 사용하려면 다음 두 가지 조건을 충족해야 합니다. 클래스는 <xref:System.Net.IWebRequestCreate> 인터페이스를 구현하고 <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType> 메서드에 등록되어야 합니다. 클래스는 플러그형 인터페이스를 제공하도록 **WebRequest**의 모든 추상 메서드 및 속성을 재정의해야 합니다.  
   
- **WebRequest** 인스턴스는 일회용입니다. 또 다른 요청을 만들려면 새 **WebRequest**를 만듭니다. **WebRequest**는 개발자가 템플릿 <xref:System.Runtime.Serialization.ISerializable>WebRequest**를 직렬화하고 나서 추가 요청을 위한 템플릿을 다시 구성할 수 있도록**  인터페이스를 지원합니다.  
+ **WebRequest** 인스턴스는 일회용입니다. 또 다른 요청을 만들려면 새 **WebRequest**를 만듭니다. **WebRequest**는 개발자가 템플릿 **WebRequest**를 직렬화하고 나서 추가 요청을 위한 템플릿을 다시 구성할 수 있도록 <xref:System.Runtime.Serialization.ISerializable> 인터페이스를 지원합니다.  
   
 ## <a name="iwebrequest-create-method"></a>IWebRequest Create 메서드  
  <xref:System.Net.IWebRequestCreate.Create%2A> 메서드는 프로토콜별 클래스의 새 인스턴스를 초기화해야 합니다. 새 **WebRequest**가 생성되면 <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> 메서드는 요청된 URI를 **RegisterPrefix** 메서드에 등록된 URI 접두사와 일치시킵니다. 적절한 프로토콜별 하위 항목의 **Create** 메서드는 프로토콜별 필드를 수정할 필요 없이 프로토콜에 대한 표준 요청/응답 트랜잭션을 수행할 수 있는 하위 항목의 초기화된 인스턴스를 반환해야 합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "71048607"
 ## <a name="contentlength-property"></a>ContentLength 속성  
  <xref:System.Net.WebRequest.ContentLength%2A> 속성은 데이터를 업로드할 때 서버에 전송될 데이터 크기(바이트)를 지정합니다.  
   
- 일반적으로 <xref:System.Net.WebRequest.Method%2A>ContentLength**속성이 0보다 큰 값으로 설정될 경우 업로드가 수행되도록 지정하려면** 속성을 설정해야 합니다.  
+ 일반적으로 **ContentLength** 속성이 0보다 큰 값으로 설정될 경우 업로드가 수행되도록 지정하려면 <xref:System.Net.WebRequest.Method%2A> 속성을 설정해야 합니다.  
   
 ## <a name="contenttype-property"></a>ContentType 속성  
  <xref:System.Net.WebRequest.ContentType%2A> 속성은 보내는 콘텐츠 형식을 식별하기 위해 프로토콜을 통해 서버에 보내야 하는 특수 정보를 제공합니다. 일반적으로 이것은 업로드된 데이터의 MIME 콘텐츠 형식입니다.  

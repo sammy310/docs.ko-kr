@@ -22,7 +22,7 @@ ms.locfileid: "78160172"
 
 ## <a name="use-trycatchfinally-blocks-to-recover-from-errors-or-release-resources"></a>Try/catch/finally 블록을 사용하여 오류를 복구하거나 리소스를 해제합니다.
 
-잠재적으로 예외를 생성`try`하고/ 코드가 해당 예외에서 복구될 수 있는 코드 주위에 `catch`****** 블록을 사용합니다. `catch` 블록에서 항상 가장 많이 파생된 것부터 가장 적게 파생된 것까지 예외를 정렬합니다. 모든 예외는 <xref:System.Exception>에서 파생됩니다. 더 많이 파생된 예외는 기본 예외 클래스에 대한 catch 절 앞에 오는 catch 절에 의해 처리되지 않습니다. 예외에서 코드를 복구할 수 없는 경우 해당 예외를 catch하지 마세요. 가능한 경우 메서드를 호출 스택 위에 추가하여 복구하세요.
+잠재적으로 예외를 생성***하고*** 코드가 해당 예외에서 복구될 수 있는 코드 주위에 `try`/`catch` 블록을 사용합니다. `catch` 블록에서 항상 가장 많이 파생된 것부터 가장 적게 파생된 것까지 예외를 정렬합니다. 모든 예외는 <xref:System.Exception>에서 파생됩니다. 더 많이 파생된 예외는 기본 예외 클래스에 대한 catch 절 앞에 오는 catch 절에 의해 처리되지 않습니다. 예외에서 코드를 복구할 수 없는 경우 해당 예외를 catch하지 마세요. 가능한 경우 메서드를 호출 스택 위에 추가하여 복구하세요.
 
 `using` 문 또는 `finally` 블록으로 할당된 리소스를 정리하세요. 예외가 throw될 때 리소스를 자동으로 정리하려면 `using` 문을 사용하는 것이 좋습니다. `finally` 블록을 사용하여 <xref:System.IDisposable>을 구현하지 않는 리소스를 정리합니다. `finally` 절의 코드는 예외가 throw되더라도 거의 항상 실행됩니다.
 
@@ -56,7 +56,7 @@ ms.locfileid: "78160172"
 
 예외를 방지하는 또 다른 방법은 매우 일반적인 오류의 경우 예외를 throw하는 대신 null(또는 기본값)을 반환하는 것입니다. 매우 흔한 오류 사례는 정상적인 제어 흐름으로 간주할 수 있습니다. 이러한 경우에 null(또는 기본값)을 반환함으로써, 앱의 성능에 미치는 영향을 최소화합니다.
 
-값 유형의 경우, 오류 표시기로 `Nullable<T>` 또는 기본값 중 무엇을 사용할지 여부는 특정 앱에서 고려해야 할 사항입니다. `Nullable<Guid>`를 사용하면 `default`는 `null` 대신 `Guid.Empty`이 됩니다. 값이 있거나 없는 경우 `Nullable<T>`을 추가하여 더 명확하게 만들 수도 있습니다. 또는 `Nullable<T>`을 추가하여 불필요한지를 확인하는 추가 사례를 만들고 오류의 잠재적 원인을 만드는 역할만 할 수도 있습니다.
+값 유형의 경우, 오류 표시기로 `Nullable<T>` 또는 기본값 중 무엇을 사용할지 여부는 특정 앱에서 고려해야 할 사항입니다. `Nullable<Guid>`를 사용하면 `default`는 `Guid.Empty` 대신 `null`이 됩니다. 값이 있거나 없는 경우 `Nullable<T>`을 추가하여 더 명확하게 만들 수도 있습니다. 또는 `Nullable<T>`을 추가하여 불필요한지를 확인하는 추가 사례를 만들고 오류의 잠재적 원인을 만드는 역할만 할 수도 있습니다.
 
 ## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>오류 코드를 반환하는 대신 예외 throw
 
@@ -108,7 +108,7 @@ ms.locfileid: "78160172"
 
 ## <a name="include-a-localized-string-message-in-every-exception"></a>모든 예외에 지역화된 문자열 메시지를 포함합니다.
 
-사용자에게 표시되는 오류 메시지는 예외 클래스 이름에서 파생된 메시지가 아니라 throw된 예외의 <xref:System.Exception.Message?displayProperty=nameWithType> 속성에서 파생된 메시지입니다. 일반적으로 <xref:System.Exception.Message?displayProperty=nameWithType>예외 생성자`message`의 [ 인수에 메시지 문자열을 전달하여 값을 ](xref:System.Exception.%23ctor%2A) 속성에 할당합니다.
+사용자에게 표시되는 오류 메시지는 예외 클래스 이름에서 파생된 메시지가 아니라 throw된 예외의 <xref:System.Exception.Message?displayProperty=nameWithType> 속성에서 파생된 메시지입니다. 일반적으로 [예외 생성자](xref:System.Exception.%23ctor%2A)의 `message` 인수에 메시지 문자열을 전달하여 값을 <xref:System.Exception.Message?displayProperty=nameWithType> 속성에 할당합니다.
 
 지역화된 애플리케이션의 경우 애플리케이션에서 throw할 수 있는 모든 예외에 대해 지역화된 메시지 문자열을 제공해야 합니다. 리소스 파일을 사용하여 지역화된 오류 메시지를 제공합니다. 애플리케이션을 지역화하고 지역화된 문자열을 검색하는 방법은 다음 문서를 참조하세요.
 

@@ -18,7 +18,7 @@ ms.locfileid: "75713790"
 `ascending` 상황별 키워드는 쿼리 식의 [orderby 절](./orderby-clause.md)에서 사용되어 정렬 순서를 가장 작은 값에서 가장 큰 값의 오름차순으로 지정합니다. `ascending`은 기본 정렬 순서이므로 지정할 필요가 없습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 `ascending`orderby 절[에 ](./orderby-clause.md)을 사용하는 방법을 보여 줍니다.  
+ 다음 예제에서는 [orderby 절](./orderby-clause.md)에 `ascending`을 사용하는 방법을 보여 줍니다.  
   
 [!code-csharp[csrefKeywordsContextual#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#14)]
   

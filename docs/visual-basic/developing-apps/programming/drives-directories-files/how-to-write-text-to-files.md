@@ -22,13 +22,13 @@ ms.locfileid: "74334467"
   
 #### <a name="to-write-text-to-a-file"></a>파일에 텍스트를 쓰려면  
   
-- 파일과 쓸 텍스트를 지정하여 `WriteAllText` 메서드를 통해 파일에 텍스트를 씁니다. 이 예제에서는 `"This is new text."`라는 파일에 `test.txt` 줄을 쓰고 파일에 있는 기존 텍스트에 텍스트를 추가합니다.  
+- 파일과 쓸 텍스트를 지정하여 `WriteAllText` 메서드를 통해 파일에 텍스트를 씁니다. 이 예제에서는 `test.txt`라는 파일에 `"This is new text."` 줄을 쓰고 파일에 있는 기존 텍스트에 텍스트를 추가합니다.  
   
      [!code-vb[VbFileIOWrite#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#3)]  
   
 #### <a name="to-write-a-series-of-strings-to-a-file"></a>일련의 문자열을 파일에 쓰려면  
   
-- 문자열 컬렉션을 반복합니다. 대상 파일 및 추가할 문자열을 지정하고 `WriteAllText`를 `append`로 설정하여 `True` 메서드를 통해 파일에 텍스트를 씁니다.  
+- 문자열 컬렉션을 반복합니다. 대상 파일 및 추가할 문자열을 지정하고 `append`를 `True`로 설정하여 `WriteAllText` 메서드를 통해 파일에 텍스트를 씁니다.  
   
      이 예제에서는 `Documents and Settings` 디렉터리에 있는 파일 이름을 `FileList.txt`에 쓰고, 가독성을 높이기 위해 각 이름 사이에 캐리지 리턴을 삽입합니다.  
   

@@ -21,7 +21,7 @@ ms.locfileid: "74334426"
 
 ## <a name="to-write-to-a-binary-file"></a>이진 파일에 쓰려면
 
-파일 경로 및 이름과 쓸 바이트를 제공하여 `WriteAllBytes` 메서드를 사용합니다. 이 예제에서는 `CustomerData`라는 파일에 데이터 배열 `CollectedData.dat`를 추가합니다.
+파일 경로 및 이름과 쓸 바이트를 제공하여 `WriteAllBytes` 메서드를 사용합니다. 이 예제에서는 `CollectedData.dat`라는 파일에 데이터 배열 `CustomerData`를 추가합니다.
 
 [!code-vb[VbVbcnMyFileSystem#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#27)]
 

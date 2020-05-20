@@ -40,7 +40,7 @@ ms.locfileid: "79173668"
 ## <a name="remarks"></a>설명  
  둘 이상의 파일에서 가져오려면 각 파일에 대해 **-reference** 옵션을 포함합니다.  
   
- 가져오는 파일에 매니페스트가 포함되어 있어야 합니다. 출력 파일이 [-target:module](./target-compiler-option.md) 이외의 [-target](./target-module-compiler-option.md) 옵션 중 하나로 컴파일된 상태여야 합니다.  
+ 가져오는 파일에 매니페스트가 포함되어 있어야 합니다. 출력 파일이 [-target:module](./target-module-compiler-option.md) 이외의 [-target](./target-compiler-option.md) 옵션 중 하나로 컴파일된 상태여야 합니다.  
   
  **-r**은 **-reference**의 약식입니다.  
   
@@ -80,13 +80,13 @@ extern alias GridV2;
 // Using statements go here.  
 ```  
   
- 이 작업이 완료되면 다음과 같이 컨트롤 이름 앞에 `grid.dll`을 추가하여 `GridV1`에서 그리드 컨트롤을 참조할 수 있습니다.  
+ 이 작업이 완료되면 다음과 같이 컨트롤 이름 앞에 `GridV1`을 추가하여 `grid.dll`에서 그리드 컨트롤을 참조할 수 있습니다.  
   
 ```csharp  
 GridV1::Grid  
 ```  
   
- 또한, 다음과 같이 컨트롤 이름 앞에 `grid20.dll`를 추가하여 `GridV2`에서 그리드 컨트롤을 참조할 수 있습니다.  
+ 또한, 다음과 같이 컨트롤 이름 앞에 `GridV2`를 추가하여 `grid20.dll`에서 그리드 컨트롤을 참조할 수 있습니다.  
   
 ```csharp  
 GridV2::Grid

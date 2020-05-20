@@ -20,7 +20,7 @@ ms.locfileid: "74348752"
  지정한 패턴과 일치하는 파일이 없으면 빈 컬렉션이 반환됩니다.  
   
 > [!NOTE]
-> `DirectoryInfo` 네임스페이스의 `System.IO` 클래스를 사용하여 파일 목록을 반환하는 방법에 대한 자세한 내용은 <xref:System.IO.DirectoryInfo.GetFiles%2A>를 참조하세요.  
+> `System.IO` 네임스페이스의 `DirectoryInfo` 클래스를 사용하여 파일 목록을 반환하는 방법에 대한 자세한 내용은 <xref:System.IO.DirectoryInfo.GetFiles%2A>를 참조하세요.  
   
 ### <a name="to-find-files-with-a-specified-pattern"></a>지정된 패턴의 파일을 찾으려면  
   

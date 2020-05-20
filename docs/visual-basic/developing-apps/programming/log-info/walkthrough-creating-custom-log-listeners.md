@@ -22,13 +22,13 @@ ms.locfileid: "74353618"
 
 #### <a name="to-create-the-listener"></a>수신기를 만들려면
 
-- `SimpleListener`에서 상속하는 이름이 <xref:System.Diagnostics.TraceListener>인 클래스를 애플리케이션에서 만듭니다.
+- <xref:System.Diagnostics.TraceListener>에서 상속하는 이름이 `SimpleListener`인 클래스를 애플리케이션에서 만듭니다.
 
      [!code-vb[VbVbalrMyApplicationLog#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#16)]
 
      기본 클래스에 필요한 <xref:System.Diagnostics.TraceListener.Write%2A> 및 <xref:System.Diagnostics.TraceListener.WriteLine%2A> 메서드는 `MsgBox`를 호출하여 해당 입력을 표시합니다.
 
-     <xref:System.Security.Permissions.HostProtectionAttribute> 및 <xref:System.Diagnostics.TraceListener.Write%2A> 메서드의 특정이 기본 클래스 메서드와 일치하도록 이 두 메서드에 <xref:System.Diagnostics.TraceListener.WriteLine%2A> 특성이 적용됩니다. <xref:System.Security.Permissions.HostProtectionAttribute> 특성을 사용하면 코드를 실행하는 호스트에서는 코드가 호스트 보호 동기화를 노출하는지를 확인할 수 있습니다.
+     <xref:System.Diagnostics.TraceListener.Write%2A> 및 <xref:System.Diagnostics.TraceListener.WriteLine%2A> 메서드의 특정이 기본 클래스 메서드와 일치하도록 이 두 메서드에 <xref:System.Security.Permissions.HostProtectionAttribute> 특성이 적용됩니다. <xref:System.Security.Permissions.HostProtectionAttribute> 특성을 사용하면 코드를 실행하는 호스트에서는 코드가 호스트 보호 동기화를 노출하는지를 확인할 수 있습니다.
 
     > [!NOTE]
     > <xref:System.Security.Permissions.HostProtectionAttribute> 특성은 공용 언어 런타임을 호스트하고 SQL Server와 같은 호스트 보호를 구현하는 관리되지 않는 애플리케이션에서만 적용됩니다.
@@ -45,7 +45,7 @@ ms.locfileid: "74353618"
 
 3. **어셈블리 시그니처** 상자를 선택합니다.
 
-4. **강력한 이름 키 파일 선택\< 드롭다운 목록에서** **새로 만들기>** 를 선택합니다.
+4. **강력한 이름 키 파일 선택** 드롭다운 목록에서 **\<새로 만들기>** 를 선택합니다.
 
      **강력한 이름 키 만들기** 대화 상자가 열립니다.
 

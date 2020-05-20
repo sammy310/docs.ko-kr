@@ -29,7 +29,7 @@ ms.locfileid: "71047028"
   
  <xref:System.Net.Sockets.Socket>이 <xref:System.Net.Sockets.Socket.Bind%2A> 및 <xref:System.Net.Sockets.Socket.Listen%2A> 메서드를 사용하여 엔드포인트에서 수신 대기하도록 설정되면 <xref:System.Net.Sockets.Socket.Accept%2A> 메서드를 사용하여 들어오는 연결 요청을 허용할 수 있습니다. **Accept** 메서드를 호출하면 연결 요청이 수신될 때까지 애플리케이션이 일시 중단됩니다.  
   
- 연결 요청이 수신되면 **Accept**는 연결 중인 클라이언트와 연결된 새 **Socket** 인스턴스를 반환합니다. 다음 예제에서는 클라이언트에서 데이터를 읽고 콘솔에 표시한 다음 데이터를 클라이언트에 다시 에코합니다. **Socket**은 메시징 프로토콜을 지정하지 않으므로 “\<EOF>” 문자열은 메시지 데이터의 끝을 표시합니다. **라는** Socket`listener`이 초기화되었으며 엔드포인트에 바인딩되었다고 가정합니다.  
+ 연결 요청이 수신되면 **Accept**는 연결 중인 클라이언트와 연결된 새 **Socket** 인스턴스를 반환합니다. 다음 예제에서는 클라이언트에서 데이터를 읽고 콘솔에 표시한 다음 데이터를 클라이언트에 다시 에코합니다. **Socket**은 메시징 프로토콜을 지정하지 않으므로 “\<EOF>” 문자열은 메시지 데이터의 끝을 표시합니다. `listener`라는 **Socket**이 초기화되었으며 엔드포인트에 바인딩되었다고 가정합니다.  
   
 ```vb  
 Console.WriteLine("Waiting for a connection...")  

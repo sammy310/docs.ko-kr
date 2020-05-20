@@ -71,7 +71,7 @@ Visual Studio를 시작하고, 사용자가 지정된 파일에 작성하는 데
 > [!NOTE]
 > Visual Studio IDE(통합 개발 환경)는 코드 편집기로 돌아가서, 코드를 추가해야 하는 이벤트 처리기 내부에 삽입점을 둡니다.
 
-1. 파일에 쓰려면 <xref:System.IO.StreamWriter.Write%2A> 클래스의 <xref:System.IO.StreamWriter> 메서드를 사용합니다. `Dim fw As StreamWriter` 직후에 다음 코드를 추가합니다. 파일이 없으면 만들어지기 때문에 파일이 없을 경우 예외가 throw될 것을 우려하지 않아도 됩니다.
+1. 파일에 쓰려면 <xref:System.IO.StreamWriter> 클래스의 <xref:System.IO.StreamWriter.Write%2A> 메서드를 사용합니다. `Dim fw As StreamWriter` 직후에 다음 코드를 추가합니다. 파일이 없으면 만들어지기 때문에 파일이 없을 경우 예외가 throw될 것을 우려하지 않아도 됩니다.
 
      [!code-vb[VbVbcnMyFileSystem#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#37)]
 
@@ -89,7 +89,7 @@ Visual Studio를 시작하고, 사용자가 지정된 파일에 작성하는 데
 
 ## <a name="adding-display-features-to-the-diary"></a>일기에 표시 기능 추가
 
-이 섹션에서는 `DisplayEntry`<xref:System.Windows.Forms.TextBox>의 최신 항목을 표시하는 기능을 추가합니다. 다양한 항목을 표시하며 사용자가 <xref:System.Windows.Forms.ComboBox>`DisplayEntry`에 표시할 항목을 선택할 수 있는 <xref:System.Windows.Forms.TextBox>를 추가할 수도 있습니다. <xref:System.IO.StreamReader> 클래스의 인스턴스는 `MyDiary.txt`에서 정보를 읽습니다. <xref:System.IO.StreamWriter> 클래스와 마찬가지로 <xref:System.IO.StreamReader>도 텍스트 파일에 사용합니다.
+이 섹션에서는 `DisplayEntry`<xref:System.Windows.Forms.TextBox>의 최신 항목을 표시하는 기능을 추가합니다. 다양한 항목을 표시하며 사용자가 `DisplayEntry`<xref:System.Windows.Forms.TextBox>에 표시할 항목을 선택할 수 있는 <xref:System.Windows.Forms.ComboBox>를 추가할 수도 있습니다. <xref:System.IO.StreamReader> 클래스의 인스턴스는 `MyDiary.txt`에서 정보를 읽습니다. <xref:System.IO.StreamWriter> 클래스와 마찬가지로 <xref:System.IO.StreamReader>도 텍스트 파일에 사용합니다.
 
 이 연습의 이 섹션에서는 다음 표의 컨트롤을 양식에 추가하고 각 속성의 해당 값을 설정합니다.
 
@@ -102,7 +102,7 @@ Visual Studio를 시작하고, 사용자가 지정된 파일에 작성하는 데
 
 ### <a name="to-populate-the-combo-box"></a>콤보 상자를 채우려면
 
-1. `PickEntries`<xref:System.Windows.Forms.ComboBox>는 사용자가 특정 날짜의 항목을 선택할 수 있도록 사용자가 각 항목을 제출하는 날짜를 표시하는 데 사용됩니다. <xref:System.Windows.Forms.Control.Click> 단추에 대한 `GetEntries` 이벤트 처리기를 만들어 다음 코드를 추가합니다.
+1. `PickEntries`<xref:System.Windows.Forms.ComboBox>는 사용자가 특정 날짜의 항목을 선택할 수 있도록 사용자가 각 항목을 제출하는 날짜를 표시하는 데 사용됩니다. `GetEntries` 단추에 대한 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기를 만들어 다음 코드를 추가합니다.
 
      [!code-vb[VbVbcnMyFileSystem#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#41)]
 
@@ -110,7 +110,7 @@ Visual Studio를 시작하고, 사용자가 지정된 파일에 작성하는 데
 
 ### <a name="to-choose-and-display-individual-entries"></a>개별 항목을 선택하고 표시하려면
 
-1. <xref:System.Windows.Forms.Control.Click> 단추에 대한 `Display` 이벤트 처리기를 만들어 다음 코드를 추가합니다.
+1. `Display` 단추에 대한 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기를 만들어 다음 코드를 추가합니다.
 
      [!code-vb[VbVbcnMyFileSystem#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#42)]
 
@@ -134,19 +134,19 @@ Visual Studio를 시작하고, 사용자가 지정된 파일에 작성하는 데
 
      [!code-vb[VbVbcnMyFileSystem#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#43)]
 
-2. <xref:System.Windows.Forms.Control.Click> 단추에 대한 `DeleteEntry` 이벤트 처리기를 만들어 다음 코드를 추가합니다.
+2. `DeleteEntry` 단추에 대한 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기를 만들어 다음 코드를 추가합니다.
 
      [!code-vb[VbVbcnMyFileSystem#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#44)]
 
-3. 사용자가 항목을 표시하면 `EditEntry` 단추가 활성화됩니다. 다음 코드를 <xref:System.Windows.Forms.Control.Click> 단추의 `Display` 이벤트에서 `DisplayEntry.Text = ReadString` 뒤에 추가합니다.
+3. 사용자가 항목을 표시하면 `EditEntry` 단추가 활성화됩니다. 다음 코드를 `Display` 단추의 <xref:System.Windows.Forms.Control.Click> 이벤트에서 `DisplayEntry.Text = ReadString` 뒤에 추가합니다.
 
      [!code-vb[VbVbcnMyFileSystem#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#45)]
 
-4. <xref:System.Windows.Forms.Control.Click> 단추에 대한 `EditEntry` 이벤트 처리기를 만들어 다음 코드를 추가합니다.
+4. `EditEntry` 단추에 대한 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기를 만들어 다음 코드를 추가합니다.
 
      [!code-vb[VbVbcnMyFileSystem#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#46)]
 
-5. <xref:System.Windows.Forms.Control.Click> 단추에 대한 `SubmitEdit` 이벤트 처리기를 만들어 다음 코드를 추가합니다.
+5. `SubmitEdit` 단추에 대한 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기를 만들어 다음 코드를 추가합니다.
 
      [!code-vb[VbVbcnMyFileSystem#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#47)]
 

@@ -20,7 +20,7 @@ ms.locfileid: "74348940"
 
 <xref:System.IO> 네임스페이스의 클래스는 드라이브, 파일 및 디렉터리 작업에 사용됩니다.
 
-<xref:System.IO> 네임스페이스는 <xref:System.IO.File> 및 <xref:System.IO.Directory> 클래스를 포함하며, 이러한 클래스는 파일 및 디렉터리를 조작하는 .NET Framework 기능을 제공합니다. 이러한 개체의 메서드는 정적 멤버 또는 공유 멤버이므로, 먼저 클래스의 인스턴스를 만들지 않고 직접 사용할 수 있습니다. <xref:System.IO.FileInfo> 기능의 사용자에게 익숙한 <xref:System.IO.DirectoryInfo> 및 `My` 클래스가 이러한 클래스와 연관되어 있습니다. 이러한 클래스를 사용하려면 이름을 정규화하거나, 영향받는 코드의 시작 부분에 `Imports` 문을 포함하여 적절한 네임스페이스를 가져와야 합니다. 자세한 내용은 [Imports 문(.NET 네임스페이스 및 형식)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)을 참조하세요.
+<xref:System.IO> 네임스페이스는 <xref:System.IO.File> 및 <xref:System.IO.Directory> 클래스를 포함하며, 이러한 클래스는 파일 및 디렉터리를 조작하는 .NET Framework 기능을 제공합니다. 이러한 개체의 메서드는 정적 멤버 또는 공유 멤버이므로, 먼저 클래스의 인스턴스를 만들지 않고 직접 사용할 수 있습니다. `My` 기능의 사용자에게 익숙한 <xref:System.IO.FileInfo> 및 <xref:System.IO.DirectoryInfo> 클래스가 이러한 클래스와 연관되어 있습니다. 이러한 클래스를 사용하려면 이름을 정규화하거나, 영향받는 코드의 시작 부분에 `Imports` 문을 포함하여 적절한 네임스페이스를 가져와야 합니다. 자세한 내용은 [Imports 문(.NET 네임스페이스 및 형식)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)을 참조하세요.
 
 > [!NOTE]
 > 이 섹션의 다른 항목은 드라이브, 파일 및 디렉터리 작업에 `My.Computer.FileSystem` 클래스 대신 `System.IO` 개체를 사용합니다. `My.Computer.FileSystem` 개체의 주요 용도는 Visual Basic 프로그램에서 사용하는 것입니다. `System.IO` 클래스는 Visual Basic을 포함하여 .NET Framework를 지원하는 모든 언어에서 사용할 수 있습니다.
@@ -71,7 +71,7 @@ ms.locfileid: "74348940"
 
 ## <a name="file-access-and-attributes"></a>파일 액세스 및 특성
 
-<xref:System.IO.FileAccess> 클래스의 생성자가 사용하는 플래그가 포함된 <xref:System.IO.FileMode>, <xref:System.IO.FileShare> 및 <xref:System.IO.FileStream> 열거형을 사용하여 파일을 만들고 열고 공유하는 방법을 제어할 수 있습니다. 예를 들어 새 <xref:System.IO.FileStream>을 열거나 만들 때 <xref:System.IO.FileMode> 열거형을 사용하면 추가하기 위해 파일을 열지 여부, 지정된 파일이 없을 경우 새 파일을 만들지 여부, 파일을 덮어쓸지 여부 등을 지정할 수 있습니다.
+<xref:System.IO.FileStream> 클래스의 생성자가 사용하는 플래그가 포함된 <xref:System.IO.FileAccess>, <xref:System.IO.FileMode> 및 <xref:System.IO.FileShare> 열거형을 사용하여 파일을 만들고 열고 공유하는 방법을 제어할 수 있습니다. 예를 들어 새 <xref:System.IO.FileStream>을 열거나 만들 때 <xref:System.IO.FileMode> 열거형을 사용하면 추가하기 위해 파일을 열지 여부, 지정된 파일이 없을 경우 새 파일을 만들지 여부, 파일을 덮어쓸지 여부 등을 지정할 수 있습니다.
 
 <xref:System.IO.FileAttributes> 열거형을 사용하면 파일에 관한 정보를 수집할 수 있습니다. <xref:System.IO.FileAttributes> 열거형은 압축, 암호화, 숨김, 읽기 전용, 보관, 디렉터리, 시스템 파일 또는 임시 파일과 같은 파일의 저장된 특성을 반환합니다.
 

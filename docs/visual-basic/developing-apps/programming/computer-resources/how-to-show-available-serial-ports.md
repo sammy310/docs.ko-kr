@@ -38,7 +38,7 @@ ms.locfileid: "74345570"
   
 - <xref:System.Windows.Forms> 네임스페이스의 멤버에 대한 액세스 권한. 코드에서 멤버 이름을 정규화하지 않는 경우 `Imports` 문을 추가합니다. 자세한 내용은 [Imports 문(.NET 네임스페이스 및 형식)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)을 참조하세요.  
   
-- <xref:System.Windows.Forms.ListBox>이라는 `ListBox1` 컨트롤이 폼에 있어야 함  
+- `ListBox1`이라는 <xref:System.Windows.Forms.ListBox> 컨트롤이 폼에 있어야 함  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
 

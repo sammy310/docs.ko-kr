@@ -33,7 +33,7 @@ dotnet new console -o myApp
 cd myApp
 ```
 
-`dotnet` 명령은 `new` 형식의 `console` 애플리케이션을 만듭니다. `-o` 매개 변수는 앱이 저장되는 `myApp`이라는 디렉터리를 만들고 필요한 파일로 채웁니다. `cd myApp` 명령을 실행하면 새로 만들어진 앱 디렉터리로 이동합니다.
+`dotnet` 명령은 `console` 형식의 `new` 애플리케이션을 만듭니다. `-o` 매개 변수는 앱이 저장되는 `myApp`이라는 디렉터리를 만들고 필요한 파일로 채웁니다. `cd myApp` 명령을 실행하면 새로 만들어진 앱 디렉터리로 이동합니다.
 
 ## <a name="install-infernet-package"></a>Infer.NET 패키지 설치
 

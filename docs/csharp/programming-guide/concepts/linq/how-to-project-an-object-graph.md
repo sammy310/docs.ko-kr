@@ -13,7 +13,7 @@ ms.locfileid: "79168962"
 이 항목에서는 XML에서 개체 그래프를 프로젝션하거나 채우는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
- 다음 코드에서는 `Address`샘플 XML 파일: 일반적인 구매 주문(LINQ to XML)`PurchaseOrder` XML 문서의 `PurchaseOrderItem`, [ 및 ](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) 클래스를 사용하여 개체 그래프를 채웁니다.  
+ 다음 코드에서는 [샘플 XML 파일: 일반적인 구매 주문(LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML 문서의 `Address`, `PurchaseOrder` 및 `PurchaseOrderItem` 클래스를 사용하여 개체 그래프를 채웁니다.  
   
 ```csharp  
 class Address  
@@ -214,7 +214,7 @@ class Program {
 }  
 ```  
   
- 이 예제에서는 LINQ 쿼리의 결과가 <xref:System.Collections.Generic.IEnumerable%601>의 `PurchaseOrderItem`로 반환됩니다. `PurchaseOrder` 클래스의 항목은 <xref:System.Collections.Generic.IEnumerable%601>의 `PurchaseOrderItem` 형식입니다. 이 코드에서는 <xref:System.Linq.Enumerable.ToList%2A> 확장 메서드를 사용하여 쿼리 결과에서 <xref:System.Collections.Generic.List%601> 컬렉션을 만듭니다.  
+ 이 예제에서는 LINQ 쿼리의 결과가 `PurchaseOrderItem`의 <xref:System.Collections.Generic.IEnumerable%601>로 반환됩니다. `PurchaseOrder` 클래스의 항목은 <xref:System.Collections.Generic.IEnumerable%601>의 `PurchaseOrderItem` 형식입니다. 이 코드에서는 <xref:System.Linq.Enumerable.ToList%2A> 확장 메서드를 사용하여 쿼리 결과에서 <xref:System.Collections.Generic.List%601> 컬렉션을 만듭니다.  
   
  예제의 결과는 다음과 같습니다.  
   

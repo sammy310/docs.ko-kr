@@ -17,7 +17,7 @@ ms.locfileid: "77625854"
 
 인터페이스는 계약을 정의합니다. 해당 계약을 구현 하는 [`class`](class.md) 또는 [`struct`](../builtin-types/struct.md)는 인터페이스에 정의된 구성원의 구현을 제공해야 합니다. C# 8.0부터 인터페이스는 구성원에 대한 기본 구현을 정의할 수 있습니다. 공통적인 기능에 대해 단일 구현을 제공하기 위해 [`static`](static.md) 구성원을 정의할 수도 있습니다.
 
-다음 예제에서 `ImplementationClass` 클래스는 매개 변수가 없고 `SampleMethod`를 반환하는 `void`라는 메서드를 구현해야 합니다.
+다음 예제에서 `ImplementationClass` 클래스는 매개 변수가 없고 `void`를 반환하는 `SampleMethod`라는 메서드를 구현해야 합니다.
 
 자세한 내용과 예제는 [인터페이스](../../programming-guide/interfaces/index.md)를 참조하세요.
 
@@ -67,7 +67,7 @@ public interface INamed
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](~/_csharplang/spec/interfaces.md)의 [인터페이스](~/_csharplang/spec/introduction.md) 섹션 및 [기본 인터페이스 구성원 - C# 8.0](~/_csharplang/proposals/csharp-8.0/default-interface-methods.md)의 기능 사양을 참조하세요.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [인터페이스](~/_csharplang/spec/interfaces.md) 섹션 및 [기본 인터페이스 구성원 - C# 8.0](~/_csharplang/proposals/csharp-8.0/default-interface-methods.md)의 기능 사양을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

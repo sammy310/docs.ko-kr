@@ -17,7 +17,7 @@ ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705017"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>텍스트 파일에서 읽는 방법(C# 프로그래밍 가이드)
-이 예제에서는 <xref:System.IO.File.ReadAllText%2A> 클래스의 정적 메서드 <xref:System.IO.File.ReadAllLines%2A> 및 <xref:System.IO.File?displayProperty=nameWithType>를 사용하여 텍스트 파일의 내용을 읽습니다.  
+이 예제에서는 <xref:System.IO.File?displayProperty=nameWithType> 클래스의 정적 메서드 <xref:System.IO.File.ReadAllText%2A> 및 <xref:System.IO.File.ReadAllLines%2A>를 사용하여 텍스트 파일의 내용을 읽습니다.  
   
 <xref:System.IO.StreamReader>를 사용하는 예제는 [텍스트 파일을 한 번에 한 줄씩 읽는 방법](./how-to-read-a-text-file-one-line-at-a-time.md)을 참조하세요.
   

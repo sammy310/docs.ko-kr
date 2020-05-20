@@ -34,7 +34,7 @@ End Try
 ## <a name="combining-the-specific-exception-and-the-user-filtered-clauses"></a>특정 예외 및 사용자 필터 절 조합  
  Catch 문은 특정 예외와 사용자 필터 절을 모두 포함할 수 있습니다. 런타임은 특정 예외를 먼저 테스트합니다. 특정 예외가 성공하면 런타임은 사용자 필터를 실행합니다. 일반 필터에는 클래스 필터에 선언된 변수에 대한 참조가 포함될 수 있습니다. 두 필터 절의 순서는 바꿀 수 없습니다.  
   
- 다음 Visual Basic 예제에서는 `ClassLoadException`When**키워드를 사용하는 사용자 필터 절 뿐만 아니라**Catch**문의 특정 예외**을 보여 줍니다.  
+ 다음 Visual Basic 예제에서는 **When** 키워드를 사용하는 사용자 필터 절 뿐만 아니라 **Catch** 문의 특정 예외 `ClassLoadException`을 보여 줍니다.  
   
 ```vb
 Try  

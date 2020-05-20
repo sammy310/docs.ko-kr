@@ -22,7 +22,7 @@ XML 문서 주석을 사용하려면 문서 주석이 시작되고 끝나는 위
   한 줄 구분 기호입니다. 문서 예제에 표시되고 Visual C# 프로젝트 템플릿에 사용되는 형식입니다. 구분 기호 뒤에 공백 문자가 있으면 해당 문자는 XML 출력에 포함되지 않습니다.
 
   > [!NOTE]
-  > Visual Studio IDE에는 코드 편집기에서 \< 구분 기호를 입력한 후 \<summary> 및 `///`/summary> 태그를 자동으로 삽입하고 이러한 태그 내에서 커서를 이동하는 스마트 주석 편집이라는 기능이 있습니다. 이 기능은 [옵션 대화 상자](/visualstudio/ide/reference/options-text-editor-csharp-advanced)에서 켜거나 끌 수 있습니다.
+  > Visual Studio IDE에는 코드 편집기에서 `///` 구분 기호를 입력한 후 \<summary> 및 \</summary> 태그를 자동으로 삽입하고 이러한 태그 내에서 커서를 이동하는 스마트 주석 편집이라는 기능이 있습니다. 이 기능은 [옵션 대화 상자](/visualstudio/ide/reference/options-text-editor-csharp-advanced)에서 켜거나 끌 수 있습니다.
   
 - `/** */`
 

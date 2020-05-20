@@ -51,7 +51,7 @@ ITransformer trainedModel = mlContext.Model.Load("ogd_model.zip", out modelSchem
 
 ## <a name="extract-pre-trained-model-parameters"></a>미리 학습된 모델 매개 변수 추출
 
-모델이 로드되면 미리 학습된 모델의 [`Model`](xref:Microsoft.ML.Data.PredictionTransformerBase`1.Model*) 속성에 액세스하여 학습된 모델 매개 변수를 추출합니다. 미리 학습된 모델은 [`OnlineGradientDescentTrainer`](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer)를 출력하는 [`RegressionPredictionTransformer`](xref:Microsoft.ML.Data.RegressionPredictionTransformer%601)를 만드는 선형 회귀 모델 [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters)를 사용하여 학습되었습니다. 이러한 선형 회귀 모델 매개 변수에는 학습된 편차 및 가중치와 모델 계수가 포함됩니다. 이런 값은 다시 학습되는 새 모델의 시작점이 됩니다.
+모델이 로드되면 미리 학습된 모델의 [`Model`](xref:Microsoft.ML.Data.PredictionTransformerBase`1.Model*) 속성에 액세스하여 학습된 모델 매개 변수를 추출합니다. 미리 학습된 모델은 [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters)를 출력하는 [`RegressionPredictionTransformer`](xref:Microsoft.ML.Data.RegressionPredictionTransformer%601)를 만드는 선형 회귀 모델 [`OnlineGradientDescentTrainer`](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer)를 사용하여 학습되었습니다. 이러한 선형 회귀 모델 매개 변수에는 학습된 편차 및 가중치와 모델 계수가 포함됩니다. 이런 값은 다시 학습되는 새 모델의 시작점이 됩니다.
 
 ```csharp
 // Extract trained model parameters

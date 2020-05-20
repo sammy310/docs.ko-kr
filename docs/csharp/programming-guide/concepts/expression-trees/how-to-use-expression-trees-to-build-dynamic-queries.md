@@ -24,7 +24,7 @@ LINQ에서는 식 트리를 사용하여 <xref:System.Linq.IQueryable%601>을 �
           .OrderBy(company => company)
  ```
   
- <xref:System.Linq.Expressions> 네임스페이스의 팩터리 메서드는 전체 쿼리를 구성하는 식을 나타내는 식 트리를 만드는 데 사용됩니다. 표준 쿼리 연산자 메서드 호출을 나타내는 식은 이러한 메서드의 <xref:System.Linq.Queryable> 구현을 가리킵니다. 최종 식 트리는 <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> 데이터 소스 공급자의 `IQueryable` 구현에 전달되어 `IQueryable` 형식의 실행 가능한 쿼리를 만듭니다. 해당 쿼리 변수를 열거하여 결과를 가져옵니다.  
+ <xref:System.Linq.Expressions> 네임스페이스의 팩터리 메서드는 전체 쿼리를 구성하는 식을 나타내는 식 트리를 만드는 데 사용됩니다. 표준 쿼리 연산자 메서드 호출을 나타내는 식은 이러한 메서드의 <xref:System.Linq.Queryable> 구현을 가리킵니다. 최종 식 트리는 `IQueryable` 데이터 소스 공급자의 <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> 구현에 전달되어 `IQueryable` 형식의 실행 가능한 쿼리를 만듭니다. 해당 쿼리 변수를 열거하여 결과를 가져옵니다.  
   
 ```csharp  
 // Add a using directive for System.Linq.Expressions.  

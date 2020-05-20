@@ -57,9 +57,9 @@ d ??= (e ??= f)
 
   [!code-csharp-interactive[with nullable types](snippets/NullCoalescingOperator.cs#WithNullableTypes)]
 
-  nullable 형식 값이 <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType>일 때 사용될 값이 기본 값 형식의 기본 값이어야 하는 경우 `null` 메서드를 사용합니다.
+  nullable 형식 값이 `null`일 때 사용될 값이 기본 값 형식의 기본 값이어야 하는 경우 <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> 메서드를 사용합니다.
 
-- C# 7.0부터 [ 연산자의 오른쪽 피연산자로 `throw`](../keywords/throw.md#the-throw-expression) 식`??`을 사용하여 인수 확인 코드를 보다 간결하게 만들 수 있습니다.
+- C# 7.0부터 `??` 연산자의 오른쪽 피연산자로 [`throw` 식](../keywords/throw.md#the-throw-expression)을 사용하여 인수 확인 코드를 보다 간결하게 만들 수 있습니다.
 
   [!code-csharp[with throw expression](snippets/NullCoalescingOperator.cs#WithThrowExpression)]
 
@@ -86,7 +86,7 @@ d ??= (e ??= f)
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-`??` 연산자에 대한 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/expressions.md#the-null-coalescing-operator)의 [null 병합 연산자](~/_csharplang/spec/introduction.md) 섹션을 참조하세요.
+`??` 연산자에 대한 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [null 병합 연산자](~/_csharplang/spec/expressions.md#the-null-coalescing-operator) 섹션을 참조하세요.
 
 `??=` 연산자에 대한 자세한 내용은 [기능 제안 노트](~/_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md)를 참조하세요.
 

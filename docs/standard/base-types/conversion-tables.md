@@ -51,9 +51,9 @@ ms.locfileid: "73103884"
 ## <a name="narrowing-conversions"></a>축소 변환  
  <xref:System.Single> 또는 <xref:System.Double>로의 축소 변환에서는 정보 손실이 발생할 수 있습니다. 대상 형식이 소스 크기를 제대로 표시할 수 없는 경우 결과 형식이 상수 `PositiveInfinity` 또는 `NegativeInfinity`로 설정됩니다. `PositiveInfinity`는 양수를 0으로 나눈 결과이며 <xref:System.Single> 또는 <xref:System.Double> 값이 `MaxValue` 필드 값을 초과하는 경우에도 반환됩니다. `NegativeInfinity`는 음수를 0으로 나눈 결과이며 <xref:System.Single> 또는 <xref:System.Double> 값이 `MinValue` 필드 값보다 작은 경우에도 반환됩니다. <xref:System.Double>에서 <xref:System.Single>로 변환하면 `PositiveInfinity` 또는 `NegativeInfinity`가 발생할 수 있습니다.  
   
- 축소 변환 시 다른 데이터 형식에 대한 정보 손실도 발생할 수 있습니다. 그러나 변환 중인 형식의 값이 대상 형식의 <xref:System.OverflowException> 및 `MaxValue` 필드에 지정된 범위를 벗어나면 `MinValue`이 throw되며, 런타임에서 변환을 검사하여 대상 형식의 값이 해당 `MaxValue` 또는 `MinValue`를 초과하지 않는지 확인합니다. <xref:System.Convert?displayProperty=nameWithType> 클래스로 수행하는 변환은 항상 이런 방식으로 검사됩니다.  
+ 축소 변환 시 다른 데이터 형식에 대한 정보 손실도 발생할 수 있습니다. 그러나 변환 중인 형식의 값이 대상 형식의 `MaxValue` 및 `MinValue` 필드에 지정된 범위를 벗어나면 <xref:System.OverflowException>이 throw되며, 런타임에서 변환을 검사하여 대상 형식의 값이 해당 `MaxValue` 또는 `MinValue`를 초과하지 않는지 확인합니다. <xref:System.Convert?displayProperty=nameWithType> 클래스로 수행하는 변환은 항상 이런 방식으로 검사됩니다.  
   
- 다음 표에서는 <xref:System.OverflowException> 사용 시 <xref:System.Convert?displayProperty=nameWithType>을 throw하는 변환 또는 변환 중인 형식의 값이 정의된 결과 형식 범위를 벗어나는지 확인한 모든 변환을 보여줍니다.  
+ 다음 표에서는 <xref:System.Convert?displayProperty=nameWithType> 사용 시 <xref:System.OverflowException>을 throw하는 변환 또는 변환 중인 형식의 값이 정의된 결과 형식 범위를 벗어나는지 확인한 모든 변환을 보여줍니다.  
   
 |형식|다음 형식으로 변환할 수 있음|  
 |----------|-------------------------|  

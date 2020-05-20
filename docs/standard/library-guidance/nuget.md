@@ -92,7 +92,7 @@ NuGet 패키지는 많은 [메타데이터 속성](/nuget/reference/nuspec)을 �
 
 기호 파일(`*.pdb`)은 어셈블리와 함께 .NET 컴파일러에서 생성됩니다. 기호 파일은 실행 위치를 원래 소스 코드에 매핑하므로, 디버거를 사용하여 실행 중인 소스 코드를 한 단계씩 실행할 수 있습니다. NuGet은 .NET 어셈블리를 포함하는 주 패키지와 함께 기호 파일을 포함하는 [별도의 기호 패키지(`*.snupkg`) 생성](/nuget/create-packages/symbol-packages-snupkg)을 지원합니다. 기호 패키지는 기호 서버에서 호스트되며 요청 시 Visual Studio와 같은 도구에서만 다운로드되도록 설계되었습니다.
 
-NuGet.org는 자체 [기호 서버 리포지토리](/nuget/create-packages/symbol-packages-snupkg#nugetorg-symbol-server)를 호스팅합니다. 개발자는 해당 `https://symbols.nuget.org/download/symbols`Visual Studio의 심볼 소스[에 ](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger)를 추가하여 NuGet.org 기호 서버에 게시된 기호를 사용할 수 있습니다.
+NuGet.org는 자체 [기호 서버 리포지토리](/nuget/create-packages/symbol-packages-snupkg#nugetorg-symbol-server)를 호스팅합니다. 개발자는 해당 [Visual Studio의 심볼 소스](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger)에 `https://symbols.nuget.org/download/symbols`를 추가하여 NuGet.org 기호 서버에 게시된 기호를 사용할 수 있습니다.
 
 > [!IMPORTANT]
 > NuGet.org 기호 서버는 SDK 스타일 프로젝트에서 생성한 새 [이식 가능한 기호 파일](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md)(`*.pdb`)만 지원합니다.

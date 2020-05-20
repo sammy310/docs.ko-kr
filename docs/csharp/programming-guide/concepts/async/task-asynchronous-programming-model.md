@@ -70,14 +70,14 @@ async Task<int> AccessTheWebAsync()
 }
 ```
 
-위의 샘플에서 몇 가지 사례를 알아볼 수 있습니다. 메서드 서명부터 시작해봅시다. 여기에는 `async` 한정자가 포함됩니다. 반환 형식은 `Task<int>`입니다(추가 옵션은 "반환 형식" 섹션 참조). 메서드 이름은 `Async`로 끝납니다. 메서드의 본문에서 `GetStringAsync`가 `Task<string>`을 반환합니다. 즉, 작업을 `await`하는 경우 `string`을 받게 됩니다(`urlContents`).  작업을 대기하기 전에 `string`의 `GetStringAsync`을 사용하지 않는 작업을 수행할 수 있습니다.
+위의 샘플에서 몇 가지 사례를 알아볼 수 있습니다. 메서드 서명부터 시작해봅시다. 여기에는 `async` 한정자가 포함됩니다. 반환 형식은 `Task<int>`입니다(추가 옵션은 "반환 형식" 섹션 참조). 메서드 이름은 `Async`로 끝납니다. 메서드의 본문에서 `GetStringAsync`가 `Task<string>`을 반환합니다. 즉, 작업을 `await`하는 경우 `string`을 받게 됩니다(`urlContents`).  작업을 대기하기 전에 `GetStringAsync`의 `string`을 사용하지 않는 작업을 수행할 수 있습니다.
 
 `await` 연산자에 주의하세요. `AccessTheWebAsync`를 일시 중단합니다.
 
 - `AccessTheWebAsync`는 `getStringTask`가 완료될 때까지 계속할 수 없습니다.
 - 반면 제어는 `AccessTheWebAsync`의 호출자에 반환됩니다.
 - `getStringTask`가 완료되면 컨트롤이 다시 시작됩니다.
-- 그런 다음, `await` 연산자가 `string`에서 `getStringTask` 결과를 검색합니다.
+- 그런 다음, `await` 연산자가 `getStringTask`에서 `string` 결과를 검색합니다.
 
 반환 문은 정수 결과를 지정합니다. `AccessTheWebAsync`를 대기하는 메서드는 길이 값을 검색합니다.
 
@@ -93,7 +93,7 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com/dot
 - 비동기 메서드의 이름은 규칙에 따라 "Async" 접미사로 끝납니다.
 - 반환 형식은 다음 형식 중 하나입니다.
 
-  - 메서드에 연산자 형식이 <xref:System.Threading.Tasks.Task%601>인 Return 문이 있는 경우 `TResult`입니다.
+  - 메서드에 연산자 형식이 `TResult`인 Return 문이 있는 경우 <xref:System.Threading.Tasks.Task%601>입니다.
   - 메서드에 반환 문이 포함되지 않았거나 피연산자가 없는 반환 문이 포함된 경우 <xref:System.Threading.Tasks.Task>입니다.
   - 비동기 이벤트 처리기를 작성하는 경우 `void`입니다.
   - `GetAwaiter` 메서드가 포함된 모든 기타 형식(C# 7.0부터).
@@ -120,7 +120,7 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com/dot
 
 3. `GetStringAsync`에서 특정 작업이 발생하여 진행이 일시 중단됩니다. 웹 사이트에서 다운로드 또는 다른 차단 작업을 수행할 때까지 기다려야 할 수 있습니다. 리소스를 차단하지 않기 위해 `GetStringAsync`는 해당 호출자인 `AccessTheWebAsync`에 제어 권한을 양도합니다.
 
-     `GetStringAsync`는 <xref:System.Threading.Tasks.Task%601>가 문자열인 `TResult`를 반환하고, `AccessTheWebAsync`는 `getStringTask` 변수에 작업을 할당합니다. 이 작업은 작업이 완료될 때 실제 문자열 값을 생성하기 위한 코드와 함께 `GetStringAsync`를 호출하는 지속적인 프로세스를 나타냅니다.
+     `GetStringAsync`는 `TResult`가 문자열인 <xref:System.Threading.Tasks.Task%601>를 반환하고, `AccessTheWebAsync`는 `getStringTask` 변수에 작업을 할당합니다. 이 작업은 작업이 완료될 때 실제 문자열 값을 생성하기 위한 코드와 함께 `GetStringAsync`를 호출하는 지속적인 프로세스를 나타냅니다.
 
 4. `getStringTask`가 아직 대기되지 않았으므로 `AccessTheWebAsync`가 `GetStringAsync`의 최종 결과에 무관한 다른 작업을 계속할 수 있습니다. 이 작업은 동기 메서드 `DoIndependentWork`를 호출하여 나타냅니다.
 
@@ -131,7 +131,7 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com/dot
      따라서 `AccessTheWebAsync`는 await 연산자를 사용해서 해당 프로세스를 일시 중단하고 `AccessTheWebAsync`를 호출한 메서드에 제어 권한을 양도합니다. `AccessTheWebAsync`는 `Task<int>`를 호출자에게 반환합니다. 작업은 다운로드한 문자열의 길이인 정수 결과를 만든다는 약속을 나타냅니다.
 
     > [!NOTE]
-    > `GetStringAsync`가 대기하기 전에 `getStringTask`(및 `AccessTheWebAsync`)가 완료되면 `AccessTheWebAsync`에서 컨트롤이 유지됩니다. 일시 중단 및 `AccessTheWebAsync`의 반환 비용은 호출된 비동기 프로세스(`getStringTask`)가 이미 완료되었고 `AccessTheWebAsync`가 최종 결과를 기다릴 필요가 없다면 낭비됩니다.
+    > `AccessTheWebAsync`가 대기하기 전에 `GetStringAsync`(및 `getStringTask`)가 완료되면 `AccessTheWebAsync`에서 컨트롤이 유지됩니다. 일시 중단 및 `AccessTheWebAsync`의 반환 비용은 호출된 비동기 프로세스(`getStringTask`)가 이미 완료되었고 `AccessTheWebAsync`가 최종 결과를 기다릴 필요가 없다면 낭비됩니다.
 
      호출자(이 예제의 이벤트 처리기) 내에서 처리 패턴이 계속됩니다. 호출자가 해당 결과를 기다리거나 즉시 기다리기 전에 `AccessTheWebAsync`에서 결과에 의존하지 않는 다른 작업을 수행할 수 있습니다.   `AccessTheWebAsync`에 대한 이벤트가 대기 중이며 `AccessTheWebAsync`가 `GetStringAsync`를 대기 중입니다.
 
@@ -144,7 +144,7 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com/dot
 
 ## <a name="api-async-methods"></a><a name="BKMK_APIAsyncMethods"></a> API 비동기 메서드
 
-`GetStringAsync`와 같이 비동기 프로그래밍을 지원하는 메서드를 어디에서 검색해야 할지 궁금했을 것입니다. .NET Framework 4.5 이상 및 .NET Core에는 `async` 및 `await`에 작동하는 많은 멤버가 포함되어 있습니다. 멤버 이름에 붙는 “Async” 접미사와 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601>의 반환 형식으로 멤버를 인식할 수 있습니다. 예를 들어, `System.IO.Stream` 클래스는 동기 메서드인 <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> 및 <xref:System.IO.Stream.WriteAsync%2A>와 함께 <xref:System.IO.Stream.CopyTo%2A>, <xref:System.IO.Stream.Read%2A> 및 <xref:System.IO.Stream.Write%2A>와 같은 메서드를 포함합니다.
+`GetStringAsync`와 같이 비동기 프로그래밍을 지원하는 메서드를 어디에서 검색해야 할지 궁금했을 것입니다. .NET Framework 4.5 이상 및 .NET Core에는 `async` 및 `await`에 작동하는 많은 멤버가 포함되어 있습니다. 멤버 이름에 붙는 “Async” 접미사와 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601>의 반환 형식으로 멤버를 인식할 수 있습니다. 예를 들어, `System.IO.Stream` 클래스는 동기 메서드인 <xref:System.IO.Stream.CopyTo%2A>, <xref:System.IO.Stream.Read%2A> 및 <xref:System.IO.Stream.Write%2A>와 함께 <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> 및 <xref:System.IO.Stream.WriteAsync%2A>와 같은 메서드를 포함합니다.
 
 Windows 런타임에는 Windows 앱에서 `async` 및 `await`와 함께 사용할 수 있는 많은 메서드도 포함되어 있습니다. 자세한 내용은 UWP 개발에 대한 [스레딩 및 비동기 프로그래밍](/windows/uwp/threading-async/)과 이전 버전의 Windows 런타임을 사용하는 경우 [비동기 프로그래밍(Windows 스토어 앱)](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10)) 및 [빠른 시작: C# 또는 Visual Basic에서 비동기 API 호출](https://docs.microsoft.com/previous-versions/windows/apps/hh452713(v=win.10))을 참조하세요.
 
@@ -154,7 +154,7 @@ Windows 런타임에는 Windows 앱에서 `async` 및 `await`와 함께 사용�
 
 `async` 및 `await` 키워드로 인해 추가 스레드가 생성되지 않습니다. 비동기 메서드는 자체 스레드에서 실행되지 않으므로 다중 스레드가 필요하지 않습니다. 메서드는 현재 동기화 컨텍스트에서 실행되고 메서드가 활성화된 경우에만 스레드에서 시간을 사용합니다. <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType>을 사용하여 CPU 바인딩 작업을 백그라운드 스레드로 이동할 수 있지만 백그라운드 스레드는 결과를 사용할 수 있을 때까지 기다리는 프로세스를 도와주지 않습니다.
 
-비동기 프로그래밍에 대한 비동기 기반 접근 방법은 거의 모든 경우에 기존 방법보다 선호됩니다. 특히, 이 접근 방식은 코드가 더 간단하고 경합 조건을 방지할 필요가 없기 때문에 I/O 바인딩 작업의 <xref:System.ComponentModel.BackgroundWorker> 클래스보다 효과적입니다. 비동기 프로그래밍은 코드 실행에 대한 조합 세부 정보를 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType>가 스레드 풀로 변환하는 작업과 구분하기 때문에 <xref:System.ComponentModel.BackgroundWorker> 메서드를 함께 사용하는 비동기 프로그래밍은 CPU 바인딩 작업을 위한 `Task.Run`보다 효과가 뛰어납니다.
+비동기 프로그래밍에 대한 비동기 기반 접근 방법은 거의 모든 경우에 기존 방법보다 선호됩니다. 특히, 이 접근 방식은 코드가 더 간단하고 경합 조건을 방지할 필요가 없기 때문에 I/O 바인딩 작업의 <xref:System.ComponentModel.BackgroundWorker> 클래스보다 효과적입니다. 비동기 프로그래밍은 코드 실행에 대한 조합 세부 정보를 `Task.Run`가 스레드 풀로 변환하는 작업과 구분하기 때문에 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 메서드를 함께 사용하는 비동기 프로그래밍은 CPU 바인딩 작업을 위한 <xref:System.ComponentModel.BackgroundWorker>보다 효과가 뛰어납니다.
 
 ## <a name="async-and-await"></a><a name="BKMK_AsyncandAwait"></a> async 및 await
 
@@ -177,7 +177,7 @@ Windows 런타임에는 Windows 앱에서 `async` 및 `await`와 함께 사용�
 
 비동기 메서드는 일반적으로 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601>를 반환합니다. 비동기 메서드 내에서 `await` 연산자는 호출에서 다른 비동기 메서드로 전환되는 작업에 적용됩니다.
 
-메서드에 <xref:System.Threading.Tasks.Task%601> 형식의 피연산자를 지정하는 [`return`](../../../language-reference/keywords/return.md) 문이 포함되어 있을 경우 `TResult`를 반환 형식으로 지정합니다.
+메서드에 `TResult` 형식의 피연산자를 지정하는 [`return`](../../../language-reference/keywords/return.md) 문이 포함되어 있을 경우 <xref:System.Threading.Tasks.Task%601>를 반환 형식으로 지정합니다.
 
 메서드에 return 문이 없거나 피연산자를 반환하지 않는 return 문이 있을 경우 반환 형식으로 <xref:System.Threading.Tasks.Task>를 사용합니다.
 
@@ -227,8 +227,8 @@ await GetTaskAsync();
 
 Windows 런타임 프로그래밍의 비동기 API에는 작업과 유사한 다음 반환 형식 중 하나가 있습니다.
 
-- <xref:Windows.Foundation.IAsyncOperation%601>에 해당하는 <xref:System.Threading.Tasks.Task%601>
-- <xref:Windows.Foundation.IAsyncAction>에 해당하는 <xref:System.Threading.Tasks.Task>
+- <xref:System.Threading.Tasks.Task%601>에 해당하는 <xref:Windows.Foundation.IAsyncOperation%601>
+- <xref:System.Threading.Tasks.Task>에 해당하는 <xref:Windows.Foundation.IAsyncAction>
 - <xref:Windows.Foundation.IAsyncActionWithProgress%601>
 - <xref:Windows.Foundation.IAsyncOperationWithProgress%602>
 

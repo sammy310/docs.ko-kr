@@ -15,7 +15,7 @@ ms.locfileid: "79169794"
  공변성(covariance) 및 반공변성(contravariance)에 대한 자세한 내용은 [대리자에서의 분산(C#)](./variance-in-delegates.md)을 참조하세요.  
   
 ## <a name="using-delegates-with-covariant-type-parameters"></a>공변 형식 매개 변수가 있는 대리자 사용  
- 다음 예제는 `Func` 대리자에서 공변성(covariance) 지원의 이점을 보여 줍니다. `FindByTitle` 메서드는 `String` 형식의 매개 변수를 가져오고 `Employee` 형식의 개체를 반환합니다. 그러나 `Func<String, Person>`는 `Employee`을 상속하므로 이 메서드를 `Person` 대리자에 할당할 수 있습니다.  
+ 다음 예제는 `Func` 대리자에서 공변성(covariance) 지원의 이점을 보여 줍니다. `FindByTitle` 메서드는 `String` 형식의 매개 변수를 가져오고 `Employee` 형식의 개체를 반환합니다. 그러나 `Employee`는 `Person`을 상속하므로 이 메서드를 `Func<String, Person>` 대리자에 할당할 수 있습니다.  
   
 ```csharp  
 // Simple hierarchy of classes.  
@@ -49,7 +49,7 @@ class Program
 ```  
   
 ## <a name="using-delegates-with-contravariant-type-parameters"></a>반공변 형식 매개 변수가 있는 대리자 사용  
- 다음 예제에서는 제네릭 `Action` 대리자에서 반공변성(contravariance) 지원의 이점을 보여 줍니다. `AddToContacts` 메서드는 `Person` 형식의 매개 변수를 사용합니다. 그러나 `Action<Employee>`는 `Employee`을 상속하므로 이 메서드를 `Person` 대리자에 할당할 수 있습니다.  
+ 다음 예제에서는 제네릭 `Action` 대리자에서 반공변성(contravariance) 지원의 이점을 보여 줍니다. `AddToContacts` 메서드는 `Person` 형식의 매개 변수를 사용합니다. 그러나 `Employee`는 `Person`을 상속하므로 이 메서드를 `Action<Employee>` 대리자에 할당할 수 있습니다.  
   
 ```csharp  
 public class Person { }  

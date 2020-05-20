@@ -15,7 +15,7 @@ ms.locfileid: "77626414"
 
 [class](../../language-reference/keywords/class.md) 또는 [struct](../../language-reference/builtin-types/struct.md)가 만들어지면 생성자가 호출됩니다. 생성자는 클래스 또는 구조체와 이름이 같으며 일반적으로 새 개체의 데이터 멤버를 초기화합니다.  
   
- 다음 예제에서는 간단한 생성자를 사용하여 `Taxi`란 이름의 클래스를 정의합니다. 그런 다음 [new](../../language-reference/operators/new-operator.md) 연산자를 사용하여 이 클래스를 인스턴스화합니다. 새 개체에 메모리가 할당된 직후 `Taxi` 연산자가 `new` 생성자를 호출합니다.  
+ 다음 예제에서는 간단한 생성자를 사용하여 `Taxi`란 이름의 클래스를 정의합니다. 그런 다음 [new](../../language-reference/operators/new-operator.md) 연산자를 사용하여 이 클래스를 인스턴스화합니다. 새 개체에 메모리가 할당된 직후 `new` 연산자가 `Taxi` 생성자를 호출합니다.  
   
  [!code-csharp[csProgGuideObjects#53](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#53)]  
   
@@ -90,7 +90,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
 
-자세한 내용은 [C# 언어 사양](~/_csharplang/spec/classes.md#instance-constructors)의 [인스턴스 생성자](~/_csharplang/spec/classes.md#static-constructors) 및 [정적 생성자](/dotnet/csharp/language-reference/language-specification/introduction)를 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
+자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)의 [인스턴스 생성자](~/_csharplang/spec/classes.md#instance-constructors) 및 [정적 생성자](~/_csharplang/spec/classes.md#static-constructors)를 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
   
 ## <a name="see-also"></a>참고 항목
 

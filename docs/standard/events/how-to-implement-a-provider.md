@@ -27,12 +27,12 @@ ms.locfileid: "73141548"
      [!code-csharp[Conceptual.ObserverDesign.HowTo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/data.cs#1)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/data.vb#1)]  
   
-2. <xref:System.IObservable%601?displayProperty=nameWithType> 인터페이스를 구현하는 형식인 데이터 공급자를 정의합니다. 공급자의 제네릭 형식 인수는 공급자가 관찰자로 보내는 형식입니다. 다음 예제에서는 `TemperatureMonitor`의 제네릭 형식 인수를 사용하여 구성된 <xref:System.IObservable%601?displayProperty=nameWithType> 구현인 `Temperature` 클래스를 정의합니다.  
+2. <xref:System.IObservable%601?displayProperty=nameWithType> 인터페이스를 구현하는 형식인 데이터 공급자를 정의합니다. 공급자의 제네릭 형식 인수는 공급자가 관찰자로 보내는 형식입니다. 다음 예제에서는 `Temperature`의 제네릭 형식 인수를 사용하여 구성된 <xref:System.IObservable%601?displayProperty=nameWithType> 구현인 `TemperatureMonitor` 클래스를 정의합니다.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#2)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#2)]  
   
-3. 해당하는 경우 각 관찰자에게 알릴 수 있도록 공급자가 관찰자에 대한 참조를 저장할 방식을 결정합니다. 일반적으로 제네릭 <xref:System.Collections.Generic.List%601> 개체와 같은 컬렉션 개체가 이 용도로 사용됩니다. 다음 예제에서는 <xref:System.Collections.Generic.List%601> 클래스 생성자에서 인스턴스화되는 private `TemperatureMonitor` 개체를 정의합니다.  
+3. 해당하는 경우 각 관찰자에게 알릴 수 있도록 공급자가 관찰자에 대한 참조를 저장할 방식을 결정합니다. 일반적으로 제네릭 <xref:System.Collections.Generic.List%601> 개체와 같은 컬렉션 개체가 이 용도로 사용됩니다. 다음 예제에서는 `TemperatureMonitor` 클래스 생성자에서 인스턴스화되는 private <xref:System.Collections.Generic.List%601> 개체를 정의합니다.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#3)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#3)]  
@@ -42,7 +42,7 @@ ms.locfileid: "73141548"
      [!code-csharp[Conceptual.ObserverDesign.HowTo#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#4)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#4)]  
   
-5. <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> 메서드를 구현합니다. 이 메서드는 <xref:System.IObserver%601?displayProperty=nameWithType> 인터페이스에 대한 참조를 전달받으며, 3단계에서 해당 용도로 디자인한 개체에 저장되어야 합니다. 그런 다음, 이 메서드는 4단계에서 개발한 <xref:System.IDisposable> 구현을 반환해야 합니다. 다음 예제는 <xref:System.IObservable%601.Subscribe%2A> 클래스의 `TemperatureMonitor` 메서드 구현을 보여줍니다.  
+5. <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> 메서드를 구현합니다. 이 메서드는 <xref:System.IObserver%601?displayProperty=nameWithType> 인터페이스에 대한 참조를 전달받으며, 3단계에서 해당 용도로 디자인한 개체에 저장되어야 합니다. 그런 다음, 이 메서드는 4단계에서 개발한 <xref:System.IDisposable> 구현을 반환해야 합니다. 다음 예제는 `TemperatureMonitor` 클래스의 <xref:System.IObservable%601.Subscribe%2A> 메서드 구현을 보여줍니다.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#5)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#5)]  
@@ -53,7 +53,7 @@ ms.locfileid: "73141548"
      [!code-vb[Conceptual.ObserverDesign.HowTo#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#6)]  
   
 ## <a name="example"></a>예제  
- 다음 예제에는 온도 모니터링 애플리케이션에 대한 <xref:System.IObservable%601> 구현을 정의하기 위한 전체 소스 코드가 포함되어 있습니다. 여기에는 관찰자로 전송된 데이터인 `Temperature` 구조체 및 `TemperatureMonitor` 구현인 <xref:System.IObservable%601> 클래스가 포함됩니다.  
+ 다음 예제에는 온도 모니터링 애플리케이션에 대한 <xref:System.IObservable%601> 구현을 정의하기 위한 전체 소스 코드가 포함되어 있습니다. 여기에는 관찰자로 전송된 데이터인 `Temperature` 구조체 및 <xref:System.IObservable%601> 구현인 `TemperatureMonitor` 클래스가 포함됩니다.  
   
  [!code-csharp[Conceptual.ObserverDesign.HowTo#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#7)]
  [!code-vb[Conceptual.ObserverDesign.HowTo#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#7)]  

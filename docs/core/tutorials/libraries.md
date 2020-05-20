@@ -105,7 +105,7 @@ ms.locfileid: "77503501"
 
 프로젝트가 .NET Framework 및 .NET Core를 모두 지원하는 경우 이전 버전의 .NET Framework를 대상으로 해야 할 수 있습니다. 이 시나리오에서, 최신 대상에 최신 API 및 언어 구조를 사용하려는 경우 코드에 `#if` 지시문을 사용하세요. 각각의 경우에 필요한 API를 포함하기 위해 대상으로 지정하는 각 플랫폼마다 서로 다른 패키지와 종속성을 추가해야 할 수도 있습니다.
 
-예를 들어 HTTP를 통해 네트워킹 작업을 수행하는 라이브러리가 있다고 가정해 보겠습니다. .NET 표준 및 .NET Framework 버전 4.5 이상 경우 `HttpClient` 네임스페이스의 `System.Net.Http` 클래스를 사용할 수 있습니다. 그러나 이전 버전의 .NET Framework에는 `HttpClient` 클래스가 없으므로, 이에 대해 `WebClient` 네임스페이스의 `System.Net` 클래스를 사용할 수 있습니다.
+예를 들어 HTTP를 통해 네트워킹 작업을 수행하는 라이브러리가 있다고 가정해 보겠습니다. .NET 표준 및 .NET Framework 버전 4.5 이상 경우 `System.Net.Http` 네임스페이스의 `HttpClient` 클래스를 사용할 수 있습니다. 그러나 이전 버전의 .NET Framework에는 `HttpClient` 클래스가 없으므로, 이에 대해 `System.Net` 네임스페이스의 `WebClient` 클래스를 사용할 수 있습니다.
 
 프로젝트 파일이 다음과 같이 표시될 수 있습니다.
 
@@ -131,8 +131,8 @@ ms.locfileid: "77503501"
 여기서 다음 세 가지 주요 변경 내용을 확인할 수 있습니다.
 
 1. `TargetFramework` 노드가 `TargetFrameworks`로 대체되었으며, 세 개의 TFM이 내부에 표시됩니다.
-1. `<ItemGroup>` 대상에는 .NET Framework 참조 하나를 끌어오는 `net40` 노드가 있습니다.
-1. `<ItemGroup>` 대상에는 .NET Framework 참조 두 개를 끌어오는 `net45` 노드가 있습니다.
+1. `net40` 대상에는 .NET Framework 참조 하나를 끌어오는 `<ItemGroup>` 노드가 있습니다.
+1. `net45` 대상에는 .NET Framework 참조 두 개를 끌어오는 `<ItemGroup>` 노드가 있습니다.
 
 빌드 시스템은 `#if` 지시문에 사용된 다음의 전처리기 기호를 인식합니다.
 
@@ -239,7 +239,7 @@ netstandard1.4/
    |__MyProject.Test/
    ```
 
-1. 테스트 프로젝트의 디렉터리로 이동한 다음 `MyProject.Test`의 `MyProject`에 대한 참조를 추가합니다.
+1. 테스트 프로젝트의 디렉터리로 이동한 다음 `MyProject`의 `MyProject.Test`에 대한 참조를 추가합니다.
 
    ```dotnetcli
    cd MyProject.Test

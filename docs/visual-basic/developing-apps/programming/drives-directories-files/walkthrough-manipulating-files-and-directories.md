@@ -54,7 +54,7 @@ ms.locfileid: "74333801"
   
 ### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>폴더를 선택하고 폴더에 파일을 나열하려면  
   
-1. 양식의 컨트롤을 두 번 클릭하여 `Click`에 대한 `browseButton` 이벤트 처리기를 만듭니다. 코드 편집기가 열립니다.  
+1. 양식의 컨트롤을 두 번 클릭하여 `browseButton`에 대한 `Click` 이벤트 처리기를 만듭니다. 코드 편집기가 열립니다.  
   
 2. 다음 코드를 `Click` 이벤트 처리기에 추가합니다.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "74333801"
   
 ### <a name="to-obtain-attributes-of-a-file-and-content-from-a-text-file"></a>파일의 특성을 및 텍스트 파일의 내용을 가져오려면  
   
-1. 양식의 컨트롤을 두 번 클릭하여 `Click`에 대한 `examineButton` 이벤트 처리기를 만듭니다.  
+1. 양식의 컨트롤을 두 번 클릭하여 `examineButton`에 대한 `Click` 이벤트 처리기를 만듭니다.  
   
 2. 다음 코드를 `Click` 이벤트 처리기에 추가합니다.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "74333801"
   
      이 코드는 선택한 파일과 동일한 디렉터리에 로그 파일을 저장하도록 로그 파일 경로를 설정합니다. 로그 항목의 텍스트는 파일 정보 뒤에 현재 날짜 및 시간으로 설정됩니다.  
   
-     <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 인수가 `append`로 설정된 `True` 메서드를 사용하여 로그 항목을 만듭니다.  
+     `append` 인수가 `True`로 설정된 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 메서드를 사용하여 로그 항목을 만듭니다.  
   
 2. 애플리케이션을 실행합니다. 텍스트 파일로 이동하고, `ListBox`에서 선택하고, **결과 저장** 확인란을 선택한 다음 **검사**를 클릭합니다. 로그 항목이 `log.txt` 파일에 기록되었는지 확인합니다.  
   
@@ -138,17 +138,17 @@ ms.locfileid: "74333801"
   
      [!code-vb[VbVbcnMyFileSystem#108](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#108)]  
   
-     `SetEnabled`에서 항목이 선택되었는지에 따라 `ListBox` 메서드는 컨트롤의 사용 여부를 설정합니다.  
+     `ListBox`에서 항목이 선택되었는지에 따라 `SetEnabled` 메서드는 컨트롤의 사용 여부를 설정합니다.  
   
-2. 양식의 `SelectedIndexChanged` 컨트롤을 두 번 클릭하여 `filesListBox`에 대한 `ListBox` 이벤트 처리기를 만듭니다.  
+2. 양식의 `ListBox` 컨트롤을 두 번 클릭하여 `filesListBox`에 대한 `SelectedIndexChanged` 이벤트 처리기를 만듭니다.  
   
-3. 새 `SetEnabled` 이벤트 처리기에서 `filesListBox_SelectedIndexChanged`에 호출을 추가합니다.  
+3. 새 `filesListBox_SelectedIndexChanged` 이벤트 처리기에서 `SetEnabled`에 호출을 추가합니다.  
   
-4. `SetEnabled` 이벤트 처리기의 끝에서 `browseButton_Click`에 호출을 추가합니다.  
+4. `browseButton_Click` 이벤트 처리기의 끝에서 `SetEnabled`에 호출을 추가합니다.  
   
-5. `SetEnabled` 이벤트 처리기의 끝에서 `Form1_Load`에 호출을 추가합니다.  
+5. `Form1_Load` 이벤트 처리기의 끝에서 `SetEnabled`에 호출을 추가합니다.  
   
-6. 애플리케이션을 실행합니다. **에서 항목을 선택하지 않으면** 결과 저장**확인란 및**검사`ListBox` 단추가 활성화되지 않습니다.  
+6. 애플리케이션을 실행합니다. `ListBox`에서 항목을 선택하지 않으면 **결과 저장** 확인란 및 **검사** 단추가 활성화되지 않습니다.  
   
 ## <a name="full-example-using-mycomputerfilesystem"></a>My.Computer.FileSystem을 사용하는 전체 예제  
 
@@ -158,7 +158,7 @@ ms.locfileid: "74333801"
   
 ## <a name="full-example-using-systemio"></a>System.IO를 사용하는 전체 예제  
 
- 동등한 다음 예제에서는 <xref:System.IO> 개체를 사용하는 대신 `My.Computer.FileSystem` 네임스페이스의 클래스를 사용합니다.  
+ 동등한 다음 예제에서는 `My.Computer.FileSystem` 개체를 사용하는 대신 <xref:System.IO> 네임스페이스의 클래스를 사용합니다.  
   
  [!code-vb[VbVbcnMyFileSystem#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class3.vb#111)]  
   

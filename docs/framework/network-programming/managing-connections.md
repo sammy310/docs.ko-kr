@@ -29,7 +29,7 @@ HTTP를 사용하여 데이터 리소스에 연결하는 애플리케이션은 .
   
  **ServicePoint** 클래스는 애플리케이션이 인터넷 리소스에 액세스하기 위해 연결할 수 있는 엔드포인트를 제공합니다. 각 **ServicePoint**에는 성능을 향상시키기 위해 연결 간 최적화 정보를 공유하여 인터넷 서버와의 연결을 최적화시킬 수 있는 정보가 들어 있습니다.  
   
- 각 **ServicePoint**는 URI(Uniform Resource Identifier)로 식별되며 URI의 구성표 식별자 및 호스트 조각에 따라 분류됩니다. 예를 들어 동일한 **ServicePoint** 인스턴스에는 동일한 구성표 식별자(http) 및 호스트 조각(`http://www.contoso.com/index.htm`)이 있으므로 이 인스턴스에서는 URI(`http://www.contoso.com/news.htm?date=today` 및 `www.contoso.com`)에 요청을 제공합니다. 애플리케이션이 이미 `www.contoso.com` 서버에 영구적으로 연결되어 있는 경우 해당 연결을 사용하여 두 요청을 모두 검색하므로 두 연결을 만들 필요가 없습니다.  
+ 각 **ServicePoint**는 URI(Uniform Resource Identifier)로 식별되며 URI의 구성표 식별자 및 호스트 조각에 따라 분류됩니다. 예를 들어 동일한 **ServicePoint** 인스턴스에는 동일한 구성표 식별자(http) 및 호스트 조각(`www.contoso.com`)이 있으므로 이 인스턴스에서는 URI(`http://www.contoso.com/index.htm` 및 `http://www.contoso.com/news.htm?date=today`)에 요청을 제공합니다. 애플리케이션이 이미 `www.contoso.com` 서버에 영구적으로 연결되어 있는 경우 해당 연결을 사용하여 두 요청을 모두 검색하므로 두 연결을 만들 필요가 없습니다.  
   
  **ServicePointManager**는 **ServicePoint** 인스턴스의 생성과 소멸을 관리하는 정적 클래스입니다. 애플리케이션에서 기존 **ServicePoint** 인스턴스의 컬렉션에 없는 인터넷 리소스를 요청하면 **ServicePointManager**에서 **ServicePoint**를 만듭니다. **ServicePoint** 인스턴스는 최대 유휴 시간이 초과되거나 기존 **ServicePoint** 인스턴스의 수가 애플리케이션의 **ServicePoint** 인스턴스 최대 수를 초과할 때 소멸됩니다. **ServicePointManager**에서 <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A> 및 <xref:System.Net.ServicePointManager.MaxServicePoints%2A> 속성을 설정하여 유휴 시간의 기본 최대값과 **ServicePoint** 인스턴스의 최대 수를 모두 제어할 수 있습니다.  
   
@@ -38,7 +38,7 @@ HTTP를 사용하여 데이터 리소스에 연결하는 애플리케이션은 .
 > [!NOTE]
 > HTTP/1.1 사양에 따르면 애플리케이션으로부터의 연결은 서버당 두 개의 연결로 제한됩니다.  
   
- 최적의 연결 수는 애플리케이션이 실행되는 실제 조건에 따라 달라집니다. 애플리케이션에 사용 가능한 연결 수를 늘려도 애플리케이션 성능에 영향을 미치지 않을 수 있습니다. 연결이 추가되는 경우 미치는 영향을 판별하려면 연결 수를 변경하면서 성능 테스트를 실행합니다. 다음 코드 샘플에 표시된 대로 애플리케이션 초기화 시 <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A>ServicePointManager**클래스의 정적** 속성을 변경하여 해당 애플리케이션에서 사용하는 연결 수를 변경할 수 있습니다.  
+ 최적의 연결 수는 애플리케이션이 실행되는 실제 조건에 따라 달라집니다. 애플리케이션에 사용 가능한 연결 수를 늘려도 애플리케이션 성능에 영향을 미치지 않을 수 있습니다. 연결이 추가되는 경우 미치는 영향을 판별하려면 연결 수를 변경하면서 성능 테스트를 실행합니다. 다음 코드 샘플에 표시된 대로 애플리케이션 초기화 시 **ServicePointManager** 클래스의 정적 <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> 속성을 변경하여 해당 애플리케이션에서 사용하는 연결 수를 변경할 수 있습니다.  
   
 ```csharp  
 // Set the maximum number of connections per server to 4.  
@@ -50,7 +50,7 @@ ServicePointManager.DefaultConnectionLimit = 4;
 ServicePointManager.DefaultConnectionLimit = 4  
 ```  
   
- **ServicePointManager.DefaultConnectionLimit** 속성을 변경해도 이전에 초기화된 **ServicePoint** 인스턴스에는 영향을 미치지 않습니다. 다음 코드에서는 **서버의 기존**ServicePoint`http://www.contoso.com`에 대한 연결 한계를 `newLimit`에 저장된 값으로 변경합니다.  
+ **ServicePointManager.DefaultConnectionLimit** 속성을 변경해도 이전에 초기화된 **ServicePoint** 인스턴스에는 영향을 미치지 않습니다. 다음 코드에서는 `http://www.contoso.com` 서버의 기존 **ServicePoint**에 대한 연결 한계를 `newLimit`에 저장된 값으로 변경합니다.  
   
 ```csharp  
 Uri uri = new Uri("http://www.contoso.com/");  

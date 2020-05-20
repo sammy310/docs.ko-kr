@@ -17,7 +17,7 @@ ms.locfileid: "75714014"
 > [!NOTE]
 > .NET Standard 버전 및 지원되는 플랫폼 목록은 [.NET Standard](../../standard/net-standard.md)를 참조하세요.
 
-이 항목에서는 단일 문자열 처리 메서드를 포함하는 간단한 유틸리티 라이브러리를 만들어 보겠습니다. [ 클래스의 멤버인 것처럼 호출할 수 있도록 ](../../csharp/programming-guide/classes-and-structs/extension-methods.md)확장 메서드<xref:System.String>로 구현하겠습니다.
+이 항목에서는 단일 문자열 처리 메서드를 포함하는 간단한 유틸리티 라이브러리를 만들어 보겠습니다. <xref:System.String> 클래스의 멤버인 것처럼 호출할 수 있도록 [확장 메서드](../../csharp/programming-guide/classes-and-structs/extension-methods.md)로 구현하겠습니다.
 
 ## <a name="create-a-visual-studio-solution"></a>Visual Studio 솔루션 만들기
 

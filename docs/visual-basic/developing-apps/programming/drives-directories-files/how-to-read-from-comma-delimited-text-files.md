@@ -20,7 +20,7 @@ ms.locfileid: "74335070"
   
 ### <a name="to-parse-a-comma-delimited-text-file"></a>쉼표로 구분된 텍스트 파일을 구문 분석하려면  
   
-1. 새 `TextFieldParser`를 만듭니다. 다음 코드는 `TextFieldParser`라는 `MyReader`를 만들고 `test.txt` 파일을 엽니다.  
+1. 새 `TextFieldParser`를 만듭니다. 다음 코드는 `MyReader`라는 `TextFieldParser`를 만들고 `test.txt` 파일을 엽니다.  
   
      [!code-vb[VbFileIORead#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#15)]  
   
@@ -32,7 +32,7 @@ ms.locfileid: "74335070"
   
      [!code-vb[VbFileIORead#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#17)]  
   
-4. `While` 및 `Using`을 사용하여 `End While` 및 `End Using` 블록을 닫습니다.  
+4. `End While` 및 `End Using`을 사용하여 `While` 및 `Using` 블록을 닫습니다.  
   
      [!code-vb[VbFileIORead#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#18)]  
   

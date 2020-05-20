@@ -17,13 +17,13 @@ ms.locfileid: "73457809"
 
 자세한 변경 내용은 다음과 같습니다.
 
-- `Version`키에서 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` 항목의 값은 .NET Framework 4.6 및 해당 포인트 릴리스에 대해 `4.6.`*xxxxx*로, .NET Framework 4.7에 대해 `4.7.`*xxxxx*로 변경되었습니다. .NET Framework 4.5, 4.5.1 및 4.5.2에서는 `4.5.`*xxxxx* 형식이었습니다.
+- `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full`키에서 `Version` 항목의 값은 .NET Framework 4.6 및 해당 포인트 릴리스에 대해 `4.6.`*xxxxx*로, .NET Framework 4.7에 대해 `4.7.`*xxxxx*로 변경되었습니다. .NET Framework 4.5, 4.5.1 및 4.5.2에서는 `4.5.`*xxxxx* 형식이었습니다.
 
 - .NET Framework 파일에 대한 파일 및 제품 버전 관리는 이전 버전 관리 체계의 `4.0.30319.x`에서 .NET Framework 4.6 및 해당 포인트 릴리스에 대해 `4.6.X.0`로, .NET Framework 4.7 및 해당 포인트에 대해 `4.7.X.0`로 변경되었습니다. 파일을 마우스 오른쪽 단추로 클릭한 후 파일의 **속성**을 보면 이러한 새 값을 확인할 수 있습니다.
 
-- 관리되는 어셈블리의 <xref:System.Reflection.AssemblyFileVersionAttribute> 및 <xref:System.Reflection.AssemblyInformationalVersionAttribute> 특성은 .NET Framework 4.6 및 해당 포인트 릴리스의 경우 <xref:System.Version> 형식, 그리고 .NET Framework 4.7의 경우에는 `4.6.X.0` 형식의 `4.7.X.0` 값을 포함합니다.
+- 관리되는 어셈블리의 <xref:System.Reflection.AssemblyFileVersionAttribute> 및 <xref:System.Reflection.AssemblyInformationalVersionAttribute> 특성은 .NET Framework 4.6 및 해당 포인트 릴리스의 경우 `4.6.X.0` 형식, 그리고 .NET Framework 4.7의 경우에는 `4.7.X.0` 형식의 <xref:System.Version> 값을 포함합니다.
 
-- .NET Framework 4.6부터 <xref:System.Environment.Version%2A?displayProperty=nameWithType> 속성은 최종 버전 문자열 `4.0.30319.42000`을 반환합니다. .NET Framework 4, 4.5, 4.5.1 및 4.5.2에서는 `4.0.30319.xxxxx`가 42000보다 작은 `xxxxx` 형식의 버전 문자열을 반환합니다(예: "4.0.30319.18010"). <xref:System.Environment.Version%2A?displayProperty=nameWithType> 속성에서 새 종속성을 취하는 애플리케이션 코드는 권장하지 않습니다.
+- .NET Framework 4.6부터 <xref:System.Environment.Version%2A?displayProperty=nameWithType> 속성은 최종 버전 문자열 `4.0.30319.42000`을 반환합니다. .NET Framework 4, 4.5, 4.5.1 및 4.5.2에서는 `xxxxx`가 42000보다 작은 `4.0.30319.xxxxx` 형식의 버전 문자열을 반환합니다(예: "4.0.30319.18010"). <xref:System.Environment.Version%2A?displayProperty=nameWithType> 속성에서 새 종속성을 취하는 애플리케이션 코드는 권장하지 않습니다.
 
 ### <a name="handling-the-product-versioning-changes"></a>제품 버전 관리 변경 내용 처리
 
@@ -31,10 +31,10 @@ ms.locfileid: "73457809"
 
 - .NET Framework의 런타임 버전을 검색하려면 [방법: 설치된 .NET Framework 버전 확인](how-to-determine-which-versions-are-installed.md)을 참조합니다.
 
-- .NET Framework의 설치 경로를 확인하려면`InstallPath` 키의 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` 항목 값을 사용합니다.
+- .NET Framework의 설치 경로를 확인하려면`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` 키의 `InstallPath` 항목 값을 사용합니다.
 
   > [!IMPORTANT]
-  > 하위 키 이름은 `NET Framework Setup`이 아니라 `.NET Framework Setup`입니다.
+  > 하위 키 이름은 `.NET Framework Setup`이 아니라 `NET Framework Setup`입니다.
 
 - .NET Framework 공용 언어 런타임에 대한 디렉터리 경로를 확인하려면 <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetRuntimeDirectory%2A?displayProperty=nameWithType> 메서드를 호출합니다.
 

@@ -126,7 +126,7 @@ Console.WriteLine("Breakfast is ready!");
 
 ## <a name="await-tasks-efficiently"></a>효율적인 작업 대기
 
-`await` 클래스의 메서드를 사용하여 앞의 코드 끝에 있는 일련의 `Task` 문을 향상시킬 수 있습니다. 이러한 API 중 하나인 <xref:System.Threading.Tasks.Task.WhenAll%2A>은 다음 코드와 같이 인수 목록의 모든 작업이 완료되면 완료된 <xref:System.Threading.Tasks.Task>를 반환합니다.
+`Task` 클래스의 메서드를 사용하여 앞의 코드 끝에 있는 일련의 `await` 문을 향상시킬 수 있습니다. 이러한 API 중 하나인 <xref:System.Threading.Tasks.Task.WhenAll%2A>은 다음 코드와 같이 인수 목록의 모든 작업이 완료되면 완료된 <xref:System.Threading.Tasks.Task>를 반환합니다.
 
 ```csharp
 await Task.WhenAll(eggsTask, baconTask, toastTask);
@@ -136,7 +136,7 @@ Console.WriteLine("toast is ready");
 Console.WriteLine("Breakfast is ready!");
 ```
 
-또 다른 옵션으로, 인수가 완료되면 완료된 <xref:System.Threading.Tasks.Task.WhenAny%2A>를 반환하는 `Task<Task>`를 사용하는 것입니다. 반환된 작업은 이미 완료되었음을 알고 있으므로 기다릴 수 있습니다. 다음 코드에서는 <xref:System.Threading.Tasks.Task.WhenAny%2A>를 사용하여 첫 번째 작업이 완료될 때까지 기다린 다음, 결과를 처리하는 방법을 보여 줍니다. 완료된 작업의 결과가 처리되면 완료된 작업을 `WhenAny`에 전달된 작업 목록에서 제거합니다.
+또 다른 옵션으로, 인수가 완료되면 완료된 `Task<Task>`를 반환하는 <xref:System.Threading.Tasks.Task.WhenAny%2A>를 사용하는 것입니다. 반환된 작업은 이미 완료되었음을 알고 있으므로 기다릴 수 있습니다. 다음 코드에서는 <xref:System.Threading.Tasks.Task.WhenAny%2A>를 사용하여 첫 번째 작업이 완료될 때까지 기다린 다음, 결과를 처리하는 방법을 보여 줍니다. 완료된 작업의 결과가 처리되면 완료된 작업을 `WhenAny`에 전달된 작업 목록에서 제거합니다.
 
 [!code-csharp[AwaitAnyTask](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-final/Program.cs#AwaitAnyTask)]
 

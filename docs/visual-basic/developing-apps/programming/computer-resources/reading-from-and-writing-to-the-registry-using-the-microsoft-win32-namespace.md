@@ -13,7 +13,7 @@ ms.locfileid: "74345493"
 ---
 # <a name="reading-from-and-writing-to-the-registry-using-the-microsoftwin32-namespace-visual-basic"></a>Microsoft.Win32 네임스페이스를 사용하여 레지스트리 읽기 및 쓰기(Visual Basic)
 
-`My.Computer.Registry`는 레지스트리에 대해 프로그래밍할 때 기본 요구를 충족해야 하지만, .NET Framework의 <xref:Microsoft.Win32.Registry> 네임스페이스에서 <xref:Microsoft.Win32.RegistryKey> 및 <xref:Microsoft.Win32> 클래스를 사용할 수도 있습니다.  
+`My.Computer.Registry`는 레지스트리에 대해 프로그래밍할 때 기본 요구를 충족해야 하지만, .NET Framework의 <xref:Microsoft.Win32> 네임스페이스에서 <xref:Microsoft.Win32.Registry> 및 <xref:Microsoft.Win32.RegistryKey> 클래스를 사용할 수도 있습니다.  
   
 ## <a name="keys-in-the-registry-class"></a>레지스트리 클래스의 키  
 
@@ -30,7 +30,7 @@ ms.locfileid: "74345493"
 |<xref:Microsoft.Win32.Registry.Users>|기본 사용자 기본 설정에 대한 정보를 포함합니다.|  
   
 > [!IMPORTANT]
-> 로컬 컴퓨터(<xref:Microsoft.Win32.Registry.CurrentUser>)보다 현재 사용자(<xref:Microsoft.Win32.Registry.LocalMachine>)에게 데이터를 기록하는 것이 더 안전합니다. 만들고 있는 키가 전에 다른 프로세스(예: 악의적인 프로세스)로 만들어진 경우 일반적으로 "스쿼팅(squatting)"이라는 조건이 발생합니다. 이 문제가 발생하지 않도록 하려면 키가 존재하지 않을 경우 <xref:Microsoft.Win32.RegistryKey.GetValue%2A>을 반환하는 메서드(예: `Nothing`)를 사용합니다.  
+> 로컬 컴퓨터(<xref:Microsoft.Win32.Registry.LocalMachine>)보다 현재 사용자(<xref:Microsoft.Win32.Registry.CurrentUser>)에게 데이터를 기록하는 것이 더 안전합니다. 만들고 있는 키가 전에 다른 프로세스(예: 악의적인 프로세스)로 만들어진 경우 일반적으로 "스쿼팅(squatting)"이라는 조건이 발생합니다. 이 문제가 발생하지 않도록 하려면 키가 존재하지 않을 경우 `Nothing`을 반환하는 메서드(예: <xref:Microsoft.Win32.RegistryKey.GetValue%2A>)를 사용합니다.  
   
 ## <a name="reading-a-value-from-the-registry"></a>레지스트리에서 값 읽기  
 

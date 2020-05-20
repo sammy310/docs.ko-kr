@@ -26,7 +26,7 @@ ms.locfileid: "77627996"
  익명 파이프를 구현하려면, <xref:System.IO.Pipes.AnonymousPipeServerStream> 및 <xref:System.IO.Pipes.AnonymousPipeClientStream> 클래스를 사용합니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제는 익명 파이프를 사용하여 부모 프로세스에서 자식 프로세스로 문자열을 보내는 방법을 보여줍니다. 이 예제는 <xref:System.IO.Pipes.AnonymousPipeServerStream>의 <xref:System.IO.Pipes.PipeDirection> 값을 사용하여 부모 프로세스에서 <xref:System.IO.Pipes.PipeDirection.Out> 개체를 생성합니다. 그런 다음, 부모 프로세스는 클라이언트 핸들을 사용하여 <xref:System.IO.Pipes.AnonymousPipeClientStream> 개체를 생성함으로써 자식 프로세스를 만듭니다. 자식 프로세스에는 <xref:System.IO.Pipes.PipeDirection>의 <xref:System.IO.Pipes.PipeDirection.In> 값이 있습니다.  
+ 다음 예제는 익명 파이프를 사용하여 부모 프로세스에서 자식 프로세스로 문자열을 보내는 방법을 보여줍니다. 이 예제는 <xref:System.IO.Pipes.PipeDirection.Out>의 <xref:System.IO.Pipes.PipeDirection> 값을 사용하여 부모 프로세스에서 <xref:System.IO.Pipes.AnonymousPipeServerStream> 개체를 생성합니다. 그런 다음, 부모 프로세스는 클라이언트 핸들을 사용하여 <xref:System.IO.Pipes.AnonymousPipeClientStream> 개체를 생성함으로써 자식 프로세스를 만듭니다. 자식 프로세스에는 <xref:System.IO.Pipes.PipeDirection.In>의 <xref:System.IO.Pipes.PipeDirection> 값이 있습니다.  
   
  그런 다음, 부모 프로세스는 사용자가 제공한 문자열을 자식 프로세스로 보냅니다. 문자열이 자식 프로세스의 콘솔에 표시됩니다.  
   

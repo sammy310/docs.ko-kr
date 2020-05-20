@@ -90,7 +90,7 @@ GitHub의 [샘플 리포지토리](https://github.com/dotnet/samples/blob/master
         PrimeServiceTests.csproj
 ```
 
-[unit-testing-using-mstest`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj` 디렉터리에서 ](../tools/dotnet-sln.md)  를 실행합니다.
+*unit-testing-using-mstest* 디렉터리에서 [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md)를 실행합니다.
 
 ## <a name="create-the-first-test"></a>첫 번째 테스트 만들기
 

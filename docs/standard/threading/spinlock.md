@@ -13,7 +13,7 @@ ms.lasthandoff: 03/15/2020
 ms.locfileid: "73106167"
 ---
 # <a name="spinlock"></a>SpinLock
-<xref:System.Threading.SpinLock> 구조는 잠금을 획득하기 위해 대기하는 동안 회전하는 하위 수준의 동기화 기본 형식입니다. 멀티 코어 컴퓨터에서 대기 시간이 짧은 것으로 예상되고 경합이 최소인 경우 <xref:System.Threading.SpinLock>의 성능이 다른 종류의 잠금보다 더 뛰어납니다. 그러나 프로파일링을 통해 <xref:System.Threading.SpinLock> 메서드 또는 <xref:System.Threading.Monitor?displayProperty=nameWithType> 메서드가 프로그램의 성능을 크게 낮추는 것을 확인하는 경우에만 <xref:System.Threading.Interlocked>을 사용하는 것이 좋습니다.  
+<xref:System.Threading.SpinLock> 구조는 잠금을 획득하기 위해 대기하는 동안 회전하는 하위 수준의 동기화 기본 형식입니다. 멀티 코어 컴퓨터에서 대기 시간이 짧은 것으로 예상되고 경합이 최소인 경우 <xref:System.Threading.SpinLock>의 성능이 다른 종류의 잠금보다 더 뛰어납니다. 그러나 프로파일링을 통해 <xref:System.Threading.Monitor?displayProperty=nameWithType> 메서드 또는 <xref:System.Threading.Interlocked> 메서드가 프로그램의 성능을 크게 낮추는 것을 확인하는 경우에만 <xref:System.Threading.SpinLock>을 사용하는 것이 좋습니다.  
   
  <xref:System.Threading.SpinLock>은 아직 잠금을 획득하지 않은 경우에도 스레드의 시간 조각을 생성할 수 있습니다. 스레드 우선 순위가 반전되는 것을 방지하고 가비지 수집기가 진행되도록 하기 위해 이 작업을 수행합니다. <xref:System.Threading.SpinLock>을 사용하면 스레드가 매우 짧은 시간 범위 이상으로 잠금을 보유할 수 없고 잠금을 보유하는 동안 스레드가 차단할 수 없습니다.  
   

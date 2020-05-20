@@ -25,7 +25,7 @@ ms.locfileid: "79398648"
 
 이 변경은 .NET Framework 4.6.1부터 .NET Framework 버전을 대상으로 하는 Windows Forms 앱에만 영향을 줍니다.
 
-이전 버전의 .NET Framework를 대상으로 하는 Windows Forms 앱에서는 경우에 따라 <xref:System.IndexOutOfRangeException> 메서드를 호출할 때 이러한 구현이 <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> 예외를 throw할 수 있습니다.
+이전 버전의 .NET Framework를 대상으로 하는 Windows Forms 앱에서는 경우에 따라 <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> 메서드를 호출할 때 이러한 구현이 <xref:System.IndexOutOfRangeException> 예외를 throw할 수 있습니다.
 
 ## <a name="mitigation"></a>완화 방법
 

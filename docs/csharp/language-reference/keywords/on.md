@@ -20,7 +20,7 @@ ms.locfileid: "75713310"
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 `on` 절에 `join`을 사용하는 방법을 보여 줍니다.
+다음 예제에서는 `join` 절에 `on`을 사용하는 방법을 보여 줍니다.
 
 [!code-csharp[csrefKeywordsContextual#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#12)]
 

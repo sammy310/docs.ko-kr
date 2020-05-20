@@ -14,7 +14,7 @@ ms.locfileid: "74348790"
 ---
 # <a name="how-to-create-a-file-in-visual-basic"></a>방법: Visual Basic에서 파일 만들기
 
-이 예제에서는 <xref:System.IO.File.Create%2A> 클래스의 <xref:System.IO.File> 메서드를 사용하여 지정된 경로에 빈 텍스트 파일을 만듭니다.  
+이 예제에서는 <xref:System.IO.File> 클래스의 <xref:System.IO.File.Create%2A> 메서드를 사용하여 지정된 경로에 빈 텍스트 파일을 만듭니다.  
   
 ## <a name="example"></a>예제  
 

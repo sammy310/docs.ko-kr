@@ -40,9 +40,9 @@ ms.locfileid: "79180867"
 ---
 # <a name="handling-errors"></a>오류 처리
 
-<xref:System.Net.WebRequest> 및 <xref:System.Net.WebResponse> 클래스는 시스템 예외(예: <xref:System.ArgumentException>) 및 웹 관련 예외(<xref:System.Net.WebException> 메서드에서 throw된 <xref:System.Net.WebRequest.GetResponse%2A>)를 둘 다 throw합니다.  
+<xref:System.Net.WebRequest> 및 <xref:System.Net.WebResponse> 클래스는 시스템 예외(예: <xref:System.ArgumentException>) 및 웹 관련 예외(<xref:System.Net.WebRequest.GetResponse%2A> 메서드에서 throw된 <xref:System.Net.WebException>)를 둘 다 throw합니다.  
   
-각 **WebException**에는 <xref:System.Net.WebException.Status%2A> 열거형의 값을 포함하는 <xref:System.Net.WebExceptionStatus> 속성이 포함됩니다. **Status** 속성을 검사하여 발생한 오류를 확인하고 적절한 단계를 수행하여 오류를 해결할 수 있습니다.  
+각 **WebException**에는 <xref:System.Net.WebExceptionStatus> 열거형의 값을 포함하는 <xref:System.Net.WebException.Status%2A> 속성이 포함됩니다. **Status** 속성을 검사하여 발생한 오류를 확인하고 적절한 단계를 수행하여 오류를 해결할 수 있습니다.  
   
 다음 표에서는 **Status** 속성의 가능한 값을 설명합니다.  
   

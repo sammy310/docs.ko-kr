@@ -177,7 +177,7 @@ public class DataSamples
 
 ### <a name="dictionaries"></a>사전
 
-또 다른 일반적인 시나리오는 사전 또는 맵을 모델링해야 하는 경우입니다. 이 시나리오는 형식이 키, 일반적으로 텍스트 키에 따라 값을 저장하는 경우입니다. 이 예제에서는 해당 옵션을 관리하는 [람다 식](delegates-overview.md)에 명령줄 인수를 매핑하는 사전을 만듭니다. 다음 예제에서는 명령줄 옵션을 `ArgsActions` 대리자에 매핑하는 `Action` 클래스와 해당 옵션을 발견할 경우 `ArgsProcessor`를 사용하여 각 `ArgsActions`을 실행하는 `Action` 클래스 등 두 개의 클래스를 보여 줍니다.
+또 다른 일반적인 시나리오는 사전 또는 맵을 모델링해야 하는 경우입니다. 이 시나리오는 형식이 키, 일반적으로 텍스트 키에 따라 값을 저장하는 경우입니다. 이 예제에서는 해당 옵션을 관리하는 [람다 식](delegates-overview.md)에 명령줄 인수를 매핑하는 사전을 만듭니다. 다음 예제에서는 명령줄 옵션을 `Action` 대리자에 매핑하는 `ArgsActions` 클래스와 해당 옵션을 발견할 경우 `ArgsActions`를 사용하여 각 `Action`을 실행하는 `ArgsProcessor` 클래스 등 두 개의 클래스를 보여 줍니다.
 
 ```csharp
 public class ArgsProcessor
@@ -320,7 +320,7 @@ using DateMeasurements = System.Collections.Generic.Dictionary<System.DateTime, 
 using CityDataMeasurements = System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<System.DateTime, IndexersSamples.Common.Measurements>>;
 ```
 
-두 문은 생성된 제네릭 형식의 *별칭*을 만듭니다. 이러한 문을 통해 나중에 코드에서 `DateMeasurements` 및 `CityDateMeasurements`의 제네릭 구문이 아니라 더 설명적인 `Dictionary<DateTime, Measurements>` 및 `Dictionary<string, Dictionary<DateTime, Measurements> >` 이름을 사용할 수 있습니다.
+두 문은 생성된 제네릭 형식의 *별칭*을 만듭니다. 이러한 문을 통해 나중에 코드에서 `Dictionary<DateTime, Measurements>` 및 `Dictionary<string, Dictionary<DateTime, Measurements> >`의 제네릭 구문이 아니라 더 설명적인 `DateMeasurements` 및 `CityDateMeasurements` 이름을 사용할 수 있습니다.
 이 구문의 경우 `=` 기호의 오른쪽에 정규화된 형식 이름을 사용해야 합니다.
 
 두 번째 방법은 컬렉션에 인덱싱하는 데 사용되는 `DateTime` 개체의 시간 부분을 제거하는 것입니다. .NET에는 날짜 전용 형식이 포함되어 있지 않습니다.

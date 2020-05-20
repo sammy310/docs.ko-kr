@@ -50,7 +50,7 @@ public class HousingData
 
 ## <a name="prepare-the-data"></a>데이터 준비
 
-데이터를 사용하여 기계 학습 모델을 빌드하기 전에 미리 처리합니다. 이 샘플에서는 `Size` 및 `HistoricalPrices` 열을 하나의 기능 벡터로 결합합니다. 이것은 `Features`[`Concatenate` 메서드를 사용하여 새 열 ](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*)에 출력합니다. ML.NET 알고리즘에서 예상하는 형식으로 데이터를 가져오는 것 외에도, 열을 연결하면 개별 열 각각에 대해서가 아니라 연결된 열에 대해 한 번만 작업을 적용하므로 파이프라인에서 이후의 작업을 최적화합니다.
+데이터를 사용하여 기계 학습 모델을 빌드하기 전에 미리 처리합니다. 이 샘플에서는 `Size` 및 `HistoricalPrices` 열을 하나의 기능 벡터로 결합합니다. 이것은 [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) 메서드를 사용하여 새 열 `Features`에 출력합니다. ML.NET 알고리즘에서 예상하는 형식으로 데이터를 가져오는 것 외에도, 열을 연결하면 개별 열 각각에 대해서가 아니라 연결된 열에 대해 한 번만 작업을 적용하므로 파이프라인에서 이후의 작업을 최적화합니다.
 
 열이 단일 벡터로 결합되면 [`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*)가 `Features` 열에 적용되어 같은 0-1 범위에서 `Size` 및 `HistoricalPrices`를 가져옵니다.
 
@@ -93,7 +93,7 @@ var cvResults = mlContext.Regression.CrossValidate(transformedData, sdcaEstimato
 
 ## <a name="evaluate-the-model"></a>모델 평가
 
-다양한 학습 모델에 대한 메트릭은 개별 `Metrics`[`CrossValidationResult` 개체의 ](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) 속성을 통해 액세스할 수 있습니다. 이 경우 [R 제곱 메트릭](https://en.wikipedia.org/wiki/Coefficient_of_determination)이 `rSquared` 변수를 통해 액세스 및 저장됩니다.
+다양한 학습 모델에 대한 메트릭은 개별 [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) 개체의 `Metrics` 속성을 통해 액세스할 수 있습니다. 이 경우 [R 제곱 메트릭](https://en.wikipedia.org/wiki/Coefficient_of_determination)이 `rSquared` 변수를 통해 액세스 및 저장됩니다.
 
 ```csharp
 IEnumerable<double> rSquared =

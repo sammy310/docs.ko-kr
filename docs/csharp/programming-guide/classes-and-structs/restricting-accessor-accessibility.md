@@ -50,9 +50,9 @@ ms.locfileid: "75714687"
  접근자의 액세스 한정자를 사용하지 않은 경우 접근자의 접근성 도메인은 속성 또는 인덱서의 접근성 수준에 의해 결정됩니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에는 세 가지 클래스 `BaseClass`, `DerivedClass`, `MainClass`가 포함되어 있습니다. `BaseClass`에는 두 클래스의 `Name` 및 `Id`인 두 가지 속성이 있습니다. 예제에서는 `Id`protected`DerivedClass`, `Id`private`BaseClass` 등의 제한적인 액세스 한정자를 사용할 때 [의 ](../../language-reference/keywords/protected.md) 속성을 [의 ](../../language-reference/keywords/private.md) 속성으로 숨길 수 있는 방법을 보여 줍니다. 따라서 이 속성에 값을 할당하면 `BaseClass` 클래스의 속성이 대신 호출됩니다. 액세스 한정자를 [public](../../language-reference/keywords/public.md)으로 바꾸면 속성에 액세스할 수 있습니다.  
+ 다음 예제에는 세 가지 클래스 `BaseClass`, `DerivedClass`, `MainClass`가 포함되어 있습니다. `BaseClass`에는 두 클래스의 `Name` 및 `Id`인 두 가지 속성이 있습니다. 예제에서는 [protected](../../language-reference/keywords/protected.md), [private](../../language-reference/keywords/private.md) 등의 제한적인 액세스 한정자를 사용할 때 `DerivedClass`의 `Id` 속성을 `BaseClass`의 `Id` 속성으로 숨길 수 있는 방법을 보여 줍니다. 따라서 이 속성에 값을 할당하면 `BaseClass` 클래스의 속성이 대신 호출됩니다. 액세스 한정자를 [public](../../language-reference/keywords/public.md)으로 바꾸면 속성에 액세스할 수 있습니다.  
   
- 또한 예제에서는 `private`, `protected` 속성의 `set` 접근자에 있는 `Name`, `DerivedClass` 등의 제한적인 액세스 한정자가 접근자에 대한 액세스를 차단하고 할당을 시도할 때 오류를 생성함을 보여 줍니다.  
+ 또한 예제에서는 `DerivedClass`, `Name` 속성의 `set` 접근자에 있는 `private`, `protected` 등의 제한적인 액세스 한정자가 접근자에 대한 액세스를 차단하고 할당을 시도할 때 오류를 생성함을 보여 줍니다.  
   
  [!code-csharp[csProgGuideIndexers#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#5)]  
   

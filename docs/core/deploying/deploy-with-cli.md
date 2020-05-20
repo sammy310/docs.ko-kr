@@ -40,7 +40,7 @@ CLI 사용에 대한 빠른 도움말을 찾나요? 다음 표는 앱을 게시�
 
 둘 이상의 프레임워크를 대상으로 하려는 경우 `<TargetFrameworks>` 설정을 세미콜론으로 구분된 둘 이상의 TFM 값으로 설정할 수 있습니다. `dotnet publish -f <TFM>` 명령을 사용하여 프레임워크 중 하나를 게시할 수 있습니다. 예를 들어 `<TargetFrameworks>netcoreapp2.1;netcoreapp2.2</TargetFrameworks>`가 있고 `dotnet publish -f netcoreapp2.1`을 실행하는 경우 .NET Core 2.1을 대상으로 하는 이진 파일이 생성됩니다.
 
-달리 설정하지 않으면 [`dotnet publish`](../tools/dotnet-publish.md) 명령의 출력 디렉터리는 `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`입니다. **매개 변수를 사용하여 변경하지 않는 한 기본**BUILD-CONFIGURATION**모드는**디버그`-c`입니다. 예를 들어 `dotnet publish -c Release -f netcoreapp2.1`은 `myfolder/bin/Release/netcoreapp2.1/publish/`에 게시합니다.
+달리 설정하지 않으면 [`dotnet publish`](../tools/dotnet-publish.md) 명령의 출력 디렉터리는 `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`입니다. `-c` 매개 변수를 사용하여 변경하지 않는 한 기본 **BUILD-CONFIGURATION** 모드는 **디버그**입니다. 예를 들어 `dotnet publish -c Release -f netcoreapp2.1`은 `myfolder/bin/Release/netcoreapp2.1/publish/`에 게시합니다.
 
 .NET Core SDK 3.0 이상을 사용하는 경우 .NET Core 버전 2.1, 2.2, 3.0 이상을 대상으로 하는 앱의 기본 게시 모드는 프레임워크 종속 실행 파일입니다.
 

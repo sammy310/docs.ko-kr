@@ -34,7 +34,7 @@ ms.locfileid: "79181262"
   
 - 드물게 특정한 상황에서 컴파일러 최적화가 사용되도록 설정되면 조건부 비트 테스트가 잘못된 <xref:System.Boolean> 값을 반환하거나 예외를 throw할 수 있습니다.  
   
-- 특정 상황에서 `if` 블록을 시작하기 전에 `try` 문을 사용해서 조건을 테스트한 후에 `try` 블록을 종료하고 `catch` 또는 `finally` 블록에서 동일한 조건을 평가하면 새로운 64비트 JIT 컴파일러는 코드를 최적화할 때 `if` 또는 `catch` 블록에서 `finally` 조건을 제거합니다. 결과적으로 `if` 또는 `catch` 블록에서 `finally` 문 내의 코드가 무조건적으로 실행됩니다.  
+- 특정 상황에서 `try` 블록을 시작하기 전에 `if` 문을 사용해서 조건을 테스트한 후에 `try` 블록을 종료하고 `catch` 또는 `finally` 블록에서 동일한 조건을 평가하면 새로운 64비트 JIT 컴파일러는 코드를 최적화할 때 `catch` 또는 `finally` 블록에서 `if` 조건을 제거합니다. 결과적으로 `catch` 또는 `finally` 블록에서 `if` 문 내의 코드가 무조건적으로 실행됩니다.  
   
 <a name="General"></a>
 ## <a name="mitigation-of-known-issues"></a>알려진 문제 완화  
@@ -61,9 +61,9 @@ ms.locfileid: "79181262"
     </configuration>  
     ```  
   
-- 사용자별로 레지스트리의 `REG_DWORD` 키에 `useLegacyJit`라는 `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` 값을 추가할 수 있습니다. 값이 1이면 레거시 64비트 JIT 컴파일러가 사용되도록 설정되고 값이 0이면 새로운 64비트 JIT 컴파일러가 사용되도록 설정됩니다.  
+- 사용자별로 레지스트리의 `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` 키에 `useLegacyJit`라는 `REG_DWORD` 값을 추가할 수 있습니다. 값이 1이면 레거시 64비트 JIT 컴파일러가 사용되도록 설정되고 값이 0이면 새로운 64비트 JIT 컴파일러가 사용되도록 설정됩니다.  
   
-- 컴퓨터별로 레지스트리의 `REG_DWORD` 키에 `useLegacyJit`라는 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` 값을 추가할 수 있습니다. 값이 1이면 레거시 64비트 JIT 컴파일러가 사용되도록 설정되고 값이 0이면 새로운 64비트 JIT 컴파일러가 사용되도록 설정됩니다.  
+- 컴퓨터별로 레지스트리의 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` 키에 `useLegacyJit`라는 `REG_DWORD` 값을 추가할 수 있습니다. 값이 1이면 레거시 64비트 JIT 컴파일러가 사용되도록 설정되고 값이 0이면 새로운 64비트 JIT 컴파일러가 사용되도록 설정됩니다.  
   
  [Microsoft Connect](https://connect.microsoft.com/VisualStudio)에 버그를 보고하여 문제를 알릴 수도 있습니다.  
   

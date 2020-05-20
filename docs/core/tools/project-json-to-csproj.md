@@ -49,7 +49,7 @@ ms.locfileid: "77451107"
 </PropertyGroup>
 ```
 
-`<AssemblyName>` 속성이 project.json에서 정의된 경우 `<PackageId>`에는 `buildOptions\outputName`와 다른 값이 있습니다.
+`buildOptions\outputName` 속성이 project.json에서 정의된 경우 `<AssemblyName>`에는 `<PackageId>`와 다른 값이 있습니다.
 자세한 내용은 [기타 일반적인 빌드 옵션](#other-common-build-options)을 참조하세요.
 
 ### <a name="version"></a>version
@@ -486,7 +486,7 @@ MSBuild에서 모든 프로젝트는 빌드 중 *이식 가능*하지만 독립 
 ```
 
 MSBuild에는 `owners` 요소에 대해 동일한 요소가 없습니다.
-`summary`의 경우, `<Description>` 값이 자동으로 해당 속성에 마이그레이션되지 않은 경우에도 속성이 `summary`[`description` 요소로 매핑되므로 MSBuild ](#other-common-root-level-options) 속성을 사용할 수 있습니다.
+`summary`의 경우, `summary` 값이 자동으로 해당 속성에 마이그레이션되지 않은 경우에도 속성이 [`description`](#other-common-root-level-options) 요소로 매핑되므로 MSBuild `<Description>` 속성을 사용할 수 있습니다.
 
 ## <a name="scripts"></a>스크립트
 
@@ -628,7 +628,7 @@ MSBuild에서는 [항목](/visualstudio/msbuild/common-msbuild-project-items)을
 
 .nupkg 내의 패키지 레이아웃은 `PackagePath="path"`를 사용하여 수정할 수 있습니다.
 
-`Content`를 제외하고, 대부분의 항목 그룹은 패키지에 포함되도록 `Pack="true"`를 명시적으로 추가해야 합니다. MSBuild `Content` 속성이 기본적으로 *로 설정되어 있기 때문에* 는 패키지의 `<IncludeContentInPack>`content`true` 폴더에 놓입니다.
+`Content`를 제외하고, 대부분의 항목 그룹은 패키지에 포함되도록 `Pack="true"`를 명시적으로 추가해야 합니다. MSBuild `<IncludeContentInPack>` 속성이 기본적으로 `true`로 설정되어 있기 때문에 `Content`는 패키지의 *content* 폴더에 놓입니다.
 자세한 내용은 [패키지에 콘텐츠 포함](/nuget/schema/msbuild-targets#including-content-in-a-package)을 참조하세요.
 
 `PackagePath="%(Identity)"`는 패키지 경로를 프로젝트 상대 파일 경로에 설정하는 간단한 방법입니다.

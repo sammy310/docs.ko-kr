@@ -38,7 +38,7 @@ C# 7.0부터 C#에서 참조 반환 값(ref return)을 지원합니다. 참조 �
 - 메서드 시그니처에는 반환 형식 앞에 [ref](../../language-reference/keywords/ref.md) 키워드가 포함됩니다.
 - 메서드 본문의 각 [return](../../language-reference/keywords/return.md) 문에는 반환된 인스턴스의 이름 앞에 [ref](../../language-reference/keywords/ref.md) 키워드가 포함됩니다.
 
-다음 예제에서는 이러한 조건을 충족하면서 `Person`라는 이름의 `p` 개체에 대한 참조를 반환하는 메서드를 보여줍니다.
+다음 예제에서는 이러한 조건을 충족하면서 `p`라는 이름의 `Person` 개체에 대한 참조를 반환하는 메서드를 보여줍니다.
 
 ```csharp
 public ref Person GetContactInformation(string fname, string lname)
@@ -80,7 +80,7 @@ Person p = contacts.GetContactInformation("Brandie", "Best");
 ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 ```
 
-`p`가 해당 변수의 별칭이므로 이후 `GetContactInformation` 사용은 `p`에서 반환된 변수를 사용하는 것과 같습니다. 또한 `p`를 변경하면 `GetContactInformation`에서 반환된 변수도 변경됩니다.
+`p`가 해당 변수의 별칭이므로 이후 `p` 사용은 `GetContactInformation`에서 반환된 변수를 사용하는 것과 같습니다. 또한 `p`를 변경하면 `GetContactInformation`에서 반환된 변수도 변경됩니다.
 
 `ref` 키워드는 지역 변수 선언 앞, ‘그리고’ 메서드 호출 앞에 사용됩니다. 
 

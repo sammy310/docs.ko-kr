@@ -24,9 +24,9 @@ ms.locfileid: "75713619"
 
 [!code-csharp[cscsrefQueryKeywords#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Into.cs#18)]
 
-각 그룹에서 추가 쿼리 작업을 수행하려는 경우에만 `into` 절에 `group`를 사용하면 됩니다. 자세한 내용은 [group 절](group-clause.md)을 참조하세요.
+각 그룹에서 추가 쿼리 작업을 수행하려는 경우에만 `group` 절에 `into`를 사용하면 됩니다. 자세한 내용은 [group 절](group-clause.md)을 참조하세요.
 
-`into` 절에 `join`를 사용하는 방법의 예는 [join 절](join-clause.md)을 참조하세요.
+`join` 절에 `into`를 사용하는 방법의 예는 [join 절](join-clause.md)을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

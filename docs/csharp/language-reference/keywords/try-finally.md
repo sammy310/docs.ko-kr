@@ -21,7 +21,7 @@ ms.locfileid: "75713016"
 
 처리된 예외 내에서는 연결된 `finally` 블록이 항상 실행됩니다. 그러나 예외가 처리되지 않은 경우 `finally` 블록의 실행 여부는 예외 해제 작업의 트리거 방법에 따라 달라집니다. 트리거 방법은 다시 사용자 컴퓨터의 설정 방법에 따라 달라집니다.
 
-일반적으로 처리되지 않은 예외로 애플리케이션이 종료되는 경우 `finally` 블록의 실행 여부는 중요하지 않습니다. 그러나 해당 상황에서도 실행해야 하는 문이 `finally` 블록에 있는 경우 한 가지 솔루션은 `catch` 블록을 `try`-`finally` 문에 추가하는 것입니다. 또는 호출 스택에서 상위 `try``try`- 문의 `finally` 블록에 throw될 수 있는 예외를 catch할 수 있습니다. 즉, `try`-`finally` 문을 포함하는 메서드를 호출하는 메서드, 해당 메서드를 호출하는 메서드 또는 호출 스택의 임의 메서드에 예외를 catch할 수 있습니다. 예외가 catch되지 않는 경우 `finally`의 실행은 운영 체제에서 예외 해제 작업 트리거를 선택하는지 여부에 따라 달라집니다.
+일반적으로 처리되지 않은 예외로 애플리케이션이 종료되는 경우 `finally` 블록의 실행 여부는 중요하지 않습니다. 그러나 해당 상황에서도 실행해야 하는 문이 `finally` 블록에 있는 경우 한 가지 솔루션은 `catch` 블록을 `try`-`finally` 문에 추가하는 것입니다. 또는 호출 스택에서 상위 `try`-`finally` 문의 `try` 블록에 throw될 수 있는 예외를 catch할 수 있습니다. 즉, `try`-`finally` 문을 포함하는 메서드를 호출하는 메서드, 해당 메서드를 호출하는 메서드 또는 호출 스택의 임의 메서드에 예외를 catch할 수 있습니다. 예외가 catch되지 않는 경우 `finally`의 실행은 운영 체제에서 예외 해제 작업 트리거를 선택하는지 여부에 따라 달라집니다.
 
 ## <a name="example"></a>예제
 
@@ -35,11 +35,11 @@ ms.locfileid: "75713016"
 
 `finally`에 대한 자세한 내용은 [try-catch-finally](try-catch-finally.md)를 참조하세요.
 
-C#에는 [ 개체에 대한 유사한 기능을 편리한 구문으로 제공하는 ](using-statement.md)using 문<xref:System.IDisposable>도 포함되어 있습니다.
+C#에는 <xref:System.IDisposable> 개체에 대한 유사한 기능을 편리한 구문으로 제공하는 [using 문](using-statement.md)도 포함되어 있습니다.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](~/_csharplang/spec/statements.md#the-try-statement)의 [try 문](~/_csharplang/spec/introduction.md) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [try 문](~/_csharplang/spec/statements.md#the-try-statement) 섹션을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

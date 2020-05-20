@@ -19,7 +19,7 @@ C#에서는 런타임 시 프로그램의 오류가 예외라는 메커니즘을
   
  [!code-csharp[csProgGuideExceptions#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#1)]  
   
- 예외가 throw되면 런타임은 현재 문을 확인하여 `try` 블록 내에 있는지 알아봅니다. 있는 경우, `catch` 블록과 연결된 `try` 블록을 확인하여 예외를 catch할 수 있는지 알아봅니다. `Catch` 블록은 일반적으로 예외 형식을 지정합니다. `catch` 블록의 형식이 예외와 동일한 형식이거나 예외의 기본 클래스인 경우 `catch` 블록이 메서드를 처리할 수 있습니다. 예들 들어 다음과 같습니다.  
+ 예외가 throw되면 런타임은 현재 문을 확인하여 `try` 블록 내에 있는지 알아봅니다. 있는 경우, `try` 블록과 연결된 `catch` 블록을 확인하여 예외를 catch할 수 있는지 알아봅니다. `Catch` 블록은 일반적으로 예외 형식을 지정합니다. `catch` 블록의 형식이 예외와 동일한 형식이거나 예외의 기본 클래스인 경우 `catch` 블록이 메서드를 처리할 수 있습니다. 예들 들어 다음과 같습니다.  
   
  [!code-csharp[csProgGuideExceptions#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#2)]  
   
@@ -33,13 +33,13 @@ C#에서는 런타임 시 프로그램의 오류가 예외라는 메커니즘을
   
  [!code-csharp[csProgGuideExceptions#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#4)]  
   
- `WriteByte()`에서 예외를 throw한 경우, `try`가 호출되지 않으면 파일을 다시 열려고 시도하는 두 번째 `file.Close()` 블록이 실패하고 파일이 잠금 상태로 유지됩니다. `finally` 블록은 예외가 throw되도 실행되므로, 이전 예제의 `finally` 블록을 통해 파일을 정확히 닫고 오류를 방지할 수 있습니다.  
+ `WriteByte()`에서 예외를 throw한 경우, `file.Close()`가 호출되지 않으면 파일을 다시 열려고 시도하는 두 번째 `try` 블록이 실패하고 파일이 잠금 상태로 유지됩니다. `finally` 블록은 예외가 throw되도 실행되므로, 이전 예제의 `finally` 블록을 통해 파일을 정확히 닫고 오류를 방지할 수 있습니다.  
   
  예외가 throw된 후 호출 스택에서 호환되는 `catch` 블록을 찾지 못하면 다음 세 가지 중 하나가 발생합니다.  
   
 - 예외가 종료자 내부에 있으면 종료자가 중단되고 기본 종료자(있는 경우)가 호출됩니다.  
   
-- 호출 스택에 정적 생성자 또는 정적 필드 이니셜라이저가 포함된 경우 새 예외의 <xref:System.TypeInitializationException> 속성에 할당된 원래 예외와 함께 <xref:System.Exception.InnerException%2A>이 throw됩니다.  
+- 호출 스택에 정적 생성자 또는 정적 필드 이니셜라이저가 포함된 경우 새 예외의 <xref:System.Exception.InnerException%2A> 속성에 할당된 원래 예외와 함께 <xref:System.TypeInitializationException>이 throw됩니다.  
   
 - 스레드의 시작에 도달하면 스레드가 종료됩니다.  
   

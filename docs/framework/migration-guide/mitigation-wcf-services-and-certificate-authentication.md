@@ -49,7 +49,7 @@ TLS 1.2는 MD5 인증서 인증을 지원하지 않습니다. 결과적으로 �
   </configuration>
   ```
 
-- 소스 코드에서 바인딩이 동적으로 구성된 경우 소스 코드에서 TLS 1.1(<xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=nameWithType>) 또는 이전 버전의 프로토콜을 사용하도록 <xref:System.Security.Authentication.SslProtocols.Tls11?displayProperty=nameWithType> 속성을 업데이트합니다.
+- 소스 코드에서 바인딩이 동적으로 구성된 경우 소스 코드에서 TLS 1.1(<xref:System.Security.Authentication.SslProtocols.Tls11?displayProperty=nameWithType>) 또는 이전 버전의 프로토콜을 사용하도록 <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=nameWithType> 속성을 업데이트합니다.
 
   > [!CAUTION]
   > MD5 해시 알고리즘을 사용하는 인증서는 안전하지 않은 것으로 간주되므로 이 해결 방법은 권장되지 않습니다.

@@ -30,7 +30,7 @@ ms.locfileid: "74348923"
 |<xref:System.IO.FileAccess?displayProperty=nameWithType>|파일에 대한 읽기, 쓰기 또는 읽기/쓰기 액세스 권한에 대한 상수를 정의합니다.|  
 |<xref:System.IO.FileAttributes?displayProperty=nameWithType>|`Archive`, `Hidden` 및 `ReadOnly`와 같은 파일 및 디렉터리에 대한 특성을 제공합니다.|  
 |<xref:System.IO.FileInfo?displayProperty=nameWithType>|파일 만들기, 복사, 삭제, 이동 및 열기를 위한 정적 메서드를 제공하고 `FileStream`만들기를 지원합니다.|  
-|<xref:System.IO.FileMode?displayProperty=nameWithType>|파일을 여는 방식을 제어합니다. 이 매개 변수는 대부분의 `FileStream` 및 `IsolatedStorageFileStream`에 대한 생성자와 `Open` 및 <xref:System.IO.File>의 <xref:System.IO.FileInfo> 메서드에 대한 생성자에서 지정됩니다.|  
+|<xref:System.IO.FileMode?displayProperty=nameWithType>|파일을 여는 방식을 제어합니다. 이 매개 변수는 대부분의 `FileStream` 및 `IsolatedStorageFileStream`에 대한 생성자와 <xref:System.IO.File> 및 <xref:System.IO.FileInfo>의 `Open` 메서드에 대한 생성자에서 지정됩니다.|  
 |<xref:System.IO.FileShare?displayProperty=nameWithType>|다른 파일 스트림이 같은 파일에 대해 가질 수 있는 액세스 형식을 제어하기 위한 상수를 정의합니다.|  
 |<xref:System.IO.Path?displayProperty=nameWithType>|디렉터리 문자열을 처리하기 위한 메서드와 속성을 제공합니다.|  
 |<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>|<xref:System.Security.Permissions.FileIOPermissionAttribute.Read%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Write%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Append%2A> 및 <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> 권한을 정의하여 파일 및 폴더 액세스를 제어합니다.|  

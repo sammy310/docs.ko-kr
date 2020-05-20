@@ -28,7 +28,7 @@ ms.locfileid: "71047352"
   
  네트워크 환경이 변경되는 경우에는 시스템에서 새 프록시 집합을 사용해야 할 수 있습니다. 네트워크 연결이 다운되거나 새 네트워크 연결이 초기화되면 시스템은 새 환경에서 적절한 구성 스크립트 소스를 찾아 새 스크립트를 실행해야 합니다.  
   
- 구성 파일에서 `usesystemdefault`[`<proxy>` 요소의 ](../configure-apps/file-schema/network/proxy-element-network-settings.md) 특성을 사용할 수 있습니다. `usesystemdefault` 특성은 정적 프록시 설정(프록시 주소, 바이패스 목록, 로컬에서 바이패스)을 사용자의 Internet Explorer 프록시 설정에서 읽어야 하는지 여부를 제어합니다. 이 값을 `true`로 설정하면 Internet Explorer의 정적 프록시 설정을 사용합니다. 이 값을 `false`로 설정하거나 설정하지 않으면 구성에서 정적 프록시 설정을 지정할 수 있으며 Internet Explorer 프록시 설정은 재정의됩니다. 적응 프록시를 사용하도록 설정하려는 경우에도 이 값을 `false`로 설정하거나 설정하지 않아야 합니다.  
+ 구성 파일에서 [`<proxy>`](../configure-apps/file-schema/network/proxy-element-network-settings.md) 요소의 `usesystemdefault` 특성을 사용할 수 있습니다. `usesystemdefault` 특성은 정적 프록시 설정(프록시 주소, 바이패스 목록, 로컬에서 바이패스)을 사용자의 Internet Explorer 프록시 설정에서 읽어야 하는지 여부를 제어합니다. 이 값을 `true`로 설정하면 Internet Explorer의 정적 프록시 설정을 사용합니다. 이 값을 `false`로 설정하거나 설정하지 않으면 구성에서 정적 프록시 설정을 지정할 수 있으며 Internet Explorer 프록시 설정은 재정의됩니다. 적응 프록시를 사용하도록 설정하려는 경우에도 이 값을 `false`로 설정하거나 설정하지 않아야 합니다.  
   
  다음 예제에서는 일반적인 적응 프록시 구성을 보여 줍니다.  
   

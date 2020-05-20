@@ -26,7 +26,7 @@ ms.locfileid: "73122228"
   
 1. Visual C# 또는 Visual Basic **Windows Forms 애플리케이션** 프로젝트를 만듭니다. 다음 단계에서 프로젝트의 이름은 `WriterReadersWinForms`입니다.  
   
-2. 기본 폼인 Form1.cs(Visual Basic에서는 Form1.vb)의 폼 디자이너에서 네 개 <xref:System.Windows.Forms.CheckBox> 컨트롤을 추가합니다. <xref:System.Windows.Forms.Control.Text%2A> 속성을 **의 경우** Reader 1`checkBox1`, **의 경우** Reader 2`checkBox2`, **의 경우** Reader 3`checkBox3`, **의 경우** Writer`checkBox4`로 설정합니다. 각 컨트롤의 <xref:System.Windows.Forms.Control.Enabled%2A> 속성을 `False`로 설정합니다.  
+2. 기본 폼인 Form1.cs(Visual Basic에서는 Form1.vb)의 폼 디자이너에서 네 개 <xref:System.Windows.Forms.CheckBox> 컨트롤을 추가합니다. <xref:System.Windows.Forms.Control.Text%2A> 속성을 `checkBox1`의 경우 **Reader 1**, `checkBox2`의 경우 **Reader 2**, `checkBox3`의 경우 **Reader 3**, `checkBox4`의 경우 **Writer**로 설정합니다. 각 컨트롤의 <xref:System.Windows.Forms.Control.Enabled%2A> 속성을 `False`로 설정합니다.  
   
 3. 폼에 <xref:System.Windows.Forms.Timer> 컨트롤을 추가합니다. <xref:System.Windows.Forms.Timer.Interval%2A> 속성을 `2500`으로 설정합니다.  
   

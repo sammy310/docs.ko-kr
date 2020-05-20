@@ -45,9 +45,9 @@ C#의 `using` 문과 Visual Basic의 `Using` 문은 개체를 만들고 정리�
 
 ## <a name="tryfinally-block"></a>Try/finally 블록
 
-`try/finally` 문에서 `using` 블록을 래핑하는 대신 `try/finally` 블록을 직접 구현하도록 선택할 수 있습니다. 개인적인 코딩 스타일에 따라서 또는 다음 이유 중 하나로 인해 이를 수행할 수 있습니다.  
+`using` 문에서 `try/finally` 블록을 래핑하는 대신 `try/finally` 블록을 직접 구현하도록 선택할 수 있습니다. 개인적인 코딩 스타일에 따라서 또는 다음 이유 중 하나로 인해 이를 수행할 수 있습니다.  
   
-- `catch` 블록에서 throw된 모든 예외를 처리하기 위해 `try` 블록을 포함하려는 경우 그렇지 않으면, `using` 문에서 throw된 예외가 `using` 블록이 없는 경우 `try/catch` 블록 내에 throw되는 예외와 마찬가지로 처리됩니다.  
+- `catch` 블록에서 throw된 모든 예외를 처리하기 위해 `try` 블록을 포함하려는 경우 그렇지 않으면, `using` 문에서 throw된 예외가 `try/catch` 블록이 없는 경우 `using` 블록 내에 throw되는 예외와 마찬가지로 처리됩니다.  
   
 - 범위가 선언된 범위 내의 블록에 대해 로컬이 아닌 <xref:System.IDisposable>을 구현하는 개체를 인스턴스화하려는 경우  
   
@@ -56,7 +56,7 @@ C#의 `using` 문과 Visual Basic의 `Using` 문은 개체를 만들고 정리�
 [!code-csharp[Conceptual.Disposable#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/using5.cs#6)]
 [!code-vb[Conceptual.Disposable#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/using5.vb#6)]  
   
-프로그래밍 언어가 `try/finally` 문을 지원하지 않지만, `using` 메서드에 대한 직접 호출을 허용하므로 <xref:System.IDisposable.Dispose%2A> 블록을 구현하도록 선택하거나 구현해야 하는 경우 이 기본 패턴을 따를 수 있습니다.
+프로그래밍 언어가 `using` 문을 지원하지 않지만, <xref:System.IDisposable.Dispose%2A> 메서드에 대한 직접 호출을 허용하므로 `try/finally` 블록을 구현하도록 선택하거나 구현해야 하는 경우 이 기본 패턴을 따를 수 있습니다.
   
 ## <a name="see-also"></a>참고 항목
 

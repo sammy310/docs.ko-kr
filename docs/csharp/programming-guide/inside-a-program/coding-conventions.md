@@ -95,7 +95,7 @@ ms.locfileid: "79398378"
   
      [!code-csharp[csProgGuideCodingConventions#10](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#10)]  
   
-- `var`dynamic[ 대신 ](../../language-reference/builtin-types/reference-types.md)를 사용하지 않습니다.  
+- [dynamic](../../language-reference/builtin-types/reference-types.md) 대신 `var`를 사용하지 않습니다.  
   
 - [for](../../language-reference/keywords/for.md) 루프의 루프 변수 형식을 결정하려면 암시적 형식을 사용합니다.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "79398378"
      [!code-csharp[csProgGuideCodingConventions#12](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#12)]
 
      > [!NOTE]
-     > 반복 가능한 컬렉션의 요소 형식을 실수로 변경하지 않도록 주의해야 합니다. 예를 들어 <xref:System.Linq.IQueryable?displayProperty=nameWithType> 문에서 <xref:System.Collections.IEnumerable?displayProperty=nameWithType>을 `foreach`으로 전환하기 쉬운데 그러면 쿼리 실행이 변경됩니다.
+     > 반복 가능한 컬렉션의 요소 형식을 실수로 변경하지 않도록 주의해야 합니다. 예를 들어 `foreach` 문에서 <xref:System.Linq.IQueryable?displayProperty=nameWithType>을 <xref:System.Collections.IEnumerable?displayProperty=nameWithType>으로 전환하기 쉬운데 그러면 쿼리 실행이 변경됩니다.
 
 ### <a name="unsigned-data-type"></a>부호 없는 데이터 형식  
   
@@ -136,13 +136,13 @@ ms.locfileid: "79398378"
   
      [!code-csharp[csProgGuideCodingConventions#16](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#16)]  
   
-- C# [using 문](../../language-reference/keywords/using-statement.md)을 사용하면 코드를 간소화할 수 있습니다. [ 블록의 코드가 ](../../language-reference/keywords/try-finally.md) 메서드 호출뿐인 `finally`try-finally<xref:System.IDisposable.Dispose%2A> 문이 있는 경우에는 `using` 문을 대신 사용합니다.  
+- C# [using 문](../../language-reference/keywords/using-statement.md)을 사용하면 코드를 간소화할 수 있습니다. `finally` 블록의 코드가 <xref:System.IDisposable.Dispose%2A> 메서드 호출뿐인 [try-finally](../../language-reference/keywords/try-finally.md) 문이 있는 경우에는 `using` 문을 대신 사용합니다.  
   
      [!code-csharp[csProgGuideCodingConventions#17](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#17)]  
   
 ### <a name="-and-124124-operators"></a>&& 및 &#124;&#124; 연산자  
   
-예외를 방지하고 불필요한 비교를 건너뛰어 성능을 개선하려면 비교를 수행할 때 다음 예제에 나와 있는 것처럼 [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) 대신 [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-)를 사용하고 [&#124;](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) 대신 [&#124;&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-)를 사용합니다.  
+예외를 방지하고 불필요한 비교를 건너뛰어 성능을 개선하려면 비교를 수행할 때 다음 예제에 나와 있는 것처럼 [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) 대신 [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-)를 사용하고 [&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) 대신 [&#124;&#124;](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-)를 사용합니다.  
   
 [!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
   
@@ -170,7 +170,7 @@ ms.locfileid: "79398378"
   
 ### <a name="static-members"></a>정적 멤버  
   
-[ClassName.StaticMember](../../language-reference/keywords/static.md)와 같이 클래스 이름을 사용하여 *static* 멤버를 호출합니다. 이렇게 하면 정적 액세스가 명확하게 표시되므로 코드를 보다 쉽게 읽을 수 있습니다.  파생 클래스 이름을 사용하여 기본 클래스에 정의된 정적 멤버를 정규화해서는 안 됩니다.  이 코드는 컴파일되기는 하지만 가독성이 떨어지며 나중에 파생 클래스와 이름이 같은 정적 멤버를 추가하면 코드가 손상될 수도 있습니다.  
+*ClassName.StaticMember*와 같이 클래스 이름을 사용하여 [static](../../language-reference/keywords/static.md) 멤버를 호출합니다. 이렇게 하면 정적 액세스가 명확하게 표시되므로 코드를 보다 쉽게 읽을 수 있습니다.  파생 클래스 이름을 사용하여 기본 클래스에 정의된 정적 멤버를 정규화해서는 안 됩니다.  이 코드는 컴파일되기는 하지만 가독성이 떨어지며 나중에 파생 클래스와 이름이 같은 정적 멤버를 추가하면 코드가 손상될 수도 있습니다.  
   
 ### <a name="linq-queries"></a>LINQ 쿼리  
   
@@ -196,7 +196,7 @@ ms.locfileid: "79398378"
   
      [!code-csharp[csProgGuideCodingConventions#29](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#29)]  
   
-- 내부 컬렉션에 액세스하려면 `from`join[ 절 대신 여러 ](../../language-reference/keywords/join-clause.md) 절을 사용합니다. 예를 들어 `Student` 개체 컬렉션이 각각 테스트 점수 컬렉션을 포함하는 경우 다음 쿼리를 실행하면 90점보다 높은 각 점수와 해당 점수를 받은 학생의 성이 반환됩니다.  
+- 내부 컬렉션에 액세스하려면 [join](../../language-reference/keywords/join-clause.md) 절 대신 여러 `from` 절을 사용합니다. 예를 들어 `Student` 개체 컬렉션이 각각 테스트 점수 컬렉션을 포함하는 경우 다음 쿼리를 실행하면 90점보다 높은 각 점수와 해당 점수를 받은 학생의 성이 반환됩니다.  
   
      [!code-csharp[csProgGuideCodingConventions#30](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#30)]  
   

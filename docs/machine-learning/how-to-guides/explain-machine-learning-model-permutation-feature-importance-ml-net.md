@@ -137,7 +137,7 @@ ImmutableArray<RegressionMetricsStatistics> permutationFeatureImportance =
         .PermutationFeatureImportance(sdcaModel, preprocessedTrainData, permutationCount:3);
 ```
 
-학습 데이터 세트에 [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions)를 사용한 결과는 [`ImmutableArray`](xref:System.Collections.Immutable.ImmutableArray) 개체의 [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics)입니다. [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics)는 [ 매개 변수에서 지정한 순열 수에 해당하는 여러 `RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics)`permutationCount` 관찰에 대해 평균, 표준 편차 같은 요약 통계를 제공합니다.
+학습 데이터 세트에 [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions)를 사용한 결과는 [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) 개체의 [`ImmutableArray`](xref:System.Collections.Immutable.ImmutableArray)입니다. [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics)는 [ 매개 변수에서 지정한 순열 수에 해당하는 여러 `RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics)`permutationCount` 관찰에 대해 평균, 표준 편차 같은 요약 통계를 제공합니다.
 
 중요도, 이 경우 [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions)에서 계산한 R 제곱 메트릭의 절대 평균 감소를 가장 중요함에서 가장 중요하지 않음의 순서로 지정할 수 있습니다.
 

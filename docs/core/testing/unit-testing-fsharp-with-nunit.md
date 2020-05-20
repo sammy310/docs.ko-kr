@@ -151,7 +151,7 @@ member this.TestEvenSequence() =
     Assert.That(actual, Is.EqualTo(expected))
 ```
 
-`expected` 시퀀스가 목록으로 변환되었습니다. NUnit 프레임워크는 많은 표준 .NET 형식을 사용합니다. 해당 종속성으로 인해 공용 인터페이스 및 예상 결과에서 <xref:System.Collections.ICollection> 대신 <xref:System.Collections.IEnumerable>을 지원합니다.
+`expected` 시퀀스가 목록으로 변환되었습니다. NUnit 프레임워크는 많은 표준 .NET 형식을 사용합니다. 해당 종속성으로 인해 공용 인터페이스 및 예상 결과에서 <xref:System.Collections.IEnumerable> 대신 <xref:System.Collections.ICollection>을 지원합니다.
 
 테스트를 실행하면 테스트가 실패합니다. 구현은 아직 만들지 않았습니다. MathService 프로젝트의 *Library.fs* 클래스에서 작동하는 가장 간단한 코드를 작성하여 이 테스트를 통과시킵니다.
 

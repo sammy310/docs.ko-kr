@@ -44,7 +44,7 @@ ms.locfileid: "75635615"
   
 1. 데이터 소스의 형식 인수에 따라 범위 변수의 형식이 결정됩니다.  
   
-2. `select` 문은 전체 `Name` 개체가 아니라 `Customer` 속성을 반환합니다. `Name`이 문자열이므로 `custNameQuery`의 형식 인수는 `string`가 아니라 `Customer`입니다.  
+2. `select` 문은 전체 `Customer` 개체가 아니라 `Name` 속성을 반환합니다. `Name`이 문자열이므로 `custNameQuery`의 형식 인수는 `Customer`가 아니라 `string`입니다.  
   
 3. `custNameQuery`가 문자열 시퀀스이므로 `foreach` 루프의 반복 변수도 `string`이어야 합니다.  
   

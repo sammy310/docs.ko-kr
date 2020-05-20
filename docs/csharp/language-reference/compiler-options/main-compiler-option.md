@@ -27,7 +27,7 @@ ms.locfileid: "69602730"
 ## <a name="arguments"></a>인수  
  `class`  
  **Main** 메서드를 포함하는 형식입니다.  
- 제공된 클래스 이름은 완전히 정규화되어야 하며, 클래스를 포함하는 전체 네임스페이스와 클래스 이름을 포함해야 합니다. 예를 들어 `Main` 메서드가 `Program` 네임스페이스의 `MyApplication.Core` 클래스 내에 있는 경우 컴파일러 옵션은 `-main:MyApplication.Core.Program`이어야 합니다.
+ 제공된 클래스 이름은 완전히 정규화되어야 하며, 클래스를 포함하는 전체 네임스페이스와 클래스 이름을 포함해야 합니다. 예를 들어 `Main` 메서드가 `MyApplication.Core` 네임스페이스의 `Program` 클래스 내에 있는 경우 컴파일러 옵션은 `-main:MyApplication.Core.Program`이어야 합니다.
   
 ## <a name="remarks"></a>설명  
  컴파일에 [Main](../../programming-guide/main-and-command-args/index.md) 메서드가 있는 형식이 둘 이상 포함된 경우 프로그램에 대한 진입점으로 사용할 **Main** 메서드를 포함하는 형식을 지정할 수 있습니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "69602730"
      프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면 <xref:VSLangProj80.ProjectProperties3.StartupObject%2A>를 참조하세요.  
   
 ## <a name="example"></a>예제  
- `t2.cs`Main`t3.cs` 메서드가 **에 있다고 지정하여**  및 `Test2`를 컴파일합니다.  
+ **Main** 메서드가 `Test2`에 있다고 지정하여 `t2.cs` 및 `t3.cs`를 컴파일합니다.  
   
 ```console  
 csc t2.cs t3.cs -main:Test2  

@@ -50,7 +50,7 @@ ASP.NET Core [암호 관리자](/aspnet/core/security/app-secrets#secret-manager
 
 애플리케이션에서 비밀 관리자를 통해 저장된 비밀을 사용하려면 ConfigurationBuilder 인스턴스에서 `AddUserSecrets<T>`를 호출하여 애플리케이션의 비밀을 해당 구성에 포함해야 합니다. 제네릭 매개 변수 T는 UserSecretId를 적용할 어셈블리의 형식이어야 합니다. 일반적으로 `AddUserSecrets<Startup>`을 사용해도 됩니다.
 
-`AddUserSecrets<Startup>()`Program.cs`CreateDefaultBuilder`의 *메서드를 사용하는 경우 개발 환경의 기본 옵션에*이 포함됩니다.
+*Program.cs*의 `CreateDefaultBuilder` 메서드를 사용하는 경우 개발 환경의 기본 옵션에 `AddUserSecrets<Startup>()`이 포함됩니다.
 
 >[!div class="step-by-step"]
 >[이전](authorization-net-microservices-web-applications.md)
