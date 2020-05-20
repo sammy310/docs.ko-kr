@@ -15,30 +15,30 @@ helpviewer_keywords:
 ms.assetid: c7f941cd-e25b-4b85-b1ce-5f77c9208fa9
 topic_type:
 - apiref
-ms.openlocfilehash: 2bc673d2e331cd32d5317cb20f9418eb3a3b144a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a76435be591d9f73d5975c5315f6e744f8972fc7
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431073"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614619"
 ---
-# <a name="isymunmanageddocumentgetchecksumalgorithmid-method"></a><span data-ttu-id="8a7a5-102">ISymUnmanagedDocument::GetCheckSumAlgorithmId 메서드</span><span class="sxs-lookup"><span data-stu-id="8a7a5-102">ISymUnmanagedDocument::GetCheckSumAlgorithmId Method</span></span>
-<span data-ttu-id="8a7a5-103">체크섬 알고리즘 식별자를 가져오거나, 체크섬이 없을 경우 모든 0의 GUID를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="8a7a5-103">Gets the checksum algorithm identifier, or returns a GUID of all zeros if there is no checksum.</span></span>  
+# <a name="isymunmanageddocumentgetchecksumalgorithmid-method"></a><span data-ttu-id="da8b7-102">ISymUnmanagedDocument::GetCheckSumAlgorithmId 메서드</span><span class="sxs-lookup"><span data-stu-id="da8b7-102">ISymUnmanagedDocument::GetCheckSumAlgorithmId Method</span></span>
+<span data-ttu-id="da8b7-103">체크섬 알고리즘 식별자를 가져오거나, 체크섬이 없을 경우 모든 0의 GUID를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="da8b7-103">Gets the checksum algorithm identifier, or returns a GUID of all zeros if there is no checksum.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8a7a5-104">구문</span><span class="sxs-lookup"><span data-stu-id="8a7a5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="da8b7-104">구문</span><span class="sxs-lookup"><span data-stu-id="da8b7-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCheckSumAlgorithmId(  
     [out, retval] GUID*  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8a7a5-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="8a7a5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="da8b7-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="da8b7-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="8a7a5-106">제한이 체크섬 알고리즘 식별자를 받는 변수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="8a7a5-106">[out] A pointer to a variable that receives the checksum algorithm identifier.</span></span>  
+ <span data-ttu-id="da8b7-106">제한이 체크섬 알고리즘 식별자를 받는 변수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="da8b7-106">[out] A pointer to a variable that receives the checksum algorithm identifier.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="8a7a5-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="8a7a5-107">Return Value</span></span>  
- <span data-ttu-id="8a7a5-108">메서드가 성공 하면 S_OK 합니다.</span><span class="sxs-lookup"><span data-stu-id="8a7a5-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="da8b7-107">Return Value</span><span class="sxs-lookup"><span data-stu-id="da8b7-107">Return Value</span></span>  
+ <span data-ttu-id="da8b7-108">메서드가 성공 하면 S_OK 합니다.</span><span class="sxs-lookup"><span data-stu-id="da8b7-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8a7a5-109">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8a7a5-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="da8b7-109">참고 항목</span><span class="sxs-lookup"><span data-stu-id="da8b7-109">See also</span></span>
 
-- [<span data-ttu-id="8a7a5-110">ISymUnmanagedDocument 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8a7a5-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="da8b7-110">ISymUnmanagedDocument 인터페이스</span><span class="sxs-lookup"><span data-stu-id="da8b7-110">ISymUnmanagedDocument Interface</span></span>](isymunmanageddocument-interface.md)
