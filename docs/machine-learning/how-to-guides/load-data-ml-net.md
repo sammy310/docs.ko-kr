@@ -57,8 +57,8 @@ public class HousingData
 
 다음과 같이 열을 로드합니다.
 
-- `Size` 클래스에서 `CurrentPrices` 및 `HousingData` 같은 개별 열
-- `HistoricalPrices` 클래스에서 `HousingData` 같이 벡터 형식으로 한 번에 여러 열
+- `HousingData` 클래스에서 `Size` 및 `CurrentPrices` 같은 개별 열
+- `HousingData` 클래스에서 `HistoricalPrices` 같이 벡터 형식으로 한 번에 여러 열
 
 벡터 속성이 있는 경우 [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) 특성을 데이터 모델의 속성에 적용합니다. 벡터의 모든 요소는 같은 반드시 형식이어야 합니다. 열을 분리된 상태로 유지하면 기능 엔지니어링을 쉽고 유연하게 사용할 수 있지만, 열 수가 매우 많은 경우 개별 열에 대해 작업하면 학습 속도에 영향을 줍니다.
 
