@@ -47,7 +47,7 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
 ```  
   
 ## <a name="remarks"></a>설명  
- 무명 형식은 [object](../../language-reference/keywords/class.md)에서 직접 파생되고 [object](../../language-reference/builtin-types/reference-types.md)를 제외한 어떠한 형식으로도 캐스팅될 수 없는 [class](../../language-reference/builtin-types/reference-types.md) 형식입니다. 컴파일러는 애플리케이션에서 해당 익명 형식에 액세스할 수 없더라도 각 익명 형식의 이름을 제공합니다. 공용 언어 런타임의 관점에서 익명 형식은 다른 참조 형식과 다를 바가 없습니다.  
+ 무명 형식은 [object](../../language-reference/builtin-types/reference-types.md)에서 직접 파생되고 [object](../../language-reference/builtin-types/reference-types.md)를 제외한 어떠한 형식으로도 캐스팅될 수 없는 [class](../../language-reference/keywords/class.md) 형식입니다. 컴파일러는 애플리케이션에서 해당 익명 형식에 액세스할 수 없더라도 각 익명 형식의 이름을 제공합니다. 공용 언어 런타임의 관점에서 익명 형식은 다른 참조 형식과 다를 바가 없습니다.  
   
  어셈블리에서 둘 이상의 익명 개체 이니셜라이저가 순서와 이름 및 형식이 동일한 속성의 시퀀스를 지정하는 경우 컴파일러는 개체를 동일한 형식의 인스턴스로 처리합니다. 이러한 개체는 컴파일러에서 생성된 동일한 형식 정보를 공유합니다.  
   

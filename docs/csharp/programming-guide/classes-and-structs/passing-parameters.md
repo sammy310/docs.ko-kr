@@ -30,7 +30,7 @@ C#에서는 인수를 값 또는 참조로 매개 변수에 전달할 수 있습
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
 
-자세한 내용은 [C# 언어 사양](~/_csharplang/spec/expressions.md#argument-lists)의 [인수 목록](/dotnet/csharp/language-reference/language-specification/introduction)을 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
+자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)의 [인수 목록](~/_csharplang/spec/expressions.md#argument-lists)을 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
   
 ## <a name="see-also"></a>참고 항목
 

@@ -71,7 +71,7 @@ public override string ToString()
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-람다 연산자에 대한 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/expressions.md#anonymous-function-expressions)의 [익명 함수 식](~/_csharplang/spec/introduction.md) 섹션을 참조하세요.
+람다 연산자에 대한 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [익명 함수 식](~/_csharplang/spec/expressions.md#anonymous-function-expressions) 섹션을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

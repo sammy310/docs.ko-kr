@@ -71,7 +71,7 @@ C# 8.0부터 null 병합 할당 연산자 `??=`를 사용하여 왼쪽 피연산
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](~/_csharplang/spec/expressions.md#assignment-operators)의 [대입 연산자](~/_csharplang/spec/introduction.md) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [대입 연산자](~/_csharplang/spec/expressions.md#assignment-operators) 섹션을 참조하세요.
 
 ref 대입 연산자 `= ref`에 대한 자세한 내용은 [기능 제안 노트](~/_csharplang/proposals/csharp-7.3/ref-local-reassignment.md)를 참조하세요.
 

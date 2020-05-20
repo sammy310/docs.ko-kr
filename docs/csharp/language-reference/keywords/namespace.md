@@ -53,7 +53,7 @@ C# 소스 파일에서 네임스페이스를 명시적으로 선언하는지 여
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](~/_csharplang/spec/namespaces.md)의 [네임스페이스](~/_csharplang/spec/introduction.md) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [네임스페이스](~/_csharplang/spec/namespaces.md) 섹션을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

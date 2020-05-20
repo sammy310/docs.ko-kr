@@ -33,7 +33,7 @@ ms.locfileid: "73458168"
 
 ### <a name="real-time-data-stream-processing"></a>실시간 데이터 스트림 처리
 
-스트리밍 또는 실시간 데이터는 이동 중인 데이터입니다. IoT 디바이스, 웹 로그, 클릭스트림의 원격 분석은 모두 데이터 스트리밍의 예입니다. 실시간 데이터를 처리하여 지리 공간적 분석, 원격 모니터링 및 변칙 검색과 같은 유용한 정보를 제공할 수 있습니다. 관계형 데이터와 마찬가지로 데이터를 출력 싱크로 이동하기 전에 스트리밍 데이터를 필터링, 집계 및 준비할 수 있습니다. Apache Spark는 [Spark Streaming](/azure/architecture/data-guide/big-data/real-time-processing)을 통해 [실시간 데이터 스트림 처리](https://spark.apache.org/streaming/)를 지원합니다.
+스트리밍 또는 실시간 데이터는 이동 중인 데이터입니다. IoT 디바이스, 웹 로그, 클릭스트림의 원격 분석은 모두 데이터 스트리밍의 예입니다. 실시간 데이터를 처리하여 지리 공간적 분석, 원격 모니터링 및 변칙 검색과 같은 유용한 정보를 제공할 수 있습니다. 관계형 데이터와 마찬가지로 데이터를 출력 싱크로 이동하기 전에 스트리밍 데이터를 필터링, 집계 및 준비할 수 있습니다. Apache Spark는 [Spark Streaming](https://spark.apache.org/streaming/)을 통해 [실시간 데이터 스트림 처리](/azure/architecture/data-guide/big-data/real-time-processing)를 지원합니다.
 
 ### <a name="batch-processing"></a>일괄 처리
 

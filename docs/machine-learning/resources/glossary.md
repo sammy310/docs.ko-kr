@@ -24,7 +24,7 @@ ms.locfileid: "79397766"
 
 ## <a name="binary-classification"></a>이진 분류
 
-[레이블](#classification)이 두 클래스 중 하나에만 해당하는 [분류](#label) 사례입니다. 자세한 내용은 [기계 학습 작업](tasks.md#binary-classification) 항목의 [이진 분류](tasks.md) 섹션을 참조하세요.
+[레이블](#label)이 두 클래스 중 하나에만 해당하는 [분류](#classification) 사례입니다. 자세한 내용은 [기계 학습 작업](tasks.md) 항목의 [이진 분류](tasks.md#binary-classification) 섹션을 참조하세요.
 
 ## <a name="calibration"></a>보정
 
@@ -104,7 +104,7 @@ ML.NET에서 카탈로그는 공통 목적에 따라 그룹화된 확장 함수�
 
 ## <a name="multiclass-classification"></a>다중 클래스 분류
 
-[레이블](#classification)이 세 개 이상의 클래스 중 하나인 [분류](#label) 사례입니다. 자세한 내용은 [다중 클래스 작업](tasks.md#multiclass-classification) 항목의 [이진 분류](tasks.md) 섹션을 참조하세요.
+[레이블](#label)이 세 개 이상의 클래스 중 하나인 [분류](#classification) 사례입니다. 자세한 내용은 [다중 클래스 작업](tasks.md) 항목의 [이진 분류](tasks.md#multiclass-classification) 섹션을 참조하세요.
 
 ## <a name="n-gram"></a>N-gram
 
@@ -139,7 +139,7 @@ ML.NET에서 카탈로그는 공통 목적에 따라 그룹화된 확장 함수�
 
 ## <a name="regression"></a>재발
 
-출력이 실제 값(예: double)인 [감독된 기계 학습](#supervised-machine-learning) 작업입니다. 예로는 재고 가격 예측이 있습니다. 자세한 내용은 [다중 클래스 작업](tasks.md#regression) 항목의 [회귀](tasks.md) 섹션을 참조하세요.
+출력이 실제 값(예: double)인 [감독된 기계 학습](#supervised-machine-learning) 작업입니다. 예로는 재고 가격 예측이 있습니다. 자세한 내용은 [다중 클래스 작업](tasks.md) 항목의 [회귀](tasks.md#regression) 섹션을 참조하세요.
 
 ## <a name="relative-absolute-error"></a>상대 절대 오차
 

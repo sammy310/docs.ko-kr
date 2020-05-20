@@ -48,7 +48,7 @@ ms.locfileid: "75711833"
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](~/_csharplang/spec/unsafe-code.md)의 [안전하지 않은 코드](~/_csharplang/spec/introduction.md) 토픽을 참조하세요.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [안전하지 않은 코드](~/_csharplang/spec/unsafe-code.md) 토픽을 참조하세요.
   
 ## <a name="see-also"></a>참고 항목
 

@@ -15,7 +15,7 @@ ms.locfileid: "69620045"
 
 * [Apache Spark용 .NET C# 및 F# 샘플](https://github.com/dotnet/spark#samples)에는 데이터 프레임과 SparkSQL, 구조적 스트리밍 및 TPC-H 쿼리를 비롯한 몇 가지 분석 시나리오를 다루는 샘플이 포함되어 있습니다.
 
-* **스택 오버플로**에서 [spark-dotnet](https://stackoverflow.com/questions/tagged/spark-dotnet) 태그를 사용하여 개발자 커뮤니티와 연결합니다.
+* [스택 오버플로](https://stackoverflow.com/questions/tagged/spark-dotnet)에서 **spark-dotnet** 태그를 사용하여 개발자 커뮤니티와 연결합니다.
 
 * 참여하는 데 관심이 있나요? [GitHub 리포지토리](https://github.com/dotnet/spark)를 방문하여 소스에서 빌드하는 방법을 알아보세요.
 

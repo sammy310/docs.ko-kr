@@ -40,7 +40,7 @@ ms.locfileid: "79173733"
 ## <a name="remarks"></a>설명  
  기본적으로 연결된 리소스는 C# 컴파일러로 생성될 때 어셈블리에서 public입니다. 리소스를 private로 만들려면 접근성 한정자로 `private`를 지정합니다. `public` 또는 `private` 이외의 다른 한정자는 허용되지 않습니다.  
   
- **-linkresource**에는 [-target:module](./target-compiler-option.md) 이외의 **-target** 옵션 중 하나가 필요합니다.  
+ **-linkresource**에는 **-target:module** 이외의 [-target](./target-compiler-option.md) 옵션 중 하나가 필요합니다.  
   
  예를 들어 `filename`이 [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md)나 개발 환경에서 만들어진 .NET Framework 리소스 파일인 경우에는 <xref:System.Resources> 네임스페이스의 멤버를 사용하여 해당 파일에 액세스할 수 있습니다. 자세한 내용은 <xref:System.Resources.ResourceManager?displayProperty=nameWithType>을 참조하세요. 다른 모든 리소스의 경우에는 런타임에 `GetManifestResource` 클래스의 <xref:System.Reflection.Assembly> 메서드를 사용하여 리소스에 액세스합니다.  
   

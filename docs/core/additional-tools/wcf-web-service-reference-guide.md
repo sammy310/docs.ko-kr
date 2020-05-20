@@ -84,7 +84,7 @@ ms.locfileid: "75715679"
 
 ## <a name="feedback--questions"></a>사용자 의견 및 질문
 
-질문이나 피드백이 있는 경우 [문제 보고](https://developercommunity.visualstudio.com/) 도구를 사용하여 [개발자 커뮤니티](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)에 보고하세요.
+질문이나 피드백이 있는 경우 [문제 보고](/visualstudio/ide/how-to-report-a-problem-with-visual-studio) 도구를 사용하여 [개발자 커뮤니티](https://developercommunity.visualstudio.com/)에 보고하세요.
 
 ## <a name="release-notes"></a>릴리스 정보
 
