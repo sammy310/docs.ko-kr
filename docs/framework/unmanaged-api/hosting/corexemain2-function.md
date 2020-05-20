@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72ea68b4-689f-4733-9416-9664b75e8892
 topic_type:
 - apiref
-ms.openlocfilehash: cc5324683daa9a02a6a89b2a3fb57ee9fd5dbe72
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8202fe4ec3ae6ef96440f203c5aea6db84744a72
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136957"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616584"
 ---
 # <a name="_corexemain2-function"></a>_CorExeMain2 함수
 지정 된 메모리 매핑된 코드에서 진입점을 실행 합니다. 이 함수는 운영 체제 로더에 의해 호출 됩니다.  
@@ -41,7 +41,7 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
  진행 메모리 매핑된 코드에 대 한 포인터입니다.  
   
  `cUnmappedPE`  
- 진행 `pUnmappedPE` 수 있는 요소 수입니다.  
+ 진행 포함할 수 있는 요소 수 `pUnmappedPE` 입니다.  
   
  `pImageNameIn`  
  진행 실행 가능 이미지의 이름에 대 한 포인터입니다.  
@@ -53,14 +53,14 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
  진행 명령줄 매개 변수 (있는 경우).  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
  **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [메타데이터 전역 정적 함수](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+- [메타데이터 전역 정적 함수](../metadata/metadata-global-static-functions.md)

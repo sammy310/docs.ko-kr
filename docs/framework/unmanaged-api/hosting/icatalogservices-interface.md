@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f0d7e49b-2394-4ae0-8820-1b64cae0cfe8
 topic_type:
 - apiref
-ms.openlocfilehash: da14d159b1933112e95a9a8973b2fad62f25288f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b3c5fc4731029561129609601b8e0635f6a9516c
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126863"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617037"
 ---
 # <a name="icatalogservices-interface"></a>ICatalogServices 인터페이스
 카탈로그 서비스에 대 한 메서드를 제공 합니다.  
@@ -30,9 +30,9 @@ ms.locfileid: "73126863"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[Autodone 메서드](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-autodone-method.md)|내부용으로 예약 되어 있습니다.|  
-|[NotAutodone 메서드](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-notautodone-method.md)|내부용으로 예약 되어 있습니다.|  
+|[Autodone 메서드](icatalogservices-autodone-method.md)|이 속성은 내부 전용으로 예약되어 있으므로|  
+|[NotAutodone 메서드](icatalogservices-notautodone-method.md)|이 속성은 내부 전용으로 예약되어 있으므로|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [호스팅 인터페이스](hosting-interfaces.md)

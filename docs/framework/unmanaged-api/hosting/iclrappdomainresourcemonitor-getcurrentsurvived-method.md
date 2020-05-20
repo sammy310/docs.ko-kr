@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 392e9009-40ef-40e3-ad4d-7ce93a989e78
 topic_type:
 - apiref
-ms.openlocfilehash: 62fcdb60b83c88738ebe2e39455b8eae60fb705e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a73c0731c79dea3a0c411fe27a864ec9ac4e20b2
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126775"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616023"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentsurvived-method"></a>ICLRAppDomainResourceMonitor::GetCurrentSurvived 메서드
 마지막 전체 차단 가비지 수집을 수행 하 고 현재 응용 프로그램 도메인에서 참조 하는 바이트 수를 가져옵니다.  
@@ -44,7 +44,7 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
  `pRuntimeBytesSurvived`  
  제한이 마지막 가비지 수집에서 남아 있는 총 바이트 수에 대 한 포인터입니다. 전체 컬렉션 후에이 수는 관리 되는 힙에서 보유 되는 바이트 수를 나타냅니다. 임시 수집 후에이 수는 임시 생성에 실시간으로 저장 되는 바이트 수를 나타냅니다. 이 매개 변수는 `null`일 수 있습니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
 |HRESULT|설명|  
@@ -52,23 +52,23 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
 |S_OK|메서드가 완료되었습니다.|  
 |COR_E_APPDOMAINUNLOADED|응용 프로그램 도메인이 언로드 되었거나 존재 하지 않습니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  통계는 전체 차단 가비지 수집 후에만 업데이트 됩니다. 즉, 컬렉션이 발생 하는 동안 응용 프로그램을 중지 하는 모든 세대를 포함 하는 컬렉션입니다. 예를 들어 <xref:System.GC.Collect?displayProperty=nameWithType> 메서드 오버 로드는 전체 차단 컬렉션을 수행 합니다. 동시 가비지 수집은 백그라운드에서 발생 하 고 응용 프로그램을 차단 하지 않습니다.  
   
- `GetCurrentSurvived` 메서드는 관리 되는 <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> 속성에 해당 하는 관리 되지 않는 항목입니다.  
+ `GetCurrentSurvived`메서드는 관리 되는 속성에 해당 하는 관리 되지 않는 속성입니다 <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> .  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** MetaHost  
   
  **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [ICLRAppDomainResourceMonitor 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
-- [애플리케이션 도메인 리소스 모니터링](../../../standard/garbage-collection/app-domain-resource-monitoring.md)
-- [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [호스팅](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRAppDomainResourceMonitor 인터페이스](iclrappdomainresourcemonitor-interface.md)
+- [응용 프로그램 도메인 리소스 모니터링](../../../standard/garbage-collection/app-domain-resource-monitoring.md)
+- [호스팅 인터페이스](hosting-interfaces.md)
+- [호스팅](index.md)

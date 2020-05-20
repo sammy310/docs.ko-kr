@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5de13327-96c6-4697-a89e-b8bf40717855
 topic_type:
 - apiref
-ms.openlocfilehash: c1d796c6ef5f707f865a60023899d3b451c2085b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c3011149b9b23e776ad3baac9e41f3c42213654d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131947"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616829"
 ---
 # <a name="clrcreateinstance-function"></a>CLRCreateInstance 함수
-[ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)또는 [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md)의 세 가지 인터페이스 중 하나를 제공 합니다.  
+[ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)또는 [ICLRDebugging](../debugging/iclrdebugging-interface.md)의 세 가지 인터페이스 중 하나를 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,21 +40,21 @@ HRESULT CLRCreateInstance(
  진행 CLSID_CLRMetaHost, CLSID_CLRMetaHostPolicy 또는 CLSID_CLRDebugging의 세 가지 클래스 식별자 중 하나입니다.  
   
  `riid`  
- 진행 IID_ICLRMetaHost, IID_ICLRMetaHostPolicy 또는 IID_ICLRDebugging의 세 가지 인터페이스 식별자 (Iid) 중 하나입니다.  
+ 진행 Iid (인터페이스 식별자): IID_ICLRMetaHost, IID_ICLRMetaHostPolicy 또는 IID_ICLRDebugging 중 하나입니다.  
   
  `ppInterface`  
- 제한이 [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)또는 [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md)의 세 가지 인터페이스 중 하나입니다.  
+ 제한이 [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)또는 [ICLRDebugging](../debugging/iclrdebugging-interface.md)의 세 가지 인터페이스 중 하나입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_POINTER|`ppInterface`가 null입니다.|  
+|E_POINTER|`ppInterface`가 null인 경우|  
   
-## <a name="remarks"></a>주의  
- 다음 표에서는 `clsid` 및 `riid`에 대해 지원 되는 조합을 보여 줍니다.  
+## <a name="remarks"></a>설명  
+ 다음 표에서는 및에 대해 지원 되는 조합을 보여 줍니다 `clsid` `riid` .  
   
 |`clsid`|`riid`|  
 |--------------|------------|  
@@ -62,7 +62,7 @@ HRESULT CLRCreateInstance(
 |CLSID_CLRMetaHostPolicy|IID_ICLRMetaHostPolicy|  
 |CLSID_CLRDebugging|IID_ICLRDebugging|  
   
- 다음 코드에서는 `CLRCreateInstance` 사용 하 여 세 가지 인터페이스를 모두 가져오는 방법을 보여 줍니다.  
+ 다음 코드에서는를 사용 하 여 `CLRCreateInstance` 세 가지 인터페이스를 모두 가져오는 방법을 보여 줍니다.  
   
 ```cpp  
 #include <metahost.h>  
@@ -81,14 +81,14 @@ hr = CLRCreateInstance (CLSID_CLRDebugging, IID_ICLRDebugging,
 ```  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** MetaHost  
   
  **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [호스팅](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [호스팅](index.md)

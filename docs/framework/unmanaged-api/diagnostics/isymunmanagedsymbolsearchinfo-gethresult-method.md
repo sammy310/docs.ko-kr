@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6999dc3d-65d7-4bf6-bb0a-6efc0fc72588
 topic_type:
 - apiref
-ms.openlocfilehash: 21f6cf18ee7d883e1792b597e08724946f53eda9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9dcd8282adf200932e86c950bee0b073780ce02d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446190"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615308"
 ---
 # <a name="isymunmanagedsymbolsearchinfogethresult-method"></a>ISymUnmanagedSymbolSearchInfo::GetHRESULT 메서드
 HRESULT를 가져옵니다.  
@@ -36,7 +36,7 @@ HRESULT GetHRESULT(
  `phr`  
  제한이 HRESULT에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
@@ -44,4 +44,4 @@ HRESULT GetHRESULT(
   
 ## <a name="see-also"></a>참고 항목
 
-- [ISymUnmanagedSymbolSearchInfo 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)
+- [ISymUnmanagedSymbolSearchInfo 인터페이스](isymunmanagedsymbolsearchinfo-interface.md)

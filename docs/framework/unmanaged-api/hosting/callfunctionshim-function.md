@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 37118465-ddf3-41f0-bf27-335b72777e63
 topic_type:
 - apiref
-ms.openlocfilehash: d39e15a2ba71ba0c0147482259f5618dcb5d298b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e8945d40a3761ec51a73a8ae90ddc1d84ccab651
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73192103"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616868"
 ---
 # <a name="callfunctionshim-function"></a>CallFunctionShim 함수
 지정 된 라이브러리에서 지정 된 이름 및 매개 변수를 가진 함수를 호출 합니다.  
@@ -59,14 +59,14 @@ HRESULT CallFunctionShim (
  진행 나중에 사용 하도록 예약 되어 있습니다. 이 매개 변수에서 0을 전달 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
  **라이브러리:** Mscoree.dll  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [사용되지 않는 CLR 호스팅 함수](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [사용되지 않는 CLR 호스팅 함수](deprecated-clr-hosting-functions.md)

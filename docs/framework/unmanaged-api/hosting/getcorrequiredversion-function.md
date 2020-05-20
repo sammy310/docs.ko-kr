@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1588fe7b-c378-4f4b-9c4b-48647f1119cc
 topic_type:
 - apiref
-ms.openlocfilehash: 661eb758e1651901bb56810640a68f0de0b4e851
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6b9fd62102056a8d5f859ac913f4786f04c1df7e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136472"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617245"
 ---
 # <a name="getcorrequiredversion-function"></a>GetCORRequiredVersion 함수
 필요한 CLR (공용 언어 런타임) 버전 번호를 가져옵니다.  
@@ -47,14 +47,14 @@ HRESULT GetCORRequiredVersion (
  제한이 버퍼에서 반환 된 바이트 수입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
  **라이브러리:** Mscoree.dll  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [사용되지 않는 CLR 호스팅 함수](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [사용되지 않는 CLR 호스팅 함수](deprecated-clr-hosting-functions.md)

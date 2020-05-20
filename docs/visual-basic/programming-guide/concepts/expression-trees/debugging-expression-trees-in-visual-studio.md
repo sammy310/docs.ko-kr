@@ -2,12 +2,12 @@
 title: Visual Studio에서 식 트리 디버그
 ms.date: 07/20/2015
 ms.assetid: 492cc28f-b7a2-4c47-b582-b3c437b8a5d5
-ms.openlocfilehash: 2c4b1fec389a8ee168b890339ce11af596581cbc
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 287f3096a1af8b9fa42d252c5240d7caefa6bac8
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378814"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616902"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a>Visual Studio에서 식 트리 디버깅 (Visual Basic)
 애플리케이션을 디버그할 때 식 트리의 구조 및 내용을 분석할 수 있습니다. 식 트리 구조에 대한 간략한 개요를 보려면 [특수 구문](debugview-syntax.md)을 사용하여 식 트리를 나타내는 `DebugView` 속성을 사용합니다. (`DebugView`는 디버그 모드에서만 사용할 수 있습니다.)  
@@ -24,9 +24,9 @@ ms.locfileid: "83378814"
 
   ![읽을 수 있는 식 시각화 도우미의 스크린샷](media/debugging-expression-trees-in-visual-studio/readable-expressions-visualizer.png)
 
-- [식 트리 시각화 도우미](https://github.com/zspitz/ExpressionToString#visual-studio-debugger-visualizer-for-expression-trees) ([MIT 라이선스](https://github.com/zspitz/ExpressionToString/blob/master/LICENSE))는 식 트리, 해당 속성 및 관련 개체에 대 한 그래픽 뷰를 제공 합니다. 및는 Visual Basic 코드를 사용 하 여 식 트리를 렌더링할 수 있습니다.
+- [식 트리 시각화 도우미](https://github.com/zspitz/ExpressionTreeVisualizer/blob/master/README.md) ([MIT 라이선스](https://github.com/zspitz/ExpressionTreeVisualizer/blob/master/LICENSE))는 식 트리 및 해당 개별 노드의 트리 뷰를 제공 합니다. 및는 Visual Basic 구문을 사용 하 여 식 트리를 렌더링할 수 있습니다.
 
-  ![ExpressionToString 시각화 도우미의 스크린샷](media/debugging-expression-trees-in-visual-studio/expression-to-string-visualizer-vb.png)
+  ![식 트리 시각화 도우미의 스크린샷](media/debugging-expression-trees-in-visual-studio/expression-tree-visualizer-vb.png)
 
 ### <a name="to-open-a-visualizer-for-an-expression-tree"></a>식 트리에 대한 시각화 도우미를 열려면  
   

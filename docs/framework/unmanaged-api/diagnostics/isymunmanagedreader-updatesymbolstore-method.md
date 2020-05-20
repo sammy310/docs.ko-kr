@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4a17d723-86b9-4f27-bd0d-b70c3259011c
 topic_type:
 - apiref
-ms.openlocfilehash: e052d9b7b2abd57b176dfe3b00afac626d422c58
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ccc787aa1c820a486d9a513055c9c9834b90bd1a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446464"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615438"
 ---
 # <a name="isymunmanagedreaderupdatesymbolstore-method"></a>ISymUnmanagedReader::UpdateSymbolStore 메서드
 기존 기호 저장소를 델타 기호 저장소로 업데이트합니다. 이 메서드는 편집 하며 계속 하기 시나리오에서 델타를 원래 PE (이식 가능한 실행) 파일에 일치 하도록 기호 저장소를 업데이트 하는 데 사용 됩니다.  
   
 > [!NOTE]
-> `filename` 또는 `pIStream` 매개 변수 중 하나만 지정 해야 합니다. `filename` 지정 하면 기호 저장소가 해당 파일의 기호로 업데이트 됩니다. `pIStream` 지정 된 경우 저장소는 <xref:System.Runtime.InteropServices.ComTypes.IStream>의 데이터로 업데이트 됩니다.  
+> 또는 매개 변수 중 하나만 지정 해야 `filename` `pIStream` 합니다. 을 `filename` 지정 하면 기호 저장소가 해당 파일의 기호를 사용 하 여 업데이트 됩니다. 을 `pIStream` 지정 하면 저장소는의 데이터로 업데이트 됩니다 <xref:System.Runtime.InteropServices.ComTypes.IStream> .  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,9 +41,9 @@ HRESULT UpdateSymbolStore (
  진행 기호 저장소를 포함 하는 파일의 이름입니다.  
   
  `pIStream`  
- 진행 `filename` 매개 변수의 대 안으로 사용 되는 파일 스트림입니다.  
+ 진행 매개 변수의 대 안으로 사용 되는 파일 스트림입니다 `filename` .  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
@@ -51,4 +51,4 @@ HRESULT UpdateSymbolStore (
   
 ## <a name="see-also"></a>참고 항목
 
-- [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader 인터페이스](isymunmanagedreader-interface.md)

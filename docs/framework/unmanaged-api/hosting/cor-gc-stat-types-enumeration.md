@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fc51d6db-f7f8-408b-b93d-c166fc712c99
 topic_type:
 - apiref
-ms.openlocfilehash: b0fbc462283ef1577de8100e60fd09caa53db539
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cca393ae34144787ab7800baec7c58209394f30e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131909"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616719"
 ---
 # <a name="cor_gc_stat_types-enumeration"></a>COR_GC_STAT_TYPES 열거형
 가비지 컬렉션에 대해 기록할 통계를 지정 합니다.  
@@ -33,8 +33,8 @@ typedef enum {
 } COR_GC_STAT_TYPES;  
 ```  
   
-## <a name="remarks"></a>주의  
- 이 열거형은 [ICLRGCManager:: GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) 메서드로 설정할 [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) 구조체의 통계를 지정 합니다.  
+## <a name="remarks"></a>설명  
+ 이 열거형은 [ICLRGCManager:: GetStats](iclrgcmanager-getstats-method.md) 메서드로 설정할 [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) 구조체의 통계를 지정 합니다.  
   
 ## <a name="members"></a>멤버  
   
@@ -44,13 +44,13 @@ typedef enum {
 |`COR_GC_MEMORYUSAGE`|메모리 사용 및 가비지 컬렉션 크기 통계를 기록 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** GCHost, GCHost  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [COR_GC_STATS 구조체](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
-- [호스팅 열거형](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [COR_GC_STATS 구조체](cor-gc-stats-structure.md)
+- [호스팅 열거형](hosting-enumerations.md)
