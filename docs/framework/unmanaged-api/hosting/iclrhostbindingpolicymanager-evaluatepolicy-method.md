@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3a3a9446-7a4e-4836-9b27-5c536c15993d
 topic_type:
 - apiref
-ms.openlocfilehash: 9600573a0a730cee10247d5644d587e75856cdd9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f72a66354bfc907dab7ebc24de515bdfb20ddfb2
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141182"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703592"
 ---
 # <a name="iclrhostbindingpolicymanagerevaluatepolicy-method"></a>ICLRHostBindingPolicyManager::EvaluatePolicy 메서드
 호스트를 대신 하 여 바인딩 정책을 평가 합니다.  
@@ -46,7 +46,7 @@ HRESULT EvaluatePolicy (
  진행 정책 데이터를 포함 하는 버퍼에 대 한 포인터입니다.  
   
  `cbAppPolicySize`  
- 진행 `pbApplicationPolicy` 버퍼의 크기입니다.  
+ 진행 버퍼의 크기 `pbApplicationPolicy` 입니다.  
   
  `pwzPostPolicyReferenceIdentity`  
  제한이 새 정책 데이터를 평가한 후의 어셈블리에 대 한 참조입니다.  
@@ -55,33 +55,33 @@ HRESULT EvaluatePolicy (
  [in, out] 새 정책 데이터를 평가한 후의 어셈블리 id 참조 버퍼 크기에 대 한 포인터입니다.  
   
  `pdwPoliciesApplied`  
- 제한이 적용 된 정책을 나타내는 [Ebindpolicylevels](../../../../docs/framework/unmanaged-api/hosting/ebindpolicylevels-enumeration.md) 값의 논리적 또는 조합에 대 한 포인터입니다.  
+ 제한이 적용 된 정책을 나타내는 [Ebindpolicylevels](ebindpolicylevels-enumeration.md) 값의 논리적 또는 조합에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|평가가 완료 되었습니다.|  
-|E_INVALIDARG|`pwzReferenceIdentity` 또는 `pbApplicationPolicy`은 (는) null 참조입니다.|  
-|ERROR_INSUFFICIENT_BUFFER|`cbAppPolicySize` 너무 작습니다.|  
+|E_INVALIDARG|`pwzReferenceIdentity`또는 `pbApplicationPolicy` 가 null 참조 인 경우|  
+|ERROR_INSUFFICIENT_BUFFER|`cbAppPolicySize`가 너무 작습니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR (공용 언어 런타임)이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자가 잠금을 소유 하지 않습니다.|  
 |HOST_E_ABANDONED|차단 된 스레드나 파이버에서 대기 하는 동안 이벤트를 취소 했습니다.|  
-|E_FAIL|알 수 없는 치명적인 오류가 발생 했습니다. 메서드가 E_FAIL을 반환한 후에는 프로세스 내에서 CLR을 더 이상 사용할 수 없습니다. 호스팅 메서드에 대 한 후속 호출은 HOST_E_CLRNOTAVAILABLE을 반환 합니다.|  
+|E_FAIL|알 수 없는 치명적인 오류가 발생 했습니다. 메서드가 E_FAIL 반환 된 후에는 프로세스 내에서 CLR을 더 이상 사용할 수 없습니다. 호스팅 메서드를 이후에 호출 하면 HOST_E_CLRNOTAVAILABLE 반환 됩니다.|  
   
-## <a name="remarks"></a>주의  
- `EvaluatePolicy` 메서드를 사용 하면 호스트 특정 어셈블리 버전 관리 요구 사항을 유지 하기 위해 호스트에서 바인딩 정책에 영향을 줄 수 있습니다. 정책 엔진 자체는 CLR 내에 유지 됩니다.  
+## <a name="remarks"></a>설명  
+ 메서드를 사용 하면 호스트 `EvaluatePolicy` 특정 어셈블리 버전 관리 요구 사항을 유지 하기 위해 호스트에서 바인딩 정책에 영향을 줄 수 있습니다. 정책 엔진 자체는 CLR 내에 유지 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
  **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [ICLRHostBindingPolicyManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)
+- [ICLRHostBindingPolicyManager 인터페이스](iclrhostbindingpolicymanager-interface.md)

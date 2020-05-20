@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 66eeca30-adb4-45f4-aff5-347564c95724
 topic_type:
 - apiref
-ms.openlocfilehash: 3c6def32c63e3557a4de72baf7b1c3e67feb4891
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 57f771d933e896677dfc0bd5d9dac58da2af22c8
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136523"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617258"
 ---
 # <a name="getclridentitymanager-function"></a>GetCLRIdentityManager 함수
 CLR (공용 언어 런타임)에서 id를 관리할 수 있도록 하는 인터페이스에 대 한 포인터를 가져옵니다.  
@@ -37,23 +37,23 @@ STDAPI GetCLRIdentityManager(
   
 ## <a name="parameters"></a>매개 변수  
  `riid`  
- 진행 가져올 인터페이스를 지정 하는 `REFIID` (인터페이스 식별자)입니다. 이 값은 IID_ICLRAssemblyIdentityManager 또는 IID_ICLRHostBindingPolicyManager 중 하나 여야 합니다.  
+ 진행 `REFIID`가져올 인터페이스를 지정 하는 (인터페이스 식별자)입니다. 이 값은 IID_ICLRAssemblyIdentityManager 또는 IID_ICLRHostBindingPolicyManager 이어야 합니다.  
   
  `ppManager`  
- 제한이 [ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md) 또는 [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) 개체의 주소에 대 한 포인터입니다.  
+ 제한이 [ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md) 또는 [ICLRHostBindingPolicyManager](iclrhostbindingpolicymanager-interface.md) 개체의 주소에 대 한 포인터입니다.  
   
-## <a name="remarks"></a>주의  
- [GetRealProcAddress](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md) 함수를 호출 하 여 `GetCLRIdentityManager` 함수에 대 한 포인터를 가져옵니다.  
+## <a name="remarks"></a>설명  
+ [GetRealProcAddress](getrealprocaddress-function.md) 함수를 호출 하 여 함수에 대 한 포인터를 가져옵니다 `GetCLRIdentityManager` .  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
  **라이브러리:** Mscorwks.dll  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [사용되지 않는 CLR 호스팅 함수](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [사용되지 않는 CLR 호스팅 함수](deprecated-clr-hosting-functions.md)

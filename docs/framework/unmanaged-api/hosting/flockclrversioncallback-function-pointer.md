@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 98a4762d-9ad2-45bd-9d03-39064a028b44
 topic_type:
 - apiref
-ms.openlocfilehash: f1ad414c30788801e14a33e98a0893e2a0f58d0c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: af42de820b2d835e8ea137a2643a51678e382ff0
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136511"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617284"
 ---
 # <a name="flockclrversioncallback-function-pointer"></a>FLockClrVersionCallback 함수 포인터
 초기화가 시작 되거나 완료 되었음을 나타내기 위해 CLR (공용 언어 런타임)에서 호출 하는 함수를 가리킵니다.  
@@ -32,19 +32,19 @@ ms.locfileid: "73136511"
 typedef HRESULT (__stdcall *FLockClrVersionCallback) ( );  
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  이 함수는 호스트에 의해 구현 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
  **라이브러리:** Mscorwks.dll  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [LockClrVersion 함수](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)
-- [사용되지 않는 CLR 호스팅 함수](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [LockClrVersion 함수](lockclrversion-function.md)
+- [사용되지 않는 CLR 호스팅 함수](deprecated-clr-hosting-functions.md)
