@@ -15,12 +15,12 @@
       href: microservices/
     - name: '서버리스 앱: 아키텍처, 패턴 및 Azure 구현'
       href: serverless/
+    - name: Azure용 클라우드 네이티브 .NET 앱 설계
+      href: cloud-native/
     - name: .NET Core 3.1을 사용하여 Windows 10의 데스크톱 앱 현대화
       href: modernize-desktop/
 - name: eBook 미리 보기
   expanded: true
   items:
-    - name: Azure용 클라우드 네이티브 .NET 앱 설계
-      href: cloud-native/
     - name: ASP.NET Web Forms용 Blazor 개발자
       href: blazor-for-web-forms-developers/

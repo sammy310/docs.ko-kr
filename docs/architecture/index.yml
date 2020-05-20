@@ -6,12 +6,12 @@ metadata:
   description: .NET 앱을 설계, 빌드 및 마이그레이션하는 권장 방법을 알아보세요.
   ms.topic: landing-page
   ms.date: 03/19/2020
-  ms.openlocfilehash: dc358f45532625bd5474b01af630674a170baf0b
-  ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+  ms.openlocfilehash: ff3b842d33ea3fd5d9cbed5b39b2757933c1a616
+  ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/15/2020
-  ms.locfileid: "83418981"
+  ms.lasthandoff: 05/19/2020
+  ms.locfileid: "83613644"
 landingContent:
 - title: ASP.NET Core 앱 개발
   linkLists:
@@ -27,7 +27,7 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
-    - text: Azure용 클라우드 네이티브 .NET 앱 설계(미리 보기)
+    - text: Azure용 클라우드 네이티브 .NET 앱 설계
       url: cloud-native/index.md
     - text: '서버리스 앱: 아키텍처, 패턴 및 Azure 구현'
       url: serverless/index.md
