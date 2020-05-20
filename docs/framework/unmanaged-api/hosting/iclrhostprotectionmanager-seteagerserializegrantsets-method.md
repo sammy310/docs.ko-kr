@@ -15,43 +15,43 @@ helpviewer_keywords:
 ms.assetid: d6158360-22b1-4ace-ad85-d830b9964783
 topic_type:
 - apiref
-ms.openlocfilehash: be59acea8eadb0da9e3cd26cf17eb9e1617c3575
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e911a8e73020321511da5bd7f3ade677058048e4
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141071"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703830"
 ---
-# <a name="iclrhostprotectionmanagerseteagerserializegrantsets-method"></a><span data-ttu-id="a1739-102">ICLRHostProtectionManager::SetEagerSerializeGrantSets 메서드</span><span class="sxs-lookup"><span data-stu-id="a1739-102">ICLRHostProtectionManager::SetEagerSerializeGrantSets Method</span></span>
-<span data-ttu-id="a1739-103">이 메서드는 .NET Framework 인프라를 지원 하며 사용자 코드에서 직접 사용 하기 위한 것이 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="a1739-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="iclrhostprotectionmanagerseteagerserializegrantsets-method"></a><span data-ttu-id="ac583-102">ICLRHostProtectionManager::SetEagerSerializeGrantSets 메서드</span><span class="sxs-lookup"><span data-stu-id="ac583-102">ICLRHostProtectionManager::SetEagerSerializeGrantSets Method</span></span>
+<span data-ttu-id="ac583-103">이 메서드는 .NET Framework 인프라를 지원하며 코드에서 직접 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="ac583-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a1739-104">구문</span><span class="sxs-lookup"><span data-stu-id="a1739-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ac583-104">구문</span><span class="sxs-lookup"><span data-stu-id="ac583-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetEagerSerializeGrantSets ();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="a1739-105">반환 값</span><span class="sxs-lookup"><span data-stu-id="a1739-105">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ac583-105">Return Value</span><span class="sxs-lookup"><span data-stu-id="ac583-105">Return Value</span></span>  
   
-|<span data-ttu-id="a1739-106">HRESULT</span><span class="sxs-lookup"><span data-stu-id="a1739-106">HRESULT</span></span>|<span data-ttu-id="a1739-107">설명</span><span class="sxs-lookup"><span data-stu-id="a1739-107">Description</span></span>|  
+|<span data-ttu-id="ac583-106">HRESULT</span><span class="sxs-lookup"><span data-stu-id="ac583-106">HRESULT</span></span>|<span data-ttu-id="ac583-107">설명</span><span class="sxs-lookup"><span data-stu-id="ac583-107">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="a1739-108">S_OK</span><span class="sxs-lookup"><span data-stu-id="a1739-108">S_OK</span></span>|<span data-ttu-id="a1739-109">`SetEagerSerializeGrantSets` 성공적으로 반환 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="a1739-109">`SetEagerSerializeGrantSets` returned successfully.</span></span>|  
-|<span data-ttu-id="a1739-110">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="a1739-110">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="a1739-111">CLR이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a1739-111">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="a1739-112">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="a1739-112">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="a1739-113">호출 시간이 초과 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="a1739-113">The call timed out.</span></span>|  
-|<span data-ttu-id="a1739-114">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="a1739-114">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="a1739-115">호출자가 잠금을 소유 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="a1739-115">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="a1739-116">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="a1739-116">HOST_E_ABANDONED</span></span>|<span data-ttu-id="a1739-117">차단 된 스레드나 파이버에서 대기 하는 동안 이벤트를 취소 했습니다.</span><span class="sxs-lookup"><span data-stu-id="a1739-117">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="a1739-118">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="a1739-118">E_FAIL</span></span>|<span data-ttu-id="a1739-119">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="a1739-119">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="a1739-120">메서드가 E_FAIL을 반환한 후에는 프로세스 내에서 CLR을 더 이상 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="a1739-120">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="a1739-121">호스팅 메서드에 대 한 후속 호출은 HOST_E_CLRNOTAVAILABLE을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="a1739-121">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="ac583-108">S_OK</span><span class="sxs-lookup"><span data-stu-id="ac583-108">S_OK</span></span>|<span data-ttu-id="ac583-109">`SetEagerSerializeGrantSets`성공적으로 반환 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="ac583-109">`SetEagerSerializeGrantSets` returned successfully.</span></span>|  
+|<span data-ttu-id="ac583-110">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="ac583-110">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="ac583-111">CLR이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ac583-111">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="ac583-112">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="ac583-112">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="ac583-113">호출 시간이 초과 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="ac583-113">The call timed out.</span></span>|  
+|<span data-ttu-id="ac583-114">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="ac583-114">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="ac583-115">호출자가 잠금을 소유 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ac583-115">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="ac583-116">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="ac583-116">HOST_E_ABANDONED</span></span>|<span data-ttu-id="ac583-117">차단 된 스레드나 파이버에서 대기 하는 동안 이벤트를 취소 했습니다.</span><span class="sxs-lookup"><span data-stu-id="ac583-117">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="ac583-118">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="ac583-118">E_FAIL</span></span>|<span data-ttu-id="ac583-119">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="ac583-119">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="ac583-120">메서드가 E_FAIL 반환 된 후에는 프로세스 내에서 CLR을 더 이상 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="ac583-120">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="ac583-121">호스팅 메서드를 이후에 호출 하면 HOST_E_CLRNOTAVAILABLE 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="ac583-121">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="a1739-122">요구 사항</span><span class="sxs-lookup"><span data-stu-id="a1739-122">Requirements</span></span>  
- <span data-ttu-id="a1739-123">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="a1739-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ac583-122">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ac583-122">Requirements</span></span>  
+ <span data-ttu-id="ac583-123">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ac583-123">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a1739-124">**헤더:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="a1739-124">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="ac583-124">**헤더:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="ac583-124">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="a1739-125">**라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a1739-125">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="ac583-125">**라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="ac583-125">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="a1739-126">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a1739-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ac583-126">**.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ac583-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a1739-127">참조</span><span class="sxs-lookup"><span data-stu-id="a1739-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ac583-127">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ac583-127">See also</span></span>
 
-- [<span data-ttu-id="a1739-128">ICLRControl 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a1739-128">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [<span data-ttu-id="a1739-129">ICLRHostProtectionManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a1739-129">ICLRHostProtectionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)
+- [<span data-ttu-id="ac583-128">ICLRControl 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ac583-128">ICLRControl Interface</span></span>](iclrcontrol-interface.md)
+- [<span data-ttu-id="ac583-129">ICLRHostProtectionManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ac583-129">ICLRHostProtectionManager Interface</span></span>](iclrhostprotectionmanager-interface.md)

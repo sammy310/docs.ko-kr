@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9929817e-acc9-40b7-960c-598664e04b60
 topic_type:
 - apiref
-ms.openlocfilehash: 90474a61b16d65565889bd69ef75616804d8bc60
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b9a51a85bd17e527d4c04b69ca65100a7069607f
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140889"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703719"
 ---
-# <a name="iclrmetahostquerylegacyv2runtimebinding-method"></a><span data-ttu-id="eacc2-102">ICLRMetaHost::QueryLegacyV2RuntimeBinding 메서드</span><span class="sxs-lookup"><span data-stu-id="eacc2-102">ICLRMetaHost::QueryLegacyV2RuntimeBinding Method</span></span>
-<span data-ttu-id="eacc2-103">레거시 정품 인증 Api를 직접 사용 하 여 [\<시작 > 요소](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) 구성 파일 항목에 `useLegacyV2RuntimeActivationPolicy` 특성을 사용 하는 등의 방법으로 레거시 활성화 정책이 바인딩된 런타임을 나타내는 인터페이스를 반환 합니다. [ICLRRuntimeInfo:: BindAsLegacyV2Runtime](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-bindaslegacyv2runtime-method.md) 메서드를 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="eacc2-103">Returns an interface that represents a runtime to which legacy activation policy has been bound, for example, by using the `useLegacyV2RuntimeActivationPolicy` attribute on the [\<startup> element](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) configuration file entry, by direct use of the legacy activation APIs, or by calling the [ICLRRuntimeInfo::BindAsLegacyV2Runtime](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-bindaslegacyv2runtime-method.md) method.</span></span>  
+# <a name="iclrmetahostquerylegacyv2runtimebinding-method"></a><span data-ttu-id="47052-102">ICLRMetaHost::QueryLegacyV2RuntimeBinding 메서드</span><span class="sxs-lookup"><span data-stu-id="47052-102">ICLRMetaHost::QueryLegacyV2RuntimeBinding Method</span></span>
+<span data-ttu-id="47052-103">레거시 활성화 정책이 바인딩된 런타임을 나타내는 인터페이스를 반환 합니다. 예를 들어, `useLegacyV2RuntimeActivationPolicy` 레거시 활성화 api를 직접 사용 하거나 [ICLRRuntimeInfo:: BindAsLegacyV2Runtime](iclrruntimeinfo-bindaslegacyv2runtime-method.md) 메서드를 호출 하 여 [ \< 시작> 요소](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) 구성 파일 항목에서 특성을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="47052-103">Returns an interface that represents a runtime to which legacy activation policy has been bound, for example, by using the `useLegacyV2RuntimeActivationPolicy` attribute on the [\<startup> element](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) configuration file entry, by direct use of the legacy activation APIs, or by calling the [ICLRRuntimeInfo::BindAsLegacyV2Runtime](iclrruntimeinfo-bindaslegacyv2runtime-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="eacc2-104">구문</span><span class="sxs-lookup"><span data-stu-id="eacc2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="47052-104">구문</span><span class="sxs-lookup"><span data-stu-id="47052-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT QueryLegacyV2RuntimeBinding (  
@@ -33,34 +33,34 @@ HRESULT QueryLegacyV2RuntimeBinding (
     [out, iid_is(riid), retval] LPVOID *ppUnk);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="eacc2-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="eacc2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="47052-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="47052-105">Parameters</span></span>  
  `riid`  
- <span data-ttu-id="eacc2-106">진행 필수입니다. 현재이 매개 변수에 유효한 값은 `IID_ICLRRuntimeInfo`입니다.</span><span class="sxs-lookup"><span data-stu-id="eacc2-106">[in] Required.Currently the only valid value for this parameter is `IID_ICLRRuntimeInfo`.</span></span>  
+ <span data-ttu-id="47052-106">진행 필수입니다. 현재이 매개 변수에 유효한 값은 뿐 `IID_ICLRRuntimeInfo` 입니다.</span><span class="sxs-lookup"><span data-stu-id="47052-106">[in] Required.Currently the only valid value for this parameter is `IID_ICLRRuntimeInfo`.</span></span>  
   
  `ppUnk`  
- <span data-ttu-id="eacc2-107">[out] 필수입니다.</span><span class="sxs-lookup"><span data-stu-id="eacc2-107">[out] Required.</span></span> <span data-ttu-id="eacc2-108">이 메서드는 반환 될 때 레거시 활성화 정책에 바인딩된 런타임을 나타내는 [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) 인터페이스에 대 한 포인터를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="eacc2-108">When this method returns, contains a pointer to the [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface that represents a runtime that has been bound to legacy activation policy.</span></span>  
+ <span data-ttu-id="47052-107">[out] 필수입니다.</span><span class="sxs-lookup"><span data-stu-id="47052-107">[out] Required.</span></span> <span data-ttu-id="47052-108">이 메서드는 반환 될 때 레거시 활성화 정책에 바인딩된 런타임을 나타내는 [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) 인터페이스에 대 한 포인터를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="47052-108">When this method returns, contains a pointer to the [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) interface that represents a runtime that has been bound to legacy activation policy.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="eacc2-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="eacc2-109">Return Value</span></span>  
- <span data-ttu-id="eacc2-110">이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="eacc2-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="47052-109">Return Value</span><span class="sxs-lookup"><span data-stu-id="47052-109">Return Value</span></span>  
+ <span data-ttu-id="47052-110">이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="47052-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="eacc2-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="eacc2-111">HRESULT</span></span>|<span data-ttu-id="eacc2-112">설명</span><span class="sxs-lookup"><span data-stu-id="eacc2-112">Description</span></span>|  
+|<span data-ttu-id="47052-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="47052-111">HRESULT</span></span>|<span data-ttu-id="47052-112">설명</span><span class="sxs-lookup"><span data-stu-id="47052-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="eacc2-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="eacc2-113">S_OK</span></span>|<span data-ttu-id="eacc2-114">메서드가 성공적으로 완료되고 레거시 활성화 정책에 바인딩된 런타임을 반환했습니다.</span><span class="sxs-lookup"><span data-stu-id="eacc2-114">The method completed successfully and returned a runtime that was bound to legacy activation policy.</span></span>|  
-|<span data-ttu-id="eacc2-115">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="eacc2-115">S_FALSE</span></span>|<span data-ttu-id="eacc2-116">메서드가 성공적으로 완료되지만 레거시 런타임이 아직 바인딩되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="eacc2-116">The method completed successfully, but a legacy runtime has not yet been bound.</span></span>|  
-|<span data-ttu-id="eacc2-117">E_NOINTERFACE</span><span class="sxs-lookup"><span data-stu-id="eacc2-117">E_NOINTERFACE</span></span>|<span data-ttu-id="eacc2-118">메서드가 레거시 활성화 정책에 바인딩된 런타임을 찾았지만 `riid`는 해당 런타임에서 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="eacc2-118">The method found a runtime that was bound to legacy activation policy, but `riid` is not supported by that runtime.</span></span>|  
+|<span data-ttu-id="47052-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="47052-113">S_OK</span></span>|<span data-ttu-id="47052-114">메서드가 성공적으로 완료되고 레거시 활성화 정책에 바인딩된 런타임을 반환했습니다.</span><span class="sxs-lookup"><span data-stu-id="47052-114">The method completed successfully and returned a runtime that was bound to legacy activation policy.</span></span>|  
+|<span data-ttu-id="47052-115">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="47052-115">S_FALSE</span></span>|<span data-ttu-id="47052-116">메서드가 성공적으로 완료되지만 레거시 런타임이 아직 바인딩되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="47052-116">The method completed successfully, but a legacy runtime has not yet been bound.</span></span>|  
+|<span data-ttu-id="47052-117">E_NOINTERFACE</span><span class="sxs-lookup"><span data-stu-id="47052-117">E_NOINTERFACE</span></span>|<span data-ttu-id="47052-118">메서드가 레거시 활성화 정책에 바인딩된 런타임을 찾았지만 `riid`는 해당 런타임에서 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="47052-118">The method found a runtime that was bound to legacy activation policy, but `riid` is not supported by that runtime.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="eacc2-119">주의</span><span class="sxs-lookup"><span data-stu-id="eacc2-119">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="47052-119">설명</span><span class="sxs-lookup"><span data-stu-id="47052-119">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="eacc2-120">요구 사항</span><span class="sxs-lookup"><span data-stu-id="eacc2-120">Requirements</span></span>  
- <span data-ttu-id="eacc2-121">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="eacc2-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="47052-120">요구 사항</span><span class="sxs-lookup"><span data-stu-id="47052-120">Requirements</span></span>  
+ <span data-ttu-id="47052-121">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="47052-121">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="eacc2-122">**헤더:** MetaHost</span><span class="sxs-lookup"><span data-stu-id="eacc2-122">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="47052-122">**헤더:** MetaHost</span><span class="sxs-lookup"><span data-stu-id="47052-122">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="eacc2-123">**라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="eacc2-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="47052-123">**라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="47052-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="eacc2-124">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eacc2-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="47052-124">**.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="47052-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eacc2-125">참조</span><span class="sxs-lookup"><span data-stu-id="eacc2-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="47052-125">참고 항목</span><span class="sxs-lookup"><span data-stu-id="47052-125">See also</span></span>
 
-- [<span data-ttu-id="eacc2-126">ICLRMetaHost 인터페이스</span><span class="sxs-lookup"><span data-stu-id="eacc2-126">ICLRMetaHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
-- [<span data-ttu-id="eacc2-127">호스팅</span><span class="sxs-lookup"><span data-stu-id="eacc2-127">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="47052-126">ICLRMetaHost 인터페이스</span><span class="sxs-lookup"><span data-stu-id="47052-126">ICLRMetaHost Interface</span></span>](iclrmetahost-interface.md)
+- [<span data-ttu-id="47052-127">호스팅</span><span class="sxs-lookup"><span data-stu-id="47052-127">Hosting</span></span>](index.md)
