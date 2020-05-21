@@ -11,18 +11,18 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 2fec7b5c36173bf4a99b35cc2bf9e3ca26354a11
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1e0141ceafe4c3450b3f798463ddc62ea79f1b36
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397637"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615217"
 ---
 # <a name="types-c-programming-guide"></a>형식(C# 프로그래밍 가이드)
 
 ## <a name="types-variables-and-values"></a>형식, 변수 및 값
 
-C#은 강력한 형식의 언어입니다. 모든 변수 및 상수에는 값으로 계산되는 모든 식을 실행하는 형식이 있습니다. 모든 메서드 시그니처는 각 입력 매개 변수 및 반환 값의 형식을 지정합니다. .NET 클래스 라이브러리는 기본 제공 숫자 형식 집합 및 파일 시스템, 네트워크 연결, 컬렉션, 개체 배열, 날짜 등의 다양한 논리 구문을 나타내는 더 복잡한 형식을 정의합니다. 일반 C# 프로그램에서는 클래스 라이브러리의 형식 및 프로그램의 문제 도메인에 관련된 개념을 모델링하는 사용자 정의 형식을 사용합니다.
+C#은 강력한 형식의 언어입니다. 모든 변수 및 상수에는 값으로 계산되는 모든 식을 실행하는 형식이 있습니다. 모든 메서드 선언은 각 입력 매개 변수와 반환 값에 대해 이름, 매개 변수 수, 형식 및 종류(값, 참조 또는 출력)를 지정합니다. .NET 클래스 라이브러리는 기본 제공 숫자 형식 집합 및 파일 시스템, 네트워크 연결, 컬렉션, 개체 배열, 날짜 등의 다양한 논리 구문을 나타내는 더 복잡한 형식을 정의합니다. 일반 C# 프로그램에서는 클래스 라이브러리의 형식 및 프로그램의 문제 도메인에 관련된 개념을 모델링하는 사용자 정의 형식을 사용합니다.
 
 형식에 저장된 정보에는 다음이 포함될 수 있습니다.
 
@@ -53,7 +53,7 @@ C#은 강력한 형식의 언어입니다. 모든 변수 및 상수에는 값으
 
 [!code-csharp[csProgGuideTypes#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#36)]
 
-메서드 매개 변수 및 반환 값의 형식은 메서드 시그니처에서 지정됩니다. 다음 시그니처는 입력 인수로 [int](../../language-reference/builtin-types/integral-numeric-types.md)가 필요하고 문자열을 반환하는 메서드를 보여 줍니다.
+메서드 매개 변수 및 반환 값의 형식은 메서드 선언에서 지정됩니다. 다음 시그니처는 입력 인수로 [int](../../language-reference/builtin-types/integral-numeric-types.md)가 필요하고 문자열을 반환하는 메서드를 보여 줍니다.
 
 [!code-csharp[csProgGuideTypes#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#35)]
 

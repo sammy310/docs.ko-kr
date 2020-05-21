@@ -2,19 +2,19 @@
 title: Azure용 클라우드 네이티브 .NET 애플리케이션 설계
 description: Azure의 컨테이너, 마이크로 서비스 및 서버리스 기능을 활용하여 클라우드 네이티브 애플리케이션을 빌드하는 방법을 보여 주는 가이드입니다.
 author: ardalis
-ms.date: 04/23/2020
-ms.openlocfilehash: 24d5c75fc5d2e5623892e8f83daea52553d13765
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.date: 05/13/2020
+ms.openlocfilehash: 1607c1bbcc9bbb3c9fe19840a2827aa5ea083728
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507392"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614003"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Azure용 클라우드 네이티브 .NET 애플리케이션 설계
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
 ![표지 이미지](./media/cover.png)
+
+**버전 1.0**
 
 게시자:
 
@@ -26,7 +26,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright &copy; 2019 by Microsoft Corporation
+Copyright &copy; 2020 by Microsoft Corporation
 
 All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 서면 허가 없이는 어떠한 형식이나 방법으로도 복제하거나 전송할 수 없습니다.
 
@@ -58,11 +58,13 @@ Docker 고래 로고는 Docker, Inc.의 등록 상표로, 허가하에 사용됩
 >
 > **Cecil Phillip**, 선임 Cloud Advocate, Microsoft
 
-eShopOnContainers에 대한 자세한 정보
-
 편집자:
 
 > **Maira Wenzel**, 프로그램 관리자, .NET 팀, Microsoft
+
+## <a name="version"></a>버전
+
+이 가이드는 .NET Core 3.1 릴리스와 동시에 **.NET Core 3.1** 버전을 다루도록 작성되었으며, 동일한 기술 “웨이브”(즉 Azure 및 추가 타사 기술)와 관련된 여러 추가 업데이트를 포함합니다.
 
 ## <a name="who-should-use-this-guide"></a>이 가이드의 대상 사용자
 
@@ -83,6 +85,10 @@ eShopOnContainers에 대한 자세한 정보
 - DevOps
 
 이 가이드는 PDF 양식과 온라인에서 모두 사용할 수 있습니다. 이러한 항목에 관한 일반적인 이해를 돕기 위해 이 문서 또는 온라인 버전 링크를 팀에 전달하세요. 이러한 항목은 대부분은 기본 원칙 및 패턴에 대한 일관된 이해를 도와주고 항목 관련 결정에 포함되는 장단점을 설명합니다. 이 문서의 목표는 팀 및 리더에게 애플리케이션의 아키텍처, 개발 및 호스팅과 관련하여 올바른 결정을 내리는 데 필요한 정보를 제공하는 것입니다.
+
+## <a name="send-your-feedback"></a>피드백 보내기
+
+이 책과 관련 샘플은 지속적으로 진화합니다. 여러분의 피드백을 기다리고 있습니다! 이 책을 향상시킬 수 있는 방법에 대한 의견이 있으면 [GitHub 문제](https://github.com/dotnet/docs/issues)에 빌드된 페이지의 맨 아래에서 피드백 섹션을 사용하세요.
 
 >[!div class="step-by-step"]
 >[다음](introduction.md)
