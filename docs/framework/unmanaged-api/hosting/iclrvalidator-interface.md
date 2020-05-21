@@ -14,34 +14,34 @@ helpviewer_keywords:
 ms.assetid: 2edd0a10-77fb-4173-91eb-f2970cc364d0
 topic_type:
 - apiref
-ms.openlocfilehash: 483d647028d1a05ea20ab836730099afe3e09374
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e071f9cba7e991c59bf697647e0e4badea57573a
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127842"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762047"
 ---
 # <a name="iclrvalidator-interface"></a>ICLRValidator 인터페이스
 PE (이식 가능한 실행) 이미지를 확인 하 고 유효성 검사 오류를 보고 하는 메서드를 제공 합니다.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|설명|  
+|메서드|Description|  
 |------------|-----------------|  
-|[FormatEventInfo 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-formateventinfo-method.md)|지정 된 유효성 검사 오류에 대 한 자세한 메시지를 가져옵니다.|  
-|[Validate 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)|지정 된 파일에서 이식 가능한 실행 파일이 나 MSIL (Microsoft 중간 언어)의 유효성을 검사 합니다.|  
+|[FormatEventInfo 메서드](iclrvalidator-formateventinfo-method.md)|지정 된 유효성 검사 오류에 대 한 자세한 메시지를 가져옵니다.|  
+|[Validate 메서드](iclrvalidator-validate-method.md)|지정 된 파일에서 이식 가능한 실행 파일이 나 MSIL (Microsoft 중간 언어)의 유효성을 검사 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** IValidator, IValidator. h  
   
  **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참조
 
-- [ICLRErrorReportingManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
-- [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [CLRRuntimeHost Coclass](../../../../docs/framework/unmanaged-api/hosting/clrruntimehost-coclass.md)
+- [ICLRErrorReportingManager 인터페이스](iclrerrorreportingmanager-interface.md)
+- [호스팅 인터페이스](hosting-interfaces.md)
+- [CLRRuntimeHost Coclass](clrruntimehost-coclass.md)

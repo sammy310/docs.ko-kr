@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c66f3ac5-6489-484a-9bed-c31b711cee01
 topic_type:
 - apiref
-ms.openlocfilehash: c450d83669a3bc548c15ed5800dc73438b9a84a6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ccad76e1c8a49222d4f527f8b7b18d4e40ff8cae
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127690"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83760409"
 ---
 # <a name="icorruntimehoststart-method"></a>ICorRuntimeHost::Start 메서드
 CLR (공용 언어 런타임)을 시작 합니다.  
@@ -31,20 +31,20 @@ CLR (공용 언어 런타임)을 시작 합니다.
 HRESULT Start ();  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
-|HRESULT|설명|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|S_OK|작업에 성공 했습니다.|  
+|S_OK|작업이 완료되었습니다.|  
 |S_FALSE|작업을 완료 하지 못했습니다.|  
-|E_FAIL|알 수 없는 치명적인 오류가 발생 했습니다. 메서드가 E_FAIL을 반환 하는 경우 해당 프로세스에서 더 이상 CLR을 사용할 수 없습니다. 모든 호스팅 Api에 대 한 후속 호출은 HOST_E_CLRNOTAVAILABLE을 반환 합니다.|  
+|E_FAIL|알 수 없는 치명적인 오류가 발생 했습니다. 메서드가 E_FAIL 반환 하는 경우 해당 프로세스에서 더 이상 CLR을 사용할 수 없습니다. 호스팅 Api에 대 한 후속 호출은 HOST_E_CLRNOTAVAILABLE을 반환 합니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
   
-## <a name="remarks"></a>주의  
- CLR은 관리 코드를 실행 하는 첫 번째 요청 시 자동으로 시작 되기 때문에 일반적으로 `Start` 메서드를 호출할 필요가 없습니다.  
+## <a name="remarks"></a>설명  
+ `Start`CLR은 관리 코드를 실행 하는 첫 번째 요청 시 자동으로 시작 되기 때문에 일반적으로 메서드를 호출할 필요가 없습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
@@ -54,4 +54,4 @@ HRESULT Start ();
   
 ## <a name="see-also"></a>참조
 
-- [ICorRuntimeHost 인터페이스](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [ICorRuntimeHost 인터페이스](icorruntimehost-interface.md)

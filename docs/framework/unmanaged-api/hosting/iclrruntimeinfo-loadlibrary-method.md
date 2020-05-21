@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4517ada3-4417-4ac5-a150-73da7a87c686
 topic_type:
 - apiref
-ms.openlocfilehash: 8c72f58bb65bd862b0625bfa0398b26bad0197e9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 09c80c3a56d86943ebe00e5222bb5452ab44e150
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73192081"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762177"
 ---
 # <a name="iclrruntimeinfoloadlibrary-method"></a>ICLRRuntimeInfo::LoadLibrary 메서드
-[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) 인터페이스로 표시 되는 CLR (공용 언어 런타임)에서 .NET Framework 라이브러리를 로드 합니다.  
+[ICLRRuntimeInfo](iclrruntimeinfo-interface.md) 인터페이스로 표시 되는 CLR (공용 언어 런타임)에서 .NET Framework 라이브러리를 로드 합니다.  
   
- 이 메서드는 [LoadLibraryShim](../../../../docs/framework/unmanaged-api/hosting/loadlibraryshim-function.md) 함수를 대체 합니다.  
+ 이 메서드는 [LoadLibraryShim](loadlibraryshim-function.md) 함수를 대체 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,29 +42,29 @@ HRESULT LoadLibrary(
  `phndModule`  
  제한이 로드 된 어셈블리에 대 한 핸들입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
-|HRESULT|설명|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_POINTER|`pwzDllName` 또는 `phndModule`가 null입니다.|  
+|E_POINTER|`pwzDllName` 또는 `phndModule` 이 null입니다.|  
 |E_OUTOFMEMORY|메모리가 부족 하 여 요청을 처리할 수 없습니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  이 메서드는 .NET Framework 재배포 가능 패키지에 포함 된 Dll만 로드 합니다. 사용자가 생성 한 어셈블리를 로드할 수 없습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** MetaHost  
   
  **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>참조
 
-- [ICLRRuntimeInfo 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [호스팅](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRRuntimeInfo 인터페이스](iclrruntimeinfo-interface.md)
+- [호스팅 인터페이스](hosting-interfaces.md)
+- [호스팅](index.md)

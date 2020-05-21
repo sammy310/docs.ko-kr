@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 82b03a59-5a87-43ed-9b75-e04b256e1a46
 topic_type:
 - apiref
-ms.openlocfilehash: bb3778a55e7f395ad65f6a9841ca1f31f1de4ebc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e2174afe0ee96bd153b7b40c73c0185d9058a0dc
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178252"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83760342"
 ---
 # <a name="icorthreadpoolcorchangetimer-method"></a>ICorThreadpool::CorChangeTimer 메서드
 이 메서드는 .NET Framework 인프라를 지원하며 코드에서 직접 사용할 수 없습니다.  
@@ -37,14 +37,14 @@ HRESULT CorChangeTimer (
 ```  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** MSCorE.h  
+ **헤더:** Mscoree.dll  
   
- **라이브러리:** MSCorEE.dll의 리소스로 포함  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [ICorThreadpool 인터페이스](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)
+- [ICorThreadpool 인터페이스](icorthreadpool-interface.md)
