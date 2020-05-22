@@ -3,13 +3,14 @@ title: .NET Core 및 .NET Standard의 단위 테스트
 description: 이 문서에서는 .NET Core 및 .NET Standard 프로젝트에 대한 단위 테스트의 간략한 개요를 제공합니다.
 author: ardalis
 ms.author: wiwagn
-ms.date: 08/30/2017
-ms.openlocfilehash: 1263bfe337b9d6609c0ca7df70aa299a61a7f1a0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 05/18/2020
+zone_pivot_groups: unit-testing-framework-set-one
+ms.openlocfilehash: e15f80b173389cdff86c6e62013e9c0f21171dd6
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78157403"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703096"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core 및 .NET Standard의 단위 테스트
 
@@ -42,23 +43,35 @@ C#, F# 및 Visual Basic에서 개인 프로젝트에 대한 시작점으로 기�
 - [F#](../../fsharp/index.yml)
 - [Visual Basic](../../visual-basic/index.yml)
 
-다음 중에서 선택할 수도 있습니다.
+여러 단위 테스트 프레임워크 중에서 선택할 수도 있습니다.
 
-- [xUnit](https://xunit.github.io)
+- [xUnit](https://xunit.net/)
 - [NUnit](https://nunit.org)
 - [MSTest](https://github.com/Microsoft/testfx-docs)
 
 다음 연습에서 자세히 알아볼 수 있습니다.
 
-- .NET Core CLI와 함께 [*xUnit* 및 *C#* 을 사용하여 단위 테스트 만들기](unit-testing-with-dotnet-test.md)
-- .NET Core CLI와 함께 [*NUnit* 및 *C#* 을 사용하여 단위 테스트 만들기](unit-testing-with-nunit.md)
+:::zone pivot="mstest"
+
 - .NET Core CLI와 함께 [*MSTest* 및 *C#* 을 사용하여 단위 테스트 만들기](unit-testing-with-mstest.md)
-- .NET Core CLI와 함께 [*xUnit* 및 *F#* 을 사용하여 단위 테스트 만들기](unit-testing-fsharp-with-dotnet-test.md)
-- .NET Core CLI와 함께 [*NUnit* 및 *F#* 을 사용하여 단위 테스트 만들기](unit-testing-fsharp-with-nunit.md)
 - .NET Core CLI와 함께 [*MSTest* 및 *F#* 을 사용하여 단위 테스트 만들기](unit-testing-fsharp-with-mstest.md)
-- .NET Core CLI와 함께 [*xUnit* 및 *Visual Basic*을 사용하여 단위 테스트 만들기](unit-testing-visual-basic-with-dotnet-test.md)
-- .NET Core CLI와 함께 [*NUnit* 및 *Visual Basic*을 사용하여 단위 테스트 만들기](unit-testing-visual-basic-with-nunit.md)
 - .NET Core CLI와 함께 [*MSTest* 및 *Visual Basic*을 사용하여 단위 테스트 만들기](unit-testing-visual-basic-with-mstest.md)
+
+:::zone-end
+:::zone pivot="xunit"
+
+- .NET Core CLI와 함께 [*xUnit* 및 *C#* 을 사용하여 단위 테스트 만들기](unit-testing-with-dotnet-test.md)
+- .NET Core CLI와 함께 [*xUnit* 및 *F#* 을 사용하여 단위 테스트 만들기](unit-testing-fsharp-with-dotnet-test.md)
+- .NET Core CLI와 함께 [*xUnit* 및 *Visual Basic*을 사용하여 단위 테스트 만들기](unit-testing-visual-basic-with-dotnet-test.md)
+
+:::zone-end
+:::zone pivot="nunit"
+
+- .NET Core CLI와 함께 [*NUnit* 및 *C#* 을 사용하여 단위 테스트 만들기](unit-testing-with-nunit.md)
+- .NET Core CLI와 함께 [*NUnit* 및 *F#* 을 사용하여 단위 테스트 만들기](unit-testing-fsharp-with-nunit.md)
+- .NET Core CLI와 함께 [*NUnit* 및 *Visual Basic*을 사용하여 단위 테스트 만들기](unit-testing-visual-basic-with-nunit.md)
+
+:::zone-end
 
 다음 문서에서 자세히 알아볼 수 있습니다.
 

@@ -1,28 +1,24 @@
 ---
 title: Newtonsoft.Json에서 System.Text.Json으로 마이그레이션 - .NET
-author: tdykstra
-ms.author: tdykstra
+author: ''
+ms.author: ''
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
-ms.date: 01/10/2020
-helpviewer_keywords:
-- JSON serialization
-- serializing objects
-- serialization
-- objects, serializing
-ms.openlocfilehash: 0828a5654171df39230055215903d3a49690155d
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.date: ''
+helpviewer_keywords: []
+ms.openlocfilehash: fe370b34d311816a815f3b2d419751ac7871f013
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739249"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703587"
 ---
-# <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Newtonsoft.json에서 System.Text.Json으로 마이그레이션하는 방법
+# <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Newtonsoft.Json에서 System.Text.Json로 마이그레이션하는 방법
 
-이 문서에서는 [Newtonsoft.Json](https://www.newtonsoft.com/json)에서 <xref:System.Text.Json>으로 마이그레이션하는 방법을 보여줍니다.
+이 문서에서는 [Newtonsoft.Json](https://www.newtonsoft.com/json)에서 <xref:System.Text.Json>로 마이그레이션하는 방법을 보여줍니다.
 
-`System.Text.Json` 네임스페이스는 JSON(JavaScript Object Notation)에서 직렬화 및 역직렬화하는 기능을 제공합니다. `System.Text.Json` 라이브러리는 [.NET Core 3.0](https://aka.ms/netcore3download) 공유 프레임워크에 포함되어 있습니다. 다른 대상 프레임워크는 [System.Text.Json](https://www.nuget.org/packages/System.Text.Json) NuGet 패키지를 설치하세요. 이 패키지는 다음을 지원합니다.
+`System.Text.Json` 네임스페이스는 JSON(JavaScript Object Notation)에서 직렬화 및 역직렬화하는 기능을 제공합니다. `System.Text.Json` 라이브러리는 [.NET Core 3.0](https://aka.ms/netcore3download) 공유 프레임워크에 포함되어 있습니다. 다른 대상 프레임워크의 경우 [System.Text.Json](https://www.nuget.org/packages/System.Text.Json) NuGet 패키지를 설치합니다. 패키지는 다음을 지원합니다.
 
 * .NET Standard 2.0 이상 버전
 * .NET Framework 4.7.2 이상 버전
@@ -34,7 +30,7 @@ ms.locfileid: "81739249"
 
 이 문서의 대부분은 <xref:System.Text.Json.JsonSerializer> API 사용 방법에 대한 내용이지만, <xref:System.Text.Json.JsonDocument>(DOM(문서 개체 모델)을 나타냄), <xref:System.Text.Json.Utf8JsonReader> 및 <xref:System.Text.Json.Utf8JsonWriter> 형식을 사용하는 방법에 대한 지침도 포함되어 있습니다.
 
-## <a name="table-of-differences-between-newtonsoftjson-and-systemtextjson"></a>Newtonsoft.Json과 System.Text.Json의 차이점 표
+## <a name="table-of-differences-between-newtonsoftjson-and-systemtextjson"></a>Newtonsoft.Json와 System.Text.Json 간의 차이점 표
 
 다음 표에는 `Newtonsoft.Json` 기능과 그에 상응하는 `System.Text.Json` 기능이 나열되어 있습니다. 상응하는 기능은 다음 범주로 분류됩니다.
 
@@ -42,48 +38,344 @@ ms.locfileid: "81739249"
 * 지원되지 않으며, 해결이 가능합니다. 해결 방법은 [사용자 지정 변환기](system-text-json-converters-how-to.md)이며, 사용자 지정 변환기는 `Newtonsoft.Json` 기능과의 완전한 패리티를 제공하지 않을 수 있습니다. 그 중 일부는 샘플 코드가 예제로 제공됩니다. 이러한 `Newtonsoft.Json` 기능을 사용하는 경우 마이그레이션을 수행하려면 .NET 개체 모델 또는 기타 코드 변경 내용을 수정해야 합니다.
 * 지원되지 않으며, 해결 방법이 실용적이지 않거나 가능하지 않습니다. 이러한 `Newtonsoft.Json` 기능을 사용하는 경우 중요한 변경 없이는 마이그레이션을 수행할 수 없습니다.
 
-| Newtonsoft.Json 기능                               | 그에 상응하는 System.Text.Json 기능 |
-|-------------------------------------------------------|-----------------------------|
-| 기본적으로 대/소문자를 구분하지 않는 역직렬화           | ✔️ [PropertyNameCaseInsensitive 글로벌 설정](#case-insensitive-deserialization) |
-| 카멜식 대/소문자 속성 이름                             | ✔️ [PropertyNamingPolicy 글로벌 설정](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) |
-| 최소 문자 이스케이프                            | ✔️ [엄격한 문자 이스케이프, 구성 가능](#minimal-character-escaping) |
-| `NullValueHandling.Ignore` 글로벌 설정             | ✔️ [IgnoreNullValues 글로벌 옵션](system-text-json-how-to.md#exclude-all-null-value-properties) |
-| 주석 허용                                        | ✔️ [ReadCommentHandling 글로벌 설정](#comments) |
-| 후행 쉼표 허용                                 | ✔️ [AllowTrailingCommas 글로벌 설정](#trailing-commas) |
-| 사용자 지정 변환기 등록                         | ✔️ [우선 순위가 다름](#converter-registration-precedence) |
-| 기본적으로 최대 깊이 없음                           | ✔️ [기본 최대 깊이는 64, 구성 가능](#maximum-depth) |
-| 광범위한 형식 지원                    | ⚠️ [일부 형식은 사용자 지정 변환기 필요](#types-without-built-in-support) |
-| 문자열을 숫자로 역직렬화                        | ⚠️ [지원되지 않음, 해결 가능, 샘플](#quoted-numbers) |
-| 문자열이 아닌 키로 `Dictionary` 역직렬화          | ⚠️ [지원되지 않음, 해결 가능, 샘플](#dictionary-with-non-string-key) |
-| 다형 직렬화                             | ⚠️ [지원되지 않음, 해결 가능, 샘플](#polymorphic-serialization) |
-| 다형 역직렬화                           | ⚠️ [지원되지 않음, 해결 가능, 샘플](#polymorphic-deserialization) |
-| 유추 형식을 `object` 속성으로 역직렬화      | ⚠️ [지원되지 않음, 해결 가능, 샘플](#deserialization-of-object-properties) |
-| JSON `null` 리터럴을 null을 허용하지 않는 값 형식으로 역직렬화 | ⚠️ [지원되지 않음, 해결 가능, 샘플](#deserialize-null-to-non-nullable-type) |
-| 변경할 수 없는 클래스 및 구조체로 역직렬화          | ⚠️ [지원되지 않음, 해결 가능, 샘플](#deserialize-to-immutable-classes-and-structs) |
-| `[JsonConstructor]` 특성                         | ⚠️ [지원되지 않음, 해결 가능, 샘플](#specify-constructor-to-use) |
-| `[JsonProperty]` 특성에 대한 `Required` 설정        | ⚠️ [지원되지 않음, 해결 가능, 샘플](#required-properties) |
-| `[JsonProperty]` 특성에 대한 `NullValueHandling` 설정 | ⚠️ [지원되지 않음, 해결 가능, 샘플](#conditionally-ignore-a-property)  |
-| `[JsonProperty]` 특성에 대한 `DefaultValueHandling` 설정 | ⚠️ [지원되지 않음, 해결 가능, 샘플](#conditionally-ignore-a-property)  |
-| `DefaultValueHandling` 글로벌 설정                 | ⚠️ [지원되지 않음, 해결 가능, 샘플](#conditionally-ignore-a-property) |
-| 속성을 제외하는 `DefaultContractResolver`       | ⚠️ [지원되지 않음, 해결 가능, 샘플](#conditionally-ignore-a-property) |
-| `DateTimeZoneHandling`, `DateFormatString` 설정   | ⚠️ [지원되지 않음, 해결 가능, 샘플](#specify-date-format) |
-| 콜백                                             | ⚠️ [지원되지 않음, 해결 가능, 샘플](#callbacks) |
-| public 및 비-public 필드 지원              | ⚠️ [지원되지 않음, 해결 가능](#public-and-non-public-fields) |
-| internal/private 속성 setter 및 getter 지원 | ⚠️ [지원되지 않음, 해결 가능](#internal-and-private-property-setters-and-getters) |
-| `JsonConvert.PopulateObject` 메서드                   | ⚠️ [지원되지 않음, 해결 가능](#populate-existing-objects) |
-| `ObjectCreationHandling` 글로벌 설정               | ⚠️ [지원되지 않음, 해결 가능](#reuse-rather-than-replace-properties) |
-| setter 없이 컬렉션에 추가                    | ⚠️ [지원되지 않음, 해결 가능](#add-to-collections-without-setters) |
-| `PreserveReferencesHandling` 글로벌 설정           | ❌ [지원되지 않음](#preserve-object-references-and-handle-loops) |
-| `ReferenceLoopHandling` 글로벌 설정                | ❌ [지원되지 않음](#preserve-object-references-and-handle-loops) |
-| `System.Runtime.Serialization` 특성 지원 | ❌ [지원되지 않음](#systemruntimeserialization-attributes) |
-| `MissingMemberHandling` 글로벌 설정                | ❌ [지원되지 않음](#missingmemberhandling) |
-| 따옴표 없는 속성 이름 허용                   | ❌ [지원되지 않음](#json-strings-property-names-and-string-values) |
-| 문자열 값 주변에 작은따옴표 허용              | ❌ [지원되지 않음](#json-strings-property-names-and-string-values) |
-| 문자열 속성에 문자열이 아닌 JSON 값 허용    | ❌ [지원되지 않음](#non-string-values-for-string-properties) |
+| Newtonsoft.Json 기능                               | System.Text.Json 해당 항목 |
+|---
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+----------------------------|--- title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+-
+title: 'Newtonsoft.Json에서 System.Text.Json로 마이그레이션 - .NET' 작성자: ms.author: no-loc:
+- 'System.Text.Json'
+- 'Newtonsoft.Json' ms.date: helpviewer_keywords:
+- 
+- 
+- 
+- 
+
+---------------| | 기본적으로 대/소문자를 구분하지 않는 deserialization           | ✔️ [PropertyNameCaseInsensitive 전역 설정](#case-insensitive-deserialization) | | 카멜식 대/소문자 속성 이름                             | ✔️ [PropertyNamingPolicy 전역 설정](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) | | 최소 문자 이스케이프                            | ✔️ [엄격 문자 이스케이프, 구성 가능](#minimal-character-escaping) | | `NullValueHandling.Ignore` 전역 설정             | ✔️ [IgnoreNullValues 전역 설정](system-text-json-how-to.md#exclude-all-null-value-properties) | | 주석 허용                                        | ✔️ [ReadCommentHandling 전역 설정](#comments) | | 후행 쉼표 허용                                 | ✔️ [AllowTrailingCommas 전역 설정](#trailing-commas) | | 사용자 지정 변환기 등록                         | ✔️ [우선 순위 다름](#converter-registration-precedence) | | 기본적으로 최대 깊이 없음                           | ✔️ [기본 최대 깊이 64, 구성 가능](#maximum-depth) | | 광범위한 형식 지원                    | ⚠ [일부 형식은 사용자 지정 변환기 필요](#types-without-built-in-support) | | 문자열을 숫자로 역직렬화                        | ⚠ [지원되지 않음, 해결 방법, 샘플](#quoted-numbers) | | 문자열이 아닌 키로 `Dictionary` 역직렬화          | ⚠ [지원되지 않음, 해결 방법, 샘플](#dictionary-with-non-string-key) | | 다형 serialization                             | ⚠ [지원되지 않음, 해결 방법, 샘플](#polymorphic-serialization) | | 다형 deserialization                           | ⚠ [지원되지 않음, 해결 방법, 샘플](#polymorphic-deserialization) | | 유추 형식을 `object` 속성으로 역직렬화      | ⚠ [지원되지 않음, 해결 방법, 샘플](#deserialization-of-object-properties) | | JSON `null` 리터럴을 null을 허용하지 않는 값 형식으로 역직렬화 | ⚠ [지원되지 않음, 해결 방법, 샘플](#deserialize-null-to-non-nullable-type) | | 변경할 수 없는 클래스 및 구조체로 역직렬화          | ⚠ [지원되지 않음, 해결 방법, 샘플](#deserialize-to-immutable-classes-and-structs) | | `[JsonConstructor]` 특성                         | ⚠ [지원되지 않음, 해결 방법, 샘플](#specify-constructor-to-use) | | `[JsonProperty]` 특성에 대한 `Required` 설정        | ⚠ [지원되지 않음, 해결 방법, 샘플](#required-properties) | | `[JsonProperty]` 특성에 대한 `NullValueHandling` 설정 | ⚠ [지원되지 않음, 해결 방법, 샘플](#conditionally-ignore-a-property)  | | `[JsonProperty]` 특성에 대한 `DefaultValueHandling` 설정 | ⚠ [지원되지 않음, 해결 방법, 샘플](#conditionally-ignore-a-property)  | | `DefaultValueHandling` 전역 설정                 | ⚠ [지원되지 않음, 해결 방법, 샘플](#conditionally-ignore-a-property) | | 속성을 제외하는 `DefaultContractResolver`       | ⚠ [지원되지 않음, 해결 방법, 샘플](#conditionally-ignore-a-property) | | `DateTimeZoneHandling`, `DateFormatString` 설정   | ⚠ [지원되지 않음, 해결 방법, 샘플](#specify-date-format) | | 콜백                                             | ⚠ [지원되지 않음, 해결 방법, 샘플](#callbacks) | | public 및 비-public 필드 지원              | ⚠ [지원되지 않음, 해결 방법](#public-and-non-public-fields) | | internal/private 속성 setter 및 getter 지원 | ⚠ [지원되지 않음, 해결 방법](#internal-and-private-property-setters-and-getters) | | `JsonConvert.PopulateObject` 메서드                   | ⚠ [지원되지 않음, 해결 방법](#populate-existing-objects) | | `ObjectCreationHandling` 전역 설정               | ⚠ [지원되지 않음, 해결 방법](#reuse-rather-than-replace-properties) | | setter 없이 컬렉션에 추가                    | ⚠ [지원되지 않음, 해결 방법](#add-to-collections-without-setters) | | `PreserveReferencesHandling` 전역 설정           | ❌ [지원되지 않음](#preserve-object-references-and-handle-loops) | | `ReferenceLoopHandling` 전역 설정                | ❌ [지원되지 않음](#preserve-object-references-and-handle-loops) | | `System.Runtime.Serialization` 특성 지원 | ❌ [지원되지 않음](#systemruntimeserialization-attributes) | | `MissingMemberHandling` 전역 설정                | ❌ [지원되지 않음](#missingmemberhandling) | | 따옴표 없는 속성 이름 허용                   | ❌ [지원되지 않음](#json-strings-property-names-and-string-values) | | 문자열 값 주변에 작은따옴표 허용              | ❌ [지원되지 않음](#json-strings-property-names-and-string-values) | | 문자열 속성에 문자열이 아닌 JSON 값 허용    | ❌ [지원되지 않음](#non-string-values-for-string-properties) |
 
 이 목록은 `Newtonsoft.Json` 기능의 전체 목록이 아닙니다. 이 목록에는 [GitHub 이슈](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json) 또는 [StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json) 게시물에 요청된 여러 시나리오가 포함되어 있습니다. 여기에 나열된 시나리오 중에서 현재 샘플 코드가 없는 시나리오에 대한 해결 방법을 구현하셨으며 그 방법을 공유하려는 분들은 이 페이지 하단의 **피드백** 섹션에서 **이 페이지**를 선택하세요. 그러면 이 설명서의 GitHub 리포지토리에 이슈가 작성되고 이 페이지의 **피드백** 섹션에도 이슈가 나열됩니다.
 
-## <a name="differences-in-default-jsonserializer-behavior-compared-to-newtonsoftjson"></a>기본 JsonSerializer와 Newtonsoft.json의 동작 차이
+## <a name="differences-in-default-jsonserializer-behavior-compared-to-newtonsoftjson"></a>기본 JsonSerializer와 Newtonsoft.Json의 동작 차이
 
 <xref:System.Text.Json>은 기본적으로 엄격하며, 호출자를 대신하여 추측하거나 해석하는 것을 금지하고 결정적 동작을 강조합니다. 이 라이브러리는 성능과 보안을 위해 의도적으로 이렇게 설계되었습니다. `Newtonsoft.Json`은 기본적으로 유연합니다. 이러한 기본적인 디자인의 차이로 인해 기본 동작에서 다음과 같은 여러 가지 차이가 있습니다.
 
@@ -203,7 +495,7 @@ The JSON value could not be converted to System.String.
 * 속성을 JSON 문자열로 직렬화합니다.
 * 역직렬화할 때 JSON 숫자 및 따옴표 안의 숫자를 허용합니다.
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/LongToStringConverter.cs)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/LongToStringConverter.cs)]
 
 개별 `long` 속성에 대한 [특성을 사용](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-property)하거나 <xref:System.Text.Json.JsonSerializerOptions.Converters> 컬렉션에 [변환기를 추가](system-text-json-converters-how-to.md#registration-sample---converters-collection)하여 이 사용자 지정 변환기를 등록합니다.
 
@@ -257,13 +549,13 @@ The JSON value could not be converted to System.String.
 
 또 다른 해결 방법은 `DateTimeOffset` 형식의 Null 값을 처리하는 다음 예제처럼 형식에 대한 변환기를 만드는 것입니다.
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DateTimeOffsetNullHandlingConverter.cs)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/DateTimeOffsetNullHandlingConverter.cs)]
 
 [속성에 대한 특성을 사용](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-property)하거나 <xref:System.Text.Json.JsonSerializerOptions.Converters> 컬렉션에 [변환기를 추가](system-text-json-converters-how-to.md#registration-sample---converters-collection)하여 이 사용자 지정 변환기를 등록합니다.
 
 **참고:** 위의 변환기는 기본값을 지정하는 POCO를 `Newtonsoft.Json`이 처리하는 방법과는 **다르게 Null 값을 처리**합니다. 예를 들어 다음 코드가 대상 개체를 보여준다고 가정하겠습니다.
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithDefault)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithDefault)]
 
 그리고 앞의 변환기를 사용하여 다음 JSON을 역직렬화한다고 가정합니다.
 
@@ -283,11 +575,11 @@ The JSON value could not be converted to System.String.
 
 다음은 여러 생성자 매개 변수가 있는 변경할 수 없는 구조체입니다.
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ImmutablePoint.cs#ImmutablePoint)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/ImmutablePoint.cs#ImmutablePoint)]
 
 다음은 이 구조체를 직렬화 및 역직렬화하는 변환기입니다.
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ImmutablePointConverter.cs)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/ImmutablePointConverter.cs)]
 
 <xref:System.Text.Json.JsonSerializerOptions.Converters> 컬렉션에 [변환기를 추가](system-text-json-converters-how-to.md#registration-sample---converters-collection)하여 이 사용자 지정 변환기를 등록합니다.
 
@@ -303,7 +595,7 @@ The JSON value could not be converted to System.String.
 
 대상 형식의 속성 중 하나에 대한 값을 받지 못해도 <xref:System.Text.Json>은 예외를 throw하지 않습니다. 예를 들어 `WeatherForecast` 클래스가 있는 경우 다음과 같습니다.
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWF)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWF)]
 
 다음 JSON은 오류 없이 역직렬화됩니다.
 
@@ -316,7 +608,7 @@ The JSON value could not be converted to System.String.
 
 JSON에 `Date` 속성이 없으면 역직렬화가 실패하도록 구성하려면 사용자 지정 변환기를 구현합니다. 다음 샘플 변환기 코드는 역직렬화 완료 후 `Date` 속성이 설정되지 않으면 예외를 throw합니다.
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecastRequiredPropertyConverter.cs)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastRequiredPropertyConverter.cs)]
 
 [POCO 클래스에 대한 특성을 사용](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type)하거나 <xref:System.Text.Json.JsonSerializerOptions.Converters> 컬렉션에 [변환기를 추가](system-text-json-converters-how-to.md#registration-sample---converters-collection)하여 이 사용자 지정 변환기를 등록합니다.
 
@@ -351,9 +643,9 @@ JSON에 `Date` 속성이 없으면 역직렬화가 실패하도록 구성하려�
 
 이 기능을 사용하려면 사용자 지정 변환기를 작성하면 됩니다. 다음은 이 방법을 보여주는 샘플 POCO 및 사용자 지정 변환기입니다.
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWF)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWF)]
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecastRuntimeIgnoreConverter.cs)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastRuntimeIgnoreConverter.cs)]
 
 `Summary` 속성의 값이 Null, 빈 문자열 또는 "N/A"이면 이 변환기는 직렬화에서 이 속성을 생략합니다.
 
@@ -384,9 +676,9 @@ JSON에 `Date` 속성이 없으면 역직렬화가 실패하도록 구성하려�
 
 <xref:System.Text.Json>에서는 사용자 지정 변환기를 작성하여 콜백을 시뮬레이션할 수 있습니다. 다음 예제에서는 POCO용 사용자 지정 변환기를 보여줍니다. 이 변환기에는 `Newtonsoft.Json` 콜백에 해당하는 각 지점에 메시지를 표시하는 코드가 포함되어 있습니다.
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecastCallbacksConverter.cs)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastCallbacksConverter.cs)]
 
-[클래스에 대한 특성을 사용](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type)하거나 <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.Converters> 컬렉션에 [변환기를 추가](system-text-json-converters-how-to.md#registration-sample---converters-collection)하여 이 사용자 지정 변환기를 등록합니다.
+[클래스에 대한 특성을 사용](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type)하거나 <xref:System.Text.Json.JsonSerializerOptions.Converters> 컬렉션에 [변환기를 추가](system-text-json-converters-how-to.md#registration-sample---converters-collection)하여 이 사용자 지정 변환기를 등록합니다.
 
 이전 샘플을 따르는 사용자 지정 변환기를 사용하는 경우:
 
@@ -548,9 +840,9 @@ while (reader.Read())
 
 <xref:System.Text.Json.Utf8JsonReader.ValueSpan%2A>을 사용하여 바이트 단위 비교를 수행하려면 속성 이름 조회를 위한 <xref:System.MemoryExtensions.SequenceEqual%2A>을 호출하지 마세요. 그 대신 JSON에서 이스케이프된 모든 문자를 이스케이프 해제하는 <xref:System.Text.Json.Utf8JsonReader.ValueTextEquals%2A>를 호출하세요. 다음은 "name"이라는 속성을 검색하는 방법을 보여주는 예제입니다.
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ValueTextEqualsExample.cs?name=SnippetDefineUtf8Var)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/ValueTextEqualsExample.cs?name=SnippetDefineUtf8Var)]
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ValueTextEqualsExample.cs?name=SnippetUseUtf8Var&highlight=11)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/ValueTextEqualsExample.cs?name=SnippetUseUtf8Var&highlight=11)]
 
 ### <a name="read-null-values-into-nullable-value-types"></a>Null 값을 null 허용 값 형식으로 읽기
 
