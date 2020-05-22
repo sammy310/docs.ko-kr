@@ -365,32 +365,40 @@
     - name: 포트 C++/CLI 프로젝트
       href: porting/cpp-cli.md
 - name: 단위 테스트
-  href: testing/index.md
+  displayName: 'xUnit,NUnit,MSTest,unit testing,testing'
   items:
     - name: 개요
       href: testing/index.md
     - name: 단위 테스트 모범 사례
       href: testing/unit-testing-best-practices.md
-    - name: 'xUnit을 사용한 C# 단위 테스트'
-      href: testing/unit-testing-with-dotnet-test.md
-    - name: 'NUnit을 사용한 C# 단위 테스트'
-      href: testing/unit-testing-with-nunit.md
-    - name: 'MSTest를 사용한 C# 단위 테스트'
-      href: testing/unit-testing-with-mstest.md
-    - name: 'xUnit을 사용한 F# 단위 테스트'
-      href: testing/unit-testing-fsharp-with-dotnet-test.md
-    - name: 'NUnit을 사용한 F# 단위 테스트'
-      href: testing/unit-testing-fsharp-with-nunit.md
-    - name: 'MSTest를 사용한 F# 단위 테스트'
-      href: testing/unit-testing-fsharp-with-mstest.md
-    - name: xUnit을 사용한 VB 단위 테스트
-      href: testing/unit-testing-visual-basic-with-dotnet-test.md
-    - name: NUnit을 사용한 VB 단위 테스트
-      href: testing/unit-testing-visual-basic-with-nunit.md
-    - name: MSTest를 사용한 VB 단위 테스트
-      href: testing/unit-testing-visual-basic-with-mstest.md
+    - name: xUnit
+      items:
+        - name: 'C# 단위 테스트'
+          href: testing/unit-testing-with-dotnet-test.md
+        - name: 'F# 단위 테스트'
+          href: testing/unit-testing-fsharp-with-dotnet-test.md
+        - name: VB 단위 테스트
+          href: testing/unit-testing-visual-basic-with-dotnet-test.md
+    - name: NUnit
+      items:
+        - name: 'C# 단위 테스트'
+          href: testing/unit-testing-with-nunit.md
+        - name: 'F# 단위 테스트'
+          href: testing/unit-testing-fsharp-with-nunit.md
+        - name: VB 단위 테스트
+          href: testing/unit-testing-visual-basic-with-nunit.md
+    - name: MSTest
+      items:
+        - name: 'C# 단위 테스트'
+          href: testing/unit-testing-with-mstest.md
+        - name: 'F# 단위 테스트'
+          href: testing/unit-testing-fsharp-with-mstest.md
+        - name: VB 단위 테스트
+          href: testing/unit-testing-visual-basic-with-mstest.md
     - name: 선택적 단위 테스트 실행
       href: testing/selective-unit-tests.md
+    - name: 단위 테스트 순서 지정
+      href: testing/order-unit-tests.md
     - name: 게시된 출력 단위 테스트
       href: testing/unit-testing-published-output.md
     - name: Visual Studio를 사용하여 .NET Core 프로젝트 라이브 단위 테스트
