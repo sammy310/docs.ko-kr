@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bba941c2-1c57-46d3-bbf5-5fb92700c490
 topic_type:
 - apiref
-ms.openlocfilehash: d78f81093e61c40eaec334f957d8583eeb593f5e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ca9566168b8aae361af8d61539066624697a2d04
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134812"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805152"
 ---
 # <a name="igchost2setgcstartuplimitsex-method"></a>IGCHost2::SetGCStartupLimitsEx 메서드
 0 세대의 세그먼트 크기와 최대 크기를 설정 합니다.  
@@ -41,18 +41,18 @@ HRESULT SetGCStartupLimitsEx (
  `MaxGen0Size`  
  진행 0 세대의 최대 크기입니다.  
   
-## <a name="remarks"></a>주의  
- `SetGCStartupLimitsEx` 설정 하는 값은 호스트를 시작 하기 전에만 지정할 수 있습니다. 이러한 값은 나중에 변경할 수 없습니다.  
+## <a name="remarks"></a>설명  
+ 를 설정 하는 값은 `SetGCStartupLimitsEx` 호스트를 시작 하기 전에만 지정할 수 있습니다. 이러한 값은 나중에 변경할 수 없습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** GCHost, GCHost  
   
  **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [IGCHost2 인터페이스](../../../../docs/framework/unmanaged-api/hosting/igchost2-interface.md)
+- [IGCHost2 인터페이스](igchost2-interface.md)

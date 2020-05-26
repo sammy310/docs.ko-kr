@@ -61,7 +61,7 @@ Side-by-Side 실행 및 .NET Framework는 DLL 충돌을 없애기 위한 다음�
   
 ### <a name="runtime-version-information-in-the-application-configuration-file"></a>애플리케이션 구성 파일의 런타임 버전 정보  
 
-PE 파일 헤더의 정보 외에도 런타임 버전 정보를 제공하는 애플리케이션 구성 파일을 사용하여 애플리케이션을 배포할 수 있습니다. 애플리케이션 구성 파일은 애플리케이션과 함께 제공되는, 애플리케이션 개발자가 만든 XML 기반 파일입니다. [\<startup&gt; 섹션](../configure-apps/file-schema/startup/requiredruntime-element.md)의 [\<requiredRuntime&gt; 요소](../configure-apps/file-schema/startup/startup-element.md)(이 파일에 있는 경우)는 애플리케이션이 지원하는 구성 요소 버전 및 런타임 버전을 지정합니다. 다양한 런타임 버전과 애플리케이션 간의 호환성을 테스트하는 데 이 파일을 사용할 수도 있습니다.  
+PE 파일 헤더의 정보 외에도 런타임 버전 정보를 제공하는 애플리케이션 구성 파일을 사용하여 애플리케이션을 배포할 수 있습니다. 애플리케이션 구성 파일은 애플리케이션과 함께 제공되는, 애플리케이션 개발자가 만든 XML 기반 파일입니다. [\<startup&gt; 섹션](../configure-apps/file-schema/startup/startup-element.md)의 [\<requiredRuntime&gt; 요소](../configure-apps/file-schema/startup/requiredruntime-element.md)(이 파일에 있는 경우)는 애플리케이션이 지원하는 구성 요소 버전 및 런타임 버전을 지정합니다. 다양한 런타임 버전과 애플리케이션 간의 호환성을 테스트하는 데 이 파일을 사용할 수도 있습니다.  
   
 COM 및 COM + 애플리케이션을 비롯한 비관리 코드에는 런타임에서 관리 코드와 상호 작용하는 데 사용하는 애플리케이션 구성 파일이 포함될 수 있습니다. 애플리케이션 구성 파일은 COM을 통해 활성화하는 모든 관리 코드에 영향을 줍니다. 파일에서 지원하는 런타임 버전 및 어셈블리 리디렉션을 지정할 수 있습니다. 기본적으로 관리 코드를 호출하는 COM interop 애플리케이션은 컴퓨터에 설치된 최신 버전의 런타임을 사용합니다.  
   
@@ -126,6 +126,6 @@ publicKeyToken=...,
 |[.NET 어셈블리](../../standard/assembly/index.md)|어셈블리에 대해 개념적으로 설명합니다.|  
 |[애플리케이션 도메인](../app-domains/application-domains.md)|애플리케이션 도메인에 대해 개념적으로 설명합니다.|  
   
-## <a name="reference"></a>참조  
+## <a name="reference"></a>참고  
 
 [\<supportedRuntime> 요소](../configure-apps/file-schema/startup/supportedruntime-element.md)

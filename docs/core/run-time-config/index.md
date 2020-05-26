@@ -2,12 +2,12 @@
 title: 런타임 구성 옵션
 description: 런타임 구성 설정을 사용하여 .NET Core 애플리케이션을 구성하는 방법을 알아봅니다.
 ms.date: 01/21/2020
-ms.openlocfilehash: d49707b93e272f0e527ff536a80140ec98e5c1a8
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 68690689fd4f936e3af76ab647f0b58d8ec6ca27
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506786"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761956"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>.NET Core 런타임 구성 설정
 
@@ -20,13 +20,16 @@ ms.locfileid: "82506786"
 > [!NOTE]
 > 이 설명서는 진행 중인 작업입니다. 여기에 제공된 정보가 불완전하거나 부정확한 경우에는 [이슈를 열어](https://github.com/dotnet/docs/issues) 그에 대해 알려주시거나 [끌어오기 요청을 제출](https://github.com/dotnet/docs/pulls)하여 이슈를 해결하세요. dotnet/docs 리포지토리의 끌어오기 요청 제출에 대한 자세한 내용은 [기여자 가이드](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute)를 참조하세요.
 
-.NET Core는 런타임 애플리케이션 동작을 구성하기 위해 다음과 같은 메커니즘을 제공합니다.
+.NET Core는 런타임에 애플리케이션 동작을 구성하기 위해 다음과 같은 메커니즘을 제공합니다.
 
 - [runtimeconfig.json 파일](#runtimeconfigjson)
 
 - [MSBuild 속성](#msbuild-properties)
 
 - [환경 변수](#environment-variables)
+
+> [!TIP]
+> 환경 변수를 사용하여 런타임 옵션을 구성하면 모든 .NET Core 앱에 설정이 적용됩니다. *runtimeconfig.json* 또는 프로젝트 파일에서 런타임 옵션을 구성하면 해당 애플리케이션에만 설정이 적용됩니다.
 
 일부 구성 값은 <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> 메서드를 호출하여 프로그래밍 방식으로 설정할 수도 있습니다.
 
@@ -106,11 +109,11 @@ ms.locfileid: "82506786"
 </Project>
 ```
 
-런타임 동작을 구성하기 위한 MSBuild 속성은 각 영역에 대한 개별 문서(예: [가비지 수집](garbage-collector.md))에 설명되어 있습니다.
+런타임 동작을 구성하기 위한 MSBuild 속성은 각 영역에 대한 개별 문서(예: [가비지 수집](garbage-collector.md))에 설명되어 있습니다. SDK 스타일 프로젝트에 대한 MSBuild 속성 참조의 [런타임 구성](../project-sdk/msbuild-props.md#run-time-configuration-properties) 섹션에도 나열됩니다.
 
 ## <a name="environment-variables"></a>환경 변수
 
-환경 변수를 사용하여 일부 런타임 구성 정보를 제공할 수 있습니다. 환경 변수로 지정된 구성 노브는 일반적으로 **COMPlus_** 접두사가 붙어 있습니다.
+환경 변수를 사용하여 일부 런타임 구성 정보를 제공할 수 있습니다. 환경 변수를 사용하여 런타임 옵션을 구성하면 모든 .NET Core 앱에 설정이 적용됩니다. 환경 변수로 지정된 구성 노브는 일반적으로 **COMPlus_** 접두사가 붙어 있습니다.
 
 Windows 제어판, 명령줄 또는 Windows 및 Unix 기반 시스템에서 <xref:System.Environment.SetEnvironmentVariable(System.String,System.String)?displayProperty=nameWithType> 메서드를 호출하여 프로그래밍 방식으로 환경 변수를 정의할 수 있습니다.
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8d3a8712528d2d35c706cc26b8c388b65d6ad506
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 32030698c12de87daef5e1d8851a0f55ec36d688
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77449224"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721608"
 ---
 ### <a name="better-argument-validation-in-the-pkcs8privatekeyinfo-constructor"></a>Pkcs8PrivateKeyInfo 생성자의 인수 유효성 검사를 개선
 
@@ -41,17 +41,17 @@ var info = new Pkcs8PrivateKeyInfo(algorithmId, algorithmParameters, privateKey)
 
 유효한 `algorithmParameters` 값만 제공하고 예외 처리가 필요한 경우 <xref:System.ArgumentException> 및 <xref:System.Security.Cryptography.CryptographicException> 모두에 대해 `Pkcs8PrivateKeyInfo` 생성자 테스트가 호출되도록 합니다.
 
-### <a name="category"></a>범주
+#### <a name="category"></a>범주
 
 암호화
 
-### <a name="affected-apis"></a>영향을 받는 API
+#### <a name="affected-apis"></a>영향을 받는 API
 
 - [Pkcs8PrivateKeyInfo 생성자](xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.%23ctor(System.Security.Cryptography.Oid,System.Nullable%7BSystem.ReadOnlyMemory%7BSystem.Byte%7D%7D,System.ReadOnlyMemory%7BSystem.Byte%7D,System.Boolean))
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `M:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.#ctor(System.Security.Cryptography.Oid,System.Nullable{System.ReadOnlyMemory{System.Byte}},System.ReadOnlyMemory{System.Byte},System.Boolean)`
 

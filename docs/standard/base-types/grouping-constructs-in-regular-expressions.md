@@ -65,7 +65,7 @@ ms.locfileid: "78159223"
   
 - 정규식 내의 명명된 역참조 구문을 사용합니다. 일치하는 하위 식은 `\k<`*name*`>`구문을 통해 동일한 정규식에서 참조됩니다. 여기서 *name* 은 캡처링 그룹의 이름) 또는 `\k<`*number*`>`구문을 통해 동일한 정규식에서 참조됩니다. 여기서 *number* 는 캡처링 그룹의 서수)을 통해 동일한 정규식에서 참조됩니다. 캡처링 그룹은 해당 서수와 같은 기본 이름을 갖고 있습니다. 자세한 내용은 이 항목 뒷부분의 [명명된 일치하는 하위 식](#named_matched_subexpression) 을 참조하세요.  
   
-- `$` 또는 *메서드 호출에서*<xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>number<xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 바꾸기 시퀀스를 사용합니다. 여기서 *number*는 캡처된 하위 식의 서수입니다.  
+- <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 또는 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 메서드 호출에서 `$`*number* 바꾸기 시퀀스를 사용합니다. 여기서 *number*는 캡처된 하위 식의 서수입니다.  
   
 - 프로그래밍 방식으로 <xref:System.Text.RegularExpressions.GroupCollection> 속성에서 반환하는 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 개체를 사용합니다. 컬렉션에서 위치 0에 있는 멤버는 전체 정규식 일치를 나타냅니다. 각 후속 멤버는 일치하는 하위 식을 나타냅니다. 자세한 내용은 [Grouping Constructs and Regular Expression Objects](#Objects) 섹션을 참조하세요.  
   
@@ -108,9 +108,9 @@ ms.locfileid: "78159223"
   
 - 정규식 내의 역참조 구문을 사용합니다. 일치하는 하위 식은 `\`*number*구문을 통해 동일한 정규식에서 참조됩니다. 여기서 *number* 는 캡처된 하위 식의 서수입니다. 명명된 일치하는 하위 식은 하위 식을 일치시킨 후 왼쪽에서 오른쪽으로 연속적으로 번호가 매겨집니다.  
   
-- `${` 또는 *메서드 호출에서*`}`name<xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType><xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 바꾸기 시퀀스를 사용합니다. 여기서 *name*은 캡처된 하위 식의 이름입니다.  
+- <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 또는 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 메서드 호출에서 `${`*name*`}` 바꾸기 시퀀스를 사용합니다. 여기서 *name*은 캡처된 하위 식의 이름입니다.  
   
-- `$` 또는 *메서드 호출에서*<xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>number<xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 바꾸기 시퀀스를 사용합니다. 여기서 *number*는 캡처된 하위 식의 서수입니다.  
+- <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 또는 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 메서드 호출에서 `$`*number* 바꾸기 시퀀스를 사용합니다. 여기서 *number*는 캡처된 하위 식의 서수입니다.  
   
 - 프로그래밍 방식으로 <xref:System.Text.RegularExpressions.GroupCollection> 속성에서 반환하는 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 개체를 사용합니다. 컬렉션에서 위치 0에 있는 멤버는 전체 정규식 일치를 나타냅니다. 각 후속 멤버는 일치하는 하위 식을 나타냅니다. 명명된 캡처된 그룹은 캡처된 그룹의 번호를 매긴 후 컬렉션에 저장됩니다.  
   
@@ -221,13 +221,13 @@ ms.locfileid: "78159223"
 |10|`(((?'Open'<)`|“\<mno”에서 왼쪽 꺾쇠괄호를 찾아 `Open` 그룹에 할당합니다. 해당 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 컬렉션에는 이제 단일 값 "<"가 있습니다.|  
 |11|`[^<>]*`|"mno"를 찾습니다.|  
 |12|`)+`|"<mno"는 캡처된 두 번째 그룹의 값입니다.<br /><br /> 입력 문자열의 다음 문자가 왼쪽 꺾쇠괄호이므로 정규식 엔진은 `(?'Open'<)[^<>]*)` 하위 패턴으로 루프백합니다.|  
-|13|`(((?'Open'<)`|“\<xyz>”에서 왼쪽 꺾쇠괄호를 찾아 `Open` 그룹에 할당합니다. 이제 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 그룹의 `Open` 컬렉션에 두 개의 캡처 즉, “\<mno”의 왼쪽 꺾쇠괄호와 “\<xyz>”의 왼쪽 꺾쇠괄호가 포함되어 있습니다.|  
+|13|`(((?'Open'<)`|“\<xyz>”에서 왼쪽 꺾쇠괄호를 찾아 `Open` 그룹에 할당합니다. 이제 `Open` 그룹의 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 컬렉션에 두 개의 캡처 즉, “\<mno”의 왼쪽 꺾쇠괄호와 “\<xyz>”의 왼쪽 꺾쇠괄호가 포함되어 있습니다.|  
 |14|`[^<>]*`|"xyz"를 찾습니다.|  
 |15|`)+`|"<xyz"는 캡처된 두 번째 그룹의 값입니다.<br /><br /> 입력 문자열의 다음 문자가 왼쪽 꺾쇠괄호가 아니므로 정규식 엔진은 `(?'Open'<)[^<>]*)` 하위 패턴으로 루프백하지 않습니다.|  
-|16|`((?'Close-Open'>)`|“\<xyz>”에서 오른쪽 꺾쇠괄호를 찾습니다. "xyz"는 `Open` 그룹과 오른쪽 꺾쇠 괄호 사이의 부분 문자열을 `Close` 그룹에 할당하고 `Open` 그룹의 현재 값을 삭제합니다. 이전 캡처의 값(“\<mno”의 왼쪽 꺾쇠괄호)이 `Open` 그룹의 현재 값이 됩니다. 이제 <xref:System.Text.RegularExpressions.Group.Captures%2A> 그룹의 `Open` 컬렉션에 단일 캡처인 “\<xyz>”의 왼쪽 꺾쇠괄호가 포함되어 있습니다.|  
+|16|`((?'Close-Open'>)`|“\<xyz>”에서 오른쪽 꺾쇠괄호를 찾습니다. "xyz"는 `Open` 그룹과 오른쪽 꺾쇠 괄호 사이의 부분 문자열을 `Close` 그룹에 할당하고 `Open` 그룹의 현재 값을 삭제합니다. 이전 캡처의 값(“\<mno”의 왼쪽 꺾쇠괄호)이 `Open` 그룹의 현재 값이 됩니다. 이제 `Open` 그룹의 <xref:System.Text.RegularExpressions.Group.Captures%2A> 컬렉션에 단일 캡처인 “\<xyz>”의 왼쪽 꺾쇠괄호가 포함되어 있습니다.|  
 |17|`[^<>]*`|꺾쇠괄호가 아닌 문자를 찾습니다. 일치 항목이 없습니다.|  
 |18|`)+`|캡처된 세 번째 그룹의 값은 ">"입니다.<br /><br /> 입력 문자열의 다음 문자가 오른쪽 꺾쇠괄호이므로 정규식 엔진은 `((?'Close-Open'>)[^<>]*)` 하위 패턴으로 루프백합니다.|  
-|19|`((?'Close-Open'>)`|“xyz>>”에서 최종 오른쪽 꺾쇠괄호를 찾고 \< 그룹과 오른쪽 꺾쇠괄호 사이의 부분 문자열인 “mno`Open`xyz>”를 `Close` 그룹에 할당한 다음, `Open` 그룹의 현재 값을 삭제합니다. 이제 `Open` 그룹이 비어 있습니다.|  
+|19|`((?'Close-Open'>)`|“xyz>>”에서 최종 오른쪽 꺾쇠괄호를 찾고 `Open` 그룹과 오른쪽 꺾쇠괄호 사이의 부분 문자열인 “mno\<xyz>”를 `Close` 그룹에 할당한 다음, `Open` 그룹의 현재 값을 삭제합니다. 이제 `Open` 그룹이 비어 있습니다.|  
 |20|`[^<>]*`|꺾쇠괄호가 아닌 문자를 찾습니다. 일치 항목이 없습니다.|  
 |21|`)+`|캡처된 세 번째 그룹의 값은 ">"입니다.<br /><br /> 입력 문자열의 다음 문자가 오른쪽 꺾쇠괄호가 아니므로 정규식 엔진은 `((?'Close-Open'>)[^<>]*)` 하위 패턴으로 루프백하지 않습니다.|  
 |22|`)*`|캡처된 첫 번째 그룹의 값은 “<mno\<xyz>>”입니다.<br /><br /> 입력 문자열의 다음 문자가 왼쪽 꺾쇠괄호가 아니므로 정규식 엔진은 `(((?'Open'<)` 하위 패턴으로 루프백하지 않습니다.|  
@@ -351,7 +351,7 @@ ms.locfileid: "78159223"
   
  `(?<=` *subexpression* `)`  
   
- 여기서 *subexpression*은 임의의 정규식 패턴입니다. 찾기가 성공하려면 *이 일치 결과에 포함되지 않더라도* subexpression`subexpression`이 입력 문자열에서 현재 위치의 왼쪽에서 발생해야 합니다. 너비가 0인 긍정 lookbehind 어설션은 역추적하지 않습니다.  
+ 여기서 *subexpression*은 임의의 정규식 패턴입니다. 찾기가 성공하려면 `subexpression`이 일치 결과에 포함되지 않더라도 *subexpression*이 입력 문자열에서 현재 위치의 왼쪽에서 발생해야 합니다. 너비가 0인 긍정 lookbehind 어설션은 역추적하지 않습니다.  
   
  너비가 0인 긍정 lookbehind 어설션은 일반적으로 정규식의 시작 부분에 사용됩니다. 이 어설션이 정의하는 패턴은 이 패턴이 일치 결과에 포함되지 않더라도 일치에 대한 사전 조건입니다.  
   

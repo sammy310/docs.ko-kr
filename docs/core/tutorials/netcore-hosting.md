@@ -2,13 +2,14 @@
 title: 사용자 지정 .NET Core 런타임 호스트 작성
 description: .NET Core 런타임의 작동 방식을 제어해야 하는 고급 시나리오를 지원하기 위해 네이티브 코드에서 .NET Core 런타임을 호스트하는 방법을 알아봅니다.
 author: mjrousos
+ms.topic: how-to
 ms.date: 12/21/2018
-ms.openlocfilehash: 46c7873a1865db04cf1c2b1bb2ded2b5dacbcc8d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 342a0cec78303f70db3a5b31294be1d465459f55
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78239900"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83394848"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>사용자 지정 .NET Core 호스트를 작성하여 네이티브 코드에서 .NET 런타임 제어
 

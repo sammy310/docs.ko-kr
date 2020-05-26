@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 189f28f8-f9a1-4192-aedc-91084e4f8b99
 topic_type:
 - apiref
-ms.openlocfilehash: b896c5509cc4862a6416381f89bc04a28959e091
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 456553e4cb5a6c6a557b5c3ac677fad12a5798bf
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121462"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83803825"
 ---
 # <a name="ihostsecuritymanagerreverttoself-method"></a>IHostSecurityManager::RevertToSelf 메서드
 현재 사용자 id의 가장을 종료 하 고 원래 스레드 토큰을 반환 합니다.  
@@ -31,31 +31,31 @@ ms.locfileid: "73121462"
 HRESULT RevertToSelf ();  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
-|HRESULT|설명|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|S_OK|`RevertToSelf` 성공적으로 반환 되었습니다.|  
+|S_OK|`RevertToSelf`성공적으로 반환 되었습니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR (공용 언어 런타임)이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자가 잠금을 소유 하지 않습니다.|  
 |HOST_E_ABANDONED|차단 된 스레드나 파이버에서 대기 하는 동안 이벤트를 취소 했습니다.|  
-|E_FAIL|알 수 없는 치명적인 오류가 발생 했습니다. 메서드가 E_FAIL을 반환 하는 경우 프로세스 내에서 더 이상 CLR을 사용할 수 없습니다. 호스팅 메서드에 대 한 후속 호출은 HOST_E_CLRNOTAVAILABLE을 반환 합니다.|  
+|E_FAIL|알 수 없는 치명적인 오류가 발생 했습니다. 메서드가 E_FAIL 반환 하는 경우 해당 프로세스 내에서 더 이상 CLR을 사용할 수 없습니다. 호스팅 메서드를 이후에 호출 하면 HOST_E_CLRNOTAVAILABLE 반환 됩니다.|  
   
-## <a name="remarks"></a>주의  
- [ImpersonateLoggedOnUser](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-impersonateloggedonuser-method.md) 메서드를 이전에 호출 하 고 나면 `RevertToSelf` 호출 되어 원래 스레드 토큰으로 돌아갑니다.  
+## <a name="remarks"></a>설명  
+ `RevertToSelf`[ImpersonateLoggedOnUser](ihostsecuritymanager-impersonateloggedonuser-method.md) 메서드를 이전에 호출 하 고 나 서 원래 스레드 토큰을 반환 하기 위해가 호출 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
  **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [IHostSecurityContext 인터페이스](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)
-- [IHostSecurityManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)
-- [ImpersonateLoggedOnUser 메서드](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-impersonateloggedonuser-method.md)
+- [IHostSecurityContext 인터페이스](ihostsecuritycontext-interface.md)
+- [IHostSecurityManager 인터페이스](ihostsecuritymanager-interface.md)
+- [ImpersonateLoggedOnUser 메서드](ihostsecuritymanager-impersonateloggedonuser-method.md)

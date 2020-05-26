@@ -2,12 +2,12 @@
 title: Entity Framework Core를 사용하여 인프라 지속성 레이어 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | Entity Framework Core를 사용하여 인프라 지속성 계층에 대한 구현 세부 정보를 탐색합니다.
 ms.date: 01/30/2020
-ms.openlocfilehash: 7ab3be0d6a5affda478f7ec8f6c356571e304759
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: c91980504b0f9de859c6d211f3a1f47435b2d3cc
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805484"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396250"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Entity Framework Core를 사용하여 인프라 지속성 레이어 구현
 
@@ -117,7 +117,7 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 구현 수준에서 보자면, 리포지토리는 다음 클래스에서 볼 수 있듯이 업데이트를 수행할 때 작업 단위(EF Core의 DBContext)에 의해 조정되는 데이터 지속성 코드가 있는 클래스일 뿐입니다.
 
 ```csharp
-// using statements...
+// using directives...
 namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositories
 {
     public class BuyerRepository : IBuyerRepository
