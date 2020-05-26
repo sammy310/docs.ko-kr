@@ -4,12 +4,12 @@ description: 식 트리의 구조를 검사하는 코드를 작성하는 방법�
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 1283d7d957c72558652b96cb428efd0f071f0184
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5734e1be6b59bfe3eae97f29d1bd91e7e3a3623f
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146010"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761865"
 ---
 # <a name="interpreting-expressions"></a>식 해석
 
@@ -51,7 +51,7 @@ The value of the constant value is 24
 Expression<Func<int>> sum = () => 1 + 2;
 ```
 
-> `var`을 사용하여 이 식 트리를 선언하지 않습니다. 왜냐하면 할당의 오른쪽이 암시적으로 형식화되어 있기 때문에 그렇게 할 수 없습니다. 이 사항을 좀더 자세히 이해하려면 [여기](implicitly-typed-lambda-expressions.md)를 읽어보세요.
+> `var`을 사용하여 이 식 트리를 선언하지 않습니다. 왜냐하면 할당의 오른쪽이 암시적으로 형식화되어 있기 때문에 그렇게 할 수 없습니다.
 
 루트 노드는 `LambdaExpression`입니다. `=>` 연산자의 오른쪽에서 흥미로운 코드를 가져오려면 `LambdaExpression`의 자식 중 하나를 찾아야 합니다. 이 섹션에서는 모든 식을 사용하여 찾습니다. 부모 노드는 `LambdaExpression`의 반환 형식을 찾는 데 도움이 됩니다.
 

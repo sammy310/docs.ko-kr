@@ -2,12 +2,12 @@
 title: dotnet new 명령
 description: dotnet new 명령은 지정된 템플릿을 기반으로 새 .NET Core 프로젝트를 만듭니다.
 ms.date: 04/10/2020
-ms.openlocfilehash: 9a68baafa7ac3e6ad2fdc8f1c6e8621d6e15f1ff
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 1544f519f2a5f6a1a6e042c1db720eff45f5d98c
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506859"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442243"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -21,7 +21,7 @@ ms.locfileid: "82506859"
 
 ```dotnetcli
 dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install {PATH|NUGET_ID}]
-    [-lang|--language {C#|F#|VB}] [-n|--name <OUTPUT_NAME>]
+    [-lang|--language {"C#"|"F#"|VB}] [-n|--name <OUTPUT_NAME>]
     [--nuget-source <SOURCE>] [-o|--output <OUTPUT_DIRECTORY>]
     [-u|--uninstall] [--update-apply] [--update-check] [Template options]
 
@@ -680,7 +680,7 @@ dotnet new -h|--help
 - 현재 디렉터리에 F# 콘솔 애플리케이션 프로젝트를 만듭니다.
 
   ```dotnetcli
-  dotnet new console -lang F#
+  dotnet new console -lang "F#"
   ```
 
 - 지정된 디렉터리에 .NET Standard 클래스 라이브러리 프로젝트를 만듭니다.

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 1e0141ceafe4c3450b3f798463ddc62ea79f1b36
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: ca499f9762f52126720159fb7c22660b1001895c
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615217"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83802923"
 ---
 # <a name="types-c-programming-guide"></a>형식(C# 프로그래밍 가이드)
 
@@ -92,10 +92,10 @@ C#에서는 정수, 부동 소수점 값, 부울 식, 텍스트 문자, 10진수
 
 값 형식에는 [struct](../../language-reference/builtin-types/struct.md) 및 [enum](../../language-reference/builtin-types/enum.md)의 두 가지 범주가 있습니다.
 
-기본 제공 숫자 형식은 구조체이며, 액세스할 수 있는 속성과 메서드가 있습니다.
+기본 제공 숫자 형식은 구조체이며, 액세스할 수 있는 필드와 메서드가 있습니다.
 
 ```csharp
-// Static method on type byte.
+// constant field on type byte.
 byte b = byte.MaxValue;
 ```
 
