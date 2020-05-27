@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6dcc4a4b-3a78-4369-bcc7-c0be6dde57d4
 topic_type:
 - apiref
-ms.openlocfilehash: d76fbb727386c84f2419ceaeecc6756514c2f124
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: afdcb21c755cb3ffbe9f273ff40361d8f8dff631
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132972"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83841436"
 ---
 # <a name="ihosttaskmanagersetstackguarantee-method"></a>IHostTaskManager::SetStackGuarantee 메서드
-내부용으로 예약 되어 있습니다.  
+이 속성은 내부 전용으로 예약되어 있으므로  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,15 +34,15 @@ HRESULT SetStackGuarantee(
 ```  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
  **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [GetStackGuarantee 메서드](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getstackguarantee-method.md)
-- [IHostTaskManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [GetStackGuarantee 메서드](ihosttaskmanager-getstackguarantee-method.md)
+- [IHostTaskManager 인터페이스](ihosttaskmanager-interface.md)

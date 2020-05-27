@@ -2,12 +2,12 @@
 title: 비동기 반환 형식(C#)
 ms.date: 04/14/2020
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 73a6e1924652c8635377547e2faddc864ac5540a
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: c2584f1e285a7ab76eb43f9a211a8d2a51c2c55e
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389127"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761878"
 ---
 # <a name="async-return-types-c"></a>비동기 반환 형식(C#)
 
@@ -26,7 +26,7 @@ ms.locfileid: "81389127"
   
 다음 예제에서 `GetLeisureHours` 비동기 메서드는 정수를 반환하는 `return` 문을 포함합니다. 따라서 메서드 선언은 `Task<int>`의 반환 형식을 지정해야 합니다.  <xref:System.Threading.Tasks.Task.FromResult%2A> 비동기 메서드는 문자열을 반환하는 작업에 대한 자리 표시자입니다.
   
-:::code language="csharp" source="./snippets/async-returns1.cs" id="SnippetFirstExample":::
+:::code language="csharp" source="./snippets/async-return-types/async-returns1.cs" id="SnippetFirstExample":::
 
 `ShowTodaysInfo` 메서드의 await 식 내에서 `GetLeisureHours`를 호출하면 await 식이 `GetLeisureHours`에서 반환된 작업에 저장된 정수 값(`leisureHours` 값)을 검색합니다. await 식에 대한 자세한 내용은 [await](../../../language-reference/operators/await.md)를 참조하세요.  
   
@@ -35,14 +35,14 @@ ms.locfileid: "81389127"
 > [!IMPORTANT]
 > <xref:System.Threading.Tasks.Task%601.Result%2A> 속성은 차단 속성입니다. 해당 작업이 완료되기 전에 액세스하려고 하면, 작업이 완료되고 값을 사용할 수 있을 때까지 현재 활성화된 스레드가 차단됩니다. 대부분의 경우 속성에 직접 액세스하지 않고 `await`를 사용하여 값에 액세스해야 합니다. <br/> 앞의 예제에서는 `ShowTodaysInfo` 메서드가 애플리케이션 종료 전에 실행을 완료할 수 있도록 <xref:System.Threading.Tasks.Task%601.Result%2A> 속성의 값을 검색하여 주 스레드를 차단했습니다.  
 
-:::code language="csharp" source="./snippets/async-returns1a.cs" id="SnippetSecondVersion":::
+:::code language="csharp" source="./snippets/async-return-types/async-returns1a.cs" id="SnippetSecondVersion":::
 
 ## <a name="task-return-type"></a>Task 반환 형식  
 `return` 문을 포함하지 않거나 피연산자를 반환하지 않는 `return` 문을 포함하는 비동기 메서드의 반환 형식은 일반적으로 <xref:System.Threading.Tasks.Task>입니다. 이러한 메서드는 동기적으로 실행될 경우 `void`를 반환합니다. 비동기 메서드에 대해 <xref:System.Threading.Tasks.Task> 반환 형식을 사용하는 경우 호출된 비동기 메서드가 완료될 때까지 호출 메서드는 `await` 연산자를 사용하여 호출자의 완료를 일시 중단할 수 있습니다.  
   
 다음 예제에서 `WaitAndApologize` 비동기 메서드에는 `return` 문이 없으므로 메서드가 <xref:System.Threading.Tasks.Task> 개체를 반환합니다. `Task`를 반환하면 `WaitAndApologize`가 대기할 수 있습니다. <xref:System.Threading.Tasks.Task> 형식에는 반환 값이 없으므로 `Result` 속성이 포함되지 않습니다.  
 
-:::code language="csharp" source="./snippets/async-returns2.cs" id="SnippetTaskReturn":::
+:::code language="csharp" source="./snippets/async-return-types/async-returns2.cs" id="SnippetTaskReturn":::
 
 동기 void를 반환하는 메서드에 대한 호출 문과 비슷하게 await 식 대신 await 문을 사용하여 `WaitAndApologize`가 대기됩니다. 이 경우 await 연산자를 적용하면 값이 산출되지 않습니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "81389127"
   
 다음 코드에서는 `WaitAndApologize` 메서드 호출과 해당 메서드에서 반환하는 작업 대기를 구분합니다.  
 
-:::code language="csharp" source="./snippets/async-returns2a.cs" id="SnippetAwaitTask":::
+:::code language="csharp" source="./snippets/async-return-types/async-returns2a.cs" id="SnippetAwaitTask":::
 
 ## <a name="void-return-type"></a>Void 반환 형식
 
@@ -62,7 +62,7 @@ Void를 반환하는 비동기 메서드의 호출자는 메서드에서 throw�
   
 다음 예제에서는 비동기 이벤트 처리기의 동작을 보여줍니다. 예제 코드에서 비동기 이벤트 처리기는 주 스레드가 완료되면 이를 알려야 합니다. 그런 다음, 주 스레드는 비동기 이벤트 처리기가 프로그램을 종료하기 전에 완료될 때까지 대기할 수 있습니다.
 
-:::code language="csharp" source="./snippets/async-returns3.cs":::
+:::code language="csharp" source="./snippets/async-return-types/async-returns3.cs":::
 
 ## <a name="generalized-async-return-types-and-valuetasktresult"></a>일반화된 비동기 반환 형식 및 ValueTask\<TResult\>
 
@@ -72,13 +72,13 @@ C# 7.0부터 비동기 메서드는 액세스 가능한 `GetAwaiter` 메서드�
 
 .NET에서는 <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType> 구조체를 일반화된 작업 반환 값의 간단한 구현으로 제공합니다. <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType> 형식을 사용하려면 `System.Threading.Tasks.Extensions` NuGet 패키지를 프로젝트에 추가해야 합니다. 다음 예제에서는 <xref:System.Threading.Tasks.ValueTask%601> 구조체를 사용하여 두 주사위 굴리기 값을 검색합니다.
   
-:::code language="csharp" source="./snippets/async-valuetask.cs":::
+:::code language="csharp" source="./snippets/async-return-types/async-valuetask.cs":::
 
 ## <a name="async-streams-with-iasyncenumerablet"></a>IAsyncEnumerable\<T\>를 사용하는 비동기 스트림
 
 C# 8.0부터 비동기 메서드는 <xref:System.Collections.Generic.IAsyncEnumerable%601>을 통해 표시되는 ‘비동기 스트림’을 반환할 수 있습니다.  비동기 스트림은 반복되는 비동기 호출을 통해 요소가 청크로 생성될 때 스트림에서 읽은 항목을 열거하는 방법을 제공합니다. 다음 예제에서는 비동기 스트림을 생성하는 비동기 메서드를 보여 줍니다.
 
-:::code language="csharp" source="./snippets/AsyncStreams.cs" id="SnippetGenerateAsyncStream":::
+:::code language="csharp" source="./snippets/async-return-types/AsyncStreams.cs" id="SnippetGenerateAsyncStream":::
 
 앞의 예제에서는 문자열의 줄을 비동기적으로 읽습니다. 각 줄을 읽은 후에는 코드가 문자열에서 각 단어를 열거합니다. 호출자는 `await foreach` 문을 사용하여 각 단어를 열거합니다. 메서드는 소스 문자열에서 다음 줄을 비동기적으로 읽어야 하는 경우 대기합니다.
 

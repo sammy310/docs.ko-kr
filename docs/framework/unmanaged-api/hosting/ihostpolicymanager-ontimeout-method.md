@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0a313b51-5e4d-4714-a86b-af75cf3902e6
 topic_type:
 - apiref
-ms.openlocfilehash: d5b5fa5198ae2c0bba30ae0f8d6d3834f2891672
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fb0f943d710322257d052edc5c16108671622790
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178013"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804213"
 ---
 # <a name="ihostpolicymanagerontimeout-method"></a>IHostPolicyManager::OnTimeout 메서드
-호스트에 공통 언어 런타임(CLR)이 [ICLRPolicyPolicy::SetActionOnTimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactionontimeout-method.md) 메서드에 대한 호출에서 지정한 작업을 수행하려고 한다는 것을 호스트에 시간 지정에 대한 응답으로 지정합니다.  
+시간 제한에 대 한 응답으로 CLR (공용 언어 런타임)이 [ICLRPolicyManager:: SetActionOnTimeout](iclrpolicymanager-setactionontimeout-method.md) 메서드 호출에 지정 된 작업을 수행 하려고 함을 호스트에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,34 +36,34 @@ HRESULT OnTimeout (
   
 ## <a name="parameters"></a>매개 변수  
  `operation`  
- 【인】 시간 중지된 작업 종류를 나타내는 [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) 값 중 하나입니다.  
+ 진행 시간 초과 된 작업의 종류를 나타내는 [EClrOperation](eclroperation-enumeration.md) 값 중 하나입니다.  
   
  `action`  
- 【인】 [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) 값 중 하나로, CLR이 시간 시간에 대한 응답으로 수행하는 작업을 나타냅니다.  
+ 진행 CLR이 제한 시간에 대 한 응답으로 수행 하는 작업을 나타내는 [EPolicyAction](epolicyaction-enumeration.md) 값 중 하나입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
   
 |HRESULT|Description|  
 |-------------|-----------------|  
-|S_OK|`OnTimeout`성공적으로 반환됩니다.|  
-|HOST_E_CLRNOTAVAILABLE|CLR이 프로세스에 로드되지 않았거나 CLR이 관리 코드를 실행하거나 호출을 성공적으로 처리할 수 없는 상태입니다.|  
-|HOST_E_TIMEOUT|통화 시간이 시간 미정으로 확인되었습니다.|  
-|HOST_E_NOT_OWNER|호출자는 잠금을 소유하지 않습니다.|  
-|HOST_E_ABANDONED|차단된 스레드 또는 파이버가 대기하는 동안 이벤트가 취소되었습니다.|  
-|E_FAIL|알 수 없는 치명적인 오류가 발생했습니다. 메서드가 E_FAIL 반환하면 프로세스 내에서 CLR을 더 이상 사용할 수 없습니다. 호스팅 메서드에 대한 후속 호출은 HOST_E_CLRNOTAVAILABLE 반환합니다.|  
+|S_OK|`OnTimeout`성공적으로 반환 되었습니다.|  
+|HOST_E_CLRNOTAVAILABLE|CLR이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
+|HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
+|HOST_E_NOT_OWNER|호출자가 잠금을 소유 하지 않습니다.|  
+|HOST_E_ABANDONED|차단 된 스레드나 파이버에서 대기 하는 동안 이벤트를 취소 했습니다.|  
+|E_FAIL|알 수 없는 치명적인 오류가 발생 했습니다. 메서드가 E_FAIL 반환 하는 경우 해당 프로세스 내에서 더 이상 CLR을 사용할 수 없습니다. 호스팅 메서드를 이후에 호출 하면 HOST_E_CLRNOTAVAILABLE 반환 됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** MSCorE.h  
+ **헤더:** Mscoree.dll  
   
- **라이브러리:** MSCorEE.dll의 리소스로 포함  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [EClrOperation 열거형](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)
-- [EPolicyAction 열거형](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)
-- [ICLRPolicyManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
-- [IHostPolicyManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)
+- [EClrOperation 열거형](eclroperation-enumeration.md)
+- [EPolicyAction 열거형](epolicyaction-enumeration.md)
+- [ICLRPolicyManager 인터페이스](iclrpolicymanager-interface.md)
+- [IHostPolicyManager 인터페이스](ihostpolicymanager-interface.md)

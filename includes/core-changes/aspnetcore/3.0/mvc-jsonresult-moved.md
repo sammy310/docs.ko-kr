@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f6fd75c5b49156f44d31c650ea452eb549f13b0e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1356f3eee5e2d8090d7d96aafc07a19507a1aff1
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75901742"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721597"
 ---
 ### <a name="mvc-jsonresult-moved-to-microsoftaspnetcoremvccore"></a>MVC: JsonResult를 Microsoft.AspNetCore.Mvc.Core로 이동
 
@@ -46,7 +46,7 @@ ASP.NET Core
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 `T:Microsoft.AspNetCore.Mvc.JsonResult`
 

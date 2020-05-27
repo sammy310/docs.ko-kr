@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 6c35174be50ffc5031d0c4183bd936b4ef27757e
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 251b8df571dc08ab8362a6e8551f0f9f62c25a11
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82859818"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702504"
 ---
 ### <a name="sse-and-sse2-comparegreaterthan-methods-properly-handle-nan-inputs"></a>SSE 및 SSE2 CompareGreaterThan 메서드가 NaN 입력을 올바르게 처리함
 
@@ -74,7 +74,7 @@ SSE(스트리밍 SIMD 확장) 및 SSE2(스트리밍 SIMD 확장 2) ISA(업계 �
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `M:System.Runtime.Intrinsics.X86.Sse.CompareGreaterThan(System.Runtime.Intrinsics.Vector128{System.Single},System.Runtime.Intrinsics.Vector128{System.Single})`
 - `M:System.Runtime.Intrinsics.X86.Sse.CompareGreaterThanOrEqual(System.Runtime.Intrinsics.Vector128{System.Single},System.Runtime.Intrinsics.Vector128{System.Single})`

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b736ab743a628fdcbc53c5ee51551e5dad986885
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: 4a34a64eba72ea24c1d830566565ce4fbee8e5b7
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888135"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721410"
 ---
 ### <a name="cellformatting-event-not-raised-if-tooltip-is-shown"></a>도구 설명이 표시되면 CellFormatting 이벤트가 발생하지 않습니다.
 
@@ -34,7 +34,7 @@ Windows Forms
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 Not detectable via API analysis.
 

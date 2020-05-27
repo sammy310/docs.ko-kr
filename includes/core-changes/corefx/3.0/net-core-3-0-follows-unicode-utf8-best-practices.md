@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: becae23cd810623bbb33c693b707c2d4735aeece
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: 298cb441bf9fe7daddb30c85f9d7366dc972628c
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158481"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721371"
 ---
 ### <a name="replacing-ill-formed-utf-8-byte-sequences-follows-unicode-guidelines"></a>잘못된 형식의 UTF-8바이트 시퀀스 교체는 유니코드 지침을 따름
 
@@ -46,7 +46,7 @@ ms.locfileid: "82158481"
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `Overload:System.Text.UTF8Encoding.GetCharCount`
 - `Overload:System.Text.UTF8Encoding.GetChars`

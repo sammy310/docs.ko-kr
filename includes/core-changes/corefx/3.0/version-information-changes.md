@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 1580c8c8b7bdad91656f494537230293dbaaf93b
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: bb264e406c6604c3606e564d99018eda0f9e8d89
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021622"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721583"
 ---
 ### <a name="apis-that-report-version-now-report-product-and-not-file-version"></a>버전을 보고하는 API가 이제 파일 버전이 아닌 제품 버전을 보고함
 
@@ -37,7 +37,7 @@ ms.locfileid: "82021622"
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `P:System.Environment.Version`
 - `P:System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription`

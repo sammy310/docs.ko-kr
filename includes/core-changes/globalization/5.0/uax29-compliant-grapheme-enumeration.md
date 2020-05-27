@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f131933f3cf7890939854c46f115e8deb8da1cc2
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: c0c1c9c9d8e3aeb6f689f754d09b50b208b54112
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888174"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702262"
 ---
 ### <a name="stringinfo-and-textelementenumerator-are-now-uax29-compliant"></a>StringInfo 및 TextElementEnumerator가 이제 UAX29 규격임
 
@@ -91,21 +91,23 @@ Grapheme 1: "🤷🏽‍♀️"
 
 .NET 5.0 미리 보기 1
 
-### <a name="recommended-action"></a>권장 조치
+#### <a name="recommended-action"></a>권장 조치
 
 아무 작업도 수행할 필요가 없습니다. 앱은 자동으로 다양한 세계화 관련 시나리오에서 더 많은 표준 규격 방식으로 동작합니다.
 
-### <a name="category"></a>범주
+#### <a name="category"></a>범주
 
 전역화
 
-### <a name="affected-apis"></a>영향을 받는 API
+#### <a name="affected-apis"></a>영향을 받는 API
 
 - <xref:System.Globalization.StringInfo?displayProperty=fullName>
 - <xref:System.Globalization.TextElementEnumerator?displayProperty=fullName>
 - <xref:Microsoft.VisualBasic.Strings.StrReverse%2A?displayProperty=fullName>
 
 <!--
+
+#### Affected APIs
 
 - `T:System.Globalization.StringInfo`
 - `T:System.Globalization.TextElementEnumerator`

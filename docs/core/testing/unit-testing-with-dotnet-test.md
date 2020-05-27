@@ -4,12 +4,12 @@ description: dotnet test 및 xUnit을 사용하여 샘플 솔루션을 단계별
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: c9e3d63a2cf4f560591459833340b729ffec1b95
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d8cf0e29c8a482b39bd7e99bcde1fd60301f046f
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240898"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702941"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>dotnet 테스트 및 xUnit을 사용하여 .NET Core에서 C# 단위 테스트
 
@@ -52,18 +52,18 @@ ms.locfileid: "78240898"
 * *PrimeService.cs*의 코드를 다음 코드로 바꿉니다.
   
   ```csharp
-    using System;
+  using System;
 
-    namespace Prime.Services
-    {
-        public class PrimeService
-        {
-            public bool IsPrime(int candidate)
-            {
-                throw new NotImplementedException("Not implemented.");
-            }
-        }
-    }
+  namespace Prime.Services
+  {
+      public class PrimeService
+      {
+          public bool IsPrime(int candidate)
+          {
+              throw new NotImplementedException("Not implemented.");
+          }
+      }
+  }
   ```
 
 * 위의 코드는:
@@ -85,7 +85,7 @@ ms.locfileid: "78240898"
   ```
 
 * 이전 명령은
-  * *PrimeService.Tests* 디렉터리에 *PrimeService.Tests* 프로젝트를 만듭니다. 테스트 프로젝트는 [xUnit](https://xunit.github.io/)을 테스트 라이브러리로 사용합니다.
+  * *PrimeService.Tests* 디렉터리에 *PrimeService.Tests* 프로젝트를 만듭니다. 테스트 프로젝트는 [xUnit](https://xunit.net/)을 테스트 라이브러리로 사용합니다.
   * 프로젝트 파일에 다음 `<PackageReference />` 요소를 추가하여 Test Runner를 구성합니다.
     * "Microsoft.NET.Test.Sdk"
     * "xunit"
@@ -190,7 +190,6 @@ Assert.False(result, "1 should not be prime");
 매개 변수만 변경될 때 테스트 코드를 복사하면 코드 중복 및 테스트 블로트가 발생합니다. 다음 xUnit 특성은 유사한 테스트 모음을 작성하는 데 사용할 수 있습니다.
 
 - `[Theory]`는 같은 코드를 실행하지만, 다른 입력 인수가 포함된 테스트 모음을 나타냅니다.
-
 - `[InlineData]` 특성은 해당 입력에 대한 값을 지정합니다.
 
 새 테스트를 만들지 않고 앞의 xUnit 특성을 적용하여 단일 이론을 만듭니다. 코드 바꾸기 대상:
@@ -230,6 +229,6 @@ TDD 방식에 따라 실패하는 테스트를 더 추가한 후 대상 코드�
 
 ### <a name="additional-resources"></a>추가 자료
 
-- [xUnit.net 공식 사이트](https://xunit.github.io)
+- [xUnit.net 공식 사이트](https://xunit.net)
 - [ASP.NET Core에서 컨트롤러 논리 테스트](/aspnet/core/mvc/controllers/testing)
 - [`dotnet add reference`](../tools/dotnet-add-reference.md)

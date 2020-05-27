@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d35de48dd22003c851cf5dba9e8517ec48b9217b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c0551fa086644497c631cd9b6d7058398ff9ccfa
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74567773"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702315"
 ---
 ### <a name="c-locale-maps-to-the-invariant-locale"></a>"C" 로캘이 고정 로캘에 매핑됩니다
 
@@ -20,18 +20,20 @@ en_US_POSIX는 대/소문자를 구분하지 않는 정렬/검색 문자열 작�
 
 3.0
 
-### <a name="recommended-action"></a>권장 조치
+#### <a name="recommended-action"></a>권장 조치
 
 이 변경 내용을 아는 것 외에 특별히 다른 것은 없습니다. 이러한 변경 내용은 “C” 로캘을 사용하는 애플리케이션에만 영향을 줍니다.
 
-### <a name="category"></a>범주
+#### <a name="category"></a>범주
 
 전역화
 
-### <a name="affected-apis"></a>영향을 받는 API
+#### <a name="affected-apis"></a>영향을 받는 API
 
 모든 데이터 정렬 및 문화권 API는 이 변경 내용의 영향을 받습니다.
 
 <!--
+
+#### Affected APIs
 
 -->
