@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: d8ec8d3c-70f7-4cc6-9957-68068fd8f49c
 topic_type:
 - apiref
-ms.openlocfilehash: 04dc12ab4d7d178ebf1575a3260f9f4981972782
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2985c419b25b8bf76df8fee0f0f37ba9ebee3df7
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176190"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007905"
 ---
 # <a name="corcheckduplicatesfor-enumeration"></a>CorCheckDuplicatesFor 열거형
-중복을 검사할 메타데이터 토큰을 지정합니다.  
+중복을 확인할 메타 데이터 토큰을 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -64,45 +64,45 @@ typedef enum CorCheckDuplicatesFor {
 } CorCheckDuplicatesFor;  
 ```  
   
-## <a name="members"></a>구성원  
+## <a name="members"></a>멤버  
   
-|멤버|Description|  
+|멤버|설명|  
 |------------|-----------------|  
-|`MDDupAll`|모든 메타데이터 토큰에 중복이 있는지 확인합니다.|  
+|`MDDupAll`|모든 메타 데이터 토큰에 중복 항목이 있는지 확인 합니다.|  
 |`MDDupENC`|사용되지 않습니다.|  
-|`MDNoDupChecks`|메타데이터 토큰에 중복이 있는지 확인하지 마십시오.|  
-|`MDDupTypeDef`|토큰의 `mdTypeDef` 중복을 확인합니다.|  
-|`MDDupInterfaceImpl`|토큰의 `mdInterfaceImpl` 중복을 확인합니다.|  
-|`MDDupMethodDef`|토큰의 `mdMethodDef` 중복을 확인합니다.|  
-|`MDDupTypeRef`|토큰의 `mdTypeRef` 중복을 확인합니다.|  
-|`MDDupMemberRef`|토큰의 `mdMemberRef` 중복을 확인합니다.|  
-|`MDDupCustomAttribute`|토큰의 `mdCustomAttribute` 중복을 확인합니다.|  
-|`MDDupParamDef`|토큰의 `mdParamDef` 중복을 확인합니다.|  
-|`MDDupPermission`|토큰의 `mdPermission` 중복을 확인합니다.|  
-|`MDDupProperty`|토큰의 `mdProperty` 중복을 확인합니다.|  
-|`MDDupEvent`|토큰의 `mdEvent` 중복을 확인합니다.|  
-|`MDDupFieldDef`|토큰의 `mdFieldDef` 중복을 확인합니다.|  
-|`MDDupSignature`|토큰의 `mdSignature` 중복을 확인합니다.|  
-|`MDDupModuleRef`|토큰의 `mdModuleRef` 중복을 확인합니다.|  
-|`MDDupTypeSpec`|토큰의 `mdTypeSpec` 중복을 확인합니다.|  
-|`MDDupImplMap`|토큰의 `mdImplMap` 중복을 확인합니다.|  
-|`MDDupAssemblyRef`|토큰의 `mdAssemblyRef` 중복을 확인합니다.|  
-|`MDDupFile`|토큰의 `mdFile` 중복을 확인합니다.|  
-|`MDDupExportedType`|토큰의 `mdExportedType` 중복을 확인합니다.|  
-|`MDDupManifestResource`|토큰의 `mdManifestResource` 중복을 확인합니다.|  
-|`MDDupGenericParam`|토큰의 `mdGenericParam` 중복을 확인합니다.|  
-|`MDDupMethodSpec`|토큰의 `mdMethodSpec` 중복을 확인합니다.|  
-|`MDDupGenericParamConstraint`|토큰의 `mdGenericParamConstraint` 중복을 확인합니다.|  
-|`MDDupAssembly`|토큰의 `mdAssembly` 중복을 확인합니다.|  
-|`MDDupDefault`|및 `mdMemberRef` `mdTypeRef` `mdMethodSpec` 토큰의 중복을 확인합니다. `mdSignature` `mdTypeSpec`|  
+|`MDNoDupChecks`|메타 데이터 토큰에서 중복 항목을 확인 하지 않습니다.|  
+|`MDDupTypeDef`|토큰의 중복을 확인 `mdTypeDef` 합니다.|  
+|`MDDupInterfaceImpl`|토큰의 중복을 확인 `mdInterfaceImpl` 합니다.|  
+|`MDDupMethodDef`|토큰의 중복을 확인 `mdMethodDef` 합니다.|  
+|`MDDupTypeRef`|토큰의 중복을 확인 `mdTypeRef` 합니다.|  
+|`MDDupMemberRef`|토큰의 중복을 확인 `mdMemberRef` 합니다.|  
+|`MDDupCustomAttribute`|토큰의 중복을 확인 `mdCustomAttribute` 합니다.|  
+|`MDDupParamDef`|토큰의 중복을 확인 `mdParamDef` 합니다.|  
+|`MDDupPermission`|토큰의 중복을 확인 `mdPermission` 합니다.|  
+|`MDDupProperty`|토큰의 중복을 확인 `mdProperty` 합니다.|  
+|`MDDupEvent`|토큰의 중복을 확인 `mdEvent` 합니다.|  
+|`MDDupFieldDef`|토큰의 중복을 확인 `mdFieldDef` 합니다.|  
+|`MDDupSignature`|토큰의 중복을 확인 `mdSignature` 합니다.|  
+|`MDDupModuleRef`|토큰의 중복을 확인 `mdModuleRef` 합니다.|  
+|`MDDupTypeSpec`|토큰의 중복을 확인 `mdTypeSpec` 합니다.|  
+|`MDDupImplMap`|토큰의 중복을 확인 `mdImplMap` 합니다.|  
+|`MDDupAssemblyRef`|토큰의 중복을 확인 `mdAssemblyRef` 합니다.|  
+|`MDDupFile`|토큰의 중복을 확인 `mdFile` 합니다.|  
+|`MDDupExportedType`|토큰의 중복을 확인 `mdExportedType` 합니다.|  
+|`MDDupManifestResource`|토큰의 중복을 확인 `mdManifestResource` 합니다.|  
+|`MDDupGenericParam`|토큰의 중복을 확인 `mdGenericParam` 합니다.|  
+|`MDDupMethodSpec`|토큰의 중복을 확인 `mdMethodSpec` 합니다.|  
+|`MDDupGenericParamConstraint`|토큰의 중복을 확인 `mdGenericParamConstraint` 합니다.|  
+|`MDDupAssembly`|토큰의 중복을 확인 `mdAssembly` 합니다.|  
+|`MDDupDefault`|`mdMemberRef`,, `mdTypeRef` `mdSignature` , 및 토큰이 중복 되는지 확인 `mdTypeSpec` `mdMethodSpec` 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** 코르Hdr.h  
+ **헤더:** CorHdr .h  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [메타데이터 열거형](metadata-enumerations.md)

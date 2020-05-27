@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7cc22562-128c-440a-9147-55ff20f173d7
 topic_type:
 - apiref
-ms.openlocfilehash: ada126b41f1c634f7d8daa58480406ac26f92377
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b7b15261d825c1bd5f217c4cecd82ed36a716d0e
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177899"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008263"
 ---
 # <a name="iceegengetstring-method"></a>ICeeGen::GetString 메서드
-지정된 상대 가상 주소에 저장된 문자열을 가져옵니다.  
+지정 된 상대 가상 주소에 저장 된 문자열을 가져옵니다.  
   
- 이 메서드는 더 이상 사용되지 않으며 사용해서는 안 됩니다.  
+ 이 메서드는 사용 되지 않으므로 사용 하면 안 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,20 +38,20 @@ HRESULT GetString (
   
 ## <a name="parameters"></a>매개 변수  
  `RVA`  
- 【인】 반환할 문자열의 상대적인 가상 주소입니다.  
+ 진행 반환할 문자열의 상대 가상 주소입니다.  
   
  `lpString`  
- 【아웃】 반환된 문자열입니다.  
+ 제한이 반환 된 문자열입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** 코르h  
+ **헤더:** Cor  
   
- **라이브러리:** MsCorEE.dll의 리소스로 사용  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [ICeeGen 인터페이스](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [ICeeGen 인터페이스](iceegen-interface.md)

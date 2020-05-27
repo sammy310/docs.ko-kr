@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9dcc8b3d-33ee-4c7c-8d6f-322c57b94a0f
 topic_type:
 - apiref
-ms.openlocfilehash: 64d76efa8c2f29fda559e5c84217b865540027ba
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5ed5afbbf49b6680d00e78b6af3d45c6f0a7229d
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175826"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004493"
 ---
 # <a name="imetadataemitdefinemethodimpl-method"></a>IMetaDataEmit::DefineMethodImpl 메서드
-인터페이스에서 상속된 메서드의 구현에 대 한 정의를 만들고 해당 메서드 구현 정의에 토큰을 반환 합니다.  
+인터페이스에서 상속 된 메서드의 구현에 대 한 정의를 만들고 해당 메서드 구현 정의에 대 한 토큰을 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,24 +37,24 @@ HRESULT DefineMethodImpl (
   
 ## <a name="parameters"></a>매개 변수  
  `td`  
- 【인】 구현 `mdTypedef` 클래스의 토큰입니다.  
+ 진행 `mdTypedef`구현 하는 클래스의 토큰입니다.  
   
  `tkBody`  
- 【인】 코드 `mdMethodDef` `mdMemberRef` 본문을 또는 토큰으로 표시합니다.  
+ 진행 `mdMethodDef` `mdMemberRef` 코드 본문의 또는 토큰입니다.  
   
  `tkDecl`  
- 【인】 구현 `mdMethodDef` `mdMemberRef` 중인 인터페이스 메서드의 토큰입니다.  
+ 진행 `mdMethodDef` `mdMemberRef` 구현 중인 인터페이스 메서드의 또는 토큰입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** 코르h  
+ **헤더:** Cor  
   
- **라이브러리:** MSCorEE.dll의 리소스로 사용  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 인터페이스](imetadataemit-interface.md)
+- [IMetaDataEmit2 인터페이스](imetadataemit2-interface.md)

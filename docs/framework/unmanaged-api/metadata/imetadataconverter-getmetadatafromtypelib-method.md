@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 97dc3a56-adfa-431f-889e-06a35ac84d51
 topic_type:
 - apiref
-ms.openlocfilehash: 09a1605deda5b51be604c3b8f0c69fa5adcf9dc0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8f8c0c2cb8dea8ad2b9c0040654122ef5942aca0
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175956"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008393"
 ---
 # <a name="imetadataconvertergetmetadatafromtypelib-method"></a>IMetaDataConverter::GetMetaDataFromTypeLib 메서드
-지정된 `ITypeLib` 인스턴스로 표시되는 형식 라이브러리의 메타데이터 서명을 나타내는 [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) 인스턴스에 대한 인터페이스 포인터를 가져옵니다.  
+지정 된 인스턴스가 나타내는 형식 라이브러리의 메타 데이터 서명을 나타내는 [IMetaDataImport](imetadataimport-interface.md) 인스턴스에 대 한 인터페이스 포인터를 가져옵니다 `ITypeLib` .  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,21 +36,21 @@ HRESULT GetMetaDataFromTypeLib (
   
 ## <a name="parameters"></a>매개 변수  
  `pITL`  
- 【인】 형식 라이브러리를 `ITypeLib` 나타내는 개체에 대한 포인터입니다.  
+ 진행 형식 라이브러리를 나타내는 개체에 대 한 포인터 `ITypeLib` 입니다.  
   
  `ppMDI`  
- 【아웃】 메타데이터 서명을 나타내는 `IMetaDataImport` 인스턴스의 주소를 받는 위치에 대한 포인터입니다.  
+ 제한이 메타 데이터 서명을 나타내는 인스턴스의 주소를 받는 위치에 대 한 포인터입니다 `IMetaDataImport` .  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항을](../../../../docs/framework/get-started/system-requirements.md)참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조 하세요.  
   
- **헤더:** 코르h  
+ **헤더:** Cor  
   
- **라이브러리:** MsCorEE.dll의 리소스로 사용  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataEmit 인터페이스](imetadataemit-interface.md)
+- [IMetaDataImport 인터페이스](imetadataimport-interface.md)

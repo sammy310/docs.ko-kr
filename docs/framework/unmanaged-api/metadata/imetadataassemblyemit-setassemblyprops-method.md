@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 91b633d7-9e75-43c3-a8d2-2144984e5f9e
 topic_type:
 - apiref
-ms.openlocfilehash: f79320d5b7d2ad4ad44a79fae063ce6718490a70
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7c6adcbcfe64f63048078b4ccba6727a58531033
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431955"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008107"
 ---
 # <a name="imetadataassemblyemitsetassemblyprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyProps 메서드
 지정된 `Assembly` 메타데이터 구조를 수정합니다.  
@@ -41,13 +41,13 @@ HRESULT SetAssemblyProps (
   
 ## <a name="parameters"></a>매개 변수  
  `pma`  
- 진행 수정할 `Assembly` 메타 데이터 구조를 지정 하는 메타 데이터 토큰입니다.  
+ 진행 수정할 메타 데이터 구조를 지정 하는 메타 데이터 토큰입니다 `Assembly` .  
   
  `pbPublicKey`  
  진행 어셈블리 게시자의 공개 키에 대 한 포인터입니다.  
   
  `cbPublicKey`  
- 진행 `pbPublicKey`의 크기 (바이트)입니다.  
+ 진행 의 크기 (바이트) `pbPublicKey` 입니다.  
   
  `ulHashAlgId`  
  진행 어셈블리 파일을 해시 하는 데 사용 되는 해시 알고리즘의 식별자입니다.  
@@ -59,20 +59,20 @@ HRESULT SetAssemblyProps (
  진행 어셈블리에 대 한 버전, 플랫폼 및 로캘 정보를 포함 하는 ASSEMBLYMETADATA에 대 한 포인터입니다.  
   
  `dwAssemblyFlags`  
- 진행 어셈블리의 다양 한 특성을 지정 하는 [Assemblyflags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) 값의 비트 조합입니다.  
+ 진행 어셈블리의 다양 한 특성을 지정 하는 [Assemblyflags](assemblyflags-enumeration.md) 값의 비트 조합입니다.  
   
-## <a name="remarks"></a>주의  
- `Assembly` 메타 데이터 구조를 만들려면 [IMetaDataAssemblyEmit::D efineAssembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) 메서드를 사용 합니다.  
+## <a name="remarks"></a>설명  
+ `Assembly`메타 데이터 구조를 만들려면 [IMetaDataAssemblyEmit::D efineAssembly](imetadataassemblyemit-defineassembly-method.md) 메서드를 사용 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조 하세요.  
+ **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조 하세요.  
   
  **헤더:** Cor  
   
  **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [IMetaDataAssemblyEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyEmit 인터페이스](imetadataassemblyemit-interface.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d9e0f3b6-e106-4820-bada-5bfba34ce360
 topic_type:
 - apiref
-ms.openlocfilehash: fb673666543bea3df44005ee3b20d311524f51d0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a76c17e663fdf6555ed878cca1b86b6a9395730e
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175917"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008796"
 ---
 # <a name="imetadatadispenserexgetcorsystemdirectory-method"></a>IMetaDataDispenserEx::GetCORSystemDirectory 메서드
-현재 공통 언어 런타임(CLR)을 포함하는 디렉토리를 가져옵니다. 이 메서드는 프로세스 외 디버거에서만 사용할 수 있습니다. 다른 구성 요소에서 호출하는 경우 E_NOTIMPL 반환합니다.  
+현재 CLR (공용 언어 런타임)을 보유 하 고 있는 디렉터리를 가져옵니다. 이 메서드는 in-process 디버거가 사용할 때만 지원 됩니다. 다른 구성 요소에서 호출 되는 경우 E_NOTIMPL 반환 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,24 +37,24 @@ HRESULT GetCORSystemDirectory (
   
 ## <a name="parameters"></a>매개 변수  
  `szBuffer`  
- 【아웃】 디렉터리 이름을 받을 버퍼입니다.  
+ 제한이 디렉터리 이름을 받을 버퍼입니다.  
   
  `cchBuffer`  
- 【인】 의 크기(바이트)입니다. `szBuffer`  
+ 진행 의 크기 (바이트)입니다 `szBuffer` .  
   
  `pchBuffer`  
- 【아웃】 실제로 반환된 바이트 수입니다. `szBuffer`  
+ 제한이 에서 실제로 반환 된 바이트 수입니다 `szBuffer` .  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항을](../../../../docs/framework/get-started/system-requirements.md)참조하십시오.  
+ **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조 하세요.  
   
- **헤더:** 코르h  
+ **헤더:** Cor  
   
- **라이브러리:** MsCorEE.dll의 리소스로 사용  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [IMetaDataDispenserEx 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [IMetaDataDispenser 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+- [IMetaDataDispenserEx 인터페이스](imetadatadispenserex-interface.md)
+- [IMetaDataDispenser 인터페이스](imetadatadispenser-interface.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbb3caf-20da-4a4b-8983-77376e72b990
 topic_type:
 - apiref
-ms.openlocfilehash: a76a7a2d4ad68e367e38e175377aff40ce399346
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b32e8f0b03ef6d550c384f3d932cc295a7270028
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450200"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007665"
 ---
 # <a name="cormethodimpl-enumeration"></a>CorMethodImpl 열거형
 메서드 구현 기능을 설명하는 값을 포함합니다.  
@@ -71,15 +71,15 @@ typedef enum CorMethodImpl {
 |`miNoInlining`|메서드를 인라인될 수 없도록 지정합니다.|  
 |`miAggressiveInlining`|가능한 경우 메서드를 인라인 하도록 지정 합니다.|  
 |`miNoOptimization`|메서드를 최적화 하지 않도록 지정 합니다.|  
-|`miMaxMethodImplVal`|`CorMethodImpl`에 대 한 최대 유효 값입니다.|  
+|`miMaxMethodImplVal`|의 최대 유효 값 `CorMethodImpl` 입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorHdr .h  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [메타데이터 열거형](metadata-enumerations.md)

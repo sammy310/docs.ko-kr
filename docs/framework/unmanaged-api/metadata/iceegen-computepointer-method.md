@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b6b95c04-0f2c-4fcc-a8bc-3b1dcbdba731
 topic_type:
 - apiref
-ms.openlocfilehash: 9587bbe8f087fd9a51bba67492af1d5acb53ae4a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 206dcd3a0a82da9b6211c8c2045e4e9d3d991973
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176099"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008874"
 ---
 # <a name="iceegencomputepointer-method"></a>ICeeGen::ComputePointer 메서드
-지정된 코드 섹션에 대한 버퍼를 결정합니다.  
+지정 된 코드 섹션의 버퍼를 확인 합니다.  
   
- 이 메서드는 더 이상 사용되지 않으며 사용해서는 안 됩니다.  
+ 이 메서드는 사용 되지 않으므로 사용 하면 안 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,23 +39,23 @@ HRESULT ComputePointer (
   
 ## <a name="parameters"></a>매개 변수  
  `section`  
- 【인】 버퍼를 반환할 코드 섹션입니다.  
+ 진행 버퍼를 반환할 코드 섹션입니다.  
   
  `RVA`  
- 【인】 포인터를 얻을 메서드의 상대적인 가상 주소입니다.  
+ 진행 포인터를 가져올 메서드의 상대 가상 주소입니다.  
   
  `lpBuffer`  
- 【아웃】 반환된 버퍼에 대한 포인터입니다.  
+ 제한이 반환 된 버퍼에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** 코르h  
+ **헤더:** Cor  
   
- **라이브러리:** MsCorEE.dll의 리소스로 사용  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [ICeeGen 인터페이스](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [ICeeGen 인터페이스](iceegen-interface.md)

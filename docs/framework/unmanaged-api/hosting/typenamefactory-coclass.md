@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c853bb58-c9c5-476b-8e80-608aa53ea18d
 topic_type:
 - apiref
-ms.openlocfilehash: c0f236bf6b4d9280945270ada36545cbf0c8a5dc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7245a4c222e2ad3ef1854f3c9e2d0abe37e0650a
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141440"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009485"
 ---
 # <a name="typenamefactory-coclass"></a>TypeNameFactory Coclass
 형식 이름의 분해를 관리 하기 위한 인터페이스를 제공 합니다.  
@@ -34,19 +34,19 @@ coclass TypeNameFactory {
   
 ## <a name="interfaces"></a>인터페이스  
   
-|인터페이스|설명|  
+|인터페이스|Description|  
 |---------------|-----------------|  
-|[ITypeNameFactory 인터페이스](../../../../docs/framework/unmanaged-api/hosting/itypenamefactory-interface.md)|이 인터페이스는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.|  
+|[ITypeNameFactory 인터페이스](itypenamefactory-interface.md)|이 인터페이스는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
  **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [호스팅 Coclass](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)
+- [호스팅 Coclass](hosting-coclasses.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8eaee971-40bf-45e2-a3d8-6e57674213b6
 topic_type:
 - apiref
-ms.openlocfilehash: de4cfdf2a9353eebdebaf4df9e481d06d776ff04
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1e6ee1f2f497ef30a5390e7afac55c54705248ed
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177484"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007808"
 ---
 # <a name="imetadataemitsetpermissionsetprops-method"></a>IMetaDataEmit::SetPermissionSetProps 메서드
-[IMetaDataEmit::DefinePermissionSet](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md)에 대한 사전 호출에 의해 정의된 권한 집합의 메타데이터 서명 기능을 설정하거나 업데이트합니다.  
+[IMetaDataEmit::D efinepermissionset](imetadataemit-definepermissionset-method.md)에 대 한 이전 호출로 정의 된 사용 권한 집합의 메타 데이터 서명 기능을 설정 하거나 업데이트 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,30 +39,30 @@ HRESULT SetPermissionSetProps (
   
 ## <a name="parameters"></a>매개 변수  
  `tk`  
- 【인】 데코레이팅할 개체를 나타내는 메타데이터 토큰입니다.  
+ 진행 데코레이팅 할 개체를 나타내는 메타 데이터 토큰입니다.  
   
  `dwAction`  
- 【인】 사용할 선언적 보안 유형을 지정하는 [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) 값입니다.  
+ 진행 사용할 선언적 보안의 형식을 지정 하는 [CorDeclSecurity](cordeclsecurity-enumeration.md) 값입니다.  
   
  `pvPermission`  
- 【인】 권한 BLOB입니다.  
+ 진행 권한 BLOB입니다.  
   
  `cbPermission`  
- 【인】 의 크기(바이트)입니다. `pvPermission`  
+ 진행 의 크기 (바이트)입니다 `pvPermission` .  
   
  `ppm`  
- 【아웃】 업데이트된 `mdPermission` 사용 권한을 나타내는 메타데이터 토큰입니다.  
+ 제한이 `mdPermission`업데이트 된 사용 권한을 나타내는 메타 데이터 토큰입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** 코르h  
+ **헤더:** Cor  
   
- **라이브러리:** MSCorEE.dll의 리소스로 사용  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 인터페이스](imetadataemit-interface.md)
+- [IMetaDataEmit2 인터페이스](imetadataemit2-interface.md)

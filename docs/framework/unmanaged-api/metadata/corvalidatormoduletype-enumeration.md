@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 748f1ab2-fbcb-4f55-89ec-8d23d81ebc80
 topic_type:
 - apiref
-ms.openlocfilehash: a8dc09ee9f0f0fd79060bb86c599ab40a285153b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 038e2ec20e5fd01edf9835080e0f7a15ec862fd9
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448764"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008939"
 ---
 # <a name="corvalidatormoduletype-enumeration"></a>CorValidatorModuleType 열거형
 모듈의 유형을 지정 합니다.  
@@ -44,22 +44,22 @@ typedef enum
 |멤버|설명|  
 |------------|-----------------|  
 |`ValidatorModuleTypeInvalid`|모듈의 형식이 잘못 되었습니다.|  
-|`ValidatorModuleTypeMin`|`CorValidatorModuleType` 열거형의 최소값입니다.|  
+|`ValidatorModuleTypeMin`|열거형의 최소값 `CorValidatorModuleType` 입니다.|  
 |`ValidatorModuleTypePE`|모듈은 PE (이식 가능한 실행) 파일입니다.|  
 |`ValidatorModuleTypeObj`|모듈은 .obj 파일입니다.|  
 |`ValidatorModuleTypeEnc`|이 모듈은 편집 하며 계속 하기 디버거 세션입니다.|  
 |`ValidatorModuleTypeIncr`|모듈은 증분 방식으로 작성 된 모듈입니다.|  
-|`ValidatorModuleTypeMax`|`CorValidatorModuleType` 열거형의 최대값입니다.|  
+|`ValidatorModuleTypeMax`|열거형의 최대값 `CorValidatorModuleType` 입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
  **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [메타데이터 열거형](metadata-enumerations.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 25ca7623-5a55-4f09-b44a-36b03d142278
 topic_type:
 - apiref
-ms.openlocfilehash: 15b58e01d4ce99f19f510c760819471b84380b45
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 944941c2356cae93ecc85f1714b4b29aefcb50ad
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177765"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008406"
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a>IMetaDataAssemblyImport::GetExportedTypeProps 메서드
-지정된 메타데이터 서명을 사용 하 고 내보낸된 형식의 속성 집합을 가져옵니다.  
+지정 된 메타 데이터 시그니처를 사용 하 여 내보낸 형식의 속성 집합을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,35 +41,35 @@ HRESULT GetExportedTypeProps (
   
 ## <a name="parameters"></a>매개 변수  
  `mdct`  
- 【인】 내보낸 형식을 나타내는 `mdExportedType` 메타데이터 토큰입니다.  
+ 진행 `mdExportedType`내보낸 형식을 나타내는 메타 데이터 토큰입니다.  
   
  `szName`  
- 【아웃】 내보낸 형식의 이름입니다.  
+ 제한이 내보낸 형식의 이름입니다.  
   
  `cchName`  
- 【인】 크기, 넓은 문자, `szName`의 .  
+ 진행 의 크기 (와이드 문자)입니다 `szName` .  
   
  `pchName`  
- 【아웃】 실제로 반환된 와이드 문자 의 수`szName`  
+ 제한이 에서 실제로 반환 된 와이드 문자의 수입니다.`szName`  
   
  `ptkImplementation`  
- 【아웃】 내보낸 `mdAssemblyRef`형식의 속성에 대한 액세스를 포함하거나 허용하는 `mdExportedType` `mdFile`메타데이터 토큰입니다.  
+ 제한이 `mdFile` `mdAssemblyRef` `mdExportedType` 내보낸 형식의 속성에 대 한 액세스를 포함 하거나 허용 하는, 또는 메타 데이터 토큰입니다.  
   
  `ptkTypeDef`  
- 【아웃】 파일의 형식을 `mdTypeDef` 나타내는 토큰에 대한 포인터입니다.  
+ 제한이 `mdTypeDef`파일의 형식을 나타내는 토큰에 대 한 포인터입니다.  
   
  `pdwExportedTypeFlags`  
- 【아웃】 내보낸 형식에 적용된 메타데이터를 설명하는 플래그에 대한 포인터입니다. 플래그 값은 하나 이상의 [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) 값일 수 있습니다.  
+ 제한이 내보낸 형식에 적용 되는 메타 데이터를 설명 하는 플래그에 대 한 포인터입니다. Flags 값은 하나 이상의 [Cortypeattr](cortypeattr-enumeration.md) 값일 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** 코르h  
+ **헤더:** Cor  
   
- **라이브러리:** MsCorEE.dll의 리소스로 사용  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [IMetaDataAssemblyImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport 인터페이스](imetadataassemblyimport-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6f2db2ca-203f-4ac3-9530-208642ca385e
 topic_type:
 - apiref
-ms.openlocfilehash: 7ef944fd06d07dc8c4e49061a5e72d8acc4d0465
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 05f39befa8966046cd71db82da37c44f20992cff
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436342"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008809"
 ---
 # <a name="iceegengetilsection-method"></a>ICeeGen::GetIlSection 메서드
 지정 된 핸들이 참조 하는 중간 언어 코드 베이스의 섹션을 가져옵니다.  
@@ -40,14 +40,14 @@ HRESULT GetIlSection (
  진행 가져올 섹션에 대 한 핸들입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Cor  
   
  **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [ICeeGen 인터페이스](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [ICeeGen 인터페이스](iceegen-interface.md)
