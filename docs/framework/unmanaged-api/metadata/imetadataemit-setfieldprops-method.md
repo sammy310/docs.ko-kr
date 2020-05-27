@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 47132dda-fa92-4bd1-ae4b-24cd9a60665a
 topic_type:
 - apiref
-ms.openlocfilehash: b921118f7c43edef3c07cbb34cbbd9119d36ce51
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 220556ec130c7bff7c413405820c4fee0582b051
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177558"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008016"
 ---
 # <a name="imetadataemitsetfieldprops-method"></a>IMetaDataEmit::SetFieldProps 메서드
-지정된 필드 토큰에서 참조하는 필드의 기본값을 설정하거나 업데이트합니다.  
+지정 된 필드 토큰이 참조 하는 필드의 기본값을 설정 하거나 업데이트 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,30 +39,30 @@ HRESULT SetFieldProps (
   
 ## <a name="parameters"></a>매개 변수  
  `fd`  
- 【인】 대상 필드에 대한 토큰입니다.  
+ 진행 대상 필드의 토큰입니다.  
   
  `dwFieldFlags`  
- 【인】 필드 특성입니다. 이것은 값의 `CorFieldAttr` 비트 마스크입니다.  
+ 진행 필드 특성. 값의 비트 마스크입니다 `CorFieldAttr` .  
   
  `dwCPlusTypeFlag`  
- 【인】 `ELEMENT_TYPE_` 에 대 한 상수 값입니다. *\** 이것은 값입니다. `CorElementType` 상수가 정의되지 않은 경우 이 `ELEMENT_TYPE_END`값을 로 설정합니다.  
+ 진행 `ELEMENT_TYPE_` *\** 상수 값에 대 한입니다. `CorElementType`값입니다. 상수가 정의 되지 않은 경우이 값을로 설정 `ELEMENT_TYPE_END` 합니다.  
   
  `pValue`  
- 【인】 필드의 상수 값입니다.  
+ 진행 필드의 상수 값입니다.  
   
  `cchValue`  
- 【인】 유니코드 문자의 크기입니다. `pValue`  
+ 진행 의 유니코드 문자 크기입니다 `pValue` .  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** 코르h  
+ **헤더:** Cor  
   
- **라이브러리:** MSCorEE.dll의 리소스로 사용  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 인터페이스](imetadataemit-interface.md)
+- [IMetaDataEmit2 인터페이스](imetadataemit2-interface.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 694c0fa0-7011-41a9-9dfd-f0e16ea574b5
 topic_type:
 - apiref
-ms.openlocfilehash: 51741aa3a6d965c1e9743081628d8ad62e8fb04e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1836f26af99f91ab1765107573f6b067edd5e95
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176203"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007925"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets 열거형
 특성을 적용하는 데 유효한 애플리케이션 요소를 지정합니다.  
@@ -58,12 +58,12 @@ typedef enum CorAttributeTargets
 } CorAttributeTargets;  
 ```  
   
-## <a name="members"></a>구성원  
+## <a name="members"></a>멤버  
   
-|멤버|Description|  
+|멤버|설명|  
 |------------|-----------------|  
 |`catAssembly`|특성은 어셈블리에 적용할 수 있습니다.|  
-|`catModule`|특성은 휴대용 실행 (.dll 또는 .exe) 모듈에 적용 할 수 있습니다.|  
+|`catModule`|특성은 이식 가능한 실행 파일 (.dll 또는 .exe)에 적용할 수 있습니다.|  
 |`catClass`|특성은 클래스에 적용할 수 있습니다.|  
 |`catStruct`|특성은 구조체 즉, 값 형식에 적용할 수 있습니다.|  
 |`catEnum`|특성은 열거형에 적용할 수 있습니다.|  
@@ -77,20 +77,20 @@ typedef enum CorAttributeTargets
 |`catDelegate`|특성은 대리자에 적용할 수 있습니다.|  
 |`catGenericParameter`|특성은 제네릭 매개 변수에 적용할 수 있습니다.|  
 |`catAll`|특성은 모든 애플리케이션 요소에 적용할 수 있습니다.|  
-|`catClassMembers`|특성은 클래스의 멤버에 적용할 수 있습니다.|  
+|`catClassMembers`|클래스의 멤버에 특성을 적용할 수 있습니다.|  
   
 ## <a name="remarks"></a>설명  
- 열거 값은 `CorAttributeTargets` 기본 조합을 얻기 위해 비트 OR 연산을 조합할 수 있습니다.  
+ `CorAttributeTargets`열거형 값을 비트 or 연산으로 결합 하 여 기본 조합을 가져올 수 있습니다.  
   
- `CorAttributeTargets` 관리되는 <xref:System.AttributeTargets?displayProperty=nameWithType> 열거형과 평행합니다.  
+ 는 `CorAttributeTargets` 관리 되는 열거형과 유사 합니다 <xref:System.AttributeTargets?displayProperty=nameWithType> .  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** 코르Hdr.h  
+ **헤더:** CorHdr .h  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [메타데이터 열거형](metadata-enumerations.md)

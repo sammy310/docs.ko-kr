@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bb8db3b6-d81d-49fc-b74c-dbc908a9eab9
 topic_type:
 - apiref
-ms.openlocfilehash: fda890cee5f513ea8cf7e82e710f5451a860c49f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b1a83f07f03ddb17d5c306453cf838101a77ed65
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443914"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007938"
 ---
 # <a name="corassemblyflags-enumeration"></a>CorAssemblyFlags 열거형
 어셈블리 컴파일에 적용되는 메타데이터를 설명하는 값을 포함합니다.  
@@ -64,25 +64,25 @@ typedef enum CorAssemblyFlags {
 |`afPA_IA64`|프로세서 아키텍처가 Itanium (PE32 +) 임을 나타냅니다.|  
 |`afPA_AMD64`|프로세서 아키텍처가 AMD X64 (PE32 +) 임을 나타냅니다.|  
 |`afPA_ARM`|프로세서 아키텍처가 ARM (PE32) 임을 나타냅니다.|  
-|`afPA_NoPlatform`|어셈블리가 참조 어셈블리 임을 나타냅니다. 즉, 모든 아키텍처에 적용 되지만 모든 아키텍처에서 실행할 수는 없습니다. 따라서 플래그는 `afPA_Mask`와 동일 합니다.|  
-|`afPA_Specified`|`AssemblyRef` 레코드에 프로세서 아키텍처 플래그를 전파 해야 함을 나타냅니다.|  
+|`afPA_NoPlatform`|어셈블리가 참조 어셈블리 임을 나타냅니다. 즉, 모든 아키텍처에 적용 되지만 모든 아키텍처에서 실행할 수는 없습니다. 따라서 플래그는와 동일 합니다 `afPA_Mask` .|  
+|`afPA_Specified`|프로세서 아키텍처 플래그를 레코드로 전파 해야 함을 나타냅니다 `AssemblyRef` .|  
 |`afPA_Mask`|프로세서 아키텍처를 설명 하는 마스크입니다.|  
 |`afPA_FullMask`|프로세서 아키텍처 설명을 포함 하도록 지정 합니다.|  
 |`afPA_Shift`|인덱스에 대 한 프로세서 아키텍처 플래그의 이동 횟수를 나타냅니다.|  
-|`afEnableJITcompileTracking`|<xref:System.Diagnostics.DebuggableAttribute><xref:System.Diagnostics.DebuggableAttribute.DebuggingModes>의 해당 값을 나타냅니다.|  
-|`afDisableJITcompileOptimizer`|<xref:System.Diagnostics.DebuggableAttribute><xref:System.Diagnostics.DebuggableAttribute.DebuggingModes>의 해당 값을 나타냅니다.|  
+|`afEnableJITcompileTracking`|의에서 해당 하는 값을 나타냅니다 <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> <xref:System.Diagnostics.DebuggableAttribute> .|  
+|`afDisableJITcompileOptimizer`|의에서 해당 하는 값을 나타냅니다 <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> <xref:System.Diagnostics.DebuggableAttribute> .|  
 |`afRetargetable`|런타임에 다른 게시자의 어셈블리에 어셈블리의 대상을 지정할 수 있음을 나타냅니다.|  
 |`afContentType_Mask`|내용 유형을 설명 하는 마스크입니다.|  
 |`afContentType_Default`|기본 콘텐츠 형식을 나타냅니다.|  
 |`afContentType_WindowsRuntime`|Windows 런타임 내용 유형을 나타냅니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorHdr .h  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [메타데이터 열거형](metadata-enumerations.md)

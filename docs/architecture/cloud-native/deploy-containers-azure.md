@@ -98,7 +98,7 @@ Azure의 대부분 리소스와 마찬가지로 포털, 명령줄 또는 투구 
 
 이 [빠른 시작은 Azure Portal를 사용 하 여 AKS 클러스터를 배포 하는 과정](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)을 안내 합니다.
 
-## <a name="azure-dev-spaces"></a>Azure Dev 공간
+## <a name="azure-dev-spaces"></a>Azure Dev Spaces
 
 클라우드 네이티브 응용 프로그램을 신속 하 게 확장 하 여 큰 계산 리소스를 실행 해야 할 수 있습니다. 이러한 시나리오에서는 전체 응용 프로그램을 개발 컴퓨터 (특히 랩톱)에서 호스팅할 수 없습니다. Azure Dev Spaces AKS를 사용 하 여이 문제를 해결 하도록 설계 되었습니다. 개발자는이를 통해 AKS development 클러스터에 응용 프로그램의 나머지 부분을 호스트 하는 동안 로컬 버전의 서비스를 사용할 수 있습니다.
 

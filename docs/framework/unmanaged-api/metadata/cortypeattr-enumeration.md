@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9bede0ec-5fdf-42a2-b5b7-bee64056acb6
 topic_type:
 - apiref
-ms.openlocfilehash: b1586184c91619994ba0dfc9d5dcc277c10f99cf
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b6936081ca3dbadb4f802a6856fafb53f6cef3fa
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436455"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008965"
 ---
 # <a name="cortypeattr-enumeration"></a>CorTypeAttr 열거형
 형식 메타데이터를 나타내는 값을 포함합니다.  
@@ -103,7 +103,7 @@ typedef enum CorTypeAttr {
 |`tdAnsiClass`|이 형식이 LPTSTR를 ANSI로 해석 하도록 지정 합니다.|  
 |`tdUnicodeClass`|이 형식이 LPTSTR를 유니코드로 해석 하도록 지정 합니다.|  
 |`tdAutoClass`|이 형식이 LPTSTR를 자동으로 해석 하도록 지정 합니다.|  
-|`tdCustomFormatClass`|`CustomFormatMask`에 지정 된 대로 형식이 비표준 인코딩을 포함 하도록 지정 합니다.|  
+|`tdCustomFormatClass`|에 지정 된 대로 형식이 비표준 인코딩을 포함 하도록 지정 합니다 `CustomFormatMask` .|  
 |`tdCustomFormatMask`|네이티브 interop에 대 한 비표준 인코딩 정보를 가져오려면이 마스크를 사용 합니다. 이러한 두 비트 값의 의미는 지정 되지 않습니다.|  
 |`tdBeforeFieldInit`|정적 필드에 대 한 첫 번째 액세스를 시도 하기 전에 형식을 초기화 하도록 지정 합니다.|  
 |`tdForwarder`|형식을 내보내도록 지정 하 고 형식 전달자를 지정 합니다.|  
@@ -112,12 +112,12 @@ typedef enum CorTypeAttr {
 |`tdHasSecurity`|형식에 연결 된 보안이 있음을 지정 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorHdr .h  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [메타데이터 열거형](metadata-enumerations.md)

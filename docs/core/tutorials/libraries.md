@@ -2,14 +2,13 @@
 title: .NET Core CLI를 사용하여 라이브러리 개발
 description: .NET Core CLI를 사용하여 .NET Core 라이브러리를 만드는 방법을 알아봅니다. 여러 프레임워크를 지원하는 라이브러리를 만듭니다.
 author: cartermp
-ms.topic: how-to
 ms.date: 05/01/2017
-ms.openlocfilehash: 7aadaf7bf7819d52a57c3a137beff46d924d8cb0
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: c23c1f027b4d6d09c50eb2257d34f72ec56302f4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396209"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "77503501"
 ---
 # <a name="develop-libraries-with-the-net-core-cli"></a>.NET Core CLI를 사용하여 라이브러리 개발
 

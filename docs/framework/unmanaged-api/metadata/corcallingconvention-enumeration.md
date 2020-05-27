@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 69156fbf-7219-43bf-b4b8-b13f1a2fcb86
 topic_type:
 - apiref
-ms.openlocfilehash: 9d4690cb6adedc77717e577d409cb52b18b1b5ca
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 310319e8fefe80017c58706e2beaee5eb1e78422
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443840"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007910"
 ---
 # <a name="corcallingconvention-enumeration"></a>CorCallingConvention 열거형
 관리 코드에서 수행된 호출 규칙의 형식을 설명하는 값을 포함합니다.  
@@ -62,17 +62,17 @@ typedef enum CorCallingConvention
 |`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|가변 개수의 매개 변수를 사용 하는 메서드에 대 한 64 비트 PInvoke 호출을 나타냅니다.|  
 |`IMAGE_CEE_CS_CALLCONV_MAX`|잘못 된 4 비트 값을 설명 합니다.|  
 |`IMAGE_CEE_CS_CALLCONV_MASK`|호출 규칙이 아래쪽 4 비트로 설명 됨을 나타냅니다.|  
-|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|상위 비트가 `this` 매개 변수를 설명 함을 나타냅니다.|  
-|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|`this` 매개 변수가 시그니처에 명시적으로 설명 됨을 나타냅니다.|  
+|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|상위 비트가 매개 변수를 설명 함을 나타냅니다 `this` .|  
+|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|`this`매개 변수가 시그니처에 명시적으로 설명 됨을 나타냅니다.|  
 |`IMAGE_CEE_CS_CALLCONV_GENERIC`|명시적 개수의 형식 인수가 있는 제네릭 메서드 시그니처를 나타냅니다. 이는 일반 매개 변수 개수 앞에 나옵니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorHdr .h  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [메타데이터 열거형](metadata-enumerations.md)

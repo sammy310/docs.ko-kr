@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b039e50-63ec-4730-99ff-2327408de477
 topic_type:
 - apiref
-ms.openlocfilehash: f664e694303691fb1132150037dcbcdb5549539a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 720133e64c02aa09c9ff7e43a20630b0d55c1acf
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177522"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008757"
 ---
 # <a name="imetadataemitseteventprops-method"></a>IMetaDataEmit::SetEventProps 메서드
-[IMetaDataEmit::DefineEvent에](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md)대한 사전 호출에 의해 정의된 이벤트의 지정된 기능을 설정하거나 업데이트합니다.  
+[IMetaDataEmit::D efineEvent](imetadataemit-defineevent-method.md)에 대 한 이전 호출에서 정의한 이벤트의 지정 된 기능을 설정 하거나 업데이트 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,36 +41,36 @@ HRESULT SetEventProps (
   
 ## <a name="parameters"></a>매개 변수  
  `ev`  
- 【인】 이벤트 토큰입니다.  
+ 진행 이벤트 토큰입니다.  
   
  `dwEventFlags`  
- 【인】 이벤트 플래그입니다. 이것은 값의 `CorEventAttr` 비트 마스크입니다.  
+ 진행 이벤트 플래그입니다. 값의 비트 마스크입니다 `CorEventAttr` .  
   
  `tkEventType`  
- 【인】 이벤트 클래스의 토큰입니다. 이것은 또는 `mdTypeDef` 토큰입니다. `mdTypeRef`  
+ 진행 이벤트 클래스에 대 한 토큰입니다. `mdTypeDef`또는 `mdTypeRef` 토큰입니다.  
   
  `mdAddOn`  
- 【인】 이벤트를 구독하는 데 사용되는 메서드 또는 null입니다.  
+ 진행 이벤트를 구독 하는 데 사용 되는 메서드 이거나 null입니다.  
   
  `mdRemoveOn`  
- 【인】 이벤트 구독을 취소하거나 null에 사용되는 메서드입니다.  
+ 진행 이벤트를 구독 취소 하는 데 사용 되는 메서드 이거나 null입니다.  
   
  `mdFire`  
- 【인】 이벤트를 발생시키기 위해 파생 클래스에서 사용하는 메서드입니다.  
+ 진행 파생 클래스에서 이벤트를 발생 시키는 데 사용 되는 메서드입니다.  
   
  `rmdOtherMethods[]`  
- 【인】 이벤트와 연결된 다른 메서드에 대한 토큰 배열입니다. 배열의 마지막 요소는 . `mdMethodDefNil`  
+ 진행 이벤트와 연결 된 다른 메서드에 대 한 토큰의 배열입니다. 배열의 마지막 요소는 이어야 합니다 `mdMethodDefNil` .  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** 코르h  
+ **헤더:** Cor  
   
- **라이브러리:** MSCorEE.dll의 리소스로 사용  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 인터페이스](imetadataemit-interface.md)
+- [IMetaDataEmit2 인터페이스](imetadataemit2-interface.md)

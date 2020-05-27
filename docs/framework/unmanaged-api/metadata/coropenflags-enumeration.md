@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e27a83b5-2698-4996-9032-1e0fed8b91ca
 topic_type:
 - apiref
-ms.openlocfilehash: ad582fc2fd1bd1d2fc9d5a0d483fdb3a51309a10
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7318a7ea3eb1ddb047a799e58ebdfd9ce6cd76d1
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436498"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007587"
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags 열거형
 매니페스트 파일을 열 때 메타데이터 동작을 제어하는 플래그 값을 포함합니다.  
@@ -54,23 +54,23 @@ typedef enum CorOpenFlags
 |`ofWrite`|쓸 수 있도록 파일을 열어야 함을 나타냅니다.<br /><br /> .winmd 파일을 열 때 `ofWrite` 플래그를 사용하는 경우에는 `ofNoTransform` 플래그도 전달해야 합니다.|  
 |`ofReadWriteMask`|읽기 및 쓰기용 마스크입니다.|  
 |`ofCopyMemory`|파일을 메모리로 읽어들여야 함을 나타냅니다. 메타데이터는 자체 복사본을 유지해야 합니다.|  
-|`ofCacheImage`|사용되지 않습니다. 이 플래그는 무시됩니다.|  
-|`ofManifestMetadata`|사용되지 않습니다. 이 플래그는 무시됩니다.|  
-|`ofReadOnly`|읽기 위해 파일을 열어야 하며 [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) 에 대 한 `QueryInterface` 호출을 만들 수 없음을 나타냅니다.|  
+|`ofCacheImage`|더 이상 사용되지 않습니다. 이 플래그는 무시됩니다.|  
+|`ofManifestMetadata`|더 이상 사용되지 않습니다. 이 플래그는 무시됩니다.|  
+|`ofReadOnly`|읽기 위해 파일을 열고 `QueryInterface` [IMetaDataEmit](imetadataemit-interface.md) 에 대 한 호출을 수행할 수 없음을 나타냅니다.|  
 |`ofTakeOwnership`|메모리가 [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) 에 대 한 호출을 사용 하 여 할당 되었으며 메타 데이터에 의해 해제 됨을 나타냅니다.|  
-|`ofNoTypeLib`|사용되지 않습니다. 이 플래그는 무시됩니다.|  
+|`ofNoTypeLib`|더 이상 사용되지 않습니다. 이 플래그는 무시됩니다.|  
 |`ofNoTransform`|.winmd 파일의 자동 변형을 사용하지 않도록 설정해야 함을 나타냅니다. 즉, Windows 런타임 형식에서 .NET Framework 형식으로의 프로젝션을 사용하지 않도록 설정해야 합니다. 자세한 내용은 [Windows 런타임 및 CLR-.net 및 Windows 런타임의 내부](https://docs.microsoft.com/archive/msdn-magazine/2012/windows-8-special-issue/windows-runtime-and-the-clr-underneath-the-hood-with-net-and-the-windows-runtime)를 참조 하십시오.|  
-|`ofReserved1`|내부 용도로 예약되어 있습니다.|  
-|`ofReserved2`|내부 용도로 예약되어 있습니다.|  
-|`ofReserved`|내부 용도로 예약되어 있습니다.|  
+|`ofReserved1`|내부용으로 예약된 속성입니다.|  
+|`ofReserved2`|내부용으로 예약된 속성입니다.|  
+|`ofReserved`|내부용으로 예약된 속성입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorHdr .h  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [메타데이터 열거형](metadata-enumerations.md)

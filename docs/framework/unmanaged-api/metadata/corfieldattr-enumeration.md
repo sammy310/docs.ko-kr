@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6ae2c4be-212c-4e74-9288-40a11dc26522
 topic_type:
 - apiref
-ms.openlocfilehash: d28a0c8b7ee85f023026dde6f3cc8f3a8406aa64
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dea69e18fc517eddddc5b99950a6f3b16ee3e426
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450309"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007405"
 ---
 # <a name="corfieldattr-enumeration"></a>CorFieldAttr 열거형
 필드에 대한 메타데이터를 설명하는 값을 포함합니다.  
@@ -61,7 +61,7 @@ typedef enum CorFieldAttr {
 |멤버|설명|  
 |------------|-----------------|  
 |`fdFieldAccessMask`|내게 필요한 옵션 정보를 지정 합니다.|  
-|`fdPrivateScope`|필드는 참조할 수 없음을 지정 합니다.|  
+|`fdPrivateScope`|필드를 참조할 수 없도록 지정합니다.|  
 |`fdPrivate`|부모 형식 에서만 필드에 액세스할 수 있도록 지정 합니다.|  
 |`fdFamANDAssem`|해당 어셈블리의 파생 클래스에서 필드에 액세스할 수 있도록 지정 합니다.|  
 |`fdAssembly`|해당 어셈블리의 모든 형식에서 필드에 액세스할 수 있도록 지정 합니다.|  
@@ -77,16 +77,16 @@ typedef enum CorFieldAttr {
 |`fdReservedMask`|공용 언어 런타임에서 내부용으로 사용 하도록 예약 되어 있습니다.|  
 |`fdRTSpecialName`|공용 언어 런타임 메타 데이터 내부 Api가 이름의 인코딩을 확인 하도록 지정 합니다.|  
 |`fdHasFieldMarshal`|필드에 마샬링 정보를 포함 하도록 지정 합니다.|  
-|`fdHasDefault`|필드 기본값을 갖도록 지정 합니다.|  
+|`fdHasDefault`|필드가 기본값을 갖도록 지정합니다.|  
 |`fdHasFieldRVA`|필드에 상대 가상 주소를 지정 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** CorHdr .h  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [메타데이터 열거형](metadata-enumerations.md)

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8d3080ee-39fe-4c57-8950-51323632d045
 topic_type:
 - apiref
-ms.openlocfilehash: 8fe6216e11a64ea182d796247d888b862b1e8377
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d8d7a43848929e49a8cb48fb957f37213ac78f2e
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177935"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007353"
 ---
 # <a name="corregflags-enumeration"></a>CorRegFlags 열거형
-모듈 또는 복합 이미지를 설치할 때 등록에 사용되는 플래그 값을 제공합니다.  
+모듈 또는 복합 이미지를 설치할 때 등록에 사용 되는 플래그 값을 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,23 +35,23 @@ typedef enum
 } CorRegFlags;  
 ```  
   
-## <a name="members"></a>구성원  
+## <a name="members"></a>멤버  
   
-|멤버|Description|  
+|멤버|설명|  
 |------------|-----------------|  
-|`regNoCopy`|파일을 대상으로 복사해서는 안 되도록 지정합니다.|  
-|`regConfig`|모듈 또는 복합체가 구성임을 지정합니다.|  
-|`regHasRefs`|모듈 또는 복합체에 클래스 참조가 있음을 지정합니다.|  
+|`regNoCopy`|파일이 대상에 복사 되지 않도록 지정 합니다.|  
+|`regConfig`|모듈 또는 복합 구성이 구성 임을 지정 합니다.|  
+|`regHasRefs`|모듈 또는 복합에 클래스 참조가 있음을 지정 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** 코르h  
+ **헤더:** Cor  
   
- **라이브러리:** MsCorEE.dll의 리소스로 포함  
+ **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [메타데이터 열거형](metadata-enumerations.md)

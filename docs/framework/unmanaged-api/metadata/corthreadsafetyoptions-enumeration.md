@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dae07d9b-df51-488c-b17e-52d6e48217bd
 topic_type:
 - apiref
-ms.openlocfilehash: 93dd8c56176890d04d792f3c336492e4f232825b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8c0527a7bc3cde7344bf809dc8e6f5a3fac04852
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442475"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007509"
 ---
 # <a name="corthreadsafetyoptions-enumeration"></a>CorThreadSafetyOptions 열거형
 
@@ -39,18 +39,18 @@ typedef enum CorThreadSafetyOptions {
 
 |멤버|설명|
 |------------|-----------------|
-|`MDThreadSafetyDefault`|기본 값입니다. `MDThreadSafetyOff`와 동일합니다.|
+|`MDThreadSafetyDefault`|기본값. `MDThreadSafetyOff`와 동일합니다.|
 |`MDThreadSafetyOff`|판독기/작성기 잠금을 설정할 수 없음을 나타냅니다.|
 |`MDThreadSafetyOn`|판독기/작성기 잠금을 설정할 수 있음을 나타냅니다.|
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.
+**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.
 
 **헤더:** CorHdr .h
 
-**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [메타데이터 열거형](metadata-enumerations.md)

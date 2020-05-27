@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e2501fc8-b2bc-4dcc-9205-e3acd5a53ffe
 topic_type:
 - apiref
-ms.openlocfilehash: dc6375f3e2cff1a744a8ff2e6a6adab27bbf8af3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b5af877c26c20bf64a27618bf24a7bce5b410419
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177472"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007782"
 ---
 # <a name="imetadataemitsetpropertyprops-method"></a>IMetaDataEmit::SetPropertyProps 메서드
-[정의 속성 메서드에](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md)대 한 이전 호출에 의해 정의 된 속성에 대 한 메타 데이터에 저장 된 기능을 설정 합니다.  
+[DefineProperty 메서드에](imetadataemit-defineproperty-method.md)대 한 이전 호출로 정의 된 속성에 대 한 메타 데이터에 저장 된 기능을 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,39 +42,39 @@ HRESULT SetPropertyProps (
   
 ## <a name="parameters"></a>매개 변수  
  `pr`  
- 【인】 속성을 변경할 토큰  
+ 진행 변경할 속성의 토큰입니다.  
   
  `dwPropFlags`  
- 【인】 속성 플래그입니다.  
+ 진행 속성 플래그입니다.  
   
  `dwCPlusTypeFlag`  
- 【인】 속성의 기본값의 형식입니다.  
+ 진행 속성의 기본값 형식입니다.  
   
  `pValue`  
- 【인】 속성의 기본값입니다.  
+ 진행 속성의 기본값입니다.  
   
  `cchValue`  
- 【인】 에서 (유니코드) 문자의 `pValue`수입니다.  
+ 진행 의 (유니코드) 문자 수입니다 `pValue` .  
   
  `mdSetter`  
- 【인】 속성 값을 설정하는 메서드입니다.  
+ 진행 속성 값을 설정 하는 메서드입니다.  
   
  `mdGetter`  
- 【인】 속성 값을 얻는 메서드입니다.  
+ 진행 속성 값을 가져오는 메서드입니다.  
   
  `rmdOtherMethods[]`  
- 【인】 속성과 연결된 다른 메서드의 배열입니다. 토큰으로 이 `mdTokenNil` 배열을 종료합니다.  
+ 진행 속성과 연결 된 다른 메서드의 배열입니다. 토큰을 사용 하 여이 배열을 종료 `mdTokenNil` 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** 코르h  
+ **헤더:** Cor  
   
- **라이브러리:** MSCorEE.dll의 리소스로 사용  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 인터페이스](imetadataemit-interface.md)
+- [IMetaDataEmit2 인터페이스](imetadataemit2-interface.md)
