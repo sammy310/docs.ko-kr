@@ -36,7 +36,7 @@ HRESULT GetSequencePointCount(
  `pRetVal`  
  제한이 `ULONG32`시퀀스 위치를 포함 하는 데 필요한 버퍼의 크기를 수신 하는에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  

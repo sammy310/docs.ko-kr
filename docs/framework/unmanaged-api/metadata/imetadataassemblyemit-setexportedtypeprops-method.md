@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c090153-fd5f-46c7-9cff-39a78d992c8f
 topic_type:
 - apiref
-ms.openlocfilehash: dd1d6f1da6e49837eebd9356500f403c199b011b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fa4f1f57cb8fe1ca81bbad6438a88bb43c48e7bf
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177848"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008081"
 ---
 # <a name="imetadataassemblyemitsetexportedtypeprops-method"></a>IMetaDataAssemblyEmit::SetExportedTypeProps 메서드
 지정된 `ExportedType` 메타데이터 구조를 수정합니다.  
@@ -38,29 +38,29 @@ HRESULT SetExportedTypeProps (
   
 ## <a name="parameters"></a>매개 변수  
  `ct`  
- 【인】 수정할 `ExportedType` 메타데이터 구조를 지정하는 메타데이터 토큰입니다.  
+ 진행 수정할 메타 데이터 구조를 지정 하는 메타 데이터 토큰입니다 `ExportedType` .  
   
  `tkImplementation`  
- 【인】 이 형식이 `File`구현되는 방법을 지정하는 토큰, 형식 . `AssemblyRef`또는 `ExportedType`  
+ 진행 `File` `AssemblyRef` `ExportedType` 이 형식을 구현 하는 방법을 지정 하는, 또는 형식의 토큰입니다.  
   
  `tkTypeDef`  
- 【인】 코드 `TypeDef` 파일에서 참조된 토큰입니다.  
+ 진행 `TypeDef`코드 파일에서 참조 되는 토큰입니다.  
   
  `dwExportedTypeFlags`  
- 【인】 형식의 특성을 지정하는 값의 비트 조합입니다.  
+ 진행 형식의 특성을 지정 하는 값의 비트 조합입니다.  
   
 ## <a name="remarks"></a>설명  
- `ExportedType` 메타데이터 구조를 만들려면 [IMetaDataAssemblyEmit::DefineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md) 메서드를 사용합니다.  
+ `ExportedType`메타 데이터 구조를 만들려면 [IMetaDataAssemblyEmit::D efineExportedType](imetadataassemblyemit-defineexportedtype-method.md) 메서드를 사용 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** 코르h  
+ **헤더:** Cor  
   
- **라이브러리:** MsCorEE.dll의 리소스로 사용  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [IMetaDataAssemblyEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyEmit 인터페이스](imetadataassemblyemit-interface.md)

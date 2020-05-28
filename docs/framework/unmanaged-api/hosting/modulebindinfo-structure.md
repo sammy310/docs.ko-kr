@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 632d4adc-dbc9-4ce8-9397-abc3285c1c69
 topic_type:
 - apiref
-ms.openlocfilehash: ae40d8adaae70ccff6e8058858a506267d58873f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 31be0525c637e50c1161129277d651b56dadfaa3
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133743"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006755"
 ---
 # <a name="modulebindinfo-structure"></a>ModuleBindInfo 구조체
 참조 된 모듈 및이 모듈을 포함 하는 어셈블리에 대 한 자세한 정보를 제공 합니다.  
@@ -38,26 +38,26 @@ typedef struct _ModuleBindInfo {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`dwAppDomainId`|참조 된 모듈을 로드할 [IHostAssemblyStore::P rovidemodule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md) 메서드를 호출 하 여 반환 되는 `IStream`에 대 한 고유 식별자입니다.|  
+|`dwAppDomainId`|`IStream`참조 된 모듈을 로드할 [IHostAssemblyStore::P rovidemodule](ihostassemblystore-providemodule-method.md) 메서드에 대 한 호출에서 반환 되는의 고유 식별자입니다.|  
 |`lpAssemblyIdentity`|참조 된 모듈이 포함 된 어셈블리에 대 한 고유 식별자입니다.|  
 |`lpModuleName`|참조 된 모듈의 이름입니다.|  
   
-## <a name="remarks"></a>주의  
- `ModuleBindInfo`는 `IHostAssemblyStore::ProvideModule`에 대 한 매개 변수로 전달 됩니다. 호스트는 CLR (공용 언어 런타임)에 `dwAppDomainId` 고유 식별자를 제공 합니다. [IHostAssemblyStore::P rovideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) 메서드에 대 한 호출이 반환 된 후에는 런타임에서 식별자를 사용 하 여 `IStream` 내용이 매핑되는지 여부를 확인 합니다. 이 경우 런타임은 스트림을 다시 매핑하지 않고 기존 복사본을 로드 합니다. 또한 런타임은 `IHostAssemblyStore::ProvideAssembly` 메서드에 대 한 호출에서 반환 되는 스트림의 조회 키로이 식별자를 사용 합니다. 따라서 식별자는 어셈블리 요청 뿐만 아니라 모듈 요청에 대해서만 고유 해야 합니다.  
+## <a name="remarks"></a>설명  
+ `ModuleBindInfo`는에 대 한 매개 변수로 전달 됩니다 `IHostAssemblyStore::ProvideModule` . 호스트는 `dwAppDomainId` CLR (공용 언어 런타임)에 고유 식별자를 제공 합니다. [IHostAssemblyStore::P rovideassembly](ihostassemblystore-provideassembly-method.md) 메서드에 대 한 호출이 반환 된 후 런타임은 식별자를 사용 하 여의 내용이 매핑 되었는지 여부를 확인 합니다 `IStream` . 이 경우 런타임은 스트림을 다시 매핑하지 않고 기존 복사본을 로드 합니다. 또한 런타임은 메서드 호출에서 반환 되는 스트림의 조회 키로이 식별자를 사용 합니다 `IHostAssemblyStore::ProvideAssembly` . 따라서 식별자는 어셈블리 요청 뿐만 아니라 모듈 요청에 대해서만 고유 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
  **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [호스팅 구조체](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
-- [AssemblyBindInfo 구조체](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md)
-- [ICLRAssemblyIdentityManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
-- [ICLRAssemblyReferenceList 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
-- [IHostAssemblyManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)
+- [호스팅 구조체](hosting-structures.md)
+- [AssemblyBindInfo 구조체](assemblybindinfo-structure.md)
+- [ICLRAssemblyIdentityManager 인터페이스](iclrassemblyidentitymanager-interface.md)
+- [ICLRAssemblyReferenceList 인터페이스](iclrassemblyreferencelist-interface.md)
+- [IHostAssemblyManager 인터페이스](ihostassemblymanager-interface.md)

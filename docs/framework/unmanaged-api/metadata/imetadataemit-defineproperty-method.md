@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c4c1dc2-d40d-4173-bbe6-7058fb21c98f
 topic_type:
 - apiref
-ms.openlocfilehash: eb3ecbf39376e7126b5ec93a26badcbf5076d1db
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 479cb25ad8e1c263d3539a4203ac5bea781eb931
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175787"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009381"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty 메서드
-지정된 및 `set` 메서드 접근자와 함께 지정된 `get` 형식에 대한 속성 정의를 만들고 해당 속성 정의에 대한 토큰을 가져옵니다.  
+지정 된 및 메서드 접근자를 사용 하 여 지정 된 형식에 대 한 속성 정의를 만들고 `get` `set` 해당 속성 정의에 대 한 토큰을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,51 +46,51 @@ HRESULT DefineProperty (
   
 ## <a name="parameters"></a>매개 변수  
  `td`  
- 【인】 속성이 정의되는 클래스 또는 인터페이스에 대한 토큰입니다.  
+ 진행 속성이 정의 되는 클래스 또는 인터페이스에 대 한 토큰입니다.  
   
  `szProperty`  
- 【인】 속성의 이름입니다.  
+ 진행 속성의 이름입니다.  
   
  `dwPropFlags`  
- 【인】 속성 플래그입니다.  
+ 진행 속성 플래그입니다.  
   
  `pvSig`  
- 【인】 속성 서명입니다.  
+ 진행 속성 시그니처입니다.  
   
  `cbSig`  
- 【인】 의 바이트 `pvSig`수입니다.  
+ 진행 의 바이트 수 `pvSig` 입니다.  
   
  `dwCPlusTypeFlag`  
- 【인】 속성의 기본값의 형식입니다.  
+ 진행 속성의 기본값 형식입니다.  
   
  `pValue`  
- 【인】 속성의 기본값입니다.  
+ 진행 속성의 기본값입니다.  
   
  `cchValue`  
- 【인】 에서 (유니코드) 문자의 `pValue`수입니다.  
+ 진행 의 (유니코드) 문자 수입니다 `pValue` .  
   
  `mdSetter`  
- 【인】 속성 값을 설정하는 메서드입니다.  
+ 진행 속성 값을 설정 하는 메서드입니다.  
   
  `mdGetter`  
- 【인】 속성 값을 얻는 메서드입니다.  
+ 진행 속성 값을 가져오는 메서드입니다.  
   
  `rmdOtherMethods[]`  
- 【인】 속성과 연결된 다른 메서드의 배열입니다. `mdTokenNil`을 통해 배열을 종료합니다.  
+ 진행 속성과 연결 된 다른 메서드의 배열입니다. 을 사용 하 여 배열을 종료 `mdTokenNil` 합니다.  
   
  `pmdProp`  
- 【아웃】 할당된 토큰입니다. `mdProperty`  
+ 제한이 `mdProperty`할당 된 토큰입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** 코르h  
+ **헤더:** Cor  
   
- **라이브러리:** MSCorEE.dll의 리소스로 사용  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 인터페이스](imetadataemit-interface.md)
+- [IMetaDataEmit2 인터페이스](imetadataemit2-interface.md)

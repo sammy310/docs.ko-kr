@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c7dd94c6-335b-46ff-9dfe-505056db5673
 topic_type:
 - apiref
-ms.openlocfilehash: a7449ffc8a8ccf2db62ab3cff2f9cfaffd0c72a9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ec8a24251ac4f0701b1adab19829078270229ced
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175865"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004597"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>IMetaDataEmit::DefineImportMember 메서드
-현재 범위 외부에 정의된 형식 또는 모듈의 지정된 멤버에 대한 참조를 만들고 해당 참조에 대한 토큰을 정의합니다.  
+현재 범위 외부에 정의 된 형식 또는 모듈의 지정 된 멤버에 대 한 참조를 만들고 해당 참조에 대 한 토큰을 정의 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,50 +42,50 @@ HRESULT DefineImportMember (
   
 ## <a name="parameters"></a>매개 변수  
  `pAssemImport`  
- 【인】 대상 멤버를 가져오는 어셈블리를 나타내는 [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) 인터페이스입니다.  
+ 진행 대상 멤버를 가져올 어셈블리를 나타내는 [IMetaDataAssemblyImport](imetadataassemblyimport-interface.md) 인터페이스입니다.  
   
  `pbHashValue`  
- 【인】 `pAssemImport`에서 지정한 어셈블리에 대한 해시가 포함된 배열입니다.  
+ 진행 에 지정 된 어셈블리에 대 한 해시를 포함 하는 배열입니다 `pAssemImport` .  
   
  `cbHashValue`  
  [in] `pbHashValue` 배열의 바이트 수입니다.  
   
  `pImport`  
- 【인】 대상 멤버를 가져오는 메타데이터 범위를 나타내는 [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) 인터페이스입니다.  
+ 진행 대상 멤버를 가져올 메타 데이터 범위를 나타내는 [IMetaDataImport](imetadataimport-interface.md) 인터페이스입니다.  
   
  `mbMember`  
- 【인】 대상 멤버를 지정하는 메타데이터 토큰입니다. 토큰은 `mdMethodDef` (멤버 메서드에 대한), `mdProperty` (멤버 속성에 `mdFieldDef` 대한) 또는 (멤버 필드의) 토큰일 수 있습니다.  
+ 진행 대상 멤버를 지정 하는 메타 데이터 토큰입니다. 토큰은 `mdMethodDef` (멤버 메서드의 경우), `mdProperty` (멤버 속성의 경우) 또는 `mdFieldDef` (멤버 필드의 경우) 토큰 일 수 있습니다.  
   
  `pAssemEmit`  
- 【인】 대상 멤버를 가져오는 어셈블리를 나타내는 [IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) 인터페이스입니다.  
+ 진행 대상 멤버를 가져올 대상 어셈블리를 나타내는 [IMetaDataAssemblyEmit](imetadataassemblyemit-interface.md) 인터페이스입니다.  
   
  `tkParent`  
- 【인】 대상 `mdTypeRef` `mdModuleRef` 멤버를 소유하는 형식 또는 모듈에 대한 또는 토큰입니다.  
+ 진행 `mdTypeRef` `mdModuleRef` 대상 멤버를 소유 하는 형식 또는 모듈의 또는 토큰입니다.  
   
  `pmr`  
- 【아웃】 멤버 `mdMemberRef` 참조의 현재 범위에 정의된 토큰입니다.  
+ 제한이 `mdMemberRef`멤버 참조의 현재 범위에서 정의 된 토큰입니다.  
   
 ## <a name="remarks"></a>설명  
- 메서드는 `DefineImportMember` 다른 범위에 정의 `mbMember`된 에 의해 지정 된 `pImport`멤버를 검색 하 고 해당 속성을 검색 합니다. 이 정보를 사용하여 현재 범위의 [IMetaDataEmit::DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md) 메서드를 호출하여 멤버 참조를 만듭니다.  
+ 메서드는로 지정 된 멤버를 조회 하 여 `DefineImportMember` `mbMember` 에 지정 된 다른 범위에 정의 되 `pImport` 고 해당 속성을 검색 합니다. 이 정보를 사용 하 여 현재 범위에서 [IMetaDataEmit::D efinememberref](imetadataemit-definememberref-method.md) 메서드를 호출 하 여 멤버 참조를 만듭니다.  
   
- 일반적으로 메서드를 `DefineImportMember` 사용하기 전에 현재 범위에서 대상 멤버의 상위 클래스, 인터페이스 또는 모듈에 대한 형식 참조 또는 모듈 참조를 만들어야 합니다. 그런 다음 이 참조에 대한 `tkParent` 메타데이터 토큰이 인수에 전달됩니다. 나중에 컴파일러 또는 링커에 의해 해결될 경우 대상 멤버의 부모에 대한 참조를 만들 필요가 없습니다. 요약하면  
+ 일반적으로 메서드를 사용 하기 전에 `DefineImportMember` 현재 범위에서 대상 멤버의 부모 클래스, 인터페이스 또는 모듈에 대 한 형식 참조 또는 모듈 참조를 만들어야 합니다. 그런 다음이 참조에 대 한 메타 데이터 토큰이 인수에 전달 됩니다 `tkParent` . 나중에 컴파일러나 링커를 통해 해결 될 경우 대상 멤버의 부모에 대 한 참조를 만들 필요가 없습니다. 요약:  
   
-- 대상 멤버가 필드 또는 메서드인 경우 [IMetaDataEmit::DefineTypeRefByName](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) 또는 [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md) 메서드를 사용하여 현재 범위에서 멤버의 상위 클래스 또는 상위 인터페이스에 대한 형식 참조를 만듭니다.  
+- 대상 멤버가 필드 또는 메서드인 경우 [IMetaDataEmit::D efinetyperefbyname](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) 또는 [IMetaDataEmit::D efineImportType](imetadataemit-defineimporttype-method.md) 메서드를 사용 하 여 현재 범위에서 멤버의 부모 클래스 또는 부모 인터페이스에 대 한 형식 참조를 만듭니다.  
   
-- 대상 멤버가 전역 변수 또는 전역 함수인 경우(즉, 클래스 또는 인터페이스의 구성원이 아님) [IMetaDataEmit::DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md) 메서드를 사용하여 멤버의 상위 모듈에 대한 현재 범위에서 모듈 참조를 만듭니다.  
+- 대상 멤버가 전역 변수나 전역 함수 (즉, 클래스 또는 인터페이스의 멤버가 아님) 인 경우 [IMetaDataEmit::D efinemoduleref](imetadataemit-definemoduleref-method.md) 메서드를 사용 하 여 현재 범위에서 멤버의 부모 모듈에 대 한 모듈 참조를 만듭니다.  
   
-- 대상 멤버의 부모가 나중에 컴파일러 또는 링커에 의해 해결되면 `mdTokenNil` `tkParent`에서 전달합니다. 이것이 적용되는 유일한 시나리오는 전역 함수 또는 전역 변수를 현재 모듈에 연결되고 메타데이터가 병합되는 .obj 파일에서 가져오는 경우입니다.  
+- 컴파일러 또는 링커가 대상 멤버의 부모를 나중에 확인 하는 경우를 전달 `mdTokenNil` `tkParent` 합니다. 이를 적용 하는 유일한 시나리오는 현재 모듈에 연결 되 고 메타 데이터가 병합 되는 .obj 파일에서 전역 함수 또는 전역 변수를 가져오는 경우입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** 코르h  
+ **헤더:** Cor  
   
- **라이브러리:** MSCorEE.dll의 리소스로 사용  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 인터페이스](imetadataemit-interface.md)
+- [IMetaDataEmit2 인터페이스](imetadataemit2-interface.md)

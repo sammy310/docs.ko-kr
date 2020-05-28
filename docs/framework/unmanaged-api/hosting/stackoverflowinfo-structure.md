@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 519389f2-0217-436c-99d4-93a76ebce5b5
 topic_type:
 - apiref
-ms.openlocfilehash: 1072026f92edbc646653c6dd74ec8e22d5b887e5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 941093b9a0856c2b716ba359c854473f3c9ea26a
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73105915"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006521"
 ---
 # <a name="stackoverflowinfo-structure"></a>StackOverflowInfo 구조체
 발생 한 오버플로 형식과 오버플로로 인해 throw 된 예외에 대 한 정보를 저장 합니다.  
@@ -37,21 +37,21 @@ typedef struct _StackOverflowInfo {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`soType`|오버플로 유형을 지정 하는 [StackOverflowType](../../../../docs/framework/unmanaged-api/hosting/stackoverflowtype-enumeration.md) 열거형의 값입니다.|  
-|`pExceptionInfo`|예외에 대 한 컴퓨터 독립적 설명과 함께 예외 레코드를 포함 하는 Win32 `EXCEPTION_POINTERS` 개체에 대 한 포인터로, 예외 발생 시 프로세서 컨텍스트에 대 한 컴퓨터 종속 설명을 포함 하는 컨텍스트 레코드를 포함 합니다.|  
+|`soType`|오버플로 유형을 지정 하는 [StackOverflowType](stackoverflowtype-enumeration.md) 열거형의 값입니다.|  
+|`pExceptionInfo`|예외에 대 한 컴퓨터 독립적 설명과 컨텍스트 레코드를 포함 하는 예외 레코드를 포함 하는 Win32 개체에 대 한 포인터로 `EXCEPTION_POINTERS` , 예외 발생 시 프로세서 컨텍스트에 대 한 컴퓨터 종속 설명을 포함 합니다.|  
   
-## <a name="remarks"></a>주의  
- `StackOverflowInfo` 개체는 `Event_StackOverflow` 이벤트에 대해 [IActionOnCLREvent:: OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) 메서드에 전달 됩니다.  
+## <a name="remarks"></a>설명  
+ `StackOverflowInfo`개체는 이벤트에 대 한 [IActionOnCLREvent:: OnEvent](iactiononclrevent-onevent-method.md) 메서드에 전달 됩니다 `Event_StackOverflow` .  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
  **라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [호스팅 구조체](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [호스팅 구조체](hosting-structures.md)

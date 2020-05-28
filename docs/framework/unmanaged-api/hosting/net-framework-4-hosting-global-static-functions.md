@@ -6,21 +6,21 @@ helpviewer_keywords:
 - global static functions [.NET Framework hosting], version 4
 - .NET Framework 4, hosting global static functions
 ms.assetid: 07a1a6e1-db73-4555-81df-bc4054c51492
-ms.openlocfilehash: 58b2b6faaf96a8c4f0c0422f2092c3752fbe822f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d1cb267127072d47ad9918808bf994c95af30d11
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133704"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006716"
 ---
 # <a name="net-framework-4-hosting-global-static-functions"></a>.NET Framework 4 호스팅 전역 정적 함수
-.NET Framework 4에서는 새 내보낸 메서드를 Mscoree.dll에서 도입 했습니다. [Clrcreateintstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md).  
+.NET Framework 4에서는 새 내보낸 메서드를 Mscoree.dll에서 도입 했습니다. [Clrcreateintstance](clrcreateinstance-function.md).  
   
-## <a name="in-this-section"></a>단원 내용  
- [CLRCreateInstance 함수](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)  
- [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)또는 [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md)의 세 가지 인터페이스 중 하나를 제공 합니다.  
+## <a name="in-this-section"></a>섹션 내용  
+ [CLRCreateInstance 함수](clrcreateinstance-function.md)  
+ [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)또는 [ICLRDebugging](../debugging/iclrdebugging-interface.md)의 세 가지 인터페이스 중 하나를 제공 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [호스팅 전역 정적 함수](../../../../docs/framework/unmanaged-api/hosting/hosting-global-static-functions.md)
-- [호스팅](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [호스팅 전역 정적 함수](hosting-global-static-functions.md)
+- [호스팅](index.md)

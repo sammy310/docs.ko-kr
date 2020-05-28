@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f043594-0c45-4bc6-988e-a6793f0d8d06
 topic_type:
 - apiref
-ms.openlocfilehash: 1799e0af91fa6074f174120b29e2302a27230c62
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b4694efffa0a3dd6fed1f97fc2359c5eb335d440
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141462"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006417"
 ---
 # <a name="startup_flags-enumeration"></a>STARTUP_FLAGS 열거형
 CLR (공용 언어 런타임)의 시작 동작을 나타내는 값을 포함 합니다. 기본적으로 가비지 수집은 비 동시 이며 기본 클래스 라이브러리만 도메인 중립적 영역에 로드 됩니다.  
@@ -68,19 +68,19 @@ typedef enum {
 |`STARTUP_LEGACY_IMPERSONATION`|기본적으로 가장이 비동기 요소 간에 이동 하지 않도록 지정 합니다.|  
 |`STARTUP_DISABLE_COMMITTHREADSTACK`|스레드의 실행이 시작 될 때 전체 스레드 스택을 커밋하지 않도록 지정 합니다.|  
 |`STARTUP_ALWAYSFLOW_IMPERSONATION`|플랫폼 호출을 통해 달성 된 관리 되는 가장 및 가장가 비동기 요소를 통해 전달 되도록 지정 합니다. 기본적으로 관리 되는 가장는 비동기 요소를 통해 전달 됩니다.|  
-|`STARTUP_TRIM_GC_COMMIT`|시스템 메모리가 부족할 때 가비지 수집에서 커밋된 공간을 적게 사용 하도록 지정 합니다. [공유 웹 호스팅을 위한 최적화](../../../standard/garbage-collection/optimization-for-shared-web-hosting.md)`gcTrimCommitOnLowMemory`를 참조 하세요.|  
-|`STARTUP_ETW`|공용 언어 런타임 이벤트에 대해 ETW (Windows 용 이벤트 추적)를 사용 하도록 지정 합니다. Windows Vista 부터는 이벤트 추적이 항상 사용 되도록 설정 되므로이 플래그는 영향을 주지 않습니다. [.NET Framework 로깅 제어](../../../../docs/framework/performance/controlling-logging.md)를 참조 하세요.|  
-|`STARTUP_ARM`|응용 프로그램 도메인 리소스 모니터링을 사용 하도록 지정 합니다. <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> 속성 및 [\<appDomainResourceMonitoring > 요소](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)를 참조 하세요.|  
+|`STARTUP_TRIM_GC_COMMIT`|시스템 메모리가 부족할 때 가비지 수집에서 커밋된 공간을 적게 사용 하도록 지정 합니다. `gcTrimCommitOnLowMemory` [공유 웹 호스팅을 위한 최적화](../../../standard/garbage-collection/optimization-for-shared-web-hosting.md)에서을 참조 하세요.|  
+|`STARTUP_ETW`|공용 언어 런타임 이벤트에 대해 ETW (Windows 용 이벤트 추적)를 사용 하도록 지정 합니다. Windows Vista 부터는 이벤트 추적이 항상 사용 되도록 설정 되므로이 플래그는 영향을 주지 않습니다. [.NET Framework 로깅 제어](../../performance/controlling-logging.md)를 참조 하세요.|  
+|`STARTUP_ARM`|응용 프로그램 도메인 리소스 모니터링을 사용 하도록 지정 합니다. <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>속성 및 [ \<appDomainResourceMonitoring> 요소](../../configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)를 참조 하세요.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
  **헤더:** Mscoree.dll  
   
  **라이브러리:** Mscoree.dll  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [호스팅 열거형](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [호스팅 열거형](hosting-enumerations.md)

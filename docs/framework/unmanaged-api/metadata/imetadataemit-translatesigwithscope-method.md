@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 47915d33-b7bf-409e-b484-4ee1df15de22
 topic_type:
 - apiref
-ms.openlocfilehash: 2662af41fbd2cdc3ce8a6df1e036dfc5b22ff6a3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7ef6dbc46806febc6fba89b39a8b894377225c23
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175553"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84003986"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>IMetaDataEmit::TranslateSigWithScope 메서드
-어셈블리를 현재 범위로 가져오고 병합된 범위에 대한 새 메타데이터 서명을 가져옵니다.  
+어셈블리를 현재 범위로 가져오고 병합 된 범위에 대 한 새 메타 데이터 서명을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,51 +45,51 @@ HRESULT TranslateSigWithScope (
   
 ## <a name="parameters"></a>매개 변수  
  `pAssemImport`  
- 【인】 가져오기 어셈블리에 대한 인터페이스입니다(서명이 정의된 위치).  
+ 진행 시그니처가 정의 된 가져오기 어셈블리에 대 한 인터페이스입니다.  
   
  `pbHashValue`  
- 【인】 어셈블리의 해시 Blob입니다.  
+ 진행 어셈블리에 대 한 해시 blob입니다.  
   
  `cbHashValue`  
- 【인】 의 바이트 `pbHashValue`수입니다.  
+ 진행 의 바이트 수 `pbHashValue` 입니다.  
   
  `import`  
- 【인】 가져오기 메타데이터 범위에 대한 인터페이스입니다.  
+ 진행 메타 데이터 가져오기 범위에 대 한 인터페이스입니다.  
   
  `pbSigBlob`  
- 【인】 가져올 서명입니다.  
+ 진행 가져올 서명입니다.  
   
  `cbSigBlob`  
- 【인】 의 크기(바이트)입니다. `pbSigBlob`  
+ 진행 의 크기 (바이트)입니다 `pbSigBlob` .  
   
  `pAssemEmit`  
- 【인】 내보내기 어셈블리의 인터페이스입니다.  
+ 진행 내보내기 어셈블리에 대 한 인터페이스입니다.  
   
  `emit`  
- 【인】 내보내기 메타데이터 범위에 대한 인터페이스입니다.  
+ 진행 내보내기 메타 데이터 범위에 대 한 인터페이스입니다.  
   
  `pvTranslatedSig`  
- 【아웃】 변환된 서명 Blob을 보유하는 버퍼입니다.  
+ 제한이 번역 된 서명 blob을 저장할 버퍼입니다.  
   
  `cbTranslatedSigMax`  
- 【인】 의 용량(바이트)입니다. `pvTranslatedSig`  
+ 진행 의 용량 (바이트)입니다 `pvTranslatedSig` .  
   
  `pcbTranslatedSig`  
- 【아웃】 번역된 서명의 실제 바이트 수입니다.  
+ 제한이 번역 된 시그니처의 실제 바이트 수입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** 코르h  
+ **헤더:** Cor  
   
- **라이브러리:** MSCorEE.dll의 리소스로 사용  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [IMetaDataAssemblyEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
-- [IMetaDataAssemblyImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
-- [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataAssemblyEmit 인터페이스](imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyImport 인터페이스](imetadataassemblyimport-interface.md)
+- [IMetaDataEmit 인터페이스](imetadataemit-interface.md)
+- [IMetaDataEmit2 인터페이스](imetadataemit2-interface.md)
+- [IMetaDataImport 인터페이스](imetadataimport-interface.md)

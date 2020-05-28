@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7596220c-f699-4b6c-8ae7-c83220610650
 topic_type:
 - apiref
-ms.openlocfilehash: 759358822ed865c89f6f55084d1e7f6143506e93
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e7fe5cbe27c0771a71e4c03d14ab68ada7d0741a
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175709"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004194"
 ---
 # <a name="imetadataemitmerge-method"></a>IMetaDataEmit::병합 메서드
-병합할 범위 목록에 지정된 가져온 범위를 추가합니다.  
+병합할 범위 목록에 지정 된 가져온 범위를 추가 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,27 +37,27 @@ HRESULT Merge (
   
 ## <a name="parameters"></a>매개 변수  
  `pImport`  
- 【인】 병합할 가져온 범위를 식별하는 [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) 개체에 대한 포인터입니다.  
+ 진행 병합할 가져온 범위를 식별 하는 [IMetaDataImport](imetadataimport-interface.md) 개체에 대 한 포인터입니다.  
   
  `pIMap`  
- 【인】 토큰 다시 매핑을 지정하는 [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) 개체에 대한 포인터입니다.  
+ 진행 토큰 다시 매핑을 지정 하는 [IMapToken](imaptoken-interface.md) 개체에 대 한 포인터입니다.  
   
  `pHandler`  
- 【인】 오류를 지정하는 [IUnknown](/cpp/atl/iunknown) 개체에 대한 포인터입니다.  
+ 진행 오류를 지정 하는 [IUnknown](/cpp/atl/iunknown) 개체에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
- [IMetaDataEmit::MergeEnd호출하여](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md) 메타데이터를 단일 범위로 병합합니다.  
+ [IMetaDataEmit:: MergeEnd](imetadataemit-mergeend-method.md) 를 호출 하 여 메타 데이터의 병합을 단일 범위로 트리거합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
   
- **헤더:** 코르h  
+ **헤더:** Cor  
   
- **라이브러리:** MSCorEE.dll의 리소스로 사용  
+ **라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.  
   
- **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 인터페이스](imetadataemit-interface.md)
+- [IMetaDataEmit2 인터페이스](imetadataemit2-interface.md)
