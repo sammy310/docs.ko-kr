@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 124656f6-0dad-4ceb-9043-d3869ab65cde
 topic_type:
 - apiref
-ms.openlocfilehash: 44a84e0752eecc1c694f3b8cf6e568b72b7d0f5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78b30f624bd71234e8f1b56600b3a23d15fdf517
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176216"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006035"
 ---
-# <a name="ceesectionreloctype-enumeration"></a><span data-ttu-id="95f9e-102">CeeSectionRelocType 열거형</span><span class="sxs-lookup"><span data-stu-id="95f9e-102">CeeSectionRelocType Enumeration</span></span>
-<span data-ttu-id="95f9e-103">`reloc` [ICeeGen::AddSectionReloc에](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)대한 호출에서 내보낸 명령 유형에 영향을 미치는 값을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="95f9e-103">Provides values to influence the type of `reloc` instruction emitted in a call to [ICeeGen::AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md).</span></span>  
+# <a name="ceesectionreloctype-enumeration"></a><span data-ttu-id="c4625-102">CeeSectionRelocType 열거형</span><span class="sxs-lookup"><span data-stu-id="c4625-102">CeeSectionRelocType Enumeration</span></span>
+<span data-ttu-id="c4625-103">`reloc` [ICeeGen:: AddSectionReloc](iceegen-addsectionreloc-method.md)에 대 한 호출에서 내보낸 명령의 형식에 영향을 주는 값을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4625-103">Provides values to influence the type of `reloc` instruction emitted in a call to [ICeeGen::AddSectionReloc](iceegen-addsectionreloc-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="95f9e-104">구문</span><span class="sxs-lookup"><span data-stu-id="95f9e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c4625-104">구문</span><span class="sxs-lookup"><span data-stu-id="c4625-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum  {  
@@ -48,37 +48,37 @@ typedef enum  {
     } CeeSectionRelocType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="95f9e-105">구성원</span><span class="sxs-lookup"><span data-stu-id="95f9e-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="c4625-105">멤버</span><span class="sxs-lookup"><span data-stu-id="c4625-105">Members</span></span>  
   
-|<span data-ttu-id="95f9e-106">멤버</span><span class="sxs-lookup"><span data-stu-id="95f9e-106">Member</span></span>|<span data-ttu-id="95f9e-107">Description</span><span class="sxs-lookup"><span data-stu-id="95f9e-107">Description</span></span>|  
+|<span data-ttu-id="c4625-106">멤버</span><span class="sxs-lookup"><span data-stu-id="c4625-106">Member</span></span>|<span data-ttu-id="c4625-107">설명</span><span class="sxs-lookup"><span data-stu-id="c4625-107">Description</span></span>|  
 |------------|-----------------|  
-|`srRelocAbsolute`|<span data-ttu-id="95f9e-108">.reloc 섹션으로 `reloc`아무 것도 보내지 는 단면 상대만 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="95f9e-108">Generates only a section-relative `reloc`, sending nothing into a .reloc section.</span></span>|  
-|`srRelocHighLow`|<span data-ttu-id="95f9e-109">포인터 크기의 `reloc` 위치에 대한 a를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="95f9e-109">Generates a `reloc` for a pointer-sized location.</span></span> <span data-ttu-id="95f9e-110">이것은 플랫폼에 따라 BASED_HIGHLOW 또는 BASED_DIR64 변환됩니다.</span><span class="sxs-lookup"><span data-stu-id="95f9e-110">This is transformed into BASED_HIGHLOW or BASED_DIR64 depending on the platform.</span></span>|  
-|`srRelocHighAdj`|<span data-ttu-id="95f9e-111">32비트 `reloc` 숫자의 상위 16비트에 대해 a를 생성하며, 여기서 아래쪽 16비트는 .reloc 테이블의 다음 단어에 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="95f9e-111">Generates a `reloc` for the top 16 bits of a 32-bit number, where the bottom 16 bits are included in the next word in the .reloc table.</span></span>|  
-|`srRelocMapToken`|<span data-ttu-id="95f9e-112">.reloc 섹션으로 아무 것도 보내지 않은 토큰 맵 재배치를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="95f9e-112">Generates a token map relocation, sending nothing into a .reloc section.</span></span>|  
-|`srRelocRelative`|<span data-ttu-id="95f9e-113">값이 상대 주소 수정임을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="95f9e-113">Indicates that the value is a relative address fixup.</span></span>|  
-|`srRelocFilePos`|<span data-ttu-id="95f9e-114">.reloc 섹션으로 `reloc`아무 것도 보내지 는 단면 상대만 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="95f9e-114">Generates only a section-relative `reloc`, sending nothing into a .reloc section.</span></span> <span data-ttu-id="95f9e-115">이는 `reloc` 섹션의 가상 주소가 아니라 섹션의 파일 위치를 기준으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="95f9e-115">This `reloc` is relative to the file position of the section, not the section's virtual address.</span></span>|  
-|`srRelocCodeRelative`|<span data-ttu-id="95f9e-116">코드 상대 주소 수정을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="95f9e-116">Specifies a code-relative address fixup.</span></span>|  
-|`srRelocIA64Imm64`|<span data-ttu-id="95f9e-117">ia64 `reloc` `movl` 명령어에서 64비트 주소에 대한 a를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="95f9e-117">Generates a `reloc` for a 64 bit address in an ia64 `movl` instruction.</span></span>|  
-|`srRelocDir64`|<span data-ttu-id="95f9e-118">64비트 `reloc` 주소에 대한 a를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="95f9e-118">Generates a `reloc` for a 64-bit address.</span></span>|  
-|`srRelocIA64PcRel25`|<span data-ttu-id="95f9e-119">ia64 `reloc` `br.call` 명령어에서 25비트 PC 상대 주소에 대한 을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="95f9e-119">Generate a `reloc` for a 25-bit PC-relative address in an ia64 `br.call` instruction.</span></span>|  
-|`srRelocIA64PcRel64`|<span data-ttu-id="95f9e-120">ia64 `reloc` `brl.call` 명령어에서 64비트 PC 상대 주소에 대한 a를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="95f9e-120">Generates a `reloc` for a 64-bit PC-relative address in an ia64 `brl.call` instruction.</span></span>|  
-|`srRelocAbsoluteTagged`|<span data-ttu-id="95f9e-121">태그가 지정된 포인터 값에 `reloc`사용되는 30비트 섹션 상대값을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="95f9e-121">Generates a 30-bit section-relative `reloc`, used for tagged pointer values.</span></span>|  
-|`srRelocSentinel`|<span data-ttu-id="95f9e-122">이 열거형에 추가된 모든 추가 사항이 내부 `reloc` 이름 배열에 반영되도록 하는 데 도움이 되는 센티넬 값입니다.</span><span class="sxs-lookup"><span data-stu-id="95f9e-122">A sentinel value to help ensure any additions to this enum are reflected to the internal `reloc` name array.</span></span>|  
-|`srNoBaseReloc`|<span data-ttu-id="95f9e-123">베이스를 `reloc`내보피지 않도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="95f9e-123">Specifies not to emit a base `reloc`.</span></span>|  
-|`srRelocPtr`|<span data-ttu-id="95f9e-124">메모리의 사전 수정 내용이 섹션 오프셋이 아닌 포인터임을 나타내는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="95f9e-124">A value indicating that the pre-fixup contents of memory are a pointer rather than a section offset.</span></span>|  
+|`srRelocAbsolute`|<span data-ttu-id="c4625-108">섹션을 기준으로 하 여 `reloc` .reloc 섹션에 아무 것도 보내지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c4625-108">Generates only a section-relative `reloc`, sending nothing into a .reloc section.</span></span>|  
+|`srRelocHighLow`|<span data-ttu-id="c4625-109">`reloc`포인터 크기의 위치에 대해를 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4625-109">Generates a `reloc` for a pointer-sized location.</span></span> <span data-ttu-id="c4625-110">이는 플랫폼에 따라 BASED_HIGHLOW 또는 BASED_DIR64으로 변환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c4625-110">This is transformed into BASED_HIGHLOW or BASED_DIR64 depending on the platform.</span></span>|  
+|`srRelocHighAdj`|<span data-ttu-id="c4625-111">`reloc`32 비트 숫자의 상위 16 비트에 대해를 생성 합니다. 여기서 하위 16 비트는 .reloc 테이블의 다음 단어에 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c4625-111">Generates a `reloc` for the top 16 bits of a 32-bit number, where the bottom 16 bits are included in the next word in the .reloc table.</span></span>|  
+|`srRelocMapToken`|<span data-ttu-id="c4625-112">.Reloc 섹션에 아무 것도 보내지 않고 토큰 맵 재배치를 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4625-112">Generates a token map relocation, sending nothing into a .reloc section.</span></span>|  
+|`srRelocRelative`|<span data-ttu-id="c4625-113">값이 상대 주소 픽스업 임을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="c4625-113">Indicates that the value is a relative address fixup.</span></span>|  
+|`srRelocFilePos`|<span data-ttu-id="c4625-114">섹션을 기준으로 하 여 `reloc` .reloc 섹션에 아무 것도 보내지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c4625-114">Generates only a section-relative `reloc`, sending nothing into a .reloc section.</span></span> <span data-ttu-id="c4625-115">섹션의 `reloc` 가상 주소가 아니라 섹션의 파일 위치를 기준으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4625-115">This `reloc` is relative to the file position of the section, not the section's virtual address.</span></span>|  
+|`srRelocCodeRelative`|<span data-ttu-id="c4625-116">코드 상대 주소 픽스업을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4625-116">Specifies a code-relative address fixup.</span></span>|  
+|`srRelocIA64Imm64`|<span data-ttu-id="c4625-117">`reloc`Ia64 명령에서 64 비트 주소에 대 한를 생성 `movl` 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4625-117">Generates a `reloc` for a 64 bit address in an ia64 `movl` instruction.</span></span>|  
+|`srRelocDir64`|<span data-ttu-id="c4625-118">`reloc`64 비트 주소에 대 한를 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4625-118">Generates a `reloc` for a 64-bit address.</span></span>|  
+|`srRelocIA64PcRel25`|<span data-ttu-id="c4625-119">`reloc`Ia64 명령의 25 비트 PC 상대 주소에 대해를 생성 `br.call` 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4625-119">Generate a `reloc` for a 25-bit PC-relative address in an ia64 `br.call` instruction.</span></span>|  
+|`srRelocIA64PcRel64`|<span data-ttu-id="c4625-120">`reloc`Ia64 명령에서 64 비트 PC 상대 주소에 대해를 생성 `brl.call` 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4625-120">Generates a `reloc` for a 64-bit PC-relative address in an ia64 `brl.call` instruction.</span></span>|  
+|`srRelocAbsoluteTagged`|<span data-ttu-id="c4625-121">`reloc`태그가 지정 된 포인터 값에 사용 되는 30 비트 섹션 상대를 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4625-121">Generates a 30-bit section-relative `reloc`, used for tagged pointer values.</span></span>|  
+|`srRelocSentinel`|<span data-ttu-id="c4625-122">이 열거형에 대 한 추가를 내부 이름 배열에 반영 하는 데 도움이 되는 센티널 값 `reloc` 입니다.</span><span class="sxs-lookup"><span data-stu-id="c4625-122">A sentinel value to help ensure any additions to this enum are reflected to the internal `reloc` name array.</span></span>|  
+|`srNoBaseReloc`|<span data-ttu-id="c4625-123">밑을 내보내지 않도록 지정 합니다 `reloc` .</span><span class="sxs-lookup"><span data-stu-id="c4625-123">Specifies not to emit a base `reloc`.</span></span>|  
+|`srRelocPtr`|<span data-ttu-id="c4625-124">메모리의 미리 픽스업 콘텐츠가 섹션 오프셋이 아닌 포인터 임을 나타내는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="c4625-124">A value indicating that the pre-fixup contents of memory are a pointer rather than a section offset.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="95f9e-125">요구 사항</span><span class="sxs-lookup"><span data-stu-id="95f9e-125">Requirements</span></span>  
- <span data-ttu-id="95f9e-126">**플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="95f9e-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c4625-125">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c4625-125">Requirements</span></span>  
+ <span data-ttu-id="c4625-126">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c4625-126">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="95f9e-127">**헤더:** 코르h</span><span class="sxs-lookup"><span data-stu-id="95f9e-127">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c4625-127">**헤더:** Cor</span><span class="sxs-lookup"><span data-stu-id="c4625-127">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="95f9e-128">**라이브러리:** MsCorEE.dll의 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="95f9e-128">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c4625-128">**라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c4625-128">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="95f9e-129">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="95f9e-129">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c4625-129">**.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c4625-129">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="95f9e-130">참고 항목</span><span class="sxs-lookup"><span data-stu-id="95f9e-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c4625-130">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c4625-130">See also</span></span>
 
-- [<span data-ttu-id="95f9e-131">메타데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="95f9e-131">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
-- [<span data-ttu-id="95f9e-132">ICeeGen 인터페이스</span><span class="sxs-lookup"><span data-stu-id="95f9e-132">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
-- [<span data-ttu-id="95f9e-133">AddSectionReloc 메서드</span><span class="sxs-lookup"><span data-stu-id="95f9e-133">AddSectionReloc Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)
+- [<span data-ttu-id="c4625-131">메타데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="c4625-131">Metadata Enumerations</span></span>](metadata-enumerations.md)
+- [<span data-ttu-id="c4625-132">ICeeGen 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c4625-132">ICeeGen Interface</span></span>](iceegen-interface.md)
+- [<span data-ttu-id="c4625-133">AddSectionReloc 메서드</span><span class="sxs-lookup"><span data-stu-id="c4625-133">AddSectionReloc Method</span></span>](iceegen-addsectionreloc-method.md)

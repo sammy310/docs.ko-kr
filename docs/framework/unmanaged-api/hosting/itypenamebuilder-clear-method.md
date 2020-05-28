@@ -15,31 +15,31 @@ helpviewer_keywords:
 ms.assetid: 18d54280-46af-479f-8d84-5ab64f8b23b9
 topic_type:
 - apiref
-ms.openlocfilehash: cf4d82bb795ee17f748955a44b422071c8009184
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8e06e67b0900b4a5b7cceead60e183ee9c728a7e
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124818"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008705"
 ---
-# <a name="itypenamebuilderclear-method"></a><span data-ttu-id="013ae-102">ITypeNameBuilder::Clear 메서드</span><span class="sxs-lookup"><span data-stu-id="013ae-102">ITypeNameBuilder::Clear Method</span></span>
-<span data-ttu-id="013ae-103">이 메서드는 .NET Framework 인프라를 지원 하며 사용자 코드에서 직접 사용 하기 위한 것이 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="013ae-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="itypenamebuilderclear-method"></a><span data-ttu-id="e2a81-102">ITypeNameBuilder::Clear 메서드</span><span class="sxs-lookup"><span data-stu-id="e2a81-102">ITypeNameBuilder::Clear Method</span></span>
+<span data-ttu-id="e2a81-103">이 메서드는 .NET Framework 인프라를 지원하며 코드에서 직접 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="e2a81-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="013ae-104">구문</span><span class="sxs-lookup"><span data-stu-id="013ae-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e2a81-104">구문</span><span class="sxs-lookup"><span data-stu-id="e2a81-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Clear ( );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="013ae-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="013ae-105">Requirements</span></span>  
- <span data-ttu-id="013ae-106">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="013ae-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e2a81-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="e2a81-105">Requirements</span></span>  
+ <span data-ttu-id="e2a81-106">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e2a81-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="013ae-107">**헤더:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="013ae-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="e2a81-107">**헤더:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="e2a81-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="013ae-108">**라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="013ae-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="e2a81-108">**라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e2a81-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="013ae-109">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="013ae-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e2a81-109">**.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e2a81-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="013ae-110">참조</span><span class="sxs-lookup"><span data-stu-id="013ae-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e2a81-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e2a81-110">See also</span></span>
 
-- [<span data-ttu-id="013ae-111">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="013ae-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="e2a81-111">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e2a81-111">Hosting Interfaces</span></span>](hosting-interfaces.md)

@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: c7c5b39a-d4ac-41f1-9d1e-44163f563a49
 topic_type:
 - apiref
-ms.openlocfilehash: 8c8ecab9d957e72bb6c0817af07c863fcff97cde
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 99eef11c294dbb17b30b2ef28e65999d4d60f817
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436335"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008328"
 ---
-# <a name="iceegengetmethodbuffer-method"></a><span data-ttu-id="5ce23-102">ICeeGen::GetMethodBuffer 메서드</span><span class="sxs-lookup"><span data-stu-id="5ce23-102">ICeeGen::GetMethodBuffer Method</span></span>
-<span data-ttu-id="5ce23-103">지정 된 상대 가상 주소에서 메서드에 대 한 적절 한 크기의 버퍼를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="5ce23-103">Gets a buffer of the appropriate size for the method at the specified relative virtual address.</span></span>  
+# <a name="iceegengetmethodbuffer-method"></a><span data-ttu-id="d0e7d-102">ICeeGen::GetMethodBuffer 메서드</span><span class="sxs-lookup"><span data-stu-id="d0e7d-102">ICeeGen::GetMethodBuffer Method</span></span>
+<span data-ttu-id="d0e7d-103">지정 된 상대 가상 주소에서 메서드에 대 한 적절 한 크기의 버퍼를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="d0e7d-103">Gets a buffer of the appropriate size for the method at the specified relative virtual address.</span></span>  
   
- <span data-ttu-id="5ce23-104">이 메서드는 사용 되지 않으므로 사용 하면 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="5ce23-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="d0e7d-104">이 메서드는 사용 되지 않으므로 사용 하면 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d0e7d-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5ce23-105">구문</span><span class="sxs-lookup"><span data-stu-id="5ce23-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d0e7d-105">구문</span><span class="sxs-lookup"><span data-stu-id="d0e7d-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetMethodBuffer (  
@@ -36,22 +36,22 @@ HRESULT GetMethodBuffer (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5ce23-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="5ce23-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d0e7d-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="d0e7d-106">Parameters</span></span>  
  `RVA`  
- <span data-ttu-id="5ce23-107">진행 버퍼를 반환할 메서드의 상대 가상 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="5ce23-107">[in] The relative virtual address of the method for which to return a buffer.</span></span>  
+ <span data-ttu-id="d0e7d-107">진행 버퍼를 반환할 메서드의 상대 가상 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="d0e7d-107">[in] The relative virtual address of the method for which to return a buffer.</span></span>  
   
  `lpBuffer`  
- <span data-ttu-id="5ce23-108">제한이 반환 된 버퍼에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="5ce23-108">[out] A pointer to the returned buffer.</span></span>  
+ <span data-ttu-id="d0e7d-108">제한이 반환 된 버퍼에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="d0e7d-108">[out] A pointer to the returned buffer.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5ce23-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="5ce23-109">Requirements</span></span>  
- <span data-ttu-id="5ce23-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="5ce23-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d0e7d-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d0e7d-109">Requirements</span></span>  
+ <span data-ttu-id="d0e7d-110">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d0e7d-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5ce23-111">**헤더:** Cor</span><span class="sxs-lookup"><span data-stu-id="5ce23-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="d0e7d-111">**헤더:** Cor</span><span class="sxs-lookup"><span data-stu-id="d0e7d-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="5ce23-112">**라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="5ce23-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="d0e7d-112">**라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d0e7d-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="5ce23-113">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5ce23-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d0e7d-113">**.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d0e7d-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5ce23-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="5ce23-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d0e7d-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d0e7d-114">See also</span></span>
 
-- [<span data-ttu-id="5ce23-115">ICeeGen 인터페이스</span><span class="sxs-lookup"><span data-stu-id="5ce23-115">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [<span data-ttu-id="d0e7d-115">ICeeGen 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d0e7d-115">ICeeGen Interface</span></span>](iceegen-interface.md)

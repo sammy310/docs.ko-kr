@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a4926d0a-261b-46b1-9994-82633661a64b
 topic_type:
 - apiref
-ms.openlocfilehash: 3b8aed6522b1c7eb2d8916f71d8a66b367623765
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78f3ea0d84c932732a752f3af2dc952100fef831
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177601"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009277"
 ---
-# <a name="imetadataemitdeletetoken-method"></a><span data-ttu-id="35387-102">IMetaDataEmit::DeleteToken 메서드</span><span class="sxs-lookup"><span data-stu-id="35387-102">IMetaDataEmit::DeleteToken Method</span></span>
-<span data-ttu-id="35387-103">현재 메타데이터 범위에서 지정된 토큰을 삭제합니다.</span><span class="sxs-lookup"><span data-stu-id="35387-103">Deletes the specified token from the current metadata scope.</span></span>  
+# <a name="imetadataemitdeletetoken-method"></a><span data-ttu-id="5629f-102">IMetaDataEmit::DeleteToken 메서드</span><span class="sxs-lookup"><span data-stu-id="5629f-102">IMetaDataEmit::DeleteToken Method</span></span>
+<span data-ttu-id="5629f-103">현재 메타 데이터 범위에서 지정 된 토큰을 삭제 합니다.</span><span class="sxs-lookup"><span data-stu-id="5629f-103">Deletes the specified token from the current metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="35387-104">구문</span><span class="sxs-lookup"><span data-stu-id="35387-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5629f-104">구문</span><span class="sxs-lookup"><span data-stu-id="5629f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DeleteToken (
@@ -33,20 +33,20 @@ HRESULT DeleteToken (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="35387-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="35387-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5629f-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="5629f-105">Parameters</span></span>  
  `tkObj`  
- <span data-ttu-id="35387-106">【인】 삭제할 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="35387-106">[in] The token to be deleted.</span></span>  
+ <span data-ttu-id="5629f-106">진행 삭제할 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="5629f-106">[in] The token to be deleted.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="35387-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="35387-107">Requirements</span></span>  
- <span data-ttu-id="35387-108">**플랫폼:**[시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="35387-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5629f-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="5629f-107">Requirements</span></span>  
+ <span data-ttu-id="5629f-108">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="5629f-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="35387-109">**헤더:** 코르h</span><span class="sxs-lookup"><span data-stu-id="35387-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="5629f-109">**헤더:** Cor</span><span class="sxs-lookup"><span data-stu-id="5629f-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="35387-110">**라이브러리:** MSCorEE.dll의 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="35387-110">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="5629f-110">**라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="5629f-110">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="35387-111">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="35387-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="5629f-111">**.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5629f-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="35387-112">참고 항목</span><span class="sxs-lookup"><span data-stu-id="35387-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5629f-112">참고 항목</span><span class="sxs-lookup"><span data-stu-id="5629f-112">See also</span></span>
 
-- [<span data-ttu-id="35387-113">IMetaDataEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="35387-113">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="35387-114">IMetaDataEmit2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="35387-114">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="5629f-113">IMetaDataEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="5629f-113">IMetaDataEmit Interface</span></span>](imetadataemit-interface.md)
+- [<span data-ttu-id="5629f-114">IMetaDataEmit2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="5629f-114">IMetaDataEmit2 Interface</span></span>](imetadataemit2-interface.md)
