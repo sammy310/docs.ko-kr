@@ -98,11 +98,6 @@
         - name: 라이브러리 단위 테스트
           href: tutorials/testing-library-with-visual-studio.md
           displayName: 'tutorials, visual studio, vs'
-        - name: 라이브러리 사용
-          href: tutorials/consuming-library-with-visual-studio.md
-          displayName: 'tutorials, visual studio, vs'
-        - name: 라이브 단위 테스트
-          href: /visualstudio/test/live-unit-testing-start
         - name: 패키지 설치 및 사용
           href: /nuget/quickstart/install-and-use-a-package-in-visual-studio
           displayName: 'tutorials, visual studio, vs'
