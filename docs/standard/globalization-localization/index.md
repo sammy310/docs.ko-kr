@@ -11,12 +11,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
-ms.openlocfilehash: eae1c38c2383d13bfb4dab83f2fe9551970b39f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5c601d18d92d9b57781bc8a09f26f0bc3a9216a
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73120881"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83842012"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>.NET 애플리케이션 전역화 및 지역화
 
@@ -44,11 +44,15 @@ ms.locfileid: "73120881"
 
 자세한 내용은 [세계화 설명서](/globalization/)를 참조하세요.
 
-## <a name="in-this-section"></a>섹션 내용
+## <a name="in-this-section"></a>단원 내용
 
 [전역화](globalization.md)
 
 문화권과 언어에 중립적인 애플리케이션을 디자인하고 코딩하는 것을 포함하여 지역화 대비 애플리케이션을 만드는 첫 번째 단계를 설명합니다.
+
+[.NET 세계화 및 ICU](globalization-icu.md)
+
+.NET 세계화에서 [ICU(International Components for Unicode)](http://site.icu-project.org/home)를 사용하는 방법을 설명합니다.
 
 [지역화 가능성 검토](localizability-review.md)
 
@@ -66,7 +70,7 @@ ms.locfileid: "73120881"
 
 전역화 및 지역화 구현과 world-ready ASP.NET 애플리케이션 개발을 위한 최선의 구현 방법을 소개합니다.
 
-## <a name="reference"></a>참조
+## <a name="reference"></a>참고
 
 - <xref:System.Globalization?displayProperty=nameWithType> 네임스페이스
 

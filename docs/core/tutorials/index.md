@@ -4,50 +4,56 @@ description: .NET Core 학습을 위한 자습서에 따라 Mac, Linux 및 Windo
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: 84784787465bec43cc460d34ca84e4baa5a15d7d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9fb87180bb001a7f54d93c6e95631562103c49e8
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77625936"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83840925"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>자습서에서 .NET Core 및 .NET Core SDK 도구 알아보기
 
 다음 자습서를 사용하여 .NET Core에 대해 알아볼 수 있습니다.
 
-## <a name="create-applications-with-visual-studio"></a>Visual Studio를 사용하여 애플리케이션 만들기
+## <a name="use-visual-studio"></a>Visual Studio 사용
 
-- [Hello World 콘솔 애플리케이션 만들기](with-visual-studio.md)
-- [Hello World 애플리케이션 디버그](debugging-with-visual-studio.md)
-- [Hello World 애플리케이션 게시](publishing-with-visual-studio.md)
-- [클래스 라이브러리 빌드](library-with-visual-studio.md)
-- [클래스 라이브러리 테스트](testing-library-with-visual-studio.md)
+- [콘솔 앱 만들기](with-visual-studio.md)
+- [F# 콘솔 앱 만들기](../../fsharp/get-started/get-started-visual-studio.md)
+- [앱 디버그](debugging-with-visual-studio.md)
+- [앱 게시](publishing-with-visual-studio.md)
+- [클래스 라이브러리 만들기](library-with-visual-studio.md)
+- [클래스 라이브러리 단위 테스트](testing-library-with-visual-studio.md)
 - [클래스 라이브러리 사용](consuming-library-with-visual-studio.md)
-- [Azure Cosmos DB: SQL API 및 .NET Core 시작](/azure/cosmos-db/sql-api-dotnetcore-get-started)
+- [패키지 설치 및 사용](/nuget/quickstart/install-and-use-a-package-in-visual-studio)
+- [패키지 만들기 및 게시](/nuget/quickstart/create-and-publish-a-package-using-visual-studio)
 
-## <a name="build-applications-with-visual-studio-code"></a>Visual Studio Code를 사용하여 애플리케이션 빌드
+## <a name="use-visual-studio-code"></a>Visual Studio Code 사용
 
-- [C# 및 Visual Studio Code 시작](with-visual-studio-code.md)
-- [macOS에서 .NET Core 시작](using-on-macos.md)
+Visual Studio Code 또는 다른 코드 편집기를 사용하려면 해당 자습서를 선택합니다. 모두 .NET Core 개발 작업에 CLI를 사용하므로 모든 코드 편집기에서 사용할 수 있습니다.
 
-## <a name="build-applications-with-visual-studio-for-mac"></a>Mac용 Visual Studio를 사용하여 애플리케이션 빌드
+- [콘솔 앱 만들기](with-visual-studio-code.md)
+- [콘솔 앱 만들기 및 게시](cli-create-console-app.md)
+- [F# 콘솔 앱 만들기](../../fsharp/get-started/get-started-vscode.md)
+- [라이브러리 만들기 및 단위 테스트 - macOS](using-on-macos.md)
+- [패키지 설치 및 사용](/nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli)
+- [패키지 만들기 및 게시](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)
 
-- [Mac용 Visual Studio를 사용하여 macOS에서 .NET Core 시작](using-on-mac-vs.md)
-- [Visual Studio for Mac을 사용하여 macOS에서 완전한 .NET Core 솔루션 빌드](using-on-mac-vs-full-solution.md)
+## <a name="use-visual-studio-for-mac"></a>Mac용 Visual Studio 사용
 
-## <a name="build-applications-with-the-net-core-cli"></a>.NET Core CLI를 사용하여 애플리케이션 빌드
+- [콘솔 앱 만들기](using-on-mac-vs.md)
+- [라이브러리 만들기 및 단위 테스트](using-on-mac-vs-full-solution.md)
+- [패키지 설치 및 사용](/nuget/quickstart/install-and-use-a-package-in-visual-studio-mac)
 
-- [.NET Core CLI를 사용하여 Windows/Linux/macOS에서 .NET Core 시작](cli-create-console-app.md)
-- [.NET Core CLI를 사용하여 프로젝트 구성 및 테스트](testing-with-cli.md)
-- [F# 시작](../../fsharp/get-started/get-started-command-line.md)
+## <a name="advanced-topics"></a>고급 항목
 
-## <a name="other"></a>기타
-
-- [Dotnet 테스트를 사용한 .NET Core의 단위 테스트](../testing/unit-testing-with-dotnet-test.md)
-- [MSTest 및 .NET Core를 사용한 단위 테스트](../testing/unit-testing-with-mstest.md)
-- [여러 플랫폼에서 사용할 수 있는 도구로 라이브러리 개발](libraries.md)
-- [네이티브 코드에서 .NET Core 호스트](netcore-hosting.md)
+- [라이브러리를 만드는 방법](libraries.md)
+- [XUnit을 사용한 앱 단위 테스트](testing-with-cli.md)
+- [C#/VB/F#을 NUnit/xUnit/MSTest와 함께 사용한 단위 테스트](../testing/index.md)
+- [Visual Studio를 사용한 라이브 단위 테스트](/visualstudio/test/live-unit-testing-start)
 - [CLI용 템플릿 만들기](cli-templates-create-item-template.md)
 - [CLI용 도구 만들기 및 사용](../tools/global-tools-how-to-create.md)
+- [플러그 인을 사용한 앱 만들기](creating-app-with-plugin-support.md)
+
+## <a name="create-web-apps"></a>웹앱 만들기
 
 ASP.NET Core 웹 애플리케이션 개발에 대한 자습서는 [ASP.NET Core 설명서](/aspnet/core/)를 참조하세요.

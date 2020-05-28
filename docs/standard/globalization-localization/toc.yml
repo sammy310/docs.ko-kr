@@ -3,6 +3,8 @@
   items:
     - name: 전역화
       href: globalization.md
+    - name: 세계화 및 ICU
+      href: globalization-icu.md
     - name: 지역화 가능성 검토
       href: localizability-review.md
     - name: 지역화
