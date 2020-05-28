@@ -2,12 +2,12 @@
 title: 클라우드 네이티브 앱에 대 한 IdentityServer
 description: Azure 용 클라우드 네이티브 .NET 앱 설계 | IdentityServer
 ms.date: 05/13/2020
-ms.openlocfilehash: 81cce30568becacda29f65f9506398790af321e0
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 2128001f0d25b1edd795dd9676e0d76018c1fa3a
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614034"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144372"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>클라우드 네이티브 응용 프로그램에 대 한 IdentityServer
 
@@ -29,7 +29,7 @@ IdentityServer는 ASP.NET Core에 대 한 OIDC (Openid connect Connect) 및 OAut
 
 이러한 각 시나리오에서 노출 된 기능을 무단 사용 으로부터 보호 해야 합니다. 일반적으로이 작업은 일반적으로 리소스에 대 한 요청을 수행 하는 사용자 또는 보안 주체를 인증 해야 합니다. 이 인증은 SAML2p, WS 또는 Openid connect Connect와 같은 몇 가지 일반적인 프로토콜 중 하나를 사용할 수 있습니다. Api와의 통신은 일반적으로 OAuth2 프로토콜을 사용 하 고 보안 토큰에 대 한 지원을 제공 합니다. 이러한 중요 한 교차를 교차 하는 보안 문제와 해당 구현 세부 사항을 응용 프로그램 자체에서 분리 하면 일관성을 유지 하 고 보안 및 유지 관리 용이성을 향상 시킵니다. 이러한 문제를 IdentityServer와 같은 전용 제품으로 아웃소싱 하면 모든 응용 프로그램에서 이러한 문제를 해결 하는 데 도움이 됩니다.
 
-IdentityServer는 ASP.NET Core 응용 프로그램 내에서 실행 되 고 Openid connect Connect 및 OAuth2에 대 한 지원을 추가 하는 미들웨어를 제공 합니다 ( [지원 되는 사양](http://docs.identityserver.io/en/latest/intro/specs.html)참조). 조직에서는 IdentityServer 미들웨어를 사용 하 여 자체 ASP.NET Core 앱을 만들어 모든 토큰 기반 보안 프로토콜에 대 한 STS 역할을 수행 합니다. IdentityServer 미들웨어는 끝점을 노출 하 여 다음과 같은 표준 기능을 지원 합니다.
+IdentityServer는 ASP.NET Core 응용 프로그램 내에서 실행 되 고 Openid connect Connect 및 OAuth2에 대 한 지원을 추가 하는 미들웨어를 제공 합니다 ( [지원 되는 사양](https://docs.identityserver.io/en/latest/intro/specs.html)참조). 조직에서는 IdentityServer 미들웨어를 사용 하 여 자체 ASP.NET Core 앱을 만들어 모든 토큰 기반 보안 프로토콜에 대 한 STS 역할을 수행 합니다. IdentityServer 미들웨어는 끝점을 노출 하 여 다음과 같은 표준 기능을 지원 합니다.
 
 - 권한 부여 (최종 사용자 인증)
 - 토큰 (프로그래밍 방식으로 토큰 요청)
@@ -40,7 +40,7 @@ IdentityServer는 ASP.NET Core 응용 프로그램 내에서 실행 되 고 Open
 - 해지 (토큰 해지)
 - 세션 종료 (모든 앱에서 single sign-on 트리거)
 
-## <a name="getting-started"></a>시작
+## <a name="getting-started"></a>시작하기
 
 IdentityServer4은 오픈 소스 이며 무료로 사용할 수 있습니다. NuGet 패키지를 사용 하 여 응용 프로그램에 추가할 수 있습니다. 주 패키지는 400만 번 이상 다운로드 된 [IdentityServer4](https://www.nuget.org/packages/IdentityServer4/) 입니다. 기본 패키지는 사용자 인터페이스 코드를 포함 하지 않고 메모리 구성 에서만 지원 합니다. 데이터베이스와 함께 사용 하려면 Entity Framework Core을 사용 하 여 IdentityServer에 대 한 구성 및 운영 데이터를 저장 하는 [IdentityServer4](https://www.nuget.org/packages/IdentityServer4.EntityFramework) 와 같은 데이터 공급자를 사용 하려고 합니다. 사용자 인터페이스의 경우 IdentityServer 미들웨어를 사용 하 여 로그인 및 로그 아웃에 대 한 지원을 추가 하기 위해 [빠른 시작 UI 리포지토리에서](https://github.com/IdentityServer/IdentityServer4.Quickstart.UI) 파일을 ASP.NET Core MVC 응용 프로그램으로 복사할 수 있습니다.
 
@@ -95,13 +95,13 @@ public class Startup
 
 ## <a name="javascript-clients"></a>JavaScript 클라이언트
 
-많은 클라우드 네이티브 응용 프로그램은 프런트 엔드에서 서버 쪽 Api 및 리치 클라이언트 SPAs (단일 페이지 응용 프로그램)를 활용 합니다. IdentityServer는 [JavaScript client](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html) `oidc-client.js` 웹 api의 로그인, 로그 아웃 및 토큰 기반 인증을 위해 IdentityServer를 사용할 수 있도록 spas에 추가할 수 있는 NPM를 통해 JavaScript 클라이언트 ()를 제공 합니다.
+많은 클라우드 네이티브 응용 프로그램은 프런트 엔드에서 서버 쪽 Api 및 리치 클라이언트 SPAs (단일 페이지 응용 프로그램)를 활용 합니다. IdentityServer는 [JavaScript client](https://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html) `oidc-client.js` 웹 api의 로그인, 로그 아웃 및 토큰 기반 인증을 위해 IdentityServer를 사용할 수 있도록 spas에 추가할 수 있는 NPM를 통해 JavaScript 클라이언트 ()를 제공 합니다.
 
 ## <a name="references"></a>참조
 
-- [IdentityServer 설명서](http://docs.identityserver.io/en/latest/)
+- [IdentityServer 설명서](https://docs.identityserver.io/en/latest/)
 - [애플리케이션 종류](https://docs.microsoft.com/azure/active-directory/develop/app-types)
-- [JavaScript OIDC 클라이언트](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)
+- [JavaScript OIDC 클라이언트](https://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)
 
 >[!div class="step-by-step"]
 >[이전](azure-active-directory.md)

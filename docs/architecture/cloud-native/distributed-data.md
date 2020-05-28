@@ -3,12 +3,12 @@ title: 분선 데이터
 description: 모놀리식 및 클라우드 네이티브 응용 프로그램의 데이터 저장소를 대조 합니다.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 2eff37dcc57ae39daac0ba10d10322be5eb4e321
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 28513f8691c06cf58ed14d57bf7830bb35d94852
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614138"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144398"
 ---
 # <a name="distributed-data"></a>분선 데이터
 
@@ -120,7 +120,7 @@ Saga 패턴은 일반적으로 일련의 관련 이벤트 또는 오케스트레
 
 **그림 5-7**. CQRS 구현
 
-위의 그림에서는 별도의 명령 및 쿼리 모델을 구현 합니다. 각 데이터 쓰기 작업은 쓰기 저장소에 저장 된 다음 읽기 저장소로 전파 됩니다. [최종 일관성](http://www.cloudcomputingpatterns.org/eventual_consistency/)원칙에 따라 데이터 전파 프로세스가 작동 하는 방식에 주의 해야 합니다. 읽기 모델은 결국 쓰기 모델과 동기화 되지만 프로세스가 지연 될 수 있습니다. 다음 섹션에서 최종 일관성에 대해 설명 합니다.
+위의 그림에서는 별도의 명령 및 쿼리 모델을 구현 합니다. 각 데이터 쓰기 작업은 쓰기 저장소에 저장 된 다음 읽기 저장소로 전파 됩니다. [최종 일관성](https://www.cloudcomputingpatterns.org/eventual_consistency/)원칙에 따라 데이터 전파 프로세스가 작동 하는 방식에 주의 해야 합니다. 읽기 모델은 결국 쓰기 모델과 동기화 되지만 프로세스가 지연 될 수 있습니다. 다음 섹션에서 최종 일관성에 대해 설명 합니다.
 
 이러한 분리를 통해 읽기 및 쓰기가 독립적으로 확장 될 수 있습니다. 읽기 작업은 쿼리에 최적화 된 스키마를 사용 하지만 쓰기는 업데이트에 최적화 된 스키마를 사용 합니다. 읽기 쿼리는 비 정규화 된 데이터를 기반으로 하며, 복잡 한 비즈니스 논리를 쓰기 모델에 적용할 수 있습니다. 또한 읽기를 노출 하는 것 보다 쓰기 작업에 대 한 보안을 강화 하는 것이 좋습니다.
 

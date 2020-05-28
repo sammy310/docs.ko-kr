@@ -2,15 +2,15 @@
 title: 트랜잭션 프로토콜 버전 1.0
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-ms.openlocfilehash: a775ca395e01e7ecbc676ba3ec97d19ae10b4f49
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 6063c643be4c60e9830a020d10ac9fbcd236dac2
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81464026"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144775"
 ---
 # <a name="transaction-protocols-version-10"></a>트랜잭션 프로토콜 버전 1.0
-WCF(Windows 통신 재단) 버전 1은 WS-원자 트랜잭션 및 WS 조정 프로토콜의 버전 1.0을 구현합니다. 버전 1.1에 대한 자세한 내용은 [트랜잭션 프로토콜을](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)참조하십시오.  
+WCF (Windows Communication Foundation) 버전 1은 WS 원자성 트랜잭션과 WS-조정 프로토콜의 1.0 버전을 구현 합니다. 버전 1.1에 대 한 자세한 내용은 [트랜잭션 프로토콜](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)을 참조 하세요.  
   
 |사양/문서|링크|  
 |-----------------------------|----------|  
@@ -21,25 +21,25 @@ WCF(Windows 통신 재단) 버전 1은 WS-원자 트랜잭션 및 WS 조정 프�
   
  이 항목에서는 WS-AT(WS-Atomic Transaction) 사양과 보안의 조합에 대해 설명하고, 트랜잭션 관리자 간 통신을 위해 사용하는 보안이 설정된 바인딩에 대해 설명합니다. 이 문서에서 설명하는 방식은 IBM, IONA, Sun Microsystems 등에서 WS-AT 및 WS-Coordination의 다른 구현과 함께 성공적으로 테스트되었습니다.  
   
- 다음 그림에서는 트랜잭션 관리자 1과 트랜잭션 관리자 2의 두 트랜잭션 관리자와 응용 프로그램 1 및 응용 프로그램 2 간의 상호 운용성을 설명합니다.  
+ 다음 그림은 두 개의 트랜잭션 관리자, 트랜잭션 관리자 1과 트랜잭션 관리자 2, 응용 프로그램 1과 응용 프로그램 2의 상호 운용성을 보여 줍니다.  
   
- ![트랜잭션 관리자 간의 상호 작용을 보여 주는 스크린샷입니다.](./media/transaction-protocols/transaction-managers-flow.gif)  
+ ![트랜잭션 관리자 간의 상호 작용을 보여 주는 스크린샷](./media/transaction-protocols/transaction-managers-flow.gif)  
   
  한 명의 개시자(I)와 한 명의 참가자(P)가 있는 일반적인 WS-Coordination/WS-Atomic Transaction 시나리오를 예로 들어 봅니다. 개시자와 참가자는 둘 다 트랜잭션 관리자(각각 ITM과 PTM)를 가집니다. 이 항목에서는 2단계 커밋을 2PC라고 합니다.  
   
 |||  
 |-|-|  
-|1. 만들기조정컨텍스트|12. 응용 프로그램 메시지 응답|  
-|2. 만들기조정컨텍스트응답|13. 커밋 (완료)|  
-|3. 등록 (완료)|14. 준비 (2PC)|  
-|4. 레지스터응답|15. 준비 (2PC)|  
-|5. 응용 프로그램 메시지|16. 준비 (2PC)|  
-|6. 컨텍스트를 사용하여 조정컨텍스트 생성|17. 준비 (2PC)|  
-|7. 등록 (내구성)|18. 커밋 (완료)|  
-|8. 레지스터응답|19. 커밋 (2PC)|  
-|9. 만들기조정컨텍스트응답|20. 커밋 (2PC)|  
-|10. 등록 (내구성)|21. 커밋 (2PC)|  
-|11. 레지스터응답|22. 커밋 (2PC)|  
+|1. CreateCoordinationContext|12. 응용 프로그램 메시지 응답|  
+|2. CreateCoordinationContextResponse|13. 커밋 (완료)|  
+|3. Register (완료)|14. 준비 (2PC)|  
+|4. RegisterResponse|15. 준비 (2PC)|  
+|5. 응용 프로그램 메시지|16. 준비 됨 (2PC)|  
+|6. 컨텍스트가 있는 CreateCoordinationContext|17. 준비 됨 (2PC)|  
+|7. Register (내구성)|18. 커밋됨 (완료)|  
+|8. RegisterResponse|19. 커밋 (2PC)|  
+|9. CreateCoordinationContextResponse|20. 커밋 (2PC)|  
+|10. Register (내구성)|21. 커밋 (2PC)|  
+|11. RegisterResponse|22. 커밋 (2PC)|  
   
  이 문서에서는 WS-AtomicTransaction 사양과 보안의 조합에 대해 설명하고, 트랜잭션 관리자 간 통신을 위해 사용하는 보안이 설정된 바인딩에 대해 설명합니다. 이 문서에서 설명하는 방식은 WS-AT 및 WS-Coordination의 다른 구현과 함께 성공적으로 테스트되었습니다.  
   
@@ -53,19 +53,19 @@ WCF(Windows 통신 재단) 버전 1은 WS-원자 트랜잭션 및 WS 조정 프�
   
 - 애플리케이션 메시지  
   
- 처음 세 개의 메시지 클래스는 트랜잭션 관리자 메시지로 간주되며, 해당 바인딩 구성은 이 항목의 뒷부분에 있는 &quot;애플리케이션 메시지 교환&quot;에서 설명합니다. 네 번째 메시지는 애플리케이션 간 메시지이며, 이 항목의 뒷부분에 있는 &quot;메시지 예제&quot; 단원에서 설명합니다. 이 섹션에서는 WCF에서 이러한 각 클래스에 사용되는 프로토콜 바인딩에 대해 설명합니다.  
+ 처음 세 개의 메시지 클래스는 트랜잭션 관리자 메시지로 간주되며, 해당 바인딩 구성은 이 항목의 뒷부분에 있는 &quot;애플리케이션 메시지 교환&quot;에서 설명합니다. 네 번째 메시지는 애플리케이션 간 메시지이며, 이 항목의 뒷부분에 있는 &quot;메시지 예제&quot; 단원에서 설명합니다. 이 섹션에서는 WCF에서 이러한 각 클래스에 사용 되는 프로토콜 바인딩을 설명 합니다.  
   
  다음 XML 네임스페이스 및 관련 접두사는 이 문서 전체에서 사용됩니다.  
   
 |접두사|네임스페이스 URI|  
 |------------|-------------------|  
-|s11|http://schemas.xmlsoap.org/soap/envelope|  
-|wsa|http://www.w3.org/2004/08/addressing|  
-|wscoor|http://schemas.xmlsoap.org/ws/2004/10/wscoor|  
-|wsat|http://schemas.xmlsoap.org/ws/2004/10/wsat|  
-|t|http://schemas.xmlsoap.org/ws/2005/02/trust|  
-|o|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd|  
-|xsd|http://www.w3.org/2001/XMLSchema|  
+|s11|`http://schemas.xmlsoap.org/soap/envelope`|  
+|wsa|`http://www.w3.org/2004/08/addressing`|  
+|wscoor|`http://schemas.xmlsoap.org/ws/2004/10/wscoor`|  
+|wsat|`http://schemas.xmlsoap.org/ws/2004/10/wsat`|  
+|t|`http://schemas.xmlsoap.org/ws/2005/02/trust`|  
+|o|`http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd`|  
+|xsd|`http://www.w3.org/2001/XMLSchema`|  
   
 ## <a name="transaction-manager-bindings"></a>트랜잭션 관리자 바인딩  
  R1001: 트랜잭션 관리자는 WS-Atomic Transaction 및 WS-Coordination 메시지 교환을 위해 SOAP 1.1과 WS-Addressing 2004/08을 사용해야 합니다.  
@@ -83,15 +83,15 @@ WCF(Windows 통신 재단) 버전 1은 WS-원자 트랜잭션 및 WS 조정 프�
 - B1112: DNS는 X.509 주체 이름을 확인한 시스템에서 각 발신자-수신자 쌍 간에 작동해야 합니다.  
   
 #### <a name="activation-and-registration-binding-configuration"></a>바인딩 구성 활성화 및 등록  
- WCF는 HTTPS에 대한 상관 관계와 요청/회신 이중 바인딩이 필요합니다. 요청/회신 메시지 교환 패턴의 상관 관계 및 설명에 대한 자세한 내용은 8단원 WS-Atomic Transaction을 참조하십시오.  
+ WCF에는 HTTPS를 통한 상관 관계가 있는 요청/응답 이중 바인딩이 필요 합니다. 요청/회신 메시지 교환 패턴의 상관 관계 및 설명에 대한 자세한 내용은 8단원 WS-Atomic Transaction을 참조하십시오.  
   
 #### <a name="2pc-protocol-binding-configuration"></a>2PC 프로토콜 바인딩 구성  
- WCF는 HTTPS를 통해 단방향(데이터그램) 메시지를 지원합니다. 메시지 간의 상관 관계는 구현 정보로 유지됩니다.  
+ WCF는 HTTPS를 통해 단방향 (데이터 그램) 메시지를 지원 합니다. 메시지 간의 상관 관계는 구현 정보로 유지됩니다.  
   
- B2131: 구현은 `wsa:ReferenceParameters` WCF의 2PC 메시지와 상관 관계를 달성하기 위해 WS 주소 지정에 설명된 대로 지원해야 합니다.  
+ B2131: 구현은 `wsa:ReferenceParameters` WCF의 2pc 메시지의 상관 관계를 얻기 위해 ws-addressing에 설명 된 대로를 지원 해야 합니다.  
   
 ### <a name="transaction-manager-mixed-security-binding"></a>트랜잭션 관리자가 혼합된 보안 바인딩  
- 이 바인딩은 ID 를 수립하기 위해 WS-Coordination 발급 토큰 모델과 결합된 전송 보안을 사용하는 대체(혼합 모드) 바인딩입니다.  두 바인딩 간에 다른 요소는 활성화와 등록뿐입니다.  
+ 이는 id 설정 목적으로 WS-TRUST 발급 토큰 모델과 결합 된 전송 보안을 사용 하는 대체 (혼합 모드) 바인딩입니다.  두 바인딩 간에 다른 요소는 활성화와 등록뿐입니다.  
   
 #### <a name="https-transport-configuration"></a>HTTPS 전송 구성  
  X.509 인증서는 트랜잭션 관리자 ID를 설정하는 데 사용합니다. 클라이언트/서버 인증이 필요하며, 클라이언트/서버 권한 부여는 구현 정보로 유지됩니다.  
@@ -99,7 +99,7 @@ WCF(Windows 통신 재단) 버전 1은 WS-원자 트랜잭션 및 WS 조정 프�
 #### <a name="activation-message-binding-configuration"></a>활성화 메시지 바인딩 구성  
  활성화 메시지는 일반적으로 애플리케이션과 해당 로컬 트랜잭션 관리자 간에 발생하기 때문에 대개 상호 운용성에 관여하지 않습니다.  
   
- B1221: WCF는 활성화 메시지에 대해 이중 HTTPS [바인딩(메시징 프로토콜에 설명)을](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)사용합니다. 요청 및 회신 메시지는 WS-Addressing 2004/08을 사용하여 상호 관련됩니다.  
+ B1221: WCF는 활성화 메시지에 이중 HTTPS 바인딩 ( [메시징 프로토콜](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)에서 설명)을 사용 합니다. 요청 및 회신 메시지는 WS-Addressing 2004/08을 사용하여 상호 관련됩니다.  
   
  8단원 WS-Atomic Transaction 사양에서는 상관 관계 및 메시지 교환 패턴에 대해 좀 더 자세히 설명합니다.  
   
@@ -107,21 +107,21 @@ WCF(Windows 통신 재단) 버전 1은 WS-원자 트랜잭션 및 WS 조정 프�
   
 - R1223: 기존 코디네이션 컨텍스트 내에서 활성화가 수행되면 기존 컨텍스트와 연관된 `t:IssuedTokens`과 함께 `SecurityContextToken` 헤더가 `CreateCoordinationContext` 메시지에서 이동해야 합니다.  
   
- 나가는 `wscoor:CreateCoordinationContextResponse` `t:IssuedTokens` 메시지에 연결하기 위해 새 헤더를 생성해야 합니다.  
+ `t:IssuedTokens`보내는 메시지에 연결 하기 위해 새 헤더를 생성 해야 합니다 `wscoor:CreateCoordinationContextResponse` .  
   
 #### <a name="registration-message-binding-configuration"></a>등록 메시지 바인딩 구성  
- B1231: WCF는 이중 HTTPS 바인딩을 [사용합니다(메시징 프로토콜에](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)설명). 요청 및 회신 메시지는 WS-Addressing 2004/08을 사용하여 상호 관련됩니다.  
+ B1231: WCF는 이중 HTTPS 바인딩 ( [메시징 프로토콜](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)에 설명)을 사용 합니다. 요청 및 회신 메시지는 WS-Addressing 2004/08을 사용하여 상호 관련됩니다.  
   
  8단원 WS-AtomicTransaction에서는 메시지 교환 패턴의 상관 관계 및 설명에 대해 좀 더 자세히 설명합니다.  
   
- R1232: 나가는 `wscoor:Register` 메시지는 보안 `IssuedTokenOverTransport` 프로토콜에 설명된 인증 모드를 사용해야 [합니다.](../../../../docs/framework/wcf/feature-details/security-protocols.md)  
+ R1232: 나가는 `wscoor:Register` 메시지는 `IssuedTokenOverTransport` [보안 프로토콜](../../../../docs/framework/wcf/feature-details/security-protocols.md)에 설명 된 인증 모드를 사용 해야 합니다.  
   
- 발행된 `wsse:Timestamp` 요소를 사용하여 `SecurityContextToken STx` 서명해야 합니다. 이 서명은 특정 트랜잭션과 연관된 토큰을 소유했음을 나타내며, 트랜잭션에 등록된 참가자를 인증하는 데 사용합니다. RegistrationResponse 메시지는 HTTPS를 통해 다시 보내집니다.  
+ `wsse:Timestamp`요소가 발급 된를 사용 하 여 서명 되어야 합니다 `SecurityContextToken STx` . 이 서명은 특정 트랜잭션과 연관된 토큰을 소유했음을 나타내며, 트랜잭션에 등록된 참가자를 인증하는 데 사용합니다. RegistrationResponse 메시지는 HTTPS를 통해 다시 보내집니다.  
   
 #### <a name="2pc-protocol-binding-configuration"></a>2PC 프로토콜 바인딩 구성  
- WCF는 HTTPS를 통해 단방향(데이터그램) 메시지를 지원합니다. 메시지 간의 상관 관계는 구현 정보로 유지됩니다.  
+ WCF는 HTTPS를 통해 단방향 (데이터 그램) 메시지를 지원 합니다. 메시지 간의 상관 관계는 구현 정보로 유지됩니다.  
   
- B2131: 구현은 `wsa:ReferenceParameters` WCF의 2PC 메시지와 상관 관계를 달성하기 위해 WS 주소 지정에 설명된 대로 지원해야 합니다.  
+ B2131: 구현은 `wsa:ReferenceParameters` WCF의 2pc 메시지의 상관 관계를 얻기 위해 ws-addressing에 설명 된 대로를 지원 해야 합니다.  
   
 ## <a name="application-message-exchange"></a>애플리케이션 메시지 교환  
  바인딩이 다음 보안 요구 사항을 만족하는 경우, 애플리케이션에서는 애플리케이션 간 메시지에 대해 특정 바인딩을 자유롭게 사용할 수 있습니다.  
@@ -130,9 +130,9 @@ WCF(Windows 통신 재단) 버전 1은 WS-원자 트랜잭션 및 WS 조정 프�
   
 - R2002: `t:IssuedToken`의 무결성 및 기밀성이 제공되어야 합니다.  
   
- `CoordinationContext` 헤더에는 `wscoor:Identifier`가 포함됩니다. 정의는 절대 `xsd:AnyURI` URI와 상대 URI를 모두 사용할 수 `wscoor:Identifiers`있지만 WCF는 절대 URI인 경우에만 지원합니다.  
+ `CoordinationContext` 헤더에는 `wscoor:Identifier`가 포함됩니다. 의 정의는 `xsd:AnyURI` 절대 uri와 상대 uri를 모두 사용할 수 있지만 WCF는 절대 uri 인만 지원 합니다 `wscoor:Identifiers` .  
   
- 의 `wscoor:Identifier` 가 `wscoor:CoordinationContext` 상대URI인 경우 트랜잭션 WCF 서비스에서 오류가 반환됩니다.  
+ `wscoor:Identifier`의 `wscoor:CoordinationContext` 가 상대 URI 인 경우 트랜잭션 WCF 서비스에서 오류가 반환 됩니다.  
   
 ## <a name="message-examples"></a>메시지 예제  
   

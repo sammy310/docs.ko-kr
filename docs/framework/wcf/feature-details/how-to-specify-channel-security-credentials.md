@@ -2,15 +2,15 @@
 title: '방법: 채널 보안 자격 증명 지정'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: e5b2b56da1989b9a7110a1ad3eee814560942c89
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 72fdcd18fba2eabe8255f73acd240e12e57d56ea
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972438"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144710"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>방법: 채널 보안 자격 증명 지정
-WCF (Windows Communication Foundation) 서비스 모니커를 사용 하면 COM 응용 프로그램에서 WCF 서비스를 호출할 수 있습니다. 대부분의 WCF 서비스에서는 클라이언트에서 인증 및 권한 부여에 대 한 자격 증명을 지정 해야 합니다. WCF 클라이언트에서 WCF 서비스를 호출 하는 경우 관리 코드 또는 응용 프로그램 구성 파일에서 이러한 자격 증명을 지정할 수 있습니다. COM 응용 프로그램에서 WCF 서비스를 호출 하는 경우 인터페이스를 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 사용 하 여 자격 증명을 지정할 수 있습니다. 이 항목에서는 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 인터페이스를 사용하여 자격 증명을 지정하는 다양한 방식을 설명합니다.  
+WCF (Windows Communication Foundation) 서비스 모니커를 사용 하면 COM 응용 프로그램에서 WCF 서비스를 호출할 수 있습니다. 대부분의 WCF 서비스에서는 클라이언트에서 인증 및 권한 부여에 대 한 자격 증명을 지정 해야 합니다. WCF 클라이언트에서 WCF 서비스를 호출 하는 경우 관리 코드 또는 응용 프로그램 구성 파일에서 이러한 자격 증명을 지정할 수 있습니다. COM 응용 프로그램에서 WCF 서비스를 호출 하는 경우 인터페이스를 사용 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 하 여 자격 증명을 지정할 수 있습니다. 이 항목에서는 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 인터페이스를 사용하여 자격 증명을 지정하는 다양한 방식을 설명합니다.  
   
 > [!NOTE]
 > <xref:System.ServiceModel.ComIntegration.IChannelCredentials>는 IDispatch 기반 인터페이스이며 Visual Studio 환경에서는 IntelliSense 기능을 가져오지 않습니다.  
@@ -23,11 +23,11 @@ WCF (Windows Communication Foundation) 서비스 모니커를 사용 하면 COM 
   
 2. 메시지 보안 프로젝트를 엽니다.  
   
-3. 인터페이스`ICalculator` 정의에를 추가 `[ServiceBehavior(Namespace="http://Microsoft.ServiceModel.Samples")]` 합니다.  
+3. `[ServiceBehavior(Namespace="http://Microsoft.ServiceModel.Samples")]`인터페이스 정의에를 추가 `ICalculator` 합니다.  
   
-4. 서비스 `bindingNamespace="http://Microsoft.ServiceModel.Samples"` 에 대 한 app.config의 끝점 태그에를 추가 합니다.  
+4. `bindingNamespace="http://Microsoft.ServiceModel.Samples"`서비스에 대 한 app.config의 끝점 태그에를 추가 합니다.  
   
-5. 메시지 보안 샘플을 빌드하고 Service.exe를 실행합니다. Internet Explorer를 사용 하 여 서비스의 URI http://localhost:8000/ServiceModelSamples/Service) 로 이동 하 여 서비스가 작동 하는지 확인 합니다.  
+5. 메시지 보안 샘플을 빌드하고 Service.exe를 실행합니다. Internet Explorer를 사용 하 여 서비스의 URI ()로 이동 `http://localhost:8000/ServiceModelSamples/Service` 하 여 서비스가 작동 하는지 확인 합니다.  
   
 6. Visual Basic 6.0을 열고 새 표준 .exe 파일을 만듭니다. 폼에 단추를 추가하고 단추를 두 번 클릭하여 다음 코드를 클릭 처리기에 추가합니다.  
   
@@ -131,10 +131,10 @@ WCF (Windows Communication Foundation) 서비스 모니커를 사용 하면 COM 
   
      이 메서드의 매개 변수에 대한 자세한 내용은 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>을 참조하세요.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)
-- [방법: 페더레이션 서비스에 대 한 자격 증명 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [방법: 페더레이션된 클라이언트 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [방법: 페더레이션 서비스에서 자격 증명 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [방법: 페더레이션 클라이언트 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [메시지 보안](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
 - [바인딩 및 보안](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

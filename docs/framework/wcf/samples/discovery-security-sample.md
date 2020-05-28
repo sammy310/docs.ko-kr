@@ -2,12 +2,12 @@
 title: Discovery Security 샘플
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 44022ee756f189347aaec606427ecb3c4c5ffa95
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: c6ec9b7e13234b7dae03541eb09ccba98f4cc93a
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728414"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144905"
 ---
 # <a name="discovery-security-sample"></a>Discovery Security 샘플
 
@@ -38,7 +38,7 @@ ms.locfileid: "82728414"
 > [!NOTE]
 > 2008 검색 버전 프로토콜에는 `PrefixList`가 추가되었습니다.  
   
- 서명을 컴퓨팅하기 위해 이 샘플에서는 확장된 서명 항목을 확인합니다. XML 서명(`SignedInfo`)은 WS-Discovery 사양에서 요구하는 대로 `ds` 네임스페이스 접두사를 사용하여 만듭니다. 검색 및 주소 지정 네임스페이스의 본문과 모든 헤더는 서명에서 참조되므로 변경할 수 없습니다. 참조 되는 각 요소는 배타적 정식화 (http://www.w3.org/2001/10/xml-exc-c14n# )를 사용 하 여 변환 된 다음 sha-1 다이제스트 값 (http://www.w3.org/2000/09/xmldsig#sha1 )이 계산 됩니다. 참조 되는 모든 요소 및 해당 다이제스트 값에 따라 서명 값은 RSA 알고리즘 (http://www.w3.org/2000/09/xmldsig#rsa-sha1 )을 사용 하 여 계산 됩니다.  
+ 서명을 컴퓨팅하기 위해 이 샘플에서는 확장된 서명 항목을 확인합니다. XML 서명(`SignedInfo`)은 WS-Discovery 사양에서 요구하는 대로 `ds` 네임스페이스 접두사를 사용하여 만듭니다. 검색 및 주소 지정 네임스페이스의 본문과 모든 헤더는 서명에서 참조되므로 변경할 수 없습니다. 참조 되는 각 요소는 배타적 정식화 ()를 사용 하 여 변환 된 <http://www.w3.org/2001/10/xml-exc-c14n#> 다음 sha-1 다이제스트 값 ()이 계산 됩니다 <http://www.w3.org/2000/09/xmldsig#sha1> . 참조 되는 모든 요소 및 해당 다이제스트 값에 따라 서명 값은 RSA 알고리즘 ()을 사용 하 여 계산 됩니다 <http://www.w3.org/2000/09/xmldsig#rsa-sha1> .  
   
  메시지는 클라이언트에서 지정한 인증서를 사용하여 서명됩니다. 바인딩 요소를 만들 때 저장소 위치, 이름 및 인증서 주체 이름을 지정 해야 합니다. 압축 서명의 `KeyId`는 서명 토큰의 키 식별자를 나타내며 서명 토큰의 SKI(주체 키 식별자)나 서명 토큰의 공개 키에 대한 SHA-1 해시(SKI가 없는 경우)입니다.  
   
@@ -72,6 +72,6 @@ ms.locfileid: "82728414"
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  
