@@ -81,59 +81,95 @@
   href: compatibility/
 - name: 자습서
   items:
-    - name: 개요
+    - name: Visual Studio 사용
+      items:
+        - name: 콘솔 앱 만들기
+          href: tutorials/with-visual-studio.md
+          displayName: 'tutorials, visual studio, vs'
+        - name: 앱 디버그
+          href: tutorials/debugging-with-visual-studio.md
+          displayName: 'tutorials, visual studio, vs'
+        - name: 앱 게시
+          href: tutorials/publishing-with-visual-studio.md
+          displayName: 'tutorials, visual studio, vs'
+        - name: 라이브러리 만들기
+          href: tutorials/library-with-visual-studio.md
+          displayName: 'tutorials, visual studio, vs'
+        - name: 라이브러리 단위 테스트
+          href: tutorials/testing-library-with-visual-studio.md
+          displayName: 'tutorials, visual studio, vs'
+        - name: 라이브러리 사용
+          href: tutorials/consuming-library-with-visual-studio.md
+          displayName: 'tutorials, visual studio, vs'
+        - name: 라이브 단위 테스트
+          href: /visualstudio/test/live-unit-testing-start
+        - name: 패키지 설치 및 사용
+          href: /nuget/quickstart/install-and-use-a-package-in-visual-studio
+          displayName: 'tutorials, visual studio, vs'
+        - name: 패키지 만들기 및 게시
+          href: /nuget/quickstart/create-and-publish-a-package-using-visual-studio
+          displayName: 'tutorials, visual studio, vs'
+    - name: Visual Studio Code 사용
+      items:
+        - name: 콘솔 앱 만들기
+          href: tutorials/with-visual-studio-code.md
+          displayName: 'tutorials, visual studio code, vs code, cli'
+        - name: 콘솔 앱 만들기 및 게시
+          href: tutorials/cli-create-console-app.md
+          displayName: 'tutorials, cli'
+        - name: 라이브러리 만들기 및 단위 테스트 - macOS
+          href: tutorials/using-on-macos.md
+          displayName: 'tutorials, visual studio code, vs code, cli'
+        - name: 패키지 설치 및 사용
+          href: /nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli
+          displayName: 'tutorials, cli'
+        - name: 패키지 만들기 및 게시
+          href: /nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli
+          displayName: tutorials
+    - name: Mac용 Visual Studio 사용
+      items:
+        - name: 콘솔 앱 만들기
+          href: tutorials/using-on-mac-vs.md
+          displayName: tutorials
+        - name: 라이브러리 만들기 및 단위 테스트
+          href: tutorials/using-on-mac-vs-full-solution.md
+          displayName: tutorials
+        - name: 패키지 설치 및 사용
+          href: /nuget/quickstart/install-and-use-a-package-in-visual-studio-mac
+          displayName: tutorials
+    - name: 고급 항목
+      items:
+        - name: XUnit을 사용한 앱 단위 테스트
+          href: tutorials/testing-with-cli.md
+          displayName: 'tutorials, cli'
+        - name: 라이브러리를 만드는 방법
+          href: tutorials/libraries.md
+        - name: CLI용 템플릿 만들기
+          items:
+            - name: 1 - 항목 템플릿 만들기
+              href: tutorials/cli-templates-create-item-template.md
+              displayName: 'tutorials, cli'
+            - name: 2 - 프로젝트 템플릿 만들기
+              href: tutorials/cli-templates-create-project-template.md
+              displayName: 'tutorials, cli'
+            - name: 3 - 템플릿 팩 만들기
+              href: tutorials/cli-templates-create-template-pack.md
+              displayName: 'tutorials, cli'
+        - name: CLI용 도구 만들기
+          items:
+            - name: 1 - 도구 만들기
+              displayName: 'tools, tutorials, cli'
+              href: tools/global-tools-how-to-create.md
+            - name: 2 - 전역 도구 사용
+              displayName: 'tools, tutorials, cli'
+              href: tools/global-tools-how-to-use.md
+            - name: 3 - 로컬 도구 사용
+              href: tools/local-tools-how-to-use.md
+              displayName: 'tools, tutorials, cli'
+        - name: 플러그 인을 사용한 앱 만들기
+          href: tutorials/creating-app-with-plugin-support.md
+    - name: 추가 자습서
       href: tutorials/index.md
-    - name: Visual Studio를 사용하여 .NET Core 시작
-      href: tutorials/with-visual-studio.md
-    - name: Visual Studio Code를 사용하여 .NET Core 시작
-      href: tutorials/with-visual-studio-code.md
-    - name: CLI를 사용하여 .NET Core 시작
-      href: tutorials/cli-create-console-app.md
-    - name: macOS에서 Visual Studio Code를 사용하여 .NET Core 시작
-      href: tutorials/using-on-macos.md
-    - name: Mac용 Visual Studio를 사용하여 .NET Core 시작
-      href: tutorials/using-on-mac-vs.md
-    - name: Visual Studio를 사용하여 애플리케이션 디버그
-      href: tutorials/debugging-with-visual-studio.md
-    - name: Visual Studio를 사용하여 애플리케이션 게시
-      href: tutorials/publishing-with-visual-studio.md
-    - name: Visual Studio에서 .NET Standard 라이브러리 만들기
-      href: tutorials/library-with-visual-studio.md
-    - name: Visual Studio에서 .NET Standard 라이브러리 테스트
-      href: tutorials/testing-library-with-visual-studio.md
-    - name: Visual Studio에서 .NET Standard 라이브러리 사용
-      href: tutorials/consuming-library-with-visual-studio.md
-    - name: macOS에서 완전한 .NET Core 솔루션 빌드
-      href: tutorials/using-on-mac-vs-full-solution.md
-    - name: .NET Core CLI를 사용하여 프로젝트 구성 및 테스트
-      href: tutorials/testing-with-cli.md
-    - name: 플랫폼 간 도구로 라이브러리 개발
-      href: tutorials/libraries.md
-    - name: 플러그 인을 사용하여 .NET Core 앱 만들기
-      href: tutorials/creating-app-with-plugin-support.md
-    - name: ASP.NET Core 앱 개발
-      href: tutorials/aspnet-core.md
-    - name: 네이티브 코드에서 .NET Core 호스팅
-      href: tutorials/netcore-hosting.md
-    - name: CLI용 템플릿 만들기
-      items:
-        - name: 1 - 항목 템플릿 만들기
-          href: tutorials/cli-templates-create-item-template.md
-        - name: 2 - 프로젝트 템플릿 만들기
-          href: tutorials/cli-templates-create-project-template.md
-        - name: 3 - 템플릿 팩 만들기
-          href: tutorials/cli-templates-create-template-pack.md
-    - name: CLI용 도구 만들기
-      items:
-        - name: 1 - 도구 만들기
-          displayName: 'tools, tutorials'
-          href: tools/global-tools-how-to-create.md
-        - name: 2 - 전역 도구 사용
-          displayName: 'tools, tutorials'
-          href: tools/global-tools-how-to-use.md
-        - name: 3 - 로컬 도구 사용
-          href: tools/local-tools-how-to-use.md
-          displayName: 'tools, tutorials'
 - name: 프로젝트 SDK
   items:
     - name: 개요
@@ -441,6 +477,8 @@
   href: distribution-packaging.md
 - name: COM에 .NET Core 구성 요소 공개
   href: native-interop/expose-components-to-com.md
+- name: 네이티브 코드에서 .NET Core 호스팅
+  href: tutorials/netcore-hosting.md
 - name: '패키지, 메타패키지 및 프레임워크'
   href: packages.md
 - name: 연속 통합
