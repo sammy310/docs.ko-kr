@@ -2,12 +2,12 @@
 title: DDD 및 CQRS 패턴을 사용하여 마이크로 서비스에서 비즈니스 복잡성 처리
 description: 컨테이너화된 .NET 애플리케이션을 위한 .NET 마이크로 서비스 아키텍처 | DDD 및 CQRS 패턴을 적용하여 복잡한 비즈니스 시나리오를 처리하는 방법 이해
 ms.date: 10/08/2018
-ms.openlocfilehash: 88b105b68307c8587f877bb9ddf370e143d8539b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 852073548a66fbe568fc5c2531342db944d5a8b0
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73739832"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144645"
 ---
 # <a name="tackle-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>DDD 및 CQRS 패턴을 사용하여 마이크로 서비스에서 비즈니스 복잡성 처리
 
@@ -64,7 +64,7 @@ DDD는 다양한 학습 리소스 집합이 있는 큰 주제입니다. Eric Eva
   <https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/>
 
 - **Scott Millett, Nick Tune - 도메인 기반 디자인의 패턴, 원칙 및 사례** \
-  <http://www.wrox.com/WileyCDA/WroxTitle/Patterns-Principles-and-Practices-of-Domain-Driven-Design.productCd-1118714709.html>
+  <https://www.wiley.com/Patterns%2C+Principles%2C+and+Practices+of+Domain+Driven+Design-p-9781118714706>
 
 ##### <a name="ddd-training"></a>DDD 교육
 

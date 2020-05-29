@@ -3,26 +3,33 @@ title: C# 소개 - 대화형 자습서
 description: 브라우저에서 C#에 대해 알아보고 사용자만의 개발 환경을 시작합니다.
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 564af21fb0f9b6cf8b5c3591ff5622278a8cbb22
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c9fc8dadac373445a5bb132b25ab25676c5230c7
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73423097"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007704"
 ---
 # <a name="introduction-to-c"></a>C\# 소개
 
-C# 소개 자습서를 시작합니다. 브라우저에서 실행할 수 있는 대화형 단원을 시작합니다. 해당 대화형 단원을 시작하기 전에 [C# 101 동영상 시리즈](https://aka.ms/dotnet3-csharp)에서 C#의 기본 사항을 학습할 수 있습니다.
+C# 소개 자습서를 시작합니다. 이 단원은 브라우저에서 실행할 수 있는 대화형 코드로 시작됩니다. 해당 대화형 단원을 시작하기 전에 [C# 101 동영상 시리즈](https://aka.ms/dotnet3-csharp)에서 C#의 기본 사항을 학습할 수 있습니다.
 
 > [!VIDEO https://channel9.msdn.com/Series/CSharp-101/What-is-C/player]
 
 첫 번째 단원에서는 작은 코드 조각을 사용하여 C# 개념을 설명합니다. C# 구문의 기본 사항과 문자열, 숫자 및 부울과 같은 데이터 형식을 사용하는 방법에 대해 학습합니다. 모두 대화형이며, 몇 분 내에 코드를 작성하여 실행할 수 있습니다. 이 첫 번째 단원에서는 프로그래밍이나 C# 언어에 대한 사전 지식이 없다고 가정합니다.
 
+다양한 환경에서 이 자습서를 사용해 볼 수 있습니다. 학습할 개념은 같습니다. 차이점은 선호하는 환경입니다.
+
+- [브라우저의 docs 플랫폼](hello-world.yml). 이 환경에는 실행 가능한 C# 코드 창이 docs 페이지에 포함되어 있습니다. 브라우저에서 C# 코드를 작성하고 실행합니다.
+- [Microsoft Learn 환경](https://docs.microsoft.com/learn/paths/csharp-first-steps/). 이 학습 경로에는 C#의 기본 사항을 설명하는 여러 모듈이 포함되어 있습니다.
+- [Binder의 Jupyter](https://mybinder.org/v2/gh/dotnet/try-samples/master?filepath=hello-csharp%2Fhello-world.ipynb). Binder의 Jupyter Notebook에서 C# 코드를 시험해 볼 수 있습니다.
+- [로컬 머신](numbers-in-csharp-local.md). 온라인에서 살펴본 후 머신에 .NET Core SDK를 [다운로드](https://dotnet.microsoft.com/download)하고 프로그램을 빌드할 수 있습니다.
+
 Hello World 단원 다음에 나오는 모든 소개 자습서는 온라인 브라우저 환경이나 [자체 로컬 개발 환경](local-environment.md)을 사용하여 볼 수 있습니다. 각 자습서가 끝날 때 다음 단원을 온라인으로 진행할지, 사용자 머신에서 진행할지 결정합니다. 환경을 설정하고 사용자 머신에서 다음 자습서를 진행하는 데 유용한 링크가 있습니다.
 
-## <a name="hello-world"></a>[Hello world](hello-world.yml)
+## <a name="hello-world"></a>[Hello World](hello-world.yml)
 
-[Hello World](hello-world.yml) 자습서에서는 가장 기본적인 C# 프로그램을 만듭니다. `string` 형식을 살펴보고 텍스트를 사용하는 방법을 살펴봅니다.
+[Hello World](hello-world.yml) 자습서에서는 가장 기본적인 C# 프로그램을 만듭니다. `string` 형식을 살펴보고 텍스트를 사용하는 방법을 살펴봅니다. 또한 [Microsoft Learn](https://docs.microsoft.com/learn/paths/csharp-first-steps/) 또는 [Binder의 Jupyter](https://mybinder.org/v2/gh/dotnet/try-samples/master?filepath=hello-csharp%2Fhello-world.ipynb) 경로를 사용할 수 있습니다.
 
 ## <a name="numbers-in-c"></a>[C#의 숫자](numbers-in-csharp.yml)
 
