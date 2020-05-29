@@ -1,42 +1,43 @@
 ---
 title: '방법: 인코딩된 SOAP XML Serialization 재정의'
+description: 개체의 XML serialization을 SOAP 메시지로 재정의하는 프로세스에 대해 알아봅니다. 이 프로세스는 표준 XML serialization을 재정의하는 프로세스와 비슷합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - overriding XML serialization
 - SOAP, overriding encoded XML serialization
 ms.assetid: d0791df8-04e3-46b4-a6be-fe0ed09267e8
-ms.openlocfilehash: 1bc9b228e61ccb0852ae489d44c5b692c54b642d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 76e8009b83182d8517ff403f4f1e67bf0e7846b8
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922592"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83375840"
 ---
-# <a name="how-to-override-encoded-soap-xml-serialization"></a><span data-ttu-id="fa4b4-102">방법: 인코딩된 SOAP XML Serialization 재정의</span><span class="sxs-lookup"><span data-stu-id="fa4b4-102">How to: Override Encoded SOAP XML Serialization</span></span>
+# <a name="how-to-override-encoded-soap-xml-serialization"></a><span data-ttu-id="9e368-103">방법: 인코딩된 SOAP XML Serialization 재정의</span><span class="sxs-lookup"><span data-stu-id="9e368-103">How to: Override Encoded SOAP XML Serialization</span></span>
 
-<span data-ttu-id="fa4b4-103">개체의 XML serialization을 SOAP 메시지로 재정의하는 프로세스는 표준 XML serialization을 재정의하는 프로세스와 비슷합니다.</span><span class="sxs-lookup"><span data-stu-id="fa4b4-103">The process for overriding XML serialization of objects as SOAP messages is similar to the process for overriding standard XML serialization.</span></span> <span data-ttu-id="fa4b4-104">표준 XML serialization 재정의에 대한 자세한 내용은 [방법: XML 스트림의 대체 요소 이름 지정](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="fa4b4-104">For information about overriding standard XML serialization, see [How to: Specify an Alternate Element Name for an XML Stream](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).</span></span>
+<span data-ttu-id="9e368-104">개체의 XML serialization을 SOAP 메시지로 재정의하는 프로세스는 표준 XML serialization을 재정의하는 프로세스와 비슷합니다.</span><span class="sxs-lookup"><span data-stu-id="9e368-104">The process for overriding XML serialization of objects as SOAP messages is similar to the process for overriding standard XML serialization.</span></span> <span data-ttu-id="9e368-105">표준 XML serialization 재정의에 대한 자세한 내용은 [방법: XML 스트림의 대체 요소 이름 지정](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9e368-105">For information about overriding standard XML serialization, see [How to: Specify an Alternate Element Name for an XML Stream](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).</span></span>
 
-## <a name="to-override-serialization-of-objects-as-soap-messages"></a><span data-ttu-id="fa4b4-105">개체의 serialization을 SOAP 메시지로 재정의하려면</span><span class="sxs-lookup"><span data-stu-id="fa4b4-105">To override serialization of objects as SOAP messages</span></span>
+## <a name="to-override-serialization-of-objects-as-soap-messages"></a><span data-ttu-id="9e368-106">개체의 serialization을 SOAP 메시지로 재정의하려면</span><span class="sxs-lookup"><span data-stu-id="9e368-106">To override serialization of objects as SOAP messages</span></span>
 
-1. <span data-ttu-id="fa4b4-106"><xref:System.Xml.Serialization.SoapAttributeOverrides> 클래스의 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="fa4b4-106">Create an instance of the <xref:System.Xml.Serialization.SoapAttributeOverrides> class.</span></span>
+1. <span data-ttu-id="9e368-107"><xref:System.Xml.Serialization.SoapAttributeOverrides> 클래스의 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="9e368-107">Create an instance of the <xref:System.Xml.Serialization.SoapAttributeOverrides> class.</span></span>
 
-2. <span data-ttu-id="fa4b4-107">serialize되는 각 클래스 멤버에 대해 `SoapAttributes`를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="fa4b4-107">Create a `SoapAttributes` for each class member that is being serialized.</span></span>
+2. <span data-ttu-id="9e368-108">serialize되는 각 클래스 멤버에 대해 `SoapAttributes`를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="9e368-108">Create a `SoapAttributes` for each class member that is being serialized.</span></span>
 
-3. <span data-ttu-id="fa4b4-108">serialize되는 멤버에 적절하게 XML serialization에 영향을 주는 하나 이상의 특성의 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="fa4b4-108">Create an instance of one or more of the attributes that affect XML serialization, as appropriate, to the member being serialized.</span></span> <span data-ttu-id="fa4b4-109">자세한 내용은 "인코딩된 SOAP serialization을 제어하는 특성"을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="fa4b4-109">For more information, see "Attributes That Control Encoded SOAP Serialization".</span></span>
+3. <span data-ttu-id="9e368-109">serialize되는 멤버에 적절하게 XML serialization에 영향을 주는 하나 이상의 특성의 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="9e368-109">Create an instance of one or more of the attributes that affect XML serialization, as appropriate, to the member being serialized.</span></span> <span data-ttu-id="9e368-110">자세한 내용은 "인코딩된 SOAP serialization을 제어하는 특성"을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="9e368-110">For more information, see "Attributes That Control Encoded SOAP Serialization".</span></span>
 
-4. <span data-ttu-id="fa4b4-110">`SoapAttributes`의 적절한 속성을 3단계에서 만든 특성으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="fa4b4-110">Set the appropriate property of `SoapAttributes` to the attribute created in step 3.</span></span>
+4. <span data-ttu-id="9e368-111">`SoapAttributes`의 적절한 속성을 3단계에서 만든 특성으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="9e368-111">Set the appropriate property of `SoapAttributes` to the attribute created in step 3.</span></span>
 
-5. <span data-ttu-id="fa4b4-111">`SoapAttributes`를 `SoapAttributeOverrides`에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="fa4b4-111">Add `SoapAttributes` to `SoapAttributeOverrides`.</span></span>
+5. <span data-ttu-id="9e368-112">`SoapAttributes`를 `SoapAttributeOverrides`에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="9e368-112">Add `SoapAttributes` to `SoapAttributeOverrides`.</span></span>
 
-6. <span data-ttu-id="fa4b4-112">`XmlTypeMapping`를 사용하여 `SoapAttributeOverrides`을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="fa4b4-112">Create an `XmlTypeMapping` using the `SoapAttributeOverrides`.</span></span> <span data-ttu-id="fa4b4-113">`SoapReflectionImporter.ImportTypeMapping` 메서드를 사용하세요.</span><span class="sxs-lookup"><span data-stu-id="fa4b4-113">Use the `SoapReflectionImporter.ImportTypeMapping` method.</span></span>
+6. <span data-ttu-id="9e368-113">`XmlTypeMapping`를 사용하여 `SoapAttributeOverrides`을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="9e368-113">Create an `XmlTypeMapping` using the `SoapAttributeOverrides`.</span></span> <span data-ttu-id="9e368-114">`SoapReflectionImporter.ImportTypeMapping` 메서드를 사용하세요.</span><span class="sxs-lookup"><span data-stu-id="9e368-114">Use the `SoapReflectionImporter.ImportTypeMapping` method.</span></span>
 
-7. <span data-ttu-id="fa4b4-114">`XmlSerializer`을 사용하여 `XmlTypeMapping`를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="fa4b4-114">Create an `XmlSerializer` using `XmlTypeMapping`.</span></span>
+7. <span data-ttu-id="9e368-115">`XmlSerializer`을 사용하여 `XmlTypeMapping`를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="9e368-115">Create an `XmlSerializer` using `XmlTypeMapping`.</span></span>
 
-8. <span data-ttu-id="fa4b4-115">개체를 직렬화하거나 역직렬화합니다.</span><span class="sxs-lookup"><span data-stu-id="fa4b4-115">Serialize or deserialize the object.</span></span>
+8. <span data-ttu-id="9e368-116">개체를 직렬화하거나 역직렬화합니다.</span><span class="sxs-lookup"><span data-stu-id="9e368-116">Serialize or deserialize the object.</span></span>
 
-## <a name="example"></a><span data-ttu-id="fa4b4-116">예제</span><span class="sxs-lookup"><span data-stu-id="fa4b4-116">Example</span></span>
+## <a name="example"></a><span data-ttu-id="9e368-117">예제</span><span class="sxs-lookup"><span data-stu-id="9e368-117">Example</span></span>
 
-<span data-ttu-id="fa4b4-117">다음 코드 예제에서는 파일을 두 가지 방법으로 serialize합니다. 우선 `XmlSerializer` 클래스의 동작을 재정의하지 않고 serialize하고, 두 번째로 동작을 재정의하여 serialize합니다.</span><span class="sxs-lookup"><span data-stu-id="fa4b4-117">The following code example serializes a file in two ways: first, without overriding the `XmlSerializer` class's behavior, and second, by overriding the behavior.</span></span> <span data-ttu-id="fa4b4-118">예제에는 몇 개의 멤버가 있는 `Group`이라는 클래스가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="fa4b4-118">The example contains a class named `Group` with several members.</span></span> <span data-ttu-id="fa4b4-119">`SoapElementAttribute`와 같은 다양한 특성이 클래스 멤버에 적용되었습니다.</span><span class="sxs-lookup"><span data-stu-id="fa4b4-119">Various attributes, such as the `SoapElementAttribute`, have been applied to class members.</span></span> <span data-ttu-id="fa4b4-120">클래스가 `SerializeOriginal` 메서드로 serialize될 때 특성이 SOAP 메시지 내용을 제어합니다.</span><span class="sxs-lookup"><span data-stu-id="fa4b4-120">When the class is serialized with the `SerializeOriginal` method, the attributes control the SOAP message content.</span></span> <span data-ttu-id="fa4b4-121">`SerializeOverride` 메서드가 호출될 때 `XmlSerializer`의 동작은 다양한 특성을 만들고 `SoapAttributes`의 속성을 해당 특성으로 적절하게 설정하여 재정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="fa4b4-121">When the `SerializeOverride` method is called, the behavior of the `XmlSerializer` is overridden by creating various attributes and setting the properties of a `SoapAttributes` to those attributes (as appropriate).</span></span>
+<span data-ttu-id="9e368-118">다음 코드 예제에서는 파일을 두 가지 방법으로 serialize합니다. 우선 `XmlSerializer` 클래스의 동작을 재정의하지 않고 serialize하고, 두 번째로 동작을 재정의하여 serialize합니다.</span><span class="sxs-lookup"><span data-stu-id="9e368-118">The following code example serializes a file in two ways: first, without overriding the `XmlSerializer` class's behavior, and second, by overriding the behavior.</span></span> <span data-ttu-id="9e368-119">예제에는 몇 개의 멤버가 있는 `Group`이라는 클래스가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="9e368-119">The example contains a class named `Group` with several members.</span></span> <span data-ttu-id="9e368-120">`SoapElementAttribute`와 같은 다양한 특성이 클래스 멤버에 적용되었습니다.</span><span class="sxs-lookup"><span data-stu-id="9e368-120">Various attributes, such as the `SoapElementAttribute`, have been applied to class members.</span></span> <span data-ttu-id="9e368-121">클래스가 `SerializeOriginal` 메서드로 serialize될 때 특성이 SOAP 메시지 내용을 제어합니다.</span><span class="sxs-lookup"><span data-stu-id="9e368-121">When the class is serialized with the `SerializeOriginal` method, the attributes control the SOAP message content.</span></span> <span data-ttu-id="9e368-122">`SerializeOverride` 메서드가 호출될 때 `XmlSerializer`의 동작은 다양한 특성을 만들고 `SoapAttributes`의 속성을 해당 특성으로 적절하게 설정하여 재정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="9e368-122">When the `SerializeOverride` method is called, the behavior of the `XmlSerializer` is overridden by creating various attributes and setting the properties of a `SoapAttributes` to those attributes (as appropriate).</span></span>
 
 ```csharp
 using System;
@@ -278,11 +279,11 @@ public class Run
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="fa4b4-122">참조</span><span class="sxs-lookup"><span data-stu-id="fa4b4-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9e368-123">참조</span><span class="sxs-lookup"><span data-stu-id="9e368-123">See also</span></span>
 
-- [<span data-ttu-id="fa4b4-123">XML 및 SOAP serialization</span><span class="sxs-lookup"><span data-stu-id="fa4b4-123">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)
-- [<span data-ttu-id="fa4b4-124">인코딩된 SOAP serialization을 제어하는 특성</span><span class="sxs-lookup"><span data-stu-id="fa4b4-124">Attributes That Control Encoded SOAP Serialization</span></span>](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)
-- [<span data-ttu-id="fa4b4-125">XML Web Services의 XML serialization</span><span class="sxs-lookup"><span data-stu-id="fa4b4-125">XML Serialization with XML Web Services</span></span>](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)
-- [<span data-ttu-id="fa4b4-126">방법: 개체 직렬화</span><span class="sxs-lookup"><span data-stu-id="fa4b4-126">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [<span data-ttu-id="fa4b4-127">방법: 개체 역직렬화</span><span class="sxs-lookup"><span data-stu-id="fa4b4-127">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-- [<span data-ttu-id="fa4b4-128">방법: 개체를 SOAP 인코딩된 XML 스트림으로 직렬화</span><span class="sxs-lookup"><span data-stu-id="fa4b4-128">How to: Serialize an Object as a SOAP-Encoded XML Stream</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
+- [<span data-ttu-id="9e368-124">XML 및 SOAP serialization</span><span class="sxs-lookup"><span data-stu-id="9e368-124">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [<span data-ttu-id="9e368-125">인코딩된 SOAP serialization을 제어하는 특성</span><span class="sxs-lookup"><span data-stu-id="9e368-125">Attributes That Control Encoded SOAP Serialization</span></span>](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)
+- [<span data-ttu-id="9e368-126">XML Web Services의 XML serialization</span><span class="sxs-lookup"><span data-stu-id="9e368-126">XML Serialization with XML Web Services</span></span>](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)
+- [<span data-ttu-id="9e368-127">방법: 개체 직렬화</span><span class="sxs-lookup"><span data-stu-id="9e368-127">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [<span data-ttu-id="9e368-128">방법: 개체 역직렬화</span><span class="sxs-lookup"><span data-stu-id="9e368-128">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [<span data-ttu-id="9e368-129">방법: 개체를 SOAP 인코딩된 XML 스트림으로 직렬화</span><span class="sxs-lookup"><span data-stu-id="9e368-129">How to: Serialize an Object as a SOAP-Encoded XML Stream</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
