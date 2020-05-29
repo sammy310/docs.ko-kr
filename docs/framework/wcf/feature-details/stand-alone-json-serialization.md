@@ -2,12 +2,12 @@
 title: DataContractJsonSerializer를 사용 하는 독립 실행형 JSON Serialization
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 259d5da544262b5cae08e1be9e8ea6e077d5b947
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 6bd075405a3bca0cc64dda90225526096b6fa8e3
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144931"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202397"
 ---
 # <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>DataContractJsonSerializer를 사용 하는 독립 실행형 JSON Serialization
 
@@ -189,7 +189,7 @@ ASP.NET AJAX 클라이언트 JavaScript 코드는 이러한 문자열을 JavaScr
 
 #### <a name="preserving-type-information"></a>형식 정보 유지
 
-위에서 설명한 것처럼 다형성은 JSON에서 지원되지만 몇 가지 제한 사항이 있습니다. JavaScript는 약한 형식의 언어이며 형식 일치는 일반적으로 문제가 되지 않습니다. 그러나 JSON을 사용하여 강력한 형식 시스템(.NET)과 약한 형식 시스템(JavaScript) 간에 통신하는 경우에는 형식 일치를 유지하는 것이 좋습니다. 예를 들어 데이터 계약 이름이 "Shape"인 형식에서 데이터 계약 이름이 "Square"와 "Circle"인 형식이 파생됩니다. "Circle"을 .NET에서 JavaScript로 보낸 다음 나중에 "Shape"이 필요한 .NET 메서드에 반환하는 경우 .NET 측에서 해당 개체가 원래 "Circle"이었음을 알고 있는 것이 좋습니다. 그렇지 않으면 파생 형식에 특정한 정보(예: "Circle"의 "radius" 데이터 멤버)가 손실될 수도 있습니다.
+위에서 설명한 것처럼 다형성은 JSON에서 지원되지만 몇 가지 제한 사항이 있습니다. JavaScript는 약한 형식의 언어이며 형식 일치는 일반적으로 문제가 되지 않습니다. 그러나 JSON을 사용 하 여 강력한 형식의 시스템 (.NET)과 약한 형식 시스템 (JavaScript) 간에 통신 하는 경우 형식 id를 유지 하는 것이 유용 합니다. 예를 들어 데이터 계약 이름이 "Shape"인 형식에서 데이터 계약 이름이 "Square"와 "Circle"인 형식이 파생됩니다. "Circle"을 .NET에서 JavaScript로 보낸 다음 나중에 "Shape"이 필요한 .NET 메서드에 반환하는 경우 .NET 측에서 해당 개체가 원래 "Circle"이었음을 알고 있는 것이 좋습니다. 그렇지 않으면 파생 형식에 특정한 정보(예: "Circle"의 "radius" 데이터 멤버)가 손실될 수도 있습니다.
 
 형식 일치를 유지하려면 복합 형식을 JSON으로 직렬화할 때 "형식 힌트"를 추가하면 역직렬 변환기가 힌트를 인식하고 적절히 작동할 수 있습니다. "형식 힌트"는 키 이름이 "type" 인 JSON 키/값 쌍 \_ \_ (두 개의 밑줄과 "type" 이라는 단어)입니다. 값은 "DataContractName:DataContractNamespace"(첫 번째 콜론까지는 이름) 형식의 JSON 문자열입니다. 앞의 예제를 사용하면 "Circle"은 다음과 같이 serialize될 수 있습니다.
 
@@ -229,7 +229,7 @@ JSON 메시지의 크기를 줄이기 위해 기본 데이터 계약 네임 스�
 
 형식 힌트는 메시지 크기를 상당히 증가시킬 수 있습니다. 이 문제를 완화하기 위한 한 가지 방법은 가능한 경우 더 짧은 데이터 계약 네임스페이스를 사용하는 것입니다. 따라서 다음 규칙에 따라 형식 힌트를 내보낼지 여부가 결정됩니다.
 
-- ASP.NET AJAX를 사용하는 경우, 기본/파생 할당이 없을 때(예를 들어 Circle이 Circle에 할당된 경우)에도 가능하면 항상 형식 힌트를 내보냅니다. 이는 정보의 큰 손실 없이 약한 형식 JSON 환경에서 강력한 형식 .NET 환경으로 호출하는 프로세스를 완벽하게 지원하기 위해 필요합니다.
+- ASP.NET AJAX를 사용하는 경우, 기본/파생 할당이 없을 때(예를 들어 Circle이 Circle에 할당된 경우)에도 가능하면 항상 형식 힌트를 내보냅니다. 이는 약한 형식의 JSON 환경에서 강력한 형식의 .NET 환경으로의 호출 프로세스를 완전 하 게 사용 하도록 설정 하는 데 필요 합니다.
 
 - ASP.NET과 통합되지 않은 AJAX 서비스를 사용하는 경우에는 기본/파생 할당이 있는 경우에만 형식 힌트를 내보냅니다. 즉, Circle이 Shape 또는 <xref:System.Object>에 할당되었지만 Circle에는 할당되지 않은 경우에 형식 힌트를 내보냅니다. 이를 통해 JavaScript 클라이언트를 올바르게 구현하는 데 필요한 최소 정보가 제공되므로 성능이 향상되지만 잘못 디자인된 클라이언트의 경우 형식 정보 손실을 방지할 수 없습니다. 클라이언트에서 이 문제를 처리하지 않으려면 서버에 기본/파생 할당이 없도록 해야 합니다.
 

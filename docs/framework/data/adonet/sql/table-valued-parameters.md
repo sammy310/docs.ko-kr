@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 2917a8d9b42d831566855271a2f2110637db586f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b968c599cf061fbd03b7ba8fb19470f6ace11a55
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174474"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202168"
 ---
 # <a name="table-valued-parameters"></a>테이블 반환 매개 변수
 테이블 반환 매개 변수를 사용하면 데이터를 처리하는 데 여러 번 왕복하거나 서버 측 특수 논리를 설정하지 않고도 데이터의 여러 행을 클라이언트 애플리케이션에서 SQL Server로 쉽게 마샬링할 수 있습니다. 또한 테이블 반환 매개 변수를 사용하면 클라이언트 애플리케이션에서 데이터 행을 캡슐화하고 매개 변수가 있는 단일 명령으로 데이터를 서버에 보낼 수 있습니다. 들어오는 데이터 행을 테이블 변수에 저장한 다음 Transact-SQL을 사용하여 연산할 수 있습니다.  
@@ -22,10 +22,10 @@ ms.locfileid: "79174474"
   
  테이블 반환 매개 변수에 대한 자세한 내용은 다음 리소스를 참조하세요.  
   
-|리소스|Description|  
+|리소스|설명|  
 |--------------|-----------------|  
 |[테이블 반환 매개 변수 사용(데이터베이스 엔진)](/sql/relational-databases/tables/use-table-valued-parameters-database-engine)|테이블 반환 매개 변수를 만들고 사용하는 방법을 설명합니다.|  
-|[사용자 정의 테이블 유형](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))|테이블 반환 매개 변수를 선언하는 데 사용되는 사용자 정의 테이블 형식에 대해 설명합니다.|  
+|[사용자 정의 테이블 형식](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))|테이블 반환 매개 변수를 선언하는 데 사용되는 사용자 정의 테이블 형식에 대해 설명합니다.|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>이전 버전의 SQL Server에서 여러 행 전달  
  SQL Server 2008에 테이블 반환 매개 변수가 도입되기 전에는 여러 행의 데이터를 저장 프로시저나 매개 변수화된 SQL 명령에 전달하는 옵션이 제한적이었습니다. 개발자는 서버에 여러 행을 전달하기 위해 다음 옵션 중에서 선택할 수 있습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "79174474"
 - `bcp` 유틸리티 프로그램 또는 <xref:System.Data.SqlClient.SqlBulkCopy> 개체를 사용하여 많은 데이터 행을 테이블에 로드할 수 있습니다. 이 기법은 매우 효율적이지만 데이터를 임시 테이블 또는 테이블 변수에 로드하지 않는 한 서버 쪽 처리를 지원하지 않습니다.  
   
 ## <a name="creating-table-valued-parameter-types"></a>테이블 반환 매개 변수 형식 만들기  
- 테이블 반환 매개 변수는 Transact-SQL CREATE TYPE 문을 사용하여 정의된 강력한 형식의 테이블 구조를 기반으로 합니다. 클라이언트 애플리케이션에서 테이블 반환 매개 변수를 사용할 수 있으려면 먼저 SQL Server에서 테이블 형식을 만들고 구조를 정의해야 합니다. 테이블 형식 만들기에 대한 자세한 내용은 [사용자 정의 테이블 형식을](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))참조하십시오.  
+ 테이블 반환 매개 변수는 Transact-sql CREATE TYPE 문을 사용 하 여 정의 된 강력한 형식의 테이블 구조를 기반으로 합니다. 클라이언트 애플리케이션에서 테이블 반환 매개 변수를 사용할 수 있으려면 먼저 SQL Server에서 테이블 형식을 만들고 구조를 정의해야 합니다. 테이블 형식을 만드는 방법에 대 한 자세한 내용은 [사용자 정의 테이블 형식](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))을 참조 하세요.  
   
  다음 문은 CategoryID 및 CategoryName 열로 구성된 CategoryTableType 라는 테이블 형식을 만듭니다.  
   
@@ -128,7 +128,7 @@ Dim tvpParam As SqlParameter = _
 tvpParam.SqlDbType = SqlDbType.Structured  
 ```  
   
-## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a><a name="passing"></a>테이블 값 매개 변수를 저장 프로시저에 전달  
+## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a><a name="passing"></a>저장 프로시저에 테이블 반환 매개 변수 전달  
  이 예제에서는 테이블 반환 매개 변수 데이터를 저장 프로시저에 전달하는 방법을 보여 줍니다. 이 코드는 <xref:System.Data.DataTable.GetChanges%2A> 메서드를 사용하여 새 <xref:System.Data.DataTable>에 추가된 행을 추출합니다. 그런 다음 코드는 <xref:System.Data.SqlClient.SqlCommand>를 정의하여 <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> 속성을 <xref:System.Data.CommandType.StoredProcedure>로 설정합니다. <xref:System.Data.SqlClient.SqlParameter>는 <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> 메서드를 사용하여 채워지고 <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A>는 `Structured`로 설정됩니다. 그런 다음 <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> 메서드를 사용하여 <xref:System.Data.SqlClient.SqlCommand>를 실행합니다.  
   
 ```csharp  
@@ -277,5 +277,5 @@ insertCommand.ExecuteNonQuery()
 - [매개 변수 및 매개 변수 데이터 형식 구성](../configuring-parameters-and-parameter-data-types.md)
 - [명령 및 매개 변수](../commands-and-parameters.md)
 - [DataAdapter 매개 변수](../dataadapter-parameters.md)
-- [ADO.NET SQL 서버 데이터 작업](sql-server-data-operations.md)
+- [ADO.NET의 SQL Server 데이터 작업](sql-server-data-operations.md)
 - [ADO.NET 개요](../ado-net-overview.md)

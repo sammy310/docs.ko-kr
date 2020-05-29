@@ -2,12 +2,12 @@
 title: '방법: WCF URL 예약을 제한된 예약으로 바꾸기'
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-ms.openlocfilehash: fc50a0e31a0c323b695ada6565743fa19c1d4c2a
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 780a2c7fe240ed624ff106e8157661f8b76b32bd
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212185"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202368"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>방법: WCF URL 예약을 제한된 예약으로 바꾸기
 
@@ -15,7 +15,7 @@ URL 예약을 사용하여 URL 또는 URL 집합에서 메시지를 수신할 �
   
  기본 운영 체제 구성의 일부로 WCF (Windows Communication Foundation)는 포트 80에 대해 전역적으로 액세스할 수 있는 예약을 만들어 모든 사용자가 이중 통신에 이중 HTTP 바인딩을 사용 하는 응용 프로그램을 실행할 수 있도록 합니다. 이 예약의 ACL은 모든 사용자를 위한 것이므로 관리자는 URL 또는 URL 집합에서 수신 대기할 수 있는 권한을 명시적으로 허용하거나 허용하지 않을 수 없습니다. 이 항목에서는 이 예약을 삭제하고 제한된 ACL로 예약을 다시 만드는 방법에 대해 설명합니다.  
   
-Windows Vista 또는 Windows Server 2008에서는 `netsh http show urlacl`를 입력 하 여 관리자 권한 명령 프롬프트에서 모든 HTTP URL 예약을 볼 수 있습니다. 다음 예제에서는 WCF URL 예약이 어떻게 유사 해야 하는지 보여 줍니다.
+Windows Vista 또는 Windows Server 2008에서는를 입력 하 여 관리자 권한 명령 프롬프트에서 모든 HTTP URL 예약을 볼 수 있습니다 `netsh http show urlacl` . 다음 예제에서는 WCF URL 예약이 어떻게 유사 해야 하는지 보여 줍니다.
 
 ```
 Reserved URL : http://+:80/Temporary_Listen_Addresses/  
@@ -31,9 +31,9 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 1. **시작**을 클릭 하 고 **모든 프로그램**을 가리킨 다음 **보조 프로그램**을 클릭 하 고 **명령 프롬프트** 를 마우스 오른쪽 단추로 클릭 하 고 표시 되는 상황에 맞는 메뉴에서 **관리자 권한으로 실행** 을 클릭 합니다. 계속 하려면 사용 권한을 요청할 수 있는 UAC (사용자 계정 컨트롤) 창에서 **계속** 을 클릭 합니다.  
   
-2. 명령 프롬프트 창에서 **netsh http delete urlacl url =http://+:80/Temporary_Listen_Addresses/** 를 입력 합니다.  
+2. `netsh http delete urlacl url=http://+:80/Temporary_Listen_Addresses/`명령 프롬프트 창에을 입력 합니다.  
   
-3. 예약이 삭제되면 다음 메시지가 표시됩니다. **URL 예약이 삭제 되었습니다.**  
+3. 예약이 삭제되면 다음 메시지가 표시됩니다. **URL 예약을 성공적으로 삭제했습니다.**  
   
 ## <a name="creating-a-new-security-group-and-new-restricted-url-reservation"></a>새 보안 그룹 및 새 제한된 URL 예약 만들기  
  WCF URL 예약을 제한 된 예약으로 바꾸려면 먼저 새 보안 그룹을 만들어야 합니다. 이 작업은 명령 프롬프트 또는 컴퓨터 관리 콘솔에서 수행할 수 있습니다. 한 가지만 수행하면 됩니다.  
@@ -42,9 +42,9 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 1. **시작**을 클릭 하 고 **모든 프로그램**을 가리킨 다음 **보조 프로그램**을 클릭 하 고 **명령 프롬프트** 를 마우스 오른쪽 단추로 클릭 하 고 표시 되는 상황에 맞는 메뉴에서 **관리자 권한으로 실행** 을 클릭 합니다. 계속 하려면 사용 권한을 요청할 수 있는 UAC (사용자 계정 컨트롤) 창에서 **계속** 을 클릭 합니다.  
   
-2. 명령 프롬프트에서 **net localgroup "\<보안 그룹 이름 >"/comment: "\<보안 그룹 설명 >"/add** 를 입력 합니다. **\<보안 그룹 이름 >** 를 만들려는 보안 그룹의 이름으로 바꾸고 보안 그룹 **설명\<** 보안 그룹에 대 한 적절 한 설명을 > 합니다.  
+2. 명령 프롬프트에을 입력 `net localgroup "<security group name>" /comment:"<security group description>" /add` 합니다. 을 **\<security group name>** 만들려는 보안 그룹의 이름으로 바꾸고,을 **\<security group description>** 보안 그룹에 대 한 적절 한 설명으로 바꿉니다.  
   
-3. 보안 그룹이 만들어지면 다음 메시지가 표시됩니다. **명령이 성공적으로 완료 되었습니다.**  
+3. 보안 그룹이 만들어지면 다음 메시지가 표시됩니다. **명령을 완료했습니다.**  
   
 ### <a name="to-create-a-new-security-group-from-the-computer-management-console"></a>컴퓨터 관리 콘솔에서 새 보안 그룹을 만들려면  
   
@@ -56,6 +56,6 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 1. **시작**을 클릭 하 고 **모든 프로그램**을 가리킨 다음 **보조 프로그램**을 클릭 하 고 **명령 프롬프트** 를 마우스 오른쪽 단추로 클릭 하 고 표시 되는 상황에 맞는 메뉴에서 **관리자 권한으로 실행** 을 클릭 합니다. 계속 하려면 사용 권한을 요청할 수 있는 UAC (사용자 계정 컨트롤) 창에서 **계속** 을 클릭 합니다.  
   
-2. 명령 프롬프트에서 **netsh http add urlacl url =http://+:80/Temporary_Listen_Addresses/ user = "\< machine name >\\ < 보안 그룹 이름** 을 입력 합니다. **\<컴퓨터 이름 >** 를 그룹을 만들어야 하는 컴퓨터 이름으로 바꾸고, 이전에 만든 보안 그룹의 이름으로 **보안 그룹 이름 >\<** 합니다.  
+2. 명령 프롬프트에을 입력 `netsh http add urlacl url=http://+:80/Temporary_Listen_Addresses/ user="<machine name>\<security group name>` 합니다. 를 **\<machine name>** 그룹이 생성 되어야 하는 컴퓨터 이름으로 바꾸고,을 **\<security group name>** 이전에 만든 보안 그룹의 이름으로 바꿉니다.  
   
 3. 예약이 만들어지면 다음 메시지가 표시됩니다. **URL 예약이 성공적으로 추가**되었습니다.

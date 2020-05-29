@@ -2,12 +2,12 @@
 title: Workflow Discovery 샘플
 ms.date: 03/30/2017
 ms.assetid: 82cc43f1-3c8f-4771-ac19-a75ac936e2c3
-ms.openlocfilehash: b3a2d88028f3854746d4e1d2fad80aae4f6be7be
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1c6210472b594aec02bdf47f472a1a8b1823230c
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79143488"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202067"
 ---
 # <a name="workflow-discovery-sample"></a>Workflow Discovery 샘플
 이 샘플에서는 워크플로 서비스를 검색 가능하게 만드는 방법과 특정 서비스를 검색하는 사용자 지정 코드 활동을 작성하는 방법을 보여 줍니다.  
@@ -20,15 +20,15 @@ ms.locfileid: "79143488"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1. 이 샘플에서는 실행하려면 적절한 URL ACL이 있어야 하는 HTTP 끝점을 사용합니다(자세한 내용은 [HTTP 및 HTTPS 구성](../feature-details/configuring-http-and-https.md) 참조). 권한이 높은 명령 프롬프트에서 다음 명령을 실행하면 적절한 ACL이 추가됩니다. 셸이 변수 형식을 이해하지 못하는 경우 도메인 및 사용자 이름을 다음 인수로 대체합니다.  
+1. 이 샘플은 실행할 적절 한 URL Acl이 있어야 하는 HTTP 끝점을 사용 합니다 (자세한 내용은 [http 및 HTTPS 구성](../feature-details/configuring-http-and-https.md) 참조). 권한이 높은 명령 프롬프트에서 다음 명령을 실행하면 적절한 ACL이 추가됩니다. 셸이 변수 형식을 인식 하지 못하는 경우 도메인 및 사용자 이름으로 다음 인수를 대체 합니다.  
   
-     **netsh http urlaclhttp://+:8000/ url= 사용자=% DOMAIN%\\% 사용자 이름 %**  
+    `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`
   
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 이 디렉터리가 없는 경우 [.NET Framework 4에 대한 WCF(Windows 통신 재단) 및 WF(Windows 워크플로우 재단) 샘플로](https://www.microsoft.com/download/details.aspx?id=21459) 이동하여 모든 WCF(Windows 통신 재단) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드합니다. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\WorkflowDiscovery`

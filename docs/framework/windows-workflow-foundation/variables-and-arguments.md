@@ -3,12 +3,12 @@ title: 변수 및 인수
 description: 이 문서에서는 데이터 저장소를 나타내는 변수와 Workflow Foundation의 작업 간 데이터 흐름을 나타내는 인수를 설명 합니다.
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-ms.openlocfilehash: 47b8a7bddc8c3a9a8427bcb3e93760a63e5fa976
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 5cce9931e9b0a37d5fafbfb84527ffd543a0a50f
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421308"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201952"
 ---
 # <a name="variables-and-arguments"></a>변수 및 인수
 WF (Windows Workflow Foundation)에서 변수는 데이터의 저장소를 나타내고 인수는 활동에 대 한 데이터의 흐름을 나타냅니다. 활동에는 인수 집합이 있으며 인수는 활동의 시그니처를 구성합니다. 또한 활동은 개발자가 워크플로 디자인 중에 변수를 추가하거나 제거할 수 있는 변수 목록을 유지할 수 있습니다. 인수는 값을 반환하는 식을 사용하여 바인딩됩니다.  
@@ -70,7 +70,7 @@ Variable<string> var = new Variable<string>
   
 3. 인수는 선택적으로 <xref:System.Activities.Argument.EvaluationOrder%2A>를 지정할 수 있습니다. <xref:System.Activities.Argument.EvaluationOrder%2A>는 인수를 평가하는 순서를 지정하는 0부터 시작하는 값입니다. 기본적으로 인수의 평가 순서는 지정되지 않으며 <xref:System.Activities.Argument.UnspecifiedEvaluationOrder> 값과 같습니다. <xref:System.Activities.Argument.EvaluationOrder%2A>를 0보다 크거나 같은 값으로 설정하여 이 인수의 평가 순서를 지정합니다. Windows Workflow Foundation에는 오름차순에서 지정한 평가 순서의 인수를 평가합니다. 평가 순서가 지정되지 않은 인수는 평가 순서가 지정된 인수 이전에 평가됩니다.  
   
- 활동 작성자는 강력한 형식의 메커니즘을 사용하여 인수를 노출합니다. 이 작업은 <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601> 및 <xref:System.Activities.InOutArgument%601> 형식의 속성을 선언하여 수행됩니다. 이렇게 하면 활동 작성자가 활동 내부 및 외부로 이동하는 데이터에 대한 특정 계약을 설정할 수 있습니다.  
+ 활동 작성자는 강력한 형식의 메커니즘을 사용 하 여 해당 인수를 노출할 수 있습니다. 이 작업은 <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601> 및 <xref:System.Activities.InOutArgument%601> 형식의 속성을 선언하여 수행됩니다. 이렇게 하면 활동 작성자가 활동 내부 및 외부로 이동하는 데이터에 대한 특정 계약을 설정할 수 있습니다.  
   
 ### <a name="defining-the-arguments-on-an-activity"></a>활동에서 인수 정의  
  <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601> 및 <xref:System.Activities.InOutArgument%601> 형식의 속성을 지정하여 활동에서 인수를 정의할 수 있습니다. 다음 코드에서는 사용자에게 표시할 문자열을 가져와서 사용자 응답을 포함하는 문자열을 반환하는 `Prompt` 활동에 대한 인수를 정의하는 방법을 보여 줍니다.  

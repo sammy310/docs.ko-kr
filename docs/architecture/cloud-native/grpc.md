@@ -3,12 +3,12 @@ title: gRPC
 description: GRPC, 클라우드 네이티브 응용 프로그램에서의 역할 및 HTTP RESTful 통신과 어떻게 다른 지에 대해 알아봅니다.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: f34b267d7f5c6b4e593841c80df44d1ccbde95ae
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 35a8325dd82e946d88b09b223287e2871be88ffa
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614047"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201329"
 ---
 # <a name="grpc"></a>gRPC
 
@@ -83,7 +83,7 @@ SDK에는 끝점 라우팅, 기본 제공 IoC 및 로깅에 대 한 도구가 �
 
 이 문서를 작성할 당시에는 gRPC가 백 엔드 서비스에서 주로 사용 됩니다. 대부분의 최신 브라우저는 프런트 엔드 gRPC 클라이언트를 지 원하는 데 필요한 HTTP/2 제어 수준을 제공할 수 없습니다. 즉, JavaScript 또는 Blazor Weasembom기술로 빌드된 브라우저 기반 앱에서 gRPC 통신을 가능 하 게 하는 [초기 이니셔티브](https://devblogs.microsoft.com/aspnet/grpc-web-experiment/) 가 있습니다. [.Net 용 grpc-웹](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-WEB.md) 을 사용 하면 ASP.NET Core grpc 앱이 브라우저 앱에서 grpc 기능을 지원할 수 있습니다.
 
-- 강력한 형식의 코드 생성 클라이언트
+- 강력 하 게 형식화 된 코드 생성 클라이언트
 - Compact Protobuf 메시지
 - 서버 스트리밍
 

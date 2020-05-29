@@ -1,5 +1,5 @@
 ---
-title: 데이터 서비스 쿼리 (WCF Data Services)
+title: 데이터 서비스 쿼리(WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: 99fe377e8fff193c4f8bb566946b95c61c1b3693
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 8ae4b4b9938f72f4f4fc011e180cd69440ec3dd9
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568890"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201753"
 ---
-# <a name="querying-the-data-service-wcf-data-services"></a>데이터 서비스 쿼리 (WCF Data Services)
+# <a name="querying-the-data-service-wcf-data-services"></a>데이터 서비스 쿼리(WCF Data Services)
 
-WCF Data Services 클라이언트 라이브러리를 사용 하면 LINQ (통합 언어 쿼리)를 사용 하는 것과 같은 친숙 한 .NET Framework 프로그래밍 패턴을 사용 하 여 데이터 서비스에 대해 쿼리를 실행할 수 있습니다. 클라이언트 라이브러리는 클라이언트에서 <xref:System.Data.Services.Client.DataServiceQuery%601> 클래스의 인스턴스로 정의된 쿼리를 HTTP GET 요청 메시지로 변환합니다. 라이브러리는 응답 메시지를 수신 하 고이를 클라이언트 데이터 서비스 클래스의 인스턴스로 변환 합니다. 이러한 클래스는 <xref:System.Data.Services.Client.DataServiceContext>가 속해 있는 <xref:System.Data.Services.Client.DataServiceQuery%601>에 의해 추적됩니다.
+WCF Data Services 클라이언트 라이브러리를 사용 하면 LINQ (통합 언어 쿼리)를 사용 하는 것과 같은 친숙 한 .NET Framework 프로그래밍 패턴을 사용 하 여 데이터 서비스에 대해 쿼리를 실행할 수 있습니다. 클라이언트 라이브러리는 클라이언트에서 <xref:System.Data.Services.Client.DataServiceQuery%601> 클래스의 인스턴스로 정의된 쿼리를 HTTP GET 요청 메시지로 변환합니다. 라이브러리는 응답 메시지를 받아 클라이언트 데이터 서비스 클래스의 인스턴스로 변환합니다. 이러한 클래스는 <xref:System.Data.Services.Client.DataServiceContext>가 속해 있는 <xref:System.Data.Services.Client.DataServiceQuery%601>에 의해 추적됩니다.
 
 ## <a name="data-service-queries"></a>데이터 서비스 쿼리
 
 <xref:System.Data.Services.Client.DataServiceQuery%601> 제네릭 클래스는 0개 이상의 엔터티 형식 인스턴스의 컬렉션을 반환하는 쿼리를 나타냅니다. 데이터 서비스 쿼리는 항상 기존 데이터 서비스 컨텍스트에 속합니다. 이 컨텍스트는 쿼리를 작성하고 실행하는 데 필요한 서비스 URI 및 메타데이터 정보를 유지 관리합니다.
 
-**서비스 참조 추가** 대화 상자를 사용 하 여 데이터 서비스를 .NET Framework 기반 클라이언트 응용 프로그램에 추가 하는 경우 <xref:System.Data.Services.Client.DataServiceContext> 클래스에서 상속 되는 엔터티 컨테이너 클래스가 만들어집니다. 이 클래스에는 형식화된 <xref:System.Data.Services.Client.DataServiceQuery%601> 인스턴스를 반환하는 속성이 포함됩니다. 데이터 서비스에서 노출하는 엔터티 집합마다 속성이 하나씩 있습니다. 이러한 속성을 사용하면 형식화된 <xref:System.Data.Services.Client.DataServiceQuery%601> 인스턴스를 보다 쉽게 만들 수 있습니다.
+**서비스 참조 추가** 대화 상자를 사용 하 여 데이터 서비스를 .NET Framework 기반 클라이언트 응용 프로그램에 추가 하면 클래스에서 상속 하는 엔터티 컨테이너 클래스가 만들어집니다 <xref:System.Data.Services.Client.DataServiceContext> . 이 클래스에는 형식화된 <xref:System.Data.Services.Client.DataServiceQuery%601> 인스턴스를 반환하는 속성이 포함됩니다. 데이터 서비스에서 노출하는 엔터티 집합마다 속성이 하나씩 있습니다. 이러한 속성을 사용하면 형식화된 <xref:System.Data.Services.Client.DataServiceQuery%601> 인스턴스를 보다 쉽게 만들 수 있습니다.
 
 쿼리는 다음 시나리오에서 실행됩니다.
 
@@ -45,11 +45,11 @@ WCF Data Services 클라이언트 라이브러리를 사용 하면 LINQ (통합 
 
 자세한 내용은 [방법: 데이터 서비스 쿼리 실행](how-to-execute-data-service-queries-wcf-data-services.md)을 참조 하세요.
 
-WCF Data Services 클라이언트는에서 C# *동적* 형식을 사용할 때와 같은 런타임에 바인딩된 개체에 대 한 쿼리를 지원 합니다. 하지만 성능상의 이유로 데이터 서비스에 대해 항상 강력한 형식의 쿼리를 작성해야 합니다. <xref:System.Tuple> 유형 및 동적 개체는 클라이언트에서 지원되지 않습니다.
+WCF Data Services 클라이언트는 c #에서 *동적* 형식을 사용할 때와 같은 런타임에 바인딩된 개체에 대 한 쿼리를 지원 합니다. 그러나 성능상의 이유로 항상 데이터 서비스에 대해 강력한 형식의 쿼리를 작성 해야 합니다. <xref:System.Tuple> 유형 및 동적 개체는 클라이언트에서 지원되지 않습니다.
 
 ## <a name="linq-queries"></a>LINQ 쿼리
 
-<xref:System.Data.Services.Client.DataServiceQuery%601> 클래스가 LINQ로 정의 된 <xref:System.Linq.IQueryable%601> 인터페이스를 구현 하므로 WCF Data Services 클라이언트 라이브러리는 엔터티 집합 데이터에 대 한 LINQ 쿼리를 데이터 서비스 리소스에 대해 평가 되는 쿼리 식을 나타내는 URI로 변환할 수 있습니다. 다음 예제는 운송료가 $30를 초과하는 <xref:System.Data.Services.Client.DataServiceQuery%601>를 반환하고 결과를 운송료순으로 정렬하는 이전 `Orders`와 동일한 LINQ 쿼리입니다.
+<xref:System.Data.Services.Client.DataServiceQuery%601>클래스가 linq로 정의 된 인터페이스를 구현 하기 때문에 <xref:System.Linq.IQueryable%601> WCF Data Services 클라이언트 라이브러리는 엔터티 집합 데이터에 대 한 linq 쿼리를 데이터 서비스 리소스에 대해 평가 되는 쿼리 식을 나타내는 URI로 변환할 수 있습니다. 다음 예제는 운송료가 $30를 초과하는 <xref:System.Data.Services.Client.DataServiceQuery%601>를 반환하고 결과를 운송료순으로 정렬하는 이전 `Orders`와 동일한 LINQ 쿼리입니다.
 
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqspecific)]
 [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqspecific)]
@@ -133,7 +133,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 
 ## <a name="in-this-section"></a>섹션 내용
 
-- [프로젝트 쿼리](query-projections-wcf-data-services.md)
+- [프로젝션 쿼리](query-projections-wcf-data-services.md)
 
 - [개체 구체화](object-materialization-wcf-data-services.md)
 
@@ -141,9 +141,9 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 
 - [방법: 데이터 서비스 쿼리 실행](how-to-execute-data-service-queries-wcf-data-services.md)
 
-- [방법: 쿼리 옵션을 데이터 서비스 쿼리에 추가](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
+- [방법: 데이터 서비스 쿼리에 쿼리 옵션 추가](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
 
-- [방법: 쿼리가 반환하는 엔터티의 수 확인](number-of-entities-returned-by-a-query-wcf.md)
+- [방법: 쿼리에서 반환하는 엔터티의 수 확인](number-of-entities-returned-by-a-query-wcf.md)
 
 - [방법: 데이터 서비스 요청에 대한 클라이언트 자격 증명 지정](specify-client-creds-for-a-data-service-request-wcf.md)
 
@@ -151,6 +151,6 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 
 - [방법: 프로젝트 쿼리 결과](how-to-project-query-results-wcf-data-services.md)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [WCF Data Services 클라이언트 라이브러리](wcf-data-services-client-library.md)
