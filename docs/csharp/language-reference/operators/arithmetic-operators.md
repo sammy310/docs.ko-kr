@@ -1,7 +1,7 @@
 ---
 title: 산술 연산자 - C# 참조
 description: 숫자 형식이 포함된 곱하기, 나누기, 나머지, 더하기 및 빼기 작업을 수행하는 C# 연산자에 대해 알아봅니다.
-ms.date: 03/27/2019
+ms.date: 05/11/2020
 author: pkulikov
 f1_keywords:
 - ++_CSharpKeyword
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: ea9bf9e065b2953fd20e0503a19d1dc143064c5d
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: d004ab466bc053ed286d85bcbee2766d8a087286
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738742"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207233"
 ---
 # <a name="arithmetic-operators-c-reference"></a>산술 연산자(C# 참조)
 
@@ -42,6 +42,8 @@ ms.locfileid: "81738742"
 - 이진 [`*`(곱하기)](#multiplication-operator-), [`/`(나누기)](#division-operator-), [`%`(나머지)](#remainder-operator-), [`+`(더하기)](#addition-operator-) 및 [`-`(빼기)](#subtraction-operator--) 연산자
 
 해당 연산자는 모든 [정수](../builtin-types/integral-numeric-types.md) 및 [부동 소수점](../builtin-types/floating-point-numeric-types.md) 숫자 형식을 지원합니다.
+
+정수 형식의 경우 이러한 연산자(`++` 및 `--` 연산자 제외)는 `int`, `uint`, `long`및 `ulong` 형식에 대해 정의됩니다. 피연산자가 다른 정수 형식(`sbyte`, `byte`, `short`, `ushort` 또는 `char`)인 경우, 해당 값은 연산의 결과 형식이기도 한 `int` 형식으로 변환됩니다. 피연산자가 정수 형식 또는 부동 소수점 형식인 경우 해당 형식이 있으면 값은 가장 근사한 포함하는 형식으로 변환됩니다. 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [숫자 승격](~/_csharplang/spec/expressions.md#numeric-promotions) 섹션을 참조하세요. `++` 및 `--` 연산자는 모든 정수 형식 및 부동 소수점 숫자 형식과 [char](../builtin-types/char.md) 형식에 대해 정의됩니다.
 
 ## <a name="increment-operator-"></a>증가 연산자 ++
 

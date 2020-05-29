@@ -10,12 +10,12 @@ helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining version
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: 8469f977c6ed9691c81a2a8354935557b5c27171
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d25e4ae97877462b2a3b90e51262fb656921e392
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77093835"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205493"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>방법: 설치된 .NET Framework 버전 확인
 
@@ -25,7 +25,7 @@ ms.locfileid: "77093835"
 
 - 앱의 기능을 제공하는 형식 및 리소스 컬렉션에 해당하는 어셈블리 집합. .NET Framework와 어셈블리는 동일한 버전 번호를 공유합니다. 예를 들어, .NET Framework 버전에는 4.5, 4.6.1, 4.7.2가 있습니다.
 
-- 앱 코드를 관리하고 실행하는 CLR(공용 언어 런타임). 하나의 CLR 버전이 여러 개의.NET Framework 버전을 지원합니다. 예를 들어 CLR 버전이 4.0.30319.‘xxxxx’이고 ‘xxxxx’가 42000보다 작은 경우 .NET Framework 버전 4~4.5.2를 지원합니다.   CLR 버전이 4.0.30319.42000보다 크거나 같으면 .NET Framework 4.6 이상 버전의 .NET Framework를 지원합니다.
+- 앱 코드를 관리하고 실행하는 CLR(공용 언어 런타임). 하나의 CLR 버전이 여러 개의.NET Framework 버전을 지원합니다. 예를 들어 CLR 버전이 4.0.30319.‘xxxxx’이고 ‘xxxxx’가 42000보다 작은 경우 .NET Framework 버전 4~4.5.2를 지원합니다.  CLR 버전이 4.0.30319.42000보다 크거나 같으면 .NET Framework 4.6 이상 버전의 .NET Framework를 지원합니다.
 
 커뮤니티에서 유지 관리되는 도구를 사용하여 설치된 .NET Framework 버전을 확인할 수 있습니다.
 
@@ -44,7 +44,7 @@ ms.locfileid: "77093835"
 컴퓨터에 설치된 .NET Framework 버전(4.5 이상)은 레지스트리에서 **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full**에 나와 있습니다. **Full** 하위 키가 없으면 .NET Framework 4.5 이상이 설치되지 않은 것입니다.
 
 > [!NOTE]
-> 레지스트리 경로에서 **NET Framework Setup** 하위 키는 마침표로 시작되지 ‘않습니다’  .
+> 레지스트리 경로에서 **NET Framework Setup** 하위 키는 마침표로 시작되지 ‘않습니다’.
 
 레지스트리의 **Release** REG_DWORD 값은 설치된 .NET Framework 버전을 나타냅니다.
 
@@ -61,13 +61,13 @@ ms.locfileid: "77093835"
 | .NET Framework 4.7     | Windows 10 Creators Update: 460798<br />다른 모든 Windows 운영 체제(다른 Windows 10 운영 체제 포함): 460805 |
 | .NET Framework 4.7.1   | Windows 10 Fall Creators Update 및 Windows Server, 버전 1709: 461308<br/>다른 모든 Windows 운영 체제(다른 Windows 10 운영 체제 포함): 461310 |
 | .NET Framework 4.7.2   | Windows 10 2018년 4월 업데이트 및 Windows Server, 버전 1803: 461808<br/>Windows 10 2018년 4월 업데이트 및 Windows Server, 버전 1803 이외의 모든 Windows 운영 체제: 461814 |
-| .NET Framework 4.8     | Windows 10 2019년 5월 업데이트 및 Windows 10 2019년 11월 업데이트: 528040<br/>Windows 10 및 Windows Server 버전 1909: 528209<br/>다른 모든 Windows 운영 체제(다른 Windows 10 운영 체제 포함): 528049 |
+| .NET Framework 4.8     | Windows 10 2019년 5월 업데이트 및 Windows 10 2019년 11월 업데이트: 528040<br/>Windows 10 2020년 5월 업데이트: 528209<br/>다른 모든 Windows 운영 체제(다른 Windows 10 운영 체제 포함): 528049 |
 
 ### <a name="minimum-version"></a>최소 버전
 
-‘최소’ 버전의 .NET Framework가 있는지 확인하려면 이전 표에서 해당 버전의 가장 작은 **Release** REG_DWORD 값을 사용하세요. 
+‘최소’ 버전의 .NET Framework가 있는지 확인하려면 이전 표에서 해당 버전의 가장 작은 **Release** REG_DWORD 값을 사용하세요.
 
-예를 들어 애플리케이션이 .NET Framework 4.8 이상 버전에서 실행되는 경우 528040과 같거나 이보다 큰 **Release** REG_DWORD 값을 테스트합니다. 
+예를 들어 애플리케이션이 .NET Framework 4.8 이상 버전에서 실행되는 경우 528040과 같거나 이보다 큰 **Release** REG_DWORD 값을 테스트합니다.
 
 | .NET Framework 버전 | 최소값 |
 | ---------------------- | ------------- |
@@ -128,7 +128,7 @@ PowerShell 명령을 사용하여 **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET
 1\.1에서 4.0까지의 각 .NET Framework 버전은 **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP**의 하위 키로 표시됩니다. 다음 표에서는 각 .NET Framework 버전의 경로를 에 나열합니다. 대부분 버전의 **Install** REG_DWORD 값은 `1`이고, 이는 해당 버전이 설치되었음을 나타냅니다. 이러한 하위 키에는 버전 문자열을 포함하는 **Version** REG_SZ 값도 있습니다.
 
 > [!NOTE]
-> 레지스트리 경로에서 **NET Framework Setup** 하위 키는 마침표로 시작되지 ‘않습니다’  .
+> 레지스트리 경로에서 **NET Framework Setup** 하위 키는 마침표로 시작되지 ‘않습니다’.
 
 | 프레임워크 버전  | 레지스트리 하위 키 | 값 |
 | ------------------ | --------------- | ----- |
@@ -194,7 +194,7 @@ PowerShell 명령을 사용하여 **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET
   
       반환된 `System.Version`개체는 현재 코드를 실행하는 런타임 버전을 식별합니다. 컴퓨터에 설치된 어셈블리 버전이나 다른 런타임 버전은 반환하지 않습니다.
   
-      .NET Framework 버전 4, 4.5, 4.5.1 및 4.5.2의 경우 반환된 <xref:System.Version> 개체 문자열 표현은 4.0.30319.‘xxxxx’ 형식이며, ‘xxxxx’는 42000보다 작습니다.   .NET Framework 4.6 및 이후 버전의 경우 형식은 4.0.30319.42000입니다.
+      .NET Framework 버전 4, 4.5, 4.5.1 및 4.5.2의 경우 반환된 <xref:System.Version> 개체 문자열 표현은 4.0.30319.‘xxxxx’ 형식이며, ‘xxxxx’는 42000보다 작습니다.  .NET Framework 4.6 및 이후 버전의 경우 형식은 4.0.30319.42000입니다.
   
   01. **Version** 개체를 가져온 후, 다음과 같이 개체를 쿼리합니다.
   

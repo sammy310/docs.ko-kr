@@ -3,12 +3,12 @@ title: 모델 작성기란 무엇이며 어떻게 작동하나요?
 description: ML.NET 모델 작성기를 사용하여 기계 학습 모델을 자동으로 학습하는 방법
 ms.date: 03/25/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: 9cf66455109908ebd9fc10e62cf4f067609b57d9
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 4afdbfd1682a30647b09d05d51a5c73c214fe2bd
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344776"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616932"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>모델 작성기란 무엇이며 어떻게 작동하나요?
 
@@ -114,7 +114,7 @@ Azure 학습은 이미지 분류에 대해 지원됩니다.
 ||사기성 신용 카드 거래 예측|[신용 카드 데이터](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|클래스(사기일 경우 1, 그렇지 않으면 0)|수량, V1-V28(익명화된 기능)|
 ||GitHub 리포지토리에서 문제 유형 예측|[GitHub 문제 데이터](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Area|제목, 설명|
 |값 예측|택시 요금 예측|[택시 요금 데이터](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|요금|운행 시간, 거리|
-|이미지 분류|문제의 범주 예측|[꽃 이미지](http://download.tensorflow.org/example_images/flower_photos.tgz)|꽃의 종류: 데이지, 민들레, 장미, 해바라기, 튤립|이미지 데이터 자체|
+|이미지 분류|꽃의 범주 예측 |[꽃 이미지](http://download.tensorflow.org/example_images/flower_photos.tgz)|꽃의 종류: 데이지, 민들레, 장미, 해바라기, 튤립|이미지 데이터 자체|
 |권장|좋아하는 영화 예측|[영화 평점](http://files.grouplens.org/datasets/movielens/ml-latest-small.zip)|사용자, 영화|등급|
 
 ## <a name="train"></a>학습

@@ -1,5 +1,6 @@
 ---
 title: XML Serialization 예제
+description: 이러한 코드 예제에서는 XML serialization을 사용하여 XML 스키마 문서를 따르는 XML 스트림을 생성하는 방법을 비롯한 고급 시나리오를 보여 줍니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-ms.openlocfilehash: 17ad1b4b5eae38a4f1dc90e154841b1315dea1b2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 73f21c7f7d0670022d757e6c4c00280bb79709b8
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349771"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379172"
 ---
 # <a name="examples-of-xml-serialization"></a>XML Serialization 예제
 

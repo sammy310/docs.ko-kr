@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 37a6cb7cd32a9d60607aec51b1994e4717c5349a
-ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
+ms.openlocfilehash: 59e01b17d78032714803629d503a92ba86a20fdc
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82624867"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83394649"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>멤버 액세스 연산자 및 식(C# 참조)
 
@@ -58,7 +58,7 @@ ms.locfileid: "82624867"
 
   [!code-csharp[nested namespaces](snippets/MemberAccessOperators.cs#NestedNamespace)]
 
-- 다음 코드와 같이 `.`을 사용하여 ‘정규화된 이름’을 만들고 네임스페이스 내의 형식에 액세스합니다. 
+- 다음 코드와 같이 `.`을 사용하여 ‘정규화된 이름’을 만들고 네임스페이스 내의 형식에 액세스합니다.
 
   [!code-csharp[qualified name](snippets/MemberAccessOperators.cs#QualifiedName)]
 
@@ -159,7 +159,7 @@ if (handler != null)
 }
 ```
 
-이는 null이 아닌 `handler`만 호출되도록 하는 스레드로부터 안전한 방법입니다. 대리자 인스턴스는 변경할 수 없으므로 스레드는 `handler` 지역 변수가 참조하는 값을 변경할 수 없습니다. 특히 다른 스레드가 실행한 코드가 `PropertyChanged` 이벤트에서 구독을 취소하고 `handler`를 호출하기 전에 `PropertyChanged`가 `null`이 되면 `handler`에서 참조하는 값은 영향을 받지 않습니다. `?.` 연산자는 왼쪽 피연산자를 한 번만 계산하여 null이 아닌 것으로 확인된 후에는 `null`로 변경할 수 없도록 보장합니다.
+이는 null이 아닌 `handler`만 호출되도록 하는 스레드로부터 안전한 방법입니다. 대리자 인스턴스는 변경할 수 없으므로 스레드는 `handler` 지역 변수가 참조하는 개체를 변경할 수 없습니다. 특히 다른 스레드가 실행한 코드가 `PropertyChanged` 이벤트에서 구독을 취소하고 `handler`를 호출하기 전에 `PropertyChanged`가 `null`이 되면 `handler`에서 참조하는 개체는 영향을 받지 않습니다. `?.` 연산자는 왼쪽 피연산자를 한 번만 계산하여 null이 아닌 것으로 확인된 후에는 `null`로 변경할 수 없도록 보장합니다.
 
 ## <a name="invocation-expression-"></a>호출 식 ()
 

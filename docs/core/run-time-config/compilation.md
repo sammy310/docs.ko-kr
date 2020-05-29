@@ -3,12 +3,12 @@ title: 컴파일 구성 설정
 description: .NET Core 앱에 대해 JIT 컴파일러가 작동하는 방식을 구성하는 런타임 설정에 대해 알아봅니다.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 4db20ee6d36fe3d3d66f473644b70c02d4e02cb3
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: cfcf9b5fc8d11a4ae35ab9b152f32133cd6930bf
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506846"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762008"
 ---
 # <a name="run-time-configuration-options-for-compilation"></a>컴파일을 위한 런타임 구성 옵션
 
@@ -98,7 +98,7 @@ ms.locfileid: "82506846"
 - JIT 컴파일러가 루프를 포함하는 메서드에서 빠른 JIT를 사용할지 여부를 구성합니다.
 - 루프에 대한 빠른 JIT를 사용하도록 설정하면 시작 성능이 향상될 수 있습니다. 그러나 장기 실행 루프의 경우 오랜 기간 동안 덜 최적화된 코드에서 중단될 수 있습니다.
 - [빠른 JIT](#quick-jit)를 사용하지 않도록 설정한 경우에는 이 설정이 적용되지 않습니다.
-- 기본값: 사용 안 함(`false`).
+- 이 설정을 생략하면 루프를 포함하는 메서드에 대해 빠른 JIT가 사용되지 않습니다. 이는 값을 `false`로 설정하는 것과 같습니다.
 
 | | 설정 이름 | 값 |
 | - | - | - |
@@ -136,7 +136,7 @@ ms.locfileid: "82506846"
 
 - .NET Core 런타임이 사용 가능한 ReadyToRun 데이터가 포함된 이미지에 미리 컴파일된 코드를 사용하도록 할지 여부를 구성합니다. 이 옵션을 사용하지 않도록 설정하면 런타임에서 프레임워크 코드를 강제로 JIT 컴파일하게 합니다.
 - 자세한 내용은 [ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images)을 참조하세요.
-- 기본값: 사용(`1`).
+- 이 설정을 생략하면 .NET은 사용 가능한 경우 ReadyToRun 데이터를 사용합니다. 이는 값을 `1`로 설정하는 것과 같습니다.
 
 | | 설정 이름 | 값 |
 | - | - | - |

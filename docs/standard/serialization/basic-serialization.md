@@ -1,5 +1,6 @@
 ---
 title: 기본 serialization
+description: 이 문서에서는 SerializableAttribute를 사용하여 클래스를 직렬화할 수 있도록 만드는 방법을 보여 주고 serialization 및 deserialization의 예제를 제공합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - binary serialization, basic serialization
@@ -7,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d899d43c-335a-433e-a589-cd187192984f
 dev_langs:
 - CSharp
-ms.openlocfilehash: ce86f7897c5c117c4fd6f1eabc4c8b802103261c
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 98ea6f23467b85dc270aa323e72a8a9b0934994a
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80248032"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378419"
 ---
 # <a name="basic-serialization"></a>기본 serialization
 

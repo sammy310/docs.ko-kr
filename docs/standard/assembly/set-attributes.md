@@ -1,5 +1,6 @@
 ---
 title: 어셈블리 특성 설정
+description: 어셈블리 ID, 정보, 어셈블리 매니페스트 및 강력한 이름 특성을 포함하여 .NET 어셈블리에 어셈블리 특성을 설정할 수 있습니다.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], attributes
@@ -10,12 +11,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 0e4e2e595ed4f95511bd23ab0ed00139f71b2c8b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e3a077dcd1b62a4676a3ac6492a90e38c548e41b
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73740478"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378641"
 ---
 # <a name="set-assembly-attributes"></a>어셈블리 특성 설정
 
@@ -37,9 +38,9 @@ ms.locfileid: "73740478"
 
 |어셈블리 ID 특성|설명|
 |---------------------------------|-----------------|
-|<xref:System.Reflection.AssemblyCultureAttribute>|어셈블리에서 지원하는 문화권을 나타내는 열거형 필드입니다. 어셈블리는 기본 문화권에 대한 리소스가 포함되어 있음을 나타내는 문화권 독립성을 지정할 수도 있습니다. **참고:** 런타임은 culture 특성이 null로 설정되어 있지 않은 모든 어셈블리를 위성 어셈블리로 처리합니다. 이러한 어셈블리에는 위성 어셈블리 바인딩 규칙이 적용됩니다. 자세한 내용은 [런타임에서 어셈블리를 찾는 방법](../../framework/deployment/how-the-runtime-locates-assemblies.md)을 참조하세요.|
+|<xref:System.Reflection.AssemblyCultureAttribute>|어셈블리에서 지원하는 문화권을 나타내는 열거형 필드입니다. 어셈블리는 기본 문화권에 대한 리소스가 포함되어 있음을 나타내는 문화권 독립성을 지정할 수도 있습니다. **참고:**  런타임은 culture 특성이 null로 설정되어 있지 않은 모든 어셈블리를 위성 어셈블리로 처리합니다. 이러한 어셈블리에는 위성 어셈블리 바인딩 규칙이 적용됩니다. 자세한 내용은 [런타임에서 어셈블리를 찾는 방법](../../framework/deployment/how-the-runtime-locates-assemblies.md)을 참조하세요.|
 |<xref:System.Reflection.AssemblyFlagsAttribute>|어셈블리를 병렬로 실행할 수 있는지 여부와 같은 어셈블리 특성을 설정하는 값입니다.|
-|<xref:System.Reflection.AssemblyVersionAttribute>|*major*.*minor*.*build*.*revision* 형식의 숫자 값입니다(예: 2.4.0.0). 공용 언어 런타임은 이 값을 사용하여 강력한 이름의 어셈블리에서 바인딩 작업을 수행합니다. **참고:** <xref:System.Reflection.AssemblyInformationalVersionAttribute> 특성이 어셈블리에 적용되어 있지 않은 경우 <xref:System.Reflection.AssemblyVersionAttribute> 특성으로 지정된 버전 번호가 <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> 및 <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> 속성에서 사용됩니다.|
+|<xref:System.Reflection.AssemblyVersionAttribute>|*major*.*minor*.*build*.*revision* 형식의 숫자 값입니다(예: 2.4.0.0). 공용 언어 런타임은 이 값을 사용하여 강력한 이름의 어셈블리에서 바인딩 작업을 수행합니다. **참고:**  <xref:System.Reflection.AssemblyInformationalVersionAttribute> 특성이 어셈블리에 적용되어 있지 않은 경우 <xref:System.Reflection.AssemblyVersionAttribute> 특성으로 지정된 버전 번호가 <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> 및 <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> 속성에서 사용됩니다.|
 
 다음 코드 예제에서는 어셈블리에 version 및 culture 특성을 적용하는 방법을 보여 줍니다.
 
@@ -73,7 +74,7 @@ ms.locfileid: "73740478"
 |<xref:System.Reflection.AssemblyCompanyAttribute>|회사 이름을 지정하는 문자열 값입니다.|
 |<xref:System.Reflection.AssemblyCopyrightAttribute>|저작권 정보를 지정하는 문자열 값입니다.|
 |<xref:System.Reflection.AssemblyFileVersionAttribute>|Win32 파일 버전 번호를 지정하는 문자열 값입니다. 기본값은 일반적으로 어셈블리 버전입니다.|
-|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|전체 제품 버전 번호와 같이 공용 언어 런타임에서 사용되지 않는 버전 정보를 지정하는 문자열 값입니다. **참고:** 이 특성이 어셈블리에 적용된 경우 <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType> 속성을 사용하여 런타임에 지정하는 문자열을 가져올 수 있습니다. 문자열은 <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> 및 <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> 속성이 제공하는 경로 및 레지스트리 키에서도 사용됩니다.|
+|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|전체 제품 버전 번호와 같이 공용 언어 런타임에서 사용되지 않는 버전 정보를 지정하는 문자열 값입니다. **참고:**  이 특성이 어셈블리에 적용된 경우 <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType> 속성을 사용하여 런타임에 지정하는 문자열을 가져올 수 있습니다. 문자열은 <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> 및 <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> 속성이 제공하는 경로 및 레지스트리 키에서도 사용됩니다.|
 |<xref:System.Reflection.AssemblyProductAttribute>|제품 정보를 지정하는 문자열 값입니다.|
 |<xref:System.Reflection.AssemblyTrademarkAttribute>|상표 정보를 지정하는 문자열 값입니다.|
 
@@ -117,6 +118,6 @@ ms.locfileid: "73740478"
 <Assembly:AssemblyDelaySignAttribute(True)>
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [어셈블리 만들기](create.md)

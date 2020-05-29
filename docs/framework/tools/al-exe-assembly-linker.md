@@ -7,12 +7,12 @@ helpviewer_keywords:
 - modules, Assembly Linker
 - assembly manifest, Assembly Linker
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
-ms.openlocfilehash: 9877c1a4e86d035b614bf421364e3281878f0d8f
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: b7081f00e31dfa8ac46909e61c7d389ba7954878
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645588"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83611408"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe(어셈블리 링커)
 
@@ -38,8 +38,8 @@ al sources options
 | 원본 | 설명 |
 | ------ | ----------- |
 |`file`[,`target`]|`file`(모듈)의 내용을 `target`이 지정하는 파일 이름에 복사합니다. 복사한 후 *Al.exe*가 `target`을 어셈블리로 컴파일합니다.|
-|**/embed[resource]:** `file`[,`name`[,`private`]]|`file`이 지정하는 리소스를 어셈블리 매니페스트가 포함된 이미지에 포함합니다. *Al.exe*는 `file`의 내용을 이식 가능한 실행 파일(PE) 이미지에 복사합니다.<br /><br /> `name` 매개 변수는 리소스의 내부 식별자입니다. 기본적으로 리소스는 어셈블리에서 공용입니다. 즉, 다른 어셈블리가 볼 수 있습니다. `private`를 지정하면 다른 어셈블리에서 리소스를 볼 수 없습니다.<br /><br /> 예를 들어, `file`이 [리소스 파일 생성기(*Resgen.exe*)](resgen-exe-resource-file-generator.md)나 개발 환경에서 만들어진 .NET Framework 리소스 파일인 경우에는 <xref:System.Resources>의 멤버를 사용하여 해당 파일에 액세스할 수 있습니다. 자세한 내용은 <xref:System.Resources.ResourceManager>를 참조하세요. 다른 모든 리소스의 경우에는 런타임에 `GetManifestResource`의 <xref:System.Reflection.Assembly>* 메서드를 사용하여 리소스에 액세스합니다.<br /><br /> 리소스 파일만 *Al.exe*에 전달되는 경우에는 출력 파일이 위성 리소스 어셈블리입니다.|
-|**/link[resource]:** `file`[,`name`[,`target`[,`private`]]]|리소스 파일을 어셈블리에 링크합니다. `file`이 지정하는 리소스가 어셈블리의 일부가 되고 파일은 복사되지 않습니다. `file` 매개 변수는 어떠한 파일 형식도 될 수 있습니다. 예를 들어, 네이티브 DLL을 `file` 매개 변수로 지정할 수 있습니다. 이렇게 하면 네이티브 DLL이 어셈블리의 일부가 되므로 전역 어셈블리 캐시에 설치하고 어셈블리의 관리 코드에서 액세스할 수 있습니다. 이 작업은 **/linkresource** 컴파일러 옵션을 사용하여 수행할 수도 있습니다. 자세한 내용은 [-linkresource(C# 컴파일러 옵션)](../../csharp/language-reference/compiler-options/linkresource-compiler-option.md)를 참조하세요.<br /><br /> `name` 매개 변수는 리소스의 내부 식별자입니다. `target` 매개 변수는 *Al.exe*에서 `file`*을 복사하는 경로와 파일 이름을 지정합니다.* 복사한 후 *Al.exe*가 `target`을 어셈블리로 컴파일합니다. 기본적으로 리소스는 어셈블리에서 공용입니다. 즉, 다른 어셈블리가 볼 수 있습니다. `private`를 지정하면 다른 어셈블리에서 리소스를 볼 수 없습니다.<br /><br /> 예를 들어, `file`이 리소스 파일 생성기 (*Resgen.exe*)나 개발 환경에서 만들어진 .NET Framework 리소스 파일인 경우에는 <xref:System.Resources> 네임스페이스의 멤버를 사용하여 해당 파일에 액세스할 수 있습니다. 자세한 내용은 <xref:System.Resources.ResourceManager>를 참조하세요. 다른 모든 리소스의 경우에는 런타임에 `GetManifestResource` 클래스의 <xref:System.Reflection.Assembly>* 메서드를 사용하여 리소스에 액세스합니다.<br /><br /> 리소스 파일만 *Al.exe*에 전달되는 경우에는 출력 파일이 위성 리소스 어셈블리입니다.|
+|**/embed[resource]:** `file`[,`name`[,`private`]]|`file`이 지정하는 리소스를 어셈블리 매니페스트가 포함된 이미지에 포함합니다. *Al.exe*는 `file`의 내용을 이식 가능한 실행 파일(PE) 이미지에 복사합니다.<br /><br /> `name` 매개 변수는 리소스의 내부 식별자입니다. 기본적으로 리소스는 어셈블리에서 공용입니다. 즉, 다른 어셈블리가 볼 수 있습니다. `private`를 지정하면 다른 어셈블리에서 리소스를 볼 수 없습니다.<br /><br /> 예를 들어, `file`이 [리소스 파일 생성기(*Resgen.exe*)](resgen-exe-resource-file-generator.md)나 개발 환경에서 만들어진 .NET Framework 리소스 파일인 경우에는 <xref:System.Resources>의 멤버를 사용하여 해당 파일에 액세스할 수 있습니다. 자세한 내용은 <xref:System.Resources.ResourceManager>를 참조하세요. 다른 모든 리소스의 경우에는 런타임에 <xref:System.Reflection.Assembly>의 `GetManifestResource*` 메서드를 사용하여 리소스에 액세스합니다.<br /><br /> 리소스 파일만 *Al.exe*에 전달되는 경우에는 출력 파일이 위성 리소스 어셈블리입니다.|
+|**/link[resource]:** `file`[,`name`[,`target`[,`private`]]]|리소스 파일을 어셈블리에 링크합니다. `file`이 지정하는 리소스가 어셈블리의 일부가 되고 파일은 복사되지 않습니다. `file` 매개 변수는 어떠한 파일 형식도 될 수 있습니다. 예를 들어, 네이티브 DLL을 `file` 매개 변수로 지정할 수 있습니다. 이렇게 하면 네이티브 DLL이 어셈블리의 일부가 되므로 전역 어셈블리 캐시에 설치하고 어셈블리의 관리 코드에서 액세스할 수 있습니다. 이 작업은 **/linkresource** 컴파일러 옵션을 사용하여 수행할 수도 있습니다. 자세한 내용은 [-linkresource(C# 컴파일러 옵션)](../../csharp/language-reference/compiler-options/linkresource-compiler-option.md)를 참조하세요.<br /><br /> `name` 매개 변수는 리소스의 내부 식별자입니다. `target` 매개 변수는 *Al.exe*에서 `file`*을 복사하는 경로와 파일 이름을 지정합니다.* 복사한 후 *Al.exe*가 `target`을 어셈블리로 컴파일합니다. 기본적으로 리소스는 어셈블리에서 공용입니다. 즉, 다른 어셈블리가 볼 수 있습니다. `private`를 지정하면 다른 어셈블리에서 리소스를 볼 수 없습니다.<br /><br /> 예를 들어, `file`이 리소스 파일 생성기 (*Resgen.exe*)나 개발 환경에서 만들어진 .NET Framework 리소스 파일인 경우에는 <xref:System.Resources> 네임스페이스의 멤버를 사용하여 해당 파일에 액세스할 수 있습니다. 자세한 내용은 <xref:System.Resources.ResourceManager>를 참조하세요. 다른 모든 리소스의 경우에는 런타임에 `GetManifestResource*` 클래스의 <xref:System.Reflection.Assembly> 메서드를 사용하여 리소스에 액세스합니다.<br /><br /> 리소스 파일만 *Al.exe*에 전달되는 경우에는 출력 파일이 위성 리소스 어셈블리입니다.|
 
 다음 `options`를 지정할 수 있으며, **/out**은 반드시 지정해야 합니다.
 
@@ -116,7 +116,7 @@ al sources options
 |al1026|지정된 ‘version’ 버전이 잘못되었습니다.<br /><br /> 유효한 형식은 **/version** 옵션에 대한 정보를 참조하세요.|
 |al1028|file' 키 파일에 서명에 필요한 프라이빗 키가 없습니다.<br /><br /> 공개 키만 포함된 키 파일이 **/keyfile** 옵션에 전달되었습니다. 다음 명령과 같이 [*Sn.exe*(강력한 이름 도구)](sn-exe-strong-name-tool.md)를 사용하여 퍼블릭 키와 프라이빗 키가 둘 다 포함된 파일을 생성합니다.<br /><br /> `sn -k keypair.snk.`|
 |al1029|키 컨테이너 이름 ‘container’가 없습니다.<br /><br /> **/keyname** 옵션에 전달된 값이 유효한 컨테이너가 아닙니다. [*Sn.exe*(강력한 이름 도구)](sn-exe-strong-name-tool.md)를 사용하여 컨테이너를 만듭니다.|
-|al1030|암호화 서비스가 제대로 설치되지 않았거나 적절한 키 공급자가 없습니다.<br /><br /> 운영 체제를 다시 설치하거나, 키를 만드는 데 사용되는 일부 암호화 유틸리티를 설치해야 할 수 있습니다.|
+|al1030|암호화 서비스가 제대로 설치되지 않았거나 적절한 키 공급자가 없습니다.<br /><br /> 운영 체제를 다시 설치해야 하거나 키를 만드는 데 사용되는 일부 암호화 유틸리티를 설치해야 할 수 있습니다.|
 |al1031|'file' 아이콘을 읽는 동안 오류 발생 - reason<br /><br /> *Al.exe*에서 지정된 이유로 **/win32icon** 옵션에 전달된 파일을 읽을 수 없습니다.|
 |al1032|'file'에 대한 리소스를 생성하는 동안 오류 발생 - reason<br /><br /> 디스크 공간 부족 또는 일부 다른 오류로 인해 *Al.exe*에서 파일을 만들 수 없습니다. **/win32icon** 옵션(.ico 파일 생성)을 지정하거나 **/win32res** 옵션(리소스 정보가 포함된 파일 생성)을 지정하지 않으면 이 오류가 발생합니다.<br /><br /> 파일 생성 문제를 해결할 수 없는 경우 버전 또는 비트맵(아이콘) 정보를 포함할 수 있는 파일을 지정하는 **/win32res**를 사용합니다.|
 |al1033|어셈블리 사용자 지정 특성 'attribute'가 서로 다른 값으로 여러 번 지정되었습니다.<br /><br /> *Al.exe*에 대한 입력으로 지정된 소스 모듈의 동일한 사용자 지정 특성 발생 두 개에 서로 다른 값이 전달되었습니다.|
@@ -125,7 +125,7 @@ al sources options
 |al1036|실행 가능한 애플리케이션에는 진입점이 필요합니다.<br /><br /> **/target:exe** 또는 **/target:win** 옵션을 사용할 때는 **/main** 옵션도 지정해야 합니다.|
 |al1037|'main' 진입점 메서드를 찾을 수 없습니다.<br /><br /> *Al.exe*가 **/main** 옵션으로 지정된 위치에서 `Main` 메서드를 찾을 수 없습니다.|
 |al1039|전역 어셈블리 캐시 관리자 초기화 실패 - reason<br /><br /> Visual Studio 또는 Windows SDK를 다시 설치합니다.|
-|al1040|캐시에 어셈블리를 설치하지 못했습니다. reason<br /><br /> 서명된 어셈블리만 캐시에 설치할 수 있습니다. 자세한 내용은 [전역 어셈블리 캐시](../app-domains/gac.md)를 참조하세요.|
+|al1040|캐시에 어셈블리를 설치하지 못함 - reason<br /><br /> 서명된 어셈블리만 캐시에 설치할 수 있습니다. 자세한 내용은 [전역 어셈블리 캐시](../app-domains/gac.md)를 참조하세요.|
 |al1041|'method': 서명 또는 표시 유형이 잘못되었거나 제네릭이기 때문에 진입점이 될 수 없습니다.<br /><br /> 메서드가 **/main** 옵션으로 지정되었지만 해당 메서드가 정적이 아니거나, `int` 또는 `void`를 반환하지 않거나, 제네릭이거나, 잘못된 인수를 포함하고 있습니다.|
 |al1042|'exe': EXE를 모듈로 추가할 수 없습니다.<br /><br /> 어셈블리가 없는 *.exe* 파일이 *Al.exe*에 대한 입력 파일로 지정되었습니다. *Al.exe*는 어셈블리가 없는 *dll* 파일만 입력 파일로 사용할 수 있습니다.|
 |al1043|'name' 매니페스트 파일 이름은 모듈과 같을 수 없습니다.<br /><br /> **/out** 옵션으로 지정된 이름은 *Al.exe*에 대한 입력으로 지정된 파일 이름 중 하나와 같을 수 없습니다.|
@@ -136,12 +136,12 @@ al sources options
 |al1048|'assembly' 어셈블리의 'module' 모듈을 가져오는 동안 오류 발생 - reason<br /><br /> 다중 파일 어셈블리의 비매니페스트 파일을 열 때 오류가 발생했습니다. 이 오류는 *Al.exe*에서 직접 내보내지 않고 *Al.exe*를 사용하는 프로세스에 프로그래밍 방식으로 전달될 수 있습니다.|
 |al1049|2000년 1월 1일 이전 날짜에 대한 빌드 및 수정 버전 번호를 자동으로 생성할 수 없습니다.<br /><br /> 컴퓨터의 시스템 시계가 2000년 1월 1일 이전 날짜로 설정되었습니다.|
 |al1050|'old feature'를 사용하는 기능은 더 이상 지원되지 않습니다. 'new feature'를 대신 사용하세요.<br /><br /> 이전에 *Al.exe*에서 지원한 기능이 이제 사용되지 않습니다. 권장 기능을 대신 사용합니다.|
-|al1051|'attribute' 특성을 내보내는 동안 오류 발생 - 'reason'<br /><br /> 지정된 이유로 어셈블리 사용자 지정 특성이 *Al.exe*에서 처리되지 않았습니다.|
+|al1051|'attribute' 특성을 내보내는 동안 오류 발생 - reason<br /><br /> 지정된 이유로 어셈블리 사용자 지정 특성이 *Al.exe*에서 처리되지 않았습니다.|
 |al1052|‘filename’ 파일은 어셈블리가 아닙니다.<br /><br /> **/template**으로 지정된 파일은 어셈블리 메타데이터를 포함해야 합니다. 이 오류는 **/template**으로 지정된 파일에 어셈블리가 포함되지 않았음을 나타냅니다.|
 |al1053|'옵션'에 대해 지정된 'version' 버전은 일반적인 'major.minor.build.revision' 형식이 아닙니다.<br /><br /> *Al.exe*에서 **/fileversion** 또는 **/productversion** 옵션으로 지정된 형식이 아닌 버전 정보를 발견했습니다.|
 |al1054|'옵션'에 대해 지정된 'version' 버전은 일반적인 'major.minor.build.revision' 형식이 아닙니다.<br /><br /> *Al.exe*에서 <xref:System.Resources.SatelliteContractVersionAttribute>에 잘못된 형식의 버전 정보가 지정된 것을 발견했습니다.|
 |al1055|참조된 ‘filename’ 어셈블리에 강력한 이름이 없습니다.<br /><br /> 이 오류는 강력한 이름의 어셈블리를 빌드하고 강력한 이름이 없는 어셈블리를 참조하는 경우에 발생합니다. 이 오류를 수정하려면 강력한 이름으로 어셈블리를 다시 생성하거나 *sn.exe*를 사용하여 어셈블리에 강력한 이름을 연결해야 합니다([*sn.exe*](sn-exe-strong-name-tool.md)에 대한 설명서 참조).<br /><br /> 일반적으로 이 오류는 Visual Studio IDE를 통해 C# 프로젝트에 COM 모듈 참조를 추가하는 경우와 같이 래퍼 어셈블리를 통해 COM 개체를 사용하는 경우에 발생합니다. 오류를 방지하려면 "래퍼 어셈블리 키 파일/이름" 프로젝트 속성에서 COM 래퍼 어셈블리에 대한 강력한 이름 키 파일을 지정할 수 있습니다.<br /><br /> tlbimp를 통해 래퍼 어셈블리를 만드는 경우 래퍼 어셈블리에 강력한 이름을 할당하는 방법에 대한 자세한 내용은 [tlbimp](tlbimp-exe-type-library-importer.md) 설명서를 참조하세요.<br /><br /> 어셈블리에 강력한 이름이 있는 경우 전역 어셈블리 캐시에 설치할 수 있습니다. 결과적으로, 참조된 어셈블리도 전역 어셈블리 캐시로 이동됩니다. 강력한 이름을 가진 어셈블리만 전역 어셈블리 캐시로 이동될 수 있습니다.|
-|al1056|참조된 'filename' 어셈블리는 지역화된 위성 어셈블리입니다.<br /><br /> <xref:System.Reflection.AssemblyCultureAttribute> 특성을 사용하여 만든 어셈블리가 현재 어셈블리를 만들 때 참조되었습니다. <xref:System.Reflection.AssemblyCultureAttribute> 특성은 파일이 지역화된 위성 어셈블리이며 위성 어셈블리를 참조하는 데 적합하지 않음을 나타냅니다. 기본 부모 어셈블리를 대신 참조해야 합니다.|
+|al1056|참조된 'filename' 어셈블리는 지역화된 위성 어셈블리입니다.<br /><br /> <xref:System.Reflection.AssemblyCultureAttribute> 특성을 사용하여 만든 어셈블리가 현재 어셈블리를 만들 때 참조되었습니다. <xref:System.Reflection.AssemblyCultureAttribute> 특성은 파일이 지역화된 위성 어셈블리이며 위성 어셈블리를 참조하는 데 적합하지 않음을 나타냅니다. 기본 부모 어셈블리를 대신 참조합니다.|
 |al1057|실행 파일을 지역화할 수 없습니다. 문화권은 항상 비어 있어야 합니다.<br /><br /> **/target:exe**를 사용하여 어셈블리를 만들고 있지만 **/culture**를 지정했습니다. *.exe*의 어셈블리는 Culture 필드에 정보를 포함할 수 없습니다.|
 |al1058|'file'은 어셈블리이며 모듈로 추가할 수 없습니다.<br /><br /> C++ 컴파일에서 **/assemblymodule**(링커 옵션)에 어셈블리가 포함된 파일이 전달되었습니다.|
 |al1059|알 수 없는 오류(code)<br /><br /> *Al.exe*가 알 수 없는 오류 코드(`code`)를 받았습니다.<br /><br /> 가능한 해결 방법은 다음과 같습니다.<br /><br /> Visual Studio를 다시 설치합니다.<br /><br /> Windows SDK를 다시 설치합니다.<br /><br /> 누락된 파일이 있는지 확인합니다.<br /><br /> 디스크 공간이 충분한지 확인합니다.<br /><br /> 메모리가 충분한지 확인합니다.<br /><br /> 파일에 액세스할 수 있는 다른 프로세스를 중지합니다.<br /><br /> 컴퓨터를 다시 부팅합니다.|

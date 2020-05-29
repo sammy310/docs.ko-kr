@@ -1,21 +1,21 @@
 ---
 title: 세계화 구성 설정
 description: '.NET Core 앱의 세계화 측면(예: 일본 날짜를 구문 분석하는 방식)을 구성하는 런타임 설정에 대해 알아봅니다.'
-ms.date: 11/27/2019
+ms.date: 05/18/2020
 ms.topic: reference
-ms.openlocfilehash: 7668c345181d7c08cfca9c5cb76b8addd76223ec
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 56228e9a6cb6dbab6a22bdc00d11212e1019776b
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506807"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761969"
 ---
 # <a name="run-time-configuration-options-for-globalization"></a>세계화를 위한 런타임 구성 옵션
 
 ## <a name="invariant-mode"></a>고정 모드
 
 - .NET Core 앱이 문화권별 데이터와 동작에 액세스하지 않고 세계화 고정 모드에서 실행되는지 여부를 결정합니다.
-- 기본값: 문화권 데이터에 액세스하여 앱을 실행합니다(`false`).
+- 이 설정을 생략하면 앱이 문화권 데이터에 액세스할 수 있는 상태로 실행됩니다. 이는 값을 `false`로 설정하는 것과 같습니다.
 - 자세한 내용은 [.NET Core globalization invariant mode](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)(.NET Core 세계화 고정 모드)를 참조하세요.
 
 | | 설정 이름 | 값 |
@@ -53,7 +53,7 @@ ms.locfileid: "82506807"
 ## <a name="era-year-ranges"></a>연대 연도 범위
 
 - 여러 연대를 지원하는 달력의 범위 검사가 완화적인지 아니면 특정 연대의 날짜 범위를 오버플로하는 날짜는 <xref:System.ArgumentOutOfRangeException>을 throw하는지를 결정합니다.
-- 기본값: 범위 검사가 완화적입니다(`false`).
+- 이 설정을 생략하면 범위 검사가 완화됩니다. 이는 값을 `false`로 설정하는 것과 같습니다.
 - 자세한 내용은 [달력, 연대 및 날짜 범위: 완화 범위 검사](../../standard/datetime/working-with-calendars.md#calendars-eras-and-date-ranges-relaxed-range-checks)를 참조하세요.
 
 | | 설정 이름 | 값 |
@@ -64,7 +64,7 @@ ms.locfileid: "82506807"
 ## <a name="japanese-date-parsing"></a>일본 날짜 구문 분석
 
 - 연도로 “1” 또는 “Gannen”을 포함하는 문자열이 성공적으로 구문 분석되는지 아니면 “1”만 지원되는지를 결정합니다.
-- 기본값: 연도로 “1” 또는 “Gannen”을 포함하는 문자열을 구문 분석합니다(`false`).
+- 이 설정을 생략하면 "1" 또는 "Gannen"를 연도로 포함하는 문자열이 성공적으로 구문 분석됩니다. 이는 값을 `false`로 설정하는 것과 같습니다.
 - 자세한 내용은 [달력의 날짜를 여러 연대로 표현](../../standard/datetime/working-with-calendars.md#represent-dates-in-calendars-with-multiple-eras)을 참조하세요.
 
 | | 설정 이름 | 값 |
@@ -75,10 +75,21 @@ ms.locfileid: "82506807"
 ## <a name="japanese-year-format"></a>일본 연도 형식
 
 - 일본 달력 연대의 첫해의 형식이 “Gannen”으로 지정되는지 아니면 숫자로 지정되는지를 결정합니다.
-- 기본값: 첫해의 형식이 “Gannen”으로 지정됩니다(`false`).
+- 이 설정을 생략하면 첫 번째 연도가 "Gannen"으로 서식 지정됩니다. 이는 값을 `false`로 설정하는 것과 같습니다.
 - 자세한 내용은 [달력의 날짜를 여러 연대로 표현](../../standard/datetime/working-with-calendars.md#represent-dates-in-calendars-with-multiple-eras)을 참조하세요.
 
 | | 설정 이름 | 값 |
 | - | - | - |
 | **runtimeconfig.json** | `Switch.System.Globalization.FormatJapaneseFirstYearAsANumber` | `false` - “Gannen”으로 형식 지정<br/>`true` - 숫자로 형식 지정 |
 | **환경 변수** | N/A | N/A |
+
+## <a name="nls"></a>NLS
+
+- .NET에서 Windows 앱에 NLS(국가별 언어 지원) 또는 ICU(International Components for Unicode) 세계화 API를 사용하는지 여부를 결정합니다. .NET 5.0 이상 버전에서는 기본적으로 Windows 10 2019년 5월 업데이트 이상 버전에 ICU 세계화 API를 사용합니다.
+- 이 설정을 생략하면 .NET는 기본적으로 ICU 세계화 API를 사용합니다. 이는 값을 `false`로 설정하는 것과 같습니다.
+- 자세한 내용은 [Windows에서 세계화 API가 ICU 라이브러리를 사용](../compatibility/3.1-5.0.md#globalization-apis-use-icu-libraries-on-windows)을 참조하세요.
+
+| | 설정 이름 | 값 | 도입 |
+| - | - | - | - |
+| **runtimeconfig.json** | `System.Globalization.UseNls` | `false` - ICU 세계화 API를 사용<br/>`true` - NLS 세계화 API를 사용 | .NET 5.0 |
+| **환경 변수** | `DOTNET_SYSTEM_GLOBALIZATION_USENLS` | `false` - ICU 세계화 API를 사용<br/>`true` - NLS 세계화 API를 사용 | .NET 5.0 |

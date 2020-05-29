@@ -1,36 +1,32 @@
 ---
-title: JSON serialization용 사용자 지정 변환기를 작성하는 방법 - .NET
-ms.date: 01/10/2020
+title: ''
+ms.date: ''
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
-helpviewer_keywords:
-- JSON serialization
-- serializing objects
-- serialization
-- objects, serializing
-- converters
-ms.openlocfilehash: 310967f39c3aa7a46d79087bcbf0cb016f7d7284
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+helpviewer_keywords: []
+ms.openlocfilehash: 69c11df8217ac6dbdddd98c550f084075b901ea6
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159574"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703615"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>.NET에서 JSON serialization(마샬링)용 사용자 지정 변환기를 작성하는 방법
 
-이 문서에서는 <xref:[!OP.NO-LOC(System.Text.Json)]> 네임스페이스에 제공된 JSON serialization 클래스에 대한 사용자 지정 변환기를 만드는 방법을 보여 줍니다. `[!OP.NO-LOC(System.Text.Json)]`에 대한 소개는 [.NET에서 JSON을 직렬화 및 역직렬화하는 방법](system-text-json-how-to.md)을 참조하세요.
+이 문서에서는 <xref:System.Text.Json> 네임스페이스에 제공된 JSON serialization 클래스에 대한 사용자 지정 변환기를 만드는 방법을 보여 줍니다. `System.Text.Json`에 대한 소개는 [.NET에서 JSON을 직렬화 및 역직렬화하는 방법](system-text-json-how-to.md)을 참조하세요.
 
-*변환기*는 개체 또는 값을 JSON으로 변환하는 클래스입니다. `[!OP.NO-LOC(System.Text.Json)]` 네임스페이스에는 JavaScript 기본 형식에 매핑되는 기본 형식 대부분에 대한 기본 제공 변환기가 있습니다. 다음과 같은 용도로 사용자 지정 변환기를 작성할 수 있습니다.
+*변환기*는 개체 또는 값을 JSON으로 변환하는 클래스입니다. `System.Text.Json` 네임스페이스에는 JavaScript 기본 형식에 매핑되는 기본 형식 대부분에 대한 기본 제공 변환기가 있습니다. 다음과 같은 용도로 사용자 지정 변환기를 작성할 수 있습니다.
 
 * 기본 제공 변환기의 기본 동작을 재정의합니다. 예를 들어 `DateTime` 값을 기본 ISO 8601-1:2019 형식 대신 mm/dd/yyyy 형식으로 표시하도록 할 수 있습니다.
 * 사용자 지정 값 형식을 지원합니다. 예를 들어 `PhoneNumber` 구조체입니다.
 
-현재 릴리스에 포함되지 않은 기능을 사용하여 `[!OP.NO-LOC(System.Text.Json)]`를 사용자 지정하거나 확장하는 사용자 지정 변환기를 작성할 수도 있습니다. 이 문서의 뒷부분에서 다음과 같은 시나리오에 대해 설명합니다.
+현재 릴리스에 포함되지 않은 기능을 사용하여 `System.Text.Json`를 사용자 지정하거나 확장하는 사용자 지정 변환기를 작성할 수도 있습니다. 이 문서의 뒷부분에서 다음과 같은 시나리오에 대해 설명합니다.
 
 * [유추된 형식을 개체 속성으로 역직렬화](#deserialize-inferred-types-to-object-properties).
 * [문자열이 아닌 키를 사용하는 사전 지원](#support-dictionary-with-non-string-key).
 * [다형 deserialization 지원](#support-polymorphic-deserialization).
+* [Stack\<T>에 대한 라운드트립 지원](#support-round-trip-for-stackt).
 
 ## <a name="custom-converter-patterns"></a>사용자 지정 변환기 패턴
 
@@ -54,13 +50,13 @@ ms.locfileid: "78159574"
 
 다음 샘플은 기존 데이터 형식에 대한 기본 serialization을 재정의하는 변환기입니다. 변환기는 `DateTimeOffset` 속성에 mm/dd/yyyy 형식을 사용합니다.
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DateTimeOffsetConverter.cs)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/DateTimeOffsetConverter.cs)]
 
 ## <a name="sample-factory-pattern-converter"></a>샘플 팩터리 패턴 변환기
 
 다음 코드에서는 `Dictionary<Enum,TValue>`와 함께 작동하는 사용자 지정 변환기를 보여 줍니다. 첫 번째 제네릭 형식 매개 변수가 `Enum`이고 두 번째는 개방형이기 때문에 이 코드는 팩터리 패턴을 따릅니다. `CanConvert` 메서드는 두 개의 제네릭 매개 변수(이 중 첫 번째는 `Enum` 형식)가 있는 `Dictionary`에 대해서만 `true`를 반환합니다. 내부 변환기는 런타임에 `TValue`에 제공되는 형식을 처리하기 위해 기존 변환기를 가져옵니다.
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DictionaryTKeyEnumTValueConverter.cs)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/DictionaryTKeyEnumTValueConverter.cs)]
 
 위의 코드는 이 문서의 뒷부분에 나오는 [문자열이 아닌 키를 사용하는 사전 지원](#support-dictionary-with-non-string-key)에서 보여 주는 것과 동일합니다.
 
@@ -68,18 +64,18 @@ ms.locfileid: "78159574"
 
 다음 단계에서는 기본 패턴을 따라 변환기를 만드는 방법을 설명합니다.
 
-* <xref:[!OP.NO-LOC(System.Text.Json)].Serialization.JsonConverter%601>에서 파생되는 클래스를 만듭니다. 여기서 `T`는 직렬화 및 역직렬화할 형식입니다.
-* 들어오는 JSON을 역직렬화하고 `T` 형식으로 변환하도록 `Read` 메서드를 재정의합니다. 메서드에 전달된 <xref:[!OP.NO-LOC(System.Text.Json)].Utf8JsonReader>를 사용하여 JSON을 읽습니다.
-* 들어오는 `T` 형식의 개체를 직렬화하도록 `Write` 메서드를 재정의합니다. 메서드에 전달된 <xref:[!OP.NO-LOC(System.Text.Json)].Utf8JsonWriter>를 사용하여 JSON을 작성합니다.
+* <xref:System.Text.Json.Serialization.JsonConverter%601>에서 파생되는 클래스를 만듭니다. 여기서 `T`는 직렬화 및 역직렬화할 형식입니다.
+* 들어오는 JSON을 역직렬화하고 `T` 형식으로 변환하도록 `Read` 메서드를 재정의합니다. 메서드에 전달된 <xref:System.Text.Json.Utf8JsonReader>를 사용하여 JSON을 읽습니다.
+* 들어오는 `T` 형식의 개체를 직렬화하도록 `Write` 메서드를 재정의합니다. 메서드에 전달된 <xref:System.Text.Json.Utf8JsonWriter>를 사용하여 JSON을 작성합니다.
 * 필요한 경우에만 `CanConvert` 메서드를 재정의합니다. 기본 구현은 변환할 형식이 `T` 형식일 때 `true`를 반환합니다. 따라서 `T` 형식만 지원하는 변환기는 이 메서드를 재정의할 필요가 없습니다. 이 메서드를 재정의해야 하는 변환기의 예제는 이 문서의 뒷부분에 나오는 [다형 deserialization](#support-polymorphic-deserialization) 섹션을 참조하세요.
 
-사용자 지정 변환기 작성을 위한 참조 구현으로 [기본 제공 변환기 소스 코드](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/[!OP.NO-LOC(System.Text.Json)]/src/[!OP.NO-LOC(System/Text/Json)]/Serialization/Converters/)를 참조할 수 있습니다.
+사용자 지정 변환기 작성을 위한 참조 구현으로 [기본 제공 변환기 소스 코드](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters/)를 참조할 수 있습니다.
 
 ## <a name="steps-to-follow-the-factory-pattern"></a>팩터리 패턴을 따르기 위한 단계
 
 다음 단계에서는 팩터리 패턴을 따라 변환기를 만드는 방법을 설명합니다.
 
-* <xref:[!OP.NO-LOC(System.Text.Json)].Serialization.JsonConverterFactory>에서 파생되는 클래스를 만듭니다.
+* <xref:System.Text.Json.Serialization.JsonConverterFactory>에서 파생되는 클래스를 만듭니다.
 * 변환할 형식이 변환기에서 처리할 수 있는 형식인 경우 true를 반환하도록 `CanConvert` 메서드를 재정의합니다. 예를 들어 `List<T>`에 대한 변환기인 경우 `List<int>`, `List<string>` 및 `List<DateTime>`만 처리할 수 있습니다.
 * 런타임에 제공되는 변환할 형식을 처리할 변환기 클래스 인스턴스를 반환하도록 `CreateConverter` 메서드를 재정의합니다.
 * `CreateConverter` 메서드가 인스턴스화하는 변환기 클래스를 만듭니다.
@@ -90,33 +86,33 @@ ms.locfileid: "78159574"
 
 ## <a name="error-handling"></a>오류 처리
 
-오류 처리 코드에서 예외를 throw해야 하는 경우에는 메시지 없이 <xref:[!OP.NO-LOC(System.Text.Json)].JsonException>을 throw하는 것이 좋습니다. 이 예외 형식은 JSON에서 오류를 발생시킨 부분의 경로를 포함하는 메시지를 자동으로 만듭니다. 예를 들어 `throw new JsonException();` 문은 다음 예제와 같은 오류 메시지를 생성합니다.
+오류 처리 코드에서 예외를 throw해야 하는 경우에는 메시지 없이 <xref:System.Text.Json.JsonException>을 throw하는 것이 좋습니다. 이 예외 형식은 JSON에서 오류를 발생시킨 부분의 경로를 포함하는 메시지를 자동으로 만듭니다. 예를 들어 `throw new JsonException();` 문은 다음 예제와 같은 오류 메시지를 생성합니다.
 
 ```
-Unhandled exception. [!OP.NO-LOC(System.Text.Json)].JsonException:
+Unhandled exception. System.Text.Json.JsonException:
 The JSON value could not be converted to System.Object.
 Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 ```
 
-메시지(예: `throw new JsonException("Error occurred")`)를 제공하는 경우에도 예외는 <xref:[!OP.NO-LOC(System.Text.Json)].JsonException.Path> 속성에서 경로를 제공합니다.
+메시지(예: `throw new JsonException("Error occurred")`)를 제공하는 경우에도 예외는 <xref:System.Text.Json.JsonException.Path> 속성에서 경로를 제공합니다.
 
 ## <a name="register-a-custom-converter"></a>사용자 지정 변환기 등록
 
 `Serialize` 및 `Deserialize` 메서드가 사용할 수 있도록 사용자 지정 변환기를 *등록*합니다. 다음 방법 중 하나를 선택합니다.
 
-* <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.Converters?displayProperty=nameWithType> 컬렉션에 변환기 클래스의 인스턴스를 추가합니다.
-* [[JsonConverter]](xref:[!OP.NO-LOC(System.Text.Json)].Serialization.JsonConverterAttribute) 특성을 사용자 지정 변환기가 필요한 속성에 적용합니다.
-* [[JsonConverter]](xref:[!OP.NO-LOC(System.Text.Json)].Serialization.JsonConverterAttribute) 특성을 사용자 지정 값 형식을 나타내는 클래스 또는 구조체에 적용합니다.
+* <xref:System.Text.Json.JsonSerializerOptions.Converters?displayProperty=nameWithType> 컬렉션에 변환기 클래스의 인스턴스를 추가합니다.
+* [[JsonConverter]](xref:System.Text.Json.Serialization.JsonConverterAttribute) 특성을 사용자 지정 변환기가 필요한 속성에 적용합니다.
+* [[JsonConverter]](xref:System.Text.Json.Serialization.JsonConverterAttribute) 특성을 사용자 지정 값 형식을 나타내는 클래스 또는 구조체에 적용합니다.
 
 ## <a name="registration-sample---converters-collection"></a>등록 샘플 - 변환기 컬렉션
 
 다음은 <xref:System.ComponentModel.DateTimeOffsetConverter>를 <xref:System.DateTimeOffset> 형식의 속성에 대한 기본값으로 지정하는 예제입니다.
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RegisterConverterWithConvertersCollection.cs?name=SnippetSerialize)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/RegisterConverterWithConvertersCollection.cs?name=SnippetSerialize)]
 
 다음 형식의 인스턴스를 직렬화한다고 가정합니다.
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWF)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWF)]
 
 다음은 사용자 지정 변환기가 사용되었음을 보여 주는 JSON 출력의 예입니다.
 
@@ -130,35 +126,35 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 다음 코드에서는 사용자 지정 `DateTimeOffset` 변환기를 사용하여 역직렬화하기 위해 동일한 방법을 사용합니다.
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RegisterConverterWithConvertersCollection.cs?name=SnippetDeserialize)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/RegisterConverterWithConvertersCollection.cs?name=SnippetDeserialize)]
 
 ## <a name="registration-sample---jsonconverter-on-a-property"></a>등록 샘플 - 속성에 적용되는 [JsonConverter]
 
 다음 코드에서는 `Date` 속성에 대한 사용자 지정 변환기를 선택합니다.
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithConverterAttribute)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithConverterAttribute)]
 
 `WeatherForecastWithConverterAttribute`를 직렬화하는 코드는 `JsonSerializeOptions.Converters`를 사용할 필요가 없습니다.
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RegisterConverterWithAttributeOnProperty.cs?name=SnippetSerialize)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/RegisterConverterWithAttributeOnProperty.cs?name=SnippetSerialize)]
 
 역직렬화하는 코드도 `Converters`를 사용할 필요가 없습니다.
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RegisterConverterWithAttributeOnProperty.cs?name=SnippetDeserialize)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/RegisterConverterWithAttributeOnProperty.cs?name=SnippetDeserialize)]
 
 ## <a name="registration-sample---jsonconverter-on-a-type"></a>등록 샘플 - 형식에 적용되는 [JsonConverter]
 
 다음은 구조체를 만들고 `[JsonConverter]` 특성을 적용하는 코드입니다.
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/Temperature.cs)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/Temperature.cs)]
 
 앞의 구조체에 대한 사용자 지정 변환기는 다음과 같습니다.
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/TemperatureConverter.cs)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/TemperatureConverter.cs)]
 
 구조체의 `[JsonConvert]` 특성은 사용자 지정 변환기를 `Temperature` 형식의 속성에 대한 기본값으로 등록합니다. 이 변환기는 다음 형식의 `TemperatureCelsius` 속성을 직렬화 또는 역직렬화할 때 자동으로 사용됩니다.
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithTemperatureStruct)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithTemperatureStruct)]
 
 ## <a name="converter-registration-precedence"></a>변환기 등록 우선 순위
 
@@ -179,6 +175,7 @@ serialization 또는 deserialization 동안 각 JSON 요소에 대해 가장 높
 * [유추된 형식을 개체 속성으로 역직렬화](#deserialize-inferred-types-to-object-properties)
 * [문자열이 아닌 키를 사용하는 사전 지원](#support-dictionary-with-non-string-key)
 * [다형 deserialization 지원](#support-polymorphic-deserialization)
+* [Stack\<T>에 대한 라운드트립 지원](#support-round-trip-for-stackt).
 
 ### <a name="deserialize-inferred-types-to-object-properties"></a>유추된 형식을 개체 속성으로 역직렬화
 
@@ -195,15 +192,15 @@ serialization 또는 deserialization 동안 각 JSON 요소에 대해 가장 높
 * 문자열을 `string`으로
 * 그 밖의 모든 항목으로 `JsonElement`로
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ObjectToInferredTypesConverter.cs)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/ObjectToInferredTypesConverter.cs)]
 
 다음 코드는 변환기를 등록합니다.
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DeserializeInferredTypesToObject.cs?name=SnippetRegister)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/DeserializeInferredTypesToObject.cs?name=SnippetRegister)]
 
 다음은 `object` 속성을 사용하는 예제 형식입니다.
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithObjectProperties)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithObjectProperties)]
 
 다음의 역직렬화 JSON 예제에는 `DateTime`, `long` 및 `string`으로 역직렬화될 값이 포함되어 있습니다.
 
@@ -225,15 +222,15 @@ serialization 또는 deserialization 동안 각 JSON 요소에 대해 가장 높
 
 다음 코드에서는 `Dictionary<Enum,TValue>`와 함께 작동하는 사용자 지정 변환기를 보여 줍니다.
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DictionaryTKeyEnumTValueConverter.cs)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/DictionaryTKeyEnumTValueConverter.cs)]
 
 다음 코드는 변환기를 등록합니다.
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripDictionaryTkeyEnumTValue.cs?name=SnippetRegister)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripDictionaryTkeyEnumTValue.cs?name=SnippetRegister)]
 
 이 변환기는 다음 `Enum`을 사용하는 다음 클래스의 `TemperatureRanges` 속성을 직렬화 및 역직렬화할 수 있습니다.
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithEnumDictionary)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithEnumDictionary)]
 
 Serialization의 JSON 출력은 다음 예제와 같습니다.
 
@@ -259,13 +256,13 @@ Serialization의 JSON 출력은 다음 예제와 같습니다.
 
 다음 코드에서는 기본 클래스, 두 개의 파생 클래스 및 해당 클래스에 대한 사용자 지정 변환기를 보여 줍니다. 이 변환기는 판별자 속성을 사용하여 다형 deserialization을 수행합니다. 형식 판별자는 클래스 정의에 없지만 serialization 동안 만들어지고 deserialization 동안 읽힙니다.
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/Person.cs?name=SnippetPerson)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/Person.cs?name=SnippetPerson)]
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/PersonConverterWithTypeDiscriminator.cs)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/PersonConverterWithTypeDiscriminator.cs)]
 
 다음 코드는 변환기를 등록합니다.
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripPolymorphic.cs?name=SnippetRegister)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripPolymorphic.cs?name=SnippetRegister)]
 
 변환기는 동일한 직렬화 변환기를 사용하여 만든 JSON을 역직렬화할 수 있습니다. 예를 들면 다음과 같습니다.
 
@@ -285,6 +282,26 @@ Serialization의 JSON 출력은 다음 예제와 같습니다.
 ```
 
 이전 예제의 변환기 코드는 각 속성을 수동으로 읽고 씁니다. 대신 `Deserialize` 또는 `Serialize`를 호출하여 일부 작업을 수행할 수 있습니다. 예제는 [이 StackOverflow 게시물](https://stackoverflow.com/a/59744873/12509023)을 참조하세요.
+
+### <a name="support-round-trip-for-stackt"></a>Stack\<T>에 대한 라운드트립 지원
+
+JSON 문자열을 <xref:System.Collections.Generic.Stack%601> 개체로 역직렬화한 다음 해당 개체를 직렬화하는 경우 스택의 내용이 역순으로 표시됩니다. 이 동작은 다음 형식 및 인터페이스, 그리고 이러한 형식에서 파생되는 사용자 정의 형식에 적용됩니다.
+
+* <xref:System.Collections.Stack>
+* <xref:System.Collections.Generic.Stack%601>
+* <xref:System.Collections.Concurrent.ConcurrentStack%601>
+* <xref:System.Collections.Immutable.ImmutableStack%601>
+* <xref:System.Collections.Immutable.IImmutableStack%601>
+
+스택에서 원래 순서를 유지하는 serialization 및 deserialization을 지원하려면 사용자 지정 변환기가 필요합니다.
+
+다음 코드는 `Stack<T>` 개체에 대한 라운드트립을 가능하게 하는 사용자 지정 변환기를 보여 줍니다.
+
+[!code-csharp[](snippets/system-text-json-how-to/csharp/JsonConverterFactoryForStackOfT.cs)]
+
+다음 코드는 변환기를 등록합니다.
+
+[!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripStackOfT.cs?name=SnippetRegister)]
 
 ## <a name="other-custom-converter-samples"></a>기타 사용자 지정 변환기 샘플
 

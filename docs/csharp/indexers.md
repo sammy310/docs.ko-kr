@@ -4,12 +4,12 @@ description: 하나 이상의 인수를 사용하여 참조된 속성인 인덱�
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 8e583b8a7cedab61ea6fdd56587608907610b6b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e9b1cb18157982f068f1c1e4546e637f2bd707cb
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79145686"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83394692"
 ---
 # <a name="indexers"></a>인덱서
 
@@ -313,7 +313,7 @@ public class HistoricalWeatherData
 
 이 예제에서는 도시(`string`) 및 날짜(`DateTime`)의 두 인수에 대한 날씨 데이터를 매핑하는 인덱서를 만듭니다. 내부 스토리지는 두 개의 `Dictionary` 클래스를 사용하여 2차원 사전을 나타냅니다. 공용 API는 더 이상 기본 스토리지를 나타내지 않습니다. 대신, 기본 스토리지가 다양한 핵심 컬렉션 형식을 사용해야 하는 경우에도 인덱서의 언어 기능을 사용하여 추상화를 나타내는 공용 인터페이스를 만들 수 있습니다.
 
-일부 개발자에게 친숙하지 않을 수 있는 이 코드의 두 부분이 있습니다. 다음 두 개의 `using` 문을 살펴보세요.
+일부 개발자에게 친숙하지 않을 수 있는 이 코드의 두 부분이 있습니다. 이러한 두 `using` 지시문은 다음과 같습니다.
 
 ```csharp
 using DateMeasurements = System.Collections.Generic.Dictionary<System.DateTime, IndexersSamples.Common.Measurements>;

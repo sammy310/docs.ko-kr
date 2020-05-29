@@ -1,16 +1,17 @@
 ---
 title: <schemaImporterExtensions>에 대한 <add> 요소
+description: <add> 요소는 XmlSchemaImporter 클래스가 XSD 형식을 .NET Framework 형식에 매핑하기 위해 사용하는 형식을 추가합니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XML serialization, configuration
 - <add> element for <schemaImporterExtensions> element
 ms.assetid: c828a558-094b-441e-9065-790b87315fa0
-ms.openlocfilehash: 4f47623aa305ae6e98625acc3d199a76e27d2ea5
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 401d1ba9cc2f97e93d7851f96f73b552e6ed6356
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159938"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378474"
 ---
 # <a name="add-element-for-schemaimporterextensions"></a>\<\<schemaImporterExtensions>에 대한 add> 요소
 <xref:System.Xml.Serialization.XmlSchemaImporter>에서 XSD 형식을 .NET Framework 형식으로 매핑하는 데 사용하는 형식을 추가합니다. 구성 파일에 대한 자세한 내용은 [구성 파일 스키마](../../../docs/framework/configure-apps/file-schema/index.md)를 참조하세요.  

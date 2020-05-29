@@ -1,5 +1,6 @@
 ---
 title: COM 래퍼
+description: COM 클라이언트와 .NET 개체는 COM 호출 가능 래퍼 및 런타임 호출 가능 래퍼를 사용하여 상호 작용합니다. CLR은 자동으로 래퍼를 만듭니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - wrapper classes
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, COM wrappers
 - COM callable wrappers
 ms.assetid: e56c485b-6b67-4345-8e66-fd21835a6092
-ms.openlocfilehash: d647a8cd73fa714e86454687a25501259f894f6d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f1cf84b8f15de1e3bd19a391767f5573f01ff806
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120720"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420515"
 ---
 # <a name="com-wrappers"></a>COM 래퍼
 COM은 다음과 같은 여러 중요한 방식에서 .NET 런타임 개체 모델과 다릅니다.  

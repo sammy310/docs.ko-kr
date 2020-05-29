@@ -1,13 +1,13 @@
 ---
 title: C# 언어 버전 관리 - C# 가이드
 description: C# 언어 버전은 프로젝트에 따라 결정된다는 사실과 그 이유를 알아봅니다. 기본값을 수동으로 재정의하는 방법을 알아봅니다.
-ms.date: 02/21/2020
-ms.openlocfilehash: 850c4a860878593d80aaa3b7b38efaff9e003f43
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.date: 05/20/2020
+ms.openlocfilehash: bbe5b12e378cf47b7c9b2c8576088e949e526a9a
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102660"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83803002"
 ---
 # <a name="c-language-versioning"></a>C# 언어 버전 관리
 
@@ -17,23 +17,23 @@ ms.locfileid: "82102660"
 
 C# 8.0(이상)은 .NET Core 3.x 및 이후 버전에서만 지원됩니다. 대부분의 최신 기능에는 .NET Core 3.x에서 도입된 라이브러리 및 런타임 기능이 필요합니다.
 
-- 기본 인터페이스 멤버를 구현하려면 .NET Core 3.0 CLR의 새로운 기능이 필요합니다.
-- 비동기 스트림에는 새로운 형식인 <xref:System.IAsyncDisposable?displayProperty=nameWithType>, <xref:System.Collections.Generic.IAsyncEnumerable%601?displayProperty=nameWithType> 및 <xref:System.Collections.Generic.IAsyncEnumerator%601?displayProperty=nameWithType>이 필요합니다.
-- 인덱스와 범위에는 새로운 형식인 <xref:System.Index?displayProperty=nameWithType> 및 <xref:System.Range?displayProperty=nameWithType>이 필요합니다.
-- null 허용 참조 형식은 더 효과적인 경고를 제공하기 위해 몇 가지 [특성](attributes/nullable-analysis.md)을 사용하는데, 이러한 특성은 .NET Core 3.0에서 추가되었습니다. 다른 대상 프레임워크는 이러한 특성으로 주석이 추가되지 않았습니다. 즉, null 허용 경고가 잠재적인 문제를 정확하게 반영하지 못할 수 있습니다.
+- [기본 인터페이스 구현](../whats-new/csharp-8.md#default-interface-methods)에는 .NET Core 3.0 CLR의 새로운 기능이 필요합니다.
+- [비동기 스트림](../whats-new/csharp-8.md#asynchronous-streams)에는 새로운 형식인 <xref:System.IAsyncDisposable?displayProperty=nameWithType>, <xref:System.Collections.Generic.IAsyncEnumerable%601?displayProperty=nameWithType> 및 <xref:System.Collections.Generic.IAsyncEnumerator%601?displayProperty=nameWithType>이 필요합니다.
+- [인덱스 및 범위](../whats-new/csharp-8.md#indices-and-ranges)에는 새로운 형식인 <xref:System.Index?displayProperty=nameWithType> 및 <xref:System.Range?displayProperty=nameWithType>이 필요합니다.
+- [Nulle 허용 참조 형식](../whats-new/csharp-8.md#nullable-reference-types)은 더 효과적인 경고를 제공하기 위해 몇 가지 [특성](attributes/nullable-analysis.md)을 사용하는데, 이러한 특성은 .NET Core 3.0에서 추가되었습니다. 다른 대상 프레임워크는 이러한 특성으로 주석이 추가되지 않았습니다. 즉, null 허용 경고가 잠재적인 문제를 정확하게 반영하지 못할 수 있습니다.
 
 ## <a name="defaults"></a>기본값
 
 컴파일러는 다음 규칙에 따라 기본값을 결정합니다.
 
-|대상 프레임워크|버전|C# 언어 버전 기본값|
-|----------------|-------|---------------------------|
-|.NET Core|3.x|C# 8.0|
-|.NET Core|2.x|C# 7.3|
-|.NET Standard|2.1|C# 8.0|
-|.NET Standard|2.0|C# 7.3|
-|.NET Standard|1.x|C# 7.3|
-|.NET Framework|모두|C# 7.3|
+| 대상 프레임워크 | 버전 | C# 언어 버전 기본값 |
+|------------------|---------|-----------------------------|
+| .NET Core        | 3.x     | C# 8.0                      |
+| .NET Core        | 2.x     | C# 7.3                      |
+| .NET Standard    | 2.1     | C# 8.0                      |
+| .NET Standard    | 2.0     | C# 7.3                      |
+| .NET Standard    | 1.x     | C# 7.3                      |
+| .NET Framework   | 모두     | C# 7.3                      |
 
 프로젝트가 해당 미리 보기 언어 버전이 있는 미리 보기 프레임워크를 대상으로 하는 경우 사용되는 언어 버전은 미리 보기 언어 버전입니다. 따라서 릴리스된 .NET Core 버전을 대상으로 하는 프로젝트에 영향을 주지 않으면서 모든 환경에서 해당 미리 보기의 최신 기능을 사용할 수 있습니다.
 
@@ -75,19 +75,32 @@ C# 버전을 명시적으로 지정해야 하는 경우 다음과 같은 여러 
 
 모든 표는 현재 C# 언어 버전을 보여줍니다. 컴파일러가 오래된 것이라면 일부 값을 파악하지 못할 수 있습니다. .NET Core 3.0 이상을 설치하면 나열된 모든 항목에 액세스할 수 있습니다.
 
-|값|의미|
-|------------|-------------|
-|미리 보기|컴파일러가 최신 미리 보기 버전의 유효한 언어 구문을 모두 허용합니다.|
-|latest|컴파일러가 최신 릴리스 버전(부 버전 포함)의 구문을 허용합니다.|
-|latestMajor|컴파일러가 최신 릴리스 주 버전의 구문을 허용합니다.|
-|8.0|컴파일러는 C# 8.0 이하에 포함된 구문만 허용합니다.|
-|7.3|컴파일러는 C# 7.3 이하에 포함된 구문만 허용합니다.|
-|7.2|컴파일러는 C# 7.2 이하에 포함된 구문만 허용합니다.|
-|7.1|컴파일러는 C# 7.1 이하에 포함된 구문만 허용합니다.|
-|7|컴파일러는 C# 7.0 이하에 포함된 구문만 허용합니다.|
-|6|컴파일러는 C# 6.0 이하에 포함된 구문만 허용합니다.|
-|5|컴파일러는 C# 5.0 이하에 포함된 구문만 허용합니다.|
-|4|컴파일러는 C# 4.0 이하에 포함된 구문만 허용합니다.|
-|3|컴파일러는 C# 3.0 이하에 포함된 구문만 허용합니다.|
-|ISO-2|컴파일러는 ISO/IEC 23270:2006 C#(2.0)에 포함된 구문만 허용합니다. |
-|ISO-1|컴파일러는 ISO/IEC 23270:2003 C#(1.0/1.2)에 포함된 구문만 허용합니다. |
+[!INCLUDE [langversion-table](includes/langversion-table.md)]
+
+> [!TIP]
+> [Visual Studio용 개발자 명령 프롬프트](../../framework/tools/developer-command-prompt-for-vs.md)를 열고 다음 명령을 실행하여 컴퓨터에서 사용할 수 있는 언어 버전의 목록을 확인합니다.
+>
+> ```CMD
+> csc -langversion:?
+> ```
+>
+> 이와 같이 [-langversion](compiler-options/langversion-compiler-option.md) compile 옵션을 질문하면 다음과 같은 내용이 출력됩니다.
+>
+> ```CMD
+> Supported language versions:
+> default
+> 1
+> 2
+> 3
+> 4
+> 5
+> 6
+> 7.0
+> 7.1
+> 7.2
+> 7.3
+> 8.0 (default)
+> latestmajor
+> preview
+> latest
+> ```

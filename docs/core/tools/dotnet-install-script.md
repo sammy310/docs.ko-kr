@@ -1,13 +1,13 @@
 ---
 title: dotnet 설치 스크립트
 description: .NET Core SDK 및 공유 런타임을 설치하는 dotnet-install 스크립트에 대해 알아봅니다.
-ms.date: 01/23/2020
-ms.openlocfilehash: 591413a17db577560bd0324995066c8ea7a35895
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.date: 04/30/2020
+ms.openlocfilehash: 9f5cef9cfcca1d8b344021efe803c063a7393f8e
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463669"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83802719"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 스크립트 참조
 
@@ -31,7 +31,7 @@ dotnet-install.ps1 [-Architecture <ARCHITECTURE>] [-AzureFeed]
 dotnet-install.ps1 -Help
 ```
 
-Linux/macOs:
+Linux/macOS:
 
 ```bash
 dotnet-install.sh  [--architecture <ARCHITECTURE>] [--azure-feed]
@@ -62,6 +62,8 @@ dotnet-install.sh --help
 스크립트를 실행하기 전에 필요한 모든 [종속성](../install/dependencies.md)을 설치하세요.
 
 `-Version|--version` 인수를 사용하여 특정 버전을 설치할 수 있습니다. 버전은 세 부분으로 구성된 버전(예: `2.1.0`)으로 지정해야 합니다. 제공하지 않으면 `latest` 버전을 사용합니다.
+
+설치 스크립트는 Windows에서 레지스트리를 업데이트하지 않습니다. 단지 압축된 이진 파일을 다운로드하여 폴더에 복사합니다. 레지스트리 키 값을 업데이트하려면 .NET Core 설치 관리자를 사용합니다.
 
 ## <a name="options"></a>옵션
 
@@ -98,7 +100,7 @@ dotnet-install.sh --help
 
 - **`-InstallDir|--install-dir <DIRECTORY>`**
 
-  설치 경로를 지정합니다. 디렉터리가 없을 경우 만듭니다. 기본값은 *%LocalAppData%\Microsoft\dotnet*입니다. 이진 파일은 이 디렉터리에 바로 배치됩니다.
+  설치 경로를 지정합니다. 디렉터리가 없을 경우 만듭니다. 기본값은 *%LocalAppData%\Microsoft\dotnet*(Windows) 또는 */usr/share/dotnet*(Linux/macOS)입니다. 이진 파일은 이 디렉터리에 바로 배치됩니다.
 
 - **`-JSonFile|--jsonfile <JSONFILE>`**
 

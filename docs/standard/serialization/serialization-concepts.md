@@ -1,13 +1,14 @@
 ---
 title: Serialization 개념
+description: Serialization을 사용하여 복사본을 만들기 위해 개체의 상태를 캡처하거나 한 애플리케이션 도메인에서 다른 애플리케이션 도메인으로 값을 기준으로 개체를 보낼 수 있습니다.
 ms.date: 08/07/2017
 ms.assetid: e1ff4740-20a1-4c76-a8ad-d857db307054
-ms.openlocfilehash: 1a7fa7c3e5561fc9e48cf627a703abc747a72ba0
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 0592dee188f1c1e5a429438c594d045f8ba268c6
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159834"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378732"
 ---
 # <a name="serialization-concepts"></a>Serialization 개념
 serialization을 사용하는 이유는 무엇입니까? 가장 중요한 두 가지 이유는 이후 단계에서 정확한 복사본을 다시 만들 수 있도록 스토리지 매체에 개체의 상태를 유지하는 것과 개체를 한 애플리케이션 도메인에서 다른 애플리케이션 도메인으로 값으로 전송하는 것입니다. 예를 들어 serialization을 사용하여 세션 상태를 ASP.NET에 저장하고 개체를 Windows Forms의 클립보드로 복사할 수 있습니다. 또한 Remoting에서 이를 사용하여 개체를 한 애플리케이션 도메인에서 다른 애플리케이션 도메인으로 값으로 전달할 수도 있습니다.

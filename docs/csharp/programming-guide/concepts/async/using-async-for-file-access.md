@@ -2,12 +2,12 @@
 title: 파일 액세스에 Async 사용(C#)
 ms.date: 07/20/2015
 ms.assetid: bb018fea-5313-4c80-ab3f-7c24b2145bd9
-ms.openlocfilehash: e6b0370049d9b9315de6a72d0e84c080aac12481
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8e0a62c2263ed3fd11eb4accb54978ef439ac010
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69595540"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396954"
 ---
 # <a name="using-async-for-file-access-c"></a>파일 액세스에 Async 사용(C#)
 파일에 액세스하는 비동기 기능을 사용할 수 있습니다. 비동기 기능을 사용하면 콜백을 사용하거나 여러 메서드 또는 람다 식에서 코드를 분할하지 않고도 비동기 메서드를 호출할 수 있습니다. 동기 코드를 비동기로 만들려면 동기 메서드 대신 비동기 메서드를 호출하고 몇 가지 키워드를 코드에 추가하면 됩니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "69595540"
 ## <a name="running-the-examples"></a>예제 실행  
  이 항목의 예제를 실행하려면 **WPF 애플리케이션** 또는 **Windows Forms 애플리케이션**을 만든 후 **단추**를 추가할 수 있습니다. 단추의 `Click` 이벤트에서 각 예제의 첫 번째 메서드에 대한 호출을 추가합니다.  
   
- 다음 예제에서는 `using` 문을 포함합니다.  
+ 다음 예제에서는 `using` 지시문을 포함합니다.  
   
 ```csharp  
 using System;  
@@ -174,7 +174,7 @@ public async Task ProcessWriteMultAsync()
   
  <xref:System.IO.Stream.WriteAsync%2A> 및 <xref:System.IO.Stream.ReadAsync%2A> 메서드를 사용하는 경우 중간에 작업을 취소하는 데 사용할 수 있는 <xref:System.Threading.CancellationToken>을 지정할 수 있습니다. 자세한 내용은 [비동기 애플리케이션 미세 조정(C#)](./fine-tuning-your-async-application.md) 및 [관리되는 스레드의 취소](../../../../standard/threading/cancellation-in-managed-threads.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [async 및 await를 사용한 비동기 프로그래밍(C#)](./index.md)
 - [비동기 반환 형식(C#)](./async-return-types.md)

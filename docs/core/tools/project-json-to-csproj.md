@@ -3,12 +3,12 @@ title: project.json 및 csproj 비교
 description: project.json 및 csproj e요소 간 매핑을 참조하세요.
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: abe515007b47b415ac33e3350a29edced1784d68
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a997b48f645ed58d15610a68aee7c67411f9763f
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77451107"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205839"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json 및 csproj 속성 간 매핑
 
@@ -38,7 +38,7 @@ ms.locfileid: "77451107"
 }
 ```
 
-더 이상 지원되지 않습니다. csproj에서는 보통 디렉터리 이름과 일치하는 프로젝트 파일 이름으로 결정됩니다. `MyProjectName.csproj`)을 입력합니다.
+더 이상 지원되지 않습니다. csproj에서는 보통 디렉터리 이름과 일치하는 프로젝트 파일 이름으로 결정됩니다. 예: `MyProjectName.csproj`.
 
 기본적으로 프로젝트 파일 이름은 `<AssemblyName>` 및 `<PackageId>` 속성의 값도 지정합니다.
 
@@ -52,7 +52,7 @@ ms.locfileid: "77451107"
 `buildOptions\outputName` 속성이 project.json에서 정의된 경우 `<AssemblyName>`에는 `<PackageId>`와 다른 값이 있습니다.
 자세한 내용은 [기타 일반적인 빌드 옵션](#other-common-build-options)을 참조하세요.
 
-### <a name="version"></a>version
+### <a name="version"></a>버전
 
 ```json
 {
@@ -179,7 +179,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-마이그레이션된 프로젝트에서 `<RuntimeFrameworkVersion>` 값은 설치한 SDK의 버전에 따라 결정됩니다.
+마이그레이션된 프로젝트의 `<RuntimeFrameworkVersion>` 값은 설치된 SDK 버전에 따라 결정됩니다.
 
 ### <a name="top-level-dependencies"></a>최상위 종속성
 
@@ -485,8 +485,7 @@ MSBuild에서 모든 프로젝트는 빌드 중 *이식 가능*하지만 독립 
 </PropertyGroup>
 ```
 
-MSBuild에는 `owners` 요소에 대해 동일한 요소가 없습니다.
-`summary`의 경우, `summary` 값이 자동으로 해당 속성에 마이그레이션되지 않은 경우에도 속성이 [`description`](#other-common-root-level-options) 요소로 매핑되므로 MSBuild `<Description>` 속성을 사용할 수 있습니다.
+MSBuild에는 `owners` 요소에 대해 동일한 요소가 없습니다. `summary`의 경우 MSBuild `<Description>` 속성을 사용할 수 있습니다. `summary`의 값은 이 속성에 자동으로 마이그레이션되지 않습니다. 이 속성이 [`description`](#other-common-root-level-options) 요소에 매핑되기 때문입니다.
 
 ## <a name="scripts"></a>스크립트
 
@@ -528,7 +527,7 @@ MSBuild에서 해당하는 요소는 [targets](/visualstudio/msbuild/msbuild-tar
 }
 ```
 
-"System.GC.Server" 속성을 제외하고, 이 그룹의 모든 설정은 마이그레이션 프로세스 중 루트 개체에 적용된 옵션과 함께 프로젝트 폴더에서 *runtimeconfig.template.json*이라는 파일에 적용됩니다.
+`System.GC.Server` 속성을 제외하고, 이 그룹의 모든 설정은 마이그레이션 프로세스 중 루트 개체에 적용된 옵션과 함께 프로젝트 폴더에서 *runtimeconfig.template.json*이라는 파일에 적용됩니다.
 
 ```json
 {
@@ -541,7 +540,7 @@ MSBuild에서 해당하는 요소는 [targets](/visualstudio/msbuild/msbuild-tar
 }
 ```
 
-"System.GC.Server" 속성은 csproj 파일로 마이그레이션됩니다.
+`System.GC.Server` 속성은 csproj 파일로 마이그레이션됩니다.
 
 ```xml
 <PropertyGroup>
@@ -569,7 +568,7 @@ MSBuild에서 해당하는 요소는 [targets](/visualstudio/msbuild/msbuild-tar
 }
 ```
 
-csproj에서 지원되지 않습니다. 대신 *.nuspec* 파일에 콘텐츠 파일을 포함해야 합니다.
+csproj에서 지원되지 않습니다. 대신 *.nuspec* 파일에 콘텐츠 파일을 포함합니다.
 자세한 내용은 [콘텐츠 파일 포함](/nuget/schema/nuspec#including-content-files)을 참조하세요.
 
 ## <a name="files"></a>파일
@@ -621,8 +620,7 @@ MSBuild에서는 [항목](/visualstudio/msbuild/common-msbuild-project-items)을
 ```
 
 > [!NOTE]
-> 많은 기본 [와일드카드 사용 패턴](https://en.wikipedia.org/wiki/Glob_(programming))이 .NET Core SDK에 의해 자동으로 추가됩니다.
-> 자세한 내용은 [기본 컴파일 항목 값](https://aka.ms/sdkimplicititems)을 참조하세요.
+> 많은 기본 [와일드카드 사용 패턴](https://en.wikipedia.org/wiki/Glob_(programming))이 .NET Core SDK에 의해 자동으로 추가됩니다. 자세한 내용은 [기본 컴파일 포함](../project-sdk/overview.md#default-compilation-includes)을 참조하세요.
 
 모든 MSBuild `ItemGroup` 요소는 `Include`, `Exclude` 및 `Remove`를 지원합니다.
 
@@ -673,6 +671,6 @@ MSBuild에서는 [항목](/visualstudio/msbuild/common-msbuild-project-items)을
 </ItemGroup>
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [CLI의 변경 내용에 대한 대략적인 개요](../tools/cli-msbuild-architecture.md)
+- [CLI의 변경 내용에 대한 대략적인 개요](cli-msbuild-architecture.md)

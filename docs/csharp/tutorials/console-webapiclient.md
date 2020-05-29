@@ -3,12 +3,12 @@ title: .NET Core를 사용하여 REST 클라이언트 만들기
 description: 이 자습서에서는 .NET Core 및 C# 언어의 다양한 기능에 대해 설명합니다.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 0105db519f7accec6bf8bfbafdc6a67a444b1074
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 4a3a76d1ec9893c2c3e0353e305a19e59c586fe5
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249170"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420385"
 ---
 # <a name="rest-client"></a>REST 클라이언트
 
@@ -77,9 +77,7 @@ using System.Threading.Tasks;
 
 이때 프로젝트를 빌드하면 이 메서드에는 `await` 연산자가 없어서 동기적으로 실행되므로 경고가 생성됩니다. 지금은 이 경고를 무시하세요. 메서드를 입력할 때 `await` 연산자를 추가할 것입니다.
 
-다음에는 `namespace` 문에 정의된 네임스페이스의 이름을 기본값인 `ConsoleApp`에서 `WebAPIClient`로 바꿉니다. 나중에 이 네임스페이스에서 `repo` 클래스를 정의할 것입니다.
-
-다음에는 `Main` 메서드를 업데이트하여 이 메서드를 호출합니다. `ProcessRepositories` 메서드는 작업을 반환합니다. 이 작업이 완료되기 전에 프로그램을 종료하지 않아야 합니다. 따라서 `Main`의 서명을 변경해야 합니다. `async` 한정자를 추가하고 반환 형식을 `Task`로 변경합니다. 그런 다음 메서드의 본문에서 `ProcessRepositories`에 대한 호출을 추가합니다. 해당 메서드 호출에 `await` 키워드를 추가합니다.
+다음으로 `Main` 메서드를 업데이트하여 `ProcessRepositories` 메서드를 호출합니다. `ProcessRepositories` 메서드는 작업을 반환합니다. 이 작업이 완료되기 전에 프로그램을 종료하지 않아야 합니다. 따라서 `Main`의 서명을 변경해야 합니다. `async` 한정자를 추가하고 반환 형식을 `Task`로 변경합니다. 그런 다음 메서드의 본문에서 `ProcessRepositories`에 대한 호출을 추가합니다. 해당 메서드 호출에 `await` 키워드를 추가합니다.
 
 ```csharp
 static async Task Main(string[] args)
@@ -173,6 +171,7 @@ var repositories = await JsonSerializer.DeserializeAsync<List<Repository>>(await
 새 네임 스페이스를 사용하고 있으므로 파일의 맨 위에도 추가해야 합니다.
 
 ```csharp
+using System.Collections.Generic;
 using System.Text.Json;
 ```
 

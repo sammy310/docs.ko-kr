@@ -3,12 +3,12 @@ title: 클래스 및 개체 - C# 소개 자습서
 description: 첫 번째 C# 프로그램을 만들고 개체 지향 개념을 살펴봅니다.
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: b6ad72997647b80b981f1a1871e384791404bdf7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5edb2d7b11caace2d794b7958dfeb75ef502ee2b
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156595"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396870"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>클래스 및 개체를 사용한 개체 지향 프로그래밍 살펴보기
 
@@ -47,7 +47,7 @@ namespace classes
 
 ## <a name="define-the-bank-account-type"></a>은행 계좌 형식 정의
 
-동작을 정의하는 클래스의 기본 사항을 만들어 시작할 수 있습니다. 다음과 같습니다.
+동작을 정의하는 클래스의 기본 사항을 만들어 시작할 수 있습니다. **File:New** 명령을 사용하여 새 파일을 만듭니다. 파일의 이름을 *BankAccount.cs*로 지정합니다. *BankAccount.cs* 파일에 다음 코드를 추가합니다.
 
 ```csharp
 using System;
@@ -79,7 +79,7 @@ namespace classes
 
 구현할 첫 번째 기능은 은행 계좌 개설 기능입니다. 고객이 계좌를 개설할 때 초기 잔액과 해당 계좌 소유자에 대한 정보를 제공해야 합니다.
 
-`BankAccount` 형식의 새 개체를 생성하는 것은 해당 값을 지정하는 ***생성자***를 정의하는 것입니다. ***생성자***는 클래스와 이름이 같은 멤버입니다. 생성자는 해당 클래스 형식의 개체를 초기화하는 데 사용됩니다. `BankAccount` 형식에 다음 생성자를 추가합니다.
+`BankAccount` 형식의 새 개체를 생성하는 것은 해당 값을 지정하는 ***생성자***를 정의하는 것입니다. ***생성자***는 클래스와 이름이 같은 멤버입니다. 생성자는 해당 클래스 형식의 개체를 초기화하는 데 사용됩니다. `BankAccount` 형식에 다음 생성자를 추가합니다. `MakeDeposit` 선언 위에 다음 코드를 배치합니다.
 
 ```csharp
 public BankAccount(string name, decimal initialBalance)
@@ -96,17 +96,17 @@ var account = new BankAccount("<name>", 1000);
 Console.WriteLine($"Account {account.Number} was created for {account.Owner} with {account.Balance} initial balance.");
 ```
 
-`dotnet run`을 입력하고 어떤 일이 일어나는지 확인합니다.  
+지금까지 빌드한 코드를 실행해 보겠습니다. Visual Studio를 사용하는 경우 **실행** 메뉴에서 **디버깅하지 않고 시작**을 선택합니다. 명령줄을 사용하는 경우 프로젝트를 만든 디렉터리에 `dotnet run`을 입력합니다.
 
 계좌 번호가 공백인가요? 이를 수정해 보겠습니다. 개체가 생성될 때 계좌 번호를 지정해야 합니다. 그러나 계좌 번호 생성은 호출자의 책임이 아닙니다. `BankAccount` 클래스 코드는 새 계좌 번호를 지정하는 방법을 알아야 합니다.  이를 수행하는 간단한 방법은 10자리 숫자로 시작하는 것입니다. 새 계좌가 생성될 때마다 숫자가 늘어납니다. 마지막으로, 개체가 생성될 때 현재 계좌 번호를 저장합니다.
 
-`BankAccount` 클래스에 다음 멤버 선언을 추가합니다.
+`BankAccount` 클래스에 멤버 선언을 추가합니다. `BankAccount` 클래스의 시작 부분에서 여는 중괄호 `{` 뒤에 다음 코드 줄을 배치합니다.
 
 ```csharp
 private static int accountNumberSeed = 1234567890;
 ```
 
-이는 데이터 멤버입니다. 이것은 `private`입니다. 즉 `BankAccount` 클래스 내의 코드로만 액세스할 수 있습니다. 이는 전용 구현(계좌 번호가 생성되는 방법)과 공공 책임(계좌 번호를 가지는 것 등)을 구분하는 방법입니다. 모든 `BankAccount` 개체에서 공유됨을 의미하는 `static`이기도 합니다. 비정적 변수의 값은 `BankAccount` 개체의 각 인스턴스에 고유합니다. 생성자에 다음 두 줄을 추가하여 계좌 번호를 지정합니다.
+이는 데이터 멤버입니다. 이것은 `private`입니다. 즉 `BankAccount` 클래스 내의 코드로만 액세스할 수 있습니다. 이는 전용 구현(계좌 번호가 생성되는 방법)과 공공 책임(계좌 번호를 가지는 것 등)을 구분하는 방법입니다. 모든 `BankAccount` 개체에서 공유됨을 의미하는 `static`이기도 합니다. 비정적 변수의 값은 `BankAccount` 개체의 각 인스턴스에 고유합니다. 생성자에 다음 두 줄을 추가하여 계좌 번호를 지정합니다. `this.Balance = initialBalance` 줄 뒤에 배치합니다.
 
 ```csharp
 this.Number = accountNumberSeed.ToString();
@@ -123,7 +123,7 @@ accountNumberSeed++;
 
 [!code-csharp[Transaction](~/samples/snippets/csharp/classes-quickstart/Transaction.cs)]
 
-이제 `Transaction` 개체의 <xref:System.Collections.Generic.List%601>를 `BankAccount` 클래스에 추가하겠습니다. 다음 선언을 추가합니다.
+이제 `Transaction` 개체의 <xref:System.Collections.Generic.List%601>를 `BankAccount` 클래스에 추가하겠습니다. *BankAccount.cs* 파일의 생성자 뒤에 다음 선언을 추가합니다.
 
 [!code-csharp[TransactionDecl](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration)]
 
@@ -141,7 +141,7 @@ using System.Collections.Generic;
 
 다음으로 `MakeDeposit` 및 `MakeWithdrawal` 메서드를 구현합니다. 이러한 메서드는 최종 두 규칙을 적용합니다. 초기 잔액은 양수여야 하고 인출로 인해 음수의 잔액이 발생되어서는 안 됩니다.
 
-이는 ***예외***의 개념을 소개합니다. 메서드가 작업을 성공적으로 완료할 수 없음을 나타내는 일반적인 방법은 예외를 throw하는 것입니다. 예외 형식 및 관련 메시지는 오류를 설명합니다. 여기에서 `MakeDeposit` 메서드는 인출 금액이 음수인 경우 예외를 throw합니다. 인출 금액이 음수이거나 인출 적용 결과로 음수의 잔액이 발생하는 경우 `MakeWithdrawal` 메서드는 예외를 throw합니다.
+이는 ***예외***의 개념을 소개합니다. 메서드가 작업을 성공적으로 완료할 수 없음을 나타내는 일반적인 방법은 예외를 throw하는 것입니다. 예외 형식 및 관련 메시지는 오류를 설명합니다. 여기에서 `MakeDeposit` 메서드는 인출 금액이 음수인 경우 예외를 throw합니다. 인출 금액이 음수이거나 인출 적용 후 잔액이 음수인 경우 `MakeWithdrawal` 메서드는 예외를 throw합니다. `allTransactions` 목록의 선언 뒤에 다음 코드를 추가합니다.
 
 [!code-csharp[DepositAndWithdrawal](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal)]
 
@@ -151,7 +151,7 @@ using System.Collections.Generic;
 
 [!code-csharp[Constructor](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#Constructor)]
 
-<xref:System.DateTime.Now?displayProperty=nameWithType>은 현재 날짜 및 시간을 반환하는 속성입니다. `Main` 메서드에 예금 및 인출을 몇 개 추가하여 다음을 테스트합니다.
+<xref:System.DateTime.Now?displayProperty=nameWithType>은 현재 날짜 및 시간을 반환하는 속성입니다. 새 `BankAccount`를 만드는 코드를 따라 `Main` 메서드에서 몇 가지 예금 및 인출을 추가하여 테스트합니다.
 
 ```csharp
 account.MakeWithdrawal(500, DateTime.Now, "Rent payment");
@@ -160,7 +160,7 @@ account.MakeDeposit(100, DateTime.Now, "Friend paid me back");
 Console.WriteLine(account.Balance);
 ```
 
-다음으로 음수 잔액을 사용하여 계정을 생성하여 오류 조건을 알아보는 테스트를 수행합니다.
+다음으로 음수 잔액을 사용하여 계정을 생성하여 오류 조건을 알아보는 테스트를 수행합니다. 방금 추가한 이전 코드 뒤에 다음 코드를 추가합니다.
 
 ```csharp
 // Test that the initial balances must be positive.
@@ -175,7 +175,7 @@ catch (ArgumentOutOfRangeException e)
 }
 ```
 
-[`try` 및 `catch` 문](../../language-reference/keywords/try-catch.md)을 사용하여 예외를 throw할 수 있는 코드 블록을 표시하고 예상한 오류를 catch합니다. 동일한 기술을 사용하여 음수 잔액에 대한 예외를 throw하는 코드를 테스트할 수 있습니다.
+[`try` 및 `catch` 문](../../language-reference/keywords/try-catch.md)을 사용하여 예외를 throw할 수 있는 코드 블록을 표시하고 예상한 오류를 catch합니다. 동일한 기술을 사용하여 음수 잔액에 대한 예외를 throw하는 코드를 테스트할 수 있습니다. `Main` 메서드의 끝에 다음 코드를 추가합니다.
 
 ```csharp
 // Test for a negative balance.
@@ -206,10 +206,10 @@ catch (InvalidOperationException e)
 Console.WriteLine(account.GetAccountHistory());
 ```
 
-`dotnet run`을 입력하여 결과를 확인합니다.
+프로그램을 실행하여 결과를 확인합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-잘 알 수 없는 경우 [GitHub 리포지토리](https://github.com/dotnet/samples/tree/master/csharp/classes-quickstart/)에서 이 자습서의 소스를 확인할 수 있습니다.
+잘 알 수 없는 경우 [GitHub 리포지토리](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/classes-quickstart/)에서 이 자습서의 소스를 확인할 수 있습니다.
 
 축하합니다. 모든 C# 소개 자습서를 완료했습니다. 더 자세히 학습하려면 추가 [자습서](../index.md)를 확인하세요.

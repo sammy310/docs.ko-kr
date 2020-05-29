@@ -1,16 +1,17 @@
 ---
 title: 어셈블리 및 Side-by-Side 실행
+description: 같은 컴퓨터에 여러 버전의 애플리케이션 또는 구성 요소를 저장하고 실행할 수 있는 기능인 Side-by-Side 실행에 대해 알아봅니다.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - side-by-side execution [.NET Framework]
 - assemblies [.NET Framework], side-by-side execution
 ms.assetid: e42036ee-7590-47d1-b884-cc856e39bd5d
-ms.openlocfilehash: 234efba66d87b520b54d6d113afcc4bba0bfe06a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 74b5710c7e8ad60873fb83a3699ce3992ead6e07
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73138653"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378636"
 ---
 # <a name="assemblies-and-side-by-side-execution"></a>어셈블리 및 Side-by-Side 실행
 
@@ -20,7 +21,7 @@ Side-by-side 실행은 같은 컴퓨터에 여러 버전의 애플리케이션�
   
 런타임에서는 동시 애플리케이션을 만들 수 있는 기능을 제공하지만, Side-by-Side 실행 기능을 자동으로 적용되지 않습니다. Side-by-Side 실행용 애플리케이션을 만드는 방법에 대한 자세한 내용은 [Side-by-Side 실행용 구성 요소를 만들기 위한 지침](../../framework/deployment/guidelines-for-creating-components-for-side-by-side-execution.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [런타임에서 어셈블리를 찾는 방법](../../framework/deployment/how-the-runtime-locates-assemblies.md)
 - [.NET 어셈블리](index.md)

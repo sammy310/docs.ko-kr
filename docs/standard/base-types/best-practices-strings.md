@@ -18,12 +18,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: e633b6c1d03a3d1cd70e277395da10f70f315f16
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 0fb7ec8d9de8fae7a0443984511e538d38d93c7a
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523969"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441008"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>.NET에서 문자열 사용에 대한 모범 사례
 
@@ -317,18 +317,20 @@ LATIN SMALL LETTER A 문자 “a”(\u0061)는 COMBINING RING ABOVE 문자 “+ 
 
 - <xref:System.String.Format%2A?displayProperty=nameWithType> 및 `ToString` 메서드를 사용하는 경우 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 또는 <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>과 같이 `provider` 매개 변수가 있는 오버로드를 호출하고 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 속성, 원하는 문화권을 나타내는 <xref:System.Globalization.CultureInfo> 인스턴스 또는 <xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType> 속성을 전달합니다.
 
-- 문자열 연결의 경우 컴파일러에서 암시적 변환을 수행하지 못하게 합니다. 대신 `provider` 매개 변수가 있는 `ToString` 오버로드를 호출하여 명시적 변환을 수행합니다. 예를 들어 컴파일러는 <xref:System.Double> 값을 다음 C# 코드의 문자열로 변환할 때 암시적으로 현재 문화권을 사용합니다.
+- 문자열 연결의 경우 컴파일러에서 암시적 변환을 수행하지 못하게 합니다. 대신 `provider` 매개 변수가 있는 `ToString` 오버로드를 호출하여 명시적 변환을 수행합니다. 예를 들어 컴파일러는 다음 코드에서 <xref:System.Double> 값을 문자열로 변환할 때 암시적으로 현재 문화권을 사용합니다.
 
-  [!code-csharp[Implicit String Conversion](~/samples/snippets/standard/base-types/string-practices/cs/tostring.cs#1)]
+  [!code-csharp[Implicit String Conversion](./snippets/best-practices-strings/csharp/tostring/Program.cs#1)]
+  [!code-vb[Implicit String Conversion](./snippets/best-practices-strings/vb/tostring/Program.vb#1)]
 
-  대신, 다음 C# 코드와 같이 <xref:System.Double.ToString(System.IFormatProvider)?displayProperty=nameWithType> 메서드를 호출하여 변환에 사용되는 서식 지정 규칙을 사용하는 문화권을 명시적으로 지정할 수 있습니다.
+  대신, 다음 코드와 같이 <xref:System.Double.ToString(System.IFormatProvider)?displayProperty=nameWithType> 메서드를 호출하여 변환에 사용되는 서식 지정 규칙을 사용하는 문화권을 명시적으로 지정할 수 있습니다.
 
-  [!code-csharp[Explicit String Conversion](~/samples/snippets/standard/base-types/string-practices/cs/tostring.cs#2)]
+  [!code-csharp[Explicit String Conversion](./snippets/best-practices-strings/csharp/tostring/Program.cs#2)]
+  [!code-vb[Implicit String Conversion](./snippets/best-practices-strings/vb/tostring/Program.vb#2)]
 
 - 문자열 보간의 경우, 보간된 문자열을 <xref:System.String> 인스턴스에 할당하는 대신 <xref:System.FormattableString>에 할당합니다. 그런 다음, 해당 <xref:System.FormattableString.ToString?displayProperty=nameWithType> 메서드를 호출하여 현재 문화권의 규칙을 반영하는 결과 문자열을 생성하거나 <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> 메서드를 호출하여 지정된 문화권의 규칙을 반영하는 결과 문자열을 생성할 수 있습니다. 서식 지정 가능 문자열을 정적 <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> 메서드에 전달하여 고정 문화권의 규칙을 반영하는 결과 문자열을 생성할 수도 있습니다. 다음 예제에서 이 방법을 보여 줍니다. (이 예제의 출력에는 en-US의 현재 문화권이 반영됩니다.)
 
-  [!code-csharp[String interpolation](~/samples/snippets/standard/base-types/string-practices/cs/formattable.cs)]
-  [!code-vb[String interpolation](~/samples/snippets/standard/base-types/string-practices/vb/formattable.vb)]
+  [!code-csharp[String interpolation](./snippets/best-practices-strings/csharp/formattable/Program.cs)]
+  [!code-vb[String interpolation](./snippets/best-practices-strings/vb/formattable/Program.vb)]
 
 문자열이 아닌 데이터를 이진 데이터 또는 형식이 지정된 데이터로 유지할 수 있습니다. 서식이 지정된 데이터로 저장하는 경우 `provider` 매개 변수를 포함하는 서식 지정 메서드 오버로드를 호출하고 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 속성에 전달해야 합니다. 고정 문화권은 문화권 및 컴퓨터와 관계없는 형식이 지정된 데이터에 대해 일관된 형식을 제공합니다. 반대로 고정 문화권이 아닌 문화권을 사용하여 형식이 지정된 영구 데이터에는 많은 제한 사항이 있습니다.
 

@@ -1,5 +1,6 @@
 ---
 title: '방법: 어셈블리 콘텐츠 보기'
+description: IL 디스어셈블러를 사용하여 어셈블리의 특성과 다른 모듈 및 어셈블리에 대한 참조를 볼 수 있습니다.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assembly manifest, viewing information
@@ -14,12 +15,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 179b240bb06a319ff71009e14323d5c8f2740e5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aed490459252466c6da06e5422b83b1bc20fb885
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79187383"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380060"
 ---
 # <a name="how-to-view-assembly-contents"></a>방법: 어셈블리 콘텐츠 보기
 

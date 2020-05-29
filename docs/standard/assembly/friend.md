@@ -1,16 +1,17 @@
 ---
 title: Friend 어셈블리
+description: Friend 어셈블리는 다른 어셈블리의 내부(C#) 또는 Friend(Visual Basic) 형식 및 멤버에 액세스할 수 있는 .NET 어셈블리입니다.
 ms.date: 08/20/2019
 ms.assetid: b65ea7de-0801-477a-a39c-e914c2cc107c
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: a74d4b74ead8492028a092e090f9281231802a87
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 105621da2bd418c6294fa2bbec474809599cb6a5
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74348173"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378929"
 ---
 # <a name="friend-assemblies"></a>Friend 어셈블리
 
@@ -25,7 +26,7 @@ ms.locfileid: "74348173"
 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성을 사용하여 지정된 어셈블리에 대해 하나 이상의 friend 어셈블리를 식별할 수 있습니다. 다음 예제에서는 *어셈블리 A*에서 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성을 사용하고 *어셈블리 B* 어셈블리를 friend 어셈블리로 지정합니다. 그러면 *어셈블리 B* 어셈블리가 *어셈블리 A*에서 `internal`(C#) 또는 `Friend`(Visual Basic)로 표시된 모든 형식 및 멤버에 액세스할 수 있습니다.
 
 > [!NOTE]
-> ‘어셈블리 A’와 같은 다른 어셈블리의 내부 형식이나 내부 멤버에 액세스하는 ‘어셈블리 B’와 같은 어셈블리를 컴파일하는 경우 **-out** 컴파일러 옵션을 사용하여 출력 파일( *.exe* 또는 *.dll*)의 이름을 명시적으로 지정해야 합니다.   컴파일러가 외부 참조에 바인딩할 때 작성하고 있는 어셈블리에 대해 이름을 생성하지 않았기 때문에 이 과정이 필요합니다. 자세한 내용은 [-out(C#)](../../csharp/language-reference/compiler-options/out-compiler-option.md) 또는 [-out(Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md)을 참조하세요.
+> ‘어셈블리 A’와 같은 다른 어셈블리의 내부 형식이나 내부 멤버에 액세스하는 ‘어셈블리 B’와 같은 어셈블리를 컴파일하는 경우 **-out** 컴파일러 옵션을 사용하여 출력 파일( *.exe* 또는 *.dll*)의 이름을 명시적으로 지정해야 합니다.  컴파일러가 외부 참조에 바인딩할 때 작성하고 있는 어셈블리에 대해 이름을 생성하지 않았기 때문에 이 과정이 필요합니다. 자세한 내용은 [-out(C#)](../../csharp/language-reference/compiler-options/out-compiler-option.md) 또는 [-out(Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md)을 참조하세요.
 
 ```csharp
 using System.Runtime.CompilerServices;

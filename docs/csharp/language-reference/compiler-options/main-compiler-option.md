@@ -8,12 +8,12 @@ helpviewer_keywords:
 - main compiler option [C#]
 - /main compiler option [C#]
 ms.assetid: 975cf4d5-36ac-4530-826c-4aad0c7f2049
-ms.openlocfilehash: 6c842abc1423e7ee0d98b71392e02410c6cf9172
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7d3cfce474023907eda0bc40b692e4bbb65ffb96
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69602730"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83802838"
 ---
 # <a name="-main-c-compiler-options"></a>-main(C# 컴파일러 옵션)
 이 옵션은 둘 이상의 클래스에 **Main** 메서드가 포함된 경우 프로그램에 대한 진입점을 포함하는 클래스를 지정합니다.  
@@ -44,6 +44,17 @@ ms.locfileid: "69602730"
   
      프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면 <xref:VSLangProj80.ProjectProperties3.StartupObject%2A>를 참조하세요.  
   
+### <a name="to-set-this-compiler-option-by-manually-editing-the-csproj-file"></a>수동으로 .csproj 파일을 편집하여 이 컴파일러 옵션을 설정하려면
+  
+.csproj 파일을 편집하고 `PropertyGroup` 섹션 내에 `StartupObject` 요소를 추가하여 이 옵션을 설정할 수 있습니다. 예를 들어:
+
+```
+  <PropertyGroup>
+    ...
+    <StartupObject>MyApplication.Core.Program</StartupObject>
+  </PropertyGroup>
+```
+
 ## <a name="example"></a>예제  
  **Main** 메서드가 `Test2`에 있다고 지정하여 `t2.cs` 및 `t3.cs`를 컴파일합니다.  
   
@@ -51,7 +62,7 @@ ms.locfileid: "69602730"
 csc t2.cs t3.cs -main:Test2  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 컴파일러 옵션](./index.md)
 - [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)

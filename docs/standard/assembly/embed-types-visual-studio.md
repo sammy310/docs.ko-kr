@@ -1,16 +1,17 @@
 ---
 title: '연습: Visual Studio에 관리되는 어셈블리의 형식 포함'
+description: 이 연습에서는 Visual Studio를 사용하여 .NET에서 관리되는 어셈블리의 형식을 포함하는 방법을 보여 줍니다. 포함된 형식은 버전 독립성을 지원할 수 있습니다.
 ms.date: 08/19/2019
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: f11fbedad766753ee462c5f597b823493cdaf7cf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 636e5f8095b64cd0f445555c96d00945ccf7eaf8
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75338550"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378982"
 ---
 # <a name="walkthrough-embed-types-from-managed-assemblies-in-visual-studio"></a>연습: Visual Studio에 관리되는 어셈블리의 형식 포함
 

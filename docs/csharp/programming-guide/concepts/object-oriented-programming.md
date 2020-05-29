@@ -1,13 +1,13 @@
 ---
 title: 개체 지향 프로그래밍(C#)
-ms.date: 02/08/2020
+ms.date: 05/13/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 2b6be3384f76fa210c2b52c55ecf9bd865df43a6
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 541d1a2581a3241f35fc8478040c007b6581e3b2
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200095"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396681"
 ---
 # <a name="object-oriented-programming-c"></a>개체 지향 프로그래밍(C#)
 
@@ -19,7 +19,7 @@ C#은 캡슐화, 상속, 다형성 등 개체 지향 프로그래밍에 대한 �
 
 ## <a name="classes-and-objects"></a>클래스 및 개체
 
-‘클래스’와 ‘개체’라는 용어는 각각 개체의 ‘형식’과 클래스의 ‘인스턴스’를 의미합니다.     따라서 개체를 만드는 작업을 *인스턴스화*라고 합니다. 청사진에 비유한다면 클래스는 청사진이고 개체는 해당 청사진을 사용하여 만든 빌딩입니다.
+‘클래스’와 ‘개체’라는 용어는 각각 개체의 ‘형식’과 클래스의 ‘인스턴스’를 의미합니다.    따라서 개체를 만드는 작업을 *인스턴스화*라고 합니다. 청사진에 비유한다면 클래스는 청사진이고 개체는 해당 청사진을 사용하여 만든 빌딩입니다.
 
 클래스를 정의하려면
 
@@ -29,7 +29,7 @@ class SampleClass
 }
 ```
 
-C#에는 ‘구조체’라는 형식도 있는데, 구조체는 상속이나 다형성을 지원할 필요가 없는 경우에 유용합니다. 
+C#에는 ‘구조체’라는 형식도 있는데, 구조체는 상속이나 다형성을 지원할 필요가 없는 경우에 유용합니다.
 
 구조체를 정의하려면
 
@@ -92,7 +92,6 @@ class SampleClass
 자세한 내용은 다음을 참조하세요.
 
 - [get](../../language-reference/keywords/get.md)
-
 - [set](../../language-reference/keywords/set.md)
 
 #### <a name="methods"></a>메서드
@@ -104,7 +103,7 @@ class SampleClass
 ```csharp
 class SampleClass
 {
-    public int sampleMethod(string sampleParam)
+    public int SampleMethod(string sampleParam)
     {
         // Insert code here
     }
@@ -116,8 +115,8 @@ class SampleClass
 메서드를 오버로드하려면
 
 ```csharp
-public int sampleMethod(string sampleParam) {}
-public int sampleMethod(int sampleParam) {}
+public int SampleMethod(string sampleParam) { }
+public int SampleMethod(int sampleParam) { }
 ```
 
 대부분의 경우 클래스 정의 내에서 메서드를 선언하지만 C#에서는 클래스의 실제 정의 밖에 있는 기존 클래스에 메서드를 추가할 수 있는 *확장 메서드*도 지원합니다.
@@ -156,9 +155,7 @@ public class SampleClass
 클래스나 개체에서는 특정 상황이 발생할 때 이벤트를 통해 다른 클래스나 개체에 이를 알려 줄 수 있습니다. 이벤트를 보내거나 발생시키는 클래스를 *게시자*라고 하며 이벤트를 받거나 처리하는 클래스를 *구독자*라고 합니다. 이벤트를 발생시키고 처리하는 방법에 대한 자세한 내용은 [이벤트](../../../standard/events/index.md)를 참조하세요.
 
 - 클래스에서 이벤트를 선언하려면 [event](../../language-reference/keywords/event.md) 키워드를 사용합니다.
-
 - 이벤트를 발생시키려면 이벤트 대리자를 호출합니다.
-
 - 이벤트를 구독하려면 `+=` 연산자를 사용하고 이벤트를 구독 취소하려면 `-=` 연산자를 사용합니다.
 
 #### <a name="nested-classes"></a>중첩 클래스
@@ -187,14 +184,14 @@ Container.Nested nestedInstance = new Container.Nested()
 
 다음과 같은 액세스 한정자를 사용할 수 있습니다.
 
-|C# 한정자|정의|
-|------------------|----------------|
-|[public](../../language-reference/keywords/public.md)|동일한 어셈블리의 다른 코드나 해당 어셈블리를 참조하는 다른 어셈블리의 코드에서 형식이나 멤버에 액세스할 수 있습니다.|
-|[private](../../language-reference/keywords/private.md)|동일한 클래스의 코드에서만 형식이나 멤버에 액세스할 수 있습니다.|
-|[protected](../../language-reference/keywords/protected.md)|동일한 클래스의 코드나 파생 클래스의 코드에서만 형식이나 멤버에 액세스할 수 있습니다.|
-|[internal](../../language-reference/keywords/internal.md)|동일한 어셈블리의 코드에서는 형식이나 멤버에 액세스할 수 있지만 다른 어셈블리의 코드에서는 액세스할 수 없습니다.|
-|[protected internal](../../language-reference/keywords/protected-internal.md)|동일한 어셈블리의 코드 또는 다른 어셈블리의 파생 클래스에서 형식이나 멤버에 액세스할 수 있습니다.|
-|[private protected](../../language-reference/keywords/private-protected.md)|기본 클래스 어셈블리 내 동일한 클래스 또는 파생 클래스의 코드에서 형식이나 멤버에 액세스할 수 있습니다.|
+| C# 한정자 | 정의 |
+|--|--|
+| [public](../../language-reference/keywords/public.md) | 동일한 어셈블리의 다른 코드나 해당 어셈블리를 참조하는 다른 어셈블리의 코드에서 형식이나 멤버에 액세스할 수 있습니다. |
+| [private](../../language-reference/keywords/private.md) | 동일한 클래스의 코드에서만 형식이나 멤버에 액세스할 수 있습니다. |
+| [protected](../../language-reference/keywords/protected.md) | 동일한 클래스의 코드나 파생 클래스의 코드에서만 형식이나 멤버에 액세스할 수 있습니다. |
+| [internal](../../language-reference/keywords/internal.md) | 동일한 어셈블리의 코드에서는 형식이나 멤버에 액세스할 수 있지만 다른 어셈블리의 코드에서는 액세스할 수 없습니다. |
+| [protected internal](../../language-reference/keywords/protected-internal.md) | 동일한 어셈블리의 코드 또는 다른 어셈블리의 파생 클래스에서 형식이나 멤버에 액세스할 수 있습니다. |
+| [private protected](../../language-reference/keywords/private-protected.md) | 기본 클래스 어셈블리 내 동일한 클래스 또는 파생 클래스의 코드에서 형식이나 멤버에 액세스할 수 있습니다. |
 
 자세한 내용은 [액세스 한정자](../classes-and-structs/access-modifiers.md)를 참조하세요.
 
@@ -212,15 +209,18 @@ SampleClass sampleObject = new SampleClass();
 // Set a property value.
 sampleObject.sampleProperty = "Sample String";
 // Call a method.
-sampleObject.sampleMethod();
+sampleObject.SampleMethod();
 ```
 
 클래스를 인스턴스화하는 동안 속성에 값을 할당하려면 다음과 같이 개체 이니셜라이저를 사용합니다.
 
 ```csharp
 // Set a property value.
-SampleClass sampleObject = new SampleClass
-    { FirstProperty = "A", SecondProperty = "B" };
+var sampleObject = new SampleClass
+{
+    FirstProperty = "A",
+    SecondProperty = "B"
+};
 ```
 
 자세한 내용은 다음을 참조하세요.
@@ -259,8 +259,11 @@ C#의 정적 클래스는 정적 멤버만 포함하며 인스턴스화할 수 �
 
 ```csharp
 // sampleObject is an instance of a simple anonymous type.
-var sampleObject =
-    new { FirstProperty = "A", SecondProperty = "B" };
+var sampleObject = new
+{
+    FirstProperty = "A",
+    SecondProperty = "B"
+};
 ```
 
 자세한 내용은 다음을 참조하세요. [익명 형식](../classes-and-structs/anonymous-types.md)을 참조하세요.
@@ -275,7 +278,7 @@ var sampleObject =
 기본 클래스에서 상속하려면
 
 ```csharp
-class DerivedClass:BaseClass {}
+class DerivedClass:BaseClass { }
 ```
 
 기본적으로 모든 클래스는 상속될 수 있지만 클래스가 기본 클래스로 사용되지 않아야 하는지 여부를 지정하거나 기본 클래스로만 사용될 수 있는 클래스를 만들 수도 있습니다.
@@ -295,7 +298,6 @@ public abstract class B { }
 자세한 내용은 다음을 참조하세요.
 
 - [sealed](../../language-reference/keywords/sealed.md)
-
 - [abstract](../../language-reference/keywords/abstract.md)
 
 ### <a name="overriding-members"></a>멤버 재정의
@@ -304,12 +306,12 @@ public abstract class B { }
 
 다음 한정자는 속성 및 메서드가 재정의되는 방식을 제어하는 데 사용됩니다.
 
-|C# 한정자|정의|
-|------------------|----------------|
-|[virtual](../../language-reference/keywords/virtual.md)|파생 클래스에서 클래스 멤버를 재정의할 수 있도록 합니다.|
-|[override](../../language-reference/keywords/override.md)|기본 클래스에 정의된 가상(재정의 가능) 멤버를 재정의합니다.|
-|[abstract](../../language-reference/keywords/abstract.md)|파생 클래스에서 클래스 멤버가 재정의되도록 합니다.|
-|[new 한정자](../../language-reference/keywords/new-modifier.md)|기본 클래스에서 상속된 멤버를 숨깁니다.|
+| C# 한정자 | 정의 |
+|--|--|
+| [virtual](../../language-reference/keywords/virtual.md) | 파생 클래스에서 클래스 멤버를 재정의할 수 있도록 합니다. |
+| [override](../../language-reference/keywords/override.md) | 기본 클래스에 정의된 가상(재정의 가능) 멤버를 재정의합니다. |
+| [abstract](../../language-reference/keywords/abstract.md) | 파생 클래스에서 클래스 멤버가 재정의되도록 합니다. |
+| [new 한정자](../../language-reference/keywords/new-modifier.md) | 기본 클래스에서 상속된 멤버를 숨깁니다. |
 
 ## <a name="interfaces"></a>인터페이스
 
@@ -320,7 +322,7 @@ public abstract class B { }
 ```csharp
 interface ISampleInterface
 {
-    void doSomething();
+    void DoSomething();
 }
 ```
 
@@ -329,7 +331,7 @@ interface ISampleInterface
 ```csharp
 class SampleClass : ISampleInterface
 {
-    void ISampleInterface.doSomething()
+    void ISampleInterface.DoSomething()
     {
         // Method implementation.
     }
@@ -354,15 +356,14 @@ public class SampleGeneric<T>
 제네릭 클래스의 인스턴스를 만들려면
 
 ```csharp
-SampleGeneric<string> sampleObject = new SampleGeneric<string>();
+var sampleObject = new SampleGeneric<string>();
 sampleObject.Field = "Sample string";
 ```
 
 자세한 내용은 다음을 참조하세요.
 
-- [제네릭](../../../standard/generics/index.md)
-
-- [제네릭](../generics/index.md)
+- [.NET의 제네릭](../../../standard/generics/index.md)
+- [제네릭 - C# 프로그래밍 가이드](../generics/index.md)
 
 ## <a name="delegates"></a>대리자
 
@@ -383,10 +384,11 @@ public delegate void SampleDelegate(string str);
 class SampleClass
 {
     // Method that matches the SampleDelegate signature.
-    public static void sampleMethod(string message)
+    public static void SampleMethod(string message)
     {
         // Add code here.
     }
+
     // Method that instantiates the delegate.
     void SampleDelegate()
     {

@@ -1,18 +1,19 @@
 ---
 title: .NET Core 프로젝트 SDK 개요
+titleSuffix: ''
 description: .NET Core 프로젝트 SDK에 대해 알아봅니다.
 ms.date: 02/02/2020
 ms.topic: conceptual
-ms.openlocfilehash: d0ac01dca31dffea482745126e00c34b1da20774
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 88ec1bf2c4917c69b80b997d090219097694d2bc
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389665"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83206053"
 ---
 # <a name="net-core-project-sdks"></a>.NET Core 프로젝트 SDK
 
-.NET Core 프로젝트는 SDK(소프트웨어 개발 키트)와 연결됩니다. 각 ‘프로젝트 SDK’는 코드를 컴파일, 압축 및 게시해야 하는 MSBuild [대상](/visualstudio/msbuild/msbuild-targets) 및 관련 [작업](/visualstudio/msbuild/msbuild-tasks) 집합입니다.  프로젝트 SDK를 참조하는 프로젝트를 ‘SDK 스타일 프로젝트’라고도 합니다. 
+.NET Core 프로젝트는 SDK(소프트웨어 개발 키트)와 연결됩니다. 각 ‘프로젝트 SDK’는 코드를 컴파일, 압축 및 게시해야 하는 MSBuild [대상](/visualstudio/msbuild/msbuild-targets) 및 관련 [작업](/visualstudio/msbuild/msbuild-tasks) 집합입니다. 프로젝트 SDK를 참조하는 프로젝트를 ‘SDK 스타일 프로젝트’라고도 합니다.
 
 ## <a name="available-sdks"></a>사용 가능한 SDK
 
@@ -82,7 +83,7 @@ SDK를 지정하는 또 다른 방법은 최상위 [Sdk](/visualstudio/msbuild/s
 
 ### <a name="default-compilation-includes"></a>기본 컴파일 포함
 
-컴파일 항목 및 포함된 리소스의 기본 포함 및 제외는 SDK에서 정의됩니다. SDK가 아닌 .NET Framework 프로젝트와 달리 기본값은 대부분의 일반적인 사용 사례를 처리하므로 프로젝트 파일에서 해당 항목을 지정할 필요가 없습니다. 결과적으로 프로젝트 파일 수가 줄어 쉽게 이해하고 편집(필요한 경우)할 수 있습니다.
+컴파일 항목, 포함된 리소스 및 `None` 항목의 기본 포함 및 제외는 SDK에서 정의됩니다. SDK가 아닌 .NET Framework 프로젝트와 달리 기본값은 대부분의 일반적인 사용 사례를 처리하므로 프로젝트 파일에서 해당 항목을 지정할 필요가 없습니다. 그러면 프로젝트 파일이 크기가 줄어들고 더 쉽게 이해하고 필요에 따라 수동으로 편집할 수 있습니다.
 
 다음 표에는 .NET Core SDK에 포함되거나 제외되는 요소 및 [GLOB](https://en.wikipedia.org/wiki/Glob_(programming))가 나와 있습니다.
 
@@ -95,39 +96,43 @@ SDK를 지정하는 또 다른 방법은 최상위 [Sdk](/visualstudio/msbuild/s
 > [!NOTE]
 > `$(BaseOutputPath)` 및 `$(BaseIntermediateOutputPath)` MSBuild 속성으로 나타내는 `./bin` 및 `./obj` 폴더는 기본적으로 GLOB에서 제외됩니다. 제외는 `$(DefaultItemExcludes)` 속성으로 나타냅니다.
 
-프로젝트 파일에서 해당 항목을 명시적으로 정의하는 경우 다음 오류가 발생할 수 있습니다.
+#### <a name="build-errors"></a>빌드 오류
 
-**중복된 컴파일 항목이 포함되었습니다. .NET SDK에는 기본적으로 프로젝트 디렉터리의 컴파일 항목이 포함됩니다. 프로젝트 파일에서 해당 항목을 제거하거나, 프로젝트 파일에서 해당 항목을 명시적으로 포함하려면 'EnableDefaultCompileItems' 속성을 'false'로 설정하면 됩니다.**
+프로젝트 파일에서 이러한 항목을 명시적으로 정의하는 경우 다음과 비슷한 "NETSDK1022" 빌드 오류가 발생할 수 있습니다.
 
-오류를 해결하려면 앞의 표에 나열된 명시적 `Compile` 항목을 제거하거나, `EnableDefaultCompileItems` 속성을 `false`로 설정하여 암시적 포함을 사용하지 않도록 설정합니다.
+  > 중복된 'Compile' 항목이 포함되었습니다. .NET SDK에는 기본적으로 프로젝트 디렉터리의 'Compile' 항목이 포함됩니다. 프로젝트 파일에서 이러한 항목을 제거하거나, 프로젝트 파일에서 이러한 항목을 명시적으로 포함하려면 'EnableDefaultCompileItems' 속성을 'false'로 설정할 수 있습니다.
 
-```xml
-<PropertyGroup>
-  <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-</PropertyGroup>
-```
+  > 중복된 'EmbeddedResource' 항목이 포함되었습니다. .NET SDK에는 기본적으로 프로젝트 디렉터리의 'EmbeddedResource' 항목이 포함됩니다. 프로젝트 파일에서 해당 항목을 제거하거나, 프로젝트 파일에 해당 항목을 명시적으로 포함하려면 'EnableDefaultEmbeddedResourceItems' 속성을 'false'로 설정할 수 있습니다.
 
-예를 들어 앱과 함께 게시할 일부 파일을 지정하려는 경우 해당 항목(예: `Content` 요소)에 알려진 MSBuild 메커니즘을 계속 사용할 수 있습니다.
+오류를 해결하려면 다음 중 하나를 수행합니다.
 
-`EnableDefaultCompileItems`는 `Compile` GLOB를 사용하지 않도록 설정할 뿐 아니라 \*.cs 항목에도 적용되는 암시적 `None` GLOB 같은 다른 GLOB에 영향을 주지 않습니다. 이로 인해 Visual Studio의 솔루션 탐색기에는 \*.cs 항목이 `None` 항목으로 포함된 프로젝트의 일부로 표시됩니다. 암시적 `None` GLOB를 사용하지 않도록 설정하려면 `EnableDefaultNoneItems`를 `false`로 설정합니다.
+- 앞의 표에 나열된 암시적 `Compile`, `EmbeddedResource` 또는 `None` 항목과 일치하는 항목을 제거합니다.
 
-```xml
-<PropertyGroup>
-  <EnableDefaultNoneItems>false</EnableDefaultNoneItems>
-</PropertyGroup>
-```
+- 모든 암시적 파일 포함을 사용하지 않으려면 `EnableDefaultItems` 속성을 `false`로 설정합니다.
 
-‘모든’ 암시적 GLOB를 사용하지 않도록 설정하려면 `EnableDefaultItems` 속성을 `false`로 설정합니다. 
+  ```xml
+  <PropertyGroup>
+    <EnableDefaultItems>false</EnableDefaultItems>
+  </PropertyGroup>
+  ```
 
-```xml
-<PropertyGroup>
-  <EnableDefaultItems>false</EnableDefaultItems>
-</PropertyGroup>
-```
+  앱과 함께 게시할 파일을 지정하려는 경우 해당 항목(예: `Content` 요소)에 알려진 MSBuild 메커니즘을 계속 사용할 수 있습니다.
+
+- `EnableDefaultCompileItems`, `EnableDefaultEmbeddedResourceItems` 또는 `EnableDefaultNoneItems` 속성을 `false`로 설정하여 `Compile`, `EmbeddedResource` 또는 `None` GLOB만 사용하지 않도록 설정합니다.
+
+  ```xml
+  <PropertyGroup>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+    <EnableDefaultNoneItems>false</EnableDefaultNoneItems>
+  </PropertyGroup>
+  ```
+
+  `Compile` GLOB만 사용하지 않도록 설정하는 경우 Visual Studio의 솔루션 탐색기는 \*.cs 항목을 `None` 항목으로 포함된 프로젝트의 일부로 계속 표시합니다. 암시적 `None` GLOB를 사용하지 않도록 설정하려면 `EnableDefaultNoneItems`도 `false`로 설정합니다.
 
 ## <a name="customize-the-build"></a>빌드 사용자 지정
 
-다양한 방법으로 [빌드를 사용자 지정](/visualstudio/msbuild/customize-your-build)할 수 있습니다. [msbuild](/visualstudio/msbuild/msbuild-command-line-reference) 또는 [dotnet](../tools/index.md) 명령에 인수로 전달하여 속성을 재정의할 수 있습니다. 또한 프로젝트 파일 또는 *Directory.Build.props* 파일에 속성을 추가할 수 있습니다. .NET Core 프로젝트의 유용한 속성 목록을 보려면 [.NET Core SDK 프로젝트의 MSBuild 속성](msbuild-props.md)을 참조하세요.
+다양한 방법으로 [빌드를 사용자 지정](/visualstudio/msbuild/customize-your-build)할 수 있습니다. [msbuild](/visualstudio/msbuild/msbuild-command-line-reference) 또는 [dotnet](../tools/index.md) 명령에 인수로 전달하여 속성을 재정의할 수 있습니다. 또한 프로젝트 파일 또는 *Directory.Build.props* 파일에 속성을 추가할 수 있습니다. .NET Core 프로젝트의 유용한 속성 목록을 보려면 [.NET Core SDK 프로젝트용 MSBuild 참조](msbuild-props.md)를 참조하세요.
 
 ### <a name="custom-targets"></a>사용자 지정 대상
 

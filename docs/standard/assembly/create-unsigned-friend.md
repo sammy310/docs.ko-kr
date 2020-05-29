@@ -1,16 +1,17 @@
 ---
 title: '방법: 서명되지 않은 friend 어셈블리 만들기'
+description: 이 문서에서는 서명되지 않은 어셈블리와 함께 friend 어셈블리를 사용하는 방법을 보여 줍니다. .NET 보안에 대한 정보를 포함합니다.
 ms.date: 08/19/2019
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: f8fec064507553b8208083578165965de2303a33
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8d3e13669c36048759fedeb3df1bfb59fd476317
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74352432"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378964"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies"></a>방법: 서명되지 않은 friend 어셈블리 만들기
 

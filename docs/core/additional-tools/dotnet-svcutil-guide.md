@@ -3,12 +3,12 @@ title: WCF svcutil 도구 개요
 description: .NET Framework 프로젝트용 WCF svcutil 도구와 유사하게, .NET Core 및 ASP.NET Core 프로젝트 기능을 추가하는 Microsoft WCF dotnet-svcutil 도구에 대한 개요입니다.
 author: mlacouture
 ms.date: 02/22/2019
-ms.openlocfilehash: 0607c73935f319f2cc0d8d9f92d96a4c71c54edf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fde42f7d040fba91f51ce6faa58282ed0206a853
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76920943"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396213"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>.NET Core용 WCF dotnet-svcutil 도구
 
@@ -21,7 +21,7 @@ WCF(Windows Communication Foundation) **dotnet-svcutil** 도구는 네트워크 
 > [!IMPORTANT]
 > 신뢰할 수 있는 원본의 서비스만 참조해야 합니다. 신뢰할 수 없는 원본에서 참조를 추가하면 보안이 손상될 수 있습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 <!-- markdownlint-disable MD025 -->
 
@@ -119,7 +119,7 @@ Windows, macOS 또는 Linux 명령 창에서 다음 단계를 수행합니다.
 
 2. 사용하려는 클라이언트 클래스 및 작업의 이름을 찾습니다. `Reference.cs`는 `System.ServiceModel.ClientBase`에서 상속되는 클래스와 서비스에서 작업을 호출하는 데 사용할 수 있는 메서드를 포함합니다. 이 예제에서는 _SayHello_ 서비스의 _Hello_ 작업을 호출합니다. `ServiceReference.SayHelloClient`는 클라이언트 클래스의 이름이고, 작업을 호출하는 데 사용할 수 있는 `HelloAsync`라는 메서드를 갖습니다.
 
-3. 편집기에서 `Startup.cs` 파일을 열고 상단에 서비스 참조 네임스페이스를 위한 using 문을 추가합니다.
+3. 편집기에서 `Startup.cs` 파일을 열고 상단에 서비스 참조 네임스페이스를 위한 `using` 지시문을 추가합니다.
 
     ```csharp
     using ServiceReference;
@@ -128,7 +128,7 @@ Windows, macOS 또는 Linux 명령 창에서 다음 단계를 수행합니다.
 4. `Configure` 메서드가 웹 서비스를 호출하도록 편집합니다. 이렇게 하려면 `ClientBase`에서 상속되는 클래스의 인스턴스를 만들고 클라이언트 개체에서 메서드를 호출합니다.
 
     ```csharp
-    public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
         if (env.IsDevelopment())
         {
@@ -153,7 +153,7 @@ Windows, macOS 또는 Linux 명령 창에서 다음 단계를 수행합니다.
 
 6. 웹 브라우저에서, 콘솔에 나열된 URL(예: `http://localhost:5000`)로 이동합니다.
 
-“Hello dotnet-svcutil!” 출력이 표시됩니다.
+다음과 같은 내용이 출력됩니다. "Hello dotnet-svcutil!"
 
 `dotnet-svcutil` 도구 매개 변수에 대한 자세한 설명을 보려면 다음과 같이 help 매개 변수를 전달하는 도구를 호출합니다.
 # <a name="dotnet-svcutil-2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
@@ -178,6 +178,6 @@ dotnet svcutil --help
 
 - 알려진 문제를 비롯한 업데이트된 릴리스 정보는 [릴리스 정보](https://github.com/dotnet/wcf/blob/master/release-notes/dotnet-svcutil-notes.md)를 참조하세요.
 
-## <a name="information"></a>Information
+## <a name="information"></a>정보
 
 - [dotnet-svcutil NuGet 패키지](https://nuget.org/packages/dotnet-svcutil)

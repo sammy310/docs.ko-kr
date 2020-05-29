@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: be5c26c81480dc2854b849dd7f2b1c46ee3e526a
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 422cb7b20e2644ab44f9573f101fb6b53ab1dd2f
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989170"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378832"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0의 새로운 기능
 
@@ -63,7 +63,7 @@ Visual Studio를 사용하고 있는 경우 Visual Studio 2017은 **.NET Standar
 
 ### <a name="macos-apphost-and-notarization"></a>macOS appHost 및 공증
 
-‘macOS만 해당’ 
+‘macOS만 해당’
 
 공증된 macOS용 .NET Core SDK 3.0부터, 기본 실행 파일(appHost)을 생성하는 설정이 기본적으로 사용하지 않도록 설정됩니다. 자세한 내용은 [macOS Catalina 공증과 이것이 .NET Core 다운로드 및 프로젝트에 미치는 영향](../install/macos-notarization-issues.md)을 참조하세요.
 
@@ -233,6 +233,8 @@ R2R 이진 파일은 애플리케이션이 로드될 때 JIT(Just-In-Time) 컴�
 롤포워드하지 않습니다. 지정된 버전에만 바인딩합니다. 이 정책은 최신 패치를 롤포워드할 수 있는 기능을 사용하지 않도록 설정하므로 일반 용도에는 좋지 않습니다. 이 값은 테스트용으로만 사용하는 것이 좋습니다.
 
 **Disable** 설정 이외에도 모든 설정에서 사용 가능한 가장 높은 패치 버전을 사용합니다.
+
+기본적으로 요청된 버전(애플리케이션에 대한 `.runtimeconfig.json`에 지정됨)이 릴리스 버전인 경우에만 릴리스 버전이 롤포워드를 고려합니다. 시험판 버전은 무시됩니다. 일치하는 릴리스 버전이 없는 경우 시험판 버전이 고려됩니다. 이 동작은 `DOTNET_ROLL_FORWARD_TO_PRERELEASE=1`을 설정하여 변경할 수 있으며, 이 경우 모든 버전이 항상 고려됩니다.
 
 ### <a name="build-copies-dependencies"></a>빌드 복사본 종속성
 

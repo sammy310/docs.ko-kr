@@ -1,13 +1,13 @@
 ---
 title: Docker 앱을 위한 개발 환경
 description: Docker 개발 수명 주기를 지원하는 가장 중요한 개발 도구 옵션을 알아봅니다.
-ms.date: 02/15/2019
-ms.openlocfilehash: 35236e75f47e830d0970ca9cfd074d9a69e6f85c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/16/2020
+ms.openlocfilehash: b1df16db88fa85f794407c989f5428030c4cddf7
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "71214295"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83394894"
 ---
 # <a name="development-environment-for-docker-apps"></a>Docker 앱을 위한 개발 환경
 
@@ -26,7 +26,7 @@ ms.locfileid: "71214295"
 
 ### <a name="visual-studio-with-docker-tools-windows-development-machine"></a>Docker 도구가 포함된 Visual Studio(Windows 개발 머신)
 
-기본 제공 Docker 도구를 사용하도록 설정된 Visual Studio 2017(이상)을 사용하는 것이 좋습니다. Visual Studio가 있으면 원하는 Docker 환경에서 직접 애플리케이션을 개발하고, 실행하고, 유효성을 검사할 수 있습니다. F5 키를 눌러 Docker 호스트에서 직접 애플리케이션(단일 컨테이너 또는 여러 컨테이너)을 디버그하거나, Ctrl+F5 키를 눌러 컨테이너를 다시 빌드하지 않고 앱을 편집하고 새로 고칠 수 있습니다. 이 방법은 Windows 개발자가 Linux 또는 Windows용 Docker 컨테이너를 만들 수 있는 가장 간단하면서도 강력한 옵션입니다.
+기본 제공 Docker 도구를 사용하도록 설정된 Visual Studio 2019를 사용하는 것이 좋습니다. Visual Studio가 있으면 원하는 Docker 환경에서 직접 애플리케이션을 개발하고, 실행하고, 유효성을 검사할 수 있습니다. F5 키를 눌러 Docker 호스트에서 직접 애플리케이션(단일 컨테이너 또는 여러 컨테이너)을 디버그하거나, Ctrl+F5 키를 눌러 컨테이너를 다시 빌드하지 않고 앱을 편집하고 새로 고칠 수 있습니다. 이 방법은 Windows 개발자가 Linux 또는 Windows용 Docker 컨테이너를 만들 수 있는 가장 간단하면서도 강력한 옵션입니다.
 
 ### <a name="visual-studio-for-mac-mac-development-machine"></a>Mac용 Visual Studio(Mac 개발 머신)
 

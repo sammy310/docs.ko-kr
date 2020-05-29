@@ -2,12 +2,12 @@
 title: dotnet 명령
 description: dotnet 명령(.NET Core CLI의 일반 드라이버) 및 사용법에 대해 알아봅니다.
 ms.date: 02/13/2020
-ms.openlocfilehash: 6a08297499d955db44e342dc82fed25b7b9b8171
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 88e92b3ff5e8f68b980015a817434dd2d67df93a
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739075"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378837"
 ---
 # <a name="dotnet-command"></a>dotnet 명령
 
@@ -110,7 +110,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 ### <a name="runtime-options"></a>런타임 옵션
 
-`dotnet`이 애플리케이션을 실행할 때 사용할 수 있는 옵션은 다음과 같습니다. 예: `dotnet myapp.dll --fx-version 3.1.1`.
+`dotnet`이 애플리케이션을 실행할 때 사용할 수 있는 옵션은 다음과 같습니다. 예: `dotnet myapp.dll --roll-forward Major`.
 
 - **`--additionalprobingpath <PATH>`**
 
@@ -120,23 +120,13 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
   추가적인 *.deps.json* 파일의 경로입니다. *deps.json* 파일에는 어셈블리 충돌을 해결하는 데 사용되는 종속성, 컴파일 종속성 및 버전 정보 목록이 포함됩니다. 자세한 내용은 GitHub에서 [런타임 구성 파일](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)을 참조하세요.
 
-- **`--fx-version <VERSION>`**
+- **`--depsfile <PATH_TO_DEPSFILE>`**
 
-  애플리케이션 실행에 사용할 .NET Core 런타임의 버전입니다.
+  *deps.json* 파일의 경로입니다. *deps.json* 파일은 애플리케이션을 실행하는 데 필요한 종속성에 대한 정보를 포함하는 구성 파일입니다. 이 파일은 .NET Core SDK에 의해 생성됩니다.
 
 - **`--runtimeconfig`**
 
   *runtimeconfig.json* 파일의 경로입니다. *runtimeconfig.json* 파일은 런타임 설정을 포함하는 구성 파일입니다. 자세한 내용은 [.NET Core 런타임 구성 설정](../run-time-config/index.md#runtimeconfigjson)을 참조하세요.
-
-- **`--roll-forward-on-no-candidate-fx <N>`** **.NET Core 2.x SDK에서 사용할 수 있습니다.**
-
-  필요한 공유 프레임워크를 사용할 수 없을 때 동작을 정의합니다. `N`는 다음이 될 수 있습니다.
-
-  - `0` - 부 버전 롤포워드도 사용하지 않도록 설정합니다.
-  - `1` - 부 버전에서는 롤포워드하지만 주 버전에서는 롤포워드하지 않습니다. 이것은 기본적인 동작입니다.
-  - `2` - 부 버전과 주 버전에서 롤포워드합니다.
-
-   자세한 내용은 [롤포워드](../whats-new/dotnet-core-2-1.md#roll-forward)를 참조하세요.
 
 - **`--roll-forward <SETTING>`** **.NET Core SDK 3.0부터 사용할 수 있습니다.**
 
@@ -149,9 +139,27 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
   - `LatestMajor` - 요청된 주 버전이 있는 경우에도 가장 높은 주 버전, 가장 높은 부 버전으로 롤포워드합니다. 구성 요소 호스팅 시나리오를 위한 것입니다.
   - `Disable` - 롤포워드하지 않습니다. 지정된 버전에만 바인딩합니다. 이 정책은 최신 패치를 롤포워드할 수 있는 기능을 사용하지 않도록 설정하므로 일반 용도에는 좋지 않습니다. 이 값은 테스트용으로만 사용하는 것이 좋습니다.
 
-`Disable`을 제외하고, 모든 설정에서 사용 가능한 가장 높은 패치 버전을 사용합니다.
+  `Disable`을 제외하고, 모든 설정에서 사용 가능한 가장 높은 패치 버전을 사용합니다.
 
-롤포워드 동작은 프로젝트 파일 속성, 런타임 구성 파일 속성 및 환경 변수에서도 구성할 수 있습니다. 자세한 내용은 [주 버전 런타임 롤포워드](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward)를 참조하세요.
+  롤포워드 동작은 프로젝트 파일 속성, 런타임 구성 파일 속성 및 환경 변수에서도 구성할 수 있습니다. 자세한 내용은 [주 버전 런타임 롤포워드](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward)를 참조하세요.
+
+- **`--roll-forward-on-no-candidate-fx <N>`** **.NET Core 2.x SDK에서 사용할 수 있습니다.**
+
+  필요한 공유 프레임워크를 사용할 수 없을 때 동작을 정의합니다. `N`는 다음이 될 수 있습니다.
+
+  - `0` - 부 버전 롤포워드도 사용하지 않도록 설정합니다.
+  - `1` - 부 버전에서는 롤포워드하지만 주 버전에서는 롤포워드하지 않습니다. 이것은 기본적인 동작입니다.
+  - `2` - 부 버전과 주 버전에서 롤포워드합니다.
+
+  자세한 내용은 [롤포워드](../whats-new/dotnet-core-2-1.md#roll-forward)를 참조하세요.
+
+  .NET Core 3.0부터 이 옵션은 `--roll-forward`로 대체되었으므로 이 옵션을 대신 사용해야 합니다.
+
+- **`--fx-version <VERSION>`**
+
+  애플리케이션 실행에 사용할 .NET Core 런타임의 버전입니다.
+
+  이 옵션은 애플리케이션의 `.runtimeconfig.json` 파일에 있는 첫 번째 프레임워크 참조의 버전을 재정의합니다. 그러므로 프레임워크 참조가 하나만 있는 경우에만 예상대로 작동합니다. 애플리케이션에 둘 이상의 프레임워크 참조가 있는 경우 이 옵션을 사용하면 오류가 발생할 수 있습니다.
 
 ## <a name="dotnet-commands"></a>dotnet 명령
 
@@ -274,13 +282,21 @@ dotnet myapp.dll
 
   전역 위치에서 .NET Core 런타임, 공유 프레임워크 또는 SDK가 확인되는지 여부를 지정합니다. 설정하지 않은 경우 기본값은 1(논리적 `true`)입니다. 전역 위치에서 확인하지 않고 격리된 .NET Core 설치를 사용하려면 0(논리적 `false`)으로 설정합니다. 다중 수준의 조회에 대한 자세한 내용은 [다중 수준 SharedFX 조회](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md)를 참조하세요.
 
-- `DOTNET_ROLL_FORWARD` **.NET Core 3.x SDK부터 사용할 수 있습니다.**
+- `DOTNET_ROLL_FORWARD` **.NET Core 3.x부터 사용할 수 있습니다.**
 
   롤포워드 동작을 결정합니다. 자세한 내용은 이 문서 앞부분에서 `--roll-forward` 옵션을 참조하세요.
 
-- `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` **.NET Core 2.x SDK에서 사용할 수 있습니다.**
+- `DOTNET_ROLL_FORWARD_TO_PRERELEASE` **.NET Core 3.x부터 사용할 수 있습니다.**
+
+  `1`(사용)로 설정된 경우 릴리스 버전에서 시험판 버전으로 롤포워드를 사용하도록 설정합니다. 기본적으로(`0` - 사용 안 함), .NET Core 런타임의 릴리스 버전이 요청되면 롤포워드는 설치된 릴리스 버전만 고려합니다.
+
+  자세한 내용은 [롤포워드](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward)를 참조하세요.
+
+- `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` **.NET Core 2.x에서 사용할 수 있습니다.**
 
   `0`으로 설정된 경우 부 버전 롤포워드를 사용하지 않도록 설정합니다. 자세한 내용은 [롤포워드](../whats-new/dotnet-core-2-1.md#roll-forward)를 참조하세요.
+
+  이 설정은 .NET Core 3.0에서 `DOTNET_ROLL_FORWARD`로 대체되었습니다. 새 설정을 대신 사용해야 합니다.
 
 - `DOTNET_CLI_UI_LANGUAGE`
 
@@ -306,9 +322,25 @@ dotnet myapp.dll
 
   시작 후크를 로드하고 실행하는 어셈블리의 목록입니다.
 
+- `DOTNET_BUNDLE_EXTRACT_BASE_DIR` **.NET Core 3.x부터 사용할 수 있습니다.**
+
+  단일 파일 애플리케이션이 실행되기 전에 추출되는 디렉터리를 지정합니다.
+
+  자세한 내용은 [단일 파일 실행 파일](../whats-new/dotnet-core-3-0.md#single-file-executables)을 참조하세요.
+
 - `COREHOST_TRACE`, `COREHOST_TRACEFILE`, `COREHOST_TRACE_VERBOSITY`
 
   호스팅 구성 요소(예: `dotnet.exe`, `hostfxr`, `hostpolicy`)에서 진단 추적을 제어합니다.
+
+  * `COREHOST_TRACE=[0/1]` -기본값은 `0`(추적 사용 안 함)입니다. `1`로 설정된 경우 진단 추적이 사용됩니다.
+  * `COREHOST_TRACEFILE=<file path>` - `COREHOST_TRACE=1`을 통해 추적을 사용하도록 설정한 경우에만 유효합니다. 설정되면 추적 정보가 지정된 파일에 기록되고, 그렇지 않으면 추적 정보가 `stderr`에 기록됩니다. **.NET Core 3.x부터 사용할 수 있습니다.**
+  * `COREHOST_TRACE_VERBOSITY=[1/2/3/4]` - 기본값은 `4`입니다. 이 설정은 `COREHOST_TRACE=1`을 통해 추적을 사용하도록 설정한 경우에만 사용됩니다. **.NET Core 3.x부터 사용할 수 있습니다.**
+    * `4` - 모든 추적 정보가 기록됩니다.
+    * `3` - 정보, 경고 및 오류 메시지만 기록됩니다.
+    * `2` - 경고 및 오류 메시지만 기록됩니다.
+    * `1` - 오류 메시지만 기록됩니다.
+
+  애플리케이션 시작에 대한 자세한 추적 정보를 얻는 일반적인 방법은 `COREHOST_TRACE=1` 및 `COREHOST_TRACEFILE=host_trace.txt`를 설정하고 애플리케이션을 실행하는 것입니다. 현재 디렉터리에 새 파일 `host_trace.txt`가 생성되어 자세한 정보가 기록됩니다.
 
 ## <a name="see-also"></a>참조
 

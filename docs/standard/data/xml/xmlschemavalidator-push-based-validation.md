@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
-ms.openlocfilehash: 6a0cc110c2b8bcd97b9f5c16a344db5a63046353
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d5b2fe4325000023acc98580a2a6d014f56fecbd
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709805"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419111"
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>XmlSchemaValidator 푸시 기반 유효성 검사
 
@@ -456,7 +456,7 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
 |------------|-----------------|
 |&#124;|세로 막대 앞이나 뒤의 메서드 또는 상태를 호출할 수 있습니다.|
 |?|물음표 앞의 메서드나 상태는 선택 항목이지만 이 메서드나 상태를 호출할 경우에는 한 번만 호출할 수 있습니다.|
-|*|\* 기호 앞의 메서드나 상태는 선택 항목이며 두 번 이상 호출할 수 있습니다.|
+|\*|\* 기호 앞의 메서드 또는 상태는 선택 항목이며 두 번 이상 호출할 수 있습니다.|
 
 ## <a name="validation-context"></a>유효성 검사 컨텍스트
 

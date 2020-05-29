@@ -4,12 +4,12 @@ description: Windows용 .NET Core에 .NET Framework Windows Forms 애플리케�
 author: Thraka
 ms.author: adegeo
 ms.date: 01/24/2020
-ms.openlocfilehash: 80b4bb225d6a6748743d91a4c70e8b09c10cc94b
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: efa73428c816eddc00c62c2275d3457c92284388
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635519"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83206130"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>.NET Core에 Windows Forms 데스크톱 앱을 포팅하는 방법
 
@@ -26,9 +26,10 @@ ms.locfileid: "80635519"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- 수행할 디자이너 작업용 [Visual Studio 2019 16.5 Preview 1](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&ch=pre&rel=16) 이상. [Visual Studio Preview 버전](https://visualstudio.microsoft.com/vs/preview/)으로 업데이트하는 것이 좋습니다.
+- 수행할 디자이너 작업용 [Visual Studio 2019 16.5 Preview 1](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&ch=pre&rel=16) 이상. [Visual Studio 미리 보기 버전](https://visualstudio.microsoft.com/vs/preview/)으로 업데이트하는 것이 좋습니다.
 
   다음 Visual Studio 워크로드를 설치합니다.
+  
   - .NET 데스크톱 개발
   - .NET Core 플랫폼 간 개발
 

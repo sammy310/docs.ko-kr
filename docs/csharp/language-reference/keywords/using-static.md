@@ -4,12 +4,12 @@ ms.date: 03/10/2017
 helpviewer_keywords:
 - using static directive [C#]
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
-ms.openlocfilehash: 55847aceb9fdf032ba533b82ee59be53761fa2c2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bffbc026e8f7937db91d42b7a06a5b7bba3bc2f8
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712951"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396147"
 ---
 # <a name="using-static-directive-c-reference"></a>using 정적 지시문(C# 참조)
 
@@ -19,7 +19,7 @@ ms.locfileid: "75712951"
 using static <fully-qualified-type-name>;
 ```
 
-여기서 *fully-qualified-type-name*은 형식 이름을 지정하지 않고 정적 멤버 및 중첩 형식을 참조할 수 있는 형식의 이름입니다. 정규화된 형식 이름(전체 네임스페이스 및 형식 이름)을 제공하지 않으면 C#은 컴파일러 오류 [CS0246](../compiler-messages/cs0246.md), "'type/namespace' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인합니다."를 생성합니다.
+여기서 *fully-qualified-type-name*은 형식 이름을 지정하지 않고 정적 멤버 및 중첩 형식을 참조할 수 있는 형식의 이름입니다. 정규화된 형식 이름(전체 네임스페이스 및 형식 이름)을 제공하지 않으면 C#에 컴파일러 오류 [CS0246](../compiler-messages/cs0246.md): “‘type/namespace’ 형식 또는 네임스페이스 이름을 찾을 수 없습니다(사용 중인 지시문 또는 어셈블리 참조가 없습니까?).”가 발생합니다.
 
 `using static` 지시문은 정적 멤버(또는 중첩 형식)가 있는 모든 형식에 적용됩니다(인스턴스 멤버가 있는 경우에도). 그러나 인스턴스 멤버는 형식 인스턴스를 통해서만 호출할 수 있습니다.
 
@@ -47,9 +47,9 @@ using static <fully-qualified-type-name>;
 
 [!code-csharp[using-static#3](~/samples/snippets/csharp/language-reference/keywords/using/using-static3.cs)]
 
-이 예제에서는 `using static` 지시문을 <xref:System.Double> 형식에 적용했을 수도 있습니다. 이 경우 형식 이름을 지정하지 않고도 <xref:System.Double.TryParse(System.String,System.Double@)> 메서드를 호출할 수 있습니다. 그러나 이렇게 하면 코드 가독성이 떨어집니다. 어떤 숫자 형식의 `TryParse` 메서드가 호출되었는지 알아보기 위해 `using static` 문을 확인해야 하기 때문입니다.
+이 예제에서는 `using static` 지시문을 <xref:System.Double> 형식에 적용했을 수도 있습니다. 이 경우 형식 이름을 지정하지 않고도 <xref:System.Double.TryParse(System.String,System.Double@)> 메서드를 호출할 수 있습니다. 그러나 이렇게 하면 코드 가독성이 떨어집니다. 어떤 숫자 형식의 `TryParse` 메서드가 호출되었는지 알아보기 위해 `using static` 지시문을 확인해야 하기 때문입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [using 지시문](using-directive.md)
 - [C# 참조](../index.md)

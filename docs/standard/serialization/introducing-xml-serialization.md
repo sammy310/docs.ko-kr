@@ -1,5 +1,6 @@
 ---
 title: XML 직렬화에 대한 세부 정보
+description: Serialization은 개체를 전송 가능한 양식으로 변환합니다. 이 문서에서는 XML serialization 및 XmlSerializer 클래스를 개략적으로 설명합니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: d644e80cbf5ac17fca4df039d915c847a1936217
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 7534ad702039b37a85a24223576320aea8052e9e
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588450"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421269"
 ---
 # <a name="xml-serialization"></a>XML serialization
 
@@ -92,7 +93,7 @@ Serialization에 대한 다른 예제를 보려면 [XML Serialization 예제](ex
 
 ## <a name="items-that-can-be-serialized"></a>serialize할 수 있는 항목
 
-**XmLSerializer** 클래스를 사용하여 직렬화할 수 있는 항목은 다음과 같습니다.
+**XmlSerializer** 클래스를 사용하여 직렬화할 수 있는 항목은 다음과 같습니다.
 
 - 공용 클래스의 공용 읽기/쓰기 속성 및 필드
 

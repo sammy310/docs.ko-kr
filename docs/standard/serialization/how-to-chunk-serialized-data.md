@@ -1,5 +1,6 @@
 ---
 title: '방법: 직렬화된 데이터 청크'
+description: 데이터를 청크하여 대규모 데이터 세트의 문제를 방지할 수 있습니다. IXmlSerializable 인터페이스를 구현하여 serialization 및 deserialization을 제어합니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - serialization, examples
 - binary serialization, examples
 ms.assetid: 22f1b818-7e0d-428a-8680-f17d6ebdd185
-ms.openlocfilehash: 6a39997d8854d525146c044ed4bbf939de615d3f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 860fdcae0d1937f53ee964d9d4631ec812b3d379
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602425"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379133"
 ---
 # <a name="how-to-chunk-serialized-data"></a>방법: 직렬화된 데이터 청크
 

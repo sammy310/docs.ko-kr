@@ -3,12 +3,12 @@ title: ML.NET CLI를 통한 모델 학습 자동화
 description: ML.NET CLI 도구를 사용하여 명령줄에서 자동으로 최상의 모델을 학습하는 방법을 알아봅니다.
 ms.date: 12/17/2019
 ms.custom: how-to, mlnet-tooling
-ms.openlocfilehash: 3344ed15266503d4d5c7cd9db0a0596f58a904fa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2e8bade898adfc3fc4af92c880b62c646343eb2f
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79185891"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212414"
 ---
 # <a name="automate-model-training-with-the-mlnet-cli"></a>ML.NET CLI를 통한 모델 학습 자동화
 
@@ -46,7 +46,7 @@ mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" 
 
 ![이미지](media/automate-training-with-cli/cli-model-generation.gif)
 
-*Windows PowerShell*, *macOS/Linux bash 또는 *Windows CMD*에서와 같은 방식으로 실행할 수 있습니다. 그러나 테이블 형식 자동 완성(매개 변수 제안)은 *Windows CMD*에서 작동하지 않습니다.
+*Windows PowerShell*, *macOS/Linux bash* 또는 *Windows CMD*에서 같은 방식으로 실행할 수 있습니다. 그러나 테이블 형식 자동 완성(매개 변수 제안)은 *Windows CMD*에서 작동하지 않습니다.
 
 ## <a name="output-assets-generated"></a>생성된 출력 자산
 

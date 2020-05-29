@@ -2,12 +2,12 @@
 title: 소스 링크 및 .NET 라이브러리
 description: 소스 링크를 사용하여 .NET 라이브러리의 디버깅을 향상시키기 위한 모범 사례 권장 사항입니다.
 ms.date: 01/15/2019
-ms.openlocfilehash: 3d768ae6e79efa23a8402ea37bc34cd58cd52c8c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0261019087bce8e9d088a90c5e36bdd0b22f556b
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76744545"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212427"
 ---
 # <a name="source-link"></a>소스 링크
 
@@ -37,6 +37,10 @@ ms.locfileid: "76744545"
 ✔️ 기호 파일(`*.pdb`)을 사용하는 것을 고려하세요.
 
 > 최상의 디버깅 환경을 위해서는 라이브러리에서 기호 파일을 게시하고 소스 링크를 사용해야 합니다. 기호 파일 및 기호 패키지에 대한 자세한 내용은 [기호 패키지](./nuget.md#symbol-packages)를 참조하세요.
+
+✔️ 결정적 빌드를 사용하도록 설정하는 것이 좋습니다.
+
+> 결정적 빌드에서는 결과 이진 파일이 지정된 소스에서 빌드되었는지 확인할 수 있고 추적 가능성을 제공합니다. 결정적 빌드 및 이를 사용하도록 설정하는 방법에 대한 자세한 내용은 [결정적 빌드](https://github.com/clairernovotny/DeterministicBuilds)를 참조하세요.
 
 >[!div class="step-by-step"]
 >[이전](dependencies.md)

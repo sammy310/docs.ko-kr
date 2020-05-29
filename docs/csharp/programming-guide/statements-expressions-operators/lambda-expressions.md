@@ -8,12 +8,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 6fd2dab09fe97aa4af87d82e2d23664c4347c8b3
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: b86fe4fd91b395498926512650490f8d3a0383a1
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82101997"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761839"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>람다 식(C# 프로그래밍 가이드)
 
@@ -49,7 +49,7 @@ ms.locfileid: "82101997"
   
 ## <a name="expression-lambdas"></a>식 람다
 
-`=>` 연산자의 오른쪽에 식이 있는 람다 식을 식 람다라고 합니다.  식 람다는 [식 트리](../concepts/expression-trees/index.md)를 만드는 데 광범위하게 사용됩니다. 식 람다는 식의 결과를 반환하며 기본 형식은 다음과 같습니다.
+`=>` 연산자의 오른쪽에 식이 있는 람다 식을 식 람다라고 합니다. 식 람다는 [식 트리](../concepts/expression-trees/index.md)를 만드는 데 광범위하게 사용됩니다. 식 람다는 식의 결과를 반환하며 기본 형식은 다음과 같습니다.
 
 ```csharp
 (input-parameters) => expression
@@ -231,6 +231,5 @@ customers.Where(c => c.City == "London");
 - [LINQ(Language-Integrated Query)](../concepts/linq/index.md)
 - [식 트리](../concepts/expression-trees/index.md)
 - [로컬 함수 및 람다 식](../classes-and-structs/local-functions.md#local-functions-vs-lambda-expressions)
-- [암시적으로 형식화된 람다 식](../../implicitly-typed-lambda-expressions.md)
 - [Visual Studio 2008 C# 샘플(LINQ 샘플 쿼리 파일 및 XQuery 프로그램 참조)](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)
 - [재귀 람다 식](https://docs.microsoft.com/archive/blogs/madst/recursive-lambda-expressions)

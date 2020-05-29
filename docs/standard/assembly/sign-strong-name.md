@@ -1,5 +1,6 @@
 ---
 title: '방법: 강력한 이름으로 어셈블리 서명'
+description: 이 문서에서는 서명 탭, 어셈블리 링커, 어셈블리 특성 또는 컴파일러 옵션을 사용하여 강력한 이름으로 .NET 어셈블리에 서명하는 방법을 보여 줍니다.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - strong-named assemblies, signing with strong names
@@ -11,12 +12,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 9998e69e8bf1505bcfc7a9103e9d89616dad9633
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d4888a12ac0494ca34eac3553a5374c3517fee38
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160315"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378613"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>방법: 강력한 이름으로 어셈블리 서명
 

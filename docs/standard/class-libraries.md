@@ -5,12 +5,12 @@ author: richlander
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: b7934e5def202760ab05d363ee5fcda5d012ca72
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e2fd0237556f877af64708674f00e9efddf95869
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77124587"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209645"
 ---
 # <a name="net-class-libraries"></a>.NET 클래스 라이브러리
 
@@ -32,11 +32,11 @@ ms.locfileid: "77124587"
 
 ## <a name="portable-class-libraries"></a>이식 가능한 클래스 라이브러리
 
-이식 가능한 라이브러리는 여러 .NET 구현에서 지원됩니다. 이 라이브러리도 알려진 실행 환경에 종속되지만 환경이 구체적인 .NET 구현 집합의 교집합에 의해 생성되는 가상 환경입니다. 즉, 표시되는 API 및 플랫폼 가정이 플랫폼별 라이브러리에서 사용할 수 있는 전체의 하위 집합입니다.
+이식 가능한 라이브러리는 여러 .NET 구현에서 지원됩니다. 이 라이브러리도 알려진 실행 환경에 종속되지만 환경이 구체적인 .NET 구현 집합의 교집합에 의해 생성되는 가상 환경입니다. 표시되는 API 및 플랫폼 가정이 플랫폼별 라이브러리에서 사용할 수 있는 전체의 하위 집합입니다.
 
-이식 가능한 라이브러리를 만드는 경우 플랫폼 구성을 선택합니다. 이러한 구성은 지원해야 하는 플랫폼 집합(예: .NET Framework 4.5 이상, Windows Phone 8.0 이상)입니다. 더 많은 플랫폼을 지원하도록 선택할수록 만들 수 있는 API 및 플랫폼 가정(최소 공통 분모)이 줄어듭니다. “많을수록 더 좋다”고 생각하는 경향이 있으므로 이 특성은 처음에 혼동을 줄 수도 있지만 지원되는 플랫폼이 많을수록 사용 가능한 API가 줄어듭니다.
+이식 가능한 라이브러리를 만드는 경우 플랫폼 구성을 선택합니다. 플랫폼 구성은 지원해야 하는 플랫폼 집합입니다(예: .NET Framework 4.5 이상, Windows Phone 8.0 이상). 더 많은 플랫폼을 지원하도록 선택할수록 만들 수 있는 API 및 플랫폼 가정(최소 공통 분모)이 줄어듭니다. 사람들은 "다다익선"으로 생각하는 경향이 있으므로 이 특성은 처음에 혼동을 줄 수도 있지만 지원되는 플랫폼이 많을수록 사용 가능한 API가 줄어듭니다.
 
-많은 라이브러리 개발자가 한 소스에서 여러 플랫폼별 라이브러리를 생성하는 형태(조건부 컴파일 지시문 사용)에서 이식 가능한 라이브러리로 전환했습니다. 이식 가능한 라이브러리 내에서 플랫폼별 기능에 액세스하기 위한 [여러 가지 방법](https://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html)이 있으며, [bait-and-switch](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/)가 현재 가장 광범위하게 사용되는 기술입니다.
+많은 라이브러리 개발자가 한 소스에서 여러 플랫폼별 라이브러리를 생성하는 형태(조건부 컴파일 지시문 사용)에서 이식 가능한 라이브러리로 전환했습니다. 이식 가능한 라이브러리 내에서 플랫폼별 기능에 액세스하기 위한 [여러 가지 방법](https://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html)이 있으며, bait-and-switch가 현재 가장 광범위하게 사용되는 기술입니다.
 
 ## <a name="net-standard-class-libraries"></a>.NET 표준 클래스 라이브러리
 
@@ -52,13 +52,13 @@ ms.locfileid: "77124587"
 * .NET Framework
 * Mono
 * Xamarin.iOS, Xamarin.Mac, Xamarin.Android
-* UWP(Universal Windows Platform)
+* UWP(유니버설 Windows 플랫폼)
 * Windows
 * Windows Phone
 * Windows Phone Silverlight
 
-자세한 내용은 [.NET 표준](net-standard.md) 항목을 참조하세요.
+자세한 내용은 [.NET 표준](net-standard.md)을 참조하세요.
 
 ## <a name="mono-class-libraries"></a>Mono 클래스 라이브러리
 
-위에서 설명한 세 가지 형식의 라이브러리를 포함하여 클래스 라이브러리는 Mono에서 지원됩니다. Mono는 Microsoft .NET Framework의 플랫폼 간 구현으로 간주되는 경우가 많습니다(맞음). 부분적으로 이는 플랫폼별 .NET Framework 라이브러리를 수정하거나 컴파일하지 않고 Mono 런타임에서 실행할 수 있기 때문이었습니다. 이 특성은 이식 가능한 클래스 라이브러리를 만들기 전에 구현되었으므로 한 방향으로만 작동한다는 제약에도 불구하고 .NET Framework와 Mono 간에 이진 이식성을 사용하는 것이 당연했습니다.
+앞서 설명한 세 가지 형식의 라이브러리를 포함하여 클래스 라이브러리는 Mono에서 지원됩니다. Mono는 .NET Framework의 플랫폼 간 구현으로 간주되는 경우가 많습니다(맞음). 부분적으로 이는 플랫폼별 .NET Framework 라이브러리를 수정하거나 컴파일하지 않고 Mono 런타임에서 실행할 수 있기 때문이었습니다. 이 특성은 이식 가능한 클래스 라이브러리를 만들기 전에 구현되었으므로 한 방향으로만 작동한다는 제약에도 불구하고 .NET Framework와 Mono 간에 이진 이식성을 사용하는 것이 당연했습니다.

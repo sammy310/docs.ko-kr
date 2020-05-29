@@ -1,5 +1,6 @@
 ---
 title: 어셈블리 버전 관리
+description: .NET 어셈블리의 버전 관리에 대해 알아봅니다. CLR을 사용하는 어셈블리의 버전 관리는 모두 어셈블리 수준에서 수행됩니다.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - informational versions
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - resolving assembly binding requests
 - versioning, assemblies
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
-ms.openlocfilehash: bbb3dae2ce66c93d05a2a1c0f7e426901fa7b2e0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fdffbcc0bbafed62228cba35e8f85fbec7f7fbab
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140184"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380077"
 ---
 # <a name="assembly-versioning"></a>어셈블리 버전 관리
 
@@ -71,7 +72,7 @@ ms.locfileid: "73140184"
   
 정보 버전은 사용자 지정 특성인 <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType>를 사용하여 나타냅니다. 정보 버전 특성에 대한 자세한 내용은 [어셈블리 특성 설정](set-attributes.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [런타임에서 어셈블리를 찾는 방법](../../framework/deployment/how-the-runtime-locates-assemblies.md)
 - [앱 구성](../../framework/configure-apps/index.md)

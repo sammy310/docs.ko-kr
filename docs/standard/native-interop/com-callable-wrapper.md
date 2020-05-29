@@ -1,5 +1,6 @@
 ---
 title: CCW
+description: COM 클라이언트에서 .NET 개체를 호출하면 CLR이 관리되는 개체와 해당 개체에 대한 COM 호출 가능 래퍼를 만듭니다. COM 클라이언트는 해당 개체에 대한 래퍼를 호출합니다.
 ms.date: 10/23/2018
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, COM wrappers
 - COM callable wrappers
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
-ms.openlocfilehash: 6f2f4055a95dbcea8d7872b5c5fa3ccede8c2c8c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c42ea0b5ba4cb01304ceae4ba2d2fc91b629a9b3
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401174"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420528"
 ---
 # <a name="com-callable-wrapper"></a>CCW
 

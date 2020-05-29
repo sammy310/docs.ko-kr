@@ -1,18 +1,18 @@
 ---
 title: Microsoft.NET.Sdk의 MSBuild 속성
-description: .NET Core SDK가 이해하는 MSBuild 속성에 대한 참조입니다.
+description: .NET Core SDK가 이해하는 MSBuild 속성 및 항목에 대한 참조입니다.
 ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: 800ff59310d8437d7f770bf20a5bdf37714f8515
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: cda56b3e23592a341d9fe672fc1f1530adcdab49
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795575"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83206104"
 ---
-# <a name="msbuild-properties-for-net-core-sdk-projects"></a>.NET Core SDK 프로젝트의 MSBuild 속성
+# <a name="msbuild-reference-for-net-core-sdk-projects"></a>.NET Core SDK 프로젝트용 MSBuild 참조
 
-이 페이지에서는 .NET Core 프로젝트를 구성하기 위한 MSBuild 속성을 설명합니다. 각 속성에 대해 ‘메타데이터’를 속성의 자식 요소로 지정할 수 있습니다. 
+이 페이지는 .NET Core 프로젝트를 구성하는 데 사용할 수 있는 MSBuild 속성 및 항목에 대한 참조입니다.
 
 > [!NOTE]
 > 이 페이지는 진행 중인 작업이며 .NET Core SDK의 일부 유용한 MSBuild 속성을 나열하지 않습니다. 일반적인 MSBuild 속성의 목록을 보려면 [일반 MSBuild 속성](/visualstudio/msbuild/common-msbuild-project-properties)을 참조하세요.
@@ -78,7 +78,7 @@ ms.locfileid: "82795575"
 </PropertyGroup>
 ```
 
-## <a name="publish-properties"></a>속성 게시
+## <a name="publish-properties-and-items"></a>속성 및 항목 게시
 
 - [RuntimeIdentifier](#runtimeidentifier)
 - [RuntimeIdentifiers](#runtimeidentifiers)
@@ -110,7 +110,7 @@ ms.locfileid: "82795575"
 
 ### <a name="trimmerrootassembly"></a>TrimmerRootAssembly
 
-`TrimmerRootAssembly` 항목을 사용하면 [‘트리밍’](../deploying/trim-self-contained.md)에서 어셈블리를 제외할 수 있습니다.  트리밍은 패키지된 애플리케이션에서 런타임의 사용되지 않은 부분을 제거하는 프로세스입니다. 일부 경우에는 트리밍이 필요한 참조를 잘못 제거할 수 있습니다.
+`TrimmerRootAssembly` 항목을 사용하면 [‘트리밍’](../deploying/trim-self-contained.md)에서 어셈블리를 제외할 수 있습니다. 트리밍은 패키지된 애플리케이션에서 런타임의 사용되지 않은 부분을 제거하는 프로세스입니다. 일부 경우에는 트리밍이 필요한 참조를 잘못 제거할 수 있습니다.
 
 다음 XML은 트리밍에서 `System.Security` 어셈블리를 제외합니다.
 
@@ -136,7 +136,23 @@ ms.locfileid: "82795575"
 
 ## <a name="compile-properties"></a>컴파일 속성
 
+- [EmbeddedResourceUseDependentUponConvention](#embeddedresourceusedependentuponconvention)
 - [LangVersion](#langversion)
+
+### <a name="embeddedresourceusedependentuponconvention"></a>EmbeddedResourceUseDependentUponConvention
+
+`EmbeddedResourceUseDependentUponConvention` 속성은 리소스 파일과 공동 배치된 소스 파일의 형식 정보에서 리소스 매니페스트 파일 이름을 생성할지 여부를 정의합니다. 예를 들어 *Form1.resx*가 *Form1.cs*와 동일한 폴더에 있고 `EmbeddedResourceUseDependentUponConvention`가 `true`로 설정된 경우 생성된 *.resources* 파일은 *Form1.cs*에 정의된 첫 번째 형식에서 이름을 가져옵니다. 예를 들어 `MyNamespace.Form1`이 *Form1.cs*에 정의된 첫 번째 형식이면 생성된 파일 이름은 *MyNamespace.Form1.resources*입니다.
+
+> [!NOTE]
+> `LogicalName`, `ManifestResourceName` 또는 `DependentUpon` 메타데이터가 `EmbeddedResource` 항목에 대해 지정된 경우 해당 리소스 파일에 대해 생성된 매니페스트 파일 이름은 이러한 메타데이터를 기반으로 합니다.
+
+기본적으로 새 .NET Core 프로젝트에서 이 속성은 `true`로 설정됩니다. 이 속성이 `false`로 설정되고 프로젝트 파일의 `EmbeddedResource` 항목에 대해 `LogicalName`, `ManifestResourceName` 또는 `DependentUpon` 메타데이터가 지정되지 않은 경우 리소스 매니페스트 파일 이름은 프로젝트의 루트 네임스페이스와 *.resx* 파일의 상대 파일 경로를 기반으로 합니다. 자세한 내용은 [리소스 매니페스트 파일 이름이 지정되는 방식](../resources/manifest-file-names.md)을 참조하세요.
+
+```xml
+<PropertyGroup>
+  <EmbeddedResourceUseDependentUponConvention>true</EmbeddedResourceUseDependentUponConvention>
+</PropertyGroup>
+```
 
 ### <a name="langversion"></a>LangVersion
 
@@ -176,7 +192,7 @@ ms.locfileid: "82795575"
 
 ### <a name="invariantglobalization"></a>InvariantGlobalization
 
-`InvariantGlobalization` 속성은 앱이 문화권별 데이터에 액세스할 수 없는 ‘세계화 고정’ 모드에서 실행되는지 여부를 구성합니다.  세계화 고정 모드에서 실행하려면 값을 `true`로 설정합니다. 자세한 내용은 [고정 모드](../run-time-config/globalization.md#invariant-mode)를 참조하세요.
+`InvariantGlobalization` 속성은 앱이 문화권별 데이터에 액세스할 수 없는 ‘세계화 고정’ 모드에서 실행되는지 여부를 구성합니다. 세계화 고정 모드에서 실행하려면 값을 `true`로 설정합니다. 자세한 내용은 [고정 모드](../run-time-config/globalization.md#invariant-mode)를 참조하세요.
 
 ```xml
 <PropertyGroup>
@@ -254,7 +270,7 @@ ms.locfileid: "82795575"
 </PropertyGroup>
 ```
 
-## <a name="reference-properties"></a>참조 속성
+## <a name="reference-properties-and-items"></a>참조 속성 및 항목
 
 - [AssetTargetFallback](#assettargetfallback)
 - [PackageReference](#packagereference)
@@ -276,7 +292,7 @@ ms.locfileid: "82795575"
 
 ### <a name="packagereference"></a>PackageReference
 
-`PackageReference`는 NuGet 패키지에 대한 참조를 정의합니다. 예를 들어 [메타패키지](../packages.md#metapackages) 대신 단일 패키지를 참조하려고 할 수 있습니다.
+`PackageReference` 항목은 NuGet 패키지에 대한 참조를 정의합니다. 예를 들어 [메타패키지](../packages.md#metapackages) 대신 단일 패키지를 참조하려고 할 수 있습니다.
 
 `Include` 특성은 패키지 ID를 지정합니다. `Version` 특성은 버전 또는 버전 범위를 지정합니다. 최소 버전, 최대 버전, 범위 또는 정확한 일치를 지정하는 방법에 대한 자세한 내용은 [버전 범위](/nuget/concepts/package-versioning#version-ranges)를 참조하세요. 또한 메타데이터 `IncludeAssets`, `ExcludeAssets`, `PrivateAssets`를 프로젝트 참조에 추가할 수도 있습니다.
 
@@ -308,7 +324,7 @@ ms.locfileid: "82795575"
 
 `Reference` 항목은 어셈블리 파일에 대한 참조를 정의합니다.
 
-`Include` 특성은 파일의 이름을 지정하고, `HintPath` 자식 요소는 어셈블리의 경로를 지정합니다.
+`Include` 특성은 파일의 이름을 지정하고, `HintPath` 메타데이터는 어셈블리의 경로를 지정합니다.
 
 ```xml
 <ItemGroup>

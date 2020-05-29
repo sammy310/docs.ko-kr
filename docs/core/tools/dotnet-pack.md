@@ -2,12 +2,12 @@
 title: dotnet pack 명령
 description: dotnet pack 명령은 .NET Core 프로젝트에 대한 NuGet 패키지를 만듭니다.
 ms.date: 04/28/2020
-ms.openlocfilehash: 26a8581f55a8dc9e61aa52e62ed94c73eefd3e03
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.openlocfilehash: 00cda2c52a12a7a3aef5f61291120f522536131d
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595756"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442230"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -64,7 +64,7 @@ dotnet pack -h|--help
 
 `PROJECT | SOLUTION`
 
-  압축할 프로젝트 또는 솔루션입니다. [csproj 파일](csproj.md), 솔루션 파일 또는 디렉터리의 경로입니다. 지정하지 않으면 이 명령은 현재 디렉터리에서 프로젝트 또는 솔루션 파일을 검색합니다.
+  압축할 프로젝트 또는 솔루션입니다. [csproj 파일](csproj.md), vbproj 파일, fsproj 파일, 솔루션 파일 또는 디렉터리에 대한 경로입니다. 지정하지 않으면 이 명령은 현재 디렉터리에서 프로젝트 또는 솔루션 파일을 검색합니다.
 
 ## <a name="options"></a>옵션
 

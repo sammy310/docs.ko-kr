@@ -3,12 +3,12 @@ title: 가비지 수집기 구성 설정
 description: 가비지 수집기가 .NET Core 앱의 메모리를 관리하는 방식을 구성하는 런타임 설정에 대해 알아봅니다.
 ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: ec575bdd17c8a7c290673b7085074bbba94cedef
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: d7e3d040cd634eeb020beff806c60f834cc02585
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102868"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761982"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>가비지 수집을 위한 런타임 구성 옵션
 
@@ -33,7 +33,7 @@ ms.locfileid: "82102868"
 ### <a name="systemgcservercomplus_gcserver"></a>System.GC.Server/COMPlus_gcServer
 
 - 애플리케이션이 워크스테이션 가비지 수집과 서버 가비지 수집 중 어느 것을 사용하는지 구성합니다.
-- 기본값: 워크스테이션 가비지 수집(`false`).
+- 기본값: 워크스테이션 가비지 수집. 이는 값을 `false`로 설정하는 것과 같습니다.
 
 | | 설정 이름 | 값 | 도입된 버전 |
 | - | - | - | - |
@@ -71,7 +71,7 @@ ms.locfileid: "82102868"
 ### <a name="systemgcconcurrentcomplus_gcconcurrent"></a>System.GC.Concurrent/COMPlus_gcConcurrent
 
 - 백그라운드(동시) 가비지 수집이 사용하도록 설정되었는지 여부를 구성합니다.
-- 기본값: 사용(`true`).
+- 기본값: 백그라운드 GC를 사용합니다. 이는 값을 `true`로 설정하는 것과 같습니다.
 - 자세한 내용은 [백그라운드 가비지 수집](../../standard/garbage-collection/background-gc.md)을 참조하세요.
 
 | | 설정 이름 | 값 | 도입된 버전 |
@@ -200,7 +200,7 @@ ms.locfileid: "82102868"
   64비트 Windows 컴퓨터에 여러 개의 CPU 그룹이 있는 경우, 다시 말해서 64개가 넘는 프로세서가 있는 경우, 이 요소를 사용하도록 설정하면 가비지 수집이 모든 CPU 그룹으로 확장됩니다. 가비지 수집기는 모든 코어를 사용하여 힙을 만들고 분산합니다.
 
 - 64비트 Windows 운영 체제의 서버 가비지 수집에만 적용됩니다.
-- 기본값: 사용 안 함(`0`).
+- 기본값: GC가 CPU 그룹 간에 확장되지 않습니다. 이는 값을 `0`으로 설정하는 것과 같습니다.
 - 자세한 내용은 Maoni Stephens의 블로그에서 [Making CPU configuration better for GC on machines with > 64 CPUs](https://devblogs.microsoft.com/dotnet/making-cpu-configuration-better-for-gc-on-machines-with-64-cpus/)(CPU가 64개가 넘는 머신에서 GC를 위한 CPU 구성 개선하기) 게시물을 참조하세요.
 
 | | 설정 이름 | 값 | 도입된 버전 |
@@ -216,7 +216,7 @@ ms.locfileid: "82102868"
 
 - 가비지 수집 스레드가 프로세서를 *선호*하도록 지정할지 여부를 지정합니다. GC 스레드의 선호도를 지정한다는 것은 특정 CPU에서만 실행할 수 있음을 의미합니다. 각 GC 스레드에 대해 힙이 생성됩니다.
 - 서버 가비지 수집에만 적용됩니다.
-- 기본값: 가비지 수집 스레드가 프로세서를 선호하도록 지정(`false`).
+- 기본값: 가비지 수집 스레드가 프로세서를 선호하도록 지정합니다. 이는 값을 `false`로 설정하는 것과 같습니다.
 
 | | 설정 이름 | 값 | 도입된 버전 |
 | - | - | - | - |
@@ -299,7 +299,7 @@ ms.locfileid: "82102868"
 ### <a name="systemgcretainvmcomplus_gcretainvm"></a>System.GC.RetainVM/COMPlus_GCRetainVM
 
 - 삭제해야 할 세그먼트를 나중에 사용할 수 있도록 대기 목록에 둘지 아니면 해제하여 운영 체제(OS)로 돌려보낼지를 구성합니다.
-- 기본값: 세그먼트를 해제하여 운영 체제로 돌려보냅니다(`false`).
+- 기본값: 세그먼트를 해제하여 운영 체제로 돌려보냅니다. 이는 값을 `false`로 설정하는 것과 같습니다.
 
 | | 설정 이름 | 값 | 도입된 버전 |
 | - | - | - | - |
@@ -338,7 +338,7 @@ ms.locfileid: "82102868"
 ### <a name="complus_gclargepages"></a>COMPlus_GCLargePages
 
 - 힙의 하드 한도가 설정된 경우 큰 페이지를 사용할지 여부를 지정합니다.
-- 기본값: 사용 안 함(`0`).
+- 기본값: 힙 하드 한도가 설정된 경우 대용량 페이지를 사용하지 않습니다. 이는 값을 `0`으로 설정하는 것과 같습니다.
 - 이것은 실험적인 설정입니다.
 
 | | 설정 이름 | 값 | 도입된 버전 |
@@ -351,7 +351,7 @@ ms.locfileid: "82102868"
 ### <a name="complus_gcallowverylargeobjects"></a>COMPlus_gcAllowVeryLargeObjects
 
 - 64비트 플랫폼에서 총 크기가 2기가바이트(GB)보다 큰 배열에 대한 가비지 수집기 지원을 구성합니다.
-- 기본값: 사용(`1`).
+- 기본값: GC가 2GB를 초과하는 배열을 지원합니다. 이는 값을 `1`로 설정하는 것과 같습니다.
 - 이 옵션은 이후 버전의 .NET에서 더 이상 사용되지 않을 수 있습니다.
 
 | | 설정 이름 | 값 | 도입된 버전 |

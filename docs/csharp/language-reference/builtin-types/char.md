@@ -1,18 +1,18 @@
 ---
 title: char 형식- C# 참조
-ms.date: 11/22/2019
+ms.date: 05/11/2020
 f1_keywords:
 - char
 - char_CSharpKeyword
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: a07cae6e607bb6cda965240c669c655207632298
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: f771626e9777deab30e798559d847615d6124e6d
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739062"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205786"
 ---
 # <a name="char-c-reference"></a>char(C# 참조)
 
@@ -23,6 +23,8 @@ ms.locfileid: "81739062"
 |`char`|U+0000~U+FFFF|16비트|<xref:System.Char?displayProperty=nameWithType>|
 
 `char` 형식의 기본값은 `\0`(U + 0000)입니다.
+
+`char` 형식은 [비교](../operators/comparison-operators.md), [같음](../operators/equality-operators.md), [증가](../operators/arithmetic-operators.md#increment-operator-) 및 [감소](../operators/arithmetic-operators.md#decrement-operator---) 연산자를 지원합니다. 또한 `char` 피연산자의 경우 [산술](../operators/arithmetic-operators.md) 및 [비트 논리](../operators/bitwise-and-shift-operators.md) 연산자는 해당 문자 코드에 대한 연산을 수행하고 `int` 형식의 결과를 생성합니다.
 
 [string](reference-types.md#the-string-type) 형식은 텍스트를 `char` 값의 시퀀스로 나타냅니다.
 

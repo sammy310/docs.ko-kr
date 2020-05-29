@@ -1,13 +1,14 @@
 ---
 title: '방법: 어셈블리 로드 및 언로드'
+description: CLR은 프로그램에서 참조하는 .NET 어셈블리를 자동으로 로드합니다. 또한 특정 어셈블리를 현재 애플리케이션 도메인에 동적으로 로드할 수도 있습니다.
 ms.date: 08/19/2019
 ms.assetid: 6a4f490f-3576-471f-9533-003737cad4a3
-ms.openlocfilehash: a520ffd41c3465737be7494d374cbcf64e3f1b85
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e6f1ede055dd3f68bced4eba527b2fc65f7d5715
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78155778"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378690"
 ---
 # <a name="how-to-load-and-unload-assemblies"></a>방법: 어셈블리 로드 및 언로드
 프로그램에서 참조하는 어셈블리는 공용 언어 런타임에 의해 자동으로 로드되지만 현재 애플리케이션 도메인에 특정 어셈블리를 동적으로 로드할 수도 있습니다. 자세한 내용은 [방법: 애플리케이션 도메인에 어셈블리 로드](../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)를 참조하세요.

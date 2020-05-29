@@ -3,12 +3,12 @@ title: '자습서: 첫 번째 분석기 및 코드 수정 작성'
 description: 이 자습서에서는 .NET Complier SDK(Roslyn API)를 사용하여 분석기 및 코드 수정 사항을 빌드하는 단계별 지침을 제공합니다.
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: d6c3ddff288bf114e1c257ae77ebf3a419913990
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 23ebf4befc75e08592890d85f2dda51251f59cd6
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895446"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396277"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>자습서: 첫 번째 분석기 및 코드 수정 작성
 
@@ -235,7 +235,7 @@ var newLocal = trimmedLocal
 
 [!code-csharp[Format the new declaration](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#FormatLocal  "Format the new declaration")]
 
-이 코드에는 새 네임스페이스가 필요합니다. 다음 `using` 문을 파일의 맨 위에 추가합니다.
+이 코드에는 새 네임스페이스가 필요합니다. 다음 `using` 지시문을 파일의 맨 위에 추가합니다.
 
 ```csharp
 using Microsoft.CodeAnalysis.Formatting;
@@ -445,7 +445,7 @@ foreach (var variable in localDeclaration.Declaration.Variables)
 
 다행히도 위의 버그는 모두 방금 알아본 동일한 기술을 사용하여 해결할 수 있습니다.
 
-첫 번째 버그를 수정하려면 먼저 **DiagnosticAnalyzer.cs**를 열고 상수 값과 함께 할당되었는지 확인하기 위해 각 로컬 선언의 이니셜라이저가 검사되는 foreach 루프를 찾습니다. 첫 번째 foreach 루프 바로 ‘앞’에서 `context.SemanticModel.GetTypeInfo()`를 호출하여 로컬 선언의 선언된 형식에 대한 자세한 정보를 검색합니다. 
+첫 번째 버그를 수정하려면 먼저 **DiagnosticAnalyzer.cs**를 열고 상수 값과 함께 할당되었는지 확인하기 위해 각 로컬 선언의 이니셜라이저가 검사되는 foreach 루프를 찾습니다. 첫 번째 foreach 루프 바로 ‘앞’에서 `context.SemanticModel.GetTypeInfo()`를 호출하여 로컬 선언의 선언된 형식에 대한 자세한 정보를 검색합니다.
 
 ```csharp
 var variableTypeName = localDeclaration.Declaration.Type;
@@ -497,7 +497,7 @@ var' 키워드를 올바른 형식 이름으로 바꾸려면 코드 수정 사�
 
 [!code-csharp[Replace Var designations](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#ReplaceVar "Replace a var designation with the explicit type")]
 
-<xref:Microsoft.CodeAnalysis.Simplification.Simplifier> 형식을 사용하려면 하나의 `using` 문을 추가해야 합니다.
+<xref:Microsoft.CodeAnalysis.Simplification.Simplifier> 형식을 사용하려면 `using` 지시문을 하나 추가해야 합니다.
 
 ```csharp
 using Microsoft.CodeAnalysis.Simplification;

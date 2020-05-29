@@ -1,5 +1,6 @@
 ---
 title: 버전 독립적 Serialization
+description: .NET Framework 2.0에는 직렬화 가능 형식을 보다 쉽게 수정할 수 있는 기능 집합인 버전 독립적 Serialization이 도입되었습니다.
 ms.date: 08/08/2017
 dev_langs:
 - csharp
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-ms.openlocfilehash: 9886e2f20ef7954b01ea1f46a9eabdb9ea2cc12d
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: afc822e1f8873bac069f6634fdf1d4665d392e69
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348429"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762593"
 ---
 # <a name="version-tolerant-serialization"></a>버전 독립적 Serialization
 
@@ -27,7 +28,7 @@ ms.locfileid: "75348429"
 - 이전 형식의 새 버전을 역직렬화하도록 요청하면 애플리케이션의 이전 버전이 예외를 throw합니다.
 - 데이터가 누락된 형식의 이전 버전을 역직렬화할 때 애플리케이션의 새 버전이 예외를 throw합니다.
 
-VTS(버전 독립적 Serialization)는 .NET Framework 2.0에 추가된 기능 집합으로, serialize 가능한 형식을 시간이 지남에 따라 더 쉽게 수정할 수 있게 해 줍니다. 특히 VTS 기능은 제네릭 형식을 비롯하여 <xref:System.SerializableAttribute> 특성이 적용된 클래스에 사용할 수 있습니다. VTS를 사용하면 형식의 다른 버전과의 호환성을 휴지하면서 해당 클래스에 새 필드를 추가할 수 있습니다. 작동하는 애플리케이션 예제는 [버전 독립적 serialization 기술 샘플](version-tolerant-serialization-technology-sample.md)을 참조하세요.
+VTS(버전 독립적 Serialization)는 .NET Framework 2.0에 추가된 기능 집합으로, serialize 가능한 형식을 시간이 지남에 따라 더 쉽게 수정할 수 있게 해 줍니다. 특히 VTS 기능은 제네릭 형식을 비롯하여 <xref:System.SerializableAttribute> 특성이 적용된 클래스에 사용할 수 있습니다. VTS를 사용하면 형식의 다른 버전과의 호환성을 휴지하면서 해당 클래스에 새 필드를 추가할 수 있습니다. 작동하는 애플리케이션 예제는 [버전 독립적 serialization 기술 샘플](basic-serialization-technology-sample.md)을 참조하세요.
 
 VTS 기능은 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>를 사용할 때 활성화됩니다. 또한 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>를 사용할 때 잘못 사용된 데이터 허용 범위를 제외한 모든 기능도 활성화됩니다. serialization에 이러한 클래스를 사용하는 방법에 대한 자세한 내용은 [이진 serialization](binary-serialization.md)을 참조하세요.
 

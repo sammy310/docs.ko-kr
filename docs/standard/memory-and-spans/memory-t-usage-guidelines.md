@@ -1,15 +1,16 @@
 ---
 title: Memory<T> 및 Span<T> 사용 지침
+description: 이 문서에서는 파이프라인에서 사용할 수 있는 .NET Core의 구조적 데이터 버퍼인 Memory<T> 및 Span<T>에 대해 설명합니다.
 ms.date: 10/01/2018
 helpviewer_keywords:
 - Memory&lt;T&gt; and Span&lt;T&gt; best practices
 - using Memory&lt;T&gt; and Span&lt;T&gt;
-ms.openlocfilehash: b89969f212da6ac90d0fb0d1bf388626e136b92e
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: b9405d746c141308c7d984dac9da0d65d1048d1e
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158595"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380010"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Memory\<T> 및 Span\<T> 사용 지침
 
