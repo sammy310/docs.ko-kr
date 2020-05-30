@@ -109,6 +109,9 @@
         - name: 콘솔 앱 만들기
           href: tutorials/with-visual-studio-code.md
           displayName: 'tutorials, visual studio code, vs code, cli'
+        - name: 앱 디버그
+          href: tutorials/debugging-with-visual-studio-code.md
+          displayName: 'tutorials, visual studio code, vs code'
         - name: 콘솔 앱 만들기 및 게시
           href: tutorials/cli-create-console-app.md
           displayName: 'tutorials, cli'
