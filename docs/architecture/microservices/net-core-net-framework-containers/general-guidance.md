@@ -2,12 +2,12 @@
 title: 일반 지침
 description: 컨테이너화된 .NET 애플리케이션을 위한 .NET 마이크로 서비스 아키텍처 | 일반 지침
 ms.date: 09/11/2018
-ms.openlocfilehash: 2fa66d7593b764a8df4d9acc20f93d3f8fb26174
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e3bb4b8cf3e371c31d783fe4cfafeac282fb72b8
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73089644"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144567"
 ---
 # <a name="general-guidance"></a>일반 지침
 
@@ -38,10 +38,10 @@ Docker에서 .NET Framework를 사용하면 배포 문제 최소화를 통해 �
 ### <a name="additional-resources"></a>추가 자료
 
 - **전자책: Azure 및 Windows 컨테이너를 사용하여 기존 .NET Framework 애플리케이션 최신화**  
-    https://aka.ms/liftandshiftwithcontainersebook
+    <https://aka.ms/liftandshiftwithcontainersebook>
 
 - **샘플 앱: Windows 컨테이너를 사용하여 레거시 ASP.NET 웹앱 최신화**  
-    https://aka.ms/eshopmodernizing
+    <https://aka.ms/eshopmodernizing>
 
 >[!div class="step-by-step"]
 >[이전](index.md)
