@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: ca499f9762f52126720159fb7c22660b1001895c
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: fa0aa09b591f9b91a82113343a3655b2240ef490
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83802923"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201207"
 ---
 # <a name="types-c-programming-guide"></a>형식(C# 프로그래밍 가이드)
 
@@ -165,7 +165,7 @@ stringList.Add("String example");
 stringList.Add(4);
 ```
 
-형식 매개 변수를 사용하면 각 요소를 [개체](../../language-reference/builtin-types/reference-types.md)로 변환할 필요 없이 같은 클래스를 재사용하여 요소 형식을 포함할 수 있습니다. 컴파일러는 컬렉션 요소의 특정 형식을 인식하며, 예를 들어 이전 예제에서 `stringList` 개체에 정수를 추가하려는 경우 컴파일 시간에 오류를 발생시킬 수 있기 때문에 제네릭 컬렉션 클래스를 *강력한 형식의 컬렉션*이라고 합니다. 자세한 내용은 [제네릭](../generics/index.md)을 참조하세요.
+형식 매개 변수를 사용하면 각 요소를 [개체](../../language-reference/builtin-types/reference-types.md)로 변환할 필요 없이 같은 클래스를 재사용하여 요소 형식을 포함할 수 있습니다. 컴파일러는 컬렉션 요소의 특정 형식을 인식하며, 예를 들어 이전 예제에서 `stringList` 개체에 정수를 추가하려는 경우 컴파일 시간에 오류를 발생시킬 수 있기 때문에 제네릭 컬렉션 클래스를 ‘강력한 형식의 컬렉션’이라고 합니다. 자세한 내용은 [제네릭](../generics/index.md)을 참조하세요.
 
 ## <a name="implicit-types-anonymous-types-and-nullable-value-types"></a>암시적 형식, 무명 형식 및 nullable 값 형식
 

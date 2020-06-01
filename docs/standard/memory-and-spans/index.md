@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Span<T>
 - buffers"
 - pipeline processing
-ms.openlocfilehash: b61b1dbbedf4658fe113986fbb4a792a2f574534
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c60c08d27c0e41228a15e8acdf01a9af28a23762
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73121995"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201961"
 ---
 # <a name="memory--and-span-related-types"></a>메모리 및 범위 관련 형식
 
@@ -45,7 +45,7 @@ ms.locfileid: "73121995"
 
 메모리 및 범위 관련 형식은 일반적으로 데이터를 처리 파이프라인에 저장하는 데 사용되므로 개발자가 <xref:System.Span%601>, <xref:System.Memory%601> 및 관련 형식을 사용할 때 모범 사례 세트를 따르는 것이 중요합니다. 이러한 모범 사례는 [메모리\<T> 및 범위\<T> 사용 지침](memory-t-usage-guidelines.md)에 설명되어 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Memory%601?displayProperty=nameWithType>
 - <xref:System.ReadOnlyMemory%601?displayProperty=nameWithType>
