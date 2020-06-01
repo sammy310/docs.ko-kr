@@ -2,12 +2,12 @@
 title: 소스 링크 및 .NET 라이브러리
 description: 소스 링크를 사용하여 .NET 라이브러리의 디버깅을 향상시키기 위한 모범 사례 권장 사항입니다.
 ms.date: 01/15/2019
-ms.openlocfilehash: 0261019087bce8e9d088a90c5e36bdd0b22f556b
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 5dee2a6b1f77daa641351e02c1dd3e0a38f66550
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212427"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201976"
 ---
 # <a name="source-link"></a>소스 링크
 
@@ -15,6 +15,7 @@ ms.locfileid: "83212427"
 
 ## <a name="source-link-demo"></a>소스 링크 데모
 
+<!--markdownlint-disable MD034 -->
 > [!VIDEO https://www.youtube.com/embed/gyRGhCQPkB4?start=61]
 
 ## <a name="using-source-link"></a>소스 링크 사용

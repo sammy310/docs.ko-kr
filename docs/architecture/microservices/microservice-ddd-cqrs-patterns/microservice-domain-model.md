@@ -2,12 +2,12 @@
 title: 마이크로 서비스 도메인 모델 디자인
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | DDD 지향 도메인 모델을 디자인할 때 주요 개념을 이해합니다.
 ms.date: 01/30/2020
-ms.openlocfilehash: 64860d75dca645904e973a4b8927a716a1603394
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 234d6e518eac8de5b2f130b91adb32b6a24a7265
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988416"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144593"
 ---
 # <a name="design-a-microservice-domain-model"></a>마이크로 서비스 도메인 모델 디자인
 
@@ -133,14 +133,14 @@ public class Order : Entity, IAggregateRoot
 
 #### <a name="additional-resources"></a>추가 자료
 
-- **Vaughn Vernon. 효율적인 집계 디자인 - 1부: 단일 집계 모델링**(<http://dddcommunity.org/>에서) \
-  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_1.pdf>
+- **Vaughn Vernon. 효율적인 집계 디자인 - 1부: 단일 집계 모델링**(<https://dddcommunity.org/>에서) \
+  <https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_1.pdf>
 
-- **Vaughn Vernon. 효율적인 집계 디자인 - 2부: 집계가 함께 작동하도록 만들기**(<http://dddcommunity.org/>에서) \
-  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf>
+- **Vaughn Vernon. 효율적인 집계 디자인 - 2부: 집계가 함께 작동하도록 만들기**(<https://dddcommunity.org/>에서) \
+  <https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf>
 
-- **Vaughn Vernon. 효율적인 집계 디자인 - 3부: 검색을 통해 Insight 얻기**(<http://dddcommunity.org/>에서) \
-  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
+- **Vaughn Vernon. 효율적인 집계 디자인 - 3부: 검색을 통해 Insight 얻기**(<https://dddcommunity.org/>에서) \
+  <https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
 
 - **Sergey Grybniak. DDD 전술적 디자인 패턴** \
   <https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part>

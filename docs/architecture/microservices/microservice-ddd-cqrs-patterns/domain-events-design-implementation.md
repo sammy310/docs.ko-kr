@@ -2,12 +2,12 @@
 title: 도메인 이벤트. 디자인 및 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 집계 간에 통신을 설정하는 주요 개념인 도메인 이벤트의 세부적인 보기를 가져옵니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: e03abba66945a6434f6a81eaa9f50d53998f346c
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 630bd0a0b060431e565df98faa77f452e2045fa2
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988719"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144307"
 ---
 # <a name="domain-events-design-and-implementation"></a>도메인 이벤트: 디자인 및 구현
 
@@ -365,13 +365,13 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
   <https://www.tonytruong.net/domain-events-pattern-example/>
 
 - **Udi Dahan. 완벽하게 캡슐화된 도메인 모델을 만드는 방법** \
-  <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
+  <https://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
 - **Udi Dahan. 도메인 이벤트 - 테이크 2** \
-  <http://udidahan.com/2008/08/25/domain-events-take-2/>
+  <https://udidahan.com/2008/08/25/domain-events-take-2/>
 
 - **Udi Dahan. 도메인 이벤트 - 구원** \
-  <http://udidahan.com/2009/06/14/domain-events-salvation/>
+  <https://udidahan.com/2009/06/14/domain-events-salvation/>
 
 - **Jan Kronquist. 도메인 이벤트를 게시하지 말고 반환하라!** \
   <https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/>

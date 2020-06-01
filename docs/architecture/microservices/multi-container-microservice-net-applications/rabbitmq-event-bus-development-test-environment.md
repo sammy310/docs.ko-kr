@@ -2,12 +2,12 @@
 title: RabbitMQ를 사용하여 개발 또는 테스트 환경에 대한 이벤트 서비스 구현
 description: 컨테이너화된 .NET 애플리케이션의 .NET 마이크로 서비스 아키텍처 | RabbitMQ를 사용하여 개발 또는 테스트 환경의 통합 이벤트에 대해 이벤트 버스 메시징 구현
 ms.date: 10/02/2018
-ms.openlocfilehash: 12e37fabfe915b4d2089d27f7852528a9a037d3c
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 32259c76fe81d324ba3ea9b35f7fddc6a0f9cdbc
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988299"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144294"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>RabbitMQ를 사용하여 개발 또는 테스트 환경에 대한 이벤트 서비스 구현
 
@@ -117,7 +117,7 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 RabbitMQ에 대한 지원이 포함된, 프로덕션 환경에서 사용할 수 있는 솔루션입니다.
 
 - **EasyNetQ** - RabbitMQ용 오픈 소스 .NET API 클라이언트\
-  <http://easynetq.com/>
+  <https://easynetq.com/>
 
 - **MassTransit** \
   <https://masstransit-project.com/>

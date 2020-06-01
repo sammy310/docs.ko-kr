@@ -2,12 +2,12 @@
 title: 클라우드를 위한 복원력 있는 서비스 빌드 클라우드의 일시적 오류 포용
 description: Azure Cloud 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화 | 클라우드를 위한 복원력 있는 서비스 빌드 클라우드의 일시적 오류 포용
 ms.date: 04/30/2018
-ms.openlocfilehash: e516dc675ceb8def25c6d676bced0ea7f253b2d5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 899084ac00d9be0df47ef88c026f4e8c19722bb6
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74711259"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144254"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>클라우드를 위한 탄력적인 서비스 빌드: 클라우드의 일시적 오류 포용
 
@@ -55,7 +55,7 @@ HTTP 다시 시도 및 회로 차단기를 구현할 때 .NET 관련 권장 사�
 
 - **복원력 있는 HTTP 통신용 Polly 라이브러리**
 
-    https://github.com/App-vNext/Polly
+    <https://github.com/App-vNext/Polly>
 
 >[!div class="step-by-step"]
 >[이전](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)

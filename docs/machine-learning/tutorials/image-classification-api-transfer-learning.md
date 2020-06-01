@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: a050d7673f7ef00cf11d959d04e709222cb2be8f
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 2915259d7c7031b9e699c7fd0cf65cf723c41680
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607560"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144424"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>자습서: ML.NET 이미지 분류 API와 함께 전이 학습을 사용한 자동화된 시각적 개체 검사
 
@@ -94,7 +94,7 @@ ML.NET은 이미지를 분류하는 다양한 방법을 제공합니다. 이 자
 ### <a name="prepare-and-understand-the-data"></a>데이터 준비 및 이해
 
 > [!NOTE]
-> 이 자습서의 데이터 세트는 Maguire, Marc, Dorafshan, Sattar 및 Thomas, Robert J., “SDNET2018: A concrete crack image dataset for machine learning applications”(기계 학습 애플리케이션의 콘크리트 금 이미지 데이터 세트)(2018)에서 가져온 것입니다. 모든 데이터 세트를 살펴봅니다. 논문 48입니다. [https://digitalcommons.usu.edu/all_datasets/48](https://digitalcommons.usu.edu/all_datasets/48 )
+> 이 자습서의 데이터 세트는 Maguire, Marc, Dorafshan, Sattar 및 Thomas, Robert J., “SDNET2018: A concrete crack image dataset for machine learning applications”(기계 학습 애플리케이션의 콘크리트 금 이미지 데이터 세트)(2018)에서 가져온 것입니다. 모든 데이터 세트를 살펴봅니다. 논문 48입니다. <https://digitalcommons.usu.edu/all_datasets/48>
 
 SDNET2018은 금이 간 콘크리트 구조물(교량 상판, 벽, 도로)과 금이 가지 않은 콘크리트 구조물에 대한 주석이 포함된 이미지 데이터 세트입니다.
 

@@ -2,12 +2,12 @@
 title: 분산 데이터 관리를 위한 과제 및 해결 방법
 description: 마이크로 서비스 환경에서 분산 데이터 관리를 위한 과제 및 솔루션은 무엇인지 알아봅니다.
 ms.date: 09/20/2018
-ms.openlocfilehash: c30de24591d5a73fd34087f34a69e9c7ed54cd35
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8b91879e879db293ed61bd5f3c49dc391b9d8f5a
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "71834452"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144320"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>분산 데이터 관리를 위한 과제 및 해결 방법
 
@@ -105,7 +105,7 @@ ms.locfileid: "71834452"
   <https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction>
 
 - **Udi Dahan. 서비스 지향 컴퍼지션** \
-  <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
+  <https://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
 >[!div class="step-by-step"]
 >[이전](logical-versus-physical-architecture.md)

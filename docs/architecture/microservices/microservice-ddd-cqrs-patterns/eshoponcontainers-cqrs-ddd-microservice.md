@@ -2,12 +2,12 @@
 title: eShopOnContainers의 DDD 마이크로 서비스에서 CQRS 및 CQS 방법 적용
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | eShopOnContainers의 주문 마이크로 서비스에서 CQRS가 구현되는 방식을 이해합니다.
 ms.date: 03/03/2020
-ms.openlocfilehash: eda0ee374b41a81811e92e2829b10dc8515e0ccd
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 0fd38a93a1056cda4abd2f9f89ee9efc626985c8
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988494"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144281"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>eShopOnContainers의 DDD 마이크로 서비스에서 CQRS 및 CQS 방법 적용
 
@@ -48,7 +48,7 @@ CQRS와 대부분의 DDD 패턴(예: DDD 계층 또는 집계가 있는 도메�
   <https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf>
 
 - **Udi Dahan. 명확한 CQRS** \
-  <http://udidahan.com/2009/12/09/clarified-cqrs/>
+  <https://udidahan.com/2009/12/09/clarified-cqrs/>
 
 >[!div class="step-by-step"]
 >[이전](apply-simplified-microservice-cqrs-ddd-patterns.md)

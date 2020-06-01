@@ -2,12 +2,12 @@
 title: 관리형 디버거 - .NET Core
 description: Visual Studio 및 Visual Studio Code 관리형 디버거의 개요입니다.
 ms.date: 08/05/2019
-ms.openlocfilehash: 065b1b0fc32eb76b398cb3821c8592a1955c9359
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 28cc21980bc78234f7af3b4668e2fa77fbf8ce5b
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75715561"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84200865"
 ---
 # <a name="net-core-managed-debuggers"></a>.NET Core 관리형 디버거
 
@@ -33,5 +33,5 @@ Visual Studio는 Windows 애플리케이션이지만, Linux 및 macOS 앱을 원
 
 **Visual Studio Code**는 간단한 플랫폼 간 코드 편집기입니다. Visual Studio와 동일한 .NET Core 디버거 구현을 사용하지만 사용자 인터페이스가 간소화되었습니다.
 
-- [자습서 - Visual Studio Code를 사용하여 .NET Core 애플리케이션 디버깅](../tutorials/with-visual-studio-code.md#debug)
+- [자습서 - Visual Studio Code를 사용하여 .NET Core 애플리케이션 디버깅](../tutorials/debugging-with-visual-studio-code.md)
 - [Visual Studio Code의 디버깅](https://code.visualstudio.com/docs/editor/debugging)

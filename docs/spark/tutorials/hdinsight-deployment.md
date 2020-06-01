@@ -4,12 +4,12 @@ description: HDInsight에 .NET for Apache Spark 애플리케이션을 배포하�
 ms.date: 01/23/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 6b8dbe395a5db9631433a5821f5ef2b9ade556f6
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: edb876921030f5034d03c821051457ca111855f8
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895689"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144762"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>자습서: Azure HDInsight에 .NET for Apache Spark 애플리케이션 배포
 
@@ -152,7 +152,7 @@ Azure Storage Explorer를 사용하여 클러스터 스토리지로 선택한 Bl
    |---------|---------|
    | 스크립트 유형 |사용자 지정|
    | 이름 | 작업자 설치|
-   | Bash 스크립트 URI |https://mystorageaccount.blob.core.windows.net/mycontainer/install-worker.sh </br> 이 URI를 확인하려면 Azure Storage Explorer에서 install-worker.sh를 마우스 오른쪽 단추로 클릭하고 속성을 선택합니다. |
+   | Bash 스크립트 URI |`https://mystorageaccount.blob.core.windows.net/mycontainer/install-worker.sh` </br> 이 URI를 확인하려면 Azure Storage Explorer에서 install-worker.sh를 마우스 오른쪽 단추로 클릭하고 속성을 선택합니다. |
    | 노드 유형| 작업자|
    | 매개 변수 | azure </br> wasbs://mycontainer@myStorageAccount.blob.core.windows.net/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz </br> /usr/local/bin
 

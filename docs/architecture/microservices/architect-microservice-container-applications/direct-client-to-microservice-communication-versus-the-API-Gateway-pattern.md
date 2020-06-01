@@ -2,12 +2,12 @@
 title: API 게이트웨이 패턴과 클라이언트-마이크로 서비스 간 직접 통신
 description: API 게이트웨이 패턴과 클라이언트-마이크로 서비스 간 직접 통신의 차이점 및 사용법을 이해합니다.
 ms.date: 01/07/2019
-ms.openlocfilehash: 47e9a383c1fcb6c9fec38cb376b60a4ab839077d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5c2f3bd32396b45a6209550f5b7a07c88795ccc0
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401558"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144333"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API 게이트웨이 패턴과 클라이언트-마이크로 서비스 간 직접 통신
 
@@ -183,7 +183,7 @@ Azure API Management를 통해 키, 토큰 및 IP 필터링을 사용하여 API�
   <https://azure.microsoft.com/services/api-management/>
 
 - **Udi Dahan. 서비스 지향 컴퍼지션** \
-  <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
+  <https://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
 - **Clemens Vasters. GOTO 2016의 메시징 및 마이크로 서비스(비디오)**  \
   <https://www.youtube.com/watch?v=rXi5CLjIQ9k>

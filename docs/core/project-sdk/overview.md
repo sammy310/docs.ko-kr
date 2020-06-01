@@ -4,12 +4,12 @@ titleSuffix: ''
 description: .NET Core 프로젝트 SDK에 대해 알아봅니다.
 ms.date: 02/02/2020
 ms.topic: conceptual
-ms.openlocfilehash: 88ec1bf2c4917c69b80b997d090219097694d2bc
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 67dede3caabd2967adca22e7563376c761829655
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206053"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144241"
 ---
 # <a name="net-core-project-sdks"></a>.NET Core 프로젝트 SDK
 
@@ -21,8 +21,8 @@ ms.locfileid: "83206053"
 
 | ID | 설명 | 리포지토리|
 | - | - | - |
-| `Microsoft.NET.Sdk` | .NET Core SDK | https://github.com/dotnet/sdk |
-| `Microsoft.NET.Sdk.Web` | .NET Core [웹 SDK](/aspnet/core/razor-pages/web-sdk) | https://github.com/aspnet/websdk |
+| `Microsoft.NET.Sdk` | .NET Core SDK | <https://github.com/dotnet/sdk> |
+| `Microsoft.NET.Sdk.Web` | .NET Core [웹 SDK](/aspnet/core/razor-pages/web-sdk) | <https://github.com/aspnet/websdk> |
 | `Microsoft.NET.Sdk.Razor` | .NET Core [Razor SDK](/aspnet/core/razor-pages/sdk) |
 | `Microsoft.NET.Sdk.Worker` | .NET Core 작업자 서비스 SDK |
 | `Microsoft.NET.Sdk.WindowsDesktop` | .NET Core WinForms 및 WPF SDK |

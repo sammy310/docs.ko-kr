@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: fe69521a6ac88055e3e8c8502a7e19a72667dbef
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7658f2498b87a90b3925d83628f6ea9247a2fc15
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240859"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83840873"
 ---
 # <a name="get-started-with-net-core-using-the-net-core-cli"></a>.NET Core CLI를 사용하여 .NET Core 시작하기
 
@@ -204,7 +204,21 @@ dotnet bin\Debug\netcoreapp3.1\publish\Hello.dll
 다음과 같은 출력을 얻습니다.
 
 ```console
-Hello World!
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+144
+233
+377
 ```
 
 이 문서의 시작 부분에서 설명한 대로 운영 체제별 실행 파일이 `Hello.dll`과 함께 만들어집니다. Windows에서는 `Hello.exe`, Linux 또는 macOS에서는 `hello`가 만들어집니다. 위의 예제에서 파일은 `Hello.exe` 또는 `Hello`로 이름이 지정됩니다. 게시된 이 실행 파일을 직접 실행할 수 있습니다.
@@ -212,7 +226,21 @@ Hello World!
 ```console
 .\bin\Debug\netcoreapp3.1\publish\Hello.exe
 
-Hello World!
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+144
+233
+377
 ```
 
 ## <a name="conclusion"></a>결론

@@ -3,12 +3,12 @@ title: 가비지 수집기 구성 설정
 description: 가비지 수집기가 .NET Core 앱의 메모리를 관리하는 방식을 구성하는 런타임 설정에 대해 알아봅니다.
 ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: d7e3d040cd634eeb020beff806c60f834cc02585
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 0ce2f70204463c1525ef7d29de21ddf5384d0238
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761982"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202090"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>가비지 수집을 위한 런타임 구성 옵션
 
@@ -78,7 +78,7 @@ ms.locfileid: "83761982"
 | - | - | - | - |
 | **runtimeconfig.json** | `System.GC.Concurrent` | `true` - 백그라운드 GC<br/>`false` - 비동시 GC | .NET Core 1.0 |
 | **MSBuild 속성** | `ConcurrentGarbageCollection` | `true` - 백그라운드 GC<br/>`false` - 비동시 GC | .NET Core 1.0 |
-| **환경 변수** | `COMPlus_gcConcurrent` | `true` - 백그라운드 GC<br/>`false` - 비동시 GC | .NET Core 1.0 |
+| **환경 변수** | `COMPlus_gcConcurrent` | `1` - 백그라운드 GC<br/>`0` - 비동시 GC | .NET Core 1.0 |
 | **.NET Framework의 app.config** | [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) | `true` - 백그라운드 GC<br/>`false` - 비동시 GC |  |
 
 ### <a name="examples"></a>예

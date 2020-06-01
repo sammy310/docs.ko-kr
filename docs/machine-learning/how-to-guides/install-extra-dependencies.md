@@ -5,18 +5,18 @@ ms.date: 04/02/2020
 author: natke
 ms.author: nakersha
 ms.custom: how-to
-ms.openlocfilehash: c427439d0950bfea38f1d6d11af84216e0f1965f
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: c744b42b4b95681de7b0cbeaef338cc890708fd8
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021851"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008432"
 ---
 # <a name="install-extra-mlnet-dependencies"></a>추가 ML.NET 종속성 설치
 
 대부분 모든 운영 체제에서 ML.NET을 설치하는 것은 적절한 NuGet 패키지를 참조하는 것만큼 간단합니다.
 
-```bash
+```dotnetcli
 dotnet add package Microsoft.ML
 ```
 

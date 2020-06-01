@@ -2,12 +2,12 @@
 title: 비동기 메시지 기반 통신
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 비동기 메시지 기반 통신은 마이크로 서비스 아키텍처에서 필수 개념입니다. 마이크로 서비스를 서로 독립적인 상태로 유지하는 동시에, 결국은 동기화된 상태로 유지하는 가장 좋은 방법이기 때문입니다.
 ms.date: 09/20/2018
-ms.openlocfilehash: 84eaf70178cce91a86dae8a55badb0b4ddd6a7c1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 476e42ccb39374c2bb50f22e41f60c10c563dc66
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73454237"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144346"
 ---
 # <a name="asynchronous-message-based-communication"></a>비동기 메시지 기반 통신
 
@@ -90,7 +90,7 @@ ms.locfileid: "73454237"
   <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
 - **Udi Dahan. 명확한 CQRS** \
-  <http://udidahan.com/2009/12/09/clarified-cqrs/>
+  <https://udidahan.com/2009/12/09/clarified-cqrs/>
 
 - **CQRS(명령과 쿼리의 역할 구분)**  \
   <https://docs.microsoft.com/azure/architecture/patterns/cqrs>

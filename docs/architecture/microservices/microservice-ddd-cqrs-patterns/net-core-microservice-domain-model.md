@@ -2,12 +2,12 @@
 title: .NET Core를 사용하여 마이크로 서비스 도메인 모델 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | DDD 지향 도메인 모델의 구현 세부 정보를 가져옵니다.
 ms.date: 10/08/2018
-ms.openlocfilehash: 24f700b371d998cf99cbcf260a5278d797cb39d4
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 8aff06a2e37dc87e5ba4f556e9b808598ff3653a
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988429"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144580"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>.NET Core를 사용하여 마이크로 서비스 도메인 모델 구현
 
@@ -177,7 +177,7 @@ EF Core 1.1 이상의 기능을 사용하여 열을 필드에 매핑하면 속�
   <https://docs.microsoft.com/archive/msdn-magazine/2013/august/data-points-coding-for-domain-driven-design-tips-for-data-focused-devs>
 
 - **Udi Dahan. 완벽하게 캡슐화된 도메인 모델을 만드는 방법** \
-  <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
+  <https://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
 > [!div class="step-by-step"]
 > [이전](microservice-domain-model.md)

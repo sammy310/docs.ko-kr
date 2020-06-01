@@ -2,12 +2,12 @@
 title: Web API를 사용하여 마이크로 서비스 애플리케이션 계층 구현
 description: Web API 애플리케이션 계층에서 종속성 주입 및 중재자 패턴과 해당 구현 세부 정보를 이해합니다.
 ms.date: 01/30/2020
-ms.openlocfilehash: 76562d87b09a18e4a4ecb7625a2e823bc1ccff78
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 3efa4939bb8762534af398d4e92361e81e668b85
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988468"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144606"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Web API를 사용하여 마이크로 서비스 에플리케이션 계층 구현
 
@@ -214,7 +214,7 @@ Autofac에는 [이름 규칙에 따라 어셈블리 및 등록 형식 검사](ht
 // plus being able to update the data just once, when creating the object
 // through the constructor.
 // References on immutable commands:
-// http://cqrs.nu/Faq
+// https://cqrs.nu/Faq
 // https://docs.spine3.org/motivation/immutability.html
 // http://blog.gauffin.org/2012/06/griffin-container-introducing-command-support/
 // https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties
