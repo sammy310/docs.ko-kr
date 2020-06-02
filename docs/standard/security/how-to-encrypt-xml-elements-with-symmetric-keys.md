@@ -16,17 +16,17 @@ helpviewer_keywords:
 - Advanced Encryption Standard algorithm
 - Rijndael
 ms.assetid: d8461a44-aa2c-4ef4-b3e4-ab7cbaaee1b5
-ms.openlocfilehash: cda5a32e9a7421cd65b2046b403fde9e05230493
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1ad75b7f36130a9f3acad97f724406650a7fdb68
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706086"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277325"
 ---
 # <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>방법: 대칭 키를 사용하여 XML 요소 암호화
 <xref:System.Security.Cryptography.Xml> 네임스페이스의 클래스를 사용하여 XML 문서 내의 요소를 암호화할 수 있습니다.  XML 암호화를 사용하면 데이터가 쉽게 읽혀질 염려 없이 중요한 XML을 저장하거나 전송할 수 있습니다.  이 절차는 Rijndael이 라고도 하는 AES (AES(Advanced Encryption Standard)) 알고리즘을 사용 하 여 XML 요소를 암호화 합니다.  
   
- 이 절차를 사용 하 여 암호화 된 XML 요소의 암호를 해독 하는 방법에 대 한 자세한 내용은 [방법: 대칭 키를 사용 하 여 Xml 요소 암호 해독](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)을 참조 하세요.  
+ 이 절차를 사용 하 여 암호화 된 XML 요소의 암호를 해독 하는 방법에 대 한 자세한 내용은 [방법: 대칭 키를 사용 하 여 Xml 요소 암호 해독](how-to-decrypt-xml-elements-with-symmetric-keys.md)을 참조 하세요.  
   
  AES와 같은 대칭 알고리즘을 사용하여 XML 데이터를 암호화하는 경우 동일한 키를 사용하여 XML 데이터를 암호화하고 암호 해독해야 합니다.  이 절차의 예제에서는 동일한 키를 사용하여 암호화된 XML이 암호 해독되며 암호화 및 암호 해독하는 당사자가 알고리즘 및 사용할 키에 대해 동의한다고 가정합니다.  이 예제에서는 암호화된 XML 내의 AES 키를 저장하거나 암호화하지 않습니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "75706086"
      [!code-csharp[HowToEncryptXMLElementSymmetric#9](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#9)]
      [!code-vb[HowToEncryptXMLElementSymmetric#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#9)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```xml  
 <root>  
@@ -99,7 +99,7 @@ ms.locfileid: "75706086"
   
  암호화 키를 사용하여 작업이 완료되면 각 바이트를 0으로 설정하거나 관리되는 암호화 클래스의 <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> 메서드를 호출하여 메모리에서 지웁니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Security.Cryptography.Xml>
-- [방법: 대칭 키를 사용하여 XML 요소 암호 해독](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)
+- [방법: 대칭 키를 사용하여 XML 요소 해독](how-to-decrypt-xml-elements-with-symmetric-keys.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - authentication [.NET Framework], principals
 - role-based security, principals
 ms.assetid: 578cc32b-5654-4d8b-9d8c-ebcbc5c75390
-ms.openlocfilehash: 1dfb1f6246e86d6f565c9338fb09f34a1608e9b0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8986e778e84fdf211d11fd7a897508acc7412207
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705927"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291203"
 ---
 # <a name="role-based-security"></a>역할 기반 보안
 역할은 재무 또는 비즈니스 애플리케이션에서 정책을 적용하는 데 자주 사용됩니다. 예를 들어 요청을 수행하는 사용자가 지정된 역할의 멤버인지 여부에 따라 애플리케이션이 처리되는 트랜잭션의 크기에 제한을 적용할 수 있습니다. 점원은 지정된 임계값보다 작은 트랜잭션을 처리할 수 있는 권한이 있고, 관리자는 더 높은 한도가 적용될 수 있고, 부사장은 이보다 더 높은 한도(또는 제한 없음)가 적용될 수 있습니다. 애플리케이션에서 작업을 완료하는 데 여러 승인이 필요한 경우에도 역할 기반 보안을 사용할 수 있습니다. 이러한 경우로 모든 직원이 구매 요청을 생성할 수 있지만 구매 담당자만 해당 요청을 공급자에게 보낼 수 있는 구매 주문으로 변환할 수 있는 구매 시스템이 있습니다.  
@@ -27,14 +27,14 @@ ms.locfileid: "75705927"
   
  .NET Framework는 다양한 애플리케이션의 요구를 충족할 수 있을 만큼 유연하고 확장 가능한 역할 기반 보안 지원을 제공합니다. COM + 1.0 서비스와 같은 기존 인증 인프라와 상호 운용되거나 사용자 지정 인증 시스템을 만들도록 선택할 수 있습니다. 역할 기반 보안은 주로 서버에서 처리되는 ASP.NET 웹 애플리케이션에서 사용하기에 특히 적합합니다. 그러나.NET Framework 역할 기반 보안은 클라이언트 또는 서버 중 하나에서 사용할 수 있습니다.  
   
- 이 섹션을 읽기 전에 [주요 보안 개념](../../../docs/standard/security/key-security-concepts.md)에 제공 된 자료를 이해 해야 합니다.  
+ 이 섹션을 읽기 전에 [주요 보안 개념](key-security-concepts.md)에 제공 된 자료를 이해 해야 합니다.  
   
 ## <a name="related-topics"></a>관련 항목  
   
 |제목|설명|  
 |-----------|-----------------|  
-|[Principal 개체 및 Identity 개체](../../../docs/standard/security/principal-and-identity-objects.md)|Windows 및 제네릭 ID와 보안 주체를 설정 및 관리하는 방법을 설명합니다.|  
-|[주요 보안 개념](../../../docs/standard/security/key-security-concepts.md)|.NET Framework 보안을 사용하기 전에 이해해야 할 기본 개념을 소개합니다.|  
+|[Principal 개체 및 Identity 개체](principal-and-identity-objects.md)|Windows 및 제네릭 ID와 보안 주체를 설정 및 관리하는 방법을 설명합니다.|  
+|[주요 보안 개념](key-security-concepts.md)|.NET Framework 보안을 사용하기 전에 이해해야 할 기본 개념을 소개합니다.|  
   
-## <a name="reference"></a>참조  
+## <a name="reference"></a>참고  
  <xref:System.Security.Permissions.PrincipalPermission?displayProperty=nameWithType>

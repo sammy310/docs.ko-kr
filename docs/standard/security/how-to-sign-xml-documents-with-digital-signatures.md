@@ -14,19 +14,19 @@ helpviewer_keywords:
 - XML signing
 - signing XML
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
-ms.openlocfilehash: 0df036b3336527f3cc0e48d9a7ec835ab9f1cf4a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 81fa5e4c503f26dc13758090f845fd8387287084
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706047"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277182"
 ---
 # <a name="how-to-sign-xml-documents-with-digital-signatures"></a>방법: 디지털 서명으로 XML 문서 서명
 <xref:System.Security.Cryptography.Xml> 네임스페이스의 클래스를 사용하여 XML 문서 또는 XML 문서의 일부를 디지털 서명으로 서명할 수 있습니다.  XML 디지털 서명(XMLDSIG)을 사용하면 서명된 후 데이터가 변경되지 않았음을 확인할 수 있습니다.  XMLDSIG 표준에 대 한 자세한 내용은 W3C (World Wide Web 컨소시엄) 권장 사항 [XML 서명 구문 및 처리](https://www.w3.org/TR/xmldsig-core/)를 참조 하세요.  
   
- 이 절차의 코드 예제에서는 전체 XML 문서를 디지털 서명 하 고 <`Signature`> 요소의 문서에 서명을 첨부 하는 방법을 보여 줍니다.  이 예제에서는 RSA 서명 키를 만들고, 보안 키 컨테이너에 키를 추가한 다음 키를 사용하여 XML 문서에 디지털 서명합니다.  그런 다음 키를 검색하여 XML 디지털 서명을 확인하거나 다른 XML 문서에 서명하는 데 사용할 수 있습니다.  
+ 이 절차의 코드 예제에서는 전체 XML 문서를 디지털 서명 하 고 <> 요소의 문서에 서명을 첨부 하는 방법을 보여 줍니다 `Signature` .  이 예제에서는 RSA 서명 키를 만들고, 보안 키 컨테이너에 키를 추가한 다음 키를 사용하여 XML 문서에 디지털 서명합니다.  그런 다음 키를 검색하여 XML 디지털 서명을 확인하거나 다른 XML 문서에 서명하는 데 사용할 수 있습니다.  
   
- 이 절차를 사용 하 여 만든 XML 디지털 서명을 확인 하는 방법에 대 한 자세한 내용은 [방법: Xml 문서의 디지털 서명 확인](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)을 참조 하세요.  
+ 이 절차를 사용 하 여 만든 XML 디지털 서명을 확인 하는 방법에 대 한 자세한 내용은 [방법: Xml 문서의 디지털 서명 확인](how-to-verify-the-digital-signatures-of-xml-documents.md)을 참조 하세요.  
   
 ### <a name="to-digitally-sign-an-xml-document"></a>XML 문서에 디지털 서명하려면  
   
@@ -75,7 +75,7 @@ ms.locfileid: "75706047"
      [!code-csharp[HowToSignXMLDocumentRSA#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#10)]
      [!code-vb[HowToSignXMLDocumentRSA#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#10)]  
   
-10. 시그니처의 XML 표시 (<`Signature`> 요소)를 검색 하 여 새 <xref:System.Xml.XmlElement> 개체에 저장 합니다.  
+10. 시그니처의 XML 표시 (<`Signature`> 요소)를 검색 하 여 새 개체에 저장 <xref:System.Xml.XmlElement> 합니다.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#11)]
      [!code-vb[HowToSignXMLDocumentRSA#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#11)]  
@@ -90,7 +90,7 @@ ms.locfileid: "75706047"
      [!code-csharp[HowToSignXMLDocumentRSA#13](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#13)]
      [!code-vb[HowToSignXMLDocumentRSA#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#13)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 `test.xml`이라는 파일이 컴파일된 프로그램과 동일한 디렉터리에 있다고 가정합니다.  `test.xml`이라는 파일에 다음 XML을 배치하고 이 예제에서 사용할 수 있습니다.  
   
 ```xml  
@@ -112,11 +112,11 @@ ms.locfileid: "75706047"
 - <xref:System.Xml>, <xref:System.Security.Cryptography> 및 <xref:System.Security.Cryptography.Xml> 네임스페이스를 포함합니다.  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
- 비대칭 키 쌍의 프라이빗 키를 일반 텍스트로 저장하거나 전송하지 마세요.  대칭 및 비대칭 암호화 키에 대 한 자세한 내용은 [암호화 및 암호 해독을 위한 키 생성](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)을 참조 하세요.  
+ 비대칭 키 쌍의 프라이빗 키를 일반 텍스트로 저장하거나 전송하지 마세요.  대칭 및 비대칭 암호화 키에 대 한 자세한 내용은 [암호화 및 암호 해독을 위한 키 생성](generating-keys-for-encryption-and-decryption.md)을 참조 하세요.  
   
- 소스 코드에 직접 프라이빗 키를 포함하지 마세요.  [Ildasm.exe (IL 디스어셈블러)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 를 사용 하거나 메모장과 같은 텍스트 편집기에서 어셈블리를 열어 어셈블리에서 포함 된 키를 쉽게 읽을 수 있습니다.  
+ 소스 코드에 직접 프라이빗 키를 포함하지 마세요.  [Ildasm.exe (IL 디스어셈블러)](../../framework/tools/ildasm-exe-il-disassembler.md) 를 사용 하거나 메모장과 같은 텍스트 편집기에서 어셈블리를 열어 어셈블리에서 포함 된 키를 쉽게 읽을 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Security.Cryptography.Xml>
-- [방법: XML 문서의 디지털 서명 확인](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)
+- [방법: XML 문서의 디지털 서명 확인](how-to-verify-the-digital-signatures-of-xml-documents.md)

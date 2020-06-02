@@ -1,6 +1,6 @@
 ---
 title: 상태 데이터 보안
-description: 상태 데이터를 개인 변수 또는 내부 변수로 선언하여 액세스 권한을 제한합니다. 이러한 데이터는 리플렉션, 직렬화 및 디버깅을 통해 계속 액세스할 수 있습니다.
+description: 상태 데이터를 private 또는 internal 변수로 선언 하 여 액세스를 제한 합니다. 이러한 데이터는 리플렉션, serialization 및 디버깅을 통해 여전히 액세스할 수 있습니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - secure coding, state data
 - state data security
 ms.assetid: 12671309-2877-43fe-a3df-6863507e712d
-ms.openlocfilehash: f95bf409f7eef8c2636d3c180d2bbd95fbc689c1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b7fcb520fe6fa28cc098c4e1cbb56ce7da759c11
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186820"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291047"
 ---
 # <a name="securing-state-data"></a>상태 데이터 보안
 중요한 데이터를 처리하거나 보안 관련 사항을 결정해야 하는 애플리케이션에서는 데이터를 자체적으로 제어해야 하며 악성 코드가 데이터에 직접 액세스하지 못하게 해야 합니다. 데이터를 메모리에서 보호하는 최상의 방법은 데이터를 동일한 어셈블리로 제한된 범위 사용하여 private 또는 internal 변수로 선언하는 것입니다. 그러나 이 데이터도 다음과 같이 액세스할 수 있습니다.  
@@ -29,4 +29,4 @@ ms.locfileid: "79186820"
   
 ## <a name="see-also"></a>참고 항목
 
-- [보안 코딩 지침](../../../docs/standard/security/secure-coding-guidelines.md)
+- [보안 코딩 지침](secure-coding-guidelines.md)

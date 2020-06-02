@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Portable Class Library [.NET Framework], and MVVM
 - MVVM, and Portable Class Library
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
-ms.openlocfilehash: f5312177b9f437d9b5474d38fca80db6fc45245b
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: ff34b295ba443088115d470d8ade0c986ac1d856
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77123677"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288851"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Model-View-View Model과 함께 이식 가능한 클래스 라이브러리 사용
-.NET Framework [이식 가능한 클래스 라이브러리](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) 를 사용 하 여 MVVM (모델 뷰 뷰 모델) 패턴을 구현 하 고 여러 플랫폼에서 어셈블리를 공유할 수 있습니다.
+.NET Framework [이식 가능한 클래스 라이브러리](cross-platform-development-with-the-portable-class-library.md) 를 사용 하 여 MVVM (모델 뷰 뷰 모델) 패턴을 구현 하 고 여러 플랫폼에서 어셈블리를 공유할 수 있습니다.
 
 [!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
 
@@ -50,7 +50,7 @@ ms.locfileid: "77123677"
 
 - <xref:System.Windows.Input.ICommand?displayProperty=nameWithType> 클래스
 
-- <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> 네임 스페이스의 모든 클래스
+- 네임 스페이스의 모든 클래스 <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType>
 
 ## <a name="implementing-mvvm"></a>MVVM 구현
  MVVM를 구현 하려면 이식 가능한 클래스 라이브러리 프로젝트에서 이식 불가능 한 프로젝트를 참조할 수 없으므로 일반적으로 이식 가능한 클래스 라이브러리 프로젝트에 모델 및 뷰 모델을 만듭니다. 모델 및 뷰 모델은 동일한 프로젝트 또는 별도의 프로젝트에 있을 수 있습니다. 별도의 프로젝트를 사용 하는 경우 모델 프로젝트에 뷰 모델 프로젝트의 참조를 추가 합니다.
@@ -74,7 +74,7 @@ ms.locfileid: "77123677"
  [!code-csharp[PortableClassLibraryMVVM#3](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/viewmodelbase.cs#3)]
  [!code-vb[PortableClassLibraryMVVM#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/viewmodelbase.vb#3)]
 
- MVVM 패턴을 사용 하는 경우에는 <xref:System.Windows.Input.ICommand> 인터페이스의 구현이 자주 사용 됩니다. 다음 예제에서는 <xref:System.Windows.Input.ICommand> 인터페이스의 구현을 보여 줍니다.
+ <xref:System.Windows.Input.ICommand>인터페이스 구현은 MVVM 패턴에서 자주 사용 됩니다. 다음 예제에서는 <xref:System.Windows.Input.ICommand> 인터페이스의 구현을 보여 줍니다.
 
  [!code-csharp[PortableClassLibraryMVVM#4](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/relaycommand.cs#4)]
  [!code-vb[PortableClassLibraryMVVM#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/relaycommand.vb#4)]
@@ -91,4 +91,4 @@ ms.locfileid: "77123677"
   
 ## <a name="see-also"></a>참고 항목
 
-- [이식 가능한 클래스 라이브러리](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)
+- [이식 가능한 클래스 라이브러리](cross-platform-development-with-the-portable-class-library.md)

@@ -1,5 +1,5 @@
 ---
-title: '방법: 조정 규칙을 사용 하지 않고 표준 시간대 만들기'
+title: '방법: 조정 규칙을 사용하지 않고 표준 시간대 만들기'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - time zones [.NET Framework], creating
 - adjustment rule [.NET Framework]
 ms.assetid: a6af8647-7893-4f29-95a9-d94c65a6e8dd
-ms.openlocfilehash: 344d8307318d5a2e50eddb39ef488cd8c5f2fdac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1d8aae1284e9ee9871c6f201c6a00e0b547f95fa
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129096"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84278040"
 ---
-# <a name="how-to-create-time-zones-without-adjustment-rules"></a>방법: 조정 규칙을 사용 하지 않고 표준 시간대 만들기
+# <a name="how-to-create-time-zones-without-adjustment-rules"></a>방법: 조정 규칙을 사용하지 않고 표준 시간대 만들기
 
 응용 프로그램에 필요한 정확한 표준 시간대 정보는 다음과 같은 여러 가지 이유로 특정 시스템에 표시 되지 않을 수 있습니다.
 
@@ -27,26 +27,26 @@ ms.locfileid: "73129096"
 
 - 표준 시간대가 있지만 특정 기록 기간의 표준 시간대 조정에 대 한 정확한 정보가 없습니다.
 
-이러한 경우 <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> 메서드를 호출 하 여 응용 프로그램에 필요한 표준 시간대를 정의할 수 있습니다. 이 메서드의 오버 로드를 사용 하 여 조정 규칙을 사용 하거나 사용 하지 않고 표준 시간대를 만들 수 있습니다. 표준 시간대가 일광 절약 시간을 지 원하는 경우 고정 또는 부동 조정 규칙을 사용 하 여 조정을 정의할 수 있습니다. 이러한 용어에 대 한 정의는 [표준 시간대 개요](../../../docs/standard/datetime/time-zone-overview.md)의 "표준 시간대 용어" 섹션을 참조 하세요.
+이러한 경우 메서드를 호출 <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> 하 여 응용 프로그램에 필요한 표준 시간대를 정의할 수 있습니다. 이 메서드의 오버 로드를 사용 하 여 조정 규칙을 사용 하거나 사용 하지 않고 표준 시간대를 만들 수 있습니다. 표준 시간대가 일광 절약 시간을 지 원하는 경우 고정 또는 부동 조정 규칙을 사용 하 여 조정을 정의할 수 있습니다. 이러한 용어에 대 한 정의는 [표준 시간대 개요](time-zone-overview.md)의 "표준 시간대 용어" 섹션을 참조 하세요.
 
 > [!IMPORTANT]
-> <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> 메서드를 호출 하 여 만든 사용자 지정 표준 시간대는 레지스트리에 추가 되지 않습니다. 대신 <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> 메서드 호출에서 반환 된 개체 참조를 통해서만 액세스할 수 있습니다.
+> 메서드를 호출 하 여 만든 사용자 지정 표준 시간대 <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> 는 레지스트리에 추가 되지 않습니다. 대신 메서드 호출에서 반환 되는 개체 참조를 통해서만 액세스할 수 있습니다 <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> .
 
-이 항목에서는 조정 규칙을 사용 하지 않고 표준 시간대를 만드는 방법을 보여 줍니다. 일광 절약 시간 조정 규칙을 지 원하는 표준 시간대를 만들려면 [방법: 조정 규칙을 사용 하 여 표준 시간대 만들기](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)를 참조 하세요.
+이 항목에서는 조정 규칙을 사용 하지 않고 표준 시간대를 만드는 방법을 보여 줍니다. 일광 절약 시간 조정 규칙을 지 원하는 표준 시간대를 만들려면 [방법: 조정 규칙을 사용 하 여 표준 시간대 만들기](create-time-zones-with-adjustment-rules.md)를 참조 하세요.
 
 ### <a name="to-create-a-time-zone-without-adjustment-rules"></a>조정 규칙을 사용 하지 않고 표준 시간대를 만들려면
 
 1. 표준 시간대의 표시 이름을 정의 합니다.
 
-   표시 이름은 UTC (협정 세계시)의 표준 시간대 오프셋을 괄호로 묶고 표준 시간대를 나타내는 문자열, 표준 시간대의 하나 이상의 도시 또는 하나 이상의 cou를 나타내는 문자열을 따르는 매우 일반적인 형식입니다. n 번 시도 하거나 표준 시간대의 지역입니다.
+   표시 이름은 표준 시간대의 오프셋 (UTC)을 괄호로 묶고 표준 시간대를 나타내는 문자열, 표준 시간대에서 하나 이상의 도시 또는 표준 시간대의 국가 또는 지역 중 하나 이상에 해당 하는 문자열 뒤에 오는 매우 일반적인 형식입니다.
 
 2. 표준 시간대의 표준 시간 이름을 정의 합니다. 일반적으로이 문자열은 표준 시간대의 식별자로도 사용 됩니다.
 
 3. 표준 시간대의 표준 이름과 다른 식별자를 사용 하려면 표준 시간대 식별자를 정의 합니다.
 
-4. UTC에서 표준 시간대의 오프셋을 정의 하는 <xref:System.TimeSpan> 개체를 인스턴스화합니다. 시간이 UTC 보다 늦은 표준 시간대에는 양의 오프셋이 있습니다. 시간이 UTC 보다 이전인 표준 시간대에는 음의 오프셋이 있습니다.
+4. <xref:System.TimeSpan>UTC에서 표준 시간대의 오프셋을 정의 하는 개체를 인스턴스화합니다. 시간이 UTC 보다 늦은 표준 시간대에는 양의 오프셋이 있습니다. 시간이 UTC 보다 이전인 표준 시간대에는 음의 오프셋이 있습니다.
 
-5. <xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%29?displayProperty=nameWithType> 메서드를 호출 하 여 새 표준 시간대를 인스턴스화합니다.
+5. 메서드를 호출 <xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%29?displayProperty=nameWithType> 하 여 새 표준 시간대를 인스턴스화합니다.
 
 ## <a name="example"></a>예제
 
@@ -55,7 +55,7 @@ ms.locfileid: "73129096"
 [!code-csharp[System.TimeZone2.CreateTimeZone#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#1)]
 [!code-vb[System.TimeZone2.CreateTimeZone#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#1)]
 
-<xref:System.TimeZoneInfo.DisplayName%2A> 속성에 할당 되는 문자열은 표준 시간대의 오프셋 뒤에 표준 시간대에 대 한 설명이 표시 되는 표준 형식을 따릅니다.
+속성에 할당 된 문자열은 표준 시간대의 <xref:System.TimeZoneInfo.DisplayName%2A> 오프셋 뒤에 표준 시간대에 대 한 설명이 표시 되는 표준 형식을 따릅니다.
 
 ## <a name="compiling-the-code"></a>코드 컴파일
 
@@ -66,8 +66,8 @@ ms.locfileid: "73129096"
   [!code-csharp[System.TimeZone2.CreateTimeZone#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#6)]
   [!code-vb[System.TimeZone2.CreateTimeZone#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#6)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [날짜, 시간 및 표준 시간대](../../../docs/standard/datetime/index.md)
-- [표준 시간대 개요](../../../docs/standard/datetime/time-zone-overview.md)
-- [방법: 조정 규칙을 사용하여 표준 시간대 만들기](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)
+- [날짜, 시간 및 표준 시간대](index.md)
+- [표준 시간대 개요](time-zone-overview.md)
+- [방법: 조정 규칙을 사용하여 표준 시간대 만들기](create-time-zones-with-adjustment-rules.md)
