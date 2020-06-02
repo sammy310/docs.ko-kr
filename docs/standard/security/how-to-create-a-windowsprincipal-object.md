@@ -11,12 +11,12 @@ helpviewer_keywords:
 - security [.NET Framework], principals
 - principal objects, creating
 ms.assetid: 56eb10ca-e61d-4ed2-af7a-555fc4c25a25
-ms.openlocfilehash: 30af18b7d7b86621586c7da66eda1b37356d5565
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 6064c98c4e1e5153f4e0de4849de196228972a89
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159782"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284431"
 ---
 # <a name="how-to-create-a-windowsprincipal-object"></a>방법: WindowsPrincipal 개체 만들기
 코드에서 역할 기반 유효성 검사를 반복적으로 수행해야 하는지 또는 한 번만 수행해야 하는지에 따라 <xref:System.Security.Principal.WindowsPrincipal> 개체를 만드는 두 가지 방법이 있습니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "78159782"
   
 ### <a name="to-create-a-windowsprincipal-object-for-repeated-validation"></a>반복된 유효성 검사를 위한 WindowsPrincipal 개체를 만들려면  
   
-1. 새 정책에 대한 요구 사항을 나타내는 <xref:System.AppDomain.SetPrincipalPolicy%2A> 열거형 값을 메서드에 전달하여 정적 <xref:System.AppDomain> 속성에 의해서 반환된 <xref:System.AppDomain.CurrentDomain%2A?displayProperty=nameWithType> 개체에서 <xref:System.Security.Principal.PrincipalPolicy> 메서드를 호출합니다. 지원되는 값은 <xref:System.Security.Principal.PrincipalPolicy.NoPrincipal>, <xref:System.Security.Principal.PrincipalPolicy.UnauthenticatedPrincipal> 및 <xref:System.Security.Principal.PrincipalPolicy.WindowsPrincipal>입니다. 다음 코드에서는 이 메서드 호출을 보여 줍니다.  
+1. 새 정책에 대한 요구 사항을 나타내는 <xref:System.Security.Principal.PrincipalPolicy> 열거형 값을 메서드에 전달하여 정적 <xref:System.AppDomain.CurrentDomain%2A?displayProperty=nameWithType> 속성에 의해서 반환된 <xref:System.AppDomain> 개체에서 <xref:System.AppDomain.SetPrincipalPolicy%2A> 메서드를 호출합니다. 지원되는 값은 <xref:System.Security.Principal.PrincipalPolicy.NoPrincipal>, <xref:System.Security.Principal.PrincipalPolicy.UnauthenticatedPrincipal> 및 <xref:System.Security.Principal.PrincipalPolicy.WindowsPrincipal>입니다. 다음 코드에서는 이 메서드 호출을 보여 줍니다.  
   
     ```csharp  
     AppDomain.CurrentDomain.SetPrincipalPolicy(  
@@ -53,7 +53,7 @@ ms.locfileid: "78159782"
   
 ### <a name="to-create-a-windowsprincipal-object-for-a-single-validation"></a>단일 유효성 검사를 위한 WindowsPrincipal 개체를 만들려면  
   
-1. 현재 Windows 계정을 쿼리하고 해당 계정에 대한 정보를 새로 만든 ID 개체에 배치하는 정적 <xref:System.Security.Principal.WindowsIdentity> 메서드를 호출하여 새 <xref:System.Security.Principal.WindowsIdentity.GetCurrent%2A?displayProperty=nameWithType> 개체를 초기화합니다. 다음 코드에서는 새 <xref:System.Security.Principal.WindowsIdentity> 개체를 만들고 현재 인증된 사용자로 초기화합니다.  
+1. 현재 Windows 계정을 쿼리하고 해당 계정에 대한 정보를 새로 만든 ID 개체에 배치하는 정적 <xref:System.Security.Principal.WindowsIdentity.GetCurrent%2A?displayProperty=nameWithType> 메서드를 호출하여 새 <xref:System.Security.Principal.WindowsIdentity> 개체를 초기화합니다. 다음 코드에서는 새 <xref:System.Security.Principal.WindowsIdentity> 개체를 만들고 현재 인증된 사용자로 초기화합니다.  
   
     ```csharp  
     WindowsIdentity myIdentity = WindowsIdentity.GetCurrent();  
@@ -77,4 +77,4 @@ ms.locfileid: "78159782"
   
 ## <a name="see-also"></a>참고 항목
 
-- [Principal 개체 및 Identity 개체](../../../docs/standard/security/principal-and-identity-objects.md)
+- [Principal 개체 및 Identity 개체](principal-and-identity-objects.md)
