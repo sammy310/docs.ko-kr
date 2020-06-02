@@ -1,16 +1,16 @@
 ---
 title: 개체 및 클래스
-ms.date: 07/20/2015
+ms.date: 05/26/2020
 helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: 589b0b362cc25fd10e2780fd541cf9f7cfb546a9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 10e257a1cbc8778565a9838aeef423522f9d2970
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344634"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290618"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Visual Basic의 개체 및 클래스
 
@@ -26,32 +26,38 @@ Visual Basic의 각 개체는 *클래스*에 의해 정의 됩니다. 클래스�
 
 개체와 해당 클래스 간의 관계를 이해하기 위해 쿠키 커터와 쿠키를 생각해 보세요. 쿠키 커터는 클래스입니다. 각 쿠키에 대해 크기와 모양 같은 특징을 정의합니다. 클래스는 개체를 만드는 데 사용됩니다. 개체는 쿠키입니다.
 
-해당 멤버에 액세스하려면 먼저 개체를 만들어야 합니다.
+[`Shared`](../../../language-reference/modifiers/shared.md)클래스의 개체 없이 액세스할 수 있는 멤버를 제외 하 고 개체의 멤버에 액세스 하려면 먼저 개체를 만들어야 합니다.
 
-### <a name="to-create-an-object-from-a-class"></a>클래스에서 개체를 만들려면
+### <a name="create-an-object-from-a-class"></a>클래스에서 개체 만들기
 
-1. 개체를 만들려는 클래스를 결정합니다.
-
-2. 클래스 인스턴스를 할당할 수 있는 변수를 만드는 [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md)을 작성합니다. 변수는 원하는 클래스의 형식이어야 합니다.
+1. 개체를 만들 클래스를 결정 하거나 고유한 클래스를 정의 합니다. 예:
 
    ```vb
-   Dim nextCustomer As customer
+   Public Class Customer
+       Public Property AccountNumber As Integer
+   End Class
    ```
 
-3. [New 연산자](../../../../visual-basic/language-reference/operators/new-operator.md) 키워드를 추가하여 변수를 클래스의 새 인스턴스로 초기화합니다.
+2. 클래스 인스턴스를 할당할 수 있는 변수를 만드는 [Dim 문](../../../language-reference/statements/dim-statement.md)을 작성합니다. 변수는 원하는 클래스의 형식이어야 합니다.
 
    ```vb
-   Dim nextCustomer As New customer
+   Dim nextCustomer As Customer
+   ```
+
+3. [New 연산자](../../../language-reference/operators/new-operator.md) 키워드를 추가하여 변수를 클래스의 새 인스턴스로 초기화합니다.
+
+   ```vb
+   Dim nextCustomer As New Customer
    ```
 
 4. 이제 개체 변수를 통해 클래스의 멤버에 액세스할 수 있습니다.
 
    ```vb
-   nextCustomer.accountNumber = lastAccountNumber + 1
+   nextCustomer.AccountNumber = lastAccountNumber + 1
    ```
 
 > [!NOTE]
-> 가능하면 항상 할당하려는 클래스 형식으로 변수를 선언해야 합니다. 이것을 *초기 바인딩*이라고 합니다. 컴파일 시간의 클래스 형식을 모르는 경우 변수를 [개체 데이터 형식](../../../../visual-basic/language-reference/data-types/object-data-type.md)으로 선언하여 *런타임에 바인딩*을 호출할 수 있습니다. 그러나 런타임에 바인딩을 사용하면 성능이 저하되고 런타임 개체 멤버에 대한 액세스가 제한됩니다. 자세한 내용은 [개체 변수 선언](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)을 참조하세요.
+> 가능하면 항상 할당하려는 클래스 형식으로 변수를 선언해야 합니다. 이것을 *초기 바인딩*이라고 합니다. 컴파일 시간의 클래스 형식을 모르는 경우 변수를 [개체 데이터 형식](../../../language-reference/data-types/object-data-type.md)으로 선언하여 *런타임에 바인딩*을 호출할 수 있습니다. 그러나 런타임에 바인딩을 사용하면 성능이 저하되고 런타임 개체 멤버에 대한 액세스가 제한됩니다. 자세한 내용은 [개체 변수 선언](../variables/object-variable-declaration.md)을 참조하세요.
 
 ### <a name="multiple-instances"></a>여러 인스턴스
 
@@ -106,6 +112,9 @@ warningLabel.ForeColor = System.Drawing.Color.Red
 
 - 자세한 내용은 [Property 프로시저](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)를 참조하세요.
 
+> [!TIP]
+> 상수가 아닌 필드는 항상 private으로 유지 합니다. 이를 공용으로 설정 하려면 대신 속성을 사용 합니다.
+
 ### <a name="methods"></a>메서드
 
 *메서드*는 개체에서 수행할 수 있는 작업입니다. 예를 들어 <xref:System.Windows.Forms.ComboBox.ObjectCollection.Add%2A>는 콤보 상자에 새 항목을 추가하는 <xref:System.Windows.Forms.ComboBox> 개체의 메서드입니다.
@@ -119,23 +128,21 @@ safetyTimer.Start()
 
 메서드는 개체에 의해 노출되는 *프로시저*일 뿐입니다.
 
-자세한 내용은 [프로시저](../../../../visual-basic/programming-guide/language-features/procedures/index.md)를 참조하세요.
+자세한 내용은 [프로시저](../procedures/index.md)를 참조하세요.
 
 ### <a name="events"></a>이벤트
 
 이벤트는 마우스 클릭이나 키 누르기와 같이 개체가 인식하는 동작이며 응답하기 위해 코드를 작성할 수 있습니다. 이벤트는 사용자 동작 또는 프로그램 코드의 결과로 발생하거나 시스템에 의해 발생할 수 있습니다. 이벤트에 신호를 보내는 코드를 이벤트 *발생*이라고 하고, 신호에 응답하는 코드를 *처리*라고 합니다.
 
-개체에 의해 발생하고 다른 개체에서 처리되는 사용자 지정 이벤트를 개발할 수도 있습니다. 자세한 내용은 [이벤트](../../../../visual-basic/programming-guide/language-features/events/index.md)에 정의된 인터페이스의 private C++ 관련 구현입니다.
+개체에 의해 발생하고 다른 개체에서 처리되는 사용자 지정 이벤트를 개발할 수도 있습니다. 자세한 내용은 [이벤트](../events/index.md)를 참조하세요.
 
 ### <a name="instance-members-and-shared-members"></a>인스턴스 멤버 및 공유 멤버
 
-클래스에서 개체를 만들 때 결과는 해당 클래스의 인스턴스가 됩니다. [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) 키워드로 선언되지 않은 멤버는 해당 특정 인스턴스에 반드시 속하는 *인스턴스 멤버*입니다. 한 인스턴스의 인스턴스 멤버는 동일한 클래스의 다른 인스턴스에 있는 동일한 멤버와 무관합니다. 예를 들어 인스턴스 멤버 변수는 서로 다른 인스턴스에서 다른 값을 가질 수 있습니다.
+클래스에서 개체를 만들 때 결과는 해당 클래스의 인스턴스가 됩니다. [Shared](../../../language-reference/modifiers/shared.md) 키워드로 선언되지 않은 멤버는 해당 특정 인스턴스에 반드시 속하는 *인스턴스 멤버*입니다. 한 인스턴스의 인스턴스 멤버는 동일한 클래스의 다른 인스턴스에 있는 동일한 멤버와 무관합니다. 예를 들어 인스턴스 멤버 변수는 서로 다른 인스턴스에서 다른 값을 가질 수 있습니다.
 
 `Shared` 키워드로 선언된 멤버는 특정 인스턴스가 아니라 전체 클래스에 속하는 *공유 멤버*입니다. 공유 멤버는 사용자가 만드는 클래스의 인스턴스 수에 관계 없이, 사용자가 인스턴스를 만들지 않더라도 한 번만 존재합니다. 예를 들어 공유 멤버 변수는 클래스에 액세스할 수 있는 모든 코드에서 사용할 수 있는 하나의 값만 갖습니다.
 
-#### <a name="accessing-nonshared-members"></a>비공유 멤버 액세스
-
-##### <a name="to-access-a-nonshared-member-of-an-object"></a>개체의 비공유 멤버에 액세스하려면
+#### <a name="accessing-non-shared-members"></a>비공유 멤버 액세스
 
 1. 개체가 해당 클래스에서 생성되고 개체 변수에 할당되어 있는지 확인합니다.
 
@@ -143,7 +150,7 @@ safetyTimer.Start()
    Dim secondForm As New System.Windows.Forms.Form
    ```
 
-2. 멤버에 액세스하는 문에서 개체 변수 이름 다음에 *멤버-액세스 연산자*(`.`)를 지정한 후 멤버 이름을 지정합니다.
+2. 멤버에 액세스 하는 문에서 개체 변수 이름 뒤에 *멤버 액세스 연산자* ( `.` )와 멤버 이름을 차례로 사용 합니다.
 
    ```vb
    secondForm.Show()
@@ -151,19 +158,17 @@ safetyTimer.Start()
 
 #### <a name="accessing-shared-members"></a>공유 멤버 액세스
 
-##### <a name="to-access-a-shared-member-of-an-object"></a>개체의 공유 멤버에 액세스하려면
-
-- 클래스 이름 뒤에 *멤버-액세스 연산자*(`.`)를 지정한 다음 멤버 이름을 지정합니다. 항상 클래스 이름을 통해 직접적으로 개체의 `Shared` 멤버에 액세스해야 합니다.
+- 클래스 이름 뒤에 *멤버 액세스 연산자* ( `.` )와 멤버 이름을 차례로 사용 합니다. 항상 클래스 이름을 통해 직접적으로 개체의 `Shared` 멤버에 액세스해야 합니다.
 
    ```vb
-   MsgBox("This computer is called " & Environment.MachineName)
+   Console.WriteLine("This computer is called " & Environment.MachineName)
    ```
 
 - 클래스에서 개체를 이미 만들었으면 개체의 변수를 통해 `Shared` 멤버에 액세스할 수도 있습니다.
 
 ### <a name="differences-between-classes-and-modules"></a>클래스와 모듈 간의 차이점
 
-클래스와 모듈 간의 주요 차이점은 클래스는 개체로 인스턴스화할 수 있지만 표준 모듈은 그럴 수 없다는 것입니다. 표준 모듈의 데이터 복사본은 하나만 있으므로 프로그램의 한 부분이 표준 모듈의 공용 변수를 변경하면 프로그램의 다른 부분은 해당 변수를 읽을 때 동일한 값을 얻습니다. 반면 개체 데이터는 인스턴스화된 각 개체에 대해 개별적으로 존재합니다. 또 다른 차이점은 표준 모듈과 달리 클래스는 인터페이스를 구현할 수 있다는 것입니다.
+클래스와 모듈 간의 주요 차이점은 클래스는 개체로 인스턴스화할 수 있지만 표준 모듈은 그럴 수 없다는 것입니다. 표준 모듈의 데이터 복사본은 하나만 있으므로 프로그램의 한 부분이 표준 모듈의 공용 변수를 변경하면 프로그램의 다른 부분은 해당 변수를 읽을 때 동일한 값을 얻습니다. 반면 개체 데이터는 인스턴스화된 각 개체에 대해 개별적으로 존재합니다. 또 다른 차이점은 표준 모듈과 달리 클래스는 인터페이스를 구현할 수 있다는 것입니다. 클래스가 [MustInherit](../../../language-reference/modifiers/mustinherit.md) 한정자로 표시 된 경우 직접 인스턴스화할 수 없습니다. 그러나 모듈은 상속 될 수 있지만 모듈은 상속 될 수 없으므로 모듈에서 여전히 다릅니다.
 
 > [!NOTE]
 > `Shared` 한정자가 클래스 멤버에 적용되면 클래스의 특정 인스턴스가 아닌 클래스 자체에 연결됩니다. 모듈 멤버에 액세스하는 것과 같은 방식으로 멤버에도 클래스 이름을 사용하여 직접 액세스합니다.
@@ -176,10 +181,10 @@ safetyTimer.Start()
 
 개체를 사용하면 변수 및 프로시저를 한 번 선언한 후 필요할 때마다 다시 사용할 수 있습니다. 예를 들어 애플리케이션에 맞춤법 검사기를 추가하려는 경우 모든 변수 및 지원 함수를 정의하여 맞춤법 검사 기능을 제공할 수 있습니다. 맞춤법 검사기를 클래스로 만드는 경우 컴파일된 어셈블리에 대한 참조를 추가하여 다른 애플리케이션에서 다시 사용할 수 있습니다. 다른 사람이 이미 개발한 맞춤법 검사기 클래스를 사용하여 일부 작업을 줄일 수도 있습니다.
 
-.NET Framework는 사용할 수 있는 구성 요소에 대 한 많은 예를 제공 합니다. 다음 예제에서는 <xref:System> 네임스페이스의 <xref:System.TimeZone> 클래스를 사용합니다. <xref:System.TimeZone>에서는 현재 컴퓨터 시스템의 표준 시간대에 대한 정보를 검색할 수 있도록 하는 멤버를 제공합니다.
+.NET은 사용할 수 있는 구성 요소에 대 한 많은 예를 제공 합니다. 다음 예제에서는 <xref:System> 네임스페이스의 <xref:System.TimeZone> 클래스를 사용합니다. <xref:System.TimeZone>에서는 현재 컴퓨터 시스템의 표준 시간대에 대한 정보를 검색할 수 있도록 하는 멤버를 제공합니다.
 
 ```vb
-Public Sub examineTimeZone()
+Public Sub ExamineTimeZone()
     Dim tz As System.TimeZone = System.TimeZone.CurrentTimeZone
     Dim s As String = "Current time zone is "
     s &= CStr(tz.GetUtcOffset(Now).Hours) & " hours and "
@@ -188,11 +193,11 @@ Public Sub examineTimeZone()
     s &= vbCrLf & "and is currently "
     If tz.IsDaylightSavingTime(Now) = False Then s &= "not "
     s &= "on ""summer time""."
-    MsgBox(s)
+    Console.WriteLine(s)
 End Sub
 ```
 
-앞의 예제에서 첫 번째 [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md)은 <xref:System.TimeZone> 형식의 개체 변수를 선언하고 이를 <xref:System.TimeZone.CurrentTimeZone%2A> 속성에 의해 반환된 <xref:System.TimeZone> 개체에 할당합니다.
+앞의 예제에서 첫 번째 [Dim 문](../../../language-reference/statements/dim-statement.md)은 <xref:System.TimeZone> 형식의 개체 변수를 선언하고 이를 <xref:System.TimeZone.CurrentTimeZone%2A> 속성에 의해 반환된 <xref:System.TimeZone> 개체에 할당합니다.
 
 ## <a name="relationships-among-objects"></a>개체 간 관계
 
@@ -204,17 +209,17 @@ End Sub
 
 다음 예제에서는 일반적인 <xref:System.Windows.Forms.Button>처럼 작동하지만 전경색 및 배경색을 거꾸로 뒤집는 메서드도 제공하는 특수한 종류의 <xref:System.Windows.Forms.Button>을 정의하려 한다고 가정합니다.
 
-#### <a name="to-define-a-class-is-derived-from-an-already-existing-class"></a>클래스가 기존 클래스에서 파생된다고 정의하려면
+#### <a name="define-a-class-that-is-derived-from-an-already-existing-class"></a>이미 존재 하는 클래스에서 파생 된 클래스를 정의 합니다.
 
-1. [Class 문](../../../../visual-basic/language-reference/statements/class-statement.md)을 사용하여 필요한 개체를 만들 클래스를 정의합니다.
+1. [Class 문](../../../language-reference/statements/class-statement.md)을 사용하여 필요한 개체를 만들 클래스를 정의합니다.
 
    ```vb
-   Public Class reversibleButton
+   Public Class ReversibleButton
    ```
 
    `End Class` 문은 클래스의 마지막 코드 줄 다음에 나옵니다. 기본적으로 IDE(통합 개발 환경)는 사용자가 `Class` 문을 입력하면 `End Class`를 자동으로 생성합니다.
 
-2. `Class` 문 바로 다음에 [Inherits 문](../../../../visual-basic/language-reference/statements/inherits-statement.md)을 입력합니다. 새 클래스가 파생되는 클래스를 지정합니다.
+2. `Class` 문 바로 다음에 [Inherits 문](../../../language-reference/statements/inherits-statement.md)을 입력합니다. 새 클래스가 파생되는 클래스를 지정합니다.
 
    ```vb
    Inherits System.Windows.Forms.Button
@@ -222,12 +227,12 @@ End Sub
 
    새 클래스는 기본 클래스에서 정의하는 모든 멤버를 상속합니다.
 
-3. 파생 클래스가 노출하는 추가 멤버에 대한 코드를 추가합니다. 예를 들어 `reverseColors` 메서드를 추가할 수 있으며 이 경우 파생 클래스는 다음과 같이 표시될 수 있습니다.
+3. 파생 클래스가 노출하는 추가 멤버에 대한 코드를 추가합니다. 예를 들어 `ReverseColors` 메서드를 추가할 수 있으며 이 경우 파생 클래스는 다음과 같이 표시될 수 있습니다.
 
    ```vb
-   Public Class reversibleButton
+   Public Class ReversibleButton
        Inherits System.Windows.Forms.Button
-           Public Sub reverseColors()
+           Public Sub ReverseColors()
                Dim saveColor As System.Drawing.Color = Me.BackColor
                Me.BackColor = Me.ForeColor
                Me.ForeColor = saveColor
@@ -235,13 +240,13 @@ End Sub
    End Class
    ```
 
-   `reversibleButton` 클래스에서 개체를 만드는 경우 <xref:System.Windows.Forms.Button> 클래스의 모든 멤버뿐 아니라 `reverseColors` 메서드와 `reversibleButton`에 정의한 다른 모든 새 멤버에도 액세스할 수 있습니다.
+   클래스에서 개체를 만드는 경우 `ReversibleButton` 클래스의 모든 멤버 뿐만 아니라 <xref:System.Windows.Forms.Button> `ReverseColors` 메서드 및에서 정의 하는 다른 모든 새 멤버에 액세스할 수 있습니다 `ReversibleButton` .
 
-파생 클래스는 해당 클래스의 기준이 되는 클래스에서 멤버를 상속하므로 클래스 계층 구조가 점점 복잡해질 수 있습니다. 자세한 내용은 [상속 기본 사항](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)을 참조하세요.
+파생 클래스는 해당 클래스의 기준이 되는 클래스에서 멤버를 상속하므로 클래스 계층 구조가 점점 복잡해질 수 있습니다. 자세한 내용은 [상속 기본 사항](inheritance-basics.md)을 참조하세요.
 
 ### <a name="compile-the-code"></a>코드 컴파일
 
-컴파일러에서 새 클래스를 파생하려는 원본 클래스에 액세스할 수 있어야 합니다. 이것은 이름을 완전히 한정하거나 앞의 예제에서와 같이 [Imports 문(.NET 네임스페이스 및 형식)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)에서 해당 네임스페이스를 식별하는 것을 의미할 수 있습니다. 클래스가 다른 프로젝트에 있으면 해당 프로젝트에 대한 참조를 추가해야 할 수 있습니다. 자세한 내용은 [프로젝트의 참조 관리](/visualstudio/ide/managing-references-in-a-project)를 참조하세요.
+컴파일러에서 새 클래스를 파생하려는 원본 클래스에 액세스할 수 있어야 합니다. 이것은 이름을 완전히 한정하거나 앞의 예제에서와 같이 [Imports 문(.NET 네임스페이스 및 형식)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md)에서 해당 네임스페이스를 식별하는 것을 의미할 수 있습니다. 클래스가 다른 프로젝트에 있으면 해당 프로젝트에 대한 참조를 추가해야 할 수 있습니다. 자세한 내용은 [프로젝트의 참조 관리](/visualstudio/ide/managing-references-in-a-project)를 참조하세요.
 
 ### <a name="containment-relationship"></a>포함 관계
 
@@ -249,27 +254,27 @@ End Sub
 
 #### <a name="collections"></a>컬렉션
 
-특정 형식의 개체 포함을 *컬렉션*으로 나타냅니다. 컬렉션은 열거할 수 있는 유사한 개체의 그룹입니다. Visual Basic는 [For Each ... ](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)컬렉션의 항목을 반복 하는 데 사용할 수 있는 다음 문입니다. 또한 컬렉션을 사용하면<xref:Microsoft.VisualBasic.Collection.Item%2A>을 사용하여 인덱스별로 또는 고유 문자열에 연결하여 요소를 검색할 수 있습니다. 컬렉션은 인덱스를 사용하지 않고도 항목을 추가 또는 제거할 수 있도록 하므로 배열보다 더 쉽게 사용할 수 있습니다. 사용 편의성 때문에 컬렉션을 폼 및 컨트롤을 저장하는 데 종종 사용합니다.
+특정 형식의 개체 포함을 *컬렉션*으로 나타냅니다. 컬렉션은 열거할 수 있는 유사한 개체의 그룹입니다. Visual Basic는 [For Each ... ](../../../language-reference/statements/for-each-next-statement.md)컬렉션의 항목을 반복 하는 데 사용할 수 있는 다음 문입니다. 또한 컬렉션을 사용하면<xref:Microsoft.VisualBasic.Collection.Item%2A>을 사용하여 인덱스별로 또는 고유 문자열에 연결하여 요소를 검색할 수 있습니다. 컬렉션은 인덱스를 사용하지 않고도 항목을 추가 또는 제거할 수 있도록 하므로 배열보다 더 쉽게 사용할 수 있습니다. 사용 편의성 때문에 컬렉션을 폼 및 컨트롤을 저장하는 데 종종 사용합니다.
 
 ## <a name="related-topics"></a>관련 항목
 
-[연습: 클래스 정의](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)\
+[연습: 클래스 정의](walkthrough-defining-classes.md)\
 클래스를 만드는 방법에 대한 단계별 설명을 제공합니다.
 
-[오버 로드 된 속성 및 메서드](../../../../visual-basic/programming-guide/language-features/objects-and-classes/overloaded-properties-and-methods.md)\
+[오버 로드 된 속성 및 메서드](overloaded-properties-and-methods.md)\
 오버로드된 속성 및 메서드
 
-[상속 기본 사항](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)\
+[상속 기본 사항](inheritance-basics.md)\
 상속 한정자, 메서드 및 속성 재정의, MyClass 및 MyBase에 대해 설명합니다.
 
-[개체 수명: 개체가 만들어지고 제거되는 방법](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)\
+[개체 수명: 개체가 만들어지고 제거 되는 방법](object-lifetime-how-objects-are-created-and-destroyed.md)\
 클래스 인스턴스의 생성 및 삭제에 대해 설명합니다.
 
-[무명 형식](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)\
+[익명 형식](anonymous-types.md)\
 익명 형식을 만들고 사용하여 데이터 형식에 대한 클래스 정의를 작성하지 않고 개체를 만들 수 있는 방법을 설명합니다.
 
-[개체 이니셜라이저: 명명된 형식과 익명 형식](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)\
+[개체 이니셜라이저: 명명 된 형식과 익명 형식](object-initializers-named-and-anonymous-types.md)\
 단일 식을 사용하여 명명된 형식 및 무명 형식의 인스턴스를 만드는 데 사용되는 개체 이니셜라이저에 대해 설명합니다.
 
-[방법: 익명 형식 선언에서 속성 이름 및 형식 유추](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)\
+[방법: 익명 형식 선언에서 속성 이름 및 형식 유추](how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)\
 무명 형식 선언에서 속성 이름 및 형식을 유추하는 방법을 설명합니다. 성공 및 실패한 유추의 예제를 제공합니다.

@@ -1,5 +1,5 @@
 ---
-title: '연습: 암호화 응용 프로그램 만들기'
+title: '연습: 암호화 애플리케이션 만들기'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - cryptography [NET Framework], cryptographic application example
 - cryptography [NET Framework], application example
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
-ms.openlocfilehash: 6e2d9b8bebdfd2ea5d5507cc73d444fa8bf785fb
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 246028566c59e5c8a77b26a21729d3f143d38d07
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705836"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289709"
 ---
-# <a name="walkthrough-creating-a-cryptographic-application"></a>연습: 암호화 응용 프로그램 만들기
+# <a name="walkthrough-creating-a-cryptographic-application"></a>연습: 암호화 애플리케이션 만들기
 이 연습에서는 콘텐츠를 암호화 및 암호 해독하는 방법을 보여 줍니다. 코드 예제는 Windows Forms 애플리케이션용으로 설계되었습니다. 이 애플리케이션은 스마트 카드 사용과 같은 실제 시나리오를 보여 주지 않습니다. 대신, 암호화 및 암호 해독의 기초를 보여 줍니다.  
   
  이 연습에서는 암호화에 대한 다음 지침을 사용합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "75705836"
   
  다음 표에는 이 항목의 암호화 작업이 요약되어 있습니다.  
   
-|작업|설명|  
+|Task|설명|  
 |----------|-----------------|  
 |Windows Forms 애플리케이션 만들기|애플리케이션을 실행하는 데 필요한 컨트롤을 나열합니다.|  
 |전역 개체 선언|<xref:System.Windows.Forms.Form> 클래스의 전역 컨텍스트를 사용하도록 문자열 경로 변수, <xref:System.Security.Cryptography.CspParameters> 및 <xref:System.Security.Cryptography.RSACryptoServiceProvider>를 선언합니다.|  
@@ -41,17 +41,17 @@ ms.locfileid: "75705836"
 |프라이빗 키 가져오기|키 컨테이너 이름을 사용하여 전체 키 쌍을 가져옵니다.|  
 |공개 키 내보내기|public 매개 변수만 사용하여 키를 XML 파일에 저장합니다.|  
 |공개 키 가져오기|XML 파일의 키를 키 컨테이너에 로드합니다.|  
-|응용 프로그램 테스트|이 애플리케이션을 테스트하기 위한 절차를 나열합니다.|  
+|애플리케이션 테스트|이 애플리케이션을 테스트하기 위한 절차를 나열합니다.|  
   
-## <a name="prerequisites"></a>전제 조건  
- 이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
+## <a name="prerequisites"></a>사전 요구 사항  
+ 이 연습을 완료하려면 다음과 같은 구성 요소가 필요합니다.  
   
 - <xref:System.IO> 및 <xref:System.Security.Cryptography> 네임스페이스에 대한 참조  
   
 ## <a name="creating-a-windows-forms-application"></a>Windows Forms 애플리케이션 만들기  
  이 연습의 대다수 코드 예제는 단추 컨트롤에 대한 이벤트 처리기로 설계되었습니다. 다음 표에서는 샘플 애플리케이션에 필요한 컨트롤 및 코드 예제와 일치하는 데 필요한 이름을 보여 줍니다.  
   
-|Control|이름|텍스트 속성(필요에 따라)|  
+|컨트롤|이름|텍스트 속성(필요에 따라)|  
 |-------------|----------|---------------------------------|  
 |<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|파일 암호화|  
 |<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|파일 암호 해독|  
@@ -80,7 +80,7 @@ ms.locfileid: "75705836"
  [!code-vb[CryptoWalkThru#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#2)]  
   
 ## <a name="encrypting-a-file"></a>파일 암호화  
- 이 작업에는 `Encrypt File` 단추에 대 한 이벤트 처리기 메서드 (`buttonEncryptFile_Click`) 및 `EncryptFile` 메서드에 대 한 두 가지 메서드가 포함 됩니다. 첫 번째 메서드는 파일을 선택할 수 있는 대화 상자를 표시하고 암호화를 수행하는 두 번째 메서드에 파일 이름을 전달합니다.  
+ 이 작업에는 단추에 대 한 이벤트 처리기 메서드 `Encrypt File` ( `buttonEncryptFile_Click` ) 및 `EncryptFile` 메서드에 대 한 두 가지 메서드가 포함 됩니다. 첫 번째 메서드는 파일을 선택할 수 있는 대화 상자를 표시하고 암호화를 수행하는 두 번째 메서드에 파일 이름을 전달합니다.  
   
  암호화된 콘텐츠, 키 및 IV가 모두 하나의 <xref:System.IO.FileStream>에 저장되며, 이를 암호화 패키지라고 합니다.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "75705836"
  [!code-csharp[CryptoWalkThru#7](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#7)]
  [!code-vb[CryptoWalkThru#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#7)]  
   
-## <a name="testing-the-application"></a>응용 프로그램 테스트  
+## <a name="testing-the-application"></a>애플리케이션 테스트  
  애플리케이션을 빌드한 후 다음과 같은 테스트 시나리오를 수행합니다.  
   
 #### <a name="to-create-keys-encrypt-and-decrypt"></a>키를 만들고 암호화 및 암호 해독하려면  
@@ -208,6 +208,6 @@ ms.locfileid: "75705836"
   
 2. `Decrypt File` 단추를 클릭하고 방금 암호화한 파일을 선택합니다. 암호 해독을 위한 전체 키 쌍이 있으므로 이 작업은 성공합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [암호화 서비스](cryptographic-services.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - global applications, naming guidelines
 - international applications, naming guidelines
 ms.assetid: 8b0e97f3-7877-44fd-bc76-e05d36d5d79c
-ms.openlocfilehash: 95aff35569e58eacfd064609140a29b53e0036da
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 762ba99c4751ba40f5f33e99455cf950af35cdf6
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743819"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290151"
 ---
 # <a name="naming-resources"></a>리소스 이름 지정
 지역화할 수 있는 리소스는 속성과 같이 특정 개체를 통해 참조 될 수 있기 때문에 리소스에 대 한 명명 지침은 속성 지침과 비슷합니다.
@@ -23,7 +23,7 @@ ms.locfileid: "76743819"
 
  ✔️ 짧은 식별자 대신 설명이 포함 되지 않습니다.
 
- ❌ 기본 CLR 언어의 언어별 키워드를 사용 하지 않습니다.
+ ❌주요 CLR 언어의 언어별 키워드를 사용 하지 마세요.
 
  ✔️는 리소스 이름 지정에 영숫자 문자와 밑줄만 사용 합니다.
 
@@ -40,5 +40,5 @@ ms.locfileid: "76743819"
 
 ## <a name="see-also"></a>참고 항목
 
-- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
-- [명명 지침](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [프레임 워크 디자인 지침](index.md)
+- [명명 지침](naming-guidelines.md)

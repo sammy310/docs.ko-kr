@@ -11,12 +11,12 @@ helpviewer_keywords:
 - asymmetric decryption
 - decryption
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
-ms.openlocfilehash: 37194380d9f08d328f836bcb8648772348958768
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 844561c0d207106a183243f5f2b3e0cea3e70422
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706242"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288370"
 ---
 # <a name="decrypting-data"></a>데이터 해독
 
@@ -174,9 +174,9 @@ class Class1
 
 일반적으로 당사자(당사자 A)는 퍼블릭 키와 프라이빗 키를 둘 다 생성하고 메모리 또는 암호화 키 컨테이너에 키를 저장합니다. 당사자 A가 다른 당사자(당사자 B)에게 공개 키를 보냅니다. 공개 키를 사용 하 여 파티 B는 데이터를 암호화 하 고 파티 A에 데이터를 다시 보냅니다. 파티는 데이터를 받은 후에 해당 하는 개인 키를 사용 하 여 암호를 해독 합니다. 암호 해독은 당사자 A가 당사자 B에서 데이터를 암호화하는 데 사용한 퍼블릭 키에 해당하는 프라이빗 키를 사용하는 경우에만 성공합니다.
 
-안전한 암호화 키 컨테이너에 비대칭 키를 저장하는 방법 및 나중에 비대칭 키를 검색하는 방법에 대한 자세한 내용은 [How to: Store Asymmetric Keys in a Key Container](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)을 참조하세요.
+안전한 암호화 키 컨테이너에 비대칭 키를 저장하는 방법 및 나중에 비대칭 키를 검색하는 방법에 대한 자세한 내용은 [How to: Store Asymmetric Keys in a Key Container](how-to-store-asymmetric-keys-in-a-key-container.md)을 참조하세요.
 
-다음 예제에서는 대칭 키 및 IV를 나타내는 두 바이트 배열의 암호 해독을 보여 줍니다. 제3자에게 쉽게 보낼 수 있는 형식으로 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 개체에서 비대칭 공개 키를 추출하는 방법에 대한 자세한 내용은 [Encrypting Data](../../../docs/standard/security/encrypting-data.md)이라는 관리되는 스트림의 값으로 초기화합니다.
+다음 예제에서는 대칭 키 및 IV를 나타내는 두 바이트 배열의 암호 해독을 보여 줍니다. 제3자에게 쉽게 보낼 수 있는 형식으로 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 개체에서 비대칭 공개 키를 추출하는 방법에 대한 자세한 내용은 [Encrypting Data](encrypting-data.md)이라는 관리되는 스트림의 값으로 초기화합니다.
 
 ```vb
 'Create a new instance of the RSACryptoServiceProvider class.
@@ -202,8 +202,8 @@ symmetricKey = rsa.Decrypt(encryptedSymmetricKey, false);
 symmetricIV = rsa.Decrypt(encryptedSymmetricIV , false);
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [암호화 및 해독용 키 생성](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
-- [데이터 암호화](../../../docs/standard/security/encrypting-data.md)
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [암호화 및 해독용 키 생성](generating-keys-for-encryption-and-decryption.md)
+- [데이터 암호화](encrypting-data.md)
+- [암호화 서비스](cryptographic-services.md)

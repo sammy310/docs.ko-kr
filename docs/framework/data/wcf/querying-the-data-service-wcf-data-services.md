@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: 8ae4b4b9938f72f4f4fc011e180cd69440ec3dd9
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 13334f6425c47e45d729d606d99602a99f35d8e6
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201753"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286160"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>데이터 서비스 쿼리(WCF Data Services)
 
@@ -67,7 +67,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 
 ## <a name="adding-query-options"></a>쿼리 옵션 추가
 
-데이터 서비스 쿼리는 WCF 데이터 Servicess가 제공 하는 모든 쿼리 옵션을 지원 합니다. 쿼리 옵션을 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 인스턴스에 추가하려면 <xref:System.Data.Services.Client.DataServiceQuery%601> 메서드를 호출합니다. <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>은 원래 쿼리와 동일하지만 새 쿼리 옵션 집합이 포함된 새 <xref:System.Data.Services.Client.DataServiceQuery%601> 인스턴스를 반환합니다. 다음 쿼리를 실행하면 `Orders` 값으로 필터링되고 `Freight`를 기준으로 내림차순으로 정렬된 `OrderID`가 반환됩니다.
+데이터 서비스 쿼리는 WCF Data Services에서 제공 하는 모든 쿼리 옵션을 지원 합니다. 쿼리 옵션을 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 인스턴스에 추가하려면 <xref:System.Data.Services.Client.DataServiceQuery%601> 메서드를 호출합니다. <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>은 원래 쿼리와 동일하지만 새 쿼리 옵션 집합이 포함된 새 <xref:System.Data.Services.Client.DataServiceQuery%601> 인스턴스를 반환합니다. 다음 쿼리를 실행하면 `Orders` 값으로 필터링되고 `Freight`를 기준으로 내림차순으로 정렬된 `OrderID`가 반환됩니다.
 
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionsspecific)]
 [!code-vb[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionsspecific)]

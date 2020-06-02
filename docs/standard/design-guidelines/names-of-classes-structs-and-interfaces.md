@@ -13,12 +13,12 @@ helpviewer_keywords:
 - interfaces [.NET Framework], names
 - generic type parameters
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
-ms.openlocfilehash: e7eee414c5bf5c69f63543ef240e50a4d2d948a3
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: b9de9329cc8e1bfc47a46523c7119bb3b2c244d8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419085"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290216"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>클래스, 구조체 및 인터페이스의 이름
 다음 명명 지침은 일반적인 형식 이름 지정에 적용 됩니다.
@@ -102,5 +102,5 @@ public interface ISessionChannel<TSession> where TSession : ISession {
 
 ## <a name="see-also"></a>참고 항목
 
-- [프레임 워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
-- [명명 지침](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [프레임 워크 디자인 지침](index.md)
+- [명명 지침](naming-guidelines.md)

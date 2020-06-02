@@ -12,12 +12,12 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-ms.openlocfilehash: 81c837bd045992043208a59f6ee16803c1d6eb3c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 87cf793229cfc7d8d0547af935369a3febee41a3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744187"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290190"
 ---
 # <a name="names-of-type-members"></a>형식 멤버의 이름
 형식은 메서드, 속성, 이벤트, 생성자 및 필드 등의 멤버로 이루어집니다. 다음 섹션에서는 형식 멤버 이름 지정에 대한 지침을 설명합니다.
@@ -40,7 +40,7 @@ public class String {
 
  명사, 명사구 또는 형용사를 사용 하 여 이름 속성을 ✔️ 합니다.
 
- ❌에는 다음 예제와 같이 "Get" 메서드의 이름과 일치 하는 속성이 없습니다.
+ ❌다음 예제와 같이 "Get" 메서드의 이름과 일치 하는 속성이 없습니다.
 
  `public string TextWriter { get {...} set {...} }` `public string GetTextWriter(int value) { ... }`
 
@@ -48,7 +48,7 @@ public class String {
 
  단일 구를 사용 하는 대신 "List" 또는 "Collection"을 사용 하는 것이 아니라 컬렉션의 항목을 설명 하는 복수 구를 사용 하 여 컬렉션 속성의 이름을 ✔️ 합니다.
 
- 찬성 문구를 사용 하 여 부울 속성의 이름을 ✔️ 합니다 (`CantSeek`대신`CanSeek`). 필요에 따라 부울 속성에 "Is", "Can" 또는 "Is"를 접두사로 추가 하 고 값을 추가할 수도 있습니다.
+ 찬성 문구 (대신)를 사용 하 여 부울 속성의 이름을 ✔️ `CanSeek` `CantSeek` 합니다. 필요에 따라 부울 속성에 "Is", "Can" 또는 "Is"를 접두사로 추가 하 고 값을 추가할 수도 있습니다.
 
  속성에 해당 형식과 같은 이름을 지정 하는 것이 좋습니다 ✔️.
 
@@ -72,26 +72,26 @@ public class Control {
 
  예를 들어 창이 닫히기 전에 발생하는 닫기 이벤트는 `Closing`이라고 하고 창이 닫힌 후에 발생하는 닫기 이벤트는 `Closed`라고 합니다.
 
- "Before" 또는 "After" 접두사 또는 postfixes를 사용 하 여 사전 및 사후 이벤트를 표시 하지 ❌. 위에서 설명한 대로 현재 및 과거 시제를 사용합니다.
+ ❌사전 및 사후 이벤트를 나타내려면 "Before" 또는 "After" 접두사 또는 postfixes를 사용 하지 마십시오. 위에서 설명한 대로 현재 및 과거 시제를 사용합니다.
 
  다음 예제에 표시 된 것 처럼 "EventHandler" 접미사를 사용 하 여 이벤트 처리기 (이벤트 유형으로 사용 되는 대리자)의 이름을 ✔️ 합니다.
 
  `public delegate void ClickedEventHandler(object sender, ClickedEventArgs e);`
 
- 이벤트 처리기에서 `sender` 및 `e` 라는 두 개의 매개 변수를 사용 ✔️ 합니다.
+ 이벤트 처리기에서 및 라는 두 매개 변수를 사용 ✔️ `sender` `e` 합니다.
 
  보낸 사람 매개 변수는 이벤트를 발생시킨 개체를 나타냅니다. 보낸 사람 매개 변수는 보다 구체적인 형식을 적용할 수 있더라도 일반적으로 `object` 형식입니다.
 
  "EventArgs" 접미사를 사용 하 여 이벤트 인수 클래스의 이름을 ✔️ 합니다.
 
 ## <a name="names-of-fields"></a>필드 이름
- 필드 명명 지침은 공용 및 보호된 고정 필드에 적용됩니다. 내부 및 개인 필드는 지침에서 다루지 않고 공용 또는 보호된 인스턴스 필드는 [멤버 디자인 지침](../../../docs/standard/design-guidelines/member.md)에서 허용하지 않습니다.
+ 필드 명명 지침은 공용 및 보호된 고정 필드에 적용됩니다. 내부 및 개인 필드는 지침에서 다루지 않고 공용 또는 보호된 인스턴스 필드는 [멤버 디자인 지침](member.md)에서 허용하지 않습니다.
 
  필드 이름에는 대/소문자 구분을 사용 ✔️ 합니다.
 
  명사, 명사구 또는 형용사를 사용 하 여 이름 필드를 ✔️ 합니다.
 
- ❌ 필드 이름에는 접두사를 사용 하지 않습니다.
+ ❌필드 이름에는 접두사를 사용 하지 마십시오.
 
  예를 들어 "g_" 또는 "s_"를 사용하여 고정 필드를 나타내지 마십시오.
 
@@ -101,5 +101,5 @@ public class Control {
 
 ## <a name="see-also"></a>참고 항목
 
-- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
-- [명명 지침](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [프레임 워크 디자인 지침](index.md)
+- [명명 지침](naming-guidelines.md)
