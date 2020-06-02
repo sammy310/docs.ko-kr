@@ -14,12 +14,12 @@ helpviewer_keywords:
 - encryption [.NET Framework], hash
 - hash
 ms.assetid: 33660f33-b70f-4dca-8c87-ab35cfc2961a
-ms.openlocfilehash: 98bdce59ccbbb3b1d00ea5521169214c2bd7a10b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4938cd75af32caa4f9da6ed682f18e9f6c73ad5b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706203"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288344"
 ---
 # <a name="ensuring-data-integrity-with-hash-codes"></a>해시 코드를 사용하여 데이터 무결성 보장
 해시 값을 데이터를 고유하게 식별하는 고정 길이 숫자 값입니다. 해시 값은 대용량 데이터를 훨씬 더 작은 숫자 값으로 나타내므로 디지털 서명과 함께 사용됩니다. 해시 값에 서명하는 것이 더 큰 값에 서명하는 것보다 더 효율적입니다. 해시 값은 안전하지 않은 채널을 통해 전송된 데이터의 무결성을 확인하는 데도 유용합니다. 수신된 데이터의 해시 값을 전송된 데이터의 해시 값과 비교하여 데이터가 변경되었는지 확인할 수 있습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "75706203"
 ## <a name="generating-a-hash"></a>해시 생성  
  관리되는 해시 클래스는 바이트 배열이나 관리되는 스트림 개체를 해시할 수 있습니다. 다음 예제에서는 SHA1 해시 알고리즘을 사용하여 문자열에 대한 해시 값을 만듭니다. 이 예제에서는 <xref:System.Text.UnicodeEncoding> 클래스를 사용하여 문자열을 <xref:System.Security.Cryptography.SHA1Managed> 클래스를 통해 해시된 바이트 배열로 변환합니다. 해시 값이 콘솔에 표시됩니다.  
 
- S h a 1의 충돌 문제로 인해 s h a 1 이상을 권장 합니다.
+ SHA1 관련 충돌 문제로 인해 SHA256 이상을 사용하는 것이 좋습니다.
   
  [!code-csharp[GeneratingAHash#1](../../../samples/snippets/csharp/VS_Snippets_CLR/generatingahash/cs/program.cs#1)]
  [!code-vb[GeneratingAHash#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/generatingahash/vb/program.vb#1)]  
@@ -58,6 +58,6 @@ The hash codes match.
 The hash codes do not match.  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [암호화 서비스](cryptographic-services.md)

@@ -1,6 +1,6 @@
 ---
 title: 보안 및 빠른 코드 생성
-description: 더 높은 신뢰에서 실행되는 신뢰가 낮은 코드를 대신하여 코드를 생성하는 것은 특히 호출인이 코드 생성에 영향을 미칠 수 있는 경우 보안 문제입니다.
+description: 더 높은 신뢰 수준에서 실행 되는 더 낮은 신뢰 코드를 대신 하 여 코드를 생성 하는 것은 특히 호출자가 코드 생성에 영향을 줄 수 있는 경우 보안 문제입니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - security [.NET Framework], on-the-fly code generation
 - secure coding, on-the-fly code generation
 ms.assetid: 6d221724-bb21-4d76-90c3-0ee2a2e69be2
-ms.openlocfilehash: 34ebda27a81ca29ebb27a721b77b735a12be882e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7e5168aa9305c559cf5ea2fb197b2c23ce2a05b0
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186796"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291034"
 ---
 # <a name="security-and-on-the-fly-code-generation"></a>보안 및 빠른 코드 생성
 일부 라이브러리는 코드를 생성하고 실행하여 호출자에 대한 일부 작업을 수행하는 방식으로 작동합니다. 기본적인 문제는 낮은 신뢰 수준의 코드를 대신하여 코드를 생성하고 높은 신뢰 수준에서 실행하는 것입니다. 호출자가 코드 생성에 영향을 줄 수 있는 경우 문제가 더욱 악화되므로 안전하다고 생각하는 코드만 생성되도록 해야 합니다.  
@@ -27,4 +27,4 @@ ms.locfileid: "79186796"
   
 ## <a name="see-also"></a>참고 항목
 
-- [보안 코딩 지침](../../../docs/standard/security/secure-coding-guidelines.md)
+- [보안 코딩 지침](secure-coding-guidelines.md)

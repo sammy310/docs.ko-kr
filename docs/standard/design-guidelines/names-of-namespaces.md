@@ -9,19 +9,19 @@ helpviewer_keywords:
 - namespaces [.NET Framework], names
 - names [.NET Framework], type names
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
-ms.openlocfilehash: 0ad98af240cf8d1041d6a8b64ab71a56e763f76f
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: e435e0281165b4a9f12bbccbeb10401b57375dcb
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419059"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290203"
 ---
 # <a name="names-of-namespaces"></a>네임스페이스의 이름
 다른 명명 지침과 마찬가지로 네임 스페이스의 이름을 지정할 때의 목표는 프레임 워크를 사용 하 여 프로그래머에 게 네임 스페이스의 콘텐츠를 즉시 알 수 있는 충분 한 명확성을 만드는 것입니다. 다음 템플릿은 네임 스페이스 이름 지정에 대 한 일반 규칙을 지정 합니다.
 
  `<Company>.(<Product>|<Technology>)[.<Feature>][.<Subnamespace>]`
 
- 예를 들면 다음과 같습니다.
+ 예제는 다음과 같습니다.
 
  `Fabrikam.Math` `Litware.Security`
 
@@ -84,5 +84,5 @@ ms.locfileid: "83419059"
 
 ## <a name="see-also"></a>참고 항목
 
-- [프레임 워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
-- [명명 지침](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [프레임 워크 디자인 지침](index.md)
+- [명명 지침](naming-guidelines.md)

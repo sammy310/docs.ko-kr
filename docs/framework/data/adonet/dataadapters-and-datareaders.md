@@ -1,13 +1,14 @@
 ---
 title: DataAdapters 및 DataReaders
+description: 데이터베이스에서 데이터를 검색 하는 ADO.NET DataReader와 데이터 원본에서 데이터를 검색 하 고 데이터 집합을 채우는 DataAdapter에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
-ms.openlocfilehash: 20c6d514e70d2e4db451e0fff02e72688bf7d0ba
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 17463d65266baa53521bed9603c8abd96923277b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786641"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286975"
 ---
 # <a name="dataadapters-and-datareaders"></a>DataAdapters 및 DataReaders
 ADO.NET **DataReader** 를 사용 하 여 데이터베이스에서 앞 으로만 이동 가능한 읽기 전용 데이터 스트림을 검색할 수 있습니다. 결과는 쿼리가 실행 될 때 반환 되 고 **DataReader**의 **Read** 메서드를 사용 하 여 요청할 때까지 클라이언트의 네트워크 버퍼에 저장 됩니다. **DataReader** 를 사용 하면 데이터를 사용할 수 있는 즉시 검색 하 고 (기본적으로) 한 번에 한 행만 메모리에 저장 하 여 시스템 오버 헤드를 줄임으로써 응용 프로그램 성능이 향상 될 수 있습니다.  
@@ -20,13 +21,13 @@ ADO.NET **DataReader** 를 사용 하 여 데이터베이스에서 앞 으로만
  [DataReader를 사용하여 데이터 검색](retrieving-data-using-a-datareader.md)  
  ADO.NET **DataReader** 개체와이 개체를 사용 하 여 데이터 소스에서 결과 스트림을 반환 하는 방법에 대해 설명 합니다.  
   
- [DataAdapter에서 데이터 집합 채우기](populating-a-dataset-from-a-dataadapter.md)  
+ [DataAdapter에서 DataSet 채우기](populating-a-dataset-from-a-dataadapter.md)  
  `DataSet`를 사용하여 테이블, 열 및 행으로 `DataAdapter`을 채우는 방법을 설명합니다.  
   
  [DataAdapter 매개 변수](dataadapter-parameters.md)  
  `DataAdapter`의 열 내용을 명령 매개 변수에 매핑하는 방법을 비롯하여 `DataSet`의 명령 속성에 매개 변수를 사용하는 방법을 설명합니다.  
   
- [데이터 집합에 기존 제약 조건 추가](adding-existing-constraints-to-a-dataset.md)  
+ [데이터 세트에 기존 제약 조건 추가](adding-existing-constraints-to-a-dataset.md)  
  `DataSet`에 기존 제약 조건을 추가하는 방법을 설명합니다.  
   
  [DataAdapter DataTable 및 DataColumn 매핑](dataadapter-datatable-and-datacolumn-mappings.md)  
@@ -35,7 +36,7 @@ ADO.NET **DataReader** 를 사용 하 여 데이터베이스에서 앞 으로만
  [쿼리 결과를 통해 페이징](paging-through-a-query-result.md)  
  쿼리 결과를 데이터 페이지로 보는 예제를 제공합니다.  
   
- [DataAdapter로 데이터 원본 업데이트](updating-data-sources-with-dataadapters.md)  
+ [DataAdapters로 데이터 원본 업데이트](updating-data-sources-with-dataadapters.md)  
  `DataAdapter`를 사용하여 `DataSet`의 변경 내용을 데이터베이스에 적용하는 방법을 설명합니다.  
   
  [DataAdapter 이벤트 처리](handling-dataadapter-events.md)  
@@ -44,10 +45,10 @@ ADO.NET **DataReader** 를 사용 하 여 데이터베이스에서 앞 으로만
  [DataAdapter를 사용하여 일괄 작업 수행](performing-batch-operations-using-dataadapters.md)  
  `DataSet`의 업데이트를 적용할 때 SQL Server로의 라운드트립 횟수를 줄여 애플리케이션의 성능을 향상시키는 방법을 설명합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [데이터 소스에 연결](connecting-to-a-data-source.md)
 - [명령 및 매개 변수](commands-and-parameters.md)
 - [트랜잭션 및 동시성](transactions-and-concurrency.md)
-- [DataSet, DataTable 및 DataView](./dataset-datatable-dataview/index.md)
+- [DataSets, DataTables 및 DataViews](./dataset-datatable-dataview/index.md)
 - [ADO.NET 개요](ado-net-overview.md)

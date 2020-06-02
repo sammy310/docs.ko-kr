@@ -1,16 +1,17 @@
 ---
 title: 테이블 반환 매개 변수
+description: 테이블 반환 매개 변수를 사용 하 여 클라이언트 응용 프로그램에서 SQL Server로 여러 데이터 행을 마샬링하는 방법에 대해 알아봅니다.
 ms.date: 10/12/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: b968c599cf061fbd03b7ba8fb19470f6ace11a55
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 7b1f0a6c416f660f06cea099197ba136f84407f9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202168"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286199"
 ---
 # <a name="table-valued-parameters"></a>테이블 반환 매개 변수
 테이블 반환 매개 변수를 사용하면 데이터를 처리하는 데 여러 번 왕복하거나 서버 측 특수 논리를 설정하지 않고도 데이터의 여러 행을 클라이언트 애플리케이션에서 SQL Server로 쉽게 마샬링할 수 있습니다. 또한 테이블 반환 매개 변수를 사용하면 클라이언트 애플리케이션에서 데이터 행을 캡슐화하고 매개 변수가 있는 단일 명령으로 데이터를 서버에 보낼 수 있습니다. 들어오는 데이터 행을 테이블 변수에 저장한 다음 Transact-SQL을 사용하여 연산할 수 있습니다.  
@@ -22,7 +23,7 @@ ms.locfileid: "84202168"
   
  테이블 반환 매개 변수에 대한 자세한 내용은 다음 리소스를 참조하세요.  
   
-|리소스|설명|  
+|리소스|Description|  
 |--------------|-----------------|  
 |[테이블 반환 매개 변수 사용(데이터베이스 엔진)](/sql/relational-databases/tables/use-table-valued-parameters-database-engine)|테이블 반환 매개 변수를 만들고 사용하는 방법을 설명합니다.|  
 |[사용자 정의 테이블 형식](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))|테이블 반환 매개 변수를 선언하는 데 사용되는 사용자 정의 테이블 형식에 대해 설명합니다.|  
@@ -34,7 +35,7 @@ ms.locfileid: "84202168"
   
 - 여러 데이터 값을 구분된 문자열 또는 XML 문서로 번들로 묶은 다음 해당 텍스트 값을 프로시저 또는 문에 전달합니다. 이렇게 하려면 프로시저 또는 문이 데이터 구조의 유효성을 검사하고 값을 번들에서 해제하는 데 필요한 논리를 포함해야 합니다.  
   
-- <xref:System.Data.SqlClient.SqlDataAdapter>의 `Update` 메서드를 호출하여 만든 것과 같이 여러 행에 영향을 주는 데이터 수정을 위한 일련의 개별 SQL 문을 만듭니다. 변경 내용을 개별적으로 서버에 제출하거나 그룹으로 일괄 처리할 수 있습니다. 그러나 여러 문이 포함된 일괄 처리로 전송된 경우에도 각 문은 서버에서 개별적으로 실행됩니다.  
+- `Update`의 <xref:System.Data.SqlClient.SqlDataAdapter> 메서드를 호출하여 만든 것과 같이 여러 행에 영향을 주는 데이터 수정을 위한 일련의 개별 SQL 문을 만듭니다. 변경 내용을 개별적으로 서버에 제출하거나 그룹으로 일괄 처리할 수 있습니다. 그러나 여러 문이 포함된 일괄 처리로 전송된 경우에도 각 문은 서버에서 개별적으로 실행됩니다.  
   
 - `bcp` 유틸리티 프로그램 또는 <xref:System.Data.SqlClient.SqlBulkCopy> 개체를 사용하여 많은 데이터 행을 테이블에 로드할 수 있습니다. 이 기법은 매우 효율적이지만 데이터를 임시 테이블 또는 테이블 변수에 로드하지 않는 한 서버 쪽 처리를 지원하지 않습니다.  
   
@@ -86,7 +87,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 - ALTER TABLE 문을 사용하여 테이블 반환 매개 변수의 디자인을 수정할 수 없습니다.  
   
 ## <a name="configuring-a-sqlparameter-example"></a>SqlParameter 예제 구성  
- <xref:System.Data.SqlClient>에서는 <xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader> 또는 <xref:System.Collections.Generic.IEnumerable%601> \ <xref:Microsoft.SqlServer.Server.SqlDataRecord> 개체를 통한 테이블 반환 매개 변수 채우기를 지원합니다. 이 경우 <xref:System.Data.SqlClient.SqlParameter>의 <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> 속성을 사용하여 테이블 반환 매개 변수에 대한 형식 이름을 지정해야 합니다. `TypeName`은 이전에 서버에서 만든 호환 가능한 형식의 이름과 일치해야 합니다. 다음 코드 조각에서는 <xref:System.Data.SqlClient.SqlParameter>를 구성하여 데이터를 삽입하는 방법을 보여 줍니다.  
+ <xref:System.Data.SqlClient>에서는 <xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader> 또는 <xref:System.Collections.Generic.IEnumerable%601> \ <xref:Microsoft.SqlServer.Server.SqlDataRecord> 개체를 통한 테이블 반환 매개 변수 채우기를 지원합니다. 이 경우 <xref:System.Data.SqlClient.SqlParameter.TypeName%2A>의 <xref:System.Data.SqlClient.SqlParameter> 속성을 사용하여 테이블 반환 매개 변수에 대한 형식 이름을 지정해야 합니다. `TypeName`은 이전에 서버에서 만든 호환 가능한 형식의 이름과 일치해야 합니다. 다음 코드 조각에서는 <xref:System.Data.SqlClient.SqlParameter>를 구성하여 데이터를 삽입하는 방법을 보여 줍니다.  
 
 다음 예에서 `addedCategories` 변수는 <xref:System.Data.DataTable>을 포함합니다. 변수가 채워지는 방법을 확인하려면 다음 섹션 [저장 프로시저에 테이블 반환 매개 변수 전달](#passing)의 예제를 참조하세요.
 
@@ -129,7 +130,7 @@ tvpParam.SqlDbType = SqlDbType.Structured
 ```  
   
 ## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a><a name="passing"></a>저장 프로시저에 테이블 반환 매개 변수 전달  
- 이 예제에서는 테이블 반환 매개 변수 데이터를 저장 프로시저에 전달하는 방법을 보여 줍니다. 이 코드는 <xref:System.Data.DataTable.GetChanges%2A> 메서드를 사용하여 새 <xref:System.Data.DataTable>에 추가된 행을 추출합니다. 그런 다음 코드는 <xref:System.Data.SqlClient.SqlCommand>를 정의하여 <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> 속성을 <xref:System.Data.CommandType.StoredProcedure>로 설정합니다. <xref:System.Data.SqlClient.SqlParameter>는 <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> 메서드를 사용하여 채워지고 <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A>는 `Structured`로 설정됩니다. 그런 다음 <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> 메서드를 사용하여 <xref:System.Data.SqlClient.SqlCommand>를 실행합니다.  
+ 이 예제에서는 테이블 반환 매개 변수 데이터를 저장 프로시저에 전달하는 방법을 보여 줍니다. 이 코드는 <xref:System.Data.DataTable> 메서드를 사용하여 새 <xref:System.Data.DataTable.GetChanges%2A>에 추가된 행을 추출합니다. 그런 다음 코드는 <xref:System.Data.SqlClient.SqlCommand>를 정의하여 <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> 속성을 <xref:System.Data.CommandType.StoredProcedure>로 설정합니다. <xref:System.Data.SqlClient.SqlParameter>는 <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> 메서드를 사용하여 채워지고 <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A>는 `Structured`로 설정됩니다. 그런 다음 <xref:System.Data.SqlClient.SqlCommand> 메서드를 사용하여 <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A>를 실행합니다.  
   
 ```csharp  
 // Assumes connection is an open SqlConnection object.  
@@ -171,7 +172,7 @@ End Using
 ```  
   
 ### <a name="passing-a-table-valued-parameter-to-a-parameterized-sql-statement"></a>매개 변수화된 SQL 문에 테이블 반환 매개 변수 전달  
- 다음 예제에서는 테이블 반환 매개 변수를 데이터 원본으로 사용하는 SELECT 하위 쿼리와 함께 INSERT 문을 사용하여 dbo.Categories 테이블에 데이터를 삽입하는 방법을 보여 줍니다. 테이블 반환 매개 변수를 매개 변수가 있는 SQL 문에 전달할 때 <xref:System.Data.SqlClient.SqlParameter>의 새 <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> 속성을 사용하여 테이블 반환 매개 변수의 형식 이름을 지정해야 합니다. 이 `TypeName`은 이전에 서버에서 만든 호환 가능한 형식의 이름과 일치해야 합니다. 이 예제의 코드는 `TypeName` 속성을 사용하여 dbo.CategoryTableType에 정의된 형식 구조를 참조합니다.  
+ 다음 예제에서는 테이블 반환 매개 변수를 데이터 원본으로 사용하는 SELECT 하위 쿼리와 함께 INSERT 문을 사용하여 dbo.Categories 테이블에 데이터를 삽입하는 방법을 보여 줍니다. 테이블 반환 매개 변수를 매개 변수가 있는 SQL 문에 전달할 때 <xref:System.Data.SqlClient.SqlParameter.TypeName%2A>의 새 <xref:System.Data.SqlClient.SqlParameter> 속성을 사용하여 테이블 반환 매개 변수의 형식 이름을 지정해야 합니다. 이 `TypeName`은 이전에 서버에서 만든 호환 가능한 형식의 이름과 일치해야 합니다. 이 예제의 코드는 `TypeName` 속성을 사용하여 dbo.CategoryTableType에 정의된 형식 구조를 참조합니다.  
   
 > [!NOTE]
 > 테이블 반환 매개 변수에서 ID 열에 대한 값을 제공하는 경우 세션에 SET IDENTITY_INSERT 문을 실행해야 합니다.  
@@ -227,7 +228,7 @@ End Using
 ```  
   
 ## <a name="streaming-rows-with-a-datareader"></a>DataReader를 사용하여 행 스트리밍  
- <xref:System.Data.Common.DbDataReader>에서 파생된 개체를 사용하여 데이터 행을 테이블 반환 매개 변수로 스트림할 수도 있습니다. 다음 코드 조각에서는 <xref:System.Data.OracleClient.OracleCommand> 및 <xref:System.Data.OracleClient.OracleDataReader>를 사용하여 Oracle 데이터베이스에서 데이터를 검색하는 방법을 보여 줍니다. 그런 다음 코드에서는 단일 입력 매개 변수를 사용하여 저장 프로시저를 호출하도록 <xref:System.Data.SqlClient.SqlCommand>를 구성합니다. <xref:System.Data.SqlClient.SqlParameter>의 <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> 속성이 `Structured`로 설정됩니다. <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A>는 `OracleDataReader` 결과 집합을 저장 프로시저에 테이블 반환 매개 변수로 전달합니다.  
+ <xref:System.Data.Common.DbDataReader>에서 파생된 개체를 사용하여 데이터 행을 테이블 반환 매개 변수로 스트림할 수도 있습니다. 다음 코드 조각에서는 <xref:System.Data.OracleClient.OracleCommand> 및 <xref:System.Data.OracleClient.OracleDataReader>를 사용하여 Oracle 데이터베이스에서 데이터를 검색하는 방법을 보여 줍니다. 그런 다음 코드에서는 단일 입력 매개 변수를 사용하여 저장 프로시저를 호출하도록 <xref:System.Data.SqlClient.SqlCommand>를 구성합니다. <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A>의 <xref:System.Data.SqlClient.SqlParameter> 속성이 `Structured`로 설정됩니다. <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A>는 `OracleDataReader` 결과 집합을 저장 프로시저에 테이블 반환 매개 변수로 전달합니다.  
   
 ```csharp  
 // Assumes connection is an open SqlConnection.  

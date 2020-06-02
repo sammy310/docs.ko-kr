@@ -10,12 +10,12 @@ helpviewer_keywords:
 - unsealed classes
 - customizing class behavior
 ms.assetid: aa0b58ee-3956-494d-ab48-471ae5db8740
-ms.openlocfilehash: 44d342662e1aaeb51f14470f354f2dadd9a6f18d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: afcb92e48996d594fcedc5b579922b179f754b9d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743654"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286121"
 ---
 # <a name="protected-members"></a>보호된 멤버
 보호 된 멤버 자체는 확장성을 제공 하지 않지만 하위 클래스를 보다 강력 하 게 확장할 수 있습니다. 이러한 옵션을 사용 하 여 기본 public 인터페이스를 불필요 하 게 복잡 하 게 하지 않고 고급 사용자 지정 옵션을 노출할 수 있습니다.
@@ -34,5 +34,5 @@ ms.locfileid: "76743654"
 
 ## <a name="see-also"></a>참고 항목
 
-- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
-- [확장성을 위한 디자인](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+- [프레임 워크 디자인 지침](index.md)
+- [확장성을 위한 디자인](designing-for-extensibility.md)

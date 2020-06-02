@@ -1,32 +1,33 @@
 ---
-title: DataAdapter로 데이터 원본 업데이트
+title: DataAdapters로 데이터 원본 업데이트
+description: DataAdapter의 업데이트 메서드가 데이터 집합의 변경 내용을 ADO.NET 응용 프로그램의 데이터 원본으로 다시 확인 하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
-ms.openlocfilehash: 4a6e22352a309f9d624c6922abc531cb31a5baf1
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: e2348a3a89aa1c28856bfc21aaa25f2c8327aac7
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736694"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286186"
 ---
-# <a name="updating-data-sources-with-dataadapters"></a>DataAdapter로 데이터 원본 업데이트
+# <a name="updating-data-sources-with-dataadapters"></a>DataAdapters로 데이터 원본 업데이트
 
 `Update`의 <xref:System.Data.Common.DataAdapter> 메서드를 호출하면 <xref:System.Data.DataSet>의 변경 내용이 데이터 소스에 다시 적용됩니다. `Update` 메서드는 `Fill` 메서드와 마찬가지로 `DataSet`의 인스턴스, 선택적 <xref:System.Data.DataTable> 개체 또는 `DataTable` 이름을 인수로 사용합니다. `DataSet` 인스턴스는 변경 내용을 포함하는 `DataSet`이며 `DataTable`은 변경 내용을 검색할 테이블을 식별합니다. `DataTable`을 지정하지 않으면 `DataTable`의 첫 번째 `DataSet`이 사용됩니다.
 
 `Update` 메서드를 호출하면 `DataAdapter`가 변경 내용을 분석하여 INSERT, UPDATE, DELETE 등의 적절한 명령을 실행합니다. `DataAdapter`에 대한 변경 사항이 발견되면 <xref:System.Data.DataRow>는 <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>, <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> 또는 <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A>를 사용하여 변경 내용을 처리합니다. 이로써 가능한 경우 디자인 타임에 저장 프로시저를 사용하여 명령 구문을 지정함으로써 ADO.NET 애플리케이션의 성능을 최대화할 수 있습니다. `Update`를 호출하기 전에 명령을 명시적으로 설정해야 합니다. `Update`를 호출했는데 삭제된 행에 대한 `DeleteCommand`가 없는 경우와 같이 특정 업데이트에 사용할 적절한 명령이 없으면 예외가 throw됩니다.
 
 > [!NOTE]
-> SQL Server 저장 프로시저를 통해 `DataAdapter`로 데이터를 편집하거나 삭제하는 경우에는 저장 프로시저 정의에 SET NOCOUNT ON을 사용하면 안 됩니다. SET NOCOUNT ON을 사용하는 경우 반환되는 행 개수가 0이 되어 `DataAdapter`가 이를 동시성 충돌로 인식합니다. 그 결과 <xref:System.Data.DBConcurrencyException>이 throw됩니다.
+> SQL Server 저장 프로시저를 사용 하 여를 사용 하 여 데이터를 편집 하거나 삭제 하는 경우 `DataAdapter` 저장 프로시저 정의에 SET NOCOUNT ON을 사용 하지 않아야 합니다. 이로 인해 영향을 받는 행 수가 0으로 반환 되어가 `DataAdapter` 동시성 충돌로 해석 합니다. 이 경우이 throw 됩니다 <xref:System.Data.DBConcurrencyException> .
 
-명령 매개 변수를 사용하여 `DataSet`의 수정된 각 행에 대해 SQL 문이나 저장 프로시저의 입력 및 출력 값을 지정할 수 있습니다. 자세한 내용은 [DataAdapter 매개 변수](dataadapter-parameters.md)합니다.
+명령 매개 변수를 사용하여 `DataSet`의 수정된 각 행에 대해 SQL 문이나 저장 프로시저의 입력 및 출력 값을 지정할 수 있습니다. 자세한 내용은 [DataAdapter 매개 변수](dataadapter-parameters.md)를 참조 하세요.
 
 > [!NOTE]
 > <xref:System.Data.DataTable>에서의 행 삭제 및 제거의 차이점을 이해하는 것이 중요합니다. `Remove` 또는 `RemoveAt` 메서드를 호출하면 행이 즉시 제거됩니다. 그런 다음 `DataTable`에 `DataSet` 또는 `DataAdapter`을 전달하고 `Update`를 호출하면 백 엔드 데이터 소스에 있는 해당 행은 아무런 영향을 받지 않습니다. `Delete` 메서드를 사용하면 행이 `DataTable`에 그대로 남아 있고 삭제 표시됩니다. 그런 다음 `DataTable`에 `DataSet` 또는 `DataAdapter`을 전달하고 `Update`를 호출하면 백 엔드 데이터 소스의 해당 행이 삭제됩니다.
 
-`DataTable`이 단일 데이터베이스 테이블에 매핑되거나 단일 데이터베이스 테이블에서 생성된 경우에는 <xref:System.Data.Common.DbCommandBuilder> 개체를 사용하여 `DeleteCommand`의 `InsertCommand`, `UpdateCommand` 및 `DataAdapter` 개체를 자동으로 생성할 수 있습니다. 자세한 내용은 [commandbuilder를 사용 하를 사용 하 여 명령 생성](generating-commands-with-commandbuilders.md)합니다.
+`DataTable`이 단일 데이터베이스 테이블에 매핑되거나 단일 데이터베이스 테이블에서 생성된 경우에는 <xref:System.Data.Common.DbCommandBuilder> 개체를 사용하여 `DeleteCommand`의 `InsertCommand`, `UpdateCommand` 및 `DataAdapter` 개체를 자동으로 생성할 수 있습니다. 자세한 내용은 [CommandBuilders를 사용 하 여 명령 생성](generating-commands-with-commandbuilders.md)을 참조 하세요.
 
 ## <a name="using-updatedrowsource-to-map-values-to-a-dataset"></a>UpdatedRowSource를 사용하여 DataSet에 값 매핑
 
@@ -34,7 +35,7 @@ ms.locfileid: "71736694"
 
 다음 표에서는 `UpdateRowSource` 열거형의 여러 값과 각 값이 `DataAdapter`에 사용하는 명령의 동작에 미치는 영향에 대해 설명합니다.
 
-|UpdatedRowSource 열거형|설명|
+|UpdatedRowSource 열거형|Description|
 |----------------------------------|-----------------|
 |<xref:System.Data.UpdateRowSource.Both>|출력 매개 변수 및 반환된 결과 집합의 첫 번째 행 모두 `DataSet`의 변경된 행에 매핑할 수 있습니다.|
 |<xref:System.Data.UpdateRowSource.FirstReturnedRecord>|반환된 결과 집합의 첫 번째 행 데이터만 `DataSet`의 변경된 행에 매핑할 수 있습니다.|
@@ -46,21 +47,21 @@ ms.locfileid: "71736694"
 > [!NOTE]
 > `SelectCommand`가 OUTER JOIN의 결과를 반환하면 `DataAdapter`는 결과 `PrimaryKey`에 대해 `DataTable` 값을 설정하지 않습니다. 행 중복 문제를 해결하려면 `PrimaryKey`를 직접 정의해야 합니다. 자세한 내용은 [기본 키 정의](./dataset-datatable-dataview/defining-primary-keys.md)합니다.
 
-`Update` 메서드를 호출할 때 발생할 수 있는 예외를 처리 하려면 `RowUpdated` 이벤트를 사용 하 여 발생 하는 행 업데이트 오류에 대응 하거나 ( [DataAdapter 이벤트 처리](handling-dataadapter-events.md)참조) 또는을 이전으로 `DataAdapter.ContinueUpdateOnError` `true` 설정할 수 있습니다. 을 `Update`호출 하 고 업데이트가 완료 되 면 특정 행의 `RowError` 속성에 저장 된 오류 정보에 응답 합니다 ( [행 오류 정보](./dataset-datatable-dataview/row-error-information.md)참조).
+메서드를 호출할 때 발생할 수 있는 예외를 처리 하려면 이벤트를 사용 하 여 `Update` `RowUpdated` 발생 한 행 업데이트 오류에 대응 하거나 ( [DataAdapter 이벤트 처리](handling-dataadapter-events.md)참조) `DataAdapter.ContinueUpdateOnError` ,를 `true` 호출 하기 전에를로 설정 하 `Update` 고 `RowError` 업데이트가 완료 되 면 특정 행의 속성에 저장 된 오류 정보에 응답 합니다 ( [행 오류 정보](./dataset-datatable-dataview/row-error-information.md)참조).
 
 > [!NOTE]
-> `AcceptChanges` ,`DataTable`또는 에서를`Original` 호출 하면의 모든 값`DataRow`이에 대 한 `DataRow`값으로 덮어쓰여집니다. `Current` `DataSet` `DataRow` 행을 고유하게 식별하는 필드 값을 수정한 경우 `AcceptChanges`를 호출하면 `Original` 값이 데이터 소스의 값과 더 이상 일치하지 않습니다. `AcceptChanges`는 `DataAdapter`의 Update 메서드를 호출하는 동안 각 행에 대해 자동으로 호출됩니다. 먼저 `AcceptChangesDuringUpdate`의 `DataAdapter` 속성을 false로 설정하거나 `RowUpdated` 이벤트에 대한 이벤트 처리기를 만들고 <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A>를 <xref:System.Data.UpdateStatus.SkipCurrentRow>로 설정하면 Update 메서드를 호출할 때 원래 값을 보존할 수 있습니다. 자세한 내용은 [데이터 집합 콘텐츠 병합](./dataset-datatable-dataview/merging-dataset-contents.md) 및 [DataAdapter 이벤트 처리](handling-dataadapter-events.md)를 참조 하세요.
+> , 또는에서를 호출 하면의 `AcceptChanges` `DataSet` `DataTable` `DataRow` 모든 값이에 `Original` `DataRow` `Current` 대 한 값으로 덮어쓰여집니다 `DataRow` . 행을 고유하게 식별하는 필드 값을 수정한 경우 `AcceptChanges`를 호출하면 `Original` 값이 데이터 소스의 값과 더 이상 일치하지 않습니다. `AcceptChanges`는 `DataAdapter`의 Update 메서드를 호출하는 동안 각 행에 대해 자동으로 호출됩니다. 먼저 `AcceptChangesDuringUpdate`의 `DataAdapter` 속성을 false로 설정하거나 `RowUpdated` 이벤트에 대한 이벤트 처리기를 만들고 <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A>를 <xref:System.Data.UpdateStatus.SkipCurrentRow>로 설정하면 Update 메서드를 호출할 때 원래 값을 보존할 수 있습니다. 자세한 내용은 [데이터 집합 콘텐츠 병합](./dataset-datatable-dataview/merging-dataset-contents.md) 및 [DataAdapter 이벤트 처리](handling-dataadapter-events.md)를 참조 하세요.
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 `UpdateCommand` `DataAdapter` 의를 명시적으로 설정 하 고 해당 `Update` 메서드를 호출 하 여 수정 된 행에 대 한 업데이트를 수행 하는 방법을 보여 줍니다. UPDATE 문의 WHERE 절에 지정된 매개 변수는 `Original`의 `SourceColumn` 값을 사용하도록 설정되어 있습니다. `Current` 값이 수정되어 데이터 소스에 있는 값과 일치하지 않을 수 있기 때문에 이 설정은 매우 중요합니다. `Original` 값은 데이터 소스에서 `DataTable`을 채우는 데 사용한 값입니다.
+다음 예제에서는의를 명시적으로 설정 하 `UpdateCommand` `DataAdapter` 고 해당 메서드를 호출 하 여 수정 된 행에 대 한 업데이트를 수행 하는 방법을 보여 줍니다 `Update` . UPDATE 문의 WHERE 절에 지정된 매개 변수는 `Original`의 `SourceColumn` 값을 사용하도록 설정되어 있습니다. `Current` 값이 수정되어 데이터 소스에 있는 값과 일치하지 않을 수 있기 때문에 이 설정은 매우 중요합니다. `Original` 값은 데이터 소스에서 `DataTable`을 채우는 데 사용한 값입니다.
 
 [!code-csharp[DataWorks SqlClient.DataAdapterUpdate#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.DataAdapterUpdate/CS/source.cs#1)]
 [!code-vb[DataWorks SqlClient.DataAdapterUpdate#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.DataAdapterUpdate/VB/source.vb#1)]
 
 ## <a name="autoincrement-columns"></a>AutoIncrement 열
 
-데이터 소스의 테이블에 자동 증분 열이 있으면 저장 프로시저의 출력 매개 변수로 자동 증분 값을 반환하여 테이블의 열에 매핑하거나, 저장 프로시저 또는 SQL 문에서 반환된 결과 집합의 첫 번째 행에 있는 자동 증분 값을 반환하거나, `DataSet`의 `RowUpdated` 이벤트를 통해 추가적인 SELECT 문을 실행하여 `DataAdapter`의 열을 채울 수 있습니다. 자세한 내용 및 예제를 참조 하세요 [Retrieving Identity or Autonumber 값](retrieving-identity-or-autonumber-values.md)합니다.
+데이터 소스의 테이블에 자동 증분 열이 있으면 저장 프로시저의 출력 매개 변수로 자동 증분 값을 반환하여 테이블의 열에 매핑하거나, 저장 프로시저 또는 SQL 문에서 반환된 결과 집합의 첫 번째 행에 있는 자동 증분 값을 반환하거나, `DataSet`의 `RowUpdated` 이벤트를 통해 추가적인 SELECT 문을 실행하여 `DataAdapter`의 열을 채울 수 있습니다. 자세한 내용 및 예제는 [id 또는 일련 번호 값 검색](retrieving-identity-or-autonumber-values.md)을 참조 하세요.
 
 ## <a name="ordering-of-inserts-updates-and-deletes"></a>삽입, 업데이트 및 삭제 순서
 
@@ -180,7 +181,7 @@ ALTER TABLE [dbo].[Course] CHECK CONSTRAINT [FK_Course_Department]
 GO
 ```
 
-이 코드 샘플을 사용 하 여 C# 및 Visual Basic 프로젝트에서 찾을 수 있습니다 [개발자 코드 샘플](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=SearchText&f%5B0%5D.Value=How%20to%20use%20DataAdapter%20to%20retrieve%20and%20update%20data&f%5B1%5D)합니다.
+이 코드 샘플을 사용 하는 c # 및 Visual Basic 프로젝트는 [개발자 코드 샘플](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=SearchText&f%5B0%5D.Value=How%20to%20use%20DataAdapter%20to%20retrieve%20and%20update%20data&f%5B1%5D)에서 찾을 수 있습니다.
 
 ```csharp
 using System;
@@ -376,11 +377,11 @@ class Program {
 }
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [DataAdapter 및 DataReader](dataadapters-and-datareaders.md)
+- [DataAdapters 및 DataReaders](dataadapters-and-datareaders.md)
 - [행 상태 및 행 버전](./dataset-datatable-dataview/row-states-and-row-versions.md)
 - [AcceptChanges 및 RejectChanges](./dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)
-- [데이터 세트 콘텐츠 병합](./dataset-datatable-dataview/merging-dataset-contents.md)
+- [DataSet 콘텐츠 병합](./dataset-datatable-dataview/merging-dataset-contents.md)
 - [ID 또는 일련 번호 값 검색](retrieving-identity-or-autonumber-values.md)
 - [ADO.NET 개요](ado-net-overview.md)

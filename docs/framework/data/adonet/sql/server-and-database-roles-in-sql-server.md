@@ -1,13 +1,14 @@
 ---
 title: SQL Server의 서버 및 데이터베이스 역할
+description: 고정 된 권한 집합이 할당 된 고정 서버 및 고정 데이터베이스 역할에 대해 알아봅니다. SQL Server는 역할 기반 보안을 사용 합니다.
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: f3e31aa67bfbaa541d8d1eb5b8b61dfd28182c72
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9c3725b0404a5b3c754a53fa56f4a22497afee70
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791782"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286240"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>SQL Server의 서버 및 데이터베이스 역할
 모든 버전의 SQL Server에서는 역할 기반 보안을 사용하므로 개별 사용자 대신 역할이나 사용자 그룹에 권한을 할당할 수 있습니다. 고정 서버 역할과 고정 데이터베이스 역할에는 고정 권한 집합이 할당되어 있습니다.  
@@ -59,13 +60,13 @@ ms.locfileid: "70791782"
 |리소스|Description|  
 |--------------|-----------------|  
 |[데이터베이스 엔진 권한 시작](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|보안 주체, 역할, 자격 증명, 보안 개체 및 권한에 대해 설명하는 항목의 링크를 제공합니다.|  
-|[주체로](/sql/relational-databases/security/authentication-access/principals-database-engine)|보안 주체에 대해 설명하며 서버 및 데이터베이스 역할에 대해 설명하는 항목의 링크를 제공합니다.|  
+|[Principals](/sql/relational-databases/security/authentication-access/principals-database-engine)|보안 주체에 대해 설명하며 서버 및 데이터베이스 역할에 대해 설명하는 항목의 링크를 제공합니다.|  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [ADO.NET 응용 프로그램 보안](../securing-ado-net-applications.md)
-- [SQL Server의 응용 프로그램 보안 시나리오](application-security-scenarios-in-sql-server.md)
+- [ADO.NET 애플리케이션 보안](../securing-ado-net-applications.md)
+- [SQL Server의 애플리케이션 보안 시나리오](application-security-scenarios-in-sql-server.md)
 - [SQL Server에서 인증](authentication-in-sql-server.md)
-- [SQL Server에서 소유권 및 사용자 스키마 분리](ownership-and-user-schema-separation-in-sql-server.md)
+- [SQL Server에서 소유권 및 사용자와 스키마 분리](ownership-and-user-schema-separation-in-sql-server.md)
 - [SQL Server에서 권한 부여 및 권한](authorization-and-permissions-in-sql-server.md)
 - [ADO.NET 개요](../ado-net-overview.md)

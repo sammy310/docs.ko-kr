@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Creating GenericPrincipal Objects
 - GenericIdentity Objects
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
-ms.openlocfilehash: 546b4d20f7b6b7a8c448f704fefd9a39b3ebd1d7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 10a71185db3359cda1c3bf7a12f5698929c98296
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706151"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290865"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>방법: GenericPrincipal 및 GenericIdentity 개체 만들기
 
-<xref:System.Security.Principal.GenericPrincipal> 클래스와 함께 <xref:System.Security.Principal.GenericIdentity> 클래스를 사용 하 여 Windows 도메인과는 독립적으로 존재 하는 권한 부여 체계를 만들 수 있습니다.
+클래스 <xref:System.Security.Principal.GenericIdentity> 와 클래스를 함께 사용 <xref:System.Security.Principal.GenericPrincipal> 하 여 Windows 도메인에 독립적으로 존재 하는 권한 부여 체계를 만들 수 있습니다.
 
 ### <a name="to-create-a-genericprincipal-object"></a>GenericPrincipal 개체를 만들려면
 
@@ -46,7 +46,7 @@ ms.locfileid: "75706151"
     GenericPrincipal myPrincipal = new GenericPrincipal(myIdentity, myStringArray);
     ```
 
-3. 해당 Principal을 현재 스레드에 연결하려면 다음 코드를 사용합니다. 이는 보안 주체가 여러 번 유효성을 검사 해야 하는 경우에 유용 하며, 응용 프로그램에서 실행 되는 다른 코드에서 유효성을 검사 해야 하거나 <xref:System.Security.Permissions.PrincipalPermission> 개체에서 유효성을 검사 해야 하는 경우에 유용 합니다. Principal 개체를 스레드에 연결하지 않고도 이 개체에 대해 역할 기반 확인을 수행할 수 있습니다. 자세한 내용은 [Principal 개체 바꾸기](../../../docs/standard/security/replacing-a-principal-object.md)를 참조하세요.
+3. 해당 Principal을 현재 스레드에 연결하려면 다음 코드를 사용합니다. 이는 보안 주체가 여러 번 유효성을 검사 해야 하는 경우, 응용 프로그램에서 실행 되는 다른 코드에 의해 유효성이 검사 되어야 하거나, 개체에서 유효성을 검사 해야 하는 경우에 유용 합니다 <xref:System.Security.Permissions.PrincipalPermission> . Principal 개체를 스레드에 연결하지 않고도 이 개체에 대해 역할 기반 확인을 수행할 수 있습니다. 자세한 내용은 [Principal 개체 바꾸기](replacing-a-principal-object.md)를 참조하세요.
 
     ```vb
     Thread.CurrentPrincipal = myPrincipal
@@ -56,7 +56,7 @@ ms.locfileid: "75706151"
     Thread.CurrentPrincipal = myPrincipal;
     ```
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 코드 예제에서는 **GenericPrincipal** 및 **GenericIdentity**의 인스턴스를 만드는 방법을 보여 줍니다 이 코드에서는 해당 개체의 값을 콘솔에 표시합니다.
 
@@ -139,10 +139,10 @@ The IsAuthenticated is: True
 Is this a Manager? True
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Security.Principal.GenericIdentity>
 - <xref:System.Security.Principal.GenericPrincipal>
 - <xref:System.Security.Permissions.PrincipalPermission>
-- [Principal 개체 바꾸기](../../../docs/standard/security/replacing-a-principal-object.md)
-- [Principal 개체 및 Identity 개체](../../../docs/standard/security/principal-and-identity-objects.md)
+- [Principal 개체 바꾸기](replacing-a-principal-object.md)
+- [Principal 개체 및 Identity 개체](principal-and-identity-objects.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], type design guidelines
 - types [.NET Framework], design guidelines
 ms.assetid: 6b49314e-8bba-43ea-97ca-4e0255812f95
-ms.openlocfilehash: 2a3cca0139974cbc92ce85a19db73dfb3d13d1a0
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 17bd300277a039818a3d563c8f2d5f99eb2fc68d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743573"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289566"
 ---
 # <a name="type-design-guidelines"></a>형식 디자인 지침
 CLR 관점에서 두 가지 종류의 형식 (참조 형식 및 값 형식)만 있습니다. 하지만 프레임 워크 디자인에 대 한 논의의 목적을 위해 각각 고유한 특정 디자인 규칙을 가진 더 많은 논리 그룹으로 형식을 나눕니다.
@@ -33,10 +33,10 @@ CLR 관점에서 두 가지 종류의 형식 (참조 형식 및 값 형식)만 �
  ✔️ 각 형식이 관련 되지 않은 기능의 임의 컬렉션이 아니라 잘 정의 된 관련 멤버 집합 인지 확인 합니다.
 
 ## <a name="in-this-section"></a>섹션 내용
- [클래스와 구조체](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md) [추상 클래스](../../../docs/standard/design-guidelines/abstract-class.md) 를 선택 합니다. 추상 클래스 디자인 [정적 클래스](../../../docs/standard/design-guidelines/static-class.md) 디자인 [인터페이스](../../../docs/standard/design-guidelines/interface.md) 디자인 [구조체](../../../docs/standard/design-guidelines/struct.md) 디자인 [열거형](../../../docs/standard/design-guidelines/enum.md) 디자인 [중첩 형식](../../../docs/standard/design-guidelines/nested-types.md) *부분 © 2005, 2009 Microsoft Corporation. All rights reserved.*
+ [클래스와 구조체](choosing-between-class-and-struct.md) [추상 클래스](abstract-class.md) 를 선택 합니다. 추상 클래스 디자인 [정적 클래스](static-class.md) 디자인 [인터페이스](interface.md) 디자인 [구조체](struct.md) 디자인 [열거형](enum.md) 디자인 [중첩 형식](nested-types.md) *부분 © 2005, 2009 Microsoft Corporation. All rights reserved.*
 
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 
 ## <a name="see-also"></a>참고 항목
 
-- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
+- [프레임 워크 디자인 지침](index.md)

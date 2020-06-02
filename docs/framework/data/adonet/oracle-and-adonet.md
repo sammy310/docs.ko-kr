@@ -1,17 +1,18 @@
 ---
 title: Oracle 및 ADO.NET
+description: Oracle 호출 인터페이스를 사용 하 여 Oracle 데이터베이스에 대 한 액세스를 제공 하는 Oracle 용 .NET Framework Data Provider의 기능 및 동작에 대해 알아봅니다.
 titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: 5683f2b4ba57021ff6dda3a51baca016f886b605
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 8757352a7444fad802ea88ba58e0fe643c86cbb8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980082"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286691"
 ---
 # <a name="oracle-and-adonet"></a>Oracle 및 ADO.NET
 > [!NOTE]
@@ -21,7 +22,7 @@ ms.locfileid: "76980082"
   
  Oracle의 .NET Framework Data Provider는 oracle 클라이언트 소프트웨어에서 제공 하는 OCI (Oracle Call Interface)를 사용 하 여 Oracle 데이터베이스에 대 한 액세스를 제공 합니다. 데이터 공급자의 기능은 SQL Server, OLE DB 및 ODBC에 대 한 .NET Framework 데이터 공급자와 유사 하 게 설계 되었습니다.  
   
- Oracle에 대 한 .NET Framework Data Provider을 사용 하려면 응용 프로그램에서 다음과 같이 <xref:System.Data.OracleClient> 네임 스페이스를 참조 해야 합니다.  
+ Oracle에 대 한 .NET Framework Data Provider을 사용 하려면 응용 프로그램에서 다음과 <xref:System.Data.OracleClient> 같이 네임 스페이스를 참조 해야 합니다.  
   
 ```vb  
 Imports System.Data.OracleClient  
@@ -62,7 +63,7 @@ csc /r:System.Data.OracleClient.dll
  [Oracle 분산 트랜잭션](oracle-distributed-transactions.md)  
  <xref:System.Data.OracleClient.OracleConnection> 개체에서 트랜잭션이 활성화되어 있다고 판단할 경우 기존 분산 트랜잭션에 자동으로 인리스트먼트하는 방법을 설명합니다.  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
  [ADO.NET 애플리케이션 보안](securing-ado-net-applications.md)  
  ADO.NET을 사용할 때 보안 코드를 작성하는 방법에 대해 설명합니다.  
   
@@ -75,10 +76,10 @@ csc /r:System.Data.OracleClient.dll
  [SQL Server 및 ADO.NET](./sql/index.md)  
  SQL Server 관련 기능을 사용하는 방법에 대해 설명합니다.  
   
- [DbProviderFactory](dbproviderfactories.md)  
+ [DbProviderFactories](dbproviderfactories.md)  
  ADO.NET에서 공급자 독립적인 코드를 쓸 수 있게 하는 일반 클래스를 설명합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ADO.NET](index.md)
 - [ADO.NET 개요](ado-net-overview.md)
