@@ -4,12 +4,12 @@ description: .NET Core 학습을 위한 자습서에 따라 Mac, Linux 및 Windo
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: 5a33158bdf02c5ac81379cfcdabb2f79230033e2
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 31f63a2bbafc7f1c8dacea0fa8d3a40f36f69e55
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202186"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241476"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>자습서에서 .NET Core 및 .NET Core SDK 도구 알아보기
 
@@ -18,7 +18,6 @@ ms.locfileid: "84202186"
 ## <a name="use-visual-studio"></a>Visual Studio 사용
 
 - [콘솔 앱 만들기](with-visual-studio.md)
-- [F# 콘솔 앱 만들기](../../fsharp/get-started/get-started-visual-studio.md)
 - [앱 디버그](debugging-with-visual-studio.md)
 - [앱 게시](publishing-with-visual-studio.md)
 - [클래스 라이브러리 만들기](library-with-visual-studio.md)
@@ -27,17 +26,20 @@ ms.locfileid: "84202186"
 - [패키지 설치 및 사용](/nuget/quickstart/install-and-use-a-package-in-visual-studio)
 - [패키지 만들기 및 게시](/nuget/quickstart/create-and-publish-a-package-using-visual-studio)
 
+- [F# 콘솔 앱 만들기](../../fsharp/get-started/get-started-visual-studio.md)
+
 ## <a name="use-visual-studio-code"></a>Visual Studio Code 사용
 
 Visual Studio Code 또는 다른 코드 편집기를 사용하려면 해당 자습서를 선택합니다. 모두 .NET Core 개발 작업에 CLI를 사용하므로 디버깅 자습서를 제외한 모든 자습서를 코드 편집기에서 사용할 수 있습니다.
 
 - [콘솔 앱 만들기](with-visual-studio-code.md)
 - [앱 디버그](debugging-with-visual-studio-code.md)
-- [콘솔 앱 만들기 및 게시](cli-create-console-app.md)
-- [F# 콘솔 앱 만들기](../../fsharp/get-started/get-started-vscode.md)
+- [앱 게시](publishing-with-visual-studio-code.md)
 - [라이브러리 만들기 및 단위 테스트 - macOS](using-on-macos.md)
 - [패키지 설치 및 사용](/nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli)
 - [패키지 만들기 및 게시](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)
+
+- [F# 콘솔 앱 만들기](../../fsharp/get-started/get-started-vscode.md)
 
 ## <a name="use-visual-studio-for-mac"></a>Mac용 Visual Studio 사용
 
