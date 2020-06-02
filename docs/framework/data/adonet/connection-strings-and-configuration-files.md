@@ -1,16 +1,17 @@
 ---
 title: 연결 문자열 및 구성 파일
+description: 응용 프로그램 구성 파일에 ADO.NET 응용 프로그램에 대 한 연결 문자열을 저장 하는 방법을 알아보고 보안 및 유지 관리를 위한 모범 사례를 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 8862aa34c2d2677f5bc3e737c01cc61036c243e1
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 572c5be1bd639e8d4b38935f5be49782f0b0316e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345052"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287040"
 ---
 # <a name="connection-strings-and-configuration-files"></a>연결 문자열 및 구성 파일
 
@@ -65,7 +66,7 @@ ms.locfileid: "80345052"
  .NET Framework 2.0에서는 런타임에 구성 파일에서 연결 문자열을 쉽게 검색할 수 있도록 <xref:System.Configuration> 네임스페이스에 새 클래스가 추가되었습니다. 이름 또는 공급자 이름을 사용하여 프로그래밍 방식으로 연결 문자열을 검색할 수 있습니다.  
   
 > [!NOTE]
-> **machine.config** 파일에는 Visual Studio에서 사용하는 연결 문자열이 있는 **connectionStrings** 섹션도 포함되어 있습니다. Windows 응용 프로그램의 **app.config** 파일에서 공급자 이름으로 연결 문자열을 검색할 때 **machine.config의** 연결 문자열이 먼저 로드된 다음 **app.config에서**항목을 가져옵니다. 연결 직후 **에 clear를** **추가Strings** 요소는 로컬 **app.config** 파일에 정의된 연결 문자열만 고려되도록 메모리의 데이터 구조에서 상속된 모든 참조를 제거합니다.  
+> **machine.config** 파일에는 Visual Studio에서 사용하는 연결 문자열이 있는 **connectionStrings** 섹션도 포함되어 있습니다. Windows 응용 프로그램의 **app.config** 파일에서 공급자 이름으로 연결 문자열을 검색할 때 **machine.config의 연결** 문자열이 먼저 로드 된 다음 **app.config**의 항목이 로드 됩니다. **ConnectionStrings** 요소 바로 뒤에 **clear** 를 추가 하면 로컬 **app.config** 파일에 정의 된 연결 문자열만 고려 되도록 메모리의 데이터 구조에서 상속 된 참조가 모두 제거 됩니다.  
   
 ### <a name="working-with-the-configuration-classes"></a>구성 클래스 사용  
  .NET Framework 2.0부터는 로컬 컴퓨터의 구성 파일을 사용할 경우 더 이상 사용되지 않는 <xref:System.Configuration.ConfigurationManager> 대신 <xref:System.Configuration.ConfigurationSettings>가 사용됩니다. ASP.NET 구성 파일을 사용하는 경우에는 <xref:System.Web.Configuration.WebConfigurationManager>가 사용됩니다. 이 클래스는 웹 서버의 구성 파일에 사용하도록 디자인되었으며 **system.web**과 같은 구성 파일 섹션에 프로그래밍 방식으로 액세스할 수 있도록 합니다.  
@@ -75,14 +76,14 @@ ms.locfileid: "80345052"
   
  <xref:System.Configuration.ConnectionStringSettingsCollection>을 사용하여 애플리케이션 구성 파일에서 연결 문자열을 검색할 수 있습니다. 이 컬렉션에는 <xref:System.Configuration.ConnectionStringSettings> 개체 컬렉션이 포함되어 있으며, 각 개체는 **connectionStrings** 섹션의 단일 항목을 나타냅니다. 개체 속성은 연결 문자열 특성에 매핑되므로 이름 또는 공급자 이름을 지정하여 연결 문자열을 검색할 수 있습니다.  
   
-|속성|설명|  
+|속성|Description|  
 |--------------|-----------------|  
 |<xref:System.Configuration.ConnectionStringSettings.Name%2A>|연결 문자열의 이름으로, **name** 특성에 매핑됩니다.|  
 |<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>|정규화된 공급자 이름으로, **providerName** 특성에 매핑됩니다.|  
 |<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>|연결 문자열입니다. **connectionString** 특성에 매핑됩니다.|  
   
 ### <a name="example-listing-all-connection-strings"></a>예제: 모든 연결 문자열 나열  
- 이 예제에서는 콘솔 <xref:System.Configuration.ConnectionStringSettingsCollection> 창에서 <xref:System.Configuration.ConnectionStringSettings.Name%2A?displayProperty=nameWithType>의 <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A?displayProperty=nameWithType>에서 <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A?displayProperty=nameWithType> 를 다시 한 번 표현하고 의 에서 의 및 속성을 표시합니다.  
+ 이 예제에서는를 반복 <xref:System.Configuration.ConnectionStringSettingsCollection> 하 고 <xref:System.Configuration.ConnectionStringSettings.Name%2A?displayProperty=nameWithType> <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A?displayProperty=nameWithType> 콘솔 창에, 및 속성을 표시 합니다 <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A?displayProperty=nameWithType> .  
   
 > [!NOTE]
 > 일부 프로젝트 형식에는 System.Configuration.dll이 포함되어 있지 않으므로 구성 클래스를 사용하려면 먼저 System.Configuration.dll에 대한 참조를 설정해야 할 수도 있습니다. 특정 애플리케이션 구성 파일의 이름과 위치는 애플리케이션의 종류 및 호스팅 프로세스에 따라 달라집니다.  
@@ -143,7 +144,7 @@ ms.locfileid: "80345052"
  두 공급자 모두 강력한 데이터 암호화를 제공합니다. 그러나 웹 팜과 같이 여러 서버에서 동일한 암호화 구성 파일을 사용하려는 경우 데이터를 암호화하는 데 사용되는 암호화 키를 내보내고 다른 서버에서 가져오도록 하려면 <xref:System.Configuration.RsaProtectedConfigurationProvider>를 사용해야 합니다. 자세한 내용은 [보호되는 구성 RSA 키 컨테이너 가져오기 및 내보내기](https://docs.microsoft.com/previous-versions/aspnet/yxw286t2(v=vs.100))를 참조합니다.  
   
 ### <a name="using-the-configuration-classes"></a>구성 클래스 사용  
- <xref:System.Configuration> 네임스페이스에서는 프로그래밍 방식으로 구성을 설정하는 클래스를 제공합니다. <xref:System.Configuration.ConfigurationManager> 클래스에서는 시스템, 애플리케이션 및 사용자 구성 파일에 대한 액세스를 제공합니다. ASP.NET 응용 프로그램을 만드는 경우 동일한 <xref:System.Web.Configuration.WebConfigurationManager> 기능을 제공하는 클래스를 사용하는 동시에 ** \<system.web>** 있는 것과 같이 ASP.NET 응용 프로그램에 고유한 설정에 액세스할 수 있습니다.  
+ <xref:System.Configuration> 네임스페이스에서는 프로그래밍 방식으로 구성을 설정하는 클래스를 제공합니다. <xref:System.Configuration.ConfigurationManager> 클래스에서는 시스템, 애플리케이션 및 사용자 구성 파일에 대한 액세스를 제공합니다. ASP.NET 응용 프로그램을 만드는 경우 클래스를 사용할 수 있습니다 <xref:System.Web.Configuration.WebConfigurationManager> .이 클래스는에서 제공 하는 것과 같이 ASP.NET 응용 프로그램에 고유한 설정에 액세스할 수 있도록 하는 동시에 동일한 기능을 제공 합니다 **\<system.web>** .  
   
 > [!NOTE]
 > <xref:System.Security.Cryptography> 네임스페이스에는 데이터를 암호화하고 해독하는 추가 옵션을 제공하는 클래스가 들어 있습니다. 보호되는 구성을 사용하여 처리할 수 없는 암호화 서비스가 필요한 경우 이러한 클래스를 사용합니다. 이러한 클래스 중 일부는 관리되지 않는 Microsoft CryptoAPI에 대한 래퍼이지만 나머지는 완전하게 관리되는 구현 클래스입니다. 자세한 내용은 [암호화 서비스](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/93bskf9z(v=vs.90))를 참조하세요.  
@@ -168,13 +169,13 @@ ms.locfileid: "80345052"
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/VB/source.vb#1)]  
   
- ASP.NET 응용 프로그램 보안에 대한 자세한 내용은 [웹 사이트 보안을](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))ASP.NET.  
+ ASP.NET 응용 프로그램을 보호 하는 방법에 대 한 자세한 내용은 [ASP.NET 웹 사이트 보안](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [연결 문자열 작성기](connection-string-builders.md)
 - [연결 정보 보호](protecting-connection-information.md)
 - [구성 클래스 사용](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
-- [앱 구성](../../configure-apps/index.md)
+- [응용 프로그램 구성](../../configure-apps/index.md)
 - [ASP.NET 웹 사이트 관리 도구](https://docs.microsoft.com/previous-versions/aspnet/6hy1xzbw(v=vs.100))
 - [ADO.NET 개요](ado-net-overview.md)

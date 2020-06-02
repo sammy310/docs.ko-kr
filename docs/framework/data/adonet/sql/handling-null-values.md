@@ -1,22 +1,23 @@
 ---
 title: Null 값 처리
+description: SQL Server에 대 한 .NET Framework Data Provider에서 null을 처리 하는 방법과 null 및 SqlBoolean, 3 값 논리 및 null 값 할당에 대해 읽어 보십시오.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: c45c6672983866df6c47ec84981cc7bd11637c0c
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: a4d086d81f1c2c959780366cfeb59f2d265bc40c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249079"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286457"
 ---
 # <a name="handling-null-values"></a>Null 값 처리
 관계형 데이터베이스에서 null 값은 열 값을 알 수 없거나 값이 누락된 경우에 사용됩니다. Null은 빈 문자열(문자 또는 날짜/시간 데이터 형식의 경우)도 아니고 0 값(숫자 데이터 형식의 경우)도 아닙니다. ANSI SQL-92 사양에서는 모든 null이 일관되게 처리되도록 null이 모든 데이터 형식에 대해 동일해야 함을 명시합니다. <xref:System.Data.SqlTypes> 네임스페이스는 <xref:System.Data.SqlTypes.INullable> 인터페이스를 구현하여 null 의미 체계를 제공합니다. <xref:System.Data.SqlTypes>의 각 데이터 형식에는 해당 데이터 형식의 인스턴스에 할당할 수 있는 고유한 `IsNull` 속성과 `Null` 값이 있습니다.  
   
 > [!NOTE]
-> .NET Framework 버전 2.0에서는 nullable 값 형식에 대한 지원을 도입하여 프로그래머가 기본 형식의 모든 값을 나타내도록 값 형식을 확장할 수 있습니다. 이러한 CLR nullable 값 형식은 <xref:System.Nullable> 구조의 인스턴스를 나타냅니다. 이 기능은 값 형식이 boxed 및 unboxed인 경우에 특히 유용하며 개체 유형과의 호환성을 향상시킵니다. CLR nullable 값 형식은 ANSI SQL null이 `null` 참조(또는 `Nothing` Visual Basic)와 동일한 방식으로 작동하지 않기 때문에 데이터베이스 null을 저장하기 위한 것이 아닙니다. 데이터베이스 ANSI SQL null 값에 대한 작업을 수행하려면 <xref:System.Nullable> 대신 <xref:System.Data.SqlTypes> null을 사용합니다. 시각적 기본에서 CLR 값 nullable 형식작업에 대한 자세한 내용은 [Nullable 값 형식을](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)참조하고 C#에 대한 [Nullable 값 형식을](../../../../csharp/language-reference/builtin-types/nullable-value-types.md)참조하십시오.  
+> .NET Framework 버전 2.0에서는 프로그래머가 값 형식을 확장 하 여 기본 형식의 모든 값을 나타내도록 허용 하는 nullable 값 형식에 대 한 지원이 도입 되었습니다. 이러한 CLR nullable 값 형식은 구조체의 인스턴스를 나타냅니다 <xref:System.Nullable> . 이 기능은 값 형식이 boxed 및 unboxed인 경우에 특히 유용하며 개체 유형과의 호환성을 향상시킵니다. ANSI SQL null은 `null` 참조 (또는 Visual Basic)와 동일한 방식으로 동작 하지 않으므로 CLR nullable 값 형식은 데이터베이스 null의 저장에 적합 하지 않습니다 `Nothing` . 데이터베이스 ANSI SQL null 값에 대한 작업을 수행하려면 <xref:System.Nullable> 대신 <xref:System.Data.SqlTypes> null을 사용합니다. Visual Basic에서 CLR 값 nullable 형식을 사용 하는 방법에 대 한 자세한 내용은 [Nullable 값 형식](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)및 c #의 경우 [nullable 값 형식](../../../../csharp/language-reference/builtin-types/nullable-value-types.md)을 참조 하세요.  
   
 ## <a name="nulls-and-three-valued-logic"></a>Null과 3중값 논리  
  열 정의에 null 값을 허용하면 애플리케이션에 값이 3치 논리가 도입됩니다. 비교는 다음 세 가지 조건 중 하나로 평가될 수 있습니다.  
@@ -25,7 +26,7 @@ ms.locfileid: "80249079"
   
 - False  
   
-- 알 수 없음  
+- Unknown  
   
  Null은 unknown으로 간주되기 때문에 서로 비교되는 두 null 값은 동일한 것으로 간주되지 않습니다. 산술 연산자를 사용하는 식에서 피연산자 중 하나라도 null이면 결과도 null입니다.  
   
@@ -35,7 +36,7 @@ ms.locfileid: "80249079"
  ![진리표](./media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansi_nulls-option"></a>ANSI_NULLS 옵션 이해  
- <xref:System.Data.SqlTypes>는 SQL Server에서 ANSI_NULLS 옵션이 on으로 설정된 경우와 동일한 의미 체계를 제공합니다. 모든 산술 연산자 (+, \*-, , -, /, %), \|bitwise 연산자 (~, &,) 및 대부분의 함수는 속성을 `IsNull`제외한 피연산자 또는 인수 중 어느 것이 null인 경우 null을 반환합니다.  
+ <xref:System.Data.SqlTypes>는 SQL Server에서 ANSI_NULLS 옵션이 on으로 설정된 경우와 동일한 의미 체계를 제공합니다. 모든 산술 연산자 (+,-, \* ,/,%), 비트 연산자 (~, &, \| ) 및 대부분의 함수는 속성을 제외 하 고 피연산자 또는 인수가 null 인 경우 null을 반환 `IsNull` 합니다.  
   
  ANSI SQL-92 표준에서는 WHERE 절에서 *columnName* = NULL을 지원하지 않습니다. SQL Server에서 ANSI_NULLS 옵션은 데이터베이스의 기본 null 허용 여부와 null 값에 대한 비교 평가를 모두 제어합니다. ANSI_NULLS이 설정된 경우(기본값) null 값을 테스트할 때 식에서 IS NULL 연산자를 사용해야 합니다. 예를 들어 ANSI_NULLS가 on이면 다음 비교 결과는 항상 unknown이 됩니다.  
   
@@ -141,7 +142,7 @@ String.Equals instance method:
   Two empty strings=True
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [SQL Server 데이터 형식 및 ADO.NET](sql-server-data-types.md)
 - [ADO.NET 개요](../ado-net-overview.md)

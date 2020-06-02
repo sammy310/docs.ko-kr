@@ -1,21 +1,22 @@
 ---
 title: DataTable에 열 추가
+description: DataTable에는 테이블의 Columns 속성에서 참조 하는 DataColumn 개체가 포함 되어 있습니다. ADO.NET의 테이블에 열을 추가 하려면 다음 예제 코드를 사용 합니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
-ms.openlocfilehash: 6e0dcd819dc354e1fd23b244692dff5091142004
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9d6d21696acd7a6b63cfd6d2ea7e906ec2acd7c9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784848"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286949"
 ---
 # <a name="adding-columns-to-a-datatable"></a>DataTable에 열 추가
-에 <xref:System.Data.DataTable> 는 테이블의 **Columns** 속성에서 참조 하는 개체의 <xref:System.Data.DataColumn> 컬렉션이 포함 되어 있습니다. 이 열 컬렉션과 모든 제약 조건을 함께 사용하여 테이블의 스키마나 구조를 정의합니다.  
+에는 <xref:System.Data.DataTable> <xref:System.Data.DataColumn> 테이블의 **Columns** 속성에서 참조 하는 개체의 컬렉션이 포함 되어 있습니다. 이 열 컬렉션과 모든 제약 조건을 함께 사용하여 테이블의 스키마나 구조를 정의합니다.  
   
- **Datacolumn** 생성자를 사용 하거나 테이블 <xref:System.Data.DataColumnCollection>의 **Columns** 속성 ()의 **Add** 메서드를 호출 하 여 테이블 내에서 **datacolumn** 개체를 만들 수 있습니다. **Add** 메서드는 선택적 **ColumnName**, **DataType**및 **Expression** 인수를 받아들이고 컬렉션의 멤버로 새 **DataColumn** 을 만듭니다. 또한 기존 **datacolumn** 개체를 수락 하 여 컬렉션에 추가 하 고 요청 시 추가 된 **datacolumn** 에 대 한 참조를 반환 합니다. **DataTable** 개체는 데이터 원본에 한정 되지 않으므로 **DataColumn**의 데이터 형식을 지정할 때 .NET Framework 형식이 사용 됩니다.  
+ **Datacolumn** 생성자를 사용 하거나 테이블의 **Columns** 속성 ()의 **Add** 메서드를 호출 하 여 테이블 내에서 **datacolumn** 개체를 만들 수 있습니다 <xref:System.Data.DataColumnCollection> . **Add** 메서드는 선택적 **ColumnName**, **DataType**및 **Expression** 인수를 받아들이고 컬렉션의 멤버로 새 **DataColumn** 을 만듭니다. 또한 기존 **datacolumn** 개체를 수락 하 여 컬렉션에 추가 하 고 요청 시 추가 된 **datacolumn** 에 대 한 참조를 반환 합니다. **DataTable** 개체는 데이터 원본에 한정 되지 않으므로 **DataColumn**의 데이터 형식을 지정할 때 .NET Framework 형식이 사용 됩니다.  
   
  다음 예에서는 **DataTable**에 4 개의 열을 추가 합니다.  
   
@@ -51,11 +52,11 @@ workTable.Columns.Add("Purchases", typeof(Double));
   
  <xref:System.Xml.Linq.XElement>를 <xref:System.Data.DataColumn.DataType%2A>에서 <xref:System.Data.DataColumn>의 <xref:System.Data.DataTable>로 사용하는 경우 데이터를 읽을 때 XML serialization이 작동하지 않습니다. 예를 들어 <xref:System.Xml.XmlDocument> 메서드를 사용하여 `DataTable.WriteXml`를 작성하는 경우 XML에 대한 serialization 수행 시 <xref:System.Xml.Linq.XElement>에 추가 부모 노드가 있습니다. 이 문제를 해결하려면 <xref:System.Data.SqlTypes.SqlXml> 대신 <xref:System.Xml.Linq.XElement> 형식을 사용합니다. `ReadXml` 및 `WriteXml`이 <xref:System.Data.SqlTypes.SqlXml>와 올바르게 작동합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Data.DataColumn>
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataTable>
 - [DataTable 스키마 정의](datatable-schema-definition.md)
-- [DataTable](datatables.md)
+- [DataTables](datatables.md)
 - [ADO.NET 개요](../ado-net-overview.md)

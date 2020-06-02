@@ -1,16 +1,17 @@
 ---
 title: DbProviderFactory 가져오기
+description: .NET Framework에서 특정 데이터 소스를 사용 하기 위해 DbProviderFactories 클래스에서 DbProviderFactory를 가져오는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a16e4a4d-6a5b-45db-8635-19570e4572ae
-ms.openlocfilehash: 0e2efd593019199ff641610b8602825cc60d4661
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b790c87cc3ec293c18bf730567f92b490c7c6594
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149468"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286717"
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>DbProviderFactory 가져오기
 <xref:System.Data.Common.DbProviderFactory>를 가져오는 프로세스에서는 데이터 공급자에 대한 정보가 <xref:System.Data.Common.DbProviderFactories> 클래스에 전달됩니다. <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> 메서드는 이 정보를 기반으로 하여 강력한 형식의 공급자 팩터리를 만듭니다. 예를 들어 <xref:System.Data.SqlClient.SqlClientFactory>를 만들려면 공급자 이름을 "System.Data.SqlClient"로 지정하는 문자열을 `GetFactory`에 전달합니다. `GetFactory`의 다른 오버로드는 <xref:System.Data.DataRow>를 사용합니다. 공급자 팩터리를 만든 후에는 해당 메서드를 사용하여 다른 개체를 만들 수 있습니다. `SqlClientFactory`의 메서드로는 <xref:System.Data.SqlClient.SqlClientFactory.CreateConnection%2A>, <xref:System.Data.SqlClient.SqlClientFactory.CreateCommand%2A> 및 <xref:System.Data.SqlClient.SqlClientFactory.CreateDataAdapter%2A>가 있습니다.  
@@ -19,7 +20,7 @@ ms.locfileid: "79149468"
 > .NET Framework <xref:System.Data.OracleClient.OracleClientFactory>, <xref:System.Data.Odbc.OdbcFactory> 및 <xref:System.Data.OleDb.OleDbFactory> 클래스도 이와 유사한 기능을 제공합니다.  
   
 ## <a name="registering-dbproviderfactories"></a>DbProviderFactories 등록  
- 팩터리 기반 클래스를 지원하는 각 .NET Framework 데이터 공급자는 로컬 컴퓨터의 **machine.config** 파일의 **DbProviderFactory** 섹션에서 구성 정보를 등록합니다. 다음 구성 파일 조각에서는 <xref:System.Data.SqlClient>의 구문과 형식을 보여 줍니다.  
+ 팩터리 기반 클래스를 지 원하는 각 .NET Framework 데이터 공급자는 로컬 컴퓨터 **에 있는 machine.config 파일의** **dbproviderfactories** 섹션에 구성 정보를 등록 합니다. 다음 구성 파일 조각에서는 <xref:System.Data.SqlClient>의 구문과 형식을 보여 줍니다.  
   
 ```xml  
 <system.data>  
@@ -34,10 +35,10 @@ ms.locfileid: "79149468"
 </system.data>  
 ```  
   
- **고정** 특성은 기본 데이터 공급자를 식별합니다. 세 부분으로 이루어진 이 명명 구문은 새 팩터리를 만들 때뿐만 아니라 공급자 이름 및 관련된 연결 문자열을 런타임에 검색할 수 있도록 애플리케이션 구성 파일에서 공급자를 식별하는 데도 사용됩니다.  
+ **고정** 특성은 기본 데이터 공급자를 식별 합니다. 세 부분으로 이루어진 이 명명 구문은 새 팩터리를 만들 때뿐만 아니라 공급자 이름 및 관련된 연결 문자열을 런타임에 검색할 수 있도록 애플리케이션 구성 파일에서 공급자를 식별하는 데도 사용됩니다.  
   
 ## <a name="retrieving-provider-information"></a>공급자 정보 검색  
- <xref:System.Data.Common.DbProviderFactories.GetFactoryClasses%2A> 메서드를 사용하면 로컬 컴퓨터에 설치되어 있는 데이터 공급자에 대한 모든 정보를 검색할 수 있습니다. 다음 표에 설명된 <xref:System.Data.DataTable> 열을 포함하는 명명된 **DbProvider공장이** 반환됩니다.  
+ <xref:System.Data.Common.DbProviderFactories.GetFactoryClasses%2A> 메서드를 사용하면 로컬 컴퓨터에 설치되어 있는 데이터 공급자에 대한 모든 정보를 검색할 수 있습니다. <xref:System.Data.DataTable>다음 표에서 설명 하는 열을 포함 하는 **Dbproviderfactories** 라는를 반환 합니다.  
   
 |열 서수|열 이름|예제 출력|Description|  
 |--------------------|-----------------|--------------------|-----------------|  
@@ -55,9 +56,9 @@ ms.locfileid: "79149468"
  [!code-vb[DataWorks DbProviderFactories#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbProviderFactories/VB/source.vb#1)]  
   
 ## <a name="using-application-configuration-files-to-store-factory-information"></a>애플리케이션 구성 파일을 사용하여 팩터리 정보 저장  
- 팩터리 작업에 사용되는 디자인 패턴에는 Windows 응용 프로그램에 대한 **app.config** 및 ASP.NET 응용 프로그램에 대한 **web.config와** 같은 공급자 및 연결 문자열 정보를 응용 프로그램 구성 파일에 저장하는 것이 수반됩니다.  
+ 팩터리를 사용 하는 데 사용 되는 디자인 패턴에는 응용 프로그램 구성 파일에 공급자 및 연결 문자열 정보 (예: Windows 응용 프로그램용 **app.config** 및 ASP.NET 응용 프로그램에 대 **한 web.config)** 가 저장 됩니다.  
   
- 다음 구성 파일 조각에서는 SQL Server에서 Northwind 데이터베이스에 연결하는 데 필요한 "NorthwindSQL" 및 Access/Jet에서 Northwind 데이터베이스에 연결하는 데 필요한 "NorthwindAccess"라는 두 가지 명명된 연결 문자열을 저장하는 방법을 보여 줍니다. **고정** 이름은 **providerName** 특성에 사용됩니다.  
+ 다음 구성 파일 조각에서는 SQL Server에서 Northwind 데이터베이스에 연결하는 데 필요한 "NorthwindSQL" 및 Access/Jet에서 Northwind 데이터베이스에 연결하는 데 필요한 "NorthwindAccess"라는 두 가지 명명된 연결 문자열을 저장하는 방법을 보여 줍니다. **ProviderName** 특성에는 **고정** 이름이 사용 됩니다.  
   
 ```xml  
 <configuration>  
@@ -79,7 +80,7 @@ ms.locfileid: "79149468"
 ```  
   
 ### <a name="retrieving-a-connection-string-by-provider-name"></a>공급자 이름을 사용하여 연결 문자열 검색  
- 공급자 팩터리를 만들려면 연결 문자열뿐만 아니라 공급자 이름도 제공해야 합니다. 이 예제에서는 응용 프로그램 구성 파일에서 연결 문자열을 고정 형식 *"System.Data.ProviderName*"로 공급자 이름을 전달 하여 검색 하는 방법을 보여 줍니다. 이 코드는 <xref:System.Configuration.ConnectionStringSettingsCollection>을 반복합니다. 메서드가 성공하면 <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>이 반환되고, 그렇지 않으면 `null`(Visual Basic의 경우에는 `Nothing`)이 반환됩니다. 공급자에 대한 항목이 여러 개 있으면 응용 프로그램 구성 파일에서 찾은 첫 번째 항목이 반환됩니다. 구성 파일에서 연결 문자열을 검색하는 자세한 정보 [및](connection-strings-and-configuration-files.md)예제는 연결 문자열 및 구성 파일을 참조하십시오.  
+ 공급자 팩터리를 만들려면 연결 문자열뿐만 아니라 공급자 이름도 제공해야 합니다. 이 예제에서는 "*system.object*" 고정 형식으로 공급자 이름을 전달 하 여 응용 프로그램 구성 파일에서 연결 문자열을 검색 하는 방법을 보여 줍니다. 이 코드는 <xref:System.Configuration.ConnectionStringSettingsCollection>을 반복합니다. 메서드가 성공하면 <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>이 반환되고, 그렇지 않으면 `null`(Visual Basic의 경우에는 `Nothing`)이 반환됩니다. 공급자에 대한 항목이 여러 개 있으면 응용 프로그램 구성 파일에서 찾은 첫 번째 항목이 반환됩니다. 구성 파일에서 연결 문자열을 검색 하는 방법에 대 한 자세한 내용 및 예제는 [연결 문자열 및 구성 파일](connection-strings-and-configuration-files.md)을 참조 하세요.  
   
 > [!NOTE]
 > 코드를 실행하려면 `System.Configuration.dll`에 대한 참조가 필요합니다.  
@@ -88,7 +89,7 @@ ms.locfileid: "79149468"
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/VB/source.vb#1)]  
   
 ## <a name="creating-the-dbproviderfactory-and-dbconnection"></a>DbProviderFactory 및 DbConnection 만들기  
- 이 예제에서는 <xref:System.Data.Common.DbProviderFactory> *"System.Data.ProviderName"* 형식과 연결 문자열로 공급자 이름을 전달하여 a 및 <xref:System.Data.Common.DbConnection> 개체를 만드는 방법을 보여 줍니다. 메서드가 성공하면 `DbConnection` 개체가 반환되고, 오류가 발생하면 `null` (Visual Basic의 경우에는 `Nothing`)이 반환됩니다.  
+ 이 예제에서는 <xref:System.Data.Common.DbProviderFactory> <xref:System.Data.Common.DbConnection> "system.string" 형식의 공급자 이름과 연결 문자열을 전달 하 여 및 개체*System.Data.ProviderName*를 만드는 방법을 보여 줍니다. 메서드가 성공하면 `DbConnection` 개체가 반환되고, 오류가 발생하면 `null` (Visual Basic의 경우에는 `Nothing`)이 반환됩니다.  
   
  이 코드는 `DbProviderFactory`를 호출하여 <xref:System.Data.Common.DbProviderFactories.GetFactory%2A>를 가져옵니다. 그러면 <xref:System.Data.Common.DbProviderFactory.CreateConnection%2A> 메서드가 <xref:System.Data.Common.DbConnection> 개체를 만들고 <xref:System.Data.Common.DbConnection.ConnectionString%2A> 속성이 연결 문자열에 설정됩니다.  
   
@@ -97,7 +98,7 @@ ms.locfileid: "79149468"
   
 ## <a name="see-also"></a>참고 항목
 
-- [DbProviderFactory](dbproviderfactories.md)
+- [DbProviderFactories](dbproviderfactories.md)
 - [연결 문자열](connection-strings.md)
 - [구성 클래스 사용](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100))
 - [ADO.NET 개요](ado-net-overview.md)

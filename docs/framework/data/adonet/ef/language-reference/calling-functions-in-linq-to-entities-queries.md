@@ -1,18 +1,19 @@
 ---
 title: LINQ to Entities 쿼리에서 함수 호출
+description: 이러한 문서를 사용 하 여 EntityFunctions SqlFunctions 클래스가 Entity Framework의 일부로 정식 함수와 데이터베이스 함수에 액세스를 제공 하는 방법을 확인할 수 있습니다.
 ms.date: 03/30/2017
 ms.assetid: 12a525a9-727c-4464-a0c7-71a0ef541792
-ms.openlocfilehash: 267bb393d9e75c66eb18139e8897da34bd86e159
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: faa6406713592f10e5e7371cd73f29bec4b03b7b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251259"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286859"
 ---
 # <a name="calling-functions-in-linq-to-entities-queries"></a>LINQ to Entities 쿼리에서 함수 호출
 이 단원의 항목에서는 LINQ to Entities 쿼리에서 함수를 호출하는 방법에 대해 설명합니다.  
   
- <xref:System.Data.Objects.EntityFunctions> 및 <xref:System.Data.Objects.SqlClient.SqlFunctions> 클래스를 사용하여 Entity Framework의 일부인 정식 함수와 데이터베이스 함수에 액세스할 수 있습니다. 자세한 내용은 [방법: 정식 함수](how-to-call-canonical-functions.md) 를 호출 [하 고 방법: 데이터베이스 함수](how-to-call-database-functions.md)를 호출 합니다.  
+ <xref:System.Data.Objects.EntityFunctions> 및 <xref:System.Data.Objects.SqlClient.SqlFunctions> 클래스를 사용하여 Entity Framework의 일부인 정식 함수와 데이터베이스 함수에 액세스할 수 있습니다. 자세한 내용은 [방법: 정식 함수 호출](how-to-call-canonical-functions.md) 및 [방법: 데이터베이스 함수 호출](how-to-call-database-functions.md)을 참조 하세요.  
   
  사용자 지정 함수를 호출하는 과정은 다음의 기본적인 세 단계로 이루어집니다.  
   
@@ -25,7 +26,7 @@ ms.locfileid: "70251259"
  자세한 내용은 이 단원의 해당 항목을 참조하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [방법: 정식 함수 호출](how-to-call-canonical-functions.md)  
+ [방법: 호출 정식 함수](how-to-call-canonical-functions.md)  
   
  [방법: 데이터베이스 함수 호출](how-to-call-database-functions.md)  
   
@@ -33,9 +34,9 @@ ms.locfileid: "70251259"
   
  [방법: 쿼리에서 모델 정의 함수 호출](how-to-call-model-defined-functions-in-queries.md)  
   
- [방법: 모델 정의 함수를 개체 메서드로 호출](how-to-call-model-defined-functions-as-object-methods.md)  
+ [방법: 개체 메서드로 모델 정의 함수 호출](how-to-call-model-defined-functions-as-object-methods.md)  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [LINQ to Entities에서 쿼리](queries-in-linq-to-entities.md)
 - [정식 함수](canonical-functions.md)

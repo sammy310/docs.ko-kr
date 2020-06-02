@@ -1,14 +1,15 @@
 ---
 title: ADO.NET
+description: 분산 된 데이터 공유 응용 프로그램을 만들기 위해 .NET Framework 프로그래머를 위한 데이터 액세스 서비스를 노출 하는 클래스에 대해 알아봅니다.
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: cca3075a73a7bb45fd6154f760adfcda9064345c
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 4f9b2ca42a2c25c1463b7d1ca38b4b8920b2dafd
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094399"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286729"
 ---
 # <a name="adonet"></a>ADO.NET
 
@@ -37,7 +38,7 @@ ADO.NET은 .NET Framework 프로그래머에게 데이터 액세스 서비스를
  LINQ to DataSet에 대한 정보와 프로그래밍 예제를 제공합니다.  
   
  [ADO.NET에서 데이터 검색 및 수정](retrieving-and-modifying-data.md)  
- 데이터 원본에 연결 하는 방법 및 `Commands`, `DataReaders`및 `DataAdapters`를 사용 하 여 데이터를 검색 및 수정 하는 방법을 설명 합니다.  
+ 데이터 원본에 연결 하는 방법과 `Commands` ,, 및를 사용 하 여 데이터를 검색 및 수정 하는 방법을 설명 합니다 `DataReaders` `DataAdapters` .  
   
  [SQL Server 및 ADO.NET](./sql/index.md)  
  SQL Server 관련 기능을 사용하는 방법에 대해 설명합니다.  
@@ -47,7 +48,7 @@ ADO.NET은 .NET Framework 프로그래머에게 데이터 액세스 서비스를
   
 ## <a name="related-sections"></a>관련 단원  
  [LINQ(Language-Integrated Query) - C#](../../../csharp/programming-guide/concepts/linq/index.md)  
- 을 사용 하 여 C#LINQ 토픽 및 샘플에 대 한 링크를 제공 합니다.  
+ C #을 사용 하 여 LINQ 토픽 및 샘플에 대 한 링크를 제공 합니다.  
   
  [LINQ(Language-Integrated Query) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)  
  Visual Basic를 사용 하 여 LINQ 토픽 및 샘플에 대 한 링크를 제공 합니다.  

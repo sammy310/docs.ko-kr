@@ -1,13 +1,14 @@
 ---
 title: SQL Server CLR 통합 소개
+description: SQL Server와의 CLR 통합은 관리 코드에서 저장 프로시저, 트리거, 사용자 정의 함수, 사용자 정의 형식 및 사용자 정의 집계를 지원 합니다.
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
-ms.openlocfilehash: 41dd89af4f45c673cf6b7283fc39aaf91fd9963c
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: fa2ef68792d09cf94b3e0680a14bd79f9b593999
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452411"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286432"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>SQL Server CLR 통합 소개
 CLR(공용 언어 런타임)은 Microsoft .NET Framework의 핵심으로, 모든 .NET Framework 코드의 실행 환경을 제공합니다. CLR 내에서 실행되는 코드를 관리 코드라고 합니다. CLR은 JIT(Just-In-Time) 컴파일, 메모리 할당 및 관리, 형식 안전성 적용, 예외 처리, 스레드 관리, 보안을 비롯하여 프로그램 실행에 필요한 다양한 기능과 서비스를 제공합니다.  

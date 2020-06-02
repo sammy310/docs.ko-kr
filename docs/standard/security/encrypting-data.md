@@ -11,18 +11,18 @@ helpviewer_keywords:
 - cryptography [.NET Framework], asymmetric
 - asymmetric encryption
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
-ms.openlocfilehash: 669b9c77ca0102ed94d8743cf37b18c0d0c528dc
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 3230836b93ea191e5de27717a918038f2f8dead6
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159405"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288357"
 ---
 # <a name="encrypting-data"></a>데이터 암호화
 대칭 암호화와 비대칭 암호화는 서로 다른 프로세스를 사용하여 수행됩니다. 대칭 암호화는 스트림에서 수행되므로 많은 양의 데이터를 암호화하는 데 유용합니다. 비대칭 암호화는 적은 수의 바이트에서 수행되므로 적은 양의 데이터에만 유용합니다.  
   
 ## <a name="symmetric-encryption"></a>대칭 암호화  
- 관리되는 대칭 암호화 클래스는 읽은 데이터를 스트림으로 암호화하는 <xref:System.Security.Cryptography.CryptoStream> 이라는 특수 스트림 클래스와 함께 사용됩니다. **CryptoStream** 클래스는 관리되는 스트림 클래스, 암호화 알고리즘을 구현하는 클래스에서 만든 <xref:System.Security.Cryptography.ICryptoTransform> () 인터페이스를 구현하는 클래스 및 <xref:System.Security.Cryptography.CryptoStreamMode> CryptoStream **에 허용되는 액세스 형식을 설명하는**열거형을 사용하여 초기화됩니다. **,** 및 <xref:System.IO.Stream> 을 포함하여 <xref:System.IO.FileStream>클래스에서 파생되는 클래스를 사용하여 <xref:System.IO.MemoryStream>CryptoStream <xref:System.Net.Sockets.NetworkStream>클래스를 초기화할 수 있습니다. 이러한 클래스를 사용하여 다양한 스트림 개체에 대해 대칭 암호화를 수행할 수 있습니다.  
+ 관리되는 대칭 암호화 클래스는 읽은 데이터를 스트림으로 암호화하는 <xref:System.Security.Cryptography.CryptoStream> 이라는 특수 스트림 클래스와 함께 사용됩니다. **CryptoStream** 클래스는 관리되는 스트림 클래스, 암호화 알고리즘을 구현하는 클래스에서 만든 <xref:System.Security.Cryptography.ICryptoTransform> () 인터페이스를 구현하는 클래스 및 <xref:System.Security.Cryptography.CryptoStreamMode> CryptoStream **에 허용되는 액세스 형식을 설명하는**열거형을 사용하여 초기화됩니다. , 및를 포함 하 여 클래스에서 파생 된 클래스를 사용 하 여 **CryptoStream** 클래스를 초기화할 수 있습니다 <xref:System.IO.Stream> <xref:System.IO.FileStream> <xref:System.IO.MemoryStream> <xref:System.Net.Sockets.NetworkStream> . 이러한 클래스를 사용하여 다양한 스트림 개체에 대해 대칭 암호화를 수행할 수 있습니다.  
   
  다음 예제에서는 Rijndael 암호화 알고리즘을 구현하는 <xref:System.Security.Cryptography.RijndaelManaged> 의 새 인스턴스를 만들고 **CryptoStream** 클래스에서 암호화를 수행하는 데 사용하는 방법을 보여 줍니다. 이 예제에서 **CryptoStream** 은 임의 형식의 관리되는 스트림일 수 있는 `myStream` 이라는 스트림 개체를 사용하여 초기화됩니다. **RijndaelManaged** 클래스의 **CreateEncryptor** 메서드에는 암호화에 사용되는 키 및 IV가 전달됩니다. 이 경우 `rmCrypto` 에서 생성되는 기본 키 및 IV가 사용됩니다. 끝으로, **CryptoStreamMode.Write** 가 전달되어 스트림에 대한 쓰기 권한을 지정합니다.  
   
@@ -262,6 +262,6 @@ class Class1
   
 ## <a name="see-also"></a>참고 항목
 
-- [암호화 및 해독용 키 생성](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
-- [데이터 해독](../../../docs/standard/security/decrypting-data.md)
-- [암호화 서비스](../../../docs/standard/security/cryptographic-services.md)
+- [암호화 및 해독용 키 생성](generating-keys-for-encryption-and-decryption.md)
+- [데이터 해독](decrypting-data.md)
+- [암호화 서비스](cryptographic-services.md)

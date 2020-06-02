@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], model
 - encryption [.NET Framework], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: f878f73497b83aaf31f2ba3b23cca1f685867b3e
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: c2d28abacd34736764b69be750a850a0f2e8db85
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77095270"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288383"
 ---
 # <a name="net-framework-cryptography-model"></a>.NET Framework 암호화 모델
 
@@ -49,7 +49,7 @@ ms.locfileid: "77095270"
 
 ## <a name="cryptographic-configuration"></a>암호화 구성
 
-암호화 구성을 사용하면 알고리즘의 특정 구현을 알고리즘 이름으로 확인하여 .NET Framework 암호화 클래스를 확장할 수 있습니다. 알고리즘의 고유한 하드웨어 또는 소프트웨어 구현을 추가하고 선택한 알고리즘 이름에 해당 구현을 매핑할 수 있습니다. 구성 파일에 알고리즘이 지정되지 않은 경우 기본 설정이 사용됩니다. 암호화 구성에 대 한 자세한 내용은 [암호화 클래스 구성](../../../docs/framework/configure-apps/configure-cryptography-classes.md)을 참조 하세요.
+암호화 구성을 사용하면 알고리즘의 특정 구현을 알고리즘 이름으로 확인하여 .NET Framework 암호화 클래스를 확장할 수 있습니다. 알고리즘의 고유한 하드웨어 또는 소프트웨어 구현을 추가하고 선택한 알고리즘 이름에 해당 구현을 매핑할 수 있습니다. 구성 파일에 알고리즘이 지정되지 않은 경우 기본 설정이 사용됩니다. 암호화 구성에 대 한 자세한 내용은 [암호화 클래스 구성](../../framework/configure-apps/configure-cryptography-classes.md)을 참조 하세요.
 
 ## <a name="choosing-an-algorithm"></a>알고리즘 선택
 
@@ -75,5 +75,5 @@ ms.locfileid: "77095270"
 
 ## <a name="see-also"></a>참고 항목
 
-- [암호화 서비스](../../../docs/standard/security/cryptographic-services.md)
+- [암호화 서비스](cryptographic-services.md)
 - [C에서 Bruce Schneier 암호화 프로토콜, 알고리즘 및 소스 코드를 적용 합니다.](https://www.schneier.com/books/applied_cryptography/)

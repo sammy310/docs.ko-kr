@@ -1,13 +1,14 @@
 ---
 title: ADO.NET Entity Framework의 연결 문자열
+description: ADO.NET 데이터 공급자에 연결 하 고 모델 및 매핑 파일에 대 한 정보를 포함 하는 Entity Framework의 연결 문자열에 대해 알아봅니다.
 ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: 392e51022dc0f98b9fad656b9f950cd25588f31a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 2ae25f5881c033a84d65f5b0b4ed14b4866dbcb3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040338"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286872"
 ---
 # <a name="connection-strings-in-the-adonet-entity-framework"></a>ADO.NET Entity Framework의 연결 문자열
 
@@ -23,14 +24,14 @@ ms.locfileid: "73040338"
 
 ## <a name="connection-string-parameters"></a>연결 문자열 매개 변수
 
-다음 표에서는 <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>에 있는 키워드 값의 올바른 이름을 나열 합니다.
+다음 표에는 <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>에 포함되는 키워드 값의 올바른 이름이 정리되어 있습니다.
 
 |키워드|설명|
 |-------------|-----------------|
-|`Provider`|`Name` 키워드가 지정 되지 않은 경우 필수 사항입니다. 기본 공급자에 대 한 <xref:System.Data.Common.DbProviderFactory> 개체를 검색 하는 데 사용 되는 공급자 이름입니다. 이 값은 상수입니다.<br /><br /> `Name` 키워드가 엔터티 연결 문자열에 포함되어 있지 않은 경우 `Provider` 키워드에 대해 비어 있지 않은 값이 필요합니다. 이 키워드는 `Name` 키워드와 함께 사용할 수 없습니다.|
-|`Provider Connection String`|(선택 사항) 내부 데이터 원본에 전달 되는 공급자별 연결 문자열을 지정 합니다. 이 연결 문자열에는 데이터 공급자에 대 한 유효한 키워드/값 쌍이 포함 되어 있습니다. 잘못 된 `Provider Connection String` 데이터 소스에서 평가할 때 런타임 오류가 발생 합니다.<br /><br /> 이 키워드는 `Name` 키워드와 함께 사용할 수 없습니다.<br /><br /> [ADO.NET 연결 문자열](../connection-strings.md)의 일반 구문에 따라 값을 이스케이프 해야 합니다. 예를 들어 다음 연결 문자열을 `Server=serverName; User ID = userID`합니다. 세미콜론을 포함 하기 때문에 이스케이프 해야 합니다. 큰따옴표를 포함 하지 않기 때문에 이스케이프에 사용 될 수 있습니다.<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`|
-|`Metadata`|`Name` 키워드가 지정 되지 않은 경우 필수 사항입니다. 메타데이터와 매핑 정보를 검색할 대상 디렉터리, 파일 및 리소스 위치에 대한 파이프로 구분된 목록입니다. 예를 들면 다음과 같습니다.<br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> 파이프 구분 기호의 양쪽에 공백이 있으면 무시 됩니다.<br /><br /> 이 키워드는 `Name` 키워드와 함께 사용할 수 없습니다.|
-|`Name`|애플리케이션에서는 필수 키워드/값 연결 문자열 값을 제공하는 애플리케이션 구성 파일에 연결 이름을 선택적으로 지정할 수 있습니다. 이 경우 연결 문자열에 직접 제공할 수 없습니다. `Name` 키워드는 구성 파일에 사용할 수 없습니다.<br /><br /> `Name` 키워드가 연결 문자열에 포함 되어 있지 않은 경우 Provider 키워드에 대해 비어 있지 않은 값이 필요 합니다.<br /><br /> 이 키워드는 다른 모든 연결 문자열 키워드와 함께 사용할 수 없습니다.|
+|`Provider`|`Name` 키워드를 지정하지 않은 경우에 필요합니다. 기본 공급자의 <xref:System.Data.Common.DbProviderFactory> 개체를 검색하는 데 사용되는 공급자 이름입니다. 이 값은 상수입니다.<br /><br /> `Name` 키워드가 엔터티 연결 문자열에 포함되어 있지 않은 경우 `Provider` 키워드에 대해 비어 있지 않은 값이 필요합니다. 이 키워드는 `Name` 키워드와 함께 사용할 수 없습니다.|
+|`Provider Connection String`|선택 사항입니다. 기본 데이터 소스에 전달되는 공급자별 연결 문자열을 지정합니다. 이 연결 문자열에는 데이터 공급자에 대 한 유효한 키워드/값 쌍이 포함 되어 있습니다. `Provider Connection String`이 올바르지 않으면 데이터 소스에서 해당 문자열을 평가할 때 런타임 오류가 발생합니다.<br /><br /> 이 키워드는 `Name` 키워드와 함께 사용할 수 없습니다.<br /><br /> [ADO.NET 연결 문자열](../connection-strings.md)의 일반 구문에 따라 값을 이스케이프 해야 합니다. 예를 들어 다음 연결 문자열을 고려해 보십시오 `Server=serverName; User ID = userID` . 세미콜론을 포함 하기 때문에 이스케이프 해야 합니다. 큰따옴표를 포함 하지 않기 때문에 이스케이프에 사용 될 수 있습니다.<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`|
+|`Metadata`|`Name` 키워드를 지정하지 않은 경우에 필요합니다. 메타데이터와 매핑 정보를 검색할 대상 디렉터리, 파일 및 리소스 위치에 대한 파이프로 구분된 목록입니다. 다음은 이에 대한 예입니다.<br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> 파이프 구분 기호 양쪽의 공백은 무시됩니다.<br /><br /> 이 키워드는 `Name` 키워드와 함께 사용할 수 없습니다.|
+|`Name`|애플리케이션에서는 필수 키워드/값 연결 문자열 값을 제공하는 애플리케이션 구성 파일에 연결 이름을 선택적으로 지정할 수 있습니다. 이 경우에는 연결 문자열에 이름을 직접 지정할 수 없습니다. `Name` 키워드는 구성 파일에 사용할 수 없습니다.<br /><br /> `Name` 키워드가 엔터티 연결 문자열에 포함되어 있지 않은 경우 Provider 키워드에 대해 비어 있지 않은 값이 필요합니다.<br /><br /> 이 키워드는 다른 모든 연결 문자열 키워드와 함께 사용할 수 없습니다.|
 
 다음은 응용 프로그램 구성 파일에 저장 된 [AdventureWorks Sales 모델](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) 에 대 한 연결 문자열의 예입니다.
 
@@ -46,7 +47,7 @@ ms.locfileid: "73040338"
 
 |옵션|설명|
 |-|-|
-|`assemblyFullName`|포함 리소스가 있는 어셈블리의 전체 이름입니다. 이 이름에는 다음과 같이 단순한 이름, 버전 이름, 지원되는 문화권 및 공개 키가 포함됩니다.<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> 애플리케이션이 액세스할 수 있는 모든 어셈블리에 리소스를 포함할 수 있습니다.<br /><br /> `assemblyFullName`에 대 한 와일드 카드 (\*)를 지정 하면 Entity Framework 런타임에서 다음 위치의 리소스를이 순서로 검색 합니다.<br /><br /> 1. 호출 하는 어셈블리입니다.<br />2. 참조 된 어셈블리<br />3. 응용 프로그램의 bin 디렉터리에 있는 어셈블리입니다.<br /><br /> 파일이 이러한 위치 중 하나에 없으면 예외가 throw됩니다. **참고:**  와일드 카드 (*)를 사용 하는 경우 Entity Framework은 올바른 이름의 리소스에 대 한 모든 어셈블리를 확인 해야 합니다. 성능을 향상시키려면 와일드카드 대신 어셈블리 이름을 지정합니다.|
+|`assemblyFullName`|포함 리소스가 있는 어셈블리의 전체 이름입니다. 이 이름에는 다음과 같이 단순한 이름, 버전 이름, 지원되는 문화권 및 공개 키가 포함됩니다.<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> 애플리케이션이 액세스할 수 있는 모든 어셈블리에 리소스를 포함할 수 있습니다.<br /><br /> 에 대해 와일드 카드 ()를 지정 하는 경우 \* `assemblyFullName` Entity Framework 런타임은 다음 위치의 리소스를이 순서로 검색 합니다.<br /><br /> 1. 호출 하는 어셈블리입니다.<br />2. 참조 된 어셈블리<br />3. 응용 프로그램의 bin 디렉터리에 있는 어셈블리입니다.<br /><br /> 파일이 이러한 위치 중 하나에 없으면 예외가 throw됩니다. **참고:**  와일드 카드 (*)를 사용 하는 경우 Entity Framework은 올바른 이름의 리소스에 대 한 모든 어셈블리를 확인 해야 합니다. 성능을 향상시키려면 와일드카드 대신 어셈블리 이름을 지정합니다.|
 |`resourceName`|포함 된 리소스의 이름 (예: Adventureworksmodel.edmx)입니다. 메타데이터 서비스는 확장명이 .csdl, .ssdl 또는 .msl 중 하나인 파일 또는 리소스만 찾습니다. `resourceName`을 지정하지 않으면 모든 메타데이터 리소스가 로드됩니다. 리소스 이름은 어셈블리 내에서 고유해야 합니다. 같은 이름을 가진 여러 파일이 어셈블리의 서로 다른 디렉터리에 정의되어 있으면 `resourceName`에서 리소스 이름 앞에 폴더 구조가 포함되어야 합니다(예: FolderName.FileName.csdl).<br /><br /> `resourceName`에 와일드카드(*)를 지정한 경우에는 `assemblyFullName`이 필요하지 않습니다.|
 
 > [!NOTE]
@@ -78,7 +79,7 @@ res://AdventureWorks, 1.0.0.0, neutral, a14f3033def15840/model.msl
 Metadata=res://AdventureWorks, 1.0.0.0, neutral, a14f3033def15840/
 ```
 
-다음 예제에서는 로드 된 어셈블리 위치에서 상대 파일 경로의 모든 리소스와 "datadir\metadata\\"를 로드 합니다.
+다음 예제에서는 \\ 로드 된 어셈블리 위치에서 상대 파일 경로의 모든 리소스와 "datadir\metadata"를 로드 합니다.
 
 ```csharp
 Metadata=datadir\metadata\
@@ -92,11 +93,11 @@ Metadata=.\
 
 ## <a name="support-for-the-124datadirectory124-substitution-string-and-the-web-application-root-operator-"></a>&#124;DataDirectory&#124; 대체 문자열 및 웹 응용 프로그램 루트 연산자 (~) 지원
 
-`DataDirectory` 및 ~ 연산자는 <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>에서 `Metadata` 및 `Provider Connection String` 키워드의 일부로 사용 됩니다. <xref:System.Data.EntityClient.EntityConnection>은 `DataDirectory` 및 ~ 연산자를 각각 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 및 저장소 공급자에 전달합니다.
+`DataDirectory`및 ~ 연산자는 <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> 및 키워드의 일부로에서 사용 됩니다 `Metadata` `Provider Connection String` . <xref:System.Data.EntityClient.EntityConnection>은 `DataDirectory` 및 ~ 연산자를 각각 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 및 저장소 공급자에 전달합니다.
 
-|용어|설명|
+|용어|Description|
 |----------|-----------------|
-|`&#124;DataDirectory&#124;`|매핑 및 메타데이터 파일에 대한 상대 경로로 확인됩니다. 이 값은 `AppDomain.SetData("DataDirectory", objValue)` 메서드를 통해 설정됩니다. `DataDirectory` 대체 문자열은 파이프 문자로 묶어야 하며, 이름과 파이프 문자 사이에 공백이 있을 수 없습니다. `DataDirectory` 이름은 대/소문자를 구분하지 않습니다.<br /><br /> "DataDirectory" 라는 실제 디렉터리를 메타 데이터 경로 목록의 멤버로 전달 해야 하는 경우 이름의 양쪽 또는 양쪽에 공백을 추가 합니다. 예를 들어 `Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"`을 참조하십시오. ASP.NET 응용 프로그램은 &#124;"&#124;\<응용 프로그램 루트 >/app_data" 폴더로 DataDirectory를 확인 합니다.|
+|`&#124;DataDirectory&#124;`|매핑 및 메타데이터 파일에 대한 상대 경로로 확인됩니다. 이 값은 `AppDomain.SetData("DataDirectory", objValue)` 메서드를 통해 설정됩니다. `DataDirectory`대체 문자열은 파이프 문자로 묶어야 하며, 이름 및 파이프 문자 사이에 공백이 있을 수 없습니다. `DataDirectory` 이름은 대/소문자를 구분하지 않습니다.<br /><br /> "DataDirectory" 라는 실제 디렉터리를 메타 데이터 경로 목록의 멤버로 전달 해야 하는 경우 이름의 양쪽 또는 양쪽에 공백을 추가 합니다. 예: `Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"` ASP.NET 응용 프로그램은 "/app_data" 폴더로 &#124;DataDirectory&#124;를 확인 \<application root> 합니다.|
 |~|웹 애플리케이션 루트로 확인됩니다. 선행 위치에 있는 ~ 문자는 항상 웹 애플리케이션 루트 연산자(~)로 해석되지만, 유효한 로컬 하위 디렉터리를 나타낼 수도 있습니다. 이러한 로컬 하위 디렉터리를 참조하려면 사용자가 명시적으로 `./~`를 전달해야 합니다.|
 
 `DataDirectory` 및 ~ 연산자는 경로의 시작 부분에만 지정해야 하며, 다른 위치에 있으면 확인되지 않습니다. Entity Framework에서 `~/data`를 확인하려고 하지만 `/data/~`를 실제 경로로 처리합니다.
@@ -107,7 +108,7 @@ Metadata=.\
 
 `DataDirectory` 대체 문자열 및 ~ 연산자 확인은 비재귀적입니다. 예를 들어 `DataDirectory`에 `~` 문자가 포함되어 있으면 예외가 발생합니다. 이 동작은 무한 재귀를 방지합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [데이터 공급자 작업](working-with-data-providers.md)
 - [배포 고려 사항](deployment-considerations.md)

@@ -1,13 +1,14 @@
 ---
 title: 참조 무결성 제약 조건
+description: 엔터티 데이터 모델의 참조 무결성 제약 조건에 대해 자세히 알아보고 엔터티 형식 간에 유효한 연결이 항상 존재 하는지 확인 합니다.
 ms.date: 03/30/2017
 ms.assetid: 3d3ba44b-4302-40d8-a7a9-62932e0395e5
-ms.openlocfilehash: ad35df7bcca62ffdbc3842b0817b22c5482a3d4d
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 65c811b2a12a64870107ff771d5acc64e86f2c1f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738376"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286626"
 ---
 # <a name="referential-integrity-constraint"></a>참조 무결성 제약 조건
 EDM (엔터티 데이터 모델)의 *참조 무결성 제약 조건은* 관계형 데이터베이스의 참조 무결성 제약 조건과 비슷합니다. 데이터베이스 테이블의 열이 다른 테이블의 기본 키를 참조할 수 있는 것과 동일한 방식으로 [엔터티 형식의](entity-type.md) [속성](property.md) 은 다른 엔터티 형식의 [엔터티 키](entity-key.md) 를 참조할 수 있습니다. 참조 되는 엔터티 형식을 제약 조건의 *주 끝* 이라고 합니다. 주 끝을 참조 하는 엔터티 형식을 제약 조건의 *종속 끝* 이라고 합니다.  
@@ -33,7 +34,7 @@ EDM (엔터티 데이터 모델)의 *참조 무결성 제약 조건은* 관계�
   
  [!code-xml[EDM_Example_Model#RefConstraint](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#refconstraint)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [엔터티 데이터 모델의 주요 개념](entity-data-model-key-concepts.md)
 - [엔터티 데이터 모델](entity-data-model.md)

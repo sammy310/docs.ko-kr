@@ -1,13 +1,14 @@
 ---
 title: SQL Server에서 권한 부여 및 권한
+description: ADO.NET를 사용 하 여 사용자가 만들 수 있는 사용자 SQL Server가 만들 수 있는 데이터베이스 개체를 만들 수 있는 권한을 명시적으로 부여 하는 방법을 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-ms.openlocfilehash: c9b041a078494cd29d6cab5297728d233dafa236
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: eb01e29b36da5e1793b9176301a968a42115d19c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782593"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286535"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>SQL Server에서 권한 부여 및 권한
 데이터베이스 개체를 만들 때는 사용자가 해당 개체에 액세스할 수 있도록 권한을 명시적으로 부여해야 합니다. 모든 보안 개체에는 권한 문을 통해 보안 주체에게 부여할 수 있는 권한이 있습니다.  
@@ -31,11 +32,11 @@ ms.locfileid: "70782593"
 ## <a name="permission-statements"></a>권한 문  
  다음 표에서는 세 가지 Transact-SQL 권한 문에 대해 설명합니다.  
   
-|권한 문|Description|  
+|권한 문|설명|  
 |--------------------------|-----------------|  
 |GRANT|권한을 부여합니다.|  
 |REVOKE|권한을 취소합니다. 이것은 새 개체의 기본 상태입니다. 사용자나 역할에 대해 취소한 권한은 해당 보안 주체가 할당된 다른 그룹이나 역할로부터 여전히 상속될 수 있습니다.|  
-|DENY|DENY는 권한을 상속할 수 없도록 취소합니다. DENY는 다른 모든 권한보다 우선적으로 적용됩니다. 단, 개체 소유자 또는 `sysadmin`의 멤버에는 DENY가 적용되지 않습니다. `public` 역할에서 개체에 대한 권한을 DENY로 설정하면 해당 권한은 개체 소유자와 `sysadmin` 멤버를 제외한 모든 사용자와 역할에 대해 거부됩니다.|  
+|거부|DENY는 권한을 상속할 수 없도록 취소합니다. DENY는 다른 모든 권한보다 우선적으로 적용됩니다. 단, 개체 소유자 또는 `sysadmin`의 멤버에는 DENY가 적용되지 않습니다. `public` 역할에서 개체에 대한 권한을 DENY로 설정하면 해당 권한은 개체 소유자와 `sysadmin` 멤버를 제외한 모든 사용자와 역할에 대해 거부됩니다.|  
   
 - GRANT 문을 사용하면 그룹 또는 역할에 권한을 할당할 수 있으며 데이터베이스 사용자는 이 그룹 또는 역할에서 권한을 상속할 수 있습니다. 그러나 DENY 문은 다른 모든 권한 문보다 우선적으로 적용되므로 권한이 거부된 사용자는 다른 역할에서 해당 권한을 상속할 수 없습니다.  
   
@@ -54,15 +55,15 @@ ms.locfileid: "70782593"
 ## <a name="external-resources"></a>외부 리소스  
  자세한 내용은 다음 리소스를 참조하세요.  
   
-|리소스|Description|  
+|리소스|설명|  
 |--------------|-----------------|  
-|[사용 권한](/sql/relational-databases/security/permissions-database-engine)|권한 계층 구조, 카탈로그 뷰, 고정 서버 역할 및 데이터베이스 역할의 권한에 대해 설명하는 항목을 제공합니다.|
+|[권한](/sql/relational-databases/security/permissions-database-engine)|권한 계층 구조, 카탈로그 뷰, 고정 서버 역할 및 데이터베이스 역할의 권한에 대해 설명하는 항목을 제공합니다.|
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [ADO.NET 응용 프로그램 보안](../securing-ado-net-applications.md)
-- [SQL Server의 응용 프로그램 보안 시나리오](application-security-scenarios-in-sql-server.md)
+- [ADO.NET 애플리케이션 보안](../securing-ado-net-applications.md)
+- [SQL Server의 애플리케이션 보안 시나리오](application-security-scenarios-in-sql-server.md)
 - [SQL Server에서 인증](authentication-in-sql-server.md)
 - [SQL Server의 서버 및 데이터베이스 역할](server-and-database-roles-in-sql-server.md)
-- [SQL Server에서 소유권 및 사용자 스키마 분리](ownership-and-user-schema-separation-in-sql-server.md)
+- [SQL Server에서 소유권 및 사용자와 스키마 분리](ownership-and-user-schema-separation-in-sql-server.md)
 - [ADO.NET 개요](../ado-net-overview.md)

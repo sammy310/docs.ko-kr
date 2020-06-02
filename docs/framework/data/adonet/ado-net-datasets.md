@@ -1,16 +1,17 @@
 ---
-title: 데이터 세트
+title: DataSets
+description: ADO.NET의 데이터 소스에 관계 없이 일관성 있는 관계형 프로그래밍 모델을 제공 하는 메모리 상주 데이터 표현인 데이터 집합에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-ms.openlocfilehash: 86c14f516ff82e4d9acf7cc3078e04590971a8a1
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 2fc5963937f7bf15dc192c6dc0a980d544a23194
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980303"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287131"
 ---
 # <a name="adonet-datasets"></a>ADO.NET 데이터 세트
-<xref:System.Data.DataSet> 개체는 ADO.NET를 사용 하 여 연결이 끊어진 분산 데이터 시나리오를 지 원하는 데 핵심이 됩니다. 데이터 **집합** 은 데이터 원본에 관계 없이 일관 된 관계형 프로그래밍 모델을 제공 하는 데이터의 메모리 상주 표현입니다. 이 개체는 다양한 여러 데이터 소스에 사용하거나 XML 데이터에 사용할 수 있을 뿐 아니라 이 개체를 사용하여 응용 프로그램의 로컬 데이터를 관리할 수도 있습니다. 데이터 **집합** 은 관련 테이블, 제약 조건 및 테이블 간의 관계를 포함 하 여 전체 데이터 집합을 나타냅니다. 다음 그림에서는 **데이터 집합** 개체 모델을 보여 줍니다.  
+<xref:System.Data.DataSet>이 개체는 ADO.NET를 사용 하 여 연결이 끊어진 분산 데이터 시나리오를 지 원하는 데 중요 합니다. 데이터 **집합** 은 데이터 원본에 관계 없이 일관 된 관계형 프로그래밍 모델을 제공 하는 데이터의 메모리 상주 표현입니다. 이 개체는 다양한 여러 데이터 소스에 사용하거나 XML 데이터에 사용할 수 있을 뿐 아니라 이 개체를 사용하여 애플리케이션의 로컬 데이터를 관리할 수도 있습니다. 데이터 **집합** 은 관련 테이블, 제약 조건 및 테이블 간의 관계를 포함 하 여 전체 데이터 집합을 나타냅니다. 다음 그림에서는 **데이터 집합** 개체 모델을 보여 줍니다.  
   
  ![ADO.Net 그래픽](./media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
 DataSet 개체 모델  
@@ -20,17 +21,17 @@ DataSet 개체 모델
  **데이터 집합** 은 해당 콘텐츠를 xml로 유지 하 고 해당 스키마를 XSD (xml 스키마 정의 언어) 스키마로 다시 로드할 수도 있습니다. 자세한 내용은 [데이터 세트에서 XML 사용](./dataset-datatable-dataview/using-xml-in-a-dataset.md)을 참조하세요.  
   
 ## <a name="the-datatablecollection"></a>DataTableCollection  
- ADO.NET **데이터 집합** 에는 <xref:System.Data.DataTable> 개체로 표시 되는 0 개 이상의 테이블 컬렉션이 포함 되어 있습니다. <xref:System.Data.DataTableCollection>에는 **데이터 집합**의 모든 **DataTable** 개체가 포함 됩니다.  
+ ADO.NET **데이터 집합** 은 개체가 나타내는 0 개 이상의 테이블 컬렉션을 포함 <xref:System.Data.DataTable> 합니다. 에는 <xref:System.Data.DataTableCollection> **데이터 집합**의 모든 **DataTable** 개체가 포함 되어 있습니다.  
   
- **DataTable** 은 <xref:System.Data> 네임 스페이스에 정의 되며 메모리 상주 데이터의 단일 테이블을 나타냅니다. 여기에는 <xref:System.Data.DataColumnCollection>에 의해 표현되는 열의 컬렉션과 <xref:System.Data.ConstraintCollection>에 의해 표현되는 제약 조건의 컬렉션이 포함됩니다. 이 두 컬렉션은 테이블의 스키마를 정의합니다. **DataTable** 에는 테이블의 데이터를 포함 하는 <xref:System.Data.DataRowCollection>표시 되는 행의 컬렉션도 포함 됩니다. 이와 함께 <xref:System.Data.DataRow>는 현재 버전과 원래 버전을 모두 보유하므로 행에 저장된 값에 대한 변경 사항을 식별할 수 있습니다.  
+ **DataTable** 은 네임 스페이스에 정의 되며 <xref:System.Data> 메모리 상주 데이터의 단일 테이블을 나타냅니다. 여기에는 <xref:System.Data.DataColumnCollection>에 의해 표현되는 열의 컬렉션과 <xref:System.Data.ConstraintCollection>에 의해 표현되는 제약 조건의 컬렉션이 포함됩니다. 이 두 컬렉션은 테이블의 스키마를 정의합니다. **DataTable** 에는 <xref:System.Data.DataRowCollection> 테이블의 데이터를 포함 하는가 나타내는 행의 컬렉션도 포함 됩니다. 이와 함께 <xref:System.Data.DataRow>는 현재 버전과 원래 버전을 모두 보유하므로 행에 저장된 값에 대한 변경 사항을 식별할 수 있습니다.  
   
 ## <a name="the-dataview-class"></a>DataView 클래스  
- <xref:System.Data.DataView>는 데이터 바인딩 애플리케이션에서 자주 사용되는 기능으로, 이 기능을 사용하면 <xref:System.Data.DataTable>에 저장되어 있는 데이터에 대해 서로 다른 뷰를 만들 수 있습니다. <xref:System.Data.DataView>를 사용하면 테이블의 데이터를 여러 정렬 순서로 노출시킬 수 있으며 행 상태에 따라 또는 필터 식을 기준으로 데이터를 필터링할 수 있습니다. 자세한 내용은 [Dataview](./dataset-datatable-dataview/dataviews.md)합니다.  
+ <xref:System.Data.DataView>는 데이터 바인딩 애플리케이션에서 자주 사용되는 기능으로, 이 기능을 사용하면 <xref:System.Data.DataTable>에 저장되어 있는 데이터에 대해 서로 다른 뷰를 만들 수 있습니다. <xref:System.Data.DataView>를 사용하면 테이블의 데이터를 여러 정렬 순서로 노출시킬 수 있으며 행 상태에 따라 또는 필터 식을 기준으로 데이터를 필터링할 수 있습니다. 자세한 내용은 [Dataviews](./dataset-datatable-dataview/dataviews.md)를 참조 하세요.  
   
 ## <a name="the-datarelationcollection"></a>DataRelationCollection  
- **데이터 집합** 은 <xref:System.Data.DataRelationCollection> 개체의 관계를 포함 합니다. <xref:System.Data.DataRelation> 개체로 표시 되는 관계는 한 **datatable** 의 행을 다른 **datatable**의 행과 연결 합니다. 이 관계는 관계형 데이터베이스의 기본 키 열과 외래 키 열 간에 존재하는 조인 경로와 유사합니다. **DataRelation** 은 **데이터 집합**의 두 테이블에서 일치 하는 열을 식별 합니다.  
+ **데이터 집합** 은 해당 개체의 관계를 포함 <xref:System.Data.DataRelationCollection> 합니다. 개체로 표시 되는 관계는 <xref:System.Data.DataRelation> 한 **datatable** 의 행을 다른 **datatable**의 행과 연결 합니다. 이 관계는 관계형 데이터베이스의 기본 키 열과 외래 키 열 간에 존재하는 조인 경로와 유사합니다. **DataRelation** 은 **데이터 집합**의 두 테이블에서 일치 하는 열을 식별 합니다.  
   
- 관계는 **데이터 집합**의 한 테이블에서 다른 테이블로의 탐색을 가능 하 게 합니다. **DataRelation** 의 필수 요소는 관계의 이름, 관련 되는 테이블의 이름 및 각 테이블에 있는 관련 열입니다. <xref:System.Data.DataColumn> 개체의 배열을 키 열로 지정하면 테이블당 두 개 이상의 열에 대한 관계를 빌드할 수 있습니다. <xref:System.Data.DataRelationCollection>에 관계를 추가 하는 경우 필요에 따라 **UniqueKeyConstraint** 및 **ForeignKeyConstraint** 를 추가 하 여 관련 열 값이 변경 될 때 무결성 제약 조건을 적용할 수 있습니다.  
+ 관계는 **데이터 집합**의 한 테이블에서 다른 테이블로의 탐색을 가능 하 게 합니다. **DataRelation** 의 필수 요소는 관계의 이름, 관련 되는 테이블의 이름 및 각 테이블에 있는 관련 열입니다. <xref:System.Data.DataColumn> 개체의 배열을 키 열로 지정하면 테이블당 두 개 이상의 열에 대한 관계를 빌드할 수 있습니다. 에 관계를 추가 하는 경우 <xref:System.Data.DataRelationCollection> 필요에 따라 **UniqueKeyConstraint** 및 **ForeignKeyConstraint** 를 추가 하 여 관련 열 값이 변경 될 때 무결성 제약 조건을 적용할 수 있습니다.  
   
  자세한 내용은 [DataRelations 추가](./dataset-datatable-dataview/adding-datarelations.md)를 참조 하세요.  
   
@@ -45,7 +46,7 @@ DataSet 개체 모델
   
  자세한 내용은 [LINQ to DataSet](linq-to-dataset.md)을 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ADO.NET 개요](ado-net-overview.md)
 - [DataSets, DataTables 및 DataViews](./dataset-datatable-dataview/index.md)

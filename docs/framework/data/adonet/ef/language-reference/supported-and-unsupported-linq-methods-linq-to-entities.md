@@ -1,13 +1,14 @@
 ---
 title: 지원 및 미지원 LINQ 메서드 (LINQ to Entities)
+description: 이 문서에서는 LINQ to Entities 쿼리에서 지원 되 고 지원 되지 않는 표준 쿼리 연산자를 요약 합니다.
 ms.date: 03/30/2017
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
-ms.openlocfilehash: 54805e8d3f0d5081c2d7d8fdbdcfbdcb63f9bcb6
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 0d01cc6ccecef0f10aed48fa7475ad1a16ad4ea1
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249000"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286781"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>지원 및 미지원 LINQ 메서드 (LINQ to Entities)
 이 섹션에서는 LINQ to Entities 쿼리에서 지원 되거나 지원 되지 않는 LINQ (통합 언어 쿼리) 표준 쿼리 연산자에 대 한 정보를 제공 합니다. LINQ 표준 쿼리 연산자 중 상당수는 정수 인수를 허용하는 오버로드된 버전이 있습니다. 정수 인수는 연산 대상인 시퀀스에서 0부터 시작하는 인덱스, <xref:System.Collections.Generic.IEqualityComparer%601> 또는 <xref:System.Collections.Generic.IComparer%601>에 해당합니다. 별도로 명시하지 않는 한 오버로드된 버전의 이 LINQ 표준 쿼리 연산자는 지원되지 않으며, 이 버전을 사용할 경우 예외가 throw됩니다.  
@@ -15,7 +16,7 @@ ms.locfileid: "70249000"
 ## <a name="projection-and-restriction-methods"></a>프로젝션 및 제한 메서드  
  대부분의 LINQ 프로젝션 및 제한 메서드는 위치 인수를 사용 하는 경우를 제외 하 고 LINQ to Entities 쿼리에서 지원 됩니다. 자세한 내용은 [LINQ to Entities 쿼리의 표준 쿼리 연산자](standard-query-operators-in-linq-to-entities-queries.md)를 참조 하세요. 다음 표에서는 지원되거나 지원되지 않는 프로젝션 및 제한 메서드 목록을 보여 줍니다.  
   
-|메서드|지원|Visual Basic 함수 시그니처|C# 메서드 시그니처|  
+|방법|지원|Visual Basic 함수 시그니처|C# 메서드 시그니처|  
 |------------|-------------|-------------------------------------|--------------------------|  
 |<xref:System.Linq.Queryable.Select%2A>|지원됨|`Function Select(Of TSource, TResult) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, TResult)) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> Select<TSource, TResult>( this IQueryable<TSource> source, Expression<Func<TSource, TResult>> selector )`|  
 |<xref:System.Linq.Queryable.Select%2A>|지원되지 않음|`Function Select(Of TSource, TResult) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Integer, TResult)) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> Select<TSource, TResult>( this IQueryable<TSource> source, Expression<Func<TSource, int, TResult>> selector )`|  
@@ -27,9 +28,9 @@ ms.locfileid: "70249000"
 |<xref:System.Linq.Queryable.Where%2A>|지원되지 않음|`Function Where(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Integer, Boolean)) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Where<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, int, bool>> predicate )`|  
   
 ## <a name="join-methods"></a>조인 메서드  
- LINQ join 메서드는 LINQ to Entities에서 지원 되지만, 비교자를 데이터 소스로 변환할 수 `IEqualityComparer` 없기 때문에를 허용 하는 메서드는 예외입니다. 자세한 내용은 [LINQ to Entities 쿼리의 표준 쿼리 연산자](standard-query-operators-in-linq-to-entities-queries.md)를 참조 하세요. 다음 표에서는 지원되거나 지원되지 않는 조인 메서드를 보여 줍니다.  
+ LINQ join 메서드는 LINQ to Entities에서 지원 되지만, `IEqualityComparer` 비교자를 데이터 소스로 변환할 수 없기 때문에를 허용 하는 메서드는 예외입니다. 자세한 내용은 [LINQ to Entities 쿼리의 표준 쿼리 연산자](standard-query-operators-in-linq-to-entities-queries.md)를 참조 하세요. 다음 표에서는 지원되거나 지원되지 않는 조인 메서드를 보여 줍니다.  
   
-|메서드|지원|Visual Basic 함수 시그니처|C# 메서드 시그니처|  
+|방법|지원|Visual Basic 함수 시그니처|C# 메서드 시그니처|  
 |------------|-------------|-------------------------------------|--------------------------|  
 |<xref:System.Linq.Queryable.GroupJoin%2A>|지원됨|`Function GroupJoin(Of TOuter, TInner, TKey, TResult) ( _ outer As IQueryable(Of TOuter), _ inner As IEnumerable(Of TInner), _ outerKeySelector As Expression(Of Func(Of TOuter, TKey)), _ innerKeySelector As Expression(Of Func(Of TInner, TKey)), _ resultSelector As Expression(Of Func(Of TOuter, IEnumerable(Of TInner), TResult)) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> GroupJoin<TOuter, TInner, TKey, TResult>( this IQueryable<TOuter> outer, IEnumerable<TInner> inner, Expression<Func<TOuter, TKey>> outerKeySelector, Expression<Func<TInner, TKey>> innerKeySelector, Expression<Func<TOuter, IEnumerable<TInner>, TResult>> resultSelector )`|  
 |<xref:System.Linq.Queryable.GroupJoin%2A>|지원되지 않음|`Function GroupJoin(Of TOuter, TInner, TKey, TResult) ( _ outer As IQueryable(Of TOuter), _ inner As IEnumerable(Of TInner), _ outerKeySelector As Expression(Of Func(Of TOuter, TKey)), _ innerKeySelector As Expression(Of Func(Of TInner, TKey)), _ resultSelector As Expression(Of Func(Of TOuter, IEnumerable(Of TInner), TResult)), _ comparer As IEqualityComparer(Of TKey) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> GroupJoin\<TOuter, TInner, TKey, TResult>( this IQueryable<TOuter> outer, IEnumerable<TInner> inner, Expression<Func\<TOuter, TKey>> outerKeySelector, Expression<Func\<TInner, TKey>> innerKeySelector, Expression<Func<TOuter, IEnumerable<TInner>, TResult>> resultSelector, IEqualityComparer<TKey> comparer )`|  
@@ -37,19 +38,19 @@ ms.locfileid: "70249000"
 |<xref:System.Linq.Queryable.Join%2A>|지원되지 않음|`Function Join(Of TOuter, TInner, TKey, TResult) ( _ outer As IQueryable(Of TOuter), _ inner As IEnumerable(Of TInner), _ outerKeySelector As Expression(Of Func(Of TOuter, TKey)), _ innerKeySelector As Expression(Of Func(Of TInner, TKey)), _ resultSelector As Expression(Of Func(Of TOuter, TInner, TResult)), _ comparer As IEqualityComparer(Of TKey) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> Join\<TOuter, TInner, TKey, TResult>( this IQueryable<TOuter> outer, IEnumerable<TInner> inner, Expression<Func\<TOuter, TKey>> outerKeySelector, Expression<Func\<TInner, TKey>> innerKeySelector, Expression<Func\<TOuter, TInner, TResult>> resultSelector, IEqualityComparer<TKey> comparer )`|  
   
 ## <a name="set-methods"></a>메서드 설정  
- 대부분의 LINQ set 메서드는를 사용 <xref:System.Collections.Generic.EqualityComparer%601>하는 메서드를 제외 하 고 LINQ to Entities 쿼리에서 지원 됩니다. 자세한 내용은 [LINQ to Entities 쿼리의 표준 쿼리 연산자](standard-query-operators-in-linq-to-entities-queries.md)를 참조 하세요. 다음 표에서는 지원되거나 지원되지 않는 set 메서드를 보여 줍니다.  
+ 대부분의 LINQ set 메서드는를 사용 하는 메서드를 제외 하 고 LINQ to Entities 쿼리에서 지원 됩니다 <xref:System.Collections.Generic.EqualityComparer%601> . 자세한 내용은 [LINQ to Entities 쿼리의 표준 쿼리 연산자](standard-query-operators-in-linq-to-entities-queries.md)를 참조 하세요. 다음 표에서는 지원되거나 지원되지 않는 set 메서드를 보여 줍니다.  
   
-|메서드|지원|Visual Basic 함수 시그니처|C# 메서드 시그니처|  
+|방법|지원|Visual Basic 함수 시그니처|C# 메서드 시그니처|  
 |------------|-------------|-------------------------------------|--------------------------|  
-|<xref:System.Linq.Queryable.All%2A>|지원됨|`Function All(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Boolean)) _ ) As Boolean`|`bool All<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, bool>> predicate )`|  
-|<xref:System.Linq.Queryable.Any%2A>|지원됨|`Function Any(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As Boolean`|`bool Any<TSource>( this IQueryable<TSource> source )`|  
-|<xref:System.Linq.Queryable.Any%2A>|지원됨|`Function Any(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Boolean)) _ ) As Boolean`|`bool Any<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, bool>> predicate )`|  
-|<xref:System.Linq.Queryable.Contains%2A>|지원됨|`Function Contains(Of TSource) ( _ source As IQueryable(Of TSource), _ item As TSource _ ) As Boolean`|`bool Contains<TSource>( this IQueryable<TSource> source, TSource item )`|  
+|<xref:System.Linq.Queryable.All%2A>|지원 여부|`Function All(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Boolean)) _ ) As Boolean`|`bool All<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, bool>> predicate )`|  
+|<xref:System.Linq.Queryable.Any%2A>|지원 여부|`Function Any(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As Boolean`|`bool Any<TSource>( this IQueryable<TSource> source )`|  
+|<xref:System.Linq.Queryable.Any%2A>|지원 여부|`Function Any(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Boolean)) _ ) As Boolean`|`bool Any<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, bool>> predicate )`|  
+|<xref:System.Linq.Queryable.Contains%2A>|지원 여부|`Function Contains(Of TSource) ( _ source As IQueryable(Of TSource), _ item As TSource _ ) As Boolean`|`bool Contains<TSource>( this IQueryable<TSource> source, TSource item )`|  
 |<xref:System.Linq.Queryable.Contains%2A>|지원되지 않음|`Function Contains(Of TSource) ( _ source As IQueryable(Of TSource), _ item As TSource, _ comparer As IEqualityComparer(Of TSource) _ ) As Boolean`|`bool Contains<TSource>( this IQueryable<TSource> source, TSource item, IEqualityComparer<TSource> comparer )`|  
 |<xref:System.Linq.Queryable.Concat%2A>|지원됨(순서가<br /><br /> 유지되지 않을 수 있음)|`Function Concat(Of TSource) ( _ source1 As IQueryable(Of TSource), _ source2 As IEnumerable(Of TSource) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Concat<TSource>( this IQueryable<TSource> source1, IEnumerable<TSource> source2 )`|  
-|<xref:System.Linq.Queryable.DefaultIfEmpty%2A>|지원됨|`Function DefaultIfEmpty(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> DefaultIfEmpty<TSource>( this IQueryable<TSource> source )`|  
-|<xref:System.Linq.Queryable.DefaultIfEmpty%2A>|지원됨|`Function DefaultIfEmpty(Of TSource) ( _ source As IQueryable(Of TSource), _ defaultValue As TSource _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> DefaultIfEmpty<TSource>( this IQueryable<TSource> source, TSource defaultValue )`|  
-|<xref:System.Linq.Queryable.Distinct%2A>|지원됨|`Function Distinct(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Distinct<TSource>( this IQueryable<TSource> source )`|  
+|<xref:System.Linq.Queryable.DefaultIfEmpty%2A>|지원 여부|`Function DefaultIfEmpty(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> DefaultIfEmpty<TSource>( this IQueryable<TSource> source )`|  
+|<xref:System.Linq.Queryable.DefaultIfEmpty%2A>|지원 여부|`Function DefaultIfEmpty(Of TSource) ( _ source As IQueryable(Of TSource), _ defaultValue As TSource _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> DefaultIfEmpty<TSource>( this IQueryable<TSource> source, TSource defaultValue )`|  
+|<xref:System.Linq.Queryable.Distinct%2A>|지원 여부|`Function Distinct(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Distinct<TSource>( this IQueryable<TSource> source )`|  
 |<xref:System.Linq.Queryable.Distinct%2A>|지원되지 않음|`Function Distinct(Of TSource) ( _ source As IQueryable(Of TSource), _ comparer As IEqualityComparer(Of TSource) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Distinct<TSource>( this IQueryable<TSource> source, IEqualityComparer<TSource> comparer )`|  
 |<xref:System.Linq.Queryable.Except%2A>|지원됨|`Function Except(Of TSource) ( _ source1 As IQueryable(Of TSource), _ source2 As IEnumerable(Of TSource) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Except<TSource>( this IQueryable<TSource> source1, IEnumerable<TSource> source2 )`|  
 |<xref:System.Linq.Queryable.Except%2A>|지원되지 않음|`Function Except(Of TSource) ( _ source1 As IQueryable(Of TSource), _ source2 As IEnumerable(Of TSource), _ comparer As IEqualityComparer(Of TSource) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Except<TSource>( this IQueryable<TSource> source1, IEnumerable<TSource> source2, IEqualityComparer<TSource> comparer )`|  
@@ -59,9 +60,9 @@ ms.locfileid: "70249000"
 |<xref:System.Linq.Queryable.Union%2A>|지원되지 않음|`Function Union(Of TSource) ( _ source1 As IQueryable(Of TSource), _ source2 As IEnumerable(Of TSource), _ comparer As IEqualityComparer(Of TSource) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Union<TSource>( this IQueryable<TSource> source1, IEnumerable<TSource> source2, IEqualityComparer<TSource> comparer )`|  
   
 ## <a name="ordering-methods"></a>정렬 메서드  
- 대부분의 LINQ 순서 지정 메서드는를 허용 <xref:System.Collections.Generic.IComparer%601>하는 메서드를 제외 하 고는 LINQ to Entities에서 지원 됩니다 .이는 비교자를 데이터 원본으로 변환할 수 없기 때문입니다. 자세한 내용은 [LINQ to Entities 쿼리의 표준 쿼리 연산자](standard-query-operators-in-linq-to-entities-queries.md)를 참조 하세요. 다음 표에서는 지원되거나 지원되지 않는 정렬 메서드를 보여 줍니다.  
+ 대부분의 LINQ 순서 지정 메서드는를 허용 하는 메서드를 제외 하 고는 LINQ to Entities에서 지원 됩니다 .이는 <xref:System.Collections.Generic.IComparer%601> 비교자를 데이터 원본으로 변환할 수 없기 때문입니다. 자세한 내용은 [LINQ to Entities 쿼리의 표준 쿼리 연산자](standard-query-operators-in-linq-to-entities-queries.md)를 참조 하세요. 다음 표에서는 지원되거나 지원되지 않는 정렬 메서드를 보여 줍니다.  
   
-|메서드|지원|Visual Basic 함수 시그니처|C# 메서드 시그니처|  
+|방법|지원|Visual Basic 함수 시그니처|C# 메서드 시그니처|  
 |------------|-------------|-------------------------------------|--------------------------|  
 |<xref:System.Linq.Queryable.OrderBy%2A>|지원됨|`Function OrderBy(Of TSource, TKey) ( _ source As IQueryable(Of TSource), _ keySelector As Expression(Of Func(Of TSource, TKey)) _ ) As IOrderedQueryable(Of TSource)`|`IOrderedQueryable<TSource> OrderBy<TSource, TKey>( this IQueryable<TSource> source, Expression<Func<TSource, TKey>> keySelector )`|  
 |<xref:System.Linq.Queryable.OrderBy%2A>|지원되지 않음|`Function OrderBy(Of TSource, TKey) ( _ source As IQueryable(Of TSource), _ keySelector As Expression(Of Func(Of TSource, TKey)), _ comparer As IComparer(Of TKey) _ ) As IOrderedQueryable(Of TSource)`|`IOrderedQueryable<TSource> OrderBy\<TSource, TKey>( this IQueryable<TSource> source, Expression<Func\<TSource, TKey>> keySelector, IComparer<TKey> comparer )`|  
@@ -74,14 +75,14 @@ ms.locfileid: "70249000"
 |<xref:System.Linq.Queryable.Reverse%2A>|지원되지 않음|`Function Reverse(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Reverse<TSource>( this IQueryable<TSource> source )`|  
   
 ## <a name="grouping-methods"></a>그룹화 메서드  
- 대부분의 LINQ 그룹화 메서드는를 허용 <xref:System.Collections.Generic.IEqualityComparer%601>하는 메서드를 제외 하 고는 LINQ to Entities에서 지원 됩니다 .이는 비교자를 데이터 원본으로 변환할 수 없기 때문입니다. 자세한 내용은 [LINQ to Entities 쿼리의 표준 쿼리 연산자](standard-query-operators-in-linq-to-entities-queries.md)를 참조 하세요. 다음 표에서는 지원되거나 지원되지 않는 그룹화 메서드를 보여 줍니다.  
+ 대부분의 LINQ 그룹화 메서드는를 허용 하는 메서드를 제외 하 고는 LINQ to Entities에서 지원 됩니다 .이는 <xref:System.Collections.Generic.IEqualityComparer%601> 비교자를 데이터 원본으로 변환할 수 없기 때문입니다. 자세한 내용은 [LINQ to Entities 쿼리의 표준 쿼리 연산자](standard-query-operators-in-linq-to-entities-queries.md)를 참조 하세요. 다음 표에서는 지원되거나 지원되지 않는 그룹화 메서드를 보여 줍니다.  
   
-|메서드|지원|Visual Basic 함수 시그니처|C# 메서드 시그니처|  
+|방법|지원|Visual Basic 함수 시그니처|C# 메서드 시그니처|  
 |------------|-------------|-------------------------------------|--------------------------|  
 |<xref:System.Linq.Queryable.GroupBy%2A>|지원됨|`Function GroupBy(Of TSource, TKey) ( _ source As IQueryable(Of TSource), _ keySelector As Expression(Of Func(Of TSource, TKey)) _ ) As IQueryable(Of IGrouping(Of TKey, TSource))`|`IQueryable<IGrouping<TKey, TSource>> GroupBy<TSource, TKey>( this IQueryable<TSource> source, Expression<Func<TSource, TKey>> keySelector )`|  
 |<xref:System.Linq.Queryable.GroupBy%2A>|지원되지 않음|`Function GroupBy(Of TSource, TKey) ( _ source As IQueryable(Of TSource), _ keySelector As Expression(Of Func(Of TSource, TKey)), _ comparer As IEqualityComparer(Of TKey) _ ) As IQueryable(Of IGrouping(Of TKey, TSource))`|`IQueryable<IGrouping\<TKey, TSource>> GroupBy\<TSource, TKey>( this IQueryable<TSource> source, Expression<Func\<TSource, TKey>> keySelector, IEqualityComparer<TKey> comparer )`|  
-|<xref:System.Linq.Queryable.GroupBy%2A>|지원됨|`Function GroupBy(Of TSource, TKey, TElement) ( _ source As IQueryable(Of TSource), _ keySelector As Expression(Of Func(Of TSource, TKey)), _ elementSelector As Expression(Of Func(Of TSource, TElement)) _ ) As IQueryable(Of IGrouping(Of TKey, TElement))`|`IQueryable<IGrouping<TKey, TElement>> GroupBy<TSource, TKey, TElement>( this IQueryable<TSource> source, Expression<Func<TSource, TKey>> keySelector, Expression<Func<TSource, TElement>> elementSelector )`|  
-|<xref:System.Linq.Queryable.GroupBy%2A>|지원됨|`Function GroupBy(Of TSource, TKey, TResult) ( _ source As IQueryable(Of TSource), _ keySelector As Expression(Of Func(Of TSource, TKey)), _ resultSelector As Expression(Of Func(Of TKey, IEnumerable(Of TSource), TResult)) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> GroupBy\<TSource, TKey, TResult>( this IQueryable<TSource> source, Expression<Func\<TSource, TKey>> keySelector, Expression<Func<TKey, IEnumerable<TSource>, TResult>> resultSelector )`|  
+|<xref:System.Linq.Queryable.GroupBy%2A>|지원 여부|`Function GroupBy(Of TSource, TKey, TElement) ( _ source As IQueryable(Of TSource), _ keySelector As Expression(Of Func(Of TSource, TKey)), _ elementSelector As Expression(Of Func(Of TSource, TElement)) _ ) As IQueryable(Of IGrouping(Of TKey, TElement))`|`IQueryable<IGrouping<TKey, TElement>> GroupBy<TSource, TKey, TElement>( this IQueryable<TSource> source, Expression<Func<TSource, TKey>> keySelector, Expression<Func<TSource, TElement>> elementSelector )`|  
+|<xref:System.Linq.Queryable.GroupBy%2A>|지원 여부|`Function GroupBy(Of TSource, TKey, TResult) ( _ source As IQueryable(Of TSource), _ keySelector As Expression(Of Func(Of TSource, TKey)), _ resultSelector As Expression(Of Func(Of TKey, IEnumerable(Of TSource), TResult)) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> GroupBy\<TSource, TKey, TResult>( this IQueryable<TSource> source, Expression<Func\<TSource, TKey>> keySelector, Expression<Func<TKey, IEnumerable<TSource>, TResult>> resultSelector )`|  
 |<xref:System.Linq.Queryable.GroupBy%2A>|지원되지 않음|`Function GroupBy(Of TSource, TKey, TElement) ( _ source As IQueryable(Of TSource), _ keySelector As Expression(Of Func(Of TSource, TKey)), _ elementSelector As Expression(Of Func(Of TSource, TElement)), _ comparer As IEqualityComparer(Of TKey) _ ) As IQueryable(Of IGrouping(Of TKey, TElement))`|`IQueryable<IGrouping\<TKey, TElement>> GroupBy\<TSource, TKey, TElement>( this IQueryable<TSource> source, Expression<Func\<TSource, TKey>> keySelector, Expression<Func\<TSource, TElement>> elementSelector, IEqualityComparer<TKey> comparer`|  
 |<xref:System.Linq.Queryable.GroupBy%2A>|지원됨|`Function GroupBy(Of TSource, TKey, TElement, TResult) ( _ source As IQueryable(Of TSource), _ keySelector As Expression(Of Func(Of TSource, TKey)), _ elementSelector As Expression(Of Func(Of TSource, TElement)), _ resultSelector As Expression(Of Func(Of TKey, IEnumerable(Of TElement), TResult)) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> GroupBy<TSource, TKey, TElement, TResult>( this IQueryable<TSource> source, Expression<Func<TSource, TKey>> keySelector, Expression<Func<TSource, TElement>> elementSelector, Expression<Func<TKey, IEnumerable<TElement>, TResult>> resultSelector )`|  
 |<xref:System.Linq.Queryable.GroupBy%2A>|지원되지 않음|`Function GroupBy(Of TSource, TKey, TResult) ( _ source As IQueryable(Of TSource), _ keySelector As Expression(Of Func(Of TSource, TKey)), _ resultSelector As Expression(Of Func(Of TKey, IEnumerable(Of TSource), TResult)), _ comparer As IEqualityComparer(Of TKey) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> GroupBy\<TSource, TKey, TResult>( this IQueryable<TSource> source, Expression<Func\<TSource, TKey>> keySelector, Expression<Func<TKey, IEnumerable<TSource>, TResult>> resultSelector, IEqualityComparer<TKey> comparer )`|  
@@ -90,20 +91,20 @@ ms.locfileid: "70249000"
 ## <a name="aggregate-methods"></a>집계 메서드  
  기본 데이터 형식을 허용 하는 대부분의 집계 메서드는 LINQ to Entities에서 지원 됩니다. 자세한 내용은 [LINQ to Entities 쿼리의 표준 쿼리 연산자](standard-query-operators-in-linq-to-entities-queries.md)를 참조 하세요. 다음 표에서는 지원되거나 지원되지 않는 집계 메서드를 보여 줍니다.  
   
-|메서드|지원|Visual Basic 함수 시그니처|C# 메서드 시그니처|  
+|방법|지원|Visual Basic 함수 시그니처|C# 메서드 시그니처|  
 |------------|-------------|-------------------------------------|--------------------------|  
 |<xref:System.Linq.Queryable.Aggregate%2A>|지원되지 않음|`Function Aggregate(Of TSource) ( _ source As IQueryable(Of TSource), _ func As Expression(Of Func(Of TSource, TSource, TSource)) _ ) As TSource`|`TSource Aggregate<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, TSource, TSource>> func )`|  
 |<xref:System.Linq.Queryable.Aggregate%2A>|지원되지 않음|`Function Aggregate(Of TSource, TAccumulate) ( _ source As IQueryable(Of TSource), _ seed As TAccumulate, _ func As Expression(Of Func(Of TAccumulate, TSource, TAccumulate)) _ ) As TAccumulate`|`TAccumulate Aggregate<TSource, TAccumulate>( this IQueryable<TSource> source, TAccumulate seed, Expression<Func<TAccumulate, TSource, TAccumulate>> func )`|  
 |<xref:System.Linq.Queryable.Aggregate%2A>|지원되지 않음|`Function Aggregate(Of TSource, TAccumulate, TResult) ( _ source As IQueryable(Of TSource), _ seed As TAccumulate, _ func As Expression(Of Func(Of TAccumulate, TSource, TAccumulate)), _ selector As Expression(Of Func(Of TAccumulate, TResult)) _ ) As TResult`|`TResult Aggregate<TSource, TAccumulate, TResult>( this IQueryable<TSource> source, TAccumulate seed, Expression<Func<TAccumulate, TSource, TAccumulate>> func, Expression<Func<TAccumulate, TResult>> selector )`|  
 |<xref:System.Linq.Queryable.Average%2A>|지원됨|`Function Average ( _ source As IQueryable(Of Decimal) _ ) As Decimal`|`decimal Average( this IQueryable<decimal> source )`|  
-|<xref:System.Linq.Queryable.Average%2A>|지원됨|`Function Average ( _ source As IQueryable(Of Double) _ ) As Double`|`double Average( this IQueryable<double> source )`|  
-|<xref:System.Linq.Queryable.Average%2A>|지원됨|`Function Average ( _ source As IQueryable(Of Integer) _ ) As Double`|`double Average( this IQueryable<int> source )`|  
-|<xref:System.Linq.Queryable.Average%2A>|지원됨|`Function Average ( _ source As IQueryable(Of Long) _ ) As Double`|`double Average( this IQueryable<long> source )`|  
-|<xref:System.Linq.Queryable.Average%2A>|지원됨|`Function Average ( _ source As IQueryable(Of Nullable(Of Decimal)) _ ) As Nullable(Of Decimal)`|`Nullable<decimal> Average( this IQueryable<Nullable<decimal>> source )`|  
-|<xref:System.Linq.Queryable.Average%2A>|지원됨|`Function Average ( _ source As IQueryable(Of Nullable(Of Double)) _ ) As Nullable(Of Double)`|`Nullable<double> Average( this IQueryable<Nullable<double>> source )`|  
-|<xref:System.Linq.Queryable.Average%2A>|지원됨|`Function Average ( _ source As IQueryable(Of Nullable(Of Integer)) _ ) As Nullable(Of Double)`|`Nullable<double> Average( this IQueryable<Nullable<int>> source )`|  
-|<xref:System.Linq.Queryable.Average%2A>|지원됨|`Function Average ( _ source As IQueryable(Of Nullable(Of Long)) _ ) As Nullable(Of Double)`|`Nullable<double> Average( this IQueryable<Nullable<long>> source )`|  
-|<xref:System.Linq.Queryable.Average%2A>|지원됨|`Function Average ( _ source As IQueryable(Of Nullable(Of Single)) _ ) As Nullable(Of Single)`|`Nullable<float> Average( this IQueryable<Nullable<float>> source )`|  
+|<xref:System.Linq.Queryable.Average%2A>|지원 여부|`Function Average ( _ source As IQueryable(Of Double) _ ) As Double`|`double Average( this IQueryable<double> source )`|  
+|<xref:System.Linq.Queryable.Average%2A>|지원 여부|`Function Average ( _ source As IQueryable(Of Integer) _ ) As Double`|`double Average( this IQueryable<int> source )`|  
+|<xref:System.Linq.Queryable.Average%2A>|지원 여부|`Function Average ( _ source As IQueryable(Of Long) _ ) As Double`|`double Average( this IQueryable<long> source )`|  
+|<xref:System.Linq.Queryable.Average%2A>|지원 여부|`Function Average ( _ source As IQueryable(Of Nullable(Of Decimal)) _ ) As Nullable(Of Decimal)`|`Nullable<decimal> Average( this IQueryable<Nullable<decimal>> source )`|  
+|<xref:System.Linq.Queryable.Average%2A>|지원 여부|`Function Average ( _ source As IQueryable(Of Nullable(Of Double)) _ ) As Nullable(Of Double)`|`Nullable<double> Average( this IQueryable<Nullable<double>> source )`|  
+|<xref:System.Linq.Queryable.Average%2A>|지원 여부|`Function Average ( _ source As IQueryable(Of Nullable(Of Integer)) _ ) As Nullable(Of Double)`|`Nullable<double> Average( this IQueryable<Nullable<int>> source )`|  
+|<xref:System.Linq.Queryable.Average%2A>|지원 여부|`Function Average ( _ source As IQueryable(Of Nullable(Of Long)) _ ) As Nullable(Of Double)`|`Nullable<double> Average( this IQueryable<Nullable<long>> source )`|  
+|<xref:System.Linq.Queryable.Average%2A>|지원 여부|`Function Average ( _ source As IQueryable(Of Nullable(Of Single)) _ ) As Nullable(Of Single)`|`Nullable<float> Average( this IQueryable<Nullable<float>> source )`|  
 |<xref:System.Linq.Queryable.Average%2A>|지원됨|`Function Average ( _ source As IQueryable(Of Single) _ ) As Single`|`float Average( this IQueryable<float> source )`|  
 |<xref:System.Linq.Queryable.Average%2A>|지원되지 않음|`Function Average(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Integer)) _ ) As Double`|`double Average<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, int>> selector )`|  
 |<xref:System.Linq.Queryable.Average%2A>|지원되지 않음|`Function Average(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Integer))) _ ) As Nullable(Of Double)`|`Nullable<double> Average<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<int>>> selector )`|  
@@ -124,14 +125,14 @@ ms.locfileid: "70249000"
 |<xref:System.Linq.Queryable.Min%2A>|지원됨|`Function Min(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As TSource`|`TSource Min<TSource>( this IQueryable<TSource> source )`|  
 |<xref:System.Linq.Queryable.Min%2A>|지원되지 않음|`Function Min(Of TSource, TResult) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, TResult)) _ ) As TResult`|`TResult Min<TSource, TResult>( this IQueryable<TSource> source, Expression<Func<TSource, TResult>> selector )`|  
 |<xref:System.Linq.Queryable.Sum%2A>|지원됨|`Function Sum ( _ source As IQueryable(Of Decimal) _ ) As Decimal`|`decimal Sum( this IQueryable<decimal> source )`|  
-|<xref:System.Linq.Queryable.Sum%2A>|지원됨|`Function Sum ( _ source As IQueryable(Of Double) _ ) As Double`|`double Sum( this IQueryable<double> source`|  
-|<xref:System.Linq.Queryable.Sum%2A>|지원됨|`Function Sum ( _ source As IQueryable(Of Integer) _ ) As Integer`|`int Sum( this IQueryable<int> source )`|  
-|<xref:System.Linq.Queryable.Sum%2A>|지원됨|`Function Sum ( _ source As IQueryable(Of Long) _ ) As Long`|`long Sum( this IQueryable<long> source )`|  
-|<xref:System.Linq.Queryable.Sum%2A>|지원됨|`Function Sum ( _ source As IQueryable(Of Nullable(Of Decimal)) _ ) As Nullable(Of Decimal)`|`Nullable<decimal> Sum( this IQueryable<Nullable<decimal>> source )`|  
-|<xref:System.Linq.Queryable.Sum%2A>|지원됨|`Function Sum ( _ source As IQueryable(Of Nullable(Of Double)) _ ) As Nullable(Of Double)`|`Function Sum ( _ source As IQueryable(Of Nullable(Of Double)) _ ) As Nullable(Of Double)Nullable<double> Sum( this IQueryable<Nullable<double>> source )`|  
-|<xref:System.Linq.Queryable.Sum%2A>|지원됨|`Function Sum ( _ source As IQueryable(Of Nullable(Of Integer)) _ ) As Nullable(Of Integer)`|`Nullable<int> Sum( this IQueryable<Nullable<int>> source )`|  
-|<xref:System.Linq.Queryable.Sum%2A>|지원됨|`Function Sum ( _ source As IQueryable(Of Nullable(Of Long)) _ ) As Nullable(Of Long)`|`Nullable<long> Sum( this IQueryable<Nullable<long>> source )`|  
-|<xref:System.Linq.Queryable.Sum%2A>|지원됨|`Function Sum ( _ source As IQueryable(Of Nullable(Of Single)) _ ) As Nullable(Of Single)`|`Nullable<float> Sum( this IQueryable<Nullable<float>> source )`|  
+|<xref:System.Linq.Queryable.Sum%2A>|지원 여부|`Function Sum ( _ source As IQueryable(Of Double) _ ) As Double`|`double Sum( this IQueryable<double> source`|  
+|<xref:System.Linq.Queryable.Sum%2A>|지원 여부|`Function Sum ( _ source As IQueryable(Of Integer) _ ) As Integer`|`int Sum( this IQueryable<int> source )`|  
+|<xref:System.Linq.Queryable.Sum%2A>|지원 여부|`Function Sum ( _ source As IQueryable(Of Long) _ ) As Long`|`long Sum( this IQueryable<long> source )`|  
+|<xref:System.Linq.Queryable.Sum%2A>|지원 여부|`Function Sum ( _ source As IQueryable(Of Nullable(Of Decimal)) _ ) As Nullable(Of Decimal)`|`Nullable<decimal> Sum( this IQueryable<Nullable<decimal>> source )`|  
+|<xref:System.Linq.Queryable.Sum%2A>|지원 여부|`Function Sum ( _ source As IQueryable(Of Nullable(Of Double)) _ ) As Nullable(Of Double)`|`Function Sum ( _ source As IQueryable(Of Nullable(Of Double)) _ ) As Nullable(Of Double)Nullable<double> Sum( this IQueryable<Nullable<double>> source )`|  
+|<xref:System.Linq.Queryable.Sum%2A>|지원 여부|`Function Sum ( _ source As IQueryable(Of Nullable(Of Integer)) _ ) As Nullable(Of Integer)`|`Nullable<int> Sum( this IQueryable<Nullable<int>> source )`|  
+|<xref:System.Linq.Queryable.Sum%2A>|지원 여부|`Function Sum ( _ source As IQueryable(Of Nullable(Of Long)) _ ) As Nullable(Of Long)`|`Nullable<long> Sum( this IQueryable<Nullable<long>> source )`|  
+|<xref:System.Linq.Queryable.Sum%2A>|지원 여부|`Function Sum ( _ source As IQueryable(Of Nullable(Of Single)) _ ) As Nullable(Of Single)`|`Nullable<float> Sum( this IQueryable<Nullable<float>> source )`|  
 |<xref:System.Linq.Queryable.Sum%2A>|지원됨|`Function Sum ( _ source As IQueryable(Of Single) _ ) As Single`|`float Sum( this IQueryable<float> source )`|  
 |<xref:System.Linq.Queryable.Sum%2A>|지원되지 않음|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Integer)) _ ) As Integer`|`int Sum<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, int>> selector )`|  
 <xref:System.Linq.Queryable.Sum%2A>|지원되지 않음|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Integer))) _ ) As Nullable(Of Integer)`|`Nullable<int> Sum<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<int>>> selector )`|  
@@ -147,7 +148,7 @@ ms.locfileid: "70249000"
 ## <a name="type-methods"></a>형식 메서드  
  CLR 형식 변환 및 테스트를 처리 하는 LINQ 표준 쿼리 연산자는 Entity Framework에서 지원 됩니다. 개념적 모델 형식에 매핑되는 CLR 형식만 LINQ to Entities에서 지원됩니다. 개념적 모델 형식 목록은 [CSDL (개념적 모델 형식)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl)을 참조 하세요. 다음 표에서는 지원되거나 지원되지 않는 형식 메서드를 보여 줍니다.  
   
-|메서드|지원|Visual Basic 함수 시그니처|C# 메서드 시그니처|  
+|방법|지원|Visual Basic 함수 시그니처|C# 메서드 시그니처|  
 |------------|-------------|-------------------------------------|--------------------------|  
 |<xref:System.Linq.Queryable.Cast%2A>|EDM 기본 형식에 지원됨|`Function Cast(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> Cast<TResult>( this IQueryable source )`|  
 |<xref:System.Linq.Queryable.OfType%2A>|<xref:System.Data.Metadata.Edm.EntityType>에 지원됨|`Function OfType(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> OfType<TResult>( this IQueryable source )`|  
@@ -155,22 +156,22 @@ ms.locfileid: "70249000"
 ## <a name="paging-methods"></a>페이징 메서드  
  많은 LINQ 페이징 메서드는 LINQ to Entities 쿼리에서 지원 되지 않습니다. 자세한 내용은 [LINQ to Entities 쿼리의 표준 쿼리 연산자](standard-query-operators-in-linq-to-entities-queries.md)를 참조 하세요. 다음 표에서는 지원되거나 지원되지 않는 페이징 메서드를 보여 줍니다.  
   
-|메서드|지원|Visual Basic 함수 시그니처|C# 메서드 시그니처|  
+|방법|지원|Visual Basic 함수 시그니처|C# 메서드 시그니처|  
 |------------|-------------|-------------------------------------|--------------------------|  
 |<xref:System.Linq.Queryable.ElementAt%2A>|지원되지 않음|`Function ElementAt(Of TSource) ( _ source As IQueryable(Of TSource), _ index As Integer _ ) As TSource`|`TSource ElementAt<TSource>( this IQueryable<TSource> source, int index )`|  
 |<xref:System.Linq.Queryable.ElementAtOrDefault%2A>|지원되지 않음|`Function ElementAtOrDefault(Of TSource) ( _ source As IQueryable(Of TSource), _ index As Integer _ ) As TSource`|`TSource ElementAtOrDefault<TSource>( this IQueryable<TSource> source, int index )`|  
 |<xref:System.Linq.Queryable.First%2A>|지원됨|`Function First(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As TSource`|`TSource First<TSource>( this IQueryable<TSource> source )`|  
-|<xref:System.Linq.Queryable.First%2A>|지원됨|`Function First(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Boolean)) _ ) As TSource`|`TSource First<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, bool>> predicate )`|  
-|<xref:System.Linq.Queryable.FirstOrDefault%2A>|지원됨|`Function FirstOrDefault(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As TSource`|`TSource FirstOrDefault<TSource>( this IQueryable<TSource> source )`|  
+|<xref:System.Linq.Queryable.First%2A>|지원 여부|`Function First(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Boolean)) _ ) As TSource`|`TSource First<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, bool>> predicate )`|  
+|<xref:System.Linq.Queryable.FirstOrDefault%2A>|지원 여부|`Function FirstOrDefault(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As TSource`|`TSource FirstOrDefault<TSource>( this IQueryable<TSource> source )`|  
 |<xref:System.Linq.Queryable.FirstOrDefault%2A>|지원됨|`Function FirstOrDefault(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Boolean)) _ ) As TSource`|`TSource FirstOrDefault<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, bool>> predicate )`|  
 |<xref:System.Linq.Queryable.Last%2A>|지원되지 않음|`Function Last(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As TSource`|`TSource Last<TSource>( this IQueryable<TSource> source )`|  
 |<xref:System.Linq.Queryable.Last%2A>|지원되지 않음|`Function Last(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Boolean)) _ ) As TSource`|`TSource Last<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, bool>> predicate )`|  
 |<xref:System.Linq.Queryable.LastOrDefault%2A>|지원되지 않음|`Function LastOrDefault(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As TSource`|`TSource LastOrDefault<TSource>( this IQueryable<TSource> source )`|  
 |<xref:System.Linq.Queryable.LastOrDefault%2A>|지원되지 않음|`Function LastOrDefault(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Boolean)) _ ) As TSource`|`TSource LastOrDefault<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, bool>> predicate )`|  
 |<xref:System.Linq.Queryable.Single%2A>|지원됨|`Function Single(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As TSource`|`TSource Single<TSource>( this IQueryable<TSource> source )`|  
-|<xref:System.Linq.Queryable.Single%2A>|지원됨|`Function Single(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Boolean)) _ ) As TSource`|`TSource Single<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, bool>> predicate )`|  
-|<xref:System.Linq.Queryable.SingleOrDefault%2A>|지원됨|`Function SingleOrDefault(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As TSource`|`TSource SingleOrDefault<TSource>( this IQueryable<TSource> source )`|  
-|<xref:System.Linq.Queryable.SingleOrDefault%2A>|지원됨|`Function SingleOrDefault(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Boolean)) _ ) As TSource`|`TSource SingleOrDefault<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, bool>> predicate )`|  
+|<xref:System.Linq.Queryable.Single%2A>|지원 여부|`Function Single(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Boolean)) _ ) As TSource`|`TSource Single<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, bool>> predicate )`|  
+|<xref:System.Linq.Queryable.SingleOrDefault%2A>|지원 여부|`Function SingleOrDefault(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As TSource`|`TSource SingleOrDefault<TSource>( this IQueryable<TSource> source )`|  
+|<xref:System.Linq.Queryable.SingleOrDefault%2A>|지원 여부|`Function SingleOrDefault(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Boolean)) _ ) As TSource`|`TSource SingleOrDefault<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, bool>> predicate )`|  
 |<xref:System.Linq.Queryable.Skip%2A>|지원됨|`Function Skip(Of TSource) ( _ source As IQueryable(Of TSource), _ count As Integer _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Skip<TSource>( this IQueryable<TSource> source, int count )`|  
 |<xref:System.Linq.Queryable.SkipWhile%2A>|지원되지 않음|`Function SkipWhile(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Boolean)) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> SkipWhile<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, bool>> predicate )`|  
 |<xref:System.Linq.Queryable.SkipWhile%2A>|지원되지 않음|`Function SkipWhile(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Integer, Boolean)) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> SkipWhile<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, int, bool>> predicate )`|  
@@ -178,6 +179,6 @@ ms.locfileid: "70249000"
 |<xref:System.Linq.Queryable.TakeWhile%2A>|지원되지 않음|`Function TakeWhile(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Boolean)) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> TakeWhile<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, bool>> predicate )`|  
 |<xref:System.Linq.Queryable.TakeWhile%2A>|지원되지 않음|`Function TakeWhile(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Integer, Boolean)) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> TakeWhile<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, int, bool>> predicate )`|  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [LINQ to Entities 쿼리에서 표준 쿼리 연산자](standard-query-operators-in-linq-to-entities-queries.md)

@@ -1,13 +1,14 @@
 ---
 title: 연결 문자열
+description: 데이터 공급자에서 데이터 원본으로 매개 변수로 전달 되는 초기화 정보를 포함 하는 ADO.NET의 연결 문자열에 대해 알아봅니다.
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 3f56a487121757706ef6b4dfd11fcd761657431a
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: baa6599a532746895cbb3920f2c623dd4c2be864
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202274"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287027"
 ---
 # <a name="connection-strings-in-adonet"></a>ADO.NET의 연결 문자열
 

@@ -1,13 +1,14 @@
 ---
 title: '연습: 간단한 개체 모델 및 쿼리(C#)'
+description: 이 연습을 수행 하 여 샘플 데이터베이스의 테이블을 모델링 하는 엔터티 클래스를 만듭니다. 그런 다음 간단한 쿼리를 만들어 특정 위치에 고객을 나열 합니다.
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: a9b3b57e37331cd13f2cd30b8a7663f2fb39d8c1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4637fabecc1726d8fec12857a667073912cfbed5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792135"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286303"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>연습: 간단한 개체 모델 및 쿼리(C#)
 
@@ -19,7 +20,7 @@ ms.locfileid: "70792135"
 
 이 연습은 Visual C# 개발 설정을 사용하여 작성했습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 - 이 연습에서는 전용 폴더("c:\linqtest5")를 사용하여 파일을 저장합니다. 연습을 시작하기 전에 먼저 이 폴더를 만듭니다.
 
@@ -29,7 +30,7 @@ ms.locfileid: "70792135"
 
 이 연습은 다음과 같은 여섯 가지 주요 작업으로 구성됩니다.
 
-- Visual Studio에서 솔루션 만들기 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Visual Studio에서 솔루션 만들기
 
 - 데이터베이스 테이블에 클래스 매핑
 
@@ -43,13 +44,13 @@ ms.locfileid: "70792135"
 
 ## <a name="creating-a-linq-to-sql-solution"></a>LINQ to SQL 솔루션 만들기
 
-이 첫 번째 작업에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 프로젝트를 빌드하고 실행 하는 데 필요한 참조를 포함 하는 Visual Studio 솔루션을 만듭니다.
+이 첫 번째 작업에서는 프로젝트를 빌드하고 실행 하는 데 필요한 참조를 포함 하는 Visual Studio 솔루션을 만듭니다 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] .
 
 ### <a name="to-create-a-linq-to-sql-solution"></a>LINQ to SQL 솔루션을 만들려면
 
 1. Visual Studio **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭 합니다.
 
-2. **새 프로젝트** 대화 상자의 **프로젝트 형식** 창에서 **C#시각적 개체**를 클릭 합니다.
+2. **새 프로젝트** 대화 상자의 **프로젝트 형식** 창에서 **Visual c #** 을 클릭 합니다.
 
 3. **템플릿** 창에서 **콘솔 애플리케이션**을 클릭합니다.
 
@@ -160,10 +161,10 @@ ms.locfileid: "70792135"
 
 ## <a name="next-steps"></a>다음 단계
 
-[연습: 관계 간 쿼리 (C#)](walkthrough-querying-across-relationships-csharp.md) 토픽은이 연습을 종료 하는 위치에서 계속 됩니다. 관계 간 쿼리 연습에서는에서 관계형 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 데이터베이스의 *조인과* 유사 하 게 테이블을 쿼리 하는 방법을 보여 줍니다.
+[연습: 관계 간 쿼리 (c #)](walkthrough-querying-across-relationships-csharp.md) 토픽은이 연습을 종료 하는 위치에서 계속 됩니다. 관계 간 쿼리 연습에서는에서 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 관계형 데이터베이스의 *조인과* 유사 하 게 테이블을 쿼리 하는 방법을 보여 줍니다.
 
 관계 간 쿼리 연습을 수행하려면 방금 완료한 연습의 솔루션을 저장해야 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [연습으로 학습](learning-by-walkthroughs.md)

@@ -1,40 +1,41 @@
 ---
 title: XML에서 데이터 세트 로드
+description: XML에서 ADO.NET 데이터 집합에 내용을 추가 하는 방법에 대해 알아봅니다. .NET Framework는 로드할 항목과 데이터 집합의 구조에 대 한 유연성을 제공 합니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
-ms.openlocfilehash: c21ed3bb31add285d64272040680433fff4e16fd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8c81e6e29678fe2e30af7c15d8d6e90f23dd0762
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151067"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286885"
 ---
 # <a name="loading-a-dataset-from-xml"></a>XML에서 데이터 세트 로드
 ADO.NET <xref:System.Data.DataSet>의 내용은 XML 스트림이나 문서로부터 만들 수 있습니다. 또한, .NET Framework를 사용하면 XML로부터 로드할 정보와 <xref:System.Data.DataSet>의 스키마나 관계형 구조를 만드는 방법을 매우 융통성 있게 선택할 수 있습니다.  
   
- XML의 <xref:System.Data.DataSet> 데이터로 채우려면 개체의 **ReadXml** 메서드를 <xref:System.Data.DataSet> 사용합니다. **ReadXml** 메서드는 파일, 스트림 또는 **XmlReader에서**읽으며 XML소스와 선택적 **XmlReadMode** 인수를 인수로 사용합니다. **XmlReader에**대한 자세한 내용은 [XmlTextReader를 사용하여 XML 데이터 읽기를](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/tfz3cz6w(v=vs.100))참조하십시오. **ReadXml** 메서드는 XML 스트림 또는 문서의 내용을 <xref:System.Data.DataSet> 읽고 데이터로 로드합니다. 또한 지정된 <xref:System.Data.DataSet> **XmlReadMode** 및 관계형 스키마가 이미 있는지 여부에 따라 관계형 스키마를 만듭니다.  
+ XML의 데이터로를 채우려면 <xref:System.Data.DataSet> 개체의 **ReadXml** 메서드를 사용 합니다 <xref:System.Data.DataSet> . **ReadXml** 메서드는 파일, 스트림 또는 **XMLREADER**에서 읽고 XML 소스와 선택적 **XmlReadMode** 인수를 인수로 사용 합니다. **XmlReader**에 대 한 자세한 내용은 [XmlTextReader를 사용 하 여 XML 데이터 읽기](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/tfz3cz6w(v=vs.100))를 참조 하세요. **ReadXml** 메서드는 XML 스트림이나 문서의 내용을 읽고를 사용 하 여 데이터를 로드 합니다 <xref:System.Data.DataSet> . 또한 <xref:System.Data.DataSet> 관계형 스키마가 이미 있는지 여부에 따라 지정 된 **XmlReadMode** 에 따라의 관계형 스키마를 만듭니다.  
   
- 다음 표는 **XmlReadMode** 인수에 대한 옵션을 설명합니다.  
+ 다음 표에서는 **XmlReadMode** 인수에 대 한 옵션을 설명 합니다.  
   
 |옵션|Description|  
 |------------|-----------------|  
-|**자동**|이것이 기본값입니다. XML을 검사하고 다음 순서에 따라 가장 적합한 옵션을 선택합니다.<br /><br /> - XML이 DiffGram인 경우 **DiffGram이** 사용됩니다.<br />- 스키마가 <xref:System.Data.DataSet> 포함되어 있거나 XML에 인라인 스키마가 포함된 경우 **ReadSchema가** 사용됩니다.<br />- 스키마를 <xref:System.Data.DataSet> 포함하지 않고 XML에 인라인 스키마가 포함되어 있지 않으면 **InferSchema가** 사용됩니다.<br /><br /> XML의 형식을 읽는 경우 최상의 성능을 위해 **자동** 기본값을 수락하는 대신 명시적 **XmlReadMode를**설정하는 것이 좋습니다.|  
-|**ReadSchema**|모든 인라인 스키마를 읽은 다음 데이터와 스키마를 로드합니다.<br /><br /> <xref:System.Data.DataSet>에 이미 스키마가 있으면 인라인 스키마의 새 테이블이 <xref:System.Data.DataSet>에 있는 기존 스키마에 추가됩니다. 인라인 스키마의 모든 테이블이 <xref:System.Data.DataSet>에 이미 있으면 예외가 throw됩니다. **XmlReadMode.ReadSchema**을 사용 하 여 기존 테이블의 스키마를 수정할 수 없습니다.<br /><br /> <xref:System.Data.DataSet>에 스키마도 없고 인라인 스키마도 없으면 데이터를 읽지 않습니다.<br /><br /> 인라인 스키마는 XSD(XML 스키마 정의 언어) 스키마를 사용하여 정의할 수 있습니다. XML 스키마로 인라인 스키마를 작성하는 것에 대한 자세한 내용은 [XML 스키마(XSD)의 데이터 집합 관계형 구조 파생을](deriving-dataset-relational-structure-from-xml-schema-xsd.md)참조하십시오.|  
-|**무시스키마**|모든 인라인 스키마를 무시하고 데이터를 기존 <xref:System.Data.DataSet> 스키마로 로드합니다. 기존 스키마와 일치하지 않는 모든 데이터는 삭제됩니다. <xref:System.Data.DataSet>에 스키마가 없으면 데이터를 로드하지 않습니다.<br /><br /> 데이터가 DiffGram인 경우 **IgnoreSchema는** **DiffGram** *과* 동일한 기능을 가짐을 가지며|  
-|**InferSchema**|모든 인라인 스키마를 무시하며 XML 데이터의 구조마다 스키마를 유추한 다음 데이터를 로드합니다.<br /><br /> <xref:System.Data.DataSet>에 이미 스키마가 있으면 기존 테이블에 열을 추가하여 현재 스키마를 확장합니다. 기존 테이블이 없으면 테이블이 추가되지 않습니다. 유추된 테이블이 다른 네임스페이스로 이미 존재하거나 유추된 열이 기존 열과 충돌하면 예외가 throw됩니다.<br /><br /> **ReadXmlSchema가** XML 문서에서 스키마를 유추하는 방법에 대한 자세한 내용은 [XML의 데이터 집합 관계형 구조 추론을](inferring-dataset-relational-structure-from-xml.md)참조하십시오.|  
-|**Diffgram**|DiffGram을 읽은 다음 해당 데이터를 현재 스키마에 추가합니다. **DiffGram은** 고유 식별자 값이 일치하는 기존 행과 새 행을 병합합니다. 이 항목의 맨 뒤에 나오는 "XML로부터 데이터 병합"을 참조하세요. DiffGrams에 대한 자세한 내용은 [DiffGrams](diffgrams.md)를 참조하십시오.|  
-|**조각**|스트림의 끝에 도달할 때까지 여러 개의 XML 조각을 계속 읽습니다. <xref:System.Data.DataSet> 스키마에 일치하는 조각이 해당 테이블의 뒤에 추가됩니다. <xref:System.Data.DataSet> 스키마에 일치하지 않는 조각은 삭제됩니다.|  
+|**자동**|기본값입니다. XML을 검사하고 다음 순서에 따라 가장 적합한 옵션을 선택합니다.<br /><br /> -XML이 DiffGram 인 경우 **diffgram** 이 사용 됩니다.<br />-에 <xref:System.Data.DataSet> 스키마가 포함 되어 있거나 XML에 인라인 스키마가 포함 되어 있으면 **readschema** 가 사용 됩니다.<br />-에 스키마가 없고 <xref:System.Data.DataSet> XML에 인라인 스키마가 포함 되어 있지 않으면 **InferSchema** 가 사용 됩니다.<br /><br /> 읽을 XML의 형식을 알고 있는 경우 최상의 성능을 위해 **자동** 기본값을 허용 하는 대신 명시적 **XmlReadMode**를 설정 하는 것이 좋습니다.|  
+|**ReadSchema**|모든 인라인 스키마를 읽은 다음 데이터와 스키마를 로드합니다.<br /><br /> <xref:System.Data.DataSet>에 이미 스키마가 있으면 인라인 스키마의 새 테이블이 <xref:System.Data.DataSet>에 있는 기존 스키마에 추가됩니다. 인라인 스키마의 모든 테이블이 <xref:System.Data.DataSet>에 이미 있으면 예외가 throw됩니다. **XmlReadMode 스키마**를 사용 하 여 기존 테이블의 스키마를 수정할 수 없습니다.<br /><br /> <xref:System.Data.DataSet>에 스키마도 없고 인라인 스키마도 없으면 데이터를 읽지 않습니다.<br /><br /> 인라인 스키마는 XSD(XML 스키마 정의 언어) 스키마를 사용하여 정의할 수 있습니다. 인라인 스키마를 XML 스키마로 작성 하는 방법에 대 한 자세한 내용은 [Xml 스키마에서 데이터 집합 관계형 구조 파생 (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md)을 참조 하세요.|  
+|**IgnoreSchema**|모든 인라인 스키마를 무시하고 데이터를 기존 <xref:System.Data.DataSet> 스키마로 로드합니다. 기존 스키마와 일치하지 않는 모든 데이터는 삭제됩니다. <xref:System.Data.DataSet>에 스키마가 없으면 데이터를 로드하지 않습니다.<br /><br /> 데이터가 DiffGram 인 경우 **IgnoreSchema** 는 **diffgram** 과 동일한 기능을 갖습니다 *.*|  
+|**InferSchema**|모든 인라인 스키마를 무시하며 XML 데이터의 구조마다 스키마를 유추한 다음 데이터를 로드합니다.<br /><br /> <xref:System.Data.DataSet>에 이미 스키마가 있으면 기존 테이블에 열을 추가하여 현재 스키마를 확장합니다. 기존 테이블이 없으면 테이블이 추가되지 않습니다. 유추된 테이블이 다른 네임스페이스로 이미 존재하거나 유추된 열이 기존 열과 충돌하면 예외가 throw됩니다.<br /><br /> **Readxmlschema** 에서 xml 문서의 스키마를 유추 하는 방법에 대 한 자세한 내용은 [Xml에서 데이터 집합 관계형 구조 유추](inferring-dataset-relational-structure-from-xml.md)를 참조 하세요.|  
+|**DiffGram**|DiffGram을 읽은 다음 해당 데이터를 현재 스키마에 추가합니다. **DiffGram** 은 고유 식별자 값이 일치 하는 기존 행과 새 행을 병합 합니다. 이 항목의 맨 뒤에 나오는 "XML로부터 데이터 병합"을 참조하세요. Diffgram에 대 한 자세한 내용은 [diffgram](diffgrams.md)를 참조 하세요.|  
+|**Don't**|스트림의 끝에 도달할 때까지 여러 개의 XML 조각을 계속 읽습니다. <xref:System.Data.DataSet> 스키마에 일치하는 조각이 해당 테이블의 뒤에 추가됩니다. <xref:System.Data.DataSet> 스키마에 일치하지 않는 조각은 삭제됩니다.|  
   
 > [!NOTE]
-> XML 문서에 위치하는 **ReadXml에** **XmlReader를** 전달하면 **ReadXml은** 다음 요소 노드로 읽고 요소 노드가 끝날 때까지 읽는 루트 요소로 처리합니다. **XmlReadMode.Fragment.**  
+> XML 문서로 배치 된 **ReadXml** 에 **XmlReader** 를 전달 하는 경우 **ReadXml** 는 다음 요소 노드를 읽고이를 루트 요소로 처리 하 여 요소 노드 끝 까지만 읽습니다. **XmlReadMode**를 지정 하는 경우에는 적용 되지 않습니다.  
   
 ## <a name="dtd-entities"></a>DTD 엔터티  
- XML에 문서 형식 정의(DTD) 스키마에 정의된 엔터티가 포함되어 있는 경우 파일 이름, 스트림 또는 유효성이 검사되지 않는 <xref:System.Data.DataSet> **XmlReader를** **ReadXml에**전달하여 로드하려고 하면 예외가 throw됩니다. 대신 **엔터티 처리가 EntityHandling.ExpandEntities로** 설정된 **EntityHandling.ExpandEntities** **XmlValidatingReader를**만들고 **XmlValidatingReader를** **ReadXml로**전달해야 합니다. **XmlValidatingReader는** <xref:System.Data.DataSet>을 읽기 전에 엔터티를 확장합니다.  
+ XML이 DTD (문서 종류 정의) 스키마에 정의 된 엔터티를 포함 하는 경우 <xref:System.Data.DataSet> 파일 이름, 스트림 또는 유효성 검사를 수행 하지 않는 **XmlReader** 를 **ReadXml**에 전달 하 여를 로드 하려고 하면 예외가 throw 됩니다. 대신 **Entityhandling** 을 **entityhandling.expandentities**로 설정 하 여 **XmlValidatingReader**를 만들고 **XmlValidatingReader** 를 **ReadXml**에 전달 해야 합니다. **XmlValidatingReader** 는에서 읽기 전에 엔터티를 확장 합니다 <xref:System.Data.DataSet> .  
   
- 다음 코드 예제에서는 XML 스트림으로부터 <xref:System.Data.DataSet>을 로드하는 방법을 보여 줍니다. 첫 번째 예제에서는 **ReadXml** 메서드에 전달되는 파일 이름을 보여 주습니다. 두 번째 예제에서는 <xref:System.IO.StringReader>를 사용하여 로드될 XML이 포함된 문자열을 보여 줍니다.  
+ 다음 코드 예제에서는 XML 스트림으로부터 <xref:System.Data.DataSet>을 로드하는 방법을 보여 줍니다. 첫 번째 예제에서는 **ReadXml** 메서드에 전달 되는 파일 이름을 보여 줍니다. 두 번째 예제에서는 <xref:System.IO.StringReader>를 사용하여 로드될 XML이 포함된 문자열을 보여 줍니다.  
   
 ```vb  
 Dim dataSet As DataSet = New DataSet  
@@ -73,7 +74,7 @@ dataSet.ReadXml(xmlSR, XmlReadMode.IgnoreSchema);
 ```  
   
 > [!NOTE]
-> **ReadXml을** 호출하여 매우 큰 파일을 로드하면 성능이 저하될 수 있습니다. **ReadXml에**대한 최상의 성능을 보장하려면 큰 <xref:System.Data.DataTable.BeginLoadData%2A> 파일에서 <xref:System.Data.DataSet>의 각 테이블에 대한 메서드를 호출한 다음 **ReadXml을**호출합니다. 마지막으로 다음 예제와 같이 <xref:System.Data.DataTable.EndLoadData%2A>의 각 테이블에 대해 <xref:System.Data.DataSet>를 호출합니다.  
+> **ReadXml** 를 호출 하 여 매우 큰 파일을 로드 하는 경우 성능이 저하 될 수 있습니다. **ReadXml**에 대 한 최상의 성능을 보장 하려면의 <xref:System.Data.DataTable.BeginLoadData%2A> 각 테이블에 대해 메서드를 호출한 <xref:System.Data.DataSet> 다음 **ReadXml**를 호출 합니다. 마지막으로 다음 예제와 같이 <xref:System.Data.DataTable.EndLoadData%2A>의 각 테이블에 대해 <xref:System.Data.DataSet>를 호출합니다.  
   
 ```vb  
 Dim dataTable As DataTable  
@@ -100,7 +101,7 @@ foreach (DataTable dataTable in dataSet.Tables)
 ```  
   
 > [!NOTE]
-> <xref:System.Data.DataSet> **대상Namespace에**대한 XSD 스키마에 데이터가 읽을 수 없는 경우 **ReadXml을** 호출하여 적격네임스페이스가 없는 요소를 포함하는 <xref:System.Data.DataSet> XML을 로드할 때 예외가 발생할 수 있습니다. 이 경우 정규화되지 않은 요소를 읽으려면 XSD 스키마에서 "정규화"와 동일한 **elementFormDefault를** 설정합니다. 다음은 그 예입니다.  
+> 의 XSD 스키마에 <xref:System.Data.DataSet> **targetNamespace**가 포함 된 경우 데이터를 읽을 수 없으며 **ReadXml** 를 호출 하 여 <xref:System.Data.DataSet> 정규화 된 네임 스페이스가 없는 요소가 포함 된 XML로를 로드 하는 경우 예외가 발생할 수 있습니다. 이 경우 정규화 되지 않은 요소를 읽으려면 XSD 스키마에서 **Elementformdefault** 를 "정규화 된"로 설정 합니다. 다음은 그 예입니다.  
   
 ```xml  
 <xsd:schema id="customDataSet"
@@ -113,9 +114,9 @@ foreach (DataTable dataTable in dataSet.Tables)
 ```  
   
 ## <a name="merging-data-from-xml"></a>XML로부터 데이터 병합  
- <xref:System.Data.DataSet>에 데이터가 이미 있으면 XML의 새 데이터는 <xref:System.Data.DataSet>에 이미 있는 데이터에 추가됩니다. **ReadXml은** XML에서 일치하는 기본 <xref:System.Data.DataSet> 키가 있는 행 정보로 병합되지 않습니다. XML의 새 정보로 기존 행 정보를 덮어쓰려면 **ReadXml을** <xref:System.Data.DataSet>사용하여 새 을 만든 다음 <xref:System.Data.DataSet.Merge%2A> 새 <xref:System.Data.DataSet> 를 기존 <xref:System.Data.DataSet>에 새 로 만듭니다. **ReadXML을** 사용하여 **DiffGram을 DiffGram의** **XmlReadMode로** 로드하면 동일한 고유 식별자가 있는 행이 병합됩니다.  
+ <xref:System.Data.DataSet>에 데이터가 이미 있으면 XML의 새 데이터는 <xref:System.Data.DataSet>에 이미 있는 데이터에 추가됩니다. **ReadXml** 는 XML에서 기본 키가 일치 하는 행 정보로 병합 되지 않습니다 <xref:System.Data.DataSet> . 기존 행 정보를 XML의 새 정보로 덮어쓰려면 **ReadXml** 를 사용 하 여 새를 만든 <xref:System.Data.DataSet> 다음 새를 기존에 만듭니다 <xref:System.Data.DataSet.Merge%2A> <xref:System.Data.DataSet> <xref:System.Data.DataSet> . **Diffgram** **XmlReadMode** 를 사용 하 여 **ReadXML** 를 사용 하 여 diffgram을 로드 하면 동일한 고유 식별자를 가진 행이 병합 됩니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Data.DataSet.Merge%2A?displayProperty=nameWithType>
 - [데이터 세트에서 XML 사용](using-xml-in-a-dataset.md)

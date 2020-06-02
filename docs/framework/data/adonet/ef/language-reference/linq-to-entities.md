@@ -1,13 +1,14 @@
 ---
 title: LINQ to Entities
+description: 'Visual Basic 또는 Visual c #을 사용 하 여 Entity Framework 개념적 모델에 대해 쿼리를 작성할 수 있는 LINQ to Entities 쿼리를 만들고 실행 하는 방법을 알아봅니다.'
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: bc568cb9dff170062651c908471a36cd17eac980
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 389a81872f4652c69e2b845359cf4e5a275aed5c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854372"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286846"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities에서는 개발자가 Visual Basic 또는 Visual C#을 사용하여 Entity Framework 개념적 모델에 대한 쿼리를 작성할 수 있도록 해 주는 LINQ(Language-Integrated Query) 지원을 제공합니다. Entity Framework에 대한 쿼리는 개체 컨텍스트에 대해 실행되는 명령 트리 쿼리로 표현됩니다. LINQ to Entities는 LINQ(Language-Integrated Query) 쿼리를 명령 트리 쿼리로 변환하여 Entity Framework에 대해 실행한 다음 Entity Framework와 LINQ에서 모두 사용할 수 있는 개체를 반환합니다. 다음은 LINQ to Entities 쿼리를 만들고 실행하는 프로세스입니다.  
@@ -23,7 +24,7 @@ LINQ to Entities에서는 개발자가 Visual Basic 또는 Visual C#을 사용�
 5. 쿼리 결과를 다시 클라이언트에 반환합니다.  
   
 ## <a name="constructing-an-objectquery-instance"></a>ObjectQuery 인스턴스 생성  
- <xref:System.Data.Objects.ObjectQuery%601> 제네릭 클래스는 0개 이상의 형식화된 엔터티로 구성된 컬렉션을 반환하는 쿼리를 나타냅니다. 개체 쿼리는 수동으로 생성되는 대신 일반적으로 기존 개체 컨텍스트에서 생성되며 항상 해당 개체 컨텍스트에 속합니다. 이 컨텍스트는 쿼리를 작성하고 실행하는 데 필요한 연결 및 메타데이터 정보를 제공합니다. <xref:System.Data.Objects.ObjectQuery%601> 제네릭 클래스는 LINQ 쿼리를 증분 빌드할 수 있는 작성기 메서드를 가지고 있는 <xref:System.Linq.IQueryable%601> 제네릭 인터페이스를 구현합니다. C# `var` 키워드(Visual Basic에서는 로컬 형식 유추가 가능한 경우 `Dim`)를 사용하여 컴파일러에서 엔터티 형식을 유추하도록 할 수도 있습니다.  
+ <xref:System.Data.Objects.ObjectQuery%601> 제네릭 클래스는 0개 이상의 형식화된 엔터티로 구성된 컬렉션을 반환하는 쿼리를 나타냅니다. 개체 쿼리는 수동으로 생성되는 대신 일반적으로 기존 개체 컨텍스트에서 생성되며 항상 해당 개체 컨텍스트에 속합니다. 이 컨텍스트는 쿼리를 작성 하 고 실행 하는 데 필요한 연결 및 메타 데이터 정보를 제공 합니다. <xref:System.Data.Objects.ObjectQuery%601> 제네릭 클래스는 LINQ 쿼리를 증분 빌드할 수 있는 작성기 메서드를 가지고 있는 <xref:System.Linq.IQueryable%601> 제네릭 인터페이스를 구현합니다. C# `var` 키워드(Visual Basic에서는 로컬 형식 유추가 가능한 경우 `Dim`)를 사용하여 컴파일러에서 엔터티 형식을 유추하도록 할 수도 있습니다.  
   
 ## <a name="composing-the-queries"></a>쿼리 작성  
  <xref:System.Data.Objects.ObjectQuery%601> 제네릭 인터페이스를 구현하는 <xref:System.Linq.IQueryable%601> 제네릭 클래스의 인스턴스는 LINQ to Entities 쿼리의 데이터 소스 역할을 합니다. 쿼리에는 데이터 소스에서 검색하려는 정보를 정확히 지정해야 합니다. 또한 정보를 반환하기 전에 정보에 대한 정렬, 그룹화 및 구체화하는 방법을 쿼리에 지정할 수 있습니다. LINQ에서 쿼리는 변수에 저장됩니다. 이 쿼리 변수는 어떠한 작업을 수행하거나 데이터를 반환하지 않고 쿼리 정보를 저장하기만 합니다. 쿼리를 만든 후에는 해당 쿼리를 실행하여 데이터를 검색해야 합니다.  
@@ -35,7 +36,7 @@ LINQ to Entities에서는 개발자가 Visual Basic 또는 Visual C#을 사용�
 ## <a name="query-conversion"></a>쿼리 변환  
  LINQ to Entities 쿼리를 Entity Framework에 대해 실행하려면 LINQ 쿼리를 Entity Framework에 대해 실행할 수 있는 명령 트리 표현으로 변환해야 합니다.  
   
- LINQ to Entities 쿼리는 LINQ 표준 쿼리 연산자 (예: <xref:System.Linq.Queryable.Select%2A>, <xref:System.Linq.Queryable.Where%2A>및 <xref:System.Linq.Queryable.GroupBy%2A>)와 식 (x > 10, Contact. LastName 등)으로 구성 됩니다. LINQ 연산자는 클래스로 정의되지 않으며 클래스에 있는 메서드입니다. LINQ에서 식은 <xref:System.Linq.Expressions> 네임스페이스 내의 형식에 허용되는 모든 항목을 포함할 수 있습니다. 확대하면 람다 함수로 표현할 수 있는 모든 항목을 포함할 수 있습니다. LINQ의 식은 <xref:System.Data.Objects.ObjectQuery%601>에서 지원되고 정의에 따라 데이터베이스에서 허용되는 연산으로 제한된 Entity Framework에서 허용되는 식의 상위 집합입니다.  
+ LINQ to Entities 쿼리는 LINQ 표준 쿼리 연산자 (예: <xref:System.Linq.Queryable.Select%2A> , <xref:System.Linq.Queryable.Where%2A> 및 <xref:System.Linq.Queryable.GroupBy%2A> )와 식 (x > 10, Contact. LastName 등)으로 구성 됩니다. LINQ 연산자는 클래스로 정의되지 않으며 클래스에 있는 메서드입니다. LINQ에서 식은 <xref:System.Linq.Expressions> 네임스페이스 내의 형식에 허용되는 모든 항목을 포함할 수 있습니다. 확대하면 람다 함수로 표현할 수 있는 모든 항목을 포함할 수 있습니다. LINQ의 식은 <xref:System.Data.Objects.ObjectQuery%601>에서 지원되고 정의에 따라 데이터베이스에서 허용되는 연산으로 제한된 Entity Framework에서 허용되는 식의 상위 집합입니다.  
   
  Entity Framework에서는 연산자와 식이 모두 단일 형식 계층 구조로 표현된 다음 명령 트리에 배치됩니다. 명령 트리는 Entity Framework에서 쿼리를 실행하는 데 사용됩니다. LINQ 쿼리를 명령 트리로 표현할 수 없는 경우에는 쿼리를 변환할 때 예외가 throw됩니다. LINQ to Entities 쿼리를 변환하는 데는 표준 쿼리 연산자 변환과 식 변환이라는 두 가지 하위 변환이 수반됩니다.  
   
@@ -88,7 +89,7 @@ LINQ to Entities에서는 개발자가 Visual Basic 또는 Visual C#을 사용�
   
  [LINQ to Entities에서 알려진 문제 및 고려 사항](known-issues-and-considerations-in-linq-to-entities.md)  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [LINQ to Entities에서 알려진 문제 및 고려 사항](known-issues-and-considerations-in-linq-to-entities.md)
 - [LINQ(Language-Integrated Query) - C#](../../../../../csharp/programming-guide/concepts/linq/index.md)

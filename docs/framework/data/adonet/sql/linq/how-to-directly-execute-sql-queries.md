@@ -1,16 +1,17 @@
 ---
 title: '방법: SQL 쿼리 직접 실행'
+description: ExecuteQuery를 사용 하 여 쿼리를 실행 한 다음 LINQ to SQL 쿼리가 충분 하지 않은 경우 결과를 개체로 직접 변환 하는 방법을 알아봅니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e491b9bf-741a-4296-9f51-76c25ddf6a82
-ms.openlocfilehash: a4971bc05b22c38790c5fd1493e70cccf5eaae16
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 59bd404e41f6be1181d6a625c31ee23358db0df3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793788"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286367"
 ---
 # <a name="how-to-directly-execute-sql-queries"></a>방법: SQL 쿼리 직접 실행
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]을 작성한 쿼리를 텍스트 형식의 매개 변수가 있는 SQL 쿼리로 변환하고 SQL 서버에 전달하여 처리합니다.  
@@ -33,9 +34,9 @@ ms.locfileid: "70793788"
  [!code-csharp[DLinqQuerying#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQuerying/cs/Program.cs#5)]
  [!code-vb[DLinqQuerying#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQuerying/vb/Module1.vb#5)]  
   
- 매개 변수는 `Console.WriteLine()` 및 `String.Format()`에서 사용되는 동일한 중괄호 표기법을 사용하여 쿼리 텍스트에서 표현됩니다. 실제로는 사용자가 제공 하는 쿼리 문자열에서 실제로 호출 되며, 중괄호로 묶인 매개 변수를 @p1 , ..., @p(n) @p0과 같은 생성 된 매개 변수 이름으로 대체 합니다. `String.Format()`  
+ 매개 변수는 `Console.WriteLine()` 및 `String.Format()`에서 사용되는 동일한 중괄호 표기법을 사용하여 쿼리 텍스트에서 표현됩니다. 실제로 `String.Format()` 는 사용자가 제공 하는 쿼리 문자열에서 실제로 호출 되며, 중괄호로 묶인 매개 변수를 @p0 , @p1 ..., @p (n)과 같은 생성 된 매개 변수 이름으로 대체 합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [배경 정보](background-information.md)
 - [데이터베이스 쿼리](querying-the-database.md)

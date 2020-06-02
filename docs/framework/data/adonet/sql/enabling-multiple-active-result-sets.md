@@ -1,16 +1,17 @@
 ---
 title: MARS(Multiple Active Result Sets) 사용
+description: 연결 문자열에서 MARS를 사용 하거나 사용 하지 않도록 설정 하는 방법에 대해 알아봅니다. ADO.NET에서 단일 연결을 사용 하 여 여러 일괄 처리를 실행할 수 있도록 SQL Server와 함께 작동 합니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 72125be835298218e5445fe1915d6a17f5008bb2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43bdfebce291c3c1d6c90104c5fef440b295934b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148727"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286483"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>MARS(Multiple Active Result Sets) 사용
 MARS(Multiple Active Result Sets)는 단일 연결에서 여러 배치를 실행할 수 있도록 하는 SQL Server의 기능입니다. SQL Server에 MARS가 활성화되어 있으면 명령 개체를 사용할 때마다 연결에 세션이 추가됩니다.  
@@ -94,7 +95,7 @@ string connectionString = "Data Source=MSSQL1;" +
   
  메시지: 다른 세션에서 트랜잭션 컨텍스트를 사용 중입니다.  
   
- 출처: .NET SqlClient 데이터 공급자  
+ 소스: .NET SqlClient Data Provider  
   
  예상: (null)  
   

@@ -1,22 +1,23 @@
 ---
 title: '방법: 데이터베이스에서 행 삭제'
+description: 테이블 관련 컬렉션에서 LINQ to SQL 개체를 제거 하 여 데이터베이스의 행을 삭제 하는 방법에 대해 알아봅니다. LINQ to SQL는 삭제를 SQL DELETE 명령으로 변환 합니다.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2144c99b-8055-4080-a5c6-1ea14335e2a3
-ms.openlocfilehash: 421735567c527ac9a70cc5eefdbd7570599faac7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d08621e834961e1db9312cac36bd2e69133142b5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782010"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286393"
 ---
 # <a name="how-to-delete-rows-from-the-database"></a>방법: 데이터베이스에서 행 삭제
 
-테이블 관련 컬렉션에서 해당 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개체를 제거 하 여 데이터베이스의 행을 삭제할 수 있습니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]변경 내용을 적절 한 SQL `DELETE` 명령으로 변환 합니다.
+테이블 관련 컬렉션에서 해당 개체를 제거 하 여 데이터베이스의 행을 삭제할 수 있습니다 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] . [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]변경 내용을 적절 한 SQL 명령으로 변환 `DELETE` 합니다.
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 하위 삭제 작업을 지원하거나 인식하지 않습니다. 제약 조건이 있는 테이블의 행을 삭제하려면 다음 작업 중 하나를 수행해야 합니다.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 하위 삭제 작업을 지원 하거나 인식 하지 않습니다. 제약 조건이 있는 테이블의 행을 삭제하려면 다음 작업 중 하나를 수행해야 합니다.
 
 - 데이터베이스의 외래 키 제약 조건에 `ON DELETE CASCADE` 규칙을 설정합니다.
 
@@ -29,7 +30,7 @@ ms.locfileid: "70782010"
 >
 > Visual Studio를 사용 하는 개발자는 개체 관계형 디자이너을 사용 하 여 동일한 목적으로 저장 프로시저를 개발할 수 있습니다.
 
-다음 단계에서는 올바른 <xref:System.Data.Linq.DataContext>를 사용하여 사용자가 Northwind 데이터베이스에 연결되는 것으로 가정합니다. 자세한 내용은 [방법: 데이터베이스](how-to-connect-to-a-database.md)에 연결 합니다.
+다음 단계에서는 올바른 <xref:System.Data.Linq.DataContext>를 사용하여 사용자가 Northwind 데이터베이스에 연결되는 것으로 가정합니다. 자세한 내용은 [방법: 데이터베이스에 연결](how-to-connect-to-a-database.md)을 참조 하세요.
 
 ### <a name="to-delete-a-row-in-the-database"></a>데이터베이스에서 행을 삭제하려면
 
@@ -53,8 +54,8 @@ ms.locfileid: "70782010"
 [!code-csharp[DLinqCascadeWorkaround#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCascadeWorkaround/cs/Program.cs#1)]
 [!code-vb[DLinqCascadeWorkaround#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCascadeWorkaround/vb/Module1.vb#1)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [방법: 변경 내용 충돌 관리](how-to-manage-change-conflicts.md)
-- [방법: 저장 프로시저를 할당하여 업데이트, 삽입 및 삭제 수행(O/R 디자이너)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)
+- [방법: 변경 충돌 관리](how-to-manage-change-conflicts.md)
+- [방법: 저장 프로시저를 할당 하 여 업데이트, 삽입 및 삭제 수행 (O/R 디자이너)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)
 - [데이터 변경 및 변경 내용 전송](making-and-submitting-data-changes.md)

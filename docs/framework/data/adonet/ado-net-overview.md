@@ -1,13 +1,14 @@
 ---
 title: 개요
+description: .NET Framework에서 ADO.NET의 개요를 읽고 자세한 설명 및 예제는 리소스 정보를 참조 하세요.
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: d5dc9cf7081c6876118914a0b95853a5a7ca5e57
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 2ff3b7ad197bfe1e1c12e382f3a59bd470c57a75
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980342"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287157"
 ---
 # <a name="adonet-overview"></a>ADO.NET 개요
 ADO.NET은 OLE DB 및 ODBC를 통해 노출되는 데이터 소스, SQL Server 및 XML과 같은 데이터 소스에 대한 일관성 있는 액세스를 제공합니다. 데이터 공유 소비자 애플리케이션은 ADO.NET을 통해 이러한 데이터 소스에 연결하여 포함된 데이터를 검색, 처리 및 업데이트할 수 있습니다.  
@@ -44,7 +45,7 @@ ADO.NET은 OLE DB 및 ODBC를 통해 노출되는 데이터 소스, SQL Server �
  [ADO.NET 코드 예제](ado-net-code-examples.md)  
  ADO.NET 데이터 공급자를 사용하여 데이터를 검색하는 코드 샘플을 제공합니다.  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
  [ADO.NET의 새로운 기능](whats-new.md)  
  ADO.NET에 새로 추가된 기능을 소개합니다.  
   
@@ -57,7 +58,7 @@ ADO.NET은 OLE DB 및 ODBC를 통해 노출되는 데이터 소스, SQL Server �
  [ADO.NET에서 데이터 검색 및 수정](retrieving-and-modifying-data.md)  
  데이터 소스에 연결하고, 데이터를 검색하고, 데이터를 수정하는 방법을 설명합니다. 여기에는 `DataReaders` 및 `DataAdapters`가 포함됩니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ADO.NET](index.md)
 - [Visual Studio에서 데이터 액세스](/visualstudio/data-tools/accessing-data-in-visual-studio)

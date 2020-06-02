@@ -1,6 +1,6 @@
 ---
 title: 보안 및 사용자 입력
-description: 코드는 사용자 입력 데이터를 다른 코드에 매개 변수로 전달할 수 있으며, 이는 보안에 영향을 줄 수 있습니다. 문제가 있는 입력을 거부하기 위해 범위 검사를 수행할 수 있습니다.
+description: 코드는 사용자가 입력 한 데이터를 다른 코드에 대 한 매개 변수로 전달 하 여 보안에 영향을 줄 수 있습니다. 범위 검사를 수행 하 여 문제가 있는 입력을 거부할 수 있습니다.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - secure coding, user input
 - code security, user input
 ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
-ms.openlocfilehash: fa9f8d4708e928c51e446d8369c9b4556fc6fb77
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 995af30385790a88718193e7abad1db7bc4b56c3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186102"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84275947"
 ---
 # <a name="security-and-user-input"></a>보안 및 사용자 입력
 
@@ -24,7 +24,7 @@ ms.locfileid: "79186102"
 
 사용자 데이터와 관련된 중요한 고려 사항은 다음과 같습니다.
 
-- 서버 응답에 있는 모든 사용자 데이터는 클라이언트 쪽의 서버 사이트 컨텍스트에서 실행됩니다. 예를 들어 웹 서버가 사용자 데이터를 가져와 반환된 웹 페이지에 삽입하는 경우 스크립트 ** \<>** 태그를 포함하고 서버에서 처럼 실행할 수 있습니다.
+- 서버 응답에 있는 모든 사용자 데이터는 클라이언트 쪽의 서버 사이트 컨텍스트에서 실행됩니다. 웹 서버에서 사용자 데이터를 가져와서 반환 된 웹 페이지에 삽입 하는 경우 예를 들어 태그를 포함 **\<script>** 하 고 서버에서와 같이 실행할 수 있습니다.
 
 - 클라이언트는 어떤 URL이라도 요청할 수 있습니다.
 
@@ -60,4 +60,4 @@ ms.locfileid: "79186102"
 
 ## <a name="see-also"></a>참고 항목
 
-- [보안 코딩 지침](../../../docs/standard/security/secure-coding-guidelines.md)
+- [보안 코딩 지침](secure-coding-guidelines.md)
