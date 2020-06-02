@@ -7,17 +7,17 @@ helpviewer_keywords:
 - arrays [.NET Framework], usage guidelines
 - empty arrays
 ms.assetid: 66a1b3d8-6f3f-4715-b235-e1ff95e32d8e
-ms.openlocfilehash: d4a1f379a88231654c710b1df7b505316377c915
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 30277507050091de6b1e9293401d61ac5e351a1f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741799"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84280623"
 ---
 # <a name="arrays"></a>배열
-공용 Api에서 배열에 대 한 컬렉션을 사용 하는 것이 좋습니다 ✔️. 컬렉션 [섹션에서는](../../../docs/standard/design-guidelines/guidelines-for-collections.md) 컬렉션과 배열 중에서 선택 하는 방법에 대 한 세부 정보를 제공 합니다.
+공용 Api에서 배열에 대 한 컬렉션을 사용 하는 것이 좋습니다 ✔️. 컬렉션 [섹션에서는](guidelines-for-collections.md) 컬렉션과 배열 중에서 선택 하는 방법에 대 한 세부 정보를 제공 합니다.
 
- ❌ 읽기 전용 배열 필드를 사용 하지 않습니다. 필드 자체는 읽기 전용 이며 변경할 수 없지만 배열의 요소는 변경할 수 있습니다.
+ ❌읽기 전용 배열 필드는 사용 하지 마십시오. 필드 자체는 읽기 전용 이며 변경할 수 없지만 배열의 요소는 변경할 수 있습니다.
 
  다차원 배열 대신 가변 배열을 사용 하는 것이 좋습니다 ✔️.
 
@@ -30,5 +30,5 @@ ms.locfileid: "76741799"
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Array>
-- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
-- [사용 지침](../../../docs/standard/design-guidelines/usage-guidelines.md)
+- [프레임 워크 디자인 지침](index.md)
+- [사용 지침](usage-guidelines.md)
