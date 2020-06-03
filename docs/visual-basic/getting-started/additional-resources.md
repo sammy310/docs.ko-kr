@@ -46,7 +46,7 @@ ms.locfileid: "81243208"
 |----------|----------------|
 |[Channel9](https://channel9.msdn.com/)|비디오, Wiki 및 포럼을 통해 커뮤니티를 지속적으로 운영합니다.|
 
-### <a name="support"></a>지원
+### <a name="support"></a>고객 지원팀
 
 |URL|설명|
 |----------|----------------|
@@ -61,7 +61,7 @@ ms.locfileid: "81243208"
 |[vbCity](http://vbcity.com/)|Visual Basic 및 .NET에 대해 자세히 알아보고 질문하기 위한 커뮤니티 사이트입니다.|
 |[스택 오버플로](https://stackoverflow.com/questions/tagged/vb.net)|스택 오버플로는 개발자를 위한 질문과 대답 사이트입니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Visual Basic 시작](../../visual-basic/getting-started/index.md)
 - [의견 보내기](/visualstudio/ide/feedback-options)

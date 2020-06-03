@@ -25,11 +25,11 @@ ms.locfileid: "82795367"
 
 1. 그 자체를 쿼리할 수 있는 열거 가능한 형식을 만듭니다.
 
-2. 쿼리가 범위 변수 `ToLower`에서 `word`를 한 번만 호출할 수 있도록 합니다. `let`을 사용하지 않을 경우 `ToLower` 절의 각 조건자에서 `where`를 호출해야 합니다.
+2. 쿼리가 범위 변수 `word`에서 `ToLower`를 한 번만 호출할 수 있도록 합니다. `let`을 사용하지 않을 경우 `where` 절의 각 조건자에서 `ToLower`를 호출해야 합니다.
 
 [!code-csharp[cscsrefQueryKeywords#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Let.cs#28)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [쿼리 키워드(LINQ)](query-keywords.md)

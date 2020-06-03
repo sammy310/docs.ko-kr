@@ -20,7 +20,7 @@ serialization을 사용하면 인스턴스 간에 개체의 데이터를 유지�
 > [!IMPORTANT]
 > 이 예제에서는 이진 형식 파일의 데이터를 저장합니다. 이러한 형식은 암호 또는 신용 카드 정보와 같은 중요한 데이터에 사용하면 안 됩니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 - 빌드하고 실행하려면 [.NET Core SDK](https://dotnet.microsoft.com/download)를 설치합니다.
 
@@ -71,7 +71,7 @@ Loan 클래스의 값을 유지하려면 먼저 클래스를 `Serializable` 속�
 
 [!code-csharp[Loan class definition](../../../../../samples/snippets/csharp/serialization/Loan.cs#2)]
 
-<xref:System.SerializableAttribute>는 클래스의 모든 내용을 파일에 유지할 수 있음을 컴파일러에 알립니다. `PropertyChanged` 이벤트가 저장되어야 하는 개체 그래프의 일부를 나타내지 않기 때문에 직렬화되지 않아야 합니다. 그러면 해당 이벤트에 연결된 모든 개체를 직렬화합니다. <xref:System.NonSerializedAttribute> 이벤트 처리기의 필드 선언에 `PropertyChanged`를 추가할 수 있습니다.
+<xref:System.SerializableAttribute>는 클래스의 모든 내용을 파일에 유지할 수 있음을 컴파일러에 알립니다. `PropertyChanged` 이벤트가 저장되어야 하는 개체 그래프의 일부를 나타내지 않기 때문에 직렬화되지 않아야 합니다. 그러면 해당 이벤트에 연결된 모든 개체를 직렬화합니다. `PropertyChanged` 이벤트 처리기의 필드 선언에 <xref:System.NonSerializedAttribute>를 추가할 수 있습니다.
 
 [!code-csharp[Disable serialization for the event handler](../../../../../samples/snippets/csharp/serialization/Loan.cs#3)]
 
@@ -99,7 +99,7 @@ C# 7.3부터는 `field` 대상 값을 사용하여 자동 구현 속성의 지�
 
 이 시점에서 다시 애플리케이션을 빌드 및 실행할 수 있습니다. 처음으로 실행되면 이자율이 7.5에서 시작한 다음, 7.1로 변경됩니다. 애플리케이션을 닫았다가 다시 엽니다. 이제 애플리케이션이 저장된 파일을 읽는 메시지를 인쇄하고 이자율은 코드가 변경하기 전에도 7.1입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Serialization(C#)](index.md)
 - [C# 프로그래밍 가이드](../../index.md)

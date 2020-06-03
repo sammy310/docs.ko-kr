@@ -17,7 +17,7 @@ ms.locfileid: "82795172"
 
 `new` 키워드를 사용하여 [형식의 인스턴스를 만들](../operators/new-operator.md)거나 [제네릭 형식 제약 조건](./new-constraint.md)으로 만들 수도 있습니다.
 
-상속된 멤버를 숨기려면 동일한 멤버 이름을 사용하여 파생된 클래스에 해당 멤버를 선언한 다음 `new` 키워드를 사용하여 이를 한정합니다. 예들 들어 다음과 같습니다.
+상속된 멤버를 숨기려면 동일한 멤버 이름을 사용하여 파생된 클래스에 해당 멤버를 선언한 다음 `new` 키워드를 사용하여 이를 한정합니다. 예를 들어:
 
 [!code-csharp[csrefKeywordsOperator#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#8)]
 
@@ -25,7 +25,7 @@ ms.locfileid: "82795172"
 
 상속을 사용한 이름 숨기기는 다음 중 한 가지 형식을 취합니다.
 
-- 일반적으로 클래스 또는 구조체에 파생된 상수, 필드, 속성 또는 형식은 동일한 이름의 모든 기본 클래스 멤버를 숨깁니다. 이 사항이 적용되지 않는 경우가 있습니다. 예를 들어 호출할 수 없는 형식이 포함된 `N`이라는 이름의 새 필드를 선언하고 기본 형식에서 `N`을 메서드로 선언하면 새 필드가 호출 구문에서 기본 선언을 숨기지 않습니다. 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/expressions.md#member-lookup)의 [멤버 조회](~/_csharplang/spec/introduction.md) 섹션을 참조하세요.
+- 일반적으로 클래스 또는 구조체에 파생된 상수, 필드, 속성 또는 형식은 동일한 이름의 모든 기본 클래스 멤버를 숨깁니다. 이 사항이 적용되지 않는 경우가 있습니다. 예를 들어 호출할 수 없는 형식이 포함된 `N`이라는 이름의 새 필드를 선언하고 기본 형식에서 `N`을 메서드로 선언하면 새 필드가 호출 구문에서 기본 선언을 숨기지 않습니다. 자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [멤버 조회](~/_csharplang/spec/expressions.md#member-lookup) 섹션을 참조하세요.
 
 - 클래스 또는 구조체에 파생된 메서드는 기본 클래스에서 동일한 이름의 속성, 필드 및 형식을 숨깁니다. 또한 시그니처가 동일한 기본 클래스 메서드도 모두 숨깁니다.
 
@@ -55,9 +55,9 @@ The keyword new is required on 'MyDerivedC.x' because it hides inherited member 
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](~/_csharplang/spec/classes.md#the-new-modifier)의 [새 한정자](~/_csharplang/spec/introduction.md) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [새 한정자](~/_csharplang/spec/classes.md#the-new-modifier) 섹션을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

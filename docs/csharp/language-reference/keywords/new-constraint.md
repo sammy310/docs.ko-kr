@@ -29,9 +29,9 @@ ms.locfileid: "82795341"
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](~/_csharplang/spec/classes.md#type-parameter-constraints)의 [유형 매개 변수 제약 조건](~/_csharplang/spec/introduction.md) 섹션을 참조하세요.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [유형 매개 변수 제약 조건](~/_csharplang/spec/classes.md#type-parameter-constraints) 섹션을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)

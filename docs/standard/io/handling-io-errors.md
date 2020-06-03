@@ -20,7 +20,7 @@ ms.locfileid: "81242675"
 ---
 # <a name="handling-io-errors-in-net"></a>.NET에서 I/O 오류 처리
 
-메서드 호출에서 throw될 수 있는 예외(예: 시스템 부하가 큰 경우의 <xref:System.OutOfMemoryException> 또는 프로그래머 오류로 인한 <xref:System.NullReferenceException>) 외에도, .NET 파일 시스템 메서드는 다음과 같은 예외를 throw할 수 있습니다.
+메서드 호출에서 throw될 수 있는 예외(예: 시스템 부하가 큰 경우의 <xref:System.NullReferenceException> 또는 프로그래머 오류로 인한 <xref:System.OutOfMemoryException>) 외에도, .NET 파일 시스템 메서드는 다음과 같은 예외를 throw할 수 있습니다.
 
 - <xref:System.IO.IOException?displayProperty=nameWithType> - 모든 <xref:System.IO> 예외 유형의 기본 클래스입니다. 운영 체제의 반환 코드가 다른 예외 유형에 직접 매핑되지 않는 오류에 대해 throw됩니다.
 - <xref:System.IO.FileNotFoundException?displayProperty=nameWithType>.
@@ -47,15 +47,15 @@ ms.locfileid: "81242675"
 
 | 예외 형식 | .NET Core | .NET Framework |
 |---|---|---|
-| <xref:System.IO.IOException> | yes | yes |
-| <xref:System.IO.FileNotFoundException> | yes | yes |
-| <xref:System.IO.DirectoryNotFoundException> | yes | yes |
-| <xref:System.IO.DriveNotFoundException?> | yes | yes |
-| <xref:System.IO.PathTooLongException> | yes | yes |
-| <xref:System.OperationCanceledException> | yes | yes |
-| <xref:System.UnauthorizedAccessException> | yes | yes |
-| <xref:System.ArgumentException> | .NET Core 2.0 및 이전| yes |
-| <xref:System.NotSupportedException> | 아니요 | yes |
+| <xref:System.IO.IOException> | 예 | 예 |
+| <xref:System.IO.FileNotFoundException> | 예 | 예 |
+| <xref:System.IO.DirectoryNotFoundException> | 예 | 예 |
+| <xref:System.IO.DriveNotFoundException?> | 예 | 예 |
+| <xref:System.IO.PathTooLongException> | 예 | 예 |
+| <xref:System.OperationCanceledException> | 예 | 예 |
+| <xref:System.UnauthorizedAccessException> | 예 | 예 |
+| <xref:System.ArgumentException> | .NET Core 2.0 및 이전| 예 |
+| <xref:System.NotSupportedException> | 아니요 | 예 |
 | <xref:System.Security.SecurityException> | 아니요 | 제한된 신뢰만 |
 
 ## <a name="handling-ioexception"></a>IOException 처리
@@ -83,7 +83,7 @@ ms.locfileid: "81242675"
 [!code-csharp[io-exception-handling](~/samples/snippets/standard/io/io-exceptions/cs/io-exceptions.cs)]
 [!code-vb[io-exception-handling](~/samples/snippets/standard/io/io-exceptions/vb/io-exceptions.vb)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [.NET의 예외 처리 및 Throw](../exceptions/index.md)
 - [예외 처리(작업 병렬 라이브러리)](../parallel-programming/exception-handling-task-parallel-library.md)

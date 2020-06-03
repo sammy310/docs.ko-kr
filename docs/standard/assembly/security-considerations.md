@@ -16,12 +16,12 @@ helpviewer_keywords:
 - security [.NET Framework], assemblies
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
-ms.openlocfilehash: 7f897241b121cf1bd52d02ee5f487aeafafc3cb0
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: d0b822f725444248d1037c21ffea9afe1cebb7e2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378654"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290021"
 ---
 # <a name="assembly-security-considerations"></a>어셈블리 보안 고려 사항
 어셈블리를 빌드할 때 어셈블리를 실행하는 데 필요한 권한을 지정할 수 있습니다. 어셈블리에 대한 특정 권한 부여 여부는 증명 정보를 바탕으로 합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "83378654"
 - 코드에 필요할 수 있는 권한을 얻기 위한 권한 요청을 사용하지 않고, 대신 권한이 부여되지 않을 경우를 대비하여 보안 예외를 처리할 수 있도록 준비합니다.  
   
   > [!NOTE]
-  > 보안은 매우 복잡한 영역이기 때문에 선택할 수 있는 옵션도 다양합니다. 자세한 내용은 [주요 보안 개념](../../standard/security/key-security-concepts.md)을 참조하세요.  
+  > 보안은 매우 복잡한 영역이기 때문에 선택할 수 있는 옵션도 다양합니다. 자세한 내용은 [주요 보안 개념](../security/key-security-concepts.md)을 참조하세요.  
   
  로드 시, 어셈블리의 증명 정보는 보안 정책에 대한 입력으로 사용됩니다. 보안 정책은 사용자 정책 설정을 비롯하여 엔터프라이즈 및 컴퓨터의 관리자에 의해 설정되며 모든 관리 코드가 실행될 때 부여되는 권한 집합을 결정합니다. 보안 정책은 어셈블리의 게시자(서명 도구로 생성된 서명이 있는 경우), 어셈블리를 다운로드한 웹 사이트 및 영역(Internet Explorer 용어), 어셈블리의 강력한 이름 등에 대해 설정될 수 있습니다. 예를 들어, 컴퓨터 관리자는 특정 웹 사이트에서 다운로드되고 지정된 소프트웨어 회사에서 서명한 모든 코드가 컴퓨터의 데이터베이스에 액세스할 수 있지만 컴퓨터의 디스크에 쓰지는 못하도록 보안 정책을 설정할 수 있습니다.  
   

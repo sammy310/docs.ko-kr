@@ -13,7 +13,7 @@ ms.locfileid: "82794665"
 ---
 # <a name="console-app"></a>콘솔 앱
 
-이 자습서에서는 .NET Core 및 C# 언어의 다양한 기능에 대해 설명합니다. 다음 내용을 배웁니다.
+이 자습서에서는 .NET Core 및 C# 언어의 다양한 기능에 대해 설명합니다. 다음에 대해 알아봅니다.
 
 - .NET Core CLI의 기본 사항
 - C# 콘솔 애플리케이션의 구조
@@ -25,7 +25,7 @@ ms.locfileid: "82794665"
 
 이 자습서에는 많은 기능이 있습니다. 하나씩 빌드해 보겠습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 - .NET Core를 실행하도록 컴퓨터를 설정합니다. [.NET Core 다운로드](https://dotnet.microsoft.com/download) 페이지에서 설치 지침을 찾을 수 있습니다. Windows, Linux, macOS 또는 Docker 컨테이너에서 이 애플리케이션을 실행할 수 있습니다.
 
@@ -55,7 +55,7 @@ namespace TeleprompterConsole
 
 ## <a name="reading-and-echoing-the-file"></a>파일 읽기 및 에코
 
-추가할 첫 번째 기능은 텍스트 파일을 읽고 콘솔에 해당 텍스트를 모두 표시하는 기능입니다. 먼저 텍스트 파일을 추가해 보겠습니다. 이 [샘플](https://github.com/dotnet/samples/raw/master/csharp/getting-started/console-teleprompter/sampleQuotes.txt)에 대한 GitHub 리포지토리의 [sampleQuotes.txt](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter) 파일을 프로젝트 디렉터리로 복사합니다. 이 파일은 애플리케이션에 대한 스크립트로 작동합니다. 이 항목에 대한 샘플 앱을 다운로드하는 방법에 대한 정보를 원하는 경우 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples) 항목의 지침을 참조하세요.
+추가할 첫 번째 기능은 텍스트 파일을 읽고 콘솔에 해당 텍스트를 모두 표시하는 기능입니다. 먼저 텍스트 파일을 추가해 보겠습니다. 이 [샘플](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter)에 대한 GitHub 리포지토리의 [sampleQuotes.txt](https://github.com/dotnet/samples/raw/master/csharp/getting-started/console-teleprompter/sampleQuotes.txt) 파일을 프로젝트 디렉터리로 복사합니다. 이 파일은 애플리케이션에 대한 스크립트로 작동합니다. 이 항목에 대한 샘플 앱을 다운로드하는 방법에 대한 정보를 원하는 경우 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples) 항목의 지침을 참조하세요.
 
 다음에는 다음 메서드를 `Program` 클래스에 추가합니다(`Main` 메서드 바로 아래).
 
@@ -86,7 +86,7 @@ using System.IO;
 
 여러분에게 생소할 수 있는 두 개의 다른 C# 구문 요소가 있습니다. 이 메서드의 [`using`](../language-reference/keywords/using-statement.md) 문은 리소스 정리를 관리합니다. `using` 문(이 예제의 `reader`)에서 초기화되는 변수는 <xref:System.IDisposable> 인터페이스를 구현해야 합니다. 이 인터페이스는 리소스를 해제해야 할 때 호출되어야 하는 단일 메서드 `Dispose`를 정의합니다. 컴파일러는 실행 중에 `using` 문의 닫는 중괄호에 도달하면 해당 호출을 생성합니다. 컴파일러에서 생성된 코드는 using 문으로 정의된 블록의 코드에서 예외가 throw되더라도 리소스가 해제되도록 합니다.
 
-`reader` 변수는 `var` 키워드를 사용하여 정의됩니다. [`var`](../language-reference/keywords/var.md)은 *암시적으로 형식화한 지역 변수*를 정의합니다. 즉, 변수의 형식이 변수에 할당된 개체의 컴파일 시간 형식에 의해 결정됩니다. 여기서는 <xref:System.IO.File.OpenText(System.String)> 개체에 해당하는 <xref:System.IO.StreamReader> 메서드의 반환 값입니다.
+`reader` 변수는 `var` 키워드를 사용하여 정의됩니다. [`var`](../language-reference/keywords/var.md)은 *암시적으로 형식화한 지역 변수*를 정의합니다. 즉, 변수의 형식이 변수에 할당된 개체의 컴파일 시간 형식에 의해 결정됩니다. 여기서는 <xref:System.IO.StreamReader> 개체에 해당하는 <xref:System.IO.File.OpenText(System.String)> 메서드의 반환 값입니다.
 
 이제 `Main` 메서드에서 파일을 읽는 코드를 채웁니다.
 
@@ -115,7 +115,7 @@ foreach (var word in words)
 yield return Environment.NewLine;
 ```
 
-다음에는 해당 파일 줄을 사용하는 방법을 수정하고 각 단어를 쓴 후에 지연을 추가합니다. `Console.WriteLine(line)` 메서드의 `Main` 문을 다음 블록으로 바꿉니다.
+다음에는 해당 파일 줄을 사용하는 방법을 수정하고 각 단어를 쓴 후에 지연을 추가합니다. `Main` 메서드의 `Console.WriteLine(line)` 문을 다음 블록으로 바꿉니다.
 
 ```csharp
 Console.Write(line);
@@ -135,7 +135,7 @@ if (!string.IsNullOrWhiteSpace(line))
 using System.Threading.Tasks;
 ```
 
-샘플을 실행하고 출력을 확인합니다. 이제 개별 단어가 출력되고 200밀리초의 지연이 발생합니다. 그러나 표시된 출력은 소스 텍스트 파일이 줄 바꿈 없는 80자 이상을 포함하는 여러 줄로 구성되므로 몇 가지 문제를 나타냅니다. 스크롤하면서 읽기 어려울 수 있습니다. 이 문제는 쉽게 해결할 수 있습니다. 각 줄의 길이를 추적하고 줄 길이가 특정 임계값에 도달할 때마다 새 줄을 생성하도록 하면 됩니다. 줄 길이를 포함하는 `words` 메서드의 `ReadFrom` 선언 다음에 지역 변수를 선언합니다.
+샘플을 실행하고 출력을 확인합니다. 이제 개별 단어가 출력되고 200밀리초의 지연이 발생합니다. 그러나 표시된 출력은 소스 텍스트 파일이 줄 바꿈 없는 80자 이상을 포함하는 여러 줄로 구성되므로 몇 가지 문제를 나타냅니다. 스크롤하면서 읽기 어려울 수 있습니다. 이 문제는 쉽게 해결할 수 있습니다. 각 줄의 길이를 추적하고 줄 길이가 특정 임계값에 도달할 때마다 새 줄을 생성하도록 하면 됩니다. 줄 길이를 포함하는 `ReadFrom` 메서드의 `words` 선언 다음에 지역 변수를 선언합니다.
 
 ```csharp
 var lineLength = 0;
@@ -219,7 +219,7 @@ private static async Task GetInput()
 
 이 메서드는 콘솔에서 키를 읽고 사용자가 '<'(보다 작음) 또는 '>'(보다 큼) 키를 누를 때 지연을 나타내는 지역 변수를 수정하는 <xref:System.Action> 대리자를 나타내는 람다 식을 만듭니다. 사용자가 'X' 또는 'x' 키를 누를 때 대리자 메서드가 완료되면 사용자가 언제든지 텍스트 표시를 중지할 수 있습니다. 이 메서드는 <xref:System.Console.ReadKey> 를 사용하여 차단한 후 사용자가 키를 누를 때까지 기다립니다.
 
-이 기능을 완료하려면 이러한 두 작업(`async Task` 및 `GetInput`)을 시작하고 이러한 두 작업 간에 공유 데이터를 관리하는 새 `ShowTeleprompter` 반환 메서드를 만들어야 합니다.
+이 기능을 완료하려면 이러한 두 작업(`GetInput` 및 `ShowTeleprompter`)을 시작하고 이러한 두 작업 간에 공유 데이터를 관리하는 새 `async Task` 반환 메서드를 만들어야 합니다.
 
 이러한 두 작업 간에 공유 데이터를 처리할 수 있는 클래스를 만들 차례입니다. 이 클래스에는 두 개의 공용 속성, 즉 지연과 파일이 완전히 읽혔음을 나타내는 `Done` 플래그가 포함됩니다.
 
@@ -247,13 +247,13 @@ namespace TeleprompterConsole
 }
 ```
 
-해당 클래스를 새 파일에 추가하고 위와 같이 `TeleprompterConsole` 네임스페이스에 클래스를 포함합니다. 또한 바깥쪽 클래스 또는 네임스페이스 이름 없이 `using static` 및 `Min` 메서드를 참조할 수 있도록 `Max` 문을 추가해야 합니다. [`using static`](../language-reference/keywords/using-static.md) 문은 하나의 클래스에서 메서드를 가져옵니다. 이것은 네임스페이스에서 모든 클래스를 가져오는 지금까지 사용했던 `using` 문과는 반대됩니다.
+해당 클래스를 새 파일에 추가하고 위와 같이 `TeleprompterConsole` 네임스페이스에 클래스를 포함합니다. 또한 바깥쪽 클래스 또는 네임스페이스 이름 없이 `Min` 및 `Max` 메서드를 참조할 수 있도록 `using static` 문을 추가해야 합니다. [`using static`](../language-reference/keywords/using-static.md) 문은 하나의 클래스에서 메서드를 가져옵니다. 이것은 네임스페이스에서 모든 클래스를 가져오는 지금까지 사용했던 `using` 문과는 반대됩니다.
 
 ```csharp
 using static System.Math;
 ```
 
-다음에는 새 `ShowTeleprompter` 개체를 사용하도록 `GetInput` 및 `config` 메서드를 업데이트해야 합니다. 두 작업을 모두 시작한 다음 첫 번째 작업이 완료될 때 종료되는 하나의 최종 `Task` 반환 `async` 메서드를 작성합니다.
+다음에는 새 `config` 개체를 사용하도록 `ShowTeleprompter` 및 `GetInput` 메서드를 업데이트해야 합니다. 두 작업을 모두 시작한 다음 첫 번째 작업이 완료될 때 종료되는 하나의 최종 `Task` 반환 `async` 메서드를 작성합니다.
 
 ```csharp
 private static async Task RunTeleprompter()
@@ -268,7 +268,7 @@ private static async Task RunTeleprompter()
 
 여기서 한 가지 새로운 메서드가 <xref:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])> 호출입니다. 그러면 인수 목록의 모든 작업이 완료되는 즉시 완료되는 `Task`가 만들어집니다.
 
-다음에는 지연을 위해 `ShowTeleprompter` 개체를 사용하도록 `GetInput` 및 `config` 메서드를 모두 업데이트해야 합니다.
+다음에는 지연을 위해 `config` 개체를 사용하도록 `ShowTeleprompter` 및 `GetInput` 메서드를 모두 업데이트해야 합니다.
 
 ```csharp
 private static async Task ShowTeleprompter(TelePrompterConfig config)
@@ -303,7 +303,7 @@ private static async Task GetInput(TelePrompterConfig config)
 }
 ```
 
-이 새 버전의 `ShowTeleprompter`는 `TeleprompterConfig` 클래스에서 새 메서드를 호출합니다. 이제 `Main` 대신 `RunTeleprompter`를 호출하도록 `ShowTeleprompter`을 업데이트해야 합니다.
+이 새 버전의 `ShowTeleprompter`는 `TeleprompterConfig` 클래스에서 새 메서드를 호출합니다. 이제 `ShowTeleprompter` 대신 `RunTeleprompter`를 호출하도록 `Main`을 업데이트해야 합니다.
 
 ```csharp
 RunTeleprompter().Wait();

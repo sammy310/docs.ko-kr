@@ -19,7 +19,7 @@ ms.locfileid: "81121499"
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-[ 클래스의 별칭인 ](../language-reference/builtin-types/reference-types.md#the-string-type)string<xref:System.String?displayProperty=nameWithType> 형식은 문자열 내용을 검색하기 위한 여러 가지 유용한 메서드를 제공합니다. 그중에 <xref:System.String.Contains%2A>, <xref:System.String.StartsWith%2A>, <xref:System.String.EndsWith%2A>, <xref:System.String.IndexOf%2A>, <xref:System.String.LastIndexOf%2A>입니다. <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 클래스는 텍스트에서 패턴을 검색하는 풍부한 어휘를 제공합니다. 이 문서에서는 이러한 기술 및 요구 사항에 대해 최상의 메서드를 선택하는 방법을 알아봅니다.
+<xref:System.String?displayProperty=nameWithType> 클래스의 별칭인 [string](../language-reference/builtin-types/reference-types.md#the-string-type) 형식은 문자열 내용을 검색하기 위한 여러 가지 유용한 메서드를 제공합니다. 그중에 <xref:System.String.Contains%2A>, <xref:System.String.StartsWith%2A>, <xref:System.String.EndsWith%2A>, <xref:System.String.IndexOf%2A>, <xref:System.String.LastIndexOf%2A>입니다. <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 클래스는 텍스트에서 패턴을 검색하는 풍부한 어휘를 제공합니다. 이 문서에서는 이러한 기술 및 요구 사항에 대해 최상의 메서드를 선택하는 방법을 알아봅니다.
 
 ## <a name="does-a-string-contain-text"></a>문자열에 텍스트가 포함되어 있나요?
 
@@ -39,9 +39,9 @@ ms.locfileid: "81121499"
 
 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 클래스를 사용하여 문자열을 검색할 수 있습니다. 이 검색은 단순한 텍스트 패턴에서 복잡한 텍스트 패턴까지 복잡성의 범위를 지정할 수 있습니다.
 
-다음 코드 예제에서는 문장에서 "the" 또는 "their"라는 문자를 검색하고 대/소문자를 무시합니다. 고정 메서드 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>은 검색을 수행합니다. 검색할 문자열 및 검색 패턴을 입력합니다. 이 경우에 세 번째 인수는 대/소문자 구분 검색을 지정합니다. 자세한 내용은 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>을 참조하세요.  
+다음 코드 예제에서는 문장에서 "the" 또는 "their"라는 문자를 검색하고 대/소문자를 무시합니다. 고정 메서드 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>은 검색을 수행합니다. 검색할 문자열 및 검색 패턴을 입력합니다. 이 경우에 세 번째 인수는 대/소문자 구분 검색을 지정합니다. 자세한 내용은 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>를 참조하세요.  
 
-검색 패턴은 검색할 텍스트를 설명합니다. 다음 표에서는 검색 패턴의 각 요소에 대해 설명합니다. (아래 표에서는 C# 문자열에서 `\`로 이스케이프되어야 하는 단일 `\\`을 사용합니다.)
+검색 패턴은 검색할 텍스트를 설명합니다. 다음 표에서는 검색 패턴의 각 요소에 대해 설명합니다. (아래 표에서는 C# 문자열에서 `\\`로 이스케이프되어야 하는 단일 `\`을 사용합니다.)
 
 | pattern  | 의미     |
 | -------- |-------------|
@@ -74,7 +74,7 @@ ms.locfileid: "81121499"
 
 [GitHub 리포지토리](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings)의 코드를 확인하여 이러한 샘플을 시험해 볼 수 있습니다. 또는 샘플을 [zip 파일로](../../../samples/snippets/csharp/how-to/strings.zip) 다운로드할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../programming-guide/index.md)
 - [문자열](../programming-guide/strings/index.md)

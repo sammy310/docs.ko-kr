@@ -13,7 +13,7 @@ ms.locfileid: "81463658"
 
 **이 문서의 적용 대상:**  ✔️ .NET Core 2.2 SDK 이상 버전
 
-## <a name="name"></a>name
+## <a name="name"></a>이름
 
 `dotnet list package` - 프로젝트 또는 솔루션에 대한 패키지 참조를 나열합니다.
 
@@ -30,7 +30,7 @@ dotnet list package -h|--help
 
 ## <a name="description"></a>설명
 
-`dotnet list package` 명령은 특정 프로젝트 또는 솔루션에 대한 모든 NuGet 패키지 참조를 나열하는 편리한 옵션을 제공합니다. 이 명령을 처리하는 데 필요한 자산을 포함하려면 먼저 프로젝트를 빌드해야 합니다. 다음 예제에서는 `dotnet list package`SentimentAnalysis[ 프로젝트에 대한 ](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) 명령의 출력을 보여 줍니다.
+`dotnet list package` 명령은 특정 프로젝트 또는 솔루션에 대한 모든 NuGet 패키지 참조를 나열하는 편리한 옵션을 제공합니다. 이 명령을 처리하는 데 필요한 자산을 포함하려면 먼저 프로젝트를 빌드해야 합니다. 다음 예제에서는 [SentimentAnalysis](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) 프로젝트에 대한 `dotnet list package` 명령의 출력을 보여 줍니다.
 
 ```output
 Project 'SentimentAnalysis' has the following package references
@@ -42,7 +42,7 @@ Project 'SentimentAnalysis' has the following package references
 (A) : Auto-referenced package.
 ```
 
-**요청됨** 열은 프로젝트 파일에 지정된 패키지 버전을 나타내고 이 버전은 범위일 수 있습니다. **해결됨** 열에는 프로젝트가 현재 사용 중이고 항상 단일 값인 버전이 나열됩니다. 이름 오른쪽에 `(A)`를 표시하는 패키지는 프로젝트 설정([ 형식, ](csproj.md#implicit-package-references) 또는 `Sdk` 속성 등)에서 유추된 `<TargetFramework>`암시적 패키지 참조`<TargetFrameworks>`를 나타냅니다.
+**요청됨** 열은 프로젝트 파일에 지정된 패키지 버전을 나타내고 이 버전은 범위일 수 있습니다. **해결됨** 열에는 프로젝트가 현재 사용 중이고 항상 단일 값인 버전이 나열됩니다. 이름 오른쪽에 `(A)`를 표시하는 패키지는 프로젝트 설정(`Sdk` 형식, `<TargetFramework>` 또는 `<TargetFrameworks>` 속성 등)에서 유추된 [암시적 패키지 참조](csproj.md#implicit-package-references)를 나타냅니다.
 
 `--outdated` 옵션을 사용하여 프로젝트에서 사용 중인 패키지에 사용 가능한 최신 버전이 있는지 확인합니다. 기본적으로 해결된 버전이 사전 릴리스 버전이 아닌 경우 `--outdated`는 안정적인 최신 패키지를 나열합니다. 최신 버전을 나열할 때 사전 릴리스 버전을 포함하려면 `--include-prerelease` 옵션도 지정합니다. 다음 예제에서는 이전 예제와 동일한 프로젝트에 대한 `dotnet list package --outdated --include-prerelease` 명령의 출력을 보여 줍니다.
 
@@ -57,7 +57,7 @@ Project `SentimentAnalysis` has the following updates to its packages
    > Microsoft.ML         1.4.0       1.4.0      1.5.0-preview
 ```
 
-프로젝트에 전이적 종속성이 있는지 확인해야 하는 경우에는 `--include-transitive` 옵션을 사용합니다. 다른 패키지에 의존하는 패키지를 프로젝트에 추가하면 전이적 종속성이 발생합니다. 다음 예제에서는 최상위 패키지 및 자신이 종속된 패키지를 표시하는, `dotnet list package --include-transitive`HelloPlugin[ 프로젝트에 대한 ](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin/HelloPlugin) 명령 실행의 출력을 보여 줍니다.
+프로젝트에 전이적 종속성이 있는지 확인해야 하는 경우에는 `--include-transitive` 옵션을 사용합니다. 다른 패키지에 의존하는 패키지를 프로젝트에 추가하면 전이적 종속성이 발생합니다. 다음 예제에서는 최상위 패키지 및 자신이 종속된 패키지를 표시하는, [HelloPlugin](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin/HelloPlugin) 프로젝트에 대한 `dotnet list package --include-transitive` 명령 실행의 출력을 보여 줍니다.
 
 ```output
 Project 'HelloPlugin' has the following package references
@@ -80,7 +80,7 @@ Project 'HelloPlugin' has the following package references
 
 - **`--framework <FRAMEWORK>`**
 
-  지정된 [대상 프레임워크](../../standard/frameworks.md)에 적용 가능한 패키지만 표시합니다. 여러 프레임워크를 지정하려면 옵션을 여러 번 반복합니다. 예: `--framework netcoreapp2.2 --framework netstandard2.0`
+  지정된 [대상 프레임워크](../../standard/frameworks.md)에 적용 가능한 패키지만 표시합니다. 여러 프레임워크를 지정하려면 옵션을 여러 번 반복합니다. 예를 들어 `--framework netcoreapp2.2 --framework netstandard2.0`을 참조하십시오.
 
 - **`-h|--help`**
 

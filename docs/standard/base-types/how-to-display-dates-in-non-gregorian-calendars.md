@@ -1,5 +1,5 @@
 ---
-title: '방법: 그레고리오력이 아닌 달력의 날짜 표시'
+title: '방법: 그레고리오력이 아닌 달력으로 날짜 표시'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,7 +18,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/01/2020
 ms.locfileid: "80523923"
 ---
-# <a name="how-to-display-dates-in-non-gregorian-calendars"></a>방법: 그레고리오력이 아닌 달력의 날짜 표시
+# <a name="how-to-display-dates-in-non-gregorian-calendars"></a>방법: 그레고리오력이 아닌 달력으로 날짜 표시
 <xref:System.DateTime> 및 <xref:System.DateTimeOffset> 형식은 양력을 기본 달력으로 사용합니다. 즉, 날짜 및 시간 값의 `ToString` 메서드를 호출하면 해당 날짜 및 시간이 다른 달력을 사용하여 생성된 경우에도 해당 날짜 및 시간의 문자열 표현을 양력 달력으로 표시합니다. 이 내용은 두 가지 방법을 사용하여 페르시아력으로 날짜 및 시간 값을 만들지만 <xref:System.DateTime.ToString%2A> 메서드를 호출할 때 해당 날짜 및 시간 값을 여전히 양력으로 표시하는 다음 예제에 설명되어 있습니다. 이 예제에서는 특정 달력의 날짜를 표시하기 위해 자주 사용되지만 잘못된 두 가지 방법을 보여 줍니다.  
   
  [!code-csharp[Formatting.HowTo.Calendar#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.Calendar/cs/Calendar1.cs#1)]
@@ -34,7 +34,7 @@ ms.locfileid: "80523923"
   
 3. <xref:System.Array.Exists%2A?displayProperty=nameWithType> 메서드를 호출하여 달력 개체가 <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> 속성에서 반환한 배열의 멤버인지 여부를 확인합니다. 이는 달력이 <xref:System.Globalization.CultureInfo> 개체의 기본 달력으로 사용될 수 있음을 나타냅니다. 배열의 멤버가 아닌 경우 "임의 달력의 날짜를 표시하려면" 섹션의 지침을 따르세요.  
   
-4. <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> 속성에서 반환한 <xref:System.Globalization.DateTimeFormatInfo> 개체의 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 속성에 달력 개체를 할당합니다.  
+4. <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 속성에서 반환한 <xref:System.Globalization.DateTimeFormatInfo> 개체의 <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> 속성에 달력 개체를 할당합니다.  
   
     > [!NOTE]
     > <xref:System.Globalization.CultureInfo> 클래스에는 <xref:System.Globalization.CultureInfo.Calendar%2A> 속성도 있습니다. 그러나 이 클래스는 읽기 전용이며 상수이므로 <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A?displayProperty=nameWithType> 속성에 할당된 새 기본 달력을 반영하도록 변경되지 않습니다.  
@@ -69,16 +69,16 @@ ms.locfileid: "80523923"
  [!code-csharp[Formatting.HowTo.Calendar#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.Calendar/cs/Calendar1.cs#2)]
  [!code-vb[Formatting.HowTo.Calendar#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.Calendar/vb/Calendar1.vb#2)]  
   
- 각 <xref:System.Globalization.CultureInfo> 개체는 <xref:System.Globalization.CultureInfo.OptionalCalendars%2A> 속성에 표시된 하나 이상의 달력을 지원할 수 있습니다. 이러한 달력 중 하나가 문화권의 기본 달력으로 지정되며 읽기 전용 <xref:System.Globalization.CultureInfo.Calendar%2A?displayProperty=nameWithType> 속성에 의해 반환됩니다. <xref:System.Globalization.Calendar> 속성에서 반환한 <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A?displayProperty=nameWithType> 속성에 해당 달력을 나타내는 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 개체를 할당하여 다른 선택적 달력을 기본값으로 지정할 수 있습니다. 그러나 <xref:System.Globalization.PersianCalendar> 클래스가 나타내는 페르시아력과 같은 일부 달력은 특정 문화권의 선택적 달력으로 사용되지 않습니다.  
+ 각 <xref:System.Globalization.CultureInfo> 개체는 <xref:System.Globalization.CultureInfo.OptionalCalendars%2A> 속성에 표시된 하나 이상의 달력을 지원할 수 있습니다. 이러한 달력 중 하나가 문화권의 기본 달력으로 지정되며 읽기 전용 <xref:System.Globalization.CultureInfo.Calendar%2A?displayProperty=nameWithType> 속성에 의해 반환됩니다. <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 속성에서 반환한 <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A?displayProperty=nameWithType> 속성에 해당 달력을 나타내는 <xref:System.Globalization.Calendar> 개체를 할당하여 다른 선택적 달력을 기본값으로 지정할 수 있습니다. 그러나 <xref:System.Globalization.PersianCalendar> 클래스가 나타내는 페르시아력과 같은 일부 달력은 특정 문화권의 선택적 달력으로 사용되지 않습니다.  
   
  예제에서는 다시 사용할 수 있는 달력 유틸리티 클래스인 `CalendarUtility`를 정의하여 날짜의 문자열 표현을 특정 달력으로 생성하는 작업의 많은 세부 정보를 처리합니다. `CalendarUtility` 클래스의 멤버는 다음과 같습니다.  
   
 - 하나의 매개 변수가 날짜를 나타내는 <xref:System.Globalization.Calendar> 개체를 매개 변수로 사용하는 생성자 - 클래스의 전용 필드에 할당됩니다.  
   
-- `CalendarExists` - `CalendarUtility` 개체가 나타내는 달력이 메서드에 매개 변수로 전달되는 <xref:System.Globalization.CultureInfo> 개체에서 지원되는지 여부를 나타내는 부울 값을 반환하는 전용 메서드입니다. 이 메서드는 <xref:System.Array.Exists%2A?displayProperty=nameWithType> 배열을 전달할 대상인 <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> 메서드에 대한 호출을 래핑합니다.  
+- `CalendarExists` - `CalendarUtility` 개체가 나타내는 달력이 메서드에 매개 변수로 전달되는 <xref:System.Globalization.CultureInfo> 개체에서 지원되는지 여부를 나타내는 부울 값을 반환하는 전용 메서드입니다. 이 메서드는 <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> 배열을 전달할 대상인 <xref:System.Array.Exists%2A?displayProperty=nameWithType> 메서드에 대한 호출을 래핑합니다.  
   
-- `HasSameName` - <xref:System.Predicate%601> 메서드에 매개 변수로 전달되는 <xref:System.Array.Exists%2A?displayProperty=nameWithType> 대리자에 할당된 전용 메서드입니다. 메서드에서 `true`가 반환될 때까지 배열의 각 멤버가 메서드에 전달됩니다. 이 메서드는 선택적 달력의 이름이 `CalendarUtility` 개체가 나타내는 달력과 같은지 여부를 확인합니다.  
+- `HasSameName` - <xref:System.Array.Exists%2A?displayProperty=nameWithType> 메서드에 매개 변수로 전달되는 <xref:System.Predicate%601> 대리자에 할당된 전용 메서드입니다. 메서드에서 `true`가 반환될 때까지 배열의 각 멤버가 메서드에 전달됩니다. 이 메서드는 선택적 달력의 이름이 `CalendarUtility` 개체가 나타내는 달력과 같은지 여부를 확인합니다.  
   
-- `DisplayDate` - 두 매개 변수 즉, <xref:System.DateTime> 개체가 나타내는 달력에 표시할 <xref:System.DateTimeOffset> 또는 `CalendarUtility` 값 및 서식 지정 규칙을 사용할 문화권이 전달되는 오버로드된 공용 메서드입니다. 날짜의 문자열 표현을 반환할 때의 해당 동작은 대상 달력이 사용할 형식 지정 규칙의 문화권에서 지원되는지 여부에 따라 달라집니다.  
+- `DisplayDate` - 두 매개 변수 즉, `CalendarUtility` 개체가 나타내는 달력에 표시할 <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 값 및 서식 지정 규칙을 사용할 문화권이 전달되는 오버로드된 공용 메서드입니다. 날짜의 문자열 표현을 반환할 때의 해당 동작은 대상 달력이 사용할 형식 지정 규칙의 문화권에서 지원되는지 여부에 따라 달라집니다.  
   
  이 예제에서 <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 값을 만드는 데 사용된 달력과 관계없이 해당 값은 일반적으로 양력 날짜로 표시됩니다. 이는 <xref:System.DateTime> 및 <xref:System.DateTimeOffset> 형식이 달력 정보를 유지하지 않기 때문입니다. 내부적으로 두 값은 0001년 1월 1일 자정 이후에 경과된 틱 수로 표시됩니다. 해당 숫자의 해석은 달력에 따라 달라집니다. 대부분의 문화권에서 기본 달력은 양력입니다.

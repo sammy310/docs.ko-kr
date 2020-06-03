@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
-ms.openlocfilehash: 623466e0e960ea991ae92e5de432171b70bad1d2
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: a2c238cb66c5018cd1dd4085c6541ef3c9371beb
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588627"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290644"
 ---
 # <a name="merge-options-in-plinq"></a>PLINQ의 병합 옵션
 쿼리가 병렬로 실행되는 경우 여러 스레드가 동시에 여러 파트에서(보통 개별 스레드에서) 작동할 수 있도록 PLINQ가 소스 시퀀스를 분할합니다. 결과를 `foreach`(Visual Basic의 `For Each`) 루프와 같은 한 스레드에서 사용할 경우 모든 스레드의 결과를 하나의 시퀀스로 다시 병합해야 합니다. PLINQ가 수행하는 병합의 종류는 쿼리에 있는 연산자에 따라 다릅니다. 예를 들어, 결과에 새 순서를 부과하는 연산자는 모든 스레드의 모든 요소를 버퍼링해야 합니다. 소비 스레드의 관점에서(또한 애플리케이션 사용자의 관점에서) 완전히 버퍼링된 쿼리는 첫 번째 결과를 생성하기 전에 한동안 실행될 수 있습니다. 다른 연산자는 기본적으로, 부분적으로 버퍼링되므로 일괄 처리로 결과가 생성됩니다. <xref:System.Linq.ParallelEnumerable.ForAll%2A> 연산자는 기본적으로 버퍼링되지 않습니다. 이 연산자는 모든 스레드에서 모든 요소를 즉시 생성합니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "80588627"
  [!code-csharp[PLINQ#26](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#26)]
  [!code-vb[PLINQ#26](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#26)]  
   
- 전체 예제는 [방법: PLINQ에서 병합 옵션 지정](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)을 참조하세요.  
+ 전체 예제는 [방법: PLINQ에서 병합 옵션 지정](how-to-specify-merge-options-in-plinq.md)을 참조하세요.  
   
  특정 쿼리가 요청된 옵션을 지원할 수 없는 경우에는 옵션이 무시됩니다. 대부분의 경우 PLINQ 쿼리의 병합 옵션을 지정할 필요가 없습니다. 그러나 어떤 경우에는 쿼리가 기본이 아닌 모드에서 가장 잘 실행한다는 것을 테스트 및 측정을 통해 확인할 수 있습니다. 이 옵션의 일반적인 용도는 응답성이 높은 사용자 인터페이스를 제공하기 위해 청크 병합 연산자가 결과를 스트리밍하도록 강제하는 것입니다.  
   
@@ -45,25 +45,25 @@ ms.locfileid: "80588627"
 ## <a name="query-operators-that-support-merge-options"></a>병합 옵션을 지원하는 쿼리 연산자  
  다음 표에서는 지정된 제한 사항에 따라 모든 병합 옵션 모드를 지원하는 연산자를 나열합니다.  
   
-|연산자|제한 사항|  
+|연산자|제한|  
 |--------------|------------------|  
-|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|None|  
-|<xref:System.Linq.ParallelEnumerable.Cast%2A>|None|  
+|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|없음|  
+|<xref:System.Linq.ParallelEnumerable.Cast%2A>|없음|  
 |<xref:System.Linq.ParallelEnumerable.Concat%2A>|배열 또는 목록 소스만 있는 순서가 지정되지 않은 쿼리입니다.|  
-|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|None|  
-|<xref:System.Linq.ParallelEnumerable.OfType%2A>|None|  
+|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|없음|  
+|<xref:System.Linq.ParallelEnumerable.OfType%2A>|없음|  
 |<xref:System.Linq.ParallelEnumerable.Reverse%2A>|배열 또는 목록 소스만 있는 순서가 지정되지 않은 쿼리입니다.|  
-|<xref:System.Linq.ParallelEnumerable.Select%2A>|None|  
-|<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|None|  
-|<xref:System.Linq.ParallelEnumerable.Skip%2A>|None|  
-|<xref:System.Linq.ParallelEnumerable.Take%2A>|None|  
-|<xref:System.Linq.ParallelEnumerable.Where%2A>|None|  
+|<xref:System.Linq.ParallelEnumerable.Select%2A>|없음|  
+|<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|없음|  
+|<xref:System.Linq.ParallelEnumerable.Skip%2A>|없음|  
+|<xref:System.Linq.ParallelEnumerable.Take%2A>|없음|  
+|<xref:System.Linq.ParallelEnumerable.Where%2A>|없음|  
   
- 다른 모든 PLINQ 쿼리 연산자는 사용자 제공 병합 옵션을 무시할 수 있습니다. 일부 쿼리 연산자(예: <xref:System.Linq.ParallelEnumerable.Reverse%2A> 및 <xref:System.Linq.ParallelEnumerable.OrderBy%2A>)는 모두 생성되어 다시 정렬될 때까지 요소를 생성할 수 없습니다. 따라서 <xref:System.Linq.ParallelMergeOptions>와 같은 연산자도 포함된 쿼리에서 <xref:System.Linq.ParallelEnumerable.Reverse%2A>를 사용하는 경우 해당 연산자가 결과를 생성할 때까지 병합 동작이 쿼리에 적용되지 않습니다.  
+ 다른 모든 PLINQ 쿼리 연산자는 사용자 제공 병합 옵션을 무시할 수 있습니다. 일부 쿼리 연산자(예: <xref:System.Linq.ParallelEnumerable.Reverse%2A> 및 <xref:System.Linq.ParallelEnumerable.OrderBy%2A>)는 모두 생성되어 다시 정렬될 때까지 요소를 생성할 수 없습니다. 따라서 <xref:System.Linq.ParallelEnumerable.Reverse%2A>와 같은 연산자도 포함된 쿼리에서 <xref:System.Linq.ParallelMergeOptions>를 사용하는 경우 해당 연산자가 결과를 생성할 때까지 병합 동작이 쿼리에 적용되지 않습니다.  
   
  병합 옵션을 처리하는 일부 연산자의 기능은 소스 시퀀스의 유형과 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 연산자가 쿼리에서 이전에 사용되었는지 여부에 따라 다릅니다. <xref:System.Linq.ParallelEnumerable.ForAll%2A>은 항상 <xref:System.Linq.ParallelMergeOptions.NotBuffered>이므로 해당 요소를 즉시 생성합니다. <xref:System.Linq.ParallelEnumerable.OrderBy%2A>는 항상 <xref:System.Linq.ParallelMergeOptions.FullyBuffered>입니다. 이 연산자는 생성하기 전에 전체 목록을 정렬해야 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [PLINQ(병렬 LINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
-- [방법: PLINQ에서 병합 옵션 지정](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)
+- [PLINQ(병렬 LINQ)](introduction-to-plinq.md)
+- [방법: PLINQ에서 병합 옵션 지정](how-to-specify-merge-options-in-plinq.md)

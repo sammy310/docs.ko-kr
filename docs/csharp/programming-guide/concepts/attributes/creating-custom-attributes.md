@@ -29,7 +29,7 @@ public class Author : System.Attribute
 }  
 ```  
   
- 클래스 이름은 특성의 이름인 `Author`입니다. 이 클래스는 `System.Attribute`를 상속하므로 사용자 지정 특성 클래스입니다. 생성자의 매개 변수는 사용자 지정 특성의 위치 매개 변수입니다. 이 예제에서는 `name`이 위치 매개 변수입니다. 모든 public 읽기-쓰기 필드 또는 속성은 명명된 매개 변수입니다. 이 경우에는 `version`이 유일한 명명된 매개 변수입니다. 클래스 및 `AttributeUsage` 선언에서만 `Author` 특성을 유효하게 설정하려면 `struct` 특성을 사용해야 합니다.  
+ 클래스 이름은 특성의 이름인 `Author`입니다. 이 클래스는 `System.Attribute`를 상속하므로 사용자 지정 특성 클래스입니다. 생성자의 매개 변수는 사용자 지정 특성의 위치 매개 변수입니다. 이 예제에서는 `name`이 위치 매개 변수입니다. 모든 public 읽기-쓰기 필드 또는 속성은 명명된 매개 변수입니다. 이 경우에는 `version`이 유일한 명명된 매개 변수입니다. 클래스 및 `struct` 선언에서만 `Author` 특성을 유효하게 설정하려면 `AttributeUsage` 특성을 사용해야 합니다.  
   
  이 새로운 특성은 다음과 같이 사용할 수 있습니다.  
   
@@ -63,7 +63,7 @@ class SampleClass
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Reflection>
 - [C# 프로그래밍 가이드](../../index.md)
