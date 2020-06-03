@@ -4,12 +4,12 @@ description: 기존 ASP.NET Web Forms 앱을 Blazor로 마이그레이션하는 
 author: twsouthwick
 ms.author: tasou
 ms.date: 09/19/2019
-ms.openlocfilehash: b614572bd04d9ec694b0feb95173373591d5e117
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: c70e4a4f57ddac97db4d58d9f876f7edc6aa6ce9
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144411"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306983"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-blazor"></a>ASP.NET Web Forms에서 Blazor로 마이그레이션
 
@@ -285,7 +285,7 @@ EShop 프로젝트를 사용 하면 기본 정적 파일에 액세스할 수 있
 
 Web Forms 앱의 페이지는 확장명이 *.aspx* 인 파일입니다. Web Forms 페이지는 종종 Blazor의 구성 요소에 매핑될 수 있습니다. Blazor 구성 요소는 확장명이 *razor* 인 파일에 작성 됩니다. EShop 프로젝트의 경우 5 개의 페이지가 Razor 페이지로 변환 됩니다.
 
-예를 들어 세부 정보 보기는 Web Forms 프로젝트의 세 가지 *파일 (* *Details.aspx.cs*, *Details.aspx.designer.cs 및*)로 구성 됩니다. Blazor로 변환 하는 경우 코드 숨김과 태그가 *자세히. razor*로 결합 됩니다. Razor 컴파일 ( *designer.cs* 파일에 해당)은 *obj* 디렉터리에 저장 되며 기본적으로 **솔루션 탐색기**에서 볼 수 없습니다. Web Forms 페이지는 다음 태그로 구성 됩니다.
+예를 들어 세부 정보 보기는 Web Forms 프로젝트의 세 가지 파일 ( *Details.aspx.cs*, Details.aspx.designer.cs *, 및* *Details.aspx.designer.cs*)로 구성 됩니다. Blazor로 변환 하는 경우 코드 숨김과 태그가 *자세히. razor*로 결합 됩니다. Razor 컴파일 ( *designer.cs* 파일에 해당)은 *obj* 디렉터리에 저장 되며 기본적으로 **솔루션 탐색기**에서 볼 수 없습니다. Web Forms 페이지는 다음 태그로 구성 됩니다.
 
 ```aspx-csharp
 <%@ Page Title="Details" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Details.aspx.cs" Inherits="eShopLegacyWebForms.Catalog.Details" %>
