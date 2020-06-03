@@ -30,7 +30,7 @@ return cms.Encode();
 
 #### <a name="recommended-action"></a>권장 조치
 
-이 변경으로 부정적인 영향을 받는 경우 다음과 같이 <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> 형식의 매개 변수를 포함하는 <xref:System.Security.Cryptography.Pkcs.AlgorithmIdentifier> 생성자에서 암호화 알고리즘 식별자를 명시적으로 지정하여 TripleDES 암호화를 복원할 수 있습니다.
+이 변경으로 부정적인 영향을 받는 경우 다음과 같이 <xref:System.Security.Cryptography.Pkcs.AlgorithmIdentifier> 형식의 매개 변수를 포함하는 <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> 생성자에서 암호화 알고리즘 식별자를 명시적으로 지정하여 TripleDES 암호화를 복원할 수 있습니다.
 
 ```csharp
 Oid tripleDesOid = new Oid("1.2.840.113549.3.7", null);

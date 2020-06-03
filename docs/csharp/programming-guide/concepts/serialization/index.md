@@ -1,12 +1,12 @@
 ---
 title: Serialization(C#)
 ms.date: 01/02/2020
-ms.openlocfilehash: d914298a370b09307e84c88959542b4823cf37ce
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b2532ccf281fdfaa951d56675066f1e239f9f480
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79167597"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241983"
 ---
 # <a name="serialization-c"></a>Serialization(C#)
 
@@ -43,7 +43,7 @@ JSON serialization은 개체의 퍼블릭 속성을 [RFC 8259 JSON 사양](https
 
 <xref:System.Runtime.Serialization> 네임스페이스에는 이진 및 XML serialization 및 deserialization 클래스가 포함되어 있습니다.
 
-이진 serialization은 이진 인코딩을 사용하여 스토리지 또는 소켓 기반 네트워크 스트림과 같은 용도에서 사용할 수 있는 압축된 serialization을 생성합니다. 이진 Serialization에서 멤버가 읽기 전용이더라도 모든 멤버가 Serialize되고 성능이 향상됩니다.
+이진 serialization은 이진 인코딩을 사용하여 스토리지 또는 스트림 기반 네트워크 스트림과 같은 용도로 사용할 수 있는 압축 serialization을 생성합니다. 이진 Serialization에서 멤버가 읽기 전용이더라도 모든 멤버가 Serialize되고 성능이 향상됩니다.
 
 XML serialization은 개체의 public 필드와 속성 또는 메서드의 매개 변수와 반환 값을 특정 XSD(XML 스키마 정의 언어) 문서와 일치하는 XML 스트림으로 serialize합니다. XML serialization을 사용하면 XML로 변환되는 public 속성 및 필드가 있는 강력한 형식의 클래스가 만들어집니다. <xref:System.Xml.Serialization>에는 XML을 직렬화 및 역직렬화하기 위한 클래스가 포함되어 있습니다. <xref:System.Xml.Serialization.XmlSerializer>가 클래스 인스턴스를 직렬화 또는 역직렬화하는 방법을 제어하기 위해 클래스 및 클래스 멤버에 특성을 적용합니다.
 
@@ -65,7 +65,7 @@ XML serialization은 개체의 public 필드와 속성 또는 메서드의 매�
 
 이진 및 XML serialization은 기본 및 사용자 지정의 두 가지 방법으로 수행할 수 있습니다.
 
-기본 serialization은 .NET Framework를 사용하여 개체를 자동으로 serialize합니다. 유일한 요구 사항은 클래스에 <xref:System.SerializableAttribute> 특성이 적용되어야 한다는 것입니다. <xref:System.NonSerializedAttribute>는 특정 필드가 직렬화되지 않도록 하는 데 사용할 수 있습니다.
+기본 serialization은 .NET을 사용하여 개체를 자동으로 직렬화합니다. 유일한 요구 사항은 클래스에 <xref:System.SerializableAttribute> 특성이 적용되어야 한다는 것입니다. <xref:System.NonSerializedAttribute>는 특정 필드가 직렬화되지 않도록 하는 데 사용할 수 있습니다.
 
 기본 Serialization을 사용하면 개체의 버전 관리에 문제가 발생할 수 있습니다. 버전 관리 문제가 중요하면 사용자 지정 Serialization을 사용합니다. 기본 serialization은 serialization을 수행하는 가장 쉬운 방법이지만 프로세스를 강력하게 제어하기는 어렵습니다.
 
@@ -75,7 +75,7 @@ XML serialization은 개체의 public 필드와 속성 또는 메서드의 매�
 
 디자이너 Serialization은 개발 도구와 관련해서 개체 지속성이 적용되는 특수한 형태의 Serialization입니다. 디자이너 serialization은 개체 그래프를 소스 파일로 변환하여 나중에 개체 그래프를 복구하는 데 사용할 수 있도록 하는 프로세스입니다. 소스 파일에는 코드, 태그 또는 심지어 SQL 테이블 정보도 포함될 수 있습니다.
 
-## <a name="BKMK_RelatedTopics"></a> 관련 항목 및 예제  
+## <a name="related-topics-and-examples"></a><a name="BKMK_RelatedTopics"></a> 관련 항목 및 예제  
 
 [System.Text.Json 개요](../../../../standard/serialization/system-text-json-overview.md) `System.Text.Json` 라이브러리를 가져오는 방법을 보여 줍니다.
 

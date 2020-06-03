@@ -2,12 +2,12 @@
 title: 공변성(Covariance) 및 반공변성(Contravariance)(C#)
 ms.date: 07/20/2015
 ms.assetid: 066d9a3c-aab7-4ea6-826d-0b1a85399c74
-ms.openlocfilehash: 80b4d703bb88d0bf1f7f48236c21b7698017e7f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 23633675059b9c295dda7ddf3d78754c0223f5f8
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79169872"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241372"
 ---
 # <a name="covariance-and-contravariance-c"></a>공변성(Covariance) 및 반공변성(Contravariance)(C#)
 C#에서 공변성(Covariance)과 반공변성(Contravariance)은 배열 형식, 대리자 형식 및 제네릭 형식 인수에 대한 암시적 참조 변환을 가능하게 합니다. 공변성(Covariance)은 할당 호환성을 유지하고 반공변성(Contravariance)은 할당 호환성을 유지하지 않습니다.  
@@ -68,7 +68,7 @@ static void Test()
 }  
 ```  
   
- .NET Framework 4 이상에서 C#는 제네릭 인터페이스 및 대리자의 공변성(Covariance) 및 반공변성(Contravariance)을 지원하고 제네릭 형식 매개 변수를 암시적으로 변환할 수 있습니다. 자세한 내용은 [제네릭 인터페이스의 가변성(C#)](./variance-in-generic-interfaces.md) 및 [대리자의 가변성(C#)](./variance-in-delegates.md)을 참조하세요.  
+ .NET Framework 4 이상 버전에서 C#은 제네릭 인터페이스 및 대리자의 공변성(Covariance) 및 반공변성(Contravariance)을 지원하고 제네릭 형식 매개 변수를 암시적으로 변환하도록 허용합니다. 자세한 내용은 [제네릭 인터페이스의 가변성(C#)](./variance-in-generic-interfaces.md) 및 [대리자의 가변성(C#)](./variance-in-delegates.md)을 참조하세요.  
   
  다음 코드 예제에서는 제네릭 인터페이스에 대한 암시적 참조 변환을 보여 줍니다.  
   

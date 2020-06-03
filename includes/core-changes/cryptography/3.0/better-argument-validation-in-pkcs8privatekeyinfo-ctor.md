@@ -24,7 +24,7 @@ var info = new Pkcs8PrivateKeyInfo(algorithmId, algorithmParameters, privateKey)
 byte[] encoded = info.Encode();
 ```
 
-.NET Core 3.0 미리 보기 9부터 생성자가 인수의 유효성을 검사하여 값이 잘못된 경우 메서드가 <xref:System.Security.Cryptography.CryptographicException>을 throw합니다. 이 변경으로 인해 예외는 데이터 오류 소스에 보다 가까워집니다. 예들 들어 다음과 같습니다.
+.NET Core 3.0 미리 보기 9부터 생성자가 인수의 유효성을 검사하여 값이 잘못된 경우 메서드가 <xref:System.Security.Cryptography.CryptographicException>을 throw합니다. 이 변경으로 인해 예외는 데이터 오류 소스에 보다 가까워집니다. 예를 들어:
 
 ```csharp
 byte[] algorithmParameters = { 0x05, 0x00, 0x05, 0x00 };

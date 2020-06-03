@@ -10,15 +10,16 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-ms.openlocfilehash: afd9e688bd716375bafb370fad4af082a9498411
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb679fbffaf742739275c171ef6d88511b2a2a77
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397661"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84240761"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>클래스 및 구조체(C# 프로그래밍 가이드)
-클래스와 구조체는 .NET Framework의 공용 형식 시스템의 기본 구문 중 두 가지입니다. 각각은 기본적으로 하나의 논리 단위에 속하는 데이터 및 동작 집합을 캡슐화하는 데이터 구조입니다. 데이터 및 동작은 클래스 또는 구조체의 *멤버*로, 이 항목의 뒷부분에 나오는 것처럼 메서드, 속성 및 이벤트 등을 포함합니다.  
+
+클래스 및 구조체는 .NET의 CTS(공용 형식 시스템)의 기본 구문 중 두 가지입니다. 각각은 기본적으로 하나의 논리 단위에 속하는 데이터 및 동작 집합을 캡슐화하는 데이터 구조입니다. 데이터 및 동작은 클래스 또는 구조체의 *멤버*로, 이 항목의 뒷부분에 나오는 것처럼 메서드, 속성 및 이벤트 등을 포함합니다.  
   
  클래스 또는 구조체 선언은 런타임에 인스턴스 또는 개체를 만드는 데 사용되는 청사진과도 같습니다. `Person`이라고 하는 클래스 또는 구조체를 정의하는 경우 `Person`이 형식의 이름입니다. 형식 `Person`의 변수 `p`를 선언하고 초기화하면 `p`는 `Person`의 개체 또는 인스턴스로 지칭됩니다. 같은 `Person` 형식의 여러 인스턴스를 만들 수 있으며 각 인스턴스는 속성 및 필드에 서로 다른 값을 가질 수 있습니다.  
   
@@ -31,7 +32,7 @@ ms.locfileid: "79397661"
  자세한 내용은 [클래스](./classes.md), [개체](./objects.md) 및 [구조 형식](../../language-reference/builtin-types/struct.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서 `ProgrammingGuide` 네임스페이스의 `CustomClass`에는 세 개의 멤버, 즉 인스턴스 생성자, `Number`라는 속성 및 `Multiply`이라는 메서드가 있습니다. `Program` 클래스의 `Main` 메서드는 `CustomClass`의 인스턴스(개체)를 만들고 개체의 메서드 및 속성은 점 표기법을 사용하여 액세스됩니다.
+ 다음 예제에서 `ProgrammingGuide` 네임스페이스의 `CustomClass`에는 세 개의 멤버, 즉 인스턴스 생성자, `Number`라는 속성 및 `Multiply`이라는 메서드가 있습니다. `Program` 클래스의 `Main` 메서드는 `CustomClass`의 인스턴스(개체)를 만들고 개체의 메서드 및 속성은 점 표기법을 통해 액세스됩니다.
   
  [!code-csharp[csProgGuideObjects#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/class1.cs#1)]  
   

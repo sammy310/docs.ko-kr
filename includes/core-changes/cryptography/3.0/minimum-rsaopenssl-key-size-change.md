@@ -12,7 +12,7 @@ Linux에서 새 RSA 키를 생성하기 위한 최소 크기가 384비트에서 
 
 #### <a name="change-description"></a>변경 내용 설명
 
-.NET Core 3.0부터는 Linux의 `LegalKeySizes`, <xref:System.Security.Cryptography.RSA.Create%2A?displayProperty=nameWithType> 및 <xref:System.Security.Cryptography.RSAOpenSsl.%23ctor%2A>에서 RSA 인스턴스의 <xref:System.Security.Cryptography.RSACryptoServiceProvider.%23ctor%2A> 속성이 보고하는 합법적인 최소 키 크기가 384에서 512로 증가했습니다.
+.NET Core 3.0부터는 Linux의 <xref:System.Security.Cryptography.RSA.Create%2A?displayProperty=nameWithType>, <xref:System.Security.Cryptography.RSAOpenSsl.%23ctor%2A> 및 <xref:System.Security.Cryptography.RSACryptoServiceProvider.%23ctor%2A>에서 RSA 인스턴스의 `LegalKeySizes` 속성이 보고하는 합법적인 최소 키 크기가 384에서 512로 증가했습니다.
 
 따라서 .NET Core 2.2 버전 이하에서는 `RSA.Create(384)` 같은 메서드 호출이 성공합니다. .Net Core 3.0 버전 이상에서 메서드 호출 `RSA.Create(384)`는 크기가 너무 작음을 나타내는 예외를 throw합니다.
 

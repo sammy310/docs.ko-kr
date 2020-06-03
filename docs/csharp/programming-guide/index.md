@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: de40369a661c347a2125075e820420af4eb71cac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: df69d895dee51f1bad1fb6164fcb18996ee3eef4
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75337254"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241658"
 ---
 # <a name="c-programming-guide"></a>C# 프로그래밍 가이드
 
-이 섹션에서는 핵심 C# 언어 기능과 .NET Framework를 통해 C#에서 액세스할 수 있는 기능에 대한 자세한 정보를 제공합니다.  
+이 섹션에서는 핵심 C# 언어 기능과 .NET을 통해 C#에서 액세스할 수 있는 기능에 대한 자세한 정보를 제공합니다.  
   
  이 섹션 대부분에서는 사용자가 C# 및 일반적인 프로그래밍 개념을 이미 알고 있다고 가정합니다. 프로그래밍 또는 C# 초급자인 경우 프로그래밍에 대한 사전 지식이 필요하지 않은 [C# 자습서 소개](../tutorials/intro-to-csharp/index.md) 또는 [.NET In-Browser 자습서](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)를 참조할 수 있습니다.  
   
@@ -84,6 +84,6 @@ ms.locfileid: "75337254"
   
  [리플렉션](./concepts/reflection.md)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [C# 참조](../language-reference/index.md)
