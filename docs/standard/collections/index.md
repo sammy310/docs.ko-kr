@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - collections [.NET Framework]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-ms.openlocfilehash: 1bc632a7cfdb96967c7fc508e22ca93c1ed9318f
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 0b87121a4a2003d3f85cf58f6d93f156fc121e54
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728490"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287954"
 ---
 # <a name="collections-and-data-structures"></a>컬렉션 및 데이터 구조
 
@@ -32,7 +32,7 @@ ms.locfileid: "82728490"
 
 - **컬렉션을 열거하는 기능**
 
-    .NET Framework 컬렉션은 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 또는 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>을 구현하므로 컬렉션을 반복할 수 있습니다. 열거자는 컬렉션의 모든 요소에 대한 이동 가능 포인터라고 할 수 있습니다. [foreach, in](../../csharp/language-reference/keywords/foreach-in.md) 문과 [For Each...Next 문](../../visual-basic/language-reference/statements/for-each-next-statement.md)은 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 메서드가 노출하는 열거자를 사용하며 해당 열거자를 조작하는 복잡한 작업을 숨깁니다. 또한 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>을 구현하는 모든 컬렉션은 *쿼리 가능 형식*으로 간주할 수 있으며 LINQ를 사용하여 쿼리할 수 있습니다. LINQ 쿼리는 데이터 액세스를 위한 일반 패턴을 제공합니다. 이러한 쿼리는 대개 표준 `foreach` 루프보다 간결하고 읽기 쉬우며 필터링, 순서 지정 및 그룹화 기능을 제공합니다. 또한 LINQ 쿼리를 통해 성능을 향상시킬 수도 있습니다. 자세한 내용은 [LINQ to Objects(C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects(Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md), [PLINQ (병렬 LINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md), [LINQ 쿼리 소개(C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) 및 [기본 쿼리 작업(Visual Basic)](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)을 참조하세요.
+    .NET Framework 컬렉션은 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 또는 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>을 구현하므로 컬렉션을 반복할 수 있습니다. 열거자는 컬렉션의 모든 요소에 대한 이동 가능 포인터라고 할 수 있습니다. [foreach, in](../../csharp/language-reference/keywords/foreach-in.md) 문과 [For Each...Next 문](../../visual-basic/language-reference/statements/for-each-next-statement.md)은 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 메서드가 노출하는 열거자를 사용하며 해당 열거자를 조작하는 복잡한 작업을 숨깁니다. 또한 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>을 구현하는 모든 컬렉션은 *쿼리 가능 형식*으로 간주할 수 있으며 LINQ를 사용하여 쿼리할 수 있습니다. LINQ 쿼리는 데이터 액세스를 위한 일반 패턴을 제공합니다. 이러한 쿼리는 대개 표준 `foreach` 루프보다 간결하고 읽기 쉬우며 필터링, 순서 지정 및 그룹화 기능을 제공합니다. 또한 LINQ 쿼리를 통해 성능을 향상시킬 수도 있습니다. 자세한 내용은 [LINQ to Objects(C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects(Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md), [PLINQ (병렬 LINQ)](../parallel-programming/introduction-to-plinq.md), [LINQ 쿼리 소개(C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) 및 [기본 쿼리 작업(Visual Basic)](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)을 참조하세요.
 
 - **컬렉션의 내용을 배열에 복사하는 기능**
 
@@ -54,7 +54,7 @@ ms.locfileid: "82728490"
 
 - **여러 스레드로부터의 액세스를 위한 동기화**(<xref:System.Collections> 클래스에만 해당됨).
 
-    <xref:System.Collections> 네임스페이스의 제네릭이 아닌 컬렉션 형식은 동기화와 관련하여 어느 정도의 스레드 보안을 제공합니다(일반적으로 <xref:System.Collections.ICollection.SyncRoot%2A> 및 <xref:System.Collections.ICollection.IsSynchronized%2A> 멤버를 통해 노출됨). 이러한 컬렉션은 기본적으로 스레드로부터 안전하지 않습니다. 확장 가능하며 효율적인 다중 스레드 방식으로 컬렉션에 액세스해야 하는 경우에는 <xref:System.Collections.Concurrent> 네임스페이스의 클래스 중 하나를 사용하거나 변경할 수 없는 컬렉션을 사용하는 것이 좋습니다. 자세한 내용은 [스레드로부터 안전한 컬렉션](../../../docs/standard/collections/thread-safe/index.md)을 참조하세요.
+    <xref:System.Collections> 네임스페이스의 제네릭이 아닌 컬렉션 형식은 동기화와 관련하여 어느 정도의 스레드 보안을 제공합니다(일반적으로 <xref:System.Collections.ICollection.SyncRoot%2A> 및 <xref:System.Collections.ICollection.IsSynchronized%2A> 멤버를 통해 노출됨). 이러한 컬렉션은 기본적으로 스레드로부터 안전하지 않습니다. 확장 가능하며 효율적인 다중 스레드 방식으로 컬렉션에 액세스해야 하는 경우에는 <xref:System.Collections.Concurrent> 네임스페이스의 클래스 중 하나를 사용하거나 변경할 수 없는 컬렉션을 사용하는 것이 좋습니다. 자세한 내용은 [스레드로부터 안전한 컬렉션](thread-safe/index.md)을 참조하세요.
 
 <a name="BKMK_Choosingacollection"></a>
 ## <a name="choose-a-collection"></a>컬렉션 선택
@@ -98,13 +98,13 @@ ms.locfileid: "82728490"
 
 |제목|설명|
 |-----------|-----------------|
-|[Collection 클래스 선택](../../../docs/standard/collections/selecting-a-collection-class.md)|다양한 컬렉션에 대해 설명하고 시나리오에 맞는 컬렉션을 선택하는 데 도움이 되는 정보를 제공합니다.|
-|[일반적으로 사용되는 컬렉션 형식](../../../docs/standard/collections/commonly-used-collection-types.md)|<xref:System.Array?displayProperty=nameWithType>, <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 및 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>와 같이 일반적으로 사용되는 제네릭 및 제네릭이 아닌 컬렉션 형식을 설명합니다.|
-|[제네릭 컬렉션 사용 기준](../../../docs/standard/collections/when-to-use-generic-collections.md)|제네릭 컬렉션 형식의 사용을 설명합니다.|
-|[컬렉션 내에서 비교 및 정렬](../../../docs/standard/collections/comparisons-and-sorts-within-collections.md)|컬렉션에서 같음 비교 및 정렬 비교를 사용하는 방법을 설명합니다.|
-|[Sorted 컬렉션 형식](../../../docs/standard/collections/sorted-collection-types.md)|정렬된 컬렉션의 성능 및 특징에 대해 설명합니다.|
-|[Hashtable 및 Dictionary 컬렉션 형식](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|제네릭 및 제네릭이 아닌 해시 기반 사전 형식의 기능을 설명합니다.|
-|[스레드로부터 안전한 컬렉션](../../../docs/standard/collections/thread-safe/index.md)|여러 스레드의 안전하고 효율적인 동시 액세스를 지원하는 <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>과 <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> 같은 컬렉션 형식에 대해 설명합니다.|
+|[Collection 클래스 선택](selecting-a-collection-class.md)|다양한 컬렉션에 대해 설명하고 시나리오에 맞는 컬렉션을 선택하는 데 도움이 되는 정보를 제공합니다.|
+|[일반적으로 사용되는 컬렉션 형식](commonly-used-collection-types.md)|<xref:System.Array?displayProperty=nameWithType>, <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 및 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>와 같이 일반적으로 사용되는 제네릭 및 제네릭이 아닌 컬렉션 형식을 설명합니다.|
+|[제네릭 컬렉션 사용 기준](when-to-use-generic-collections.md)|제네릭 컬렉션 형식의 사용을 설명합니다.|
+|[컬렉션 내에서 비교 및 정렬](comparisons-and-sorts-within-collections.md)|컬렉션에서 같음 비교 및 정렬 비교를 사용하는 방법을 설명합니다.|
+|[Sorted 컬렉션 형식](sorted-collection-types.md)|정렬된 컬렉션의 성능 및 특징에 대해 설명합니다.|
+|[Hashtable 및 Dictionary 컬렉션 형식](hashtable-and-dictionary-collection-types.md)|제네릭 및 제네릭이 아닌 해시 기반 사전 형식의 기능을 설명합니다.|
+|[스레드로부터 안전한 컬렉션](thread-safe/index.md)|여러 스레드의 안전하고 효율적인 동시 액세스를 지원하는 <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>과 <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> 같은 컬렉션 형식에 대해 설명합니다.|
 |System.Collections.Immutable|변경 불가능은 컬렉션을 소개하고 컬렉션 형식에 대한 링크를 제공합니다.|
 
 <a name="BKMK_Reference"></a>

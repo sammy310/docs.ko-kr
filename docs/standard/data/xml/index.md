@@ -3,12 +3,12 @@ title: XML 문서 및 데이터
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
-ms.openlocfilehash: e0c3f3e99b06b65caf79d87a7831369f6fb33b08
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a752d634141a56df1caa61eb5d375dd2a402832f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75710793"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287690"
 ---
 # <a name="xml-documents-and-data"></a>XML 문서 및 데이터
 
@@ -54,33 +54,33 @@ ms.locfileid: "75710793"
 
   성능 향상을 위해 XSLT 처리가 필요할 때마다 <xref:System.Xml.XPath.XPathDocument> 클래스를 사용합니다. <xref:System.Xml.Xsl.XslCompiledTransform>는  클래스와 함께 효율적으로 사용하도록 디자인된 XPath 쿼리를 위한 최적화된 읽기 전용 저장소입니다.
 
-- **ADO.NET과의 통합** XML 클래스 및 [ADO.NET](../../../../docs/framework/data/adonet/index.md)은 관계형 데이터와 XML을 하나로 결합하도록 긴밀히 통합되어 있습니다. <xref:System.Data.DataSet> 클래스는 데이터베이스에서 파생된 데이터의 메모리 내 캐시입니다. <xref:System.Data.DataSet> 클래스에서는 <xref:System.Xml.XmlReader> 및 <xref:System.Xml.XmlWriter> 클래스를 사용하여 XML을 읽고 쓰며, 내부 관계형 스키마 구조를 XSD(XML 스키마)로 유지할 수 있을 뿐 아니라 XML 문서의 스키마 구조를 예측할 수도 있습니다.
+- **ADO.NET과의 통합** XML 클래스 및 [ADO.NET](../../../framework/data/adonet/index.md)은 관계형 데이터와 XML을 하나로 결합하도록 긴밀히 통합되어 있습니다. <xref:System.Data.DataSet> 클래스는 데이터베이스에서 파생된 데이터의 메모리 내 캐시입니다. <xref:System.Data.DataSet> 클래스에서는 <xref:System.Xml.XmlReader> 및 <xref:System.Xml.XmlWriter> 클래스를 사용하여 XML을 읽고 쓰며, 내부 관계형 스키마 구조를 XSD(XML 스키마)로 유지할 수 있을 뿐 아니라 XML 문서의 스키마 구조를 예측할 수도 있습니다.
 
 ## <a name="in-this-section"></a>섹션 내용
 
-[XML 처리 옵션](../../../../docs/standard/data/xml/xml-processing-options.md) XML 데이터를 처리하기 위한 옵션을 설명합니다.
+[XML 처리 옵션](xml-processing-options.md) XML 데이터를 처리하기 위한 옵션을 설명합니다.
 
-[메모리 내 XML 데이터 처리](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md) 메모리 내 XML 데이터를 처리하기 위한 다음과 같은 세 가지 모델을 설명합니다. [LINQ to XML(C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) 및 [LINQ to XML(Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md), <xref:System.Xml.XmlDocument> 클래스(W3C 문서 개체 모델 기반) 및 <xref:System.Xml.XPath.XPathDocument> 클래스(XPath 데이터 모델 기반).
+[메모리 내 XML 데이터 처리](processing-xml-data-in-memory.md) 메모리 내 XML 데이터를 처리하기 위한 다음과 같은 세 가지 모델을 설명합니다. [LINQ to XML(C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) 및 [LINQ to XML(Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md), <xref:System.Xml.XmlDocument> 클래스(W3C 문서 개체 모델 기반) 및 <xref:System.Xml.XPath.XPathDocument> 클래스(XPath 데이터 모델 기반).
 
-[XSLT 변환](../../../../docs/standard/data/xml/xslt-transformations.md)\
+[XSLT 변환](xslt-transformations.md)\
 XSLT 프로세서의 사용 방법에 대해 설명합니다.
 
-[XML SOM(스키마 개체 모델)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)\
+[XML SOM(스키마 개체 모델)](xml-schema-object-model-som.md)\
 <xref:System.Xml.Schema.XmlSchema> 클래스를 제공하여 XSD(XML 스키마)를 빌드 및 조작하고 스키마를 로드 및 편집하는 데 사용되는 클래스에 대해 설명합니다.
 
-[관계형 데이터 및 ADO.NET과의 XML 통합](../../../../docs/standard/data/xml/xml-integration-with-relational-data-and-adonet.md)\
+[관계형 데이터 및 ADO.NET과의 XML 통합](xml-integration-with-relational-data-and-adonet.md)\
 .NET Framework에서 <xref:System.Data.DataSet> 개체 및 <xref:System.Xml.XmlDataDocument> 개체를 사용하여 관계형 데이터와 계층형 데이터에 실시간으로 동시에 액세스할 수 있는 방법에 대해 설명합니다.
 
-[XML 문서의 네임스페이스 관리](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md)\
+[XML 문서의 네임스페이스 관리](managing-namespaces-in-an-xml-document.md)\
 <xref:System.Xml.XmlNamespaceManager> 클래스를 사용하여 네임스페이스 정보를 저장하고 유지 관리하는 방법을 설명합니다.
 
-[System.Xml 클래스의 형식 지원](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)\
+[System.Xml 클래스의 형식 지원](type-support-in-the-system-xml-classes.md)\
 XML 데이터 형식을 CLR 형식으로 매핑하는 방법, XML 데이터 형식을 변환하는 방법 및 <xref:System.Xml> 클래스의 기능을 지원하는 기타 형식을 설명합니다.
 
 ## <a name="related-sections"></a>관련 단원
 
-[ADO.NET](../../../../docs/framework/data/adonet/index.md)\
+[ADO.NET](../../../framework/data/adonet/index.md)\
 ADO.NET을 사용하여 데이터에 액세스하는 방법에 대한 정보를 제공합니다.
 
-[보안](../../../../docs/standard/security/index.md)\
+[보안](../../security/index.md)\
 .NET Framework 보안 시스템을 개략적으로 설명합니다.

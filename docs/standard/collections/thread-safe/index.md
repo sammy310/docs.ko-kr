@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, overview
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
-ms.openlocfilehash: 790543118b18b0422f41c3249512b62aae0cfb03
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7af59cf0fdbe8d5c7d7d586b4b86992ae1dc7601
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75938103"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290372"
 ---
 # <a name="thread-safe-collections"></a>스레드로부터 안전한 컬렉션
 .NET Framework 4에서는 네임스페이스는 스레드로부터 안전하면서 확장 가능한 몇 가지 컬렉션 클래스를 포함하는 <xref:System.Collections.Concurrent?displayProperty=nameWithType> 네임스페이스를 도입합니다. 여러 스레드는 사용자 코드에서 추가로 동기화할 필요없이 이러한 컬렉션으로부터 안전하고 효율적으로 항목을 추가하거나 제거할 수 있습니다. 새 코드를 작성하는 경우 여러 스레드가 컬렉션에 동시에 작성될 때마다 동시 컬렉션 클래스를 사용합니다. 공유 컬렉션에서 읽기만 하는 경우에 <xref:System.Collections.Generic?displayProperty=nameWithType> 네임스페이스에서 클래스를 사용할 수 있습니다. .NET Framework 1.1 또는 이전 런타임을 대상으로 해야 하는 경우가 아니면 1.0 컬렉션 클래스를 사용하지 않는 것이 좋습니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "75938103"
  .NET Framework 4의 동시 컬렉션 클래스는 .NET Framework 2.0 컬렉션 클래스의 형식 안전성을 제공할 뿐만 아니라 .NET Framework 1.0 컬렉션이 제공하는 스레드로부터의 안전성보다 더 효율적이고 안전하기 때문에 권장됩니다.  
   
 ## <a name="fine-grained-locking-and-lock-free-mechanisms"></a>세부적인 잠금 및 잠금 해제 메커니즘  
- 동시 컬렉션 형식의 일부에서는 .NET Framework 4에 새로 도입된 <xref:System.Threading.SpinLock>, <xref:System.Threading.SpinWait>, <xref:System.Threading.SemaphoreSlim> 및 <xref:System.Threading.CountdownEvent>와 같은 간단한 동기화 메커니즘을 사용합니다. 실제로 이러한 동기화 형식이 스레드를 Wait 상태로 전환하기 전 짧은 기간 동안에는 일반적으로 *사용 중인 회전*을 사용합니다. 대기 시간이 매우 짧을 경우 회전은 비용이 많이 드는 커널 전환을 포함하는 대기보다 훨씬 계산 비용이 적습니다. 회전을 사용하는 컬렉션 클래스의 경우 이 효율성 덕분에 여러 스레드가 매우 빠른 속도로 항목을 추가하고 제거할 수 있습니다. 회전 및 차단에 대한 자세한 내용은 [SpinLock](../../../../docs/standard/threading/spinlock.md) 및 [SpinWait](../../../../docs/standard/threading/spinwait.md)를 참조하세요.  
+ 동시 컬렉션 형식의 일부에서는 .NET Framework 4에 새로 도입된 <xref:System.Threading.SpinLock>, <xref:System.Threading.SpinWait>, <xref:System.Threading.SemaphoreSlim> 및 <xref:System.Threading.CountdownEvent>와 같은 간단한 동기화 메커니즘을 사용합니다. 실제로 이러한 동기화 형식이 스레드를 Wait 상태로 전환하기 전 짧은 기간 동안에는 일반적으로 *사용 중인 회전*을 사용합니다. 대기 시간이 매우 짧을 경우 회전은 비용이 많이 드는 커널 전환을 포함하는 대기보다 훨씬 계산 비용이 적습니다. 회전을 사용하는 컬렉션 클래스의 경우 이 효율성 덕분에 여러 스레드가 매우 빠른 속도로 항목을 추가하고 제거할 수 있습니다. 회전 및 차단에 대한 자세한 내용은 [SpinLock](../../threading/spinlock.md) 및 [SpinWait](../../threading/spinwait.md)를 참조하세요.  
   
  <xref:System.Collections.Concurrent.ConcurrentQueue%601> 및 <xref:System.Collections.Concurrent.ConcurrentStack%601> 클래스는 잠금을 전혀 사용하지 않습니다. 대신, 스레드로부터의 안전성을 달성하기 위해 <xref:System.Threading.Interlocked> 작업을 사용합니다.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "75938103"
   
 |형식|설명|  
 |----------|-----------------|  
-|<xref:System.Collections.Concurrent.BlockingCollection%601>|<xref:System.Collections.Concurrent.IProducerConsumerCollection%601>을 구현하는 모든 형식에 대해 경계 및 차단 기능을 제공합니다. 자세한 내용은 [BlockingCollection 개요](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)를 참조하세요.|  
+|<xref:System.Collections.Concurrent.BlockingCollection%601>|<xref:System.Collections.Concurrent.IProducerConsumerCollection%601>을 구현하는 모든 형식에 대해 경계 및 차단 기능을 제공합니다. 자세한 내용은 [BlockingCollection 개요](blockingcollection-overview.md)를 참조하세요.|  
 |<xref:System.Collections.Concurrent.ConcurrentDictionary%602>|키-값 쌍의 사전을 스레드로부터 안전하게 구현합니다.|  
 |<xref:System.Collections.Concurrent.ConcurrentQueue%601>|FIFO(선입선출) 큐를 스레드로부터 안전하게 구현합니다.|  
 |<xref:System.Collections.Concurrent.ConcurrentStack%601>|LIFO(후입선출) 스택을 스레드로부터 안전하게 구현합니다.|  
@@ -45,13 +45,13 @@ ms.locfileid: "75938103"
   
 |제목|설명|  
 |-----------|-----------------|  
-|[BlockingCollection 개요](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)|<xref:System.Collections.Concurrent.BlockingCollection%601> 형식에서 제공하는 기능에 대해 설명합니다.|  
-|[방법: ConcurrentDictionary에서 항목 추가 및 제거](../../../../docs/standard/collections/thread-safe/how-to-add-and-remove-items.md)|<xref:System.Collections.Concurrent.ConcurrentDictionary%602>에서 요소를 추가하고 제거하는 방법에 관해 설명합니다.|  
-|[방법: BlockingCollection에서 개별적으로 항목 추가 및 가져오기](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md)|읽기 전용 열거자를 사용하지 않고 차단 컬렉션에서 항목을 추가하고 검색하는 방법에 대해 설명합니다.|  
-|[방법: 컬렉션에 경계 및 차단 기능 추가](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md)|컬렉션 클래스를 <xref:System.Collections.Concurrent.IProducerConsumerCollection%601> 컬렉션에 대한 기본 스토리지 메커니즘으로 사용하는 방법을 설명합니다.|  
-|[방법: ForEach를 사용하여 BlockingCollection의 항목 제거](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md)|`foreach`(Visual Basic의 `For Each`)를 사용하여 차단 컬렉션에서 모든 항목을 제거하는 방법에 대해 설명합니다.|  
-|[방법: 파이프라인에서 차단 컬렉션 배열 사용](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md)|파이프라인을 구현하는 동시에 여러 차단 컬렉션을 사용하는 방법에 대해 설명합니다.|  
-|[방법: ConcurrentBag을 사용하여 개체 풀 만들기](../../../../docs/standard/collections/thread-safe/how-to-create-an-object-pool.md)|개체를 끊임없이 새로 만드는 대신 다시 사용할 수 있는 시나리오에서 동시 모음을 사용하고 성능을 향상시키는 방법을 보여 줍니다.|  
+|[BlockingCollection 개요](blockingcollection-overview.md)|<xref:System.Collections.Concurrent.BlockingCollection%601> 형식에서 제공하는 기능에 대해 설명합니다.|  
+|[방법: ConcurrentDictionary에서 항목 추가 및 제거](how-to-add-and-remove-items.md)|<xref:System.Collections.Concurrent.ConcurrentDictionary%602>에서 요소를 추가하고 제거하는 방법에 관해 설명합니다.|  
+|[방법: BlockingCollection에서 개별적으로 항목 추가 및 가져오기](how-to-add-and-take-items.md)|읽기 전용 열거자를 사용하지 않고 차단 컬렉션에서 항목을 추가하고 검색하는 방법에 대해 설명합니다.|  
+|[방법: 컬렉션에 한계 지정 및 차단 기능 추가](how-to-add-bounding-and-blocking.md)|컬렉션 클래스를 <xref:System.Collections.Concurrent.IProducerConsumerCollection%601> 컬렉션에 대한 기본 스토리지 메커니즘으로 사용하는 방법을 설명합니다.|  
+|[방법: ForEach를 사용하여 BlockingCollection의 항목 제거](how-to-use-foreach-to-remove.md)|`foreach`(Visual Basic의 `For Each`)를 사용하여 차단 컬렉션에서 모든 항목을 제거하는 방법에 대해 설명합니다.|  
+|[방법: 파이프라인에서 차단 컬렉션 배열 사용](how-to-use-arrays-of-blockingcollections.md)|파이프라인을 구현하는 동시에 여러 차단 컬렉션을 사용하는 방법에 대해 설명합니다.|  
+|[방법: ConcurrentBag을 사용하여 개체 풀 만들기](how-to-create-an-object-pool.md)|개체를 끊임없이 새로 만드는 대신 다시 사용할 수 있는 시나리오에서 동시 모음을 사용하고 성능을 향상시키는 방법을 보여 줍니다.|  
   
-## <a name="reference"></a>참조  
+## <a name="reference"></a>참고  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>

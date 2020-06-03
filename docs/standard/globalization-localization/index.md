@@ -11,12 +11,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
-ms.openlocfilehash: c5c601d18d92d9b57781bc8a09f26f0bc3a9216a
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 10d07a02a7ff744a87b920fd97df24b076c22cc3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842012"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288292"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>.NET 애플리케이션 전역화 및 지역화
 
@@ -84,10 +84,10 @@ ms.locfileid: "83842012"
 
    ASCII, ANSI, 유니코드 및 기타 문자 인코딩을 나타내는 클래스를 포함합니다.
 
-- [Resgen.exe(리소스 파일 생성기)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)
+- [Resgen.exe(리소스 파일 생성기)](../../framework/tools/resgen-exe-resource-file-generator.md)
 
    Resgen.exe를 사용하여 .txt 파일 및 .resx(XML 기반 리소스 형식) 파일을 공용 언어 런타임 바이너리 .resources 파일로 변환하는 방법에 대해 설명합니다.
 
-- [Winres.exe(Windows Forms 리소스 편집기)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)
+- [Winres.exe(Windows Forms 리소스 편집기)](../../framework/tools/winres-exe-windows-forms-resource-editor.md)
 
    Winres.exe를 사용하여 Windows Forms 폼을 지역화하는 방법을 설명합니다.

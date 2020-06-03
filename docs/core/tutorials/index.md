@@ -4,12 +4,12 @@ description: .NET Core 학습을 위한 자습서에 따라 Mac, Linux 및 Windo
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: 31f63a2bbafc7f1c8dacea0fa8d3a40f36f69e55
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: a685b7d8d6c849cfea061a997780b9cafeb6d938
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241476"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84283730"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>자습서에서 .NET Core 및 .NET Core SDK 도구 알아보기
 
@@ -22,10 +22,8 @@ ms.locfileid: "84241476"
 - [앱 게시](publishing-with-visual-studio.md)
 - [클래스 라이브러리 만들기](library-with-visual-studio.md)
 - [클래스 라이브러리 단위 테스트](testing-library-with-visual-studio.md)
-- [클래스 라이브러리 사용](consuming-library-with-visual-studio.md)
 - [패키지 설치 및 사용](/nuget/quickstart/install-and-use-a-package-in-visual-studio)
 - [패키지 만들기 및 게시](/nuget/quickstart/create-and-publish-a-package-using-visual-studio)
-
 - [F# 콘솔 앱 만들기](../../fsharp/get-started/get-started-visual-studio.md)
 
 ## <a name="use-visual-studio-code"></a>Visual Studio Code 사용
@@ -35,10 +33,10 @@ Visual Studio Code 또는 다른 코드 편집기를 사용하려면 해당 자�
 - [콘솔 앱 만들기](with-visual-studio-code.md)
 - [앱 디버그](debugging-with-visual-studio-code.md)
 - [앱 게시](publishing-with-visual-studio-code.md)
-- [라이브러리 만들기 및 단위 테스트 - macOS](using-on-macos.md)
+- [클래스 라이브러리 만들기](library-with-visual-studio-code.md)
+- [클래스 라이브러리 단위 테스트](testing-library-with-visual-studio-code.md)
 - [패키지 설치 및 사용](/nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli)
 - [패키지 만들기 및 게시](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)
-
 - [F# 콘솔 앱 만들기](../../fsharp/get-started/get-started-vscode.md)
 
 ## <a name="use-visual-studio-for-mac"></a>Mac용 Visual Studio 사용
