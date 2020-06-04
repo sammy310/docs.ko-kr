@@ -1,16 +1,16 @@
 ---
-title: XmlReader로 serialization(XSLT 호출)
+title: XmlReader에 직렬화(XSLT 호출)
 ms.date: 07/20/2015
 ms.assetid: 8b64f95a-e8f6-40f7-99f9-a8002c63af96
-ms.openlocfilehash: 39ecbc1851764d221ac99c3e47c26bcbe84c9e46
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e51bfc031ad6d5d0eb98718f5d547fb18eb45295
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349358"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84357376"
 ---
 # <a name="serializing-to-an-xmlreader-invoking-xslt-visual-basic"></a>XmlReader로 serialize (XSLT 호출) (Visual Basic)
-<xref:System.Xml?displayProperty=nameWithType>의 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 상호 운용성 기능을 사용할 때 <xref:System.Xml.Linq.XNode.CreateReader%2A>를 사용하여 <xref:System.Xml.XmlReader>를 만들 수 있습니다. 만들어진 <xref:System.Xml.XmlReader>에서 읽는 모듈은 XML 트리에서 노드를 읽고 적절하게 처리합니다.  
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]의 <xref:System.Xml?displayProperty=nameWithType> 상호 운용성 기능을 사용할 때 <xref:System.Xml.Linq.XNode.CreateReader%2A>를 사용하여 <xref:System.Xml.XmlReader>를 만들 수 있습니다. 만들어진 <xref:System.Xml.XmlReader>에서 읽는 모듈은 XML 트리에서 노드를 읽고 적절하게 처리합니다.  
   
 ## <a name="invoking-an-xslt-transformation"></a>XSLT 변환 호출  
  이 메서드를 사용할 수 있는 한 가지 경우는 XSLT 변환을 호출할 때입니다. XML 트리를 만들고 XML 트리에서 <xref:System.Xml.XmlReader>를 만든 다음 새 문서를 만들고 새 문서에 쓸 <xref:System.Xml.XmlWriter>를 만들 수 있습니다. 그런 다음 XSLT 변형을 호출하여 <xref:System.Xml.XmlReader> 및 <xref:System.Xml.XmlWriter>를 전달할 수 있습니다. 변환이 성공적으로 완료된 후 새 XML 트리가 변환의 결과로 채워집니다.  
@@ -62,4 +62,4 @@ Console.WriteLine(newTree)
   
 ## <a name="see-also"></a>참고 항목
 
-- [XML 트리 serialize (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)
+- [XML 트리 serialize (Visual Basic)](serializing-xml-trees.md)

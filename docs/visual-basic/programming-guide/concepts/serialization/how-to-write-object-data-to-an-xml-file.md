@@ -2,17 +2,17 @@
 title: '방법: XML 파일에 개체 데이터 쓰기'
 ms.date: 07/20/2015
 ms.assetid: f7966480-5ed2-43ac-9894-33427436de2a
-ms.openlocfilehash: 989920709428f0e9cb4ddb8aeacfc71a2df220d2
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 9608a48cb8b3fac1c71affa7a0a17e9789f94b18
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345971"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413156"
 ---
-# <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>방법: XML 파일에 개체 데이터 쓰기 (Visual Basic)
+# <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>방법: XML 파일에 개체 데이터 쓰기(Visual Basic)
 이 예제에서는 <xref:System.Xml.Serialization.XmlSerializer> 클래스를 사용하여 XML 파일에 클래스의 개체를 씁니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```vb  
 Public Module XMLWrite  
@@ -54,8 +54,8 @@ End Module
 ## <a name="net-framework-security"></a>.NET Framework 보안  
  이 예제에서는 파일이 아직 없는 경우 새 파일을 만듭니다. 애플리케이션에서 파일을 만들어야 하는 경우 해당 애플리케이션에 폴더에 대한 `Create` 권한이 있어야 합니다. 파일이 이미 있는 경우 애플리케이션에 더 낮은 권한인 `Write` 권한만 있으면 됩니다. 가능한 경우 배포하는 동안 파일을 만들고, 폴더에 대한 `Create` 권한 대신 단일 파일에 대해 `Read` 권한만 부여하는 것이 더 안전합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.IO.StreamWriter>
-- [방법: XML 파일에서 개체 데이터 읽기(Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)
-- [Serialization(Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
+- [방법: XML 파일에서 개체 데이터 읽기(Visual Basic)](how-to-read-object-data-from-an-xml-file.md)
+- [Serialization(Visual Basic)](index.md)

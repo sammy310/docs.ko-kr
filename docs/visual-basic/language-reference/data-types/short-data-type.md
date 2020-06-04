@@ -16,39 +16,39 @@ helpviewer_keywords:
 - Short data type
 - literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
-ms.openlocfilehash: 8dfdfb56de32e4b3a96729b09ccf46a6fee9a424
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 176d27c86127dac1d9c9c0231790f7a5c2a2fefc
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401342"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415559"
 ---
-# <a name="short-data-type-visual-basic"></a>짧은 데이터 유형(비주얼 베이직)
+# <a name="short-data-type-visual-basic"></a>Short 데이터 형식 (Visual Basic)
 
--32,768에서 32,767까지의 가치가 있는 16비트(2바이트) 정수를 보유합니다.  
+-32768부터 32767 까지의 값 범위에 해당 하는 부호 있는 16 비트 (2 바이트) 정수를 저장 합니다.  
   
 ## <a name="remarks"></a>설명  
 
- `Short` 데이터 형식을 사용하여 `Integer`의 전체 데이터 너비가 필요하지 않은 정수 값을 포함합니다. 경우에 따라 공통 언어 런타임으로 `Short` 변수를 밀접하게 압축하고 메모리 소비를 줄일 수 있습니다.  
+ `Short`데이터 형식을 사용 하 여의 전체 데이터 너비를 요구 하지 않는 정수 값을 포함 합니다 `Integer` . 경우에 따라 공용 언어 런타임에서는 변수를 긴밀 하 게 압축 `Short` 하 고 메모리 사용을 줄일 수 있습니다.  
   
  `Short`의 기본값은 0입니다.  
   
 ## <a name="literal-assignments"></a>리터럴 할당
 
-소수점 문자, 육각 형 리터럴, 옥탈 리터럴 또는 (Visual Basic 2017로 시작) 이진 리터럴을 할당하여 `Short` 변수를 선언하고 초기화 할 수 있습니다. 정수 리터럴이 `Short` 범위를 벗어나는 경우(즉 <xref:System.Int16.MinValue?displayProperty=nameWithType>보다 작거나 <xref:System.Int16.MaxValue?displayProperty=nameWithType>보다 큰 경우) 컴파일 오류가 발생합니다.
+`Short`10 진수 리터럴, 16 진수 리터럴, 8 진수 리터럴 또는 (Visual Basic 2017부터) 이진 리터럴을 할당 하 여 변수를 선언 하 고 초기화할 수 있습니다. 정수 리터럴이 `Short` 범위를 벗어나는 경우(즉 <xref:System.Int16.MinValue?displayProperty=nameWithType>보다 작거나 <xref:System.Int16.MaxValue?displayProperty=nameWithType>보다 큰 경우) 컴파일 오류가 발생합니다.
 
-다음 예제에서 소수점, 육각형 및 이진 리터럴로 표시되는 정수는 1,034와 같으며 이진 리터럴은 [정수에서](integer-data-type.md) 값으로 `Short` 암시적으로 변환됩니다.
+다음 예제에서는 10 진수, 16 진수 및 이진 리터럴로 표현 된 1034와 동일한 정수를 암시적으로 [정수](integer-data-type.md) 에서 값으로 변환 `Short` 합니다.
 
 [!code-vb[Short](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Short)]
 
 > [!NOTE]
-> 접두사를 `&h` 사용하거나 `&H` 육각 문자 문자, `&b` 접두사 또는 이진 `&B` 리터럴을 나타내거나 접두사를 `&o` 나타내거나 `&O` 팔각형 리터럴을 나타냅니다. 10진수 리터럴에는 접두사가 없습니다.
+> 접두사 또는를 사용 하 여 `&h` `&H` 16 진수 리터럴을 표시 하거나, 접두사 또는을 사용 하 여 이진 리터럴을 표시 하 고, 접두사 또는를 사용 하 여 `&b` `&B` `&o` `&O` 8 진수 리터럴을 나타냅니다. 10진수 리터럴에는 접두사가 없습니다.
 
-Visual Basic 2017부터는 다음 예제와 같이 `_`밑줄 문자를 숫자 구분 기호로 사용하여 가독성을 향상시킬 수도 있습니다.
+Visual Basic 2017부터 `_` 다음 예제와 같이 밑줄 문자를 자릿수 구분 기호로 사용 하 여 가독성을 높일 수도 있습니다.
 
 [!code-vb[Short](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ShortS)]
 
-Visual Basic 15.5부터는 접두사와 육각형, 이진 또는 옥탈 숫자 사이의 선행 구분 기호로 밑줄 문자()를`_`사용할 수도 있습니다. 다음은 그 예입니다.
+Visual Basic 15.5부터 `_` 접두사와 16 진수, 이진 또는 8 진수 숫자 사이의 선행 구분 기호로 밑줄 문자 ()를 사용할 수도 있습니다. 예를 들면 다음과 같습니다.
 
 ```vb
 Dim number As Short = &H_3264
@@ -56,7 +56,7 @@ Dim number As Short = &H_3264
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-숫자 리터럴은 다음 예제와 `S` 같이 `Short` 데이터 형식을 나타내는 형식 [문자를](../../programming-guide/language-features/data-types/type-characters.md) 포함할 수도 있습니다.
+`S`다음 예제와 같이 숫자 리터럴은 [형식 문자](../../programming-guide/language-features/data-types/type-characters.md) 를 포함 하 여 데이터 형식을 나타낼 수도 있습니다 `Short` .
 
 ```vb
 Dim number = &H_3264S
@@ -64,18 +64,18 @@ Dim number = &H_3264S
 
 ## <a name="programming-tips"></a>프로그래밍 팁
 
-- **확대.** 데이터 `Short` 형식은 `Integer`" `Long` `Decimal`을 `Single`로 `Double`확대합니다. 이는 `Short` 오류 발생 없이 <xref:System.OverflowException?displayProperty=nameWithType>를 이러한 형식 중 하나로 변환할 수 있음을 의미합니다.  
+- **넓혀.** `Short`데이터 형식은,,, 또는로 확대 변환 `Integer` `Long` `Decimal` `Single` `Double` 됩니다. 이는 `Short` 오류 발생 없이 <xref:System.OverflowException?displayProperty=nameWithType>를 이러한 형식 중 하나로 변환할 수 있음을 의미합니다.  
   
-- **문자를 입력합니다.** 리터럴 형식 문자 `S`를 리터럴에 추가하면 `Short` 데이터 형식이 됩니다. `Short`식별자 유형 문자가 없습니다.  
+- **문자를 입력 합니다.** 리터럴 형식 문자 `S`를 리터럴에 추가하면 `Short` 데이터 형식이 됩니다. `Short`에는 식별자 형식 문자가 없습니다.  
   
 - **Framework 형식.** .NET Framework에서 해당하는 형식은 <xref:System.Int16?displayProperty=nameWithType> 구조체입니다.  
   
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Int16?displayProperty=nameWithType>
-- [데이터 유형](../../../visual-basic/language-reference/data-types/index.md)
-- [CString](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [변환 요약](../../../visual-basic/language-reference/keywords/conversion-summary.md)
-- [정수 데이터 유형](../../../visual-basic/language-reference/data-types/integer-data-type.md)
-- [Long 데이터 형식](../../../visual-basic/language-reference/data-types/long-data-type.md)
-- [데이터 형식의 효율적 사용](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [데이터 형식](index.md)
+- [형식 변환 함수](../functions/type-conversion-functions.md)
+- [변환 요약](../keywords/conversion-summary.md)
+- [Integer 데이터 형식](integer-data-type.md)
+- [Long 데이터 형식](long-data-type.md)
+- [데이터 형식의 효율적 사용](../../programming-guide/language-features/data-types/efficient-use-of-data-types.md)

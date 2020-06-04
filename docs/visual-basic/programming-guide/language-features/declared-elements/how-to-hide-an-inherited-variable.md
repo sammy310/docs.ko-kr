@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], about declared elements
 - variables [Visual Basic], hiding inherited
 ms.assetid: 765728d9-7351-4a30-999d-b5f34f024412
-ms.openlocfilehash: c20c36b26c90c82da4e8836799f499498ccc40e4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f49bba0497f9f4f2774b01284c815bba9aaed119
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345349"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84357272"
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a>방법: 상속된 변수 숨기기(Visual Basic)
 
@@ -50,7 +50,7 @@ ms.locfileid: "74345349"
     End Class  
     ```  
   
-     앞의 예제에서는 기본 클래스에서 `shadowString` 변수를 선언 하 고 파생 클래스에서 해당 변수를 숨깁니다. 파생 클래스의 `ShowStrings` 프로시저는 이름 `shadowString` 정규화 되지 않은 경우 문자열의 숨김 버전을 표시 합니다. 그런 다음 `shadowString` `MyBase` 키워드를 사용 하 여 정규화 된 버전을 표시 합니다.  
+     앞의 예제에서는 `shadowString` 기본 클래스에서 변수를 선언 하 고 파생 클래스에서 해당 변수를 숨깁니다. `ShowStrings`파생 클래스의 프로시저는 이름이 한정 되지 않은 경우 문자열의 숨김 버전을 표시 합니다 `shadowString` . 그런 다음 `shadowString` 키워드를 사용 하 여 정규화 된 버전을 표시 `MyBase` 합니다.  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍
 
@@ -58,11 +58,11 @@ ms.locfileid: "74345349"
 
 ## <a name="see-also"></a>참고 항목
 
-- [선언된 요소 참조](references-to-declared-elements.md)
+- [References to Declared Elements](references-to-declared-elements.md)
 - [Visual Basic에서 숨김](shadowing.md)
-- [숨기기와 재정의의 차이점](differences-between-shadowing-and-overriding.md)
-- [방법: 이름이 같은 변수 숨기기](how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
+- [섀도잉과 재정의 간의 차이점](differences-between-shadowing-and-overriding.md)
+- [방법: 사용자 변수와 이름이 같은 변수 숨기기](how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
 - [방법: 파생 클래스에 의해 숨겨진 변수에 액세스](how-to-access-a-variable-hidden-by-a-derived-class.md)
-- [재정의](../../../../visual-basic/language-reference/modifiers/overrides.md)
+- [재정의](../../../language-reference/modifiers/overrides.md)
 - [Me, My, MyBase 및 MyClass](../../program-structure/me-my-mybase-and-myclass.md)
 - [상속 기본 사항](../objects-and-classes/inheritance-basics.md)
