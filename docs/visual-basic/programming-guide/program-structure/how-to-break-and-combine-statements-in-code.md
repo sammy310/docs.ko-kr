@@ -1,5 +1,5 @@
 ---
-title: '방법: 코드에서 문 분리 및 결합'
+title: '방법: 코드에서 명령문 분리 및 결합'
 ms.date: 07/20/2015
 f1_keywords:
 - vb._
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-ms.openlocfilehash: f1a24c001cd20acc7663fb4cbe60e7e35a9c8fc3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c78cbeaa5c2df2d4f2e3cce2b5b3fb8048ff3388
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347431"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403254"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>방법: 코드에서 문 분리 및 결합(Visual Basic)
 
@@ -34,10 +34,10 @@ ms.locfileid: "74347431"
 
 ## <a name="to-break-a-single-statement-into-multiple-lines"></a>단일 문을 여러 줄로 분할 하려면
 
-줄 연속 문자를 사용 합니다 .이 문자는 줄을 나눌 지점에서 밑줄 (`_`)입니다. 밑줄 바로 앞에는 공백이 오고 바로 뒤에 줄 종결자 (캐리지 리턴)가와 야 합니다 (버전 16.0부터). 주석 뒤에 캐리지 리턴이와 야 합니다.
+줄 연속 문자를 사용 합니다 .이 문자는 줄을 `_` 나눌 지점에서 밑줄 ()입니다. 밑줄 바로 앞에는 공백이 오고 바로 뒤에 줄 종결자 (캐리지 리턴)가와 야 합니다 (버전 16.0부터). 주석 뒤에 캐리지 리턴이와 야 합니다.
 
   > [!NOTE]
-  > 경우에 따라 줄 연속 문자를 생략 하는 경우 Visual Basic 컴파일러는 다음 코드 줄에서 문을 암시적으로 계속 합니다. 줄 연속 문자를 생략할 수 있는 구문 요소 목록은 [문의](../../../visual-basic/programming-guide/language-features/statements.md)"암시적 줄 연속"을 참조 하세요.
+  > 경우에 따라 줄 연속 문자를 생략 하는 경우 Visual Basic 컴파일러는 다음 코드 줄에서 문을 암시적으로 계속 합니다. 줄 연속 문자를 생략할 수 있는 구문 요소 목록은 [문의](../language-features/statements.md)"암시적 줄 연속"을 참조 하세요.
 
   다음 예제에서 문은 줄 연속 문자를 사용 하 여 마지막 줄을 제외한 4 개의 줄로 구분 됩니다.
 
@@ -49,17 +49,17 @@ ms.locfileid: "74347431"
 
   줄 연속 문자를 사용할 수 있는 위치에 대 한 몇 가지 제한이 있습니다. 예를 들어 인수 이름 중간에 사용할 수 없습니다. 줄 연속 문자를 사용 하 여 인수 목록을 나눌 수 있지만 인수의 개별 이름은 그대로 유지 되어야 합니다.
 
-  줄 연속 문자를 사용 하 여 주석을 계속할 수 없습니다. 컴파일러는 특별 한 의미를 위해 주석의 문자를 검사 하지 않습니다. 여러 줄로 된 주석을 보려면 각 줄에서 주석 기호 (`'`)를 반복 합니다.
+  줄 연속 문자를 사용 하 여 주석을 계속할 수 없습니다. 컴파일러는 특별 한 의미를 위해 주석의 문자를 검사 하지 않습니다. 여러 줄로 된 주석을 보려면 각 줄에서 주석 기호 ( `'` )를 반복 합니다.
 
  각 문을 별도의 줄에 배치 하는 것이 좋습니다. Visual Basic을 사용 하면 여러 문을 같은 줄에 배치할 수도 있습니다.
 
 ## <a name="to-place-multiple-statements-on-the-same-line"></a>같은 줄에 여러 문을 추가 하려면
 
-다음 예제와 같이 문을 콜론 (`:`)으로 구분 합니다.
+다음 예제와 같이 문을 콜론 ()으로 구분 합니다 `:` .
 
   [!code-vb[VbVbcnConventions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#10)]
 
 ## <a name="see-also"></a>참고 항목
 
-- [프로그램 구조 및 코드 규칙](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
-- [문](../../../visual-basic/programming-guide/language-features/statements.md)
+- [프로그램 구조 및 코드 규칙](program-structure-and-code-conventions.md)
+- [문](../language-features/statements.md)

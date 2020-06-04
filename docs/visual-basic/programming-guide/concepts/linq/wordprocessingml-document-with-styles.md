@@ -1,13 +1,13 @@
 ---
-title: Styles2 사용 된 WordprocessingML 문서
+title: Styles2가 포함 된 WordprocessingML 문서
 ms.date: 07/20/2015
 ms.assetid: a9136e4d-c368-4661-8049-7d45c679a236
-ms.openlocfilehash: 977de8e4272ca7cea004127adcf1b15726dcc211
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: caf80014077bf57dc1ffb8eaeac6390cf4258015
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907948"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403552"
 ---
 # <a name="wordprocessingml-document-with-styles"></a>스타일이 사용된 WordprocessingML 문서
 더 복잡한 WordprocessingML 문서에는 스타일로 서식이 지정된 단락이 있습니다.  
@@ -17,7 +17,7 @@ ms.locfileid: "61907948"
  패키지에 액세스할 때 임의의 경로를 사용하는 대신 부분 간 관계를 통해 액세스해야 합니다. 이 문제는 WordprocessingML 문서의 내용 조작 자습서의 범위를 벗어나지만 이 자습서에 포함된 예제 프로그램에서는 올바른 방법을 보여 줍니다.  
   
 ## <a name="a-document-that-uses-styles"></a>스타일을 사용하는 문서  
- WordML 예제에 표시 되는 [WordprocessingML 문서의 모양 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) 항목은 매우 단순 합니다. 다음 문서는 더 복잡합니다. 스타일로 서식이 지정된 단락이 있습니다. Office Open XML 문서를 구성 하는 XML 실행 하는 것을 확인 하는 가장 쉬운 방법은 합니다 [예제에서는 해당 출력 Office Open XML 문서 부분 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md)합니다.  
+ [WordprocessingML Documents (Visual Basic) 항목의 모양](shape-of-wordprocessingml-documents.md) 에 표시 되는 WordML 예제는 매우 단순 합니다. 다음 문서는 더 복잡합니다. 이 문서에는 스타일로 서식이 지정된 단락이 있습니다. Office Open XML 문서를 구성 하는 XML을 보는 가장 쉬운 방법은 [Office OPEN Xml 문서 파트 (Visual Basic)를 출력 하는 예제](example-that-outputs-office-open-xml-document-parts.md)를 실행 하는 것입니다.  
   
  다음 문서에서 첫 번째 단락에는 `Heading1` 스타일이 있습니다. 기본 스타일이 있는 단락이 많이 있으며 `Code` 스타일이 있는 단락도 많이 있습니다. 이 문서는 이와 같이 비교적 복잡하기 때문에 LINQ to XML을 사용하여 구문 분석하기가 더 흥미로운 대상입니다.  
   
@@ -137,6 +137,6 @@ ms.locfileid: "61907948"
 </w:document>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [자세한 내용은 office Open XML WordprocessingML 문서 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+- [Office Open XML WordprocessingML 문서에 대 한 세부 정보 (Visual Basic)](details-of-office-open-xml-wordprocessingml-documents.md)

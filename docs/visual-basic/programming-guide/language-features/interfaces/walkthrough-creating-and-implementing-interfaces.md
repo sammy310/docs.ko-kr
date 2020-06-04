@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interface implementation [Visual Basic], walkthrough
 - interfaces [Visual Basic], creating
 ms.assetid: ded82af2-9f52-4232-98ef-fe458180f112
-ms.openlocfilehash: 47176d2e7a512d8e8c27a90ac04d2a2a2af274b5
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 89e8f91a04b25b84bc783d5c4f4b91cf12426f72
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345036"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405069"
 ---
 # <a name="walkthrough-creating-and-implementing-interfaces-visual-basic"></a>연습: 인터페이스 만들기 및 구현(Visual Basic)
 
@@ -31,11 +31,11 @@ ms.locfileid: "74345036"
   
 2. **프로젝트** 메뉴에서 **모듈 추가** 를 클릭 하 여 프로젝트에 새 모듈을 추가 합니다.  
   
-3. 새 모듈의 이름을 `Module1.vb` 하 고 **추가**를 클릭 합니다. 새 모듈의 코드가 표시 됩니다.  
+3. 새 모듈의 이름을로 `Module1.vb` 하 고 **추가**를 클릭 합니다. 새 모듈의 코드가 표시 됩니다.  
   
-4. `Module`와 `End Module` 문 사이에 `Interface TestInterface`를 입력 하 고 ENTER 키를 눌러 `Module1` 내에서 `TestInterface` 이라는 인터페이스를 정의 합니다. **코드 편집기** 는 `Interface` 키워드를 들여쓰 며 `End Interface` 문을 추가 하 여 코드 블록을 구성 합니다.  
+4. `TestInterface` `Module1` 및 문 사이에를 입력 하 `Interface TestInterface` `Module` 고 enter 키를 눌러 내에 명명 된 인터페이스를 정의 `End Module` 합니다. **코드 편집기** 는 키워드를 들여쓰기 하 `Interface` 고 `End Interface` 문을 추가 하 여 코드 블록을 구성 합니다.  
   
-5. `Interface` 문과 `End Interface` 문 사이에 다음 코드를 배치 하 여 인터페이스에 대 한 속성, 메서드 및 이벤트를 정의 합니다.  
+5. 및 문 사이에 다음 코드를 배치 하 여 인터페이스에 대 한 속성, 메서드 및 이벤트를 정의 합니다 `Interface` `End Interface` .  
   
      [!code-vb[VbVbalrOOP#98](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#98)]
   
@@ -45,71 +45,71 @@ ms.locfileid: "74345036"
   
 ### <a name="to-implement-the-interface"></a>인터페이스를 구현 하려면
   
-1. 다음 문을 추가 하 여 `ImplementationClass` 라는 클래스를 추가 하 고 `End Interface` 문 뒤에 `End Module` 문 앞에 `Module1`한 다음 ENTER 키를 누릅니다.  
+1. 문 뒤에 문 뒤에 다음 문을 추가 하 여 라는 클래스를 추가 하 `ImplementationClass` `Module1` `End Interface` `End Module` 고 enter 키를 누릅니다.  
   
      [!code-vb[VbVbalrOOP#99](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#99)]
   
-     통합 개발 환경 내에서 작업 하는 경우 ENTER 키를 누르면 **코드 편집기** 에서 일치 하는 `End Class` 문을 제공 합니다.  
+     통합 개발 환경 내에서 작업 하는 경우 ENTER 키를 누르면 **코드 편집기** 에서 일치 하는 문을 제공 합니다 `End Class` .  
   
-2. 클래스가 구현 하는 인터페이스의 이름을 `ImplementationClass`에 다음 `Implements` 문을 추가 합니다.  
+2. `Implements` `ImplementationClass` 클래스에서 구현 하는 인터페이스의 이름을로 하는 다음 문을에 추가 합니다.  
   
      [!code-vb[VbVbalrOOP#100](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#100)]
   
-     클래스 또는 구조체의 맨 위에 있는 다른 항목과 별도로 나열 될 경우 `Implements` 문은 클래스 또는 구조체가 인터페이스를 구현 한다는 것을 나타냅니다.  
+     클래스 또는 구조체의 맨 위에 있는 다른 항목과 별도로 나열 되는 경우 `Implements` 문은 클래스 또는 구조체가 인터페이스를 구현 한다는 것을 나타냅니다.  
   
-     통합 개발 환경 내에서 작업 하는 경우 **코드 편집기** 는 enter 키를 누를 때 `TestInterface`에 필요한 클래스 멤버를 구현 하 고 다음 단계를 건너뛸 수 있습니다.  
+     통합 개발 환경 내에서 작업 하는 경우 ENTER 키를 누를 때에 필요한 클래스 멤버를 **코드 편집기** 에서 구현 `TestInterface` 하 고 다음 단계를 건너뛸 수 있습니다.  
   
-3. 통합 개발 환경 내에서 작업 하지 않는 경우 `MyInterface`인터페이스의 모든 멤버를 구현 해야 합니다. `ImplementationClass`에 다음 코드를 추가 하 여 `Event1`, `Method1`및 `Prop1`을 구현 합니다.  
+3. 통합 개발 환경 내에서 작업 하지 않는 경우 인터페이스의 모든 멤버를 구현 해야 합니다 `MyInterface` . `ImplementationClass`, 및를 구현 하려면에 다음 코드를 추가 합니다 `Event1` `Method1` `Prop1` .  
   
      [!code-vb[VbVbalrOOP#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#101)]
   
-     `Implements` 문은 구현할 인터페이스와 인터페이스 멤버의 이름을로 합니다.  
+     `Implements`문은 구현 중인 인터페이스와 인터페이스 멤버의 이름을로 합니다.  
   
-4. 속성 값을 저장 한 클래스에 전용 필드를 추가 하 여 `Prop1`의 정의를 완료 합니다.  
+4. `Prop1`속성 값을 저장 한 클래스에 전용 필드를 추가 하 여의 정의를 완료 합니다.  
   
      [!code-vb[VbVbalrOOP#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#102)]
   
-     속성 get 접근자에서 `pval` 값을 반환 합니다.  
+     Get 접근자 속성에서의 값을 반환 합니다 `pval` .  
   
      [!code-vb[VbVbalrOOP#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#103)]
   
-     속성 집합 접근자에서 `pval` 값을 설정 합니다.  
+     `pval`속성 집합 접근자에서 값을 설정 합니다.  
   
      [!code-vb[VbVbalrOOP#104](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#104)]
   
-5. 다음 코드를 추가 하 여 `Method1`의 정의를 완료 합니다.  
+5. `Method1`다음 코드를 추가 하 여의 정의를 완료 합니다.  
   
      [!code-vb[VbVbalrOOP#105](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#105)]
   
 ### <a name="to-test-the-implementation-of-the-interface"></a>인터페이스 구현을 테스트 하려면
   
-1. **솔루션 탐색기**에서 프로젝트의 시작 폼을 마우스 오른쪽 단추로 클릭 하 고 **코드 보기**를 클릭 합니다. 편집기에서 시작 폼의 클래스를 표시 합니다. 기본적으로 시작 폼을 `Form1`이라고 합니다.  
+1. **솔루션 탐색기**에서 프로젝트의 시작 폼을 마우스 오른쪽 단추로 클릭 하 고 **코드 보기**를 클릭 합니다. 편집기에서 시작 폼의 클래스를 표시 합니다. 기본적으로 시작 폼이 호출 됩니다 `Form1` .  
   
-2. `Form1` 클래스에 다음 `testInstance` 필드를 추가 합니다.  
+2. 클래스에 다음 필드를 추가 합니다 `testInstance` `Form1` .  
   
      [!code-vb[VbVbalrOOP#120](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#120)]
   
-     `testInstance`를 `WithEvents`로 선언 하면 `Form1` 클래스가 해당 이벤트를 처리할 수 있습니다.  
+     로 선언 `testInstance` 하면 `WithEvents` `Form1` 클래스가 해당 이벤트를 처리할 수 있습니다.  
   
-3. `Form1` 클래스에 다음 이벤트 처리기를 추가 하 여 `testInstance`에서 발생 한 이벤트를 처리 합니다.  
+3. 클래스에 다음 이벤트 처리기를 추가 하 `Form1` 여에서 발생 하는 이벤트를 처리 합니다 `testInstance` .  
   
      [!code-vb[VbVbalrOOP#106](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#106)]
   
-4. `Test` 라는 서브루틴을 `Form1` 클래스에 추가 하 여 구현 클래스를 테스트 합니다.  
+4. 클래스에 라는 서브루틴을 추가 `Test` `Form1` 하 여 구현 클래스를 테스트 합니다.  
   
      [!code-vb[VbVbalrOOP#107](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#107)]
   
-     `Test` 프로시저는 `MyInterface`를 구현 하는 클래스의 인스턴스를 만들고, 해당 인스턴스를 `testInstance` 필드에 할당 하 고, 속성을 설정 하 고, 인터페이스를 통해 메서드를 실행 합니다.  
+     `Test`프로시저는를 구현 하는 클래스의 인스턴스 `MyInterface` 를 만들고, 해당 인스턴스를 필드에 할당 하 `testInstance` 고, 속성을 설정 하 고, 인터페이스를 통해 메서드를 실행 합니다.  
   
-5. 시작 폼의 `Form1 Load` 프로시저에서 `Test` 프로시저를 호출 하는 코드를 추가 합니다.  
+5. `Test`시작 폼의 프로시저에서 프로시저를 호출 하는 코드를 추가 합니다 `Form1 Load` .  
   
      [!code-vb[VbVbalrOOP#108](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#108)]
   
-6. F5 키를 눌러 `Test` 프로시저를 실행 합니다. "Prop1가 9로 설정 되었습니다." 라는 메시지가 표시 됩니다. 확인을 클릭 하면 "Method1의 X 매개 변수가 5입니다." 라는 메시지가 표시 됩니다. 확인을 클릭 하면 "이벤트를 catch 했습니다." 라는 메시지가 표시 됩니다.  
+6. `Test`F5 키를 눌러 프로시저를 실행 합니다. "Prop1가 9로 설정 되었습니다." 라는 메시지가 표시 됩니다. 확인을 클릭 하면 "Method1의 X 매개 변수가 5입니다." 라는 메시지가 표시 됩니다. 확인을 클릭 하면 "이벤트를 catch 했습니다." 라는 메시지가 표시 됩니다.  
   
 ## <a name="see-also"></a>참고 항목
 
-- [Implements 문](../../../../visual-basic/language-reference/statements/implements-statement.md)
-- [인터페이스](../../../../visual-basic/programming-guide/language-features/interfaces/index.md)
-- [Interface 문](../../../../visual-basic/language-reference/statements/interface-statement.md)
-- [Event 문](../../../../visual-basic/language-reference/statements/event-statement.md)
+- [Implements 문](../../../language-reference/statements/implements-statement.md)
+- [인터페이스](index.md)
+- [Interface 문](../../../language-reference/statements/interface-statement.md)
+- [Event 문](../../../language-reference/statements/event-statement.md)

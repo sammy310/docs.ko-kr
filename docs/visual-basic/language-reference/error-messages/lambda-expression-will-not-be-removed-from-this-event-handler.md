@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - BC42326
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
-ms.openlocfilehash: 52107589c6bbebbd34ecbb090845f4031612c276
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 07ace3f1b9c5e512227dc1f718ef768b631c8303
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72578931"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397378"
 ---
 # <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a>이벤트 처리기에서 람다 식이 제거되지 않습니다.
 
 이 이벤트 처리기에서 람다 식이 제거 되지 않습니다. 변수에 람다 식을 할당 하 고 변수를 사용 하 여 이벤트를 추가 및 제거 합니다.
 
-이벤트 처리기에 람다 식을 사용 하는 경우에는 원하는 동작이 표시 되지 않을 수 있습니다. 컴파일러는 동일한 경우에도 각 람다 식 정의에 대 한 새 메서드를 생성 합니다. 따라서 다음 코드는 `False`를 표시 합니다.
+이벤트 처리기에 람다 식을 사용 하는 경우에는 원하는 동작이 표시 되지 않을 수 있습니다. 컴파일러는 동일한 경우에도 각 람다 식 정의에 대 한 새 메서드를 생성 합니다. 따라서 다음 코드는를 표시 합니다 `False` .
 
 ```vb
 Module Module1
@@ -34,7 +34,7 @@ Module Module1
 End Module
 ```
 
-이벤트 처리기에 람다 식을 사용 하면 예기치 않은 결과가 발생할 수 있습니다. 다음 예에서는 `AddHandler` 의해 추가 된 람다 식이 `RemoveHandler` 문으로 제거 되지 않습니다.
+이벤트 처리기에 람다 식을 사용 하면 예기치 않은 결과가 발생할 수 있습니다. 다음 예제에서는에 의해 추가 된 람다 식이 `AddHandler` 문에 의해 제거 되지 않습니다 `RemoveHandler` .
 
 ```vb
 Module Module1
@@ -61,7 +61,7 @@ End Module
 
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면
 
-경고를 방지 하 고 람다 식을 제거 하려면 다음 예제와 같이 람다 식을 변수에 할당 하 고 `AddHandler` 및 `RemoveHandler` 문 모두에서 변수를 사용 합니다.
+경고를 방지 하 고 람다 식을 제거 하려면 다음 예제와 같이 람다 식을 변수에 할당 하 고 및 문에서 변수를 사용 `AddHandler` `RemoveHandler` 합니다.
 
 ```vb
 Module Module1
@@ -85,8 +85,8 @@ Module Module1
 End Module
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [람다 식](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
-- [완화된 대리자 변환](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
-- [이벤트](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [람다 식](../../programming-guide/language-features/procedures/lambda-expressions.md)
+- [완화된 대리자 변환](../../programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [이벤트](../../programming-guide/language-features/events/index.md)

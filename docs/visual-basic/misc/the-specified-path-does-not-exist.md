@@ -2,12 +2,12 @@
 title: 지정한 경로가 없습니다.
 ms.date: 07/20/2015
 ms.assetid: b0855f92-03c2-446b-94c1-856c87359c54
-ms.openlocfilehash: b4e6c6618567f39165d33c567bfd0a5fecf73bf7
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: c5d5ac2b2988c6d8b13c2b1d11885d8b549ba487
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912573"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398554"
 ---
 # <a name="the-specified-path-does-not-exist"></a>지정한 경로가 없습니다.
 아마도 문자열을 결합하는 오류로 인해 지정된 경로가 없습니다.  
@@ -16,8 +16,8 @@ ms.locfileid: "64912573"
   
 - 경로가 정확한지 확인합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [방법: 파일 경로의 구문 분석](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
-- [문자열과 다른 형식 사이의 변환](../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
+- [방법: 파일 경로 구문 분석](../developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+- [문자열과 다른 형식 사이의 변환](../programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
 - [Visual Basic의 문자열 구문 분석](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms235224(v=vs.100))

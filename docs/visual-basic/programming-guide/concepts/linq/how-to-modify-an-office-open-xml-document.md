@@ -1,20 +1,20 @@
 ---
-title: '문서: Office Open XML 문서 수정'
+title: '방법: Office Open XML 문서 수정'
 ms.date: 07/20/2015
 ms.assetid: 1cefd7f5-8e39-44c4-869c-f8021538a777
-ms.openlocfilehash: a6d546b064afe7020e5d3287351e946e182f03e6
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 9fb046f43686405a3d84cb68b49cd6dcd34e0839
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337886"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398027"
 ---
 # <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>방법: Office Open XML 문서 수정 (Visual Basic)
 이 항목에서는 Office Open XML 문서를 열고, 수정하고, 저장하는 예제를 제공합니다.  
   
  Office Open XML에 대 한 자세한 내용은 [Eric 흰색의 블로그](http://www.ericwhite.com)를 참조 하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 문서의 첫 번째 단락 요소를 찾고 단락에서 텍스트를 검색한 다음 단락의 모든 텍스트 실행을 삭제합니다. 또한 대문자로 변환된 첫 번째 단락 텍스트로 구성된 새로운 텍스트 실행을 만들고 변경된 XML을 Open XML 패키지로 serialize한 후 닫습니다.  
   
  이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 <xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.  
@@ -137,12 +137,12 @@ End Module
   
  이 프로그램을 실행한 후 `SampleDoc.docx`를 열면 이 프로그램에서 해당 문서의 첫 번째 단락을 대문자로 변환한 것을 확인할 수 있습니다.  
   
- [원본 Office OPEN Xml 문서 만들기 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)에 설명 된 샘플 Open xml 문서를 사용 하 여 실행 하는 경우이 예제는 다음과 같은 출력을 생성 합니다.  
+ [원본 Office OPEN Xml 문서 만들기 (Visual Basic)](creating-the-source-office-open-xml-document.md)에 설명 된 샘플 Open xml 문서를 사용 하 여 실행 하는 경우이 예제는 다음과 같은 출력을 생성 합니다.  
   
 ```console  
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [LINQ to XML (고급 쿼리 기술) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [LINQ to XML (고급 쿼리 기술) (Visual Basic)](advanced-query-techniques-linq-to-xml.md)

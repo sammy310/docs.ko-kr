@@ -1,13 +1,13 @@
 ---
-title: '방법: 그룹을 사용하여 파일을 여러 파일로 분할(LINQ)'
+title: '방법: 그룹을 사용하여 여러 파일로 파일 분할(LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-ms.openlocfilehash: 07d53c9afca88cd3156c7fc8fcfab5ac7ca24f25
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f6b11ab4b4fe11dbf1cb4cf07654b5ef3f6785ad
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348035"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397715"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>방법: 그룹을 사용 하 여 파일을 여러 파일로 분할 (LINQ) (Visual Basic)
 
@@ -45,7 +45,7 @@ ms.locfileid: "75348035"
     El Yassir, Mehdi
     ```
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 ```vb
 Class SplitWithGroups
@@ -118,9 +118,9 @@ End Class
 
 ## <a name="compile-the-code"></a>코드 컴파일
 
-System.xml 네임 스페이스에 대 한 `Imports` 문을 사용 하 여 Visual Basic 콘솔 응용 프로그램 프로젝트를 만듭니다.
+System.xml `Imports` 네임 스페이스에 대 한 문을 사용 하 여 Visual Basic 콘솔 응용 프로그램 프로젝트를 만듭니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [LINQ 및 문자열 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ 및 파일 디렉터리(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ 및 문자열(Visual Basic)](linq-and-strings.md)
+- [LINQ 및 파일 디렉터리(Visual Basic)](linq-and-file-directories.md)
