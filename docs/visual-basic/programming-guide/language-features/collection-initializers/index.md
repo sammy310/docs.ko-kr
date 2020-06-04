@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
-ms.openlocfilehash: fbdd116298c530ae54677631eff7dac2f22c0fe2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1d2d5adc7266faaa1636e568d6433429761eeaab
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346778"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414545"
 ---
 # <a name="collection-initializers-visual-basic"></a>컬렉션 이니셜라이저(Visual Basic)
 
 *컬렉션 이니셜라이저*는 컬렉션을 만들고 값의 초기 집합으로 채울 수 있도록 하는 약식 구문을 제공합니다. 컬렉션 이니셜라이저는 알려진 값(예: 메뉴 옵션 또는 범주 목록, 숫자 값의 초기 집합, 일 또는 월 이름과 같은 문자열의 정적 목록 또는 유효성 검사에 사용되는 상태 목록과 같은 지리적 위치)의 집합에서 컬렉션을 만드는 경우에 유용합니다.
 
-항목 컬렉션에 대한 자세한 내용은 [컬렉션](../../../../visual-basic/programming-guide/concepts/collections.md)을 참조하세요.
+항목 컬렉션에 대한 자세한 내용은 [컬렉션](../../concepts/collections.md)을 참조하세요.
 
-`From` 키워드 뒤에 중괄호(`{}`)를 사용하여 컬렉션 이니셜라이저를 식별합니다. 이것은 [배열](../../../../visual-basic/programming-guide/language-features/arrays/index.md)에서 설명된 배열 리터럴 구문과 비슷합니다. 다음 예제에서는 컬렉션 이니셜라이저를 사용하여 컬렉션을 만드는 다양한 방법을 보여 줍니다.
+`From` 키워드 뒤에 중괄호(`{}`)를 사용하여 컬렉션 이니셜라이저를 식별합니다. 이것은 [배열](../arrays/index.md)에서 설명된 배열 리터럴 구문과 비슷합니다. 다음 예제에서는 컬렉션 이니셜라이저를 사용하여 컬렉션을 만드는 다양한 방법을 보여 줍니다.
 
 [!code-vb[VbVbalrCollectionInitializers#1](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#1)]
 
@@ -28,7 +28,7 @@ ms.locfileid: "74346778"
 
 ## <a name="syntax"></a>구문
 
-컬렉션 이니셜라이저는 다음 코드에서처럼 `{}` 키워드 뒤에서 중괄호(`From`)로 묶인 쉼표로 구분된 값 목록으로 구성됩니다.
+컬렉션 이니셜라이저는 다음 코드에서처럼 `From` 키워드 뒤에서 중괄호(`{}`)로 묶인 쉼표로 구분된 값 목록으로 구성됩니다.
 
 [!code-vb[VbVbalrCollectionInitializers#2](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#2)]
 
@@ -57,13 +57,13 @@ ms.locfileid: "74346778"
 
 [!code-vb[VbVbalrCollectionInitializers#10](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#10)]
 
-`Add` 개체에 대한 생성자와 일치하는 매개 변수가 있는 `Customer` 메서드가 컬렉션에 포함된 경우 다음 섹션에 설명된 대로 `Add` 메서드에 대한 매개 변수 값을 컬렉션 이니셜라이저 내에 중첩할 수 있습니다. 컬렉션에 이런 `Add` 메서드가 없는 경우 확장 메서드로 만들 수 있습니다. `Add` 메서드를 컬렉션의 확장 메서드로 만드는 방법에 대한 예제는 [방법: 컬렉션 이니셜라이저에 사용되는 Add 확장 메서드 만들기](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)를 참조하세요. 컬렉션 이니셜라이저에서 사용할 수 있는 사용자 지정 컬렉션을 만드는 방법에 대한 예제는 [방법: 컬렉션 이니셜라이저에 사용되는 컬렉션 만들기](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)를 참조하세요.
+`Customer` 개체에 대한 생성자와 일치하는 매개 변수가 있는 `Add` 메서드가 컬렉션에 포함된 경우 다음 섹션에 설명된 대로 `Add` 메서드에 대한 매개 변수 값을 컬렉션 이니셜라이저 내에 중첩할 수 있습니다. 컬렉션에 이런 `Add` 메서드가 없는 경우 확장 메서드로 만들 수 있습니다. `Add` 메서드를 컬렉션의 확장 메서드로 만드는 방법에 대한 예제는 [방법: 컬렉션 이니셜라이저에 사용되는 Add 확장 메서드 만들기](how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)를 참조하세요. 컬렉션 이니셜라이저에서 사용할 수 있는 사용자 지정 컬렉션을 만드는 방법에 대한 예제는 [방법: 컬렉션 이니셜라이저에 사용되는 컬렉션 만들기](how-to-create-a-collection-used-by-a-collection-initializer.md)를 참조하세요.
 
 ## <a name="nesting-collection-initializers"></a>컬렉션 이니셜라이저 중첩
 
 값을 컬렉션 이니셜라이저 내에 중첩하여 만들고 있는 컬렉션에 대한 `Add` 메서드의 특정 오버로드를 식별할 수 있습니다. `Add` 메서드에 전달된 값은 배열 리터럴 또는 컬렉션 이니셜라이저에서 하는 것과 같이 쉼표로 구분하고 중괄호(`{}`)로 묶어야 합니다.
 
-중첩된 값을 사용하여 컬렉션을 만들 경우 중첩된 값 목록의 각 요소는 요소 형식과 일치하는 `Add` 메서드에 인수로 전달됩니다. 예를 들어 다음 코드 예제에서는 키가 <xref:System.Collections.Generic.Dictionary%602> 형식이고 값이 `Integer` 형식인 `String`를 만듭니다. 각 중첩된 값 목록은 <xref:System.Collections.Generic.Dictionary%602.Add%2A>에 대한 `Dictionary` 메서드와 일치합니다.
+중첩된 값을 사용하여 컬렉션을 만들 경우 중첩된 값 목록의 각 요소는 요소 형식과 일치하는 `Add` 메서드에 인수로 전달됩니다. 예를 들어 다음 코드 예제에서는 키가 `Integer` 형식이고 값이 `String` 형식인 <xref:System.Collections.Generic.Dictionary%602>를 만듭니다. 각 중첩된 값 목록은 `Dictionary`에 대한 <xref:System.Collections.Generic.Dictionary%602.Add%2A> 메서드와 일치합니다.
 
 [!code-vb[VbVbalrCollectionInitializers#5](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#5)]
 
@@ -75,20 +75,20 @@ ms.locfileid: "74346778"
 
 ## <a name="related-topics"></a>관련 항목
 
-|제목|설명|
+|제목|Description|
 |---|---|
-|[방법: 컬렉션 이니셜라이저에 사용되는 확장명 추가 메서드 만들기](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|컬렉션 이니셜라이저의 값으로 컬렉션을 채우는 데 사용될 수 있는 `Add`라는 확장 메서드를 만드는 방법을 보여 줍니다.|
-|[방법: 컬렉션 이니셜라이저에 사용되는 컬렉션 만들기](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|`Add`을 구현하는 컬렉션 클래스에 `IEnumerable` 메서드를 포함하여 컬렉션 이니셜라이저를 사용할 수 있도록 설정하는 방법을 보여 줍니다.|
+|[방법: 컬렉션 이니셜라이저에서 사용되는 확장 메서드 만들기 및 추가](how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|컬렉션 이니셜라이저의 값으로 컬렉션을 채우는 데 사용될 수 있는 `Add`라는 확장 메서드를 만드는 방법을 보여 줍니다.|
+|[방법: 컬렉션 이니셜라이저에서 사용되는 컬렉션 만들기](how-to-create-a-collection-used-by-a-collection-initializer.md)|`IEnumerable`을 구현하는 컬렉션 클래스에 `Add` 메서드를 포함하여 컬렉션 이니셜라이저를 사용할 수 있도록 설정하는 방법을 보여 줍니다.|
 
 ## <a name="see-also"></a>참고 항목
 
-- [컬렉션](../../../../visual-basic/programming-guide/concepts/collections.md)
-- [배열](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [개체 이니셜라이저: 명명된 형식과 익명 형식](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
-- [New 연산자](../../../../visual-basic/language-reference/operators/new-operator.md)
-- [자동으로 구현된 속성](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
-- [방법: Visual Basic에서 배열 변수 초기화](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
-- [지역 형식 유추](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [익명 형식](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
-- [Visual Basic의 LINQ 소개](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [방법: 항목 목록 만들기](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)
+- [컬렉션](../../concepts/collections.md)
+- [배열](../arrays/index.md)
+- [개체 이니셜라이저: 명명된 형식 및 무명 형식](../objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [새 운영자](../../../language-reference/operators/new-operator.md)
+- [자동으로 구현된 속성](../procedures/auto-implemented-properties.md)
+- [방법: Visual Basic에서 배열 변수 초기화](../arrays/how-to-initialize-an-array-variable.md)
+- [지역 형식 유추](../variables/local-type-inference.md)
+- [익명 형식](../objects-and-classes/anonymous-types.md)
+- [Visual Basic의 LINQ 소개](../linq/introduction-to-linq.md)
+- [방법: 항목 목록 만들기](../../concepts/linq/how-to-create-a-list-of-items.md)

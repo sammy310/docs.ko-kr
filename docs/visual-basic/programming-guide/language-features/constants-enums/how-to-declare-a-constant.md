@@ -23,17 +23,17 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: 5054d4a4fc02d8bd22efceb01770fc54167d8cb3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ffaa98f6af3d4b276f5c0b1153841acdea0809d7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347465"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414481"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>방법: 상수 선언(Visual Basic)
-`Const` 문을 사용 하 여 상수를 선언 하 고 해당 값을 설정 합니다. 상수를 선언 하 여 값에 의미 있는 이름을 할당 합니다. 상수를 선언한 후에는 수정 하거나 새 값을 할당할 수 없습니다.  
+문을 사용 하 여 `Const` 상수를 선언 하 고 해당 값을 설정 합니다. 상수를 선언 하 여 값에 의미 있는 이름을 할당 합니다. 상수를 선언한 후에는 수정 하거나 새 값을 할당할 수 없습니다.  
   
- 프로시저 내에서 상수를 선언 하거나 모듈, 클래스 또는 구조체의 선언 섹션에서 상수를 선언 합니다. 클래스 또는 구조체 수준 상수는 기본적으로 `Private` 되지만 적절 한 수준의 코드 액세스에 대해 `Public`, `Friend`, `Protected`또는 `Protected Friend`로 선언할 수도 있습니다.  
+ 프로시저 내에서 상수를 선언 하거나 모듈, 클래스 또는 구조체의 선언 섹션에서 상수를 선언 합니다. 클래스 또는 구조체 수준 상수는 `Private` 기본적으로 이지만 `Public` 적절 한 `Friend` `Protected` `Protected Friend` 수준의 코드 액세스에 대해,, 또는로 선언할 수도 있습니다.  
   
  상수에는 유효한 기호화 된 이름 (규칙은 변수 이름을 만드는 데 사용할 수 있는 이름)과 숫자 또는 문자열 상수와 연산자로 구성 된 식 (함수 호출은 제외)이 있어야 합니다.  
   
@@ -41,21 +41,21 @@ ms.locfileid: "74347465"
   
 ### <a name="to-declare-a-constant"></a>상수를 선언 하려면  
   
-- 다음 예제와 같이 액세스 지정자, `Const` 키워드 및 식을 포함 하는 선언을 작성 합니다.  
+- `Const`다음 예제와 같이 액세스 지정자, 키워드 및 식을 포함 하는 선언을 작성 합니다.  
   
      [!code-vb[VbEnumsTask#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#8)]  
   
-     [옵션 추론](../../../../visual-basic/language-reference/statements/option-infer-statement.md) 을 `Off` 하 고 [option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) 를 `On`하는 경우 데이터 형식 (`Boolean`, `Byte`, `Char`, `DateTime`, `Decimal`, `Double`, `Integer`, `Long`, `Short`)을 지정 하 여 상수를 명시적으로 선언 해야 합니다.`Single``String`  
+     [Option 유추](../../../language-reference/statements/option-infer-statement.md) 는이 `Off` 고 [option Strict](../../../language-reference/statements/option-strict-statement.md) 가 이면 데이터 형식 (,,,,,,,,, `On` `Boolean` `Byte` `Char` `DateTime` `Decimal` `Double` `Integer` `Long` `Short` `Single` 또는 `String` )을 지정 하 여 상수를 명시적으로 선언 해야 합니다.  
   
-     `Option Infer` `On` 또는 `Option Strict` `Off`경우에는 `As` 절을 사용 하 여 데이터 형식을 지정 하지 않고 상수를 선언할 수 있습니다. 컴파일러는 식의 형식에서 상수의 형식을 결정 합니다. 자세한 내용은 [상수 및 리터럴 데이터 형식](constant-and-literal-data-types.md)을 참조 하세요.  
+     `Option Infer`가 `On` 이거나 `Option Strict` 가 인 경우 `Off` 절을 사용 하 여 데이터 형식을 지정 하지 않고 상수를 선언할 수 있습니다 `As` . 컴파일러는 식의 형식에서 상수의 형식을 결정 합니다. 자세한 내용은 [상수 및 리터럴 데이터 형식](constant-and-literal-data-types.md)을 참조 하세요.  
   
 ### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a>명시적으로 언급 된 데이터 형식이 있는 상수를 선언 하려면  
   
-- 다음 예제와 같이 `As` 키워드 및 명시적 데이터 형식을 포함 하는 선언을 작성 합니다.  
+- `As`다음 예제와 같이 키워드 및 명시적 데이터 형식을 포함 하는 선언을 작성 합니다.  
   
      [!code-vb[VbEnumsTask#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#9)]  
   
-     한 줄에 하나의 상수만 선언 하는 경우 코드를 더 쉽게 읽을 수 있지만 단일 줄에 여러 상수를 선언할 수 있습니다. 단일 줄에 여러 상수를 선언 하는 경우 모두 동일한 액세스 수준 (`Public`, `Private`, `Friend`, `Protected`또는 `Protected Friend`)을 가져야 합니다.  
+     한 줄에 하나의 상수만 선언 하는 경우 코드를 더 쉽게 읽을 수 있지만 단일 줄에 여러 상수를 선언할 수 있습니다. 단일 줄에 여러 상수를 선언 하는 경우 모두 동일한 액세스 수준 ( `Public` , `Private` ,, `Friend` `Protected` 또는 `Protected Friend` )을 가져야 합니다.  
   
 ### <a name="to-declare-multiple-constants-on-a-single-line"></a>한 줄에 여러 상수를 선언 하려면  
   
@@ -67,7 +67,7 @@ ms.locfileid: "74347465"
   
 ## <a name="see-also"></a>참고 항목
 
-- [Const 문](../../../../visual-basic/language-reference/statements/const-statement.md)
+- [Const 문](../../../language-reference/statements/const-statement.md)
 - [상수 및 리터럴 데이터 형식](constant-and-literal-data-types.md)
 - [상수 개요](constants-overview.md)
 - [방법: 상수 선언](how-to-declare-a-constant.md)
@@ -86,5 +86,5 @@ ms.locfileid: "74347465"
 - [상수 개요](constants-overview.md)
 - [방법: 열거형 선언](how-to-declare-enumerations.md)
 - [열거형 및 이름 한정](enumerations-and-name-qualification.md)
-- [Option Strict 문](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [상수 및 열거형](../../../../visual-basic/language-reference/constants-and-enumerations.md)
+- [Option Strict 문](../../../language-reference/statements/option-strict-statement.md)
+- [상수 및 열거형](../../../language-reference/constants-and-enumerations.md)

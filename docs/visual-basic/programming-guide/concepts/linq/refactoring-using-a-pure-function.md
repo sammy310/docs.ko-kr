@@ -2,20 +2,20 @@
 title: 순수 함수를 사용하여 리팩터링
 ms.date: 07/20/2015
 ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
-ms.openlocfilehash: 3a0365c79b8283fef242ecf8f2b68ea4de780049
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 675baa4eb07db7a798b9bd47877c8f019a7021e3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266939"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413454"
 ---
 # <a name="refactoring-using-a-pure-function-visual-basic"></a>순수 함수를 사용하여 리팩터링(Visual Basic)
-다음 예제에서는 확장 [메서드(Visual Basic)를 사용하여 리팩터링하고](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)순수 함수를 사용하는 경우 이 예제에서는 단락의 텍스트를 찾는 코드가 순수 `ParagraphText`정적 메서드로 이동됩니다.  
+다음 예제에서는 이전 예제를 사용 하 여 리팩터링 [확장 메서드 (Visual Basic)](refactoring-using-an-extension-method.md)를 사용 합니다 .이 예제에서는 순수 함수를 사용 하기 위해 단락 텍스트를 찾는 코드를 순수 정적 메서드로 이동 합니다 `ParagraphText` .  
   
 ## <a name="example"></a>예제  
  이 예제에서는 WordprocessingML 문서를 처리하여 WordprocessingML 문서에서 단락 노드를 검색합니다. 또한 각 단락의 스타일도 식별합니다. 이 예제는 이 자습서의 이전 예제를 기반으로 합니다. 리팩터링된 코드는 아래에 있는 코드의 주석에서 호출됩니다.  
   
- 이 예제의 원본 문서를 만드는 방법에 대한 지침은 [소스 사무실 열기 XML 문서 만들기(시각적 기본)를](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)참조하십시오.  
+ 이 예제에 대 한 소스 문서를 만드는 방법에 대 한 지침은 [원본 Office OPEN XML 문서 만들기 (Visual Basic)](creating-the-source-office-open-xml-document.md)를 참조 하십시오.  
   
  이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 <xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.  
   
@@ -170,10 +170,10 @@ StyleName:Code >Hello World<
 ### <a name="next-steps"></a>다음 단계  
  다음 예제에서는 XML을 다른 모양으로 프로젝션하는 방법을 보여 줍니다.  
   
-- [다른 모양으로 XML 투영(시각적 기본)](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+- [다른 모양으로 XML 프로젝션 (Visual Basic)](projecting-xml-in-a-different-shape.md)  
   
 ## <a name="see-also"></a>참고 항목
 
-- [자습서: 워드프로세싱ML 문서의 콘텐츠 조작(시각적 기본)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-- [확장 메서드사용 리팩터링(시각적 기본)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)
-- [순수 함수로 리팩터링(시각적 기본)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [자습서: WordprocessingML 문서에서 내용 조작 (Visual Basic)](tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [확장 메서드를 사용 하 여 리팩터링 (Visual Basic)](refactoring-using-an-extension-method.md)
+- [순수 함수로 리팩터링 (Visual Basic)](refactoring-into-pure-functions.md)

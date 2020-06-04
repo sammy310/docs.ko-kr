@@ -2,15 +2,15 @@
 title: Serialization
 ms.date: 07/20/2015
 ms.assetid: 67379a76-5465-4af8-a781-0b0b25a62d9a
-ms.openlocfilehash: 9ce97e541cb204b92663464e36d9e8f221ccc3f2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: db14147a23940fa2403613036750be1bca566e8e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351912"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413143"
 ---
 # <a name="serialization-visual-basic"></a>Serialization(Visual Basic)
-Serialization은 개체를 저장하거나 메모리, 데이터베이스 또는 파일로 전송하기 위해 개체를 바이트 스트림으로 변환하는 프로세스입니다. 주 목적은 필요할 때 다시 만들 수 있도록 개체의 상태를 저장하는 것입니다. 역 프로세스를 deserialization이라고 합니다.  
+Serialization은 개체를 저장하거나 메모리, 데이터베이스 또는 파일로 전송하기 위해 개체를 바이트 스트림으로 변환하는 프로세스입니다. 주 목적은 필요할 때 다시 개체로 만들 수 있도록 개체의 상태를 저장하는 것입니다. 역 프로세스를 deserialization이라고 합니다.  
   
 ## <a name="how-serialization-works"></a>Serialization 작동 방법  
  이 그림에서는 serialization의 전체 프로세스를 보여 줍니다.  
@@ -25,7 +25,7 @@ Serialization은 개체를 저장하거나 메모리, 데이터베이스 또는 
 ### <a name="making-an-object-serializable"></a>개체를 Serialize 가능하게 만들기  
  개체를 직렬화하려면 직렬화할 개체, 직렬화된 개체를 포함할 스트림 및 <xref:System.Runtime.Serialization.Formatter>가 필요합니다. <xref:System.Runtime.Serialization>은 개체를 직렬화하거나 역직렬화하는 데 사용할 수 있는 클래스를 포함합니다.  
   
- 형식에 <xref:System.SerializableAttribute> 특성을 적용하여 이 형식의 인스턴스를 직렬화할 수 있음을 나타냅니다. 직렬화하려고 하지만 형식에 <xref:System.Runtime.Serialization.SerializationException> 특성이 없는 경우 <xref:System.SerializableAttribute> 예외가 throw됩니다.  
+ 형식에 <xref:System.SerializableAttribute> 특성을 적용하여 이 형식의 인스턴스를 직렬화할 수 있음을 나타냅니다. 직렬화하려고 하지만 형식에 <xref:System.SerializableAttribute> 특성이 없는 경우 <xref:System.Runtime.Serialization.SerializationException> 예외가 throw됩니다.  
   
  클래스 내의 필드를 직렬화 가능하게 하지 않으려면 <xref:System.NonSerializedAttribute> 특성을 적용합니다. serialize 가능한 형식의 필드에 특정 환경과 관련된 포인터, 핸들 또는 다른 데이터 구조가 포함되어 있고 필드를 다른 환경에서 의미 있게 재구성할 수 없으면 serialize할 수 없게 만들 수 있습니다.  
   
@@ -58,12 +58,12 @@ Serialization은 개체를 저장하거나 메모리, 데이터베이스 또는 
 ## <a name="designer-serialization"></a>디자이너 serialization  
  디자이너 serialization은 일반적으로 개발 도구와 관련해서 개체 지속성이 적용되는 특수한 형태의 serialization입니다. 디자이너 serialization은 개체 그래프를 소스 파일로 변환하여 나중에 개체 그래프를 복구하는 데 사용할 수 있도록 하는 프로세스입니다. 소스 파일에는 코드, 태그 또는 심지어 SQL 테이블 정보도 포함될 수 있습니다.  
   
-## <a name="BKMK_RelatedTopics"></a> 관련 항목 및 예제  
- [연습: Visual Studio에서 개체 유지(Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
+## <a name="related-topics-and-examples"></a><a name="BKMK_RelatedTopics"></a> 관련 항목 및 예제  
+ [연습: Visual Studio에서 개체 유지(Visual Basic)](walkthrough-persisting-an-object-in-visual-studio.md)  
  serialization을 사용하여 인스턴스 간에 개체의 데이터를 유지함으로써 다음에 개체를 인스턴스화할 때 값을 저장하고 검색하는 방식을 보여 줍니다.  
   
- [방법: XML 파일에서 개체 데이터 읽기(Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
+ [방법: XML 파일에서 개체 데이터 읽기(Visual Basic)](how-to-read-object-data-from-an-xml-file.md)  
  <xref:System.Xml.Serialization.XmlSerializer> 클래스를 사용하여 이전에 XML 파일에 기록된 개체 데이터를 읽는 방법을 보여 줍니다.  
   
- [방법: XML 파일에 개체 데이터 쓰기(Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)  
+ [방법: XML 파일에 개체 데이터 쓰기(Visual Basic)](how-to-write-object-data-to-an-xml-file.md)  
  <xref:System.Xml.Serialization.XmlSerializer> 클래스를 사용하여 클래스의 개체를 XML 파일에 쓰는 방법을 보여 줍니다.

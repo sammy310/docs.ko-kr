@@ -2,19 +2,19 @@
 title: XML 트리에서 요소, 특성 및 노드 제거
 ms.date: 07/20/2015
 ms.assetid: 5cf21919-4360-4b49-b29d-58ea3164ac72
-ms.openlocfilehash: 4cce1eff469c1f737e18b88cce30155547d9f11b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f8be7fe521fb3c2662b105e34fd96fea1d1ac6e7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348949"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413411"
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-visual-basic"></a>XML 트리에서 요소, 특성 및 노드 제거 (Visual Basic)
 XML 트리를 수정하여 요소, 특성 및 다른 형식의 노드를 제거할 수 있습니다.  
   
  XML 문서에서 요소나 특성을 하나만 제거하는 것은 간단합니다. 그러나 요소나 특성의 컬렉션을 제거하는 경우 먼저 컬렉션을 목록으로 구체화한 다음 요소나 특성을 목록에서 삭제해야 합니다. 가장 좋은 방법은 이 작업을 수행하는 <xref:System.Xml.Linq.Extensions.Remove%2A> 확장 메서드를 사용하는 것입니다.  
   
- 이렇게 하는 주요 이유는 XML 트리에서 검색하는 대부분의 컬렉션이 지연된 실행을 사용하여 생성되기 때문입니다. 컬렉션을 먼저 목록으로 구체화하지 않거나 확장명 메서드를 사용하지 않는 경우 특정 유형의 버그가 발생할 수 있습니다. 자세한 내용은 [혼합 선언적 코드/명령적 코드 버그 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md)를 참조 하세요.  
+ 이렇게 하는 주요 이유는 XML 트리에서 검색하는 대부분의 컬렉션이 지연된 실행을 사용하여 생성되기 때문입니다. 컬렉션을 먼저 목록으로 구체화하지 않거나 확장명 메서드를 사용하지 않는 경우 특정 유형의 버그가 발생할 수 있습니다. 자세한 내용은 [혼합 선언적 코드/명령적 코드 버그 (LINQ to XML) (Visual Basic)](mixed-declarative-code-imperative-code-bugs-linq-to-xml.md)를 참조 하세요.  
   
  다음 메서드는 XML 트리에서 노드와 특성을 제거합니다.  
   
@@ -34,7 +34,7 @@ XML 트리를 수정하여 요소, 특성 및 다른 형식의 노드를 제거�
 ### <a name="description"></a>설명  
  이 예제에서는 요소를 제거하는 세 가지 방법을 보여 줍니다. 첫째, 단일 요소를 제거합니다. 둘째, 요소의 컬렉션을 검색하고 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> 연산자를 사용하여 구체화한 다음 제거합니다. 마지막으로, 요소의 컬렉션을 검색하고 <xref:System.Xml.Linq.Extensions.Remove%2A> 확장 메서드를 사용하여 제거합니다.  
   
- <xref:System.Linq.Enumerable.ToList%2A> 연산자에 대 한 자세한 내용은 [데이터 형식 변환 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)을 참조 하세요.  
+ 연산자에 대 한 자세한 내용은 <xref:System.Linq.Enumerable.ToList%2A> [데이터 형식 변환 (Visual Basic)](converting-data-types.md)을 참조 하세요.  
   
 ### <a name="code"></a>코드  
   
@@ -63,7 +63,7 @@ root.<Child3>.Elements().Remove()
 Console.WriteLine(root)  
 ```  
   
-### <a name="comments"></a>주석  
+### <a name="comments"></a>설명  
  이 코드의 결과는 다음과 같습니다.  
   
 ```xml  
@@ -79,6 +79,6 @@ Console.WriteLine(root)
   
  `Child1`에서는 첫 번째 손자 요소가 제거되었고, `Child2`와 `Child3`에서는 모든 손자 요소가 제거되었습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [XML 트리 수정 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+- [XML 트리 수정 (LINQ to XML) (Visual Basic)](modifying-xml-trees-linq-to-xml.md)

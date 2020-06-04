@@ -6,12 +6,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-ms.openlocfilehash: be5337e36c2cc7ad9f9b32182b8575ac66bb4a50
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c38def1ba9f3720bc760d6f6e4264510c884c930
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351885"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413081"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>방법: 한 배열에 다른 배열 할당(Visual Basic)
 
@@ -35,17 +35,17 @@ ms.locfileid: "74351885"
 
   두 배열의 순위가 동일 하 게 지정 된 경우 차원이 같을 필요는 없습니다. 지정 된 차원의 요소 수는 할당 중에 변경 될 수 있습니다.
 
-- **요소 형식.** 두 배열 중 하나에 *참조 형식* 요소가 있거나 두 배열에 모두 *값 형식* 요소가 있어야 합니다. 자세한 내용은 [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)을 참조하세요.
+- **요소 형식.** 두 배열 중 하나에 *참조 형식* 요소가 있거나 두 배열에 모두 *값 형식* 요소가 있어야 합니다. 자세한 내용은 [값 형식 및 참조 형식](../data-types/value-types-and-reference-types.md)을 참조 하세요.
 
-  - 두 배열에 모두 값 형식 요소가 있으면 요소 데이터 형식이 정확히 동일 해야 합니다. 이에 대 한 유일한 예외는 `Enum` 요소의 배열을 `Enum`기본 형식의 배열에 할당할 수 있다는 것입니다.
+  - 두 배열에 모두 값 형식 요소가 있으면 요소 데이터 형식이 정확히 동일 해야 합니다. 이에 대 한 유일한 예외는 `Enum` 요소의 배열을 기본 형식의 배열에 할당할 수 있다는 것입니다 `Enum` .
 
   - 두 배열에 모두 참조 형식 요소가 있으면 원본 요소 형식이 대상 요소 형식에서 파생 되어야 합니다. 이 경우 두 배열의 요소와 상속 관계가 동일 합니다. 이를 *배열 공분산*이라고 합니다.
 
-위의 규칙을 위반 하는 경우 (예: 데이터 형식이 호환 되지 않거나 순위가 같지 않은 경우) 컴파일러에서 오류를 보고 합니다. 코드에 오류 처리를 추가 하 여 배열이 호환 되는지 확인 하 고 할당을 시도할 수 있습니다. 예외를 throw 하지 않으려면 [TryCast Operator](../../../../visual-basic/language-reference/operators/trycast-operator.md) 키워드를 사용할 수도 있습니다.
+위의 규칙을 위반 하는 경우 (예: 데이터 형식이 호환 되지 않거나 순위가 같지 않은 경우) 컴파일러에서 오류를 보고 합니다. 코드에 오류 처리를 추가 하 여 배열이 호환 되는지 확인 하 고 할당을 시도할 수 있습니다. 예외를 throw 하지 않으려면 [TryCast Operator](../../../language-reference/operators/trycast-operator.md) 키워드를 사용할 수도 있습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [배열](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [배열 문제 해결](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
-- [Enum 문](../../../../visual-basic/language-reference/statements/enum-statement.md)
-- [배열 규칙](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
+- [배열](index.md)
+- [배열 문제 해결](troubleshooting-arrays.md)
+- [Enum 문](../../../language-reference/statements/enum-statement.md)
+- [배열 규칙](../data-types/array-conversions.md)

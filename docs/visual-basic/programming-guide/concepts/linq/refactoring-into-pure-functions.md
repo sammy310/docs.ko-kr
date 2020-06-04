@@ -2,12 +2,12 @@
 title: 순수 함수로 리팩터링
 ms.date: 07/20/2015
 ms.assetid: 99e7d27b-a3ff-4577-bdb2-5a8278d6d7af
-ms.openlocfilehash: 22b371c6136836d6e0f1281f824b69378c0d3e4a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 415b088661eca347330f4776901d68ee514d8dad
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346517"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413481"
 ---
 # <a name="refactoring-into-pure-functions-visual-basic"></a>순수 함수로 리팩터링 (Visual Basic)
 
@@ -21,7 +21,7 @@ ms.locfileid: "74346517"
 
  함수형 프로그래밍으로 전환하는 한 가지 방법은 기존 코드를 리팩터링하여 의도하지 않은 불필요한 결과와 외부 종속성을 없애는 것입니다. 이런 식으로 기존 코드의 순수 함수 버전을 만들 수 있습니다.
 
-이 항목에서는 순수 함수의 개념과 순수 함수가 의미하지 않는 것에 대해 설명합니다. [자습서: WordprocessingML 문서에서 내용 조작 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) 자습서에서는 WordprocessingML 문서를 조작 하는 방법을 보여 주며 순수 함수를 사용 하 여 리팩터링 하는 방법에 대 한 두 가지 예제를 제공 합니다.
+이 항목에서는 순수 함수의 개념과 순수 함수가 의미하지 않는 것에 대해 설명합니다. [자습서: WordprocessingML 문서에서 내용 조작 (Visual Basic)](tutorial-manipulating-content-in-a-wordprocessingml-document.md) 자습서에서는 WordprocessingML 문서를 조작 하는 방법을 보여 주며 순수 함수를 사용 하 여 리팩터링 하는 방법에 대 한 두 가지 예제를 제공 합니다.
 
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>의도하지 않은 결과 및 외부 종속성 제거
 
@@ -52,7 +52,7 @@ End Module
 StringOne-StringTwo
 ```
 
-수정 되는 데이터에 `public` 또는 `private` 액세스 권한이 있는지 여부는 관련이 없으며 `shared` 멤버 또는 인스턴스 멤버 인지 여부를 확인 합니다. 순수 함수는 함수 외부에 있는 데이터를 변경하지 않습니다.
+수정 되는 데이터에 대 한 액세스 권한이 있는지 여부에 관계 없이 또는 `public` `private` `shared` 멤버 또는 인스턴스 멤버 인지 여부를 확인 합니다. 순수 함수는 함수 외부에 있는 데이터를 변경하지 않습니다.
 
 ### <a name="non-pure-function-that-changes-an-argument"></a>인수를 변경하는 비순수 함수
 
@@ -103,9 +103,9 @@ End Module
 
 표준 쿼리 연산자의 중요한 특징은 순수 함수로 구현된다는 점입니다.
 
-자세한 내용은 [표준 쿼리 연산자 개요 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)를 참조 하세요.
+자세한 내용은 [표준 쿼리 연산자 개요 (Visual Basic)](standard-query-operators-overview.md)를 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [순수 함수 변환 소개 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [함수형 프로그래밍과 명령형 프로그래밍 비교 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+- [순수 함수 변환 소개 (Visual Basic)](introduction-to-pure-functional-transformations.md)
+- [함수형 프로그래밍과 명령형 프로그래밍 비교 (Visual Basic)](functional-programming-vs-imperative-programming.md)

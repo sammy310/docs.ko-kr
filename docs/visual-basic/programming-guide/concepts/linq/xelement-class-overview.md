@@ -2,12 +2,12 @@
 title: XElement 클래스 개요
 ms.date: 07/20/2015
 ms.assetid: 52331fcd-6023-4d19-b423-7b24f2d86ded
-ms.openlocfilehash: 2e5a1e161345df39ff5c006f751fb293cad60510
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: a0e50c8a5a14150ee09a328f4dcdd5bc88363621
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636668"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413221"
 ---
 # <a name="xelement-class-overview-visual-basic"></a>XElement 클래스 개요 (Visual Basic)
 <xref:System.Xml.Linq.XElement> 클래스는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]의 기본 클래스 중 하나이며 XML 요소를 나타냅니다. 이 클래스를 사용하여 요소를 만들거나, 요소의 내용을 변경하거나, 자식 요소를 추가, 변경 또는 삭제하거나, 특성을 요소에 추가하거나, 요소의 내용을 텍스트 형태로 serialize할 수 있습니다. 또한 <xref:System.Xml?displayProperty=nameWithType>, <xref:System.Xml.XmlReader> 및 <xref:System.Xml.XmlWriter>과 같은 <xref:System.Xml.Xsl.XslCompiledTransform>의 다른 클래스와 상호 운용할 수도 있습니다.  
@@ -18,9 +18,9 @@ ms.locfileid: "75636668"
 ### <a name="constructing-xml-trees"></a>XML 트리 생성  
  다음과 같은 다양한 방법으로 XML 트리를 생성할 수 있습니다.  
   
-- 코드에서 XML 트리를 생성할 수 있습니다. 자세한 내용은 [XML 트리 만들기 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)를 참조 하세요.  
+- 코드에서 XML 트리를 생성할 수 있습니다. 자세한 내용은 [XML 트리 만들기 (Visual Basic)](creating-xml-trees.md)를 참조 하세요.  
   
-- <xref:System.IO.TextReader>, 텍스트 파일 또는 웹 주소(URL)와 같은 다양한 소스에서 XML의 구문을 분석할 수 있습니다. 자세한 내용은 [XML 구문 분석 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)을 참조 하세요.  
+- <xref:System.IO.TextReader>, 텍스트 파일 또는 웹 주소(URL)와 같은 다양한 소스에서 XML의 구문을 분석할 수 있습니다. 자세한 내용은 [XML 구문 분석 (Visual Basic)](parsing-xml.md)을 참조 하세요.  
   
 - <xref:System.Xml.XmlReader>를 사용하여 트리를 채울 수 있습니다. 자세한 내용은 <xref:System.Xml.Linq.XNode.ReadFrom%2A>를 참조하세요.  
   
@@ -44,7 +44,7 @@ Dim contacts As XElement = _
     </Contacts>  
 ```  
   
- XML 트리를 만드는 또 다른 일반적인 방법은 다음 예제와 같이 LINQ 쿼리의 결과를 사용 하 여 XML 트리를 채우는 것입니다.  
+ XML 트리를 만드는 또 다른 일반적인 방법에는 다음 예제에서와 같이 LINQ 쿼리의 결과를 사용하여 XML 트리를 채우는 작업이 포함됩니다.  
   
 ```vb  
 Dim srcTree As XElement = _  
@@ -81,23 +81,23 @@ Console.WriteLine(xmlTree)
 ### <a name="serializing-xml-trees"></a>XML 트리 serialization  
  XML 트리를 <xref:System.IO.File>, <xref:System.IO.TextWriter> 또는 <xref:System.Xml.XmlWriter>로 serialize할 수 있습니다.  
   
- 자세한 내용은 [XML 트리 serialize (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)를 참조 하세요.  
+ 자세한 내용은 [XML 트리 serialize (Visual Basic)](serializing-xml-trees.md)를 참조 하세요.  
   
 ### <a name="retrieving-xml-data-via-axis-methods"></a>축 메서드를 통해 XML 데이터 검색  
- 축 메서드를 사용하여 특성, 자식 요소, 하위 요소 및 상위 요소를 검색할 수 있습니다. LINQ 쿼리는 축 메서드에 대해 작동 하며 XML 트리를 탐색 하 고 처리 하는 몇 가지 유연 하 고 강력한 방법을 제공 합니다.  
+ 축 메서드를 사용하여 특성, 자식 요소, 하위 요소 및 상위 요소를 검색할 수 있습니다. LINQ 쿼리는 축 메서드에 대해 작동하며 XML 트리를 탐색하고 처리하는 유연하고 강력한 몇 가지 방법을 제공합니다.  
   
- 자세한 내용은 [LINQ to XML 축 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)을 참조 하세요.  
+ 자세한 내용은 [LINQ to XML 축 (Visual Basic)](linq-to-xml-axes.md)을 참조 하세요.  
   
 ### <a name="querying-xml-trees"></a>XML 트리 쿼리  
- XML 트리에서 데이터를 추출 하는 LINQ 쿼리를 작성할 수 있습니다.  
+ XML 트리에서 데이터를 추출하는 LINQ 쿼리를 작성할 수 있습니다.  
   
- 자세한 내용은 [XML 트리 쿼리 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)를 참조 하세요.  
+ 자세한 내용은 [XML 트리 쿼리 (Visual Basic)](querying-xml-trees.md)를 참조 하세요.  
   
 ### <a name="modifying-xml-trees"></a>XML 트리 수정  
  내용이나 특성을 변경하는 등의 다양한 방법으로 요소를 수정할 수 있습니다. 또한 부모에서 요소를 제거할 수도 있습니다.  
   
- 자세한 내용은 [XML 트리 수정 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)을 참조 하십시오.  
+ 자세한 내용은 [XML 트리 수정 (LINQ to XML) (Visual Basic)](modifying-xml-trees-linq-to-xml.md)을 참조 하십시오.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [LINQ to XML 프로그래밍 개요 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [LINQ to XML 프로그래밍 개요 (Visual Basic)](linq-to-xml-programming-overview.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], constants
 - Visual Basic code, improving readability with constants
 ms.assetid: c8aba36e-fa47-4a33-8b68-cb2009218270
-ms.openlocfilehash: 858f22df26d44f47848921ee862c1d4c1ca1fc60
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 7d15c46c0f6bb00c23dd98e464f61a5f94b0773a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353978"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414403"
 ---
 # <a name="constants-and-enumerations-in-visual-basic"></a>Visual Basic의 상수 및 열거형
 상수는 변경되지 않는 값 대신 의미 있는 이름을 사용하는 방법입니다. 상수는 애플리케이션 실행 중 변함없이 유지되는 값을 저장합니다. 상수를 사용하여 숫자 대신 의미 있는 이름을 제공하여 코드의 가독성을 향상할 수 있습니다.  
@@ -27,15 +27,15 @@ ms.locfileid: "74353978"
   
 |용어|정의|  
 |---|---|  
-|[상수 개요](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)|이 단원의 항목에서는 상수 및 해당 용도를 설명합니다.|  
-|[열거형 개요](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)|이 단원의 항목에서는 열거형 및 해당 용도를 설명합니다.|  
+|[상수 개요](constants-overview.md)|이 단원의 항목에서는 상수 및 해당 용도를 설명합니다.|  
+|[열거형 개요](enumerations-overview.md)|이 단원의 항목에서는 열거형 및 해당 용도를 설명합니다.|  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
   
 |용어|정의|  
 |---|---|  
-|[Const 문](../../../../visual-basic/language-reference/statements/const-statement.md)|상수를 선언하는 데 사용되는 `Const` 문을 설명합니다.|  
-|[Enum 문](../../../../visual-basic/language-reference/statements/enum-statement.md)|열거형을 만드는 데 사용되는 `Enum` 문을 설명합니다.|  
-|[Option Explicit 문](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)|해당 모듈에서 모든 변수에 대해 명시적 선언을 적용하기 위해 모듈 수준에서 사용되는 `Option Explicit` 문을 설명합니다.|  
-|[Option Infer 문](../../../../visual-basic/language-reference/statements/option-infer-statement.md)|변수를 선언할 때 지역 형식 유추를 사용하도록 설정하는 `Option Infer` 문을 설명합니다.|  
-|[Option Strict 문](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|암시적 데이터 형식을 확대 변환으로만 제한하고, 런타임에 바인딩을 허용하지 않고, `Option Strict` 형식이 되는 암시적 형식을 허용하지 않는 `Object` 문을 설명합니다.|
+|[Const 문](../../../language-reference/statements/const-statement.md)|상수를 선언하는 데 사용되는 `Const` 문을 설명합니다.|  
+|[Enum 문](../../../language-reference/statements/enum-statement.md)|열거형을 만드는 데 사용되는 `Enum` 문을 설명합니다.|  
+|[Option Explicit 문](../../../language-reference/statements/option-explicit-statement.md)|해당 모듈에서 모든 변수에 대해 명시적 선언을 적용하기 위해 모듈 수준에서 사용되는 `Option Explicit` 문을 설명합니다.|  
+|[Option Infer 문](../../../language-reference/statements/option-infer-statement.md)|변수를 선언할 때 지역 형식 유추를 사용하도록 설정하는 `Option Infer` 문을 설명합니다.|  
+|[Option Strict 문](../../../language-reference/statements/option-strict-statement.md)|암시적 데이터 형식을 확대 변환으로만 제한하고, 런타임에 바인딩을 허용하지 않고, `Object` 형식이 되는 암시적 형식을 허용하지 않는 `Option Strict` 문을 설명합니다.|
