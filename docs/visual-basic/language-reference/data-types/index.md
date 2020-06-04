@@ -37,12 +37,12 @@ helpviewer_keywords:
 - storage order, controlling in Visual Basic
 - data types [Visual Basic], memory requirements
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
-ms.openlocfilehash: 72bd8158880c602fb2cde92a3851c4e8a702c70b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5eb52ef937a677c0b7498d058b5a39a375351ddc
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343993"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415623"
 ---
 # <a name="data-type-summary-visual-basic"></a>데이터 형식 요약(Visual Basic)
 
@@ -50,30 +50,30 @@ ms.locfileid: "74343993"
   
 |Visual Basic 형식|공용 언어 런타임 형식 구조|명목상 저장소 할당|값 범위|  
 |-----------------------|--------------------------------------------|--------------------------------|-----------------|  
-|[Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|<xref:System.Boolean>|구현 플랫폼에 따라 달라 집니다.|`True` 또는 `False`|  
-|[Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md)|<xref:System.Byte>|1바이트|0-255 (부호 없음)|  
-|[Char](../../../visual-basic/language-reference/data-types/char-data-type.md) (단일 문자)|<xref:System.Char>|2바이트|0-65535 (부호 없음)|  
-|[Date](../../../visual-basic/language-reference/data-types/date-data-type.md)|<xref:System.DateTime>|8바이트|01 년 1 월 1 일 0:00:00 (자정), 11:59:59 년 12 월 9999 31 일 오후|  
-|[Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|<xref:System.Decimal>|16바이트|0부터 +/-79228162514264337593543950335 (+/-7.9...E + 28) <sup>†</sup> (소수점 없음) 0부터 +/-7.9228162514264337593543950335, 소수 오른쪽에 28 개 위치<br /><br /> 0이 아닌 가장 작은 숫자는 +/-0.0000000000000000000000000001 (+/-1E-28) <sup>†</sup> 입니다.|  
-|[Double](../../../visual-basic/language-reference/data-types/double-data-type.md) (배정밀도 부동 소수점)|<xref:System.Double>|8바이트|-1.79769313486231570 e + 308 ~-4.94065645841246544 E-324 <sup>†</sup> (음수 값)<br /><br /> 4.94065645841246544 e-324 ~ 1.79769313486231570 E + 308 <sup>†</sup> (양수 값)|  
-|[Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32>|4바이트|-2147483648 ~ 2147483647 (부호 있음)|  
-|[Long](../../../visual-basic/language-reference/data-types/long-data-type.md) (long 정수)|<xref:System.Int64>|8바이트|-9223372036854775808 ~ 9223372036854775807 (9.2 ... E + 18 <sup>†</sup>) (부호 있음)|  
-|[개체](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object> (클래스)|32 비트 플랫폼에서 4 바이트<br /><br /> 64 비트 플랫폼에서 8 바이트|모든 형식을 형식의 변수에 저장할 수 있습니다 `Object`|  
-|[SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte>|1바이트|-128 ~ 127 (부호 있음)|  
-|[Short](../../../visual-basic/language-reference/data-types/short-data-type.md) (short 정수)|<xref:System.Int16>|2바이트|-32768 ~ 32767 (부호 있음)|  
-|[단일](../../../visual-basic/language-reference/data-types/single-data-type.md) (단 정밀도 부동 소수점)|<xref:System.Single>|4바이트|-3.4028235 e + 38 ~-1.401298 E-45 <sup>†</sup> (음수 값)<br /><br /> 1.401298 e-45 ~ 3.4028235 E + 38 <sup>†</sup> (양수 값)|  
-|[문자열](../../../visual-basic/language-reference/data-types/string-data-type.md) (가변 길이)|<xref:System.String> (클래스)|구현 플랫폼에 따라 달라 집니다.|0 ~ 약 20억 유니코드 문자|  
-|[UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|<xref:System.UInt32>|4바이트|0-4294967295 (부호 없음)|  
-|[ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<xref:System.UInt64>|8바이트|0-18446744073709551615 (1.8 ... E + 19 <sup>†</sup>) (부호 없음)|  
-|[사용자 정의](../../../visual-basic/language-reference/data-types/user-defined-data-type.md) (구조)|(<xref:System.ValueType>에서 상속)|구현 플랫폼에 따라 달라 집니다.|구조체의 각 멤버는 데이터 형식에 따라 결정 되 고 다른 멤버의 범위에 독립적으로 범위가 결정 됩니다.|  
-|[UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|<xref:System.UInt16>|2바이트|0-65535 (부호 없음)|  
+|[Boolean](boolean-data-type.md)|<xref:System.Boolean>|구현 플랫폼에 따라 달라 집니다.|`True` 또는 `False`|  
+|[Byte](byte-data-type.md)|<xref:System.Byte>|1바이트|0-255 (부호 없음)|  
+|[Char](char-data-type.md) (단일 문자)|<xref:System.Char>|2바이트|0-65535 (부호 없음)|  
+|[Date](date-data-type.md)|<xref:System.DateTime>|8바이트|01 년 1 월 1 일 0:00:00 (자정), 11:59:59 년 12 월 9999 31 일 오후|  
+|[Decimal](decimal-data-type.md)|<xref:System.Decimal>|16바이트|0부터 +/-79228162514264337593543950335 (+/-7.9...E + 28) <sup>†</sup> (소수점 없음) 0부터 +/-7.9228162514264337593543950335, 소수 오른쪽에 28 개 위치<br /><br /> 0이 아닌 가장 작은 숫자는 +/-0.0000000000000000000000000001 (+/-1E-28) <sup>†</sup> 입니다.|  
+|[Double](double-data-type.md) (배정밀도 부동 소수점)|<xref:System.Double>|8바이트|-1.79769313486231570 e + 308 ~-4.94065645841246544 E-324 <sup>†</sup> (음수 값)<br /><br /> 4.94065645841246544 e-324 ~ 1.79769313486231570 E + 308 <sup>†</sup> (양수 값)|  
+|[정수](integer-data-type.md)|<xref:System.Int32>|4바이트|-2147483648 ~ 2147483647 (부호 있음)|  
+|[Long](long-data-type.md) (long 정수)|<xref:System.Int64>|8바이트|-9223372036854775808 ~ 9223372036854775807 (9.2 ... E + 18 <sup>†</sup>) (부호 있음)|  
+|[개체](object-data-type.md)|<xref:System.Object>클래스|32 비트 플랫폼에서 4 바이트<br /><br /> 64 비트 플랫폼에서 8 바이트|모든 형식을 형식의 변수에 저장할 수 있습니다.`Object`|  
+|[SByte](sbyte-data-type.md)|<xref:System.SByte>|1바이트|-128 ~ 127 (부호 있음)|  
+|[Short](short-data-type.md) (short 정수)|<xref:System.Int16>|2바이트|-32768 ~ 32767 (부호 있음)|  
+|[단일](single-data-type.md) (단 정밀도 부동 소수점)|<xref:System.Single>|4바이트|-3.4028235 e + 38 ~-1.401298 E-45 <sup>†</sup> (음수 값)<br /><br /> 1.401298 e-45 ~ 3.4028235 E + 38 <sup>†</sup> (양수 값)|  
+|[문자열](string-data-type.md) (가변 길이)|<xref:System.String>클래스|구현 플랫폼에 따라 달라 집니다.|0 ~ 약 20억 유니코드 문자|  
+|[UInteger](uinteger-data-type.md)|<xref:System.UInt32>|4바이트|0-4294967295 (부호 없음)|  
+|[ULong](ulong-data-type.md)|<xref:System.UInt64>|8바이트|0-18446744073709551615 (1.8 ... E + 19 <sup>†</sup>) (부호 없음)|  
+|[사용자 정의](user-defined-data-type.md) (구조)|(에서 상속 <xref:System.ValueType> )|구현 플랫폼에 따라 달라 집니다.|구조체의 각 멤버는 데이터 형식에 따라 결정 되 고 다른 멤버의 범위에 독립적으로 범위가 결정 됩니다.|  
+|[UShort](ushort-data-type.md)|<xref:System.UInt16>|2바이트|0-65535 (부호 없음)|  
   
  <sup>†</sup> *과학적 표기법*에서 "E"는 10의 거듭제곱을 나타냅니다. 따라서 3.56 E + 2는 3.56 x 10<sup>2</sup> 또는 356을 의미 하 고, 3.56 e-2는 3.56/10<sup>2</sup> 또는 0.0356을 의미 합니다.  
   
 > [!NOTE]
-> 텍스트를 포함 하는 문자열의 경우 <xref:Microsoft.VisualBasic.Strings.StrConv%2A> 함수를 사용 하 여 텍스트 형식을 다른 형식으로 변환 합니다.  
+> 텍스트를 포함 하는 문자열의 경우 함수를 사용 하 여 <xref:Microsoft.VisualBasic.Strings.StrConv%2A> 텍스트 형식을 다른 형식으로 변환 합니다.  
   
- 선언 문에서 데이터 형식을 지정 하는 것 외에도 형식 문자를 사용 하 여 일부 프로그래밍 요소의 데이터 형식을 강제할 수 있습니다. [형식 문자](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)를 참조 하십시오.  
+ 선언 문에서 데이터 형식을 지정 하는 것 외에도 형식 문자를 사용 하 여 일부 프로그래밍 요소의 데이터 형식을 강제할 수 있습니다. [형식 문자](../../programming-guide/language-features/data-types/type-characters.md)를 참조 하십시오.  
   
 ## <a name="memory-consumption"></a>메모리 소비  
 
@@ -89,17 +89,17 @@ ms.locfileid: "74343993"
   
 - **헤드만.** 일부 복합 형식에는 추가 메모리 요구 사항이 있습니다. 예를 들어 배열에는 배열 자체와 각 차원에 대 한 추가 메모리가 사용 됩니다. 32 비트 플랫폼에서이 오버 헤드는 현재 12 바이트와 각 차원에 대 한 8 바이트를 더한 값입니다. 64 비트 플랫폼에서는이 요구 사항이 두 배가 됩니다.  
   
-- **저장소 레이아웃.** 메모리의 저장소 순서가 선언 순서와 동일 하다는 것을 안전 하 게 가정할 수 없습니다. 2 바이트 또는 4 바이트 경계와 같은 바이트 맞춤에 대 한 가정을 수행할 수도 없습니다. 클래스 또는 구조체를 정의 하 고 해당 멤버의 저장소 레이아웃을 제어 해야 하는 경우 클래스 또는 구조체에 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 특성을 적용할 수 있습니다.  
+- **저장소 레이아웃.** 메모리의 저장소 순서가 선언 순서와 동일 하다는 것을 안전 하 게 가정할 수 없습니다. 2 바이트 또는 4 바이트 경계와 같은 바이트 맞춤에 대 한 가정을 수행할 수도 없습니다. 클래스 또는 구조체를 정의 하 고 해당 멤버의 저장소 레이아웃을 제어 해야 하는 경우 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 특성을 클래스나 구조체에 적용할 수 있습니다.  
   
 ### <a name="object-overhead"></a>개체 오버 헤드  
 
- 기본 또는 복합 데이터 형식을 참조 하는 `Object` 데이터 형식에 포함 된 데이터 외에 4 바이트를 사용 합니다.  
+ `Object`기본 또는 복합 데이터 형식을 참조 하는는 데이터 형식에 포함 된 데이터 외에 4 바이트를 사용 합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:Microsoft.VisualBasic.Strings.StrConv%2A>
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>
-- [CString](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [변환 요약](../../../visual-basic/language-reference/keywords/conversion-summary.md)
-- [형식 문자](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
-- [데이터 형식의 효율적 사용](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [형식 변환 함수](../functions/type-conversion-functions.md)
+- [변환 요약](../keywords/conversion-summary.md)
+- [형식 문자](../../programming-guide/language-features/data-types/type-characters.md)
+- [데이터 형식의 효율적 사용](../../programming-guide/language-features/data-types/efficient-use-of-data-types.md)

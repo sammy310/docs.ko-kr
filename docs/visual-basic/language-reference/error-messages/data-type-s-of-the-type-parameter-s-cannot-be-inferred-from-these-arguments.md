@@ -10,12 +10,12 @@ helpviewer_keywords:
 - BC36644
 - BC36647
 ms.assetid: 0e0050f2-2039-4311-b260-f0ebfde84189
-ms.openlocfilehash: 97b03874489473482554078958c7bfd29d87c095
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: b278dcc10a8a4e9e67aacdb16dca2588d2ebd0f1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523998"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409788"
 ---
 # <a name="data-types-of-the-type-parameters-cannot-be-inferred-from-these-arguments"></a>이 인수에서 형식 매개 변수의 데이터 형식을 유추할 수 없습니다.
 
@@ -26,7 +26,7 @@ ms.locfileid: "72523998"
 > [!NOTE]
 > 인수 지정이 옵션이 아닌 경우(예: 쿼리 식의 쿼리 연산자) 두 번째 문장 없이 오류 메시지가 나타납니다.
 
-다음 코드에서는  오류를 보여 줍니다.
+다음 코드에서는 오류를 보여 줍니다.
 
 ```vb
 Module Module1
@@ -58,8 +58,8 @@ End Interface
 
 형식 유추를 사용하지 않고 형식 매개 변수에 대한 데이터 형식을 지정할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [완화된 대리자 변환](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
-- [Generic Procedures in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
-- [Visual Basic 형식 변환](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [완화된 대리자 변환](../../programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [Visual Basic의 제네릭 프로시저](../../programming-guide/language-features/data-types/generic-procedures.md)
+- [Visual Basic의 형식 변환](../../programming-guide/language-features/data-types/type-conversions.md)

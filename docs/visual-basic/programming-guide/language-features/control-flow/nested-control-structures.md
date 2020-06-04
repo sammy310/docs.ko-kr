@@ -10,20 +10,20 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: b696c79cd3cada4416b3f4b6cdf96f00b89a5a0a
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 539ad639320615c1e53176fe47e5468864aa21d8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266926"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414391"
 ---
 # <a name="nested-control-structures-visual-basic"></a>중첩 제어 구조(Visual Basic)
-다른 컨트롤 문(예: 루프 내의 `If...Then...Else` 블록) `For...Next` 내에 제어 문을 배치할 수 있습니다. 다른 제어 문 안에 배치된 제어 문이 *중첩되었다고*합니다.  
+루프 내의 블록과 같은 다른 제어 문 내에 제어 문을 추가할 수 있습니다 `If...Then...Else` `For...Next` . 다른 제어 문 내에 배치 된 제어 문은 *중첩*된 것으로 간주 됩니다.  
   
 ## <a name="nesting-levels"></a>중첩 수준  
- Visual Basic의 컨트롤 구조는 원하는 수의 레벨에 중첩될 수 있습니다. 각 구조의 본문을 들여쓰기하여 중첩 된 구조를 더 읽기 쉽게 만드는 것이 일반적입니다. 통합 개발 환경(IDE) 편집기는 자동으로 이 작업을 수행합니다.  
+ Visual Basic의 제어 구조는 원하는 만큼 수준으로 중첩 될 수 있습니다. 각각의 본문을 들여쓰기 하 여 중첩 된 구조를 더 읽기 쉽게 만드는 것이 일반적입니다. IDE (통합 개발 환경) 편집기에서 자동으로이를 수행 합니다.  
   
- 다음 예제에서 프로시저는 `sumRows` 행렬의 각 행의 양수 요소를 함께 추가합니다.  
+ 다음 예에서는 프로시저가 `sumRows` 행렬의 각 행에 대 한 긍정 요소를 함께 추가 합니다.  
   
 ```vb
 Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)  
@@ -39,15 +39,15 @@ Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)
 End Sub  
 ```  
   
- 앞의 예제에서 첫 `Next` 번째 문은 내부 `For` 루프를 `Next` 닫고 마지막 `For` 문은 외부 루프를 닫습니다.  
+ 앞의 예제에서 첫 번째 `Next` 문은 내부 루프를 닫고 `For` 마지막 `Next` 문은 외부 루프를 닫습니다 `For` .  
   
- 마찬가지로 중첩 된 `If` 문에서 `End If` 문은 가장 가까운 이전 `If` 문에 자동으로 적용됩니다. 중첩 `Do` 루프는 가장 안쪽 문과 일치하는 `Loop` `Do` 가장 안쪽 문과 비슷한 방식으로 작동합니다.  
+ 마찬가지로 중첩 된 `If` 문에서 `End If` 문이 가장 가까운 이전 문에 자동으로 적용 `If` 됩니다. 중첩 된 루프는 가장 안쪽의 문과 일치 하는 `Do` 가장 안쪽의 문을 사용 하 여 비슷한 방식으로 작동 `Loop` `Do` 합니다.  
   
 > [!NOTE]
-> 많은 컨트롤 구조의 경우 키워드를 클릭하면 구조의 모든 키워드가 강조 표시됩니다. 예를 들어 구성을 `If` `If...Then...Else` 클릭하면 `If`구성의 모든 `Then` `ElseIf` `Else` `End If` 인스턴스가 강조 표시됩니다. 강조 표시된 다음 또는 이전 키워드로 이동하려면 CTRL+SHIFT+DOWN 화살표 또는 CTRL+SHIFT+UP 화살표를 누릅니다.  
+> 많은 컨트롤 구조에서 키워드를 클릭 하면 구조에 있는 모든 키워드가 강조 표시 됩니다. 예를 들어, `If` 생성을 클릭 하면 `If...Then...Else` 생성에서,,, 및의 모든 인스턴스가 `If` `Then` `ElseIf` `Else` `End If` 강조 표시 됩니다. 다음 또는 이전 강조 표시 된 키워드로 이동 하려면 CTRL + SHIFT + 아래쪽 화살표 또는 CTRL + SHIFT + 위쪽 화살표를 누릅니다.  
   
-## <a name="nesting-different-kinds-of-control-structures"></a>다양한 종류의 제어 구조 중첩  
- 한 종류의 제어 구조를 다른 종류 내에 중첩할 수 있습니다. 다음 예제에서는 `With` `For Each` 루프 내부의 블록과 `If` `With` 블록 내부에 중첩된 블록을 사용합니다.  
+## <a name="nesting-different-kinds-of-control-structures"></a>여러 종류의 제어 구조 중첩  
+ 한 종류의 제어 구조를 다른 종류 내에 중첩할 수 있습니다. 다음 예제에서는 루프 내에서 블록을 사용 하 `With` `For Each` 고 `If` 블록 내의 중첩 블록을 사용 `With` 합니다.  
   
 ```vb
 For Each ctl As System.Windows.Forms.Control In Me.Controls  
@@ -65,15 +65,15 @@ Next ctl
 ```  
   
 ## <a name="overlapping-control-structures"></a>겹치는 제어 구조  
- 컨트롤 구조를 겹칠 수 없습니다. 즉, 중첩된 구조는 가장 안쪽 의 구조 내에 완전히 포함되어야 합니다. 예를 들어 내부 `For` `With` 블록이 종료되기 전에 루프가 종료되므로 다음 배열이 잘못되었습니다.  
+ 제어 구조는 겹칠 수 없습니다. 즉, 중첩 된 구조는 다음의 가장 안쪽 구조 내에 완전히 포함 되어야 합니다. 예를 들어 다음 정렬은 `For` 내부 블록이 종료 되기 전에 루프가 종료 되기 때문에 유효 하지 않습니다 `With` .  
   
- ![잘못된 중첩의 예를 보여 주는 다이어그램입니다.](./media/nested-control-structures/example-invalid-nesting.gif)
+ ![잘못 된 중첩의 예를 보여 주는 다이어그램입니다.](./media/nested-control-structures/example-invalid-nesting.gif)
   
- Visual Basic 컴파일러는 이러한 겹치는 제어 구조를 감지하고 컴파일 타임 오류를 신호합니다.  
+ Visual Basic 컴파일러는 이러한 겹치는 제어 구조를 검색 하 고 컴파일 시간 오류를 신호로 보냅니다.  
   
 ## <a name="see-also"></a>참고 항목
 
-- [제어 흐름](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
-- [판단 구조](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
-- [루프 구조체](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
-- [기타 제어 구조](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
+- [제어 흐름](index.md)
+- [판단 구조체](decision-structures.md)
+- [루프 구조체](loop-structures.md)
+- [기타 제어 구조체](other-control-structures.md)
