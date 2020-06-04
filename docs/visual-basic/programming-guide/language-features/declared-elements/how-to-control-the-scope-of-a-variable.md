@@ -12,29 +12,29 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-ms.openlocfilehash: 0ee6ce183310aa836ecdbbc0bc819e0e83d1872d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 8b21f22edea84448e3f2969c3e4b07c08a17a338
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345371"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84357350"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>방법: 변수의 범위 제어(Visual Basic)
 일반적으로 변수는 *범위*내에 있거나 선언 하는 지역 전체에서 참조로 표시 됩니다. 경우에 따라 변수의 *액세스 수준이* 범위에 영향을 줄 수 있습니다.  
   
- 자세한 내용은 [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)을 참조하세요.  
+ 자세한 내용은 [Scope in Visual Basic](scope.md)을 참조하세요.  
   
 ## <a name="scope-at-block-or-procedure-level"></a>블록 또는 프로시저 수준에서의 범위  
   
 #### <a name="to-make-a-variable-visible-only-within-a-block"></a>블록 내 에서만 변수를 표시 하려면  
   
-- 해당 블록의 시작 및 종료 선언문 사이에 있는 변수에 대 한 [Dim 문을](../../../../visual-basic/language-reference/statements/dim-statement.md) 저장 합니다 (예: `For` 루프의 `For` 문과 `Next` 문 사이).  
+- 루프의 및 문 사이에 있는 경우와 같이 해당 블록의 시작 및 종료 선언 문 간에 변수에 [Dim 문을](../../../language-reference/statements/dim-statement.md) 추가 합니다 `For` `Next` `For` .  
   
      변수는 블록 내 에서만 참조할 수 있습니다.  
   
 #### <a name="to-make-a-variable-visible-only-within-a-procedure"></a>프로시저 내 에서만 변수를 표시 하려면  
   
-- 프로시저 내의 변수에 대 한 `Dim` 문을 저장 합니다 (예: `With`...`End With` 블록).  
+- `Dim`프로시저 내의 변수는 물론 블록 외부 (예: ... `With` `End With` 블록)에 문을 추가 합니다.  
   
      프로시저 내에서 프로시저 내에 포함 된 모든 블록을 포함 하 여 변수만 참조할 수 있습니다.  
   
@@ -43,17 +43,17 @@ ms.locfileid: "74345371"
   
 #### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a>모듈, 클래스 또는 구조 전체에서 변수를 표시 하도록 설정 하려면  
   
-1. 모듈, 클래스 또는 구조체 내의 변수에 대 한 `Dim` 문을 프로시저 외부에 저장 합니다.  
+1. `Dim`모듈, 클래스 또는 구조체 내에 있는 변수에 대 한 문을 프로시저 외부에 저장 합니다.  
   
-2. [Private](../../../../visual-basic/language-reference/modifiers/private.md) 키워드를 `Dim` 문에 포함 합니다.  
+2. 문에 [Private](../../../language-reference/modifiers/private.md) 키워드를 포함 `Dim` 합니다.  
   
 3. 모듈, 클래스 또는 구조체 내의 어디에서 나 변수를 참조할 수 있지만 외부에서는 참조할 수 없습니다.  
   
 #### <a name="to-make-a-variable-visible-throughout-a-namespace"></a>네임 스페이스 전체에서 변수를 표시 하려면  
   
-1. 모듈, 클래스 또는 구조체 내의 변수에 대 한 `Dim` 문을 프로시저 외부에 저장 합니다.  
+1. `Dim`모듈, 클래스 또는 구조체 내에 있는 변수에 대 한 문을 프로시저 외부에 저장 합니다.  
   
-2. [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) 또는 [Public](../../../../visual-basic/language-reference/modifiers/public.md) 키워드를 `Dim` 문에 포함 합니다.  
+2. 문에 [Friend](../../../language-reference/modifiers/friend.md) 또는 [Public](../../../language-reference/modifiers/public.md) 키워드를 포함 `Dim` 합니다.  
   
 3. 모듈, 클래스 또는 구조체를 포함 하는 네임 스페이스 내의 어디에서 나 변수를 참조할 수 있습니다.  
   
@@ -72,9 +72,9 @@ Module demonstrateScope
 End Module  
 ```  
   
- 위의 예제에서 모듈 `demonstrateScope`에 정의 된 모든 프로시저는 `strMsg``String` 변수를 참조할 수 있습니다. `usePrivateVariable` 프로시저가 호출 되 면 대화 상자에 `strMsg` 문자열 변수의 내용이 표시 됩니다.  
+ 위의 예에서는 모듈에 정의 된 모든 프로시저가 `demonstrateScope` 변수를 참조할 수 있습니다 `String` `strMsg` . 프로시저를 `usePrivateVariable` 호출 하면 대화 상자에 문자열 변수의 내용이 표시 됩니다 `strMsg` .  
   
- 앞의 예제를 다음과 같이 변경 하 여 문자열 변수 `strMsg` 선언 네임 스페이스의 모든 위치에서 코드로 참조할 수 있습니다.  
+ 앞의 예제를 다음과 같이 변경 하 여 문자열 변수를 `strMsg` 선언 네임 스페이스의 모든 위치에서 코드로 참조할 수 있습니다.  
   
 ```vb  
 Public strMsg As String  
@@ -88,9 +88,9 @@ Public strMsg As String
   
 ## <a name="see-also"></a>참고 항목
 
-- [Visual Basic 범위](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [Visual Basic 수명](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
-- [Visual Basic의 액세스 수준](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
-- [변수](../../../../visual-basic/programming-guide/language-features/variables/index.md)
-- [변수 선언](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Visual Basic의 범위](scope.md)
+- [Visual Basic의 수명](lifetime.md)
+- [Visual Basic의 액세스 수준](access-levels.md)
+- [변수](../variables/index.md)
+- [변수 선언](../variables/variable-declaration.md)
+- [Dim 문](../../../language-reference/statements/dim-statement.md)

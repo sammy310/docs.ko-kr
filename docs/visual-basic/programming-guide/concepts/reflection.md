@@ -1,15 +1,15 @@
 ---
-title: 리플렉션
+title: 반사
 ms.date: 07/20/2015
 ms.assetid: d991bc0f-d16a-4ac5-9351-70e5c5b9891b
-ms.openlocfilehash: 28f33c88f7aaaf51938a7d27fd2218a97b628acd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 43c05a0b3bbfc3dfc304b1aed3f689625a40229a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349274"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413182"
 ---
-# <a name="reflection-visual-basic"></a>리플렉션 (Visual Basic)
+# <a name="reflection-visual-basic"></a>리플렉션(Visual Basic)
 리플렉션은 어셈블리, 모듈 및 형식을 설명하는 개체(<xref:System.Type> 형식)를 제공합니다. 리플렉션을 사용하면 동적으로 형식 인스턴스를 만들거나, 형식을 기존 개체에 바인딩하거나, 기존 개체에서 형식을 가져와 해당 메서드를 호출하거나, 필드 및 속성에 액세스할 수 있습니다. 코드에서 특성을 사용하는 경우 리플렉션은 특성에 대한 액세스를 제공합니다. 자세한 내용은 [특성](../../../standard/attributes/index.md)을 참조하세요.  
   
  다음은 정적 메서드 `GetType`(`Object` 기본 클래스의 모든 형식에 상속됨)을 사용하여 변수 형식을 가져오는 간단한 리플렉션 예제입니다.  
@@ -48,8 +48,8 @@ System.Console.WriteLine(info)
   
 - 런타임에 바인딩을 수행하고 런타임에 생성된 형식의 메서드에 액세스하려는 경우. [동적으로 형식 로드 및 사용](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md) 항목을 참조하세요.  
   
-## <a name="related-sections"></a>관련 섹션  
- 참조 항목:  
+## <a name="related-sections"></a>관련 단원  
+ 추가 정보는 다음 항목을 참조하세요.  
   
 - [리플렉션](../../../framework/reflection-and-codedom/reflection.md)  
   
@@ -63,5 +63,5 @@ System.Console.WriteLine(info)
   
 ## <a name="see-also"></a>참고 항목
 
-- [Visual Basic 프로그래밍 가이드](../../../visual-basic/programming-guide/index.md)
+- [Visual Basic 프로그래밍 가이드](../index.md)
 - [.NET 어셈블리](../../../standard/assembly/index.md)

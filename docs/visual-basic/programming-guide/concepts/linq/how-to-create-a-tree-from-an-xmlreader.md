@@ -1,13 +1,13 @@
 ---
-title: '방법: XmlReader에서 트리 조각 만들기'
+title: '방법: XmlReader에서 트리 만들기'
 ms.date: 07/20/2015
 ms.assetid: 6de683d8-177d-402b-b0de-d0539f1ce5d8
-ms.openlocfilehash: 7d8d7f5b6389bef520e11fd2b7cc3e1c7e862e73
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 25c15ff08563b12b26041a536dfbca1c9cce260a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353080"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414610"
 ---
 # <a name="how-to-create-a-tree-from-an-xmlreader-visual-basic"></a>방법: XmlReader에서 트리 만들기 (Visual Basic)
 
@@ -15,7 +15,7 @@ ms.locfileid: "74353080"
 
 ## <a name="example"></a>예제
 
-이 예제에서는 XML 문서 [샘플 XML 파일: Books(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)를 사용합니다.
+이 예제에서는 XML 문서 [샘플 XML 파일: Books(LINQ to XML)](sample-xml-file-books-linq-to-xml.md)를 사용합니다.
 
 다음 코드에서는 `T:System.Xml.XmlReader` 개체를 만들고 첫 번째 요소 노드를 찾을 때까지 노드를 읽은 다음 <xref:System.Xml.Linq.XElement> 개체를 로드합니다.
 
@@ -54,6 +54,6 @@ Console.WriteLine(e)
 </Catalog>
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [XML 구문 분석 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [XML 구문 분석 (Visual Basic)](parsing-xml.md)

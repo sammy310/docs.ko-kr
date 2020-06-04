@@ -1,5 +1,5 @@
 ---
-title: '방법: 이름이 같은 변수 숨기기'
+title: '방법: 사용자 변수와 이름이 같은 변수 숨기기'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - qualification [Visual Basic], of element names
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
-ms.openlocfilehash: 0915adbbabb778b1bdd3b6b30e56725a7e74867c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c1f4c2fbf339358be77e76468b1db94616bf04a2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345365"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84357234"
 ---
 # <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>방법: 이름이 같은 변수 숨기기(Visual Basic)
 
@@ -25,7 +25,7 @@ ms.locfileid: "74345365"
 
 - **범위를 통한 숨김** 숨기려는 변수를 포함 하는 영역의 영역 영역 안에서 다시 선언할 하 여 범위를 숨길 수 있습니다.
 
-- **상속을 통한 숨김** 숨기려는 변수가 클래스 수준에서 정의 되는 경우 상속을 통해 파생 클래스의 [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) 키워드로 다시 선언할 하 여 숨길 수 있습니다.
+- **상속을 통한 숨김** 숨기려는 변수가 클래스 수준에서 정의 되는 경우 상속을 통해 파생 클래스의 [Shadows](../../../language-reference/modifiers/shadows.md) 키워드로 다시 선언할 하 여 숨길 수 있습니다.
 
 ## <a name="two-ways-to-hide-a-variable"></a>변수를 숨기는 두 가지 방법
 
@@ -35,14 +35,14 @@ ms.locfileid: "74345365"
 
     |변수의 영역|재정의할 수 있는 하위 영역|
     |-----------------------|-------------------------------------------|
-    |모듈|모듈 내의 클래스|
+    |Module|모듈 내의 클래스|
     |클래스|클래스 내의 하위 클래스<br /><br /> 클래스 내의 프로시저|
 
-    `If`...`End If` 생성 또는 `For` 루프 등 해당 프로시저 내의 블록에서 프로시저 변수를 다시 정의할 수 없습니다.
+    해당 프로시저 내에서 프로시저 변수를 다시 정의할 수 없습니다 (예: `If` ... `End If` 생성 또는 `For` 루프).
 
 2. 아직 없는 경우 영역을 만듭니다.
 
-3. 영역 내에서 숨김 변수를 선언 하는 [Dim 문을](../../../../visual-basic/language-reference/statements/dim-statement.md) 작성 합니다.
+3. 영역 내에서 숨김 변수를 선언 하는 [Dim 문을](../../../language-reference/statements/dim-statement.md) 작성 합니다.
 
     영역 내의 코드가 변수 이름을 참조 하는 경우 컴파일러는 숨기는 변수에 대 한 참조를 확인 합니다.
 
@@ -68,9 +68,9 @@ ms.locfileid: "74345365"
     End Module
     ```
 
-    위의 예에서는 모듈 수준 및 프로시저 수준 (`show`프로시저)에서 변수 `num` 선언 합니다. 지역 변수는 `show`내에서 모듈 수준 변수 `num` `num` 숨기 므로 지역 변수는 2로 설정 됩니다. 그러나 `useModuleLevelNum` 프로시저에 `num`를 숨길 지역 변수가 없습니다. 따라서 `useModuleLevelNum` 모듈 수준 변수의 값을 1로 설정 합니다.
+    앞의 예제에서는 `num` 모듈 수준 및 프로시저 수준 (프로시저)에서 모두 변수를 선언 합니다 `show` . 지역 변수는 `num` 내에서 모듈 수준 변수를 `num` 숨기 `show` 므로 지역 변수는 2로 설정 됩니다. 그러나 프로시저에서 숨길 지역 변수는 없습니다 `num` `useModuleLevelNum` . 따라서는 `useModuleLevelNum` 모듈 수준 변수의 값을 1로 설정 합니다.
 
-    `show` 내의 `MsgBox` 호출은 모듈 이름으로 `num`를 한정 하 여 숨김 메커니즘을 무시 합니다. 따라서 지역 변수 대신 모듈 수준 변수를 표시 합니다.
+    `MsgBox`내의 호출은 `show` `num` 모듈 이름으로 한정 하 여 숨김 메커니즘을 무시 합니다. 따라서 지역 변수 대신 모듈 수준 변수를 표시 합니다.
 
 #### <a name="to-hide-a-variable-by-shadowing-it-through-inheritance"></a>상속을 통해 변수를 숨겨 변수를 숨기려면
 
@@ -78,7 +78,7 @@ ms.locfileid: "74345365"
 
 2. 이미 존재 하지 않는 경우 변수의 클래스에서 파생 된 클래스를 정의 합니다.
 
-3. 파생 클래스 내에서 변수를 선언 하는 `Dim` 문을 작성 합니다. 선언에 [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) 키워드를 포함 합니다.
+3. 파생 클래스 내에서 `Dim` 변수를 선언 하는 문을 작성 합니다. 선언에 [Shadows](../../../language-reference/modifiers/shadows.md) 키워드를 포함 합니다.
 
     파생 클래스의 코드가 변수 이름을 참조 하는 경우 컴파일러는 변수에 대 한 참조를 확인 합니다.
 
@@ -99,7 +99,7 @@ ms.locfileid: "74345365"
     End Class
     ```
 
-    앞의 예제에서는 기본 클래스에서 `shadowString` 변수를 선언 하 고 파생 클래스에서 해당 변수를 숨깁니다. 파생 클래스의 `showStrings` 프로시저는 이름 `shadowString` 정규화 되지 않은 경우 문자열의 숨김 버전을 표시 합니다. 그런 다음 `shadowString` `MyBase` 키워드를 사용 하 여 정규화 된 버전을 표시 합니다.
+    앞의 예제에서는 `shadowString` 기본 클래스에서 변수를 선언 하 고 파생 클래스에서 해당 변수를 숨깁니다. `showStrings`파생 클래스의 프로시저는 이름이 한정 되지 않은 경우 문자열의 숨김 버전을 표시 합니다 `shadowString` . 그런 다음 `shadowString` 키워드를 사용 하 여 정규화 된 버전을 표시 `MyBase` 합니다.
 
 ## <a name="robust-programming"></a>강력한 프로그래밍
 
@@ -107,11 +107,11 @@ ms.locfileid: "74345365"
 
 ## <a name="see-also"></a>참고 항목
 
-- [선언된 요소 참조](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Visual Basic에서 숨김](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
-- [숨기기와 재정의의 차이점](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
-- [방법: 상속된 변수 숨기기](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)
-- [방법: 파생 클래스에 의해 숨겨진 변수에 액세스](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)
-- [재정의](../../../../visual-basic/language-reference/modifiers/overrides.md)
-- [Me, My, MyBase 및 MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
-- [상속 기본 사항](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [References to Declared Elements](references-to-declared-elements.md)
+- [Visual Basic에서 숨김](shadowing.md)
+- [섀도잉과 재정의 간의 차이점](differences-between-shadowing-and-overriding.md)
+- [방법: 상속된 변수 숨기기](how-to-hide-an-inherited-variable.md)
+- [방법: 파생 클래스에 의해 숨겨진 변수에 액세스](how-to-access-a-variable-hidden-by-a-derived-class.md)
+- [재정의](../../../language-reference/modifiers/overrides.md)
+- [Me, My, MyBase 및 MyClass](../../program-structure/me-my-mybase-and-myclass.md)
+- [상속 기본 사항](../objects-and-classes/inheritance-basics.md)

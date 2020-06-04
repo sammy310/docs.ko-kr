@@ -1,17 +1,17 @@
 ---
-title: 객체 지향 프로그래밍
+title: 개체 지향 프로그래밍
 ms.date: 07/20/2015
 ms.assetid: 49794de4-64c3-473c-b8ed-fe98835df69c
-ms.openlocfilehash: 3739919273f4cdd285d519c414c542f1a82a16d2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f7e222cde8ce80d4c52cc8b4b111c576eb4041b9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401306"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413195"
 ---
-# <a name="object-oriented-programming-visual-basic"></a>객체 지향 프로그래밍(비주얼 베이직)
+# <a name="object-oriented-programming-visual-basic"></a>개체 지향 프로그래밍 (Visual Basic)
 
-Visual Basic은 캡슐화, 상속 및 다형성을 포함한 개체 지향 프로그래밍을 완전히 지원합니다.
+Visual Basic은 캡슐화, 상속 및 다형성을 포함 하는 개체 지향 프로그래밍에 대 한 완전 한 지원을 제공 합니다.
 
  *캡슐화*는 서로 관련된 속성, 메서드 및 기타 멤버의 그룹을 하나의 단위나 개체로 취급하는 것을 말합니다.
 
@@ -24,15 +24,15 @@ Visual Basic은 캡슐화, 상속 및 다형성을 포함한 개체 지향 프�
 - [클래스 및 개체](#classes-and-objects)
   - [클래스 멤버](#class-members)
     - [속성 및 필드](#properties-and-fields)
-    - [방법](#methods)
+    - [메서드](#methods)
     - [생성자](#constructors)
     - [소멸자](#destructors)
-    - [Events](#events)
+    - [이벤트](#events)
     - [중첩 클래스](#nested-classes)
-  - [수정자 및 액세스 수준에 액세스](#access-modifiers-and-access-levels)
+  - [액세스 한정자 및 액세스 수준](#access-modifiers-and-access-levels)
     - [클래스 인스턴스화](#instantiating-classes)
     - [공유 클래스 및 멤버](#shared-classes-and-members)
-    - [익명 형식](#anonymous-types)
+    - [무명 형식](#anonymous-types)
 - [상속](#inheritance)
   - [멤버 재정의](#overriding-members)
 - [인터페이스](#interfaces)
@@ -50,7 +50,7 @@ Class SampleClass
 End Class
 ```
 
-Visual Basic은 또한 큰 개체 배열을 만들어야 하고 너무 많은 메모리를 사용하지 않으려는 경우에 유용한 *구조체라는* 클래스의 라이트 버전을 제공합니다.
+또한 Visual Basic는 큰 개체 배열을 만들어야 하 고 해당 개체에 너무 많은 메모리를 사용 하지 않으려는 경우에 유용 하 게 사용 되는 *구조체* 라는 클래스의 light 버전을 제공 합니다.
 
 구조체를 정의하려면
 
@@ -59,10 +59,10 @@ Structure SampleStructure
 End Structure
 ```
 
-자세한 내용은 다음을 참조하세요.
+자세한 내용은 다음을 참조하십시오.
 
-- [Class 문](../../../visual-basic/language-reference/statements/class-statement.md)
-- [Structure 문](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Class 문](../../language-reference/statements/class-statement.md)
+- [Structure 문](../../language-reference/statements/structure-statement.md)
 
 ### <a name="class-members"></a>클래스 멤버
 
@@ -82,7 +82,7 @@ End Class
 
 속성에는 값을 설정하고 가져오는 방법을 보다 세밀하게 제어할 수 있는 get 및 set 프로시저가 있습니다.
 
-Visual Basic을 사용하면 속성 값을 저장하기 위한 전용 필드를 만들거나 백그라운드에서 이 필드를 자동으로 만들고 속성 프로시저에 대한 기본 논리를 제공하는 소위 자동 구현 속성을 사용할 수 있습니다.
+Visual Basic를 사용 하면 속성 값을 저장 하기 위한 전용 필드를 만들거나이 필드를 내부적으로 자동으로 만들고 속성 프로시저에 대 한 기본 논리를 제공 하는 자동 구현 속성을 사용할 수 있습니다.
 
 자동 구현 속성을 정의하려면
 
@@ -112,13 +112,13 @@ End Class
 
 대부분의 속성에는 속성 값을 설정하고 가져오는 메서드나 프로시저가 있습니다. 그러나 읽기 전용 또는 쓰기 전용 속성을 만들어 속성을 수정하거나 읽지 못하도록 제한할 수도 있습니다. 이렇게 하려면 Visual Basic에서는 `ReadOnly` 및 `WriteOnly` 키워드를 사용하면 되고 하지만 자동 구현 속성은 읽기 전용 또는 쓰기 전용일 수 없습니다.
 
-자세한 내용은 다음을 참조하세요.
+자세한 내용은 다음을 참조하십시오.
 
-- [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)
-- [Get 문](../../../visual-basic/language-reference/statements/get-statement.md)
-- [문 설정](../../../visual-basic/language-reference/statements/set-statement.md)
-- [Readonly](../../../visual-basic/language-reference/modifiers/readonly.md)
-- [쓰기 전용](../../../visual-basic/language-reference/modifiers/writeonly.md)
+- [Property Statement](../../language-reference/statements/property-statement.md)
+- [Get 문](../../language-reference/statements/get-statement.md)
+- [Set 문](../../language-reference/statements/set-statement.md)
+- [ReadOnly](../../language-reference/modifiers/readonly.md)
+- [WriteOnly](../../language-reference/modifiers/writeonly.md)
 
 #### <a name="methods"></a>메서드
 
@@ -150,14 +150,14 @@ Overloads Sub Display(ByVal theInteger As Integer)
 End Sub
 ```
 
-대부분의 경우 클래스 정의 내에서 메서드를 선언하지만 그러나 Visual Basic은 클래스의 실제 정의 외부의 기존 클래스에 메서드를 추가할 수 있는 *확장 메서드도* 지원합니다.
+대부분의 경우 클래스 정의 내에서 메서드를 선언하지만 그러나 Visual Basic는 클래스의 실제 정의 밖에 있는 기존 클래스에 메서드를 추가할 수 있는 *확장 메서드도* 지원 합니다.
 
-자세한 내용은 다음을 참조하세요.
+자세한 내용은 다음을 참조하십시오.
 
-- [함수 문](../../../visual-basic/language-reference/statements/function-statement.md)
-- [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [오버 로드](../../../visual-basic/language-reference/modifiers/overloads.md)
-- [확장 메서드](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+- [Function 문](../../language-reference/statements/function-statement.md)
+- [Sub 문](../../language-reference/statements/sub-statement.md)
+- [오버로드](../../language-reference/modifiers/overloads.md)
+- [확장명 메서드](../language-features/procedures/extension-methods.md)
 
 #### <a name="constructors"></a>생성자
 
@@ -173,7 +173,7 @@ Class SampleClass
 End Class
 ```
 
-자세한 내용은 개체 [수명: 개체를 만들고 삭제하는 방법을](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)참조하십시오.
+자세한 내용은 [개체 수명: 개체가 만들어지고 소멸 되는 방법](../language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)을 참조 하세요.
 
 #### <a name="destructors"></a>소멸자
 
@@ -185,13 +185,13 @@ End Class
 
 클래스나 개체에서는 특정 상황이 발생할 때 이벤트를 통해 다른 클래스나 개체에 이를 알려 줄 수 있습니다. 이벤트를 보내거나 발생시키는 클래스를 *게시자*라고 하며 이벤트를 받거나 처리하는 클래스를 *구독자*라고 합니다. 이벤트를 발생시키고 처리하는 방법에 대한 자세한 내용은 [이벤트](../../../standard/events/index.md)를 참조하세요.
 
-- 이벤트를 선언하려면 [이벤트 문을](../../../visual-basic/language-reference/statements/event-statement.md)사용합니다.
+- 이벤트를 선언 하려면 [이벤트 문을](../../language-reference/statements/event-statement.md)사용 합니다.
 
-- 이벤트를 발생하려면 [RaiseEvent 문을](../../../visual-basic/language-reference/statements/raiseevent-statement.md)사용합니다.
+- 이벤트를 발생 시키려면 [RaiseEvent 문을](../../language-reference/statements/raiseevent-statement.md)사용 합니다.
 
-- 선언적 방법을 사용하여 이벤트 처리기를 지정하려면 [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md) 문 및 [핸들 절을](../../../visual-basic/language-reference/statements/handles-clause.md) 사용합니다.
+- 선언적 방법을 사용 하 여 이벤트 처리기를 지정 하려면 [WithEvents](../../language-reference/modifiers/withevents.md) 문과 [Handles](../../language-reference/statements/handles-clause.md) 절을 사용 합니다.
 
-- 이벤트와 연결된 이벤트 처리기를 동적으로 추가, 제거 및 변경할 수 있도록 하려면 [AddressOf 연산자와](../../../visual-basic/language-reference/operators/addressof-operator.md)함께 [AddHandler 문](../../../visual-basic/language-reference/statements/addhandler-statement.md) 및 [RemoveHandler 문을](../../../visual-basic/language-reference/statements/removehandler-statement.md) 사용합니다.
+- 이벤트와 연결 된 이벤트 처리기를 동적으로 추가, 제거 및 변경할 수 있으려면 AddressOf [문과](../../language-reference/statements/addhandler-statement.md) [RemoveHandler 문을](../../language-reference/statements/removehandler-statement.md) [AddressOf 연산자](../../language-reference/operators/addressof-operator.md)와 함께 사용 합니다.
 
 #### <a name="nested-classes"></a>중첩 클래스
 
@@ -211,7 +211,7 @@ End Class
 Dim nestedInstance As Container.Nested = New Container.Nested()
 ```
 
-### <a name="access-modifiers-and-access-levels"></a>수정자 및 액세스 수준에 액세스
+### <a name="access-modifiers-and-access-levels"></a>액세스 한정자 및 액세스 수준
 
 모든 클래스 및 클래스 멤버는 *액세스 한정자*를 사용하여 다른 클래스에 제공할 액세스 수준을 지정할 수 있습니다.
 
@@ -219,13 +219,13 @@ Dim nestedInstance As Container.Nested = New Container.Nested()
 
 |Visual Basic 한정자|정의|
 |---------------------------|----------------|
-|[공용](../../../visual-basic/language-reference/modifiers/public.md)|동일한 어셈블리의 다른 코드나 해당 어셈블리를 참조하는 다른 어셈블리의 코드에서 형식이나 멤버에 액세스할 수 있습니다.|
-|[프라이빗](../../../visual-basic/language-reference/modifiers/private.md)|동일한 클래스의 코드에서만 형식이나 멤버에 액세스할 수 있습니다.|
-|[보호](../../../visual-basic/language-reference/modifiers/protected.md)|동일한 클래스의 코드나 파생 클래스의 코드에서만 형식이나 멤버에 액세스할 수 있습니다.|
-|[Friend](../../../visual-basic/language-reference/modifiers/friend.md)|동일한 어셈블리의 코드에서는 형식이나 멤버에 액세스할 수 있지만 다른 어셈블리의 코드에서는 액세스할 수 없습니다.|
+|[공용](../../language-reference/modifiers/public.md)|동일한 어셈블리의 다른 코드나 해당 어셈블리를 참조하는 다른 어셈블리의 코드에서 형식이나 멤버에 액세스할 수 있습니다.|
+|[프라이빗](../../language-reference/modifiers/private.md)|동일한 클래스의 코드에서만 형식이나 멤버에 액세스할 수 있습니다.|
+|[보호](../../language-reference/modifiers/protected.md)|동일한 클래스의 코드나 파생 클래스의 코드에서만 형식이나 멤버에 액세스할 수 있습니다.|
+|[Friend](../../language-reference/modifiers/friend.md)|동일한 어셈블리의 코드에서는 형식이나 멤버에 액세스할 수 있지만 다른 어셈블리의 코드에서는 액세스할 수 없습니다.|
 |`Protected Friend`|동일한 어셈블리의 코드 또는 다른 어셈블리의 파생 클래스에서 형식이나 멤버에 액세스할 수 있습니다.|
 
-자세한 내용은 시각적 기본 의 [액세스 수준을](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)참조하십시오.
+자세한 내용은 [Visual Basic의 액세스 수준](../language-features/declared-elements/access-levels.md)을 참조 하세요.
 
 ### <a name="instantiating-classes"></a>클래스 인스턴스화
 
@@ -251,16 +251,16 @@ Dim sampleObject = New SampleClass With
     {.FirstProperty = "A", .SecondProperty = "B"}
 ```
 
-자세한 내용은 다음을 참조하세요.
+자세한 내용은 다음을 참조하십시오.
 
-- [새로운 연산자](../../../visual-basic/language-reference/operators/new-operator.md)
-- [개체 이니셜라이저: 명명된 형식과 익명 형식](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [새 운영자](../../language-reference/operators/new-operator.md)
+- [개체 이니셜라이저: 명명된 형식 및 무명 형식](../language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 
 ### <a name="shared-classes-and-members"></a>공유 클래스 및 멤버
 
- 클래스의 공유 멤버는 클래스의 모든 인스턴스에서 공유하는 속성, 프로시저 또는 필드입니다.
+ 클래스의 공유 멤버는 클래스의 모든 인스턴스에서 공유 하는 속성, 프로시저 또는 필드입니다.
 
- 공유 멤버를 정의하려면 다음을 수행하십시오.
+ 공유 멤버를 정의 하려면:
 
 ```vb
 Class SampleClass
@@ -268,18 +268,18 @@ Class SampleClass
 End Class
 ```
 
- 공유 멤버에 액세스하려면 이 클래스의 개체를 만들지 않고 클래스 이름을 사용합니다.
+ 공유 멤버에 액세스 하려면이 클래스의 개체를 만들지 않고 클래스의 이름을 사용 합니다.
 
 ```vb
 MsgBox(SampleClass.SampleString)
 ```
 
- Visual Basic의 공유 모듈은 구성원만 공유하며 인스턴스화할 수 없습니다. 공유 멤버는 공유되지 않는 속성, 필드 또는 메서드에도 액세스할 수 없습니다.
+ Visual Basic 공유 모듈은 공유 멤버만 포함 하며 인스턴스화할 수 없습니다. 공유 멤버도 비공유 속성, 필드 또는 메서드에 액세스할 수 없습니다.
 
- 자세한 내용은 다음을 참조하세요.
+ 자세한 내용은 다음을 참조하십시오.
 
-- [공유](../../../visual-basic/language-reference/modifiers/shared.md)
-- [Module 문](../../../visual-basic/language-reference/statements/module-statement.md)
+- [공유](../../language-reference/modifiers/shared.md)
+- [Module 문](../../language-reference/statements/module-statement.md)
 
 ### <a name="anonymous-types"></a>무명 형식
 
@@ -293,14 +293,14 @@ Dim sampleObject =
     New With {Key .FirstProperty = "A", .SecondProperty = "B"}
 ```
 
-자세한 내용은 [다음을](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)참조하십시오.
+자세한 내용은 다음을 참조하세요. [익명 형식](../language-features/objects-and-classes/anonymous-types.md)을 참조하세요.
 
 ## <a name="inheritance"></a>상속
 
-상속을 사용하면 다른 클래스에 정의된 동작을 다시 사용, 확장 및 수정하는 새 클래스를 만들 수 있습니다. 멤버가 상속되는 클래스를 *기본 클래스*라고 하고 해당 멤버를 상속하는 클래스를 *파생 클래스*라고 합니다. 그러나 Visual Basic의 모든 클래스는 <xref:System.Object> .NET 클래스 계층 구조를 지원하고 모든 클래스에 하위 수준 서비스를 제공하는 클래스에서 암시적으로 상속됩니다.
+상속을 사용하면 다른 클래스에 정의된 동작을 다시 사용, 확장 및 수정하는 새 클래스를 만들 수 있습니다. 멤버가 상속되는 클래스를 *기본 클래스*라고 하고 해당 멤버를 상속하는 클래스를 *파생 클래스*라고 합니다. 그러나 Visual Basic의 모든 클래스는 <xref:System.Object> .net 클래스 계층 구조를 지원 하 고 모든 클래스에 하위 수준 서비스를 제공 하는 클래스에서 암시적으로 상속 됩니다.
 
 > [!NOTE]
-> Visual Basic은 여러 상속을 지원하지 않습니다. 즉, 파생된 클래스에 대해 하나의 기본 클래스만 지정할 수 있습니다.
+> Visual Basic는 다중 상속을 지원 하지 않습니다. 즉, 파생된 클래스에 대해 하나의 기본 클래스만 지정할 수 있습니다.
 
 기본 클래스에서 상속하려면
 
@@ -326,11 +326,11 @@ MustInherit Class BaseClass
 End Class
 ```
 
-자세한 내용은 다음을 참조하세요.
+자세한 내용은 다음을 참조하십시오.
 
-- [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md)
-- [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)
-- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
+- [Inherits Statement](../../language-reference/statements/inherits-statement.md)
+- [NotInheritable](../../language-reference/modifiers/notinheritable.md)
+- [MustInherit](../../language-reference/modifiers/mustinherit.md)
 
 ### <a name="overriding-members"></a>멤버 재정의
 
@@ -340,11 +340,11 @@ End Class
 
 |Visual Basic 한정자|정의|
 |---------------------------|----------------|
-|[Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)|파생 클래스에서 클래스 멤버를 재정의할 수 있도록 합니다.|
-|[재정의](../../../visual-basic/language-reference/modifiers/overrides.md)|기본 클래스에 정의된 가상(재정의 가능) 멤버를 재정의합니다.|
-|[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)|멤버가 상속 클래스에서 재정의되지 않도록 합니다.|
-|[MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)|파생 클래스에서 클래스 멤버가 재정의되도록 합니다.|
-|[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)|기본 클래스에서 상속된 멤버를 숨깁니다.|
+|[Overrides](../../language-reference/modifiers/overridable.md)|파생 클래스에서 클래스 멤버를 재정의할 수 있도록 합니다.|
+|[재정의](../../language-reference/modifiers/overrides.md)|기본 클래스에 정의된 가상(재정의 가능) 멤버를 재정의합니다.|
+|[NotOverridable](../../language-reference/modifiers/notoverridable.md)|멤버가 상속 클래스에서 재정의되지 않도록 합니다.|
+|[New](../../language-reference/modifiers/mustoverride.md)|파생 클래스에서 클래스 멤버가 재정의되도록 합니다.|
+|[Overloads](../../language-reference/modifiers/shadows.md)|기본 클래스에서 상속된 멤버를 숨깁니다.|
 
 ## <a name="interfaces"></a>인터페이스
 
@@ -369,15 +369,15 @@ Class SampleClass
 End Class
 ```
 
-자세한 내용은 다음을 참조하세요.
+자세한 내용은 다음을 참조하십시오.
 
-- [인터페이스](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
-- [Interface 문](../../../visual-basic/language-reference/statements/interface-statement.md)
-- [Implements 문](../../../visual-basic/language-reference/statements/implements-statement.md)
+- [인터페이스](../language-features/interfaces/index.md)
+- [Interface 문](../../language-reference/statements/interface-statement.md)
+- [Implements 문](../../language-reference/statements/implements-statement.md)
 
 ## <a name="generics"></a>제네릭
 
-.NET의 클래스, 구조, 인터페이스 및 메서드에는 저장하거나 사용할 수 있는 개체 유형을 정의하는 *형식 매개 변수가* 포함될 수 있습니다. 제네릭의 가장 일반적인 예는 컬렉션에 저장할 개체의 형식을 지정할 수 있는 컬렉션입니다.
+.NET의 클래스, 구조체, 인터페이스 및 메서드는 저장 하거나 사용할 수 있는 개체 형식을 정의 하는 *형식 매개 변수* 를 포함할 수 있습니다. 제네릭의 가장 일반적인 예는 컬렉션에 저장할 개체의 형식을 지정할 수 있는 컬렉션입니다.
 
 제네릭 클래스를 정의하려면
 
@@ -397,7 +397,7 @@ sampleObject.Field = "Sample string"
 자세한 내용은 다음을 참조하세요.
 
 - [제네릭](../../../standard/generics/index.md)
-- [Visual Basic의 제네릭 형식](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Visual Basic의 제네릭 형식](../language-features/data-types/generic-types.md)
 
 ## <a name="delegates"></a>대리자
 
@@ -428,12 +428,12 @@ Class SampleClass
 End Class
 ```
 
-자세한 내용은 다음을 참조하세요.
+자세한 내용은 다음을 참조하십시오.
 
-- [대리자](../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [Delegate 문](../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [AddressOf 연산자](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [대리자](../language-features/delegates/index.md)
+- [Delegate 문](../../language-reference/statements/delegate-statement.md)
+- [AddressOf 연산자](../../language-reference/operators/addressof-operator.md)
 
 ## <a name="see-also"></a>참고 항목
 
-- [Visual Basic 프로그래밍 가이드](../../../visual-basic/programming-guide/index.md)
+- [Visual Basic 프로그래밍 가이드](../index.md)
