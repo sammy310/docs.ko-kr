@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-ms.openlocfilehash: 42177f22e632e4a05b1f0b4d934f3e56ab9ff0f2
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: e3a9f4cf2f4105d2c449813bf0c593860df7d1f0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698575"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409532"
 ---
-# <a name="expression-recursively-calls-the-containing-property-propertyname"></a>식이 포함 하는 '\<propertyname > ' 속성을 재귀적으로 호출 합니다.
-속성 정의의 `Set` 프로시저에 있는 문은 속성 이름에 값을 저장 합니다.  
+# <a name="expression-recursively-calls-the-containing-property-propertyname"></a>식이 포함하는 속성 '\<propertyname>'을(를) 재귀적으로 호출합니다.
+`Set`속성 정의 프로시저의 문은 속성 이름에 값을 저장 합니다.  
   
- 속성의 값을 유지 하는 권장 방법은 속성의 컨테이너에 `Private` 변수를 정의 하 고 `Get` 및 `Set` 프로시저에서 사용 하는 것입니다. 그런 다음 `Set` 프로시저는 들어오는 값을이 `Private` 변수에 저장 해야 합니다.  
+ 속성의 값을 유지 하는 권장 방법은 `Private` 속성의 컨테이너에 변수를 정의 하 고 및 프로시저에서 사용 하는 것입니다 `Get` `Set` . `Set`그런 다음이 프로시저는 들어오는 값을이 변수에 저장 해야 합니다 `Private` .  
   
- `Get` 프로시저는 `Function` 프로시저 처럼 동작 하므로 `End Get` 문을 발생 시켜 속성 이름에 값을 할당 하 고 컨트롤을 반환할 수 있습니다. 그러나 권장 되는 방법은 [Return 문의](../../../visual-basic/language-reference/statements/return-statement.md)값으로 `Private` 변수를 포함 하는 것입니다.  
+ `Get`프로시저는 프로시저 처럼 동작 `Function` 하므로 문을 발생 시켜 속성 이름에 값을 할당 하 고 컨트롤을 반환할 수 있습니다 `End Get` . 그러나 권장 되는 방법은 `Private` [Return 문의](../statements/return-statement.md)값으로 변수를 포함 하는 것입니다.  
   
- `Set` 프로시저는 값을 반환 하지 않는 `Sub` 프로시저 처럼 동작 합니다. 따라서 프로시저 또는 속성 이름은 `Set` 프로시저 내에서 특별 한 의미가 없으며 값을 저장할 수 없습니다.  
+ `Set`프로시저는 `Sub` 값을 반환 하지 않는 프로시저 처럼 동작 합니다. 따라서 프로시저 또는 속성 이름에는 프로시저 내에 특별 한 의미가 없으며 `Set` 값을 저장할 수 없습니다.  
   
  다음 예제에서는이 오류를 발생 시킬 수 있는 방법 및 권장 되는 방법을 보여 줍니다.  
   
@@ -65,6 +65,6 @@ End Class
   
 ## <a name="see-also"></a>참고 항목
 
-- [속성 프로시저](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
-- [Property 문](../../../visual-basic/language-reference/statements/property-statement.md)
-- [Set 문](../../../visual-basic/language-reference/statements/set-statement.md)
+- [속성 프로시저](../../programming-guide/language-features/procedures/property-procedures.md)
+- [Property Statement](../statements/property-statement.md)
+- [Set 문](../statements/set-statement.md)

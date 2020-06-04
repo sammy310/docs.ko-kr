@@ -2,12 +2,12 @@
 title: 지연 실행 예제
 ms.date: 07/20/2015
 ms.assetid: 9a22bea1-c755-4aac-800a-fcd9e5107ace
-ms.openlocfilehash: 6ab8f6434bb24b7a66ca4afd1d082911481671f6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 863b018b6047d61f6fb4a5c1ac68151ed69d24a1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354234"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410801"
 ---
 # <a name="deferred-execution-example-visual-basic"></a>지연 된 실행 예제 (Visual Basic)
 
@@ -63,4 +63,4 @@ Main: str GHI
 
 ## <a name="see-also"></a>참고 항목
 
-- [자습서: 지연 된 실행 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
+- [자습서: 지연 된 실행 (Visual Basic)](tutorial-deferred-execution.md)

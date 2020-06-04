@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft.VisualBasic namespace
 - members [Visual Basic], Visual Basic run-time library
 ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
-ms.openlocfilehash: a73589c4b0d0faeac321090e6030f1f8392a5342
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f7c7d818e6439f732031e23f297661bb960effb7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349612"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359492"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Visual Basic 런타임 라이브러리 멤버
 
-`Microsoft.VisualBasic` 네임 스페이스에는 Visual Basic 런타임 라이브러리를 구성 하는 클래스, 모듈, 상수 및 열거형이 포함 되어 있습니다. 이러한 라이브러리 멤버는 코드에서 사용할 수 있는 프로시저, 속성 및 상수 값을 제공 합니다. 각 모듈 및 클래스는 특정 기능 범주를 나타냅니다.  
+`Microsoft.VisualBasic`네임 스페이스에는 Visual Basic 런타임 라이브러리를 구성 하는 클래스, 모듈, 상수 및 열거형이 포함 되어 있습니다. 이러한 라이브러리 멤버는 코드에서 사용할 수 있는 프로시저, 속성 및 상수 값을 제공 합니다. 각 모듈 및 클래스는 특정 기능 범주를 나타냅니다.  
   
 ## <a name="microsoftvisualbasiccollection-class"></a>Microsoft.visualbasic 클래스  
   
@@ -79,7 +79,7 @@ ms.locfileid: "74349612"
 |<xref:Microsoft.VisualBasic.Conversion.ErrorToString%2A>|<xref:Microsoft.VisualBasic.Conversion.Fix%2A>|<xref:Microsoft.VisualBasic.Conversion.Hex%2A>|<xref:Microsoft.VisualBasic.Conversion.Int%2A>|  
 |<xref:Microsoft.VisualBasic.Conversion.Oct%2A>|<xref:Microsoft.VisualBasic.Conversion.Str%2A>|<xref:Microsoft.VisualBasic.Conversion.Val%2A>||  
   
-## <a name="microsoftvisualbasicdateandtime-module"></a>Microsoft.VisualBasic.DateAndTime Module  
+## <a name="microsoftvisualbasicdateandtime-module"></a>Microsoft.visualbasic. DateAndTime 모듈  
   
 |||||  
 |---|---|---|---|  
@@ -98,7 +98,7 @@ ms.locfileid: "74349612"
 |<xref:Microsoft.VisualBasic.ErrObject.HelpContext%2A>|<xref:Microsoft.VisualBasic.ErrObject.HelpFile%2A>|<xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>|<xref:Microsoft.VisualBasic.ErrObject.Number%2A>|  
 |<xref:Microsoft.VisualBasic.ErrObject.Raise%2A>|<xref:Microsoft.VisualBasic.ErrObject.Raise%2A>|||  
   
-## <a name="microsoftvisualbasicfilesystem-module"></a>Microsoft.VisualBasic.FileSystem Module  
+## <a name="microsoftvisualbasicfilesystem-module"></a>Microsoft.visualbasic 모듈  
   
 |||||  
 |---|---|---|---|  
@@ -113,7 +113,7 @@ ms.locfileid: "74349612"
 |<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|<xref:Microsoft.VisualBasic.FileSystem.SPC%2A>|<xref:Microsoft.VisualBasic.FileSystem.TAB%2A>|<xref:Microsoft.VisualBasic.FileSystem.Unlock%2A>|  
 |<xref:Microsoft.VisualBasic.FileSystem.Write%2A>|<xref:Microsoft.VisualBasic.FileSystem.WriteLine%2A>|||  
   
-## <a name="microsoftvisualbasicfinancial-module"></a>Microsoft.VisualBasic.Financial Module  
+## <a name="microsoftvisualbasicfinancial-module"></a>Microsoft.visualbasic 모듈  
   
 |||||  
 |---|---|---|---|  
@@ -122,7 +122,7 @@ ms.locfileid: "74349612"
 |<xref:Microsoft.VisualBasic.Financial.PPmt%2A>|<xref:Microsoft.VisualBasic.Financial.PV%2A>|<xref:Microsoft.VisualBasic.Financial.Rate%2A>|<xref:Microsoft.VisualBasic.Financial.SLN%2A>|  
 |<xref:Microsoft.VisualBasic.Financial.SYD%2A>||||  
   
-## <a name="microsoftvisualbasicglobals-module"></a>Microsoft.VisualBasic.Globals Module  
+## <a name="microsoftvisualbasicglobals-module"></a>Microsoft.visualbasic 모듈  
   
 |||||  
 |---|---|---|---|  
@@ -160,7 +160,7 @@ ms.locfileid: "74349612"
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.MyGroupCollectionAttribute.CreateMethod%2A>|<xref:Microsoft.VisualBasic.MyGroupCollectionAttribute.DefaultInstanceAlias%2A>|<xref:Microsoft.VisualBasic.MyGroupCollectionAttribute.DisposeMethod%2A>|<xref:Microsoft.VisualBasic.MyGroupCollectionAttribute.MyGroupName%2A>|  
   
-## <a name="microsoftvisualbasicstrings-module"></a>Microsoft.VisualBasic.Strings Module  
+## <a name="microsoftvisualbasicstrings-module"></a>Microsoft.visualbasic 모듈  
   
 |||||  
 |---|---|---|---|  
@@ -185,7 +185,7 @@ ms.locfileid: "74349612"
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.VBFixedStringAttribute.Length%2A>||||  
   
-## <a name="microsoftvisualbasicvbmath-module"></a>Microsoft.VisualBasic.VbMath Module  
+## <a name="microsoftvisualbasicvbmath-module"></a>Microsoft.visualbasic 모듈  
   
 |||||  
 |---|---|---|---|  
@@ -193,9 +193,9 @@ ms.locfileid: "74349612"
   
 ## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Microsoft.visualbasic 상수 및 열거형  
 
- `Microsoft.VisualBasic` 네임 스페이스는 Visual Basic 런타임 라이브러리의 일부로 상수 및 열거형을 제공 합니다. 코드에서 이러한 상수 값을 사용할 수 있습니다. 각 열거형은 특정 기능 범주를 나타냅니다. 자세한 내용은 [상수 및 열거형](../../visual-basic/language-reference/constants-and-enumerations.md)을 참조 하세요.  
+ `Microsoft.VisualBasic`네임 스페이스는 Visual Basic 런타임 라이브러리의 일부로 상수 및 열거형을 제공 합니다. 코드에서 이러한 상수 값을 사용할 수 있습니다. 각 열거형은 특정 기능 범주를 나타냅니다. 자세한 내용은 [상수 및 열거형](constants-and-enumerations.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목
 
-- [상수 및 열거형](../../visual-basic/language-reference/constants-and-enumerations.md)
-- [키워드](../../visual-basic/language-reference/keywords/index.md)
+- [상수 및 열거형](constants-and-enumerations.md)
+- [C++ 키워드](keywords/index.md)
