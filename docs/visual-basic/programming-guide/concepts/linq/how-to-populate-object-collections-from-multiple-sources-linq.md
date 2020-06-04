@@ -1,13 +1,13 @@
 ---
-title: '방법: 여러 소스로 개체 컬렉션 채우기(LINQ)'
+title: '방법: 여러 원본에서 개체 컬렉션 채우기(LINQ)'
 ms.date: 06/22/2018
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-ms.openlocfilehash: 74a2a0f71e575136f1758f72f9a8db72549a9489
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9c6d8ff5165bf886d8aad87b64305819e65361ab
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346974"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396521"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>방법: 여러 소스로 개체 컬렉션 채우기 (LINQ) (Visual Basic)
 
@@ -18,7 +18,7 @@ ms.locfileid: "74346974"
 
 ## <a name="to-create-the-data-file"></a>데이터 파일을 만들려면
 
-- [방법: 서로 다른 파일의 콘텐츠 조인 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)에 설명 된 대로 이름 .csv 및 점수 .csv 파일을 프로젝트 폴더에 복사 합니다.
+- [방법: 서로 다른 파일의 콘텐츠 조인 (LINQ) (Visual Basic)](how-to-join-content-from-dissimilar-files-linq.md)에 설명 된 대로 이름 .csv 및 점수 .csv 파일을 프로젝트 폴더에 복사 합니다.
 
 ## <a name="example"></a>예제
 
@@ -100,7 +100,7 @@ End Class
 ' The average score of Michael Tucker is 92
 ```
 
-[Select 절](../../../../visual-basic/language-reference/queries/select-clause.md) 절에서 개체 이니셜라이저는 두 소스의 데이터를 사용 하 여 새 `Student` 개체를 각각 인스턴스화하는 데 사용 됩니다.
+[Select 절](../../../language-reference/queries/select-clause.md) 절에서 개체 이니셜라이저는 `Student` 두 소스의 데이터를 사용 하 여 새 개체를 각각 인스턴스화하는 데 사용 됩니다.
 
 쿼리 결과를 저장할 필요가 없는 경우 무명 형식이 명명된 형식보다 더 편리할 수 있습니다. 명명된 형식은 쿼리가 실행되는 메서드 외부로 쿼리 결과를 전달하는 경우에 필요합니다. 다음 예제는 앞의 예제와 동일한 작업을 수행하지만 명명된 형식 대신 무명 형식을 사용합니다.
 
@@ -130,4 +130,4 @@ Next
 
 ## <a name="see-also"></a>참고 항목
 
-- [LINQ 및 문자열 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ 및 문자열(Visual Basic)](linq-and-strings.md)

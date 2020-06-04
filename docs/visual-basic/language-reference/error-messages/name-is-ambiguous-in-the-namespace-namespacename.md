@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30560
 ms.assetid: 7f032293-054b-4eae-8d97-3db8e7ddde3b
-ms.openlocfilehash: 6171572176d53562a1baeb8d8602113f6abf9c43
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0fd07e4b777bdf48fa07eac7ef49dfb92aae522f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665721"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397196"
 ---
-# <a name="name-is-ambiguous-in-the-namespace-namespacename"></a>'\<이름 >' 네임 스페이스에서 모호 합니다. '\<namespacename >'
-모호한 이름을 제공했으므로 다른 이름과 충돌합니다. Visual Basic 컴파일러에는 충돌 해결 규칙이; 없습니다 직접 이름을 구분 해야 합니다.  
+# <a name="name-is-ambiguous-in-the-namespace-namespacename"></a>'\<name>'은(는) '\<namespacename>' 네임스페이스에서 모호합니다.
+모호한 이름을 제공했으므로 다른 이름과 충돌합니다. Visual Basic 컴파일러에 충돌 해결 규칙이 없습니다. 이름을 명확 하 게 구분 해야 합니다.  
   
  **오류 ID:** BC30560  
   
@@ -23,7 +23,7 @@ ms.locfileid: "64665721"
   
 - 이름을 정규화합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [Visual Basic의 네임 스페이스](../../../visual-basic/programming-guide/program-structure/namespaces.md)
-- [Namespace 문](../../../visual-basic/language-reference/statements/namespace-statement.md)
+- [Visual Basic의 네임스페이스](../../programming-guide/program-structure/namespaces.md)
+- [Namespace 문](../statements/namespace-statement.md)

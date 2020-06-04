@@ -1,18 +1,18 @@
 ---
-title: '샘플 XSD 파일: Customers 및 Orders2'
+title: '샘플 XSD 파일: Customers 및 주문 2'
 ms.date: 07/20/2015
 ms.assetid: a0c0b414-c8e1-45e4-bb67-b5e650c97130
-ms.openlocfilehash: e2549b4d330ecd8b60ede86c55f28930ae5e41dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1b1d9f1702f9ba9946d9bd7f678440558ef0a75
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786908"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84360698"
 ---
 # <a name="sample-xsd-file-customers-and-orders"></a>샘플 XSD 파일: Customer 및 Order
-다음 XSD 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다. 이 파일에는 [샘플 XML 파일: Customers 및 Orders(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)에 대한 스키마 정의가 포함되어 있습니다. 스키마에서는 XSD의 `xs:key` 및 `xs:keyref` 기능을 사용하여 `CustomerID` 요소의 `Customer` 특성을 키로 설정하고 각 `CustomerID` 요소의 `Order` 요소와 각 `CustomerID` 요소의 `Customer` 특성 간 관계를 설정합니다.  
+다음 XSD 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다. 이 파일에는 [샘플 XML 파일: Customers 및 Orders(LINQ to XML)](sample-xml-file-customers-and-orders-linq-to-xml.md)에 대한 스키마 정의가 포함되어 있습니다. 스키마에서는 XSD의 `xs:key` 및 `xs:keyref` 기능을 사용하여 `CustomerID` 요소의 `Customer` 특성을 키로 설정하고 각 `CustomerID` 요소의 `Order` 요소와 각 `CustomerID` 요소의 `Customer` 특성 간 관계를 설정합니다.  
   
- `Join` 절을 사용하여 이 관계를 이용하는 LINQ 쿼리를 작성하는 예제는 [방법: 두 컬렉션 조인 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md)합니다.  
+ 절을 사용 하 여이 관계를 활용 하는 LINQ 쿼리를 작성 하는 예제는 `Join` [방법: 두 컬렉션 조인 (LINQ to XML) (Visual Basic)](how-to-join-two-collections-linq-to-xml.md)을 참조 하세요.  
   
 ## <a name="customersordersxsd"></a>CustomersOrders.xsd  
   
@@ -93,6 +93,6 @@ ms.locfileid: "61786908"
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [샘플 XML 문서(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [샘플 XML 문서(LINQ to XML)](sample-xml-documents-linq-to-xml.md)

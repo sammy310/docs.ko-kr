@@ -1,18 +1,18 @@
 ---
-title: '방법: 디렉터리 트리의 중복 파일 쿼리(LINQ)'
+title: '방법: 디렉터리 트리에서 중복 파일 쿼리(LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 387d7c97-95dd-4a50-9761-7e9cf8ae9e6a
-ms.openlocfilehash: 9870ccae327bccb0f6f93d49e3b2fc77d72f95cd
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b37da0a26c8bb4abc885faa7bb0c467e2d7d2347
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75342178"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396430"
 ---
 # <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>방법: 디렉터리 트리에서 중복 파일 쿼리 (LINQ) (Visual Basic)
 동일한 이름을 가진 파일이 둘 이상의 폴더에 있는 경우도 있습니다. 예를 들어 Visual Studio 설치 폴더 아래의 여러 폴더에 readme.htm 파일이 있습니다. 이 예제에서는 지정된 루트 폴더 아래에서 이러한 중복 파일 이름을 쿼리하는 방법을 보여 줍니다. 두 번째 예제에서는 크기 및 생성 시간도 일치하는 파일을 쿼리하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```vb  
 Module QueryDuplicateFileNames  
@@ -101,9 +101,9 @@ End Module
  첫 번째 쿼리는 단순 키를 사용하여 일치하는 항목을 확인합니다. 이름은 같지만 내용이 다를 수 있는 파일을 찾습니다. 두 번째 쿼리는 복합 키를 사용하여 <xref:System.IO.FileInfo> 개체의 세 가지 속성과 비교합니다. 이 쿼리가 이름이 같고 내용이 비슷하거나 동일한 파일을 찾을 가능성이 훨씬 더 큽니다.  
   
 ## <a name="compile-the-code"></a>코드 컴파일  
-System.xml 네임 스페이스에 대 한 `Imports` 문을 사용 하 여 Visual Basic 콘솔 응용 프로그램 프로젝트를 만듭니다.
+System.xml `Imports` 네임 스페이스에 대 한 문을 사용 하 여 Visual Basic 콘솔 응용 프로그램 프로젝트를 만듭니다.
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [LINQ to Objects(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ 및 파일 디렉터리(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects(Visual Basic)](linq-to-objects.md)
+- [LINQ 및 파일 디렉터리(Visual Basic)](linq-and-file-directories.md)

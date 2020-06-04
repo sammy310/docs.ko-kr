@@ -2,18 +2,18 @@
 title: '방법: CSV 파일에서 XML 생성'
 ms.date: 07/20/2015
 ms.assetid: fe4dbc87-7b0d-40bf-88c3-5d706ee89a4d
-ms.openlocfilehash: 79b609c3a706db4c8b4c082fbeaf143632a75033
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 647cab02c730f18629c669c3526520b2a98a86d8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636824"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396612"
 ---
 # <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>방법: CSV 파일에서 XML 생성 (Visual Basic)
-이 예에서는 LINQ (통합 언어 쿼리) 및 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]를 사용 하 여 CSV (쉼표로 구분 된 값) 파일에서 XML 파일을 생성 하는 방법을 보여 줍니다.  
+이 예제에서는 LINQ(Language-Integrated Query) 및 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]을 사용하여 CSV(쉼표로 구분된 값) 파일에서 XML 파일을 생성하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예  
- 다음 코드는 문자열 배열에 대해 LINQ 쿼리를 수행 합니다.  
+## <a name="example"></a>예제  
+ 다음 코드에서는 문자열 배열에 대해 LINQ 쿼리를 수행합니다.  
   
 ```vb  
       ' Create the text file.  
@@ -107,6 +107,6 @@ Console.WriteLine(cust)
 </Root>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [프로젝션 및 변환 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [프로젝션 및 변환 (LINQ to XML) (Visual Basic)](projections-and-transformations-linq-to-xml.md)

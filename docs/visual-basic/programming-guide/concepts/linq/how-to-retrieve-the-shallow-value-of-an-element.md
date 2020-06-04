@@ -2,12 +2,12 @@
 title: '방법: 요소의 단순 값 검색'
 ms.date: 07/20/2015
 ms.assetid: 730a6670-fb8c-41fc-8a1b-eb97a837e432
-ms.openlocfilehash: 7449d6d1230313aef6005284270370bb9d243a3f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 24e6b128481f56941f0a61da9766f02813a46e97
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346907"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397819"
 ---
 # <a name="how-to-retrieve-the-shallow-value-of-an-element-visual-basic"></a>방법: 요소의 단순 값 검색 (Visual Basic)
 
@@ -78,4 +78,4 @@ Column  Name="Name"         =Customer.Name
 
 ## <a name="see-also"></a>참고 항목
 
-- [LINQ to XML 축(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [LINQ to XML 축(Visual Basic)](linq-to-xml-axes.md)

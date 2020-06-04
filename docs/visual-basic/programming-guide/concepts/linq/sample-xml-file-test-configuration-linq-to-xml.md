@@ -2,12 +2,12 @@
 title: '샘플 XML 파일: 테스트 구성(LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 2e0e19f2-83e4-42ad-958a-6b3e34c9bf17
-ms.openlocfilehash: ef0df3ba2aa6d7628902cf59ff5fad4d29b017f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b971044ad28763858f40d36e454c08762598a435
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786934"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84360854"
 ---
 # <a name="sample-xml-file-test-configuration-linq-to-xml"></a>샘플 XML 파일: 테스트 구성(LINQ to XML)
 다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다. 이것은 테스트 구성 파일입니다.  
@@ -56,6 +56,6 @@ ms.locfileid: "61786934"
 </Tests>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [샘플 XML 문서(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [샘플 XML 문서(LINQ to XML)](sample-xml-documents-linq-to-xml.md)

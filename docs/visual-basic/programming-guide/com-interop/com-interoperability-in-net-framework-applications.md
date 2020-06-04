@@ -6,12 +6,12 @@ helpviewer_keywords:
 - COM interop [Visual Basic]
 - shared components
 ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
-ms.openlocfilehash: c3567464616d3b0b3f91ff57e8a169aca046c866
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 377958a21886fe0257633ea19417f9a19bd51ff3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452294"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396871"
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>.NET Framework 애플리케이션의 COM 상호 운용성(Visual Basic)
 
@@ -25,7 +25,7 @@ COM 개체를 사용 하 고 동일한 응용 프로그램에서 개체를 .NET 
 
 | | |
 |---------|---------|
-| [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md) | Com 개체, ActiveX 컨트롤, Win32 Dll, 관리 되는 개체 및 COM 개체의 상속을 비롯 하 여 Visual Basic의 COM 상호 운용성을 다루는 항목에 대 한 링크를 제공 합니다. |
+| [COM Interop](index.md) | Com 개체, ActiveX 컨트롤, Win32 Dll, 관리 되는 개체 및 COM 개체의 상속을 비롯 하 여 Visual Basic의 COM 상호 운용성을 다루는 항목에 대 한 링크를 제공 합니다. |
 | [비관리 코드와의 상호 운용](../../../framework/interop/index.md) | 관리 코드와 비관리 코드 간의 상호 작용 문제 중 일부에 대해 간략하게 설명 하 고 추가 조사를 위한 링크를 제공 합니다. |
 | [COM 래퍼](../../../standard/native-interop/com-wrappers.md) | 관리 코드에서 COM 메서드를 호출할 수 있도록 하는 런타임 호출 가능 래퍼와 com 클라이언트에서 .NET 개체 메서드를 호출할 수 있도록 하는 COM 호출 가능 래퍼에 대해 설명 합니다. |
 | [고급 COM 상호 운용성](../../../framework/interop/index.md) | 래퍼, 예외, 상속, 스레딩, 이벤트, 변환 및 마샬링과 관련 하 여 COM 상호 운용성을 다루는 항목의 링크를 제공 합니다. |

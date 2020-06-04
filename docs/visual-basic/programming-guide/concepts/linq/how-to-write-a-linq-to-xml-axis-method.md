@@ -2,12 +2,12 @@
 title: '방법: LINQ to XML 축 메서드 작성'
 ms.date: 07/20/2015
 ms.assetid: b676f025-a24c-4076-8713-aa809b2b8ce0
-ms.openlocfilehash: 88a9df9a2750736cfd34b655cf3ea0f57b2bff39
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0a20bef800c07b0db8ed47c7a04fd102c1076588
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348341"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397650"
 ---
 # <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a>방법: LINQ to XML 축 메서드 작성 (Visual Basic)
 XML 트리에서 컬렉션을 검색하는 축 메서드를 작성할 수 있습니다. 축 메서드를 작성하는 가장 좋은 방법 중 하나는 요소나 특성의 컬렉션을 반환하는 확장 메서드를 작성하는 것입니다. 애플리케이션의 요구 사항에 따라 요소나 특성의 특정 하위 집합을 반환하는 확장명 메서드를 작성할 수 있습니다.  
@@ -15,7 +15,7 @@ XML 트리에서 컬렉션을 검색하는 축 메서드를 작성할 수 있습
 ## <a name="example"></a>예제  
  다음 예제에서는 두 가지 확장명 메서드를 사용합니다. 첫 번째 확장 메서드인 `GetXPath`는 <xref:System.Xml.Linq.XObject>에 대해 작동하며 계산될 때 노드나 특성을 반환할 XPath 식을 반환합니다. 두 번째 확장 메서드인 `Find`는 <xref:System.Xml.Linq.XElement>에 대해 작동하며 지정된 일부 텍스트가 포함된 <xref:System.Xml.Linq.XAttribute> 개체와 <xref:System.Xml.Linq.XElement> 개체의 컬렉션을 반환합니다.  
   
- 이 예제에서는 XML 문서 [샘플 XML 파일: 여러 구매 주문(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)을 사용합니다.  
+ 이 예제에서는 XML 문서 [샘플 XML 파일: 여러 구매 주문(LINQ to XML)](sample-xml-file-multiple-purchase-orders-linq-to-xml.md)을 사용합니다.  
   
 ```vb  
 Imports System.Runtime.CompilerServices  
@@ -217,4 +217,4 @@ End Module
   
 ## <a name="see-also"></a>참고 항목
 
-- [LINQ to XML (고급 쿼리 기술) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [LINQ to XML (고급 쿼리 기술) (Visual Basic)](advanced-query-techniques-linq-to-xml.md)

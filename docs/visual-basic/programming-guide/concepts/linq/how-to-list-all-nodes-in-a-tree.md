@@ -2,12 +2,12 @@
 title: '방법: 트리의 모든 노드 나열'
 ms.date: 07/20/2015
 ms.assetid: e19289c4-26d1-435b-b0db-fb8bc856b753
-ms.openlocfilehash: ea968298d49397f493cf0963db1214915c2e3822
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 15427ccf4701f3cd4bd1dc348f753c187571972c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74336130"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396560"
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>방법: 트리의 모든 노드 나열 (Visual Basic)
 경우에 따라 트리의 모든 노드를 나열하는 것이 유용합니다. 이것은 메서드나 속성이 트리에 미치는 영향을 정확히 확인할 때 유용할 수 있습니다. 텍스트 형식으로 모든 노드를 나열하는 한 가지 방법은 트리의 노드를 정확하고 특정하게 식별하는 XPath 식을 생성하는 것입니다.  
@@ -265,4 +265,4 @@ End Module
   
 ## <a name="see-also"></a>참고 항목
 
-- [LINQ to XML (고급 쿼리 기술) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [LINQ to XML (고급 쿼리 기술) (Visual Basic)](advanced-query-techniques-linq-to-xml.md)
