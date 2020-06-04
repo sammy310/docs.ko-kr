@@ -223,6 +223,10 @@
           displayName: 'unmanaged resources, memory management'
         - name: Dispose 메서드 구현
           href: garbage-collection/implementing-dispose.md
+          displayName: 'using, Dispose, dispose pattern, IDisposable'
+        - name: DisposeAsync 메서드 구현
+          href: garbage-collection/implementing-disposeasync.md
+          displayName: 'await using, DisposeAsync, async dispose pattern, IAsyncDisposable'
         - name: IDisposable을 구현하는 개체 사용
           href: garbage-collection/using-objects.md
     - name: 가비지 수집
