@@ -3,18 +3,25 @@ title: Visual Studio를 사용하여 .NET Core Hello World 애플리케이션 �
 description: 게시하면 .NET Core 애플리케이션을 실행하는 데 필요한 파일 집합이 만들어집니다.
 author: BillWagner
 ms.author: wiwagn
-ms.date: 12/10/2019
+ms.date: 05/20/2020
+dev_langs:
+- csharp
+- vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: bdd6e28713bdece2bd144e6763bd84d719e91449
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e4ef8c12f3e52faa7cf09058a98abae65b0dcfce
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156636"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84005111"
 ---
-# <a name="publish-your-net-core-hello-world-application-with-visual-studio"></a>Visual Studio를 사용하여 .NET Core Hello World 애플리케이션 게시
+# <a name="tutorial-publish-a-net-core-console-application-with-visual-studio"></a>자습서: Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 게시
 
-[Visual Studio에서 .NET Core를 사용하여 Hello World 애플리케이션 만들기](with-visual-studio.md)에서 Hello World 콘솔 애플리케이션을 빌드했습니다. [Visual Studio을 사용하여 Hello World 애플리케이션 디버그](debugging-with-visual-studio.md)에서 Visual Studio 디버거를 사용하여 테스트했습니다. 예상대로 작동하는지 확인했으므로 다른 사용자가 실행할 수 있도록 게시할 수 있습니다. 게시하면 애플리케이션을 실행하는 데 필요한 파일 집합이 만들어집니다. 파일을 배포하려면 대상 컴퓨터로 복사합니다.
+이 자습서에서는 다른 사용자가 실행할 수 있도록 콘솔 앱을 게시하는 방법을 보여 줍니다. 게시하면 애플리케이션을 실행하는 데 필요한 파일 집합이 만들어집니다. 파일을 배포하려면 대상 컴퓨터로 복사합니다.
+
+## <a name="prerequisites"></a>사전 요구 사항
+
+- 이 자습서는 [Visual Studio 2019에서 .NET Core 콘솔 애플리케이션 만들기](with-visual-studio.md)에서 만든 콘솔 앱에 사용할 수 있습니다.
 
 ## <a name="publish-the-app"></a>앱 게시
 
@@ -22,31 +29,33 @@ ms.locfileid: "78156636"
 
    ![릴리스 빌드가 선택된 Visual Studio 도구 모음](media/publishing-with-visual-studio/visual-studio-toolbar-release.png)
 
-1. **HelloWorld** 프로젝트(HelloWorld 솔루션 아님)를 마우스 오른쪽 단추로 클릭하고 메뉴에서 **게시**를 선택합니다. (주 **빌드** 메뉴에서 **HelloWorld 게시**를 선택할 수도 있습니다.)
+1. **HelloWorld** 프로젝트(HelloWorld 솔루션 아님)를 마우스 오른쪽 단추로 클릭하고 메뉴에서 **게시**를 선택합니다.
 
    ![Visual Studio 게시 상황에 맞는 메뉴](media/publishing-with-visual-studio/publish-context-menu.png)
 
-1. **게시 대상 선택** 페이지에서 **폴더**를 선택한 다음 **프로필 만들기**를 선택합니다.
+1. **게시** 페이지의 **대상** 탭에서 **폴더**를 선택한 후 **다음**을 선택합니다.
 
    ![Visual Studio에서 게시 대상 선택](media/publishing-with-visual-studio/pick-publish-target.png)
 
-1. **게시** 페이지에서 **게시**를 선택합니다.
+1. **게시** 페이지의 **위치** 탭에서 **마침**을 선택합니다.
+
+   ![Visual Studio 게시 페이지 위치 탭](media/publishing-with-visual-studio/publish-page-loc-tab.png)
+
+1. **게시** 창의 **게시** 탭에서 **게시**를 선택합니다.
 
    ![Visual Studio 게시 창](media/publishing-with-visual-studio/publish-page.png)
 
 ## <a name="inspect-the-files"></a>파일 검사
 
-게시 프로세스는 프레임워크 종속 배포를 만듭니다. 이 배포는 시스템에 .NET Core가 설치되어 있으면 게시된 애플리케이션이 .NET Core에서 지원하는 모든 플랫폼에서 실행되는 배포 유형입니다. 사용자는 실행 파일을 두 번 클릭하거나 명령 프롬프트에서 `dotnet HelloWorld.dll` 명령을 실행하여 게시된 앱을 실행할 수 있습니다.
+게시 프로세스는 프레임워크 종속 배포를 만듭니다. 이 배포는 .NET Core 런타임이 설치된 컴퓨터에서 게시된 애플리케이션이 실행되는 배포 유형입니다. 사용자는 실행 파일을 두 번 클릭하거나 명령 프롬프트에서 `dotnet HelloWorld.dll` 명령을 실행하여 게시된 앱을 실행할 수 있습니다.
 
 다음 단계에서는 게시 프로세스를 통해 생성된 파일을 살펴봅니다.
 
-1. 명령 프롬프트를 엽니다.
+1. **솔루션 탐색기**에서 **모든 파일 표시**를 선택합니다.
 
-   명령 프롬프트를 여는 방법 중 하나는 Windows 작업 표시줄의 검색 상자에서 **명령 프롬프트**(또는 **cmd**)를 입력하는 것입니다. **명령 프롬프트** 데스크톱 앱을 선택하거나 검색 결과에서 이미 선택되어 있는 경우 **Enter** 키를 누릅니다.
+1. 프로젝트 폴더에서 *bin/Release/netcoreapp3.1/publish*를 확장합니다.
 
-1. 애플리케이션 프로젝트 디렉터리의 *bin\Release\netcoreapp3.1\publish* 하위 디렉터리에 게시된 애플리케이션으로 이동합니다.
-
-   ![게시된 파일을 보여 주는 콘솔 창](media/publishing-with-visual-studio/published-files-output.png)
+   :::image type="content" source="media/publishing-with-visual-studio/published-files-output.png" alt-text="게시된 파일을 보여 주는 솔루션 탐색기":::
 
    그림에 표시된 것과 같이 게시된 출력에는 다음 파일이 포함되어 있습니다.
 
@@ -70,6 +79,35 @@ ms.locfileid: "78156636"
 
          애플리케이션의 런타임 구성 파일입니다. 애플리케이션이 실행되도록 빌드된 .NET Core의 버전을 식별합니다. 구성 옵션을 추가할 수도 있습니다. 자세한 내용은 [.NET Core 런타임 구성 설정](../run-time-config/index.md#runtimeconfigjson)을 참조하세요.
 
+## <a name="run-the-published-app"></a>게시된 앱 실행
+
+1. **솔루션 탐색기**에서 *publish* 폴더를 마우스 오른쪽 단추로 클릭하고 **전체 경로 복사**를 선택합니다.
+
+1. 명령 프롬프트를 열고 *publish* 폴더로 이동합니다. `cd`를 입력한 다음 전체 경로를 붙여넣습니다. 예를 들어:
+
+   ```
+   cd C:\Projects\HelloWorld\bin\Release\netcoreapp3.1\publish\
+   ```
+
+1. 실행 파일을 사용하여 앱을 실행합니다.
+
+   1. `HelloWorld.exe`를 입력하고 Enter 키를 누릅니다.
+
+   1. 프롬프트에 대한 응답으로 이름을 입력하고 아무 키나 눌러 종료합니다.
+
+1. `dotnet` 명령을 사용하여 앱을 실행합니다.
+
+   1. `dotnet HelloWorld.dll`을 입력하고 Enter 키를 누릅니다.
+
+   1. 프롬프트에 대한 응답으로 이름을 입력하고 아무 키나 눌러 종료합니다.
+
 ## <a name="additional-resources"></a>추가 자료
 
 - [.NET Core 애플리케이션 배포](../deploying/index.md)
+
+## <a name="next-steps"></a>다음 단계
+
+이 자습서에서는 콘솔 앱을 게시했습니다. 다음 자습서에서는 클래스 라이브러리를 만듭니다.
+
+> [!div class="nextstepaction"]
+> [Visual Studio에서 .NET Standard 라이브러리 만들기](library-with-visual-studio.md)

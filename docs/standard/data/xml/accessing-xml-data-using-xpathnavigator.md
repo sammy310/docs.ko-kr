@@ -3,12 +3,12 @@ title: XPathNavigator를 사용하여 XML 데이터 액세스
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: c57b46e6-5c77-408f-bc4e-67a5dcc9cc05
-ms.openlocfilehash: c8466e78458d344a872aac7cdebc155342b13e0f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8cba6e106623169f5575684162bf3be383563275
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711170"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202310"
 ---
 # <a name="accessing-xml-data-using-xpathnavigator"></a>XPathNavigator를 사용하여 XML 데이터 액세스
 <xref:System.Xml.XPath.XPathNavigator> 클래스는 <xref:System.Xml.XPath.XPathDocument> 또는 <xref:System.Xml.XmlDocument> 개체에서 노드를 탐색하고 XML 데이터를 추출하고 강력한 형식의 XML 데이터에 액세스하는 메서드를 제공합니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "75711170"
  <xref:System.Xml.XPath.XPathDocument> 또는 <xref:System.Xml.XmlDocument> 개체에서 XML 데이터를 추출하는 다양한 메서드에 대해 설명합니다.  
   
  [XPathNavigator를 사용하여 강력한 형식의 XML 데이터 액세스](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)  
- <xref:System.Xml.XPath.XPathDocument> 클래스를 사용하여 <xref:System.Xml.XmlDocument> 또는 <xref:System.Xml.XPath.XPathNavigator> 개체에서 강력한 형식의 XML 데이터에 액세스하는 방법을 설명합니다.  
+ <xref:System.Xml.XPath.XPathNavigator> 클래스를 사용하여 <xref:System.Xml.XPath.XPathDocument> 또는 <xref:System.Xml.XmlDocument> 개체에서 강력한 형식의 XML 데이터에 액세스하는 방법을 설명합니다.  
   
  [사용자 정의 함수 및 변수](../../../../docs/standard/data/xml/user-defined-functions-and-variables.md)  
  확장 함수 및 변수를 지원하는 인터페이스 <xref:System.Xml.Xsl.XsltContext> 및 <xref:System.Xml.Xsl.IXsltContextFunction>과 함께 사용자 지정 <xref:System.Xml.Xsl.IXsltContextVariable> 클래스 구현에 대해 설명합니다.  

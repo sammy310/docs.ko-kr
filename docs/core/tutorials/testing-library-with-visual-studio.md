@@ -1,104 +1,105 @@
 ---
 title: Visual Studio에서 .NET Core를 사용하여 .NET Standard 클래스 라이브러리 테스트
 description: .NET Core 클래스 라이브러리에 대한 단위 테스트 프로젝트를 만듭니다. .NET Core 클래스 라이브러리가 단위 테스트에서 올바르게 작동하는지 확인합니다.
-ms.date: 12/24/2019
+ms.date: 05/21/2020
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: 307261088f5c7c69c0e69fbd6b99940c04842eec
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.custom: vs-dotnet
+ms.openlocfilehash: 79b680022484bb9222b66c3df76bdd5a06de8117
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156623"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84005013"
 ---
-# <a name="test-a-net-standard-library-with-net-core-in-visual-studio"></a>Visual Studio에서 .NET Core를 사용하여 .NET Standard 라이브러리 테스트
+# <a name="tutorial-test-a-net-standard-library-with-net-core-in-visual-studio"></a>자습서: Visual Studio에서 .NET Core를 사용하여 .NET Standard 라이브러리 테스트
 
-[Visual Studio에서 .NET Standard 라이브러리 빌드](library-with-visual-studio.md)에서는 <xref:System.String> 클래스에 확장 메서드를 추가하는 간단한 클래스 라이브러리를 만들었습니다. 이제 예상대로 작동하는지 확인하기 위한 단위 테스트를 만들어 보겠습니다. 이전 문서에서 만든 솔루션에 단위 테스트 프로젝트를 추가할 것입니다.
+이 자습서에서는 솔루션에 테스트 프로젝트를 추가하여 단위 테스트를 자동화하는 방법을 보여 줍니다.
+
+## <a name="prerequisites"></a>사전 요구 사항
+
+- 이 자습서는 [Visual Studio에서 .NET Standard 라이브러리 만들기](library-with-visual-studio.md)에서 만든 솔루션에 사용할 수 있습니다.
 
 ## <a name="create-a-unit-test-project"></a>단위 테스트 프로젝트 만들기
 
-단위 테스트 프로젝트를 만들려면 다음을 수행합니다.
-
-1. [Visual Studio에서 .NET Standard 라이브러리 빌드](library-with-visual-studio.md) 문서에서 만든 `ClassLibraryProjects` 솔루션을 엽니다.
+1. [Visual Studio에서 .NET Standard 라이브러리 만들기](library-with-visual-studio.md)에서 만든 `ClassLibraryProjects` 솔루션을 엽니다.
 
 1. "StringLibraryTest"라는 새 단위 테스트 프로젝트를 솔루션에 추가합니다.
 
    1. **솔루션 탐색기**에서 솔루션을 마우스 오른쪽 단추로 클릭하고 **추가** > **새 프로젝트**를 선택합니다.
 
-   1. **새 프로젝트 추가** 페이지의 검색 상자에 **mstest**를 입력합니다. 언어 목록에서 **C#** 또는 **Visual Basic**을 선택한 다음, 플랫폼 목록에서 **모든 플랫폼**을 선택합니다. **MsTest 테스트 프로젝트(.NET Core)** 템플릿을 선택하고 **다음**을 선택합니다.
+   1. **새 프로젝트 추가** 페이지의 검색 상자에 **mstest**를 입력합니다. 언어 목록에서 **C#** 또는 **Visual Basic**을 선택한 다음, 플랫폼 목록에서 **모든 플랫폼**을 선택합니다.
+
+   1. **MSTest 테스트 프로젝트(.NET Core)** 템플릿을 선택한 후 **다음**을 선택합니다.
 
    1. **새 프로젝트 구성** 페이지에서 **프로젝트 이름** 상자에 **StringLibraryTest**를 입력합니다. 그런 다음, **만들기**를 선택합니다.
 
    > [!NOTE]
-   > MSTest 테스트 프로젝트 외에 Visual Studio의 .NET Core에 대한 xUnit 및 nUnit 테스트를 만들 수도 있습니다.
+   > MSTest는 선택할 수 있는 세 가지 테스트 프레임워크 중 하나입니다. 다른 프레임워크는 xUnit과 nUnit입니다.
 
-1. Visual Studio에서는 해당 프로젝트를 만들고 코드 창에서 다음 코드가 포함된 클래스 파일을 엽니다.
+1. Visual Studio는 프로젝트를 만들고 코드 창에서 다음 코드가 포함된 클래스 파일을 엽니다. 사용하려는 언어가 표시되지 않으면 페이지 맨 위에 있는 언어 선택기를 변경합니다.
 
    ```csharp
    using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-    namespace StringLibraryTest
-    {
-        [TestClass]
-        public class UnitTest1
-        {
-            [TestMethod]
-            public void TestMethod1()
-            {
-            }
-        }
-    }
-    ```
+   namespace StringLibraryTest
+   {
+       [TestClass]
+       public class UnitTest1
+       {
+           [TestMethod]
+           public void TestMethod1()
+           {
+           }
+       }
+   }
+   ```
 
-    ```vb
-    Imports Microsoft.VisualStudio.TestTools.UnitTesting
+   ```vb
+   Imports Microsoft.VisualStudio.TestTools.UnitTesting
 
-    Namespace StringLibraryTest
-        <TestClass>
-        Public Class UnitTest1
-            <TestMethod>
-            Sub TestSub()
+   Namespace StringLibraryTest
+       <TestClass>
+       Public Class UnitTest1
+           <TestMethod>
+           Sub TestSub()
 
-            End Sub
-        End Class
-    End Namespace
-    ```
+           End Sub
+       End Class
+   End Namespace
+   ```
 
    단위 테스트 템플릿을 통해 만들어진 소스 코드는 다음을 수행합니다.
 
    - 단위 테스트에 사용되는 형식을 포함하는 <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType> 네임스페이스를 가져옵니다.
+   - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> 특성을 `UnitTest1` 클래스에 적용합니다.
+   - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 특성을 적용하여 `TestMethod1`(C#) 또는 `TestSub`(Visual Basic)를 정의합니다.
 
-   - [TestClass](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute) 특성을 `UnitTest1` 클래스에 적용합니다. [TestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) 특성으로 태그가 지정된 테스트 클래스의 각 테스트 메서드는 단위 테스트를 실행할 때 자동으로 실행됩니다.
+   [[TestClass]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute)로 태그가 지정된 테스트 클래스에서 [[TestMethod]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute)로 태그가 지정된 각 메서드는 단위 테스트가 실행될 때 자동으로 실행됩니다.
 
-   - [TestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) 특성을 적용하여 단위 테스트를 실행할 때 자동으로 실행되는 테스트 메서드로 C#에서 `TestMethod1`을 또는 Visual Basic에서 `TestSub`를 정의합니다.
+1. **솔루션 탐색기**에서 **StringLibraryTest** 프로젝트의 **종속성** 노드를 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **프로젝트 참조 추가**를 선택합니다.
 
-1. **솔루션 탐색기**에서 **StringLibraryTest** 프로젝트의 **종속성** 노드를 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **참조 추가**를 선택합니다.
+1. **참조 관리자** 대화 상자에서 **프로젝트** 노드를 확장하고 **StringLibrary** 옆에 있는 확인란을 선택합니다. `StringLibrary` 어셈블리에 대한 참조를 추가하면 컴파일러가 **StringLibraryTest** 프로젝트를 컴파일하면서 **StringLibrary** 메서드를 찾을 수 있습니다.
 
-   > [!div class="mx-imgBorder"]
-   > ![StringLibraryTest 종속성의 상황에 맞는 메뉴](./media/testing-library-with-visual-studio/add-reference-context-menu.png)
-
-1. **참조 관리자** 대화 상자에서 **프로젝트** 노드를 확장하고 **StringLibrary** 옆에 있는 확인란을 선택합니다. `StringLibrary` 어셈블리에 대한 참조를 추가하면 컴파일러가 **StringLibrary** 메서드를 찾을 수 있습니다. **확인** 단추를 선택합니다. 클래스 라이브러리 프로젝트 `StringLibrary`에 참조가 추가됩니다.
-
-   ![Visual Studio의 참조 관리자 대화 상자](./media/testing-library-with-visual-studio/project-reference-manager.png)
+1. **확인**을 선택합니다.
 
 ## <a name="add-and-run-unit-test-methods"></a>단위 테스트 메서드 추가 및 실행
 
-Visual Studio는 단위 테스트를 실행할 때 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> 특성이 적용되는 클래스인 단위 테스트 클래스에서 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 특성이 표시된 각 메서드를 실행합니다. 테스트 메서드는 첫 번째 오류가 발생하거나 메서드에 포함된 모든 테스트가 성공적으로 수행되면 종료됩니다.
+Visual Studio는 단위 테스트를 실행할 때 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> 특성이 표시된 클래스에서 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 특성이 표시된 각 메서드를 실행합니다. 테스트 메서드는 첫 번째 오류가 발생하거나 메서드에 포함된 모든 테스트가 성공적으로 수행되면 종료됩니다.
 
 가장 일반적인 테스트는 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> 클래스의 멤버를 호출합니다. 많은 어설션 메서드에는 2개 이상의 매개 변수가 포함되며, 그 중 하나는 예상된 테스트 결과이고, 다른 하나는 실제 테스트 결과입니다. `Assert` 클래스에서 가장 자주 호출되는 일부 메서드는 다음 표에 나와 있습니다.
 
-| Assert 메서드     | 함수 |
+| Assert 메서드     | 기능 |
 | ------------------ | -------- |
 | `Assert.AreEqual`  | 두 개의 값이나 개체가 같은지를 확인합니다. 값이나 개체가 같지 않으면 어설션이 실패합니다. |
 | `Assert.AreSame`   | 두 개의 개체 변수가 같은 개체를 참조하는지를 확인합니다. 변수가 서로 다른 개체를 참조하면 어설션이 실패합니다. |
 | `Assert.IsFalse`   | 조건이 `false`인지 확인합니다. 조건이 `true`이면 어설션이 실패합니다. |
 | `Assert.IsNotNull` | 개체가 `null`이 아닌지를 확인합니다. 개체가 `null`이면 어설션이 실패합니다. |
 
-테스트 메서드에서 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.ThrowsException%2A> 메서드를 사용하여 throw될 것으로 예상되는 예외의 유형을 나타낼 수도 있습니다. 지정된 예외가 throw되지 않으면 테스트가 실패한 것입니다.
+테스트 메서드에서 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.ThrowsException%2A?displayProperty=nameWithType> 메서드를 사용하여 throw될 것으로 예상되는 예외의 유형을 나타낼 수도 있습니다. 지정된 예외가 throw되지 않으면 테스트가 실패한 것입니다.
 
-`StringLibrary.StartsWithUpper` 메서드를 테스트할 때 대문자로 시작하는 많은 문자열을 제공하려고 합니다. 이러한 경우에 메서드가 `true`를 반환할 것으로 기대하므로 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue%2A> 메서드를 호출할 수 있습니다. 마찬가지로, 대문자 이외의 문자로 시작하는 많은 문자열을 제공하려고 합니다. 이러한 경우에 메서드가 `false`를 반환할 것으로 기대하므로 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse%2A> 메서드를 호출할 수 있습니다.
+`StringLibrary.StartsWithUpper` 메서드를 테스트할 때 대문자로 시작하는 많은 문자열을 제공하려고 합니다. 이러한 경우에 메서드가 `true`를 반환할 것으로 기대하므로 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue%2A?displayProperty=nameWithType> 메서드를 호출할 수 있습니다. 마찬가지로, 대문자 이외의 문자로 시작하는 많은 문자열을 제공하려고 합니다. 이러한 경우에 메서드가 `false`를 반환할 것으로 기대하므로 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse%2A?displayProperty=nameWithType> 메서드를 호출할 수 있습니다.
 
 또한 라이브러리 메서드가 문자열을 처리하므로 [빈 문자열(`String.Empty`)](xref:System.String.Empty)(문자가 없고 해당 <xref:System.String.Length>가 0인 유효한 문자열) 및 `null` 문자열(초기화되지 않은 문자열)을 성공적으로 처리하는지 확인하려고 합니다. `StartsWithUpper`가 <xref:System.String> 인스턴스에 대한 확장 메서드로 호출될 경우 `null` 문자열이 제공될 수 없습니다. 그러나 정적 메서드로 직접 호출하고 단일 <xref:System.String> 인수를 전달할 수도 있습니다.
 
@@ -127,7 +128,7 @@ Visual Studio는 단위 테스트를 실행할 때 <xref:Microsoft.VisualStudio.
 
    소스 코드를 UTF8로 인코드된 파일에 저장하지 못하면 Visual Studio에서 해당 파일이 ASCII 파일로 저장될 수 있습니다. 이 경우 런타임은 ASCII 범위 밖의 UTF8 문자를 정확히 디코드하지 않으며 테스트 결과가 올바르지 않게 됩니다.
 
-1. 메뉴 모음에서 **테스트** > **실행** > **모든 테스트**를 선택합니다. **테스트 탐색기** 창이 열리고 테스트가 성공적으로 실행되었는지를 보여 줍니다. 세 가지 테스트가 **통과한 테스트** 섹션에 표시되고 **요약** 섹션에 테스트 실행 결과가 보고됩니다.
+1. 메뉴 모음에서 **테스트** > **모든 테스트 실행**을 선택합니다. **테스트 탐색기** 창이 열리지 않으면 **테스트** > **테스트 탐색기**를 선택하여 엽니다. 세 가지 테스트가 **통과한 테스트** 섹션에 표시되고 **요약** 섹션에 테스트 실행 결과가 보고됩니다.
 
    > [!div class="mx-imgBorder"]
    > ![테스트를 통과한 테스트 탐색기 창](./media/testing-library-with-visual-studio/test-explorer-window.png)
@@ -149,7 +150,7 @@ Visual Studio는 단위 테스트를 실행할 때 <xref:Microsoft.VisualStudio.
 
    ```
 
-1. 메뉴 모음에서 **테스트** > **실행** > **모든 테스트**를 선택하여 테스트를 실행합니다. **테스트 탐색기** 창에 두 가지 테스트는 성공하고 한 가지 테스트는 실패한 것으로 나타납니다.
+1. 메뉴 모음에서 **테스트** > **모든 테스트 실행**을 선택하여 테스트를 실행합니다. **테스트 탐색기** 창에 두 가지 테스트는 성공하고 한 가지 테스트는 실패한 것으로 나타납니다.
 
    > [!div class="mx-imgBorder"]
    > ![테스트를 실패한 테스트 탐색기 창](./media/testing-library-with-visual-studio/failed-test-window.png)
@@ -163,7 +164,7 @@ Visual Studio는 단위 테스트를 실행할 때 <xref:Microsoft.VisualStudio.
 
 ## <a name="test-the-release-version-of-the-library"></a>라이브러리의 릴리스 버전 테스트
 
-지금까지 디버그 버전의 라이브러리에 대한 테스트를 실행했습니다. 테스트를 모두 통과하고 라이브러리를 적절히 테스트했으므로 추가 시간 동안 라이브러리의 릴리스 빌드에 대해 테스트를 실행해야 합니다. 컴파일러 최적화를 비롯한 여러 가지 요인 때문에 디버그 및 릴리스 빌드 간에 서로 다른 동작이 발생할 수도 있습니다.
+라이브러리의 디버그 버전을 실행할 때 테스트에 모두 통과했으므로 라이브러리의 릴리스 빌드에 대해 추가로 테스트를 실행합니다. 컴파일러 최적화를 비롯한 여러 가지 요인 때문에 디버그 및 릴리스 빌드 간에 서로 다른 동작이 발생할 수도 있습니다.
 
 릴리스 빌드를 테스트하려면
 
@@ -177,10 +178,25 @@ Visual Studio는 단위 테스트를 실행할 때 <xref:Microsoft.VisualStudio.
    > [!div class="mx-imgBorder"]
    > ![빌드 명령이 있는 StringLibrary 상황에 맞는 메뉴](./media/testing-library-with-visual-studio/build-library-context-menu.png)
 
-1. 메뉴 모음에서 **테스트** > **실행** > **모든 테스트**를 선택하여 단위 테스트를 실행합니다. 테스트를 통과합니다.
+1. 메뉴 모음에서 **테스트 실행** > **모든 테스트**를 선택하여 단위 테스트를 실행합니다. 테스트를 통과합니다.
 
-라이브러리에 테스트를 마쳤으므로 다음 단계는 호출자가 사용할 수 있도록 하는 것입니다. 하나 이상의 애플리케이션과 함께 번들로 묶거나 NuGet 패키지로 배포할 수 있습니다. 자세한 내용은 [.NET Standard 클래스 라이브러리 사용](consuming-library-with-visual-studio.md)을 참조하세요.
-
-## <a name="see-also"></a>참고 항목
+## <a name="additional-resources"></a>추가 자료
 
 - [단위 테스트 기본 사항 - Visual Studio](/visualstudio/test/unit-test-basics)
+
+## <a name="next-steps"></a>다음 단계
+
+이 자습서에서는 클래스 라이브러리의 단위 테스트를 실행했습니다. [NuGet](https://nuget.org)에 패키지로 라이브러리를 게시하면 다른 사용자가 사용할 수 있습니다. 방법을 알아보려면 NuGet 자습서를 따릅니다.
+
+> [!div class="nextstepaction"]
+> [Visual Studio를 사용하여 NuGet 패키지 만들기 및 게시](/nuget/quickstart/create-and-publish-a-package-using-visual-studio?tabs=netcore-cli)
+
+라이브러리를 NuGet 패키지로 게시하면 다른 사용자가 설치하고 사용할 수 있습니다. 방법을 알아보려면 NuGet 자습서를 따릅니다.
+
+> [!div class="nextstepaction"]
+> [Visual Studio에서 패키지 설치 및 사용](/nuget/quickstart/install-and-use-a-package-in-visual-studio)
+
+라이브러리는 패키지로 배포하지 않아도 됩니다. 라이브러리를 사용하는 콘솔 앱과 함께 제공할 수 있습니다. 콘솔 앱을 게시하는 방법을 알아보려면 이 시리즈의 이전 자습서를 참조하세요.
+
+> [!div class="nextstepaction"]
+> [Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 게시](publishing-with-visual-studio.md)

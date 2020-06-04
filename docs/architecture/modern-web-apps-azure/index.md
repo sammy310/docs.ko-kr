@@ -3,13 +3,13 @@ title: ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케이션 �
 description: ASP.NET Core 및 Azure를 사용하여 모놀리식 웹 애플리케이션을 빌드하는 방법에 대한 포괄적인 지침을 제공하는 가이드입니다.
 author: ardalis
 ms.author: wiwagn
-ms.date: 12/4/2019
-ms.openlocfilehash: 8eebe9a8e530b244f4596adef1b5e6dd23e305bd
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.date: 5/25/2020
+ms.openlocfilehash: 7be03ea8edb763096b0684a62e71826f1cfcd42f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144541"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284457"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케이션 설계
 
@@ -35,7 +35,7 @@ All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 �
 
 여기에 설명된 일부 예제는 예시 용도로만 제공되며 실제 데이터가 아닙니다. 실제로 연관시키거나 관련시키려고 의도하거나 추론해서는 안 됩니다.
 
-"상표" 웹 페이지의 <https://www.microsoft.com> 에 나열된 Microsoft 및 상표는 Microsoft 그룹 계열사의 상표입니다.
+"상표" 웹 페이지의 <https://www.microsoft.com>에 나열된 Microsoft 및 상표는 Microsoft 그룹 계열사의 상표입니다.
 
 Mac 및 macOS는 Apple Inc.의 상표입니다.
 
@@ -86,6 +86,10 @@ Docker 고래 로고는 Docker, Inc.의 등록 상표로, 허가하에 사용됩
 - 유동적인 용량: 실제 요구 사항에 따라 규모 확장 또는 축소
 
 Azure에서 호스팅되는 ASP.NET Core를 사용하여 웹 애플리케이션을 빌드하면 기존의 대안보다 많은 경쟁적 이점을 제공할 수 있습니다. ASP.NET Core는 현대식 웹 애플리케이션 개발 사례 및 클라우드 호스팅 시나리오에 최적화되어 있습니다. 이 가이드에서는 이러한 기능을 최대한 활용할 수 있도록 ASP.NET Core 애플리케이션을 설계하는 방법에 알아봅니다.
+
+## <a name="version"></a>버전
+
+이 가이드는 .NET Core 3.1 릴리스와 동시에 **.NET Core 3.1** 버전을 다루도록 수정되었으며, 동일한 기술 “웨이브”(즉 Azure 및 추가 타사 기술)와 관련된 여러 추가 업데이트를 포함합니다. 이런 이유로 책 버전도 버전 **3.1**로 업데이트되었습니다.
 
 ## <a name="purpose"></a>용도
 

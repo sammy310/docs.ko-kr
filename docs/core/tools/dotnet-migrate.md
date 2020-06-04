@@ -2,18 +2,18 @@
 title: dotnet migrate 명령
 description: dotnet migrate 명령은 프로젝트와 모든 종속성을 마이그레이션합니다.
 ms.date: 02/14/2020
-ms.openlocfilehash: 71f587c1bfadd445aca818448bdd5f136f009fe0
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 2e7f9ae5a1d11c54280d914b04df761f0d5aff99
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463631"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284094"
 ---
 # <a name="dotnet-migrate"></a>dotnet 마이그레이션
 
 **이 문서의 적용 대상:**  ✔️ .NET Core 2.x SDK
 
-## <a name="name"></a>name
+## <a name="name"></a>이름
 
 `dotnet migrate` - Preview 2 .NET Core 프로젝트를 .NET Core SDK 스타일 프로젝트로 마이그레이션합니다.
 

@@ -2,13 +2,13 @@
 title: 제거 도구
 description: .NET Core SDK 및 런타임의 제어된 정리를 사용 설정하는 단계별 도구인 .NET Core 제거 도구에 대한 개요입니다.
 author: sfoslund
-ms.date: 01/06/2020
-ms.openlocfilehash: 45cf0841391d02636770e98666e2897d2598fab4
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.date: 05/27/2020
+ms.openlocfilehash: 1ad31cd42d8f8f87e3501b422fc4298c643e2067
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595717"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144515"
 ---
 # <a name="net-core-uninstall-tool"></a>.NET Core 제거 도구
 
@@ -66,7 +66,7 @@ dotnet-core-uninstall list [options]
 
 * **`--hosting-bundle`**
 
-  이 도구를 사용하여 제거할 수 있는 모든 .NET Core 런타임 및 호스팅 번들을 나열합니다.
+  이 도구를 사용하여 제거할 수 있는 모든 .NET Core 호스팅 번들을 나열합니다.
 
 * **`--runtime`**
 
@@ -215,7 +215,7 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
 * **`--force`** 는 Visual Studio에서 사용할 수 있는 버전을 강제로 제거합니다.
 
-참고:
+메모:
 
 1. 정확히 `--sdk`, `--runtime`, `--aspnet-runtime` 및 `--hosting-bundle` 중 하나가 필요합니다.
 2. `--all`, `--all-below`, `--all-but`, `--all-but-latest`, `--all-lower-patches`, `--all-previews`, `--all-previews-but-latest`, `--major-minor` 및 `[<VERSION>...]`은 배타적입니다.
@@ -269,7 +269,7 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
   
 * **`--force`** 는 Visual Studio 또는 SDK에서 사용할 수 있는 버전을 강제로 제거합니다.
 
-참고:
+메모:
 
 1. 정확히 `--sdk` 및 `--runtime` 중 하나가 필요합니다.
 2. `--all`, `--all-below`, `--all-but`, `--all-but-latest`, `--all-lower-patches`, `--all-previews`, `--all-previews-but-latest`, `--major-minor` 및 `[<VERSION>...]`은 배타적입니다.
@@ -397,7 +397,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 * **`--force`** 는 Visual Studio에서 사용할 수 있는 버전을 강제로 제거합니다.
 
-참고:
+메모:
 
 1. 정확히 `--sdk`, `--runtime`, `--aspnet-runtime` 및 `--hosting-bundle` 중 하나가 필요합니다.
 2. `--all`, `--all-below`, `--all-but`, `--all-but-latest`, `--all-lower-patches`, `--all-previews`, `--all-previews-but-latest`, `--major-minor` 및 `[<VERSION>...]`은 배타적입니다.
@@ -453,7 +453,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
   
 * **`--force`** 는 Visual Studio 또는 SDK에서 사용할 수 있는 버전을 강제로 제거합니다.
 
-참고:
+메모:
 
 1. 정확히 `--sdk` 및 `--runtime` 중 하나가 필요합니다.
 2. `--all`, `--all-below`, `--all-but`, `--all-but-latest`, `--all-lower-patches`, `--all-previews`, `--all-previews-but-latest`, `--major-minor` 및 `[<VERSION>...]`은 배타적입니다.

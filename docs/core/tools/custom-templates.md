@@ -3,12 +3,12 @@ title: dotnet new에 대한 사용자 지정 템플릿
 description: 모든 형식의 .NET 프로젝트 또는 파일에 대한 사용자 지정 템플릿을 알아봅니다.
 author: thraka
 ms.date: 05/20/2020
-ms.openlocfilehash: 19855c99b240b66dfa819e70d4a1bee5c8ed14ed
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 56fcbfbc168143007f0772ce8a12347f7e25e50b
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761917"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84005320"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new에 대한 사용자 지정 템플릿
 
@@ -96,7 +96,7 @@ dotnet new --list
 
 ## <a name="packing-a-template-into-a-nuget-package-nupkg-file"></a>템플릿을 NuGet 패키지(nupkg 파일)로 압축
 
-사용자 지정 템플릿은 [dotnet pack](dotnet-pack.md) 명령과 *.csproj* 파일을 사용하여 압축됩니다. 또는 [nuget pack](https://docs.microsoft.com/nuget/tools/cli-ref-pack) 명령 및 *.nuspec* 파일과 함께 [NuGet](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference)을 사용할 수 있습니다. 그러나 NuGet을 사용하려면 Windows에서는 .NET Framework가 필요하고, Linux 및 MacOS에서는 [Mono](https://www.mono-project.com/)가 필요합니다.
+사용자 지정 템플릿은 [dotnet pack](dotnet-pack.md) 명령과 *.csproj* 파일을 사용하여 압축됩니다. 또는 [nuget pack](https://docs.microsoft.com/nuget/tools/cli-ref-pack) 명령 및 *.nuspec* 파일과 함께 [NuGet](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference)을 사용할 수 있습니다. 그러나 NuGet을 사용하려면 Windows에서는 .NET Framework가 필요하고, Linux 및 macOS에서는 [Mono](https://www.mono-project.com/)가 필요합니다.
 
 *.csproj* 파일은 기존의 코드 프로젝트 *.csproj* 파일과 약간 다릅니다. 다음 설정을 참고하세요.
 

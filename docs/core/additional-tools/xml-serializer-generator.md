@@ -5,12 +5,12 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c3f1fcda8a8a6abc58d35bf37e51485bb3590fa3
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: efa0925a96fcdd4356109632fa77199edde73c26
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794639"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284288"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>.NET Core에서 Microsoft XML Serializer Generator 사용
 
@@ -26,7 +26,7 @@ ms.locfileid: "82794639"
 
 .NET Framework용 [Xml Serializer Generator(sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md)와 마찬가지로, [Microsoft.XmlSerializer.Generator NuGet 패키지](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator)는 .NET Core 및 .NET Standard 프로젝트와 동일합니다. <xref:System.Xml.Serialization.XmlSerializer>를 사용하여 해당 형식의 개체를 직렬화하거나 역직렬화할 때 XML serialization의 시작 성능을 향상시키기 위해 어셈블리에 포함된 형식의 XML serialization 어셈블리를 만듭니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 자습서를 완료하려면 다음이 필요합니다.
 
@@ -52,7 +52,7 @@ dotnet new console
 
 [`dotnet add package`](../tools/dotnet-add-package.md) 명령을 사용하여 프로젝트에 참조를 추가합니다.
 
-형식:
+유형:
 
 ```dotnetcli
 dotnet add package Microsoft.XmlSerializer.Generator -v 1.0.0
@@ -103,7 +103,7 @@ var serializer = new System.Xml.Serialization.XmlSerializer(typeof(MyClass));
 
 ### <a name="build-and-run-the-application"></a>애플리케이션 빌드 및 실행
 
-*MyApp* 폴더 내에서 [`dotnet run`](../tools/dotnet-run.md)을(를) 통해 애플리케이션을 실행하면 런타임에 미리 생성된 serializer가 자동으로 로드되어 사용됩니다.
+*MyApp* 폴더 내에서 [`dotnet run`](../tools/dotnet-run.md)을 통해 애플리케이션을 실행하면 런타임에 미리 생성된 serializer가 자동으로 로드되어 사용됩니다.
 
 콘솔 창에 다음 명령을 입력합니다.
 

@@ -2,12 +2,12 @@
 title: 표준 쿼리 연산자 개요(C#)
 ms.date: 07/20/2015
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-ms.openlocfilehash: 76c2c4684f33c3fb30748b5f08efd215548661ef
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 16ab04e774e6654ce67a8c1d1c5a743c999958ff
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167857"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201300"
 ---
 # <a name="standard-query-operators-overview-c"></a>표준 쿼리 연산자 개요(C#)
 *표준 쿼리 연산자*는 LINQ 패턴을 형성하는 메서드입니다. 이 메서드 중 대부분은 시퀀스에서 작동합니다. 여기서 시퀀스란 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스 또는 <xref:System.Linq.IQueryable%601> 인터페이스를 구현하는 형식의 개체를 의미합니다. 표준 쿼리 연산자는 필터링, 프로젝션, 집계, 정렬 등을 포함하여 다양한 쿼리 기능을 제공합니다.  
@@ -67,7 +67,7 @@ foreach (var obj in query)
 ```  
   
 ## <a name="query-expression-syntax"></a>쿼리 식 구문  
- 자주 사용되는 표준 쿼리 연산자 중 일부에는 ‘쿼리 식’의 일부로 호출할 수 있는 전용 C# 및 Visual Basic 언어 키워드 구문이 있습니다.   전용 키워드와 해당 구문이 있는 표준 쿼리 연산자에 대한 자세한 내용은 [표준 쿼리 연산자에 대한 쿼리 식 구문(C#)](./query-expression-syntax-for-standard-query-operators.md)을 참조하세요.  
+ 자주 사용되는 표준 쿼리 연산자 중 일부에는 ‘쿼리 식’의 일부로 호출할 수 있는 전용 C# 및 Visual Basic 언어 키워드 구문이 있습니다.  전용 키워드와 해당 구문이 있는 표준 쿼리 연산자에 대한 자세한 내용은 [표준 쿼리 연산자에 대한 쿼리 식 구문(C#)](./query-expression-syntax-for-standard-query-operators.md)을 참조하세요.  
   
 ## <a name="extending-the-standard-query-operators"></a>표준 쿼리 연산자 확장  
  대상 도메인 또는 기술에 적합한 도메인 특정 메서드를 만들어 표준 쿼리 연산자 집합을 강화할 수 있습니다. 또한 원격 평가, 쿼리 변환, 최적화 등의 추가 서비스를 제공하는 고유한 구현으로 표준 쿼리 연산자를 바꿀 수도 있습니다. 예제는 <xref:System.Linq.Enumerable.AsEnumerable%2A>을 참조하세요.  

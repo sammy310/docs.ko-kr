@@ -2,12 +2,12 @@
 title: dotnet test 명령
 description: dotnet test 명령은 지정된 프로젝트에서 단위 테스트를 실행하는 데 사용됩니다.
 ms.date: 04/29/2020
-ms.openlocfilehash: 22b27007d26c98cff40733ef8d449ce334f87848
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: b427954fe0026e6ac96d3bbce2b70b5c44e884e0
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83802688"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84005377"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -79,6 +79,10 @@ dotnet test -h|--help
 - **`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`**
 
   테스트 실행에 대한 데이터 수집기를 사용하도록 설정합니다. 자세한 내용은 [테스트 실행 모니터링 및 분석](https://aka.ms/vstest-collect)을 참조하세요.
+  
+  .NET Core가 지원하는 플랫폼에서 코드 검사를 수집하려면 [Coverlet](https://github.com/coverlet-coverage/coverlet/blob/master/README.md)을 설치하고 `--collect:"XPlat Code Coverage"` 옵션을 사용하세요.
+
+  Windows에서는 `--collect "Code Coverage"` 옵션을 사용하여 코드 검사를 수집할 수 있습니다. 이 옵션은 Visual Studio 2019 Enterprise에서 열 수 있는 *.coverage* 파일을 생성합니다. 자세한 내용은 [코드 검사 사용](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested) 및 [코드 검사 분석 사용자 지정](/visualstudio/test/customizing-code-coverage-analysis)을 참조하세요.
 
 - **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
@@ -171,6 +175,18 @@ dotnet test -h|--help
   dotnet test --logger trx
   ```
 
+- 현재 디렉터리의 프로젝트에서 테스트를 실행하고 코드 검사 파일을 생성합니다([Coverlet](https://github.com/tonerdo/coverlet/blob/master/README.md) 설치 후).
+
+  ```dotnetcli
+  dotnet test --collect:"XPlat Code Coverage"
+  ```
+
+- 현재 디렉터리의 프로젝트에서 테스트를 실행하고 코드 검사 파일을 생성합니다(Windows만 해당).
+
+  ```dotnetcli
+  dotnet test --collect "Code Coverage"
+  ```
+
 - 현재 디렉터리의 프로젝트에서 테스트를 실행하고 콘솔에 세부 정보를 기록합니다.
 
   ```dotnetcli
@@ -195,6 +211,7 @@ dotnet test -h|--help
 | -------------- | --------------------------------------------------------------------------------------------------------- |
 | MSTest         | <ul><li>FullyQualifiedName</li><li>이름</li><li>ClassName</li><li>우선 순위</li><li>TestCategory</li></ul> |
 | xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>특성</li></ul>                                   |
+| NUnit          | <ul><li>FullyQualifiedName</li><li>이름</li><li>TestCategory</li><li>우선 순위</li></ul>                                   |
 
 `<operator>`은(는) 속성과 값 사이의 관계를 설명합니다.
 

@@ -5,12 +5,12 @@ ms.date: 10/01/2018
 helpviewer_keywords:
 - Memory&lt;T&gt; and Span&lt;T&gt; best practices
 - using Memory&lt;T&gt; and Span&lt;T&gt;
-ms.openlocfilehash: b9405d746c141308c7d984dac9da0d65d1048d1e
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: cb9075a12bb8d842cd8e937e74f8869c910fc0ab
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380010"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201937"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Memory\<T> 및 Span\<T> 사용 지침
 
@@ -89,7 +89,7 @@ class Program
 
 `WriteInt32ToBuffer` 메서드는 버퍼에 값을 쓰기 위한 것이지만 `DisplayBufferToConsole` 메서드는 그렇지 않습니다. 이를 반영하기 위해 <xref:System.ReadOnlyMemory%601> 형식의 인수를 허용했을 수 있습니다. <xref:System.ReadOnlyMemory%601>에 대한 자세한 내용은 [Rule #2: 버퍼가 읽기 전용이어야 하는 경우 ReadOnlySpan\<T> 또는 ReadOnlyMemory\<T> 사용](#rule-2)을 참조하세요.
 
-### <a name="ownerless-memoryt-instances"></a>“소유자가 없는” Memory\<T> 인스턴스
+### <a name="ownerless-memoryt-instances"></a>"소유자가 없는" Memory\<T> 인스턴스
 
 <xref:System.Buffers.IMemoryOwner%601>를 사용하지 않고 <xref:System.Memory%601> 인스턴스를 만들 수 있습니다. 이 경우 버퍼의 소유권은 명시적이 아니라 암시적이며 단일 소유자 모델만 지원됩니다. 이렇게 하려면 다음을 수행합니다.
 
@@ -115,7 +115,7 @@ class Program
 
 **규칙 #1: 동기 API의 경우 가능하면 Memory\<T> 대신 Span\<T>를 매개 변수로 사용합니다.**
 
-<xref:System.Span%601>은 <xref:System.Memory%601>보다 유연하며 더 광범위한 인접한 메모리 버퍼를 나타낼 수 있습니다. 또한 <xref:System.Span%601>은 <xref:System.Memory%601>보다 나은 성능을 제공합니다. 마지막으로, <xref:System.Memory%601.Span?displayProperty=nameWithType> 속성을 사용하여 <xref:System.Memory%601> 인스턴스를 <xref:System.Span%601>으로 변환할 수 있습니다. 단, Span\<T>-Memory\<T> 변환은 불가능합니다. 따라서 호출자에게 <xref:System.Memory%601> 인스턴스가 있는 경우 <xref:System.Span%601> 매개 변수를 사용하여 메서드를 호출할 수 있습니다.
+<xref:System.Span%601>은 <xref:System.Memory%601>보다 유연하며 더 광범위한 인접한 메모리 버퍼를 나타낼 수 있습니다. 또한 <xref:System.Span%601>은 <xref:System.Memory%601>보다 나은 성능을 제공합니다. 마지막으로 <xref:System.Memory%601.Span?displayProperty=nameWithType> 속성을 사용하여 <xref:System.Memory%601> 인스턴스를 <xref:System.Span%601>으로 변환할 수 있습니다. 단, Span\<T>-Memory\<T> 변환은 불가능합니다. 따라서 호출자에게 <xref:System.Memory%601> 인스턴스가 있는 경우 <xref:System.Span%601> 매개 변수를 사용하여 메서드를 호출할 수 있습니다.
 
 <xref:System.Memory%601> 형식 대신 <xref:System.Span%601> 형식의 매개 변수를 사용하면 올바른 소비 메서드 구현을 작성하는 데에도 도움이 됩니다. 메서드의 임대 기간을 지나서 버퍼에 액세스를 시도하지 않는지 확인하기 위해 자동으로 컴파일 시간 검사가 수행됩니다(뒷부분에서 자세히 설명).
 
@@ -123,7 +123,7 @@ class Program
 
 <a name="rule-2" />
 
-**규칙 #2: 버퍼가 읽기 전용이어야 하는 경우 ReadOnlySpan\<T> 또는 ReadOnlyMemory\<T>를 사용합니다.**
+**규칙 #2: 버퍼가 읽기 전용이어야 하는 경우 ReadOnlySpan\<T> 또는 ReadOnlyMemory\<T> 사용**을 참조하세요.
 
 앞의 예제에서 `DisplayBufferToConsole` 메서드는 버퍼에서 읽기만 하고 버퍼 내용을 수정하지 않습니다. 메서드 시그니처를 다음으로 변경해야 합니다.
 

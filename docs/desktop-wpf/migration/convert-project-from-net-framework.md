@@ -4,12 +4,12 @@ description: WPF(Windows Presentation Foundation) 앱을 .NET Core 3.0으로 마
 author: mjrousos
 ms.date: 09/12/2019
 ms.author: mikerou
-ms.openlocfilehash: ccd2fc5a49d9c2d31c693e48099732614b568c7b
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: fda4f618ddb4a3edbe6f2dd9fba0b10bc618e88d
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507457"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201568"
 ---
 # <a name="migrating-wpf-apps-to-net-core"></a>WPF 앱을 .NET Core로 마이그레이션
 
@@ -45,7 +45,7 @@ ms.locfileid: "82507457"
 
 ## <a name="about-the-sample"></a>샘플 정보
 
-이 문서에서는 [Bean Trader 샘플 앱](https://github.com/dotnet/windows-desktop/tree/master/Samples/BeanTrader)을 참조합니다. 이 앱에는 실제 WPF 앱에 사용되는 종속성과 유사한 종속성이 다양하게 사용되기 때문입니다. 이 앱은 크지 않지만 복잡성 측면에서 'Hello World'에서 한 단계 업그레이드된 앱입니다. 이 앱은 실제 앱을 이식하는 동안 발생할 수 있는 몇 가지 문제를 보여줍니다. 이 앱은 WCF 서비스와 통신하기 때문에 제대로 실행되려면, BeanTraderServer 프로젝트(동일한 GitHub 리포지토리에서 사용 가능)를 실행하고 BeanTraderClient 구성이 올바른 엔드포인트를 가리키도록 해야 합니다. (기본적으로 이 샘플은 서버가 *http://localhost:8090* 의 동일한 머신에서 실행되는 것으로 가정하며, BeanTraderServer를 로컬에서 시작하면 동일한 상황이 됩니다.)
+이 문서에서는 [Bean Trader 샘플 앱](https://github.com/dotnet/windows-desktop/tree/master/Samples/BeanTrader)을 참조합니다. 이 앱에는 실제 WPF 앱에 사용되는 종속성과 유사한 종속성이 다양하게 사용되기 때문입니다. 이 앱은 크지 않지만 복잡성 측면에서 'Hello World'에서 한 단계 업그레이드된 앱입니다. 이 앱은 실제 앱을 이식하는 동안 발생할 수 있는 몇 가지 문제를 보여줍니다. 이 앱은 WCF 서비스와 통신하기 때문에 제대로 실행되려면, BeanTraderServer 프로젝트(동일한 GitHub 리포지토리에서 사용 가능)를 실행하고 BeanTraderClient 구성이 올바른 엔드포인트를 가리키도록 해야 합니다. (기본적으로 이 샘플은 서버가 `http://localhost:8090`의 동일한 컴퓨터에서 실행되는 것으로 가정하며, BeanTraderServer를 로컬에서 시작하면 동일한 상황이 됩니다.)
 
 이 샘플 앱으로 .NET Core 이식의 어려움과 솔루션을 시연할 예정입니다. WPF 모범 사례를 시연하려는 것은 아닙니다. 사실은, 이식하는 동안 적어도 몇 가지 흥미로운 문제가 발생할 수 있도록 몇 가지 안티 패턴이 의도적으로 포함되어 있습니다.
 
@@ -76,7 +76,7 @@ ms.locfileid: "82507457"
 
 .NET Core 3.0을 대상으로 하는 경우 .NET Core 또는 .NET Standard를 대상으로 하는 모든 패키지가 작동해야 합니다. (.NET Core는 .NET Standard 노출 영역을 구현하기 때문입니다.) 사용되는 특정 버전의 패키지는 .NET Core나 .NET Standard를 대상으로 하지 않지만 최신 버전은 대상으로 하는 경우가 있습니다. 이런 경우에는 최신 버전의 패키지로 업그레이드하는 것이 좋습니다.
 
-.NET Framework를 대상으로 하는 패키지도 사용할 수 있지만 약간의 위험이 있습니다. .NET Core와 .NET Framework 노출 영역은 종속성이 대체로 작동할 만큼 유사하기 때문에, .NET Core에서 .NET Framework로 종속성은 허용됩니다.  하지만, 패키지가 .NET Core에 없는 .NET API를 사용하려고 하면 런타임 예외가 발생합니다. 따라서 다른 옵션이 없는 경우에만 .NET Framework 패키지를 참조해야 하며 이렇게 하면 테스트 부담이 발생한다는 것을 이해해야 합니다.
+.NET Framework를 대상으로 하는 패키지도 사용할 수 있지만 약간의 위험이 있습니다. .NET Core와 .NET Framework 노출 영역은 종속성이 대체로 작동할 만큼 유사하기 때문에, .NET Core에서 .NET Framework로 종속성은 허용됩니다. 하지만, 패키지가 .NET Core에 없는 .NET API를 사용하려고 하면 런타임 예외가 발생합니다. 따라서 다른 옵션이 없는 경우에만 .NET Framework 패키지를 참조해야 하며 이렇게 하면 테스트 부담이 발생한다는 것을 이해해야 합니다.
 
 .NET Core나 .NET Standard를 대상으로 하지 않는 패키지가 참조된 경우에는 다른 대안을 고려해야 합니다.
 
@@ -162,7 +162,7 @@ WCF 클라이언트 API는 .NET Core에서 (대부분) 지원되기 때문에 �
 
 앱에 새로운 [SDK 스타일 프로젝트 파일 형식](../../core/tools/csproj.md)이 사용되지 않으면 .NET Core를 대상으로 하는 새 프로젝트 파일이 필요합니다. 기존 csproj 파일을 교체하거나, 기존 프로젝트를 현재 상태에서 그대로 유지하려면 .NET Core를 대상으로 하는 새 csproj 파일을 추가하면 됩니다. [멀티 타기팅](../../standard/library-guidance/cross-platform-targeting.md)(여러 `<TargetFrameworks>` 대상 지정)이 포함된 단일 SDK 스타일 프로젝트 파일을 사용하여 .NET Framework와 .NET Core용 앱 버전을 빌드할 수 있습니다.
 
-새 프로젝트 파일을 만들려면 Visual Studio에서 새 WPF 프로젝트를 만들거나, 임시 디렉터리에서 `dotnet new wpf` 명령을 사용하여 프로젝트 파일을 만든 다음, 올바른 위치로 복사하고 이름을 변경하면 됩니다. 커뮤니티에서 만든 도구인 [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017)도 있으며, 프로젝트 파일 마이그레이션의 일부를 자동화할 수 있습니다. 이 도구는 유용하지만 그래도 사람이 결과를 검토하여 마이그레이션의 모든 세부 사항이 올바른지 확인해야 합니다. 이 도구가 최적으로 처리하지 못하는 한 가지 영역은 *packages.config* 파일에서 NuGet 패키지를 마이그레이션하는 것입니다. *packages.config* 파일을 사용하여 NuGet 패키지를 참조하는 프로젝트 파일에서 도구를 실행하면, `<PackageReference>` 요소로 자동 마이그레이션되지만 최상위 패키지뿐만 아니라 모든 패키지에 대해 `<PackageReference>` 요소가 추가됩니다.  Visual Studio를 사용하여 `<PackageReference>` 요소로 이미 마이그레이션한 경우에는(이 샘플에서 수행한 것처럼), 이 도구가 나머지 변환에 유용할 수 있습니다. Scott Hanselman이 [csproj 파일 마이그레이션에 대한 블로그 게시물](https://www.hanselman.com/blog/UpgradingAnExistingNETProjectFilesToTheLeanNewCSPROJFormatFromNETCore.aspx)에서 권장하듯이, 수동으로 이식하면 교육적이며 이식할 프로젝트가 적다면 더 나은 결과를 얻을 수 있습니다. 하지만 수십 또는 수백 개의 프로젝트 파일을 이식하는 경우에는 [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017)과 같은 도구가 유용할 수 있습니다.
+새 프로젝트 파일을 만들려면 Visual Studio에서 새 WPF 프로젝트를 만들거나, 임시 디렉터리에서 `dotnet new wpf` 명령을 사용하여 프로젝트 파일을 만든 다음, 올바른 위치로 복사하고 이름을 변경하면 됩니다. 커뮤니티에서 만든 도구인 [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017)도 있으며, 프로젝트 파일 마이그레이션의 일부를 자동화할 수 있습니다. 이 도구는 유용하지만 그래도 사람이 결과를 검토하여 마이그레이션의 모든 세부 사항이 올바른지 확인해야 합니다. 이 도구가 최적으로 처리하지 못하는 한 가지 영역은 *packages.config* 파일에서 NuGet 패키지를 마이그레이션하는 것입니다. *packages.config* 파일을 사용하여 NuGet 패키지를 참조하는 프로젝트 파일에서 도구를 실행하면, `<PackageReference>` 요소로 자동 마이그레이션되지만 최상위 패키지뿐만 아니라 모든 패키지에 대해 `<PackageReference>` 요소가 추가됩니다. Visual Studio를 사용하여 `<PackageReference>` 요소로 이미 마이그레이션한 경우에는(이 샘플에서 수행한 것처럼), 이 도구가 나머지 변환에 유용할 수 있습니다. Scott Hanselman이 [csproj 파일 마이그레이션에 대한 블로그 게시물](https://www.hanselman.com/blog/UpgradingAnExistingNETProjectFilesToTheLeanNewCSPROJFormatFromNETCore.aspx)에서 권장하듯이, 수동으로 이식하면 교육적이며 이식할 프로젝트가 적다면 더 나은 결과를 얻을 수 있습니다. 하지만 수십 또는 수백 개의 프로젝트 파일을 이식하는 경우에는 [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017)과 같은 도구가 유용할 수 있습니다.
 
 Bean Trader 샘플에 대한 새 프로젝트 파일을 만들려면 임시 디렉터리에서 `dotnet new wpf`를 실행하여 생성된 *.csproj* 파일을 *BeanTraderClient* 폴더로 옮기고 이름을 **BeanTraderClient.Core.csproj**로 바꿉니다.
 
@@ -174,7 +174,7 @@ Bean Trader 샘플에 대한 새 프로젝트 파일을 만들려면 임시 디�
 
 - *resx* 파일은 포함된 리소스로 자동 포함되지만 이미지와 같은 다른 `<Resource>` 항목은 그렇지 않습니다. 따라서 이미지와 아이콘 파일을 포함하기 위해 `<Resource>` 요소를 복사합니다. 와일드 카드 사용 패턴(`<Resource Include="**\*.png" />`)에 대한 새 프로젝트 파일 형식의 지원을 사용하면 png 참조를 한 줄로 간소화할 수 있습니다.
 
-- 마찬가지로 `<None>` 항목은 자동으로 포함되지만, 기본적으로 출력 디렉터리에 복사되지 않습니다. Bean Trader 프로젝트에는 출력 디렉터리에 복사된(`PreserveNewest` 동작을 사용하여) `<None>` 항목이 포함되어 있기 때문에, 이 파일에 대해 자동으로 채워진 `<None>` 항목을 다음과 같이 업데이트해야 합니다. 
+- 마찬가지로 `<None>` 항목은 자동으로 포함되지만, 기본적으로 출력 디렉터리에 복사되지 않습니다. Bean Trader 프로젝트에는 출력 디렉터리에 복사된(`PreserveNewest` 동작을 사용하여) `<None>` 항목이 포함되어 있기 때문에, 이 파일에 대해 자동으로 채워진 `<None>` 항목을 다음과 같이 업데이트해야 합니다.
 
   ```xml
   <None Update="BeanTrader.pfx">
@@ -208,7 +208,7 @@ Bean Trader 샘플에서 대부분의 빌드 오류는 <xref:System.ServiceModel
 
 ### <a name="cleaning-up-unused-files"></a>사용되지 않는 파일 정리
 
-자주 발생하는 마이그레이션 문제 중 한 가지 형식은, 이전에는 빌드에 포함되지 않은 C# 및 XAML 파일이 모든 소스를 자동으로 포함하는 새로운 SDK 스타일 프로젝트에서 선택되는 것과 관련이 있습니다. 
+자주 발생하는 마이그레이션 문제 중 한 가지 형식은, 이전에는 빌드에 포함되지 않은 C# 및 XAML 파일이 모든 소스를 자동으로 포함하는 새로운 SDK 스타일 프로젝트에서 선택되는 것과 관련이 있습니다.
 
 Bean Trader 샘플에 보이는 다음 빌드 오류는 *OldUnusedViewModel.cs*의 잘못된 인터페이스 구현을 나타냅니다. 파일 이름에 힌트가 있지만 검사를 하면 소스 파일이 잘못된 것을 알 수 있습니다. 원래 .NET Framework 프로젝트에는 포함되지 않았기 때문에 이전에는 문제가 발생하지 않았습니다. 디스크에 있어도 이전 *csproj*에는 포함되지 않았던 소스 파일이 이제 자동으로 포함되어 있습니다.
 

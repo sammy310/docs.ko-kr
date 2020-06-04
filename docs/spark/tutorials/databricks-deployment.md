@@ -4,12 +4,12 @@ description: Databricks에 .NET for Apache Spark 애플리케이션을 배포하
 ms.date: 05/12/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 245df14b9174a3b2ff152f90e6c50cc8766a2de9
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 4010f363e8ba606a7294ea32dc34587da6d6c8aa
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83397044"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202236"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>자습서: Databricks에 .NET for Apache Spark 애플리케이션 배포
 
@@ -87,7 +87,7 @@ ms.locfileid: "83397044"
 
 1. Databricks CLI 명령 `databricks configure --token`을 실행합니다.
 
-2. 구성 명령을 실행하면 호스트를 입력하라는 메시지가 표시됩니다. 호스트 URL은 **https://<\Location>.azuredatabricks.net** 형식을 사용합니다. 예를 들어 Azure Databricks 서비스를 만드는 동안 **eastus2**를 선택한 경우 호스트는 **https://eastus2.azuredatabricks.net** 이 됩니다.
+2. 구성 명령을 실행하면 호스트를 입력하라는 메시지가 표시됩니다. 호스트 URL은 `https://<Location>.azuredatabricks.net` 형식을 사용합니다. 예를 들어 Azure Databricks 서비스를 만드는 동안 **eastus2**를 선택한 경우 호스트는 `https://eastus2.azuredatabricks.net`이 됩니다.
 
 3. 호스트를 입력하면 토큰을 입력하라는 메시지가 표시됩니다. Azure Portal에서 **작업 영역 시작**을 선택하여 Azure Databricks 작업 영역을 시작합니다.
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-ms.openlocfilehash: 725884d8ab6d6d9009ad1cdd7bc185889cd5e485
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: aa569c0da5b963243596ef440ef37c08b4fae37f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243065"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288240"
 ---
 # <a name="language-independence-and-language-independent-components"></a>언어 독립성 및 언어 독립적 구성 요소
 
@@ -27,7 +27,7 @@ ms.locfileid: "81243065"
 > [!NOTE]
 > 이 문서의 첫 부분에서는 언어 독립 구성 요소를 만드는 방법에 대해 설명합니다. 즉, 이러한 구성 요소는 어떠한 언어로 작성된 앱에서도 사용할 수 있습니다. 여러 언어로 작성된 소스 코드에서 구성 요소나 앱을 하나 만들 수도 있습니다. 이 문서의 두 번째 부분에서 [언어 간 상호 운용성](#CrossLang)을 참조하세요.
 
-어떠한 언어로 작성된 다른 개체와도 완전하게 상호 작용하려면 개체는 모든 언어에 공통적인 기능만 호출자에게 노출해야 합니다. 기능의 공통 집합은 생성된 어셈블리에 적용되는 규칙 집합인 CLS(공용 언어 사양)에서 정의됩니다. 공용 언어 사양은 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)에서 Partition I, Clauses 7~11에 정의되어 있습니다.
+어떠한 언어로 작성된 다른 개체와도 완전하게 상호 작용하려면 개체는 모든 언어에 공통적인 기능만 호출자에게 노출해야 합니다. 기능의 공통 집합은 생성된 어셈블리에 적용되는 규칙 집합인 CLS(공용 언어 사양)에서 정의됩니다. 공용 언어 사양은 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)의 Partition I, Clauses 7~11에 정의되어 있습니다.
 
 구성 요소가 공용 언어 사양을 따르는 경우, 이 구성 요소는 CLS 규격임이 보장되고 CLS를 지원하는 모든 프로그래밍 언어로 작성된 어셈블리 코드에서 액세스할 수 있습니다. <xref:System.CLSCompliantAttribute> 특성을 소스 코드에 적용하여 구성 요소가 컴파일 타임에 공용 언어 사양을 준수하는지 여부를 결정할 수 있습니다. 자세한 내용은 [CLSCompliantAttribute 특성](#CLSAttribute)을 참조하세요.
 
@@ -59,7 +59,7 @@ ms.locfileid: "81243065"
 
   - [이벤트](#events)
 
-  - [Overloads](#overloads)
+  - [오버로드](#overloads)
 
   - [예외](#exceptions)
 
@@ -73,7 +73,7 @@ ms.locfileid: "81243065"
 
 ## <a name="cls-compliance-rules"></a>CLS 규격 규칙
 
-이 섹션에서는 CLS 규격 구성 요소를 만드는 규칙을 설명합니다. 규칙의 전체 목록은 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)에서 Partition I, Clause 11을 참조하세요.
+이 섹션에서는 CLS 규격 구성 요소를 만드는 규칙을 설명합니다. 규칙의 전체 목록은 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)의 Partition I, Clauses 11에 정의되어 있습니다.
 
 > [!NOTE]
 > 공용 언어 사양에서는 소비자(CLS 규격인 구성 요소를 프로그래밍 방식으로 액세스하는 개발자), 프레임워크(언어 컴파일러를 사용하여 CLS 규격 라이브러리를 만드는 개발자) 및 extender(CLS 규격 구성 요소를 생성하는 언어 컴파일러 또는 코드 파서 등의 도구를 만드는 개발자)에게 적용되는 CLS 규격에 대한 각 규칙을 설명합니다. 이 문서에서는 프레임워크에 적용되는 규칙에 초점을 맞춥니다. 그러나 extender에 적용되는 규칙 중 일부를 Reflection.Emit을 사용하여 만든 어셈블리에도 적용할 수 있습니다.
@@ -101,9 +101,9 @@ ms.locfileid: "81243065"
 
 - 공용 클래스의 공용 메서드에 대한 매개 변수 및 반환 형식, 파생 클래스에서 액세스할 수 있는 메서드에 대한 매개 변수 및 반환 형식
 
-CLS 규격의 규칙은 다음 표에 나와 있습니다. 규칙 텍스트는 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)에서 그대로 가져온 것으로, Copyright 2012 by Ecma International입니다. 이러한 규칙에 대한 보다 자세한 내용은 다음 섹션에서 찾을 수 있습니다.
+CLS 규격의 규칙은 다음 표에 나와 있습니다. 규칙의 텍스트는 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)(Copyright 2012 by Ecma International)에서 가져온 약어입니다. 이러한 규칙에 대한 보다 자세한 내용은 다음 섹션에서 찾을 수 있습니다.
 
-|범주|참조 항목|규칙|규칙 번호|
+|범주|참조|규칙|규칙 번호|
 |--------------|---------|----------|-----------------|
 |액세스 가능성|[멤버 접근성](#MemberAccess)|`family-or-assembly` 액세스 가능성을 갖는 다른 어셈블리에서 상속된 메서드를 재정의하는 경우를 제외하고는, 상속된 메서드를 재정의할 때 액세스 가능성이 변경되어서는 안 됩니다. 이 경우, 재정의는 `family` 액세스 가능성을 가져야 합니다.|10|
 |액세스 가능성|[멤버 접근성](#MemberAccess)|형식과 멤버의 표시 유형 및 접근성은 해당 멤버가 표시되고 액세스 가능한 경우 모든 멤버의 시그니처에 있는 해당 형식이 표시되고 액세스 가능해야 합니다. 예를 들어 어셈블리 외부에 표시되는 공용 메서드는 어셈블리 내부에서만 표시되는 형식의 인수를 가질 수 없습니다. 해당 멤버가 표시되고 액세스 가능한 경우 모든 멤버의 시그니처에 사용된 인스턴스화된 제네릭 형식을 구성하는 형식의 표시 유형과 액세스 가능성은 표시되고 액세스 가능해야 합니다. 예를 들어 어셈블리 외부에 표시되는 멤버의 시그니처에 있는 인스턴스화된 제네릭 형식은 어셈블리 내부에서만 표시되는 형식의 제네릭 인수를 가질 수 없습니다.|12|
@@ -115,7 +115,7 @@ CLS 규격의 규칙은 다음 표에 나와 있습니다. 규칙 텍스트는 [
 |생성자|[생성자](#ctors)|개체 생성자는 개체 만들기 작업의 일부로 호출되는 것을 제외하고 호출되어서는 안 되며 개체는 두 번 초기화해서는 안 됩니다.|22|
 |열거형|[열거형](#enums)|열거형의 기본 형식은 기본 제공 CLS 정수 형식이고, 필드의 이름은 "value__"이며, 해당 필드는 `RTSpecialName`으로 표시되어야 합니다.|7|
 |열거형|[열거형](#enums)|<xref:System.FlagsAttribute?displayProperty=nameWithType>(Partition IV 라이브러리 참조) 사용자 지정 특성의 존재 여부에 따라 표시되는 다음 두 가지 구분되는 열거형이 있습니다. 하나는 명명된 정수 값을 나타내며, 다른 하나는 명명되지 않은 값을 생성하도록 결합될 수 있는 명명된 비트 플래그를 나타냅니다. `enum`의 값은 지정된 값으로 제한되지 않습니다.|8|
-|열거형|[열거형](#enums)|열거형의 리터럴 정적 필드는 그 자체가 열거형 형식을 갖습니다.|10|
+|열거형|[열거형](#enums)|열거형의 리터럴 정적 필드는 그 자체가 열거형 형식을 갖습니다.|9|
 |이벤트|[이벤트](#events)|이벤트를 구현하는 메서드는 메타데이터에서 `SpecialName`으로 표시됩니다.|29|
 |이벤트|[이벤트](#events)|이벤트와 접근자의 액세스 가능성이 동일해야 합니다.|30|
 |이벤트|[이벤트](#events)|이벤트에 대한 `add` 및 `remove` 메서드는 모두 있거나 모두 없어야 합니다.|31|
@@ -138,8 +138,8 @@ CLS 규격의 규칙은 다음 표에 나와 있습니다. 규칙 텍스트는 [
 |명명 규칙|[명명 규칙](#naming)|어셈블리는 시작하고 식별자에 포함할 수 있는 문자 집합을 규정하는 유니코드 표준 3.0 기술 보고서 15의 부록 7을 준수합니다. <https://www.unicode.org/unicode/reports/tr15/tr15-18.html>에서 온라인으로 확인할 수 있습니다. 식별자는 유니코드 정규화 형식 C에서 정의된 정규 형식입니다. CLS에서 소문자 매핑(유니코드 로캘 비구분으로 지정된, 일 대 일 소문자 매핑)이 같은 두 개의 식별자는 서로 같습니다. 즉, 두 식별자가 CLS에서 서로 다른 것으로 간주되는 경우 단순히 대/소문자 이상의 차이가 있습니다. 그러나 상속된 정의를 재정의하기 위해서는 CLI가 원래 선언에 정확한 인코딩을 사용해야 합니다.|4|
 |오버로딩|[명명 규칙](#naming)|CLS 규격 범위에 소개된 모든 이름은 이름이 동일한 경우를 제외하고는 종류가 독립적이고 고유한 이름이어야 하며 오버로드를 통해 확인됩니다. 즉, CTS에서는 메서드 및 필드에 동일한 이름을 사용하는 단일 형식이 허용되지만, CLS에서는 그렇지 않습니다.|5|
 |오버로딩|[명명 규칙](#naming)|CTS로 고유 시그니처가 구분될 수 있지만 필드 및 중첩 형식은 식별자 비교만으로 구분됩니다. 식별자를 비교했을 때 CLS 규칙 39에 지정된 경우를 제외하고 동일한 이름을 갖는 메서드, 속성 및 이벤트는 반환 형식 이상의 차이가 있습니다.|6|
-|오버로딩|[Overloads](#overloads)|속성 및 메서드만 오버로드될 수 있습니다.|37|
-|오버로딩|[Overloads](#overloads)|반환 형식에 따라서도 오버로드될 수 있는 이름이 `op_Implicit` 및 `op_Explicit`인 변환 연산자를 제외하고, 속성 및 메서드는 매개 변수의 형식과 수에 따라서만 오버로드될 수 있습니다.|38|
+|오버로딩|[오버로드](#overloads)|속성 및 메서드만 오버로드될 수 있습니다.|37|
+|오버로딩|[오버로드](#overloads)|반환 형식에 따라서도 오버로드될 수 있는 이름이 `op_Implicit` 및 `op_Explicit`인 변환 연산자를 제외하고, 속성 및 메서드는 매개 변수의 형식과 수에 따라서만 오버로드될 수 있습니다.|38|
 |오버로딩|--|한 형식에서 선언된 둘 이상의 CLS 규격 메서드의 이름이 같고 형식 인스턴스화의 특정 집합에 대해 매개 변수와 반환 형식이 같다면 이러한 모든 메서드는 해당 형식 인스턴스화에서 의미상 동일합니다.|48|
 |유형|[형식 및 형식 멤버 시그니처](#Types)|<xref:System.Object?displayProperty=nameWithType>는 CLS 규격입니다. 다른 CLS 규격 클래스는 모두 CLS 규격 클래스에서 상속해야 합니다.|23|
 |속성|[속성](#properties)|속성의 getter 및 setter 메서드를 구현하는 메서드는 메타데이터에서 `SpecialName`으로 표시됩니다.|24|
@@ -170,7 +170,7 @@ CLS 규격의 규칙은 다음 표에 나와 있습니다. 규칙 텍스트는 [
 
 - 제네릭 매개 변수에 대한 제약 조건으로 사용되는 모든 형식은 CLS 규격이어야 합니다.
 
-.NET Framework [공용 형식 시스템](../../docs/standard/base-types/common-type-system.md)은 공용 언어 런타임에 의해 직접 지원되고 어셈블리의 메타데이터에서 특수 인코딩되는 여러 기본 형식을 포함합니다. 이러한 내장 형식 중에서 다음 표에 나열된 형식은 CLS 규격입니다.
+.NET Framework [공용 형식 시스템](base-types/common-type-system.md)은 공용 언어 런타임에 의해 직접 지원되고 어셈블리의 메타데이터에서 특수 인코딩되는 여러 기본 형식을 포함합니다. 이러한 내장 형식 중에서 다음 표에 나열된 형식은 CLS 규격입니다.
 
 |CLS 규격 형식|설명|
 |-------------------------|-----------------|
@@ -191,7 +191,7 @@ CLS 규격의 규칙은 다음 표에 나와 있습니다. 규칙 텍스트는 [
 |비규격 형식|설명|CLS 규격 대체 항목|
 |-------------------------|-----------------|--------------------------------|
 |<xref:System.SByte>|8비트 부호 있는 정수 데이터 형식|<xref:System.Int16>|
-|<xref:System.TypedReference>|개체 및 해당 런타임 형식에 대한 포인터|None|
+|<xref:System.TypedReference>|개체 및 해당 런타임 형식에 대한 포인터|없음|
 |<xref:System.UInt16>|16비트 부호 없는 정수|<xref:System.Int32>|
 |<xref:System.UInt32>|32비트 부호 없는 정수|<xref:System.Int64>|
 |<xref:System.UInt64>|64비트 부호 없는 정수|<xref:System.Int64>(오버플로될 수 있음), <xref:System.Numerics.BigInteger> 또는 <xref:System.Double>|
@@ -400,7 +400,7 @@ CLS 규격 열거형은 다음 규칙을 따라야 합니다.
 
 공용 언어 사양에서는 중첩된 형식 및 protected 멤버에 대해 보수적인 인스턴스화별 모델을 적용합니다. 개방형 제네릭 형식은 protected 중첩 제네릭 형식의 특정 인스턴스화를 포함하는 시그니처로 필드 또는 멤버를 노출할 수 없습니다. 제네릭 기본 클래스나 인터페이스의 특정 인스턴스화를 확장하는 제네릭이 아닌 형식은 protected 중첩 제네릭 형식의 다른 인스턴스화를 포함하는 서명이 있는 필드나 멤버를 노출할 수 없습니다.
 
-다음 예제에서는 제네릭 형식 `C1<T>`(Visual Basic의 경우 `C1(Of T)`)와 protected 클래스 `C1<T>.N`(Visual Basic의 경우 `C1(Of T).N`)을 정의합니다. `C1<T>`에는 `M1` 및 `M2`의 두 메서드가 있습니다. 하지만 `M1`은 C1`C1<int>.N`T>(또는 `C1(Of Integer).N`)에서 \<(또는 `C1(Of T)`) 개체를 반환하려 하므로 CLS 규격이 아닙니다. 두 번째 클래스인 `C2`는 `C1<long>`(또는 `C1(Of Long)`)에서 파생됩니다. 여기에는 `M3` 및 `M4`의 두 메서드가 있습니다. `M3`는 `C1<int>.N`의 하위 클래스에서 `C1(Of Integer).N`(또는 `C1<long>`) 개체를 반환하려 하므로 CLS 규격이 아닙니다. 언어 컴파일러는 훨씬 더 제한적일 수 있습니다. 이 예제에서는 Visual Basic에서 `M4`를 컴파일하려고 하면 오류를 표시합니다.
+다음 예제에서는 제네릭 형식 `C1<T>`(Visual Basic의 경우 `C1(Of T)`)와 protected 클래스 `C1<T>.N`(Visual Basic의 경우 `C1(Of T).N`)을 정의합니다. `C1<T>`에는 `M1` 및 `M2`의 두 메서드가 있습니다. 하지만 `M1`은 C1\<T>(또는 `C1(Of T)`)에서 `C1<int>.N`(또는 `C1(Of Integer).N`) 개체를 반환하려 하므로 CLS 규격이 아닙니다. 두 번째 클래스인 `C2`는 `C1<long>`(또는 `C1(Of Long)`)에서 파생됩니다. 여기에는 `M3` 및 `M4`의 두 메서드가 있습니다. `M3`는 `C1<int>.N`의 하위 클래스에서 `C1(Of Integer).N`(또는 `C1<long>`) 개체를 반환하려 하므로 CLS 규격이 아닙니다. 언어 컴파일러는 훨씬 더 제한적일 수 있습니다. 이 예제에서는 Visual Basic에서 `M4`를 컴파일하려고 하면 오류를 표시합니다.
 
 [!code-csharp[Conceptual.CLSCompliant#32](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics4.cs#32)]
 [!code-vb[Conceptual.CLSCompliant#32](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics4.vb#32)]
@@ -426,7 +426,7 @@ CLS 규격 클래스의 생성자와 구조체는 다음 규칙을 따라야 합
 
 CLS 규격 형식의 속성은 다음 규칙을 따라야 합니다.
 
-- 속성에는 setter, getter 또는 둘 모두가 있어야 합니다. 어셈블리에서 이러한 메서드는 특수한 메서드로 구현됩니다. 즉, 어셈블리의 메타데이터에 `get_`으로 표시되는 별도 메서드(이름이 getter는  propertyname`set_`, setter는  propertyname`SpecialName`임)로 나타납니다. C# 및 Visual Basic 컴파일러에서는 <xref:System.CLSCompliantAttribute> 특성을 적용할 필요 없이 자동으로 이 규칙이 적용됩니다.
+- 속성에는 setter, getter 또는 둘 모두가 있어야 합니다. 어셈블리에서 이러한 메서드는 특수한 메서드로 구현됩니다. 즉, 어셈블리의 메타데이터에 `SpecialName`으로 표시되는 별도 메서드(이름이 getter는 `get_`*propertyname*, setter는 `set_`*propertyname*임)로 나타납니다. C# 및 Visual Basic 컴파일러에서는 <xref:System.CLSCompliantAttribute> 특성을 적용할 필요 없이 자동으로 이 규칙이 적용됩니다.
 
 - 속성의 형식은 속성 getter의 반환 형식이며 setter의 마지막 인수입니다. 이러한 형식은 CLS 규격이어야 하며 인수는 참조로 속성에 할당할 수 없습니다. 즉, 관리되는 포인터일 수 없습니다.
 
@@ -456,7 +456,7 @@ CLS 규격 형식의 속성은 다음 규칙을 따라야 합니다.
 
 <a name="overloads"></a>
 
-### <a name="overloads"></a>Shadows
+### <a name="overloads"></a>Overloads
 
 공용 언어 사양에서는 오버로드된 멤버에 대해 다음과 같은 요구 사항을 적용합니다.
 
@@ -571,7 +571,7 @@ CLS 규격 구성 요소를 만들려면
 
 ## <a name="cross-language-interoperability"></a>언어 간 상호 운용성
 
-언어 독립성은 여러 가지 의미를 가질 수 있습니다. [언어 독립성 및 언어 독립 구성 요소](../../docs/standard/language-independence-and-language-independent-components.md) 문서에 설명된 한 가지 의미는 한 언어로 작성된 형식을 다른 언어로 작성된 앱에서 원활하게 사용하는 것입니다. 이 문서의 핵심이기도 한 두 번째 의미는 여러 언어로 작성된 코드를 단일 .NET Framework 어셈블리로 결합하는 것입니다.
+언어 독립성은 여러 가지 의미를 가질 수 있습니다. [언어 독립성 및 언어 독립 구성 요소](language-independence-and-language-independent-components.md) 문서에 설명된 한 가지 의미는 한 언어로 작성된 형식을 다른 언어로 작성된 앱에서 원활하게 사용하는 것입니다. 이 문서의 핵심이기도 한 두 번째 의미는 여러 언어로 작성된 코드를 단일 .NET Framework 어셈블리로 결합하는 것입니다.
 
 다음 예제에서는 두 클래스 `NumericLib` 및 `StringLib`를 포함하는 Utilities.dll이라는 클래스 라이브러리를 만들어 언어 간 상호 운용성을 보여 줍니다. `NumericLib` 클래스는 C#으로 작성되었고 `StringLib` 클래스는 Visual Basic으로 작성되었습니다. 다음은 단일 멤버 `ToTitleCase`를 해당 `StringLib` 클래스에 포함하는 StringUtil.vb용 소스 코드입니다.
 
@@ -620,6 +620,6 @@ C#으로 컴파일하려면 **vbc**에서 **csc**로 컴파일러의 이름을 �
 csc example.cs /r:UtilityLib.dll
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.CLSCompliantAttribute>

@@ -4,12 +4,12 @@ description: C# 라이브러리 및 애플리케이션에서 상속 사용 방�
 ms.date: 07/05/2018
 ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 78833110db0e4f0382e5c0c6de7c6c8be9a16c8d
-ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
+ms.openlocfilehash: 8e24ad3e93dcd11f39ae979a3acda4c4ada13dc5
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80391151"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007730"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 및 .NET의 상속
 
@@ -58,9 +58,9 @@ C# 및 .NET은 *단일 상속*만 지원합니다. 즉, 하나의 클래스가 �
 
 - [Public](../language-reference/keywords/public.md) 멤버는 파생 클래스에서 표시되고 파생 클래스의 공용 인터페이스에 속합니다. 상속된 public 멤버는 파생 클래스에서 정의된 것처럼 호출할 수 있습니다. 다음 예제에서 클래스 `A`는 `Method1`이라는 메서드를 정의하고 클래스 `B`는 클래스 `A`에서 상속합니다. 그런 다음 이 예제에서는 마치 `B`에 대한 인스턴스 메서드인 것처럼 `Method1`을 호출합니다.
 
-[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
+  [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
 
-파생 클래스는 대체 구현을 제공하여 상속된 멤버를 *재정의*할 수도 있습니다. 멤버를 재정의하기 위해서는 기본 클래스의 멤버가 [virtual](../language-reference/keywords/virtual.md) 키워드로 표시되어야 합니다. 기본적으로 기본 클래스 멤버는 `virtual`로 표시되지 않으며 재정의할 수 없습니다. 다음 예제와 같이 비가상 멤버를 재정의하려고 하면 컴파일러 오류 CS0506: "\<member>는 virtual, abstract 또는 override로 표시되지 않으므로 상속된 멤버 \<member>를 재정의할 수 없습니다.”가 표시됩니다.
+파생 클래스는 대체 구현을 제공하여 상속된 멤버를 *재정의*할 수도 있습니다. 멤버를 재정의하기 위해서는 기본 클래스의 멤버가 [virtual](../language-reference/keywords/virtual.md) 키워드로 표시되어야 합니다. 기본적으로 기본 클래스 멤버는 `virtual`로 표시되지 않으며 재정의할 수 없습니다. 다음 예제와 같이 비가상 멤버를 재정의하려고 하면 컴파일러 오류 CS0506: "\<member>: 상속된 ‘\<member>’ 멤버는 virtual, abstract 또는 override로 표시되지 않았으므로 재정의할 수 없습니다.”가 표시됩니다.
 
 ```csharp
 public class A
@@ -191,9 +191,9 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 파생 클래스에서 특정 멤버의 기본 클래스 구현을 상속해야 하는지 여부, 파생 클래스에 기본 클래스 구현을 재정의할 수 있는 옵션이 있는지 여부 또는 파생 클래스에서 구현을 제공해야 하는지 여부. [abstract](../language-reference/keywords/abstract.md) 키워드를 사용하여 파생 클래스에서 구현을 제공하도록 적용합니다. [virtual](../language-reference/keywords/virtual.md) 키워드를 사용하여 파생 클래스에서 기본 클래스 메서드를 재정의할 수 있도록 허용합니다. 기본적으로 기본 클래스에 정의된 메서드는 재정의 가능하지 *않습니다*.
 
- `Publication` 클래스에는 `abstract` 메서드가 없지만 클래스 자체는 `abstract`입니다.
+  `Publication` 클래스에는 `abstract` 메서드가 없지만 클래스 자체는 `abstract`입니다.
 
-- 파생 클래스가 상속 계층 구조의 최종 클래스를 나타내고 자체적으로 추가 파생 클래스에 대한 기본 클래스로 사용될 수 없는지 여부. 기본적으로 모든 클래스는 기본 클래스로 사용될 수 있습니다. [sealed](../language-reference/keywords/sealed.md) 키워드를 적용하여 클래스가 추가 클래스에 대한 기본 클래스로 사용될 수 없음을 나타낼 수 있습니다. 봉인된 클래스로부터 파생하려고 하면 컴파일러 오류 CS0509 "봉인된 형식 \<typeName>에서 파생될 수 없습니다."를 생성했습니다.
+- 파생 클래스가 상속 계층 구조의 최종 클래스를 나타내고 자체적으로 추가 파생 클래스에 대한 기본 클래스로 사용될 수 없는지 여부. 기본적으로 모든 클래스는 기본 클래스로 사용될 수 있습니다. [sealed](../language-reference/keywords/sealed.md) 키워드를 적용하여 클래스가 추가 클래스에 대한 기본 클래스로 사용될 수 없음을 나타낼 수 있습니다. sealed 클래스에서 파생하려고 하면 컴파일러 오류 CS0509 "sealed 형식 '\<typeName>'에서 파생될 수 없습니다."를 생성합니다.
 
   예를 들어 파생 클래스를 `sealed`로 표시합니다.
 

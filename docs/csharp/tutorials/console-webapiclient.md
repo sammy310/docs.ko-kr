@@ -3,12 +3,12 @@ title: .NET Core를 사용하여 REST 클라이언트 만들기
 description: 이 자습서에서는 .NET Core 및 C# 언어의 다양한 기능에 대해 설명합니다.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 4a3a76d1ec9893c2c3e0353e305a19e59c586fe5
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 1d1d1bec8c6602e4fe34fa3ce243423290412736
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420385"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004857"
 ---
 # <a name="rest-client"></a>REST 클라이언트
 
@@ -37,10 +37,10 @@ GitHub에서 REST 서비스에 HTTP 요청을 실행하는 애플리케이션을
 첫 번째 단계에서는 새 애플리케이션을 만듭니다. 명령 프롬프트를 열고 애플리케이션에 대한 새 디렉터리를 만듭니다. 해당 디렉터리를 현재 디렉터리로 지정합니다. 콘솔 창에 다음 명령을 입력합니다.
 
 ```dotnetcli
-dotnet new console --name WebApiClient
+dotnet new console --name WebAPIClient
 ```
 
-이렇게 하면 기본 "Hello World" 애플리케이션에 대한 시작 파일이 만들어집니다. 프로젝트 이름은 "WebApiClient"입니다. 새 프로젝트이므로 어떤 종속성도 없습니다. 첫 번째 실행에서는 .NET Core 프레임워크를 다운로드하고, 개발 인증서를 설치하며, NuGet 패키지 관리자를 실행하여 누락된 종속성을 복원합니다.
+이렇게 하면 기본 "Hello World" 애플리케이션에 대한 시작 파일이 만들어집니다. 프로젝트 이름은 "WebAPIClient"입니다. 새 프로젝트이므로 어떤 종속성도 없습니다. 첫 번째 실행에서는 .NET Core 프레임워크를 다운로드하고, 개발 인증서를 설치하며, NuGet 패키지 관리자를 실행하여 누락된 종속성을 복원합니다.
 
 수정하기 전에 명령 프롬프트에 `dotnet run`([참고 참조](#dotnet-restore-note))을 입력하여 애플리케이션을 실행합니다. 환경에 누락된 종속성이 있으면 `dotnet run`이 자동으로 `dotnet restore`를 수행합니다. 애플리케이션을 다시 빌드해야 하면 `dotnet build`도 수행합니다.
 최초 설치 후에는 프로젝트에 해당할 때만 `dotnet restore` 또는 `dotnet build`를 실행하면 됩니다.

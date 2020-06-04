@@ -2,12 +2,12 @@
 title: dotnet add package 명령
 description: ‘dotnet add package’ 명령은 NuGet 패키지 참조를 프로젝트에 추가하는 편리한 옵션을 제공합니다.
 ms.date: 02/14/2020
-ms.openlocfilehash: 1d57aed59ccd45417c88f9b6a2f9dd768fda9b58
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: bc79fe8adf5f775ddce62f3877a8de945c6a18ab
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102855"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83840899"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -91,7 +91,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 - **`-s|--source <SOURCE>`**
 
-  복원 작업 중에 사용할 NuGet 패키지 소스입니다.
+  복원 작업 중에 사용할 NuGet 패키지 소스의 URI입니다.
 
 - **`-v|--version <VERSION>`**
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 87030bf9770c464709559b2fb8f4c0004009e48d
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 364a1a8c0fbaae93a02495aaf2e8c519ffb46451
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379905"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290943"
 ---
 # <a name="assemblies-in-net"></a>.NET 어셈블리
 
@@ -102,8 +102,8 @@ C#에서는 단일 애플리케이션에서 동일한 어셈블리의 두 버전
 |[어셈블리 버전 관리](versioning.md)|.NET Framework 버전 관리 정책의 개요.|
 |[어셈블리 배치](../../framework/app-domains/assembly-placement.md)|어셈블리가 배치되는 위치.|
 |[어셈블리 및 Side-by-Side 실행](side-by-side-execution.md)|여러 버전의 런타임 또는 어셈블리를 동시에 사용합니다.|
-|[동적 메서드 및 어셈블리 내보내기](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|동적 어셈블리를 만드는 방법.|
-|[런타임에서 어셈블리를 찾는 방법](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|.NET Framework가 런타임에서 어셈블리 참조를 확인하는 방법.|
+|[동적 메서드 및 어셈블리 내보내기](../../framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|동적 어셈블리를 만드는 방법.|
+|[런타임에서 어셈블리를 찾는 방법](../../framework/deployment/how-the-runtime-locates-assemblies.md)|.NET Framework가 런타임에서 어셈블리 참조를 확인하는 방법.|
 
 ## <a name="reference"></a>참고
 

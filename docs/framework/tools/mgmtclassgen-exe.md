@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Mgmtclassgen.exe
 - early-bound managed classes
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
-ms.openlocfilehash: 5e39670fbb40acb999a243ac86683219f3c89e4f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d6de28694a1fdcd22cc2baa8cff66387c601414c
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180373"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201857"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe(강력하게 형식화된 관리 클래스 생성기)
 강력하게 형식화된 관리 클래스 생성기 도구를 사용하면 지정된 WMI(Windows Management Instrumentation) 클래스에 대해 초기 바인딩 관리되는 클래스를 신속하게 생성할 수 있습니다. 생성된 클래스는 WMI 클래스의 인스턴스에 액세스할 때 작성해야 하는 코드를 단순화합니다.  
@@ -87,7 +87,7 @@ WMIClass [options]
   
 - WMI에서는 CIM_DATETIME 데이터 형식의 데이터 값을 특정 날짜 및 시간이나 시간 간격으로 나타낼 수 있습니다. 데이터 값이 날짜 및 시간을 나타내는 경우 생성된 클래스의 데이터 형식은 **DateTime**이 되고, 데이터 값이 시간 간격을 나타내는 경우 생성된 클래스의 데이터 형식은 **TimeSpan**이 됩니다.  
   
- 또는 Visual Studio .NET의 Server Explorer Management Extension을 사용하여 강력한 형식의 클래스를 생성할 수 있습니다.  
+ 또는 Visual Studio .NET의 서버 탐색기 관리 확장을 사용하여 강력한 형식의 클래스를 생성할 수 있습니다.  
   
  WMI에 대한 자세한 내용은 Platform SDK 설명서의 **WMI(Windows Management Instrumentation)** 항목을 참조하세요.  
   

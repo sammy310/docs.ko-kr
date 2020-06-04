@@ -1,142 +1,124 @@
 ---
-title: C# 및 Visual Studio Code 시작
-description: Visual Studio Code를 사용하여 C#에서 첫 번째 .NET Core 애플리케이션을 만들고 디버그하는 방법을 알아봅니다.
-author: kendrahavens
-ms.date: 04/23/2020
-ms.openlocfilehash: 3dd7c4602fbb27e29bad977f8d3df34b6061bc23
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+title: Visual Studio Code를 사용하여 .NET Core로 콘솔 애플리케이션 만들기
+description: Visual Studio Code와 .NET Core CLI를 사용하여 .NET Core 콘솔 애플리케이션을 만드는 방법을 알아봅니다.
+ms.date: 05/22/2020
+ms.openlocfilehash: 673c4a639a2cab26261b7cdafd5d8e20acfafb94
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506904"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201699"
 ---
-# <a name="get-started-with-c-and-visual-studio-code"></a>C# 및 Visual Studio Code 시작
+# <a name="tutorial-create-a-console-application-with-net-core-using-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 .NET Core로 콘솔 애플리케이션 만들기
 
-.NET Core는 Windows, Linux 및 macOS에서 실행되는 애플리케이션을 만들기 위한 빠른 모듈식 플랫폼을 제공합니다. C# 확장이 있는 Visual Studio Code를 사용하면 C# IntelliSense(스마트 코드 완성) 및 디버깅을 완벽하게 지원하는 강력한 편집 환경이 구현됩니다.
+이 자습서에서는 Visual Studio Code와 .NET Core CLI를 사용하여 .NET Core 콘솔 애플리케이션을 만들고 실행하는 방법을 보여 줍니다. 프로젝트 만들기, 컴파일, 실행과 같은 프로젝트 작업은 CLI를 사용하여 수행되므로 원하는 경우 다른 코드 편집기로 이 자습서를 수행하고 터미널에서 명령을 실행할 수 있습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-1. [Visual Studio Code](https://code.visualstudio.com/)를 설치합니다.
-2. [.NET Core SDK](https://dotnet.microsoft.com/download)를 설치합니다.
-3. Visual Studio Code의 [C# 확장](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)을 설치합니다. Visual Studio Code의 확장을 설치하는 방법에 대한 자세한 내용은 [VS Code Extension Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery)(VS Code 확장 마켓플레이스)를 참조하세요.
+1. [C# 확장](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)이 설치된 [Visual Studio Code](https://code.visualstudio.com/). Visual Studio Code에 확장을 설치하는 방법에 대한 자세한 내용은 [VS Code 확장 Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery)를 참조하세요.
+2. [.NET Core 3.1 SDK 이상](https://dotnet.microsoft.com/download)
 
-## <a name="hello-world"></a>Hello World
+## <a name="create-the-app"></a>앱 만들기
 
-.NET Core에서 간단한 “Hello World” 프로그램으로 시작:
+1. Visual Studio Code를 엽니다.
 
-1. 프로젝트 열기
+1. 프로젝트를 만듭니다.
 
-    - Visual Studio Code를 엽니다.
-    - 주 메뉴에서 **파일** > **폴더 열기**를 선택합니다.
-    - *HelloWorld* 폴더를 만들고 **폴더 선택**을 클릭합니다. 기본적으로 폴더 이름은 프로젝트 이름 및 네임스페이스 이름이 됩니다. 프로젝트 네임스페이스가 `HelloWorld`라고 가정하는 코드를 자습서의 뒷부분에 추가합니다.
+   1. 주 메뉴에서 **파일** > **폴더 열기**/**열기...** 를 선택하고, *HelloWorld* 폴더를 만든 다음 **폴더 선택**/**열기**를 클릭합니다.
 
-1. C# 프로젝트 초기화
+      기본적으로 폴더 이름은 프로젝트 이름 및 네임스페이스 이름이 됩니다. 프로젝트 네임스페이스가 `HelloWorld`라고 가정하는 코드를 자습서의 뒷부분에 추가합니다.
 
-    - 주 메뉴에서 **보기** > **터미널**을 선택하여 Visual Studio Code에서 터미널을 엽니다.
-    - 터미널 창에서 `dotnet new console`을 입력합니다.
+   1. 주 메뉴에서 **보기** > **터미널**을 선택하여 Visual Studio Code에서 **터미널**을 엽니다.
 
-      이 명령은 폴더에 이미 작성된 간단한 “헬로 월드” 프로그램이 있는 *Program.cs* 파일을 만들고 *HelloWorld.csproj*라는 C# 프로젝트 파일을 만듭니다.
+      *HelloWorld* 폴더에서 명령 프롬프트와 함께 **터미널**이 열립니다.
 
-      ![dotnet new 명령](media/with-visual-studio-code/dotnet-new-command.png)
+   1. **터미널**에서 다음 명령을 입력합니다.
 
-1. "Hello World" 프로그램 실행
+      ```dotnetcli
+      dotnet new console
+      ```
 
-    - 터미널 창에서 `dotnet run`을 입력합니다.
+.NET Core용 콘솔 애플리케이션 템플릿은 <xref:System.String> 배열을 인수로 사용하는 단일 메서드 `Main`으로 `Program` 클래스를 정의합니다. *Program.cs* 파일에는 다음 코드가 있습니다.
 
-      ![dotnet run 명령](media/with-visual-studio-code/dotnet-run-command.png)
+```csharp
+using System;
 
-## <a name="debug"></a>디버그
-
-1. *Program.cs*를 클릭하여 엽니다. Visual Studio Code에서 C# 파일을 처음 열면 [OmniSharp](https://www.omnisharp.net/)에서 편집기가 로드됩니다.
-
-    ![Program.cs 파일 열기](media/with-visual-studio-code/open-program-cs.png)
-
-1. Visual Studio Code는 앱을 빌드하고 디버그하기 위해 누락된 자산을 추가하라는 메시지를 표시합니다. **Yes**를 선택합니다.
-
-    ![누락된 자산에 대한 프롬프트](media/with-visual-studio-code/missing-assets.png)
-
-1. 디버그 보기를 열려면 왼쪽 메뉴에서 디버깅 아이콘을 클릭합니다.
-
-    ![Visual Studio Code에서 [디버그] 탭 열기](media/with-visual-studio-code/open-debug-tab.png)
-
-1. 창 위쪽에서 녹색 화살표를 찾습니다. 옆에 있는 드롭다운 목록에서 **.NET Core Launch(콘솔)** 가 선택되어 있는지 확인합니다.
-
-    ![Visual Studio Code에서.NET Core 선택](media/with-visual-studio-code/select-net-core.png)
-
-1. 9번째 줄 옆에 있는 **편집기 여백**(편집기에서 줄 번호 왼쪽에 있는 공간)을 클릭하거나 편집기에서 9번째 줄로 이동하여 <kbd>F9</kbd>를 눌러서 프로젝트에 중단점을 추가합니다.
-
-    ![중단점 설정](media/with-visual-studio-code/set-breakpoint-vs-code.png)
-
-1. 디버깅을 시작하려면 <kbd>F5</kbd>를 누르거나 또는 녹색 화살표를 선택합니다. 이전 단계에서 설정한 중단점에 도달하면 디버거에서 프로그램 실행을 중지합니다.
-    - 디버깅 동안 왼쪽 위에 있는 창에서 지역 변수를 보거나 디버그 콘솔을 사용할 수 있습니다.
-
-1. 디버깅을 계속하려면 맨 위에 있는 파란색 화살표를 선택하고, 중지하려면 맨 위에 있는 빨간색 사각형을 선택합니다.
-
-    ![Visual Studio Code에서 실행 및 디버그](media/with-visual-studio-code/run-debug-vs-code.png)
-
-> [!TIP]
-> Visual Studio Code에서 OmniSharp를 사용한 .NET Core 디버깅에 대한 자세한 내용과 문제 해결 정보는 [Instructions for setting up the .NET Core debugger](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)(.NET Core 디버거 설정 지침)를 참조하세요.
-
-## <a name="add-a-class"></a>클래스 추가
-
-1. 새 클래스를 추가하려면 *Program.cs* 아래 VSCode 탐색기에서 마우스 오른쪽 단추를 클릭하고 **새 파일**을 선택합니다. VSCode에서 열어 놓은 폴더에 새 파일이 추가됩니다.
-1. 파일 이름을 *MyClass.cs*로 지정합니다. csharp 파일로 인식되도록 끝에 `.cs` 확장명을 추가해서 저장해야 합니다.
-1. 다음 코드를 추가하여 첫 번째 클래스를 만듭니다.
-
-    ``` csharp
-    using System;
-
-    namespace HelloWorld
+namespace HelloWorld
+{
+    class Program
     {
-        public class MyClass
+        static void Main(string[] args)
         {
-            public string ReturnMessage()
-            {
-                return "Happy coding!";
-            }
+            Console.WriteLine("Hello World!");
         }
     }
-    ```
+}
+```
 
-1. *Program.cs*의 코드를 다음 코드로 바꿔서 `Main` 메서드에서 새 클래스를 호출합니다.
+`Main`은 애플리케이션 진입점으로, 애플리케이션을 시작할 때 런타임에 의해 자동으로 호출되는 메서드입니다. 애플리케이션이 시작될 때 제공되는 모든 명령줄 인수는 *args* 배열에서 사용할 수 있습니다.
 
-    ```csharp
-    using System;
+템플릿은 <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> 메서드를 호출하여 "Hello World!"를 표시하는 간단한 애플리케이션을 만듭니다. 콘솔 창에 표시합니다.
 
-    namespace HelloWorld
-    {
-        class Program
-        {
-            static void Main(string[] args)
-            {
-                var c1 = new MyClass();
-                Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
-            }
-        }
-    }
-    ```
+## <a name="run-the-app"></a>앱 실행
+
+**터미널**에서 다음 명령을 실행합니다.
+
+```dotnetcli
+dotnet run
+```
+
+프로그램이 "Hello World!"를 표시하고 종료됩니다.
+
+![dotnet run 명령](media/with-visual-studio-code/dotnet-run-command.png)
+
+## <a name="enhance-the-app"></a>앱 향상
+
+사용자에게 이름을 입력하라는 메시지를 표시한 다음 사용자 이름을 날짜 및 시간과 함께 표시하도록 애플리케이션을 개선합니다.
+
+1. *Program.cs*를 클릭하여 엽니다.
+
+   Visual Studio Code에서 C# 파일을 처음 열면 [OmniSharp](https://www.omnisharp.net/)에서 편집기가 로드됩니다.
+
+   ![Program.cs 파일 열기](media/with-visual-studio-code/open-program-cs.png)
+
+1. Visual Studio Code가 앱을 빌드하고 디버그하기 위해 누락된 자산을 추가하라는 메시지를 표시하면 **예**를 선택합니다.
+
+   ![누락된 자산에 대한 프롬프트](media/with-visual-studio-code/missing-assets.png)
+
+1. 현재는 `Console.WriteLine`을 호출하는 줄에 불과한 *Program.cs*의 `Main` 메서드 내용을 다음 코드로 바꿉니다.
+
+   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="Snippet1":::
+
+   이 코드는 "What is your name?"을 콘솔 창에 표시하고 사용자가 문자열을 입력한 후 **Enter** 키를 누를 때까지 기다립니다. 이 문자열을 `name`이라는 변수에 저장합니다. 또한 현재 현지 시간을 포함하는 <xref:System.DateTime.Now?displayProperty=nameWithType> 속성 값을 검색한 후 `date`라는 변수에 할당합니다. 마지막으로 콘솔 창에 이러한 값을 표시합니다.
+
+   `\n`은 줄 바꿈 문자를 나타냅니다.
+
+   문자열 앞의 달러 기호(`$`)를 사용하면 변수 이름과 같은 식을 문자열의 중괄호 안에 넣을 수 있습니다. 식 값은 식 대신 문자열에 삽입됩니다. 이 구문을 [보간된 문자열](../../csharp/language-reference/tokens/interpolated.md)이라고 합니다.
 
 1. 변경 내용을 저장합니다.
 
+   > [!IMPORTANT]
+   > Visual Studio Code에서는 변경 내용을 명시적으로 저장해야 합니다. Visual Studio와 달리 애플리케이션을 빌드 및 실행할 때 파일 변경 내용이 자동으로 저장되지 않습니다.
+
 1. 프로그램을 다시 실행합니다.
 
-    ```dotnetcli
-    dotnet run
-    ```
+   ```dotnetcli
+   dotnet run
+   ```
 
-    추가된 문자열을 포함하는 새 메시지가 표시됩니다.
+1. 이름을 입력하고 **Enter** 키를 눌러 프롬프트에 응답합니다.
 
-    ```console
-    Hello World! Happy coding!
-    ```
+   :::image type="content" source="media/debugging-with-visual-studio-code/run-modified-program.png" alt-text="수정된 프로그램 출력이 표시된 터미널 창":::
 
-## <a name="faq"></a>FAQ
+1. 아무 키나 눌러 프로그램을 종료합니다.
 
-### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>Visual Studio Code에서 C#을 빌드하고 디버그하는 데 필요한 자산이 누락되었습니다. 내 디버거에서 "구성 없음"이라고 표시됩니다.
-
-Visual Studio Code C# 확장에서 빌드 및 디버그할 자산을 생성할 수 있습니다. C# 프로젝트를 처음 열면 Visual Studio Code에 이러한 자산을 생성하라는 메시지가 표시됩니다. 자산을 생성하지 않은 경우 명령 팔레트(**보기 > 명령 팔레트**)를 열고 ">.NET: Generate Assets Build and Debug"를 입력하여 이 명령을 실행할 수 있습니다. 이를 선택하면 필요한 . *.vscode*, *launch.json* 및 *tasks.json* 구성 파일이 생성됩니다.
-
-## <a name="see-also"></a>참조
+## <a name="additional-resources"></a>추가 자료
 
 - [Visual Studio Code 설치](https://code.visualstudio.com/docs/setup/setup-overview)
-- [Visual Studio Code의 디버깅](https://code.visualstudio.com/Docs/editor/debugging)
+
+## <a name="next-steps"></a>다음 단계
+
+이 자습서에서는 .NET Core 애플리케이션을 만들었습니다. 다음 자습서에서는 앱을 디버그합니다.
+
+> [!div class="nextstepaction"]
+> [Visual Studio Code를 사용하여 .NET Core 콘솔 애플리케이션 디버그](debugging-with-visual-studio-code.md)

@@ -4,12 +4,12 @@ description: 제품 판매 데이터에 대한 변칙 검색 애플리케이션�
 ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: c3fd4aa715a64a20f1eff9b789f6a87eaa749163
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2fc9c552f5a00d59ea2fddcbcfcbd240cf2fc83c
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78239991"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201986"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>자습서: ML.NET을 사용하여 제품 판매의 변칙 검색
 
@@ -193,7 +193,7 @@ ML.NET에서 IID 급증 검색 또는 IID 변화점 검색 알고리즘은 [독�
 
     이전 코드에서는 [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) 메서드를 사용하여 여러 데이터 세트 입력 행에 대해 예측합니다.
 
-1. `transformedData`를 다음 코드로 [CreateEnumerable()](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A) 메서드를 사용하여 쉽게 표시하도록 강력한 형식의 `IEnumerable`로 변환합니다.
+1. 쉽게 표시할 수 있도록 다음 코드로 [CreateEnumerable()](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A) 메서드를 사용하여 `transformedData`를 강력한 형식의 `IEnumerable`로 변환합니다.
 
     [!code-csharp[CreateEnumerable1](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#CreateEnumerable1)]
 
@@ -297,7 +297,7 @@ Alert   Score   P-Value
 
     [!code-csharp[TransformData2](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#TransformData2)]
 
-1. 이전에 했던 것처럼, `transformedData`를 다음 코드로 `CreateEnumerable()` 메서드를 사용하여 쉽게 표시하도록 강력한 형식의 `IEnumerable`로 변환합니다.
+1. 이전에 했던 것처럼 쉽게 표시할 수 있도록 다음 코드로 `CreateEnumerable()` 메서드를 사용하여 `transformedData`를 강력한 형식의 `IEnumerable`로 변환합니다.
 
     [!code-csharp[CreateEnumerable2](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#CreateEnumerable2)]
 

@@ -2,12 +2,12 @@
 title: 기계 학습 작업
 description: ML.NET에서 지원되는 다양한 기계 학습 작업 및 관련 작업을 살펴봅니다.
 ms.date: 12/23/2019
-ms.openlocfilehash: 6cd41065e668375537b9816ef7a208a65e0a523b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e6e36bd65dbadb8cb7b8edbf9e2e82071c208378
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397790"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144450"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>ML.NET의 기계 학습 작업
 
@@ -72,7 +72,7 @@ ms.locfileid: "79397790"
 자세한 내용은 Wikipedia에서 [Multiclass classification](https://en.wikipedia.org/wiki/Multiclass_classification)(다중 클래스 분류) 문서를 참조하세요.
 
 >[!NOTE]
->일 대 다(One vs all)는 모든 [이진 분류 학습자](#binary-classification)를 다중 클래스 데이터 세트에서 작동하도록 업그레이드합니다. 자세한 내용은 [Wikipedia](https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest) )를 참조하세요.
+>일 대 다(One vs all)는 모든 [이진 분류 학습자](#binary-classification)를 다중 클래스 데이터 세트에서 작동하도록 업그레이드합니다. 자세한 내용은 [Wikipedia](https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest)를 참조하세요.
 
 ### <a name="multiclass-classification-trainers"></a>다중 클래스 분류 트레이너
 
@@ -131,7 +131,7 @@ ms.locfileid: "79397790"
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | 모델에서 예측된 원시 점수 |
 
-## <a name="clustering"></a>Clustering
+## <a name="clustering"></a>클러스터링
 
 데이터 인스턴스를 비슷한 특성을 포함하는 클러스터로 그룹화하는 데 사용되는 [감독되지 않는 기계 학습](glossary.md#unsupervised-machine-learning) 작업입니다. 클러스터링을 사용하여 검색 또는 단순 관찰을 통해 논리적으로 파생될 수 없는 데이터 세트의 관계를 식별할 수도 있습니다. 클러스터링 알고리즘의 입력 및 출력은 선택한 방법에 따라 다릅니다. 분산, 중심, 연결 또는 밀도 기반 방법을 사용할 수 있습니다. 현재 ML.NET은 K-평균 클러스터링을 사용하는 중심 기반 방법을 지원합니다. 클러스터링 시나리오의 예는 다음과 같습니다.
 

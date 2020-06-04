@@ -4,12 +4,12 @@ description: 기존 TensorFlow 모델에서 새로운 ML.NET 이미지 분류 �
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: be21a94f571a1676d2a4bce2196dec34bf008121
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: ae6094d5acd4d26482f3690e174d82bbf1807266
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607573"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144437"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>자습서: 미리 학습된 TensorFlow 모델에서 ML.NET 이미지 분류 모델 생성
 
@@ -66,9 +66,9 @@ TensorFlow 모델은 이미지를 천 개 범주로 분류하도록 학습되었
 >[!Note]
 > 앞의 이미지는 Wikimedia Commons에 속하고 다음 특성을 사용합니다.
 >
-> * “220px-Pepperoni_pizza.jpg” 공용 도메인, https://commons.wikimedia.org/w/index.php?curid=79505,
-> * “119px-Nalle_-_a_small_brown_teddy_bear.jpg” 작성자: [Jonik](https://commons.wikimedia.org/wiki/User:Jonik) - 직접 사진 촬영, CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=48166.
-> * “193px-Broodrooster.jpg” 작성자: [M.Minderhoud](https://nl.wikipedia.org/wiki/Gebruiker:Michiel1972) - 직접 작업, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=27403
+> * “220px-Pepperoni_pizza.jpg” 공용 도메인, <https://commons.wikimedia.org/w/index.php?curid=79505>,
+> * “119px-Nalle_-_a_small_brown_teddy_bear.jpg” 작성자: [Jonik](https://commons.wikimedia.org/wiki/User:Jonik) - 직접 사진 촬영, CC BY-SA 2.0, <https://commons.wikimedia.org/w/index.php?curid=48166>.
+> * “193px-Broodrooster.jpg” 작성자: [M.Minderhoud](https://nl.wikipedia.org/wiki/Gebruiker:Michiel1972) - 직접 작업, CC BY-SA 3.0, <https://commons.wikimedia.org/w/index.php?curid=27403>
 
 `Inception model`은 이미지를 천 개의 범주로 분류하도록 학습되지만, 이 자습서에서는 더 작은 범주 세트 및 해당 범주로만 이미지를 분류해야 합니다. `transfer learning`의 `transfer` 부분을 입력합니다. 이미지를 인식하고 사용자 지정 이미지 분류자의 제한된 새 범주로 분류하는 `Inception model`의 기능을 전이할 수 있습니다.
 
@@ -110,7 +110,9 @@ toaster2.png    appliance
 <!-- markdownlint-enable MD010 -->
 
 학습 및 테스트 이미지는 zip 파일로 다운로드할 수 있는 자산 폴더에 있습니다. 이 이미지는 Wikimedia Commons에 속합니다.
-> *[Wikimedia Commons](https://commons.wikimedia.org/w/index.php?title=Main_Page&oldid=313158208), 무료 미디어 리포지토리.* 2018년 10월 17일 10시 48분 검색된 위치: https://commons.wikimedia.org/wiki/Pizza https://commons.wikimedia.org/wiki/Toaster https://commons.wikimedia.org/wiki/Teddy_bear
+> *[Wikimedia Commons](https://commons.wikimedia.org/w/index.php?title=Main_Page&oldid=313158208), 무료 미디어 리포지토리.* 2018년 10월 17일 10시 48분 검색된 위치: <https://commons.wikimedia.org/wiki/Pizza>
+> <https://commons.wikimedia.org/wiki/Toaster>
+> <https://commons.wikimedia.org/wiki/Teddy_bear>
 
 ## <a name="setup"></a>설정
 

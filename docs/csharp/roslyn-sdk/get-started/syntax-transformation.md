@@ -3,12 +3,12 @@ title: 구문 변환 시작(Roslyn API)
 description: 구문 트리를 트래버스하고, 탐색하고, 쿼리하는 방법을 소개합니다.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 232fe5fcba35f152dbc3f00b2f2c092b5df0dd35
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 5879dfd6ed0a5f6465829eec496d10cfcfd07362
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794795"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202117"
 ---
 # <a name="get-started-with-syntax-transformation"></a>구문 변환 시작
 
@@ -34,7 +34,7 @@ Visual Studio를 시작하고 새 C# **독립 실행형 코드 분석 도구** �
 
 이 프로젝트는 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> 클래스 메서드를 사용하여 `System.Collections.Generic` 네임스페이스를 나타내는 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType>를 생성합니다.
 
-다음 using 지시문을 `Program.cs` 파일의 맨 위에 추가하여 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory> 클래스의 팩터리 메서드와 <xref:System.Console>의 메서드를 가져오면 나중에 이러한 항목을 정규화하지 않고 사용할 수 있습니다.
+다음 using 지시문을 `Program.cs`의 맨 위에 추가합니다.
 
 [!code-csharp[import the SyntaxFactory class](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#StaticUsings "import the Syntax Factory class and the System.Console class")]
 
@@ -63,7 +63,7 @@ Visual Studio를 시작하고 새 C# **독립 실행형 코드 분석 도구** �
 
 ### <a name="create-a-modified-tree"></a>수정된 트리 만들기
 
-하나의 문을 포함하는 작은 구문 트리를 빌드했습니다. 단일 문 또는 기타 작은 코드 블록을 만드는 데는 새 노드를 만드는 API를 사용하는 것이 적합합니다. 그러나 더 큰 코드 블록을 빌드하려면 노드를 바꾸거나 노드를 기존 트리에 삽입하는 메서드를 사용해야 합니다. 구문 트리는 변경할 수 없습니다. **구문 API**는 생성 후 기존 구문 트리를 수정하기 위한 메커니즘을 제공하지 않습니다. 대신 기존 트리에 대한 변경 내용을 기반으로 새 트리를 생성하는 메서드를 제공합니다. `With*` 메서드는 <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions> 클래스에서 선언된 확장 메서드 또는 <xref:Microsoft.CodeAnalysis.SyntaxNode>에서 파생되는 구체적인 클래스에서 정의됩니다. 이러한 메서드는 기존 노드의 자식 속성에 변경 내용을 적용하여 새 노드를 만듭니다. 또한 <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> 확장 메서드를 사용하여 하위 트리의 하위 노드를 바꿀 수 있습니다. 이 메서드는 새로 만들어진 자식을 가리키도록 부모를 업데이트하고, 전체 트리에서 이 프로세스를 반복합니다(트리 ‘재회전’으로 알려진 프로세스). 
+하나의 문을 포함하는 작은 구문 트리를 빌드했습니다. 단일 문 또는 기타 작은 코드 블록을 만드는 데는 새 노드를 만드는 API를 사용하는 것이 적합합니다. 그러나 더 큰 코드 블록을 빌드하려면 노드를 바꾸거나 노드를 기존 트리에 삽입하는 메서드를 사용해야 합니다. 구문 트리는 변경할 수 없습니다. **구문 API**는 생성 후 기존 구문 트리를 수정하기 위한 메커니즘을 제공하지 않습니다. 대신 기존 트리에 대한 변경 내용을 기반으로 새 트리를 생성하는 메서드를 제공합니다. `With*` 메서드는 <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions> 클래스에서 선언된 확장 메서드 또는 <xref:Microsoft.CodeAnalysis.SyntaxNode>에서 파생되는 구체적인 클래스에서 정의됩니다. 이러한 메서드는 기존 노드의 자식 속성에 변경 내용을 적용하여 새 노드를 만듭니다. 또한 <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> 확장 메서드를 사용하여 하위 트리의 하위 노드를 바꿀 수 있습니다. 이 메서드는 새로 만들어진 자식을 가리키도록 부모를 업데이트하고, 전체 트리에서 이 프로세스를 반복합니다(트리 ‘재회전’으로 알려진 프로세스).
 
 다음 단계에서는 전체(작은) 프로그램을 나타내는 트리를 만든 다음, 수정합니다. 다음 코드를 `Program` 클래스의 시작 부분에 추가합니다.
 

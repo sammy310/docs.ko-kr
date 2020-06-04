@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
-ms.openlocfilehash: e6ec30e3c7c2318b199122cd63c7f56584707a98
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: afbfd516ef25eff94a9eed841f313892007c58a1
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78158053"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202347"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>XPathNavigator를 사용하여 강력한 형식의 XML 데이터 액세스
 XPath 2.0 데이터 모델의 인스턴스로서 <xref:System.Xml.XPath.XPathNavigator> 클래스는 CLR(공용 언어 런타임) 형식에 매핑되는 강력한 형식의 데이터를 포함할 수 있습니다. XPath 2.0 데이터 모델에 따르면 요소와 특성에만 강력한 형식의 데이터를 포함할 수 있습니다. <xref:System.Xml.XPath.XPathNavigator> 클래스는 데이터 형식을 변환하는 메커니즘뿐 아니라 강력한 형식의 데이터로 <xref:System.Xml.XPath.XPathDocument> 또는 <xref:System.Xml.XmlDocument> 개체 내의 데이터에 액세스할 수 있는 메커니즘도 제공합니다.  

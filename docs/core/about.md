@@ -2,12 +2,12 @@
 title: .NET Core 개요
 description: .NET Core의 특성 및 구성을 알아보고 다른 .NET 구현과 비교합니다.
 ms.date: 03/26/2020
-ms.openlocfilehash: c9a63ddba14cf176be529e9520027c0610cfc087
-ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
+ms.openlocfilehash: e57451968ed8c4d5457acea084d3c6c9f998b8da
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80391171"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144528"
 ---
 # <a name="net-core-overview"></a>.NET Core 개요
 
@@ -28,7 +28,7 @@ ms.locfileid: "80391171"
 - [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
 - [Visual Studio Code](https://code.visualstudio.com/download)
 
-편집기 통합은 부분적으로 [OmniSharp](https://www.omnisharp.net/) 및 [Ionide](http://ionide.io) 프로젝트의 참가자가 제공합니다.
+편집기 통합은 부분적으로 [OmniSharp](https://www.omnisharp.net/) 및 [Ionide](https://ionide.io) 프로젝트의 참가자가 제공합니다.
 
 ## <a name="apis"></a>API
 
@@ -69,6 +69,6 @@ ms.locfileid: "80391171"
 
 Microsoft에서 제공하는 .NET Core 이진 배포는 Azure의 Microsoft가 유지 관리하는 서버에서 빌드되고 테스트 되며 Microsoft 엔지니어링 및 보안 관행을 따릅니다.
 
-RHEL(Red Hat Enterprise Linux)에서 [Red Hat이 .NET Core를 지원](http://redhatloves.net/)합니다. Red Hat은 소스에서 .NET Core를 빌드하여 [Red Hat 소프트웨어 컬렉션](https://developers.redhat.com/products/softwarecollections/overview/)에서 사용할 수 있게 합니다. Red Hat 및 Microsoft는 협력하여 RHEL에서 .NET Core가 잘 작동하도록 합니다.
+RHEL(Red Hat Enterprise Linux)에서 [Red Hat이 .NET Core를 지원](https://developers.redhat.com/topics/dotnet/)합니다. Red Hat은 소스에서 .NET Core를 빌드하여 [Red Hat 소프트웨어 컬렉션](https://developers.redhat.com/products/softwarecollections/overview/)에서 사용할 수 있게 합니다. Red Hat 및 Microsoft는 협력하여 RHEL에서 .NET Core가 잘 작동하도록 합니다.
 
 [Tizen은 Tizen 플랫폼에서 .NET Core을 지원](https://developer.tizen.org/development/training/.net-application)합니다.

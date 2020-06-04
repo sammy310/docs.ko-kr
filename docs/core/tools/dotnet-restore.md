@@ -2,12 +2,12 @@
 title: dotnet restore 명령
 description: dotnet restore 명령을 사용하여 종속성 및 프로젝트 관련 도구를 복원하는 방법을 알아봅니다.
 ms.date: 02/27/2020
-ms.openlocfilehash: cc8f374468ba95baccf058ac0b0a0175672cdf01
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: 276fad896a6a8a647ed05a9de8c582d463d9ab8f
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158309"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84005321"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -25,7 +25,7 @@ dotnet restore [<ROOT>] [--configfile <FILE>] [--disable-parallel]
     [--interactive] [--lock-file-path <LOCK_FILE_PATH>] [--locked-mode]
     [--no-cache] [--no-dependencies] [--packages <PACKAGES_DIRECTORY>]
     [-r|--runtime <RUNTIME_IDENTIFIER>] [-s|--source <SOURCE>]
-    [--use-lockfile] [-v|--verbosity <LEVEL>]
+    [--use-lock-file] [-v|--verbosity <LEVEL>]
 
 dotnet restore -h|--help
 ```
@@ -143,9 +143,9 @@ dotnet restore -h|--help
 
 - **`-s|--source <SOURCE>`**
 
-  복원 작업 중 사용할 NuGet 패키지 소스를 지정합니다. 이 설정은 *nuget.config* 파일에 지정된 모든 소스를 재정의합니다. 이 옵션을 여러 번 지정하여 여러 소스를 제공할 수 있습니다.
+  복원 작업 중 사용할 NuGet 패키지 소스의 URI를 지정합니다. 이 설정은 *nuget.config* 파일에 지정된 모든 소스를 재정의합니다. 이 옵션을 여러 번 지정하여 여러 소스를 제공할 수 있습니다.
 
-- **`--use-lockfile`**
+- **`--use-lock-file`**
 
   복원에 사용되고 생성될 프로젝트 잠금 파일을 사용합니다.
 

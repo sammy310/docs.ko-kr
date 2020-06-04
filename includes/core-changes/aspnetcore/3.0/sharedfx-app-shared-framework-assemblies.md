@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 64e854b06895ca54a9ab9870b85868788a731c00
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: d598d8d3203e804e5e935c3564b0053f9fc2e9a6
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79549592"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84145005"
 ---
 ### <a name="shared-framework-assemblies-removed-from-microsoftaspnetcoreapp"></a>공유 프레임워크: Microsoft.AspNetCore.App에서 제거되는 어셈블리
 
@@ -54,7 +54,7 @@ Json.NET 및 Entity Framework Core는 ASP.NET Core를 계속 사용합니다. �
 
 이 변경은 ASP.NET Core 2.x의 `Microsoft.AspNetCore.App`을 통해 참조되는 모든 이진 파일에 적용되지 않습니다. 주목할 만한 예외는 다음과 같습니다.
 
-- .NET Standard를 계속 대상으로 하는 `Microsoft.Extensions` 라이브러리는 NuGet 패키지로 사용할 수 있습니다(https://github.com/dotnet/extensions) 참조).
+- .NET Standard를 계속 대상으로 하는 `Microsoft.Extensions` 라이브러리는 NuGet 패키지로 사용할 수 있습니다(<https://github.com/dotnet/extensions> 참조).
 - `Microsoft.AspNetCore.App`의 일부가 아닌 ASP.NET Core 팀에서 생성한 API입니다. 예를 들어 NuGet 패키지로 사용할 수 있는 구성 요소는 다음과 같습니다.
   - Entity Framework Core
   - 타사 통합 기능을 제공하는 API
