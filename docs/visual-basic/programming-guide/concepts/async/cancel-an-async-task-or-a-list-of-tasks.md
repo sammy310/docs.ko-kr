@@ -2,23 +2,23 @@
 title: 비동기 작업 또는 작업 목록 취소
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: 2956582cd0c8e044fcd37ffab13686489a7c854c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 932bf46f1e3aee220d0412f1688e961faaef3459
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347962"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396703"
 ---
-# <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>비동기 작업 또는 작업 목록 취소 (Visual Basic)
+# <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>비동기 작업 또는 작업 목록 취소(Visual Basic)
 
 작업이 완료될 때까지 기다리지 않으려면 비동기 애플리케이션을 취소할 때 사용하는 단추를 설정할 수 있습니다. 이 항목의 예제에 따라 한 웹 사이트 또는 웹 사이트 목록의 콘텐츠를 다운로드하는 애플리케이션에 취소 단추를 추가할 수 있습니다.
 
-이 예제에서는 [비동기 응용 프로그램 (Visual Basic)을 미세 조정](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) 하는 UI를 사용 합니다.
+이 예제에서는 [비동기 응용 프로그램 (Visual Basic)을 미세 조정](fine-tuning-your-async-application.md) 하는 UI를 사용 합니다.
 
 > [!NOTE]
 > 예제를 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.
 
-## <a name="BKMK_CancelaTask"></a> 작업 취소
+## <a name="cancel-a-task"></a><a name="BKMK_CancelaTask"></a>작업 취소
 
 첫 번째 예제에서는 **취소** 단추를 단일 다운로드 작업에 연결합니다. 애플리케이션이 콘텐츠를 다운로드하는 동안 단추를 선택하면 다운로드가 취소됩니다.
 
@@ -78,7 +78,7 @@ ms.locfileid: "74347962"
       cts = New CancellationTokenSource()
       ```
 
-    - 지정된 웹 사이트의 콘텐츠를 다운로드하는 `AccessTheWebAsync` 호출에서 <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType>의 `cts` 속성을 인수로 전송합니다. 취소가 요청되면 `Token` 속성은 메시지를 전파합니다. 사용자가 다운로드 작업을 취소하도록 선택할 경우 메시지를 표시하는 catch 블록을 추가합니다. 다음 코드는 변경 내용을 보여 줍니다.
+    - 지정된 웹 사이트의 콘텐츠를 다운로드하는 `AccessTheWebAsync` 호출에서 `cts`의 <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> 속성을 인수로 전송합니다. 취소가 요청되면 `Token` 속성은 메시지를 전파합니다. 사용자가 다운로드 작업을 취소하도록 선택할 경우 메시지를 표시하는 catch 블록을 추가합니다. 다음 코드는 변경 내용을 보여 줍니다.
 
       ```vb
       Try
@@ -97,7 +97,7 @@ ms.locfileid: "74347962"
       End Try
       ```
 
-4. `AccessTheWebAsync`에서 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> 형식에 있는 `GetAsync` 메서드의 <xref:System.Net.Http.HttpClient> 오버로드를 사용하여 웹 사이트의 콘텐츠를 다운로드합니다. `ct`의 <xref:System.Threading.CancellationToken> 매개 변수인 `AccessTheWebAsync`를 두 번째 인수로 전달합니다. 사용자가 **취소** 단추를 선택하면 토큰이 메시지를 전달합니다.
+4. `AccessTheWebAsync`에서 <xref:System.Net.Http.HttpClient> 형식에 있는 `GetAsync` 메서드의 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> 오버로드를 사용하여 웹 사이트의 콘텐츠를 다운로드합니다. `AccessTheWebAsync`의 <xref:System.Threading.CancellationToken> 매개 변수인 `ct`를 두 번째 인수로 전달합니다. 사용자가 **취소** 단추를 선택하면 토큰이 메시지를 전달합니다.
 
     다음 코드는 `AccessTheWebAsync`의 변경 내용을 보여 줍니다.
 
@@ -138,7 +138,7 @@ ms.locfileid: "74347962"
     Download canceled.
     ```
 
-## <a name="BKMK_CancelaListofTasks"></a> 작업 목록 취소
+## <a name="cancel-a-list-of-tasks"></a><a name="BKMK_CancelaListofTasks"></a>작업 목록 취소
 
 이전 예제를 확장하여 같은 `CancellationTokenSource` 인스턴스를 각 작업과 연결하는 방식으로 여러 작업을 취소할 수 있습니다. **취소** 단추를 선택하면 아직 완료되지 않은 모든 작업이 취소됩니다.
 
@@ -209,7 +209,7 @@ ms.locfileid: "74347962"
     Next
     ```
 
-4. `AccessTheWebAsync`는 길이를 표시하므로 메서드가 아무것도 반환할 필요가 없습니다. return 문을 제거하고 메서드의 반환 형식을 <xref:System.Threading.Tasks.Task> 대신 <xref:System.Threading.Tasks.Task%601>로 변경합니다.
+4. `AccessTheWebAsync`는 길이를 표시하므로 메서드가 아무것도 반환할 필요가 없습니다. return 문을 제거하고 메서드의 반환 형식을 <xref:System.Threading.Tasks.Task%601> 대신 <xref:System.Threading.Tasks.Task>로 변경합니다.
 
     ```vb
     Async Function AccessTheWebAsync(ct As CancellationToken) As Task
@@ -253,7 +253,7 @@ ms.locfileid: "74347962"
     Downloads canceled.
     ```
 
-## <a name="BKMK_CompleteExamples"></a> 전체 예제
+## <a name="complete-examples"></a><a name="BKMK_CompleteExamples"></a>전체 예제
 
 다음 섹션에는 각각의 이전 예제에 대한 코드가 있습니다. <xref:System.Net.Http>에 대한 참조를 추가해야 합니다.
 
@@ -467,6 +467,6 @@ End Class
 
 - <xref:System.Threading.CancellationTokenSource>
 - <xref:System.Threading.CancellationToken>
-- [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [Async 애플리케이션 미세 조정(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](index.md)
+- [Async 애플리케이션 미세 조정(Visual Basic)](fine-tuning-your-async-application.md)
 - [Async 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

@@ -1,15 +1,15 @@
 ---
-title: '방법: 특성을 사용 하 여C++ C-공용 구조체 만들기'
+title: '방법: 특성을 사용 하 여 C-C + + 공용 구조체 만들기'
 ms.date: 07/20/2015
 ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
-ms.openlocfilehash: acb8dc781e2872ae46e5aa058a98b3dd98f3e064
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ebab0ad947f776932f9379af3969e369eeec1941
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349494"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400683"
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>방법: 특성을 사용 하 여C++ C/공용 구조체 만들기 (Visual Basic)
+# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>방법: 특성을 사용하여 C/C++ 공용 구조체 만들기(Visual Basic)
 
 특성을 사용하면 메모리에서 구조체가 레이아웃되는 방식을 사용자 지정할 수 있습니다. 예를 들어 `StructLayout(LayoutKind.Explicit)` 및 `FieldOffset` 특성을 사용하여 C/C++에서 공용 구조체로 알려진 항목을 만들 수 있습니다.
 
@@ -73,9 +73,9 @@ Structure TestExplicit
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [Visual Basic 프로그래밍 가이드](../../../../visual-basic/programming-guide/index.md)
+- [Visual Basic 프로그래밍 가이드](../../index.md)
 - [특성](../../../../standard/attributes/index.md)
-- [리플렉션(Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [특성(Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
-- [사용자 지정 특성 만들기(Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
-- [리플렉션을 사용하여 특성 액세스(Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [리플렉션(Visual Basic)](../reflection.md)
+- [특성(Visual Basic)](../../../language-reference/attributes.md)
+- [사용자 지정 특성 만들기(Visual Basic)](creating-custom-attributes.md)
+- [리플렉션을 사용하여 특성 액세스(Visual Basic)](accessing-attributes-by-using-reflection.md)

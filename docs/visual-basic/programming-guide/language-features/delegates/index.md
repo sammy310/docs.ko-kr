@@ -5,22 +5,22 @@ helpviewer_keywords:
 - delegates [Visual Basic]
 - Visual Basic code, delegates
 ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
-ms.openlocfilehash: 15b4cb0a038429c5fe67d3e013818a7a2170abcc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1f161248fa04f8fab0e5335413e69ca565732f71
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345230"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410684"
 ---
 # <a name="delegates-visual-basic"></a>대리자(Visual Basic)
 
-대리자는 메서드를 참조하는 개체입니다. 다른 프로그래밍 언어에서 사용되는 함수 포인터와 비슷하기 때문에 *형식 안전 함수 포인터*라고도 합니다. 그러나 함수 포인터와는 달리 Visual Basic 대리자는 <xref:System.Delegate?displayProperty=nameWithType>클래스를 기반으로 하는 참조 형식입니다. 대리자는 공유 메서드(클래스의 특정 인스턴스 없이 호출할 수 있는 메서드) 및 인스턴스 메서드를 둘 다 참조할 수 있습니다.
+대리자는 메서드를 참조하는 개체입니다. 다른 프로그래밍 언어에서 사용되는 함수 포인터와 비슷하기 때문에 *형식 안전 함수 포인터*라고도 합니다. 그러나 함수 포인터와는 달리 Visual Basic 대리자는 클래스를 기반으로 하는 참조 형식 <xref:System.Delegate?displayProperty=nameWithType> 입니다. 대리자는 공유 메서드(클래스의 특정 인스턴스 없이 호출할 수 있는 메서드) 및 인스턴스 메서드를 둘 다 참조할 수 있습니다.
 
 ## <a name="delegates-and-events"></a>대리자 및 이벤트
 
-대리자는 호출 프로시저와 호출되는 프로시저 간에 중개자가 필요한 경우에 유용합니다. 예를 들어 다양한 상황에서 다른 이벤트 처리기를 호출하도록 하는 이벤트를 발생시키는 개체를 원할 수 있습니다. 그러나 이벤트를 발생시키는 개체는 특정 이벤트를 처리할 이벤트 처리기가 어느 것인지를 미리 알 수 없습니다. Visual Basic를 사용 하면 `AddHandler` 문을 사용할 때 대리자를 만들어 이벤트에 이벤트 처리기를 동적으로 연결할 수 있습니다. 런타임 시 대리자는 적절한 이벤트 처리기로 호출을 전달합니다.
+대리자는 호출 프로시저와 호출되는 프로시저 간에 중개자가 필요한 경우에 유용합니다. 예를 들어 다양한 상황에서 다른 이벤트 처리기를 호출하도록 하는 이벤트를 발생시키는 개체를 원할 수 있습니다. 그러나 이벤트를 발생시키는 개체는 특정 이벤트를 처리할 이벤트 처리기가 어느 것인지를 미리 알 수 없습니다. Visual Basic를 사용 하면 문을 사용할 때 대리자를 만들어 이벤트에 이벤트 처리기를 동적으로 연결할 수 있습니다 `AddHandler` . 런타임 시 대리자는 적절한 이벤트 처리기로 호출을 전달합니다.
 
-사용자 고유의 대리자를 만들 수는 있지만 대부분의 경우 Visual Basic는 대리자를 만들고 사용자에 대 한 세부 정보를 처리 합니다. 예를 들어 `Event` 문은 `<EventName>EventHandler`라는 대리자 클래스를 `Event` 문을 포함하고 이벤트와 시그니처가 같은 클래스의 중첩 클래스로 암시적으로 정의합니다. `AddressOf` 문은 특정 프로시저를 참조하는 대리자의 인스턴스를 암시적으로 만듭니다. 다음 두 코드 줄은 동일한 의미를 갖습니다. 첫 번째 줄에서는 `EventHandler` 메서드에 대한 참조가 인수로 전달된 `Button1_Click`의 인스턴스를 명시적으로 만듭니다. 두 번째 줄은 동일한 작업을 좀 더 편리하게 수행합니다.
+사용자 고유의 대리자를 만들 수는 있지만 대부분의 경우 Visual Basic는 대리자를 만들고 사용자에 대 한 세부 정보를 처리 합니다. 예를 들어 `Event` 문은 `<EventName>EventHandler`라는 대리자 클래스를 `Event` 문을 포함하고 이벤트와 시그니처가 같은 클래스의 중첩 클래스로 암시적으로 정의합니다. `AddressOf` 문은 특정 프로시저를 참조하는 대리자의 인스턴스를 암시적으로 만듭니다. 다음 두 코드 줄은 동일한 의미를 갖습니다. 첫 번째 줄에서는 `Button1_Click` 메서드에 대한 참조가 인수로 전달된 `EventHandler`의 인스턴스를 명시적으로 만듭니다. 두 번째 줄은 동일한 작업을 좀 더 편리하게 수행합니다.
 
 [!code-vb[VbVbalrDelegates#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#6)]
 
@@ -60,13 +60,13 @@ ms.locfileid: "74345230"
 
 [!code-vb[VbVbalrDelegates#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class2.vb#15)]
 
-함수의 시그니처는 대리자 형식의 시그니처와 일치해야 합니다. 람다 식에 대한 자세한 내용은 [람다 식](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)을 참조하세요. 대리자에 대한 람다 식 및 `AddressOf` 대입의 추가 예제를 보려면 [완화된 대리자 변환](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)을 참조하세요.
+함수의 시그니처는 대리자 형식의 시그니처와 일치해야 합니다. 람다 식에 대 한 자세한 내용은 [람다 식](../procedures/lambda-expressions.md)을 참조 하세요. 대리자에 대한 람다 식 및 `AddressOf` 대입의 추가 예제를 보려면 [완화된 대리자 변환](relaxed-delegate-conversion.md)을 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 
-|제목|설명|
+|제목|Description|
 |-----------|-----------------|
-|[방법: 대리자 메서드 호출](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)|메서드를 대리자를 연결하고 대리자를 통해 해당 메서드를 호출하는 방법을 보여 주는 예제를 제공합니다.|
-|[방법: Visual Basic에서 프로시저에 다른 프로시저 전달](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)|대리자를 사용하여 한 프로시저를 다른 프로시저에 전달하는 방법을 보여 줍니다.|
-|[완화된 대리자 변환](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)|시그니처가 동일하지 않더라도 sub 및 함수를 대리자 또는 처리기에 할당하는 방법을 설명합니다.|
-|[이벤트](../../../../visual-basic/programming-guide/language-features/events/index.md)|Visual Basic의 이벤트에 대해 간략하게 설명합니다.|
+|[방법: 대리자 메서드 호출](how-to-invoke-a-delegate-method.md)|메서드를 대리자를 연결하고 대리자를 통해 해당 메서드를 호출하는 방법을 보여 주는 예제를 제공합니다.|
+|[방법: Visual Basic에서 프로시저에 다른 프로시저 전달](how-to-pass-procedures-to-another-procedure.md)|대리자를 사용하여 한 프로시저를 다른 프로시저에 전달하는 방법을 보여 줍니다.|
+|[완화된 대리자 변환](relaxed-delegate-conversion.md)|시그니처가 동일하지 않더라도 sub 및 함수를 대리자 또는 처리기에 할당하는 방법을 설명합니다.|
+|[이벤트](../events/index.md)|Visual Basic의 이벤트에 대해 간략하게 설명합니다.|

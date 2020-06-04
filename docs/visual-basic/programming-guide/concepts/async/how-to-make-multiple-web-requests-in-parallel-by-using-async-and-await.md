@@ -2,16 +2,16 @@
 title: '방법: Async 및 Await를 사용하여 병렬로 여러 웹 요청 만들기'
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-ms.openlocfilehash: 616efca79312883f17ba837d17a5ee9c97d15b34
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 40bab392af94ba941c2562e885a8d2e08aeea5b9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346145"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396586"
 ---
-# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>방법: Async 및 Wait (Visual Basic)를 사용 하 여 병렬로 여러 웹 요청 만들기
+# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>방법: Async 및 Await를 사용하여 병렬로 여러 웹 요청 만들기(Visual Basic)
 
-비동기 메서드에서 작업은 만들어질 때 시작됩니다. [Wait](../../../../visual-basic/language-reference/operators/await-operator.md) 연산자는 작업을 완료할 때까지 처리를 계속할 수 없는 메서드의 지점에 있는 작업에 적용 됩니다. 다음 예제와 같이 작업이 생성되는 즉시 대기되는 경우가 많습니다.
+비동기 메서드에서 작업은 만들어질 때 시작됩니다. [Wait](../../../language-reference/operators/await-operator.md) 연산자는 작업을 완료할 때까지 처리를 계속할 수 없는 메서드의 지점에 있는 작업에 적용 됩니다. 다음 예제와 같이 작업이 생성되는 즉시 대기되는 경우가 많습니다.
 
 ```vb
 Dim result = Await someWebAccessMethodAsync(url)
@@ -39,25 +39,25 @@ Dim result = Await myTask
 > [!NOTE]
 > 이 프로젝트를 완료하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.
 
-여러 작업을 동시에 시작 하는 다른 예제 [는 방법: 작업을 사용 하 여 비동기 연습 확장 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)을 참조 하세요.
+여러 작업을 동시에 시작 하는 다른 예제 [는 방법: 작업을 사용 하 여 비동기 연습 확장 (Visual Basic)](how-to-extend-the-async-walkthrough-by-using-task-whenall.md)을 참조 하세요.
 
 이 예제의 코드는 [개발자 코드 샘플](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)에서 다운로드할 수 있습니다.
 
 ### <a name="to-set-up-the-project"></a>프로젝트를 설정하려면
 
-1. WPF 애플리케이션을 설정하려면 다음 단계를 완료합니다. [연습: Async 및 wait를 사용 하 여 웹에 액세스 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)에서 이러한 단계에 대 한 자세한 지침을 찾을 수 있습니다.
+1. WPF 애플리케이션을 설정하려면 다음 단계를 완료합니다. [연습: Async 및 wait를 사용 하 여 웹에 액세스 (Visual Basic)](walkthrough-accessing-the-web-by-using-async-and-await.md)에서 이러한 단계에 대 한 자세한 지침을 찾을 수 있습니다.
 
     - 텍스트 상자와 단추가 포함된 WPF 애플리케이션을 만듭니다. 단추의 이름을 `startButton`, 텍스트 상자의 이름을 `resultsTextBox`로 지정합니다.
 
     - <xref:System.Net.Http>에 대한 참조를 추가합니다.
 
-    - Mainwindow.xaml 파일에서 `System.Net.Http`에 대 한 `Imports` 문을 추가 합니다.
+    - Mainwindow.xaml 파일에서 `Imports` 에 대 한 문을 추가 `System.Net.Http` 합니다.
 
 ### <a name="to-add-the-code"></a>코드를 추가하려면
 
-1. 디자인 창 Mainwindow.xaml에서 단추를 두 번 클릭 하 여 Mainwindow.xaml에서 `startButton_Click` 이벤트 처리기를 만듭니다.
+1. 디자인 창인 Mainwindow.xaml에서 단추를 두 번 클릭 하 여 `startButton_Click` mainwindow.xaml에서 이벤트 처리기를 만듭니다.
 
-2. 다음 코드를 복사 하 여 Mainwindow.xaml의 `startButton_Click` 본문에 붙여넣습니다.
+2. 다음 코드를 복사 하 여 Mainwindow.xaml의 본문에 붙여넣습니다. `startButton_Click`
 
     ```vb
     resultsTextBox.Clear()
@@ -73,7 +73,7 @@ Dim result = Await myTask
 
     - `DisplayResults`에 각 URL에 대한 바이트 배열의 바이트 수가 표시됩니다. 이 표시는 각 작업의 다운로드가 완료된 시간을 보여 줍니다.
 
-     다음 메서드를 복사 하 여 Mainwindow.xaml의 `startButton_Click` 이벤트 처리기 뒤에 붙여넣습니다.
+     다음 메서드를 복사 하 여 `startButton_Click` mainwindow.xaml의 이벤트 처리기 뒤에 붙여넣습니다.
 
     ```vb
     Private Async Function ProcessURLAsync(url As String, client As HttpClient) As Task(Of Integer)
@@ -97,9 +97,9 @@ Dim result = Await myTask
 
 4. 마지막으로, 다음 단계를 수행하는 `CreateMultipleTasksAsync` 메서드를 정의합니다.
 
-    - 이 메서드는 `HttpClient`의 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> 메서드에 액세스하는 데 필요한 `ProcessURLAsync` 개체를 선언합니다.
+    - 이 메서드는 `ProcessURLAsync`의 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> 메서드에 액세스하는 데 필요한 `HttpClient` 개체를 선언합니다.
 
-    - 메서드는 <xref:System.Threading.Tasks.Task%601>가 정수인 `TResult` 형식의 세 가지 작업을 만들고 시작합니다. 각 작업이 완료되면 `DisplayResults`에 작업의 URL 및 다운로드한 콘텐츠의 길이가 표시됩니다. 작업이 비동기적으로 실행되므로 결과가 표시되는 순서는 선언된 순서와 다를 수 있습니다.
+    - 메서드는 `TResult`가 정수인 <xref:System.Threading.Tasks.Task%601> 형식의 세 가지 작업을 만들고 시작합니다. 각 작업이 완료되면 `DisplayResults`에 작업의 URL 및 다운로드한 콘텐츠의 길이가 표시됩니다. 작업이 비동기적으로 실행되므로 결과가 표시되는 순서는 선언된 순서와 다를 수 있습니다.
 
     - 메서드는 각 작업이 완료될 때까지 기다립니다. 각 `Await` 연산자는 대기된 작업이 완료될 때까지 `CreateMultipleTasksAsync`의 실행을 중단합니다. 또한 연산자는 완료된 각 작업에서 `ProcessURLAsync` 호출의 반환 값을 검색합니다.
 
@@ -207,6 +207,6 @@ End Class
 
 ## <a name="see-also"></a>참고 항목
 
-- [연습: Async 및 Await를 사용하여 웹에 액세스(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [방법: Task.WhenAll을 사용하여 비동기 연습 확장(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [연습: Async 및 Await를 사용하여 웹에 액세스(Visual Basic)](walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](index.md)
+- [방법: Task.WhenAll을 사용하여 비동기 연습 확장(Visual Basic)](how-to-extend-the-async-walkthrough-by-using-task-whenall.md)

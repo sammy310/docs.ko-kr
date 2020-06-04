@@ -1,17 +1,17 @@
 ---
-title: 필드 '<fieldname>'형식의'<typename>'은 'ReadOnly'
+title: "'<typename>' 형식의 '<fieldname>' 필드는 'ReadOnly'입니다."
 ms.date: 07/20/2015
 f1_keywords:
 - vbrMissingMember_ReadOnlyField2
 ms.assetid: fb51f54b-f12d-4aea-9a6e-6e070721c010
-ms.openlocfilehash: 836dd43ff32c3a1b5594db243f79b116675a35b8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 705fbd8e1658a4aedcf2d1f89b031e205b9a021a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611301"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411072"
 ---
-# <a name="field-fieldname-of-type-typename-is-readonly"></a>필드 '\<fieldname >' 형식의 '\<typename >'은 'ReadOnly'
+# <a name="field-fieldname-of-type-typename-is-readonly"></a>'\<typename>' 형식의 '\<fieldname>' 필드는 'ReadOnly'입니다.
 `ReadOnly`로 선언된 필드에 쓰려고 했습니다.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
@@ -22,6 +22,6 @@ ms.locfileid: "64611301"
   
 - 이 필드에 쓰면 안 됩니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [ReadOnly](../../visual-basic/language-reference/modifiers/readonly.md)
+- [ReadOnly](../language-reference/modifiers/readonly.md)

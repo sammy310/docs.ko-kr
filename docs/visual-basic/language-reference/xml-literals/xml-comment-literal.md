@@ -9,15 +9,15 @@ helpviewer_keywords:
 - XML comment literal [Visual Basic]
 - XML literals [Visual Basic], comment
 ms.assetid: 634c1cee-5e01-48d0-88d7-2dd55e4a9e52
-ms.openlocfilehash: 8d9db66aabe344bd5c8f9a92ac8618b7bc1abb43
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 93c1346e54106b93f3932a494dea85d082ec994d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349393"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400217"
 ---
 # <a name="xml-comment-literal-visual-basic"></a>XML 주석 리터럴(Visual Basic)
-<xref:System.Xml.Linq.XComment> 개체를 나타내는 리터럴입니다.  
+개체를 나타내는 리터럴입니다 <xref:System.Xml.Linq.XComment> .  
   
 ## <a name="syntax"></a>구문  
   
@@ -25,7 +25,7 @@ ms.locfileid: "74349393"
 <!-- content -->  
 ```  
   
-## <a name="parts"></a>요소  
+## <a name="parts"></a>부분  
   
 |용어|정의|  
 |---|---|  
@@ -41,23 +41,23 @@ ms.locfileid: "74349393"
   
 - 포함 된 식 구분 기호가 유효한 XML 주석 내용 이므로 XML 주석 리터럴에 포함 식을 사용할 수 없습니다.  
   
-- `content` "-->" 값을 포함할 수 없기 때문에 XML 주석 섹션을 중첩할 수 없습니다.  
+- XML 주석 섹션은 중첩 될 수 없습니다 `content` .에는 "-->" 값을 사용할 수 없기 때문입니다.  
   
  XML 주석 리터럴을 변수에 할당 하거나 XML 요소 리터럴에 포함할 수 있습니다.  
   
 > [!NOTE]
 > XML 리터럴은 줄 연속 문자를 사용 하지 않고 여러 줄에 걸쳐 있을 수 있습니다. 이 기능을 사용 하면 XML 문서에서 콘텐츠를 복사 하 여 Visual Basic 프로그램에 직접 붙여넣을 수 있습니다.  
   
- Visual Basic 컴파일러는 XML 주석 리터럴을 <xref:System.Xml.Linq.XComment.%23ctor%2A> 생성자에 대 한 호출로 변환 합니다.  
+ Visual Basic 컴파일러는 XML 주석 리터럴을 생성자에 대 한 호출로 변환 합니다 <xref:System.Xml.Linq.XComment.%23ctor%2A> .  
   
 ## <a name="example"></a>예제  
  다음 예에서는 "This is comment" 라는 텍스트가 포함 된 XML 주석을 만듭니다.  
   
  [!code-vb[VbXMLSamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples4.vb#9)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Xml.Linq.XComment>
-- [XML 요소 리터럴](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
-- [XML 리터럴](../../../visual-basic/language-reference/xml-literals/index.md)
-- [Visual Basic에서 XML 만들기](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [XML 요소 리터럴](xml-element-literal.md)
+- [XML 리터럴](index.md)
+- [Visual Basic에서 XML 만들기](../../programming-guide/language-features/xml/creating-xml.md)

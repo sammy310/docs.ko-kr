@@ -2,16 +2,16 @@
 title: 비동기 작업 하나가 완료되면 남은 비동기 작업 취소
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
-ms.openlocfilehash: e6747f35e665611ac7a48a87f955c8b893ee2b99
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: be716e98263c865adad3c197236467b2f48d7740
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347930"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396677"
 ---
-# <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>비동기 작업 하나가 완료 되 면 남은 비동기 작업 취소 (Visual Basic)
+# <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>비동기 작업 하나가 완료되면 남은 비동기 작업 취소(Visual Basic)
 
-<xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>과 함께 <xref:System.Threading.CancellationToken> 메서드를 사용하면 한 작업이 완료될 때 나머지 작업을 모두 취소할 수 있습니다. `WhenAny` 메서드는 작업의 컬렉션인 인수를 사용합니다. 메서드는 모든 작업을 시작하고 단일 작업을 반환합니다. 컬렉션의 임의 작업이 완료되면 단일 작업이 완료됩니다.
+<xref:System.Threading.CancellationToken>과 함께 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 메서드를 사용하면 한 작업이 완료될 때 나머지 작업을 모두 취소할 수 있습니다. `WhenAny` 메서드는 작업의 컬렉션인 인수를 사용합니다. 메서드는 모든 작업을 시작하고 단일 작업을 반환합니다. 컬렉션의 임의 작업이 완료되면 단일 작업이 완료됩니다.
 
 이 예제에서는 취소 토큰을 `WhenAny`와 함께 사용하여 작업 컬렉션에서 완료될 첫 번째 작업을 유지하고 나머지 작업을 취소하는 방법을 보여 줍니다. 각 작업은 웹 사이트의 콘텐츠를 다운로드합니다. 예제에서는 완료할 첫 번째 다운로드의 콘텐츠 길이를 표시하고 기타 다운로드를 취소합니다.
 
@@ -40,11 +40,11 @@ ms.locfileid: "74347930"
 
 ## <a name="building-the-example"></a>예제 빌드
 
-이 항목의 예제에서는 [비동기 작업 취소 또는](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) 작업 목록 취소에서 개발 된 프로젝트에 추가 합니다. **취소** 단추는 명시적으로 사용되지 않지만 예제에서는 같은 UI를 사용합니다.
+이 항목의 예제에서는 [비동기 작업 취소 또는](cancel-an-async-task-or-a-list-of-tasks.md) 작업 목록 취소에서 개발 된 프로젝트에 추가 합니다. **취소** 단추는 명시적으로 사용되지 않지만 예제에서는 같은 UI를 사용합니다.
 
 직접 예제를 빌드하려면 "예제 다운로드" 섹션의 지침을 단계별로 따르되, **CancelAListOfTasks**를 **시작 프로젝트**로 선택합니다. 이 항목의 변경 내용을 해당 프로젝트에 추가합니다.
 
-**Cancelalistoftasks** 프로젝트의 mainwindow.xaml 파일에서 각 웹 사이트에 대 한 처리 단계를 `AccessTheWebAsync`의 루프에서 다음 비동기 메서드로 이동 하 여 전환을 시작 합니다.
+**Cancelalistoftasks** 프로젝트의 mainwindow.xaml 파일에서 각 웹 사이트에 대 한 처리 단계를의 루프에서 다음 비동기 메서드로 이동 하 여 전환을 시작 합니다 `AccessTheWebAsync` .
 
 ```vb
 ' ***Bundle the processing steps for a website into one async method.
@@ -105,7 +105,7 @@ End Function
 
 프로그램을 여러 번 실행하여 다른 다운로드가 먼저 완료되는지 확인합니다.
 
-## <a name="complete-example"></a>완성된 예제
+## <a name="complete-example"></a>전체 예제
 
 다음 코드는 예제의 전체 Mainwindow.xaml 또는 MainWindow.xaml.cs 파일입니다. 별표는 이 예제에 대해 추가된 요소를 표시합니다.
 
@@ -239,6 +239,6 @@ End Class
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
-- [Async 애플리케이션 미세 조정(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Async 애플리케이션 미세 조정(Visual Basic)](fine-tuning-your-async-application.md)
+- [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](index.md)
 - [Async 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

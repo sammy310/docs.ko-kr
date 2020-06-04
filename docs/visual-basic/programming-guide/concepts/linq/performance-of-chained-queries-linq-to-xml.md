@@ -1,13 +1,13 @@
 ---
-title: 연결된 쿼리의 성능(LINQ to XML)
+title: 연결된 쿼리 성능(LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 589f2adc-69f9-404d-b9d6-4c28dabea7f7
-ms.openlocfilehash: 15cb9f94a49600c221b0cbb246743a79e9a5297b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6b87f2744f663ebd45dceb036dcaac71b80765fc
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353129"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396391"
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-visual-basic"></a>연결 된 쿼리 (LINQ to XML)의 성능 (Visual Basic)
 
@@ -33,7 +33,7 @@ Next
 4
 ```
 
-이 연결된 쿼리는 연결된 목록을 반복하는 것과 같은 성능 프로필을 제공합니다.
+이 연결된 쿼리는 연결된 목록을 반복하는 것과 같은 성능을 제공합니다.
 
 - <xref:System.Xml.Linq.XContainer.Elements%2A> 축은 기본적으로 연결된 목록을 반복하는 것과 같은 성능을 제공합니다. <xref:System.Xml.Linq.XContainer.Elements%2A>는 지연된 실행을 사용하는 반복기로 구현됩니다. 이는 연결된 목록을 반복하는 작업뿐만 아니라 반복기 개체 할당, 실행 상태 추적 등의 다른 작업도 수행함을 의미합니다. 이러한 작업은 두 가지 범주로 나눌 수 있습니다. 하나는 반복기가 설정될 때 수행되는 작업이며, 다른 하나는 각 반복에서 수행되는 작업입니다. 설정 작업은 그 양이 작고 정해져 있지만 각 반복에서 수행되는 작업의 양은 소스 컬렉션에 포함된 항목 수에 비례합니다.
 
@@ -41,10 +41,10 @@ Next
 
 - `query1`의 select 절로 인해 쿼리는 <xref:System.Linq.Enumerable.Select%2A> 메서드를 호출합니다. 이 메서드는 <xref:System.Linq.Enumerable.Where%2A> 메서드와 같은 성능을 제공합니다.
 
-- `query2`의 `Where` 절과 `Select` 절은 모두 `query1`의 해당 절과 같은 성능 프로필을 제공합니다.
+- `query2`의 `Where` 절과 `Select` 절은 모두 `query1`의 해당 절과 같은 성능을 제공합니다.
 
  따라서 `query2`의 반복은 소스로 사용된 첫 번째 쿼리의 항목 수에 정비례합니다. 즉, 선형 시간으로 실행됩니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [성능 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+- [성능 (LINQ to XML) (Visual Basic)](performance-linq-to-xml.md)

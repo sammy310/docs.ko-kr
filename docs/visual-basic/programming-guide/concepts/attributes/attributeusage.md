@@ -2,12 +2,12 @@
 title: AttributeUsage
 ms.date: 07/20/2015
 ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
-ms.openlocfilehash: 7e54e82c1e9edfd0d9d393a014f9d91f82970363
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 677d49aba38801f2adf42cc745983af30b3eddc5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353537"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400734"
 ---
 # <a name="attributeusage-visual-basic"></a>AttributeUsage (Visual Basic)
 
@@ -55,7 +55,7 @@ Class Class1
 End Class
 ```
 
-이 경우 `MultiUseAttr`이 `AllowMultiple`로 설정되므로 `true`를 반복적으로 적용할 수 있습니다. 여러 특성을 적용하기 위해 표시된 두 형식이 모두 유효합니다.
+이 경우 `AllowMultiple`이 `true`로 설정되므로 `MultiUseAttr`를 반복적으로 적용할 수 있습니다. 여러 특성을 적용하기 위해 표시된 두 형식이 모두 유효합니다.
 
 `Inherited`를 `false`로 설정하면 특성이 지정된 클래스에서 파생된 클래스가 특성을 상속하지 않습니다. 예를 들면 다음과 같습니다.
 
@@ -77,15 +77,15 @@ End Class
 
 이 경우 `Attr1`은 상속을 통해 `DClass`에 적용되지 않습니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 `AttributeUsage` 특성은 단일 사용 특성입니다. 같은 클래스에 두 번 이상 적용될 수 없습니다. `AttributeUsage`는 <xref:System.AttributeUsageAttribute>의 별칭입니다.
 
-자세한 내용은 [리플렉션을 사용하여 특성 액세스(Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)를 참조하세요.
+자세한 내용은 [리플렉션을 사용하여 특성 액세스(Visual Basic)](accessing-attributes-by-using-reflection.md)를 참조하세요.
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 `Inherited` 특성에 대한 `AllowMultiple` 및 `AttributeUsage`의 영향과 클래스에 적용되는 사용자 지정 특성을 열거하는 방법을 보여 줍니다.
+다음 예제에서는 `AttributeUsage` 특성에 대한 `Inherited` 및 `AllowMultiple`의 영향과 클래스에 적용되는 사용자 지정 특성을 열거하는 방법을 보여 줍니다.
 
 ```vb
 ' Create some custom attributes:
@@ -152,9 +152,9 @@ A2
 
 - <xref:System.Attribute>
 - <xref:System.Reflection>
-- [Visual Basic 프로그래밍 가이드](../../../../visual-basic/programming-guide/index.md)
+- [Visual Basic 프로그래밍 가이드](../../index.md)
 - [특성](../../../../standard/attributes/index.md)
-- [리플렉션(Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [특성(Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
-- [사용자 지정 특성 만들기(Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
-- [리플렉션을 사용하여 특성 액세스(Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [리플렉션(Visual Basic)](../reflection.md)
+- [특성(Visual Basic)](../../../language-reference/attributes.md)
+- [사용자 지정 특성 만들기(Visual Basic)](creating-custom-attributes.md)
+- [리플렉션을 사용하여 특성 액세스(Visual Basic)](accessing-attributes-by-using-reflection.md)
