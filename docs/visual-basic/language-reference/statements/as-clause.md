@@ -8,62 +8,62 @@ helpviewer_keywords:
 - As keyword [Visual Basic], statement syntax
 - As keyword [Visual Basic]
 ms.assetid: b4281ec8-2be5-49f7-aae8-ae0a96265b0d
-ms.openlocfilehash: cf1acbfeee150f1ea353ce134a4e94dab9928e8a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4afc2800a98ceeda8eeb3a1fada0b82c2e8bcedb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350180"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408460"
 ---
 # <a name="as-clause-visual-basic"></a>As 절(Visual Basic)
-제네릭 형식 매개 변수의 선언 문이나 제약 조건 목록에서 데이터 형식을 식별 하는 `As` 절을 소개 합니다.  
+`As`제네릭 형식 매개 변수의 선언 문이나 제약 조건 목록에서 데이터 형식을 식별 하는 절을 소개 합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  `As` 키워드는 다음 컨텍스트에서 사용할 수 있습니다.  
   
- [Aggregate 절](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
+ [Aggregate Clause](../queries/aggregate-clause.md)  
   
- [Class 문](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [Class 문](class-statement.md)  
   
- [Const 문](../../../visual-basic/language-reference/statements/const-statement.md)  
+ [Const 문](const-statement.md)  
   
- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare 문](declare-statement.md)  
   
- [Delegate 문](../../../visual-basic/language-reference/statements/delegate-statement.md)  
+ [Delegate 문](delegate-statement.md)  
   
- [Dim 문](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Dim 문](dim-statement.md)  
   
- [Enum 문](../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [Enum 문](enum-statement.md)  
   
- [Event 문](../../../visual-basic/language-reference/statements/event-statement.md)  
+ [Event 문](event-statement.md)  
   
- [... 다음 문](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [... 다음 문](for-next-statement.md)  
   
- [For Each ... 다음 문](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [For Each ... 다음 문](for-each-next-statement.md)  
   
- [From 절](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [From 절](../queries/from-clause.md)  
   
- [Function 문](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Function 문](function-statement.md)  
   
- [Group Join 절](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [Group Join 절](../queries/group-join-clause.md)  
   
- [Interface 문](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [Interface 문](interface-statement.md)  
   
- [Operator 문](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Operator Statement](operator-statement.md)  
   
- [Property 문](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Property Statement](property-statement.md)  
   
- [Structure 문](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Structure 문](structure-statement.md)  
   
- [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Sub 문](sub-statement.md)  
   
- [Try ... Catch ... Finally 문](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [Try ... Catch ... Finally 문](try-catch-finally-statement.md)  
   
 ## <a name="see-also"></a>참고 항목
 
-- [방법: 새 변수 만들기](../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
-- [데이터 형식](../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [변수 선언](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [형식 목록](../../../visual-basic/language-reference/statements/type-list.md)
-- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [키워드](../../../visual-basic/language-reference/keywords/index.md)
+- [방법: 새 변수 만들기](../../programming-guide/language-features/variables/how-to-create-a-new-variable.md)
+- [데이터 형식](../../programming-guide/language-features/data-types/index.md)
+- [변수 선언](../../programming-guide/language-features/variables/variable-declaration.md)
+- [Type List](type-list.md)
+- [Visual Basic의 제네릭 형식](../../programming-guide/language-features/data-types/generic-types.md)
+- [C++ 키워드](../keywords/index.md)

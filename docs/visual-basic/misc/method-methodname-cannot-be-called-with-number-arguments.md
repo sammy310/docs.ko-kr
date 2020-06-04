@@ -1,17 +1,17 @@
 ---
-title: 메서드 '<methodname>'로 호출할 수 없습니다 <number> 인수
+title: <number>개 인수로 ‘<methodname>’ 메서드를 호출할 수 없습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrNoMethodTakingXArguments2
 ms.assetid: 23260199-b6a4-469f-b75f-4a3d8d25e2cc
-ms.openlocfilehash: e168d59da6c0c293d2429f90b858baf3547c22b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1f8dedf6797f16e61eb44875f28f4ed9ea787540
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922319"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402111"
 ---
-# <a name="method-methodname-cannot-be-called-with-number-arguments"></a>메서드 '\<methodname >'로 호출할 수 없습니다 \<수 > 인수
+# <a name="method-methodname-cannot-be-called-with-number-arguments"></a>\<number>개 인수로 ‘\<methodname>’ 메서드를 호출할 수 없습니다.
 메서드 호출에 잘못된 인수 개수가 포함되어 있습니다.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
@@ -22,6 +22,6 @@ ms.locfileid: "61922319"
   
 3. 두 수가 일치하지 않는 경우 인수의 수를 조정합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [값 또는 참조로 인수 전달](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [값 또는 참조로 인수 전달](../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

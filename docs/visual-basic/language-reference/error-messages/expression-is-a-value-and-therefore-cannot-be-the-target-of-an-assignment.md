@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30068
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
-ms.openlocfilehash: d5aae4d30abbf9ed2af260412352a5e0452e0dcc
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 9e4dbaf2f2800454c673cd58ddec4cf0f6e5c6b9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68513032"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409509"
 ---
 # <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>식이 값이므로 할당 대상일 수 없습니다.
 
@@ -29,7 +29,7 @@ maximum = 50
 
 속성과 배열 요소에도 유사한 예제가 적용 될 수 있습니다.
 
-**간접 액세스.** 값 형식을 통해 간접적으로 액세스 하는 경우에도이 오류가 발생할 수 있습니다. 를 통해 <xref:System.Drawing.Point> <xref:System.Windows.Forms.Control.Location%2A>간접적으로 액세스 하 여의 값을 설정 하려고 시도 하는 다음 코드 예제를 고려 합니다.
+**간접 액세스.** 값 형식을 통해 간접적으로 액세스 하는 경우에도이 오류가 발생할 수 있습니다. 를 통해 간접적으로 액세스 하 여의 값을 설정 하려고 시도 하는 다음 코드 예제를 고려 합니다 <xref:System.Drawing.Point> <xref:System.Windows.Forms.Control.Location%2A> .
 
 ```vb
 ' Assume this code runs inside Form1.
@@ -39,7 +39,7 @@ exitButton.Location.X = 140
 ' The preceding line is an ERROR because of no storage for Location.
 ```
 
-이전 예제의 마지막 문은 <xref:System.Drawing.Point> <xref:System.Windows.Forms.Control.Location%2A> 속성이 반환 하는 구조에 대 한 임시 할당만 만들기 때문에 실패 합니다. 구조체는 값 형식이 며 문이 실행 된 후에는 임시 구조가 유지 되지 않습니다. 에 대 <xref:System.Windows.Forms.Control.Location%2A>한 변수를 선언 하 고 사용 하 여 문제를 해결 하면 <xref:System.Drawing.Point> 구조에 대 한 보다 영구적인 할당을 만들 수 있습니다. 다음 예제에서는 이전 예제의 마지막 문을 바꿀 수 있는 코드를 보여 줍니다.
+이전 예제의 마지막 문은 속성이 반환 하는 구조에 대 한 임시 할당만 만들기 때문에 실패 <xref:System.Drawing.Point> <xref:System.Windows.Forms.Control.Location%2A> 합니다. 구조체는 값 형식이 며 문이 실행 된 후에는 임시 구조가 유지 되지 않습니다. 에 대 한 변수를 선언 하 고 사용 하 여 문제를 해결 하면 <xref:System.Windows.Forms.Control.Location%2A> 구조에 대 한 보다 영구적인 할당을 만들 수 <xref:System.Drawing.Point> 있습니다. 다음 예제에서는 이전 예제의 마지막 문을 바꿀 수 있는 코드를 보여 줍니다.
 
 ```vb
 Dim exitLocation as New System.Drawing.Point(140, exitButton.Location.Y)
@@ -58,8 +58,8 @@ exitButton.Location = exitLocation
 
 - 변수를 사용 하 여 속성에 액세스 하 고 값을 할당 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [연산자 및 식](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
-- [문(C++)](../../../visual-basic/programming-guide/language-features/statements.md)
-- [프로시저 문제 해결](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)
+- [연산자 및 식](../../programming-guide/language-features/operators-and-expressions/index.md)
+- [문](../../programming-guide/language-features/statements.md)
+- [프로시저 문제 해결](../../programming-guide/language-features/procedures/troubleshooting-procedures.md)

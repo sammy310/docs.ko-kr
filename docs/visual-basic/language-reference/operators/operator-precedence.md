@@ -14,12 +14,12 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-ms.openlocfilehash: 318fcc3f35276ba0b2061ba9677c5fde29429f6f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: eef6314f5fc1f5a7fffa7997559f697130f6f755
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348271"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401448"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Visual Basic에서의 연산자 우선 순위
 식에서 여러 연산이 수행 될 때 각 부분은 *연산자 우선 순위*라는 미리 결정 된 순서에 따라 평가 되 고 해결 됩니다.
@@ -42,43 +42,43 @@ ms.locfileid: "74348271"
  W
 
 ### <a name="arithmetic-and-concatenation-operators"></a>산술 및 연결 연산자
- 지 때 (`^`)
+ 지 각 ( `^` )
 
- 단항 id 및 부정 (`+`, `–`)
+ 단항 id 및 부정 ( `+` , `–` )
 
- 곱하기 및 부동 소수점 나누기 (`*`, `/`)
+ 곱하기 및 부동 소수점 나누기 ( `*` , `/` )
 
- 정수 나누기 (`\`)
+ 정수 나누기 ( `\` )
 
- 모듈식 산술 (`Mod`)
+ 모듈식 산술 ( `Mod` )
 
- 더하기 및 빼기 (`+`, `–`)
+ 더하기 및 빼기 ( `+` , `–` )
 
- 문자열 연결 (`&`)
+ 문자열 연결 ( `&` )
 
- 산술 비트 시프트 (`<<`, `>>`)
+ 산술 비트 시프트 ( `<<` , `>>` )
 
 ### <a name="comparison-operators"></a>비교 연산자
- 모든 비교 연산자 (`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`)`Is`
+ 모든 비교 연산자 ( `=` , `<>` , `<` , `<=` ,,,,, `>` `>=` `Is` `IsNot` `Like` , `TypeOf` ... `Is` )
 
 ### <a name="logical-and-bitwise-operators"></a>논리 및 비트 연산자
- 부정 (`Not`)
+ 부정 ( `Not` )
 
- 결합 (`And`, `AndAlso`)
+ 결합 ( `And` , `AndAlso` )
 
- 포함 분리 (`Or`, `OrElse`)
+ 포함 분리 ( `Or` , `OrElse` )
 
- 배타적 분리 (`Xor`)
+ 배타적 분리 ( `Xor` )
 
-### <a name="comments"></a>설명
- `=` 연산자는 대입 연산자가 아닌 같음 비교 연산자입니다.
+### <a name="comments"></a>주석
+ `=`연산자는 대입 연산자가 아닌 같음 비교 연산자입니다.
 
- 문자열 연결 연산자 (`&`)는 산술 연산자가 아니지만 우선 순위는 산술 연산자와 함께 그룹화 됩니다.
+ 문자열 연결 연산자 ( `&` )는 산술 연산자가 아니지만 우선 순위는 산술 연산자와 함께 그룹화 됩니다.
 
- `Is` 및 `IsNot` 연산자는 개체 참조 비교 연산자입니다. 두 개체의 값을 비교 하지 않습니다. 두 개체 변수가 동일한 개체 인스턴스를 참조 하는지 확인 합니다.
+ `Is`및 `IsNot` 연산자는 개체 참조 비교 연산자입니다. 두 개체의 값을 비교 하지 않습니다. 두 개체 변수가 동일한 개체 인스턴스를 참조 하는지 확인 합니다.
 
-## <a name="associativity"></a>결합성
- 곱하기 및 나누기와 같이 우선 순위가 같은 연산자가 식에 함께 표시 되는 경우 컴파일러는 각 작업을 왼쪽에서 오른쪽으로 발견할 때 각 작업을 평가 합니다. 다음 예제에서는 이것을 보여 줍니다.
+## <a name="associativity"></a>associativity
+ 곱하기 및 나누기와 같이 우선 순위가 같은 연산자가 식에 함께 표시 되는 경우 컴파일러는 각 작업을 왼쪽에서 오른쪽으로 발견할 때 각 작업을 평가 합니다. 다음은 이에 대한 예입니다.
 
 ```vb
 Dim n1 As Integer = 96 / 8 / 4
@@ -86,12 +86,12 @@ Dim n2 As Integer = (96 / 8) / 4
 Dim n3 As Integer = 96 / (8 / 4)
 ```
 
- 첫 번째 식은 나누기 96/8 (결과 12)을 평가한 다음 나누기 12/4를 계산 하 여 3을 반환 합니다. 컴파일러는 `n1`에 대 한 작업을 왼쪽에서 오른쪽으로 평가 하기 때문에 `n2`에 대해 순서가 명시적으로 지정 된 경우에는 계산이 동일 합니다. `n1`와 `n2`는 모두 3의 결과를 가집니다. 이와 대조적으로 괄호를 적용 하면 컴파일러가 8/4를 먼저 평가 하기 때문에 `n3`의 결과는 48입니다.
+ 첫 번째 식은 나누기 96/8 (결과 12)을 평가한 다음 나누기 12/4를 계산 하 여 3을 반환 합니다. 컴파일러는에 대 한 작업을 왼쪽에서 오른쪽으로 평가 하기 때문에 `n1` 에 대 한 순서가 명시적으로 지정 된 경우에도 계산이 동일 합니다 `n2` . 및는 모두 `n1` `n2` 3의 결과를 가집니다. 이와 대조적으로 `n3` 괄호를 적용 하면 컴파일러가 8/4를 먼저 평가 하기 때문에 48이 발생 합니다.
 
  이 동작으로 인해 연산자는 Visual Basic에서 *왼쪽 결합성* 이라고 합니다.
 
 ## <a name="overriding-precedence-and-associativity"></a>우선 순위 및 결합성 재정의
- 괄호를 사용 하 여 식의 일부 부분이 다른 식 보다 먼저 계산 되도록 할 수 있습니다. 이는 우선 순위와 왼쪽 결합성의 순서를 모두 재정의할 수 있습니다. Visual Basic는 항상 괄호 안에 포함 된 작업을 외부에서 수행 합니다. 그러나 괄호 안에 괄호를 사용 하지 않으면 괄호 안에 일반적인 우선 순위와 결합성이 유지 됩니다. 다음 예제에서는 이것을 보여 줍니다.
+ 괄호를 사용 하 여 식의 일부 부분이 다른 식 보다 먼저 계산 되도록 할 수 있습니다. 이는 우선 순위와 왼쪽 결합성의 순서를 모두 재정의할 수 있습니다. Visual Basic는 항상 괄호 안에 포함 된 작업을 외부에서 수행 합니다. 그러나 괄호 안에 괄호를 사용 하지 않으면 괄호 안에 일반적인 우선 순위와 결합성이 유지 됩니다. 다음은 이에 대한 예입니다.
 
 ```vb
 Dim a, b, c, d, e, f, g As Double
@@ -113,11 +113,11 @@ g = (a - (b + c)) / (d * e)
 
 ## <a name="see-also"></a>참고 항목
 
-- [= 연산자](../../../visual-basic/language-reference/operators/assignment-operator.md)
-- [Is 연산자](../../../visual-basic/language-reference/operators/is-operator.md)
-- [IsNot 연산자](../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [Like 연산자](../../../visual-basic/language-reference/operators/like-operator.md)
-- [TypeOf 연산자](../../../visual-basic/language-reference/operators/typeof-operator.md)
-- [Await 연산자](../../../visual-basic/language-reference/operators/await-operator.md)
-- [기능별 연산자 목록](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [연산자 및 식](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [= 연산자](assignment-operator.md)
+- [Is 연산자](is-operator.md)
+- [IsNot 연산자](isnot-operator.md)
+- [Like 연산자](like-operator.md)
+- [TypeOf 연산자](typeof-operator.md)
+- [Wait 연산자](await-operator.md)
+- [기능별 연산자 목록](operators-listed-by-functionality.md)
+- [연산자 및 식](../../programming-guide/language-features/operators-and-expressions/index.md)

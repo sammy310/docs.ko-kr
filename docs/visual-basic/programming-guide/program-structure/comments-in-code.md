@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: 189810393db42c54cb8a0f97b22b3d1514d9a7c4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b50e76b8f832c3a214ca54f97bab8b0b6789ac25
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346166"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403319"
 ---
 # <a name="comments-in-code-visual-basic"></a>코드 주석(Visual Basic)
 코드 예제를 읽다 보면 종종 주석 기호(`'`)를 보게 됩니다. 이 기호는 Visual Basic 컴파일러가 뒤에 나오는 텍스트 또는 *주석을*무시 하도록 지시 합니다. 주석이란 해당 코드를 읽을 사람의 편의를 위해 코드에 추가되는 간단한 설명입니다.  
@@ -41,10 +41,10 @@ ms.locfileid: "74346166"
 |---|---|  
 |주석 형식|주석 설명|  
 |용도|프로시저의 작업 수행 방식이 아니라 해당 프로시저에서 수행하는 작업에 대해 설명합니다.|  
-|가정|프로시저에서 액세스하는 외부 변수, 컨트롤, 열린 파일 또는 기타 요소를 나열합니다.|  
+|Assumptions|프로시저에서 액세스하는 외부 변수, 컨트롤, 열린 파일 또는 기타 요소를 나열합니다.|  
 |효과|영향을 받은 외부 변수, 컨트롤 또는 파일을 나열하고, 분명하지 않은 경우에는 그 효과를 나열합니다.|  
 |입력|인수의 용도를 지정합니다.|  
-|반환 값|프로시저에 의해 반환된 값에 대해 설명합니다.|  
+|반환|프로시저에 의해 반환된 값에 대해 설명합니다.|  
   
  다음은 주의해야 할 사항입니다.  
   
@@ -54,15 +54,15 @@ ms.locfileid: "74346166"
   
 - 줄 연속 시퀀스를 사용한 후에는 같은 줄에 주석을 쓸 수 없습니다.  
   
- **편집** 도구 모음에서 하나 이상의 코드 줄을 선택 하 고 **주석** (visual](./media/comments-in-code/visual-basic-comment-button.gif)studio의 Visual Basic 주석 단추![)을 선택 하 고 주석 **처리** 를 제거 하 여 코드 블록의 주석 기호를 추가 하거나 제거할 수 있습니다![(Visual Basic).](./media/comments-in-code/visual-basic-uncomment-button.gif)  
+ 코드 줄을 하나 이상 선택 하 고 **주석** ( ![ visual Studio의 Visual Basic 주석 단추)을 선택 하 ](./media/comments-in-code/visual-basic-comment-button.gif) 고 **Uncomment** ![ ](./media/comments-in-code/visual-basic-uncomment-button.gif) **편집** 도구 모음에서 주석 처리를 제거 (visual studio의 Visual Basic 주석 제거 단추) 하는 방법으로 코드 블록의 주석 기호를 추가 하거나 제거할 수 있습니다.  
   
 > [!NOTE]
-> `REM` 키워드로 텍스트를 시작하여 코드에 주석을 추가할 수도 있습니다. 그러나 `'` 기호와 **주석**/주석 **제거** 단추는 사용 하기 쉬우며 공간 및 메모리를 줄일 수 있습니다.  
+> `REM` 키워드로 텍스트를 시작하여 코드에 주석을 추가할 수도 있습니다. 그러나 `'` 기호 및 **주석** / **주석 처리** 되지 않은 단추는 사용 하기 쉬우며 공간 및 메모리를 줄일 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목
 
 - [Basic 직감-XML 주석을 사용 하 여 코드 문서화](https://docs.microsoft.com/archive/msdn-magazine/2009/may/documenting-your-code-with-xml-comments)
-- [방법: XML 문서 만들기](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
-- [XML 주석 태그](../../../visual-basic/language-reference/xmldoc/index.md)
-- [프로그램 구조 및 코드 규칙](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
-- [REM 문](../../../visual-basic/language-reference/statements/rem-statement.md)
+- [방법: XML 설명서 만들기](how-to-create-xml-documentation.md)
+- [XML 주석 태그](../../language-reference/xmldoc/index.md)
+- [프로그램 구조 및 코드 규칙](program-structure-and-code-conventions.md)
+- [REM 문](../../language-reference/statements/rem-statement.md)

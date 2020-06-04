@@ -2,12 +2,12 @@
 title: '방법: 식 트리를 사용하여 동적 쿼리 빌드'
 ms.date: 07/20/2015
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
-ms.openlocfilehash: 616aa3eba1e07a92983bb5d2048a9dbae936e77c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 1f686c37b5d04263ac5ae0dd6883aa8a519ed19e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346060"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410981"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>방법: 식 트리를 사용 하 여 동적 쿼리 빌드 (Visual Basic)
 
@@ -17,7 +17,7 @@ LINQ에서는 식 트리를 사용하여 <xref:System.Linq.IQueryable%601>을 �
 
 이 항목에서는 식 트리를 사용하여 동적 LINQ 쿼리를 만드는 방법을 설명합니다. 동적 쿼리는 컴파일 시 쿼리의 세부 정보를 알 수 없는 경우에 유용합니다. 예를 들어 최종 사용자가 하나 이상의 조건자를 지정하여 데이터를 필터링할 수 있는 사용자 인터페이스를 애플리케이션에서 제공할 수 있습니다. LINQ를 쿼리에 사용하려면 이러한 종류의 애플리케이션에서 식 트리를 사용하여 런타임에 LINQ 쿼리를 만들어야 합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 식 트리를 사용하여 `IQueryable` 데이터 소스에 대한 쿼리를 생성한 다음 실행하는 방법을 보여 줍니다. 코드에서 다음 쿼리를 나타내는 식 트리를 작성합니다.
 
@@ -103,13 +103,13 @@ Next
 
 ## <a name="compile-the-code"></a>코드 컴파일
 
-- **콘솔 애플리케이션** 프로젝트를 새로 만듭니다.
+- 새 **콘솔 응용 프로그램** 프로젝트를 만듭니다.
 
 - System.Linq.Expressions 네임스페이스를 포함합니다.
 
-- 예제의 코드를 복사 하 여 `Main` `Sub` 프로시저에 붙여넣습니다.
+- 예제의 코드를 복사 하 여 프로시저에 붙여넣습니다 `Main` `Sub` .
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [식 트리(Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
-- [방법: 식 트리 실행 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+- [식 트리(Visual Basic)](index.md)
+- [방법: 식 트리 실행(Visual Basic)](how-to-execute-expression-trees.md)
