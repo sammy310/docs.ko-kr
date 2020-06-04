@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC31084
 ms.assetid: 6111c5ca-d30b-490a-812e-dd422e221c7d
-ms.openlocfilehash: f9598a219c9ec0a5dac0b6e7df778bb9efd05f44
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 04c59f5efe190210a2a6b87b7c2a0971b705c1bb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642926"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409584"
 ---
-# <a name="events-cannot-be-declared-with-a-delegate-type-that-has-a-return-type"></a><span data-ttu-id="ca0ab-102">이벤트는 반환 형식이 있는 대리자 형식으로 선언할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="ca0ab-102">Events cannot be declared with a delegate type that has a return type</span></span>
-<span data-ttu-id="ca0ab-103">대리자는 function 프로시저에 지정 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="ca0ab-103">A delegate was specified for a function procedure.</span></span>  
+# <a name="events-cannot-be-declared-with-a-delegate-type-that-has-a-return-type"></a><span data-ttu-id="e9eb7-102">이벤트는 반환 형식이 있는 대리자 형식으로 선언할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="e9eb7-102">Events cannot be declared with a delegate type that has a return type</span></span>
+<span data-ttu-id="e9eb7-103">대리자가 함수 프로시저에 대해 지정 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="e9eb7-103">A delegate was specified for a function procedure.</span></span>  
   
- <span data-ttu-id="ca0ab-104">**오류 ID:** BC31084</span><span class="sxs-lookup"><span data-stu-id="ca0ab-104">**Error ID:** BC31084</span></span>  
+ <span data-ttu-id="e9eb7-104">**오류 ID:** BC31084</span><span class="sxs-lookup"><span data-stu-id="e9eb7-104">**Error ID:** BC31084</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="ca0ab-105">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="ca0ab-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e9eb7-105">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="e9eb7-105">To correct this error</span></span>  
   
-- <span data-ttu-id="ca0ab-106">에 대리자를 지정 된 `Sub` 프로시저입니다.</span><span class="sxs-lookup"><span data-stu-id="ca0ab-106">Specify a delegate for a `Sub` procedure.</span></span>  
+- <span data-ttu-id="e9eb7-106">프로시저에 대 한 대리자를 지정 `Sub` 합니다.</span><span class="sxs-lookup"><span data-stu-id="e9eb7-106">Specify a delegate for a `Sub` procedure.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ca0ab-107">참고자료</span><span class="sxs-lookup"><span data-stu-id="ca0ab-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e9eb7-107">참조</span><span class="sxs-lookup"><span data-stu-id="e9eb7-107">See also</span></span>
 
-- [<span data-ttu-id="ca0ab-108">이벤트</span><span class="sxs-lookup"><span data-stu-id="ca0ab-108">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [<span data-ttu-id="e9eb7-108">이벤트</span><span class="sxs-lookup"><span data-stu-id="e9eb7-108">Events</span></span>](../../programming-guide/language-features/events/index.md)
