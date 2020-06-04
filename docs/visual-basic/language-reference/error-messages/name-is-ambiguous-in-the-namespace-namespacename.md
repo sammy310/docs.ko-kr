@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30560
 ms.assetid: 7f032293-054b-4eae-8d97-3db8e7ddde3b
-ms.openlocfilehash: 6171572176d53562a1baeb8d8602113f6abf9c43
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0fd07e4b777bdf48fa07eac7ef49dfb92aae522f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665721"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397196"
 ---
-# <a name="name-is-ambiguous-in-the-namespace-namespacename"></a><span data-ttu-id="79aab-102">'\<이름 >' 네임 스페이스에서 모호 합니다. '\<namespacename >'</span><span class="sxs-lookup"><span data-stu-id="79aab-102">'\<name>' is ambiguous in the namespace '\<namespacename>'</span></span>
-<span data-ttu-id="79aab-103">모호한 이름을 제공했으므로 다른 이름과 충돌합니다.</span><span class="sxs-lookup"><span data-stu-id="79aab-103">You have provided a name that is ambiguous and therefore conflicts with another name.</span></span> <span data-ttu-id="79aab-104">Visual Basic 컴파일러에는 충돌 해결 규칙이; 없습니다 직접 이름을 구분 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="79aab-104">The Visual Basic compiler does not have any conflict resolution rules; you must disambiguate names yourself.</span></span>  
+# <a name="name-is-ambiguous-in-the-namespace-namespacename"></a><span data-ttu-id="7921e-102">'\<name>'은(는) '\<namespacename>' 네임스페이스에서 모호합니다.</span><span class="sxs-lookup"><span data-stu-id="7921e-102">'\<name>' is ambiguous in the namespace '\<namespacename>'</span></span>
+<span data-ttu-id="7921e-103">모호한 이름을 제공했으므로 다른 이름과 충돌합니다.</span><span class="sxs-lookup"><span data-stu-id="7921e-103">You have provided a name that is ambiguous and therefore conflicts with another name.</span></span> <span data-ttu-id="7921e-104">Visual Basic 컴파일러에 충돌 해결 규칙이 없습니다. 이름을 명확 하 게 구분 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="7921e-104">The Visual Basic compiler does not have any conflict resolution rules; you must disambiguate names yourself.</span></span>  
   
- <span data-ttu-id="79aab-105">**오류 ID:** BC30560</span><span class="sxs-lookup"><span data-stu-id="79aab-105">**Error ID:** BC30560</span></span>  
+ <span data-ttu-id="7921e-105">**오류 ID:** BC30560</span><span class="sxs-lookup"><span data-stu-id="7921e-105">**Error ID:** BC30560</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="79aab-106">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="79aab-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="7921e-106">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="7921e-106">To correct this error</span></span>  
   
-- <span data-ttu-id="79aab-107">이름을 정규화합니다.</span><span class="sxs-lookup"><span data-stu-id="79aab-107">Fully qualify the name.</span></span>  
+- <span data-ttu-id="7921e-107">이름을 정규화합니다.</span><span class="sxs-lookup"><span data-stu-id="7921e-107">Fully qualify the name.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="79aab-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="79aab-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7921e-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="7921e-108">See also</span></span>
 
-- [<span data-ttu-id="79aab-109">Visual Basic의 네임 스페이스</span><span class="sxs-lookup"><span data-stu-id="79aab-109">Namespaces in Visual Basic</span></span>](../../../visual-basic/programming-guide/program-structure/namespaces.md)
-- [<span data-ttu-id="79aab-110">Namespace 문</span><span class="sxs-lookup"><span data-stu-id="79aab-110">Namespace Statement</span></span>](../../../visual-basic/language-reference/statements/namespace-statement.md)
+- [<span data-ttu-id="7921e-109">Visual Basic의 네임스페이스</span><span class="sxs-lookup"><span data-stu-id="7921e-109">Namespaces in Visual Basic</span></span>](../../programming-guide/program-structure/namespaces.md)
+- [<span data-ttu-id="7921e-110">Namespace 문</span><span class="sxs-lookup"><span data-stu-id="7921e-110">Namespace Statement</span></span>](../statements/namespace-statement.md)

@@ -2,20 +2,20 @@
 title: '방법: LINQ to XML 축 메서드 작성'
 ms.date: 07/20/2015
 ms.assetid: b676f025-a24c-4076-8713-aa809b2b8ce0
-ms.openlocfilehash: 88a9df9a2750736cfd34b655cf3ea0f57b2bff39
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0a20bef800c07b0db8ed47c7a04fd102c1076588
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348341"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397650"
 ---
-# <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a><span data-ttu-id="4875e-102">방법: LINQ to XML 축 메서드 작성 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4875e-102">How to: Write a LINQ to XML Axis Method (Visual Basic)</span></span>
-<span data-ttu-id="4875e-103">XML 트리에서 컬렉션을 검색하는 축 메서드를 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4875e-103">You can write your own axis methods to retrieve collections from an XML tree.</span></span> <span data-ttu-id="4875e-104">축 메서드를 작성하는 가장 좋은 방법 중 하나는 요소나 특성의 컬렉션을 반환하는 확장 메서드를 작성하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="4875e-104">One of the best ways to do this is to write an extension method that returns a collection of elements or attributes.</span></span> <span data-ttu-id="4875e-105">애플리케이션의 요구 사항에 따라 요소나 특성의 특정 하위 집합을 반환하는 확장명 메서드를 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4875e-105">You can write your extension method to return specific subsets of elements or attributes, based on the requirements of your application.</span></span>  
+# <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a><span data-ttu-id="cea6e-102">방법: LINQ to XML 축 메서드 작성 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cea6e-102">How to: Write a LINQ to XML Axis Method (Visual Basic)</span></span>
+<span data-ttu-id="cea6e-103">XML 트리에서 컬렉션을 검색하는 축 메서드를 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cea6e-103">You can write your own axis methods to retrieve collections from an XML tree.</span></span> <span data-ttu-id="cea6e-104">축 메서드를 작성하는 가장 좋은 방법 중 하나는 요소나 특성의 컬렉션을 반환하는 확장 메서드를 작성하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="cea6e-104">One of the best ways to do this is to write an extension method that returns a collection of elements or attributes.</span></span> <span data-ttu-id="cea6e-105">애플리케이션의 요구 사항에 따라 요소나 특성의 특정 하위 집합을 반환하는 확장명 메서드를 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cea6e-105">You can write your extension method to return specific subsets of elements or attributes, based on the requirements of your application.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4875e-106">예제</span><span class="sxs-lookup"><span data-stu-id="4875e-106">Example</span></span>  
- <span data-ttu-id="4875e-107">다음 예제에서는 두 가지 확장명 메서드를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="4875e-107">The following example uses two extension methods.</span></span> <span data-ttu-id="4875e-108">첫 번째 확장 메서드인 `GetXPath`는 <xref:System.Xml.Linq.XObject>에 대해 작동하며 계산될 때 노드나 특성을 반환할 XPath 식을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="4875e-108">The first extension method, `GetXPath`, operates on <xref:System.Xml.Linq.XObject>, and returns an XPath expression that when evaluated will return the node or attribute.</span></span> <span data-ttu-id="4875e-109">두 번째 확장 메서드인 `Find`는 <xref:System.Xml.Linq.XElement>에 대해 작동하며</span><span class="sxs-lookup"><span data-stu-id="4875e-109">The second extension method, `Find`, operates on <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="4875e-110">지정된 일부 텍스트가 포함된 <xref:System.Xml.Linq.XAttribute> 개체와 <xref:System.Xml.Linq.XElement> 개체의 컬렉션을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="4875e-110">It returns a collection of <xref:System.Xml.Linq.XAttribute> objects and <xref:System.Xml.Linq.XElement> objects that contain some specified text.</span></span>  
+## <a name="example"></a><span data-ttu-id="cea6e-106">예제</span><span class="sxs-lookup"><span data-stu-id="cea6e-106">Example</span></span>  
+ <span data-ttu-id="cea6e-107">다음 예제에서는 두 가지 확장명 메서드를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="cea6e-107">The following example uses two extension methods.</span></span> <span data-ttu-id="cea6e-108">첫 번째 확장 메서드인 `GetXPath`는 <xref:System.Xml.Linq.XObject>에 대해 작동하며 계산될 때 노드나 특성을 반환할 XPath 식을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="cea6e-108">The first extension method, `GetXPath`, operates on <xref:System.Xml.Linq.XObject>, and returns an XPath expression that when evaluated will return the node or attribute.</span></span> <span data-ttu-id="cea6e-109">두 번째 확장 메서드인 `Find`는 <xref:System.Xml.Linq.XElement>에 대해 작동하며</span><span class="sxs-lookup"><span data-stu-id="cea6e-109">The second extension method, `Find`, operates on <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="cea6e-110">지정된 일부 텍스트가 포함된 <xref:System.Xml.Linq.XAttribute> 개체와 <xref:System.Xml.Linq.XElement> 개체의 컬렉션을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="cea6e-110">It returns a collection of <xref:System.Xml.Linq.XAttribute> objects and <xref:System.Xml.Linq.XElement> objects that contain some specified text.</span></span>  
   
- <span data-ttu-id="4875e-111">이 예제에서는 XML 문서 [샘플 XML 파일: 여러 구매 주문(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="4875e-111">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="cea6e-111">이 예제에서는 XML 문서 [샘플 XML 파일: 여러 구매 주문(LINQ to XML)](sample-xml-file-multiple-purchase-orders-linq-to-xml.md)을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="cea6e-111">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Imports System.Runtime.CompilerServices  
@@ -202,7 +202,7 @@ Public Module MyExtensions
 End Module  
 ```  
   
- <span data-ttu-id="4875e-112">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="4875e-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="cea6e-112">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="cea6e-112">This code produces the following output:</span></span>  
   
 ```console  
 /PurchaseOrders/PurchaseOrder[1]/@OrderDate  
@@ -215,6 +215,6 @@ End Module
 1999-10-22  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4875e-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4875e-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cea6e-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="cea6e-113">See also</span></span>
 
-- [<span data-ttu-id="4875e-114">LINQ to XML (고급 쿼리 기술) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4875e-114">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [<span data-ttu-id="cea6e-114">LINQ to XML (고급 쿼리 기술) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cea6e-114">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span></span>](advanced-query-techniques-linq-to-xml.md)
