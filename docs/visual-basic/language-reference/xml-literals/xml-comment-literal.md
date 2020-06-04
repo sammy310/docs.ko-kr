@@ -9,55 +9,55 @@ helpviewer_keywords:
 - XML comment literal [Visual Basic]
 - XML literals [Visual Basic], comment
 ms.assetid: 634c1cee-5e01-48d0-88d7-2dd55e4a9e52
-ms.openlocfilehash: 8d9db66aabe344bd5c8f9a92ac8618b7bc1abb43
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 93c1346e54106b93f3932a494dea85d082ec994d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349393"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400217"
 ---
-# <a name="xml-comment-literal-visual-basic"></a><span data-ttu-id="0e22d-102">XML 주석 리터럴(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0e22d-102">XML Comment Literal (Visual Basic)</span></span>
-<span data-ttu-id="0e22d-103"><xref:System.Xml.Linq.XComment> 개체를 나타내는 리터럴입니다.</span><span class="sxs-lookup"><span data-stu-id="0e22d-103">A literal representing an <xref:System.Xml.Linq.XComment> object.</span></span>  
+# <a name="xml-comment-literal-visual-basic"></a><span data-ttu-id="79650-102">XML 주석 리터럴(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="79650-102">XML Comment Literal (Visual Basic)</span></span>
+<span data-ttu-id="79650-103">개체를 나타내는 리터럴입니다 <xref:System.Xml.Linq.XComment> .</span><span class="sxs-lookup"><span data-stu-id="79650-103">A literal representing an <xref:System.Xml.Linq.XComment> object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0e22d-104">구문</span><span class="sxs-lookup"><span data-stu-id="0e22d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="79650-104">구문</span><span class="sxs-lookup"><span data-stu-id="79650-104">Syntax</span></span>  
   
 ```xml  
 <!-- content -->  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="0e22d-105">요소</span><span class="sxs-lookup"><span data-stu-id="0e22d-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="79650-105">부분</span><span class="sxs-lookup"><span data-stu-id="79650-105">Parts</span></span>  
   
-|<span data-ttu-id="0e22d-106">용어</span><span class="sxs-lookup"><span data-stu-id="0e22d-106">Term</span></span>|<span data-ttu-id="0e22d-107">정의</span><span class="sxs-lookup"><span data-stu-id="0e22d-107">Definition</span></span>|  
+|<span data-ttu-id="79650-106">용어</span><span class="sxs-lookup"><span data-stu-id="79650-106">Term</span></span>|<span data-ttu-id="79650-107">정의</span><span class="sxs-lookup"><span data-stu-id="79650-107">Definition</span></span>|  
 |---|---|  
-|`<!--`|<span data-ttu-id="0e22d-108">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="0e22d-108">Required.</span></span> <span data-ttu-id="0e22d-109">XML 주석의 시작을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="0e22d-109">Denotes the start of the XML comment.</span></span>|  
-|`content`|<span data-ttu-id="0e22d-110">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="0e22d-110">Required.</span></span> <span data-ttu-id="0e22d-111">XML 주석에 표시할 텍스트입니다.</span><span class="sxs-lookup"><span data-stu-id="0e22d-111">Text to appear in the XML comment.</span></span> <span data-ttu-id="0e22d-112">두 개의 하이픈 (--)을 포함 하거나 닫는 태그 옆에 하이픈으로 끝날 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="0e22d-112">Cannot contain a series of two hyphens (--) or end with a hyphen adjacent to the closing tag.</span></span>|  
-|`-->`|<span data-ttu-id="0e22d-113">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="0e22d-113">Required.</span></span> <span data-ttu-id="0e22d-114">XML 주석의 끝을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="0e22d-114">Denotes the end of the XML comment.</span></span>|  
+|`<!--`|<span data-ttu-id="79650-108">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="79650-108">Required.</span></span> <span data-ttu-id="79650-109">XML 주석의 시작을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="79650-109">Denotes the start of the XML comment.</span></span>|  
+|`content`|<span data-ttu-id="79650-110">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="79650-110">Required.</span></span> <span data-ttu-id="79650-111">XML 주석에 표시할 텍스트입니다.</span><span class="sxs-lookup"><span data-stu-id="79650-111">Text to appear in the XML comment.</span></span> <span data-ttu-id="79650-112">두 개의 하이픈 (--)을 포함 하거나 닫는 태그 옆에 하이픈으로 끝날 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="79650-112">Cannot contain a series of two hyphens (--) or end with a hyphen adjacent to the closing tag.</span></span>|  
+|`-->`|<span data-ttu-id="79650-113">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="79650-113">Required.</span></span> <span data-ttu-id="79650-114">XML 주석의 끝을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="79650-114">Denotes the end of the XML comment.</span></span>|  
   
-## <a name="return-value"></a><span data-ttu-id="0e22d-115">반환 값</span><span class="sxs-lookup"><span data-stu-id="0e22d-115">Return Value</span></span>  
- <span data-ttu-id="0e22d-116"><xref:System.Xml.Linq.XComment> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="0e22d-116">An <xref:System.Xml.Linq.XComment> object.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="79650-115">반환 값</span><span class="sxs-lookup"><span data-stu-id="79650-115">Return Value</span></span>  
+ <span data-ttu-id="79650-116"><xref:System.Xml.Linq.XComment> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="79650-116">An <xref:System.Xml.Linq.XComment> object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0e22d-117">설명</span><span class="sxs-lookup"><span data-stu-id="0e22d-117">Remarks</span></span>  
- <span data-ttu-id="0e22d-118">XML 주석 리터럴에 문서 내용이 포함 되어 있지 않습니다. 문서에 대 한 정보를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e22d-118">XML comment literals do not contain document content; they contain information about the document.</span></span> <span data-ttu-id="0e22d-119">XML 주석 섹션은 "-->" 시퀀스로 끝납니다.</span><span class="sxs-lookup"><span data-stu-id="0e22d-119">The XML comment section ends with the sequence "-->".</span></span> <span data-ttu-id="0e22d-120">이는 다음 사항을 의미 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e22d-120">This implies the following points:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="79650-117">설명</span><span class="sxs-lookup"><span data-stu-id="79650-117">Remarks</span></span>  
+ <span data-ttu-id="79650-118">XML 주석 리터럴에 문서 내용이 포함 되어 있지 않습니다. 문서에 대 한 정보를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="79650-118">XML comment literals do not contain document content; they contain information about the document.</span></span> <span data-ttu-id="79650-119">XML 주석 섹션은 "-->" 시퀀스로 끝납니다.</span><span class="sxs-lookup"><span data-stu-id="79650-119">The XML comment section ends with the sequence "-->".</span></span> <span data-ttu-id="79650-120">이는 다음 사항을 의미 합니다.</span><span class="sxs-lookup"><span data-stu-id="79650-120">This implies the following points:</span></span>  
   
-- <span data-ttu-id="0e22d-121">포함 된 식 구분 기호가 유효한 XML 주석 내용 이므로 XML 주석 리터럴에 포함 식을 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="0e22d-121">You cannot use an embedded expression in an XML comment literal because the embedded expression delimiters are valid XML comment content.</span></span>  
+- <span data-ttu-id="79650-121">포함 된 식 구분 기호가 유효한 XML 주석 내용 이므로 XML 주석 리터럴에 포함 식을 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="79650-121">You cannot use an embedded expression in an XML comment literal because the embedded expression delimiters are valid XML comment content.</span></span>  
   
-- <span data-ttu-id="0e22d-122">`content` "-->" 값을 포함할 수 없기 때문에 XML 주석 섹션을 중첩할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="0e22d-122">XML comment sections cannot be nested, because `content` cannot contain the value "-->".</span></span>  
+- <span data-ttu-id="79650-122">XML 주석 섹션은 중첩 될 수 없습니다 `content` .에는 "-->" 값을 사용할 수 없기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="79650-122">XML comment sections cannot be nested, because `content` cannot contain the value "-->".</span></span>  
   
- <span data-ttu-id="0e22d-123">XML 주석 리터럴을 변수에 할당 하거나 XML 요소 리터럴에 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0e22d-123">You can assign an XML comment literal to a variable, or you can include it in an XML element literal.</span></span>  
+ <span data-ttu-id="79650-123">XML 주석 리터럴을 변수에 할당 하거나 XML 요소 리터럴에 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="79650-123">You can assign an XML comment literal to a variable, or you can include it in an XML element literal.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="0e22d-124">XML 리터럴은 줄 연속 문자를 사용 하지 않고 여러 줄에 걸쳐 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0e22d-124">An XML literal can span multiple lines without using line continuation characters.</span></span> <span data-ttu-id="0e22d-125">이 기능을 사용 하면 XML 문서에서 콘텐츠를 복사 하 여 Visual Basic 프로그램에 직접 붙여넣을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0e22d-125">This feature enables you to copy content from an XML document and paste it directly into a Visual Basic program.</span></span>  
+> <span data-ttu-id="79650-124">XML 리터럴은 줄 연속 문자를 사용 하지 않고 여러 줄에 걸쳐 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="79650-124">An XML literal can span multiple lines without using line continuation characters.</span></span> <span data-ttu-id="79650-125">이 기능을 사용 하면 XML 문서에서 콘텐츠를 복사 하 여 Visual Basic 프로그램에 직접 붙여넣을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="79650-125">This feature enables you to copy content from an XML document and paste it directly into a Visual Basic program.</span></span>  
   
- <span data-ttu-id="0e22d-126">Visual Basic 컴파일러는 XML 주석 리터럴을 <xref:System.Xml.Linq.XComment.%23ctor%2A> 생성자에 대 한 호출로 변환 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e22d-126">The Visual Basic compiler converts the XML comment literal to a call to the <xref:System.Xml.Linq.XComment.%23ctor%2A> constructor.</span></span>  
+ <span data-ttu-id="79650-126">Visual Basic 컴파일러는 XML 주석 리터럴을 생성자에 대 한 호출로 변환 합니다 <xref:System.Xml.Linq.XComment.%23ctor%2A> .</span><span class="sxs-lookup"><span data-stu-id="79650-126">The Visual Basic compiler converts the XML comment literal to a call to the <xref:System.Xml.Linq.XComment.%23ctor%2A> constructor.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0e22d-127">예제</span><span class="sxs-lookup"><span data-stu-id="0e22d-127">Example</span></span>  
- <span data-ttu-id="0e22d-128">다음 예에서는 "This is comment" 라는 텍스트가 포함 된 XML 주석을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="0e22d-128">The following example creates an XML comment that contains the text "This is a comment".</span></span>  
+## <a name="example"></a><span data-ttu-id="79650-127">예제</span><span class="sxs-lookup"><span data-stu-id="79650-127">Example</span></span>  
+ <span data-ttu-id="79650-128">다음 예에서는 "This is comment" 라는 텍스트가 포함 된 XML 주석을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="79650-128">The following example creates an XML comment that contains the text "This is a comment".</span></span>  
   
  [!code-vb[VbXMLSamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples4.vb#9)]  
   
-## <a name="see-also"></a><span data-ttu-id="0e22d-129">참고자료</span><span class="sxs-lookup"><span data-stu-id="0e22d-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="79650-129">참고 항목</span><span class="sxs-lookup"><span data-stu-id="79650-129">See also</span></span>
 
 - <xref:System.Xml.Linq.XComment>
-- [<span data-ttu-id="0e22d-130">XML 요소 리터럴</span><span class="sxs-lookup"><span data-stu-id="0e22d-130">XML Element Literal</span></span>](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
-- [<span data-ttu-id="0e22d-131">XML 리터럴</span><span class="sxs-lookup"><span data-stu-id="0e22d-131">XML Literals</span></span>](../../../visual-basic/language-reference/xml-literals/index.md)
-- [<span data-ttu-id="0e22d-132">Visual Basic에서 XML 만들기</span><span class="sxs-lookup"><span data-stu-id="0e22d-132">Creating XML in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [<span data-ttu-id="79650-130">XML 요소 리터럴</span><span class="sxs-lookup"><span data-stu-id="79650-130">XML Element Literal</span></span>](xml-element-literal.md)
+- [<span data-ttu-id="79650-131">XML 리터럴</span><span class="sxs-lookup"><span data-stu-id="79650-131">XML Literals</span></span>](index.md)
+- [<span data-ttu-id="79650-132">Visual Basic에서 XML 만들기</span><span class="sxs-lookup"><span data-stu-id="79650-132">Creating XML in Visual Basic</span></span>](../../programming-guide/language-features/xml/creating-xml.md)

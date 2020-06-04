@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC36635
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
-ms.openlocfilehash: e9bf248da980705f070be878208c55b0cc6dae01
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 08f7cd9dd95a10cad0df6539ba43122495347bae
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589731"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397365"
 ---
-# <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-select-case-statement"></a><span data-ttu-id="b6405-102">람다 식은 'Select Case' 문의 첫 번째 식에 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b6405-102">Lambda expressions are not valid in the first expression of a 'Select Case' statement</span></span>
-<span data-ttu-id="b6405-103">테스트 식에 람다 식을 사용할 수 없습니다는 `Select Case` 문입니다.</span><span class="sxs-lookup"><span data-stu-id="b6405-103">You cannot use a lambda expression for the test expression in a `Select Case` statement.</span></span> <span data-ttu-id="b6405-104">람다 식 정의는 함수를 테스트 식의 반환을 `Select Case` 문은 기본 데이터 형식 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b6405-104">Lambda expression definitions return functions, and the test expression of a `Select Case` statement must be an elementary data type.</span></span>  
+# <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-select-case-statement"></a><span data-ttu-id="71d9c-102">람다 식은 'Select Case' 문의 첫 번째 식에 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="71d9c-102">Lambda expressions are not valid in the first expression of a 'Select Case' statement</span></span>
+<span data-ttu-id="71d9c-103">문에서는 테스트 식에 람다 식을 사용할 수 없습니다 `Select Case` .</span><span class="sxs-lookup"><span data-stu-id="71d9c-103">You cannot use a lambda expression for the test expression in a `Select Case` statement.</span></span> <span data-ttu-id="71d9c-104">람다 식 정의에서 함수를 반환 하 고 문의 테스트 식이 `Select Case` 기본 데이터 형식 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="71d9c-104">Lambda expression definitions return functions, and the test expression of a `Select Case` statement must be an elementary data type.</span></span>  
   
- <span data-ttu-id="b6405-105">다음 코드는이 오류가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="b6405-105">The following code causes this error:</span></span>  
+ <span data-ttu-id="71d9c-105">다음 코드는이 오류를 발생 시킵니다.</span><span class="sxs-lookup"><span data-stu-id="71d9c-105">The following code causes this error:</span></span>  
   
 ```vb  
 ' Select Case (Function(arg) arg Is Nothing)  
@@ -25,13 +25,13 @@ ms.locfileid: "64589731"
 ' End Select  
 ```  
   
- <span data-ttu-id="b6405-106">**오류 ID:** BC36635</span><span class="sxs-lookup"><span data-stu-id="b6405-106">**Error ID:** BC36635</span></span>  
+ <span data-ttu-id="71d9c-106">**오류 ID:** BC36635</span><span class="sxs-lookup"><span data-stu-id="71d9c-106">**Error ID:** BC36635</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="b6405-107">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="b6405-107">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="71d9c-107">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="71d9c-107">To correct this error</span></span>  
   
-- <span data-ttu-id="b6405-108">코드를 검사하여 `If...Then...Else` 문과 같은 다른 조건부 생성이 적합한지 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="b6405-108">Examine your code to determine whether a different conditional construction, such as an `If...Then...Else` statement, would work for you.</span></span>  
+- <span data-ttu-id="71d9c-108">코드를 검사하여 `If...Then...Else` 문과 같은 다른 조건부 생성이 적합한지 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="71d9c-108">Examine your code to determine whether a different conditional construction, such as an `If...Then...Else` statement, would work for you.</span></span>  
   
-- <span data-ttu-id="b6405-109">계획 했던 함수를 호출 하려면 다음 코드 에서처럼:</span><span class="sxs-lookup"><span data-stu-id="b6405-109">You may have intended to call the function, as shown in the following code:</span></span>  
+- <span data-ttu-id="71d9c-109">다음 코드와 같이 함수를 호출 하려고 했을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="71d9c-109">You may have intended to call the function, as shown in the following code:</span></span>  
   
 ```vb  
 Dim num? As Integer  
@@ -40,8 +40,8 @@ Select Case ((Function(arg? As Integer) arg Is Nothing)(num))
 End Select  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b6405-110">참고자료</span><span class="sxs-lookup"><span data-stu-id="b6405-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="71d9c-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="71d9c-110">See also</span></span>
 
-- [<span data-ttu-id="b6405-111">람다 식</span><span class="sxs-lookup"><span data-stu-id="b6405-111">Lambda Expressions</span></span>](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
-- [<span data-ttu-id="b6405-112">If...Then...Else 문</span><span class="sxs-lookup"><span data-stu-id="b6405-112">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
-- [<span data-ttu-id="b6405-113">Select...Case 문</span><span class="sxs-lookup"><span data-stu-id="b6405-113">Select...Case Statement</span></span>](../../../visual-basic/language-reference/statements/select-case-statement.md)
+- [<span data-ttu-id="71d9c-111">람다 식</span><span class="sxs-lookup"><span data-stu-id="71d9c-111">Lambda Expressions</span></span>](../../programming-guide/language-features/procedures/lambda-expressions.md)
+- [<span data-ttu-id="71d9c-112">If...Then...Else 문</span><span class="sxs-lookup"><span data-stu-id="71d9c-112">If...Then...Else Statement</span></span>](../statements/if-then-else-statement.md)
+- [<span data-ttu-id="71d9c-113">Select...Case 문</span><span class="sxs-lookup"><span data-stu-id="71d9c-113">Select...Case Statement</span></span>](../statements/select-case-statement.md)
