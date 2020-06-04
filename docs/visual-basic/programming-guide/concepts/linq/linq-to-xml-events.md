@@ -2,12 +2,12 @@
 title: LINQ to XML 이벤트
 ms.date: 07/20/2015
 ms.assetid: 34923928-b99c-4004-956e-38f6db25e910
-ms.openlocfilehash: 06191fb94f808d9a3ece8de000dec1c5de769dde
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d00f6f1b2a14ac73c1bcd4a1f74b9714ca304da3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351935"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84368818"
 ---
 # <a name="linq-to-xml-events-visual-basic"></a>LINQ to XML 이벤트 (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 이벤트를 통해 XML 트리가 변경될 때 알림을 받을 수 있습니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "74351935"
   
  다음 이벤트는 XML 트리를 수정할 때 발생합니다.  
   
-|이벤트|설명|  
+|이벤트(event)|설명|  
 |-----------|-----------------|  
 |<xref:System.Xml.Linq.XObject.Changing>|이 <xref:System.Xml.Linq.XObject> 또는 해당 하위 항목이 변경되기 직전에 발생합니다.|  
 |<xref:System.Xml.Linq.XObject.Changed>|<xref:System.Xml.Linq.XObject>가 변경되거나 해당 하위 항목이 변경될 때 발생합니다.|  
@@ -116,4 +116,4 @@ Total:308
   
 ## <a name="see-also"></a>참고 항목
 
-- [Visual Basic (Advanced LINQ to XML 프로그래밍)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Visual Basic (Advanced LINQ to XML 프로그래밍)](advanced-linq-to-xml-programming.md)

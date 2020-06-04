@@ -2,14 +2,14 @@
 title: '방법: 식 트리 수정'
 ms.date: 07/20/2015
 ms.assetid: d1309fff-28bd-4d8e-a2cf-75725999e8f2
-ms.openlocfilehash: 12ccad6df7d6c7d91ebc290163db362eae173209
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1f052120a2e7e12f5a985adce3ae193afec0e9af
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353754"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410994"
 ---
-# <a name="how-to-modify-expression-trees-visual-basic"></a>방법: 식 트리 수정 (Visual Basic)
+# <a name="how-to-modify-expression-trees-visual-basic"></a>방법: 식 트리 수정(Visual Basic)
 
 이 항목에서는 식 트리를 수정하는 방법을 보여 줍니다. 식 트리는 변경할 수 없으며, 직접 수정할 수 없음을 의미합니다. 식 트리를 변경하려면 기존 식 트리의 복사본을 만들고, 해당 복사본을 만들 때 필요한 사항을 변경해야 합니다. <xref:System.Linq.Expressions.ExpressionVisitor> 클래스를 사용하여 기존 식 트리를 트래버스하고 방문하는 각 노드를 복사할 수 있습니다.
 
@@ -17,7 +17,7 @@ ms.locfileid: "74353754"
 
 1. **콘솔 애플리케이션** 프로젝트를 새로 만듭니다.
 
-2. `System.Linq.Expressions` 네임 스페이스에 대 한 파일에 `Imports` 문을 추가 합니다.
+2. `Imports`네임 스페이스에 대 한 파일에 문을 추가 `System.Linq.Expressions` 합니다.
 
 3. 프로젝트에 `AndAlsoModifier` 클래스를 추가합니다.
 
@@ -45,11 +45,11 @@ ms.locfileid: "74353754"
     End Class
     ```
 
-    이 클래스는 <xref:System.Linq.Expressions.ExpressionVisitor> 클래스를 상속하며, 조건부 `AND` 작업을 나타내는 식을 수정하도록 특수화되었습니다. 해당 작업을 조건부 `AND`에서 조건부 `OR`로 변경합니다. 조건부 <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> 식은 이진 식으로 표현되기 때문에 이 작업을 위해 클래스는 기본 형식의 `AND` 메서드를 재정의합니다. `VisitBinary` 메서드에서 전달된 식이 조건부 `AND` 작업을 나타내는 경우 코드는 조건부 `OR` 연산자 대신 조건부 `AND` 연산자가 포함된 새 식을 생성합니다. `VisitBinary`에 전달된 식이 조건부 `AND` 작업을 나타내지 않는 경우 메서드는 기본 클래스 구현을 따릅니다. 기본 클래스 메서드는 전달된 식 트리와 유사한 노드를 생성하지만 노드의 하위 트리가 방문자에 의해 재귀적으로 생성된 식 트리로 바뀌었습니다.
+    이 클래스는 <xref:System.Linq.Expressions.ExpressionVisitor> 클래스를 상속하며, 조건부 `AND` 작업을 나타내는 식을 수정하도록 특수화되었습니다. 해당 작업을 조건부 `AND`에서 조건부 `OR`로 변경합니다. 조건부 `AND` 식은 이진 식으로 표현되기 때문에 이 작업을 위해 클래스는 기본 형식의 <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> 메서드를 재정의합니다. `VisitBinary` 메서드에서 전달된 식이 조건부 `AND` 작업을 나타내는 경우 코드는 조건부 `AND` 연산자 대신 조건부 `OR` 연산자가 포함된 새 식을 생성합니다. `VisitBinary`에 전달된 식이 조건부 `AND` 작업을 나타내지 않는 경우 메서드는 기본 클래스 구현을 따릅니다. 기본 클래스 메서드는 전달된 식 트리와 유사한 노드를 생성하지만 노드의 하위 트리가 방문자에 의해 재귀적으로 생성된 식 트리로 바뀌었습니다.
 
-4. `System.Linq.Expressions` 네임 스페이스에 대 한 파일에 `Imports` 문을 추가 합니다.
+4. `Imports`네임 스페이스에 대 한 파일에 문을 추가 `System.Linq.Expressions` 합니다.
 
-5. Module1.vb 파일의 `Main` 메서드에 코드를 추가 하 여 식 트리를 만들고 수정 하는 메서드에 전달 합니다.
+5. Module1.vb `Main` 파일의 메서드에 코드를 추가 하 여 식 트리를 만들고 수정 하는 메서드에 전달 합니다.
 
     ```vb
     Dim expr As Expression(Of Func(Of String, Boolean)) = _
@@ -73,5 +73,5 @@ ms.locfileid: "74353754"
 
 ## <a name="see-also"></a>참고 항목
 
-- [방법: 식 트리 실행 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
-- [식 트리(Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
+- [방법: 식 트리 실행(Visual Basic)](how-to-execute-expression-trees.md)
+- [식 트리(Visual Basic)](index.md)

@@ -8,18 +8,18 @@ helpviewer_keywords:
 - examples [Visual Basic], string conversion
 - arrays [Visual Basic], byte arrays
 ms.assetid: f477d35c-a3fc-4a30-b1d4-cd0d353aae1d
-ms.openlocfilehash: 76fde3120ce629ce32f29ca28d90eba24fff726c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3ee1d5e1e31054f23f4510c7a112d8e3473bcdd7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351966"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410608"
 ---
 # <a name="how-to-convert-strings-into-an-array-of-bytes-in-visual-basic"></a>방법: Visual Basic에서 문자열을 바이트 배열로 변환
 이 항목에서는 문자열을 바이트 배열로 변환 하는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
- 이 예제에서는 <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> encoding 클래스의 <xref:System.Text.Encoding.GetBytes%2A> 메서드를 사용 하 여 문자열을 바이트 배열로 변환 합니다.  
+ 이 예제에서는 <xref:System.Text.Encoding.GetBytes%2A> encoding 클래스의 메서드를 사용 하 여 <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> 문자열을 바이트 배열로 변환 합니다.  
   
  [!code-vb[VbVbalrStrings#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#74)]  
   
@@ -33,7 +33,7 @@ ms.locfileid: "74351966"
   
 - <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType>: 작은 endian 바이트 순서를 사용 하 여 UTF-16 형식에 대 한 인코딩을 가져옵니다.  
   
-- <xref:System.Text.Encoding.UTF32%2A?displayProperty=nameWithType>: 작은 endian 바이트 순서를 사용 하 여 32 형식에 대 한 인코딩을 가져옵니다.  
+- <xref:System.Text.Encoding.UTF32%2A?displayProperty=nameWithType>: 작은 endian 바이트 순서를 사용 하 여 32 UTF-8 형식에 대 한 인코딩을 가져옵니다.  
   
 - <xref:System.Text.Encoding.UTF7%2A?displayProperty=nameWithType>: UTF-7 형식에 대 한 인코딩을 가져옵니다.  
   
@@ -43,4 +43,4 @@ ms.locfileid: "74351966"
 
 - <xref:System.Text.Encoding?displayProperty=nameWithType>
 - <xref:System.Text.Encoding.GetBytes%2A>
-- [방법: 바이트 배열을 Visual Basic의 문자열로 변환](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-an-array-of-bytes-into-a-string.md)
+- [방법: Visual Basic에서 바이트 배열을 문자열로 변환](how-to-convert-an-array-of-bytes-into-a-string.md)
