@@ -10,35 +10,35 @@ helpviewer_keywords:
 - Widening keyword [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: 646ae263-94d3-40a2-b0cc-64f619292f56
-ms.openlocfilehash: 1c9aa78549ca6e41c9fe54c12e0aaec8e7cc30cb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 69040bf48b44a54f7a231738b88db1cbc716ebb3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347840"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359905"
 ---
 # <a name="widening-visual-basic"></a>Widening(Visual Basic)
-변환 연산자 (`CType`)가 클래스 또는 구조체를 원래 클래스 또는 구조체의 가능한 모든 값을 보유할 수 있는 형식으로 변환 함을 나타냅니다.  
+변환 연산자 ( `CType` )가 클래스 또는 구조체를 원래 클래스 또는 구조체의 가능한 모든 값을 보유할 수 있는 형식으로 변환 함을 나타냅니다.  
   
 ## <a name="converting-with-the-widening-keyword"></a>확대/축소 키워드를 사용 하 여 변환  
- 변환 프로시저는 `Widening`외에 `Public Shared`를 지정 해야 합니다.  
+ 변환 프로시저는 `Public Shared` 와 함께를 지정 해야 합니다 `Widening` .  
   
- 확대 변환은 런타임에 항상 성공 하며 데이터 손실이 발생 하지 않습니다. 예제는 `Double`, `String``Char` 및 파생 된 형식을 기본 형식으로 `Single` 합니다. 이 마지막 변환은 파생 된 형식에 기본 형식의 모든 멤버가 포함 되어 있으므로 기본 형식의 인스턴스입니다.  
+ 확대 변환은 런타임에 항상 성공 하며 데이터 손실이 발생 하지 않습니다. 예를 들어, `Single` `Double` 파생 된 `Char` `String` 형식을 기본 형식으로 변환할 수 있습니다. 이 마지막 변환은 파생 된 형식에 기본 형식의 모든 멤버가 포함 되어 있으므로 기본 형식의 인스턴스입니다.  
   
- `Option Strict`을 `On`경우에도 사용 하는 코드는 확대 변환에 `CType`를 사용할 필요가 없습니다.  
+ 를 사용 하는 코드는 `CType` 가 인 경우에도 확대 변환에를 사용할 필요가 없습니다. `Option Strict` `On`  
   
- 이 컨텍스트에서는 `Widening` 키워드를 사용할 수 있습니다.  
+ `Widening`키워드는 다음 컨텍스트에서 사용할 수 있습니다.  
   
- [Operator 문](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Operator Statement](../statements/operator-statement.md)  
   
- 확대 및 축소 변환 연산자의 정의 예제 [는 방법: 변환 연산자 정의](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)를 참조 하세요.  
+ 확대 및 축소 변환 연산자의 정의 예제 [는 방법: 변환 연산자 정의](../../programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목
 
-- [Operator 문](../../../visual-basic/language-reference/statements/operator-statement.md)
-- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)
-- [확대 변환과 축소 변환](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
-- [방법: 연산자 정의](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
-- [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md)
-- [Option Strict 문](../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [방법: 변환 연산자 정의](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+- [Operator Statement](../statements/operator-statement.md)
+- [Narrowing](narrowing.md)
+- [Widening and Narrowing Conversions](../../programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [방법: 연산자 정의](../../programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [CType Function](../functions/ctype-function.md)
+- [Option Strict 문](../statements/option-strict-statement.md)
+- [방법: 변환 연산자 정의](../../programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)

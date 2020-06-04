@@ -2,12 +2,12 @@
 title: '방법: 대리자 메서드 호출'
 ms.date: 07/20/2015
 ms.assetid: b56866ae-abf9-4a5a-a855-486359455e9c
-ms.openlocfilehash: 520bacfbe6103490e0459cd5af149c1d55a8fce4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f319727c007b93c7b334af0598f1b9f7c034144d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345260"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410723"
 ---
 # <a name="how-to-invoke-a-delegate-method-visual-basic"></a>방법: 대리자 메서드 호출(Visual Basic)
 
@@ -15,7 +15,7 @@ ms.locfileid: "74345260"
 
 ### <a name="create-the-delegate-and-matching-procedures"></a>대리자 및 일치 프로시저 만들기
 
-1. `MySubDelegate`이라는 대리자를 만듭니다.
+1. 이라는 대리자를 만듭니다 `MySubDelegate` .
 
     ```vb
     Delegate Sub MySubDelegate(ByVal x As Integer)
@@ -31,7 +31,7 @@ ms.locfileid: "74345260"
     End Class
     ```
 
-3. 대리자의 인스턴스를 만들고 기본 제공 `Invoke` 메서드를 호출 하 여 대리자와 연결 된 메서드를 호출 하는 메서드를 정의 합니다.
+3. 대리자의 인스턴스를 만들고 기본 제공 메서드를 호출 하 여 대리자와 연결 된 메서드를 호출 하는 메서드를 정의 `Invoke` 합니다.
 
     ```vb
     Protected Sub DelegateTest()
@@ -45,7 +45,7 @@ ms.locfileid: "74345260"
 
 ## <a name="see-also"></a>참고 항목
 
-- [Delegate 문](../../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [대리자](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [이벤트](../../../../visual-basic/programming-guide/language-features/events/index.md)
+- [Delegate 문](../../../language-reference/statements/delegate-statement.md)
+- [대리자](index.md)
+- [이벤트](../events/index.md)
 - [다중 스레드 애플리케이션](../../../../standard/threading/using-threads-and-threading.md)
