@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30594
 ms.assetid: 5b9fceb4-ab11-41bb-ad3b-6f1a9da8ae7e
-ms.openlocfilehash: d6067c75835ecd14f1dd796c20ae3f29f456e541
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fc163c1069aa6f41766664e0fa5f5a9c34a1f73d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642952"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409571"
 ---
-# <a name="events-of-shared-withevents-variables-cannot-be-handled-by-non-shared-methods"></a><span data-ttu-id="dca39-102">비공유 메서드에서는 공유 WithEvents 변수의 이벤트를 처리할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="dca39-102">Events of shared WithEvents variables cannot be handled by non-shared methods</span></span>
-<span data-ttu-id="dca39-103">사용 하 여 선언 된 변수는 `Shared` 한정자는 공유 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="dca39-103">A variable declared with the `Shared` modifier is a shared variable.</span></span> <span data-ttu-id="dca39-104">공유 변수는 정확히 하나의 저장 위치를 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="dca39-104">A shared variable identifies exactly one storage location.</span></span> <span data-ttu-id="dca39-105">사용 하 여 선언 된 변수는 `WithEvents` 한정자 변수의 속한 형식에서 변수의 발생 하는 이벤트 집합을 처리 하는 어설션 합니다.</span><span class="sxs-lookup"><span data-stu-id="dca39-105">A variable declared with the `WithEvents` modifier asserts that the type to which the variable belongs handles the set of events the variable raises.</span></span> <span data-ttu-id="dca39-106">속성에서 만든 값이 변수에 할당 되는 경우는 `WithEvents` 선언 기존 이벤트 처리기를 언 후크합니다를 통해 새 이벤트 처리기는 `Add` 메서드.</span><span class="sxs-lookup"><span data-stu-id="dca39-106">When a value is assigned to the variable, the property created by the `WithEvents` declaration unhooks any existing event handler and hooks up the new event handler via the `Add` method.</span></span>  
+# <a name="events-of-shared-withevents-variables-cannot-be-handled-by-non-shared-methods"></a><span data-ttu-id="9bacb-102">비공유 메서드에서는 공유 WithEvents 변수의 이벤트를 처리할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="9bacb-102">Events of shared WithEvents variables cannot be handled by non-shared methods</span></span>
+<span data-ttu-id="9bacb-103">한정자를 사용 하 여 선언 된 변수는 `Shared` 공유 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="9bacb-103">A variable declared with the `Shared` modifier is a shared variable.</span></span> <span data-ttu-id="9bacb-104">공유 변수는 정확히 하나의 저장소 위치를 식별 합니다.</span><span class="sxs-lookup"><span data-stu-id="9bacb-104">A shared variable identifies exactly one storage location.</span></span> <span data-ttu-id="9bacb-105">한정자를 사용 하 여 선언 된 변수는 변수가 `WithEvents` 속한 형식이 변수가 발생 시키는 이벤트 집합을 처리 함을 어설션 합니다.</span><span class="sxs-lookup"><span data-stu-id="9bacb-105">A variable declared with the `WithEvents` modifier asserts that the type to which the variable belongs handles the set of events the variable raises.</span></span> <span data-ttu-id="9bacb-106">변수에 값이 할당 되 면 선언으로 생성 된 속성이 `WithEvents` 기존 이벤트 처리기를 언 후크 하 고 메서드를 통해 새 이벤트 처리기를 후크합니다 `Add` .</span><span class="sxs-lookup"><span data-stu-id="9bacb-106">When a value is assigned to the variable, the property created by the `WithEvents` declaration unhooks any existing event handler and hooks up the new event handler via the `Add` method.</span></span>  
   
- <span data-ttu-id="dca39-107">**오류 ID:** BC30594</span><span class="sxs-lookup"><span data-stu-id="dca39-107">**Error ID:** BC30594</span></span>  
+ <span data-ttu-id="9bacb-107">**오류 ID:** BC30594</span><span class="sxs-lookup"><span data-stu-id="9bacb-107">**Error ID:** BC30594</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="dca39-108">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="dca39-108">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="9bacb-108">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="9bacb-108">To correct this error</span></span>  
   
-- <span data-ttu-id="dca39-109">이벤트 처리기를 선언 `Shared`합니다.</span><span class="sxs-lookup"><span data-stu-id="dca39-109">Declare your event handler `Shared`.</span></span>  
+- <span data-ttu-id="9bacb-109">이벤트 처리기를 선언 `Shared` 합니다.</span><span class="sxs-lookup"><span data-stu-id="9bacb-109">Declare your event handler `Shared`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dca39-110">참고자료</span><span class="sxs-lookup"><span data-stu-id="dca39-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9bacb-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="9bacb-110">See also</span></span>
 
-- [<span data-ttu-id="dca39-111">공유</span><span class="sxs-lookup"><span data-stu-id="dca39-111">Shared</span></span>](../../../visual-basic/language-reference/modifiers/shared.md)
-- [<span data-ttu-id="dca39-112">WithEvents</span><span class="sxs-lookup"><span data-stu-id="dca39-112">WithEvents</span></span>](../../../visual-basic/language-reference/modifiers/withevents.md)
+- [<span data-ttu-id="9bacb-111">공유</span><span class="sxs-lookup"><span data-stu-id="9bacb-111">Shared</span></span>](../modifiers/shared.md)
+- [<span data-ttu-id="9bacb-112">WithEvents</span><span class="sxs-lookup"><span data-stu-id="9bacb-112">WithEvents</span></span>](../modifiers/withevents.md)
