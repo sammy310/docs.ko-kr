@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: 790c680744e2100a40a7cea8b8cef80c68d586bb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f30b78a2f0c38f233796e18006c889438dce4c58
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348728"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396832"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>방법: 부호 없는 형식을 사용하는 Windows 함수 호출(Visual Basic)
 
@@ -27,15 +27,15 @@ ms.locfileid: "74348728"
 
 ## <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>부호 없는 형식을 사용 하는 Windows 함수를 호출 하려면
 
-1. [Declare 문을](../../../visual-basic/language-reference/statements/declare-statement.md) 사용 하 여 함수를 포함 하는 라이브러리, 해당 라이브러리에 있는 이름, 호출 하는 시퀀스의 정의, 호출 시 문자열을 변환 하는 방법에 대 한 Visual Basic를 알려 줍니다.
+1. [Declare 문을](../../language-reference/statements/declare-statement.md) 사용 하 여 함수를 포함 하는 라이브러리, 해당 라이브러리에 있는 이름, 호출 하는 시퀀스의 정의, 호출 시 문자열을 변환 하는 방법에 대 한 Visual Basic를 알려 줍니다.
 
-2. `Declare` 문에서는 부호 없는 형식의 각 매개 변수에 대해 적절 하 게 `UInteger`, `ULong`, `UShort`또는 `Byte`를 사용 합니다.
+2. 문에서는 `Declare` `UInteger` ,, 또는를 `ULong` `UShort` `Byte` 부호 없는 형식의 각 매개 변수에 적합 하 게 사용 합니다.
 
 3. 호출 하는 Windows 함수 설명서를 참조 하 여 사용 하는 상수의 이름과 값을 확인 합니다. 이러한 중 상당수는 Winuser.h 파일에 정의 되어 있습니다.
 
-4. 코드에서 필요한 상수를 선언 합니다. 많은 Windows 상수는 32 비트 부호 없는 값 이며, 이러한 `As UInteger`를 선언 해야 합니다.
+4. 코드에서 필요한 상수를 선언 합니다. 많은 Windows 상수는 32 비트 부호 없는 값 이며, 이러한 값을 선언 해야 `As UInteger` 합니다.
 
-5. 일반적인 방법으로 함수를 호출 합니다. 다음 예제에서는 부호 없는 정수 인수를 사용 하는 Windows 함수 `MessageBox`를 호출 합니다.
+5. 일반적인 방법으로 함수를 호출 합니다. 다음 예제에서는 `MessageBox` 부호 없는 정수 인수를 사용 하는 Windows 함수를 호출 합니다.
 
     ```vb
     Public Class windowsMessage
@@ -60,7 +60,7 @@ ms.locfileid: "74348728"
     End Class
     ```
 
-     다음 코드를 사용 하 여 `messageThroughWindows` 함수를 테스트할 수 있습니다.
+     다음 코드를 사용 하 여 함수를 테스트할 수 있습니다 `messageThroughWindows` .
 
     ```vb
     Public Sub consumeWindowsMessage()
@@ -70,7 +70,7 @@ ms.locfileid: "74348728"
     ```
 
     > [!CAUTION]
-    > `UInteger`, `ULong`, `UShort`및 `SByte` 데이터 형식은 [언어 독립성 및 cls (언어 독립적 구성 요소](../../../standard/language-independence-and-language-independent-components.md) )의 일부가 아니므로 cls 규격 코드는이를 사용 하는 구성 요소를 사용할 수 없습니다.
+    > `UInteger`,, `ULong` `UShort` 및 `SByte` 데이터 형식은 [언어 독립성 및 언어 독립적 구성 요소](../../../standard/language-independence-and-language-independent-components.md) (cls)의 일부가 아니므로 cls 규격 코드는이를 사용 하는 구성 요소를 사용할 수 없습니다.
 
     > [!IMPORTANT]
     > Windows API (응용 프로그래밍 인터페이스)와 같은 비관리 코드에 대 한 호출을 수행 하면 잠재적인 보안 위험에 대 한 코드를 노출 합니다.
@@ -80,8 +80,8 @@ ms.locfileid: "74348728"
 
 ## <a name="see-also"></a>참고 항목
 
-- [데이터 형식](../../../visual-basic/language-reference/data-types/index.md)
-- [Integer 데이터 형식](../../../visual-basic/language-reference/data-types/integer-data-type.md)
-- [UInteger 데이터 형식](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)
-- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)
-- [연습: Windows API 호출](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+- [데이터 형식](../../language-reference/data-types/index.md)
+- [Integer 데이터 형식](../../language-reference/data-types/integer-data-type.md)
+- [UInteger 데이터 형식](../../language-reference/data-types/uinteger-data-type.md)
+- [Declare 문](../../language-reference/statements/declare-statement.md)
+- [연습: Windows API 호출](walkthrough-calling-windows-apis.md)

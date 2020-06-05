@@ -21,12 +21,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 242dd2a6-86c4-4ce7-83f2-f2661803f752
-ms.openlocfilehash: 87ca0da5095484615666cda505b4f7678d8160de
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 01f1f7ef5963feeb3fe2b5390244e4e516773bad
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350054"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84393846"
 ---
 # <a name="how-to-use-a-generic-class-visual-basic"></a>방법: 제네릭 클래스 사용(Visual Basic)
 *형식 매개 변수* 를 사용하는 클래스를 *제네릭 클래스*라고 합니다. 제네릭 클래스를 사용 중인 경우 이러한 각 매개 변수에 대해 *형식 인수* 를 제공하여, 여기에서 *생성된 클래스* 를 만들 수 있습니다. 그런 다음 생성된 클래스 형식의 변수를 선언하고, 생성된 클래스의 인스턴스를 만들어 해당 변수에 할당할 수 있습니다.  
@@ -37,9 +37,9 @@ ms.locfileid: "74350054"
   
 ### <a name="to-use-a-class-that-takes-a-type-parameter"></a>형식 매개 변수를 가져오는 클래스를 사용하려면  
   
-1. 소스 파일의 시작 부분에 <xref:System.Collections.Generic?displayProperty=nameWithType> 네임 스페이스를 가져오는 [Imports 문 (.Net 네임 스페이스 및 형식)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) 을 포함 합니다. 이렇게 하면 <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> 같은 다른 큐 클래스와 차별화하기 위해 정규화하지 않고도 <xref:System.Collections.Queue?displayProperty=nameWithType> 클래스를 참조할 수 있습니다.  
+1. 소스 파일의 시작 부분에 네임 스페이스를 가져오는 [Imports 문 (.Net 네임 스페이스 및 형식)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md) 을 포함 합니다 <xref:System.Collections.Generic?displayProperty=nameWithType> . 이렇게 하면 <xref:System.Collections.Queue?displayProperty=nameWithType> 같은 다른 큐 클래스와 차별화하기 위해 정규화하지 않고도 <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> 클래스를 참조할 수 있습니다.  
   
-2. 일반적인 방법으로 개체를 만들지만 클래스 이름 바로 뒤에 `(Of type)`를 추가 합니다.  
+2. 일반적인 방법으로 개체를 만들지만 클래스 이름 바로 뒤에 `(Of type)` 을 추가합니다.  
   
      다음 예에서는 동일한 클래스(<xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>)를 사용하여, 서로 다른 데이터 형식의 항목을 포함하는 두 개의 큐 개체를 만듭니다. 각 큐의 끝에 항목을 추가한 다음 각 큐의 앞부분부터 항목을 제거하고 표시합니다.  
   
@@ -47,10 +47,10 @@ ms.locfileid: "74350054"
   
 ## <a name="see-also"></a>참고 항목
 
-- [데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [데이터 형식](index.md)
+- [Visual Basic의 제네릭 형식](generic-types.md)
 - [언어 독립성 및 언어 독립적 구성 요소](../../../../standard/language-independence-and-language-independent-components.md)
-- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
-- [Imports 문(.NET 네임스페이스 및 형식)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [방법: 다른 데이터 형식에 동일한 기능을 제공할 수 있는 클래스 정의](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)
-- [반복기](../../../../visual-basic/programming-guide/concepts/iterators.md)
+- [으로](../../../language-reference/statements/of-clause.md)
+- [Imports 문(.NET 네임스페이스 및 형식)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [방법: 다른 데이터 형식에 동일한 기능을 제공할 수 있는 클래스 정의](how-to-define-a-class-that-can-provide-identical-functionality.md)
+- [반복기](../../concepts/iterators.md)
