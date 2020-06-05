@@ -7,18 +7,18 @@ helpviewer_keywords:
 - Out keyword [Visual Basic]
 - covariance, Out keyword [Visual Basic]
 ms.assetid: c4418369-1518-4a46-9a1e-054c61038eca
-ms.openlocfilehash: 0460015b44971fa638dba47183690ffcc89ca55f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 28ae7d6fd51170aa822072fc2f5357443f51a353
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351418"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84392095"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out(제네릭 한정자)(Visual Basic)
 
 제네릭 형식 매개 변수의 경우 `Out` 키워드는 형식이 공변 (covariant) 임을 지정 합니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 공변성(covariance)을 통해 제네릭 매개 변수에 지정된 것보다 많은 파생 형식을 사용할 수 있습니다. 따라서 variant 인터페이스를 구현하는 클래스의 암시적 변환과 대리자 형식의 암시적 변환이 허용됩니다.
 
@@ -64,4 +64,4 @@ Visual Basic에서는 대리자 형식을 지정 하지 않고 공변 (covariant
 ## <a name="see-also"></a>참고 항목
 
 - [제네릭 인터페이스의 가변성](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
-- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+- [진행](in-generic-modifier.md)
