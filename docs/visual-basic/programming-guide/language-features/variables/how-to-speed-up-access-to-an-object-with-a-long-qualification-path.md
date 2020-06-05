@@ -8,18 +8,18 @@ helpviewer_keywords:
 - With block
 - object variables [Visual Basic], accessing
 ms.assetid: 3eb7657f-c9fe-4e05-8bc3-4bb14d5ae585
-ms.openlocfilehash: 83670ae6af0904156b08398024658cf504b7663f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: fe93e7bac2a21f1060d1f93765eb35e1ad0c7eb0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346825"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410414"
 ---
 # <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>방법: 정규화 경로가 긴 개체에 대한 액세스 속도 개선(Visual Basic)
 
 여러 메서드 및 속성의 정규화 경로를 필요로 하는 개체에 자주 액세스 하는 경우 한정 경로를 반복 하지 않고 코드 속도를 높일 수 있습니다.
 
-두 가지 방법으로 한정 경로를 반복 하지 않을 수 있습니다. 개체를 변수에 할당 하거나 `With`...`End With` 블록에서 사용할 수 있습니다.
+두 가지 방법으로 한정 경로를 반복 하지 않을 수 있습니다. 개체를 변수에 할당 하거나 ... 블록에서 사용할 수 있습니다. `With` `End With`
 
 ### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>변수에 할당 하 여 높은 정규화 된 개체에 대 한 액세스 속도를 높이려면
 
@@ -39,13 +39,13 @@ ms.locfileid: "74346825"
 
 ### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a>을 사용 하 여 높은 정규화 된 개체에 대 한 액세스 속도를 높이려면 ... 블록으로 끝
 
-1. `With` 문에 한정 경로를 넣습니다.
+1. 문에 한정 경로를 넣습니다 `With` .
 
     ```vb
     With someForm.ActiveForm.ActiveControl
     ```
 
-2. `End With` 문 앞에 `With` 블록 내에서 개체의 멤버에 액세스 합니다.
+2. 문 앞의 블록 내에서 개체의 멤버에 액세스 합니다 `With` `End With` .
 
     ```vb
         .Text = "Test"
@@ -56,5 +56,5 @@ ms.locfileid: "74346825"
 
 ## <a name="see-also"></a>참고 항목
 
-- [개체 변수](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [With...End With 문](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+- [개체 변수](object-variables.md)
+- [With...End With 문](../../../language-reference/statements/with-end-with-statement.md)

@@ -7,29 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - BC30188
 ms.assetid: da6b1df3-fe6b-4415-88e6-0977e5189e0b
-ms.openlocfilehash: e6f8bf2b4ce9789a1715971b8262bdd162ba8035
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 237622d0dc6c57f66d402f491a6191a5911574e2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619539"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409740"
 ---
 # <a name="declaration-expected"></a>선언이 필요합니다.
-할당 또는 루프 문과 같은 선언문이 아닌 문을 프로시저 외부에서 발생 합니다. 선언에만 외부 프로시저 허용 됩니다.  
+대입 또는 loop 문과 같은 비 선언적 문은 프로시저 외부에서 발생 합니다. 프로시저 외부에는 선언만 사용할 수 있습니다.  
   
- 또는, 프로그래밍 요소를 선언 하지 선언 키워드와 같은 `Dim` 또는 `Const`합니다.  
+ 또는와 같은 선언 키워드 없이 프로그래밍 요소가 선언 되었습니다 `Dim` `Const` .  
   
  **오류 ID:** BC30188  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-- 프로시저의 본문 선언문이 아닌 문을 이동 합니다.  
+- 비 선언적 문을 프로시저 본문으로 이동 합니다.  
   
-- 적절 한 선언 키워드로 선언을 시작 합니다.  
+- 적절 한 선언 키워드를 사용 하 여 선언을 시작 합니다.  
   
-- 선언 키워드의 철자를 확인 합니다.  
+- 선언 키워드의 철자가 잘못 되었는지 확인 합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [절차](../../../visual-basic/programming-guide/language-features/procedures/index.md)
-- [Dim 문](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [절차](../../programming-guide/language-features/procedures/index.md)
+- [Dim 문](../statements/dim-statement.md)

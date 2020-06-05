@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML literals [Visual Basic]
 - XML literals [Visual Basic], modifying
 ms.assetid: 4e864522-a37a-43a2-8236-af80277c5482
-ms.openlocfilehash: 99ec35addcb9fc8d886c9151cde87227b5113eb9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a2ac2e9802d4c8ab522bb430d15cce5616430437
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330853"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374903"
 ---
 # <a name="how-to-modify-xml-literals-visual-basic"></a>방법: XML 리터럴 수정(Visual Basic)
 
@@ -21,7 +21,7 @@ Visual Basic은 XML 리터럴을 수정할 수 있는 편리한 방법을 제공
 
 1. XML 리터럴의 값을 수정 하려면 XML 리터럴에 대 한 참조를 가져오고 `Value` 속성을 원하는 값으로 설정 합니다.
 
-    다음 코드 예제에서는 XML 문서에 있는 모든 \<가격 > 요소의 값을 업데이트 합니다.
+    다음 코드 예제에서는 \<Price> XML 문서에 있는 모든 요소의 값을 업데이트 합니다.
 
     [!code-vb[VbXmlSamples2#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#4)]
 
@@ -64,11 +64,11 @@ Visual Basic은 XML 리터럴을 수정할 수 있는 편리한 방법을 제공
     ```
 
     > [!NOTE]
-    > `Value` 속성은 컬렉션의 첫 번째 XML 요소를 참조 합니다. 컬렉션에 이름이 같은 요소가 둘 이상 있는 경우 `Value` 속성을 설정 하면 컬렉션의 첫 번째 요소에만 영향을 줍니다.
+    > `Value`속성은 컬렉션의 첫 번째 XML 요소를 참조 합니다. 컬렉션에 이름이 같은 요소가 둘 이상 있는 경우 속성을 설정 하면 `Value` 컬렉션의 첫 번째 요소에만 영향을 줍니다.
 
 ### <a name="to-add-an-attribute-to-an-xml-literal"></a>XML 리터럴에 특성을 추가 하려면
 
-1. XML 리터럴에 특성을 추가 하려면 먼저 XML 리터럴에 대 한 참조를 가져옵니다. 그런 다음 새 XML 특성 축 속성을 추가 하 여 특성을 추가할 수 있습니다. <xref:System.Xml.Linq.XContainer.Add%2A> 메서드를 사용 하 여 새 <xref:System.Xml.Linq.XAttribute> 개체를 XML 리터럴에 추가할 수도 있습니다. 다음 예에서는 두 옵션을 모두 보여 줍니다.
+1. XML 리터럴에 특성을 추가 하려면 먼저 XML 리터럴에 대 한 참조를 가져옵니다. 그런 다음 새 XML 특성 축 속성을 추가 하 여 특성을 추가할 수 있습니다. <xref:System.Xml.Linq.XAttribute>메서드를 사용 하 여 새 개체를 XML 리터럴에 추가할 수도 있습니다 <xref:System.Xml.Linq.XContainer.Add%2A> . 다음 예에서는 두 옵션을 모두 보여 줍니다.
 
     [!code-vb[VbXmlSamples2#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#5)]
 
@@ -110,13 +110,13 @@ Visual Basic은 XML 리터럴을 수정할 수 있는 편리한 방법을 제공
     </Catalog>
     ```
 
-    XML 특성 축 속성에 대 한 자세한 내용은 [Xml 특성 축 속성](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)을 참조 하세요.
+    XML 특성 축 속성에 대 한 자세한 내용은 [Xml 특성 축 속성](../../../language-reference/xml-axis/xml-attribute-axis-property.md)을 참조 하세요.
 
 ### <a name="to-add-an-element-to-an-xml-literal"></a>XML 리터럴에 요소를 추가 하려면
 
-1. XML 리터럴에 요소를 추가 하려면 먼저 XML 리터럴에 대 한 참조를 가져옵니다. 그런 다음 <xref:System.Xml.Linq.XContainer.Add%2A> 메서드를 사용 하 여 새 <xref:System.Xml.Linq.XElement> 개체를 요소의 마지막 하위 요소로 추가할 수 있습니다. <xref:System.Xml.Linq.XContainer.AddFirst%2A> 메서드를 사용 하 여 새 <xref:System.Xml.Linq.XElement> 개체를 첫 번째 하위 요소로 추가할 수 있습니다.
+1. XML 리터럴에 요소를 추가 하려면 먼저 XML 리터럴에 대 한 참조를 가져옵니다. 그런 다음 <xref:System.Xml.Linq.XElement> 메서드를 사용 하 여 새 개체를 요소의 마지막 하위 요소로 추가할 수 있습니다 <xref:System.Xml.Linq.XContainer.Add%2A> . <xref:System.Xml.Linq.XElement>메서드를 사용 하 여 새 개체를 첫 번째 하위 요소로 추가할 수 있습니다 <xref:System.Xml.Linq.XContainer.AddFirst%2A> .
 
-    다른 하위 요소를 기준으로 특정 위치에 새 요소를 추가 하려면 먼저 인접 하위 요소에 대 한 참조를 가져옵니다. 그런 다음 <xref:System.Xml.Linq.XNode.AddBeforeSelf%2A> 메서드를 사용 하 여 인접 한 하위 요소 앞에 새 <xref:System.Xml.Linq.XElement> 개체를 추가할 수 있습니다. <xref:System.Xml.Linq.XNode.AddAfterSelf%2A> 메서드를 사용 하 여 인접 한 하위 요소 뒤에 새 <xref:System.Xml.Linq.XElement> 개체를 추가할 수도 있습니다.
+    다른 하위 요소를 기준으로 특정 위치에 새 요소를 추가 하려면 먼저 인접 하위 요소에 대 한 참조를 가져옵니다. 그런 다음 <xref:System.Xml.Linq.XElement> 메서드를 사용 하 여 인접 한 하위 요소 앞에 새 개체를 추가할 수 있습니다 <xref:System.Xml.Linq.XNode.AddBeforeSelf%2A> . <xref:System.Xml.Linq.XElement>메서드를 사용 하 여 인접 한 하위 요소 뒤에 새 개체를 추가할 수도 있습니다 <xref:System.Xml.Linq.XNode.AddAfterSelf%2A> .
 
     다음 예제에서는 이러한 각 기술에 대 한 예제를 보여 줍니다.
 
@@ -166,7 +166,7 @@ Visual Basic은 XML 리터럴을 수정할 수 있는 편리한 방법을 제공
 
 ### <a name="to-remove-an-element-or-attribute-from-an-xml-literal"></a>XML 리터럴에서 요소나 특성을 제거 하려면
 
-1. XML 리터럴에서 요소나 특성을 제거 하려면 다음 예제와 같이 요소나 특성에 대 한 참조를 가져오고 `Remove` 메서드를 호출 합니다.
+1. XML 리터럴에서 요소나 특성을 제거 하려면 다음 예제와 같이 요소나 특성에 대 한 참조를 가져오고 메서드를 호출 `Remove` 합니다.
 
     [!code-vb[VbXmlSamples2#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#7)]
 
@@ -210,15 +210,15 @@ Visual Basic은 XML 리터럴을 수정할 수 있는 편리한 방법을 제공
       </Book></Catalog>
     ```
 
-    XML 리터럴에서 모든 요소나 특성을 제거 하려면 XML 리터럴에 대 한 참조를 가져오고 <xref:System.Xml.Linq.XElement.RemoveAll%2A> 메서드를 호출 합니다.
+    XML 리터럴에서 모든 요소나 특성을 제거 하려면 XML 리터럴에 대 한 참조를 가져오고 메서드를 호출 <xref:System.Xml.Linq.XElement.RemoveAll%2A> 합니다.
 
 ### <a name="to-modify-an-xml-literal"></a>XML 리터럴을 수정 하려면
 
-1. XML 요소의 이름을 변경 하려면 먼저 요소에 대 한 참조를 가져옵니다. 그런 다음 새 이름을 가진 새 <xref:System.Xml.Linq.XElement> 개체를 만들어 기존 <xref:System.Xml.Linq.XElement> 개체의 <xref:System.Xml.Linq.XNode.ReplaceWith%2A> 메서드에 새 <xref:System.Xml.Linq.XElement> 개체를 전달할 수 있습니다.
+1. XML 요소의 이름을 변경 하려면 먼저 요소에 대 한 참조를 가져옵니다. 그런 다음 새 <xref:System.Xml.Linq.XElement> 이름을 포함 하는 새 개체를 만들고 <xref:System.Xml.Linq.XElement> <xref:System.Xml.Linq.XNode.ReplaceWith%2A> 기존 개체의 메서드에 새 개체를 전달할 수 있습니다 <xref:System.Xml.Linq.XElement> .
 
-    바꾸려는 요소에 유지 해야 하는 하위 요소가 있으면 새 <xref:System.Xml.Linq.XElement> 개체의 값을 기존 요소의 <xref:System.Xml.Linq.XContainer.Nodes%2A> 속성으로 설정 합니다. 그러면 새 요소의 값이 기존 요소의 내부 XML로 설정 됩니다. 그렇지 않으면 새 요소의 값을 기존 요소의 `Value` 속성으로 설정할 수 있습니다.
+    바꾸려는 요소에 유지 해야 하는 하위 요소가 있으면 새 개체의 값을 <xref:System.Xml.Linq.XElement> <xref:System.Xml.Linq.XContainer.Nodes%2A> 기존 요소의 속성으로 설정 합니다. 그러면 새 요소의 값이 기존 요소의 내부 XML로 설정 됩니다. 그렇지 않으면 새 요소의 값을 기존 요소의 속성으로 설정할 수 있습니다 `Value` .
 
-    다음 코드 예제에서는 모든 \<설명 > 요소를 \<추상 > 요소로 바꿉니다. \<Description > 요소의 내용은 <xref:System.Xml.Linq.XContainer.Nodes%2A> 설명 \<> 개체의 <xref:System.Xml.Linq.XElement> 속성을 사용 하 여 새 \<추상 > 요소에 유지 됩니다.
+    다음 코드 예제에서는 \<Description> 요소를 사용 하 여 모든 요소를 바꿉니다 \<Abstract> . 요소의 콘텐츠는 \<Description> \<Abstract> <xref:System.Xml.Linq.XContainer.Nodes%2A> 개체의 속성을 사용 하 여 새 요소에서 유지 됩니다 \<Description> <xref:System.Xml.Linq.XElement> .
 
     [!code-vb[VbXmlSamples2#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#8)]
 
@@ -288,8 +288,8 @@ Visual Basic은 XML 리터럴을 수정할 수 있는 편리한 방법을 제공
 
 ## <a name="see-also"></a>참고 항목
 
-- [Visual Basic에서 XML 조작](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
-- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
-- [방법: 파일, 문자열 또는 스트림에서 XML 로드](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)
-- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [Visual Basic의 LINQ 소개](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Visual Basic에서 XML 조작](manipulating-xml.md)
+- [XML](index.md)
+- [방법: 파일, 문자열 또는 스트림에서 XML 로드](how-to-load-xml-from-a-file-string-or-stream.md)
+- [LINQ](../linq/index.md)
+- [Visual Basic의 LINQ 소개](../linq/introduction-to-linq.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], XML 1.0 specification
 ms.assetid: 46f046e5-293c-41a3-b893-4e5f6e32e78a
-ms.openlocfilehash: d5dd90899c8a3c4fb4670258e7ff636822c479da
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1200e9ada45adce267c61f821bc7e2bde211cdc3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346177"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403280"
 ---
 # <a name="xml-literals-and-the-xml-10-specification-visual-basic"></a>XML 리터럴 및 XML 1.0 사양(Visual Basic)
 Visual Basic의 XML 리터럴 구문은 대부분의 XML(Extensible Markup Language) (XML) 1.0 사양을 지원 합니다. XML 1.0 사양에 대 한 자세한 내용은 W3C 웹 사이트의 [XML(Extensible Markup Language) (xml) 1.0](https://www.w3.org/TR/xml) 을 참조 하십시오.  
@@ -30,6 +30,6 @@ Visual Basic의 XML 리터럴 구문은 대부분의 XML(Extensible Markup Langu
   
 ## <a name="see-also"></a>참고 항목
 
-- [Visual Basic에서 XML 만들기](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
-- [XML 문서 리터럴](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
-- [XML 요소 리터럴](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [Visual Basic에서 XML 만들기](creating-xml.md)
+- [XML 문서 리터럴](../../../language-reference/xml-literals/xml-document-literal.md)
+- [XML 요소 리터럴](../../../language-reference/xml-literals/xml-element-literal.md)

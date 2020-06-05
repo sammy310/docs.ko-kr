@@ -7,19 +7,19 @@ helpviewer_keywords:
 - name conflicts [Visual Basic]
 - element names [Visual Basic], in code
 ms.assetid: 2e4e8e02-23f7-49b9-a1c8-2b0402b6b525
-ms.openlocfilehash: 4cdcda7c5c78481af1633bf29d75070c521ab393
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a98f0b027700717b414d58e1284ddec655eb25f7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347387"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403228"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>코드에서 요소 이름으로 사용되는 키워드(Visual Basic)
-변수, 클래스 또는 멤버와 같은 모든 프로그램 요소는 제한 된 키워드와 동일한 이름을 가질 수 있습니다. 예를 들어 `Loop`라는 변수를 만들 수 있습니다. 그러나 제한 된 `Loop` 키워드와 동일한 이름을 사용 하는 버전의를 참조 하려면 다음 예제와 같이 전체 한정 문자열로 앞에 또는 대괄호 (`[ ]`)로 묶어야 합니다.  
+변수, 클래스 또는 멤버와 같은 모든 프로그램 요소는 제한 된 키워드와 동일한 이름을 가질 수 있습니다. 예를 들어 라는 변수를 만들 수 있습니다 `Loop` . 그러나 제한 된 키워드와 동일한 이름을 사용 하는 버전의를 참조 하려면 `Loop` `[ ]` 다음 예제와 같이 전체 한정 문자열로 앞에 또는 대괄호 ()로 묶어야 합니다.  
   
  [!code-vb[VbVbcnConventions#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#8)]  
   
- 이러한 방법 중 하나를 사용 하지 않는 경우 다음 예제와 같이 내장 `Loop` 키워드를 사용 하는 것으로 가정 하 고 오류를 생성 Visual Basic 합니다.  
+ 이러한 방법 중 하나를 사용 하지 않는 경우 `Loop` 다음 예제와 같이 내장 키워드를 사용 하는 것으로 가정 하 고 오류를 생성 Visual Basic 합니다.  
   
  `' The following statement causes a compiler error.`  
   
@@ -32,6 +32,6 @@ ms.locfileid: "74347387"
   
 ## <a name="see-also"></a>참고 항목
 
-- [Visual Basic 명명 규칙](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
-- [프로그램 구조 및 코드 규칙](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
-- [키워드](../../../visual-basic/language-reference/keywords/index.md)
+- [Visual Basic 명명 규칙](naming-conventions.md)
+- [프로그램 구조 및 코드 규칙](program-structure-and-code-conventions.md)
+- [C++ 키워드](../../language-reference/keywords/index.md)
