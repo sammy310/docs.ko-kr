@@ -2,22 +2,22 @@
 title: '방법: 특정 특성으로 요소 찾기(XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 4bb38d2c-bc7c-4196-8909-aaf41fb86b28
-ms.openlocfilehash: 36f725a7684dc009dbfb956a1584fd6ca5e487b0
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 4b625fcccc834f860072ad92587bbfd7ed5ec4ad
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78267043"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364775"
 ---
-# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="16b1e-102">방법: 특정 특성이 있는 요소 찾기(XPath-LINQ에서 XML까지) (시각적 기본)</span><span class="sxs-lookup"><span data-stu-id="16b1e-102">How to: Find Elements with a Specific Attribute (XPath-LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="16b1e-103">특정 특성을 가진 모든 요소를 찾으려는 경우가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="16b1e-103">Sometimes you want to find all elements that have a specific attribute.</span></span> <span data-ttu-id="16b1e-104">특성의 내용에는 관심이 없으며,</span><span class="sxs-lookup"><span data-stu-id="16b1e-104">You are not concerned about the contents of the attribute.</span></span> <span data-ttu-id="16b1e-105">대신 특성의 존재에 따라 선택하려고 합니다.</span><span class="sxs-lookup"><span data-stu-id="16b1e-105">Instead, you want to select based on the existence of the attribute.</span></span>  
+# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="0744e-102">방법: 특정 특성으로 요소 찾기 (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0744e-102">How to: Find Elements with a Specific Attribute (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="0744e-103">특정 특성을 가진 모든 요소를 찾으려는 경우가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0744e-103">Sometimes you want to find all elements that have a specific attribute.</span></span> <span data-ttu-id="0744e-104">특성의 내용에는 관심이 없으며,</span><span class="sxs-lookup"><span data-stu-id="0744e-104">You are not concerned about the contents of the attribute.</span></span> <span data-ttu-id="0744e-105">대신 특성의 존재에 따라 선택하려고 합니다.</span><span class="sxs-lookup"><span data-stu-id="0744e-105">Instead, you want to select based on the existence of the attribute.</span></span>  
   
- <span data-ttu-id="16b1e-106">XPath 식은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="16b1e-106">The XPath expression is:</span></span>  
+ <span data-ttu-id="0744e-106">XPath 식은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="0744e-106">The XPath expression is:</span></span>  
   
  `./*[@Select]`  
   
-## <a name="example"></a><span data-ttu-id="16b1e-107">예제</span><span class="sxs-lookup"><span data-stu-id="16b1e-107">Example</span></span>  
- <span data-ttu-id="16b1e-108">다음 코드에서는 `Select` 특성을 가진 요소만 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="16b1e-108">The following code selects just the elements that have the `Select` attribute.</span></span>  
+## <a name="example"></a><span data-ttu-id="0744e-107">예제</span><span class="sxs-lookup"><span data-stu-id="0744e-107">Example</span></span>  
+ <span data-ttu-id="0744e-108">다음 코드에서는 `Select` 특성을 가진 요소만 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="0744e-108">The following code selects just the elements that have the `Select` attribute.</span></span>  
   
 ```vb  
 Dim doc As XElement = _
@@ -51,7 +51,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- <span data-ttu-id="16b1e-109">이 예에서 생성되는 출력은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="16b1e-109">This example produces the following output:</span></span>  
+ <span data-ttu-id="0744e-109">이 예에서 생성되는 출력은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="0744e-109">This example produces the following output:</span></span>  
   
 ```console
 Results are identical  
@@ -59,6 +59,6 @@ Results are identical
 <Child4 Select="true">4</Child4>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="16b1e-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="16b1e-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0744e-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="0744e-110">See also</span></span>
 
-- [<span data-ttu-id="16b1e-111">XPath 사용자를 위한 LINQ에서 XML로(시각적 기본)</span><span class="sxs-lookup"><span data-stu-id="16b1e-111">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="0744e-111">XPath 사용자에 대 한 LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0744e-111">LINQ to XML for XPath Users (Visual Basic)</span></span>](linq-to-xml-for-xpath-users.md)
