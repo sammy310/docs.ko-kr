@@ -10,12 +10,12 @@ helpviewer_keywords:
 - concatenation operators [Visual Basic], syntax
 - strings [Visual Basic], concatenating
 ms.assetid: fefc3d00-cbf1-475c-8c5e-6fb213b3f85a
-ms.openlocfilehash: 4cae7e59083890e82d754bdaa58942c2224357b0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d778c0c99d6d074fe8b73aaf3660074643e7e136
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74336051"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84371611"
 ---
 # <a name="amp-operator-visual-basic"></a>&amp; 연산자 (Visual Basic)
 두 식의 문자열 연결을 생성 합니다.  
@@ -26,36 +26,36 @@ ms.locfileid: "74336051"
 result = expression1 & expression2  
 ```  
   
-## <a name="parts"></a>요소  
+## <a name="parts"></a>부분  
  `result`  
- 필수입니다. 모든 `String` 또는 `Object` 변수입니다.  
+ 필수 요소. Any `String` 또는 `Object` variable.  
   
  `expression1`  
- 필수입니다. `String`로 확대 되는 데이터 형식의 식입니다.  
+ 필수 요소. 로 확대 되는 데이터 형식을 사용 하는 모든 식 `String` 입니다.  
   
  `expression2`  
- 필수입니다. `String`로 확대 되는 데이터 형식의 식입니다.  
+ 필수 요소. 로 확대 되는 데이터 형식을 사용 하는 모든 식 `String` 입니다.  
   
-## <a name="remarks"></a>주의  
- `expression1` 또는 `expression2`의 데이터 형식이 `String` 되지 않지만 `String`로 확대 되는 경우 `String`로 변환 됩니다. 데이터 형식 중 하나가 `String`확장 되지 않는 경우 컴파일러에서 오류를 생성 합니다.  
+## <a name="remarks"></a>설명  
+ 또는의 데이터 형식이 `expression1` `expression2` 이 아닌로 확대 된 경우로 `String` `String` 변환 됩니다 `String` . 데이터 형식 중 하나가로 확장 되지 않는 경우 `String` 컴파일러에서 오류를 생성 합니다.  
   
- `result` 데이터 형식이 `String`입니다. 하나 또는 두 식이 모두 [Nothing](../../../visual-basic/language-reference/nothing.md) 으로 평가 되거나 값이 <xref:System.DBNull.Value?displayProperty=nameWithType>경우 값이 "" 인 문자열로 처리 됩니다.  
-  
-> [!NOTE]
-> `&` 연산자를 *오버 로드할*수 있습니다. 즉, 피연산자가 해당 클래스 또는 구조체의 형식일 때 클래스 또는 구조체에서 해당 동작을 다시 정의할 수 있습니다. 코드가 이러한 클래스 또는 구조체에서이 연산자를 사용 하는 경우 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
+ 의 데이터 형식이 `result` 인 경우 `String` 하나 또는 두 식이 모두 [Nothing](../nothing.md) 으로 평가 되거나 값이 인 경우 <xref:System.DBNull.Value?displayProperty=nameWithType> 값이 "" 인 문자열로 처리 됩니다.  
   
 > [!NOTE]
-> 앰퍼샌드 (&) 문자를 사용 하 여 변수를 `Long`형식으로 식별할 수도 있습니다. 자세한 내용은 [형식 문자](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)를 참조 하십시오.  
+> `&`연산자를 *오버 로드할*수 있습니다. 즉, 피연산자가 해당 클래스 또는 구조체의 형식일 때 클래스 또는 구조체의 동작을 다시 정의할 수 있습니다. 코드가 이러한 클래스 또는 구조체에서이 연산자를 사용 하는 경우 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
+  
+> [!NOTE]
+> 앰퍼샌드 (&) 문자를 사용 하 여 변수를 형식으로 식별할 수도 있습니다 `Long` . 자세한 내용은 [형식 문자](../../programming-guide/language-features/data-types/type-characters.md)를 참조 하십시오.  
   
 ## <a name="example"></a>예제  
- 이 예에서는 `&` 연산자를 사용 하 여 문자열 연결을 강제 적용 합니다. 결과는 두 문자열 피연산자의 연결을 나타내는 문자열 값입니다.  
+ 이 예에서는 연산자를 사용 `&` 하 여 문자열을 연결 합니다. 결과는 두 문자열 피연산자의 연결을 나타내는 문자열 값입니다.  
   
  [!code-vb[VbVbalrOperators#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#2)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [&= 연산자](../../../visual-basic/language-reference/operators/and-assignment-operator.md)
-- [연결 연산자](../../../visual-basic/language-reference/operators/concatenation-operators.md)
-- [Visual Basic에서의 연산자 우선 순위](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [기능별 연산자 목록](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Visual Basic의 연결 연산자](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [&= 연산자](and-assignment-operator.md)
+- [연결 연산자](concatenation-operators.md)
+- [Visual Basic에서의 연산자 우선 순위](operator-precedence.md)
+- [기능별 연산자 목록](operators-listed-by-functionality.md)
+- [Visual Basic의 연결 연산자](../../programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
