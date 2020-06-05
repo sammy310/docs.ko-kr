@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: 53bc9d41f28f63061db2012395480aa6be7515dd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 977e492c1c8ec5040c22169d91268c9c2241f6c4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346492"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404358"
 ---
 # <a name="option-infer-statement"></a>Option Infer 문
 
@@ -28,14 +28,14 @@ ms.locfileid: "74346492"
 Option Infer { On | Off }
 ```
 
-## <a name="parts"></a>요소
+## <a name="parts"></a>부분
 
 |용어|정의|
 |---|---|
-|`On`|(선택 사항) 지역 형식 유추를 사용하도록 설정합니다.|
-|`Off`|(선택 사항) 지역 형식 유추를 사용하지 않도록 설정합니다.|
+|`On`|선택 사항입니다. 지역 형식 유추를 사용하도록 설정합니다.|
+|`Off`|선택 사항입니다. 지역 형식 유추를 사용하지 않도록 설정합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 파일에서 `Option Infer`를 설정하려면 파일 맨 위(기타 모든 소스 코드 앞)에 `Option Infer On` 또는 `Option Infer Off`를 입력합니다. 파일에서 `Option Infer`에 대해 설정된 값이 IDE 또는 명령줄에 설정된 값과 충돌하는 경우에는 파일의 값이 우선적으로 적용됩니다.
 
@@ -54,29 +54,29 @@ Option Infer { On | Off }
 ![옵션 추론을 해제 한 경우 IntelliSense 보기를 보여 주는 스크린샷](./media/option-infer-statement/option-infer-as-object-off.png)
 
 > [!NOTE]
-> 변수가 `Object`로 선언되면 프로그램을 실행하는 동안 런타임 형식이 변경될 수 있습니다. Visual Basic은 *boxing* 및 *unboxing* 이라는 작업을 수행 하 여 `Object`와 값 형식 간에 변환 하 여 실행 속도를 느리게 합니다. Boxing 및 unboxing에 대 한 자세한 내용은 [Visual Basic 언어 사양](~/_vblang/spec/conversions.md#value-type-conversions)을 참조 하세요.
+> 변수가 `Object`로 선언되면 프로그램을 실행하는 동안 런타임 형식이 변경될 수 있습니다. Visual Basic는 *boxing* 및 *unboxing* 작업을 수행 하 여와 값 형식 간에 변환 하는 작업을 수행 하므로 `Object` 실행 속도가 느려집니다. Boxing 및 unboxing에 대 한 자세한 내용은 [Visual Basic 언어 사양](~/_vblang/spec/conversions.md#value-type-conversions)을 참조 하세요.
 
 형식 유추는 프로시저 수준에서 적용되며 클래스, 구조체, 모듈 또는 인터페이스의 프로시저 외부에는 적용되지 않습니다.
 
-자세한 내용은 [지역 형식 유추](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)를 참조 하세요.
+자세한 내용은 [지역 형식 유추](../../programming-guide/language-features/variables/local-type-inference.md)를 참조 하세요.
 
 ## <a name="when-an-option-infer-statement-is-not-present"></a>Option Infer 문이 없는 경우
 
-소스 코드에 `Option Infer` 문이 포함 되어 있지 않은 경우 [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) 에 대 한 **옵션 유추 옵션이** 사용 됩니다. 명령줄 컴파일러를 사용 하는 경우 [-옵션 추론](../../../visual-basic/reference/command-line-compiler/optioninfer.md) 컴파일러 옵션이 사용 됩니다.
+소스 코드에 문이 포함 되어 있지 않으면 `Option Infer` 컴파일 페이지에서 설정 **유추 옵션이** 사용 됩니다 [(Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) . 명령줄 컴파일러를 사용 하는 경우 [-옵션 추론](../../reference/command-line-compiler/optioninfer.md) 컴파일러 옵션이 사용 됩니다.
 
 #### <a name="to-set-option-infer-in-the-ide"></a>IDE에서 Option Infer를 설정하려면
 
-1. **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.
+1. **솔루션 탐색기**에서 프로젝트를 선택 합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.
 
 2. **컴파일** 탭을 클릭합니다.
 
 3. **유추 옵션** 상자에서 값을 설정 합니다.
 
-새 프로젝트를 만들 때 **컴파일** 탭의 **유추 설정 옵션이** **VB 기본값** 대화 상자의 **유추 옵션** 으로 설정 됩니다. **VB 기본값** 대화 상자에 액세스 하려면 **도구** 메뉴에서 **옵션**을 클릭 합니다. **옵션** 대화 상자에서 **프로젝트 및 솔루션**을 확장하고 **VB 기본값**을 클릭합니다. **VB 기본값** 의 초기 기본 설정은 `On`입니다.
+새 프로젝트를 만들 때 **컴파일** 탭의 **유추 설정 옵션이** **VB 기본값** 대화 상자의 **유추 옵션** 으로 설정 됩니다. **VB 기본값** 대화 상자에 액세스 하려면 **도구** 메뉴에서 **옵션**을 클릭 합니다. **옵션** 대화 상자에서 **프로젝트 및 솔루션**을 확장하고 **VB 기본값**을 클릭합니다. **VB 기본값** 의 초기 기본 설정은 `On` 입니다.
 
 #### <a name="to-set-option-infer-on-the-command-line"></a>명령줄에서 Option Infer를 설정하려면
 
-**Vbc** 명령에 [-옵션 추론](../../../visual-basic/reference/command-line-compiler/optioninfer.md) 컴파일러 옵션을 포함 합니다.
+**Vbc** 명령에 [-옵션 추론](../../reference/command-line-compiler/optioninfer.md) 컴파일러 옵션을 포함 합니다.
 
 ## <a name="default-data-types-and-values"></a>기본 데이터 형식 및 값
 
@@ -84,9 +84,9 @@ Option Infer { On | Off }
 
 |데이터 형식 지정 여부|이니셜라이저 지정 여부|예제|결과|
 |---|---|---|---|
-|아니요|아니요|`Dim qty`|`Option Strict`가 off(기본값)이면 변수는 `Nothing`으로 설정됩니다.<br /><br /> `Option Strict`가 on이면 컴파일 시간 오류가 발생합니다.|
-|아니요|예|`Dim qty = 5`|`Option Infer`가 on(기본값)이면 변수가 이니셜라이저의 데이터 형식을 사용합니다. [지역 형식 유추](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)를 참조 하세요.<br /><br /> `Option Infer`가 off이고 `Option Strict`고 off이면 변수가 `Object`의 데이터 형식을 사용합니다.<br /><br /> `Option Infer`가 off이고 `Option Strict`는 on이면 컴파일 시간 오류가 발생합니다.|
-|예|아니요|`Dim qty As Integer`|변수는 데이터 형식의 기본값으로 초기화됩니다. 자세한 내용은 [Dim 문](../../../visual-basic/language-reference/statements/dim-statement.md)을 참조 하세요.|
+|아니요|예|`Dim qty`|`Option Strict`가 off(기본값)이면 변수는 `Nothing`으로 설정됩니다.<br /><br /> `Option Strict`가 on이면 컴파일 시간 오류가 발생합니다.|
+|예|예|`Dim qty = 5`|`Option Infer`가 on(기본값)이면 변수가 이니셜라이저의 데이터 형식을 사용합니다. [지역 형식 유추](../../programming-guide/language-features/variables/local-type-inference.md)를 참조 하세요.<br /><br /> `Option Infer`가 off이고 `Option Strict`고 off이면 변수가 `Object`의 데이터 형식을 사용합니다.<br /><br /> `Option Infer`가 off이고 `Option Strict`는 on이면 컴파일 시간 오류가 발생합니다.|
+|예|예|`Dim qty As Integer`|변수는 데이터 형식의 기본값으로 초기화됩니다. 자세한 내용은 [Dim 문](dim-statement.md)을 참조 하세요.|
 |예|예|`Dim qty  As Integer = 5`|이니셜라이저의 데이터 형식을 지정한 데이터 형식으로 변환할 수 없으면 컴파일 시간 오류가 발생합니다.|
 
 ## <a name="example"></a>예제
@@ -103,11 +103,11 @@ Option Infer { On | Off }
 
 ## <a name="see-also"></a>참고 항목
 
-- [Dim 문](../../../visual-basic/language-reference/statements/dim-statement.md)
-- [지역 형식 유추](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Option Compare 문](../../../visual-basic/language-reference/statements/option-compare-statement.md)
-- [Option Explicit 문](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
-- [Option Strict 문](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Dim 문](dim-statement.md)
+- [지역 형식 유추](../../programming-guide/language-features/variables/local-type-inference.md)
+- [Option Compare 문](option-compare-statement.md)
+- [Option Explicit 문](option-explicit-statement.md)
+- [Option Strict 문](option-strict-statement.md)
 - [옵션 대화 상자, 프로젝트, Visual Basic 기본값](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
-- [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
+- [-optioninfer](../../reference/command-line-compiler/optioninfer.md)
 - [boxing 및 unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)
