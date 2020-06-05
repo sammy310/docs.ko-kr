@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Settings object [Visual Basic], application settings
 - examples [Visual Basic], application settings
 ms.assetid: e38d0cc7-247a-46ca-ba04-f2913f0adb2e
-ms.openlocfilehash: 49f65e9c39a29056cb1c552f0d577fcf0d75d658
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1c564694c7ca047378c66fd2b7f3f3ecd5ce687b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74353239"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410129"
 ---
 # <a name="accessing-application-settings-visual-basic"></a>애플리케이션 설정 액세스(Visual Basic)
 
@@ -28,12 +28,12 @@ ms.locfileid: "74353239"
   
 |대상|참조 항목|  
 |--------|---------|  
-|사용자 설정 값 업데이트|[방법: Visual Basic에서 사용자 설정 변경](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
-|속성 표에 애플리케이션 및 사용자 설정 표시|[방법: Visual Basic에서 사용자 설정의 속성 표 만들기](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
-|업데이트된 사용자 설정 값 저장|[방법: Visual Basic에서 사용자 설정 유지](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
-|사용자 설정 값 결정|[방법: Visual Basic에서 애플리케이션 설정 읽기](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
+|사용자 설정 값 업데이트|[방법: Visual Basic에서 사용자 설정 변경](how-to-change-user-settings.md)|  
+|속성 표에 애플리케이션 및 사용자 설정 표시|[방법: Visual Basic에서 사용자 설정의 속성 표 만들기](how-to-create-property-grids-for-user-settings.md)|  
+|업데이트된 사용자 설정 값 저장|[방법: Visual Basic에서 사용자 설정 유지](how-to-persist-user-settings.md)|  
+|사용자 설정 값 결정|[방법: Visual Basic에서 애플리케이션 설정 읽기](how-to-read-application-settings.md)|  
   
 ## <a name="see-also"></a>참조
 
 - [애플리케이션 설정 관리(.NET)](/visualstudio/ide/managing-application-settings-dotnet)
-- [My.Settings 개체](../../../../visual-basic/language-reference/objects/my-settings-object.md)
+- [My.Settings 개체](../../../language-reference/objects/my-settings-object.md)

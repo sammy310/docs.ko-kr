@@ -9,12 +9,12 @@ helpviewer_keywords:
 - files [Visual Basic], accessing
 - directories [Visual Studio], processing
 ms.assetid: f1db14c8-a4fd-4d0b-8323-c7cb29d688c2
-ms.openlocfilehash: 790cf5aa2d3fde779fcc24c0c9f1fc9c4c42331b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b69c65621f3849b07bd31f569fc4ae9fe04b50a6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74333955"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411566"
 ---
 # <a name="processing-drives-directories-and-files-visual-basic"></a>드라이브, 디렉터리 및 파일 처리(Visual Basic)
 
@@ -22,21 +22,21 @@ Visual Basic을 사용하여 `My.Computer.FileSystem` 개체로 드라이브, �
   
 ## <a name="in-this-section"></a>섹션 내용  
 
- [Visual Basic을 사용한 파일 액세스](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)  
+ [Visual Basic을 사용한 파일 액세스](file-access.md)  
  `My.Computer.FileSystem` 개체를 파일, 드라이브 및 폴더 작업에 사용하는 방법을 설명합니다.  
   
- [.NET Framework 파일 I/O 및 파일 시스템의 기본 사항(Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)  
+ [.NET Framework 파일 I/O 및 파일 시스템의 기본 사항(Visual Basic)](basics-of-net-framework-file-io-and-the-file-system.md)  
  스트림, 격리된 스토리지, 파일 이벤트, 파일 특성, 파일 액세스 등 .NET Framework의 파일 I/O 개념에 대해 개략적으로 설명합니다.  
   
- [연습: .NET Framework 메서드를 사용하여 파일 조작](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
+ [연습: .NET Framework 메서드를 사용하여 파일 조작](walkthrough-manipulating-files-by-using-net-framework-methods.md)  
  .NET Framework를 사용하여 파일 및 폴더를 조작하는 방법을 설명합니다.  
   
- [연습: Visual Basic에서 파일과 디렉터리 조작](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
+ [연습: Visual Basic에서 파일과 디렉터리 조작](walkthrough-manipulating-files-and-directories.md)  
  `My.Computer.FileSystem` 개체를 사용하여 파일 및 폴더를 조작하는 방법을 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
 
- [프로그램 구조 및 코드 규칙](../../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
+ [프로그램 구조 및 코드 규칙](../../../programming-guide/program-structure/program-structure-and-code-conventions.md)  
  프로그램의 물리적 구조와 모양에 대한 지침을 제공합니다.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  

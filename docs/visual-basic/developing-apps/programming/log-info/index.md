@@ -9,12 +9,12 @@ helpviewer_keywords:
 - My.Application.Log object
 - examples [Visual Basic], logging application information
 ms.assetid: 8bf4f047-22d6-48d6-aec5-93b98ad5b8e8
-ms.openlocfilehash: dace4bac3bf7529b8c50a492a092ad478f4d9e2d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43738b2d654435532a98654cbc40af134d43f02c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74353251"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410025"
 ---
 # <a name="logging-information-from-the-application-visual-basic"></a>애플리케이션의 정보 기록(Visual Basic)
 
@@ -28,18 +28,18 @@ ms.locfileid: "74353251"
   
 |대상|참조 항목|  
 |--------|---------|  
-|애플리케이션의 로그에 이벤트 정보를 씁니다.|[방법: 로그 메시지 쓰기](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)|  
-|애플리케이션의 로그에 예외 정보를 씁니다.|[방법: 로그 예외](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)|  
-|애플리케이션을 시작 및 종료할 때 애플리케이션의 로그에 추적 정보를 씁니다.|[방법: 애플리케이션이 시작 또는 종료될 때 메시지 기록](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-messages-when-the-application-starts-or-shuts-down.md)|  
-|텍스트 파일에 정보를 쓰도록 `My.Application.Log`를 구성합니다.|[방법: 텍스트 파일에 이벤트 정보 쓰기](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)|  
-|이벤트 로그에 정보를 쓰도록 `My.Application.Log`를 구성합니다.|[방법: 애플리케이션 이벤트 로그에 쓰기](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)|  
-|`My.Application.Log`가 정보를 쓰는 위치를 변경합니다.|[연습: My.Application.Log가 정보를 기록하는 위치 변경](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)|  
-|`My.Application.Log`가 정보를 쓰는 위치를 확인합니다.|[연습: My.Application.Log가 정보를 기록하는 위치 확인](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)|  
-|`My.Application.Log`에 대한 사용자 지정 로그 수신기를 만듭니다.|[연습: 사용자 지정 로그 수신기 만들기](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)|  
-|`My.Application.Log` 로그의 출력을 필터링합니다.|[연습: My.Application.Log 출력 필터링](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)|  
+|애플리케이션의 로그에 이벤트 정보를 씁니다.|[방법: 로그 메시지 쓰기](how-to-write-log-messages.md)|  
+|애플리케이션의 로그에 예외 정보를 씁니다.|[방법: 로그 예외](how-to-log-exceptions.md)|  
+|애플리케이션을 시작 및 종료할 때 애플리케이션의 로그에 추적 정보를 씁니다.|[방법: 애플리케이션이 시작 또는 종료될 때 메시지 기록](how-to-log-messages-when-the-application-starts-or-shuts-down.md)|  
+|텍스트 파일에 정보를 쓰도록 `My.Application.Log`를 구성합니다.|[방법: 텍스트 파일에 이벤트 정보 쓰기](how-to-write-event-information-to-a-text-file.md)|  
+|이벤트 로그에 정보를 쓰도록 `My.Application.Log`를 구성합니다.|[방법: 애플리케이션 이벤트 로그에 쓰기](how-to-write-to-an-application-event-log.md)|  
+|`My.Application.Log`가 정보를 쓰는 위치를 변경합니다.|[연습: My.Application.Log가 정보를 기록하는 위치 변경](walkthrough-changing-where-my-application-log-writes-information.md)|  
+|`My.Application.Log`가 정보를 쓰는 위치를 확인합니다.|[연습: My.Application.Log가 정보를 기록하는 위치 확인](walkthrough-determining-where-my-application-log-writes-information.md)|  
+|`My.Application.Log`에 대한 사용자 지정 로그 수신기를 만듭니다.|[연습: 사용자 지정 로그 수신기 만들기](walkthrough-creating-custom-log-listeners.md)|  
+|`My.Application.Log` 로그의 출력을 필터링합니다.|[연습: My.Application.Log 출력 필터링](walkthrough-filtering-my-application-log-output.md)|  
   
 ## <a name="see-also"></a>참조
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
-- [애플리케이션 로그 작업](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [문제 해결: 로그 수신기](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)
+- [애플리케이션 로그 작업](working-with-application-logs.md)
+- [문제 해결: 로그 수신기](troubleshooting-log-listeners.md)
