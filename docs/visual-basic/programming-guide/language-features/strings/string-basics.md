@@ -1,17 +1,17 @@
 ---
-title: 문자열 기본
+title: 문자열 기본 사항
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], Like operator
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-ms.openlocfilehash: 7141966e3c8a8cbce42111c56a85a00709e8fe1a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 935926b8b83afa47c20ea68aecd6bc8c40bd0234
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344285"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363699"
 ---
 # <a name="string-basics-in-visual-basic"></a>Visual Basic의 문자열 기본
 `String` 데이터 형식은 일련의 문자를 나타내며, 각각은 차례로 `Char` 데이터 형식의 인스턴스를 나타냅니다. 이 항목에서는 Visual Basic에 있는 문자열의 기본 개념을 소개 합니다.  
@@ -54,7 +54,7 @@ World]]></xml>.Value
   
  [!code-vb[VbVbalrStrings#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#67)]  
   
- 위 예제에서 문자열의 `Chars` 속성은 문자열에서 네 번째 문자인 `D`를 반환하고 `myChar`에 할당합니다. `Length` 속성을 통해 특정 문자열의 길이를 가져올 수도 있습니다. 문자열에서 여러 배열 형식 조작을 수행해야 하는 경우 문자열의 `Char` 함수를 사용하여 `ToCharArray` 인스턴스의 배열로 변환할 수 있습니다. 예를 들면 다음과 같습니다.  
+ 위 예제에서 문자열의 `Chars` 속성은 문자열에서 네 번째 문자인 `D`를 반환하고 `myChar`에 할당합니다. `Length` 속성을 통해 특정 문자열의 길이를 가져올 수도 있습니다. 문자열에서 여러 배열 형식 조작을 수행해야 하는 경우 문자열의 `ToCharArray` 함수를 사용하여 `Char` 인스턴스의 배열로 변환할 수 있습니다. 예를 들면 다음과 같습니다.  
   
  [!code-vb[VbVbalrStrings#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#68)]  
   
@@ -73,7 +73,7 @@ World]]></xml>.Value
   
 ## <a name="see-also"></a>참고 항목
 
-- [Visual Basic의 문자열 소개](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
-- [String 데이터 형식](../../../../visual-basic/language-reference/data-types/string-data-type.md)
-- [Char 데이터 형식](../../../../visual-basic/language-reference/data-types/char-data-type.md)
-- [기본적인 문자열 작업](../../../../standard/base-types/basic-string-operations.md)
+- [Visual Basic의 문자열 소개](introduction-to-strings.md)
+- [문자열 데이터 형식](../../../language-reference/data-types/string-data-type.md)
+- [Char 데이터 형식](../../../language-reference/data-types/char-data-type.md)
+- [기본 문자열 작업](../../../../standard/base-types/basic-string-operations.md)

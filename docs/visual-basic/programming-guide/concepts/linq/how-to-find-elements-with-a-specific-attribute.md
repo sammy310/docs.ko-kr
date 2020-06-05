@@ -2,14 +2,14 @@
 title: '방법: 특정 특성으로 요소 찾기(XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 4bb38d2c-bc7c-4196-8909-aaf41fb86b28
-ms.openlocfilehash: 36f725a7684dc009dbfb956a1584fd6ca5e487b0
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 4b625fcccc834f860072ad92587bbfd7ed5ec4ad
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78267043"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364775"
 ---
-# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a>방법: 특정 특성이 있는 요소 찾기(XPath-LINQ에서 XML까지) (시각적 기본)
+# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a>방법: 특정 특성으로 요소 찾기 (XPath-LINQ to XML) (Visual Basic)
 특정 특성을 가진 모든 요소를 찾으려는 경우가 있습니다. 특성의 내용에는 관심이 없으며, 대신 특성의 존재에 따라 선택하려고 합니다.  
   
  XPath 식은 다음과 같습니다.  
@@ -61,4 +61,4 @@ Results are identical
   
 ## <a name="see-also"></a>참고 항목
 
-- [XPath 사용자를 위한 LINQ에서 XML로(시각적 기본)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath 사용자에 대 한 LINQ to XML (Visual Basic)](linq-to-xml-for-xpath-users.md)

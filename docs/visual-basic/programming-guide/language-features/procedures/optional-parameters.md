@@ -12,15 +12,15 @@ helpviewer_keywords:
 - arguments [Visual Basic], optional
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
-ms.openlocfilehash: d859f7eaaefa051cfdf703d8589bc8c679a3ee85
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4e07b75c94b4aea681e6e862e161bda80b2833fc
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345959"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364333"
 ---
 # <a name="optional-parameters-visual-basic"></a>선택적 매개 변수(Visual Basic)
-프로시저 매개 변수를 선택적 요소로 지정하여 프로시저를 호출할 때 인수를 지정하지 않아도 되도록 할 수 있습니다. *선택적 매개 변수* 는 프로시저 정의에서 `Optional` 키워드로 표시 됩니다. 이 때 적용되는 규칙은 다음과 같습니다.  
+프로시저 매개 변수를 선택적 요소로 지정하여 프로시저를 호출할 때 인수를 지정하지 않아도 되도록 할 수 있습니다. *선택적 매개 변수* 는 `Optional` 프로시저 정의에서 키워드로 표시 됩니다. 이 때 적용되는 규칙은 다음과 같습니다.  
   
 - 프로시저 정의의 모든 선택적 매개 변수에는 기본값을 지정해야 합니다.  
   
@@ -43,14 +43,14 @@ Sub name(ByVal parameter1 As datatype1, Optional ByVal parameter2 As datatype2 =
 Sub name(argument 1, , , argument 4)  
 ```  
   
- 다음 예제에서는 `MsgBox` 함수를 여러 번 호출합니다. `MsgBox`에는 필수 매개 변수 하 나와 선택적 매개 변수 두 개가 있습니다.  
+ 다음 예제에서는 `MsgBox` 함수를 여러 번 호출합니다. `MsgBox`에는 필수적 매개 변수 하나와 선택적 매개 변수 두 개가 사용됩니다.  
   
  `MsgBox`에 대한 첫 번째 호출에서 `MsgBox`에서 정의하는 순서대로 세 개의 인수를 모두 제공합니다. 두 번째 호출에서는 필수적 인수만 지정합니다. 세 번째와 네 번째 호출에서는 첫 번째 인수와 세 번째 인수를 지정합니다. 세 번째 호출에서는 위치로 인수를 지정하고, 네 번째 호출에서는 이름으로 인수를 지정합니다.  
   
  [!code-vb[VbVbcnProcedures#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#47)]  
   
 ## <a name="determining-whether-an-optional-argument-is-present"></a>선택적 인수의 존재 여부 확인  
- 프로시저는 지정된 인수가 생략되었는지 또는 호출 코드가 명시적으로 기본값을 제공했는지 여부를 런타임에서 감지할 수 없습니다. 이를 알아보려면 특이한 값을 기본값으로 설정하면 됩니다. 다음 절차에서는 선택적 매개 변수 `office`를 정의 하 고, `QJZ`기본값을 테스트 하 여 호출에서 생략 되었는지 확인 합니다.  
+ 프로시저는 지정된 인수가 생략되었는지 또는 호출 코드가 명시적으로 기본값을 제공했는지 여부를 런타임에서 감지할 수 없습니다. 이를 알아보려면 특이한 값을 기본값으로 설정하면 됩니다. 다음 절차에서는 선택적 매개 변수 `office` 를 정의 하 고, `QJZ` 호출에서이 값이 생략 되었는지 여부를 확인 하기 위해 기본값을 테스트 합니다.  
   
  [!code-vb[VbVbcnProcedures#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#46)]  
   
@@ -67,5 +67,5 @@ Sub name(argument 1, , , argument 4)
 - [위치 및 이름으로 인수 전달](./passing-arguments-by-position-and-by-name.md)
 - [매개 변수 배열](./parameter-arrays.md)
 - [프로시저 오버로딩](./procedure-overloading.md)
-- [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)
-- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)
+- [선택 사항](../../../language-reference/modifiers/optional.md)
+- [ParamArray](../../../language-reference/modifiers/paramarray.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID17
 ms.assetid: eeab237c-4110-4abd-b601-bbb025c5d204
-ms.openlocfilehash: bb7b4834ede26b330ecd30c5293e4cab6654bc67
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 301a8661fa9a63ab80f25550e7b5dee1b33123a2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353315"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364970"
 ---
 # <a name="cant-perform-requested-operation-visual-basic"></a>요청한 작업을 수행할 수 없습니다(Visual Basic).
 프로젝트의 현재 상태를 무효화하기 때문에 작업을 수행할 수 없습니다. 예를 들어 실행되는 코드를 프로그래밍 방식으로 수정하려 했을 수 있습니다.  
@@ -20,4 +20,4 @@ ms.locfileid: "74353315"
   
 ## <a name="see-also"></a>참고 항목
 
-- [오류 형식](../../visual-basic/programming-guide/language-features/error-types.md)
+- [오류 유형](../programming-guide/language-features/error-types.md)

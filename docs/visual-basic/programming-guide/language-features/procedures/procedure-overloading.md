@@ -17,12 +17,12 @@ helpviewer_keywords:
 - procedure overloading
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
-ms.openlocfilehash: 41a971896fe726cbe9849fd46334910e7288afe0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f8accc74fbdd9b1d8cf9bc3d8f6ddd26f73452b8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352595"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363878"
 ---
 # <a name="procedure-overloading-visual-basic"></a>프로시저 오버로딩(Visual Basic)
 
@@ -50,13 +50,13 @@ ms.locfileid: "74352595"
 
 - **항목은 시그니처의 일부가 아닙니다**. 시그니처를 변경 하지 않고 프로시저를 오버 로드할 수 없습니다. 특히 다음 항목 중 하나 이상을 변경 하 여 프로시저를 오버 로드할 수 없습니다.
 
-  - 프로시저 한정자 키워드 (예: `Public`, `Shared`및 `Static`
+  - 프로시저 한정자 키워드 (예: `Public` , `Shared` 및)`Static`
 
   - 매개 변수 또는 형식 매개 변수 이름
 
   - 형식 매개 변수 제약 조건 (제네릭 프로시저의 경우)
 
-  - `ByRef` 및 `Optional`와 같은 매개 변수 한정자 키워드
+  - 매개 변수 한정자 키워드 (예: `ByRef` 및)`Optional`
 
   - 값을 반환 하는지 여부
 
@@ -64,27 +64,27 @@ ms.locfileid: "74352595"
 
   위의 목록에 있는 항목은 시그니처의 일부가 아닙니다. 오버 로드 된 버전을 구분 하는 데 사용할 수는 없지만 해당 시그니처로 적절히 구분 되는 오버 로드 된 버전 간에는 이러한 버전을 변경할 수 있습니다.
 
-- **런타임에 바인딩된 인수**입니다. 런타임에 바인딩된 개체 변수를 오버 로드 된 버전에 전달 하려는 경우 적절 한 매개 변수를 <xref:System.Object>선언 해야 합니다.
+- **런타임에 바인딩된 인수**입니다. 런타임에 바인딩된 개체 변수를 오버 로드 된 버전에 전달 하려는 경우에는 적절 한 매개 변수를로 선언 해야 합니다 <xref:System.Object> .
 
 ## <a name="multiple-versions-of-a-procedure"></a>프로시저의 여러 버전
 
-고객의 잔액에 대해 트랜잭션을 게시 하는 `Sub` 프로시저를 작성 하 고 있거나 이름 또는 계정 번호를 기준으로 고객을 참조할 수 있습니다. 이를 수용 하기 위해 다음 예제와 같이 두 가지 다른 `Sub` 프로시저를 정의할 수 있습니다.
+`Sub`고객의 잔액에 대해 트랜잭션을 게시 하는 프로시저를 작성 하는 경우 이름 또는 계정 번호를 기준으로 고객을 참조할 수 있습니다. 이를 수용 하기 위해 `Sub` 다음 예제와 같이 두 가지 다른 프로시저를 정의할 수 있습니다.
 
 [!code-vb[VbVbcnProcedures#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#73)]
 
 ### <a name="overloaded-versions"></a>오버 로드 된 버전
 
-또 다른 방법은 단일 프로시저 이름을 오버 로드 하는 것입니다. 다음과 같이 [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) 키워드를 사용 하 여 각 매개 변수 목록에 대 한 프로시저의 버전을 정의할 수 있습니다.
+또 다른 방법은 단일 프로시저 이름을 오버 로드 하는 것입니다. 다음과 같이 [Overloads](../../../language-reference/modifiers/overloads.md) 키워드를 사용 하 여 각 매개 변수 목록에 대 한 프로시저의 버전을 정의할 수 있습니다.
 
 [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]
 
 #### <a name="additional-overloads"></a>추가 오버 로드
 
-또한 `Decimal` 또는 `Single`에서 트랜잭션 양을 수락 하려는 경우이 변형에 대해 `post` 오버 로드를 추가로 수행할 수 있습니다. 앞의 예제에서 각 오버 로드에 대해이를 수행한 경우 이름이 같지만 서명이 4 개 있는 `Sub` 프로시저가 네 개 있습니다.
+또는에서 트랜잭션 양을 허용 하려는 경우 `Decimal` `Single` `post` 이 변형에 대해 허용할 추가 오버 로드를 수행할 수 있습니다. 앞의 예제에서 각 오버 로드에 대해이를 수행한 경우 네 가지 `Sub` 절차를 모두 포함 하 고 네 개의 다른 서명을 사용 합니다.
 
 ## <a name="advantages-of-overloading"></a>오버 로드의 이점
 
-프로시저 오버 로드의 이점은 호출의 유연성을 제공 합니다. 앞의 예제에서 선언 된 `post` 프로시저를 사용 하려면 호출 하는 코드에서 고객 id를 `String` 또는 `Integer`으로 가져온 다음 두 경우 모두 동일한 프로시저를 호출할 수 있습니다. 다음 예제는 이러한 과정을 보여 줍니다.
+프로시저 오버 로드의 이점은 호출의 유연성을 제공 합니다. `post`앞의 예제에서 선언한 프로시저를 사용 하려면 호출 하는 코드에서 또는로 고객 id를 가져온 `String` `Integer` 다음 두 경우 모두 동일한 프로시저를 호출할 수 있습니다. 다음 예제에서는 이에 대해 설명합니다.
 
 [!code-vb[VbVbcnProcedures#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#56)]
 
@@ -97,7 +97,7 @@ ms.locfileid: "74352595"
 - [방법: 오버로드된 프로시저 호출](./how-to-call-an-overloaded-procedure.md)
 - [방법: 선택적 매개 변수를 사용하는 프로시저 오버로드](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
 - [방법: 매개 변수를 무제한으로 사용하는 프로시저 오버로드](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
-- [프로시저를 오버로드할 때 고려해야 할 사항](./considerations-in-overloading-procedures.md)
-- [오버로드 확인](./overload-resolution.md)
-- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
-- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [프로시저 오버로드에서 고려해야 할 사항](./considerations-in-overloading-procedures.md)
+- [오버 로드 확인](./overload-resolution.md)
+- [오버로드](../../../language-reference/modifiers/overloads.md)
+- [Visual Basic의 제네릭 형식](../data-types/generic-types.md)

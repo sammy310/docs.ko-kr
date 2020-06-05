@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - BC36550
 ms.assetid: 4387a51f-733c-45d7-abdb-eb64d4f51078
-ms.openlocfilehash: 2ed3a10cdf941bb8d1d7c00379736e04e8cad4d7
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 9b8f49c498699a8f7d1c4b329e82258501aa0c47
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583176"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363100"
 ---
 # <a name="extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations"></a>'Extension' 특성은 'Module', 'Sub' 또는 'Function' 선언에만 적용할 수 있습니다.
 
-Visual Basic에서 데이터 형식을 확장 하는 유일한 방법은 표준 모듈 내에 확장 메서드를 정의 하는 것입니다. 확장 메서드는 `Sub` 프로시저 이거나 `Function` 프로시저일 수 있습니다. 모든 확장 메서드는 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 네임 스페이스에서 `<Extension()>` 확장 특성으로 표시 되어야 합니다. 필요에 따라 확장 메서드를 포함 하는 모듈을 동일한 방식으로 표시할 수 있습니다. 확장 특성은 사용할 수 없습니다.
+Visual Basic에서 데이터 형식을 확장 하는 유일한 방법은 표준 모듈 내에 확장 메서드를 정의 하는 것입니다. 확장 메서드는 `Sub` 프로시저 또는 프로시저일 수 있습니다 `Function` . 모든 확장 메서드는 `<Extension()>` 네임 스페이스에서 확장 특성으로 표시 되어야 합니다 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> . 필요에 따라 확장 메서드를 포함 하는 모듈을 동일한 방식으로 표시할 수 있습니다. 확장 특성은 사용할 수 없습니다.
 
 **오류 ID:** BC36550
 
@@ -28,7 +28,7 @@ Visual Basic에서 데이터 형식을 확장 하는 유일한 방법은 표준 
 
 ## <a name="example"></a>예제
 
-다음 예에서는 `String` 데이터 형식에 대 한 `Print` 메서드를 정의 합니다.
+다음 예제에서는 `Print` 데이터 형식에 대 한 메서드를 정의 합니다 `String` .
 
 ```vb
 Imports StringUtility
@@ -44,8 +44,8 @@ Namespace StringUtility
 End Namespace
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [특성 개요](../../../visual-basic/programming-guide/concepts/attributes/index.md)
-- [확장명 메서드](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
-- [Module 문](../../../visual-basic/language-reference/statements/module-statement.md)
+- [특성 개요](../../programming-guide/concepts/attributes/index.md)
+- [확장명 메서드](../../programming-guide/language-features/procedures/extension-methods.md)
+- [Module 문](../statements/module-statement.md)

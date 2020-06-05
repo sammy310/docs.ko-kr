@@ -1,27 +1,27 @@
 ---
-title: 함수형 프로그래밍 및 명령형 프로그래밍 비교
+title: 함수형 프로그래밍과 명령형 프로그래밍 비교
 ms.date: 07/20/2015
 ms.assetid: 6a1f3b57-00e6-447d-9906-74c7c4d5d85c
-ms.openlocfilehash: 704beadc29af0de606b8f246360dc6fffca8cfcc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0090761dc07218673e1e0299951530d5a4763ffe
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353437"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364801"
 ---
 # <a name="functional-programming-vs-imperative-programming-visual-basic"></a>함수형 프로그래밍과 명령형 프로그래밍 비교 (Visual Basic)
 이 항목에서는 함수형 프로그래밍을 더욱 일반적인 명령형(절차적) 프로그래밍과 비교하고 대조합니다.  
   
-## <a name="functional-programming-vs-imperative-programming"></a>함수형 프로그래밍 및 명령형 프로그래밍 비교  
+## <a name="functional-programming-vs-imperative-programming"></a>함수형 프로그래밍과 명령형 프로그래밍 비교  
  *함수형 프로그래밍* 패러다임은 순수하게 함수적인 접근 방법으로 문제를 해결하는 것을 지원하기 위해 만들어졌습니다. 함수형 프로그래밍은 *선언적 프로그래밍*의 형태로 표현됩니다. 이와 대조적으로 C#, Visual Basic, C++ 및 Java와 같은 OOP(개체 지향 프로그래밍) 언어를 비롯한 대부분의 주류 언어는 주로 *명령형*(절차적) 프로그래밍을 지원하기 위해 디자인되었습니다.  
   
  명령형 방법을 사용하는 경우 개발자는 컴퓨터에서 목표를 이루기 위해 수행해야 하는 단계를 매우 자세히 설명하는 코드를 작성합니다. 이러한 프로그래밍을 *알고리즘* 프로그래밍이라고도 합니다. 이와 대조적으로 함수형 방법에는 실행할 일련의 함수로 문제를 구성하는 작업이 포함됩니다. 이 경우 각 함수에 대한 입력과 각 함수가 반환하는 항목을 신중하게 정의합니다. 다음 표에서는 이러한 두 방법의 일반적인 차이점에 대해 설명합니다.  
   
-|특징|명령형 방법|함수형 방법|  
+|특성|명령형 방법|함수형 방법|  
 |--------------------|-------------------------|-------------------------|  
 |프로그래머가 중점을 두는 부분|작업을 수행하는 방법(알고리즘)과 상태의 변경을 추적하는 방법|원하는 정보와 필요한 변환|  
-|상태 변경|중요.|존재하지 않음|  
-|실행 순서|중요.|중요도가 낮음|  
+|상태 변경|중요|존재하지 않음|  
+|실행 순서|중요|중요도가 낮음|  
 |주요 흐름 제어|루프, 조건 및 함수(메서드) 호출|재귀를 비롯한 함수 호출|  
 |주요 조작 단위|클래스나 구조체의 인스턴스|1급(first-class) 개체와 데이터 컬렉션인 함수|  
   
@@ -50,8 +50,8 @@ ms.locfileid: "74353437"
   
  다행히 Visual Basic는 명령형 프로그래밍 방법과 함수형 프로그래밍 방법을 모두 지원 하기 때문에 함수형 프로그래밍을 완벽 하 게 수행 하지 않아도 됩니다. 개발자는 특정 시나리오에 가장 적합한 방법을 선택할 수 있습니다. 실제로 프로그램에는 흔히 두 방법이 결합되어 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [순수 함수 변환 소개 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [순수 함수 변환 소개 (Visual Basic)](introduction-to-pure-functional-transformations.md)
 - [XSLT 변환](../../../../standard/data/xml/xslt-transformations.md)
-- [순수 함수로 리팩터링 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [순수 함수로 리팩터링 (Visual Basic)](refactoring-into-pure-functions.md)
