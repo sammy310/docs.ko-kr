@@ -27,16 +27,16 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 9895709076634ce156ba9d1009f79ba7ddd2ba56
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 021805508a8a053ccc8fab6f1013109bece4b6f2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646378"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404773"
 ---
 # <a name="declare-statement"></a>Declare 문
 
-외부 파일에 구현된 프로시저에 대한 참조를 선언합니다.
+외부 파일에 구현 된 프로시저에 대 한 참조를 선언 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -54,92 +54,92 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 
 |용어|정의|
 |---|---|
-|`attributelist`|(선택 사항) [속성 목록을](../../../visual-basic/language-reference/statements/attribute-list.md)참조하십시오.|
-|`accessmodifier`|(선택 사항) 다음 중 하나일 수 있습니다.<br /><br /> -   [공용](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [보호](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [친구](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [개인](../../../visual-basic/language-reference/modifiers/private.md)<br />- [보호된 친구](../../language-reference/modifiers/protected-friend.md)<br />- [개인 보호](../../language-reference/modifiers/private-protected.md)<br /><br /> [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)을 참조하세요.|
-|`Shadows`|(선택 사항) [그림자 를](../../../visual-basic/language-reference/modifiers/shadows.md)참조하십시오.|
-|`charsetmodifier`|(선택 사항) 문자 집합 및 파일 검색 정보를 지정합니다. 다음 중 하나일 수 있습니다.<br /><br /> -   [안시(기본값)](../../../visual-basic/language-reference/modifiers/ansi.md)<br />-   [유니코드](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [자동](../../../visual-basic/language-reference/modifiers/auto.md)|
-|`Sub`|선택 사항이지만 `Sub` `Function` 나타나야 합니다. 외부 프로시저가 값을 반환하지 않음을 나타냅니다.|
-|`Function`|선택 사항이지만 `Sub` `Function` 나타나야 합니다. 외부 프로시저가 값을 반환했음을 나타냅니다.|
-|`name`|필수 사항입니다. 이 외부 참조의 이름입니다. 자세한 내용은 [선언된 요소 이름을](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)참조하십시오.|
-|`Lib`|필수 사항입니다. 외부 프로시저가 포함된 외부 파일(DLL 또는 코드 리소스)을 식별하는 `Lib` 절을 소개합니다.|
-|`libname`|필수 사항입니다. 선언된 프로시저가 포함된 파일의 이름입니다.|
-|`Alias`|(선택 사항) 선언되는 프로시저가 에 지정된 이름으로 파일 내에서 `name`식별될 수 없음을 나타냅니다. 에서 ID를 `aliasname`지정합니다.|
-|`aliasname`|키워드를 `Alias` 사용하는 경우 필요합니다. 다음 두 가지 방법 중 하나로 프로시저를 식별하는 문자열:<br /><br /> 파일 내의 프로시저의 진입점 이름(따옴표(`""`) 내에서<br /><br /> 또는<br /><br /> 숫자 부호`#`() 다음에 해당 파일 내에서 프로시저의 진입점의 서수 수를 지정하는 정수|
-|`parameterlist`|프로시저가 매개 변수를 취하는 경우 필요합니다. [매개 변수 목록](../../../visual-basic/language-reference/statements/parameter-list.md)을 참조하십시오.|
-|`returntype`|지정되어 `Function` 있고 `Option Strict` 있는 `On`경우 필수입니다. 프로시저에서 반환되는 값의 데이터 형식입니다.|
+|`attributelist`|선택 사항입니다. [특성 목록](attribute-list.md)을 참조 하십시오.|
+|`accessmodifier`|선택 사항입니다. 다음 중 하나일 수 있습니다.<br /><br /> -   [공개적](../modifiers/public.md)<br />-   [보호](../modifiers/protected.md)<br />-   [Friend](../modifiers/friend.md)<br />-   [문자](../modifiers/private.md)<br />- [보호 된 Friend](../modifiers/protected-friend.md)<br />- [개인 보호](../modifiers/private-protected.md)<br /><br /> [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md)을 참조하세요.|
+|`Shadows`|선택 사항입니다. [그림자](../modifiers/shadows.md)를 참조 하세요.|
+|`charsetmodifier`|선택 사항입니다. 문자 집합 및 파일 검색 정보를 지정 합니다. 다음 중 하나일 수 있습니다.<br /><br /> -   [Ansi](../modifiers/ansi.md) (기본값)<br />-   [유니코드](../modifiers/unicode.md)<br />-   [자동](../modifiers/auto.md)|
+|`Sub`|선택 사항 이지만 또는 중 하나를 `Sub` `Function` 표시 해야 합니다. 외부 프로시저에서 값을 반환 하지 않음을 나타냅니다.|
+|`Function`|선택 사항 이지만 또는 중 하나를 `Sub` `Function` 표시 해야 합니다. 외부 프로시저에서 값을 반환 함을 나타냅니다.|
+|`name`|필수 요소. 이 외부 참조의 이름입니다. 자세한 내용은 [선언 된 요소 이름](../../programming-guide/language-features/declared-elements/declared-element-names.md)을 참조 하세요.|
+|`Lib`|필수 요소. `Lib`외부 프로시저를 포함 하는 외부 파일 (DLL 또는 코드 리소스)을 식별 하는 절을 소개 합니다.|
+|`libname`|필수 요소. 선언 된 프로시저를 포함 하는 파일의 이름입니다.|
+|`Alias`|선택 사항입니다. 선언 되는 프로시저를 파일 내에서에 지정 된 이름으로 식별할 수 없음을 나타냅니다 `name` . 에서 해당 id를 지정 `aliasname` 합니다.|
+|`aliasname`|키워드를 사용 하는 경우 필요 `Alias` 합니다. 다음 두 가지 방법 중 하나로 프로시저를 식별 하는 문자열입니다.<br /><br /> 해당 파일 내에 있는 프로시저의 진입점 이름 (따옴표 포함)입니다. `""`<br /><br /> 또는<br /><br /> `#`해당 파일 내에서 프로시저 진입점의 서 수를 지정 하는 숫자 기호 () 뒤에 오는 정수|
+|`parameterlist`|프로시저에서 매개 변수를 사용 하는 경우 필수입니다. [매개 변수 목록](parameter-list.md)을 참조 하세요.|
+|`returntype`|`Function`가 지정 되 고가 인 경우 필수입니다 `Option Strict` `On` . 프로시저에서 반환 하는 값의 데이터 형식입니다.|
 
 ## <a name="remarks"></a>설명
 
-경우에 따라 프로젝트 외부의 파일(예: DLL 또는 코드 리소스)에 정의된 프로시저를 호출해야 합니다. 이렇게 하면 Visual Basic 컴파일러는 프로시저가 있는 위치, 식별 되는 방법, 호출 시퀀스 및 반환 형식 및 사용 하는 문자열 문자 집합 등 프로시저를 올바르게 호출 하는 데 필요한 정보에 액세스할 수 없습니다. 문은 `Declare` 외부 프로시저에 대한 참조를 만들고 이 필요한 정보를 제공합니다.
+프로젝트 외부의 파일 (예: DLL 또는 코드 리소스)에 정의 된 프로시저를 호출 해야 하는 경우가 있습니다. 이 작업을 수행 하는 경우 Visual Basic 컴파일러는 프로시저를 올바르게 호출 하는 데 필요한 정보 (프로시저의 위치, 식별 방법, 호출 시퀀스 및 반환 형식, 사용 하는 문자열 문자 집합)에 액세스할 수 없습니다. `Declare`문은 외부 프로시저에 대 한 참조를 만들고이 필요한 정보를 제공 합니다.
 
-`Declare`는 모듈 수준에서만 사용할 수 있습니다. 즉, 외부 참조에 대한 *선언 컨텍스트는* 클래스, 구조 또는 모듈이어야 하며 소스 파일, 네임스페이스, 인터페이스, 프로시저 또는 블록일 수 없습니다. 자세한 내용은 [선언 컨텍스트 및 기본 액세스 수준](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)을 참조하세요.
+`Declare`는 모듈 수준에서만 사용할 수 있습니다. 즉, 외부 참조의 *선언 컨텍스트* 는 클래스, 구조체 또는 모듈 이어야 하며 소스 파일, 네임 스페이스, 인터페이스, 프로시저 또는 블록일 수 없습니다. 자세한 내용은 [선언 컨텍스트 및 기본 액세스 수준](declaration-contexts-and-default-access-levels.md)을 참조하세요.
 
-외부 참조는 기본적으로 [공용](../../../visual-basic/language-reference/modifiers/public.md) 액세스로 설정됩니다. 액세스 수정자를 통해 액세스 수준을 조정할 수 있습니다.
+외부 참조의 기본값은 [공용](../modifiers/public.md) 액세스입니다. 액세스 한정자를 사용 하 여 액세스 수준을 조정할 수 있습니다.
 
 ## <a name="rules"></a>규칙
 
-- **특성.** 외부 참조에 특성을 적용할 수 있습니다. 적용하는 모든 특성은 외부 파일이 아닌 프로젝트에만 영향을 미칩니다.
+- **특성.** 외부 참조에 특성을 적용할 수 있습니다. 적용 하는 모든 특성은 외부 파일이 아닌 프로젝트에만 적용 됩니다.
 
-- **한정자.** 외부 프로시저는 암시적으로 [공유됩니다.](../../../visual-basic/language-reference/modifiers/shared.md) 외부 참조를 `Shared` 선언할 때는 키워드를 사용할 수 없으며 공유 상태를 변경할 수 없습니다.
+- **수정자.** 외부 프로시저는 암시적으로 [공유](../modifiers/shared.md)됩니다. `Shared`외부 참조를 선언할 때 키워드를 사용할 수 없으며, 해당 공유 상태를 변경할 수 없습니다.
 
-  외부 프로시저는 재정의에 참여하거나 인터페이스 멤버를 구현하거나 이벤트를 처리할 수 없습니다. 따라서 `Declare` 명령문에서 `Overrides`" `Overridable` `NotOverridable` `MustOverride` `Implements`의 키워드를 `Handles` 사용할 수 없습니다.
+  외부 프로시저는 재정의, 인터페이스 멤버 구현 또는 이벤트 처리에 참여할 수 없습니다. 따라서 `Overrides` 문에는,,,, `Overridable` `NotOverridable` `MustOverride` `Implements` 또는 `Handles` 키워드 `Declare` 를 사용할 수 없습니다.
 
-- **외부 프로시저 이름입니다.** 이 외부 참조에 외부 파일()에서 `name``aliasname`프로시저의 진입점 이름과 동일한 이름(in)을 지정할 필요는 없습니다. 절을 `Alias` 사용하여 진입점 이름을 지정할 수 있습니다. 이 기능은 외부 프로시저가 Visual Basic 예약 수정자 또는 변수, 프로시저 또는 동일한 범위의 다른 프로그래밍 요소와 이름이 같은 경우에 유용할 수 있습니다.
+- **외부 프로시저 이름입니다.** 이 외부 참조는 `name` 외부 파일 () 내에서 프로시저의 진입점 이름과 동일한 이름 ()을 제공할 필요가 없습니다 `aliasname` . 절을 사용 `Alias` 하 여 진입점 이름을 지정할 수 있습니다. 이는 외부 프로시저의 이름이 Visual Basic 예약 된 한정자, 변수, 프로시저 또는 동일한 범위에 있는 다른 프로그래밍 요소와 동일한 경우에 유용할 수 있습니다.
 
   > [!NOTE]
-  > 대부분의 DLL의 진입점 이름은 대/소문자를 구분합니다.
+  > 대부분의 Dll에서 진입점 이름은 대/소문자를 구분 합니다.
 
-- **외부 프로시저 번호입니다.** 또는 절을 `Alias` 사용하여 외부 파일의 내보내기 테이블 내에서 진입점의 서수 수를 지정할 수 있습니다. 이렇게 하려면 숫자 `aliasname` 기호()로`#`시작합니다. 이 기능은 Visual Basic에서 외부 프로시저 이름의 문자를 허용하지 않거나 외부 파일이 이름 없이 프로시저를 내보내는 경우에 유용할 수 있습니다.
+- **외부 프로시저 번호입니다.** 또는 절을 사용 하 여 `Alias` 외부 파일의 내보내기 테이블에 있는 진입점의 서 수를 지정할 수 있습니다. 이렇게 하려면 `aliasname` 숫자 기호 ()로 시작 `#` 합니다. 이는 Visual Basic에서 외부 프로시저 이름에 있는 모든 문자를 사용할 수 없거나 외부 파일이 프로시저를 이름 없이 내보내는 경우에 유용 합니다.
 
 ## <a name="data-type-rules"></a>데이터 형식 규칙
 
-- **매개 변수 데이터 유형입니다.** is는 `Option Strict` 에서 각 매개 변수의 데이터 형식을 지정해야 `parameterlist` `On` 모든 데이터 형식 또는 열거형, 구조체, 클래스 또는 인터페이스의 이름일 수 있습니다. 에서 `parameterlist`절을 `As` 사용하여 각 매개 변수에 전달할 인수의 데이터 형식을 지정합니다.
+- **매개 변수 데이터 형식입니다.** `Option Strict`가 이면 `On` 에서 각 매개 변수의 데이터 형식을 지정 해야 합니다 `parameterlist` . 모든 데이터 형식 또는 열거형, 구조체, 클래스 또는 인터페이스의 이름일 수 있습니다. 내에서 절을 사용 하 여 `parameterlist` `As` 각 매개 변수에 전달할 인수의 데이터 형식을 지정 합니다.
 
   > [!NOTE]
-  > .NET Framework에 대해 외부 프로시저가 작성되지 않은 경우 데이터 형식이 해당하는지 주의해야 합니다. 예를 들어 `Integer` 매개 변수(Visual Basic 6.0의 16비트)를 사용하여 Visual Basic 6.0 프로시저에 대한 `Short` 외부 `Declare` 참조를 선언하는 경우 Visual Basic의 16비트 정수 유형이기 때문에 문에서와 같이 해당 인수를 식별해야 합니다. 마찬가지로 `Long` Visual Basic 6.0에서 데이터 너비가 `Date` 다르고 다르게 구현됩니다.
+  > .NET Framework에 대해 외부 프로시저가 작성 되지 않은 경우에는 데이터 형식이 일치 하는지 주의 해야 합니다. 예를 들어 매개 변수를 사용 하 여 Visual Basic 6.0 프로시저에 대 한 외부 참조를 선언 하는 경우 `Integer` (Visual Basic 6.0에서 16 비트) 해당 인수는 `Short` `Declare` Visual Basic에서 16 비트 정수 형식 이므로 문에서와 같이 식별 해야 합니다. 마찬가지로 `Long` Visual Basic 6.0에는 서로 다른 데이터 너비가 있으며 `Date` 다르게 구현 됩니다.
 
-- **데이터 형식을 반환합니다.** 외부 프로시저가 `Function` `Option Strict` a이고 `On`있는 경우 호출 코드에 반환되는 값의 데이터 형식을 지정해야 합니다. 모든 데이터 형식 또는 열거형, 구조체, 클래스 또는 인터페이스의 이름일 수 있습니다.
-
-  > [!NOTE]
-  > Visual Basic 컴파일러는 데이터 형식이 외부 프로시저의 데이터 형식과 호환되는지 확인하지 않습니다. 불일치가 있는 경우 공통 언어 런타임은 <xref:System.Runtime.InteropServices.MarshalDirectiveException> 런타임에 예외를 생성합니다.
-
-- **기본 데이터 유형입니다.** 에서 `Option Strict` `Off` 매개 변수의 `parameterlist`데이터 형식을 지정하지 않은 경우 Visual Basic 컴파일러는 해당 인수를 [개체 데이터 유형으로](../../../visual-basic/language-reference/data-types/object-data-type.md)변환합니다. 마찬가지로 지정하지 `returntype`않으면 컴파일러는 반환 데이터 형식을 으로 `Object`합니다.
+- **반환 데이터 형식입니다.** 외부 프로시저가 `Function` `Option Strict` 이 고가 인 경우 `On` 호출 코드에 반환 되는 값의 데이터 형식을 지정 해야 합니다. 모든 데이터 형식 또는 열거형, 구조체, 클래스 또는 인터페이스의 이름일 수 있습니다.
 
   > [!NOTE]
-  > 다른 플랫폼에서 작성되었을 수 있는 외부 프로시저를 처리하기 때문에 데이터 형식에 대해 가정하거나 기본값으로 허용하는 것은 위험합니다. 모든 매개 변수의 데이터 형식과 반환 값(있는 경우)을 지정하는 것이 훨씬 안전합니다. 이렇게 하면 코드의 가독성이 향상됩니다.
+  > Visual Basic 컴파일러는 데이터 형식이 외부 프로시저의 데이터 형식과 호환 되는지 확인 하지 않습니다. 일치 하지 않는 경우 공용 언어 런타임에서는 런타임에 예외를 생성 <xref:System.Runtime.InteropServices.MarshalDirectiveException> 합니다.
+
+- **기본 데이터 형식입니다.** `Option Strict`가이 `Off` 고에서 매개 변수의 데이터 형식을 지정 하지 않는 경우 `parameterlist` Visual Basic 컴파일러는 해당 인수를 [개체 데이터 형식](../data-types/object-data-type.md)으로 변환 합니다. 마찬가지로를 지정 하지 않는 경우 `returntype` 컴파일러는 반환 데이터 형식을로 사용 합니다 `Object` .
+
+  > [!NOTE]
+  > 다른 플랫폼에서 작성 되었을 수 있는 외부 프로시저를 처리 하기 때문에 데이터 형식에 대 한 가정을 하거나 기본값을 허용 하는 것이 위험 합니다. 모든 매개 변수의 데이터 형식과 반환 값 (있는 경우)을 지정 하는 것이 훨씬 안전 합니다. 또한 코드의 가독성을 향상 시킵니다.
 
 ## <a name="behavior"></a>동작
 
-- **범위.** 외부 참조는 클래스, 구조 또는 모듈 전체에서 범위에 있습니다.
+- **범위.** 외부 참조는 해당 클래스, 구조체 또는 모듈 전체의 범위에 있습니다.
 
-- **수명.** 외부 참조는 선언된 클래스, 구조또는 모듈과 수명이 동일합니다.
+- **수명.** 외부 참조는 선언 된 클래스, 구조체 또는 모듈과 수명이 동일 합니다.
 
-- **외부 프로시저를 호출합니다.** 값을 반환하는 경우 식에서 사용하거나 `Sub` 값을 반환하지 않는 경우 호출 [문에](../../../visual-basic/language-reference/statements/call-statement.md) 지정하여 외부 프로시저를 호출하는 `Function` 것과 동일한 방식으로 외부 프로시저를 호출합니다.
+- **외부 프로시저를 호출 합니다.** 또는 프로시저를 호출 하는 것과 같은 방법으로 외부 프로시저를 호출 `Function` `Sub` 하거나, 값을 반환 하는 경우에는 식에서 사용 하 고, 값을 반환 하지 않으면 [call 문에](call-statement.md) 지정 하 여 호출 합니다.
 
-  문에서 지정한 대로 외부 `parameterlist` 프로시저에 `Declare` 인수를 전달합니다. 매개 변수가 원래 외부 파일에서 선언된 방법을 고려하지 마십시오. 마찬가지로 반환 값이 있는 경우 `returntype` `Declare` 명령문에 지정된 대로 정확하게 사용합니다.
+  문에서에 지정 된 것과 정확히 일치 하는 인수를 외부 프로시저에 전달 `parameterlist` `Declare` 합니다. 매개 변수가 외부 파일에서 원래 선언 된 방식을 고려 하지 마십시오. 마찬가지로 반환 값이 있는 경우 문에 지정 된 대로 정확 하 게 사용 `returntype` `Declare` 합니다.
 
-- **문자 집합입니다.** Visual Basic이 `charsetmodifier` 외부 프로시저를 호출할 때 문자열을 마샬링하는 방법을 지정할 수 있습니다. `Ansi` 수정자는 Visual Basic을 지시하여 모든 문자열을 ANSI 값으로 `Unicode` 마샬링하고, 수정자는 모든 문자열을 유니코드 값으로 마샬링하도록 지시합니다. `Auto` 수정자는 외부 참조를 `name`기반으로 하거나 `aliasname` 지정된 경우 .NET Framework 규칙에 따라 Visual Basic을 마샬링하도록 지시합니다. 기본값은 `Ansi`입니다.
+- **문자 집합.** 에서 `charsetmodifier` 외부 프로시저를 호출할 때 문자열을 마샬링하 Visual Basic는 방법을 지정할 수 있습니다. `Ansi`한정자는 모든 문자열을 ANSI 값으로 마샬링하기 위해 Visual Basic를 전달 하 고 `Unicode` 한정자는 모든 문자열을 유니코드 값으로 마샬링하는 것으로 지시 합니다. `Auto`한정자는 외부 참조를 기반으로 하는 .NET Framework 규칙에 따라 문자열을 마샬링할 Visual Basic `name` 또는 `aliasname` 지정 된 경우를 전달 합니다. 기본값은 `Ansi`입니다.
 
-  `charsetmodifier`또한 Visual Basic이 외부 파일 내에서 외부 프로시저를 조회하는 방법을 지정합니다. `Ansi`그리고 `Unicode` 둘 다 검색 하는 동안 이름을 수정 하지 않고 그것을 조회 하는 Visual Basic 을 직접. `Auto`Visual Basic을 지시하여 런타임 플랫폼의 기본 문자 집합을 결정하고 다음과 같이 외부 프로시저 이름을 수정할 수 있습니다.
+  `charsetmodifier`는 외부 파일 내에서 외부 프로시저를 Visual Basic 하는 방법도 지정 합니다. `Ansi`및는 `Unicode` 둘 다 검색 중에 이름을 수정 하지 않고 조회 하기 위해 직접 Visual Basic 합니다. `Auto`는 런타임 플랫폼의 기본 문자 집합을 결정 하 고 다음과 같이 외부 프로시저 이름을 수정할 수 Visual Basic를 전달 합니다.
 
-  - Windows 95, Windows 98 또는 Windows 밀레니엄 에디션과 같은 ANSI 플랫폼에서 먼저 이름 수정 없이 외부 프로시저를 찾습니다. 실패하면 외부 프로시저 이름 끝에 "A"를 더한 다음 다시 찾습니다.
+  - ANSI 플랫폼 (예: Windows 95, Windows 98 또는 Windows Millennium Edition)에서 먼저 이름 수정 없이 외부 프로시저를 조회 합니다. 실패 하면 외부 프로시저 이름의 끝에 "A"를 추가 하 고 다시 확인 합니다.
 
-  - Windows NT, Windows 2000 또는 Windows XP와 같은 유니코드 플랫폼에서 먼저 이름 수정 없이 외부 프로시저를 찾습니다. 실패하면 외부 프로시저 이름 끝에 "W"를 더한 다음 다시 찾습니다.
+  - Windows NT, Windows 2000 또는 Windows XP와 같은 유니코드 플랫폼에서는 먼저 이름 수정 없이 외부 프로시저를 조회 합니다. 실패 하면 외부 프로시저 이름의 끝에 "W"를 추가 하 고 다시 확인 합니다.
 
-- **메커니즘.** Visual Basic은 .NET Framework 플랫폼 호출(PInvoke) 메커니즘을 사용하여 외부 프로시저를 해결하고 액세스합니다. *platform invoke* 명령문과 `Declare` <xref:System.Runtime.InteropServices.DllImportAttribute> 클래스 는 모두 이 메커니즘을 자동으로 사용하며 PInvoke에 대한 지식이 필요하지 않습니다. 자세한 내용은 [연습: Windows Api 호출](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)합니다.
+- **방법일.** Visual Basic는 PInvoke (.NET Framework *platform invoke* ) 메커니즘을 사용 하 여 외부 프로시저를 확인 하 고 액세스 합니다. `Declare`문과 <xref:System.Runtime.InteropServices.DllImportAttribute> 클래스 모두이 메커니즘을 자동으로 사용 하 고 PInvoke에 대 한 지식이 필요 하지 않습니다. 자세한 내용은 [연습: Windows Api 호출](../../programming-guide/com-interop/walkthrough-calling-windows-apis.md)합니다.
 
 > [!IMPORTANT]
-> 외부 프로시저가 공통 언어 런타임(CLR) 외부에서 실행되는 경우 *관리되지 않는 코드입니다.* 이러한 프로시저를 호출할 때(예: Windows API 함수 또는 COM 메서드) 응용 프로그램을 보안 위험에 노출시킬 수 있습니다. 자세한 내용은 [관리되지 않는 코드에 대한 보안 코딩 지침을](https://docs.microsoft.com/previous-versions/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code)참조하십시오.
+> 외부 프로시저가 CLR (공용 언어 런타임) 외부에서 실행 되는 경우 *관리 되지 않는 코드*입니다. 이러한 프로시저 (예: Windows API 함수 또는 COM 메서드)를 호출 하는 경우 응용 프로그램을 보안 위험에 노출 시킬 수 있습니다. 자세한 내용은 [비관리 코드에 대 한 보안 코딩 지침](https://docs.microsoft.com/previous-versions/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code)을 참조 하세요.
 
 ## <a name="example"></a>예제
 
-다음 예제는 현재 사용자 이름을 `Function` 반환 하는 프로시저에 대 한 외부 참조를 선언 합니다. 그런 다음 프로시저의 일부로 외부 프로시저를 `GetUserNameA` 호출합니다. `getUser`
+다음 예에서는 `Function` 현재 사용자 이름을 반환 하는 프로시저에 대 한 외부 참조를 선언 합니다. 그런 다음 프로시저의 일부로 외부 프로시저를 호출 `GetUserNameA` `getUser` 합니다.
 
 [!code-vb[VbVbalrStatements#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#15)]
 
 ## <a name="example"></a>예제
 
-는 <xref:System.Runtime.InteropServices.DllImportAttribute> 관리되지 않는 코드에서 함수를 사용하는 다른 방법을 제공합니다. 다음 예제는 문을 사용 하지 않고 `Declare` 가져온된 함수를 선언 합니다.
+는 <xref:System.Runtime.InteropServices.DllImportAttribute> 비관리 코드에서 함수를 사용 하는 대체 방법을 제공 합니다. 다음 예에서는 문을 사용 하지 않고 가져온 함수를 선언 합니다 `Declare` .
 
 [!code-vb[VbVbalrStatements#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#16)]
 
@@ -148,10 +148,10 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 ## <a name="see-also"></a>참고 항목
 
 - <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>
-- [Imports 문(.NET 네임스페이스 및 형식)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [주소운영자](../../../visual-basic/language-reference/operators/addressof-operator.md)
-- [Function 문](../../../visual-basic/language-reference/statements/function-statement.md)
-- [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [매개 변수 목록](../../../visual-basic/language-reference/statements/parameter-list.md)
-- [Call 문](../../../visual-basic/language-reference/statements/call-statement.md)
-- [연습: Windows API 호출](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+- [Imports 문(.NET 네임스페이스 및 형식)](imports-statement-net-namespace-and-type.md)
+- [AddressOf 연산자](../operators/addressof-operator.md)
+- [Function 문](function-statement.md)
+- [Sub 문](sub-statement.md)
+- [매개 변수 목록](parameter-list.md)
+- [Call 문](call-statement.md)
+- [연습: Windows API 호출](../../programming-guide/com-interop/walkthrough-calling-windows-apis.md)
