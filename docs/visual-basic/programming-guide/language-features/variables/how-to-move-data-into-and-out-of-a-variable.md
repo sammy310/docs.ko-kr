@@ -5,12 +5,12 @@ helpviewer_keywords:
 - variables [Visual Basic], retrieving values
 - variables [Visual Basic], storing data
 ms.assetid: 93744f46-bf78-4fa0-9640-1de01bc38d9a
-ms.openlocfilehash: bc5a7377a5e2e4c7ebe7291fd5f0093c4d6e996d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: fe19a6160623aa9ea867becdf7a15b51319abf45
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346898"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410440"
 ---
 # <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>방법: 변수 값 저장 및 검색(Visual Basic)
 
@@ -22,7 +22,7 @@ ms.locfileid: "74346898"
 
 - 대입문의 왼쪽에 변수 이름을 사용 합니다.
 
-    다음 예에서는 `alpha`변수의 값을 설정 합니다.
+    다음 예에서는 변수의 값을 설정 합니다 `alpha` .
 
     ```vb
     alpha = (beta * 6.27) / (gamma + 2.1)
@@ -40,9 +40,9 @@ ms.locfileid: "74346898"
 
   \-또는-
 
-- 대입문에서 등호 (`=`) 뒤에 변수 이름을 사용 합니다.
+- 대입문에서 등호 () 뒤에 변수 이름을 사용 `=` 합니다.
 
-  다음 예에서는 `startValue` 변수의 값을 읽은 다음 식에 `counter` 변수 값을 사용 합니다.
+  다음 예에서는 변수의 값을 읽은 `startValue` 다음 식의 변수 값을 사용 합니다 `counter` .
 
   ```vb
   counter = startValue
@@ -53,6 +53,6 @@ ms.locfileid: "74346898"
 
 ## <a name="see-also"></a>참고 항목
 
-- [변수](../../../../visual-basic/programming-guide/language-features/variables/index.md)
-- [변수 선언](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [개체 변수](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [변수](index.md)
+- [변수 선언](variable-declaration.md)
+- [개체 변수](object-variables.md)

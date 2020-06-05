@@ -2,15 +2,15 @@
 title: LINQ to XML 보안
 ms.date: 07/20/2015
 ms.assetid: d99b4af2-d447-4a3b-991b-6da0231a8637
-ms.openlocfilehash: 01b03dc5792981d41d16cc7b551892bd6fe2bcde
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2be3e2df81af046035832794766f3317e1e96e35
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74331737"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84368532"
 ---
 # <a name="linq-to-xml-security-visual-basic"></a>LINQ to XML 보안 (Visual Basic)
-이 항목에서는 LINQ to XML과 관련된 보안 문제에 대해 설명합니다. 또한 보안 노출을 줄이기 위한 몇 가지 지침을 제공합니다.  
+이 항목에서는 LINQ to XML과 관련된 보안 문제에 대해 설명합니다. 또한 보안 노출을 경감하는 몇 가지 지침을 제공합니다.  
   
 ## <a name="linq-to-xml-security-overview"></a>LINQ to XML 보안 개요  
  LINQ to XML은 보안 요구 사항이 엄격한 서버측 애플리케이션보다 간편하게 프로그래밍하는 데 중점을 두어 디자인되었습니다. 대부분의 XML 시나리오는 서버에 업로드된 신뢰할 수 없는 XML 문서의 처리가 아니라 신뢰할 수 있는 XML 문서의 처리로 이루어져 있습니다. LINQ to XML은 이러한 시나리오에 맞게 최적화되었습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "74331737"
 - 동적 XPath 식을 생성하기 전에 신중하게 유효성을 검사합니다.  
   
 ## <a name="linq-to-xml-security-issues"></a>LINQ to XML 보안 문제  
- 이 항목의 보안 문제는 특정 순서로 표시되지 않습니다. 모든 문제는 중요하며 적절하게 처리되어야 합니다.  
+ 이 항목의 보안 문제는 특정 순서로 제공되지 않습니다. 모든 문제는 중요하며 적절하게 처리되어야 합니다.  
   
  권한 상승 공격이 성공하면 악의적인 어셈블리가 환경을 더 많이 제어할 수 있습니다. 또한 데이터 공개, 서비스 거부 등이 발생할 수 있습니다.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "74331737"
  DTD를 사용하는 경우 알려진 서비스 거부 공격 중 하나는 지나친 엔터티 확장을 발생시키는 문서입니다. 이를 방지하기 위해 <xref:System.Xml.XmlReaderSettings.MaxCharactersFromEntities%2A?displayProperty=nameWithType> 속성을 설정하고 엔터티 확장으로 발생하는 문자 수로 제한된 판독기를 만들 수 있습니다. 그런 다음 판독기를 사용하여 XML 트리를 만듭니다.  
   
 ### <a name="limit-the-depth-of-the-xml-hierarchy"></a>XML 계층 구조의 깊이 제한  
- 한 가지 가능한 서비스 거부 공격은 계층 구조의 깊이가 과도한 문서가 제출될 때입니다. 이를 방지하기 위해 <xref:System.Xml.XmlReader>를 요소의 깊이를 세는 자체 클래스에 래핑할 수 있습니다. 깊이가 미리 결정된 적절한 수준을 초과하면 악의적인 문서의 처리를 종료할 수 있습니다.  
+ 한 가지 가능한 서비스 거부 공격은 계층 구조의 깊이가 매우 큰 문서가 제출되는 경우입니다. 이를 방지하기 위해 <xref:System.Xml.XmlReader>를 요소의 깊이를 세는 자체 클래스에 래핑할 수 있습니다. 깊이가 미리 결정된 적절한 수준을 초과하면 악의적인 문서의 처리를 종료할 수 있습니다.  
   
 ### <a name="protect-against-untrusted-xmlreader-or-xmlwriter-implementations"></a>신뢰할 수 없는 XmlReader 또는 XmlWriter 구현으로부터 보호  
  관리자는 외부에서 제공된 <xref:System.Xml.XmlReader> 또는 <xref:System.Xml.XmlWriter> 구현이 강력한 이름을 갖고 있고 컴퓨터 구성에 등록되어 있는지 확인해야 합니다. 이렇게 하면 판독기 또는 작성기로 가장한 악의적인 코드가 로드되는 것이 방지됩니다.  
@@ -101,4 +101,4 @@ ms.locfileid: "74331737"
   
 ## <a name="see-also"></a>참고 항목
 
-- [프로그래밍 가이드 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+- [프로그래밍 가이드 (LINQ to XML) (Visual Basic)](programming-guide-linq-to-xml.md)

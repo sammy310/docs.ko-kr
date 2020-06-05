@@ -1,20 +1,20 @@
 ---
-title: 비주얼 베이직의 XML 리터럴 소개2
+title: Visual Basic2의 XML 리터럴 소개
 ms.date: 07/20/2015
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-ms.openlocfilehash: 9f5c54574e51c537d9ea58d307afda10736d0d88
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 8b92d22727c50274d57a5e407a0ca42807de3a94
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266952"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397586"
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Visual Basic의 XML 리터럴 소개
-이 섹션에서는 Visual Basic에서 XML 트리를 만드는 것에 대한 정보를 제공합니다.  
+이 섹션에서는 Visual Basic에서 XML 트리를 만드는 방법에 대 한 정보를 제공 합니다.  
   
- LINQ 쿼리 결과를 XML 트리의 콘텐츠로 사용하는 자세한 내용은 [기능 구성(LINQ ~ XML) (Visual Basic)을](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)참조하십시오.  
+ LINQ 쿼리의 결과를 XML 트리의 콘텐츠로 사용 하는 방법에 대 한 자세한 내용은 [함수 생성 (LINQ to XML) (Visual Basic)](functional-construction-linq-to-xml.md)을 참조 하세요.  
   
- 시각적 기본의 XML 리터럴에 대한 자세한 내용은 [시각적 기본에서 LINQ에서 XML로의 개요를](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)참조하십시오.  
+ Visual Basic의 XML 리터럴에 대 한 자세한 내용은 Visual Basic의 [LINQ to XML 개요](../../language-features/xml/overview-of-linq-to-xml.md)를 참조 하세요.  
   
 ## <a name="creating-xml-trees"></a>XML 트리 만들기  
  다음 예제에서는 <xref:System.Xml.Linq.XElement>(이 경우에는 `contacts`)를 만드는 방법을 보여 줍니다.  
@@ -43,7 +43,7 @@ Dim n as XElement = <Customer>Adventure Works</Customer>
 Console.WriteLine(n)
 ```  
   
- 이 예에서 생성되는 출력은 다음과 같습니다.  
+ 이 예제는 다음과 같은 출력을 생성합니다.  
   
 ```xml  
 <Customer>Adventure Works</Customer>  
@@ -57,7 +57,7 @@ Dim n As XElement = <Customer/>
 Console.WriteLine(n)  
 ```  
   
- 이 예에서 생성되는 출력은 다음과 같습니다.  
+ 이 예제는 다음과 같은 출력을 생성합니다.  
   
 ```xml  
 <Customer />  
@@ -84,7 +84,7 @@ Dim xmlTree2 As XElement = _
 Console.WriteLine(xmlTree2)  
 ```  
   
- 이 예에서 생성되는 출력은 다음과 같습니다.  
+ 이 예제는 다음과 같은 출력을 생성합니다.  
   
 ```xml  
 <Root>  
@@ -102,7 +102,7 @@ Dim root As XElement = <Root><%= str %></Root>
 Console.WriteLine(root)  
 ```  
   
- 이 예에서 생성되는 출력은 다음과 같습니다.  
+ 이 예제는 다음과 같은 출력을 생성합니다.  
   
 ```xml  
 <Root>Some content</Root>  
@@ -122,7 +122,7 @@ Dim n As XElement = _
 Console.WriteLine(n)  
 ```  
   
- 이 예에서 생성되는 출력은 다음과 같습니다.  
+ 이 예제는 다음과 같은 출력을 생성합니다.  
   
 ```xml  
 <Root>  
@@ -149,7 +149,7 @@ Dim n As XElement = _
 Console.WriteLine(n)  
 ```  
   
- 이 예에서 생성되는 출력은 다음과 같습니다.  
+ 이 예제는 다음과 같은 출력을 생성합니다.  
   
 ```xml  
 <Root att="aValue">  
@@ -157,7 +157,7 @@ Console.WriteLine(n)
 </Root>  
 ```  
   
-### <a name="cloning-vs-attaching"></a>복제 및 연결 비교  
+### <a name="cloning-vs-attaching"></a>복제와 연결 비교  
  앞에서 설명했듯이 포함 식을 사용하여 기존 노드(요소 포함)와 특성을 새 XML 트리에 추가하는 경우 기존 노드에 이미 부모가 있으면 노드가 복제되고 새로 복제된 노드가 새 XML 트리에 추가됩니다. 기존 노드에 부모가 없으면 노드가 새 XML 트리에 추가되기만 합니다.  
   
 ```vb  
@@ -197,4 +197,4 @@ Child2 was attached
   
 ## <a name="see-also"></a>참고 항목
 
-- [XML 트리 만들기(시각적 기본)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [XML 트리 만들기 (Visual Basic)](creating-xml-trees.md)

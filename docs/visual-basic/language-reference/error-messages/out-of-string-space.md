@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID14
 ms.assetid: 16681c75-a400-422d-9351-c691d3c7614e
-ms.openlocfilehash: d5e44b44c63ed23697ffc639cc4f42c6424409b1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4767aa3431b0d255a57a7c0b8e7b271891e12581
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349173"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84387363"
 ---
 # <a name="out-of-string-space-visual-basic"></a>문자열 공간이 부족합니다(Visual Basic).
 Visual Basic를 사용 하면 매우 큰 문자열을 사용할 수 있습니다. 그러나 다른 프로그램의 요구 사항 및 문자열로 작업 하는 방법에도이 오류가 발생할 수 있습니다.  
@@ -22,5 +22,5 @@ Visual Basic를 사용 하면 매우 큰 문자열을 사용할 수 있습니다
   
 ## <a name="see-also"></a>참고 항목
 
-- [오류 형식](../../../visual-basic/programming-guide/language-features/error-types.md)
-- [문자열 조작 요약](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
+- [오류 유형](../../programming-guide/language-features/error-types.md)
+- [문자열 조작 요약](../keywords/string-manipulation-summary.md)
