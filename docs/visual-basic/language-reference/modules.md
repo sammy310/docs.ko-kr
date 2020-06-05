@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - modules, Visual Basic
 ms.assetid: 370bfc90-e8f2-4942-bdec-9897ce605d31
-ms.openlocfilehash: 6869d981cdca20b915a588969134fc50e8d1ff47
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: df7e32a81746a97a78a4a2a28e57032affa73cc0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838249"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84386597"
 ---
 # <a name="modules-visual-basic"></a>모듈(Visual Basic)
 
@@ -17,7 +17,7 @@ Visual Basic는 문자열 조작, 수학적 계산 수행, 시스템 정보 가�
   
 |||  
 |---|---|  
-|<xref:Microsoft.VisualBasic.Constants>|기타 상수를 포함 합니다. 이러한 상수는 코드에서 어디서 나 사용할 수 있습니다.|  
+|<xref:Microsoft.VisualBasic.Constants>|기타 상수를 포함 합니다. 이 상수는 코드의 모든 위치에서 사용할 수 있습니다.|  
 |<xref:Microsoft.VisualBasic.ControlChars>|텍스트 인쇄 및 표시를 위한 상수 제어 문자를 포함 합니다.|  
 |<xref:Microsoft.VisualBasic.Conversion>|10 진수를 다른 기본으로 변환 하 고, 숫자를 문자열로, 문자열을 숫자로 변환 하 고, 데이터 형식을 다른 형식으로 변환 하는 멤버를 포함 합니다.|  
 |<xref:Microsoft.VisualBasic.DateAndTime>|현재 날짜 또는 시간을 가져오고, 날짜 계산을 수행 하 고, 날짜 또는 시간을 반환 하거나, 프로세스의 날짜 또는 시간 또는 시간을 설정 하는 멤버를 포함 합니다.|  
@@ -30,6 +30,6 @@ Visual Basic는 문자열 조작, 수학적 계산 수행, 시스템 정보 가�
 |<xref:Microsoft.VisualBasic.Strings>|문자열을 다시 포맷 하 고 문자열을 검색 하 고 문자열의 길이를 가져오는 등의 문자열 작업을 수행 하는 멤버를 포함 합니다.|  
 |<xref:Microsoft.VisualBasic.VBMath>|수학 연산을 수행 하는 멤버를 포함 합니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [Visual Basic 언어 참조](../../visual-basic/language-reference/index.md)
+- [Visual Basic 언어 참조](index.md)
