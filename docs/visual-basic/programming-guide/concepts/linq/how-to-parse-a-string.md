@@ -2,18 +2,18 @@
 title: '방법: 문자열 구문 분석'
 ms.date: 07/20/2015
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
-ms.openlocfilehash: 31bae00eb3ebf0d8e64fc657693e8c0767c4f5d4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0a9076fc516bb8e6bc74732ca252fabfeda43d53
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344491"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398014"
 ---
 # <a name="how-to-parse-a-string-visual-basic"></a>방법: 문자열 구문 분석 (Visual Basic)
-이 항목에서는에서 C#XML 트리를 만드는 방법을 보여 줍니다.  
+이 항목에서는 c #에서 XML 트리를 만드는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
- `XElement.Parse` 메서드를 사용 하 여 Visual Basic에서 문자열을 구문 분석할 수 있습니다. 그러나 xml 리터럴은 문자열에서 XML을 구문 분석 하는 것과 동일한 성능 저하가 발생 하지 않기 때문에 다음 코드에 표시 된 것 처럼 XML 리터럴을 사용 하는 것이 더 효율적입니다.  
+ 메서드를 사용 하 여 Visual Basic에서 문자열을 구문 분석할 수 있습니다 `XElement.Parse` . 그러나 XML 리터럴을 사용하면 문자열에서 XML의 구문을 분석하는 것과 동일한 성능 저하가 발생하지 않기 때문에 다음 코드에서와 같이 XML 리터럴을 사용하는 것이 더 효율적입니다.  
   
  Xml 리터럴을 사용 하면 XML을 복사 하 여 Visual Basic 프로그램에 붙여 넣을 수 있습니다.  
   
@@ -49,6 +49,6 @@ Dim contacts as XElement = _
     </Contacts>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [XML 구문 분석 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [XML 구문 분석 (Visual Basic)](parsing-xml.md)

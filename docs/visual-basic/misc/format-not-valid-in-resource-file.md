@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID325
 ms.assetid: e986ab45-e3ce-430e-8704-5882e5da1104
-ms.openlocfilehash: 5285365c9ae780a8f78f11eab6705d52138fc049
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 42cccaf6c8539a2d5e8e081bfe0c0c5cec0e02e9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62055175"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84358322"
 ---
 # <a name="format-not-valid-in-resource-file"></a>리소스 파일의 형식이 잘못되었습니다.
-프로젝트에서 리소스 파일을 Windows 리소스 파일에 대 한 표준 형식을 따르지 않습니다 또는 리소스 파일 및 Visual Basic 프로젝트 간에 일치 하지 않습니다.  
+프로젝트의 리소스 파일이 Windows 리소스 파일의 표준 형식을 따르지 않거나 리소스 파일과 Visual Basic 프로젝트가 일치 하지 않습니다.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
@@ -20,6 +20,6 @@ ms.locfileid: "62055175"
   
 2. 프로젝트에서 잘못된 리소스 파일을 제거합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [오류 형식](../../visual-basic/programming-guide/language-features/error-types.md)
+- [오류 유형](../programming-guide/language-features/error-types.md)

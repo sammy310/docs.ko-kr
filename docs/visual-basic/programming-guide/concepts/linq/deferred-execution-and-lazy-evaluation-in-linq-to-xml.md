@@ -1,13 +1,13 @@
 ---
-title: LINQ to XML에서 지연 실행 및 지연 계산
+title: LINQ to XML의 지연 실행 및 지연 계산
 ms.date: 07/20/2015
 ms.assetid: 31998eed-b95e-47fb-a865-9de1f337d1fb
-ms.openlocfilehash: 8e94b9133a2d2dd287fba91600c94460a5204b2c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 98a5010de6ea7ef46d845c6a921c54d4e7692370
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346401"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410814"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-visual-basic"></a>LINQ to XML (Visual Basic)에서 지연 된 실행 및 지연 계산
 쿼리 및 축 연산은 흔히 지연된 실행을 사용하도록 구현됩니다. 이 항목에서는 지연된 실행의 요구 사항 및 장점과 몇 가지 구현 고려 사항에 대해 설명합니다.  
@@ -29,10 +29,10 @@ ms.locfileid: "74346401"
 ## <a name="next-steps"></a>다음 단계  
  이 자습서의 다음 항목에서는 지연된 실행을 보여 줍니다.  
   
-- [지연 된 실행 예제 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-example.md)  
+- [지연 된 실행 예제 (Visual Basic)](deferred-execution-example.md)  
   
 ## <a name="see-also"></a>참고 항목
 
-- [자습서: 지연 된 실행 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
-- [개념 및 용어 (함수 변환) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)
-- [집계 작업 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)
+- [자습서: 지연 된 실행 (Visual Basic)](tutorial-deferred-execution.md)
+- [개념 및 용어 (함수 변환) (Visual Basic)](concepts-and-terminology-functional-transformation.md)
+- [집계 작업 (Visual Basic)](aggregation-operations.md)

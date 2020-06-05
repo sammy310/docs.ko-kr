@@ -8,21 +8,21 @@ helpviewer_keywords:
 - structured code [Visual Basic], procedures
 - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
-ms.openlocfilehash: b959f4b6986bc325c97c7cbe9aeee0341832f6cc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c0d9921704570c6984b203817aed8f5546b2f936
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345988"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408791"
 ---
 # <a name="procedures-in-visual-basic"></a>Visual Basic의 프로시저
-*프로시저* 는 선언 문 (`Function`, `Sub`, `Operator`, `Get`, `Set`) 및 일치 하는 `End` 선언으로 묶인 Visual Basic 문 블록입니다. Visual Basic의 모든 실행 문은 일부 프로시저 내에 있어야 합니다.  
+*프로시저* 는 선언문 ( `Function` ,, `Sub` `Operator` , `Get` , `Set` ) 및 일치 하는 `End` 선언으로 묶인 Visual Basic 문 블록입니다. Visual Basic의 모든 실행 문은 일부 프로시저 내에 있어야 합니다.  
   
 ## <a name="calling-a-procedure"></a>프로시저 호출  
  코드에서 다른 위치에 있는 프로시저를 호출합니다. 이것을 *프로시저 호출*이라고 합니다. 프로시저는 실행이 완료되면 자신을 호출한 코드(*호출 코드*라고 함)로 컨트롤을 반환합니다. 호출 코드란 프로시저를 이름으로 지정하고 프로시저에 컨트롤을 전달하는 문 또는 문 내부의 식입니다.  
   
 ## <a name="returning-from-a-procedure"></a>프로시저에서 반환  
- 프로시저는 실행이 완료되면 호출 코드로 컨트롤을 반환합니다. 이를 위해 [Return 문](../../../../visual-basic/language-reference/statements/return-statement.md), 프로시저에 대한 적절한 [Exit 문](../../../../visual-basic/language-reference/statements/exit-statement.md) 또는 프로시저의 [End \<Keyword> 문](../../../../visual-basic/language-reference/statements/end-keyword-statement.md)을 사용할 수 있습니다. 그러면 컨트롤이 호출 코드에서 프로시저 호출 지점 이후로 전달됩니다.  
+ 프로시저는 실행이 완료되면 호출 코드로 컨트롤을 반환합니다. 이렇게 하려면 [Return 문](../../../language-reference/statements/return-statement.md), 프로시저에 대 한 적절 한 [Exit 문](../../../language-reference/statements/exit-statement.md) 문 또는 프로시저의 [End \<keyword> 문](../../../language-reference/statements/end-keyword-statement.md) 문을 사용할 수 있습니다. 그러면 컨트롤이 호출 코드에서 프로시저 호출 지점 이후로 전달됩니다.  
   
 - `Return` 문과 함께 컨트롤이 즉시 호출 코드로 반환됩니다. `Return` 문 이후의 문은 실행되지 않습니다. 동일한 프로시저에 `Return` 문을 둘 이상 사용할 수 있습니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "74345988"
   
 - [Operator 프로시저](./operator-procedures.md)는 피연산자 중 하나 또는 둘 모두가 새로 정의된 클래스 또는 구조일 때 표준 연산자의 동작을 정의합니다.  
   
-- 호출 코드가 호출할 때마다 특정 데이터 유형을 전달할 수 있도록, [Visual Basic의 제네릭 프로시저](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)는 일반 매개 변수 외에도 하나 이상의 *형식 매개 변수*를 정의합니다.  
+- 호출 코드가 호출할 때마다 특정 데이터 유형을 전달할 수 있도록, [Visual Basic의 제네릭 프로시저](../data-types/generic-procedures.md)는 일반 매개 변수 외에도 하나 이상의 *형식 매개 변수*를 정의합니다.  
   
 ## <a name="procedures-and-structured-code"></a>프로시저 및 구조적 코드  
  애플리케이션의 각 실행 코드 줄은 `Main`, `calculate` 또는 `Button1_Click` 등의 프로시저 내부에 있어야 합니다. 큰 프로시저를 더 작은 프로시저로 세분화하면 애플리케이션을 더 쉽게 읽을 수 있습니다.  
@@ -64,12 +64,12 @@ ms.locfileid: "74345988"
 ## <a name="see-also"></a>참고 항목
 
 - [방법: 프로시저 만들기](./how-to-create-a-procedure.md)
-- [Sub 프로시저](./sub-procedures.md)
-- [Function 프로시저](./function-procedures.md)
+- [하위 프로시저](./sub-procedures.md)
+- [함수 프로시저](./function-procedures.md)
 - [속성 프로시저](./property-procedures.md)
 - [연산자 프로시저](./operator-procedures.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)
 - [재귀 프로시저](./recursive-procedures.md)
 - [프로시저 오버로딩](./procedure-overloading.md)
-- [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
-- [개체 및 클래스](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Visual Basic의 제네릭 프로시저](../data-types/generic-procedures.md)
+- [개체 및 클래스](../objects-and-classes/index.md)

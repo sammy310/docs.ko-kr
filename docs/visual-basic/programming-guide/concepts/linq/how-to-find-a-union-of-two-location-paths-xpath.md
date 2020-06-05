@@ -1,13 +1,13 @@
 ---
-title: '방법: 두 위치 경로의 공용 구조체 찾기(XPath-LINQ to XML)'
+title: '방법: 두 위치 경로의 합집합 찾기(XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: c82c09b4-cb0a-47ec-8cc3-a124144c2788
-ms.openlocfilehash: db9ba3f66bfa8643738203ec05a106bab4193fda
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 36528d1748d5675231f14de92dcd78734a696711
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352978"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406874"
 ---
 # <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-visual-basic"></a>방법: 두 위치 경로의 공용 구조체 찾기 (XPath-LINQ to XML) (Visual Basic)
 XPath를 사용하여 두 XPath 위치 경로의 통합을 찾을 수 있습니다.  
@@ -21,7 +21,7 @@ XPath를 사용하여 두 XPath 위치 경로의 통합을 찾을 수 있습니�
 ## <a name="example"></a>예제  
  이 예제에서는 모든 `Category` 요소와 모든 `Price` 요소를 찾은 다음 단일 컬렉션으로 연결합니다. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리는 <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A>을 호출하여 결과를 정렬합니다. XPath 식 계산의 결과도 문서 순서로 되어 있습니다.  
   
- 이 예제에서는 XML 문서 [샘플 XML 파일: 숫자 데이터(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)를 사용합니다.  
+ 이 예제에서는 XML 문서 [샘플 XML 파일: 숫자 데이터(LINQ to XML)](sample-xml-file-numerical-data-linq-to-xml.md)를 사용합니다.  
   
 ```vb  
 Dim data As XDocument = XDocument.Load("Data.xml")  
@@ -45,7 +45,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- 이 예제는 다음과 같은 출력을 생성합니다.  
+ 이 예에서 생성되는 출력은 다음과 같습니다.  
   
 ```console
 Results are identical  
@@ -67,4 +67,4 @@ Results are identical
   
 ## <a name="see-also"></a>참고 항목
 
-- [XPath 사용자에 대 한 LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath 사용자에 대 한 LINQ to XML (Visual Basic)](linq-to-xml-for-xpath-users.md)
