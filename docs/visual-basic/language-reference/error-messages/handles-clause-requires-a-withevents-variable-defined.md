@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC30506
 ms.assetid: 5b66f6a8-f050-4e03-a57f-a64e85f80cb5
-ms.openlocfilehash: 191415408f607d0ff768e50c41fa9b3c4405a688
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 94c4229d4036382e344cffb09295e218642c55d4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582821"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402903"
 ---
-# <a name="handles-clause-requires-a-withevents-variable-defined-in-the-containing-type-or-one-of-its-base-types"></a><span data-ttu-id="e4970-102">Handles 절에는 포함하는 형식 또는 해당 형식의 기본 형식 중 하나에 정의된 WithEvents 변수가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="e4970-102">Handles clause requires a WithEvents variable defined in the containing type or one of its base types</span></span>
+# <a name="handles-clause-requires-a-withevents-variable-defined-in-the-containing-type-or-one-of-its-base-types"></a><span data-ttu-id="b8992-102">Handles 절에는 포함하는 형식 또는 해당 형식의 기본 형식 중 하나에 정의된 WithEvents 변수가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="b8992-102">Handles clause requires a WithEvents variable defined in the containing type or one of its base types</span></span>
 
-<span data-ttu-id="e4970-103">@No__t_1 절에 `WithEvents` 변수를 제공 하지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="e4970-103">You did not supply a `WithEvents` variable in your `Handles` clause.</span></span> <span data-ttu-id="e4970-104">프로시저 선언 끝의 `Handles` 키워드는 `WithEvents` 키워드를 사용 하 여 선언 된 개체 변수에 의해 발생 된 이벤트를 처리 합니다.</span><span class="sxs-lookup"><span data-stu-id="e4970-104">The `Handles` keyword at the end of a procedure declaration causes it to handle events raised by an object variable declared using the `WithEvents` keyword.</span></span>
+<span data-ttu-id="b8992-103">절에 변수를 제공 하지 않았습니다 `WithEvents` `Handles` .</span><span class="sxs-lookup"><span data-stu-id="b8992-103">You did not supply a `WithEvents` variable in your `Handles` clause.</span></span> <span data-ttu-id="b8992-104">`Handles`프로시저 선언 끝에 있는 키워드를 사용 하면 키워드를 사용 하 여 선언 된 개체 변수에 의해 발생 된 이벤트를 처리할 수 `WithEvents` 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b8992-104">The `Handles` keyword at the end of a procedure declaration causes it to handle events raised by an object variable declared using the `WithEvents` keyword.</span></span>
 
-<span data-ttu-id="e4970-105">**오류 ID:** BC30506</span><span class="sxs-lookup"><span data-stu-id="e4970-105">**Error ID:** BC30506</span></span>
+<span data-ttu-id="b8992-105">**오류 ID:** BC30506</span><span class="sxs-lookup"><span data-stu-id="b8992-105">**Error ID:** BC30506</span></span>
 
-## <a name="to-correct-this-error"></a><span data-ttu-id="e4970-106">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="e4970-106">To correct this error</span></span>
+## <a name="to-correct-this-error"></a><span data-ttu-id="b8992-106">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="b8992-106">To correct this error</span></span>
 
-<span data-ttu-id="e4970-107">필요한 `WithEvents` 변수를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="e4970-107">Supply the necessary `WithEvents` variable.</span></span>
+<span data-ttu-id="b8992-107">필요한 변수를 제공 `WithEvents` 합니다.</span><span class="sxs-lookup"><span data-stu-id="b8992-107">Supply the necessary `WithEvents` variable.</span></span>
 
-## <a name="example"></a><span data-ttu-id="e4970-108">예제</span><span class="sxs-lookup"><span data-stu-id="e4970-108">Example</span></span>
+## <a name="example"></a><span data-ttu-id="b8992-108">예제</span><span class="sxs-lookup"><span data-stu-id="b8992-108">Example</span></span>
 
-<span data-ttu-id="e4970-109">다음 예제에서는 <xref:System.Timers.Timer?displayProperty=nameWithType> 인스턴스의 정의에 [WithEvents](../modifiers/withevents.md) 키워드가 사용 되지 않으므로 Visual Basic에서 컴파일러 오류 `BC30506`을 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="e4970-109">In the following example, Visual Basic generates compiler error `BC30506` because the [WithEvents](../modifiers/withevents.md) keyword is not used in the definition of the <xref:System.Timers.Timer?displayProperty=nameWithType> instance.</span></span>
+<span data-ttu-id="b8992-109">다음 예제에서는 `BC30506` [WithEvents](../modifiers/withevents.md) 키워드가 인스턴스의 정의에 사용 되지 않기 때문에 Visual Basic는 컴파일러 오류를 생성 <xref:System.Timers.Timer?displayProperty=nameWithType> 합니다.</span><span class="sxs-lookup"><span data-stu-id="b8992-109">In the following example, Visual Basic generates compiler error `BC30506` because the [WithEvents](../modifiers/withevents.md) keyword is not used in the definition of the <xref:System.Timers.Timer?displayProperty=nameWithType> instance.</span></span>
 
 ```vb
 Imports System.Timers
@@ -47,7 +47,7 @@ Module Module1
 End Module
 ```
 
-<span data-ttu-id="e4970-110">다음 예제는 `_timer1` 변수가 `WithEvents` 키워드를 사용 하 여 정의 되기 때문에 성공적으로 컴파일됩니다.</span><span class="sxs-lookup"><span data-stu-id="e4970-110">The following example compiles successfully because the `_timer1` variable is defined with the `WithEvents` keyword:</span></span>
+<span data-ttu-id="b8992-110">다음 예제는 키워드를 사용 하 여 변수를 정의 하기 때문에 성공적으로 컴파일됩니다 `_timer1` `WithEvents` .</span><span class="sxs-lookup"><span data-stu-id="b8992-110">The following example compiles successfully because the `_timer1` variable is defined with the `WithEvents` keyword:</span></span>
 
 ```vb
 Imports System.Timers
@@ -69,6 +69,6 @@ Module Module1
 End Module
 ```
 
-## <a name="see-also"></a><span data-ttu-id="e4970-111">참조</span><span class="sxs-lookup"><span data-stu-id="e4970-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b8992-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b8992-111">See also</span></span>
 
-- [<span data-ttu-id="e4970-112">Handles</span><span class="sxs-lookup"><span data-stu-id="e4970-112">Handles</span></span>](../../../visual-basic/language-reference/statements/handles-clause.md)
+- [<span data-ttu-id="b8992-112">핸들</span><span class="sxs-lookup"><span data-stu-id="b8992-112">Handles</span></span>](../statements/handles-clause.md)
