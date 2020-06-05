@@ -18,12 +18,12 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: 7538466c8f4b90e2e655a2ec762d8c545546a481
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1ffe3e45a296d02364f488540d987d85133013bd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344423"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404384"
 ---
 # <a name="option-compare-statement"></a>Option Compare 문
 문자열 데이터를 비교할 때 사용할 기본 비교 방법을 선언합니다.  
@@ -34,14 +34,14 @@ ms.locfileid: "74344423"
 Option Compare { Binary | Text }  
 ```  
   
-## <a name="parts"></a>요소  
+## <a name="parts"></a>부분  
   
 |용어|정의|  
 |---|---|  
-|`Binary`|(선택 사항) 문자의 내부 이진 표현에서 파생된 정렬 순서에 따라 문자열을 비교합니다.<br /><br /> 이 유형의 비교는 문자열에 텍스트로 해석할 수 없는 문자가 포함될 수 있는 경우 특히 유용합니다. 이 경우 대/소문자 미구분 등의 영문자 동일 여부에 따라 비교 결과가 달라지지 않습니다.|  
-|`Text`|(선택 사항) 시스템의 로캘에 따라 결정되는 대/소문자 미구분 텍스트 정렬 순서에 따라 문자열을 비교합니다.<br /><br /> 문자열에 텍스트 문자만 포함되며 대/소문자 미구분, 밀접하게 관련된 문자 등의 영문자 동일 여부를 고려하여 이러한 문자를 비교하려는 경우에는 이 유형의 비교가 유용합니다. 예를 들어 `A`와 `a`를 같은 문자로 간주하고 `Ä` 및 `ä`가 `B` 및 `b` 앞에 온다고 간주할 수 있습니다.|  
+|`Binary`|선택 사항입니다. 문자의 내부 이진 표현에서 파생된 정렬 순서에 따라 문자열을 비교합니다.<br /><br /> 이 유형의 비교는 문자열에 텍스트로 해석할 수 없는 문자가 포함될 수 있는 경우 특히 유용합니다. 이 경우 대/소문자 미구분 등의 영문자 동일 여부에 따라 비교 결과가 달라지지 않습니다.|  
+|`Text`|선택 사항입니다. 시스템의 로캘에 따라 결정되는 대/소문자 미구분 텍스트 정렬 순서에 따라 문자열을 비교합니다.<br /><br /> 문자열에 텍스트 문자만 포함되며 대/소문자 미구분, 밀접하게 관련된 문자 등의 영문자 동일 여부를 고려하여 이러한 문자를 비교하려는 경우에는 이 유형의 비교가 유용합니다. 예를 들어 `A`와 `a`를 같은 문자로 간주하고 `Ä` 및 `ä`가 `B` 및 `b` 앞에 온다고 간주할 수 있습니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  `Option Compare` 문은 사용하는 경우 파일에서 다른 소스 코드 문 앞에 나와야 합니다.  
   
  `Option Compare` 문은 문자열 비교 방법(`Binary` 또는 `Text`)을 지정합니다.  기본 텍스트 비교 방법은 `Binary`입니다.  
@@ -59,13 +59,13 @@ Option Compare { Binary | Text }
  `(A=a) < (À = à) < (B=b) < (E=e) < (Ê = ê) < (Z=z) < (Ø = ø)`  
   
 ## <a name="when-an-option-compare-statement-is-not-present"></a>Option Compare 문이 없는 경우  
- 소스 코드에 `Option Compare` 문이 포함 되어 있지 않으면 [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) 에서 **Option Compare** 설정이 사용 됩니다. 명령줄 컴파일러를 사용 하는 경우 [-옵션 비교](../../../visual-basic/reference/command-line-compiler/optioncompare.md) 컴파일러 옵션에 지정 된 설정이 사용 됩니다.  
+ 소스 코드에 문이 포함 되어 있지 않은 경우 `Option Compare` 컴파일 페이지에서 **Option Compare** 설정이 사용 됩니다 [(Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) . 명령줄 컴파일러를 사용 하는 경우 [-옵션 비교](../../reference/command-line-compiler/optioncompare.md) 컴파일러 옵션에 지정 된 설정이 사용 됩니다.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 #### <a name="to-set-option-compare-in-the-ide"></a>IDE에서 Option Compare를 설정하려면  
   
-1. **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
+1. **솔루션 탐색기**에서 프로젝트를 선택 합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
   
 2. **컴파일** 탭을 클릭합니다.  
   
@@ -75,7 +75,7 @@ Option Compare { Binary | Text }
   
 #### <a name="to-set-option-compare-on-the-command-line"></a>명령줄에서 Option Compare를 설정하려면  
   
-- **Vbc** 명령에 [-옵션 compare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) 컴파일러 옵션을 포함 합니다.  
+- **Vbc** 명령에 [-옵션 compare](../../reference/command-line-compiler/optioncompare.md) 컴파일러 옵션을 포함 합니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 `Option Compare` 문을 사용하여 이진 비교를 기본 문자열 비교 방법으로 설정합니다. 이 코드를 사용하려면 `Option Compare Binary` 문의 주석 처리를 제거하여 소스 파일 맨 위에 삽입합니다.  
@@ -94,10 +94,10 @@ Option Compare { Binary | Text }
 - <xref:Microsoft.VisualBasic.Strings.Replace%2A>
 - <xref:Microsoft.VisualBasic.Strings.Split%2A>
 - <xref:Microsoft.VisualBasic.Strings.StrComp%2A>
-- [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
-- [비교 연산자](../../../visual-basic/language-reference/operators/comparison-operators.md)
-- [Visual Basic의 비교 연산자](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [Like 연산자](../../../visual-basic/language-reference/operators/like-operator.md)
-- [문자열 함수](../../../visual-basic/language-reference/functions/string-functions.md)
-- [Option Explicit 문](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
-- [Option Strict 문](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [-optioncompare](../../reference/command-line-compiler/optioncompare.md)
+- [비교 연산자](../operators/comparison-operators.md)
+- [Comparison Operators in Visual Basic](../../programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Like 연산자](../operators/like-operator.md)
+- [문자열 함수](../functions/string-functions.md)
+- [Option Explicit 문](option-explicit-statement.md)
+- [Option Strict 문](option-strict-statement.md)

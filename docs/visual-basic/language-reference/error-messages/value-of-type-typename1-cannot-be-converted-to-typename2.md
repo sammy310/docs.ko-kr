@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
-ms.openlocfilehash: 027cccc9ad406d5bc2fd686ddeb4c674dc8f3c90
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f6b35efbc445887c537b94dd299b317a28e5f689
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621195"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406562"
 ---
-# <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a>형식의 값 '\<typename1 >'로 변환할 수 없습니다 '\<typename2 >'
-형식의 값 '\<typename1 >'로 변환할 수 없습니다 '\<typename2 >'입니다. 형식 불일치 어셈블리에 대 한 프로젝트 참조를 사용 하는 파일 참조가 섞여 있기 때문일 수 있습니다 '\<assemblyname >'입니다. 에 대 한 파일 참조를 바꿔 보십시오 '\<파일 경로 >' 프로젝트에서 '\<projectname1 >'에 대 한 프로젝트 참조를 사용 하 여 '\<projectname2 >'입니다.  
+# <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a>'\<typename1>' 형식의 값을 '\<typename2>'(으)로 변환할 수 없습니다.
+' ' 형식의 값 \<typename1> 을 ' ' (으)로 변환할 수 없습니다 \<typename2> . ' ' 어셈블리에 대 한 프로젝트 참조와 파일 참조가 섞여 있기 때문에 형식이 일치 하지 않을 수 있습니다 \<assemblyname> . ' ' 프로젝트의 ' '에 대 한 파일 참조를 \<filepath> \<projectname1> ' '에 대 한 프로젝트 참조로 바꿔 보세요 \<projectname2> .  
   
- 프로젝트의 프로젝트 참조와 파일 참조는 있는 경우에서 컴파일러는 형식 간에 변환할 수는 보장할 수 없습니다.  
+ 프로젝트에서 프로젝트 참조와 파일 참조를 모두 사용 하는 경우 컴파일러는 한 형식을 다른 형식으로 변환할 수 있음을 보장할 수 없습니다.  
   
- 다음 의사 코드에서는이 오류를 생성할 수 있는 위험한 상황을 보여 줍니다.  
+ 다음 의사 코드는이 오류를 생성할 수 있는 상황을 보여 줍니다.  
   
  `' ================ Visual Basic project P1 ================`  
   
@@ -47,11 +47,11 @@ ms.locfileid: "64621195"
   
  `End Class`  
   
- 프로젝트 `P1` 프로젝트를 통해 간접 프로젝트 참조를 사용 하면 `P2` 프로젝트에 `P3`, 및에 대 한 파일을 직접 참조도 `P3`합니다. 선언의 `commonObject` 에 대 한 파일 참조를 사용 하 여 `P3`를 호출 하는 동안 `P2.getCommonClass` 에 대 한 프로젝트 참조를 사용 하 여 `P3`입니다.  
+ 프로젝트에서 프로젝트 `P1` 에 대 한 간접 프로젝트 참조 `P2` `P3` 와에 대 한 직접 파일 참조를 만듭니다 `P3` . 에 대 한 호출에서에 대 한 프로젝트 참조를 사용 하는의 선언에는 `commonObject` 에 대 한 파일 참조가 사용 `P3` `P2.getCommonClass` `P3` 됩니다.  
   
- 이런에서 문제는 파일 참조의 출력 파일에 대 한 이름과 파일 경로 지정 하는지 `P3` (일반적으로 p3.dll) 프로젝트 참조 소스 프로젝트를 식별 하는 동안 (`P3`) 프로젝트 이름으로 합니다. 이 인해 컴파일러 보장할 수 없습니다 형식 `P3.commonClass` 두 개의 다른 참조를 통해 동일한 소스 코드에서 제공 됩니다.  
+ 이 경우의 문제는 파일 참조가의 출력 파일에 대 한 파일 경로 및 이름을 지정 하는 `P3` 반면 (일반적으로 p3 .dll) 프로젝트 참조는 프로젝트 이름으로 소스 프로젝트 ()를 식별 하기 때문입니다 `P3` . 이로 인해 컴파일러는 형식이 `P3.commonClass` 두 개의 다른 참조를 통해 동일한 소스 코드에서 제공 되는 것을 보장할 수 없습니다.  
   
- 이 상황은 일반적으로 발생 경우 프로젝트 참조와 파일 참조가 섞여 있습니다. 앞의 그림에서 문제가 발생 하지 않습니다 `P1` 에 대 한 직접 프로젝트 참조 `P3` 파일 참조를 대신 합니다.  
+ 이 상황은 일반적으로 프로젝트 참조와 파일 참조가 섞여 있을 때 발생 합니다. 위의 그림에서 `P1` 파일 참조 대신에 직접 프로젝트 참조를 만든 경우 문제가 발생 하지 않습니다 `P3` .  
   
  **오류 ID:** BC30955  
   
@@ -59,7 +59,7 @@ ms.locfileid: "64621195"
   
 - 프로젝트 참조에 대 한 파일 참조를 변경 합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [Visual Basic의 형식 변환](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic의 형식 변환](../../programming-guide/language-features/data-types/type-conversions.md)
 - [프로젝트의 참조 관리](/visualstudio/ide/managing-references-in-a-project)

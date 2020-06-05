@@ -8,15 +8,15 @@ helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-ms.openlocfilehash: b322bd2215c95298be0a33ace1f3590a63878e24
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d991a385e537c43daeb708e96e712acd92110379
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350380"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403384"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>자동 구현 속성(Visual Basic)
-*자동 구현 속성* 을 사용 하면 `Get` 하는 코드를 작성 하지 않고도 속성을 `Set` 하 여 클래스의 속성을 신속 하 게 지정할 수 있습니다. 자동 구현 속성에 대한 코드를 작성하면 Visual Basic 컴파일러에서 관련 `Get` 및 `Set` 프로시저가 생성될 뿐만 아니라 속성 변수를 저장하는 전용 필드가 자동으로 만들어집니다.  
+*자동 구현 속성* 을 사용 하면 및 속성에 코드를 작성 하지 않고도 클래스의 속성을 신속 하 게 지정할 수 있습니다 `Get` `Set` . 자동 구현 속성에 대한 코드를 작성하면 Visual Basic 컴파일러에서 관련 `Get` 및 `Set` 프로시저가 생성될 뿐만 아니라 속성 변수를 저장하는 전용 필드가 자동으로 만들어집니다.  
   
  자동 구현 속성을 사용하면 기본값을 포함한 속성을 한 줄에 선언할 수 있습니다. 다음 예제에서는 3개의 속성 선언을 보여 줍니다.  
   
@@ -51,7 +51,7 @@ End Class
   
  지원 필드에는 또한 다음과 같은 특징이 있습니다.  
   
-- 속성 자체에 `Private`과 같은 다른 액세스 수준이 있는 경우에도, 지원 필드에 대한 액세스 한정자는 항상 `Public`입니다.  
+- 속성 자체에 `Public`과 같은 다른 액세스 수준이 있는 경우에도, 지원 필드에 대한 액세스 한정자는 항상 `Private`입니다.  
   
 - 속성이 `Shared`로 표시된 경우 지원 필드도 공유됩니다.  
   
@@ -90,13 +90,13 @@ End Class
 - 지원 필드에 대한 XML 주석을 제공합니다.  
   
 ## <a name="expanding-an-auto-implemented-property"></a>자동 구현 속성 확장명  
- 자동 구현 속성을 `Get` 또는 `Set` 프로시저가 포함된 확장된 속성으로 변환해야 하는 경우 Visual Basic 코드 편집기는 속성에 대한 `Get` 및 `Set` 프로시저와 `End Property` 문을 자동으로 생성할 수 있습니다. `Property` 문 뒤에 있는 빈 줄에 커서를 놓고 `G` (`Get`) 또는 `S` (`Set`)를 입력 한 다음 ENTER 키를 누르면 코드가 생성 됩니다. `Get` 문 끝에서 Enter 키를 누르면 Visual Basic 코드 편집기에서 읽기 전용 및 쓰기 전용 속성에 대한 `Set` 또는 `Property` 프로시저가 자동으로 생성됩니다.  
+ 자동 구현 속성을 `Get` 또는 `Set` 프로시저가 포함된 확장된 속성으로 변환해야 하는 경우 Visual Basic 코드 편집기는 속성에 대한 `Get` 및 `Set` 프로시저와 `End Property` 문을 자동으로 생성할 수 있습니다. 문 뒤에 있는 빈 줄에 커서를 놓고 `Property` `G` (의 경우 `Get` ) 또는 (의 경우)를 입력 하 `S` `Set` 고 enter 키를 누르면 코드가 생성 됩니다. `Property` 문 끝에서 Enter 키를 누르면 Visual Basic 코드 편집기에서 읽기 전용 및 쓰기 전용 속성에 대한 `Get` 또는 `Set` 프로시저가 자동으로 생성됩니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [방법: Visual Basic에서 기본 속성 선언 및 호출](./how-to-declare-and-call-a-default-property.md)
 - [방법: 액세스 수준이 혼합된 속성 선언](./how-to-declare-a-property-with-mixed-access-levels.md)
-- [Property 문](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)
-- [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)
-- [개체 및 클래스](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Property Statement](../../../language-reference/statements/property-statement.md)
+- [ReadOnly](../../../language-reference/modifiers/readonly.md)
+- [WriteOnly](../../../language-reference/modifiers/writeonly.md)
+- [개체 및 클래스](../objects-and-classes/index.md)

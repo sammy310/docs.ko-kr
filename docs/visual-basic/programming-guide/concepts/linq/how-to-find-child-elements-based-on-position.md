@@ -2,12 +2,12 @@
 title: '방법: 위치에 따라 자식 요소 찾기(XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 6831e1db-5e97-444f-a7a1-d0a87104b005
-ms.openlocfilehash: c3062963c6144dfafed8b49410208f480c273ec9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d6dd1150ae3e4ad586e476b777b1f7d47d60c261
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349080"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405263"
 ---
 # <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-visual-basic"></a>방법: 위치에 따라 자식 요소 찾기 (XPath-LINQ to XML) (Visual Basic)
 위치에 따라 요소를 찾으려는 경우가 있습니다. 두 번째 요소를 찾으려고 하거나 세 번째 요소부터 다섯 번째 요소까지 찾으려고 할 수도 있습니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "74349080"
 ## <a name="example"></a>예제  
  이 예제에서는 두 번째 `Test` 요소부터 네 번째 요소까지 찾습니다. 결과는 요소의 컬렉션입니다.  
   
- 이 예제에서는 XML 문서 [샘플 XML 파일: 테스트 구성(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)을 사용합니다.  
+ 이 예제에서는 XML 문서 [샘플 XML 파일: 테스트 구성(LINQ to XML)](sample-xml-file-test-configuration-linq-to-xml.md)을 사용합니다.  
   
 ```vb  
 Dim testCfg As XElement = XElement.Load("TestConfig.xml")  
@@ -54,7 +54,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- 이 예제는 다음과 같은 출력을 생성합니다.  
+ 이 예에서 생성되는 출력은 다음과 같습니다.  
   
 ```console  
 Results are identical  
@@ -78,6 +78,6 @@ Results are identical
 </Test>  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [XPath 사용자에 대 한 LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath 사용자에 대 한 LINQ to XML (Visual Basic)](linq-to-xml-for-xpath-users.md)

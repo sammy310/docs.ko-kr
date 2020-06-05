@@ -2,15 +2,15 @@
 title: '방법: 네임스페이스에서 요소 찾기(XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: c7cb3b77-3424-4b54-9efa-4dc715948e41
-ms.openlocfilehash: 822af6367fab707f52e2dcb7a130d899be1fba26
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3663516e6b6289fe3b1d0599ff3ed4b7dad6a80a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344659"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405198"
 ---
 # <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a>방법: 네임 스페이스에서 요소 찾기 (XPath-LINQ to XML) (Visual Basic)
-XPath 식은 특정 네임스페이스에서 노드를 찾을 수 있습니다. XPath 식은 네임스페이스를 지정하는 데 네임스페이스 접두사를 사용합니다. 네임스페이스 접두사가 포함된 XPath 식의 구문을 분석하려면 <xref:System.Xml.IXmlNamespaceResolver>를 구현하는 XPath 메서드에 개체를 전달해야 합니다. 이 예제에서는 <xref:System.Xml.XmlNamespaceManager>를 사용합니다.  
+XPath 식은 특정 네임스페이스에서 노드를 찾을 수 있습니다. XPath 식은 네임스페이스를 지정하는 데 네임스페이스 접두사를 사용합니다. 네임스페이스 접두사가 포함된 XPath 식의 구문을 분석하려면 <xref:System.Xml.IXmlNamespaceResolver>를 구현하는 XPath 메서드에 개체를 전달해야 합니다. 이 예에서는 <xref:System.Xml.XmlNamespaceManager>를 사용합니다.  
   
  XPath 식은 다음과 같습니다.  
   
@@ -45,7 +45,7 @@ For Each el As XElement In list2
 Next  
 ```  
   
- 이 예제는 다음과 같은 출력을 생성합니다.  
+ 이 예에서 생성되는 출력은 다음과 같습니다.  
   
 ```console
 Results are identical  
@@ -82,4 +82,4 @@ Results are identical
   
 ## <a name="see-also"></a>참고 항목
 
-- [XPath 사용자에 대 한 LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath 사용자에 대 한 LINQ to XML (Visual Basic)](linq-to-xml-for-xpath-users.md)
