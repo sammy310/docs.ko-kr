@@ -10,12 +10,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-ms.openlocfilehash: 668ffbc7b8db73a706c5771bb0734a77f8fc0206
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 35ba1f19654d1d23ac1ec73564bc36b0af4f6777
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351246"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404747"
 ---
 # <a name="error-statement"></a>Error 문
 오류가 발생 한 경우를 시뮬레이션 합니다.  
@@ -26,31 +26,31 @@ ms.locfileid: "74351246"
 Error errornumber  
 ```  
   
-## <a name="parts"></a>요소  
+## <a name="parts"></a>부분  
  `errornumber`  
- 필수입니다. 모든 유효한 오류 번호가 될 수 있습니다.  
+ 필수 요소. 모든 유효한 오류 번호가 될 수 있습니다.  
   
-## <a name="remarks"></a>주의  
- `Error` 문은 이전 버전과의 호환성을 위해 지원 됩니다. 새 코드에서 특히 개체를 만들 때 `Err` 개체의 `Raise` 메서드를 사용 하 여 런타임 오류를 생성 합니다.  
+## <a name="remarks"></a>설명  
+ `Error`문은 이전 버전과의 호환성을 위해 지원 됩니다. 새 코드에서 특히 개체를 만들 때 `Err` 개체의 메서드를 사용 `Raise` 하 여 런타임 오류를 생성 합니다.  
   
- `errornumber` 정의 된 경우 `Error` 문은 `Err` 개체의 속성에 다음과 같은 기본값을 할당 한 후에 오류 처리기를 호출 합니다.  
+ `errornumber`를 정의 하면 `Error` 개체의 속성에 다음 기본값이 할당 된 후에 문이 오류 처리기를 호출 합니다 `Err` .  
   
 |속성|값|  
 |--------------|-----------|  
-|`Number`|`Error` 문에 대 한 인수로 지정 된 값입니다. 모든 유효한 오류 번호가 될 수 있습니다.|  
+|`Number`|문에 대 한 인수로 지정 된 값 `Error` 입니다. 모든 유효한 오류 번호가 될 수 있습니다.|  
 |`Source`|현재 Visual Basic 프로젝트의 이름입니다.|  
-|`Description`|지정 된 `Number`에 대 한 `Error` 함수의 반환 값에 해당 하는 문자열 식입니다 (이 문자열이 있는 경우). 문자열이 없으면 `Description`에 길이가 0 인 문자열 ("")이 포함 됩니다.|  
+|`Description`|지정 된에 대 한 함수의 반환 값에 해당 하는 문자열 식 `Error` `Number` (있는 경우)입니다. 문자열이 없으면에 `Description` 길이가 0 인 문자열 ("")이 포함 됩니다.|  
 |`HelpFile`|적절 한 Visual Basic 도움말 파일의 정규화 된 드라이브, 경로 및 파일 이름입니다.|  
-|`HelpContext`|`Number` 속성에 해당 하는 오류에 대 한 적절 한 Visual Basic 도움말 파일 컨텍스트 ID입니다.|  
-|`LastDLLError`|0입니다.|  
+|`HelpContext`|속성에 해당 하는 오류에 대 한 적절 한 Visual Basic 도움말 파일 컨텍스트 ID입니다 `Number` .|  
+|`LastDLLError`|단계 없음.|  
   
- 오류 처리기가 없거나 사용할 수 없는 경우에는 오류 메시지가 생성 되 고 `Err` 개체 속성에서 표시 됩니다.  
+ 오류 처리기가 없거나 사용할 수 없는 경우 오류 메시지가 생성 되 고 개체 속성에서 표시 됩니다 `Err` .  
   
 > [!NOTE]
 > 일부 Visual Basic 호스트 응용 프로그램에서 개체를 만들 수 없습니다. 클래스 및 개체를 만들 수 있는지 여부를 확인 하려면 호스트 응용 프로그램의 설명서를 참조 하세요.  
   
 ## <a name="example"></a>예제  
- 이 예에서는 `Error` 문을 사용 하 여 오류 번호 11을 생성 합니다.  
+ 이 예에서는 문을 사용 하 여 `Error` 오류 번호 11을 생성 합니다.  
   
 ```vb  
 On Error Resume Next   ' Defer error handling.  
@@ -58,7 +58,7 @@ Error 11   ' Simulate the "Division by zero" error.
 ```  
   
 ## <a name="requirements"></a>요구 사항  
- **네임 스페이스:** [microsoft.visualbasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **네임 스페이스:** [microsoft.visualbasic](../runtime-library-members.md)  
   
  **어셈블리:** Visual Basic 런타임 라이브러리 (Microsoft.visualbasic)  
   
@@ -67,6 +67,6 @@ Error 11   ' Simulate the "Division by zero" error.
 - <xref:Microsoft.VisualBasic.ErrObject.Clear%2A>
 - <xref:Microsoft.VisualBasic.Information.Err%2A>
 - <xref:Microsoft.VisualBasic.ErrObject.Raise%2A>
-- [On Error 문](../../../visual-basic/language-reference/statements/on-error-statement.md)
-- [Resume 문](../../../visual-basic/language-reference/statements/resume-statement.md)
-- [오류 메시지](../../../visual-basic/language-reference/error-messages/index.md)
+- [On Error 문](on-error-statement.md)
+- [Resume 문](resume-statement.md)
+- [오류 메시지](../error-messages/index.md)

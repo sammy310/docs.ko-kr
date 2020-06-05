@@ -2,21 +2,21 @@
 title: 비동기 프로그램의 제어 흐름
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
-ms.openlocfilehash: 94b2c2ea89f729e882229d4ecce7faa169c24267
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0c479b9dd2a691b1b353fac54ee3320a895b1c7f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347933"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396664"
 ---
-# <a name="control-flow-in-async-programs-visual-basic"></a>비동기 프로그램의 제어 흐름 (Visual Basic)
+# <a name="control-flow-in-async-programs-visual-basic"></a>비동기 프로그램의 제어 흐름(Visual Basic)
 
 `Async` 및 `Await` 키워드를 사용하면 비동기 프로그램을 더 쉽게 쓰고 유지 관리할 수 있습니다. 그러나 프로그램 작동 방식을 이해하지 못한다면 결과에 놀랄 수 있습니다. 이 항목에서는 간단한 비동기 프로그램을 통해 제어 흐름을 추적하여 언제 메서드 간에 제어가 이동되고 매번 어떤 정보가 전달되는지 보여 줍니다.
 
 > [!NOTE]
 > `Async` 및 `Await` 키워드는 Visual Studio 2012에서 도입되었습니다.
 
-일반적으로 [비동기 한정자를 사용 하 여 비동기](../../../../visual-basic/language-reference/modifiers/async.md) 코드를 포함 하는 메서드를 표시 합니다. Async 한정자로 표시 된 메서드에서 [wait (Visual Basic)](../../../../visual-basic/language-reference/operators/await-operator.md) 연산자를 사용 하 여 호출 된 비동기 프로세스가 완료 될 때까지 메서드가 일시 중지 될 때까지 대기 하는 위치를 지정할 수 있습니다. 자세한 내용은 [Async 및 wait를 사용한 비동기 프로그래밍 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)을 참조 하세요.
+일반적으로 [비동기 한정자를 사용 하 여 비동기](../../../language-reference/modifiers/async.md) 코드를 포함 하는 메서드를 표시 합니다. Async 한정자로 표시 된 메서드에서 [wait (Visual Basic)](../../../language-reference/operators/await-operator.md) 연산자를 사용 하 여 호출 된 비동기 프로세스가 완료 될 때까지 메서드가 일시 중지 될 때까지 대기 하는 위치를 지정할 수 있습니다. 자세한 내용은 [Async 및 wait를 사용한 비동기 프로그래밍 (Visual Basic)](index.md)을 참조 하세요.
 
 다음 예제에서는 비동기 메서드를 사용하여 지정된 웹 사이트의 콘텐츠를 문자열로 다운로드하고 문자열 길이를 표시합니다. 예제에는 다음 두 가지 메서드가 포함됩니다.
 
@@ -147,7 +147,7 @@ Length of the downloaded string: 33946.
     </Window>
     ```
 
-    텍스트 상자와 단추가 포함된 간단한 창이 MainWindow.xaml의 **디자인** 보기에 나타납니다.
+    텍스트 상자와 버튼이 포함된 간단한 창이 MainWindow.xaml의 **디자인** 보기에 나타납니다.
 
 7. <xref:System.Net.Http>에 대한 참조를 추가합니다.
 
@@ -218,7 +218,7 @@ Length of the downloaded string: 33946.
     End Class
     ```
 
-10. F5 키를 선택하여 프로그램을 실행한 다음 **시작** 단추를 선택합니다.
+10. F5 키를 선택하여 프로그램을 실행한 후 **시작** 단추를 선택합니다.
 
     다음과 같은 출력이 표시 됩니다.
 
@@ -256,23 +256,23 @@ Length of the downloaded string: 33946.
 
 처음 두 표시 줄은 `startButton_Click`이 `AccessTheWebAsync`를 호출하고, `AccessTheWebAsync`가 비동기 <xref:System.Net.Http.HttpClient> 메서드 <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>을 호출할 때 경로를 추적합니다. 다음 그림은 메서드 간의 호출을 간단히 보여 줍니다.
 
-![1 ~ 2 단계](../../../../csharp/programming-guide/concepts/async/media/asynctrace-onetwo.png "AsyncTrace-ONETWO")
+![1, 2단계](../../../../csharp/programming-guide/concepts/async/media/asynctrace-onetwo.png "AsyncTrace-ONETWO")
 
-`AccessTheWebAsync` 및 `client.GetStringAsync`의 반환 형식은 둘 다 <xref:System.Threading.Tasks.Task%601>입니다. `AccessTheWebAsync`의 경우 TResult는 정수입니다. `GetStringAsync`의 경우 TResult는 문자열입니다. 비동기 메서드 반환 형식에 대 한 자세한 내용은 [비동기 반환 형식 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)을 참조 하세요.
+`AccessTheWebAsync` 및 `client.GetStringAsync`의 반환 형식은 둘 다 <xref:System.Threading.Tasks.Task%601>입니다. `AccessTheWebAsync`의 경우 TResult는 정수입니다. `GetStringAsync`의 경우 TResult는 문자열입니다. 비동기 메서드 반환 형식에 대 한 자세한 내용은 [비동기 반환 형식 (Visual Basic)](async-return-types.md)을 참조 하세요.
 
 제어가 다시 호출자로 이동할 때 작업 반환 비동기 메서드는 작업 인스턴스를 반환합니다. 호출된 메서드에서 `Await` 연산자가 발견되거나 호출된 메서드가 종료될 때 제어는 비동기 메서드에서 호출자로 반환됩니다. "THREE"~"SIX"의 레이블이 지정된 표시 줄은 이 프로세스 부분을 추적합니다.
 
 ### <a name="step-three"></a>3단계
 
-`AccessTheWebAsync`에서 비동기 메서드 <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>을 호출하여 대상 웹 페이지의 콘텐츠를 다운로드합니다. `client.GetStringAsync`가 반환되면 제어가 `AccessTheWebAsync`에서 `client.GetStringAsync`로 반환됩니다.
+`AccessTheWebAsync`에서 비동기 메서드 <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>을 호출하여 대상 웹 페이지의 콘텐츠를 다운로드합니다. `client.GetStringAsync`가 반환되면 제어가 `client.GetStringAsync`에서 `AccessTheWebAsync`로 반환됩니다.
 
-`client.GetStringAsync` 메서드는 `getStringTask`의 `AccessTheWebAsync` 변수에 할당된 문자열의 작업을 반환합니다. 예제 프로그램의 다음 줄은 `client.GetStringAsync` 호출 및 할당을 보여 줍니다.
+`client.GetStringAsync` 메서드는 `AccessTheWebAsync`의 `getStringTask` 변수에 할당된 문자열의 작업을 반환합니다. 예제 프로그램의 다음 줄은 `client.GetStringAsync` 호출 및 할당을 보여 줍니다.
 
 ```vb
 Dim getStringTask As Task(Of String) = client.GetStringAsync("https://msdn.microsoft.com")
 ```
 
-작업은 결국 실제 문자열을 생성하기 위한 `client.GetStringAsync`의 약속으로 간주할 수 있습니다. 그리고 `AccessTheWebAsync`의 약속된 문자열을 사용하지 않는 작업이 `client.GetStringAsync`에 있는 경우 `client.GetStringAsync`가 대기하는 동안 해당 작업이 계속될 수 있습니다. 예제에서 "THREE" 레이블이 지정된 다음 출력 줄은 독립 작업을 수행할 기회를 나타냅니다.
+작업은 결국 실제 문자열을 생성하기 위한 `client.GetStringAsync`의 약속으로 간주할 수 있습니다. 그리고 `client.GetStringAsync`의 약속된 문자열을 사용하지 않는 작업이 `AccessTheWebAsync`에 있는 경우 `client.GetStringAsync`가 대기하는 동안 해당 작업이 계속될 수 있습니다. 예제에서 "THREE" 레이블이 지정된 다음 출력 줄은 독립 작업을 수행할 기회를 나타냅니다.
 
 ```console
 THREE: Back in AccessTheWebAsync.
@@ -280,17 +280,17 @@ THREE: Back in AccessTheWebAsync.
            About to await getStringTask & return a Task<int> to startButton_Click.
 ```
 
- 다음 문은 `AccessTheWebAsync`가 대기 상태일 때 `getStringTask`의 진행을 일시 중단합니다.
+ 다음 문은 `getStringTask`가 대기 상태일 때 `AccessTheWebAsync`의 진행을 일시 중단합니다.
 
 ```vb
 Dim urlContents As String = Await getStringTask
 ```
 
-다음 이미지는 `getStringTask`에 대 한 `client.GetStringAsync` 할당에 대 한 제어 흐름을 보여 주고 `getStringTask`를 Wait 연산자의 응용 프로그램에 만듭니다.
+다음 이미지에서는에서로의 제어 흐름과 `client.GetStringAsync` `getStringTask` `getStringTask` wait 연산자의 응용 프로그램을 만드는 방법에 대 한 제어 흐름을 보여 줍니다.
 
 ![3 단계](../../../../csharp/programming-guide/concepts/async/media/asynctrace-three.png "AsyncTrace-3")
 
-await 식은 `AccessTheWebAsync`가 반환될 때까지 `client.GetStringAsync`를 일시 중단합니다. 그리고 제어는 `AccessTheWebAsync`의 호출자, `startButton_Click`으로 반환됩니다.
+await 식은 `client.GetStringAsync`가 반환될 때까지 `AccessTheWebAsync`를 일시 중단합니다. 그리고 제어는 `AccessTheWebAsync`의 호출자, `startButton_Click`으로 반환됩니다.
 
 > [!NOTE]
 > 일반적으로 즉시 비동기 메서드에 대한 호출을 기다립니다. 예를 들어 다음 할당은 `getStringTask`를 만들고 기다리는 이전 코드를 대체할 수 있습니다. `Dim urlContents As String = Await client.GetStringAsync("https://msdn.microsoft.com")`.
@@ -315,13 +315,13 @@ FOUR:  Back in startButton_Click.
            About to await getLengthTask -- no caller to return to.
 ```
 
-`startButton_Click`의 진행은 `getLengthTask`가 대기 상태일 때 일시 중단됩니다. 다음 대입문은 `startButton_Click`가 완료될 때까지 `AccessTheWebAsync`을 일시 중단합니다.
+`startButton_Click`의 진행은 `getLengthTask`가 대기 상태일 때 일시 중단됩니다. 다음 대입문은 `AccessTheWebAsync`가 완료될 때까지 `startButton_Click`을 일시 중단합니다.
 
 ```vb
 Dim contentLength As Integer = Await getLengthTask
 ```
 
-다음 그림에서 화살표는 `AccessTheWebAsync`의 await 식에서 `getLengthTask`에 대한 값 할당으로의 제어 흐름에 이어 `startButton_Click`가 대기 상태가 될 때까지 `getLengthTask`의 일반적인 처리를 보여 줍니다.
+다음 그림에서 화살표는 `AccessTheWebAsync`의 await 식에서 `getLengthTask`에 대한 값 할당으로의 제어 흐름에 이어 `getLengthTask`가 대기 상태가 될 때까지 `startButton_Click`의 일반적인 처리를 보여 줍니다.
 
 ![4 단계](../../../../csharp/programming-guide/concepts/async/media/asynctrace-four.png "AsyncTrace-4")
 
@@ -336,11 +336,11 @@ FIVE:  Back in AccessTheWebAsync.
            Exiting from AccessTheWebAsync.
 ```
 
-return 문의 피연산자, `urlContents.Length`는 `AccessTheWebAsync`가 반환하는 작업에 저장됩니다. await 식은 `getLengthTask`의 `startButton_Click`에서 해당 값을 검색합니다.
+return 문의 피연산자, `urlContents.Length`는 `AccessTheWebAsync`가 반환하는 작업에 저장됩니다. await 식은 `startButton_Click`의 `getLengthTask`에서 해당 값을 검색합니다.
 
 다음 그림은 `client.GetStringAsync`(및 `getStringTask`)가 완료된 후 제어의 전송을 보여 줍니다.
 
-![5 단계](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace-5")
+![5단계](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace-5")
 
 `AccessTheWebAsync`는 완료될 때까지 실행되고 제어는 완료를 기다리고 있는 `startButton_Click`으로 반환됩니다.
 
@@ -365,11 +365,11 @@ Dim contentLength As Integer = Await getLengthTask
 
 다음 그림은 `AccessTheWebAsync`에서 `startButton_Click`로의 제어 반환을 보여 줍니다.
 
-![6 단계](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace-6")
+![6단계](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace-6")
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [비동기 반환 형식(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
-- [연습: Async 및 Await를 사용하여 웹에 액세스(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](index.md)
+- [비동기 반환 형식(Visual Basic)](async-return-types.md)
+- [연습: Async 및 Await를 사용하여 웹에 액세스(Visual Basic)](walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Async Sample: Control Flow in Async Programs (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)(Async 샘플: 비동기 프로그램의 제어 흐름(C# 및 Visual Basic))

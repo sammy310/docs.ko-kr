@@ -1,27 +1,27 @@
 ---
-title: Variant 제네릭 인터페이스 만들기
+title: 변형 제네릭 인터페이스 만들기
 ms.date: 07/20/2015
 ms.assetid: d4037dd2-dfe9-4811-9150-93d4e8b20113
-ms.openlocfilehash: 74362b9d9effab028bebb9e9ecf72ac0111366d3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 884349159d2738d8481b217f9dab383483616f2b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347062"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400644"
 ---
-# <a name="creating-variant-generic-interfaces-visual-basic"></a>Variant 제네릭 인터페이스 만들기 (Visual Basic)
+# <a name="creating-variant-generic-interfaces-visual-basic"></a>Variant 제네릭 인터페이스 만들기(Visual Basic)
 
 인터페이스에서 제네릭 형식 매개 변수를 공변(covariant) 또는 반공변(contravariant)으로 선언할 수 있습니다. *공변성(covariance)* 은 인터페이스 메서드가 제네릭 형식 매개 변수에 정의된 것보다 더 많은 수의 파생된 반환 형식을 갖도록 허용합니다. *반공변성(contravariance)* 은 인터페이스 메서드가 제네릭 매개 변수에 지정된 것보다 더 적은 수의 파생된 형식의 인수 형식을 갖도록 허용합니다. 공변(covariant) 또는 반공변(contravariant) 제네릭 형식 매개 변수가 포함된 제네릭 인터페이스를 *variant*라고 합니다.
 
 > [!NOTE]
-> .NET Framework 4에서는 기존의 몇몇 제네릭 인터페이스에 대한 가변성 지원이 추가되었습니다. .NET Framework의 variant 인터페이스 목록은 [제네릭 인터페이스의 가변성 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)을 참조 하세요.
+> .NET Framework 4에서는 기존의 몇몇 제네릭 인터페이스에 대한 가변성 지원이 추가되었습니다. .NET Framework의 variant 인터페이스 목록은 [제네릭 인터페이스의 가변성 (Visual Basic)](variance-in-generic-interfaces.md)을 참조 하세요.
 
 ## <a name="declaring-variant-generic-interfaces"></a>Variant 제네릭 인터페이스 선언
 
 제네릭 형식 매개 변수에 `in` 및 `out` 키워드를 사용하여 Variant 제네릭 인터페이스를 선언할 수 있습니다.
 
 > [!IMPORTANT]
-> Visual Basic의 `ByRef` 매개 변수는 variant 일 수 없습니다. 또한 값 형식은 가변성을 지원하지 않습니다.
+> `ByRef`Visual Basic의 매개 변수는 variant 일 수 없습니다. 또한 값 형식은 가변성을 지원하지 않습니다.
 
 `out` 키워드를 사용하여 제네릭 형식 매개 변수를 공변(covariant)으로 선언할 수 있습니다. 공변(covariant) 형식은 다음 조건을 충족해야 합니다.
 
@@ -35,7 +35,7 @@ ms.locfileid: "74347062"
     End Interface
     ```
 
-    그러나 이 규칙에는 한 가지 예외가 있습니다. 반공변(contravariant) 제네릭 대리자가 메서드 매개 변수로 있는 경우 형식을 이 대리자에 대한 제네릭 형식 매개 변수로 사용할 수 있습니다. 다음 예제에서 `R` 형식을 통해 이를 확인할 수 있습니다. 자세한 내용은 [대리자의 가변성 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) 및 [Func 및 Action 제네릭 대리자에 가변성 사용 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)을 참조 하세요.
+    그러나 이 규칙에는 한 가지 예외가 있습니다. 반공변(contravariant) 제네릭 대리자가 메서드 매개 변수로 있는 경우 형식을 이 대리자에 대한 제네릭 형식 매개 변수로 사용할 수 있습니다. 다음 예제에서 `R` 형식을 통해 이를 확인할 수 있습니다. 자세한 내용은 [대리자의 가변성 (Visual Basic)](variance-in-delegates.md) 및 [Func 및 Action 제네릭 대리자에 가변성 사용 (Visual Basic)](using-variance-for-func-and-action-generic-delegates.md)을 참조 하세요.
 
     ```vb
     Interface ICovariant(Of Out R)
@@ -149,9 +149,9 @@ Interface IExtCovariant(Of Out T)
 End Interface
 ```
 
-`Invariant(Of T)` 인터페이스에서 제네릭 형식 매개 변수 `T`는 고정 이지만, `IExtCovariant (Of Out T)`에서 형식 매개 변수는 공변 (covariant) 이지만 두 인터페이스는 모두 동일한 인터페이스를 확장 합니다. 반공변(contravariant) 제네릭 형식 매개 변수에는 같은 규칙이 적용됩니다.
+인터페이스에서 `Invariant(Of T)` 제네릭 형식 매개 변수는 고정 이지만, `T` `IExtCovariant (Of Out T)` 형식 매개 변수에서 공변 (covariant) 이지만 두 인터페이스가 모두 동일한 인터페이스를 확장 합니다. 반공변(contravariant) 제네릭 형식 매개 변수에는 같은 규칙이 적용됩니다.
 
-제네릭 형식 매개 변수 `T`가 공변(covariant)인 인터페이스 및 확장 인터페이스에서 제네릭 형식 매개 변수 `T`가 고정인 경우 반공변(contravariant)인 인터페이스를 둘 다 확장하는 인터페이스를 만들 수 있습니다. 다음 코드 예제에 그 방법이 설명되어 있습니다.
+제네릭 형식 매개 변수 `T`가 공변(covariant)인 인터페이스 및 확장 인터페이스에서 제네릭 형식 매개 변수 `T`가 고정인 경우 반공변(contravariant)인 인터페이스를 둘 다 확장하는 인터페이스를 만들 수 있습니다. 다음 코드 예제에서 이 내용을 보여 줍니다.
 
 ```vb
 Interface ICovariant(Of Out T)
@@ -165,7 +165,7 @@ Interface IInvariant(Of T)
 End Interface
 ```
 
-그러나 한 인터페이스에서 제네릭 형식 매개 변수 `T`가 공변(covariant)으로 선언되면 확장 인터페이스에서는 이 매개 변수를 반공변(contravariant)으로 선언할 수 없고, 반대의 경우도 마찬가지입니다. 다음 코드 예제에 그 방법이 설명되어 있습니다.
+그러나 한 인터페이스에서 제네릭 형식 매개 변수 `T`가 공변(covariant)으로 선언되면 확장 인터페이스에서는 이 매개 변수를 반공변(contravariant)으로 선언할 수 없고, 반대의 경우도 마찬가지입니다. 다음 코드 예제에서 이 내용을 보여 줍니다.
 
 ```vb
 Interface ICovariant(Of Out T)
@@ -181,10 +181,10 @@ End Interface
 
 Variant 제네릭 인터페이스를 구현할 경우 가변성으로 인해 모호성이 나타나는 경우가 있습니다. 이러한 경우가 발생해서는 안 됩니다.
 
-예를 들어 서로 다른 제네릭 형식 매개 변수가 포함된 같은 Variant 제네릭 인터페이스를 한 클래스에서 명시적으로 구현하면 모호성이 발생할 수 있습니다. 컴파일러에서는 이 경우 오류를 생성하지 않지만 런타임에 선택될 인터페이스 구현이 지정되지 않습니다. 이로 인해 코드에서 미묘한 버그가 발생할 수 있습니다. 다음 코드 예를 살펴보십시오.
+예를 들어 서로 다른 제네릭 형식 매개 변수가 포함된 같은 Variant 제네릭 인터페이스를 한 클래스에서 명시적으로 구현하면 모호성이 발생할 수 있습니다. 컴파일러에서는 이 경우 오류를 생성하지 않지만 런타임에 선택될 인터페이스 구현이 지정되지 않습니다. 이로 인해 코드에서 미묘한 버그가 발생할 수 있습니다. 다음 코드 예제를 살펴봅니다.
 
 > [!NOTE]
-> `Option Strict Off`를 사용 하면 모호한 인터페이스 구현이 있는 경우 Visual Basic에서 컴파일러 경고가 생성 됩니다. `Option Strict On`를 사용 하면 Visual Basic 컴파일러 오류가 생성 됩니다.
+> `Option Strict Off`에서는 모호한 인터페이스 구현이 있는 경우 Visual Basic에서 컴파일러 경고를 생성 합니다. `Option Strict On`에서 Visual Basic는 컴파일러 오류를 생성 합니다.
 
 ```vb
 ' Simple class hierarchy.
@@ -232,5 +232,5 @@ End Sub
 
 ## <a name="see-also"></a>참고 항목
 
-- [제네릭 인터페이스의 가변성(Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
-- [Func 및 Action 제네릭 대리자에 가변성 사용(Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [제네릭 인터페이스의 가변성(Visual Basic)](variance-in-generic-interfaces.md)
+- [Func 및 Action 제네릭 대리자에 가변성 사용(Visual Basic)](using-variance-for-func-and-action-generic-delegates.md)

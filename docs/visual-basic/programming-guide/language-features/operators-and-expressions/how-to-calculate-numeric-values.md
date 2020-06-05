@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-ms.openlocfilehash: d213f6b5a4abf8c52d8872ae36e89796183ff27c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 94b02693f308dcfcfa6983f2750a26d9d419f7be
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348963"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403461"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>방법: 숫자 값 계산(Visual Basic)
 숫자 식을 사용 하 여 숫자 값을 계산할 수 있습니다. *숫자 식은* 숫자 값을 나타내는 리터럴, 상수 및 변수와 해당 값에 대해 작동 하는 연산자를 포함 하는 식입니다.  
@@ -45,9 +45,9 @@ ms.locfileid: "74348963"
   
      [!code-vb[VbVbalrOperators#82](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#82)]  
   
-     위의 예에서는 같음 연산자 (`=`)의 오른쪽에 있는 식의 값이 연산자의 좌 변에 있는 `j` 변수에 할당 되므로 `j` 276로 계산 됩니다.  
+     앞의 예제에서 같음 연산자 ()의 오른쪽에 있는 식의 값은 `=` `j` 연산자의 좌 변에 있는 변수에 할당 되므로 `j` 276로 계산 됩니다.  
   
-     자세한 내용은 [문](../../../../visual-basic/language-reference/statements/index.md)을 참조하세요.  
+     자세한 내용은 [문](../../../language-reference/statements/index.md)을 참조하십시오.  
   
 ## <a name="multiple-operators"></a>여러 연산자  
  숫자 식에 여러 개의 연산자가 포함 된 경우 계산 되는 순서는 연산자 우선 순위 규칙에 따라 결정 됩니다. 연산자 우선 순위 규칙을 재정의 하려면 위 예제와 같이 식을 괄호로 묶습니다. 괄호로 묶인 식이 먼저 계산 됩니다.  
@@ -58,15 +58,15 @@ ms.locfileid: "74348963"
   
      [!code-vb[VbVbalrOperators#83](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#83)]  
   
-     앞의 예제에서 `j`에 대 한 계산은 `(67 + i)`의 괄호가 보통 우선 순위를 재정의 하 고 `j`에 할당 된 값이 276 (4 배 69) 이므로 더하기 연산자 (`+`)를 먼저 수행 합니다. `k` 계산은 일반적인 우선 순위 (`+`이전`*`)에서 연산자를 수행 하 고 `k`에 할당 되는 값은 270 (268 plus 2)입니다.  
+     위의 예제에서에 대 한 계산은 `j` 먼저 더하기 연산자 ()를 수행 합니다 `+` . 괄호는 `(67 + i)` 일반적인 우선 순위를 재정의 하 고에 할당 된 값은 `j` 276 (4 시간 69)입니다. 에 대 한 계산은 `k` 일반적인 우선 순위 (이전)에서 연산자를 수행 하 `*` `+` 고에 할당 된 값은 `k` 270 (268 plus 2)입니다.  
   
-     자세한 내용은 [Visual Basic 연산자 우선 순위](../../../../visual-basic/language-reference/operators/operator-precedence.md)를 참조 하세요.  
+     자세한 내용은 [Visual Basic 연산자 우선 순위](../../../language-reference/operators/operator-precedence.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목
 
-- [연산자 및 식](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
-- [값 비교](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
-- [문](../../../../visual-basic/language-reference/statements/index.md)
-- [Visual Basic에서의 연산자 우선 순위](../../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [산술 연산자](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)
-- [연산자의 효율적 결합](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)
+- [연산자 및 식](index.md)
+- [값 비교](value-comparisons.md)
+- [문](../../../language-reference/statements/index.md)
+- [Visual Basic에서의 연산자 우선 순위](../../../language-reference/operators/operator-precedence.md)
+- [산술 연산자](../../../language-reference/operators/arithmetic-operators.md)
+- [연산자의 효율적 결합](efficient-combination-of-operators.md)

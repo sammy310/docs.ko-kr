@@ -2,14 +2,14 @@
 title: '방법: XmlWriter를 사용하여 XML 트리 채우기(LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 5792a0eb-94ee-440d-b601-58cca8c0ee0b
-ms.openlocfilehash: fecf57eac570a9ca57dd1fe2f7a0b54cd78c33b5
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: b3a36326175eeba8cd692a2c71f1f9b0fde24b5f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78267004"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397975"
 ---
-# <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-visual-basic"></a>방법: XML 라이터(LINQ에서 XML로)(시각적 기본)로 XML 트리채우기
+# <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-visual-basic"></a>방법: XmlWriter를 사용 하 여 XML 트리 채우기 (LINQ to XML) (Visual Basic)
 XML 트리를 채우는 한 가지 방법은 <xref:System.Xml.Linq.XContainer.CreateWriter%2A>를 사용하여 <xref:System.Xml.XmlWriter>를 만든 다음 <xref:System.Xml.XmlWriter>에 쓰는 것입니다. XML 트리는 <xref:System.Xml.XmlWriter>에 쓴 모든 노드로 채워집니다.  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에 써야 하는 <xref:System.Xml.XmlWriter> 등의 다른 클래스와 함께 <xref:System.Xml.Xsl.XslCompiledTransform>을 사용할 때 이 메서드를 일반적으로 사용합니다.  
@@ -67,4 +67,4 @@ Console.WriteLine(newTree)
 - <xref:System.Xml.Linq.XContainer.CreateWriter%2A>
 - <xref:System.Xml.XmlWriter>
 - <xref:System.Xml.Xsl.XslCompiledTransform>
-- [XML 트리 만들기(시각적 기본)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [XML 트리 만들기 (Visual Basic)](creating-xml-trees.md)

@@ -1,19 +1,19 @@
 ---
-title: '방법: 지정된 단어 집합이 들어 있는 문장 쿼리(LINQ)'
+title: '방법: 지정된 단어 세트가 포함된 문장 쿼리(LINQ)'
 ms.date: 07/20/2015
 ms.assetid: a5ae8ced-61fe-4c10-bb8a-95630e50f603
-ms.openlocfilehash: 6595932fae9737a0ac482c952b29bfde429de76f
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: ce88bf001346f90eb9b08ca1ff14afc7dcb04fa0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344155"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397962"
 ---
 # <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-visual-basic"></a>방법: 지정된 단어 집합이 들어 있는 문장 쿼리(LINQ)(Visual Basic)
 
 이 예제에서는 지정된 각 단어 집합과 일치하는 항목이 포함된 문장을 텍스트 파일에서 찾는 방법을 보여 줍니다. 이 예제에서는 검색어 배열이 하드 코드되어 있지만 런타임에 동적으로 채워질 수도 있습니다. 이 예제에서 쿼리는 "Historically", "data" 및 "integrated" 단어가 포함된 문장을 반환합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 ```vb
 Class FindSentences
@@ -65,8 +65,8 @@ End Class
 
 ## <a name="compile-the-code"></a>코드 컴파일
 
-System.xml 네임 스페이스에 대 한 `Imports` 문을 사용 하 여 Visual Basic 콘솔 응용 프로그램 프로젝트를 만듭니다.
+System.xml `Imports` 네임 스페이스에 대 한 문을 사용 하 여 Visual Basic 콘솔 응용 프로그램 프로젝트를 만듭니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [LINQ 및 문자열 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ 및 문자열(Visual Basic)](linq-and-strings.md)

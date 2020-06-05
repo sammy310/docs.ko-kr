@@ -2,12 +2,12 @@
 title: 파일 액세스에 Async 사용
 ms.date: 07/20/2015
 ms.assetid: c989305f-08e3-4687-95c3-948465cda202
-ms.openlocfilehash: 803d182f5b0f3071feb7aae4945bc3c0a1fd82c3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2ee1efa69f4b13224be65fe802ebf5f834c941aa
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349105"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400773"
 ---
 # <a name="using-async-for-file-access-visual-basic"></a>파일 액세스에 Async 사용(Visual Basic)
 비동기 기능을 사용 하 여 파일에 액세스할 수 있습니다. 비동기 기능을 사용하면 콜백을 사용하거나 여러 메서드 또는 람다 식에 코드를 분할하지 않고도 비동기 메서드를 호출할 수 있습니다. 동기 코드를 비동기로 만들려면 동기 메서드 대신 비동기 메서드를 호출하고 몇 가지 키워드를 코드에 추가하면 됩니다.  
@@ -41,7 +41,7 @@ Imports System.Threading.Tasks
 ## <a name="use-of-the-filestream-class"></a>FileStream 클래스 사용  
  이 항목의 예제에서는 운영 체제 수준에서 비동기 I/O를 일으키는 옵션이 있는 <xref:System.IO.FileStream> 클래스를 사용합니다. 이 옵션을 사용하면 많은 경우 ThreadPool 스레드를 차단하지 않아도 됩니다. 이 옵션을 사용하도록 설정하려면 생성자 호출에서 `useAsync=true` 또는 `options=FileOptions.Asynchronous` 인수를 지정합니다.  
   
- 파일 경로를 지정하여 직접 여는 경우에는 <xref:System.IO.StreamReader> 및 <xref:System.IO.StreamWriter>와 함께 이 옵션을 사용할 수 없습니다. 그러나 <xref:System.IO.Stream> 클래스에서 열린 <xref:System.IO.FileStream>을 제공하면 이 옵션을 사용할 수 있습니다. 대기 중에는 UI 스레드가 차단되지 않으므로, ThreadPool 스레드가 차단된 경우에도 UI 앱에서 비동기 호출이 더 빠릅니다.  
+ 파일 경로를 지정하여 직접 여는 경우에는 <xref:System.IO.StreamReader> 및 <xref:System.IO.StreamWriter>와 함께 이 옵션을 사용할 수 없습니다. 그러나 <xref:System.IO.FileStream> 클래스에서 열린 <xref:System.IO.Stream>을 제공하면 이 옵션을 사용할 수 있습니다. 대기 중에는 UI 스레드가 차단되지 않으므로, ThreadPool 스레드가 차단된 경우에도 UI 앱에서 비동기 호출이 더 빠릅니다.  
   
 ## <a name="writing-text"></a>텍스트 쓰기  
  다음 예제에서는 파일에 텍스트를 씁니다. 각 await 문에서 메서드가 즉시 종료됩니다. 파일 I/O가 완료되면 await 문 뒤에 오는 문에서 메서드가 다시 시작됩니다. async 한정자는 await 문을 사용하는 메서드의 정의에 있습니다.  
@@ -73,10 +73,10 @@ Dim theTask As Task = sourceStream.WriteAsync(encodedText, 0, encodedText.Length
 Await theTask  
 ```  
   
- 첫 번째 문은 작업을 반환하여 파일 처리가 시작되도록 합니다. await가 있는 두 번째 문은 메서드를 즉시 종료하고 다른 작업을 반환하도록 합니다. 나중에 파일 처리가 완료되면 await 뒤에 오는 문으로 실행이 반환됩니다. 자세한 내용은 [비동기 프로그램의 제어 흐름 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)을 참조 하세요.  
+ 첫 번째 문은 작업을 반환하여 파일 처리가 시작되도록 합니다. await가 있는 두 번째 문은 메서드를 즉시 종료하고 다른 작업을 반환하도록 합니다. 나중에 파일 처리가 완료되면 await 뒤에 오는 문으로 실행이 반환됩니다. 자세한 내용은 [비동기 프로그램의 제어 흐름 (Visual Basic)](control-flow-in-async-programs.md)을 참조 하세요.  
   
 ## <a name="reading-text"></a>텍스트 읽기  
- 다음 예제에서는 파일에서 텍스트를 읽습니다. 텍스트가 버퍼링되고, 이 경우 <xref:System.Text.StringBuilder>에 배치됩니다. 이전 예제와 달리 await의 계산에서 값이 생성됩니다. <xref:System.IO.Stream.ReadAsync%2A> 메서드는 <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>를 반환하므로 작업이 완료된 후 await 평가에서 `Int32` 값(`numRead`)이 생성됩니다. 자세한 내용은 [비동기 반환 형식 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)을 참조 하세요.  
+ 다음 예제에서는 파일에서 텍스트를 읽습니다. 텍스트가 버퍼링되고, 이 경우 <xref:System.Text.StringBuilder>에 배치됩니다. 이전 예제와 달리 await의 계산에서 값이 생성됩니다. <xref:System.IO.Stream.ReadAsync%2A> 메서드는 <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>를 반환하므로 작업이 완료된 후 await 평가에서 `Int32` 값(`numRead`)이 생성됩니다. 자세한 내용은 [비동기 반환 형식 (Visual Basic)](async-return-types.md)을 참조 하세요.  
   
 ```vb  
 Public Async Sub ProcessRead()  
@@ -120,7 +120,7 @@ End Function
 ## <a name="parallel-asynchronous-io"></a>병렬 비동기 I/O  
  다음 예제에서는 10개의 텍스트 파일을 작성하여 병렬 처리를 보여 줍니다. 각 파일에서 <xref:System.IO.Stream.WriteAsync%2A> 메서드는 작업 목록에 추가되는 작업을 반환합니다. `Await Task.WhenAll(tasks)` 문은 메서드를 종료하고, 파일 처리가 모든 작업에 대해 완료되면 메서드 내에서 다시 시작됩니다.  
   
- 이 예제는 작업이 완료된 후 <xref:System.IO.FileStream> 블록에서 모든 `Finally` 인스턴스를 닫습니다. 대신 `FileStream` 문에 각 `Imports`이 만들어진 경우 작업이 완료되기 전에 `FileStream`이 삭제될 수 있습니다.  
+ 이 예제는 작업이 완료된 후 `Finally` 블록에서 모든 <xref:System.IO.FileStream> 인스턴스를 닫습니다. 대신 `Imports` 문에 각 `FileStream`이 만들어진 경우 작업이 완료되기 전에 `FileStream`이 삭제될 수 있습니다.  
   
  성능 향상은 거의 대부분 비동기 처리가 아닌 병렬 처리에서 발생합니다. 비동기의 장점은 다중 스레드를 묶어 두지 않고 사용자 인터페이스 스레드를 묶어 두지 않는다는 것입니다.  
   
@@ -158,10 +158,10 @@ Public Async Sub ProcessWriteMult()
 End Sub  
 ```  
   
- <xref:System.IO.Stream.WriteAsync%2A> 및 <xref:System.IO.Stream.ReadAsync%2A> 메서드를 사용하는 경우 중간에 작업을 취소하는 데 사용할 수 있는 <xref:System.Threading.CancellationToken>을 지정할 수 있습니다. 자세한 내용은 [비동기 응용 프로그램 미세 조정 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) 및 [관리 되는 스레드의 취소](../../../../standard/threading/cancellation-in-managed-threads.md)를 참조 하세요.  
+ <xref:System.IO.Stream.WriteAsync%2A> 및 <xref:System.IO.Stream.ReadAsync%2A> 메서드를 사용하는 경우 중간에 작업을 취소하는 데 사용할 수 있는 <xref:System.Threading.CancellationToken>을 지정할 수 있습니다. 자세한 내용은 [비동기 응용 프로그램 미세 조정 (Visual Basic)](fine-tuning-your-async-application.md) 및 [관리 되는 스레드의 취소](../../../../standard/threading/cancellation-in-managed-threads.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [비동기 반환 형식(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
-- [비동기 프로그램의 제어 흐름(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)
+- [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](index.md)
+- [비동기 반환 형식(Visual Basic)](async-return-types.md)
+- [비동기 프로그램의 제어 흐름(Visual Basic)](control-flow-in-async-programs.md)

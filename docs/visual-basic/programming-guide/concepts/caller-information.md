@@ -2,19 +2,19 @@
 title: 호출자 정보
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: 7c87b540a68f4d0219918fed66de6c1b635104a9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 93fb1e327d65ac19f293a2f77b7d5712fc5e8d2f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349470"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400670"
 ---
-# <a name="caller-information-visual-basic"></a>호출자 정보 (Visual Basic)
+# <a name="caller-information-visual-basic"></a>호출자 정보(Visual Basic)
 호출자 정보 특성을 사용하여 메서드 호출자에 대한 정보를 얻을 수 있습니다. 소스 코드 파일 경로, 소스 코드 줄 번호 및 호출자의 멤버 이름을 얻을 수 있습니다. 이 정보는 추적, 디버깅 및 진단 도구를 만드는 데 도움이 됩니다.  
   
  이 정보를 얻으려면 각각 기본값이 있는 선택적 매개 변수에 적용되는 특성을 사용합니다. 다음 표에서는 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 네임스페이스에 정의된 호출자 정보 특성을 보여줍니다.  
   
-|특성|설명|형식|  
+|특성|Description|형식|  
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|호출자를 포함한 소스 파일의 전체 경로입니다. 컴파일 시간의 파일 경로입니다.|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|메서드가 호출되는 소스 파일의 줄 번호입니다.|`Integer`|  
@@ -46,7 +46,7 @@ End Sub
 '   source line number: 15  
 ```  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  각각의 선택적 매개 변수에 대한 명시적 기본값을 지정해야 합니다. 선택적으로 지정되지 않은 매개 변수에 호출자 정보 특성을 적용할 수 없습니다.  
   
  호출자 정보 특성은 매개 변수를 선택적 매개 변수로 만들지 못합니다. 대신, 이런 특성은 인수가 생략될 때 전달되는 기본값에 영향을 미칩니다.  
@@ -55,7 +55,7 @@ End Sub
   
  선택적 인수를 명시적으로 제공하여 호출자 정보를 제어하거나 호출자 정보를 숨길 수 있습니다.  
   
-### <a name="MEMBERNAMES"></a> 멤버 이름  
+### <a name="member-names"></a><a name="MEMBERNAMES"></a>멤버 이름  
  `CallerMemberName` 특성을 사용하여 멤버 이름을 호출된 메서드에 대한 `String` 인수로 지정하는 것을 피할 수 있습니다. 이 기술을 사용하여 **이름 바꾸기 리팩터링**이 `String` 값을 변경하지 못하는 문제를 피합니다. 이 이점은 다음 작업에 특히 유용합니다.  
   
 - 추적 및 진단 루틴 사용.  
@@ -74,9 +74,9 @@ End Sub
 |특성 생성자|특성이 적용되는 멤버의 이름입니다. 특성이 멤버 내에 있는 어떤 요소인 경우(예: 매개 변수, 반환 값 또는 제네릭 형식 매개 변수) 이 결과는 그 요소와 관련된 멤버의 이름입니다.|  
 |포함하는 멤버가 없음(예: 어셈블리 수준 또는 형식에 적용되는 특성)|선택적 매개 변수의 기본값입니다.|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [특성(Visual Basic)](../../../visual-basic/language-reference/attributes.md)
-- [일반 특성(Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)
-- [선택적 매개 변수](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
-- [프로그래밍 개념(Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)
+- [특성(Visual Basic)](../../language-reference/attributes.md)
+- [일반 특성(Visual Basic)](attributes/common-attributes.md)
+- [선택적 매개 변수](../language-features/procedures/optional-parameters.md)
+- [프로그래밍 개념 (Visual Basic)](index.md)

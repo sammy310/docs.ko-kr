@@ -5,33 +5,33 @@ helpviewer_keywords:
 - operators [Visual Basic], logical
 - logical operators [Visual Basic], Visual Basic
 ms.assetid: 55de4889-7679-4859-8063-bee15abca53f
-ms.openlocfilehash: 7f957a6e4f2dfea3f744365d2d065442d3b85183
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 281004809c7f5000f1c68ecb0db759aa30c78e39
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350922"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401561"
 ---
 # <a name="logicalbitwise-operators-visual-basic"></a>논리/비트 연산자(Visual Basic)
 Visual Basic에 정의 된 논리/비트 연산자는 다음과 같습니다.  
   
- [And 연산자](../../../visual-basic/language-reference/operators/and-operator.md)  
+ [And 연산자](and-operator.md)  
   
- [Not 연산자](../../../visual-basic/language-reference/operators/not-operator.md)  
+ [Not 연산자](not-operator.md)  
   
- [Or 연산자](../../../visual-basic/language-reference/operators/or-operator.md)  
+ [Or 연산자](or-operator.md)  
   
- [Xor 연산자](../../../visual-basic/language-reference/operators/xor-operator.md)  
+ [Xor 연산자](xor-operator.md)  
   
- [AndAlso 연산자](../../../visual-basic/language-reference/operators/andalso-operator.md)  
+ [AndAlso 연산자](andalso-operator.md)  
   
- [OrElse 연산자](../../../visual-basic/language-reference/operators/orelse-operator.md)  
+ [OrElse 연산자](orelse-operator.md)  
   
- [IsFalse 연산자](../../../visual-basic/language-reference/operators/isfalse-operator.md)  
+ [IsFalse 연산자](isfalse-operator.md)  
   
- [IsTrue 연산자](../../../visual-basic/language-reference/operators/istrue-operator.md)  
+ [IsTrue 연산자](istrue-operator.md)  
   
 ## <a name="see-also"></a>참고 항목
 
-- [Visual Basic에서의 연산자 우선 순위](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Visual Basic 논리 및 비트 연산자](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Visual Basic에서의 연산자 우선 순위](operator-precedence.md)
+- [Visual Basic의 논리 및 비트 연산자](../../programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

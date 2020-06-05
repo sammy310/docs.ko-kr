@@ -2,14 +2,14 @@
 title: 데이터 그룹화
 ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
-ms.openlocfilehash: 9a4011b77f91ff241d23f7aeca95925a1e170483
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 8996eee748489c596bc5adc32f53b6b39dbfc6ac
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266822"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398385"
 ---
-# <a name="grouping-data-visual-basic"></a>데이터 그룹화(시각적 기본)
+# <a name="grouping-data-visual-basic"></a>데이터 그룹화 (Visual Basic)
 그룹화는 데이터를 그룹에 넣어 각 그룹의 요소가 공통 특성을 공유하게 하는 작업을 가리킵니다.  
   
  다음 그림은 문자 시퀀스를 그룹화한 결과를 보여 줍니다. 각 그룹에 대한 키는 문자입니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "78266822"
   
 ## <a name="methods"></a>메서드  
   
-|메서드 이름|설명|시각적 기본 쿼리 표현식 구문|추가 정보|  
+|메서드 이름|설명|Visual Basic 쿼리 식 구문|추가 정보|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |GroupBy|공통 특성을 공유하는 요소를 그룹화합니다. 각 그룹은 <xref:System.Linq.IGrouping%602> 개체로 표시됩니다.|`Group … By … Into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
 |ToLookup|키 선택기 함수에 따라 <xref:System.Linq.Lookup%602>(일대다 사전)에 요소를 삽입합니다.|해당 사항 없음|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
@@ -66,7 +66,7 @@ MsgBox(sb.ToString())
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Linq>
-- [표준 쿼리 연산자 개요(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [그룹별 절](../../../../visual-basic/language-reference/queries/group-by-clause.md)
-- [방법: 확장자별 파일 그룹화(LINQ) (시각적 기본)](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
-- [방법: 그룹(LINQ)(시각적 기본)을 사용하여 파일을 여러 파일로 분할](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [표준 쿼리 연산자 개요(Visual Basic)](standard-query-operators-overview.md)
+- [Group By 절](../../../language-reference/queries/group-by-clause.md)
+- [방법: 확장명에 따라 파일 그룹화 (LINQ) (Visual Basic)](how-to-group-files-by-extension-linq.md)
+- [방법: 그룹을 사용 하 여 파일을 여러 파일로 분할 (LINQ) (Visual Basic)](how-to-split-a-file-into-many-files-by-using-groups-linq.md)

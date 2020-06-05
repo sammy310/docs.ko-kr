@@ -5,14 +5,14 @@ helpviewer_keywords:
 - returns XML tag
 - <returns> XML tag
 ms.assetid: a03a6469-d907-425d-882f-083187950e7e
-ms.openlocfilehash: 62f70ae7f40fa3cde9492563b7bd14dfa5940a5f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: edbc374332bdcd67b385ac3d061045664e942460
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352237"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84399997"
 ---
-# <a name="returns-visual-basic"></a>\<반환 > (Visual Basic)
+# <a name="returns-visual-basic"></a>\<returns>(Visual Basic)
 속성 또는 함수의 반환 값을 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -26,15 +26,15 @@ ms.locfileid: "74352237"
  반환 값에 대한 설명입니다.  
   
 ## <a name="remarks"></a>설명  
- 메서드 선언의 주석에서 `<returns>` 태그를 사용 하 여 반환 값을 설명 합니다.  
+ `<returns>`메서드의 태그를 사용 하 여 반환 값을 설명 합니다.  
   
- [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
+ [-doc](../../reference/command-line-compiler/doc.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   
 ## <a name="example"></a>예제  
- 이 예에서는 `<returns>` 태그를 사용 하 여 `DoesRecordExist` 함수가 반환 하는 항목을 설명 합니다.  
+ 이 예제에서는 태그를 사용 하 여 `<returns>` 함수가 반환 하는 항목을 설명 `DoesRecordExist` 합니다.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [XML 주석 태그](../../../visual-basic/language-reference/xmldoc/index.md)
+- [XML 주석 태그](index.md)

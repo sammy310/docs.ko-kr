@@ -1,13 +1,13 @@
 ---
-title: '방법: DataContractSerializer를 사용하여 Serialize'
+title: '방법: DataContractSerializer를 사용하여 직렬화'
 ms.date: 07/20/2015
 ms.assetid: ecaea518-8a0f-4249-b4e5-9b3fb0cdd8ad
-ms.openlocfilehash: 6c4142673cc374fbc6202e5806d1e9016cc81893
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ef3a1d7f4b4ce5705411053303d23b3ecfad81e8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352369"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397780"
 ---
 # <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a>방법: DataContractSerializer를 사용 하 여 Serialize (Visual Basic)
 이 항목에서는 <xref:System.Runtime.Serialization.DataContractSerializer>를 사용하여 직렬화하고 역직렬화하는 예제를 보여 줍니다.  
@@ -85,4 +85,4 @@ Testing for type: XElementNullContainer
   
 ## <a name="see-also"></a>참고 항목
 
-- [XElement 개체를 포함 하는 개체 그래프 serialize (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+- [XElement 개체를 포함 하는 개체 그래프 serialize (Visual Basic)](serializing-object-graphs-that-contain-xelement-objects.md)

@@ -10,17 +10,17 @@ helpviewer_keywords:
 - time, Visual Basic keywords and run-time library members
 - time data types [Visual Basic]
 ms.assetid: 914d0563-b53c-492c-ac62-d833ce805f2f
-ms.openlocfilehash: d377c5fe4c0726b468014639e39df1f2f0cc1c64
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 071da9305c3e58fbc35d82d0cd5a275c35467901
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349869"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402722"
 ---
 # <a name="dates-and-times-summary-visual-basic"></a>날짜 및 시간 요약(Visual Basic)
 Visual Basic 언어 키워드 및 런타임 라이브러리 멤버는 목적과 사용을 기준으로 구성 됩니다.  
   
-|작업|Language 요소|  
+|작업|언어 요소|  
 |------------|----------------------|  
 |현재 날짜 또는 시간을 가져옵니다.|<xref:Microsoft.VisualBasic.DateAndTime.Now%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Today%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>|  
 |날짜 계산을 수행 합니다.|<xref:Microsoft.VisualBasic.DateAndTime.DateAdd%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DateDiff%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>|  
@@ -31,5 +31,5 @@ Visual Basic 언어 키워드 및 런타임 라이브러리 멤버는 목적과 
   
 ## <a name="see-also"></a>참고 항목
 
-- [키워드](../../../visual-basic/language-reference/keywords/index.md)
-- [Visual Basic 런타임 라이브러리 멤버](../../../visual-basic/language-reference/runtime-library-members.md)
+- [C++ 키워드](index.md)
+- [Visual Basic 런타임 라이브러리 멤버](../runtime-library-members.md)

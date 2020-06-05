@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 740d8010908d658deb40591d4a9c3182c46ffc84
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 273c688d7e9d3fb86d4baece75193ce6d112b62f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201716"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404916"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Visual Basic의 LINQ 소개
 LINQ (언어 통합 쿼리)는 쿼리 기능을 Visual Basic에 추가 하 고 모든 종류의 데이터를 사용할 때 간단 하 고 강력한 기능을 제공 합니다. LINQ에서는 검색 하는 각 데이터 형식에 대해 쿼리를 처리 하거나 다른 쿼리 구문으로 작업 하는 대신 Visual Basic 언어의 일부로 쿼리를 도입 합니다. LINQ는 데이터의 형식에 관계없이 통합된 구문을 사용합니다.  
@@ -42,7 +42,7 @@ LINQ (언어 통합 쿼리)는 쿼리 기능을 Visual Basic에 추가 하 고 �
 |---|---|  
 |LINQ to Objects|LINQ to Objects 공급자를 사용하면 메모리 내 컬렉션 및 배열을 쿼리할 수 있습니다. 개체가 <xref:System.Collections.IEnumerable> 또는 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스를 지원하는 경우 LINQ to Objects 공급자를 사용하면 개체를 쿼리할 수 있습니다.<br /><br /> <xref:System.Linq>모든 Visual Basic 프로젝트에 대해 기본적으로 가져오는 네임 스페이스를 가져와서 LINQ to Objects 공급자를 사용 하도록 설정할 수 있습니다.<br /><br /> LINQ to Objects 공급자에 대 한 자세한 내용은 [LINQ to Objects](../../concepts/linq/linq-to-objects.md)을 참조 하십시오.|  
 |LINQ to SQL|LINQ to SQL 공급자를 사용하면 SQL Server 데이터베이스의 데이터를 쿼리하고 수정할 수 있습니다. 이렇게 하면 애플리케이션의 개체 모델을 데이터베이스의 테이블 및 개체에 쉽게 매핑할 수 있습니다.<br /><br /> Visual Basic를 사용 하면 개체 관계형 디자이너 (O/R 디자이너)를 포함 하 여 LINQ to SQL을 보다 쉽게 사용할 수 있습니다. 이 디자이너는 데이터베이스의 개체에 매핑되는 애플리케이션의 개체 모델을 만드는 데 사용됩니다. 또한 O/R 디자이너는 <xref:System.Data.Linq.DataContext> 데이터베이스와의 통신을 관리 하 고 낙관적 동시성 검사에 대 한 상태를 저장 하는 개체에 저장 프로시저 및 함수를 매핑하는 기능을 제공 합니다.<br /><br /> LINQ to SQL 공급자에 대 한 자세한 내용은 [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)을 참조 하십시오. 개체 관계형 디자이너에 대 한 자세한 내용은 [Visual Studio의 LINQ to SQL 도구](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)를 참조 하세요.|  
-|LINQ to XML|LINQ to XML 공급자를 사용하면 XML을 쿼리하고 수정할 수 있습니다. 메모리 내 XML을 수정하거나 XML을 파일에서 로드하고 파일에 저장할 수 있습니다.<br /><br /> 또한 LINQ to XML 공급자를 사용 하면 xml 리터럴 및 xml 축 속성을 사용 하 여 Visual Basic 코드에서 직접 XML을 작성할 수 있습니다. 자세한 내용은 [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)을 참조 하세요.|  
+|LINQ to XML|LINQ to XML 공급자를 사용하면 XML을 쿼리하고 수정할 수 있습니다. 메모리 내 XML을 수정하거나 XML을 파일에서 로드하고 파일에 저장할 수 있습니다.<br /><br /> 또한 LINQ to XML 공급자를 사용 하면 xml 리터럴 및 xml 축 속성을 사용 하 여 Visual Basic 코드에서 직접 XML을 작성할 수 있습니다. 자세한 내용은 [XML](../xml/index.md)을 참조 하세요.|  
 |LINQ to DataSet|LINQ to DataSet 공급자를 사용 하 여 ADO.NET 데이터 집합의 데이터를 쿼리하고 업데이트할 수 있습니다. 데이터 세트의 데이터를 쿼리, 집계 및 업데이트하는 기능을 단순화하고 확장하기 위해 데이터 세트을 사용하는 애플리케이션에 LINQ의 기능을 추가할 수 있습니다.<br /><br /> 자세한 내용은 [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)을 참조하세요.|  
   
 ## <a name="structure-of-a-linq-query"></a>LINQ 쿼리 구조  
@@ -68,7 +68,7 @@ LINQ (언어 통합 쿼리)는 쿼리 기능을 Visual Basic에 추가 하 고 �
   
  [!code-vb[VbVbalrIntroToLINQ#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#6)]  
   
- 강력한 쿼리 식을 만드는 데 사용할 수 있는 몇 가지 추가 LINQ 쿼리 연산자가 있습니다. 이 항목의 다음 섹션에서는 쿼리 식에 포함할 수 있는 다양한 쿼리 절에 대해 설명합니다. Visual Basic 쿼리 절에 대 한 자세한 내용은 [쿼리](../../../../visual-basic/language-reference/queries/index.md)를 참조 하세요.  
+ 강력한 쿼리 식을 만드는 데 사용할 수 있는 몇 가지 추가 LINQ 쿼리 연산자가 있습니다. 이 항목의 다음 섹션에서는 쿼리 식에 포함할 수 있는 다양한 쿼리 절에 대해 설명합니다. Visual Basic 쿼리 절에 대 한 자세한 내용은 [쿼리](../../../language-reference/queries/index.md)를 참조 하세요.  
   
 ## <a name="visual-basic-linq-query-operators"></a>Visual Basic LINQ 쿼리 연산자  
 
@@ -76,13 +76,13 @@ LINQ (언어 통합 쿼리)는 쿼리 기능을 Visual Basic에 추가 하 고 �
 
 ### <a name="from-clause"></a>원본 절
 
-[ `From` ](../../../../visual-basic/language-reference/queries/from-clause.md) `Aggregate` 쿼리를 시작 하려면 절 또는 절이 필요 합니다. `From` 절은 쿼리의 소스 컬렉션과 반복 변수를 지정합니다. 예:
+[ `From` ](../../../language-reference/queries/from-clause.md) `Aggregate` 쿼리를 시작 하려면 절 또는 절이 필요 합니다. `From` 절은 쿼리의 소스 컬렉션과 반복 변수를 지정합니다. 예를 들면 다음과 같습니다.
 
  [!code-vb[VbVbalrIntroToLINQ#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#7)]
 
 ### <a name="select-clause"></a>Select 절
 
-선택 사항입니다. [ `Select` 절](../../../../visual-basic/language-reference/queries/select-clause.md) 은 쿼리의 반복 변수 집합을 선언 합니다. 예:
+선택 사항입니다. [ `Select` 절](../../../language-reference/queries/select-clause.md) 은 쿼리의 반복 변수 집합을 선언 합니다. 예를 들면 다음과 같습니다.
 
  [!code-vb[VbVbalrIntroToLINQ#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#8)]
 
@@ -90,77 +90,77 @@ LINQ (언어 통합 쿼리)는 쿼리 기능을 Visual Basic에 추가 하 고 �
 
 ### <a name="where-clause"></a>Where 절
 
-선택 사항입니다. [ `Where` 절](../../../../visual-basic/language-reference/queries/where-clause.md) 은 쿼리에 대 한 필터링 조건을 지정 합니다. 예:
+선택 사항입니다. [ `Where` 절](../../../language-reference/queries/where-clause.md) 은 쿼리에 대 한 필터링 조건을 지정 합니다. 예를 들면 다음과 같습니다.
 
  [!code-vb[VbVbalrIntroToLINQ#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#9)]
 
 ### <a name="order-by-clause"></a>Order By 절
 
-선택 사항입니다. [ `Order By` 절](../../../../visual-basic/language-reference/queries/order-by-clause.md) 은 쿼리에서 열의 정렬 순서를 지정 합니다. 예:
+선택 사항입니다. [ `Order By` 절](../../../language-reference/queries/order-by-clause.md) 은 쿼리에서 열의 정렬 순서를 지정 합니다. 예를 들면 다음과 같습니다.
 
  [!code-vb[VbVbalrIntroToLINQ#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#10)]
 
 ### <a name="join-clause"></a>Join 절
 
-선택 사항입니다. [ `Join` 절](../../../../visual-basic/language-reference/queries/join-clause.md) 은 두 개의 컬렉션을 단일 컬렉션으로 결합 합니다. 예:
+선택 사항입니다. [ `Join` 절](../../../language-reference/queries/join-clause.md) 은 두 개의 컬렉션을 단일 컬렉션으로 결합 합니다. 예를 들면 다음과 같습니다.
 
  [!code-vb[VbVbalrIntroToLINQ#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#11)]
 
 ### <a name="group-by-clause"></a>Group By 절
 
-선택 사항입니다. [ `Group By` 절](../../../../visual-basic/language-reference/queries/group-by-clause.md) 은 쿼리 결과의 요소를 그룹화 합니다. 각 그룹에 집계 함수를 적용 하는 데 사용할 수 있습니다. 예:
+선택 사항입니다. [ `Group By` 절](../../../language-reference/queries/group-by-clause.md) 은 쿼리 결과의 요소를 그룹화 합니다. 각 그룹에 집계 함수를 적용 하는 데 사용할 수 있습니다. 예를 들면 다음과 같습니다.
 
  [!code-vb[VbVbalrIntroToLINQ#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#12)]
 
 ### <a name="group-join-clause"></a>Group Join 절
 
-선택 사항입니다. [ `Group Join` 절](../../../../visual-basic/language-reference/queries/group-join-clause.md) 은 두 개의 컬렉션을 단일 계층 구조 컬렉션으로 결합 합니다. 예:
+선택 사항입니다. [ `Group Join` 절](../../../language-reference/queries/group-join-clause.md) 은 두 개의 컬렉션을 단일 계층 구조 컬렉션으로 결합 합니다. 예를 들면 다음과 같습니다.
 
  [!code-vb[VbVbalrIntroToLINQ#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#13)]
 
 ### <a name="aggregate-clause"></a>Aggregate 절
 
-[ `Aggregate` ](../../../../visual-basic/language-reference/queries/aggregate-clause.md) `From` 쿼리를 시작 하려면 절 또는 절이 필요 합니다. `Aggregate` 절은 하나 이상의 집계 함수를 컬렉션에 적용합니다. 예를 들어 `Aggregate` 다음 예제와 같이 절을 사용 하 여 쿼리에서 반환 하는 모든 요소의 합계를 계산할 수 있습니다.
+[ `Aggregate` ](../../../language-reference/queries/aggregate-clause.md) `From` 쿼리를 시작 하려면 절 또는 절이 필요 합니다. `Aggregate` 절은 하나 이상의 집계 함수를 컬렉션에 적용합니다. 예를 들어 `Aggregate` 다음 예제와 같이 절을 사용 하 여 쿼리에서 반환 하는 모든 요소의 합계를 계산할 수 있습니다.
 
  [!code-vb[VbVbalrIntroToLINQ#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#14)]
 
-또한 `Aggregate` 절을 사용하여 쿼리를 수정할 수 있습니다. 예를 들어 `Aggregate` 절을 사용하여 관련된 쿼리 컬렉션에 대한 계산을 수행할 수 있습니다. 예:
+또한 `Aggregate` 절을 사용하여 쿼리를 수정할 수 있습니다. 예를 들어 `Aggregate` 절을 사용하여 관련된 쿼리 컬렉션에 대한 계산을 수행할 수 있습니다. 예를 들면 다음과 같습니다.
 
  [!code-vb[VbVbalrIntroToLINQ#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#15)]
 
 ### <a name="let-clause"></a>Let 절
 
-선택 사항입니다. [ `Let` 절](../../../../visual-basic/language-reference/queries/let-clause.md) 은 값을 계산 하 여 쿼리의 새 변수에 할당 합니다. 예:
+선택 사항입니다. [ `Let` 절](../../../language-reference/queries/let-clause.md) 은 값을 계산 하 여 쿼리의 새 변수에 할당 합니다. 예를 들면 다음과 같습니다.
 
  [!code-vb[VbVbalrIntroToLINQ#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#16)]
 
 ### <a name="distinct-clause"></a>Distinct 절
 
-선택 사항입니다. `Distinct`절은 현재 반복 변수의 값을 제한 하 여 쿼리 결과에서 중복 값을 제거 합니다. 예:
+선택 사항입니다. `Distinct`절은 현재 반복 변수의 값을 제한 하 여 쿼리 결과에서 중복 값을 제거 합니다. 예를 들면 다음과 같습니다.
 
  [!code-vb[VbVbalrIntroToLINQ#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#17)]
 
 ### <a name="skip-clause"></a>Skip 절
 
-선택 사항입니다. [ `Skip` 절](../../../../visual-basic/language-reference/queries/skip-clause.md) 은 컬렉션에서 지정 된 수의 요소를 건너뛴 다음 나머지 요소를 반환 합니다. 예:
+선택 사항입니다. [ `Skip` 절](../../../language-reference/queries/skip-clause.md) 은 컬렉션에서 지정 된 수의 요소를 건너뛴 다음 나머지 요소를 반환 합니다. 예를 들면 다음과 같습니다.
 
  [!code-vb[VbVbalrIntroToLINQ#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#18)]
 
 ### <a name="skip-while-clause"></a>Skip While 절
 
-선택 사항입니다. [ `Skip While` 절](../../../../visual-basic/language-reference/queries/skip-while-clause.md) 은 지정 된 조건이 이면 컬렉션의 요소를 무시 `true` 하 고 나머지 요소를 반환 합니다. 예:
+선택 사항입니다. [ `Skip While` 절](../../../language-reference/queries/skip-while-clause.md) 은 지정 된 조건이 이면 컬렉션의 요소를 무시 `true` 하 고 나머지 요소를 반환 합니다. 예를 들면 다음과 같습니다.
 
  [!code-vb[VbVbalrIntroToLINQ#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#19)]
 
 ### <a name="take-clause"></a>Take 절
 
-선택 사항입니다. [ `Take` 절](../../../../visual-basic/language-reference/queries/take-clause.md) 은 컬렉션의 시작 부분부터 지정 된 수의 연속 요소를 반환 합니다. 예:
+선택 사항입니다. [ `Take` 절](../../../language-reference/queries/take-clause.md) 은 컬렉션의 시작 부분부터 지정 된 수의 연속 요소를 반환 합니다. 예를 들면 다음과 같습니다.
 
  [!code-vb[VbVbalrIntroToLINQ#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#20)]
 
 ### <a name="take-while-clause"></a>Take While 절
 
-선택 사항입니다. 지정 된 조건이 이면 [ `Take While` 절](../../../../visual-basic/language-reference/queries/take-while-clause.md) 에는 컬렉션의 요소가 포함 되 `true` 고 나머지 요소는 무시 됩니다. 예:
+선택 사항입니다. 지정 된 조건이 이면 [ `Take While` 절](../../../language-reference/queries/take-while-clause.md) 에는 컬렉션의 요소가 포함 되 `true` 고 나머지 요소는 무시 됩니다. 예를 들면 다음과 같습니다.
 
  [!code-vb[VbVbalrIntroToLINQ#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#21)]
   
@@ -211,11 +211,11 @@ LINQ에서 제공하는 열거 가능 형식과 쿼리 가능 형식의 멤버�
   
  자세한 내용은 [XML](../xml/index.md)을 참조 하세요.  
   
-## <a name="related-resources"></a>관련 리소스  
+## <a name="related-resources"></a>관련 참고 자료  
   
-|항목|설명|  
+|항목|Description|  
 |---|---|  
-|[XML](../../language-features/xml/index.md)|쿼리할 수 있고 Visual Basic 코드에 XML을 첫 번째 클래스 데이터 개체로 포함할 수 있는 Visual Basic의 XML 기능에 대해 설명 합니다.|  
+|[XML](../xml/index.md)|쿼리할 수 있고 Visual Basic 코드에 XML을 첫 번째 클래스 데이터 개체로 포함할 수 있는 Visual Basic의 XML 기능에 대해 설명 합니다.|  
 |[쿼리](../../../language-reference/queries/index.md)|Visual Basic에서 사용할 수 있는 쿼리 절에 대 한 참조 정보를 제공 합니다.|  
 |[LINQ(Language-Integrated Query)](../../concepts/linq/index.md)|LINQ에 대한 일반 정보, 프로그래밍 지침 및 샘플을 포함하고 있습니다.|  
 |[LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)|LINQ to SQL에 대한 일반 정보, 프로그래밍 지침 및 샘플을 포함하고 있습니다.|  
@@ -248,7 +248,7 @@ LINQ에서 제공하는 열거 가능 형식과 쿼리 가능 형식의 멤버�
 ## <a name="see-also"></a>참고 항목
 
 - [LINQ(Language-Integrated Query)](../../concepts/linq/index.md)
-- [Visual Basic의 LINQ to XML 개요](../../language-features/xml/overview-of-linq-to-xml.md)
+- [Visual Basic의 LINQ to XML 개요](../xml/overview-of-linq-to-xml.md)
 - [LINQ to DataSet 개요](../../../../framework/data/adonet/linq-to-dataset-overview.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 - [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)(Visual Studio의 LINQ to SQL 도구)

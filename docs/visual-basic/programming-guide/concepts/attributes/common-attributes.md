@@ -2,14 +2,14 @@
 title: 공통 특성
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 2889411779a275baa8c91862d4cac2f820d660d0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 57ef8f103d64a51d896f46d2889d78ec99ff3223
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353523"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400721"
 ---
-# <a name="common-attributes-visual-basic"></a>공통 특성 (Visual Basic)
+# <a name="common-attributes-visual-basic"></a>일반 특성(Visual Basic)
 
 이 항목에서는 Visual Basic 프로그램에서 가장 일반적으로 사용 되는 특성에 대해 설명 합니다.
 
@@ -23,7 +23,7 @@ ms.locfileid: "74353523"
 
 - [Visual Basic 특성](#VB)
 
-## <a name="Global"></a> 전역 특성
+## <a name="global-attributes"></a><a name="Global"></a>전역 특성
 
 대부분의 특성은 클래스나 메서드와 같은 특정 언어 요소에 적용되지만 일부 특성은 전체 어셈블리나 모듈에 적용되는 전역 특성입니다. 예를 들어 다음과 같이 <xref:System.Reflection.AssemblyVersionAttribute> 특성을 사용하여 버전 정보를 어셈블리에 포함할 수 있습니다.
 
@@ -33,7 +33,7 @@ ms.locfileid: "74353523"
 
 전역 특성은 소스 코드에서 최상위 `Imports` 문과 모든 형식, 모듈 또는 네임 스페이스 선언 앞에 표시 됩니다. 전역 특성은 여러 소스 파일에 나타날 수 있지만 파일은 하나의 컴파일 패스에서 컴파일되어야 합니다. Visual Basic 프로젝트의 경우 일반적으로 전역 특성은 AssemblyInfo 파일에 저장 됩니다 .이 파일은 Visual Studio에서 프로젝트를 만들 때 자동으로 만들어집니다.
 
-어셈블리 특성은 어셈블리에 대한 정보를 제공하는 값입니다. 이러한 화면과 페이지는 다음과 같은 범주로 구분됩니다.
+어셈블리 특성은 어셈블리에 대한 정보를 제공하는 값입니다. 어셈블리 특성은 다음 범주로 구분됩니다.
 
 - 어셈블리 ID 특성
 
@@ -45,18 +45,18 @@ ms.locfileid: "74353523"
 
 name, version 및 culture의 세 가지 특성(해당하는 경우 강력한 이름 포함)이 어셈블리의 ID를 결정합니다. 이러한 특성은 어셈블리의 전체 이름을 구성하며 코드에서 어셈블리를 참조할 때 필요합니다. 특성을 사용하여 어셈블리의 버전 및 문화권을 설정할 수 있습니다. 그러나 이름 값은 어셈블리가 만들어질 때 어셈블리 매니페스트가 포함된 파일에 따라 컴파일러, [어셈블리 정보 대화 상자](/visualstudio/ide/reference/assembly-information-dialog-box)의 Visual Studio IDE 또는 어셈블리 링커(Al.exe)에서 설정됩니다. <xref:System.Reflection.AssemblyFlagsAttribute> 특성은 어셈블리의 여러 복사본이 공존할 수 있는지 여부를 지정합니다.
 
-다음 표에서는 ID 특성을 보여 줍니다.
+다음 표에서는 ID 특성들을 보여 줍니다.
 
 |특성|용도|
 |---------------|-------------|
-|<xref:System.Reflection.AssemblyName>|어셈블리의 ID를 완전히 설명합니다.|
+|<xref:System.Reflection.AssemblyName>|어셈블리의 ID를 모두 설명합니다.|
 |<xref:System.Reflection.AssemblyVersionAttribute>|어셈블리의 버전을 지정합니다.|
 |<xref:System.Reflection.AssemblyCultureAttribute>|어셈블리에서 지원하는 문화권을 지정합니다.|
 |<xref:System.Reflection.AssemblyFlagsAttribute>|어셈블리가 같은 컴퓨터, 같은 프로세스 또는 같은 애플리케이션 도메인에서 Side-by-side 실행을 지원하는지 지정합니다.|
 
 ### <a name="informational-attributes"></a>정보 특성
 
-정보 특성을 사용하여 어셈블리에 대한 추가 회사 또는 제품 정보를 제공할 수 있습니다. 다음 표에서는 <xref:System.Reflection?displayProperty=nameWithType> 네임스페이스에 정의된 정보 특성을 보여 줍니다.
+정보 특성을 사용하여 어셈블리와 연관된 회사 또는 제품에 대한 추가적인 정보를 제공할 수 있습니다. 다음 표에서는 <xref:System.Reflection?displayProperty=nameWithType> 네임스페이스에 정의된 정보 특성을 보여 줍니다.
 
 |특성|용도|
 |---------------|-------------|
@@ -79,7 +79,7 @@ name, version 및 culture의 세 가지 특성(해당하는 경우 강력한 이
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|어셈블리 매니페스트에 대한 어셈블리 구성(예: 정품 또는 디버그)을 지정하는 사용자 지정 특성을 정의합니다.|
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|어셈블리 매니페스트에 대한 친숙한 기본 별칭을 정의합니다.|
 
-## <a name="Obsolete"></a> 사용되지 않는 특성
+## <a name="obsolete-attribute"></a><a name="Obsolete"></a> 사용되지 않는 특성
 
 `Obsolete` 특성은 프로그램 엔터티를 더 이상 사용이 권장되지 않는 항목으로 표시합니다. 나중에 사용되지 않음으로 표시된 엔터티를 사용할 때마다 특성 구성 방법에 따라 경고나 오류가 생성됩니다. 예를 들면 다음과 같습니다.
 
@@ -122,7 +122,7 @@ b.NewMethod()
 
 `Obsolete` 특성은 단일 사용 특성이고 특성을 허용하는 모든 엔터티에 적용할 수 있습니다. `Obsolete`는 <xref:System.ObsoleteAttribute>의 별칭입니다.
 
-## <a name="Conditional"></a> 조건부 특성
+## <a name="conditional-attribute"></a><a name="Conditional"></a>조건부 특성
 
 `Conditional` 특성을 사용하면 메서드 실행이 전처리 식별자에 따라 달라집니다. `Conditional` 특성은 <xref:System.Diagnostics.ConditionalAttribute>의 별칭이고 메서드 또는 특성 클래스에 적용할 수 있습니다.
 
@@ -159,7 +159,7 @@ Shared Sub DebugMethod()
 End Sub
 ```
 
-조건부로 표시된 메서드를 호출하면 지정된 전처리 기호가 있는지 여부에 따라 호출을 포함 또는 생략할지 결정됩니다. 기호가 정의되면 호출이 포함되고, 정의되지 않으면 호출이 생략됩니다. 다음과 같이 메서드를 `Conditional` 블록 내부에 포함하는 것보다 `#if…#endif`을 사용하는 것이 더 분명하고 더 정교하며 오류 가능성이 더 적습니다.
+조건부로 표시된 메서드를 호출하면 지정된 전처리 기호가 있는지 여부에 따라 호출을 포함 또는 생략할지 결정됩니다. 기호가 정의되면 호출이 포함되고, 정의되지 않으면 호출이 생략됩니다. 다음과 같이 메서드를 `#if…#endif` 블록 내부에 포함하는 것보다 `Conditional`을 사용하는 것이 더 분명하고 더 정교하며 오류 가능성이 더 적습니다.
 
 ```vb
 #If DEBUG Then
@@ -218,21 +218,21 @@ Class SampleClass
 End Class
 ```
 
-## <a name="CallerInfo"></a> 호출자 정보 특성
+## <a name="caller-info-attributes"></a><a name="CallerInfo"></a>호출자 정보 특성
 
 호출자 정보 특성을 사용하여 메서드 호출자에 대한 정보를 얻을 수 있습니다. 소스 코드 파일 경로, 소스 코드 줄 번호 및 호출자의 멤버 이름을 얻을 수 있습니다.
 
 멤버 호출자 정보를 얻으려면 선택적 매개 변수에 적용되는 특성을 사용합니다. 각 선택적 매개 변수는 기본값을 지정합니다. 다음 표에서는 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 네임스페이스에 정의된 호출자 정보 특성을 보여줍니다.
 
-|특성|설명|형식|
+|특성|Description|형식|
 |---|---|---|
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|호출자를 포함한 소스 파일의 전체 경로입니다. 컴파일 시간의 경로입니다.|`String`|
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|메서드가 호출되는 소스 파일의 줄 번호입니다.|`Integer`|
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|호출자의 메서드 이름 또는 속성 이름입니다. 자세한 내용은 [호출자 정보 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)를 참조 하세요.|`String`|
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|호출자의 메서드 이름 또는 속성 이름입니다. 자세한 내용은 [호출자 정보 (Visual Basic)](../caller-information.md)를 참조 하세요.|`String`|
 
-호출자 정보 특성에 대 한 자세한 내용은 [호출자 정보 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)를 참조 하세요.
+호출자 정보 특성에 대 한 자세한 내용은 [호출자 정보 (Visual Basic)](../caller-information.md)를 참조 하세요.
 
-## <a name="VB"></a>Visual Basic 특성
+## <a name="visual-basic-attributes"></a><a name="VB"></a>Visual Basic 특성
 
 다음 표에서는 Visual Basic 관련 된 특성을 나열 합니다.
 
@@ -245,15 +245,15 @@ End Class
 
 ### <a name="comclassattribute"></a>M
 
-`COMClassAttribute`를 사용 하 여 Visual Basic에서 COM 구성 요소를 만드는 프로세스를 간소화할 수 있습니다. COM 개체는 .NET Framework 어셈블리와 상당히 다르며 `COMClassAttribute`없이 Visual Basic에서 COM 개체를 생성 하려면 여러 단계를 수행 해야 합니다. `COMClassAttribute`표시 된 클래스의 경우 컴파일러는 이러한 단계를 자동으로 수행 합니다.
+`COMClassAttribute`를 사용 하 여 Visual Basic에서 COM 구성 요소를 만드는 프로세스를 간소화할 수 있습니다. COM 개체는 .NET Framework 어셈블리와 상당히 다르며, 없이는 `COMClassAttribute` 여러 단계를 수행 하 여 Visual Basic에서 com 개체를 생성 해야 합니다. 로 표시 된 클래스의 경우 `COMClassAttribute` 컴파일러는 이러한 단계를 자동으로 수행 합니다.
 
 ### <a name="hidemodulenameattribute"></a>HideModuleNameAttribute
 
-모듈에 필요한 한정자만 사용 하 여 모듈 멤버에 액세스할 수 있도록 하려면 `HideModuleNameAttribute`을 사용 합니다.
+`HideModuleNameAttribute`모듈에 필요한 한정자만 사용 하 여 모듈 멤버에 액세스할 수 있도록 하려면를 사용 합니다.
 
 ### <a name="vbfixedstringattribute"></a>VBFixedStringAttribute
 
-`VBFixedStringAttribute`를 사용 하 여 Visual Basic 고정 길이 문자열을 만들도록 강제 합니다. 문자열은 기본적으로 가변 길이 이며이 특성은 파일에 문자열을 저장할 때 유용 합니다. 다음 코드에서 이 과정을 보여 줍니다.
+`VBFixedStringAttribute`Visual Basic를 사용 하 여 고정 길이 문자열을 만들도록 강제 합니다. 문자열은 기본적으로 가변 길이 이며이 특성은 파일에 문자열을 저장할 때 유용 합니다. 다음 코드에서 이 과정을 보여 줍니다.
 
 ```vb
 Structure Worker
@@ -267,13 +267,13 @@ End Structure
 
 ### <a name="vbfixedarrayattribute"></a>VBFixedArrayAttribute
 
-크기가 고정 된 배열을 선언 하려면 `VBFixedArrayAttribute`을 사용 합니다. Visual Basic 문자열과 마찬가지로 배열은 기본적으로 가변 길이입니다. 이 특성은 파일에 데이터를 직렬화 하거나 쓸 때 유용 합니다.
+`VBFixedArrayAttribute`크기가 고정 된 배열을 선언 하는 데 사용 합니다. Visual Basic 문자열과 마찬가지로 배열은 기본적으로 가변 길이입니다. 이 특성은 파일에 데이터를 직렬화 하거나 쓸 때 유용 합니다.
 
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [Visual Basic 프로그래밍 가이드](../../../../visual-basic/programming-guide/index.md)
+- [Visual Basic 프로그래밍 가이드](../../index.md)
 - [특성](../../../../standard/attributes/index.md)
-- [리플렉션(Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [리플렉션을 사용하여 특성 액세스(Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [리플렉션(Visual Basic)](../reflection.md)
+- [리플렉션을 사용하여 특성 액세스(Visual Basic)](accessing-attributes-by-using-reflection.md)

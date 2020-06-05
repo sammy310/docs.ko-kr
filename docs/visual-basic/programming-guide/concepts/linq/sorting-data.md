@@ -2,12 +2,12 @@
 title: 데이터 정렬
 ms.date: 07/20/2015
 ms.assetid: 6f81065c-0c89-4bf3-a6d8-442273f8810e
-ms.openlocfilehash: f1d4d8afb9b6e176a7ac048ba3270ecafdce24c9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a5ccff745995ed7f41731cf98fb7c49d3247d994
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350596"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406796"
 ---
 # <a name="sorting-data-visual-basic"></a>데이터 정렬 (Visual Basic)
 
@@ -21,7 +21,7 @@ ms.locfileid: "74350596"
 
 ## <a name="methods"></a>메서드
 
-|메서드 이름|설명|Visual Basic 쿼리 식 구문|자세한 내용|
+|메서드 이름|설명|Visual Basic 쿼리 식 구문|추가 정보|
 |-----------------|-----------------|------------------------------------------|----------------------|
 |OrderBy|값을 오름차순으로 정렬합니다.|`Order By`|<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderBy%2A?displayProperty=nameWithType>|
 |OrderByDescending|값을 내림차순으로 정렬합니다.|`Order By … Descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=nameWithType>|
@@ -150,7 +150,7 @@ MsgBox(sb.ToString())
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Linq>
-- [표준 쿼리 연산자 개요(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Order By 절](../../../../visual-basic/language-reference/queries/order-by-clause.md)
-- [방법: 쿼리 결과 정렬](../../../../visual-basic/programming-guide/language-features/linq/how-to-sort-query-results-by-using-linq.md)
-- [방법: 단어 또는 필드에 따라 텍스트 데이터 정렬 또는 필터링 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [표준 쿼리 연산자 개요(Visual Basic)](standard-query-operators-overview.md)
+- [Order By 절](../../../language-reference/queries/order-by-clause.md)
+- [방법: 쿼리 결과 정렬](../../language-features/linq/how-to-sort-query-results-by-using-linq.md)
+- [방법: 단어 또는 필드에 따라 텍스트 데이터 정렬 또는 필터링(LINQ)(Visual Basic)](how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

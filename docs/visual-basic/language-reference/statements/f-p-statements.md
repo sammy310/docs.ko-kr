@@ -2,27 +2,27 @@
 title: F-P 문
 ms.date: 07/20/2015
 ms.assetid: cdce7ab0-c52e-4d33-a29b-bf32cdacc79f
-ms.openlocfilehash: fcd57321e0fb39a77e89b5b29f66edab6b40763a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0da540df9485fcb9a5b386d76488a5e99264b377
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351220"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404682"
 ---
 # <a name="f-p-statements"></a>F-P 문
 다음 표에서는 Visual Basic 언어 문의 목록을 포함 합니다.  
   
 |||||  
 |---|---|---|---|  
-|[For Each ... 그런](../../../visual-basic/language-reference/statements/for-each-next-statement.md)|[... 그런](../../../visual-basic/language-reference/statements/for-next-statement.md)|[Function](../../../visual-basic/language-reference/statements/function-statement.md)|[Get](../../../visual-basic/language-reference/statements/get-statement.md)|  
-|[GoTo](../../../visual-basic/language-reference/statements/goto-statement.md)|[... 그런 다음 ... 사람이](../../../visual-basic/language-reference/statements/if-then-else-statement.md)|[Sub New](../../../visual-basic/language-reference/statements/implements-statement.md)|[Imports(.NET 네임스페이스 및 형식)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)|  
-|[Imports(XML 네임스페이스)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)|[Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md)|[Interface](../../../visual-basic/language-reference/statements/interface-statement.md)|[Mid](../../../visual-basic/language-reference/statements/mid-statement.md)|  
-|[모듈](../../../visual-basic/language-reference/statements/module-statement.md)|[Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)|[오류 발생 시](../../../visual-basic/language-reference/statements/on-error-statement.md)|[Operator](../../../visual-basic/language-reference/statements/operator-statement.md)|  
-|[Option \<키워드 >](../../../visual-basic/language-reference/statements/option-keyword-statement.md)|[Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)|[Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)|[Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md)|  
-|[Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)|[Property](../../../visual-basic/language-reference/statements/property-statement.md)|||  
+|[For Each ... 그런](for-each-next-statement.md)|[For...Next](for-next-statement.md)|[Function](function-statement.md)|[가져오기](get-statement.md)|  
+|[GoTo](goto-statement.md)|[If...Then...Else](if-then-else-statement.md)|[구현](implements-statement.md)|[Imports(.NET 네임스페이스 및 형식)](imports-statement-net-namespace-and-type.md)|  
+|[Imports(XML 네임스페이스)](imports-statement-xml-namespace.md)|[받을지](inherits-statement.md)|[인터페이스](interface-statement.md)|[Mid](mid-statement.md)|  
+|[모듈](module-statement.md)|[Namespace](namespace-statement.md)|[오류 발생 시](on-error-statement.md)|[연산자](operator-statement.md)|  
+|[Option\<keyword>](option-keyword-statement.md)|[Option Compare](option-compare-statement.md)|[Option Explicit](option-explicit-statement.md)|[Option Infer](option-infer-statement.md)|  
+|[Option Strict](option-strict-statement.md)|[Property](property-statement.md)|||  
   
 ## <a name="see-also"></a>참고 항목
 
-- [A-E 문](../../../visual-basic/language-reference/statements/a-e-statements.md)
-- [Q-Z 문](../../../visual-basic/language-reference/statements/q-z-statements.md)
-- [Visual Basic 언어 참조](../../../visual-basic/language-reference/index.md)
+- [A-E 문](a-e-statements.md)
+- [Q-Z 문](q-z-statements.md)
+- [Visual Basic 언어 참조](../index.md)

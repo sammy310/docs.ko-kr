@@ -6,12 +6,12 @@ helpviewer_keywords:
 - anonymous types [Visual Basic], inferring property names and types
 - inferring property types [Visual Basic]
 ms.assetid: 7c748b22-913f-4d9d-b747-6b7bf296a0bc
-ms.openlocfilehash: 89a39e8e9cd66b1d774da70be47c7c6824cccef2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9ebbbe9d2e6d36f5ab2bc7f7c916d18c9240a06d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350032"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404890"
 ---
 # <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a>방법: 익명 형식 선언에서 속성 이름 및 형식 유추(Visual Basic)
 
@@ -126,9 +126,9 @@ ms.locfileid: "74350032"
 
   [!code-vb[VbVbalrAnonymousTypes#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#16)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [개체 이니셜라이저: 명명된 형식과 익명 형식](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
-- [지역 형식 유추](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [익명 형식](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
-- [키](../../../../visual-basic/language-reference/modifiers/key.md)
+- [개체 이니셜라이저: 명명된 형식 및 무명 형식](object-initializers-named-and-anonymous-types.md)
+- [지역 형식 유추](../variables/local-type-inference.md)
+- [익명 형식](anonymous-types.md)
+- [키](../../../language-reference/modifiers/key.md)

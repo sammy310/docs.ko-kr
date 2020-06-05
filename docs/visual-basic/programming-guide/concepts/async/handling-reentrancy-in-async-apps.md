@@ -2,12 +2,12 @@
 title: 비동기 앱에서 재진입 처리
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 110298a2ca937dbf39c94cfe9df29afb2e76a91c
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: 2d1af14016f82b5de875d3638b132e14c7d2280d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021502"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396638"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>비동기 응용 프로그램에서 재진입 처리(Visual Basic)
 
@@ -17,7 +17,7 @@ ms.locfileid: "82021502"
 > 예제를 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.
 
 > [!NOTE]
-> 현재 앱 개발에 사용할 최소 버전은 TLS(전송 계층 보안) 버전 1.2입니다. 앱이 4.7 보다 이전의 .NET Framework 버전을 대상으로 하는 경우 [.NET Framework를 사용하여 다음 TLS(전송 계층 보안) 모범 사례에](../../../../framework/network-programming/tls.md)대한 다음 문서를 참조하십시오.
+> 현재 앱 개발에 사용할 최소 버전은 TLS(전송 계층 보안) 버전 1.2입니다. 앱이 .NET Framework 4.7 이전 버전을 대상으로 하는 경우, 다음 문서에서 [.NET Framework를 사용한 TLS(전송 계층 보안) 모범 사례](../../../../framework/network-programming/tls.md)를 참조하세요.
 
 ## <a name="recognizing-reentrancy"></a><a name="BKMK_RecognizingReentrancy"></a> 재진입 인식
 
@@ -93,7 +93,7 @@ TOTAL bytes returned:  890591
 
   요청한 모든 작업이 비동기적으로 실행되도록 허용하지만 각 작업의 결과가 함께 순서대로 나타나도록 출력의 표시를 조정합니다.
 
-### <a name="disable-the-start-button"></a><a name="BKMK_DisableTheStartButton"></a>시작 버튼 사용 안 함
+### <a name="disable-the-start-button"></a><a name="BKMK_DisableTheStartButton"></a> 시작 버튼 사용 안 함
 
 `StartButton_Click` 이벤트 처리기의 위쪽에 있는 버튼를 사용하지 않도록 설정하여 작업이 실행되는 동안 **시작** 버튼를 차단할 수 있습니다. 그런 다음 작업이 완료되면 `Finally` 블록 내에서 버튼를 다시 사용하도록 설정하여 사용자가 앱을 다시 실행하도록 할 수 있습니다.
 
@@ -126,9 +126,9 @@ End Sub
 
 **시작** 버튼을 사용하지 않도록 설정하는 대신 버튼을 활성 상태로 유지하지만 사용자가 버튼을 다시 클릭하는 경우 이미 실행되고 있는 작업을 취소하고 가장 최근에 시작한 작업이 계속되도록 합니다.
 
-취소에 대한 자세한 내용은 [비동기 응용 프로그램(Visual Basic)을 미세 조정합니다.](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+취소에 대 한 자세한 내용은 [비동기 응용 프로그램 미세 조정 (Visual Basic)](fine-tuning-your-async-application.md)을 참조 하세요.
 
-이 시나리오를 설정하려면 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)에서 제공하는 기본 코드를 다음과 같이 변경합니다. .NET 데스크톱 앱의 [재진입: 비동기 샘플에서](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)완성된 앱을 다운로드할 수도 있습니다. 이 프로젝트의 이름은 CancelAndRestart입니다.
+이 시나리오를 설정하려면 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)에서 제공하는 기본 코드를 다음과 같이 변경합니다. [비동기 샘플: .NET 데스크톱 앱의 재진입](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)에서 완성된 앱을 다운로드할 수도 있습니다. 이 프로젝트의 이름은 CancelAndRestart입니다.
 
 1. 모든 메서드에 대한 범위 내에 있는 <xref:System.Threading.CancellationTokenSource> 변수 `cts`를 선언합니다.
 
@@ -139,7 +139,7 @@ End Sub
         Dim cts As CancellationTokenSource
     ```
 
-2. `StartButton_Click`에서 작업이 이미 진행 중인지 확인합니다. 값이 `cts` `Nothing`있는 경우 작업이 이미 활성 상태입니다. 값이 아닌 `Nothing`경우 이미 실행 중인 작업이 취소됩니다.
+2. `StartButton_Click`에서 작업이 이미 진행 중인지 확인합니다. 의 값이 이면 `cts` `Nothing` 아직 활성화 된 작업이 없습니다. 값이이 아닌 경우 `Nothing` 이미 실행 중인 작업이 취소 됩니다.
 
     ```vb
     ' *** If a download process is already underway, cancel it.
@@ -156,7 +156,7 @@ End Sub
     cts = newCTS
     ```
 
-4. `StartButton_Click`의 끝에서 현재 프로세스가 완료되므로 `cts` 값을 다시 로 `Nothing`설정합니다.
+4. 의 끝에서 `StartButton_Click` 현재 프로세스가 완료 되므로 값을 `cts` 다시로 설정 `Nothing` 합니다.
 
     ```vb
     ' *** When the process completes, signal that another process can proceed.
@@ -248,7 +248,7 @@ Private Async Function AccessTheWebAsync(ct As CancellationToken) As Task
 End Function
 ```
 
-이 앱을 실행하는 동안 **시작** 단추를 여러 번 선택하면 다음 출력과 유사한 결과가 생성되어야 합니다.
+이 앱이 실행 되는 동안 **시작** 단추를 여러 번 선택 하면 다음 출력과 유사한 결과가 생성 됩니다.
 
 ```console
 1. msdn.microsoft.com/library/hh191443.aspx                83732
@@ -278,13 +278,13 @@ TOTAL bytes returned:  890591
 
 부분 목록을 제거하려면 `StartButton_Click`에서 코드 첫 줄의 주석 처리를 제거하여 사용자가 작업을 다시 시작할 때마다 텍스트 상자의 내용을 지웁니다.
 
-### <a name="run-multiple-operations-and-queue-the-output"></a><a name="BKMK_RunMultipleOperations"></a>여러 작업을 실행하고 출력큐를 대기열
+### <a name="run-multiple-operations-and-queue-the-output"></a><a name="BKMK_RunMultipleOperations"></a> 여러 작업을 실행하고 출력을 큐 대기
 
 이 세 번째 예제는 사용자가 **시작** 버튼을 선택할 때마다 앱이 다른 비동기 작업을 시작하고 모든 작업이 실행되어 완료된다는 점에서 가장 복잡합니다. 요청한 모든 작업은 목록에서 비동기적으로 웹 사이트를 다운로드하지만 작업의 출력은 순차적으로 제공됩니다. 즉, 실제 다운로드 작업은 [재진입 인식](#BKMK_RecognizingReentrancy)의 출력에 표시된 대로 인터리브되지만 각 그룹에 대한 결과 목록은 별도로 제공됩니다.
 
 작업은 표시 프로세스의 게이트키퍼 역할을 하는 전역 <xref:System.Threading.Tasks.Task>, `pendingWork`를 공유합니다.
 
-이 예제를 실행하여 변경 내용을 앱 [빌드의](#BKMK_BuildingTheApp)코드에 붙여넣거나 [앱 다운로드의](#BKMK_DownloadingTheApp) 지침에 따라 샘플을 다운로드한 다음 QueueResults 프로젝트를 실행할 수 있습니다.
+[앱 빌드](#BKMK_BuildingTheApp)의 코드에 변경 내용을 붙여 넣어이 예제를 실행 하거나, [앱 다운로드](#BKMK_DownloadingTheApp) 의 지침에 따라 샘플을 다운로드 한 다음 QueueResults 프로젝트를 실행할 수 있습니다.
 
 다음 출력은 사용자가 **시작** 버튼을 한 번만 선택하는 경우의 결과를 보여 줍니다. 문제 레이블 A는 처음으로 **시작** 버튼을 선택한 경우의 결과임을 나타냅니다. 숫자는 다운로드 대상 목록에서 URL의 순서를 보여 줍니다.
 
@@ -516,7 +516,7 @@ End Function
   TOTAL bytes returned:  915908
   ```
 
-- 이 `pendingWork` 작업은 `Nothing` 먼저 시작된 `FinishOneGroupAsync` 그룹 A에 대해서만 시작됩니다. 그룹 A는 `FinishOneGroupAsync`에 도달할 때 await 식을 아직 완료하지 않았습니다. 따라서 컨트롤이 `AccessTheWebAsync`로 반환되지 않았으며 `pendingWork`에 대한 첫 번째 할당이 발생되지 않았습니다.
+- `pendingWork`작업은 처음에 시작 된 `Nothing` `FinishOneGroupAsync` 그룹 A에 대해서만 시작 됩니다. 그룹 A는 `FinishOneGroupAsync`에 도달할 때 await 식을 아직 완료하지 않았습니다. 따라서 컨트롤이 `AccessTheWebAsync`로 반환되지 않았으며 `pendingWork`에 대한 첫 번째 할당이 발생되지 않았습니다.
 
 - 다음 두 줄은 항상 출력에 함께 나타납니다. 코드는 `StartButton_Click`의 그룹 작업 시작과 `pendingWork`에 그룹에 대한 작업 할당 사이에서 중단되지 않습니다.
 
@@ -527,7 +527,7 @@ End Function
 
   그룹이 `StartButton_Click`을 입력한 후 작업은 `FinishOneGroupAsync`를 입력한 다음에야 await 식을 완료합니다. 따라서 코드의 해당 세그먼트 중에는 다른 작업에서 제어할 수 없습니다.
 
-## <a name="reviewing-and-running-the-example-app"></a><a name="BKMD_SettingUpTheExample"></a>예제 앱 검토 및 실행
+## <a name="reviewing-and-running-the-example-app"></a><a name="BKMD_SettingUpTheExample"></a> 예제 앱 검토 및 실행
 
 예제 앱을 더 잘 이해하려면 다운로드하거나, 직접 빌드하거나, 앱을 구현하지 않고 이 항목의 끝에 있는 코드를 검토할 수 있습니다.
 
@@ -536,7 +536,7 @@ End Function
 
 ### <a name="downloading-the-app"></a><a name="BKMK_DownloadingTheApp"></a> 앱 다운로드
 
-1. [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)(비동기 샘플: .NET 데스크톱 앱의 재입력)에서 압축 파일을 다운로드합니다.
+1. [Async Samples: .NET 데스크톱 앱의 재진입](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)에서 완성된 앱을 다운로드할 수도 있습니다.
 
 2. 다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.
 
@@ -560,7 +560,7 @@ End Function
 
      **새 프로젝트** 대화 상자가 열립니다.
 
-3. 설치된 **템플릿** 창에서 Visual **Basic을**확장한 다음 **Windows**를 확장합니다.
+3. **설치 된 템플릿** 창에서 **Visual Basic**을 확장 한 다음 **Windows**를 확장 합니다.
 
 4. 프로젝트 형식 목록에서 **WPF 애플리케이션**을 선택합니다.
 
@@ -592,13 +592,13 @@ End Function
 
      텍스트 상자와 버튼이 포함된 간단한 창이 MainWindow.xaml의 **디자인** 보기에 나타납니다.
 
-8. **솔루션 탐색기에서** **참조를** 마우스 오른쪽 단추로 클릭하고 **참조 추가를**선택합니다.
+8. **솔루션 탐색기**에서 **참조**를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 선택합니다.
 
      아직 선택하지 않은 경우 <xref:System.Net.Http>에 대한 참조를 추가합니다.
 
-9. **솔루션 탐색기에서**MainWindow.xaml.vb의 바로 가기 메뉴를 연 다음 **코드 보기를**선택합니다.
+9. **솔루션 탐색기**에서 mainwindow.xaml의 바로 가기 메뉴를 열고 **코드 보기**를 선택 합니다.
 
-10. MainWindow.xaml.vb에서 코드를 다음 코드로 바꿉니다.
+10. Mainwindow.xaml에서 코드를 다음 코드로 바꿉니다.
 
     ```vb
     ' Add the following Imports statements, and add a reference for System.Net.Http.
@@ -680,9 +680,9 @@ End Function
 
 11. CTRL+F5 키를 선택하여 프로그램을 실행한 다음 **시작** 버튼을 여러 번 선택합니다.
 
-12. [시작 단추 사용 안 함](#BKMK_DisableTheStartButton), [작업 취소 및 다시 시작](#BKMK_CancelAndRestart) 또는 [여러 작업을 실행하고 출력을 큐 대기](#BKMK_RunMultipleOperations)의 내용을 변경하여 재입력을 처리합니다.
+12. [시작 버튼 사용 안 함](#BKMK_DisableTheStartButton), [작업 취소 및 다시 시작](#BKMK_CancelAndRestart) 또는 [여러 작업을 실행하고 출력을 큐 대기](#BKMK_RunMultipleOperations)의 내용을 변경하여 재진입을 처리합니다.
 
 ## <a name="see-also"></a>참조
 
-- [연습: Async 및 Await를 사용하여 웹에 액세스(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [연습: Async 및 Await를 사용하여 웹에 액세스(Visual Basic)](walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](index.md)

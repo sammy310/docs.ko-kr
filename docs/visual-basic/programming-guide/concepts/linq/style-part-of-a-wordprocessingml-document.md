@@ -2,12 +2,12 @@
 title: WordprocessingML Document2의 스타일 부분
 ms.date: 07/20/2015
 ms.assetid: 292cc094-9483-4192-ac3b-a5dc51fbac12
-ms.openlocfilehash: 06800a138d33d8116ebdece8160e2705d294161c
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 0692a9cc3a2ce51851d1b551d49f112fc5e4e41a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582883"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406757"
 ---
 # <a name="style-part-of-a-wordprocessingml-document"></a>WordprocessingML 문서의 스타일 부분
 이 항목에서는 Office Open XML WordprocessingML 문서의 스타일 부분에 대한 예제를 보여 줍니다.  
@@ -140,6 +140,6 @@ ms.locfileid: "72582883"
 </w:styles>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [Office Open XML WordprocessingML 문서에 대 한 세부 정보 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+- [Office Open XML WordprocessingML 문서에 대 한 세부 정보 (Visual Basic)](details-of-office-open-xml-wordprocessingml-documents.md)
