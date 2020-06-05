@@ -2,12 +2,12 @@
 title: '방법: XSLT 스타일에서 주석을 사용하여 LINQ to XML 트리 변환'
 ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
-ms.openlocfilehash: d9cb32462535f099107343bd9069b4da3508c5b0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 099457eaab8c80605138d7e67d7bc2823e316234
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348351"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364450"
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>방법: XSLT 스타일에서 주석을 사용 하 여 LINQ to XML 트리 변환 (Visual Basic)
 
@@ -43,7 +43,7 @@ ms.locfileid: "74348351"
 
 ## <a name="transforming-a-tree"></a>트리 변환
 
-이 첫 번째 예제에서는 모든 `Paragraph` 노드의 이름을 `para`으로 바꿉니다.
+첫 번째 예제에서는 모든 `Paragraph` 노드의 이름을로 바꿉니다 `para` .
 
 ```vb
 Imports <xmlns:xf="http://www.microsoft.com/LinqToXmlTransform/2007">
@@ -340,7 +340,7 @@ Module Module1
 End Module
 ```
 
-이 예제는 다음과 같은 출력을 생성합니다.
+이 예에서 생성되는 출력은 다음과 같습니다.
 
 ```console
 Before Transform
@@ -376,4 +376,4 @@ After Transform
 
 ## <a name="see-also"></a>참고 항목
 
-- [Visual Basic (Advanced LINQ to XML 프로그래밍)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Visual Basic (Advanced LINQ to XML 프로그래밍)](advanced-linq-to-xml-programming.md)
