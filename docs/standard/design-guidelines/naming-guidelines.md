@@ -1,5 +1,6 @@
 ---
 title: 명명 지침
+description: 이 개요에서는 프레임 워크 개발에 사용할 명명 규칙을 참조 하세요. 대문자 표시, 일반 이름 지정 및 기타 지침을 다루는 문서로 이동 합니다.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - names [.NET Framework]
 - format naming guidelines [.NET Framework]
 ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
-ms.openlocfilehash: 1b137be60f4c8c1c7cf1fa1f807841d4bc209089
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: fbcf5ef5eb02a5e45b5c981b4247ffe1c9c2631b
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290177"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447149"
 ---
 # <a name="naming-guidelines"></a>명명 지침
 프레임 워크의 개발에서 일관적인 명명 규칙 집합에 따라 프레임 워크의 유용성에 대 한 주요 기여를 수행할 수 있습니다. 이를 통해 광범위 하 게 분리 된 프로젝트에서 프레임 워크를 많은 개발자가 사용할 수 있습니다. 양식의 일관성 이외에 프레임 워크 요소의 이름은 쉽게 이해 하 고 각 요소의 함수를 전달 해야 합니다.  

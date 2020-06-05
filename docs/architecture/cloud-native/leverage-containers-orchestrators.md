@@ -1,13 +1,13 @@
 ---
 title: 컨테이너 및 오케스트레이터 활용
 description: Azure에서 Docker 컨테이너 및 Kubernetes Orchestrator 활용
-ms.date: 05/13/2020
-ms.openlocfilehash: b2fedac205d7a5bd8b8f8cf665ae370b9bf26654
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.date: 05/31/2020
+ms.openlocfilehash: 25e981e0fb7957e7180be09a19a406eddfe4e51b
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84282586"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446869"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>컨테이너 및 오케스트레이터 활용
 
@@ -31,7 +31,7 @@ ms.locfileid: "84282586"
 
 모놀리식 응용 프로그램은 전적으로 많은 기능을 필요로 하는 단일 컴퓨터 인스턴스에서 호스팅됩니다. 모놀리식의 어느 부분에서 확장이 필요한 경우에는 다른 컴퓨터에 전체 응용 프로그램의 다른 복사본을 배포 해야 합니다. Monolith를 사용 하면 응용 프로그램 구성 요소를 개별적으로 규모를 조정할 수 없습니다. 크기를 조정 하지 않아도 되는 구성 요소는 비효율적 이며 비용이 많이 드는 리소스 사용량을 초래 합니다.
 
-### <a name="environment"></a>Environment
+### <a name="environment"></a>환경
 
 모놀리식 응용 프로그램은 일반적으로 미리 설치 된 운영 체제, 런타임 및 라이브러리 종속성이 있는 호스팅 환경에 배포 됩니다. 이 환경은 응용 프로그램을 개발 하거나 테스트할 때와 일치 하지 않을 수 있습니다. 응용 프로그램 환경에서의 불일치는 모놀리식 배포에 대 한 문제의 일반적인 원인입니다.
 
