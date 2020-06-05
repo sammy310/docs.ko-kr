@@ -2,20 +2,20 @@
 title: '방법: 문자열 컬렉션 결합 및 비교(LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: 2df5db16e51e8f9de8a8e3506eb1f7b737065a14
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 271ef7805cd2285fa2d8796a31257c0f31bb9a76
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337566"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374864"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a><span data-ttu-id="b1829-102">방법: 문자열 컬렉션 결합 및 비교 (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b1829-102">How to: Combine and Compare String Collections (LINQ) (Visual Basic)</span></span>
+# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a><span data-ttu-id="d329b-102">방법: 문자열 컬렉션 결합 및 비교 (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d329b-102">How to: Combine and Compare String Collections (LINQ) (Visual Basic)</span></span>
 
-<span data-ttu-id="b1829-103">이 예제에서는 텍스트 줄이 포함된 파일을 병합하고 결과를 정렬하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b1829-103">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="b1829-104">특히, 두 개의 텍스트 줄 집합에 대한 단순 연결, 합집합 및 교집합을 수행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b1829-104">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>
+<span data-ttu-id="d329b-103">이 예제에서는 텍스트 줄이 포함된 파일을 병합하고 결과를 정렬하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d329b-103">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="d329b-104">특히, 두 개의 텍스트 줄 집합에 대한 단순 연결, 합집합 및 교집합을 수행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d329b-104">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>
 
-## <a name="set-up-the-project-and-the-text-files"></a><span data-ttu-id="b1829-105">프로젝트 및 텍스트 파일 설정</span><span class="sxs-lookup"><span data-stu-id="b1829-105">Set up the project and the text files</span></span>
+## <a name="set-up-the-project-and-the-text-files"></a><span data-ttu-id="d329b-105">프로젝트 및 텍스트 파일 설정</span><span class="sxs-lookup"><span data-stu-id="d329b-105">Set up the project and the text files</span></span>
 
-1. <span data-ttu-id="b1829-106">이러한 이름을 names1.txt 텍스트 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="b1829-106">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>
+1. <span data-ttu-id="d329b-106">이러한 이름을 names1.txt 텍스트 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="d329b-106">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>
 
     ```text
     Bankov, Peter
@@ -30,7 +30,7 @@ ms.locfileid: "75337566"
     Garcia, Debra
     ```
 
-2. <span data-ttu-id="b1829-107">이러한 이름을 names2.txt 텍스트 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="b1829-107">Copy these names into a text file that is named names2.txt and save it in your project folder.</span></span> <span data-ttu-id="b1829-108">두 파일의 일부 이름에는 공통점이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b1829-108">Note that the two files have some names in common.</span></span>
+2. <span data-ttu-id="d329b-107">이러한 이름을 names2.txt 텍스트 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="d329b-107">Copy these names into a text file that is named names2.txt and save it in your project folder.</span></span> <span data-ttu-id="d329b-108">두 파일의 일부 이름에는 공통점이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d329b-108">Note that the two files have some names in common.</span></span>
 
     ```text
     Liu, Jinghao
@@ -45,7 +45,7 @@ ms.locfileid: "75337566"
     El Yassir, Mehdi
     ```
 
-## <a name="example"></a><span data-ttu-id="b1829-109">예</span><span class="sxs-lookup"><span data-stu-id="b1829-109">Example</span></span>
+## <a name="example"></a><span data-ttu-id="d329b-109">예제</span><span class="sxs-lookup"><span data-stu-id="d329b-109">Example</span></span>
 
 ```vb
 Class ConcatenateStrings
@@ -163,11 +163,11 @@ End Class
 ' 2 total names in list
 ```
 
-## <a name="compile-the-code"></a><span data-ttu-id="b1829-110">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="b1829-110">Compile the code</span></span>
+## <a name="compile-the-code"></a><span data-ttu-id="d329b-110">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="d329b-110">Compile the code</span></span>
 
-<span data-ttu-id="b1829-111">Visual Basic 콘솔 응용 프로그램 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="b1829-111">Create a Visual Basic console application project.</span></span> <span data-ttu-id="b1829-112">System.xml 네임 스페이스에 대 한 `Imports` 문을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1829-112">Add an `Imports` statement for the System.Linq namespace.</span></span>
+<span data-ttu-id="d329b-111">Visual Basic 콘솔 응용 프로그램 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="d329b-111">Create a Visual Basic console application project.</span></span> <span data-ttu-id="d329b-112">System.xml `Imports` 네임 스페이스에 대 한 문을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="d329b-112">Add an `Imports` statement for the System.Linq namespace.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="b1829-113">참조</span><span class="sxs-lookup"><span data-stu-id="b1829-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d329b-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d329b-113">See also</span></span>
 
-- [<span data-ttu-id="b1829-114">LINQ 및 문자열 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b1829-114">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="b1829-115">LINQ 및 파일 디렉터리(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b1829-115">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="d329b-114">LINQ 및 문자열(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d329b-114">LINQ and Strings (Visual Basic)</span></span>](linq-and-strings.md)
+- [<span data-ttu-id="d329b-115">LINQ 및 파일 디렉터리(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d329b-115">LINQ and File Directories (Visual Basic)</span></span>](linq-and-file-directories.md)
