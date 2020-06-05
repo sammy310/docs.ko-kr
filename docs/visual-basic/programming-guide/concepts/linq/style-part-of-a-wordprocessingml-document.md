@@ -2,28 +2,28 @@
 title: WordprocessingML Document2의 스타일 부분
 ms.date: 07/20/2015
 ms.assetid: 292cc094-9483-4192-ac3b-a5dc51fbac12
-ms.openlocfilehash: 06800a138d33d8116ebdece8160e2705d294161c
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 0692a9cc3a2ce51851d1b551d49f112fc5e4e41a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582883"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406757"
 ---
-# <a name="style-part-of-a-wordprocessingml-document"></a><span data-ttu-id="0b48b-102">WordprocessingML 문서의 스타일 부분</span><span class="sxs-lookup"><span data-stu-id="0b48b-102">Style Part of a WordprocessingML Document</span></span>
-<span data-ttu-id="0b48b-103">이 항목에서는 Office Open XML WordprocessingML 문서의 스타일 부분에 대한 예제를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0b48b-103">This topic shows an example of the style part of the Office Open XML WordprocessingML document.</span></span>  
+# <a name="style-part-of-a-wordprocessingml-document"></a><span data-ttu-id="713a2-102">WordprocessingML 문서의 스타일 부분</span><span class="sxs-lookup"><span data-stu-id="713a2-102">Style Part of a WordprocessingML Document</span></span>
+<span data-ttu-id="713a2-103">이 항목에서는 Office Open XML WordprocessingML 문서의 스타일 부분에 대한 예제를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="713a2-103">This topic shows an example of the style part of the Office Open XML WordprocessingML document.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0b48b-104">예제</span><span class="sxs-lookup"><span data-stu-id="0b48b-104">Example</span></span>  
- <span data-ttu-id="0b48b-105">다음 예제는 Office Open XML WordprocessingML 문서의 스타일 부분을 구성하는 XML입니다.</span><span class="sxs-lookup"><span data-stu-id="0b48b-105">The following example is the XML that makes up the style part of an Office Open XML WordprocessingML document.</span></span>  
+## <a name="example"></a><span data-ttu-id="713a2-104">예제</span><span class="sxs-lookup"><span data-stu-id="713a2-104">Example</span></span>  
+ <span data-ttu-id="713a2-105">다음 예제는 Office Open XML WordprocessingML 문서의 스타일 부분을 구성하는 XML입니다.</span><span class="sxs-lookup"><span data-stu-id="713a2-105">The following example is the XML that makes up the style part of an Office Open XML WordprocessingML document.</span></span>  
   
- <span data-ttu-id="0b48b-106">기본 단락 스타일에는 다음과 같은 여는 태그를 가진 요소가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0b48b-106">The default paragraph style has an element with the following opening tag:</span></span>  
+ <span data-ttu-id="713a2-106">기본 단락 스타일에는 다음과 같은 여는 태그를 가진 요소가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="713a2-106">The default paragraph style has an element with the following opening tag:</span></span>  
   
 ```xml  
 <w:style w:type="paragraph" w:default="1" w:styleId="Normal">  
 ```  
   
- <span data-ttu-id="0b48b-107">기본 스타일 식별자를 찾기 위해 쿼리를 작성할 때 이 정보를 알고 있어야 쿼리에서 기본 스타일을 가진 단락의 스타일을 식별할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0b48b-107">You need to know this information when you write the query to find the default style identifier, so that the query can identify the style of paragraphs that have the default style.</span></span>  
+ <span data-ttu-id="713a2-107">기본 스타일 식별자를 찾기 위해 쿼리를 작성할 때 이 정보를 알고 있어야 쿼리에서 기본 스타일을 가진 단락의 스타일을 식별할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="713a2-107">You need to know this information when you write the query to find the default style identifier, so that the query can identify the style of paragraphs that have the default style.</span></span>  
   
- <span data-ttu-id="0b48b-108">이러한 문서는 Microsoft Word에서 생성하는 일반적인 문서와 비교할 때 매우 간단합니다.</span><span class="sxs-lookup"><span data-stu-id="0b48b-108">Note that these documents are very simple when compared to typical documents that Microsoft Word generates.</span></span> <span data-ttu-id="0b48b-109">대부분의 경우 Word에서는 많은 양의 추가 정보, 추가 서식 및 메타데이터를 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="0b48b-109">In many cases, Word saves a great deal of additional information, additional formatting and metadata.</span></span> <span data-ttu-id="0b48b-110">또한 Word에서는 이 예제의 경우처럼 쉽게 읽을 수 있도록 줄의 서식을 지정하지 않으며 XML은 들여쓰기 없이 저장됩니다.</span><span class="sxs-lookup"><span data-stu-id="0b48b-110">Furthermore, Word does not format the lines to be easily readable as in this example; instead, the XML is saved without indentation.</span></span> <span data-ttu-id="0b48b-111">그러나 모든 WordprocessingML 문서는 동일한 기본 XML 모양을 공유합니다.</span><span class="sxs-lookup"><span data-stu-id="0b48b-111">However, all WordprocessingML documents share the same basic XML shape.</span></span> <span data-ttu-id="0b48b-112">이 때문에 이 자습서에서 제공하는 쿼리는 더욱 복잡한 문서와 함께 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0b48b-112">Because of this, the queries presented in this tutorial will work with more complicated documents.</span></span>  
+ <span data-ttu-id="713a2-108">이러한 문서는 Microsoft Word에서 생성하는 일반적인 문서와 비교할 때 매우 간단합니다.</span><span class="sxs-lookup"><span data-stu-id="713a2-108">Note that these documents are very simple when compared to typical documents that Microsoft Word generates.</span></span> <span data-ttu-id="713a2-109">대부분의 경우 Word에서는 많은 양의 추가 정보, 추가 서식 및 메타데이터를 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="713a2-109">In many cases, Word saves a great deal of additional information, additional formatting and metadata.</span></span> <span data-ttu-id="713a2-110">또한 Word에서는 이 예제의 경우처럼 쉽게 읽을 수 있도록 줄의 서식을 지정하지 않으며 XML은 들여쓰기 없이 저장됩니다.</span><span class="sxs-lookup"><span data-stu-id="713a2-110">Furthermore, Word does not format the lines to be easily readable as in this example; instead, the XML is saved without indentation.</span></span> <span data-ttu-id="713a2-111">그러나 모든 WordprocessingML 문서는 동일한 기본 XML 모양을 공유합니다.</span><span class="sxs-lookup"><span data-stu-id="713a2-111">However, all WordprocessingML documents share the same basic XML shape.</span></span> <span data-ttu-id="713a2-112">이 때문에 이 자습서에서 제공하는 쿼리는 더욱 복잡한 문서와 함께 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="713a2-112">Because of this, the queries presented in this tutorial will work with more complicated documents.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -140,6 +140,6 @@ ms.locfileid: "72582883"
 </w:styles>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0b48b-113">참조</span><span class="sxs-lookup"><span data-stu-id="0b48b-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="713a2-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="713a2-113">See also</span></span>
 
-- [<span data-ttu-id="0b48b-114">Office Open XML WordprocessingML 문서에 대 한 세부 정보 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0b48b-114">Details of Office Open XML WordprocessingML Documents (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+- [<span data-ttu-id="713a2-114">Office Open XML WordprocessingML 문서에 대 한 세부 정보 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="713a2-114">Details of Office Open XML WordprocessingML Documents (Visual Basic)</span></span>](details-of-office-open-xml-wordprocessingml-documents.md)

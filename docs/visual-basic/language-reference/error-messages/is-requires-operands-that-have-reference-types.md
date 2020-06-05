@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC30020
 ms.assetid: 228afebd-1203-4bd3-8d7a-c5c56f3cedc4
-ms.openlocfilehash: 65fbba9689ae01d8156bd0b3e2efeb6b75bd79e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e5acc94a3738fca3a43740bdba727fc843132aa1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625952"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402813"
 ---
-# <a name="is-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-typename"></a><span data-ttu-id="79f2a-102">'Is' 피연산자는 참조 형식 이어야 하는데이 피연산자의 값 형식은 '\<typename >'</span><span class="sxs-lookup"><span data-stu-id="79f2a-102">'Is' requires operands that have reference types, but this operand has the value type '\<typename>'</span></span>
-<span data-ttu-id="79f2a-103">`Is` 비교 연산자는 두 개의 개체 변수가 같은 인스턴스를 참조 하는지 여부를 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="79f2a-103">The `Is` comparison operator determines whether two object variables refer to the same instance.</span></span> <span data-ttu-id="79f2a-104">이 비교 값 형식에 대해 정의 되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="79f2a-104">This comparison is not defined for value types.</span></span>  
+# <a name="is-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-typename"></a><span data-ttu-id="9c4f9-102">'Is'의 피연산자는 참조 형식이어야 하는데 이 피연산자의 값 형식은 '\<typename>'입니다.</span><span class="sxs-lookup"><span data-stu-id="9c4f9-102">'Is' requires operands that have reference types, but this operand has the value type '\<typename>'</span></span>
+<span data-ttu-id="9c4f9-103">`Is`비교 연산자는 두 개체 변수가 같은 인스턴스를 참조 하는지 여부를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c4f9-103">The `Is` comparison operator determines whether two object variables refer to the same instance.</span></span> <span data-ttu-id="9c4f9-104">이 비교는 값 형식에 대해 정의 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="9c4f9-104">This comparison is not defined for value types.</span></span>  
   
- <span data-ttu-id="79f2a-105">**오류 ID:** BC30020</span><span class="sxs-lookup"><span data-stu-id="79f2a-105">**Error ID:** BC30020</span></span>  
+ <span data-ttu-id="9c4f9-105">**오류 ID:** BC30020</span><span class="sxs-lookup"><span data-stu-id="9c4f9-105">**Error ID:** BC30020</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="79f2a-106">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="79f2a-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="9c4f9-106">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="9c4f9-106">To correct this error</span></span>  
   
-- <span data-ttu-id="79f2a-107">적절 한 산술 비교 연산자를 사용 하 여 또는 `Like` 두 개의 값 형식을 비교 하는 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="79f2a-107">Use the appropriate arithmetic comparison operator or the `Like` operator to compare two value types.</span></span>  
+- <span data-ttu-id="9c4f9-107">적절 한 산술 비교 연산자 또는 연산자를 사용 `Like` 하 여 두 개의 값 형식을 비교 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c4f9-107">Use the appropriate arithmetic comparison operator or the `Like` operator to compare two value types.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="79f2a-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="79f2a-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9c4f9-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="9c4f9-108">See also</span></span>
 
-- [<span data-ttu-id="79f2a-109">Is 연산자</span><span class="sxs-lookup"><span data-stu-id="79f2a-109">Is Operator</span></span>](../../../visual-basic/language-reference/operators/is-operator.md)
-- [<span data-ttu-id="79f2a-110">Like 연산자</span><span class="sxs-lookup"><span data-stu-id="79f2a-110">Like Operator</span></span>](../../../visual-basic/language-reference/operators/like-operator.md)
-- [<span data-ttu-id="79f2a-111">비교 연산자</span><span class="sxs-lookup"><span data-stu-id="79f2a-111">Comparison Operators</span></span>](../../../visual-basic/language-reference/operators/comparison-operators.md)
+- [<span data-ttu-id="9c4f9-109">Is 연산자</span><span class="sxs-lookup"><span data-stu-id="9c4f9-109">Is Operator</span></span>](../operators/is-operator.md)
+- [<span data-ttu-id="9c4f9-110">Like 연산자</span><span class="sxs-lookup"><span data-stu-id="9c4f9-110">Like Operator</span></span>](../operators/like-operator.md)
+- [<span data-ttu-id="9c4f9-111">비교 연산자</span><span class="sxs-lookup"><span data-stu-id="9c4f9-111">Comparison Operators</span></span>](../operators/comparison-operators.md)
