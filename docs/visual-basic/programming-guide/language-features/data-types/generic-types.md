@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: 3dcd7756b10fab8f66f4d5c10acedd8f600eb2e7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b14c7a3f1f667e7c13ec0ae46185ed3ece92beb8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350126"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84394054"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic의 제네릭 형식(Visual Basic)
 *제네릭 형식* 은 다양한 데이터 형식에 대해 동일한 기능을 수행하도록 조정되는 단일 프로그래밍 요소입니다. 제네릭 클래스 또는 프로시저를 정의할 때는 해당 기능을 수행하고자 하는 각 데이터 형식마다 별도의 버전을 정의할 필요가 없습니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "74350126"
   
  이제 `stringQ` 를 사용하여 `String` 값으로만 작업할 수 있습니다. `stringQ` 는 `String` 값에 일반화되는 것이 아니라 `Object` 에 한정되므로 런타임에 바인딩 또는 형식 변환이 없습니다. 이를 통해 실행 시간을 절약하고 런타임 오류를 줄일 수 있습니다.  
   
- 제네릭 형식 사용에 대한 자세한 내용은 [How to: Use a Generic Class](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)을 참조하세요.  
+ 제네릭 형식 사용에 대한 자세한 내용은 [How to: Use a Generic Class](how-to-use-a-generic-class.md)을 참조하세요.  
   
 ## <a name="example-of-a-generic-class"></a>제네릭 클래스의 예  
  다음 예에서는 제네릭 클래스의 기본 정의를 보여 줍니다.  
@@ -73,19 +73,19 @@ ms.locfileid: "74350126"
   
  [!code-vb[VbVbalrDataTypes#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#4)]  
   
- 더 자세한 예제는 [방법: 다른 데이터 형식에 동일한 기능을 제공할 수 있는 클래스 정의](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)를 참조 하세요.  
+ 더 자세한 예제는 [방법: 다른 데이터 형식에 동일한 기능을 제공할 수 있는 클래스 정의](how-to-define-a-class-that-can-provide-identical-functionality.md)를 참조 하세요.  
   
 ## <a name="eligible-programming-elements"></a>적용 가능한 프로그래밍 요소  
  제네릭 클래스, 구조체, 인터페이스, 프로시저 및 대리자를 정의하고 사용할 수 있습니다. .NET Framework은 일반적으로 사용 되는 제네릭 요소를 나타내는 몇 개의 제네릭 클래스, 구조체 및 인터페이스를 정의 합니다. <xref:System.Collections.Generic?displayProperty=nameWithType> 네임스페이스는 사전, 목록, 큐, 스택 등을 제공합니다. 제네릭 요소를 직접 정의하기 전에 <xref:System.Collections.Generic?displayProperty=nameWithType>에 이미 있지 않은지 확인하세요.  
   
- 프로시저는 형식이 아니지만 제네릭 프로시저를 정의하고 사용할 수 있습니다. [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)을 참조하세요.  
+ 프로시저는 형식이 아니지만 제네릭 프로시저를 정의하고 사용할 수 있습니다. [Generic Procedures in Visual Basic](generic-procedures.md)을 참조하세요.  
   
 ## <a name="advantages-of-generic-types"></a>제네릭 형식의 장점  
  제네릭 형식은 각각 특정 데이터 형식에서 작동하는 서로 다른 프로그래밍 요소 여러 개를 선언하는 기초의 역할을 합니다. 제네릭 형식의 대안은 다음과 같습니다.  
   
 1. `Object` 데이터 형식에서 작동하는 단일 형식.  
   
-2. 형식의 *형식 특정* 버전 집합. 각 버전은 `String`, `Integer`또는 사용자 정의 형식(예: `customer`)과 같은 하나의 특정 데이터 형식에 대해 개별적으로 코딩되고 작동합니다.  
+2. 형식의 *형식 특정* 버전 집합입니다. 각 버전은 `String` , 또는과 같은 사용자 정의 형식과 같은 하나의 특정 데이터 형식에 대해 개별적으로 코딩 되 고 작동 `Integer` `customer` 합니다.  
   
  이러한 대안에 비교했을 때 제네릭 형식에는 다음과 같은 장점이 있습니다.  
   
@@ -122,11 +122,11 @@ ms.locfileid: "74350126"
   
 - 형식 인수는 매개 변수 없는 생성자로부터 개체를 만드는 코드에 액세스할 수 있는 매개 변수 없는 생성자를 노출해야 함  
   
-- 형식 인수는 *참조 형식*이거나 *값 형식*이어야 함  
+- 형식 인수는 *참조 형식*이거나 *값 형식* 이어야 합니다.  
   
- 둘 이상의 요구 사항을 적용해야 하는 경우 쉼표로 구분된 *제약 조건 목록* 을 중괄호(`{ }`) 안에 넣으세요. 액세스 가능한 생성자를 요구 하려면 목록에 [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) 키워드를 포함 합니다. 참조 형식을 요구하려면 `Class` 키워드를 넣고, 값 형식을 요구하려면 `Structure` 키워드를 넣으세요.  
+ 둘 이상의 요구 사항을 적용해야 하는 경우 쉼표로 구분된 *제약 조건 목록* 을 중괄호(`{ }`) 안에 넣으세요. 액세스 가능한 생성자를 요구 하려면 목록에 [New Operator](../../../language-reference/operators/new-operator.md) 키워드를 포함 합니다. 참조 형식을 요구하려면 `Class` 키워드를 넣고, 값 형식을 요구하려면 `Structure` 키워드를 넣으세요.  
   
- 제약 조건에 대한 자세한 내용은 [Type List](../../../../visual-basic/language-reference/statements/type-list.md)을 참조하세요.  
+ 제약 조건에 대한 자세한 내용은 [Type List](../../../language-reference/statements/type-list.md)을 참조하세요.  
   
 ### <a name="example-of-multiple-constraints"></a>다중 제약 조건의 예  
  다음 예제에서는 형식 매개 변수에 제약 조건 목록이 있는 제네릭 클래스의 기본 정의를 보여 줍니다. 이 클래스의 인스턴스를 만드는 코드에서 형식 인수는 <xref:System.IComparable> 및 <xref:System.IDisposable> 인터페이스를 모두 구현해야 하고, 참조 형식어야 하며, 액세스 가능한 매개 변수 없는 생성자를 노출해야 합니다.  
@@ -148,14 +148,14 @@ ms.locfileid: "74350126"
   
 ## <a name="see-also"></a>참고 항목
 
-- [데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [형식 문자](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
-- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Visual Basic 형식 변환](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
-- [데이터 형식 문제 해결](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [데이터 형식](../../../../visual-basic/language-reference/data-types/index.md)
-- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
-- [As](../../../../visual-basic/language-reference/statements/as-clause.md)
-- [Object 데이터 형식](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [데이터 형식](index.md)
+- [형식 문자](type-characters.md)
+- [Value Types and Reference Types](value-types-and-reference-types.md)
+- [Visual Basic의 형식 변환](type-conversions.md)
+- [데이터 형식 문제 해결](troubleshooting-data-types.md)
+- [데이터 형식](../../../language-reference/data-types/index.md)
+- [으로](../../../language-reference/statements/of-clause.md)
+- [는](../../../language-reference/statements/as-clause.md)
+- [Object Data Type](../../../language-reference/data-types/object-data-type.md)
 - [공 분산 및 반공 분산](../../concepts/covariance-contravariance/index.md)
-- [반복기](../../../../visual-basic/programming-guide/concepts/iterators.md)
+- [반복기](../../concepts/iterators.md)

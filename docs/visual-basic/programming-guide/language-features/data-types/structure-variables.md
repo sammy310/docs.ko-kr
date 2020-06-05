@@ -7,16 +7,16 @@ helpviewer_keywords:
 - variables [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: 156872f8-aabc-4454-8e2d-f2253c3c13c9
-ms.openlocfilehash: 16b6cdc5a849b50f6caa8b7963dac5c12d63cf3e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 270e8ca26185e4a68def3b95f4ce6ab4c57a629c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346302"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84393587"
 ---
 # <a name="structure-variables-visual-basic"></a>구조체 변수(Visual Basic)
 
-구조를 만든 후에는 프로시저 수준 및 모듈 수준 변수를 해당 형식으로 선언할 수 있습니다. 예를 들어 컴퓨터 시스템에 대 한 정보를 기록 하는 구조를 만들 수 있습니다. 다음은 이에 대한 예입니다.
+구조를 만든 후에는 프로시저 수준 및 모듈 수준 변수를 해당 형식으로 선언할 수 있습니다. 예를 들어 컴퓨터 시스템에 대 한 정보를 기록 하는 구조를 만들 수 있습니다. 다음 예에 이러한 부하 분산 방식이 나와 있습니다.
 
 ```vb
 Public Structure systemInfo
@@ -33,11 +33,11 @@ Dim mySystem, yourSystem As systemInfo
 ```
 
 > [!NOTE]
-> 클래스 및 모듈에서 [Dim 문을](../../../../visual-basic/language-reference/statements/dim-statement.md) 사용 하 여 선언 된 구조체는 기본적으로 공용 액세스를 사용 합니다. 구조체를 private로 설정 하려면 [private](../../../../visual-basic/language-reference/modifiers/private.md) 키워드를 사용 하 여 구조체를 선언 해야 합니다.
+> 클래스 및 모듈에서 [Dim 문을](../../../language-reference/statements/dim-statement.md) 사용 하 여 선언 된 구조체는 기본적으로 공용 액세스를 사용 합니다. 구조체를 private로 설정 하려면 [private](../../../language-reference/modifiers/private.md) 키워드를 사용 하 여 구조체를 선언 해야 합니다.
 
 ## <a name="access-to-structure-values"></a>구조 값에 대 한 액세스
 
-구조체 변수의 요소에서 값을 할당 하 고 검색 하려면를 사용할 때와 동일한 구문을 사용 하 여 개체에 대 한 속성을 설정 하 고 가져옵니다. 구조체 변수 이름과 요소 이름 사이에 멤버 액세스 연산자 (`.`)를 저장 합니다. 다음 예제에서는 이전에 `systemInfo`형식으로 선언 된 변수의 요소에 액세스 합니다.
+구조체 변수의 요소에서 값을 할당 하 고 검색 하려면를 사용할 때와 동일한 구문을 사용 하 여 개체에 대 한 속성을 설정 하 고 가져옵니다. `.`구조체 변수 이름과 요소 이름 사이에 멤버 액세스 연산자 ()를 추가 합니다. 다음 예제에서는 이전에 형식으로 선언 된 변수의 요소에 액세스 합니다 `systemInfo` .
 
 ```vb
 mySystem.cPU = "486"
@@ -53,17 +53,17 @@ If yourSystem.purchaseDate < #1/1/1992# Then tooOld = True
 yourSystem = mySystem
 ```
 
-구조체 요소가 `String`, `Object`또는 배열과 같은 참조 형식이 면 데이터에 대 한 포인터가 복사 됩니다. 이전 예제에서 `systemInfo` 개체 변수를 포함 한 경우 위의 예제는 `mySystem`에서 `yourSystem`로 포인터를 복사 했 고 한 구조를 통해 개체의 데이터 변경 내용이 다른 구조를 통해 액세스 될 때 적용 됩니다.
+구조체 요소가, 또는 배열과 같은 참조 형식이 면 `String` `Object` 데이터에 대 한 포인터가 복사 됩니다. 이전 예제에서가 `systemInfo` 개체 변수를 포함 한 경우 앞의 예제는에서로 포인터를 복사 했 `mySystem` `yourSystem` 고 한 구조를 통해 개체의 데이터 변경 내용이 다른 구조를 통해 액세스 될 때 적용 됩니다.
 
 ## <a name="see-also"></a>참고 항목
 
-- [데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [기본 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
-- [복합 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
-- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [구조체](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [데이터 형식 문제 해결](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [방법: 구조체 선언](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
-- [구조체 및 기타 프로그래밍 요소](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)
-- [구조체와 클래스](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
-- [Structure 문](../../../../visual-basic/language-reference/statements/structure-statement.md)
+- [데이터 형식](index.md)
+- [기본 데이터 형식](elementary-data-types.md)
+- [복합 데이터 형식](composite-data-types.md)
+- [Value Types and Reference Types](value-types-and-reference-types.md)
+- [구조체](structures.md)
+- [데이터 형식 문제 해결](troubleshooting-data-types.md)
+- [방법: 구조 선언](how-to-declare-a-structure.md)
+- [구조체 및 기타 프로그래밍 요소](structures-and-other-programming-elements.md)
+- [구조체와 클래스](structures-and-classes.md)
+- [Structure 문](../../../language-reference/statements/structure-statement.md)

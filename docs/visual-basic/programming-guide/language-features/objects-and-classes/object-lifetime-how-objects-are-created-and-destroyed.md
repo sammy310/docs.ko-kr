@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 8d9647fa490077f9f6ef82f30eccc4d5ee271985
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e81e131933e0997756ed4185a3ceb12ad19b78de
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346101"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84392885"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>개체 수명: 개체가 만들어지고 소멸되는 방법(Visual Basic)
 
@@ -37,11 +37,11 @@ ms.locfileid: "74346101"
 
 ## <a name="using-constructors-and-destructors"></a>생성자 및 소멸자 사용
 
-생성자와 소멸자는 개체 만들기 및 소멸을 제어합니다. 의 `Sub New` 및 `Sub Finalize` 프로시저는 개체를 초기화 및 제거 Visual Basic 합니다. Visual Basic 6.0 이전 버전에서 사용 되는 `Class_Initialize` 및 `Class_Terminate` 메서드를 대체 합니다.
+생성자와 소멸자는 개체 만들기 및 소멸을 제어합니다. `Sub New`의 및 `Sub Finalize` 프로시저는 개체를 초기화 및 제거 Visual Basic `Class_Initialize` `Class_Terminate` Visual Basic 6.0 이전 버전에서 사용 되는 및 메서드를 대체 합니다.
 
 ### <a name="sub-new"></a>Sub New
 
-`Sub New` 생성자는 클래스를 만들 때 한 번만 실행할 수 있으며, 같은 클래스나 파생 클래스에서 다른 생성자의 첫 번째 코드 줄이 아닌 위치에서 명시적으로 호출할 수는 없습니다. 또한 `Sub New` 메서드의 코드는 항상 클래스의 다른 코드보다 먼저 실행됩니다. 클래스에 대 한 `Sub New` 프로시저를 명시적으로 정의 하지 않은 경우 런타임에는 런타임에 `Sub New` 생성자를 명시적으로 만듭니다. Visual Basic
+`Sub New` 생성자는 클래스를 만들 때 한 번만 실행할 수 있으며, 같은 클래스나 파생 클래스에서 다른 생성자의 첫 번째 코드 줄이 아닌 위치에서 명시적으로 호출할 수는 없습니다. 또한 `Sub New` 메서드의 코드는 항상 클래스의 다른 코드보다 먼저 실행됩니다. `Sub New` `Sub New` 클래스에 대 한 프로시저를 명시적으로 정의 하지 않은 경우 런타임에는 런타임에 생성자를 암시적으로 만듭니다. Visual Basic
 
 클래스의 생성자를 만들려면 클래스 정의 내 임의의 위치에 `Sub New` 프로시저를 만듭니다. 매개 변수화된 생성자를 만들려면 다음 코드에 나와 있는 것처럼 다른 프로시저에 인수를 지정할 때와 마찬가지로 `Sub New`에 인수의 이름과 데이터 형식을 지정합니다.
 
@@ -51,9 +51,9 @@ ms.locfileid: "74346101"
 
 [!code-vb[VbVbalrOOP#116](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/WhidbeyStuff.vb#116)]
 
-다른 클래스에서 파생되는 클래스를 정의할 때 생성자의 첫 줄은 기본 클래스의 생성자에 대한 호출이어야 합니다. 단, 기본 클래스에 매개 변수가 없는 액세스 가능 생성자가 있는 경우는 예외입니다. 예를 들어 위의 생성자를 포함하는 기본 클래스에 대한 호출은 `MyBase.New(s)`가 됩니다. 그렇지 않으면 `MyBase.New`는 선택 사항이 며 Visual Basic 런타임은이를 암시적으로 호출 합니다.
+다른 클래스에서 파생되는 클래스를 정의할 때 생성자의 첫 줄은 기본 클래스의 생성자에 대한 호출이어야 합니다. 단, 기본 클래스에 매개 변수가 없는 액세스 가능 생성자가 있는 경우는 예외입니다. 예를 들어 위의 생성자를 포함하는 기본 클래스에 대한 호출은 `MyBase.New(s)`가 됩니다. 그렇지 않으면 `MyBase.New` 는 선택 사항이 며 Visual Basic 런타임에서는이를 암시적으로 호출 합니다.
 
-부모 개체의 생성자를 호출하는 코드를 작성한 후에는 `Sub New` 프로시저에 초기화 코드를 더 추가할 수 있습니다. 매개 변수가 있는 생성자로 호출 될 경우 `Sub New`는 인수를 사용할 수 있습니다. 이러한 매개 변수는 생성자를 호출하는 프로시저에서 전달됩니다(예: `Dim AnObject As New ThisClass(X)`).
+부모 개체의 생성자를 호출하는 코드를 작성한 후에는 `Sub New` 프로시저에 초기화 코드를 더 추가할 수 있습니다. `Sub New`는 매개 변수화된 생성자로 호출할 때 인수를 허용할 수 있습니다. 이러한 매개 변수는 생성자를 호출하는 프로시저에서 전달됩니다(예: `Dim AnObject As New ThisClass(X)`).
 
 ### <a name="sub-finalize"></a>Sub Finalize
 
@@ -64,14 +64,14 @@ CLR은 개체를 해제하기 전에 `Finalize` 프로시저를 정의하는 개
 
 `Finalize` 소멸자는 소멸자가 속한 클래스나 파생 클래스에서만 호출할 수 있는 보호된 메서드입니다. 시스템은 개체 소멸 시 `Finalize`를 자동으로 호출하므로 파생 클래스의 `Finalize` 구현 외부에서 `Finalize`를 명시적으로 호출해서는 안 됩니다.
 
-개체가 nothing으로 설정되는 즉시 실행되는 `Class_Terminate`와는 달리, 개체 범위가 손실되는 시점과 Visual Basic에서 `Finalize` 소멸자를 호출하는 시점 사이에는 대개 지연 시간이 생깁니다. Visual Basic .NET을 사용 하면 언제 든 지 명시적으로 호출 하 여 리소스를 즉시 해제할 수 있는 두 번째 유형의 소멸자 인 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>를 사용할 수 있습니다.
+개체가 nothing으로 설정되는 즉시 실행되는 `Class_Terminate`와는 달리, 개체 범위가 손실되는 시점과 Visual Basic에서 `Finalize` 소멸자를 호출하는 시점 사이에는 대개 지연 시간이 생깁니다. Visual Basic .NET은 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 리소스를 즉시 해제 하기 위해 언제 든 지 명시적으로 호출할 수 있는 두 번째 종류의 소멸자를 허용 합니다.
 
 > [!NOTE]
 > `Finalize` 소멸자는 예외를 throw해서는 안 됩니다. 이러한 예외는 애플리케이션에서 처리할 수 없으며 throw되는 경우 애플리케이션이 종료되기 때문입니다.
 
 ### <a name="how-new-and-finalize-methods-work-in-a-class-hierarchy"></a>클래스 계층 구조에서 New 및 Finalize 메서드가 작동하는 방식
 
-클래스의 인스턴스를 만들 때마다 CLR(공용 언어 런타임)은 `New` 프로시저가 개체에 있으면 해당 프로시저의 실행을 시도합니다. `New`은 개체의 다른 코드를 실행 하기 전에 새 개체를 초기화 하는 데 사용 되는 `constructor` 이라는 프로시저의 형식입니다. `New` 생성자를 사용하여 파일을 열고, 데이터베이스에 연결하고, 변수를 초기화하고, 개체를 사용하려면 수행해야 하는 기타 작업을 처리할 수 있습니다.
+클래스의 인스턴스를 만들 때마다 CLR(공용 언어 런타임)은 `New` 프로시저가 개체에 있으면 해당 프로시저의 실행을 시도합니다. `New`는 개체의 다른 코드가 실행되기 전에 새 개체를 초기화하는 데 사용되는 `constructor`라는 프로시저 형식입니다. `New` 생성자를 사용하여 파일을 열고, 데이터베이스에 연결하고, 변수를 초기화하고, 개체를 사용하려면 수행해야 하는 기타 작업을 처리할 수 있습니다.
 
 파생 클래스의 인스턴스를 만들 때는 기본 클래스의 `Sub New` 생성자가 먼저 실행되고 파생 클래스의 생성자가 실행됩니다. `Sub New` 생성자의 첫 번째 코드 줄은 `MyBase.New()` 구문을 사용하여 클래스 계층 구조에서 바로 위에 있는 클래스의 생성자를 호출하기 때문입니다. 그 다음에는 기본 클래스의 생성자에 도달할 때까지 클래스 계층 구조의 각 클래스에 대해 `Sub New` 생성자가 호출됩니다. 기본 클래스의 생성자에 도달하면 기본 클래스 생성자의 코드가 실행되며, 모든 파생 클래스 내 각 생성자의 코드와 대부분의 파생 클래스 내 코드가 마지막으로 실행됩니다.
 
@@ -85,7 +85,7 @@ CLR은 개체가 더 이상 필요하지 않으면 메모리를 해제하기 전
 
 클래스 인스턴스는 Windows 핸들 및 데이터베이스 연결과 같이 CLR에서 관리하지 않는 리소스를 제어하는 경우가 많습니다. 이러한 리소스는 클래스의 `Finalize` 메서드에서 삭제되어야 하므로 가비지 수집기가 개체를 소멸시킬 때 해제됩니다. 그러나 가비지 컬렉션기는 CLR에 사용 가능한 메모리가 더 필요할 때만 개체를 제거합니다. 즉, 개체가 범위를 벗어난 후 오랜 시간이 지날 때까지 리소스가 해제되지 않을 수도 있습니다.
 
-가비지 수집을 보완하기 위해 클래스는 <xref:System.IDisposable> 인터페이스를 구현하는 경우 시스템 리소스를 실제로 관리하는 메커니즘을 제공할 수 있습니다. <xref:System.IDisposable>에는 클라이언트에서 개체 사용을 마칠 때 호출 해야 하는 <xref:System.IDisposable.Dispose%2A>한 메서드가 있습니다. <xref:System.IDisposable.Dispose%2A> 메서드를 사용하면 리소스를 즉시 해제하고 데이터베이스 연결 및 파일 닫기와 같은 작업을 수행할 수 있습니다. `Finalize` 소멸자와 달리 <xref:System.IDisposable.Dispose%2A> 메서드는 자동으로 호출되지 않기 때문에 리소스를 즉시 해제하려는 경우 클래스의 클라이언트가 <xref:System.IDisposable.Dispose%2A>를 명시적으로 호출해야 합니다.
+가비지 수집을 보완하기 위해 클래스는 <xref:System.IDisposable> 인터페이스를 구현하는 경우 시스템 리소스를 실제로 관리하는 메커니즘을 제공할 수 있습니다. <xref:System.IDisposable>에는 클라이언트가 개체 사용을 완료할 때 호출해야 하는 <xref:System.IDisposable.Dispose%2A>라는 메서드가 있습니다. <xref:System.IDisposable.Dispose%2A> 메서드를 사용하면 리소스를 즉시 해제하고 데이터베이스 연결 및 파일 닫기와 같은 작업을 수행할 수 있습니다. `Finalize` 소멸자와 달리 <xref:System.IDisposable.Dispose%2A> 메서드는 자동으로 호출되지 않기 때문에 리소스를 즉시 해제하려는 경우 클래스의 클라이언트가 <xref:System.IDisposable.Dispose%2A>를 명시적으로 호출해야 합니다.
 
 ### <a name="implementing-idisposable"></a>IDisposable 구현
 
@@ -155,10 +155,10 @@ CLR은 시스템에서 더 이상 필요하지 않다고 결정하는 개체를 
 
 가비지 컬렉션 시스템 간의 또 다른 차이점은 `Nothing` 사용법입니다. Visual Basic 6.0 이하 버전에서는 프로그래머가 참조 횟수 기능을 활용하기 위해 개체 변수에 `Nothing`을 할당하여 해당 변수에 저장된 참조를 해제하는 경우가 있었습니다. 이때 개체에 대한 마지막 참조가 변수에 저장되어 있었다면 해당 개체의 리소스가 즉시 해제됩니다. 최신 Visual Basic 버전에서는 이 프로시저가 계속 유용한 경우도 있지만, 해당 프로시저를 수행해도 참조되는 개체가 리소스를 즉시 해제하지는 않습니다. 리소스를 즉시 해제하려면 개체의 <xref:System.IDisposable.Dispose%2A> 메서드를 사용합니다(사용 가능한 경우). 가비지 수집기가 분리된 개체를 검색하는 데 걸리는 시간에 비해 변수의 수명이 더 긴 경우에만 해당 변수를 `Nothing`로 설정해야 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.IDisposable.Dispose%2A>
-- [구성 요소 초기화 및 종료](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ws9dc6t6(v=vs.120))
-- [New 연산자](../../../../visual-basic/language-reference/operators/new-operator.md)
-- [관리되지 않는 리소스 정리](../../../../standard/garbage-collection/unmanaged.md)
-- [Nothing](../../../../visual-basic/language-reference/nothing.md)
+- [구성 요소의 초기화 및 종료](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ws9dc6t6(v=vs.120))
+- [새 운영자](../../../language-reference/operators/new-operator.md)
+- [관리 되지 않는 리소스 정리](../../../../standard/garbage-collection/unmanaged.md)
+- [Nothing](../../../language-reference/nothing.md)
