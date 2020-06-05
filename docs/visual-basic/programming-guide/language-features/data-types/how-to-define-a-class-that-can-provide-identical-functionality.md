@@ -26,12 +26,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: d80623d9e55358d37aa45f11f1525c80a09b91a6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3b1f47250453c32735d633b98da0bd0ddb1ed5b9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350049"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84393859"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>방법: 다른 데이터 형식에 동일한 기능을 제공할 수 있는 클래스 정의(Visual Basic)
 여러 데이터 형식에 대해 동일한 기능을 제공하는 개체를 만들 수 있는 클래스를 정의할 수 있습니다. 이렇게 하려면 정의에 하나 이상의 *형식 매개 변수* 를 지정합니다. 그러면 클래스는 여러 데이터 형식을 사용하는 개체의 템플릿 역할을 할 수 있습니다. 이 방법으로 정의된 클래스를 *제네릭 클래스*라고 합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "74350049"
   
 1. 일반적인 방법으로 클래스를 정의합니다.  
   
-2. 형식 매개 변수를 지정하려면 클래스 이름 바로 뒤에 `(Of` *typeparameter*`)` 를 추가하세요.  
+2. `(Of` *typeparameter* `)` 형식 매개 변수를 지정 하려면 클래스 이름 바로 뒤에 typeparameter를 추가 합니다.  
   
 3. 형식 매개 변수가 두 개 이상인 경우에는 쉼표로 구분된 목록을 괄호 안에 넣으세요. `Of` 키워드는 반복하지 마세요.  
   
@@ -56,13 +56,13 @@ ms.locfileid: "74350049"
   
     - 매개 변수 없는 생성자 노출  
   
-     제약 조건을 지정하지 않으면 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)에서 지원되는 작업 및 멤버만 코드에서 사용할 수 있습니다. 자세한 내용은 [Type List](../../../../visual-basic/language-reference/statements/type-list.md)을 참조하세요.  
+     제약 조건을 지정하지 않으면 [Object Data Type](../../../language-reference/data-types/object-data-type.md)에서 지원되는 작업 및 멤버만 코드에서 사용할 수 있습니다. 자세한 내용은 [Type List](../../../language-reference/statements/type-list.md)을 참조하세요.  
   
-5. 제공된 형식으로 선언될 모든 클래스 멤버를 식별하고 이를 `As` `typeparameter`로 선언합니다. 이는 내부 스토리지, 프로시저 매개 변수 및 반환 값에 적용됩니다.  
+5. 제공 된 형식으로 선언 될 모든 클래스 멤버를 식별 하 고이를 선언 `As` `typeparameter` 합니다. 이는 내부 스토리지, 프로시저 매개 변수 및 반환 값에 적용됩니다.  
   
 6. `itemType`에 제공할 수 있는 모든 데이터 형식이 지원하는 작업 및 메서드만 코드에서 사용해야 합니다.  
   
-     다음 예에서는 매우 간단한 목록을 관리하는 클래스를 정의합니다. 내부 배열 `items`에 목록을 저장하며 코드를 사용하여 목록 요소의 데이터 형식을 선언할 수 있습니다. 매개 변수가 있는 생성자를 사용 하면 코드를 사용 하 여 `items`상한을 설정할 수 있으며, 매개 변수가 없는 생성자는이를 9 (총 10 개 항목)로 설정 합니다.  
+     다음 예에서는 매우 간단한 목록을 관리하는 클래스를 정의합니다. 내부 배열 `items`에 목록을 저장하며 코드를 사용하여 목록 요소의 데이터 형식을 선언할 수 있습니다. 매개 변수가 있는 생성자를 사용 하면 코드를 사용 하 여의 상한을 설정할 수 `items` 있으며, 매개 변수가 없는 생성자는이를 9 (총 10 개 항목)로 설정 합니다.  
   
      [!code-vb[VbVbalrDataTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#7)]  
   
@@ -76,10 +76,10 @@ ms.locfileid: "74350049"
   
 ## <a name="see-also"></a>참고 항목
 
-- [데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [데이터 형식](index.md)
+- [Visual Basic의 제네릭 형식](generic-types.md)
 - [언어 독립성 및 언어 독립적 구성 요소](../../../../standard/language-independence-and-language-independent-components.md)
-- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
-- [형식 목록](../../../../visual-basic/language-reference/statements/type-list.md)
-- [방법: 제네릭 클래스 사용](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
-- [Object 데이터 형식](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [으로](../../../language-reference/statements/of-clause.md)
+- [Type List](../../../language-reference/statements/type-list.md)
+- [방법: 제네릭 클래스 사용](how-to-use-a-generic-class.md)
+- [Object Data Type](../../../language-reference/data-types/object-data-type.md)
