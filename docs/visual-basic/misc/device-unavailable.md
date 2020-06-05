@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID68
 ms.assetid: 9a89beda-140e-4b32-8d0a-2dc598ef279a
-ms.openlocfilehash: 2738ce692f5eb2df433cd5cb1a5e1ae4a5968cab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d1c31af1df65855d3632e64983314767f76c9375
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970081"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84394793"
 ---
 # <a name="device-unavailable"></a>디바이스를 사용할 수 없습니다.
 네트워크 연결이 끊어졌거나, 액세스하려는 디바이스가 오프라인 상태이거나 존재하지 않습니다.  
@@ -20,6 +20,6 @@ ms.locfileid: "61970081"
   
 2. 네트워크에 다시 연결하여 시도합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [오류 형식](../../visual-basic/programming-guide/language-features/error-types.md)
+- [오류 유형](../programming-guide/language-features/error-types.md)

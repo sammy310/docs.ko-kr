@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC42324
 ms.assetid: b5c2c4bd-3b2a-4a73-aaeb-55728eb03b68
-ms.openlocfilehash: 3335da503b6fb9c33e44266997cc945214a3a365
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: aa3e1d6281af22b301a4697b265ed3fbf23e3de4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64913069"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84373916"
 ---
 # <a name="using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results"></a>람다 식에 반복 변수를 사용하면 예기치 않은 결과가 발생할 수 있습니다.
-람다 식에 반복 변수를 사용 하 여 있을 예기치 않은 결과입니다. 대신 루프 내의 지역 변수를 만들고 반복 변수의 값을 할당 합니다.  
+람다 식에 반복 변수를 사용 하면 예기치 않은 결과가 발생할 수 있습니다. 대신 루프 내에서 지역 변수를 만들고 반복 변수의 값을 할당 합니다.  
   
- 루프 반복 변수를 사용 하 여 루프 내에서 선언 된 람다 식에서이 경고가 표시 됩니다. 예를 들어, 다음 예제에서는 경고를 표시 합니다.  
+ 이 경고는 루프 내에서 선언 된 람다 식에서 루프 반복 변수를 사용 하는 경우에 나타납니다. 예를 들어 다음 예제에서는 경고가 표시 되도록 합니다.  
   
 ```vb  
 For i As Integer = 1 To 10  
@@ -26,7 +26,7 @@ For i As Integer = 1 To 10
 Next  
 ```  
   
- 다음 예제에서는 발생할 수 있는 예기치 않은 결과 보여 줍니다.  
+ 다음 예에서는 예기치 않은 결과가 발생할 수 있는 경우를 보여 줍니다.  
   
 ```vb  
 Module Module1  
@@ -45,7 +45,7 @@ Module Module1
 End Module  
 ```  
   
- 합니다 `For` 루프는 각 루프 반복 변수의 값을 반환 람다 식의 배열을 만듭니다 `i`합니다. 람다 식의 평가 하는 경우는 `For Each` 루프를 예상할 수 0, 1, 2, 3 및 4 표시의 연속 값을 보려면 `i` 에 `For` 루프. 최종 값 대신 표시 `i` 다섯 번 표시 됩니다.  
+ `For`루프는 각각 루프 반복 변수의 값을 반환 하는 람다 식의 배열을 만듭니다 `i` . 루프에서 람다 식을 계산 하는 경우 `For Each` 루프에서의 연속 값이 0, 1, 2, 3 및 4로 표시 될 수 있습니다 `i` `For` . 대신, 최종 값이 `i` 5 번 표시 됩니다.  
   
  `5`  
   
@@ -63,7 +63,7 @@ End Module
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-- 반복 변수의 값을 지역 변수에 할당 및 람다 식에 지역 변수를 사용 합니다.  
+- 반복 변수의 값을 지역 변수에 할당 하 고 람다 식에서 지역 변수를 사용 합니다.  
   
 ```vb  
 Module Module1  
@@ -83,6 +83,6 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [람다 식](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [람다 식](../../programming-guide/language-features/procedures/lambda-expressions.md)

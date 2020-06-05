@@ -1,13 +1,13 @@
 ---
-title: XElement 및 XDocument Objects2의 올바른 콘텐츠
+title: XElement 및 XDocument Objects2의 유효한 콘텐츠
 ms.date: 07/20/2015
 ms.assetid: 400bb692-478a-40b6-ac1b-4ccbb4cbbd02
-ms.openlocfilehash: 5e9b5ec54b3005d18a1a0da10d78d3c8ad5300ea
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d222f19f6f588968a3ef1515dca522a4a80e1ffb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614356"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364346"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>XElement 및 XDocument 개체의 올바른 콘텐츠
 이 항목에서는 생성자에 전달될 수 있는 유효한 인수에 대해 설명하고 내용을 요소와 문서에 추가하는 데 사용하는 메서드에 대한 정보를 제공합니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "64614356"
   
 - <xref:System.Xml.Linq.XAttribute>  
   
-- <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 임의의 형식  
+- 구현하는 모든 형식 <xref:System.Collections.Generic.IEnumerable%601>  
   
  개체가 <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 경우 개체의 컬렉션이 열거되고 컬렉션의 모든 항목이 추가됩니다. 컬렉션에 <xref:System.Xml.Linq.XNode> 또는 <xref:System.Xml.Linq.XAttribute> 개체가 포함되어 있으면 컬렉션의 각 항목이 개별적으로 추가됩니다. 컬렉션에 텍스트(또는 텍스트로 변환된 개체)가 포함되어 있으면 컬렉션의 텍스트가 연결되어 단일 텍스트 노드로 추가됩니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "64614356"
 ## <a name="valid-content-for-documents"></a>문서의 유효한 내용  
  특성과 간단한 내용은 문서에 추가될 수 없습니다.  
   
- <xref:System.Xml.Linq.XDocument>를 만들어야 하는 경우는 많지 않습니다. 대신 일반적으로 <xref:System.Xml.Linq.XElement> 루트 노드를 사용하여 XML 트리를 만들 수 있습니다. 문서를 만들어야 하는 특정 요구 사항(예를 들어, 최상위 수준에서 처리 명령과 주석을 만들어야 하거나 문서 형식을 지원해야 하는 경우)이 없는 한 <xref:System.Xml.Linq.XElement>를 루트 노드로 사용하는 것이 더 편리한 경우가 많습니다.  
+ <xref:System.Xml.Linq.XDocument>를 만들어야 하는 시나리오는 많지 않습니다. 대신 일반적으로 <xref:System.Xml.Linq.XElement> 루트 노드를 사용하여 XML 트리를 만들 수 있습니다. 문서를 만들어야 하는 특정 요구 사항(예를 들어, 최상위 수준에서 처리 명령과 주석을 만들어야 하거나 문서 형식을 지원해야 하는 경우)이 없는 한 <xref:System.Xml.Linq.XElement>를 루트 노드로 사용하는 것이 더 편리한 경우가 많습니다.  
   
  문서의 유효한 내용은 다음과 같습니다.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "64614356"
 ## <a name="constructors-and-functions-that-allow-adding-content"></a>내용 추가를 허용하는 생성자 및 함수  
  다음 메서드를 사용하여 자식 내용을 <xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XDocument>에 추가할 수 있습니다.  
   
-|메서드|설명|  
+|방법|Description|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.%23ctor%2A>|<xref:System.Xml.Linq.XElement>를 생성합니다.|  
 |<xref:System.Xml.Linq.XDocument.%23ctor%2A>|<xref:System.Xml.Linq.XDocument>를 생성합니다.|  
@@ -88,6 +88,6 @@ ms.locfileid: "64614356"
 |<xref:System.Xml.Linq.XContainer.ReplaceNodes%2A>|자식 노드를 새 내용으로 바꿉니다.|  
 |<xref:System.Xml.Linq.XNode.ReplaceWith%2A>|노드를 새 내용으로 바꿉니다.|  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [XML 트리 만들기 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [XML 트리 만들기 (Visual Basic)](creating-xml-trees.md)

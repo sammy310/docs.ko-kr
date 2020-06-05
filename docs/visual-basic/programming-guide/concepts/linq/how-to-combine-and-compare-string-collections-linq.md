@@ -2,12 +2,12 @@
 title: '방법: 문자열 컬렉션 결합 및 비교(LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: 2df5db16e51e8f9de8a8e3506eb1f7b737065a14
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 271ef7805cd2285fa2d8796a31257c0f31bb9a76
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337566"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374864"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>방법: 문자열 컬렉션 결합 및 비교 (LINQ) (Visual Basic)
 
@@ -45,7 +45,7 @@ ms.locfileid: "75337566"
     El Yassir, Mehdi
     ```
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 ```vb
 Class ConcatenateStrings
@@ -165,9 +165,9 @@ End Class
 
 ## <a name="compile-the-code"></a>코드 컴파일
 
-Visual Basic 콘솔 응용 프로그램 프로젝트를 만듭니다. System.xml 네임 스페이스에 대 한 `Imports` 문을 추가 합니다.
+Visual Basic 콘솔 응용 프로그램 프로젝트를 만듭니다. System.xml `Imports` 네임 스페이스에 대 한 문을 추가 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [LINQ 및 문자열 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ 및 파일 디렉터리(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ 및 문자열(Visual Basic)](linq-and-strings.md)
+- [LINQ 및 파일 디렉터리(Visual Basic)](linq-and-file-directories.md)

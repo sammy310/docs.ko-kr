@@ -12,12 +12,12 @@ helpviewer_keywords:
 - generics [Visual Basic], procedures
 - generic procedures [Visual Basic], type inference
 ms.assetid: 95577b28-137f-4d5c-a149-919c828600e5
-ms.openlocfilehash: 16a629e07cf711778b3d8d1863958ec7a6300649
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2efc0410b9d4bb663e1ff19d5a5456d7ff2c99bd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350079"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84394067"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Generic Procedures in Visual Basic
 제네릭 *메서드*라고도 하는 *제네릭 프로시저*는 하나 이상의 형식 매개 변수를 사용 하 여 정의 된 프로시저입니다. 이를 통해 호출 코드는 프로시저를 호출할 때마다 데이터 형식을 요구 사항에 맞게 조정할 수 있습니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "74350079"
  제네릭 프로시저의 형식 매개 변수는 해당 형식 매개 변수를 반환 형식 (있는 경우) 및 해당 프로시저 코드에 사용할 수 있습니다.  
   
 ## <a name="type-inference"></a>형식 유추  
- 모든 형식 인수를 제공 하지 않고 제네릭 프로시저를 호출할 수 있습니다. 이러한 방식으로 호출 하는 경우 컴파일러는 적절 한 데이터 형식을 확인 하 여 프로시저의 형식 인수에 전달 합니다. 이를 *형식 유추*라고 합니다. 다음 코드는 `t`형식 매개 변수에 `String` 형식을 전달 해야 한다는 것을 컴파일러에서 유추 하는 호출을 보여 줍니다.  
+ 모든 형식 인수를 제공 하지 않고 제네릭 프로시저를 호출할 수 있습니다. 이러한 방식으로 호출 하는 경우 컴파일러는 적절 한 데이터 형식을 확인 하 여 프로시저의 형식 인수에 전달 합니다. 이를 *형식 유추*라고 합니다. 다음 코드는 컴파일러에서 형식 매개 변수에 형식을 전달 해야 한다는 것을 유추 하는 호출을 보여 줍니다 `String` `t` .  
   
  [!code-vb[VbVbalrDataTypes#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#15)]  
   
@@ -49,27 +49,27 @@ End Sub
   
 ## <a name="example"></a>예제  
   
-### <a name="description"></a>설명  
- 다음 예제에서는 배열의 특정 요소를 찾기 위한 일반적인 `Function` 프로시저를 정의 합니다. 하나의 형식 매개 변수를 정의 하 고이를 사용 하 여 매개 변수 목록에서 두 개의 매개 변수를 생성 합니다.  
+### <a name="description"></a>Description  
+ 다음 예제에서는 `Function` 배열에서 특정 요소를 찾기 위한 제네릭 프로시저를 정의 합니다. 하나의 형식 매개 변수를 정의 하 고이를 사용 하 여 매개 변수 목록에서 두 개의 매개 변수를 생성 합니다.  
   
 ### <a name="code"></a>코드  
  [!code-vb[VbVbalrDataTypes#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#14)]  
   
-### <a name="comments"></a>설명  
- 앞의 예제에서는 `searchArray`의 각 요소에 대해 `searchValue`를 비교 하는 기능이 필요 합니다. 이 기능을 보장 하기 위해 `T` 형식 매개 변수를 제한 하 여 <xref:System.IComparable%601> 인터페이스를 구현 합니다. `T`에 제공 된 형식 인수가 `=` 연산자를 지원함을 보장 하지 않기 때문에이 코드에서는 `=` 연산자 대신 <xref:System.IComparable%601.CompareTo%2A> 메서드를 사용 합니다.  
+### <a name="comments"></a>주석  
+ 앞의 예제에서는의 각 요소를 비교 하는 기능이 필요 합니다 `searchValue` `searchArray` . 이 기능을 보장 하기 위해 형식 매개 변수를 제한 하 여 `T` 인터페이스를 구현 <xref:System.IComparable%601> 합니다. <xref:System.IComparable%601.CompareTo%2A> `=` 에 제공 된 형식 인수가 연산자를 지원 한다는 보장이 없으므로 코드는 연산자 대신 메서드를 사용 합니다 `T` `=` .  
   
- 다음 코드를 사용 하 여 `findElement` 프로시저를 테스트할 수 있습니다.  
+ 다음 코드를 사용 하 여 프로시저를 테스트할 수 있습니다 `findElement` .  
   
  [!code-vb[VbVbalrDataTypes#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#13)]  
   
- 위의 `MsgBox` 호출은 각각 "0", "1" 및 "-1"을 표시 합니다.  
+ 앞의 호출은 `MsgBox` 각각 "0", "1" 및 "-1"을 표시 합니다.  
   
 ## <a name="see-also"></a>참고 항목
 
-- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [방법: 다른 데이터 형식에 동일한 기능을 제공할 수 있는 클래스 정의](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)
-- [방법: 제네릭 클래스 사용](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
-- [절차](../../../../visual-basic/programming-guide/language-features/procedures/index.md)
-- [프로시저 매개 변수 및 인수](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)
-- [형식 목록](../../../../visual-basic/language-reference/statements/type-list.md)
-- [매개 변수 목록](../../../../visual-basic/language-reference/statements/parameter-list.md)
+- [Visual Basic의 제네릭 형식](generic-types.md)
+- [방법: 다른 데이터 형식에 동일한 기능을 제공할 수 있는 클래스 정의](how-to-define-a-class-that-can-provide-identical-functionality.md)
+- [방법: 제네릭 클래스 사용](how-to-use-a-generic-class.md)
+- [절차](../procedures/index.md)
+- [프로시저 매개 변수 및 인수](../procedures/procedure-parameters-and-arguments.md)
+- [Type List](../../../language-reference/statements/type-list.md)
+- [매개 변수 목록](../../../language-reference/statements/parameter-list.md)

@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID35
 ms.assetid: 661fdb90-ee7d-40ce-b30b-5e7267bd957a
-ms.openlocfilehash: 8b81460eccb6be8baa2ea7bc68d0f80c9d16398e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9eb13d943f9f1cffc984847f7339111e06f5aa6b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349571"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84373929"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Sub 또는 Function이 정의되지 않았습니다(Visual Basic).
-`Sub` 또는 `Function`를 호출 하기 위해 정의 해야 합니다. 이 오류가 발생하는 원인은 다음과 같습니다.  
+`Sub`또는를 `Function` 호출 하기 위해 정의 해야 합니다. 이 오류가 발생하는 원인은 다음과 같습니다.  
   
 - 프로시저 이름의 철자가 틀린 경우  
   
@@ -32,7 +32,7 @@ ms.locfileid: "74349571"
   
 ## <a name="see-also"></a>참고 항목
 
-- [오류 형식](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [오류 유형](../../programming-guide/language-features/error-types.md)
 - [프로젝트의 참조 관리](/visualstudio/ide/managing-references-in-a-project)
-- [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Function 문](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Sub 문](../statements/sub-statement.md)
+- [Function 문](../statements/function-statement.md)
