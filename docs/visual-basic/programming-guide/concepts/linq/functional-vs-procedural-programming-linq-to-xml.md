@@ -1,13 +1,13 @@
 ---
-title: 함수형 프로그래밍 및 절차적 프로그래밍 비교(LINQ to XML)
+title: 함수형 프로그래밍과 절차적 프로그래밍 비교(LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: ea1015a5-d4c8-4d79-8e1e-ba17a40a4f39
-ms.openlocfilehash: 3d1e3cf01b30454d29836f176afcd39cb2b55b73
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0b525f13298e7402369b890516434cec47e01542
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353405"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398437"
 ---
 # <a name="functional-vs-procedural-programming-linq-to-xml-visual-basic"></a>함수형 프로그래밍과 절차적 프로그래밍 비교 (LINQ to XML) (Visual Basic)
 다양한 유형의 XML 애플리케이션이 있습니다.  
@@ -36,10 +36,10 @@ ms.locfileid: "74353405"
   
  두 방법 중 하나로 LINQ to XML을 사용할 수 있습니다. 두 방법은 동일한 클래스를 사용하며 경우에 따라 동일한 메서드를 사용합니다. 그러나 두 방법의 구조와 목표는 매우 다릅니다. 예를 들어 상황에 따라 성능이 높고 메모리를 적게 사용하는 방법이 달라집니다. 또한 유지 관리하기가 더 쉬운 코드를 작성하고 생성하는 것이 용이한 방법도 상황에 따라 다릅니다.  
   
- 두 방법을 대조 하는 방법에 대 한 자세한 내용은 [메모리 내 XML 트리 수정 및 함수 생성 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction.md)을 참조 하세요.  
+ 두 방법을 대조 하는 방법에 대 한 자세한 내용은 [메모리 내 XML 트리 수정 및 함수 생성 (LINQ to XML) (Visual Basic)](in-memory-xml-tree-modification-vs-functional-construction.md)을 참조 하세요.  
   
- 함수 변환 작성에 대 한 자습서는 [XML의 순수 함수 변환 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)을 참조 하세요.  
+ 함수 변환 작성에 대 한 자습서는 [XML의 순수 함수 변환 (Visual Basic)](pure-functional-transformations-of-xml.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [LINQ to XML 프로그래밍 개요 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [LINQ to XML 프로그래밍 개요 (Visual Basic)](linq-to-xml-programming-overview.md)

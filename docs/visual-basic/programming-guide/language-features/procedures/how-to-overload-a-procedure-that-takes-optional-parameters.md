@@ -10,31 +10,31 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: 825f9d56-4cde-43fd-993a-b9171717e2eb
-ms.openlocfilehash: 4d31980e4b968cff274091ba4f307dffddab1100
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9ae6818b1e03ccd00ed554e98690e02ffa45de99
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350858"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84387844"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>방법: 선택적 매개 변수를 사용하는 프로시저 오버로드(Visual Basic)
-프로시저에 하나 이상의 [선택적](../../../../visual-basic/language-reference/modifiers/optional.md) 매개 변수가 있는 경우 해당 암시적 오버 로드와 일치 하는 오버 로드 된 버전을 정의할 수 없습니다. 자세한 내용은 [오버 로드 절차의 고려 사항](./considerations-in-overloading-procedures.md)에서 "선택적 매개 변수에 대 한 암시적 오버 로드"를 참조 하십시오.  
+프로시저에 하나 이상의 [선택적](../../../language-reference/modifiers/optional.md) 매개 변수가 있는 경우 해당 암시적 오버 로드와 일치 하는 오버 로드 된 버전을 정의할 수 없습니다. 자세한 내용은 [오버 로드 절차의 고려 사항](./considerations-in-overloading-procedures.md)에서 "선택적 매개 변수에 대 한 암시적 오버 로드"를 참조 하십시오.  
   
 ## <a name="one-optional-parameter"></a>하나의 선택적 매개 변수  
   
 #### <a name="to-overload-a-procedure-that-takes-one-optional-parameter"></a>선택적 매개 변수 하나를 사용 하는 프로시저를 오버 로드 하려면  
   
-1. 매개 변수 목록에 선택적 매개 변수를 포함 하는 `Sub` 또는 `Function` 선언문을 작성 합니다. 이 오버 로드 된 버전에는 `Optional` 키워드를 사용 하지 마십시오.  
+1. `Sub` `Function` 매개 변수 목록에서 선택적 매개 변수를 포함 하는 또는 선언문을 작성 합니다. `Optional`이 오버 로드 된 버전에는 키워드를 사용 하지 마십시오.  
   
-2. `Sub` 또는 `Function` 키워드 앞에 [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) 키워드를 사용 합니다.  
+2. `Sub`Or 키워드 앞에 `Function` [Overloads](../../../language-reference/modifiers/overloads.md) 키워드를 사용 합니다.  
   
 3. 호출 코드에서 선택적 인수를 제공할 때 실행 되어야 하는 프로시저 코드를 작성 합니다.  
   
-4. `End Sub` 또는 `End Function` 문을 사용 하 여 프로시저를 적절 하 게 종료 합니다.  
+4. 또는 문을 사용 하 여 프로시저를 적절 하 게 종료 `End Sub` `End Function` 합니다.  
   
 5. 매개 변수 목록에 선택적 매개 변수를 포함 하지 않는 경우를 제외 하 고 첫 번째 선언과 동일한 두 번째 선언문을 작성 합니다.  
   
-6. 호출 코드에서 선택적 인수를 제공 하지 않는 경우 실행 되는 프로시저 코드를 작성 합니다. `End Sub` 또는 `End Function` 문을 사용 하 여 프로시저를 적절 하 게 종료 합니다.  
+6. 호출 코드에서 선택적 인수를 제공 하지 않는 경우 실행 되는 프로시저 코드를 작성 합니다. 또는 문을 사용 하 여 프로시저를 적절 하 게 종료 `End Sub` `End Function` 합니다.  
   
      다음 예에서는 선택적 매개 변수를 사용 하 여 정의 된 프로시저, 두 오버 로드 된 프로시저의 동등한 집합 및 유효 하지 않은 오버 로드 된 버전의 마지막 예제를 보여 줍니다.  
   
@@ -53,13 +53,13 @@ ms.locfileid: "74350858"
   
 1. 제공 된 선택적 인수의 조합을 프로시저 논리에 허용 되는지 확인 합니다. 하나의 선택적 매개 변수가 다른 매개 변수에 종속 되는 경우 허용 되지 않는 조합이 발생할 수 있습니다. 예를 들어 한 매개 변수가 개인의 이름을 허용 하 고 다른 매개 변수가 해당 사용자의 연령를 수락 하는 경우 나이를 제공 하지만 이름을 생략 하는 인수를 조합 하 여 사용할 수 없습니다.  
   
-2. 제공 된 선택적 인수의 허용 가능한 각 조합에 대해 해당 매개 변수 목록을 정의 하는 `Sub` 또는 `Function` 선언문을 작성 합니다. `Optional` 키워드를 사용 하지 마십시오.  
+2. 제공 되는 선택적 인수의 각 조합에 대해 해당 하 `Sub` 는 `Function` 매개 변수 목록을 정의 하는 또는 선언문을 작성 합니다. 키워드를 사용 하지 마십시오 `Optional` .  
   
-3. 각 선언에서 `Sub` 또는 `Function` 키워드 앞에 [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) 키워드를 사용 합니다.  
+3. 각 선언에서 `Sub` 또는 키워드 앞에 `Function` [Overloads](../../../language-reference/modifiers/overloads.md) 키워드를 붙입니다.  
   
 4. 각 선언 후에 호출 코드에서 해당 선언의 매개 변수 목록에 해당 하는 인수 목록을 제공할 때 실행 해야 하는 프로시저 코드를 작성 합니다.  
   
-5. `End Sub` 또는 `End Function` 문을 사용 하 여 각 프로시저를 적절 하 게 종료 합니다.  
+5. 또는 문을 사용 하 여 각 프로시저를 적절 하 게 종료 `End Sub` `End Function` 합니다.  
   
 ## <a name="see-also"></a>참고 항목
 
@@ -72,4 +72,4 @@ ms.locfileid: "74350858"
 - [방법: 여러 버전의 프로시저 정의](./how-to-define-multiple-versions-of-a-procedure.md)
 - [방법: 오버로드된 프로시저 호출](./how-to-call-an-overloaded-procedure.md)
 - [방법: 매개 변수를 무제한으로 사용하는 프로시저 오버로드](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
-- [오버로드 확인](./overload-resolution.md)
+- [오버 로드 확인](./overload-resolution.md)

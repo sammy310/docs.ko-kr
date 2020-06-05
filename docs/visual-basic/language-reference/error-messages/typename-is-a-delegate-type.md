@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - BC32008
 ms.assetid: dc6abba0-a9ad-450f-8899-87265bc84abc
-ms.openlocfilehash: 45dc0403468fa40888a6c5e6bdfe6ca782e98325
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7056bbf2b4de26feba3bfbe0e02b3239311271c9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664186"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84382174"
 ---
-# <a name="typename-is-a-delegate-type"></a>'\<typename >' 대리자 형식이
-'\<typename >' 대리자 형식이 있습니다. 인수 목록으로 단일 AddressOf 식만 허용 하는 대리자 생성 합니다. 종종 AddressOf 식은 대리자 구문 대신 사용할 수 있습니다.  
+# <a name="typename-is-a-delegate-type"></a>'\<typename>'은(는) 대리자 형식입니다.
+' \<typename> '은 (는) 대리자 형식입니다. 대리자 생성은 단일 AddressOf 식만 인수 목록으로 허용 합니다. 일반적으로 대리자 생성 대신 AddressOf 식을 사용할 수 있습니다.  
   
- `New` 대리자 클래스의 인스턴스를 만들고 절 대리자 생성자에는 잘못 된 인수 목록을 제공 합니다.  
+ `New`대리자 클래스의 인스턴스를 만드는 절은 대리자 생성자에 잘못 된 인수 목록을 제공 합니다.  
   
- 하나만 제공할 수 있습니다 `AddressOf` 새 대리자 인스턴스를 만들 때 식입니다.  
+ `AddressOf`새 대리자 인스턴스를 만들 때 단일 식만 제공할 수 있습니다.  
   
- 전달 하지 않으면 모든 인수 대리자 생성자에는 잘못 된 단일 인수를 전달 하는 경우 또는 둘 이상의 인수를 전달 하는 경우이 오류가 발생할 수 있습니다 `AddressOf` 식입니다.  
+ 이 오류는 대리자 생성자에 인수를 전달 하지 않거나 둘 이상의 인수를 전달 하거나 유효한 식이 아닌 단일 인수를 전달 하는 경우에 발생할 수 있습니다 `AddressOf` .  
   
  **오류 ID:** BC32008  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-- 단일을 사용 하 여 `AddressOf` 대리자 클래스에 대 한 인수 목록에 있는 식의 `New` 절.  
+- `AddressOf`절에서 대리자 클래스의 인수 목록에 있는 단일 식을 사용 `New` 합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [New 연산자](../../../visual-basic/language-reference/operators/new-operator.md)
-- [AddressOf 연산자](../../../visual-basic/language-reference/operators/addressof-operator.md)
-- [대리자](../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [방법: 대리자 메서드 호출](../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)
+- [새 운영자](../operators/new-operator.md)
+- [AddressOf 연산자](../operators/addressof-operator.md)
+- [대리자](../../programming-guide/language-features/delegates/index.md)
+- [방법: 대리자 메서드 호출](../../programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)

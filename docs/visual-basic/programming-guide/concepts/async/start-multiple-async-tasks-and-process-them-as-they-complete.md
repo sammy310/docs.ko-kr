@@ -2,12 +2,12 @@
 title: 비동기 작업을 여러 개 시작하고 완료될 때마다 처리
 ms.date: 07/20/2015
 ms.assetid: 57ffb748-af40-4794-bedd-bdb7fea062de
-ms.openlocfilehash: b14171196a95e9a6a12f6b13f6f17d3cfe352bce
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: e227029928676e21d3ed14450140e92b386bf216
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266848"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400799"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>비동기 작업을 여러 개 시작하고 완료될 때마다 처리(Visual Basic)
 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>를 사용하면 시작된 순서대로 처리하는 대신 동시에 여러 작업을 시작하고 완료 시 하나씩 처리할 수 있습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "78266848"
  프로젝트를 다운로드하지 않으려는 경우 이 항목의 끝에 있는 MainWindow.xaml.vb 파일을 검토할 수 있습니다.  
   
 ## <a name="building-the-example"></a>예제 빌드  
- 이 예제에서는 [완료(Visual Basic) 후 남은 비동기 작업 취소에서](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md) 개발된 코드에 추가하고 동일한 UI를 사용합니다.  
+ 이 예제에서는 [작업 하나가 완료 된 후 남은 비동기 작업 취소 (Visual Basic)](cancel-remaining-async-tasks-after-one-is-complete.md) 에서 개발 된 코드에를 추가 하 고 동일한 UI를 사용 합니다.  
   
  직접 예제를 빌드하려면 "예제 다운로드" 섹션의 지침을 단계별로 따르되, **CancelAfterOneTask**를 **시작 프로젝트**로 선택합니다. 이 항목의 변경 내용을 해당 프로젝트의 `AccessTheWebAsync` 메서드에 추가합니다. 변경 내용은 별표로 표시됩니다.  
   
@@ -48,7 +48,7 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
     From url In urlList Select ProcessURLAsync(url, client, ct)  
 ```  
   
- 프로젝트의 MainWindow.xaml.vb 파일에서 `AccessTheWebAsync` 메서드를 다음과 같은 변경 합니다.  
+ 프로젝트의 Mainwindow.xaml 파일에서 메서드를 다음과 같이 변경 합니다 `AccessTheWebAsync` .  
   
 - <xref:System.Linq.Enumerable.ToArray%2A> 대신 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>를 적용하여 쿼리를 실행합니다.  
   
@@ -80,7 +80,7 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
  프로젝트를 여러 번 실행하여 다운로드한 길이가 항상 같은 순서로 표시되는지 확인해야 합니다.  
   
 > [!CAUTION]
-> 예제에 설명된 대로 루프에서 `WhenAny`를 사용하는 것은 적은 수의 작업이 필요한 문제 해결에 적합합니다. 그러므로 많은 수의 작업을 처리해야 하는 경우에는 다른 접근 방법이 더 효율적입니다. 자세한 정보 및 예제는 [완료될 때 처리 작업을](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/)참조하십시오.  
+> 예제에 설명된 대로 루프에서 `WhenAny`를 사용하는 것은 적은 수의 작업이 필요한 문제 해결에 적합합니다. 그러므로 많은 수의 작업을 처리해야 하는 경우에는 다른 접근 방법이 더 효율적입니다. 자세한 내용 및 예제는 [완료 시 작업 처리](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/)를 참조 하세요.  
   
 ## <a name="complete-example"></a>전체 예제  
  다음 코드는 예제에 대한 MainWindow.xaml.vb 파일의 전체 텍스트입니다. 별표는 이 예제에 대해 추가된 요소를 표시합니다.  
@@ -208,6 +208,6 @@ End Class
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
-- [Async 애플리케이션 미세 조정(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Async 애플리케이션 미세 조정(Visual Basic)](fine-tuning-your-async-application.md)
+- [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](index.md)
 - [Async 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

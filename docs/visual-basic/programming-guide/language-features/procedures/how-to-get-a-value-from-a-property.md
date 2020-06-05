@@ -8,27 +8,27 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: 3954423e-6ab7-4a4c-b55c-a8d27be47891
-ms.openlocfilehash: 85512d4311d3e731a2c4e129d6a01f9b3273b333
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2c92cd4a869acbb7c8c52fbf4117112967386498
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74339822"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84387896"
 ---
 # <a name="how-to-get-a-value-from-a-property-visual-basic"></a>방법: 속성에서 값 가져오기(Visual Basic)
 식에 속성 이름을 포함 하 여 속성의 값을 검색 합니다.  
   
- 속성의 `Get` 프로시저는 값을 검색 하지만 이름으로 명시적으로 호출 하지 않습니다. 변수를 사용 하는 것 처럼 속성을 사용 합니다. Visual Basic은 속성의 프로시저에 대 한 호출을 수행 합니다.  
+ 속성의 `Get` 프로시저에서 값을 검색 하지만 이름으로 명시적으로 호출 하지 않습니다. 변수를 사용 하는 것 처럼 속성을 사용 합니다. Visual Basic은 속성의 프로시저에 대 한 호출을 수행 합니다.  
   
 ### <a name="to-retrieve-a-value-from-a-property"></a>속성에서 값을 검색 하려면  
   
 1. 변수 이름을 사용 하는 것과 동일한 방식으로 식에 속성 이름을 사용 합니다. 변수나 상수를 사용할 수 있는 모든 위치에서 속성을 사용할 수 있습니다.  
   
-     -또는-  
+     또는  
   
-     등호 (`=`) 뒤에 오는 속성 이름을 대입문에 사용 합니다.  
+     대입문에 등호 () 기호를 사용 하 여 속성 이름을 사용 `=` 합니다.  
   
-     다음 예에서는 `Get` 프로시저를 암시적으로 호출 하 여 Visual Basic `Now` 속성의 값을 읽습니다.  
+     다음 예제에서는 `Now` 해당 프로시저를 암시적으로 호출 하 여 Visual Basic 속성의 값을 읽습니다 `Get` .  
   
      [!code-vb[VbVbalrDateProperties#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDateProperties/VB/Module1.vb#4)]  
   
@@ -43,7 +43,7 @@ ms.locfileid: "74339822"
 - [절차](./index.md)
 - [속성 프로시저](./property-procedures.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)
-- [Property 문](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [Property Statement](../../../language-reference/statements/property-statement.md)
 - [Visual Basic에서 속성과 변수의 차이점](./differences-between-properties-and-variables.md)
 - [방법: 속성 만들기](./how-to-create-a-property.md)
 - [방법: 액세스 수준이 혼합된 속성 선언](./how-to-declare-a-property-with-mixed-access-levels.md)

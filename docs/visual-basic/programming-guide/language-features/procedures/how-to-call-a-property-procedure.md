@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [Visual Basic], property procedures
 - procedure calls [Visual Basic], property procedures
 ms.assetid: 96bc4d74-d9c3-4b7a-954d-58ac8553cd94
-ms.openlocfilehash: 52e6c62ffb81c480ccc1abf06f04eb780218dbf1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 006961a0f1d4be6b0d52be5bc273dad9733bfe56
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74340549"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84388701"
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>방법: 속성 프로시저 호출(Visual Basic)
 속성에 값을 저장 하거나 값을 검색 하 여 속성 프로시저를 호출 합니다. 변수에 액세스 하는 것과 동일한 방식으로 속성에 액세스 합니다.  
@@ -24,11 +24,11 @@ ms.locfileid: "74340549"
   
 1. 변수 이름을 사용 하는 것과 동일한 방식으로 식에 속성 이름을 사용 합니다. 변수나 상수를 사용할 수 있는 모든 위치에서 속성을 사용할 수 있습니다.  
   
-     -또는-  
+     또는  
   
-     등호 (`=`) 뒤에 오는 속성 이름을 대입문에 사용 합니다.  
+     대입문에 등호 () 기호를 사용 하 여 속성 이름을 사용 `=` 합니다.  
   
-     다음 예제에서는 `Get` 프로시저를 암시적으로 호출 하 여 <xref:Microsoft.VisualBasic.DateAndTime.Now%2A> 속성의 값을 읽습니다.  
+     다음 예제에서는 <xref:Microsoft.VisualBasic.DateAndTime.Now%2A> 해당 프로시저를 암시적으로 호출 하 여 속성의 값을 읽습니다 `Get` .  
   
      [!code-vb[VbVbalrDateProperties#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDateProperties/VB/Module1.vb#4)]  
   
@@ -42,7 +42,7 @@ ms.locfileid: "74340549"
   
 1. 대입문의 왼쪽에 속성 이름을 사용 합니다.  
   
-     다음 예에서는 `Set` 프로시저를 암시적으로 호출 하 여 <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A> 속성의 값을 설정 합니다.  
+     다음 예에서는 <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A> 프로시저를 암시적으로 호출 하 여 속성의 값을 설정 합니다 `Set` .  
   
      [!code-vb[VbVbcnProcedures#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#11)]  
   
@@ -56,12 +56,12 @@ ms.locfileid: "74340549"
 
 - [속성 프로시저](./property-procedures.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)
-- [Property 문](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [Property Statement](../../../language-reference/statements/property-statement.md)
 - [Visual Basic에서 속성과 변수의 차이점](./differences-between-properties-and-variables.md)
 - [방법: 속성 만들기](./how-to-create-a-property.md)
 - [방법: 액세스 수준이 혼합된 속성 선언](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [방법: Visual Basic에서 기본 속성 선언 및 호출](./how-to-declare-and-call-a-default-property.md)
 - [방법: 속성 값 입력](./how-to-put-a-value-in-a-property.md)
 - [방법: 속성에서 값 가져오기](./how-to-get-a-value-from-a-property.md)
-- [Get 문](../../../../visual-basic/language-reference/statements/get-statement.md)
-- [Set 문](../../../../visual-basic/language-reference/statements/set-statement.md)
+- [Get 문](../../../language-reference/statements/get-statement.md)
+- [Set 문](../../../language-reference/statements/set-statement.md)

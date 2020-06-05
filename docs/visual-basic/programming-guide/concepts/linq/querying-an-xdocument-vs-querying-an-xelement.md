@@ -1,13 +1,13 @@
 ---
-title: XDocument 쿼리 및 XElement 쿼리
+title: XDocument 쿼리와 XElement 쿼리 비교
 ms.date: 07/20/2015
 ms.assetid: 2d111f84-0ded-4cde-8d93-5440557a726d
-ms.openlocfilehash: 5cee2c841f391bfb6fc410421108656680880616
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3cd79c8f2cde101de43a9b9e983709e2e0d11814
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346566"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396300"
 ---
 # <a name="querying-an-xdocument-vs-querying-an-xelement-visual-basic"></a>XDocument 쿼리 및 XElement 쿼리 (Visual Basic)
 <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>를 통해 문서를 로드하는 경우에는 <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>를 통해 로드하는 경우와 약간 다르게 쿼리를 작성해야 합니다.  
@@ -114,4 +114,4 @@ Querying tree loaded with XDocument.Load
   
 ## <a name="see-also"></a>참고 항목
 
-- [기본 쿼리 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [기본 쿼리 (LINQ to XML) (Visual Basic)](basic-queries-linq-to-xml.md)

@@ -2,12 +2,12 @@
 title: '방법: XmlReader에서 XML 조각 스트리밍'
 ms.date: 07/20/2015
 ms.assetid: f67ce598-4a12-4dcb-9a07-24deca02a111
-ms.openlocfilehash: 42d3edb390035d20f506388974000aa204312109
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: ff22625767c4e0752ca19d5a315395934b566230
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636798"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397702"
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-visual-basic"></a>방법: XmlReader에서 XML 조각 스트리밍 (Visual Basic)
 큰 XML 파일을 처리해야 하는 경우 전체 XML 트리를 메모리에 로드하는 것이 가능하지 않을 수 있습니다. 이 항목에서는 <xref:System.Xml.XmlReader>를 사용하여 조각을 스트림하는 방법을 보여 줍니다.  
@@ -18,12 +18,12 @@ ms.locfileid: "75636798"
   
  부분 트리를 만들려는 경우 <xref:System.Xml.XmlReader>를 인스턴스화하고 <xref:System.Xml.Linq.XElement> 트리로 변환할 노드에 판독기를 배치한 다음 <xref:System.Xml.Linq.XElement> 개체를 만들 수 있습니다.  
   
- [방법: 헤더 정보에 액세스 하 여 XML 조각 스트리밍 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) 항목에는 더 복잡 한 문서를 스트림 하는 방법에 대 한 정보와 예제가 포함 되어 있습니다.  
+ [방법: 헤더 정보에 액세스 하 여 XML 조각 스트리밍 (Visual Basic)](how-to-stream-xml-fragments-with-access-to-header-information.md) 항목에는 더 복잡 한 문서를 스트림 하는 방법에 대 한 정보와 예제가 포함 되어 있습니다.  
   
- [방법: 큰 Xml 문서의 스트리밍 변환 수행 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) 항목에는 작은 메모리 사용 공간을 유지 하면서 매우 큰 xml 문서를 변환 하는 LINQ to XML를 사용 하는 예제가 포함 되어 있습니다.  
+ [방법: 큰 Xml 문서의 스트리밍 변환 수행 (Visual Basic)](how-to-perform-streaming-transform-of-large-xml-documents.md) 항목에는 작은 메모리 사용 공간을 유지 하면서 매우 큰 xml 문서를 변환 하는 LINQ to XML를 사용 하는 예제가 포함 되어 있습니다.  
   
-## <a name="example"></a>예  
- 이 예제에서는 사용자 지정 축 메서드를 만듭니다. LINQ 쿼리를 사용 하 여 쿼리할 수 있습니다. 사용자 지정 축 메서드 `StreamRootChildDoc`는 반복되는 `Child` 요소가 있는 문서를 읽도록 특정하게 디자인된 메서드입니다.  
+## <a name="example"></a>예제  
+ 이 예제에서는 사용자 지정 축 메서드를 만듭니다. LINQ 쿼리를 사용하여 이 메서드를 쿼리할 수 있습니다. 사용자 지정 축 메서드 `StreamRootChildDoc`는 반복되는 `Child` 요소가 있는 문서를 읽도록 특정하게 디자인된 메서드입니다.  
   
 ```vb  
 Module Module1  
@@ -145,7 +145,7 @@ ccc
   
  이 예제의 소스 문서는 매우 작습니다. `Child` 요소가 수백만 있더라도 이 예제에서는 여전히 작은 메모리 공간만 사용할 것입니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [연습: Visual Basic에서 IEnumerable (Of T) 구현](../../../../visual-basic/programming-guide/language-features/control-flow/walkthrough-implementing-ienumerable-of-t.md)
-- [XML 구문 분석 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [연습: Visual Basic에서 IEnumerable (Of T) 구현](../../language-features/control-flow/walkthrough-implementing-ienumerable-of-t.md)
+- [XML 구문 분석 (Visual Basic)](parsing-xml.md)
