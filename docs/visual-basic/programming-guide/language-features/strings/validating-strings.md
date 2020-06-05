@@ -7,30 +7,30 @@ helpviewer_keywords:
 - strings [Visual Basic], validating
 - validation [Visual Basic], strings
 ms.assetid: 9a1acf9b-7e2c-40cb-bba4-656ee2bc2ed0
-ms.openlocfilehash: e9a034a430ff7f30c259bcdd395ebf6147dfc582
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 58ca052f4a03d99ab62e651f5c15e45c94b8d483
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346253"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363718"
 ---
 # <a name="validating-strings-in-visual-basic"></a>Visual Basic의 문자열 유효성 검사
 이 섹션에서는 Visual Basic에서 문자열의 유효성을 검사 하는 방법을 설명 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [방법: Visual Basic에서 파일 이름 및 경로 유효성 검사](../../../../visual-basic/programming-guide/language-features/strings/how-to-validate-file-names-and-paths.md)  
+ [방법: Visual Basic에서 파일 이름 및 경로 확인](how-to-validate-file-names-and-paths.md)  
  문자열이 파일 이름 또는 경로를 나타내는지 여부를 확인 하는 방법  
   
- [방법: 날짜 또는 시간을 나타내는 문자열 확인](../../../../visual-basic/programming-guide/language-features/strings/how-to-validate-strings-that-represent-dates-or-times.md)  
+ [방법: 날짜 또는 시간을 나타내는 문자열의 유효성 검사](how-to-validate-strings-that-represent-dates-or-times.md)  
  문자열이 유효한 날짜를 나타내는지 여부를 확인 하는 방법입니다.  
   
- [Visual Basic에서 MaskedTextBox 컨트롤을 사용 하 여 정규식 사용](../../../../visual-basic/programming-guide/language-features/strings/using-regular-expressions-with-the-maskedtextbox-control.md)  
- <xref:System.Windows.Forms.MaskedTextBox> 컨트롤을 사용 하도록 간단한 정규식을 변환 하는 방법을 보여 줍니다.  
+ [Visual Basic에서 MaskedTextBox 컨트롤과 함께 정규식 사용](using-regular-expressions-with-the-maskedtextbox-control.md)  
+ 간단한 정규식을 컨트롤을 사용 하도록 변환 하는 방법을 보여 줍니다 <xref:System.Windows.Forms.MaskedTextBox> .  
   
- [연습: 암호의 복합성 검사](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-validating-that-passwords-are-complex.md)  
+ [연습: 암호 복합성의 유효성 검사](walkthrough-validating-that-passwords-are-complex.md)  
  문자열에 강력한 암호의 특징이 있는지 확인 하는 방법입니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [문자열](../../../../visual-basic/programming-guide/language-features/strings/index.md)
+- [문자열](index.md)
 - [MaskedTextBox 컨트롤](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)
