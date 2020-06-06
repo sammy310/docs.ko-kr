@@ -3,16 +3,16 @@ title: <tokenRequestParameters>
 ms.date: 03/30/2017
 ms.assetid: 1fc2b90c-a61f-4337-ac4c-f341e596a781
 ms.openlocfilehash: 2d9ee4fc6458683771f3f2d7f4666db3df9a9f6e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69932383"
 ---
-# <a name="tokenrequestparameters"></a>\<tokenRequestParameters>
+# \<tokenRequestParameters>
 이 구성 요소에는 토큰 요청 시 메시지 본문에 포함시켜 보안 토큰 서비스로 전송할 추가 XML 요소를 지정하는 데 사용할 수 있는 자식 요소가 포함되어 있습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.TokenRequestParameters%2A>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.TokenRequestParameters%2A>

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - cryptography, mapping object identifiers
 ms.assetid: c9673f81-bf9e-47fd-bc6f-6bc1c1c4c15e
 ms.openlocfilehash: a5aebac2d392d4540581dfe7c7afff0819968ac0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69912537"
 ---
 # <a name="mapping-object-identifiers-to-cryptography-algorithms"></a>개체 식별자를 암호화 알고리즘에 매핑
@@ -38,9 +38,9 @@ ms.locfileid: "69912537"
 </configuration>  
 ```  
   
- [ \<Y > 요소](./file-schema/cryptography/oidentry-element.md) 는 두 가지 특성을 포함 합니다. **OID** 특성은 개체 식별자 번호입니다. **Name** 특성은 [ \<nameentry > 요소의](./file-schema/cryptography/nameentry-element.md) **name** 특성 값입니다. 개체 식별자를 단순 이름에 매핑하기 전에 알고리즘 이름에서 클래스로 매핑되어야 합니다.  
+ [ \<oidEntry> 요소](./file-schema/cryptography/oidentry-element.md) 는 두 가지 특성을 포함 합니다. **OID** 특성은 개체 식별자 번호입니다. **Name** 특성은 [ \<nameEntry> 요소의](./file-schema/cryptography/nameentry-element.md) **name** 특성 값입니다. 개체 식별자를 단순 이름에 매핑하기 전에 알고리즘 이름에서 클래스로 매핑되어야 합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [암호화 클래스 구성](configure-cryptography-classes.md)
-- [Cryptographic Services](../../standard/security/cryptographic-services.md)
+- [암호화 서비스](../../standard/security/cryptographic-services.md)

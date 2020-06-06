@@ -1,15 +1,15 @@
 ---
-title: <Event>요소(.NET 네이티브)
+title: <Event>요소 (.NET 네이티브)
 ms.date: 03/30/2017
 ms.assetid: e53b029c-9d6d-4c0a-9cdc-5cfca8a5ca47
 ms.openlocfilehash: 60da48d5872d7ce61afcffa7977411bc6e1efc7f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79181035"
 ---
-# <a name="event-element-net-native"></a>\<이벤트> 요소(.NET 네이티브)
+# <a name="event-element-net-native"></a>\<Event>요소 (.NET 네이티브)
 런타임 리플렉션 정책을 이벤트에 적용합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -21,7 +21,7 @@ ms.locfileid: "79181035"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -35,7 +35,7 @@ ms.locfileid: "79181035"
   
 |값|Description|  
 |-----------|-----------------|  
-|*method_name*|이벤트 이름입니다. 이벤트의 형식은 부모 [ \<형식>](type-element-net-native.md) 또는 [ \<TypeInstantiation>](typeinstantiation-element-net-native.md) 요소에 의해 정의됩니다.|  
+|*method_name*|이벤트 이름입니다. 이벤트의 형식은 부모 [\<Type>](type-element-net-native.md) 또는 요소로 정의 됩니다 [\<TypeInstantiation>](typeinstantiation-element-net-native.md) .|  
   
 ## <a name="all-other-attributes"></a>기타 모든 특성  
   
@@ -50,14 +50,14 @@ ms.locfileid: "79181035"
   
 |요소|Description|  
 |-------------|-----------------|  
-|[\<유형>](type-element-net-native.md)|형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  
-|[\<타이핑>](typeinstantiation-element-net-native.md)|생성된 제네릭 형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  
+|[\<Type>](type-element-net-native.md)|형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|생성된 제네릭 형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  
   
 ## <a name="remarks"></a>설명  
  이벤트의 정책이 명시적으로 정의되어 있지 않으면 부모 요소의 런타임 정책을 상속합니다.  
   
 ## <a name="see-also"></a>참고 항목
 
-- [Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md)
+- [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)
 - [런타임 지시문 요소](runtime-directive-elements.md)
 - [런타임 지시문 정책 설정](runtime-directive-policy-settings.md)

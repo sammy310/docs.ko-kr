@@ -3,13 +3,13 @@ title: <behaviorExtensions>
 ms.date: 03/30/2017
 ms.assetid: 59f2791a-c78f-40d7-aa80-0d9cd10135d9
 ms.openlocfilehash: 39dc92d65a41d223ebd39aec3dc59871ad1fd101
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77448687"
 ---
-# <a name="behaviorextensions"></a>\<behaviorExtensions >
+# \<behaviorExtensions>
 동작 확장을 사용하면 사용자 정의 동작 요소를 만들 수 있습니다. 이러한 요소는 표준 WCF(Windows Communication Foundation) 동작 요소 구성과 함께 사용할 수 있습니다. `behaviorExtensions` 섹션은 구성에 사용할 수 있도록 요소를 정의합니다. 다음은 일반적인 동작 확장 예제입니다.  
   
 ```xml  
@@ -49,7 +49,7 @@ ms.locfileid: "77448687"
   
  공격자는 CLR 검색 순서를 탐색하고 허가되지 않은 코드를 실행할 수 있습니다. 정규화된(강력한) 이름을 사용하면 형식을 고유하게 식별하고 시스템 보안을 더욱 강화할 수 있습니다.  
   
- 자세한 내용은 [런타임에서 어셈블리를 찾고 <xref:System.AppDomain.TypeResolve>하는 방법](../../../deployment/how-the-runtime-locates-assemblies.md) 을 참조 하세요.  
+ 자세한 내용은 [런타임에서 어셈블리를 찾는 방법](../../../deployment/how-the-runtime-locates-assemblies.md) 및을 참조 하십시오 <xref:System.AppDomain.TypeResolve> .  
   
 ## <a name="see-also"></a>참고 항목
 
