@@ -10,25 +10,25 @@ helpviewer_keywords:
 - default cryptography
 ms.assetid: eee3ccb8-2c0d-4f35-b38d-6892a46c14e5
 ms.openlocfilehash: e53f4c5c9e24fb25b43b7f27b80ab984214eeac2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69927778"
 ---
-# <a name="configuring-cryptography-classes"></a><span data-ttu-id="3bbfc-102">암호화 클래스 구성</span><span class="sxs-lookup"><span data-stu-id="3bbfc-102">Configuring Cryptography Classes</span></span>
-<span data-ttu-id="3bbfc-103">Windows SDK를 사용 하 여 컴퓨터 관리자는 .NET Framework 및 적절 하 게 작성 된 응용 프로그램에서 사용 하는 기본 암호화 알고리즘과 알고리즘 구현을 구성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3bbfc-103">The Windows SDK allows computer administrators to configure the default cryptographic algorithms and algorithm implementations that the .NET Framework and appropriately written applications use.</span></span>  <span data-ttu-id="3bbfc-104">예를 들어, 암호화 알고리즘의 자체 구현을 포함 하는 엔터프라이즈는 Windows SDK에서 제공 하는 구현 대신 기본값을 구현 하도록 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3bbfc-104">For example, an enterprise that has its own implementation of a cryptographic algorithm can make that implementation the default instead of the implementation shipped in the Windows SDK.</span></span> <span data-ttu-id="3bbfc-105">암호화를 사용 하는 관리 되는 응용 프로그램은 항상 특정 구현에 명시적으로 바인딩하도록 선택할 수 있지만 암호화 구성 시스템을 사용 하 여 암호화 개체를 만드는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="3bbfc-105">Although managed applications that use cryptography can always choose to explicitly bind to a particular implementation, it is recommended that they create cryptographic objects by using the crypto configuration system.</span></span>  
+# <a name="configuring-cryptography-classes"></a><span data-ttu-id="21cb7-102">암호화 클래스 구성</span><span class="sxs-lookup"><span data-stu-id="21cb7-102">Configuring Cryptography Classes</span></span>
+<span data-ttu-id="21cb7-103">Windows SDK를 사용 하 여 컴퓨터 관리자는 .NET Framework 및 적절 하 게 작성 된 응용 프로그램에서 사용 하는 기본 암호화 알고리즘과 알고리즘 구현을 구성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="21cb7-103">The Windows SDK allows computer administrators to configure the default cryptographic algorithms and algorithm implementations that the .NET Framework and appropriately written applications use.</span></span>  <span data-ttu-id="21cb7-104">예를 들어, 암호화 알고리즘의 자체 구현을 포함 하는 엔터프라이즈는 Windows SDK에서 제공 하는 구현 대신 기본값을 구현 하도록 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="21cb7-104">For example, an enterprise that has its own implementation of a cryptographic algorithm can make that implementation the default instead of the implementation shipped in the Windows SDK.</span></span> <span data-ttu-id="21cb7-105">암호화를 사용 하는 관리 되는 응용 프로그램은 항상 특정 구현에 명시적으로 바인딩하도록 선택할 수 있지만 암호화 구성 시스템을 사용 하 여 암호화 개체를 만드는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="21cb7-105">Although managed applications that use cryptography can always choose to explicitly bind to a particular implementation, it is recommended that they create cryptographic objects by using the crypto configuration system.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3bbfc-106">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="3bbfc-106">In This Section</span></span>  
- [<span data-ttu-id="3bbfc-107">알고리즘 이름을 암호화 클래스에 매핑</span><span class="sxs-lookup"><span data-stu-id="3bbfc-107">Mapping Algorithm Names to Cryptography Classes</span></span>](map-algorithm-names-to-cryptography-classes.md)  
- <span data-ttu-id="3bbfc-108">암호화 클래스에 알고리즘 이름을 매핑하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="3bbfc-108">Describes how to map an algorithm name to a cryptography class.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="21cb7-106">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="21cb7-106">In This Section</span></span>  
+ [<span data-ttu-id="21cb7-107">알고리즘 이름을 암호화 클래스에 매핑</span><span class="sxs-lookup"><span data-stu-id="21cb7-107">Mapping Algorithm Names to Cryptography Classes</span></span>](map-algorithm-names-to-cryptography-classes.md)  
+ <span data-ttu-id="21cb7-108">암호화 클래스에 알고리즘 이름을 매핑하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="21cb7-108">Describes how to map an algorithm name to a cryptography class.</span></span>  
   
- [<span data-ttu-id="3bbfc-109">개체 식별자를 암호화 알고리즘에 매핑</span><span class="sxs-lookup"><span data-stu-id="3bbfc-109">Mapping Object Identifiers to Cryptography Algorithms</span></span>](map-object-identifiers-to-cryptography-algorithms.md)  
- <span data-ttu-id="3bbfc-110">암호화 알고리즘에 개체 식별자를 매핑하는 방법에 대해 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="3bbfc-110">Describes how to map an object identifier to a cryptography algorithm.</span></span>  
+ [<span data-ttu-id="21cb7-109">개체 식별자를 암호화 알고리즘에 매핑</span><span class="sxs-lookup"><span data-stu-id="21cb7-109">Mapping Object Identifiers to Cryptography Algorithms</span></span>](map-object-identifiers-to-cryptography-algorithms.md)  
+ <span data-ttu-id="21cb7-110">암호화 알고리즘에 개체 식별자를 매핑하는 방법에 대해 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="21cb7-110">Describes how to map an object identifier to a cryptography algorithm.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="3bbfc-111">관련 단원</span><span class="sxs-lookup"><span data-stu-id="3bbfc-111">Related Sections</span></span>  
- [<span data-ttu-id="3bbfc-112">Cryptographic Services</span><span class="sxs-lookup"><span data-stu-id="3bbfc-112">Cryptographic Services</span></span>](../../standard/security/cryptographic-services.md)  
- <span data-ttu-id="3bbfc-113">Windows SDK에서 제공 하는 암호화 서비스에 대 한 개요를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="3bbfc-113">Provides an overview of cryptographic services provided by the Windows SDK.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="21cb7-111">관련 단원</span><span class="sxs-lookup"><span data-stu-id="21cb7-111">Related Sections</span></span>  
+ [<span data-ttu-id="21cb7-112">암호화 서비스</span><span class="sxs-lookup"><span data-stu-id="21cb7-112">Cryptographic Services</span></span>](../../standard/security/cryptographic-services.md)  
+ <span data-ttu-id="21cb7-113">Windows SDK에서 제공 하는 암호화 서비스에 대 한 개요를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="21cb7-113">Provides an overview of cryptographic services provided by the Windows SDK.</span></span>  
   
- [<span data-ttu-id="3bbfc-114">암호화 설정 스키마</span><span class="sxs-lookup"><span data-stu-id="3bbfc-114">Cryptography Settings Schema</span></span>](./file-schema/cryptography/index.md)  
- <span data-ttu-id="3bbfc-115">암호화 알고리즘을 구현하는 클래스에 편리한 알고리즘 이름을 매핑하는 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="3bbfc-115">Describes elements that map friendly algorithm names to classes that implement cryptography algorithms.</span></span>
+ [<span data-ttu-id="21cb7-114">암호화 설정 스키마</span><span class="sxs-lookup"><span data-stu-id="21cb7-114">Cryptography Settings Schema</span></span>](./file-schema/cryptography/index.md)  
+ <span data-ttu-id="21cb7-115">암호화 알고리즘을 구현하는 클래스에 편리한 알고리즘 이름을 매핑하는 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="21cb7-115">Describes elements that map friendly algorithm names to classes that implement cryptography algorithms.</span></span>
