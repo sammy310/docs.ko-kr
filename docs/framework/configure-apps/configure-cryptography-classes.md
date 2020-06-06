@@ -10,10 +10,10 @@ helpviewer_keywords:
 - default cryptography
 ms.assetid: eee3ccb8-2c0d-4f35-b38d-6892a46c14e5
 ms.openlocfilehash: e53f4c5c9e24fb25b43b7f27b80ab984214eeac2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69927778"
 ---
 # <a name="configuring-cryptography-classes"></a>암호화 클래스 구성
@@ -27,7 +27,7 @@ Windows SDK를 사용 하 여 컴퓨터 관리자는 .NET Framework 및 적절 �
  암호화 알고리즘에 개체 식별자를 매핑하는 방법에 대해 설명 합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [Cryptographic Services](../../standard/security/cryptographic-services.md)  
+ [암호화 서비스](../../standard/security/cryptographic-services.md)  
  Windows SDK에서 제공 하는 암호화 서비스에 대 한 개요를 제공 합니다.  
   
  [암호화 설정 스키마](./file-schema/cryptography/index.md)  

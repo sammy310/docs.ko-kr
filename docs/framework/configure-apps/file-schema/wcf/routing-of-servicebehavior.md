@@ -3,21 +3,21 @@ title: <serviceBehavior>의 <routing>
 ms.date: 03/30/2017
 ms.assetid: d8f9c844-4629-4a45-9599-856dc8f01794
 ms.openlocfilehash: 0998f4fc61de7099879ba6e122eed1e64588baec
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70397728"
 ---
-# <a name="routing-of-servicebehavior"></a>\<serviceBehavior >의 \<라우팅 >
+# <a name="routing-of-servicebehavior"></a>\<serviceBehavior>의 \<routing>
 라우팅 서비스에 대한 런타임 액세스를 제공하여 라우팅 구성의 동적 수정을 허용합니다.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<동작 >** ](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<동작 >** ](behavior-of-servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<라우팅 >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceBehaviors>**](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<routing>**  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,9 +38,9 @@ ms.locfileid: "70397728"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
-|filterTable|라우팅 서비스에서 평가할 필터를 포함하는 라우팅 테이블의 이름을 지정하는 문자열입니다. 이 값은 `name` [filtertables > 섹션에 있는 filterTable > 요소의 특성과 일치 해야 합니다. \<](filtertables.md) [ \<](filtertable.md)|  
+|filterTable|라우팅 서비스에서 평가할 필터를 포함하는 라우팅 테이블의 이름을 지정하는 문자열입니다. 이 값은 `name` [\<filterTable>](filtertable.md) 섹션에 있는 요소의 특성과 일치 해야 합니다 [\<filterTables>](filtertables.md) .|  
 |routeOnHeaderOnly|필터를 사용하여 메시지 본문과 헤더를 모두 검사할지 또는 헤더만 검사할지를 지정하는 부울 값입니다. 기본값은 `true`입니다.|  
 |soapProcessingEnabled|SOAP 처리가 발생해야 하는지 여부를 지정하는 부울 값입니다.|  
   
@@ -49,7 +49,7 @@ ms.locfileid: "70397728"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |[\<behavior>](behavior-of-endpointbehaviors.md)|동작 요소를 지정합니다.|  
   

@@ -3,22 +3,22 @@ title: <secureConversationBootstrap>
 ms.date: 03/30/2017
 ms.assetid: 66b46f95-fa2d-4b5b-b6ce-0572ab0cdd50
 ms.openlocfilehash: b3187cb51b6fd32797c9ad401c704d5f16c6f7e8
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70399918"
 ---
-# <a name="secureconversationbootstrap"></a>\<secureConversationBootstrap>
+# \<secureConversationBootstrap>
 보안 대화 서비스 개시에 사용되는 기본값을 지정합니다.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<바인딩 >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<바인딩 >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<보안 >** ](security-of-custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<secureConversationBootstrap >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<customBinding>**](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<secureConversationBootstrap>**  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,7 +38,7 @@ ms.locfileid: "70399918"
                              includeTimestamp="Boolean" />
 ```  
   
-## <a name="type"></a>형식  
+## <a name="type"></a>Type  
  `Type`  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
@@ -46,19 +46,19 @@ ms.locfileid: "70399918"
   
 ### <a name="attributes"></a>특성  
   
-|특성|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |`allowSerializedSigningTokenOnReply`|선택 사항입니다. serialize(직렬화)된 토큰을 회신에 사용할 수 있는지 여부를 지정하는 부울 값입니다. 기본값은 `false`입니다. 이중 바인딩을 사용하는 경우 설정은 기본적으로 `true`로 지정되며 변경된 설정이 모두 무시됩니다.|  
 |`authenticationMode`|게시자와 응답자 간에 SOAP 인증 모드가 사용되도록 지정합니다.<br /><br /> 기본값은 sspiNegotiated입니다.<br /><br /> 이 특성은 <xref:System.ServiceModel.Configuration.AuthenticationMode> 형식입니다.|  
 |`defaultAlgorithmSuite`|보안 알고리즘 모음은 정형화, 다이제스트, 키 래핑, 시그니처, 암호화 및 키 파생 알고리즘과 같은 다양한 알고리즘을 정의합니다. 각 보안 알고리즘 모음은 이러한 다양한 매개 변수의 값을 정의합니다. 이러한 알고리즘을 통해 메시지 기반 보안이 구현됩니다.<br /><br /> 이 특성은 기본값과 다른 알고리즘 집합에 적합한 다른 플랫폼에서 작업할 때 사용됩니다. 이 설정을 수정하는 경우 관련 알고리즘의 장점과 단점을 파악해야 합니다. 이 특성은 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 형식입니다. 기본값은 `Basic256`입니다.|  
 |`includeTimestamp`|각 메시지에 타임스탬프가 포함되는지 여부를 지정하는 부울 값입니다. 기본값은 `true`입니다.|  
-|`keyEntropyMode`|메시지 보안 설정을 위한 키의 계산 방식을 지정합니다. 키는 클라이언트 키 자료만을 기반으로 하거나 서비스 키 자료만을 기반으로 하거나 두 가지의 조합을 기반으로 할 수 있습니다. 유효한 값은<br /><br /> -ClientEntropy: 세션 키는 클라이언트 제공 키 자료를 기반으로 합니다.<br />-   ServerEntropy: 세션 키는 서비스 제공 키 자료를 기반으로 합니다.<br />CombinedEntropy 세션 키는 클라이언트 및 서비스 제공 키 자료를 기반으로 합니다.<br /><br /> 기본값은 CombinedEntropy입니다.<br /><br /> 이 특성은 <xref:System.ServiceModel.Security.SecurityKeyEntropyMode> 형식입니다.|  
-|`messageProtectionOrder`|메시지 수준 보안 알고리즘이 메시지에 적용되는 순서를 설정합니다. 유효한 값은 다음과 같습니다.<br /><br /> -   SignBeforeEncrypt: 먼저 서명 하 고 암호화 합니다.<br />-   SignBeforeEncryptAndEncryptSignature: 서명, 암호화 및 서명 암호화<br />-   EncryptBeforeSign: 먼저 암호화 한 다음 서명 합니다.<br /><br /> WS-Security 1.1과 함께 상호 인증서를 사용하는 경우 기본값은 SignBeforeEncryptAndEncryptSignature입니다.  WS-Security 1.0을 사용하는 경우 기본값은 SignBeforeEncrypt입니다.<br /><br /> 이 특성은 <xref:System.ServiceModel.Security.MessageProtectionOrder> 형식입니다.|  
-|`messageSecurityVersion`|사용되는 WS-Security 버전을 설정합니다. 유효한 값은 다음과 같습니다.<br /><br /> -   WSSecurityJan2004<br />-   WSSecurityXXX2005<br /><br /> 기본값은 WSSecurityXXX2005입니다. 이 특성은 <xref:System.ServiceModel.MessageSecurityVersion> 형식입니다.|  
+|`keyEntropyMode`|메시지 보안 설정을 위한 키의 계산 방식을 지정합니다. 키는 클라이언트 키 자료만을 기반으로 하거나 서비스 키 자료만을 기반으로 하거나 두 가지의 조합을 기반으로 할 수 있습니다. 유효한 값은 다음과 같습니다.<br /><br /> -ClientEntropy: 세션 키는 클라이언트 제공 키 자료를 기반으로 합니다.<br />-ServerEntropy: 세션 키는 서비스 제공 키 자료를 기반으로 합니다.<br />-CombinedEntropy: 세션 키는 클라이언트 및 서비스 제공 키 자료를 기반으로 합니다.<br /><br /> 기본값은 CombinedEntropy입니다.<br /><br /> 이 특성은 <xref:System.ServiceModel.Security.SecurityKeyEntropyMode> 형식입니다.|  
+|`messageProtectionOrder`|메시지 수준 보안 알고리즘이 메시지에 적용되는 순서를 설정합니다. 유효한 값은 다음과 같습니다.<br /><br /> -SignBeforeEncrypt: 먼저 서명한 다음 암호화 합니다.<br />-SignBeforeEncryptAndEncryptSignature: 서명 하 고, 암호화 하 고, 암호화 합니다.<br />-EncryptBeforeSign: 먼저 암호화 한 다음 서명 합니다.<br /><br /> WS-Security 1.1과 함께 상호 인증서를 사용하는 경우 기본값은 SignBeforeEncryptAndEncryptSignature입니다.  WS-Security 1.0을 사용하는 경우 기본값은 SignBeforeEncrypt입니다.<br /><br /> 이 특성은 <xref:System.ServiceModel.Security.MessageProtectionOrder> 형식입니다.|  
+|`messageSecurityVersion`|사용되는 WS-Security 버전을 설정합니다. 유효한 값은 다음과 같습니다.<br /><br /> - WSSecurityJan2004<br />- WSSecurityXXX2005<br /><br /> 기본값은 WSSecurityXXX2005입니다. 이 특성은 <xref:System.ServiceModel.MessageSecurityVersion> 형식입니다.|  
 |`requireDerivedKeys`|키를 원본 증명 키에서 파생할 수 있는지 여부를 지정하는 부울 값입니다. 기본값은 `true`입니다.|  
 |`requireSecurityContextCancellation`|더 이상 필요하지 않은 보안 컨텍스트를 취소 및 종료할지 여부를 지정하는 부울 값입니다. 기본값은 `true`입니다.|  
 |`requireSignatureConfirmation`|WS-Security 시그니처 확인을 사용할 수 있는지 여부를 지정하는 부울 값입니다. `true`로 설정되면 응답자는 메시지 시그니처를 확인합니다. 기본값은 `false`입니다.<br /><br /> 서비스가 요청을 완전히 인식하고 응답하는지 확인하기 위해 시그니처 확인이 사용됩니다.|  
-|`securityHeaderLayout`|보안 헤더의 요소 순서를 지정합니다. 유효한 값은<br /><br /> 제품과. 일반적인 “사용 전 선언” 원칙에 따라 항목이 보안 헤더에 추가됩니다.<br />이점과. WSS: SOAP 메시지 보안을 확인하는 순서로 항목이 보안 헤더에 추가됩니다. 추가됩니다.<br />-   LaxWithTimestampFirst. WSS: SOAP 메시지 보안을 확인하는 순서로 항목이 보안 헤더에 추가됩니다. 단, 보안 헤더의 첫 번째 요소는 wsse:Timestamp 요소여야 합니다.<br />-   LaxWithTimestampLast. WSS: SOAP 메시지 보안을 확인하는 순서로 항목이 보안 헤더에 추가됩니다. 단, 보안 헤더의 마지막 요소는 wsse:Timestamp 요소여야 합니다.<br /><br /> 기본값은 Strict입니다.<br /><br /> 이 요소는 <xref:System.ServiceModel.Channels.SecurityHeaderLayout> 형식입니다.|  
+|`securityHeaderLayout`|보안 헤더의 요소 순서를 지정합니다. 유효한 값은 다음과 같습니다.<br /><br /> 제품과. 일반적인 “사용 전 선언” 원칙에 따라 항목이 보안 헤더에 추가됩니다.<br />이점과. WSS: SOAP 메시지 보안을 확인하는 순서로 항목이 보안 헤더에 추가됩니다.<br />- LaxWithTimestampFirst. WSS: SOAP 메시지 보안을 확인하는 순서로 항목이 보안 헤더에 추가되며 보안 헤더의 첫 번째 요소는 wsse:Timestamp 요소여야 합니다.<br />- LaxWithTimestampLast. WSS: SOAP 메시지 보안을 확인하는 순서로 항목이 보안 헤더에 추가되며 보안 헤더의 마지막 요소는 wsse:Timestamp 요소여야 합니다.<br /><br /> 기본값은 Strict입니다.<br /><br /> 이 요소는 <xref:System.ServiceModel.Channels.SecurityHeaderLayout> 형식입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   
@@ -70,19 +70,19 @@ ms.locfileid: "70399918"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |[\<security>](security-of-custombinding.md)|사용자 지정 바인딩에 대한 보안 옵션을 지정합니다.|  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [바인딩](../../../wcf/bindings.md)
-- [바인딩 확장](../../../wcf/extending/extending-bindings.md)
+- [바인딩 확장명](../../../wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)
-- [방법: SecurityBindingElement를 사용 하 여 사용자 지정 바인딩 만들기](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [사용자 지정 바인딩 보안](../../../wcf/samples/custom-binding-security.md)
+- [방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Custom Binding Security](../../../wcf/samples/custom-binding-security.md)

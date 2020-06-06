@@ -6,20 +6,20 @@ helpviewer_keywords:
 - clear element for <namedCaches>
 ms.assetid: ea01a858-65da-4348-800f-5e3df59d4d79
 ms.openlocfilehash: bcc0e23f0c47ad3a98430e36da31d39612caa3c9
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70252755"
 ---
-# <a name="clear-element-for-namedcaches"></a>\<namedcaches의 > \<요소를 지웁니다 >
-메모리 캐시 `namedCache` 의 `namedCaches` 컬렉션에서 모든 항목을 지웁니다.  
+# <a name="clear-element-for-namedcaches"></a>\<namedCaches>에 대한 \<clear> 요소
+`namedCache`메모리 캐시의 컬렉션에서 모든 항목을 지웁니다 `namedCaches` .  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<>의 런타임 캐싱**](system-runtime-caching-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<memoryCache >** ](memorycache-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<namedCaches >** ](namedcaches-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> 지우기**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.runtime.caching>**](system-runtime-caching-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<memoryCache>**](memorycache-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<namedCaches>**](namedcaches-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**  
   
 ## <a name="syntax"></a>구문  
   
@@ -30,7 +30,7 @@ ms.locfileid: "70252755"
  </namedCaches>  
 ```  
   
-## <a name="type"></a>형식  
+## <a name="type"></a>Type  
  `Type`  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
@@ -46,11 +46,11 @@ ms.locfileid: "70252755"
   
 |요소|Description|  
 |-------------|-----------------|  
-|[\<namedCaches>](namedcaches-element-cache-settings.md)|명명 <xref:System.Runtime.Caching.MemoryCache> 된 인스턴스에 대 한 구성 설정의 컬렉션을 포함 합니다.|  
+|[\<namedCaches>](namedcaches-element-cache-settings.md)|명명 된 인스턴스에 대 한 구성 설정의 컬렉션을 포함 <xref:System.Runtime.Caching.MemoryCache> 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 요소 `clear` 는 메모리 캐시 `namedCache` 에 대해 명명 된 캐시 컬렉션에서 모든 항목을 지웁니다. 요소를 사용 하 `clear` 여 새 명명 된 캐시 `add` 엔트리를 추가 하기 전에 요소를 사용 하 여 컬렉션에 명명 된 다른 캐시가 없는지 확인할 수 있습니다.  
+ `clear`요소는 `namedCache` 메모리 캐시에 대해 명명 된 캐시 컬렉션에서 모든 항목을 지웁니다. 요소를 사용 하 여 `clear` 새 명명 된 캐시 엔트리를 추가 하기 전에 요소를 사용 하 여 `add` 컬렉션에 명명 된 다른 캐시가 없는지 확인할 수 있습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [\<namedCaches > 요소 (캐시 설정)](namedcaches-element-cache-settings.md)
+- [\<namedCaches>요소 (캐시 설정)](namedcaches-element-cache-settings.md)

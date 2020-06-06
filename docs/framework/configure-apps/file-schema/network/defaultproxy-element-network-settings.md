@@ -9,18 +9,18 @@ helpviewer_keywords:
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
 ms.openlocfilehash: 0945629c1395917bc1cf825f2ba84d20afa99957
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "71698203"
 ---
-# <a name="defaultproxy-element-network-settings"></a>\<defaultProxy > 요소 (네트워크 설정)
+# <a name="defaultproxy-element-network-settings"></a>\<defaultProxy> 요소(네트워크 설정)
 HTTP(Hypertext Transfer Protocol) 프록시 서버를 구성합니다.  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<.net >** ](system-net-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;**defaultProxy\<**  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<defaultProxy>**  
   
 ## <a name="syntax"></a>구문  
   
@@ -49,7 +49,7 @@ HTTP(Hypertext Transfer Protocol) 프록시 서버를 구성합니다.
 |**요소**|**설명**|  
 |-----------------|---------------------|  
 |[bypasslist](bypasslist-element-network-settings.md)|프록시를 사용하지 않는 주소를 설명하는 정규식 집합을 제공합니다.|  
-|[name](module-element-network-settings.md)|애플리케이션에 새 프록시 모듈을 추가합니다.|  
+|[모듈](module-element-network-settings.md)|애플리케이션에 새 프록시 모듈을 추가합니다.|  
 |[proxy](proxy-element-network-settings.md)|프록시 서버를 정의합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
@@ -58,10 +58,10 @@ HTTP(Hypertext Transfer Protocol) 프록시 서버를 구성합니다.
 |-----------------|---------------------|  
 |[system.net](system-net-element-network-settings.md)|.NET Framework의 네트워크 연결 방법을 지정하는 설정을 포함합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  DefaultProxy 요소 비어 있으면 Internet Explorer의 프록시 설정이 사용됩니다. 이 동작은 .NET Framework 버전 1.1과 다릅니다.  
   
- [모듈](module-element-network-settings.md) 요소가 public이 아닌 형식을 지정 하거나, 형식이 <xref:System.Net.IWebProxy> 클래스에서 파생 되지 않거나,이 개체의 매개 변수가 없는 생성자에서 예외가 발생 했거나, 시스템에서 지정한 기본 프록시를 검색 하는 동안 예외가 발생 한 경우 예외가 throw 됩니다. 예외의 <xref:System.Exception.InnerException%2A> 속성에는 오류의 근본 원인에 대한 추가 정보가 있어야 합니다.  
+ [모듈](module-element-network-settings.md) 요소가 public이 아닌 형식을 지정 하거나, 형식이 클래스에서 파생 되지 않거나, <xref:System.Net.IWebProxy> 이 개체의 매개 변수가 없는 생성자에서 예외가 발생 했거나, 시스템에서 지정한 기본 프록시를 검색 하는 동안 예외가 발생 한 경우 예외가 throw 됩니다. 예외의 <xref:System.Exception.InnerException%2A> 속성에는 오류의 근본 원인에 대한 추가 정보가 있어야 합니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
  이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  

@@ -3,10 +3,10 @@ title: <Directives>요소 (.NET 네이티브)
 ms.date: 03/30/2017
 ms.assetid: 444846f3-48d5-4341-a43e-69f7221389eb
 ms.openlocfilehash: 0c6ebb8954e80f3f6dc6733f0e9d76094477689b
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84202378"
 ---
 # <a name="directives-element-net-native"></a>\<Directives>요소 (.NET 네이티브)
@@ -24,13 +24,13 @@ ms.locfileid: "84202378"
   
 ## <a name="attributes"></a>특성  
   
-|특성|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |`xmlns`|XML 네임스페이스입니다. 해당 값은 항상 `http://schemas.microsoft.com/netfx/2013/01/metadata` 입니다.|  
   
 ## <a name="child-elements"></a>자식 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |[\<Application>](application-element-net-native.md)|해당 메타데이터를 리플렉션에 사용할 수 있는 애플리케이션 수준 형식 및 형식 멤버의 컨테이너로 사용됩니다.|  
 |[\<Library>](library-element-net-native.md)|런타임에 자식 형식 및 형식 멤버에 메타데이터가 필요한 어셈블리를 정의합니다.|  

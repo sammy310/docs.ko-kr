@@ -22,10 +22,10 @@ helpviewer_keywords:
 - configuration file reference [.NET Framework]
 ms.assetid: 69003d39-dc8a-460c-a6be-e6d93e690b38
 ms.openlocfilehash: 35ed53fc480e218df595794f80af2458f3ecec38
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73039153"
 ---
 # <a name="configuration-file-schema-for-the-net-framework"></a>.NET Framework의 구성 파일 스키마
@@ -37,15 +37,15 @@ ms.locfileid: "73039153"
 > [!IMPORTANT]
 > 구성 파일에서 XML 태그 및 특성은 대/소문자를 구분합니다.
 
-## <a name="in-this-section"></a>이 섹션의 내용
+## <a name="in-this-section"></a>단원 내용
 
-[ **구성 >** 요소를\<](configuration-element.md)\
+[**\<configuration>** 요소인](configuration-element.md)\
 모든 구성 파일의 최상위 요소입니다.
 
-[ **assemblybinding >** 요소를\<](assemblybinding-element-for-configuration.md)\
+[**\<assemblyBinding>** 요소인](assemblybinding-element-for-configuration.md)\
 구성 수준에서 어셈블리 바인딩 정책을 지정합니다.
 
-[ **\<linkedConfiguration >** 요소](linkedconfiguration-element.md)\
+[**\<linkedConfiguration>** 요소인](linkedconfiguration-element.md)\
 포함할 구성 파일을 지정합니다.
 
 [시작 설정 스키마](./startup/index.md)\
@@ -85,7 +85,7 @@ ASP.NET가 IIS와 같은 호스트 응용 프로그램과 함께 작동 하는 �
 WCF 서비스 및 클라이언트 응용 프로그램을 구성 하는 데 사용할 수 있는 모든 요소입니다.
 
 [WCF 지시문 구문](./wcf-directive/index.md)\
-.Svc 컴파일러에서 사용 하는 페이지 관련 특성을 정의 하는 `@ServiceHost` 지시문에 대해 설명 합니다.
+`@ServiceHost`.Svc 컴파일러에서 사용 하는 페이지 관련 특성을 정의 하는 지시문에 대해 설명 합니다.
 
 [WIF 구성 스키마](windows-identity-foundation/index.md)\
 WIF (Windows Identity Foundation) 구성 스키마의 모든 요소입니다.

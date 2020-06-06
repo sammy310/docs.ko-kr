@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 50855b30-d5fe-49a9-89d3-3f1bfd670958
 ms.openlocfilehash: 728408e744bc1eca62158fab1a7a17e985fe3b6c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69947279"
 ---
 # <a name="using-annotation-in-queries"></a>쿼리에 주석 사용
@@ -30,7 +30,7 @@ ms.locfileid: "69947279"
 > [!NOTE]
 > 이러한 추적 쿼리 요소를 사용하여 추적 프로필을 만들 수 있습니다. 추적 프로필은 구성이나 코드를 사용하여 만들 수 있습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement>
 - <xref:System.Activities.Tracking.TrackingProfile>

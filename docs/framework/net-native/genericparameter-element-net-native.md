@@ -1,15 +1,15 @@
 ---
-title: <GenericParameter> 요소 (.NET 네이티브)
+title: <GenericParameter>요소 (.NET 네이티브)
 ms.date: 03/30/2017
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 ms.openlocfilehash: d0b18211206a8f9d4365ab3affe6d1c376003348
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128428"
 ---
-# <a name="genericparameter-element-net-native"></a>\<GenericParameter > 요소 (.NET 네이티브)
+# <a name="genericparameter-element-net-native"></a>\<GenericParameter>요소 (.NET 네이티브)
 제네릭 형식 또는 메서드의 매개 변수 형식에 정책을 적용합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -33,7 +33,7 @@ ms.locfileid: "73128428"
   
 ### <a name="attributes"></a>특성  
   
-|특성|특성 유형|설명|  
+|attribute|특성 유형|Description|  
 |---------------|--------------------|-----------------|  
 |`Name`|일반|필수 특성입니다. 제네릭 매개 변수의 이름입니다. 예를 들어 <xref:System.Func%603> 제네릭 대리자의 경우 런타임 정책을 대리자의 반환 값에 적용할 수 있도록 `Name` 특성의 값은 "TResult"입니다.|  
 |`Activate`|반사|선택적 특성입니다. 인스턴스를 활성화할 수 있도록 생성자에 대한 런타임 액세스를 제어합니다.|  
@@ -49,30 +49,30 @@ ms.locfileid: "73128428"
   
 ## <a name="name-attribute"></a>Name 특성  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |*generic_parameter_name*|필수 특성입니다. 제네릭 형식 매개 변수의 이름입니다. 예를 들어 <xref:System.Func%603> 제네릭 대리자의 경우 *generic_parameter_name*의 값이 “TResult”이면 런타임 정책이 대리자의 반환 값에 적용됩니다.|  
   
 ## <a name="all-other-attributes"></a>기타 모든 특성  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |*policy_setting*|이 정책 형식에 적용할 설정입니다. 가능한 값은 `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` 및 `Required All`입니다. 자세한 내용은 [런타임 지시문 정책 설정](runtime-directive-policy-settings.md)을 참조하세요.|  
   
 ### <a name="child-elements"></a>자식 요소  
- 없음.  
+ 없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |[\<Method>](method-element-net-native.md)|생성자 또는 메서드에 런타임 리플렉션 정책을 적용합니다.|  
 |[\<Type>](type-element-net-native.md)|클래스 또는 구조체와 같은 특정 형식에 런타임 리플렉션 정책을 적용합니다.|  
   
-## <a name="remarks"></a>주의  
- `<GenericParameter>` 요소는 [\<Method>](method-element-net-native.md) 또는 [\<Type>](type-element-net-native.md) 요소의 자식이며, 제네릭 형식 또는 메서드 시그니처에서 해당 이름으로 지정되는 특정 제네릭 형식 매개 변수에 정책을 적용하는 데 사용됩니다.  
+## <a name="remarks"></a>설명  
+ `<GenericParameter>`요소는 [\<Method>](method-element-net-native.md) 또는 요소의 자식 [\<Type>](type-element-net-native.md) 이며, 제네릭 형식 또는 메서드 시그니처에서 해당 이름으로 지정 되는 특정 제네릭 형식 매개 변수에 정책을 적용 하는 데 사용 됩니다.  
   
- `<GenericParameter>` 요소는 serializer와 함께 사용하면 가장 유용합니다. 다음 예제에서는 `<GenericParameter>` 요소를 사용하여 NewtonSoft JSON 직렬 변환기의 [JsonConvert.DeserializeObject\<T>(String)](https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_JsonConvert_DeserializeObject__1.htm) 메서드 오버로드에 대한 호출에서 `T` 형식에 정책을 적용합니다.  
+ `<GenericParameter>` 요소는 serializer와 함께 사용하면 가장 유용합니다. 다음 예제에서는 요소를 사용 하 여 `<GenericParameter>` `T` newtonsoft.json JSON Serializer의 [JsonConvert .는 deserializeobject \<T> (String)](https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_JsonConvert_DeserializeObject__1.htm) 메서드 오버 로드에 대 한 호출에서 형식에 정책을 적용 합니다.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -84,10 +84,10 @@ ms.locfileid: "73128428"
 </Directives>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [\<Method> 요소](method-element-net-native.md)
-- [\<형식 > 요소](type-element-net-native.md)
+- [\<Method>요소인](method-element-net-native.md)
+- [\<Type>요소인](type-element-net-native.md)
 - [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)
 - [런타임 지시문 정책 설정](runtime-directive-policy-settings.md)
 - [런타임 지시문 요소](runtime-directive-elements.md)

@@ -3,10 +3,10 @@ title: 리플렉션 및 .NET 네이티브
 ms.date: 03/30/2017
 ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
 ms.openlocfilehash: 65921377be9b8bf1c2d147b384c85cbd037d15f2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128179"
 ---
 # <a name="reflection-and-net-native"></a>리플렉션 및 .NET 네이티브
@@ -31,7 +31,7 @@ ms.locfileid: "73128179"
   
 - [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [.NET Native로 앱 컴파일](index.md)
 - [.NET 네이티브 및 컴파일](net-native-and-compilation.md)

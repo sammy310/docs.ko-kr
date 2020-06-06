@@ -3,19 +3,19 @@ title: <service>
 ms.date: 03/30/2017
 ms.assetid: 13123dd6-c4a9-4a04-a984-df184b851788
 ms.openlocfilehash: c12f57d68de870123d92c8a101e2999c24bb988f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70855026"
 ---
-# <a name="service"></a>\<service>
+# \<service>
 `service` 요소에는 WCF(Windows Communication Foundation) 서비스 설정이 포함되어 있습니다. 이 요소에는 서비스를 공개하는 엔드포인트도 포함되어 있습니다.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<서비스 >** ](services.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<서비스 >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<services>**](services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<service>**  
   
 ## <a name="syntax"></a>구문  
   
@@ -30,10 +30,10 @@ ms.locfileid: "70855026"
   
 ### <a name="attributes"></a>특성  
   
-|특성|Description|  
+|attribute|Description|  
 |---------------|-----------------|  
 |behaviorConfiguration|서비스 인스턴스화에 사용할 동작의 동작 이름을 포함하는 문자열입니다. 동작 이름은 서비스가 정의된 지점의 범위에 속해야 합니다. 기본값은 빈 문자열입니다.|  
-|name|인스턴스화할 서비스 형식을 지정하는 필수 문자열 특성입니다. 이 설정은 유효한 형식을 사용해야 하며, Namespace.Class`Namespace.Class.` 형식이어야 합니다.|  
+|name|인스턴스화할 서비스 형식을 지정하는 필수 문자열 특성입니다. 이 설정은 유효한 형식을 사용해야 하며, `Namespace.Class.` 형식이어야 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   
@@ -69,7 +69,7 @@ ms.locfileid: "70855026"
 </service>
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Configuration.ServiceElement>
 - [서비스 구성](../../../wcf/configuring-services.md)

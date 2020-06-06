@@ -3,19 +3,19 @@ title: <udpBinding>
 ms.date: 03/30/2017
 ms.assetid: fa291901-8340-45c6-9c44-5d9281c70bc3
 ms.openlocfilehash: 7fa72d233d6489ab6a2c534f69c66a55a22d0f59
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74429837"
 ---
-# <a name="udpbinding"></a>\<udpBinding >
+# \<udpBinding>
 <xref:System.ServiceModel.UdpBinding> 바인딩을 구성하는 데 사용되는 구성 요소입니다.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;[ **\<system.servicemodel >를**](system-servicemodel.md) &nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp;\<[**바인딩**](bindings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<udpBinding >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<udpBinding>**  
   
 ## <a name="syntax"></a>구문  
   
@@ -49,7 +49,7 @@ ms.locfileid: "74429837"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |`closeTimeout`|닫기 작업을 완료하기 위해 제공된 시간 간격을 지정하는 <xref:System.TimeSpan> 값입니다. 이 값은 <xref:System.TimeSpan.Zero>보다 크거나 같아야 합니다. 기본값은 00:01:00입니다.|  
 |`duplicateMessageHistoryLength`|중복 메시지 기록 길이를 지정하는 정수 값입니다.|  
@@ -68,21 +68,21 @@ ms.locfileid: "74429837"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|이 바인딩으로 구성된 엔드포인트에서 처리할 수 있는 SOAP 메시지의 복잡성에 대한 제약 조건을 정의합니다. 이 요소는 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> 형식입니다.|  
+|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|이 바인딩으로 구성된 엔드포인트에서 처리할 수 있는 SOAP 메시지의 복잡성에 대한 제약 조건을 정의합니다. 이 요소는 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> 형식입니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<바인딩 >](bindings.md)|이 요소는 표준 및 사용자 지정 바인딩의 컬렉션을 보유합니다.|  
+|[\<bindings>](bindings.md)|이 요소는 표준 및 사용자 지정 바인딩의 컬렉션을 보유합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  UdpBinding을 사용하면 WCF 서비스가 UDP 전송을 통해 통신할 수 있습니다. 클라이언트는 서비스에 메시지를 보내고 응답을 받지 않을 것으로 예상 하는 "화재 및 잊은" 메시지 교환을 허용 합니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 <`udpBinding`> 요소를 사용 하 여 <xref:System.ServiceModel.UdpBinding>를 구성 하는 방법을 보여 줍니다.  
+ 다음 예제에서는 <xref:System.ServiceModel.UdpBinding> <> 요소를 사용 하 여를 구성 하는 방법을 보여 줍니다 `udpBinding` .  
   
 ```xml  
 <udpBinding>
@@ -113,4 +113,4 @@ ms.locfileid: "74429837"
 - [바인딩](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<바인딩 >](bindings.md)
+- [\<binding>](bindings.md)

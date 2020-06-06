@@ -3,10 +3,10 @@ title: .NET 네이티브 일반 문제 해결
 ms.date: 03/30/2017
 ms.assetid: ee8c5e17-35ea-48a1-8767-83298caac1e8
 ms.openlocfilehash: 2bea81e380fed6c456898e9883658ef874c8dd97
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128235"
 ---
 # <a name="net-native-general-troubleshooting"></a>.NET 네이티브 일반 문제 해결
@@ -29,7 +29,7 @@ ms.locfileid: "73128235"
 
   **해결 방법:** .NET 네이티브 컴파일러를 호출 하면 빌드 시간이 길어질 수 있으며, 작업 관리자는 ILC 및 nutc_driver와 같은 다양 한 .NET 네이티브 구성 요소 프로세스를 표시 합니다.
 
-  .NET 네이티브를 사용 하 여 프로젝트를 성공적으로 빌드한 후에는 .obj\\*구성*\ *아치*\\*projectname*. ilc\out.에서 출력을 찾을 수 있습니다.  최종 네이티브 패키지 내용은 bin\\*아치*\\*config*\appx에서 확인할에서 찾을 수 있습니다. 앱을 배포한 경우 최종 네이티브 패키지 콘텐츠는 \bin\\*arch*\\*config*\AppX에 있습니다.
+  .NET 네이티브를 사용 하 여 프로젝트를 성공적으로 빌드한 후에는 obj \\ *구성* \  *아치* \\ *projectname*. ilc\out. 아래에 출력을 찾을 수 있습니다.  최종 네이티브 패키지 내용은 bin \\ *아치* \\ *config*\appx에서 확인할에서 찾을 수 있습니다. 앱을 배포한 경우 최종 네이티브 패키지 콘텐츠는 \bin \\ *아치* \\ *config*\appx 아래에 있습니다.
 
 - **문제:** .NET 네이티브를 사용해서 컴파일한 앱에서 .NET 네이티브 없이 컴파일했을 때는 throw하지 않던 런타임 예외(일반적으로 [MissingMetadataException](missingmetadataexception-class-net-native.md) 또는 [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) 예외)를 throw합니다.
 
@@ -41,6 +41,6 @@ ms.locfileid: "73128235"
 
   자세한 내용은 [리플렉션 및 .NET 네이티브](reflection-and-net-native.md)를 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows 스토어 앱을 .NET 네이티브로 마이그레이션](migrating-your-windows-store-app-to-net-native.md)

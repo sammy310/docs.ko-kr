@@ -5,10 +5,10 @@ helpviewer_keywords:
 - gcNoAffinitize element
 - <gcNoAffinitize> element
 ms.openlocfilehash: 16d6e5adefe2b632d7251669650058d7df7cea70
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84004740"
 ---
 # <a name="gcnoaffinitize-element"></a>\<GCNoAffinitize> 요소
@@ -40,7 +40,7 @@ Cpu가 있는 서버 GC 스레드를 선호도 여부를 지정 합니다.
 
 |값|Description|
 |-----------|-----------------|
-|`false`|Cpu가 있는 서버 GC 스레드를 선호도 합니다. 이것이 기본값입니다.|
+|`false`|Cpu가 있는 서버 GC 스레드를 선호도 합니다. 기본값입니다.|
 |`true`|는 Cpu가 있는 서버 GC 스레드를 선호도 하지 않습니다.|
 
 ### <a name="child-elements"></a>자식 요소
