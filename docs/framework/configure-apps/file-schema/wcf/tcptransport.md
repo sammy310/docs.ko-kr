@@ -3,21 +3,21 @@ title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
 ms.openlocfilehash: f2c1335795ffd3cb395a7006bfaeb3cf7b39636b
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77448623"
 ---
-# <a name="tcptransport"></a>\<tcpTransport >
+# \<tcpTransport>
 사용자 지정 바인딩에 대한 메시지를 전송하기 위해 채널이 사용할 수 있는 TCP 전송을 정의합니다.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;[ **\<system.servicemodel >를**](system-servicemodel.md) &nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp;\<[**바인딩**](bindings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<바인딩 >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**tcpTransport >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<customBinding>**](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<tcpTransport>**  
   
 ## <a name="syntax"></a>구문  
   
@@ -73,7 +73,7 @@ ms.locfileid: "77448623"
   
 |요소|Description|  
 |-------------|-----------------|  
-|[\<바인딩 >](bindings.md)|사용자 지정 바인딩의 모든 바인딩 기능을 정의합니다.|  
+|[\<binding>](bindings.md)|사용자 지정 바인딩의 모든 바인딩 기능을 정의합니다.|  
   
 ## <a name="remarks"></a>설명  
  이 전송은 "net.tcp://hostname:port/path" 형식의 URI를 사용합니다. 다른 URI 구성 요소는 선택적입니다.  
@@ -88,7 +88,7 @@ ms.locfileid: "77448623"
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [전송](../../../wcf/feature-details/transports.md)
 - [전송 선택](../../../wcf/feature-details/choosing-a-transport.md)
-- [Bindings](../../../wcf/bindings.md)
-- [바인딩 확장](../../../wcf/extending/extending-bindings.md)
+- [바인딩](../../../wcf/bindings.md)
+- [바인딩 확장명](../../../wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../wcf/extending/custom-bindings.md)
-- [\<customBinding >](custombinding.md)
+- [\<customBinding>](custombinding.md)

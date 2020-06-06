@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 560dd0bb-f9fb-423c-8857-2101a3654b06
 ms.openlocfilehash: e6e996bd1cc32258167e30287e9338a4773ce921
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79152030"
 ---
-# <a name="participants"></a>\<참가자는>
+# \<participants>
 런타임에서 내보내지는 추적 레코드를 수신하는 추적 참가자의 목록을 직접 구성하고 구성된 방식대로 처리합니다. 여기에는 특정 출력(예: 파일, 콘솔, ETW)에 쓰기, 레코드 처리/집계 또는 필요한 기타 조합이 포함됩니다.  
   
- 워크플로 추적 및 추적 참가자에 대한 자세한 내용은 [워크플로 추적 및 추적](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) [참가자를](../../../windows-workflow-foundation/tracking-participants.md)참조하십시오.  
+ 워크플로 추적 및 추적 참가자에 대 한 자세한 내용은 [워크플로 추적 및](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) 추적 및 추적 [참가자](../../../windows-workflow-foundation/tracking-participants.md)를 참조 하세요.  
   
-[**\<구성>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<시스템. 서비스 모델>**](system-servicemodel-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<추적>**](tracking.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<참가자들은>**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.ServiceModel>**](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<tracking>**](tracking.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<participants>**  
   
 ## <a name="syntax"></a>구문  
   
@@ -33,7 +33,7 @@ ms.locfileid: "79152030"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
  없음  
@@ -42,13 +42,13 @@ ms.locfileid: "79152030"
   
 |요소|Description|  
 |-------------|-----------------|  
-|[\<>추가](add-of-participants.md)|추적 참가자에 대한 설정을 포함합니다.|  
+|[\<add>](add-of-participants.md)|추적 참가자에 대한 설정을 포함합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
 |요소|Description|  
 |-------------|-----------------|  
-|[\<추적>](tracking.md)|워크플로 서비스에 대한 추적 설정을 정의하기 위한 구성 섹션을 나타냅니다.|  
+|[\<tracking>](tracking.md)|워크플로 서비스에 대한 추적 설정을 정의하기 위한 구성 섹션을 나타냅니다.|  
   
 ## <a name="remarks"></a>설명  
  추적 참가자는 워크플로에서 내보내지는 추적 데이터를 가져오고 이 데이터를 다른 미디어에 저장하기 위해 사용됩니다. 마찬가지로 추적 레코드에 대한 모든 사후 처리를 추적 참가자 내에서 수행할 수도 있습니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "79152030"
 ## <a name="example"></a>예제  
  다음 구성 예제에서는 Web.config 파일에서 구성되는 표준 ETW 추적 참가자를 보여 줍니다.  
   
- ETW 추적 참가자가 추적 레코드를 ETW에 기록하는 데 사용하는 공급자 ID는 ** \<진단>** 섹션에 정의되어 있습니다. 추적 참가자에는 구독하는 추적 레코드를 지정하기 위해 연결된 프로필이 있습니다. 이>** \<추가** 요소의 **profileName** 특성에 의해 정의 됩니다. 이러한 정의가 정의되면 추적 참가자가 ** \<etwTracking>** 서비스 동작에 추가됩니다. 이렇게 하면 선택된 추적 참가자가 워크플로 인스턴스의 확장에 추가되어 추적 레코드를 받기 시작합니다.  
+ Etw 추적 참가자가 ETW에 추적 레코드를 기록 하는 데 사용 하는 공급자 Id는 섹션에서 정의 됩니다 **\<diagnostics>** . 추적 참가자에는 구독하는 추적 레코드를 지정하기 위해 연결된 프로필이 있습니다. 이는 요소의 **profileName** 특성에 의해 정의 됩니다 **\<add>** . 이러한 설정이 정의 되 면 추적 참가자가 서비스 동작에 추가 됩니다 **\<etwTracking>** . 이렇게 하면 선택된 추적 참가자가 워크플로 인스턴스의 확장에 추가되어 추적 레코드를 받기 시작합니다.  
   
 ```xml
 <configuration>
@@ -93,4 +93,4 @@ ms.locfileid: "79152030"
 - <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>
 - <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>
 - [워크플로 추적](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [참가자 추적](../../../windows-workflow-foundation/tracking-participants.md)
+- [추적 참가자](../../../windows-workflow-foundation/tracking-participants.md)

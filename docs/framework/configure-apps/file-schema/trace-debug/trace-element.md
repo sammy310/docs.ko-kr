@@ -11,18 +11,18 @@ helpviewer_keywords:
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
 ms.openlocfilehash: 7d8a989219d84e8604e767456c84c0092bc73b22
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153168"
 ---
-# <a name="trace-element"></a>\<추적> 요소
+# <a name="trace-element"></a>\<trace> 요소
 추적 메시지를 수집하고 저장하고 라우팅하는 수신기가 포함되어 있습니다.  
   
-[**\<구성>**](../configuration-element.md)  
-&nbsp;&nbsp;[**\<system.진단>**](system-diagnostics-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;**\<추적>**  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<trace>**  
   
 ## <a name="syntax"></a>구문  
   
@@ -33,35 +33,35 @@ ms.locfileid: "79153168"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
 |attribute|Description|  
 |---------------|-----------------|  
-|`autoflush`|선택적 특성입니다.<br /><br /> 추적 리스너가 모든 쓰기 작업 후에 출력 버퍼를 자동으로 플러시할지 여부를 지정합니다.|  
-|`indentsize`|선택적 특성입니다.<br /><br /> 들여쓰기할 공백 수를 지정합니다.|  
-|`useGlobalLock`|선택적 특성입니다.<br /><br /> 전역 잠금을 사용해야 하는지 여부를 나타냅니다.|  
+|`autoflush`|선택적 특성입니다.<br /><br /> 모든 쓰기 작업 후 추적 수신기가 출력 버퍼를 자동으로 플러시하지 여부를 지정 합니다.|  
+|`indentsize`|선택적 특성입니다.<br /><br /> 들여쓸 공백의 수를 지정 합니다.|  
+|`useGlobalLock`|선택적 특성입니다.<br /><br /> 전역 잠금을 사용 해야 하는지 여부를 나타냅니다.|  
   
-## <a name="autoflush-attribute"></a>자동 플러시 특성  
+## <a name="autoflush-attribute"></a>autoflush 특성  
   
 |값|Description|  
 |-----------|-----------------|  
-|`false`|출력 버퍼를 자동으로 플러시하지 않습니다. 이것이 기본값입니다.|  
+|`false`|는 출력 버퍼를 자동으로 플러시하지 않습니다. 기본값입니다.|  
 |`true`|출력 버퍼를 자동으로 플러시합니다.|  
   
-## <a name="usegloballock-attribute"></a>use글로벌록 속성  
+## <a name="usegloballock-attribute"></a>useGlobalLock 특성  
   
 |값|Description|  
 |-----------|-----------------|  
-|`false`|수신기가 스레드에 안전한 경우 전역 잠금을 사용하지 않습니다. 그렇지 않으면 전역 잠금을 사용합니다.|  
-|`true`|수신기가 스레드에 안전한지 여부에 관계없이 전역 잠금을 사용합니다. 이것이 기본값입니다.|  
+|`false`|수신기가 스레드로부터 안전 하 게 보호 되는 경우 전역 잠금을 사용 하지 않습니다. 그렇지 않으면 전역 잠금을 사용 합니다.|  
+|`true`|수신기가 스레드로부터 안전한 지 여부에 관계 없이 전역 잠금을 사용 합니다. 기본값입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   
 |요소|Description|  
 |-------------|-----------------|  
-|[\<청취자>](listeners-element-for-trace.md)|메시지를 수집, 저장 및 라우팅하는 수신기를 지정합니다.|  
+|[\<listeners>](listeners-element-for-trace.md)|메시지를 수집, 저장 및 라우팅하는 수신기를 지정 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
@@ -71,7 +71,7 @@ ms.locfileid: "79153168"
 |`system.diagnostics`|메시지를 수집하고 저장하고 라우팅하는 추적 수신기를 지정하며, 추적 스위치가 설정되는 수준을 지정합니다.|  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 요소를 사용하여 `<trace>` 컬렉션에 리스터를 `MyListener` 추가하는 `Listeners` 방법을 보여 주며 있습니다. `MyListener`이라는 이름의 `MyListener.log` 파일을 만들고 출력을 파일에 씁니다. 특성은 `useGlobalLock` `false`로 설정되어 추적 수신기가 스레드에서 안전한 경우 전역 잠금을 사용하지 않습니다. 특성은 `autoflush` `true`로 설정되어 추적 수신기가 <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> 메서드가 호출되는지 여부에 관계없이 파일에 기록됩니다. 특성은 `indentsize` 0(0)으로 설정되어 메서드가 호출될 때 수신기가 0 공백을 <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> 들여쓰기합니다.  
+ 다음 예제에서는 요소를 사용 하 여 `<trace>` 컬렉션에 수신기를 추가 하는 방법을 보여 줍니다 `MyListener` `Listeners` . `MyListener`이라는 파일을 만들고 출력을 `MyListener.log` 파일에 씁니다. `useGlobalLock`특성은로 설정 되며 `false` ,이로 인해 추적 수신기가 스레드로부터 안전 하 게 보호 되는 경우 전역 잠금이 사용 되지 않습니다. `autoflush`특성은로 설정 되며 `true` ,이로 인해 메서드가 호출 되었는지 여부에 관계 없이 추적 수신기가 파일에 쓸 수 <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> 있습니다. `indentsize`특성이 0으로 설정 되 면 메서드가 호출 될 때 수신기가 공백을 0으로 들여씁니다 <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> .  
   
 ```xml  
 <configuration>  

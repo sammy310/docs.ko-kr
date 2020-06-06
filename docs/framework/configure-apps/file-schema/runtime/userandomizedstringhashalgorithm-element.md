@@ -9,18 +9,18 @@ helpviewer_keywords:
 - <UseRandomizedStringHashAlgorithm> element
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
 ms.openlocfilehash: a9afa0db516a542b74d08a4c3754a3244abbbea7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153779"
 ---
-# <a name="userandomizedstringhashalgorithm-element"></a>\<사용임의적 스트링해시 알고리즘> 요소
-공통 언어 런타임이 응용 프로그램 도메인별로 문자열에 대한 해시 코드를 계산하는지 여부를 결정합니다.  
+# <a name="userandomizedstringhashalgorithm-element"></a>\<UseRandomizedStringHashAlgorithm> 요소
+공용 언어 런타임이 응용 프로그램 도메인 별로 문자열의 해시 코드를 계산할지 여부를 결정 합니다.  
   
-[**\<구성>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<런타임>**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<사용임의적 스트링해시 알고리즘>**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<UseRandomizedStringHashAlgorithm>**  
   
 ## <a name="syntax"></a>구문  
   
@@ -30,20 +30,20 @@ ms.locfileid: "79153779"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
 |attribute|Description|  
 |---------------|-----------------|  
-|`enabled`|필수 특성입니다.<br /><br /> 문자열에 대한 해시 코드가 응용 프로그램 도메인별로 계산되는지 여부를 지정합니다.|  
+|`enabled`|필수 특성입니다.<br /><br /> 응용 프로그램 도메인 별로 문자열의 해시 코드를 계산할지 여부를 지정 합니다.|  
   
 ## <a name="enabled-attribute"></a>enabled 특성  
   
 |값|Description|  
 |-----------|-----------------|  
-|`0`|공통 언어 런타임은 응용 프로그램 도메인별로 문자열에 대한 해시 코드를 계산하지 않습니다. 단일 알고리즘은 문자열 해시 코드를 계산하는 데 사용됩니다. 이것이 기본값입니다.|  
-|`1`|공통 언어 런타임은 응용 프로그램 도메인별로 문자열에 대한 해시 코드를 계산합니다. 서로 다른 응용 프로그램 도메인과 다른 프로세스의 동일한 문자열에는 서로 다른 해시 코드가 있습니다.|  
+|`0`|공용 언어 런타임은 응용 프로그램 도메인 별로 문자열의 해시 코드를 계산 하지 않습니다. 단일 알고리즘은 문자열 해시 코드를 계산 하는 데 사용 됩니다. 기본값입니다.|  
+|`1`|공용 언어 런타임은 응용 프로그램 도메인 별로 문자열의 해시 코드를 계산 합니다. 서로 다른 응용 프로그램 도메인의 동일한 문자열과 다른 프로세스의 해시 코드는 서로 다릅니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -56,14 +56,14 @@ ms.locfileid: "79153779"
 |`runtime`|런타임 초기화 옵션에 대한 정보를 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
- 기본적으로 클래스와 <xref:System.StringComparer> 메서드는 <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> 응용 프로그램 도메인 간에 일관된 해시 코드를 생성하는 단일 해시 알고리즘을 사용합니다. 이는 `enabled` `<UseRandomizedStringHashAlgorithm>` 요소의 특성을 에 설정하는 `0`것과 같습니다. .NET Framework 4에 사용되는 해싱 알고리즘입니다.  
+ 기본적으로 <xref:System.StringComparer> 클래스와 <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> 메서드는 응용 프로그램 도메인 간에 일관 된 해시 코드를 생성 하는 단일 해싱 알고리즘을 사용 합니다. 이는 요소의 특성을로 설정 하는 것과 같습니다 `enabled` `<UseRandomizedStringHashAlgorithm>` `0` . .NET Framework 4에서 사용 되는 해시 알고리즘입니다.  
   
- 클래스와 <xref:System.StringComparer> <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> 메서드는 응용 프로그램 도메인별로 해시 코드를 계산하는 다른 해시 알고리즘을 사용할 수도 있습니다. 따라서 해당 문자열에 대한 해시 코드는 응용 프로그램 도메인마다 다릅니다. 이 기능은 옵트인 기능입니다. 이를 활용하려면 요소의 특성을 `enabled` `<UseRandomizedStringHashAlgorithm>` `1`로 설정해야 합니다.  
+ <xref:System.StringComparer>클래스와 메서드는 <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> 응용 프로그램 도메인 별로 해시 코드를 계산 하는 다른 해싱 알고리즘을 사용할 수도 있습니다. 따라서 동일한 문자열의 해시 코드는 응용 프로그램 도메인에 따라 달라 집니다. 이 기능은 옵트인 (opt in) 기능입니다. 이를 활용 하려면 요소의 특성을로 설정 해야 합니다 `enabled` `<UseRandomizedStringHashAlgorithm>` `1` .  
   
- 해시 테이블의 문자열 조회는 일반적으로 O(1) 작업입니다. 그러나 많은 수의 충돌이 발생하면 조회가<sup>O(n2)</sup>작업이 될 수 있습니다. `<UseRandomizedStringHashAlgorithm>` 구성 요소를 사용하여 응용 프로그램 도메인당 임의의 해싱 알고리즘을 생성할 수 있으며, 특히 해시 코드가 계산되는 키가 사용자가 입력한 데이터를 기반으로 하는 경우 잠재적충돌 횟수를 제한할 수 있습니다.  
+ 해시 테이블의 문자열 조회는 일반적으로 O (1) 연산입니다. 그러나 많은 수의 충돌이 발생 하면 조회는 O (n<sup>2</sup>) 작업이 될 수 있습니다. 구성 요소를 사용 하 여 `<UseRandomizedStringHashAlgorithm>` 응용 프로그램 도메인당 임의의 해싱 알고리즘을 생성할 수 있습니다 .이는 특히 해시 코드를 계산 하는 키가 사용자의 데이터 입력을 기반으로 하는 경우 잠재적 충돌 수를 제한 합니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 "이 문자열은 문자열입니다"라는 값을 포함하는 전용 문자열 상수를 `DisplayString` `s`포함하는 클래스를 정의합니다. 메서드를 실행하는 애플리케이션 도메인의 이름과 함께 문자열 값 및 해시 코드를 표시하는 `ShowStringHashCode` 메서드도 포함합니다.  
+ 다음 예제에서는 `DisplayString` 전용 문자열 상수를 포함 하는 클래스를 정의 합니다 `s` . 해당 값은 "This is the string"입니다. 메서드를 실행하는 애플리케이션 도메인의 이름과 함께 문자열 값 및 해시 코드를 표시하는 `ShowStringHashCode` 메서드도 포함합니다.  
   
  [!code-csharp[System.String.GetHashCode#2](../../../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.String.GetHashCode/CS/perdomain.cs#2)]
  [!code-vb[System.String.GetHashCode#2](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.String.GetHashCode/VB/perdomain.vb#2)]  

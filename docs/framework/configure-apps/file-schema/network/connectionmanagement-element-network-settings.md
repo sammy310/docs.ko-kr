@@ -9,18 +9,18 @@ helpviewer_keywords:
 - connectionManagement element
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
 ms.openlocfilehash: 9f1e382bbbaad2cb95e2c33bbbdfb4c505378c9e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154896"
 ---
 # <a name="connectionmanagement-element-network-settings"></a>\<connectionManagement> 요소(네트워크 설정)
 네트워크 호스트에 대한 최대 연결 수를 지정합니다.  
 
-[**\<구성>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<연결 관리>**
+&nbsp;&nbsp;&nbsp;&nbsp;**\<connectionManagement>**
 
 ## <a name="syntax"></a>구문  
   
@@ -30,7 +30,7 @@ ms.locfileid: "79154896"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
  없음  
@@ -40,8 +40,8 @@ ms.locfileid: "79154896"
 |**요소**|**설명**|  
 |-----------------|---------------------|  
 |[추가](add-element-for-connectionmanagement-network-settings.md)|연결 관리 목록에 IP 주소 또는 DNS 이름을 추가합니다.|  
-|[명확한](clear-element-for-connectionmanagement-network-settings.md)|연결 관리 목록을 지웁히 바입니다.|  
-|[제거](remove-element-for-connectionmanagement-network-settings.md)|연결 관리 목록에서 IP 주소 또는 DNS 이름을 제거합니다.|  
+|[해제](clear-element-for-connectionmanagement-network-settings.md)|연결 관리 목록을 지웁니다.|  
+|[remove](remove-element-for-connectionmanagement-network-settings.md)|연결 관리 목록에서 IP 주소 또는 DNS 이름을 제거 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
@@ -50,13 +50,13 @@ ms.locfileid: "79154896"
 |[system.net](system-net-element-network-settings.md)|.NET Framework의 네트워크 연결 방법을 지정하는 설정을 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
- 요소는 `connectionManagement` 서버 또는 서버 그룹에 대한 최대 연결 수를 정의합니다.  
+ `connectionManagement`요소는 서버 또는 서버 그룹에 대 한 최대 연결 수를 정의 합니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
  이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제는 서버에 `www.contoso.com` 대한 네 개의 연결과 다른 모든 서버에 대한 두 개의 연결을 사용하도록 응용 프로그램을 구성합니다.  
+ 다음 예에서는 서버에 대 한 4 개의 연결과 `www.contoso.com` 다른 모든 서버에 대 한 두 개의 연결을 사용 하도록 응용 프로그램을 구성 합니다.  
   
 ```xml  
 <configuration>  

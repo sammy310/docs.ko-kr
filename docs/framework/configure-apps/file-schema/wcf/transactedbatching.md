@@ -3,22 +3,22 @@ title: <transactedBatching>
 ms.date: 03/30/2017
 ms.assetid: 2f790a0d-8f03-4b86-81b5-ce1bc1a6c575
 ms.openlocfilehash: 6167a4ad56a9481a9f695b770605991a0a88d2d9
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70399408"
 ---
-# <a name="transactedbatching"></a>\<transactedBatching>
+# \<transactedBatching>
 
 받기 작업에 트랜잭션 일괄 처리가 지원되는지 여부를 지정합니다.
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<동작 >** ](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<동작 >** ](behavior-of-endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<transactedBatching >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<endpointBehaviors>**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<transactedBatching>**  
 
 ## <a name="syntax"></a>구문
 
@@ -32,7 +32,7 @@ ms.locfileid: "70399408"
 
 ### <a name="attributes"></a>특성
 
-|특성|Description|
+|attribute|Description|
 |---------------|-----------------|
 |`maxBatchSize`|트랜잭션 한 번으로 일괄 처리할 수 있는 받기 작업의 최대 수를 지정하는 정수입니다. 기본값은 0입니다.|
 
@@ -42,7 +42,7 @@ ms.locfileid: "70399408"
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|설명|
+|요소|Description|
 |-------------|-----------------|
 |[\<behavior>](behavior-of-endpointbehaviors.md)|엔드포인트 동작을 지정합니다.|
 
@@ -89,7 +89,7 @@ ms.locfileid: "70399408"
 </system.serviceModel>
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Configuration.TransactedBatchingElement>
 - <xref:System.ServiceModel.Description.TransactedBatchingBehavior>

@@ -3,22 +3,22 @@ title: <httpDigest> 요소
 ms.date: 03/30/2017
 ms.assetid: 3da4f276-dfd9-4247-8c07-01d83618727c
 ms.openlocfilehash: 328411a429cd42927a190c6805a1f5e2b3555ea1
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77448454"
 ---
-# <a name="httpdigest-element"></a>\<httpDigest > 요소
+# <a name="httpdigest-element"></a>\<httpDigest> 요소
 서비스에게 클라이언트를 인증하는 데 사용되는 다이제스트 형식 자격 증명을 지정합니다.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;[ **\<system.servicemodel >를**](system-servicemodel.md) &nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp;\<[**동작**](behaviors.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors**](endpointbehaviors.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<동작 >** ](behavior-of-endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**clientCredentials >** ](clientcredentials.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**httpDigest >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<endpointBehaviors>**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<clientCredentials>**](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<httpDigest>**  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,7 +42,7 @@ ms.locfileid: "77448454"
   
 |요소|Description|  
 |-------------|-----------------|  
-|[\<clientCredentials >](clientcredentials.md)|클라이언트를 서비스에 인증할 때 사용되는 자격 증명을 지정합니다.|  
+|[\<clientCredentials>](clientcredentials.md)|클라이언트를 서비스에 인증할 때 사용되는 자격 증명을 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
  다이제스트는 알고리즘과 입력 집합을 통해 확인되는 해시입니다. 인증자 및 인증된 사용자는 알고리즘에 동의하고 입력으로 사용된 데이터를 교환합니다. 클라이언트는 해시를 계산하여 서비스로 보냅니다. 서비스에서도 해시를 계산하여 값을 비교합니다. 값이 일치하면 클라이언트가 확인됩니다.  
@@ -59,5 +59,5 @@ ms.locfileid: "77448454"
 - <xref:System.ServiceModel.Security.HttpDigestClientCredential>
 - [보안 동작](../../../wcf/feature-details/security-behaviors-in-wcf.md)
 - [클라이언트에 보안 설정](../../../wcf/securing-clients.md)
-- [인증서 작업](../../../wcf/feature-details/working-with-certificates.md)
+- [인증서 사용](../../../wcf/feature-details/working-with-certificates.md)
 - [서비스 및 클라이언트에 보안 설정](../../../wcf/feature-details/securing-services-and-clients.md)

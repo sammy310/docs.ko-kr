@@ -6,10 +6,10 @@ helpviewer_keywords:
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
 ms.openlocfilehash: 178d5070dd7018bbc0fce474cdd0b31ba3d17f77
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69913042"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>방법: 자동 바인딩 리디렉션 사용 설정 및 해제
@@ -28,7 +28,7 @@ Visual Studio 2017 버전 15.7 이상이 있는 경우 프로젝트의 속성 �
 
 2. **응용 프로그램** 페이지에서 **바인딩 리디렉션 자동 생성** 옵션을 선택 취소 합니다.
 
-3. **Ctrl**+**S** 를 눌러 변경 내용을 저장 합니다.
+3. **Ctrl** + **S** 를 눌러 변경 내용을 저장 합니다.
 
 ### <a name="disable-manually-in-the-project-file"></a>프로젝트 파일에서 수동으로 사용 안 함
 
@@ -58,7 +58,7 @@ Visual Studio 2017 버전 15.7 이상이 있는 경우 프로젝트의 속성 �
    - Visual Studio의 **솔루션 탐색기**에서 프로젝트를 선택한 다음 바로 가기 메뉴에서 **파일 탐색기에서 폴더 열기** 를 선택 합니다. 파일 탐색기에서 프로젝트 (.csproj 또는 .vbproj) 파일을 찾아서 메모장에서 엽니다.
    - Visual Studio의 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **프로젝트 언로드**를 선택 합니다. 언로드된 프로젝트를 다시 마우스 오른쪽 단추로 클릭 한 다음 **편집 [projectname. .csproj]** 을 선택 합니다.
 
-2. 다음 요소를 첫 번째 구성 속성 그룹 ( \<PropertyGroup > 태그 아래)에 추가 합니다.
+2. 다음 요소를 첫 번째 구성 속성 그룹 (태그 아래)에 추가 합니다 \<PropertyGroup> .
 
    ```xml
    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -91,7 +91,7 @@ Visual Studio 2017 버전 15.7 이상이 있는 경우 프로젝트의 속성 �
 
 1. Visual Studio에서 응용 프로그램을 컴파일하고 빌드 경고를 확인합니다.
 
-   ![어셈블리 참조 충돌에 대 한 빌드 경고](./media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")
+   ![어셈블리 참고 충돌에 대한 빌드 경고](./media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")
 
 2. 어셈블리 바인딩 충돌이 있을 경우 경고가 나타납니다. 경고를 두 번 클릭 하거나 경고를 선택 하 고 enter **키를**누릅니다.
 
@@ -101,5 +101,5 @@ Visual Studio 2017 버전 15.7 이상이 있는 경우 프로젝트의 속성 �
 
 ## <a name="see-also"></a>참고 항목
 
-- [\<bindingRedirect > 요소](./file-schema/runtime/bindingredirect-element.md)
+- [\<bindingRedirect>요소인](./file-schema/runtime/bindingredirect-element.md)
 - [어셈블리 버전 리디렉션](redirect-assembly-versions.md)

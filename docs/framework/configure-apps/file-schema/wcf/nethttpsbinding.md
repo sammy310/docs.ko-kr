@@ -3,10 +3,10 @@ title: <netHttpsBinding>
 ms.date: 03/30/2017
 ms.assetid: ff122116-6042-4792-9f21-275b4f97a105
 ms.openlocfilehash: 842f2acb3be03be8171bcf7312f230fc06754511
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84201039"
 ---
 # \<netHttpsBinding>
@@ -53,7 +53,7 @@ WCF (Windows Communication Foundation) 서비스가 HTTPS를 통해 통신할 �
 </netHttpsBinding>
 ```  
   
-## <a name="type"></a>형식  
+## <a name="type"></a>Type  
  `Type`  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
@@ -61,7 +61,7 @@ WCF (Windows Communication Foundation) 서비스가 HTTPS를 통해 통신할 �
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |`allowCookies`|클라이언트가 쿠키를 수락하고 이를 앞으로의 요청에서 전파할지 여부를 나타내는 부울 값입니다. 기본값은 `false`입니다.<br /><br /> 쿠키를 사용하는 ASMX 웹 서비스와 상호 작용할 때 이 속성을 사용할 수 있습니다. 그러면 서버에서 반환된 쿠키가 해당 서비스에 대한 이후의 모든 클라이언트 요청에 자동으로 복사되도록 할 수 있습니다.|  
 |`bypassProxyOnLocal`|로컬 주소에 대해 프록시 서버를 사용하지 않을 것인지 여부를 나타내는 부울 값입니다. 기본값은 `false`입니다.<br /><br /> 주소가 로컬인 인터넷 리소스는 로컬 리소스입니다. 로컬 주소는 동일한 컴퓨터, 로컬 LAN 또는 인트라넷에 있는 주소 이며 구문적으로 Uri 및에서와 같이 마침표 (.)가 없는 것으로 식별 됩니다. `http://webserver/` `http://localhost/`<br /><br /> 이 특성은 BasicHttpBinding으로 구성된 엔드포인트가 로컬 리소스 액세스 시 프록시 서버를 사용할지 여부를 결정합니다. 이 특성이 `true`이면 로컬 인터넷 리소스에 대한 요청은 프록시 서버를 사용하지 않습니다. 이 특성이 `true`로 설정된 경우 클라이언트가 동일한 시스템의 서비스와 통신할 때 프록시를 통하게 하려면 localhost 대신 호스트 이름을 사용해야 합니다<br /><br /> 이 특성이 `false`이면 모든 인터넷 요청이 프록시 서버를 통해 이루어집니다.|  
@@ -83,14 +83,14 @@ WCF (Windows Communication Foundation) 서비스가 HTTPS를 통해 통신할 �
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |[\<security>](security-of-nethttpbinding.md)|바인딩에 대한 보안 설정을 정의합니다. 이 요소는 <xref:System.ServiceModel.Configuration.BasicHttpsSecurityElement> 형식입니다. |  
 |[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|이 바인딩으로 구성된 엔드포인트에서 처리할 수 있는 SOAP 메시지의 복잡성에 대한 제약 조건을 정의합니다. 이 요소는 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> 형식입니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |[\<bindings>](bindings.md)|이 요소는 표준 및 사용자 지정 바인딩의 컬렉션을 보유합니다.|  
   

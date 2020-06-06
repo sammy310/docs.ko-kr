@@ -6,18 +6,18 @@ helpviewer_keywords:
 - PreferComInsteadOfManagedRemoting element
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
 ms.openlocfilehash: 1376df4efd56734f2b8da9bd76033afcce8a285b
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77452255"
 ---
-# <a name="prefercominsteadofmanagedremoting-element"></a>\<PreferComInsteadOfManagedRemoting > 요소
+# <a name="prefercominsteadofmanagedremoting-element"></a>\<PreferComInsteadOfManagedRemoting> 요소
 런타임이 응용 프로그램 도메인 경계를 넘어 모든 호출에 대해 원격 대신 COM interop을 사용할지 여부를 지정 합니다.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-[ **\<런타임 >** ](runtime-element.md) &nbsp;&nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<PreferComInsteadOfManagedRemoting >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<PreferComInsteadOfManagedRemoting>**  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,7 +38,7 @@ ms.locfileid: "77452255"
   
 |값|Description|  
 |-----------|-----------------|  
-|`false`|런타임은 응용 프로그램 도메인 경계에서 원격 기능을 사용 합니다. 이것이 기본값입니다.|  
+|`false`|런타임은 응용 프로그램 도메인 경계에서 원격 기능을 사용 합니다. 기본값입니다.|  
 |`true`|런타임은 응용 프로그램 도메인 경계에 걸쳐 COM interop를 사용 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
@@ -52,11 +52,11 @@ ms.locfileid: "77452255"
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
- `enabled` 특성을 `true`로 설정 하면 런타임은 다음과 같이 동작 합니다.  
+ 특성을로 설정 하면 런타임은 다음과 같이 `enabled` `true` 동작 합니다.  
   
 - 런타임은 [iunknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) 인터페이스가 COM 인터페이스를 통해 도메인에 들어가면 [IManagedObject](../../../unmanaged-api/hosting/imanagedobject-interface.md) 인터페이스에 대해 [iunknown:: QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) 를 호출 하지 않습니다. 대신, 개체 주위에서 RCW ( [런타임 호출 가능 래퍼](../../../../standard/native-interop/runtime-callable-wrapper.md) )를 생성 합니다.  
   
-- 런타임은이 도메인에서 만들어진 ccw ( [COM 호출 가능 래퍼](../../../../standard/native-interop/com-callable-wrapper.md) )에 대 한 [IManagedObject](../../../unmanaged-api/hosting/imanagedobject-interface.md) 인터페이스에 대 한 `QueryInterface` 호출을 받을 때 E_NOINTERFACE을 반환 합니다.  
+- 런타임은 `QueryInterface` 이 도메인에 생성 된 ccw ( [COM 호출 가능 래퍼](../../../../standard/native-interop/com-callable-wrapper.md) )에 대 한 [IManagedObject](../../../unmanaged-api/hosting/imanagedobject-interface.md) 인터페이스 호출을 받을 때 E_NOINTERFACE을 반환 합니다.  
   
  이러한 두 동작은 응용 프로그램 도메인 경계에서 관리 되는 개체 간의 COM 인터페이스에 대 한 모든 호출이 원격 대신 COM 및 COM interop을 사용 하도록 합니다.  
   

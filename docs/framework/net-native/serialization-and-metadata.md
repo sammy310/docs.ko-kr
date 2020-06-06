@@ -3,10 +3,10 @@ title: Serialization 및 메타데이터
 ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 ms.openlocfilehash: cc9adf0e6627ef3190e74fea5d4f0f3afd581811
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "81389224"
 ---
 # <a name="serialization-and-metadata"></a>Serialization 및 메타데이터
@@ -15,7 +15,7 @@ ms.locfileid: "81389224"
   
 - 리플렉션 기반 타사 serializer. 이러한 serializer의 경우 런타임 지시문 파일을 수정해야 합니다. 여기에 대해서는 다음 섹션에서 설명합니다.  
   
-- .NET Framework 클래스 라이브러리에 있는 비반사 기반 serializer입니다. 이러한 직렬 변환기의 경우 런타임 지시문 파일을 수정해야 할 수도 있습니다. 아래의 [Microsoft 직렬 변환기](#Microsoft) 섹션에서 여기에 대해 설명합니다.  
+- .NET Framework 클래스 라이브러리에 리플렉션 기반 serializer가 없습니다. 이러한 직렬 변환기의 경우 런타임 지시문 파일을 수정해야 할 수도 있습니다. 아래의 [Microsoft 직렬 변환기](#Microsoft) 섹션에서 여기에 대해 설명합니다.  
   
 <a name="ThirdParty"></a>
 ## <a name="third-party-serializers"></a>타사 serializer
@@ -28,7 +28,7 @@ ms.locfileid: "81389224"
 <Namespace Name="App.Models" Serialize="Required PublicAndInternal" />  
 ```  
   
- 예제에서 사용된 구문에 대한 자세한 내용은 [ \<네임스페이스> Element](namespace-element-net-native.md)를 참조하십시오.  
+ 예제에 사용 된 구문에 대 한 자세한 내용은 [ \<Namespace> 요소](namespace-element-net-native.md)를 참조 하세요.  
   
 <a name="Microsoft"></a>
 ## <a name="microsoft-serializers"></a>Microsoft serializer
@@ -37,15 +37,15 @@ ms.locfileid: "81389224"
   
 ### <a name="typeof-used-in-the-constructor"></a>생성자 내부에서 사용되는 typeof
 
- 이러한 직렬화 클래스의 생성자 호출 하 고 메서드 호출에 C# [typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) 연산자 포함 하는 경우 **추가 작업을 수행할 필요가 없습니다.** 예를 들어 serialization 클래스 생성자에 대한 다음의 각 호출에서 `typeof` 키워드는 생성자에 전달되는 식의 일부로 사용됩니다.  
+ 이러한 serialization 클래스의 생성자를 호출 하 고 c # [typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) 연산자를 메서드 호출에 포함 하는 경우 **추가 작업을 수행할 필요가 없습니다**. 예를 들어 serialization 클래스 생성자에 대한 다음의 각 호출에서 `typeof` 키워드는 생성자에 전달되는 식의 일부로 사용됩니다.  
   
  [!code-csharp[ProjectN#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#5)]  
   
- .NET 네이티브 컴파일러가 자동으로 이 코드를 처리합니다.  
+ .NET 네이티브 컴파일러는이 코드를 자동으로 처리 합니다.  
   
 ### <a name="typeof-used-outside-the-constructor"></a>생성자 외부에서 사용되는 typeof
 
- 다음 코드에서와 같이 이러한 직렬화 클래스의 생성자를 호출하고 생성자의 매개 변수에 제공된 식 외부의 <xref:System.Type> C# [typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) 연산자를 사용하는 경우 .NET 네이티브 컴파일러는 형식을 확인할 수 없습니다.  
+ 다음 코드와 같이 이러한 serialization 클래스의 생성자를 호출 하 고 생성자의 매개 변수에 제공 된 식 외부에서 c # [typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) 연산자를 사용 하는 경우 <xref:System.Type> .NET 네이티브 컴파일러에서 형식을 확인할 수 없습니다.  
   
  [!code-csharp[ProjectN#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#6)]  
   
@@ -55,21 +55,21 @@ ms.locfileid: "81389224"
 <Type Name="DataSet" Browse="Required Public" />  
 ```  
   
- 마찬가지로 다음과 같은 생성자를 <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29> 호출하고 다음 코드와 <xref:System.Type> 같이 serialize할 추가 개체배열을 제공하는 경우 .NET Native 컴파일러는 이러한 형식을 해결할 수 없습니다.  
+ 마찬가지로 다음 코드와 같이와 같은 생성자를 호출 하 <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29> 고 serialize 할 추가 개체의 배열을 제공 하는 경우 <xref:System.Type> .NET 네이티브 컴파일러는 이러한 형식을 확인할 수 없습니다.  
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   
-런타임 지시문 파일에 각 형식에 대한 다음과 같은 항목을 추가합니다.  
+각 형식에 대 한 다음과 같은 항목을 런타임 지시문 파일에 추가 합니다.  
   
 ```xml  
 <Type Name="t" Browse="Required Public" />  
 ```  
   
-예제에서 사용된 구문에 대한 자세한 내용은 [ \<요소> 유형](type-element-net-native.md)참조  
+예제에 사용 된 구문에 대 한 자세한 내용은 [ \<Type> 요소](type-element-net-native.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목
 
 - [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)
 - [런타임 지시문 요소](runtime-directive-elements.md)
-- [\<> 요소 유형](type-element-net-native.md)
-- [\<네임스페이스> 요소](namespace-element-net-native.md)
+- [\<Type>요소인](type-element-net-native.md)
+- [\<Namespace>요소인](namespace-element-net-native.md)
