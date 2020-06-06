@@ -11,49 +11,49 @@ helpviewer_keywords:
 - authenticationModules, clear element
 ms.assetid: dc522c45-4a80-4831-8955-f7b68a47edfd
 ms.openlocfilehash: e3abd1b4c76ebda885703ccf961d58657b582f19
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74087507"
 ---
-# <a name="clear-element-for-authenticationmodules-network-settings"></a><span data-ttu-id="912ed-102">authenticationModules의 \<clear > 요소 (네트워크 설정)</span><span class="sxs-lookup"><span data-stu-id="912ed-102">\<clear> Element for authenticationModules (Network Settings)</span></span>
-<span data-ttu-id="912ed-103">응용 프로그램에서 모든 인증 모듈을 지웁니다.</span><span class="sxs-lookup"><span data-stu-id="912ed-103">Clears all authentication modules from the application.</span></span>  
+# <a name="clear-element-for-authenticationmodules-network-settings"></a><span data-ttu-id="39ea1-102">authenticationModules의 \<clear> 요소(네트워크 설정)</span><span class="sxs-lookup"><span data-stu-id="39ea1-102">\<clear> Element for authenticationModules (Network Settings)</span></span>
+<span data-ttu-id="39ea1-103">응용 프로그램에서 모든 인증 모듈을 지웁니다.</span><span class="sxs-lookup"><span data-stu-id="39ea1-103">Clears all authentication modules from the application.</span></span>  
 
-<span data-ttu-id="912ed-104">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="912ed-104">[**\<configuration>**](../configuration-element.md)</span></span>\
-<span data-ttu-id="912ed-105">&nbsp;[ **\<.net >를**](system-net-element-network-settings.md) &nbsp;</span><span class="sxs-lookup"><span data-stu-id="912ed-105">&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)</span></span>\
-<span data-ttu-id="912ed-106">&nbsp;&nbsp;&nbsp;&nbsp;\<[**authenticationModules**](authenticationmodules-element-network-settings.md) ></span><span class="sxs-lookup"><span data-stu-id="912ed-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<authenticationModules>**](authenticationmodules-element-network-settings.md)\</span></span>
-<span data-ttu-id="912ed-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<clear >**</span><span class="sxs-lookup"><span data-stu-id="912ed-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**</span></span>
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<authenticationModules>**](authenticationmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
 
-## <a name="syntax"></a><span data-ttu-id="912ed-108">구문</span><span class="sxs-lookup"><span data-stu-id="912ed-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="39ea1-104">구문</span><span class="sxs-lookup"><span data-stu-id="39ea1-104">Syntax</span></span>  
   
 ```xml  
 <clear/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="912ed-109">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="912ed-109">Attributes and Elements</span></span>  
- <span data-ttu-id="912ed-110">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="912ed-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="39ea1-105">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="39ea1-105">Attributes and Elements</span></span>  
+ <span data-ttu-id="39ea1-106">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="39ea1-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="912ed-111">특성</span><span class="sxs-lookup"><span data-stu-id="912ed-111">Attributes</span></span>  
- <span data-ttu-id="912ed-112">없음.</span><span class="sxs-lookup"><span data-stu-id="912ed-112">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="39ea1-107">특성</span><span class="sxs-lookup"><span data-stu-id="39ea1-107">Attributes</span></span>  
+ <span data-ttu-id="39ea1-108">없음</span><span class="sxs-lookup"><span data-stu-id="39ea1-108">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="912ed-113">자식 요소</span><span class="sxs-lookup"><span data-stu-id="912ed-113">Child Elements</span></span>  
- <span data-ttu-id="912ed-114">없음.</span><span class="sxs-lookup"><span data-stu-id="912ed-114">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="39ea1-109">자식 요소</span><span class="sxs-lookup"><span data-stu-id="39ea1-109">Child Elements</span></span>  
+ <span data-ttu-id="39ea1-110">없음</span><span class="sxs-lookup"><span data-stu-id="39ea1-110">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="912ed-115">부모 요소</span><span class="sxs-lookup"><span data-stu-id="912ed-115">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="39ea1-111">부모 요소</span><span class="sxs-lookup"><span data-stu-id="39ea1-111">Parent Elements</span></span>  
   
-|<span data-ttu-id="912ed-116">**요소**</span><span class="sxs-lookup"><span data-stu-id="912ed-116">**Element**</span></span>|<span data-ttu-id="912ed-117">**설명**</span><span class="sxs-lookup"><span data-stu-id="912ed-117">**Description**</span></span>|  
+|<span data-ttu-id="39ea1-112">**요소**</span><span class="sxs-lookup"><span data-stu-id="39ea1-112">**Element**</span></span>|<span data-ttu-id="39ea1-113">**설명**</span><span class="sxs-lookup"><span data-stu-id="39ea1-113">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="912ed-118">Authenticationmodules></span><span class="sxs-lookup"><span data-stu-id="912ed-118">authenticationModules</span></span>](authenticationmodules-element-network-settings.md)|<span data-ttu-id="912ed-119">네트워크 요청을 인증 하는 데 사용 되는 모듈을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="912ed-119">Specifies modules used to authenticate network requests.</span></span>|  
+|[<span data-ttu-id="39ea1-114">authenticationModules</span><span class="sxs-lookup"><span data-stu-id="39ea1-114">authenticationModules</span></span>](authenticationmodules-element-network-settings.md)|<span data-ttu-id="39ea1-115">네트워크 요청을 인증 하는 데 사용 되는 모듈을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ea1-115">Specifies modules used to authenticate network requests.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="912ed-120">주의</span><span class="sxs-lookup"><span data-stu-id="912ed-120">Remarks</span></span>  
- <span data-ttu-id="912ed-121">`clear` 요소는 구성 파일에서 이전에 정의 되었거나 구성 계층 구조에서 상위 수준에 정의 된 모든 인증 모듈을 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="912ed-121">The `clear` element removes all authentication modules that were defined earlier in the configuration file or at a higher level in the configuration hierarchy.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="39ea1-116">설명</span><span class="sxs-lookup"><span data-stu-id="39ea1-116">Remarks</span></span>  
+ <span data-ttu-id="39ea1-117">요소는 구성 `clear` 파일 또는 구성 계층 구조에서 더 높은 수준에서 정의 된 모든 인증 모듈을 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ea1-117">The `clear` element removes all authentication modules that were defined earlier in the configuration file or at a higher level in the configuration hierarchy.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="912ed-122">구성 파일</span><span class="sxs-lookup"><span data-stu-id="912ed-122">Configuration Files</span></span>  
- <span data-ttu-id="912ed-123">이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="912ed-123">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="39ea1-118">구성 파일</span><span class="sxs-lookup"><span data-stu-id="39ea1-118">Configuration Files</span></span>  
+ <span data-ttu-id="39ea1-119">이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="39ea1-119">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="912ed-124">예제</span><span class="sxs-lookup"><span data-stu-id="912ed-124">Example</span></span>  
- <span data-ttu-id="912ed-125">다음 예제에서는 구성 된 모든 인증 모듈을 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="912ed-125">The following example removes all configured authentication modules.</span></span>  
+## <a name="example"></a><span data-ttu-id="39ea1-120">예제</span><span class="sxs-lookup"><span data-stu-id="39ea1-120">Example</span></span>  
+ <span data-ttu-id="39ea1-121">다음 예제에서는 구성 된 모든 인증 모듈을 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="39ea1-121">The following example removes all configured authentication modules.</span></span>  
   
 ```xml  
 <configuration>  
@@ -65,8 +65,8 @@ ms.locfileid: "74087507"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="912ed-126">참조</span><span class="sxs-lookup"><span data-stu-id="912ed-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="39ea1-122">참고 항목</span><span class="sxs-lookup"><span data-stu-id="39ea1-122">See also</span></span>
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [<span data-ttu-id="912ed-127">네트워크 설정 스키마</span><span class="sxs-lookup"><span data-stu-id="912ed-127">Network Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="39ea1-123">네트워크 설정 스키마</span><span class="sxs-lookup"><span data-stu-id="39ea1-123">Network Settings Schema</span></span>](index.md)
