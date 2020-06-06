@@ -3,19 +3,19 @@ title: <udpDiscoveryEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 1f485329-2771-43bc-88de-df8f2faa3bb7
 ms.openlocfilehash: 1729255c68c75f824b8cd8c87f106a4a9b3550f6
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70854886"
 ---
-# <a name="udpdiscoveryendpoint"></a>\<udpDiscoveryEndpoint>
+# \<udpDiscoveryEndpoint>
 이 구성 요소는 UDP 멀티캐스트 바인딩을 통한 검색 작업에 대해 미리 구성된 표준 엔드포인트를 정의합니다. 이 엔드포인트에는 고정된 계약이 있으며 두 가지 버전의 WS-Discovery 프로토콜을 지원합니다. 또한 WS-Discovery 사양(WS-Discovery April 2005 또는 WS-Discovery V1.1)에 지정된 고정된 UDP 바인딩 및 기본 주소가 있습니다.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<standardEndpoints >** ](standardendpoints.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<udpDiscoveryEndpoint >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<standardEndpoints>**](standardendpoints.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<udpDiscoveryEndpoint>**  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,7 +38,7 @@ ms.locfileid: "70854886"
   
 ### <a name="attributes"></a>특성  
   
-|특성|Description|  
+|attribute|Description|  
 |---------------|-----------------|  
 |discoveryMode|검색 프로토콜의 모드를 지정하는 문자열입니다. 유효한 값은 "임시" 및 "관리"입니다. 관리 모드에서는 프로토콜이 검색 가능한 서비스의 리포지토리로 작동하는 검색 프록시를 사용하고, 애드혹 모드에서는 프로토콜이 UDP 멀티캐스트 메커니즘을 사용하여 사용 가능한 서비스를 찾아야 합니다. 이 값은 <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode> 형식입니다.|  
 |discoveryVersion|WS-Discovery 프로토콜의 두 버전 중 하나를 지정하는 문자열입니다. 유효한 값은 WSDiscovery11 및 WSDiscoveryApril2005입니다. 이 값은 <xref:System.ServiceModel.Discovery.DiscoveryVersion> 형식입니다.|  
@@ -54,7 +54,7 @@ ms.locfileid: "70854886"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |[\<standardEndpoints>](standardendpoints.md)|하나 이상의 속성(주소, 바인딩, 계약)이 고정된 미리 정의된 엔드포인트인 표준 엔드포인트의 컬렉션입니다.|  
   
@@ -80,6 +80,6 @@ ms.locfileid: "70854886"
 </services>
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>

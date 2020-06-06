@@ -9,10 +9,10 @@ helpviewer_keywords:
 - C# and native compilation
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
 ms.openlocfilehash: 1f176e81905fe68c6d740a13240fe814659a7a59
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128383"
 ---
 # <a name="compiling-apps-with-net-native"></a>.NET 네이티브로 앱 컴파일
@@ -40,15 +40,15 @@ ms.locfileid: "73128383"
 > [!IMPORTANT]
 > 대부분의 앱 및 시나리오에서 .NET 네이티브는 IL 또는 NGEN 이미지로 컴파일된 앱에 비해 훨씬 빠른 시작 시간 및 뛰어난 성능을 제공 합니다. 그러나 결과가 다를 수 있습니다. 앱이 .NET 네이티브의 성능 향상으로 인 한 혜택을 보장 하려면 해당 성능과 앱의 non-.NET 네이티브 버전을 비교 해야 합니다. 자세한 내용은 [성능 세션 개요](https://docs.microsoft.com/visualstudio/profiling/performance-session-overview)를 참조 하세요.
 
-하지만 .NET 네이티브에는 네이티브 코드에 대 한 컴파일 이상의 작업이 포함 됩니다. .NET Framework 앱 빌드 및 실행 방식도 바뀝니다. 특히 다음과 같습니다.
+하지만 .NET 네이티브에는 네이티브 코드에 대 한 컴파일 이상의 작업이 포함 됩니다. .NET Framework 앱 빌드 및 실행 방식도 바뀝니다. 특히 다음 사항에 주의하십시오.
 
 - 미리 컴파일하는 동안 .NET Framework의 필수 부분이 앱에 정적으로 연결됩니다. 따라서 앱이 .NET Framework의 앱 로컬 라이브러리를 사용하여 실행될 수 있으며 컴파일러가 전역 분석을 수행하여 성능을 개선할 수 있습니다. 따라서 .NET Framework를 업데이트한 후에도 앱이 지속적으로 빠르게 시작됩니다.
 
 - .NET 네이티브 런타임은 정적 미리 컴파일에 최적화 되어 있으며 대부분의 경우 우수한 성능을 제공 합니다. 그와 동시에 개발자의 생산성을 높여 주는 핵심 리플렉션 기능도 계속 제공합니다.
 
-- .NET 네이티브은 C++ 컴파일러와 동일한 백 엔드를 사용 합니다 .이는 정적 미리 컴파일 시나리오에 최적화 되어 있습니다.
+- .NET 네이티브는 정적 미리 컴파일 시나리오용으로 최적화 된 c + + 컴파일러와 같은 백 엔드를 사용 합니다.
 
-.NET 네이티브는이 표에 나와 있는 것 처럼 내부 C++ 에서와 C++ 동일 하거나 비슷한 도구를 사용 하므로 관리 코드 개발자에 게의 성능 이점을 제공할 수 있습니다.
+이 표에 표시 된 것 처럼 .NET 네이티브는 c + +와 같거나 비슷한 도구를 사용 하 여 관리 코드 개발자에 게 c + +의 성능 이점을 제공할 수 있습니다.
 
 ||.NET 네이티브|C++|
 |-|----------------------------------------------------------------|-----------|
@@ -59,7 +59,7 @@ ms.locfileid: "73128383"
 
 Windows 10용 Windows 앱의 경우 앱 패키지(.appx 파일)의 .NET 네이티브 코드 컴파일 이진 파일을 Windows 스토어에 업로드합니다.
 
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
 .NET 네이티브 코드 컴파일을 사용한 앱 개발에 대한 자세한 내용은 다음 항목을 참조하세요.
 

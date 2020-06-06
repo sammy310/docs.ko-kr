@@ -1,5 +1,5 @@
 ---
-title: <remove>에 대한 <appSettings> 요소
+title: <appSettings>에 대한 <remove> 요소
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/remove
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <remove> Element
 ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
 ms.openlocfilehash: 83abbdbf0d3e4dfd16c0e8c649200c4ecc7329f7
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77215485"
 ---
-# <a name="remove-element-for-appsettings"></a>\<appSettings에 대 한 > 요소 \<제거 >
+# <a name="remove-element-for-appsettings"></a>\<appSettings>에 대한 \<remove> 요소
 
 사용자 지정 응용 프로그램 설정을 제거 합니다.
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<제거**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<appSettings>**](appsettings-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
 
 ## <a name="syntax"></a>구문
 
@@ -40,7 +40,7 @@ ms.locfileid: "77215485"
 
 |     | Description |
 | --- | ----------- |
-| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | 파일 경로, XML Web services URL 또는 애플리케이션의 기타 사용자 지정 구성 정보와 같은 사용자 지정 애플리케이션 설정이 포함되어 있습니다. |
+| [**\<appSettings>**](appsettings-element-for-configuration.md) | 파일 경로, XML Web services URL 또는 애플리케이션의 기타 사용자 지정 구성 정보와 같은 사용자 지정 애플리케이션 설정이 포함되어 있습니다. |
 
 ## <a name="child-elements"></a>자식 요소
 
@@ -48,7 +48,7 @@ None
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 `ApplicationName`에 대 한 사용자 지정 구성 설정을 제거 하는 방법을 보여 줍니다.
+다음 예제에서는에 대 한 사용자 지정 구성 설정을 제거 하는 방법을 보여 줍니다 `ApplicationName` .
 
 ```xml
 <appSettings>
@@ -58,4 +58,4 @@ None
 
 ## <a name="see-also"></a>참고 항목
 
-- [.NET Framework에 대 한 구성 파일 스키마](../index.md)
+- [.NET Framework의 구성 파일 스키마](../index.md)

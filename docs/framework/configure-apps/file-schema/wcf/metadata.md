@@ -3,19 +3,19 @@ title: <metadata>
 ms.date: 03/30/2017
 ms.assetid: d09653eb-e355-4c73-b87b-28f93d56480d
 ms.openlocfilehash: 028e4d3fbe7bce06caa7497c8f95f3b293a4b068
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70855234"
 ---
-# <a name="metadata"></a>\<metadata>
+# \<metadata>
 서비스 메타데이터를 처리할 수 있는 방법을 지정합니다.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<클라이언트 >** ](client.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<메타 데이터 >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<client>**](client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<metadata>**  
   
 ## <a name="syntax"></a>구문  
   
@@ -53,7 +53,7 @@ ms.locfileid: "70855234"
 |-------------|-----------------|  
 |[\<client>](client.md)|클라이언트 섹션은 클라이언트가 연결할 수 있는 엔드포인트 목록을 정의합니다.|  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Configuration.MetadataElement>
 - <xref:System.ServiceModel.Configuration.PolicyImporterElementCollection>

@@ -5,19 +5,19 @@ helpviewer_keywords:
 - gcHeapCount element
 - <gcHeapCount> element
 ms.openlocfilehash: 09d6523fb10692dd3617a3827d5bccf112bc632b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73978422"
 ---
-# <a name="gcheapaffinitizemask-element"></a>\<GCHeapAffinitizeMask > 요소
+# <a name="gcheapaffinitizemask-element"></a>\<GCHeapAffinitizeMask> 요소
 
 GC 힙과 개별 프로세서 간의 선호도를 정의 합니다.
 
-\<구성 > \
-&nbsp;&nbsp;\<런타임 > \
-&nbsp;&nbsp;&nbsp;&nbsp;\<GCHeapAffinitizeMask >
+\<configuration>\
+&nbsp;&nbsp;\<runtime>\
+&nbsp;&nbsp;&nbsp;&nbsp;\<GCHeapAffinitizeMask>
 
 ## <a name="syntax"></a>구문
 
@@ -28,42 +28,42 @@ GC 힙과 개별 프로세서 간의 선호도를 정의 합니다.
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.
+다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.
 
 ### <a name="attributes"></a>특성
 
-|특성|설명|
+|attribute|Description|
 |---------------|-----------------|
 |`enabled`|필수 특성입니다.<br /><br />GC 힙과 개별 프로세서 간의 선호도를 지정 합니다. |
 
 #### <a name="enabled-attribute"></a>enabled 특성
 
-|값|설명|
+|값|Description|
 |-----------|-----------------|
 |`nnnn`|서버 GC 힙과 개별 프로세서 간의 선호도를 정의 하는 비트 마스크를 형성 하는 10 진수 값입니다. |
 
 ### <a name="child-elements"></a>자식 요소
 
-없음.
+없음
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|설명|
+|요소|Description|
 |-------------|-----------------|
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 기본적으로 서버 GC 스레드는 각 프로세서에 대해 하나의 GC 힙, 하나의 서버 GC 스레드 및 하나의 백그라운드 서버 GC 스레드를 갖도록 해당 CPU와 하드 선호도가 설정 됩니다. .NET Framework 4.6.2 부터는 **GCHeapAffinitizeMask** 요소를 사용 하 여 힙 수가 **GCHeapCount** 요소에 의해 제한 되는 경우 서버 GC 힙과 프로세서 간의 선호도를 제어할 수 있습니다.
 
 **GCHeapAffinitizeMask** 는 일반적으로 두 개의 다른 플래그와 함께 사용 됩니다.
 
-- [GCNoAffinitize](gcnoaffinitize-element.md)-서버 GC 스레드/힙이 cpu와 선호도가 설정 여부를 제어 합니다. [GCNoAffinitize](gcnoaffinitize-element.md) 요소의 `enabled` 특성은 사용할 **GCHeapAffinitizeMask** 설정에 대 한 `false` (기본값) 여야 합니다.
+- [GCNoAffinitize](gcnoaffinitize-element.md)-서버 GC 스레드/힙이 cpu와 선호도가 설정 여부를 제어 합니다. `enabled` [GCNoAffinitize](gcnoaffinitize-element.md) 요소의 특성은 `false` 사용할 **GCHeapAffinitizeMask** 설정에 대해 (기본값) 여야 합니다.
 
 - [GCHeapCount](gcheapcount-element.md)-서버 GC에 대해 프로세스에서 사용 하는 힙 수를 제한 합니다. 기본적으로 각 프로세서에 대해 하나의 힙이 있습니다.
 
-**nnnn** 은 10 진수 값으로 표현 되는 비트 마스크입니다. 바이트 0의 비트 0은 프로세서 0, 바이트 0의 비트 1은 프로세서 1을 나타냅니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+**nnnn** 은 10 진수 값으로 표현 되는 비트 마스크입니다. 바이트 0의 비트 0은 프로세서 0, 바이트 0의 비트 1은 프로세서 1을 나타냅니다. 다음은 그 예입니다.
 
 ```xml
 <GCHeapAffinitizeMask enabled="1023"/>
@@ -85,7 +85,7 @@ GC 힙과 개별 프로세서 간의 선호도를 정의 합니다.
 </configuration>
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
 - [GCNoAffinitize 요소](gcnoaffinitize-element.md)

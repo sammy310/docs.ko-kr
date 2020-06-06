@@ -10,10 +10,10 @@ helpviewer_keywords:
 - configuration schema [.NET Framework], Web settings
 ms.assetid: ae1ac356-267d-4753-8d7a-7a04eb45a9be
 ms.openlocfilehash: 030841330ff37cddb0c9e3e466a55a4be098e784
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74088785"
 ---
 # <a name="web-settings-schema"></a>웹 설정 스키마
@@ -25,11 +25,11 @@ ms.locfileid: "74088785"
   
 웹 설정은 machine.config 파일, 루트 Web.config 또는 애플리케이션 수준 Web.config 파일과 같은 다른 구성 파일에는 사용되지 않습니다.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-[ **\<system.web >** ](system-web-element-web-settings.md) &nbsp;&nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<applicationPool >** ](applicationpool-element-web-settings.md)
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.web>**](system-web-element-web-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<applicationPool>**](applicationpool-element-web-settings.md)
 
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |[\<system.web>](system-web-element-web-settings.md)|ASP.NET 호스팅 계층에서 사용하는 정보가 포함됩니다.|  
 |[\<applicationPool>](applicationpool-element-web-settings.md)|CPU와 ASP.NET 호스팅 계층에서 관리하는 프로세스 전반 동작에 적용되는 실행 수준 ASP.NET 설정을 지정합니다.|  

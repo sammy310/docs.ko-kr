@@ -3,22 +3,22 @@ title: <localClientSettings> 요소
 ms.date: 03/30/2017
 ms.assetid: 4680ace5-f4e1-4fcb-b9d8-a4a4af5cd7ae
 ms.openlocfilehash: 3ec0394943c030a8866087c98a912682a2a2112e
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70400317"
 ---
-# <a name="localclientsettings-element"></a>\<localClientSettings > 요소
+# <a name="localclientsettings-element"></a>\<localClientSettings> 요소
 이 바인딩에 대한 로컬 클라이언트의 보안 설정을 지정합니다.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<바인딩 >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<바인딩 >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<보안 >** ](security-of-custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<localClientSettings >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<customBinding>**](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<localClientSettings>**  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,7 +43,7 @@ ms.locfileid: "70400317"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |`cacheCookies`|쿠키 캐싱 활성화 여부를 나타내는 부울 값입니다. 기본값은 `false`입니다.|  
 |`cookieRenewalThresholdPercentage`|갱신할 수 있는 최대 쿠키 백분율을 지정하는 정수입니다. 이 값은 0 이상 100 이하여야 합니다. 기본값은 90입니다.|  
@@ -58,11 +58,11 @@ ms.locfileid: "70400317"
 |`timestampValidityDuration`|타임스탬프의 유효 기간을 지정하는 <xref:System.TimeSpan>(양수)입니다. 기본값은 "00:15:00"입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- 없음  
+ None  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |[\<security>](security-of-custombinding.md)|사용자 지정 바인딩에 대한 보안 옵션을 지정합니다.|  
 |[\<secureConversationBootstrap>](secureconversationbootstrap.md)|보안 대화 서비스 개시에 사용되는 기본값을 지정합니다.|  
@@ -70,7 +70,7 @@ ms.locfileid: "70400317"
 ## <a name="remarks"></a>설명  
  이 설정은 서비스의 보안 정책에서 파생되는 설정이 아니므로 로컬 설정에 속합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>
 - <xref:System.ServiceModel.Configuration.SecurityElementBase.LocalClientSettings%2A>
@@ -78,8 +78,8 @@ ms.locfileid: "70400317"
 - <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [바인딩](../../../wcf/bindings.md)
-- [바인딩 확장](../../../wcf/extending/extending-bindings.md)
+- [바인딩 확장명](../../../wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)
-- [방법: SecurityBindingElement를 사용 하 여 사용자 지정 바인딩 만들기](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [사용자 지정 바인딩 보안](../../../wcf/samples/custom-binding-security.md)
+- [방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Custom Binding Security](../../../wcf/samples/custom-binding-security.md)

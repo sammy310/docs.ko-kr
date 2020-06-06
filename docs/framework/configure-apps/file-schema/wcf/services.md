@@ -3,18 +3,18 @@ title: <services>
 ms.date: 03/30/2017
 ms.assetid: 80d76ba9-2058-48ad-9b91-5e4be7e5c113
 ms.openlocfilehash: 02d1d530f37f5082153c9aa6b9993fc4009917f5
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70854985"
 ---
-# <a name="services"></a>\<services>
+# \<services>
 서비스는 구성 파일의 `services` 섹션에 정의됩니다. 서비스별로 해당 `service` 구성 섹션이 있습니다.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<서비스 >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<services>**  
   
 ## <a name="syntax"></a>구문  
   
@@ -31,7 +31,7 @@ ms.locfileid: "70854985"
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
- 없음  
+ None  
   
 ### <a name="child-elements"></a>자식 요소  
   
@@ -45,6 +45,6 @@ ms.locfileid: "70854985"
 |-------------|-----------------|  
 |[\<system.serviceModel>](system-servicemodel.md)|모든 WCF(Windows Communication Foundation) 구성 요소의 루트 요소입니다.|  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Configuration.ServicesSection>

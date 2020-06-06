@@ -3,10 +3,10 @@ title: 런타임 지시문(rd.xml) 구성 파일 참조
 ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 ms.openlocfilehash: e74d34693446cca645003a9f93bc1777849e3182
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "76738414"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>런타임 지시문(rd.xml) 구성 파일 참조
@@ -132,43 +132,43 @@ ms.locfileid: "76738414"
 
 [Application](application-element-net-native.md), [Assembly](assembly-element-net-native.md), [AttributeImplies](attributeimplies-element-net-native.md), [Namespace](namespace-element-net-native.md), [Subtypes](subtypes-element-net-native.md) 및 [Type](type-element-net-native.md) 요소는 다음 정책 형식을 지원합니다.
 
-- `Activate`입니다. 인스턴스를 활성화할 수 있도록 생성자에 대한 런타임 액세스를 제어합니다.
+- `Activate`. 인스턴스를 활성화할 수 있도록 생성자에 대한 런타임 액세스를 제어합니다.
 
-- `Browse`입니다. 프로그램 요소에 대한 정보 쿼리를 제어하지만 런타임 액세스를 사용하도록 설정하지는 않습니다.
+- `Browse`. 프로그램 요소에 대한 정보 쿼리를 제어하지만 런타임 액세스를 사용하도록 설정하지는 않습니다.
 
-- `Dynamic`입니다. 동적 프로그래밍을 수행할 수 있도록 생성자, 메서드, 필드, 속성 및 이벤트를 비롯한 모든 형식 멤버에 대한 런타임 액세스를 제어합니다.
+- `Dynamic`. 동적 프로그래밍을 수행할 수 있도록 생성자, 메서드, 필드, 속성 및 이벤트를 비롯한 모든 형식 멤버에 대한 런타임 액세스를 제어합니다.
 
-- `Serialize`입니다. Newtonsoft JSON serializer 등의 타사 라이브러리를 통해 형식 인스턴스를 serialize 및 deserialize할 수 있도록 생성자, 필드 및 속성에 대한 런타임 액세스를 제어합니다.
+- `Serialize`. Newtonsoft JSON serializer 등의 타사 라이브러리를 통해 형식 인스턴스를 serialize 및 deserialize할 수 있도록 생성자, 필드 및 속성에 대한 런타임 액세스를 제어합니다.
 
-- `DataContractSerializer`입니다. <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 클래스를 사용하는 serialization에 대한 정책을 제어합니다.
+- `DataContractSerializer`. <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 클래스를 사용하는 serialization에 대한 정책을 제어합니다.
 
-- `DataContractJsonSerializer`입니다. <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 클래스를 사용하는 JSON serialization에 대한 정책을 제어합니다.
+- `DataContractJsonSerializer`. <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 클래스를 사용하는 JSON serialization에 대한 정책을 제어합니다.
 
-- `XmlSerializer`입니다. <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> 클래스를 사용하는 XML serialization에 대한 정책을 제어합니다.
+- `XmlSerializer`. <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> 클래스를 사용하는 XML serialization에 대한 정책을 제어합니다.
 
-- `MarshalObject`입니다. WinRT 및 COM에 대한 참조 형식을 마샬링하는 정책을 제어합니다.
+- `MarshalObject`. WinRT 및 COM에 대한 참조 형식을 마샬링하는 정책을 제어합니다.
 
-- `MarshalDelegate`입니다. 네이티브 코드에 대한 함수 포인터로 대리자 형식을 마샬링하는 정책을 제어합니다.
+- `MarshalDelegate`. 네이티브 코드에 대한 함수 포인터로 대리자 형식을 마샬링하는 정책을 제어합니다.
 
 - `MarshalStructure` . 구조체를 네이티브 코드로 마샬링하는 정책을 제어합니다.
 
 이러한 정책 형식과 연관된 설정은 다음과 같습니다.
 
-- `All`입니다. 도구 체인에서 제거하지 않는 모든 형식과 멤버에 대해 정책을 사용하도록 설정합니다.
+- `All`. 도구 체인에서 제거하지 않는 모든 형식과 멤버에 대해 정책을 사용하도록 설정합니다.
 
-- `Auto`입니다. 기본 동작을 사용합니다. 정책을 지정하지 않는 것은 부모 요소에 의해 정책이 재정의되는 등의 경우를 제외하면 해당 정책을 `Auto`로 설정하는 것과 같습니다.
+- `Auto`. 기본 동작을 사용합니다. 정책을 지정하지 않는 것은 부모 요소에 의해 정책이 재정의되는 등의 경우를 제외하면 해당 정책을 `Auto`로 설정하는 것과 같습니다.
 
-- `Excluded`입니다. 프로그램 요소에 대한 정책을 사용하지 않도록 설정합니다.
+- `Excluded`. 프로그램 요소에 대한 정책을 사용하지 않도록 설정합니다.
 
-- `Public`입니다. 도구 체인이 멤버를 불필요한 것으로 결정하여 제거하는 경우가 아니면 public 형식 또는 멤버에 대해서는 정책을 사용하도록 설정합니다. 멤버가 제거되는 경우에는 `Required Public`을 사용하여 멤버를 유지하고 리플렉션 기능이 포함되도록 해야 합니다.
+- `Public`. 도구 체인이 멤버를 불필요한 것으로 결정하여 제거하는 경우가 아니면 public 형식 또는 멤버에 대해서는 정책을 사용하도록 설정합니다. 멤버가 제거되는 경우에는 `Required Public`을 사용하여 멤버를 유지하고 리플렉션 기능이 포함되도록 해야 합니다.
 
-- `PublicAndInternal`입니다. 도구 체인에서 제거하지 않는 public 및 내부 형식이나 멤버에 대해 정책을 사용하도록 설정합니다.
+- `PublicAndInternal`. 도구 체인에서 제거하지 않는 public 및 내부 형식이나 멤버에 대해 정책을 사용하도록 설정합니다.
 
-- `Required Public`입니다. 사용 여부에 관계없이 도구 체인이 public 형식과 멤버를 유지해야 하도록 지정하고 해당 형식과 멤버에 대해 정책을 사용하도록 설정합니다.
+- `Required Public`. 사용 여부에 관계없이 도구 체인이 public 형식과 멤버를 유지해야 하도록 지정하고 해당 형식과 멤버에 대해 정책을 사용하도록 설정합니다.
 
-- `Required PublicAndInternal`입니다. 사용 여부에 관계없이 도구 체인이 public 및 내부 형식과 멤버를 모두 유지해야 하도록 지정하고 해당 형식과 멤버에 대해 정책을 사용하도록 설정합니다.
+- `Required PublicAndInternal`. 사용 여부에 관계없이 도구 체인이 public 및 내부 형식과 멤버를 모두 유지해야 하도록 지정하고 해당 형식과 멤버에 대해 정책을 사용하도록 설정합니다.
 
-- `Required All`입니다. 사용 여부에 관계없이 도구 체인이 모든 형식과 멤버를 유지해야 하도록 지정하고 해당 형식과 멤버에 대해 정책을 사용하도록 설정합니다.
+- `Required All`. 사용 여부에 관계없이 도구 체인이 모든 형식과 멤버를 유지해야 하도록 지정하고 해당 형식과 멤버에 대해 정책을 사용하도록 설정합니다.
 
 예를 들어 다음 런타임 지시문 파일은 DataClasses.dll 어셈블리의 모든 형식과 멤버에 대한 정책을 정의합니다. 이 정책은 모든 public 속성의 serialization에 대해 리플렉션을 사용하도록 설정하고, 모든 형식 및 형식 멤버를 검색할 수 있도록 설정하고, `Dynamic` 특성을 통해 모든 형식을 활성화할 수 있도록 설정하고, 모든 public 형식 및 멤버에 대해 리플렉션을 사용하도록 설정합니다.
 
@@ -445,7 +445,7 @@ ms.locfileid: "76738414"
 
 #### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserializer-policies"></a>XmlSerializer, DataContractSerializer 및 DataContractJsonSerializer 정책의 영향
 
-리플렉션 기반 serializer를 위한 `Serialize` 정책과 달리 <xref:System.Xml.Serialization.XmlSerializer>, <xref:System.Runtime.Serialization.DataContractSerializer>및 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 정책은 .NET 네이티브 도구 체인에 알려진 일련의 직렬 변환기를 사용 하도록 설정 하는 데 사용 됩니다. 이러한 serializer는 리플렉션을 사용하여 구현되지 않으며 런타임에 serialize할 수 있는 형식 집합은 리플렉션 가능한 형식과 비슷한 방식으로 결정됩니다.
+`Serialize`리플렉션 기반 serializer에 사용 되는 정책과 달리 <xref:System.Xml.Serialization.XmlSerializer> , <xref:System.Runtime.Serialization.DataContractSerializer> 및 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 정책은 .NET 네이티브 도구 체인에 알려진 일련의 직렬 변환기를 사용 하도록 설정 하는 데 사용 됩니다. 이러한 serializer는 리플렉션을 사용하여 구현되지 않으며 런타임에 serialize할 수 있는 형식 집합은 리플렉션 가능한 형식과 비슷한 방식으로 결정됩니다.
 
 이러한 정책 중 하나를 형식에 적용하면 일치하는 serializer를 사용하여 형식을 serialize할 수 있습니다. 또한 serialization 엔진이 serialization을 수행해야 한다고 정적으로 확인할 수 있는 모든 형식도 serialize할 수 있습니다.
 

@@ -10,18 +10,18 @@ helpviewer_keywords:
 - <developmentMode> element
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
 ms.openlocfilehash: 4a062da31740edb8f0c7a4f4db8b09800c687587
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73117625"
 ---
-# <a name="developmentmode-element"></a>\<developmentMode > 요소
+# <a name="developmentmode-element"></a>\<developmentMode> 요소
 런타임이 DEVPATH 환경 변수로 지정된 디렉터리에서 어셈블리를 검색할지를 지정합니다.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<developmentMode >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<developmentMode>**  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,28 +34,28 @@ ms.locfileid: "73117625"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |**developerInstallation**|런타임이 DEVPATH 환경 변수로 지정된 디렉터리에서 어셈블리를 검색할지를 지정합니다.|  
   
 ## <a name="developerinstallation-attribute"></a>developerInstallation 특성  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**true**|DEVPATH 환경 변수로 지정 된 디렉터리에서 어셈블리를 검색 합니다.|  
 |**false**|는 DEVPATH 환경 변수로 지정 된 디렉터리에서 어셈블리를 검색 하지 않습니다. 이것이 기본값입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- 없음.  
+ 없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  이 설정은 개발 시에만 사용 합니다. 런타임은 DEVPATH에서 찾은 강력한 이름의 어셈블리에 대 한 버전을 확인 하지 않습니다. 단순히 찾은 첫 번째 어셈블리를 사용 합니다.  
   
 ## <a name="example"></a>예제  
@@ -69,7 +69,7 @@ ms.locfileid: "73117625"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [런타임 설정 스키마](index.md)
 - [구성 파일 스키마](../index.md)

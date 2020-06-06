@@ -9,19 +9,19 @@ helpviewer_keywords:
 - ipv6 element
 ms.assetid: 10b79aef-327b-4718-a892-e11f55e4d169
 ms.openlocfilehash: c16949171d082bd02abb0a02db83c2e71c2f17df
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74088127"
 ---
 # <a name="ipv6-element-network-settings"></a>\<ipv6> 요소(네트워크 설정)
-<xref:System.Net.Dns> 클래스의 사용 되지 않는 멤버의 IPv6 (인터넷 프로토콜 버전 6) 응답을 사용 하도록 설정 합니다.  
+클래스의 사용 되지 않는 멤버에서 IPv6 (인터넷 프로토콜 버전 6) 응답을 사용 하도록 설정 <xref:System.Net.Dns> 합니다.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;[ **\<.net >를**](system-net-element-network-settings.md) &nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<설정**](settings-element-network-settings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<ipv6 >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<settings>**](settings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<ipv6>**
 
 ## <a name="syntax"></a>구문  
   
@@ -38,10 +38,10 @@ ms.locfileid: "74088127"
   
 |**특성**|**설명**|  
 |-------------------|---------------------|  
-|`enabled`|<xref:System.Net.Dns> 클래스의 멤버가 IPv6 (인터넷 프로토콜 버전 6) 주소를 반환 하는지 여부를 지정 합니다. 기본값은 `false`여야 합니다.|  
+|`enabled`|클래스의 멤버가 <xref:System.Net.Dns> IPv6 (인터넷 프로토콜 버전 6) 주소를 반환 하는지 여부를 지정 합니다. 기본값은 `false`입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- 없음.  
+ 없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
@@ -49,14 +49,14 @@ ms.locfileid: "74088127"
 |-----------------|---------------------|  
 |[설정](settings-element-network-settings.md)|<xref:System.Net> 네임스페이스에 대한 기본 네트워크 옵션을 구성합니다.|  
   
-## <a name="remarks"></a>주의  
- 이 설정은 <xref:System.Net.Dns> 클래스의 사용 되지 않는 멤버 (<xref:System.Net.Dns.BeginGetHostByName%2A>, <xref:System.Net.Dns.BeginResolve%2A>, <xref:System.Net.Dns.EndGetHostByName%2A>, <xref:System.Net.Dns.EndResolve%2A>, <xref:System.Net.Dns.GetHostByAddress%2A>, <xref:System.Net.Dns.GetHostByName%2A>, <xref:System.Net.Dns.Resolve%2A>에 대 한 IPv6 지원을 사용 하도록 설정 합니다. <xref:System.Net?displayProperty=nameWithType> 네임 스페이스의 다른 구성원의 경우 운영 체제에서 i p v 6을 사용 하도록 설정 하면 IPv6 주소가 반환 될 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 이 설정은,,,,, 및 클래스의 사용 되지 않는 멤버에 대 한 IPv6 지원을 사용 하도록 설정 <xref:System.Net.Dns> <xref:System.Net.Dns.BeginGetHostByName%2A> <xref:System.Net.Dns.BeginResolve%2A> <xref:System.Net.Dns.EndGetHostByName%2A> <xref:System.Net.Dns.EndResolve%2A> <xref:System.Net.Dns.GetHostByAddress%2A> <xref:System.Net.Dns.GetHostByName%2A> <xref:System.Net.Dns.Resolve%2A> 합니다. 네임 스페이스의 다른 구성원의 경우 ipv6 <xref:System.Net?displayProperty=nameWithType> 주소가 운영 체제에서 사용 하도록 설정 된 경우 ipv6 주소가 반환 될 수 있습니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
  이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 <xref:System.Net.Dns> 클래스에 대 한 IPv6 지원을 사용 하도록 설정 하는 방법을 보여 줍니다.  
+ 다음 예제에서는 클래스에 대 한 IPv6 지원을 사용 하도록 설정 하는 방법을 보여 줍니다 <xref:System.Net.Dns> .  
   
 ```xml  
 <configuration>  
@@ -68,7 +68,7 @@ ms.locfileid: "74088127"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Net?displayProperty=nameWithType>
 - <xref:System.Net.Dns?displayProperty=nameWithType>

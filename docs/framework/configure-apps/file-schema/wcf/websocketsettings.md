@@ -3,21 +3,21 @@ title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
 ms.openlocfilehash: fa87a1b0961425d6a9bc84769bef6e87cbc2ce96
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73732559"
 ---
-# <a name="websocketsettings"></a>\<webSocketSettings >
+# \<webSocketSettings>
 WebSocket 설정을 지정하는 데 사용되는 구성 요소입니다.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-[ **\<system serviceModel >** ](system-servicemodel.md) &nbsp; &nbsp; \
-&nbsp;&nbsp;&nbsp;&nbsp;\<[**바인딩**](bindings.md) >
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netHttpBinding >** ](nethttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<바인딩 >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**webSocketSettings >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<netHttpBinding>**](nethttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<webSocketSettings>**  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,7 +41,7 @@ WebSocket 설정을 지정하는 데 사용되는 구성 요소입니다.
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |createNotificationOnConnection|연결 시 알림이 보내지는지 여부를 지정합니다.|  
 |disablePayloadMasking|WebSocket 마스킹을 사용하지 않도록 설정할지 여부를 지정합니다.|  
@@ -54,23 +54,23 @@ WebSocket 설정을 지정하는 데 사용되는 구성 요소입니다.
   
 ## <a name="transportusage-attribute"></a>transportUsage 특성  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |WhenDuplex|이중 계약인 경우 WebSocket 프로토콜을 사용합니다.|  
 |항상|계약과 관계없이 항상 WebSocket 프로토콜을 사용합니다.|  
-|Never|WebSocket 프로토콜을 사용하지 않습니다.|  
+|안 함|WebSocket 프로토콜을 사용하지 않습니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- 없음  
+ None  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|\<netHttpBinding >|NetHttpBinding을 지정합니다.|  
+|\<netHttpBinding>|NetHttpBinding을 지정합니다.|  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 \<webSocketSettings > 요소를 사용 하는 방법을 보여 줍니다.  
+ 다음 예제에서는 \<webSocketSettings> 요소를 사용하는 방법을 보여 줍니다.  
   
 ```xml  
 <netHttpBinding>
@@ -87,7 +87,7 @@ WebSocket 설정을 지정하는 데 사용되는 구성 요소입니다.
 </netHttpBinding>
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Channels.Binding>
 - <xref:System.ServiceModel.Channels.BindingElement>
@@ -96,4 +96,4 @@ WebSocket 설정을 지정하는 데 사용되는 구성 요소입니다.
 - [바인딩](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding >](bindings.md)
+- [\<binding>](bindings.md)

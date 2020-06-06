@@ -1,5 +1,5 @@
 ---
-title: <sectionGroup>에 대한 <configSections> 요소
+title: <configSections>에 대한 <sectionGroup> 요소
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/sectionGroup
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <sectionGroup> Element
 ms.assetid: 6c27f9e2-809c-4bc9-aca9-72f90360e7a3
 ms.openlocfilehash: eb221027470fe6e485f8fcc4b939b71e4f219712
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77215255"
 ---
-# <a name="sectiongroup-element-for-configsections"></a>\<configSections에 대 한 \<sectionGroup > 요소 >
+# <a name="sectiongroup-element-for-configsections"></a>\<configSections>에 대한 \<sectionGroup> 요소
 
 구성 섹션에 대 한 네임 스페이스를 정의 합니다.
 
-[ **\<configuration>** ](configuration-element.md)\
-[**configSections >\<** ](configsections-element-for-configuration.md) &nbsp;&nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<sectionGroup >**
+[**\<configuration>**](configuration-element.md)\
+&nbsp;&nbsp;[**\<configSections>**](configsections-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<sectionGroup>**
 
 ## <a name="syntax"></a>구문
 
@@ -40,17 +40,17 @@ ms.locfileid: "77215255"
 
 |     | Description |
 | --- | ----------- |
-| [**configSections을\<>** 요소인](configsections-element-for-configuration.md) | 구성 섹션과 네임 스페이스 선언을 포함 합니다. |
+| [**\<configSections>** 요소인](configsections-element-for-configuration.md) | 구성 섹션과 네임 스페이스 선언을 포함 합니다. |
 
 ## <a name="child-elements"></a>자식 요소
 
 |     | Description |
 | --- | ----------- |
-| [ **\<섹션 >** ](section-element.md) | 구성 섹션 선언을 포함 합니다. |
+| [**\<section>**](section-element.md) | 구성 섹션 선언을 포함 합니다. |
 
 ## <a name="remarks"></a>설명
 
-섹션 그룹을 선언 하면 구성 섹션에 대 한 컨테이너 태그가 생성 되며 다른 사용자가 정의한 구성 섹션과 이름이 충돌 하지 않습니다. **\<sectionGroup >** 요소를 서로 중첩할 수 있습니다.
+섹션 그룹을 선언 하면 구성 섹션에 대 한 컨테이너 태그가 생성 되며 다른 사용자가 정의한 구성 섹션과 이름이 충돌 하지 않습니다. 요소를 서로 중첩할 수 있습니다 **\<sectionGroup>** .
 
 ## <a name="example"></a>예제
 
@@ -78,4 +78,4 @@ ms.locfileid: "77215255"
 
 ## <a name="see-also"></a>참고 항목
 
-- [.NET Framework에 대 한 구성 파일 스키마](index.md)
+- [.NET Framework의 구성 파일 스키마](index.md)

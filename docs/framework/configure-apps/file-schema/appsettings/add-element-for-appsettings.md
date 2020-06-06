@@ -1,5 +1,5 @@
 ---
-title: <add>에 대한 <appSettings> 요소
+title: <appSettings>에 대한 <add> 요소
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/add
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <add> Element
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
 ms.openlocfilehash: 5c7de79ec626966e71d461dd3865b294a8979db2
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77214801"
 ---
-# <a name="add-element-for-appsettings"></a>\<appSettings에 대 한 > 요소를 추가 \<>
+# <a name="add-element-for-appsettings"></a>\<appSettings>에 대한 \<add> 요소
 
 사용자 지정 응용 프로그램 설정을 추가 합니다.
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<추가**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<appSettings>**](appsettings-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
 
 ## <a name="syntax"></a>구문
 
@@ -41,7 +41,7 @@ ms.locfileid: "77214801"
 
 |     | Description |
 | --- | ----------- |
-| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | 파일 경로, XML Web services URL 또는 애플리케이션의 기타 사용자 지정 구성 정보와 같은 사용자 지정 애플리케이션 설정이 포함되어 있습니다. |
+| [**\<appSettings>**](appsettings-element-for-configuration.md) | 파일 경로, XML Web services URL 또는 애플리케이션의 기타 사용자 지정 구성 정보와 같은 사용자 지정 애플리케이션 설정이 포함되어 있습니다. |
 
 ## <a name="child-elements"></a>자식 요소
 
@@ -57,7 +57,7 @@ None
 </appSettings>
 ```
 
-다음 예제에서는 `<add>` 요소를 사용 하 여 ASP.NET 응용 프로그램에서 두 가지 호환성 설정을 정의 합니다.
+다음 예제에서는 요소를 사용 하 여 `<add>` ASP.NET 응용 프로그램에서 두 가지 호환성 설정을 정의 합니다.
 
 ```xml
 <appSettings>
@@ -68,4 +68,4 @@ None
 
 ## <a name="see-also"></a>참고 항목
 
-- [.NET Framework에 대 한 구성 파일 스키마](../index.md)
+- [.NET Framework의 구성 파일 스키마](../index.md)

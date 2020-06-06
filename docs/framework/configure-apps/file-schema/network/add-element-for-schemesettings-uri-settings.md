@@ -3,19 +3,19 @@ title: schemeSettings의 <add> 요소(URI 설정)
 ms.date: 03/30/2017
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
 ms.openlocfilehash: ed40098e8d4c2d1298771e67a618b8d04f59c912
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74087713"
 ---
-# <a name="add-element-for-schemesettings-uri-settings"></a>schemeSettings에 대 한 > 요소 추가 \<(Uri 설정)
+# <a name="add-element-for-schemesettings-uri-settings"></a>schemeSettings의 \<add> 요소(URI 설정)
 구성표 이름에 대 한 구성표 설정을 추가 합니다.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-[ **\<uri >** ](uri-element-uri-settings.md) &nbsp;&nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<schemeSettings >** ](schemesettings-element-uri-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**추가** >
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<uri>**](uri-element-uri-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<schemeSettings>**](schemesettings-element-uri-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
 
 ## <a name="syntax"></a>구문  
   
@@ -31,27 +31,27 @@ ms.locfileid: "74087713"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |name|이 설정이 적용 되는 체계 이름입니다. 유일 하 게 지원 되는 값은 name = "http" 및 name = "https"입니다.|  
   
 ## <a name="attribute-name-attribute"></a>{Attribute name} 특성도  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |genericUriParserOptions|이 스키마에 대 한 파서 옵션입니다. 유일 하 게 지원 되는 값은 genericUriParserOptions = "DontUnescapePathDotsAndSlashes"입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- 없음  
+ None  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<schemeSettings> 요소 (URI 설정)](schemesettings-element-uri-settings.md)|특정 체계에 대해 <xref:System.Uri>가 구문 분석되는 방법을 지정합니다.|  
+|[\<schemeSettings>요소 (Uri 설정)](schemesettings-element-uri-settings.md)|특정 체계에 대해 <xref:System.Uri>가 구문 분석되는 방법을 지정합니다.|  
   
-## <a name="remarks"></a>주의  
- 기본적으로 <xref:System.Uri?displayProperty=nameWithType> 클래스는 경로 압축을 실행 하기 전에 인코딩된 경로 구분 기호 비율을 이스케이프 해제 합니다. 이는 다음과 같은 공격에 대 한 보안 메커니즘으로 구현 되었습니다.  
+## <a name="remarks"></a>설명  
+ 기본적으로 클래스는 <xref:System.Uri?displayProperty=nameWithType> 경로 압축을 실행 하기 전에 인코딩된 경로 구분 기호 비율을 이스케이프 해제 합니다. 이는 다음과 같은 공격에 대 한 보안 메커니즘으로 구현 되었습니다.  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -59,7 +59,7 @@ ms.locfileid: "74087713"
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- 이러한 이유로, <xref:System.Uri?displayProperty=nameWithType> 클래스는 먼저 경로 구분 기호를 이스케이프 해제 한 후 경로 압축을 적용 합니다. 위의 악성 URL을 <xref:System.Uri?displayProperty=nameWithType> 클래스 생성자에 전달 하면 다음 URI가 생성 됩니다.  
+ 따라서 <xref:System.Uri?displayProperty=nameWithType> 클래스는 먼저 경로 구분 기호를 이스케이프 해제 한 후 경로 압축을 적용 합니다. 위의 악성 URL을 클래스 생성자에 전달 하면 <xref:System.Uri?displayProperty=nameWithType> 다음 URI가 생성 됩니다.  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -69,7 +69,7 @@ ms.locfileid: "74087713"
  이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 http 체계의 백분율 인코딩된 경로 구분 기호를 이스케이프 하지 않도록 지원 하기 위해 <xref:System.Uri> 클래스에서 사용 하는 구성을 보여 줍니다.  
+ 다음 예제에서는 <xref:System.Uri> http 체계의 백분율 인코딩된 경로 구분 기호를 이스케이프 하지 않도록 지원 하기 위해 클래스에서 사용 하는 구성을 보여 줍니다.  
   
 ```xml  
 <configuration>  
@@ -81,7 +81,7 @@ ms.locfileid: "74087713"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>

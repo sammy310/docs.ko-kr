@@ -3,10 +3,10 @@ title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
 ms.openlocfilehash: fdd6d83836c4ef31a4d7c8e68cb0cc050ac6bea4
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "76787795"
 ---
 # <a name="servicehost"></a>\@ServiceHost
@@ -35,25 +35,25 @@ CodeBehind = "CodeBehind"
 
 서비스 호스트를 인스턴스화하는 데 사용되는 서비스 호스트 팩터리의 CLR 형식 이름입니다. 이 특성은 선택적 요소입니다. 지정되지 않은 경우 <xref:System.ServiceModel.Activation.ServiceHostFactory>의 인스턴스를 반환하는 <xref:System.ServiceModel.ServiceHost> 기본값이 사용됩니다.
 
-### <a name="debug"></a>Debug
+### <a name="debug"></a>디버그
 
-디버그 기호를 사용 하 여 WCF (Windows Communication Foundation) 서비스를 컴파일해야 하는지 여부를 나타냅니다. 디버그 기호를 사용 하 여 WCF 서비스를 컴파일해야 하는지 여부를 `true` 합니다. 그렇지 않으면 `false`합니다.
+디버그 기호를 사용 하 여 WCF (Windows Communication Foundation) 서비스를 컴파일해야 하는지 여부를 나타냅니다. `true`디버그 기호를 사용 하 여 WCF 서비스를 컴파일해야 하면이 고, 그렇지 않으면입니다. 그렇지 않으면 `false` 입니다.
 
-### <a name="language"></a>Language
+### <a name="language"></a>언어
 
-파일(.svc) 내의 인라인 코드를 모두 컴파일할 때 사용되는 언어를 지정합니다. 값은 any를 나타낼 수 있습니다. `C#`, `VB`및 `JS`를 포함 하 여 C#,, Visual Basic 및 JScript .net을 각각 참조 하는 순으로 지원 되는 언어입니다. 이 특성은 선택적 요소입니다.
+파일(.svc) 내의 인라인 코드를 모두 컴파일할 때 사용되는 언어를 지정합니다. 값은 any를 나타낼 수 있습니다. , 및를 포함 하 여 `C#` `VB` `JS` c #, Visual Basic 및 JScript .net을 각각 참조 하는 NET 지원 언어. 이 특성은 선택적 요소입니다.
 
 ### <a name="codebehind"></a>CodeBehind
 
 Xml Web services를 구현 하는 클래스가 동일한 파일에 있지 않고 어셈블리로 컴파일되지 않고 *\bin* 디렉터리에 저장 된 경우 xml web services를 구현 하는 소스 파일을 지정 합니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-서비스를 호스트 하는 데 사용 되는 <xref:System.ServiceModel.ServiceHost>는 WCF (Windows Communication Foundation) 프로그래밍 모델 내의 확장성 지점입니다. 팩터리 패턴은 호스팅 환경에서 직접 인스턴스화하면 안 되는 다형 형식이므로 <xref:System.ServiceModel.ServiceHost>를 인스턴스화하는 데 사용됩니다.
+<xref:System.ServiceModel.ServiceHost>서비스를 호스트 하는 데 사용 되는은 WCF (Windows Communication Foundation) 프로그래밍 모델 내의 확장성 지점입니다. 팩터리 패턴은 호스팅 환경에서 직접 인스턴스화하면 안 되는 다형 형식이므로 <xref:System.ServiceModel.ServiceHost>를 인스턴스화하는 데 사용됩니다.
 
-기본 구현에서는 <xref:System.ServiceModel.Activation.ServiceHostFactory>를 사용하여 <xref:System.ServiceModel.ServiceHost>의 인스턴스를 만듭니다. 그러나 `@ServiceHost` 지시문에 팩터리 구현의 CLR 형식 이름을 지정 하 여 고유한 팩터리 (파생 호스트를 반환 하는 팩터리)를 제공할 수 있습니다.
+기본 구현에서는 <xref:System.ServiceModel.Activation.ServiceHostFactory>를 사용하여 <xref:System.ServiceModel.ServiceHost>의 인스턴스를 만듭니다. 그러나 지시문에 팩터리 구현의 CLR 형식 이름을 지정 하 여 고유한 팩터리 (파생 호스트를 반환 하는 팩터리)를 제공할 수 있습니다 `@ServiceHost` .
 
-기본 팩터리 대신 사용자 지정 서비스 호스트 팩터리를 사용 하려면 다음과 같이 `@ServiceHost` 지시문에 형식 이름을 제공 하면 됩니다.
+기본 팩터리 대신 사용자 지정 서비스 호스트 팩터리를 사용 하려면 다음과 같이 지시문에 형식 이름을 제공 하면 `@ServiceHost` 됩니다.
 
 ```xml
 <% @ServiceHost Factory="DerivedFactory" Service="MyService" %>
@@ -61,7 +61,7 @@ Xml Web services를 구현 하는 클래스가 동일한 파일에 있지 않고
 
 팩터리 구현을 가능하면 간단하게 유지합니다. 사용자 지정 논리가 많은 경우 팩터리 내부 대신 호스트 내부에 해당 로직을 배치하면 코드를 재사용할 수 있습니다.
 
-예를 들어 `MyService`에 대해 AJAX 사용 끝점을 사용 하도록 설정 하려면 다음 예제와 같이 `@ServiceHost` 지시문에서 기본 <xref:System.ServiceModel.Activation.ServiceHostFactory>대신 `Factory` 특성의 값에 대 한 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>를 지정 합니다.
+예를 들어에 대해 AJAX 사용 끝점을 사용 하도록 설정 하려면 `MyService` <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> `Factory` <xref:System.ServiceModel.Activation.ServiceHostFactory> 다음 예제와 같이 지시문에서 기본값 대신 특성 값에 대해를 지정 합니다 `@ServiceHost` .
 
 ```xml
 <% @ServiceHost
@@ -72,6 +72,6 @@ Factory="WebScriptServiceHostFactory"
 %>
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [사용자 지정 서비스 호스트](../../../wcf/samples/custom-service-host.md)

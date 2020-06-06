@@ -3,20 +3,20 @@ title: <serviceActivations>
 ms.date: 03/30/2017
 ms.assetid: 97e665b6-1c51-410b-928a-9bb42c954ddb
 ms.openlocfilehash: 64ae0bfd90ae941fc78515c7936c998201c87485
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70855141"
 ---
-# <a name="serviceactivations"></a>\<serviceActivations>
+# \<serviceActivations>
 
 WCF (Windows Communication Foundation) 서비스 형식에 매핑되는 가상 서비스 활성화 설정을 정의 하는 설정을 추가할 수 있는 구성 요소입니다. .svc 파일 없이도 WAS/IIS에서 호스트되는 서비스를 활성화할 수 있습니다.
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceHostingEnvironment >** ](servicehostingenvironment.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<serviceActivations >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceHostingEnvironment>**](servicehostingenvironment.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<serviceActivations>**  
 
 ## <a name="syntax"></a>구문
 
@@ -39,7 +39,7 @@ WCF (Windows Communication Foundation) 서비스 형식에 매핑되는 가상 �
 
 ### <a name="child-elements"></a>자식 요소
 
-|요소|설명|
+|요소|Description|
 |-------------|-----------------|
 |[\<add>](add-of-serviceactivations.md)|서비스 애플리케이션의 활성화를 지정하는 구성 요소를 추가합니다.|
 
@@ -71,7 +71,7 @@ WCF (Windows Communication Foundation) 서비스 형식에 매핑되는 가상 �
 
 구성 기반 활성화는 http 및 http가 아닌 프로토콜을 통한 활성화를 모두 지원합니다. 이 클래스에는 relativeAddress, xoml 또는. .xamlx의 확장이 필요 합니다. 직접 작성한 확장을 알려진 buildProviders에 매핑할 수 있으며, 이렇게 하면 모든 확장에서 서비스를 활성화할 수 있습니다. 충돌이 발생하면 `<serviceActivations>` 섹션이 .svc 등록을 재정의합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Configuration.ServiceActivationElementCollection>
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>

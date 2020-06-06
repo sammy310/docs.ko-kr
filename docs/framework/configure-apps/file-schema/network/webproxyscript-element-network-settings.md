@@ -9,19 +9,19 @@ helpviewer_keywords:
 - webProxyScript element
 ms.assetid: a13c26db-6218-4af3-9696-38f24b23bfac
 ms.openlocfilehash: dbad888cd0537f63c09840ac1053f924db9ea9bc
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74089066"
 ---
-# <a name="webproxyscript-element-network-settings"></a>\<webProxyScript > 요소 (네트워크 설정)
+# <a name="webproxyscript-element-network-settings"></a>\<webProxyScript> 요소(네트워크 설정)
 웹 프록시를 검색 하는 데 사용 되는 스크립트의 특징을 구성 합니다.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;[ **\<.net >를**](system-net-element-network-settings.md) &nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<설정**](settings-element-network-settings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<webProxyScript >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<settings>**](settings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<webProxyScript>**
 
 ## <a name="syntax"></a>구문  
   
@@ -36,24 +36,24 @@ ms.locfileid: "74089066"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |`downloadTimeout`|스크립트를 다운로드 하는 최대 시간을 시간, 분, 초 단위로 지정 합니다. 기본값은 1 분입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- 없음.  
+ 없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |[설정](settings-element-network-settings.md)|<xref:System.Net> 네임스페이스에 대한 기본 네트워크 옵션을 구성합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
   
 ## <a name="configuration-files"></a>구성 파일  
  이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [네트워크 설정 스키마](index.md)

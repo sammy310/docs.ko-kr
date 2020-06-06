@@ -3,19 +3,19 @@ title: <workflowControlEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 6c89e76c-643b-4b6a-9b25-628f753d7027
 ms.openlocfilehash: 670c1573fe4378a18c19d0a58fe58241745725bd
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70854790"
 ---
-# <a name="workflowcontrolendpoint"></a>\<workflowControlEndpoint>
+# \<workflowControlEndpoint>
 이 구성 요소는 워크플로 인스턴스의 실행(만들기, 실행, 일시 중단, 종료 등)을 제어하기 위한 표준 엔드포인트를 정의합니다.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<standardEndpoints >** ](standardendpoints.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<workflowControlEndpoint >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<standardEndpoints>**](standardendpoints.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<workflowControlEndpoint>**  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,7 +34,7 @@ ms.locfileid: "70854790"
   
 ### <a name="attributes"></a>특성  
   
-|특성|Description|  
+|attribute|Description|  
 |---------------|-----------------|  
 |name|표준 엔드포인트의 구성 이름을 지정하는 문자열입니다. 이 이름은 서비스 엔드포인트의 `endpointConfiguration` 특성에서 표준 엔드포인트를 해당 구성에 연결하기 위해 사용됩니다.|  
   
@@ -47,6 +47,6 @@ ms.locfileid: "70854790"
 |-------------|-----------------|  
 |[\<standardEndpoints>](standardendpoints.md)|하나 이상의 속성(주소, 바인딩, 계약)이 고정된 미리 정의된 엔드포인트인 표준 엔드포인트의 컬렉션입니다.|  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>

@@ -3,21 +3,21 @@ title: <rsa>
 ms.date: 03/30/2017
 ms.assetid: ae1f2267-e40d-42ff-8abf-06ab7067bdb9
 ms.openlocfilehash: 0e1651f563bdb2b2b24eacacf7bfe387e33a82c7
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70855051"
 ---
-# <a name="rsa"></a>\<rsa>
-이 ID를 가진 엔드포인트와 연결되는 보안 WCF 클라이언트는 서버가 나타내는 클레임 중에 이 ID 생성에 사용된 RSA 공개 키가 포함된 클레임이 있음을 확인합니다.  
+# \<rsa>
+이 id를 사용 하 여 끝점에 연결 하는 보안 WCF 클라이언트는 서버에서 제공 하는 클레임이이 id를 생성 하는 데 사용 된 RSA 공개 키를 포함 하는 클레임을 포함 하는지 확인 합니다.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<클라이언트 >** ](client.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<끝점 >** ](endpoint-of-client.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<id >** ](identity.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<rsa >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<client>**](client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<endpoint>**](endpoint-of-client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<identity>**](identity.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<rsa>**  
   
 ## <a name="syntax"></a>구문  
   
@@ -30,16 +30,16 @@ ms.locfileid: "70855051"
   
 ### <a name="attributes"></a>특성  
   
-|특성|Description|  
+|attribute|Description|  
 |---------------|-----------------|  
-|value|선택적 문자열입니다. 클라이언트에서 비교할 RSA 공개 키 값입니다.|  
+|값|선택적 문자열입니다. 클라이언트에서 비교할 RSA 공개 키 값입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- 없음  
+ None  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |[\<identity>](identity.md)|클라이언트에서 인증할 서비스의 ID를 지정합니다.|  
   
@@ -57,7 +57,7 @@ ms.locfileid: "70855051"
 </identity>
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Configuration.IdentityElement>
 - <xref:System.ServiceModel.EndpointAddress>

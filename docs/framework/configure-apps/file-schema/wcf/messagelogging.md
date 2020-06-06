@@ -3,19 +3,19 @@ title: <messageLogging>
 ms.date: 03/30/2017
 ms.assetid: 1d06a7e6-9633-4a12-8c5d-123adbbc19c5
 ms.openlocfilehash: 9291c38af28c18d20e23e34e8316b4a9fe523123
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70855128"
 ---
-# <a name="messagelogging"></a>\<messageLogging>
+# \<messageLogging>
 이 요소는 WCF(Windows Communication Foundation)의 메시지 로깅 기능 설정을 정의합니다.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<진단 >** ](diagnostics.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<messageLogging >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<diagnostics>**](diagnostics.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<messageLogging>**  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,7 +41,7 @@ ms.locfileid: "70855128"
   
 ### <a name="attributes"></a>특성  
   
-|특성|Description|  
+|attribute|Description|  
 |---------------|-----------------|  
 |`logEntireMessage`|전체 메시지(메시지 헤더 및 본문)를 로깅할지 여부를 지정하는 부울 값입니다. 기본값은 `false`로, 메시지 헤더만 로깅됩니다. 이 설정은 모든 메시지 로깅 수준(서비스, 전송 및 잘못된 형식)에 영향을 줍니다.|  
 |`logMalformedMessages`|잘못된 형식의 메시지를 로깅할지 여부를 지정하는 부울 값입니다. 잘못된 형식의 메시지는 `maxMessagesToLog`에 포함되지 않습니다. 기본값은 `false`입니다.|  
@@ -54,7 +54,7 @@ ms.locfileid: "70855128"
   
 |요소|Description|  
 |-------------|-----------------|  
-|필터|`filters` 요소는 XPath 필터 컬렉션을 보유합니다. `logMessagesAtTransportLevel`이 `true`로 설정되어 전송 메시지 로깅을 사용할 경우 필터와 일치하는 메시지만 로깅됩니다.<br /><br /> 필터는 전송 레이어에서만 적용됩니다. 서비스 수준 및 잘못된 형식의 메시지 로깅은 필터의 영향을 받지 않습니다.<br /><br /> 이 요소의 유일한 특성인 `filter`는 XpathFilter입니다.<br /><br /> `<filters>     <add xmlns:soap="http://www.w3.org/2003/05/soap-envelope">/soap:Envelope</add> </filters>`|  
+|filters|`filters` 요소는 XPath 필터 컬렉션을 보유합니다. `logMessagesAtTransportLevel`이 `true`로 설정되어 전송 메시지 로깅을 사용할 경우 필터와 일치하는 메시지만 로깅됩니다.<br /><br /> 필터는 전송 레이어에서만 적용됩니다. 서비스 수준 및 잘못된 형식의 메시지 로깅은 필터의 영향을 받지 않습니다.<br /><br /> 이 요소의 유일한 특성인 `filter`는 XpathFilter입니다.<br /><br /> `<filters>     <add xmlns:soap="http://www.w3.org/2003/05/soap-envelope">/soap:Envelope</add> </filters>`|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
@@ -122,7 +122,7 @@ ms.locfileid: "70855128"
 </messageLogging>
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Configuration.DiagnosticSection>
 - <xref:System.ServiceModel.Diagnostics>

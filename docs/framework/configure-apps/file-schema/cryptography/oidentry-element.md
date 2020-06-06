@@ -9,20 +9,20 @@ helpviewer_keywords:
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
 ms.openlocfilehash: 4564cf59e3b6cfbdcd9dca06cd0f966d524834de
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74088545"
 ---
-# <a name="oidentry-element"></a>\<y > 요소
+# <a name="oidentry-element"></a>\<oidEntry> 요소
 ASN.1 OID(개체 식별자)를 이름에 매핑합니다.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-[**mscorlib >\<** ](mscorlib-element-for-cryptography-settings.md) &nbsp;&nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp;\<[**cryptographySettings**](cryptographysettings-element.md) >
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<oidMap >** ](oidmap-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<y >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<mscorlib>**](mscorlib-element-for-cryptography-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<cryptographySettings>**](cryptographysettings-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<oidMap>**](oidmap-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<oidEntry>**
 
 ## <a name="syntax"></a>구문  
   
@@ -35,28 +35,28 @@ ASN.1 OID(개체 식별자)를 이름에 매핑합니다.
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |**OID**|필수 특성입니다.<br /><br /> 클래스에서 구현 하는 알고리즘에 해당 하는 ASN OID를 지정 합니다.|  
-|**name**|필수 특성입니다.<br /><br /> [\<nameEntry >](nameentry-element.md) 태그에 **name** 특성의 값을 지정 합니다.|  
+|**name**|필수 특성입니다.<br /><br /> 태그의 **이름** 특성에 대 한 값을 지정 합니다 [\<nameEntry>](nameentry-element.md) .|  
   
 ### <a name="child-elements"></a>자식 요소  
- 없음.  
+ 없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`cryptographySettings`|암호화 설정이 포함되어 있습니다.|  
-|`mscorlib`|`cryptographySettings` 요소를 포함 합니다.|  
+|`mscorlib`|요소를 포함 `cryptographySettings` 합니다.|  
 |`oidMap`|클래스에 대 한 OID (개체 식별자) 매핑을 포함 합니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  ASN 개체 식별자는 일부 암호화 형식의 알고리즘을 식별 합니다. 식별 하려는 알고리즘의 이름에 개체 식별자를 매핑합니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 **\<y >** 요소를 사용 하 여 RIPEMD-160 해시 알고리즘에 대 한 개체 식별자를 해당 해시 알고리즘의 구현에 매핑하는 방법을 보여 줍니다.  
+ 다음 예제에서는 요소를 사용 하 여 **\<oidEntry>** RIPEMD-160 해시 알고리즘에 대 한 개체 식별자를 해당 해시 알고리즘의 구현에 매핑하는 방법을 보여 줍니다.  
   
 ```xml  
 <configuration>  

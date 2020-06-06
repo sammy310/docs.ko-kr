@@ -1,5 +1,5 @@
 ---
-title: NameValueSectionHandler 및 DictionarySectionHandler에 대 한 <clear> 요소
+title: <clear>NameValueSectionHandler 및 DictionarySectionHandler에 대 한 요소
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/clear
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <clear> Element
 ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
 ms.openlocfilehash: f6d860f35d22002030ffa3d09dd0d8a96116bf5e
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77214749"
 ---
-# <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>NameValueSectionHandler 및 DictionarySectionHandler에 대 한 \<clear > 요소
+# <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<clear>NameValueSectionHandler 및 DictionarySectionHandler에 대 한 요소
 
 섹션에서 이전에 정의 된 모든 설정을 지웁니다.
 
-[ **\<configuration>** ](configuration-element.md)\
-&nbsp;&nbsp;[ **\<섹션 이름 >** ](custom-element-2.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<clear >**
+[**\<configuration>**](configuration-element.md)\
+&nbsp;&nbsp;[**\<sectionName>**](custom-element-2.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
 
 ## <a name="syntax"></a>구문
 
@@ -36,7 +36,7 @@ None
 
 |     | Description |
 | --- | ------------|
-| [ **\<섹션 이름 >** 요소인](custom-element-2.md) | <xref:System.Configuration.NameValueSectionHandler> 및 <xref:System.Configuration.DictionarySectionHandler> 클래스를 사용 하는 사용자 지정 구성 섹션에 대 한 설정을 정의 합니다. |
+| [**\<sectionName>** 요소인](custom-element-2.md) | 및 클래스를 사용 하는 사용자 지정 구성 섹션에 대 한 설정을 정의 <xref:System.Configuration.NameValueSectionHandler> <xref:System.Configuration.DictionarySectionHandler> 합니다. |
 
 ## <a name="child-elements"></a>자식 요소
 
@@ -44,13 +44,13 @@ None
 
 ## <a name="remarks"></a>설명
 
-**\<clear >** 요소를 사용 하 여 구성 파일 계층 구조에서 상위 수준에 정의 된 응용 프로그램의 모든 설정을 제거할 수 있습니다.
+요소를 사용 하 여 **\<clear>** 구성 파일 계층 구조에서 상위 수준에 정의 된 응용 프로그램의 모든 설정을 제거할 수 있습니다.
 
 ## <a name="example"></a>예제
 
-이 예제에서는 컴퓨터 구성 파일 및 응용 프로그램 구성 파일을 정의 하 고, 응용 프로그램 구성 파일에서 **\<clear >** 요소를 사용 하 여 이전에 컴퓨터 구성 파일에 정의 된 섹션을 지우는 방법을 보여 줍니다.
+이 예제에서는 컴퓨터 구성 파일 및 응용 프로그램 구성 파일을 정의 하 고, **\<clear>** 응용 프로그램 구성 파일에서 요소를 사용 하 여 이전에 컴퓨터 구성 파일에 정의 된 섹션을 지우는 방법을 보여 줍니다.
 
-다음 컴퓨터 구성 파일 코드는 **\<mysection >** 섹션을 선언 합니다.
+다음 컴퓨터 구성 파일 코드는 섹션을 선언 합니다 **\<mySection>** .
 
 ```xml
 <!-- Machine.config file -->
@@ -65,7 +65,7 @@ None
 </configuration>
 ```
 
-다음 응용 프로그램 구성 파일 코드는 **\<mySection >** 에서 모든 설정을 제거 합니다. 응용 프로그램은 컴퓨터 구성 파일의 **\<mysection >** 섹션에서에 선언 된 설정을 검색할 수 없습니다.
+다음 응용 프로그램 구성 파일 코드는에서 모든 설정을 제거 합니다 **\<mySection>** . 응용 프로그램은 **\<mySection>** 컴퓨터 구성 파일의 섹션에 있는에서 선언 된 설정을 검색할 수 없습니다.
 
 ```xml
 <!-- Application configuration file -->
@@ -82,4 +82,4 @@ None
 
 ## <a name="see-also"></a>참고 항목
 
-- [.NET Framework에 대 한 구성 파일 스키마](index.md)
+- [.NET Framework의 구성 파일 스키마](index.md)

@@ -3,19 +3,19 @@ title: <mexTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 01baba8d-d784-4255-9ea2-7afff1482bf0
 ms.openlocfilehash: 8d0ae2a1848eaf28c2e408542b8209cf968de4c1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74430297"
 ---
-# <a name="mextcpbinding"></a>\<mexTcpBinding >
+# \<mexTcpBinding>
 TCP를 통한 WS-MEX(WS-MetadataExchange) 메시지 교환에 사용되는 바인딩의 설정을 지정합니다.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;[ **\<system.servicemodel >를**](system-servicemodel.md) &nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp;\<[**바인딩**](bindings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<mexTcpBinding >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<mexTcpBinding>**  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,7 +35,7 @@ TCP를 통한 WS-MEX(WS-MetadataExchange) 메시지 교환에 사용되는 바�
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |`closeTimeout`|닫기 작업을 완료하기 위해 제공된 시간 간격을 지정하는 <xref:System.TimeSpan> 값입니다. 이 값은 <xref:System.TimeSpan.Zero>보다 크거나 같아야 합니다. 기본값은 00:01:00입니다.|  
 |`name`|바인딩의 구성 이름을 포함하는 문자열입니다. 이 값은 바인딩의 ID로 사용되므로 고유해야 합니다. .NET Framework 4부터 바인딩과 동작은 이름을 가질 필요가 없습니다. 기본 구성 및 이름이 없는 바인딩 및 동작에 대 한 자세한 내용은 [WCF 서비스에 대 한](../../../wcf/samples/simplified-configuration-for-wcf-services.md) [간소화 된 구성](../../../wcf/simplified-configuration.md) 및 단순화 된 구성을 참조 하세요.|  
@@ -44,22 +44,22 @@ TCP를 통한 WS-MEX(WS-MetadataExchange) 메시지 교환에 사용되는 바�
 |`sendTimeout`|보내기 작업을 완료하기 위해 제공된 시간 간격을 지정하는 <xref:System.TimeSpan> 값입니다. 이 값은 <xref:System.TimeSpan.Zero>보다 크거나 같아야 합니다. 기본값은 00:01:00입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- None.  
+ 없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<바인딩 >](bindings.md)|이 요소는 표준 및 사용자 지정 바인딩의 컬렉션을 보유합니다.|  
+|[\<bindings>](bindings.md)|이 요소는 표준 및 사용자 지정 바인딩의 컬렉션을 보유합니다.|  
   
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Configuration.MexTcpBindingElement>
 - <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexTcpBinding%2A>
-- [방법: 구성 파일을 사용하여 서비스의 메타데이터 게시](../../../wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [방법: 구성 파일을 사용하여 서비스에 대한 메타데이터 게시](../../../wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [사용자 지정 바인딩을 통해 메타데이터 게시 및 검색](../../../wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)
 - [메타데이터](../../../wcf/feature-details/metadata.md)
 - [바인딩](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<바인딩 >](bindings.md)
+- [\<binding>](bindings.md)

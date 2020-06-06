@@ -9,18 +9,18 @@ helpviewer_keywords:
 - assert element
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
 ms.openlocfilehash: f3c1a1670139a8262dea449bfff99c7c1c19f088
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74088941"
 ---
-# <a name="assert-element"></a>\<assert > 요소
+# <a name="assert-element"></a>\<assert> 요소
 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> 메서드를 호출할 때 메시지 상자를 표시할지 여부를 지정합니다. 또한 메시지를 작성할 파일의 이름도 지정합니다.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;[ **\<&nbsp;진단 >** ](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<assert >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<assert>**
 
 ## <a name="syntax"></a>구문  
   
@@ -33,33 +33,33 @@ ms.locfileid: "74088941"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |`assertuienabled`|선택적 특성입니다.<br /><br /> **Debug. Assert** 메서드가 **false**로 평가 될 때 메시지 상자를 표시할지 여부를 지정 합니다.|  
 |`logfilename`|선택적 특성입니다.<br /><br /> 디버그가 인 경우 메시지를 쓸 파일의 이름을 지정 합니다 **. Assert** 가 **false**로 평가 됩니다.|  
   
 ## <a name="assertuienabled-attribute"></a>assertuienabled 특성  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |`true`|메시지 상자를 표시 합니다. 기본값입니다.|  
 |`false`|메시지 상자를 표시 하지 않습니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- 없음.  
+ 없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`system.diagnostics`|메시지를 수집하고 저장하고 라우팅하는 추적 수신기를 지정하며, 추적 스위치가 설정되는 수준을 지정합니다.|  
   
-## <a name="remarks"></a>주의  
- **\<assert >** 요소의 두 특성은 모두 선택 사항입니다. 메시지를 쓸 파일을 지정 하지 않고 메시지 상자를 사용 하지 않도록 설정 하거나 메시지 상자를 활성화 한 상태로 메시지를 쓸 파일을 지정할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 요소의 두 특성 **\<assert>** 은 모두 선택 사항입니다. 메시지를 쓸 파일을 지정 하지 않고 메시지 상자를 사용 하지 않도록 설정 하거나 메시지 상자를 활성화 한 상태로 메시지를 쓸 파일을 지정할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 Debug를 호출할 때 메시지 상자를 표시 하지 않도록 설정 하는 방법을 보여 줍니다 **. Assert** 및 `c:\log.txt`에 메시지를 씁니다.  
+ 다음 예제에서는 Debug를 호출할 때 메시지 상자를 표시 하지 않도록 설정 하는 방법을 보여 줍니다 **. Assert** 및 메시지 `c:\log.txt` 를에 씁니다.  
   
 ```xml  
 <configuration>  
@@ -69,7 +69,7 @@ ms.locfileid: "74088941"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Diagnostics.Debug>
 - [추적 및 디버그 설정 스키마](index.md)

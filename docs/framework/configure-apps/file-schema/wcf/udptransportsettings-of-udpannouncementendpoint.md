@@ -3,20 +3,20 @@ title: <udpAnnouncementEndpoint>의 <udpTransportSettings>
 ms.date: 03/30/2017
 ms.assetid: a7ddff1a-5eed-4bbc-8580-b95ef8890e1f
 ms.openlocfilehash: b67bdf825948dffe18aabe91b0de236eb929bccc
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70854853"
 ---
-# <a name="udptransportsettings-of-udpannouncementendpoint"></a>\<udpTransportSettings> of \<udpAnnouncementEndpoint>
-이 구성 요소는 [ \<udpannouncementendpoint >](udpannouncementendpoint.md)에 대 한 UDP 전송 설정을 노출 합니다.  
+# <a name="udptransportsettings-of-udpannouncementendpoint"></a>\<udpAnnouncementEndpoint>의 \<udpTransportSettings>
+이 구성 요소는에 대 한 UDP 전송 설정을 노출 [\<udpAnnouncementEndpoint>](udpannouncementendpoint.md) 합니다.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<standardEndpoints >** ](standardendpoints.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<udpAnnouncementEndpoint >** ](udpannouncementendpoint.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<updTransportSettings >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<standardEndpoints>**](standardendpoints.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<udpAnnouncementEndpoint>**](udpannouncementendpoint.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<updTransportSettings>**  
 
 ## <a name="syntax"></a>구문  
   
@@ -45,7 +45,7 @@ ms.locfileid: "70854853"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |duplicateMessageHistoryLength|중복 메시지를 식별하기 위해 전송에 사용되는 최대 메시지 해시 수를 지정합니다.  TransportManager 수준에서 중복 검색이 수행됩니다. 이 속성을 0으로 설정하면 중복 검색이 사용되지 않습니다.<br /><br /> 시스템 관리자나 개발자는 이 특성을 사용하여 중복 메시지 검색 알고리즘을 해제할 수 있습니다. 직접 작성한 중복 검색 알고리즘을 구현하려는 경우 유용할 수 있습니다.<br /><br /> 기본값은 4112입니다.|  
 |maxBufferPoolSize|전송에 사용할 수 있는 버퍼 풀의 최대 크기를 지정하는 정수입니다.|  
@@ -66,6 +66,6 @@ ms.locfileid: "70854853"
 |-------------|-----------------|  
 |[\<udpAnnouncementEndpoint>](udpannouncementendpoint.md)|고정 알림 계약 및 UDP 전송 바인딩이 있는 표준 엔드포인트입니다.|  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Discovery.UdpTransportSettings>

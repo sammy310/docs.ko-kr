@@ -3,22 +3,22 @@ title: <dispatcherSynchronization>
 ms.date: 03/30/2017
 ms.assetid: cc030f9c-4e38-4b14-94dc-9a0e41ec8e2d
 ms.openlocfilehash: b95f25217c2a3558846cc7a0ef43e21aacd2ee2a
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70398010"
 ---
-# <a name="dispatchersynchronization"></a>\<dispatcherSynchronization>
+# \<dispatcherSynchronization>
   
 서비스에서 응답을 비동기적으로 보낼 수 있도록 하는 엔드포인트 동작을 지정합니다.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<동작 >** ](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<동작 >** ](behavior-of-endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<dispatcherSynchronization >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<endpointBehaviors>**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<dispatcherSynchronization>**  
   
 ## <a name="syntax"></a>구문  
   
@@ -27,7 +27,7 @@ ms.locfileid: "70398010"
                                    maxPendingReceives="Integer" />
 ```  
   
-## <a name="type"></a>형식  
+## <a name="type"></a>Type  
   
 `Type`  
   
@@ -37,7 +37,7 @@ ms.locfileid: "70398010"
   
 ### <a name="attributes"></a>특성
 
-| 특성               | Description       |
+| attribute               | Description       |
 | ----------------------- | ----------------- |
 | asynchronousSendEnabled | 비동기 보내기 동작 사용 여부를 나타내는 부울입니다. |
 | `maxPendingReceives`    | 채널에서 발급할 수 있는 동시 수신의 수를 지정하는 정수입니다.<br /><br /> 이 값은 서비스 스로틀 동작을 제대로 구성한 후에 구성해야 합니다. |
@@ -48,11 +48,11 @@ ms.locfileid: "70398010"
 
 ### <a name="parent-elements"></a>부모 요소
 
-| 요소 | 설명 |  
+| 요소 | Description |  
 | ------- | ----------- |  
 | [\<behavior>](behavior-of-endpointbehaviors.md)|엔드포인트 동작을 지정합니다. |
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Configuration.DispatcherSynchronizationElement>
 - <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior>

@@ -3,10 +3,10 @@ title: .NET 네이티브 및 컴파일
 ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 ms.openlocfilehash: cf5c9f05b2f2cb4ca15e4add5b53bc9bdca757a3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128254"
 ---
 # <a name="net-native-and-compilation"></a>.NET 네이티브 및 컴파일
@@ -58,9 +58,9 @@ ms.locfileid: "73128254"
 
 .NET 네이티브 도구 체인에서 생성되는 결과 앱은 프로젝트 디렉터리의 디버그 또는 릴리스 디렉터리에 있는 ilc.out 디렉터리에 기록됩니다. 결과 앱은 다음 파일로 구성됩니다.
 
-- *\<appName>* .exe - 컨트롤을 *\<appName>* .dll의 특수 `Main` 내보내기에 전송하는 스텁 실행 파일.
+- *\<appName>*.exe. .exe는 단순히 .dll의 특수 내보내기로 제어를 전달 하는 스텁 실행 파일입니다. `Main` *\<appName>*
 
-- *\<appName&gt;* .dll - 모든 애플리케이션 코드와 종속성이 있는 .NET Framework 클래스 라이브러리 및 타사 라이브러리의 코드가 들어 있는 Windows 동적 링크 라이브러리.  Windows와 상호 운용하고 앱에서 개체를 직렬화하는 데 필요한 코드와 같은 지원 코드도 포함됩니다.
+- *\<appName>*.dll, 모든 응용 프로그램 코드를 포함 하는 Windows 동적 연결 라이브러리와 .NET Framework 클래스 라이브러리 및 종속성이 있는 타사 라이브러리의 코드를 포함 합니다.  Windows와 상호 운용하고 앱에서 개체를 직렬화하는 데 필요한 코드와 같은 지원 코드도 포함됩니다.
 
 - mrt100_app.dll - 가비지 컬렉션과 같은 런타임 서비스를 제공하는 리팩터링된 런타임.
 
@@ -102,9 +102,9 @@ ms.locfileid: "73128254"
 
 - NGEN 이미지는 손상되기 쉽습니다. 예를 들어 종속성에 패치나 변경을 적용하려면 일반적으로 패치나 변경을 사용하는 어셈블리도 다시 NGEN되어야 합니다. 이는 특히 .NET Framework 클래스 라이브러리의 시스템 라이브러리에 적용됩니다. 반대로 .NET 네이티브에서는 애플리케이션을 서로 독립적으로 처리할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 및 자동 기술 구성 요소](../../standard/metadata-and-self-describing-components.md)
-- [내부 .NET 네이티브 (Channel 9 비디오)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
+- [.NET 네이티브 정보(채널 9 비디오)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
 - [리플렉션 및 .NET 네이티브](reflection-and-net-native.md)
 - [.NET 네이티브 일반 문제 해결](net-native-general-troubleshooting.md)

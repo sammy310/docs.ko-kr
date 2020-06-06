@@ -1,5 +1,5 @@
 ---
-title: NameValueSectionHandler 및 DictionarySectionHandler에 대 한 <remove> 요소
+title: <remove>NameValueSectionHandler 및 DictionarySectionHandler에 대 한 요소
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/remove
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <remove> Element
 ms.assetid: 8d8af7f5-26c9-4db9-bbe4-b2a4e6949568
 ms.openlocfilehash: d1e4f3478f6afd6a20c01c6b57a137020ee88f5f
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77214763"
 ---
-# <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>NameValueSectionHandler 및 DictionarySectionHandler에 대 한 > 요소 \<제거
+# <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<remove>NameValueSectionHandler 및 DictionarySectionHandler에 대 한 요소
 
 이전에 정의 된 설정을 제거 합니다.
 
-[ **\<configuration>** ](configuration-element.md)\
-&nbsp;&nbsp;[ **\<섹션 이름 >** ](custom-element-2.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<제거**
+[**\<configuration>**](configuration-element.md)\
+&nbsp;&nbsp;[**\<sectionName>**](custom-element-2.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
 
 ## <a name="syntax"></a>구문
 
@@ -38,7 +38,7 @@ ms.locfileid: "77214763"
 
 | 요소 | Description |
 | ------- | ------------|
-| [ **\<섹션 이름 >** 요소인](custom-element-2.md) | <xref:System.Configuration.NameValueSectionHandler> 및 <xref:System.Configuration.DictionarySectionHandler> 클래스를 사용 하는 사용자 지정 구성 섹션에 대 한 설정을 정의 합니다. |
+| [**\<sectionName>** 요소인](custom-element-2.md) | 및 클래스를 사용 하는 사용자 지정 구성 섹션에 대 한 설정을 정의 <xref:System.Configuration.NameValueSectionHandler> <xref:System.Configuration.DictionarySectionHandler> 합니다. |
 
 ## <a name="child-elements"></a>자식 요소
 
@@ -46,13 +46,13 @@ None
 
 ## <a name="remarks"></a>설명
 
-**\<제거 >** 요소를 사용 하 여 구성 파일 계층 구조에서 상위 수준으로 정의 된 응용 프로그램에서 설정을 제거할 수 있습니다.
+요소를 사용 하 여 **\<remove>** 구성 파일 계층 구조에서 상위 수준에 정의 된 응용 프로그램의 설정을 제거할 수 있습니다.
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 응용 프로그램 구성 파일에서 **\<제거 >** 요소를 사용 하 여 이전에 컴퓨터 구성 파일에 정의 된 설정을 제거 하는 방법을 보여 줍니다.
+다음 예제에서는 **\<remove>** 응용 프로그램 구성 파일에서 요소를 사용 하 여 이전에 컴퓨터 구성 파일에 정의 된 설정을 제거 하는 방법을 보여 줍니다.
 
-다음 컴퓨터 구성 파일 코드는 **\<mysection >** 섹션을 선언 하 고이에 `key1` 및 `key2`두 가지 설정을 추가 합니다.
+다음 컴퓨터 구성 파일 코드는 섹션을 선언 하 **\<mySection>** 고 두 개의 설정 인 및를 추가 합니다 `key1` `key2` .
 
 ```xml
 <!-- Machine.config file -->
@@ -67,7 +67,7 @@ None
 </configuration>
 ```
 
-다음 응용 프로그램 구성 파일 코드는 **\<mySection >** 에서 `key2` 설정을 제거 합니다.
+다음 응용 프로그램 구성 파일 코드는 `key2` 에서 설정을 제거 합니다 **\<mySection>** .
 
 ```xml
 <!--Application configuration file -->
@@ -84,4 +84,4 @@ None
 
 ## <a name="see-also"></a>참고 항목
 
-- [.NET Framework에 대 한 구성 파일 스키마](index.md)
+- [.NET Framework의 구성 파일 스키마](index.md)

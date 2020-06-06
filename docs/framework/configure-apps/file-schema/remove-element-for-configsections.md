@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <remove> Element
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
 ms.openlocfilehash: 6991e3f73ac180fc690ec48e1a0d15f40c915733
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154532"
 ---
-# <a name="remove-element-for-configsections"></a>\<> 구성에 \<대한> 요소 제거
+# <a name="remove-element-for-configsections"></a>\<configSections>에 대한 \<remove> 요소
 
-미리 정의된 단면 또는 단면 그룹을 제거합니다.
+미리 정의 된 섹션 또는 섹션 그룹을 제거 합니다.
 
-[**\<구성>**](configuration-element.md)\
-&nbsp;&nbsp;[**\<>섹션**](configsections-element-for-configuration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<>제거**
+[**\<configuration>**](configuration-element.md)\
+&nbsp;&nbsp;[**\<configSections>**](configsections-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
 
 ## <a name="syntax"></a>구문
 
@@ -32,13 +32,13 @@ ms.locfileid: "79154532"
 
 |           | Description |
 | --------- | ----------- |
-| **(이름)**  | 필수 특성입니다.<br><br>제거할 단면 또는 단면 그룹의 이름을 지정합니다. |
+| **name**  | 필수 특성입니다.<br><br>제거할 섹션 또는 섹션 그룹의 이름을 지정 합니다. |
 
 ## <a name="parent-element"></a>부모 요소
 
 |     | Description |
 | --- | ----------- |
-| [** \<>구성섹션** 요소](configsections-element-for-configuration.md) | 구성 섹션 및 네임스페이스 선언을 포함합니다. |
+| [**\<configSections>** 요소인](configsections-element-for-configuration.md) | 구성 섹션과 네임 스페이스 선언을 포함 합니다. |
 
 ## <a name="child-elements"></a>자식 요소
 
@@ -46,13 +46,13 @@ None
 
 ## <a name="remarks"></a>설명
 
-제거>요소를 사용하여 구성 파일 계층 구조의 상위 수준에서 정의된 응용 프로그램에서 섹션 및 단면 그룹을 제거할 수 있습니다. ** \<**
+요소를 사용 하 여 **\<remove>** 구성 파일 계층 구조에서 상위 수준에 정의 된 섹션 및 섹션 그룹을 응용 프로그램에서 제거할 수 있습니다.
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 응용 프로그램 구성 파일에서 ** \<제거>** 요소를 사용하여 이전에 컴퓨터 구성 파일에 정의된 섹션을 제거하는 방법을 보여 주습니다.
+다음 예제에서는 **\<remove>** 응용 프로그램 구성 파일에서 요소를 사용 하 여 이전에 컴퓨터 구성 파일에 정의 된 섹션을 제거 하는 방법을 보여 줍니다.
 
-다음 컴퓨터 구성 파일 코드는 섹션 ** \<sampleSection>** 선언합니다.
+다음 컴퓨터 구성 파일 코드는 섹션을 선언 합니다 **\<sampleSection>** .
 
 ```xml
 <!-- Machine.config file -->
@@ -67,7 +67,7 @@ None
 </configuration>
 ```
 
-다음 응용 프로그램 구성 파일 코드는 ** \<샘플섹션을>.** 제거 후 응용 프로그램은 ** \<sampleSection>** 설정을 검색할 수 없습니다.
+다음 응용 프로그램 구성 파일 코드는 섹션을 제거 합니다 **\<sampleSection>** . 제거 후 응용 프로그램은에서 설정을 검색할 수 없습니다 **\<sampleSection>** .
 
 ```xml
 <!-- Application configuration file -->
@@ -80,7 +80,7 @@ None
 
 ## <a name="configuration-file"></a>구성 파일
 
-이 요소는 응용 프로그램 구성 파일, 컴퓨터 구성*파일(Machine.config)* 및 응용 프로그램 디렉터리 수준에 없는 *Web.config* 파일에 사용할 수 있습니다.
+이 요소는 응용 프로그램 구성 파일 *, 컴퓨터 구성 파일 (machine.config*) 및 응용 프로그램 디렉터리 수준에 없는 *web.config 파일* 에서 사용할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 

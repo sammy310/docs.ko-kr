@@ -3,10 +3,10 @@ title: .NET 네이티브 시작
 ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 ms.openlocfilehash: 1c0c25ddf379c31a9c7b4437d36e7e0cbf1bb2f3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128404"
 ---
 # <a name="getting-started-with-net-native"></a>.NET 네이티브 시작
@@ -34,7 +34,7 @@ ms.locfileid: "73128404"
 
 2. .NET 네이티브 도구 체인을 사용하는 UWP 앱 프로젝트 컴파일과 도구 체인이 없는 프로젝트 컴파일 간에 알려진 호환성 문제가 몇 가지 있습니다. 자세한 내용은 [마이그레이션 가이드](migrating-your-windows-store-app-to-net-native.md) 를 참조하세요.
 
-이제 로컬 시스템이 나 C# 시뮬레이터에서 실행 되는 .NET 네이티브 노출 영역에 대해 코드를 작성 하거나 Visual Basic 수 있습니다.
+이제 로컬 시스템이 나 시뮬레이터에서 실행 되는 .NET 네이티브 노출 영역에 대해 c # 또는 Visual Basic 코드를 작성할 수 있습니다.
 
 > [!IMPORTANT]
 > 앱을 개발할 때는 코드에서 serialization 또는 리플렉션 사용을 파악합니다.
@@ -58,7 +58,7 @@ ms.locfileid: "73128404"
 
 - 리플렉션을 기반으로 하지 않는 serializer. <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, <xref:System.Xml.Serialization.XmlSerializer> 클래스와 같이 .NET Framework 클래스 라이브러리에 포함된 serializer는 리플렉션을 사용하지 않습니다. 그러나 직렬화 또는 역직렬화할 개체에 따라 코드를 생성해야 합니다.  자세한 내용은 [Serialization and Metadata](serialization-and-metadata.md)의 "Microsoft 직렬 변환기" 섹션을 참조하세요.
 
-- 타사 직렬 변환기. Newtonsoft.json JSON serializer가 가장 일반적으로 사용 되는 타사 직렬화 라이브러리는 일반적으로 리플렉션 기반 이며 개체 serialization 및 deserialization을 지원 하기 위해 \*파일의 항목이 필요 합니다. 자세한 내용은 [Serialization and Metadata](serialization-and-metadata.md)의 "타사 직렬 변환기" 섹션을 참조하세요.
+- 타사 직렬 변환기. Newtonsoft.json JSON serializer가 가장 일반적으로 사용 되는 타사 직렬화 라이브러리는 일반적으로 리플렉션 기반 이며 \* 개체 serialization 및 deserialization을 지원 하기 위해. x l l 파일의 항목이 필요 합니다. 자세한 내용은 [Serialization and Metadata](serialization-and-metadata.md)의 "타사 직렬 변환기" 섹션을 참조하세요.
 
 **리플렉션을 사용하는 메서드**
 
@@ -79,7 +79,7 @@ ms.locfileid: "73128404"
 
 ## <a name="step-3-deploy-and-test-the-release-builds-of-your-app"></a>3단계: 앱의 릴리스 빌드 배포 및 테스트
 
-런타임 지시문 파일을 업데이트한 후에는 앱의 릴리스 빌드를 다시 빌드하고 배포할 수 있습니다. .NET 네이티브 이진 파일은 프로젝트의 **속성** 대화 상자, **컴파일** 탭의 **빌드 출력 경로** 텍스트 상자에 지정 된 디렉터리의 ILC 하위 디렉터리에 배치 됩니다 .이 폴더에 없는 이진 파일은 컴파일되지 않았습니다. with .NET 네이티브. 각각의 대상 플랫폼에서 앱을 철저하게 테스트하고 오류 시나리오를 비롯한 모든 시나리오를 테스트합니다.
+런타임 지시문 파일을 업데이트한 후에는 앱의 릴리스 빌드를 다시 빌드하고 배포할 수 있습니다. .NET 네이티브 이진 파일은 프로젝트의 **속성** 대화 상자, **컴파일** 탭의 **빌드 출력 경로** 텍스트 상자에 지정 된 디렉터리의 ILC 하위 디렉터리에 배치 됩니다 .이 폴더에 없는 이진 파일은 .NET 네이티브으로 컴파일되지 않았습니다. 각각의 대상 플랫폼에서 앱을 철저하게 테스트하고 오류 시나리오를 비롯한 모든 시나리오를 테스트합니다.
 
 앱이 정상적으로 작동하지 않는 경우(특히 런타임에 [MissingMetadataException](missingmetadataexception-class-net-native.md) 또는 [MissingInteropDataException](missinginteropdataexception-class-net-native.md) 예외가 throw되는 경우) 다음 섹션인 [4단계: 수동으로 누락된 메타데이터 문제 해결](#Step4)의 지침을 따릅니다. 첫째 예외를 사용하도록 설정하면 이러한 버그를 찾는 데 도움이 될 수 있습니다.
 
@@ -89,7 +89,7 @@ ms.locfileid: "73128404"
 
 ## <a name="step-4-manually-resolve-missing-metadata"></a>4단계: 수동으로 누락된 메타데이터 문제 해결
 
-데스크톱에서 발생 하지 않는 .NET 네이티브 발생 하는 가장 일반적인 오류는 런타임 [MissingMetadataException](missingmetadataexception-class-net-native.md), [MissingInteropDataException](missinginteropdataexception-class-net-native.md)또는 [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) 예외입니다. 경우에 따라서는 메타데이터가 없어서 예측할 수 없는 동작이 발생하거나 앱 자체에도 오류가 발생할 수 있습니다. 이 섹션에서는 런타임 지시문 파일에 지시문을 추가하여 이러한 예외를 디버그 및 해결하는 방법을 설명합니다. 런타임 지시문 형식에 대한 자세한 내용은 [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)를 참조하세요. 런타임 지시문을 추가한 후에는 다시 [앱을 배포 및 테스트](#Step3)하고 예외가 더 이상 발생하지 않을 때까지 새로 발생하는 [MissingMetadataException](missingmetadataexception-class-net-native.md), [MissingInteropDataException](missinginteropdataexception-class-net-native.md) 및 [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) 예외를 해결해야 합니다.
+데스크톱에서 발생 하지 않는 .NET 네이티브 발생 하는 가장 일반적인 오류는 런타임 [MissingMetadataException](missingmetadataexception-class-net-native.md), [MissingInteropDataException](missinginteropdataexception-class-net-native.md)또는 [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) 예외입니다. 경우에 따라서는 메타데이터가 없어서 예측할 수 없는 동작이 발생하거나 앱 자체에도 오류가 발생할 수 있습니다. 이 섹션에서는 런타임 지시문 파일에 지시문을 추가하여 이러한 예외를 디버그 및 해결하는 방법을 설명합니다. 런타임 지시문 형식에 대한 자세한 내용은 [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)를 참조하세요. 런타임 지시문을 추가한 후에는 다시 [앱을 배포 및 테스트](#Step3) 하고 예외가 더 이상 발생하지 않을 때까지 새로 발생하는 [MissingMetadataException](missingmetadataexception-class-net-native.md), [MissingInteropDataException](missinginteropdataexception-class-net-native.md)및  [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) 예외를 해결해야 합니다.
 
 > [!TIP]
 > 코드 변경 시 앱을 복원하려면 런타임 지시문을 대략적으로 지정합니다.  런타임 지시문은 멤버 수준이 아닌 네임스페이스 및 형식 수준에 추가하는 것이 좋습니다. 복원력을 높이면 이진 파일이 커지고 컴파일 시간이 길어질 수 있습니다.
@@ -121,10 +121,10 @@ ms.locfileid: "73128404"
 
 - [.NET 네이티브 앱의 런타임 예외](runtime-exceptions-in-net-native-apps.md)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)
-- [설정 및 구성 .NET 네이티브](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
+- [.NET 네이티브 설치 및 구성](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
 - [.NET 네이티브 및 컴파일](net-native-and-compilation.md)
 - [리플렉션 및 .NET 네이티브](reflection-and-net-native.md)
 - [리플렉션을 사용하는 API](apis-that-rely-on-reflection.md)

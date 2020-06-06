@@ -25,10 +25,10 @@ helpviewer_keywords:
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
 ms.openlocfilehash: b2da9600e6947a1efcb13fc8b1127665cea63071
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70972197"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>구성 파일을 사용하여 앱 구성
@@ -40,7 +40,7 @@ ms.locfileid: "70972197"
  이 항목에서는 구성 파일의 구문에 대해 설명하고 컴퓨터, 애플리케이션 및 보안 등 세 가지 유형의 구성 파일에 대한 정보를 제공합니다.  
   
 ## <a name="configuration-file-format"></a>구성 파일 서식  
- 구성 파일에는 구성 정보를 설정하는 논리적 데이터 구조인 요소가 포함되어 있습니다. 구성 파일에서는 태그를 사용하여 요소의 시작과 끝을 표시합니다. 예를 들어 `<runtime>` 요소는 `<runtime>`*자식 요소*`</runtime>`로 구성됩니다. 빈 요소는 `<runtime/>` 또는 `<runtime></runtime>`으로 기록됩니다.  
+ 구성 파일에는 구성 정보를 설정하는 논리적 데이터 구조인 요소가 포함되어 있습니다. 구성 파일에서는 태그를 사용하여 요소의 시작과 끝을 표시합니다. 예를 들어 `<runtime>` 요소는 `<runtime>` *자식 요소로*구성 됩니다 `</runtime>` . 빈 요소는 `<runtime/>` 또는 `<runtime></runtime>`으로 기록됩니다.  
   
  모든 XML 파일에서와 같이 구성 파일의 구문은 대/소문자를 구분합니다.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "70972197"
 ## <a name="machine-configuration-files"></a>컴퓨터 구성 파일  
  컴퓨터 구성 파일인 Machine.config 에는 전체 컴퓨터에 적용되는 설정이 포함되어 있습니다. 이 파일은 %*런타임 설치 경로*%\Config 디렉터리에 있습니다. Machine.config는 컴퓨터 전반의 어셈블리 바인딩, 기본 제공 [원격 채널](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100)) 및 ASP.NET에 대한 구성 설정을 포함합니다.  
   
- 구성 시스템은 먼저 컴퓨터 구성 파일에서 [ **\<appSettings>** 요소](./file-schema/appsettings/index.md)를 찾아본 후 개발자가 정의한 다른 구성 섹션에서 찾아봅니다. 그런 다음 애플리케이션 구성 파일에서 찾아봅니다. 컴퓨터 구성 파일을 지속적으로 관리하려면 이러한 설정을 애플리케이션 구성 파일에 넣는 것이 가장 좋습니다. 그러나 컴퓨터 구성 파일에 설정을 넣으면 시스템을 유지 관리하기가 더 쉬울 수 있습니다. 예를 들어, 클라이언트 및 서버 애플리케이션이 모두 사용하는 타사 제품의 구성 요소를 가지고 있을 경우에는 이 구성 요소의 설정을 한 곳에 두는 것이 더 용이합니다. 이 때 설정을 넣을 적합한 위치는 컴퓨터 구성 파일이며, 이럴 경우 동일한 설정을 서로 다른 두 파일에 둘 필요가 없습니다.  
+ 구성 시스템은 먼저 컴퓨터 구성 파일에서 개발자가 정의할 수 있는 [ **\<appSettings>** 요소](./file-schema/appsettings/index.md) 및 다른 구성 섹션을 찾습니다. 그런 다음 애플리케이션 구성 파일에서 찾아봅니다. 컴퓨터 구성 파일을 지속적으로 관리하려면 이러한 설정을 애플리케이션 구성 파일에 넣는 것이 가장 좋습니다. 그러나 컴퓨터 구성 파일에 설정을 넣으면 시스템을 유지 관리하기가 더 쉬울 수 있습니다. 예를 들어, 클라이언트 및 서버 애플리케이션이 모두 사용하는 타사 제품의 구성 요소를 가지고 있을 경우에는 이 구성 요소의 설정을 한 곳에 두는 것이 더 용이합니다. 이 때 설정을 넣을 적합한 위치는 컴퓨터 구성 파일이며, 이럴 경우 동일한 설정을 서로 다른 두 파일에 둘 필요가 없습니다.  
   
 > [!NOTE]
 > XCOPY를 사용하여 애플리케이션을 배포하면 컴퓨터 구성 파일의 설정이 복사되지 않습니다.  
@@ -101,7 +101,7 @@ ms.locfileid: "70972197"
 - 사용자 정책 구성 파일: %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [방법: DEVPATH를 사용 하 여 어셈블리 찾기](how-to-locate-assemblies-by-using-devpath.md)  
+ [방법: DEVPATH를 사용하여 어셈블리 찾기](how-to-locate-assemblies-by-using-devpath.md)  
  어셈블리를 검색할 때 런타임에서 DEVPATH 환경 변수를 사용하도록 지정하는 방법에 대해 설명합니다.  
   
  [어셈블리 버전 리디렉션](redirect-assembly-versions.md)  
@@ -119,12 +119,12 @@ ms.locfileid: "70972197"
  [구성 파일 스키마](./file-schema/index.md)  
  시작, 런타임, 네트워크 및 구성 설정의 다른 형식에 대한 스키마 계층 구조를 설명합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [구성 파일 스키마](./file-schema/index.md)
 - [어셈블리 위치 지정](specify-assembly-location.md)
 - [어셈블리 버전 리디렉션](redirect-assembly-versions.md)
-- [ASP.NET 웹 사이트 관리](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
+- [ASP.NET 웹 사이트 관리 도구](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
 - [보안 정책 관리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
 - [Caspol.exe(코드 액세스 보안 정책 도구)](../tools/caspol-exe-code-access-security-policy-tool.md)
 - [.NET 어셈블리](../../standard/assembly/index.md)

@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 3c6017b6-0c4f-4192-bd67-9515f5d1ec82
 ms.openlocfilehash: 05a15cdf5c043eb5d94b36028324310d2b7a8413
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70398870"
 ---
-# <a name="behaviors-of-workflow"></a>\<워크플로의 동작 >
+# <a name="behaviors-of-workflow"></a>\<behaviors>워크플로
 이 요소는 **Servicebehaviors** 컬렉션을 포함 합니다.  컬렉션의 각 요소는 워크플로 서비스에서 사용하는 동작 요소를 정의합니다. 각 동작 요소는 고유한 **이름** 특성으로 식별 됩니다.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<컴퓨터. ServiceModel >** ](system-servicemodel-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<동작 >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.ServiceModel>**](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<behaviors>**  
   
 ## <a name="syntax"></a>구문  
   
@@ -30,7 +30,7 @@ ms.locfileid: "70398870"
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
- 없음  
+ None  
   
 ### <a name="child-elements"></a>자식 요소  
   
@@ -44,7 +44,7 @@ ms.locfileid: "70398870"
 |-------------|-----------------|  
 |[\<system.serviceModel>](../wcf/system-servicemodel.md)|모든 워크플로 구성 요소의 루트 요소입니다.|  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Configuration.BehaviorsSection>
 - <xref:System.ServiceModel.Configuration.ServiceBehaviorElementCollection>

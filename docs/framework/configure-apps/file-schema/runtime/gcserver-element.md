@@ -9,19 +9,19 @@ helpviewer_keywords:
 - <gcServer> element
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 ms.openlocfilehash: 8eab5e36bab90510aff4f1a3e15328197ac59ed7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73968943"
 ---
-# <a name="gcserver-element"></a>\<gcServer > 요소
+# <a name="gcserver-element"></a>\<gcServer> 요소
 
 공용 언어 런타임이 서버 가비지 컬렉션을 실행하는지 여부를 지정합니다.
 
 [\<configuration>](../configuration-element.md)\
-[\<런타임 >](runtime-element.md) &nbsp;&nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp;\<gcServer >
+&nbsp;&nbsp;[\<runtime>](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<gcServer>
 
 ## <a name="syntax"></a>구문
 
@@ -32,33 +32,33 @@ ms.locfileid: "73968943"
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.
+다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.
 
 ### <a name="attributes"></a>특성
 
-|특성|설명|
+|attribute|Description|
 |---------------|-----------------|
 |`enabled`|필수 특성입니다.<br /><br />런타임이 서버 가비지 수집을 실행하는지 여부를 지정합니다.|
 
 #### <a name="enabled-attribute"></a>enabled 특성
 
-|값|설명|
+|값|Description|
 |-----------|-----------------|
 |`false`|서버 가비지 컬렉션을 실행하지 않습니다. 기본값입니다.|
 |`true`|서버 가비지 컬렉션을 실행합니다.|
 
 ### <a name="child-elements"></a>자식 요소
 
-없음.
+없음
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|설명|
+|요소|Description|
 |-------------|-----------------|
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 CLR(공용 언어 런타임)에서는 두 가지 유형의 가비지 컬렉션을 지원합니다. 워크스테이션 가비지 컬렉션은 모든 시스템에서 사용할 수 있고, 서버 가비지 컬렉션은 다중 프로세서 시스템에서 사용할 수 있습니다. **GcServer** 요소를 사용 하 여 CLR에서 수행 하는 가비지 수집 유형을 제어 합니다. <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType> 속성을 사용하여 서버 가비지 컬렉션이 사용하도록 설정되었는지 확인합니다.
 
@@ -67,7 +67,7 @@ CLR(공용 언어 런타임)에서는 두 가지 유형의 가비지 컬렉션�
 이 요소는 애플리케이션 구성 파일에만 사용할 수 있습니다. 컴퓨터 구성 파일에 있는 경우 무시됩니다.
 
 > [!NOTE]
-> .NET Framework 4 및 이전 버전에서, 서버 가비지 수집이 사용되는 경우에는 동시 가비지 수집을 사용할 수 없습니다. .NET Framework 4.5부터 서버 가비지 수집이 동시에 이루어 집니다. 비 동시 서버 가비지 수집을 사용 하려면 **gcServer** 요소를 `true`으로 설정 하 고 [gcConcurrent 요소](gcconcurrent-element.md) 를 `false`로 설정 합니다.
+> .NET Framework 4 및 이전 버전에서, 서버 가비지 수집이 사용되는 경우에는 동시 가비지 수집을 사용할 수 없습니다. .NET Framework 4.5부터 서버 가비지 수집이 동시에 이루어 집니다. 비 동시 서버 가비지 수집을 사용 하려면 **gcServer** 요소를로 설정 하 `true` 고 [gcConcurrent 요소](gcconcurrent-element.md) 를로 설정 `false` 합니다.
 
 .NET Framework 4.6.2부터 다음 요소를 사용 하 여 서버 GC를 구성할 수도 있습니다.
 
@@ -89,7 +89,7 @@ CLR(공용 언어 런타임)에서는 두 가지 유형의 가비지 컬렉션�
 </configuration>
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
 - [런타임 설정 스키마](index.md)

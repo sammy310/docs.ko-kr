@@ -1,24 +1,24 @@
 ---
-title: <wsFederationHttpBinding>의 <message> 요소
+title: <message>의 요소<wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
 ms.openlocfilehash: 8e0903dd1313e68e2de65730e129079199ebe2f2
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73738989"
 ---
-# <a name="message-element-of-wsfederationhttpbinding"></a>\<wsFederationHttpBinding의 \<message > 요소 >
-[\<wsFederationHttpBinding >](wsfederationhttpbinding.md)에 대 한 메시지 수준 보안 설정을 정의 합니다.  
+# <a name="message-element-of-wsfederationhttpbinding"></a>\<message>의 요소\<wsFederationHttpBinding>
+의 메시지 수준 보안 설정을 정의 합니다 [\<wsFederationHttpBinding>](wsfederationhttpbinding.md) .  
   
-[ **\<configuration>** ](../configuration-element.md)\
-[ **\<system serviceModel >** ](system-servicemodel.md) &nbsp; &nbsp; \
-&nbsp;&nbsp;&nbsp;&nbsp;\<[**바인딩**](bindings.md) >
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsFederationHttpBinding >** ](wsfederationhttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<바인딩 >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**security >** ](security-of-wsfederationhttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**메시지 >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<wsFederationHttpBinding>**](wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<message>**  
   
 ## <a name="syntax"></a>구문  
   
@@ -85,16 +85,16 @@ ms.locfileid: "73738989"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
-|algorithmSuite|메시지 암호화 및 키 래핑 알고리즘을 설정합니다. 이 특성의 유효한 값은 "algorithmSuite 특성" 표를 참조하세요. 기본값은 `Basic256`여야 합니다.<br /><br /> 이 특성은 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 형식입니다. 이러한 알고리즘은 WS-SecurityPolicy(Security Policy Language) 사양에 지정된 알고리즘에 매핑됩니다.|  
-|issuedKeyType|발급할 키의 유형을 지정 합니다. 유효한 값은 다음과 같습니다.<br /><br /> -SymmetricKey<br />-PublicKey<br /><br /> 기본값은 `SymmetricKey`입니다. 이 특성은 <xref:System.IdentityModel.Tokens.SecurityKeyType> 형식입니다.|  
+|algorithmSuite|메시지 암호화 및 키 래핑 알고리즘을 설정합니다. 이 특성의 유효한 값은 "algorithmSuite 특성" 표를 참조하세요. 기본값은 `Basic256`입니다.<br /><br /> 이 특성은 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 형식입니다. 이러한 알고리즘은 보안 정책 언어(WS-SecurityPolicy) 사양에 지정된 알고리즘에 매핑됩니다.|  
+|issuedKeyType|발급할 키 유형을 지정합니다. 유효한 값은 다음과 같습니다.<br /><br /> -SymmetricKey<br />-PublicKey<br /><br /> 기본값은 `SymmetricKey`입니다. 이 특성은 <xref:System.IdentityModel.Tokens.SecurityKeyType> 형식입니다.|  
 |issuedTokenType|발급될 토큰 형식을 지정하는 URI가 들어 있는 문자열입니다. 기본값은 `null`입니다.|  
 |negotiateServiceCredential|서비스 자격 증명이 협상의 일부로 교환되는지 또는 out of band 방식으로 사용될 수 있는지를 지정하는 부울 값입니다. 기본값은 서비스 자격 증명이 협상됨을 의미하는 `true`입니다.|  
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite 특성  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |Basic128|Basic128 암호화, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa-oaep-mgf1p를 사용합니다.|  
 |Basic192|Basic192 암호화, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa-oaep-mgf1p를 사용합니다.|  
@@ -115,20 +115,20 @@ ms.locfileid: "73738989"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<claimTypeRequirements >](claimtyperequirements-element.md)|이 바인딩에 대한 클레임 형식 컬렉션을 지정합니다. 각 요소는 <xref:System.ServiceModel.Configuration.ClaimTypeElement> 형식입니다.|  
-|issuer|보안 토큰을 발급하는 엔드포인트를 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement> 형식입니다.|  
+|[\<claimTypeRequirements>](claimtyperequirements-element.md)|이 바인딩에 대한 클레임 형식 컬렉션을 지정합니다. 각 요소는 <xref:System.ServiceModel.Configuration.ClaimTypeElement> 형식입니다.|  
+|발급자|보안 토큰을 발급하는 엔드포인트를 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement> 형식입니다.|  
 |issuerMetadata|발급자의 엔드포인트 주소를 지정합니다.|  
-|[tokenRequestParameters를 \<](tokenrequestparameters.md)|토큰 요청 매개 변수 컬렉션입니다. 각 매개 변수는 XML 요소입니다.|  
+|[\<tokenRequestParameters>](tokenrequestparameters.md)|토큰 요청 매개 변수 컬렉션입니다. 각 매개 변수는 XML 요소입니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<security >](security-of-wsfederationhttpbinding.md)|바인딩에 대한 보안 설정을 정의합니다.|  
+|[\<security>](security-of-wsfederationhttpbinding.md)|바인딩에 대한 보안 설정을 정의합니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>
 - <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>
@@ -138,4 +138,4 @@ ms.locfileid: "73738989"
 - [바인딩](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding >](bindings.md)
+- [\<binding>](bindings.md)

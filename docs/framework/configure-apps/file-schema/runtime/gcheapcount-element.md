@@ -5,19 +5,19 @@ helpviewer_keywords:
 - gcHeapCount element
 - <gcHeapCount> element
 ms.openlocfilehash: 3d6cac4185af182758cb82e6bfd9d96ed24869b4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74283080"
 ---
-# <a name="gcheapcount-element"></a>\<GCHeapCount > 요소
+# <a name="gcheapcount-element"></a>\<GCHeapCount> 요소
 
 서버 가비지 수집에 사용할 힙/스레드 수를 지정 합니다.
 
-\<구성 > \
-&nbsp;&nbsp;\<런타임 > \
-&nbsp;&nbsp;&nbsp;&nbsp;\<GCHeapCount >
+\<configuration>\
+&nbsp;&nbsp;\<runtime>\
+&nbsp;&nbsp;&nbsp;&nbsp;\<GCHeapCount>
 
 ## <a name="syntax"></a>구문
 
@@ -28,17 +28,17 @@ ms.locfileid: "74283080"
 
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
-다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.
+다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.
 
 ### <a name="attributes"></a>특성
 
-|특성|설명|
+|attribute|Description|
 |---------------|-----------------|
 |`enabled`|필수 특성입니다.<br /><br />서버 가비지 수집에 사용할 힙 수를 지정 합니다. 실제 힙 수는 사용자가 지정 하는 힙 수와 프로세스에서 사용할 수 있는 프로세서 수의 최소값입니다. |
 
 #### <a name="enabled-attribute"></a>enabled 특성
 
-|값|설명|
+|값|Description|
 |-----------|-----------------|
 |`nn`|서버 GC에 사용할 힙 수입니다.|
 
@@ -48,7 +48,7 @@ ms.locfileid: "74283080"
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|설명|
+|요소|Description|
 |-------------|-----------------|
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|
@@ -93,7 +93,7 @@ ms.locfileid: "74283080"
 </configuration>
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
 - [GCNoAffinitize 요소](gcnoaffinitize-element.md)

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - add element for <switches>
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
 ms.openlocfilehash: db2de681227dfdb7420808963219b9f52381f8fe
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74088954"
 ---
-# <a name="add-element-for-switches"></a>\<스위치에 대 한 > 요소를 추가 \<
+# <a name="add-element-for-switches"></a>\<switches>에 대한 \<add> 요소
 추적 스위치를 설정하는 수준을 지정합니다.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;[ **\<&nbsp;진단 >** ](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<스위치**](switches-element.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**추가** >
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<switches>**](switches-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
 
 ## <a name="syntax"></a>구문  
   
@@ -34,27 +34,27 @@ ms.locfileid: "74088954"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |**name**|필수 특성입니다.<br /><br /> 스위치의 이름을 지정 합니다. 이 특성의 값은 switch 생성자에 전달 되는 *displayName* 매개 변수에 해당 합니다.|  
 |**value**|필수 특성입니다.<br /><br /> 스위치의 수준을 지정 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
- 없음.  
+ 없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`switches`|추적 스위치 및 추적 스위치가 설정된 수준이 포함되어 있습니다.|  
 |`system.diagnostics`|메시지를 수집하고 저장하고 라우팅하는 추적 수신기를 지정하며, 추적 스위치가 설정되는 수준을 지정합니다.|  
   
-## <a name="remarks"></a>주의  
- 구성 파일에 배치 하 여 추적 스위치의 수준을 변경할 수 있습니다. 스위치가 <xref:System.Diagnostics.BooleanSwitch>경우 설정 및 해제할 수 있습니다. 스위치가 <xref:System.Diagnostics.TraceSwitch>경우 다른 수준을 할당 하 여 응용 프로그램에서 출력 하는 추적 또는 디버그 메시지의 형식을 지정할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 구성 파일에 배치 하 여 추적 스위치의 수준을 변경할 수 있습니다. 스위치가 인 경우 <xref:System.Diagnostics.BooleanSwitch> 설정 및 해제할 수 있습니다. 스위치가 인 경우 <xref:System.Diagnostics.TraceSwitch> 다른 수준을 할당 하 여 응용 프로그램에서 출력 하는 추적 또는 디버그 메시지의 형식을 지정할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예에서는 **\<> 요소 추가** 를 사용 하 여 `General` 추적 스위치를 <xref:System.Diagnostics.TraceLevel> 수준으로 설정 하 고 `Data` 부울 추적 스위치를 사용 하도록 설정 하는 방법을 보여 줍니다.  
+ 다음 예에서는 요소를 사용 하 여 **\<add>** `General` 추적 스위치를 수준으로 설정 하 <xref:System.Diagnostics.TraceLevel> 고 `Data` 부울 추적 스위치를 사용 하도록 설정 하는 방법을 보여 줍니다.  
   
 ```xml  
 <configuration>  
@@ -67,7 +67,7 @@ ms.locfileid: "74088954"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Diagnostics.Switch>
 - <xref:System.Diagnostics.TraceSwitch>

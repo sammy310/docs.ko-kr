@@ -9,19 +9,19 @@ helpviewer_keywords:
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
 ms.openlocfilehash: 625c3cb82a8659c742b540724e5cf31be65a705e
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74089096"
 ---
-# <a name="smtp-element-network-settings"></a>\<smtp > 요소 (네트워크 설정)
+# <a name="smtp-element-network-settings"></a>\<smtp> 요소(네트워크 설정)
 전자 메일을 보내기 위한 배달 형식, 배달 방법 및 보낸 사람 주소를 구성 합니다.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;[ **\<.net >를**](system-net-element-network-settings.md) &nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<mailSettings**](mailsettings-element-network-settings.md) >
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<smtp >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<mailSettings>**](mailsettings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<smtp>**
   
 ## <a name="syntax"></a>구문  
   
@@ -40,7 +40,7 @@ ms.locfileid: "74089096"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |`deliveryFormat`|보내는 전자 메일의 배달 형식을 지정 합니다. 허용 가능한 값은 SevenBit와 International입니다.|  
 |`deliveryMethod`|전자 메일에 대 한 배달 방법을 지정 합니다. 허용 되는 값은 Network, PickupDirectoryFromIis 및 SpecifiedPickupDirectory입니다.|  
@@ -48,7 +48,7 @@ ms.locfileid: "74089096"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|특성|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |`specifiedPickupDirectory`|SMTP (Simple Mail Transport Protocol) 서버에 대 한 로컬 디렉터리를 구성 합니다.|  
 |`network`|외부 SMTP 서버에 대 한 네트워크 옵션을 구성 합니다.|  
@@ -57,7 +57,7 @@ ms.locfileid: "74089096"
   
 |**요소**|**설명**|  
 |-----------------|---------------------|  
-|[\<mailSettings> 요소(네트워크 설정)](mailsettings-element-network-settings.md)|메일 전송 옵션을 구성 합니다.|  
+|[\<mailSettings>요소 (네트워크 설정)](mailsettings-element-network-settings.md)|메일 전송 옵션을 구성 합니다.|  
   
 ## <a name="example"></a>예제  
  다음 예에서는 기본 네트워크 자격 증명을 사용 하 여 전자 메일을 보낼 적절 한 SMTP 매개 변수를 지정 합니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "74089096"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>
 - <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
